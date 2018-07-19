@@ -16,15 +16,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 74fbdd99c162b4362339d8c1b45ddc281d30eeee
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 72c6c992f2ec92bc11d6dd009649d503d3c0bd02
+ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32356456"
+ms.lasthandoff: 07/05/2018
+ms.locfileid: "37848340"
 ---
 # <a name="notifyhandler"></a>NotifyHandler
-Nazwa funkcji identyfikowane przez trzeci parametr funkcji `NOTIFY_HANDLER` makra mapy wiadomości.  
+Nazwa funkcji identyfikowane przez trzeci parametr makra NOTIFY_HANDLER na mapie komunikatów.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -39,20 +39,20 @@ Nazwa funkcji identyfikowane przez trzeci parametr funkcji `NOTIFY_HANDLER` makr
 ```  
   
 #### <a name="parameters"></a>Parametry  
- `idCtrl`  
- Identyfikator formantu wysyłania wiadomości.  
+ *idCtrl*  
+ Identyfikator formantu wysyłania komunikatu.  
   
  *pnmh*  
- Adres [NMHDR](http://msdn.microsoft.com/library/windows/desktop/bb775514) strukturę, która zawiera kod powiadomienia i dodatkowe informacje. Niektóre komunikaty powiadomień, ten parametr wskazuje większej struktury, która ma **NMHDR** struktury jako swojego pierwszego elementu członkowskiego.  
+ Adres [NMHDR](http://msdn.microsoft.com/library/windows/desktop/bb775514) strukturę, która zawiera kod powiadomienia i dodatkowe informacje. Niektóre komunikaty powiadomień, ten parametr wskazuje większej struktury, która ma `NMHDR` struktury jako swojego pierwszego elementu członkowskiego.  
   
- `bHandled`  
- Ustawia mapy komunikatów `bHandled` do **TRUE** przed *NotifyHandler* jest wywoływana. Jeśli *NotifyHandler* nie obsługuje pełni komunikatu, należy ją ustawić `bHandled` do **FALSE** wskazująca wiadomość wymaga dalsze przetwarzanie.  
+ *bHandled*  
+ Ustawia mapy wiadomości *bHandled* na wartość TRUE, przed *NotifyHandler* jest wywoływana. Jeśli *NotifyHandler* nie obsługuje w pełni komunikat, należy ją ustawić *bHandled* do **FALSE** do wskazania wiadomość wymaga dalszego przetwarzania.  
   
 ## <a name="return-value"></a>Wartość zwracana  
- Wynik przetwarzania komunikatów. 0 w przypadku powodzenia.  
+ Wynik przetwarzania wiadomości. 0, jeśli kończy się pomyślnie.  
   
 ## <a name="remarks"></a>Uwagi  
- Na przykład za pomocą tej obsługi wiadomości w mapie komunikatów, zobacz [NOTIFY_HANDLER](reference/message-map-macros-atl.md#notify_handler)).  
+ Aby uzyskać przykład korzystania z tej obsługi wiadomości w mapie komunikatów, zobacz [NOTIFY_HANDLER](reference/message-map-macros-atl.md#notify_handler)).  
   
 ## <a name="see-also"></a>Zobacz też  
  [Implementowanie okna](../atl/implementing-a-window.md)   

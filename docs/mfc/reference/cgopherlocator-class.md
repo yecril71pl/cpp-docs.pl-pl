@@ -20,18 +20,18 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8f466864e694f332f70d9f5932a528917a000974
-ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
+ms.openlocfilehash: 6b51fd0f090eb53184572ac1ee26d30177fae1df
+ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/27/2018
-ms.locfileid: "37041289"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37339296"
 ---
 # <a name="cgopherlocator-class"></a>Klasa CGopherLocator
-Pobiera gopher "lokalizatora" z serwera gopher, określa typ lokalizatora i udostępnia Lokalizator [CGopherFileFind](../../mfc/reference/cgopherfilefind-class.md).  
+Pobiera "Lokalizator" gopher z serwera gopher, określa typ lokalizatora i udostępnia go do [CGopherFileFind](../../mfc/reference/cgopherfilefind-class.md).  
   
 > [!NOTE]
->  Klasy `CGopherConnection`, `CGopherFile`, `CGopherFileFind`, `CGopherLocator` i ich elementy członkowskie są przestarzałe, ponieważ nie działają na platformie Windows XP, ale będą one nadal działać na starszych platformach.  
+>  Klasy `CGopherConnection`, `CGopherFile`, `CGopherFileFind`, `CGopherLocator` i ich elementów członkowskich są przestarzałe, ponieważ nie działają na platformie Windows XP, ale będą one nadal działały na starszych platformach.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -57,16 +57,16 @@ class CGopherLocator : public CObject
   
 |Nazwa|Opis|  
 |----------|-----------------|  
-|[CGopherLocator::operator LPCTSTR](#operator_lpctstr)|Bezpośredni dostęp do znaków przechowywanych w `CGopherLocator` obiekt jako ciąg w stylu języka C.|  
+|[CGopherLocator::operator LPCTSTR](#operator_lpctstr)|Bezpośrednio uzyskuje dostęp do znaków przechowywanych w `CGopherLocator` obiektu jako ciąg stylu C.|  
   
 ## <a name="remarks"></a>Uwagi  
- Aplikacji, musisz uzyskać lokalizatora serwer gopher, aby możliwe było pobieranie informacji z tego serwera. Gdy ma ona Lokalizator, to traktowane Lokalizator jako nieprzezroczyste token.  
+ Aplikację, musisz uzyskać lokalizatora serwera gopher, aby możliwe było pobieranie informacji z tego serwera. Gdy ma ona Lokalizator, to traktowane Lokalizator jako nieprzezroczysty token.  
   
- Każdy Lokalizator gopher ma atrybuty, które określają typ pliku lub znaleziono serwera. Zobacz [GetLocatorType](#getlocatortype) listę typy lokalizatorów gopher.  
+ Lokalizator każdego gopher ma atrybuty, które określają typ pliku lub znaleziono serwera. Zobacz [GetLocatorType](#getlocatortype) listę typy lokalizatorów gopher.  
   
- Zwykle aplikacja używa Lokalizator dla wywołania [CGopherFileFind::FindFile](../../mfc/reference/cgopherfilefind-class.md#findfile) do pobrania konkretnych danych.  
+ Aplikacja używa zwykle Lokalizator dla wywołań [CGopherFileFind::FindFile](../../mfc/reference/cgopherfilefind-class.md#findfile) do pobrania konkretnych danych.  
   
- Aby dowiedzieć się więcej na temat `CGopherLocator` współpracuje z innych klas MFC Internet, zapoznaj się z artykułem [Internet programowanie za pomocą interfejsu WinInet](../../mfc/win32-internet-extensions-wininet.md).  
+ Aby dowiedzieć się więcej o tym, jak `CGopherLocator` współpracuje z innych klas MFC Internet, zapoznaj się z artykułem [Internet programowanie za pomocą interfejsu WinInet](../../mfc/win32-internet-extensions-wininet.md).  
   
 ## <a name="inheritance-hierarchy"></a>Hierarchia dziedziczenia  
  [CObject](../../mfc/reference/cobject-class.md)  
@@ -77,7 +77,7 @@ class CGopherLocator : public CObject
  **Nagłówek:** afxinet.h  
   
 ##  <a name="cgopherlocator"></a>  CGopherLocator::CGopherLocator  
- Ta funkcja członkowska jest wywoływana w celu utworzenia `CGopherLocator` obiektu.  
+ Ta funkcja członkowska jest wywoływana, aby utworzyć `CGopherLocator` obiektu.  
   
 ```  
 CGopherLocator(const CGopherLocator& ref);
@@ -88,10 +88,10 @@ CGopherLocator(const CGopherLocator& ref);
  Odwołanie do stałej `CGopherLocator` obiektu.  
   
 ### <a name="remarks"></a>Uwagi  
- Nigdy nie twórz `CGopherLocator` obiekt bezpośrednio. Zamiast tego wywołać [CGopherConnection::CreateLocator](../../mfc/reference/cgopherconnection-class.md#createlocator) do tworzenia i zwraca wskaźnik do `CGopherLocator` obiektu.  
+ Nigdy nie twórz `CGopherLocator` obiektu bezpośrednio. Zamiast tego należy wywołać [CGopherConnection::CreateLocator](../../mfc/reference/cgopherconnection-class.md#createlocator) do tworzenia i zwracają wskaźnik do `CGopherLocator` obiektu.  
   
 ##  <a name="getlocatortype"></a>  CGopherLocator::GetLocatorType  
- Wywołanie tej funkcji Członkowskich wybrany typ lokalizatora.  
+ Wywołaj tę funkcję elementu członkowskiego, aby uzyskać Typ lokalizatora.  
   
 ```  
 BOOL GetLocatorType(DWORD& dwRef) const;  
@@ -99,10 +99,10 @@ BOOL GetLocatorType(DWORD& dwRef) const;
   
 ### <a name="parameters"></a>Parametry  
  *dwRef*  
- Odwołanie do `DWORD` który otrzyma Typ lokalizatora. Zobacz **uwagi** dla tabeli typów lokalizatora.  
+ Odwołanie do typu DWORD, który będzie otrzymywać Typ lokalizatora. Zobacz **uwagi** dla tabeli typów lokalizatora.  
   
 ### <a name="return-value"></a>Wartość zwracana  
- Różna od zera, w przypadku powodzenia; w przeciwnym razie 0. W przypadku niepowodzenia wywołania funkcji Win32 [GetLastError](http://msdn.microsoft.com/library/windows/desktop/ms679360) może zostać wywołana w celu ustalenia przyczyny błędu.  
+ Wartość różną od zera, jeśli to się powiedzie; w przeciwnym razie 0. W przypadku niepowodzenia wywołania funkcji Win32 [GetLastError](http://msdn.microsoft.com/library/windows/desktop/ms679360) może zostać wywołana w celu ustalenia przyczyny błędu.  
   
 ### <a name="remarks"></a>Uwagi  
  Typy możliwe są następujące:  
@@ -113,41 +113,41 @@ BOOL GetLocatorType(DWORD& dwRef) const;
 |GOPHER_TYPE_DIRECTORY|Katalog dodatkowe elementy Gopher.|  
 |GOPHER_TYPE_CSO|Serwer CSO książki telefonicznej.|  
 |GOPHER_TYPE_ERROR|Wskazuje na błąd.|  
-|GOPHER_TYPE_MAC_BINHEX|Macintosh pliku w formacie BINHEX.|  
-|GOPHER_TYPE_DOS_ARCHIVE|Plik archiwum DOS.|  
-|GOPHER_TYPE_UNIX_UUENCODED|Plik UUENCODED.|  
+|GOPHER_TYPE_MAC_BINHEX|Dla komputerów Macintosh pliku w formacie BINHEX.|  
+|GOPHER_TYPE_DOS_ARCHIVE|Plik archiwum systemu DOS.|  
+|GOPHER_TYPE_UNIX_UUENCODED|Plik zakodowany w UUENCODE.|  
 |GOPHER_TYPE_INDEX_SERVER|Serwer indeksu.|  
 |GOPHER_TYPE_TELNET|Serwer Telnet.|  
 |GOPHER_TYPE_BINARY|Plik binarny.|  
-|GOPHER_TYPE_REDUNDANT|Zduplikowany serwer. Informacje zawarte w jest duplikatem serwera podstawowego. Serwer główny jest ostatni wpis katalogu, który nie ma typu GOPHER_TYPE_REDUNDANT.|  
+|GOPHER_TYPE_REDUNDANT|Zduplikowane serwera. Informacje zawarte w ciągu jest duplikatem podstawowego serwera. Serwer główny jest ostatni wpis katalogu, które nie mają typu GOPHER_TYPE_REDUNDANT.|  
 |GOPHER_TYPE_TN3270|Serwer TN3270.|  
-|GOPHER_TYPE_GIF|Plik GIF grafiki.|  
+|GOPHER_TYPE_GIF|Plik grafiki GIF.|  
 |GOPHER_TYPE_IMAGE|Plik obrazu.|  
 |GOPHER_TYPE_BITMAP|Plik mapy bitowej.|  
-|GOPHER_TYPE_MOVIE|Filmu.|  
+|GOPHER_TYPE_MOVIE|Plik filmu.|  
 |GOPHER_TYPE_SOUND|Plik dźwiękowy.|  
 |GOPHER_TYPE_HTML|Dokument HTML.|  
 |GOPHER_TYPE_PDF|Plik PDF.|  
 |GOPHER_TYPE_CALENDAR|Plik kalendarza.|  
-|GOPHER_TYPE_INLINE|Wbudowany plik.|  
+|GOPHER_TYPE_INLINE|Plik wbudowany.|  
 |GOPHER_TYPE_UNKNOWN|Typ elementu jest nieznany.|  
-|GOPHER_TYPE_ASK|Poproś + elementu.|  
-|GOPHER_TYPE_GOPHER_PLUS|Gopher + element.|  
+|GOPHER_TYPE_ASK|Poproś + element.|  
+|GOPHER_TYPE_GOPHER_PLUS|Elementu Gopher +.|  
   
 ##  <a name="operator_lpctstr"></a>  CGopherLocator::operator LPCTSTR  
- Ten operator rzutowania przydatne zapewnia efektywną metodę dostępu zawarte w ciągu C zerem `CGopherLocator` obiektu.  
+ Ten operator rzutowania przydatne zapewnia efektywną metodę dostępu zawarte w ciągu C zakończony znakiem null `CGopherLocator` obiektu.  
   
 ```  
 operator LPCTSTR () const;  
 ```  
   
 ### <a name="return-value"></a>Wartość zwracana  
- Znak wskaźnikiem do danych ciągu.  
+ Wskaźnik znaku do danych ciągu.  
   
 ### <a name="remarks"></a>Uwagi  
- Żadne znaki nie są kopiowane; zwracany jest tylko wskaźnik.  
+ Żadne znaki nie są kopiowane; zwracany jest tylko wskaźnikiem.  
   
 ## <a name="see-also"></a>Zobacz też  
- [CObject — klasa](../../mfc/reference/cobject-class.md)   
+ [Klasa CObject](../../mfc/reference/cobject-class.md)   
  [Diagram hierarchii](../../mfc/hierarchy-chart.md)   
  [Klasa CGopherFileFind](../../mfc/reference/cgopherfilefind-class.md)

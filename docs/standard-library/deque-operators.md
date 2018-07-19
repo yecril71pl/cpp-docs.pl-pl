@@ -20,14 +20,14 @@ helpviewer_keywords:
 - std::operator&lt; (deque)
 - std::operator&lt;= (deque)
 - std::operator== (deque)
-ms.openlocfilehash: d4dfa6963e9c8194bd4ee589a1a0adced1f05d0d
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 21fdf5e624634a29d8ed32e004e7fb0d653b86f1
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33846847"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38955218"
 ---
-# <a name="ltdequegt-operators"></a>&lt;deque —&gt; operatory
+# <a name="ltdequegt-operators"></a>&lt;deque —&gt; operatorów
 
 ||||
 |-|-|-|
@@ -36,7 +36,7 @@ ms.locfileid: "33846847"
 
 ## <a name="op_neq"></a>  operator! =
 
-Testy, jeśli obiekt deque — po lewej stronie operatora nie jest taki sam jak obiekt deque — po prawej stronie.
+Sprawdza, czy obiekt deque po lewej stronie operatora nie jest równy obiektowi deque — po prawej stronie.
 
 ```cpp
 bool operator!=(const deque<Type, Allocator>& left, const deque<Type, Allocator>& right);
@@ -44,9 +44,9 @@ bool operator!=(const deque<Type, Allocator>& left, const deque<Type, Allocator>
 
 ### <a name="parameters"></a>Parametry
 
-`left` Obiekt typu `deque`.
+*po lewej stronie* obiektu typu `deque`.
 
-`right` Obiekt typu `deque`.
+*prawy* obiektu typu `deque`.
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -54,7 +54,7 @@ bool operator!=(const deque<Type, Allocator>& left, const deque<Type, Allocator>
 
 ### <a name="remarks"></a>Uwagi
 
-Porównanie deque — obiekty opiera się na parowania porównanie ich elementów. Dwa deque — obiekty są takie same, jeśli mają one taką samą liczbę elementów i ich odpowiednich elementy mają takie same wartości. W przeciwnym razie ich nie są równe.
+Porównanie deque — obiekty opiera się na parowania porównania ich elementów. Dwa deque — obiekty są równe, jeśli mają taką samą liczbę elementów i ich odpowiednie elementy mają te same wartości. W przeciwnym razie są nierówne.
 
 ### <a name="example"></a>Przykład
 
@@ -84,7 +84,7 @@ The deques are not equal.
 
 ## <a name="op_lt"></a>  Operator&lt;
 
-Testy, jeśli obiekt deque — po lewej stronie operatora jest mniejsza niż obiekt deque — po prawej stronie.
+Sprawdza, czy obiekt deque, po lewej stronie operatora jest mniejszy niż obiekt deque — po prawej stronie.
 
 ```cpp
 bool operator<(const deque<Type, Allocator>& left, const deque<Type, Allocator>& right);
@@ -92,17 +92,17 @@ bool operator<(const deque<Type, Allocator>& left, const deque<Type, Allocator>&
 
 ### <a name="parameters"></a>Parametry
 
-`left` Obiekt typu `deque`.
+*po lewej stronie* obiektu typu `deque`.
 
-`right` Obiekt typu `deque`.
+*prawy* obiektu typu `deque`.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-**wartość true,** Jeśli deque — po lewej stronie operatora jest mniejsza niż i nie równa deque — po prawej stronie operatora; w przeciwnym razie **false**.
+**wartość true,** Jeśli deque po lewej stronie operatora jest mniejszy niż i nie równa deque — po prawej stronie operatora; w przeciwnym razie **false**.
 
 ### <a name="remarks"></a>Uwagi
 
-Porównanie deque — obiekty opiera się na parowania porównanie ich elementów. Less — niż relacji między dwoma obiektami jest oparta na porównanie pierwszego pary nierówne elementów.
+Porównanie deque — obiekty opiera się na parowania porównania ich elementów. Mniej-niż relacji między dwoma obiektami opiera się na porównanie pierwszy pary nierówne elementów.
 
 ### <a name="example"></a>Przykład
 
@@ -136,7 +136,7 @@ Deque c1 is less than deque c2.
 
 ## <a name="op_lt_eq"></a>  Operator&lt;=
 
-Testy, jeśli deque — obiekty po lewej stronie operatora jest mniejsza niż lub równe obiektu deque — po prawej stronie.
+Sprawdza, czy deque — obiekt po lewej stronie operatora jest mniejszy niż lub równy obiektowi deque — po prawej stronie.
 
 ```cpp
 bool operator<=(const deque<Type, Allocator>& left, const deque<Type, Allocator>& right);
@@ -144,17 +144,17 @@ bool operator<=(const deque<Type, Allocator>& left, const deque<Type, Allocator>
 
 ### <a name="parameters"></a>Parametry
 
-`left` Obiekt typu `deque`.
+*po lewej stronie* obiektu typu `deque`.
 
-`right` Obiekt typu `deque`.
+*prawy* obiektu typu `deque`.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-**wartość true,** Jeśli deque — po lewej stronie operatora jest mniejsza niż lub równa deque — po prawej stronie operatora, w przeciwnym **false**.
+**wartość true,** Jeśli deque po lewej stronie operatora jest mniejszy niż lub równa deque — po prawej stronie operatora; w przeciwnym **false**.
 
 ### <a name="remarks"></a>Uwagi
 
-Porównanie deque — obiekty opiera się na parowania porównanie ich elementów. Mniejsze niż lub równe do relacji między dwoma obiektami jest oparta na porównanie pierwszego pary nierówne elementów.
+Porównanie deque — obiekty opiera się na parowania porównania ich elementów. Mniejszą lub równą do relacji między dwoma obiektami opiera się na porównaniu pierwszy pary nierówne elementów.
 
 ### <a name="example"></a>Przykład
 
@@ -189,7 +189,7 @@ Deque c1 is less than or equal to deque c2.
 
 ## <a name="op_eq_eq"></a>  operator ==
 
-Testy, jeśli obiekt deque — po lewej stronie operatora jest taki sam jak obiekt deque — po prawej stronie.
+Sprawdza, czy obiekt deque po lewej stronie operatora jest równy obiektowi deque — po prawej stronie.
 
 ```cpp
 bool operator==(const deque<Type, Allocator>& left, const deque<Type, Allocator>& right);
@@ -197,17 +197,17 @@ bool operator==(const deque<Type, Allocator>& left, const deque<Type, Allocator>
 
 ### <a name="parameters"></a>Parametry
 
-`left` Obiekt typu `deque`.
+*po lewej stronie* obiektu typu `deque`.
 
-`right` Obiekt typu `deque`.
+*prawy* obiektu typu `deque`.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-**wartość true,** Jeśli deque — po lewej stronie operatora jest równa deque — po prawej stronie operatora; w przeciwnym razie **false**.
+**wartość true,** Jeśli deque po lewej stronie operatora jest równy deque — po prawej stronie operatora; w przeciwnym **false**.
 
 ### <a name="remarks"></a>Uwagi
 
-Porównanie deque — obiekty opiera się na parowania porównanie ich elementów. Dwa deques są takie same, jeśli mają one taką samą liczbę elementów i ich odpowiednich elementy mają takie same wartości. W przeciwnym razie ich nie są równe.
+Porównanie deque — obiekty opiera się na parowania porównania ich elementów. Dwa deques są takie same, jeśli mają taką samą liczbę elementów i ich odpowiednie elementy mają te same wartości. W przeciwnym razie są nierówne.
 
 ### <a name="example"></a>Przykład
 
@@ -245,7 +245,7 @@ The deques are not equal.
 
 ## <a name="op_gt"></a>  Operator&gt;
 
-Testy, jeśli obiekt deque — po lewej stronie operatora jest większy niż obiekt deque — po prawej stronie.
+Sprawdza, czy obiekt deque po lewej stronie operatora jest większy niż obiekt deque — po prawej stronie.
 
 ```cpp
 bool operator>(const deque<Type, Allocator>& left, const deque<Type, Allocator>& right);
@@ -253,17 +253,17 @@ bool operator>(const deque<Type, Allocator>& left, const deque<Type, Allocator>&
 
 ### <a name="parameters"></a>Parametry
 
-`left` Obiekt typu `deque`.
+*po lewej stronie* obiektu typu `deque`.
 
-`right` Obiekt typu `deque`.
+*prawy* obiektu typu `deque`.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-**wartość true,** Jeśli deque — po lewej stronie operatora jest większa niż deque — po prawej stronie operatora; w przeciwnym razie **false**.
+**wartość true,** Jeśli deque po lewej stronie operatora jest większy niż deque — po prawej stronie operatora; w przeciwnym razie **false**.
 
 ### <a name="remarks"></a>Uwagi
 
-Porównanie deque — obiekty opiera się na parowania porównanie ich elementów. Większa-niż relacji między dwoma obiektami jest oparta na porównanie pierwszego pary nierówne elementów.
+Porównanie deque — obiekty opiera się na parowania porównania ich elementów. Większą-niż relacji między dwoma obiektami opiera się na porównanie pierwszy pary nierówne elementów.
 
 ### <a name="example"></a>Przykład
 
@@ -299,7 +299,7 @@ Deque c1 is greater than deque c2.
 
 ## <a name="op_gt_eq"></a>  Operator&gt;=
 
-Testy, jeśli obiekt deque — po lewej stronie operatora jest większa niż lub równa obiektu deque — po prawej stronie.
+Sprawdza, czy obiekt deque po lewej stronie operatora jest większy lub równy obiektowi deque — po prawej stronie.
 
 ```cpp
 bool operator>=(const deque<Type, Allocator>& left, const deque<Type, Allocator>& right);
@@ -307,17 +307,17 @@ bool operator>=(const deque<Type, Allocator>& left, const deque<Type, Allocator>
 
 ### <a name="parameters"></a>Parametry
 
-`left` Obiekt typu `deque`.
+*po lewej stronie* obiektu typu `deque`.
 
-`right` Obiekt typu `deque`.
+*prawy* obiektu typu `deque`.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-**wartość true,** Jeśli deque — po lewej stronie operatora jest większa niż lub równa deque — po prawej stronie operatora; w przeciwnym razie **false**.
+**wartość true,** Jeśli deque po lewej stronie operatora jest większy niż lub równa deque — po prawej stronie operatora; w przeciwnym **false**.
 
 ### <a name="remarks"></a>Uwagi
 
-Porównanie deque — obiekty opiera się na parowania porównanie ich elementów. Większa niż lub równa relacji między dwoma obiektami opiera się na porównanie pierwszego pary nierówne elementów.
+Porównanie deque — obiekty opiera się na parowania porównania ich elementów. Większa lub równa relacji między dwoma obiektami opiera się na porównaniu pierwszy pary nierówne elementów.
 
 ### <a name="example"></a>Przykład
 
@@ -352,4 +352,4 @@ Deque c1 is greater than or equal to deque c2.
 
 ## <a name="see-also"></a>Zobacz także
 
-[\<deque — >](../standard-library/deque.md)<br/>
+[\<deque >](../standard-library/deque.md)<br/>

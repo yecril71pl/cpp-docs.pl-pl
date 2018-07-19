@@ -33,16 +33,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e8d68723573d3a11565ae32f07bf8899661097c4
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 8468cb290b6845050943159aaa69b9cd000d2bc7
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33846873"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38960297"
 ---
 # <a name="geometricdistribution-class"></a>geometric_distribution — Klasa
 
-Generuje geometrycznych dystrybucji.
+Generuje rozkład geometryczny.
 
 ## <a name="syntax"></a>Składnia
 
@@ -76,13 +76,13 @@ public:
 
 ### <a name="parameters"></a>Parametry
 
-*IntType* domyślnie integer — typ wyniku `int`. Dla typów możliwych [ \<losowe >](../standard-library/random.md).
+*IntType* typ wyniku liczby całkowitej, wartość domyślna to **int**. Aby możliwych typów, zobacz [ \<losowy >](../standard-library/random.md).
 
-*URNG* uniform losowych liczb aparat generatora. Dla typów możliwych [ \<losowe >](../standard-library/random.md).
+*URNG* jednolitego numer generator aparat losowy. Aby możliwych typów, zobacz [ \<losowy >](../standard-library/random.md).
 
 ## <a name="remarks"></a>Uwagi
 
-Klasa szablonu opisuje dystrybucji tworzącego wartości określonych przez użytkownika typu całkowitego z geometrycznych dystrybucji. Poniższe łącza tabeli do artykułów na temat poszczególnych członków.
+Klasa szablonu opisuje dystrybucji, która wytwarza wartości typu całkowitego określone przez użytkownika z rozkład geometryczny. Poniższa tabela zawiera linki do artykułów na temat poszczególnych elementów członkowskich.
 
 ||||
 |-|-|-|
@@ -91,17 +91,17 @@ Klasa szablonu opisuje dystrybucji tworzącego wartości określonych przez uży
 
 Funkcja właściwości `p()` zwraca wartość parametru przechowywanych dystrybucji `p`.
 
-Element członkowski właściwości `param()` Ustawia lub zwraca `param_type` dystrybucji składowanych parametr pakietu.
+Właściwość elementu członkowskiego `param()` Ustawia lub zwraca `param_type` pakiet parametrów przechowywanych dystrybucji.
 
-`min()` i `max()` funkcje Członkowskie zwracają najmniejsza możliwa wynik i największa możliwa wynik, odpowiednio.
+`min()` i `max()` funkcje Członkowskie zwracają najmniejsza możliwa wynik i największych możliwych wyników, odpowiednio.
 
-`reset()` Funkcji członkowskiej odrzuca wszystkie buforowane wartości, tak aby wynik następne wywołanie `operator()` nie zależy od wartości uzyskane z aparatu przed wywołaniem.
+`reset()` Funkcja elementu członkowskiego odrzuca wszystkie wartości z pamięci podręcznej, tak aby wynik następnego wywołania metody `operator()` nie zależy od żadnych wartości uzyskane z aparatu przed wywołaniem.
 
-`operator()` Elementu członkowskiego zwracają wartość następnego wygenerowanego oparty na aparacie URNG, z bieżącego pakietu parametrów lub pakiet określony parametr.
+`operator()` Funkcje Członkowskie zwracają dalej wygenerowaną wartość opartą na aparacie URNG, z bieżącego pakietu parametrów lub pakietu określony parametr.
 
-Aby uzyskać więcej informacji o dystrybucji klasy i ich elementy członkowskie, zobacz [ \<losowe >](../standard-library/random.md).
+Aby uzyskać więcej informacji o dystrybucji klasy i składowe, zobacz [ \<losowy >](../standard-library/random.md).
 
-Aby uzyskać szczegółowe informacje na temat rozkład chi kwadrat, zobacz artykuł Wolfram MathWorld [geometrycznych dystrybucji](http://go.microsoft.com/fwlink/p/?linkid=400529).
+Aby uzyskać szczegółowe informacje na temat rozkład chi-kwadrat, zobacz artykuł Wolfram MathWorld [rozkład geometryczny](http://go.microsoft.com/fwlink/p/?linkid=400529).
 
 ## <a name="example"></a>Przykład
 
@@ -156,7 +156,7 @@ int main()
 }
 ```
 
-Pierwszego testu:
+Pierwszy test:
 
 ```Output
 Use CTRL-Z to bypass data entry and run using default values.
@@ -213,13 +213,13 @@ Distribution for 100 samples:
 
 ## <a name="requirements"></a>Wymagania
 
-**Nagłówek:** \<losowe >
+**Nagłówek:** \<losowy >
 
-**Namespace:** Standard
+**Namespace:** standardowe
 
 ## <a name="geometric_distribution"></a>  geometric_distribution::geometric_distribution
 
-Tworzy dystrybucji.
+Tworzy rozkład.
 
 ```cpp
 explicit geometric_distribution(double p = 0.5);
@@ -230,15 +230,15 @@ explicit geometric_distribution(const param_type& parm);
 
 *p* `p` parametru dystrybucji.
 
-*Parametr* struktury parametr używany do budowy dystrybucji.
+*Parametr* struktury parametr, używane do konstruowania dystrybucji.
 
 ### <a name="remarks"></a>Uwagi
 
 **Warunek wstępny:** `0.0 < p && p < 1.0`
 
-Pierwszy Konstruktor konstrukcji obiektu których przechowywane `p` wartość przechowuje wartość *p*.
+Pierwszy Konstruktor konstruuje obiekt, którego przechowywane `p` wartość przechowuje wartość *p*.
 
-Drugi Konstruktor konstrukcji obiektu, którego parametry przechowywane są inicjowane z *parametr*. Możesz uzyskać i ustawić bieżących parametrów istniejącego dystrybucji przez wywołanie metody `param()` funkcję elementu członkowskiego.
+Drugi Konstruktor konstruuje obiekt, którego przechowywane parametry są inicjowane z *parametr*. Możesz uzyskać i ustawić bieżących parametrów istniejącego dystrybucji przez wywołanie metody `param()` funkcja elementu członkowskiego.
 
 ## <a name="param_type"></a>  geometric_distribution::param_type
 
@@ -259,14 +259,14 @@ struct param_type {
 
 *p* `p` parametru dystrybucji.
 
-*prawy* `param_type` wystąpienia, aby porównać.
+*prawy* `param_type` wystąpienie do porównania.
 
 ### <a name="remarks"></a>Uwagi
 
 **Warunek wstępny:** `0.0 < p && p < 1.0`
 
-Ta struktura może być przekazany do konstruktora klasy dystrybucji przy tworzeniu wystąpienia, do `param()` funkcji członkowskiej, aby ustawić parametry przechowywane istniejących dystrybucji oraz do `operator()` do użycia zamiast przechowywane parametry.
+Ta struktura może być przekazywany do konstruktora klasy dystrybucji przy konkretyzacji, do `param()` funkcję elementu członkowskiego, aby ustawić przechowywanych parametrów istniejącego dystrybucji oraz do `operator()` ma być używany zamiast przechowywanych parametrów.
 
 ## <a name="see-also"></a>Zobacz także
 
-[\<losowe >](../standard-library/random.md)<br/>
+[\<losowy >](../standard-library/random.md)<br/>

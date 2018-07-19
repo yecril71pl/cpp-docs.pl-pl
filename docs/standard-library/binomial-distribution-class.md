@@ -36,16 +36,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f46e2d7f6fd7337965d0b5dcf5b5cfe8d7a53688
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 0266c33731bdbd70fe9c9fb26a33878fc5d1c495
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33846314"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38957688"
 ---
 # <a name="binomialdistribution-class"></a>binomial_distribution — Klasa
 
-Generuje dwumianowy.
+Generuje rozkład dwumianowy.
 
 ## <a name="syntax"></a>Składnia
 
@@ -81,32 +81,32 @@ public:
 
 ### <a name="parameters"></a>Parametry
 
-*IntType* domyślnie integer — typ wyniku `int`. Dla typów możliwych [ \<losowe >](../standard-library/random.md).
+*IntType* typ wyniku liczby całkowitej, wartość domyślna to **int**. Aby możliwych typów, zobacz [ \<losowy >](../standard-library/random.md).
 
-*URNG* uniform losowych liczb aparat generatora. Dla typów możliwych [ \<losowe >](../standard-library/random.md).
+*URNG* jednolitego numer generator aparat losowy. Aby możliwych typów, zobacz [ \<losowy >](../standard-library/random.md).
 
 ## <a name="remarks"></a>Uwagi
 
-Klasa szablonu opisuje dystrybucji, który spowoduje utworzenie wartości typu całkowitego określone przez użytkownika typu lub typu `int` Jeśli nie zostanie podana, rozdzielonych dwumianowy odrębny prawdopodobieństwa. Poniższe łącza tabeli do artykułów na temat poszczególnych członków.
+Klasa szablonu opisuje dystrybucji, który tworzy wartości całkowitego określone przez użytkownika typ lub typ **int** rozkładane Jeśli nie zostanie podana, odrębny prawdopodobieństwa rozkładu dwumianowego. Poniższa tabela zawiera linki do artykułów na temat poszczególnych elementów członkowskich.
 
 ||||
 |-|-|-|
 |[binomial_distribution](#binomial_distribution)|`binomial_distribution::t`|`binomial_distribution::param`|
 |`binomial_distribution::operator()`|`binomial_distribution::p`|[param_type](#param_type)|
 
-Elementy członkowskie właściwości `t()` i `p()` zwrócić dystrybucji obecnie przechowywane wartości parametru `t` i `p` odpowiednio.
+Właściwości elementów członkowskich `t()` i `p()` zwraca aktualnie przechowywana rozkład wartości parametrów *t* i *p* odpowiednio.
 
-Element członkowski właściwości `param()` Ustawia lub zwraca `param_type` dystrybucji składowanych parametr pakietu.
+Właściwość elementu członkowskiego `param()` Ustawia lub zwraca `param_type` pakiet parametrów przechowywanych dystrybucji.
 
-`min()` i `max()` funkcje Członkowskie zwracają najmniejsza możliwa wynik i największa możliwa wynik, odpowiednio.
+`min()` i `max()` funkcje Członkowskie zwracają najmniejsza możliwa wynik i największych możliwych wyników, odpowiednio.
 
-`reset()` Funkcji członkowskiej odrzuca wszystkie buforowane wartości, tak aby wynik następne wywołanie `operator()` nie zależy od wartości uzyskane z aparatu przed wywołaniem.
+`reset()` Funkcja elementu członkowskiego odrzuca wszystkie wartości z pamięci podręcznej, tak aby wynik następnego wywołania metody `operator()` nie zależy od żadnych wartości uzyskane z aparatu przed wywołaniem.
 
-`operator()` Elementu członkowskiego zwracają wartość następnego wygenerowanego oparty na aparacie URNG, z bieżącego pakietu parametrów lub pakiet określony parametr.
+`operator()` Funkcje Członkowskie zwracają dalej wygenerowaną wartość opartą na aparacie URNG, z bieżącego pakietu parametrów lub pakietu określony parametr.
 
-Aby uzyskać więcej informacji o dystrybucji klasy i ich elementy członkowskie, zobacz [ \<losowe >](../standard-library/random.md).
+Aby uzyskać więcej informacji o dystrybucji klasy i składowe, zobacz [ \<losowy >](../standard-library/random.md).
 
-Aby uzyskać szczegółowe informacje na temat dwumianowy odrębny prawdopodobieństwa, zobacz artykuł Wolfram MathWorld [dwumianowy](http://go.microsoft.com/fwlink/p/?linkid=398469).
+Aby uzyskać szczegółowe informacje na temat funkcji dyskretnych prawdopodobieństwa rozkładu dwumianowego, zobacz artykuł Wolfram MathWorld [rozkład dwumianowy](http://go.microsoft.com/fwlink/p/?linkid=398469).
 
 ## <a name="example"></a>Przykład
 
@@ -187,7 +187,7 @@ Histogram for 100 samples:
     12 :
 ```
 
-Druga instalacja:
+Uruchom drugie:
 
 ```Output
 Use CTRL-Z to bypass data entry and run using default values.
@@ -235,13 +235,13 @@ Histogram for 100 samples:
 
 ## <a name="requirements"></a>Wymagania
 
-**Nagłówek:** \<losowe >
+**Nagłówek:** \<losowy >
 
-**Namespace:** Standard
+**Namespace:** standardowe
 
 ## <a name="binomial_distribution"></a>  binomial_distribution::binomial_distribution
 
-Tworzy dystrybucji.
+Tworzy rozkład.
 
 ```cpp
 explicit binomial_distribution(result_type t = 1, double p = 0.5);
@@ -254,15 +254,15 @@ explicit binomial_distribution(const param_type& parm);
 
 *p* `p` parametru dystrybucji.
 
-*Parametr* `param_type` struktury użyta do skonstruowania dystrybucji.
+*Parametr* `param_type` struktura używana do konstruowania dystrybucji.
 
 ### <a name="remarks"></a>Uwagi
 
 **Warunek wstępny:** `0 ≤ t` i `0.0 ≤ p ≤ 1.0`
 
-Pierwszy Konstruktor konstrukcji obiektu których przechowywane `p` wartość przechowuje wartość *p* i których przechowywane `t` wartość zawiera wartość *t*.
+Pierwszy Konstruktor konstruuje obiekt, którego przechowywane *p* wartość przechowuje wartość *p* i którego przechowywane *t* wartość przechowuje wartość *t*.
 
-Drugi Konstruktor konstrukcji obiektu, którego parametry przechowywane są inicjowane z *parametr*. Możesz uzyskać i ustawić bieżących parametrów istniejącego dystrybucji przez wywołanie metody `param()` funkcję elementu członkowskiego.
+Drugi Konstruktor konstruuje obiekt, którego przechowywane parametry są inicjowane z *parametr*. Możesz uzyskać i ustawić bieżących parametrów istniejącego dystrybucji przez wywołanie metody `param()` funkcja elementu członkowskiego.
 
 ## <a name="param_type"></a>  binomial_distribution::param_type
 
@@ -292,8 +292,8 @@ struct param_type {
 
 **Warunek wstępny:** `0 ≤ t` i `0.0 ≤ p ≤ 1.0`
 
-Ta struktura może być przekazany do konstruktora klasy dystrybucji przy tworzeniu wystąpienia, do `param()` funkcji członkowskiej, aby ustawić parametry przechowywane istniejących dystrybucji oraz do `operator()` do użycia zamiast przechowywane parametry.
+Ta struktura może być przekazywany do konstruktora klasy dystrybucji przy konkretyzacji, do `param()` funkcję elementu członkowskiego, aby ustawić przechowywanych parametrów istniejącego dystrybucji oraz do `operator()` ma być używany zamiast przechowywanych parametrów.
 
 ## <a name="see-also"></a>Zobacz także
 
-[\<losowe >](../standard-library/random.md)<br/>
+[\<losowy >](../standard-library/random.md)<br/>

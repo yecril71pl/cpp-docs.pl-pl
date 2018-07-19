@@ -17,16 +17,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: af1db124d7fa73a9483d2c77f0a1e78349224023
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 2d511eb29c081cfbb85770b35e31aab927b2480b
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33864533"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38957124"
 ---
 # <a name="syncpercontainer-class"></a>sync_per_container — Klasa
 
-W tym artykule opisano [filtr synchronizacji](../standard-library/allocators-header.md) zapewnia obiektu osobne dla każdego obiektu przydzielania.
+W tym artykule opisano [filtr synchronizacji](../standard-library/allocators-header.md) zapewniający obiektu pamięci podręcznej osobne dla każdego obiektu programu przydzielania.
 
 ## <a name="syntax"></a>Składnia
 
@@ -40,23 +40,23 @@ class sync_per_container
 
 |Parametr|Opis|
 |---------------|-----------------|
-|`Cache`|Typ pamięci podręcznej skojarzone z filtrem synchronizacji. Może to być [cache_chunklist —](../standard-library/cache-chunklist-class.md), [cache_freelist —](../standard-library/cache-freelist-class.md), lub [cache_suballoc —](../standard-library/cache-suballoc-class.md).|
+|*Cache*|Typ pamięci podręcznej skojarzone z filtrem synchronizacji. Może to być [cache_chunklist](../standard-library/cache-chunklist-class.md), [cache_freelist](../standard-library/cache-freelist-class.md), lub [cache_suballoc](../standard-library/cache-suballoc-class.md).|
 
 ### <a name="member-functions"></a>Funkcje Członkowskie
 
-|Funkcja członkowska|Opis|
+|Funkcja elementu członkowskiego|Opis|
 |-|-|
-|[equals](#equals)|Porównuje dwa pamięci podręcznych pod kątem równości.|
+|[equals](#equals)|Porównuje dwa pamięci podręczne dla równości.|
 
 ## <a name="requirements"></a>Wymagania
 
-**Nagłówek:** \<allocators — >
+**Nagłówek:** \<buforów >
 
-**Namespace:** stdext —
+**Namespace:** stdext
 
 ## <a name="equals"></a>  sync_per_container::Equals
 
-Porównuje dwa pamięci podręcznych pod kątem równości.
+Porównuje dwa pamięci podręczne dla równości.
 
 ```cpp
 bool equals(const sync_per_container<Cache>& Other) const;
@@ -66,12 +66,12 @@ bool equals(const sync_per_container<Cache>& Other) const;
 
 |Parametr|Opis|
 |---------------|-----------------|
-|`Cache`|Buforowany obiekt filtr synchronizacji.|
-|`Other`|Buforowany obiekt do porównania równości.|
+|*Cache*|Buforowany obiekt filtr synchronizacji.|
+|*Inne*|Buforowany obiekt do porównania dla równości.|
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Funkcja członkowska zawsze zwraca `false`.
+Funkcja elementu członkowskiego zwraca zawsze **false**.
 
 ### <a name="remarks"></a>Uwagi
 

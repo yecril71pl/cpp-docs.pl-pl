@@ -1,5 +1,5 @@
 ---
-title: Programowanie przy użyciu CComBSTR (ALT) | Dokumentacja firmy Microsoft
+title: Programowanie przy użyciu CComBSTR (ATL) | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,69 +15,69 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b957cca4ff1af93d3f62ab0bf667462c91b81bba
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: e0cae1e2f05484aeccd76e987c2d63c41aec30f6
+ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32357860"
+ms.lasthandoff: 07/05/2018
+ms.locfileid: "37848447"
 ---
 # <a name="programming-with-ccombstr-atl"></a>Programowanie przy użyciu CComBSTR (ALT)
-Klasy ATL [CComBSTR](../atl/reference/ccombstr-class.md) udostępnia otokę `BSTR` — typ danych. Gdy `CComBSTR` stanowi przydatne narzędzie jest wiele sytuacji, które wymagają ostrożność.  
+Klasy ATL [CComBSTR](../atl/reference/ccombstr-class.md) stanowi otokę typ danych. Gdy `CComBSTR` stanowi przydatne narzędzie, istnieje kilka sytuacji, które wymagają Uwaga.  
   
--   [Problemy z konwersją](#programmingwithccombstr_conversionissues)  
+-   [Problemy przy konwersji](#programmingwithccombstr_conversionissues)  
   
 -   [Problemy z zakresu](#programmingwithccombstr_scopeissues)  
   
--   [Jawne zwalnianie obiektów CComBSTR](#programmingwithccombstr_explicitlyfreeing)  
+-   [Zwalnianie jawne obiektu CComBSTR](#programmingwithccombstr_explicitlyfreeing)  
   
 -   [Przy użyciu CComBSTR obiektów w pętli](#programmingwithccombstr_usingloops)  
   
--   [Problemy przecieków pamięci](#programmingwithccombstr_memoryleaks)  
+-   [Problemy z przeciek pamięci](#programmingwithccombstr_memoryleaks)  
   
-##  <a name="programmingwithccombstr_conversionissues"></a> Problemy z konwersją  
- Mimo że kilka `CComBSTR` metody automatycznie przekonwertuje argument ciągu ANSI na Unicode, metody zawsze zwróci ciągów w formacie Unicode. Aby przekonwertować ciągu wyjściowego ANSI, należy użyć klasy konwersji ATL. Aby uzyskać więcej informacji na ATL — klasy konwersji, zobacz [ATL i makr konwersji MFC ciąg](reference/string-conversion-macros.md).  
+##  <a name="programmingwithccombstr_conversionissues"></a> Problemy przy konwersji  
+ Chociaż kilka `CComBSTR` metody zostaną automatycznie przekonwertowane na zestaw Unicode argument ciąg ANSI, metody zawsze zwróci ciągów formatu Unicode. Aby przekonwertować ciąg wyjściowy ANSI, należy użyć klasy ATL konwersji. Aby uzyskać więcej informacji na temat klasy konwersji ATL, zobacz [ATL i makr konwersji ciągu MFC](reference/string-conversion-macros.md).  
   
 ### <a name="example"></a>Przykład  
  [!code-cpp[NVC_ATL_Utilities#114](../atl/codesnippet/cpp/programming-with-ccombstr-atl_1.cpp)]  
   
- Jeśli używasz literału ciągu do modyfikowania `CComBSTR` obiekt, należy użyć ciągów znaków dwubajtowych. Zmniejsza to niepotrzebnych konwersji.  
+ Jeśli używasz literału ciągu do modyfikowania `CComBSTR` obiektu, należy użyć ciągów znaków dwubajtowych. Zmniejszy to niepotrzebnych konwersji.  
   
 ### <a name="example"></a>Przykład  
  [!code-cpp[NVC_ATL_Utilities#115](../atl/codesnippet/cpp/programming-with-ccombstr-atl_2.cpp)]  
   
 ##  <a name="programmingwithccombstr_scopeissues"></a> Problemy z zakresu  
- Podobnie jak w przypadku każdej dobrze behaved klasy `CComBSTR` zwolni jej zasobów, gdy przechodzi ona poza zakresem. Jeśli funkcja zwraca wskaźnik do `CComBSTR` ciąg, może to powodować problemy, jako wskaźnik będzie odwoływać się do pamięci, który już został zwolniony. W takich sytuacjach należy użyć **kopiowania** metody, jak pokazano poniżej.  
+ Podobnie jak w przypadku każdej dobrze behaved klasy `CComBSTR` spowoduje zwolnienie zasobów, gdy go wykracza poza zakres. Jeśli funkcja zwraca wskaźnik do `CComBSTR` ciągu, może to powodować problemy, ponieważ wskaźnik będzie odwoływać się do pamięci, który został już zwolniony z pamięci. W takich przypadkach należy użyć `Copy` metody, jak pokazano poniżej.  
   
 ### <a name="example"></a>Przykład  
  [!code-cpp[NVC_ATL_Utilities#116](../atl/codesnippet/cpp/programming-with-ccombstr-atl_3.cpp)]  
   
-##  <a name="programmingwithccombstr_explicitlyfreeing"></a> Jawne zwalnianie obiektów CComBSTR  
- Istnieje możliwość jawnie wolne ciąg znajdujący się w `CComBSTR` obiekt przed obiekt wykracza poza zakres. Jeśli ciąg zostanie zwolniona, `CComBSTR` obiektu jest nieprawidłowy.  
+##  <a name="programmingwithccombstr_explicitlyfreeing"></a> Zwalnianie jawne obiektu CComBSTR  
+ Można jawnie zwolnić ciąg znajdujący się w `CComBSTR` obiektu, zanim obiekt trafia zakresu. Jeśli ciąg zostanie zwolniony, `CComBSTR` obiekt jest nieprawidłowy.  
   
 ### <a name="example"></a>Przykład  
  [!code-cpp[NVC_ATL_Utilities#117](../atl/codesnippet/cpp/programming-with-ccombstr-atl_4.cpp)]  
   
 ##  <a name="programmingwithccombstr_usingloops"></a> Przy użyciu CComBSTR obiektów w pętli  
- Jako `CComBSTR` klasy przydziela buforu w celu wykonywania pewnych operacji, takich jak `+=` operator lub **Append** metody, nie zaleca się wykonanie manipulowanie ciągami wewnątrz ścisłej pętli. W takich sytuacjach `CStringT` zapewnia lepszą wydajność.  
+ Jako `CComBSTR` klasy przydziela bufor wykonywania pewnych operacji, takich jak `+=` operatora lub `Append` metody, nie zaleca się wykonanie manipulowanie ciągami wewnątrz pętli. W takich sytuacjach `CStringT` zapewnia lepszą wydajność.  
   
 ### <a name="example"></a>Przykład  
  [!code-cpp[NVC_ATL_Utilities#118](../atl/codesnippet/cpp/programming-with-ccombstr-atl_5.cpp)]  
   
-##  <a name="programmingwithccombstr_memoryleaks"></a> Problemy przecieków pamięci  
- Przekazywanie adresu zainicjowane `CComBSTR` mógł działać jako **[out]** parametr powoduje, że przeciek pamięci.  
+##  <a name="programmingwithccombstr_memoryleaks"></a> Problemy z przeciek pamięci  
+ Przekazywanie adresu zainicjowane `CComBSTR` działanie jako **[out]** parametru powoduje, że przeciek pamięci.  
   
- W poniższym przykładzie ciąg przeznaczona do przechowywania ciąg `"Initialized"` przeciek kiedy funkcja `MyGoodFunction` zamienia ciąg.  
+ W poniższym przykładzie ciąg jest przeznaczona do przechowywania ciągu `"Initialized"` przeciek kiedy funkcja `MyGoodFunction` zamienia ciąg.  
   
  [!code-cpp[NVC_ATL_Utilities#119](../atl/codesnippet/cpp/programming-with-ccombstr-atl_6.cpp)]  
   
- Aby uniknąć systemu, należy wywołać **pusty** metody na istniejącej `CComBSTR` obiektów przed przekazaniem adresów jako **[out]** parametru.  
+ Aby uniknąć przecieku, należy wywołać `Empty` metody na istniejących `CComBSTR` obiektów przed przekazaniem jako adres **[out]** parametru.  
   
- Należy pamiętać, że ten sam kod nie może powodować przeciek, jeśli parametr funkcji **[w, limit]**.  
+ Należy pamiętać, że ten sam kod nie mogłoby spowodować przeciek, jeśli parametr funkcji **[w, zewnętrzne]**.  
   
 ## <a name="see-also"></a>Zobacz też  
  [Pojęcia](../atl/active-template-library-atl-concepts.md)   
- [Klasa CStringT](../atl-mfc-shared/reference/cstringt-class.md)   
+ [CStringT, klasa](../atl-mfc-shared/reference/cstringt-class.md)   
  [wstring](../standard-library/basic-string-class.md)   
  [Makra konwersji ciągów](../atl/reference/string-conversion-macros.md)
 

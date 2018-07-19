@@ -1,5 +1,5 @@
 ---
-title: Klasa is_move_assignable | Dokumentacja firmy Microsoft
+title: is_move_assignable, klasa | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,16 +16,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: adda28e4c6cc2a7ba7a387e125bd873b2107b687
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 3af5cbeae84b5b582077f543a39cfe408575bc71
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33850375"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38960061"
 ---
-# <a name="ismoveassignable-class"></a>is_move_assignable — klasa
+# <a name="ismoveassignable-class"></a>is_move_assignable, klasa
 
-Testy, jeśli typ można przenieść przypisane.
+Sprawdza, czy typ może być przejście przypisane.
 
 ## <a name="syntax"></a>Składnia
 
@@ -36,17 +36,17 @@ struct is_move_assignable;
 
 ### <a name="parameters"></a>Parametry
 
-`T` Typ do zapytania.
+*T* typ do zapytania.
 
 ## <a name="remarks"></a>Uwagi
 
-Typ jest przeniesienie można przypisać, jeśli odwołania do r-wartości na typ można przypisać do odwołania do typu. Predykat typów jest odpowiednikiem `is_assignable<T&, T&&>`. Przenieś można przypisać typy referenceable typów skalarnych i operatory przypisania przenoszenia typy klas, którzy generowane przez kompilator lub zdefiniowanej przez użytkownika.
+Typ jest możliwy do przypisania przeniesienia, jeśli odwołania rvalue do tego typu mogą być przypisane do odwołanie do typu. Predykat typów jest odpowiednikiem `is_assignable<T&, T&&>`. Przenieś można przypisać typy obejmują którego można się odwoływać typów skalarnych i typów klasy, które mają generowanych przez kompilator lub zdefiniowanych przez użytkownika operatorów przypisania przenoszenia.
 
 ## <a name="requirements"></a>Wymagania
 
 **Nagłówek:** \<type_traits >
 
-**Namespace:** Standard
+**Namespace:** standardowe
 
 ## <a name="see-also"></a>Zobacz także
 

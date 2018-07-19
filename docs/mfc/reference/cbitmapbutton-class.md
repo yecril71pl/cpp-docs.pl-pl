@@ -24,15 +24,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7ef1c1a328b785c189a2d7d4a2eb28ec3995a810
-ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
+ms.openlocfilehash: ab7147e360d98eb054062b2c2e14ee0ef7febf91
+ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/26/2018
-ms.locfileid: "36952183"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37339063"
 ---
 # <a name="cbitmapbutton-class"></a>Klasa CBitmapButton
-Tworzy łącznik formanty etykietą map bitowych obrazów zamiast tekstu.  
+Tworzy przycisk kontrolek oznaczonych bitowymi obrazów zamiast tekstu mapami.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -52,57 +52,57 @@ class CBitmapButton : public CButton
   
 |Nazwa|Opis|  
 |----------|-----------------|  
-|[CBitmapButton::AutoLoad](#autoload)|Kojarzy przycisk w oknie dialogowym z obiektu `CBitmapButton` klasy ładuje bitmap(s) według nazwy i rozmiar przycisk, aby dopasować mapy bitowej.|  
-|[CBitmapButton::LoadBitmaps](#loadbitmaps)|Inicjuje obiekt ładowania co najmniej jeden zasób o nazwie mapy bitowej z pliku zasobów aplikacji i dołączanie do obiektu map bitowych.|  
-|[CBitmapButton::SizeToContent](#sizetocontent)|Rozmiary przycisk, aby pomieścić mapy bitowej.|  
+|[CBitmapButton::AutoLoad](#autoload)|Kojarzy przycisk w oknie dialogowym z obiektu `CBitmapButton` klasy, ładuje bitmap(s) według nazwy i rozmiar przycisku, aby dopasować mapę bitową.|  
+|[CBitmapButton::LoadBitmaps](#loadbitmaps)|Inicjuje obiekt podczas ładowania co najmniej jeden zasób mapy bitowej o nazwie z pliku zasobów aplikacji i dołączanie bitmap do obiektu.|  
+|[CBitmapButton::SizeToContent](#sizetocontent)|Ustawia rozmiar przycisku aby pomieścić mapy bitowej.|  
   
 ## <a name="remarks"></a>Uwagi  
- `CBitmapButton` obiekty zawierają maksymalnie cztery mapy bitowe, zawierające obrazy do innych stanów przycisku można założyć: się (lub normalna), dół (lub wybranych), fokus i wyłączone. Tylko pierwszy mapy bitowej jest wymagana. inne są opcjonalne.  
+ `CBitmapButton` obiekty zawierają maksymalnie cztery mapy bitowe, co zawierają obrazy w różnych regionach, można założyć, przycisk: górę (lub normalny) dół (lub wybrane) skupia się i wyłączone. Tylko pierwszy mapy bitowej jest wymagana. inne są opcjonalne.  
   
- Obrazy dla przycisków mapy bitowej obejmują obramowania wokół obrazu, a także samego obrazu. Obramowanie zwykle odgrywa rolę podczas wyświetlania stanu przycisku. Na przykład mapy bitowej dla stanu ukierunkowanych zazwyczaj jest podobny do konfigurowania stanu, ale wstawki kreskowane prostokąta, obramowanie lub grubości linii ciągłej na granicy. Mapa bitowa dla osób niepełnosprawnych stanu zwykle podobny do jednego dla stan up, lecz jest niższe kontrastu (np. menu na wygaszone lub wyszarzonymi polami wyboru).  
+ Przycisk mapy bitowej obrazy obejmują obramowanie wokół obrazu, a także sam obraz. Obramowanie zwykle odgrywa rolę w przedstawiający stan przycisku. Na przykład mapa bitowa fokusem stanu zazwyczaj jest podobny do stanu pracy, ale wstawki kreskowane prostokąta, obramowanie lub Gruba linia ciągła na granicy. Mapa bitowa dla wyłączony stanu zwykle podobny do jednego dla się stan, lecz jest niższe kontrast (np. wybór wygaszone lub wygaszone menu).  
   
- Te mapy bitowe mogą być o dowolnym rozmiarze, ale wszystkie są traktowane, tak jakby były to taki sam rozmiar jak mapa bitowa w górę stanu.  
+ Te mapy bitowe mogą być dowolnego rozmiaru, ale wszystkie są traktowane tak, jakby były one taki sam rozmiar jak mapy bitowej dla stanu pracy.  
   
- Różne aplikacje wymagać różnych kombinacji map bitowych:  
+ Różne aplikacje wymagają różnych kombinacji map bitowych:  
   
 |W górę|W dół|Fokus|Wyłączone|Aplikacja|  
 |--------|----------|-------------|--------------|-----------------|  
 |×||||Mapy bitowej|  
-|×|×|||Przycisk bez **ws_tabstop —** stylu|  
-|×|×|×|×|Przycisk okna dialogowego z wszystkich stanów|  
-|×|×|×||Przycisk okna dialogowego z **ws_tabstop —** stylu|  
+|×|×|||Przycisk bez WS_TABSTOP stylu|  
+|×|×|×|×|Przycisk okna dialogowego z wszystkie stany|  
+|×|×|×||Okno dialogowe przycisk ze stylem WS_TABSTOP|  
   
- Podczas tworzenia kontrolkę przycisku mapy bitowej należy skonfigurować **bs_ownerdraw —** stylu, aby określić, czy przycisk jest rysowane przez właściciela. Powoduje to, że system Windows do wysyłania `WM_MEASUREITEM` i `WM_DRAWITEM` wiadomości dla przycisku; ramach obsługi tych wiadomości i zarządza wygląd przycisku dla Ciebie.  
+ Podczas tworzenia kontrolki mapy bitowej przycisku, ustaw styl BS_OWNERDRAW, aby określić, czy przycisk jest rysowane przez właściciela. Powoduje to Windows wysyłać komunikaty WM_MEASUREITEM i WM_DRAWITEM dla przycisku; struktura obsługuje te komunikaty i zarządza wyglądu przycisku dla Ciebie.  
   
-### <a name="to-create-a-bitmap-button-control-in-a-windows-client-area"></a>Aby utworzyć kontrolkę przycisku mapy bitowej w obszaru klienckiego okna  
+### <a name="to-create-a-bitmap-button-control-in-a-windows-client-area"></a>Aby utworzyć kontrolkę przycisk mapy bitowej w obszaru klienckiego okna  
   
-1.  Tworzenie obrazów mapy bitowej 1 do 4 dla przycisku.  
+1.  Utwórz jednej do czterech obrazy mapy bitowej dla przycisku.  
   
-2.  Utworzyć [CBitmapButton](#cbitmapbutton) obiektu.  
+2.  Konstruowania [CBitmapButton](#cbitmapbutton) obiektu.  
   
-3.  Wywołanie [Utwórz](../../mfc/reference/cbutton-class.md#create) funkcja Utwórz kontrolkę przycisku systemu Windows i dołączenie go do `CBitmapButton` obiektu.  
+3.  Wywołaj [Utwórz](../../mfc/reference/cbutton-class.md#create) funkcję, aby utworzyć formant przycisku Windows i dołączyć go do `CBitmapButton` obiektu.  
   
-4.  Wywołanie [LoadBitmaps](#loadbitmaps) funkcji członkowskiej załadować zasoby mapy bitowej po przycisk mapy bitowej jest tworzony.  
+4.  Wywołaj [LoadBitmaps](#loadbitmaps) funkcja elementu członkowskiego, które można załadować zasobów mapy bitowej, po jest tworzony przycisk mapy bitowej.  
   
-### <a name="to-include-a-bitmap-button-control-in-a-dialog-box"></a>Aby uwzględnić kontrolkę przycisku mapy bitowej w oknie dialogowym  
+### <a name="to-include-a-bitmap-button-control-in-a-dialog-box"></a>Aby dołączyć kontrolki przycisku mapy bitowej w oknie dialogowym  
   
-1.  Tworzenie obrazów mapy bitowej 1 do 4 dla przycisku.  
+1.  Utwórz jednej do czterech obrazy mapy bitowej dla przycisku.  
   
-2.  Tworzenie szablonu okna dialogowego z przyciskiem rysowania przez właściciela odległości przycisk mapy bitowej. Rozmiar przycisku w szablonie nie ma znaczenia.  
+2.  Tworzenie szablonu okna dialogowego z przyciskiem rysowanym przez właściciela odległości przycisk mapy bitowej. Rozmiar przycisku w szablonie nie ma znaczenia.  
   
-3.  Takie jak ustawienie przycisku na wartość " **MYIMAGE**" i zdefiniuj symbol dla przycisku, takich jak **IDC_MYIMAGE**.  
+3.  Ustaw napis na przycisku z wartością, taką jak "MYIMAGE", a następnie zdefiniować symbol dla przycisku, takich jak IDC_MYIMAGE.  
   
-4.  W aplikacji skrypt zasobu Nadaj każdej obrazy utworzone dla przycisku wykonane przez dodanie jednej litery "U", "D", "F", identyfikator lub "X" (na górę, dół, fokus i wyłączony) na ciąg używany dla podpisu przycisku w kroku 3. Dla podpisu przycisku " **MYIMAGE**," na przykład, będzie identyfikatorów " **MYIMAGEU**," " **MYIMAGED**," " **MYIMAGEF**," i " **MYIMAGEX**. " Możesz **musi** Podaj identyfikator użytkownika map bitowych w podwójny cudzysłów. W przeciwnym razie edytora zasobów przypisze całkowitą zasobu i MFC zakończy się niepowodzeniem podczas ładowania obrazu.  
+4.  W skrypcie zasobów aplikacji Nadaj każdej obrazów utworzonych dla przycisku tworzony przez dołączenie jednej litery "U", "D", "F", identyfikator lub "X" (na górę, dół, fokus i wyłączone) na ciąg używany dla podpisu przycisku w kroku 3. Napis na przycisku "MYIMAGE", na przykład identyfikatory będzie "MYIMAGEU", "MYIMAGED", "MYIMAGEF" i "MYIMAGEX." Możesz **musi** . Określ identyfikator usługi map bitowych w cudzysłów. W przeciwnym razie Edytor zasobów przypisze całkowitą zasobu i MFC zakończy się niepowodzeniem podczas ładowania obrazu.  
   
-5.  W aplikacji klasy okien dialogowych (pochodną `CDialog`), Dodaj `CBitmapButton` obiektu elementu członkowskiego.  
+5.  W aplikacji klasy okien dialogowych (pochodną `CDialog`), Dodaj `CBitmapButton` elementu członkowskiego obiektu.  
   
-6.  W `CDialog` obiektu [OnInitDialog](../../mfc/reference/cdialog-class.md#oninitdialog) wywołaniu procedury, `CBitmapButton` obiektu [automatyczne ładowanie](#autoload) działanie, używając jako parametry Identyfikatora formantu przycisku i `CDialog` obiektu **to** wskaźnika.  
+6.  W `CDialog` obiektu [OnInitDialog](../../mfc/reference/cdialog-class.md#oninitdialog) wywołaniu procedury, `CBitmapButton` obiektu [załaduj](#autoload) funkcję, za pomocą jako parametry identyfikator formantu przycisku i `CDialog` obiektu **to** wskaźnika.  
   
- Aby obsłużyć komunikaty powiadomień systemu Windows, takich jak BN_CLICKED, wysyłany przez kontrolkę przycisku mapy bitowej do elementu nadrzędnego (zazwyczaj klasą pochodną `CDialog`), Dodaj do `CDialog`-obiektu pochodne mapy komunikatów członka wpisu i obsługi wiadomości Funkcja dla każdego komunikatu. Powiadomienia wysyłane przez `CBitmapButton` obiektu są takie same jak wysyłane przez [CButton](../../mfc/reference/cbutton-class.md) obiektu.  
+ Jeśli chcesz obsługiwać komunikaty powiadomień, Windows, takie jak BN_CLICKED, wysyłany przez kontrolkę przycisku mapy bitowej do elementu nadrzędnego (zazwyczaj klasą pochodną `CDialog`), Dodaj do `CDialog`— obiekt pochodne mapy komunikatów wejścia i obsługi wiadomości elementu członkowskiego Funkcja dla każdego komunikatu. Powiadomienia wysyłane przez `CBitmapButton` obiektu są takie same, jak wysyłane przez [CButton](../../mfc/reference/cbutton-class.md) obiektu.  
   
- Klasa [ctoolbar —](../../mfc/reference/ctoolbar-class.md) mają inne podejście do przycisków mapy bitowej.  
+ Klasa [CToolBar](../../mfc/reference/ctoolbar-class.md) mają inne podejście do przycisków mapy bitowej.  
   
- Aby uzyskać więcej informacji na temat `CBitmapButton`, zobacz [formanty](../../mfc/controls-mfc.md).  
+ Aby uzyskać więcej informacji na temat `CBitmapButton`, zobacz [formantów](../../mfc/controls-mfc.md).  
   
 ## <a name="inheritance-hierarchy"></a>Hierarchia dziedziczenia  
  [CObject](../../mfc/reference/cobject-class.md)  
@@ -119,7 +119,7 @@ class CBitmapButton : public CButton
  **Nagłówek:** afxext.h  
   
 ##  <a name="autoload"></a>  CBitmapButton::AutoLoad  
- Kojarzy przycisk w oknie dialogowym z obiektu `CBitmapButton` klasy ładuje bitmap(s) według nazwy i rozmiar przycisk, aby dopasować mapy bitowej.  
+ Kojarzy przycisk w oknie dialogowym z obiektu `CBitmapButton` klasy, ładuje bitmap(s) według nazwy i rozmiar przycisku, aby dopasować mapę bitową.  
   
 ```  
 BOOL AutoLoad(
@@ -135,10 +135,10 @@ BOOL AutoLoad(
  Wskaźnik do obiektu, który jest właścicielem przycisku.  
   
 ### <a name="return-value"></a>Wartość zwracana  
- Różna od zera, w przypadku powodzenia; w przeciwnym razie 0.  
+ Wartość różną od zera, jeśli to się powiedzie; w przeciwnym razie 0.  
   
 ### <a name="remarks"></a>Uwagi  
- Użyj `AutoLoad` funkcji, aby zainicjować przycisk rysowania przez właściciela, w oknie dialogowym jako przycisk mapy bitowej. Instrukcje dotyczące używania tej funkcji znajdują się w uwagi dla `CBitmapButton` klasy.  
+ Użyj `AutoLoad` funkcji, aby zainicjować przycisk rysowania przez właściciela, w oknie dialogowym jako przycisk mapy bitowej. Instrukcje dotyczące korzystania z tej funkcji znajdują się w uwagi dla `CBitmapButton` klasy.  
   
 ### <a name="example"></a>Przykład  
  [!code-cpp[NVC_MFCControlLadenDialog#75](../../mfc/codesnippet/cpp/cbitmapbutton-class_1.cpp)]  
@@ -151,13 +151,13 @@ CBitmapButton();
 ```  
   
 ### <a name="remarks"></a>Uwagi  
- Po utworzeniu C++ `CBitmapButton` obiekt, należy wywołać [CButton::Create](../../mfc/reference/cbutton-class.md#create) Utwórz kontrolkę przycisku systemu Windows i dołączenie go do `CBitmapButton` obiektu.  
+ Po utworzeniu C++ `CBitmapButton` obiektu, wywołaj [CButton::Create](../../mfc/reference/cbutton-class.md#create) do tworzenia kontrolki przycisku Windows i dołącz je do `CBitmapButton` obiektu.  
   
 ### <a name="example"></a>Przykład  
  [!code-cpp[NVC_MFCControlLadenDialog#57](../../mfc/codesnippet/cpp/cbitmapbutton-class_2.cpp)]  
   
 ##  <a name="loadbitmaps"></a>  CBitmapButton::LoadBitmaps  
- Użyj tej funkcji, jeśli chcesz załadować bitmapy zidentyfikowane przy użyciu ich nazw zasobów lub numerów Identyfikacyjnych lub gdy nie można użyć `AutoLoad` działać, ponieważ na przykład tworzysz przycisk mapy bitowej, który nie jest częścią okno dialogowe.  
+ Użyj tej funkcji załadować obrazy mapy bitowej identyfikowane przez ich nazwy zasobu lub numery identyfikatorów lub jeśli nie możesz używać `AutoLoad` działać, ponieważ na przykład utworzysz przycisk mapy bitowej, który nie jest częścią okno dialogowe.  
   
 ```  
 BOOL LoadBitmaps(
@@ -176,37 +176,37 @@ BOOL LoadBitmaps(
   
 ### <a name="parameters"></a>Parametry  
  *lpszBitmapResource*  
- Wskazuje zerem ciągu zawierającego nazwę mapy bitowej do normalnego przycisku Mapa bitowa lub "informacje" o stanie. Wymagana.  
+ Wskazuje ciąg zakończony wartością null zawierający nazwę mapy bitowej Normalny przycisk mapy bitowej lub "stan up". Wymagane.  
   
  *lpszBitmapResourceSel*  
- Punkty zerem ciąg zawierający nazwę mapy bitowej dla przycisku mapy bitowej na wybranych lub w "stanie dół". Może być **NULL**.  
+ Wskazuje ciąg zakończony zerem, który zawiera nazwę mapy bitowej dla wybranych przycisk mapy bitowej lub "stan działa". Może mieć wartości NULL.  
   
  *lpszBitmapResourceFocus*  
- Wskazuje ciąg zakończony zerem, która zawiera nazwę mapy bitowej dla przycisku mapy bitowej fokus stanu. Może być **NULL**.  
+ Wskazuje ciąg zakończony znakiem null, który zawiera nazwę mapy bitowej dla przycisku kontrolki mapy bitowej koncentruje się stan. Może mieć wartości NULL.  
   
  *lpszBitmapResourceDisabled*  
- Wskazuje zerem ciągu zawierającego nazwę mapy bitowej dla przycisku mapy bitowej stan wyłączenia. Może być **NULL**.  
+ Wyłączone punkty ciąg zakończony znakiem null, który zawiera nazwę mapy bitowej dla przycisku kontrolki mapy bitowej. Może mieć wartości NULL.  
   
  *nIDBitmapResource*  
- Określa identyfikator zasobu zasobu mapy bitowej do normalnego przycisku Mapa bitowa lub "informacje" o stanie. Wymagana.  
+ Określa identyfikator zasobu zasób mapy bitowej, przycisk mapy bitowej normalny lub "stan up". Wymagane.  
   
  *nIDBitmapResourceSel*  
- Określa identyfikator zasobu zasobu mapy bitowej przez wybrany przycisk mapa bitowa lub "w dół" stan. Może być równa 0.  
+ Określa identyfikator zasobu zasób mapy bitowej wybranych przycisk mapy bitowej lub "stan działa". Może mieć wartość 0.  
   
  *nIDBitmapResourceFocus*  
- Określa zasób identyfikator zasobu mapy bitowej dla stanu ukierunkowanych przycisk mapy bitowej. Może być równa 0.  
+ Określa identyfikator zasobu zasób mapy bitowej dla stanu wąsko zdefiniowany przycisk mapy bitowej. Może mieć wartość 0.  
   
  *nIDBitmapResourceDisabled*  
- Określa identyfikator zasobu mapy bitowej zasobu w stanie wyłączenia przycisk mapy bitowej. Może być równa 0.  
+ Określa identyfikator zasobu zasobu mapy bitowej w stanie wyłączenia przycisk mapy bitowej. Może mieć wartość 0.  
   
 ### <a name="return-value"></a>Wartość zwracana  
- Różna od zera, w przypadku powodzenia; w przeciwnym razie 0.  
+ Wartość różną od zera, jeśli to się powiedzie; w przeciwnym razie 0.  
   
 ### <a name="example"></a>Przykład  
  [!code-cpp[NVC_MFCControlLadenDialog#58](../../mfc/codesnippet/cpp/cbitmapbutton-class_3.cpp)]  
   
 ##  <a name="sizetocontent"></a>  CBitmapButton::SizeToContent  
- Wywołanie tej funkcji, aby zmienić rozmiar przycisku mapy bitowej do rozmiaru mapy bitowej.  
+ Wywołaj tę funkcję, aby zmienić rozmiar przycisku mapy bitowej do rozmiaru mapy bitowej.  
   
 ```  
 void SizeToContent();
@@ -216,7 +216,7 @@ void SizeToContent();
  [!code-cpp[NVC_MFCControlLadenDialog#59](../../mfc/codesnippet/cpp/cbitmapbutton-class_4.cpp)]  
   
 ## <a name="see-also"></a>Zobacz też  
- [Przykładowe MFC CTRLTEST](../../visual-cpp-samples.md)   
+ [Próbki MFC CTRLTEST](../../visual-cpp-samples.md)   
  [Klasa CButton](../../mfc/reference/cbutton-class.md)   
  [Wykres hierarchii](../../mfc/hierarchy-chart.md)
 

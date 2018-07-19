@@ -17,41 +17,41 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e84e26bae83bd131b53d10e4561ddb60854a8a5e
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 661735e91084bad45553de71e80a599afd674028
+ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33378337"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37336829"
 ---
 # <a name="persistence-of-ole-controls"></a>Stan trwały formantów OLE
-Jeden możliwości formantów OLE jest właściwość trwałości (lub serializacji), co pozwala kontrolkę OLE do odczytu lub zapisu wartości właściwości do i z pliku lub strumienia. Aplikacji kontenera można użyć serializacji do przechowywania wartości właściwości formantu, nawet po aplikacji został zniszczony formantu. Wartości właściwości formantu OLE następnie można odczytać z pliku lub strumienia, gdy nowe wystąpienie kontrolki jest tworzona w późniejszym czasie.  
+Jeden możliwości formantów OLE jest właściwość trwałość (lub serializacji), co pozwala kontrolkę OLE do odczytu lub zapisu wartości właściwości, do i z pliku lub strumienia. Aplikacja kontenera można użyć serializacji do przechowywania wartości właściwości kontrolki, nawet po zakończeniu aplikacja ma zniszczone formantu. Wartości właściwości kontrolki OLE może następnie zostać odczytany z pliku lub strumienia, gdy nowe wystąpienie kontrolki jest tworzona w późniejszym czasie.  
   
 ### <a name="persistence-of-ole-controls"></a>Stan trwały formantów OLE  
   
 |||  
 |-|-|  
-|[Px_blob —](#px_blob)|Zamienia właściwość formantu, która przechowuje dane dużego obiektu binarnego (BLOB).|  
-|[Px_bool —](#px_bool)|Zamienia właściwość formantu typu **BOOL**.|  
-|[Px_color —](#px_color)|Zamienia właściwość kolor formantu.|  
-|[Px_currency —](#px_currency)|Zamienia właściwość formantu typu **CY**.|  
-|[Px_datapath —](#px_datapath)|Zamienia właściwość formantu typu `CDataPathProperty`.|  
-|[Px_double —](#px_double)|Zamienia właściwość formantu typu **podwójne**.|  
+|[Px_blob —](#px_blob)|Zamienia właściwości kontrolki, która przechowuje dane dużych obiektów binarnych (BLOB).|  
+|[Px_bool —](#px_bool)|Wymienia właściwość formantu typu **BOOL**.|  
+|[Px_color —](#px_color)|Zamienia właściwość color, kontrolki.|  
+|[Px_currency —](#px_currency)|Wymienia właściwość formantu typu **CY**.|  
+|[Px_datapath —](#px_datapath)|Wymienia właściwość formantu typu `CDataPathProperty`.|  
+|[Px_double —](#px_double)|Wymienia właściwość formantu typu **double**.|  
 |[Px_font —](#px_font)|Zamienia właściwość czcionki formantu.|  
-|[Px_float —](#px_float)|Zamienia właściwość formantu typu **float**.|  
-|[Px_iunknown —](#px_iunknown)|Zamienia właściwości formantu niezdefiniowanego typu.|  
-|[Px_long —](#px_long)|Zamienia właściwość formantu typu **długi**.|  
-|[Px_picture —](#px_picture)|Zamienia właściwość obraz formantu.|  
-|[Px_short —](#px_short)|Zamienia właściwość formantu typu **krótki**.|  
-|[Px_ulong —](#px_ulong)|Zamienia właściwość formantu typu **ULONG**.|  
-|[Px_ushort —](#px_ushort)|Zamienia właściwość formantu typu **USHORT**.|  
-|[PXstring](#px_string)|Zamienia właściwości formantu ciąg znaków.|  
-|[Px_vbxfontconvert —](#px_vbxfontconvert)|Zamienia właściwości powiązanych z czcionki formantu VBX do właściwość czcionki formantu OLE.|  
+|[Px_float —](#px_float)|Wymienia właściwość formantu typu **float**.|  
+|[Px_iunknown —](#px_iunknown)|Zamienia niezdefiniowanego typu właściwości formantu.|  
+|[Px_long —](#px_long)|Wymienia właściwość formantu typu **długie**.|  
+|[Px_picture —](#px_picture)|Zamienia właściwość obrazu formantu.|  
+|[Px_short —](#px_short)|Wymienia właściwość formantu typu **krótki**.|  
+|[Px_ulong —](#px_ulong)|Wymienia właściwość formantu typu **ULONG**.|  
+|[Px_ushort —](#px_ushort)|Wymienia właściwość formantu typu **USHORT**.|  
+|[PXstring](#px_string)|Zamienia właściwość formantu w postaci ciągu znaków.|  
+|[Px_vbxfontconvert —](#px_vbxfontconvert)|Zamienia właściwości powiązanych z czcionki kontrolkę VBX do właściwości czcionki kontrolki OLE.|  
   
- Ponadto `AfxOleTypeMatchGuid` globalne funkcja służy do testowania dopasowanie między `TYPEDESC` i danym identyfikatorem GUID.  
+ Ponadto `AfxOleTypeMatchGuid` funkcja globalna znajduje się do testowania TYPEDESC zgodne z podanym identyfikatorem GUID.  
   
 ##  <a name="px_blob"></a>  Px_blob —  
- Wywołanie tej funkcji w ramach formantu `DoPropExchange` funkcji członkowskiej do serializacji lub zainicjować właściwość, która przechowuje dane dużego obiektu binarnego (BLOB).  
+ Wywołaj tę funkcję, w ramach kontroli nad `DoPropExchange` funkcja elementu członkowskiego do serializacji lub zainicjuj właściwość, która przechowuje dane dużych obiektów binarnych (BLOB).  
   
 ```  
  
@@ -69,34 +69,34 @@ hBlobDefault
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `pPX`  
- Wskaźnik do [CPropExchange](../../mfc/reference/cpropexchange-class.md) obiektu (zwykle jest przekazywana jako parametr `DoPropExchange`).  
+ *pPX*  
+ Wskaźnik do [CPropExchange](../../mfc/reference/cpropexchange-class.md) obiektu (zwykle jest przekazywany jako parametr do `DoPropExchange`).  
   
- `pszPropName`  
- Nazwa właściwości są wymieniane.  
+ *pszPropName*  
+ Nazwa właściwości wymianie.  
   
- `hBlob`  
- Odwołanie do zmiennej, w którym przechowywana jest właściwość (zazwyczaj zmiennej członkowskiej klasy).  
+ *hBlob*  
+ Odwołanie do zmiennej, w której są przechowywane właściwości (zazwyczaj zmienną składową klasy).  
   
- `hBlobDefault`  
- Wartość domyślna właściwości.  
+ *hBlobDefault*  
+ Wartość domyślna dla właściwości.  
   
 ### <a name="return-value"></a>Wartość zwracana  
- Różna od zera, jeśli wymiany zakończyło się pomyślnie; 0 w przypadku niepowodzenia.  
+ Wartość różną od zera, jeśli wymiany powiodła się. 0 w przypadku niepowodzenia.  
   
 ### <a name="remarks"></a>Uwagi  
- Wartość właściwości będzie można z zapisu lub odczytu zmienna odwołuje się `hBlob`, gdzie to właściwe. Ta zmienna powinien być inicjowany do **NULL** przed wywołaniem początkowo `PX_Blob` po raz pierwszy (zazwyczaj można to zrobić w Konstruktorze formantu). Jeśli `hBlobDefault` jest określony, będzie on używany jako wartość domyślna właściwości. Ta wartość jest używana, jeśli z jakiegokolwiek powodu, proces inicjowania lub serializacji formantu nie powiedzie się.  
+ Wartość właściwości będzie odczytać lub zapisywane w zmiennej, odwołuje się *hBlob*, odpowiednio. Ta zmienna powinna zostać zainicjowana na wartość NULL, przed wywołaniem początkowo `PX_Blob` po raz pierwszy (zazwyczaj można to zrobić w Konstruktorze formantu). Jeśli *hBlobDefault* jest określony, będzie służyć jako wartość domyślna właściwości. Ta wartość jest używana, jeśli z jakiegokolwiek powodu, proces inicjowania lub serializacji formantu nie powiedzie się.  
   
- Uchwyty `hBlob` i `hBlobDefault` odwoływać się do bloku pamięci, która zawiera następujące:  
+ Uchwyty *hBlob* i *hBlobDefault* odnoszą się do bloku pamięci, która zawiera następujące czynności:  
   
--   A `DWORD` zawierającą w bajtach długość danych binarnych, poniżej, a następnie natychmiast przez  
+-   DWORD, zawierającą długości w bajtach, danych binarnych, poniżej, a następnie natychmiast przez  
   
--   Blok pamięci zawierający dane binarne.  
+-   Blok pamięci zawierającej dane binarne.  
   
- Należy pamiętać, że `PX_Blob` spowoduje przydzielenie pamięci przy użyciu systemu Windows [działanie funkcji GlobalAlloc](http://msdn.microsoft.com/library/windows/desktop/aa366574) interfejsu API, podczas ładowania właściwości typu obiektu BLOB. Jest odpowiedzialny za zwolnienie tej pamięci. W związku z tym powinny wywoływać destruktor formantu [GlobalFree](http://msdn.microsoft.com/library/windows/desktop/aa366579) na żadnej właściwości typu obiektu BLOB dojścia do zwolnienia Konfigurowanie wszystkie pamięci przydzielona do formantu.  
+ Należy pamiętać, że `PX_Blob` spowoduje przydzielenie pamięci, przy użyciu Windows [działanie funkcji GlobalAlloc](http://msdn.microsoft.com/library/windows/desktop/aa366574) interfejsu API, podczas ładowania właściwości typu obiektu BLOB. Odpowiedzialność za zwalniania tej pamięci. W związku z tym, należy wywołać destruktor kontroli nad [GlobalFree](http://msdn.microsoft.com/library/windows/desktop/aa366579) dowolne właściwości typu obiektu BLOB uchwytów, aby zwolnić Konfigurowanie przydzielania pamięci na Twoją kontrolą.  
   
 ##  <a name="px_bool"></a>  Px_bool —  
- Wywołanie tej funkcji w ramach formantu `DoPropExchange` funkcji członkowskiej do serializacji lub zainicjować właściwość typu **BOOL**.  
+ Wywołaj tę funkcję, w ramach kontroli nad `DoPropExchange` funkcja elementu członkowskiego do serializacji lub zainicjuj właściwość typu wartość logiczna.  
   
 ```  
  
@@ -120,26 +120,26 @@ bValue  ,
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `pPX`  
- Wskaźnik do [CPropExchange](../../mfc/reference/cpropexchange-class.md) obiektu (zwykle jest przekazywana jako parametr `DoPropExchange`).  
+ *pPX*  
+ Wskaźnik do [CPropExchange](../../mfc/reference/cpropexchange-class.md) obiektu (zwykle jest przekazywany jako parametr do `DoPropExchange`).  
   
- `pszPropName`  
- Nazwa właściwości są wymieniane.  
+ *pszPropName*  
+ Nazwa właściwości wymianie.  
   
- `bValue`  
- Odwołanie do zmiennej, w którym przechowywana jest właściwość (zazwyczaj zmiennej członkowskiej klasy).  
+ *bDane wartości*  
+ Odwołanie do zmiennej, w której są przechowywane właściwości (zazwyczaj zmienną składową klasy).  
   
- `bDefault`  
- Wartość domyślna właściwości.  
+ *bPoziom domyślny*  
+ Wartość domyślna dla właściwości.  
   
 ### <a name="return-value"></a>Wartość zwracana  
- Różna od zera, jeśli wymiany zakończyło się pomyślnie; 0 w przypadku niepowodzenia.  
+ Wartość różną od zera, jeśli wymiany powiodła się. 0 w przypadku niepowodzenia.  
   
 ### <a name="remarks"></a>Uwagi  
- Wartość właściwości będzie można z zapisu lub odczytu zmienna odwołuje się `bValue`, gdzie to właściwe. Jeśli `bDefault` jest określony, będzie on używany jako wartość domyślna właściwości. Ta wartość jest używana, jeśli z jakiegokolwiek powodu, niepowodzenia procesu serializacji formantu.  
+ Wartość właściwości będzie odczytać lub zapisywane w zmiennej, odwołuje się *bDane wartości*, odpowiednio. Jeśli *bPoziom domyślny* jest określony, będzie służyć jako wartość domyślna właściwości. Ta wartość jest używana, jeśli z jakiegokolwiek powodu, procesem serializacji formantu nie powiedzie się.  
   
 ##  <a name="px_color"></a>  Px_color —  
- Wywołanie tej funkcji w ramach formantu `DoPropExchange` funkcji członkowskiej do serializacji lub zainicjować właściwość typu **OLE_COLOR**.  
+ Wywołaj tę funkcję, w ramach kontroli nad `DoPropExchange` funkcja elementu członkowskiego do serializacji lub zainicjuj właściwość typu OLE_COLOR.  
   
 ```  
  
@@ -162,26 +162,26 @@ clrDefault);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `pPX`  
- Wskaźnik do [CPropExchange](../../mfc/reference/cpropexchange-class.md) obiektu (zwykle jest przekazywana jako parametr `DoPropExchange`).  
+ *pPX*  
+ Wskaźnik do [CPropExchange](../../mfc/reference/cpropexchange-class.md) obiektu (zwykle jest przekazywany jako parametr do `DoPropExchange`).  
   
- `pszPropName`  
- Nazwa właściwości są wymieniane.  
+ *pszPropName*  
+ Nazwa właściwości wymianie.  
   
- `clrValue`  
- Odwołanie do zmiennej, w którym przechowywana jest właściwość (zazwyczaj zmiennej członkowskiej klasy).  
+ *clrValue*  
+ Odwołanie do zmiennej, w której są przechowywane właściwości (zazwyczaj zmienną składową klasy).  
   
- `clrDefault`  
+ *clrDefault*  
  Wartość domyślna właściwości, zdefiniowaną przez dewelopera kontrolek.  
   
 ### <a name="return-value"></a>Wartość zwracana  
- Różna od zera, jeśli wymiany zakończyło się pomyślnie; 0 w przypadku niepowodzenia.  
+ Wartość różną od zera, jeśli wymiany powiodła się. 0 w przypadku niepowodzenia.  
   
 ### <a name="remarks"></a>Uwagi  
- Wartość właściwości będzie można z zapisu lub odczytu zmienna odwołuje się `clrValue`, gdzie to właściwe. Jeśli `clrDefault` jest określony, będzie on używany jako wartość domyślna właściwości. Ta wartość jest używana, jeśli z jakiegokolwiek powodu, niepowodzenia procesu serializacji formantu.  
+ Wartość właściwości będzie odczytać lub zapisywane w zmiennej, odwołuje się *clrValue*, odpowiednio. Jeśli *clrDefault* jest określony, będzie służyć jako wartość domyślna właściwości. Ta wartość jest używana, jeśli z jakiegokolwiek powodu, procesem serializacji formantu nie powiedzie się.  
   
 ##  <a name="px_currency"></a>  Px_currency —  
- Wywołanie tej funkcji w ramach formantu `DoPropExchange` funkcji członkowskiej do serializacji lub zainicjować właściwość typu **waluty**.  
+ Wywołaj tę funkcję, w ramach kontroli nad `DoPropExchange` funkcja elementu członkowskiego do serializacji lub zainicjuj właściwość typu **waluty**.  
   
 ```  
  
@@ -205,26 +205,26 @@ cyValue  ,
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `pPX`  
- Wskaźnik do [CPropExchange](../../mfc/reference/cpropexchange-class.md) obiektu (zwykle jest przekazywana jako parametr `DoPropExchange`).  
+ *pPX*  
+ Wskaźnik do [CPropExchange](../../mfc/reference/cpropexchange-class.md) obiektu (zwykle jest przekazywany jako parametr do `DoPropExchange`).  
   
- `pszPropName`  
- Nazwa właściwości są wymieniane.  
+ *pszPropName*  
+ Nazwa właściwości wymianie.  
   
- `cyValue`  
- Odwołanie do zmiennej, w którym przechowywana jest właściwość (zazwyczaj zmiennej członkowskiej klasy).  
+ *cyValue*  
+ Odwołanie do zmiennej, w której są przechowywane właściwości (zazwyczaj zmienną składową klasy).  
   
- `cyDefault`  
- Wartość domyślna właściwości.  
+ *cyDefault*  
+ Wartość domyślna dla właściwości.  
   
 ### <a name="return-value"></a>Wartość zwracana  
- Różna od zera, jeśli wymiany zakończyło się pomyślnie; 0 w przypadku niepowodzenia.  
+ Wartość różną od zera, jeśli wymiany powiodła się. 0 w przypadku niepowodzenia.  
   
 ### <a name="remarks"></a>Uwagi  
- Wartość właściwości będzie można z zapisu lub odczytu zmienna odwołuje się `cyValue`, gdzie to właściwe. Jeśli `cyDefault` jest określony, będzie on używany jako wartość domyślna właściwości. Ta wartość jest używana, jeśli z jakiegokolwiek powodu, niepowodzenia procesu serializacji formantu.  
+ Wartość właściwości będzie odczytać lub zapisywane w zmiennej, odwołuje się *cyValue*, odpowiednio. Jeśli *cyDefault* jest określony, będzie służyć jako wartość domyślna właściwości. Ta wartość jest używana, jeśli z jakiegokolwiek powodu, procesem serializacji formantu nie powiedzie się.  
   
 ##  <a name="px_datapath"></a>  Px_datapath —  
- Wywołanie tej funkcji w ramach formantu `DoPropExchange` funkcji członkowskiej do serializacji lub zainicjować właściwość ścieżki danych typu [CDataPathProperty](../../mfc/reference/cdatapathproperty-class.md).  
+ Wywołaj tę funkcję, w ramach kontroli nad `DoPropExchange` funkcja elementu członkowskiego do serializacji lub zainicjować właściwości ścieżki danych typu [CDataPathProperty](../../mfc/reference/cdatapathproperty-class.md).  
   
 ```  
  
@@ -244,23 +244,23 @@ pPX,
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `pPX`  
- Wskaźnik do [CPropExchange](../../mfc/reference/cpropexchange-class.md) obiektu (zwykle jest przekazywana jako parametr `DoPropExchange`).  
+ *pPX*  
+ Wskaźnik do [CPropExchange](../../mfc/reference/cpropexchange-class.md) obiektu (zwykle jest przekazywany jako parametr do `DoPropExchange`).  
   
- `pszPropName`  
- Nazwa właściwości są wymieniane.  
+ *pszPropName*  
+ Nazwa właściwości wymianie.  
   
- `dataPathProperty`  
- Odwołanie do zmiennej, w którym przechowywana jest właściwość (zazwyczaj zmiennej członkowskiej klasy).  
+ *dataPathProperty*  
+ Odwołanie do zmiennej, w której są przechowywane właściwości (zazwyczaj zmienną składową klasy).  
   
 ### <a name="return-value"></a>Wartość zwracana  
- Różna od zera, jeśli wymiany zakończyło się pomyślnie; 0 w przypadku niepowodzenia.  
+ Wartość różną od zera, jeśli wymiany powiodła się. 0 w przypadku niepowodzenia.  
   
 ### <a name="remarks"></a>Uwagi  
- Właściwości ścieżki danych implementuje właściwości asynchronicznej formantu. Wartość właściwości będzie można z zapisu lub odczytu zmienna odwołuje się `dataPathProperty`, gdzie to właściwe.  
+ Właściwości ścieżki danych implementuje właściwości kontrolki asynchronicznego. Wartość właściwości będzie odczytać lub zapisywane w zmiennej, odwołuje się *dataPathProperty*, odpowiednio.  
   
 ##  <a name="px_double"></a>  Px_double —  
- Wywołanie tej funkcji w ramach formantu `DoPropExchange` funkcji członkowskiej do serializacji lub zainicjować właściwość typu **podwójne**.  
+ Wywołaj tę funkcję, w ramach kontroli nad `DoPropExchange` funkcja elementu członkowskiego do serializacji lub zainicjuj właściwość typu **double**.  
   
 ```  
  
@@ -284,26 +284,26 @@ doubleValue  ,
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `pPX`  
- Wskaźnik do [CPropExchange](../../mfc/reference/cpropexchange-class.md) obiektu (zwykle jest przekazywana jako parametr `DoPropExchange`).  
+ *pPX*  
+ Wskaźnik do [CPropExchange](../../mfc/reference/cpropexchange-class.md) obiektu (zwykle jest przekazywany jako parametr do `DoPropExchange`).  
   
- `pszPropName`  
- Nazwa właściwości są wymieniane.  
+ *pszPropName*  
+ Nazwa właściwości wymianie.  
   
- `doubleValue`  
- Odwołanie do zmiennej, w którym przechowywana jest właściwość (zazwyczaj zmiennej członkowskiej klasy).  
+ *doubleValue*  
+ Odwołanie do zmiennej, w której są przechowywane właściwości (zazwyczaj zmienną składową klasy).  
   
- `doubleDefault`  
- Wartość domyślna właściwości.  
+ *doubleDefault*  
+ Wartość domyślna dla właściwości.  
   
 ### <a name="return-value"></a>Wartość zwracana  
- Różna od zera, jeśli wymiany zakończyło się pomyślnie; 0 w przypadku niepowodzenia.  
+ Wartość różną od zera, jeśli wymiany powiodła się. 0 w przypadku niepowodzenia.  
   
 ### <a name="remarks"></a>Uwagi  
- Wartość właściwości jest odczytu lub zapisu odwołuje się zmiennej `doubleValue`, gdzie to właściwe. Jeśli `doubleDefault` jest określony, będzie on używany jako wartość domyślna właściwości. Ta wartość jest używana, jeśli z jakiegokolwiek powodu, niepowodzenia procesu serializacji formantu.  
+ Wartość właściwości jest odczytywany lub zapisywany do zmiennej, odwołuje się *doubleValue*, odpowiednio. Jeśli *doubleDefault* jest określony, będzie służyć jako wartość domyślna właściwości. Ta wartość jest używana, jeśli z jakiegokolwiek powodu, procesem serializacji formantu nie powiedzie się.  
   
 ##  <a name="px_font"></a>  Px_font —  
- Wywołanie tej funkcji w ramach formantu `DoPropExchange` funkcji członkowskiej do serializacji lub zainicjować właściwość czcionki typu.  
+ Wywołaj tę funkcję, w ramach kontroli nad `DoPropExchange` funkcja elementu członkowskiego do serializacji lub zainicjuj właściwość Typ czcionki.  
   
 ```  
  
@@ -327,29 +327,29 @@ pFontDispAmbient
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `pPX`  
- Wskaźnik do [CPropExchange](../../mfc/reference/cpropexchange-class.md) obiektu (zwykle jest przekazywana jako parametr `DoPropExchange`).  
+ *pPX*  
+ Wskaźnik do [CPropExchange](../../mfc/reference/cpropexchange-class.md) obiektu (zwykle jest przekazywany jako parametr do `DoPropExchange`).  
   
- `pszPropName`  
- Nazwa właściwości są wymieniane.  
+ *pszPropName*  
+ Nazwa właściwości wymianie.  
   
- `font`  
+ *Czcionka*  
  Odwołanie do `CFontHolder` obiekt, który zawiera właściwość czcionki.  
   
- `pFontDesc`  
- Wskaźnik do **FONTDESC** struktura zawierająca wartości do użycia w inicjowanie domyślnego stanu właściwość czcionki, w przypadku których `pFontDispAmbient` jest **NULL**.  
+ *pFontDesc*  
+ Wskaźnik do `FONTDESC` struktura zawierająca wartości, które mają być używane w inicjowanie domyślnego stanu właściwość czcionki, w przypadku których *pFontDispAmbient* ma wartość NULL.  
   
- `pFontDispAmbient`  
- Wskaźnik do **IFontDisp** interfejsu czcionki do użycia w inicjowanie domyślnego stanu właściwość czcionki.  
+ *pFontDispAmbient*  
+ Wskaźnik do `IFontDisp` interfejsu czcionki do użycia w inicjowanie domyślnego stanu właściwość czcionki.  
   
 ### <a name="return-value"></a>Wartość zwracana  
- Różna od zera, jeśli wymiany zakończyło się pomyślnie; 0 w przypadku niepowodzenia.  
+ Wartość różną od zera, jeśli wymiany powiodła się. 0 w przypadku niepowodzenia.  
   
 ### <a name="remarks"></a>Uwagi  
- Wartość właściwości jest odczytu lub zapisu do `font`, `CFontHolder` odwołać, jeśli to możliwe. Jeśli `pFontDesc` i `pFontDispAmbient` są określone, są one używane do inicjowania wartość domyślna właściwości, gdy jest wymagane. Te wartości są używane, jeśli z jakiegokolwiek powodu, niepowodzenia procesu serializacji formantu. Zazwyczaj należy przekazać **NULL** dla `pFontDesc` i otoczenia wartość zwrócona przez `COleControl::AmbientFont` dla `pFontDispAmbient`. Należy pamiętać, że obiekt czcionki zwracany przez `COleControl::AmbientFont` musi zostać zwolniona przez wywołanie do **IFontDisp::Release** funkcję elementu członkowskiego.  
+ Wartość właściwości jest odczytywany lub zapisywany do `font`, `CFontHolder` odwołanie, jeśli to możliwe. Jeśli *pFontDesc* i *pFontDispAmbient* są określone, są one używane do inicjowania właściwości wartość domyślna, gdy potrzebne. Te wartości są używane, jeśli z jakiegokolwiek powodu, procesem serializacji formantu nie powiedzie się. Zazwyczaj przekazać wartości NULL *pFontDesc* i otoczenia wartość zwrócona przez obiekt `COleControl::AmbientFont` dla *pFontDispAmbient*. Należy zauważyć, że obiekt czcionki zwracany przez `COleControl::AmbientFont` muszą zostać zwolnione przez wywołanie `IFontDisp::Release` funkcja elementu członkowskiego.  
   
 ##  <a name="px_float"></a>  Px_float —  
- Wywołanie tej funkcji w ramach formantu `DoPropExchange` funkcji członkowskiej do serializacji lub zainicjować właściwość typu **float**.  
+ Wywołaj tę funkcję, w ramach kontroli nad `DoPropExchange` funkcja elementu członkowskiego do serializacji lub zainicjuj właściwość typu **float**.  
   
 ```  
  
@@ -373,26 +373,26 @@ floatValue  ,
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `pPX`  
- Wskaźnik do [CPropExchange](../../mfc/reference/cpropexchange-class.md) obiektu (zwykle jest przekazywana jako parametr `DoPropExchange`).  
+ *pPX*  
+ Wskaźnik do [CPropExchange](../../mfc/reference/cpropexchange-class.md) obiektu (zwykle jest przekazywany jako parametr do `DoPropExchange`).  
   
- `pszPropName`  
- Nazwa właściwości są wymieniane.  
+ *pszPropName*  
+ Nazwa właściwości wymianie.  
   
- `floatValue`  
- Odwołanie do zmiennej, w którym przechowywana jest właściwość (zazwyczaj zmiennej członkowskiej klasy).  
+ *floatValue*  
+ Odwołanie do zmiennej, w której są przechowywane właściwości (zazwyczaj zmienną składową klasy).  
   
- `floatDefault`  
- Wartość domyślna właściwości.  
+ *floatDefault*  
+ Wartość domyślna dla właściwości.  
   
 ### <a name="return-value"></a>Wartość zwracana  
- Różna od zera, jeśli wymiany zakończyło się pomyślnie; 0 w przypadku niepowodzenia.  
+ Wartość różną od zera, jeśli wymiany powiodła się. 0 w przypadku niepowodzenia.  
   
 ### <a name="remarks"></a>Uwagi  
- Wartość właściwości jest odczytu lub zapisu odwołuje się zmiennej `floatValue`, gdzie to właściwe. Jeśli `floatDefault` jest określony, będzie on używany jako wartość domyślna właściwości. Ta wartość jest używana, jeśli z jakiegokolwiek powodu, niepowodzenia procesu serializacji formantu.  
+ Wartość właściwości jest odczytywany lub zapisywany do zmiennej, odwołuje się *floatValue*, odpowiednio. Jeśli *floatDefault* jest określony, będzie służyć jako wartość domyślna właściwości. Ta wartość jest używana, jeśli z jakiegokolwiek powodu, procesem serializacji formantu nie powiedzie się.  
   
 ##  <a name="px_iunknown"></a>  Px_iunknown —  
- Wywołanie tej funkcji w ramach formantu `DoPropExchange` funkcji członkowskiej do serializacji lub zainicjować reprezentowanego przez obiekt o właściwości **IUnknown**-interfejsu pochodnego.  
+ Wywołaj tę funkcję, w ramach kontroli nad `DoPropExchange` funkcja elementu członkowskiego do serializacji lub zainicjować właściwość reprezentowana przez obiekt `IUnknown`-pochodnych interfejsu.  
   
 ```  
  
@@ -412,29 +412,29 @@ pUnkDefault
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `pPX`  
- Wskaźnik do [CPropExchange](../../mfc/reference/cpropexchange-class.md) obiektu (zwykle jest przekazywana jako parametr `DoPropExchange`).  
+ *pPX*  
+ Wskaźnik do [CPropExchange](../../mfc/reference/cpropexchange-class.md) obiektu (zwykle jest przekazywany jako parametr do `DoPropExchange`).  
   
- `pszPropName`  
- Nazwa właściwości są wymieniane.  
+ *pszPropName*  
+ Nazwa właściwości wymianie.  
   
  *pUnk*  
- Odwołanie do zmiennej z interfejsem obiekt reprezentujący wartość właściwości.  
+ Odwołanie do zmiennej zawierający interfejs obiekt reprezentujący wartość właściwości.  
   
- `iid`  
- Identyfikator interfejsu wskazujący, który interfejs obiektu właściwości jest używany przez formant.  
+ *IID*  
+ Identyfikator interfejsu, wskazujący, który interfejs obiektu właściwość jest używana przez kontrolkę.  
   
- `pUnkDefault`  
- Wartość domyślna właściwości.  
+ *pUnkDefault*  
+ Wartość domyślna dla właściwości.  
   
 ### <a name="return-value"></a>Wartość zwracana  
- Różna od zera, jeśli wymiany zakończyło się pomyślnie; 0 w przypadku niepowodzenia.  
+ Wartość różną od zera, jeśli wymiany powiodła się. 0 w przypadku niepowodzenia.  
   
 ### <a name="remarks"></a>Uwagi  
- Wartość właściwości jest odczytu lub zapisu odwołuje się zmiennej *pUnk*odpowiednio. Jeśli `pUnkDefault` jest określony, będzie on używany jako wartość domyślna właściwości. Ta wartość jest używana, jeśli z jakiegokolwiek powodu, niepowodzenia procesu serializacji formantu.  
+ Wartość właściwości jest odczytywany lub zapisywany do zmiennej, odwołuje się *pUnk*, odpowiednio. Jeśli *pUnkDefault* jest określony, będzie służyć jako wartość domyślna właściwości. Ta wartość jest używana, jeśli z jakiegokolwiek powodu, procesem serializacji formantu nie powiedzie się.  
   
 ##  <a name="px_long"></a>  Px_long —  
- Wywołanie tej funkcji w ramach formantu `DoPropExchange` funkcji członkowskiej do serializacji lub zainicjować właściwość typu **długi**.  
+ Wywołaj tę funkcję, w ramach kontroli nad `DoPropExchange` funkcja elementu członkowskiego do serializacji lub zainicjuj właściwość typu **długie**.  
   
 ```  
  
@@ -458,26 +458,26 @@ lValue  ,
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `pPX`  
- Wskaźnik do [CPropExchange](../../mfc/reference/cpropexchange-class.md) obiektu (zwykle jest przekazywana jako parametr `DoPropExchange`).  
+ *pPX*  
+ Wskaźnik do [CPropExchange](../../mfc/reference/cpropexchange-class.md) obiektu (zwykle jest przekazywany jako parametr do `DoPropExchange`).  
   
- `pszPropName`  
- Nazwa właściwości są wymieniane.  
+ *pszPropName*  
+ Nazwa właściwości wymianie.  
   
- `lValue`  
- Odwołanie do zmiennej, w którym przechowywana jest właściwość (zazwyczaj zmiennej członkowskiej klasy).  
+ *l-wartości*  
+ Odwołanie do zmiennej, w której są przechowywane właściwości (zazwyczaj zmienną składową klasy).  
   
- `lDefault`  
- Wartość domyślna właściwości.  
+ *lDefault*  
+ Wartość domyślna dla właściwości.  
   
 ### <a name="return-value"></a>Wartość zwracana  
- Różna od zera, jeśli wymiany zakończyło się pomyślnie; 0 w przypadku niepowodzenia.  
+ Wartość różną od zera, jeśli wymiany powiodła się. 0 w przypadku niepowodzenia.  
   
 ### <a name="remarks"></a>Uwagi  
- Wartość właściwości jest odczytu lub zapisu odwołuje się zmiennej `lValue`, gdzie to właściwe. Jeśli `lDefault` jest określony, będzie on używany jako wartość domyślna właściwości. Ta wartość jest używana, jeśli z jakiegokolwiek powodu, niepowodzenia procesu serializacji formantu.  
+ Wartość właściwości jest odczytywany lub zapisywany do zmiennej, odwołuje się *l-wartości*, odpowiednio. Jeśli *lDefault* jest określony, będzie służyć jako wartość domyślna właściwości. Ta wartość jest używana, jeśli z jakiegokolwiek powodu, procesem serializacji formantu nie powiedzie się.  
   
 ##  <a name="px_picture"></a>  Px_picture —  
- Wywołanie tej funkcji w ramach formantu `DoPropExchange` funkcji członkowskiej do serializacji lub zainicjować właściwość obraz formantu.  
+ Wywołaj tę funkcję, w ramach kontroli nad `DoPropExchange` funkcja elementu członkowskiego do serializacji lub zainicjować właściwość obraz kontrolki.  
   
 ```  
  
@@ -501,26 +501,26 @@ pict  ,
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `pPX`  
- Wskaźnik do [CPropExchange](../../mfc/reference/cpropexchange-class.md) obiektu (zwykle jest przekazywana jako parametr `DoPropExchange`).  
+ *pPX*  
+ Wskaźnik do [CPropExchange](../../mfc/reference/cpropexchange-class.md) obiektu (zwykle jest przekazywany jako parametr do `DoPropExchange`).  
   
- `pszPropName`  
- Nazwa właściwości są wymieniane.  
+ *pszPropName*  
+ Nazwa właściwości wymianie.  
   
- `pict`  
- Odwołanie do [CPictureHolder](../../mfc/reference/cpictureholder-class.md) obiektu, w którym przechowywana jest właściwość (zazwyczaj zmiennej członkowskiej klasy).  
+ *PICT*  
+ Odwołanie do [CPictureHolder](../../mfc/reference/cpictureholder-class.md) przechowywania właściwości obiektu (zazwyczaj zmienną składową klasy).  
   
- `pictDefault`  
- Wartość domyślna właściwości.  
+ *pictDefault*  
+ Wartość domyślna dla właściwości.  
   
 ### <a name="return-value"></a>Wartość zwracana  
- Różna od zera, jeśli wymiany zakończyło się pomyślnie; 0 w przypadku niepowodzenia.  
+ Wartość różną od zera, jeśli wymiany powiodła się. 0 w przypadku niepowodzenia.  
   
 ### <a name="remarks"></a>Uwagi  
- Wartość właściwości jest odczytu lub zapisu odwołuje się zmiennej `pict`, gdzie to właściwe. Jeśli `pictDefault` jest określony, będzie on używany jako wartość domyślna właściwości. Ta wartość jest używana, jeśli z jakiegokolwiek powodu, niepowodzenia procesu serializacji formantu.  
+ Wartość właściwości jest odczytywany lub zapisywany do zmiennej, odwołuje się *pict*, odpowiednio. Jeśli *pictDefault* jest określony, będzie służyć jako wartość domyślna właściwości. Ta wartość jest używana, jeśli z jakiegokolwiek powodu, procesem serializacji formantu nie powiedzie się.  
   
 ##  <a name="px_short"></a>  Px_short —  
- Wywołanie tej funkcji w ramach formantu `DoPropExchange` funkcji członkowskiej do serializacji lub zainicjować właściwość typu **krótki**.  
+ Wywołaj tę funkcję, w ramach kontroli nad `DoPropExchange` funkcja elementu członkowskiego do serializacji lub zainicjuj właściwość typu **krótki**.  
   
 ```  
  
@@ -544,26 +544,26 @@ sValue  ,
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `pPX`  
- Wskaźnik do [CPropExchange](../../mfc/reference/cpropexchange-class.md) obiektu (zwykle jest przekazywana jako parametr `DoPropExchange`).  
+ *pPX*  
+ Wskaźnik do [CPropExchange](../../mfc/reference/cpropexchange-class.md) obiektu (zwykle jest przekazywany jako parametr do `DoPropExchange`).  
   
- `pszPropName`  
- Nazwa właściwości są wymieniane.  
+ *pszPropName*  
+ Nazwa właściwości wymianie.  
   
- `sValue`  
- Odwołanie do zmiennej, w którym przechowywana jest właściwość (zazwyczaj zmiennej członkowskiej klasy).  
+ *sValue*  
+ Odwołanie do zmiennej, w której są przechowywane właściwości (zazwyczaj zmienną składową klasy).  
   
- `sDefault`  
- Wartość domyślna właściwości.  
+ *sDefault*  
+ Wartość domyślna dla właściwości.  
   
 ### <a name="return-value"></a>Wartość zwracana  
- Różna od zera, jeśli wymiany zakończyło się pomyślnie; 0 w przypadku niepowodzenia.  
+ Wartość różną od zera, jeśli wymiany powiodła się. 0 w przypadku niepowodzenia.  
   
 ### <a name="remarks"></a>Uwagi  
- Wartość właściwości jest odczytu lub zapisu odwołuje się zmiennej `sValue`, gdzie to właściwe. Jeśli `sDefault` jest określony, będzie on używany jako wartość domyślna właściwości. Ta wartość jest używana, jeśli z jakiegokolwiek powodu, niepowodzenia procesu serializacji formantu.  
+ Wartość właściwości jest odczytywany lub zapisywany do zmiennej, odwołuje się *sValue*, odpowiednio. Jeśli *sDefault* jest określony, będzie służyć jako wartość domyślna właściwości. Ta wartość jest używana, jeśli z jakiegokolwiek powodu, procesem serializacji formantu nie powiedzie się.  
   
 ##  <a name="px_ulong"></a>  Px_ulong —  
- Wywołanie tej funkcji w ramach formantu `DoPropExchange` funkcji członkowskiej do serializacji lub zainicjować właściwość typu **ULONG**.  
+ Wywołaj tę funkcję, w ramach kontroli nad `DoPropExchange` funkcja elementu członkowskiego do serializacji lub zainicjuj właściwość typu **ULONG**.  
   
 ```  
  
@@ -587,26 +587,26 @@ ulValue  ,
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `pPX`  
- Wskaźnik do [CPropExchange](../../mfc/reference/cpropexchange-class.md) obiektu (zwykle jest przekazywana jako parametr `DoPropExchange`).  
+ *pPX*  
+ Wskaźnik do [CPropExchange](../../mfc/reference/cpropexchange-class.md) obiektu (zwykle jest przekazywany jako parametr do `DoPropExchange`).  
   
- `pszPropName`  
- Nazwa właściwości są wymieniane.  
+ *pszPropName*  
+ Nazwa właściwości wymianie.  
   
- `ulValue`  
- Odwołanie do zmiennej, w którym przechowywana jest właściwość (zazwyczaj zmiennej członkowskiej klasy).  
+ *ulValue*  
+ Odwołanie do zmiennej, w której są przechowywane właściwości (zazwyczaj zmienną składową klasy).  
   
- `ulDefault`  
- Wartość domyślna właściwości.  
+ *ulDefault*  
+ Wartość domyślna dla właściwości.  
   
 ### <a name="return-value"></a>Wartość zwracana  
- Różna od zera, jeśli wymiany zakończyło się pomyślnie; 0 w przypadku niepowodzenia.  
+ Wartość różną od zera, jeśli wymiany powiodła się. 0 w przypadku niepowodzenia.  
   
 ### <a name="remarks"></a>Uwagi  
- Wartość właściwości jest odczytu lub zapisu odwołuje się zmiennej `ulValue`, gdzie to właściwe. Jeśli `ulDefault` jest określony, będzie on używany jako wartość domyślna właściwości. Ta wartość jest używana, jeśli z jakiegokolwiek powodu, niepowodzenia procesu serializacji formantu.  
+ Wartość właściwości jest odczytywany lub zapisywany do zmiennej, odwołuje się *ulValue*, odpowiednio. Jeśli *ulDefault* jest określony, będzie służyć jako wartość domyślna właściwości. Ta wartość jest używana, jeśli z jakiegokolwiek powodu, procesem serializacji formantu nie powiedzie się.  
   
 ##  <a name="px_ushort"></a>  Px_ushort —  
- Wywołanie tej funkcji w ramach formantu `DoPropExchange` funkcji członkowskiej do serializacji lub zainicjować właściwość typu `unsigned` **krótki**.  
+ Wywołaj tę funkcję, w ramach kontroli nad `DoPropExchange` funkcja elementu członkowskiego do serializacji lub zainicjuj właściwość typu **typ unsigned short**.  
   
 ```  
  
@@ -630,26 +630,26 @@ usValue  ,
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `pPX`  
- Wskaźnik do [CPropExchange](../../mfc/reference/cpropexchange-class.md) obiektu (zwykle jest przekazywana jako parametr `DoPropExchange`).  
+ *pPX*  
+ Wskaźnik do [CPropExchange](../../mfc/reference/cpropexchange-class.md) obiektu (zwykle jest przekazywany jako parametr do `DoPropExchange`).  
   
- `pszPropName`  
- Nazwa właściwości są wymieniane.  
+ *pszPropName*  
+ Nazwa właściwości wymianie.  
   
  *usValue*  
- Odwołanie do zmiennej, w którym przechowywana jest właściwość (zazwyczaj zmiennej członkowskiej klasy).  
+ Odwołanie do zmiennej, w której są przechowywane właściwości (zazwyczaj zmienną składową klasy).  
   
  *usDefault*  
- Wartość domyślna właściwości.  
+ Wartość domyślna dla właściwości.  
   
 ### <a name="return-value"></a>Wartość zwracana  
- Różna od zera, jeśli wymiany zakończyło się pomyślnie; 0 w przypadku niepowodzenia.  
+ Wartość różną od zera, jeśli wymiany powiodła się. 0 w przypadku niepowodzenia.  
   
 ### <a name="remarks"></a>Uwagi  
- Wartość właściwości jest odczytu lub zapisu odwołuje się zmiennej *usValue*, gdzie to właściwe. Jeśli *usDefault* jest określony, będzie on używany jako wartość domyślna właściwości. Ta wartość jest używana, jeśli z jakiegokolwiek powodu, niepowodzenia procesu serializacji formantu.  
+ Wartość właściwości jest odczytywany lub zapisywany do zmiennej, odwołuje się *usValue*, odpowiednio. Jeśli *usDefault* jest określony, będzie służyć jako wartość domyślna właściwości. Ta wartość jest używana, jeśli z jakiegokolwiek powodu, procesem serializacji formantu nie powiedzie się.  
   
 ##  <a name="px_string"></a>  PXstring  
- Wywołanie tej funkcji w ramach formantu **DoPropExchange** funkcji członkowskiej do serializacji lub zainicjować właściwości ciągu znaków.  
+ Wywołaj tę funkcję, w ramach kontroli nad `DoPropExchange` funkcja elementu członkowskiego do serializacji lub zainicjuj właściwość ciągu znaków.  
   
 ```  
  
@@ -673,26 +673,26 @@ strValue  ,
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `pPX`  
- Wskaźnik do [CPropExchange](../../mfc/reference/cpropexchange-class.md) obiektu (zwykle jest przekazywana jako parametr `DoPropExchange`).  
+ *pPX*  
+ Wskaźnik do [CPropExchange](../../mfc/reference/cpropexchange-class.md) obiektu (zwykle jest przekazywany jako parametr do `DoPropExchange`).  
   
- `pszPropName`  
- Nazwa właściwości są wymieniane.  
+ *pszPropName*  
+ Nazwa właściwości wymianie.  
   
- `strValue`  
- Odwołanie do zmiennej, w którym przechowywana jest właściwość (zazwyczaj zmiennej członkowskiej klasy).  
+ *strValue*  
+ Odwołanie do zmiennej, w której są przechowywane właściwości (zazwyczaj zmienną składową klasy).  
   
- `strDefault`  
- Wartość domyślna właściwości.  
+ *strDefault*  
+ Wartość domyślna dla właściwości.  
   
 ### <a name="return-value"></a>Wartość zwracana  
- Różna od zera, jeśli wymiany zakończyło się pomyślnie; 0 w przypadku niepowodzenia.  
+ Wartość różną od zera, jeśli wymiany powiodła się. 0 w przypadku niepowodzenia.  
   
 ### <a name="remarks"></a>Uwagi  
- Wartość właściwości jest odczytu lub zapisu odwołuje się zmiennej `strValue`, gdzie to właściwe. Jeśli `strDefault` jest określony, będzie on używany jako wartość domyślna właściwości. Ta wartość jest używana, jeśli z jakiegokolwiek powodu, niepowodzenia procesu serializacji formantu.  
+ Wartość właściwości jest odczytywany lub zapisywany do zmiennej, odwołuje się *strValue*, odpowiednio. Jeśli *strDefault* jest określony, będzie służyć jako wartość domyślna właściwości. Ta wartość jest używana, jeśli z jakiegokolwiek powodu, procesem serializacji formantu nie powiedzie się.  
   
 ##  <a name="px_vbxfontconvert"></a>  Px_vbxfontconvert —  
- Wywołanie tej funkcji w ramach formantu `DoPropExchange` funkcji członkowskiej zainicjować właściwość czcionki konwertując właściwości powiązanych z czcionki formantu VBX.  
+ Wywołaj tę funkcję, w ramach kontroli nad `DoPropExchange` funkcji elementu członkowskiego, aby zainicjować właściwość czcionki przez przekonwertowanie właściwości powiązanych z czcionki kontrolkę VBX.  
   
 ```  
  
@@ -704,19 +704,19 @@ pPX  ,
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `pPX`  
- Wskaźnik do [CPropExchange](../../mfc/reference/cpropexchange-class.md) obiektu (zwykle jest przekazywana jako parametr `DoPropExchange`).  
+ *pPX*  
+ Wskaźnik do [CPropExchange](../../mfc/reference/cpropexchange-class.md) obiektu (zwykle jest przekazywany jako parametr do `DoPropExchange`).  
   
- `font`  
- Właściwość czcionki formantu OLE, który będzie zawierać właściwości związanych z czcionki VBX przekonwertowany.  
+ *Czcionka*  
+ Właściwość czcionki formantu OLE, który będzie zawierać przekonwertowanego właściwości powiązanych z czcionki VBX.  
   
 ### <a name="return-value"></a>Wartość zwracana  
- Różna od zera, jeśli wymiany zakończyło się pomyślnie; 0 w przypadku niepowodzenia.  
+ Wartość różną od zera, jeśli wymiany powiodła się. 0 w przypadku niepowodzenia.  
   
 ### <a name="remarks"></a>Uwagi  
- Funkcja ta powinna być używana tylko przez formant OLE, który został zaprojektowany jako bezpośredniej wymiany kontrolki VBX. Gdy środowiska projektowania Visual Basic konwertuje formularz zawierający formantu VBX odpowiednie zastąpienia kontrolkę OLE, wywoła formantu **IDataObject::SetData** funkcji, przekazywanie we właściwości zestawu zawiera dane właściwości formantu VBX. Ta operacja powoduje z kolei formantu `DoPropExchange` funkcji do wywołania. `DoPropExchange` można wywołać `PX_VBXFontConvert` przekonwertować właściwości związanych z czcionki formantu VBX (na przykład "FontName," "FontSize," itd.) w odpowiadających składników właściwość czcionki formantu OLE.  
+ Ta funkcja powinna być używane tylko przez kontrolkę OLE, która została zaprojektowana jako bezpośrednio zastąpić kontrolki VBX. Gdy środowisko projektowe języka Visual Basic konwertuje formularza, w którym formant VBX, aby użyć odpowiedniego zastępczy formantu OLE, wywoła formantu `IDataObject::SetData` funkcję, przekazując ustawioną właściwość, która zawiera dane właściwości kontrolki VBX. Ta operacja powoduje z kolei formantu `DoPropExchange` funkcja do wywołania. `DoPropExchange` można wywołać `PX_VBXFontConvert` przekonwertować właściwości związane z czcionki formantu VBX (na przykład "FontName," "FontSize", i tak dalej) do odpowiadających składników właściwość czcionki kontrolkę OLE.  
   
- `PX_VBXFontConvert` tylko powinna być wywoływana, gdy formant jest rzeczywiście przekształcany z aplikacji formularza VBX. Na przykład:  
+ `PX_VBXFontConvert` tylko powinna być wywoływana, gdy kontrolka jest faktycznie przekształcany z poziomu aplikacji formularza VBX. Na przykład:  
   
  [!code-cpp[NVC_MFCActiveXControl#14](../../mfc/codesnippet/cpp/persistence-of-ole-controls_1.cpp)]  
 [!code-cpp[NVC_MFCActiveXControl#15](../../mfc/codesnippet/cpp/persistence-of-ole-controls_2.cpp)]  

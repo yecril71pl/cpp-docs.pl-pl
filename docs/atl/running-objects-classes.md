@@ -1,5 +1,5 @@
 ---
-title: Uruchomiona obiektów klasy (ATL) | Dokumentacja firmy Microsoft
+title: Uruchamianie obiektów klas (ATL) | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,21 +17,21 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8541d0732813ebd2b86e9a1941dc262b0ba1c20e
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: fcbc0820f98052ee29c489ca9cb556e1c913d07c
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32358941"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38958575"
 ---
-# <a name="running-objects-classes"></a>Uruchomiona klasy obiektów
+# <a name="running-objects-classes"></a>Uruchamianie klas obiektów
 Następujące klasy zapewnia obsługę uruchamiania obiektów:  
   
--   [IRunnableObjectImpl](../atl/reference/irunnableobjectimpl-class.md) Określa, czy obiekt jest uruchomiona, wymusza go uruchomić, lub blokuje go do stanu uruchomienia.  
+-   [IRunnableObjectImpl](../atl/reference/irunnableobjectimpl-class.md) określa Jeśli obiekt jest uruchomiona, wymusza je do uruchomienia, lub blokuje je w stanie uruchomienia.  
   
 ## <a name="related-articles"></a>Powiązane artykuły  
  [ALT — samouczek](../atl/active-template-library-atl-tutorial.md)  
   
 ## <a name="see-also"></a>Zobacz też  
- [Przegląd klas](../atl/atl-class-overview.md)
+ [Klasa — Przegląd](../atl/atl-class-overview.md)
 

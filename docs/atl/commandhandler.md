@@ -16,15 +16,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 27f5585ec334a4179b76579c5216c8c30013ca97
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 784551b090f7c0c73b96b846fcc8d74017cc1e30
+ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32355141"
+ms.lasthandoff: 07/05/2018
+ms.locfileid: "37850644"
 ---
 # <a name="commandhandler"></a>CommandHandler
-`CommandHandler` jest to funkcja oznaczona trzeci parametr funkcji `COMMAND_HANDLER` makra mapy wiadomości.  
+`CommandHandler` czy funkcja jest identyfikowana przez trzeci parametr makra COMMAND_HANDLER na mapie komunikatów.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -40,23 +40,23 @@ ms.locfileid: "32355141"
 ```  
   
 #### <a name="parameters"></a>Parametry  
- `wNotifyCode`  
+ *wNotifyCode*  
  Kod powiadomienia.  
   
  *wID*  
- Identyfikator elementu menu, kontroli lub akceleratora.  
+ Identyfikator elementu menu, formant lub klawiszy skrótów.  
   
  *hWndCtl*  
- Dojście do formantu okna.  
+ Dojście do kontrolki okna.  
   
- `bHandled`  
- Ustawia mapy komunikatów `bHandled` do **TRUE** przed `CommandHandler` jest wywoływana. Jeśli `CommandHandler` nie obsługuje pełni komunikatu, należy ją ustawić `bHandled` do **FALSE** wskazująca wiadomość wymaga dalsze przetwarzanie.  
+ *bHandled*  
+ Ustawia mapy wiadomości *bHandled* na wartość TRUE, przed `CommandHandler` jest wywoływana. Jeśli `CommandHandler` nie obsługuje w pełni komunikat, należy ją ustawić *bHandled* na wartość FAŁSZ, aby wiadomość wymaga dalszego przetwarzania.  
   
 ## <a name="return-value"></a>Wartość zwracana  
- Wynik przetwarzania komunikatów. 0 w przypadku powodzenia.  
+ Wynik przetwarzania wiadomości. 0, jeśli kończy się pomyślnie.  
   
 ## <a name="remarks"></a>Uwagi  
- Na przykład za pomocą tej obsługi wiadomości w mapie komunikatów, zobacz [COMMAND_HANDLER](reference/message-map-macros-atl.md#command_handler).  
+ Aby uzyskać przykład korzystania z tej obsługi wiadomości w mapie komunikatów, zobacz [COMMAND_HANDLER](reference/message-map-macros-atl.md#command_handler).  
   
 ## <a name="see-also"></a>Zobacz też  
  [Implementowanie okna](../atl/implementing-a-window.md)   

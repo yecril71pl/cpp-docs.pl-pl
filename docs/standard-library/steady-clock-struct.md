@@ -1,5 +1,5 @@
 ---
-title: steady_clock — struktura | Dokumentacja firmy Microsoft
+title: steady_clock, struktura | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 05/22/2018
 ms.technology:
@@ -14,16 +14,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5445379597c4fefcd657303a05c33b6509d54d2e
-ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
+ms.openlocfilehash: 53f4deb0bfe9439011f75cd22d0d52b74dae9c1f
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/01/2018
-ms.locfileid: "34569901"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38959728"
 ---
 # <a name="steadyclock-struct"></a>steady_clock — struktura
 
-Reprezentuje *stałej* zegara.
+Reprezentuje *stały* zegara.
 
 ## <a name="syntax"></a>Składnia
 
@@ -33,32 +33,32 @@ struct steady_clock;
 
 ## <a name="remarks"></a>Uwagi
 
-W systemie Windows `steady_clock` opakowuje `QueryPerformanceCounter` funkcji.
+W Windows `steady_clock` opakowuje `QueryPerformanceCounter` funkcji.
 
-Zegar jest *monotoniczna* Jeśli wartość, która jest zwracana przez pierwsze wywołanie w celu `now` zawsze jest mniejsza niż wartość zwracaną przez kolejne wywołanie `now`. Zegar jest *stałej* przypadku *monotoniczna* i jeśli czas między zegarowych jest stałą.
+Zegar jest *monotoniczny* Jeśli wartość, która jest zwracana przez pierwsze wywołanie `now` jest zawsze mniejsza niż wartość, która jest zwracana przez kolejne wywołanie `now`. Zegar jest *stały* , gdy jest *monotoniczny* i jeśli czas między taktami zegara jest stały.
 
-`high_resolution_clock` jest elementem typedef dla `steady_clock`.
+`high_resolution_clock` element typedef dla jest `steady_clock`.
 
-### <a name="public-typedefs"></a>Definicje typów publicznych
+### <a name="public-typedefs"></a>Publiczne definicje typów
 
 |Nazwa|Opis|
 |----------|-----------------|
-|`steady_clock::duration`|Jest to synonim `nanoseconds`zdefiniowanej w \<chrono >.|
-|`steady_clock::period`|Jest to synonim `nano`zdefiniowanej w \<stosunek >.|
-|`steady_clock::rep`|Synonimem **długi** **długi**, typu, który jest używany do reprezentowania liczbę taktów zegara w zawartych w niej tworzenia wystąpienia elementu `duration`.|
-|`steady_clock::time_point`|Jest to synonim `chrono::time_point<steady_clock>`.|
+|`steady_clock::duration`|Synonim dla `nanoseconds`zdefiniowaną w \<chrono >.|
+|`steady_clock::period`|Synonim dla `nano`zdefiniowaną w \<współczynnik >.|
+|`steady_clock::rep`|Synonim dla **długie** **długie**, typ, który jest używany do reprezentowania liczby taktów zegara w zamkniętym `duration`.|
+|`steady_clock::time_point`|Synonim dla `chrono::time_point<steady_clock>`.|
 
-## <a name="public-functions"></a>Funkcje publiczne
+## <a name="public-functions"></a>Funkcji publicznych
 
 |Funkcja|Opis|
 |--------------|-----------------|
 |`now`|Zwraca bieżącą godzinę jako `time_point` wartość.|
 
-## <a name="public-constants"></a>Publiczny — stałe
+## <a name="public-constants"></a>Publiczne stałe
 
 |Nazwa|Opis|
 |----------|-----------------|
-|`steady_clock::is_steady`|Przechowuje `true`. A `steady_clock` jest *stałej*.|
+|`steady_clock::is_steady`|Przechowuje **true**. A `steady_clock` jest *stały*.|
 
 ## <a name="requirements"></a>Wymagania
 

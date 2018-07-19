@@ -17,16 +17,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bf15ef0b5134af7831cf2e71b4235df9534f3425
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 8775c681954799e2239da5ad429f9f8131ca25b1
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33841300"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38958893"
 ---
 # <a name="addvolatile-class"></a>add_volatile — Klasa
 
-Sprawia, że typ volatile z określonego typu.
+Sprawia, że **volatile** typu z określonego typu.
 
 ## <a name="syntax"></a>Składnia
 
@@ -40,11 +40,11 @@ using add_volatile_t = typename add_volatile<T>::type;
 
 ### <a name="parameters"></a>Parametry
 
-*T* typu do zmodyfikowania.
+*T* typ do modyfikacji.
 
 ## <a name="remarks"></a>Uwagi
 
-Wystąpienie `add_volatile<T>` ma typedef elementu członkowskiego `type` czyli *T* Jeśli *T* jest odwołanie, funkcji lub typu kwalifikowana volatile `volatile` *T*. Alias `add_volatile_t` to skrót do dostępu — element członkowski typedef `type`.
+Wystąpienie `add_volatile<T>` ma składową **typedef** `type` czyli *T* Jeśli *T* jest odwołaniem, funkcją lub volatile kwalifikowanego typu, w przeciwnym razie **volatile** *T*. Alias `add_volatile_t` to skrót umożliwiający dostęp do elementu członkowskiego **typedef** `type`.
 
 ## <a name="example"></a>Przykład
 
@@ -72,7 +72,7 @@ add_volatile<int> == int
 
 **Nagłówek:** \<type_traits >
 
-**Namespace:** Standard
+**Namespace:** standardowe
 
 ## <a name="see-also"></a>Zobacz także
 

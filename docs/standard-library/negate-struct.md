@@ -17,16 +17,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b1151464d4f2d863f8cdc30191199c0606d58b8f
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 58599777f3e680b7ea124d9e9dfa427fd55b4051
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33852393"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38956937"
 ---
 # <a name="negate-struct"></a>negate — Struktura
 
-Obiekt wstępnie zdefiniowanych funkcji, który wykonuje operacje arytmetyczne negacji (jednoargumentowy `operator-`) na jej argument.
+Obiekt wstępnie zdefiniowana funkcja, która wykonuje operację arytmetyczną negację (jednoargumentowy `operator-`) na jej argument.
 
 ## <a name="syntax"></a>Składnia
 
@@ -49,13 +49,13 @@ struct negate<void>
 
 ### <a name="parameters"></a>Parametry
 
-`Type` Dowolnego typu, który obsługuje `operator-` który przyjmuje argument typu określonego lub wykrywany.
+*Typ* dowolnego typu, który obsługuje `operator-` która przyjmuje argument typu określonego lub wywnioskowane uprawnienie.
 
-`Left` Argument operacji można zanegowane. Specjalne szablonu doskonała przekazującej lewostronnie i argumenty odwołanie do r-wartości wywnioskować typu `Type`.
+*Po lewej stronie* argument przekazywany do być ujemna. Wyspecjalizowane szablonu doskonała przekazywania l-wartością i argumenty odwołania rvalue wywnioskować typu *typu*.
 
 ## <a name="return-value"></a>Wartość zwracana
 
-Wynik `-Left.` specjalne szablonu doskonała przekazywanie wynik, który ma typ zwracany przez jednoargumentowy `operator-`.
+Wynik `-Left.` wyspecjalizowane szablonu doskonała przekazywania wyniku, który ma typ, który jest zwracany przez jednoargumentowy `operator-`.
 
 ## <a name="example"></a>Przykład
 
@@ -103,7 +103,7 @@ The negated elements of the vector = ( 10 5 0 -5 -10 -15 -20 -25 )
 
 **Nagłówek:** \<funkcjonalności >
 
-**Namespace:** Standard
+**Namespace:** standardowe
 
 ## <a name="see-also"></a>Zobacz także
 

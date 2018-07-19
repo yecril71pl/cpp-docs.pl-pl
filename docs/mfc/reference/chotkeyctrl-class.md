@@ -1,5 +1,5 @@
 ---
-title: Chotkeyctrl — klasa | Dokumentacja firmy Microsoft
+title: Klasa CHotKeyCtrl | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -32,15 +32,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 365f984385eab870d46b0772719346fa5d1ae383
-ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
+ms.openlocfilehash: 8151b69b92566f45766c4ffa25d40bb5f077c606
+ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/27/2018
-ms.locfileid: "37040158"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37337261"
 ---
-# <a name="chotkeyctrl-class"></a>Chotkeyctrl — klasa
-Udostępnia funkcje systemu Windows wspólnej formantu klawisza dostępu.  
+# <a name="chotkeyctrl-class"></a>Klasa CHotKeyCtrl
+Oferuje funkcje Windows formantu typowego klawisza dostępu.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -60,24 +60,24 @@ class CHotKeyCtrl : public CWnd
   
 |Nazwa|Opis|  
 |----------|-----------------|  
-|[CHotKeyCtrl::Create](#create)|Tworzy formantu klawisza dostępu i dołącza go do `CHotKeyCtrl` obiektu.|  
-|[CHotKeyCtrl::CreateEx](#createex)|Tworzy formantu klawisza dostępu przy użyciu określonego stylów rozszerzonej systemu Windows i dołącza go do `CHotKeyCtrl` obiektu.|  
-|[CHotKeyCtrl::GetHotKey](#gethotkey)|Pobiera wirtualnego klucza flagi kodu i modyfikator klucza dostępu z formantu klawisza dostępu.|  
+|[CHotKeyCtrl::Create](#create)|Tworzy formantu klawisza dostępu i dołącza je do `CHotKeyCtrl` obiektu.|  
+|[CHotKeyCtrl::CreateEx](#createex)|Tworzy formantu klawisza dostępu przy użyciu określonego stylów rozszerzonej Windows i dołącza je do `CHotKeyCtrl` obiektu.|  
+|[CHotKeyCtrl::GetHotKey](#gethotkey)|Pobiera wirtualnego kodu i modyfikator flagi kluczy z klawisza dostępu z formantu klawisza dostępu.|  
 |[CHotKeyCtrl::GetHotKeyName](#gethotkeyname)|Pobiera nazwę klucza, w zestawie znaków lokalnych przypisane do klawisza dostępu.|  
-|[CHotKeyCtrl::GetKeyName](#getkeyname)|Pobiera nazwę klucza, w zestawie znaków lokalnych przypisane do określonej wirtualnej kod klucza.|  
-|[CHotKeyCtrl::SetHotKey](#sethotkey)|Określa kombinację klawiszy dostępu dla formantu klawisza dostępu.|  
-|[CHotKeyCtrl::SetRules](#setrules)|Określa nieprawidłowy kombinacji i kombinacja modyfikatora domyślnego dla formantu klawisza dostępu.|  
+|[CHotKeyCtrl::GetKeyName](#getkeyname)|Pobiera nazwę klucza, w zestawie znaków lokalnych przypisane do określonej wirtualnej kod klawisza.|  
+|[CHotKeyCtrl::SetHotKey](#sethotkey)|Ustawia gorąca kombinację klawiszy dla formantu klawisza dostępu.|  
+|[CHotKeyCtrl::SetRules](#setrules)|Definiuje nieprawidłowe kombinacje i kombinacji modyfikator domyślny dla formantu klawisza dostępu.|  
   
 ## <a name="remarks"></a>Uwagi  
- "Formantu klawisza dostępu" jest typu window, który umożliwia użytkownikowi utworzenie klawisza dostępu. "Klawisz skrótu" jest kombinacja klawiszy, które użytkownik może nacisnąć szybko wykonania akcji. (Na przykład użytkownik może utworzyć klawisza dostępu, który aktywuje danego okna i aktualizuje na początku porządek osi). Formantu klawisza dostępu Wyświetla opcje użytkownika oraz zapewnia, że użytkownik wybierze prawidłową kombinację klawiszy.  
+ "Formantu klawisza dostępu" jest oknem, który umożliwia użytkownikowi utworzenie klawisza dostępu. "Klawisz skrótu" jest kombinacji klawiszy, który użytkownik może nacisnąć szybko wykonać akcję. (Na przykład użytkownik może utworzyć aktywuje danego okno i udostępnia go do góry porządek klawisza dostępu). Formantu klawisza dostępu Wyświetla opcje użytkownika i gwarantuje, że użytkownik wybierze prawidłową kombinację klawiszy.  
   
- Ten formant (i w związku z tym `CHotKeyCtrl` klasy) jest dostępne tylko dla programów w wersji Windows 95/98 i Windows NT 3.51 lub nowszej.  
+ Ta kontrolka (i w związku z tym `CHotKeyCtrl` klasy) jest dostępna tylko dla programów uruchomionych w wersji Windows 95/98 i Windows NT 3.51 lub nowszej.  
   
- Gdy użytkownik wybierze kombinację klawiszy, aplikacja może pobrać kombinację klawiszy z formantu i użyj **WM_SETHOTKEY** wiadomości, aby skonfigurować klawisza dostępu w systemie. Przy każdym naciśnięciu klawisza dostępu, z dowolną część systemu, okna określony w **WM_SETHOTKEY** odbiera komunikat **WM_SYSCOMMAND** określenie komunikat **SC_HOTKEY** . Ten komunikat zostanie aktywowany okna, który odbiera on. Klawisz dostępu pozostaje ważny aż do aplikacji, która wywołuje **WM_SETHOTKEY** kończy pracę.  
+ Po użytkownik wybierze kombinację klawiszy, aplikacja może pobrać określonej kombinacji klawiszy z formantu i komunikat WM_SETHOTKEY umożliwia ustawianie klawisza dostępu w systemie. Zawsze, gdy użytkownik naciśnie klawisz skrótu, z dowolnej części systemu, okna określony w komunikacie WM_SETHOTKEY odbiera komunikat WM_SYSCOMMAND, określając SC_HOTKEY. Ten komunikat uaktywnia okna, które otrzymuje go. Klawisz skrótu pozostanie ważny aż do aplikacji, która umożliwia zamknięcie WM_SETHOTKEY wywołana.  
   
- Ten mechanizm różni się od gorących klucza pomocy technicznej, która jest zależna od **WM_HOTKEY** komunikat i systemu Windows [RegisterHotKey](http://msdn.microsoft.com/library/windows/desktop/ms646309) i [UnregisterHotKey](http://msdn.microsoft.com/library/windows/desktop/ms646327) funkcji.  
+ Ten mechanizm różni się od gorąca obsługę kluczy, która jest zależna od komunikat WM_HOTKEY i Windows [RegisterHotKey](http://msdn.microsoft.com/library/windows/desktop/ms646309) i [UnregisterHotKey](http://msdn.microsoft.com/library/windows/desktop/ms646327) funkcji.  
   
- Aby uzyskać więcej informacji na temat używania `CHotKeyCtrl`, zobacz [formanty](../../mfc/controls-mfc.md) i [przy użyciu CHotKeyCtrl](../../mfc/using-chotkeyctrl.md).  
+ Aby uzyskać więcej informacji na temat korzystania z `CHotKeyCtrl`, zobacz [kontrolki](../../mfc/controls-mfc.md) i [korzystanie z CHotKeyCtrl](../../mfc/using-chotkeyctrl.md).  
   
 ## <a name="inheritance-hierarchy"></a>Hierarchia dziedziczenia  
  [CObject](../../mfc/reference/cobject-class.md)  
@@ -99,7 +99,7 @@ CHotKeyCtrl();
 ```  
   
 ##  <a name="create"></a>  CHotKeyCtrl::Create  
- Tworzy formantu klawisza dostępu i dołącza go do `CHotKeyCtrl` obiektu.  
+ Tworzy formantu klawisza dostępu i dołącza je do `CHotKeyCtrl` obiektu.  
   
 ```  
 virtual BOOL Create(
@@ -111,27 +111,27 @@ virtual BOOL Create(
   
 ### <a name="parameters"></a>Parametry  
  *dwStyle*  
- Określa styl formantu klawisza dostępu firmy. Zastosuj dowolną kombinację stylów formantu. Zobacz [najczęściej używane style formantu](http://msdn.microsoft.com/library/windows/desktop/bb775498) w zestawie SDK systemu Windows, aby uzyskać więcej informacji.  
+ Określa styl formantu klawisza dostępu firmy. Zastosuj dowolną kombinację style kontrolki. Zobacz [najczęściej używane style kontrolki](http://msdn.microsoft.com/library/windows/desktop/bb775498) w zestawie Windows SDK, aby uzyskać więcej informacji.  
   
  *Rect*  
- Określa rozmiar i położenie gorących sterujący klucza. Może być albo [CRect](../../atl-mfc-shared/reference/crect-class.md) obiektu lub [struktura RECT](../../mfc/reference/rect-structure1.md).  
+ Określa rozmiar i położenie formantu klawisza dostępu firmy. Może być albo [CRect](../../atl-mfc-shared/reference/crect-class.md) obiektu lub [struktura RECT](../../mfc/reference/rect-structure1.md).  
   
  *pParentWnd*  
- Określa okno nadrzędne kontrolki klucza dostępu, zwykle [cdialog —](../../mfc/reference/cdialog-class.md). Nie może być **NULL**.  
+ Określa formantu klawisza dostępu przez okno nadrzędne, zwykle [CDialog](../../mfc/reference/cdialog-class.md). Nie może być równa NULL.  
   
  *nID*  
  Określa identyfikator formantu klawisza dostępu firmy.  
   
 ### <a name="return-value"></a>Wartość zwracana  
- Różna od zera, jeśli inicjowanie zakończyło się pomyślnie; w przeciwnym razie 0.  
+ Wartość różną od zera, jeśli inicjowanie się powiodła. w przeciwnym razie 0.  
   
 ### <a name="remarks"></a>Uwagi  
- Możesz utworzyć `CHotKeyCtrl` obiektu w dwóch krokach. Najpierw należy wywołać konstruktora, a następnie wywołać `Create`, która tworzy formantu klawisza dostępu i dołącza go do `CHotKeyCtrl` obiektu.  
+ Konstruowanie `CHotKeyCtrl` obiektu w dwóch krokach. Po pierwsze wywołanie konstruktora, a następnie wywołać `Create`, który tworzy formantu klawisza dostępu i dołącza go do `CHotKeyCtrl` obiektu.  
   
- Jeśli chcesz style rozszerzonej systemu windows za pomocą formantu wywołanie [CreateEx](#createex) zamiast `Create`.  
+ Style rozszerzone systemu windows za pomocą formantu należy wywołać [CreateEx](#createex) zamiast `Create`.  
   
 ##  <a name="createex"></a>  CHotKeyCtrl::CreateEx  
- Wywołanie tej funkcji można utworzyć formantu (okno podrzędne) i skojarz ją z `CHotKeyCtrl` obiektu.  
+ Wywołaj tę funkcję, aby utworzyć kontrolkę (okno podrzędne) i powiąż ją z `CHotKeyCtrl` obiektu.  
   
 ```  
 virtual BOOL CreateEx(
@@ -144,13 +144,13 @@ virtual BOOL CreateEx(
   
 ### <a name="parameters"></a>Parametry  
  *dwExStyle*  
- Określa styl rozszerzony formantu tworzona. Aby uzyskać listę rozszerzone style systemu Windows, zobacz *dwExStyle* parametr [CreateWindowEx](http://msdn.microsoft.com/library/windows/desktop/ms632680) w zestawie Windows SDK.  
+ Określa styl rozszerzony kontrolki tworzona. Aby uzyskać listę rozszerzone style Windows, zobacz *dwExStyle* parametr [elementu CreateWindowEx](http://msdn.microsoft.com/library/windows/desktop/ms632680) w zestawie Windows SDK.  
   
  *dwStyle*  
- Określa styl formantu klawisza dostępu firmy. Zastosuj dowolną kombinację stylów formantu. Aby uzyskać więcej informacji, zobacz [najczęściej używane style formantu](http://msdn.microsoft.com/library/windows/desktop/bb775498) w zestawie Windows SDK.  
+ Określa styl formantu klawisza dostępu firmy. Zastosuj dowolną kombinację style kontrolki. Aby uzyskać więcej informacji, zobacz [najczęściej używane style kontrolki](http://msdn.microsoft.com/library/windows/desktop/bb775498) w zestawie Windows SDK.  
   
  *Rect*  
- Odwołanie do [RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897) struktury opisujące rozmiar i położenie okna, które ma zostać utworzony w współrzędne klienta *pParentWnd*.  
+ Odwołanie do [Prostokąt](http://msdn.microsoft.com/library/windows/desktop/dd162897) struktury opisujących rozmiar i położenie okna, można utworzyć klienta współrzędne *pParentWnd*.  
   
  *pParentWnd*  
  Wskaźnik do okna, które jest elementem nadrzędnym formantu.  
@@ -159,13 +159,13 @@ virtual BOOL CreateEx(
  Identyfikator formantu okna podrzędnego.  
   
 ### <a name="return-value"></a>Wartość zwracana  
- Różna od zera, w przypadku powodzenia; w przeciwnym razie 0.  
+ Wartość różną od zera, jeśli to się powiedzie; w przeciwnym razie 0.  
   
 ### <a name="remarks"></a>Uwagi  
- Użyj `CreateEx` zamiast [Utwórz](#create) dotyczyć rozszerzone style systemu Windows, określone przez wstępu rozszerzonego stylu Windows **WS_EX_**.  
+ Użyj `CreateEx` zamiast [Utwórz](#create) do zastosowania rozszerzone style Windows, określonego przez tekst wstępny rozszerzonego stylu Windows **WS_EX_**.  
   
 ##  <a name="gethotkey"></a>  CHotKeyCtrl::GetHotKey  
- Pobiera wirtualnego klucza flagi kodu i modyfikator skrótu klawiatury z formantu klawisza dostępu.  
+ Pobiera wirtualnego kodu i modyfikator flagi kluczy skrótu klawiatury z formantu klawisza dostępu.  
   
 ```  
 DWORD GetHotKey() const;  
@@ -177,28 +177,28 @@ void GetHotKey(
   
 ### <a name="parameters"></a>Parametry  
  [out] *wVirtualKeyCode*  
- Kod klucza wirtualnego skrót klawiaturowy. Listę standardowych wirtualnego kodów klucza Zobacz Winuser.h.  
+ Wirtualne kod klawisza skrótu klawiaturowego. Aby uzyskać listę standardowa wirtualnej kody klawiszy Zobacz Winuser.h.  
   
  [out] *wModifiers*  
- Bitowe połączenie (lub) flag, które wskazują klawisze modyfikujące w skrót klawiaturowy.  
+ Bitowa kombinacja (lub) flagi wskazujące klawisze modyfikujące w skrótów klawiaturowych.  
   
- Modyfikator flagi są następujące:  
+ Dostępne są następujące flagi modyfikatora:  
   
 |Flaga|Odpowiedni klucz|  
 |----------|-----------------------|  
-|`HOTKEYF_ALT`|ALT — Klawisz|  
-|`HOTKEYF_CONTROL`|Klawisz CTRL|  
-|`HOTKEYF_EXT`|Rozszerzone klucza|  
-|`HOTKEYF_SHIFT`|Klawisz SHIFT|  
+|HOTKEYF_ALT|ALT — Klawisz|  
+|HOTKEYF_CONTROL|Klawisz CTRL|  
+|HOTKEYF_EXT|Rozszerzone klucza|  
+|HOTKEYF_SHIFT|Klawisz SHIFT|  
   
 ### <a name="return-value"></a>Wartość zwracana  
- W pierwszym przeciążonej metody, `DWORD` zawierający wirtualnego klucza flagi kodu i modyfikator. Mniej znaczącego bajtu Word znaczącymi bitami zawiera wirtualnego kod klucza, byte znaczących Word znaczącymi bitami zawiera flagi modyfikator i word znaczących wynosi zero.  
+ W pierwszym przeciążonej metody, DWORD, zawierającej wirtualny klucza kodu i modyfikator flagi. Mniej znaczący bajt, wyraz niskiego rzędu zawiera wirtualny kod klawisza, bajt wyższego rzędu word niskiego rzędu zawiera flagi modyfikatora i word wyższego rzędu jest równa zero.  
   
 ### <a name="remarks"></a>Uwagi  
- Kod klucza wirtualnego i jednocześnie klawisze modyfikujące definiują skrót klawiaturowy.  
+ Kod klawisza wirtualnego i klawisze modyfikujące, które razem definiują skrót klawiaturowy.  
   
 ##  <a name="gethotkeyname"></a>  CHotKeyCtrl::GetHotKeyName  
- Wywołanie tej funkcji Członkowskich uzyskanie zlokalizowana nazwa klawisza dostępu.  
+ Wywołaj tę funkcję elementu członkowskiego, aby pobrać zlokalizowana nazwa klawisza dostępu.  
   
 ```  
 CString GetHotKeyName() const;  
@@ -208,10 +208,10 @@ CString GetHotKeyName() const;
  Zlokalizowana nazwa aktualnie wybranego klucza dostępu. Jeśli wybrany klucz dostępu, nie istnieje `GetHotKeyName` zwraca pusty ciąg.  
   
 ### <a name="remarks"></a>Uwagi  
- Nazwa, która zwraca funkcji członkowskiej pochodzi z sterownik klawiatury. Można zainstalować sterownik klawiatury nie zlokalizowane w zlokalizowanej wersji systemu Windows i na odwrót.  
+ Nazwa która to funkcja elementu członkowskiego zwraca pochodzi z sterownik klawiatury. Można zainstalować sterownik niezlokalizowana klawiatury w zlokalizowanej wersji systemu Windows i na odwrót.  
   
 ##  <a name="getkeyname"></a>  CHotKeyCtrl::GetKeyName  
- Wywołanie tej funkcji Członkowskich zlokalizowanej nazwy klucza przypisane do określonej wirtualnej kod klucza.  
+ Wywołaj tę funkcję elementu członkowskiego, aby pobrać zlokalizowana nazwa klucza przypisane do określonej wirtualnej kod klawisza.  
   
 ```  
 static CString GetKeyName(
@@ -221,16 +221,16 @@ static CString GetKeyName(
   
 ### <a name="parameters"></a>Parametry  
  *vk*  
- Wirtualne kod klucza.  
+ Kod klawisza wirtualnego.  
   
  *fExtended*  
- W przypadku wirtualnego kod klucza rozszerzonego klucza **TRUE**; w przeciwnym razie **FALSE**.  
+ Jeśli kod klawisza wirtualnego jest rozszerzonej klucz, wartość PRAWDA; w przeciwnym razie wartość FALSE.  
   
 ### <a name="return-value"></a>Wartość zwracana  
- Zlokalizowana nazwa określony przez klucz *vk* parametru. Jeśli klucz nie ma mapowanych nazwy, `GetKeyName` zwraca pusty ciąg.  
+ Zlokalizowana nazwa klucza określonym przez *vk* parametru. Jeśli klucz nie ma zamapowany nazwy, `GetKeyName` zwraca pusty ciąg.  
   
 ### <a name="remarks"></a>Uwagi  
- Nazwa klucza, który ta funkcja zwraca wartość pochodzi z sterownik klawiatury, aby móc zainstalować sterownik klawiatury nie zlokalizowane w zlokalizowanej wersji systemu Windows i na odwrót.  
+ Nazwa klucza, którego funkcja zwraca wartość pochodzi z sterownik klawiatury, dzięki czemu można zainstalować sterownik niezlokalizowana klawiatury w zlokalizowanej wersji systemu Windows i na odwrót.  
   
 ### <a name="example"></a>Przykład  
  [!code-cpp[NVC_MFCControlLadenDialog#69](../../mfc/codesnippet/cpp/chotkeyctrl-class_1.cpp)]  
@@ -246,25 +246,25 @@ void SetHotKey(
   
 ### <a name="parameters"></a>Parametry  
  [in] *wVirtualKeyCode*  
- Kod klucza wirtualnego skrót klawiaturowy. Listę standardowych wirtualnego kodów klucza Zobacz Winuser.h.  
+ Wirtualne kod klawisza skrótu klawiaturowego. Aby uzyskać listę standardowa wirtualnej kody klawiszy Zobacz Winuser.h.  
   
  [in] *wModifiers*  
- Bitowe połączenie (lub) flag, które wskazują klawisze modyfikujące w skrót klawiaturowy.  
+ Bitowa kombinacja (lub) flagi wskazujące klawisze modyfikujące w skrótów klawiaturowych.  
   
- Modyfikator flagi są następujące:  
+ Dostępne są następujące flagi modyfikatora:  
   
 |Flaga|Odpowiedni klucz|  
 |----------|-----------------------|  
-|`HOTKEYF_ALT`|ALT — Klawisz|  
-|`HOTKEYF_CONTROL`|Klawisz CTRL|  
-|`HOTKEYF_EXT`|Rozszerzone klucza|  
-|`HOTKEYF_SHIFT`|Klawisz SHIFT|  
+|HOTKEYF_ALT|ALT — Klawisz|  
+|HOTKEYF_CONTROL|Klawisz CTRL|  
+|HOTKEYF_EXT|Rozszerzone klucza|  
+|HOTKEYF_SHIFT|Klawisz SHIFT|  
   
 ### <a name="remarks"></a>Uwagi  
- Kod klucza wirtualnego i jednocześnie klawisze modyfikujące definiują skrót klawiaturowy.  
+ Kod klawisza wirtualnego i klawisze modyfikujące, które razem definiują skrót klawiaturowy.  
   
 ##  <a name="setrules"></a>  CHotKeyCtrl::SetRules  
- Wywołanie tej funkcji, aby zdefiniować kombinacje nieprawidłowy i kombinacja modyfikatora domyślnego dla formantu klawisza dostępu.  
+ Wywołaj tę funkcję, aby zdefiniować nieprawidłowe kombinacje i kombinacji modyfikator domyślny dla formantu klawisza dostępu.  
   
 ```  
 void SetRules(
@@ -274,29 +274,29 @@ void SetRules(
   
 ### <a name="parameters"></a>Parametry  
  *wInvalidComb*  
- Tablica flag, który określa nieprawidłowy kombinacje klawiszy. Może być kombinacją następujących wartości:  
+ Tablica flagi, który określa nieprawidłowy kombinacje klawiszy. Może być kombinacją następujących wartości:  
   
-- `HKCOMB_A` ALT  
+- HKCOMB_A ALT  
   
-- `HKCOMB_C` CTRL  
+- HKCOMB_C CTRL  
   
-- `HKCOMB_CA` CTRL + ALT  
+- HKCOMB_CA KLAWISZE CTRL + ALT  
   
-- `HKCOMB_NONE` Klucze zostały zmodyfikowane  
+- Niezmodyfikowane HKCOMB_NONE kluczy  
   
-- `HKCOMB_S` SHIFT  
+- HKCOMB_S SHIFT  
   
-- `HKCOMB_SA` SHIFT + ALT  
+- HKCOMB_SA SHIFT + ALT  
   
-- `HKCOMB_SC` SHIFT + CTRL  
+- HKCOMB_SC SHIFT + CTRL  
   
-- `HKCOMB_SCA` SHIFT + CTRL + ALT  
+- HKCOMB_SCA SHIFT + KLAWISZE CTRL + ALT  
   
  *wModifiers*  
- Tablica flag, która określa kombinację klawiszy do użycia, kiedy użytkownik wprowadzi nieprawidłowe połączenie. Aby uzyskać więcej informacji o flagach modyfikator, zobacz [GetHotKey](#gethotkey).  
+ Tablica flagi, która określa kombinację klawiszy do użycia, gdy użytkownik wprowadzi nieprawidłowe połączenie. Aby uzyskać więcej informacji na temat flagi modyfikatora, zobacz [GetHotKey](#gethotkey).  
   
 ### <a name="remarks"></a>Uwagi  
- Gdy użytkownik wprowadza nieprawidłową kombinację klucza, zgodnie z definicją flag określonych we *wInvalidComb*, system używa operatora OR połączyć klucze wprowadzony przez użytkownika z flag określonych we *wModifiers*. Wynikowa kombinacji klawiszy jest konwertowana na ciąg znaków, a następnie wyświetlane w formantu klawisza dostępu.  
+ Gdy użytkownik wprowadza Nieprawidłowa kombinacja klawiszy, zgodnie z definicją flag określonych we *wInvalidComb*, wówczas system używa operatora OR połączyć klucze wprowadzonej przez użytkownika za pomocą flag określonych we *wModifiers*. Wynikowy kombinacja klawiszy jest konwertowana na ciąg, a następnie wyświetlane w formantu klawisza dostępu.  
   
 ## <a name="see-also"></a>Zobacz też  
  [Klasa CWnd](../../mfc/reference/cwnd-class.md)   

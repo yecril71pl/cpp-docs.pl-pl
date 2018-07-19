@@ -24,18 +24,18 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 83c211617752a9c9701f513373d8fe796a26a1c6
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 00114711f93fcc1ec057ea50b1ce681523db3a9c
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33850720"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38958006"
 ---
 # <a name="autoptr-class"></a>auto_ptr — Klasa
 
-Zawija się wokół zasobów, które zapewnia, że zasób zostanie zniszczony automatycznie, gdy formant opuszcza blok wskaźnika inteligentnego.
+Otacza inteligentny wskaźnik wokół zasobów, które zapewnia, że zasób zostanie zniszczony automatycznie, kiedy formant opuszcza blok.
 
-Więcej funkcją `unique_ptr` zastępuje klasy `auto_ptr`. Aby uzyskać więcej informacji, zobacz [unique_ptr — klasa](../standard-library/unique-ptr-class.md).
+Więcej z możliwością `unique_ptr` zastępuje klasy `auto_ptr`. Aby uzyskać więcej informacji, zobacz [unique_ptr — klasa](../standard-library/unique-ptr-class.md).
 
 Aby uzyskać więcej informacji na temat `throw()` i obsługa wyjątków, zobacz [specyfikacje wyjątków (throw)](../cpp/exception-specifications-throw-cpp.md).
 
@@ -65,15 +65,15 @@ public:
 ```
 ### <a name="parameters"></a>Parametry
 
-`right` `auto_ptr` z którego można pobrać istniejący zasób.
+*prawy* `auto_ptr` z którego można pobrać istniejącego zasobu.
 
-`ptr` Wskaźnik, określić, aby zastąpić przechowywanych wskaźnika.
+*PTR* wskaźnika, określić, aby zastąpić przechowywany wskaźnik.
 
 ## <a name="remarks"></a>Uwagi
 
-Klasa szablonu opisuje wskaźnika inteligentnego o nazwie `auto_ptr`, do przydzielonego obiektu. Wskaźnik musi być równa albo wartość null lub wyznaczyć przydzielone przez obiekt `new`. `auto_ptr` Przesyła własność, jeśli jego wartość przechowywana jest przypisany do innego obiektu. (Zastępowanego przechowywana wartość po transferu za pomocą wskaźnika null.) Destruktor dla elementu `auto_ptr<Type>` usuwa przydzielonego obiektu. `auto_ptr<Type>` Gwarantuje, że obiekt przydzielony jest automatycznie usuwana, gdy formant opuszcza blok, nawet za pośrednictwem zwrócony wyjątek. Nie należy utworzyć dwa `auto_ptr<Type>` obiekty, które posiadają ten sam obiekt.
+Klasa szablonu opisuje inteligentny wskaźnik, wywołuje `auto_ptr`, do przydzielonego obiektu. Wskaźnik musi mieć wartość null albo wyznaczenie przydzielonej przez obiekt **nowe**. `auto_ptr` Przeniesienie własności, jeśli jego przechowywanej wartości jest przypisany do innego obiektu. (Jego zastępuje przechowywana wartość po przeniesieniu ze wskaźnikiem typu null). Destruktor dla `auto_ptr<Type>` usuwa przydzielonego obiektu. `auto_ptr<Type>` Gwarantuje, że przydzielony obiekt jest automatycznie usuwany kiedy formant opuszcza blok, nawet za pośrednictwem wyrzuconego wyjątku. Nie należy utworzyć dwa `auto_ptr<Type>` obiekty, które są właścicielami tego samego obiektu.
 
-Można przekazać `auto_ptr<Type>` obiektu przez wartość jako argument wywołania funkcji. `auto_ptr` Nie może być elementem każdy kontener standardowa biblioteka. Nie można niezawodnie zarządzać sekwencji `auto_ptr<Type>` obiektów z kontenera standardowa biblioteka C++.
+Możesz przekazać `auto_ptr<Type>` obiekt przez wartość jako argument wywołania funkcji. `auto_ptr` Nie może być elementem dowolnego kontenera standardowej biblioteki. Niezawodne nie da się zarządzać sekwencji `auto_ptr<Type>` obiektów za pomocą kontenera standardowej biblioteki języka C++.
 
 ## <a name="members"></a>Elementy członkowskie
 
@@ -87,31 +87,31 @@ Można przekazać `auto_ptr<Type>` obiektu przez wartość jako argument wywoła
 
 |Nazwa typu|Opis|
 |-|-|
-|[element_type](#element_type)|Typ jest synonimem parametru szablonu `Type`.|
+|[element_type](#element_type)|Typ jest synonimem dla parametru szablonu `Type`.|
 
 ### <a name="member-functions"></a>Funkcje Członkowskie
 
-|Funkcja członkowska|Opis|
+|Funkcja elementu członkowskiego|Opis|
 |-|-|
-|[get](#get)|Funkcja członkowska zwraca wskaźnik przechowywanych `myptr`.|
-|[Zlecenia](#release)|Element członkowski zastępuje przechowywanych wskaźnika `myptr` za pomocą wskaźnika null i zwraca wskaźnik zapisanych wcześniej.|
-|[Resetowanie](#reset)|Funkcja członkowska oblicza wyrażenie `delete myptr`, ale tylko wtedy, gdy wartość wskaźnika przechowywanych `myptr` zmiany w wyniku wywołania funkcji. Następnie zastępuje przechowywanych wskaźnik z `ptr`.|
+|[get](#get)|Funkcja elementu członkowskiego zwraca przechowywany wskaźnik `myptr`.|
+|[Wydania](#release)|Element członkowski zastępuje przechowywany wskaźnik `myptr` za pomocą wskaźnika o wartości null i zwraca wskaźnik do poprzednio zapisanego.|
+|[Resetuj](#reset)|Funkcja elementu członkowskiego oblicza wyrażenie `delete myptr`, ale tylko wtedy, gdy wartość przechowywany wskaźnik `myptr` zmiany w wyniku wywołania funkcji. Następnie zastępuje przechowywany wskaźnik przy użyciu *ptr*.|
 
 ### <a name="operators"></a>Operatory
 
 |Operator|Opis|
 |-|-|
-|[operator=](#op_eq)|Operator przypisania przeniesienia własności z jedną `auto_ptr` obiektu do innego.|
-|[operator *](#op_star)|Operator usuwania odwołań dla obiektów typu `auto_ptr`.|
-|[operator ->](#op_arrow)|Operator umożliwiający dostęp do elementu członkowskiego.|
-|[auto_ptr operatora\<innych >](#op_auto_ptr_lt_other_gt)|Rzutuje z jednego rodzaju `auto_ptr` do innego rodzaju z `auto_ptr`.|
+|[operator=](#op_eq)|Operator przypisania przeniesienia własności z jedną `auto_ptr` obiektu do drugiego.|
+|[operator *](#op_star)|Operator dereferencji dla obiektów typu `auto_ptr`.|
+|[operator ->](#op_arrow)|Operator umożliwiające dostęp do elementu członkowskiego.|
+|[Operator auto_ptr\<innych >](#op_auto_ptr_lt_other_gt)|Rzutuje z jednego rodzaju `auto_ptr` do innego rodzaju elementu `auto_ptr`.|
 |[Operator auto_ptr_ref\<innych >](#op_auto_ptr_ref_lt_other_gt)|Rzutuje z `auto_ptr` do `auto_ptr_ref`.|
 
 ## <a name="requirements"></a>Wymagania
 
 **Nagłówek:** \<pamięci >
 
-**Namespace:** Standard
+**Namespace:** standardowe
 
 ## <a name="auto_ptr"></a>  auto_ptr::auto_ptr
 
@@ -130,17 +130,17 @@ auto _ptr(auto _ptr<Other>& right) throw();
 
 ### <a name="parameters"></a>Parametry
 
-`ptr` Wskaźnik do obiektu który `auto_ptr` hermetyzuje.
+*PTR* wskaźnik do obiektu, `auto_ptr` hermetyzuje.
 
-`right` `auto_ptr` Obiektu do skopiowania przez konstruktora.
+*prawy* `auto_ptr` obiektu do skopiowania przez konstruktora.
 
 ### <a name="remarks"></a>Uwagi
 
-Pierwszy magazynów konstruktora `ptr` w **myptr**, przechowywane wskaźnik do przydzielonego obiektu. Drugi Konstruktor przesyła własność wskaźnika przechowywane w `right`, przechowując `right`. [Zwolnij](#release) w **myptr**.
+Pierwszy magazynów Konstruktor *ptr* w `myptr`, przechowywany wskaźnik do przydzielonego obiektu. Drugi Konstruktor przenosi własność wskaźnika przechowywania w *prawo*, przechowując *prawo*. [Zwolnij](#release) w `myptr`.
 
-Trzeci konstruktora zachowuje się taka sama jak druga Strona, z wyjątkiem tego, że przechowuje **prawo**. `ref`. **Zwolnij** w **myptr**, gdzie `ref` odwołanie znajduje się w `right`.
+Trzeci Konstruktor zachowuje się taka sama jak druga Strona, z tą różnicą, że przechowuje `right`. `ref`. `release` w `myptr`, gdzie `ref` odwołanie znajduje się w `right`.
 
-Konstruktor szablonu działa tak samo jak drugi Konstruktor, pod warunkiem, że wskaźnik do **innych** można niejawnie przekonwertować na wskaźnik do **typu**.
+Konstruktor szablon działa tak samo jak drugi Konstruktor, pod warunkiem, że wskaźnik do `Other` można niejawnie przekonwertować na wskaźnik do `Type`.
 
 ### <a name="example"></a>Przykład
 
@@ -203,7 +203,7 @@ Destructing 00311AF8
 
 ## <a name="element_type"></a>  auto_ptr::ELEMENT_TYPE
 
-Typ jest synonimem parametru szablonu **typu**.
+Typ jest synonimem dla parametru szablonu `Type`.
 
 ```cpp
 
@@ -212,7 +212,7 @@ typedef Type element  _type;
 
 ## <a name="get"></a>  auto_ptr::Get
 
-Funkcja członkowska zwraca wskaźnik przechowywanych **myptr**.
+Funkcja elementu członkowskiego zwraca przechowywany wskaźnik `myptr`.
 
 ```cpp
 Type *get() const throw();
@@ -220,7 +220,7 @@ Type *get() const throw();
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Wskaźnik przechowywanych **myptr**.
+Przechowywany wskaźnik `myptr`.
 
 ### <a name="example"></a>Przykład
 
@@ -271,7 +271,7 @@ Destructing 00311B88 Value: 6
 
 ## <a name="op_eq"></a>  auto_ptr::operator =
 
-Operator przypisania przeniesienia własności z jedną `auto_ptr` obiektu do innego.
+Operator przypisania przeniesienia własności z jedną `auto_ptr` obiektu do drugiego.
 
 ```cpp
 template <class Other>
@@ -282,7 +282,7 @@ auto_ptr<Type>& operator=(auto_ptr_ref<Type> right) throw();
 
 ### <a name="parameters"></a>Parametry
 
-`right` Obiekt typu `auto_ptr`.
+*prawy* obiektu typu `auto_ptr`.
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -290,15 +290,15 @@ Odwołanie do obiektu typu `auto_ptr` \< **typu**>.
 
 ### <a name="remarks"></a>Uwagi
 
-Przypisanie oblicza wyrażenie **usunąć myptr**, ale tylko wtedy, gdy wskaźnik przechowywanych **myptr** zmiany wyniku przypisania. Następnie przesyła własność wskaźnika przechowywane w _ *prawej*, przechowując \_ *prawej*. [Zwolnij](#release) w **myptr**. Funkcja zwraca  **\*to**.
+Przypisanie oblicza wyrażenie `delete myptr`, ale tylko wtedy, gdy przechowywany wskaźnik `myptr` zmiany wyniku przypisania. Następnie przekazuje własność wskaźnika, przechowywane w _ *po prawej stronie*, przechowując \_ *po prawej stronie*. [Zwolnij](#release) w `myptr`. Funkcja zwraca  **\*to**.
 
 ### <a name="example"></a>Przykład
 
-Na przykład użycie operator członkowski zobacz [auto_ptr::auto_ptr](#auto_ptr).
+Na przykład użycie operatora składowej zobacz [auto_ptr::auto_ptr](#auto_ptr).
 
 ## <a name="op_star"></a>  auto_ptr::operator *
 
-Operator usuwania odwołań dla obiektów typu `auto_ptr`.
+Operator dereferencji dla obiektów typu `auto_ptr`.
 
 ```cpp
 Type& operator*() const throw();
@@ -306,19 +306,19 @@ Type& operator*() const throw();
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Odwołanie do obiektu typu **typu** będący właścicielem wskaźnika.
+Odwołanie do obiektu typu `Type` będący właścicielem wskaźnika.
 
 ### <a name="remarks"></a>Uwagi
 
-Operator pośredni zwraca `*` [uzyskać](#get). W związku z tym przechowywanych wskaźnika nie może mieć wartości null.
+Zwraca operatora pośredniego `*` [uzyskać](#get). Dzięki temu przechowywany wskaźnik nie może być zerowy.
 
 ### <a name="example"></a>Przykład
 
-Na przykład dotyczące używania funkcji członkowskiej zobacz [auto_ptr::auto_ptr](#auto_ptr).
+Na przykład jak używać funkcji składowej zobacz [auto_ptr::auto_ptr](#auto_ptr).
 
 ## <a name="op_arrow"></a>  auto_ptr::operator-&gt;
 
-Operator umożliwiający dostęp do elementu członkowskiego.
+Operator umożliwiające dostęp do elementu członkowskiego.
 
 ```cpp
 Type * operator->() const throw();
@@ -326,19 +326,19 @@ Type * operator->() const throw();
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Element członkowski obiektu, który **auto_ptr** właścicielem.
+Element członkowski obiektu, `auto_ptr` jest właścicielem.
 
 ### <a name="remarks"></a>Uwagi
 
-Zwraca operatorem wyboru [uzyskać](#get)`( )`, dzięki czemu wyrażenie *region*-> **elementu członkowskiego** działa tak samo jak ( *region*. **Pobierz**()) -> **elementu członkowskiego**, gdzie *region* jest obiektem klasy `auto_ptr` \< **typu**>. W związku z tym przechowywanych wskaźnika nie może być pusta, i **typu** musi być klasy, struktury lub Unii typu o **elementu członkowskiego** elementu członkowskiego.
+Zwraca operatora wyboru [uzyskać](#get)`( )`, dzięki czemu wyrażenie *ap*-> **elementu członkowskiego** działa tak samo jak ( *ap*. **Pobierz**()) -> **elementu członkowskiego**, gdzie *ap* jest obiektem klasy `auto_ptr` \< **typu**>. Dzięki temu przechowywany wskaźnik nie może być null, i `Type` musi być klasy, struktury lub Unii typu z `member` elementu członkowskiego.
 
 ### <a name="example"></a>Przykład
 
-Na przykład dotyczące używania funkcji członkowskiej zobacz [auto_ptr::auto_ptr](#auto_ptr).
+Na przykład jak używać funkcji składowej zobacz [auto_ptr::auto_ptr](#auto_ptr).
 
 ## <a name="op_auto_ptr_lt_other_gt"></a>  auto_ptr::operator auto_ptr&lt;innych&gt;
 
-Rzutuje z jednego rodzaju `auto_ptr` do innego rodzaju z `auto_ptr`.
+Rzutuje z jednego rodzaju `auto_ptr` do innego rodzaju elementu `auto_ptr`.
 
 ```cpp
 template <class Other>
@@ -347,7 +347,7 @@ operator auto _ptr<Other>() throw();
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Typ rzutowania zwraca operator `auto_ptr` \< **innych**> (  **\*to**).
+Typ rzutowania operator zwraca `auto_ptr` \< **innych**> (  **\*to**).
 
 ### <a name="example"></a>Przykład
 
@@ -368,7 +368,7 @@ int main()
 
 ## <a name="op_auto_ptr_ref_lt_other_gt"></a>  auto_ptr::operator auto_ptr_ref&lt;innych&gt;
 
-Rzutuje z `auto_ptr` do **auto_ptr_ref**.
+Rzutuje z `auto_ptr` do `auto_ptr_ref`.
 
 ```cpp
 template <class Other>
@@ -377,7 +377,7 @@ operator auto _ptr  _ref<Other>() throw();
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Typ rzutowania zwraca operator **auto_ptr_ref** \< **innych**> (  **\*to**).
+Typ rzutowania operator zwraca **auto_ptr_ref** \< **innych**> (  **\*to**).
 
 ### <a name="example"></a>Przykład
 
@@ -429,7 +429,7 @@ main exiting
 
 ## <a name="release"></a>  auto_ptr::Release
 
-Element członkowski zastępuje przechowywanych wskaźnika **myptr** za pomocą wskaźnika null i zwraca wskaźnik zapisanych wcześniej.
+Element członkowski zastępuje przechowywany wskaźnik `myptr` za pomocą wskaźnika o wartości null i zwraca wskaźnik do poprzednio zapisanego.
 
 ```cpp
 Type *release() throw();
@@ -437,11 +437,11 @@ Type *release() throw();
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Wskaźnik zapisanych wcześniej.
+Wcześniej przechowywany wskaźnik.
 
 ### <a name="remarks"></a>Uwagi
 
-Element członkowski zastępuje przechowywanych wskaźnika **myptr** za pomocą wskaźnika null i zwraca wskaźnik zapisanych wcześniej.
+Element członkowski zastępuje przechowywany wskaźnik `myptr` za pomocą wskaźnika o wartości null i zwraca wskaźnik do poprzednio zapisanego.
 
 ### <a name="example"></a>Przykład
 
@@ -491,7 +491,7 @@ Destructing 00311B88 Value: 6
 
 ## <a name="reset"></a>  auto_ptr::reset
 
-Funkcji członkowskiej oblicza wyrażenie **usunąć** **myptr**, ale tylko wtedy, gdy wartość wskaźnika przechowywanych **myptr** zmiany w wyniku wywołania funkcji. Następnie zastępuje przechowywanych wskaźnik z **ptr**.
+Funkcja elementu członkowskiego oblicza wyrażenie `delete myptr`, ale tylko wtedy, gdy wartość przechowywany wskaźnik `myptr` zmiany w wyniku wywołania funkcji. Następnie zastępuje przechowywany wskaźnik przy użyciu `ptr`.
 
 ```cpp
 void reset(Type* ptr = 0);
@@ -499,7 +499,7 @@ void reset(Type* ptr = 0);
 
 ### <a name="parameters"></a>Parametry
 
-`ptr` Wskaźnik, określić, aby zastąpić przechowywanych wskaźnika **myptr**.
+*PTR* wskaźnika, określić, aby zastąpić przechowywany wskaźnik `myptr`.
 
 ### <a name="example"></a>Przykład
 

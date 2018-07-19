@@ -16,16 +16,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2529a38a7737fc45573f5c151477e0a5754cde50
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 7017ee7b29e8e41e4aa33f95560a10127dc812e7
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33854574"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38960895"
 ---
 # <a name="unarynegate-class"></a>unary_negate — Klasa
 
-Zapewnianie funkcji członkowskiej, która Negacja wartość zwracana funkcji jednoargumentowy określonej klasy szablonów.
+Klasa szablonu, zapewniając funkcją składową, negujące wartość zwracaną funkcję jednoargumentową określony.
 
 ## <a name="syntax"></a>Składnia
 
@@ -42,19 +42,21 @@ public:
 
 ### <a name="parameters"></a>Parametry
 
-`Func` Jednoargumentowy funkcję, która ma być zanegowane.
+*FUNC*  
+ Funkcja jednoargumentowe być ujemna.
 
-`left` Operand operatora jednoargumentowego funkcję, która ma być zanegowane.
+*left*  
+ Argument operacji funkcję jednoargumentową, aby być ujemna.
 
 ## <a name="return-value"></a>Wartość zwracana
 
-Negacja funkcja jednoargumentowy.
+Negacja funkcję jednoargumentową.
 
 ## <a name="remarks"></a>Uwagi
 
-Klasy szablonu przechowuje kopię _ obiektu funkcja jednoargumentowy *Func.* Definiuje jego funkcji członkowskiej `operator()` jako zwracanie **!**\_ *FUNC(LEFT).*
+Klasa szablonu przechowuje kopię _ obiektu funkcji jednoargumentowe *Func.* Definiuje jej funkcji członkowskiej `operator()` powrotu **!**\_ *FUNC(LEFT).*
 
-Konstruktor obiektu `unary_negate` jest rzadko używana bezpośrednio. Funkcja Pomocnika [not1 —](../standard-library/functional-functions.md#not1) umożliwia łatwiejsze deklarowanie i użycie **unary_negator** predykatu karty.
+Konstruktor obiektu `unary_negate` jest rzadko używana bezpośrednio. Funkcja Pomocnika [not1 —](../standard-library/functional-functions.md#not1) zapewnia łatwiejszy sposób deklarowanie i użycie **unary_negator** predykatu adaptera.
 
 ## <a name="example"></a>Przykład
 
@@ -112,7 +114,7 @@ The number of elements in v1 not greater than 10 is: 3.
 
 **Nagłówek:** \<funkcjonalności >
 
-**Namespace:** Standard
+**Namespace:** standardowe
 
 ## <a name="see-also"></a>Zobacz także
 

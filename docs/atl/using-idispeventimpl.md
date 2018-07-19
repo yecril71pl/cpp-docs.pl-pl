@@ -1,5 +1,5 @@
 ---
-title: Przy użyciu IDispEventImpl (ATL) | Dokumentacja firmy Microsoft
+title: Korzystanie z interfejsu IDispEventImpl (ATL) | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,30 +16,30 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 520d1129234a26ff6eb4c402154969ad7e166211
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 38ac64a99c3523f174c62c9788aeab867aa8758b
+ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32361154"
+ms.lasthandoff: 07/05/2018
+ms.locfileid: "37848931"
 ---
-# <a name="using-idispeventimpl"></a>Przy użyciu IDispEventImpl
+# <a name="using-idispeventimpl"></a>Korzystanie z interfejsu IDispEventImpl
 Korzystając z `IDispEventImpl` do obsługi zdarzeń, konieczne będzie:  
   
 -   Pochodzi z klasy [IDispEventImpl](../atl/reference/idispeventimpl-class.md).  
   
--   Dodaj mapę obiekt sink zdarzenia do swojej klasy.  
+-   Dodaj mapę ujścia zdarzeń do swojej klasy.  
   
--   Dodawanie wpisów do event sink mapy przy użyciu [SINK_ENTRY](reference/composite-control-macros.md#sink_entry) lub [SINK_ENTRY_EX](reference/composite-control-macros.md#sink_entry_ex) makra.  
+-   Dodawanie wpisów do zdarzenia sink mapy za pomocą [SINK_ENTRY](reference/composite-control-macros.md#sink_entry) lub [SINK_ENTRY_EX](reference/composite-control-macros.md#sink_entry_ex) makra.  
   
--   Implementuje metody, że jesteś zainteresowany obsługi.  
+-   Implementuje metody interesującego Cię w obsłudze.  
   
--   Powiadomienia i unadvise źródło zdarzenia.  
+-   Powiadomienia i unadvise źródła zdarzeń.  
   
 ## <a name="example"></a>Przykład  
- W poniższym przykładzie pokazano sposób obsługi **DocumentChange** zdarzenia wywoływane przez Word **aplikacji** obiektu. To zdarzenie jest definiowane jako metodę na **ApplicationEvents** dispinterface.  
+ W poniższym przykładzie pokazano sposób obsługi `DocumentChange` zdarzenia wywoływane przez programu Word **aplikacji** obiektu. To zdarzenie jest zdefiniowany jako metodę na `ApplicationEvents` dispinterface.  
   
- Przykładem jest z [próbki ATLEventHandling](../visual-cpp-samples.md).  
+ W przykładzie występuje z [przykładowe ATLEventHandling](../visual-cpp-samples.md).  
   
  `[`  
   
@@ -69,11 +69,11 @@ Korzystając z `IDispEventImpl` do obsługi zdarzeń, konieczne będzie:
   
  `};`  
   
- W przykładzie użyto `#import` generuje pliki wymaganego nagłówka z biblioteki typów dla programu Word. Jeśli chcesz użyć tego przykładu z innymi wersjami programu Word, należy określić poprawną mso pliku dll. Na przykład pakiet Office 2000 zawiera mso9.dll i OfficeXP zapewnia mso.dll. Ten kod jest uproszczone z stdafx.h:  
+ W przykładzie użyto `#import` ma generować pliki wymaganego nagłówka z biblioteki typów programu Word. Jeśli chcesz wykorzystać ten przykład z innymi wersjami programu Word, należy określić prawidłowe mso pliku dll. Na przykład pakiet Office 2000 zawiera mso9.dll i OfficeXP zapewnia mso.dll. Ten kod jest uproszczony w pliku stdafx.h:  
   
  [!code-cpp[NVC_ATL_EventHandlingSample#1](../atl/codesnippet/cpp/using-idispeventimpl_1.h)]  
   
- Poniższy kod zostanie wyświetlony w NotSoSimple.h. Odpowiedni kod jest odnotowany odpowiednimi komentarzami:  
+ Poniższy kod zostanie wyświetlony w NotSoSimple.h. Odpowiedni kod jest oznaczone przez komentarzy:  
   
  [!code-cpp[NVC_ATL_EventHandlingSample#2](../atl/codesnippet/cpp/using-idispeventimpl_2.h)]  
   

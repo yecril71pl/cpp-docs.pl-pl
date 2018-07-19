@@ -22,16 +22,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0f8bd1ec1436b960a0637a79cb04982a953636a6
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: c4bff519ea12646e94e92cde219fa38e4009a767
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33856303"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38956460"
 ---
 # <a name="rtsalloc-class"></a>rts_alloc — Klasa
 
-Rts_alloc — klasa szablonu opisuje [filtru](../standard-library/allocators-header.md) zawierający tablicę pamięci podręcznej wystąpienia i określa, które wystąpienie na potrzeby alokacji i dezalokacji w czasie wykonywania, a nie w czasie kompilacji.
+Rts_alloc — klasa szablonu opisuje [filtru](../standard-library/allocators-header.md) zawierający tablicę pamięci podręcznej wystąpień i określa, które wystąpienie na potrzeby alokacji i dezalokacji w czasie wykonywania, a nie w czasie kompilacji.
 
 ## <a name="syntax"></a>Składnia
 
@@ -44,29 +44,29 @@ class rts_alloc
 
 |Parametr|Opis|
 |---------------|-----------------|
-|`Cache`|Typ wystąpienia pamięci podręcznej zawartych w tablicy. Może to być [cache_chunklist — klasa](../standard-library/cache-chunklist-class.md), [cache_freelist —](../standard-library/cache-freelist-class.md), lub [cache_suballoc —](../standard-library/cache-suballoc-class.md).|
+|*Cache*|Typ wystąpienia pamięci podręcznej znajdujących się w tablicy. Może to być [cache_chunklist — klasa](../standard-library/cache-chunklist-class.md), [cache_freelist](../standard-library/cache-freelist-class.md), lub [cache_suballoc](../standard-library/cache-suballoc-class.md).|
 
 ## <a name="remarks"></a>Uwagi
 
-Ta klasa szablonu zawiera blok wiele wystąpień programu przydzielania i określa, które wystąpienie na potrzeby alokacji lub dezalokacji w czasie wykonywania, a nie w czasie kompilacji. Jest ona używana z kompilatorów, których nie można skompilować ponownie Utwórz wiązanie.
+Tej klasy szablonu zawiera blok wiele wystąpień programu przydzielania i określa, które wystąpienie na potrzeby alokacji i dezalokacji w czasie wykonywania, a nie w czasie kompilacji. Kompilatory, których nie można skompilować ponowne wiązanie jest używany.
 
 ### <a name="member-functions"></a>Funkcje Członkowskie
 
-|Funkcja członkowska|Opis|
+|Funkcja elementu członkowskiego|Opis|
 |-|-|
-|[allocate](#allocate)|Przydziela bloku pamięci.|
-|[Cofnięcie przydziału](#deallocate)|Zwalnia określoną liczbę obiektów z magazynu rozpoczynający się od określonej pozycji.|
-|[equals](#equals)|Porównuje dwa pamięci podręcznych pod kątem równości.|
+|[allocate](#allocate)|Przydziela blok pamięci.|
+|[Cofnij Przydział](#deallocate)|Zwalnia określoną liczbę obiektów z pamięci masowej rozpoczynający się od określonej pozycji.|
+|[equals](#equals)|Porównuje dwa pamięci podręczne dla równości.|
 
 ## <a name="requirements"></a>Wymagania
 
-**Nagłówek:** \<allocators — >
+**Nagłówek:** \<buforów >
 
-**Namespace:** stdext —
+**Namespace:** stdext
 
 ## <a name="allocate"></a>  rts_alloc::allocate
 
-Przydziela bloku pamięci.
+Przydziela blok pamięci.
 
 ```cpp
 void *allocate(std::size_t count);
@@ -76,7 +76,7 @@ void *allocate(std::size_t count);
 
 |Parametr|Opis|
 |---------------|-----------------|
-|`count`|Liczba elementów w tablicy do przydzielenia.|
+|*Liczba*|Liczba elementów w tablicy do przydzielenia.|
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -84,11 +84,11 @@ Wskaźnik do przydzielonego obiektu.
 
 ### <a name="remarks"></a>Uwagi
 
-Funkcja członkowska zwraca `caches[_IDX].allocate(count)`, gdzie indeks `_IDX` jest zależny od rozmiaru żądanego bloku `count`, lub jeśli `count` jest zbyt duży, zwraca `operator new(count)`. `cache`, która reprezentuje buforowany obiekt.
+Funkcja elementu członkowskiego zwraca `caches[_IDX].allocate(count)`, gdzie indeks `_IDX` zależy od rozmiaru żądanego bloku *liczba*, lub jeśli *liczba* jest za duży, funkcja zwraca `operator new(count)`. `cache`, która reprezentuje buforowany obiekt.
 
 ## <a name="deallocate"></a>  rts_alloc::deallocate
 
-Zwalnia określoną liczbę obiektów z magazynu rozpoczynający się od określonej pozycji.
+Zwalnia określoną liczbę obiektów z pamięci masowej rozpoczynający się od określonej pozycji.
 
 ```cpp
 void deallocate(void* ptr, std::size_t count);
@@ -98,16 +98,16 @@ void deallocate(void* ptr, std::size_t count);
 
 |Parametr|Opis|
 |---------------|-----------------|
-|`ptr`|Wskaźnik do pierwszego obiektu do cofnięcia alokacji z magazynu.|
-|`count`|Liczba obiektów do cofnięcia alokacji z magazynu.|
+|*ptr*|Wskaźnik do pierwszego obiektu można cofnąć przydziału z magazynu.|
+|*Liczba*|Liczba obiektów, które można cofnąć przydziału z magazynu.|
 
 ### <a name="remarks"></a>Uwagi
 
-Wywołania funkcji Członkowskich `caches[_IDX].deallocate(ptr, count)`, gdzie indeks `_IDX` jest zależny od rozmiaru żądanego bloku `count`, lub jeśli `count` jest zbyt duży, zwraca `operator delete(ptr)`.
+Wywołania funkcji elementu członkowskiego `caches[_IDX].deallocate(ptr, count)`, gdzie indeks `_IDX` zależy od rozmiaru żądanego bloku *liczba*, lub jeśli *liczba* jest za duży, funkcja zwraca `operator delete(ptr)`.
 
 ## <a name="equals"></a>  rts_alloc::Equals
 
-Porównuje dwa pamięci podręcznych pod kątem równości.
+Porównuje dwa pamięci podręczne dla równości.
 
 ```cpp
 bool equals(const sync<_Cache>& _Other) const;
@@ -117,12 +117,12 @@ bool equals(const sync<_Cache>& _Other) const;
 
 |Parametr|Opis|
 |---------------|-----------------|
-|`_Cache`|Buforowany obiekt skojarzone z filtrem.|
-|`_Other`|Buforowany obiekt do porównania równości.|
+|*_Cache*|Buforowany obiekt skojarzony z filtrem.|
+|*_Inne*|Buforowany obiekt do porównania dla równości.|
 
 ### <a name="remarks"></a>Uwagi
 
-`true` Jeśli wynik `caches[0].equals(other.caches[0])`; w przeciwnym razie `false`. `caches` reprezentuje tablicę obiektów w pamięci podręcznej.
+**wartość true,** Jeśli wynikiem `caches[0].equals(other.caches[0])`; w przeciwnym razie **false**. `caches` reprezentuje tablicę obiektów w pamięci podręcznej.
 
 ## <a name="see-also"></a>Zobacz także
 

@@ -19,15 +19,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 114411d0f8c7084e26f36f0ffc05e60a32407c44
-ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
+ms.openlocfilehash: 96db2ea0c28e14f7a8e614d94e18cd3fad3cda53
+ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/26/2018
-ms.locfileid: "36956837"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37339013"
 ---
 # <a name="callback-functions-used-by-mfc"></a>Funkcje wywołania zwrotnego używane przez MFC
-Trzy funkcje wywołania zwrotnego są wyświetlane w programie Microsoft Foundation Class Library. Te funkcje wywołania zwrotnego są przekazywane do [CDC::EnumObjects](../../mfc/reference/cdc-class.md#enumobjects), [CDC::GrayString](../../mfc/reference/cdc-class.md#graystring), i [CDC::SetAbortProc](../../mfc/reference/cdc-class.md#setabortproc). Należy pamiętać, że wszystkie funkcje wywołania zwrotnego musi przechwytują wyjątki MFC przed zwróceniem do systemu Windows, ponieważ nie może być wyjątek w granicach wywołania zwrotnego. Aby uzyskać więcej informacji o wyjątkach, zobacz artykuł [wyjątki](../../mfc/exception-handling-in-mfc.md).  
+Trzy funkcje wywołania zwrotnego pojawiają się w bibliotece klas Microsoft Foundation. Te funkcje wywołania zwrotnego są przekazywane do [CDC::EnumObjects](../../mfc/reference/cdc-class.md#enumobjects), [CDC::GrayString](../../mfc/reference/cdc-class.md#graystring), i [CDC::SetAbortProc](../../mfc/reference/cdc-class.md#setabortproc). Należy pamiętać, że wszystkie funkcje wywołania zwrotnego musi przechwytują wyjątki MFC przed zwróceniem do Windows, ponieważ nie może być zgłaszane wyjątki granice wywołania zwrotnego. Aby uzyskać więcej informacji na temat wyjątków, zobacz artykuł [wyjątki](../../mfc/exception-handling-in-mfc.md).  
 
 |Nazwa||  
 |----------|-----------------|  
@@ -39,7 +39,7 @@ Trzy funkcje wywołania zwrotnego są wyświetlane w programie Microsoft Foundat
  **Nagłówek:** afxwin.h 
 
 ## <a name="enum_objects"></a> Funkcja wywołania zwrotnego dla CDC::EnumObjects
-*ObjectFunc* nazwy jest symbolem zastępczym dla nazwy funkcji aplikacji.  
+*ObjectFunc* nazwa jest symbolem zastępczym dla nazwy funkcji aplikacji.  
   
 ### <a name="syntax"></a>Składnia  
   
@@ -54,16 +54,16 @@ int CALLBACK EXPORT ObjectFunc(
  Wskazuje [LOGPEN](../../mfc/reference/logpen-structure.md) lub [LOGBRUSH](../../mfc/reference/logbrush-structure.md) struktura danych, która zawiera informacje dotyczące logicznej atrybutów obiektu.  
   
  *lpData*  
- Punkty danych dostarczonych aplikacji przekazany do `EnumObjects` funkcji.  
+ Punkty danych podany w aplikacji jest przekazywany do `EnumObjects` funkcji.  
   
 ### <a name="return-value"></a>Wartość zwracana  
- Funkcja wywołania zwrotnego **int**. Wartość tego zwracany jest zdefiniowane przez użytkownika. Jeśli funkcja wywołania zwrotnego zwraca wartość 0, `EnumObjects` zatrzymuje wczesne wyliczenia.  
+ Funkcja wywołania zwrotnego zwraca **int**. Wartość tego zwracany jest zdefiniowane przez użytkownika. Jeśli funkcja wywołania zwrotnego zwraca wartość 0, `EnumObjects` zatrzymuje wcześnie wyliczenia.  
   
 ### <a name="remarks"></a>Uwagi  
- Musi być eksportowany rzeczywistą nazwą.  
+ Rzeczywista nazwa musi być eksportowany.  
   
 ## <a name="graystring"></a>  Funkcja wywołania zwrotnego dla CDC::GrayString
-*OutputFunc* to symbol zastępczy nazwą funkcji dostarczone przez aplikację wywołania zwrotnego.  
+*OutputFunc* jest symbolem zastępczym dla nazwy funkcji wywołania zwrotnego z dostarczonych aplikacji.  
   
 ### <a name="syntax"></a>Składnia  
   
@@ -76,19 +76,19 @@ BOOL CALLBACK EXPORT OutputFunc(
   
 ### <a name="parameters"></a>Parametry  
  *elementu hDC*  
- Identyfikuje kontekst urządzenia pamięci z mapą bitową co najmniej szerokości i wysokości określony przez *nWidth* i *nHeight* do `GrayString`.  
+ Identyfikuje kontekst urządzenia pamięci z mapą bitową w co najmniej szerokość i wysokość, określony przez `nWidth` i `nHeight` do `GrayString`.  
   
  *lpData*  
  Wskazuje ciąg znaków do rysowania.  
   
  *nCount*  
- Określa liczbę znaków do danych wyjściowych.  
+ Określa liczbę znaków w danych wyjściowych.  
   
 ### <a name="return-value"></a>Wartość zwracana  
- Funkcja wywołania zwrotnego zwracana wartość musi być **TRUE** informując o powodzeniu; w przeciwnym razie jest **FALSE**.  
+ Wartość zwracaną przez funkcję wywołania zwrotnego musi mieć wartość PRAWDA, informując o powodzeniu; w przeciwnym razie ma wartość FAŁSZ.  
   
 ### <a name="remarks"></a>Uwagi  
- Funkcja wywołania zwrotnego (*OutputFunc*) należy narysować obrazu względem współrzędnych (0,0) zamiast (*x*, *y*).  
+ Funkcja wywołania zwrotnego (*OutputFunc*) musi narysuj obraz względem współrzędnych (0,0) zamiast (*x*, *y*).  
 
 ## <a name="setabortproc"></a>  Funkcja wywołania zwrotnego dla CDC::SetAbortProc
 Nazwa *AbortFunc* jest symbolem zastępczym dla nazwy funkcji aplikacji.  
@@ -106,10 +106,10 @@ BOOL CALLBACK EXPORT AbortFunc(
  Identyfikuje kontekst urządzenia.  
   
  *Kod*  
- Określa, czy wystąpił błąd. Jeśli wystąpił błąd nie jest 0. Jest **SP_OUTOFDISK** Jeśli Menedżera wydruku jest obecnie mało miejsca na dysku i stanie się dostępna, gdy aplikacja oczekuje więcej miejsca na dysku. Jeśli *kod* jest **SP_OUTOFDISK**przerwać zadanie drukowania nie ma aplikacji. Jeśli nie, musi on uzyskanie Menedżera wydruku przez wywołanie metody `PeekMessage` lub `GetMessage` funkcji systemu Windows.  
+ Określa, czy wystąpił błąd. Jeśli żaden błąd nie wystąpił, to 0. To SP_OUTOFDISK przypadku Menedżera wydruku jest obecnie wolne miejsce na dysku i więcej miejsca na dysku staną się dostępne, jeśli aplikacja oczekuje. Jeśli *kodu* jest SP_OUTOFDISK, aplikacja nie musi przerwać zadanie drukowania. Jeśli nie, musi on uzyskanie Menedżera wydruku przez wywołanie metody `PeekMessage` lub `GetMessage` funkcji Windows.  
   
 ### <a name="return-value"></a>Wartość zwracana  
- Wartość zwracana funkcji obsługi przerwania jest różna od zera, jeśli zadanie drukowania jest kontynuowanie i 0, jeśli jest ona anulowana.  
+ Wartość zwracaną funkcji obsługi przerwania jest różna od zera, jeśli zadanie drukowania jest, aby kontynuować i 0, jeśli zostanie anulowane.  
   
 ### <a name="remarks"></a>Uwagi  
  Rzeczywista nazwa musi być eksportowany zgodnie z opisem w sekcji uwag [CDC::SetAbortProc](../../mfc/reference/cdc-class.md#setabortproc).  

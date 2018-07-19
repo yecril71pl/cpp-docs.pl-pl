@@ -17,20 +17,20 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: da8d7358c634416941a551c93c6a2772549a3fd2
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 5ef614f4cbc3f097e6f790a49c0b599817f9b59c
+ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32357280"
+ms.lasthandoff: 07/05/2018
+ms.locfileid: "37849188"
 ---
 # <a name="catlservicemoduletstart-function"></a>Funkcja CAtlServiceModuleT::Start
-Po uruchomieniu usługi **_tWinMain** wywołania **CAtlServiceModuleT::WinMain**, który z kolei wywołuje `CAtlServiceModuleT::Start`.  
+Po uruchomieniu usługi `_tWinMain` wywołania `CAtlServiceModuleT::WinMain`, który z kolei wywołuje `CAtlServiceModuleT::Start`.  
   
- `CAtlServiceModuleT::Start` Ustawia tablicę **SERVICE_TABLE_ENTRY** struktur, które mapują każdej usługi do jego uruchamiania funkcji. Ta tablica są następnie przekazywane do funkcji Win32 API [StartServiceCtrlDispatcher](http://msdn.microsoft.com/library/windows/desktop/ms686324). Teoretycznie jednego pliku EXE może obsłużyć wielu usług i Tablica może mieć wielu **SERVICE_TABLE_ENTRY** struktury. Obecnie jednak wygenerowane ATL usługa obsługuje tylko jedną usługę na pliku EXE. W związku z tym tablicy ma pojedynczy wpis, który zawiera nazwę usługi i **_ServiceMain** jako funkcja startowa. **_ServiceMain** jest funkcją statyczny element członkowski `CAtlServiceModuleT` , który odwołuje się funkcja niestatycznego elementu członkowskiego `ServiceMain`.  
+ `CAtlServiceModuleT::Start` Ustawia tablicę `SERVICE_TABLE_ENTRY` struktur, które mapują poszczególnych usług dla jej funkcji uruchamiania. Ta tablica jest następnie przekazywany do funkcji Win32 API [StartServiceCtrlDispatcher](http://msdn.microsoft.com/library/windows/desktop/ms686324). Teoretycznie jeden plik EXE może obsługiwać wiele usług i tablicy może mieć wiele `SERVICE_TABLE_ENTRY` struktury. Obecnie jednak wygenerowane ATL usługa obsługuje tylko jedną usługę na pliku EXE. W związku z tym, tablica nie zawiera pojedynczy wpis, który zawiera nazwę usługi i `_ServiceMain` jako funkcję uruchamiania. `_ServiceMain` jest to funkcja statycznej składowej `CAtlServiceModuleT` wywołującą funkcję niestatycznego elementu członkowskiego `ServiceMain`.  
   
 > [!NOTE]
->  Niepowodzenie **StartServiceCtrlDispatcher** nawiązać sterowania usługami (SCM) manager prawdopodobnie oznacza to, że program nie jest uruchomiony jako usługa. W takim przypadku program wywołuje `CAtlServiceModuleT::Run` bezpośrednio, aby uruchomić program jako serwer lokalny. Aby uzyskać więcej informacji na temat program działa jako serwer lokalny, zobacz [debugowania porady](../atl/debugging-tips.md).  
+>  Niepowodzenie `StartServiceCtrlDispatcher` połączyć się z kontroli usług Menedżera (SCM) prawdopodobnie oznacza, że program nie jest uruchomiony jako usługa. W takim przypadku program wywołuje `CAtlServiceModuleT::Run` bezpośrednio, aby uruchomić program jako serwera lokalnego. Aby uzyskać więcej informacji na temat uruchamiania programu jako serwera lokalnego, zobacz [debugowania porady](../atl/debugging-tips.md).  
   
 ## <a name="see-also"></a>Zobacz też  
  [Usługi](../atl/atl-services.md)   

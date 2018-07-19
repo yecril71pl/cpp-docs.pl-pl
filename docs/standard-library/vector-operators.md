@@ -20,14 +20,14 @@ helpviewer_keywords:
 - std::operator&lt; (vector)
 - std::operator&lt;= (vector)
 - std::operator== (vector)
-ms.openlocfilehash: 779fe61bec63f55d7f3b8b3bb7f2e0d084fbab5b
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 4dac24b73e2b0a228f712453b124ff01e5c13c46
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33863959"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38959686"
 ---
-# <a name="ltvectorgt-operators"></a>&lt;Wektor&gt; operatory
+# <a name="ltvectorgt-operators"></a>&lt;Wektor&gt; operatorów
 
 ||||
 |-|-|-|
@@ -36,7 +36,7 @@ ms.locfileid: "33863959"
 
 ## <a name="op_neq"></a>  operator! =
 
-Testy, jeśli obiekt po lewej stronie operatora nie jest taki sam jak obiekt po prawej stronie.
+Sprawdza, czy obiekt po lewej stronie operatora nie jest równy obiektowi po prawej stronie.
 
 ```cpp
 bool operator!=(const vector<Type, Allocator>& left, const vector<Type, Allocator>& right);
@@ -44,17 +44,17 @@ bool operator!=(const vector<Type, Allocator>& left, const vector<Type, Allocato
 
 ### <a name="parameters"></a>Parametry
 
-`left` Obiekt typu **wektor**.
+*po lewej stronie* obiektu typu `vector`.
 
-`right` Obiekt typu **wektor**.
+*prawy* obiektu typu `vector`.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-**wartość true,** wektory nie są równe; **false** Jeśli wektory są takie same.
+**wartość true,** wektory nie są równe; **false** Jeśli wektory są równe.
 
 ### <a name="remarks"></a>Uwagi
 
-Dwa wektory są takie same, jeśli mają one taką samą liczbę elementów i ich odpowiednich elementy mają takie same wartości. W przeciwnym razie ich nie są równe.
+Dwa wektory są takie same, jeśli mają taką samą liczbę elementów i ich odpowiednie elementy mają te same wartości. W przeciwnym razie są nierówne.
 
 ### <a name="example"></a>Przykład
 
@@ -85,7 +85,7 @@ Vectors not equal.
 
 ## <a name="op_lt"></a>  Operator&lt;
 
-Testy, jeśli obiekt po lewej stronie operatora jest mniejsza niż obiekt po prawej stronie.
+Sprawdza, czy obiekt po lewej stronie operatora jest mniejszy niż obiekt po prawej stronie.
 
 ```cpp
 bool operator<(const vector<Type, Allocator>& left, const vector<Type, Allocator>& right);
@@ -93,13 +93,15 @@ bool operator<(const vector<Type, Allocator>& left, const vector<Type, Allocator
 
 ### <a name="parameters"></a>Parametry
 
-`left` Obiekt typu **wektor**.
+*left*  
+ Obiekt typu `vector`.
 
-`right` Obiekt typu **wektor**.
+*right*  
+ Obiekt typu `vector`.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-**wartość true,** Jeśli wektora po lewej stronie operatora jest mniejsza niż wektora po prawej stronie operatora; w przeciwnym razie **false**.
+**wartość true,** Jeśli wektora po lewej stronie operatora jest mniejszy niż wektora po prawej stronie operatora; w przeciwnym razie **false**.
 
 ### <a name="example"></a>Przykład
 
@@ -134,7 +136,7 @@ Vector v1 is less than vector v2.
 
 ## <a name="op_lt_eq"></a>  Operator&lt;=
 
-Testy, jeśli obiekt po lewej stronie operatora jest mniejsza lub równa obiektu po prawej stronie.
+Sprawdza, czy obiekt po lewej stronie operatora jest mniejszy niż lub równy obiektowi po prawej stronie.
 
 ```cpp
 bool operator<=(const vector<Type, Allocator>& left, const vector<Type, Allocator>& right);
@@ -142,13 +144,15 @@ bool operator<=(const vector<Type, Allocator>& left, const vector<Type, Allocato
 
 ### <a name="parameters"></a>Parametry
 
-`left` Obiekt typu **wektor**.
+*left*  
+ Obiekt typu `vector`.
 
-`right` Obiekt typu **wektor**.
+*right*  
+ Obiekt typu `vector`.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-**wartość true,** Jeśli wektora po lewej stronie operatora jest mniejsza niż lub równa wektora po prawej stronie operatora, w przeciwnym **false**.
+**wartość true,** Jeśli wektora po lewej stronie operatora jest mniejszy niż lub równe do wektora po prawej stronie operatora; w przeciwnym **false**.
 
 ### <a name="example"></a>Przykład
 
@@ -183,7 +187,7 @@ Vector v1 is less than or equal to vector v2.
 
 ## <a name="op_eq_eq"></a>  operator ==
 
-Testy, jeśli obiekt po lewej stronie operatora jest taki sam jak obiekt po prawej stronie.
+Sprawdza, czy obiekt po lewej stronie operatora jest równy obiektowi po prawej stronie.
 
 ```cpp
 bool operator==(const vector<Type, Allocator>& left, const vector<Type, Allocator>& right);
@@ -191,17 +195,19 @@ bool operator==(const vector<Type, Allocator>& left, const vector<Type, Allocato
 
 ### <a name="parameters"></a>Parametry
 
-`left` Obiekt typu **wektor**.
+*left*  
+ Obiekt typu `vector`.
 
-`right` Obiekt typu **wektor**.
+*right*  
+ Obiekt typu `vector`.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-**wartość true,** w przypadku wektora po lewej stronie operatora równa wektora po prawej stronie operatora; w przeciwnym razie **false**.
+**wartość true,** Jeśli wektor po lewej stronie operatora jest równy wektora po prawej stronie operatora, a w przeciwnym **false**.
 
 ### <a name="remarks"></a>Uwagi
 
-Dwa wektory są takie same, jeśli mają one taką samą liczbę elementów i ich odpowiednich elementy mają takie same wartości. W przeciwnym razie ich nie są równe.
+Dwa wektory są takie same, jeśli mają taką samą liczbę elementów i ich odpowiednie elementy mają te same wartości. W przeciwnym razie są nierówne.
 
 ### <a name="example"></a>Przykład
 
@@ -232,7 +238,7 @@ Vectors equal.
 
 ## <a name="op_gt"></a>  Operator&gt;
 
-Testy, jeśli obiekt po lewej stronie operatora jest większy niż obiekt po prawej stronie.
+Sprawdza, czy obiekt po lewej stronie operatora jest większy niż obiekt po prawej stronie.
 
 ```cpp
 bool operator>(const vector<Type, Allocator>& left, const vector<Type, Allocator>& right);
@@ -240,13 +246,15 @@ bool operator>(const vector<Type, Allocator>& left, const vector<Type, Allocator
 
 ### <a name="parameters"></a>Parametry
 
-`left` Obiekt typu **wektor**.
+*left*  
+ Obiekt typu `vector`.
 
-`right` Obiekt typu **wektor**.
+*right*  
+ Obiekt typu `vector`.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-**wartość true,** Jeśli wektor po lewej stronie operatora jest większa niż wektora po prawej stronie operatora; w przeciwnym razie **false**.
+**wartość true,** Jeśli wektor po lewej stronie operatora jest większy niż wektora po prawej stronie operatora; w przeciwnym razie **false**.
 
 ### <a name="example"></a>Przykład
 
@@ -282,7 +290,7 @@ Vector v1 is greater than vector v2.
 
 ## <a name="op_gt_eq"></a>  Operator&gt;=
 
-Testy, jeśli obiekt po lewej stronie operatora jest większa niż lub równa obiektu po prawej stronie.
+Sprawdza, czy obiekt po lewej stronie operatora jest większy lub równy obiektowi po prawej stronie.
 
 ```cpp
 bool operator>=(const vector<Type, Allocator>& left, const vector<Type, Allocator>& right);
@@ -290,13 +298,15 @@ bool operator>=(const vector<Type, Allocator>& left, const vector<Type, Allocato
 
 ### <a name="parameters"></a>Parametry
 
-`left` Obiekt typu **wektor**.
+*left*  
+ Obiekt typu `vector`.
 
-`right` Obiekt typu **wektor**.
+*right*  
+ Obiekt typu `vector`.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-**wartość true,** Jeśli wektor po lewej stronie operatora jest większa niż lub równa wektora po prawej stronie wektora, w przeciwnym **false**.
+**wartość true,** Jeśli wektor po lewej stronie operatora jest większy niż lub równe do wektora po prawej stronie wektora; w przeciwnym **false**.
 
 ### <a name="example"></a>Przykład
 

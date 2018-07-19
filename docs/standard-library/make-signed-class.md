@@ -17,16 +17,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b58c31c7f4180f9c65b04bbb852bf15c7315c35d
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 7fe6eb3ffa83316071de2ba26cf80e6e6cbd5245
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33859371"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38957350"
 ---
 # <a name="makesigned-class"></a>make_signed — Klasa
 
-Wpisz sprawia, że lub najmniejszą podpisem wpisz większa niż lub równa o rozmiarze do typu.
+Tworzy typ lub najmniejszą podpisem wpisz większa lub równa rozmiarze do typu.
 
 ## <a name="syntax"></a>Składnia
 
@@ -40,17 +40,17 @@ using make_signed_t = typename make_signed<T>::type;
 
 ### <a name="parameters"></a>Parametry
 
-`T` Typ do zmodyfikowania.
+*T* typ do modyfikacji.
 
 ## <a name="remarks"></a>Uwagi
 
-Wystąpienie modyfikator typu przechowuje zmodyfikowane — typ danych `T` Jeśli `is_signed<T>` jest spełniony. W przeciwnym razie jest najmniejszą typu bez znaku `UT` dla którego `sizeof (T) <= sizeof (UT)`.
+Wystąpienie modyfikatora typu przechowuje zmodyfikowany typ, który jest *T* Jeśli `is_signed<T>` prawdziwe. W przeciwnym razie jest najmniejszą typ bez znaku `UT` dla którego `sizeof (T) <= sizeof (UT)`.
 
 ## <a name="requirements"></a>Wymagania
 
 **Nagłówek:** \<type_traits >
 
-**Namespace:** Standard
+**Namespace:** standardowe
 
 ## <a name="see-also"></a>Zobacz także
 

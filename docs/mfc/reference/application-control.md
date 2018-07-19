@@ -1,5 +1,5 @@
 ---
-title: Formant aplikacji | Dokumentacja firmy Microsoft
+title: Sterowanie aplikacjami | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,44 +16,44 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: aa364ef0a817d46decef79b93e08bd5a359389d1
-ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
+ms.openlocfilehash: a6d8780c249fdf768c322e3026240642c4da43c4
+ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/26/2018
-ms.locfileid: "36954043"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37338724"
 ---
 # <a name="application-control"></a>Sterowanie aplikacjami
-OLE wymaga znacznej kontrolę nad ich obiektów i aplikacji. Biblioteki DLL systemu OLE musi mieć możliwość uruchamiania i automatycznie wersji aplikacji, koordynować ich produkcyjnego i modyfikacji obiektów i tak dalej. Funkcje, w tym temacie spełnienia tych wymagań. Oprócz wywoływana przez system OLE bibliotek DLL, można wywołać przez aplikacje, a także czasami tych funkcji. 
+OLE wymaga znacznej kontroli nad aplikacjami i ich obiektami. OLE systemowych bibliotek DLL musi mieć możliwość uruchamiania i automatyczne wydanie aplikacji, koordynowania ich produkcji i modyfikacji obiektów i tak dalej. Funkcje, w tym temacie spełniają te wymagania. Oprócz wywoływana przez OLE systemowych bibliotek DLL, te funkcje czasami musi zostać wywołany przez aplikacje, jak również. 
   
 ### <a name="application-control"></a>Sterowanie aplikacjami  
   
 |||  
 |-|-|  
-|[Afxolecanexitapp —](#afxolecanexitapp)|Wskazuje, czy aplikacja może obsłużyć.|  
+|[Afxolecanexitapp —](#afxolecanexitapp)|Wskazuje, czy aplikacja może zakończyć.|  
 |[Afxolegetmessagefilter —](#afxolegetmessagefilter)|Pobiera bieżący filtr komunikatów aplikacji.|  
-|[Afxolegetuserctrl —](#afxolegetuserctrl)|Pobiera bieżący flagi kontrolki użytkownika.|  
-|[Afxolesetuserctrl —](#afxolesetuserctrl)|Ustawia lub usuwa flagę kontrolki użytkownika.|  
-|[AfxOleLockApp](#afxolelockapp)|Zwiększa liczbę globalne w ramach liczby obiektów aktywnych w aplikacji.|  
-|[Afxolelockcontrol —](#afxolelockcontrol)| Blokuje fabryki klasy określonego formantu. |
-|[AfxOleUnlockApp](#afxoleunlockapp)|Zmniejsza framework liczba obiektów aktywnych w aplikacji.| 
-|[Afxoleunlockcontrol —](#afxoleunlockcontrol)| Umożliwia odblokowanie fabryki klasy określonego formantu. |
-|[Afxoleregisterserverclass —](#afxoleregisterserverclass)|Rejestruje serwer w rejestrze systemu OLE.|  
+|[Afxolegetuserctrl —](#afxolegetuserctrl)|Pobiera bieżące flagi kontrolki użytkownika.|  
+|[Afxolesetuserctrl —](#afxolesetuserctrl)|Ustawia lub czyści flagi kontrolki użytkownika.|  
+|[AfxOleLockApp](#afxolelockapp)|Zwiększa liczbę globalnego struktury liczby aktywnych obiektów w aplikacji.|  
+|[Afxolelockcontrol —](#afxolelockcontrol)| Blokuje fabryki klas z określoną kontrolkę. |
+|[AfxOleUnlockApp](#afxoleunlockapp)|Dekrementuje struktury liczbę obiektów aktywnych w aplikacji.| 
+|[Afxoleunlockcontrol —](#afxoleunlockcontrol)| Odblokowuje fabryki klas z określoną kontrolkę. |
+|[Afxoleregisterserverclass —](#afxoleregisterserverclass)|Rejestruje serwer w rejestrze systemowym OLE.|  
 |[Afxoleseteditmenu —](#afxoleseteditmenu)|Implementuje interfejs użytkownika dla *typename* obiekt polecenia.|  
 
   
 ##  <a name="afxolecanexitapp"></a>  Afxolecanexitapp —  
- Wskazuje, czy aplikacja może obsłużyć.  
+ Wskazuje, czy aplikacja może zakończyć.  
   
 ```   
 BOOL AFXAPI AfxOleCanExitApp(); 
 ```  
   
 ### <a name="return-value"></a>Wartość zwracana  
- Różna od zera, jeśli aplikacja może wyjść; w przeciwnym razie 0.  
+ Wartość różną od zera, jeśli aplikacja może zakończyć; w przeciwnym razie 0.  
   
 ### <a name="remarks"></a>Uwagi  
- Aplikacja nie powinna przerywane, jeśli istnieją oczekujących odwołań do jej obiektów. Funkcje globalne `AfxOleLockApp` i `AfxOleUnlockApp` zwiększyć i zmniejszyć odpowiednio licznikiem odwołań do obiektów w aplikacji. Aplikacja należy nie wygasa, gdy ten licznik jest różna od zera. Jeśli licznik jest różna od zera, głównego okna aplikacji jest ukryty (nie niszczone), gdy użytkownik wybierze Zamknij z menu systemowego lub zakończenia w menu Plik. Struktura wywołuje tej funkcji `CFrameWnd::OnClose`.  
+ Aplikacji nie powinna kończyć, w przypadku innych odwołań do obiektów. Funkcje globalne `AfxOleLockApp` i `AfxOleUnlockApp` zwiększyć i zmniejszyć, odpowiednio, licznik odwołań do obiektów w aplikacji. Aplikacji nie powinna zakończyć, gdy ten licznik jest różna od zera. Jeśli licznik jest różna od zera, okna głównego aplikacji jest ukryty (nie zniszczonego), gdy użytkownik wybierze zamknięcia z menu systemowego lub Zakończ w menu Plik. Struktura wywołuje tę funkcję `CFrameWnd::OnClose`.  
   
 ### <a name="example"></a>Przykład  
  [!code-cpp[NVC_MFCAutomation#2](../../mfc/codesnippet/cpp/application-control_1.cpp)]  
@@ -72,7 +72,7 @@ COleMessageFilter* AFXAPI AfxOleGetMessageFilter();
  Wskaźnik do bieżącego filtra wiadomości.  
   
 ### <a name="remarks"></a>Uwagi  
- Wywołanie tej funkcji można uzyskać dostępu do bieżącego `COleMessageFilter`-pochodnych obiektu, tak samo, jak możesz wywołać `AfxGetApp` dostępu do bieżącego obiektu aplikacji.  
+ Wywołaj tę funkcję, aby dostęp do bieżącego `COleMessageFilter`-pochodnych obiektu, tak samo, jak możesz wywołać `AfxGetApp` dostępu do bieżącego obiektu aplikacji.  
   
 ### <a name="example"></a>Przykład  
  [!code-cpp[NVC_MFCAutomation#3](../../mfc/codesnippet/cpp/application-control_2.cpp)]  
@@ -83,23 +83,23 @@ COleMessageFilter* AFXAPI AfxOleGetMessageFilter();
  **Nagłówek**: afxwin.h 
 
 ##  <a name="afxolegetuserctrl"></a>  Afxolegetuserctrl —  
- Pobiera bieżący flagi kontrolki użytkownika.  
+ Pobiera bieżące flagi kontrolki użytkownika.  
   
 ```   
 BOOL AFXAPI AfxOleGetUserCtrl(); 
 ```  
   
 ### <a name="return-value"></a>Wartość zwracana  
- Różna od zera, jeśli użytkownik jest w formancie aplikacji; w przeciwnym razie 0.  
+ Wartość różną od zera, jeśli użytkownik znajduje się w kontrolce aplikacji; w przeciwnym razie 0.  
   
 ### <a name="remarks"></a>Uwagi  
- Użytkownik jest w formancie aplikacji, gdy użytkownik ma jawnie otworzyć lub utworzyć nowy dokument. Użytkownik jest również w formancie Jeśli aplikacja nie została uruchomiona w systemie OLE biblioteki DLL — innymi słowy, jeśli użytkownik uruchomił aplikację z powłoką systemu.  
+ Użytkownik znajduje się w kontroli aplikacji, gdy użytkownik ma jawnie otworzyć lub utworzyć nowy dokument. Użytkownik znajduje się również w kontrolce, jeśli aplikacja nie została uruchomiona przez system OLE biblioteki DLL — innymi słowy, jeśli użytkownik uruchomić aplikację z powłoką systemu.  
 
 ### <a name="requirements"></a>Wymagania  
  **Nagłówek**: afxdisp.h
 
 ##  <a name="afxolesetuserctrl"></a>  Afxolesetuserctrl —  
- Ustawia lub usuwa flagę kontrolki użytkownika, które wyjaśniono w odwołaniu do `AfxOleGetUserCtrl`.  
+ Ustawia lub czyści flagi kontrolki użytkownika, które wyjaśniono w odwołaniu do `AfxOleGetUserCtrl`.  
   
 ```  
 void AFXAPI AfxOleSetUserCtrl(BOOL bUserCtrl); 
@@ -107,29 +107,29 @@ void AFXAPI AfxOleSetUserCtrl(BOOL bUserCtrl);
   
 ### <a name="parameters"></a>Parametry  
  *bUserCtrl*  
- Określa, czy można ustawić lub wyczyścić flagę kontrolki użytkownika.  
+ Określa, czy flaga kontrolki użytkownika ma być ustawiane lub czyszczone.  
   
 ### <a name="remarks"></a>Uwagi  
- Struktura wywołuje tej funkcji, gdy użytkownik tworzy i ładuje dokumentu, ale nie podczas ładowania dokumentu lub została utworzona za pośrednictwem pośrednie akcja, taka jak ładowania osadzonego obiektu z aplikacji kontenera.  
+ Struktura wywołuje tę funkcję, gdy użytkownik tworzy lub ładuje dokument, ale nie wtedy, gdy dokument jest załadowany lub utworzone za pomocą działań pośrednich, takich jak ładowanie osadzonego obiektu z aplikacji kontenera.  
   
- Wywołanie tej funkcji, jeśli inne akcje w aplikacji należy umieścić użytkownika w formancie aplikacji.  
+ Wywołaj tę funkcję, jeśli inne akcje w aplikacji należy umieścić użytkownika w kontrolce aplikacji.  
 
 ### <a name="requirements"></a>Wymagania  
  **Nagłówek**: afxdisp.h
 
 ##  <a name="afxolelockapp"></a>  AfxOleLockApp  
- Zwiększa liczbę globalne w ramach liczby obiektów aktywnych w aplikacji.  
+ Zwiększa liczbę globalnego struktury liczby aktywnych obiektów w aplikacji.  
   
 ```   
 void AFXAPI AfxOleLockApp(); 
 ```  
   
 ### <a name="remarks"></a>Uwagi  
- Platformę śledzi liczbę liczbę obiektów active w aplikacji. `AfxOleLockApp` i `AfxOleUnlockApp` funkcji, odpowiednio zwiększyć i zmniejszyć tej liczby.  
+ Struktura przechowuje liczbę obiektów aktywnych w aplikacji. `AfxOleLockApp` i `AfxOleUnlockApp` funkcje, odpowiednio zwiększyć i zmniejszyć ta liczba.  
   
- Gdy użytkownik próbuje zamknąć aplikację, która ma aktywne obiekty — aplikacja, dla którego jest różna od zera, liczba obiektów usługi active — platformę ukrywa aplikacji z punktu widzenia użytkownika zamiast całkowicie zamykania. `AfxOleCanExitApp` Funkcji wskazuje, czy aplikacja może obsłużyć.  
+ Gdy użytkownik próbuje zamknąć aplikację, która ma obiekty usługi active — aplikację, dla którego jest różna od zera łącznej liczby aktywnych obiektów — struktura ukrywa aplikację z punktu widzenia użytkownika zamiast całkowicie zamykania. `AfxOleCanExitApp` Funkcji wskazuje, czy aplikacja może zakończyć.  
   
- Wywołanie `AfxOleLockApp` z dowolnych obiektów, która udostępnia interfejsy OLE, jeśli będzie niepożądanych dla tego obiektu, które mają zostać zniszczone, gdy nadal jest używana przez aplikację klienta. Także wywołać `AfxOleUnlockApp` w destruktorze dowolnego obiektu, który wywołuje `AfxOleLockApp` w konstruktorze. Domyślnie `COleDocument` (i klasy pochodne) automatycznie blokowania i odblokowywania aplikacji.  
+ Wywołaj `AfxOleLockApp` z dowolnego obiektu, który uwidacznia interfejsy OLE, jeśli będzie niepożądane dla tego obiektu, które mają zostać zniszczone, gdy był używany przez aplikację kliencką. Również wywołać `AfxOleUnlockApp` w destruktorze dowolnego obiektu, który wywołuje `AfxOleLockApp` w konstruktorze. Domyślnie `COleDocument` (i klas pochodnych) automatyczne blokowanie i odblokowywanie aplikacji.  
   
 ### <a name="example"></a>Przykład  
  [!code-cpp[NVC_MFCAutomation#5](../../mfc/codesnippet/cpp/application-control_4.cpp)]  
@@ -138,7 +138,7 @@ void AFXAPI AfxOleLockApp();
  **Nagłówek**: afxdisp.h
 
 ##  <a name="afxoleunlockapp"></a>  AfxOleUnlockApp  
- Zmniejsza framework liczba obiektów aktywnych w aplikacji.  
+ Dekrementuje struktury łącznej liczby aktywnych obiektów w aplikacji.  
   
 ```   
 void AFXAPI AfxOleUnlockApp(); 
@@ -147,7 +147,7 @@ void AFXAPI AfxOleUnlockApp();
 ### <a name="remarks"></a>Uwagi  
  Zobacz `AfxOleLockApp` Aby uzyskać więcej informacji.  
   
- Gdy liczba obiektów active osiągnie wartość 0, `AfxOleOnReleaseAllObjects` jest wywoływana.  
+ Gdy liczba obiektów active osiągnie zero, `AfxOleOnReleaseAllObjects` jest wywoływana.  
   
 ### <a name="example"></a>Przykład  
  Zobacz przykład [AfxOleLockApp](#afxolelockapp).  
@@ -156,7 +156,7 @@ void AFXAPI AfxOleUnlockApp();
  **Nagłówek**: afxdisp.h  
 
  ## <a name="afxolelockcontrol"></a>AfxOleLockControl
-Blokuje fabryki klasy określonego formantu danych dynamicznie utworzony, skojarzony z formantem pozostaje w pamięci.  
+Blokuje fabryki klas z określoną kontrolkę tak, aby dynamicznie utworzoną danych skojarzonego z kontrolką pozostaje w pamięci.  
    
 ### <a name="syntax"></a>Składnia    
 ```
@@ -164,17 +164,17 @@ BOOL AFXAPI AfxOleLockControl(  REFCLSID clsid  );
 BOOL AFXAPI AfxOleLockControl( LPCTSTR lpszProgID );  
 ```
 ### <a name="parameters"></a>Parametry  
- *Identyfikator CLSID*  
- Identyfikator unikatowy klasy formantu.  
+ *Identyfikator klasy*  
+ Identyfikator unikatowy klasy kontrolki.  
   
  *lpszProgID*  
- Unikatowy identyfikator formantu.  
+ Unikatowy identyfikator kontrolki.  
    
 ### <a name="return-value"></a>Wartość zwracana  
- Różna od zera, jeśli fabryka klas formantu zostało pomyślnie zablokowane; w przeciwnym razie 0.  
+ Wartość różną od zera, jeśli fabryka klas formantu zostało pomyślnie zablokowane; w przeciwnym razie 0.  
    
 ### <a name="remarks"></a>Uwagi  
- To znacznie przyspieszyć wyświetlania kontrolki. Na przykład po Tworzenie formantu w oknie dialogowym i przy zablokować kontrolki z `AfxOleLockControl`, nie trzeba tworzyć i zamknij go ponownie za każdym razem, gdy okno dialogowe jest wyświetlane lub zniszczenia. Jeśli użytkownik otwiera i zamyka okno dialogowe wielokrotnie, blokowanie formantów może znacznie poprawić wydajność. Gdy wszystko będzie gotowe do zniszczenia kontrolki wywołania `AfxOleUnlockControl`.  
+ To znacznie przyspieszyć wyświetlanie kontrolki. Na przykład, po Tworzenie formantu w oknie dialogowym i przy zablokować kontrolki z `AfxOleLockControl`, nie trzeba tworzyć i zamknij go ponownie za każdym razem, gdy okno dialogowe jest wyświetlane lub zniszczenia obiektu. Jeśli użytkownik otwiera i zamyka okno dialogowe wielokrotnie, blokowanie formantów mogą znacznie poprawić wydajność. Gdy wszystko jest gotowe do zniszczenia kontrolki, należy wywołać `AfxOleUnlockControl`.  
    
 ### <a name="example"></a>Przykład  
 ```cpp
@@ -193,7 +193,7 @@ AfxOleLockControl(_T("MSCAL.Calendar"));
  [Afxoleunlockcontrol —](#afxoleunlockcontrol)
  
 ##  <a name="afxoleregisterserverclass"></a>  Afxoleregisterserverclass —  
- Dzięki tej funkcji, należy zarejestrować serwer w rejestrze systemu OLE.  
+ Ta funkcja umożliwia zarejestrować serwer w rejestrze systemowym OLE.  
   
 ```   
 BOOL AFXAPI AfxOleRegisterServerClass(
@@ -207,51 +207,51 @@ BOOL AFXAPI AfxOleRegisterServerClass(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- *Identyfikator CLSID*  
- Odwołanie do identyfikatora klasy OLE serwera  
+ *Identyfikator klasy*  
+ Odwołanie do identyfikator serwera OLE klasy.  
   
  *lpszClassName*  
  Wskaźnik do ciągu zawierającego nazwę klasy obiektów serwera.  
   
  *lpszShortTypeName*  
- Wskaźnik do ciągu zawierającego krótką nazwę serwera typu obiektu, takiego jak "Wykresu".  
+ Wskaźnik do ciągu zawierającego krótką nazwę typu obiektu serwera, na przykład "Chart".  
   
  *lpszLongTypeName*  
- Wskaźnik do ciąg zawierający długa nazwa typu obiektu serwera, na przykład "Wykres programu Microsoft Excel w wersji 5.0".  
+ Wskaźnik do ciągu zawierającego długa nazwa typ obiektu serwera, na przykład "Wykres programu Microsoft Excel 5.0".  
   
  *nAppType*  
- Wartość, z **OLE_APPTYPE** wyliczenie określenie typu aplikacji OLE. Możliwe wartości są następujące:  
+ Wartość z wyliczenia OLE_APPTYPE, określając typ aplikacji OLE. Możliwe wartości są następujące:  
   
-- `OAT_INPLACE_SERVER` Serwer ma interfejs użytkownika całego serwera.  
+- OAT_INPLACE_SERVER serwer ma interfejs użytkownika pełny serwer.  
   
-- `OAT_SERVER` Serwer obsługuje tylko osadzania.  
+- OAT_SERVER Server obsługuje tylko osadzania.  
   
-- `OAT_CONTAINER` Kontener obsługuje łącza do osadzonego.  
+- Kontener OAT_CONTAINER obsługuje linki do wbudowanych elementów.  
   
-- `OAT_DISPATCH_OBJECT` `IDispatch`— obsługuje obiektu.  
+- OAT_DISPATCH_OBJECT `IDispatch`— zdolne do obiektu.  
   
  *rglpszRegister*  
- Tablicy wskaźników do ciągów reprezentujących klucze i wartości, które mają zostać dodane do rejestru systemowego OLE, jeśli zostaną znalezione nie istniejące wartości kluczy.  
+ Tablica wskaźników do ciągów reprezentujących kluczy i wartości, które ma zostać dodany do rejestru systemowego OLE, jeśli nie zostaną znalezione nie istniejące wartości kluczy.  
   
  *rglpszOverwrite*  
- Tablicy wskaźników do ciągów reprezentujących klucze i wartości do dodania do rejestru systemowego OLE Rejestr zawiera istniejące wartości dla danych kluczy.  
+ Tablica wskaźników do ciągów reprezentujących kluczy i wartości, które ma zostać dodany do rejestru systemowego OLE, jeśli rejestr zawiera istniejące wartości dla danych kluczy.  
   
 ### <a name="return-value"></a>Wartość zwracana  
- Różna od zera, jeśli klasa serwera zostanie pomyślnie zarejestrowana; w przeciwnym razie 0.  
+ Wartość różną od zera, jeśli klasa serwera po pomyślnym zarejestrowaniu; w przeciwnym razie 0.  
   
 ### <a name="remarks"></a>Uwagi  
- Większość aplikacji można użyć `COleTemplateServer::Register` zarejestrować typy dokumentów aplikacji. Jeśli format rejestru systemowego aplikacji nie mieści się typowy wzorzec, możesz użyć `AfxOleRegisterServerClass` uzyskać większą kontrolę.  
+ Większość aplikacji można użyć `COleTemplateServer::Register` zarejestrować typy dokumentów aplikacji. Jeśli format rejestru systemowego aplikacji nie mieści się typowy wzorzec, możesz użyć `AfxOleRegisterServerClass` Aby uzyskać większą kontrolę.  
   
- Rejestr zawiera zestaw kluczy i wartości. *RglpszRegister* i *rglpszOverwrite* argumenty są tablic wskaźników do ciągów, składające się z klucza i wartości rozdzielonych **NULL** znak ( `'\0'`). Każdy z tych ciągów może mieć parametry wymienne, którego miejsca są oznaczane sekwencje znaków *%1* za pośrednictwem *%5*.  
+ Rejestr zawiera zestaw kluczy i wartości. *RglpszRegister* i *rglpszOverwrite* argumenty są tablicami, wskaźnikami do ciągów, składający się z klucza i wartości oddzielonych **NULL** znak ( `'\0'`). Każdy z tych ciągów może mieć parametrów zastępowalnych miejsca, w których są oznaczone przez sekwencje znaków *%1* za pośrednictwem *%5*.  
   
- Symbole są wypełnione następujący sposób:  
+ Symbole są wypełnione w następujący sposób:  
   
 |Symbol|Wartość|  
 |------------|-----------|  
-|%1|Identyfikator klasy, w formacie ciągu|  
+|%1|Identyfikator klasy, sformatowany jako ciąg|  
 |%2|Nazwa klasy|  
 |%3|Ścieżka do pliku wykonywalnego|  
-|%4|Wpisz krótką nazwę|  
+|%4|Nazwa typu krótkiego|  
 |%5|Nazwa typu Long|  
 
 ### <a name="requirements"></a>Wymagania  
@@ -272,25 +272,25 @@ void AFXAPI AfxOleSetEditMenu(
   
 ### <a name="parameters"></a>Parametry  
  *pClient*  
- Wskaźnik do elementu OLE klienta.  
+ Wskaźnik do elementu klienta OLE.  
   
  *pMenu*  
- Wskaźnik do obiektu menu aktualizacji.  
+ Wskaźnik do obiektu menu do zaktualizowania.  
   
  *iMenuItem*  
  Indeks elementu menu aktualizacji.  
   
  *nIDVerbMin*  
- Identyfikator polecenia umożliwiająca zlecenia głównego.  
+ Identyfikator polecenia, który odpowiada primary — zlecenie.  
   
  *nIDVerbMax*  
- Identyfikator polecenia do ostatniego odpowiadający zlecenie.  
+ Identyfikator polecenia, który odnosi się do ostatniego zlecenie.  
   
  *nIDConvert*  
- Identyfikator elementu menu Convert.  
+ Identyfikator elementu menu konwersji.  
   
 ### <a name="remarks"></a>Uwagi  
- Jeśli serwer rozpoznaje głównej zlecenie, staje się element menu "zlecenie *typename* obiektu" i *nIDVerbMin* polecenia jest wysyłany, gdy użytkownik wybierze polecenie. Jeśli serwer rozpoznaje kilku poleceń, a następnie staje się element menu " *typename* obiektu" i podmenu wszystkie zlecenia jest wyświetlany, gdy użytkownik wybierze polecenie. Gdy użytkownik wybierze zlecenia z podmenu *nIDVerbMin* są wysyłane, jeśli wybrano opcję pierwsze zlecenie, *nIDVerbMin* + 1 jest wysyłane, jeśli drugi zlecenie jest wybrane i tak dalej. Wartość domyślna `COleDocument` implementacji automatycznie obsługuje tę funkcję.  
+ Jeśli serwer rozpoznaje tylko primary — zlecenie, staje się element menu "zlecenie *typename* obiektu" i *nIDVerbMin* polecenia jest wysyłana, gdy użytkownik wybierze polecenie. Jeśli serwer rozpoznaje kilka poleceń, a następnie staje się element menu " *typename* obiektu" i pojawia się podmenu wszystkie zlecenia, gdy użytkownik wybierze polecenie. Gdy użytkownik wybierze czasownika w podmenu *nIDVerbMin* są wysyłane, jeśli zostanie wybrany pierwsze zlecenie, *nIDVerbMin* + 1 są wysyłane, jeśli drugie polecenie jest wybrana i tak dalej. Wartość domyślna `COleDocument` implementacji automatycznie obsługuje tę funkcję.  
   
  Musi mieć następującą instrukcję w skrypcie zasobów aplikacji klienta (. Plik RC):  
   
@@ -303,28 +303,28 @@ void AFXAPI AfxOleSetEditMenu(
  [Makra i funkcje globalne](../../mfc/reference/mfc-macros-and-globals.md)
 
 ## <a name="afxoleunlockcontrol"></a> Afxoleunlockcontrol —
-Umożliwia odblokowanie fabryki klasy określonego formantu.  
+Odblokowuje fabryki klas z określoną kontrolkę.  
    
 ### <a name="syntax"></a>Składnia  
-  ```
+```
 BOOL AFXAPI AfxOleUnlockControl( REFCLSID clsid );  
 BOOL AFXAPI AfxOleUnlockControl( LPCTSTR lpszProgID );  
 ```
 ### <a name="parameters"></a>Parametry  
- *Identyfikator CLSID*  
- Identyfikator unikatowy klasy formantu.  
+ *Identyfikator klasy*  
+ Identyfikator unikatowy klasy kontrolki.  
   
  *lpszProgID*  
- Unikatowy identyfikator formantu.  
+ Unikatowy identyfikator kontrolki.  
    
 ### <a name="return-value"></a>Wartość zwracana  
- Różna od zera, jeśli fabryka klas formantu został pomyślnie odblokowane; w przeciwnym razie 0.  
+ Wartość różną od zera, jeśli fabryka klas formantu zostało pomyślnie odblokowane; w przeciwnym razie 0.  
    
 ### <a name="remarks"></a>Uwagi  
- Formant jest zablokowany z `AfxOleLockControl`, dzięki czemu utworzony dynamicznie dane skojarzone z formantem pozostaje w pamięci. To znacznie przyspieszyć wyświetlanie formantu, ponieważ formant nie muszą utworzona i zniszczona za każdym razem, gdy jest on wyświetlany. Gdy wszystko będzie gotowe do zniszczenia kontrolki wywołania `AfxOleUnlockControl`.  
+ Kontrolka jest zablokowana z `AfxOleLockControl`, dzięki czemu dynamicznie utworzoną danych skojarzonego z kontrolką pozostaje w pamięci. To znacznie przyspieszyć wyświetlanie formantu, ponieważ kontrolki nie muszą być tworzone i zniszczone za każdym razem, gdy jest on wyświetlany. Gdy wszystko jest gotowe do zniszczenia kontrolki, należy wywołać `AfxOleUnlockControl`.  
    
 ### <a name="example"></a>Przykład  
- ```cpp
+```cpp
 // Unlock control's (Microsoft Calendar Control) class factory.
 
 AfxOleUnlockControl(_T("MSCAL.Calendar"));

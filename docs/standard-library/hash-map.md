@@ -16,19 +16,19 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e0e3948e8697825af6cdd785117647943b33bac0
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: caae1a52c36c5d21e55e90a821b280f2face7ede
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33850056"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38959777"
 ---
 # <a name="lthashmapgt"></a>&lt;hash_map&gt;
 
 > [!NOTE]
-> Ten nagłówek jest przestarzała. Alternatywą jest [ \<unordered_map >](unordered-map.md).
+> Tego pliku nagłówkowego jest przestarzała. Alternatywą jest [ \<unordered_map >](unordered-map.md).
 
-Definiuje hash_map klasy szablonu kontenera i hash_multimap i ich obsługi szablonów.
+Definiuje hash_map klasy szablonu kontenera i hash_multimap i ich szablonów pomocniczych.
 
 ## <a name="syntax"></a>Składnia
 
@@ -38,32 +38,32 @@ Definiuje hash_map klasy szablonu kontenera i hash_multimap i ich obsługi szabl
 
 |Hash_map — wersja|Hash_multimap — wersja|Opis|
 |-----------------------|----------------------------|-----------------|
-|[operator!= (hash_map)](hash-map-operators.md#op_neq)|[operator!=(hash_multimap)](hash-map-operators.md#op_neq_mm)|Testy, jeśli obiekt hash_map lub hash_multimap po lewej stronie operatora nie jest taki sam jak obiekt hash_map lub hash_multimap po prawej stronie.|
-|[operator== (hash_map)](hash-map-operators.md#op_eq_eq)|[operator== (hash_multimap)](hash-map-operators.md#op_eq_eq_mm)|Testy, jeśli obiekt hash_map lub hash_multimap po lewej stronie operatora jest taki sam jak obiekt hash_map lub hash_multimap po prawej stronie.|
+|[operator!= (hash_map)](hash-map-operators.md#op_neq)|[operator!=(hash_multimap)](hash-map-operators.md#op_neq_mm)|Sprawdza, czy obiekt hash_map lub hash_multimap po lewej stronie operatora nie jest równy obiektowi hash_map lub hash_multimap po prawej stronie.|
+|[operator== (hash_map)](hash-map-operators.md#op_eq_eq)|[operator== (hash_multimap)](hash-map-operators.md#op_eq_eq_mm)|Sprawdza, czy obiekt hash_map lub hash_multimap po lewej stronie operatora jest równy obiektowi hash_map lub hash_multimap po prawej stronie.|
 
 ### <a name="specialized-template-functions"></a>Specialized Template — Funkcje
 
 |Hash_map — wersja|Hash_multimap — wersja|Opis|
 |-----------------------|----------------------------|-----------------|
-|[swap (hash_map)](hash-map-class.md#swap)|[swap (hash_multimap)](hash-multimap-class.md#swap)|Zamienia elementy dwóch hash_maps lub hash_multimaps.|
+|[swap (hash_map)](hash-map-class.md#swap)|[swap (hash_multimap)](hash-multimap-class.md#swap)|Zamienia elementy z dwóch hash_maps lub hash_multimaps.|
 
 ### <a name="classes"></a>Klasy
 
 |Class|Opis|
 |-|-|
-|[hash_compare, klasa](hash-compare-class.md)|Opisuje obiekt, który mogą być używane przez dowolny kontener asocjacyjna skrótu — hash_map hash_multimap, hash_set, lub hash_multiset — domyślnie **cech** obiektu parameter kolejność i wyznaczania wartości skrótu elementy zawierają.|
-|[value_compare, klasa](value-compare-class.md)|Udostępnia obiekt funkcji, który można porównać elementów hash_map porównując wartości ich kluczy, aby określić ich kolejność względne w hash_map.|
-|[hash_map, klasa](hash-map-class.md)|Używany do przechowywania i szybkie pobieranie danych z kolekcji, w którym każdy element jest parę klucza sortowania, którego wartość jest unikatowa i skojarzone dane wartości.|
-|[hash_multimap, klasa](hash-multimap-class.md)|Używany do przechowywania i szybkie pobieranie danych z kolekcji, w którym każdy element jest parę klucza sortowania, którego wartość nie musi być unikatowa i skojarzone dane wartości.|
+|[hash_compare, klasa](hash-compare-class.md)|Opisuje obiekt, który może służyć przez żaden z kontenerów asocjacyjnych wyznaczania wartości skrótu — hash_map hash_multimap, hash_set, lub hash_multiset — domyślnie `Traits` parametr obiektu do porządkowania i wyznaczania wartości skrótu elementy zawierają.|
+|[value_compare, klasa](value-compare-class.md)|Dostarcza obiekt funkcji, która może porównać elementów hash_map przez porównanie wartości ich klucze, aby określić ich względną kolejność w hash_map.|
+|[hash_map, klasa](hash-map-class.md)|Używane do przechowywania i szybkie pobieranie danych z kolekcji, w której każdy element jest parą, która ma klucz sortowania, w której wartość jest unikatowa i skojarzone dane wartości.|
+|[hash_multimap, klasa](hash-multimap-class.md)|Używane do przechowywania i szybkie pobieranie danych z kolekcji, w której każdy element jest parą, która ma klucz sortowania, którego wartość nie musi być unikatowa i skojarzone dane wartości.|
 
 ## <a name="requirements"></a>Wymagania
 
 **Nagłówek:** \<hash_map >
 
-**Namespace:** stdext —
+**Namespace:** stdext
 
 ## <a name="see-also"></a>Zobacz także
 
 [Pliki nagłówkowe odwołanie](cpp-standard-library-header-files.md)
 [bezpieczeństwo wątku w standardowej bibliotece C++](thread-safety-in-the-cpp-standard-library.md)
-[odwołanie do biblioteki C++ Standard](cpp-standard-library-reference.md)
+[dokumentacja standardowej biblioteki C++](cpp-standard-library-reference.md)

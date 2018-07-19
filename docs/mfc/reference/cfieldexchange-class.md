@@ -20,15 +20,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 96c70bc7c6c506d033b39ca55ba2b1a090767b5d
-ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
+ms.openlocfilehash: f6735cddf401ba09d3743b178357fb740b873c21
+ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/26/2018
-ms.locfileid: "36951690"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37336510"
 ---
 # <a name="cfieldexchange-class"></a>Klasa CFieldExchange
-Obsługuje wymiana pól rekordów (RFX) i procedury wymiany (zbiorczego RFX) pól rekordów zbiorczego używane przez klasy baz danych.  
+Obsługuje procedury wymiany (zbiorcze RFX) zbiorczej pól rekordów z używanych przez klasy bazy danych i wymiana pól rekordów (RFX).  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -42,28 +42,28 @@ class CFieldExchange
   
 |Nazwa|Opis|  
 |----------|-----------------|  
-|[CFieldExchange::IsFieldType](#isfieldtype)|Zwraca wartość niezerową, jeśli bieżąca operacja jest odpowiednie dla typu pola aktualizowana.|  
-|[CFieldExchange::SetFieldType](#setfieldtype)|Określa typ elementu członkowskiego danych rekordów — kolumna lub parametr — reprezentowany przez wszystkie wywołania następujące funkcje RFX aż do następnego wywołania `SetFieldType`.|  
+|[CFieldExchange::IsFieldType](#isfieldtype)|Zwraca wartość różną od zera, jeśli bieżąca operacja jest odpowiednie dla typu pola aktualizowana.|  
+|[CFieldExchange::SetFieldType](#setfieldtype)|Określa typ element członkowski danych rekordów — kolumna lub parametr — reprezentowany przez wszystkie następujące wywołania funkcji RFX aż do następnego wywołania metody `SetFieldType`.|  
   
 ## <a name="remarks"></a>Uwagi  
- `CFieldExchange` nie ma klasy podstawowej.  
+ `CFieldExchange` nie ma klasy bazowej.  
   
- Klasa używana podczas pisania procedury wymiany danych w niestandardowe typy danych lub gdy w przypadku implementowania zbiorcze pobieranie z wiersza; w przeciwnym razie nie będzie bezpośrednio używany tej klasy. RFX i RFX zbiorczego wymianie danych między elementy członkowskie danych pola obiektu zestawu rekordów i odpowiednie pola z bieżącego rekordu w źródle danych.  
+ Klasa jest używana podczas pisania procedury wymiany danych dla niestandardowych typów danych lub gdy w przypadku wdrażania zbiorcze pobieranie z wiersza; w przeciwnym razie nie bezpośrednio użyjesz tej klasy. RFX zbiorcze RFX wymiany danych oraz między elementy członkowskie danych pola obiektu zestawu rekordów i odpowiednich pól bieżącego rekordu w źródle danych.  
   
 > [!NOTE]
->  Jeśli pracujesz z klas obiektów DAO (Data Access), a nie klasy otwarte połączenie bazy danych (ODBC), należy użyć klasy [CDaoFieldExchange](../../mfc/reference/cdaofieldexchange-class.md) zamiast tego. Aby uzyskać więcej informacji, zobacz artykuł [programowania omówienie: baza danych](../../data/data-access-programming-mfc-atl.md).  
+>  Jeśli pracujesz z klas obiektów dostępu do danych (DAO), a nie klasy Open Database Connectivity (ODBC), należy użyć klasy [CDaoFieldExchange](../../mfc/reference/cdaofieldexchange-class.md) zamiast tego. Aby uzyskać więcej informacji, zobacz artykuł [baza danych — omówienie programowania](../../data/data-access-programming-mfc-atl.md).  
   
- A `CFieldExchange` obiekt zapewnia informacje kontekstowe potrzebne wymiana pól rekordów lub zbiorcza wymiana pól rekordów podjęcie Umieść. `CFieldExchange` obiekty obsługują szereg działań, włącznie z parametrów wiązania i elementy członkowskie danych pola i ustawienie flagi różnych pól bieżącego rekordu. RFX i RFX zbiorcze operacje są wykonywane na klasy rekordów elementy członkowskie danych typów zdefiniowanych przez **wyliczenia** **typu pola** w `CFieldExchange`. Możliwe **typu pola** wartości to:  
+ A `CFieldExchange` obiekt zapewnia informacje kontekstowe potrzebne wymiana pól rekordów lub zbiorcza wymiana pól rekordów, aby móc umieścić. `CFieldExchange` obiekty obsługują szereg operacji, takich jak parametry powiązania i elementy członkowskie danych pola oraz ustawienie flagi różnych pól bieżącego rekordu. RFX i zbiorcze RFX operacje są wykonywane na składowych danych klas zestawu rekordów typy zdefiniowane przez **wyliczenia** **typu pola** w `CFieldExchange`. Możliwe **typu pola** wartości to:  
   
-- **CFieldExchange::outputColumn** dla elementy członkowskie danych pola.  
+- `CFieldExchange::outputColumn` Aby uzyskać elementy członkowskie danych pola.  
   
-- **CFieldExchange::inputParam** lub **CFieldExchange::param** elementów członkowskich danych parametru wejściowego.  
+- `CFieldExchange::inputParam` lub `CFieldExchange::param` składowych danych parametru wejściowego.  
   
-- **CFieldExchange::outputParam** dla elementy członkowskie danych parametru w danych wyjściowych.  
+- `CFieldExchange::outputParam` Aby uzyskać dane wyjściowe elementy członkowskie danych parametru.  
   
-- **CFieldExchange::inoutParam** dla elementy członkowskie danych parametru wejścia/wyjścia.  
+- `CFieldExchange::inoutParam` Parametr input/output składowych danych.  
   
- Większość elementów członkowskich danych i funkcje elementu członkowskiego klasy są dostarczane do pisania własne niestandardowe procedury RFX. Użyjesz `SetFieldType` często. Aby uzyskać więcej informacji, zobacz artykuły [wymiany pól rekordów (RFX)](../../data/odbc/record-field-exchange-rfx.md) i [zestawu rekordów (ODBC)](../../data/odbc/recordset-odbc.md). Aby uzyskać informacje na temat zbiorcze pobieranie z wiersza, zobacz artykuł [zestaw rekordów: pobieranie rekordów zbiorczego (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md). Aby uzyskać więcej informacji o globalne funkcje RFX i RFX zbiorczego, zobacz [funkcje wymiany pól rekordów](../../mfc/reference/record-field-exchange-functions.md) w sekcji makr MFC i funkcje globalne tego odwołania.  
+ Większość elementów członkowskich funkcje i dane Członkowskie tej klasy są dostarczane do pisania własnych niestandardowych procedury RFX. Użyjesz `SetFieldType` często. Aby uzyskać więcej informacji, zobacz artykuły [wymiany pól rekordu (RFX)](../../data/odbc/record-field-exchange-rfx.md) i [zestawu rekordów (ODBC)](../../data/odbc/recordset-odbc.md). Aby dowiedzieć się, jak zbiorcze pobieranie z wiersza, zobacz artykuł [zestaw rekordów: pobieranie rekordów w zbiorcze (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md). Aby uzyskać szczegółowe informacje dotyczące funkcji globalnych RFX i zbiorcze RFX, zobacz [funkcje wymiany pól rekordów](../../mfc/reference/record-field-exchange-functions.md) makr MFC i funkcje globalne sekcji tego odwołania.  
   
 ## <a name="inheritance-hierarchy"></a>Hierarchia dziedziczenia  
  `CFieldExchange`  
@@ -72,7 +72,7 @@ class CFieldExchange
  **Nagłówek:** afxdb.h  
   
 ##  <a name="isfieldtype"></a>  CFieldExchange::IsFieldType  
- Jeśli piszesz funkcji RFX wywołanie `IsFieldType` na początku funkcji do określenia, czy można wykonać bieżącej operacji na określonego typu elementu członkowskiego danych pola lub parametr ( **CFieldExchange::outputColumn**, **CFieldExchange::inputParam**, **CFieldExchange::param**, **CFieldExchange::outputParam**, lub **CFieldExchange::inoutParam** ).  
+ Jeśli piszesz funkcji RFX, wywołaj `IsFieldType` na początku funkcję, aby określić, czy bieżący operację można wykonać określonego pola lub parametru elementu członkowskiego typu danych ( `CFieldExchange::outputColumn`, `CFieldExchange::inputParam`, `CFieldExchange::param`, `CFieldExchange::outputParam`, lub `CFieldExchange::inoutParam`).  
   
 ```  
 BOOL IsFieldType(UINT* pnField);
@@ -80,16 +80,16 @@ BOOL IsFieldType(UINT* pnField);
   
 ### <a name="parameters"></a>Parametry  
  *pnField*  
- Numer porządkowy pola lub parametr elementu członkowskiego danych jest zwracana w tym parametrze. Liczba odpowiada kolejności element członkowski danych w [CRecordset::DoFieldExchange](../../mfc/reference/crecordset-class.md#dofieldexchange) lub [CRecordset::DoBulkFieldExchange](../../mfc/reference/crecordset-class.md#dobulkfieldexchange) funkcji.  
+ Numer porządkowy pola lub parametr składowej danych, które jest zwracany w tym parametrze. Ta liczba odpowiada kolejności składowej danych w [CRecordset::DoFieldExchange](../../mfc/reference/crecordset-class.md#dofieldexchange) lub [CRecordset::DoBulkFieldExchange](../../mfc/reference/crecordset-class.md#dobulkfieldexchange) funkcji.  
   
 ### <a name="return-value"></a>Wartość zwracana  
- Różna od zera, jeśli bieżącą operację można wykonać na bieżący typ pola lub parametr.  
+ Różna od zera, jeśli dla bieżącego pola lub parametru typu można wykonać bieżącej operacji.  
   
 ### <a name="remarks"></a>Uwagi  
  Postępuj zgodnie z modelem istniejące funkcje RFX.  
   
 ##  <a name="setfieldtype"></a>  CFieldExchange::SetFieldType  
- Należy wywołanie `SetFieldType` w klasie rekordów [DoFieldExchange](../../mfc/reference/crecordset-class.md#dofieldexchange) lub [DoBulkFieldExchange](../../mfc/reference/crecordset-class.md#dobulkfieldexchange) zastąpienia.  
+ Konieczne jest wywołanie `SetFieldType` w klasie rekordów [dofieldexchange —](../../mfc/reference/crecordset-class.md#dofieldexchange) lub [dobulkfieldexchange —](../../mfc/reference/crecordset-class.md#dobulkfieldexchange) zastąpienia.  
   
 ```  
 void SetFieldType(UINT nFieldType);
@@ -97,36 +97,36 @@ void SetFieldType(UINT nFieldType);
   
 ### <a name="parameters"></a>Parametry  
  *nFieldType*  
- Wartość **wyliczenia typu pola**, zadeklarowanych w `CFieldExchange`, który może być jedną z następujących czynności:  
+ Wartość `enum FieldType`, zadeklarowanych w `CFieldExchange`, który może być jedną z następujących czynności:  
   
-- **CFieldExchange::outputColumn**  
+- `CFieldExchange::outputColumn`  
   
-- **CFieldExchange::inputParam**  
+- `CFieldExchange::inputParam`  
   
-- **CFieldExchange::param**  
+- `CFieldExchange::param`  
   
-- **CFieldExchange::outputParam**  
+- `CFieldExchange::outputParam`  
   
-- **CFieldExchange::inoutParam**  
+- `CFieldExchange::inoutParam`  
   
 ### <a name="remarks"></a>Uwagi  
- Elementy członkowskie danych pola, należy wywołać `SetFieldType` z parametrem **CFieldExchange::outputColumn**, a następnie wywołania funkcji RFX lub RFX zbiorczego. Jeśli nie zaimplementowano zbiorcze pobieranie z wiersza, a następnie powoduje ClassWizard, to `SetFieldType` wywołania dla Ciebie w sekcji map pola `DoFieldExchange`.  
+ Elementy członkowskie danych pola, należy wywołać `SetFieldType` z parametrem `CFieldExchange::outputColumn`, a następnie wywołania funkcji RFX lub zbiorcze RFX. Jeśli nie zaimplementowano zbiorcze pobieranie z wiersza, a następnie umieszcza ClassWizard, to `SetFieldType` wywołać dla Ciebie w sekcji map pola `DoFieldExchange`.  
   
- Jeśli parametryzacja zestawu rekordów klasy, należy wywołać `SetFieldType` ponownie, poza dowolnej sekcji mapy pola następuje wywołania RFX dla wszystkich członków danych parametru. Każdy typ elementu członkowskiego danych parametru musi mieć własny `SetFieldType` wywołania. Poniższa tabela odróżnia różne wartości, które można przekazać do `SetFieldType` do reprezentowania elementy członkowskie danych parametru klasy:  
+ Jeśli możesz zdefiniować parametry klasy zestawu rekordów, należy wywołać `SetFieldType` ponownie poza dowolną sekcję mapy pola następuje RFX wywołań dla wszystkich członków danych parametru. Każdy typ element członkowski danych parametr musi mieć swój własny `SetFieldType` wywołania. Poniższa tabela różnic między usługą różne wartości, którą można przekazać do `SetFieldType` do reprezentowania elementy członkowskie danych parametru klasy:  
   
-|Wartość parametru SetFieldType|Typ elementu członkowskiego danych parametru|  
+|Wartość parametru SetFieldType|Typ parametru element członkowski danych|  
 |----------------------------------|-----------------------------------|  
-|**CFieldExchange::inputParam**|Parametr wejściowy. Wartość, która została przekazana do zapytań lub procedurze składowanej w zestawie rekordów.|  
-|**CFieldExchange::param**|Taki sam jak **CFieldExchange::inputParam**.|  
-|**CFieldExchange::outputParam**|Parametr wyjściowy. Procedury składowanej zwracana wartość w zestawie rekordów.|  
-|**CFieldExchange::inoutParam**|Parametr wejścia/wyjścia. Wartość, która jest przekazany i zwrócony z procedury składowanej w zestawie rekordów.|  
+|`CFieldExchange::inputParam`|Parametr wejściowy. Wartość, która została przekazana do zapytań lub procedurze składowanej w zestawie rekordów.|  
+|"ieldExchange::param **`ame as **CFieldExchange::inputParam`.|  
+|`CFieldExchange::outputParam`|Parametr wyjściowy. Zwracana wartość wynosząca procedury składowanej w zestawie rekordów.|  
+|`CFieldExchange::inoutParam`|Parametr input/output. Wartość, która jest przekazywana do i zwrócone przez procedurę składowaną w zestawie rekordów.|  
   
- Ogólnie rzecz biorąc, każdej grupy wywołania funkcji RFX skojarzonych z elementy członkowskie danych pola lub elementy członkowskie danych parametru musi być poprzedzony przez wywołanie do `SetFieldType`. *NFieldType* parametru każdego `SetFieldType` wywołania Określa typ elementów członkowskich danych reprezentowanego przez wywołania funkcji RFX, które należy wykonać `SetFieldType` wywołania.  
+ Ogólnie rzecz biorąc, poszczególne grupy skojarzone z elementy członkowskie danych pola lub elementy członkowskie danych parametru wywołania funkcji RFX musi być poprzedzona wywołanie `SetFieldType`. *NFieldType* parametru każdego `SetFieldType` wywołanie określa typ elementów członkowskich danych reprezentowanego przez wywołania funkcji RFX, które należy wykonać `SetFieldType` wywołania.  
   
- Aby uzyskać więcej informacji na temat obsługi parametry wejścia/wyjścia i danych wyjściowych, zobacz `CRecordset` funkcji członkowskiej [FlushResultSet](../../mfc/reference/crecordset-class.md#flushresultset). Aby uzyskać więcej informacji o funkcji RFX i RFX zbiorczego, zobacz temat [funkcje wymiany pól rekordów](../../mfc/reference/record-field-exchange-functions.md). Powiązane informacje zbiorcze pobieranie z wiersza, zobacz artykuł [zestaw rekordów: pobieranie rekordów zbiorczego (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md).  
+ Aby uzyskać więcej informacji na temat obsługi danych wyjściowych i parametrów wejściowych/wyjściowych zobacz `CRecordset` funkcja elementu członkowskiego [FlushResultSet](../../mfc/reference/crecordset-class.md#flushresultset). Aby uzyskać więcej informacji na temat funkcji RFX i zbiorcze RFX, zobacz temat [funkcje wymiany pól rekordów](../../mfc/reference/record-field-exchange-functions.md). Aby uzyskać powiązane informacje na temat zbiorcze pobieranie z wiersza, zobacz artykuł [zestaw rekordów: pobieranie rekordów w zbiorcze (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md).  
   
 ### <a name="example"></a>Przykład  
- W tym przykładzie pokazano kilka wywołania funkcji RFX z towarzyszącym wywołania `SetFieldType`. Należy pamiętać, że `SetFieldType` jest wywoływana przez `pFX` wskaźnik do `CFieldExchange` obiektu.  
+ W tym przykładzie pokazano kilka wywołań do funkcji RFX z towarzyszącym wywołania `SetFieldType`. Należy pamiętać, że `SetFieldType` jest wywoływany za pośrednictwem `pFX` wskaźnik do `CFieldExchange` obiektu.  
   
  [!code-cpp[NVC_MFCDatabase#33](../../mfc/codesnippet/cpp/cfieldexchange-class_1.cpp)]  
   

@@ -48,15 +48,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c477ee69b8bc8e824aae6df1f74ba97d2825524f
-ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
+ms.openlocfilehash: ebfacd93c8a346c2303e80ded4e28f3314ed10bb
+ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/27/2018
-ms.locfileid: "37039162"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37339172"
 ---
 # <a name="cmap-class"></a>Klasa CMap
-Klasa kolekcji słownik mapujący klucze unikatowe wartości.  
+Klasa kolekcji słownika, która mapuje unikatowe klucze do wartości.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -69,21 +69,21 @@ template<class KEY, class ARG_KEY, class VALUE, class ARG_VALUE>class CMap : pub
  Klasa Obiekt używany jako klucz do mapy.  
   
  *ARG_KEY*  
- Typ danych używany dla *klucza* argumentów; zwykle odwołanie do *klucza*.  
+ Typ danych używany dla *klucz* argumentów; zazwyczaj odwołanie do *klucz*.  
   
  *WARTOŚĆ*  
- Klasa obiektu przechowywane na mapie.  
+ Klasa obiektu przechowywany w mapie.  
   
  *ARG_VALUE*  
- Typ danych używany dla *wartość* argumentów; zwykle odwołanie do *wartość*.  
+ Typ danych używany dla *wartość* argumentów; zazwyczaj odwołanie do *wartość*.  
   
 ## <a name="members"></a>Elementy członkowskie  
   
-### <a name="public-structures"></a>Publiczny struktury  
+### <a name="public-structures"></a>Publiczne struktury  
   
 |Nazwa|Opis|  
 |----------|-----------------|  
-|[CMap::CPair](#cpair)|Zagnieżdżone struktury zawierające wartości klucza i wartości skojarzonego obiektu.|  
+|[CMap::CPair](#cpair)|Struktura zagnieżdżona zawierające wartości klucza i wartości skojarzonego obiektu.|  
   
 ### <a name="public-constructors"></a>Konstruktory publiczne  
   
@@ -96,17 +96,17 @@ template<class KEY, class ARG_KEY, class VALUE, class ARG_VALUE>class CMap : pub
 |Nazwa|Opis|  
 |----------|-----------------|  
 |[CMap::GetCount](#getcount)|Zwraca liczbę elementów na tej mapie.|  
-|[CMap::GetHashTableSize](#gethashtablesize)|Zwraca liczbę elementów w tablicy skrótów.|  
-|[CMap::GetNextAssoc](#getnextassoc)|Pobiera następnego elementu potrzeby iteracji.|  
+|[CMap::GetHashTableSize](#gethashtablesize)|Zwraca liczbę elementów w tabeli wyznaczania wartości skrótu.|  
+|[CMap::GetNextAssoc](#getnextassoc)|Pobiera następny element do wykonania iteracji.|  
 |[CMap::GetSize](#getsize)|Zwraca liczbę elementów na tej mapie.|  
 |[CMap::GetStartPosition](#getstartposition)|Zwraca pozycję pierwszego elementu.|  
-|[CMap::InitHashTable](#inithashtable)|Inicjuje tablicy skrótów i określa jego rozmiar.|  
-|[CMap::IsEmpty](#isempty)|Testy dla warunku pusta Mapa (Brak elementów).|  
-|[CMap::Lookup](#lookup)|Wyszukuje wartość mapowane na danym kluczem.|  
+|[CMap::InitHashTable](#inithashtable)|Inicjuje tabelę mieszania oraz określa jego rozmiar.|  
+|[CMap::IsEmpty](#isempty)|Testuje pod kątem warunku pusta Mapa (Brak elementów).|  
+|[CMap::Lookup](#lookup)|Wyszukuje wartość mapowane do danego klucza.|  
 |[CMap::PGetFirstAssoc](#pgetfirstassoc)|Zwraca wskaźnik do pierwszego elementu.|  
-|[CMap::PGetNextAssoc](#pgetnextassoc)|Pobiera wskaźnik do następnego elementu potrzeby iteracji.|  
+|[CMap::PGetNextAssoc](#pgetnextassoc)|Pobiera wskaźnik do następnego elementu do wykonania iteracji.|  
 |[CMap::PLookup](#plookup)|Zwraca wskaźnik do klucza, którego wartość odpowiada określonej wartości.|  
-|[CMap::RemoveAll](#removeall)|Usuwa wszystkie elementy z tej mapy.|  
+|[CMap::RemoveAll](#removeall)|Usuwa wszystkie elementy z tej mapie.|  
 |[CMap::RemoveKey](#removekey)|Usuwa element określony przez klucz.|  
 |[CMap::SetAt](#setat)|Wstawia element do mapy; zastępuje istniejący element, jeśli dopasowany klucz zostanie znaleziony.|  
   
@@ -114,22 +114,22 @@ template<class KEY, class ARG_KEY, class VALUE, class ARG_VALUE>class CMap : pub
   
 |Nazwa|Opis|  
 |----------|-----------------|  
-|[[CMap::operator]](#operator_at)|Wstawia element do mapy — operator podstawienia dla `SetAt`.|  
+|[[] CMap::operator](#operator_at)|Wstawia element do mapy — operator podstawienia dla `SetAt`.|  
   
 ## <a name="remarks"></a>Uwagi  
- Po wstawieniu pary klucz wartość (element) do mapy wydajnie można pobrać lub usunąć pary przy użyciu klucza dostępu do niego. Można również iteracja wszystkie elementy na mapie.  
+ Po wstawieniu pary klucz wartość (element) do mapy efektywnie można pobrać lub usunąć pary przy użyciu klucza dostępu do niego. Można również wykonać iterację przez wszystkie elementy na mapie.  
   
- Zmienna typu **pozycji** jest używana do alternatywnego dostępu do wpisów. Można użyć **pozycji** wpis "pamiętać" i do iteracji mapy. Może uważasz, że ten iteracji jest sekwencyjnych przez wartość klucza; nie jest. Sekwencja pobrane elementów jest nieokreślony.  
+ Zmienna typu pozycja jest używany dla alternatywny dostęp do wpisów. Można użyć pozycji, wpis "pamiętać" i do iteracji na mapie. Może się wydawać, sekwencyjnych według wartości kluczy; to tej iteracji nie jest dostępne. Sekwencja elementów pobrane jest nieokreślony.  
   
- Niektóre funkcje Członkowskie wywołanie klasy funkcje globalne pomocy, które muszą być dostosowane dla większości zastosowań `CMap` klasy. Zobacz [pomocnicy klasy kolekcji](../../mfc/reference/collection-class-helpers.md) w sekcji makra i funkcje globalne `MFC Reference`.  
+ Niektóre funkcje Członkowskie to wywołanie klasy, funkcje globalne pomocy, które muszą być dostosowane dla większości zastosowań `CMap` klasy. Zobacz [pomocnicy klasy kolekcji](../../mfc/reference/collection-class-helpers.md) w sekcji makra i funkcje globalne **odwołanie MFC**.  
   
- `CMap` zastępuje [CObject::Serialize](../../mfc/reference/cobject-class.md#serialize) do obsługi serializacji i zrzucanie swoich elementów. Jeśli mapy jest przechowywany przy użyciu archiwum `Serialize`, każdy element mapy jest serializowany z kolei. Domyślna implementacja `SerializeElements` funkcja pomocnicza jest logiczną zapisu. Dla informacje o serializacji elementów kolekcji wskaźnika pochodną `CObject` lub innych typów zdefiniowanych przez użytkownika, zobacz [porady: tworzenie bezpiecznej kolekcji](../../mfc/how-to-make-a-type-safe-collection.md).  
+ `CMap` zastępuje [CObject::Serialize](../../mfc/reference/cobject-class.md#serialize) do obsługi serializacji i zrzucanie z jego elementów. Jeśli mapa jest przechowywany za pomocą archiwum `Serialize`, każdy element mapy jest serializowana z osobna. Domyślna implementacja klasy `SerializeElements` funkcja pomocnicza jest bitowe zapisu. Dla informacji o serializacji elementów kolekcji wskaźnika pochodną `CObject` lub innych typów zdefiniowanych przez użytkownika, zobacz [porady: tworzenie bezpiecznej kolekcji](../../mfc/how-to-make-a-type-safe-collection.md).  
   
- Diagnostycznych zrzut poszczególne elementy na mapie (klucze i wartości), należy do co najmniej 1 należy ustawić głębokość kontekstu zrzutu.  
+ Diagnostyczne zrzut poszczególnych elementów w mapie (klucze i wartości), należy należy ustawić głębokość kontekstu zrzutu do 1 lub większą.  
   
- Gdy `CMap` obiekt jest usunięty lub gdy jego elementy są usuwane, klucze i wartości zostaną usunięte.  
+ Gdy `CMap` obiekt zostanie usunięty lub po jego elementy są usuwane, klucze i wartości są usuwane.  
   
- Mapy pochodnym klasy jest podobna do listy pochodnym. Zapoznaj się z artykułem [kolekcje](../../mfc/collections.md) ilustrację pochodnym klasy listy specjalnych.  
+ Wyprowadzanie klasy mapy jest podobny do wyprowadzania listy. Zapoznaj się z artykułem [kolekcje](../../mfc/collections.md) ilustrację pochodnym klasy listy specjalnych.  
   
 ## <a name="inheritance-hierarchy"></a>Hierarchia dziedziczenia  
  [CObject](../../mfc/reference/cobject-class.md)  
@@ -148,33 +148,33 @@ CMap(INT_PTR nBlockSize = 10);
   
 ### <a name="parameters"></a>Parametry  
  *nBlockSize*  
- Określa poziom szczegółowości Alokacja pamięci dla rozszerzanie mapy.  
+ Określa stopień szczegółowości alokacji pamięci do rozszerzania możliwości programu na mapie.  
   
 ### <a name="remarks"></a>Uwagi  
- Wraz z rozwojem mapy, w jednostkach jest przydzielana pamięć *nBlockSize* wpisów.  
+ Wraz z rozwojem mapy pamięć została przydzielona w jednostkach *nBlockSize* wpisów.  
   
 ### <a name="example"></a>Przykład  
  [!code-cpp[NVC_MFCCollections#56](../../mfc/codesnippet/cpp/cmap-class_1.cpp)]  
   
 ##  <a name="cpair"></a>  CMap::CPair  
- Zawiera wartość klucza i wartość skojarzonego obiektu.  
+ Zawiera wartość klucza i wartości skojarzonego obiektu.  
   
 ### <a name="remarks"></a>Uwagi  
- To jest strukturą zagnieżdżone w obrębie klasy [CMap](../../mfc/reference/cmap-class.md).  
+ Jest to struktura zagnieżdżona w klasie [CMap](../../mfc/reference/cmap-class.md).  
   
  Struktura składa się z dwóch pól:  
   
-- **klucz** rzeczywistej wartości Typ klucza.  
+- `key` Wartość rzeczywista typ klucza.  
   
-- **wartość** wartość skojarzonego obiektu.  
+- `value` Wartość skojarzonego obiektu.  
   
  Jest on używany do przechowywania wartości zwracanych z [CMap::PLookup](#plookup), [CMap::PGetFirstAssoc](#pgetfirstassoc), i [CMap::PGetNextAssoc](#pgetnextassoc).  
   
 ### <a name="example"></a>Przykład  
- Przykład użycia, zobacz przykład [CMap::PLookup](#plookup).  
+ Na przykład użycia, zobacz przykład [CMap::PLookup](#plookup).  
   
 ##  <a name="getcount"></a>  CMap::GetCount  
- Pobiera liczbę elementów w planie.  
+ Pobiera liczbę elementów w mapie.  
   
 ```  
 INT_PTR GetCount() const;  
@@ -194,13 +194,13 @@ UINT GetHashTableSize() const;
 ```  
   
 ### <a name="return-value"></a>Wartość zwracana  
- Liczba elementów w tablicy skrótów.  
+ Liczba elementów w tabeli wyznaczania wartości skrótu.  
   
 ### <a name="example"></a>Przykład  
  [!code-cpp[NVC_MFCCollections#57](../../mfc/codesnippet/cpp/cmap-class_2.cpp)]  
   
 ##  <a name="getnextassoc"></a>  CMap::GetNextAssoc  
- Pobiera element mapy pod `rNextPosition`, następnie aktualizuje `rNextPosition` do odwoływania się do następnego elementu na mapie.  
+ Pobiera element mapy w `rNextPosition`, następnie aktualizuje `rNextPosition` do odwoływania się do następnego elementu w mapie.  
   
 ```  
 void GetNextAssoc(
@@ -211,7 +211,7 @@ void GetNextAssoc(
   
 ### <a name="parameters"></a>Parametry  
  *rNextPosition*  
- Określa odwołania do **pozycji** wartość zwrócona przez poprzednie `GetNextAssoc` lub `GetStartPosition` wywołania.  
+ Określa odwołanie do wartości pozycji zwrócony przez poprzednie `GetNextAssoc` lub `GetStartPosition` wywołania.  
   
  *KEY*  
  Parametr szablonu określający typ klucza mapy.  
@@ -226,9 +226,9 @@ void GetNextAssoc(
  Określa wartość elementu pobrane.  
   
 ### <a name="remarks"></a>Uwagi  
- Ta funkcja jest najbardziej przydatny w przypadku iteracja przez wszystkie elementy na mapie. Należy pamiętać, że sekwencji pozycji nie jest zawsze taki sam jak wartości klucza sekwencji.  
+ Ta funkcja jest najbardziej przydatne do iteracji na elementach na mapie. Należy pamiętać, że sekwencja pozycji niekoniecznie jest taka sama jak wartość klucza sekwencji.  
   
- Jeśli element pobrane przez ostatnie na mapie jest następnie nowa wartość *rNextPosition* ustawiono **NULL**.  
+ Jeśli element pobrane jest ostatni w mapie, nowa wartość *rNextPosition* ma wartość NULL.  
   
 ### <a name="example"></a>Przykład  
  Zobacz przykład [CMap::SetAt](#setat).  
@@ -241,32 +241,32 @@ INT_PTR GetSize() const;
 ```  
   
 ### <a name="return-value"></a>Wartość zwracana  
- Liczba elementów w planie.  
+ Liczba elementów w mapie.  
   
 ### <a name="remarks"></a>Uwagi  
- Wywołaj tę metodę, aby pobrać liczbę elementów w planie.  
+ Wywołaj tę metodę, aby pobrać liczbę elementów w mapie.  
   
 ### <a name="example"></a>Przykład  
  [!code-cpp[NVC_MFCCollections#58](../../mfc/codesnippet/cpp/cmap-class_3.cpp)]  
   
 ##  <a name="getstartposition"></a>  CMap::GetStartPosition  
- Uruchamia iteracji mapy zwracając **pozycji** wartości, które mogą zostać przekazane do `GetNextAssoc` wywołania.  
+ Uruchamia iteracji mapy, zwracając wartość pozycji, które mogą być przekazywane do `GetNextAssoc` wywołania.  
   
 ```  
 POSITION GetStartPosition() const;  
 ```  
   
 ### <a name="return-value"></a>Wartość zwracana  
- A **pozycji** wartość, która wskazuje pozycję początkową, które mapy; lub **NULL** Jeśli mapy jest pusta.  
+ Wartość pozycji, która wskazuje pozycja początkowa które mapy; lub wartość NULL, jeśli mapa jest pusta.  
   
 ### <a name="remarks"></a>Uwagi  
- Sekwencja iteracji nie jest przewidywalne; w związku z tym "pierwszy element w mapie" ma specjalnego znaczenia.  
+ Sekwencja iteracji nie jest przewidywalne; Dlatego "pierwszego elementu w mapie" ma specjalnego znaczenia.  
   
 ### <a name="example"></a>Przykład  
  Zobacz przykład [CMap::SetAt](#setat).  
   
 ##  <a name="inithashtable"></a>  CMap::InitHashTable  
- Inicjuje tablicy skrótów.  
+ Inicjuje tabelę mieszania.  
   
 ```  
 void InitHashTable(UINT hashSize, BOOL  bAllocNow = TRUE);  
@@ -274,13 +274,13 @@ void InitHashTable(UINT hashSize, BOOL  bAllocNow = TRUE);
   
 ### <a name="parameters"></a>Parametry  
  *hashSize*  
- Liczba wpisów w tablicy skrótów.  
+ Liczba wpisów w tabeli wyznaczania wartości skrótu.  
   
  *bAllocNow*  
- Jeśli **TRUE**, przydziela tablicy skrótów po zainicjowaniu; w przeciwnym razie tabeli jest przydzielane w razie potrzeby.  
+ W przypadku opcji TRUE przydziela tablicy skrótów po zainicjowaniu; w przeciwnym razie tabeli jest przydzielany, gdy potrzebne.  
   
 ### <a name="remarks"></a>Uwagi  
- Aby uzyskać najlepszą wydajność rozmiar tabeli skrótów powinna być liczba pierwsza. Aby zminimalizować problemy, rozmiar powinien mieścić się około 20 procent większy niż największy oczekiwanego zestawu danych.  
+ Aby uzyskać najlepszą wydajność rozmiar tabeli wyznaczania wartości skrótu powinien być liczba pierwsza. Aby zminimalizować konflikty, rozmiar powinien być około 20% większa niż największa przewidywanego zestawu danych.  
   
 ### <a name="example"></a>Przykład  
  Zobacz przykład [CMap::Lookup](#lookup).  
@@ -293,13 +293,13 @@ BOOL IsEmpty() const;
 ```  
   
 ### <a name="return-value"></a>Wartość zwracana  
- Różna od zera, jeśli ta mapa nie zawiera żadnych elementów; w przeciwnym razie 0.  
+ Wartość różną od zera, jeśli to mapowanie nie zawiera elementów; w przeciwnym razie 0.  
   
 ### <a name="example"></a>Przykład  
  Zobacz przykład [CMap::RemoveAll](#removeall).  
   
 ##  <a name="lookup"></a>  CMap::Lookup  
- Wyszukuje wartość mapowane na danym kluczem.  
+ Wyszukuje wartość mapowane do danego klucza.  
   
 ```  
 BOOL Lookup(ARG_KEY key, VALUE& rValue) const;  
@@ -307,28 +307,28 @@ BOOL Lookup(ARG_KEY key, VALUE& rValue) const;
   
 ### <a name="parameters"></a>Parametry  
  *ARG_KEY*  
- Określenie typu parametru szablonu *klucza* wartość.  
+ Parametr szablonu określający typ *klucz* wartość.  
   
  *Klucz*  
- Określa klucz identyfikujący element, aby wyszukiwać.  
+ Określa klucz, który identyfikuje elementu, który ma być wyszukiwana.  
   
  *WARTOŚĆ*  
- Określa typ wartości, aby wyszukiwać.  
+ Określa typ wartości ma być wyszukiwana.  
   
  *r-wartości*  
- Odbiera wartość wyszukiwanego w górę.  
+ Odbiera wartość oglądałem się w górę.  
   
 ### <a name="return-value"></a>Wartość zwracana  
- Różna od zera, jeśli znaleziono element; w przeciwnym razie 0.  
+ Wartość różną od zera, jeśli element został znaleziony; w przeciwnym razie 0.  
   
 ### <a name="remarks"></a>Uwagi  
- `Lookup` używa algorytmu wyznaczania wartości skrótu, aby szybko znaleźć map element za pomocą klucza, która dokładnie odpowiada danym kluczem.  
+ `Lookup` używa algorytmu wyznaczania wartości skrótu, aby szybko znaleźć element mapy za pomocą klucza, który dokładnie pasuje do danego klucza.  
   
 ### <a name="example"></a>Przykład  
  [!code-cpp[NVC_MFCCollections#58](../../mfc/codesnippet/cpp/cmap-class_3.cpp)]  
   
-##  <a name="operator_at"></a>  [CMap::operator]  
- Zastępuje wygodne `SetAt` funkcję elementu członkowskiego.  
+##  <a name="operator_at"></a>  [] CMap::operator  
+ Zastępuje wygodne `SetAt` funkcja elementu członkowskiego.  
   
 ```  
 VALUE& operator[](arg_key key);
@@ -345,9 +345,9 @@ VALUE& operator[](arg_key key);
  Klucz używany do pobierania wartości z mapy.  
   
 ### <a name="remarks"></a>Uwagi  
- W związku z tym można używać tylko po lewej stronie instrukcji przypisania (wartością l-value). Jeśli nie ma mapy elementu z określonym kluczem, jest tworzony nowy element.  
+ Dlatego może służyć tylko z lewej instrukcji przypisania (l wartości). Jeśli nie ma żadnego elementu na mapie, z określonym kluczem, nowy element zostanie utworzony.  
   
- Nie jest równoważna tego operatora nie "po prawej stronie" (r), ponieważ istnieje możliwość, że nie można odnaleźć klucza na mapie. Użyj `Lookup` funkcji członkowskiej dla elementu pobierania.  
+ Istnieje nie "po prawej stronie" (r) odpowiednikiem tego operatora, ponieważ istnieje możliwość, że nie można znaleźć klucza w mapie. Użyj `Lookup` funkcja elementu członkowskiego do elementu pobierania.  
   
 ### <a name="example"></a>Przykład  
  Zobacz przykład [CMap::Lookup](#lookup).  
@@ -361,16 +361,16 @@ CPair* PGetFirstAssoc();
 ```  
   
 ### <a name="return-value"></a>Wartość zwracana  
- Wskaźnik do pierwszego wpis w mapie; zobacz [CMap::CPair](#cpair). Jeśli mapy nie zawiera żadnych pozycji, wartość jest **NULL**.  
+ Wskaźnik do pierwszej pozycji w mapowaniu; zobacz [CMap::CPair](#cpair). Jeśli mapa zawiera żadnych wpisów, wartość jest równa NULL.  
   
 ### <a name="remarks"></a>Uwagi  
- Wywołanie tej funkcji, aby zwracać wskaźnik pierwszego elementu w obiekcie mapy.  
+ Wywołaj tę funkcję, aby zwrócić wskaźnik do pierwszego elementu w obiektu mapy.  
   
 ### <a name="example"></a>Przykład  
  [!code-cpp[NVC_MFCCollections#59](../../mfc/codesnippet/cpp/cmap-class_4.cpp)]  
   
 ##  <a name="pgetnextassoc"></a>  CMap::PGetNextAssoc  
- Pobiera element map wskazywana przez *pAssocRec*.  
+ Pobiera element mapy, wskazane przez *pAssocRec*.  
   
 ```  
 const CPair *PGetNextAssoc(const CPair* pAssocRet) const;  
@@ -380,19 +380,19 @@ CPair *PGetNextAssoc(const CPair* pAssocRet);
   
 ### <a name="parameters"></a>Parametry  
  *pAssocRet*  
- Wskazuje wpis mapy zwrócony przez poprzednie [PGetNextAssoc](#pgetnextassoc) lub [CMap::PGetFirstAssoc](#pgetfirstassoc) wywołania.  
+ Wskazuje na wpis mapy zwrócony przez poprzednie [PGetNextAssoc](#pgetnextassoc) lub [CMap::PGetFirstAssoc](#pgetfirstassoc) wywołania.  
   
 ### <a name="return-value"></a>Wartość zwracana  
- Wskaźnik do następnego wpisu w mapowaniu; zobacz [CMap::CPair](#cpair). Jeśli element jest ostatni w planie, wartość jest **NULL**.  
+ Wskaźnik do następnego wpisu w mapowaniu; zobacz [CMap::CPair](#cpair). Jeśli element jest ostatni w mapie, wartość jest wartością NULL.  
   
 ### <a name="remarks"></a>Uwagi  
- Wywołaj tę metodę, aby wykonać iterację wszystkie elementy na mapie. Pierwszy element z wywołaniem do pobrania `PGetFirstAssoc` , a następnie wykonać iterację mapy kolejne wywołania `PGetNextAssoc`.  
+ Wywołaj tę metodę do iteracji wszystkich elementów w mapie. Pobrać pierwszy element z wywołaniem `PGetFirstAssoc` i następnie iterację mapy za pomocą kolejne wywołania `PGetNextAssoc`.  
   
 ### <a name="example"></a>Przykład  
  Zobacz przykład [CMap::PGetFirstAssoc](#pgetfirstassoc).  
   
 ##  <a name="plookup"></a>  CMap::PLookup  
- Wyszukuje wartość mapowane na danym kluczem.  
+ Wyszukuje wartość mapowane do danego klucza.  
   
 ```  
 const CPair* PLookup(ARG_KEY key) const;
@@ -401,32 +401,32 @@ CPair* PLookup(ARG_KEY key);
   
 ### <a name="parameters"></a>Parametry  
  *Klucz*  
- Klucz dla elementu, który ma zostać wyszukany.  
+ Klucz elementu, który ma zostać wyszukany.  
   
 ### <a name="return-value"></a>Wartość zwracana  
- Wskaźnik do struktury klucza; zobacz [CMap::CPair](#cpair). Jeśli nie znaleziono, `CMap::PLookup` zwraca `NULL`.  
+ Wskaźnik do struktury klucza; zobacz [CMap::CPair](#cpair). Jeśli nie zostanie znalezione dopasowanie, `CMap::PLookup` zwraca wartość NULL.  
   
 ### <a name="remarks"></a>Uwagi  
- Wywołaj tę metodę, aby wyszukać map element, za pomocą klucza, która dokładnie odpowiada danym kluczem.  
+ Wywołaj tę metodę, aby wyszukać element mapy za pomocą klucza, który dokładnie pasuje do danego klucza.  
   
 ### <a name="example"></a>Przykład  
  [!code-cpp[NVC_MFCCollections#60](../../mfc/codesnippet/cpp/cmap-class_5.cpp)]  
   
 ##  <a name="removeall"></a>  CMap::RemoveAll  
- Usuwa wszystkie wartości z tej mapy przez wywołanie funkcji pomocnika globalne **destructelements —**.  
+ Usuwa wszystkie wartości z tej mapy, przez wywołanie funkcji pomocnika globalnego `DestructElements`.  
   
 ```  
 void RemoveAll();
 ```  
   
 ### <a name="remarks"></a>Uwagi  
- Funkcja działa prawidłowo, jeśli mapy już jest pusta.  
+ Funkcja działa prawidłowo, jeśli mapa jest pusty.  
   
 ### <a name="example"></a>Przykład  
  [!code-cpp[NVC_MFCCollections#61](../../mfc/codesnippet/cpp/cmap-class_6.cpp)]  
   
 ##  <a name="removekey"></a>  CMap::RemoveKey  
- Wyszukuje wpisu mapy odpowiadający podany klucz; następnie Jeśli klucz zostanie znaleziony, usuwa wpis.  
+ Wyszukuje wpisu mapowania odpowiadający podany klucz; następnie Jeśli klucz zostanie znaleziony, usuwa wpis.  
   
 ```  
 BOOL RemoveKey(ARG_KEY key);
@@ -440,16 +440,16 @@ BOOL RemoveKey(ARG_KEY key);
  Klucz elementu do usunięcia.  
   
 ### <a name="return-value"></a>Wartość zwracana  
- Różna od zera, jeśli wpis został znaleziony i pomyślnie usunął; w przeciwnym razie 0.  
+ Wartość różną od zera, jeśli wpis zostało znalezione i pomyślnie usunął; w przeciwnym razie 0.  
   
 ### <a name="remarks"></a>Uwagi  
- **Destructelements —** funkcji Pomocnik służy do usuwania wpis.  
+ `DestructElements` Funkcji pomocnika służy do usuwania wpisu.  
   
 ### <a name="example"></a>Przykład  
  Zobacz przykład [CMap::SetAt](#setat).  
   
 ##  <a name="setat"></a>  CMap::SetAt  
- Podstawowy oznacza, że wstawić element na mapie.  
+ Podstawowy oznacza, że można wstawić elementu na mapie.  
   
 ```  
 void SetAt(ARG_KEY key, ARG_VALUE newValue);
@@ -457,24 +457,24 @@ void SetAt(ARG_KEY key, ARG_VALUE newValue);
   
 ### <a name="parameters"></a>Parametry  
  *ARG_KEY*  
- Określenie typu parametru szablonu *klucza* parametru.  
+ Parametr szablonu określający typ *klucz* parametru.  
   
  *Klucz*  
  Określa klucz nowego elementu.  
   
  *ARG_VALUE*  
- Określenie typu parametru szablonu *newValue* parametru.  
+ Parametr szablonu określający typ *newValue* parametru.  
   
  *newValue*  
  Określa wartość nowego elementu.  
   
 ### <a name="remarks"></a>Uwagi  
- Po pierwsze wyszukiwania klucza. Jeśli klucz zostanie znaleziony, a następnie zostanie zmieniona wartość odpowiadająca; w przeciwnym razie utworzono nową parę klucz wartość.  
+ Najpierw jest wyszukiwana klucza. Jeśli klucz zostanie znaleziony, a następnie odpowiednią wartość zostanie zmieniona; w przeciwnym razie jest tworzony nowy pary klucz wartość.  
   
 ### <a name="example"></a>Przykład  
  [!code-cpp[NVC_MFCCollections#62](../../mfc/codesnippet/cpp/cmap-class_7.cpp)]  
   
 ## <a name="see-also"></a>Zobacz też  
- [Przykładowe MFC ZBIERANIE](../../visual-cpp-samples.md)   
- [CObject — klasa](../../mfc/reference/cobject-class.md)   
+ [Próbki MFC ZBIERANIE](../../visual-cpp-samples.md)   
+ [Klasa CObject](../../mfc/reference/cobject-class.md)   
  [Wykres hierarchii](../../mfc/hierarchy-chart.md)  

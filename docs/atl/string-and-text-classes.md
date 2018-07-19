@@ -1,5 +1,5 @@
 ---
-title: Ciąg ALT i klasy tekstu | Dokumentacja firmy Microsoft
+title: Klasy ATL ciągów i tekstu | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,33 +15,33 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4bd20b017109cd91bcfcb25020178c1296cadf24
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 953afd2ba9f2a575eddb4140e71bada46e71dae3
+ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32362203"
+ms.lasthandoff: 07/05/2018
+ms.locfileid: "37848954"
 ---
-# <a name="string-and-text-classes"></a>Ciąg i klasy tekstu
-Te klasy zapewniają obsługę konwersje ciąg tekstu i ciągów.  
+# <a name="string-and-text-classes"></a>Klasy ciągów i tekstu
+Te klasy zapewniają obsługę dla ciągów i konwersji ciągów tekstu.  
   
--   [CA2AEX](../atl/reference/ca2aex-class.md) ta klasa jest używana przez makra konwersji ciągu `CA2TEX` i `CT2AEX`i typedef **CA2A**.  
+-   [CA2AEX](../atl/reference/ca2aex-class.md) ta klasa jest używana przez makra konwersji ciągów CA2TEX i CT2AEX i typedef CA2A.  
   
--   [CA2CAEX](../atl/reference/ca2caex-class.md) ta klasa jest używana przez makra konwersji ciągu `CA2CTEX` i `CT2CAEX`i typedef **CA2CA**.  
+-   [CA2CAEX](../atl/reference/ca2caex-class.md) ta klasa jest używana przez makra konwersji ciągów CA2CTEX i CT2CAEX i typedef CA2CA.  
   
--   [CA2WEX](../atl/reference/ca2wex-class.md) ta klasa jest używana przez makra konwersji ciągu `CA2TEX`, `CA2CTEX`, `CT2WEX`, i `CT2CWEX`i typedef **CA2W**.  
+-   [CA2WEX](../atl/reference/ca2wex-class.md) ta klasa jest używana przez makra konwersji ciągów CA2TEX, CA2CTEX, CT2WEX i CT2CWEX i typedef CA2W.  
   
--   [CW2AEX](../atl/reference/cw2aex-class.md) ta klasa jest używana przez makra konwersji ciągu `CT2AEX`, `CW2TEX`, `CW2CTEX`, i `CT2CAEX`i typedef **CW2A**.  
+-   [CW2AEX](../atl/reference/cw2aex-class.md) ta klasa jest używana przez makra konwersji ciągów CT2AEX, CW2TEX, CW2CTEX i CT2CAEX i typedef CW2A.  
   
--   [CW2CWEX](../atl/reference/cw2cwex-class.md) ta klasa jest używana przez makra konwersji ciągu `CW2CTEX` i `CT2CWEX`i typedef **CW2CW**.  
+-   [CW2CWEX](../atl/reference/cw2cwex-class.md) ta klasa jest używana przez makra konwersji ciągów CW2CTEX i CT2CWEX i typedef CW2CW.  
   
--   [CW2WEX](../atl/reference/cw2wex-class.md) ta klasa jest używana przez makra konwersji ciągu `CW2TEX` i `CT2WEX`i typedef `CW2W`.  
+-   [CW2WEX](../atl/reference/cw2wex-class.md) ta klasa jest używana przez makra konwersji ciągów CW2TEX i CT2WEX i typedef CW2W.  
   
--   [CComBSTR](../atl/reference/ccombstr-class.md) ta klasa jest otoki dla `BSTR`s.  
+-   [CComBSTR](../atl/reference/ccombstr-class.md) tej klasy jest otoką BSTR.  
   
--   [_U_STRINGorID](../atl/reference/u-stringorid-class.md) tej klasy karty argument umożliwia albo nazw zasobów (`LPCTSTR`s) lub identyfikatory zasobów (**UINT**s) mają być przekazane do funkcji bez konieczności obiekt wywołujący, aby przekonwertować identyfikator ciągu przy użyciu  **MAKEINTRESOURCE** makra.  
+-   [_U_STRINGorID](../atl/reference/u-stringorid-class.md) ta klasa adaptera argument umożliwia albo nazw zasobów (`LPCTSTR`s) lub identyfikatory (UINTs), który zostanie przekazany do funkcji bez konieczności obiekt wywołujący, aby przekonwertować na ciąg przy użyciu makra MAKEINTRESOURCE identyfikator zasobów.  
   
 ## <a name="see-also"></a>Zobacz też  
- [Przegląd klas](../atl/atl-class-overview.md)   
- [ATL i makr konwersji MFC ciągu](reference/string-conversion-macros.md)
+ [Klasa — Przegląd](../atl/atl-class-overview.md)   
+ [ATL i makr konwersji ciągu MFC](reference/string-conversion-macros.md)
 

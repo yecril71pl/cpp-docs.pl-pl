@@ -16,16 +16,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e71cdbfad883d1d9560ee88fde0338958240bd19
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 3ae46a78484a2ee2737f3d949e525ce89d8401cd
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33855828"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38959072"
 ---
 # <a name="tupleelement-class"></a>tuple_element — Klasa
 
-Opakowuje `tuple` elementu. Zawijaj specjalizacje `array` elementów i `pair` elementy.
+Opakowuje `tuple` elementu. OPAKOWYWANIE specjalizacje `array` elementy i `pair` elementów.
 
 ## <a name="syntax"></a>Składnia
 
@@ -66,29 +66,35 @@ template <class T1, class T2>
 
 ### <a name="parameters"></a>Parametry
 
-*Indeks* indeks elementu wyznaczonych.
+*Index*  
+Indeks elementu wyznaczonym.
 
-*Tuple* typ spójnej kolekcji.
+*Krotki*  
+Typ spójnej kolekcji.
 
-*Element* typ elementu tablicy.
+*Elem*  
+Typ elementu tablicy.
 
-*Rozmiar* rozmiar tablicy.
+*Rozmiar*  
+Rozmiar tablicy.
 
-*T1* typ pierwszego elementu w parze.
+*T1*  
+Typ pierwszego elementu w parę.
 
-*T2* typ drugiego elementu w parze.
+*T2*  
+Typ drugiego elementu w parze.
 
 ## <a name="remarks"></a>Uwagi
 
-Klasy szablonów `tuple_element` zagnieżdżony element typedef ma `type` oznacza to synonim dla typu w indeksie `Index` typu krotki `Tuple`.
+Klasa szablonu `tuple_element` zawiera zagnieżdżony typedef `type` czyli synonimem typu pod indeksem *indeksu* typu krotki *krotki*.
 
 Typedef `tuple_element_t` jest wygodne alias dla `tuple_element<Index, Tuple>::type`.
 
-Specjalizacji klasy szablonów dla tablic zapewnia interfejs do `array` jako krotki liczącej `Size` elementów, z których każda ma tego samego typu. Zagnieżdżony element typedef ma każdej specjalizacji `type` oznacza to synonim dla typu `Index` elementu `array`, z dowolnego kwalifikacji const-volatile zachowane.
+Specjalizacja klasy szablonów dla tablic udostępnia interfejs dla `array` jako krotka o `Size` elementów, z których każdy ma tego samego typu. Każda specjalizacja zawiera zagnieżdżony typedef `type` oznacza to synonim dla typu *indeksu* elementu `array`, za pomocą dowolnego kwalifikacji const-volatile zachowane.
 
-Specjalizacji szablonu dla `pair` typy każdego zapewniają typedef pojedynczy element członkowski, `type`, który jest synonimem typ elementu w określonej pozycji w parze z dowolnego kwalifikacji const i/lub volatile zachowane. Typedef `tuple_element_t` jest wygodne alias dla `tuple_element<N, pair<T1, T2>>::type`.
+Specjalizacje szablonu dla `pair` typy każdego Podaj element typedef jeden element członkowski `type`, który jest synonimem dla typu elementu w określonej pozycji w parze, za pomocą dowolnego kwalifikacji const i/lub volatile zachowane. Typedef `tuple_element_t` jest wygodne alias dla `tuple_element<N, pair<T1, T2>>::type`.
 
-Użyj [get — funkcja &lt;narzędzie&gt; ](../standard-library/utility-functions.md#get) do zwrócenia elementu w określonej pozycji lub określonego typu.
+Użyj [get — funkcja &lt;narzędzie&gt; ](../standard-library/utility-functions.md#get) celu zwrócenia elementu w określonym położeniu lub określonego typu.
 
 ## <a name="example"></a>Przykład
 
@@ -178,7 +184,7 @@ int main() {
 
 ## <a name="requirements"></a>Wymagania
 
-**Nagłówek:** \<krotki > **nagłówka:** \<tablicy > (dla specjalizacji tablicy) **nagłówka:** \<narzędzie > (dla specjalizacji pary)  **Namespace:** Standard
+**Nagłówek:** \<krotki > **nagłówka:** \<tablicy > (dla specjalizacji tablicy) **nagłówka:** \<Narzędzia > (dla pary specjalizacje)  **Namespace:** standardowe
 
 ## <a name="see-also"></a>Zobacz także
 

@@ -96,17 +96,17 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cb5745d5c4ccc495cd508df10f0d36e3729ecf13
-ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
+ms.openlocfilehash: 4a47efc1018f42cbd9f421f1d53566aa134addd6
+ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/26/2018
-ms.locfileid: "36952561"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37336842"
 ---
 # <a name="cdocksite-class"></a>Klasa CDockSite
 [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
- Udostępnia funkcje rozmieszczania okienka pochodzących z [klasy CPane](../../mfc/reference/cpane-class.md) do zestawów wierszy.  
+ Oferuje funkcję rozmieszczania okienek, które są uzyskiwane z [klasa CPane](../../mfc/reference/cpane-class.md) do zestawów wierszy.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -146,10 +146,10 @@ class CDockSite: public CBasePane
 |[CDockSite::OnSetWindowPos](#onsetwindowpos)||  
 |[CDockSite::OnShowRow](#onshowrow)||  
 |[CDockSite::OnSizeParent](#onsizeparent)||  
-|[CDockSite::PaneFromPoint](#panefrompoint)|Zwraca okienko, w którym jest zadokowany w witrynie dock w momencie określonej przez parametr danego.|  
-|[CDockSite::DockPaneLeftOf](#dockpaneleftof)|Stacje dokujące okienko na lewo od innego okienka.|  
-|[CDockSite::FindPaneByID](#findpanebyid)|Zwraca okienko identyfikowany przez danemu identyfikatorowi.|  
-|[CDockSite::GetPaneList](#getpanelist)|Zwraca listę okienka, które są zadokowane w witrynie dokowania.|  
+|[CDockSite::PaneFromPoint](#panefrompoint)|Zwraca okienko, w którym jest zadokowany w witrynie Zadokuj w punkcie określonym przez danego parametru.|  
+|[CDockSite::DockPaneLeftOf](#dockpaneleftof)|Stacje dokujące okienko po lewej stronie okienka innego.|  
+|[CDockSite::FindPaneByID](#findpanebyid)|Zwraca okienko w którym jest identyfikowane za pomocą podanym identyfikatorze.|  
+|[CDockSite::GetPaneList](#getpanelist)|Zwraca listę okienek, które są zadokowane w witrynie dokowania.|  
 |[CDockSite::RectSideFromPoint](#rectsidefrompoint)||  
 |[CDockSite::RemovePane](#removepane)||  
 |[CDockSite::RemoveRow](#removerow)||  
@@ -162,9 +162,9 @@ class CDockSite: public CBasePane
 |[CDockSite::SwapRows](#swaprows)||  
   
 ## <a name="remarks"></a>Uwagi  
- Tworzy w ramach `CDockSite` obiekty automatycznie podczas wywoływania [CFrameWndEx::EnableDocking](../../mfc/reference/cframewndex-class.md#enabledocking). Dock witryny windows będą umieszczane na krawędzi obszaru klienckiego na głównego okna ramowego.  
+ Szablon tworzy `CDockSite` obiekty automatycznie po wywołaniu [CFrameWndEx::EnableDocking](../../mfc/reference/cframewndex-class.md#enabledocking). Zadokuj witryny windows są umieszczone na krawędzi obszaru klienckiego okna ramki głównej.  
   
- Zwykle nie trzeba wywołać usług świadczonych przez witrynę dokowania, ponieważ [klasy CFrameWndEx](../../mfc/reference/cframewndex-class.md) obsługi tych usług.  
+ Zazwyczaj nie trzeba wywołać usługi świadczone przez witryny dokowania, ponieważ [klasa CFrameWndEx](../../mfc/reference/cframewndex-class.md) obsługi tych usług.  
   
 ## <a name="example"></a>Przykład  
  Poniższy przykład przedstawia sposób tworzenia obiektu `CDockSite` klasy.  
@@ -189,7 +189,7 @@ CDockingPanesRow* AddRow(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *pos*  
+ [in] *punktu sprzedaży*  
  [in] *nHeight*  
   
 ### <a name="return-value"></a>Wartość zwracana  
@@ -324,7 +324,7 @@ virtual void DockPane(
 ### <a name="remarks"></a>Uwagi  
   
 ##  <a name="dockpaneleftof"></a>  CDockSite::DockPaneLeftOf  
- Stacje dokujące okienko na lewo od innego okienka.  
+ Stacje dokujące okienko po lewej stronie okienka innego.  
   
 ```  
 virtual BOOL DockPaneLeftOf(
@@ -334,13 +334,13 @@ virtual BOOL DockPaneLeftOf(
   
 ### <a name="parameters"></a>Parametry  
  [in] [out] *pBarToDock*  
- Wskaźnik do okienko, aby być zadokowany z lewej strony *pTargetBar*.  
+ Wskaźnik do okienka, aby być zadokowane po lewej stronie *pTargetBar*.  
   
  [in] [out] *pTargetBar*  
- Wskaźnik do okienka docelowej.  
+ Wskaźnik do okienka docelowego.  
   
 ### <a name="return-value"></a>Wartość zwracana  
- `TRUE` Jeśli panel jest zadokowany pomyślnie; w przeciwnym razie `FALSE`.  
+ Wartość TRUE, jeśli panel jest zadokowany pomyślnie; w przeciwnym razie wartość FALSE.  
   
 ### <a name="remarks"></a>Uwagi  
   
@@ -356,7 +356,7 @@ virtual BOOL DoesAllowDynInsertBefore() const;
 ### <a name="remarks"></a>Uwagi  
   
 ##  <a name="findpanebyid"></a>  CDockSite::FindPaneByID  
- Zwraca okienko z danym identyfikatorem.  
+ Zwraca okienko o podanym identyfikatorze.  
   
 ```  
 CPane* FindPaneByID(UINT nID);
@@ -367,7 +367,7 @@ CPane* FindPaneByID(UINT nID);
  Identyfikator polecenia okienka ma zostać odnaleziona.  
   
 ### <a name="return-value"></a>Wartość zwracana  
- Wskaźnik do okienka o identyfikatorze określonego polecenia lub `NULL` Jeśli okienku nie zostanie znaleziony.  
+ Wskaźnik do okienka z polecenie o określonym identyfikatorze lub o wartości NULL, jeśli nie zostanie znaleziony okienka.  
   
 ### <a name="remarks"></a>Uwagi  
   
@@ -417,14 +417,14 @@ const CObList& GetDockSiteRowsList() const;
 ### <a name="remarks"></a>Uwagi  
   
 ##  <a name="getpanelist"></a>  CDockSite::GetPaneList  
- Zwraca listę okienka, które są zadokowane w witrynie dokowania.  
+ Zwraca listę okienek, które są zadokowane w witrynie dokowania.  
   
 ```  
 const CObList& GetPaneList() const;  
 ```  
   
 ### <a name="return-value"></a>Wartość zwracana  
- Odwołanie tylko do odczytu do listy okienka obecnie zadokowane, dokującego paska.  
+ Odwołania tylko do odczytu do listy okienka obecnie zadokowane, na pasku dokowania.  
   
 ##  <a name="isaccessibilitycompatible"></a>  CDockSite::IsAccessibilityCompatible  
 
@@ -517,7 +517,7 @@ virtual void OnInsertRow(POSITION pos);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *pos*  
+ [in] *punktu sprzedaży*  
   
 ### <a name="remarks"></a>Uwagi  
   
@@ -531,7 +531,7 @@ virtual void OnRemoveRow(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *pos*  
+ [in] *punktu sprzedaży*  
  [in] *bByShow*  
   
 ### <a name="remarks"></a>Uwagi  
@@ -601,24 +601,24 @@ virtual void OnShowRow(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *pos*  
+ [in] *punktu sprzedaży*  
  [in] *bShow*  
   
 ### <a name="remarks"></a>Uwagi  
   
 ##  <a name="panefrompoint"></a>  CDockSite::PaneFromPoint  
- Zwraca okienko, w którym jest zadokowany w witrynie dock w momencie określonej przez parametr danego.  
+ Zwraca okienko, w którym jest zadokowany w witrynie Zadokuj w punkcie określonym przez danego parametru.  
   
 ```  
 virtual CPane* PaneFromPoint(CPoint pt);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *pt*  
- Punkt, we współrzędnych ekranu okienka do pobrania.  
+ [in] *(czas pacyficzny)*  
+ Punkt, w układzie współrzędnych ekranu, dla tego okienka do pobrania.  
   
 ### <a name="return-value"></a>Wartość zwracana  
- Wskaźnik do okienka znajdujące się w określonym punkcie lub `NULL` Jeśli brak okienku nie ma w określonym momencie.  
+ Wskaźnik do okienka znajdujący się w określonym lub wartość NULL, jeśli okienko nie była obecna w określonym momencie.  
   
 ### <a name="remarks"></a>Uwagi  
   
@@ -742,22 +742,22 @@ virtual BOOL ShowPane(
   
 ### <a name="parameters"></a>Parametry  
  [in] [out] *pBar*  
- Wskaźnik do okienka mają być pokazywane lub ukryte.  
+ Wskaźnik do okienka, które mają być wyświetlane lub ukryte.  
   
  [in] *bShow*  
- `TRUE` Aby określić, że okienka ma być wyświetlana; `FALSE` do określenia, że okienka ma być ukryty.  
+ Wartość TRUE, aby określić, że okienka ma być wyświetlana; Wartość FALSE, aby określić, to okienko zostanie ukryte.  
   
  [in] *bDelay*  
- `TRUE` Aby określić, czy układ okienka powinno zostać opóźnione aż po okienku jest wyświetlany; w przeciwnym razie `FALSE`.  
+ Wartość TRUE, aby określić, że układ okienka powinno zostać opóźnione do po okienku są wyświetlane; w przeciwnym razie wartość FALSE.  
   
  [in] *bActivate*  
  Ten parametr nie jest używany.  
   
 ### <a name="return-value"></a>Wartość zwracana  
- `TRUE` Jeśli okienko został ukrywane lub uwidaczniane pomyślnie. `FALSE` Jeśli okienko określony nie należą do tej witryny dokowania.  
+ Wartość TRUE, jeśli okienko zostało pokazane lub ukryte pomyślnie. Wartość FALSE, jeśli określony okienko nie należy do tej witryny dokowania.  
   
 ### <a name="remarks"></a>Uwagi  
- Wywołanie tej metody, aby pokazać lub ukryć okienka dokowanych. Zwykle nie trzeba wywołać `CDockSite::ShowPane` bezpośrednio, ponieważ jest ona wywoływana przez okno ramowe nadrzędnej lub okienku podstawowej.  
+ Wywołaj tę metodę, aby pokazać lub ukryć zadokowanego okienka. Zwykle nie trzeba wywoływać `CDockSite::ShowPane` bezpośrednio, ponieważ jest ona wywoływana przez nadrzędnej ramki okna lub okienku podstawowej.  
   
 ##  <a name="showrow"></a>  CDockSite::ShowRow  
 

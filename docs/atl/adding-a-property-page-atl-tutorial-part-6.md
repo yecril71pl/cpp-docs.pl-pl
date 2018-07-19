@@ -12,38 +12,38 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bf7f0383697fbc1e23e179936a2616d1d236b5f2
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 32b89b36318800ff35bc78fee35f094f75bdf36e
+ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32361593"
+ms.lasthandoff: 07/05/2018
+ms.locfileid: "37848694"
 ---
 # <a name="adding-a-property-page-atl-tutorial-part-6"></a>Dodawanie strony właściwości (ALT — Samouczek, część 6)
-Strony właściwości są zaimplementowane jako osobne obiekty COM, które pozwalają na udostępnionym, jeśli jest to wymagane. W tym kroku spowoduje wykonanie następujących zadań, które można dodać strony właściwości do kontrolki:  
+Strony właściwości są implementowane jako oddzielne obiekty COM, które zezwolić im na udostępnionych, jeśli jest to wymagane. W tym kroku wykonasz następujące zadania, aby dodać stronę właściwości do kontrolki:  
   
 -   Tworzenie zasobu strony właściwości  
   
--   Dodawanie kodu do tworzenia i zarządzania strony właściwości  
+-   Dodawanie kodu do tworzenia i zarządzania nimi na stronie właściwości  
   
 -   Dodawanie strony właściwości do kontrolki  
   
 ## <a name="creating-the-property-page-resource"></a>Tworzenie zasobu strony właściwości  
- Aby dodać strony właściwości formantu, użyj Kreatora dodawania klasy ATL.  
+ Aby dodać stronę właściwości do kontrolki, należy użyć Kreatora dodawania klasy ATL.  
   
-#### <a name="to-add-a-property-page"></a>Aby dodać strony właściwości  
+#### <a name="to-add-a-property-page"></a>Aby dodać stronę właściwości  
   
 1.  W Eksploratorze rozwiązań kliknij prawym przyciskiem myszy wielokąta.  
   
 2.  W menu skrótów kliknij **Dodaj**, a następnie kliknij przycisk **Dodaj klasę**.  
   
-3.  Wybierz z listy szablonów **stronę właściwości ATL** i kliknij przycisk **Dodaj**.  
+3.  Z listy szablonów wybierz **strony właściwości ATL** i kliknij przycisk **Dodaj**.  
   
-4.  Gdy pojawi się Kreator strony właściwości ATL, wprowadź `PolyProp` jako **krótki** nazwy.  
+4.  Gdy pojawi się Kreator strony właściwości ATL, wprowadź *PolyProp* jako **krótki** nazwy.  
   
-5.  Kliknij przycisk **ciągów** otworzyć **ciągów** strony, a następnie wprowadź **& wielokąta** jako **tytuł**.  
+5.  Kliknij przycisk **ciągi** otworzyć **ciągi** stronie, a następnie wprowadź **& wielokąta** jako **tytuł**.  
   
-     **Tytuł** właściwości strony jest ciągiem, który jest wyświetlany na karcie tej strony. **Doc string** jest opis, który używa ramka właściwości mają zostać umieszczone w etykietce wiersza lub narzędzia stanu. Należy pamiętać, że ramka standardowe właściwości obecnie nie korzysta z tych parametrów, dlatego pozostawić wartość domyślną. Nie będą generowane **plik Pomocy** w momencie, dlatego usunąć wpis w tym polu tekstowym.  
+     **Tytuł** właściwości strony jest ciąg, który pojawia się w karcie tej strony. **Ciąg dokumentu** znajduje się opis używającej ramka właściwości do umieszczenia w etykietce stan wiersza lub narzędzia. Pamiętaj, że ramka właściwości standardowych obecnie nie używać ten ciąg, dzięki czemu możesz pozostawić wartość domyślną. Nie wygeneruje **plik Pomocy** w chwili, więc Usuń wpis, w tym polu tekstowym.  
   
 6.  Kliknij przycisk **Zakończ**, i zostanie utworzony obiekt strony właściwości.  
   
@@ -55,17 +55,17 @@ Strony właściwości są zaimplementowane jako osobne obiekty COM, które pozwa
 |PolyProp.cpp|Zawiera plik PolyProp.h.|  
 |PolyProp.rgs|Skrypt rejestru, który rejestruje obiekt strony właściwości.|  
   
- Poniższy kod zmienia są również:  
+ Również są wprowadzane następujące zmiany kodu:  
   
--   Nowe strony właściwości jest dodawany do mapy wpis obiektu w Polygon.cpp.  
+-   Nowa strona właściwości jest dodawana do mapy zapisu obiektu w Polygon.cpp.  
   
--   `PolyProp` Klas są dodawane do pliku Polygon.idl.  
+-   `PolyProp` Klasy są dodawane do pliku Polygon.idl.  
   
--   Nowy plik skryptu rejestru PolyProp.rgs jest dodane do projektu zasobów.  
+-   Nowy plik skryptu rejestru PolyProp.rgs zostanie dodany do zasobu projektu.  
   
--   Szablon okno dialogowe zostanie dodany do zasobów projektu dla strony właściwości.  
+-   Szablonu okna dialogowego zostanie dodany do zasobu projektu dla strony właściwości.  
   
--   Ciągi właściwości określone przez użytkownika są dodawane do tabeli ciągów zasobów.  
+-   Ciągi właściwości, które można określić są dodawane do tabeli ciągów zasobów.  
   
  Teraz Dodaj pola, które mają być wyświetlane na stronie właściwości.  
   
@@ -73,80 +73,80 @@ Strony właściwości są zaimplementowane jako osobne obiekty COM, które pozwa
   
 1.  W Eksploratorze rozwiązań kliknij dwukrotnie plik zasobu Polygon.rc. Spowoduje to otwarcie widoku zasobów.  
   
-2.  W widokach rozwiń węzeł okna dialogowego, a następnie kliknij dwukrotnie ikonę IDD_POLYPROP. Należy pamiętać, że okno dialogowe, która jest wyświetlana pusta z wyjątkiem etykietę, która informuje, aby wstawić formanty w tym miejscu.  
+2.  W widoku zasobu rozwiń węzeł okna dialogowego, a następnie kliknij dwukrotnie IDD_POLYPROP. Należy pamiętać, że zostanie wyświetlone okno dialogowe jest pusta, z wyjątkiem etykietę, która informuje Wprowadź tutaj swoje formanty.  
   
-3.  Wybierz tej etykiety i zmień, aby odczytać `Sides:` , zmieniając **podpis** tekst w **właściwości** okna.  
+3.  Wybierz tej etykiety i zmień go ciągiem `Sides:` , zmieniając **podpis** tekstu w **właściwości** okna.  
   
-4.  Tak, aby zmieścił się rozmiar tekstu, należy zmienić rozmiar pola etykiety.  
+4.  Zmienić rozmiar pola etykiety, tak aby mieścił się rozmiar tekstu.  
   
-5.  Przeciągnij kontrolki edycji z przybornika z prawej strony etykiety.  
+5.  Przeciągnij formant edycji z przybornika z prawej strony etykiety.  
   
-6.  Na koniec zmień **identyfikator** formantu edycji `IDC_SIDES` przy użyciu okna właściwości.  
+6.  Na koniec zmień **identyfikator** kontrolki edycji `IDC_SIDES` w oknie właściwości.  
   
  Na tym kończy proces tworzenia zasobu strony właściwości.  
   
-## <a name="adding-code-to-create-and-manage-the-property-page"></a>Dodawanie kodu do tworzenia i zarządzania strony właściwości  
+## <a name="adding-code-to-create-and-manage-the-property-page"></a>Dodawanie kodu do tworzenia i zarządzania nimi na stronie właściwości  
  Teraz, po utworzeniu zasobu strony właściwości, należy napisać kod implementacji.  
   
- Najpierw włączyć `CPolyProp` klasy, aby ustawić liczbę stron w obiektu podczas **Zastosuj** przycisk jest naciśnięty.  
+ Najpierw należy włączyć `CPolyProp` klasy, aby ustawić liczbę boków obiektu podczas **Zastosuj** naciśnięciu przycisku.  
   
-#### <a name="to-modify-the-apply-function-to-set-the-number-of-sides"></a>Aby zmodyfikować funkcja Zastosuj, aby ustawić liczbę stron  
+#### <a name="to-modify-the-apply-function-to-set-the-number-of-sides"></a>Aby zmodyfikować funkcję Zastosuj, aby ustawić liczbę boków  
   
 1.  Zastąp `Apply` funkcji w PolyProp.h następującym kodem:  
   
      [!code-cpp[NVC_ATL_Windowing#58](../atl/codesnippet/cpp/adding-a-property-page-atl-tutorial-part-6_1.h)]  
   
- Strony właściwości może mieć więcej niż jednego klienta, dołączony w czasie, więc `Apply` funkcji pętli wokół i wywołuje `put_Sides` na każdym komputerze klienckim z wartością pobierane z pola edycji. Używasz [CComQIPtr](../atl/reference/ccomqiptr-class.md) klasy, która wykonuje `QueryInterface` dla każdego obiektu w celu uzyskania `IPolyCtl` interfejsu z **IUnknown** interfejsu (przechowywane w `m_ppUnk` tablicy).  
+ Strona właściwości może mieć więcej niż jeden klient dołączony w czasie, więc `Apply` funkcji w pętli wokół i wywołuje `put_Sides` na każdym komputerze klienckim z wartością pobierane pola edycji. Używasz [CComQIPtr](../atl/reference/ccomqiptr-class.md) klasy, która wykonuje `QueryInterface` dla każdego obiektu w celu uzyskania `IPolyCtl` interfejs z `IUnknown` interfejsu (przechowywane w `m_ppUnk` tablicy).  
   
- Kod sprawdza ustawienie `Sides` właściwości tygodniowo. Jeśli nie powiedzie się, kod wyświetla komunikat wyświetlanie szczegółów błędu z **IErrorInfo** interfejsu. Zazwyczaj kontener prosi obiekt **ISupportErrorInfo** interfejsu i wywołania `InterfaceSupportsErrorInfo` first, aby ustalić, czy obiekt obsługuje ustawienie informacje o błędzie. Można pominąć to zadanie.  
+ Kod sprawdza to ustawienie `Sides` właściwość tygodniowo. Jeśli nie powiedzie się, kod wyświetla okno komunikatu, wyświetlania szczegółów błędu z `IErrorInfo` interfejsu. Zazwyczaj kontener żąda obiektu dla `ISupportErrorInfo` interfejsu i wywołania `InterfaceSupportsErrorInfo` pierwszy, aby ustalić, czy obiekt obsługuje informacje o błędzie ustawienie. Można pominąć to zadanie.  
   
- [CComPtr](../atl/reference/ccomptr-class.md) pomaga przez automatycznie obsługi liczenie odwołań, dzięki czemu nie trzeba wywołać `Release` w interfejsie. `CComBSTR` pomaga przy `BSTR` przetwarzania, dzięki czemu nie trzeba wykonać ostatecznego `SysFreeString` wywołania. Możesz także użyć jednej z różnymi klasami Konwersja ciągu, można przekonwertować `BSTR` w razie potrzeby (jest to dlaczego `USES_CONVERSION` makro jest na początku funkcji).  
+ [CComPtr](../atl/reference/ccomptr-class.md) pomoże Ci przy automatycznie zliczanie odwołań, więc nie trzeba wywoływać `Release` w interfejsie. `CComBSTR` pomoże Ci przy użyciu przetwarzania BSTR, dzięki czemu nie trzeba wykonać końcowe `SysFreeString` wywołania. Możesz także użyć jednej z różnych klas konwersji ciągów, dzięki czemu można przekonwertować BSTR, jeśli to konieczne, (jest to dlaczego makro USES_CONVERSION jest na początku funkcji).  
   
- Należy również ustawić stronę właściwości dirty flagi z informacją, że **Zastosuj** przycisku powinno być włączone. Dzieje się tak, gdy użytkownik zmieni wartość w **strony** polu edycji.  
+ Należy również ustawić flagę zanieczyszczone na stronie właściwości, aby wskazać, że **Zastosuj** przycisku powinno być włączone. Ten problem wystąpi, gdy użytkownik zmieni wartość w **boki** pole edycji.  
   
 #### <a name="to-handle-the-apply-button"></a>Aby obsługa przycisku Zastosuj  
   
-1.  W widoku klas, kliknij prawym przyciskiem myszy CPolyProp, a następnie kliknij przycisk **właściwości** menu skrótów.  
+1.  W widoku klas kliknij prawym przyciskiem myszy CPolyProp, a następnie kliknij przycisk **właściwości** w menu skrótów.  
   
-2.  Kliknij w oknie właściwości **zdarzenia** ikony.  
+2.  W oknie dialogowym właściwości kliknij **zdarzenia** ikony.  
   
-3.  Rozwiń węzeł `IDC_SIDES` węzła listy zdarzeń.  
+3.  Rozwiń `IDC_SIDES` węzła listy zdarzeń.  
   
-4.  Wybierz `EN_CHANGE`, a z menu rozwijanego po prawej stronie, kliknij przycisk  **\<Dodaj > OnEnChangeSides**. `OnEnChangeSides` Deklaracja obsługi zostaną dodane do Polyprop.h i implementację programu obsługi, aby Polyprop.cpp.  
+4.  Wybierz `EN_CHANGE`, a z menu rozwijanego po prawej stronie kliknij pozycję  **\<Dodaj > OnEnChangeSides**. `OnEnChangeSides` Polyprop.h w celu wykonania procedury obsługi Polyprop.cpp zostanie dodana deklaracja procedury obsługi.  
   
- Następnie należy zmodyfikować program obsługi.  
+ Następnie zmodyfikujesz program obsługi.  
   
 #### <a name="to-modify-the-onenchangesides-method"></a>Aby zmodyfikować metodę OnEnChangeSides  
   
-1.  Dodaj następujący kod w Polyprop.cpp do `OnEnChangeSides` — metoda (usuwanie kodu, który Kreator umieszczono):  
+1.  Dodaj następujący kod w Polyprop.cpp do `OnEnChangeSides` — metoda (usuwanie wszelki kod, który Kreator ważną):  
   
      [!code-cpp[NVC_ATL_Windowing#59](../atl/codesnippet/cpp/adding-a-property-page-atl-tutorial-part-6_2.cpp)]  
   
- `OnEnChangeSides` będzie ona wywoływana podczas **WM_COMMAND** komunikat jest wysyłany z **EN_CHANGE** powiadomienia o `IDC_SIDES` formantu. `OnEnChangeSides` następnie wywołuje `SetDirty` i przekazuje `TRUE` można wskazać właściwości strony teraz jest zanieczyszczony i **Zastosuj** przycisku powinno być włączone.  
+ `OnEnChangeSides` wywoływane w sytuacji, gdy zostanie wysłana wiadomość WM_COMMAND z powiadomieniem EN_CHANGE dla `IDC_SIDES` kontroli. `OnEnChangeSides` następnie wywołuje `SetDirty` i przekazuje wartość TRUE, aby wskazać, na stronie właściwości teraz został zmieniony i **Zastosuj** przycisku powinno być włączone.  
   
 ## <a name="adding-the-property-page-to-the-control"></a>Dodawanie strony właściwości do kontrolki  
- Kreator dodawania klasy ATL i Kreator strony właściwości ATL nie dodawaj stronę właściwości do formantu można automatycznie, ponieważ może istnieć wiele formantów w projekcie. Należy dodać wpis do mapy właściwości formantu.  
+ Kreator dodawania klasy ATL i Kreator strony właściwości ATL nie dodawaj strony właściwości do kontrolki dla Ciebie automatycznie, ponieważ może istnieć wiele formantów w projekcie. Należy dodać wpis do map właściwości formantu.  
   
-#### <a name="to-add-the-property-page"></a>Aby dodać strony właściwości  
+#### <a name="to-add-the-property-page"></a>Aby dodać stronę właściwości  
   
 1.  Otwórz PolyCtl.h i Dodaj następujący wiersz do mapy właściwości:  
   
      [!code-cpp[NVC_ATL_Windowing#60](../atl/codesnippet/cpp/adding-a-property-page-atl-tutorial-part-6_3.h)]  
   
- Mapy właściwości formantu teraz wygląda następująco:  
+ Mapy właściwości formantów wygląda teraz następująco:  
   
  [!code-cpp[NVC_ATL_Windowing#61](../atl/codesnippet/cpp/adding-a-property-page-atl-tutorial-part-6_4.h)]  
   
- Można dodano `PROP_PAGE` makro o identyfikatorze CLSID strony właściwości, ale jeśli używasz `PROP_ENTRY` makra, co zostało pokazane, `Sides` wartość właściwości jest także zapisane po zapisaniu formantu.  
+ Można dodać makra PROP_PAGE o identyfikatorze CLSID strony właściwości, ale jeśli używasz makro PROP_ENTRY, jak pokazano, `Sides` wartość właściwości jest również zapisywana, gdy kontrolka jest zapisywany.  
   
- Trzy parametry do makra są opisu właściwości, identyfikator DISPID właściwości i identyfikatora CLSID strony właściwości, która ma właściwość z. Jest to przydatne, jeśli na przykład załadować formantu w języku Visual Basic i ustaw liczbę stron w czasie projektowania. Ponieważ jest zapisywany numer strony, gdy należy ponownie załadować projekt programu Visual Basic, liczba stron zostaną przywrócone.  
+ Trzy parametry do makra są opisu właściwości, DISPID, właściwości i CLSID strony właściwości, która ma właściwość na nim. Jest to przydatne, jeśli na przykład załadować formantu w języku Visual Basic i ustaw liczbę stron w czasie projektowania. Ponieważ liczbę boków jest zapisywany, gdy użytkownik ponownie Załaduj projekt języka Visual Basic, zostanie przywrócony liczbę boków.  
   
 ## <a name="building-and-testing-the-control"></a>Tworzenie i testowanie formantu  
- Teraz skompilować tego formantu i wstawić je do kontener testu formantu ActiveX. W kontenerze testowym na **Edytuj** menu, kliknij przycisk **obiektu klasy PolyCtl**. Zostanie wyświetlona strona właściwości; Kliknij przycisk **wielokąta** kartę.  
+ Teraz tworzenie tej kontrolki i wstawianie kontener testu kontrolki ActiveX. W kontenerze testów na **Edytuj** menu, kliknij przycisk **obiektu klasy PolyCtl**. Zostanie wyświetlona strona właściwości; Kliknij przycisk **wielokąta** kartę.  
   
- **Zastosuj** przycisk początkowo jest wyłączony. Rozpocznij wprowadzanie wartości w **strony** pole i **Zastosuj** przycisk będzie stają się aktywny. Po wprowadzeniu wszystkich wartość, kliknij przycisk **Zastosuj** przycisku. Zmiany wyświetlania kontrolki i **Zastosuj** przycisk ponownie jest wyłączony. Spróbuj wprowadzić wartość jest nieprawidłowa. Zostanie wyświetlone pole komunikat zawierający opis błędu, który ustawiony z `put_Sides` funkcji.  
+ **Zastosuj** przycisk jest początkowo wyłączone. Zacznij wpisywać ciąg wartości w **boki** pole i **Zastosuj** uaktywni przycisku. Po wprowadzeniu wszystkich wartości, kliknij przycisk **Zastosuj** przycisku. Zmiany wyświetlania formantów i **Zastosuj** przycisk ponownie jest wyłączony. Spróbuj wprowadzić nieprawidłową wartość. Pojawi się okno komunikatu, zawierający opis błędu, który ustawiony z `put_Sides` funkcji.  
   
- Następnie należy umieścić formantu na stronie sieci Web.  
+ Następnie należy umieścić swój formant na stronie sieci Web.  
   
  [Wróć do kroku 5](../atl/adding-an-event-atl-tutorial-part-5.md) &#124; [do kroku 7](../atl/putting-the-control-on-a-web-page-atl-tutorial-part-7.md)  
   

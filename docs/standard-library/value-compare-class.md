@@ -16,16 +16,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 594f3aaa45638ff2ab5d184a771070d87dbeb0bb
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 3f46153400744b4a6d0350b97fa7158ea9f69c34
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33856586"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38957111"
 ---
 # <a name="valuecompare-class"></a>value_compare — Klasa
 
-Udostępnia obiekt funkcji, który można porównać elementów hash_map porównując wartości ich kluczy, aby określić ich kolejność względne w hash_map.
+Dostarcza obiekt funkcji, która może porównać elementów hash_map przez porównanie wartości ich klucze, aby określić ich względną kolejność w hash_map.
 
 ## <a name="syntax"></a>Składnia
 
@@ -49,19 +49,19 @@ protected:
 
 ## <a name="remarks"></a>Uwagi
 
-Kryteriów porównania dostarczonych przez value_compare między **value_types** z całego zawartym hash_map powstaniu porównanie między kluczami elementów odpowiednich przez konstrukcji klasy pomocniczej. Operator funkcji Członkowskich używa obiektu **kompozycji** typu `key_compare` przechowywane w obiekcie funkcji dostarczonych przez value_compare do porównania składniki klucza sortowania z dwóch elementów.
+Kryteria porównania, dostarczone przez value_compare między `value_types` całego elementów zawartych hash_map wywołane z porównania między kluczami elementów odpowiednich wynikające z konstrukcji klasy pomocniczej. Operator funkcji elementów członkowskich używa obiektu `comp` typu `key_compare` przechowywanych w obiekcie funkcji dostarczonych przez value_compare — Aby porównać składniki klucz sortowania w dwóch elementów.
 
-Hash_sets i hash_multisets, będące proste kontenerów, których wartości klucza są takie same jak wartości elementów jest odpowiednikiem value_compare `key_compare`; hash_maps i hash_multimaps nie mają, ponieważ wartość typu `pair` elementy nie jest taka sama jak wartość klucza elementu.
+Hash_sets i hash_multisets, które są proste kontenery, których wartości klucza są identyczne do wartości elementów, jest odpowiednikiem value_compare `key_compare`; hash_maps i hash_multimaps nie są one, ponieważ wartość typu `pair` elementy nie jest taka sama jak wartość klucza elementu.
 
 ## <a name="example"></a>Przykład
 
-Zobacz przykład [hash_map::value_comp](../standard-library/hash-map-class.md#value_comp) przykład sposobu deklarowanie i użycie value_compare.
+Zobacz przykład [hash_map::value_comp](../standard-library/hash-map-class.md#value_comp) przykładowy sposób deklarowania i użyj value_compare —.
 
 ## <a name="requirements"></a>Wymagania
 
 **Nagłówek:** \<hash_map >
 
-**Namespace:** stdext —
+**Namespace:** stdext
 
 ## <a name="see-also"></a>Zobacz także
 

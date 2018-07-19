@@ -16,16 +16,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: eab07f19f9d5025eba1ffe82c7e23066683b6267
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 1de239e408adf4f66e7868ce9b91d7da574fffde
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33852982"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38958038"
 ---
 # <a name="messagesbyname-class"></a>messages_byname — Klasa
 
-Klasy pochodne szablonu opisuje obiekt, który może służyć jako zestaw reguł komunikatów z danego ustawienia regionalne, włączanie pobieranie zlokalizowanych komunikatów.
+Klasa pochodna szablonu opisująca obiekt, który może służyć jako zestaw reguł komunikatów danych ustawień regionalnych, umożliwiając pobieranie zlokalizowanych komunikatów.
 
 ## <a name="syntax"></a>Składnia
 
@@ -49,19 +49,19 @@ protected:
 
 ### <a name="parameters"></a>Parametry
 
-`_Locname` Nazwane ustawień regionalnych.
+*_Locname* o nazwie ustawień regionalnych.
 
-`_Refs` Liczba początkowa odwołania.
+*_Refs* licznik odwołań początkowej.
 
 ## <a name="remarks"></a>Uwagi
 
-Jego zachowanie jest określany przez nazwany ustawień regionalnych `_Locname`. Każdy Konstruktor inicjuje jego obiektu podstawowego z [wiadomości](../standard-library/messages-class.md#messages)\<CharType > ( `_Refs`).
+Jego zachowanie jest określana przez nazwany ustawień regionalnych *_Locname*. Każdy Konstruktor inicjuje jego podstawowego obiektu z [wiadomości](../standard-library/messages-class.md#messages)\<CharType > ( `_Refs`).
 
 ## <a name="requirements"></a>Wymagania
 
 **Nagłówek:** \<ustawień regionalnych >
 
-**Namespace:** Standard
+**Namespace:** standardowe
 
 ## <a name="see-also"></a>Zobacz także
 

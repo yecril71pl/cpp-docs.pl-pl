@@ -17,35 +17,35 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b49db13f4067ee595896ace808213a11256f7ff7
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: e2e8e15a19cfa7069e7dbaf8d9e9af8bc3dd6f0b
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32356469"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38957327"
 ---
 # <a name="adding-an-atl-active-server-page-component"></a>Dodawanie składnika strony Active Server ATL
-Aby dodać obiekt Active Template Library (ATL) do projektu, projektu musi być utworzony jako aplikacji ATL COM lub aplikacji z obsługą ATL MFC. Można użyć [Kreator projektu ATL](../../atl/reference/atl-project-wizard.md) do tworzenia aplikacji ATL, można wybrać **Dodaj obsługę ATL do MFC** z [Dodaj klasę — okno dialogowe](../../ide/add-class-dialog-box.md) okno dialogowe, lub można [Dodaj obiekt ATL do aplikacji MFC](../../mfc/reference/adding-atl-support-to-your-mfc-project.md) ATL Obsługa aplikacji MFC.  
+Aby dodać obiekt Active Template Library (ATL) do projektu, projekt musi być utworzony jako aplikacji ATL COM lub aplikacji MFC, który zawiera obsługę ATL. Możesz użyć [Kreator projektów ATL](../../atl/reference/atl-project-wizard.md) do tworzenia aplikacji biblioteki ATL, można wybrać **Dodawanie obsługi ATL do MFC** z [klasy okno dialogowe Dodawanie](../../ide/add-class-dialog-box.md) okno dialogowe, możesz także [Dodaj obiekt ATL do Twojej aplikacji MFC](../../mfc/reference/adding-atl-support-to-your-mfc-project.md) do zaimplementowania Obsługa ALT dla aplikacji MFC.  
   
- Active Server Pages składniki są częścią architektury Internetowe usługi informacyjne, która zapewnia następujące funkcje zaawansowane Projektowanie sieci Web:  
+ Active Server Pages składniki są częścią architekturę Internet Information Services, która oferuje następujące funkcje zaawansowane programowanie sieci Web:  
   
--   Składniki ASP można osadzić do stron HTML do tworzenia dynamicznych, niezależnej od przeglądarki zawartości.  
+-   Możesz osadzić składniki ASP do stron HTML do tworzenia zawartości dynamicznej, niezależnie od przeglądarki.  
   
--   Strony ASP służy do zapewniania łączności opartych na standardach bazy danych.  
+-   Strony ASP służy do zapewniania łączności oparte na standardach bazy danych.  
   
--   Można użyć funkcji obsługi błędów ASP dla aplikacji sieci Web.  
+-   Dla aplikacji sieci Web, można użyć możliwości obsługi błędów ASP.  
   
 ### <a name="to-add-an-atl-active-server-pages-component-to-your-project"></a>Aby dodać składnik ATL strony ASP do projektu  
   
-1.  W jednym **Eksploratora rozwiązań** lub [widoku klasy](http://msdn.microsoft.com/en-us/8d7430a9-3e33-454c-a9e1-a85e3d2db925), kliknij prawym przyciskiem myszy nazwę projektu, do której chcesz dodać składnik ATL Active Server Pages.  
+1.  W **Eksploratora rozwiązań** kliknij prawym przyciskiem myszy nazwę projektu, do którego chcesz dodać składnik ATL strony ASP.  
   
 2.  W menu skrótów kliknij **Dodaj**, a następnie kliknij przycisk **Dodaj klasę**.  
   
-3.  W [Dodaj klasę](../../ide/add-class-dialog-box.md) kliknij okno dialogowe, w okienku szablonów **składników stron serwera Active ATL**, a następnie kliknij przycisk **Otwórz** do wyświetlenia [aktywnego serwera ATL Kreator składników stron ASP](../../atl/reference/atl-active-server-page-component-wizard.md).  
+3.  W [Dodaj klasę](../../ide/add-class-dialog-box.md) kliknij w okienku szablonów, w oknie dialogowym **składnik strony Active Server ATL**, a następnie kliknij przycisk **Otwórz** do wyświetlenia [ATL ASP Kreator składników stron](../../atl/reference/atl-active-server-page-component-wizard.md).  
   
 ## <a name="see-also"></a>Zobacz też  
  [Dodawanie klasy](../../ide/adding-a-class-visual-cpp.md)   
- [Dodawanie nowego interfejsu w Projekt ATL](../../atl/reference/adding-a-new-interface-in-an-atl-project.md)   
+ [Dodawanie nowego interfejsu w projekcie ATL](../../atl/reference/adding-a-new-interface-in-an-atl-project.md)   
  [Dodawanie punktów połączenia do obiektu](../../atl/adding-connection-points-to-an-object.md)   
  [Dodawanie metody](../../ide/adding-a-method-visual-cpp.md)   
  [Klasy MFC](../../mfc/reference/adding-an-mfc-class.md)   

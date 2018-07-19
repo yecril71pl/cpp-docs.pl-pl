@@ -1,5 +1,5 @@
 ---
-title: Dodawanie prosty obiekt ATL | Dokumentacja firmy Microsoft
+title: Dodawanie prostego obiektu ATL | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,33 +18,33 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 229866620826581214d5fb0395fa2bdf4f0c8574
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: cedb2da5ede01f4efee81ed4336d8a1ad4178997
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32357059"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38956196"
 ---
-# <a name="adding-an-atl-simple-object"></a>Dodawanie prosty obiekt ATL
-Aby dodać obiekt ATL (biblioteki Active Template Library) do projektu, projektu musi być utworzony jako aplikacji ATL lub aplikacji z obsługą ATL MFC. Można użyć [Kreator projektu ATL](../../atl/reference/atl-project-wizard.md) Aby utworzyć aplikację ATL lub [Dodaj obiekt ATL do aplikacji MFC](../../mfc/reference/adding-atl-support-to-your-mfc-project.md) ATL Obsługa aplikacji MFC.  
+# <a name="adding-an-atl-simple-object"></a>Dodawanie prostego obiektu ATL
+Aby dodać obiekt ATL (biblioteki Active Template Library) do projektu, projekt musi być utworzony jako aplikacji ATL lub aplikacji MFC, który zawiera obsługę ATL. Możesz użyć [Kreator projektów ATL](../../atl/reference/atl-project-wizard.md) do tworzenia aplikacji biblioteki ATL, lub [Dodaj obiekt ATL do Twojej aplikacji MFC](../../mfc/reference/adding-atl-support-to-your-mfc-project.md) do zaimplementowania Obsługa ALT dla aplikacji MFC.  
   
- Interfejsy modelu COM można zdefiniować nowego obiektu ATL podczas najpierw ją utworzyć lub dodać je później za pomocą [implementuj interfejs](../../ide/implement-interface-wizard.md) polecenia menu skrótów widoku klasy.  
+ Można zdefiniować interfejsów COM dla nowego obiektu ATL, kiedy należy najpierw utworzyć lub je dodać później przy użyciu [implementuj interfejs](../../ide/implement-interface-wizard.md) polecenia z menu skrótów w widoku klas.  
   
 ### <a name="to-add-an-atl-simple-object-to-your-atl-com-project"></a>Aby dodać prosty obiekt ATL do projektu ATL COM  
   
-1.  W jednym **Eksploratora rozwiązań** lub [widoku klasy](http://msdn.microsoft.com/en-us/8d7430a9-3e33-454c-a9e1-a85e3d2db925), kliknij prawym przyciskiem myszy nazwę projektu, do której chcesz dodać prosty obiekt ATL.  
+1.  W obu **Eksploratora rozwiązań** lub [Widok klas](/visualstudio/ide/viewing-the-structure-of-code), kliknij prawym przyciskiem myszy nazwę projektu, do którego chcesz dodać prosty obiekt ATL.  
   
 2.  W menu skrótów kliknij **Dodaj**, a następnie kliknij przycisk **Dodaj klasę**.  
   
-3.  W [Dodaj klasę](../../ide/add-class-dialog-box.md) kliknij okno dialogowe, w okienku szablonów **prosty obiekt ATL**, a następnie kliknij przycisk **Otwórz** do wyświetlenia [prosty kreator obiektów ATL](../../atl/reference/atl-simple-object-wizard.md).  
+3.  W [Dodaj klasę](../../ide/add-class-dialog-box.md) kliknij w okienku szablonów, w oknie dialogowym **prosty obiekt ATL**, a następnie kliknij przycisk **Otwórz** do wyświetlenia [proste Kreator obiektówATL](../../atl/reference/atl-simple-object-wizard.md).  
   
-4.  Ustaw dodatkowe opcje projektu na [opcje](../../atl/reference/options-atl-simple-object-wizard.md) prosty obiekt ATL kreatora.  
+4.  Ustaw dodatkowe opcje projektu na [opcje](../../atl/reference/options-atl-simple-object-wizard.md) strony Kreator prostych obiektów ATL.  
   
 5.  Kliknij przycisk **Zakończ** można dodać obiektu do projektu.  
   
 ## <a name="see-also"></a>Zobacz też  
  [Dodawanie klasy](../../ide/adding-a-class-visual-cpp.md)   
- [Dodawanie nowego interfejsu w Projekt ATL](../../atl/reference/adding-a-new-interface-in-an-atl-project.md)   
+ [Dodawanie nowego interfejsu w projekcie ATL](../../atl/reference/adding-a-new-interface-in-an-atl-project.md)   
  [Dodawanie punktów połączenia do obiektu](../../atl/adding-connection-points-to-an-object.md)   
  [Dodawanie metody](../../ide/adding-a-method-visual-cpp.md)   
  [Klasy MFC](../../mfc/reference/adding-an-mfc-class.md)   

@@ -14,88 +14,88 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5aa8bf42d255cfb582989d1376aa3479559e9309
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 89576f96c50e62220e56050834b141e1f2ac6e08
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32361332"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38955387"
 ---
 # <a name="collection-classes"></a>Klasy kolekcji
-Następujące klasy zapewniają obsługę dla tablic, list, map, a także metody cech przy porównań i dostępu do elementu.  
+Następujące klasy zapewniają obsługę tablic, list, mapy, a także metody cech przy porównania i dostęp do elementu.  
   
--   [CAtlArray](../atl/reference/catlarray-class.md) ta klasa implementuje tablicy obiektów.  
+-   [CAtlArray](../atl/reference/catlarray-class.md) ta klasa implementuje obiektu array.  
   
 -   [CAtlList](../atl/reference/catllist-class.md) ta klasa dostarcza metody do tworzenia i zarządzania obiekt listy.  
   
 -   [CAtlMap](../atl/reference/catlmap-class.md) ta klasa dostarcza metody do tworzenia i zarządzania obiektu mapy.  
   
--   [CAutoPtrArray](../atl/reference/cautoptrarray-class.md) ta klasa dostarcza metody przydatne podczas konstruowania tablicę wskaźniki inteligentne.  
+-   [CAutoPtrArray](../atl/reference/cautoptrarray-class.md) ta klasa dostarcza metody, które przydatne przy konstruowaniu tablicy inteligentnych wskaźników.  
   
--   [CAutoPtrElementTraits](../atl/reference/cautoptrelementtraits-class.md) ta klasa udostępnia metody statyczne funkcje i definicje typów przydatne podczas tworzenia kolekcji wskaźniki inteligentne.  
+-   [CAutoPtrElementTraits](../atl/reference/cautoptrelementtraits-class.md) ta klasa dostarcza metody, funkcje statyczne i definicje typów przydatne podczas tworzenia kolekcji inteligentnych wskaźników.  
   
--   [CAutoPtrList](../atl/reference/cautoptrlist-class.md) ta klasa dostarcza metody przydatne podczas konstruowania listy wskaźniki inteligentne.  
+-   [CAutoPtrList](../atl/reference/cautoptrlist-class.md) ta klasa dostarcza metody, które przydatne podczas tworzenia listy inteligentne wskaźniki.  
   
--   [CAutoVectorPtrElementTraits](../atl/reference/cautovectorptrelementtraits-class.md) ta klasa udostępnia metody statyczne funkcje i definicje typów przydatne podczas tworzenia kolekcji wskaźniki inteligentne przy użyciu wektorów new i delete — operatory.  
+-   [CAutoVectorPtrElementTraits](../atl/reference/cautovectorptrelementtraits-class.md) ta klasa dostarcza metody, funkcje statyczne i definicje typów przydatne podczas tworzenia kolekcji inteligentnych wskaźników przy użyciu nowego vector i delete — operatory.  
   
--   [CComQIPtrElementTraits](../atl/reference/ccomqiptrelementtraits-class.md) ta klasa udostępnia metody statyczne funkcje i definicje typów przydatne podczas tworzenia kolekcji COM interfejsu wskaźników.  
+-   [CComQIPtrElementTraits](../atl/reference/ccomqiptrelementtraits-class.md) ta klasa dostarcza metody, funkcje statyczne i przydatne podczas tworzenia kolekcji COM definicje typów interfejsu wskaźników.  
   
--   [CComSafeArray](../atl/reference/ccomsafearray-class.md) ta klasa jest otoki dla [— typ danych parametru SAFEARRAY](http://msdn.microsoft.com/en-us/9ec8025b-4763-4526-ab45-390c5d8b3b1e) struktury.  
+-   [CComSafeArray](../atl/reference/ccomsafearray-class.md) tej klasy jest otoką [SAFEARRAY — typ danych](/previous-versions/windows/desktop/api/oaidl/ns-oaidl-tagsafearray) struktury.  
   
--   [CComSafeArrayBound](../atl/reference/ccomsafearraybound-class.md) ta klasa jest otoki dla [SAFEARRAYBOUND](http://msdn.microsoft.com/en-us/303a9bdb-71d6-4f14-8747-84cf84936c6d) struktury.  
+-   [CComSafeArrayBound](../atl/reference/ccomsafearraybound-class.md) tej klasy jest otoką [SAFEARRAYBOUND](/previous-versions/windows/desktop/api/oaidl/ns-oaidl-tagsafearraybound) struktury.  
   
--   [CComUnkArray](../atl/reference/ccomunkarray-class.md) tej klasy są przechowywane **IUnknown** wskaźniki i jest przeznaczony do użycia jako parametr [IConnectionPointImpl](../atl/reference/iconnectionpointimpl-class.md) klasy szablonu.  
+-   [CComUnkArray](../atl/reference/ccomunkarray-class.md) tej klasy przechowuje **IUnknown** wskaźników i jest przeznaczony do użycia jako parametr do [IConnectionPointImpl](../atl/reference/iconnectionpointimpl-class.md) klasy szablonu.  
   
--   [CDefaultCharTraits](../atl/reference/cdefaultchartraits-class.md) ta klasa zawiera dwie funkcje statyczne konwersję znaków między wielkie i małe litery.  
+-   [CDefaultCharTraits](../atl/reference/cdefaultchartraits-class.md) ta klasa udostępnia dwie funkcje statyczne konwersję znaków między wielkimi i małymi.  
   
 -   [CDefaultCompareTraits](../atl/reference/cdefaultcomparetraits-class.md) ta klasa udostępnia domyślny element porównanie funkcji.  
   
--   [CDefaultElementTraits](../atl/reference/cdefaultelementtraits-class.md) ta klasa zawiera domyślnych metod i funkcji do klasy kolekcji.  
+-   [CDefaultElementTraits](../atl/reference/cdefaultelementtraits-class.md) ta klasa udostępnia domyślne metody i funkcje dla klas kolekcji.  
   
 -   [CDefaultHashTraits](../atl/reference/cdefaulthashtraits-class.md) ta klasa udostępnia funkcję statyczną do obliczania wartości skrótu.  
   
--   [CElementTraits](../atl/reference/celementtraits-class.md) ta klasa jest używana przez klasy kolekcji do zapewnienia metod i funkcje przenoszenie, kopiowanie porównania i tworzenia skrótów operacji.  
+-   [CElementTraits](../atl/reference/celementtraits-class.md) ta klasa jest używana przez klasy kolekcji, zapewniają metody i funkcje dla przenoszenie, kopiowanie, porównanie i wyznaczania wartości skrótu operacji.  
   
--   [CElementTraitsBase](../atl/reference/celementtraitsbase-class.md) ta klasa udostępnia domyślny kopiowanie i przenoszenie metody do klasy kolekcji.  
+-   [CElementTraitsBase](../atl/reference/celementtraitsbase-class.md) ta klasa udostępnia domyślną, kopiowanie i przenoszenie metody do klasy kolekcji.  
   
--   [CHeapPtrElementTraits](../atl/reference/cheapptrelementtraits-class.md) ta klasa udostępnia metody statyczne funkcje i definicje typów przydatne podczas tworzenia kolekcji wskaźniki stosu.  
+-   [CHeapPtrElementTraits](../atl/reference/cheapptrelementtraits-class.md) ta klasa dostarcza metody, funkcje statyczne i definicje typów przydatne podczas tworzenia kolekcji wskaźniki stosu.  
   
--   [CHeapPtrList](../atl/reference/cheapptrlist-class.md) ta klasa dostarcza metody przydatne podczas konstruowania listy wskaźniki stosu.  
+-   [CHeapPtrList](../atl/reference/cheapptrlist-class.md) ta klasa dostarcza metody, które przydatne podczas tworzenia listy wskaźników sterty.  
   
--   [CInterfaceArray](../atl/reference/cinterfacearray-class.md) ta klasa dostarcza metody przydatne podczas tworzenia tablicy wskaźników interfejsów COM.  
+-   [CInterfaceArray](../atl/reference/cinterfacearray-class.md) ta klasa dostarcza metody, które przydatne przy konstruowaniu tablicy wskaźników interfejsu COM.  
   
--   [CInterfaceList](../atl/reference/cinterfacelist-class.md) ta klasa dostarcza metody przydatne podczas konstruowania listy wskaźników interfejsów COM.  
+-   [CInterfaceList](../atl/reference/cinterfacelist-class.md) ta klasa dostarcza metody, które przydatne podczas tworzenia listy wskaźniki interfejsu COM.  
   
--   [CPrimitiveElementTraits](../atl/reference/cprimitiveelementtraits-class.md) ta klasa dostarcza metody domyślnej i funkcje do klasy kolekcji składa się z następujących typów danych pierwotnych.  
+-   [CPrimitiveElementTraits](../atl/reference/cprimitiveelementtraits-class.md) ta klasa dostarcza metody domyślne i funkcji dla klasy kolekcji składa się z pierwotnych typów danych.  
   
--   [CRBMap](../atl/reference/crbmap-class.md) ta klasa reprezentuje struktury mapowanie za pomocą czarnego Red drzewa binarnego.  
+-   [CRBMap](../atl/reference/crbmap-class.md) ta klasa reprezentuje strukturę mapowania przy użyciu drzewa binarnego Red czarny.  
   
--   [CRBMultiMap](../atl/reference/crbmultimap-class.md) ta klasa reprezentuje strukturę mapowania, która umożliwia każdy klucz ma zostać skojarzony z więcej niż jedną wartość, przy użyciu drzewa binarnego czarne czerwony.  
+-   [CRBMultiMap](../atl/reference/crbmultimap-class.md) ta klasa reprezentuje strukturę mapowania, która zezwala na każdy klucz ma zostać skojarzony z więcej niż jedną wartość, przy użyciu drzewa binarnego Red czarny.  
   
--   [CRBTree](../atl/reference/crbtree-class.md) ta klasa dostarcza metody do tworzenia i przy użyciu drzewa czarne czerwony.  
+-   [CRBTree](../atl/reference/crbtree-class.md) ta klasa dostarcza metody do tworzenia i przy użyciu drzewa Red czarny.  
   
--   [CSimpleArray](../atl/reference/csimplearray-class.md) ta klasa dostarcza metody do zarządzania proste tablicy.  
+-   [CSimpleArray](../atl/reference/csimplearray-class.md) ta klasa dostarcza metody do zarządzania macierzą proste.  
   
 -   [CSimpleArrayEqualHelper](../atl/reference/csimplearrayequalhelper-class.md) ta klasa jest pomocnika dla [CSimpleArray](../atl/reference/csimplearray-class.md) klasy.  
   
 -   [CSimpleArrayEqualHelperFalse](../atl/reference/csimplearrayequalhelperfalse-class.md) ta klasa jest pomocnika dla [CSimpleArray](../atl/reference/csimplearray-class.md) klasy.  
   
--   [CSimpleMap](../atl/reference/csimplemap-class.md) ta klasa obsługuje tablicy mapowania proste.  
+-   [CSimpleMap](../atl/reference/csimplemap-class.md) ta klasa udostępnia pomocy technicznej dla tablicy mapowania proste.  
   
 -   [CSimpleMapEqualHelper](../atl/reference/csimplemapequalhelper-class.md) ta klasa jest pomocnika dla [CSimpleMap](../atl/reference/csimplemap-class.md) klasy.  
   
 -   [CSimpleMapEqualHelperFalse](../atl/reference/csimplemapequalhelperfalse-class.md) ta klasa jest pomocnika dla [CSimpleMap](../atl/reference/csimplemap-class.md) klasy.  
   
--   [CStringElementTraits](../atl/reference/cstringelementtraits-class.md) ta klasa udostępnia funkcje statyczne używane przez klasy kolekcji przechowywania `CString` obiektów.  
+-   [CStringElementTraits](../atl/reference/cstringelementtraits-class.md) ta klasa udostępnia statyczne funkcje używane przez klasy kolekcji przechowywania `CString` obiektów.  
   
--   [CStringElementTraitsI](../atl/reference/cstringelementtraitsi-class.md) ta klasa udostępnia statyczne funkcje związane z przechowywane w obiektach klasy kolekcji ciągów. Jest on podobny do [CStringElementTraits](../atl/reference/cstringelementtraits-class.md), ale wykonuje porównania bez uwzględniania wielkości liter.  
+-   [CStringElementTraitsI](../atl/reference/cstringelementtraitsi-class.md) ta klasa udostępnia statyczne funkcje związane z przechowywanych w obiektach klasy kolekcji ciągów. Jest on podobny do [CStringElementTraits](../atl/reference/cstringelementtraits-class.md), ale wykonuje porównania bez uwzględniania wielkości liter.  
   
--   [CStringRefElementTraits](../atl/reference/cstringrefelementtraits-class.md) ta klasa udostępnia statyczne funkcje związane z przechowywane w obiektach klasy kolekcji ciągów. Obiekty ciągu są traktowane jako odwołania.  
+-   [CStringRefElementTraits](../atl/reference/cstringrefelementtraits-class.md) ta klasa udostępnia statyczne funkcje związane z przechowywanych w obiektach klasy kolekcji ciągów. Obiektów w postaci ciągów są traktowane jako odwołania.  
   
 ## <a name="related-articles"></a>Powiązane artykuły  
  [Kolekcje klas ATL](../atl/atl-collection-classes.md)  
   
 ## <a name="see-also"></a>Zobacz też  
- [Przegląd klas](../atl/atl-class-overview.md)   
+ [Klasa — Przegląd](../atl/atl-class-overview.md)   
  [Klasy kolekcji](../atl/atl-collection-classes.md)
 

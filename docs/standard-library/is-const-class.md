@@ -17,16 +17,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e5fbb8ee6852e21912050ae7af9ed291f8ecb104
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 085a9c3926506ce7886b48465bdd2618541d4feb
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33843915"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38956088"
 ---
 # <a name="isconst-class"></a>is_const — Klasa
 
-Testy, jeśli typ jest wartością stałą.
+Sprawdza, czy typ jest wartością stałą.
 
 ## <a name="syntax"></a>Składnia
 
@@ -37,11 +37,11 @@ struct is_const;
 
 ### <a name="parameters"></a>Parametry
 
-`Ty` Typ do zapytania.
+*Ty* typ do zapytania.
 
 ## <a name="remarks"></a>Uwagi
 
-Wystąpienie typu predykatu posiada wartość true, jeśli `Ty` jest `const-qualified`.
+Wystąpienie typu predykatu ma wartość true, jeśli *Ty* jest `const-qualified`.
 
 ## <a name="example"></a>Przykład
 
@@ -83,7 +83,7 @@ is_const<const int> == true
 
 **Nagłówek:** \<type_traits >
 
-**Namespace:** Standard
+**Namespace:** standardowe
 
 ## <a name="see-also"></a>Zobacz także
 

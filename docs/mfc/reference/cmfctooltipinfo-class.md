@@ -42,15 +42,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fb5cb4020b851f3522842951030c8155ee68516f
-ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
+ms.openlocfilehash: babc490d63f6c7e1692877e53b4971fc85ec4c24
+ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/27/2018
-ms.locfileid: "37037548"
+ms.lasthandoff: 07/05/2018
+ms.locfileid: "37850894"
 ---
 # <a name="cmfctooltipinfo-class"></a>Klasa CMFCToolTipInfo
-Przechowuje informacje o wygląd etykietek narzędzi.  
+Przechowuje informacje na temat wyglądu etykietek narzędzi.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -70,25 +70,25 @@ class CMFCToolTipInfo
   
 |Nazwa|Opis|  
 |----------|-----------------|  
-|[CMFCToolTipInfo::m_bBalloonTooltip](#m_bballoontooltip)|Wartość logiczna wskazująca, czy element tooltip ma wygląd dymka.|  
+|[CMFCToolTipInfo::m_bBalloonTooltip](#m_bballoontooltip)|Wartość logiczna wskazująca, czy etykietka narzędzia wygląd dymek.|  
 |[CMFCToolTipInfo::m_bBoldLabel](#m_bboldlabel)|Wartość logiczna wskazująca, czy etykietka narzędzia etykiety są wyświetlane pogrubioną czcionką.|  
 |[CMFCToolTipInfo::m_bDrawDescription](#m_bdrawdescription)|Wartość logiczna wskazująca, czy etykietka narzędzia zawiera opis.|  
-|[CMFCToolTipInfo::m_bDrawIcon](#m_bdrawicon)|Wartość logiczna wskazująca, czy element tooltip jest wyświetlana ikona.|  
-|[CMFCToolTipInfo::m_bDrawSeparator](#m_bdrawseparator)|Wartość logiczna wskazująca, czy między etykietka narzędzia etykiety i opis tooltip jest wyświetlany separator.|  
-|[CMFCToolTipInfo::m_bRoundedCorners](#m_broundedcorners)|Wartość logiczna wskazująca, czy element tooltip ma zaokrąglone narożniki.|  
-|[CMFCToolTipInfo::m_bVislManagerTheme](#m_bvislmanagertheme)|Zmienną wartości logicznej, która wskazuje, czy wygląd elementu tooltip powinien być kontrolowany przez Menedżera visual (zobacz [CMFCVisualManager klasy](../../mfc/reference/cmfcvisualmanager-class.md)).|  
-|[CMFCToolTipInfo::m_clrBorder](#m_clrborder)|Kolor obramowania etykietka narzędzia.|  
-|[CMFCToolTipInfo::m_clrFill](#m_clrfill)|Kolor tła etykietka narzędzia.|  
+|[CMFCToolTipInfo::m_bDrawIcon](#m_bdrawicon)|Wartość logiczna wskazująca, czy etykietka narzędzia jest wyświetlana ikona.|  
+|[CMFCToolTipInfo::m_bDrawSeparator](#m_bdrawseparator)|Wartość logiczna wskazująca, czy między etykietki narzędzia etykiety i opis etykietki narzędzia wyświetlana jest separatorem.|  
+|[CMFCToolTipInfo::m_bRoundedCorners](#m_broundedcorners)|Wartość logiczna wskazująca, czy etykietki narzędzia ma zaokrąglone rogi.|  
+|[CMFCToolTipInfo::m_bVislManagerTheme](#m_bvislmanagertheme)|Zmiennej typu Boolean wskazującą, czy wygląd etykietki narzędzia powinny być kontrolowane przez Menedżer wizualnego (zobacz [klasa CMFCVisualManager](../../mfc/reference/cmfcvisualmanager-class.md)).|  
+|[CMFCToolTipInfo::m_clrBorder](#m_clrborder)|Kolor obramowania etykietki narzędzia.|  
+|[CMFCToolTipInfo::m_clrFill](#m_clrfill)|Kolor tła etykietki narzędzia.|  
 |[CMFCToolTipInfo::m_clrFillGradient](#m_clrfillgradient)|Kolor wypełnienia gradientowego w etykietce narzędzia.|  
 |[CMFCToolTipInfo::m_clrText](#m_clrtext)|Kolor tekstu w etykietce narzędzia.|  
 |[CMFCToolTipInfo::m_nGradientAngle](#m_ngradientangle)|Kąt wypełnieniem gradientowym w etykietce narzędzia.|  
-|[CMFCToolTipInfo::m_nMaxDescrWidth](#m_nmaxdescrwidth)|Maksymalna możliwa szerokość w pikselach, opisu w etykietce narzędzia.|  
+|[CMFCToolTipInfo::m_nMaxDescrWidth](#m_nmaxdescrwidth)|Maksymalna możliwa szerokość w pikselach, opis w etykietce narzędzia.|  
   
 ## <a name="remarks"></a>Uwagi  
- Użyj [klasy CMFCToolTipCtrl](../../mfc/reference/cmfctooltipctrl-class.md), `CMFCToolTipInfo`, i [CTooltipManager klasy](../../mfc/reference/ctooltipmanager-class.md) ze sobą w celu wdrożenia dostosowane etykietki narzędzi w aplikacji. Na przykład dotyczące używania tych klas tooltip zobacz [klasy CMFCToolTipCtrl](../../mfc/reference/cmfctooltipctrl-class.md) tematu.  
+ Użyj [klasa CMFCToolTipCtrl](../../mfc/reference/cmfctooltipctrl-class.md), `CMFCToolTipInfo`, i [klasa CTooltipManager](../../mfc/reference/ctooltipmanager-class.md) ze sobą, aby implementować niestandardowe etykietki narzędzi w aplikacji. Na przykład dotyczące używania tych klas etykietki narzędzia zobacz [klasa CMFCToolTipCtrl](../../mfc/reference/cmfctooltipctrl-class.md) tematu.  
   
 ## <a name="example"></a>Przykład  
- W poniższym przykładzie pokazano sposób ustawiania wartości poszczególnych zmiennych w `CMFCToolTipInfo` klasy.  
+ Poniższy przykład pokazuje, jak można ustawić wartości różne zmienne Członkowskie `CMFCToolTipInfo` klasy.  
   
  [!code-cpp[NVC_MFC_RibbonApp#42](../../mfc/reference/codesnippet/cpp/cmfctooltipinfo-class_1.cpp)]  
   
@@ -106,7 +106,7 @@ BOOL m_bBalloonTooltip;
 ```  
   
 ### <a name="remarks"></a>Uwagi  
- `TRUE` Wskazuje, że elementy ToolTip korzystać styl dymek `FALSE` wskazuje, że elementy ToolTip korzystać prostokątne stylu.  
+ Wartość TRUE wskazuje, że etykietki narzędzi korzystać stylu balonowego, wartość FALSE wskazuje, że etykietki narzędzi korzystać styl prostokątny.  
   
 ##  <a name="m_bboldlabel"></a>  CMFCToolTipInfo::m_bBoldLabel  
  Określa czcionkę tekstu etykietki narzędzia jest pogrubiony.  
@@ -116,64 +116,64 @@ BOOL m_bBoldLabel;
 ```  
   
 ### <a name="remarks"></a>Uwagi  
- Ustaw ten element członkowski `TRUE` do wyświetlania tekstu etykietki narzędzia czcionką pogrubioną, lub `FALSE` do wyświetlania etykiet tooltip-pogrubioną czcionką.  
+ Ustaw tą składową, aby wartość PRAWDA, aby tekst etykietki narzędzia wyświetlana czcionką pogrubioną, lub FAŁSZ Aby wyświetlić etykietkę narzędzia etykiety przy użyciu pogrubiona czcionki.  
   
 ##  <a name="m_bdrawdescription"></a>  CMFCToolTipInfo::m_bDrawDescription  
- Określa, czy każdy tooltip Wyświetla tekst opisu.  
+ Określa, czy każdy etykietka narzędzia zawiera tekst opisu.  
   
 ```  
 BOOL m_bDrawDescription;  
 ```  
   
 ### <a name="remarks"></a>Uwagi  
- Ustaw ten element członkowski `TRUE` do wyświetlenia opisu, lub `FALSE` ukrycia opis. Można określić opis w etykietce narzędzia wywołując [CMFCToolTipCtrl::SetDescription](../../mfc/reference/cmfctooltipctrl-class.md#setdescription)  
+ Ustaw ten element na wartość true, Wyświetl opis lub FAŁSZYWE do ukrycia opis. Można określić opis w etykietce narzędzia, wywołując [CMFCToolTipCtrl::SetDescription](../../mfc/reference/cmfctooltipctrl-class.md#setdescription)  
   
 ##  <a name="m_bdrawicon"></a>  CMFCToolTipInfo::m_bDrawIcon  
- Określa, czy wszystkie elementy ToolTip wyświetlanie ikon.  
+ Określa, czy wszystkie etykietki narzędzi wyświetlanie ikon.  
   
 ```  
 BOOL m_bDrawIcon;  
 ```  
   
 ### <a name="remarks"></a>Uwagi  
- Ustaw ten element członkowski `TRUE` do wyświetlenia ikony na każdym tooltip lub `FALSE` wyświetlać elementy ToolTip bez ikon.  
+ Ten element członkowski ustaw wartość TRUE, aby wyświetlić ikonę na każdym etykietki narzędzia, lub FAŁSZ, aby wyświetlić etykietki narzędzi bez ikony.  
   
 ##  <a name="m_bdrawseparator"></a>  CMFCToolTipInfo::m_bDrawSeparator  
- Określa, czy każda wskazówka ma separatora między etykiety i jego opis.  
+ Określa, czy każdy etykietki narzędzia ma znak oddzielający etykiety i jego opis.  
   
 ```  
 BOOL m_bDrawSeparator;  
 ```  
   
 ### <a name="remarks"></a>Uwagi  
- Ustaw ten element członkowski `TRUE` do wyświetlenia separatora między etykietka narzędzia etykiety i opis, lub `FALSE` wyświetlać elementy ToolTip bez separatora.  
+ Ustaw ten element członkowski na wartość TRUE, aby wyświetlić separator między etykietki narzędzia etykiety i opis lub wartość FAŁSZ powoduje wyświetlanie etykietek narzędzi bez separatorów.  
   
 ##  <a name="m_broundedcorners"></a>  CMFCToolTipInfo::m_bRoundedCorners  
- Określa, czy wszystkie elementy ToolTip mają zaokrąglone narożniki.  
+ Określa, czy wszystkie etykietki narzędzi ma zaokrąglone rogi.  
   
 ```  
 BOOL m_bRoundedCorners;  
 ```  
   
 ### <a name="remarks"></a>Uwagi  
- Ustaw ten element członkowski `TRUE` do wyświetlenia zaokrąglone narożniki na etykietki narzędzi, lub `FALSE` do wyświetlenia rogi prostokątne na elementy ToolTip.  
+ Ustaw tą składową, aby wartość true, ekran zaokrąglone narożniki dotyczących etykietek narzędzi, lub FAŁSZ Aby wyświetlić prostokątny rogi dotyczących etykietek narzędzi.  
   
 ##  <a name="m_clrborder"></a>  CMFCToolTipInfo::m_clrBorder  
- Określa kolor obramowania na wszystkie elementy ToolTip.  
+ Określa kolor obramowania na wszystkie etykietki narzędzi.  
   
 ```  
 COLORREF m_clrBorder;  
 ```  
   
 ##  <a name="m_clrfill"></a>  CMFCToolTipInfo::m_clrFill  
- Określa kolor tła etykietka narzędzia.  
+ Określa kolor tła etykietki narzędzia.  
   
 ```  
 COLORREF m_clrFill;  
 ```  
   
 ### <a name="remarks"></a>Uwagi  
- Jeśli [CMFCToolTipInfo::m_clrFillGradient](#m_clrfillgradient) wynosi -1, jest kolor tła etykietek narzędzi `m_clrFill`. W przeciwnym razie `m_clrFill` Określa kolor początkowy gradientu i `m_clrFillGradient` Określa kolor końcowy gradientu. [CMFCToolTipInfo::m_nGradientAngle](#m_ngradientangle) Określa kierunek gradientu.  
+ Jeśli [CMFCToolTipInfo::m_clrFillGradient](#m_clrfillgradient) wynosi -1, kolor tła etykietek narzędzi jest `m_clrFill`. W przeciwnym razie `m_clrFill` Określa kolor początkowy gradientu i `m_clrFillGradient` Określa kolor końcowy gradientu. [CMFCToolTipInfo::m_nGradientAngle](#m_ngradientangle) Określa kierunek gradientu.  
   
 ##  <a name="m_clrfillgradient"></a>  CMFCToolTipInfo::m_clrFillGradient  
  Określa kolor końcowy gradientu tła etykietek narzędzi.  
@@ -183,10 +183,10 @@ COLORREF m_clrFillGradient;
 ```  
   
 ### <a name="remarks"></a>Uwagi  
- Jeśli `m_clrFillGradient` wynosi -1, nie istnieje żadne gradientu. W przeciwnym razie kolor początkowy gradientu jest określona przez [CMFCToolTipInfo::m_clrFill](#m_clrfill) i określany przez kolor gradientu Zakończ `m_clrFillGradient`. [CMFCToolTipInfo::m_nGradientAngle](#m_ngradientangle) Określa kierunek gradientu.  
+ Jeśli `m_clrFillGradient` wynosi -1, nie ma żadnych gradientu. W przeciwnym razie kolor początkowy gradientu jest określona przez [CMFCToolTipInfo::m_clrFill](#m_clrfill) i określany przez kolor gradientu Zakończ `m_clrFillGradient`. [CMFCToolTipInfo::m_nGradientAngle](#m_ngradientangle) Określa kierunek gradientu.  
   
 ##  <a name="m_clrtext"></a>  CMFCToolTipInfo::m_clrText  
- Określa kolor tekstu wszystkie elementy ToolTip.  
+ Określa kolor tekstu, wszystkie etykietek narzędzi.  
   
 ```  
 COLORREF m_clrText;  
@@ -200,26 +200,26 @@ int m_nGradientAngle;
 ```  
   
 ### <a name="remarks"></a>Uwagi  
- `m_nGradientAngle` Określa kąt w stopniach, czy gradientu tła etykietek narzędzi jest przesunięta w poziomie. Jeśli `m_nGradientAngle` wynosi 0, rysowania gradientu od lewej do prawej. Jeśli `m_nGradientAngle` to od 1 do 360 gradientu jest obracanie wskazówek zegara przez ten numer stopni. Jeśli `m_nGradientAngle` wynosi -1, która jest wartością domyślną, rysowania gradientu od góry do dołu. Jest to taka sama jak ustawienie `m_nGradientAngle` do 90.  
+ `m_nGradientAngle` Określa kąt w stopniach, że gradientu tła etykietek narzędzi jest przesunięcie od poziomych. Jeśli `m_nGradientAngle` wynosi 0, gradientu jest rysowana od lewej do prawej. Jeśli `m_nGradientAngle` to od 1 do 360 gradientu jest obracanie zgodnie ze wskazówkami zegara przez tę liczbę stopni. Jeśli `m_nGradientAngle` wynosi -1, która jest wartością domyślną, gradientu jest rysowana od góry do dołu. To jest taka sama, jak ustawienie `m_nGradientAngle` na 90.  
   
- [CMFCToolTipInfo::m_clrFill](#m_clrfill) `clrFill` Określa kolor początkowy gradientu i [CMFCToolTipInfo::m_clrFillGradient](#m_clrfillgradient) `clrFillGradient` Określa kolor końcowy gradientu. Jeśli `m_clrFillGradient` wynosi -1, nie istnieje żadne gradientu.  
+ [CMFCToolTipInfo::m_clrFill](#m_clrfill) `clrFill` Określa kolor początkowy gradientu i [CMFCToolTipInfo::m_clrFillGradient](#m_clrfillgradient) `clrFillGradient` Określa kolor końcowy gradientu. Jeśli `m_clrFillGradient` wynosi -1, nie ma żadnych gradientu.  
   
 ##  <a name="m_nmaxdescrwidth"></a>  CMFCToolTipInfo::m_nMaxDescrWidth  
- Określa maksymalną szerokość opisu wyświetlanej w każdym etykietka narzędzia. Jeśli szerokość opis przekracza określoną wartość, tekst jest zawijany.  
+ Określa maksymalną szerokość opis, który on wyświetlany w każdym etykietki narzędzia. Szerokość opisu przekracza określoną wartość, opakowaniu tekstu.  
   
 ```  
 int m_nMaxDescrWidth;  
 ```  
   
 ##  <a name="m_bvislmanagertheme"></a>  CMFCToolTipInfo::m_bVislManagerTheme  
- Określa, czy visual Menedżera aplikacji steruje wyglądem wszystkie elementy ToolTip.  
+ Określa, czy visual Menedżera aplikacji steruje wyglądem wszystkie etykietki narzędzi.  
   
 ```  
 BOOL m_bVislManagerTheme;  
 ```  
   
 ### <a name="remarks"></a>Uwagi  
- Jeśli `m_bVislManagerTheme` jest `TRUE`, co tooltip żądań nowy [CMFCToolTipInfo](../../mfc/reference/cmfctooltipinfo-class.md) visual Menedżera aplikacji przed ich są wyświetlane na ekranie i używa wartości w tym obiekcie w celu określenia sposobu ich wyświetlania. Elementy członkowskie z Twojej [CMFCToolTipInfo](../../mfc/reference/cmfctooltipinfo-class.md) są ignorowane.  
+ Jeśli `m_bVislManagerTheme` ma wartość TRUE, co etykietki narzędzia żądania nowy [CMFCToolTipInfo](../../mfc/reference/cmfctooltipinfo-class.md) z visual Menedżera aplikacji przed ich na ekranie i używa wartości w tym obiekcie do określenia sposobu ich wyświetlania. Innym członkom swojej [CMFCToolTipInfo](../../mfc/reference/cmfctooltipinfo-class.md) są ignorowane.  
   
 ##  <a name="operator_eq"></a>  CMFCToolTipInfo::operator =  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  

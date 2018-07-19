@@ -1,5 +1,5 @@
 ---
-title: Używanie okien zawartych w niej | Dokumentacja firmy Microsoft
+title: Za pomocą ograniczonego Windows | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,31 +16,31 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f6c3b439baf05c4e4287613e9b6b5a9b1c2546b6
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: cc17925e36e0e224a657177d0aa18912c564efed
+ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32357924"
+ms.lasthandoff: 07/05/2018
+ms.locfileid: "37850803"
 ---
-# <a name="using-contained-windows"></a>Używanie okien zawartych w niej
-ATL implementuje zawartych w niej systemu windows za pomocą [CContainedWindowT](../atl/reference/ccontainedwindowt-class.md). Zawartego okna reprezentuje okna, który deleguje jego komunikatów do obiektu kontenera, zamiast ich obsługę w jej własnej klasy.  
+# <a name="using-contained-windows"></a>Za pomocą ograniczonego Windows
+ATL implementuje okien zawartych z [CContainedWindowT](../atl/reference/ccontainedwindowt-class.md). Zawartego okna reprezentuje okna, który deleguje swoje wiadomości do obiektu kontenera, zamiast ich obsługę w jej własnej klasy.  
   
 > [!NOTE]
->  Nie trzeba wyprowadzenia klasy z `CContainedWindowT` aby można było używać zawartych w niej systemu windows.  
+>  Nie należy wyprowadzić klasę z `CContainedWindowT` aby można było używać okien zawartych.  
   
- W systemie windows zawartych w niej można albo superklasie istniejącej klasy systemu Windows lub podklasa klasy istniejącego okna. Można utworzyć okna tego nadklas Windows istniejących klas, najpierw określ nazwę klasy istniejącego w Konstruktorze `CContainedWindowT` obiektu. Następnie wywołaj `CContainedWindowT::Create`. Do podklasy istniejącego okna, nie trzeba określić nazwę klasy systemu Windows (przekazywane **NULL** konstruktora). Po prostu Wywołaj `CContainedWindowT::SubclassWindow` metody za pomocą dojścia do okna jest podklasą klasy.  
+ Za pomocą okien zawartych można albo superklasie istniejącej klasy Windows lub podklasy istniejącego okna. Można utworzyć okna tego superklas Windows istniejącej klasy, należy najpierw określić istniejącą nazwę klasy w Konstruktorze `CContainedWindowT` obiektu. Następnie wywołaj `CContainedWindowT::Create`. Do podklasy istniejącego okna nie trzeba określić nazwę klasy Windows (— dostęp próbny o wartości NULL do konstruktora). Po prostu Wywołaj `CContainedWindowT::SubclassWindow` metody za pomocą dojścia do okna, jest podklasą klasy.  
   
- Zazwyczaj użytkownik używa okien zawartych w niej jako element członkowski danych klasy kontenera. Kontener nie musi być oknem; jednak musi pochodzić od [CMessageMap](../atl/reference/cmessagemap-class.md).  
+ Zazwyczaj używa się okien zawartych jako elementy członkowskie danych klasy kontenera. Kontener musi być okna; jednak musi pochodzić od [CMessageMap](../atl/reference/cmessagemap-class.md).  
   
- Zawartego okna można użyć mapy komunikatów alternatywnej do obsługi jego wiadomości. Jeśli masz więcej niż jedno okno zawartych w niej powinny deklarować się, że kilka alternatywny mapy komunikatów, każdy odpowiadający osobnym oknie zawartych w niej.  
+ Zawartego okna mogą używać mapy komunikatów alternatywnej do obsługi swojej wiadomości. Jeśli masz więcej niż jeden zawartego okna, powinny deklarować, że kilka alternatywny mapy komunikatów, każdej odpowiadającej oddzielne okno zawarte.  
   
 ## <a name="example"></a>Przykład  
- Poniżej przedstawiono przykładowy kontener klasy z dwóch zawartych w niej systemu windows:  
+ Oto przykład klasy kontenera za pomocą dwóch okien zawartych:  
   
  [!code-cpp[NVC_ATL_Windowing#67](../atl/codesnippet/cpp/using-contained-windows_1.h)]  
   
- Aby uzyskać więcej informacji na temat zawartych w niej systemu windows, temacie [SUBEDIT](../visual-cpp-samples.md) próbki.  
+ Aby uzyskać więcej informacji na temat okien zawartych zobacz [SUBEDIT](../visual-cpp-samples.md) próbki.  
   
 ## <a name="see-also"></a>Zobacz też  
  [Klasy okien](../atl/atl-window-classes.md)

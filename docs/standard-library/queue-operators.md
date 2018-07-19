@@ -20,14 +20,14 @@ helpviewer_keywords:
 - std::operator&lt; (queue)
 - std::operator&lt;= (queue)
 - std::operator== (queue)
-ms.openlocfilehash: ddcc5ab787e4eba060960207a5260a571a64ff4d
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 138eddc6704b5e12798ccceacc5b3f37b3df1d96
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33859452"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38958295"
 ---
-# <a name="ltqueuegt-operators"></a>&lt;kolejka&gt; operatory
+# <a name="ltqueuegt-operators"></a>&lt;kolejka&gt; operatorów
 
 ||||
 |-|-|-|
@@ -36,7 +36,7 @@ ms.locfileid: "33859452"
 
 ## <a name="op_neq"></a>  operator! =
 
-Testy, jeśli obiekt kolejki po lewej stronie operatora nie jest taki sam jak obiekt kolejki po prawej stronie.
+Sprawdza, czy obiekt kolejki po lewej stronie operatora nie jest taki sam jak obiekt kolejki po prawej stronie.
 
 ```cpp
 bool operator!=(const queue <Type, Container>& left, const queue <Type, Container>& right,);
@@ -44,17 +44,17 @@ bool operator!=(const queue <Type, Container>& left, const queue <Type, Containe
 
 ### <a name="parameters"></a>Parametry
 
-`left` Obiekt typu **kolejki**.
+*po lewej stronie* obiektu typu `queue`.
 
-`right` Obiekt typu **kolejki**.
+*prawy* obiektu typu `queue`.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-**wartość true,** kolejek nie są równe; **false** kolejki są równe.
+**wartość true,** kolejki nie są równe; **false** kolejki są równe.
 
 ### <a name="remarks"></a>Uwagi
 
-Porównanie obiektów kolejki jest oparta na parowania porównanie ich elementów. Dwie kolejki są takie same, jeśli mają one taką samą liczbę elementów i ich odpowiednich elementy mają takie same wartości. W przeciwnym razie ich nie są równe.
+Porównanie obiektów kolejki jest oparty na parowania porównania ich elementów. Dwie kolejki są takie same, jeśli mają taką samą liczbę elementów i ich odpowiednie elementy mają te same wartości. W przeciwnym razie są nierówne.
 
 ### <a name="example"></a>Przykład
 
@@ -101,7 +101,7 @@ The queues q1 and q3 are equal.
 
 ## <a name="op_lt"></a>  Operator&lt;
 
-Testy, jeśli obiekt kolejki po lewej stronie operatora jest mniejsza niż obiekt kolejki po prawej stronie.
+Sprawdza, czy obiekt kolejki po lewej stronie operatora jest mniejszy niż obiekt kolejki po prawej stronie.
 
 ```cpp
 bool operator<(const queue <Type, Container>& left, const queue <Type, Container>& right,);
@@ -109,17 +109,17 @@ bool operator<(const queue <Type, Container>& left, const queue <Type, Container
 
 ### <a name="parameters"></a>Parametry
 
-`left` Obiekt typu **kolejki**.
+*po lewej stronie* obiektu typu `queue`.
 
-`right` Obiekt typu **kolejki**.
+*prawy* obiektu typu `queue`.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-**wartość true,** Jeśli kolejki po lewej stronie operatora jest mniejsza niż i nie równa kolejki po prawej stronie operatora; w przeciwnym razie **false**.
+**wartość true,** Jeśli kolejka po lewej stronie operatora jest mniejszy niż i nie równe do kolejki po prawej stronie operatora; w przeciwnym **false**.
 
 ### <a name="remarks"></a>Uwagi
 
-Porównanie obiektów kolejki jest oparta na parowania porównanie ich elementów. Less — niż relacji między dwoma obiektami kolejki jest oparta na porównanie pierwszego pary nierówne elementów.
+Porównanie obiektów kolejki jest oparty na parowania porównania ich elementów. Mniej-niż relacji między dwoma obiektami kolejki opiera się na porównanie pierwszy pary nierówne elementów.
 
 ### <a name="example"></a>Przykład
 
@@ -162,7 +162,7 @@ The queue q1 is not less than the queue q3.
 
 ## <a name="op_lt_eq"></a>  Operator&lt;=
 
-Testy, jeśli obiekt kolejki po lewej stronie operatora jest mniejsza niż lub równe obiekt kolejki po prawej stronie.
+Sprawdza, czy kolejka obiektu po lewej stronie operatora jest mniejszy niż lub równy obiektowi kolejki po prawej stronie.
 
 ```cpp
 bool operator<=(const queue <Type, Container>& left, const queue <Type, Container>& right,);
@@ -170,17 +170,17 @@ bool operator<=(const queue <Type, Container>& left, const queue <Type, Containe
 
 ### <a name="parameters"></a>Parametry
 
-`left` Obiekt typu **kolejki**.
+*po lewej stronie* obiektu typu `queue`.
 
-`right` Obiekt typu **kolejki**.
+*prawy* obiektu typu `queue`.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-**wartość true,** Jeśli kolejka po lewej stronie operatora jest ściśle mniejsza niż kolejki po prawej stronie operatora; w przeciwnym razie **false**.
+**wartość true,** Jeśli kolejki po lewej stronie operatora jest mniejsza niż kolejki po prawej stronie operatora; w przeciwnym razie **false**.
 
 ### <a name="remarks"></a>Uwagi
 
-Porównanie obiektów kolejki jest oparta na parowania porównanie ich elementów. Mniejsze niż lub równe do relacji między obiektami dwóch kolejki jest oparta na porównanie pierwszego pary nierówne elementów.
+Porównanie obiektów kolejki jest oparty na parowania porównania ich elementów. Mniejszą lub równą do relacji między obiektami kolejki dwa opiera się na porównanie pierwszy pary nierówne elementów.
 
 ### <a name="example"></a>Przykład
 
@@ -225,7 +225,7 @@ The queue q1 is less than or equal to the queue q3.
 
 ## <a name="op_eq_eq"></a>  operator ==
 
-Testy, jeśli obiekt kolejki po lewej stronie operatora jest taki sam obiekt kolejki po prawej stronie.
+Sprawdza, czy obiekt kolejki po lewej stronie operatora jest równy obiektowi kolejki po prawej stronie.
 
 ```cpp
 bool operator==(const queue <Type, Container>& left, const queue <Type, Container>& right,);
@@ -233,17 +233,17 @@ bool operator==(const queue <Type, Container>& left, const queue <Type, Containe
 
 ### <a name="parameters"></a>Parametry
 
-`left` Obiekt typu **kolejki**.
+*po lewej stronie* obiektu typu `queue`.
 
-`right` Obiekt typu **kolejki**.
+*prawy* obiektu typu `queue`.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-**wartość true,** kolejek nie są równe; **false** kolejki są równe.
+**wartość true,** kolejki nie są równe; **false** kolejki są równe.
 
 ### <a name="remarks"></a>Uwagi
 
-Porównanie obiektów kolejki jest oparta na parowania porównanie ich elementów. Dwie kolejki są takie same, jeśli mają one taką samą liczbę elementów i ich odpowiednich elementy mają takie same wartości. W przeciwnym razie ich nie są równe.
+Porównanie obiektów kolejki jest oparty na parowania porównania ich elementów. Dwie kolejki są takie same, jeśli mają taką samą liczbę elementów i ich odpowiednie elementy mają te same wartości. W przeciwnym razie są nierówne.
 
 ### <a name="example"></a>Przykład
 
@@ -289,7 +289,7 @@ The queues q1 and q3 are equal.
 
 ## <a name="op_gt"></a>  Operator&gt;
 
-Testy, jeśli obiekt kolejki po lewej stronie operatora jest większa niż obiekt kolejki po prawej stronie.
+Sprawdza, czy obiekt kolejki po lewej stronie operatora jest większy niż obiekt kolejki po prawej stronie.
 
 ```cpp
 bool operator>(const queue <Type, Container>& left, const queue <Type, Container>& right,);
@@ -297,17 +297,17 @@ bool operator>(const queue <Type, Container>& left, const queue <Type, Container
 
 ### <a name="parameters"></a>Parametry
 
-`left` Obiekt typu **kolejki**.
+*po lewej stronie* obiektu typu `queue`.
 
-`right` Obiekt typu **kolejki**.
+*prawy* obiektu typu `queue`.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-**wartość true,** Jeśli kolejka po lewej stronie operatora jest ściśle mniejsza niż kolejki po prawej stronie operatora; w przeciwnym razie **false**.
+**wartość true,** Jeśli kolejki po lewej stronie operatora jest mniejsza niż kolejki po prawej stronie operatora; w przeciwnym razie **false**.
 
 ### <a name="remarks"></a>Uwagi
 
-Porównanie obiektów kolejki jest oparta na parowania porównanie ich elementów. Większa-niż relacji między dwoma obiektami kolejki jest oparta na porównanie pierwszego pary nierówne elementów.
+Porównanie obiektów kolejki jest oparty na parowania porównania ich elementów. Większą-niż relacji między dwoma obiektami kolejki opiera się na porównanie pierwszy pary nierówne elementów.
 
 ### <a name="example"></a>Przykład
 
@@ -353,7 +353,7 @@ The queue q1 is greater than the queue q3.
 
 ## <a name="op_gt_eq"></a>  Operator&gt;=
 
-Testy, jeśli obiekt kolejki po lewej stronie operatora jest większa niż lub równa obiekt kolejki po prawej stronie.
+Sprawdza, czy obiekt kolejki po lewej stronie operatora jest większy lub równy obiektowi kolejki po prawej stronie.
 
 ```cpp
 bool operator>=(const queue <Type, Container>& left, const queue <Type, Container>& right,);
@@ -361,17 +361,17 @@ bool operator>=(const queue <Type, Container>& left, const queue <Type, Containe
 
 ### <a name="parameters"></a>Parametry
 
-`left` Obiekt typu **kolejki**.
+*po lewej stronie* obiektu typu `queue`.
 
-`right` Obiekt typu **kolejki**.
+*prawy* obiektu typu `queue`.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-**wartość true,** Jeśli kolejka po lewej stronie operatora jest ściśle mniejsza niż kolejki po prawej stronie operatora; w przeciwnym razie **false**.
+**wartość true,** Jeśli kolejki po lewej stronie operatora jest mniejsza niż kolejki po prawej stronie operatora; w przeciwnym razie **false**.
 
 ### <a name="remarks"></a>Uwagi
 
-Porównanie obiektów kolejki jest oparta na parowania porównanie ich elementów. Dwie kolejki są takie same, jeśli mają one taką samą liczbę elementów i ich odpowiednich elementy mają takie same wartości. W przeciwnym razie ich nie są równe.
+Porównanie obiektów kolejki jest oparty na parowania porównania ich elementów. Dwie kolejki są takie same, jeśli mają taką samą liczbę elementów i ich odpowiednie elementy mają te same wartości. W przeciwnym razie są nierówne.
 
 ### <a name="example"></a>Przykład
 

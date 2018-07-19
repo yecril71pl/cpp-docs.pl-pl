@@ -17,16 +17,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bf42d118118a849a841967404bc626ed3b9205ab
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 4405f2ac1615a40f41f5deb9ee4d9baf5b8f8ef7
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33852653"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38955276"
 ---
 # <a name="multiplies-struct"></a>multiplies — Struktura
 
-Obiekt wstępnie zdefiniowanych funkcji, który wykonuje operację mnożenia (binarne `operator*`) na jego argumenty.
+Obiekt wstępnie zdefiniowana funkcja, który wykonuje operację mnożenia (binarne `operator*`) na jego argumenty.
 
 ## <a name="syntax"></a>Składnia
 
@@ -49,15 +49,15 @@ struct multiplies<void>
 
 ### <a name="parameters"></a>Parametry
 
-`Type`, `T`, `U` Typu, który obsługuje dane binarne `operator*` pobierającej argumentów operacji typu określonego lub wywnioskowany.
+*Typ*, *T*, *U* typu, który obsługuje dane binarne `operator*` przyjmującej argumentów operacji typu określonego lub wywnioskowane uprawnienie.
 
-`Left` Lewy operand operacji mnożenia. Szablon klasy niespecjalizowanej przyjmuje argument odwołania l-wartością typu `Type`. Specjalne szablonu doskonała przekazującej lewostronnie i argumenty odwołanie do r-wartości wywnioskować typu `T`.
+*Po lewej stronie* lewy operand operacja mnożenia. Szablon Niewyspecjalizowana przyjmuje argument odwołania l-wartości typu *typu*. Wyspecjalizowane szablonu doskonała przekazywania l-wartością i argumenty odwołania rvalue wywnioskować typu *T*.
 
-`Right` Prawy argument operacji mnożenia. Szablon klasy niespecjalizowanej przyjmuje argument odwołania l-wartością typu `Type`. Specjalne szablonu doskonała przekazującej lewostronnie i argumenty odwołanie do r-wartości wywnioskować typu `U`.
+*Po prawej stronie* prawy operand operacja mnożenia. Szablon Niewyspecjalizowana przyjmuje argument odwołania l-wartości typu *typu*. Wyspecjalizowane szablonu doskonała przekazywania l-wartością i argumenty odwołania rvalue wywnioskować typu *U*.
 
 ## <a name="return-value"></a>Wartość zwracana
 
-Wynik `Left * Right`. Specjalne szablonu doskonała przekazywanie wynik, który ma typ zwracany przez `operator*`.
+Wynik `Left * Right`. Szablon wyspecjalizowane doskonała przekazywania wyniku, który ma typ, który jest zwracany przez `operator*`.
 
 ## <a name="example"></a>Przykład
 
@@ -119,7 +119,7 @@ The element-wise products of vectors V1 & v2
 
 **Nagłówek:** \<funkcjonalności >
 
-**Namespace:** Standard
+**Namespace:** standardowe
 
 ## <a name="see-also"></a>Zobacz także
 

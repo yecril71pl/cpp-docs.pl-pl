@@ -1,5 +1,5 @@
 ---
-title: wyjątek klasy | Dokumentacja firmy Microsoft
+title: Klasa Exception | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,16 +16,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ff6bc46fb8776de5f93b623b98f87513e710c603
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: ec1cfe2be7f6a2172b6624f15cb3dcde4f0ba3c2
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33843109"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38957021"
 ---
 # <a name="exception-class"></a>Klasa exception
 
-Klasa służy jako klasa podstawowa dla wszystkich wyjątków zgłoszonych przez niektórych wyrażeń i standardowa biblioteka C++.
+Klasa służy jako klasa bazowa dla wszystkich wyjątków generowanych przez niektóre wyrażenia i standardowej biblioteki języka C++.
 
 ## <a name="syntax"></a>Składnia
 
@@ -44,22 +44,22 @@ class exception {
 
 ## <a name="remarks"></a>Uwagi
 
-W szczególności ta klasa podstawowa jest katalogiem głównym standardowe wyjątek klas zdefiniowanych w [ \<stdexcept — >](../standard-library/stdexcept.md). Wartość zwrócona przez ciąg C `what` jest określony przez konstruktora domyślnego, ale może być zdefiniowana przez konstruktorów niektórych klas pochodnych jako ciąg C zdefiniowane w implementacji. Brak funkcji Członkowskich generują żadnych wyjątków.
+W szczególności, ta klasa bazowa jest katalogiem głównym klas standardowych wyjątków zdefiniowanych w [ \<stdexcept >](../standard-library/stdexcept.md). Wartość zwrócona przez obiekt string, C `what` jest określony przez konstruktora domyślnego, ale mogą być określone przez konstruktory dla niektórych klas pochodnych w postaci ciągu zdefiniowane w implementacji C. Żadna z funkcji elementu członkowskiego generuje żadnych wyjątków.
 
-`int` Parametr umożliwia określenie, czy można przydzielić pamięci. Wartość `int` jest ignorowana.
+**Int** parametr umożliwia określenie, że pamięć nie powinna zostać przydzielona. Wartość **int** jest ignorowana.
 
 > [!NOTE]
-> Konstruktory `exception(const char* const &message)` i `exception(const char* const &message, int)` są rozszerzenia Microsoft do standardowej biblioteki C++.
+> Konstruktory `exception(const char* const &message)` i `exception(const char* const &message, int)` są rozszerzenia Microsoft do standardowej biblioteki języka C++.
 
 ## <a name="example"></a>Przykład
 
-Przykłady użycia klasy standardowe wyjątków, które dziedziczą z `exception` , zobacz jedną z klas zdefiniowanych w [ \<stdexcept — >](../standard-library/stdexcept.md).
+Przykłady użycia, które dziedziczą z klasy wyjątku standardowa `exception` , zobacz jedną z klas zdefiniowanych w [ \<stdexcept >](../standard-library/stdexcept.md).
 
 ## <a name="requirements"></a>Wymagania
 
 **Nagłówek:** \<wyjątku >
 
-**Namespace:** Standard
+**Namespace:** standardowe
 
 ## <a name="see-also"></a>Zobacz także
 

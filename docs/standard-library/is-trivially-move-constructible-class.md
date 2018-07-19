@@ -1,5 +1,5 @@
 ---
-title: Klasa is_trivially_move_constructible | Dokumentacja firmy Microsoft
+title: is_trivially_move_constructible, klasa | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,16 +16,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4d4368fa2b88d22f0b07bc10bba4769d05375041
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 316ffdee4905ff8a35baef7137ff7f28a2846786
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33859254"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38958195"
 ---
-# <a name="istriviallymoveconstructible-class"></a>is_trivially_move_constructible — klasa
+# <a name="istriviallymoveconstructible-class"></a>is_trivially_move_constructible, klasa
 
-Testy, jeśli typ ma trivial przenoszenie konstruktora.
+Konstruktor przenoszący sprawdza, czy typ ma proste.
 
 ## <a name="syntax"></a>Składnia
 
@@ -36,35 +36,35 @@ struct is_trivially_move_constructible;
 
 ### <a name="parameters"></a>Parametry
 
-`Ty` Typ do zapytania.
+*Ty* typ do zapytania.
 
 ## <a name="remarks"></a>Uwagi
 
-Wystąpienie typu predykatu posiada wartość true Jeśli typ `Ty` jest klasa, która ma Konstruktor przenoszący trivial w inny sposób przechowuje wartość false.
+Wystąpienie typu predykatu ma wartość true, jeśli typ *Ty* to klasa, która ma Konstruktor przenoszący prosta w przeciwnym razie przechowuje wartość false.
 
-Przenoszenie konstruktora dla klasy `Ty` jest prosta jeśli:
+Konstruktor przenoszący dla klasy *Ty* jest proste jeśli:
 
-został niejawnie zadeklarowany.
+jest niejawnie zadeklarowana
 
-jego typy parametrów są odpowiadające niejawne deklaracji
+jego typy parametrów są równoważne do tych deklaracji niejawnej
 
-Klasa `Ty` ma żadnych funkcji wirtualnych
+Klasa *Ty* ma żadnych funkcji wirtualnych
 
-Klasa `Ty` ma nie wirtualnych typów podstawowych
+Klasa *Ty* ma nie baz wirtualnych
 
-Klasa nie ma żadnych członków danych niestatycznych nietrwałe
+Klasa nie ma danych niestatycznych elementów członkowskich
 
-wszystkie bezpośrednio podstawowych klasy `Ty` mieć konstruktorów przenoszenia prosta
+wszystkie bezpośrednio baz klasy *Ty* ma konstruktorów przenoszących prosta
 
-klasy wszystkich członków danych niestatycznych typu klasy mają konstruktorów przenoszenia prosta
+klasy wszystkie składowe danych niestatycznych typu klasy ma konstruktorów przenoszących prosta
 
-klasy wszystkich członków danych niestatycznych tablicy typu klasy mają konstruktorów przenoszenia prosta
+klasy wszystkie składowe danych niestatycznych typu tablicowego klasy ma konstruktorów przenoszących prosta
 
 ## <a name="requirements"></a>Wymagania
 
 **Nagłówek:** \<type_traits >
 
-**Namespace:** Standard
+**Namespace:** standardowe
 
 ## <a name="see-also"></a>Zobacz także
 

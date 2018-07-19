@@ -16,15 +16,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ea99cfb77f295530f65b3d3b07888b0735fc0b6a
-ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
+ms.openlocfilehash: a9b1bd896157d7f11792a5a6514e30ecd3d46a19
+ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/26/2018
-ms.locfileid: "36950506"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37336260"
 ---
 # <a name="bitmapinfo-structure"></a>Struktura BITMAPINFO
-`BITMAPINFO` Definiuje strukturę, wymiarów i informacji o kolorze do mapy bitowej systemu Windows niezależnych od urządzenia (DIB).  
+`BITMAPINFO` Definiuje strukturę, wymiary i informacji o kolorze do mapy bitowej Windows niezależnych od urządzenia (DIB).  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -37,23 +37,23 @@ typedef struct tagBITMAPINFO {
   
 #### <a name="parameters"></a>Parametry  
  *bmiHeader*  
- Określa [BITMAPINFOHEADER](http://msdn.microsoft.com/library/windows/desktop/dd183376) struktury, który zawiera informacje o wymiary i kolor format mapy bitowej niezależnych od urządzenia.  
+ Określa [BITMAPINFOHEADER](http://msdn.microsoft.com/library/windows/desktop/dd183376) strukturę, która zawiera informacje dotyczące wymiarów i format koloru z mapy bitowej niezależnych od urządzenia.  
   
  *bmiColors*  
- Określa tablicę [RGBQUAD](http://msdn.microsoft.com/library/windows/desktop/dd162938) lub `DWORD` typy danych, które definiują kolorów w mapie bitowej.  
+ Określa tablicę [RGBQUAD](http://msdn.microsoft.com/library/windows/desktop/dd162938) lub DWORD typów danych, które definiują kolorów w mapie bitowej.  
   
 ## <a name="remarks"></a>Uwagi  
- Mapy bitowej niezależnych od urządzenia składa się z dwóch części: `BITMAPINFO` strukturę, która opisuje wymiarów i kolorów mapy bitowej i tablicę bajtów, które określają pikseli w pliku mapy bitowej. Usługa bits w tablicy są pakowane, ale każdy wiersz skanowania musi być uzupełniana zerami kończy się z `LONG` granic. Gdy wysokość jest dodatnia, mapy bitowej pochodzi z lewym dolnym rogu. Jeśli wysokość jest ujemna, pochodzi lewym górnym rogu.  
+ Mapy bitowej niezależnych od urządzenia składa się z dwóch części: `BITMAPINFO` strukturę, która w tym artykule opisano wymiary i kolorów mapy bitowej i tablicę bajtów, które określają pikseli w mapie bitowej. Usługa bits w tablicy są pakowane razem, ale każdy wiersz skanowania musi dopełniana zerami w celu zakończenia na **długie** granic. Gdy wysokość jest dodatnia, mapy bitowej pochodzi z lewego dolnego rogu. Gdy wysokość jest ujemna, pochodzi lewego górnego rogu.  
   
- A *spakowana mapy bitowej* jest mapą bitową, w którym poniższą tablicy bajtów `BITMAPINFO` struktury. Spakowana map bitowych odwołuje się jednego wskaźnika.  
+ A *upakowaną mapy bitowej* jest mapą bitową, gdzie następuje tablicy bajtowej `BITMAPINFO` struktury. Mapy bitowe upakowaną odwołują się jednego wskaźnika.  
   
- Aby uzyskać więcej informacji na temat `BITMAPINFO` struktury i odpowiednie wartości dla elementów członkowskich `BITMAPINFOHEADER` i `RGBQUAD` struktury, zobacz następujące tematy w dokumentacji zestawu SDK systemu Windows.  
+ Aby uzyskać więcej informacji na temat `BITMAPINFO` struktury i odpowiednie wartości dla elementów członkowskich `BITMAPINFOHEADER` i `RGBQUAD` struktur, zobacz następujące tematy w dokumentacji zestawu Windows SDK.  
   
 - [Struktura BITMAPINFO](http://msdn.microsoft.com/library/windows/desktop/dd183375)  
   
-- [BITMAPINFOHEADER](http://msdn.microsoft.com/library/windows/desktop/dd183376) — struktura  
+- [BITMAPINFOHEADER](http://msdn.microsoft.com/library/windows/desktop/dd183376) struktury  
   
-- [RGBQUAD](http://msdn.microsoft.com/library/windows/desktop/dd162938) — struktura  
+- [RGBQUAD](http://msdn.microsoft.com/library/windows/desktop/dd162938) struktury  
   
 ## <a name="requirements"></a>Wymagania  
  **Nagłówek:** wingdi.h  

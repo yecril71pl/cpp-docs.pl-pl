@@ -16,42 +16,42 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: eb1e42bf61c1fa70ee74063cd6857d842ee87de7
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 92dce97754eccc8cd4f618db3ac3e23574fb54ae
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33846496"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38956585"
 ---
 # <a name="hashcompare-class"></a>hash_compare — Klasa
 
-Obiekt, który mogą być używane przez dowolny kontener asocjacyjna skrótu opisano klasy szablonu — hash_map hash_multimap, hash_set, lub hash_multiset — domyślnie **cech** obiektu parameter kolejność i wyznaczania wartości skrótu elementy zawierają .
+Klasa szablonu opisuje obiekt, który może służyć przez żaden z kontenerów asocjacyjnych wyznaczania wartości skrótu — hash_map hash_multimap, hash_set, lub hash_multiset — domyślnie **cech** parametr obiektu do porządkowania i wyznaczania wartości skrótu elementy zawierają .
 
 ## <a name="syntax"></a>Składnia
 
-hash_compare — klasa {komp cech; public: const size_t bucket_size = 4; const size_t min_buckets = 8; hash_compare(); hash_compare — (cech pred) size_t operator() (const klucza & klucz) const; bool operator() (const klucza & klucz1, klucz const & klucz2) const;};
+hash_compare — klasa {comp cech; public: const size_t bucket_size — = 4; const size_t min_buckets = 8 hash_compare() hash_compare — (cechy pred); size_t operator() (const Key & klucza) const; bool operator() (const Key & klucz1, const Key & klucz2) const;};
 
 ## <a name="remarks"></a>Uwagi
 
-Każdego kontenera asocjacyjna skrótu przechowuje obiektu skrótu cech typu **cech** (parametr szablonu). Klasy mogą dziedziczyć po specjalizacja hash_compare — Aby selektywnie zastąpić pewne funkcje i obiekty, lub możesz podać własne wersja tej klasy, które spełniają określone wymagania minimalne. W szczególności dla obiekt hash_comp typu **hash_compare —\<klawisz, cechy >**, następujące działania jest wymagany przez kontenery powyżej:
+Każdy kontener asocjacyjny wyznaczania wartości skrótu są przechowywane obiektu skrótu cech typu `Traits` (parametr szablonu). Klasy mogą dziedziczyć specjalizacja hash_compare — w celu selektywnego przesłaniania pewne funkcje i obiekty, lub możesz podać własną wersję tej klasy, które spełniają określone wymagania minimalne. W szczególności dla hash_comp obiektu typu `hash_compare<Key, Traits>`, następujące zachowanie jest wymagana przez powyższe kontenerów:
 
-- Dla wszystkich wartości `key` typu **klucza**, wywołanie **hash_comp**( `key`) służy jako funkcji wyznaczania wartości skrótu, która daje w wyniku podziału wartości typu **size_t**. Funkcja dostarczonych przez hash_compare — zwraca `key`.
+- Dla wszystkich wartości `key` typu `Key`, wywołanie **hash_comp**(`key`) służy jako funkcji wyznaczania wartości skrótu, która daje w wyniku rozkład wartości typu `size_t`. Funkcja dostarczonych przez hash_compare — zwraca `key`.
 
-- Dla dowolnej wartości `key1` typu **klucza** czy poprzedza `key2` w sekwencji i ma tę samą wartość (wartość zwrócona przez funkcję skrótu), skrótu **hash_comp**( `key2`, `key1`) ma wartość false. Funkcja musi nałożyć łącznie porządkowanie dla wartości typu **klucza**. Funkcja dostarczonych przez hash_compare — zwraca *kompozycji*( `key2`, `key1`) `,` gdzie *kompozycji* jest przechowywane obiektu typu **cech** który można określić podczas tworzenia obiektu hash_comp. Dla domyślnej **cech** typ parametru **mniej\<klucza >**, klucze sortowania nigdy nie spadek wartości.
+- Dla dowolnej wartości `key1` typu `Key` , który poprzedza `key2` w sekwencji i ma taką samą wartość (wartość zwrócona przez funkcję skrótu), skrótu **hash_comp**(`key2`, `key1`) ma wartość false. Funkcja musi nakładają łącznie porządkowanie dla wartości typu `Key`. Funkcja dostarczonych przez hash_compare — zwraca *comp*(`key2`, `key1`) `,` gdzie *comp* jest przechowywany obiekt typu `Traits` , możesz określić, kiedy użytkownik Skonstruuj hash_comp obiektu. Dla domyślnego `Traits` typ parametru `less<Key>`, klucze sortowania nigdy nie spadek wartości.
 
-- Stała całkowita **bucket_size** określa średnia liczba elementów na "zasobnika" (wpis tablicy skrótów) który kontenera nie należy próbować przekracza. Musi być większa niż zero. Wartość dostarczona przez hash_compare — to 4.
+- Stała całkowita `bucket_size` określa średnią liczbę elementów na "zasobnik" (wpis w tabeli skrótów) kontenera nie należy próbować przekracza. Musi być większa od zera. Wartość dostarczona przez hash_compare — to 4.
 
-- Stała całkowita **min_buckets** określa minimalną liczbę zasobników, aby zachować w tablicy skrótów. Musi być potęgą liczby dwa i większa od zera. Wartość dostarczona przez hash_compare — jest 8.
+- Stała całkowita `min_buckets` określa minimalną liczbę zasobników, aby zachować w tabeli wyznaczania wartości skrótu. Musi być potęgą liczby dwa i większa od zera. Wartość dostarczona przez hash_compare — jest 8.
 
 ## <a name="example"></a>Przykład
 
-Przykłady dla [hash_map::hash_map](../standard-library/hash-map-class.md#hash_map), [hash_multimap::hash_multimap](../standard-library/hash-multimap-class.md#hash_multimap), [hash_set::hash_set](../standard-library/hash-set-class.md#hash_set), i [hash_multiset::hash_multiset](../standard-library/hash-multiset-class.md#hash_multiset), przykłady deklarowanie i użycie hash_compare —.
+Zobacz przykłady dla [hash_map::hash_map](../standard-library/hash-map-class.md#hash_map), [hash_multimap::hash_multimap](../standard-library/hash-multimap-class.md#hash_multimap), [hash_set::hash_set](../standard-library/hash-set-class.md#hash_set), i [hash_multiset::hash_multiset](../standard-library/hash-multiset-class.md#hash_multiset), przykładów dotyczących sposobów na zadeklarowanie i użyj hash_compare —.
 
 ## <a name="requirements"></a>Wymagania
 
 **Nagłówek:** \<hash_map >
 
-**Namespace:** stdext —
+**Namespace:** stdext
 
 ## <a name="see-also"></a>Zobacz także
 

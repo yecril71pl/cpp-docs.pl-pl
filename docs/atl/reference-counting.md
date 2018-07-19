@@ -18,30 +18,30 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d1ba27f00bf25f88575101b1299daf50f94000ad
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 8e0ce8b2cc412c576b0eded9662d8e70b34cf2ec
+ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32358251"
+ms.lasthandoff: 07/05/2018
+ms.locfileid: "37850816"
 ---
-# <a name="reference-counting"></a>Liczenie odwołań
-COM sam nie automatycznie próbuje usunąć obiekt z pamięci po sądzi, że obiekt jest już używany. Zamiast tego obiektu programisty należy usunąć nieużywane obiektu. Programistę Określa, czy obiekt można usunąć zależności od liczby odwołania.  
+# <a name="reference-counting"></a>Zliczanie odwołań
+COM, sama nie automatycznie próbuje usunąć obiekt z pamięci, jeśli uważa, że obiekt jest już używany. Zamiast tego programisty obiektu, należy usunąć nieużywane obiektu. Programistę Określa, czy obiekt można usunąć zależności od liczby odwołań.  
   
- Używa COM **IUnknown** metod, [AddRef](http://msdn.microsoft.com/library/windows/desktop/ms691379) i [wersji](http://msdn.microsoft.com/library/windows/desktop/ms682317), aby zarządzać liczebności referencyjnej interfejsów dla obiektu. Ogólne zasady do wywoływania metody te są:  
+ COM używa `IUnknown` metod [AddRef](http://msdn.microsoft.com/library/windows/desktop/ms691379) i [wersji](http://msdn.microsoft.com/library/windows/desktop/ms682317), aby zarządzać licznikiem odwołań interfejsów na obiekcie. Ogólne zasady wywoływanie tych metod są:  
   
--   Zawsze, gdy klient otrzymuje wskaźnika interfejsu `AddRef` musi zostać wywołana w interfejsie.  
+-   Zawsze, gdy klient odbierze wskaźnika interfejsu `AddRef` musi zostać wywołana w interfejsie.  
   
--   Zawsze, gdy klient zakończy działanie przy użyciu wskaźnika interfejsu, należy wywołać **wersji**.  
+-   Zawsze, gdy klient zakończy się za pomocą wskaźnika interfejsu, należy wywołać `Release`.  
   
- W prostych implementacji każdy `AddRef` wywoływać zwiększa i każdego **wersji** wywołać zmniejsza zmienną licznika wewnątrz obiektu. Zwrócona liczba od zera. interfejs już nie ma żadnych użytkowników i może się usunąć z pamięci.  
+ W prostych implementacji każdy `AddRef` wywołać przyrosty, a każdy `Release` wywołać zmniejsza zmienną licznika wewnątrz obiektu. Gdy liczba zwraca zero, interfejs nie jest już zawiera wszystkich użytkowników i jest bezpłatna usunąć samego z pamięci.  
   
- Liczenie odwołań również można zaimplementować tak, aby jest liczony każdego odwołania do obiektu (nie do określonego interfejsu). W takim przypadku każdy `AddRef` i **wersji** wywołać delegatów centralnej implementacji dla obiektu, i **wersji** zwalnia całego obiektu, gdy jego liczebności referencyjnej osiągnie wartość zero.  
+ Zliczanie odwołań może też być implementowany tak, aby każde odwołanie do obiektu (nie do poszczególnych interfejsu) jest liczony. W takim przypadku każdy `AddRef` i `Release` wywoływać delegatów centralnej implementacji dla obiektu i `Release` zwalnia całego obiektu, gdy jego licznik odwołań osiągnie zero.  
   
 > [!NOTE]
->  Gdy `CComObject`— obiekt pochodny jest tworzony przy użyciu **nowe** operatora, liczba odwołań wynosi 0. W związku z tym wywołaniu `AddRef` muszą być wprowadzane po pomyślnym utworzeniu `CComObject`-pochodzi z obiektu.  
+>  Gdy `CComObject`— pochodnej obiekt jest tworzony przy użyciu **nowe** operatora, licznik odwołań to 0. W związku z tym, wywołanie `AddRef` musi nastąpić po pomyślnym utworzeniu `CComObject`-pochodnych obiektu.  
   
 ## <a name="see-also"></a>Zobacz też  
- [Wprowadzenie do COM](../atl/introduction-to-com.md)   
- [Zarządzanie okresy istnienia obiektu przez liczenie odwołań](http://msdn.microsoft.com/library/windows/desktop/ms687260)
+ [Wprowadzenie do modelu COM](../atl/introduction-to-com.md)   
+ [Zarządzanie czasów istnienia obiektów za pomocą zliczanie odwołań](http://msdn.microsoft.com/library/windows/desktop/ms687260)
 

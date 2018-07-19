@@ -15,21 +15,21 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 760a595274ba7a1901138cc0cceceddf97122725
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 2457d6e94677c43985cadf8ca49a176a82566b6a
+ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32353966"
+ms.lasthandoff: 07/05/2018
+ms.locfileid: "37847872"
 ---
 # <a name="aggregation"></a>Agregacji
-Brak razy, gdy osoby wdrażającej obiektu chcesz korzystać z usług oferowanych przez inny, wbudowane obiektu. Ponadto chcesz ten drugi obiekt do są wyświetlane jako fizyczne część pierwszy. COM osiąga obu tych celów poprzez zawierania i agregacji.  
+Istnieją terminy, gdy obiekt implementujący chcesz korzystać z usług oferowanych przez inną, wstępnie utworzonym obiekt. Ponadto chcesz ten drugi obiekt do są wyświetlane jako fizyczną część pierwsza. COM osiąga obu tych celów poprzez zawierania i agregacji.  
   
- Agregacja oznacza, że obiektu zawierającego (zewnętrznego) tworzy zawartego w nim obiektu (wewnętrzny) jako część procesu tworzenia i interfejsy wewnętrzny obiekt są udostępniane przez zewnętrznego. Obiekt umożliwia siebie jako agregowaniu, czy nie. Jeśli tak jest, musi on wykonaj niektóre zasady w celu agregacji działała poprawnie.  
+ Agregacja oznacza, że zawierającego go obiektu (zewnętrznego) tworzy zawartego w nim obiektu (wewnętrzny) w ramach procesu tworzenia i interfejsy obiekt wewnętrzny są udostępniane przez zewnętrzny. Obiekt umożliwia sam można było agregować, czy nie. Jeśli tak jest, należy go wykonać niektóre zasady w celu agregacji zapewnić prawidłowe działanie.  
   
- Przede wszystkim wszystkie **IUnknown** wywołania metody w obiekcie zawartych w niej należy delegować do obiektu zawierającego.  
+ Przede wszystkim wszystkie `IUnknown` wywołania metody na przechowywany obiekt musi delegować do obiektu zawierającego.  
   
 ## <a name="see-also"></a>Zobacz też  
- [Wprowadzenie do COM](../atl/introduction-to-com.md)   
- [Ponowne wykorzystywanie obiektów](http://msdn.microsoft.com/library/windows/desktop/ms678443)
+ [Wprowadzenie do modelu COM](../atl/introduction-to-com.md)   
+ [Ponowne używanie obiektów](http://msdn.microsoft.com/library/windows/desktop/ms678443)
 

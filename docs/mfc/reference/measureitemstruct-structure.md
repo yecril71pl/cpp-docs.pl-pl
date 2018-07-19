@@ -16,15 +16,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ff015fdaf9e37d919459cadc8e4c35c4b795b3f8
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: bcf4bd41d00f6999b4158f0884c39e7a16d10bcc
+ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33372273"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37336962"
 ---
 # <a name="measureitemstruct-structure"></a>Struktura MEASUREITEMSTRUCT
-`MEASUREITEMSTRUCT` Struktury powiadamia okno wymiarów elementu menu lub formant rysowanych przez właściciela.  
+`MEASUREITEMSTRUCT` Struktury informuje Windows wymiary elementu menu lub kontrolki rysowane przez właściciela.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -40,29 +40,29 @@ typedef struct tagMEASUREITEMSTRUCT {
 ```  
   
 #### <a name="parameters"></a>Parametry  
- `CtlType`  
- Zawiera typ formantu. Wartości dla typów kontroli są następujące:  
+ *CtlType*  
+ Zawiera typ formantu. Wartości dla typów formantów są następujące:  
   
-- **ODT_COMBOBOX** rysowania przez właściciela pole kombi  
+- Pole kombi rysowanego przez właściciela ODT_COMBOBOX  
   
-- **ODT_LISTBOX** rysowania przez właściciela pole listy  
+- Pole listy rysowane przez właściciela ODT_LISTBOX  
   
-- **ODT_MENU** rysowania przez właściciela menu  
+- ODT_MENU rysowanym przez właściciela menu  
   
- `CtlID`  
- Zawiera identyfikator kontrolki pola kombi, pole listy lub przycisku. Ten element członkowski nie jest używany do menu.  
+ *CtlID*  
+ Zawiera identyfikator formantu dla pola kombi, pole listy lub przycisku. Ten element członkowski nie jest używana do menu.  
   
- `itemID`  
- Zawiera identyfikator elementu menu dla menu lub identyfikator elementu pola listy zmiennej wysokości kombi lub pola listy. Ten element członkowski nie jest używany dla pola kombi wysokości pola listy lub przycisku.  
+ *Identyfikator elementu*  
+ Zawiera identyfikator elementu menu do menu lub identyfikator elementu pola listy, pola kombi o zmiennej wysokości lub pola listy. Ten element członkowski nie jest używana dla pola kombi wysokości lub pola listy lub dla przycisku.  
   
  *itemWidth*  
- Określa szerokość elementu menu. Właściciel elementu menu rysowania przez właściciela, należy podać ten element członkowski, przed zwróceniem z komunikatu.  
+ Określa szerokość elementu menu. Właściciel elementu menu rysowania przez właściciela należy podać ten element członkowski, przed zwróceniem z komunikatu.  
   
  *itemHeight*  
- Określa wysokość pojedynczego elementu w polu listy lub menu. Przed zwróceniem z komunikatu właściciela pole kombi rysowania przez właściciela pole listy lub elementu menu musisz wypełnić tego elementu członkowskiego. Maksymalna wysokość elementu pola listy wynosi 255.  
+ Określa wysokość pojedynczy element w polu listy lub menu. Przed zwróceniem z komunikatu właściciela pole kombi rysowanego przez właściciela pola listy i element menu musisz wypełnić tego elementu członkowskiego. Maksymalna wysokość elementu pola listy wynosi 255.  
   
- `itemData`  
- Pola kombi lub pola listy tego elementu członkowskiego zawiera wartość, która została przekazana do pola listy przez jedną z następujących czynności:  
+ *itemData*  
+ Pole kombi lub pola listy ten element członkowski zawiera wartość, która została przekazana do pola listy za pomocą jednej z następujących czynności:  
   
 - [CComboBox::AddString](../../mfc/reference/ccombobox-class.md#addstring)  
   
@@ -80,7 +80,7 @@ typedef struct tagMEASUREITEMSTRUCT {
   
 - [CMenu::ModifyMenu](../../mfc/reference/cmenu-class.md#modifymenu)  
   
- Dzięki temu system Windows, aby poprawnie przetworzyć interakcji z formantem. Nie można wypełnić odpowiednie elementy członkowskie w `MEASUREITEMSTRUCT` struktury spowoduje, że nieprawidłowej operacji formantu.  
+ Dzięki temu Windows poprawnie przetworzyć interakcji z użytkownikiem za pomocą kontrolki. Błąd występujący w odpowiednich elementów członkowskich `MEASUREITEMSTRUCT` struktury spowoduje, że nieprawidłowej operacji formantu.  
   
 ## <a name="requirements"></a>Wymagania  
  **Nagłówek:** winuser.h  

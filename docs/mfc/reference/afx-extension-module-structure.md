@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e741f172d0dfe528a166fad087460fd9ae18c0f3
-ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
+ms.openlocfilehash: 65f1f2a6416ef93395f7ec73b27a89bf44e2d885
+ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/26/2018
-ms.locfileid: "36951185"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37339387"
 ---
 # <a name="afxextensionmodule-structure"></a>AFX_EXTENSION_MODULE — Struktura
 `AFX_EXTENSION_MODULE` Jest używany podczas inicjowania biblioteki DLL rozszerzeń MFC do przechowywania stanu modułu MFC DLL rozszerzenia.  
@@ -41,28 +41,28 @@ struct AFX_EXTENSION_MODULE
   
 #### <a name="parameters"></a>Parametry  
  *bInitialized*  
- **Wartość TRUE,** Jeśli modułu DLL został zainicjowany z `AfxInitExtensionModule`.  
+ Wartość TRUE, jeśli moduł DLL została zainicjowana przy użyciu `AfxInitExtensionModule`.  
   
  *hModule*  
- Określa dojście modułu DLL.  
+ Określa uchwytu modułu DLL.  
   
  *hResource*  
- Określa dojście modułu DLL zasobów niestandardowych.  
+ Określa uchwytu modułu DLL zasobów niestandardowych.  
   
  *pFirstSharedClass*  
- Wskaźnik do informacji ( `CRuntimeClass` struktury) informacje o klasie czasu wykonywania z pierwszego modułu DLL. Służą do początku listy klas środowiska wykonawczego.  
+ Wskaźnik do informacji ( `CRuntimeClass` struktury) o pierwszej klasie czasu wykonywania modułu DLL. Służą do początku listy klas środowiska uruchomieniowego.  
   
  *pFirstSharedFactory*  
- Wskaźnik do pierwszego fabrykę obiektów modułu DLL ( `COleObjectFactory` obiektu). Służą do początku listy fabryki klasy.  
+ Wskaźnik do pierwszego fabryki obiektów modułu DLL ( `COleObjectFactory` obiektu). Służą do początku lista fabryk klas.  
   
 ## <a name="remarks"></a>Uwagi  
- Rozszerzenia MFC DLL należy wykonać dwie czynności w ich `DllMain` funkcji:  
+ Rozszerzenia MFC biblioteki DLL trzeba wykonać dwie czynności w ich `DllMain` funkcji:  
   
--   Wywołanie [afxinitextensionmodule —](extension-dll-macros.md#afxinitextensionmodule) i sprawdzić wartość zwrotną.  
+-   Wywołaj [afxinitextensionmodule —](extension-dll-macros.md#afxinitextensionmodule) i sprawdź wartość zwracaną.  
   
--   Utwórz `CDynLinkLibrary` obiektu, jeśli zostanie wyeksportowany plik DLL [CRuntimeClass](../../mfc/reference/cruntimeclass-structure.md) obiektów lub ma własne niestandardowe zasoby.  
+-   Tworzenie `CDynLinkLibrary` obiektu, jeśli biblioteka DLL będzie eksportowanie [CRuntimeClass](../../mfc/reference/cruntimeclass-structure.md) obiektów lub ma swoje własne niestandardowe zasoby.  
   
- `AFX_EXTENSION_MODULE` Struktura jest używana do przechowywania kopii rozszerzenia MFC DLL modułu Państwa, w tym kopiowania obiektów klasy środowiska uruchomieniowego, które zostały zainicjowane przez bibliotekę DLL rozszerzenia MFC jako część konstrukcji obiektu statycznego normalne wykonywany przed `DllMain` jest wprowadzona. Na przykład:  
+ `AFX_EXTENSION_MODULE` Struktury jest używany do przechowywania kopii rozszerzeń MFC DLL modułu stanu, w tym kopiowania obiektów klasy środowiska uruchomieniowego, które zostały zainicjowane przez rozszerzenia MFC biblioteki DLL jako część konstruowania normalnych obiektu statycznego wykonywane przed `DllMain` jest wprowadzony. Na przykład:  
   
  [!code-cpp[NVC_MFC_DLL#2](../../atl-mfc-shared/codesnippet/cpp/afx-extension-module-structure_1.cpp)]  
   

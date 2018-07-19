@@ -16,15 +16,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ec0fd88def88f7d31fce078fec0c860f4f21f51c
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: dcd02396fa76e9e68fce628783fb17bc6adab36e
+ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32356370"
+ms.lasthandoff: 07/05/2018
+ms.locfileid: "37848405"
 ---
 # <a name="messagehandler"></a>MessageHandler
-**MessageHandler** jest nazwą funkcji identyfikowane przez drugi parametr funkcji `MESSAGE_HANDLER` makra mapy wiadomości.  
+`MessageHandler` jest nazwą funkcji identyfikowane przez drugi parametr makra MESSAGE_HANDLER na mapie komunikatów.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -40,23 +40,23 @@ ms.locfileid: "32356370"
 ```  
   
 #### <a name="parameters"></a>Parametry  
- `uMsg`  
+ *uMsg*  
  Określa komunikat.  
   
- `wParam`  
+ *wParam*  
  Dodatkowe informacje specyficzne dla wiadomości.  
   
- `lParam`  
+ *lParam*  
  Dodatkowe informacje specyficzne dla wiadomości.  
   
- `bHandled`  
- Ustawia mapy komunikatów `bHandled` do **TRUE** przed `MessageHandler` jest wywoływana. Jeśli `MessageHandler` nie obsługuje pełni komunikatu, należy ją ustawić `bHandled` do **FALSE** wskazująca wiadomość wymaga dalsze przetwarzanie.  
+ *bHandled*  
+ Ustawia mapy wiadomości *bHandled* na wartość TRUE, przed `MessageHandler` jest wywoływana. Jeśli `MessageHandler` nie obsługuje w pełni komunikat, należy ją ustawić *bHandled* na wartość FAŁSZ, aby wiadomość wymaga dalszego przetwarzania.  
   
 ## <a name="return-value"></a>Wartość zwracana  
- Wynik przetwarzania komunikatów. 0 w przypadku powodzenia.  
+ Wynik przetwarzania wiadomości. 0, jeśli kończy się pomyślnie.  
   
 ## <a name="remarks"></a>Uwagi  
- Na przykład za pomocą tej obsługi wiadomości w mapie komunikatów, zobacz [MESSAGE_HANDLER](reference/message-map-macros-atl.md#message_handler).  
+ Aby uzyskać przykład korzystania z tej obsługi wiadomości w mapie komunikatów, zobacz [MESSAGE_HANDLER](reference/message-map-macros-atl.md#message_handler).  
   
 ## <a name="see-also"></a>Zobacz też  
  [Implementowanie okna](../atl/implementing-a-window.md)   

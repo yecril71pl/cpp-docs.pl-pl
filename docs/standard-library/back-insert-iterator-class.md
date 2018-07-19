@@ -20,16 +20,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: efd633fb4617a5058afd9bd55b40ccb4fbcee06e
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 6830baf3d474b80f2e7906a7aadd27d2eee27f9a
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33847689"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38958623"
 ---
 # <a name="backinsertiterator-class"></a>back_insert_iterator — Klasa
 
-Opisuje adapter iteratora, który spełnia wymagania iteratora danych wyjściowych. Wstawia (a nie zastępuje) elementy do tylnego końca sekwencji i w ten sposób zapewnia semantykę, która różni się od semantyki zastępowania, dostarczanej przez iteratory kontenerów sekwencji C++. `back_insert_iterator` Klasy jest którego ma zastosowany szablon na typ kontenera.
+Opisuje adapter iteratora, który spełnia wymagania iteratora danych wyjściowych. Wstawia (a nie zastępuje) elementy do tylnego końca sekwencji i w ten sposób zapewnia semantykę, która różni się od semantyki zastępowania, dostarczanej przez iteratory kontenerów sekwencji C++. `back_insert_iterator` Klasy jest szablonowana na typie kontenera.
 
 ## <a name="syntax"></a>Składnia
 
@@ -40,42 +40,42 @@ class back_insert_iterator;
 
 ### <a name="parameters"></a>Parametry
 
-`Container` Typ kontenera do tyłu elementy, które mają zostać wstawione przez `back_insert_iterator`.
+*Kontener* typ kontenera, na którego tył elementy mają zostać wstawione przez `back_insert_iterator`.
 
 ## <a name="remarks"></a>Uwagi
 
-Kontener musi spełniać wymagania dla sekwencji wstawiania na tył, gdzie jest możliwe wstawianie elementów na koniec sekwencji w amortyzowanym stałym czasie. Standardowa biblioteka C++ sekwencji kontenery zdefiniowane przez [deque — klasa](../standard-library/deque-class.md), [list — klasa](../standard-library/list-class.md) i [vector — klasa](../standard-library/vector-class.md) Podaj wymagane `push_back` funkcji członkowskiej i spełnia te wymagania. Te trzy kontenery, a także ciągi każdego można dostosować do użycia z `back_insert_iterator`s. A `back_insert_iterator` zawsze musi zostać zainicjowany z jego kontenera.
+Kontener musi spełniać wymagania dla sekwencji wstawiania na tył, gdzie jest możliwe wstawianie elementów na koniec sekwencji w amortyzowanym stałym czasie. Kontenery sekwencji standardowej biblioteki języka C++ zdefiniowane przez [klasę deque](../standard-library/deque-class.md), [list, klasa](../standard-library/list-class.md) i [vector, klasa](../standard-library/vector-class.md) zapewniają potrzebną `push_back` funkcja elementu członkowskiego i spełniają te wymagania. Te trzy kontenery, jak również ciągi, można dostosować za pomocą `back_insert_iterator`s. A `back_insert_iterator` zawsze musi zostać zainicjowany z jego kontenerem.
 
 ### <a name="constructors"></a>Konstruktorów
 
 |Konstruktor|Opis|
 |-|-|
-|[back_insert_iterator](#back_insert_iterator)|Konstruuje `back_insert_iterator` która wstawia elementy za ostatnim elementem w kontenerze.|
+|[back_insert_iterator](#back_insert_iterator)|Konstruuje `back_insert_iterator` który wstawia elementy za ostatnim elementem w kontenerze.|
 
 ### <a name="typedefs"></a>Typedefs
 
 |Nazwa typu|Opis|
 |-|-|
-|[container_type](#container_type)|Typ, który udostępnia kontener dla `back_insert_iterator`.|
+|[container_type](#container_type)|Typ, który zapewnia kontener dla `back_insert_iterator`.|
 |[Odwołanie](#reference)|Typ, który zawiera odwołanie do `back_insert_iterator`.|
 
 ### <a name="operators"></a>Operatory
 
 |Operator|Opis|
 |-|-|
-|[operator *](#op_star)|Operator usuwania odwołań używaną do zaimplementowania wyrażenia iteratora dane wyjściowe * `i`  =  `x` do tyłu wstawiania.|
+|[operator *](#op_star)|Operator dereferencji używany do implementowania wyrażenie iteratora wyjściowego * `i`  =  `x` dla wstawiania na tył.|
 |[operator++](#op_add_add)|Zwiększa `back_insert_iterator` do następnej lokalizacji, w której może być przechowywana wartość.|
-|[operator=](#op_eq)|Operator przypisania używaną do zaimplementowania wyrażenia iteratora dane wyjściowe * `i`  =  `x` do tyłu wstawiania.|
+|[operator=](#op_eq)|Operator przypisania używany do implementowania wyrażenie iteratora wyjściowego * `i`  =  `x` dla wstawiania na tył.|
 
 ## <a name="requirements"></a>Wymagania
 
-**Nagłówek**: \<iteratora >
+**Nagłówek**: \<iterator >
 
-**Namespace:** Standard
+**Namespace:** standardowe
 
 ## <a name="back_insert_iterator"></a>  back_insert_iterator::back_insert_iterator
 
-Konstruuje `back_insert_iterator` która wstawia elementy za ostatnim elementem w kontenerze.
+Konstruuje `back_insert_iterator` który wstawia elementy za ostatnim elementem w kontenerze.
 
 ```cpp
 explicit back_insert_iterator(Container& _Cont);
@@ -83,11 +83,11 @@ explicit back_insert_iterator(Container& _Cont);
 
 ### <a name="parameters"></a>Parametry
 
-`_Cont` Kontener który `back_insert_iterator` ma element do wstawienia.
+*_Cont* kontenera, `back_insert_iterator` jest Wstawianie elementu do.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-A `back_insert_iterator` kontenera parametru.
+Element `back_insert_iterator` dla kontenera parametru.
 
 ### <a name="example"></a>Przykład
 
@@ -139,7 +139,7 @@ After the insertions, the vector vec is: ( 1 2 3 40 50 600 700 ).
 
 ## <a name="container_type"></a>  back_insert_iterator::container_type
 
-Typ, który udostępnia kontener dla `back_insert_iterator`.
+Typ, który zapewnia kontener dla `back_insert_iterator`.
 
 ```cpp
 typedef Container
@@ -148,7 +148,7 @@ container_type;
 
 ### <a name="remarks"></a>Uwagi
 
-Typ jest synonimem parametru szablonu **kontenera**.
+Typ jest synonimem dla parametru szablonu **kontenera**.
 
 ### <a name="example"></a>Przykład
 
@@ -193,7 +193,7 @@ After the insertion, the vector is: ( 1 2 3 40 ).
 
 ## <a name="op_star"></a>  back_insert_iterator::operator *
 
-Operator usuwania odwołań używaną do zaimplementowania wyrażenia iteratora dane wyjściowe \* *i* = *x*.
+Operator dereferencji używany do implementowania wyrażenia iteratora danych wyjściowych \* *i* = *x*.
 
 ```cpp
 back_insert_iterator<Container>& operator*();
@@ -205,7 +205,7 @@ Odwołanie do elementu dodaje tyłu kontenera.
 
 ### <a name="remarks"></a>Uwagi
 
-Używane do implementowania wyrażenia iteratora dane wyjściowe  **\*Iter** = **wartość**. Jeśli **Iter** jest iteratora, którego dotyczy elementu w sekwencji, następnie  **\*Iter** = **wartość** zamienia wartość tego elementu, a nie Zmień łączna liczba elementów w sekwencji.
+Używany do implementowania wyrażenia iteratora danych wyjściowych  **\*Iter** = **wartość**. Jeśli **Iter** jest iterator odnoszący się do elementu w sekwencji, następnie  **\*Iter** = **wartość** zamienia wartość tego elementu, a nie jest Zmień całkowitą liczbę elementów w sekwencji.
 
 ### <a name="example"></a>Przykład
 
@@ -266,7 +266,7 @@ A `back_insert_iterator` adresowania następnej lokalizacji, w której może by�
 
 ### <a name="remarks"></a>Uwagi
 
-Operatory zarówno preincrementation i postincrementation zwracać ten sam rezultat.
+Operatory preincrementation i postincrementation zwracać ten sam wynik.
 
 ### <a name="example"></a>Przykład
 
@@ -314,7 +314,7 @@ After the insertions, the vector vec becomes: ( 10 20 30 40 ).
 
 ## <a name="op_eq"></a>  back_insert_iterator::operator =
 
-Dołącza lub wypychanie wartości na zaplecza kontenera.
+Dołącza lub wypychanie wartości na zapleczu kontenera.
 
 ```cpp
 back_insert_iterator<Container>& operator=(typename Container::const_reference val);
@@ -323,7 +323,7 @@ back_insert_iterator<Container>& operator=(typename Container::value_type&& val)
 
 ### <a name="parameters"></a>Parametry
 
-`val` Wartość, która ma zostać wstawiony do kontenera.
+*Val* wartość ma zostać wstawiony do kontenera.
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -333,11 +333,11 @@ Odwołanie do ostatniego elementu dodaje tyłu kontenera.
 
 Oblicza pierwszy operator członkowski `Container.push_back( val)`,
 
-Zwraca `*this`. Oblicza drugi operator elementu członkowskiego
+Następnie zwraca `*this`. Drugi operator składowej daje w wyniku
 
 `container->push_back((typename Container::value_type&&)val)`,
 
-Zwraca `*this`.
+Następnie zwraca `*this`.
 
 ### <a name="example"></a>Przykład
 
@@ -388,7 +388,7 @@ typedef typename Container::reference reference;
 
 ### <a name="remarks"></a>Uwagi
 
-Typ w tym artykule opisano odwołanie do elementu sekwencji kontrolowane przez skojarzony kontenera.
+Typ opisuje odwołanie do elementu sekwencji kontrolowanej przez skojarzony kontener.
 
 ### <a name="example"></a>Przykład
 

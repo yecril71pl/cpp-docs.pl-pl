@@ -16,15 +16,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 12161938f96e5044ae48f9eb5cf380fbc3840d3f
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: cf9a6e6a1397b9361df5372af09be8e61d997e62
+ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33369521"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37337817"
 ---
 # <a name="minmaxinfo-structure"></a>Struktura MINMAXINFO
-`MINMAXINFO` Struktura zawiera informacje o zmaksymalizowane rozmiaru okna i pozycji i rozmiaru śledzenia minimalną i maksymalną.  
+`MINMAXINFO` Struktura zawiera informacje dotyczące rozmiaru w trybie zmaksymalizowanym okna i położenie i rozmiar jego śledzenia minimalną i maksymalną.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -40,16 +40,16 @@ typedef struct tagMINMAXINFO {
   
 #### <a name="parameters"></a>Parametry  
  *ptReserved*  
- Zarezerwowany do użytku wewnętrznego.  
+ Zarezerwowane do użytku wewnętrznego.  
   
  *ptMaxSize*  
- Określa maksymalną szerokość (point.x) i w trybie zmaksymalizowanym wysokość okna (point.y).  
+ Określa maksymalną szerokość (point.x) i w trybie zmaksymalizowanym wysokość (point.y) okna.  
   
- `ptMaxPosition`  
- Określa położenie lewej zmaksymalizowane okno (point.x) i umieść je u góry okna w trybie zmaksymalizowanym (point.y).  
+ *ptMaxPosition*  
+ Określa położenie po lewej stronie zmaksymalizowane okno (point.x) oraz pozycji w górnej części zmaksymalizowane okno (point.y).  
   
  *ptMinTrackSize*  
- Określa minimalną szerokość (point.x) śledzenia i minimalna wysokość (point.y) okna śledzenia.  
+ Określa co najmniej śledzenia szerokość (point.x) i minimalna wysokość (point.y) okna śledzenia.  
   
  *ptMaxTrackSize*  
  Określa maksymalną szerokość (point.x) śledzenia i maksymalną wysokość (point.y) okna śledzenia.  

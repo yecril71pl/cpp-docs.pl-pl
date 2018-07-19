@@ -16,43 +16,43 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 28a82cc55e1cbf782603c7b34368fbc3d4ebe4c4
-ms.sourcegitcommit: be0e3457f2884551f18e183ef0ea65c3ded7f689
+ms.openlocfilehash: 015dce59058f776269c3c793b195a323eae2f652
+ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/28/2018
-ms.locfileid: "37079205"
+ms.lasthandoff: 07/05/2018
+ms.locfileid: "37850605"
 ---
 # <a name="connection-maps"></a>Mapy połączeń
-Formanty OLE są możliwe do udostępnienia interfejsy do innych aplikacji. Te interfejsy umożliwiają dostęp z kontenera tylko do tego formantu. Jeśli formant OLE chce uzyskać dostępu do zewnętrznych interfejsów innych obiektów OLE, należy ustanowić punktu połączenia. Punkt połączenia z tym zapewnia kontrolę wychodzący dostęp do mapy wysyłania zewnętrznych, takich jak mapy zdarzeń lub funkcji powiadomień.  
+Formanty OLE będą mogli uwidacznia interfejsów do innych aplikacji. Te interfejsy zezwalanie na dostęp tylko z kontenera do tego formantu. Jeśli kontrolkę OLE chce uzyskać dostęp zewnętrzne interfejsy innymi obiektami OLE, należy ustanowić punktu połączenia. Punkt połączenia z tym umożliwia wychodzący dostęp do mapy wysyłania zewnętrznych, takich jak mapy zdarzeń lub funkcje powiadomień formantu.  
   
- Microsoft Foundation Class Library zapewnia model programowania, który obsługuje punkty połączenia. W tym modelu "połączenia mapuje" służą do wyznaczenia interfejsów lub punkty połączenia OLE formantu. Mapy połączeń zawierać jedno makro dla każdego punktu połączenia. Aby uzyskać więcej informacji na mapy połączeń, zobacz [CConnectionPoint](../../mfc/reference/cconnectionpoint-class.md) klasy.  
+ Biblioteki klas Microsoft Foundation udostępnia model programowania, który obsługuje punkty połączenia. W tym modelu "połączenia mapuje" są używane do wyznaczenia interfejsy lub punkty połączenia do sterowania OLE. Mapy połączeń zawierają jeden makra dla każdego punktu połączenia. Aby uzyskać więcej informacji na temat mapy połączeń, zobacz [CConnectionPoint](../../mfc/reference/cconnectionpoint-class.md) klasy.  
   
- Zwykle formantu zostanie obsługują tylko dwa punkty połączeń: jeden dla zdarzeń i jeden dla właściwości powiadomienia. Są one zaimplementowane przez `COleControl` klasa podstawowa i wymagane żadne dodatkowe czynności przez moduł zapisujący formantu. Wszystkie punkty połączenia dodatkowe, które mają do zaimplementowania w klasie, należy dodać ręcznie. Aby obsługiwać mapy połączeń i punkty, MFC zapewnia następujące makra:  
+ Zazwyczaj formant będzie obsługiwać tylko dwa punkty połączeń: jeden dla zdarzeń i jeden dla właściwości powiadomień. Są one zaimplementowane przez `COleControl` klasy bazowej i wymagane żadne dodatkowe czynności przez moduł zapisujący kontroli. Potrzebne do zaimplementowania w klasie punkty dodatkowych połączeń, należy dodać ręcznie. Aby zapewnić obsługę mapy połączeń i punktów, biblioteka MFC zawiera następujące makra:  
   
 ### <a name="connection-map-declaration-and-demarcation"></a>Połączenie mapy deklaracja i odgraniczenie  
   
 |||  
 |-|-|  
-|[BEGIN_CONNECTION_PART —](#begin_connection_part)|Deklaruje osadzonych klasy, która implementuje punkt połączenia dodatkowe (należy użyć w deklaracji klasy).|  
-|[END_CONNECTION_PART —](#end_connection_part)|Kończy się deklarację punktu połączenia (należy użyć w deklaracji klasy).|  
-|[CONNECTION_IID —](#connection_iid)|Określa identyfikator interfejsu punktu połączenia formantu.|  
-|[DECLARE_CONNECTION_MAP —](#declare_connection_map)|Deklaruje, że mapa połączenia będą używane w klasie (należy użyć w deklaracji klasy).|  
-|[BEGIN_CONNECTION_MAP —](#begin_connection_map)|Rozpoczyna się definicję planu połączenia (musi być zastosowany w implementacji klasy).|  
-|[END_CONNECTION_MAP —](#end_connection_map)|Kończy definicję planu połączenia (musi być zastosowany w implementacji klasy).|  
-|[CONNECTION_PART —](#connection_part)|Określa punkt połączenia w mapie połączenia formantu.|  
+|[BEGIN_CONNECTION_PART](#begin_connection_part)|Deklaruje osadzone klasę, która implementuje punkt połączenia dodatkowe (muszą być używane w deklaracji klasy).|  
+|[END_CONNECTION_PART](#end_connection_part)|Kończy się deklarację punktu połączenia (muszą być używane w deklaracji klasy).|  
+|[CONNECTION_IID](#connection_iid)|Określa identyfikator interfejsu punktu połączenia formantu.|  
+|[DECLARE_CONNECTION_MAP](#declare_connection_map)|Deklaruje, że mapę połączenia będą używane w klasie (muszą być używane w deklaracji klasy).|  
+|[BEGIN_CONNECTION_MAP](#begin_connection_map)|Rozpoczyna się definicji mapy połączeń (muszą być używane w implementacji klasy).|  
+|[END_CONNECTION_MAP](#end_connection_map)|Kończy definicję mapy połączeń (muszą być używane w implementacji klasy).|  
+|[CONNECTION_PART](#connection_part)|Określa punkt połączenia w mapie połączenia formantu.|  
   
- Następujące funkcje pomagają zbiorniku ustanawiania i rozłączanie połączenia przy użyciu punkty połączeń:  
+ Następujące funkcje pomagają obiekt sink w tworzeniu i rozłączanie połączenia za pomocą punktów połączenia:  
   
-### <a name="initializationtermination-of-connection-points"></a>Inicjowanie/Zakończenie punktów połączenia  
+### <a name="initializationtermination-of-connection-points"></a>Inicjowanie/zakończeniem punktów połączenia  
   
 |||  
 |-|-|  
-|[Afxconnectionadvise —](#afxconnectionadvise)|Ustanawia połączenie między źródłem i odbioru.|  
-|[Afxconnectionunadvise —](#afxconnectionunadvise)|Przerywa połączenie między źródłem i odbioru.|  
+|[Afxconnectionadvise —](#afxconnectionadvise)|Ustanawia połączenie między źródłem i ujścia.|  
+|[Afxconnectionunadvise —](#afxconnectionunadvise)|Przerywa połączenie między źródła i ujścia.|  
   
-##  <a name="begin_connection_part"></a>  BEGIN_CONNECTION_PART —  
- Użyj `BEGIN_CONNECTION_PART` makra, aby rozpocząć definicji punkty połączenia dodatkowych poza punkty połączenia powiadomień zdarzeń i właściwości.  
+##  <a name="begin_connection_part"></a>  BEGIN_CONNECTION_PART  
+ Aby rozpocząć definicji punktów dodatkowego połączenia po przekroczeniu punkty połączenia powiadomień zdarzeń i właściwości, należy użyć BEGIN_CONNECTION_PART — makro.  
   
 ```   
 BEGIN_CONNECTION_PART(theClass, localClass)   
@@ -60,19 +60,19 @@ BEGIN_CONNECTION_PART(theClass, localClass)
   
 ### <a name="parameters"></a>Parametry  
  *theClass*  
- Określa, że nazwa klasy formantu, którego połączenie punktu to jest.  
+ Określa, że nazwa klasy kontrolki, którego połączenie punktu to.  
   
  *localClass*  
  Określa nazwę klasy lokalnej, która implementuje punkt połączenia.  
   
 ### <a name="remarks"></a>Uwagi  
- W pliku deklaracji (.h), który definiuje funkcje Członkowskie dla klasy Uruchom punkt połączenia z begin_connection_part — makro, a następnie dodaj connection_iid — makro i innych funkcji elementów członkowskich, które chcesz wdrożyć, a zakończenia połączenia Mapa punktu z end_connection_part — makro.  
+ W pliku deklaracji (.h), który definiuje funkcji elementów członkowskich dla swojej klasy Uruchom punkt połączenia z BEGIN_CONNECTION_PART — makro, a następnie dodaj CONNECTION_IID — makro i innych funkcji Członkowskich, które chcesz wdrożyć i zakończyć połączenie z punkt mapy za pomocą END_CONNECTION_PART — makro.  
   
 ### <a name="requirements"></a>Wymagania  
   **Nagłówek** afxdisp.h  
   
-##  <a name="end_connection_part"></a>  END_CONNECTION_PART —  
- Kończy się deklaracja punktu połączenia.  
+##  <a name="end_connection_part"></a>  END_CONNECTION_PART  
+ Kończy się deklarację punktu połączenia.  
   
 ```   
 END_CONNECTION_PART(localClass)   
@@ -85,19 +85,19 @@ END_CONNECTION_PART(localClass)
 ### <a name="requirements"></a>Wymagania  
   **Nagłówek** afxdisp.h  
   
-##  <a name="connection_iid"></a>  CONNECTION_IID —  
- Umożliwia między begin_connection_part — a end_connection_part — makra zdefiniować identyfikator interfejsu punktu połączenia obsługiwane przez formant OLE.  
+##  <a name="connection_iid"></a>  CONNECTION_IID  
+ Aby korzystać z między BEGIN_CONNECTION_PART i END_CONNECTION_PART makra zdefiniować identyfikator interfejsu punktu połączenia obsługiwane przez Twoją kontrolą OLE.  
   
 ```   
 CONNECTION_IID(iid)   
 ```  
   
 ### <a name="parameters"></a>Parametry  
- *identyfikator IID*  
- Identyfikator interfejsu interfejsu wywoływane przez punkt połączenia.  
+ *IID*  
+ Identyfikator interfejsu interfejs o nazwie przez punkt połączenia.  
   
 ### <a name="remarks"></a>Uwagi  
- *Iid* argument jest interfejsem identyfikator używany do identyfikowania interfejs, który punkt połączenia będzie zwracać się o jego połączonych obiektach sink. Na przykład:  
+ *Iid* argument jest interfejsem identyfikator używany do identyfikowania interfejsu, który punkt połączenia będzie wybierany na swoich połączonych ujścia. Na przykład:  
   
  [!code-cpp[NVC_MFCConnectionPoints#10](../../mfc/codesnippet/cpp/connection-maps_1.h)]  
   
@@ -106,21 +106,21 @@ CONNECTION_IID(iid)
 ### <a name="requirements"></a>Wymagania  
   **Nagłówek** afxdisp.h  
   
-##  <a name="declare_connection_map"></a>  DECLARE_CONNECTION_MAP —  
- Każdy `COleControl`-klasy pochodnej w programie zapewniają Mapa połączenia podaj punkty połączenia dodatkowe, które obsługuje formantu.  
+##  <a name="declare_connection_map"></a>  DECLARE_CONNECTION_MAP  
+ Każdy `COleControl`-klasy pochodnej w programie może zapewnić mapy połączenia w celu określenia punktów dodatkowe połączenie, które obsługuje formant.  
   
 ```   
 DECLARE_CONNECTION_MAP() 
 ```  
   
 ### <a name="remarks"></a>Uwagi  
- W przypadku formantu obsługuje dodatkowe punkty, użyj declare_connection_map — makro końca z deklaracji klasy. Następnie w pliku .cpp, który definiuje funkcji elementów członkowskich klasy, za pomocą begin_connection_map — makro connection_part — makra dla każdego z punktów połączenia formantu i end_connection_map — makro zadeklarować koniec mapy połączenia.  
+ Jeśli formant obsługuje dodatkowe punkty, należy użyć DECLARE_CONNECTION_MAP — makro na końcu deklaracją klasy. Następnie plik .cpp, w którym zdefiniowano funkcji elementów członkowskich klasy, użyj BEGIN_CONNECTION_MAP — makro, CONNECTION_PART makra dla każdego formantu punkty połączenia i END_CONNECTION_MAP — makro do deklarowania koniec mapy połączeń.  
   
 ### <a name="requirements"></a>Wymagania  
   **Nagłówek** afxdisp.h  
   
-##  <a name="begin_connection_map"></a>  BEGIN_CONNECTION_MAP —  
- Każdy `COleControl`-klasy pochodnej w programie zapewniają mapy połączenia w celu określenia punktów połączenia, które będą obsługiwać formantu.  
+##  <a name="begin_connection_map"></a>  BEGIN_CONNECTION_MAP  
+ Każdy `COleControl`-klasy pochodnej w programie może zapewnić mapę połączenia, aby określić punkty połączenia obsługiwane przez kontrolkę.  
   
 ```   
 BEGIN_CONNECTION_MAP(theClass, theBase)   
@@ -128,19 +128,19 @@ BEGIN_CONNECTION_MAP(theClass, theBase)
   
 ### <a name="parameters"></a>Parametry  
  *theClass*  
- Określa nazwę klasy formantu, którego połączenie mapowania.  
+ Określa, że nazwa klasy kontrolki Mapuj którego połączenie.  
   
  *theBase*  
- Określa nazwę klasy podstawowej *theClass*.  
+ Określa nazwę klasy bazowej *theClass*.  
   
 ### <a name="remarks"></a>Uwagi  
- W implementacji (. Funkcje pliku CPP), który definiuje element członkowski dla klasy, rozpoczynać mapy połączenia begin_connection_map — makro, a następnie dodaj makro wpisy dla wszystkich punktów połączenia przy użyciu [connection_part —](#connection_part) makra. Na koniec Ukończ Mapa połączenia z [end_connection_map —](#end_connection_map) makra.  
+ W implementacji (. Plik CPP), który definiuje składową funkcje dla swojej klasy, rozpoczynać mapy połączeń BEGIN_CONNECTION_MAP — makro, a następnie dodać wpisy makra dla każdego z punktów połączenia przy użyciu [CONNECTION_PART](#connection_part) makra. Na koniec Ukończ mapy połączenia za pomocą [END_CONNECTION_MAP](#end_connection_map) makra.  
   
 ### <a name="requirements"></a>Wymagania  
   **Nagłówek** afxdisp.h  
   
-##  <a name="end_connection_map"></a>  END_CONNECTION_MAP —  
- Kończy definicję mapy połączenia.  
+##  <a name="end_connection_map"></a>  END_CONNECTION_MAP  
+ Kończy definicję mapy połączeń.  
   
 ```   
 END_CONNECTION_MAP()  
@@ -149,8 +149,8 @@ END_CONNECTION_MAP()
 ### <a name="requirements"></a>Wymagania  
   **Nagłówek** afxdisp.h  
   
-##  <a name="connection_part"></a>  CONNECTION_PART —  
- Mapuje punktu połączenia dla formantu OLE na identyfikator określonego interfejsu.  
+##  <a name="connection_part"></a>  CONNECTION_PART  
+ Mapowany punkt połączenia dla kontrolki OLE identyfikatora dla określonego interfejsu.  
   
 ```   
 CONNECTION_PART(theClass, iid, localClass)   
@@ -158,10 +158,10 @@ CONNECTION_PART(theClass, iid, localClass)
   
 ### <a name="parameters"></a>Parametry  
  *theClass*  
- Określa, że nazwa klasy formantu, którego połączenie punktu to jest.  
+ Określa, że nazwa klasy kontrolki, którego połączenie punktu to.  
   
- *identyfikator IID*  
- Identyfikator interfejsu interfejsu wywoływane przez punkt połączenia.  
+ *IID*  
+ Identyfikator interfejsu interfejs o nazwie przez punkt połączenia.  
   
  *localClass*  
  Określa nazwę klasy lokalnej, która implementuje punkt połączenia.  
@@ -171,13 +171,13 @@ CONNECTION_PART(theClass, iid, localClass)
   
  [!code-cpp[NVC_MFCConnectionPoints#2](../../mfc/codesnippet/cpp/connection-maps_2.cpp)]  
   
- mapy połączenia z punktem połączenia, który wywołuje implementuje `IID_ISinkInterface` interfejsu.  
+ implementuje mapę połączenia z punktem połączenia, który wywołuje `IID_ISinkInterface` interfejsu.  
   
 ### <a name="requirements"></a>Wymagania  
   **Nagłówek** afxdisp.h  
   
 ##  <a name="afxconnectionadvise"></a>  Afxconnectionadvise —  
- Wywołaj tę funkcję, aby nawiązać połączenie między źródłem, określony przez *pUnkSrc*i odbiorczy, określony przez *pUnkSink*.  
+ Wywołaj tę funkcję, aby nawiązać połączenie między źródłem określony przez *pUnkSrc*, jak i ujście, określony przez *pUnkSink*.  
   
 ```   
 BOOL AFXAPI AfxConnectionAdvise(
@@ -195,17 +195,17 @@ BOOL AFXAPI AfxConnectionAdvise(
  *pUnkSink*  
  Wskaźnik do obiektu, który implementuje interfejs.  
   
- *identyfikator IID*  
+ *IID*  
  Identyfikator interfejsu połączenia.  
   
  *bRefCount*  
- **Wartość TRUE,** wskazuje, że tworzenie połączenie powinno powodować liczebności referencyjnej równej *pUnkSink* do jest zwiększany. **FALSE** wskazuje liczbę odwołań nie powinny być zwiększane.  
+ Wartość TRUE wskazuje, czy tworzy się połączenie powinno spowodować, że licznik odwołań *pUnkSink* rośnie. Wartość FALSE wskazuje, że licznik odwołań nie powinien być zwiększane.  
   
  *pdwCookie*  
- Wskaźnik do `DWORD` gdy zwracany jest identyfikator połączenia. Ta wartość powinien zostać przekazany jako *dwCookie* parametr `AfxConnectionUnadvise` podczas rozłączanie połączenia.  
+ Wskaźnik do DWORD, gdy zwracany jest identyfikator połączenia. Ta wartość ma być przekazywany jako *dwCookie* parametr `AfxConnectionUnadvise` podczas rozłączania połączenia.  
   
 ### <a name="return-value"></a>Wartość zwracana  
- Różna od zera, jeśli połączenie zostało nawiązane; w przeciwnym razie 0.  
+ Wartość różną od zera, jeśli połączenie zostało nawiązane; w przeciwnym razie 0.  
   
 ### <a name="example"></a>Przykład  
  [!code-cpp[NVC_MFCConnectionPoints#8](../../mfc/codesnippet/cpp/connection-maps_3.cpp)]  
@@ -214,7 +214,7 @@ BOOL AFXAPI AfxConnectionAdvise(
  **Nagłówek:** afxctl.h 
 
 ##  <a name="afxconnectionunadvise"></a>  Afxconnectionunadvise —  
- Wywołaj tę funkcję, aby rozłączyć połączenie między źródłem, określony przez *pUnkSrc*i odbiorczy, określony przez *pUnkSink*.  
+ Wywołaj tę funkcję, aby rozłączyć połączenie między źródłem określony przez *pUnkSrc*, jak i ujście, określony przez *pUnkSink*.  
   
 ```   
 BOOL AFXAPI AfxConnectionUnadvise(
@@ -232,17 +232,17 @@ BOOL AFXAPI AfxConnectionUnadvise(
  *pUnkSink*  
  Wskaźnik do obiektu, który implementuje interfejs.  
   
- *identyfikator IID*  
+ *IID*  
  Interfejs identyfikator interfejsu punktu połączenia.  
   
  *bRefCount*  
- **Wartość TRUE,** wskazuje, że rozłączanie połączenia powinno powodować liczebności referencyjnej równej *pUnkSink* być zmniejszany. **FALSE** wskazuje, że liczba odwołań nie powinny być zmniejszany.  
+ Wartość TRUE wskazuje, że rozłączanie połączenia powinno spowodować, że licznik odwołań *pUnkSink* do zmniejszenia. Wartość FALSE wskazuje, że licznik odwołań nie powinny być zmniejszony.  
   
  *dwCookie*  
- Identyfikator połączenia zwrócony przez `AfxConnectionAdvise`.  
+ Identyfikator połączenia, zwracany przez `AfxConnectionAdvise`.  
   
 ### <a name="return-value"></a>Wartość zwracana  
- Różna od zera, jeśli połączenie zostało rozłączone; w przeciwnym razie 0.  
+ Wartość różną od zera, jeśli połączenie zostało rozłączone; w przeciwnym razie 0.  
   
 ### <a name="example"></a>Przykład  
  [!code-cpp[NVC_MFCConnectionPoints#9](../../mfc/codesnippet/cpp/connection-maps_4.cpp)]  

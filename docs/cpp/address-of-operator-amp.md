@@ -18,11 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: df243cac3b48a120345760f814a97b77667c770f
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 144e770a90427d12d79a18c346d74140d07c5c5c
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38958588"
 ---
 # <a name="address-of-operator-amp"></a>Operator Address-of: &amp;
 ## <a name="syntax"></a>Składnia  
@@ -32,20 +33,20 @@ ms.lasthandoff: 05/03/2018
 ```  
   
 ## <a name="remarks"></a>Uwagi  
- Jednoargumentowy operator address-of (**&**) ma adres jej argument. Argument operacji operatora adresu można oznaczeniem funkcji lub l wartość, która określa obiekt, który nie jest polem bitowym.  
+ Jednoargumentowy operator address-of (**&**) przyjmuje adres jego operandu. Operand operatora address-of może być określeniem funkcji lub l wartość opisująca obiekt, który nie jest polem bitowym.  
   
- Operator address-of można stosować tylko do zmiennych z podstawowych, struktury, klasy, lub jako typami Unii, które są zadeklarowane na poziomie zakresu plików lub do odwołań do tablicy. W tych wyrażeń wyrażenie stałe, która nie zawiera operator address-of może być dodania lub odjęcia wyrażenia adresu.  
+ Operator address-of można stosować tylko do zmiennych o strukturze podstawowych, klasy lub typy Unii, które są zadeklarowane na poziomie zakresu pliku lub do indeksowanych odwołań do tablic. W tych wyrażeniach wyrażenie stałe, które nie zawiera operatora address-of można dodać do lub odjęte od wyrażenia adresu.  
   
- Po zastosowaniu funkcji lub wartości l, wynikiem wyrażenia jest typem wskaźnika (r) pochodzi od typu argumentu. Na przykład, jeśli argument jest typu `char`, wynikiem wyrażenia jest typ wskaźnika do `char`. Operator address-of, dotyczą **const** lub `volatile` obiektów, daje w wyniku **const** `type` **\*** lub `volatile` `type` **\***, gdzie `type` jest typem obiektu oryginalnego.  
+ Po zastosowaniu do funkcji lub l wartości, wynikiem wyrażenia typu wskaźnika (r) pochodzi od typu operand. Na przykład, jeśli argument jest typu **char**, wynikiem wyrażenia jest typ wskaźnika do **char**. Operator address-of, dotyczą **const** lub **volatile** obiektów, daje w wyniku **typ const \***  lub **typ volatile \*** , gdzie **typu** jest typem obiektu oryginalnego.  
   
- Gdy operator address-of jest stosowany do [kwalifikowana nazwa](http://msdn.microsoft.com/en-us/3fefb16d-8120-4627-8b3f-3d90fbdcd1df), wynik jest zależny od tego, czy *nazwa kwalifikowana* określa statycznego elementu członkowskiego. Jeśli tak, wynik ma postać wskaźnika na typ określony w deklaracji elementu członkowskiego. Jeśli element członkowski nie jest statyczny, wynikiem jest wskaźnik do elementu członkowskiego *nazwa* klasy oznaczona *klasy nazwy kwalifikowanej*. (Zobacz [wyrażenia podstawowe](../cpp/primary-expressions.md) więcej informacji o *klasy nazwy kwalifikowanej*.) Poniższy fragment kodu przedstawia, jak wynik różni się w zależności od tego, czy element członkowski jest statyczny:  
+ Po zastosowaniu operatora address-of kwalifikowaną nazwę, wynik zależy od tego, czy *kwalifikowana nazwa* określa statyczny element członkowski. Jeśli tak, wynik jest wskaźnikiem do typu określonego w deklaracji elementu członkowskiego. Jeśli element członkowski nie jest statyczna, wynik jest wskaźnikiem do elementu członkowskiego *nazwa* klasy wskazanego przez *kwalifikowana class-name*. (Zobacz [wyrażenia podstawowe](../cpp/primary-expressions.md) więcej informacji na temat *kwalifikowana class-name*.) Poniższy fragment kodu przedstawia, jak wynik różnią się zależnie od tego, czy jest statyczny element członkowski:  
   
-```  
+```cpp 
 // expre_Address_Of_Operator.cpp  
 // C2440 expected  
 class PTM {  
 public:  
-           int   iValue;  
+    int iValue;  
     static float fValue;  
 };  
   
@@ -56,15 +57,15 @@ int main() {
 }  
 ```  
   
- W tym przykładzie wyrażenie `&PTM::fValue` daje typu `float *` zamiast typu `float PTM::*` ponieważ `fValue` jest statycznym elementem członkowskim.  
+ W tym przykładzie wyrażenie `&PTM::fValue` daje typu `float *` zamiast typu `float PTM::*` ponieważ `fValue` jest składową statyczną.  
   
- Adres przeciążonej funkcji mogą być wykonywane tylko wtedy, gdy jest wyczyszczone, w którą wersję funkcji wystąpiło odwołanie do. Zobacz [przeciążanie funkcji](function-overloading.md) informacji o sposobie uzyskania adresu określonego przeciążonej funkcji.  
+ Adres przeciążonej funkcji mogą być wykonywane tylko wtedy, gdy jest to oczywiste, jest ono przywoływane wersji funkcji. Zobacz [przeciążanie funkcji](function-overloading.md) informacji o tym, jak w celu uzyskania adresu określonego przeciążonej funkcji.  
   
- Zastosowanie operator address-of na typ referencyjny daje takiego samego wyniku jako operator odnoszący się do obiektu, z którym związane są odwołania. Na przykład:  
+ Zastosowanie operatora address-of do typu odwołania daje ten sam wynik w postaci zastosowania operatora do obiektu, z którym związane są odwołania. Na przykład:  
   
 ## <a name="example"></a>Przykład  
   
-```  
+```cpp 
 // expre_Address_Of_Operator2.cpp  
 // compile with: /EHsc  
 #include <iostream>  
@@ -85,9 +86,9 @@ int main() {
 &d equals &rd  
 ```  
   
- W poniższym przykładzie użyto operator address-of do przekazania argumentu będącego wskaźnikiem do funkcji:  
+ W poniższym przykładzie użyto operatora address-of, aby przekazać argumentu będącego wskaźnikiem do funkcji:  
   
-```  
+```cpp 
 // expre_Address_Of_Operator3.cpp  
 // compile with: /EHsc  
 // Demonstrate address-of operator &  
@@ -114,6 +115,6 @@ int main() {
   
 ## <a name="see-also"></a>Zobacz też  
  [Wyrażenia z operatorami Jednoargumentowymi](../cpp/expressions-with-unary-operators.md)   
- [Operatory C++ wbudowanych, priorytet i łączność](../cpp/cpp-built-in-operators-precedence-and-associativity.md)   
+ [C++ wbudowane operatory, pierwszeństwo i kojarzenie](../cpp/cpp-built-in-operators-precedence-and-associativity.md)   
  [Deklarator odwołania do wartości: &](../cpp/lvalue-reference-declarator-amp.md)   
  [Operatory pośrednie i „Address-of”](../c-language/indirection-and-address-of-operators.md)

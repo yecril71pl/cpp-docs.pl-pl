@@ -9,12 +9,12 @@ f1_keywords:
 - string/std::u32string
 - string/std::wstring
 ms.assetid: fdca01e9-f2f1-4b59-abda-0093d760b3cc
-ms.openlocfilehash: 2d3f63ab29049e5f5a928186ba033bfe041bcfc1
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 5747d511777ae6f1f32d8e93bb6ee90bd0193bf9
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33860622"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38959982"
 ---
 # <a name="ltstringgt-typedefs"></a>&lt;ciąg&gt; definicje typów
 
@@ -23,9 +23,9 @@ ms.locfileid: "33860622"
 |[string](#string)|[u16string](#u16string)|[u32string](#u32string)|
 |[wstring](#wstring)|
 
-## <a name="string"></a>  Ciąg
+## <a name="string"></a>  ciąg
 
-Typ, który opisuje specjalizacji szablonu klasy [basic_string —](../standard-library/basic-string-class.md) elementami typu `char`.
+Typ, który opisuje specjalizacji szablonu klasy [basic_string](../standard-library/basic-string-class.md) elementami typu **char**.
 
 Inne definicje typów, które specialize `basic_string` obejmują [wstring](../standard-library/string-typedefs.md#wstring), [u16string](../standard-library/string-typedefs.md#u16string), i [u32string](../standard-library/string-typedefs.md#u32string).
 
@@ -35,7 +35,7 @@ typedef basic_string<char, char_traits<char>, allocator<char>> string;
 
 ### <a name="remarks"></a>Uwagi
 
-Deklaracje równoważne są następujące:
+Równoważne deklaracji są następujące:
 
 ```cpp
 string str("");
@@ -43,11 +43,11 @@ string str("");
 basic_string<char> str("");
 ```
 
-Lista konstruktorów ciągu, zobacz [basic_string::basic_string](../standard-library/basic-string-class.md#basic_string).
+Aby uzyskać listę parametrów konstruktorów, zobacz [basic_string::basic_string](../standard-library/basic-string-class.md#basic_string).
 
 ## <a name="u16string"></a>  u16string
 
-Typ, który opisuje specjalizacji szablonu klasy [basic_string —](../standard-library/basic-string-class.md) elementami typu `char16_t`.
+Typ, który opisuje specjalizacji szablonu klasy [basic_string](../standard-library/basic-string-class.md) elementami typu `char16_t`.
 
 Inne definicje typów, które specialize `basic_string` obejmują [wstring](../standard-library/string-typedefs.md#wstring), [ciąg](../standard-library/string-typedefs.md#string), i [u32string](../standard-library/string-typedefs.md#u32string).
 
@@ -57,11 +57,11 @@ typedef basic_string<char16_t, char_traits<char16_t>, allocator<char16_t>> u16st
 
 ### <a name="remarks"></a>Uwagi
 
-Lista konstruktorów ciągu, zobacz [basic_string::basic_string](../standard-library/basic-string-class.md#basic_string).
+Aby uzyskać listę parametrów konstruktorów, zobacz [basic_string::basic_string](../standard-library/basic-string-class.md#basic_string).
 
 ## <a name="u32string"></a>  u32string
 
-Typ, który opisuje specjalizacji szablonu klasy [basic_string —](../standard-library/basic-string-class.md) elementami typu `char32_t`.
+Typ, który opisuje specjalizacji szablonu klasy [basic_string](../standard-library/basic-string-class.md) elementami typu `char32_t`.
 
 Inne definicje typów, które specialize `basic_string` obejmują [ciąg](../standard-library/string-typedefs.md#string), [u16string](../standard-library/string-typedefs.md#u16string), i [wstring](../standard-library/string-typedefs.md#wstring).
 
@@ -71,11 +71,11 @@ typedef basic_string<char32_t, char_traits<char32_t>, allocator<char32_t>> u32st
 
 ### <a name="remarks"></a>Uwagi
 
-Lista konstruktorów ciągu, zobacz [basic_string::basic_string](../standard-library/basic-string-class.md#basic_string).
+Aby uzyskać listę parametrów konstruktorów, zobacz [basic_string::basic_string](../standard-library/basic-string-class.md#basic_string).
 
 ## <a name="wstring"></a>  wstring
 
-Typ, który opisuje specjalizacji szablonu klasy [basic_string —](../standard-library/basic-string-class.md) elementami typu `wchar_t`.
+Typ, który opisuje specjalizacji szablonu klasy [basic_string](../standard-library/basic-string-class.md) elementami typu **wchar_t**.
 
 Inne definicje typów, które specialize `basic_string` obejmują [ciąg](../standard-library/string-typedefs.md#string), [u16string](../standard-library/string-typedefs.md#u16string), i [u32string](../standard-library/string-typedefs.md#u32string).
 
@@ -85,7 +85,7 @@ typedef basic_string<wchar_t, char_traits<wchar_t>, allocator<wchar_t>> wstring;
 
 ### <a name="remarks"></a>Uwagi
 
-Deklaracje równoważne są następujące:
+Równoważne deklaracji są następujące:
 
 ```cpp
 wstring wstr(L"");
@@ -93,10 +93,10 @@ wstring wstr(L"");
 basic_string<wchar_t> wstr(L"");
 ```
 
-Lista konstruktorów ciągu, zobacz [basic_string::basic_string](../standard-library/basic-string-class.md#basic_string).
+Aby uzyskać listę parametrów konstruktorów, zobacz [basic_string::basic_string](../standard-library/basic-string-class.md#basic_string).
 
 > [!NOTE]
-> Rozmiar `wchar_t` jest zdefiniowane w implementacji. Jeśli kod jest zależny od `wchar_t` się określony rozmiar, sprawdź implementacji danej platformy (na przykład z `sizeof(wchar_t)`). Jeśli potrzebujesz typu ciąg znaków o szerokości, który jest taka sama na wszystkich platformach gwarantuje, że, użyj [ciąg](../standard-library/string-typedefs.md#string), [u16string](../standard-library/string-typedefs.md#u16string), lub [u32string](../standard-library/string-typedefs.md#u32string).
+> Rozmiar **wchar_t** jest zdefiniowane w implementacji. Jeśli Twój kod jest zależna od **wchar_t** do określonego rozmiaru, zapoznaj się z implementacji danej platformy (na przykład za pomocą `sizeof(wchar_t)`). Jeśli potrzebujesz typu ciąg znaków o szerokości, który gwarantuje pozostają takie same na wszystkich platformach, należy użyć [ciąg](../standard-library/string-typedefs.md#string), [u16string](../standard-library/string-typedefs.md#u16string), lub [u32string](../standard-library/string-typedefs.md#u32string).
 
 ## <a name="see-also"></a>Zobacz także
 

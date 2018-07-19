@@ -17,16 +17,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 493c3dc0faf42e0f08f88afd3ac405cfbd7404aa
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: ac1a6c39f25e42237265964ae1bfb0214aaa9087
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33844884"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38961002"
 ---
 # <a name="isenum-class"></a>is_enum — Klasa
 
-Testy, jeśli typ to wyliczenie.
+Sprawdza, czy typ jest wyliczeniem.
 
 ## <a name="syntax"></a>Składnia
 
@@ -37,11 +37,11 @@ struct is_enum;
 
 ### <a name="parameters"></a>Parametry
 
-`Ty` Typ do zapytania.
+*Ty* typ do zapytania.
 
 ## <a name="remarks"></a>Uwagi
 
-Wystąpienie typu predykatu posiada wartość true Jeśli typ `Ty` jest typem wyliczenia lub `cv-qualified` formularz typu wyliczeniowego, w przeciwnym razie posiada wartość false.
+Wystąpienie typu predykatu ma wartość true, jeśli typ *Ty* jest typem wyliczenia lub `cv-qualified` formularza typu wyliczeniowego, w przeciwnym razie przechowuje wartość false.
 
 ## <a name="example"></a>Przykład
 
@@ -83,7 +83,7 @@ is_enum<int> == false
 
 **Nagłówek:** \<type_traits >
 
-**Namespace:** Standard
+**Namespace:** standardowe
 
 ## <a name="see-also"></a>Zobacz także
 

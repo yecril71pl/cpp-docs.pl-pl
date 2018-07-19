@@ -17,16 +17,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7f87ae764372990a96515a73789b373d2d6d7d01
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 9f8b516a3e5f5e19731a372a6531d9f26cb94fa6
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33843421"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38958919"
 ---
 # <a name="greaterequal-struct"></a>greater_equal — Struktura
 
-Predykat binarne wykonująca operację większą niż lub równości — do ( `operator>=`) na jego argumenty.
+Predykat binarny, który wykonuje operację z większą niż lub równe to (`operator>=`) na jego argumenty.
 
 ## <a name="syntax"></a>Składnia
 
@@ -49,19 +49,19 @@ struct greater_equal<void>
 
 ### <a name="parameters"></a>Parametry
 
-`Type`, `T`, `U` Dowolnego typu, który obsługuje `operator>=` pobierającej argumentów operacji typu określonego lub wywnioskowany.
+*Typ*, *T*, *U* dowolnego typu, który obsługuje `operator>=` przyjmującej argumentów operacji typu określonego lub wywnioskowane uprawnienie.
 
-`Left` Lewy argument operacji większą niż lub równości — do operacji. Szablon klasy niespecjalizowanej przyjmuje argument odwołania l-wartością typu `Type`. Specjalne szablonu doskonała przekazującej lewostronnie i argumenty odwołanie do r-wartości wywnioskować typu `T`.
+*Po lewej stronie* lewy operand operacji większą niż lub równe to. Szablon Niewyspecjalizowana przyjmuje argument odwołania l-wartości typu *typu*. Wyspecjalizowane szablonu doskonała przekazywania l-wartością i argumenty odwołania rvalue wywnioskować typu *T*.
 
-`Right` Prawy argument operacji większą niż lub równości — do operacji. Szablon klasy niespecjalizowanej przyjmuje argument odwołania l-wartością typu `Type`. Specjalne szablonu doskonała przekazującej lewostronnie i argumenty odwołanie do r-wartości wywnioskować typu `U`.
+*Po prawej stronie* prawy operand operacji większą niż lub równe to. Szablon Niewyspecjalizowana przyjmuje argument odwołania l-wartości typu *typu*. Wyspecjalizowane szablonu doskonała przekazywania l-wartością i argumenty odwołania rvalue wywnioskować typu *U*.
 
 ## <a name="return-value"></a>Wartość zwracana
 
-Wynik `Left >= Right`. Specjalne szablonu doskonała przekazywanie wynik, który ma typ zwracany przez `operator>=`.
+Wynik `Left >= Right`. Szablon wyspecjalizowane doskonała przekazywania wyniku, który ma typ, który jest zwracany przez `operator>=`.
 
 ## <a name="remarks"></a>Uwagi
 
-Predykat binarne `greater_equal` <  `Type`> udostępnia strict słabe uporządkowanie zestawu wartości elementu typu `Type` do pełnienia roli równoważnika klas, tylko wtedy, gdy ten typ spełnia wymagania standardowe matematyczne Dlatego porządkowana. Specjalizacje dla dowolnego typu wskaźnika instrukcji yield całkowita kolejność elementów, w tym wszystkie elementy unikatowe wartości są uporządkowane względem siebie.
+Predykat dwuelementowy `greater_equal` <  `Type`> udostępnia ścisłe słabe porządkowanie zestaw wartości elementów typu *typu* na klasy równoważności, tylko wtedy, gdy ten typ spełnia standard matematyczne wymagania dotyczące więc szeregowane. Specjalizacje dla dowolnego typu wskaźnika yield, łączna liczba kolejność elementów, w tym, że wszystkie elementy unikatowe wartości są uporządkowane względem siebie.
 
 ## <a name="example"></a>Przykład
 
@@ -121,7 +121,7 @@ Resorted vector v1 = (26500 19169 18467 6334 6262 6262 41)
 
 **Nagłówek:** \<funkcjonalności >
 
-**Namespace:** Standard
+**Namespace:** standardowe
 
 ## <a name="see-also"></a>Zobacz także
 

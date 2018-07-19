@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bfeddfd1ebf0c5c2247b27a0c69a8a6ef33e7766
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 75a3db6c6beb18afe2303b464fcab290b2e132fc
+ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33370441"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37338213"
 ---
 # <a name="paintstruct-structure"></a>Struktura PAINTSTRUCT
 `PAINTSTRUCT` Struktura zawiera informacje, który może służyć do malowania obszaru klienckiego okna.  
@@ -41,22 +41,22 @@ typedef struct tagPAINTSTRUCT {
   
 #### <a name="parameters"></a>Parametry  
  *elementu hdc*  
- Identyfikuje kontekst wyświetlania służący do rysowania.  
+ Identyfikuje kontekst wyświetlania ma być używany do malowania.  
   
  *fErase*  
- Określa, czy tło powinien być narysowany ponownie. Nie jest równa 0, jeśli aplikacja powinna ponownie narysuj tła. Aplikacja jest odpowiedzialny za rysowania tła. Jeśli klasę okna systemu Windows została utworzona bez pędzel tła (zobacz opis **hbrBackground** członkiem [WNDCLASS](http://msdn.microsoft.com/library/windows/desktop/ms633576) — struktura w systemie Windows SDK).  
+ Określa, czy tło powinien być narysowany ponownie. Nie jest równa 0, jeśli aplikacja ponownie narysować tła. Aplikacja jest odpowiedzialna za rysowania tła, jeśli klasę okna Windows została utworzona bez pędzel tła (zobacz opis `hbrBackground` członkiem [WNDCLASS](http://msdn.microsoft.com/library/windows/desktop/ms633576) struktury w zestawie Windows SDK).  
   
  *rcPaint*  
- Określa lewy górny i dolny prawy narożników prostokąta, w którym wymagane jest rysowania.  
+ Określa lewym górnym i dolnym prawym rogu prostokąta, w której zażądano malowania.  
   
  *fRestore*  
- Zastrzeżonym elementem członkowskim. Jest ona używana wewnętrznie przez system Windows.  
+ Zastrzeżoną składową. Jest ono używane wewnętrznie przez Windows.  
   
  *fIncUpdate*  
- Zastrzeżonym elementem członkowskim. Jest ona używana wewnętrznie przez system Windows.  
+ Zastrzeżoną składową. Jest ono używane wewnętrznie przez Windows.  
   
  *rgbReserved [16]*  
- Zastrzeżonym elementem członkowskim. Zarezerwowane blok pamięci używana wewnętrznie przez system Windows.  
+ Zastrzeżoną składową. Zastrzeżone blok pamięć używana wewnętrznie przez Windows.  
   
 ## <a name="requirements"></a>Wymagania  
  **Nagłówek:** winuser.h  

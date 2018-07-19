@@ -26,15 +26,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bcddf0f1848bdd75714bd5b931dcf8520e68cf8c
-ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
+ms.openlocfilehash: 11c83332c12daa6753add0618367b90f8c759532
+ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/27/2018
-ms.locfileid: "37041251"
+ms.lasthandoff: 07/05/2018
+ms.locfileid: "37848771"
 ---
 # <a name="cmfcribbonundobutton-class"></a>Klasa CMFCRibbonUndoButton
-`CMFCRibbonUndoButton` Klasa implementuje przycisk listy rozwijanej, który zawiera najnowsze poleceń użytkownika. Użytkownicy mogą wybrać co najmniej jeden z najnowszych poleceń, z listy rozwijanej, aby cofnąć je albo wykonaj ponownie.  
+`CMFCRibbonUndoButton` Klasa implementuje przycisk listy rozwijanej, który zawiera najnowsze polecenia użytkownika. Użytkownicy mogą wybrać co najmniej jednym z najbardziej aktualną poleceń, z listy rozwijanej, aby cofnąć lub ponowić.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -48,22 +48,22 @@ class CMFCRibbonUndoButton : public CMFCRibbonGallery
   
 |Nazwa|Opis|  
 |----------|-----------------|  
-|[CMFCRibbonUndoButton::CMFCRibbonUndoButton](#cmfcribbonundobutton)|Tworzy nową `CMFCRibbonUndoButton` obiektu przy użyciu Identyfikatora polecenia, który określisz, tekst etykiety i obrazów z listy obrazów obiektu nadrzędnego.|  
+|[CMFCRibbonUndoButton::CMFCRibbonUndoButton](#cmfcribbonundobutton)|Tworzy nowy `CMFCRibbonUndoButton` obiektu za pomocą Identyfikatora polecenia, który określisz, etykiety tekstu i obrazów z listy obrazów obiektu nadrzędnego.|  
   
 ### <a name="public-methods"></a>Metody publiczne  
   
 |Nazwa|Opis|  
 |----------|-----------------|  
 |[CMFCRibbonUndoButton::AddUndoAction](#addundoaction)|Dodaje nową akcję do listy akcji.|  
-|[CMFCRibbonUndoButton::CleanUpUndoList](#cleanupundolist)|Czyści listę akcji, czyli z listy rozwijanej.|  
-|[CMFCRibbonUndoButton::GetActionNumber](#getactionnumber)|Określa liczbę elementów, które użytkownik wybrał z listy rozwijanej.|  
+|[CMFCRibbonUndoButton::CleanUpUndoList](#cleanupundolist)|Czyści listę akcji, która jest listy rozwijanej.|  
+|[CMFCRibbonUndoButton::GetActionNumber](#getactionnumber)|Określa liczbę elementów, które użytkownik wybrane z listy rozwijanej.|  
 |[CMFCRibbonUndoButton::HasMenu](#hasmenu)|Wskazuje, czy obiekt zawiera menu.|  
   
 ## <a name="remarks"></a>Uwagi  
- `CMFCRibbonUndoButton` Klasy używa stosu do reprezentowania listy rozwijanej.  
+ `CMFCRibbonUndoButton` Klasa używa stosu, który reprezentuje listy rozwijanej.  
   
 ## <a name="example"></a>Przykład  
- W poniższym przykładzie pokazano sposób tworzenia obiektu `CMFCRibbonUndoButton` klasy, a następnie dodaj nową akcję do listy akcji. Następujący fragment kodu jest częścią [próbki gadżetów wstążki](../../visual-cpp-samples.md).  
+ W poniższym przykładzie pokazano sposób tworzenia obiektu `CMFCRibbonUndoButton` klasy, a następnie dodaj nową akcję do listy akcji. Ten fragment kodu jest częścią [przykładowe gadżetów wstążki](../../visual-cpp-samples.md).  
   
  [!code-cpp[NVC_MFC_RibbonGadgets#2](../../mfc/reference/codesnippet/cpp/cmfcribbonundobutton-class_1.cpp)]  
   
@@ -90,17 +90,17 @@ void AddUndoAction(LPCTSTR lpszLabel);
   
 ### <a name="parameters"></a>Parametry  
  [in] *lpszLabel*  
- Etykieta akcji, który będzie wyświetlany na liście rozwijanej.  
+ Etykieta akcji, która będzie wyświetlana na liście rozwijanej.  
   
 ##  <a name="cleanupundolist"></a>  CMFCRibbonUndoButton::CleanUpUndoList  
- Czyści listę akcji, czyli z listy rozwijanej.  
+ Czyści listę akcji, która jest listy rozwijanej.  
   
 ```  
 void CleanUpUndoList();
 ```  
   
 ##  <a name="cmfcribbonundobutton"></a>  CMFCRibbonUndoButton::CMFCRibbonUndoButton  
- Tworzy nową `CMFCRibbonUndoButton` obiektu przy użyciu Identyfikatora polecenia, który określisz, tekst etykiety i obrazów z listy obrazów obiektu nadrzędnego.  
+ Tworzy nowy `CMFCRibbonUndoButton` obiektu za pomocą Identyfikatora polecenia, który określisz, etykiety tekstu i obrazów z listy obrazów obiektu nadrzędnego.  
   
 ```  
 CMFCRibbonUndoButton(
@@ -124,16 +124,16 @@ CMFCRibbonUndoButton(
  Określa tekst etykiety przycisku.  
   
  [in] *nSmallImageIndex*  
- Liczony od zera indeks obiektu nadrzędnego dla przycisku mały obraz na liście obrazów.  
+ Liczony od zera indeks z listy obrazów obiektu nadrzędnego, która ma być mały obraz przycisku.  
   
  [in] *nLargeImageIndex*  
- Liczony od zera indeks obrazu na liście obiektu nadrzędnego dla dużych obrazu przycisku.  
+ Liczony od zera indeks, z listy obrazów obiektu nadrzędnego dla dużych obrazu przycisku.  
   
  [in] *hIcon*  
- Dojście do ikonę, która służy jako obrazu przycisku.  
+ Dojście do ikonę która służy jako obrazu przycisku.  
   
 ##  <a name="getactionnumber"></a>  CMFCRibbonUndoButton::GetActionNumber  
- Określa liczbę elementów, które użytkownik wybrał z listy rozwijanej.  
+ Określa liczbę elementów, które użytkownik wybrane z listy rozwijanej.  
   
 ```  
 int GetActionNumber() const;  
@@ -150,7 +150,7 @@ virtual BOOL HasMenu() const;
 ```  
   
 ### <a name="return-value"></a>Wartość zwracana  
- Zawsze zwraca `TRUE`.  
+ Zawsze zwraca wartość PRAWDA.  
   
 ### <a name="remarks"></a>Uwagi  
   

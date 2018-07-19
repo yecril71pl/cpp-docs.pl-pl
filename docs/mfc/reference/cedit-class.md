@@ -104,15 +104,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 98410fb8b62eb160e21803b60a14ce731ffc8c23
-ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
-ms.translationtype: HT
+ms.openlocfilehash: 8e1521c73f92bbb941b1060cb5cf2051ead88ffb
+ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/26/2018
-ms.locfileid: "36957458"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37339595"
 ---
 # <a name="cedit-class"></a>Klasa CEdit
-Udostępnia funkcje kontrolki edycji systemu Windows.  
+Oferuje funkcje formantu edycji Windows.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -126,108 +126,108 @@ class CEdit : public CWnd
   
 |Nazwa|Opis|  
 |----------|-----------------|  
-|[CEdit::CEdit](#cedit)|Konstruuje `CEdit` obiektu formantu.|  
+|[CEdit::CEdit](#cedit)|Konstruuje `CEdit` obiekt formantu.|  
   
 ### <a name="public-methods"></a>Metody publiczne  
   
 |Nazwa|Opis|  
 |----------|-----------------|  
-|[CEdit::CanUndo](#canundo)|Określa, czy operacja formancie edycyjnym można cofnąć.|  
-|[CEdit::CharFromPos](#charfrompos)|Pobiera indeksów wiersza i znaku najbardziej zbliżony do określonej pozycji znaku.|  
-|[CEdit::Clear](#clear)|Usuwa (czyści) kontrolować bieżące zaznaczenie (jeśli istnieje) w edycji.|  
-|[CEdit::Copy](#copy)|Kopiuje bieżące zaznaczenie (jeśli istnieją) w formancie edycyjnym do Schowka w **CF_TEXT** format.|  
-|[CEdit::Create](#create)|Tworzy kontrolkę edycji systemu Windows i dołącza go do `CEdit` obiektu.|  
-|[CEdit::Cut](#cut)|Kontrolowanie bieżące zaznaczenie (jeśli istnieje) w edycji usuwa (części) i kopiuje usunięty tekst do Schowka w **CF_TEXT** format.|  
-|[CEdit::EmptyUndoBuffer](#emptyundobuffer)|Resetuje formantu (czyści) Flaga Cofnij edycję.|  
-|[CEdit::FmtLines](#fmtlines)|Ustawia lub wyłącz włączenia znaków nietrwałego podział wiersza w formancie edycji wielu linii.|  
-|[CEdit::GetCueBanner](#getcuebanner)|Pobiera tekst, który jest wyświetlana jako tekst wskaźnika lub porada w kontrolce edycji, gdy formant jest pusty i nie ma fokusa.|  
-|[CEdit::GetFirstVisibleLine](#getfirstvisibleline)|Określa znajdujące się najwyżej wiersza widocznego w kontrolce edycji.|  
-|[CEdit::GetHandle](#gethandle)|Pobiera dojścia do pamięci przydzielonej aktualnie do wielu linii edycji.|  
-|[CEdit::GetHighlight](#gethighlight)|Pobiera indeksów początkowe i końcowe znaki w zakresie tekstu, który zostanie wyróżniona w bieżącym kontrolki edycji.|  
-|[CEdit::GetLimitText](#getlimittext)|Pobiera maksymalną ilość tekstu, to `CEdit` może zawierać.|  
-|[CEdit::GetLine](#getline)|Pobiera wiersza tekstu z formantu edycyjnego.|  
+|[CEdit::CanUndo](#canundo)|Określa, czy można cofnąć operacji kontrolki edycji.|  
+|[CEdit::CharFromPos](#charfrompos)|Pobiera wiersz i znak indeksów dla najbardziej zbliżony do określonej pozycji znaku.|  
+|[CEdit::Clear](#clear)|Usuwa (czyści) kontrolować aktualnie zaznaczonej edycji (jeśli istnieje).|  
+|[CEdit::Copy](#copy)|Kopiuje bieżącego zaznaczenia (jeśli istnieją) w kontrolce edycji do Schowka w formacie CF_TEXT.|  
+|[CEdit::Create](#create)|Tworzy formant edycji Windows i dołącza je do `CEdit` obiektu.|  
+|[CEdit::Cut](#cut)|Kontrolowanie bieżące zaznaczenie (jeśli istnieje) w trakcie edycji usuwa (kawałki) i sformatować usunięty tekst do Schowka w CF_TEXT kopii.|  
+|[CEdit::EmptyUndoBuffer](#emptyundobuffer)|Resetuje kontroli (czyści) Flaga Cofnij edycję.|  
+|[CEdit::FmtLines](#fmtlines)|Ustawia włączenia nietrwałego podział wiersza znakami lub wyłączyć w kontrolce edycji wielu linii.|  
+|[CEdit::GetCueBanner](#getcuebanner)|Pobiera tekst, który jest wyświetlany jako podpowiedź tekstowa lub porady w formancie edycji, gdy kontrolka jest pusta i nie ma fokusu.|  
+|[CEdit::GetFirstVisibleLine](#getfirstvisibleline)|Określa znajdujące się najwyżej wiersza widocznego w formancie edycji.|  
+|[CEdit::GetHandle](#gethandle)|Pobiera uchwyt do pamięci, które jest aktualnie przydzielone dla formantu wielowierszowe edytowanie.|  
+|[CEdit::GetHighlight](#gethighlight)|Pobiera indeksy początkowe i końcowe znaki w zakresie tekst, który jest wyróżniony w bieżącym kontrolki edycji.|  
+|[CEdit::GetLimitText](#getlimittext)|Pobiera maksymalną ilość tekstu `CEdit` może zawierać.|  
+|[CEdit::GetLine](#getline)|Pobiera wiersz tekstu z kontrolki edycji.|  
 |[CEdit::GetLineCount](#getlinecount)|Pobiera liczbę wierszy w formancie edycji wielu linii.|  
-|[CEdit::GetMargins](#getmargins)|Pobiera lewego i prawego marginesu dla `CEdit`.|  
-|[CEdit::GetModify](#getmodify)|Określa, czy zawartość formantu edycyjnego zostały zmodyfikowane.|  
-|[CEdit::GetPasswordChar](#getpasswordchar)|Pobiera znak hasła wyświetlany w formancie edycji, gdy użytkownik wprowadzi tekst.|  
-|[CEdit::GetRect](#getrect)|Pobiera prostokąt formatowania formantu edycyjnego.|  
-|[CEdit::GetSel](#getsel)|Pobiera pierwszy i ostatni znak położenia bieżące zaznaczenie w formancie edycyjnym.|  
+|[CEdit::GetMargins](#getmargins)|Pobiera lewego i prawego marginesu tego `CEdit`.|  
+|[CEdit::GetModify](#getmodify)|Określa, czy zawartość formantu edycji został zmieniony.|  
+|[CEdit::GetPasswordChar](#getpasswordchar)|Pobiera znaku hasła, wyświetlana w formancie edycji, gdy użytkownik wprowadzi tekst.|  
+|[CEdit::GetRect](#getrect)|Pobiera formatowania prostokąt formant edycji.|  
+|[CEdit::GetSel](#getsel)|Pobiera położenie pierwszy i ostatni znak bieżące zaznaczenie w formancie edycji.|  
 |[CEdit::HideBalloonTip](#hideballoontip)|Ukrywa dowolnym dymku skojarzone z bieżącym kontrolki edycji.|  
-|[CEdit::LimitText](#limittext)|Ogranicza długość tekstu, który użytkownik może wprowadzić do formantu edycyjnego.|  
-|[CEdit::LineFromChar](#linefromchar)|Pobiera numer wiersza, który zawiera indeks określony znak.|  
+|[CEdit::LimitText](#limittext)|Ogranicza długość tekstu, który użytkownik może wprowadzić do kontrolki edycji.|  
+|[CEdit::LineFromChar](#linefromchar)|Pobiera numer wiersza w wierszu, który zawiera indeks określonego znaku.|  
 |[CEdit::LineIndex](#lineindex)|Pobiera indeks znaków wiersza w formancie edycji wielu linii.|  
-|[CEdit::LineLength](#linelength)|Pobiera długość wiersza w kontrolce edycji.|  
-|[CEdit::LineScroll](#linescroll)|Przewija tekst formantu edycji wielu linii.|  
-|[CEdit::Paste](#paste)|Wstawia danych ze Schowka do kontrolki edycji w bieżącym położeniu kursora. Dane są wstawiane tylko wtedy, gdy Schowek zawiera dane w **CF_TEXT** format.|  
-|[CEdit::PosFromChar](#posfromchar)|Pobiera współrzędne górnego lewego rogu indeksu określony znak.|  
+|[CEdit::LineLength](#linelength)|Pobiera długość wiersza w formancie edycji.|  
+|[CEdit::LineScroll](#linescroll)|Przewija tekst kontrolki edycji wielu linii.|  
+|[CEdit::Paste](#paste)|Wstawia dane ze Schowka do kontrolki edycji w bieżącym położeniu kursora. Dane są wstawiane tylko wtedy, gdy Schowek zawiera dane w formacie CF_TEXT.|  
+|[CEdit::PosFromChar](#posfromchar)|Pobiera współrzędne lewego górnego rogu indeksu określonego znaku.|  
 |[CEdit::ReplaceSel](#replacesel)|Zamienia bieżące zaznaczenie w formancie edycji określony tekst.|  
-|[CEdit::SetCueBanner](#setcuebanner)|Ustawia tekst, który jest wyświetlany jako tekst wskaźnika lub porada w kontrolce edycji, gdy formant jest pusty i nie ma fokusa.|  
-|[CEdit::SetHandle](#sethandle)|Ustawia dojście do pamięci lokalnej, który będzie używany przez formant edycji wielu linii.|  
-|[CEdit::SetHighlight](#sethighlight)|Najważniejsze funkcje zakres tekstu, który jest wyświetlany w bieżącej edycji.|  
-|[CEdit::SetLimitText](#setlimittext)|Ustawia maksymalną ilość tekstu, to `CEdit` może zawierać.|  
-|[CEdit::SetMargins](#setmargins)|Ustawia lewego i prawego marginesu dla tego `CEdit`.|  
-|[CEdit::SetModify](#setmodify)|Ustawia lub usuwa flagę modyfikacji kontrolki edycji.|  
-|[CEdit::SetPasswordChar](#setpasswordchar)|Ustawia lub usuwa hasło znak wyświetlany w formancie edycji, gdy użytkownik wprowadzi tekst.|  
-|[CEdit::SetReadOnly](#setreadonly)|Ustawia stan tylko do odczytu kontrolki edycji.|  
-|[CEdit::SetRect](#setrect)|Ustawia prostokąt formatowania formantu edycji wielu linii i aktualizuje formantu.|  
-|[CEdit::SetRectNP](#setrectnp)|Ustawia prostokąt formatowania formantu edycji Wielowierszowe bez ponownego narysowania okna formantu.|  
-|[CEdit::SetSel](#setsel)|Wybiera zakres znaków w formancie edycyjnym.|  
-|[CEdit::SetTabStops](#settabstops)|Formant edycji zestawów tabulatorów w wielu wierszach.|  
-|[CEdit::ShowBalloonTip](#showballoontip)|Wyświetla etykieta dymka skojarzony z bieżącym kontrolki edycji.|  
+|[CEdit::SetCueBanner](#setcuebanner)|Ustawia tekst, który jest wyświetlany jako podpowiedź tekstowa lub porady w formancie edycji, gdy kontrolka jest pusta i nie ma fokusu.|  
+|[CEdit::SetHandle](#sethandle)|Ustawia dojście do pamięci lokalnej, używany przez kontrolkę edycji wielu linii.|  
+|[CEdit::SetHighlight](#sethighlight)|Najważniejsze funkcje zakres tekstu wyświetlanego w bieżącym formant edycji.|  
+|[CEdit::SetLimitText](#setlimittext)|Określa maksymalną ilość tekstu `CEdit` może zawierać.|  
+|[CEdit::SetMargins](#setmargins)|Ustawia lewego i prawego marginesu tego `CEdit`.|  
+|[CEdit::SetModify](#setmodify)|Ustawia lub czyści flagi modyfikacji kontrolki edycji.|  
+|[CEdit::SetPasswordChar](#setpasswordchar)|Ustawia lub usuwa znaku hasła, wyświetlana w formancie edycji, gdy użytkownik wprowadzi tekst.|  
+|[CEdit::SetReadOnly](#setreadonly)|Ustawia stan tylko do odczytu formant edycji.|  
+|[CEdit::SetRect](#setrect)|Ustawia prostokąt formatowania kontroli wielowierszowe edytowanie i aktualizuje formantu.|  
+|[CEdit::SetRectNP](#setrectnp)|Ustawia prostokąt formatowania kontroli wielowierszowe edytowanie bez ponownego narysowania okno kontrolki.|  
+|[CEdit::SetSel](#setsel)|Wybiera zakres znaków w kontrolce edycji.|  
+|[CEdit::SetTabStops](#settabstops)|Formant edycji zestawy tabulatorów w wielu wierszach.|  
+|[CEdit::ShowBalloonTip](#showballoontip)|Wyświetla dymku, który jest skojarzony z bieżącym kontrolki edycji.|  
 |[CEdit::Undo](#undo)|Cofa ostatnią operację kontrolki edycji.|  
   
 ## <a name="remarks"></a>Uwagi  
- Formant edycji jest oknem podrzędnym prostokątne, w którym użytkownik może wprowadzić tekst.  
+ Formant edycji jest oknem podrzędnym prostokątny, w którym użytkownik może wpisać tekst.  
   
- Formant edycji można utworzyć szablonu okna dialogowego lub bezpośrednio w kodzie. W obu przypadkach należy najpierw wywołać konstruktora `CEdit` do skonstruowania `CEdit` obiekt, a następnie wywołaj [Utwórz](#create) funkcji członkowskiej można utworzyć okna formantu edycyjnego i dołączenie go do `CEdit` obiektu.  
+ Można utworzyć formant edycji, z szablonu okna dialogowego lub bezpośrednio w kodzie. W obu przypadkach należy najpierw wywołać konstruktora `CEdit` do konstruowania `CEdit` obiektu, a następnie wywołaj [Utwórz](#create) funkcji elementu członkowskiego, aby utworzyć Windows formantu edycyjnego i dołącz je do `CEdit` obiektu.  
   
- Konstrukcja może być jednoetapowy proces w klasie pochodnej z `CEdit`. Zapisywanie konstruktora klasy pochodnej i wywołanie `Create` z wewnątrz konstruktora.  
+ Konstrukcja może być jednoetapowy proces w klasę pochodną `CEdit`. Zapisywanie konstruktora dla klasy pochodnej i wywołanie `Create` z w konstruktorze.  
   
- `CEdit` Najważniejsze funkcje z dziedziczy `CWnd`. Do ustawiania i pobierania tekstu z `CEdit` obiektów, użyj `CWnd` funkcje Członkowskie [SetWindowText](cwnd-class.md#setwindowtext) i [GetWindowText](cwnd-class.md#getwindowtext), które set lub get kontrolować całą zawartość edycji, nawet jeśli jego jest wielowierszowe kontrolki. Wiersze tekstu w wielowierszowym formancie są rozdzielone przez sekwencje znaków "\r\n". Ponadto w przypadku wielowierszowe kontrolki edycji get i set część tekstu formantu przez wywołanie metody `CEdit` funkcje Członkowskie [GetLine](#getline), [SetSel](#setsel), [GetSel](#getsel)i [ ReplaceSel](#replacesel).  
+ `CEdit` Najważniejsze funkcje z dziedziczy `CWnd`. Do ustawiania i pobierania tekstu z `CEdit` obiektu, należy użyć `CWnd` elementów członkowskich [SetWindowText](cwnd-class.md#setwindowtext) i [getwindowtext —](cwnd-class.md#getwindowtext), które set lub get kontrolować całą zawartość edycji, nawet jeśli jego jest wieloliniowy formant. Wiersze tekstu w kontrolce wielowierszowy są oddzielone sekwencje znaków "\r\n". Ponadto w przypadku wielowierszowy formant edycji, pobieranie i ustawianie część tekstu formantu przez wywołanie metody `CEdit` elementów członkowskich [getline —](#getline), [SetSel](#setsel), [GetSel](#getsel)i [ ReplaceSel](#replacesel).  
   
- Jeśli chcesz obsługiwać komunikaty powiadomień systemu Windows, wysyłany przez kontrolkę edycji do elementu nadrzędnego (zazwyczaj klasą pochodną `CDialog`), Dodaj funkcji członkowskiej wpisu i program obsługi komunikatów map wiadomości do klasy nadrzędnej dla każdego komunikatu.  
+ Jeśli chcesz obsługiwać Windows powiadomienia wysyłane przez formant edycji do elementu nadrzędnego (zazwyczaj klasą pochodną `CDialog`), dodanie funkcji składowej wejścia i program obsługi komunikatów mapy komunikatów do klasy nadrzędnej dla każdego komunikatu.  
   
  Każdy wpis mapy komunikatów ma następującą postać:  
   
   **ON_**_POWIADOMIEŃ_**(** _identyfikator_**,** _memberFxn_ **)**
   
- gdzie `id` Określa identyfikator okna podrzędnego kontrolki edycji wysyłania powiadomienia, oraz `memberFxn` jest nazwą funkcji członkowskiej nadrzędnego zostały zapisane do obsługi powiadomień.  
+ gdzie `id` Określa identyfikator okna elementu podrzędnego kontrolki edycji wysyłania powiadomienia, a `memberFxn` nazywa się nadrzędny element członkowski funkcji zostały napisane do obsługi powiadomień.  
   
- Prototyp funkcji elementu nadrzędnego, jak wygląda następująco:  
+ Prototyp funkcji elementu nadrzędnego jest następująca:  
   
  **afx_msg** void memberFxn **();**  
   
- Poniżej przedstawiono listę potencjalnych wpisów map wiadomości i opis przypadków, w których będą przesyłane do obiektu nadrzędnego:  
+ Poniżej przedstawiono listę potencjalnych wpisy mapy komunikatów i opis przypadków, w których będą one wysyłane do elementu nadrzędnego:  
   
-- **On_en_change —** użytkownik ma podjąć akcję, która może zmienić tekst w kontrolce edycji. W odróżnieniu od **EN_UPDATE** komunikat powiadomienia, to powiadomienie jest wysyłane po wyświetlanie aktualizacji systemu Windows.  
+- ON_EN_CHANGE użytkownik ma podjąć akcję, która może być zmieniony tekst w kontrolce edycji. W odróżnieniu od EN_UPDATE komunikat powiadomienia taki komunikat powiadomienia są wysyłane po Windows aktualizuje okno.  
   
-- **On_en_errspace —** formant edycyjny nie może przydzielić wystarczającej ilości pamięci do spełnienia określonego żądania.  
+- ON_EN_ERRSPACE kontrolki edycji nie może przydzielić wystarczającej ilości pamięci, aby spełnić określonego żądania.  
   
-- **On_en_hscroll —** kliknięciu formantu edycyjnego poziomy pasek przewijania. Okno nadrzędne jest powiadamiany o przed zaktualizowaniem ekranu.  
+- ON_EN_HSCROLL użytkownik klika formant edycji poziomy pasek przewijania. Okno nadrzędne zostanie powiadomiony, zanim ekran zostanie zaktualizowany.  
   
-- **On_en_killfocus —** formant edycyjny traci fokus wprowadzania.  
+- ON_EN_KILLFOCUS kontrolki edycji traci fokus wprowadzania.  
   
-- **On_en_maxtext —** bieżącego wstawiania przekroczył określoną liczbę znaków dla kontrolki edycji i dlatego została obcięta. Również wysyłany, gdy formant edycyjny nie ma **es_autohscroll —** styl i liczbę znaków, które ma zostać wstawiony przekroczyłby szerokość kontrolki edycji. Również wysyłany, gdy formant edycyjny nie ma **es_autovscroll —** styl i całkowita liczba wierszy, wynikające z Wstawianie tekstu spowoduje przekroczenie wysokość formantu edycyjnego.  
+- ON_EN_MAXTEXT bieżącego włożenia przekroczył określoną liczbę znaków dla kontrolki edycji i dlatego została obcięta. Również wysyłane, gdy formant edycji nie ma stylu ES_AUTOHSCROLL liczbę znaków, które ma zostać wstawiony spowoduje przekroczenie szerokość kontrolki edycji. Również wysyłane, gdy formant edycji nie ma stylu ES_AUTOVSCROLL i łączna liczba wierszy, w wyniku Wstawianie tekstu spowoduje przekroczenie wysokość kontrolki edycji.  
   
-- **On_en_setfocus —** wysyłany, gdy formant edycyjny zyska fokus wprowadzania.  
+- ON_EN_SETFOCUS wysyłany, gdy formant edycji otrzymuje fokus wprowadzania.  
   
-- **On_en_update —** ma wyświetli zmieniony tekst formantu edycyjnego. Wysyłane po formantu ma sformatowanego tekstu, ale przed jego ekrany tekst, dzięki czemu może się zmienić rozmiar okna, jeśli to konieczne.  
+- ON_EN_UPDATE kontrolki edycji wkrótce zmieniony tekst. Wysyłane po formant został sformatowany tekst, ale przed jego ekrany tekst tak, aby rozmiar okna może się zmienić, jeśli to konieczne.  
   
-- **On_en_vscroll —** użytkownik klika formant edycyjny pionowy pasek przewijania. Okno nadrzędne jest powiadamiany o przed zaktualizowaniem ekranu.  
+- ON_EN_VSCROLL użytkownik klika formant edycji pionowy pasek przewijania. Okno nadrzędne zostanie powiadomiony, zanim ekran zostanie zaktualizowany.  
   
- W przypadku utworzenia `CEdit` obiektu w oknie dialogowym, `CEdit` obiekt zostanie zniszczony automatycznie, gdy użytkownik zamyka okno dialogowe.  
+ Jeśli tworzysz `CEdit` obiektu w oknie dialogowym, `CEdit` obiektu automatycznie jest niszczony, kiedy użytkownik zamknie okno dialogowe.  
   
- W przypadku utworzenia `CEdit` obiektu z zasobu okna dialogowego za pomocą edytora okien dialogowych `CEdit` obiekt zostanie zniszczony automatycznie, gdy użytkownik zamyka okno dialogowe.  
+ Jeśli tworzysz `CEdit` obiekt z zasobem okna dialogowego za pomocą edytora okien dialogowych `CEdit` obiektu automatycznie jest niszczony, kiedy użytkownik zamknie okno dialogowe.  
   
- W przypadku utworzenia `CEdit` obiektów w ramach okna, może być również konieczne zniszczenia. W przypadku utworzenia `CEdit` obiektów na stosie, zostanie zniszczony automatycznie. W przypadku utworzenia `CEdit` obiektów na stercie przy użyciu **nowe** funkcji, należy wywołać **usunąć** formant edycji w obiekcie zniszczyć ją, gdy użytkownik kończy systemu Windows. Jeśli Przydziel wszystkie pamięci w `CEdit` obiektów, Zastąp `CEdit` destruktora zlikwidować alokacje.  
+ Jeśli tworzysz `CEdit` obiekt w tym oknie, konieczne może zniszczyć ją. Jeśli tworzysz `CEdit` obiektów na stosie, zostanie zniszczony automatycznie. Jeśli tworzysz `CEdit` obiektów na stosie przy użyciu **nowe** funkcji, należy wywołać **Usuń** obiektu zniszczyć ją, gdy użytkownik kończy Windows formantu edycyjnego. Jeśli przydzielisz wszystkie pamięci w `CEdit` obiektów, Zastąp `CEdit` destruktora w celu usunięcia alokacje.  
   
- Aby zmodyfikować niektórych style w formancie edycyjnym (takich jak **es_readonly —**), musisz wysłać określone komunikaty do formantu zamiast [ModifyStyle](cwnd-class.md#modifystyle). Zobacz [style formantu edycji](http://msdn.microsoft.com/library/windows/desktop/bb775464) w systemie Windows SDK.  
+ Aby zmodyfikować określone style w formancie edycji (na przykład ES_READONLY) można wysyłać wiadomości określonych do kontrolki zamiast [ModifyStyle](cwnd-class.md#modifystyle). Zobacz [style kontrolki edycji](http://msdn.microsoft.com/library/windows/desktop/bb775464) w Windows SDK.  
   
  Aby uzyskać więcej informacji na temat funkcji `CEdit`, zobacz:  
   
 - [Kontrolki](../../mfc/controls-mfc.md)  
   
--   Artykuł bazy wiedzy Q259949: informacje o: SetCaretPos() jest nieodpowiedni z CEdit lub kontrolki CRichEditCtrl  
+-   Artykuł bazy wiedzy Q259949: INFO: SetCaretPos() jest nieodpowiednia CEdit lub kontrolki w CRichEditCtrl  
   
 ## <a name="inheritance-hierarchy"></a>Hierarchia dziedziczenia  
  [CObject](cobject-class.md)  
@@ -242,14 +242,14 @@ class CEdit : public CWnd
  **Nagłówek:** afxwin.h  
   
 ##  <a name="canundo"></a>  CEdit::CanUndo  
- Wywołanie tej funkcji w celu ustalenia, czy ostatniej operacji edycji można cofnąć.  
+ Wywołaj tę funkcję, aby określić, jeśli ostatnia operacja edycji można cofnąć.  
   
 ```  
 BOOL CanUndo() const;  
 ```  
   
 ### <a name="return-value"></a>Wartość zwracana  
- Różna od zera, jeśli ostatnia operacja edycji można cofnąć przez wywołanie do `Undo` funkcja członkowska; 0, jeśli nie można cofnąć.  
+ Wartość różną od zera, jeśli ostatnia operacja Edytuj mogą zostać cofnięte przez wywołanie `Undo` funkcji członkowskiej; 0, jeśli nie można cofnąć.  
   
 ### <a name="remarks"></a>Uwagi  
  Aby uzyskać więcej informacji, zobacz [EM_CANUNDO](http://msdn.microsoft.com/library/windows/desktop/bb775468) w zestawie Windows SDK.  
@@ -265,24 +265,24 @@ CEdit();
 ```  
   
 ### <a name="remarks"></a>Uwagi  
- Użyj [Utwórz](#create) do skonstruowania formant edycji systemu Windows.  
+ Użyj [Utwórz](#create) do konstruowania Windows formantu edycyjnego.  
   
 ### <a name="example"></a>Przykład  
  [!code-cpp[NVC_MFC_CEdit#1](../../mfc/reference/codesnippet/cpp/cedit-class_1.cpp)]  
   
 ##  <a name="charfrompos"></a>  CEdit::CharFromPos  
- Wywołanie tej funkcji można pobrać wiersz liczony od zera i indeksów znak znaku najbliższy punkt określonego w tym `CEdit` formantu  
+ Wywołaj tę funkcję, aby pobrać wiersz zaczynający się od zera i indeksów znak znaku najbliższym określonego punktu w tym `CEdit` kontroli  
   
 ```  
 int CharFromPos(CPoint pt) const;  
 ```  
   
 ### <a name="parameters"></a>Parametry  
- *PT*  
- Współrzędne punktu w obszarze klienckim tego `CEdit` obiektu.  
+ *(czas pacyficzny)*  
+ Współrzędne punktu w obszarze klienta, to `CEdit` obiektu.  
   
 ### <a name="return-value"></a>Wartość zwracana  
- Indeks znaków w znaczącymi bitami **WORD**, a indeks wierszy w kolejności wysokiej **WORD**.  
+ Indeks znaków w SŁOWIE niskiego rzędu, a indeks wiersza w programie WORD wyższego rzędu.  
   
 ### <a name="remarks"></a>Uwagi  
   
@@ -295,16 +295,16 @@ int CharFromPos(CPoint pt) const;
  [!code-cpp[NVC_MFC_CEdit#3](../../mfc/reference/codesnippet/cpp/cedit-class_2.cpp)]  
   
 ##  <a name="clear"></a>  CEdit::Clear  
- Wywołanie tej funkcji do usunięcia (Usuń) bieżącym zaznaczeniu (jeśli istnieją) w formancie edycyjnym.  
+ Wywołaj tę funkcję można usunąć (Wyczyść) bieżącego zaznaczenia (jeśli istnieją) w kontrolce edycji.  
   
 ```  
 void Clear();
 ```  
   
 ### <a name="remarks"></a>Uwagi  
- Usunięcie wykonywane przez `Clear` mogą zostać cofnięte przez wywołanie metody [Cofnij](#undo) funkcję elementu członkowskiego.  
+ Usuwanie wykonywane przez `Clear` mogą zostać cofnięte przez wywołanie metody [Cofnij](#undo) funkcja elementu członkowskiego.  
   
- Aby usunąć bieżące zaznaczenie i umieść usunięto zawartość w Schowku, należy wywołać [Wytnij](#cut) funkcję elementu członkowskiego.  
+ Aby usunąć bieżące zaznaczenie i umieść usunięto zawartość w Schowku, należy wywołać [Wytnij](#cut) funkcja elementu członkowskiego.  
   
  Aby uzyskać więcej informacji, zobacz [WM_CLEAR](http://msdn.microsoft.com/library/windows/desktop/ms649020) w zestawie Windows SDK.  
   
@@ -312,7 +312,7 @@ void Clear();
  [!code-cpp[NVC_MFC_CEdit#4](../../mfc/reference/codesnippet/cpp/cedit-class_3.cpp)]  
   
 ##  <a name="copy"></a>  CEdit::Copy  
- Wywołanie tej funkcji do coy bieżącym zaznaczeniu (jeśli istnieją) w formancie edycyjnym do Schowka w **CF_TEXT** format.  
+ Wywołaj tę funkcję, aby coy bieżące zaznaczenie (jeśli istnieją) w formancie edycji do Schowka w formacie CF_TEXT.  
   
 ```  
 void Copy();
@@ -325,7 +325,7 @@ void Copy();
  [!code-cpp[NVC_MFC_CEdit#5](../../mfc/reference/codesnippet/cpp/cedit-class_4.cpp)]  
   
 ##  <a name="create"></a>  CEdit::Create  
- Tworzy kontrolkę edycji systemu Windows i dołącza go do `CEdit` obiektu.  
+ Tworzy formant edycji Windows i dołącza je do `CEdit` obiektu.  
   
 ```  
 virtual BOOL Create(
@@ -337,53 +337,53 @@ virtual BOOL Create(
   
 ### <a name="parameters"></a>Parametry  
  *dwStyle*  
- Określa styl formantu edycyjnego. Zastosuj dowolną kombinację [style edycji](styles-used-by-mfc.md#edit-styles) do formantu.  
+ Określa styl kontrolki edycji. Zastosuj dowolną kombinację [style edycji](styles-used-by-mfc.md#edit-styles) do formantu.  
   
  *Rect*  
  Określa rozmiar i położenie kontrolki edycji. Może być `CRect` obiektu lub `RECT` struktury.  
   
  *pParentWnd*  
- Określa okno nadrzędne kontrolki edycji (zazwyczaj `CDialog`). Nie może być **NULL**.  
+ Określa okno nadrzędne kontrolki edycji (zazwyczaj `CDialog`). Nie może być równa NULL.  
   
  *nID*  
  Określa identyfikator kontrolki edycji.  
   
 ### <a name="return-value"></a>Wartość zwracana  
- Różna od zera, jeśli inicjowanie zakończy się pomyślnie; w przeciwnym razie 0.  
+ Wartość różną od zera, jeśli inicjowanie zakończy się; w przeciwnym razie 0.  
   
 ### <a name="remarks"></a>Uwagi  
- Możesz utworzyć `CEdit` obiektu w dwóch krokach. Najpierw należy wywołać `CEdit` , a następnie wywołania konstruktora `Create`, która tworzy kontrolkę edycji systemu Windows i dołącza go do `CEdit` obiektu.  
+ Konstruowanie `CEdit` obiektu w dwóch krokach. Po pierwsze wywołanie `CEdit` Konstruktor i następnie wywołaniu `Create`, który tworzy Windows formantu edycyjnego i dołącza go do `CEdit` obiektu.  
   
- Gdy `Create` wykonuje system Windows wysyła [WM_NCCREATE](http://msdn.microsoft.com/library/windows/desktop/ms632635), [WM_NCCALCSIZE](http://msdn.microsoft.com/library/windows/desktop/ms632634), [WM_CREATE](http://msdn.microsoft.com/library/windows/desktop/ms632619), i [WM_GETMINMAXINFO](http://msdn.microsoft.com/library/windows/desktop/ms632626) wiadomości do kontrolki edycji.  
+ Gdy `Create` wykonuje Windows wysyła [WM_NCCREATE](http://msdn.microsoft.com/library/windows/desktop/ms632635), [WM_NCCALCSIZE](http://msdn.microsoft.com/library/windows/desktop/ms632634), [WM_CREATE](http://msdn.microsoft.com/library/windows/desktop/ms632619), i [WM_GETMINMAXINFO](http://msdn.microsoft.com/library/windows/desktop/ms632626) Komunikaty wyjściowe do kontrolki edycji.  
   
- Komunikaty te są obsługiwane przez domyślnie [OnNcCreate](cwnd-class.md#onnccreate), [OnNcCalcSize](cwnd-class.md#onnccalcsize), [OnCreate](cwnd-class.md#oncreate), i [OnGetMinMaxInfo](cwnd-class.md#ongetminmaxinfo) funkcje Członkowskie w `CWnd` klasy podstawowej. Aby rozszerzyć domyślnej obsługi wiadomości, klasa wyprowadzona z `CEdit`, Dodaj mapowanie komunikatów do nowej klasy i zastąpienie powyżej funkcje Członkowskie obsługi wiadomości. Zastąpienie `OnCreate`, na przykład, aby wykonać wymagane inicjowania dla nowej klasy.  
+ Te komunikaty są obsługiwane domyślnie [OnNcCreate](cwnd-class.md#onnccreate), [OnNcCalcSize](cwnd-class.md#onnccalcsize), [OnCreate](cwnd-class.md#oncreate), i [ongetminmaxinfo —](cwnd-class.md#ongetminmaxinfo) funkcji elementów członkowskich w `CWnd` klasy bazowej. Aby rozszerzyć domyślnej obsługi komunikatów, należy wyprowadzić klasę z `CEdit`, dodać mapy komunikatów do nowej klasy, a zastąpienie powyżej funkcji elementów członkowskich programu obsługi komunikatów. Zastąp `OnCreate`, na przykład do przeprowadzenia wymaganych inicjowania dla nowej klasy.  
   
- Zastosuj następujące [Style okna](styles-used-by-mfc.md#window-styles) do kontrolki edycji.  
+ Zastosuj następujące [Style okna ramowego](styles-used-by-mfc.md#window-styles) do kontrolki edycji.  
   
-- **Ws_child —** zawsze  
+- WS_CHILD zawsze  
   
-- **Ws_visible —** zwykle  
+- WS_VISIBLE zwykle  
   
-- **Ws_disabled —** rzadko  
+- WS_DISABLED rzadko  
   
-- **Ws_group —** na grupowanie formantów  
+- WS_GROUP kontrolek grupy  
   
-- **Ws_tabstop —** do uwzględnienia kontrolki edycji w kolejności tabulacji  
+- WS_TABSTOP, które mają zostać objęte kontrolki edycji kolejność tabulacji  
   
 ### <a name="example"></a>Przykład  
  [!code-cpp[NVC_MFC_CEdit#2](../../mfc/reference/codesnippet/cpp/cedit-class_5.cpp)]  
   
 ##  <a name="cut"></a>  CEdit::Cut  
- Wywołanie tej funkcji do usunięcia (obcięty) w bieżącym zaznaczeniu (jeśli istnieją) w formancie edycyjnym i skopiuj usunięty tekst do Schowka w **CF_TEXT** format.  
+ Wywołaj tę funkcję, aby usunąć (obcięty) bieżącego zaznaczenia (jeśli istnieją) w formancie edycji, a następnie skopiuj usunięty tekst do Schowka w formacie CF_TEXT.  
   
 ```  
 void Cut();
 ```  
   
 ### <a name="remarks"></a>Uwagi  
- Usunięcie wykonywane przez `Cut` mogą zostać cofnięte przez wywołanie metody [Cofnij](#undo) funkcję elementu członkowskiego.  
+ Usuwanie wykonywane przez `Cut` mogą zostać cofnięte przez wywołanie metody [Cofnij](#undo) funkcja elementu członkowskiego.  
   
- Aby usunąć bieżące zaznaczenie bez wprowadzania usunięty tekst do Schowka, wywołaj [wyczyść](#clear) funkcję elementu członkowskiego.  
+ Aby usunąć bieżące zaznaczenie bez pogarszania usunięty tekst do Schowka, wywołaj [wyczyść](#clear) funkcja elementu członkowskiego.  
   
  Aby uzyskać więcej informacji, zobacz [WM_CUT](http://msdn.microsoft.com/library/windows/desktop/ms649023) w zestawie Windows SDK.  
   
@@ -391,16 +391,16 @@ void Cut();
  [!code-cpp[NVC_MFC_CEdit#6](../../mfc/reference/codesnippet/cpp/cedit-class_6.cpp)]  
   
 ##  <a name="emptyundobuffer"></a>  CEdit::EmptyUndoBuffer  
- Wywołanie tej funkcji, aby zresetować (Wyczyść) Flaga cofania kontrolki edycji.  
+ Wywołaj tę funkcję, aby zresetować (Wyczyść) Flaga cofania formant edycji.  
   
 ```  
 void EmptyUndoBuffer();
 ```  
   
 ### <a name="remarks"></a>Uwagi  
- Kontrolka edycji będzie teraz nie można cofnąć ostatniej operacji. Zawsze, gdy operacja w formancie edycyjnym można cofnąć została ustawiona flaga cofania.  
+ Kontrolka edycji będzie teraz nie można cofnąć ostatnią operację. Ustawiono flagę cofania, gdy operacja w kontrolce edycji można cofnąć.  
   
- Flaga cofania jest automatycznie czyszczone po każdej zmianie [SetWindowText](../../mfc/reference/cwnd-class.md#setwindowtext) lub [SetHandle](#sethandle) `CWnd` są nazywane funkcji elementów członkowskich.  
+ Flaga cofania jest automatycznie czyszczona zawsze, gdy [SetWindowText](../../mfc/reference/cwnd-class.md#setwindowtext) lub [SetHandle](#sethandle) `CWnd` funkcji składowych są wywoływane.  
   
  Aby uzyskać więcej informacji, zobacz [EM_EMPTYUNDOBUFFER](http://msdn.microsoft.com/library/windows/desktop/bb761568) w zestawie Windows SDK.  
   
@@ -408,7 +408,7 @@ void EmptyUndoBuffer();
  [!code-cpp[NVC_MFC_CEdit#7](../../mfc/reference/codesnippet/cpp/cedit-class_7.cpp)]  
   
 ##  <a name="fmtlines"></a>  CEdit::FmtLines  
- Wywołanie tej funkcji można ustawić lub wyłącz włączenia znaków nietrwałego podział wiersza w formancie edycji wielu linii.  
+ Wywołaj tę funkcję można ustawić lub wyłącz włączenia nietrwałego żadnych znaków w kontrolce edycji wielu linii.  
   
 ```  
 BOOL FmtLines(BOOL bAddEOL);
@@ -416,17 +416,17 @@ BOOL FmtLines(BOOL bAddEOL);
   
 ### <a name="parameters"></a>Parametry  
  *bAddEOL*  
- Określa, czy znaki nietrwałego podziału wiersza są do wstawienia. Wartość **TRUE** wstawia znaków; wartość **FALSE** usuwa je.  
+ Określa, czy mają zostać wstawione znaków nietrwałego podziału wiersza. Wartość TRUE wstawia znaków. wartość FALSE, usuwa je.  
   
 ### <a name="return-value"></a>Wartość zwracana  
- Formatowanie występuje wartość niezerową, jeśli występuje; w przeciwnym razie 0.  
+ Formatowanie występuje wartość różną od zera, jeśli istnieje; w przeciwnym razie 0.  
   
 ### <a name="remarks"></a>Uwagi  
- Podział wiersza nietrwałego składa się z dwóch karetki i wysuwu wiersza wstawione na końcu wiersza, który został przerwany z powodu zawijania wyrazów. Podział wiersza składa się z jednego powrotu karetki i wysuwu wiersza. Nie dotyczy wierszy, które kończyć podział wiersza `FmtLines`.  
+ Podział wiersza nietrwałego składa się z dwóch znaki powrotu karetki i wysuwu wiersza na końcu wiersza, który został przerwany z powodu zawijania dodaje. Podział wiersza twardych składa się z jednego znaku powrotu karetki i wysuwu wiersza. Nie dotyczy linie kończyć się znakiem końca wiersza twardych `FmtLines`.  
   
- System Windows będzie odpowiadać tylko, jeśli `CEdit` obiekt jest w formancie edycji wielu linii.  
+ Windows będą odpowiadać tylko, jeśli `CEdit` obiekt jest formantem wielowierszowe edytowanie.  
   
- `FmtLines` dotyczy tylko buforu zwrócony przez [GetHandle](#gethandle) i tekst zwracany przez [WM_GETTEXT](http://msdn.microsoft.com/library/windows/desktop/ms632627). Nie ma to wpływu na wyświetlanie tekstu w formancie edycyjnym.  
+ `FmtLines` dotyczy tylko buforu zwrócony przez [gethandle —](#gethandle) i tekstem zwróconym przez [WM_GETTEXT](http://msdn.microsoft.com/library/windows/desktop/ms632627). Go nie ma wpływu na wyświetlanie tekstu w kontrolce edycji.  
   
  Aby uzyskać więcej informacji, zobacz [EM_FMTLINES](http://msdn.microsoft.com/library/windows/desktop/bb761570) w zestawie Windows SDK.  
   
@@ -434,7 +434,7 @@ BOOL FmtLines(BOOL bAddEOL);
  [!code-cpp[NVC_MFC_CEdit#8](../../mfc/reference/codesnippet/cpp/cedit-class_8.cpp)]  
   
 ##  <a name="getcuebanner"></a>  CEdit::GetCueBanner  
- Pobiera tekst, który jest wyświetlana jako tekst wskaźnika lub porada w kontrolce edycji, gdy formant jest pusty.  
+ Pobiera tekst, który jest wyświetlany jako podpowiedź tekstowa lub porady w formancie edycji, gdy kontrolka jest pusta.  
   
 ```  
 BOOL GetCueBanner(
@@ -446,28 +446,28 @@ CString GetCueBanner() const;
   
 ### <a name="parameters"></a>Parametry  
  [out] *lpszText*  
- Wskaźnik do ciąg, który zawiera tekst wskaźnika.  
+ Wskaźnik do ciągu, który zawiera tekst wskaźnika.  
   
  [in] *cchText*  
- Liczba znaków, które mogą być odbierane. Liczba ta obejmuje Kończenie `NULL` znaków.  
+ Liczba znaków, które mogą być odbierane. Liczba ta obejmuje kończącego znaku NULL.  
   
 ### <a name="return-value"></a>Wartość zwracana  
- Dla pierwszego przeciążenia `true` przypadku powodzenia; w przeciwnym razie metody `false`.  
+ Pierwsze przeciążenie wartość TRUE jeśli metoda się powiedzie; w przeciwnym razie wartość FALSE.  
   
- Dla drugiego przeciążenia [cstring —](../../atl-mfc-shared/using-cstring.md) zawierający tekst wskaźnika, jeśli metoda przebiegło pomyślnie; w przeciwnym razie wartość pustego ciągu ("").  
+ Dla drugie przeciążenie [CString](../../atl-mfc-shared/using-cstring.md) zawierające tekst wskaźnika, jeśli metoda jest pomyślnie; w przeciwnym razie pusty ciąg ("").  
   
 ### <a name="remarks"></a>Uwagi  
- Ta metoda wysyła [EM_GETCUEBANNER](http://msdn.microsoft.com/library/windows/desktop/bb761572) komunikat, który jest opisany w zestawie SDK systemu Windows. Aby uzyskać więcej informacji, zobacz [Edit_GetCueBannerText](http://msdn.microsoft.com/library/windows/desktop/bb761695) makra.  
+ Ta metoda wysyła [EM_GETCUEBANNER](http://msdn.microsoft.com/library/windows/desktop/bb761572) komunikat, który jest opisany w zestawie Windows SDK. Aby uzyskać więcej informacji, zobacz [Edit_GetCueBannerText](http://msdn.microsoft.com/library/windows/desktop/bb761695) makra.  
   
 ##  <a name="getfirstvisibleline"></a>  CEdit::GetFirstVisibleLine  
- Wywołanie tej funkcji, aby ustalić linię widoczne znajdujące się najwyżej w formancie edycji.  
+ Wywołaj tę funkcję, aby określić najwyżej wiersza widocznego w formancie edycji.  
   
 ```  
 int GetFirstVisibleLine() const;  
 ```  
   
 ### <a name="return-value"></a>Wartość zwracana  
- Liczony od zera indeks wiersza widocznego najwyższego poziomu. Dla formantów edycyjnych jeden wiersz zwracana wartość to 0.  
+ Liczony od zera indeks wiersza widocznego najwyższego poziomu. Dla formantów edycji jednowierszowego wartość zwracana to 0.  
   
 ### <a name="remarks"></a>Uwagi  
  Aby uzyskać więcej informacji, zobacz [EM_GETFIRSTVISIBLELINE](http://msdn.microsoft.com/library/windows/desktop/bb761574) w zestawie Windows SDK.  
@@ -476,24 +476,24 @@ int GetFirstVisibleLine() const;
  [!code-cpp[NVC_MFC_CEdit#9](../../mfc/reference/codesnippet/cpp/cedit-class_9.cpp)]  
   
 ##  <a name="gethandle"></a>  CEdit::GetHandle  
- Wywołanie tej funkcji można pobrać dojścia do pamięci przydzielonego dla formantu edycji wielu linii.  
+ Wywołaj tę funkcję można pobrać dojścia do pamięć, aktualnie przydzielonych dla kontrolki edycji wielu linii.  
   
 ```  
 HLOCAL GetHandle() const;  
 ```  
   
 ### <a name="return-value"></a>Wartość zwracana  
- Dojście pamięci lokalnej identyfikujący buforu zawierający zawartość kontrolki edycji. Jeśli wystąpi błąd, takie jak wysyłanie komunikatu do formantu edycji jeden wiersz, zwracana wartość to 0.  
+ Uchwytu pamięci lokalnej, który identyfikuje buforu zawierający zawartość kontrolki edycji. Jeśli wystąpi błąd, takie jak wysyłanie komunikatu do kontrolki edycji jednowierszowego, wartość zwracana to 0.  
   
 ### <a name="remarks"></a>Uwagi  
- Dojście jest uchwytu pamięci lokalnej i mogą być używane przez jedną z **lokalnego** obsługi funkcji pamięci systemu Windows, które przyjmują pamięci lokalnej jako parametr.  
+ Dojście jest uchwytem pamięci lokalnej i mogą być używane przez żaden z **lokalnego** funkcje pamięci Windows, w których pamięci lokalnej obsługi jako parametr.  
   
- **GetHandle** jest przetwarzany tylko przez formantów edycyjnych wielu linii.  
+ `GetHandle` jest przetwarzany tylko przez formanty edycji wielu linii.  
   
- Wywołanie **GetHandle** kontrolki edycji wielu linii w oknie dialogowym tylko wtedy, gdy okno dialogowe utworzono za pomocą **DS_LOCALEDIT** styl ustawioną flagą. Jeśli **DS_LOCALEDIT** stylu nie jest ustawiona, będą nadal otrzymywać niezerowe wartości zwracanej, ale nie będzie mógł używać zwracanej wartości.  
+ Wywołaj `GetHandle` wielowierszowe edytowanie kontrolki w oknie dialogowym tylko wtedy, gdy okno dialogowe zostało utworzone z ustawioną flagą DS_LOCALEDIT stylu. Jeśli nie ustawiono styl DS_LOCALEDIT, można mimo to uzyskać wartość zwracaną wartość różną od zera, ale nie można użyć wartości zwracane.  
   
 > [!NOTE]
-> **GetHandle** nie działa w systemie Windows 95/98. Jeśli należy wywołać **GetHandle** w systemie Windows 95/98 zwróci **NULL**. **GetHandle** będzie działać zgodnie z opisem w systemie Windows NT w wersji 3.51 lub nowszej.  
+> `GetHandle` nie będzie działać z Windows 95/98. Jeśli wywołasz `GetHandle` w Windows 95/98, to zostanie zwrócona wartość NULL. `GetHandle` będzie działać zgodnie z opisem w obszarze Windows NT w wersji 3.51 lub nowszej.  
   
  Aby uzyskać więcej informacji, zobacz [EM_GETHANDLE](http://msdn.microsoft.com/library/windows/desktop/bb761576) w zestawie Windows SDK.  
   
@@ -501,7 +501,7 @@ HLOCAL GetHandle() const;
  [!code-cpp[NVC_MFC_CEdit#10](../../mfc/reference/codesnippet/cpp/cedit-class_10.cpp)]  
   
 ##  <a name="gethighlight"></a>  CEdit::GetHighlight  
- Pobiera indeksy pierwszy i ostatni znak w zakresie tekstu, który zostanie wyróżniona w bieżącym kontrolki edycji.  
+ Pobiera indeksy pierwszy i ostatni znak w zakresie tekst, który jest wyróżniony w bieżącym kontrolki edycji.  
   
 ```  
 BOOL GetHighlight(
@@ -513,27 +513,27 @@ BOOL GetHighlight(
   
 |Parametr|Opis|  
 |---------------|-----------------|  
-|[out] *pichStart*|Liczony od zera indeks pierwszego znaku w zakresie tekstu, który zostanie wyróżniona.|  
-|[out] *pichEnd*|Liczony od zera indeks ostatni znak w zakres tekstu, które są wyróżnione.|  
+|[out] *pichStart*|Liczony od zera indeks pierwszego wystąpienia znaku w zakresie tekst, który zostanie wyróżniona.|  
+|[out] *pichEnd*|Liczony od zera indeks ostatniego znaku w zakresie tekst, który zostanie wyróżniona.|  
   
 ### <a name="return-value"></a>Wartość zwracana  
- `true` Jeśli ta metoda zakończy się pomyślnie; w przeciwnym razie `false`.  
+ Wartość TRUE, jeśli ta metoda jest kończy się pomyślnie; w przeciwnym razie wartość FALSE.  
   
 ### <a name="remarks"></a>Uwagi  
- Ta metoda wysyła [EM_GETHILITE](http://msdn.microsoft.com/library/windows/desktop/bb761578) komunikat, który jest opisany w zestawie SDK systemu Windows.  
+ Ta metoda wysyła [EM_GETHILITE](http://msdn.microsoft.com/library/windows/desktop/bb761578) komunikat, który jest opisany w zestawie Windows SDK.  
   
 ##  <a name="getlimittext"></a>  CEdit::GetLimitText  
- Wywołanie tej funkcji Członkowskich uzyskanie limit tekstu dla tego `CEdit` obiektu.  
+ Wywołaj tę funkcję elementu członkowskiego, aby pobrać limit tekstu, w tym `CEdit` obiektu.  
   
 ```  
 UINT GetLimitText() const;  
 ```  
   
 ### <a name="return-value"></a>Wartość zwracana  
- Bieżący tekst limit, w bajtach, w tym `CEdit` obiektu.  
+ Bieżący limit tekstu, w bajtach dla tego `CEdit` obiektu.  
   
 ### <a name="remarks"></a>Uwagi  
- Limit tekstu jest maksymalny w bajtach, akceptujących kontrolki edycji.  
+ Limit tekstu jest maksymalną ilość tekstu, w bajtach, akceptujące kontrolki edycji.  
   
 > [!NOTE]
 >  Ta funkcja członkowska jest dostępnych w programie Windows 95 i Windows NT 4.0.  
@@ -544,7 +544,7 @@ UINT GetLimitText() const;
  [!code-cpp[NVC_MFC_CEdit#11](../../mfc/reference/codesnippet/cpp/cedit-class_11.cpp)]  
   
 ##  <a name="getline"></a>  CEdit::GetLine  
- Wywołanie tej funkcji można pobrać wiersza z formantu edycyjnego i umieszcza je w *lpszBuffer*.  
+ Wywołaj tę funkcję, aby pobrać wiersz tekstu z kontrolki edycji i umieszcza je w *lpszBuffer*.  
   
 ```  
 int GetLine(
@@ -559,19 +559,19 @@ int GetLine(
   
 ### <a name="parameters"></a>Parametry  
  *nIndex*  
- Określa numer wiersza, który można pobrać z wielu linii edycji kontrolki. Numerowanie wierszy jest liczony od zera; wartość 0 określa pierwszego wiersza. Ten parametr jest ignorowana przez kontrolkę edycji jeden wiersz.  
+ Określa numer wiersza, który można pobrać z wielu linii do kontrolki edycji. Numery wierszy są oparte na zerze; wartość 0 określa pierwszy wiersz. Ten parametr jest ignorowany przez kontrolę edycji jeden wiersz.  
   
  *lpszBuffer*  
- Wskazuje buforu, który otrzyma kopię wiersza. Pierwsze słowo buforu, należy określić maksymalną liczbę znaków, które mogą zostać skopiowane do buforu.  
+ Wskazuje buforu, który otrzymuje kopię wiersza. Pierwszy wyraz buforu, należy określić maksymalną liczbę znaków, które mogą być kopiowane do buforu.  
   
  *nMaxLength*  
- Określa maksymalną liczbę bajtów, które mogą zostać skopiowane do buforu. `GetLine` umieszcza tę wartość w pierwszej wyrazu *lpszBuffer* przed wykonaniem połączenia do systemu Windows.  
+ Określa maksymalną liczbę bajtów, które mogą być kopiowane do buforu. `GetLine` umieszcza tę wartość w pierwszy wyraz *lpszBuffer* przed wykonaniem wywołania do Windows.  
   
 ### <a name="return-value"></a>Wartość zwracana  
- Liczba bajtów faktycznie skopiowane. Zwracana wartość wynosi 0, jeśli numer wiersza określony przez *nIndex* jest większa niż liczba wierszy w formancie edycyjnym.  
+ Liczba bajtów skopiowanych w rzeczywistości. Wartość zwracana to 0, jeśli numer wiersza określonego przez *nIndex* jest większa niż liczba wierszy w formancie edycji.  
   
 ### <a name="remarks"></a>Uwagi  
- Skopiowanego wiersza nie zawiera znaku zakończenia wartości null.  
+ Skopiowanego wiersza nie zawiera znaku zakończenia o wartości null.  
   
  Aby uzyskać więcej informacji, zobacz [EM_GETLINE](http://msdn.microsoft.com/library/windows/desktop/bb761584) w zestawie Windows SDK.  
   
@@ -579,17 +579,17 @@ int GetLine(
   Zobacz przykład [CEdit::GetLineCount](#getlinecount).  
   
 ##  <a name="getlinecount"></a>  CEdit::GetLineCount  
- Wywołanie tej funkcji, aby pobrać liczbę wierszy w formancie edycji wielu linii.  
+ Wywołaj tę funkcję można pobrać liczby wierszy w formancie edycji wielu linii.  
   
 ```  
 int GetLineCount() const;  
 ```  
   
 ### <a name="return-value"></a>Wartość zwracana  
- Formant edycji całkowitą reprezentującą liczbę wierszy w wielu wierszach. Jeśli tekst nie został wprowadzony w formancie edycji, zwracana wartość to 1.  
+ Formant edycji całkowitą reprezentującą liczbę wierszy w wielu wierszach. Jeśli tekst nie został wprowadzony w formancie edycji, wartość zwracana to 1.  
   
 ### <a name="remarks"></a>Uwagi  
- `GetLineCount` jest przetwarzany tylko przez formantów edycyjnych wielu linii.  
+ `GetLineCount` jest przetwarzany tylko przez formanty edycji wielu linii.  
   
  Aby uzyskać więcej informacji, zobacz [EM_GETLINECOUNT](http://msdn.microsoft.com/library/windows/desktop/bb761586) w zestawie Windows SDK.  
   
@@ -597,14 +597,14 @@ int GetLineCount() const;
  [!code-cpp[NVC_MFC_CEdit#12](../../mfc/reference/codesnippet/cpp/cedit-class_12.cpp)]  
   
 ##  <a name="getmargins"></a>  CEdit::GetMargins  
- Wywołanie tej funkcji Członkowskich pobrać lewego i prawego marginesu tej kontrolki edycji.  
+ Wywołaj tę funkcję elementu członkowskiego, aby pobrać lewego i prawego marginesu tej kontrolki edycji.  
   
 ```  
 DWORD GetMargins() const;  
 ```  
   
 ### <a name="return-value"></a>Wartość zwracana  
- Szerokość lewy margines w znaczącymi bitami **WORD** i szerokość prawego marginesu w znaczącymi bitami **WORD**.  
+ Szerokość lewy margines WORD niskiego rzędu i szerokość prawy margines w programie WORD wyższego rzędu.  
   
 ### <a name="remarks"></a>Uwagi  
  Marginesy są mierzone w pikselach.  
@@ -618,17 +618,17 @@ DWORD GetMargins() const;
   Zobacz przykład [CEditView::GetEditCtrl](ceditview-class.md#geteditctrl).  
   
 ##  <a name="getmodify"></a>  CEdit::GetModify  
- Wywołanie tej funkcji, aby określić, czy zawartość formantu edycyjnego zostały zmodyfikowane.  
+ Wywołaj tę funkcję, aby ustalić, czy zawartość formantu edycji został zmieniony.  
   
 ```  
 BOOL GetModify() const;  
 ```  
   
 ### <a name="return-value"></a>Wartość zwracana  
- Różna od zera, jeśli zostały zmodyfikowane zawartość kontrolki edycji; 0, jeśli ich pozostać bez zmian.  
+ Wartość różną od zera, jeśli zmodyfikowano zawartość kontrolki edycji; 0, jeśli one pozostać niezmieniona.  
   
 ### <a name="remarks"></a>Uwagi  
- System Windows zachowuje wewnętrzny flagę wskazującą, czy zawartość formantu edycyjnego zostały zmienione. Flaga ta zostanie wyczyszczona po kontrolki edycji utworzenia i mogą być również usunięte przez wywołanie metody [SetModify](#setmodify) funkcję elementu członkowskiego.  
+ Windows przechowuje wewnętrzny flagę wskazującą, czy zawartość formantu edycji został zmieniony. Ta flaga jest czyszczona po kontrolki edycji tworzona jest najpierw, a także mogą zostać wyczyszczone, wywołując [SetModify](#setmodify) funkcja elementu członkowskiego.  
   
  Aby uzyskać więcej informacji, zobacz [EM_GETMODIFY](http://msdn.microsoft.com/library/windows/desktop/bb761592) w zestawie Windows SDK.  
   
@@ -636,25 +636,25 @@ BOOL GetModify() const;
  [!code-cpp[NVC_MFC_CEdit#13](../../mfc/reference/codesnippet/cpp/cedit-class_13.cpp)]  
   
 ##  <a name="getpasswordchar"></a>  CEdit::GetPasswordChar  
- Wywołanie tej funkcji można pobrać znak hasła, która jest wyświetlana w formancie edycji, gdy użytkownik wprowadzi tekst.  
+ Wywołaj tę funkcję, aby pobrać znaku hasła, która jest wyświetlana w formancie edycji, gdy użytkownik wprowadzi tekst.  
   
 ```  
 TCHAR GetPasswordChar() const;  
 ```  
   
 ### <a name="return-value"></a>Wartość zwracana  
- Określa znaków, które mają być wyświetlane zamiast znaków, która zostanie wpisany. Wartość zwracana jest `NULL` Jeśli istnieje nie znaków hasła.  
+ Określa znak, który ma być wyświetlany zamiast znaku, który wpisany przez użytkownika. Wartość zwracana jest wartość NULL, jeśli istnieje Brak znaku hasła.  
   
 ### <a name="remarks"></a>Uwagi  
- W przypadku utworzenia kontrolki edycji z **es_password —** styl, DLL, która obsługuje kontrolkę Określa domyślny znak hasła. Plik manifestu lub [InitCommonControlsEx](http://msdn.microsoft.com/library/windows/desktop/bb775697) Metoda określa, który obsługuje DLL kontrolki edycji. Jeśli user32.dll obsługuje kontrolki edycji, domyślny znak hasła jest znak GWIAZDKI ("*", U + 002A). Jeśli comctl32.dll w wersji 6 obsługuje kontrolki edycji, domyślny znak jest czarne KÓŁKO ("●", U + 25CF). Aby uzyskać więcej informacji o obsługujący biblioteki DLL i wersji wspólne kontrolki, zobacz [powłoki i wersji formantów wspólnych](http://msdn.microsoft.com/library/windows/desktop/bb776779).  
+ Jeśli utworzysz formant edycji stylu ES_PASSWORD biblioteki DLL, która obsługuje formant określa domyślny znak hasła. Manifest lub [InitCommonControlsEx](http://msdn.microsoft.com/library/windows/desktop/bb775697) Metoda określa, który obsługuje biblioteki DLL kontrolki edycji. Jeśli user32.dll obsługuje formant edycji, domyślny znak hasła jest GWIAZDKI ("*", U + 002A). Jeśli comctl32.dll w wersji 6 obsługuje formant edycji, domyślny znak jest czarne KÓŁKO ("●", U + 25CF). Aby uzyskać więcej informacji na temat obsługujący biblioteki DLL i wersji wspólnych formantów, zobacz [powłoki i wspólnej kontroli wersji](http://msdn.microsoft.com/library/windows/desktop/bb776779).  
   
- Ta metoda wysyła [EM_GETPASSWORDCHAR](http://msdn.microsoft.com/library/windows/desktop/bb761594) komunikat, który jest opisany w zestawie SDK systemu Windows.  
+ Ta metoda wysyła [EM_GETPASSWORDCHAR](http://msdn.microsoft.com/library/windows/desktop/bb761594) komunikat, który jest opisany w zestawie Windows SDK.  
   
 ### <a name="example"></a>Przykład  
  [!code-cpp[NVC_MFC_CEdit#14](../../mfc/reference/codesnippet/cpp/cedit-class_14.cpp)]  
   
 ##  <a name="getrect"></a>  CEdit::GetRect  
- Wywołanie tej funkcji można pobrać prostokąt formatowania formantu edycyjnego.  
+ Wywołaj tę funkcję, aby pobrać formatowania prostokąt formant edycji.  
   
 ```  
 void GetRect(LPRECT lpRect) const;  
@@ -665,9 +665,9 @@ void GetRect(LPRECT lpRect) const;
  Wskazuje `RECT` strukturę, która odbiera formatowania prostokąta.  
   
 ### <a name="remarks"></a>Uwagi  
- Prostokąt formatowania jest ograniczanie prostokąt tekst, który jest niezależny od rozmiaru okna kontrolki edycji.  
+ Prostokąt formatowania jest ograniczającą prostokąt tekst, który jest niezależny od rozmiaru okna kontrolki edycji.  
   
- Prostokąt formatowania formantu edycji wielu linii, może być modyfikowany przez [SetRect](#setrect) i [SetRectNP](#setrectnp) funkcji elementów członkowskich.  
+ Formatowania prostokąt kontrolkę edycji wielu linii, może być modyfikowana przez [setrect —](#setrect) i [SetRectNP](#setrectnp) funkcji elementów członkowskich.  
   
  Aby uzyskać więcej informacji, zobacz [EM_GETRECT](http://msdn.microsoft.com/library/windows/desktop/bb761596) w zestawie Windows SDK.  
   
@@ -675,7 +675,7 @@ void GetRect(LPRECT lpRect) const;
   Zobacz przykład [CEdit::LimitText](#limittext).  
   
 ##  <a name="getsel"></a>  CEdit::GetSel  
- Wywołanie tej funkcji, aby uzyskać początkową i końcową pozycji znaku bieżącego zaznaczenia (jeśli istnieją) w formancie edycji, przy użyciu parametrów lub wartości zwracanej.  
+ Wywołaj tę funkcję, aby uzyskać początkową i końcową pozycji znaku bieżącego zaznaczenia (jeśli istnieją) w kontrolce edycji, przy użyciu parametrów lub wartości zwracanej.  
   
 ```  
 DWORD GetSel() const;  
@@ -687,13 +687,13 @@ void GetSel(
   
 ### <a name="parameters"></a>Parametry  
  *nStartChar*  
- Odwołanie do wartości całkowitej, który będzie otrzymywał pozycja pierwszego znaku w bieżącym zaznaczeniu.  
+ Odwołanie do liczby całkowitej, który będzie otrzymywał położenie pierwszego wystąpienia znaku w bieżącym zaznaczeniu.  
   
  *nEndChar*  
- Odwołanie do wartości całkowitej, który będzie otrzymywał pozycja pierwszego znaku nonselected poza końcem bieżącego zaznaczenia.  
+ Odwołanie do liczby całkowitej, który będzie otrzymywał pozycja pierwszego znaku nonselected poza końcem bieżącego zaznaczenia.  
   
 ### <a name="return-value"></a>Wartość zwracana  
- Wersja, która zwraca `DWORD` zwróci wartość, która zawiera pozycji początkowej w programie word znaczącymi bitami i pozycja pierwszego znaku nonselected po zakończeniu wyboru w programie word znaczących.  
+ Wersja, która zwraca wartość typu DWORD zwraca wartość, która zawiera pozycja początkowa w programie word niskiego rzędu i położenie pierwszego wystąpienia znaku nonselected po zakończeniu wyboru w programie word wyższego rzędu.  
   
 ### <a name="remarks"></a>Uwagi  
  Aby uzyskać więcej informacji, zobacz [EM_GETSEL](http://msdn.microsoft.com/library/windows/desktop/bb761598) w zestawie Windows SDK.  
@@ -709,13 +709,13 @@ BOOL HideBalloonTip();
 ```  
   
 ### <a name="return-value"></a>Wartość zwracana  
- `true` Jeśli ta metoda zakończy się pomyślnie; w przeciwnym razie `false`.  
+ Wartość TRUE, jeśli ta metoda jest kończy się pomyślnie; w przeciwnym razie wartość FALSE.  
   
 ### <a name="remarks"></a>Uwagi  
- Ta funkcja wysyła [EM_HIDEBALLOONTIP](http://msdn.microsoft.com/library/windows/desktop/bb761604) komunikat, który jest opisany w zestawie SDK systemu Windows.  
+ Ta funkcja wysyła [EM_HIDEBALLOONTIP](http://msdn.microsoft.com/library/windows/desktop/bb761604) komunikat, który jest opisany w zestawie Windows SDK.  
   
 ##  <a name="limittext"></a>  CEdit::LimitText  
- Wywołanie tej funkcji, aby ograniczyć długość tekstu, który użytkownik może wprowadzić w formancie edycyjnym.  
+ Wywołaj tę funkcję, aby ograniczyć długość tekstu, który użytkownik może wprowadzić do kontrolki edycji.  
   
 ```  
 void LimitText(int nChars = 0);
@@ -723,13 +723,13 @@ void LimitText(int nChars = 0);
   
 ### <a name="parameters"></a>Parametry  
  *nChars*  
- Określa tekst, który użytkownik może wprowadzić długość (w bajtach). Jeśli ten parametr ma wartość 0, ma ustawioną wartość długość tekstu **uint_max —** bajtów. Jest to zachowanie domyślne.  
+ Określa długość (w bajtach) tekst, który użytkownik może wprowadzić. Jeśli ten parametr ma wartość 0, długość tekstu jest równa UINT_MAX bajtów. Jest to zachowanie domyślne.  
   
 ### <a name="remarks"></a>Uwagi  
- Zmiana limit tekstu ogranicza tylko tekst, który użytkownik może wprowadzić. Go nie ma wpływu na dowolny tekst już w formancie edycyjnym ani nie ogranicza długość tekstu skopiowane do edycji przez [SetWindowText](cwnd-class.md#setwindowtext) funkcji członkowskiej we `CWnd`. Jeśli aplikacja używa `SetWindowText` funkcji, aby umieścić tekst w formancie edycyjnym niż określona w wywołaniu `LimitText`, użytkownik może usunąć tekstu w formancie edycji. Jednak limit tekstu uniemożliwi zastępując istniejący tekst na nowy tekst użytkownika, chyba że usunięcie bieżącego zaznaczenia powoduje, że tekst, który spadną poniżej limit tekstu.  
+ Zmiana tego limitu tekstu ogranicza tylko tekst, który użytkownik może wprowadzić. Nie ma ona wpływu na dowolny tekst już w formancie edycji ani nie ogranicza długość tekstu skopiowane do kontrolki edycji przez [SetWindowText](cwnd-class.md#setwindowtext) funkcji składowej we `CWnd`. Jeśli aplikacja używa `SetWindowText` funkcję, aby umieścić więcej tekstu w formancie edycji niż określona w wywołaniu `LimitText`, użytkownik może usunąć dowolny tekst w kontrolce edycji. Jednak limit tekstu uniemożliwi zastępując istniejący tekst nowym tekstem użytkownika, chyba że usuwanie bieżące zaznaczenie powoduje, że tekst nie przekraczają limit tekstu.  
   
 > [!NOTE]
->  W systemie Win32 (z systemem Windows NT i system operacyjny Windows 95/98), [SetLimitText](#setlimittext) zastępuje tej funkcji.  
+>  W systemie Win32 (Windows 95/98 i Windows NT), [SetLimitText](#setlimittext) zastępuje tę funkcję.  
   
  Aby uzyskać więcej informacji, zobacz [EM_LIMITTEXT](http://msdn.microsoft.com/library/windows/desktop/bb761607) w zestawie Windows SDK.  
   
@@ -737,7 +737,7 @@ void LimitText(int nChars = 0);
  [!code-cpp[NVC_MFC_CEdit#17](../../mfc/reference/codesnippet/cpp/cedit-class_16.cpp)]  
   
 ##  <a name="linefromchar"></a>  CEdit::LineFromChar  
- Wywołanie tej funkcji można pobrać numer wiersza, który zawiera indeks określony znak.  
+ Wywołaj tę funkcję, aby pobrać numer wiersza w wierszu, który zawiera indeks określonego znaku.  
   
 ```  
 int LineFromChar(int nIndex = -1) const;  
@@ -745,15 +745,15 @@ int LineFromChar(int nIndex = -1) const;
   
 ### <a name="parameters"></a>Parametry  
  *nIndex*  
- Zawiera wartość indeksu żądany znak w tekście kontrolki edycji lub zawiera wartość -1. Jeśli *nIndex* wynosi -1, określa bieżącego wiersza, oznacza to, że wiersz zawierający karetki.  
+ Zawiera wartość indeksu zaczynającego się od zera dla żądany znak w tekście kontrolki edycji lub zawiera wartość -1. Jeśli *nIndex* wynosi -1, określa bieżący wiersz, oznacza to, że wiersz, który zawiera karetki.  
   
 ### <a name="return-value"></a>Wartość zwracana  
- Liczony od zera numery wierszy zawierających określony przez indeks znaków *nIndex*. Jeśli *nIndex* wynosi -1, jest zwracany numer wiersza, który zawiera pierwszy znak zaznaczenia. Jeśli nie ma żadnego zaznaczenia, zwracany jest bieżący numer wiersza.  
+ Liczony od zera numer wiersza, zawierający określone przez indeks znaków *nIndex*. Jeśli *nIndex* wynosi -1, numer wiersza, która zawiera pierwszy znak zaznaczenia jest zwracana. Jeśli nie zaznaczono żadnego fragmentu, zwracany jest bieżący numer wiersza.  
   
 ### <a name="remarks"></a>Uwagi  
  Indeks znaków jest liczbę znaków od początku kontrolki edycji.  
   
- Ta funkcja członkowska jest używana tylko w formantach edycji wielu linii.  
+ Ta funkcja elementu członkowskiego tylko jest używany przez formanty edycji wielu linii.  
   
  Aby uzyskać więcej informacji, zobacz [EM_LINEFROMCHAR](http://msdn.microsoft.com/library/windows/desktop/bb761609) w zestawie Windows SDK.  
   
@@ -761,7 +761,7 @@ int LineFromChar(int nIndex = -1) const;
  [!code-cpp[NVC_MFC_CEdit#18](../../mfc/reference/codesnippet/cpp/cedit-class_17.cpp)]  
   
 ##  <a name="lineindex"></a>  CEdit::LineIndex  
- Wywołanie tej funkcji można pobrać indeks znaków wiersza w formancie edycji wielu linii.  
+ Wywołaj tę funkcję, aby pobrać indeks znaków wiersza w formancie edycji wielu linii.  
   
 ```  
 int LineIndex(int nLine = -1) const;  
@@ -769,15 +769,15 @@ int LineIndex(int nLine = -1) const;
   
 ### <a name="parameters"></a>Parametry  
  *nLine*  
- Zawiera wartość indeksu dla żądanego wiersza w tekście kontrolki edycji lub zawiera wartość -1. Jeśli *nLine* wynosi -1, określa bieżącego wiersza, oznacza to, że wiersz zawierający karetki.  
+ Zawiera wartość indeksu żądanego wiersza w tekście kontrolki edycji lub zawiera wartość -1. Jeśli *nLine* wynosi -1, określa bieżący wiersz, oznacza to, że wiersz, który zawiera karetki.  
   
 ### <a name="return-value"></a>Wartość zwracana  
- Indeks znaków wiersza określony w *nLine* lub wartość -1 Jeśli liczba określonego wiersza jest większa niż liczba wierszy w formancie edycyjnym.  
+ Indeks znaków wiersza określonego w *nLine* lub wartość -1, jeśli określony numer wiersza jest większa niż liczba wierszy w formancie edycji.  
   
 ### <a name="remarks"></a>Uwagi  
- Indeks znaków jest liczbę znaków od początku kontrolki edycji określony wiersz.  
+ Indeks znaków jest liczbę znaków od początku kontrolki edycji do określonego wiersza.  
   
- Funkcji członkowskiej jest przetwarzany tylko przez formantów edycyjnych wielu linii.  
+ Ta funkcja członkowska jest przetwarzany tylko przez formanty edycji wielu linii.  
   
  Aby uzyskać więcej informacji, zobacz [EM_LINEINDEX](http://msdn.microsoft.com/library/windows/desktop/bb761611) w zestawie Windows SDK.  
   
@@ -785,7 +785,7 @@ int LineIndex(int nLine = -1) const;
  [!code-cpp[NVC_MFC_CEdit#19](../../mfc/reference/codesnippet/cpp/cedit-class_18.cpp)]  
   
 ##  <a name="linelength"></a>  CEdit::LineLength  
- Pobiera długość wiersza w kontrolce edycji.  
+ Pobiera długość wiersza w formancie edycji.  
   
 ```  
 int LineLength(int nLine = -1) const;  
@@ -793,27 +793,27 @@ int LineLength(int nLine = -1) const;
   
 ### <a name="parameters"></a>Parametry  
  *nLine*  
- Liczony od zera indeks znaków w wierszu, którego długość ma być pobrana. Wartość domyślna wynosi -1.  
+ Liczony od zera indeks znaku w wierszu, którego długość ma być pobrana. Wartość domyślna to -1.  
   
 ### <a name="return-value"></a>Wartość zwracana  
- Dla formantów edycyjnych jeden wiersz, wartość zwracana jest długość, w `TCHAR`s tekstu w formancie edycyjnym.  
+ Dla formantów edycji jednowierszowego wartość zwracana jest długość tekstu w formancie edycji TCHARs.  
   
- Dla wielowierszowych formantów edycyjnych, wartość zwracana jest długość, `TCHAR`s wiersza określony przez *nLine* parametru. Aby uzyskać [!INCLUDE[vcpransi](../../atl-mfc-shared/reference/includes/vcpransi_md.md)] tekstu, długość jest to liczba bajtów w wierszu; tekst Unicode, długość jest liczba znaków w wierszu. Długość nie zawiera znak powrotu karetki na końcu linii.  
+ W przypadku kontrolek edycji wielowierszowy wartość zwracana jest długość wiersza określonego przez parametr TCHARs, *nLine* parametru. Aby uzyskać [!INCLUDE[vcpransi](../../atl-mfc-shared/reference/includes/vcpransi_md.md)] tekstu, długość jest liczbą bajtów w wierszu; w przypadku tekst Unicode, długość jest liczba znaków w wierszu. Długość nie zawiera znaku powrotu karetki na końcu wiersza.  
   
- Jeśli *nLine* parametru jest większa niż liczba znaków w formancie, zwracana wartość wynosi zero.  
+ Jeśli *nLine* parametru jest większa niż liczba znaków w kontrolce, wartość zwracana wynosi zero.  
   
- Jeśli *nLine* parametru wynosi -1, wartość zwracana jest liczba niezaznaczone znaków w wierszy, które zawierają znaki wybrane. Na przykład jeśli zaznaczenie rozciąga się od czwarty znaku o jeden wiersz za pośrednictwem osiem znaków od końca następnego wiersza, zwracana wartość wynosi 10. Oznacza to trzy znaki na pierwszy wiersz i siedem przy następnym.  
+ Jeśli *nLine* parametru wynosi -1, wartość zwracana jest liczba znaków niezaznaczone w wierszach, które zawierają znaki wybrane. Na przykład jeśli zaznaczenie rozciąga się od znaku czwartego jednowierszowy za pośrednictwem osiem znaków od końca następnego wiersza, wartość zwracana wynosi 10. Oznacza to trzech znaków w pierwszym wierszu i siedem na następnej.  
   
- Aby uzyskać więcej informacji na temat `TCHAR` typu, zobacz `TCHAR` wiersza w tabeli w [typów danych systemu Windows](http://msdn.microsoft.com/library/windows/desktop/aa383751).  
+ Aby uzyskać więcej informacji o typie danych TCHAR, zobacz wiersz TCHAR w tabeli w [typy danych Windows](http://msdn.microsoft.com/library/windows/desktop/aa383751).  
   
 ### <a name="remarks"></a>Uwagi  
- Ta metoda jest obsługiwana przez [EM_LINELENGTH](http://msdn.microsoft.com/library/windows/desktop/bb761613) komunikat, który jest opisany w zestawie SDK systemu Windows.  
+ Ta metoda jest obsługiwana przez [EM_LINELENGTH](http://msdn.microsoft.com/library/windows/desktop/bb761613) komunikat, który jest opisany w zestawie Windows SDK.  
   
 ### <a name="example"></a>Przykład  
   Zobacz przykład [CEdit::LineIndex](#lineindex).  
   
 ##  <a name="linescroll"></a>  CEdit::LineScroll  
- Wywołanie tej funkcji, aby przewijać tekst formantu edycji wielu linii.  
+ Wywołaj tę funkcję, aby przewijać tekstu wielowierszowego edycji.  
   
 ```  
 void LineScroll(
@@ -826,14 +826,14 @@ void LineScroll(
  Określa liczbę wierszy, aby przewijać w pionie.  
   
  *nChars*  
- Określa liczbę pozycji znaku można przewijać w poziomie. Ta wartość jest ignorowana, jeśli formant edycyjny ma albo **es_right —** lub **es_center —** stylu.  
+ Określa numer pozycji znaku do być przewijane w poziomie. Ta wartość jest ignorowana, jeśli kontrolka edycji zawiera ES_RIGHT albo ES_CENTER stylu.  
   
 ### <a name="remarks"></a>Uwagi  
- Ta funkcja członkowska jest przetwarzany tylko przez formantów edycyjnych wielu linii.  
+ Ta funkcja członkowska jest przetwarzany tylko przez formantów edycji wielu linii.  
   
- Formant edycyjny nie jest przewijane w pionie poza ostatni wiersz tekstu w formancie edycyjnym. Jeśli bieżący wiersz i liczby wierszy określony przez *nLines* przekracza całkowitą liczbę wierszy w formancie edycyjnym, wartość jest ustawione tak, aby ostatni wiersz kontrolki edycji jest przewijane w górnej części okna kontrolki edycji.  
+ Kontrolka edycji nie w pionie przewiń ekran za ostatni wiersz tekstu w kontrolce edycji. Jeśli bieżący wiersz oraz liczbę wierszy, określony przez *nLines* przekracza łączna liczba wierszy w formancie edycji, wartość jest korygowana, więc, że ostatni wiersz kontrolki edycji jest przewijane do góry okna kontrolki edycji.  
   
- `LineScroll` można przewijać w poziomie poza ostatni znak każdego wiersza.  
+ `LineScroll` można przewijać w poziomie poza ostatnim znakiem każdego wiersza.  
   
  Aby uzyskać więcej informacji, zobacz [EM_LINESCROLL](http://msdn.microsoft.com/library/windows/desktop/bb761615) w zestawie Windows SDK.  
   
@@ -841,14 +841,14 @@ void LineScroll(
   Zobacz przykład [CEdit::GetFirstVisibleLine](#getfirstvisibleline).  
   
 ##  <a name="paste"></a>  CEdit::Paste  
- Wywołanie tej funkcji do wstawiania danych ze Schowka do `CEdit` punkt wstawiania.  
+ Wywołaj tę funkcję, aby wstawić dane ze Schowka do `CEdit` w punkcie wstawiania.  
   
 ```  
 void Paste();
 ```  
   
 ### <a name="remarks"></a>Uwagi  
- Dane są wstawiane tylko wtedy, gdy Schowek zawiera dane w **CF_TEXT** format.  
+ Dane są wstawiane tylko wtedy, gdy Schowek zawiera dane w formacie CF_TEXT.  
   
  Aby uzyskać więcej informacji, zobacz [WM_PASTE](http://msdn.microsoft.com/library/windows/desktop/ms649028) w zestawie Windows SDK.  
   
@@ -856,21 +856,21 @@ void Paste();
  [!code-cpp[NVC_MFC_CEdit#20](../../mfc/reference/codesnippet/cpp/cedit-class_19.cpp)]  
   
 ##  <a name="posfromchar"></a>  CEdit::PosFromChar  
- Wywołanie tej funkcji można pobrać pozycji (lewego górnego rogu) danego znaku w ramach tego `CEdit` obiektu.  
+ Wywołaj tę funkcję, aby uzyskać pozycji (w lewym górnym rogu) danego znaku w ramach tej `CEdit` obiektu.  
   
 ```  
 CPoint PosFromChar(UINT nChar) const;  
 ```  
   
 ### <a name="parameters"></a>Parametry  
- *NChar*  
- Liczony od zera indeks określony znak.  
+ *nChar*  
+ Liczony od zera indeks określonego znaku.  
   
 ### <a name="return-value"></a>Wartość zwracana  
- Współrzędne górnego lewego rogu znak określony przez *nChar*.  
+ Współrzędne w lewym górnym rogu znak określony przez *nChar*.  
   
 ### <a name="remarks"></a>Uwagi  
- Znak jest określona przez podanie jego liczony od zera indeks wartości. Jeśli *nChar* jest większa niż indeks ostatni znak w tym `CEdit` obiektu, zwracana wartość określa współrzędne znaku na pozycji tylko po ostatnim znakiem w tym `CEdit` obiektu.  
+ Znak jest określona, zapewniając jej wartość indeksu zaczynającego się od zera. Jeśli *nChar* jest większa niż indeks ostatniego znaku w tym `CEdit` obiekt, wartość zwracana określa współrzędne pozycji znaku tylko poza ostatnim znakiem w tym `CEdit` obiektu.  
   
 > [!NOTE]
 >  Ta funkcja członkowska jest dostępnych w programie Windows 95 i Windows NT 4.0.  
@@ -881,7 +881,7 @@ CPoint PosFromChar(UINT nChar) const;
   Zobacz przykład [CEdit::LineFromChar](#linefromchar).  
   
 ##  <a name="replacesel"></a>  CEdit::ReplaceSel  
- Wywołanie tej funkcji, aby zastąpić bieżące zaznaczenie w formancie edycji tekstu określonego przez *lpszNewText*.  
+ Wywołaj tę funkcję, aby zastąpić bieżące zaznaczenie w formancie edycji tekstu określonego przez *lpszNewText*.  
   
 ```  
 void ReplaceSel(LPCTSTR lpszNewText, BOOL bCanUndo = FALSE);
@@ -889,15 +889,15 @@ void ReplaceSel(LPCTSTR lpszNewText, BOOL bCanUndo = FALSE);
   
 ### <a name="parameters"></a>Parametry  
  *lpszNewText*  
- Wskazuje zerem ciąg zawierający tekst zastępczy.  
+ Wskazuje ciąg zakończony wartością null zawierający tekst zastępujący.  
   
  *bCanUndo*  
- Aby określić, że ta funkcja może być cofnięte, ustaw wartość tego parametru, aby **TRUE** . Wartość domyślna to **FALSE**.  
+ Aby określić, że ta funkcja może być cofnięte, należy ustawić wartość tego parametru na wartość TRUE. Wartość domyślna to FALSE.  
   
 ### <a name="remarks"></a>Uwagi  
- Zastępuje tylko część tekstu w kontrolce edycji. Jeśli chcesz zamienić cały tekst, użyj [CWnd::SetWindowText](cwnd-class.md#setwindowtext) funkcję elementu członkowskiego.  
+ Zastępuje tylko część tekstu w kontrolce edycji. Jeśli chcesz zamienić cały tekst, użyj [CWnd::SetWindowText](cwnd-class.md#setwindowtext) funkcja elementu członkowskiego.  
   
- Jeśli nie ma żadnego bieżącego zaznaczenia, tekst zastępczy jest wstawiany w bieżącej lokalizacji kursora.  
+ Jeśli nie ma bieżącego zaznaczenia, tekst zastępczy jest wstawiany w bieżącej lokalizacji kursora.  
   
  Aby uzyskać więcej informacji, zobacz [EM_REPLACESEL](http://msdn.microsoft.com/library/windows/desktop/bb761633) w zestawie Windows SDK.  
   
@@ -905,7 +905,7 @@ void ReplaceSel(LPCTSTR lpszNewText, BOOL bCanUndo = FALSE);
   Zobacz przykład [CEdit::LineIndex](#lineindex).  
   
 ##  <a name="setcuebanner"></a>  CEdit::SetCueBanner  
- Ustawia tekst, który jest wyświetlany jako wskaźnik tekstu lub Porada, w edycji sterować tym, gdy formant jest pusty.  
+ Ustawia tekst, który jest wyświetlany jako podpowiedź tekstowa lub Porada, w trakcie edycji kontroli, gdy kontrolka jest pusty.  
   
 ```  
 BOOL SetCueBanner(LPCWSTR lpszText);
@@ -918,20 +918,20 @@ BOOL SetCueBanner(
   
 ### <a name="parameters"></a>Parametry  
  [in] *lpszText*  
- Wskaźnik do ciąg, który zawiera wskaźnik do wyświetlenia w formancie edycyjnym.  
+ Wskaźnik na ciąg, który zawiera wskaźnik do wyświetlenia w kontrolce edycji.  
   
  [in] *fDrawWhenFocused*  
- Jeśli `false`, transparent wskaźnika nie jest rysowana, gdy użytkownik kliknie przycisk w formancie edycyjnym i przenosi fokus na formantu.  
+ W przypadku wartości FAŁSZ transparent wskaźnika nie jest narysowany, gdy użytkownik kliknie w formancie edycji i przenosi fokus na formant.  
   
- Jeśli `true`, transparent wskaźnika jest rysowany nawet wtedy, gdy formant ma fokus. Transparent sygnalizacji zniknie uruchomienia wpisz w formancie użytkownika.  
+ W przypadku opcji TRUE transparent wskaźnika jest rysowana nawet wtedy, gdy kontrolka jest ustawiony fokus. Transparent sygnalizacji znika, gdy użytkownik rozpoczyna się do typu w kontrolce.  
   
- Wartość domyślna to `false`.  
+ Wartość domyślna to FALSE.  
   
 ### <a name="return-value"></a>Wartość zwracana  
- `true` Jeśli metoda zakończy się pomyślnie; w przeciwnym razie `false`.  
+ Wartość TRUE, jeśli metoda się powiedzie; w przeciwnym razie wartość FALSE.  
   
 ### <a name="remarks"></a>Uwagi  
- Ta metoda wysyła [EM_SETCUEBANNER](http://msdn.microsoft.com/library/windows/desktop/bb761639) komunikat, który jest opisany w zestawie SDK systemu Windows. Aby uzyskać więcej informacji, zobacz [Edit_SetCueBannerTextFocused](http://msdn.microsoft.com/library/windows/desktop/bb761703) makra.  
+ Ta metoda wysyła [EM_SETCUEBANNER](http://msdn.microsoft.com/library/windows/desktop/bb761639) komunikat, który jest opisany w zestawie Windows SDK. Aby uzyskać więcej informacji, zobacz [Edit_SetCueBannerTextFocused](http://msdn.microsoft.com/library/windows/desktop/bb761703) makra.  
   
 ### <a name="example"></a>Przykład  
  W poniższym przykładzie pokazano [CEdit::SetCueBanner](#setcuebanner) metody.  
@@ -939,7 +939,7 @@ BOOL SetCueBanner(
  [!code-cpp[NVC_MFC_CEdit_s1#2](../../mfc/reference/codesnippet/cpp/cedit-class_20.cpp)]  
   
 ##  <a name="sethandle"></a>  CEdit::SetHandle  
- Wywołanie tej funkcji, aby ustawić dojście do pamięci lokalnej, który będzie używany przez formant edycji wielu linii.  
+ Wywołaj tę funkcję, aby ustawić dojście do pamięci lokalnej, używany przez kontrolkę edycji wielu linii.  
   
 ```  
 void SetHandle(HLOCAL hBuffer);
@@ -947,21 +947,21 @@ void SetHandle(HLOCAL hBuffer);
   
 ### <a name="parameters"></a>Parametry  
  *hBuffer*  
- Zawiera dojścia do pamięci lokalnej. Ta dojścia musi być utworzony przez poprzednie wywołanie [Funkcja LocalAlloc](http://msdn.microsoft.com/library/windows/desktop/aa366723) za pomocą funkcji Windows **LMEM_MOVEABLE** flagi. Pamięć zakłada się, że zawierają ciąg znaków zakończony znakiem null. Jeśli nie jest to możliwe, pierwszy bajt alokacji pamięci powinna być równa 0.  
+ Zawiera dojście do pamięci lokalnej. Tego dojścia musi być utworzony przez poprzednie wywołanie [Funkcja LocalAlloc](http://msdn.microsoft.com/library/windows/desktop/aa366723) funkcji Windows przy użyciu flagi LMEM_MOVEABLE. Pamięć zakłada się, że zawierają ciąg zakończony znakiem null. Jeśli nie jest to możliwe, pierwszy bajt ilość przydzielonej pamięci powinna być równa 0.  
   
 ### <a name="remarks"></a>Uwagi  
- Kontrolka edycji będzie używać tego buforu do przechowywania aktualnie wyświetlanego tekstu zamiast przydzielania własną buforu.  
+ Kontrolki edycji następnie użyje tego buforu do przechowywania tekstu w aktualnie wyświetlany, zamiast przydzielać swój własny buforu.  
   
- Ta funkcja członkowska jest przetwarzany tylko przez formantów edycyjnych wielu linii.  
+ Ta funkcja członkowska jest przetwarzany tylko przez formantów edycji wielu linii.  
   
- Przed aplikacji Ustawia nowy uchwyt pamięci, należy używać [GetHandle](#gethandle) funkcji członkowskiej można uzyskać dojścia do bieżącego bufora pamięci i wolną przy użyciu tej pamięci **LocalFree** funkcji systemu Windows.  
+ Zanim aplikacja ustawia nowy uchwyt pamięci, należy używać [gethandle —](#gethandle) funkcja elementu członkowskiego, aby uzyskać dojście do bieżącego bufora pamięci i wolnego, przy użyciu pamięci `LocalFree` funkcji Windows.  
   
- `SetHandle` czyści buforu cofania ( [CanUndo](#canundo) funkcji członkowskiej zwracana 0) i flagi modyfikacji wewnętrzny ( [GetModify](#getmodify) funkcji członkowskiej zwracana 0). Rysowane jest okno kontrolki edycji.  
+ `SetHandle` Czyści bufor cofania ( [CanUndo](#canundo) następnie funkcja elementu członkowskiego zwraca 0) oraz flagę modyfikacji wewnętrznego ( [GetModify](#getmodify) następnie funkcja elementu członkowskiego zwraca 0). Jest ponownie rysowany okna kontrolki edycji.  
   
- Możesz użyć tej funkcji elementu członkowskiego w formancie edycji wielu linii w oknie dialogowym tylko wtedy, gdy utworzono okna dialogowego z **DS_LOCALEDIT** styl ustawioną flagą.  
+ W oknie dialogowym można użyć tej funkcji elementu członkowskiego w formancie edycji wielu linii, tylko wtedy, gdy okno dialogowe zostały utworzone z ustawioną flagą styl DS_LOCALEDIT.  
   
 > [!NOTE]
-> **GetHandle** nie działa w systemie Windows 95/98. Jeśli należy wywołać **GetHandle** w systemie Windows 95/98 zwróci **NULL**. **GetHandle** będzie działać zgodnie z opisem w systemie Windows NT w wersji 3.51 lub nowszej.  
+> `GetHandle` nie będzie działać z Windows 95/98. Jeśli wywołasz `GetHandle` w Windows 95/98, to zostanie zwrócona wartość NULL. `GetHandle` będzie działać zgodnie z opisem w obszarze Windows NT w wersji 3.51 lub nowszej.  
   
  Aby uzyskać więcej informacji, zobacz [EM_SETHANDLE](http://msdn.microsoft.com/library/windows/desktop/bb761641), [Funkcja LocalAlloc](http://msdn.microsoft.com/library/windows/desktop/aa366723), i [LocalFree](http://msdn.microsoft.com/library/windows/desktop/aa366730) w zestawie Windows SDK.  
   
@@ -969,7 +969,7 @@ void SetHandle(HLOCAL hBuffer);
  [!code-cpp[NVC_MFC_CEdit#22](../../mfc/reference/codesnippet/cpp/cedit-class_21.cpp)]  
   
 ##  <a name="sethighlight"></a>  CEdit::SetHighlight  
- Najważniejsze funkcje zakres tekstu, który jest wyświetlany w bieżącej edycji.  
+ Najważniejsze funkcje zakres tekstu wyświetlanego w bieżącym formant edycji.  
   
 ```  
 void SetHighlight(
@@ -981,29 +981,29 @@ void SetHighlight(
   
 |Parametr|Opis|  
 |---------------|-----------------|  
-|[in] *ichStart*|Liczony od zera indeks pierwszego znaku w zakres tekstu, aby wyróżnić.|  
-|[in] *ichEnd*|Liczony od zera indeks ostatni znak w zakres tekstu, aby wyróżnić.|  
+|[in] *ichStart*|Liczony od zera indeks pierwszego wystąpienia znaku w zakresie tekstu, aby wyróżnić.|  
+|[in] *ichEnd*|Liczony od zera indeks ostatniego znaku w zakresie tekstu, aby wyróżnić.|  
   
 ### <a name="remarks"></a>Uwagi  
- Ta metoda wysyła [EM_SETHILITE](http://msdn.microsoft.com/library/windows/desktop/bb761643) komunikat, który jest opisany w zestawie SDK systemu Windows.  
+ Ta metoda wysyła [EM_SETHILITE](http://msdn.microsoft.com/library/windows/desktop/bb761643) komunikat, który jest opisany w zestawie Windows SDK.  
   
 ##  <a name="setlimittext"></a>  CEdit::SetLimitText  
- Wywołanie tej funkcji członkowskich można ustawić limitu tekstu dla tego `CEdit` obiektu.  
+ Wywołaj tę funkcję elementu członkowskiego, aby ustawić limit tekstu, w tym `CEdit` obiektu.  
   
 ```  
 void SetLimitText(UINT nMax);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- *nMax*  
+ *nmaks.*  
  Nowy limit tekstu, w znakach.  
   
 ### <a name="remarks"></a>Uwagi  
- Limit tekst to maksymalna ilość tekstu w znaków, która może zaakceptować kontrolki edycji.  
+ Limit tekstu jest maksymalną ilość tekstu w postaci, w jakie może akceptować kontrolki edycji.  
   
- Zmiana limit tekstu ogranicza tylko tekst, który użytkownik może wprowadzić. Go nie ma wpływu na dowolny tekst już w formancie edycyjnym ani nie ogranicza długość tekstu skopiowane do edycji przez [SetWindowText](cwnd-class.md#setwindowtext) funkcji członkowskiej we `CWnd`. Jeśli aplikacja używa `SetWindowText` funkcji, aby umieścić tekst w formancie edycyjnym niż określona w wywołaniu `LimitText`, użytkownik może usunąć tekstu w formancie edycji. Jednak limit tekstu uniemożliwi zastępując istniejący tekst na nowy tekst użytkownika, chyba że usunięcie bieżącego zaznaczenia powoduje, że tekst, który spadną poniżej limit tekstu.  
+ Zmiana tego limitu tekstu ogranicza tylko tekst, który użytkownik może wprowadzić. Nie ma ona wpływu na dowolny tekst już w formancie edycji ani nie ogranicza długość tekstu skopiowane do kontrolki edycji przez [SetWindowText](cwnd-class.md#setwindowtext) funkcji składowej we `CWnd`. Jeśli aplikacja używa `SetWindowText` funkcję, aby umieścić więcej tekstu w formancie edycji niż określona w wywołaniu `LimitText`, użytkownik może usunąć dowolny tekst w kontrolce edycji. Jednak limit tekstu uniemożliwi zastępując istniejący tekst nowym tekstem użytkownika, chyba że usuwanie bieżące zaznaczenie powoduje, że tekst nie przekraczają limit tekstu.  
   
- Ta funkcja zastępuje [LimitText](#limittext) w Win32.  
+ Ta funkcja zastępuje [LimitText](#limittext) w systemie Win32.  
   
  Aby uzyskać więcej informacji, zobacz [EM_SETLIMITTEXT](http://msdn.microsoft.com/library/windows/desktop/bb761647) w zestawie Windows SDK.  
   
@@ -1011,7 +1011,7 @@ void SetLimitText(UINT nMax);
   Zobacz przykład [CEditView::GetEditCtrl](ceditview-class.md#geteditctrl).  
   
 ##  <a name="setmargins"></a>  CEdit::SetMargins  
- Wywołaj tę metodę, aby ustawić lewego i prawego marginesu tej kontrolki edycji.  
+ Wywołaj tę metodę, aby ustawić marginesy lewy i prawy tej kontrolki edycji.  
   
 ```  
 void SetMargins(
@@ -1021,10 +1021,10 @@ void SetMargins(
   
 ### <a name="parameters"></a>Parametry  
  *nLeft*  
- Szerokość nowego lewy margines, w pikselach.  
+ Szerokość nowe lewy margines w pikselach.  
   
  *nRight*  
- Szerokość nowego prawy margines w pikselach.  
+ Szerokość nowe prawy margines, w pikselach.  
   
 ### <a name="remarks"></a>Uwagi  
   
@@ -1037,7 +1037,7 @@ void SetMargins(
   Zobacz przykład [CEditView::GetEditCtrl](ceditview-class.md#geteditctrl).  
   
 ##  <a name="setmodify"></a>  CEdit::SetModify  
- Wywołanie tej funkcji do ustawiania i czyszczenia zmodyfikowane flagi dla kontrolki edycji.  
+ Wywołaj tę funkcję, aby ustawić lub wyczyścić flagę zmodyfikowanej kontrolki edycji.  
   
 ```  
 void SetModify(BOOL bModified = TRUE);
@@ -1045,10 +1045,10 @@ void SetModify(BOOL bModified = TRUE);
   
 ### <a name="parameters"></a>Parametry  
  *bModified*  
- Wartość **TRUE** wskazuje, czy tekst został zmodyfikowany i wartość **FALSE** wskazuje on pozostaje niezmieniona. Domyślnie została ustawiona flaga zmodyfikowane.  
+ Wartość TRUE wskazuje, że tekst został zmodyfikowany, a wartość FALSE wskazuje, że zostały zmodyfikowane. Domyślnie zmodyfikowane flaga jest ustawiona.  
   
 ### <a name="remarks"></a>Uwagi  
- Zmodyfikowane flaga wskazuje, czy tekst w formancie edycyjnym został zmodyfikowany. Ta opcja jest automatycznie ustawiana zawsze, gdy użytkownik zmieni tekst. Jej wartość może być pobrany za pomocą [GetModify](#getmodify) funkcję elementu członkowskiego.  
+ Zmodyfikowane flaga wskazuje, czy tekst w kontrolce edycji został zmodyfikowany. Ta opcja jest automatycznie ustawiana zawsze wtedy, gdy użytkownik zmieni tekst. Wartość może być pobierany za pomocą [GetModify](#getmodify) funkcja elementu członkowskiego.  
   
  Aby uzyskać więcej informacji, zobacz [EM_SETMODIFY](http://msdn.microsoft.com/library/windows/desktop/bb761651) w zestawie Windows SDK.  
   
@@ -1056,7 +1056,7 @@ void SetModify(BOOL bModified = TRUE);
   Zobacz przykład [CEdit::GetModify](#getmodify).  
   
 ##  <a name="setpasswordchar"></a>  CEdit::SetPasswordChar  
- Wywołanie tej funkcji, aby ustawić lub usunąć wyświetlany w formancie edycji, gdy użytkownik wpisze tekst znak hasła.  
+ Wywołaj tę funkcję, aby ustawić lub usunąć znaku hasła, wyświetlana w formancie edycji, gdy użytkownik wpisze tekst.  
   
 ```  
 void SetPasswordChar(TCHAR ch);
@@ -1064,16 +1064,16 @@ void SetPasswordChar(TCHAR ch);
   
 ### <a name="parameters"></a>Parametry  
  *ch*  
- Określa znaków, które mają być wyświetlane zamiast znaków wpisana przez użytkownika. Jeśli *ch* ma wartość 0, wyświetlane są rzeczywiste znaki wpisywane przez użytkownika.  
+ Określa znak, które mają być wyświetlane zamiast znaku wpisana przez użytkownika. Jeśli *ch* wynosi 0, wyświetlane są rzeczywiste znaki wpisane przez użytkownika.  
   
 ### <a name="remarks"></a>Uwagi  
- Gdy znak hasła jest ustawiona, ten znak jest wyświetlana dla każdego znaku typy użytkownika.  
+ Gdy znaku hasła jest ustawiona, ten znak jest wyświetlany dla każdego znaku typy użytkownika.  
   
- Ta funkcja członkowska nie ma wpływu na wielu linii formantów edycji.  
+ Ta funkcja elementu członkowskiego nie ma wpływu na wielu linii formant edycji.  
   
- Gdy `SetPasswordChar` po wywołaniu funkcji członkowskiej `CEdit` ponownie utworzy wszystkie znaki widoczne przy użyciu znaku określonego przez *ch*.  
+ Gdy `SetPasswordChar` funkcja członkowska jest wywoływana, `CEdit` narysuje wszystkie znaki widoczne, korzystając ze znaku określonej przez *ch*.  
   
- Jeśli utworzono kontrolki edycji z [es_password —](styles-used-by-mfc.md#edit-styles) styl domyślny znak hasła ustawiono gwiazdkę ( **\***). Ten styl jest usunięte, jeśli `SetPasswordChar` jest wywoływana z *ch* równa 0.  
+ Jeśli kontrolka edycji została utworzona za pomocą [ES_PASSWORD](styles-used-by-mfc.md#edit-styles) styl domyślny znak hasła jest ustawiona na znak gwiazdki ( **\***). Ten styl jest usuwany, jeśli `SetPasswordChar` jest wywoływana z *ch* ustawione na 0.  
   
  Aby uzyskać więcej informacji, zobacz [EM_SETPASSWORDCHAR](http://msdn.microsoft.com/library/windows/desktop/bb761653) w zestawie Windows SDK.  
   
@@ -1081,7 +1081,7 @@ void SetPasswordChar(TCHAR ch);
  [!code-cpp[NVC_MFC_CEdit#16](../../mfc/reference/codesnippet/cpp/cedit-class_22.cpp)]  
   
 ##  <a name="setreadonly"></a>  CEdit::SetReadOnly  
- Wywołanie tej funkcji można ustawić stanu tylko do odczytu formantu edycji.  
+ Wywołuje tę funkcję, aby ustawić stan tylko do odczytu formant edycji.  
   
 ```  
 BOOL SetReadOnly(BOOL bReadOnly = TRUE);
@@ -1089,13 +1089,13 @@ BOOL SetReadOnly(BOOL bReadOnly = TRUE);
   
 ### <a name="parameters"></a>Parametry  
  *bReadOnly*  
- Określa, czy do ustawiania lub usuwania stanie tylko do odczytu kontrolki edycji. Wartość **TRUE** ustawia stan tylko do odczytu; wartość **FALSE** ustawia stan odczytu/zapisu.  
+ Określa, czy należy ustawić lub usunąć tylko do odczytu stan kontrolki edycji. Wartość TRUE, ustawia stan tylko do odczytu; wartość FALSE, ustawia stan odczytu/zapisu.  
   
 ### <a name="return-value"></a>Wartość zwracana  
- Różna od zera, czy operacja się powiodła, 0 Jeśli błąd występuje.  
+ Różna od zera, jeśli operacja się powiedzie, lub 0, jeśli błąd wystąpi.  
   
 ### <a name="remarks"></a>Uwagi  
- Bieżące ustawienia można znaleźć testując [es_readonly —](styles-used-by-mfc.md#edit-styles) flagi w zwracanej wartości [CWnd::GetStyle](cwnd-class.md#getstyle).  
+ Bieżące ustawienie można znaleźć, testując [ES_READONLY](styles-used-by-mfc.md#edit-styles) Flaga wartość zwracaną przez [CWnd::GetStyle](cwnd-class.md#getstyle).  
   
  Aby uzyskać więcej informacji, zobacz [EM_SETREADONLY](http://msdn.microsoft.com/library/windows/desktop/bb761655) w zestawie Windows SDK.  
   
@@ -1103,7 +1103,7 @@ BOOL SetReadOnly(BOOL bReadOnly = TRUE);
  [!code-cpp[NVC_MFC_CEdit#23](../../mfc/reference/codesnippet/cpp/cedit-class_23.cpp)]  
   
 ##  <a name="setrect"></a>  CEdit::SetRect  
- Wywołanie tej funkcji można ustawić wymiary prostokąt przy użyciu określonych współrzędnych.  
+ Wywołaj tę funkcję, aby ustawić wymiary prostokąta przy użyciu określonych współrzędnych.  
   
 ```  
 void SetRect(LPCRECT lpRect);
@@ -1111,16 +1111,16 @@ void SetRect(LPCRECT lpRect);
   
 ### <a name="parameters"></a>Parametry  
  *lprect —*  
- Wskazuje `RECT` struktury lub `CRect` obiekt, który określa nowe wymiary formatowania prostokąta.  
+ Wskazuje `RECT` struktury lub `CRect` obiekt, który określa nowe wymiary prostokąta formatowania.  
   
 ### <a name="remarks"></a>Uwagi  
- Ten element członkowski jest przetwarzany tylko przez formantów edycyjnych wielu linii.  
+ Ten element członkowski jest przetwarzany tylko przez formantów edycji wielu linii.  
   
- Użyj `SetRect` ustawienia formatowania formantu edycyjnego prostokąt wielu linii. Prostokąt formatowania jest ograniczanie prostokąt tekst, który jest niezależny od rozmiaru okna kontrolki edycji. Podczas tworzenia kontrolki edycji formatowania prostokąt jest taka sama jak obszaru klienckiego okna kontrolki edycji. Za pomocą `SetRect` funkcji członkowskiej aplikacji ułatwia formatowania prostokąt większy lub mniejszy niż okno kontrolki edycji.  
+ Użyj `SetRect` ustawienia formatowania formant edycji Prostokąt wielu linii. Prostokąt formatowania jest ograniczającą prostokąt tekst, który jest niezależny od rozmiaru okna kontrolki edycji. Podczas tworzenia kontrolki edycji Prostokąt formatowania jest taka sama jak obszaru klienckiego okna kontrolki edycji. Za pomocą `SetRect` funkcja elementu członkowskiego aplikacji ułatwia formatowania prostokąt większy lub mniejszy od okna kontrolki edycji.  
   
- Jeśli formant edycyjny nie ma paska przewijania, tekst zostaną przycięte, nie jest zawijany, jeśli formatowania prostokąt jest większy niż okno. Jeśli kontrolka edycji zawiera obramowanie, zostanie zmniejszona formatowania prostokąt rozmiar obramowania. Dostosowanie prostokąt zwrócony przez `GetRect` funkcji członkowskiej, musisz usunąć rozmiar obramowania przekazać prostokąt `SetRect`.  
+ Jeśli kontrolka edycji nie ma paska przewijania, tekst zostaną przycięte, nie zawinięty, jeśli prostokąt formatowania jest większe niż okno. Jeśli kontrolka edycji zawiera obramowanie, formatowania prostokąt została zmniejszona o rozmiar obramowania. Jeśli dostosowano prostokątowi zwróconemu przez `GetRect` funkcja elementu członkowskiego, należy usunąć rozmiar obramowania Zanim przekażesz prostokąt `SetRect`.  
   
- Gdy `SetRect` jest nazywany kontrolki edycji tekstu jest również ponownie sformatowany i wyświetlane ponownie.  
+ Gdy `SetRect` nosi kontrolki edycji tekstu jest również ponownie sformatowany i wyświetlane ponownie.  
   
  Aby uzyskać więcej informacji, zobacz [EM_SETRECT](http://msdn.microsoft.com/library/windows/desktop/bb761657) w zestawie Windows SDK.  
   
@@ -1128,7 +1128,7 @@ void SetRect(LPCRECT lpRect);
  [!code-cpp[NVC_MFC_CEdit#24](../../mfc/reference/codesnippet/cpp/cedit-class_24.cpp)]  
   
 ##  <a name="setrectnp"></a>  CEdit::SetRectNP  
- Wywołanie tej funkcji, aby ustawić formatowania prostokąt kontrolkę edycji wielu linii.  
+ Wywołaj tę funkcję, aby ustawić formatowania prostokąt kontrolkę edycji wielu linii.  
   
 ```  
 void SetRectNP(LPCRECT lpRect);
@@ -1139,15 +1139,15 @@ void SetRectNP(LPCRECT lpRect);
  Wskazuje `RECT` struktury lub `CRect` obiekt, który określa nowe wymiary prostokąta.  
   
 ### <a name="remarks"></a>Uwagi  
- Prostokąt formatowania jest ograniczanie prostokąt tekst, który jest niezależny od rozmiaru okna kontrolki edycji.  
+ Prostokąt formatowania jest ograniczającą prostokąt tekst, który jest niezależny od rozmiaru okna kontrolki edycji.  
   
- `SetRectNP` jest taka sama jak `SetRect` funkcji członkowskiej, z wyjątkiem tego, że nie jest rysowane okna kontrolki edycji.  
+ `SetRectNP` jest taka sama jak `SetRect` funkcję członkowską, z tą różnicą, że okna kontrolki edycji nie jest narysowany ponownie.  
   
- Podczas tworzenia kontrolki edycji formatowania prostokąt jest taka sama jak obszaru klienckiego okna kontrolki edycji. Wywołując `SetRectNP` funkcji członkowskiej aplikacji ułatwia formatowania prostokąt większy lub mniejszy niż okno kontrolki edycji.  
+ Podczas tworzenia kontrolki edycji Prostokąt formatowania jest taka sama jak obszaru klienckiego okna kontrolki edycji. Przez wywołanie metody `SetRectNP` funkcja elementu członkowskiego aplikacji ułatwia formatowania prostokąt większy lub mniejszy od okna kontrolki edycji.  
   
- Jeśli formant edycyjny nie ma paska przewijania, tekst zostaną przycięte, nie jest zawijany, jeśli formatowania prostokąt jest większy niż okno.  
+ Jeśli kontrolka edycji nie ma paska przewijania, tekst zostaną przycięte, nie zawinięty, jeśli prostokąt formatowania jest większe niż okno.  
   
- Ten element członkowski jest przetwarzany tylko przez formantów edycyjnych wielu linii.  
+ Ten element członkowski jest przetwarzany tylko przez formantów edycji wielu linii.  
   
  Aby uzyskać więcej informacji, zobacz [EM_SETRECTNP](http://msdn.microsoft.com/library/windows/desktop/bb761659) w zestawie Windows SDK.  
   
@@ -1155,7 +1155,7 @@ void SetRectNP(LPCRECT lpRect);
   Zobacz przykład [CEdit::SetRect](#setrect).  
   
 ##  <a name="setsel"></a>  CEdit::SetSel  
- Wywołanie tej funkcji, aby wybrać zakres znaków w formancie edycyjnym.  
+ Wywołaj tę funkcję, aby wybrać zakres znaków w kontrolce edycji.  
   
 ```  
 void SetSel(
@@ -1171,13 +1171,13 @@ void SetSel(
   
 ### <a name="parameters"></a>Parametry  
  *dwSelection*  
- Określa położenie początkowe w programie word znaczącymi bitami i pozycji końcowej w programie word znaczących. Word znaczącymi bitami wynosi 0 i word znaczącymi to -1, cały tekst w formancie edycyjnym jest zaznaczone. Jeśli word znaczącymi to -1, wszystkie bieżące zaznaczenie zostanie usunięta.  
+ Określa pozycję początkową w programie word niskiego rzędu i pozycji końcowej w programie word wyższego rzędu. Jeśli wyraz niskiego rzędu wynosi 0 i word wyższego rzędu jest wartość -1, zostanie wybrany cały tekst w kontrolce edycji. Jeśli wyraz niskiego rzędu jest wartość -1, zostaną usunięte wszystkie bieżące zaznaczenie.  
   
  *bNoScroll*  
- Wskazuje, czy karetkę powinien zostać wyświetlony w wyniku przewijania. Jeśli **FALSE**, karetkę jest wyświetlony w wyniku przewijania. Jeśli **TRUE**, karetkę nie jest przewijane w widoku.  
+ Wskazuje, czy powinien być przewijane karetkę do widoku. W przypadku wartości FAŁSZ karetkę jest przewijane do widoku. W przypadku opcji TRUE karetkę nie jest przewijane do widoku.  
   
  *nStartChar*  
- Określa położenie początkowe. Jeśli *nStartChar* 0 i *nEndChar* wynosi -1, wszystkie tekst w formancie edycyjnym jest zaznaczone. Jeśli *nStartChar* wynosi -1, wszystkie bieżące zaznaczenie jest usunięte.  
+ Określa położenie początkowe. Jeśli *nStartChar* wynosi 0 i *nEndChar* wynosi -1, wszystkie zaznaczono tekstu w kontrolce edycji. Jeśli *nStartChar* wynosi -1, wszystkie bieżące zaznaczenie jest usunięte.  
   
  *nEndChar*  
  Określa pozycję końcową.  
@@ -1189,7 +1189,7 @@ void SetSel(
   Zobacz przykład [CEdit::GetSel](#getsel).  
   
 ##  <a name="settabstops"></a>  CEdit::SetTabStops  
- Wywołanie tej funkcji tabulatorów w formancie edycji wielu linii.  
+ Wywołaj tę funkcję, aby ustawienie pozycji tabulatorów w formancie edycji wielu linii.  
   
 ```  
 void SetTabStops();  
@@ -1203,25 +1203,25 @@ BOOL SetTabStops(
   
 ### <a name="parameters"></a>Parametry  
  *cxEachStop*  
- Określa, że tabulatorów był co *cxEachStop* jednostki okna dialogowego.  
+ Określa, czy można ustawić na pozycji tabulatorów co *cxEachStop* jednostki okna dialogowego.  
   
  *nTabStops*  
- Określa liczbę tabulatorów zawarte w *rgTabStops*. Ta liczba musi być większa niż 1.  
+ Określa liczbę pozycji tabulatorów zawarte w *rgTabStops*. Ta liczba musi być większa niż 1.  
   
  *rgTabStops*  
- Punkty na tablicę liczb całkowitych bez znaku, określając karcie zatrzymuje się w jednostkach okna dialogowego. Jednostki okna dialogowego jest odległość pozioma lub pionowa. Jednostki okna dialogowego w poziomie jest taki sam, jak jedna czwarta bieżąca jednostka podstawowa szerokość okna dialogowego i 1 jednostka pionowy okna dialogowego jest równa 1 / 8 bieżąca jednostka podstawowa wysokość okna dialogowego. Jednostki podstawowy okna dialogowego są obliczane na podstawie wysokość i szerokość bieżącej czcionki systemowej. **GetDialogBaseUnits** systemu Windows funkcja zwraca bieżącego okna dialogowego podstawowej jednostki w pikselach.  
+ Wskazuje tablicy liczb całkowitych bez znaku, określając karcie zatrzymuje się w jednostkach okna dialogowego. Do okna dialogowego jest odległość pozioma lub pionowa. Jedna jednostka w poziomie okna dialogowego równą jednej czwartej bieżącej jednostki podstawowej szerokość okna dialogowego i 1 jednostka pionowy okno dialogowe jest równa jednej ósmej bieżącej jednostki podstawowej wysokość okna dialogowego. Okno dialogowe stanowiącej są obliczane na podstawie wysokość i szerokość bieżącej czcionki systemowej. `GetDialogBaseUnits` Windows funkcja zwraca bieżące okno dialogowe stanowiącej w pikselach.  
   
 ### <a name="return-value"></a>Wartość zwracana  
- Różna od zera, jeśli ustawiono kart; w przeciwnym razie 0.  
+ Wartość różną od zera, jeśli ustawiono kart; w przeciwnym razie 0.  
   
 ### <a name="remarks"></a>Uwagi  
- Jeśli tekst jest kopiowany do formantu edycji wielu linii, wszelkie znak tabulacji w tekście spowoduje miejsca do wygenerowania do następnego tabulatora.  
+ Jeśli tekst jest kopiowany do kontrolki edycji wielu linii, wszelkie znak tabulacji w tekście spowoduje, że miejsce do wygenerowania do następnej pozycji tabulatora.  
   
- Ustawić tabulatorów domyślny rozmiar 32 jednostki okna dialogowego, należy wywołać wersji bez parametrów funkcji członkowskiej. Tabulatorów rozmiar niż 32, wywołaj wersji z *cxEachStop* parametru. Tabulatorów na tablicę rozmiary, użyj wersji z dwoma parametrami.  
+ Aby ustawić domyślny rozmiar jednostki okna dialogowego 32 tabulatorów, wywołać bez parametrów wersja tej funkcji elementu członkowskiego. Aby ustawienie pozycji tabulatorów rozmiar niż 32, należy wywołać wersja, która *cxEachStop* parametru. Aby ustawienie pozycji tabulatorów do tablicy o rozmiarach, należy użyć wersji z dwoma parametrami.  
   
- Funkcji członkowskiej jest przetwarzany tylko przez formantów edycyjnych wielu linii.  
+ Ta funkcja członkowska jest przetwarzany tylko przez formanty edycji wielu linii.  
   
- `SetTabStops` nie automatycznie są odświeżane okno edycji. Jeśli zmienisz tabulatorów dla tekstu w formancie edycyjnym wywołanie [CWnd::InvalidateRect](cwnd-class.md#invalidaterect) ponowne okno edycji.  
+ `SetTabStops` nie automatycznie ponownie narysować okno edycji. Jeśli zmienisz tabulatory tekst już w kontrolce edycji, wywołaj [CWnd::InvalidateRect](cwnd-class.md#invalidaterect) ponowne okno edycji.  
   
  Aby uzyskać więcej informacji, zobacz [EM_SETTABSTOPS](http://msdn.microsoft.com/library/windows/desktop/bb761663) i [GetDialogBaseUnits](http://msdn.microsoft.com/library/windows/desktop/ms645475) w zestawie Windows SDK.  
   
@@ -1229,7 +1229,7 @@ BOOL SetTabStops(
   Zobacz przykład [CEditView::SetTabStops](ceditview-class.md#settabstops).  
   
 ##  <a name="showballoontip"></a>  CEdit::ShowBalloonTip  
- Wyświetla etykieta dymka skojarzony z bieżącym kontrolki edycji.  
+ Wyświetla dymku, który jest skojarzony z bieżącym kontrolki edycji.  
   
 ```  
 BOOL ShowBalloonTip(PEDITBALLOONTIP pEditBalloonTip);
@@ -1245,39 +1245,39 @@ BOOL ShowBalloonTip(
   
 |Parametr|Opis|  
 |---------------|-----------------|  
-|[in] *pEditBalloonTip*|Wskaźnik do [EDITBALLOONTIP](http://msdn.microsoft.com/library/windows/desktop/bb775466) struktury, która opisuje etykieta dymka.|  
-|[in] *lpszTitle*|Wskaźnik do ciągu Unicode, który zawiera tytuł etykieta dymka.|  
-|[in] *lpszText*|Wskaźnik do ciągu Unicode, który zawiera tekst etykiety dymka.|  
-|[in] *ttiIcon*|**INT** określająca typ ikona do skojarzenia z etykieta dymka. Wartość domyślna to `TTI_NONE`. Aby uzyskać więcej informacji, zobacz `ttiIcon` członkiem [EDITBALLOONTIP](http://msdn.microsoft.com/library/windows/desktop/bb775466) struktury.|  
+|[in] *pEditBalloonTip*|Wskaźnik do [EDITBALLOONTIP](http://msdn.microsoft.com/library/windows/desktop/bb775466) strukturę, która opisuje Porada dymek.|  
+|[in] *lpszTitle*|Wskaźnik na ciąg Unicode, który zawiera tytuł Porada dymek.|  
+|[in] *lpszText*|Wskaźnik do ciągu Unicode, który zawiera tekst porady dymek.|  
+|[in] *ttiIcon*|**INT** określająca typ ikonę, aby skojarzyć z końcówką dymek. Wartość domyślna to TTI_NONE. Aby uzyskać więcej informacji, zobacz `ttiIcon` członkiem [EDITBALLOONTIP](http://msdn.microsoft.com/library/windows/desktop/bb775466) struktury.|  
   
 ### <a name="return-value"></a>Wartość zwracana  
- `true` Jeśli ta metoda zakończy się pomyślnie; w przeciwnym razie `false`.  
+ Wartość TRUE, jeśli ta metoda jest kończy się pomyślnie; w przeciwnym razie wartość FALSE.  
   
 ### <a name="remarks"></a>Uwagi  
- Ta funkcja wysyła [EM_SHOWBALLOONTIP](http://msdn.microsoft.com/library/windows/desktop/bb761668) komunikat, który jest opisany w zestawie SDK systemu Windows. Aby uzyskać więcej informacji, zobacz [Edit_ShowBalloonTip](http://msdn.microsoft.com/library/windows/desktop/bb761707) makra.  
+ Ta funkcja wysyła [EM_SHOWBALLOONTIP](http://msdn.microsoft.com/library/windows/desktop/bb761668) komunikat, który jest opisany w zestawie Windows SDK. Aby uzyskać więcej informacji, zobacz [Edit_ShowBalloonTip](http://msdn.microsoft.com/library/windows/desktop/bb761707) makra.  
   
 ### <a name="example"></a>Przykład  
- Poniższy przykładowy kod definiuje zmienną, `m_cedit`, która jest umożliwiają dostęp do bieżącej kontrolki edycji. Ta zmienna jest używana w następnym przykładzie.  
+ Poniższy kod definiuje zmienną `m_cedit`, to znaczy umożliwiają dostęp do bieżącego kontrolki edycji. Ta zmienna jest używana w następnym przykładzie.  
   
  [!code-cpp[NVC_MFC_CEdit_s1#1](../../mfc/reference/codesnippet/cpp/cedit-class_25.h)]  
   
 ### <a name="example"></a>Przykład  
- Poniższy przykładowy kod przedstawia etykieta dymka dla kontrolki edycji. [CEdit::ShowBalloonTip](#showballoontip) metody Określa tekst porady tytuł i dymek.  
+ Poniższy przykład kodu wyświetla dymku dla kontrolki edycji. [CEdit::ShowBalloonTip](#showballoontip) metody Określa tekst porady tytuł i dymek.  
   
  [!code-cpp[NVC_MFC_CEdit_s1#3](../../mfc/reference/codesnippet/cpp/cedit-class_26.cpp)]  
   
 ##  <a name="undo"></a>  CEdit::Undo  
- Wywołanie tej funkcji, aby cofnąć ostatnią operację kontrolki edycji.  
+ Wywołaj tę funkcję, aby cofnąć ostatnią operację kontrolki edycji.  
   
 ```  
 BOOL Undo();
 ```  
   
 ### <a name="return-value"></a>Wartość zwracana  
- Kontrolki edycji jeden wiersz zwracana wartość jest zawsze różną od zera. Kontrolki edycji wielu linii, zwracana wartość jest różna od zera, jeśli operacja cofania zakończy się pomyślnie, lub wartość 0 w przypadku niepowodzenia operacji cofania.  
+ Kontrolki edycji jednowierszowego wartość zwracana jest zawsze wartość różną od zera. Kontrolki edycji wielu linii, wartość zwracana jest wartość różną od zera, jeśli operacja cofania zakończy się pomyślnie, lub 0, jeśli operacja cofania nie powiedzie się.  
   
 ### <a name="remarks"></a>Uwagi  
- Można także cofnąć operacji cofania. Na przykład można przywrócić usuniętego tekstu w pierwszym wywołaniu `Undo`. Tak długo, jak brak pośredniczące operacji edycji, należy usunąć go ponownie, używając drugie wywołanie `Undo`.  
+ Można także cofnąć operację cofnięcia. Na przykład, można przywrócić usunięty tekst z pierwszym wywołaniu `Undo`. Tak długo, jak długo ma nie pośredniczące operacji edycji, możesz usunąć tekst między znakami dwóch ponownie drugie wywołanie `Undo`.  
   
  Aby uzyskać więcej informacji, zobacz [EM_UNDO](http://msdn.microsoft.com/library/windows/desktop/bb761670) w zestawie Windows SDK.  
   
@@ -1285,7 +1285,7 @@ BOOL Undo();
  [!code-cpp[NVC_MFC_CEdit#25](../../mfc/reference/codesnippet/cpp/cedit-class_27.cpp)]  
   
 ## <a name="see-also"></a>Zobacz też  
- [Przykładowe MFC CALCDRIV](../../visual-cpp-samples.md)   
+ [Próbki MFC CALCDRIV](../../visual-cpp-samples.md)   
  [CMNCTRL2 próbki MFC](../../visual-cpp-samples.md)   
  [Klasa CWnd](../../mfc/reference/cwnd-class.md)   
  [Diagram hierarchii](../../mfc/hierarchy-chart.md)   

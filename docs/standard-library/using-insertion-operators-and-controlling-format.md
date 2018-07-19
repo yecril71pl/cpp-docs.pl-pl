@@ -14,16 +14,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1cb6d17a771b5a1e24b8d09532f432b95ce5d736
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 51754b2b777523593118b0b0a88dfa4ac8803b20
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33863533"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38959810"
 ---
 # <a name="using-insertion-operators-and-controlling-format"></a>Korzystanie z operatorów wstawiania i formatu kontrolującego
 
-W tym temacie przedstawia sposób kontrolowania format oraz sposobu tworzenia operatorów wstawiania własnych klas. Wstawiania (**<<**) operatora, który jest wcześniej zaplanowane dla wszystkie standardowe typy danych języka C++, wysyła bajtów do obiektu strumienia wyjściowego. Operatory wstawienia współpracować z wstępnie zdefiniowanych "manipulatory,", które są elementami, które zmienić domyślny format liczby całkowitej argumentów.
+W tym temacie pokazano, jak kontrolować format oraz sposób tworzenia operatorów wstawiania dla własnych klas. Wstawianie (**<<**) operatora, który jest wcześniej zaplanowane dla wszystkich standardowych typów danych języka C++, wysyła bajtów do obiektu strumienia wyjściowego. Operatory wstawienia współpracować z wstępnie zdefiniowanych "manipulatory,", które są elementami, które Zmienianie domyślnego formatu argumenty liczby całkowitej.
 
 Można kontrolować format z następujących opcji:
 
@@ -31,13 +31,13 @@ Można kontrolować format z następujących opcji:
 
 - [Wyrównanie](#vclrfalignmentanchor4)
 
-- [dokładność](#vclrfprecisionanchor5)
+- [Precyzja](#vclrfprecisionanchor5)
 
 - [Radix](#vclrfradixanchor6)
 
 ## <a name="vclrfoutputwidthanchor3"></a> Szerokość danych wyjściowych
 
-Aby wyrównać dane wyjściowe, określ szerokość danych wyjściowych dla każdego elementu przez umieszczenie `setw` manipulatora w strumieniu, przez wywołanie **szerokość** funkcję elementu członkowskiego. W tym przykładzie prawej wyrównuje wartości w kolumnie co najmniej 10 znaków:
+Aby wyrównać dane wyjściowe, określamy szerokość dane wyjściowe dla każdego elementu, umieszczając `setw` manipulator w strumieniu lub przez wywołanie `width` funkcja elementu członkowskiego. W tym przykładzie po prawej stronie Wyrównuje wartości w kolumnie co najmniej 10 znaków:
 
 ```cpp
 // output_width.cpp
@@ -63,9 +63,9 @@ int main( )
    4358.24
 ```
 
-Spacje wiodące są dodawane do żadnej wartości mniej niż 10 znaków.
+Spacje wiodące są dodawane do dowolnej wartości mniej niż 10 znaków.
 
-Aby uzupełnić pola, użyj **wypełnienia** funkcji członkowskiej, która ustawia wartości znak dopełnienia dla pól zawierających określona szerokość. Ustawieniem domyślnym jest pusty. Aby konsoli kolumny liczb z gwiazdką, zmodyfikuj poprzedniej **dla** pętli w następujący sposób:
+Aby uzupełnić pola, użyj `fill` funkcja elementu członkowskiego, który określa wartość znaku wypełnienie pól, które mają określoną szerokość. Ustawieniem domyślnym jest pusty. Do wypełnienia kolumny liczb gwiazdkami, zmodyfikować poprzedni **dla** pętli w następujący sposób:
 
 ```cpp
 for (int i = 0; i <4; i++)
@@ -76,7 +76,7 @@ for (int i = 0; i <4; i++)
 }
 ```
 
-`endl` Manipulatora zastępuje znaku nowego wiersza (`'\n'`). Dane wyjściowe wyglądają następująco:
+`endl` Manipulator zastępuje znak nowego wiersza (`'\n'`). Dane wyjściowe wyglądają następująco:
 
 ```Output
 ******1.23
@@ -85,7 +85,7 @@ for (int i = 0; i <4; i++)
 ***4358.24
 ```
 
-Aby określić szerokości dla elementów danych w tej samej linii, użyj `setw` manipulatora:
+Aby określić szerokości dla elementów danych, w tym samym wierszu, użyj `setw` manipulator:
 
 ```cpp
 // setw.cpp
@@ -104,7 +104,7 @@ int main( )
 }
 ```
 
-**Szerokość** funkcja członkowska jest zadeklarowana w \<iostream >. Jeśli używasz `setw` lub innych manipulatora z argumentami, musi zawierać \<iomanip — >. W danych wyjściowych parametrów są podane w zakresie szerokość 6 i liczb całkowitych w polu Szerokość 10:
+`width` Składowa jest zadeklarowana w \<iostream >. Jeśli używasz `setw` lub innych manipulator z argumentami, musi zawierać \<iomanip >. W danych wyjściowych ciągi są drukowane w zakresie szerokość 6 i liczb całkowitych w polu Szerokość 10:
 
 ```Output
   Zoot      1.23
@@ -113,11 +113,11 @@ int main( )
   Stan   4358.24
 ```
 
-Ani `setw` ani **szerokość** obcina wartości. Jeśli dane wyjściowe w formacie przekracza szerokość Wyświetla całą wartość, mogą ulec precyzję strumienia. Zarówno `setw` i **szerokość** mają wpływ na następujące pole. Szerokość pola zostanie przywrócony do jego domyślne zachowanie (szerokość niezbędne) po wydrukowaniu jedno pole. Jednak inne opcje format strumienia obowiązują do momentu zmiany.
+Ani `setw` ani `width` obcina wartości. Jeśli sformatowane dane wyjściowe przekracza szerokość, wyświetla całą wartość, z zastrzeżeniem precyzję strumienia. Zarówno `setw` i `width` mają wpływ na następujące pole. Szerokość pola wraca do swojego zachowania domyślnego (szerokość niezbędne) po wydrukowaniu jedno pole. Jednak inne opcje formatowania strumienia obowiązują do momentu zmienione.
 
 ## <a name="vclrfalignmentanchor4"></a> Wyrównanie
 
-Dane wyjściowe strumieni domyślny tekst wyrównany do prawej. Do lewej align nazwy w poprzednim przykładzie i wyrównanie do prawej liczb, Zastąp **dla** pętli w następujący sposób:
+Dane wyjściowe strumieni domyślny tekst wyrównany do prawej. Wyrównuj do lewej nazwy w poprzednim przykładzie i liczby do prawej, Zastąp **dla** pętli w następujący sposób:
 
 ```cpp
 for (int i = 0; i <4; i++)
@@ -136,13 +136,13 @@ Al         653.7
 Stan     4358.24
 ```
 
-Ustawiono flagi left-align przy użyciu [setiosflags](../standard-library/iomanip-functions.md#setiosflags) manipulatora z `left` modułu wyliczającego. Ten moduł wyliczający jest zdefiniowany w [ios](../standard-library/basic-ios-class.md) klasy, więc musi zawierać odwołanie **ios::** prefiks. [Resetiosflags](../standard-library/iomanip-functions.md#resetiosflags) manipulatora wyłącza flagi left-align. W odróżnieniu od **szerokość** i `setw`, efekt `setiosflags` i `resetiosflags` jest trwały.
+Ustawiono flagę left-align przy użyciu [setiosflags](../standard-library/iomanip-functions.md#setiosflags) manipulator z `left` modułu wyliczającego. Ten moduł wyliczający jest zdefiniowany w [ios](../standard-library/basic-ios-class.md) klasy, więc musi zawierać odwołanie **ios::** prefiks. [Resetiosflags](../standard-library/iomanip-functions.md#resetiosflags) manipulator wyłącza flagę left-align. W odróżnieniu od `width` i `setw`, efekt `setiosflags` i `resetiosflags` jest nieodwracalna.
 
-## <a name="vclrfprecisionanchor5"></a> dokładność
+## <a name="vclrfprecisionanchor5"></a> Precyzja
 
-Wartość domyślna dla liczb zmiennoprzecinkowych dokładność jest sześć. Na przykład numer 3466.9768 drukuje jako 3466.98. Aby zmienić sposób drukuje tę wartość, należy użyć [setprecision](../standard-library/iomanip-functions.md#setprecision) manipulatora. Manipulatora ma dwie flagi: [stałej](../standard-library/ios-functions.md#fixed) i [naukowych](../standard-library/ios-functions.md#scientific). Jeśli [stałej](../standard-library/ios-functions.md#fixed) ustawiono numer odbitek jako 3466.976800. Jeśli **naukowych** jest ustawiona, wyświetla jako 3.4669773 + 003.
+Wartością domyślną precyzję zmiennoprzecinkową to sześć. Na przykład numer 3466.9768 drukuje jako 3466.98. Aby zmienić sposób, wyświetla tę wartość, należy użyć [setprecision](../standard-library/iomanip-functions.md#setprecision) manipulatora. Manipulator ma dwie flagi: [stałej](../standard-library/ios-functions.md#fixed) i [naukowych](../standard-library/ios-functions.md#scientific). Jeśli [stałej](../standard-library/ios-functions.md#fixed) ustawiono numer drukuje jako 3466.976800. Jeśli `scientific` jest ustawiony, wydrukowaniu jako 3.4669773 + 003.
 
-Do wyświetlania liczb zmiennoprzecinkowych pokazano [wyrównanie](#vclrfalignmentanchor4) z jedną cyfrę znaczące, Zastąp **dla** pętli w następujący sposób:
+Do wyświetlania liczb zmiennoprzecinkowych objętego [wyrównanie](#vclrfalignmentanchor4) przy użyciu jednej cyfry znaczące, Zastąp **dla** pętli w następujący sposób:
 
 ```cpp
 for (int i = 0; i <4; i++)
@@ -156,7 +156,7 @@ for (int i = 0; i <4; i++)
          << endl;
 ```
 
-Program drukuje tej listy:
+Program wyświetla tej listy:
 
 ```Output
 Zoot          1
@@ -171,7 +171,7 @@ Aby wyeliminować notacji naukowej, Wstaw niniejszych przed **dla** Pętla:
 cout << setiosflags(ios::fixed);
 ```
 
-Notacji stałej program drukuje z jednej cyfry po przecinku.
+Naprawiono notacji program drukuje z jedną cyfrę po punkcie dziesiętnym.
 
 ```Output
 Zoot         1.2
@@ -180,7 +180,7 @@ Al         653.7
 Stan      4358.2
 ```
 
-Jeśli zmienisz **ios::fixed** flaga **ios::scientific**, program drukuje to:
+Jeśli zmienisz `ios::fixed` flaga `ios::scientific`, program drukuje to:
 
 ```cpp
 Zoot    1.2e+00
@@ -189,15 +189,15 @@ Al      6.5e+02
 Stan    4.4e+03
 ```
 
-Ponownie program drukuje jednej cyfry po przecinku. Jeśli dowolny **ios::fixed** lub **ios::scientific** jest ustawiona wartość dokładności określa liczbę cyfr po punkcie dziesiętnym. Jeśli żadna flaga jest ustawiona, wartość precyzji określa całkowitą liczbę cyfr znaczących. `resetiosflags` Manipulatora usuwa te flagi.
+Ponownie program wyświetla jedną cyfrę po punkcie dziesiętnym. Jeśli `ios::fixed` lub `ios::scientific` jest ustawiona wartość dokładności pola określa liczbę cyfr po punkcie dziesiętnym. Jeśli żadna flaga jest ustawiona, wartość dokładności pola określa całkowitą liczbę cyfr znaczących. `resetiosflags` Manipulator czyści tych flag.
 
 ## <a name="vclrfradixanchor6"></a> Radix
 
-**Gru**, **oct**, i **szesnastkowych** manipulatory ustawić podstawy domyślny dla danych wejściowych i wyjściowych. Na przykład po wstawieniu **szesnastkowych** manipulatora do strumienia wyjściowego obiektu poprawnie tłumaczy reprezentacji wewnętrznej danych liczb całkowitych w formacie szesnastkowym danych wyjściowych. Liczby są wyświetlany cyfr poprzez f liter [wielkich](../standard-library/ios-functions.md#uppercase) flaga jest Wyczyść (ustawienie domyślne); w przeciwnym razie są wyświetlane wielkimi literami. Podstawa domyślny jest **gru** (dziesiętne).
+`dec`, `oct`, I `hex` manipulatory Ustaw radix — domyślne dane wejściowe i wyjściowe. Na przykład w przypadku wstawiania `hex` manipulatora do strumienia wyjściowego obiektu poprawnie tłumaczy reprezentacji danych wewnętrznych liczb całkowitych na format szesnastkowy danych wyjściowych. Liczby są wyświetlane z cyframi do f w małych liter, gdy [wielkie](../standard-library/ios-functions.md#uppercase) flaga jest Wyczyść (ustawienie domyślne); w przeciwnym razie są wyświetlane napisane wielkimi literami. Podstawa domyślny jest `dec` (dziesiętna).
 
-## <a name="quoted-strings-c14"></a>Ciągi cudzysłowie (C ++ 14)
+## <a name="quoted-strings-c14"></a>Ciągi w cudzysłowie (C ++ 14)
 
-Podczas wstawiania ciągu w strumieniu, możesz łatwo pobierać te same parametry przez wywołanie funkcji Członkowskich stringstream::str(). Jednak jeśli chcesz użyć operatora wyodrębniania można wstawić strumienia do nowego ciągu w późniejszym czasie, może wystąpić nieoczekiwany wynik ponieważ >> operator domyślnie zostanie zatrzymane po napotkaniu pierwszy znak odstępu.
+Wstawiając ciąg do strumienia, możesz łatwo pobrać te same parametry przywrócić przez wywołanie funkcji członkowskiej stringstream::str(). Jednak jeśli chcesz użyć operatora wyodrębniania do wstawienia w strumieniu do nowego ciągu w dowolnym momencie, może wystąpić nieoczekiwany wynik ponieważ >> operator domyślnie przestanie działać po napotkaniu pierwszego znaku odstępu.
 
 ```cpp
 std::stringstream ss;
@@ -211,13 +211,13 @@ std::cout << inserted;     //  This is a sentence.
 std::cout << extracted;    //  This
 ```
 
-Można ręcznie rozwiązać ten problem, ale aby dwustronną komunikację ciąg wygodniejsze, C ++ 14 dodaje `std::quoted` strumienia manipulatora w \<iomanip — >. Podczas wstawiania `quoted()` otaczający ciąg ogranicznikiem (podwójny cudzysłów "" "domyślnie) i podczas wyodrębniania manipuluje strumienia można wyodrębnić wszystkie znaki, dopóki nie napotkano końcowy ogranicznik. Wszystkie osadzone cudzysłowy są anulowane się od znaku ucieczki ("\\\\" domyślnie).
+Można ręcznie przezwyciężyć takie zachowanie, ale aby obustronne konwertowanie ciągu bardziej wygodne, C ++ 14 dodaje `std::quoted` strumienia manipulator w \<iomanip >. Podczas wstawiania `quoted()` otacza ciągu ogranicznikiem (podwójny cudzysłów "" "domyślnie) i podczas wyodrębniania manipuluje strumienia, aby wyodrębnić wszystkie znaki, dopóki nie zostanie osiągnięty ogranicznika końcowego. Wszelkie osadzone cudzysłowy są poprzedzone znakiem zmiany znaczenia znakiem ucieczki ("\\\\" domyślnie).
 
-Ograniczniki znajdują się tylko w obiekcie strumienia; nie istnieją w ciągu wyodrębnić, ale są obecne w ciągu zwróconego przez [basic_stringstream::str](../standard-library/basic-stringstream-class.md#str).
+Ograniczniki są obecne tylko w obiekcie strumienia; nie są obecne w wyodrębnionego ciągu, ale są obecne w ciągu zwracanego przez [basic_stringstream::str](../standard-library/basic-stringstream-class.md#str).
 
-Zachowanie spacji operacji wstawiania i wyodrębniania jest niezależna od jak ciąg są reprezentowane w kodzie, więc ujętego w cudzysłów operator przydaje się niezależnie od tego, czy ciąg wejściowy jest nieprzetworzonego literału ciągu lub ciągu regularne. Ciąg wejściowy, niezależnie od jego format można osadzania oferty, podziały wiersza, kart i tak dalej i wszystkie one będą zachowane manipulatora quoted().
+Zachowanie spacji operacje wstawiania i wyodrębniania jest niezależna od jak ciąg jest reprezentowana w kodzie, więc cudzysłowie operator przydaje się niezależnie od tego, czy ciąg wejściowy jest nieprzetworzony literał ciągu lub ciągu regularne. Ciąg wejściowy, niezależnie od jego format mogą mieć osadzone cudzysłowów, podziały wierszy, karty i tak dalej, a wszystkie te zostaną zachowane quoted() manipulator.
 
-Aby uzyskać dodatkowe informacje i przykłady pełny kod, zobacz [cytowaną](../standard-library/iomanip-functions.md#quoted).
+Aby uzyskać więcej informacji i przykłady pełnego kodu, zobacz [cytowane](../standard-library/iomanip-functions.md#quoted).
 
 ## <a name="see-also"></a>Zobacz także
 

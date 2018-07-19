@@ -16,15 +16,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f19ab7e05b4e27a3b00576339d0b60b37bdba4a7
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 53601afdd562f29ccd4bce9db76811e610940b7a
+ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33374347"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37339374"
 ---
 # <a name="linger-structure"></a>Struktura LINGER
-`LINGER` Struktura jest używana do manipulowania **SO_LINGER** i **SO_DONTLINGER** opcji `CAsyncSocket::GetSockOpt`.  
+`LINGER` Struktura jest używana do manipulowania opcje SO_LINGER i SO_DONTLINGER `CAsyncSocket::GetSockOpt`.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -36,7 +36,7 @@ struct linger {
 ```  
   
 ## <a name="remarks"></a>Uwagi  
- Ustawienie **SO_DONTLINGER** opcja uniemożliwia blokowanie w funkcji członkowskiej **Zamknij** podczas oczekiwania na nie wysłane dane do wysłania. Ta opcja jest odpowiednikiem ustawienia **SO_LINGER** z **l_onoff** równa 0.  
+ Ustawianie opcji SO_DONTLINGER zapobiega blokowania na funkcję członkowską `Close` podczas oczekiwania na niewysłanych danych do wysłania. Ustawienie tej opcji jest równoznaczne z ustawieniem SO_LINGER z `l_onoff` ustawione na 0.  
   
 ## <a name="requirements"></a>Wymagania  
  **Nagłówek:** winsock2.h  

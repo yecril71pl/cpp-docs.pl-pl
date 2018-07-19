@@ -32,16 +32,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5442888e8e370892add687c21132e397ae683ac8
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: d50b53f9c06c5edbd159e7e2bac112f6f30432df
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33861506"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38954919"
 ---
 # <a name="queue-class"></a>queue — Klasa
 
-Klasa karty kontenera szablonu, która umożliwia ograniczenie funkcjonalności dla niektórych odpowiedni typ kontenera, ograniczanie dostępu do elementów front i back. Elementy można dodać na tylnej lub wiodących i elementy mogą być kontrolowane na końcu kolejki.
+Klasa adaptera kontenera szablonu, która umożliwia ograniczenie funkcjonalności dla pewnego bazowego typu kontenera, ograniczanie dostępu do elementów w przód i Wstecz. Elementy, które mogą być dodane w tle lub wiodących, a elementy mogą być kontrolowane na końcu kolejki.
 
 ## <a name="syntax"></a>Składnia
 
@@ -52,47 +52,47 @@ class queue
 
 ### <a name="parameters"></a>Parametry
 
-*Typ* typu danych elementu mają być przechowywane w kolejce
+*Typ* typ danych elementu mają być przechowywane w kolejce
 
-`Container` Typ podstawowy kontenera używaną do zaimplementowania kolejki.
+*Kontener* typu bazowego kontenera, używaną do zaimplementowania kolejki.
 
 ## <a name="remarks"></a>Uwagi
 
-Elementy klasy **typu** określone w szablonie pierwszy parametr obiekt kolejki jest tożsame z [value_type](#value_type) i musi odpowiadać typowi element w klasie podstawowej kontenera **Kontenera** określone przez drugi parametr szablonu. **Typu** musi być możliwa do przypisania, dzięki czemu możliwe jest do kopii obiektów tego typu i można przypisać wartości do zmiennych typu.
+Elementy klasy `Type` określone w szablonie pierwszy parametr obiekt kolejki jest równoznaczny z [value_type](#value_type) i musi odpowiadać typowi elementu w klasie podstawowej kontenera `Container` określonymi przez drugi parametr szablonu. `Type` Musi być możliwy do przypisania, więc jest możliwe, aby skopiować obiekty tego typu, a także do przypisywania wartości do zmiennych tego typu.
 
-Obejmują odpowiedniej klasy kontenerów podstawowej dla kolejki [deque —](../standard-library/deque-class.md) i [listy](../standard-library/list-class.md), lub inne kontenera sekwencji, która obsługuje operacje `front`, **ponownie** , `push_back`, i `pop_front`. Podstawowe klasy kontenera jest hermetyzowany w ramach karty kontenera, który udostępnia tylko ograniczony zestaw funkcji Członkowskich sekwencji kontener jako publiczny interfejs.
+Dołączyć odpowiednie podstawowej klasy kontenera dla kolejki [deque](../standard-library/deque-class.md) i [listy](../standard-library/list-class.md), lub innego kontenera sekwencji, która obsługuje operacje `front`, `back`, `push_back`, i `pop_front`. Podstawowej klasy kontenera są hermetyzowane w obrębie adaptera kontenera, który uwidacznia tylko ograniczony zestaw funkcji elementów członkowskich kontenerów sekwencji jako interfejs publiczny.
 
-Kolejki obiektów, to jeśli można porównywać pod względem równości i tylko wtedy, gdy elementy klasy **typu** są można porównywać pod względem równości i mniejsze-niż porównywalne w przypadku i tylko wtedy, gdy elementy klasy **typu** są mniejsze-niż porównywanie.
+Kolejki obiekty są wtedy porównywanie równości i tylko wtedy, gdy elementy klasy `Type` są porównywalne równości i mniej-niż porównywalne wtedy i tylko wtedy, gdy elementy klasy `Type` są mniejsze-niż porównywalne.
 
-Istnieją trzy typy adapterów kontenera zdefiniowane przez standardowa biblioteka C++: stosu, kolejki i priority_queue —. Każdy ogranicza funkcjonalność niektórych podstawowych klasy kontenera dokładnie kontrolowanym interfejs do struktury danych standardowych.
+Istnieją trzy typy adaptery kontenera definicją standardowej biblioteki języka C++: stosu, kolejki i priority_queue —. Każdy ogranicza funkcjonalność niektóre podstawowe klasy kontenera dokładnie kontrolowanym interfejs do struktury danych w warstwie standardowa.
 
-- [Stack — klasa](../standard-library/stack-class.md) obsługuje ostatni na, wytworzenia struktura danych. Dobrym analogowy należy wziąć pod uwagę będzie stosu tablic. Elementy (płyty) może wstawiania, inspekcji lub usunąć tylko z góry stosu, w którym jest ostatni element w końcu podstawowej kontenera. Ograniczenie do uzyskiwania dostępu do górnego elementu jest przyczyna za pomocą klasy stosu.
+- [Stack — klasa](../standard-library/stack-class.md) obsługuje ostatni na wejściu, first-out (LIFO) strukturę danych. Dobre analogowy na uwadze byłoby były stosem talerzy. Elementy (talerzy) może wstawiania, inspekcji lub usunąć tylko z góry stosu, w którym jest ostatnim elementem na końcu podstawowym kontenerem. Ograniczenie do uzyskiwania dostępu do górnego elementu jest przyczyna przy użyciu klasy stosu.
 
-- Klasa kolejki obsługuje pierwszy w, FIFO (FIFO) struktury danych. Dobrym analogowy należy wziąć pod uwagę będzie Wyrównywanie dla kasjerów bankowych osób. Elementy (użytkownicy) mogą być dodawane do tyłu wiersza i są usuwane z na początku wiersza. Może być sprawdzany przodu i z powrotem wiersza. Ograniczenie do uzyskiwania dostępu do tylko front i back elementów w ten sposób jest przyczyna za pomocą klasy kolejki.
+- Klasa kolejki obsługuje pierwszy in, first-out (FIFO) strukturę danych. Dobre analogowy na uwadze byłoby osób wyrównywania dla dla kasjerów bankowych. Elementy (osób) mogą być dodawane do końca wiersza i są usuwane z początku wiersza. Mogą być kontrolowane zarówno do przodu, jak i do tyłu wiersza. Ograniczenie do uzyskiwania dostępu do tylko przód i Wstecz elementy w ten sposób jest przyczyna przy użyciu klasy kolejki.
 
-- [Priority_queue — klasa](../standard-library/priority-queue-class.md) porządkuje swoich elementów, aby największy element zawsze znajduje się w górnej pozycji. Obsługuje ona wstawiania elementu oraz inspekcji i usuwaniu górnego elementu. Dobrym analogowy należy wziąć pod uwagę będzie osób wyrównywanie, gdzie są uporządkowane według ważności, wysokość lub innego kryterium.
+- [Priority_queue — klasa](../standard-library/priority-queue-class.md) porządkuje jego elementy, dzięki czemu największy element jest zawsze u góry. Obsługuje ona Wstawianie elementu i inspekcji i usuwania górnego elementu. Dobre analogowy na uwadze byłoby osób wyrównywanie gdzie one są uporządkowane według wiek, wysokości lub innego kryterium.
 
 ### <a name="constructors"></a>Konstruktorów
 
 |Konstruktor|Opis|
 |-|-|
-|[Kolejki](#queue)|Konstruuje `queue` pusta lub jest kopię obiektu podstawowego kontenera.|
+|[kolejki](#queue)|Konstruuje `queue` pusty lub jest kopię obiektu podstawowego kontenera.|
 
 ### <a name="typedefs"></a>Typedefs
 
 |Nazwa typu|Opis|
 |-|-|
-|[container_type](#container_type)|Typ, który zapewnia podstawową kontener należy dostosować przez `queue`.|
-|[size_type](#size_type)|Typu Liczba całkowita bez znaku, który może reprezentować liczbę elementów w `queue`.|
-|[value_type](#value_type)|Typ, który reprezentuje typ obiektu przechowywane jako elementu `queue`.|
+|[container_type](#container_type)|Typ, który zapewnia podstawowy kontener, aby zostać dostosowane przez `queue`.|
+|[size_type](#size_type)|Typ całkowitoliczbowy bez znaku, który może reprezentować liczbę elementów w `queue`.|
+|[value_type](#value_type)|Typ, który reprezentuje typ obiektu przechowywanego jako element w `queue`.|
 
 ### <a name="member-functions"></a>Funkcje Członkowskie
 
-|Funkcja członkowska|Opis|
+|Funkcja elementu członkowskiego|Opis|
 |-|-|
-|[back](#back)|Zwraca odwołanie do ostatniego i ostatnio dodany element na tworzenie kopii `queue`.|
-|[pusty](#empty)|Sprawdza, czy `queue` jest pusta.|
-|[Front](#front)|Zwraca odwołanie do pierwszego elementu z przodu `queue`.|
+|[back](#back)|Zwraca odwołanie do ostatniego i ostatnio dodane elementu na tworzenie kopii zapasowych `queue`.|
+|[pusty](#empty)|Sprawdza, czy `queue` jest pusty.|
+|[Frontonu](#front)|Zwraca odwołanie do pierwszego elementu na początku `queue`.|
 |[POP](#pop)|Usuwa element z przodu `queue`.|
 |[push](#push)|Dodaje element do tyłu `queue`.|
 |[Rozmiar](#size)|Zwraca liczbę elementów w `queue`.|
@@ -101,11 +101,11 @@ Istnieją trzy typy adapterów kontenera zdefiniowane przez standardowa bibliote
 
 **Nagłówek:** \<kolejki >
 
-**Namespace:** Standard
+**Namespace:** standardowe
 
 ## <a name="back"></a>  Queue::back
 
-Zwraca odwołanie do ostatniego i ostatnio dodane element w końcu kolejki.
+Zwraca odwołanie do ostatniego i ostatnio dodane element tyłu kolejki.
 
 ```cpp
 reference back();
@@ -115,13 +115,13 @@ const_reference back() const;
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Ostatnim elementem kolejki. Jeśli kolejka jest pusta, zwracana wartość jest niezdefiniowana.
+Ostatni element kolejki. Jeśli kolejka jest pusta, zwracana wartość jest niezdefiniowana.
 
 ### <a name="remarks"></a>Uwagi
 
-Jeśli wartość zwracana **ponownie** jest przypisany do `const_reference`, obiekt kolejki nie może być modyfikowany. Jeśli wartość zwracana **ponownie** jest przypisany do **odwołania**, obiekt kolejki może być modyfikowany.
+Jeśli wartość zwracaną przez `back` jest przypisany do `const_reference`, nie można zmodyfikować obiektu kolejki. Jeśli wartość zwracaną przez `back` jest przypisany do `reference`, można zmodyfikować obiekt kolejki.
 
-Podczas kompilacji za pomocą [_ITERATOR_DEBUG_LEVEL](../standard-library/iterator-debug-level.md) zdefiniowany jako 1 lub 2, błąd środowiska uruchomieniowego nastąpi próba uzyskania dostępu do elementu w pustej kolejce.  Zobacz [zaznaczone Iteratory](../standard-library/checked-iterators.md) Aby uzyskać więcej informacji.
+Gdy kompilowany przy użyciu [_ITERATOR_DEBUG_LEVEL](../standard-library/iterator-debug-level.md) zdefiniowana jako 1 lub 2, wystąpi błąd czasu wykonywania przy próbie uzyskania dostępu do elementu w pustej kolejce.  Zobacz [Checked Iterators](../standard-library/checked-iterators.md) Aby uzyskać więcej informacji.
 
 ### <a name="example"></a>Przykład
 
@@ -151,7 +151,7 @@ int main( )
 
 ## <a name="container_type"></a>  Queue::container_type
 
-Typ, który zapewnia podstawową kontener dostosowania.
+Typ, który dostarcza podstawowy kontener, aby dostosować.
 
 ```cpp
 typedef Container container_type;
@@ -159,17 +159,17 @@ typedef Container container_type;
 
 ### <a name="remarks"></a>Uwagi
 
-Typ jest synonimem parametru szablonu `Container`. Klasy kontenerów w dwóch sekwencji standardowa biblioteka C++ — klasa listy i domyślne deque — klasa — spełniać wymagania dotyczące służyć jako podstawowa kontener dla obiekt kolejki. Typy danych zdefiniowane przez użytkownika spełnia wymagania mogą również.
+Typ jest synonimem dla parametru szablonu `Container`. Dwie klasy kontenera sekwencja standardowej biblioteki języka C++ — klasa listy i domyślną klasę deque — spełniają wymagania, które ma być używany jako bazowy kontener dla obiektu kolejki. Typy zdefiniowane przez użytkownika niespełniających wymagań można także.
 
-Aby uzyskać więcej informacji na temat `Container`, zobacz sekcję uwag [kolejka klasy](../standard-library/queue-class.md) tematu.
+Aby uzyskać więcej informacji na temat `Container`, zobacz sekcję Uwagi [kolejkowania klasy](../standard-library/queue-class.md) tematu.
 
 ### <a name="example"></a>Przykład
 
-Zobacz przykład [kolejki](#queue) przykład sposobu deklarowanie i użycie `container_type`.
+Zobacz przykład [kolejki](#queue) przykładowy sposób deklarowania i użyj `container_type`.
 
 ## <a name="empty"></a>  Queue::Empty
 
-Testy, jeśli kolejka jest pusta.
+Sprawdza, czy kolejka jest pusta.
 
 ```cpp
 bool empty() const;
@@ -215,7 +215,7 @@ The queue q2 is empty.
 
 ## <a name="front"></a>  Queue::front
 
-Zwraca odwołanie do pierwszego elementu z przodu kolejki.
+Zwraca odwołanie do pierwszego elementu na wierzchu kolejki.
 
 ```cpp
 reference front();
@@ -225,15 +225,15 @@ const_reference front() const;
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Pierwszy element kolejki. Jeśli kolejka jest pusta, zwracana wartość jest niezdefiniowana.
+Pierwszy element w kolejce. Jeśli kolejka jest pusta, zwracana wartość jest niezdefiniowana.
 
 ### <a name="remarks"></a>Uwagi
 
-Jeśli wartość zwracana `front` jest przypisany do `const_reference`, obiekt kolejki nie może być modyfikowany. Jeśli wartość zwracana `front` jest przypisany do **odwołania**, obiekt kolejki może być modyfikowany.
+Jeśli wartość zwracaną przez `front` jest przypisany do `const_reference`, nie można zmodyfikować obiektu kolejki. Jeśli wartość zwracaną przez `front` jest przypisany do `reference`, można zmodyfikować obiekt kolejki.
 
-Funkcja członkowska zwraca **odwołania** do pierwszego elementu w kontrolowanej sekwencji, która nie może być puste.
+Funkcja elementu członkowskiego zwraca `reference` do pierwszego elementu w kontrolowanej sekwencji, która nie może być puste.
 
-Podczas kompilacji za pomocą [_ITERATOR_DEBUG_LEVEL](../standard-library/iterator-debug-level.md) zdefiniowany jako 1 lub 2, błąd środowiska uruchomieniowego nastąpi próba uzyskania dostępu do elementu w pustej kolejce.  Zobacz [zaznaczone Iteratory](../standard-library/checked-iterators.md) Aby uzyskać więcej informacji.
+Gdy kompilowany przy użyciu [_ITERATOR_DEBUG_LEVEL](../standard-library/iterator-debug-level.md) zdefiniowana jako 1 lub 2, wystąpi błąd czasu wykonywania przy próbie uzyskania dostępu do elementu w pustej kolejce.  Zobacz [Checked Iterators](../standard-library/checked-iterators.md) Aby uzyskać więcej informacji.
 
 ### <a name="example"></a>Przykład
 
@@ -275,7 +275,7 @@ void pop();
 
 ### <a name="remarks"></a>Uwagi
 
-Kolejki nie może być puste, aby zastosować funkcji członkowskiej. Na początku kolejki jest zajmowane przez element ostatnio dodane stanowisko i ostatni element w końcu kontenera.
+Kolejka nie może być puste do zastosowania funkcji elementu członkowskiego. Początku kolejki jest pozycja zajmowane przez element ostatnio dodane i ostatni element na końcu kontenera.
 
 ### <a name="example"></a>Przykład
 
@@ -331,11 +331,11 @@ void push(const Type& val);
 
 ### <a name="parameters"></a>Parametry
 
-`val` Element dodany do tyłu kolejki.
+*Val* elementu dodany do tyłu kolejki.
 
 ### <a name="remarks"></a>Uwagi
 
-Wstecz kolejki jest zajmowane przez element ostatnio dodane stanowisko i ostatni element w końcu kontenera.
+Wstecz kolejki jest pozycja zajmowane przez element ostatnio dodane i ostatni element na końcu kontenera.
 
 ### <a name="example"></a>Przykład
 
@@ -371,7 +371,7 @@ The element at the front of the queue is 10.
 
 ## <a name="queue"></a>  Queue::Queue
 
-Tworzy kolejka jest pusta lub kopię obiektu podstawowego kontenera.
+Tworzy kolejki, który jest pusty lub jest kopią obiektu podstawowego kontenera.
 
 ```cpp
 queue();
@@ -381,11 +381,11 @@ explicit queue(const container_type& right);
 
 ### <a name="parameters"></a>Parametry
 
-`right` **Const** kontenera skonstruowane kolejki ma być kopii.
+*prawy* **const** kontenera, w której skonstruowany kolejki jest kopią.
 
 ### <a name="remarks"></a>Uwagi
 
-Domyślny kontener podstawowy dla kolejki jest deque —. Listy można również określić jako kontener podstawowy, ale nie można określić wektora, ponieważ nie ma wymaganego `pop_front` funkcję elementu członkowskiego.
+Domyślny kontener podstawowy dla kolejki jest deque. Można również określić listy jako podstawowy kontener, ale nie można określić wektora, ponieważ brakuje wymaganych `pop_front` funkcja elementu członkowskiego.
 
 ### <a name="example"></a>Przykład
 
@@ -478,7 +478,7 @@ The queue length is now 2.
 
 ## <a name="size_type"></a>  Queue::size_type
 
-Typ liczby całkowitej bez znaku, który może reprezentować liczbę elementów w kolejce.
+Typ całkowitoliczbowy bez znaku, który może reprezentować liczbę elementów w kolejce.
 
 ```cpp
 typedef typename Container::size_type size_type;
@@ -486,15 +486,15 @@ typedef typename Container::size_type size_type;
 
 ### <a name="remarks"></a>Uwagi
 
-Typ jest synonimem `size_type` podstawowej kontenera dostosowane przez kolejkę.
+Typ jest synonimem dla `size_type` podstawowy kontenera dostosowane przez kolejkę.
 
 ### <a name="example"></a>Przykład
 
-Zobacz przykład [queue::front](#front) przykład sposobu deklarowanie i użycie `size_type`.
+Zobacz przykład [queue::front](#front) przykładowy sposób deklarowania i użyj `size_type`.
 
 ## <a name="value_type"></a>  Queue::value_type
 
-Typ, który reprezentuje typ obiektu przechowywane jako element w kolejce.
+Typ, który reprezentuje typ obiektu przechowywanego jako element w kolejce.
 
 ```cpp
 typedef typename Container::value_type value_type;
@@ -502,7 +502,7 @@ typedef typename Container::value_type value_type;
 
 ### <a name="remarks"></a>Uwagi
 
-Typ jest synonimem `value_type` podstawowej kontenera dostosowane przez kolejkę.
+Typ jest synonimem dla `value_type` podstawowy kontenera dostosowane przez kolejkę.
 
 ### <a name="example"></a>Przykład
 

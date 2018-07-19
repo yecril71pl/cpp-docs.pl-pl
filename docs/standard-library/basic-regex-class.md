@@ -16,12 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ec5ca351f6ac96fd8420ee921ca95b78ee2f487d
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 2f13dfb45073a1a21e8d6a7b4585f0dfc5c71b8e
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33848313"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38959751"
 ---
 # <a name="basicregex-class"></a>basic_regex — Klasa
 
@@ -84,35 +84,35 @@ class basic_regex {
 
 ### <a name="parameters"></a>Parametry
 
-`Elem` Typ elementów w celu dopasowania.
+*Elem* typ elementów do dopasowania.
 
-`RXtraits` Klasa cech elementów.
+*RXtraits* klasa cech dla elementów.
 
 ## <a name="remarks"></a>Uwagi
 
-Klasa szablonu opisuje obiekt, który zawiera wyrażenie regularne. Obiektów klasy tego szablonu można przekazać do funkcji szablonu [regex_match —](../standard-library/regex-functions.md#regex_match), [regex_search —](../standard-library/regex-functions.md#regex_search), i [regex_replace —](../standard-library/regex-functions.md#regex_replace), wraz z odpowiednią tekst argumenty typu string, Aby wyszukać tekst, który odpowiada wyrażeniu regularnemu. Istnieją dwa specjalizacje tej klasy szablonu z definicji typu [regex](../standard-library/regex-typedefs.md#regex) dla elementów typu `char`, i [wregex](../standard-library/regex-typedefs.md#wregex) dla elementów typu `wchar_t`.
+Klasa szablonu opisuje obiekt, który zawiera wyrażenie regularne. Obiekty tej klasy szablonu mogą być przekazywane do funkcji szablonu [regex_match —](../standard-library/regex-functions.md#regex_match), [regex_search —](../standard-library/regex-functions.md#regex_search), i [regex_replace —](../standard-library/regex-functions.md#regex_replace), wraz z odpowiednimi argumentami ciągu tekstu, Aby wyszukać tekst, który odpowiada wyrażeniu regularnemu. Istnieją dwie specjalizacje tej klasy szablonu, z definicjami typu [wyrażenia regularnego](../standard-library/regex-typedefs.md#regex) dla elementów typu **char**, i [wregex](../standard-library/regex-typedefs.md#wregex) dla elementów typu  **wchar_t**.
 
-Argument szablonu `RXtraits` opisuje różne właściwości ważne składni wyrażeń regularnych, które obsługuje klasy szablonu. Klasa, która określa tych cech wyrażenia regularnego muszą mieć ten sam interfejs zewnętrznych jako obiekt klasy szablonu [regex_traits — klasa](../standard-library/regex-traits-class.md).
+Argument szablonu *RXtraits* opisuje różne ważne właściwości składni wyrażeń regularnych, które obsługuje klasa szablonu. Klasa, która określa te cechy wyrażeń regularnych musi mieć ten sam interfejs zewnętrzny co obiekt klasy szablonu [regex_traits, klasa](../standard-library/regex-traits-class.md).
 
 Niektóre funkcje przyjmują sekwencję operandów, która definiuje wyrażenie regularne. Można określić taką sekwencję operandów na kilka sposobów:
 
-`ptr` — sekwencję zerem (takiego jak ciąg C dla `Elem` typu `char`) począwszy od `ptr` (który nie może być wskaźnika o wartości null), gdzie element zakończenia jest wartością `value_type()` i nie jest częścią sekwencji operandu
+`ptr` --sekwencję zakończony znakiem null (taka jak ciąg C dla *Elem* typu **char**) począwszy od `ptr` (może nie być wskaźnikiem typu null), gdzie element kończący jest wartością `value_type()` i nie jest częścią sekwencji operandu
 
-`ptr`, `count` — Sekwencja `count` elementów, rozpoczynając od `ptr` (który nie może być wskaźnika o wartości null)
+`ptr`, `count` — Sekwencja `count` elementów, poczynając od `ptr` (może nie być wskaźnikiem typu null)
 
-`str` --sekwencji określony przez `basic_string` obiektu `str`
+`str` — Sekwencja określona przez `basic_string` obiektu `str`
 
-`first`, `last` — sekwencję elementów oddzielonych Iteratory `first` i `last`, w zakresie `[first, last)`
+`first`, `last` — sekwencja elementów rozdzielonych iteratorami `first` i `last`, w zakresie `[first, last)`
 
 `right` -- `basic_regex` obiektu `right`
 
-Te funkcje Członkowskie również przyjmuje argumentu `flags` , który określa różne opcje interpretacji wyrażenia regularnego oprócz opisane przez `RXtraits` typu.
+Te funkcje elementów członkowskich również przyjmują argument `flags` , który określa różne opcje dla interpretacji wyrażenia regularnego w uzupełnieniu do opisanych przez *RXtraits* typu.
 
 ## <a name="requirements"></a>Wymagania
 
-**Nagłówek:** \<regex >
+**Nagłówek:** \<wyrażenia regularnego >
 
-**Namespace:** Standard
+**Namespace:** standardowe
 
 ## <a name="assign"></a>  basic_regex::ASSIGN
 
@@ -148,31 +148,31 @@ basic_regex& assign(
 
 ### <a name="parameters"></a>Parametry
 
-`STtraits` Klasa cech źródła ciągu.
+*STtraits* klasa cech dla źródła ciągu.
 
-`STalloc` Allocator — Klasa źródła ciągu.
+*STalloc* klasę alokatora dla źródła ciągu.
 
-`InIt` Typ iteratora źródła zakresu wejściowych.
+*InIt* typu iteratora zakres źródła danych wejściowych.
 
-`right` Źródło wyrażeń regularnych do skopiowania.
+*prawy* wyrażenia regularnego źródła do skopiowania.
 
-`ptr` Wskaźnik do początku sekwencji do skopiowania.
+*PTR* wskaźnik do początku sekwencji do skopiowania.
 
-`flags` Składnia flagi opcji do dodawania podczas kopiowania.
+*flagi* składni flagi opcji można dodać podczas kopiowania.
 
-`len/TD>` Długość sekwencji do skopiowania.
+*LEN/TD >* długości sekwencji do skopiowania.
 
-`str` Ciąg do skopiowania.
+*str* ciągu do skopiowania.
 
-`first` Początek sekwencji do skopiowania.
+*pierwszy* początek sekwencji do skopiowania.
 
-`last` Koniec sekwencji do skopiowania.
+*ostatni* koniec sekwencji do skopiowania.
 
-`IList` Initializer_list do skopiowania.
+*IList* initializer_list do skopiowania.
 
 ### <a name="remarks"></a>Uwagi
 
-Funkcje Członkowskie Zastąp wyrażenie regularne w posiadaniu `*this` z wyrażeniem regularnym opisanego przez argument sekwencji, zwracany jest `*this`.
+Funkcje elementów członkowskich Zastąp wyrażenie regularne w posiadaniu `*this` z wyrażeniem regularnym opisanego przez sekwencję operandów, zwracany jest `*this`.
 
 ### <a name="example"></a>Przykład
 
@@ -258,7 +258,7 @@ match("abc", "") == falsematch("abc", "abcd") == falsematch("abc", "abc") == tru
 
 ## <a name="basic_regex"></a>  basic_regex::basic_regex
 
-Utworzyć obiekt będący wyrażeniem regularnym.
+Skonstruuj obiekt będący wyrażeniem regularnym.
 
 ```cpp
 basic_regex();
@@ -293,35 +293,35 @@ explicit basic_regex(
 
 ### <a name="parameters"></a>Parametry
 
-`STtraits` Klasa cech źródła ciągu.
+*STtraits* klasa cech dla źródła ciągu.
 
-`STalloc` Allocator — Klasa źródła ciągu.
+*STalloc* klasę alokatora dla źródła ciągu.
 
-`InIt` Typ iteratora źródła zakresu wejściowych.
+*InIt* typu iteratora zakres źródła danych wejściowych.
 
-`right` Źródło wyrażeń regularnych do skopiowania.
+*prawy* wyrażenia regularnego źródła do skopiowania.
 
-`ptr` Wskaźnik do początku sekwencji do skopiowania.
+*PTR* wskaźnik do początku sekwencji do skopiowania.
 
-`flags` Składnia flagi opcji do dodawania podczas kopiowania.
+*flagi* składni flagi opcji można dodać podczas kopiowania.
 
-`len/TD>` Długość sekwencji do skopiowania.
+*LEN/TD >* długości sekwencji do skopiowania.
 
-`str` Ciąg do skopiowania.
+*str* ciągu do skopiowania.
 
-`first` Początek sekwencji do skopiowania.
+*pierwszy* początek sekwencji do skopiowania.
 
-`last` Koniec sekwencji do skopiowania.
+*ostatni* koniec sekwencji do skopiowania.
 
-`IList` Initializer_list do skopiowania.
+*IList* initializer_list do skopiowania.
 
 ### <a name="remarks"></a>Uwagi
 
-Wszystkie konstruktory przechowywania skonstruowany domyślnego obiektu typu `RXtraits`.
+Wszystkie konstruktory zapisują obiekt zbudowanego domyślnie typu `RXtraits`.
 
-Pierwszy konstruktora tworzy pustą `basic_regex` obiektu. Inne konstruktorów skonstruować `basic_regex` obiekt przechowujący opisanego przez sekwencji argument operacji wyrażenia regularnego.
+Pierwszy Konstruktor konstruuje pustą `basic_regex` obiektu. Inne konstruktory konstruowania `basic_regex` obiekt, który zawiera wyrażenie regularne opisanego przez sekwencję operandów.
 
-Pusta `basic_regex` obiekt nie pasuje do dowolnego sekwencja znaków przekazany do [regex_match —](../standard-library/regex-functions.md#regex_match), [regex_search —](../standard-library/regex-functions.md#regex_search), lub [regex_replace —](../standard-library/regex-functions.md#regex_replace).
+Pusta `basic_regex` obiekt nie jest zgodny z dowolnej sekwencji znaków, gdy przekazywane do [regex_match —](../standard-library/regex-functions.md#regex_match), [regex_search —](../standard-library/regex-functions.md#regex_search), lub [regex_replace —](../standard-library/regex-functions.md#regex_replace).
 
 ### <a name="example"></a>Przykład
 
@@ -415,7 +415,7 @@ typedef regex_constants::syntax_option_type flag_type;
 
 ### <a name="remarks"></a>Uwagi
 
-Typ jest synonimem [regex_constants::syntax_option_type](../standard-library/regex-constants-class.md#syntax_option_type).
+Typ jest synonimem dla [regex_constants::syntax_option_type](../standard-library/regex-constants-class.md#syntax_option_type).
 
 ### <a name="example"></a>Przykład
 
@@ -512,7 +512,7 @@ flag_type flags() const;
 
 ### <a name="remarks"></a>Uwagi
 
-Funkcja członkowska zwraca wartość `flag_type` argument przekazany do jednego z najnowszych wywołania [basic_regex::assign](#assign) funkcji Członkowskich lub, jeśli wprowadzono Brak takiego wywołania wartość przekazany do konstruktora.
+Funkcja elementu członkowskiego zwraca wartość `flag_type` argument przekazany do jednej z najbardziej aktualną wywołania [basic_regex::assign](#assign) funkcji składowych lub, jeśli brak takiego wywołania zostały wprowadzone, wartość przekazywana do konstruktora.
 
 ### <a name="example"></a>Przykład
 
@@ -601,7 +601,7 @@ getloc == imbued == true
 
 ## <a name="getloc"></a>  basic_regex::getloc
 
-Zwraca obiekt przechowywanych ustawień regionalnych.
+Zwraca obiekt ustawień regionalnych przechowywanych.
 
 ```cpp
 locale_type getloc() const;
@@ -609,7 +609,7 @@ locale_type getloc() const;
 
 ### <a name="remarks"></a>Uwagi
 
-Funkcja członkowska zwraca `traits.` [regex_traits::getloc](../standard-library/regex-traits-class.md#getloc)`()`.
+Funkcja elementu członkowskiego zwraca `traits.` [regex_traits::getloc](../standard-library/regex-traits-class.md#getloc)`()`.
 
 ### <a name="example"></a>Przykład
 
@@ -706,11 +706,11 @@ locale_type imbue(locale_type loc);
 
 ### <a name="parameters"></a>Parametry
 
-`loc` Obiekt ustawień regionalnych, aby zapisać.
+*Lokalizacja* obiekt ustawień regionalnych, który ma być przechowywany.
 
 ### <a name="remarks"></a>Uwagi
 
-Funkcja członkowska opróżnia `*this` i zwraca `traits.` [regex_traits::imbue](../standard-library/regex-traits-class.md#imbue)`(loc)`.
+Funkcja elementu członkowskiego opróżnia `*this` i zwraca `traits.` [regex_traits::imbue](../standard-library/regex-traits-class.md#imbue)`(loc)`.
 
 ### <a name="example"></a>Przykład
 
@@ -807,7 +807,7 @@ typedef typename RXtraits::locale_type locale_type;
 
 ### <a name="remarks"></a>Uwagi
 
-Typ jest synonimem [regex_traits::locale_type](../standard-library/regex-traits-class.md#locale_type).
+Typ jest synonimem dla [regex_traits::locale_type](../standard-library/regex-traits-class.md#locale_type).
 
 ### <a name="example"></a>Przykład
 
@@ -896,7 +896,7 @@ getloc == imbued == true
 
 ## <a name="mark_count"></a>  basic_regex::mark_count
 
-Zwraca liczbę użyto dopasowaniu.
+Zwraca liczbę dopasowane podwyrażenia.
 
 ```cpp
 unsigned mark_count() const;
@@ -904,7 +904,7 @@ unsigned mark_count() const;
 
 ### <a name="remarks"></a>Uwagi
 
-Funkcja członkowska zwraca liczbę grup przechwytywania w wyrażeniu regularnym.
+Element członkowski funkcji zwraca liczbę grup przechwytywania w wyrażeniu regularnym.
 
 ### <a name="example"></a>Przykład
 
@@ -1006,17 +1006,17 @@ basic_regex& operator=(const basic_string<Elem, STtraits, STalloc>& str);
 
 ### <a name="parameters"></a>Parametry
 
-`STtraits` Klasa cech źródła ciągu.
+*STtraits* klasa cech dla źródła ciągu.
 
-`STalloc` Allocator — Klasa źródła ciągu.
+*STalloc* klasę alokatora dla źródła ciągu.
 
-`right` Źródło wyrażeń regularnych do skopiowania.
+*prawy* wyrażenia regularnego źródła do skopiowania.
 
-`str` Ciąg do skopiowania.
+*str* ciągu do skopiowania.
 
 ### <a name="remarks"></a>Uwagi
 
-Operatory każdego Zastąp wyrażenie regularne w posiadaniu `*this` z wyrażeniem regularnym opisanego przez argument sekwencji, zwracany jest `*this`.
+Operatory każdego Zastąp wyrażenie regularne w posiadaniu `*this` z wyrażeniem regularnym opisanego przez sekwencję operandów, zwracany jest `*this`.
 
 ### <a name="example"></a>Przykład
 
@@ -1105,7 +1105,7 @@ getloc == imbued == true
 
 ## <a name="swap"></a>  basic_regex::swap
 
-Zamienia dwa obiekty wyrażenia regularnego.
+Zamienia dwa obiekty wyrażeń regularnych.
 
 ```cpp
 void swap(basic_regex& right) throw();
@@ -1113,11 +1113,11 @@ void swap(basic_regex& right) throw();
 
 ### <a name="parameters"></a>Parametry
 
-`right` Obiekt będący wyrażeniem regularnym wymiany.
+*prawy* obiektu będącego wyrażeniem regularnym wymiany.
 
 ### <a name="remarks"></a>Uwagi
 
-Funkcja członkowska zamienia wyrażeń regularnych między `*this` i `right`. Nie, w czasie stałej i zgłasza żadnych wyjątków.
+Funkcja elementu członkowskiego zamienia wyrażeń regularnych między `*this` i *prawo*. Ją w stałym czasie i zgłasza żadnych wyjątków.
 
 ### <a name="example"></a>Przykład
 
@@ -1214,7 +1214,7 @@ typedef Elem value_type;
 
 ### <a name="remarks"></a>Uwagi
 
-Typ jest synonimem parametru szablonu `Elem`.
+Typ jest synonimem dla parametru szablonu *Elem*.
 
 ### <a name="example"></a>Przykład
 

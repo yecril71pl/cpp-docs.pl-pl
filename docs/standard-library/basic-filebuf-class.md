@@ -50,16 +50,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 65dc91bebf55c617d5c18d86d308558e57cbd3c3
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: b9ea6f4a5770163ddaa34478f6630ed2a24ffbd6
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33848869"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38954971"
 ---
 # <a name="basicfilebuf-class"></a>basic_filebuf — Klasa
 
-W tym artykule opisano buforu strumienia, który kontroluje przekazywania elementów typu `Elem`, którego cech znaków są określane przez klasę `Tr`, do i z sekwencję elementy przechowywane w pliku zewnętrznym.
+W tym artykule opisano buforu strumieni, który kontroluje transmisji elementów typu *Elem*, którego cech są określane przez klasę *Tr*, do i z sekwencji elementów przechowywanych w pliku zewnętrznym.
 
 ## <a name="syntax"></a>Składnia
 
@@ -70,22 +70,22 @@ class basic_filebuf : public basic_streambuf<Elem, Tr>
 
 ### <a name="parameters"></a>Parametry
 
-`Elem` Podstawowy element buforu plików.
+*Elem* podstawowy element buforu plików.
 
-`Tr` Cechy podstawowy element pliku buforu (zazwyczaj `char_traits` <  `Elem`>).
+*TR* cech elementu podstawowego buforu pliku (zazwyczaj `char_traits` <  `Elem`>).
 
 ## <a name="remarks"></a>Uwagi
 
-Klasa szablonu opisuje buforu strumienia, który kontroluje przekazywania elementów typu `Elem`, którego cech znaków są określane przez klasę `Tr`, do i z sekwencję elementy przechowywane w pliku zewnętrznym.
+Klasa szablonu opisuje buforu strumieni, który kontroluje transmisji elementów typu *Elem*, którego cech są określane przez klasę *Tr*, do i z sekwencji elementów przechowywanych w Plik zewnętrzny.
 
 > [!NOTE]
-> Obiekty typu `basic_filebuf` są tworzone z buforu wewnętrznego typu `char *` niezależnie od tego `char_type` określonej przez parametr typu `Elem`. Oznacza to, że ciąg Unicode (zawierający `wchar_t` znaków) zostaną skonwertowane do ciągu ANSI (zawierający `char` znaków) zanim zostaną zapisane do wewnętrznego buforu. Do przechowywania ciągów Unicode w buforze, Utwórz bufor nowego typu `wchar_t` i ustaw ją przy użyciu [basic_streambuf::pubsetbuf](../standard-library/basic-streambuf-class.md#pubsetbuf) `()` metody. Aby zapoznać się przykładem, który demonstruje tego zachowania, zobacz poniżej.
+> Obiekty typu `basic_filebuf` są tworzone przy użyciu buforu wewnętrznego typu `char *` niezależnie od wartości `char_type` określony przez parametr typu *Elem*. Oznacza to, że ciąg Unicode (zawierający **wchar_t** znaków) zostanie przekonwertowany na ciąg ANSI (zawierający **char** znaków) zanim zostaną zapisane do wewnętrznego buforu. Do przechowywania ciągów Unicode w buforze, Utwórz bufor nowego typu **wchar_t** i ustaw ją za pomocą [basic_streambuf::pubsetbuf](../standard-library/basic-streambuf-class.md#pubsetbuf) `()` metody. Aby zobaczyć przykład demonstrujący ten problem, zobacz poniżej.
 
-Obiekt klasy `basic_filebuf` <  `Elem`, `Tr`> przechowuje wskaźnika pliku, który wyznacza `FILE` obiekt, który kontroluje strumienia skojarzonego z otwartego pliku. Przechowuje także wskaźniki do dwa aspekty konwersji plików do użycia przez funkcje chroniony element członkowski [przepełnienie](#overflow) i [niedopełnienie](#underflow). Aby uzyskać więcej informacji, zobacz [basic_filebuf::open](#open).
+Obiekt klasy `basic_filebuf` <  `Elem`, `Tr`> przechowuje wskaźnik pliku, który wyznacza `FILE` obiekt, który kontroluje strumienia skojarzone z otwartego pliku. Przechowuje także wskaźniki do dwóch zestawów reguł konwersji plików do użytku przez funkcje składowe chronione [przepełnienie](#overflow) i [niedopełnienie](#underflow). Aby uzyskać więcej informacji, zobacz [basic_filebuf::open](#open).
 
 ## <a name="example"></a>Przykład
 
-W poniższym przykładzie pokazano, jak wymusić typu obiektu `basic_filebuf<wchar_t>` do przechowywania znaków Unicode w swoim buforze wewnętrzny przez wywołanie metody `pubsetbuf()` metody.
+Poniższy przykład ilustruje sposób wymusić obiektu typu `basic_filebuf<wchar_t>` do przechowywania znaki Unicode w jego wewnętrznego buforu, wywołując `pubsetbuf()` metody.
 
 ```cpp
 // unicode_basic_filebuf.cpp
@@ -213,33 +213,33 @@ Hex Dump of wwHello.txt - note that output is wchar_t chars:
 |Nazwa typu|Opis|
 |-|-|
 |[char_type](#char_type)|Kojarzy nazwę typu z `Elem` parametru szablonu.|
-|[int_type](#int_type)|Sprawia, że ten typ w `basic_filebuf`jego odpowiednikiem typu o takiej samej nazwie w zakresie `Tr` zakresu.|
-|[off_type](#off_type)|Sprawia, że ten typ w `basic_filebuf`jego odpowiednikiem typu o takiej samej nazwie w zakresie `Tr` zakresu.|
-|[pos_type](#pos_type)|Sprawia, że ten typ w `basic_filebuf`jego odpowiednikiem typu o takiej samej nazwie w zakresie `Tr` zakresu.|
+|[int_type](#int_type)|Sprawia, że tego typu w ramach `basic_filebuf`firmy odpowiednikiem typu o takiej samej nazwie w zakresie `Tr` zakresu.|
+|[off_type](#off_type)|Sprawia, że tego typu w ramach `basic_filebuf`firmy odpowiednikiem typu o takiej samej nazwie w zakresie `Tr` zakresu.|
+|[pos_type](#pos_type)|Sprawia, że tego typu w ramach `basic_filebuf`firmy odpowiednikiem typu o takiej samej nazwie w zakresie `Tr` zakresu.|
 |[traits_type](#traits_type)|Kojarzy nazwę typu z `Tr` parametru szablonu.|
 
 ### <a name="member-functions"></a>Funkcje Członkowskie
 
-|Funkcja członkowska|Opis|
+|Funkcja elementu członkowskiego|Opis|
 |-|-|
 |[close](#close)|Zamyka plik.|
 |[is_open](#is_open)|Wskazuje, czy plik jest otwarty.|
 |[open](#open)|Otwiera plik.|
-|[overflow](#overflow)|Chronione funkcji wirtualnej można wywołać po wstawieniu nowego znaku w buforze pełna.|
-|[pbackfail](#pbackfail)|Funkcja chroniony element członkowski wirtualnego próbuje ponownie poddane elementu wejściowego strumienia, a następnie wprowadź go bieżącego elementu (wskazywana przez wskaźnik następnej).|
-|[seekoff](#seekoff)|Funkcja chronionego członka wirtualnego próbuje zmienić bieżącego położenia dla strumieni kontrolowane.|
-|[seekpos](#seekpos)|Funkcja chronionego członka wirtualnego próbuje zmienić bieżącego położenia dla strumieni kontrolowane.|
-|[setbuf](#setbuf)|Funkcja chroniony element członkowski wirtualnego wykonuje określonego operację do każdego strumienia pochodnej buforu.|
-|[Swap](#swap)|Zamienia zawartość tego `basic_filebuf` zawartości dotyczącej dostępnego `basic_filebuf` parametru.|
-|[sync](#sync)|Funkcja chroniony, wirtualny próbuje synchronizować kontrolowane strumieni wszystkie skojarzone strumieni zewnętrznych.|
-|[uflow](../standard-library/basic-streambuf-class.md#uflow)|Chronione funkcji wirtualnych można wyodrębnić bieżącego elementu ze strumienia wejściowego.|
-|[underflow](#underflow)|Chronione funkcji wirtualnych można wyodrębnić bieżącego elementu ze strumienia wejściowego.|
+|[overflow](#overflow)|Chronione funkcja wirtualna, która może być wywoływana po wstawieniu do buforu pełnej nowego znaku.|
+|[pbackfail](#pbackfail)|Funkcja chroniony element członkowski wirtualnego próbuje odłożyć element do strumienia wejściowego, a następnie wprowadź go bieżącego elementu (wskazywany przez wskaźnik następnej).|
+|[seekoff](#seekoff)|Chronione wirtualna funkcja składowa próbuje alter dla strumieni kontrolowanego bieżącej pozycji.|
+|[seekpos —](#seekpos)|Chronione wirtualna funkcja składowa próbuje alter dla strumieni kontrolowanego bieżącej pozycji.|
+|[setbuf](#setbuf)|Funkcja chroniony element członkowski wirtualnego wykonuje określonego operacji, aby każdy bufor strumienia pochodnej.|
+|[swap](#swap)|Wymienia zawartość tego `basic_filebuf` zawartości dotyczącej dostępnego `basic_filebuf` parametru.|
+|[sync](#sync)|Funkcja chroniony, wirtualny próbuje synchronizował kontrolowanego strumienie skojarzone strumieni zewnętrznych.|
+|[uflow](../standard-library/basic-streambuf-class.md#uflow)|Chroniona funkcja wirtualna, aby wyodrębnić bieżącego elementu ze strumienia wejściowego.|
+|[underflow](#underflow)|Chroniona funkcja wirtualna, aby wyodrębnić bieżącego elementu ze strumienia wejściowego.|
 
 ## <a name="requirements"></a>Wymagania
 
 **Nagłówek:** \<fstream — >
 
-**Namespace:** Standard
+**Namespace:** standardowe
 
 ## <a name="basic_filebuf"></a>  basic_filebuf::basic_filebuf
 
@@ -253,13 +253,13 @@ basic_filebuf(basic_filebuf&& right);
 
 ### <a name="remarks"></a>Uwagi
 
-Pierwszy Konstruktor przechowuje wskaźnika o wartości null w wszystkie wskaźniki kontrolowanie buforu wejściowego i buforu wyjściowego. Przechowuje także wskaźnika o wartości null wskaźnika pliku.
+Pierwszy Konstruktor przechowuje wskaźnik zerowy wszystkie wskaźniki kontrolowanie buforu wejściowego i bufor wyjściowy. Przechowuje także wskaźnik zerowy we wskaźniku pliku.
 
-Drugi Konstruktor inicjuje obiekt z zawartością `right`, traktowane jako odwołanie do r-wartości.
+Drugi Konstruktor inicjuje obiekt z zawartością `right`, traktowane jako odwołanie rvalue.
 
 ## <a name="char_type"></a>  basic_filebuf::char_type
 
-Kojarzy nazwę typu z **elementu** parametru szablonu.
+Kojarzy nazwę typu z `Elem` parametru szablonu.
 
 ```cpp
 typedef Elem char_type;
@@ -275,17 +275,17 @@ basic_filebuf<Elem, Tr> *close();
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Funkcja członkowska zwraca wskaźnika o wartości null, jeśli wskaźnika o wartości null wskaźnika pliku.
+Funkcja elementu członkowskiego zwraca wskaźnikiem typu null, jeśli wskaźnik pliku jest wskaźnikiem typu null.
 
 ### <a name="remarks"></a>Uwagi
 
-**Zamknij** wywołania `fclose`( **fp**). Jeśli ta funkcja zwróci wartość niezerową, funkcja zwraca wskaźnika o wartości null. W przeciwnym razie zwraca **to** aby wskazać, że plik został zamknięty pomyślnie.
+`close` wywołania `fclose`( **fp**). Jeśli ta funkcja zwraca wartość różną od zera, funkcja zwraca pusty wskaźnik. W przeciwnym razie zwraca **to** do wskazania, że plik został pomyślnie zamknięty.
 
-Dla strumienia szerokości, jeśli wystąpiły wstawienia wszelkie ponieważ strumień został otwarty lub od czasu ostatniego wywołania `streampos`, wywołania funkcji [przepełnienie](#overflow). Również wstawia żadnych sekwencji potrzebne do przywrócenia stanu początkowego konwersji przy użyciu pliku aspekt konwersji **fac** do wywołania **fac.unshift** zgodnie z potrzebami. Każdy element **bajtów** typu `char` w związku z tym tworzone są zapisywane do strumienia skojarzone wskazywany przez wskaźnika pliku **fp** funkcję Jeśli kolejnych wywołań w postaci `fputc`( **bajtów**, **fp**). Jeśli wywołanie **fac.unshift** lub dowolnego zapis kończy się niepowodzeniem, funkcja nie powiedzie się.
+Dla szerokiego strumienia, jeśli wszystkie wstawienia miały miejsce od czasu otwarcia strumienia lub od momentu ostatniego wywołania do `streampos`, wywołania funkcji [przepełnienie](#overflow). Wstawia dowolnej sekwencji niezbędne do przywrócenia stanu początkowego konwersji przy użyciu pliku reguł konwersji `fac` do wywołania `fac.unshift` zgodnie z potrzebami. Każdy element `byte` typu **char** generowany w związku z tym są zapisywane do skojarzonego strumienia wyznaczony przez wskaźnik pliku `fp` tak jak za kolejnych wywołań formularza `fputc`( **bajtów**, **fp**). Jeśli wywołanie `fac.unshift` lub wszelkie zapisu kończy się niepowodzeniem, funkcja kończy się niepowodzeniem.
 
 ### <a name="example"></a>Przykład
 
-Poniższy przykład przyjmuje dwa pliki w bieżącym katalogu: basic_filebuf_close.txt (zawartość "testuje") i iotest.txt (zawartość jest "SSS").
+Poniższy przykład przyjmuje dwa pliki w bieżącym katalogu: basic_filebuf_close.txt (zawartość jest "Testowanie") i iotest.txt (zawartość jest "SSS").
 
 ```cpp
 // basic_filebuf_close.cpp
@@ -334,7 +334,7 @@ s
 
 ## <a name="int_type"></a>  basic_filebuf::int_type
 
-Sprawia, że ten typ w zakresie basic_filebuf — jego odpowiednikiem typu o takiej samej nazwie w **Tr** zakresu.
+Sprawia, że tego typu w zakresie firmy basic_filebuf — odpowiednikiem typu o takiej samej nazwie w `Tr` zakresu.
 
 ```cpp
 typedef typename traits_type::int_type int_type;
@@ -350,7 +350,7 @@ bool is_open() const;
 
 ### <a name="return-value"></a>Wartość zwracana
 
-**wartość true,** Jeśli wskaźnika pliku nie jest wskaźnika o wartości null.
+**wartość true,** Jeśli wskaźnik pliku nie jest wskaźnikiem typu null.
 
 ### <a name="example"></a>Przykład
 
@@ -378,7 +378,7 @@ true
 
 ## <a name="off_type"></a>  basic_filebuf::off_type
 
-Sprawia, że ten typ w zakresie basic_filebuf — jego odpowiednikiem typu o takiej samej nazwie w **Tr** zakresu.
+Sprawia, że tego typu w zakresie firmy basic_filebuf — odpowiednikiem typu o takiej samej nazwie w `Tr` zakresu.
 
 ```cpp
 typedef typename traits_type::off_type off_type;
@@ -410,45 +410,45 @@ basic_filebuf<Elem, Tr> *open(
 
 ### <a name="parameters"></a>Parametry
 
-`_Filename` Nazwa pliku, aby otworzyć.
+*Nazwa p_liku* nazwę pliku, aby otworzyć.
 
-`_Mode` Jedno z wyliczeń w [ios_base::openmode](../standard-library/ios-base-class.md#openmode).
+*_Tryb* jedno z wyliczeń w [ios_base::openmode](../standard-library/ios-base-class.md#openmode).
 
-`_Prot` Domyślny plik otwierania ochrony odpowiednikiem `shflag` parametru w [_fsopen —, _wfsopen —](../c-runtime-library/reference/fsopen-wfsopen.md).
+*_Prot* domyślnego pliku otwarcie ochrony odpowiednikiem *shflag* parametru w [_fsopen —, _wfsopen —](../c-runtime-library/reference/fsopen-wfsopen.md).
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Jeśli wskaźnika pliku wskaźnika o wartości null, funkcja zwraca wskaźnika o wartości null. W przeciwnym razie zwraca **to**.
+Jeśli wskaźnik pliku jest wskaźnikiem typu null, funkcja zwraca pusty wskaźnik. W przeciwnym razie zwraca **to**.
 
 ### <a name="remarks"></a>Uwagi
 
-Funkcja członkowska otwiera plik o nazwie pliku *filename*, wywołując [fopen —](../c-runtime-library/reference/fopen-wfopen.md)( *filename*, **strmode**). **strmode** jest określana na podstawie **trybu &**~ ( [uj](../standard-library/ios-base-class.md#openmode) & &#124; [binary](../standard-library/ios-base-class.md#openmode)):
+Funkcja elementu członkowskiego otwiera plik o nazwie pliku *filename*, wywołując [fopen —](../c-runtime-library/reference/fopen-wfopen.md)( *filename*, **strmode**). `strmode` jest określana na podstawie **trybu &**~ ( [zjadło](../standard-library/ios-base-class.md#openmode) & &#124; [binarne](../standard-library/ios-base-class.md#openmode)):
 
-- **ios_base::in** staje się **"r"** (Otwórz istniejący plik do odczytu).
+- `ios_base::in` staje się **"r"** (Otwórz istniejący plik do odczytu).
 
-- [ios_base::Out](../standard-library/ios-base-class.md#fmtflags) lub **ios_base::out &#124; ios_base::trunc** staje się **"w"** (obcięcia istniejący plik lub utwórz do zapisu).
+- [ios_base::Out](../standard-library/ios-base-class.md#fmtflags) lub **ios_base::out &#124; ios_base::trunc** staje się **"w"** (obciąć istniejący plik lub utwórz do zapisu).
 
-- **ios_base::Out &#124; aplikacji** staje się **""** (Otwórz istniejący plik dołączania zapisy wszystkie).
+- **ios_base::Out &#124; aplikacji** staje się **""** (Otwórz istniejący plik do wykonania operacji dołączania wszystkie operacje zapisu).
 
 - **ios_base::in &#124; ios_base::out** staje się **"r +"** (Otwórz istniejący plik do odczytu i zapisu).
 
-- **ios_base::in &#124; ios_base::out &#124; ios_base::trunc** staje się **"w +"** (obcięcia istniejący plik lub utwórz do odczytywania i zapisywania).
+- **ios_base::in &#124; ios_base::out &#124; ios_base::trunc** staje się **"w +"** (obciąć istniejący plik lub utwórz do odczytu i zapisu).
 
-- **ios_base::in &#124; ios_base::out &#124; ios_base::app** staje się **"+"** (Otwórz istniejący plik do odczytu i dołączania zapisy wszystkie).
+- **ios_base::in &#124; ios_base::out &#124; ios_base::app** staje się **"+"** (Otwórz istniejący plik do odczytu i dołączania wszystkie operacje zapisu).
 
-Jeśli **trybu & ios_base::binary** jest różna od zera, dołącza funkcji **b** do **strmode** można otworzyć strumienia binarnego zamiast strumienia tekstu. Następnie zapisuje wartość zwrócona przez `fopen` wskaźnika pliku **fp**. Jeśli **trybu & ios_base::ate** jest różna od zera i wskaźnika pliku nie jest wskaźnika o wartości null, wywołania funkcji `fseek`( **fp**, 0, `SEEK_END`) do pozycji w strumieniu na końcu pliku. Jeśli tej operacji pozycjonowania zakończy się niepowodzeniem, wywołania funkcji [zamknąć](#close)( **fp**) i przechowuje wskaźnika o wartości null wskaźnika pliku.
+Jeśli **trybu & ios_base::binary** jest różna od zera, dołącza funkcję `b` do `strmode` można otworzyć strumienia binarnego zamiast strumieniu tekstu. Następnie przechowuje wartość zwrócona przez obiekt `fopen` we wskaźniku pliku `fp`. Jeśli **trybu & ios_base::ate** jest różna od zera, a wskaźnikiem pliku nie jest wskaźnikiem typu null, wywołania funkcji `fseek`( **fp**, 0, `SEEK_END`) do pozycji w strumieniu na końcu pliku. Jeśli ten pozycjonowania operacja zakończy się niepowodzeniem, wywołania funkcji [Zamknij](#close)( `fp`) i przechowuje wskaźnik zerowy we wskaźniku pliku.
 
-Jeśli wskaźnika pliku nie jest wskaźnika o wartości null, funkcja określa aspekt konwersji plików: `use_facet` <  `codecvt` <  **elementu**, `char`, **traits_type::** [ state_type](../standard-library/char-traits-struct.md#state_type)>> ( [getloc](../standard-library/basic-streambuf-class.md#getloc)), do użycia przez [niedopełnienie](#underflow) i [przepełnienie](#overflow).
+Jeśli wskaźnik pliku nie jest wskaźnikiem typu null, funkcja określa zestaw reguł konwersji plików: `use_facet` <  `codecvt` <  **Elem**, `char`, **traits_type::** [ state_type](../standard-library/char-traits-struct.md#state_type)>> ( [getloc —](../standard-library/basic-streambuf-class.md#getloc)), do użytku przez [niedopełnienie](#underflow) i [przepełnienie](#overflow).
 
-Jeśli wskaźnika pliku wskaźnika o wartości null, funkcja zwraca wskaźnika o wartości null. W przeciwnym razie zwraca **to**.
+Jeśli wskaźnik pliku jest wskaźnikiem typu null, funkcja zwraca pusty wskaźnik. W przeciwnym razie zwraca **to**.
 
 ### <a name="example"></a>Przykład
 
-Zobacz [basic_filebuf::close](#close) na przykład, który używa **Otwórz**.
+Zobacz [basic_filebuf::close](#close) przykład, który używa `open`.
 
 ## <a name="op_eq"></a>  basic_filebuf::operator =
 
-Przypisz zawartość tego obiektu buforu strumienia. Jest to przypisania przenoszenia, obejmujące r-wartości nie pozostawione kopii.
+Przypisz zawartość tego obiektu buforu strumienia. Jest to przeniesienia przypisania obejmujące rvalue, który nie pozostawione kopię.
 
 ```cpp
 basic_filebuf& operator=(basic_filebuf&& right);
@@ -456,7 +456,7 @@ basic_filebuf& operator=(basic_filebuf&& right);
 
 ### <a name="parameters"></a>Parametry
 
-`right` Odwołania do r-wartości do [basic_filebuf —](../standard-library/basic-filebuf-class.md) obiektu.
+*prawy* odwołania rvalue do [basic_filebuf —](../standard-library/basic-filebuf-class.md) obiektu.
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -464,11 +464,11 @@ Zwraca * to.
 
 ### <a name="remarks"></a>Uwagi
 
-Operator członkowski zastępuje zawartość obiektu przy użyciu zawartości `right`, traktowane jako odwołanie do r-wartości. Aby uzyskać więcej informacji, zobacz [deklarator odwołania do r-wartości: & &](../cpp/rvalue-reference-declarator-amp-amp.md).
+Operator składowy zastępuje zawartość obiektu przy użyciu zawartości *prawo*, traktowane jako odwołanie rvalue. Aby uzyskać więcej informacji, zobacz [Rvalue Reference Declarator: & &](../cpp/rvalue-reference-declarator-amp-amp.md).
 
 ## <a name="overflow"></a>  basic_filebuf::Overflow
 
-Wywołuje się po wstawieniu nowego znaku w buforze pełna.
+Wywołuje się, gdy znak nowego są wstawiane do pełnego buforu.
 
 ```cpp
 virtual int_type overflow(int_type _Meta = traits_type::eof);
@@ -476,25 +476,25 @@ virtual int_type overflow(int_type _Meta = traits_type::eof);
 
 ### <a name="parameters"></a>Parametry
 
-`_Meta` Znak do wstawienia w buforze lub **traits_type::eof**.
+*_Meta* znaku do wstawienia w buforze lub `traits_type::eof`.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Jeśli funkcja nie może się powieść, zwraca **traits_type::eof**. W przeciwnym razie zwraca **traits_type::**[not_eof](../standard-library/char-traits-struct.md#not_eof)(_ *Meta*).
+Jeśli funkcja nie powiedzie się, zwraca `traits_type::eof`. W przeciwnym razie zwraca **traits_type::**[not_eof —](../standard-library/char-traits-struct.md#not_eof)(_ *Meta*).
 
 ### <a name="remarks"></a>Uwagi
 
-Jeśli _ * Meta ***! = traits_type::**[eof](../standard-library/char-traits-struct.md#eof), funkcja chroniony element członkowski wirtualnego usiłują wstawienie elementu **ch = traits_type::**[to_char_type](../standard-library/char-traits-struct.md#to_char_type) (\_ *Meta*) do buforu wyjściowego. Go to zrobić na różne sposoby:
+Jeśli _ * Meta ***! = traits_type::**[eof](../standard-library/char-traits-struct.md#eof), chronionych wirtualna funkcja składowa usiłują Wstaw element **ch = traits_type::**[to_char_type](../standard-library/char-traits-struct.md#to_char_type) (\_ *Meta*) do buforu danych wyjściowych. Jego można to zrobić na różne sposoby:
 
-- Jeśli pozycja zapisu jest dostępny, można przechowywać elementu w miejscu zapisu i zwiększyć wskaźnik następnej buforu danych wyjściowych.
+- W przypadku pozycji zapisu jest dostępny, można przechowywać element w określonej pozycji zapisu i zwiększyć wskaźnik następnej dla buforu danych wyjściowych.
 
-- Go można udostępnić pozycję zapisu przydzielając nowej lub dodatkowej pamięci masowej dla buforu danych wyjściowych.
+- Go można udostępnić pozycji zapisu, przydzielając nowej lub dodatkowej pamięci masowej dla buforu danych wyjściowych.
 
-- Umożliwia on konwertowanie żadnych oczekujących danych wyjściowych w buforze danych wyjściowych, a następnie **ch**, przy użyciu pliku aspekt konwersji **fac** do wywołania **fac.out** zgodnie z potrzebami. Każdy element `ch` typu *char* w związku z tym tworzone są zapisywane do strumienia skojarzone wskazywany przez wskaźnika pliku **fp** funkcję Jeśli kolejnych wywołań w postaci `fputc`( **ch**, **fp**). W przypadku niepowodzenia konwersji ani zapisu funkcji nie powiedzie się.
+- Umożliwia on konwertowanie żadnych oczekujących danych wyjściowych w buforze danych wyjściowych, a następnie `ch`, przy użyciu pliku reguł konwersji `fac` do wywołania `fac.out` zgodnie z potrzebami. Każdy element `ch` typu *char* generowany w związku z tym są zapisywane do skojarzonego strumienia wyznaczony przez wskaźnik pliku `fp` tak jak za kolejnych wywołań formularza `fputc`( **ch**, **fp**). W przypadku niepowodzenia konwersji ani zapisu funkcja kończy się niepowodzeniem.
 
 ## <a name="pbackfail"></a>  basic_filebuf::pbackfail
 
-Próbuje ponownie poddane elementu wejściowego strumienia, a następnie wprowadź go bieżącego elementu (wskazywana przez wskaźnik następnej).
+Próbuje odłożyć element do strumienia wejściowego, a następnie wprowadź go bieżącego elementu (wskazywany przez wskaźnik następnej).
 
 ```cpp
 virtual int_type pbackfail(int_type _Meta = traits_type::eof);
@@ -502,25 +502,25 @@ virtual int_type pbackfail(int_type _Meta = traits_type::eof);
 
 ### <a name="parameters"></a>Parametry
 
-`_Meta` Znak do wstawienia w buforze, lub **traits_type::eof**.
+*_Meta* znak wstawiania do bufora, lub `traits_type::eof`.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Jeśli funkcja nie może się powieść, zwraca **traits_type::eof**. W przeciwnym razie zwraca **traits_type::**[not_eof](../standard-library/char-traits-struct.md#not_eof)(_ *Meta*).
+Jeśli funkcja nie powiedzie się, zwraca `traits_type::eof`. W przeciwnym razie zwraca **traits_type::**[not_eof —](../standard-library/char-traits-struct.md#not_eof)(_ *Meta*).
 
 ### <a name="remarks"></a>Uwagi
 
-Funkcja chroniony element członkowski wirtualnego umieszcza ponownie element buforu wejściowego i czyni go po bieżącego elementu (wskazywana przez wskaźnik następnej). Jeśli _ *Meta* **== traits_type::**[eof](../standard-library/char-traits-struct.md#eof), elementu do usunięcia jest już w strumieniu przed bieżącego elementu. W przeciwnym razie ten element został zastąpiony przez **ch = traits_type::**[to_char_type](../standard-library/char-traits-struct.md#to_char_type)(\_ *Meta*). Funkcja można odłożyć element na różne sposoby:
+Funkcja chroniony element członkowski wirtualnego przywraca element do buforu wejściowego i udostępnia je po bieżącego elementu (wskazywany przez wskaźnik następnej). Jeśli _ *Meta* **== traits_type::**[eof](../standard-library/char-traits-struct.md#eof), element do usunięcia jest skutecznie już w strumieniu przed bieżącego elementu. W przeciwnym razie ten element został zastąpiony **ch = traits_type::**[to_char_type](../standard-library/char-traits-struct.md#to_char_type)(\_ *Meta*). Funkcję można odłożyć element na różne sposoby:
 
-- Jeśli pozycja putback jest dostępne, a element przechowywane porównuje równa **ch**, jego zmniejszanie wskaźnik następnej dla buforu wejściowego.
+- Jeśli pozycja putback — i element tam przechowywane w porównaniu równa `ch`, jego dekrementacja wskaźnik następnej dla buforu danych wejściowych.
 
-- Jeśli funkcja mogą wysyłać `putback` miejsce dostępne, można to zrobić, ustawienia wskaźnika dalej, aby wskazywały na pozycji i przechowywać **ch** w tej lokalizacji.
+- Jeśli funkcja mogą wysyłać `putback` pozycji dostępny, można to zrobić, ustaw wskaźnik dalej, aby wskazywała na położenie i przechowywać `ch` w tym miejscu.
 
-- Jeśli funkcja można wypchnąć ponownie element na strumień wejściowy, go to zrobić, takich jak wywołując `ungetc` dla elementu typu `char`.
+- Jeśli funkcja wypchnąć ponownie element na strumień wejściowy, go to zrobić, takie jak przez wywołanie metody `ungetc` dla elementu typu **char**.
 
 ## <a name="pos_type"></a>  basic_filebuf::pos_type
 
-Sprawia, że ten typ w zakresie basic_filebuf — jego odpowiednikiem typu o takiej samej nazwie w **Tr** zakresu.
+Sprawia, że tego typu w zakresie firmy basic_filebuf — odpowiednikiem typu o takiej samej nazwie w `Tr` zakresu.
 
 ```cpp
 typedef typename traits_type::pos_type pos_type;
@@ -528,7 +528,7 @@ typedef typename traits_type::pos_type pos_type;
 
 ## <a name="seekoff"></a>  basic_filebuf::seekoff
 
-Próbuje zmienić bieżącego położenia dla strumieni kontrolowane.
+Próbuje zmienić dla strumieni kontrolowanego bieżącej pozycji.
 
 ```cpp
 virtual pos_type seekoff(off_type _Off,
@@ -538,27 +538,27 @@ virtual pos_type seekoff(off_type _Off,
 
 ### <a name="parameters"></a>Parametry
 
-`_Off` Położenie do wyszukania dla względem `_Way`.
+*_Off* położenie do wyszukania dla względem *_Way*.
 
-`_Way` Punkt początkowy dla operacji przesunięcia. Zobacz [seekdir](../standard-library/ios-base-class.md#seekdir) prawidłowych wartości.
+*_Way* punkt początkowy dla operacji przesunięcia. Zobacz [seekdir](../standard-library/ios-base-class.md#seekdir) uzyskać odpowiednie wartości.
 
-`_Which` Określa tryb pozycję wskaźnika. Wartość domyślna to umożliwia modyfikowanie, Odczyt i zapis pozycji.
+*_Which* Określa tryb pozycję wskaźnika. Wartość domyślna to umożliwia modyfikowanie, Odczyt i zapis pozycji.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Zwraca nowego położenia lub nieprawidłowy strumień pozycji.
+Zwraca nową pozycję lub nieprawidłowy strumień pozycji.
 
 ### <a name="remarks"></a>Uwagi
 
-Funkcja chroniony element członkowski wirtualnego usiłują alter dla strumieni kontrolowane bieżącej pozycji. Dla obiekt klasy [basic_filebuf —](../standard-library/basic-filebuf-class.md)< `Elem`, `Tr`>, pozycji w strumieniu może być reprezentowany przez obiekt typu `fpos_t`, która przechowuje przesunięcie i konieczne jest żadnych informacji o stanie przeanalizować szeroki strumienia. Przesunięcia zero oznacza pierwszego elementu obiektu strumienia. (Obiekt typu [pos_type](../standard-library/basic-streambuf-class.md#pos_type) przechowuje co najmniej `fpos_t` obiektu.)
+Funkcja chroniony element członkowski wirtualnego usiłują alter dla strumieni kontrolowanego bieżącej pozycji. Dla obiektu klasy [basic_filebuf —](../standard-library/basic-filebuf-class.md)< `Elem`, `Tr`>, pozycja strumień może być reprezentowany przez obiekt typu `fpos_t`, która przechowuje przesunięcie i wszelkich informacji o stanie potrzebne do Przeanalizuj szerokiego strumień. Przesunięcia zero Określa pierwszy element strumienia. (Obiekt typu [pos_type](../standard-library/basic-streambuf-class.md#pos_type) są przechowywane co najmniej `fpos_t` obiektu.)
 
-Plik otwarty do odczytu i zapisu strumienie wejściowe i wyjściowe są pozycjonowane wspólnie. Aby przełączyć między Wstawianie i wyodrębnianie, należy wywołać albo [pubseekoff](../standard-library/basic-streambuf-class.md#pubseekoff) lub [pubseekpos](../standard-library/basic-streambuf-class.md#pubseekpos). Wywołuje się `pubseekoff` (i dlatego do `seekoff`) mają różne ograniczenia dotyczące [strumienie tekstu](../c-runtime-library/text-and-binary-streams.md), [strumienie binarne](../c-runtime-library/text-and-binary-streams.md), i [szerokie strumienie](../c-runtime-library/byte-and-wide-streams.md).
+Strumienie wejściowe i wyjściowe dla pliku, otworzyć do odczytu i zapisu, są umieszczone tandem. Aby przełączać się między wstawiania i wyodrębniania, należy wywołać, albo [pubseekoff —](../standard-library/basic-streambuf-class.md#pubseekoff) lub [pubseekpos —](../standard-library/basic-streambuf-class.md#pubseekpos). Wywołania `pubseekoff` (a tym samym do `seekoff`) mają różne ograniczenia dotyczące [strumienie tekstu](../c-runtime-library/text-and-binary-streams.md), [strumieni binarnych](../c-runtime-library/text-and-binary-streams.md), i [szerokie strumienie](../c-runtime-library/byte-and-wide-streams.md).
 
-Jeśli wskaźnika pliku **fp** wskaźnik null, funkcja kończy się niepowodzeniem. W przeciwnym razie usiłują zmiany wywołując pozycji w strumieniu `fseek`( **fp**, `_Off`, `_Way`). Jeśli ta funkcja zakończy się powodzeniem i wynikowy pozycji **fposn** można ustalić wywołując `fgetpos`( **fp**, **& fposn**), funkcja zakończy się pomyślnie. Jeśli funkcja zakończy się powodzeniem, funkcja zwraca wartość typu **pos_type** zawierający **fposn**. W przeciwnym razie zwraca wartość pozycji nieprawidłowy strumień.
+Jeśli wskaźnik pliku `fp` jest pustym wskaźnikiem, funkcja kończy się niepowodzeniem. W przeciwnym razie usiłują zmiany pozycji strumienia, wywołując `fseek`( **fp**, `_Off`, `_Way`). Jeśli ta funkcja zakończy się powodzeniem i wynikowy pozycji `fposn` można ustalić, wywołując `fgetpos`( **fp**, **& fposn**), funkcja się powiedzie. Jeśli funkcja się powiedzie, funkcja zwraca wartość typu `pos_type` zawierający `fposn`. W przeciwnym razie zwraca położenie nieprawidłowy strumień.
 
 ## <a name="seekpos"></a>  basic_filebuf::seekpos
 
-Próbuje zmienić bieżącego położenia dla strumieni kontrolowane.
+Próbuje zmienić dla strumieni kontrolowanego bieżącej pozycji.
 
 ```cpp
 virtual pos_type seekpos(pos_type _Sp, ios_base::openmode _Which = ios_base::in | ios_base::out);
@@ -566,25 +566,25 @@ virtual pos_type seekpos(pos_type _Sp, ios_base::openmode _Which = ios_base::in 
 
 ### <a name="parameters"></a>Parametry
 
-`_Sp` Położenie do wyszukania dla.
+*_Sp* położenie do wyszukania dla.
 
-`_Which` Określa tryb pozycję wskaźnika. Wartość domyślna to umożliwia modyfikowanie, Odczyt i zapis pozycji.
+*_Which* Określa tryb pozycję wskaźnika. Wartość domyślna to umożliwia modyfikowanie, Odczyt i zapis pozycji.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Jeśli wskaźnika pliku **fp** wskaźnik null, funkcja kończy się niepowodzeniem. W przeciwnym razie usiłują zmiany wywołując pozycji w strumieniu `fsetpos`( **fp**, **& fposn**), gdzie **fposn** jest `fpos_t` obiektu przechowywanego w `pos`. Jeśli ta funkcja zakończy się powodzeniem, funkcja zwraca `pos`. W przeciwnym razie zwraca wartość pozycji nieprawidłowy strumień. Aby ustalić, czy pozycja strumienia jest nieprawidłowa, porównanie wartości zwracanych z `pos_type(off_type(-1))`.
+Jeśli wskaźnik pliku `fp` jest pustym wskaźnikiem, funkcja kończy się niepowodzeniem. W przeciwnym razie usiłują zmiany pozycji strumienia, wywołując `fsetpos`( **fp**, **& fposn**), gdzie `fposn` jest `fpos_t` obiektu przechowywanego w `pos`. Jeśli ta funkcja zakończy się powodzeniem, funkcja zwraca `pos`. W przeciwnym razie zwraca położenie nieprawidłowy strumień. Aby określić, jeśli pozycja strumienia jest nieprawidłowa, porównaj wartość zwracaną z `pos_type(off_type(-1))`.
 
 ### <a name="remarks"></a>Uwagi
 
-Funkcja chroniony element członkowski wirtualnego usiłują alter dla strumieni kontrolowane bieżącej pozycji. Dla obiekt klasy [basic_filebuf —](../standard-library/basic-filebuf-class.md) \< **elementu**, **Tr**>, pozycji w strumieniu może być reprezentowany przez obiekt typu `fpos_t`, której są przechowywane Przesunięcie i żadnych informacji o stanie potrzebnych do analizy strumienia szerokości. Przesunięcia zero oznacza pierwszego elementu obiektu strumienia. (Obiekt typu `pos_type` przechowuje co najmniej `fpos_t` obiektu.)
+Funkcja chroniony element członkowski wirtualnego usiłują alter dla strumieni kontrolowanego bieżącej pozycji. Dla obiektu klasy [basic_filebuf —](../standard-library/basic-filebuf-class.md) \< **Elem**, **Tr**>, pozycja strumień może być reprezentowany przez obiekt typu `fpos_t`, które sklepy Przesunięcie i wszelkich informacji o stanie potrzebnych do analizy strumienia szeroki. Przesunięcia zero Określa pierwszy element strumienia. (Obiekt typu `pos_type` są przechowywane co najmniej `fpos_t` obiektu.)
 
-Plik otwarty do odczytu i zapisu strumienie wejściowe i wyjściowe są pozycjonowane wspólnie. Aby przełączyć między Wstawianie i wyodrębnianie, należy wywołać albo [pubseekoff](../standard-library/basic-streambuf-class.md#pubseekoff) lub [pubseekpos](../standard-library/basic-streambuf-class.md#pubseekpos). Wywołuje się `pubseekoff` (i dlatego aby `seekoff`) mają różne ograniczenia strumienie tekstu, strumienie binarne i szerokie strumienie.
+Strumienie wejściowe i wyjściowe dla pliku, otworzyć do odczytu i zapisu, są umieszczone tandem. Aby przełączać się między wstawiania i wyodrębniania, należy wywołać, albo [pubseekoff —](../standard-library/basic-streambuf-class.md#pubseekoff) lub [pubseekpos —](../standard-library/basic-streambuf-class.md#pubseekpos). Wywołania `pubseekoff` (a tym samym do `seekoff`) mają różne ograniczenia strumienie tekstu, strumienie binarne i szerokie strumienie.
 
-Dla strumienia szerokości, jeśli wystąpiły wstawienia wszelkie ponieważ strumień został otwarty lub od czasu ostatniego wywołania `streampos`, wywołania funkcji [przepełnienie](#overflow). Również wstawia żadnych sekwencji potrzebne do przywrócenia stanu początkowego konwersji przy użyciu pliku aspekt konwersji **fac** do wywołania **fac** `.unshift` zgodnie z potrzebami. Każdy element **bajtów** typu `char` w związku z tym tworzone są zapisywane do strumienia skojarzone wskazywany przez wskaźnika pliku **fp** funkcję Jeśli kolejnych wywołań w postaci `fputc`( **bajtów**, **fp**). Jeśli wywołanie **fac.unshift** lub dowolnego zapis kończy się niepowodzeniem, funkcja nie powiedzie się.
+Dla szerokiego strumienia, jeśli wszystkie wstawienia miały miejsce od czasu otwarcia strumienia lub od momentu ostatniego wywołania do `streampos`, wywołania funkcji [przepełnienie](#overflow). Wstawia dowolnej sekwencji niezbędne do przywrócenia stanu początkowego konwersji przy użyciu pliku reguł konwersji `fac` do wywołania **fac** `.unshift` zgodnie z potrzebami. Każdy element `byte` typu **char** generowany w związku z tym są zapisywane do skojarzonego strumienia wyznaczony przez wskaźnik pliku `fp` tak jak za kolejnych wywołań formularza `fputc`( **bajtów**, **fp**). Jeśli wywołanie `fac.unshift` lub wszelkie zapisu kończy się niepowodzeniem, funkcja kończy się niepowodzeniem.
 
 ## <a name="setbuf"></a>  basic_filebuf::setbuf
 
-Wykonuje określonego operację do każdego strumienia pochodnej buforu.
+Wykonuje określonego operacji, aby każdy bufor strumienia pochodnej.
 
 ```cpp
 virtual basic_streambuf<Elem, Tr> *setbuf(
@@ -594,21 +594,21 @@ virtual basic_streambuf<Elem, Tr> *setbuf(
 
 ### <a name="parameters"></a>Parametry
 
-`_Buffer` Wskaźnik do buforu.
+*Właściwość _Buffer* wskaźnik do buforu.
 
-`count` Rozmiar buforu.
+*Liczba* rozmiar buforu.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Funkcja chroniony element członkowski zwraca zero, jeśli wskaźnika pliku `fp` jest wskaźnika o wartości null.
+Chroniona funkcja elementu członkowskiego zwraca zero, jeśli wskaźnik pliku `fp` jest wskaźnikiem wartości null.
 
 ### <a name="remarks"></a>Uwagi
 
-`setbuf` wywołania `setvbuf`( **fp**, ( `char` \*) `_Buffer`, `_IOFBF`, `count` \* `sizeof` ( **elementu**)) do zaoferowania tablicy z `count` elementów, rozpoczynając od _ *buforu* jako bufor dla tego strumienia. Jeśli ta funkcja zwróci wartość niezerową, funkcja zwraca wskaźnika o wartości null. W przeciwnym razie zwraca **to** Powodzenie sygnału.
+`setbuf` wywołania `setvbuf`( **fp**, ( `char` \*) `_Buffer`, `_IOFBF`, `count` \* `sizeof` ( **Elem**)) do zaoferowania tablicy z `count` elementów, poczynając od _ *buforu* jako bufor dla strumienia. Jeśli ta funkcja zwraca wartość różną od zera, funkcja zwraca pusty wskaźnik. W przeciwnym razie zwraca **to** Powodzenie sygnału.
 
 ## <a name="swap"></a>  basic_filebuf::swap
 
-Zamienia zawartość tych `basic_filebuf` dla zawartości określonego `basic_filebuf`.
+Wymienia zawartość tych `basic_filebuf` dla zawartości dotyczącej dostępnego `basic_filebuf`.
 
 ```cpp
 void swap(basic_filebuf& right);
@@ -616,11 +616,11 @@ void swap(basic_filebuf& right);
 
 ### <a name="parameters"></a>Parametry
 
-`right` `lvalue` Odwołania do innego `basic_filebuf`.
+*prawy* `lvalue` odwołanie do innego `basic_filebuf`.
 
 ## <a name="sync"></a>  basic_filebuf::Sync
 
-Próbuje synchronizować kontrolowane strumieni wszystkie skojarzone strumieni zewnętrznych.
+Próbuje synchronizował kontrolowanego strumienie skojarzone strumieni zewnętrznych.
 
 ```cpp
 virtual int sync();
@@ -628,11 +628,11 @@ virtual int sync();
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Zwraca zero, jeśli wskaźnika pliku **fp** jest wskaźnika o wartości null. W przeciwnym razie zwraca zero tylko wtedy, gdy wywołuje zarówno do [przepełnienie](#overflow) i `fflush`( **fp**) uda się opróżnianie wszelkie oczekujące dane wyjściowe do strumienia.
+Zwraca zero, jeśli wskaźnik pliku `fp` jest wskaźnikiem wartości null. W przeciwnym razie zwraca zero tylko wtedy, gdy wywołuje zarówno [przepełnienie](#overflow) i `fflush`( **fp**) odnieść sukces w opróżnianie wszelkie oczekujące dane wyjściowe do strumienia.
 
 ## <a name="traits_type"></a>  basic_filebuf::traits_type
 
-Kojarzy nazwę typu z **Tr** parametru szablonu.
+Kojarzy nazwę typu z `Tr` parametru szablonu.
 
 ```cpp
 typedef Tr traits_type;
@@ -648,15 +648,15 @@ virtual int_type underflow();
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Jeśli funkcja nie może się powieść, zwraca **traits_type::**[eof](../standard-library/char-traits-struct.md#eof). W przeciwnym razie zwraca **ch**konwersji, zgodnie z opisem w sekcji uwag.
+Jeśli funkcja nie powiedzie się, zwraca **traits_type::**[eof](../standard-library/char-traits-struct.md#eof). W przeciwnym razie zwraca `ch`konwersji, zgodnie z opisem w sekcji uwag.
 
 ### <a name="remarks"></a>Uwagi
 
-Funkcja chroniony element członkowski wirtualnego usiłują wyodrębnić bieżącego elementu **ch** wejściowego strumienia i zwracać element jako **traits_type::**[to_int_type](../standard-library/char-traits-struct.md#to_int_type)() **ch**). Go to zrobić na różne sposoby:
+Chronione wirtualna funkcja składowa usiłują wyodrębnić bieżącego elementu `ch` wejściowego strumienia i zwracać element jako **traits_type::**[to_int_type](../standard-library/char-traits-struct.md#to_int_type)(`ch`). Jego można to zrobić na różne sposoby:
 
-- Jeśli pozycja odczytu jest dostępny, przyjmuje **ch** jako element przechowywane w pozycji odczytu i przesuwa wskaźnik następnej dla buforu wejściowego.
+- Jeśli pozycji odczytu jest dostępny, zajmuje `ch` elementu przechowywanego w pozycji odczytu i przesuwa wskaźnik następnej dla buforu danych wejściowych.
 
-- Można odczytać co najmniej jeden element typu `char`, tak, jakby w kolejnych wywołaniach formularza `fgetc`(**fp**) i przekonwertować je na element **ch** typu **elementu**przy użyciu fac aspektu konwersji plików do wywołania **fac.in** zgodnie z potrzebami. W przypadku niepowodzenia odczytu ani konwersji funkcji nie powiedzie się.
+- Może odczytywać, jeden lub więcej elementów typu **char**, tak, jakby przez kolejnych wywołań formularza `fgetc`(**fp**) i konwertować je na element **ch** typu `Elem`przy użyciu fac reguł konwersji plików do wywoływania `fac.in` zgodnie z potrzebami. Jeśli odczyt ani konwersji nie powiedzie się, funkcja kończy się niepowodzeniem.
 
 ## <a name="see-also"></a>Zobacz także
 

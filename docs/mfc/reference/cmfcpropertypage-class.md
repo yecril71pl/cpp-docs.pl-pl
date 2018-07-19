@@ -18,15 +18,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c58e279a2e99201656e8af02d8c1c5d4d944f88d
-ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
+ms.openlocfilehash: 2081053f406d9985d722da7d4cd9f3dad56f061c
+ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/27/2018
-ms.locfileid: "37042085"
+ms.lasthandoff: 07/05/2018
+ms.locfileid: "37848739"
 ---
 # <a name="cmfcpropertypage-class"></a>Klasa CMFCPropertyPage
-`CMFCPropertyPage` Klasa obsługuje wyświetlanie menu wyskakujące na stronie właściwości.  
+`CMFCPropertyPage` Klasa obsługuje wyświetlanie wyskakujących menu na stronie właściwości.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -48,14 +48,14 @@ class CMFCPropertyPage : public CPropertyPage
 |Nazwa|Opis|  
 |----------|-----------------|  
 |`CMFCPropertyPage::CreateObject`|Używane przez platformę do tworzenia dynamicznych wystąpienia tego typu klasy.|  
-|`CMFCPropertyPage::GetThisClass`|Używany przez platformę do uzyskania wskaźnik do [CRuntimeClass](../../mfc/reference/cruntimeclass-structure.md) obiekt, który jest skojarzony z tym typem klasy.|  
-|`CMFCPropertyPage::OnSetActive`|Ta funkcja elementu członkowskiego jest wywoływana przez platformę, gdy strona jest wybierany przez użytkownika i staje się stroną aktywną. (Przesłania [CPropertyPage::OnSetActive](../../mfc/reference/cpropertypage-class.md#onsetactive).)|  
-|`CMFCPropertyPage::PreTranslateMessage`|Wykonuje translację komunikaty okna przed wysłaniem do [TranslateMessage](http://msdn.microsoft.com/library/windows/desktop/ms644955) i [DispatchMessage](http://msdn.microsoft.com/library/windows/desktop/ms644934) funkcje systemu Windows. Aby uzyskać więcej informacji i składnia metody, zobacz [CWnd::PreTranslateMessage](../../mfc/reference/cwnd-class.md#pretranslatemessage). (Przesłania `CPropertyPage::PreTranslateMessage`.)|  
+|`CMFCPropertyPage::GetThisClass`|Używane przez architekturę, aby uzyskać wskaźnik do [CRuntimeClass](../../mfc/reference/cruntimeclass-structure.md) obiektu, który jest skojarzony z tym typem klasy.|  
+|`CMFCPropertyPage::OnSetActive`|Ta funkcja członkowska jest wywoływana przez platformę, gdy strona jest wybierany przez użytkownika i staje się stroną aktywną. (Przesłania [CPropertyPage::OnSetActive](../../mfc/reference/cpropertypage-class.md#onsetactive).)|  
+|`CMFCPropertyPage::PreTranslateMessage`|Wykonuje translację komunikatów okien, zanim zostaną rozesłane do [TranslateMessage](http://msdn.microsoft.com/library/windows/desktop/ms644955) i [DispatchMessage](http://msdn.microsoft.com/library/windows/desktop/ms644934) funkcje Windows. Aby uzyskać więcej informacji i składnia metody, zobacz [CWnd::PreTranslateMessage](../../mfc/reference/cwnd-class.md#pretranslatemessage). (Przesłania `CPropertyPage::PreTranslateMessage`.)|  
   
 ## <a name="remarks"></a>Uwagi  
- `CMFCPropertyPage` Klasa reprezentuje poszczególnych stron arkusza właściwości, znanej także jako okno dialogowe kartę.  
+ `CMFCPropertyPage` Klasa przedstawia pojedyncze strony arkusza właściwości, znane również jako zakładki okna dialogowego.  
   
- Użyj `CMFCPropertyPage` klasy razem z [CMFCPropertySheet](../../mfc/reference/cmfcpropertysheet-class.md) klasy. Aby użyć menu na stronie właściwości, należy zastąpić wszystkie wystąpienia `CPropertyPage` klasy z `CMFCPropertyPage` klasy.  
+ Użyj `CMFCPropertyPage` klasy wraz z [CMFCPropertySheet](../../mfc/reference/cmfcpropertysheet-class.md) klasy. Aby użyć menu na stronie właściwości, należy zastąpić wszystkie wystąpienia `CPropertyPage` klasy `CMFCPropertyPage` klasy.  
   
 ## <a name="inheritance-hierarchy"></a>Hierarchia dziedziczenia  
  [CObject](../../mfc/reference/cobject-class.md)  
@@ -92,15 +92,15 @@ CMFCPropertyPage(
  Identyfikator zasobu szablon dla tej strony.  
   
  *nIDCaption*  
- Identyfikator zasobu etykiety mają zostać umieszczone w karcie tej strony. W przypadku wartości 0 nazwy są uzyskiwane z szablonu okno dialogowe dla tej strony. Wartość domyślna to 0.  
+ Identyfikator zasobu etykiety, aby umieścić na karcie tej strony. Jeśli jest to 0, nazwa jest uzyskiwana z szablonu okna dialogowego na tej stronie. Wartość domyślna to 0.  
   
  *lpszTemplateName*  
- Wskazuje nazwę szablonu dla tej strony. Nie może być `NULL`.  
+ Wskazuje nazwę szablonu dla tej strony. Nie może mieć wartości NULL.  
   
 ### <a name="return-value"></a>Wartość zwracana  
   
 ### <a name="remarks"></a>Uwagi  
- Aby uzyskać więcej informacji o parametrach konstruktora, zobacz [CPropertyPage::CPropertyPage](../../mfc/reference/cpropertypage-class.md#cpropertypage).  
+ Aby uzyskać więcej informacji na temat parametrów konstruktora, zobacz [CPropertyPage::CPropertyPage](../../mfc/reference/cpropertypage-class.md#cpropertypage).  
   
 ## <a name="see-also"></a>Zobacz też  
  [Diagram hierarchii](../../mfc/hierarchy-chart.md)   

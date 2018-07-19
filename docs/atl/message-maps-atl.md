@@ -15,27 +15,27 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: eaef52363ebdd79a1efb1e2e26bce016500cb722
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 6c59cda065a84b7b664dcfccd7c876e19ef2f1aa
+ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32357261"
+ms.lasthandoff: 07/05/2018
+ms.locfileid: "37848418"
 ---
-# <a name="message-maps-atl"></a>Mapy komunikatów (ALT)
-Mapy komunikatów kojarzy funkcji obsługi z danego komunikatu, polecenia lub powiadomień. Za pomocą biblioteki ATL dla [makra mapy komunikatów](../atl/reference/message-map-macros-atl.md), można określić mapy komunikatów dla okna. Procedury okna w `CWindowImpl`, `CDialogImpl`, i `CContainedWindowT` bezpośrednie komunikatów okien jego mapę komunikatów.  
+# <a name="message-maps-atl"></a>Mapy komunikatów (ATL)
+Mapy komunikatów kojarzy funkcji obsługi przy użyciu określonego komunikatu, polecenie lub powiadomień. Przy użyciu ATL [makra mapy komunikatów](../atl/reference/message-map-macros-atl.md), można określić mapy komunikatów dla okna. Procedury okna w `CWindowImpl`, `CDialogImpl`, i `CContainedWindowT` przekierowywania komunikatów okna do jego mapie komunikatów.  
   
- [Funkcji obsługi komunikatów](../atl/message-handler-functions.md) zaakceptować dodatkowe argumentu typu `BOOL&`. Ten argument wskazuje, czy wiadomość została przetworzona i ma ustawioną wartość `TRUE` domyślnie. Funkcji obsługi można następnie ustawić argument `FALSE` aby wskazać, że nie ma obsługi wiadomości. W takim przypadku ATL będzie wyglądać dla funkcji obsługi dalsze w mapie komunikatów. Przez ustawienie tego argumentu `FALSE`, można najpierw wykonać kilka akcji w odpowiedzi na wiadomość, a następnie pozwól przetwarzania domyślne lub innej funkcji obsługi na zakończenie obsługi wiadomości.  
+ [Funkcje obsługi komunikatów](../atl/message-handler-functions.md) zaakceptowanie dodatkowych argumentu typu `BOOL&`. Ten argument wskazuje, czy wiadomość została przetworzona, i jest ustawiona na wartość TRUE, domyślnie. Funkcja obsługi można następnie ustawiać na wartość FALSE, aby wskazać, że nie ma obsługi wiadomości. W tym przypadku ATL będą w dalszym ciągu wyszukiwania dla funkcji obsługi dalsze w mapie wiadomości. Ustawiając ten argument na wartość FALSE, należy najpierw wykonać pewne działania w odpowiedzi na wiadomość, a następnie zezwolić na przetwarzanie domyślnego lub innego funkcji obsługi na zakończenie obsługi wiadomości.  
   
 ## <a name="chained-message-maps"></a>Mapy komunikatów łańcuchowa  
- ATL umożliwia łańcuch mapy komunikatów, kierującą Obsługa do mapy komunikatów zdefiniowana w klasie innej komunikatów. Na przykład można zaimplementować typowe Obsługa komunikatów w osobnej klasy zapewniające jednolite dla wszystkich okien łańcucha do tej klasy. Do klasy podstawowej lub element członkowski danych klasy mogą być powiązane.  
+ ATL również pozwala na łańcuch mapy komunikatów, która kieruje wiadomości obsługi do mapy komunikatów zdefiniowane w innej klasy. Na przykład można zaimplementować typowych komunikatów w osobnej klasy, aby zapewniać jednolite zachowanie dla wszystkich okien łańcucha dla tej klasy. Można połączyć w łańcuch do klasy bazowej lub element członkowski danych klasy.  
   
- ATL obsługuje również dynamiczne tworzenie łańcucha programów, co pozwala łańcucha do innego obiektu mapy wiadomości w czasie wykonywania. Aby zaimplementować dynamiczne tworzenie łańcucha programów, musi pochodzić z klasy [CDynamicChain](../atl/reference/cdynamicchain-class.md). Następnie zadeklarować [CHAIN_MSG_MAP_DYNAMIC](reference/message-map-macros-atl.md#chain_msg_map_dynamic) makra mapy wiadomości. `CHAIN_MSG_MAP_DYNAMIC` wymaga unikatowy numer identyfikujący obiekt i mapy komunikatów, do którego łańcucha. Należy określić to unikatowa wartość poprzez wywołanie `CDynamicChain::SetChainEntry`.  
+ ATL obsługuje również dynamiczne tworzenie łańcuchów pozwalający do tworzenia łańcucha mapę komunikatów w innym obiektem w czasie wykonywania. Do zaimplementowania dynamicznych łańcucha, musi pochodzić od klasy [CDynamicChain](../atl/reference/cdynamicchain-class.md). Następnie zadeklarować [CHAIN_MSG_MAP_DYNAMIC](reference/message-map-macros-atl.md#chain_msg_map_dynamic) makra w mapie wiadomości. CHAIN_MSG_MAP_DYNAMIC wymaga unikatowy numer, który identyfikuje obiekt i mapy komunikatów, do którego łańcucha. Należy zdefiniować to unikatowa wartość za pomocą wywołania `CDynamicChain::SetChainEntry`.  
   
- Tworzenia łańcucha dla każdej klasy, która deklaruje mapy komunikatów, pod warunkiem pochodną klasy [CMessageMap](../atl/reference/cmessagemap-class.md). `CMessageMap` Umożliwia obiektu do udostępnienia jej mapy wiadomości do innych obiektów. Należy pamiętać, że `CWindowImpl` już pochodną `CMessageMap`.  
+ Można połączyć w łańcuch do każdej klasy, która deklaruje mapy komunikatów, pod warunkiem klasę pochodną [CMessageMap](../atl/reference/cmessagemap-class.md). `CMessageMap` zezwala na obiekt uwidocznić jej mapy wiadomości do innych obiektów. Należy pamiętać, że `CWindowImpl` już pochodzi od klasy `CMessageMap`.  
   
-## <a name="alternate-message-maps"></a>Mapy komunikatów alternatywnej  
- Na koniec ATL obsługuje mapy komunikatów alternatywne, zadeklarowana z [ALT_MSG_MAP](reference/message-map-macros-atl.md#alt_msg_map) makra. Każdy mapy komunikatów alternatywny jest identyfikowany przez unikatowy numer przekazać do `ALT_MSG_MAP`. Za pomocą alternatywnej komunikatu mapy, może obsługiwać komunikaty wiele okien w jedną mapę. Należy pamiętać, że domyślnie `CWindowImpl` nie korzysta z mapy komunikatów alternatywny. Aby dodać tę obsługę, Przesłoń `WindowProc` metody w Twojej `CWindowImpl`-pochodzi z klasy i wywołanie `ProcessWindowMessage` z identyfikatorem mapy wiadomości.  
+## <a name="alternate-message-maps"></a>Mapy komunikatów alternatywne  
+ Na koniec ATL obsługuje mapy komunikatów alternatywne, zadeklarowany za pomocą [ALT_MSG_MAP](reference/message-map-macros-atl.md#alt_msg_map) makra. Każdej mapie komunikatów alternatywne jest identyfikowany przez unikatowy numer, który zostanie przekazany do ALT_MSG_MAP. Za pomocą alternatywnej komunikatu mapy, może obsługiwać komunikaty wiele okien w jedną mapę. Należy pamiętać, że domyślnie `CWindowImpl` nie korzysta z mapy komunikatów alternatywne. Aby dodać tę obsługę, Zastąp `WindowProc` method in Class metoda swoje `CWindowImpl`-pochodne klasy i wywołania `ProcessWindowMessage` o identyfikatorze mapy wiadomości.  
   
 ## <a name="see-also"></a>Zobacz też  
  [Implementowanie okna](../atl/implementing-a-window.md)

@@ -65,16 +65,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 569b37f705bc974c9b16b1602c59983c58a2775c
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 28854866824b1750fb1887d5e822d2165034f687
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33848586"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38956846"
 ---
 # <a name="basicios-class"></a>basic_ios — Klasa
 
-Klasy szablonów w tym artykule opisano funkcje magazynu i element członkowski wspólne dla obu strumienie wejściowe (szablonu klasy [basic_istream —](../standard-library/basic-istream-class.md)) i strumienie wyjściowe (szablonu klasy [basic_ostream —](../standard-library/basic-ostream-class.md)) zależnych od Parametry szablonu. (Klasa [ios_base —](../standard-library/ios-base-class.md) opisano typowe i nie jest zależna od parametrów szablonu.) Obiekt klasy **basic_ios —\<klasy elementu, klasa cech >** ułatwia kontrolowanie strumienia elementami typu **elementu**, którego cech znaków są określane przez klasę  **Cechy**.
+Klasa szablonu Opisuje funkcje magazynu i elementów członkowskich, które muszą być wspólne dla obu strumienie wejściowe (szablonu klasy [basic_istream](../standard-library/basic-istream-class.md)) i strumieni danych wyjściowych (szablonu klasy [basic_ostream](../standard-library/basic-ostream-class.md)) zależą od Parametry szablonu. (Klasy [ios_base —](../standard-library/ios-base-class.md) w tym artykule opisano, co to jest typowe i nie jest zależny od parametrów szablonu.) Obiekt klasy **basic_ios —\<Elem klasy, klasy cech >** ułatwia kontrolowanie strumieni elementami typu `Elem`, którego cech są określane przez klasę `Traits`.
 
 ## <a name="syntax"></a>Składnia
 
@@ -86,23 +86,23 @@ class basic_ios : public ios_base
 
 ### <a name="parameters"></a>Parametry
 
-`Elem` Typ.
+*Elem* typu.
 
-`Traits` Zmienna typu `char_traits`.
+*Cechy* zmienną typu `char_traits`.
 
 ## <a name="remarks"></a>Uwagi
 
-Obiekt klasy **basic_ios —\<klasy elementu, klasa cech >** przechowuje:
+Obiekt klasy **basic_ios —\<Elem klasy, klasy cech >** przechowuje:
 
-- Wskaźnik grupie równych wartości do obiektu typu [basic_istream —](../standard-library/basic-istream-class.md)**\<elementu, cech >**.
+- Tie wskaźnik do obiektu typu [basic_istream](../standard-library/basic-istream-class.md)**\<Elem, cechy >**.
 
-- Wskaźnik buforu strumienia do typu obiektu [basic_streambuf —](../standard-library/basic-streambuf-class.md)**\<elementu, cech >**.
+- Wskaźnik buforu strumienia na obiekt typu [basic_streambuf](../standard-library/basic-streambuf-class.md)**\<Elem, cechy >**.
 
-- [Informacje dotyczące formatowania](../standard-library/ios-base-class.md).
+- [Informacje o formatowaniu](../standard-library/ios-base-class.md).
 
-- [Informacje o stanie strumienia](../standard-library/ios-base-class.md) w obiektu podstawowego typu [ios_base —](../standard-library/ios-base-class.md).
+- [Informacje o stanie Stream](../standard-library/ios-base-class.md) w obiektu podstawowego typu [ios_base —](../standard-library/ios-base-class.md).
 
-- Znak wypełnienia typu obiektu `char_type`.
+- Znak wypełnienia w obiekt typu `char_type`.
 
 ### <a name="constructors"></a>Konstruktorów
 
@@ -114,53 +114,53 @@ Obiekt klasy **basic_ios —\<klasy elementu, klasa cech >** przechowuje:
 
 |Nazwa typu|Opis|
 |-|-|
-|[char_type](#char_type)|Synonim parametru szablonu `Elem`.|
-|[int_type](#int_type)|Jest to synonim `Traits::int_type`.|
-|[off_type](#off_type)|Jest to synonim `Traits::off_type`.|
-|[pos_type](#pos_type)|Jest to synonim `Traits::pos_type`.|
-|[traits_type](#traits_type)|Synonim parametru szablonu `Traits`.|
+|[char_type](#char_type)|Synonim dla parametru szablonu `Elem`.|
+|[int_type](#int_type)|Synonim dla `Traits::int_type`.|
+|[off_type](#off_type)|Synonim dla `Traits::off_type`.|
+|[pos_type](#pos_type)|Synonim dla `Traits::pos_type`.|
+|[traits_type](#traits_type)|Synonim dla parametru szablonu `Traits`.|
 
 ### <a name="member-functions"></a>Funkcje Członkowskie
 
-|Funkcja członkowska|Opis|
+|Funkcja elementu członkowskiego|Opis|
 |-|-|
 |[bad](#bad)|Wskazuje utraty integralności buforu strumienia.|
-|[Wyczyść](#clear)|Czyści wszystkie flagi błędu.|
-|[copyfmt](#copyfmt)|Kopiuje flagi z jednego strumienia do innego.|
-|[eof](#eof)|Wskazuje, czy osiągnięto koniec strumienia.|
-|[Wyjątki](#exceptions)|Wskazuje, które wyjątki będą zgłaszane przez strumień.|
-|[Niepowodzenie](#fail)|Wskazuje niepowodzenie wyodrębnienia prawidłowym polem ze strumienia.|
-|[wypełnienia](#fill)|Określa, czy zwraca znak, który będzie używany, gdy tekst nie jest szerokie, jak strumienia.|
-|[Dobra](#good)|Wskazuje, że strumień jest w dobrym stanie.|
+|[Usuń zaznaczenie](#clear)|Czyści wszystkie flagi błędu.|
+|[copyfmt](#copyfmt)|Kopiuje flagi z jednym strumień.|
+|[eof](#eof)|Wskazuje, jeśli osiągnięto koniec strumienia.|
+|[Wyjątki](#exceptions)|Wskazuje, której wyjątki zostaną zgłoszone przez strumień.|
+|[Niepowodzenie](#fail)|Wskazuje błąd, aby wyodrębnić prawidłowym polem ze strumienia.|
+|[Wypełnienie](#fill)|Określa, czy zwraca znak, który będzie używany, gdy tekst nie jest szerokie, jak strumień.|
+|[dobre](#good)|Wskazuje, że strumień jest w dobrym stanie.|
 |[imbue](#imbue)|Zmiany ustawień regionalnych.|
 |[init](#init)|Wywoływane przez `basic_ios` konstruktorów.|
-|[Przenieś](#move)|Przenosi wszystkie wartości z wyjątkiem wskaźnik do buforu strumienia od parametru do bieżącego obiektu.|
-|[zawęzić](#narrow)|Wyszukuje odpowiednik znaku do danego `char_type`.|
+|[Przenieś](#move)|Przenosi wszystkie wartości, z wyjątkiem wskaźnik do buforu strumienia z parametru, jak bieżący obiekt.|
+|[Zawęź](#narrow)|Umożliwia znalezienie równoważne znaku do danego `char_type`.|
 |[rdbuf](#rdbuf)|Strumień trasy do określonego bufora.|
 |[rdstate](#rdstate)|Odczytuje stan usługi bits dla flag.|
-|[set_rdbuf](#set_rdbuf)|Przypisuje się buforu odczytu dla tego obiektu strumienia buforu strumienia.|
-|[Metoda setstate](#setstate)|Ustawia dodatkowe flagi.|
-|[swap](#swap)|Zamienia wartości w tym `basic_ios` obiektu tych innego `basic_ios` obiektu. Wskaźniki do buforów strumienia nie są zamienione.|
-|[Powiązanie](#tie)|Gwarantuje, że jeden strumieniu jest przetwarzana przed innym strumienia.|
-|[widen](#widen)|Wyszukuje odpowiednikiem `char_type` do danego char.|
+|[set_rdbuf](#set_rdbuf)|Przydziela bufor strumienia do buforu odczytu dla tego obiektu strumienia.|
+|[setstate](#setstate)|Ustawia dodatkowe flagi.|
+|[swap](#swap)|Wymienia wartości w tym `basic_ios` obiektu dla osób z innej `basic_ios` obiektu. Wskaźników do buforów strumienia nie zostały zamienione.|
+|[Powiązanie](#tie)|Gwarantuje, że ten jeden strumień jest przetwarzana przed innym strumienia.|
+|[widen](#widen)|Znajduje odpowiednik `char_type` do danego znaku.|
 
 ### <a name="operators"></a>Operatory
 
 |Operator|Opis|
 |-|-|
-|[jawny operator bool](#op_bool)|Umożliwia korzystanie z `basic_ios` obiekt jako `bool`. Konwersja typów automatycznego jest wyłączona, aby uniknąć wspólnego, niezamierzone skutki uboczne.|
-|[operator void *](#op_void_star)|Wskazuje, czy strumień jest nadal dobra.|
-|[operator!](#op_not)|Wskazuje, czy strumień nie jest nieprawidłowy.|
+|[bool operatora Explicit](#op_bool)|Umożliwia korzystanie z `basic_ios` obiektu jako **bool**. Konwersja typu automatyczne jest wyłączona, aby uniknąć typowych i niezamierzone efekty uboczne.|
+|[operator void *](#op_void_star)|Wskazuje, czy strumień jest w dalszym ciągu idealnie sprawdzają.|
+|[operator!](#op_not)|Wskazuje, jeżeli strumień jest nieodpowiedni.|
 
 ## <a name="requirements"></a>Wymagania
 
-**Nagłówek:** \<systemu ios >
+**Nagłówek:** \<dla systemu ios >
 
-**Namespace:** Standard
+**Namespace:** standardowe
 
 ## <a name="bad"></a>  basic_ios::bad
 
-Wskazuje utraty integralności strumienia buforu
+Wskazuje utraty integralności bufor strumienia
 
 ```cpp
 bool bad() const;
@@ -168,7 +168,7 @@ bool bad() const;
 
 ### <a name="return-value"></a>Wartość zwracana
 
-`true` Jeśli `rdstate & badbit` jest różna od zera; w przeciwnym razie `false`.
+**wartość true,** Jeśli `rdstate & badbit` jest różna od zera; w przeciwnym razie **false**.
 
 Aby uzyskać więcej informacji na temat `badbit`, zobacz [ios_base::iostate](../standard-library/ios-base-class.md#iostate).
 
@@ -202,15 +202,15 @@ basic_ios();
 
 ### <a name="parameters"></a>Parametry
 
-`sb` Standardowa bufor do przechowywania elementów wejściowych lub wyjściowych.
+*SB* standardowa bufor do przechowywania elementów wejściowych lub wyjściowych.
 
 ### <a name="remarks"></a>Uwagi
 
-Pierwszy Konstruktor inicjuje jego obiektów, wywołując [init](#init)(_ *Sb*). Drugi Konstruktor (chroniony) pozostawia jego elementów członkowskich obiektów odinicjowany. Wywołanie nowsze **init** przed zostać zniszczone bezpiecznie musi zainicjować obiektu.
+Pierwszy Konstruktor inicjuje jego obiektu elementu członkowskiego, wywołując [init](#init)(_ *Sb*). Drugi Konstruktor (chroniony) pozostawia członków niezainicjowane obiekty. Nowsze wywołanie `init` należy zainicjować obiektu, zanim może zostać bezpiecznie zniszczone.
 
 ## <a name="char_type"></a>  basic_ios::char_type
 
-Synonim parametru szablonu **elementu**.
+Synonim dla parametru szablonu `Elem`.
 
 ```cpp
 typedef Elem char_type;
@@ -227,27 +227,27 @@ void clear(io_state state);
 
 ### <a name="parameters"></a>Parametry
 
-`state` (opcjonalnie) Flagi, który chcesz ustawić po wyczyszczeniu wszystkie flagi. Domyślnie `goodbit`.
+*Stan* (opcjonalnie) flagi, które chcesz ustawić po wyczyszczeniu wszystkie flagi. Wartość domyślna to `goodbit`.
 
-`reraise` (opcjonalnie) Określa, czy należy ponownie zgłoszono wyjątek. Domyślnie `false` (nie ponownie zgłosi wyjątek).
+*reraise —* (opcjonalnie) określa czy wystawca ma być ponownie podniesiona podstawa. Wartość domyślna to **false** (nie ponownie zgłosi wyjątek).
 
 ### <a name="remarks"></a>Uwagi
 
-Flagi są **goodbit**, **failbit**, **eofbit**, i **badbit**. Testowanie te flagi z [dobrej](#good), [zły](#bad), [eof](#eof), i [zakończyć się niepowodzeniem](#fail)
+Flagi są `goodbit`, `failbit`, `eofbit`, i `badbit`. Test dla tych flag z [dobre](#good), [zły](#bad), [eof](#eof), i [zakończyć się niepowodzeniem](#fail)
 
-Funkcja członkowska zastępuje strumienia przechowywanych informacji o stanie z:
+Funkcji składowej zastępuje informacje o stanie przechowywanych strumienia za pomocą:
 
-`state` &#124;`(` [rdbuf](#rdbuf) ! = 0 **goodbit** : **badbit**)
+`state` &#124;`(` [rdbuf —](#rdbuf) ! = 0 **goodbit** : **badbit**)
 
-Jeśli `state` **&** [wyjątki](#exceptions) jest różna od zera, następnie zgłasza obiekt klasy [błąd](../standard-library/ios-base-class.md#failure).
+Jeśli `state` **&** [wyjątki](#exceptions) jest różna od zera, następnie wyrzuca obiekt klasy [błąd](../standard-library/ios-base-class.md#failure).
 
 ### <a name="example"></a>Przykład
 
-Zobacz [rdstate](#rdstate) i [getline](../standard-library/string-functions.md#getline) przykłady przy użyciu **wyczyść**.
+Zobacz [rdstate —](#rdstate) i [getline —](../standard-library/string-functions.md#getline) przykłady użycia `clear`.
 
 ## <a name="copyfmt"></a>  basic_ios::copyfmt
 
-Kopiuje flagi z jednego strumienia do innego.
+Kopiuje flagi z jednym strumień.
 
 ```cpp
 basic_ios<Elem, Traits>& copyfmt(
@@ -256,15 +256,15 @@ const basic_ios<Elem, Traits>& right);
 
 ### <a name="parameters"></a>Parametry
 
-`right` Strumień flagi, którego chcesz skopiować.
+*prawy* strumienia flagi, którego chcesz skopiować.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-**To** obiektu strumienia, do którego są kopiowane flag.
+**To** obiektu strumienia, do którego kopiowane są flagi.
 
 ### <a name="remarks"></a>Uwagi
 
-Funkcja członkowska zgłasza zdarzenie wywołania zwrotnego **wymazać\_zdarzeń**. Następnie kopiuje z `right` do  **\*to** znaków wypełnienia wskaźnika rozwiązany i informacje dotyczące formatowania. Przed zmianą maska wyjątek, zgłasza zdarzenie wywołania zwrotnego **copyfmt_event**. Jeśli po zakończeniu kopiowania **stanu &**[wyjątki](#exceptions) jest różna od zera, funkcja wywołuje [wyczyść](#clear) z argumentem [rdstate](#rdstate). Zwraca  **\*to**.
+Funkcja elementu członkowskiego zgłasza zdarzenie wywołania zwrotnego **wymazać\_zdarzeń**. Następnie kopiuje z *prawo* do  **\*to** znak wypełnienia wskaźnika tie oraz informacje o formatowaniu. Przed zmianą maski wyjątków, zgłasza zdarzenie wywołania zwrotnego `copyfmt_event`. Jeśli po zakończeniu kopiowania **stan &**[wyjątki](#exceptions) jest różna od zera, funkcja wywołuje [wyczyść](#clear) z argumentem [rdstate —](#rdstate). Zwraca  **\*to**.
 
 ### <a name="example"></a>Przykład
 
@@ -290,7 +290,7 @@ int main( )
 
 ## <a name="eof"></a>  basic_ios::EOF
 
-Wskazuje, czy osiągnięto koniec strumienia.
+Wskazuje, jeśli osiągnięto koniec strumienia.
 
 ```cpp
 bool eof() const;
@@ -298,11 +298,11 @@ bool eof() const;
 
 ### <a name="return-value"></a>Wartość zwracana
 
-`true` Jeśli zostanie osiągnięty koniec strumienia `false` inaczej.
+**wartość true,** jeśli osiągnięto koniec strumienia, **false** inaczej.
 
 ### <a name="remarks"></a>Uwagi
 
-Funkcja członkowska zwraca `true` Jeśli [rdstate](#rdstate) `& eofbit` jest różna od zera. Aby uzyskać więcej informacji na temat `eofbit`, zobacz [ios_base::iostate](../standard-library/ios-base-class.md#iostate).
+Funkcja elementu członkowskiego zwraca **true** Jeśli [rdstate —](#rdstate) `& eofbit` jest różna od zera. Aby uzyskać więcej informacji na temat `eofbit`, zobacz [ios_base::iostate](../standard-library/ios-base-class.md#iostate).
 
 ### <a name="example"></a>Przykład
 
@@ -328,7 +328,7 @@ int main( int argc, char* argv[] )
 
 ## <a name="exceptions"></a>  basic_ios::Exceptions
 
-Wskazuje, które wyjątki będą zgłaszane przez strumień.
+Wskazuje, której wyjątki zostaną zgłoszone przez strumień.
 
 ```cpp
 iostate exceptions() const;
@@ -338,15 +338,15 @@ void exceptions(io_state Newexcept);
 
 ### <a name="parameters"></a>Parametry
 
-*Newexcept* flagi, które mają zostać zgłoszony wyjątek.
+*Newexcept* flagi, które chcesz zgłosić wyjątek.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Flagi, które obecnie są określone na zgłosił wyjątek dla tego strumienia.
+Flagi, które są aktualnie określone do zgłoszony wyjątek dla strumienia.
 
 ### <a name="remarks"></a>Uwagi
 
-Pierwszy funkcji członkowskiej zwraca maska przechowywanych wyjątku. Drugi magazynów funkcji Członkowskich *_Except* maska wyjątku i zwraca jego poprzedniej przechowywane wartości. Należy pamiętać, że przechowywanie nowych maska wyjątek może zgłosić wyjątek, podobnie jak wywołanie [wyczyść](#clear)( [rdstate](#rdstate) ).
+Pierwsza funkcja elementu członkowskiego zwraca maski wyjątku przechowywanych. Drugi magazynów funkcja elementu członkowskiego *_Except* maskę wyjątku i zwraca jego poprzedniej przechowywaną wartość. Należy pamiętać, że przechowywanie nową maskę wyjątku może zgłosić wyjątek podobnie jak wywołanie [wyczyść](#clear)( [rdstate —](#rdstate) ).
 
 ### <a name="example"></a>Przykład
 
@@ -386,7 +386,7 @@ Exception description: ios_base::eofbit set
 
 ## <a name="fail"></a>  basic_ios::fail
 
-Wskazuje niepowodzenie wyodrębnienia prawidłowym polem ze strumienia.
+Wskazuje błąd, aby wyodrębnić prawidłowym polem ze strumienia.
 
 ```cpp
 bool fail() const;
@@ -394,7 +394,7 @@ bool fail() const;
 
 ### <a name="return-value"></a>Wartość zwracana
 
-`true` Jeśli [rdstate](#rdstate) `& (badbit|failbit)` jest różna od zera, w przeciwnym razie `false`.
+**wartość true,** Jeśli [rdstate —](#rdstate) `& (badbit|failbit)` jest różna od zera, w przeciwnym razie **false**.
 
 Aby uzyskać więcej informacji na temat `failbit`, zobacz [ios_base::iostate](../standard-library/ios-base-class.md#iostate).
 
@@ -417,7 +417,7 @@ int main( void )
 
 ## <a name="fill"></a>  basic_ios::Fill
 
-Określa, czy zwraca znak, który będzie używany, gdy tekst nie jest szerokie, jak strumienia.
+Określa, czy zwraca znak, który będzie używany, gdy tekst nie jest szerokie, jak strumień.
 
 ```cpp
 char_type fill() const;
@@ -426,7 +426,7 @@ char_type fill(char_type Char);
 
 ### <a name="parameters"></a>Parametry
 
-`Char` Znak, który ma być znaków wypełnienia.
+*CHAR* żądany jako znak wypełnienia znak.
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -434,7 +434,7 @@ Bieżący znak wypełnienia.
 
 ### <a name="remarks"></a>Uwagi
 
-Pierwszy funkcji członkowskiej zwraca znak wypełnienia przechowywane. Drugi magazynów funkcji Członkowskich `Char` wypełnienia znaku i zwraca jego poprzedniej przechowywana wartość.
+Pierwsza funkcja elementu członkowskiego zwraca znak odpowiadający przechowywanej wypełnienia. Drugi magazynów funkcja elementu członkowskiego *Char* wypełnienia znaku i zwraca jego poprzedniej przechowywaną wartość.
 
 ### <a name="example"></a>Przykład
 
@@ -471,13 +471,13 @@ bool good() const;
 
 ### <a name="return-value"></a>Wartość zwracana
 
-`true` Jeśli [rdstate](#rdstate) `== goodbit` (żadnych flag stanu są ustawione), w przeciwnym razie `false`.
+**wartość true,** Jeśli [rdstate —](#rdstate) `== goodbit` (nie flagi stanu są ustawione), w przeciwnym razie **false**.
 
 Aby uzyskać więcej informacji na temat `goodbit`, zobacz [ios_base::iostate](../standard-library/ios-base-class.md#iostate).
 
 ### <a name="example"></a>Przykład
 
-Zobacz [basic_ios::bad](#bad) przykład przy użyciu `good`.
+Zobacz [basic_ios::bad](#bad) na przykład za pomocą `good`.
 
 ## <a name="imbue"></a>  basic_ios::imbue
 
@@ -489,7 +489,7 @@ locale imbue(const locale& Loc);
 
 ### <a name="parameters"></a>Parametry
 
-`Loc` Ciąg ustawień regionalnych.
+*Lokalizacja* ciągu ustawień regionalnych.
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -497,9 +497,9 @@ Poprzednie ustawienia regionalne.
 
 ### <a name="remarks"></a>Uwagi
 
-Jeśli [rdbuf](#rdbuf) jest nie wskaźnika o wartości null, element członkowski wywołania funkcji
+Jeśli [rdbuf —](#rdbuf) jest nie wskaźnikiem typu null, element członkowski wywołania funkcji
 
-`rdbuf`-> [pubimbue](../standard-library/basic-streambuf-class.md#pubimbue)(_ *Loc*)
+`rdbuf`-> [pubimbue —](../standard-library/basic-streambuf-class.md#pubimbue)(_ *Loc*)
 
 W każdym przypadku zwraca [ios_base::imbue](../standard-library/ios-base-class.md#imbue)(_ *Loc*).
 
@@ -523,7 +523,7 @@ int main( )
 
 ## <a name="init"></a>  basic_ios::init
 
-Metoda wywoływana przez konstruktorów basic_ios —.
+Metoda wywoływana przez konstruktory basic_ios —.
 
 ```cpp
 void init(basic_streambuf<Elem,Traits>* _Sb, bool _Isstd = false);
@@ -531,37 +531,37 @@ void init(basic_streambuf<Elem,Traits>* _Sb, bool _Isstd = false);
 
 ### <a name="parameters"></a>Parametry
 
-`_Sb` Standardowa bufor do przechowywania elementów wejściowych lub wyjściowych.
+*_Sb* standardowa bufor do przechowywania elementów wejściowych lub wyjściowych.
 
-`_Isstd` Określa, czy jest to Standardowy strumień.
+*_Isstd* Określa, czy jest to Standardowy strumień.
 
 ### <a name="remarks"></a>Uwagi
 
-Funkcja członkowska przechowuje wartości we wszystkich obiektach — członek, tak aby:
+Funkcja elementu członkowskiego zapisuje wartości we wszystkich obiektach elementu członkowskiego, tak aby:
 
-- [rdbuf](#rdbuf) zwraca *_Sb.*
+- [rdbuf —](#rdbuf) zwraca *_Sb.*
 
-- [Powiązanie](#tie) zwraca wskaźnika o wartości null.
+- [Powiązanie](#tie) zwraca wskaźnik o wartości null.
 
-- [rdstate](#rdstate) zwraca [goodbit](../standard-library/ios-base-class.md#iostate) Jeśli `_Sb` jest różna od zera, a w przeciwnym razie zwraca [badbit](../standard-library/ios-base-class.md#iostate).
+- [rdstate —](#rdstate) zwraca [goodbit](../standard-library/ios-base-class.md#iostate) Jeśli *_Sb* jest różna od zera; w przeciwnym razie zwraca [badbit](../standard-library/ios-base-class.md#iostate).
 
-- [Wyjątki](#exceptions) zwraca **goodbit**.
+- [Wyjątki](#exceptions) zwraca `goodbit`.
 
 - [flagi](../standard-library/ios-base-class.md#flags) zwraca [skipws](../standard-library/ios-base-class.md#fmtflags) &#124; [gru](../standard-library/ios-base-class.md#fmtflags).
 
 - [szerokość](../standard-library/ios-base-class.md#width) zwraca wartość 0.
 
-- [dokładność](../standard-library/ios-base-class.md#precision) zwraca 6.
+- [dokładność](../standard-library/ios-base-class.md#precision) zwróci wynik 6.
 
 - [wypełnienie](#fill) zwraca znak spacji.
 
-- [getloc](../standard-library/ios-base-class.md#getloc) zwraca `locale::classic`.
+- [getloc —](../standard-library/ios-base-class.md#getloc) zwraca `locale::classic`.
 
-- [iword](../standard-library/ios-base-class.md#iword) zwraca zero, i [pword](../standard-library/ios-base-class.md#pword) zwraca wskaźnik null dla wszystkich wartości argumentu.
+- [iword —](../standard-library/ios-base-class.md#iword) zwraca zero, a [pword —](../standard-library/ios-base-class.md#pword) zwraca pusty wskaźnik dla wszystkich wartości argumentu.
 
 ## <a name="int_type"></a>  basic_ios::int_type
 
-Jest to synonim **traits_type::int_type**.
+Synonim dla `traits_type::int_type`.
 
 ```cpp
 typedef typename traits_type::int_type int_type;
@@ -569,7 +569,7 @@ typedef typename traits_type::int_type int_type;
 
 ## <a name="move"></a>  basic_ios::MOVE
 
-Przenosi wszystkie wartości z wyjątkiem wskaźnik do buforu strumienia od parametru do bieżącego obiektu.
+Przenosi wszystkie wartości, z wyjątkiem wskaźnik do buforu strumienia z parametru, jak bieżący obiekt.
 
 ```cpp
 void move(basic_ios&& right);
@@ -577,15 +577,15 @@ void move(basic_ios&& right);
 
 ### <a name="parameters"></a>Parametry
 
-`right` `ios_base` Przesunięcia wartości.
+*prawy* `ios_base` przesunięcia wartości z.
 
 ### <a name="remarks"></a>Uwagi
 
-Funkcja chroniony element członkowski przenosi wszystkie wartości, które są przechowywane w `right` do `*this` z wyjątkiem zapisana `stream buffer pointer`, który jest bez zmian w `right` i ustawić wartości null wskaźnika w `*this`. Zapisana `tie pointer` ma wartość null wskaźnika w `right`.
+Funkcja elementu członkowskiego chronionego przenosi wszystkie wartości, które są przechowywane w *prawo* do `*this` , z wyjątkiem przechowywanych `stream buffer pointer`, który nie jest zmienione *prawo* a wskaźnikiem typu null w `*this`. Przechowywany `tie pointer` jest ustawiona na wartość null wskaźnika w *prawo*.
 
 ## <a name="narrow"></a>  basic_ios::Narrow
 
-Wyszukuje odpowiednik znaku do danego `char_type`.
+Umożliwia znalezienie równoważne znaku do danego `char_type`.
 
 ```cpp
 char narrow(char_type Char, char Default = '\0') const;
@@ -593,17 +593,17 @@ char narrow(char_type Char, char Default = '\0') const;
 
 ### <a name="parameters"></a>Parametry
 
-`Char` `char` Do przekonwertowania.
+*CHAR* **char** do przekonwertowania.
 
-`Default` `char` Czy mają być zwracane przypadku nieznalezienia odpowiednika.
+*Domyślne* **char** czy mają być zwracane, jeśli znaleziono odpowiednika.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Odpowiednik `char` do danego `char_type`.
+Odpowiednik **char** do danego `char_type`.
 
 ### <a name="remarks"></a>Uwagi
 
-Funkcja członkowska zwraca [use_facet](../standard-library/basic-filebuf-class.md#open)\<ctype\<E >> ( [getloc](../standard-library/ios-base-class.md#getloc)()).`narrow` ( `Char`, `Default`).
+Funkcja elementu członkowskiego zwraca [use_facet](../standard-library/basic-filebuf-class.md#open)\<ctype\<E >> ( [getloc —](../standard-library/ios-base-class.md#getloc)()).`narrow` ( `Char`, `Default`).
 
 ### <a name="example"></a>Przykład
 
@@ -628,7 +628,7 @@ int main( )
 
 ## <a name="off_type"></a>  basic_ios::off_type
 
-Jest to synonim **traits_type::off_type**.
+Synonim dla `traits_type::off_type`.
 
 ```cpp
 typedef typename traits_type::off_type off_type;
@@ -636,7 +636,7 @@ typedef typename traits_type::off_type off_type;
 
 ## <a name="op_void_star"></a>  basic_ios::operator void *
 
-Wskazuje, czy strumień jest nadal dobra.
+Wskazuje, czy strumień jest w dalszym ciągu idealnie sprawdzają.
 
 ```cpp
 operator void *() const;
@@ -644,7 +644,7 @@ operator void *() const;
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Operator zwraca wskaźnik null tylko wtedy, gdy [niepowodzenie](#fail).
+Operator zwraca wskaźnika o wartości null tylko wtedy, gdy [się nie powieść](#fail).
 
 ### <a name="example"></a>Przykład
 
@@ -666,7 +666,7 @@ int main( )
 
 ## <a name="op_not"></a>  basic_ios::operator!
 
-Wskazuje, czy strumień nie jest nieprawidłowy.
+Wskazuje, jeżeli strumień jest nieodpowiedni.
 
 ```cpp
 bool operator!() const;
@@ -674,7 +674,7 @@ bool operator!() const;
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Zwraca [niepowodzenie](#fail).
+Zwraca [się nie powieść](#fail).
 
 ### <a name="example"></a>Przykład
 
@@ -696,7 +696,7 @@ int main( )
 
 ## <a name="op_bool"></a>  basic_ios::operator bool
 
-Umożliwia korzystanie z `basic_ios` obiekt jako `bool`. Konwersja typów automatycznego jest wyłączona, aby uniknąć wspólnego, niezamierzone skutki uboczne.
+Umożliwia korzystanie z `basic_ios` obiektu jako **bool**. Konwersja typu automatyczne jest wyłączona, aby uniknąć typowych i niezamierzone efekty uboczne.
 
 ```cpp
 explicit operator bool() const;
@@ -704,11 +704,11 @@ explicit operator bool() const;
 
 ### <a name="remarks"></a>Uwagi
 
-Zwraca wartość możliwe do przekonwertowania na `false` tylko wtedy, gdy `fail()`. Typ zwracany jest tylko do przekonwertowania `bool`, aby nie były `void *` lub innych znanych typów skalarnych.
+Operator zwraca można przekonwertować wartości na **false** tylko wtedy, gdy `fail()`. Typ zwracany jest konwertowany tylko **bool**, nie `void *` lub innych znanych typów skalarnych.
 
 ## <a name="pos_type"></a>  basic_ios::pos_type
 
-Jest to synonim **traits_type::pos_type**.
+Synonim dla `traits_type::pos_type`.
 
 ```cpp
 typedef typename traits_type::pos_type pos_type;
@@ -726,13 +726,13 @@ basic_streambuf<Elem, Traits>* _Sb);
 
 ### <a name="parameters"></a>Parametry
 
-`_Sb` Strumień.
+*_Sb* strumienia.
 
 ### <a name="remarks"></a>Uwagi
 
-Pierwszy element członkowski funkcja przechowywane strumienia wskaźnika buforu.
+Pierwsza funkcja elementu członkowskiego zwraca wskaźnik buforu strumienia przechowywanych.
 
-Drugi magazynów funkcji Członkowskich `_Sb` przechowywane strumienia wskaźnika buforu i zwraca wartość zapisanych wcześniej.
+Drugi magazynów funkcja elementu członkowskiego *_Sb* we wskaźniku buforu strumienia przechowywanych i zwraca wartość zapisanych wcześniej.
 
 ### <a name="example"></a>Przykład
 
@@ -768,7 +768,7 @@ iostate rdstate() const;
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Strumień przechowywane informacje o stanie.
+Informacje o stanie przechowywanych strumienia.
 
 ### <a name="example"></a>Przykład
 
@@ -817,11 +817,11 @@ void setstate(iostate _State);
 
 ### <a name="parameters"></a>Parametry
 
-`_State` Dodatkowe flagi do ustawienia.
+*_Stanu* dodatkowe flagi, aby ustawić.
 
 ### <a name="remarks"></a>Uwagi
 
-Wywołuje funkcję elementu członkowskiego [wyczyść](#clear)(_ *stanu* &#124; [rdstate](#rdstate)).
+Funkcja elementu członkowskiego skutecznie wywołuje [wyczyść](#clear)(_ *stanu* &#124; [rdstate —](#rdstate)).
 
 ### <a name="example"></a>Przykład
 
@@ -857,7 +857,7 @@ int main( )
 
 ## <a name="set_rdbuf"></a>  basic_ios::set_rdbuf
 
-Przypisuje się buforu odczytu dla tego obiektu strumienia buforu strumienia.
+Przydziela bufor strumienia do buforu odczytu dla tego obiektu strumienia.
 
 ```cpp
 void set_rdbuf(
@@ -866,15 +866,15 @@ basic_streambuf<Elem, Tr>* strbuf)
 
 ### <a name="parameters"></a>Parametry
 
-`strbuf` Bufor strumienia, aby stać się buforu odczytu.
+*strbuf* buforu strumienia, aby stać się buforu odczytu.
 
 ### <a name="remarks"></a>Uwagi
 
-Chroniony element członkowski magazynów funkcja `strbuf` w `stream buffer pointer`. Nie wywołuje `clear`.
+Chroniony element członkowski funkcji magazynów *strbuf* w `stream buffer pointer`. Nie wywołuje `clear`.
 
 ## <a name="tie"></a>  basic_ios::tie
 
-Gwarantuje, że jeden strumieniu jest przetwarzana przed innym strumienia.
+Gwarantuje, że ten jeden strumień jest przetwarzana przed innym strumienia.
 
 ```cpp
 basic_ostream<Elem, Traits> *tie() const;
@@ -884,19 +884,19 @@ basic_ostream<Elem, Traits>* str);
 
 ### <a name="parameters"></a>Parametry
 
-`str` Strumień.
+*str* strumienia.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Pierwszy element członkowski funkcja wskaźnik przechowywanych w grupie równych wartości. Drugi magazynów funkcji Członkowskich `str` w grupie równych wartości wskaźnika i zwraca jego poprzedniej przechowywana wartość.
+Pierwsza funkcja elementu członkowskiego zwraca wskaźnik tie przechowywanych. Drugi magazynów funkcja elementu członkowskiego *str* tie wskaźnika i zwraca jego poprzedniej przechowywaną wartość.
 
 ### <a name="remarks"></a>Uwagi
 
-`tie` powoduje, że dwa strumienie synchronizacji tak, aby operacje na jeden strumień wykonywane po zakończeniu operacji na strumieniu innych.
+`tie` powoduje dwóch strumieni, które mają być synchronizowane w taki sposób, że operacje na jeden strumień wystąpić po zakończeniu operacji w usłudze stream.
 
 ### <a name="example"></a>Przykład
 
-W tym przykładzie przez wiązanie cin do cout, będzie gwarancji, że "Wprowadź liczbę z zakresu:" ciąg przejdzie do konsoli przed numerem sam jest wyodrębniana z cin. Eliminuje to możliwość który "Wprowadź liczbę z zakresu:" ciąg nadal znajduje się w buforze została przeczytana numer, tak, aby upewnić, że jesteśmy użytkownika faktycznie niektórych wiersza odpowiedzieć. Domyślnie cin i cout są powiązane.
+W tym przykładzie przez wiązanie cin do cout, ma żadnej gwarancji, że "Wprowadź liczbę:" ciąg zostanie umieszczona w konsoli przed numerem, sama są wyodrębniane z cin. Pozwala to wyeliminować możliwość który "Wprowadź liczbę:" ciągu nadal znajdują się w buforze, jeśli liczba jest odczytu, tak, aby się upewnić, że użytkownika faktycznie niektóre wiersz, aby odpowiedzieć na. Domyślnie cin i cout są powiązane.
 
 ```cpp
 #include <ios>
@@ -914,7 +914,7 @@ int main( )
 
 ## <a name="traits_type"></a>  basic_ios::traits_type
 
-Synonim parametru szablonu **cech**.
+Synonim dla parametru szablonu `Traits`.
 
 ```cpp
 typedef Traits traits_type;
@@ -922,7 +922,7 @@ typedef Traits traits_type;
 
 ## <a name="widen"></a>  basic_ios::widen
 
-Wyszukuje odpowiednikiem `char_type` do danego `char`.
+Znajduje odpowiednik `char_type` do danego **char**.
 
 ```cpp
 char_type widen(char Char) const;
@@ -930,15 +930,15 @@ char_type widen(char Char) const;
 
 ### <a name="parameters"></a>Parametry
 
-`Char` Znak do konwersji.
+*CHAR* znak, który ma zostać przekształcony.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Wyszukuje odpowiednikiem `char_type` do danego `char`.
+Znajduje odpowiednik `char_type` do danego **char**.
 
 ### <a name="remarks"></a>Uwagi
 
-Funkcja członkowska zwraca [use_facet](../standard-library/basic-filebuf-class.md#open)< **ctype** \< **E**>> ( [getloc](../standard-library/ios-base-class.md#getloc)). `widen`( `Char`).
+Funkcja elementu członkowskiego zwraca [use_facet](../standard-library/basic-filebuf-class.md#open)< **ctype** \< **E**>> ( [getloc —](../standard-library/ios-base-class.md#getloc)). `widen`( `Char`).
 
 ### <a name="example"></a>Przykład
 
@@ -963,7 +963,7 @@ int main( )
 
 ## <a name="swap"></a>  basic_ios::swap
 
-Zamienia wartości w tym `basic_ios` obiektu tych innego `basic_ios` obiektu. Wskaźniki do buforów strumienia nie są jednak zamienione.
+Wymienia wartości w tym `basic_ios` obiektu dla osób z innej `basic_ios` obiektu. Jednakże wskaźniki do buforów strumienia nie zostały zamienione.
 
 ```cpp
 void swap(basic_ios&& right);
@@ -971,11 +971,11 @@ void swap(basic_ios&& right);
 
 ### <a name="parameters"></a>Parametry
 
-`right` `basic_ios` Obiekt, który jest używany do wymiany wartości.
+*prawy* `basic_ios` obiekt, który jest używany do wymiany wartości.
 
 ### <a name="remarks"></a>Uwagi
 
-Funkcja chroniony element członkowski zamienia wszystkie wartości, które są przechowywane w `right` z `*this` z wyjątkiem zapisana `stream buffer pointer`.
+Chroniona funkcja elementu członkowskiego wymienia wszystkie wartości, które są przechowywane w *prawo* z `*this` , z wyjątkiem przechowywanych `stream buffer pointer`.
 
 ## <a name="see-also"></a>Zobacz także
 

@@ -17,16 +17,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c7d9ba59d7f1539f690d7b04c70139c263490368
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 8b679d4c8807a19c977cd7e59481dc1d78e67ba1
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33850694"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38956521"
 ---
 # <a name="alignmentof-class"></a>alignment_of — Klasa
 
-Pobiera wyrównanie określonego typu. Ta struktura jest zaimplementowana w postaci liczby [alignof](../cpp/alignof-and-alignas-cpp.md). Użyj `alignof` bezpośrednio po prostu konieczność wartość wyrównania zapytania. Alignment_of — należy używać wtedy, gdy konieczne stałej, na przykład podczas wysyłania tagu.
+Pobiera wyrównanie określonego typu. Ta struktura jest zaimplementowana w [alignof](../cpp/alignof-and-alignas-cpp.md). Użyj `alignof` bezpośrednio po prostu konieczność wartość wyrównania zapytania. Alignment_of — należy używać wtedy, gdy konieczne stałą całkowitą, na przykład podczas wysyłania tagu.
 
 ## <a name="syntax"></a>Składnia
 
@@ -37,17 +37,17 @@ struct alignment_of;
 
 ### <a name="parameters"></a>Parametry
 
-`Ty` Typ do zapytania.
+*Ty* typ do zapytania.
 
 ## <a name="remarks"></a>Uwagi
 
-Kwerenda typu przechowuje wartość wyrównania typu `Ty`.
+Zapytanie typu przechowuje wartość wyrównanie typu *Ty*.
 
 ## <a name="requirements"></a>Wymagania
 
 **Nagłówek:** \<type_traits >
 
-**Namespace:** Standard
+**Namespace:** standardowe
 
 ## <a name="see-also"></a>Zobacz także
 

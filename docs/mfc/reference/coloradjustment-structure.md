@@ -16,15 +16,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1bb4cba5ef2eafa27a26c945f8754eb1a0ab0315
-ms.sourcegitcommit: be0e3457f2884551f18e183ef0ea65c3ded7f689
+ms.openlocfilehash: 03c5346a59ea52ca6b2428652d5da69aacf6ea5b
+ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/28/2018
-ms.locfileid: "37077958"
+ms.lasthandoff: 07/05/2018
+ms.locfileid: "37849098"
 ---
 # <a name="coloradjustment-structure"></a>Struktura COLORADJUSTMENT
-`COLORADJUSTMENT` Struktury definiuje wartości dostosowania kolorów, które są używane przez system Windows `StretchBlt` i `StretchDIBits` funkcji podczas `StretchBlt` jest tryb **PÓŁTONÓW**.  
+`COLORADJUSTMENT` Struktury definiuje wartości dostosowanie kolorów, które są używane przez Windows `StretchBlt` i `StretchDIBits` funkcji podczas `StretchBlt` PÓŁTONÓW jest tryb.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -50,67 +50,67 @@ typedef struct  tagCOLORADJUSTMENT {    /* ca */
  Określa rozmiar struktury w bajtach.  
   
  *caFlags*  
- Określa, jak można przygotować obraz danych wyjściowych. Ten element członkowski może być ustawiony na **NULL** lub dowolną kombinację następujących wartości:  
+ Określa, jak można przygotować obraz danych wyjściowych. Ten element członkowski można ustawić na zero lub dowolną kombinację następujących wartości:  
   
-- **CA_NEGATIVE** Określa, że wyświetlane ujemna oryginalnego obrazu.  
+- CA_NEGATIVE Określa, że negacją oryginalny obraz powinien być wyświetlany.  
   
-- **CA_LOG_FILTER** Określa, że funkcja logarytmiczna powinny być stosowane do końcowego gęstość kolory danych wyjściowych. Zwiększy kontrast kolorów gdy jasności jest niskie.  
+- CA_LOG_FILTER Określa, że funkcja logarytmiczna powinny być stosowane do końcowego gęstość kolory danych wyjściowych. To spowoduje zwiększenie kontrast kolorów, gdy brakuje jasności.  
   
  *caIlluminantIndex*  
- Określa jasności źródła światła, pod którym jest wyświetlany obiektu obrazu. Ten element członkowski można wybrać jedno z następujących wartości:  
+ Określa jasności po stronie źródła światła w ramach której jest wyświetlany obiekt obrazu. Ten element członkowski można ustawić jedną z następujących wartości:  
   
-- **ILLUMINANT_EQUAL_ENERGY**  
+- ILLUMINANT_EQUAL_ENERGY  
   
-- **ILLUMINANT_A**  
+- ILLUMINANT_A  
   
-- **ILLUMINANT_B**  
+- ILLUMINANT_B  
   
-- **ILLUMINANT_C**  
+- ILLUMINANT_C  
   
-- **ILLUMINANT_D50**  
+- ILLUMINANT_D50  
   
-- **ILLUMINANT_D55**  
+- ILLUMINANT_D55  
   
-- **ILLUMINANT_D65**  
+- ILLUMINANT_D65  
   
-- **ILLUMINANT_D75**  
+- ILLUMINANT_D75  
   
-- **ILLUMINANT_F2**  
+- ILLUMINANT_F2  
   
-- **ILLUMINANT_TURNGSTEN**  
+- ILLUMINANT_TURNGSTEN  
   
-- **ILLUMINANT_DAYLIGHT**  
+- ILLUMINANT_DAYLIGHT  
   
-- **ILLUMINANT_FLUORESCENT**  
+- ILLUMINANT_FLUORESCENT  
   
-- **ILLUMINANT_NTSC**  
+- ILLUMINANT_NTSC  
   
  *caRedGamma*  
- Określa wartość n-ty power korekcja gamma red podstawową kolorów źródła. Wartość musi należeć do zakresu od 2500 65 000. Wartość 10 000 oznacza nie korekcja gamma.  
+ Określa wartość korekcji gamma n-ty zasilania dla podstawowego czerwony kolorów źródła. Wartość musi należeć do zakresu od 2500 do 65 000. Wartość 10 000 oznacza, że nie korekcji gamma.  
   
  *caGreenGamma*  
- Określa wartość n-ty zasilania korekcja gamma zielony podstawową kolorów źródła. Wartość musi należeć do zakresu od 2500 65 000. Wartość 10 000 oznacza nie korekcja gamma.  
+ Określa wartość korekcji gamma n-ty zasilania dla podstawowego zielony kolorów źródła. Wartość musi należeć do zakresu od 2500 do 65 000. Wartość 10 000 oznacza, że nie korekcji gamma.  
   
  *caBlueGamma*  
- Określa wartość n-ty zasilania korekcja gamma niebieski podstawową kolorów źródła. Wartość musi należeć do zakresu od 2500 65 000. Wartość 10 000 oznacza nie korekcja gamma.  
+ Określa wartość korekcji gamma n-ty zasilania dla podstawowego niebieski kolorów źródła. Wartość musi należeć do zakresu od 2500 do 65 000. Wartość 10 000 oznacza, że nie korekcji gamma.  
   
  *caReferenceBlack*  
- Określa czarny odwołanie kolorów źródła. Wszelkie kolorów, które są ciemniejsze od to są traktowane jako czarny. Wartość musi należeć do zakresu od 0 do 4000.  
+ Określa odwołanie do czarnego kolory źródła. Wszelkie kolorów, które są ciemniejsze od tego, są traktowane jako czarny. Wartość musi należeć do zakresu od 0 do 4000.  
   
  *caReferenceWhite*  
- Określa białe odwołanie kolorów źródła. Wszelkie kolorów, które są cieńszego niż to są traktowane jako biały. Wartość musi należeć do zakresu od 6000 do 10 000.  
+ Określa odwołanie białe kolorów źródła. Wszelkie kolorów, które są cieńszego niż to są traktowane jako biały. Wartość musi należeć do zakresu od 6000 do 10 000.  
   
  *caContrast*  
- Określa ilość kontrastu, mają być stosowane do obiektu źródłowego. Wartość musi należeć do zakresu od -100 do 100. Wartość 0 oznacza nie dopasowania kontrast.  
+ Określa ilość kontrastu mają być stosowane do obiektu źródłowego. Wartość musi należeć do zakresu od -100 do 100. Wartość 0 oznacza nie dopasowania kontrast.  
   
  *caBrightness*  
- Określa ilość jasności ma zostać zastosowany do obiektu źródłowego. Wartość musi należeć do zakresu od -100 do 100. Wartość 0 oznacza nie dopasowania Jasność.  
+ Określa ilość jasność ma zostać zastosowany do obiektu źródłowego. Wartość musi należeć do zakresu od -100 do 100. Wartość 0 oznacza nie dopasowania Jasność.  
   
  *caColorfulness*  
  Określa ilość colorfulness ma zostać zastosowany do obiektu źródłowego. Wartość musi należeć do zakresu od -100 do 100. Wartość 0 oznacza nie dopasowania colorfulness.  
   
  *caRedGreenTint*  
- Określa ilość korekty odcień czerwone lub zielone ma zostać zastosowany do obiektu źródłowego. Wartość musi należeć do zakresu od -100 do 100. Dodatnie będzie dostosować do czerwony, a liczby ujemne Dostosuj kierunku zielony. Wartość 0 oznacza nie dopasowania odcień.  
+ Określa dopasowania odcień czerwonego lub zielonego, ma zostać zastosowany do obiektu źródłowego. Wartość musi należeć do zakresu od -100 do 100. Liczb dodatnich może dopasować względem czerwieni, a liczby ujemne dopasować względem zieleni. Wartość 0 oznacza nie dopasowania odcień.  
   
 ## <a name="requirements"></a>Wymagania  
  **Nagłówek:** wingdi.h  

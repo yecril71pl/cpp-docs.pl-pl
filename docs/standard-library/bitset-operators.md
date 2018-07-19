@@ -20,14 +20,14 @@ helpviewer_keywords:
 - std::operator&lt;&lt; (bitset)
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3056546e5a543c0058f789e293e0a63a3d53283a
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 7d01a9ad5ef0b5cc3198231ae2b361e04856449f
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33850401"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38955023"
 ---
-# <a name="ltbitsetgt-operators"></a>&lt;bitset —&gt; operatory
+# <a name="ltbitsetgt-operators"></a>&lt;bitset —&gt; operatorów
 
 ||||
 |-|-|-|
@@ -36,7 +36,7 @@ ms.locfileid: "33850401"
 
 ## <a name="op_amp"></a>  Operator&amp;
 
-Wykonuje bitowej `AND` między dwoma bitsets.
+Wykonuje bitową operację `AND` między dwoma bitsets.
 
 ```cpp
 template <size_t size>
@@ -48,13 +48,13 @@ operator&(
 
 ### <a name="parameters"></a>Parametry
 
-`left` Pierwszy z dwóch bitsets, której elementy odpowiednich mają być łączone z bitowego `AND`.
+*po lewej stronie* pierwsza z dwóch bitsets, w której odpowiednie elementy, które mają być łączone za pomocą operatora testu koniunkcji `AND`.
 
-`right` Drugi dwóch valarrays, której elementy odpowiednich mają być łączone z bitowego `AND`.
+*prawy* drugi dwóch valarrays, w której odpowiednie elementy, które mają być łączone za pomocą operatora testu koniunkcji `AND`.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Bitset —, której elementy są wynik wykonania `AND` operacji do odpowiednich elementów `left` i `right`.
+Bitset —, której elementy są wynikiem wykonania `AND` operacji na odpowiadające elementy *po lewej stronie* i *prawo*.
 
 ### <a name="example"></a>Przykład
 
@@ -86,7 +86,7 @@ bitset 3: 0001
 
 ## <a name="op_lt_lt"></a>  Operator&lt;&lt;
 
-Wstawia tekst reprezentację sekwencji bit do strumienia wyjściowego.
+Wstawia tekstowa reprezentacja bitową sekwencję do strumienia wyjściowego.
 
 ```
 
@@ -98,17 +98,17 @@ basic_ostream<CharType, Traits>& operator<<(
 
 ### <a name="parameters"></a>Parametry
 
-`right` Obiekt typu **bitset —\<N >** to ma zostać wstawiony do strumienia wyjściowego jako ciąg.
+*prawy* obiektu typu **bitset —\<N >** który ma zostać wstawiony do strumienia wyjściowego, jako ciąg.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Tekstowa reprezentacja sekwencji bitowe w **ostr**.
+Tekstowa reprezentacja bitową sekwencję w `ostr`.
 
 ### <a name="remarks"></a>Uwagi
 
-Przeciążenia funkcji szablonu **operator <<**, dzięki czemu bitset — należy zapisać bez uprzedniego przekonwertowania na ciąg. Funkcja szablonu skutecznie wykonuje:
+Przeciążenia funkcji szablonu `operator<<`, dzięki czemu zestawu bitów do zapisania bez uprzedniego przekonwertowania na ciąg. Funkcja szablonu skutecznie wykonuje:
 
-**OSTR** << _ *prawej*. [to_string](bitset-class.md) < **CharType**, **cech**, **alokatora** \< **CharType**>>)
+**OSTR** << _ *po prawej stronie*. [to_string —](bitset-class.md) < **CharType**, **cech**, **alokatora** \< **CharType**>>)
 
 ### <a name="example"></a>Przykład
 
@@ -143,7 +143,7 @@ int main( )
 
 ## <a name="op_gt_gt"></a>  Operator&gt;&gt;
 
-Odczytuje ciąg znaków z bitowego do bitset —.
+Odczytuje ciąg znaków bit do zestawu bitów.
 
 ```
 
@@ -157,23 +157,23 @@ _Istr,
 
 ### <a name="parameters"></a>Parametry
 
-`_Istr` Ciąg, który jest wprowadzany do strumień wejściowy ma zostać wstawiony do bitset —.
+*_Istr* ciąg, który jest wprowadzany do strumienia wejściowego, który ma zostać wstawiony do bitset —.
 
-`right` Bitset — otrzymuje bity ze strumienia wejściowego.
+*prawy* bitset —, który otrzymuje bity ze strumienia wejściowego.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Funkcja szablonu zwraca ciąg `_Istr`.
+Funkcja szablonu zwraca ciąg *_Istr*.
 
 ### <a name="remarks"></a>Uwagi
 
-Przeciążenia funkcji szablonu **operator >>** do przechowywania w _ bitset — *prawej* bitset — wartość ( `str`), gdzie `str` jest obiektem typu [basic_string — ](basic-string-class.md)  <  **CharType**, **cech**, **alokatora** \< **CharType**> > **&** wyodrębniony z `_Istr`.
+Przeciążenia funkcji szablonu `operator>>` do przechowywania w _ bitset — *po prawej stronie* bitset — wartość (`str`), gdzie `str` jest obiektem typu [basic_string](basic-string-class.md)  <  **CharType**, **cech**, **alokatora** \< **CharType**>> **&** wyodrębnione z *_Istr*.
 
-Funkcja szablonu wyodrębnia elementy z `_Istr` i wstawia je do bitset — do:
+Funkcja szablonu wyodrębnia elementy z *_Istr* i wstawia je do bitset — aż do:
 
-- Wszystkie elementy z bitowego zostały wyodrębnione ze strumienia wejściowego i przechowywane w bitset —.
+- Wszystkie elementy bit zostały wyodrębnione ze strumienia wejściowego i przechowywane w bitset —.
 
-- Bitset — należy wypełnić z bitami ze strumienia wejściowego.
+- Bitset — jest wypełnione z użyciem usługi bits ze strumienia wejściowego.
 
 - Napotkano element wejściowy nie jest 0 ani 1.
 
@@ -228,7 +228,7 @@ int main()
 
 ## <a name="op_xor"></a>  operator ^
 
-Wykonuje bitowej `EXCLUSIVE-OR` między dwoma bitsets.
+Wykonuje bitową operację `EXCLUSIVE-OR` między dwoma bitsets.
 
 ```cpp
 template <size_t size>
@@ -240,13 +240,13 @@ operator^(
 
 ### <a name="parameters"></a>Parametry
 
-`left` Pierwszy z dwóch bitsets, której elementy odpowiednich mają być łączone z bitowego `EXCLUSIVE-OR`.
+*po lewej stronie* pierwsza z dwóch bitsets, w której odpowiednie elementy, które mają być łączone za pomocą operatora testu koniunkcji `EXCLUSIVE-OR`.
 
-`right` Drugi dwóch valarrays, której elementy odpowiednich mają być łączone z bitowego `EXCLUSIVE-OR`.
+*prawy* drugi dwóch valarrays, w której odpowiednie elementy, które mają być łączone za pomocą operatora testu koniunkcji `EXCLUSIVE-OR`.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Bitset —, której elementy są wynik wykonania `EXCLUSIVE-OR` operacji do odpowiednich elementów `left` i `right`.
+Bitset —, której elementy są wynikiem wykonania `EXCLUSIVE-OR` operacji na odpowiadające elementy *po lewej stronie* i *prawo*.
 
 ### <a name="example"></a>Przykład
 
@@ -278,7 +278,7 @@ bitset 3: 0110
 
 ## <a name="op_or"></a>  operator |
 
-Wykonuje bitowej `OR` między dwoma bitsets.
+Wykonuje bitową operację `OR` między dwoma bitsets.
 
 ```cpp
 template <size_t size>
@@ -290,13 +290,13 @@ operator|(
 
 ### <a name="parameters"></a>Parametry
 
-`left` Pierwszy z dwóch bitsets, której elementy odpowiednich mają być łączone z bitowego `OR`.
+*po lewej stronie* pierwsza z dwóch bitsets, w której odpowiednie elementy, które mają być łączone za pomocą operatora testu koniunkcji `OR`.
 
-`right` Drugi dwóch valarrays, której elementy odpowiednich mają być łączone z bitowego `OR`.
+*prawy* drugi dwóch valarrays, w której odpowiednie elementy, które mają być łączone za pomocą operatora testu koniunkcji `OR`.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Bitset —, której elementy są wynik wykonania `OR` operacji do odpowiednich elementów `left` i `right`.
+Bitset —, której elementy są wynikiem wykonania `OR` operacji na odpowiadające elementy *po lewej stronie* i *prawo*.
 
 ### <a name="example"></a>Przykład
 

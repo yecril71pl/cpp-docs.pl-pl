@@ -14,12 +14,12 @@ helpviewer_keywords:
 - std::make_error_code
 - std::make_error_condition
 - std::system_category
-ms.openlocfilehash: 6135a3dc51b372c85545f01f52c70cbc6f236e64
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 838a63fc43ef71561c0911cfa4c85c76cf04bc08
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33855136"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38959668"
 ---
 # <a name="ltsystemerrorgt-functions"></a>&lt;system_error —&gt; funkcji
 
@@ -38,11 +38,11 @@ extern const error_category& generic_category();
 
 ### <a name="remarks"></a>Uwagi
 
-`generic_category` Obiektu jest implementacją [error_category —](../standard-library/error-category-class.md).
+`generic_category` Obiektu jest implementacją [error_category](../standard-library/error-category-class.md).
 
 ## <a name="make_error_code"></a>  make_error_code —
 
-Tworzy obiekt kod błędu.
+Tworzy obiekt błędu kodu.
 
 ```cpp
 error_code make_error_code(generic_errno _Errno);
@@ -52,7 +52,7 @@ error_code make_error_code(generic_errno _Errno);
 
 |Parametr|Opis|
 |---------------|-----------------|
-|`_Errno`|Wartość wyliczenia mają być przechowywane w obiekcie kod błędu.|
+|*_Errno*|Wartość wyliczenia do przechowywania w obiekcie kodu błędu.|
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -62,7 +62,7 @@ Obiekt kodu błędu.
 
 ## <a name="make_error_condition"></a>  make_error_condition —
 
-Tworzy obiekt warunek błędu.
+Tworzy obiekt warunku błędu.
 
 ```cpp
 error_condition make_error_condition(generic_errno _Errno);
@@ -72,11 +72,11 @@ error_condition make_error_condition(generic_errno _Errno);
 
 |Parametr|Opis|
 |---------------|-----------------|
-|`_Errno`|Wartość wyliczenia mają być przechowywane w obiekcie warunek błędu.|
+|*_Errno*|Wartość wyliczenia do przechowywania w obiekcie warunku błędu.|
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Obiekt warunek błędu.
+Obiekt warunku błędu.
 
 ### <a name="remarks"></a>Uwagi
 
@@ -90,7 +90,7 @@ extern const error_category& system_category();
 
 ### <a name="remarks"></a>Uwagi
 
-`system_category` Obiektu jest implementacją [error_category —](../standard-library/error-category-class.md).
+`system_category` Obiektu jest implementacją [error_category](../standard-library/error-category-class.md).
 
 ## <a name="see-also"></a>Zobacz także
 

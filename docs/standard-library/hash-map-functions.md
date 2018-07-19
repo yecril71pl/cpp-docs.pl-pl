@@ -7,12 +7,12 @@ f1_keywords:
 - hash_map/std::swap
 - hash_map/std::swap (hash_map)
 ms.assetid: 28748cd0-71f7-41b9-b068-579183645fba
-ms.openlocfilehash: 4ae585c53fde68c580059532722ac5d0b019a3db
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: d8ae3102091b9057f45f6b0072e0c272dfb27458
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33845976"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38958556"
 ---
 # <a name="lthashmapgt-functions"></a>&lt;hash_map —&gt; funkcji
 
@@ -23,9 +23,9 @@ ms.locfileid: "33845976"
 ## <a name="swap_hash_map"></a>  swap (hash_map)
 
 > [!NOTE]
-> Ten interfejs API jest nieaktualny. Alternatywą jest [unordered_map — klasa](../standard-library/unordered-map-class.md).
+> Ten interfejs API jest nieaktualny. Alternatywą jest [unordered_map, klasa](../standard-library/unordered-map-class.md).
 
-Zamienia hash_maps dwa elementy.
+Zamienia elementy z dwóch hash_maps.
 
 ```cpp
 void swap(
@@ -35,20 +35,20 @@ void swap(
 
 ### <a name="parameters"></a>Parametry
 
-`right` Hash_map —, której elementy są wymienianych z tymi mapy `left`.
+*prawy* hash_map, której elementy są wymieniane z tymi mapy *po lewej stronie*.
 
-`left` Hash_map —, której elementy są wymienianych z tymi mapy `right`.
+*po lewej stronie* hash_map, której elementy są wymieniane z tymi mapy *prawo*.
 
 ### <a name="remarks"></a>Uwagi
 
-Funkcja szablonu jest algorytm specjalizowany na hash_map — klasa kontenera do wykonywania funkcji członkowskiej `left.` [wymiany](../standard-library/basic-ios-class.md#swap)*(prawo*). To wystąpienie częściowe porządkowanie szablonów funkcji przez kompilator. Gdy funkcje szablonów są przeciążone w taki sposób, dopasowania szablonu z wywołaniem funkcji nie jest unikatowa, kompilator wybierze najbardziej specjalna wersja funkcji szablonu. Ogólne wersja funkcji szablonu **szablonu \<klasy T > wymiany void (T &, T &)**, w algorytmie pliku nagłówka działa przez przypisanie i jest wolne działanie. Specjalna wersja w poszczególnych kontenerach jest znacznie szybsze może współpracować z reprezentacji wewnętrznej klasy kontenera.
+Funkcja szablonu jest algorytm przeznaczone na hash_map — klasa kontenera na wykonanie funkcji elementu członkowskiego `left.` [wymiany](../standard-library/basic-ios-class.md#swap)*(prawy*). To wystąpienie częściowe porządkowanie szablonów funkcji przez kompilator. Gdy funkcje szablonu przeciążone są w sposób dopasowania szablonu za pomocą wywołania funkcji nie jest unikatowa, kompilator wybierze najbardziej wyspecjalizowaną wersję funkcji szablonu. Ogólne wersję funkcji szablonu **szablonu \<klasa T > void swap (T &, T &)**, w algorytmie plik nagłówkowy działa przez przypisanie a wolne działanie. Specjalizowanej wersji w każdym kontenerze jest znacznie szybsza, ponieważ może współpracować z reprezentacji wewnętrznej klasy kontenera.
 
-## <a name="swap"></a>  Swap
+## <a name="swap"></a>  swap
 
 > [!NOTE]
-> Ten interfejs API jest nieaktualny. Alternatywą jest [unordered_multimap — klasa](../standard-library/unordered-multimap-class.md).
+> Ten interfejs API jest nieaktualny. Alternatywą jest [unordered_multimap, klasa](../standard-library/unordered-multimap-class.md).
 
-Zamienia hash_multimaps dwa elementy.
+Zamienia elementy z dwóch hash_multimaps.
 
 ```cpp
 void swap(
@@ -58,13 +58,13 @@ void swap(
 
 ### <a name="parameters"></a>Parametry
 
-`right` Hash_multimap —, której elementy są wymienianych z tymi mapy `left`.
+*prawy* hash_multimap, której elementy są wymieniane z tymi mapy *po lewej stronie*.
 
-`left` Hash_multimap —, której elementy są wymienianych z tymi mapy `right`.
+*po lewej stronie* hash_multimap, której elementy są wymieniane z tymi mapy *prawo*.
 
 ### <a name="remarks"></a>Uwagi
 
-Funkcja szablonu jest algorytm specjalizowany na hash_multimap — klasa kontenera do wykonywania funkcji członkowskiej `left.` [wymiany](../standard-library/hash-multimap-class.md#swap)*(prawo*`)`. To wystąpienie częściowe porządkowanie szablonów funkcji przez kompilator. Gdy funkcje szablonów są przeciążone w taki sposób, dopasowania szablonu z wywołaniem funkcji nie jest unikatowa, kompilator wybierze najbardziej specjalna wersja funkcji szablonu. Ogólne wersja funkcji szablonu **szablonu \<klasy T > wymiany void (T &, T &)**, w algorytmie pliku nagłówka działa przez przypisanie i jest wolne działanie. Specjalna wersja w poszczególnych kontenerach jest znacznie szybsze może współpracować z reprezentacji wewnętrznej klasy kontenera.
+Funkcja szablonu jest algorytm przeznaczone na hash_multimap — klasa kontenera na wykonanie funkcji elementu członkowskiego `left.` [wymiany](../standard-library/hash-multimap-class.md#swap)*(prawy*`)`. To wystąpienie częściowe porządkowanie szablonów funkcji przez kompilator. Gdy funkcje szablonu przeciążone są w sposób dopasowania szablonu za pomocą wywołania funkcji nie jest unikatowa, kompilator wybierze najbardziej wyspecjalizowaną wersję funkcji szablonu. Ogólne wersję funkcji szablonu **szablonu \<klasa T > void swap (T &, T &)**, w algorytmie plik nagłówkowy działa przez przypisanie a wolne działanie. Specjalizowanej wersji w każdym kontenerze jest znacznie szybsza, ponieważ może współpracować z reprezentacji wewnętrznej klasy kontenera.
 
 ## <a name="see-also"></a>Zobacz także
 

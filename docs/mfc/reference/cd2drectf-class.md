@@ -20,12 +20,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c7dc518832dd84bf5ca91765211f96934ea0b4f0
-ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
+ms.openlocfilehash: 1f96adf519eb710d412465a9db4cbd7313f91f41
+ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/26/2018
-ms.locfileid: "36956452"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37338275"
 ---
 # <a name="cd2drectf-class"></a>Klasa CD2DRectF
 Otoka dla `D2D1_RECT_F`.  
@@ -42,13 +42,13 @@ class CD2DRectF : public D2D1_RECT_F;
   
 |Nazwa|Opis|  
 |----------|-----------------|  
-|[CD2DRectF::CD2DRectF](#cd2drectf)|Przeciążone. Konstruuje `CD2DRectF` obiekt z `D2D1_RECT_F` obiektu.|  
+|[CD2DRectF::CD2DRectF](#cd2drectf)|Przeciążone. Konstruuje `CD2DRectF` obiektu z `D2D1_RECT_F` obiektu.|  
   
 ### <a name="public-methods"></a>Metody publiczne  
   
 |Nazwa|Opis|  
 |----------|-----------------|  
-|[CD2DRectF::IsNull](#isnull)|Zwraca **logiczna** wartość, która wskazuje, czy wyrażenie nie zawiera prawidłowych danych ( **null**).|  
+|[CD2DRectF::IsNull](#isnull)|Zwraca **logiczna** wartość, która wskazuje, czy wyrażenie nie zawiera żadnych prawidłowych danych (NULL).|  
   
 ### <a name="public-operators"></a>Operatory publiczne  
   
@@ -82,39 +82,39 @@ CD2DRectF(
   
 ### <a name="parameters"></a>Parametry  
  *Rect*  
- Prostokąt źródła  
+ prostokąta źródłowego  
   
  *fLeft*  
- Lewa współrzędna źródła  
+ Współrzędna lewej źródła  
   
  *fTop*  
- Górna współrzędna źródła  
+ współrzędne źródła  
   
  *fRight*  
- prawa Współrzędna źródła  
+ Źródło bezpośrednio współrzędnych  
   
  *fBottom*  
  Współrzędna dolnej źródła  
   
 ##  <a name="isnull"></a>  CD2DRectF::IsNull  
- Zwraca wartość logiczną, wskazującą, czy wyrażenie nie zawiera prawidłowych danych (Null).  
+ Zwraca wartość logiczną wskazującą, czy wyrażenie nie zawiera żadnych prawidłowych danych (Null).  
   
 ```  
 BOOL IsNull() const;  
 ```  
   
 ### <a name="return-value"></a>Wartość zwracana  
- Wartość TRUE, jeśli prostokąta top, lewej dolnej i prawej wartości są równe 0; w przeciwnym razie wartość FALSE.  
+ Wartość TRUE, jeśli góry prostokąta, po lewej stronie, dolnej i odpowiednie wartości są równe 0; w przeciwnym razie wartość FALSE.  
   
 ##  <a name="operator_crect"></a>  CD2DRectF::operator CRect  
- Konwertuje obiekt CRect CD2DRectF.  
+ Konwertuje CD2DRectF CRect obiektu.  
   
 ```  
 operator CRect();
 ```   
   
 ### <a name="return-value"></a>Wartość zwracana  
- Bieżąca wartość D2D prostokąta.  
+ Bieżąca wartość prostokąta D2D.  
   
 ## <a name="see-also"></a>Zobacz też  
  [Klasy](../../mfc/reference/mfc-classes.md)

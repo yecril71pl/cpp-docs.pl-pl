@@ -21,26 +21,26 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9153d5e85540c50e11e096c33c474f1344d3ad2f
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 237ce1e956cd05f21a34d0b2b159ba104167ca37
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33846210"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38959595"
 ---
 # <a name="debug-iterator-support"></a>Obsługa iteratora debugowania
 
-Biblioteki wykonawczej programu Visual C++ wykrywa Użyj iteratora niepoprawny i potwierdzeń i wyświetla okno dialogowe w czasie wykonywania. Aby włączona obsługa iteratora debugowania, należy użyć debugowania wersji standardowa biblioteka C++ i Biblioteka środowiska wykonawczego języka C do skompilowania programu. Aby uzyskać więcej informacji, zobacz [Biblioteka CRT — funkcje](../c-runtime-library/crt-library-features.md). Aby uzyskać informacje o sposobie używania zaznaczone Iteratory, zobacz [zaznaczone Iteratory](../standard-library/checked-iterators.md).
+Biblioteka środowiska uruchomieniowego Visual C++ wykrywa użycie iteratora niepoprawne potwierdza i wyświetla okno dialogowe w czasie wykonywania. Aby włączyć Obsługa iteratora debugowania, należy użyć wersje do debugowania biblioteki standardowej języka C++ i biblioteki wykonawczej języka C skompilować program. Aby uzyskać więcej informacji, zobacz [funkcje biblioteki CRT](../c-runtime-library/crt-library-features.md). Aby uzyskać informacje o sposobie używania Iteratory sprawdzane, zobacz [Checked Iterators](../standard-library/checked-iterators.md).
 
-C++ standard opisano, jak funkcji elementów członkowskich może spowodować Iteratory kontener staną się nieprawidłowe. Przedstawiono dwa przykłady:
+C++ standard w tym artykule opisano sposób elementów członkowskich może spowodować Iteratory do kontenera, które staną się nieprawidłowe. Dwa przykłady to:
 
 - Wymazywanie elementu z kontenera powoduje, że Iteratory do elementu staną się nieprawidłowe.
 
-- Zwiększenie rozmiaru [wektor](../standard-library/vector.md) za pomocą wypychania lub Wstaw Iteratory przyczyny do `vector` staną się nieprawidłowe.
+- Zwiększenie rozmiaru [wektor](../standard-library/vector.md) za pomocą wypychania lub Wstaw iteratorów powoduje, że do `vector` staną się nieprawidłowe.
 
 ## <a name="example"></a>Przykład
 
-Jeśli kompilacja ten przykładowy program w trybie debugowania w czasie wykonywania go potwierdzeń i kończy.
+W przypadku kompilacji ten przykładowy program w trybie debugowania w czasie wykonywania go potwierdza i kończy się.
 
 ```cpp
 // iterator_debugging_0.cpp
@@ -71,7 +71,7 @@ int main() {
 
 ## <a name="example"></a>Przykład
 
-Można użyć makra preprocesora [_ITERATOR_DEBUG_LEVEL](../standard-library/iterator-debug-level.md) o wyłączenie debugowania funkcji kompilacji debugowania iteratora. Ten program nie, ale nadal wyzwala niezdefiniowane zachowanie.
+Można użyć makra preprocesora [_ITERATOR_DEBUG_LEVEL](../standard-library/iterator-debug-level.md) wyłączenia debugowania funkcji do kompilacji debugowanej iteratora. Ten program nie, ale nadal wyzwala niezdefiniowane zachowanie.
 
 ```cpp
 // iterator_debugging_1.cpp
@@ -108,7 +108,7 @@ int main() {
 
 ## <a name="example"></a>Przykład
 
-Assert występuje również w przypadku, Jeśli spróbujesz użyć iteratora przed zainicjowaniem, jak pokazano poniżej:
+Asercja również występuje, Jeśli spróbujesz użyć iteratora, zanim zostanie zainicjowany, jak pokazano poniżej:
 
 ```cpp
 // iterator_debugging_2.cpp
@@ -125,7 +125,7 @@ int main() {
 
 ## <a name="example"></a>Przykład
 
-Poniższy przykład kodu powoduje potwierdzenia, ponieważ dwie Iteratory do [for_each](../standard-library/algorithm-functions.md#for_each) algorytm są niezgodne. Algorytmy Sprawdź, czy Iteratory, które są dostarczane do nich odwoływać się tego samego kontenera.
+Poniższy przykładowy kod powoduje potwierdzenie, ponieważ dwóch iteratorów [for_each](../standard-library/algorithm-functions.md#for_each) algorytm są niezgodne. Algorytmy Sprawdź, czy Iteratory, które są dostarczane do nich odwoływać się do tego samego kontenera.
 
 ```cpp
 // iterator_debugging_3.cpp
@@ -151,11 +151,11 @@ int main()
 }
 ```
 
-Powiadomienie, że w tym przykładzie użyto wyrażenia lambda `[] (int& elem) { elem *= 2; }` zamiast obiekt. Mimo że ten wybór nie ma żadnego wpływu na niepowodzenie assert — podobne obiekt mogłyby spowodować niepowodzenie tej samej — wyrażenia lambda są bardzo przydatne sposobem wykonania określonych zadań obiektu compact funkcji. Aby uzyskać więcej informacji na temat wyrażeń lambda, zobacz [wyrażenia Lambda](../cpp/lambda-expressions-in-cpp.md).
+Zwróć uwagę, że w tym przykładzie użyto wyrażenia lambda `[] (int& elem) { elem *= 2; }` zamiast funktorem. Mimo że ten wybór nie ma wpływu na niepowodzenie asercji — podobne funktor mogłoby spowodować wystąpienie takiego samego błędu — wyrażenia lambda są bardzo przydatne w sposób wykonywania zadań obiektu compact funkcji. Aby uzyskać więcej informacji na temat wyrażeń lambda, zobacz [wyrażeń Lambda](../cpp/lambda-expressions-in-cpp.md).
 
 ## <a name="example"></a>Przykład
 
-Kontrole iteratora debugowania powodować zmiennej iteracyjnej, która jest zadeklarowana w `for` pętli się poza zakres podczas `for` kończy się w zakresie pętli.
+Debugowania iteratora sprawdza również powodować zmienna iteratora, który jest zadeklarowany w **dla** pętli się poza zakres, kiedy **dla** zakończeniu zakresu pętli.
 
 ```cpp
 // iterator_debugging_4.cpp
@@ -177,7 +177,7 @@ int main() {
 
 ## <a name="example"></a>Przykład
 
-Debugowanie Iteratory mają destruktory nieuproszczony. W przypadku destruktor nie jest uruchamiane, niezależnie od przyczyny, mogą wystąpić naruszenia zasad dostępu i uszkodzenie danych. Rozważmy następujący przykład:
+Debugowanie Iteratory mają nietrywialnymi destruktory. Jeśli destruktor nie jest uruchamiany z jakiegokolwiek powodu, może wystąpić naruszenia zasad dostępu i uszkodzeniem danych. Rozważmy następujący przykład:
 
 ```cpp
 // iterator_debugging_5.cpp

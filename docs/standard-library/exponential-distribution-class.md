@@ -33,12 +33,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8f324eaea0f84767d174bb109a8c1cfff7abfb50
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: e40c06d2dc95366e154f4299dda0087c42698312
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33850082"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38960199"
 ---
 # <a name="exponentialdistribution-class"></a>exponential_distribution — Klasa
 
@@ -77,24 +77,24 @@ public:
 
 ### <a name="parameters"></a>Parametry
 
-*RealType* wartość domyślna typu wynik zmiennoprzecinkowy to `double`. Dla typów możliwych [ \<losowe >](../standard-library/random.md).
+*RealType* typu wyniku zmiennoprzecinkowych, wartość domyślna to **double**. Aby możliwych typów, zobacz [ \<losowy >](../standard-library/random.md).
 
-*URNG* aparat losowe generatora liczb. Dla typów możliwych [ \<losowe >](../standard-library/random.md).
+*URNG* losowego silnika generatora liczb. Aby możliwych typów, zobacz [ \<losowy >](../standard-library/random.md).
 
 ## <a name="remarks"></a>Uwagi
 
-Klasa szablonu opisuje dystrybucji, który spowoduje utworzenie wartości typu całkowitego określone przez użytkownika typu lub typu `double` Jeśli nie zostanie podana, rozdzielonych rozkład wykładniczy. Poniższe łącza tabeli do artykułów na temat poszczególnych członków.
+Klasa szablonu opisuje dystrybucji, który tworzy wartości całkowitego określone przez użytkownika typu lub typu **double** rozkładane Jeśli nie zostanie podana, rozkład wykładniczy. Poniższa tabela zawiera linki do artykułów na temat poszczególnych elementów członkowskich.
 
 ||||
 |-|-|-|
 |[exponential_distribution](#exponential_distribution)|`exponential_distribution::lambda`|`exponential_distribution::param`|
 |`exponential_distribution::operator()`||[param_type](#param_type)|
 
-Funkcja członkowska właściwości `lambda()` zwraca wartość parametru przechowywanych dystrybucji `lambda`.
+Funkcja elementu członkowskiego właściwość `lambda()` zwraca wartość dla parametru przechowywanych dystrybucji `lambda`.
 
-Funkcja członkowska właściwości `param()` Ustawia lub zwraca `param_type` dystrybucji składowanych parametr pakietu.
+Funkcja elementu członkowskiego właściwość `param()` Ustawia lub zwraca `param_type` pakiet parametrów przechowywanych dystrybucji.
 
-Aby uzyskać więcej informacji o dystrybucji klasy i ich elementy członkowskie, zobacz [ \<losowe >](../standard-library/random.md).
+Aby uzyskać więcej informacji o dystrybucji klasy i składowe, zobacz [ \<losowy >](../standard-library/random.md).
 
 Aby uzyskać szczegółowe informacje na temat rozkład wykładniczy, zobacz artykuł Wolfram MathWorld [rozkład wykładniczy](http://go.microsoft.com/fwlink/p/?linkid=401098).
 
@@ -176,13 +176,13 @@ Distribution for 10 samples:
 
 ## <a name="requirements"></a>Wymagania
 
-**Nagłówek:** \<losowe >
+**Nagłówek:** \<losowy >
 
-**Namespace:** Standard
+**Namespace:** standardowe
 
 ## <a name="exponential_distribution"></a>  exponential_distribution::exponential_distribution
 
-Tworzy dystrybucji.
+Tworzy rozkład.
 
 ```cpp
 explicit exponential_distribution(result_type lambda = 1.0);
@@ -193,15 +193,15 @@ explicit exponential_distribution(const param_type& parm);
 
 *lambda* `lambda` parametru dystrybucji.
 
-*Parametr* użyta do skonstruowania dystrybucji pakietu parametrów.
+*Parametr* pakiet parametru wykorzystywany do konstruowania dystrybucji.
 
 ### <a name="remarks"></a>Uwagi
 
 **Warunek wstępny:** `0.0 < lambda`
 
-Pierwszy Konstruktor konstrukcji obiektu których przechowywane `lambda` wartość przechowuje wartość *lambda*.
+Pierwszy Konstruktor konstruuje obiekt, którego przechowywane `lambda` wartość przechowuje wartość *lambda*.
 
-Drugi Konstruktor konstrukcji obiektu, którego parametry przechowywane są inicjowane z *parametr*. Możesz uzyskać i ustawić bieżących parametrów istniejącego dystrybucji przez wywołanie metody `param()` funkcję elementu członkowskiego.
+Drugi Konstruktor konstruuje obiekt, którego przechowywane parametry są inicjowane z *parametr*. Możesz uzyskać i ustawić bieżących parametrów istniejącego dystrybucji przez wywołanie metody `param()` funkcja elementu członkowskiego.
 
 ## <a name="param_type"></a>  exponential_distribution::param_type
 
@@ -228,8 +228,8 @@ struct param_type {
 
 **Warunek wstępny:** `0.0 < lambda`
 
-Ta struktura może być przekazany do konstruktora klasy dystrybucji przy tworzeniu wystąpienia, do `param()` funkcji członkowskiej, aby ustawić parametry przechowywane istniejących dystrybucji oraz do `operator()` do użycia zamiast przechowywane parametry.
+Ta struktura może być przekazywany do konstruktora klasy dystrybucji przy konkretyzacji, do `param()` funkcję elementu członkowskiego, aby ustawić przechowywanych parametrów istniejącego dystrybucji oraz do `operator()` ma być używany zamiast przechowywanych parametrów.
 
 ## <a name="see-also"></a>Zobacz także
 
-[\<losowe >](../standard-library/random.md)<br/>
+[\<losowy >](../standard-library/random.md)<br/>

@@ -16,15 +16,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6a60e4af31ba5da23f399f86175ed4fcf1e4ec14
-ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
+ms.openlocfilehash: ddc4868d7cc3c094ad2bb81b5d9706a2b749553d
+ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/26/2018
-ms.locfileid: "36950307"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37339350"
 ---
 # <a name="bitmap-structure"></a>Struktura BITMAP
-**Mapy BITOWEJ** struktury określa wysokość, szerokość, format koloru i wartości bitowe logiczne mapy bitowej **.**  
+**Mapy BITOWEJ** definiuje strukturę, wysokość, szerokość, format koloru i wartości bitowe logicznej mapy bitowej **.**  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -51,7 +51,7 @@ typedef struct tagBITMAP {  /* bm */
  Określa wysokość mapy bitowej w wierszach rastrowych. Wysokość musi być większa od 0.  
   
  *bmWidthBytes*  
- Określa liczbę bajtów w każdym wierszu rastrowym. Ta wartość musi być liczbą parzystą, ponieważ graficzny interfejs urządzenia (GDI) zakłada, że wartości bitowe mapy bitowej tworzą tablicę wartości całkowitych (2-bajtowych). Innymi słowy *bmWidthBytes* \* 8 musi być dalej wielokrotnością 16 większa lub równa wartości uzyskać po *bmWidth* elementu członkowskiego jest mnożona przez *bmBitsPixel*  elementu członkowskiego.  
+ Określa liczbę bajtów w każdym wierszu rastrowym. Ta wartość musi być liczbą parzystą, ponieważ graficzny interfejs urządzenia (GDI) zakłada, że wartości bitowe mapy bitowej tworzą tablicę wartości całkowitych (2-bajtowych). Innymi słowy *bmWidthBytes* \* 8 musi być kolejną wielokrotnością liczby 16, większą lub równą wartości uzyskanej po *bmWidth* elementu członkowskiego jest mnożony przez *bmBitsPixel*  elementu członkowskiego.  
   
  *bmPlanes*  
  Określa liczbę płaszczyzn kolorów w mapie bitowej.  
@@ -60,12 +60,12 @@ typedef struct tagBITMAP {  /* bm */
  Określa liczbę bitów sąsiadujących kolorów na każdej płaszczyźnie niezbędnej do zdefiniowania piksela.  
   
  *bmBits*  
- Wskazuje lokalizację wartości bitowych mapy bitowej. *BmBits* element członkowski musi być długi wskaźnika do tablicy wartości 1-bajtowego.  
+ Wskazuje lokalizację wartości bitowych mapy bitowej. *BmBits* elementu członkowskiego musi być wskaźnikiem long do tablicy wartości 1-bajtowe.  
   
 ## <a name="remarks"></a>Uwagi  
  Obecnie są stosowane dwa formaty map bitowych: monochromatyczne i kolorowe. Mapa bitowa monochromatyczna używa formatu 1-bitowego 1-płaszczyznowego. Każde skanowanie jest wielokrotnością 16 bitów.  
   
- Skanowania są zorganizowane w następujący sposób dla monochromatyczny mapy bitowej wysokości *n*:  
+ Skanowania są zorganizowane w następujący sposób dla monochromatycznych map bitowych o wysokości *n*:  
   
  `Scan 0`  
   
@@ -83,9 +83,9 @@ typedef struct tagBITMAP {  /* bm */
   
  Piksele na urządzeniu monochromatycznym są czarne lub białe. Jeśli odnośny bit w mapie bitowej ma wartość 1, piksel jest włączony (biały). Gdy odnośny bit w mapie bitowej ma wartość 0, piksel jest wyłączony (czarny).  
   
- Wszystkie urządzenia obsługują bitmap **RC_BITBLT** w ustawiony bit **RASTERCAPS** indeks [CDC::GetDeviceCaps](../../mfc/reference/cdc-class.md#getdevicecaps) funkcję elementu członkowskiego.  
+ Wszystkie urządzenia obsługują mapy bitowe, które mają zestaw rastercaps bit w indeksie RASTERCAPS [rc_bitblt](../../mfc/reference/cdc-class.md#getdevicecaps) funkcja elementu członkowskiego.  
   
- Każde urządzenie ma własny unikatowy format koloru. Aby przenieść mapę bitową z jednego urządzenia do innego, użyj [GetDIBits](http://msdn.microsoft.com/library/windows/desktop/dd144879) i [SetDIBits](http://msdn.microsoft.com/library/windows/desktop/dd162973) funkcje systemu Windows.  
+ Każde urządzenie ma własny unikatowy format koloru. W celu przekazania bitmapy z jednego urządzenia do innego, należy użyć [GetDIBits](http://msdn.microsoft.com/library/windows/desktop/dd144879) i [SetDIBits](http://msdn.microsoft.com/library/windows/desktop/dd162973) funkcje Windows.  
   
 ## <a name="requirements"></a>Wymagania  
  **Nagłówek:** wingdi.h  

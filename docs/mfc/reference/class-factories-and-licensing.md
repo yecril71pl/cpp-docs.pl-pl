@@ -16,32 +16,32 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e8f411aeb88a2d76265c6e8c277b367cb1ebce57
-ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
+ms.openlocfilehash: abb9d5ca169edf28bb3f72c26e644894c12ccb93
+ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/27/2018
-ms.locfileid: "37038239"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37336235"
 ---
 # <a name="class-factories-and-licensing"></a>Fabryki klas i licencjonowanie
-Aby utworzyć wystąpienia formantu OLE, aplikacji kontenera wywołania funkcji członkowskiej klasy fabryki klasy formantu. Ponieważ formantu rzeczywistego obiektu OLE, fabryki klasy jest odpowiedzialny za tworzenie wystąpienia formantu. Każda klasa formantu OLE musi mieć fabrykę klas.  
+Aby utworzyć wystąpienie kontrolki OLE, aplikacji kontenera wywołania funkcji składowej typu fabryki klas formantu. Ponieważ formant do rzeczywistego obiektu OLE, fabryki klas jest odpowiedzialny za tworzenie wystąpienia formantu. Każda klasa sterowania OLE musi mieć fabrykę klas.  
   
- Inną ważną funkcją formantów OLE jest możliwość wymuszania licencji. ControlWizard pozwala na uwzględnienie licencjonowania podczas tworzenia projektu kontroli. Aby uzyskać więcej informacji dotyczących licencji formantu, zobacz artykuł [formantów ActiveX: Licencjonowanie formantu ActiveX](../../mfc/mfc-activex-controls-licensing-an-activex-control.md).  
+ Inną ważną cechą formantów OLE jest możliwość wymuszania licencji. ControlWizard umożliwia wykorzystanie, licencjonowania podczas tworzenia projektu kontroli. Aby uzyskać więcej informacji na temat licencjonowania formantów, zobacz artykuł [kontrolek ActiveX: Licencjonowanie kontrolki ActiveX](../../mfc/mfc-activex-controls-licensing-an-activex-control.md).  
   
- W poniższej tabeli wymieniono kilka makra i funkcje używane zadeklarować i wdrożenie fabryki klasy formantu i licencji formantu.  
+ W poniższej tabeli wymieniono kilka makra i funkcje używane do deklarowania i implementowanie kontroli nad fabryki klas i licencji formantu.  
   
 ### <a name="class-factories-and-licensing"></a>Fabryki klas i licencjonowanie  
   
 |||  
 |-|-|  
-|[DECLARE_OLECREATE_EX —](#declare_olecreate_ex)|Deklaruje fabryki klasy dla formantu lub właściwości strony dla obiektów OLE.|  
-|[IMPLEMENT_OLECREATE_EX —](#implement_olecreate_ex)|Implementuje formantu `GetClassID` funkcji i deklaruje wystąpienie fabryki klasy.|  
-|[BEGIN_OLEFACTORY —](#begin_olefactory)|Rozpoczyna się deklaracji funkcji licencjonowania.|  
-|[END_OLEFACTORY —](#end_olefactory)|Kończy się deklaracji funkcji licencjonowania.|  
+|[DECLARE_OLECREATE_EX](#declare_olecreate_ex)|Deklaruje fabryki klas dla formantu lub właściwości strony dla obiektów OLE.|  
+|[IMPLEMENT_OLECREATE_EX](#implement_olecreate_ex)|Implementuje formant `GetClassID` funkcji i deklaruje wystąpienie fabryki klas.|  
+|[BEGIN_OLEFACTORY](#begin_olefactory)|Rozpoczyna się deklaracji wszystkie funkcje licencjonowania.|  
+|[END_OLEFACTORY](#end_olefactory)|Kończy się w deklaracji funkcji licencjonowania.|  
 |[Afxverifylicfile —](#afxverifylicfile)|Sprawdza, czy formant jest licencjonowany do użycia na danym komputerze.|  
   
-##  <a name="declare_olecreate_ex"></a>  DECLARE_OLECREATE_EX —  
- Deklaruje fabrykę klas i `GetClassID` funkcji członkowskiej klasy formantu.  
+##  <a name="declare_olecreate_ex"></a>  DECLARE_OLECREATE_EX  
+ Deklaruje fabryki klas i `GetClassID` funkcji składowej klasy kontrolki.  
   
 ```   
 DECLARE_OLECREATE_EX(class_name)   
@@ -49,20 +49,20 @@ DECLARE_OLECREATE_EX(class_name)
   
 ### <a name="parameters"></a>Parametry  
  *class_name*  
- Nazwa klasy formantu.  
+ Nazwa klasy kontrolki.  
   
 ### <a name="remarks"></a>Uwagi  
- Używanie tego makra w pliku nagłówka klasy formantu, który nie obsługuje licencjonowania.  
+ Użyj tego makra w plik nagłówkowy klasy formantu, formant, który nie obsługuje licencjonowania.  
   
- Należy pamiętać, że to makro pełni tę samą funkcję jak w poniższym przykładzie kodu:  
+ Należy zwrócić uwagę na to, że to makro pełni tę samą funkcję, jak w następującym przykładzie kodu:  
   
  [!code-cpp[NVC_MFCAxCtl#14](../../mfc/reference/codesnippet/cpp/class-factories-and-licensing_1.h)]  
   
 ### <a name="requirements"></a>Wymagania  
   **Nagłówek** afxctl.h  
   
-##  <a name="implement_olecreate_ex"></a>  IMPLEMENT_OLECREATE_EX —  
- Implementuje fabryki klasy formantu i [Procedura GetClassID](../../mfc/reference/colecontrol-class.md#getclassid) funkcji członkowskiej klasy formantu.  
+##  <a name="implement_olecreate_ex"></a>  IMPLEMENT_OLECREATE_EX  
+ Implementuje kontroli nad fabryki klas i [Procedura GetClassID](../../mfc/reference/colecontrol-class.md#getclassid) funkcji składowej klasy kontrolki.  
   
 ```   
 IMPLEMENT_OLECREATE_EX(
@@ -89,16 +89,16 @@ IMPLEMENT_OLECREATE_EX(
  Nazwa obiektu widoczne dla aplikacji.  
   
  *l, w1, w2, b1, b2, b3, b4, b5, b6, b7, b8*  
- Składniki klasy **CLSID**. Aby uzyskać więcej informacji o tych parametrów, zobacz uwagi dla [implement_olecreate —](run-time-object-model-services.md#implement_olecreate).  
+ Składniki CLSID tej klasy. Aby uzyskać więcej informacji na temat tych parametrów, zobacz uwagi dla [IMPLEMENT_OLECREATE](run-time-object-model-services.md#implement_olecreate).  
   
 ### <a name="remarks"></a>Uwagi  
- To makro musi występować w pliku implementacji dla dowolnej klasy formantu, który używa `DECLARE_OLECREATE_EX` makro lub `BEGIN_OLEFACTORY` i `END_OLEFACTORY` makra. Zewnętrzna nazwa to identyfikator formantu OLE, który jest dostępny dla innych aplikacji. Kontenery ta nazwa jest używana do żądania obiektu tej klasy formantu.  
+ To makro musi znajdować się w pliku implementacji dla każdej klasy kontrolki, która używa DECLARE_OLECREATE_EX — makro lub BEGIN_OLEFACTORY i END_OLEFACTORY makra. Zewnętrzna nazwa to identyfikator kontrolki OLE, która jest widoczna dla innych aplikacji. Ta nazwa jest używana przez kontenery na żądanie obiekt tej klasy kontrolki.  
   
 ### <a name="requirements"></a>Wymagania  
   **Nagłówek** afxctl.h  
   
-##  <a name="begin_olefactory"></a>  BEGIN_OLEFACTORY —  
- Rozpoczyna się deklaracja fabryce klasy w pliku nagłówka klasy formantu.  
+##  <a name="begin_olefactory"></a>  BEGIN_OLEFACTORY  
+ Rozpoczyna się deklaracji fabryki klas w pliku nagłówkowym Twojej klasy kontrolki.  
   
 ``` 
 BEGIN_OLEFACTORY(class_name)  
@@ -106,16 +106,16 @@ BEGIN_OLEFACTORY(class_name)
   
 ### <a name="parameters"></a>Parametry  
  *class_name*  
- Określa nazwę klasy formantu fabryki klasy, których to.  
+ Określa nazwę klasy kontrolki fabryki klas, których to.  
   
 ### <a name="remarks"></a>Uwagi  
- Deklaracje funkcji licencjonowania fabryki klasy powinny one zacząć od razu po `BEGIN_OLEFACTORY`.  
+ Deklaracje fabryki klas licencjonowania funkcji ma się zacząć od razu po BEGIN_OLEFACTORY.  
   
 ### <a name="requirements"></a>Wymagania  
   **Nagłówek** afxctl.h  
   
-##  <a name="end_olefactory"></a>  END_OLEFACTORY —  
- Kończy się deklaracja fabryki klasy formantu.  
+##  <a name="end_olefactory"></a>  END_OLEFACTORY  
+ Kończy się deklaracji kontroli nad fabryki klas.  
   
 ```  
 END_OLEFACTORY(class_name)   
@@ -123,13 +123,13 @@ END_OLEFACTORY(class_name)
   
 ### <a name="parameters"></a>Parametry  
  *class_name*  
- Nazwa fabryki klasy, których to klasy formantu.  
+ Nazwa klasy kontrolki fabryki klas, których to.  
   
 ### <a name="requirements"></a>Wymagania  
   **Nagłówek** afxctl.h  
   
 ##  <a name="afxverifylicfile"></a>  Afxverifylicfile —  
- Wywołanie tej funkcji, aby sprawdzić, czy plik licencji o nazwie `pszLicFileName` jest nieprawidłowa dla formantu OLE.  
+ Wywołaj tę funkcję, aby sprawdzić, czy plik licencji o nazwie określonej przez `pszLicFileName` nadaje się do sterowania OLE.  
   
 ```   
 BOOL AFXAPI AfxVerifyLicFile(
@@ -141,19 +141,19 @@ BOOL AFXAPI AfxVerifyLicFile(
   
 ### <a name="parameters"></a>Parametry  
  *hInstance*  
- Dojście wystąpienia skojarzony z formantem licencjonowane biblioteki dll.  
+ Dojście wystąpienia jest skojarzony z licencjonowany formant biblioteki dll.  
   
  *pszLicFileName*  
- Wskazuje ciąg znaków zakończony znakiem null, zawierający nazwę pliku licencji.  
+ Wskazuje ciąg znaków zakończony znakiem null zawierający nazwę pliku licencji.  
   
  *pszLicFileContents*  
- Punkty sekwencji bajtów, która musi być zgodna sekwencji znaleziono na początku pliku licencji.  
+ Wskazuje na sekwencję bajtów, która musi być zgodna z sekwencji znalezione na początku pliku licencji.  
   
  *CCH*  
  Liczba znaków w *pszLicFileContents*.  
   
 ### <a name="return-value"></a>Wartość zwracana  
- Różna od zera, jeśli istnieje plik licencji rozpoczyna się od sekwencja znaków w *pszLicFileContents*; w przeciwnym razie wartość 0.  
+ Wartość różną od zera, jeśli istnieje plik licencji i zaczyna się od sekwencji znaków w *pszLicFileContents*; w przeciwnym razie 0.  
   
 ### <a name="remarks"></a>Uwagi  
  Jeśli *cch* wynosi -1, korzysta z tej funkcji:  

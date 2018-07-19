@@ -1,5 +1,5 @@
 ---
-title: Klasa is_copy_assignable | Dokumentacja firmy Microsoft
+title: is_copy_assignable, klasa | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,14 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f9c63aa54675bd0b1d5a52a1c0a9d80a73f53290
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 65ac9dc44da5126673ee1f0699f5a5dd9dcb87e1
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33842823"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38960784"
 ---
-# <a name="iscopyassignable-class"></a>is_copy_assignable — klasa
+# <a name="iscopyassignable-class"></a>is_copy_assignable, klasa
 
 Testy czy typ ma można kopiować przypisania.
 
@@ -36,17 +36,17 @@ struct is_copy_assignable;
 
 ### <a name="parameters"></a>Parametry
 
-`Ty` Typ do zapytania.
+*Ty* typ do zapytania.
 
 ## <a name="remarks"></a>Uwagi
 
-Wystąpienie typu predykatu posiada wartość true Jeśli typ `Ty` jest klasa, która ma operatora przypisania kopii, w przeciwnym razie posiada wartość false. Odpowiednikiem is_assignable\<Ty & const Ty & >.
+Wystąpienie typu predykatu ma wartość true, jeśli typ *Ty* to klasa, która zawiera operator przypisania kopii, w przeciwnym razie przechowuje wartość false. Odpowiednikiem is_assignable\<Ty & const Ty & >.
 
 ## <a name="requirements"></a>Wymagania
 
 **Nagłówek:** \<type_traits >
 
-**Namespace:** Standard
+**Namespace:** standardowe
 
 ## <a name="see-also"></a>Zobacz także
 

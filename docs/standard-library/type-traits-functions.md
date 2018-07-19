@@ -26,12 +26,12 @@ helpviewer_keywords:
 - std::is_trivially_copy_assignable
 - std::is_trivially_move_assignable
 - std::is_trivially_move_constructible
-ms.openlocfilehash: ff6d6066d90fe5049b89586ce657e62860c12f9f
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 3754af9a32ab1beeb4f3b9a783547bd081d57a46
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33861097"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38955841"
 ---
 # <a name="lttypetraitsgt-functions"></a>&lt;type_traits&gt; funkcji
 
@@ -44,7 +44,7 @@ ms.locfileid: "33861097"
 
 ## <a name="is_assignable"></a>  is_assignable
 
-Sprawdza, czy wartość `From` typu mogą być przypisane do `To` typu.
+Sprawdza, czy wartość *z* typu mogą być przypisane do *do* typu.
 
 ```cpp
 template <class To, class From>
@@ -53,13 +53,15 @@ struct is_assignable;
 
 ### <a name="parameters"></a>Parametry
 
-Typ obiektu, który odbiera przypisania.
+*To*  
+ Typ obiektu, który odbiera przypisania.
 
-Z typu obiektu, który zawiera wartość.
+*From*  
+ Typ obiektu, który zawiera wartość.
 
 ### <a name="remarks"></a>Uwagi
 
-Wyrażenie, którego nie obliczono `declval<To>() = declval<From>()` musi być poprawnie sformułowany. Zarówno `From` i `To` musi być ukończone typy `void`, lub tablic z nieznanym powiązaniem.
+Wyrażenie nieobliczonym `declval<To>() = declval<From>()` musi być poprawnie sformułowany. Zarówno *z* i *do* muszą być typami pełnymi **void**, lub tablic nieznany powiązane z.
 
 ## <a name="is_copy_assignable"></a>  is_copy_assignable
 
@@ -72,15 +74,16 @@ struct is_copy_assignable;
 
 ### <a name="parameters"></a>Parametry
 
-`Ty` Typ do zapytania.
+*Ty*  
+ Typ do zapytania.
 
 ### <a name="remarks"></a>Uwagi
 
-Wystąpienie typu predykatu posiada wartość true Jeśli typ `Ty` jest klasa, która ma operatora przypisania kopii, w przeciwnym razie posiada wartość false. Odpowiednikiem is_assignable\<Ty & const Ty & >.
+Wystąpienie typu predykatu ma wartość true, jeśli typ *Ty* to klasa, która zawiera operator przypisania kopii, w przeciwnym razie przechowuje wartość false. Odpowiednikiem is_assignable\<Ty & const Ty & >.
 
 ## <a name="is_copy_constructible"></a>  is_copy_constructible
 
-Testy, jeśli typ ma konstruktora kopiującego.
+Sprawdza, czy typ ma konstruktora kopiującego.
 
 ```cpp
 template <class Ty>
@@ -89,11 +92,12 @@ struct is_copy_constructible;
 
 ### <a name="parameters"></a>Parametry
 
-`Ty` Typ do zapytania.
+*Ty*  
+ Typ do zapytania.
 
 ### <a name="remarks"></a>Uwagi
 
-Wystąpienie typu predykatu posiada wartość true Jeśli typ `Ty` jest klasa, która ma konstruktora kopiującego, w przeciwnym razie posiada wartość false.
+Wystąpienie typu predykatu ma wartość true, jeśli typ *Ty* to klasa, która ma Konstruktor kopiujący w przeciwnym razie przechowuje wartość false.
 
 ### <a name="example"></a>Przykład
 
@@ -132,7 +136,7 @@ is_copy_constructible<NotCopyable > == false
 
 ## <a name="is_default_constructible"></a>  is_default_constructible
 
-Testy, jeśli typ ma konstruktora domyślnego.
+Sprawdza, czy typ ma konstruktora domyślnego.
 
 ```cpp
 template <class Ty>
@@ -141,11 +145,12 @@ struct is_default_constructible;
 
 ### <a name="parameters"></a>Parametry
 
-`T` Typ do zapytania.
+*T*  
+ Typ do zapytania.
 
 ### <a name="remarks"></a>Uwagi
 
-Wystąpienie typu predykatu posiada wartość true Jeśli typ `T` jest typem klasy, który ma domyślny konstruktor, w przeciwnym razie posiada wartość false. Jest to równoważne predykatu `is_constructible<T>`. Typ `T` musi być typem pełną `void`, lub tablicy z nieznanym powiązaniem.
+Wystąpienie typu predykatu ma wartość true, jeśli typ *T* jest typu klasy, która ma Konstruktor domyślny w przeciwnym razie przechowuje wartość false. Jest to równoważne do predykatu `is_constructible<T>`. Typ *T* musi być typem kompletnym **void**, lub tablicę nieznany powiązane z.
 
 ### <a name="example"></a>Przykład
 
@@ -184,7 +189,7 @@ is_default_constructible<Simple2> == false
 
 ## <a name="is_move_assignable"></a>  is_move_assignable
 
-Testy, jeśli typ można przenieść przypisane.
+Sprawdza, czy typ może być przejście przypisane.
 
 ```cpp
 template <class T>
@@ -193,15 +198,16 @@ struct is_move_assignable;
 
 ### <a name="parameters"></a>Parametry
 
-`T` Typ do zapytania.
+*T*  
+ Typ do zapytania.
 
 ### <a name="remarks"></a>Uwagi
 
-Typ jest przeniesienie można przypisać, jeśli odwołania do r-wartości na typ można przypisać do odwołania do typu. Predykat typów jest odpowiednikiem `is_assignable<T&, T&&>`. Przenieś można przypisać typy referenceable typów skalarnych i operatory przypisania przenoszenia typy klas, którzy generowane przez kompilator lub zdefiniowanej przez użytkownika.
+Typ jest możliwy do przypisania przeniesienia, jeśli odwołania rvalue do tego typu mogą być przypisane do odwołanie do typu. Predykat typów jest odpowiednikiem `is_assignable<T&, T&&>`. Przenieś można przypisać typy obejmują którego można się odwoływać typów skalarnych i typów klasy, które mają generowanych przez kompilator lub zdefiniowanych przez użytkownika operatorów przypisania przenoszenia.
 
 ## <a name="is_move_constructible"></a>  is_move_constructible
 
-Sprawdza, czy typ ma konstruktora przenoszenia.
+Sprawdza, czy typ ma konstruktora przenoszącego.
 
 ```cpp
 template <class T>
@@ -210,11 +216,12 @@ struct is_move_constructible;
 
 ### <a name="parameters"></a>Parametry
 
-Typ T, ma zostać obliczone
+*T*  
+ Typ, który ma zostać obliczone
 
 ### <a name="remarks"></a>Uwagi
 
-Predykat typów, która daje w wyniku wartość true, jeśli typ `T` może być skonstruowany przy użyciu operacji przenoszenia. Odpowiada to predykatu `is_constructible<T, T&&>`.
+Predykat typów, które daje w wyniku wartość true, jeśli typ *T* można skonstruować przy użyciu operacji przenoszenia. Ten predykat jest odpowiednikiem `is_constructible<T, T&&>`.
 
 ## <a name="is_nothrow_move_assignable"></a>  is_nothrow_move_assignable
 
@@ -227,15 +234,16 @@ struct is_nothrow_move_assignable;
 
 ### <a name="parameters"></a>Parametry
 
-`Ty` Typ do zapytania.
+*Ty*  
+ Typ do zapytania.
 
 ### <a name="remarks"></a>Uwagi
 
-Wystąpienie typu predykatu posiada wartość true Jeśli typ `Ty` ma nothrow operator przypisania przenoszenia, w przeciwnym razie posiada wartość false.
+Wystąpienie typu predykatu ma wartość true, jeśli typ *Ty* ma nothrow operator przypisania przenoszenia, w przeciwnym razie przechowuje wartość false.
 
 ## <a name="is_trivially_copy_assignable"></a>  is_trivially_copy_assignable
 
-Sprawdza, czy typ ma operatora przypisania kopii prosta.
+Sprawdza, czy typ ma operator przypisania kopiowania prosta.
 
 ```cpp
 template <class Ty>
@@ -244,13 +252,14 @@ struct is_trivially_copy_assignable;
 
 ### <a name="parameters"></a>Parametry
 
-`T` Typ do zapytania.
+*T*  
+ Typ do zapytania.
 
 ### <a name="remarks"></a>Uwagi
 
-Wystąpienie typu predykatu posiada wartość true Jeśli typ `T` jest klasa, która ma trivial operatora przypisania kopii, w przeciwnym razie posiada wartość false.
+Wystąpienie typu predykatu ma wartość true, jeśli typ *T* to klasa, która ma proste operatora przypisanej kopii, w przeciwnym razie przechowuje wartość false.
 
-Konstruktor przypisania dla klasy `T` jest proste, jeśli jest niejawnie podany, klasa `T` ma żadnych funkcji wirtualnych klasy `T` ma nie wirtualnych typów podstawowych, klas wszystkich członków danych niestatycznych typu klasy mają prosta Operatory przypisania i klasy wszystkich członków danych niestatycznych tablicy typu klasy mają operatory przypisania prosta.
+Konstruktor przypisania dla klasy *T* jest proste, jeśli jest niejawnie podany, klasa *T* ma żadnych funkcji wirtualnych klasy *T* ma nie baz wirtualnych klas Wszyscy członkowie danych niestatycznych typu klasy mają operatory przypisania proste, a klasy wszystkie składowe danych niestatycznych tablicy typu klasy mieć operatory przypisania prosta.
 
 ## <a name="is_trivially_move_assignable"></a>  is_trivially_move_assignable
 
@@ -263,27 +272,28 @@ struct is_trivially_move_assignable;
 
 ### <a name="parameters"></a>Parametry
 
-`Ty` Typ do zapytania.
+*Ty*  
+ Typ do zapytania.
 
 ### <a name="remarks"></a>Uwagi
 
-Wystąpienie typu predykatu posiada wartość true Jeśli typ `Ty` jest klasa, która ma trivial operator przypisania przenoszenia, w przeciwnym razie posiada wartość false.
+Wystąpienie typu predykatu ma wartość true, jeśli typ *Ty* to klasa, która ma proste operator przypisania przenoszenia, w przeciwnym razie przechowuje wartość false.
 
-Operator przypisania przenoszenia, dla klasy `Ty` jest prosta jeśli:
+Operator przypisania przenoszenia dla klasy *Ty* jest proste jeśli:
 
-niejawnie podano
+Domyślnie jest ona udostępniana
 
-Klasa `Ty` ma żadnych funkcji wirtualnych
+Klasa *Ty* ma żadnych funkcji wirtualnych
 
-Klasa `Ty` ma nie wirtualnych typów podstawowych
+Klasa *Ty* ma nie baz wirtualnych
 
-klasy wszystkich członków danych niestatycznych typu klasy mają trivial przenoszące operatory przypisania
+klasy wszystkie składowe danych niestatycznych typu klasy mają trivial przenoszące operatory przypisania
 
-klasy wszystkich członków danych niestatycznych tablicy typu klasy mają trivial przenoszące operatory przypisania
+klasy wszystkie składowe danych niestatycznych typu tablicowego klasy mają trivial przenoszące operatory przypisania
 
 ## <a name="is_trivially_move_constructible"></a>  is_trivially_move_constructible
 
-Testy, jeśli typ ma trivial przenoszenie konstruktora.
+Konstruktor przenoszący sprawdza, czy typ ma proste.
 
 ```cpp
 template <class Ty>
@@ -292,29 +302,30 @@ struct is_trivially_move_constructible;
 
 ### <a name="parameters"></a>Parametry
 
-`Ty` Typ do zapytania.
+*Ty*  
+ Typ do zapytania.
 
 ### <a name="remarks"></a>Uwagi
 
-Wystąpienie typu predykatu posiada wartość true Jeśli typ `Ty` jest klasa, która ma Konstruktor przenoszący trivial w inny sposób przechowuje wartość false.
+Wystąpienie typu predykatu ma wartość true, jeśli typ *Ty* to klasa, która ma Konstruktor przenoszący prosta w przeciwnym razie przechowuje wartość false.
 
-Przenoszenie konstruktora dla klasy `Ty` jest prosta jeśli:
+Konstruktor przenoszący dla klasy *Ty* jest proste jeśli:
 
-został niejawnie zadeklarowany.
+jest niejawnie zadeklarowana
 
-jego typy parametrów są odpowiadające niejawne deklaracji
+jego typy parametrów są równoważne do tych deklaracji niejawnej
 
-Klasa `Ty` ma żadnych funkcji wirtualnych
+Klasa *Ty* ma żadnych funkcji wirtualnych
 
-Klasa `Ty` ma nie wirtualnych typów podstawowych
+Klasa *Ty* ma nie baz wirtualnych
 
-Klasa nie ma żadnych członków danych niestatycznych nietrwałe
+Klasa nie ma danych niestatycznych elementów członkowskich
 
-wszystkie bezpośrednio podstawowych klasy `Ty` mieć konstruktorów przenoszenia prosta
+wszystkie bezpośrednio baz klasy *Ty* ma konstruktorów przenoszących prosta
 
-klasy wszystkich członków danych niestatycznych typu klasy mają konstruktorów przenoszenia prosta
+klasy wszystkie składowe danych niestatycznych typu klasy ma konstruktorów przenoszących prosta
 
-klasy wszystkich członków danych niestatycznych tablicy typu klasy mają konstruktorów przenoszenia prosta
+klasy wszystkie składowe danych niestatycznych typu tablicowego klasy ma konstruktorów przenoszących prosta
 
 ## <a name="see-also"></a>Zobacz także
 

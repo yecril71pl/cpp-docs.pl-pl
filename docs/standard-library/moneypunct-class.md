@@ -56,16 +56,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 28acc1eb2f2ed265d20507d2b47efa657c2d1bb9
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 0ed808d8b28071978e89d873d0af9735167e4dbf
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33862510"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38957512"
 ---
 # <a name="moneypunct-class"></a>moneypunct — Klasa
 
-Klasa szablonu opisuje obiekt, który może służyć jako zestaw reguł ustawienia regionalne do opisywania sekwencji typu `CharType` używany do reprezentowania pieniężnego pole wejściowe lub pole pieniężne danych wyjściowych. Jeśli parametr szablonu `Intl` jest `true`, międzynarodowych konwencji są przestrzegane.
+Klasa szablonu opisuje obiekt, który może służyć jako zestaw reguł ustawień regionalnych do opisania sekwencji typu *CharType* używana do reprezentowania pola pieniężnych danych wejściowych lub pola pieniężnych danych wyjściowych. Jeśli wartość parametru szablonu *Intl* jest *true*, konwencje międzynarodowe są przestrzegane.
 
 ## <a name="syntax"></a>Składnia
 
@@ -76,15 +76,15 @@ class moneypunct;
 
 ### <a name="parameters"></a>Parametry
 
-`CharType` Typ używany w programie do kodowania znaków.
+*CharType* typ używany w programie do kodowania znaków.
 
-`Intl` Flaga określenie, czy międzynarodowych konwencji są przestrzegane.
+*Intl* Flaga określająca, czy międzynarodowe konwencje mają być przestrzegane.
 
 ## <a name="remarks"></a>Uwagi
 
-Podobnie jak w przypadku dowolnego zestawu reguł ustawień regionalnych, identyfikator obiektu statycznego ma początkową przechowywaną wartość zero. Pierwsza próba jej wartości przechowywanej dostępu są przechowywane w unikatową wartość dodatnią **identyfikator.**
+Podobnie jak w przypadku dowolnego zestawu reguł ustawień regionalnych, identyfikator obiektu statycznego ma początkową przechowywaną wartość zero. Pierwsza próba dostępu do jego przechowywanej wartości przechowuje unikatową wartość dodatnią w **identyfikator.**
 
-Stała wewnętrzna obiektu statycznego przechowuje wartość parametru szablonu **wewnętrzna**.
+Obiekt statyczny const intl przechowuje wartość parametru szablonu *Intl*.
 
 ### <a name="constructors"></a>Konstruktorów
 
@@ -101,7 +101,7 @@ Stała wewnętrzna obiektu statycznego przechowuje wartość parametru szablonu 
 
 ### <a name="member-functions"></a>Funkcje Członkowskie
 
-|Funkcja członkowska|Opis|
+|Funkcja elementu członkowskiego|Opis|
 |-|-|
 |[curr_symbol](#curr_symbol)|Zwraca sekwencję elementów specyficzną dla danych ustawień regionalnych w celu wykorzystania jako symbol waluty.|
 |[decimal_point](#decimal_point)|Zwraca sekwencję elementów specyficzną dla danych ustawień regionalnych w celu wykorzystania jako symbol separatora dziesiętnego.|
@@ -114,19 +114,19 @@ Stała wewnętrzna obiektu statycznego przechowuje wartość parametru szablonu 
 |[do_pos_format](#do_pos_format)|Chroniona funkcja wirtualna elementu członkowskiego, wywoływana w celu zwrócenia reguły specyficznej dla ustawień regionalnych przy formatowaniu danych wyjściowych z kwotami dodatnimi.|
 |[do_positive_sign](#do_positive_sign)|Chroniona funkcja wirtualna elementu członkowskiego, która jest wywoływana w celu zwrócenia sekwencji elementów specyficznych dla ustawień regionalnych używanych jako symbol znaku dodatniego.|
 |[do_thousands_sep](#do_thousands_sep)|Chroniona funkcja wirtualna elementu członkowskiego, która jest wywoływana w celu zwrócenia sekwencji elementów specyficznych dla ustawień regionalnych używanych jako symbol separatora tysięcznego.|
-|[frac_digits](#frac_digits)|Zwraca specyficzną dla ustawień regionalnych liczbę cyfr, które mają być wyświetlane z prawej strony każdego znaku dziesiętnego.|
+|[frac_digits —](#frac_digits)|Zwraca specyficzną dla ustawień regionalnych liczbę cyfr, które mają być wyświetlane z prawej strony każdego znaku dziesiętnego.|
 |[Grupowanie](#grouping)|Zwraca regułę specyficzną dla ustawień regionalnych określającą sposób grupowania cyfr na lewo od każdego znaku dziesiętnego.|
 |[neg_format](#neg_format)|Zwraca regułę specyficzną dla ustawień regionalnych przy formatowaniu danych wyjściowych z kwotami ujemnymi.|
 |[negative_sign](#negative_sign)|Zwraca sekwencję elementów specyficzną dla danych ustawień regionalnych w celu wykorzystania jako symbol znaku ujemnego.|
 |[pos_format](#pos_format)|Zwraca regułę specyficzną dla ustawień regionalnych przy formatowaniu danych wyjściowych z kwotami dodatnimi.|
 |[positive_sign](#positive_sign)|Zwraca sekwencję elementów specyficzną dla danych ustawień regionalnych w celu wykorzystania jako symbol znaku dodatniego.|
-|[thousands_sep](#thousands_sep)|Zwraca sekwencję elementów specyficzną dla danych ustawień regionalnych w celu wykorzystania jako symbol separatora tysięcznego.|
+|[thousands_sep —](#thousands_sep)|Zwraca sekwencję elementów specyficzną dla danych ustawień regionalnych w celu wykorzystania jako symbol separatora tysięcznego.|
 
 ## <a name="requirements"></a>Wymagania
 
 **Nagłówek:** \<ustawień regionalnych >
 
-**Namespace:** Standard
+**Namespace:** standardowe
 
 ## <a name="char_type"></a>  moneypunct::char_type
 
@@ -138,7 +138,7 @@ typedef CharType char_type;
 
 ### <a name="remarks"></a>Uwagi
 
-Typ jest synonimem parametru szablonu **CharType**.
+Typ jest synonimem dla parametru szablonu **CharType**.
 
 ## <a name="curr_symbol"></a>  moneypunct::curr_symbol
 
@@ -154,7 +154,7 @@ Ciąg zawierający symbol waluty.
 
 ### <a name="remarks"></a>Uwagi
 
-Funkcja członkowska zwraca [do_curr_symbol](#do_curr_symbol).
+Funkcja elementu członkowskiego zwraca [do_curr_symbol —](#do_curr_symbol).
 
 ### <a name="example"></a>Przykład
 
@@ -187,11 +187,11 @@ CharType decimal_point() const;
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Sekwencja specyficzne dla ustawień regionalnych elementy do użycia jako symbol punktu dziesiętnego.
+Specyficzne dla ustawień regionalnych sekwencja elementów do wykorzystania jako symbol punktu dziesiętnego.
 
 ### <a name="remarks"></a>Uwagi
 
-Funkcja członkowska zwraca [do_decimal_point](#do_decimal_point).
+Funkcja elementu członkowskiego zwraca [do_decimal_point —](#do_decimal_point).
 
 ### <a name="example"></a>Przykład
 
@@ -233,15 +233,15 @@ virtual string_type do_curr_symbol() const;
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Sekwencja specyficzne dla ustawień regionalnych elementy do użycia jako symbol punktu dziesiętnego.
+Specyficzne dla ustawień regionalnych sekwencja elementów do wykorzystania jako symbol punktu dziesiętnego.
 
 ### <a name="example"></a>Przykład
 
-Zobacz przykład [curr_symbol](#curr_symbol), w którym funkcja wirtualny element członkowski jest wywoływana przez `curr_symbol`.
+Zobacz przykład [curr_symbol —](#curr_symbol), w którym funkcja wirtualna elementu członkowskiego jest wywoływana przez `curr_symbol`.
 
 ## <a name="do_decimal_point"></a>  moneypunct::do_decimal_point
 
-Chronionych wirtualną funkcją członkowską zwracającą specyficzne dla ustawień regionalnych sekwencję elementów do użycia jako symbol punktu dziesiętnego.
+Funkcja chronionych wirtualna elementu członkowskiego, która zwraca sekwencję elementów do wykorzystania jako symbol dziesiętny specyficzne dla ustawień regionalnych.
 
 ```cpp
 virtual CharType do_decimal_point() const;
@@ -249,15 +249,15 @@ virtual CharType do_decimal_point() const;
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Sekwencja specyficzne dla ustawień regionalnych elementy do użycia jako symbol punktu dziesiętnego.
+Specyficzne dla ustawień regionalnych sekwencja elementów do wykorzystania jako symbol punktu dziesiętnego.
 
 ### <a name="example"></a>Przykład
 
-Zobacz przykład [decimal_point](#decimal_point), w którym funkcja wirtualny element członkowski jest wywoływana przez `decimal_point`.
+Zobacz przykład [decimal_point —](#decimal_point), w którym funkcja wirtualna elementu członkowskiego jest wywoływana przez `decimal_point`.
 
 ## <a name="do_frac_digits"></a>  moneypunct::do_frac_digits
 
-Funkcja chroniony element członkowski wirtualnego, która zwraca liczbę ustawień regionalnych liczbę miejsc po przecinku do wyświetlenia na prawo od dowolnego punktu dziesiętnego.
+Funkcja chronionych wirtualna elementu członkowskiego, która zwraca specyficzną dla ustawień regionalnych liczbę cyfr, które mają być wyświetlane z prawej strony każdego separatora dziesiętnego.
 
 ```cpp
 virtual int do_frac_digits() const;
@@ -265,15 +265,15 @@ virtual int do_frac_digits() const;
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Specyficzne dla ustawień regionalnych liczba liczbę miejsc po przecinku do wyświetlenia na prawo od dowolnego punktu dziesiętnego.
+Specyficzne dla ustawień regionalnych liczbę cyfr, które mają być wyświetlane z prawej strony każdego separatora dziesiętnego.
 
 ### <a name="example"></a>Przykład
 
-Zobacz przykład [frac_digits](#frac_digits), w którym funkcja wirtualny element członkowski jest wywoływana przez `frac_digits`.
+Zobacz przykład [frac_digits —](#frac_digits), w którym funkcja wirtualna elementu członkowskiego jest wywoływana przez `frac_digits`.
 
 ## <a name="do_grouping"></a>  moneypunct::do_grouping
 
-Chronione wirtualną funkcją członkowską zwracającą regułę specyficznych określające sposób grupowania cyfr na lewo od dowolnego punktu dziesiętnego.
+Funkcja chronionych wirtualna elementu członkowskiego, która zwraca regułę specyficzną dla ustawień regionalnych, określając sposób grupowania cyfr na lewo od każdego znaku dziesiętnego.
 
 ```cpp
 virtual string do_grouping() const;
@@ -281,11 +281,11 @@ virtual string do_grouping() const;
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Reguła specyficzne dla ustawień regionalnych określające sposób grupowania cyfr na lewo od dowolnego punktu dziesiętnego.
+Reguła specyficzne dla ustawień regionalnych określić sposób grupowania cyfr na lewo od każdego znaku dziesiętnego.
 
 ### <a name="example"></a>Przykład
 
-Zobacz przykład [grupowanie](#grouping), w którym funkcja wirtualny element członkowski jest wywoływana przez **grupowanie**.
+Zobacz przykład [grupowanie](#grouping), w którym funkcja wirtualna elementu członkowskiego jest wywoływana przez `grouping`.
 
 ## <a name="do_neg_format"></a>  moneypunct::do_neg_format
 
@@ -297,25 +297,25 @@ virtual pattern do_neg_format() const;
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Chroniony element członkowski wirtualnego funkcja regułę specyficznych określające sposób generowania pola pieniężne danych wyjściowych dla liczbą ujemną. Każdy z czterech elementy **pattern::field** może mieć wartości:
+Chronionych wirtualnej funkcji składowej zwraca regułę specyficzną dla ustawień regionalnych do określania sposobu generowania pola pieniężnych danych wyjściowych dla liczbą ujemną. Każdy z czterech elementów `pattern::field` może mieć wartości:
 
-- **Brak** odpowiada zero lub więcej spacji lub wygenerowanie nothing.
+- `none` Aby dopasować zero lub więcej spacji lub generowanie nothing.
 
-- **znak** zgodny lub wygenerowanie znak dodatnią lub ujemną.
+- `sign` Aby dopasować lub generowanie znaku dodatniego lub ujemnego.
 
-- **miejsce** odpowiada zero lub więcej spacji lub wygenerowanie spacją.
+- `space` Aby dopasować zero lub więcej spacji lub generowanie spację.
 
-- **symbol** zgodny lub wygenerowanie symbol waluty.
+- `symbol` Aby dopasować lub wygenerowania symbolu waluty.
 
-- **wartość** zgodny lub wygenerowanie wartość pieniężną.
+- `value` Aby dopasować lub wygenerować wartość pieniężną.
 
-Składniki pola pieniężne dane wyjściowe są generowane i składniki pieniężnego pole wejściowe są dopasowywane w kolejności, w którym te elementy są wyświetlane w **pattern::field**. Wartości **znak**, **symbol**, **wartość**oraz **Brak** lub **miejsca** musi występować dokładnie jeden raz. Wartość **Brak** nie musi występować jako pierwszy. Przestrzeni wartości **musi** nie są wyświetlane pierwszego lub ostatniego. Jeśli **wewnętrzna** ma wartość true, kolejność jest **symbol**, **znak**, **Brak**, następnie **wartość**.
+Składniki pola pieniężnych danych wyjściowych są generowane i składniki pola pieniężnych danych wejściowych są dopasowywane w kolejności, w którym te elementy są wyświetlane w `pattern::field`. Możliwe wartości `sign`, `symbol`, `value`oraz `none` lub `space` musi znajdować się dokładnie jeden raz. Wartość `none` nie musi występować jako pierwszy. Miejsce na wartość **musi** nie są wyświetlane pierwsze lub ostatnie. Jeśli `Intl` ma wartość true, kolejność jest `symbol`, `sign`, `none`, następnie `value`.
 
-Wersja szablonu `moneypunct` \< **CharType**, **wewnętrzna**> zwraca `{` **money_base::symbol**, **money_ Base::sign**, **money_base::value**, **money_base::none**`}`.
+Wersja szablonu `moneypunct` \< **CharType**, **Intl**> zwraca `{` **money_base::symbol**, **money_ Base::sign**, **money_base::value**, **money_base::none**`}`.
 
 ### <a name="example"></a>Przykład
 
-Zobacz przykład [neg_format](#neg_format), w którym funkcja wirtualny element członkowski jest wywoływana przez `neg_format`.
+Zobacz przykład [neg_format —](#neg_format), w którym funkcja wirtualna elementu członkowskiego jest wywoływana przez `neg_format`.
 
 ## <a name="do_negative_sign"></a>  moneypunct::do_negative_sign
 
@@ -327,11 +327,11 @@ virtual string_type do_negative_sign() const;
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Sekwencja specyficzne dla ustawień regionalnych elementy do użycia jako symbolu wartości ujemnej.
+Sekwencja specyficzne dla ustawień regionalnych elementy do użycia jako znak ujemny.
 
 ### <a name="example"></a>Przykład
 
-Zobacz przykład [negative_sign](#negative_sign), w którym funkcja wirtualny element członkowski jest wywoływana przez `negative_sign`.
+Zobacz przykład [negative_sign —](#negative_sign), w którym funkcja wirtualna elementu członkowskiego jest wywoływana przez `negative_sign`.
 
 ## <a name="do_pos_format"></a>  moneypunct::do_pos_format
 
@@ -343,17 +343,17 @@ virtual pattern do_pos_format() const;
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Chroniony element członkowski wirtualnego funkcja regułę specyficznych określające sposób generowania pola pieniężne danych wyjściowych dla dodatnią wartość. (On również określa jak odpowiadające składniki pieniężnego pole wejściowe). Kodowanie jest taka sama, jak w przypadku [do_neg_format](#do_neg_format).
+Chronionych wirtualnej funkcji składowej zwraca regułę specyficzną dla ustawień regionalnych do określania sposobu generowania pola pieniężnych danych wyjściowych na dodatnią kwotę. (Jego określa również sposób dopasowania składniki pola pieniężnych danych wejściowych.) Kodowanie jest taka sama, jak w przypadku [do_neg_format —](#do_neg_format).
 
-Wersja szablonu moneypunct —\< **CharType**, **Inputlterator**> zwraca `{` **money_base::symbol**, **pieniędzy _base::sign**, **money_base::value**, **money_base::none**`}`.
+Wersja szablonu moneypunct\< **CharType**, **Inputlterator**> zwraca `{` **money_base::symbol**, **pieniędzy _base::sign**, **money_base::value**, **money_base::none**`}`.
 
 ### <a name="example"></a>Przykład
 
-Zobacz przykład [pos_format](#pos_format), w którym funkcja wirtualny element członkowski jest wywoływana przez `pos_format`.
+Zobacz przykład [pos_format —](#pos_format), w którym funkcja wirtualna elementu członkowskiego jest wywoływana przez `pos_format`.
 
 ## <a name="do_positive_sign"></a>  moneypunct::do_positive_sign
 
-Chronionych wirtualną funkcją członkowską zwracającą specyficzne dla ustawień regionalnych sekwencję elementów do użycia jako znak dodatni.
+Funkcja chronionych wirtualna elementu członkowskiego, która zwraca sekwencję elementów do użycia jako znak wartości dodatnich specyficzne dla ustawień regionalnych.
 
 ```cpp
 virtual string_type do_positive_sign() const;
@@ -361,15 +361,15 @@ virtual string_type do_positive_sign() const;
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Sekwencja specyficzne dla ustawień regionalnych elementy do użycia jako znak dodatni.
+Sekwencja specyficzne dla ustawień regionalnych elementy do użycia jako znak wartości dodatnich.
 
 ### <a name="example"></a>Przykład
 
-Zobacz przykład [positive_sign](#positive_sign), w którym funkcja wirtualny element członkowski jest wywoływana przez `positive_sign`.
+Zobacz przykład [positive_sign —](#positive_sign), w którym funkcja wirtualna elementu członkowskiego jest wywoływana przez `positive_sign`.
 
 ## <a name="do_thousands_sep"></a>  moneypunct::do_thousands_sep
 
-Chroniony element członkowski wirtualnego funkcja zwraca element ustawień regionalnych do użycia jako separator grupy na lewo od dowolnego punktu dziesiętnego.
+Funkcja chronionych wirtualna elementu członkowskiego, która zwraca element specyficzne dla ustawień regionalnych używany jako separator grup na lewo od każdego znaku dziesiętnego.
 
 ```cpp
 virtual CharType do_thousands_sep() const;
@@ -377,11 +377,11 @@ virtual CharType do_thousands_sep() const;
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Element ustawień regionalnych do użycia jako separator grupy na lewo od dowolnego punktu dziesiętnego.
+Element specyficzne dla ustawień regionalnych używany jako separator grup na lewo od każdego znaku dziesiętnego.
 
 ### <a name="example"></a>Przykład
 
-Zobacz przykład [thousands_sep](#thousands_sep), w którym funkcja wirtualny element członkowski jest wywoływana przez `thousands_sep`.
+Zobacz przykład [thousands_sep —](#thousands_sep), w którym funkcja wirtualna elementu członkowskiego jest wywoływana przez `thousands_sep`.
 
 ## <a name="frac_digits"></a>  moneypunct::frac_digits
 
@@ -393,11 +393,11 @@ int frac_digits() const;
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Specyficzne dla ustawień regionalnych liczba liczbę miejsc po przecinku do wyświetlenia na prawo od dowolnego punktu dziesiętnego.
+Specyficzne dla ustawień regionalnych liczbę cyfr, które mają być wyświetlane z prawej strony każdego separatora dziesiętnego.
 
 ### <a name="remarks"></a>Uwagi
 
-Funkcja członkowska zwraca [do_frac_digits](#do_frac_digits).
+Funkcja elementu członkowskiego zwraca [do_frac_digits —](#do_frac_digits).
 
 ### <a name="example"></a>Przykład
 
@@ -462,11 +462,11 @@ string grouping() const;
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Reguła specyficzne dla ustawień regionalnych określające sposób grupowania cyfr na lewo od dowolnego punktu dziesiętnego.
+Reguła specyficzne dla ustawień regionalnych określić sposób grupowania cyfr na lewo od każdego znaku dziesiętnego.
 
 ### <a name="remarks"></a>Uwagi
 
-Funkcja członkowska zwraca [do_grouping](#do_grouping).
+Funkcja elementu członkowskiego zwraca [do_grouping —](#do_grouping).
 
 ### <a name="example"></a>Przykład
 
@@ -531,21 +531,21 @@ explicit moneypunct(size_t _Refs = 0);
 
 ### <a name="parameters"></a>Parametry
 
-`_Refs` Wartość całkowita używany do określania typu zarządzania pamięci dla obiektu.
+*_Refs* wartość całkowitą, można określić typ zarządzania pamięci dla obiektu.
 
 ### <a name="remarks"></a>Uwagi
 
-Możliwe wartości `_Refs` i ich znaczenie są:
+Możliwe wartości parametru *_Refs* parametrów i ich znaczenie są:
 
-- 0: okres istnienia obiektu zarządza ustawieniami regionalnymi, które zawierałoby proces.
+- 0: okres istnienia obiektu jest zarządzany przez ustawienia regionalne, zawierających go.
 
 - 1: okres istnienia obiektu musi być zarządzane ręcznie.
 
-- \> 1: te wartości są niezdefiniowane.
+- \> 1: nie zdefiniowano tych wartości.
 
-Nie bezpośredniego przykładów to możliwe, ponieważ destruktor jest chroniony.
+Żadnych przykładów bezpośrednie są to tylko możliwe, ponieważ destruktor jest chroniony.
 
-Konstruktor inicjuje jego obiektu podstawowego z [locale::facet](../standard-library/locale-class.md#facet_class)(_ *Refs*).
+Konstruktor inicjuje jego podstawowego obiektu z [locale::facet](../standard-library/locale-class.md#facet_class)(_ *system plików Refs*).
 
 ## <a name="neg_format"></a>  moneypunct::neg_format
 
@@ -557,11 +557,11 @@ pattern neg_format() const;
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Reguła specyficzne dla ustawień regionalnych formatowanie danych wyjściowych z wartości ujemnych.
+Reguły specyficzne dla ustawień regionalnych przy formatowaniu danych wyjściowych z kwotami ujemnymi.
 
 ### <a name="remarks"></a>Uwagi
 
-Funkcja członkowska zwraca [do_neg_format](#do_neg_format).
+Funkcja elementu członkowskiego zwraca [do_neg_format —](#do_neg_format).
 
 ### <a name="example"></a>Przykład
 
@@ -609,7 +609,7 @@ Zwraca sekwencję elementów specyficzną dla danych ustawień regionalnych w ce
 
 ### <a name="remarks"></a>Uwagi
 
-Funkcja członkowska zwraca [do_negative_sign](#do_negative_sign).
+Funkcja elementu członkowskiego zwraca [do_negative_sign —](#do_negative_sign).
 
 ### <a name="example"></a>Przykład
 
@@ -667,11 +667,11 @@ pattern pos_format() const;
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Reguła specyficzne dla ustawień regionalnych formatowanie danych wyjściowych z kwoty dodatnie.
+Reguły specyficzne dla ustawień regionalnych przy formatowaniu danych wyjściowych z kwotami dodatnimi.
 
 ### <a name="remarks"></a>Uwagi
 
-Funkcja członkowska zwraca [do_pos_format](#do_pos_format).
+Funkcja elementu członkowskiego zwraca [do_pos_format —](#do_pos_format).
 
 ### <a name="example"></a>Przykład
 
@@ -715,11 +715,11 @@ string_type positive_sign() const;
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Sekwencja specyficzne dla ustawień regionalnych elementy do użycia jako symbol dodatnią logowania.
+Sekwencja elementów do wykorzystania jako symbol znaku dodatniego specyficzne dla ustawień regionalnych.
 
 ### <a name="remarks"></a>Uwagi
 
-Funkcja członkowska zwraca [do_positive_sign](#do_positive_sign).
+Funkcja elementu członkowskiego zwraca [do_positive_sign —](#do_positive_sign).
 
 ### <a name="example"></a>Przykład
 
@@ -777,7 +777,7 @@ typedef basic_string<CharType, Traits, Allocator> string_type;
 
 ### <a name="remarks"></a>Uwagi
 
-Typ w tym artykule opisano specjalizacji szablonu klasy [basic_string —](../standard-library/basic-string-class.md) obiektów, których można przechowywać kopie sekwencje znaków interpunkcyjnych.
+Typ opisuje specjalizacji szablonu klasy [basic_string](../standard-library/basic-string-class.md) których obiekty można przechowywać kopie sekwencje znaków interpunkcyjnych.
 
 ## <a name="thousands_sep"></a>  moneypunct::thousands_sep
 
@@ -789,11 +789,11 @@ CharType thousands_sep() const;
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Specyficzne dla ustawień regionalnych sekwencję elementów do użycia jako tysięcy separatora
+Sekwencja specyficzne dla ustawień regionalnych elementów do użycia jako tysięcy separatora
 
 ### <a name="remarks"></a>Uwagi
 
-Funkcja członkowska zwraca [do_thousands_sep](#do_thousands_sep).
+Funkcja elementu członkowskiego zwraca [do_thousands_sep —](#do_thousands_sep).
 
 ### <a name="example"></a>Przykład
 

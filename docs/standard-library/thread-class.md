@@ -1,5 +1,5 @@
 ---
-title: Thread — klasa | Dokumentacja firmy Microsoft
+title: Klasa wątku | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -33,12 +33,12 @@ helpviewer_keywords:
 - std::thread [C++], swap
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bfcb554b374d035e85d53d769d04317e52e4193b
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 47afdbd5e4a5045ec5f91f8f766b45d3d547ba3e
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33861126"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38958208"
 ---
 # <a name="thread-class"></a>thread — Klasa
 
@@ -52,13 +52,13 @@ class thread;
 
 ## <a name="remarks"></a>Uwagi
 
-Można użyć obiektu `thread`, aby obserwować i zarządzać wątkiem wykonywania w obrębie aplikacji. Obiekt wątku, który jest tworzony przy użyciu konstruktora domyślnego nie jest skojarzony z żadnym wątkiem wykonywania. Obiekt wątku, który jest konstruowany przy użyciu wywoływanego obiektu tworzy nowy wątek wykonywania i wywołuje obiekt w tym wątku. Obiekty wątków można przenosić, ale nie kopiować. W związku z tym wątek wykonywania może być skojarzony tylko z jednym obiektem wątku.
+Możesz użyć **wątku** obiektu do obserwowania i zarządzania wątkiem wykonywania w obrębie aplikacji. Obiekt wątku, który jest tworzony przy użyciu konstruktora domyślnego nie jest skojarzony z żadnym wątkiem wykonywania. Obiekt wątku, który jest konstruowany przy użyciu wywoływanego obiektu tworzy nowy wątek wykonywania i wywołuje obiekt w tym wątku. Obiekty wątków można przenosić, ale nie kopiować. W związku z tym wątek wykonywania może być skojarzony tylko z jednym obiektem wątku.
 
 Każdy wątek wykonywania ma unikatowy identyfikator typu `thread::id`. Funkcja `this_thread::get_id` zwraca identyfikator wywołującego wątku. Element członkowski funkcji `thread::get_id` zwraca identyfikator wątku, który jest zarządzany przez obiekt wątku. Dla obiektu wątku zbudowanego domyślnie, metoda `thread::get_id` zwraca obiekt o wartości, która jest taka sama dla wszystkich obiektów wątku zbudowanego domyślnie i różni się od wartości zwracanej przez `this_thread::get_id` dla każdego wątku wykonywania, która może być połączona w momencie wywołania.
 
 ## <a name="members"></a>Elementy członkowskie
 
-### <a name="public-classes"></a>Klas publicznych
+### <a name="public-classes"></a>Publiczne klasy
 
 |Nazwa|Opis|
 |----------|-----------------|
@@ -68,35 +68,35 @@ Każdy wątek wykonywania ma unikatowy identyfikator typu `thread::id`. Funkcja 
 
 |Nazwa|Opis|
 |----------|-----------------|
-|[wątek](#thread)|Konstruuje `thread` obiektu.|
+|[wątek](#thread)|Konstruuje **wątku** obiektu.|
 
 ### <a name="public-methods"></a>Metody publiczne
 
 |Nazwa|Opis|
 |----------|-----------------|
-|[Odłączanie](#detach)|Odłącza skojarzony wątek od obiektu `thread`.|
+|[Odłącz](#detach)|Odłącza skojarzony wątek od **wątku** obiektu.|
 |[get_id](#get_id)|Zwraca unikatowy identyfikator skojarzonego wątku.|
-|[hardware_concurrency](#hardware_concurrency)|Statyczna. Zwraca szacunkową liczbę kontekstów wątków sprzętu.|
+|[hardware_concurrency](#hardware_concurrency)|Statyczne. Zwraca szacunkową liczbę kontekstów wątków sprzętu.|
 |[join](#join)|Blokuje, aż do zakończenia skojarzonego wątku.|
-|[podlegającego sprzęganiu](#joinable)|Określa, czy skojarzony wątek podlega sprzęganiu.|
-|[native_handle](#native_handle)|Zwraca typ zależny od implementacji, który reprezentuje dojście wątku.|
-|[swap](#swap)|Zamienia stan obiektu z określonym obiektem `thread`.|
+|[sprzęganiu](#joinable)|Określa, czy skojarzony wątek podlega sprzęganiu.|
+|[native_handle —](#native_handle)|Zwraca typ zależny od implementacji, który reprezentuje dojście wątku.|
+|[swap](#swap)|Zamienia stan obiektu z określonym **wątku** obiektu.|
 
 ### <a name="public-operators"></a>Operatory publiczne
 
 |Nazwa|Opis|
 |----------|-----------------|
-|[Thread::operator =](#op_eq)|Kojarzy bieżący wątek z obiektem `thread`.|
+|[Thread::operator =](#op_eq)|Kojarzy wątku z bieżącej **wątku** obiektu.|
 
 ## <a name="requirements"></a>Wymagania
 
 **Nagłówek:** \<wątku >
 
-**Namespace:** Standard
+**Namespace:** standardowe
 
-## <a name="detach"></a>  Thread::detach
+## <a name="detach"></a>  Thread::detach —
 
-Odłącza skojarzone wątku. System operacyjny staje się odpowiedzialny za zwolnienie zasobów wątków na zakończenie.
+Odłącza skojarzony wątek. System operacyjny staje się odpowiedzialny za przy zwalnianiu zasobów wątków na zakończenie.
 
 ```cpp
 void detach();
@@ -104,15 +104,15 @@ void detach();
 
 ### <a name="remarks"></a>Uwagi
 
-Po wywołaniu `detach`, kolejnych wywołań [get_id](#get_id) zwracać [identyfikator](#id_class).
+Po wywołaniu `detach`, kolejne wywołania [get_id —](#get_id) zwracają [identyfikator](#id_class).
 
-Jeśli nie podlegającego sprzęganiu wątku, który jest skojarzony z obiektem wywołującym, funkcja zwraca [system_error —](../standard-library/system-error-class.md) mający z kodem błędu `invalid_argument`.
+Jeśli wątek, który ma skojarzony obiekt wywołujący nie jest sprzęganiu, funkcja zgłasza [system_error](../standard-library/system-error-class.md) zawierający kod błędu `invalid_argument`.
 
-Jeśli wątek, który jest skojarzony z obiektem wywołującym jest nieprawidłowa, funkcja zwraca `system_error` mający z kodem błędu `no_such_process`.
+Jeśli wątek, który jest skojarzony z obiektem wywołującym jest nieprawidłowa, funkcja zgłasza `system_error` zawierający kod błędu `no_such_process`.
 
-## <a name="get_id"></a>  Thread::get_id
+## <a name="get_id"></a>  Thread::get_id —
 
-Zwraca unikatowy identyfikator skojarzony wątku.
+Zwraca unikatowy identyfikator skojarzonego wątku.
 
 ```cpp
 id get_id() const noexcept;
@@ -120,11 +120,11 @@ id get_id() const noexcept;
 
 ### <a name="return-value"></a>Wartość zwracana
 
-A [Thread::ID —](#id_class) obiektu, który unikatowo identyfikuje skojarzone wątku lub `thread::id()` Jeśli wątku nie jest skojarzony z obiektem.
+A [Thread::ID —](#id_class) obiekt, który jednoznacznie identyfikuje skojarzony wątek lub `thread::id()` Jeśli żaden wątek nie jest skojarzony z obiektem.
 
-## <a name="hardware_concurrency"></a>  Thread::hardware_concurrency
+## <a name="hardware_concurrency"></a>  Thread::hardware_concurrency —
 
-Metoda statyczna, która zwraca wartość szacunkową liczbę wątków sprzętu.
+Metoda statyczna zwraca szacunkową liczbę kontekstów wątków sprzętu.
 
 ```cpp
 static unsigned int hardware_concurrency() noexcept;
@@ -132,11 +132,11 @@ static unsigned int hardware_concurrency() noexcept;
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Szacowana liczba wątków sprzętu. Jeśli wartości nie można obliczyć lub nie jest jasno określone, ta metoda zwraca wartość 0.
+Szacunkową liczbę kontekstów wątków sprzętu. Jeśli wartość nie można obliczyć lub nie jest dobrze zdefiniowane, ta metoda zwraca wartość 0.
 
 ## <a name="id_class"></a>  Thread::ID — klasa
 
-Zawiera unikatowy identyfikator dla każdego wątku do wykonania procesu.
+Zawiera unikatowy identyfikator dla każdego wątku wykonywania procesu.
 
 ```cpp
 class thread::id {
@@ -146,13 +146,13 @@ class thread::id {
 
 ### <a name="remarks"></a>Uwagi
 
-Domyślny konstruktor tworzy obiekt, który porównuje równa `thread::id` obiektu wszelkie istniejące wątku.
+Domyślny konstruktor tworzy obiekt, który porównuje równa `thread::id` obiekt dla każdego istniejącego wątku.
 
-Wszystkie wykonane domyślne `thread::id` porównanie obiektów.
+Wszystkie zbudowanego domyślnie `thread::id` obiekty są sobie równe.
 
-## <a name="join"></a>  Thread::JOIN
+## <a name="join"></a>  Thread::JOIN —
 
-Bloki do chwili zakończenia wątku do wykonania, który został skojarzony z obiektem wywołującym.
+Blokuje, aż do zakończenia wątku wykonywania, który jest skojarzony z obiektem wywołującym.
 
 ```cpp
 void join();
@@ -160,11 +160,11 @@ void join();
 
 ### <a name="remarks"></a>Uwagi
 
-Jeśli wywołanie zakończy się powodzeniem, kolejne wywołania [get_id](#get_id) dla obiekt wywołujący zwracać wartości domyślnej [Thread::ID —](#id_class) nie porównujące równa `thread::id` wszelkie istniejące wątku; wywołanie nie powiodło się. , wartość, która jest zwracana w wyniku `get_id` niezmieniona.
+Jeśli wywołanie zakończy się powodzeniem, kolejne wywołania [get_id —](#get_id) obiekt wywołujący można powrócić w domyślnego [Thread::ID —](#id_class) nie porównujące równa `thread::id` z dowolnego istniejącego wątku; Jeśli wywołanie powiedzie się , wartość, która jest zwracana przez `get_id` pozostaje niezmieniony.
 
-## <a name="joinable"></a>  Thread::joinable
+## <a name="joinable"></a>  Thread::joinable —
 
-Określa, czy wątek skojarzony *podlegającego sprzęganiu*.
+Określa, czy skojarzony wątek podlega *sprzęganiu*.
 
 ```cpp
 bool joinable() const noexcept;
@@ -172,15 +172,15 @@ bool joinable() const noexcept;
 
 ### <a name="return-value"></a>Wartość zwracana
 
-`true` Jeśli wątek skojarzony jest *podlegającego sprzęganiu*; w przeciwnym razie `false`.
+**wartość true,** jeśli skojarzony wątek podlega *sprzęganiu*; w przeciwnym razie **false**.
 
 ### <a name="remarks"></a>Uwagi
 
-Obiekt wątku jest *podlegającego sprzęganiu* Jeśli `get_id() != id()`.
+Obiekt wątku jest *sprzęganiu* Jeśli `get_id() != id()`.
 
-## <a name="native_handle"></a>  Thread::native_handle
+## <a name="native_handle"></a>  Thread::native_handle —
 
-Zwraca typ zależny od implementacji, który reprezentuje dojście wątku. Dojście wątku można w sposób konkretnej implementacji.
+Zwraca typ zależny od implementacji, który reprezentuje dojście wątku. Dojście wątku może służyć w sposób specyficzne dla implementacji.
 
 ```cpp
 native_handle_type native_handle();
@@ -188,11 +188,11 @@ native_handle_type native_handle();
 
 ### <a name="return-value"></a>Wartość zwracana
 
-`native_handle_type` nie zdefiniowano jako Win32 `HANDLE` który jest rzutowany jako `void *`.
+`native_handle_type` jest zdefiniowany jako Win32 `HANDLE` , jest rzutowany jako `void *`.
 
 ## <a name="op_eq"></a>  Thread::operator =
 
-Kojarzy wątek określony obiekt z bieżącego obiektu.
+Kojarzy wątku określony obiekt z bieżącego obiektu.
 
 ```cpp
 thread& operator=(thread&& Other) noexcept;
@@ -200,7 +200,8 @@ thread& operator=(thread&& Other) noexcept;
 
 ### <a name="parameters"></a>Parametry
 
-`Other` A `thread` obiektu.
+*Inne*  
+ A **wątku** obiektu.
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -208,13 +209,13 @@ thread& operator=(thread&& Other) noexcept;
 
 ### <a name="remarks"></a>Uwagi
 
-Wywołania metody detach w przypadku wywoływania obiektu podlegającego sprzęganiu.
+Wywołań metod odłączyć, jeśli obiekt wywołujący podlega sprzęganiu.
 
-Po dokonaniu skojarzenia `Other` ustawiono stanie skonstruowany domyślne.
+Po dokonaniu skojarzenia `Other` ustawiono stan zbudowanego domyślnie.
 
-## <a name="swap"></a>  Thread::swap
+## <a name="swap"></a>  Thread::swap —
 
-Zamienia stanu obiektu z tym określonej `thread` obiektu.
+Zamienia stan obiektu, z którego określonego **wątku** obiektu.
 
 ```cpp
 void swap(thread& Other) noexcept;
@@ -222,11 +223,12 @@ void swap(thread& Other) noexcept;
 
 ### <a name="parameters"></a>Parametry
 
-`Other` A `thread` obiektu.
+*Inne*  
+ A **wątku** obiektu.
 
 ## <a name="thread"></a>  Thread::Thread — Konstruktor
 
-Konstruuje `thread` obiektu.
+Konstruuje **wątku** obiektu.
 
 ```cpp
 thread() noexcept;
@@ -238,19 +240,22 @@ thread(thread&& Other) noexcept;
 
 ### <a name="parameters"></a>Parametry
 
-`F` Zdefiniowane przez aplikację funkcji ma być wykonane przez wątek.
+*F*  
+ Zdefiniowane przez aplikację funkcji wykonywanej przez wątek.
 
-`A` Lista argumentów, które mają być przekazane do `F`.
+*A*  
+ Lista argumentów do przekazania do *F*.
 
-`Other` Istniejące `thread` obiektu.
+*Inne*  
+ Istniejące **wątku** obiektu.
 
 ### <a name="remarks"></a>Uwagi
 
-Pierwszy konstruktora tworzy obiekt, który nie został skojarzony z wykonanie wątku. Wartość zwracana przez wywołanie do `get_id` skonstruowanego obiektu jest `thread::id()`.
+Pierwszy Konstruktor konstruuje obiekt, który nie został skojarzony z wątkiem wykonywania. Wartość, która jest zwracana przez wywołanie `get_id` skonstruowanego obiektu jest `thread::id()`.
 
-Drugi Konstruktor konstrukcji obiektu, który jest skojarzony z nowego wątku wykonania i wykonuje pseudo-funkcja `INVOKE` zdefiniowanego w [ \<funkcjonalności >](../standard-library/functional.md). Jeśli nie ma wystarczającej ilości zasobów są dostępne, można rozpocząć nowego wątku, funkcja zwraca [system_error —](../standard-library/system-error-class.md) obiekt, który zawiera kod błędu `resource_unavailable_try_again`. Jeśli wywołanie `F` kończy z nieprzechwycony wyjątek [przerwanie](../standard-library/exception-functions.md#terminate) jest wywoływana.
+Drugi Konstruktor konstruuje obiekt, który jest skojarzony z nowy wątek wykonywania i wykonuje pseudo-funkcję `INVOKE` zdefiniowanego w [ \<funkcjonalności >](../standard-library/functional.md). Jeśli nie ma wystarczającej ilości zasobów dostępnych może rozpocząć nowego wątku, funkcja zgłasza [system_error](../standard-library/system-error-class.md) obiekt, który ma kod błędu `resource_unavailable_try_again`. Jeśli wywołanie *F* kończy nieprzechwycony wyjątek [zakończyć](../standard-library/exception-functions.md#terminate) jest wywoływana.
 
-Trzeci Konstruktor konstrukcji obiektu, który jest skojarzony z wątkiem, z którym skojarzony jest `Other`. `Other` następnie ustaw stan skonstruowany domyślne.
+Trzeci Konstruktor konstruuje obiekt, który jest skojarzony z wątkiem, który jest skojarzony z `Other`. `Other` następnie ustaw stan zbudowanego domyślnie.
 
 ## <a name="see-also"></a>Zobacz także
 

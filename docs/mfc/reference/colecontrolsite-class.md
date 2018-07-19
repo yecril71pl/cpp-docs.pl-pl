@@ -116,12 +116,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 61544026f559e0c45cbd81735e76203a088d2d6b
-ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
+ms.openlocfilehash: 5c6f84f575edbcaf8ecc64f424f3225d969d6a7f
+ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/27/2018
-ms.locfileid: "37040876"
+ms.lasthandoff: 07/05/2018
+ms.locfileid: "37850358"
 ---
 # <a name="colecontrolsite-class"></a>Klasa COleControlSite
 Zapewnia obsługę interfejsów kontrolki niestandardowej po stronie klienta.  
@@ -144,35 +144,35 @@ class COleControlSite : public CCmdTarget
   
 |Nazwa|Opis|  
 |----------|-----------------|  
-|[COleControlSite::BindDefaultProperty](#binddefaultproperty)|Wiąże domyślną właściwość obsługiwanego formantu ze źródłem danych.|  
-|[COleControlSite::BindProperty](#bindproperty)|Wiąże właściwości obsługiwanego formantu ze źródłem danych.|  
-|[COleControlSite::CreateControl](#createcontrol)|Tworzy obsługiwanego formantu ActiveX.|  
+|[COleControlSite::BindDefaultProperty](#binddefaultproperty)|Wiąże domyślną właściwość hostowanej formant ze źródłem danych.|  
+|[COleControlSite::BindProperty](#bindproperty)|Tworzy powiązanie z właściwością kontrolki hostowanej ze źródłem danych.|  
+|[COleControlSite::CreateControl](#createcontrol)|Tworzy formant ActiveX hostowanej.|  
 |[COleControlSite::DestroyControl](#destroycontrol)|Niszczy obsługiwanego formantu.|  
 |[COleControlSite::DoVerb](#doverb)|Wykonuje określone zlecenie obsługiwanego formantu.|  
-|[COleControlSite::EnableDSC](#enabledsc)|Umożliwia danych sourcing kontroli lokacji.|  
+|[COleControlSite::EnableDSC](#enabledsc)|Umożliwia określanie źródła dla witryny kontroli danych.|  
 |[COleControlSite::EnableWindow](#enablewindow)|Umożliwia kontroli lokacji.|  
-|[COleControlSite::FreezeEvents](#freezeevents)|Określa, czy kontroli lokacji akceptuje zdarzenia.|  
+|[COleControlSite::FreezeEvents](#freezeevents)|Określa, jeśli witryna kontroli akceptuje zdarzenia.|  
 |[COleControlSite::GetDefBtnCode](#getdefbtncode)|Pobiera domyślny kod obsługiwanego formantu przycisku.|  
-|[COleControlSite::GetDlgCtrlID](#getdlgctrlid)|Pobiera identyfikator formantu.|  
+|[COleControlSite::GetDlgCtrlID](#getdlgctrlid)|Pobiera identyfikator kontrolki.|  
 |[COleControlSite::GetEventIID](#geteventiid)|Pobiera identyfikator interfejs zdarzenie dla obsługiwanego formantu.|  
 |[COleControlSite::GetExStyle](#getexstyle)|Pobiera rozszerzone style kontroli lokacji.|  
-|[COleControlSite::GetProperty](#getproperty)|Pobiera określoną właściwością obsługiwanego formantu.|  
+|[COleControlSite::GetProperty](#getproperty)|Pobiera określoną właściwością kontrolki hostowanej.|  
 |[COleControlSite::GetStyle](#getstyle)|Pobiera style kontroli lokacji.|  
-|[COleControlSite::GetWindowText](#getwindowtext)|Pobiera tekst formantu hostowanej.|  
-|[COleControlSite::InvokeHelper](#invokehelper)|Wywoływanie metody określonej obsługiwanego formantu.|  
-|[COleControlSite::InvokeHelperV](#invokehelperv)|Wywoływanie metody określonej obsługiwanego formantu z listy zmiennych argumentów.|  
-|[COleControlSite::IsDefaultButton](#isdefaultbutton)|Określa, czy formant jest przycisk domyślny w oknie.|  
+|[COleControlSite::GetWindowText](#getwindowtext)|Pobiera tekst hostowanej formantu.|  
+|[COleControlSite::InvokeHelper](#invokehelper)|Wywoływanie metody określonego obsługiwanego formantu.|  
+|[COleControlSite::InvokeHelperV](#invokehelperv)|Wywoływanie metody określonego obsługiwanego formantu przy użyciu listy zmiennych argumentów.|  
+|[COleControlSite::IsDefaultButton](#isdefaultbutton)|Określa, czy kontrolka jest przycisk domyślny w oknie.|  
 |[COleControlSite::IsWindowEnabled](#iswindowenabled)|Sprawdza, czy wyświetlany stan kontroli lokacji.|  
 |[COleControlSite::ModifyStyle](#modifystyle)|Modyfikuje bieżącego rozszerzone style kontroli lokacji.|  
 |[COleControlSite::ModifyStyleEx](#modifystyleex)|Modyfikuje style bieżącego kontroli lokacji.|  
-|[COleControlSite::MoveWindow](#movewindow)|Zmienia położenie kontroli lokacji.|  
+|[COleControlSite::MoveWindow](#movewindow)|Zmienia położenie obiektu formantu.|  
 |[COleControlSite::QuickActivate](#quickactivate)|Szybkie aktywuje obsługiwanego formantu.|  
-|[COleControlSite::SafeSetProperty](#safesetproperty)|Ustawia właściwości lub metody kontroli bez generowania wyjątku ryzyko.|  
-|[COleControlSite::SetDefaultButton](#setdefaultbutton)|Ustawia przycisk domyślny w oknie.|  
-|[COleControlSite::SetDlgCtrlID](#setdlgctrlid)|Pobiera identyfikator formantu.|  
-|[COleControlSite::SetFocus](#setfocus)|Ustawia fokus kontroli lokacji.|  
-|[COleControlSite::SetProperty](#setproperty)|Ustawia określoną właściwością obsługiwanego formantu.|  
-|[COleControlSite::SetPropertyV](#setpropertyv)|Ustawia z określoną właściwością obsługiwanego formantu listy zmiennych argumentów.|  
+|[COleControlSite::SafeSetProperty](#safesetproperty)|Ustawia właściwości lub metody kontroli bez prawdopodobieństwo zostanie zgłoszony wyjątek.|  
+|[COleControlSite::SetDefaultButton](#setdefaultbutton)|Określa przycisk domyślny w oknie.|  
+|[COleControlSite::SetDlgCtrlID](#setdlgctrlid)|Pobiera identyfikator kontrolki.|  
+|[COleControlSite::SetFocus](#setfocus)|Ustawia fokus do kontroli lokacji.|  
+|[COleControlSite::SetProperty](#setproperty)|Ustawia określoną właściwością kontrolki hostowanej.|  
+|[COleControlSite::SetPropertyV](#setpropertyv)|Ustawia określoną właściwością kontrolki hostowanej przy użyciu listy zmiennych argumentów.|  
 |[COleControlSite::SetWindowPos](#setwindowpos)|Ustawia położenie kontroli lokacji.|  
 |[COleControlSite::SetWindowText](#setwindowtext)|Ustawia tekst obsługiwanego formantu.|  
 |[COleControlSite::ShowWindow](#showwindow)|Pokazuje lub ukrywa kontroli lokacji.|  
@@ -181,33 +181,33 @@ class COleControlSite : public CCmdTarget
   
 |Nazwa|Opis|  
 |----------|-----------------|  
-|[COleControlSite::GetControlInfo](#getcontrolinfo)|Pobiera informacje o klawiatury i klawiszy skrótu dla obsługiwanego formantu.|  
+|[COleControlSite::GetControlInfo](#getcontrolinfo)|Pobiera informacje o klawiatury i symboli dla obsługiwanego formantu.|  
   
 ### <a name="public-data-members"></a>Publiczne elementy członkowskie danych  
   
 |Nazwa|Opis|  
 |----------|-----------------|  
-|[COleControlSite::m_bIsWindowless](#m_biswindowless)|Określa, czy formant hostowanej jest formantem bez okien.|  
-|[COleControlSite::m_ctlInfo](#m_ctlinfo)|Zawiera informacje dotyczące formantu za pomocą klawiatury.|  
+|[COleControlSite::m_bIsWindowless](#m_biswindowless)|Określa, czy kontrolka hostowanej kontrolce.|  
+|[COleControlSite::m_ctlInfo](#m_ctlinfo)|Zawiera informacje na temat formantu za pomocą klawiatury.|  
 |[COleControlSite::m_dwEventSink](#m_dweventsink)|Plik cookie punkt połączenia z formantu.|  
-|[COleControlSite::m_dwMiscStatus](#m_dwmiscstatus)|Różne stany obsługiwanego formantu.|  
+|[COleControlSite::m_dwMiscStatus](#m_dwmiscstatus)|Różne stany dla obsługiwanego formantu.|  
 |[COleControlSite::m_dwPropNotifySink](#m_dwpropnotifysink)|`IPropertyNotifySink` Plik cookie formantu.|  
 |[COleControlSite::m_dwStyle](#m_dwstyle)|Style formantu hostowanej.|  
-|[COleControlSite::m_hWnd](#m_hwnd)|Dojście kontroli lokacji.|  
+|[COleControlSite::m_hWnd](#m_hwnd)|Uchwyt kontroli lokacji.|  
 |[COleControlSite::m_iidEvents](#m_iidevents)|Identyfikator interfejsu zdarzenia dla obsługiwanego formantu.|  
-|[COleControlSite::m_nID](#m_nid)|Identyfikator formantu hostowanej.|  
+|[COleControlSite::m_nID](#m_nid)|Identyfikator obsługiwanego formantu.|  
 |[COleControlSite::m_pActiveObject](#m_pactiveobject)|Wskaźnik do `IOleInPlaceActiveObject` obiektu obsługiwanego formantu.|  
 |[COleControlSite::m_pCtrlCont](#m_pctrlcont)|Kontener obsługiwanego formantu.|  
 |[COleControlSite::m_pInPlaceObject](#m_pinplaceobject)|Wskaźnik do `IOleInPlaceObject` obiektu obsługiwanego formantu.|  
 |[COleControlSite::m_pObject](#m_pobject)|Wskaźnik do `IOleObjectInterface` interfejsu formantu.|  
 |[COleControlSite::m_pWindowlessObject](#m_pwindowlessobject)|Wskaźnik do `IOleInPlaceObjectWindowless` interfejsu formantu.|  
-|[COleControlSite::m_pWndCtrl](#m_pwndctrl)|Wskaźnik do obiektu okna dla formantu hostowanej.|  
+|[COleControlSite::m_pWndCtrl](#m_pwndctrl)|Wskaźnik do obiektu okna dla kontrolki hostowanej.|  
 |[COleControlSite::m_rect](#m_rect)|Wymiary kontroli lokacji.|  
   
 ## <a name="remarks"></a>Uwagi  
- Ta obsługa jest podstawowym elementem używanym za pomocą którego osadzonego formantu ActiveX uzyskuje informacje o lokalizacji i zakresie swojej witryny wyświetlania, jego nazwie interfejs użytkownika, jej otoczeniu właściwości i innych zasobów udostępnianych przez jego kontenera. `COleControlSite` implementuje w pełni [IOleControlSite](http://msdn.microsoft.com/library/windows/desktop/ms688502), [IOleInPlaceSite](http://msdn.microsoft.com/library/windows/desktop/ms686586), [IOleClientSite](http://msdn.microsoft.com/library/windows/desktop/ms693706), [IPropertyNotifySink](http://msdn.microsoft.com/library/windows/desktop/ms692638), `IBoundObjectSite`, `INotifyDBEvents`, [IRowSetNotify](../../data/oledb/irowsetnotifyimpl-class.md) interfejsów. Ponadto również zaimplementowano interfejs IDispatch (Zapewnianie obsługi do właściwości otaczających i wychwytywanie zdarzeń).  
+ Ta funkcja jest podstawowym elementem używanym za pomocą którego osadzonego formantu ActiveX uzyskuje informacje o lokalizacji i zasięg swojej witryny wyświetlania, jego nazwie, interfejs użytkownika, jego właściwości otoczenia i innych zasobów dostarczanych przez kontener. `COleControlSite` w pełni zaimplementowano [IOleControlSite](http://msdn.microsoft.com/library/windows/desktop/ms688502), [IOleInPlaceSite](http://msdn.microsoft.com/library/windows/desktop/ms686586), [IOleClientSite](http://msdn.microsoft.com/library/windows/desktop/ms693706), [ipropertynotifysink —](http://msdn.microsoft.com/library/windows/desktop/ms692638), `IBoundObjectSite`, `INotifyDBEvents`, [IRowSetNotify](../../data/oledb/irowsetnotifyimpl-class.md) interfejsów. Ponadto jest również implementowana interfejsu IDispatch (świadczenie pomocy technicznej dla właściwości otoczenia i ujścia zdarzeń).  
   
- Aby utworzyć ActiveX sterowania lokacji za pomocą `COleControlSite`, klasa wyprowadzona z `COleControlSite`. W Twojej `CWnd`-przesłonić klasy pochodnej kontenera (na przykład dialogowym) **CWnd::CreateControlSite** funkcji.  
+ Aby utworzyć ActiveX sterowania lokacji za pomocą `COleControlSite`, wyprowadzić klasę z `COleControlSite`. W swojej `CWnd`— zastąpienie klasy pochodnej dla kontenera (na przykład Twoje okno dialogowe) `CWnd::CreateControlSite` funkcji.  
   
 ## <a name="inheritance-hierarchy"></a>Hierarchia dziedziczenia  
  [CObject](../../mfc/reference/cobject-class.md)  
@@ -220,7 +220,7 @@ class COleControlSite : public CCmdTarget
  **Nagłówek:** afxocc.h  
   
 ##  <a name="binddefaultproperty"></a>  COleControlSite::BindDefaultProperty  
- Wiąże obiekt wywołujący domyślne proste powiązania właściwość, jako oznaczone w bibliotece typów podstawowych kursora, jest definiowana za pomocą właściwości źródła danych, nazwę użytkownika, hasło i SQL kontroli źródła danych.  
+ Wiąże obiekt wywołujący domyślne proste właściwości powiązanej, jako oznaczony w bibliotece typów do kursora podstawowej, który jest definiowany przez właściwości źródła danych, nazwę użytkownika, hasło i SQL do kontroli źródła danych.  
   
 ```  
 virtual void BindDefaultProperty(
@@ -232,22 +232,22 @@ virtual void BindDefaultProperty(
   
 ### <a name="parameters"></a>Parametry  
  *dwDispID*  
- Określa **DISPID** właściwości dla formantu powiązanego z danymi, który ma zostać powiązany do kontroli źródła danych.  
+ Określa identyfikator DISPID właściwości kontrolki powiązania danych, który ma zostać powiązany do kontroli źródła danych.  
   
  *vtProp*  
- Określa typ właściwości powiązać — na przykład **VT_BSTR**, **VT_VARIANT**i tak dalej.  
+ Określa typ właściwości powiązać — na przykład VT_BSTR, VT_VARIANT i tak dalej.  
   
  *szFieldName*  
- Określa nazwę kolumny w kursorze pochodzącymi z kontroli źródła danych, do którego będzie można powiązać właściwości.  
+ Określa nazwę kolumny, w kursorze dostarczane przez kontrolę źródła danych, do którego będą powiązane właściwości.  
   
  *pDSCWnd*  
- Wskaźnik do `CWnd`-pochodnej obiekt, który obsługuje kontroli źródła danych, do którego będzie można powiązać właściwości.  
+ Wskaźnik do `CWnd`-pochodnych obiekt, który hostuje kontroli źródła danych, do którego będą powiązane właściwości.  
   
 ### <a name="remarks"></a>Uwagi  
- `CWnd` Obiektu, na którym wywołanie tej funkcji musi być formantem powiązane z danymi.  
+ `CWnd` Obiektu, na którym Wywołaj tę funkcję, musi być kontrolki powiązania danych.  
   
 ##  <a name="bindproperty"></a>  COleControlSite::BindProperty  
- Wiąże obiektu wywołującego proste powiązania właściwość, jako zaznaczone w bibliotece typów podstawowych kursora, jest definiowana za pomocą właściwości źródła danych, nazwę użytkownika, hasło i SQL kontroli źródła danych.  
+ Wiąże obiekt wywołujący powiązanych właściwości prostej, jako oznaczony w bibliotece typów podstawowych kursora, jest definiowana przez właściwości źródła danych, nazwę użytkownika, hasło i SQL do kontroli źródła danych.  
   
 ```  
 virtual void BindProperty(
@@ -257,16 +257,16 @@ virtual void BindProperty(
   
 ### <a name="parameters"></a>Parametry  
  *dwDispId*  
- Określa **DISPID** właściwości dla formantu powiązanego z danymi, który ma zostać powiązany do kontroli źródła danych.  
+ Określa identyfikator DISPID właściwości kontrolki powiązania danych, który ma zostać powiązany do kontroli źródła danych.  
   
  *pWndDSC*  
- Wskaźnik do `CWnd`-pochodnej obiekt, który obsługuje kontroli źródła danych, do którego będzie można powiązać właściwości.  
+ Wskaźnik do `CWnd`-pochodnych obiekt, który hostuje kontroli źródła danych, do którego będą powiązane właściwości.  
   
 ### <a name="remarks"></a>Uwagi  
- `CWnd` Obiektu, na którym wywołanie tej funkcji musi być formantem powiązane z danymi.  
+ `CWnd` Obiektu, na którym Wywołaj tę funkcję, musi być kontrolki powiązania danych.  
   
 ##  <a name="colecontrolsite"></a>  COleControlSite::COleControlSite  
- Tworzy nową `COleControlSite` obiektu.  
+ Tworzy nowy `COleControlSite` obiektu.  
   
 ```  
 explicit COleControlSite(COleControlContainer* pCtrlCont);
@@ -274,13 +274,13 @@ explicit COleControlSite(COleControlContainer* pCtrlCont);
   
 ### <a name="parameters"></a>Parametry  
  *pCtrlCont*  
- Wskaźnik do formantu kontenera, (reprezentujący okno obsługującego kontroli AtiveX).  
+ Wskaźnik do kontrolki kontenera, (który reprezentuje okno, które obsługuje formant AtiveX).  
   
 ### <a name="remarks"></a>Uwagi  
- Ta funkcja jest wywoływana [COccManager::CreateContainer](../../mfc/reference/coccmanager-class.md#createcontainer) funkcji. Aby uzyskać więcej informacji o dostosowywaniu tworzenie kontenerów, zobacz [COccManager::CreateSite](../../mfc/reference/coccmanager-class.md#createsite).  
+ Ta funkcja jest wywoływana [COccManager::CreateContainer](../../mfc/reference/coccmanager-class.md#createcontainer) funkcji. Aby uzyskać więcej informacji na temat dostosowywania tworzenia kontenerów, zobacz [COccManager::CreateSite](../../mfc/reference/coccmanager-class.md#createsite).  
   
 ##  <a name="createcontrol"></a>  COleControlSite::CreateControl  
- Tworzy formantu ActiveX, obsługiwanych przez `COleControlSite` obiektu.  
+ Tworzy formant ActiveX, hostowane przez `COleControlSite` obiektu.  
   
 ```  
 virtual HRESULT CreateControl(
@@ -310,55 +310,55 @@ virtual HRESULT CreateControl(
   
 ### <a name="parameters"></a>Parametry  
  *pWndCtrl*  
- Wskaźnik do obiekt window reprezentujący formantu.  
+ Wskaźnik do obiektu okna, reprezentujący formantu.  
   
- *Identyfikator CLSID*  
- Identyfikator unikatowy klasy formantu.  
+ *Identyfikator klasy*  
+ Identyfikator unikatowy klasy kontrolki.  
   
  *lpszWindowName*  
- Wskaźnik do tekstu wyświetlanego w formancie. Ustawia wartości właściwości podpisu lub tekst winodw (jeśli istnieje).  
+ Wskaźnik na tekst, który ma być wyświetlany w formancie. Ustawia wartość właściwości podpisu lub tekst winodw (jeśli istnieje).  
   
  *dwStyle*  
- Style systemu Windows. Dostępne style są wyświetlane w obszarze **uwagi** sekcji.  
+ Style Windows. Dostępne style są wyświetlane w obszarze **uwagi** sekcji.  
   
  *Rect*  
  Określa rozmiar i położenie formantu. Może być albo `CRect` obiektu lub `RECT` struktury.  
   
  *nID*  
- Określa identyfikator formantu podrzędnego okna.  
+ Określa identyfikator. okno podrzędne kontrolki  
   
  *pPersist*  
- Wskaźnik do `CFile` zawierający trwały stan formantu. Wartość domyślna to **NULL**, wskazującą, czy formant inicjuje się bez przywracania stanu z dowolnego magazynu trwałego. Jeśli nie **NULL**, powinny być wskaźnikiem do `CFile`-pochodnych obiekt, który zawiera trwałych danych formantu w postaci strumienia lub magazynu. Można te dane zostały zapisane w poprzednim aktywacji klienta. `CFile` Może zawierać innych danych, lecz musi mieć jego wskaźnika odczytu i zapisu, ustaw do pierwszego bajtu trwałych danych w momencie wywołania `CreateControl`.  
+ Wskaźnik do `CFile` zawierający trwały stan dla formantu. Wartość domyślna to NULL, wskazujący, że kontrolka inicjalizuje bez przywracania stanu z dowolnego magazynu trwałego. Jeśli nie ma wartość NULL, powinna to być wskaźnik do `CFile`-pochodzi obiekt, który zawiera trwałych danych formantu w formie strumienia lub magazynu. Można te dane zostały zapisane w poprzednim aktywacji klienta. `CFile` Może zawierać innych danych, ale musi mieć swojego wskaźnika odczytu i zapisu, ustaw do pierwszego bajtu trwałych danych w czasie wywołania `CreateControl`.  
   
  *bStorage*  
- Wskazuje, czy dane w *pPersist* powinny być rozumiane jako `IStorage` lub `IStream` danych. Jeśli dane w *pPersist* magazynu, *bStorage* powinien być **TRUE**. Jeśli dane w *pPersist* jest typu stream, *bStorage* powinien być **FALSE**. Wartość domyślna to **FALSE**.  
+ Wskazuje, czy dane w *pPersist* powinno być interpretowane jako `IStorage` lub `IStream` danych. Jeśli dane w *pPersist* magazynu *bStorage* powinien mieć wartość PRAWDA. Jeśli dane w *pPersist* jest strumieniem, *bStorage* powinna być równa FALSE. Wartość domyślna to FALSE.  
   
  *bstrLicKey*  
- Opcjonalne dane klucza licencji. Tych danych jest konieczne tylko w przypadku tworzenia formantów, które wymagają klucz licencji środowiska wykonawczego. Jeśli formant obsługuje licencjonowania, należy podać klucz licencji w celu utworzenia kontrolki została wykonana pomyślnie. Wartość domyślna to **NULL**.  
+ Opcjonalne dane klucza licencji. Tych danych jest konieczne tylko w przypadku tworzenia formantów, które wymagają klucz licencji środowiska wykonawczego. Jeśli są obsługiwane przez kontrolkę licencjonowania, musisz podać klucz licencji do tworzenia kontrolki została wykonana pomyślnie. Wartością domyślną jest NULL.  
   
  *ppt*  
- Wskaźnik do **punktu** struktury, która zawiera górnego lewego rogu formantu. Rozmiar formantu jest określana przez wartość *psize*. *Ppt* i *psize* wartości są opcjonalne metoda określania rozmiaru i pozycji opf formantu.  
+ Wskaźnik do `POINT` strukturę, która zawiera lewego górnego rogu kontrolki. Rozmiar kontrolki jest określany przez wartość *psize*. *Ppt* i *psize* wartości są opcjonalne metodę określania rozmiaru i pozycji opf formantu.  
   
  *psize*  
- Wskaźnik do **rozmiar** struktury, która zawiera rozmiar formantu. Lewy górny róg jest określana przez wartość *ppt*. *Ppt* i *psize* wartości są opcjonalne metoda określania rozmiaru i pozycji opf formantu.  
+ Wskaźnik do `SIZE` strukturę, która zawiera rozmiar formantu. Lewy górny róg jest określana przez wartość *ppt*. *Ppt* i *psize* wartości są opcjonalne metodę określania rozmiaru i pozycji opf formantu.  
   
 ### <a name="return-value"></a>Wartość zwracana  
- Standard `HRESULT` wartość.  
+ Standardowe wartości HRESULT.  
   
 ### <a name="remarks"></a>Uwagi  
- Tylko podzestaw systemu Windows *dwStyle* flagi są obsługiwane przez `CreateControl`:  
+ Tylko podzbiór Windows *dwStyle* flagi są obsługiwane przez `CreateControl`:  
   
-- **Ws_visible —** tworzy okna, które jest początkowo widoczne. Wymagane, jeśli formantu ma być widoczna od razu, takich jak zwykłe systemu windows.  
+- WS_VISIBLE tworzy okno, które jest początkowo widoczne. Wymagane, jeśli formant aby były widoczne natychmiast, takich jak zwykłe systemu windows.  
   
-- **Ws_disabled —** tworzy okno, które jest początkowo wyłączone. Wyłączone okna nie mogą otrzymywać dane wejściowe użytkownika. Można ustawić, jeśli formant ma właściwość Enabled.  
+- WS_DISABLED tworzy okno, które jest początkowo wyłączone. Wyłączone okno nie może odbierać dane wejściowe od użytkownika. Można ustawić, jeśli kontrolka ma właściwość Enabled.  
   
-- **Ws_border —** tworzy okno z elastycznej linii obramowania. Można ustawić, jeśli formant ma właściwości BorderStyle.  
+- WS_BORDER tworzy okno z obramowaniem alokowanych wiersza. Można ustawić, jeśli kontrolka ma właściwości BorderStyle.  
   
-- **Ws_group —** Określa pierwszą kontrolkę grupy formantów. Użytkownik może zmienić fokus klawiatury z jednego formantu w grupie do następnego przy użyciu kluczy kierunku. Wszystkie formanty zdefiniowane z **ws_group —** styl po pierwszą kontrolkę należą do tej samej grupy. Następnego formantu z **ws_group —** styl kończy się grupie i uruchamia następnej grupy.  
+- WS_GROUP Określa pierwszy formant grupy formantów. Użytkownik może zmienić fokus klawiatury w jeden formant w grupie do następnego przy użyciu kluczy kierunku. Wszystkie formanty zdefiniowane przy użyciu stylu WS_GROUP po pierwszej kontroli należą do tej samej grupy. Następny formant ze stylem WS_GROUP kończy grupy i rozpoczyna następną grupę.  
   
-- **Ws_tabstop —** Określa formant może przyjmować fokus klawiatury, gdy użytkownik naciśnie klawisz TAB. Naciśnięcie klawisza TAB zmienia fokus klawiatury do następnej kontrolki z **ws_tabstop —** stylu.  
+- WS_TABSTOP Określa formant, który może odebrać fokus klawiatury, gdy użytkownik naciśnie klawisz TAB. Naciskając klawisz TAB, zmienia się na następnej kontrolki stylu WS_TABSTOP fokus klawiatury.  
   
- Drugi przeciążenie umożliwia tworzenie formantów o rozmiarze domyślnym.  
+ Drugie przeciążenie umożliwia tworzenie formantów o rozmiarze domyślnym.  
   
 ##  <a name="destroycontrol"></a>  COleControlSite::DestroyControl  
  Niszczy `COleControlSite` obiektu.  
@@ -368,10 +368,10 @@ virtual BOOL DestroyControl();
 ```  
   
 ### <a name="return-value"></a>Wartość zwracana  
- Różna od zera, jeśli to się powiedzie, w przeciwnym razie wartość 0.  
+ Wartość różną od zera, jeśli to się powiedzie, w przeciwnym razie 0.  
   
 ### <a name="remarks"></a>Uwagi  
- Po zakończeniu obiekt zostanie zwolniona z pamięci, a wszystkie wskaźniki do obiektu nie są już prawidłowe.  
+ Po zakończeniu obiekt zostanie zwolniony z pamięci i wszystkie wskaźniki do obiektu nie są już prawidłowe.  
   
 ##  <a name="doverb"></a>  COleControlSite::DoVerb  
  Wykonuje określone zlecenie.  
@@ -384,39 +384,39 @@ virtual HRESULT DoVerb(
   
 ### <a name="parameters"></a>Parametry  
  *nVerb*  
- Określa zlecenie do wykonania. Może zawierać jedną z następujących czynności:  
+ Określa polecenie do wykonania. Może ono obejmować jedną z następujących czynności:  
   
 |Wartość|Znaczenie|Symbol|  
 |-----------|-------------|------------|  
-|0|Primary — Zlecenie|`OLEIVERB_PRIMARY`|  
-|-1|Zlecenie dodatkowej|(Brak)|  
-|1|Wyświetla obiekt do edycji.|`OLEIVERB_SHOW`|  
-|-2|Edytuje element w osobnym oknie.|`OLEIVERB_OPEN`|  
-|-3|Ukrywa obiektu.|`OLEIVERB_HIDE`|  
-|-4|Aktywuje formant w miejscu.|`OLEIVERB_UIACTIVATE`|  
-|-5|Aktywuje formant w miejscu, bez dodatkowe elementy interfejsu użytkownika.|`OLEIVERB_INPLACEACTIVATE`|  
-|-7|Wyświetl właściwości formantu.|`OLEIVERB_PROPERTIES`|  
+|0|Primary — Zlecenie|OLEIVERB_PRIMARY|  
+|-1|Pomocniczy zlecenia|(Brak)|  
+|1|Wyświetla obiekt do edycji.|OLEIVERB_SHOW|  
+|-2|Edytuje element w osobnym oknie.|OLEIVERB_OPEN|  
+|-3|Ukrywa obiektu.|OLEIVERB_HIDE|  
+|-4|Aktywuje formant w miejscu.|OLEIVERB_UIACTIVATE|  
+|-5|Aktywuje formant w miejscu, bez dodatkowe elementy interfejsu użytkownika.|OLEIVERB_INPLACEACTIVATE|  
+|-7|Wyświetlanie właściwości formantu.|OLEIVERB_PROPERTIES|  
   
  *lpMsg*  
- Wskaźnik do wiadomości, który spowodował ten element, aby aktywować.  
+ Wskaźnik na komunikat, który spowodował elementu zostanie uaktywniony.  
   
 ### <a name="return-value"></a>Wartość zwracana  
- Standard `HRESULT` wartość.  
+ Standardowe wartości HRESULT.  
   
 ### <a name="remarks"></a>Uwagi  
- Ta funkcja bezpośrednio wywołuje za pomocą formantu `IOleObject` interfejsu, aby wykonać określone zlecenie. Jeśli w wyniku tego wywołania funkcji, jest zgłaszany wyjątek `HRESULT` zwrócony kod błędu.  
+ Ta funkcja odwołuje się bezpośrednio za pośrednictwem formantu `IOleObject` interfejsu, aby wykonać określone zlecenie. Jeśli wyjątek jest generowany w wyniku tego wywołania funkcji, zwracany jest kod błędu HRESULT.  
   
  Aby uzyskać więcej informacji, zobacz [IOleObject::DoVerb](http://msdn.microsoft.com/library/windows/desktop/ms694508) w zestawie Windows SDK.  
   
 ##  <a name="enabledsc"></a>  COleControlSite::EnableDSC  
- Umożliwia danych sourcing kontroli lokacji.  
+ Umożliwia określanie źródła dla tej witryny kontroli danych.  
   
 ```  
 virtual void EnableDSC();
 ```  
   
 ### <a name="remarks"></a>Uwagi  
- Wywoływane przez platformę, by włączyć i zainicjuj dane sourcing kontroli lokacji. Przesłonić tę funkcję, aby zapewnić zachowanie niestandardowych.  
+ Metoda wywoływana przez platformę, by włączyć i zainicjuj danych sourcing kontroli lokacji. Należy przesłonić tę funkcję, aby zapewnić zachowanie niestandardowe.  
   
 ##  <a name="enablewindow"></a>  COleControlSite::EnableWindow  
  Włącza lub wyłącza myszy i klawiatury do kontroli lokacji.  
@@ -427,13 +427,13 @@ virtual BOOL EnableWindow(BOOL bEnable);
   
 ### <a name="parameters"></a>Parametry  
  *bWłączenie*  
- Określa, czy włączyć lub wyłączyć okna: **TRUE** w przypadku wprowadzania okna do włączenia, w przeciwnym razie **FALSE**.  
+ Określa, czy włączać lub wyłączać okna: wartość TRUE, jeśli dane wejściowe z okna, które ma być włączone, w przeciwnym razie wartość FALSE.  
   
 ### <a name="return-value"></a>Wartość zwracana  
- Różna od zera, jeśli wcześniej była wyłączona okna, w przeciwnym razie wartość 0.  
+ Wartość różną od zera, jeśli wcześniej była wyłączona okna, w przeciwnym razie 0.  
   
 ##  <a name="freezeevents"></a>  COleControlSite::FreezeEvents  
- Określa, czy kontroli lokacji będzie obsługiwać lub Ignoruj zdarzenia wywoływane z formantu.  
+ Określa, czy witryny kontroli będzie obsługiwać Ignoruj zdarzenia zwolnione z formantu.  
   
 ```  
 void FreezeEvents(BOOL bFreeze);
@@ -441,16 +441,16 @@ void FreezeEvents(BOOL bFreeze);
   
 ### <a name="parameters"></a>Parametry  
  *bFreeze*  
- Określa lokacji kontroli chce akceptować zdarzenia. Różna od zera, jeśli formant nie akceptuje zdarzeń; w przeciwnym razie wartość zero.  
+ Określa witryny kontroli chce akceptować zdarzenia. Wartość różną od zera, jeśli formant nie akceptuje zdarzeń; w przeciwnym razie wartość zero.  
   
 ### <a name="remarks"></a>Uwagi  
- Jeśli *bFreeze* jest **TRUE**, witrynie formant żądań formant przestanie fring zdarzenia. Jeśli *bFreeze* jest **FALSE**, witrynie formant żądań kontroli, aby kontynuować, wyzwalania zdarzenia.  
+ Jeśli *bFreeze* ma wartość PRAWDA, witrynie kontroli żądań formant Aby zatrzymać Przenieś zdarzenia. Jeśli *bFreeze* ma wartość FAŁSZ, witrynie kontroli żądań formant aby kontynuować, wyzwalanie zdarzeń.  
   
 > [!NOTE]
->  Formant nie jest wymagane do zatrzymania wyzwalania zdarzenia żądanie kontroli lokacji. Można kontynuować uruchamiania, ale wszystkich kolejnych zdarzeń zostaną zignorowane przez kontroli lokacji.  
+>  Kontrolka nie jest wymagane przestanie wyzwalanie zdarzeń, jeśli jest to wymagane przez lokację kontroli. Może kontynuować uruchomieniu którego, ale wszystkie kolejne zdarzenia zostaną zignorowane przez lokację kontroli.  
   
 ##  <a name="getcontrolinfo"></a>  COleControlSite::GetControlInfo  
- Pobiera informacje o klawiszy skrótu klawiatury i zachowanie klawiatury formantu.  
+ Pobiera informacje o kontroli klawiszy skrótu klawiatury i zachowanie klawiatury.  
   
 ```  
 void GetControlInfo();
@@ -460,30 +460,30 @@ void GetControlInfo();
  Informacje są przechowywane w [COleControlSite::m_ctlInfo](#m_ctlinfo).  
   
 ##  <a name="getdefbtncode"></a>  COleControlSite::GetDefBtnCode  
- Określa, czy formant jest domyślny przycisk.  
+ Określa, czy formant przycisku domyślnego.  
   
 ```  
 DWORD GetDefBtnCode();
 ```  
   
 ### <a name="return-value"></a>Wartość zwracana  
- Może to być jedna z następujących wartości:  
+ Może być jednym z następujących wartości:  
   
-- **DLGC_DEFPUSHBUTTON** formant jest przycisk domyślny w oknie dialogowym.  
+- Kontrolka DLGC_DEFPUSHBUTTON jest przycisk domyślny w oknie dialogowym.  
   
-- **DLGC_UNDEFPUSHBUTTON** formant nie jest przycisk domyślny w oknie dialogowym.  
+- Kontrolka DLGC_UNDEFPUSHBUTTON nie jest przycisk domyślny w oknie dialogowym.  
   
-- **0** formant nie jest przycisk.  
+- **0** kontrolki nie jest przyciskiem.  
   
 ##  <a name="getdlgctrlid"></a>  COleControlSite::GetDlgCtrlID  
- Pobiera identyfikator formantu.  
+ Pobiera identyfikator kontrolki.  
   
 ```  
 virtual int GetDlgCtrlID() const;  
 ```  
   
 ### <a name="return-value"></a>Wartość zwracana  
- Identyfikator elementu okna dialogowego formantu.  
+ Identyfikator elementu okno dialogowe formantu.  
   
 ##  <a name="geteventiid"></a>  COleControlSite::GetEventIID  
  Pobiera wskaźnik do interfejsu zdarzenia domyślne formantu.  
@@ -494,10 +494,10 @@ BOOL GetEventIID(IID* piid);
   
 ### <a name="parameters"></a>Parametry  
  *piid*  
- Wskaźnik do identyfikatora interfejsu.  
+ Wskaźnik do interfejsu.  
   
 ### <a name="return-value"></a>Wartość zwracana  
- Różna od zera, jeśli to się powiedzie, w przeciwnym razie wartość 0. W przypadku powodzenia *piid* zawiera identyfikator interfejsu dla interfejsu zdarzenia domyślne formantu.  
+ Wartość różną od zera, jeśli to się powiedzie, w przeciwnym razie 0. W przypadku powodzenia *piid* zawiera identyfikator interfejsu dla interfejsu zdarzenia domyślne formantu.  
   
 ##  <a name="getexstyle"></a>  COleControlSite::GetExStyle  
  Pobiera rozszerzone Style okna.  
@@ -513,7 +513,7 @@ virtual DWORD GetExStyle() const;
  Aby pobrać regularne style, wywołania [COleControlSite::GetStyle](#getstyle).  
   
 ##  <a name="getproperty"></a>  COleControlSite::GetProperty  
- Pobiera określony przez właściwość kontrolki *dwDispID*.  
+ Pobiera określony przez właściwość formantu *dwDispID*.  
   
 ```  
 virtual void GetProperty(
@@ -527,13 +527,13 @@ virtual void GetProperty(
  Określa identyfikator wysyłania odnaleziono na formantu domyślnych właściwości `IDispatch` interfejsu do pobrania.  
   
  *vtProp*  
- Określa typ właściwości, które mają zostać pobrane. Możliwe wartości w sekcji uwag dla [COleDispatchDriver::InvokeHelper](../../mfc/reference/coledispatchdriver-class.md#invokehelper).  
+ Określa typ właściwości, które mają zostać pobrane. Aby uzyskać możliwych wartości, zobacz sekcję Spostrzeżenia, aby [COleDispatchDriver::InvokeHelper](../../mfc/reference/coledispatchdriver-class.md#invokehelper).  
   
  *pvProp*  
- Adres zmiennej, która otrzyma wartość właściwości. Musi on być zgodny z typem określonym przez *vtProp*.  
+ Adres zmiennej, która otrzyma wartość właściwości. Musi być zgodny z typem określonym przez *vtProp*.  
   
 ### <a name="remarks"></a>Uwagi  
- Wartość jest zwracana przez *pvProp*.  
+ Wartość jest zwracana za pośrednictwem *pvProp*.  
   
 ##  <a name="getstyle"></a>  COleControlSite::GetStyle  
  Pobiera style kontroli lokacji.  
@@ -546,10 +546,10 @@ virtual DWORD GetStyle() const;
  Style okna.  
   
 ### <a name="remarks"></a>Uwagi  
- Aby uzyskać listę możliwych wartości, zobacz [style Windows](../../mfc/reference/styles-used-by-mfc.md#window-styles). Aby pobrać rozszerzone style sterowania lokacji, należy wywołać [COleControlSite::GetExStyle](#getexstyle).  
+ Aby uzyskać listę możliwych wartości, zobacz [style Windows](../../mfc/reference/styles-used-by-mfc.md#window-styles). Aby pobrać rozszerzone style lokacji kontrolki, należy wywołać [COleControlSite::GetExStyle](#getexstyle).  
   
 ##  <a name="getwindowtext"></a>  COleControlSite::GetWindowText  
- Pobiera bieżący tekst formantu.  
+ Pobiera tekst kontrolki.  
   
 ```  
 virtual void GetWindowText(CString& str) const;  
@@ -557,13 +557,13 @@ virtual void GetWindowText(CString& str) const;
   
 ### <a name="parameters"></a>Parametry  
  *str*  
- Odwołanie do `CString` obiekt, który zawiera dany tekst formantu.  
+ Odwołanie do `CString` obiekt, który zawiera tekst kontrolki.  
   
 ### <a name="remarks"></a>Uwagi  
- Jeśli formant obsługuje właściwości standardowych podpis, ta wartość jest zwracana. Jeśli właściwość standardowych podpis nie jest obsługiwana, jest zwracana wartość właściwości Text.  
+ Jeśli są obsługiwane przez kontrolkę podstawowe właściwości podpisu, ta wartość jest zwracana. Jeśli właściwości podstawowych podpis nie jest obsługiwana, jest zwracana wartość właściwości Text.  
   
 ##  <a name="invokehelper"></a>  COleControlSite::InvokeHelper  
- Wywołuje metodę lub określona przez właściwość *dwDispID*, w ramach określonej przez *wFlags*.  
+ Wywołuje metodę lub właściwość określoną przez *dwDispID*, w kontekście określonej przez *wFlags*.  
   
 ```  
 virtual void AFX_CDECL InvokeHelper(
@@ -576,30 +576,30 @@ virtual void AFX_CDECL InvokeHelper(
   
 ### <a name="parameters"></a>Parametry  
  *dwDispID*  
- Określa identyfikator wysyłania właściwości lub metody, na formantu `IDispatch` interfejs do wywołania.  
+ Określa identyfikator wysyłania odnaleziono właściwości lub metody, na kontrolce `IDispatch` interfejsu do wywołania.  
   
  *wFlags*  
- Flagi opisujące Kontekst wywołania IDispatch::Invoke. Do ewentualnego *wFlags* wartości, zobacz `IDispatch::Invoke` w zestawie Windows SDK.  
+ Flagi opisujące Kontekst wywołania uwzględniając. Do ewentualnego *wFlags* wartości, zobacz `IDispatch::Invoke` w zestawie Windows SDK.  
   
  *vtRet*  
- Określa typ zwracanej wartości. Możliwe wartości w sekcji uwag dla [COleDispatchDriver::InvokeHelper](../../mfc/reference/coledispatchdriver-class.md#invokehelper).  
+ Określa typ wartości zwracanej. Aby uzyskać możliwych wartości, zobacz sekcję Spostrzeżenia, aby [COleDispatchDriver::InvokeHelper](../../mfc/reference/coledispatchdriver-class.md#invokehelper).  
   
  *pvRet*  
- Adres zmiennej, która będzie odbierać wartość właściwości ani zwracanej wartości. Musi on być zgodny z typem określonym przez *vtRet*.  
+ Adres zmiennej, która będzie odbierać wartość właściwości lub wartości zwracanej. Musi być zgodny z typem określonym przez *vtRet*.  
   
  *pbParamInfo*  
- Wskaźnik do zerem ciągu bajtów Określanie typów parametrów po *pbParamInfo*. Możliwe wartości w sekcji uwag dla [COleDispatchDriver::InvokeHelper](../../mfc/reference/coledispatchdriver-class.md#invokehelper).  
+ Wskaźnik na ciąg zakończony znakiem null bajtów, określając typy parametrów, zgodnie z *pbParamInfo*. Aby uzyskać możliwych wartości, zobacz sekcję Spostrzeżenia, aby [COleDispatchDriver::InvokeHelper](../../mfc/reference/coledispatchdriver-class.md#invokehelper).  
   
  *...*  
  Zmiennej listy parametrów typów określonych w *pbParamInfo*.  
   
 ### <a name="remarks"></a>Uwagi  
- *PbParamInfo* parametr określa typy parametrów przekazanych do metody lub właściwości. Listy zmiennych argumentów jest reprezentowana przez... w deklaracji składni.  
+ *PbParamInfo* parametr określa typy parametrów przekazanych do metody lub właściwości. Listy zmiennych argumentów jest reprezentowany przez... w składni deklaracji.  
   
- Ta funkcja konwertuje parametry **VARIANTARG** wartości, a następnie wywołuje `IDispatch::Invoke` metody w formancie. Jeśli wywołanie `IDispatch::Invoke` kończy się niepowodzeniem, ta funkcja spowoduje zgłoszenie wyjątku. Jeśli kod stanu zwrócony przez `IDispatch::Invoke` jest `DISP_E_EXCEPTION`, funkcja zwraca `COleDispatchException` obiektu, w przeciwnym razie zgłasza `COleException`.  
+ Ta funkcja konwertuje parametry VARIANTARG wartości, a następnie wywołuje `IDispatch::Invoke` metody dla kontrolki. Jeśli wywołanie `IDispatch::Invoke` zakończy się niepowodzeniem, ta funkcja spowoduje zgłoszenie wyjątku. Jeśli kod stanu zwrócony przez `IDispatch::Invoke` jest `DISP_E_EXCEPTION`, ta funkcja zgłosi `COleDispatchException` obiektu, w przeciwnym razie wyniku weryfikacji zgłasza wyjątek `COleException`.  
   
 ##  <a name="invokehelperv"></a>  COleControlSite::InvokeHelperV  
- Wywołuje metodę lub określona przez właściwość *dwDispID*, w ramach określonej przez *wFlags*.  
+ Wywołuje metodę lub właściwość określoną przez *dwDispID*, w kontekście określonej przez *wFlags*.  
   
 ```  
 virtual void InvokeHelperV(
@@ -613,37 +613,37 @@ virtual void InvokeHelperV(
   
 ### <a name="parameters"></a>Parametry  
  *dwDispID*  
- Określa identyfikator wysyłania właściwości lub metody, na formantu `IDispatch` interfejs do wywołania.  
+ Określa identyfikator wysyłania odnaleziono właściwości lub metody, na kontrolce `IDispatch` interfejsu do wywołania.  
   
  *wFlags*  
- Flagi opisujące Kontekst wywołania IDispatch::Invoke.  
+ Flagi opisujące Kontekst wywołania uwzględniając.  
   
  *vtRet*  
- Określa typ zwracanej wartości. Możliwe wartości w sekcji uwag dla [COleDispatchDriver::InvokeHelper](../../mfc/reference/coledispatchdriver-class.md#invokehelper).  
+ Określa typ wartości zwracanej. Aby uzyskać możliwych wartości, zobacz sekcję Spostrzeżenia, aby [COleDispatchDriver::InvokeHelper](../../mfc/reference/coledispatchdriver-class.md#invokehelper).  
   
  *pvRet*  
- Adres zmiennej, która będzie odbierać wartość właściwości ani zwracanej wartości. Musi on być zgodny z typem określonym przez *vtRet*.  
+ Adres zmiennej, która będzie odbierać wartość właściwości lub wartości zwracanej. Musi być zgodny z typem określonym przez *vtRet*.  
   
  *pbParamInfo*  
- Wskaźnik do zerem ciągu bajtów Określanie typów parametrów po *pbParamInfo*. Możliwe wartości w sekcji uwag dla [COleDispatchDriver::InvokeHelper](../../mfc/reference/coledispatchdriver-class.md#invokehelper).  
+ Wskaźnik na ciąg zakończony znakiem null bajtów, określając typy parametrów, zgodnie z *pbParamInfo*. Aby uzyskać możliwych wartości, zobacz sekcję Spostrzeżenia, aby [COleDispatchDriver::InvokeHelper](../../mfc/reference/coledispatchdriver-class.md#invokehelper).  
   
  *Lista_argumentów*  
  Wskaźnik do listy zmiennych argumentów.  
   
 ### <a name="remarks"></a>Uwagi  
- *PbParamInfo* parametr określa typy parametrów przekazanych do metody lub właściwości. Dodatkowe parametry dla metody lub właściwości wywoływaną mogą zostać przekazane za pomocą *va_list* parametru.  
+ *PbParamInfo* parametr określa typy parametrów przekazanych do metody lub właściwości. Mogą być przekazywane dodatkowe parametry dla metody lub właściwości, które są wywoływane przy użyciu *va_list* parametru.  
   
- Zwykle ta funkcja jest wywoływana `COleControlSite::InvokeHelper`.  
+ Typowo, ta funkcja jest wywoływana `COleControlSite::InvokeHelper`.  
   
 ##  <a name="isdefaultbutton"></a>  COleControlSite::IsDefaultButton  
- Określa, czy formant jest przycisk domyślny.  
+ Określa, czy kontrolka jest przycisk domyślny.  
   
 ```  
 BOOL IsDefaultButton();
 ```  
   
 ### <a name="return-value"></a>Wartość zwracana  
- Różna od zera, jeśli kontrolka znajduje się przycisk domyślny w oknie, w przeciwnym razie wartość zero.  
+ Wartość różną od zera, jeśli formant znajduje się przycisk domyślny w oknie, w przeciwnym razie od zera.  
   
 ##  <a name="iswindowenabled"></a>  COleControlSite::IsWindowEnabled  
  Określa, czy włączono kontroli lokacji.  
@@ -653,10 +653,10 @@ virtual BOOL IsWindowEnabled() const;
 ```  
   
 ### <a name="return-value"></a>Wartość zwracana  
- Różna od zera, jeśli formant jest włączony, w przeciwnym razie wartość zero.  
+ Wartość różną od zera, jeśli kontrolka jest włączona, w przeciwnym razie wartość zero.  
   
 ### <a name="remarks"></a>Uwagi  
- Wartość jest pobierana z właściwości standardowych włączone formantu.  
+ Wartość jest pobierana z właściwości podstawowych włączone formantu.  
   
 ##  <a name="m_biswindowless"></a>  COleControlSite::m_bIsWindowless  
  Określa, czy obiekt jest formantem bez okien.  
@@ -666,10 +666,10 @@ BOOL m_bIsWindowless;
 ```  
   
 ### <a name="remarks"></a>Uwagi  
- Różna od zera, jeśli formant nie ma żadnego okna, w przeciwnym razie wartość zero.  
+ Wartość różną od zera, jeśli kontrolka nie ma żadnego okna, w przeciwnym razie wartość zero.  
   
 ##  <a name="m_ctlinfo"></a>  COleControlSite::m_ctlInfo  
- Informacje na temat sposobu obsługi danych wprowadzonych z klawiatury przez formant.  
+ Informacje na temat sposobu obsługi danych wprowadzonych z klawiatury przez kontrolkę.  
   
 ```  
 CONTROLINFO m_ctlInfo;  
@@ -679,14 +679,14 @@ CONTROLINFO m_ctlInfo;
  Te informacje są przechowywane w [CONTROLINFO](http://msdn.microsoft.com/library/windows/desktop/ms680734) struktury.  
   
 ##  <a name="m_dweventsink"></a>  COleControlSite::m_dwEventSink  
- Zawiera plik cookie punkt połączenia z obiektu sink zdarzenia formantu.  
+ Zawiera cookie punkt połączenia z obiektu sink zdarzenia formantu.  
   
 ```  
 DWORD m_dwEventSink;  
 ```  
   
 ##  <a name="m_dwmiscstatus"></a>  COleControlSite::m_dwMiscStatus  
- Zawiera dodatkowe informacje dotyczące formantu.  
+ Zawiera różne informacje o kontrolce.  
   
 ```  
 DWORD m_dwMiscStatus;  
@@ -696,28 +696,28 @@ DWORD m_dwMiscStatus;
  Aby uzyskać więcej informacji, zobacz [OLEMISC](http://msdn.microsoft.com/library/windows/desktop/ms678497)w zestawie Windows SDK.  
   
 ##  <a name="m_dwpropnotifysink"></a>  COleControlSite::m_dwPropNotifySink  
- Zawiera [IPropertyNotifySink](http://msdn.microsoft.com/library/windows/desktop/ms692638) pliku cookie.  
+ Zawiera [ipropertynotifysink —](http://msdn.microsoft.com/library/windows/desktop/ms692638) pliku cookie.  
   
 ```  
 DWORD m_dwPropNotifySink;  
 ```  
   
 ##  <a name="m_dwstyle"></a>  COleControlSite::m_dwStyle  
- Zawiera style okna formantu.  
+ Zawiera style okna ramowego formantu.  
   
 ```  
 DWORD m_dwStyle;  
 ```  
   
 ##  <a name="m_hwnd"></a>  COleControlSite::m_hWnd  
- Zawiera `HWND` formantu, lub **NULL** Jeśli formant jest powiązany z oknami.  
+ Zawiera HWND formantu lub wartość NULL, jeśli kontrolka jest bez okien.  
   
 ```  
 HWND m_hWnd;  
 ```  
   
 ##  <a name="m_iidevents"></a>  COleControlSite::m_iidEvents  
- Zawiera identyfikator interfejsu interfejsu obiekt sink zdarzenia domyślne formantu.  
+ Zawiera identyfikator interfejsu interfejs ujścia zdarzeń domyślne formantu.  
   
 ```  
 IID m_iidEvents;  
@@ -738,7 +738,7 @@ LPOLEINPLACEACTIVEOBJECT m_pActiveObject;
 ```  
   
 ##  <a name="m_pctrlcont"></a>  COleControlSite::m_pCtrlCont  
- Zawiera formantu kontenera (formularz reprezentujący).  
+ Zawiera kontener formantu (reprezentującej formularza).  
   
 ```  
 COleControlContainer* m_pCtrlCont;  
@@ -752,7 +752,7 @@ LPOLEINPLACEOBJECT m_pInPlaceObject;
 ```  
   
 ##  <a name="m_pobject"></a>  COleControlSite::m_pObject  
- Zawiera **IOleObjectInterface** interfejsu formantu.  
+ Zawiera `IOleObjectInterface` interfejsu formantu.  
   
 ```  
 LPOLEOBJECT m_pObject;  
@@ -766,21 +766,21 @@ IOleInPlaceObjectWindowless* m_pWindowlessObject;
 ```  
   
 ##  <a name="m_pwndctrl"></a>  COleControlSite::m_pWndCtrl  
- Zawiera wskaźnik do `CWnd` obiekt, który reprezentuje samego formantu.  
+ Zawiera wskaźnik do `CWnd` obiekt, który reprezentuje sam formant.  
   
 ```  
 CWnd* m_pWndCtrl;  
 ```  
   
 ##  <a name="m_rect"></a>  COleControlSite::m_rect  
- Zawiera granice kontroli względem kontenera okna.  
+ Zawiera granice formantu względem okna kontenera.  
   
 ```  
 CRect m_rect;  
 ```  
   
 ##  <a name="modifystyle"></a>  COleControlSite::ModifyStyle  
- Modyfikuje stylów formantu.  
+ Modyfikuje style kontrolki.  
   
 ```  
 virtual BOOL ModifyStyle(
@@ -791,36 +791,36 @@ virtual BOOL ModifyStyle(
   
 ### <a name="parameters"></a>Parametry  
  *dwRemove*  
- Style do usunięcia z bieżącego Style okna.  
+ Style do usunięcia z bieżącego Style okna ramowego.  
   
  *dwAdd*  
- Style, które ma zostać dodana z style bieżącego okna.  
+ Style, które mają zostać dodane z bieżącym Style okna ramowego.  
   
  *nFlags*  
- Okno pozycjonowanie flagi. Aby uzyskać listę możliwych wartości, zobacz [SetWindowPos](http://msdn.microsoft.com/library/windows/desktop/ms633545) funkcji w zestawie Windows SDK.  
+ Okno pozycjonowanie flag. Aby uzyskać listę możliwych wartości, zobacz [SetWindowPos](http://msdn.microsoft.com/library/windows/desktop/ms633545) funkcji w zestawie Windows SDK.  
   
 ### <a name="return-value"></a>Wartość zwracana  
- Różna od zera, jeżeli style są zmieniane, w przeciwnym razie wartość zero.  
+ Różna od zera, jeśli style zostaną zmienione, w przeciwnym razie wartość zero.  
   
 ### <a name="remarks"></a>Uwagi  
- Stock formantu Właściwość Enabled zostaną zmodyfikowane i odpowiadają ustawieniom **ws_disabled —**. Właściwości standardowych styl obramowania formantu zostaną zmodyfikowane i odpowiadają ustawieniom żądanego `WS_BORDER`. Wszystkie inne style są stosowane bezpośrednio do uchwytu okna dla formantu, jeśli występuje.  
+ Stock formantu właściwość włączone zostaną zmodyfikowane w taki sposób, aby dopasować ustawienie WS_DISABLED. Podstawowe właściwości Styl obramowania formantu zostaną zmodyfikowane w taki sposób, aby dopasować żądany ustawienie WS_BORDER. Innymi stylami są stosowane bezpośrednio do dojścia okna kontrolki, jeśli jest obecna.  
   
- Modyfikuje style okna formantu. Style, które mają zostać dodane lub usunięte można łączyć, używając wartości bitowe lub ( &#124; ) operatora. Zobacz [właściwości CreateWindow](http://msdn.microsoft.com/library/windows/desktop/ms632679) funkcji w zestawie Windows SDK dla informacji o style dostępnym oknie.  
+ Modyfikuje style okna ramowego formantu. Style, które mają być dodane lub usunięte, może być połączone za pomocą bitowe OR ( &#124; ) — operator. Zobacz [CreateWindow](http://msdn.microsoft.com/library/windows/desktop/ms632679) funkcji w zestawie Windows SDK dla informacji o stylach dostępnym oknie.  
   
- Jeśli *nFlags* jest różna od zera, `ModifyStyle` wywołania funkcji Win32 `SetWindowPos`i ponownie rysuje okna łącząc *nFlags* z następujących czterech flag:  
+ Jeśli *nFlags* jest różna od zera, `ModifyStyle` wywołuje funkcję Win32 `SetWindowPos`i ponownie rysuje okna, łącząc *nFlags* z czterech następujących flag:  
   
-- `SWP_NOSIZE` Zachowuje bieżący rozmiar.  
+- SWP_NOSIZE zachowuje bieżący rozmiar.  
   
-- `SWP_NOMOVE` Zachowuje bieżące położenie.  
+- SWP_NOMOVE zachowuje bieżącej pozycji.  
   
-- `SWP_NOZORDER` Zachowuje bieżący porządek osi.  
+- SWP_NOZORDER zachowuje porządek bieżącego.  
   
-- `SWP_NOACTIVATE` Nie aktywować okna.  
+- SWP_NOACTIVATE nie uaktywnia okna.  
   
- Aby zmodyfikować okna na rozszerzone style, wywołania [ModifyStyleEx](#modifystyleex).  
+ Aby zmodyfikować w oknie, użytkownika rozszerzone style, wywołania [ModifyStyleEx](#modifystyleex).  
   
 ##  <a name="modifystyleex"></a>  COleControlSite::ModifyStyleEx  
- Modyfikuje rozszerzone style formantu.  
+ Modyfikuje rozszerzone style kontrolki.  
   
 ```  
 virtual BOOL ModifyStyleEx(
@@ -831,33 +831,33 @@ virtual BOOL ModifyStyleEx(
   
 ### <a name="parameters"></a>Parametry  
  *dwRemove*  
- Rozszerzone style do usunięcia z bieżącego Style okna.  
+ Rozszerzone style do usunięcia z bieżącego Style okna ramowego.  
   
  *dwAdd*  
- Rozszerzone style ma zostać dodana z style bieżącego okna.  
+ Rozszerzone style do dodania z bieżącym Style okna ramowego.  
   
  *nFlags*  
- Okno pozycjonowanie flagi. Aby uzyskać listę możliwych wartości, zobacz [SetWindowPos](http://msdn.microsoft.com/library/windows/desktop/ms633545) funkcji w zestawie Windows SDK.  
+ Okno pozycjonowanie flag. Aby uzyskać listę możliwych wartości, zobacz [SetWindowPos](http://msdn.microsoft.com/library/windows/desktop/ms633545) funkcji w zestawie Windows SDK.  
   
 ### <a name="return-value"></a>Wartość zwracana  
- Różna od zera, jeżeli style są zmieniane, w przeciwnym razie wartość zero.  
+ Różna od zera, jeśli style zostaną zmienione, w przeciwnym razie wartość zero.  
   
 ### <a name="remarks"></a>Uwagi  
- Właściwości standardowych wygląd formantu zostaną zmodyfikowane i odpowiadają ustawieniom **WS_EX_CLIENTEDGE**. Wszystkie inne rozszerzone Style okna są stosowane bezpośrednio do uchwytu okna dla formantu, jeśli występuje.  
+ Stock formantu właściwości wyglądu zostaną zmodyfikowane w taki sposób, aby dopasować ustawienie WS_EX_CLIENTEDGE. Wszystkie inne rozszerzone Style okna są stosowane bezpośrednio do dojścia okna kontrolki, jeśli jest obecna.  
   
- Modyfikuje okna rozszerzone style obiektu kontroli lokacji. Style, które mają zostać dodane lub usunięte można łączyć, używając wartości bitowe lub ( &#124; ) operatora. Zobacz [CreateWindowEx](http://msdn.microsoft.com/library/windows/desktop/ms632680) funkcji w zestawie Windows SDK dla informacji o style dostępnym oknie.  
+ Modyfikuje okna rozszerzone style obiektu kontroli lokacji. Style, które mają być dodane lub usunięte, może być połączone za pomocą bitowe OR ( &#124; ) — operator. Zobacz [elementu CreateWindowEx](http://msdn.microsoft.com/library/windows/desktop/ms632680) funkcji w zestawie Windows SDK dla informacji o stylach dostępnym oknie.  
   
- Jeśli *nFlags* jest różna od zera, `ModifyStyleEx` wywołania funkcji Win32 `SetWindowPos`i ponownie rysuje okna łącząc *nFlags* z następujących czterech flag:  
+ Jeśli *nFlags* jest różna od zera, `ModifyStyleEx` wywołuje funkcję Win32 `SetWindowPos`i ponownie rysuje okna, łącząc *nFlags* z czterech następujących flag:  
   
-- `SWP_NOSIZE` Zachowuje bieżący rozmiar.  
+- SWP_NOSIZE zachowuje bieżący rozmiar.  
   
-- `SWP_NOMOVE` Zachowuje bieżące położenie.  
+- SWP_NOMOVE zachowuje bieżącej pozycji.  
   
-- `SWP_NOZORDER` Zachowuje bieżący porządek osi.  
+- SWP_NOZORDER zachowuje porządek bieżącego.  
   
-- `SWP_NOACTIVATE` Nie aktywować okna.  
+- SWP_NOACTIVATE nie uaktywnia okna.  
   
- Aby zmodyfikować okna na rozszerzone style, wywołania [ModifyStyle](#modifystyle).  
+ Aby zmodyfikować w oknie, użytkownika rozszerzone style, wywołania [ModifyStyle](#modifystyle).  
   
 ##  <a name="movewindow"></a>  COleControlSite::MoveWindow  
  Zmienia położenie formantu.  
@@ -872,34 +872,34 @@ virtual void MoveWindow(
   
 ### <a name="parameters"></a>Parametry  
  *x*  
- Nowa pozycja lewej części okna.  
+ Stanowisko w lewej części okna.  
   
  *y*  
- Nowa pozycja górnej części okna.  
+ Stanowisko w górnej części okna.  
   
  *nWidth*  
- Nową szerokość okna  
+ Nowe szerokość okna  
   
  *nHeight*  
  Nową wysokość okna.  
   
 ##  <a name="quickactivate"></a>  COleControlSite::QuickActivate  
- Szybkie aktywuje formant zawartych w niej.  
+ Szybkie aktywuje kontrolkę zawarte.  
   
 ```  
 virtual BOOL QuickActivate();
 ```  
   
 ### <a name="return-value"></a>Wartość zwracana  
- Różna od zera, jeśli uaktywniono sterowania lokacji, w przeciwnym razie wartość zero.  
+ Wartość różną od zera Jeżeli lokacji kontrolki została aktywowana, w przeciwnym razie zero.  
   
 ### <a name="remarks"></a>Uwagi  
- Ta funkcja powinna być wywoływana tylko wtedy, gdy użytkownik zastępuje procesu tworzenia formantu.  
+ Ta funkcja powinna być wywoływana tylko wtedy, gdy użytkownik zastępuje procesu tworzenia kontrolki.  
   
- `IPersist*::Load` i `IPersist*::InitNew` metody powinna być wywoływana po wystąpieniu szybkie aktywacji. Formant należy określić jego połączenia z wychwytywanie kontenera podczas szybkiego aktywacji. Połączenia te nie są jednak na żywo do `IPersist*::Load` lub `IPersist*::InitNew` została wywołana.  
+ `IPersist*::Load` i `IPersist*::InitNew` metody powinna być wywoływana po wystąpieniu szybkiego aktywacji. Formant należy określić jego połączenia z ujść kontenera podczas szybkiego aktywacji. Połączenia te nie są jednak na żywo do momentu `IPersist*::Load` lub `IPersist*::InitNew` została wywołana.  
   
 ##  <a name="safesetproperty"></a>  COleControlSite::SafeSetProperty  
- Ustawia właściwość formantu określony przez *dwDispID*.  
+ Ustawia właściwości kontrolki określonej przez *dwDispID*.  
   
 ```  
 virtual BOOL AFX_CDECL SafeSetProperty(
@@ -909,24 +909,24 @@ virtual BOOL AFX_CDECL SafeSetProperty(
   
 ### <a name="parameters"></a>Parametry  
  *dwDispID*  
- Określa identyfikator wysyłania właściwości lub metody, na formantu `IDispatch` interfejsu, należy ustawić wartość.  
+ Określa identyfikator wysyłania odnaleziono właściwości lub metody, na kontrolce `IDispatch` interfejsu, należy ustawić.  
   
  *vtProp*  
- Określa typ właściwości do ustawienia. Możliwe wartości w sekcji uwag dla [COleDispatchDriver::InvokeHelper](../../mfc/reference/coledispatchdriver-class.md#invokehelper).  
+ Określa typ właściwości do ustawienia. Aby uzyskać możliwych wartości, zobacz sekcję Spostrzeżenia, aby [COleDispatchDriver::InvokeHelper](../../mfc/reference/coledispatchdriver-class.md#invokehelper).  
   
  *...*  
- Pojedynczy parametr typu określony przez *vtProp*.  
+ Pojedynczy parametr typu określonego przez *vtProp*.  
   
 ### <a name="return-value"></a>Wartość zwracana  
- Różna od zera, w przypadku powodzenia; w przeciwnym razie wartość zero.  
+ Wartość różną od zera, jeśli to się powiedzie; w przeciwnym razie wartość zero.  
   
 ### <a name="remarks"></a>Uwagi  
   
 > [!NOTE]
->  W odróżnieniu od `SetProperty` i `SetPropertyV`, jeśli wystąpił błąd (na przykład próby ustawienia właściwości nieistniejącą), nie jest wyjątek.  
+>  W odróżnieniu od `SetProperty` i `SetPropertyV`, w przypadku napotkania błędu (np. próbuje ustawić właściwość nieistniejącej), jest zgłaszany żaden wyjątek.  
   
 ##  <a name="setdefaultbutton"></a>  COleControlSite::SetDefaultButton  
- Formant jako przycisk domyślny.  
+ Ustawienie dla formantu jako przycisk domyślny.  
   
 ```  
 void SetDefaultButton(BOOL bDefault);
@@ -934,15 +934,15 @@ void SetDefaultButton(BOOL bDefault);
   
 ### <a name="parameters"></a>Parametry  
  *bPoziom domyślny*  
- Różna od zera, jeśli formant powinien być przycisk domyślny; w przeciwnym razie wartość zero.  
+ Wartość różną od zera, jeśli kontrolka powinna stać się przycisk domyślny; w przeciwnym razie wartość zero.  
   
 ### <a name="remarks"></a>Uwagi  
   
 > [!NOTE]
->  Kontrolka musi mieć **OLEMISC_ACTSLIKEBUTTON** bitu stanu.  
+>  Kontrolka musi mieć OLEMISC_ACTSLIKEBUTTON stan-bitowego zestawu.  
   
 ##  <a name="setdlgctrlid"></a>  COleControlSite::SetDlgCtrlID  
- Zmienia wartość Identyfikator elementu okna dialogowego formantu.  
+ Zmienia wartość Identyfikator elementu okno dialogowe formantu.  
   
 ```  
 virtual int SetDlgCtrlID(int nID);
@@ -953,7 +953,7 @@ virtual int SetDlgCtrlID(int nID);
  Nowa wartość identyfikatora.  
   
 ### <a name="return-value"></a>Wartość zwracana  
- W przypadku powodzenia poprzedniego okna dialogowego elementu identyfikator okna; w przeciwnym razie 0.  
+ W przypadku powodzenia poprzedniego okna dialogowego elementu identyfikatora oknie. w przeciwnym razie 0.  
   
 ### <a name="remarks"></a>Uwagi  
   
@@ -967,13 +967,13 @@ virtual CWnd* SetFocus(LPMSG lpmsg);
   
 ### <a name="parameters"></a>Parametry  
  *lpmsg*  
- Wskaźnik do [struktura MSG](../../mfc/reference/msg-structure1.md). Ta struktura zawiera wyzwalania wiadomości Windows `SetFocus` żądania kontroli zawarte w bieżącej witrynie formant.  
+ Wskaźnik do [struktura MSG](../../mfc/reference/msg-structure1.md). Ta struktura zawiera wyzwolenie wiadomości Windows `SetFocus` żądania dla formantu zawartego w bieżącej witrynie formant.  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Wskaźnik do okna, który wcześniej był aktywny.  
   
 ##  <a name="setproperty"></a>  COleControlSite::SetProperty  
- Ustawia właściwość formantu określony przez *dwDispID*.  
+ Ustawia właściwości kontrolki określonej przez *dwDispID*.  
   
 ```  
 virtual void AFX_CDECL SetProperty(
@@ -983,21 +983,21 @@ virtual void AFX_CDECL SetProperty(
   
 ### <a name="parameters"></a>Parametry  
  *dwDispID*  
- Określa identyfikator wysyłania właściwości lub metody, na formantu `IDispatch` interfejsu, należy ustawić wartość.  
+ Określa identyfikator wysyłania odnaleziono właściwości lub metody, na kontrolce `IDispatch` interfejsu, należy ustawić.  
   
  *vtProp*  
- Określa typ właściwości do ustawienia. Możliwe wartości w sekcji uwag dla [COleDispatchDriver::InvokeHelper](../../mfc/reference/coledispatchdriver-class.md#invokehelper).  
+ Określa typ właściwości do ustawienia. Aby uzyskać możliwych wartości, zobacz sekcję Spostrzeżenia, aby [COleDispatchDriver::InvokeHelper](../../mfc/reference/coledispatchdriver-class.md#invokehelper).  
   
  *...*  
- Pojedynczy parametr typu określony przez *vtProp*.  
+ Pojedynczy parametr typu określonego przez *vtProp*.  
   
 ### <a name="remarks"></a>Uwagi  
- Jeśli `SetProperty` napotka błąd, jest zgłaszany wyjątek.  
+ Jeśli `SetProperty` napotka błąd, zostanie zgłoszony wyjątek.  
   
- Typ wyjątku jest określany przez wartość zwracaną próba ustawienia właściwości lub metody. Jeśli wartość zwracana jest `DISP_E_EXCEPTION`, `COleDispatchExcpetion` zgłoszenia; w przeciwnym razie `COleException`.  
+ Typ wyjątku jest określana przez wartość zwracaną próba ustawienia właściwości lub metody. Jeśli wartość zwracana jest `DISP_E_EXCEPTION`, `COleDispatchExcpetion` jest zgłoszenia; w przeciwnym razie `COleException`.  
   
 ##  <a name="setpropertyv"></a>  COleControlSite::SetPropertyV  
- Ustawia właściwość formantu określony przez *dwDispID*.  
+ Ustawia właściwości kontrolki określonej przez *dwDispID*.  
   
 ```  
 virtual void SetPropertyV(
@@ -1008,21 +1008,21 @@ virtual void SetPropertyV(
   
 ### <a name="parameters"></a>Parametry  
  *dwDispID*  
- Określa identyfikator wysyłania właściwości lub metody, na formantu `IDispatch` interfejsu, należy ustawić wartość.  
+ Określa identyfikator wysyłania odnaleziono właściwości lub metody, na kontrolce `IDispatch` interfejsu, należy ustawić.  
   
  *vtProp*  
- Określa typ właściwości do ustawienia. Możliwe wartości w sekcji uwag dla [COleDispatchDriver::InvokeHelper](../../mfc/reference/coledispatchdriver-class.md#invokehelper).  
+ Określa typ właściwości do ustawienia. Aby uzyskać możliwych wartości, zobacz sekcję Spostrzeżenia, aby [COleDispatchDriver::InvokeHelper](../../mfc/reference/coledispatchdriver-class.md#invokehelper).  
   
  *Lista_argumentów*  
  Wskaźnik do listy argumentów.  
   
 ### <a name="remarks"></a>Uwagi  
- Dodatkowe parametry dla metody lub właściwości wywoływaną mogą być passeed przy użyciu *arg_list* parametru. Jeśli `SetProperty` napotka błąd, jest zgłaszany wyjątek.  
+ Dodatkowe parametry dla metody lub właściwości wywoływanej może być passeed przy użyciu *arg_list* parametru. Jeśli `SetProperty` napotka błąd, zostanie zgłoszony wyjątek.  
   
- Typ wyjątku jest określany przez wartość zwracaną próba ustawienia właściwości lub metody. Jeśli wartość zwracana jest `DISP_E_EXCEPTION`, `COleDispatchExcpetion` zgłoszenia; w przeciwnym razie `COleException`.  
+ Typ wyjątku jest określana przez wartość zwracaną próba ustawienia właściwości lub metody. Jeśli wartość zwracana jest `DISP_E_EXCEPTION`, `COleDispatchExcpetion` jest zgłoszenia; w przeciwnym razie `COleException`.  
   
 ##  <a name="setwindowpos"></a>  COleControlSite::SetWindowPos  
- Ustawia położenie, rozmiar i porządek osi z kontroli lokacji.  
+ Ustawia rozmiar, położenie i porządek kontroli lokacji.  
   
 ```  
 virtual BOOL SetWindowPos(
@@ -1039,22 +1039,22 @@ virtual BOOL SetWindowPos(
  Wskaźnik do okna.  
   
  *x*  
- Nowa pozycja lewej części okna.  
+ Stanowisko w lewej części okna.  
   
  *y*  
- Nowa pozycja górnej części okna.  
+ Stanowisko w górnej części okna.  
   
  *CX*  
- Nową szerokość okna  
+ Nowe szerokość okna  
   
  *CY*  
  Nową wysokość okna.  
   
  *nFlags*  
- Określa okno zmiany rozmiaru i pozycjonowania flagi. Możliwe wartości w sekcji uwag dla [SetWindowPos](http://msdn.microsoft.com/library/windows/desktop/ms633545) w zestawie Windows SDK.  
+ Określa okna, rozmiar i położenie flag. Aby uzyskać możliwych wartości, zobacz sekcję Spostrzeżenia, aby [SetWindowPos](http://msdn.microsoft.com/library/windows/desktop/ms633545) w zestawie Windows SDK.  
   
 ### <a name="return-value"></a>Wartość zwracana  
- Różna od zera, jeśli to się powiedzie, w przeciwnym razie wartość zero.  
+ Wartość różną od zera jeśli to się powiedzie, w przeciwnym razie wartość zero.  
   
 ##  <a name="setwindowtext"></a>  COleControlSite::SetWindowText  
  Ustawia tekst kontroli lokacji.  
@@ -1065,13 +1065,13 @@ virtual void SetWindowText(LPCTSTR lpszString);
   
 ### <a name="parameters"></a>Parametry  
  *lpszString*  
- Wskaźnik do ciągu zerem służący jako nowy tekst tytułu lub formantu.  
+ Wskaźnik na ciąg zakończony znakiem null ma być używany jako nowy tekst tytułu lub formant.  
   
 ### <a name="remarks"></a>Uwagi  
- Ta funkcja najpierw próbuje ustawić właściwości podpisu podstawowego. Jeśli właściwość standardowych podpis nie jest obsługiwana, jest Ustaw zamiast tego właściwość Text.  
+ Ta funkcja najpierw próbuje ustawić właściwości podstawowe podpisu. Jeśli właściwości podstawowych podpis nie jest obsługiwany, zamiast tego jest ustawiona właściwość Text.  
   
 ##  <a name="showwindow"></a>  COleControlSite::ShowWindow  
- Ustawia okna Pokaż stan.  
+ Ustawia stan Pokaż okna.  
   
 ```  
 virtual BOOL ShowWindow(int nCmdShow);
@@ -1079,30 +1079,30 @@ virtual BOOL ShowWindow(int nCmdShow);
   
 ### <a name="parameters"></a>Parametry  
  *nCmdShow*  
- Określa, jak ma być wyświetlana kontroli lokacji. Musi to być jedna z następujących wartości:  
+ Określa, jak witryna kontrolki ma być wyświetlana. Musi mieć jedną z następujących wartości:  
   
-- **SW_HIDE** ukrywa okno i przekazuje aktywacji do innego okna.  
+- SW_HIDE polega na schowaniu to okno i przekazuje aktywacji do innego okna.  
   
-- **SW_MINIMIZE** minimalizuje okno i aktywuje okno najwyższego poziomu w liście systemu.  
+- SW_MINIMIZE minimalizuje okna i aktywuje okno najwyższego poziomu, na liście systemu.  
   
-- **SW_RESTORE** Activates i wyświetla okno. Jeśli okno jest zminimalizowane lub zmaksymalizowane, Windows przywracania go w jego oryginalny rozmiar i położenie.  
+- Aktywuje SW_RESTORE i wyświetla okno. Jeśli okno jest zminimalizowane lub zmaksymalizowane, Windows przywraca oryginalny rozmiar i położenie.  
   
-- **SW_SHOW** uaktywnia okno i wyświetla je w jego bieżący rozmiar i położenie.  
+- SW_SHOW uaktywnia okno i wyświetla go w jego bieżący rozmiar i położenie.  
   
-- **SW_SHOWMAXIMIZED** uaktywnia okno i wyświetla je jako okno zmaksymalizowane.  
+- SW_SHOWMAXIMIZED uaktywnia okno i wyświetla je jako zmaksymalizowane okno.  
   
-- **SW_SHOWMINIMIZED** uaktywnia okno i wyświetla je w postaci ikony.  
+- SW_SHOWMINIMIZED uaktywnia okno i wyświetla je jako ikona.  
   
-- **SW_SHOWMINNOACTIVE** Wyświetla okna w postaci ikony. Okno, który jest obecnie aktywny pozostaje aktywna.  
+- SW_SHOWMINNOACTIVE Wyświetla okno jako ikona. Okno, które jest obecnie aktywny pozostaje aktywna.  
   
-- **SW_SHOWNA** Wyświetla okno w bieżącym stanie. Okno, który jest obecnie aktywny pozostaje aktywna.  
+- SW_SHOWNA Wyświetla okno w jego bieżącym stanie. Okno, które jest obecnie aktywny pozostaje aktywna.  
   
-- **SW_SHOWNOACTIVATE** Wyświetla okna w najnowszych rozmiar i położenie. Okno, który jest obecnie aktywny pozostaje aktywna.  
+- SW_SHOWNOACTIVATE Wyświetla okno w najnowszych rozmiar i położenie. Okno, które jest obecnie aktywny pozostaje aktywna.  
   
-- **SW_SHOWNORMAL** Activates i wyświetla okno. Jeśli okno jest zminimalizowane lub zmaksymalizowane, Windows przywracania go w jego oryginalny rozmiar i położenie.  
+- Aktywuje SW_SHOWNORMAL i wyświetla okno. Jeśli okno jest zminimalizowane lub zmaksymalizowane, Windows przywraca oryginalny rozmiar i położenie.  
   
 ### <a name="return-value"></a>Wartość zwracana  
- Różna od zera, jeśli okno było widoczne wcześniej; 0, jeśli okno zostało wcześniej ukryte.  
+ Wartość różną od zera, jeśli okno było wcześniej widoczne; 0, jeśli wcześniej została ukryta, okna.  
   
 ## <a name="see-also"></a>Zobacz też  
  [CCmdTarget — klasa](../../mfc/reference/ccmdtarget-class.md)   

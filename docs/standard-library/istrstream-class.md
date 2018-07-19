@@ -17,16 +17,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e48e6fcd7da3b1e1c91b4aecb640c02ae4068bf9
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 6484d70488da834d0acea79cbe9b02968e0e2a35
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33855321"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38957288"
 ---
 # <a name="istrstream-class"></a>istrstream — Klasa
 
-Zawiera opis obiektu, który kontroluje wyodrębniania elementów i zakodowanego obiektów z buforu strumienia klasy [strstreambuf —](../standard-library/strstreambuf-class.md).
+Opisuje obiekt, który kontroluje wyodrębniania elementów i zakodowany obiektów z bufor strumienia klasy [strstreambuf —](../standard-library/strstreambuf-class.md).
 
 ## <a name="syntax"></a>Składnia
 
@@ -49,16 +49,16 @@ Obiekt przechowuje obiekt klasy `strstreambuf`.
 
 ### <a name="member-functions"></a>Funkcje Członkowskie
 
-|Funkcja członkowska|Opis|
+|Funkcja elementu członkowskiego|Opis|
 |-|-|
-|[rdbuf](#rdbuf)|Zwraca wskaźnik do strumienia powiązanych `strstreambuf` obiektu.|
-|[str](#str)|Wywołania [Zablokuj](../standard-library/strstreambuf-class.md#freeze), a następnie zwraca wskaźnik do początku kontrolowanej sekwencji.|
+|[rdbuf](#rdbuf)|Zwraca wskaźnik do strumienia skojarzonej `strstreambuf` obiektu.|
+|[str](#str)|Wywołania [freeze](../standard-library/strstreambuf-class.md#freeze), a następnie zwraca wskaźnik do początku kontrolowanej sekwencji.|
 
 ## <a name="requirements"></a>Wymagania
 
 **Nagłówek:** \<strstream — >
 
-**Namespace:** Standard
+**Namespace:** standardowe
 
 ## <a name="istrstream"></a>  istrstream::istrstream
 
@@ -82,13 +82,13 @@ istrstream(
 
 ### <a name="parameters"></a>Parametry
 
-`count` Długość buforu ( `ptr`).
+*Liczba* długość buforu (*ptr*).
 
-`ptr` Zawartość, z których bufor jest inicjowana.
+*PTR* zawartość za pomocą których rozmiar buforu jest zainicjowany.
 
 ### <a name="remarks"></a>Uwagi
 
-Wszystkie konstruktory zainicjowanie klasy głównej przez wywołanie metody [istream](../standard-library/istream-typedefs.md#istream)( **sb**), gdzie **sb** jest przechowywane obiekt klasy [strstreambuf —](../standard-library/strstreambuf-class.md) . Pierwsze dwa konstruktory również zainicjować **sb** przez wywołanie metody `strstreambuf`(( **const** `char` \*) `ptr`, 0). Zamiast tego wywołać pozostałe dwa konstruktory `strstreambuf`(( **const** `char` *) `ptr`, `count` ).
+Wszystkie konstruktory inicjowania klasy bazowej, wywołując [istream](../standard-library/istream-typedefs.md#istream)(**sb**), gdzie `sb` jest przechowywany obiekt klasy [strstreambuf —](../standard-library/strstreambuf-class.md). Dwa pierwsze konstruktory również inicjują `sb` przez wywołanie metody `strstreambuf`(( **const** `char` \*) `ptr`, 0). Zamiast tego wywoływać pozostałe dwa konstruktory `strstreambuf`(( **const** `char` *) `ptr`, `count` ).
 
 ## <a name="rdbuf"></a>  istrstream::rdbuf
 
@@ -100,19 +100,19 @@ strstreambuf *rdbuf() const
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Wskaźnik do strumienia powiązanych strstreambuf — obiektu.
+Strstreambuf — obiekt skojarzonej wskaźnik do strumienia.
 
 ### <a name="remarks"></a>Uwagi
 
-Funkcja członkowska zwraca adres buforu przechowywanych strumienia, typu wskaźnika do [strstreambuf —](../standard-library/strstreambuf-class.md).
+Funkcja elementu członkowskiego zwraca adres bufor strumienia przechowywane, typu wskaźnika do [strstreambuf —](../standard-library/strstreambuf-class.md).
 
 ### <a name="example"></a>Przykład
 
-Zobacz [strstreambuf::pcount](../standard-library/strstreambuf-class.md#pcount) dla przykładu korzystającego z `rdbuf`.
+Zobacz [strstreambuf::pcount](../standard-library/strstreambuf-class.md#pcount) dla przykładu, który używa `rdbuf`.
 
 ## <a name="str"></a>  istrstream::str
 
-Wywołania [Zablokuj](../standard-library/strstreambuf-class.md#freeze), a następnie zwraca wskaźnik do początku kontrolowanej sekwencji.
+Wywołania [freeze](../standard-library/strstreambuf-class.md#freeze), a następnie zwraca wskaźnik do początku kontrolowanej sekwencji.
 
 ```cpp
 char *str();
@@ -120,15 +120,15 @@ char *str();
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Wskaźnik do początku kontrolowanej sekwencji.
+Wskaźnik na początek kontrolowanej sekwencji.
 
 ### <a name="remarks"></a>Uwagi
 
-Funkcja członkowska zwraca [rdbuf](#rdbuf) -> [str](../standard-library/strstreambuf-class.md#str).
+Funkcja elementu członkowskiego zwraca [rdbuf —](#rdbuf) -> [str](../standard-library/strstreambuf-class.md#str).
 
 ### <a name="example"></a>Przykład
 
-Zobacz [strstream::str](../standard-library/strstreambuf-class.md#str) dla przykładu korzystającego z **str**.
+Zobacz [strstream::str](../standard-library/strstreambuf-class.md#str) dla przykładu, który używa `str`.
 
 ## <a name="see-also"></a>Zobacz także
 

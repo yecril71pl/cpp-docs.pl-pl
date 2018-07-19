@@ -17,16 +17,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bfb4b2be959dc48bbf7c5c5f786f7b803dba1a8e
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 1d3549d222ccfcf317b2621c2e2f8869b6634249
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33843135"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38959222"
 ---
 # <a name="ismemberpointer-class"></a>is_member_pointer — Klasa
 
-Testy, jeśli typ jest wskaźnik do elementu członkowskiego.
+Sprawdza, czy typ jest wskaźnik do składowej.
 
 ## <a name="syntax"></a>Składnia
 
@@ -37,11 +37,11 @@ struct is_member_pointer;
 
 ### <a name="parameters"></a>Parametry
 
-`Ty` Typ do zapytania.
+*Ty* typ do zapytania.
 
 ## <a name="remarks"></a>Uwagi
 
-Wystąpienie typu predykatu posiada wartość true Jeśli typ `Ty` jest wskaźnikiem do funkcji członkowskiej lub wskaźnika do obiektu elementu członkowskiego lub `cv-qualified` formularza jednego z nich, w przeciwnym razie posiada wartość false.
+Wystąpienie typu predykatu ma wartość true, jeśli typ *Ty* jest wskaźnikiem do funkcji składowej lub wskaźnik do obiektu elementu członkowskiego lub `cv-qualified` postaci jednego z tych funkcji, w przeciwnym razie przechowuje wartość false.
 
 ## <a name="example"></a>Przykład
 
@@ -91,7 +91,7 @@ is_member_pointer<int (functional::*)()> == true
 
 **Nagłówek:** \<type_traits >
 
-**Namespace:** Standard
+**Namespace:** standardowe
 
 ## <a name="see-also"></a>Zobacz także
 

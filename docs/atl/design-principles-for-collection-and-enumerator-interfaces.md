@@ -1,5 +1,5 @@
 ---
-title: Projektowanie kolekcji i interfejsy modułu wyliczającego (ATL) | Dokumentacja firmy Microsoft
+title: Projektowanie interfejsów kolekcji i wyliczeń (ATL) | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,21 +15,21 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 05649cce0e80af6f54327545cef7b663d69babf9
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: ab8b42804ca892c80971928b869e09ccdf479d68
+ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32354922"
+ms.lasthandoff: 07/05/2018
+ms.locfileid: "37851330"
 ---
-# <a name="design-principles-for-collection-and-enumerator-interfaces"></a>Zasady projektowania dla kolekcji i interfejsy modułu wyliczającego
-Istnieją zasady projektowania za każdego typu interfejsu:  
+# <a name="design-principles-for-collection-and-enumerator-interfaces"></a>Zasady projektowania interfejsów kolekcji i wyliczeń
+Istnieją zasady dotyczące projektowania każdego typu interfejsu:  
   
--   Udostępnia interfejs kolekcji *losowe* dostęp do *pojedynczego* elementu w kolekcji za pomocą **elementu** metody umożliwia klientom odnajdowanie są liczbę elementów w kolekcji za pomocą **liczba** właściwości, oraz często zezwala klientom na dodawanie i usuwanie elementów.  
+-   Udostępnia interfejs kolekcji *losowych* dostęp do *pojedynczego* elementu w kolekcji za pomocą `Item` metody umożliwia klientom odnajdywanie, ile elementów znajdują się w kolekcji za pomocą `Count` właściwości i często umożliwia klientom dodawanie i usuwanie elementów.  
   
--   Udostępnia interfejs modułu wyliczającego *serial* dostęp do *wiele* elementów w kolekcji, jego nie zezwala na klienta dowiedzieć się, ile elementów znajdują się w kolekcji (do czasu modułu wyliczającego zatrzymuje zwracanie elementy), a nie zapewnia żadnych sposób dodawania lub usuwania elementów.  
+-   Udostępnia interfejs modułu wyliczającego *serial* dostęp do *wielu* elementów w kolekcji, nie zezwalał na klienta dowiedzieć się, ile elementów są w kolekcji (aż do modułu wyliczającego zatrzymuje, zwracając elementy), a nie udostępnia żadnym dodawania lub usuwania elementów.  
   
- Każdego typu interfejsu pełni rolę innego udzielając dostęp do elementów w kolekcji.  
+ Każdy typ interfejsu odgrywa inną rolę w zapewnieniu dostępu do elementów w kolekcji.  
   
 ## <a name="see-also"></a>Zobacz też  
  [Kolekcje i wyliczenia](../atl/atl-collections-and-enumerators.md)

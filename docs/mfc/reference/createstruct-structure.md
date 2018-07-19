@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b7bc510f0d0cfc88476c9e222f51bcfeb958e31a
-ms.sourcegitcommit: be0e3457f2884551f18e183ef0ea65c3ded7f689
+ms.openlocfilehash: 6036490b21ccbd86dfed56ea90226cbb2db8d596
+ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/28/2018
-ms.locfileid: "37078470"
+ms.lasthandoff: 07/05/2018
+ms.locfileid: "37848473"
 ---
 # <a name="createstruct-structure"></a>Struktura CREATESTRUCT
 `CREATESTRUCT` Struktury definiuje parametry inicjacji przekazany do procedury okna aplikacji.  
@@ -47,37 +47,37 @@ typedef struct tagCREATESTRUCT {
   
 #### <a name="parameters"></a>Parametry  
  *lpCreateParams*  
- Punkty danych ma być używany do tworzenia okna.  
+ Punkty danych, które ma być używany do tworzenia okna.  
   
  *hInstance*  
- Identyfikuje dojście wystąpienia modułu moduł, który jest właścicielem nowe okno.  
+ Identyfikuje dojście wystąpienia modułu modułu, który jest właścicielem w nowym oknie.  
   
  *hMenu*  
- Identyfikuje menu, które mają być używane przez nowe okno. Jeśli okno podrzędne, zawiera liczby całkowitej.  
+ Określa menu, który będzie używany przez nowe okno. Jeśli okno podrzędne zawiera liczby całkowitej.  
   
  *hwndParent*  
- Określa okno, który jest właścicielem nowe okno. Ten element członkowski jest **NULL** Jeśli nowe okno jest oknem najwyższego poziomu.  
+ Identyfikuje okna, który jest właścicielem w nowym oknie. Ten element członkowski ma wartość NULL, jeśli nowe okno jest oknem najwyższego poziomu.  
   
  *CY*  
  Określa wysokość w nowym oknie.  
   
  *CX*  
- Określa szerokość nowe okno.  
+ Określa szerokość w nowym oknie.  
   
  *y*  
- Określa współrzędną y lewego górnego rogu nowe okno. Współrzędne są względem okno nadrzędne, czy nowe okno jest oknem podrzędnym; w przeciwnym razie współrzędne są podawane pokrewny ze źródłem ekranu.  
+ Określa współrzędną y lewego górnego rogu nowe okno. Współrzędne są względem okna nadrzędnego, jeśli nowe okno jest oknem podrzędnym; w przeciwnym razie współrzędne są podawane pokrewny ze źródłem ekranu.  
   
  *x*  
- Określa współrzędną x lewym górnym rogu nowe okno. Współrzędne są względem okno nadrzędne, czy nowe okno jest oknem podrzędnym; w przeciwnym razie współrzędne są podawane pokrewny ze źródłem ekranu.  
+ Określa współrzędną x lewym górnym rogu w nowym oknie. Współrzędne są względem okna nadrzędnego, jeśli nowe okno jest oknem podrzędnym; w przeciwnym razie współrzędne są podawane pokrewny ze źródłem ekranu.  
   
- *Styl*  
+ *Określ informacje potrzebne do łączenia z usługą Azure storage dla właściwości connectionString.*  
  Określa nowe okno [styl](../../mfc/reference/styles-used-by-mfc.md).  
   
  *lpszName*  
- Wskazuje zerem ciąg określający nazwę nowego okna.  
+ Wskazuje ciąg zakończony znakiem null, który określa nazwę nowego okna.  
   
  *lpszClass*  
- Wskazuje zerem ciąg, który określa nazwę klasy nowe okno systemu Windows ( [WNDCLASS](http://msdn.microsoft.com/library/windows/desktop/ms633576) struktury; Aby uzyskać więcej informacji, zobacz zestaw Windows SDK).  
+ Wskazuje ciąg zakończony znakiem null, określający nazwę klasy Windows nowe okno ( [WNDCLASS](http://msdn.microsoft.com/library/windows/desktop/ms633576) struktury; Aby uzyskać więcej informacji, zobacz zestaw Windows SDK).  
   
  *dwExStyle*  
  Określa [rozszerzone style](../../mfc/reference/styles-used-by-mfc.md#extended-window-styles) dla nowego okna.  

@@ -16,15 +16,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6e02c156619e4ca36d268870c70ba783c41a352d
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 15b904a07eb668a59a269741973424aa30e15877
+ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33375213"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37336409"
 ---
 # <a name="logbrush-structure"></a>Struktura LOGBRUSH
-`LOGBRUSH` Struktury definiuje styl, kolor i wzorzec fizycznych pędzla. Jest on używany przez system Windows [CreateBrushIndirect](http://msdn.microsoft.com/library/windows/desktop/dd183487) i [ExtCreatePen](http://msdn.microsoft.com/library/windows/desktop/dd162705) funkcji.  
+`LOGBRUSH` Definiuje struktury, style, kolor i wzoru pędzla fizycznych. Jest on używany przez Windows [CreateBrushIndirect](http://msdn.microsoft.com/library/windows/desktop/dd183487) i [ExtCreatePen](http://msdn.microsoft.com/library/windows/desktop/dd162705) funkcji.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -37,49 +37,49 @@ typedef struct tag LOGBRUSH { /* lb */
 ```  
   
 #### <a name="parameters"></a>Parametry  
- `lbStyle`  
- Określa styl pędzla. `lbStyle` Elementu członkowskiego musi być jedną z następujących stylów:  
+ *lbStyle*  
+ Określa styl pędzla. `lbStyle` Element członkowski musi mieć jedną z następujących stylów:  
   
-- **BS_DIBPATTERN** pędzla w specyfikacji map bitowych niezależnych od urządzenia (DIB). Jeśli `lbStyle` jest **BS_DIBPATTERN**, **lbHatch** elementu członkowskiego zawiera dojścia do spakowanej DIB.  
+- Pędzla wzoru BS_DIBPATTERN A zdefiniowane przez mapę bitową niezależnych od urządzenia (DIB) specyfikacji. Jeśli *lbStyle* jest BS_DIBPATTERN, `lbHatch` elementu członkowskiego zawiera dojście do upakowaną DIB.  
   
-- **BS_DIBPATTERNPT** pędzla w specyfikacji map bitowych niezależnych od urządzenia (DIB). Jeśli `lbStyle` jest **BS_DIBPATTERNPT**, **lbHatch** elementu członkowskiego zawiera wskaźnik do spakowanej DIB.  
+- Pędzla wzoru BS_DIBPATTERNPT A zdefiniowane przez mapę bitową niezależnych od urządzenia (DIB) specyfikacji. Jeśli *lbStyle* jest BS_DIBPATTERNPT, `lbHatch` elementu członkowskiego zawiera wskaźnik do upakowaną DIB.  
   
-- **BS_HATCHED** wyklutych pędzla.  
+- Wyklutych BS_HATCHED pędzla.  
   
-- **BS_HOLLOW** pusty pędzla.  
+- Pusty BS_HOLLOW pędzla.  
   
-- **BS_NULL** taki sam jak **BS_HOLLOW**.  
+- BS_NULL taki sam jak BS_HOLLOW.  
   
-- **BS_PATTERN** wzoru pędzla wynika z mapą bitową pamięci.  
+- Pędzel BS_PATTERN wzorzec zdefiniowany przez mapę bitową w pamięci.  
   
-- **BS_SOLID** pędzla pełnego koloru.  
+- BS_SOLID pędzla.  
   
- `lbColor`  
- Określa kolor, w którym ma być rysowany pędzla. Jeśli `lbStyle` jest **BS_HOLLOW** lub **BS_PATTERN** styl **lbColor** jest ignorowana. Jeśli `lbStyle` jest **BS_DIBPATTERN** lub **BS_DIBPATTERNBT**, wyrazu znaczącymi bitami **lbColor** Określa, czy **bmiColors**członkami [BITMAPINFO](../../mfc/reference/bitmapinfo-structure.md) struktura zawiera jawne czerwony, zielony, niebieski wartości (RGB) lub wskaźników do aktualnie zrealizowanych logiczną paletę. **LbColor** elementu członkowskiego musi być jedną z następujących wartości:  
+ *lbColor*  
+ Określa kolor, w którym ma być rysowany pędzla. Jeśli *lbStyle* jest styl BS_HOLLOW lub BS_PATTERN *lbColor* jest ignorowana. Jeśli *lbStyle* BS_DIBPATTERN lub BS_DIBPATTERNBT, słowo niskiego rzędu *lbColor* Określa, czy `bmiColors` członkowie [BITMAPINFO](../../mfc/reference/bitmapinfo-structure.md) struktury zawiera jawne czerwony, zielony, niebieski wartości (RGB) lub wskaźniki do aktualnie zrealizowane logiczną paletę. `lbColor` Element członkowski musi mieć jedną z następujących wartości:  
   
-- **DIB_PAL_COLORS** tabeli kolorów składa się z tablicy 16-bitowych wskaźników do aktualnie zrealizowanych logiczną paletę.  
+- DIB_PAL_COLORS tabeli kolorów składa się z tablicy wskaźników 16-bitowych do aktualnie zrealizowane palety logiczne.  
   
-- **DIB_RGB_COLORS** tabeli kolorów zawiera wartości RGB literałów.  
+- DIB_RGB_COLORS tabeli kolorów zawiera wartości RGB literału.  
   
  *lbHatch*  
- Określa styl kreskowania. Znaczenie zależy od styl pędzla zdefiniowane przez `lbStyle`. Jeśli `lbStyle` jest **BS_DIBPATTERN**, **lbHatch** elementu członkowskiego zawiera dojścia do spakowanej DIB. Jeśli `lbStyle` jest **BS_DIBPATTERNPT**, **lbHatch** elementu członkowskiego zawiera wskaźnik do spakowanej DIB. Jeśli `lbStyle` jest **BS_HATCHED**, **lbHatch** elementu członkowskiego Określa orientację pozwala utworzyć kreskowania linii. Może być jedną z następujących wartości:  
+ Określa styl kreskowania. Znaczenie zależy od stylu pędzla, zdefiniowane przez *lbStyle*. Jeśli *lbStyle* jest BS_DIBPATTERN, `lbHatch` elementu członkowskiego zawiera dojście do upakowaną DIB. Jeśli *lbStyle* jest BS_DIBPATTERNPT, `lbHatch` elementu członkowskiego zawiera wskaźnik do upakowaną DIB. Jeśli *lbStyle* jest BS_HATCHED, `lbHatch` elementu członkowskiego Określa orientację wiersze użyty do utworzenia kreskowania. Może to być jedna z następujących wartości:  
   
-- `HS_BDIAGONAL` Kreskowania górę, od lewej do prawej 45 stopni  
+- HS_BDIAGONAL A 45 stopni palcem, od lewej do prawej kreskowania  
   
-- `HS_CROSS` Kreskowany poziome i pionowe  
+- HS_CROSS poziome i pionowe kreskowany  
   
-- `HS_DIAGCROSS` Kreskowany 45 stopni  
+- Kreskowany 45 stopni HS_DIAGCROSS  
   
-- `HS_FDIAGONAL` Kreskowania 45 stopni w dół, od lewej do prawej  
+- HS_FDIAGONAL A 45 stopni w dół, od lewej do prawej kreskowania  
   
-- `HS_HORIZONTAL` Poziomy kreskowania  
+- Kreskowanie poziome HS_HORIZONTAL  
   
-- `HS_VERTICAL` Pionowy kreskowania  
+- Kreskowanie pionowe HS_VERTICAL  
   
- Jeśli `lbStyle` jest **BS_PATTERN**, **lbHatch** jest dojścia do mapy bitowej, który definiuje wzorzec. Jeśli `lbStyle` jest **BS_SOLID** lub **BS_HOLLOW**, **lbHatch** jest ignorowana.  
+ Jeśli *lbStyle* jest BS_PATTERN, *lbHatch* jest uchwytem do mapy bitowej, który definiuje wzorzec. Jeśli *lbStyle* BS_SOLID lub BS_HOLLOW, *lbHatch* jest ignorowana.  
   
 ## <a name="remarks"></a>Uwagi  
- Mimo że **lbColor** Określa kolor pierwszego planu pędzla kreskowania [CDC::SetBkMode](../../mfc/reference/cdc-class.md#setbkmode) i [CDC::SetBkColor](../../mfc/reference/cdc-class.md#setbkcolor) funkcje kontroli kolor tła.  
+ Mimo że *lbColor* Określa kolor pierwszego planu pędzel kreskowania [CDC::SetBkMode](../../mfc/reference/cdc-class.md#setbkmode) i [CDC::SetBkColor](../../mfc/reference/cdc-class.md#setbkcolor) funkcje sterowania kolor tła.  
   
 ## <a name="requirements"></a>Wymagania  
  **Nagłówek:** wingdi.h  

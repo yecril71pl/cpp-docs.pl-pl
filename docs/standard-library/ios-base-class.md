@@ -118,32 +118,32 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 818d6fad62ec4d506215a82f2faa1e3aa58d1654
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: aec1d5291526360157b4e1a0b5b4eff9ae9fd454
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33849044"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38956466"
 ---
 # <a name="iosbase-class"></a>ios_base — Klasa
 
-Klasa opisuje magazyn i funkcje Członkowskie wspólne dla wejścia i wyjścia strumieni, które nie są zależne od parametrów szablonu. (Klasy szablonu [basic_ios —](../standard-library/basic-ios-class.md) opisano, co jest typowe i jest zależna od parametrów szablonu.)
+Klasa opisuje magazynu i funkcje Członkowskie wspólne dla danych wejściowych i wyjściowych strumieni, które nie są zależne od parametrów szablonu. (Klasy szablonu [basic_ios —](../standard-library/basic-ios-class.md) opisuje co to jest typowe i jest zależna od parametrów szablonu.)
 
-Obiekt ios_base — klasa przechowuje informacje dotyczące formatowania, która składa się z:
+Obiekt ios_base — klasa przechowuje informacje o formatowaniu, która obejmuje:
 
-- Format flagi w obiekcie typu [fmtflags](#fmtflags).
+- Formatowanie flagi w obiekcie typu [fmtflags](#fmtflags).
 
-- Maska wyjątek w obiekcie typu [iostate](#iostate).
+- Maska wyjątku w obiekcie typu [iostate](#iostate).
 
-- Szerokość pola w obiekcie typu `int`.
+- Szerokość pola w obiekcie typu **int**.
 
-- Dokładności wyświetlania w obiekcie typu `int`.
+- Precyzją wyświetlania, w obiekcie typu **int**.
 
-- Obiekt ustawień regionalnych w obiekcie typu **ustawień regionalnych**.
+- Obiekt ustawień regionalnych w obiekcie typu `locale`.
 
-- Dwie tablice rozszerzalny, elementami typu **długi** i `void` wskaźnika.
+- Dwie tablice rozszerzalny, elementami typu **długie** i **void** wskaźnika.
 
-Obiekt ios_base — klasa przechowuje także informacje o stanie strumienia, w obiekcie typu [iostate](#iostate)i stosu wywołania zwrotnego.
+Obiekt ios_base — klasa przechowuje także informacje o stanie strumienia, w obiekcie typu [iostate](#iostate)i stosu wywołań zwrotnych.
 
 ### <a name="constructors"></a>Konstruktorów
 
@@ -156,9 +156,9 @@ Obiekt ios_base — klasa przechowuje także informacje o stanie strumienia, w o
 |Nazwa typu|Opis|
 |-|-|
 |[event_callback](#event_callback)|W tym artykule opisano przekazany do funkcji [register_call](#register_callback).|
-|[fmtflags](#fmtflags)|Stałe, aby określić wygląd danych wyjściowych.|
-|[iostate](#iostate)|Określa stałe opisujące stan strumienia.|
-|[openmode](#openmode)|Opisuje sposób interakcji z strumienia.|
+|[fmtflags](#fmtflags)|Stałe, aby określić sposób wyświetlania danych wyjściowych.|
+|[iostate](#iostate)|Definiuje stałe opisujące stan strumienia.|
+|[openmode](#openmode)|W tym artykule opisano sposób interakcji ze strumieniem.|
 |[seekdir](#seekdir)|Określa punkt początkowy dla operacji przesunięcia.|
 
 ### <a name="enums"></a>Wyliczenia
@@ -172,55 +172,55 @@ Obiekt ios_base — klasa przechowuje także informacje o stanie strumienia, w o
 |||
 |-|-|
 |[adjustfield](#fmtflags)|Maska bitowa zdefiniowany jako `internal` &#124; `left` &#124; `right`.|
-|[Aplikacji](#openmode)|Określa wyszukiwanie na koniec strumienia przed każdym wstawiania.|
-|[uj](#openmode)|Określa wyszukiwanie do końca strumienia po jego kontrolowanie obiektu najpierw.|
+|[Aplikacja](#openmode)|Określa, wyszukiwanie na koniec strumienia przed każdym wstawiania.|
+|[Utwórz](#openmode)|Określa, wyszukiwanie do końca strumienia, w chwili utworzenia jej kontrolowania obiektu.|
 |[badbit](#iostate)|Rejestruje utraty integralności buforu strumienia.|
 |[basefield](#fmtflags)|Maska bitowa zdefiniowany jako `dec` &#124; `hex` &#124; `oct`.|
-|[beg](#seekdir)|Określa wyszukiwanie względem początku sekwencji.|
-|[Binarne](#openmode)|Określa, że plik można odczytać jako strumienia binarnego, a nie jako strumień tekstu.|
-|[boolalpha](#fmtflags)|Określa, wstawiania lub wyodrębniania obiektów typu `bool` jako nazwy (takich jak `true` i `false`), a nie jako wartości liczbowe.|
-|[cur](#seekdir)|Określa wyszukiwanie względem bieżącej pozycji w sekwencji.|
-|[DEC](#fmtflags)|Określa, wstawiania lub wyodrębniania wartości całkowite w formacie dziesiętnym.|
-|[Koniec](#seekdir)|Określa wyszukiwanie względem koniec sekwencji.|
-|[eofbit](#iostate)|Rejestruje koniec pliku podczas wyodrębniania ze strumienia.|
-|[failbit](#iostate)|Rejestruje błąd wyodrębnić prawidłowym polem ze strumienia.|
-|[Stałe](#fmtflags)|Określa wstawiania wartości zmiennoprzecinkowych w formacie stałoprzecinkowe (z żadnego pola wykładnika).|
+|[beg](#seekdir)|Określa względem początku sekwencji.|
+|[dane binarne](#openmode)|Określa, że plik powinny być odczytywane jako strumienia binarnego, a nie jako strumienia tekstu.|
+|[boolalpha](#fmtflags)|Określa wstawiania lub wyodrębniania obiektów typu **bool** jako nazwy (takie jak **true** i **false**), a nie jako wartości liczbowe.|
+|[cur](#seekdir)|Określa względem początku bieżącej pozycji w sekwencji.|
+|[Gru](#fmtflags)|Określa wstawiania lub ekstrakcji liczb całkowitych w formacie dziesiętnym.|
+|[koniec](#seekdir)|Określa względem końca sekwencji.|
+|[eofbit](#iostate)|Rekordy koniec pliku podczas wyodrębniania ze strumienia.|
+|[failbit](#iostate)|Rejestruje błąd podczas wyodrębniania prawidłowym polem ze strumienia.|
+|[Stała](#fmtflags)|Określa różne wartości zmiennoprzecinkowe operacje wstawiania w formatu stałoprzecinkowego (z Brak wykładnika pola).|
 |[floatfield](#fmtflags)|Maska bitowa zdefiniowany jako `fixed`&#124; `scientific`|
 |[goodbit](#iostate)|Wyczyść wszystkie bity stanu.|
-|[hex](#fmtflags)|Określa, wstawiania lub wyodrębniania wartości całkowite w formacie szesnastkowym.|
+|[hex](#fmtflags)|Określa wstawiania lub ekstrakcji liczb całkowitych w formacie szesnastkowym.|
 |[in](#openmode)|Określa wyodrębniania ze strumienia.|
-|[internal](#fmtflags)|Konsole do szerokości pola, wstawiając znaki w punkcie wewnętrzny wygenerowanego pola liczbowego.|
-|[left](#fmtflags)|Określa wyrównania do lewej.|
-|[oct](#fmtflags)|Określa wstawiania lub wyodrębniania wartości całkowite w formacie ósemkowe.|
+|[internal](#fmtflags)|Okienka do szerokości pola, wstawiając znaki w punkcie wewnętrzne wygenerowanego pola liczbowego.|
+|[left](#fmtflags)|Określa uzasadnienie po lewej stronie.|
+|[oct](#fmtflags)|Określa wstawiania lub ekstrakcji liczb całkowitych w formacie.|
 |[out](#openmode)|Określa wstawiania do strumienia.|
 |[right](#fmtflags)|Określa prawej strony.|
-|[scientific](#fmtflags)|Określa wstawiania wartości zmiennoprzecinkowych formatu naukowe (z polem wykładnika).|
-|[showbase](#fmtflags)|Określa wstawiania prefiks, który ujawnia base całkowitą wygenerowanego pola.|
-|[showpoint](#fmtflags)|Określa bezwarunkowe wstawiania dziesiętnego wygenerowanego pola liczb zmiennoprzecinkowych.|
-|[showpos](#fmtflags)|Określa nieujemna wygenerowanego pola numerycznego wstawiania znak plus.|
-|[skipws](#fmtflags)|Określa, pomijanie Spacja wiodąca przed niektórych ekstrakcje.|
-|[TRUNC —](#openmode)|Określa zawartość usuwanie istniejącego pliku po utworzeniu jego kontrolowanie obiekt.|
-|[unitbuf](#fmtflags)|Powoduje, że dane wyjściowe do opróżnienia po każdym wstawiania.|
-|[wielkie litery](#fmtflags)|Określa wstawiania odpowiedniki wielkie litery, małe litery w niektórych wstawienia.|
+|[scientific](#fmtflags)|Określa wstawiania wartości zmiennoprzecinkowych w formacie naukowym (z polem wykładnika).|
+|[showbase](#fmtflags)|Określa wstawiania prefiks, który ujawnia base pola wygenerowana liczba całkowita.|
+|[showpoint](#fmtflags)|Określa bezwarunkowe Wstawianie przecinka dziesiętnego w wygenerowanym pola zmiennoprzecinkowego.|
+|[showpos](#fmtflags)|Określa wstawiania znak plus w nieujemna wygenerowanego pola liczbowego.|
+|[skipws](#fmtflags)|Określa, pomijanie wiodących biały znak przed niektórych wyodrębniania.|
+|[TRUNC —](#openmode)|Określa zawartość usuwania istniejącego pliku, gdy jego kontrolowanie obiekt zostanie utworzony.|
+|[unitbuf](#fmtflags)|Powoduje, że dane wyjściowe do opróżniany po każdym wstawiania.|
+|[wielkie litery](#fmtflags)|Określa wstawiania odpowiedniki wielkie litery, małe litery, w niektórych wstawienia.|
 
 ### <a name="member-functions"></a>Funkcje Członkowskie
 
-|Funkcja członkowska|Opis|
+|Funkcja elementu członkowskiego|Opis|
 |-|-|
-|[Błąd](#failure)|Klasy członkowskiej służy jako klasa podstawowa dla wszystkich wyjątków zgłaszanych przez funkcję elementu członkowskiego [wyczyść](../standard-library/basic-ios-class.md#clear) szablonu klasy [basic_ios —](../standard-library/basic-ios-class.md).|
-|[Flagi](#flags)|Ustawia lub zwraca bieżące ustawienia flagi.|
-|[getloc](#getloc)|Zwraca obiekt przechowywanych ustawień regionalnych.|
+|[Błąd](#failure)|Klasa elementu członkowskiego służy jako klasa bazowa dla wszystkich wyjątków generowanych przez funkcję elementu członkowskiego [wyczyść](../standard-library/basic-ios-class.md#clear) w klasie szablonu [basic_ios —](../standard-library/basic-ios-class.md).|
+|[flagi](#flags)|Ustawia lub zwraca bieżące ustawienia flagi.|
+|[getloc](#getloc)|Zwraca obiekt ustawień regionalnych przechowywanych.|
 |[imbue](#imbue)|Zmiany ustawień regionalnych.|
-|[Init](#init)|Tworzy obiekty iostream standardowe, gdy utworzony.|
+|[Init](#init)|Tworzy obiektów standardowa iostream, kiedy zostaną wykonane.|
 |[iword](#iword)|Przypisuje wartość do zapisania jako `iword`.|
-|[dokładność](#precision)|Określa liczbę miejsc po przecinku do wyświetlenia w liczbie zmiennoprzecinkowej.|
-|[pword](#pword)|Przypisuje wartość do zapisania jako `pword`.|
+|[Precyzja](#precision)|Określa liczbę cyfr wyświetlanych w liczbę zmiennoprzecinkową.|
+|[pword —](#pword)|Przypisuje wartość do zapisania jako `pword`.|
 |[register_callback](#register_callback)|Określa funkcję wywołania zwrotnego.|
 |[SETF](#setf)|Ustawia określone flagi.|
-|[sync_with_stdio](#sync_with_stdio)|Zapewnia, że iostream i operacje biblioteki wykonawcze języka C są wykonywane w kolejności ich występowania w kodzie źródłowym.|
-|[unsetf](#unsetf)|Powoduje, że określone flagi należy wyłączyć.|
+|[sync_with_stdio](#sync_with_stdio)|Zapewnia, że iostream i operacje biblioteki wykonawczej C wystąpić w kolejności, w jakiej występują w kodzie źródłowym.|
+|[unsetf —](#unsetf)|Powoduje, że określone flagi były wyłączone.|
 |[width](#width)|Ustawia długość strumienia wyjściowego.|
-|[xalloc](#xalloc)|Określa, czy zmienna jest częścią strumienia.|
+|[xalloc](#xalloc)|Określa, że zmienna jest części strumienia.|
 
 ### <a name="operators"></a>Operatory
 
@@ -230,9 +230,9 @@ Obiekt ios_base — klasa przechowuje także informacje o stanie strumienia, w o
 
 ## <a name="requirements"></a>Wymagania
 
-**Nagłówek:** \<systemu ios >
+**Nagłówek:** \<dla systemu ios >
 
-**Namespace:** Standard
+**Namespace:** standardowe
 
 ## <a name="event"></a>  ios_base::Event
 
@@ -247,17 +247,17 @@ enum event {
 
 ### <a name="remarks"></a>Uwagi
 
-Typ jest Typ wyliczany opisujący obiekt, który może przechowywać zdarzenia wywołania zwrotnego używane jako argument do funkcji zarejestrowany [register_callback](#register_callback). Wartości różnych zdarzeń są następujące:
+Typ jest typem wyliczanym, który opisuje obiekt, który może przechowywać zdarzenia wywołania zwrotnego używane jako argument do funkcji zarejestrowane w usłudze [register_callback —](#register_callback). Wartości różnych zdarzeń są następujące:
 
-- **copyfmt_event**, aby zidentyfikować wywołanie zwrotne, które występuje pod koniec wywołania [copyfmt](../standard-library/basic-ios-class.md#copyfmt), bezpośrednio przed [maska wyjątek](../standard-library/ios-base-class.md) zostanie skopiowana.
+- `copyfmt_event`, do identyfikowania wywołanie zwrotne, które występuje w końcowej części wywołanie [copyfmt —](../standard-library/basic-ios-class.md#copyfmt), tuż przed [maskę wyjątku](../standard-library/ios-base-class.md) jest kopiowany.
 
-- **erase_event**, aby zidentyfikować wywołania zwrotnego, która występuje na początku wywołania [copyfmt](../standard-library/basic-ios-class.md#copyfmt), lub na początku wywołania destruktora dla  **\*to**.
+- `erase_event`, aby zidentyfikować wywołania zwrotnego, która występuje na początku wywołanie [copyfmt —](../standard-library/basic-ios-class.md#copyfmt), lub na początku po wywołaniu destruktora dla  **\*to**.
 
-- **imbue_event**, aby zidentyfikować wywołania zwrotnego, która występuje na końcu wywołanie [imbue](#imbue)tak, aby funkcja zwraca wartość.
+- `imbue_event`, aby zidentyfikować wywołania zwrotnego, która występuje na końcu wywołania [imbue —](#imbue), po prostu, zanim funkcja zwróci.
 
 ### <a name="example"></a>Przykład
 
-Zobacz [register_callback](#register_callback) przykład.
+Zobacz [register_callback —](#register_callback) przykład.
 
 ## <a name="event_callback"></a>  ios_base::event_callback
 
@@ -272,23 +272,23 @@ typedef void (__cdecl *event_callback)(
 
 ### <a name="parameters"></a>Parametry
 
-*_E* [zdarzeń](#event).
+*Adr_es* [zdarzeń](#event).
 
-`_Base` Strumień, w którym wywołano zdarzenie.
+*_Podstawowego* strumienia, w której wywołano zdarzenie.
 
-*_Znam* wiele zdefiniowanych przez użytkownika.
+*_Akceptuję* wiele zdefiniowanych przez użytkownika.
 
 ### <a name="remarks"></a>Uwagi
 
-Typ w tym artykule opisano wskaźnik funkcji, które mogą być rejestrowane w [register_callback](#register_callback). Ten typ funkcji nie należy zgłosić wyjątek.
+Typ opisuje wskaźnik do funkcji, która może być zarejestrowany w usłudze [register_callback —](#register_callback). Ten typ funkcji nie może zgłaszać wyjątek.
 
 ### <a name="example"></a>Przykład
 
-Zobacz [register_call](#register_callback) na przykład, który używa `event_callback`.
+Zobacz [register_call](#register_callback) przykład, który używa `event_callback`.
 
 ## <a name="failure"></a>  ios_base::failure
 
-Klasa `failure` definiuje klasę podstawową dla typów obiektów wszystkie zgłaszane wyjątki, za pomocą funkcji w `iostreams` biblioteki, aby włączyć raportowanie błędów wykrytych podczas operacji buforu strumienia.
+Klasa `failure` definiuje klasę bazową dla typów wszystkich obiektów generowane jako wyjątki, przez funkcje w `iostreams` biblioteki zgłaszaj błędy wykryte podczas operacji buforu strumienia.
 
 ```cpp
 namespace std {
@@ -307,7 +307,7 @@ namespace std {
 
 ### <a name="remarks"></a>Uwagi
 
-Wartość zwrócona przez `what()` kopię `_Message`, prawdopodobnie zwiększonej testem na podstawie `_Code`. Jeśli `_Code` nie zostanie określony, wartością domyślną jest `make_error_code(io_errc::stream)`.
+Wartość zwrócona przez obiekt `what()` jest kopią `_Message`, prawdopodobnie rozszerzone testu na podstawie `_Code`. Jeśli `_Code` nie zostanie określony, wartością domyślną jest `make_error_code(io_errc::stream)`.
 
 ### <a name="example"></a>Przykład
 
@@ -349,17 +349,17 @@ fmtflags flags(fmtflags fmtfl);
 
 ### <a name="parameters"></a>Parametry
 
-`fmtfl` Nowe `fmtflags` ustawienie.
+*fmtfl* nowy `fmtflags` ustawienie.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Poprzedniego lub bieżącego `fmtflags` ustawienie.
+Poprzednie lub bieżącego `fmtflags` ustawienie.
 
 ### <a name="remarks"></a>Uwagi
 
 Zobacz [ios_base::fmtflags](#fmtflags) listę flag.
 
-Pierwszy element członkowski funkcja flag formatu przechowywane. Drugi magazynów funkcji Członkowskich `fmtfl` flag formatu i zwraca jego poprzedniej przechowywana wartość.
+Pierwsza funkcja elementu członkowskiego zwraca flagi formatu przechowywanych. Drugi magazynów funkcja elementu członkowskiego *fmtfl* flagi formatu i zwraca jego poprzedniej przechowywaną wartość.
 
 ### <a name="example"></a>Przykład
 
@@ -385,7 +385,7 @@ int main ( )
 
 ## <a name="fmtflags"></a>  ios_base::fmtflags
 
-Stałe, aby określić wygląd danych wyjściowych.
+Stałe, aby określić sposób wyświetlania danych wyjściowych.
 
 ```cpp
 class ios_base {
@@ -417,51 +417,51 @@ public:
 
 Obsługuje manipulatory w [ios](../standard-library/ios.md).
 
-Typ jest typem maski, który opisuje obiekt, który może przechowywać flag formatu. Flagi różne wartości (elementy) są następujące:
+Typ jest typem maski bitów, który opisuje obiekt, które mogą być przechowywane flagi formatu. Flagi odrębne wartości (elementy) są następujące:
 
 - `dec`, aby wstawić lub Wyodrębnij wartości całkowite w formacie dziesiętnym.
 
 - `hex`, aby wstawić lub Wyodrębnij wartości całkowite w formacie szesnastkowym.
 
-- `oct`, aby wstawić lub Wyodrębnij wartości całkowite w formacie ósemkowe.
+- `oct`, aby wstawić lub Wyodrębnij wartości całkowite w formacie.
 
-- `showbase`, aby wstawić prefiks, który ujawnia base całkowitą wygenerowanego pola.
+- `showbase`, aby wstawić prefiks, który ujawnia base pola wygenerowana liczba całkowita.
 
-- `internal`, aby uzupełnić do szerokości pola odpowiednio do potrzeb Wstawianie znaków wypełnienia w punkcie wewnętrzny wygenerowanego pola liczbowego. (Aby uzyskać informacje na temat ustawiania szerokości pola, zobacz [setw](../standard-library/iomanip-functions.md#setw)).
+- `internal`, aby uzupełnić do szerokości pola, zgodnie z potrzebami, wstawiając znaki w punkcie wewnętrzne wygenerowanego pola liczbowego. (Aby uzyskać informacje na temat ustawiania szerokości pola, zobacz [setw](../standard-library/iomanip-functions.md#setw)).
 
-- `left`, aby uzupełnić do szerokości pola odpowiednio do potrzeb Wstawianie znaki na końcu wygenerowanego pola (wyrównania do lewej).
+- `left`, aby uzupełnić do szerokości pola, zgodnie z potrzebami, wstawiając znaki na końcu wygenerowanego pola (uzasadnienie po lewej stronie).
 
-- `right`, aby uzupełnić do szerokości pola odpowiednio do potrzeb Wstawianie znaki na początku wygenerowanego pola (prawej strony).
+- `right`, aby uzupełnić do szerokości pola, zgodnie z potrzebami, wstawiając znaki na początku wygenerowanego pola (prawej strony).
 
-- `boolalpha`, aby wstawić lub Wyodrębnij obiektów typu `bool` jako nazwy (takich jak `true` i `false`), a nie jako wartości liczbowe.
+- `boolalpha`, aby wstawić lub Wyodrębnij obiektów typu **bool** jako nazwy (takie jak **true** i **false**), a nie jako wartości liczbowe.
 
-- `fixed`, aby wstawić wartości zmiennoprzecinkowych w formacie stałoprzecinkowe (z żadnego pola wykładnika).
+- `fixed`, aby wstawić wartości zmiennoprzecinkowych formatu stałoprzecinkowego (z Brak wykładnika pola).
 
-- `scientific`, aby wstawić wartości zmiennoprzecinkowych formatu naukowe (z polem wykładnika).
+- `scientific`, aby wstawić wartości zmiennoprzecinkowych w formacie naukowym (z polem wykładnika).
 
-- `showpoint`, aby wstawić punktu dziesiętnego bezwarunkowo wygenerowanego pola liczb zmiennoprzecinkowych.
+- `showpoint`, aby wstawić separator dziesiętny bezwarunkowo wygenerowanego pola zmiennoprzecinkowego.
 
-- `showpos`, który będzie wprowadzany znak plus nieujemna wygenerowanego pola liczbowego.
+- `showpos`, aby wstawić znak plus nieujemna wygenerowanego pola liczbowego.
 
-- `skipws`, aby pominąć Spacja wiodąca przed niektórych ekstrakcje.
+- `skipws`, aby pominąć wiodących biały znak przed niektórych wyodrębniania.
 
-- `unitbuf`, aby opróżnić dane wyjściowe po każdym wstawiania.
+- `unitbuf`, aby opróżnić danych wyjściowych po każdym wstawiania.
 
 - `uppercase`, aby wstawić odpowiedniki wielkie litery, małe litery w niektórych wstawienia.
 
-Ponadto kilka przydatne wartości są następujące:
+Ponadto kilka wartości przydatne to:
 
-- `adjustfield`, maską bitów zdefiniowany jako `internal` &#124; `left`&#124; `right`
+- `adjustfield`, maskę bitów zdefiniowany jako `internal` &#124; `left`&#124; `right`
 
-- `basefield`, zdefiniowany jako `dec` &#124; `hex`&#124; `oct`
+- `basefield`, zdefiniowane jako `dec` &#124; `hex`&#124; `oct`
 
-- `floatfield`, zdefiniowany jako `fixed`&#124; `scientific`
+- `floatfield`, zdefiniowane jako `fixed`&#124; `scientific`
 
-Przykłady funkcji, które modyfikują te format flagi, zobacz [ \<iomanip — >](../standard-library/iomanip.md).
+Aby uzyskać przykłady funkcji, które modyfikują je sformatować flagi, zobacz [ \<iomanip >](../standard-library/iomanip.md).
 
 ## <a name="getloc"></a>  ios_base::getloc
 
-Zwraca obiekt przechowywanych ustawień regionalnych.
+Zwraca obiekt ustawień regionalnych przechowywanych.
 
 ```cpp
 locale getloc() const;
@@ -499,7 +499,7 @@ locale imbue(const locale& _Loc);
 
 ### <a name="parameters"></a>Parametry
 
-`_Loc` Nowe ustawienia regionalne.
+*_Loc* nowych ustawień regionalnych.
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -507,15 +507,15 @@ Poprzednie ustawienia regionalne.
 
 ### <a name="remarks"></a>Uwagi
 
-Magazyny funkcji Członkowskich `_Loc` w obiekcie ustawień regionalnych, a następnie zgłasza zdarzenie wywołania zwrotnego i `imbue_event`. Zwraca poprzednią wartość przechowywane.
+Magazyny funkcja elementu członkowskiego *_Loc* w obiekcie ustawień regionalnych i następnie zgłasza zdarzenie wywołania zwrotnego i `imbue_event`. Zwraca poprzednią wartość przechowywanych.
 
 ### <a name="example"></a>Przykład
 
-Zobacz [basic_ios::imbue](../standard-library/basic-ios-class.md#imbue) przykładowe.
+Zobacz [basic_ios::imbue](../standard-library/basic-ios-class.md#imbue) dla próbki.
 
 ## <a name="init"></a>  ios_base::init
 
-Tworzy obiekty iostream standardowe, gdy utworzony.
+Tworzy obiektów standardowa iostream, kiedy zostaną wykonane.
 
 ```cpp
 class Init { };
@@ -523,7 +523,7 @@ class Init { };
 
 ### <a name="remarks"></a>Uwagi
 
-Zagnieżdżona klasa opisuje obiekt, którego konstrukcji gwarantuje, że obiekty standardowe iostream prawidłowo są utworzone, nawet przed wykonaniem konstruktora dla dowolnego obiektu statycznego.
+Zagnieżdżona klasa opisująca obiekt, którego konstrukcji gwarantuje, że obiekty iostreams standardowych prawidłowo są konstruowane, nawet przed wykonaniem konstruktora dla dowolnego obiektu statycznego.
 
 ## <a name="ios_base"></a>  ios_base::ios_base
 
@@ -535,11 +535,11 @@ ios_base();
 
 ### <a name="remarks"></a>Uwagi
 
-Konstruktor (chroniony) nie działa. Wywołanie nowsze **basic_ios —::**[init](../standard-library/basic-ios-class.md#init) przed zostać zniszczone bezpiecznie musi zainicjować obiektu. W związku z tym tylko bezpieczne użycie ios_base — klasa jest jako klasę podstawową dla klasy szablonu [basic_ios —](../standard-library/basic-ios-class.md).
+Konstruktor (chroniony) nie działa. Nowsze wywołanie **basic_ios —::**[init](../standard-library/basic-ios-class.md#init) należy zainicjować obiektu, zanim może zostać bezpiecznie zniszczone. W związku z tym, tylko bezpieczne użycie ios_base — klasa jest jako klasę bazową dla klasy szablonu [basic_ios —](../standard-library/basic-ios-class.md).
 
 ## <a name="iostate"></a>  ios_base::iostate
 
-Typ stałe opisujące stan strumienia.
+Typ stałych, które opisują stan strumienia.
 
 ```cpp
 class ios_base {
@@ -555,15 +555,15 @@ public:
 
 ### <a name="remarks"></a>Uwagi
 
-Typ jest typem maski, który opisuje obiekt, który może zapisać informacji o stanie strumienia. Flagi różne wartości (elementy) są następujące:
+Typ jest typem maski bitów, który opisuje obiekt, który może przechowywać informacje o stanie strumienia. Flagi odrębne wartości (elementy) są następujące:
 
-- `badbit`, aby zarejestrować utraty integralności buforu strumienia.
+- `badbit`, aby nagrać utraty integralności buforu strumienia.
 
 - `eofbit`, aby rekordów koniec pliku podczas wyodrębniania ze strumienia.
 
-- `failbit`, aby zarejestrować niepowodzenie wyodrębnienia prawidłowym polem ze strumienia.
+- `failbit`, aby zarejestrować błąd podczas wyodrębniania prawidłowym polem ze strumienia.
 
-Ponadto jest przydatne wartość `goodbit`, gdzie są ustawione bity wymienione wcześniej ( `goodbit` może być równy zero).
+Ponadto jest przydatny wartość `goodbit`, gdzie wymienionych wcześniej bity są ustawione (`goodbit` może być równy zero).
 
 ## <a name="iword"></a>  ios_base::iword
 
@@ -575,23 +575,23 @@ long& iword(int idx);
 
 ### <a name="parameters"></a>Parametry
 
-`idx` Indeks wartości do przechowywania jako `iword`.
+*idx* indeks wartości do przechowywania jako `iword`.
 
 ### <a name="remarks"></a>Uwagi
 
-Funkcja członkowska zwraca odwołanie do elementu `idx` extensible tablicy elementami typu **długi**. Wszystkie elementy są skutecznie obecne i początkowo przechowywać wartość zero. Odwołanie zwracane jest nieprawidłowy po wywołaniu dalej `iword` dla obiektu, gdy obiekt jest zmieniony przez wywołanie do **basic_ios —::**[copyfmt](../standard-library/basic-ios-class.md#copyfmt), lub gdy obiekt zostanie zniszczony.
+Funkcja elementu członkowskiego zwraca odwołanie do elementu *idx* tablicy extensible elementami typu **długie**. Wszystkie elementy są wydajnie obecne i początkowo przechowywane wartości zero. Zwracane odwołanie będzie nieprawidłowe po następnym wywołaniu `iword` dla obiektu, gdy obiekt jest zmieniony przez wywołanie **basic_ios —::**[copyfmt —](../standard-library/basic-ios-class.md#copyfmt), lub gdy obiekt zostanie zniszczony.
 
-Jeśli `idx` jest ujemny lub jeśli unikatowy magazyn jest niedostępny dla elementu, wywołuje funkcję [metoda setstate](../standard-library/basic-ios-class.md#setstate)**(badbit)** i zwraca odwołanie, które nie muszą być unikatowe.
+Jeśli *idx* jest ujemne lub jeżeli unikatowy magazyn jest niedostępny dla elementu, funkcja wywołuje [setstate](../standard-library/basic-ios-class.md#setstate)**(badbit)** i zwraca odwołanie, które nie muszą być unikatowe.
 
-Aby uzyskać unikatowy indeks, do użytku dla wszystkich obiektów typu `ios_base`, wywołaj [xalloc](#xalloc).
+Aby uzyskać unikatowy indeks do użycia dla wszystkich obiektów typu `ios_base`, wywołaj [xalloc —](#xalloc).
 
 ### <a name="example"></a>Przykład
 
-Zobacz [xalloc](#xalloc) przykładowy sposób użycia `iword`.
+Zobacz [xalloc —](#xalloc) przykład sposobu użycia `iword`.
 
 ## <a name="openmode"></a>  ios_base::openmode
 
-Opisuje sposób interakcji z strumienia.
+W tym artykule opisano sposób interakcji ze strumieniem.
 
 ```cpp
 class ios_base {
@@ -607,19 +607,19 @@ public:
 
 ### <a name="remarks"></a>Uwagi
 
-Typ jest `bitmask type` , który opisuje obiekt, który może przechowywać tryb otwarcia wielu obiektów iostream. Flagi różne wartości (elementy) są następujące:
+Typ jest `bitmask type` , który opisuje obiekt, który może przechowywać tryb otwarcia kilka obiektów iostream. Flagi odrębne wartości (elementy) są następujące:
 
-- **Aplikacja**, aby wyszukiwać na koniec strumienia przed każdym wstawiania.
+- `app`, aby starać się koniec strumienia przed każdym wstawiania.
 
-- **uj**, aby przejść do końca strumienia po jego kontrolowanie obiektu najpierw.
+- `ate`, do wyszukania na końcu strumienia, w chwili utworzenia jej kontrolowania obiektu.
 
-- **binarny**, aby odczytać plik jako strumienia binarnego, a nie jako strumień tekstu.
+- `binary`, można odczytać pliku jako strumienia binarnego, a nie jako strumienia tekstu.
 
-- **w**, aby umożliwić wyodrębniania ze strumienia.
+- `in`, aby umożliwić wyodrębnianie ze strumienia.
 
-- **limit**, aby umożliwić wstawiania do strumienia.
+- `out`, aby umożliwić wstawienie do strumienia.
 
-- **TRUNC**, aby usunąć zawartość z istniejącego pliku po utworzeniu jego kontrolowanie obiekt.
+- `trunc`, można usunąć zawartości istniejącego pliku, podczas jego kontrolowanie obiekt zostanie utworzony.
 
 ### <a name="example"></a>Przykład
 
@@ -641,7 +641,7 @@ int main ( )
 
 ## <a name="op_eq"></a>  ios_base::operator =
 
-Operator przypisania dla obiektów ios_base —.
+Operator przypisania ios_base — obiektów.
 
 ```cpp
 ios_base& operator=(const ios_base& right);
@@ -649,21 +649,21 @@ ios_base& operator=(const ios_base& right);
 
 ### <a name="parameters"></a>Parametry
 
-`right` Obiekt typu `ios_base`.
+*prawy* obiektu typu `ios_base`.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Obiekt jest przypisywany do.
+Obiekt, który jest przypisany do.
 
 ### <a name="remarks"></a>Uwagi
 
-Operator kopiuje przechowywane informacje dotyczące formatowania, nowych kopii dowolnego extensible tablic. Następnie zwraca  **\*to**. Należy pamiętać, że stosu wywołania zwrotnego nie został skopiowany.
+Operator kopiuje przechowywane informacje o formatowaniu, dzięki czemu nową kopię wszystkie tablice extensible. Następnie zwraca  **\*to**. Należy pamiętać, stos wywołań zwrotnych nie jest kopiowany.
 
-Ten operator jest używana tylko w klasach pochodzących od `ios_base`.
+Ten operator jest używana tylko przez klasy pochodne `ios_base`.
 
 ## <a name="precision"></a>  ios_base::Precision
 
-Określa liczbę miejsc po przecinku do wyświetlenia w liczbie zmiennoprzecinkowej.
+Określa liczbę cyfr wyświetlanych w liczbę zmiennoprzecinkową.
 
 ```cpp
 streamsize precision() const;
@@ -672,15 +672,15 @@ streamsize precision(streamsize _Prec);
 
 ### <a name="parameters"></a>Parametry
 
-`_Prec` Liczba cyfr znaczących w celu wyświetlenia lub liczbę cyfr po punkcie dziesiętnym w notacji stałej.
+*_Prec* liczbę cyfr znaczących, aby wyświetlić lub liczbę cyfr po punkcie dziesiętnym w stałej cyfrowym.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Zwraca zapisana pierwszej funkcji Członkowskich [dokładność wyświetlania](../standard-library/ios-base-class.md). Drugi magazynów funkcji Członkowskich `_Prec` dokładność wyświetlania i zwraca jego poprzedniej przechowywana wartość.
+Pierwsza funkcja elementu członkowskiego zwraca przechowywany [dokładność wyświetlania](../standard-library/ios-base-class.md). Drugi magazynów funkcja elementu członkowskiego *_Prec* precyzją wyświetlania i zwraca jego poprzedniej przechowywaną wartość.
 
 ### <a name="remarks"></a>Uwagi
 
-Liczby zmiennoprzecinkowe są wyświetlane w notacji stałej z [stałej](../standard-library/ios-functions.md#fixed).
+Liczby zmiennoprzecinkowe są wyświetlane w stałym notacji z [stałej](../standard-library/ios-functions.md#fixed).
 
 ### <a name="example"></a>Przykład
 
@@ -716,19 +716,19 @@ void *& pword(int _Idx);
 
 ### <a name="parameters"></a>Parametry
 
-`_Idx` Indeks wartości do przechowywania jako `pword`.
+*_Idx* indeks wartości do przechowywania jako `pword`.
 
 ### <a name="remarks"></a>Uwagi
 
-Funkcja członkowska zwraca odwołanie do elementu _ *Idx* extensible tablicy elementami typu `void` wskaźnika. Wszystkie elementy są wydajnie obecne i początkowo przechowywania pustego wskaźnika. Odwołanie zwracane jest nieprawidłowy po wywołaniu dalej `pword` dla obiektu, gdy obiekt jest zmieniony przez wywołanie do **basic_ios —::**[copyfmt](../standard-library/basic-ios-class.md#copyfmt), lub gdy obiekt zostanie zniszczony.
+Funkcja elementu członkowskiego zwraca odwołanie do elementu _ *Idx* tablicy extensible elementami typu **void** wskaźnika. Wszystkie elementy są skutecznie obecne i początkowo przechowywane wskaźnika o wartości null. Zwracane odwołanie będzie nieprawidłowe po następnym wywołaniu `pword` dla obiektu, gdy obiekt jest zmieniony przez wywołanie **basic_ios —::**[copyfmt —](../standard-library/basic-ios-class.md#copyfmt), lub gdy obiekt zostanie zniszczony.
 
-Jeśli _ *Idx* jest ujemna, lub jeśli unikatowy magazyn jest niedostępny dla elementu, wywołuje funkcję [metoda setstate](../standard-library/basic-ios-class.md#setstate)**(badbit)** i zwraca odwołanie, które nie muszą być unikatowe.
+Jeśli _ *Idx* jest ujemna, lub jeśli unikatowy magazyn jest niedostępny dla elementu, funkcja wywołuje [setstate](../standard-library/basic-ios-class.md#setstate)**(badbit)** i zwraca odwołanie, które nie muszą być unikatowe.
 
-Aby uzyskać unikatowy indeks, do użytku dla wszystkich obiektów typu `ios_base`, wywołaj [xalloc](#xalloc).
+Aby uzyskać unikatowy indeks do użycia dla wszystkich obiektów typu `ios_base`, wywołaj [xalloc —](#xalloc).
 
 ### <a name="example"></a>Przykład
 
-Zobacz [xalloc](#xalloc) przykład przy użyciu `pword`.
+Zobacz [xalloc —](#xalloc) na przykład za pomocą `pword`.
 
 ## <a name="register_callback"></a>  ios_base::register_callback
 
@@ -741,13 +741,13 @@ void register_callback(
 
 ### <a name="parameters"></a>Parametry
 
-`pfn` Wskaźnik do funkcji wywołania zwrotnego.
+*nazwy pfn* wskaźnik do funkcji wywołania zwrotnego.
 
-`idx` Liczba zdefiniowanych przez użytkownika.
+*idx* wiele zdefiniowanych przez użytkownika.
 
 ### <a name="remarks"></a>Uwagi
 
-Funkcja członkowska wypchnięcia pary `{pfn, idx}` na stosie przechowywanych wywołania zwrotnego [stosu wywołania zwrotnego](../standard-library/ios-base-class.md). Gdy zdarzenie wywołania zwrotnego **weryfikacją** jest zgłaszany, funkcje są nazywane, w kolejności odwrotnej rejestracji, przez wyrażenie `(*pfn)(ev, *this, idx)`.
+Funkcja elementu członkowskiego wypycha pary `{pfn, idx}` na stosie wywołania zwrotnego przechowywanych [stos wywołań zwrotnych](../standard-library/ios-base-class.md). Gdy zdarzenie wywołania zwrotnego **weryfikacją** jest zgłaszany, funkcje są wywoływane, w odwrotnej kolejności z rejestru, przez wyrażenie `(*pfn)(ev, *this, idx)`.
 
 ### <a name="example"></a>Przykład
 
@@ -855,13 +855,13 @@ namespace std {
 
 ### <a name="remarks"></a>Uwagi
 
-Typ jest Typ wyliczany opisujący obiekt, który może przechowywać używanym jako argument do funkcji Członkowskich w klasach iostream kilka tryb wyszukiwania. Flaga różne wartości są następujące:
+Typ jest typem wyliczanym, opisująca obiekt, które mogą być przechowywane jako argument do funkcji Członkowskich z kilku klas iostream tryb wyszukiwania. Wartości odrębnych flagi są następujące:
 
-- **czyna**, aby wyszukiwać (alter bieżącego odczytu lub zapisu pozycji) względem na początku sekwencji (tablicy, strumienia lub pliku).
+- `beg`, do wyszukania (alter bieżącego odczytu lub zapisu pozycji) względem początku sekwencji (tablicy, strumień lub plik).
 
-- **Waluta**, aby wyszukiwać względem bieżącej pozycji w sekwencji.
+- `cur`, do wyszukania względem bieżącej pozycji w sekwencji.
 
-- **końcowy**, aby wyszukiwać względem koniec sekwencji.
+- `end`, do wyszukania względem końca sekwencji.
 
 ### <a name="example"></a>Przykład
 
@@ -901,9 +901,9 @@ fmtflags setf(
 
 ### <a name="parameters"></a>Parametry
 
-`_Mask` Flagi, aby włączyć funkcję.
+*_Maska* flagi, aby włączyć.
 
-*_Unset* flagi, które należy wyłączyć.
+*_Unset* flagi, aby wyłączyć.
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -939,7 +939,7 @@ int main( )
 
 ## <a name="sync_with_stdio"></a> ios_base::sync_with_stdio
 
-Zapewnia, że iostream i operacje biblioteki wykonawcze języka C są wykonywane w kolejności ich występowania w kodzie źródłowym.
+Zapewnia, że iostream i operacje biblioteki wykonawczej C wystąpić w kolejności, w jakiej występują w kodzie źródłowym.
 
 ```cpp
 static bool sync_with_stdio(
@@ -949,7 +949,7 @@ static bool sync_with_stdio(
 
 ### <a name="parameters"></a>Parametry
 
-`_Sync` Określa, czy wszystkie strumienie są zsynchronizowane z **stdio —**.
+*_Sync* tego, czy wszystkie strumienie są zsynchronizowane z `stdio`.
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -957,11 +957,11 @@ static bool sync_with_stdio(
 
 ### <a name="remarks"></a>Uwagi
 
-    The static member function stores a **stdio** sync flag, which is initially **true**. When **true**, this flag ensures that operations on the same file are properly synchronized between the [iostreams](../standard-library/iostreams-conventions.md) functions and those defined in the C++ Standard Library. Otherwise, synchronization may or may not be guaranteed, but performance may be improved. The function stores `_Sync` in the **stdio** sync flag and returns its previous stored value. You can call it reliably only before performing any operations on the standard streams.
+    The static member function stores a `stdio` sync flag, which is initially **true**. When **true**, this flag ensures that operations on the same file are properly synchronized between the [iostreams](../standard-library/iostreams-conventions.md) functions and those defined in the C++ Standard Library. Otherwise, synchronization may or may not be guaranteed, but performance may be improved. The function stores *_Sync* in the `stdio` sync flag and returns its previous stored value. You can call it reliably only before performing any operations on the standard streams.
 
 ## <a name="unsetf"></a> ios_base::unsetf
 
-Powoduje, że określone flagi należy wyłączyć.
+Powoduje, że określone flagi były wyłączone.
 
 ```cpp
 void unsetf(
@@ -971,7 +971,7 @@ void unsetf(
 
 ### <a name="parameters"></a>Parametry
 
-`_Mask` Flagi, które chcesz wyłączyć.
+*_Maska* flagi, które chcesz wyłączyć.
 
 ### <a name="remarks"></a>Uwagi
 
@@ -994,7 +994,7 @@ streamsize width(
 
 ### <a name="parameters"></a>Parametry
 
-`_Wide` Wymagany rozmiar strumienia wyjściowego.
+*_Wide* żądany rozmiar strumienia wyjściowego.
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -1002,7 +1002,7 @@ streamsize width(
 
 ### <a name="remarks"></a>Uwagi
 
-    The first member function returns the stored field width. The second member function stores `_Wide` in the field width and returns its previous stored value.
+    The first member function returns the stored field width. The second member function stores *_Wide* in the field width and returns its previous stored value.
 
 ### <a name="example"></a>Przykład
 

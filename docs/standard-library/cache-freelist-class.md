@@ -20,16 +20,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8478490914a6f9049cd54ec78c8de8a1e519f36f
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: c3d3902d900e0dad5ec3e335e9c3424d58ee2674
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33845677"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38960420"
 ---
 # <a name="cachefreelist-class"></a>cache_freelist — Klasa
 
-Definiuje [zablokować alokatora](../standard-library/allocators-header.md) przydziela i zwalnia bloki pamięci o rozmiarze pojedynczego.
+Definiuje [block alokatora](../standard-library/allocators-header.md) który przydziela i zwalnia bloki pamięci o rozmiarze jednego.
 
 ## <a name="syntax"></a>Składnia
 
@@ -42,14 +42,14 @@ class cache_freelist
 
 |Parametr|Opis|
 |---------------|-----------------|
-|`Sz`|Liczba elementów w tablicy do przydzielenia.|
-|`Max`|Max Klasa reprezentująca maksymalny rozmiar wolnego listy. Może to być [max_fixed_size —](../standard-library/max-fixed-size-class.md), [max_none —](../standard-library/max-none-class.md), [max_unbounded —](../standard-library/max-unbounded-class.md), lub [max_variable_size —](../standard-library/max-variable-size-class.md).|
+|*Sz*|Liczba elementów w tablicy do przydzielenia.|
+|*Maksymalna*|Klasa max reprezentujący maksymalny rozmiar wolnego listy. Może to być [max_fixed_size —](../standard-library/max-fixed-size-class.md), [max_none —](../standard-library/max-none-class.md), [max_unbounded —](../standard-library/max-unbounded-class.md), lub [max_variable_size —](../standard-library/max-variable-size-class.md).|
 
 ## <a name="remarks"></a>Uwagi
 
-Cache_freelist — klasa szablonu prowadzi listę wolnego bloki pamięci o rozmiarze `Sz`. Po zapełnieniu listy wolnego używa `operator delete` można cofnąć alokacji pamięci bloki. Gdy wolnego lista jest pusta używa `operator new` można przydzielić nowego bloki pamięci. Maksymalny rozmiar wolnego listy jest określany przez klasy przekazano max klasy `Max` parametru.
+Cache_freelist — klasa szablonu przechowuje listę wolne bloki pamięci o rozmiarze *Sz*. Po zapełnieniu listy bezpłatne używa **operatora delete** można cofnąć alokacji pamięci blokuje. Bezpłatne lista jest pusta korzysta **nowy operator** przydzielić nowe bloki pamięci. Maksymalny rozmiar wolnego list jest określany przez klasę klasy max przekazanej *Max* parametru.
 
-Każdy blok pamięci przechowuje `Sz` w bajtach dostępnej pamięci i danych który `operator new` i `operator delete` wymagają.
+Każdy blok pamięci przechowuje *Sz* w bajtach dostępnej pamięci i danych, **nowy operator** i **operatora delete** wymagają.
 
 ### <a name="constructors"></a>Konstruktorów
 
@@ -59,20 +59,20 @@ Każdy blok pamięci przechowuje `Sz` w bajtach dostępnej pamięci i danych kt�
 
 ### <a name="member-functions"></a>Funkcje Członkowskie
 
-|Funkcja członkowska|Opis|
+|Funkcja elementu członkowskiego|Opis|
 |-|-|
-|[allocate](#allocate)|Przydziela bloku pamięci.|
-|[Cofnięcie przydziału](#deallocate)|Zwalnia określoną liczbę obiektów z magazynu rozpoczynający się od określonej pozycji.|
+|[allocate](#allocate)|Przydziela blok pamięci.|
+|[Cofnij Przydział](#deallocate)|Zwalnia określoną liczbę obiektów z pamięci masowej rozpoczynający się od określonej pozycji.|
 
 ## <a name="requirements"></a>Wymagania
 
-**Nagłówek:** \<allocators — >
+**Nagłówek:** \<buforów >
 
-**Namespace:** stdext —
+**Namespace:** stdext
 
 ## <a name="allocate"></a>  cache_freelist::allocate
 
-Przydziela bloku pamięci.
+Przydziela blok pamięci.
 
 ```cpp
 void *allocate(std::size_t count);
@@ -82,7 +82,7 @@ void *allocate(std::size_t count);
 
 |Parametr|Opis|
 |---------------|-----------------|
-|`count`|Liczba elementów w tablicy do przydzielenia.|
+|*Liczba*|Liczba elementów w tablicy do przydzielenia.|
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -102,7 +102,7 @@ cache_freelist();
 
 ## <a name="deallocate"></a>  cache_freelist::deallocate
 
-Zwalnia określoną liczbę obiektów z magazynu rozpoczynający się od określonej pozycji.
+Zwalnia określoną liczbę obiektów z pamięci masowej rozpoczynający się od określonej pozycji.
 
 ```cpp
 void deallocate(void* ptr, std::size_t count);
@@ -112,8 +112,8 @@ void deallocate(void* ptr, std::size_t count);
 
 |Parametr|Opis|
 |---------------|-----------------|
-|`ptr`|Wskaźnik do pierwszego obiektu do cofnięcia alokacji z magazynu.|
-|`count`|Liczba obiektów do cofnięcia alokacji z magazynu.|
+|*ptr*|Wskaźnik do pierwszego obiektu można cofnąć przydziału z magazynu.|
+|*Liczba*|Liczba obiektów, które można cofnąć przydziału z magazynu.|
 
 ### <a name="remarks"></a>Uwagi
 

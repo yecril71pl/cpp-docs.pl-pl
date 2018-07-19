@@ -8,19 +8,19 @@ f1_keywords:
 ms.assetid: 6cdcf043-eef6-4330-83f0-4596fb9f968a
 helpviewer_keywords:
 - std::swap [vector]
-ms.openlocfilehash: dbcb2524736bcb99693f3a4b27790c3447d58fe3
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 29b23ec4afe32d1aa383afd4fdaf3ca280d49161
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33856179"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38955264"
 ---
 # <a name="ltvectorgt-functions"></a>&lt;Wektor&gt; funkcji
 
 
-## <a name="swap"></a>  Swap
+## <a name="swap"></a>  swap
 
-Zamienia elementy dwa wektory.
+Zamienia elementy z dwoma wektorami.
 
 ```cpp
 template <class Type, class Allocator>
@@ -29,17 +29,19 @@ void swap(vector<Type, Allocator>& left, vector<Type, Allocator>& right);
 
 ### <a name="parameters"></a>Parametry
 
-`right` Wektor zapewnianie elementów zamianę lub wektora, której elementy są wymienianych z tymi wektora `left`.
+*right*  
+ Wektor zawierająca elementy, które mają być zamienione lub wektora, której elementy są wymieniane z tymi wektora *po lewej stronie*.
 
-`left` Wektor, której elementy są wymienianych z tymi wektora `right`.
+*left*  
+ Wektor, w której elementy są wymieniane z tymi wektora *prawo*.
 
 ### <a name="remarks"></a>Uwagi
 
-Funkcja szablonu jest algorytm specjalizowany na wektor klasy kontenera do wykonywania funkcji członkowskiej `left`. [Vector::swap](../standard-library/vector-class.md) *(prawo*). Te są wystąpieniami klasy częściowe porządkowanie szablonów funkcji przez kompilator. Gdy funkcje szablonów są przeciążone w taki sposób, dopasowania szablonu z wywołaniem funkcji nie jest unikatowa, kompilator wybierze najbardziej specjalna wersja funkcji szablonu. Ogólne wersja funkcji szablonu **szablonu** \< **klasy T**> **void wymiany**( **T &**, **T &**), w algorytmie klasa działa przez przypisanie i jest wolne działanie. Specjalna wersja w poszczególnych kontenerach jest znacznie szybsze może współpracować z reprezentacji wewnętrznej klasy kontenera.
+Funkcja szablonu jest algorytm przeznaczone na wektor klasy kontenera na wykonanie funkcji elementu członkowskiego `left`. [Vector::swap](../standard-library/vector-class.md) *(prawy*). Są to wystąpień częściowe porządkowanie szablonów funkcji przez kompilator. Gdy funkcje szablonu przeciążone są w sposób dopasowania szablonu za pomocą wywołania funkcji nie jest unikatowa, kompilator wybierze najbardziej wyspecjalizowaną wersję funkcji szablonu. Ogólne wersję funkcji szablonu **szablonu** \< **klasa T**> **void wymiany**( **T &**, **T &**), w algorytmie klasy działa przez przypisanie a wolne działanie. Specjalizowanej wersji w każdym kontenerze jest znacznie szybsza, ponieważ może współpracować z reprezentacji wewnętrznej klasy kontenera.
 
 ### <a name="example"></a>Przykład
 
-Zobacz przykład kodu dla funkcji członkowskiej [vector::swap](../standard-library/vector-class.md) na przykład, który używa wersji szablonu `swap`.
+Zobacz przykład kodu dla funkcji członkowskiej [vector::swap](../standard-library/vector-class.md) przykład, który używa szablonu wersji `swap`.
 
 ## <a name="see-also"></a>Zobacz także
 

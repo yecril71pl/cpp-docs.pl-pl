@@ -1,5 +1,5 @@
 ---
-title: system_clock — struktura | Dokumentacja firmy Microsoft
+title: system_clock, struktura | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -19,16 +19,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 31f7fe06c46472f9919a642ecc5d6ed5a326792c
-ms.sourcegitcommit: 3bb7c1c0ceeb8012418e2fff9ae5a7db0fff3877
+ms.openlocfilehash: b56a493ce91c6ac7f0864a1bf4e10476603d79fd
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/23/2018
-ms.locfileid: "34458904"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38959046"
 ---
 # <a name="systemclock-structure"></a>system_clock — Struktura
 
-Reprezentuje *typ zegara* opartego na zegarze w czasie rzeczywistym systemu.
+Reprezentuje *typ zegara* jest oparty na zegarze w czasie rzeczywistym systemu.
 
 ## <a name="syntax"></a>Składnia
 
@@ -38,37 +38,37 @@ struct system_clock;
 
 ## <a name="remarks"></a>Uwagi
 
-A *typ zegara* jest używany do uzyskania bieżącego czasu jako czas UTC. Typ zawiera instancją typu [czas trwania](../standard-library/duration-class.md) i szablonu klasy [time_point —](../standard-library/time-point-class.md)i definiuje statycznej funkcji członkowskiej `now()` zwracającą czas.
+A *typ zegara* służy do uzyskiwania bieżącego czasu jako czas UTC. Typ uosabia wystąpienie z [czas trwania](../standard-library/duration-class.md) i szablonem klasy [time_point](../standard-library/time-point-class.md)i definiuje funkcję członka statycznego `now()` który zwraca czas.
 
-Zegar jest *monotoniczna* Jeśli wartość, która jest zwracana przez pierwsze wywołanie w celu `now()` zawsze jest mniejsza niż wartość zwracaną przez kolejne wywołanie `now()`.
+Zegar jest *monotoniczny* Jeśli wartość, która jest zwracana przez pierwsze wywołanie `now()` jest zawsze mniejsza niż wartość, która jest zwracana przez kolejne wywołanie `now()`.
 
-Zegar jest *stałej* przypadku *monotoniczna* i jeśli czas między zegarowych jest stałą.
+Zegar jest *stały* , gdy jest *monotoniczny* i jeśli czas między taktami zegara jest stały.
 
 ## <a name="members"></a>Elementy członkowskie
 
-### <a name="public-typedefs"></a>Definicje typów publicznych
+### <a name="public-typedefs"></a>Publiczne definicje typów
 
 |Nazwa|Opis|
 |----------|-----------------|
-|`system_clock::duration`|Jest to synonim `duration<rep, period>`.|
-|`system_clock::period`|Synonim dla typu, który jest używany do reprezentowania okres znaczników w zawartych w niej tworzenia wystąpienia elementu `duration`.|
-|`system_clock::rep`|Synonim dla typu, który jest używany do reprezentowania liczbę taktów zegara w zawartych w niej tworzenia wystąpienia elementu `duration`.|
-|`system_clock::time_point`|Jest to synonim `time_point<Clock, duration>`, gdzie `Clock` jest synonimem sam typ zegara lub inny typ zegara, oparty na tej samej epoki i ma takie same zagnieżdżone `duration` typu.|
+|`system_clock::duration`|Synonim dla `duration<rep, period>`.|
+|`system_clock::period`|Synonim dla typu, który jest używany do reprezentowania okresu taktu w zamkniętym `duration`.|
+|`system_clock::rep`|Synonim dla typu, który jest używany do reprezentowania liczby taktów zegara w zamkniętym `duration`.|
+|`system_clock::time_point`|Synonim dla `time_point<Clock, duration>`, gdzie `Clock` jest synonimem samego typu zegara lub innego typu zegara, który opiera się na tej samej epoce i ma taki sam zagnieżdżony `duration` typu.|
 
 ### <a name="public-methods"></a>Metody publiczne
 
 |Nazwa|Opis|
 |----------|-----------------|
-|[from_time_t](#from_time_t)|Statyczna. Zwraca `time_point` która najbardziej podobny przez określony czas.|
-|[Teraz](#now)|Statyczna. Zwraca bieżącą godzinę.|
-|[to_time_t](#to_time_t)|Statyczna. Zwraca `time_t` obiekt, który najlepiej oblicza przybliżoną określonej `time_point`.|
+|[from_time_t](#from_time_t)|Statyczne. Zwraca `time_point` , najbardziej zbliżony przez określony czas.|
+|[teraz](#now)|Statyczne. Zwraca bieżącą godzinę.|
+|[to_time_t](#to_time_t)|Statyczne. Zwraca `time_t` obiekt, który jest najbardziej zbliżony do określonego `time_point`.|
 
-### <a name="public-constants"></a>Publiczny — stałe
+### <a name="public-constants"></a>Publiczne stałe
 
 |Nazwa|Opis|
 |----------|-----------------|
-|[system_clock::is_monotonic — stała](#is_monotonic_constant)|Określa, czy typ zegara monotoniczna.|
-|[system_clock::is_steady — stała](#is_steady_constant)|Określa, czy typ zegara jest stałą.|
+|[system_clock::is_monotonic — stała](#is_monotonic_constant)|Określa, czy typ zegara jest monotoniczny.|
+|[system_clock::is_steady — stała](#is_steady_constant)|Określa, czy typ zegara jest stały.|
 
 ## <a name="requirements"></a>Wymagania
 
@@ -76,9 +76,9 @@ Zegar jest *stałej* przypadku *monotoniczna* i jeśli czas między zegarowych j
 
 **Namespace:** std::chrono
 
-## <a name="from_time_t"></a>  system_clock::from_time_t
+## <a name="from_time_t"></a>  system_clock::from_time_t —
 
-Statyczna metoda, która zwraca [time_point —](../standard-library/time-point-class.md) najlepiej odpowiadającej zbliżonego czas reprezentowany przez `Tm`.
+Metoda statyczna zwraca [time_point](../standard-library/time-point-class.md) który możliwie najbardziej przybliża czas, który jest reprezentowany przez *Tm*.
 
 ```cpp
 static time_point from_time_t(time_t Tm) noexcept;
@@ -86,11 +86,12 @@ static time_point from_time_t(time_t Tm) noexcept;
 
 ### <a name="parameters"></a>Parametry
 
-`Tm` A [time_t —](../c-runtime-library/standard-types.md) obiektu.
+*Menedżer transakcji*  
+ A [time_t](../c-runtime-library/standard-types.md) obiektu.
 
 ## <a name="is_monotonic_constant"></a>  system_clock::is_monotonic — stała
 
-Wartość statyczną, który określa, czy typ zegara monotoniczna.
+Wartość statyczna, która określa, czy typ zegara jest monotoniczny.
 
 ```cpp
 static const bool is_monotonic = false;
@@ -98,15 +99,15 @@ static const bool is_monotonic = false;
 
 ### <a name="return-value"></a>Wartość zwracana
 
-W tej implementacji `system_clock::is_monotonic` zawsze zwraca `false`.
+W tej implementacji `system_clock::is_monotonic` zawsze zwraca **false**.
 
 ### <a name="remarks"></a>Uwagi
 
-Zegar jest *monotoniczna* Jeśli wartość, która jest zwracana przez pierwsze wywołanie w celu `now()` zawsze jest mniejsza niż wartość zwracaną przez kolejne wywołanie `now()`.
+Zegar jest *monotoniczny* Jeśli wartość, która jest zwracana przez pierwsze wywołanie `now()` jest zawsze mniejsza niż wartość, która jest zwracana przez kolejne wywołanie `now()`.
 
 ## <a name="is_steady_constant"></a>  system_clock::is_steady — stała
 
-Wartość statyczną, który określa, czy typ zegara *stałej*.
+Wartość statyczna, która określa, czy typ zegara jest *stały*.
 
 ```cpp
 static const bool is_steady = false;
@@ -114,13 +115,13 @@ static const bool is_steady = false;
 
 ### <a name="return-value"></a>Wartość zwracana
 
-W tej implementacji `system_clock::is_steady` zawsze zwraca `false`.
+W tej implementacji `system_clock::is_steady` zawsze zwraca **false**.
 
 ### <a name="remarks"></a>Uwagi
 
-Zegar jest *stałej* przypadku [monotoniczna](#is_monotonic_constant) i jeśli czas między zegarowych jest stałą.
+Zegar jest *stały* , gdy jest [monotoniczny](#is_monotonic_constant) i jeśli czas między taktami zegara jest stały.
 
-## <a name="now"></a>  system_clock::Now
+## <a name="now"></a>  system_clock::Now —
 
 Metoda statyczna zwraca bieżącą godzinę.
 
@@ -130,11 +131,11 @@ static time_point now() noexcept;
 
 ### <a name="return-value"></a>Wartość zwracana
 
-A [time_point —](../standard-library/time-point-class.md) obiekt, który reprezentuje bieżący czas.
+A [time_point](../standard-library/time-point-class.md) obiekt, który reprezentuje bieżący czas.
 
-## <a name="to_time_t"></a>  system_clock::to_time_t
+## <a name="to_time_t"></a>  system_clock::to_time_t —
 
-Statyczna metoda, która zwraca [time_t —](../c-runtime-library/standard-types.md) najlepiej odpowiadającej zbliżonego czas reprezentowany przez `Time`.
+Metoda statyczna zwraca [time_t](../c-runtime-library/standard-types.md) który możliwie najbardziej przybliża czas, który jest reprezentowany przez *czasu*.
 
 ```cpp
 static time_t to_time_t(const time_point& Time) noexcept;
@@ -142,7 +143,8 @@ static time_t to_time_t(const time_point& Time) noexcept;
 
 ### <a name="parameters"></a>Parametry
 
-`Time` A [time_point —](../standard-library/time-point-class.md) obiektu.
+*czas*  
+ A [time_point](../standard-library/time-point-class.md) obiektu.
 
 ## <a name="see-also"></a>Zobacz także
 

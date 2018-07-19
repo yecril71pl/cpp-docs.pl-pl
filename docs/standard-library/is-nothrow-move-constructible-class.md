@@ -1,5 +1,5 @@
 ---
-title: is_nothrow_move_constructible — klasa | Dokumentacja firmy Microsoft
+title: is_nothrow_move_constructible, klasa | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,16 +16,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fbd7ab0593d3a8d6486f2f29cd796656407e14cb
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: a1883f051a1df74256da533cf2aba19626b9f19e
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33858529"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38959462"
 ---
 # <a name="isnothrowmoveconstructible-class"></a>is_nothrow_move_constructible — klasa
 
-Sprawdza, czy typ ma **nothrow** przenoszenie konstruktora.
+Sprawdza, czy typ ma **nothrow** Konstruktor przenoszący.
 
 ## <a name="syntax"></a>Składnia
 
@@ -36,17 +36,17 @@ struct is_nothrow_move_constructible;
 
 ### <a name="parameters"></a>Parametry
 
-`Ty` Typ do zapytania.
+*Ty* typ do zapytania.
 
 ## <a name="remarks"></a>Uwagi
 
-Wystąpienie typu predykatu posiada wartość true Jeśli typ `Ty` ma nothrow Konstruktor przenoszący, w przeciwnym razie posiada wartość false.
+Wystąpienie typu predykatu ma wartość true, jeśli typ *Ty* ma nothrow Konstruktor przenoszący, w przeciwnym razie przechowuje wartość false.
 
 ## <a name="requirements"></a>Wymagania
 
 **Nagłówek:** \<type_traits >
 
-**Namespace:** Standard
+**Namespace:** standardowe
 
 ## <a name="see-also"></a>Zobacz także
 

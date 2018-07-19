@@ -1,5 +1,5 @@
 ---
-title: " Klasy ATL — klasy fabryki | Dokumentacja firmy Microsoft"
+title: " Klasy fabryk klas ATL | Dokumentacja firmy Microsoft"
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,26 +18,26 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 ms.openlocfilehash: 197e9d538b51ec69c0d2b2ab5dd7395f98bee7e5
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32355348"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38958494"
 ---
-# <a name="class-factories-classes"></a>Klasa fabryki klas
-Następujące klasy implementuje lub obsługuje fabrykę klas:  
+# <a name="class-factories-classes"></a>Klasy fabryk klas
+Następujące klasy wdrożenia lub obsługi fabrykę klas:  
   
--   [CComClassFactory](../atl/reference/ccomclassfactory-class.md) udostępnia domyślną fabrykę klas do utworzenia obiektu.  
+-   [CComClassFactory](../atl/reference/ccomclassfactory-class.md) udostępnia domyślnej fabryki klas do tworzenia obiektów.  
   
--   [CComClassFactory2](../atl/reference/ccomclassfactory2-class.md) kontroluje tworzenie obiektu za pomocą licencji.  
+-   [CComClassFactory2](../atl/reference/ccomclassfactory2-class.md) kontroluje tworzenie obiektów za pomocą licencji.  
   
--   [CComClassFactoryAutoThread](../atl/reference/ccomclassfactoryautothread-class.md) umożliwia obiekty mogą być tworzone w wielu wątków w puli apartamentach.  
+-   [CComClassFactoryAutoThread](../atl/reference/ccomclassfactoryautothread-class.md) pozwala obiektów można utworzyć w wielu wątków w puli apartamentach.  
   
--   [CComClassFactorySingleton](../atl/reference/ccomclassfactorysingleton-class.md) tworzy jeden obiekt.  
+-   [CComClassFactorySingleton](../atl/reference/ccomclassfactorysingleton-class.md) tworzy pojedynczy obiekt.  
   
--   [Klasy CComCoClass](../atl/reference/ccomcoclass-class.md) definiuje fabryki klasy dla obiekt.  
+-   [Klasy CComCoClass](../atl/reference/ccomcoclass-class.md) definiuje fabryki klas dla obiektu.  
   
 ## <a name="see-also"></a>Zobacz też  
- [Przegląd klas](../atl/atl-class-overview.md)   
+ [Klasa — Przegląd](../atl/atl-class-overview.md)   
  [Makra agregacji i fabryki klas](../atl/reference/aggregation-and-class-factory-macros.md)
 

@@ -1,5 +1,5 @@
 ---
-title: System Windows obsługuje klasy (ATL) | Dokumentacja firmy Microsoft
+title: Windows obsługuje klas (ATL) | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,43 +17,43 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c2095e5141dfdd320bae0e7aa69ffd4b3c9fe9a9
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 40521ce5b7ec192781e1496590fdd42b36e132e1
+ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32362085"
+ms.lasthandoff: 07/05/2018
+ms.locfileid: "37848392"
 ---
-# <a name="windows-support-classes"></a>Klasy obsługi systemu Windows
-Następujące klasy zapewniają obsługę dla systemu windows:  
+# <a name="windows-support-classes"></a>Klasy obsługi Windows
+Następujące klasy obsługi dla systemu windows:  
   
--   [_U_MENUorID](../atl/reference/u-menuorid-class.md) zapewnia otoki **właściwości CreateWindow** i **CreateWindowEx**.  
+-   [_U_MENUorID](../atl/reference/u-menuorid-class.md) zapewnia otoki dla `CreateWindow` i `CreateWindowEx`.  
   
--   [CWindow](../atl/reference/cwindow-class.md) zawiera metody okna. `CWindow` jest klasą bazową dla `CWindowImpl`, `CDialogImpl`, i `CContainedWindow`.  
+-   [CWindow](../atl/reference/cwindow-class.md) zawiera metody do manipulowania okna. `CWindow` jest klasą bazową dla `CWindowImpl`, `CDialogImpl`, i `CContainedWindow`.  
   
--   [CWindowImpl](../atl/reference/cwindowimpl-class.md) implementuje okna, w oparciu o nowe klasy okna. Można też do podklasy lub superklasie okna.  
+-   [CWindowImpl](../atl/reference/cwindowimpl-class.md) implementuje okna, w oparciu o nowe klasy okna. Pozwala również na podklasę lub superklasie okna.  
   
--   [Cdialogimpl —](../atl/reference/cdialogimpl-class.md) implementuje okno dialogowe.  
+-   [CDialogImpl](../atl/reference/cdialogimpl-class.md) implementuje okno dialogowe.  
   
--   [CAxDialogImpl](../atl/reference/caxdialogimpl-class.md) implementuje okno dialogowe (modalne i niemodalne) obsługującego formantów ActiveX.  
+-   [CAxDialogImpl](../atl/reference/caxdialogimpl-class.md) implementuje okno dialogowe (modalnym lub niemodalnym), który obsługuje formanty ActiveX.  
   
--   [CSimpleDialog](../atl/reference/csimpledialog-class.md) implementuje okno dialogowe (modalne i niemodalne) z podstawowymi funkcjami.  
+-   [CSimpleDialog](../atl/reference/csimpledialog-class.md) implementuje okno dialogowe (modalnym lub niemodalnym) z podstawowymi funkcjami.  
   
--   [CAxWindow](../atl/reference/caxwindow-class.md) manipuluje okna obsługującego formantu ActiveX.  
+-   [CAxWindow](../atl/reference/caxwindow-class.md) manipuluje okno które obsługuje formant ActiveX.  
   
--   [CAxWindow2T](../atl/reference/caxwindow2t-class.md) udostępnia metody do manipulowania okna, które obsługuje formantu ActiveX ale ma także obsługa hostingu licencjonowane formanty ActiveX.  
+-   [CAxWindow2T](../atl/reference/caxwindow2t-class.md) zapewnia metody do manipulowania okno które obsługuje formant ActiveX i ma również obsługę hostowania licencjonowane formanty ActiveX.  
   
--   [CContainedWindowT](../atl/reference/ccontainedwindowt-class.md) implementuje okna zawarty w innym obiekcie.  
+-   [CContainedWindowT](../atl/reference/ccontainedwindowt-class.md) implementuje okno znajdujących się w innym obiekcie.  
   
--   [CWndClassInfo](../atl/reference/cwndclassinfo-class.md) zarządza informacjami nową klasę okna.  
+-   [CWndClassInfo](../atl/reference/cwndclassinfo-class.md) zarządza informacjami nowe klasy okna.  
   
--   [CDynamicChain](../atl/reference/cdynamicchain-class.md) obsługuje dynamiczne tworzenie łańcuchów mapy komunikatów.  
+-   [CDynamicChain](../atl/reference/cdynamicchain-class.md) obsługuje dynamiczne łańcuch mapy wiadomości.  
   
--   [CMessageMap](../atl/reference/cmessagemap-class.md) umożliwia mapuje obiektu do udostępnienia jej wiadomości do innych obiektów.  
+-   [CMessageMap](../atl/reference/cmessagemap-class.md) umożliwia obiektu do udostępnienia komunikat mapuje do innych obiektów.  
   
--   [CWinTraits](../atl/reference/cwintraits-class.md) zapewnia prostą metodę z standaryzacji cechy obiekt ATL okna.  
+-   [CWinTraits](../atl/reference/cwintraits-class.md) zapewnia prostą metodę standaryzacji cech okna obiektu ATL.  
   
--   [CWinTraitsOR](../atl/reference/cwintraitsor-class.md) zawiera wartości domyślne style okna i rozszerzone style używane można utworzyć okna. Te wartości są dodawane przy użyciu operatora logicznego OR, wartości podane podczas tworzenia okna.  
+-   [CWinTraitsOR](../atl/reference/cwintraitsor-class.md) zawiera wartości domyślne style okna ramowego i rozszerzone style używane można utworzyć okna. Te wartości są dodawane przy użyciu — operator logiczny OR wartości podane podczas tworzenia okna.  
   
 ## <a name="related-articles"></a>Powiązane artykuły  
  [Klasy okien ATL](../atl/atl-window-classes.md)  
@@ -61,7 +61,7 @@ Następujące klasy zapewniają obsługę dla systemu windows:
  [ALT — samouczek](../atl/active-template-library-atl-tutorial.md)  
   
 ## <a name="see-also"></a>Zobacz też  
- [Przegląd klas](../atl/atl-class-overview.md)   
- [Makra mapy wiadomości](../atl/reference/message-map-macros-atl.md)   
+ [Klasa — Przegląd](../atl/atl-class-overview.md)   
+ [Makra mapy komunikatów](../atl/reference/message-map-macros-atl.md)   
  [Makra klasy okna](../atl/reference/window-class-macros.md)
 

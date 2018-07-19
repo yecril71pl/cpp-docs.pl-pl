@@ -17,16 +17,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1fbc0003db72d6a72e31a7d79de786476c946188
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 350fd6007ab6b89064ed6d0a7070a21e57427018
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33845417"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38956325"
 ---
 # <a name="isconvertible-class"></a>is_convertible — Klasa
 
-Testy, jeśli jeden typ jest możliwe do przekonwertowania na inny.
+Sprawdza, czy jeden typ jest konwertowany na inny.
 
 ## <a name="syntax"></a>Składnia
 
@@ -37,13 +37,13 @@ struct is_convertible;
 
 ### <a name="parameters"></a>Parametry
 
-`From` Typ do przekonwertowania z.
+*Z* na typ docelowy konwersji z.
 
-`Ty` Typ docelowy konwersji.
+*Ty* typ docelowy konwersji.
 
 ## <a name="remarks"></a>Uwagi
 
-Wystąpienie typu predykatu posiada wartość true Jeśli wyrażenie `To to = from;`, gdzie `from` jest obiektem typu `From`, jest poprawnie sformułowany.
+Wystąpienie typu predykatu ma wartość true, jeśli wyrażenie `To to = from;`, gdzie `from` jest obiektem typu `From`, jest poprawnie sformułowany.
 
 ## <a name="example"></a>Przykład
 
@@ -82,7 +82,7 @@ is_convertible<char, int> == true
 
 **Nagłówek:** \<type_traits >
 
-**Namespace:** Standard
+**Namespace:** standardowe
 
 ## <a name="see-also"></a>Zobacz także
 

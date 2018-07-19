@@ -26,16 +26,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ce8b4fde6668fe7901ecf75c153765302c6d770e
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 974cee757708b9f7b1e48ea3bec3c4af98ced558
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33854801"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38957658"
 ---
 # <a name="maxvariablesize-class"></a>max_variable_size — Klasa
 
-W tym artykule opisano [maksymalnej liczby klasy](../standard-library/allocators-header.md) obiekt, który ogranicza [elementu freelist](../standard-library/freelist-class.md) obiektu maksymalną długość, który jest około proporcjonalny do liczby przydzielonych bloków pamięci.
+W tym artykule opisano [maksymalnej liczby klas](../standard-library/allocators-header.md) obiekt, który ogranicza [FreeList —](../standard-library/freelist-class.md) obiektu do maksymalnej długości, który jest około proporcjonalny do liczby przydzielonych bloków pamięci.
 
 ## <a name="syntax"></a>Składnia
 
@@ -51,23 +51,23 @@ class max_variable_size
 
 ### <a name="member-functions"></a>Funkcje Członkowskie
 
-|Funkcja członkowska|Opis|
+|Funkcja elementu członkowskiego|Opis|
 |-|-|
-|[Przydzielone](#allocated)|Zwiększa liczbę bloków alokacji pamięci.|
-|[Cofnięcie przydziału](#deallocated)|Zmniejsza liczbę przydzielonych bloków pamięci.|
-|[full](#full)|Zwraca wartość, która określa, czy należy dodać więcej bloków pamięci do wolnego listy.|
-|[Wydane](#released)|Zmniejsza liczbę pamięci blokuje na liście wolne.|
-|[zapisane](#saved)|Zwiększa liczbę bloków pamięci na liście wolne.|
+|[przydzielona](#allocated)|Zwiększa liczbę bloków ilość przydzielonej pamięci.|
+|[Cofnięto alokację](#deallocated)|Dekrementuje liczbę przydzielonych bloków pamięci.|
+|[full](#full)|Zwraca wartość określającą, czy więcej bloków pamięci powinna być dodana do listy bezpłatne.|
+|[Wydana](#released)|Zmniejsza liczbę pamięci blokuje się na liście bezpłatne.|
+|[zapisano](#saved)|Zwiększa liczbę bloków pamięci na liście bezpłatne.|
 
 ## <a name="requirements"></a>Wymagania
 
-**Nagłówek:** \<allocators — >
+**Nagłówek:** \<buforów >
 
-**Namespace:** stdext —
+**Namespace:** stdext
 
 ## <a name="allocated"></a>  max_variable_size::allocated
 
-Zwiększa liczbę bloków alokacji pamięci.
+Zwiększa liczbę bloków ilość przydzielonej pamięci.
 
 ```cpp
 void allocated(std::size_t _Nx = 1);
@@ -77,15 +77,15 @@ void allocated(std::size_t _Nx = 1);
 
 |Parametr|Opis|
 |---------------|-----------------|
-|`_Nx`|Wartość przyrostu.|
+|*_Nx*|Wartość przyrostu.|
 
 ### <a name="remarks"></a>Uwagi
 
-Ta funkcja członkowska dodaje `_Nx` przechowywanej wartości `_Nallocs`. Ta funkcja elementu członkowskiego jest wywoływana po każdym pomyślnym wywołaniem przez `cache_freelist::allocate` operator `new`. Argument `_Nx` jest to liczba bloków pamięci we fragmencie przydzielone przez operatora `new`.
+Ta funkcja elementu członkowskiego dodaje *_Nx* do wartości przechowywanej `_Nallocs`. Ta funkcja członkowska jest wywoływana po każdym pomyślnym wywołaniem przez `cache_freelist::allocate` operatora **nowe**. Argument *_Nx* jest to liczba bloków pamięci we fragmencie przydzielonej przez operator **nowe**.
 
 ## <a name="deallocated"></a>  max_variable_size::deallocated
 
-Zmniejsza liczbę przydzielonych bloków pamięci.
+Dekrementuje liczbę przydzielonych bloków pamięci.
 
 ```cpp
 void deallocated(std::size_t _Nx = 1);
@@ -95,15 +95,15 @@ void deallocated(std::size_t _Nx = 1);
 
 |Parametr|Opis|
 |---------------|-----------------|
-|`_Nx`|Wartość przyrostu.|
+|*_Nx*|Wartość przyrostu.|
 
 ### <a name="remarks"></a>Uwagi
 
-Funkcja członkowska odejmuje `_Nx` z wartością przechowywaną `_Nallocs`. Ta funkcja elementu członkowskiego jest wywoływana po każdym wywołania `cache_freelist::deallocate` operator `delete`. Argument `_Nx` jest to liczba bloków pamięci we fragmencie alokację przez operatora `delete`.
+Funkcja elementu członkowskiego odejmuje *_Nx* z wartości przechowywanej `_Nallocs`. Ta funkcja członkowska jest wywoływana po każdym wywołaniu przez `cache_freelist::deallocate` operatora **Usuń**. Argument *_Nx* jest to liczba bloków pamięci we fragmencie cofnięta przez operator **Usuń**.
 
 ## <a name="full"></a>  max_variable_size::Full
 
-Zwraca wartość, która określa, czy należy dodać więcej bloków pamięci do wolnego listy.
+Zwraca wartość określającą, czy więcej bloków pamięci powinna być dodana do listy bezpłatne.
 
 ```cpp
 bool full();
@@ -111,11 +111,11 @@ bool full();
 
 ### <a name="return-value"></a>Wartość zwracana
 
-`true` Jeśli `_Nallocs / 16 + 16 <= _Nblocks`.
+**wartość true,** Jeśli `_Nallocs / 16 + 16 <= _Nblocks`.
 
 ### <a name="remarks"></a>Uwagi
 
-Ta funkcja członkowska jest wywoływana przez `cache_freelist::deallocate`. Jeśli wywołanie zwraca `true`, `deallocate` umieszcza blok pamięci na liście wolnego; Jeśli zwraca wartość false, `deallocate` operator wywołania `delete` można cofnąć alokacji bloku.
+Ta funkcja członkowska jest wywoływana przez `cache_freelist::deallocate`. Jeśli to wywołanie zwraca **true**, `deallocate` umieszcza blok pamięci na liście bezpłatne; Jeśli zostanie zwrócona wartość false, `deallocate` operatora wywołania **Usuń** można cofnąć alokacji bloku.
 
 ## <a name="max_variable_size"></a>  max_variable_size::max_variable_size
 
@@ -127,11 +127,11 @@ max_variable_size();
 
 ### <a name="remarks"></a>Uwagi
 
-Konstruktor inicjuje przechowywane wartości `_Nblocks` i `_Nallocs` od zera.
+Konstruktor inicjuje przechowywane wartości `_Nblocks` i `_Nallocs` do zera.
 
 ## <a name="released"></a>  max_variable_size::released
 
-Zmniejsza liczbę pamięci blokuje na liście wolne.
+Zmniejsza liczbę pamięci blokuje się na liście bezpłatne.
 
 ```cpp
 void released();
@@ -139,11 +139,11 @@ void released();
 
 ### <a name="remarks"></a>Uwagi
 
-Ten element członkowski funkcji zmniejsza przechowywana wartość `_Nblocks`. `released` Funkcji członkowskiej klasy bieżący maksymalny jest wywoływana przez `cache_freelist::allocate` po każdej zmianie Usuwa blok pamięci z wolnego listy.
+Ten element członkowski funkcji Dekrementuje przechowywaną wartość `_Nblocks`. `released` Funkcji składowej klasy bieżący maksymalny jest wywoływana przez `cache_freelist::allocate` zawsze, gdy usunie blok pamięci z bezpłatnych listy.
 
 ## <a name="saved"></a>  max_variable_size::Saved
 
-Zwiększa liczbę bloków pamięci na liście wolne.
+Zwiększa liczbę bloków pamięci na liście bezpłatne.
 
 ```cpp
 void saved();
@@ -151,7 +151,7 @@ void saved();
 
 ### <a name="remarks"></a>Uwagi
 
-Ta funkcja elementu członkowskiego zwiększa przechowywana wartość `_Nblocks`. Ta funkcja członkowska jest wywoływana przez `cache_freelist::deallocate` zawsze, gdy blok pamięci są umieszczane na liście wolne.
+Ta funkcja elementu członkowskiego zwiększa przechowywaną wartość `_Nblocks`. Ta funkcja członkowska jest wywoływana przez `cache_freelist::deallocate` zawsze umieszcza blok pamięci na liście bezpłatne.
 
 ## <a name="see-also"></a>Zobacz także
 

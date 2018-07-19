@@ -26,16 +26,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3ccf17eb39d71d444db9154fb06991be42c34a70
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: f6bd4a7827ec5223297f3ec3195724b62d4dc72c
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33857379"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38955309"
 ---
 # <a name="subtractwithcarryengine-class"></a>subtract_with_carry_engine — Klasa
 
-Generuje losowe sekwencji przez algorytm subtract z przenoszące (połączenie z otuliną Fibonacci).
+Generuje losową sekwencję przez algorytm odejmowania z przeniesienia (opóźnioną kopię Fibonacci).
 
 ## <a name="syntax"></a>Składnia
 
@@ -46,13 +46,17 @@ class subtract_with_carry_engine;
 
 ### <a name="parameters"></a>Parametry
 
-`UIntType` Typ wyniku liczbę całkowitą bez znaku. Dla typów możliwych [ \<losowe >](../standard-library/random.md).
+*UIntType*  
+ Typ wyniku liczby całkowitej bez znaku. Aby możliwych typów, zobacz [ \<losowy >](../standard-library/random.md).
 
-`W` **Word rozmiar**. Rozmiar każdego wyrazu w bitach sekwencji stanu. **Warunek wstępny**: `0 < W ≤ numeric_limits<UIntType>::digits`
+*W*  
+ **Word rozmiar**. Rozmiar każdego wyrazu w bitach sekwencji stanu. **Warunek wstępny**: `0 < W ≤ numeric_limits<UIntType>::digits`
 
-`S` **Krótkie opóźnienie**. Liczba wartości będące liczbami całkowitymi. **Warunek wstępny**: `0 < S < R`
+*S*  
+ **Krótkie opóźnienie**. Liczba wartości całkowitych. **Warunek wstępny**: `0 < S < R`
 
-`R` **Long lag**. Określa cyklu w serii wygenerowany.
+*R*  
+ **Opóźnione w długo**. Określa cyklu w serii wygenerowany.
 
 ## <a name="members"></a>Elementy członkowskie
 
@@ -60,34 +64,34 @@ class subtract_with_carry_engine;
 |-|-|-|
 |`subtract_with_carry_engine::subtract_with_carry_engine`|`subtract_with_carry_engine::min`|`subtract_with_carry_engine::discard`|
 |`subtract_with_carry_engine::operator()`|`subtract_with_carry_engine::max`|`subtract_with_carry_engine::seed`|
-|`default_seed` jest elementem członkowskim stałej, zdefiniowanej jako `19780503u`, używana jako domyślna wartość parametru `subtract_with_carry_engine::seed` i Konstruktor pojedynczej wartości.|||
+|`default_seed` jest elementem członkowskim stałą, definiowany jako `19780503u`, który jest używany jako wartość domyślna parametru `subtract_with_carry_engine::seed` i konstruktora pojedynczej wartości.|||
 
-Aby uzyskać więcej informacji na temat aparatu członków zobacz [ \<losowe >](../standard-library/random.md).
+Aby uzyskać więcej informacji na temat elementów członkowskich aparatu zobacz [ \<losowy >](../standard-library/random.md).
 
 ## <a name="remarks"></a>Uwagi
 
-`substract_with_carry_engine` Klasy szablonu jest ulepszeniem [linear_congruential_engine —](../standard-library/linear-congruential-engine-class.md). Nie te aparatów będzie tak szybko, lub za pomocą jako wysokiej jakości wyniki w postaci [mersenne_twister_engine —](../standard-library/mersenne-twister-engine-class.md).
+`substract_with_carry_engine` Klasy szablonu jest ulepszeniem [linear_congruential_engine —](../standard-library/linear-congruential-engine-class.md). Żadna tych aparatów jest tak szybko, lub jako wysokiej jakości wyniki w postaci [mersenne_twister_engine —](../standard-library/mersenne-twister-engine-class.md).
 
-Ten aparat tworzy wartości określonych przez użytkownika bez znaku typu całkowitego przy użyciu relacji cyklu ( *okres*) `x(i) = (x(i - R) - x(i - S) - cy(i - 1)) mod M`, gdzie `cy(i)` ma wartość `1` Jeśli `x(i - S) - x(i - R) - cy(i - 1) < 0`, w przeciwnym razie `0`, i `M` ma wartość `2` <sup>W</sup>. Stan aparatu jest przeniesienie wskaźnik plus `R` wartości. Te wartości składają się z ostatniego `R` wartości zwracane w przypadku `operator()` została wywołana w co najmniej `R` czas, w przeciwnym razie `N` wartości, które zostały zwrócone oraz za ostatni `R - N` wartości inicjatora.
+Ten aparat tworzy wartości określonych przez użytkownika typ bez znaku typu całkowitego przy użyciu relacji cyklu ( *okres*) `x(i) = (x(i - R) - x(i - S) - cy(i - 1)) mod M`, gdzie `cy(i)` ma wartość `1` Jeśli `x(i - S) - x(i - R) - cy(i - 1) < 0`, w przeciwnym razie `0`, i `M` ma wartość `2` <sup>W</sup>. Stan aparatu to przeniesienie wskaźnika plus *R* wartości. Wartości te składają się z ostatnich *R* wartości zwracane, gdy `operator()` została wywołana co najmniej *R* czas, w przeciwnym razie `N` wartości, które zostały zwrócone, a ostatni `R - N` wartości inicjatora.
 
-Argument szablonu `UIntType` musi być wystarczająco duży, aby pomieścić wartości do `M - 1`.
+Argument szablonu `UIntType` musi być wystarczająco duży, aby przechowywać wartości do `M - 1`.
 
-Mimo że można bezpośrednio utworzyć generator z tym aparatem, można także można użyć jednego z tych wstępnie zdefiniowanych definicje typów:
+Chociaż można utworzyć generatora z tego aparatu bezpośrednio, umożliwia także jeden z tych wstępnie zdefiniowanych definicje typów:
 
-`ranlux24_base`: Użyty jako podstawa dla `ranlux24`.
+`ranlux24_base`: Używany jako podstawa `ranlux24`.
 `typedef subtract_with_carry_engine<unsigned int, 24, 10, 24> ranlux24_base;`
 
-`ranlux48_base`: Użyty jako podstawa dla `ranlux48`.
+`ranlux48_base`: Używany jako podstawa `ranlux48`.
 `typedef subtract_with_carry_engine<unsigned long long, 48, 5, 12> ranlux48_base;`
 
-Aby uzyskać szczegółowe informacje na temat subract z algorytmem aparat przenoszące, zobacz artykuł Wikipedia [generator połączenie z otuliną Fibonacci](http://go.microsoft.com/fwlink/p/?linkid=402445).
+Aby uzyskać szczegółowe informacje na temat subract z algorytmem aparatem przeniesienia, zobacz artykułu w Wikipedii [generator opóźnioną kopię Fibonacci](http://go.microsoft.com/fwlink/p/?linkid=402445).
 
 ## <a name="requirements"></a>Wymagania
 
-**Nagłówek:** \<losowe >
+**Nagłówek:** \<losowy >
 
-**Namespace:** Standard
+**Namespace:** standardowe
 
 ## <a name="see-also"></a>Zobacz także
 
-[\<losowe >](../standard-library/random.md)<br/>
+[\<losowy >](../standard-library/random.md)<br/>

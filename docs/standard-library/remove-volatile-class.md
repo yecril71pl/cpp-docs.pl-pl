@@ -17,12 +17,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d1cd2b4882c4b5e62a2f6574b3011b74747e412b
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: e9a46294156c1f7beffecb997569221a388b3394
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33858503"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38957314"
 ---
 # <a name="removevolatile-class"></a>remove_volatile — Klasa
 
@@ -40,11 +40,11 @@ using remove_volatile_t = typename remove_volatile<T>::type;
 
 ### <a name="parameters"></a>Parametry
 
-`T` Typ do zmodyfikowania.
+*T* typ do modyfikacji.
 
 ## <a name="remarks"></a>Uwagi
 
-Wystąpienie `remove_volatile<T>` przechowuje zmodyfikowane — typ danych `T1` podczas `T` ma postać `volatile T1`, w przeciwnym razie `T`.
+Wystąpienie `remove_volatile<T>` przechowuje zmodyfikowany typ, który jest `T1` podczas *T* ma postać `volatile T1`, w przeciwnym razie *T*.
 
 ## <a name="example"></a>Przykład
 
@@ -72,7 +72,7 @@ remove_volatile_t<volatile int> == int
 
 **Nagłówek:** \<type_traits >
 
-**Namespace:** Standard
+**Namespace:** standardowe
 
 ## <a name="see-also"></a>Zobacz także
 

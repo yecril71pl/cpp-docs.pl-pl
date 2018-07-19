@@ -17,16 +17,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 161551747455bae1347e5059ec3afffd2649294c
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: e5f7a4d5ad1d7991e69a5092333974ec3a8ade07
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33845300"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38956625"
 ---
 # <a name="isarithmetic-class"></a>is_arithmetic — Klasa
 
-Testy, jeśli typ jest arytmetyczne.
+Sprawdza, czy typ jest arytmetyczne.
 
 ## <a name="syntax"></a>Składnia
 
@@ -37,11 +37,11 @@ struct is_arithmetic;
 
 ### <a name="parameters"></a>Parametry
 
-`Ty` Typ do zapytania.
+*Ty* typ do zapytania.
 
 ## <a name="remarks"></a>Uwagi
 
-Wystąpienie typu predykatu posiada wartość true Jeśli typ `Ty` jest typ arytmetyczny, czyli typu całkowitego lub liczbą zmiennoprzecinkową punktu lub `cv-qualified` formularza jednego z nich, w przeciwnym razie posiada wartość false.
+Wystąpienie typu predykatu ma wartość true, jeśli typ *Ty* jest typ arytmetyczny, czyli typu całkowitoliczbowego lub zmiennoprzecinkową punktu lub `cv-qualified` postaci jednego z tych funkcji, w przeciwnym razie przechowuje wartość false.
 
 ## <a name="example"></a>Przykład
 
@@ -79,7 +79,7 @@ is_arithmetic<float> == true
 
 **Nagłówek:** \<type_traits >
 
-**Namespace:** Standard
+**Namespace:** standardowe
 
 ## <a name="see-also"></a>Zobacz także
 

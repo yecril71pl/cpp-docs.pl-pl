@@ -1,5 +1,5 @@
 ---
-title: MSG Structure1 | Dokumentacja firmy Microsoft
+title: Struktura1 MSG | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,15 +16,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 41dbbcdd3404705a9ac7c6c7969a9ebeeb0238f8
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 5fe629c2f279b6b258f4824229490f7b72b4ce4d
+ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33372260"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37338815"
 ---
-# <a name="msg-structure1"></a>MSG Structure1
-`MSG` Struktura zawiera informacje dotyczące komunikatu z kolejki komunikatów dla wątku.  
+# <a name="msg-structure1"></a>Struktura1 MSG
+`MSG` Struktura zawiera informacje o wiadomości z kolejki komunikatów dla wątku.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -40,23 +40,23 @@ typedef struct tagMSG {     // msg
 ```  
   
 #### <a name="parameters"></a>Parametry  
- *Właściwość hwnd*  
- Określa okno, którego procedurę okna odbiera wiadomości.  
+ *hwnd*  
+ Identyfikuje okna, w których procedurę okna odbiera komunikat.  
   
- `message`  
+ *komunikat*  
  Określa numer komunikatu.  
   
- `wParam`  
- Określa dodatkowe informacje na temat wiadomości. Dokładne znaczenie zależy od wartości **komunikat** elementu członkowskiego.  
+ *wParam*  
+ Określa dodatkowe informacje na temat wiadomości. Dokładne znaczenie zależy od wartości `message` elementu członkowskiego.  
   
- `lParam`  
- Określa dodatkowe informacje na temat wiadomości. Dokładne znaczenie zależy od wartości **komunikat** elementu członkowskiego.  
+ *lParam*  
+ Określa dodatkowe informacje na temat wiadomości. Dokładne znaczenie zależy od wartości `message` elementu członkowskiego.  
   
- `time`  
- Określa czas, w którym była umieszczona wiadomości.  
+ *czas*  
+ Określa czas, w którym opublikowano wiadomość.  
   
- `pt`  
- Określa pozycji kursora, we współrzędnych ekranu, gdy wiadomość była umieszczona.  
+ *(czas pacyficzny)*  
+ Określa położenie kursora, we współrzędnych ekranu, gdy opublikowano wiadomość.  
   
 ## <a name="requirements"></a>Wymagania  
  **Nagłówek:** winuser.h  

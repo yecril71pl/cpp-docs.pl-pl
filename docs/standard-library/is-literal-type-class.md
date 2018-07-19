@@ -1,5 +1,5 @@
 ---
-title: Klasa is_literal_type | Dokumentacja firmy Microsoft
+title: is_literal_type, klasa | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,16 +17,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4b123144643fd50b019853d21e4140ba2d931f7c
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: a14b2fe5a14eaf264377a1f818227d73e134b030
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33844988"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38957970"
 ---
-# <a name="isliteraltype-class"></a>is_literal_type — klasa
+# <a name="isliteraltype-class"></a>is_literal_type, klasa
 
-Sprawdza, czy typ mogą być używane jako `constexpr` zmiennej lub skonstruowany, używany przez lub zwrócony z `constexpr` funkcji.
+Sprawdza, czy typ mogą być używane jako `constexpr` zmiennej lub skonstruowany, używane przez lub zwrócone w wyniku `constexpr` funkcji.
 
 ## <a name="syntax"></a>Składnia
 
@@ -37,17 +37,17 @@ struct is_literal_type;
 
 ### <a name="parameters"></a>Parametry
 
-`T` Typ do zapytania.
+*T* typ do zapytania.
 
 ## <a name="remarks"></a>Uwagi
 
-Wystąpienie typu predykatu posiada wartość true Jeśli typ `T` jest *literalne*, w przeciwnym razie ma wartość false. Jest typem literału, albo `void`, typem skalarnym, typu odwołania, tablicy typu literału lub typie klasy literałów. Typie klasy literałów jest typem klasy, który ma destruktor trivial, jest łączny typu lub ma co najmniej jeden z systemem innym niż z move bez kopiowania `constexpr` Konstruktor i wszystkie jej klasy podstawowe i elementy członkowskie danych niestatyczna są trwałej typy literału. Typ literału zawsze jest typem literału, koncepcja literału typu obejmuje wszystkie elementy, które kompilator może służyć do oceny jako `constexpr` w czasie kompilacji.
+Wystąpienie typu predykatu ma wartość true, jeśli typ *T* jest *literalne*, w przeciwnym razie przechowuje wartość false. Jest typem literału **void**, typowi skalarnemu, typ odwołania, tablicy literału typu lub typu klasy literału. Typ literału klasy jest typu klasy, która ma destruktor proste, jest albo odpowiedni typ agregacji lub ma co najmniej jednego innego niż z przeniesienia / kopia `constexpr` Konstruktor i wszystkie jej klasy bazowe i elementy członkowskie danych niestatycznych są typy literałów trwałej. Chociaż typ literału jest zawsze typem literału, koncepcji typem literału obejmuje wszystkie elementy, które kompilator może być interpretowane jako `constexpr` w czasie kompilacji.
 
 ## <a name="requirements"></a>Wymagania
 
 **Nagłówek:** \<type_traits >
 
-**Namespace:** Standard
+**Namespace:** standardowe
 
 ## <a name="see-also"></a>Zobacz także
 

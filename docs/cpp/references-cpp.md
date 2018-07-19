@@ -19,73 +19,74 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fe60a849cb1b14420ab83af77362ddda433884a9
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 174ab622b177766a33dd55f6b3c78ac38c26ded1
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38956596"
 ---
 # <a name="references-c"></a>Odwołania (C++)
-Odwołanie, takie jak wskaźnik, przechowuje adres obiektu, który znajduje się w innym miejscu w pamięci. W przeciwieństwie do wskaźnika, po jego inicjowania nie można odwołać się do odwoływać się do innego obiektu lub wartość null. Istnieją dwa rodzaje odwołań: odwołania l-wartości, których dotyczą odwołania o nazwie zmiennej i r-wartości, które odnoszą się do [tymczasowy obiekt](../cpp/temporary-objects.md). & — Operator oznacza, że odwołania do wartości i & & — operator oznacza, że odwołanie do r-wartości lub uniwersalnych odwołanie (r-wartości lub l-wartością) w zależności od kontekstu.  
+Odwołania, jak wskaźnik, przechowuje adres obiektu, który znajduje się w innym miejscu w pamięci. W przeciwieństwie do wskaźnika, odwołania po jego zainicjowaniu nie można wprowadzać odnoszą się do innego obiektu lub ustawiona na wartość null. Istnieją dwa rodzaje odwołań: odwołania lvalue, które odnoszą się do nazwanej odwołania zmiennej i r-wartości, które odnoszą się do [tymczasowy obiekt](../cpp/temporary-objects.md). & — Operator oznacza odwołanie lvalue i & & — operator oznacza odwołanie rvalue lub odwołaniem universal (rvalue lub l-wartości) w zależności od kontekstu.  
   
- Odwołania mogą być deklarowane przy użyciu następującej składni:  
+ Odwołania może być zadeklarowana przy użyciu następującej składni:  
   
 ```  
 [storage-class-specifiers] [cv-qualifiers] type-specifiers   
 [ms-modifier] declarator [= expression];  
 ```  
   
- Mogą być używane wszystkie nieprawidłowy deklarator określenie odwołania. Chyba, że odwołanie jest odwołanie do funkcji lub dotyczy następującej składni uproszczoną typu tablicy:  
+ Wszystkie prawidłowe deklaratora, określając odwołanie mogą być używane. Chyba, że odwołanie jest odwołanie do typu funkcji lub tablicy, mają zastosowanie następujące uproszczoną składnię:  
   
 ```  
 [storage-class-specifiers] [cv-qualifiers] type-specifiers [& or &&]   
 [cv-qualifiers] identifier [= expression];  
 ```  
   
- Odwołania są zadeklarowane za pomocą następującej kolejności:  
+ Odwołania są zadeklarowane za pomocą następującej sekwencji:  
   
  1. Specyfikatory deklaracji:  
   
--   Specyfikator klasy magazynu opcjonalne.  
+-   Specyfikator klasy magazynowania opcjonalne.  
   
--   Opcjonalne **const** i/lub `volatile` kwalifikatorów.  
+-   Opcjonalnie **const** i/lub **volatile** kwalifikatorów.  
   
 -   Specyfikator typu: Nazwa typu.  
   
--   2. Deklarator:  
+-   2. Specyfikator:  
   
--   Opcjonalne Microsoft określonych modyfikatora. Aby uzyskać więcej informacji, zobacz [Modyfikatory specyficzne dla firmy Microsoft](../cpp/microsoft-specific-modifiers.md).  
+-   Opcjonalny modyfikator właściwy dla Microsoft. Aby uzyskać więcej informacji, zobacz [Modyfikatory specyficzne dla Microsoft](../cpp/microsoft-specific-modifiers.md).  
   
 -   & — Operator lub & & — operator.  
   
--   Opcjonalne **const** i/lub `volatile` kwalifikatorów.  
+-   Opcjonalnie **const** i/lub **volatile** qualifers.  
   
 -   Identyfikator.  
   
- 3. Opcjonalne inicjatora.  
+ 3. Opcjonalny inicjator.  
   
- Bardziej złożone formularze deklarator wskaźniki do tablic i funkcje mają też zastosowanie do odwołania do tablic i funkcji, zobacz [wskaźniki](../cpp/pointers-cpp.md) i [deklaratorów](http://msdn.microsoft.com/en-us/8a7b9b51-92bd-4ac0-b3fe-0c4abe771838).  
+ Formularze deklaratorów bardziej złożonych wskaźniki do tablic i funkcji mają zastosowanie również do odwołań do tablic i funkcji, zobacz [wskaźniki](../cpp/pointers-cpp.md).  
   
- Wiele deklaratorów i inicjatory może pojawić się na liście rozdzielanej przecinkami po specyfikator jednej deklaracji. Na przykład:  
+ Wiele deklaratorów i inicjatory mogą występować w rozdzielana przecinkami lista specyfikator jednej deklaracji. Na przykład:  
   
-```  
+```cpp 
 int &i;   
 int &i, &j;   
 ```  
   
  Odwołania, wskaźniki i obiekty mogą być zadeklarowane jednocześnie:  
   
-```  
+```cpp 
 int &ref, *ptr, k;   
 ```  
   
- Odwołanie przechowuje adres obiektu, ale składniowo zachowuje się jak obiektu.  
+ Odwołanie przechowuje adres obiektu, ale składniowo zachowuje się jak obiekt.  
   
- W programie następujące, zwróć uwagę, że nazwa obiektu, `Today`i odwołania do obiektu, `TodayRef`, można używać tak samo w programach:  
+ W następujący program, zwróć uwagę, że nazwa obiektu, `Today`i odwołania do obiektu, `TodayRef`, mogą być używane tak samo w programach:  
   
 ## <a name="example"></a>Przykład  
   
-```  
+```cpp 
 // references.cpp  
 #include <stdio.h>  
 struct S {  

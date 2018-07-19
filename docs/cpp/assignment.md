@@ -15,24 +15,25 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 66fd08215c3849bf487578b28b1824afbec14c52
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 27e78f7429c4d2a0f83ff7184460eb2ae69df129
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38960989"
 ---
 # <a name="assignment"></a>Przypisanie
-Operator przypisania (**=**) jest mówiąc ściślej, operator binarny. Jego deklaracji jest taki sam jak inne operatora binarnego, z następującymi wyjątkami:  
+Operator przypisania (**=**) jest ściśle rzecz ujmując, operatora binarnego. Jego deklaracji jest taka sama jak innych operatora binarnego, z następującymi wyjątkami:  
   
--   Musi być niestatyczną funkcją członkowską. Nie `operator=` mogą być deklarowane jako funkcji nieczłonkowskiej.  
+-   Musi być funkcją składową Niestatyczne. Nie **operator =** mogą być deklarowane jako funkcja niebędących.  
   
--   Nie jest dziedziczone przez klasy pochodnej.  
+-   Nie jest dziedziczone przez klasy pochodne.  
   
--   Domyślnie `operator=` funkcji mogą być generowane przez kompilator dla typu klasy, jeśli żaden nie istnieje. (Aby uzyskać więcej informacji na temat domyślne `operator=` funkcji, zobacz [Memberwise przypisania i inicjowania](http://msdn.microsoft.com/en-us/94048213-8b49-4416-8069-b1b7a6f271f9).)  
+-   Domyślnie **operator =** funkcji mogą być generowane przez kompilator dla typu klasy, jeśli żaden nie istnieje.  
   
- Poniższy przykład przedstawia sposób deklarować operatora przypisania:  
+ Poniższy przykład ilustruje sposób deklarowania operatora przypisania:  
   
-```  
+```cpp 
 // assignment.cpp  
 class Point  
 {  
@@ -55,9 +56,9 @@ int main()
 }  
 ```  
   
- Należy pamiętać, że podany argumentu z prawej strony wyrażenia. Operator zwraca obiekt, aby zachować zachowanie operatora przypisania, która zwraca wartość po lewej stronie, po zakończeniu przydziału. Umożliwia to pisanie instrukcji, takich jak:  
+ Należy pamiętać, że podany argument po prawej stronie wyrażenia. Operator zwraca obiekt, aby zachować zachowanie operator przypisania zwraca wartość po lewej stronie, po zakończeniu przydziału. Dzięki temu można pisać instrukcje, takich jak:  
   
-```  
+```cpp 
 pt1 = pt2 = pt3;  
 ```  
   

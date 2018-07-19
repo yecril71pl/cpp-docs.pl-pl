@@ -30,16 +30,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b0512e2794e5ac493a997b5d4d885931d9a9fc14
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: e7f52e0e62a831a77a7a00dc50aeecac45cd0fe9
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33862341"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38960557"
 ---
 # <a name="strstreambuf-class"></a>strstreambuf — Klasa
 
-W tym artykule opisano buforu strumienia, który kontroluje przesyłania elementów do i z sekwencję elementy przechowywane w `char` tablicy obiektów.
+W tym artykule opisano buforu strumieni, który kontroluje przekazywanie elementów do i z sekwencji elementów przechowywanych w **char** obiektu array.
 
 ## <a name="syntax"></a>Składnia
 
@@ -49,21 +49,21 @@ class strstreambuf : public streambuf
 
 ## <a name="remarks"></a>Uwagi
 
-W zależności od sposobu konstruowania obiektu go można być przydzielone, rozszerzony i zwolniony w razie potrzeby w celu uwzględnienia zmian w sekwencji.
+W zależności od tego, jak obiekt jest konstruowany jego może można przydzielone, rozszerzać, a zwolniona zgodnie z potrzebami, aby uwzględnić zmiany w sekwencji.
 
-Obiekt klasy `strstreambuf` przechowuje kilka bity informacji o trybie jako jego `strstreambuf` tryb. Bity te wskazują czy kontrolowanej sekwencji:
+Obiekt klasy `strstreambuf` przechowuje kilka bitów informacji o trybie jako jego `strstreambuf` trybu. Te bity wskazują czy kontrolowanej sekwencji:
 
-- Została przydzielona i musi zostać zwolniony po pewnym czasie.
+- Została przydzielona i musi być zwolniona po pewnym czasie.
 
-- Jest można modyfikować.
+- To można modyfikować.
 
-- To rozszerzalna przez ponowne przydzielanie magazynu.
+- Jest rozszerzalnej ponowne przydzielanie magazynu.
 
-- Została zablokowana i dlatego musi być odblokowany przed zniszczone obiekt lub zwolniony (Jeśli przydzielone) Agencja niż obiekt.
+- Został zamrożony i dlatego musi być są przed obiekt jest niszczony lub zwolnione (jeśli jest przydzielona) przez agencję innego niż obiekt.
 
-Kontrolowanej sekwencji, który jest zablokowana nie można zmodyfikować lub extended, bez względu na stan tych bitów trybu osobnych.
+Kontrolowanej sekwencji, która jest zamrożony nie można zmodyfikować lub przedłużony, bez względu na stan tych bitów trybu osobnych.
 
-Obiekt przechowuje także wskaźniki do dwóch funkcji, które kontrolują `strstreambuf` alokacji. Jeśli są one wskaźniki o wartości null, obiekt devises własną metodę alokacji i zwalnianie magazynu w kontrolowanej sekwencji.
+Obiekt przechowuje również wskaźniki do dwóch funkcji, które kontrolują `strstreambuf` alokacji. Jeśli są one wskaźników o wartości null, obiekt devises własną metodę przydzielanie i zwalnianie pamięci masowej dla kontrolowanej sekwencji.
 
 > [!NOTE]
 > Ta klasa jest przestarzały. Należy rozważyć użycie [stringbuf](../standard-library/sstream-typedefs.md#stringbuf) lub [wstringbuf](../standard-library/sstream-typedefs.md#wstringbuf) zamiast tego.
@@ -76,26 +76,26 @@ Obiekt przechowuje także wskaźniki do dwóch funkcji, które kontrolują `strs
 
 ### <a name="member-functions"></a>Funkcje Członkowskie
 
-|Funkcja członkowska|Opis|
+|Funkcja elementu członkowskiego|Opis|
 |-|-|
-|[Blokowanie](#freeze)|Powoduje, że jest niedostępna za pośrednictwem operacji buforu strumienia buforu strumienia.|
-|[overflow](#overflow)|Chronione funkcji wirtualnej można wywołać po wstawieniu nowego znaku w buforze pełna.|
-|[pbackfail](#pbackfail)|Chroniony element członkowski wirtualnego funkcję, która próbuje zawiesić elementu z powrotem do strumienia wejściowego, a następnie dokonaj jego bieżącego elementu (wskazywana przez wskaźnik następnej).|
-|[pcount](#pcount)|Zwraca liczbę z liczbą elementów zapisywane w kontrolowanej sekwencji.|
-|[seekoff](#seekoff)|Funkcja chroniony element członkowski wirtualnego próbuje zmienić bieżącego położenia dla strumieni kontrolowane.|
-|[seekpos](#seekpos)|Funkcja chroniony element członkowski wirtualnego próbuje zmienić bieżącego położenia dla strumieni kontrolowane.|
-|[str](#str)|Wywołania [Zablokuj](#freeze), a następnie zwraca wskaźnik do początku kontrolowanej sekwencji.|
+|[blokowanie](#freeze)|Powoduje, że bufor strumienia będzie dostępny za pośrednictwem operacji buforu strumienia.|
+|[overflow](#overflow)|Chronione funkcja wirtualna, która może być wywoływana po wstawieniu do buforu pełnej nowego znaku.|
+|[pbackfail](#pbackfail)|Funkcja chronionych wirtualna elementu członkowskiego, która próbuje umieścić element z powrotem do strumienia wejściowego i przypisz ją po bieżącego elementu (wskazywany przez wskaźnik następnej).|
+|[pcount —](#pcount)|Zwraca liczbę elementów zapisywane w kontrolowanej sekwencji.|
+|[seekoff](#seekoff)|Funkcja chronionych wirtualna elementu członkowskiego, która próbuje zmienić dla strumieni kontrolowanego bieżącej pozycji.|
+|[seekpos —](#seekpos)|Funkcja chronionych wirtualna elementu członkowskiego, która próbuje zmienić dla strumieni kontrolowanego bieżącej pozycji.|
+|[str](#str)|Wywołania [freeze](#freeze), a następnie zwraca wskaźnik do początku kontrolowanej sekwencji.|
 |[underflow](#underflow)|Chroniony funkcją wirtualną można wyodrębnić bieżącego elementu ze strumienia wejściowego.|
 
 ## <a name="requirements"></a>Wymagania
 
 **Nagłówek:** \<strstream — >
 
-**Namespace:** Standard
+**Namespace:** standardowe
 
 ## <a name="freeze"></a>  strstreambuf::FREEZE
 
-Powoduje, że jest niedostępna za pośrednictwem operacji buforu strumienia buforu strumienia.
+Powoduje, że bufor strumienia będzie dostępny za pośrednictwem operacji buforu strumienia.
 
 ```cpp
 void freeze(bool _Freezeit = true);
@@ -103,16 +103,17 @@ void freeze(bool _Freezeit = true);
 
 ### <a name="parameters"></a>Parametry
 
-`_Freezeit` A `bool` wskazującą, czy ma strumień jest zablokowana.
+*_Freezeit*  
+ A **bool** wskazującą, czy chcesz, aby strumień jest zablokowana.
 
 ### <a name="remarks"></a>Uwagi
 
-Jeśli `_Freezeit` ma wartość true, funkcja zmienia zapisana `strstreambuf` tryb dokonanie kontrolowanej sekwencji zablokowane. W przeciwnym razie ułatwia kontrolowanej sekwencji nie są zablokowane.
+Jeśli *_Freezeit* ma wartość true, funkcja zmienia przechowywaną `strstreambuf` tryb się kontrolowanej sekwencji, zamrożone. W przeciwnym razie ułatwia kontrolowanej sekwencji, które nie są zablokowane.
 
 [str](#str) oznacza `freeze`.
 
 > [!NOTE]
-> Zablokowane buforu nie zostanie zwolniona podczas `strstreambuf` zniszczenia. Rozmiar buforu musi Odblokuj, zanim zostanie zwolniona w celu uniknięcia wycieku pamięci.
+> Zamrożone buforu nie zostanie zwolniona podczas `strstreambuf` zniszczenia. Rozmiar buforu musi Odblokuj, zanim zostanie zwolniony w celu uniknięcia wycieku pamięci.
 
 ### <a name="example"></a>Przykład
 
@@ -182,7 +183,7 @@ test1test3
 
 ## <a name="overflow"></a>  strstreambuf::Overflow
 
-Chronione funkcji wirtualnej można wywołać po wstawieniu nowego znaku w buforze pełna.
+Chronione funkcja wirtualna, która może być wywoływana po wstawieniu do buforu pełnej nowego znaku.
 
 ```cpp
 virtual int overflow(int _Meta = EOF);
@@ -190,23 +191,24 @@ virtual int overflow(int _Meta = EOF);
 
 ### <a name="parameters"></a>Parametry
 
-`_Meta` Znak do wstawienia w buforze, lub `EOF`.
+*_Meta*  
+ Znak do wstawienia do określonego bufora lub `EOF`.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Jeśli funkcja nie może się powieść, zwraca `EOF`. W przeciwnym razie, jeśli _ *Meta* == `EOF`, zwraca niektóre wartości innych niż `EOF`. W przeciwnym razie zwraca \_ *Meta*.
+Jeśli funkcja nie powiedzie się, zwraca `EOF`. W przeciwnym razie, jeśli _ *Meta* == `EOF`, zwraca niektóre wartości innych niż `EOF`. W przeciwnym razie zwraca \_ *Meta*.
 
 ### <a name="remarks"></a>Uwagi
 
-Jeśli _ *Meta* ! = `EOF`, funkcja chroniony element członkowski wirtualnego próbuje wstawić elementu ( `char`)\_ *Meta* w buforze danych wyjściowych. Go to zrobić na różne sposoby:
+Jeśli _ *Meta* ! = `EOF`, próbuje Wstaw element chronionych wirtualnej funkcji składowej ( `char`)\_ *Meta* do buforu danych wyjściowych. Jego można to zrobić na różne sposoby:
 
-- Jeśli pozycja zapisu jest dostępny, można przechowywać elementu w miejscu zapisu i zwiększyć wskaźnik następnej buforu danych wyjściowych.
+- W przypadku pozycji zapisu jest dostępny, można przechowywać element w określonej pozycji zapisu i zwiększyć wskaźnik następnej dla buforu danych wyjściowych.
 
-- Jeśli tryb przechowywanych strstreambuf — stwierdzający, że jest kontrolowanej sekwencji można modyfikować, rozszerzalne i nie jest zablokowane, funkcja można udostępnić pozycję zapisu przydzielając nowych buforu danych wyjściowych. Rozszerzanie buforu wyjściowego w ten sposób rozszerzają wszystkie skojarzone buforu wejściowego.
+- Jeśli tryb przechowywanych strstreambuf — mówi, że kontrolowanej sekwencji jest modyfikowalny, rozszerzalnej i nie zamrożone, funkcja udostępnić pozycji zapisu, przydzielając nowe dla buforu danych wyjściowych. Rozszerzanie bufora wyjściowego w ten sposób rozszerzają wszelkie skojarzone buforu wejściowego.
 
 ## <a name="pbackfail"></a>  strstreambuf::pbackfail
 
-Funkcja chronionego członka wirtualnego, który próbuje ponownie poddane elementu wejściowego strumienia, a następnie ułatwia bieżącego elementu (wskazywana przez wskaźnik następnej).
+Funkcja chronionych wirtualna elementu członkowskiego, która próbuje odłożyć element do strumienia wejściowego, a następnie sprawia, że bieżący element (wskazywany przez wskaźnik następnej).
 
 ```cpp
 virtual int pbackfail(int _Meta = EOF);
@@ -214,25 +216,26 @@ virtual int pbackfail(int _Meta = EOF);
 
 ### <a name="parameters"></a>Parametry
 
-`_Meta` Znak do wstawienia w buforze, lub `EOF`.
+*_Meta*  
+ Znak do wstawienia do określonego bufora lub `EOF`.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Jeśli funkcja nie może się powieść, zwraca `EOF`. W przeciwnym razie, jeśli _ *Meta* == `EOF`, zwraca niektóre wartości innych niż `EOF`. W przeciwnym razie zwraca \_ *Meta*.
+Jeśli funkcja nie powiedzie się, zwraca `EOF`. W przeciwnym razie, jeśli _ *Meta* == `EOF`, zwraca niektóre wartości innych niż `EOF`. W przeciwnym razie zwraca \_ *Meta*.
 
 ### <a name="remarks"></a>Uwagi
 
-Funkcja chroniony element członkowski wirtualnego próbuje ponownie poddane element buforze wejściowym, a następnie wprowadź go bieżącego elementu (wskazywana przez wskaźnik następnej).
+Funkcja chroniony element członkowski wirtualnego próbuje odłożyć element do buforu wejściowego, a następnie bieżącego elementu (wskazywany przez wskaźnik następnej).
 
-Jeśli _ *Meta* == `EOF`, elementu do usunięcia jest już w strumieniu przed bieżącego elementu. W przeciwnym razie ten element został zastąpiony przez **ch** = ( `char`)\_ *Meta*. Funkcja można odłożyć element na różne sposoby:
+Jeśli _ *Meta* == `EOF`, element do usunięcia jest skutecznie już w strumieniu przed bieżącego elementu. W przeciwnym razie ten element został zastąpiony **ch** = ( `char`)\_ *Meta*. Funkcję można odłożyć element na różne sposoby:
 
-- Jeśli pozycja putback jest dostępne, a element przechowywane porównuje równa **ch**, jego zmniejszanie wskaźnik następnej dla buforu wejściowego.
+- Jeśli pozycja putback — i element tam przechowywane w porównaniu równa `ch`, jego dekrementacja wskaźnik następnej dla buforu danych wejściowych.
 
-- Jeśli pozycja putback jest dostępne, a jeśli tryb strstreambuf — kontrolowanej sekwencji jest można modyfikować, funkcja może przechowywać **ch** w pozycji putback i dekrementacja wskaźnik następnej dla buforu wejściowego.
+- Jeśli pozycja putback — jest dostępna, a jeśli tryb strstreambuf — jest w kontrolowanej sekwencji jest modyfikowalny, funkcja może `ch` putback — pozycja i dekrementacji wskaźnik następnej dla buforu danych wejściowych.
 
 ## <a name="pcount"></a>  strstreambuf::pcount
 
-Zwraca liczbę z liczbą elementów zapisywane w kontrolowanej sekwencji.
+Zwraca liczbę elementów zapisywane w kontrolowanej sekwencji.
 
 ```cpp
 streamsize pcount() const;
@@ -240,11 +243,11 @@ streamsize pcount() const;
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Liczba elementów zapisywane w kontrolowanej sekwencji.
+Licznik liczby elementów zapisywane w kontrolowanej sekwencji.
 
 ### <a name="remarks"></a>Uwagi
 
-W szczególności jeśli [pptr](../standard-library/basic-streambuf-class.md#pptr) jest wskaźnika o wartości null, funkcja zwraca wartość zero. W przeciwnym razie zwraca `pptr`  -  [pbase](../standard-library/basic-streambuf-class.md#pbase).
+W szczególności jeśli [pptr —](../standard-library/basic-streambuf-class.md#pptr) jest pustym wskaźnikiem, funkcja zwraca wartość zero. W przeciwnym razie zwraca `pptr`  -  [pbase —](../standard-library/basic-streambuf-class.md#pbase).
 
 ### <a name="example"></a>Przykład
 
@@ -267,7 +270,7 @@ int main( )
 
 ## <a name="seekoff"></a>  strstreambuf::seekoff
 
-Funkcja chroniony element członkowski wirtualnego próbuje zmienić bieżącego położenia dla strumieni kontrolowane.
+Funkcja chronionych wirtualna elementu członkowskiego, która próbuje zmienić dla strumieni kontrolowanego bieżącej pozycji.
 
 ```cpp
 virtual streampos seekoff(streamoff _Off,
@@ -277,35 +280,38 @@ virtual streampos seekoff(streamoff _Off,
 
 ### <a name="parameters"></a>Parametry
 
-`_Off` Położenie do wyszukania dla względem `_Way`.
+*_Off*  
+ Położenie do wyszukania dla względem *_Way*.
 
-`_Way` Punkt początkowy dla operacji przesunięcia. Zobacz [seekdir](../standard-library/ios-base-class.md#seekdir) prawidłowych wartości.
+*_Way*  
+ Punkt początkowy dla operacji przesunięcia. Zobacz [seekdir](../standard-library/ios-base-class.md#seekdir) uzyskać odpowiednie wartości.
 
-`_Which` Określa tryb pozycję wskaźnika. Wartość domyślna to umożliwia modyfikowanie, Odczyt i zapis pozycji.
+*_Which*  
+ Określa tryb pozycję wskaźnika. Wartość domyślna to umożliwia modyfikowanie, Odczyt i zapis pozycji.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Funkcja powiedzie się w jednej zmiany lub strumienia obie pozycje, zwraca pozycji w strumieniu wynikowe. W przeciwnym razie nie powiedzie się i zwraca pozycję nieprawidłowy strumień.
+Jeśli funkcja się powiedzie, w jednej zmiany lub strumienia obie pozycje, zwraca położenie wynikowy strumień. W przeciwnym razie nie powiedzie się i zwraca pozycję nieprawidłowy strumień.
 
 ### <a name="remarks"></a>Uwagi
 
-Funkcja chroniony element członkowski wirtualnego usiłują alter dla strumieni kontrolowane bieżącej pozycji. W przypadku obiektu strstreambuf — klasa pozycji w strumieniu składa się wyłącznie z przesunięciu strumienia. Przesunięcia zero oznacza pierwszy element kontrolowanej sekwencji.
+Funkcja chroniony element członkowski wirtualnego usiłują alter dla strumieni kontrolowanego bieżącej pozycji. W przypadku obiektu strstreambuf — klasa pozycji strumienia składa się wyłącznie z przesunięciu strumienia. Przesunięcia zero wskazuje pierwszego elementu w kontrolowanej sekwencji.
 
-Nowa pozycja jest określane w następujący sposób:
+Nowa pozycja jest określany w następujący sposób:
 
-- Jeśli `_Way`  ==  `ios_base::beg`, nowe położenie jest na początku strumienia plus _ *poza*.
+- Jeśli `_Way`  ==  `ios_base::beg`, nowe położenie jest na początku strumienia oraz _ *poza*.
 
-- Jeśli `_Way`  ==  `ios_base::cur`, nowe położenie jest bieżącej pozycji strumienia plus _ *poza*.
+- Jeśli `_Way`  ==  `ios_base::cur`, nowe położenie jest bieżącą pozycję w strumieniu oraz _ *poza*.
 
-- Jeśli `_Way`  ==  `ios_base::end`, nowe położenie jest koniec strumienia plus _ *poza*.
+- Jeśli `_Way`  ==  `ios_base::end`, nowe położenie jest na końcu strumienia oraz _ *poza*.
 
-Jeśli `_Which`  &  **ios_base::in** jest różna od zera i istnieje buforu wejściowego, funkcja zmienia pozycję dalej do odczytu w buforze wejściowym. Jeśli `_Which`  &  **ios_base::out** również jest różna od zera, `_Way` ! = **ios_base::cur**i istnieje buforu wyjściowego, funkcja ustawia również dalej pozycji do zapisania do dopasowania Pozycja dalej do odczytu.
+Jeśli `_Which`  &  **ios_base::in** jest różna od zera i istnieje buforu wejściowego, funkcja zmienia pozycję dalej do odczytu w buforze wejściowym. Jeśli `_Which`  &  **ios_base::out** również jest różna od zera, `_Way` ! = **ios_base::cur**i istnieje bufor wyjściowy, funkcja ustawia również następnej pozycji, aby zapisać dopasowania następnej pozycji do odczytu.
 
-W przeciwnym razie, jeśli `_Which`  &  `ios_base::out` jest różna od zera i istnieje buforu wyjściowego, funkcja zmienia dalej pozycji do zapisania w buforze danych wyjściowych. W przeciwnym razie pozycjonowania kończy się niepowodzeniem. Pozycjonowania operacja się powiodła wynikowy pozycji strumienia musi znajdować się w kontrolowanej sekwencji.
+W przeciwnym razie, jeśli `_Which`  &  `ios_base::out` jest różna od zera i bufor wyjściowy istnieje, funkcja zmienia następnej pozycji, aby zapisać w buforze danych wyjściowych. W przeciwnym razie pozycjonowania kończy się niepowodzeniem. Pozycjonowania operacja została wykonana pomyślnie wynikowy pozycji strumienia musi znajdować się w kontrolowanej sekwencji.
 
 ## <a name="seekpos"></a>  strstreambuf::seekpos
 
-Funkcja chroniony element członkowski wirtualnego próbuje zmienić bieżącego położenia dla strumieni kontrolowane.
+Funkcja chronionych wirtualna elementu członkowskiego, która próbuje zmienić dla strumieni kontrolowanego bieżącej pozycji.
 
 ```cpp
 virtual streampos seekpos(streampos _Sp, ios_base::openmode _Which = ios_base::in | ios_base::out);
@@ -313,23 +319,25 @@ virtual streampos seekpos(streampos _Sp, ios_base::openmode _Which = ios_base::i
 
 ### <a name="parameters"></a>Parametry
 
-`_Sp` Położenie do wyszukania dla.
+*_Sp*  
+ Położenie do wyszukania dla.
 
-`_Which` Określa tryb pozycję wskaźnika. Wartość domyślna to umożliwia modyfikowanie, Odczyt i zapis pozycji.
+*_Which*  
+ Określa tryb pozycję wskaźnika. Wartość domyślna to umożliwia modyfikowanie, Odczyt i zapis pozycji.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Funkcja powiedzie się w jednej zmiany lub strumienia obie pozycje, zwraca pozycji w strumieniu wynikowe. W przeciwnym razie nie powiedzie się i zwraca pozycję nieprawidłowy strumień. Aby ustalić, czy pozycja strumienia jest nieprawidłowa, porównanie wartości zwracanych z `pos_type(off_type(-1))`.
+Jeśli funkcja się powiedzie, w jednej zmiany lub strumienia obie pozycje, zwraca położenie wynikowy strumień. W przeciwnym razie nie powiedzie się i zwraca pozycję nieprawidłowy strumień. Aby określić, jeśli pozycja strumienia jest nieprawidłowa, porównaj wartość zwracaną z `pos_type(off_type(-1))`.
 
 ### <a name="remarks"></a>Uwagi
 
-Funkcja chroniony element członkowski wirtualnego usiłują alter dla strumieni kontrolowane bieżącej pozycji. W przypadku obiektu strstreambuf — klasa pozycji w strumieniu składa się wyłącznie z przesunięciu strumienia. Przesunięcia zero oznacza pierwszy element kontrolowanej sekwencji. Nowa pozycja jest określany przez _ *Sp*.
+Funkcja chroniony element członkowski wirtualnego usiłują alter dla strumieni kontrolowanego bieżącej pozycji. W przypadku obiektu strstreambuf — klasa pozycji strumienia składa się wyłącznie z przesunięciu strumienia. Przesunięcia zero wskazuje pierwszego elementu w kontrolowanej sekwencji. Nowa pozycja jest określana przez _ *Sp*.
 
-Jeśli `_Which`  &  **ios_base::in** jest różna od zera i istnieje buforu wejściowego, funkcja zmienia pozycję dalej do odczytu w buforze wejściowym. Jeśli `_Which`  &  `ios_base::out` jest różna od zera i istnieje buforu wyjściowego, funkcja ustawia również dalej pozycji do zapisania do dopasowania dalej pozycji do odczytu. W przeciwnym razie, jeśli `_Which`  &  `ios_base::out` jest różna od zera i istnieje buforu wyjściowego, funkcja zmienia dalej pozycji do zapisania w buforze danych wyjściowych. W przeciwnym razie pozycjonowania kończy się niepowodzeniem. Pozycjonowania operacja się powiodła wynikowy pozycji strumienia musi znajdować się w kontrolowanej sekwencji.
+Jeśli `_Which`  &  **ios_base::in** jest różna od zera i istnieje buforu wejściowego, funkcja zmienia pozycję dalej do odczytu w buforze wejściowym. Jeśli `_Which`  &  `ios_base::out` jest różna od zera i bufor wyjściowy istnieje, funkcja ustawia również następnej pozycji, aby zapisać dopasowania następnej pozycji, aby odczytać. W przeciwnym razie, jeśli `_Which`  &  `ios_base::out` jest różna od zera i bufor wyjściowy istnieje, funkcja zmienia następnej pozycji, aby zapisać w buforze danych wyjściowych. W przeciwnym razie pozycjonowania kończy się niepowodzeniem. Pozycjonowania operacja została wykonana pomyślnie wynikowy pozycji strumienia musi znajdować się w kontrolowanej sekwencji.
 
 ## <a name="str"></a>  strstreambuf::str
 
-Wywołania [Zablokuj](#freeze), a następnie zwraca wskaźnik do początku kontrolowanej sekwencji.
+Wywołania [freeze](#freeze), a następnie zwraca wskaźnik do początku kontrolowanej sekwencji.
 
 ```cpp
 char *str();
@@ -337,15 +345,15 @@ char *str();
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Wskaźnik do początku kontrolowanej sekwencji.
+Wskaźnik na początek kontrolowanej sekwencji.
 
 ### <a name="remarks"></a>Uwagi
 
-Element o wartości null nie przerywania istnieje, chyba że użytkownik jawnie Włóż dysk.
+Element o wartości null nie kończący istnieje, chyba że jawnie wstawieniu.
 
 ### <a name="example"></a>Przykład
 
-Zobacz [strstreambuf::freeze](#freeze) dla przykładu korzystającego z **str**.
+Zobacz [strstreambuf::freeze](#freeze) dla przykładu, który używa **str**.
 
 ## <a name="strstreambuf"></a>  strstreambuf::strstreambuf
 
@@ -381,23 +389,28 @@ strstreambuf(const unsigned char* _Getptr,
 
 ### <a name="parameters"></a>Parametry
 
-*_Allocfunc* funkcji można przydzielić bufora pamięci.
+*_Allocfunc*  
+ Funkcja używana można przydzielić bufora pamięci.
 
-`count` Określa długość buforu wskazywana przez `_Getptr`. Jeśli `_Getptr` nie jest argumentem (forma konstruktora pierwszy), alokacji sugerowany rozmiar buforów.
+*Liczba*  
+ Określa długość bufor wskazywany przez *_Getptr*. Jeśli *_Getptr* nie jest argument (pierwszy Konstruktor formularz) sugerowane alokacji rozmiar buforów.
 
-*_Freefunc* funkcję służącą do wolnego buforu pamięci.
+*_Freefunc*  
+ Funkcja używana, aby zwolnić pamięć buforu.
 
-`_Getptr` Bufor używany dla danych wejściowych.
+*_Getptr*  
+ Bufor używany do wprowadzania danych.
 
-`_Putptr` Bufor używany dla danych wyjściowych.
+*_Putptr*  
+ Bufor używany dla danych wyjściowych.
 
 ### <a name="remarks"></a>Uwagi
 
-Pierwszy Konstruktor przechowuje wskaźnika o wartości null w wszystkie wskaźniki kontrolowanie buforu wejściowego, buforu wyjściowego i strstreambuf — alokacji. Ustawia tryb przechowywanych strstreambuf — aby kontrolowanej sekwencji można modyfikować i rozszerzalna. Również akceptuje `count` jako sugerowane początkowy rozmiar alokacji.
+Pierwszy Konstruktor przechowuje wskaźnik zerowy w wszystkie wskaźniki kontrolowanie buforu wejściowego, buforu wyjściowego i strstreambuf — alokacji. Ustawia tryb przechowywanych strstreambuf — aby argumentami modyfikowalnymi i rozszerzalnej kontrolowanej sekwencji. Również akceptuje *liczba* jako sugerowane początkowy rozmiar alokacji.
 
-Drugi Konstruktor zachowuje się jak pierwszy, z wyjątkiem tego, że przechowuje _ *Allocfunc* jako wskaźnik do funkcji do wywołania, aby przydzielić magazyn i \_ *Freefunc* jako wskaźnik do funkcji Wywołanie zwolnienia tego magazynu.
+Drugi Konstruktor zachowuje się jak pierwsza strona, z tą różnicą, że przechowuje _ *Allocfunc* jako wskaźnik do funkcji do wywołania do przydzielania pamięci i \_ *Freefunc* jako wskaźnik do funkcji wywołania z bezpłatnymi tego magazynu.
 
-Konstruktory trzy:
+Trzy konstruktory:
 
 ```cpp
 strstreambuf(char *_Getptr,
@@ -413,15 +426,15 @@ strstreambuf(unsigned char *_Getptr,
     unsigned char *putptr = 0);
 ```
 
-również przypominają pierwsza strona, z wyjątkiem `_Getptr` określa obiekt array używanym do przechowywania kontrolowanej sekwencji. (W związku z tym nie może być wskaźnika o wartości null.) Liczba elementów *N* w tablicy jest określane w następujący sposób:
+zawsze zachowują się jak pierwsza strona, z tą różnicą, że `_Getptr` wyznacza obiektu array, używane do przechowywania kontrolowanej sekwencji. (Dlatego nie należy wskaźnikiem typu null.) Liczba elementów, które *N* w tablicy jest określany w następujący sposób:
 
 - Jeśli (`count` > 0), następnie *N* jest `count`.
 
 - Jeśli (`count` == 0), następnie *N* jest `strlen`(( **const** `char` *) `_Getptr` ).
 
-- Jeśli (`count` < 0), następnie *N* jest **int_max —**.
+- Jeśli (`count` < 0), następnie *N* jest **INT_MAX**.
 
-Jeśli `_Putptr` jest wskaźnika o wartości null, funkcja ustanawia tylko buforu wejściowego, wykonując:
+Jeśli `_Putptr` jest pustym wskaźnikiem, funkcja ustanawia po prostu buforu wejściowego, wykonując:
 
 ```cpp
 setg(_Getptr,
@@ -429,7 +442,7 @@ setg(_Getptr,
     _Getptr + N);
 ```
 
-W przeciwnym razie ustanawia wejścia i wyjścia buforów, wykonując:
+W przeciwnym razie ustanawia bufory wejściowe i wyjściowe, wykonując:
 
 ```cpp
 setg(_Getptr,
@@ -440,7 +453,7 @@ setp(_Putptr,
     _Getptr + N);
 ```
 
-W takim przypadku `_Putptr` musi być w interwale [ `_Getptr`, `_Getptr`  +  *N*].
+W tym przypadku `_Putptr` musi być w interwale [ `_Getptr`, `_Getptr`  +  *N*].
 
 Na koniec trzy konstruktory:
 
@@ -455,13 +468,13 @@ strstreambuf(const unsigned char *_Getptr,
     streamsize count);
 ```
 
-wszystkie działają tak samo, jak:
+wszystko działa tak samo, jak:
 
 ```cpp
 streambuf((char *)_Getptr, count);
 ```
 
-z tą różnicą, że przechowywanej tryb sprawia, że kontrolowanej sekwencji można modyfikować ani rozszerzalne.
+poza tym, że tryb przechowywanych sprawia, że kontrolowanej sekwencji można modyfikować ani rozszerzalne.
 
 ## <a name="underflow"></a>  strstreambuf::underflow
 
@@ -473,11 +486,11 @@ virtual int underflow();
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Jeśli funkcja nie może się powieść, zwraca `EOF`. W przeciwnym razie zwraca bieżący element w strumieniu wejściowym przekonwertować zgodnie z powyższym opisem.
+Jeśli funkcja nie powiedzie się, zwraca `EOF`. W przeciwnym razie zwraca bieżącego elementu w strumieniu wejściowym przekonwertować zgodnie z powyższym opisem.
 
 ### <a name="remarks"></a>Uwagi
 
-Funkcja chroniony element członkowski wirtualnego usiłują wyodrębnić bieżącego elementu **ch** z buforu wejściowego, następnie poprawić bieżącej pozycji strumienia i zwracać element jako (`int`) (`unsigned char`) **ch** . Go to zrobić w tylko jednym ze sposobów: Jeśli pozycja odczytu jest dostępny, przyjmuje **ch** jako element przechowywane w pozycji odczytu i przesuwa wskaźnik następnej dla buforu wejściowego.
+Chronione wirtualna funkcja składowa usiłują wyodrębnić bieżącego elementu `ch` z buforu wejściowego, następnie przejdź bieżącej pozycji strumienia i zwracać element jako (`int`) (`unsigned char`) **ch**. Jego można to zrobić w tylko jednym ze sposobów: pozycję odczytu jest dostępny, dopiero po `ch` elementu przechowywanego w pozycji odczytu i przesuwa wskaźnik następnej dla buforu danych wejściowych.
 
 ## <a name="see-also"></a>Zobacz także
 

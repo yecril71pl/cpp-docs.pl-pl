@@ -16,15 +16,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4c0e07ce3a38eaca54e860ebe821924c0f564c69
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: c677f86a44d24e0d0d2742d47ee1534532001528
+ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33374153"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37338535"
 ---
 # <a name="logpen-structure"></a>Struktura LOGPEN
-`LOGPEN` Definiuje struktury, style, szerokość i kolor pióra, rysunek używany do rysowania linii i obramowania. [CPen::CreatePenIndirect](../../mfc/reference/cpen-class.md#createpenindirect) używa `LOGPEN` struktury.  
+`LOGPEN` Struktury definiuje styl, szerokość i kolor pióra, rysunek używany do rysowania linii i obramowanie. [CPen::CreatePenIndirect](../../mfc/reference/cpen-class.md#createpenindirect) używa funkcji `LOGPEN` struktury.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -38,34 +38,34 @@ typedef struct tagLOGPEN {  /* lgpn */
   
 #### <a name="parameters"></a>Parametry  
  *lopnStyle*  
- Określa typ pióra. Ten element członkowski może być jedną z następujących wartości:  
+ Określa typ pióra. Ten element członkowski może być jednym z następujących wartości:  
   
-- **PS_SOLID** tworzy stałe pióra.  
+- PS_SOLID tworzy pełny pióra.  
   
-- **PS_DASH** tworzy kreskowane pióra. (Prawidłowe tylko wtedy, gdy szerokość pióra 1).  
+- PS_DASH tworzy kreskowane pióra. (Prawidłowe tylko wtedy, gdy szerokość pióra 1).  
   
-- **PS_DOT** tworzy kropkowanej pióra. (Prawidłowe tylko wtedy, gdy szerokość pióra 1).  
+- PS_DOT tworzy kropkowana pióra. (Prawidłowe tylko wtedy, gdy szerokość pióra 1).  
   
-- **PS_DASHDOT** tworzy pióra ze zmieniającymi się łączniki i kropki. (Prawidłowe tylko wtedy, gdy szerokość pióra 1).  
+- Tworzy PS_DASHDOT pióra ze zmieniającymi się kreski oraz kropki. (Prawidłowe tylko wtedy, gdy szerokość pióra 1).  
   
-- **PS_DASHDOTDOT** tworzy pióra ze zmieniającymi się łączniki i kropki dwa razy. (Prawidłowe tylko wtedy, gdy szerokość pióra 1).  
+- Tworzy PS_DASHDOTDOT a pióra ze zmieniającymi się łączniki i kropki double. (Prawidłowe tylko wtedy, gdy szerokość pióra 1).  
   
-- **PS_NULL** tworzy pióra wartości null.  
+- PS_NULL tworzy pióra o wartości null.  
   
-- **PS_INSIDEFRAME** tworzy Pióro rysuje wewnątrz ramki kształty zamknięte utworzone za pomocą GDI dane wyjściowe funkcji określające prostokąt ograniczający (na przykład **elipsy**, **prostokąt**, `RoundRect`, `Pie`, i `Chord` funkcji elementów członkowskich). Gdy ten styl jest używany z GDI output funkcje, które nie określają prostokąt ograniczający (na przykład `LineTo` funkcji członkowskiej), obszaru rysowania pióra nie jest ograniczona przez ramki.  
+- PS_INSIDEFRAME tworzy produkowane przez Pióro, który rysuje wewnątrz ramki kształty zamknięte w GDI dane wyjściowe funkcji, które określają prostokąt otaczający (na przykład `Ellipse`, `Rectangle`, `RoundRect`, `Pie`, i `Chord` elementu członkowskiego funkcje). Gdy ten styl jest używany z użyciem interfejsu GDI dane wyjściowe funkcji, które nie określaj prostokąt otaczający (na przykład `LineTo` składowa), obszaru rysowania pióra nie jest ograniczone przez ramkę.  
   
-     Jeśli ma pióra **PS_INSIDEFRAME** styl i kolor, który jest niezgodny z kolorów w tabeli kolorów logicznej pióra jest rysowany z kolor symulowany. **PS_SOLID** styl pióra nie może służyć do tworzenia pióra symulowanych kolorem. **PS_INSIDEFRAME** styl jest taki sam jak **PS_SOLID** Jeśli szerokość pióra jest mniejsza niż lub równa 1.  
+     Jeśli styl PS_INSIDEFRAME i kolor, który nie pasuje do koloru w tabeli kolorów logiczne pióra, pióro jest rysowana szarych kolorem. Styl pióra PS_SOLID, nie może służyć do tworzenia pióra szarych kolorem. Styl PS_INSIDEFRAME jest taka sama jak PS_SOLID, jeśli szerokość pióra jest mniejsza niż lub równa 1.  
   
-     Gdy **PS_INSIDEFRAME** styl jest używany z innych niż utworzone za pomocą funkcji Obiekty GDI **elipsy**, **prostokąt**, i `RoundRect`, wiersz nie może być całkowicie w określonej ramce.  
+     Gdy styl PS_INSIDEFRAME jest używany z obiektami interfejsu GDI produkowane przez funkcje inne niż `Ellipse`, `Rectangle`, i `RoundRect`, wiersz nie może być całkowicie wewnątrz ramki o określonym.  
   
  *lopnWidth*  
- Określa szerokość pióra w jednostkach logicznych. Jeśli **lopnWidth** elementu członkowskiego wynosi 0, Pióro na urządzeniach rastrowe niezależnie od bieżącego trybu mapowania szerokości 1 piksela.  
+ Określa szerokość pióra w jednostkach logicznych. Jeśli `lopnWidth` elementu członkowskiego wynosi 0, Pióro szerokości na urządzeniach rastrowych niezależnie od tego, w bieżącym trybie mapowanie 1 piksela.  
   
  *lopnColor*  
  Określa kolor pióra.  
   
 ## <a name="remarks"></a>Uwagi  
- **y** wartość w [punktu](../../mfc/reference/point-structure1.md) struktury **lopnWidth** element nie jest używany.  
+ `y` Wartość w [punktu](../../mfc/reference/point-structure1.md) struktury dla `lopnWidth` element nie jest używany.  
   
 ## <a name="requirements"></a>Wymagania  
  **Nagłówek:** wingdi.h  

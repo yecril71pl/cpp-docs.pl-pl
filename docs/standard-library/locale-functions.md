@@ -36,21 +36,21 @@ helpviewer_keywords:
 - std::tolower [C++]
 - std::toupper [C++]
 - std::use_facet [C++]
-ms.openlocfilehash: fbe74dbd1218aec211bb600f1db6a1c2300f18e2
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 8b3f6ed544bd4726b8bed2b63394a8b28c54c339
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33862406"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38956075"
 ---
 # <a name="ltlocalegt-functions"></a>&lt;Ustawienia regionalne&gt; funkcji
 
 ||||
 |-|-|-|
 |[has_facet](#has_facet)|[isalnum](#isalnum)|[isalpha](#isalpha)|
-|[iscntrl](#iscntrl)|[isdigit](#isdigit)|[isgraph —](#isgraph)|
-|[islower](#islower)|[isprint —](#isprint)|[ispunct —](#ispunct)|
-|[isspace —](#isspace)|[isupper —](#isupper)|[isxdigit](#isxdigit)|
+|[iscntrl](#iscntrl)|[isdigit](#isdigit)|[isgraph](#isgraph)|
+|[islower](#islower)|[isprint](#isprint)|[ispunct](#ispunct)|
+|[isspace](#isspace)|[isupper](#isupper)|[isxdigit](#isxdigit)|
 |[tolower](#tolower)|[toupper](#toupper)|[use_facet](#use_facet)|
 
 ## <a name="has_facet"></a>  has_facet
@@ -64,15 +64,15 @@ bool has_facet(const locale& Loc);
 
 ### <a name="parameters"></a>Parametry
 
-`Loc` Ustawienia regionalne pod kątem obecności zestaw reguł.
+*Lokalizacja* ustawień regionalnych pod kątem obecności zestaw reguł.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-**wartość true,** Jeśli ustawienia regionalne ma aspekt sprawdzane pod kątem; **false** jeśli jej nie ma.
+**wartość true,** Jeśli ustawienia regionalne aspekt sprawdzane pod kątem; **false** Jeśli tak nie jest.
 
 ### <a name="remarks"></a>Uwagi
 
-Funkcja szablonu jest przydatna do sprawdzania, czy nonmandatory aspekty są wyświetlane w ustawieniach regionalnych przed `use_facet` jest wywoływana w celu uniknięcia wyjątek, który może zostać zgłoszony, gdy nie były widoczne.
+Funkcja szablonu jest przydatne w przypadku sprawdzania, czy nonmandatory zestawów reguł są wymienione w ustawieniach regionalnych przed `use_facet` jest wywoływana w celu uniknięcia wyjątek, który może zostać wygenerowany, jeśli nie był obecny.
 
 ### <a name="example"></a>Przykład
 
@@ -95,7 +95,7 @@ int main( )
 1
 ```
 
-## <a name="isalnum"></a>  isalnum —
+## <a name="isalnum"></a>  isalnum
 
 Sprawdza, czy element w ustawieniach regionalnych jest znakiem alfabetycznym czy liczbowym.
 
@@ -106,13 +106,13 @@ bool isalnum(CharType Ch, const locale& Loc)
 
 ### <a name="parameters"></a>Parametry
 
-`Ch` Alfanumeryczne element do sprawdzenia.
+*Ch* alfanumeryczne element ma zostać przetestowana.
 
-`Loc` Ustawienia regionalne zawierający element alfanumeryczne, które ma zostać przetestowana.
+*Lokalizacja* ustawień regionalnych, zawierający element alfanumeryczne, które ma zostać przetestowana.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-**wartość true,** Jeśli element przetestowane jest alfanumeryczne; **false** Jeśli nie jest.
+**wartość true,** przypadku alfanumeryczne; badanego elementu **false** Jeśli tak nie jest.
 
 ### <a name="example"></a>Przykład
 
@@ -160,9 +160,9 @@ The character '@' in the locale is  not alphanumeric.
 The character '3' in the locale is alphanumeric.
 ```
 
-## <a name="isalpha"></a>  isalpha —
+## <a name="isalpha"></a>  isalpha
 
-Sprawdza, czy element ustawień regionalnych jest znakiem alfabetycznym.
+Sprawdza, czy element w ustawieniach regionalnych jest znakiem alfabetycznym.
 
 ```cpp
 template <class CharType>
@@ -171,17 +171,17 @@ bool isalpha(CharType Ch, const locale& Loc)
 
 ### <a name="parameters"></a>Parametry
 
-`Ch` Element, który ma zostać przetestowana.
+*Ch* element, który ma zostać przetestowana.
 
-`Loc` Ustawienia regionalne zawierający element alfabetyczne, które ma zostać przetestowana.
+*Lokalizacja* ustawień regionalnych, zawierający element alfabetyczne, które ma zostać przetestowana.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-**wartość true,** w przypadku elementu przetestowane alfabetycznej; **false** Jeśli nie jest.
+**wartość true,** przypadku alfabetycznej; badanego elementu **false** Jeśli tak nie jest.
 
 ### <a name="remarks"></a>Uwagi
 
-Funkcja szablonu [use_facet](../standard-library/locale-functions.md#use_facet)< [ctype](../standard-library/ctype-class.md) \< **CharType**>> ( `Loc`). [jest](../standard-library/ctype-class.md#is)( **ctype** \< **CharType**>:: **alfa**, `Ch`).
+Funkcja szablonu zwraca [use_facet](../standard-library/locale-functions.md#use_facet)< [ctype](../standard-library/ctype-class.md) \< **CharType**>> ( `Loc`). [jest](../standard-library/ctype-class.md#is)( **ctype** \< **CharType**>:: **alfa**, `Ch`).
 
 ### <a name="example"></a>Przykład
 
@@ -223,7 +223,7 @@ int main( )
 }
 ```
 
-## <a name="iscntrl"></a>  iscntrl —
+## <a name="iscntrl"></a>  iscntrl
 
 Sprawdza, czy element w ustawieniach regionalnych jest znakiem kontrolnym.
 
@@ -234,17 +234,17 @@ bool iscntrl(CharType Ch, const locale& Loc)
 
 ### <a name="parameters"></a>Parametry
 
-`Ch` Element, który ma zostać przetestowana.
+*Ch* element, który ma zostać przetestowana.
 
-`Loc` Ustawienia regionalne zawierający element, który ma zostać przetestowana.
+*Lokalizacja* ustawień regionalnych, zawierający element, który ma zostać przetestowana.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-**wartość true,** Jeśli element przetestowane jest znak kontrolny; **false** Jeśli nie jest.
+**wartość true,** Jeśli badanego elementu jest znakiem kontrolnym; **false** Jeśli tak nie jest.
 
 ### <a name="remarks"></a>Uwagi
 
-Funkcja szablonu [use_facet](../standard-library/locale-functions.md#use_facet)< [ctype](../standard-library/ctype-class.md) \< **CharType**>> ( `Loc`). [jest](../standard-library/ctype-class.md#is)( **ctype** \< **CharType**>:: **nacisnąć klawisze CTRL +**, `Ch`).
+Funkcja szablonu zwraca [use_facet](../standard-library/locale-functions.md#use_facet)< [ctype](../standard-library/ctype-class.md) \< **CharType**>> ( `Loc`). [jest](../standard-library/ctype-class.md#is)( **ctype** \< **CharType**>:: **nacisnąć klawisze CTRL +**, `Ch`).
 
 ### <a name="example"></a>Przykład
 
@@ -286,7 +286,7 @@ int main( )
 }
 ```
 
-## <a name="isdigit"></a>  isdigit —
+## <a name="isdigit"></a>  isdigit
 
 Sprawdza, czy element w ustawieniach regionalnych jest znakiem liczbowym.
 
@@ -297,17 +297,17 @@ bool isdigit(CharType Ch, const locale& Loc)
 
 ### <a name="parameters"></a>Parametry
 
-`Ch` Element, który ma zostać przetestowana.
+*Ch* element, który ma zostać przetestowana.
 
-`Loc` Ustawienia regionalne zawierający element, który ma zostać przetestowana.
+*Lokalizacja* ustawień regionalnych, zawierający element, który ma zostać przetestowana.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-**wartość true,** Jeśli element przetestowane jest znaku numerycznego; **false** Jeśli nie jest.
+**wartość true,** Jeśli badanego elementu jest znakiem liczbowym; **false** Jeśli tak nie jest.
 
 ### <a name="remarks"></a>Uwagi
 
-Funkcja szablonu [use_facet](../standard-library/locale-functions.md#use_facet)< [ctype](../standard-library/ctype-class.md) \< **CharType**>> ( `Loc`). [jest](../standard-library/ctype-class.md#is)( **ctype** \< **CharType**>:: **cyfrę**, `Ch`).
+Funkcja szablonu zwraca [use_facet](../standard-library/locale-functions.md#use_facet)< [ctype](../standard-library/ctype-class.md) \< **CharType**>> ( `Loc`). [jest](../standard-library/ctype-class.md#is)( **ctype** \< **CharType**>:: **cyfrę**, `Ch`).
 
 ### <a name="example"></a>Przykład
 
@@ -349,7 +349,7 @@ int main( )
 }
 ```
 
-## <a name="isgraph"></a>  isgraph —
+## <a name="isgraph"></a>  isgraph
 
 Sprawdza, czy element w ustawieniach regionalnych jest znakiem alfanumerycznym lub interpunkcyjnym.
 
@@ -360,17 +360,17 @@ bool isgraph(CharType Ch, const locale& Loc)
 
 ### <a name="parameters"></a>Parametry
 
-`Ch` Element, który ma zostać przetestowana.
+*Ch* element, który ma zostać przetestowana.
 
-`Loc` Ustawienia regionalne zawierający element, który ma zostać przetestowana.
+*Lokalizacja* ustawień regionalnych, zawierający element, który ma zostać przetestowana.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-**wartość true,** w przypadku elementu przetestowane alfanumeryczne lub znak interpunkcyjny; **false** Jeśli nie jest.
+**wartość true,** przypadku badanego elementu alfanumerycznym lub znakiem interpunkcyjnym; **false** Jeśli tak nie jest.
 
 ### <a name="remarks"></a>Uwagi
 
-Funkcja szablonu [use_facet](../standard-library/locale-functions.md#use_facet)< [ctype](../standard-library/ctype-class.md) \< **CharType**>> ( `Loc`). [jest](../standard-library/ctype-class.md#is)( **ctype** \< **CharType**>:: **wykres**, `Ch`).
+Funkcja szablonu zwraca [use_facet](../standard-library/locale-functions.md#use_facet)< [ctype](../standard-library/ctype-class.md) \< **CharType**>> ( `Loc`). [jest](../standard-library/ctype-class.md#is)( **ctype** \< **CharType**>:: **wykres**, `Ch`).
 
 ### <a name="example"></a>Przykład
 
@@ -412,7 +412,7 @@ int main( )
 }
 ```
 
-## <a name="islower"></a>  islower —
+## <a name="islower"></a>  islower
 
 Sprawdza, czy element w ustawieniach regionalnych jest pisany małymi literami.
 
@@ -423,17 +423,17 @@ bool islower(CharType Ch, const locale& Loc)
 
 ### <a name="parameters"></a>Parametry
 
-`Ch` Element, który ma zostać przetestowana.
+*Ch* element, który ma zostać przetestowana.
 
-`Loc` Ustawienia regionalne zawierający element, który ma zostać przetestowana.
+*Lokalizacja* ustawień regionalnych, zawierający element, który ma zostać przetestowana.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-**wartość true,** Jeśli element przetestowane jest małą literę; **false** Jeśli nie jest.
+**wartość true,** Jeśli badanego elementu jest znakiem małej litery; **false** Jeśli tak nie jest.
 
 ### <a name="remarks"></a>Uwagi
 
-Funkcja szablonu [use_facet](../standard-library/locale-functions.md#use_facet)< [ctype](../standard-library/ctype-class.md) \< **CharType**>> ( `Loc`). [jest](../standard-library/ctype-class.md#is)( **ctype** \< **CharType**>:: **niższe**, `Ch`).
+Funkcja szablonu zwraca [use_facet](../standard-library/locale-functions.md#use_facet)< [ctype](../standard-library/ctype-class.md) \< **CharType**>> ( `Loc`). [jest](../standard-library/ctype-class.md#is)( **ctype** \< **CharType**>:: **niższe**, `Ch`).
 
 ### <a name="example"></a>Przykład
 
@@ -475,7 +475,7 @@ int main( )
 }
 ```
 
-## <a name="isprint"></a>  isprint —
+## <a name="isprint"></a>  isprint
 
 Sprawdza, czy element w ustawieniach regionalnych jest znakiem drukowalnym.
 
@@ -486,17 +486,17 @@ bool isprint(CharType Ch, const locale& Loc)
 
 ### <a name="parameters"></a>Parametry
 
-`Ch` Element, który ma zostać przetestowana.
+*Ch* element, który ma zostać przetestowana.
 
-`Loc` Ustawienia regionalne zawierający element, który ma zostać przetestowana.
+*Lokalizacja* ustawień regionalnych, zawierający element, który ma zostać przetestowana.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-**wartość true,** Jeśli element przetestowane jest drukowalnych; **false** Jeśli nie jest.
+**wartość true,** Jeśli badanego elementu jest drukowalnym; **false** Jeśli tak nie jest.
 
 ### <a name="remarks"></a>Uwagi
 
-Funkcja szablonu [use_facet](../standard-library/locale-functions.md#use_facet)< [ctype](../standard-library/ctype-class.md) \< **CharType**>> ( `Loc`). [jest](../standard-library/ctype-class.md#is)( **ctype** \< **CharType**>:: **drukowanie**, `Ch`).
+Funkcja szablonu zwraca [use_facet](../standard-library/locale-functions.md#use_facet)< [ctype](../standard-library/ctype-class.md) \< **CharType**>> ( `Loc`). [jest](../standard-library/ctype-class.md#is)( **ctype** \< **CharType**>:: **drukowanie**, `Ch`).
 
 ### <a name="example"></a>Przykład
 
@@ -537,7 +537,7 @@ int main( )
 }
 ```
 
-## <a name="ispunct"></a>  ispunct —
+## <a name="ispunct"></a>  ispunct
 
 Sprawdza, czy element w ustawieniach regionalnych jest znakiem interpunkcyjnym.
 
@@ -548,17 +548,17 @@ bool ispunct(CharType Ch, const locale& Loc)
 
 ### <a name="parameters"></a>Parametry
 
-`Ch` Element, który ma zostać przetestowana.
+*Ch* element, który ma zostać przetestowana.
 
-`Loc` Ustawienia regionalne zawierający element, który ma zostać przetestowana.
+*Lokalizacja* ustawień regionalnych, zawierający element, który ma zostać przetestowana.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-**wartość true,** Jeśli element przetestowane jest znak interpunkcyjny; **false** Jeśli nie jest.
+**wartość true,** Jeśli badanego elementu jest znakiem interpunkcyjnym; **false** Jeśli tak nie jest.
 
 ### <a name="remarks"></a>Uwagi
 
-Funkcja szablonu [use_facet](../standard-library/locale-functions.md#use_facet)`<`[ctype](../standard-library/ctype-class.md) \< **CharType**>> ( `Loc`). [jest](../standard-library/ctype-class.md#is)( **ctype** \< **CharType**>:: **punct**, `Ch`).
+Funkcja szablonu zwraca [use_facet](../standard-library/locale-functions.md#use_facet)`<`[ctype](../standard-library/ctype-class.md) \< **CharType**>> ( `Loc`). [jest](../standard-library/ctype-class.md#is)( **ctype** \< **CharType**>:: **punct**, `Ch`).
 
 ### <a name="example"></a>Przykład
 
@@ -600,7 +600,7 @@ int main( )
 }
 ```
 
-## <a name="isspace"></a>  isspace —
+## <a name="isspace"></a>  isspace
 
 Sprawdza, czy element w ustawieniach regionalnych jest znakiem białym.
 
@@ -611,17 +611,17 @@ bool isspace(CharType Ch, const locale& Loc)
 
 ### <a name="parameters"></a>Parametry
 
-`Ch` Element, który ma zostać przetestowana.
+*Ch* element, który ma zostać przetestowana.
 
-`Loc` Ustawienia regionalne zawierający element, który ma zostać przetestowana.
+*Lokalizacja* ustawień regionalnych, zawierający element, który ma zostać przetestowana.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-**wartość true,** Jeśli element przetestowane jest znak odstępu; **false** Jeśli nie jest.
+**wartość true,** przypadku badanego elementu znakiem odstępu; **false** Jeśli tak nie jest.
 
 ### <a name="remarks"></a>Uwagi
 
-Funkcja szablonu [use_facet](../standard-library/locale-functions.md#use_facet)< [ctype](../standard-library/ctype-class.md) \< **CharType**>> ( `Loc`). [jest](../standard-library/ctype-class.md#is)( **ctype** \< **CharType**>:: **miejsca**, `Ch`).
+Funkcja szablonu zwraca [use_facet](../standard-library/locale-functions.md#use_facet)< [ctype](../standard-library/ctype-class.md) \< **CharType**>> ( `Loc`). [jest](../standard-library/ctype-class.md#is)( **ctype** \< **CharType**>:: **miejsca**, `Ch`).
 
 ### <a name="example"></a>Przykład
 
@@ -663,9 +663,9 @@ int main( )
 }
 ```
 
-## <a name="isupper"></a>  isupper —
+## <a name="isupper"></a>  isupper
 
-Sprawdza, czy element ustawień regionalnych jest wielkimi literami.
+Sprawdza, czy element w ustawieniach regionalnych jest pisany wielkimi literami.
 
 ```cpp
 template <class CharType>
@@ -674,17 +674,17 @@ bool isupper(CharType Ch, const locale& Loc)
 
 ### <a name="parameters"></a>Parametry
 
-`Ch` Element, który ma zostać przetestowana.
+*Ch* element, który ma zostać przetestowana.
 
-`Loc` Ustawienia regionalne zawierający element, który ma zostać przetestowana.
+*Lokalizacja* ustawień regionalnych, zawierający element, który ma zostać przetestowana.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-**wartość true,** Jeśli element przetestowane jest wielką literę; **false** Jeśli nie jest.
+**wartość true,** Jeśli badanego elementu jest znakiem wielkiej litery; **false** Jeśli tak nie jest.
 
 ### <a name="remarks"></a>Uwagi
 
-Funkcja szablonu [use_facet](../standard-library/locale-functions.md#use_facet)< [ctype](../standard-library/ctype-class.md) \< **CharType**>> ( `Loc`). [jest](../standard-library/ctype-class.md#is)( **ctype** \< **CharType**>:: **górnej**, `Ch`).
+Funkcja szablonu zwraca [use_facet](../standard-library/locale-functions.md#use_facet)< [ctype](../standard-library/ctype-class.md) \< **CharType**>> ( `Loc`). [jest](../standard-library/ctype-class.md#is)( **ctype** \< **CharType**>:: **górny**, `Ch`).
 
 ### <a name="example"></a>Przykład
 
@@ -726,7 +726,7 @@ int main( )
 }
 ```
 
-## <a name="isxdigit"></a>  isxdigit —
+## <a name="isxdigit"></a>  isxdigit
 
 Sprawdza, czy element w ustawieniach regionalnych jest znakiem używanym do reprezentowania liczby w postaci szesnastkowej.
 
@@ -737,19 +737,19 @@ bool isxdigit(CharType Ch, const locale& Loc)
 
 ### <a name="parameters"></a>Parametry
 
-`Ch` Element, który ma zostać przetestowana.
+*Ch* element, który ma zostać przetestowana.
 
-`Loc` Ustawienia regionalne zawierający element, który ma zostać przetestowana.
+*Lokalizacja* ustawień regionalnych, zawierający element, który ma zostać przetestowana.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-**wartość true,** Jeśli element przetestowane jest znak używany do reprezentowania liczbą szesnastkową; **false** Jeśli nie jest.
+**wartość true,** Jeśli badanego elementu jest znakiem używanym do reprezentowania liczby szesnastkowej; **false** Jeśli tak nie jest.
 
 ### <a name="remarks"></a>Uwagi
 
-Funkcja szablonu [use_facet](../standard-library/locale-functions.md#use_facet)< [ctype](../standard-library/ctype-class.md) \< **CharType**>> ( `Loc`). [jest](../standard-library/ctype-class.md#is)( **ctype** \< **CharType**>:: **xdigit**, `Ch`).
+Funkcja szablonu zwraca [use_facet](../standard-library/locale-functions.md#use_facet)< [ctype](../standard-library/ctype-class.md) \< **CharType**>> ( `Loc`). [jest](../standard-library/ctype-class.md#is)( **ctype** \< **CharType**>:: **xdigit**, `Ch`).
 
-Cyfry szesnastkowe używa podstawowej 16 do reprezentowania liczb, przy użyciu cyfry od 0 do 9 oraz bez uwzględniania wielkości liter litery od A do F do reprezentowania dziesiętnego liczby od 0 do 15.
+Cyfry szesnastkowe użyć podstawowa 16 do reprezentowania liczb, przy użyciu cyfr od 0 do 9 oraz bez uwzględniania wielkości liter litery od A do F, aby reprezentować separatora dziesiętnego liczby od 0 do 15.
 
 ### <a name="example"></a>Przykład
 
@@ -802,17 +802,17 @@ CharType tolower(CharType Ch, const locale& Loc)
 
 ### <a name="parameters"></a>Parametry
 
-`Ch` Znak, który ma zostać przekonwertowany na małe litery.
+*ch* znak, który ma zostać przekonwertowany na małe litery.
 
-`Loc` Ustawienia regionalne zawierającą znak, który ma zostać przekonwertowany.
+*Lokalizacja* ustawień regionalnych, zawierającą znak, który ma zostać przekonwertowany.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Znak przekonwertowany na małe litery.
+Znak jest konwertowany na małe litery.
 
 ### <a name="remarks"></a>Uwagi
 
-Funkcja szablonu [use_facet](../standard-library/locale-functions.md#use_facet)< [ctype](../standard-library/ctype-class.md) \< **CharType**>> ( `Loc`). [tolower](../standard-library/ctype-class.md#tolower)( `Ch`).
+Funkcja szablonu zwraca [use_facet](../standard-library/locale-functions.md#use_facet)< [ctype](../standard-library/ctype-class.md) \< **CharType**>> ( `Loc`). [tolower](../standard-library/ctype-class.md#tolower)( `Ch`).
 
 ### <a name="example"></a>Przykład
 
@@ -849,17 +849,17 @@ CharType toupper(CharType Ch, const locale& Loc)
 
 ### <a name="parameters"></a>Parametry
 
-`Ch` Znak, który ma zostać przekonwertowane na wielkie litery.
+*ch* znak, który ma zostać przekonwertowany na wielkie litery.
 
-`Loc` Ustawienia regionalne zawierającą znak, który ma zostać przekonwertowany.
+*Lokalizacja* ustawień regionalnych, zawierającą znak, który ma zostać przekonwertowany.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Znak przekonwertowany na wielkie litery.
+Znak jest konwertowany na wielkie litery.
 
 ### <a name="remarks"></a>Uwagi
 
-Funkcja szablonu [use_facet](../standard-library/locale-functions.md#use_facet)< [ctype](../standard-library/ctype-class.md) \< **CharType**>> ( `Loc`). [toupper](../standard-library/ctype-class.md#toupper)( `Ch`).
+Funkcja szablonu zwraca [use_facet](../standard-library/locale-functions.md#use_facet)< [ctype](../standard-library/ctype-class.md) \< **CharType**>> ( `Loc`). [toupper](../standard-library/ctype-class.md#toupper)( `Ch`).
 
 ### <a name="example"></a>Przykład
 
@@ -896,7 +896,7 @@ const Facet& use_facet(const locale& Loc);
 
 ### <a name="parameters"></a>Parametry
 
-`Loc` Stałe ustawień regionalnych, zawierający ten typ zestawu reguł, do którego nastąpiło odwołanie.
+*Lokalizacja* const ustawień regionalnych, zawierający typ zestawu reguł, do którego nastąpiło odwołanie.
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -904,7 +904,7 @@ Odwołanie do zestawu reguł klasy `Facet` zawartych w ustawieniach regionalnych
 
 ### <a name="remarks"></a>Uwagi
 
-Odwołanie do aspektu zwracane przez funkcję szablonu pozostaje ważny tak długo, jak istnieje ewentualnych kopii zawierającego ustawień regionalnych. Jeśli nie ma takiego obiektu aspektu klasy `Facet` znajduje się w ustawieniach regionalnych argumentu, funkcja zwraca `bad_cast` wyjątku.
+Odwołanie do zestawu reguł, zwrócona przez funkcję szablonu zachowuje ważność tak długo, jak istnieje ewentualnych kopii zawierającego ustawienia regionalne. Jeśli nie ma takiego obiektu aspekt klasy `Facet` znajduje się w ustawieniach regionalnych argumentu, zgłasza funkcja `bad_cast` wyjątku.
 
 ### <a name="example"></a>Przykład
 

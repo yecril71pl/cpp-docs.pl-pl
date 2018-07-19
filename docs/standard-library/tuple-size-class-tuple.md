@@ -18,16 +18,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7249aad5e130e805aae73bdbfba7f9c4f78ad4fe
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 0c03c47502fdd9309b3d6553c3f46f9685d4eaa9
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33853986"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38958269"
 ---
 # <a name="tuplesize-class"></a>tuple_size — klasa;
 
-Liczba elementów raportów który `tuple` zawiera.
+Liczba elementów raportów, `tuple` zawiera.
 
 ## <a name="syntax"></a>Składnia
 
@@ -66,25 +66,31 @@ template <class Tuple>
 
 ### <a name="parameters"></a>Parametry
 
-*Tuple* typ spójnej kolekcji.
+*Krotki*  
+Typ spójnej kolekcji.
 
-*Element* typ elementów tablicy.
+*Elem*  
+Typ elementów tablicy.
 
-*Rozmiar* rozmiar tablicy.
+*Rozmiar*  
+Rozmiar tablicy.
 
-*T1* typ pierwszego elementu członkowskiego pary.
+*T1*  
+Typ pierwszego elementu członkowskiego pary.
 
-*T2* typ drugiego elementu członkowskiego pary.
+*T2*  
+Typ drugiego elementu członkowskiego pary.
 
-*Typy* typy elementów spójnej kolekcji.
+*Typy*  
+Typy elementów krotki.
 
 ## <a name="remarks"></a>Uwagi
 
-Szablon klasy ma element członkowski `value` będący wyrażeniem stałej całkowitej którego wartość jest zakres typu krotki `Tuple`.
+Klasa szablonu ma składową `value` oznacza to wyrażenie stałej całkowitej którego wartość jest w zakresie typu spoiny *krotki*.
 
-Specjalizacja szablonów dla tablic ma element członkowski `value` czyli wyrażeniu dającym stałą o wartości `Size`, która jest rozmiar tablicy.
+Specjalizacja szablonu dla tablic ma składową `value` oznacza to wyrażenie stałej całkowitej o wartości *rozmiar*, czyli rozmiar tablicy.
 
-Specjalizacja szablonu dla pary ma element członkowski `value` będący wyrażeniem stałej całkowitej którego wartość jest równa 2.
+Specjalizacja szablonu dla pary ma składową `value` oznacza to wyrażenie stałej całkowitej którego wartość jest równa 2.
 
 ## <a name="example"></a>Przykład
 
@@ -116,9 +122,9 @@ int main()
 
 ## <a name="requirements"></a>Wymagania
 
-**Nagłówek:** \<krotki > **nagłówka:** \<tablicy > (dla specjalizacji tablicy) **nagłówka:** \<narzędzie > (dla specjalizacji pary)
+**Nagłówek:** \<krotki > **nagłówka:** \<tablicy > (dla specjalizacji tablicy) **nagłówka:** \<Narzędzia > (dla specjalizacji pary)
 
-**Namespace:** Standard
+**Namespace:** standardowe
 
 ## <a name="see-also"></a>Zobacz także
 

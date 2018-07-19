@@ -44,12 +44,12 @@ helpviewer_keywords:
 - std::sqrt [C++]
 - std::tan [C++]
 - std::tanh [C++]
-ms.openlocfilehash: 040104eeb43ccfe6225821b7318346bc1fe60f92
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 6fd1712cb5d6c565b5ccea90050d2d4be6a1f7b0
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33848612"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38959995"
 ---
 # <a name="ltcomplexgt-functions"></a>&lt;złożone&gt; funkcji
 
@@ -58,7 +58,7 @@ ms.locfileid: "33848612"
 |[ABS](#abs)|[ARG](#arg)|[conj](#conj)|
 |[COS](#cos)|[COSH](#cosh)|[EXP](#exp)|
 |[imag](#imag)|[log](#log)|[log10](#log10)|
-|[norm —](#norm)|[polar](#polar)|[Pow](#pow)|
+|[norm](#norm)|[polar](#polar)|[Pow](#pow)|
 |[rzeczywiste](#real)|[SIN](#sin)|[SINH](#sinh)|
 |[sqrt](#sqrt)|[tan](#tan)|[TANH](#tanh)|
 
@@ -73,7 +73,7 @@ Type abs(const complex<Type>& complexNum);
 
 ### <a name="parameters"></a>Parametry
 
-`complexNum` Liczby złożonej, którego modulo zostanie określony.
+*complexNum* liczby zespolonej, którego moduł zostanie określony.
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -81,7 +81,7 @@ Moduł liczbą.
 
 ### <a name="remarks"></a>Uwagi
 
-*Modulo* z liczbą jest miarą długość wektora reprezentujący liczby złożonej. Moduł liczbą + bi jest sqrt (<sup>2</sup> + b<sup>2</sup>) pisemnej &#124;+ analizy biznesowej&#124;. *Normy* z liczbą + jest analizy biznesowej (<sup>2</sup> + b<sup>2</sup>), więc resztę z liczbą jest pierwiastek kwadratowy liczby jego normy.
+*Modulo* liczby zespolonej jest miarą długość wektora reprezentujący liczbę złożone. Modulo liczby zespolonej + bi jest sqrt (<sup>2</sup> + b<sup>2</sup>) robaków napisanych &#124;+ bi&#124;. *Norm* liczby zespolonej + BI (<sup>2</sup> + b<sup>2</sup>), więc moduł liczby zespolonej jest pierwiastek kwadratowy z jego normy.
 
 ### <a name="example"></a>Przykład
 
@@ -150,7 +150,7 @@ The complex numbers c2 & c3 have the same principal arguments.
 
 ## <a name="arg"></a>  ARG
 
-Wyodrębnia argument z liczbą.
+Wyodrębnia argumentu z liczbą.
 
 ```cpp
 template <class Type>
@@ -159,15 +159,15 @@ Type arg(const complex<Type>& complexNum);
 
 ### <a name="parameters"></a>Parametry
 
-`complexNum` Liczba złożonych, którego argument zostanie określony.
+*complexNum* liczby zespolonej, którego argument zostanie określony.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Argument liczby złożonej.
+Argument liczby zespolonej.
 
 ### <a name="remarks"></a>Uwagi
 
-*Argument* to kąt, umożliwiający złożonych wektora z dodatnią rzeczywistych osi w płaszczyźnie złożone. Dla liczbą *+ analizy biznesowej*, argument jest równa arctan (*b /*). Kąt ma dodatnią znaczeniu mierzoną w wskazówek zegara od rzeczywistych osi dodatnią i ujemną znaczeniu mierzoną w wskazówek zegara. Główna wartości są większe od - pi i mniejsza niż lub równa + pi.
+*Argument* to kąt, który złożonych wektor sprawia, że dodatnia oś rzeczywistych na płaszczyźnie złożone. Dla liczby zespolonej *+ bi*, argument jest równa arctan (*b /*). Kąt ma dodatnią sens, mierzoną w wskazówek zegara od dodatnią rzeczywistych osi i ujemne sens, mierzoną w z ruchem wskazówek zegara. Jednostki wartości są większe, niż - pi i mniej niż lub równe + pi.
 
 ### <a name="example"></a>Przykład
 
@@ -245,15 +245,15 @@ complex<Type> conj(const complex<Type>& complexNum);
 
 ### <a name="parameters"></a>Parametry
 
-`complexNum` Liczby złożonej, którego zespolonej zostały zwrócone.
+*complexNum* liczby zespolonej, w których zespolonej jest zwracany.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Zespolonej wprowadzania numeru złożone.
+Zespolonej liczby zespolonej danych wejściowych.
 
 ### <a name="remarks"></a>Uwagi
 
-Zespolonej liczbą *+ analizy biznesowej* jest *bi*. Produkt liczbą i jego sprzężenie jest normy numer *a*2 + *b*2.
+Zespolonej liczby zespolonej *+ bi* jest *bi*. Produkt liczbą i jego sprzężenie jest normy numer *a*2 + *b*2.
 
 ### <a name="example"></a>Przykład
 
@@ -310,7 +310,7 @@ The norm of (c1 * conj (c1) ) is c1 * c2 = 25
 
 ## <a name="cos"></a>  COS
 
-Zwraca cosinus liczby złożonej.
+Zwraca cosinus liczby zespolonej.
 
 ```cpp
 template <class Type>
@@ -319,17 +319,17 @@ complex<Type> cos(const complex<Type>& complexNum);
 
 ### <a name="parameters"></a>Parametry
 
-`complexNum` Liczba złożonych, którego cosinus jest określane.
+*complexNum* liczby zespolonej, którego cosinus jest określane.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Liczba złożone, która jest cosinus liczby zespolonej wejściowych.
+Liczby zespolonej będącego cosinus liczby zespolonej danych wejściowych.
 
 ### <a name="remarks"></a>Uwagi
 
-Definiowanie złożonych cosinusów tożsamości:
+Definiowanie cosinusów złożone tożsamości:
 
-COS ( *z*) = (1/2)\*(exp ( *iz*) + exp (- *iz*))
+COS ( *z*) (1/2) =\*(exp ( *iz*) + exp (- *iz*))
 
 COS ( *z*) = cos ( *a* + *bi*) = cos ( *a*) cosh ( *b*)-isin ( *a*) sinh ( *b*)
 
@@ -400,7 +400,7 @@ The complex components cos (vci), where abs (vci) = 1
 
 ## <a name="cosh"></a>  COSH
 
-Zwraca cosinus hiperboliczny dla liczby złożonej.
+Zwraca cosinus hiperboliczny liczby zespolonej.
 
 ```cpp
 template <class Type>
@@ -409,17 +409,17 @@ complex<Type> cosh(const complex<Type>& complexNum);
 
 ### <a name="parameters"></a>Parametry
 
-`complexNum` Liczba złożonych, której cosinus hiperboliczny jest określane.
+*complexNum* liczby zespolonej, której cosinus hiperboliczny jest określane.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Liczba złożone, która jest cosinus hiperboliczny liczby zespolonej wejściowych.
+Liczby zespolonej będącego cosinus hiperboliczny liczby zespolonej danych wejściowych.
 
 ### <a name="remarks"></a>Uwagi
 
 Definiowanie złożonych cosinusów hiperboliczny tożsamości:
 
-COS ( *z*) = (1/2)\*(exp ( *z*) + exp (- *z*))
+COS ( *z*) (1/2) =\*(exp ( *z*) + exp (- *z*))
 
 COS ( *z*) = cosh ( *+ analizy biznesowej*) = cosh ( *a*) cos ( *b*) + isinh ( *a*) sin ( *b*)
 
@@ -490,7 +490,7 @@ The complex components cosh (vci), where abs (vci) = 1
 
 ## <a name="exp"></a>  EXP
 
-Zwraca funkcja wykładnicza z liczbą.
+Zwraca wartość funkcji wykładniczej liczby zespolonej.
 
 ```cpp
 template <class Type>
@@ -499,11 +499,11 @@ complex<Type> exp(const complex<Type>& complexNum);
 
 ### <a name="parameters"></a>Parametry
 
-`complexNum` Złożone number, którego wykładniczej jest określane.
+*complexNum* numer tym złożone, którego wykładniczej określa.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Kod złożone wykładniczej wprowadzania numeru złożone.
+Numer złożone wykładniczą liczby zespolonej danych wejściowych.
 
 ### <a name="example"></a>Przykład
 
@@ -560,7 +560,7 @@ int main() {
 
 ## <a name="imag"></a>  imag
 
-Wyodrębnia urojony składnik liczbą.
+Wyodrębnia urojone części liczby zespolonej.
 
 ```cpp
 template <class Type>
@@ -569,15 +569,15 @@ Type imag(const complex<Type>& complexNum);
 
 ### <a name="parameters"></a>Parametry
 
-`complexNum` Liczba złożonych, których część rzeczywista ma zostać wyodrębniony.
+*complexNum* liczby zespolonej, w których część rzeczywista jest do wyodrębnienia.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Wyrażenie Liczba_zespolona część liczby złożonej jako funkcję globalną.
+Urojone części liczb zespolonych jako funkcję globalną.
 
 ### <a name="remarks"></a>Uwagi
 
-Ta funkcja szablonu nie może służyć do modyfikowania część rzeczywista liczby złożonej. Aby zmienić część rzeczywista, liczbą nowych musi być przypisany wartość składnika.
+Ta funkcja szablonu nie może służyć do modyfikowania rzeczywistych część liczby zespolonej. Aby zmienić część rzeczywista, nowe liczby zespolonej muszą mieć przypisaną wartość składnika.
 
 ### <a name="example"></a>Przykład
 
@@ -611,7 +611,7 @@ The imaginary part of c1 is imag ( c1 ) = 3.
 
 ## <a name="log"></a>  Dziennik
 
-Zwraca logarytm naturalny liczby złożonej.
+Zwraca logarytm naturalny liczby zespolonej.
 
 ```cpp
 template <class Type>
@@ -620,15 +620,15 @@ complex<Type> log(const complex<Type>& complexNum);
 
 ### <a name="parameters"></a>Parametry
 
-`complexNum` Liczba złożonych zależy którego logarytm naturalny.
+*complexNum* liczby zespolonej zależy której obliczyć logarytm naturalny.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Liczba złożone, która jest logarytm naturalny liczby zespolonej wejściowego.
+Liczby zespolonej będącego logarytm naturalny liczby zespolonej danych wejściowych.
 
 ### <a name="remarks"></a>Uwagi
 
-Części gałęzi są rzeczywistych osi ujemna.
+Cenowe gałęzi są ujemne rzeczywistych osi.
 
 ### <a name="example"></a>Przykład
 
@@ -689,15 +689,15 @@ complex<Type> log10(const complex<Type>& complexNum);
 
 ### <a name="parameters"></a>Parametry
 
-`complexNum` Liczba złożonych zależy którego logarytm 10.
+*complexNum* liczby zespolonej zależy którego logarytm 10.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Liczba złożonych, która jest logarytm 10 wejściowych liczby złożonej.
+Liczby zespolonej będącego 10 logarytm liczby zespolonej danych wejściowych.
 
 ### <a name="remarks"></a>Uwagi
 
-Części gałęzi są rzeczywistych osi ujemna.
+Cenowe gałęzi są ujemne rzeczywistych osi.
 
 ### <a name="example"></a>Przykład
 
@@ -747,7 +747,7 @@ int main() {
 }
 ```
 
-## <a name="norm"></a>  norm —
+## <a name="norm"></a>  norm
 
 Wyodrębnia normy liczbą.
 
@@ -758,7 +758,7 @@ Type norm(const complex<Type>& complexNum);
 
 ### <a name="parameters"></a>Parametry
 
-`complexNum` Liczby złożonej, których normy zostanie określony.
+*complexNum* liczby zespolonej, w których norm zostanie określony.
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -766,7 +766,7 @@ Normy liczbą.
 
 ### <a name="remarks"></a>Uwagi
 
-Normy liczbą *+ analizy biznesowej* jest *(*<sup>2</sup> *+ b*<sup>2</sup>*).* Normy liczbą jest kwadrat jego modulo. Resztę z liczbą jest miarą długość wektora reprezentujący liczby złożonej. Moduł liczbą *+ analizy biznesowej* jest `sqrt` *(*<sup>2</sup> *+ b*<sup>2</sup> *),* zapisywane  *&#124;+ analizy biznesowej&#124;.*
+Norm liczby zespolonej *+ bi* jest *(*<sup>2</sup> *+ b*<sup>2</sup>*).* Norm liczby zespolonej jest kwadratowy jego modulo. Modulo liczby zespolonej jest miarą o długości wektora, reprezentujący liczbę złożone. Modulo liczby zespolonej *+ bi* jest `sqrt` *(*<sup>2</sup> *+ b*<sup>2</sup> *),* zapisywane  *&#124;+ bi&#124;.*
 
 ### <a name="example"></a>Przykład
 
@@ -829,9 +829,9 @@ The norm of c2 given by: norm ( c2 ) = 25
 The modulus of c2 is the square root of the norm: sqrt ( normc2 ) = 5.
 ```
 
-## <a name="polar"></a>  polar
+## <a name="polar"></a>  Polar
 
-Zwraca liczby złożonej, co odpowiada określonym modulo i argumentu, w postaci kartezjańskimi.
+Zwraca liczby zespolonej, odnoszące się do określonego modułu, a argument w postaci kartezjańskich wizualizacji.
 
 ```cpp
 template <class Type>
@@ -840,13 +840,13 @@ complex<Type> polar(const Type& _Modulus, const Type& _Argument = 0);
 
 ### <a name="parameters"></a>Parametry
 
-*_Modulus* resztę liczby złożonej trwa danych wejściowych.
+*_Modulus* modulo liczby zespolonej są dane wejściowe.
 
-*_Argument* argument liczby złożonej trwa danych wejściowych.
+*_Argument* argument liczby zespolonej są dane wejściowe.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Formularz kartezjańskimi liczby złożonej określone w formie polar.
+Kartezjańskiego formularz liczby zespolonej określone w formie polarnych.
 
 ### <a name="remarks"></a>Uwagi
 
@@ -906,7 +906,7 @@ Argument of c2 is recovered from c2 using:
 
 ## <a name="pow"></a>  Pow
 
-Oblicza liczby złożonej uzyskany przez zwiększenie base, która jest liczbą do potęgi równej innej liczbie złożone.
+Oblicza liczby zespolonej uzyskać, tworząc podstawowy, która jest liczbą do potęgi innej liczby zespolonej.
 
 ```cpp
 template <class Type>
@@ -924,19 +924,19 @@ complex<Type> pow(const Type& _Base, const complex<Type>& _Power);
 
 ### <a name="parameters"></a>Parametry
 
-`_Base` Liczba złożonych lub liczba, która jest typu parametru dla liczby złożonej, będący podstawą do podniesione do potęgi o funkcji członkowskiej.
+*_Podstawowego* liczby zespolonej lub liczbę, która jest typu parametru dla liczby zespolonej, która jest podstawą zostać podniesiona do potęgi funkcja elementu członkowskiego.
 
-*_Power* liczby całkowitej lub liczby złożonej lub liczba, która jest typu parametru dla liczby złożonej, będącą energii zostać podniesiona do funkcji członkowskiej bazie.
+*_Wyłącz* liczby całkowitej lub liczby zespolonej lub liczbę, która jest typu parametru liczby złożone, z którą jest energii base zostać podniesiona do funkcji składowej.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Liczba złożonych uzyskany przez wywołanie do podanej potęgi określonej podstawy.
+Liczby zespolonej uzyskać, tworząc określonej podstawie do określonej potęgi.
 
 ### <a name="remarks"></a>Uwagi
 
-Funkcje każdego skutecznie konwersji na zwracany typ Obydwa argumenty operacji, a następnie wróć skonwertowany **po lewej stronie** do potęgi **prawo**.
+Funkcje każdego skutecznie Konwertuj oba operandy na zwracany typ, a następnie wróć skonwertowany **po lewej stronie** do potęgi **prawo**.
 
-Wytnij gałęzi jest ujemna osi prawdziwe.
+Wytnij gałęzi jest ujemna rzeczywistych osi.
 
 ### <a name="example"></a>Przykład
 
@@ -1049,7 +1049,7 @@ The argument of ce4 is: -1.14473 radians, which is -65.5882 degrees.
 
 ## <a name="real"></a>  rzeczywiste
 
-Wyodrębnia rzeczywistych składnik liczbą.
+Wyodrębnia rzeczywisty składnik liczby zespolonej.
 
 ```cpp
 template <class Type>
@@ -1058,15 +1058,15 @@ Type real(const complex<Type>& complexNum);
 
 ### <a name="parameters"></a>Parametry
 
-`complexNum` Liczba złożonych, których część rzeczywista ma zostać wyodrębniony.
+*complexNum* liczby zespolonej, w których część rzeczywista jest do wyodrębnienia.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Część rzeczywista liczby złożonej jako funkcję globalną.
+Rzeczywiste część liczby zespolonej jako funkcję globalną.
 
 ### <a name="remarks"></a>Uwagi
 
-Ta funkcja szablonu nie może służyć do modyfikowania część rzeczywista liczby złożonej. Aby zmienić część rzeczywista, liczbą nowych musi być przypisany wartość składnika.
+Ta funkcja szablonu nie może służyć do modyfikowania rzeczywistych część liczby zespolonej. Aby zmienić część rzeczywista, nowe liczby zespolonej muszą mieć przypisaną wartość składnika.
 
 ### <a name="example"></a>Przykład
 
@@ -1100,7 +1100,7 @@ The imaginary part of c1 is imag ( c1 ) = 3.
 
 ## <a name="sin"></a>  SIN
 
-Zwraca sinus liczby złożonej.
+Zwraca sinus liczby zespolonej.
 
 ```cpp
 template <class Type>
@@ -1109,15 +1109,15 @@ complex<Type> sin(const complex<Type>& complexNum);
 
 ### <a name="parameters"></a>Parametry
 
-`complexNum` Liczba złożonych, którego sinus jest określane.
+*complexNum* liczby zespolonej, którego sinus jest określane.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Numer złożone jest sinus liczby zespolonej wejściowego.
+Liczby zespolonej będącego sinus liczby zespolonej danych wejściowych.
 
 ### <a name="remarks"></a>Uwagi
 
-Definiowanie złożonych sinusów tożsamości:
+Definiowanie hiperboliczne złożone tożsamości:
 
 SIN ( *z*) = (1/2 *i*)\*(exp ( *iz*)-exp (- *iz*))
 
@@ -1190,7 +1190,7 @@ The complex components sin (vci), where abs (vci) = 1
 
 ## <a name="sinh"></a>  SINH
 
-Zwraca sinus hiperboliczny liczby złożonej.
+Zwraca sinus hiperboliczny liczby zespolonej.
 
 ```cpp
 template <class Type>
@@ -1199,17 +1199,17 @@ complex<Type> sinh(const complex<Type>& complexNum);
 
 ### <a name="parameters"></a>Parametry
 
-`complexNum` Liczba złożonych, której sinusem hiperbolicznym jest określane.
+*complexNum* liczby zespolonej, której sinusem hiperbolicznym jest określane.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Liczba złożone, która jest sinus hiperboliczny liczby zespolonej wejściowych.
+Liczby zespolonej będącego sinus hiperboliczny liczby zespolonej danych wejściowych.
 
 ### <a name="remarks"></a>Uwagi
 
-Definiowanie złożonych sinusów hiperboliczny tożsamości:
+Definiowanie złożonych sinusy hiperboliczne tożsamości:
 
-SINH ( *z*) = (1/2)\*(exp ( *z*)-exp (- *z*))
+SINH ( *z*) (1/2) =\*(exp ( *z*)-exp (- *z*))
 
 SINH ( *z*) = sinh ( *+ analizy biznesowej*) = sinh ( *a*) cos ( *b*) + *i*cosh ( *a*) sin ( *b*)
 
@@ -1280,7 +1280,7 @@ The complex components sinh (vci), where abs (vci) = 1
 
 ## <a name="sqrt"></a>  SQRT
 
-Oblicza pierwiastek kwadratowy z liczby złożonej.
+Oblicza pierwiastek kwadratowy liczby zespolonej.
 
 ```cpp
 template <class Type>
@@ -1289,19 +1289,19 @@ complex<Type> sqrt(const complex<Type>& complexNum);
 
 ### <a name="parameters"></a>Parametry
 
-`complexNum` Liczba złożonych, której pierwiastek kwadratowy ma zostać znaleziona.
+*complexNum* liczby zespolonej pierwiastek kwadratowy, którego ma zostać znaleziona.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Pierwiastek kwadratowy z liczby złożonej.
+Pierwiastek kwadratowy liczby zespolonej.
 
 ### <a name="remarks"></a>Uwagi
 
-Pierwiastek kwadratowy będzie mieć kąt fazy w zakresie połowy open (-pi/2, pi/2].
+Pierwiastek kwadratowy odniesie kąt fazy w interwale połowicznie rozwarty (-pi/2, pi/2].
 
-Części gałęzi w płaszczyźnie złożone są rzeczywistych osi ujemna.
+Cenowe gałęzi na płaszczyźnie złożone są ujemne rzeczywistych osi.
 
-Pierwiastek kwadratowy z liczby złożonej ma moduł, który jest pierwiastek kwadratowy z liczby wejściowy i argument, który jest połowę wprowadzania numeru.
+Pierwiastek kwadratowy liczby zespolonej będzie miał moduł, który jest pierwiastek kwadratowy z liczby wejściowy i argument, który jest połowa liczby danych wejściowych.
 
 ### <a name="example"></a>Przykład
 
@@ -1356,7 +1356,7 @@ The argument of c2 = ( 1 / 2 ) * arg ( c1 ) =0.785398 radians,
 
 ## <a name="tan"></a> tan
 
-Zwraca tangens liczby złożonej.
+Zwraca tangens liczby zespolonej.
 
 ```cpp
 template <class Type>
@@ -1365,15 +1365,15 @@ complex<Type> tan(const complex<Type>& complexNum);
 
 ### <a name="parameters"></a>Parametry
 
-`complexNum` Liczba złożonych, którego tangens jest określane.
+*complexNum* liczby zespolonej, którego tangens jest określane.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Numer złożone jest tangens liczby zespolonej wejściowego.
+Liczby zespolonej stycznej liczby zespolonej danych wejściowych.
 
 ### <a name="remarks"></a>Uwagi
 
-Definiowanie złożonych cotangens tożsamości:
+Definiowanie cotangens złożone tożsamości:
 
 Tan ( *z*) = sin ( *z*) / cos ( *z*) = (exp ( *iz*)-exp (- *iz*)) / *i*(exp ( *iz*) + exp (- *iz*))
 
@@ -1444,7 +1444,7 @@ The complex components tan (vci), where abs (vci) = 1
 
 ## <a name="tanh"></a>  TANH
 
-Zwraca tangens hiperboliczny dla liczby złożonej.
+Zwraca tangens hiperboliczny liczby zespolonej.
 
 ```cpp
 template <class Type>
@@ -1453,11 +1453,11 @@ complex<Type> tanh(const complex<Type>& complexNum);
 
 ### <a name="parameters"></a>Parametry
 
-`complexNum` Liczba złożonych, której tangens hiperboliczny jest określane.
+*complexNum* liczby zespolonej, której tangens hiperboliczny jest określane.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Liczba złożone, która jest tangens hiperboliczny liczby zespolonej wejściowych.
+Liczby zespolonej będącego tangens hiperboliczny liczby zespolonej danych wejściowych.
 
 ### <a name="remarks"></a>Uwagi
 

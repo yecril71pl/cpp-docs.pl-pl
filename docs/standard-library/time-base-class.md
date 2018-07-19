@@ -16,16 +16,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4c13cd76f5d353cf91997406c8e7f74b5383cf8e
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 6e1111ede44edc36e5399d82b3c4e088b20cc1c9
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33854501"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38957301"
 ---
 # <a name="timebase-class"></a>time_base — Klasa
 
-Klasa służy jako klasę podstawową dla aspekty time_get — klasa szablonu, definiowanie tylko typ wyliczeniowy **dateorder** i kilka stałych tego typu.
+Klasa służy jako klasa bazowa dla zestawów reguł klasy szablonu time_get, definiująca tylko Typ wyliczany `dateorder` oraz kilka stałych tego typu.
 
 ## <a name="syntax"></a>Składnia
 
@@ -46,23 +46,23 @@ public:
 
 ## <a name="remarks"></a>Uwagi
 
-Każdy stała charakteryzuje inny sposób, aby uporządkować składniki daty. Stałe są:
+Każdej z nich charakteryzuje się inny sposób, aby uporządkować składniki daty. Stałe są następujące:
 
-- **no_order** określa nie określonej kolejności.
+- `no_order` Określa losowej kolejności.
 
-- **dmy** określa kolejność dzień, miesiąc, a następnie roku, tak jak 2 grudnia 1979.
+- `dmy` Określa kolejność dzień, miesiąc, a następnie roku, tak jak 2 1979 grudnia.
 
-- **MDY** określa kolejność miesiąc, dzień, a następnie roku, tak jak 2 grudnia 1979.
+- `mdy` Określa kolejność miesiąc, dzień, a następnie roku, tak jak 2 grudnia 1979.
 
-- **YMD** określa kolejność rok, miesiąc, a następnie dziennie, tak jak 1979/12/2.
+- `ymd` Określa kolejność rok, miesiąc, a następnie dzień, jak 1979/12/2.
 
-- **ydm** określa kolejności roku, dzień, miesiąc, tak jak gru 1979:2.
+- `ydm` Określa kolejność rok, dzień, a następnie miesiąca, tak jak gru 1979:2.
 
 ## <a name="requirements"></a>Wymagania
 
 **Nagłówek:** \<ustawień regionalnych >
 
-**Namespace:** Standard
+**Namespace:** standardowe
 
 ## <a name="see-also"></a>Zobacz także
 

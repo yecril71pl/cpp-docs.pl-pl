@@ -17,12 +17,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4144eed22a3a16615d7fa79ecd4828835c6ebe0b
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 73a051eadaf06950e606f475b2bb418425e1b19f
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33846483"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38958877"
 ---
 # <a name="alignedstorage-class"></a>aligned_storage — Klasa
 
@@ -40,13 +40,13 @@ using aligned_storage_t = typename aligned_storage<Len, Align>::type;
 
 ### <a name="parameters"></a>Parametry
 
-`Len` Rozmiar obiektu.
+*Len* rozmiar obiektu.
 
-`Align` Wyrównanie obiektu.
+*Wyrównaj* wyrównanie obiektu.
 
 ## <a name="remarks"></a>Uwagi
 
-Element typedef elementu członkowskiego szablonu `type` jest synonimem typu POD wyrównanie `Align` i rozmiar `Len`. `Align` musi być równa `alignment_of<T>::value` dla niektórych typu `T`, lub domyślne wyrównanie.
+Szablon elementu członkowskiego typedef `type` jest synonimem typu POD z wyrównaniem *Wyrównaj* i rozmiar *Len*. *Wyrównaj* musi być równa `alignment_of<T>::value` dla pewnego typu `T`, lub wyrównanie domyślne.
 
 ## <a name="example"></a>Przykład
 
@@ -77,7 +77,7 @@ aligned to double == 8
 
 **Nagłówek:** \<type_traits >
 
-**Namespace:** Standard
+**Namespace:** standardowe
 
 ## <a name="see-also"></a>Zobacz także
 

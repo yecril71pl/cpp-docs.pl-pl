@@ -1,5 +1,5 @@
 ---
-title: Kontrolowanie zawierania klasy (ATL) | Dokumentacja firmy Microsoft
+title: Kontrolowanie klasy zawierania (ATL) | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,27 +16,27 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 353b4a1a9acaeccd64d99e8ee18914681353ca86
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 2a54da05cb71114f455b24d18004049b2fa91b2a
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32356794"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38959342"
 ---
-# <a name="control-containment-classes"></a>Klasy zawierania formantów
-Następujące klasy zapewniają obsługę zawierania dla kontrolki hostingu:  
+# <a name="control-containment-classes"></a>Klasy zawierania kontrolek
+Następujące klasy umożliwiają zawieranie kontrolki hostingu:  
   
--   [CAxWindow](../atl/reference/caxwindow-class.md) udostępnia metody do manipulowania okna obsługującego formantu ActiveX.  
+-   [CAxWindow](../atl/reference/caxwindow-class.md) zapewnia metody do manipulowania okno które obsługuje formant ActiveX.  
   
--   [CAxWindow2T](../atl/reference/caxwindow2t-class.md) udostępnia metody do manipulowania okna, które obsługuje formantu ActiveX ale ma także obsługa hostingu licencjonowane formanty ActiveX.  
+-   [CAxWindow2T](../atl/reference/caxwindow2t-class.md) zapewnia metody do manipulowania okno które obsługuje formant ActiveX i ma również obsługę hostowania licencjonowane formanty ActiveX.  
   
--   [IAxWinAmbientDispatch](../atl/reference/iaxwinambientdispatch-interface.md) wywoływać metody w tym interfejsie można ustawić właściwości otaczających dostępne do obsługiwanego formantu.  
+-   [IAxWinAmbientDispatch](../atl/reference/iaxwinambientdispatch-interface.md) wywoływać metody, w tym interfejsie można ustawić właściwości otoczenia, która jest dostępna do obsługiwanego formantu.  
   
--   [IAxWinHostWindow](../atl/reference/iaxwinhostwindow-interface.md) wywoływać metody tego interfejsu do utworzenia i/lub dołączyć formantu do obiektu hosta lub można pobrać interfejsu z obsługiwanego formantu.  
+-   [IAxWinHostWindow](../atl/reference/iaxwinhostwindow-interface.md) wywoływać metody, w tym interfejsie do tworzenia i/lub dołączyć formantu do obiektu hosta lub można pobrać interfejsu z obsługiwanego formantu.  
   
 ## <a name="related-articles"></a>Powiązane artykuły  
  [Zawieranie kontrolek ATL — często zadawane pytania](../atl/atl-control-containment-faq.md)  
   
 ## <a name="see-also"></a>Zobacz też  
- [Przegląd klas](../atl/atl-class-overview.md)
+ [Klasa — Przegląd](../atl/atl-class-overview.md)
 

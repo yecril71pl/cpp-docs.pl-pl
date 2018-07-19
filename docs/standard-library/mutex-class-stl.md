@@ -26,16 +26,16 @@ helpviewer_keywords:
 - std::mutex [C++], unlock
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 23e7220d2710465dc8d155cf35ec7d47db4e3c08
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 84a6b685501927d9fbd79fa7c82a90c5671f70b2
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33854080"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38958949"
 ---
 # <a name="mutex-class-c-standard-library"></a>mutex — klasa (standardowa biblioteka C++)
 
-Reprezentuje *typu obiektu mutex*. Obiekty tego typu może służyć do wymuszania wzajemne wykluczenie w programie.
+Reprezentuje *typu obiektu mutex*. Obiekty tego typu może służyć do wymuszenia wzajemnego wykluczenia w ramach programu.
 
 ## <a name="syntax"></a>Składnia
 
@@ -50,26 +50,26 @@ class mutex;
 |Nazwa|Opis|
 |----------|-----------------|
 |[mutex](#mutex)|Konstruuje `mutex` obiektu.|
-|[mutex:: ~ mutex — destruktor](#dtormutex_destructor)|Zwalnia wszystkie zasoby, które były używane przez `mutex` obiektu.|
+|[mutex:: ~ mutex — destruktor](#dtormutex_destructor)|Zwalnia wszelkie zasoby, które były używane przez `mutex` obiektu.|
 
 ### <a name="public-methods"></a>Metody publiczne
 
 |Nazwa|Opis|
 |----------|-----------------|
-|[lock](#lock)|Wątek wywołujący blokuje, dopóki wątek uzyskuje prawo własności do `mutex`.|
-|[native_handle](#native_handle)|Zwraca typ konkretnej implementacji, który reprezentuje dojście obiektu mutex.|
-|[try_lock](#try_lock)|Próbuje uzyskać prawo własności `mutex` bez blokowania.|
+|[lock](#lock)|Blokuje wątek wywołujący, aż wątek uzyskuje własność `mutex`.|
+|[native_handle —](#native_handle)|Zwraca typ zależny od implementacji, który reprezentuje uchwyt mutex.|
+|[try_lock —](#try_lock)|Próby uzyskania własności `mutex` bez blokowania.|
 |[unlock](#unlock)|Zwalnia własność `mutex`.|
 
 ## <a name="requirements"></a>Wymagania
 
-**Nagłówek:** \<obiektu mutex >
+**Nagłówek:** \<mutex >
 
-**Namespace:** Standard
+**Namespace:** standardowe
 
-## <a name="lock"></a>  mutex::Lock
+## <a name="lock"></a>  mutex::Lock —
 
-Wątek wywołujący blokuje, dopóki wątek uzyskuje prawo własności do `mutex`.
+Blokuje wątek wywołujący, aż wątek uzyskuje własność `mutex`.
 
 ```cpp
 void lock();
@@ -77,11 +77,11 @@ void lock();
 
 ### <a name="remarks"></a>Uwagi
 
-Jeśli wątek wywołujący już właścicielem `mutex`, zachowanie jest niezdefiniowany.
+Jeśli wątek wywołujący jest już właścicielem `mutex`, zachowanie jest niezdefiniowane.
 
 ## <a name="mutex"></a>  mutex::mutex — Konstruktor
 
-Konstruuje `mutex` obiekt, który nie jest zablokowany.
+Konstruuje `mutex` obiektu, który nie jest zablokowany.
 
 ```cpp
 constexpr mutex() noexcept;
@@ -89,7 +89,7 @@ constexpr mutex() noexcept;
 
 ## <a name="dtormutex_destructor"></a>  mutex:: ~ mutex — destruktor
 
-Zwalnia wszystkie zasoby, które są używane przez `mutex` obiektu.
+Zwalnia wszelkie zasoby, które są używane przez `mutex` obiektu.
 
 ```cpp
 ~mutex();
@@ -97,11 +97,11 @@ Zwalnia wszystkie zasoby, które są używane przez `mutex` obiektu.
 
 ### <a name="remarks"></a>Uwagi
 
-Jeśli obiekt jest zablokowany, po uruchomieniu destruktor, zachowanie jest niezdefiniowany.
+Jeśli obiekt jest zablokowany, po uruchomieniu destruktora, zachowanie jest niezdefiniowane.
 
 ## <a name="native_handle"></a>  mutex::native_handle
 
-Zwraca typ konkretnej implementacji, który reprezentuje dojście obiektu mutex. Dojście obiektu mutex można w sposób konkretnej implementacji.
+Zwraca typ zależny od implementacji, który reprezentuje uchwyt mutex. Uchwyt mutex może służyć w sposób specyficzne dla implementacji.
 
 ```cpp
 native_handle_type native_handle();
@@ -109,11 +109,11 @@ native_handle_type native_handle();
 
 ### <a name="return-value"></a>Wartość zwracana
 
-`native_handle_type` nie zdefiniowano jako `Concurrency::critical_section *` który jest rzutowany jako `void *`.
+`native_handle_type` jest zdefiniowany jako `Concurrency::critical_section *` , jest rzutowany jako `void *`.
 
-## <a name="try_lock"></a>  mutex::try_lock
+## <a name="try_lock"></a>  mutex::try_lock —
 
-Próbuje uzyskać prawo własności `mutex` bez blokowania.
+Próby uzyskania własności `mutex` bez blokowania.
 
 ```cpp
 bool try_lock();
@@ -121,13 +121,13 @@ bool try_lock();
 
 ### <a name="return-value"></a>Wartość zwracana
 
-`true` Jeśli metoda pomyślnie uzyskuje prawo własności `mutex`; w przeciwnym razie `false`.
+**wartość true,** Jeśli metoda pomyślnie uzyskuje własność `mutex`; w przeciwnym razie **false**.
 
 ### <a name="remarks"></a>Uwagi
 
-Jeśli wątek wywołujący już właścicielem `mutex`, zachowanie jest niezdefiniowany.
+Jeśli wątek wywołujący jest już właścicielem `mutex`, zachowanie jest niezdefiniowane.
 
-## <a name="unlock"></a>  mutex::Unlock
+## <a name="unlock"></a>  mutex::Unlock —
 
 Zwalnia własność `mutex`.
 
@@ -137,7 +137,7 @@ void unlock();
 
 ### <a name="remarks"></a>Uwagi
 
-Jeśli wątek wywołujący nie jest właścicielem `mutex`, zachowanie jest niezdefiniowany.
+Jeśli wątek wywołujący nie jest właścicielem `mutex`, zachowanie jest niezdefiniowane.
 
 ## <a name="see-also"></a>Zobacz także
 

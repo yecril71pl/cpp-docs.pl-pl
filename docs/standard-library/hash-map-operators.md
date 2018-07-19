@@ -9,14 +9,14 @@ f1_keywords:
 dev_langs:
 - C++
 ms.assetid: 24b9bb9e-e983-4060-bce5-2c7c8161ee61
-ms.openlocfilehash: aa5c2a662fb5e827978a7c00aa3035dcc6cc97f2
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 135922bb88b02c00849a577fb8d8457b6fb21989
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33847302"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38958240"
 ---
-# <a name="lthashmapgt-operators"></a>&lt;hash_map —&gt; operatory
+# <a name="lthashmapgt-operators"></a>&lt;hash_map —&gt; operatorów
 
 |||
 |-|-|
@@ -26,9 +26,9 @@ ms.locfileid: "33847302"
 ## <a name="op_neq"></a>  operator! =
 
 > [!NOTE]
-> Ten interfejs API jest nieaktualny. Alternatywą jest [unordered_map — klasa](unordered-map-class.md).
+> Ten interfejs API jest nieaktualny. Alternatywą jest [unordered_map, klasa](unordered-map-class.md).
 
-Testy, jeśli obiekt hash_map po lewej stronie operatora nie jest taki sam jak obiekt hash_map po prawej stronie.
+Sprawdza, czy obiekt hash_map po lewej stronie operatora nie jest równy obiektowi hash_map po prawej stronie.
 
 ```cpp
 bool operator!=(const hash_map <Key, Type, Traits, Allocator>& left, const hash_map <Key, Type, Traits, Allocator>& right);
@@ -36,9 +36,9 @@ bool operator!=(const hash_map <Key, Type, Traits, Allocator>& left, const hash_
 
 ### <a name="parameters"></a>Parametry
 
-`left` Obiekt typu `hash_map`.
+*po lewej stronie* obiektu typu `hash_map`.
 
-`right` Obiekt typu `hash_map`.
+*prawy* obiektu typu `hash_map`.
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -46,9 +46,9 @@ bool operator!=(const hash_map <Key, Type, Traits, Allocator>& left, const hash_
 
 ### <a name="remarks"></a>Uwagi
 
-Porównanie hash_map — obiekty opiera się na parowania porównanie ich elementów. Dwa hash_maps są takie same, jeśli mają one taką samą liczbę elementów i ich odpowiednich elementy mają takie same wartości. W przeciwnym razie ich nie są równe.
+Porównanie obiektów hash_map opiera się na parowania porównania ich elementów. Dwa hash_maps są takie same, jeśli mają taką samą liczbę elementów i ich odpowiednie elementy mają te same wartości. W przeciwnym razie są nierówne.
 
-Elementy członkowskie [< hash_map >](hash-map.md) i [< hash_set >](hash-set.md) pliki nagłówkowe w [ stdext — Namespace](stdext-namespace.md).
+Elementy członkowskie [< hash_map >](hash-map.md) i [< hash_set >](hash-set.md) pliki nagłówkowe w [ stdext Namespace](stdext-namespace.md).
 
 ### <a name="example"></a>Przykład
 
@@ -93,9 +93,9 @@ The hash_maps hm1 and hm3 are equal.
 ## <a name="op_eq_eq"></a>  operator ==
 
 > [!NOTE]
-> Ten interfejs API jest nieaktualny. Alternatywą jest [unordered_map — klasa](unordered-map-class.md).
+> Ten interfejs API jest nieaktualny. Alternatywą jest [unordered_map, klasa](unordered-map-class.md).
 
-Testy, jeśli obiekt hash_map po lewej stronie operatora jest taki sam jak obiekt hash_map po prawej stronie.
+Sprawdza, czy obiekt hash_map po lewej stronie operatora jest równy obiektowi hash_map po prawej stronie.
 
 ```cpp
 bool operator==(const hash_map <Key, Type, Traits, Allocator>& left, const hash_map <Key, Type, Traits, Allocator>& right);
@@ -103,17 +103,17 @@ bool operator==(const hash_map <Key, Type, Traits, Allocator>& left, const hash_
 
 ### <a name="parameters"></a>Parametry
 
-`left` Obiekt typu `hash_map`.
+*po lewej stronie* obiektu typu `hash_map`.
 
-`right` Obiekt typu `hash_map`.
+*prawy* obiektu typu `hash_map`.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-**wartość true,** Jeśli hash_map po lewej stronie operatora jest równa hash_map po prawej stronie operatora; w przeciwnym razie **false**.
+**wartość true,** Jeśli hash_map po lewej stronie operatora jest równy hash_map po prawej stronie operatora; w przeciwnym **false**.
 
 ### <a name="remarks"></a>Uwagi
 
-Porównanie hash_map — obiekty opiera się na parowania porównanie ich elementów. Dwa hash_maps są takie same, jeśli mają one taką samą liczbę elementów i ich odpowiednich elementy mają takie same wartości. W przeciwnym razie ich nie są równe.
+Porównanie obiektów hash_map opiera się na parowania porównania ich elementów. Dwa hash_maps są takie same, jeśli mają taką samą liczbę elementów i ich odpowiednie elementy mają te same wartości. W przeciwnym razie są nierówne.
 
 ### <a name="example"></a>Przykład
 
@@ -158,9 +158,9 @@ The hash_maps hm1 and hm3 are equal.
 ## <a name="op_neq_mm"></a>  Operator! = (hash_multimap)
 
 > [!NOTE]
-> Ten interfejs API jest nieaktualny. Alternatywą jest [unordered_multimap — klasa](unordered-multimap-class.md).
+> Ten interfejs API jest nieaktualny. Alternatywą jest [unordered_multimap, klasa](unordered-multimap-class.md).
 
-Testy, jeśli obiekt hash_multimap po lewej stronie operatora nie jest taki sam jak obiekt hash_multimap po prawej stronie.
+Sprawdza, czy obiekt hash_multimap po lewej stronie operatora nie jest równy obiektowi hash_multimap po prawej stronie.
 
 ```cpp
 bool operator!=(const hash_multimap <Key, Type, Traits, Allocator>& left, const hash_multimap <Key, Type, Traits, Allocator>& right);
@@ -168,9 +168,9 @@ bool operator!=(const hash_multimap <Key, Type, Traits, Allocator>& left, const 
 
 ### <a name="parameters"></a>Parametry
 
-`left` Obiekt typu `hash_multimap`.
+*po lewej stronie* obiektu typu `hash_multimap`.
 
-`right` Obiekt typu `hash_multimap`.
+*prawy* obiektu typu `hash_multimap`.
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -178,7 +178,7 @@ bool operator!=(const hash_multimap <Key, Type, Traits, Allocator>& left, const 
 
 ### <a name="remarks"></a>Uwagi
 
-Porównanie obiektów hash_multimap jest oparta na parowania porównanie ich elementów. Dwa hash_multimaps są takie same, jeśli mają one taką samą liczbę elementów i ich odpowiednich elementy mają takie same wartości. W przeciwnym razie ich nie są równe.
+Porównanie obiektów hash_multimap opiera się na parowania porównania ich elementów. Dwa hash_multimaps są takie same, jeśli mają taką samą liczbę elementów i ich odpowiednie elementy mają te same wartości. W przeciwnym razie są nierówne.
 
 ### <a name="example"></a>Przykład
 
@@ -223,9 +223,9 @@ The hash_multimaps hm1 and hm3 are equal.
 ## <a name="op_eq_eq_mm"></a>  Operator == (hash_multimap)
 
 > [!NOTE]
-> Ten interfejs API jest nieaktualny. Alternatywą jest [unordered_multimap — klasa](unordered-multimap-class.md).
+> Ten interfejs API jest nieaktualny. Alternatywą jest [unordered_multimap, klasa](unordered-multimap-class.md).
 
-Testy, jeśli obiekt hash_multimap po lewej stronie operatora jest taki sam jak obiekt hash_multimap po prawej stronie.
+Sprawdza, czy obiekt hash_multimap po lewej stronie operatora jest równy obiektowi hash_multimap po prawej stronie.
 
 ```cpp
 bool operator==(const hash_multimap <Key, Type, Traits, Allocator>& left, const hash_multimap <Key, Type, Traits, Allocator>& right);
@@ -233,17 +233,17 @@ bool operator==(const hash_multimap <Key, Type, Traits, Allocator>& left, const 
 
 ### <a name="parameters"></a>Parametry
 
-`left` Obiekt typu `hash_multimap`.
+*po lewej stronie* obiektu typu `hash_multimap`.
 
-`right` Obiekt typu `hash_multimap`.
+*prawy* obiektu typu `hash_multimap`.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-**wartość true,** Jeśli hash_multimap po lewej stronie operatora jest równa hash_multimap po prawej stronie operatora; w przeciwnym razie **false**.
+**wartość true,** Jeśli hash_multimap po lewej stronie operatora jest równy hash_multimap po prawej stronie operatora; w przeciwnym **false**.
 
 ### <a name="remarks"></a>Uwagi
 
-Porównanie obiektów hash_multimap jest oparta na parowania porównanie ich elementów. Dwa hash_multimaps są takie same, jeśli mają one taką samą liczbę elementów i ich odpowiednich elementy mają takie same wartości. W przeciwnym razie ich nie są równe.
+Porównanie obiektów hash_multimap opiera się na parowania porównania ich elementów. Dwa hash_multimaps są takie same, jeśli mają taką samą liczbę elementów i ich odpowiednie elementy mają te same wartości. W przeciwnym razie są nierówne.
 
 ### <a name="example"></a>Przykład
 

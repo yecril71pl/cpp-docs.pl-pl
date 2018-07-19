@@ -30,15 +30,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 78f2c1843602c1c1db6b05a16bbea0aceec70df2
-ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
+ms.openlocfilehash: a32963ebb6bfbfcb1063e8eda678693bec872e79
+ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/26/2018
-ms.locfileid: "36955992"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37337287"
 ---
 # <a name="cdraglistbox-class"></a>Klasa CDragListBox
-Oprócz funkcji pole listy Windows `CDragListBox` klasa umożliwia użytkownikowi Przenieś elementy pola listy, takich jak nazwy plików, w polu listy.  
+Ponadto, aby zapewnić funkcjonalność pola listy Windows `CDragListBox` klasy umożliwia użytkownikowi przenoszenie elementów pola listy, takich jak nazwy plików, w polu listy.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -63,16 +63,16 @@ class CDragListBox : public CListBox
 |[CDragListBox::Dragging](#dragging)|Wywoływane przez platformę w czasie trwania operacji przeciągania.|  
 |[CDragListBox::DrawInsert](#drawinsert)|Rysuje prowadnicę wstawiania, przeciągnij pola listy.|  
 |[CDragListBox::Dropped](#dropped)|Wywoływane przez platformę po upuszczeniu elementu.|  
-|[CDragListBox::ItemFromPt](#itemfrompt)|Zwraca współrzędne przeciąganie elementu.|  
+|[CDragListBox::ItemFromPt](#itemfrompt)|Zwraca współrzędne elementu przeciągania.|  
   
 ## <a name="remarks"></a>Uwagi  
- Pola listy z tej możliwości użytkownicy kolejność elementów na liście w jakikolwiek sposób najbardziej przydaje się do nich. Domyślnie pole listy będzie Przenieś element do nowej lokalizacji na liście. Jednak `CDragListBox` obiektów można dostosować, aby skopiować elementy zamiast przenoszenia.  
+ Pola list z tej możliwości użytkownicy kolejność elementów na liście w jakikolwiek sposób najbardziej przydaje się do nich. Domyślnie pole listy będzie przenieść element do nowej lokalizacji na liście. Jednak `CDragListBox` obiekty można dostosować tak, aby skopiować elementy zamiast przenoszenia ich.  
   
- Pole listy skojarzony z `CDragListBox` klasy nie mogą mieć **lbs_sort —** lub **LBS_MULTIPLESELECT** stylu. Opis elementu Style pola listy, zobacz [style pola listy](../../mfc/reference/styles-used-by-mfc.md#list-box-styles).  
+ Skojarzony formant pola listy `CDragListBox` klasy nie może mieć LBS_SORT lub stylu LBS_MULTIPLESELECT. Aby uzyskać opis style pola listy, zobacz [style pola listy](../../mfc/reference/styles-used-by-mfc.md#list-box-styles).  
   
- Aby użyć przeciągnij pole listy w oknie dialogowym istniejących aplikacji, Dodaj pole listy do szablonu okna dialogowego za pomocą edytora okien dialogowych, a następnie przypisz zmienną członkowską (kategorii `Control` i typu zmienną `CDragListBox`) odpowiadającego pola listy kontrolowanie w szablonie okna dialogowego.  
+ Aby użyć przeciągania pola listy w oknie dialogowym istniejących aplikacji, Dodaj pole listy do szablonu okna dialogowego za pomocą edytora okien dialogowych, a następnie przypisz zmienną członkowską (kategorii `Control` i typ zmiennej `CDragListBox`) odpowiadający pole listy kontrolowanie w szablonie okna dialogowego.  
   
- Aby uzyskać więcej informacji na przypisywanie formanty ze zmiennymi Członkowskimi, zobacz [skrót do definiowania zmiennych Członkowskich dla formantów okna dialogowego](../../windows/defining-member-variables-for-dialog-controls.md).  
+ Aby uzyskać więcej informacji na temat przypisywania formanty do zmiennych składowych, zobacz [skrót do definiowania zmiennych Członkowskich dla formantów okna dialogowego](../../windows/defining-member-variables-for-dialog-controls.md).  
   
 ## <a name="inheritance-hierarchy"></a>Hierarchia dziedziczenia  
  [CObject](../../mfc/reference/cobject-class.md)  
@@ -89,21 +89,21 @@ class CDragListBox : public CListBox
  **Nagłówek:** afxcmn.h  
   
 ##  <a name="begindrag"></a>  CDragListBox::BeginDrag  
- Wywoływane przez platformę, gdy wystąpi zdarzenie, które można rozpocząć operacji przeciągania, takich jak naciśnięcie przycisku lewego przycisku myszy.  
+ Wywoływane przez platformę, gdy wystąpi zdarzenie, które można rozpocząć operacji przeciągania, takich jak naciśnięcie klawisza lewego przycisku myszy.  
   
 ```  
 virtual BOOL BeginDrag(CPoint pt);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- *PT*  
- A [CPoint](../../atl-mfc-shared/reference/cpoint-class.md) obiekt, który zawiera współrzędne przeciąganie elementu.  
+ *(czas pacyficzny)*  
+ A [CPoint](../../atl-mfc-shared/reference/cpoint-class.md) obiekt, który zawiera współrzędne elementu przeciągania.  
   
 ### <a name="return-value"></a>Wartość zwracana  
- Różna od zera, jeśli przeciąganie jest dozwolone, w przeciwnym razie 0.  
+ Różna od zera, jeśli przeciąganie może, w przeciwnym razie 0.  
   
 ### <a name="remarks"></a>Uwagi  
- Należy przesłonić tę funkcję, jeśli chcesz kontrolować, co się dzieje, gdy rozpocznie się wykonywanie operacji przeciągania. Domyślna implementacja przechwytuje mysz i pozostaje w trybie przeciągania, dopóki użytkownik kliknie przycisk myszy do lewego lub prawego lub naciśnie klawisz ESC, po tym czasie operacja przeciągania została anulowana.  
+ Należy przesłonić tę funkcję, jeśli chcesz kontrolować, co się dzieje po rozpoczęciu operacji przeciągania. Domyślna implementacja przechwytuje mysz i pozostaje w trybie przeciągnij, dopóki użytkownik kliknie przycisk myszy w lewo lub w prawo lub naciśnie klawisz ESC, w tym czasie operacji przeciągania zostanie anulowane.  
   
 ##  <a name="canceldrag"></a>  CDragListBox::CancelDrag  
  Wywoływane przez platformę, gdy Anulowano operację przeciągania.  
@@ -113,11 +113,11 @@ virtual void CancelDrag(CPoint pt);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- *PT*  
- A [CPoint](../../atl-mfc-shared/reference/cpoint-class.md) obiekt, który zawiera współrzędne przeciąganie elementu.  
+ *(czas pacyficzny)*  
+ A [CPoint](../../atl-mfc-shared/reference/cpoint-class.md) obiekt, który zawiera współrzędne elementu przeciągania.  
   
 ### <a name="remarks"></a>Uwagi  
- Zastąpienie tej funkcji do obsługi dowolnej specjalnego przetwarzania dla formantu pole listy.  
+ Należy przesłonić tę funkcję, aby obsługiwać żadnych specjalnych przetwarzania dla kontrolki pola listy.  
   
 ##  <a name="cdraglistbox"></a>  CDragListBox::CDragListBox  
  Konstruuje `CDragListBox` obiektu.  
@@ -127,30 +127,30 @@ CDragListBox();
 ```  
   
 ##  <a name="dragging"></a>  CDragListBox::Dragging  
- Wywoływane przez platformę, gdy wewnątrz przeciągania elementu pola listy `CDragListBox` obiektu.  
+ Wywoływane przez platformę podczas przeciągania elementu pola listy w ramach `CDragListBox` obiektu.  
   
 ```  
 virtual UINT Dragging(CPoint pt);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- *PT*  
- A [CPoint](../../atl-mfc-shared/reference/cpoint-class.md) obiekt, który zawiera x i y ekranu współrzędne kursora.  
+ *(czas pacyficzny)*  
+ A [CPoint](../../atl-mfc-shared/reference/cpoint-class.md) obiekt, który zawiera x i y ekran współrzędne kursora.  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Identyfikator zasobu kursora do wyświetlenia. Możliwe są następujące wartości:  
   
-- `DL_COPYCURSOR` Wskazuje, że zostanie skopiowany element.  
+- DL_COPYCURSOR wskazuje, że zostanie skopiowany element.  
   
-- `DL_MOVECURSOR` Wskazuje, że element ma zostać przeniesiona.  
+- DL_MOVECURSOR wskazuje, że będzie można przenieść elementu.  
   
-- `DL_STOPCURSOR` Wskazuje, czy bieżący element docelowy upuszczania nie jest akceptowane.  
+- DL_STOPCURSOR wskazuje, czy bieżący element docelowy nie jest dopuszczalna.  
   
 ### <a name="remarks"></a>Uwagi  
- Zwraca domyślne zachowanie `DL_MOVECURSOR`. Należy przesłonić tę funkcję, jeśli chcesz zapewnić dodatkowe funkcje.  
+ Domyślne zachowanie zwraca DL_MOVECURSOR. Należy przesłonić tę funkcję, aby zapewnić dodatkowe funkcje.  
   
 ##  <a name="drawinsert"></a>  CDragListBox::DrawInsert  
- Wywoływane przez platformę, by narysować prowadnicę wstawiania przed elementem o wskazanym indeksie.  
+ Metoda wywoływana przez platformę, by narysować prowadnicę wstawiania przed elementem o wskazanym indeksie.  
   
 ```  
 virtual void DrawInsert(int nItem);
@@ -161,10 +161,10 @@ virtual void DrawInsert(int nItem);
  Liczony od zera indeks punktu wstawiania.  
   
 ### <a name="remarks"></a>Uwagi  
- Wartość - 1 spowoduje wyczyszczenie prowadnicę wstawiania. Należy przesłonić tę funkcję, aby zmodyfikować wygląd i zachowanie prowadnicę wstawiania.  
+ Wartość - 1 powoduje wyczyszczenie prowadnicę wstawiania. Należy przesłonić tę funkcję, aby zmodyfikować wygląd i zachowanie prowadnicę wstawiania.  
   
 ##  <a name="dropped"></a>  CDragListBox::Dropped  
- Wywoływane przez platformę, gdy element zostanie porzucony w `CDragListBox` obiektu.  
+ Wywoływane przez platformę, gdy element zostanie porzucony w ramach `CDragListBox` obiektu.  
   
 ```  
 virtual void Dropped(
@@ -176,11 +176,11 @@ virtual void Dropped(
  *nSrcIndex*  
  Określa liczony od zera indeks porzuconych ciągu.  
   
- *PT*  
+ *(czas pacyficzny)*  
  A [CPoint](../../atl-mfc-shared/reference/cpoint-class.md) obiekt, który zawiera współrzędne lokacji docelowej.  
   
 ### <a name="remarks"></a>Uwagi  
- Domyślne zachowanie kopiuje element pole listy i jego danych do nowej lokalizacji, a następnie usunięcie oryginalnego elementu. Należy przesłonić tę funkcję, aby dostosować zachowanie domyślne, np. włączenie kopii elementów pole listy ma zostać przeciągnięty do innych lokalizacji na liście.  
+ Domyślne zachowanie kopiuje elementu pola listy i jego danych do nowej lokalizacji, a następnie usuwa oryginalnego elementu. Należy przesłonić tę funkcję, aby dostosować zachowanie domyślne, takich jak umożliwianie kopie elementów pola listy, można przeciągać do innych lokalizacji w obrębie listy.  
   
 ##  <a name="itemfrompt"></a>  CDragListBox::ItemFromPt  
  Wywołanie tej funkcji można pobrać liczony od zera indeks elementu pola listy znajdującym się w *pt*.  
@@ -192,17 +192,17 @@ int ItemFromPt(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- *PT*  
- A [CPoint](../../atl-mfc-shared/reference/cpoint-class.md) obiekt zawierający współrzędne punktu, w polu listy.  
+ *(czas pacyficzny)*  
+ A [CPoint](../../atl-mfc-shared/reference/cpoint-class.md) obiekt, który zawiera współrzędne punktu, w polu listy.  
   
  *bAutoScroll*  
- Różna od zera, jeśli przewijanie jest dozwolone, w przeciwnym razie 0.  
+ Różna od zera, jeśli przewijania może, w przeciwnym razie 0.  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Liczony od zera indeks elementu pola listy przeciągania.  
   
 ## <a name="see-also"></a>Zobacz też  
- [Przykładowe MFC TSTCON](../../visual-cpp-samples.md)   
+ [TSTCON gt; próbki MFC](../../visual-cpp-samples.md)   
  [Clistbox — klasa](../../mfc/reference/clistbox-class.md)   
  [Diagram hierarchii](../../mfc/hierarchy-chart.md)   
  [Klasa CListBox](../../mfc/reference/clistbox-class.md)

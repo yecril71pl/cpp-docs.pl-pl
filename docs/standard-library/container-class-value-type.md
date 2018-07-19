@@ -14,19 +14,19 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2a4927657bd0a4944e62493134c041011c142051
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 919d62d967df4e41b5a25e953202352305b50d02
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33841464"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38958169"
 ---
 # <a name="container-classvaluetype"></a>Kontener Class::value_type
 
 > [!NOTE]
-> Ten temat dotyczy w dokumentacji Visual C++ prawidłowo przykład kontenerów używanych w standardowej bibliotece C++. Aby uzyskać więcej informacji, zobacz [standardowe kontenery biblioteki C++](../standard-library/stl-containers.md).
+> Ten temat dotyczy w dokumentacji języka Visual C++ jako prawidłowo przykład kontenerów używanych w standardowej biblioteki języka C++. Aby uzyskać więcej informacji, zobacz [standardowych kontenerów biblioteki języka C++](../standard-library/stl-containers.md).
 
-Zachowuje się synonim parametru szablonu **Ty**.
+Synonim dla parametru szablonu działa *Ty*.
 
 ## <a name="syntax"></a>Składnia
 
@@ -37,7 +37,7 @@ typedef T4 value_type;
 
 ## <a name="remarks"></a>Uwagi
 
-Jest on opisany tutaj jako synonimem nieokreślonego typu **T4** (zazwyczaj **Alloc::value_type**).
+Jest on opisany tutaj jako synonim dla nieokreślonego typu `T4` (zazwyczaj `Alloc::value_type`).
 
 ## <a name="see-also"></a>Zobacz także
 

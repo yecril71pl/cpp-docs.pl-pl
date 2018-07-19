@@ -16,26 +16,26 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8f1d24fb90b99d7b757f628be4b39d42f0c0051f
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 676cc8ea493d113e9ef8a6f85108fdf3bad6ce5f
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33845768"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38959510"
 ---
 # <a name="indirectarray-class"></a>indirect_array — Klasa
 
-Klasy wewnętrzne, pomocnicze szablonu, która obsługuje obiekty, które są podzbiorem valarrays zapewniając operacji między macierzami podzbioru zdefiniowanych przez określenie podzbiór indeksów valarray — nadrzędnego.
+Klasa szablonu wewnętrznego, pomocnicza, która obiektów obsługuje, które są podzbiorem valarrays, zapewniając operacji między macierzami podzbioru definiowaną przez określenie podzbiór indeksów valarray nadrzędnej.
 
 ## <a name="syntax"></a>Składnia
 
 ## <a name="remarks"></a>Uwagi
 
-Klasa opisuje obiekt, który zawiera odwołanie do obiektu **va** klasy [valarray —](../standard-library/valarray-class.md)**\<typu >**, wraz z obiektem **xa**  klasy **valarray — < size_t >**, która opisuje kolejność elementów, aby dokonać wyboru spośród **valarray —\<typu >** obiektu.
+Klasa opisująca obiekt, który zawiera odwołanie do obiektu `va` klasy [valarray](../standard-library/valarray-class.md)**\<typ >**, wraz z obiektem `xa` klasy `valarray<size_t>`, opisano sekwencji elementów, które można wybierać `valarray<Type>` obiektu.
 
-Możesz utworzyć **indirect_array —\<typu >** obiektu Pisząc wyrażenie w postaci **va [xa]**. Funkcje Członkowskie indirect_array — klasa następnie zachowania odpowiedniego sygnatury funkcji zdefiniowane dla **valarray —\<typu >**, ale dotyczy tylko sekwencji wybrane elementy.
+Konstruowanie `indirect_array<Type>` obiektu Pisząc wyrażenie w formie `va[xa]`. Funkcje Członkowskie indirect_array — klasa następnie zachowują się jak odpowiedniej sygnatury funkcji zdefiniowanych dla `valarray<Type>`, z tą różnicą, że dotyczy tylko kolejność wybranych elementów.
 
-Sekwencja składa się z **xa.** [rozmiar](../standard-library/valarray-class.md#size) elementów, gdy element `I` staje się indeks **xa**[ `I`] w **va**.
+Sekwencja składa się z **xa.** [rozmiar](../standard-library/valarray-class.md#size) elementów, gdzie element `I` staje się indeks **xa**[ `I`] w ramach `va`.
 
 ## <a name="example"></a>Przykład:
 
@@ -85,9 +85,9 @@ The modified operand valarray is:  (0 -1 10 -1 10 -1 10 -1 8 -1).
 
 ## <a name="requirements"></a>Wymagania
 
-**Nagłówek:** \<valarray — >
+**Nagłówek:** \<valarray >
 
-**Namespace:** Standard
+**Namespace:** standardowe
 
 ## <a name="see-also"></a>Zobacz także
 

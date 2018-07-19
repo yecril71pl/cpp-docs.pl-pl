@@ -17,12 +17,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b5aaf151d7591776857c5f731841847e31c41239
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 343acc8d23e2b67c1e9f7556ffe2268c94bb3c63
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33858542"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38957905"
 ---
 # <a name="removereference-class"></a>remove_reference — Klasa
 
@@ -40,11 +40,11 @@ using remove_reference_t = typename remove_reference<T>::type;
 
 ### <a name="parameters"></a>Parametry
 
-`T` Typ do zmodyfikowania.
+*T* typ do modyfikacji.
 
 ## <a name="remarks"></a>Uwagi
 
-Wystąpienie `remove_reference<T>` przechowuje zmodyfikowane — typ danych `T1` podczas `T` ma postać `T1&`, w przeciwnym razie `T`.
+Wystąpienie `remove_reference<T>` przechowuje zmodyfikowany typ, który jest `T1` podczas *T* ma postać `T1&`, w przeciwnym razie *T*.
 
 ## <a name="example"></a>Przykład
 
@@ -72,7 +72,7 @@ remove_reference_t<int&> == int
 
 **Nagłówek:** \<type_traits >
 
-**Namespace:** Standard
+**Namespace:** standardowe
 
 ## <a name="see-also"></a>Zobacz także
 

@@ -1,5 +1,5 @@
 ---
-title: Klasa add_lvalue_reference | Dokumentacja firmy Microsoft
+title: add_lvalue_reference, klasa | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,16 +16,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f4d91cfdafcbe81d568bdfffa5ee1b7c99d6bf8d
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 710d7c154477320f7fb65f52f430f4c0666762c2
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33839486"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38956950"
 ---
-# <a name="addlvaluereference-class"></a>add_lvalue_reference — klasa
+# <a name="addlvaluereference-class"></a>add_lvalue_reference, klasa
 
-Odnosi się do typu z typu.
+Sprawia, że odwołanie do typu z typu.
 
 ## <a name="syntax"></a>Składnia
 
@@ -39,11 +39,11 @@ using add_lvalue_reference_t = typename add_lvalue_reference<T>::type;
 
 ### <a name="parameters"></a>Parametry
 
-`T` Typ do zmodyfikowania.
+*T* typ do modyfikacji.
 
 ## <a name="remarks"></a>Uwagi
 
-Wystąpienie modyfikator typu przechowuje zmodyfikowane — typ danych `T` Jeśli `T` jest odwołania do wartości, w przeciwnym razie `T&`.
+Wystąpienie modyfikatora typu przechowuje zmodyfikowany typ, który jest *T* Jeśli *T* jest odwołanie lvalue, w przeciwnym razie `T&`.
 
 ## <a name="example"></a>Przykład
 
@@ -72,7 +72,7 @@ add_lvalue_reference_t<int> == int
 
 **Nagłówek:** \<type_traits >
 
-**Namespace:** Standard
+**Namespace:** standardowe
 
 ## <a name="see-also"></a>Zobacz także
 

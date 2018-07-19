@@ -16,16 +16,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 504d561dd0d7fbc640c898aa8aa70a70337accb8
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: bb03b35ed792bda7c506fd06d6102dda83c768e6
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33860648"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38959274"
 ---
 # <a name="mersennetwisterengine-class"></a>mersenne_twister_engine — Klasa
 
-Generuje losowe sekwencji liczb całkowitych na podstawie algorytmu — trąba powietrzna w ramach projektu Mersenne wysokiej jakości.
+Generuje losową sekwencję liczb całkowitych, w oparciu o algorytmu Mersenne twister wysokiej jakości.
 
 ## <a name="syntax"></a>Składnia
 
@@ -39,23 +39,23 @@ class mersenne_twister_engine;
 
 ### <a name="parameters"></a>Parametry
 
-`UIntType` Typ wyniku liczbę całkowitą bez znaku. Dla typów możliwych [ \<losowe >](../standard-library/random.md).
+*UIntType* typ wyniku liczby całkowitej bez znaku. Aby możliwych typów, zobacz [ \<losowy >](../standard-library/random.md).
 
-`W` **Word rozmiar**. Rozmiar każdego wyrazu w bitach sekwencji stanu. **Warunek wstępny**: `2u < W ≤ numeric_limits<UIntType>::digits`
+*W* **Word rozmiar**. Rozmiar każdego wyrazu w bitach sekwencji stanu. **Warunek wstępny**: `2u < W ≤ numeric_limits<UIntType>::digits`
 
-`N` **Stan: rozmiar**. Liczba elementów (wartości) w sekwencji stanu.
+*N* **stanu rozmiar**. Liczba elementów (wartości) w sekwencji stanu.
 
-`M` **Wielkość przesunięcia**. Liczba elementów, aby pominąć podczas każdego dołączony. **Warunek wstępny**: `0 < M ≤ N`
+*M* **rozmiaru do przesunięcia**. Liczba elementów do pominięcia podczas każdego akcentem. **Warunek wstępny**: `0 < M ≤ N`
 
-`R` **Bity maski**. **Warunek wstępny**: `R ≤ W`
+*R* **maski bitów**. **Warunek wstępny**: `R ≤ W`
 
-`A` **Maska XOR**. **Warunek wstępny**: `A ≤ (1u<<W) - 1u`
+*A* **maska XOR**. **Warunek wstępny**: `A ≤ (1u<<W) - 1u`
 
-`U`, `S`, `T`, `L` **Tempering shift parametry**. Używane jako wartości shift podczas zaszyfrowanie (jej). Warunek wstępny: `U,S,T,L ≤ W`
+*U*, *S*, *T*, *L* **parametry przesunięcia Tempering**. Używane jako wartości przesunięcia podczas zaszyfrowanie (jej). Warunek wstępny: `U,S,T,L ≤ W`
 
-`D`, `B`, `C` **Tempering bit maski parametry**. Używane jako wartości maski bitowej podczas zaszyfrowanie (jej). Warunek wstępny: `D,B,C ≤ (1u<<W) - 1u`
+*D*, *B*, *C* **Tempering bit maski parametry**. Używane jako wartości maski bitowej podczas zaszyfrowanie (jej). Warunek wstępny: `D,B,C ≤ (1u<<W) - 1u`
 
-`F` **Mnożnik inicjowania**. Używane z inicjalizacją sekwencji. Warunek wstępny: `F ≤ (1u<<W) - 1u`
+*F* **mnożnik inicjowania**. Używane z inicjalizacją sekwencji. Warunek wstępny: `F ≤ (1u<<W) - 1u`
 
 ## <a name="members"></a>Elementy członkowskie
 
@@ -64,21 +64,21 @@ class mersenne_twister_engine;
 |`mersenne_twister_engine::mersenne_twister_engine`|`mersenne_twister_engine::min`|`mersenne_twister_engine::discard`|
 |`mersenne_twister_engine::operator()`|`mersenne_twister_engine::max`|`mersenne_twister_engine::seed`|
 
-`default_seed` jest elementem członkowskim stałej, zdefiniowanej jako `5489u`, używana jako domyślna wartość parametru `mersenne_twister_engine::seed` i Konstruktor pojedynczej wartości.
+`default_seed` jest elementem członkowskim stałą, definiowany jako `5489u`, który jest używany jako wartość domyślna parametru `mersenne_twister_engine::seed` i konstruktora pojedynczej wartości.
 
-Aby uzyskać więcej informacji na temat aparatu członków zobacz [ \<losowe >](../standard-library/random.md).
+Aby uzyskać więcej informacji na temat elementów członkowskich aparatu zobacz [ \<losowy >](../standard-library/random.md).
 
 ## <a name="remarks"></a>Uwagi
 
-Ta klasa szablonu opisuje losowe aparat numer, zwracanie wartości w interwale zamknięte [ `0`, `2` <sup>W</sup> - `1`]. Przechowuje duża wartość całkowitą z `W * (N - 1) + R` usługi bits. Plik `W` bitów w czasie z tym duża wartość, a jeśli został użyty wszystkie bity go twists duża wartość przesunięciu i łączenie usługi bits, aby miała nowego zestawu usługi bits do wyodrębniania. Stan aparatu jest ostatni `N` `W`-bit wartości użyte, jeśli `operator()` została wywołana w co najmniej `N` czas, w przeciwnym razie `M` `W`-bit wartości, które zostały już użyte oraz za ostatni `N - M` wartości z inicjatora.
+Ta klasa szablonu opisuje losowego silnika liczb, zwracanie wartości w zamkniętym przedziale [ `0`, `2` <sup>W</sup> - `1`]. Przechowuje dużą wartość całkowitą z `W * (N - 1) + R` usługi bits. Wyodrębnia *W* bitów jednorazowo z tej dużej wartości, a kiedy zużyje wszystkie bity, skręca dużą wartość przez przesunięcie i zmieszanie bitów, tak aby mieć nowy zestaw bitów w celu wyodrębnienia z. Stan aparatu to ostatnie `N` `W`-bit używane, jeśli wartości `operator()` została wywołana co najmniej *N* czas, w przeciwnym razie `M` `W`-bitowe wartości, które zostały użyte, a ostatni `N - M` wartości inicjatora.
 
-Generator twists duża wartość, która przechowuje za pomocą rejestru shift skręconych opinii uogólniony zdefiniowanych przez wartości przesunięcia `N` i `M`, wartość dołączony `R`i warunkowego maska XOR `A`. Ponadto usługi bits rejestru shift nieprzetworzone są zaszyfrowane (ograniczony) zgodnie z macierzy zaszyfrowanie z bitowego zdefiniowanej przez wartości `U`, `D`, `S`, `B`, `T`, `C`, i `L`.
+Generator skręca dużą wartość, która przechowuje, za pomocą rejestru shift skręconych opinii uogólniony, zdefiniowane przez wartości przesunięcia *N* i *M*, wartość akcentem *R*, a warunkowe maska XOR *A*. Ponadto bity rejestru shift pierwotne są zaszyfrowane (UFNOŚĆ), zgodnie z macierzy zaszyfrowanie bit zdefiniowanej przez wartości *U*, *D*, *S*, *B* , *T*, *C*, i *L*.
 
-Argument szablonu `UIntType` musi być wystarczająco duży, aby pomieścić wartości do `2` <sup>W</sup> - `1`. Wartości do argumentów szablonu musi spełniać następujące wymagania: `2u < W, 0 < M, M ≤ N, R ≤ W, U ≤ W, S ≤ W, T ≤ W, L ≤ W, W ≤ numeric_limits<UIntType>::digits, A ≤ (1u<<W) - 1u, B ≤ (1u<<W) - 1u, C ≤ (1u<<W) - 1u, D ≤ (1u<<W) - 1u, and F ≤ (1u<<W) - 1u`.
+Argument szablonu `UIntType` musi być wystarczająco duży, aby przechowywać wartości do `2` <sup>W</sup> - `1`. Wartości innych argumentów szablonu muszą spełniać następujące wymagania: `2u < W, 0 < M, M ≤ N, R ≤ W, U ≤ W, S ≤ W, T ≤ W, L ≤ W, W ≤ numeric_limits<UIntType>::digits, A ≤ (1u<<W) - 1u, B ≤ (1u<<W) - 1u, C ≤ (1u<<W) - 1u, D ≤ (1u<<W) - 1u, and F ≤ (1u<<W) - 1u`.
 
-Mimo że można bezpośrednio utworzyć generator z tym aparatem, zaleca się, że używany jest jeden z tych wstępnie zdefiniowanych definicje typów:
+Chociaż można utworzyć generatora z tego aparatu bezpośrednio, zalecane jest korzystanie z jednej z tych definicji wstępnie zdefiniowanych typów:
 
-`mt19937`: aparat — trąba powietrzna w ramach projektu Mersenne 32-bitowych (Matsumoto i Nishimura, 1998).
+`mt19937`: 32-bitowych Mersenne twister (Matsumoto i aparat Nishimura-1998).
 
 ```cpp
 typedef mersenne_twister_engine<unsigned int, 32, 624, 397,
@@ -89,7 +89,7 @@ typedef mersenne_twister_engine<unsigned int, 32, 624, 397,
     18, 1812433253> mt19937;
 ```
 
-`mt19937_64`: aparat — trąba powietrzna w ramach projektu Mersenne 64-bitowych (Matsumoto i Nishimura, 2000).
+`mt19937_64`: aparatu 64-bitowych Mersenne twister (Matsumoto i Nishimura, 2000).
 
 ```cpp
 typedef mersenne_twister_engine<unsigned long long, 64, 312, 156,
@@ -100,18 +100,18 @@ typedef mersenne_twister_engine<unsigned long long, 64, 312, 156,
     43, 6364136223846793005ULL> mt19937_64;
 ```
 
-Aby uzyskać szczegółowe informacje na temat algorytm — trąba powietrzna w ramach projektu Mersenne, zobacz artykuł Wikipedia [— trąba powietrzna w ramach projektu Mersenne](http://go.microsoft.com/fwlink/p/?linkid=402356).
+Aby uzyskać szczegółowe informacje na temat algorytmu Mersenne twister Zobacz artykułu w Wikipedii [Mersenne twister](http://go.microsoft.com/fwlink/p/?linkid=402356).
 
 ## <a name="example"></a>Przykład
 
-Na przykład kod, zobacz [ \<losowe >](../standard-library/random.md).
+Dla przykładu kodu zobacz [ \<losowy >](../standard-library/random.md).
 
 ## <a name="requirements"></a>Wymagania
 
-**Nagłówek:** \<losowe >
+**Nagłówek:** \<losowy >
 
-**Namespace:** Standard
+**Namespace:** standardowe
 
 ## <a name="see-also"></a>Zobacz także
 
-[\<losowe >](../standard-library/random.md)<br/>
+[\<losowy >](../standard-library/random.md)<br/>

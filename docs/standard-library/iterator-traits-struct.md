@@ -17,16 +17,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 57387af452ff4a127eec6b669cec6e02863b8fd3
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: e0b4221e32b6e85df0b559b1d6d4ecda381d8e3d
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33856625"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38959641"
 ---
 # <a name="iteratortraits-struct"></a>iterator_traits — Struktura
 
-Struktura pomocnika szablon używany do określenia wszystkich definicji typu krytycznego mających iteratora.
+Struktura pomocnika szablonu używany do określenia wszystkich definicji typu krytycznego dla mających iterator.
 
 ## <a name="syntax"></a>Składnia
 
@@ -43,23 +43,23 @@ struct iterator_traits {
 
 ## <a name="remarks"></a>Uwagi
 
-Struktura szablonu określa typy elementów członkowskich
+Struktura szablon definiuje typy elementów członkowskich
 
-- **iterator_category**: synonimem **Iterator::iterator_category**.
+- `iterator_category`: jest to synonim `Iterator::iterator_category`.
 
-- `value_type`: synonimem **Iterator::value_type**.
+- `value_type`: jest to synonim `Iterator::value_type`.
 
-- `difference_type`: synonimem **Iterator::difference_type**.
+- `difference_type`: jest to synonim `Iterator::difference_type`.
 
-- `distance_type`: synonimem **Iterator::difference_type.**
+- `distance_type`: jest to synonim `Iterator::difference_type.`
 
-- **wskaźnik**: synonimem **Iterator::pointer**.
+- `pointer`: jest to synonim `Iterator::pointer`.
 
-- **Odwołanie**: synonimem **Iterator::reference**.
+- `reference`: jest to synonim `Iterator::reference`.
 
-Częściowe specjalizacje określić typy krytyczne skojarzone z wskaźnik do obiektu typu **typu \***  lub const **typu \*** .
+Częściowe specjalizacje określić typy krytyczne skojarzony wskaźnik do obiektu typu **typu \***  lub const **typu \*** .
 
-W tej implementacji, które umożliwia także kilka funkcji szablonów, które nie korzystać z częściowa specjalizacja:
+W tej implementacji, które można również użyć kilku funkcji szablonu, które nie należy wprowadzać użytkowania częściowej specjalizacji:
 
 ```cpp
 template <class Category, class Type, class Diff>
@@ -81,7 +81,7 @@ template <class Ty>
 ptrdiff_t *_Dist_type(const Ty *);
 ```
 
-te określają, niektóre z takich samych typach więcej pośrednio. Jako argumentów w wywołaniu funkcji korzystania z tych funkcji. Ich jedynym celem jest podać parametr klasy szablonu przydatne do wywołanej funkcji.
+te określają kilka takich samych typach bardziej pośrednio. Te funkcje są używane jako argumentów w wywołaniu funkcji. Jedynym ich celem jest podać parametr klasy szablonu przydatne dla wywoływanej funkcji.
 
 ## <a name="example"></a>Przykład
 
@@ -128,9 +128,9 @@ struct std::bidirectional_iterator_tag
 
 ## <a name="requirements"></a>Wymagania
 
-**Nagłówek:** \<iteratora >
+**Nagłówek:** \<iterator >
 
-**Namespace:** Standard
+**Namespace:** standardowe
 
 ## <a name="see-also"></a>Zobacz także
 

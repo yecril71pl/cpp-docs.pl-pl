@@ -17,12 +17,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7b9aaae690acd372e8482ac8a0e33a14e030e4b3
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 3c0eaf8eeab1c5d9c024baa85af025f2294956e8
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33855334"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38959287"
 ---
 # <a name="removeconst-class"></a>remove_const — Klasa
 
@@ -42,11 +42,11 @@ using remove_const_t = typename remove_const<T>::type;
 
 ### <a name="parameters"></a>Parametry
 
-`T` Typ do zmodyfikowania.
+*T* typ do modyfikacji.
 
 ## <a name="remarks"></a>Uwagi
 
-Wystąpienie `remove_const<T>` przechowuje zmodyfikowane — typ danych `T1` podczas `T` ma postać `const T1`, w przeciwnym razie `T`.
+Wystąpienie `remove_const<T>` przechowuje zmodyfikowany typ, który jest `T1` podczas *T* ma postać `const T1`, w przeciwnym razie *T*.
 
 ## <a name="example"></a>Przykład
 
@@ -74,7 +74,7 @@ remove_const_t<const int> == int
 
 **Nagłówek:** \<type_traits >
 
-**Namespace:** Standard
+**Namespace:** standardowe
 
 ## <a name="see-also"></a>Zobacz także
 

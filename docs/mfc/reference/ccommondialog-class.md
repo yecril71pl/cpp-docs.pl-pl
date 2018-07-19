@@ -18,15 +18,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 53f53bdb19c6f40d73179b600051ecfaf6b69c94
-ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
+ms.openlocfilehash: d6821b7a33339b2a143778172caa7a4a22cb101e
+ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/26/2018
-ms.locfileid: "36950638"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37335918"
 ---
 # <a name="ccommondialog-class"></a>Klasa CCommonDialog
-Klasa podstawowa dla klas, które zapewniają funkcje wspólne okna dialogowe systemu Windows.  
+Klasa bazowa dla klas, które zapewniają funkcjonalność wspólnych okien dialogowych Windows.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -43,7 +43,7 @@ class CCommonDialog : public CDialog
 |[CCommonDialog::CCommonDialog](#ccommondialog)|Konstruuje `CCommonDialog` obiektu.|  
   
 ## <a name="remarks"></a>Uwagi  
- Następujące klasy Hermetyzowanie funkcji wspólne okna dialogowe systemu Windows:  
+ Następujące klasy hermetyzacji wspólnych okien dialogowych Windows funkcji:  
   
 - [CFileDialog](../../mfc/reference/cfiledialog-class.md)  
   
@@ -84,7 +84,7 @@ explicit CCommonDialog(CWnd* pParentWnd);
   
 ### <a name="parameters"></a>Parametry  
  *pParentWnd*  
- Wskazuje obiekt okna nadrzędnego lub właściciela (typu [CWnd](../../mfc/reference/cwnd-class.md)) do której należy obiektu okna dialogowego. Jeśli jest **NULL**, okna nadrzędnego obiektu okna dialogowego ma ustawioną wartość okna głównego aplikacji.  
+ Wskazuje na obiekt okna nadrzędnego lub właściciela (typu [CWnd](../../mfc/reference/cwnd-class.md)) do którego należy obiekt okna dialogowego. Jeśli ma wartość NULL, okna nadrzędnego obiektu okna dialogowego jest ustawiony na okna głównego aplikacji.  
   
 ### <a name="remarks"></a>Uwagi  
  Zobacz [CDialog::CDialog](../../mfc/reference/cdialog-class.md#cdialog) pełne informacje.  

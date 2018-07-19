@@ -18,16 +18,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bf7b8bf3015879643728358258cfe4a67536b3ea
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 94c84a8fd6b3aacbedf9d624fc750f98da4531e9
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33863790"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38957938"
 ---
 # <a name="ltostreamgt"></a>&lt;ostream&gt;
 
-Definiuje klasę szablonu [basic_ostream —](../standard-library/basic-ostream-class.md), która przekazuje wstawienia dla iostream. Nagłówek definiuje również kilka manipulatory pokrewne. (Ten nagłówek jest zwykle dołączone dla Ciebie przez inną nagłówków iostream. Rzadko należy dołączyć go bezpośrednio.)
+Definiuje klasę szablonu [basic_ostream](../standard-library/basic-ostream-class.md), która pośredniczy wstawienia dla iostream. Nagłówek definiuje również kilka powiązanych manipulatory. (Tego pliku nagłówkowego jest zazwyczaj uwzględniony dla Ciebie żadnego innego nagłówków iostream. Rzadko należy dołączyć go bezpośrednio.)
 
 ## <a name="syntax"></a>Składnia
 
@@ -40,17 +40,17 @@ Definiuje klasę szablonu [basic_ostream —](../standard-library/basic-ostream-
 
 |Nazwa typu|Opis|
 |-|-|
-|[ostream](../standard-library/ostream-typedefs.md#ostream)|Tworzy typ z `basic_ostream` które jest przeznaczone na `char` i `char_traits` specjalne na `char`.|
-|[wostream](../standard-library/ostream-typedefs.md#wostream)|Tworzy typ z `basic_ostream` które jest przeznaczone na `wchar_t` i `char_traits` specjalne na `wchar_t`.|
+|[ostream](../standard-library/ostream-typedefs.md#ostream)|Tworzy typ z `basic_ostream` które jest przeznaczone na **char** i `char_traits` wyspecjalizowane na **char**.|
+|[wostream](../standard-library/ostream-typedefs.md#wostream)|Tworzy typ z `basic_ostream` które jest przeznaczone na **wchar_t** i `char_traits` wyspecjalizowane na **wchar_t**.|
 
 ### <a name="manipulators"></a>Manipulatory
 
 |||
 |-|-|
-|[endl](../standard-library/ostream-functions.md#endl)|Przerywa wiersza i opróżnia bufor.|
-|[kończy się](../standard-library/ostream-functions.md#ends)|Kończy się ciągiem.|
+|[endl](../standard-library/ostream-functions.md#endl)|Kończy działanie wiersza i opróżnia bufor.|
+|[kończy się](../standard-library/ostream-functions.md#ends)|Kończy ciąg.|
 |[flush](../standard-library/ostream-functions.md#flush)|Opróżnia bufor.|
-|[swap](../standard-library/ostream-functions.md#swap)|Zamienia wartości po lewej stronie `basic_ostream` obiekt parametru do tych praw `basic_ostream` obiekt parametru.|
+|[swap](../standard-library/ostream-functions.md#swap)|Wymienia wartości lewej strony `basic_ostream` obiektu parametr dla osób, które po prawej stronie `basic_ostream` obiektu parametru.|
 
 ### <a name="operators"></a>Operatory
 
@@ -62,7 +62,7 @@ Definiuje klasę szablonu [basic_ostream —](../standard-library/basic-ostream-
 
 |Class|Opis|
 |-|-|
-|[basic_ostream](../standard-library/basic-ostream-class.md)|Klasy szablonów opisano obiekt, który kontroluje wstawiania elementów i obiektów zakodowanych w buforze strumienia.|
+|[basic_ostream](../standard-library/basic-ostream-class.md)|Klasa szablonu opisuje obiekt, który kontroluje wstawiania elementów i zakodowany obiekty do buforu strumienia.|
 
 ## <a name="see-also"></a>Zobacz także
 

@@ -1,5 +1,5 @@
 ---
-title: '&lt;Tuple&gt; operatory | Dokumentacja firmy Microsoft'
+title: '&lt;Krotka&gt; operatory | Dokumentacja firmy Microsoft'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.topic: reference
@@ -13,14 +13,14 @@ f1_keywords:
 dev_langs:
 - C++
 ms.assetid: f25752dc-d3e2-4e12-b5ac-9a8682ca60ed
-ms.openlocfilehash: c3e5c1e82e98379ff2cefae48f8af89f8fc0b698
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: ce4c1a0b7fa1771cf80437d27ed9dd89baa5f220
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33859075"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38956966"
 ---
-# <a name="lttuplegt-operators"></a>&lt;Tuple&gt; operatory
+# <a name="lttuplegt-operators"></a>&lt;Krotka&gt; operatorów
 
 ||||
 |-|-|-|
@@ -40,7 +40,8 @@ bool operator!=(const tuple<T1, T2, ..., TN>& tpl1,
 
 ### <a name="parameters"></a>Parametry
 
-`TN` Typ elementu n-ty spójnej kolekcji.
+*TN*  
+ Typ elementu spójnej kolekcji n-ty.
 
 ### <a name="remarks"></a>Uwagi
 
@@ -93,7 +94,7 @@ true
 
 ## <a name="op_lt"></a>  Operator&lt;
 
-Porównaj `tuple` mniej obiektów.
+Porównaj `tuple` obiekty za niższą cenę.
 
 ```cpp
 template <class T1, class T2, ..., class TN,
@@ -104,11 +105,12 @@ bool operator<(const tuple<T1, T2, ..., TN>& tpl1,
 
 ### <a name="parameters"></a>Parametry
 
-`TN` Typ elementu n-ty spójnej kolekcji.
+*TN*  
+ Typ elementu spójnej kolekcji n-ty.
 
 ### <a name="remarks"></a>Uwagi
 
-Funkcja zwraca wartość true, gdy `N` jest większa niż 0 i pierwsza wartość różne `tpl1` porównuje poniżej odpowiednie wartości w `tpl2`, w przeciwnym razie zwraca wartość false.
+Funkcja zwraca wartość true, gdy `N` jest większa niż 0 i pierwszy różne wartości w `tpl1` porównuje mniejsze niż odpowiednie wartości w `tpl2`, w przeciwnym razie zwraca wartość false.
 
 ### <a name="example"></a>Przykład
 
@@ -157,7 +159,7 @@ true
 
 ## <a name="op_lt_eq"></a>  Operator&lt;=
 
-Porównaj `tuple` obiektów mniejsze lub równe.
+Porównaj `tuple` obiektów na mniejsze lub równe.
 
 ```cpp
 template <class T1, class T2, ..., class TN,
@@ -168,7 +170,8 @@ bool operator<=(const tuple<T1, T2, ..., TN>& tpl1,
 
 ### <a name="parameters"></a>Parametry
 
-`TN` Typ elementu n-ty spójnej kolekcji.
+*TN*  
+ Typ elementu spójnej kolekcji n-ty.
 
 ### <a name="remarks"></a>Uwagi
 
@@ -232,7 +235,8 @@ bool operator==(const tuple<T1, T2, ..., TN>& tpl1,
 
 ### <a name="parameters"></a>Parametry
 
-`TN` Typ elementu n-ty spójnej kolekcji.
+*TN*  
+ Typ elementu spójnej kolekcji n-ty.
 
 ### <a name="remarks"></a>Uwagi
 
@@ -285,7 +289,7 @@ false
 
 ## <a name="op_gt"></a>  Operator&gt;
 
-Porównaj `tuple` obiektów na większy.
+Porównaj `tuple` obiektów, aby uzyskać większą.
 
 ```cpp
 template <class T1, class T2, ..., class TN,
@@ -296,7 +300,8 @@ bool operator>(const tuple<T1, T2, ..., TN>& tpl1,
 
 ### <a name="parameters"></a>Parametry
 
-`TN` Typ elementu n-ty spójnej kolekcji.
+*TN*  
+ Typ elementu spójnej kolekcji n-ty.
 
 ### <a name="remarks"></a>Uwagi
 
@@ -349,7 +354,7 @@ true
 
 ## <a name="op_gt_eq"></a>  Operator&gt;=
 
-Porównaj `tuple` obiekty większy lub równy.
+Porównaj `tuple` obiektów większe lub równe.
 
 ```cpp
 template <class T1, class T2, ..., class TN,
@@ -360,7 +365,8 @@ bool operator>=(const tuple<T1, T2, ..., TN>& tpl1,
 
 ### <a name="parameters"></a>Parametry
 
-`TN` Typ elementu n-ty spójnej kolekcji.
+*TN*  
+ Typ elementu spójnej kolekcji n-ty.
 
 ### <a name="remarks"></a>Uwagi
 

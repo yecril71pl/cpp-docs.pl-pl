@@ -1,5 +1,5 @@
 ---
-title: Określanie strony właściwości (ALT) | Dokumentacja firmy Microsoft
+title: Określanie stron właściwości (ATL) | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,31 +17,31 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e8d4cbeaa8ea9a57f9287f2d2fe78c61884ba4a3
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 7119dca24a6b6ec5b66e52d7e2c01cd66985e764
+ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32358928"
+ms.lasthandoff: 07/05/2018
+ms.locfileid: "37848379"
 ---
-# <a name="specifying-property-pages"></a>Określanie strony właściwości
-Podczas tworzenia formantu ActiveX, często można skojarzyć go z strony właściwości, które mogą służyć do ustawiania właściwości formantu. Kontroluje użycia kontenery **ISpecifyPropertyPages** interfejsu, aby dowiedzieć się, które strony właściwości może służyć do ustawiania właściwości formantu. Musisz zaimplementować ten interfejs formantu.  
+# <a name="specifying-property-pages"></a>Określanie stron właściwości
+Podczas tworzenia formantu ActiveX, często można skojarzyć go na stronach właściwości, które mogą służyć do ustawiania właściwości formantu. Kontrolowanie użycia kontenery `ISpecifyPropertyPages` interfejsu, aby dowiedzieć się, które strony właściwości może służyć do ustawiania właściwości formantu. Należy zaimplementować ten interfejs na Twoją kontrolą.  
   
- Aby zaimplementować **ISpecifyPropertyPages** za pomocą biblioteki ATL, wykonaj następujące czynności:  
+ Aby zaimplementować `ISpecifyPropertyPages` przy użyciu biblioteki ATL, wykonaj następujące czynności:  
   
 1.  Pochodzi z klasy [ISpecifyPropertyPagesImpl](../atl/reference/ispecifypropertypagesimpl-class.md).  
   
-2.  Dodaj wpis dla **ISpecifyPropertyPages** do własnej klasy COM mapy.  
+2.  Dodaj wpis dla `ISpecifyPropertyPages` do mapy COM swojej klasy.  
   
-3.  Dodaj [PROP_PAGE](reference/property-map-macros.md#prop_page) wpisu mapę właściwości dla każdej strony skojarzone z formantu.  
+3.  Dodaj [PROP_PAGE](reference/property-map-macros.md#prop_page) wpisu do map właściwości dla każdej strony skojarzonych z Twoją kontrolą.  
   
 > [!NOTE]
->  Podczas generowania za pomocą formantu standardowego [Kreator formantu ATL](../atl/reference/atl-control-wizard.md), będzie miał tylko do dodawania `PROP_PAGE` wpisów do mapy właściwości. Kreator generuje kod wymagane inne czynności.  
+>  Podczas generowania, za pomocą formantu standardowego [Kreator kontrolki ATL](../atl/reference/atl-control-wizard.md), tylko trzeba będzie dodać wpisy PROP_PAGE map właściwości. Kreator generuje kod wymagane inne czynności.  
   
- Kontenerów dobrze działające będą wyświetlane na stronach właściwości określony w tej samej kolejności jak `PROP_PAGE` wpisy mapy właściwości. Ogólnie rzecz biorąc należy umieścić wpisów stron właściwości standardowych po pozycji niestandardowych stron w mapie właściwości, aby użytkownicy widzieli najpierw stron specyficzne dla formantu.  
+ Dobrze działające kontenery będą wyświetlane na stronach właściwości określonego w takiej samej kolejności jak wpisy PROP_PAGE w mapie właściwości. Ogólnie rzecz biorąc należy umieszczać wpisów stron właściwości standardowych po pozycji stron niestandardowego w mapowaniu właściwości, dzięki czemu użytkownicy zobaczą specyficzne dla formantu strony najpierw.  
   
 ## <a name="example"></a>Przykład  
- Następujące klasy kalendarza kontrolować używa **ISpecifyPropertyPages** interfejsu mówić kontenerów, które właściwości można ustawić za pomocą strony niestandardowa data i strony kolorów podstawowych.  
+ Następujące klasy dla kalendarza kontrolować używa `ISpecifyPropertyPages` interfejsu stwierdzić, kontenery, które można ustawić jego właściwości za pomocą strony niestandardowa data i strony podstawowego koloru.  
   
  [!code-cpp[NVC_ATL_Windowing#72](../atl/codesnippet/cpp/specifying-property-pages_1.h)]  
   

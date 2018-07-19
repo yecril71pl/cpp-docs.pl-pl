@@ -17,16 +17,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 108397f6c3c3c088839230f2b48b505300149345
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: a04265a68a03edc9f957161991d2ddd91a8e6096
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33844396"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38958182"
 ---
 # <a name="bidirectionaliteratortag-struct"></a>bidirectional_iterator_tag — Struktura
 
-Klasa, która zawiera typ zwracany dla **iterator_category** funkcja, która reprezentuje iteratora dwukierunkowego.
+Klasa udostępniająca typ zwracany dla `iterator_category` funkcja, która reprezentuje iterator dwukierunkowy.
 
 ## <a name="syntax"></a>Składnia
 
@@ -36,19 +36,19 @@ struct bidirectional_iterator_tag    : public forward_iterator_tag {};
 
 ## <a name="remarks"></a>Uwagi
 
-Klasy tag kategorii są używane jako kompilacji znaczników dla algorytmu zaznaczenia. Funkcja szablonu musi znaleźć najbardziej określonej kategorii argumentu iteratora, dzięki czemu najbardziej efektywny algorytm może użyć w czasie kompilacji. Dla każdego iteratora typu `Iterator`, `iterator_traits` <  `Iterator`>:: **iterator_category** musi być zdefiniowany jako najbardziej konkretny tag kategorii, który określa zachowanie iteratora.
+Klasy tagów kategorii są używane, jak skompilować tagów dla algorytm wybór. Funkcja szablonu musi znaleźć najbardziej specyficzną kategorię argumentem iteratora tak, aby możliwe było użycie algorytmu najbardziej wydajne w czasie kompilacji. Dla każdego iteratora typu `Iterator`, `iterator_traits` <  `Iterator`>:: **iterator_category** muszą być zdefiniowane bardziej konkretny od pozostałych tag kategorii, który określa zachowanie iteratora.
 
-Typ jest taki sam jak **iterator** \< **Iter**>:: **iterator_category** podczas **Iter** opisuje obiekt, który można służyć jako iterator dwukierunkowego.
+Typ jest taki sam jak **iteratora** \< **Iter**>:: **iterator_category** podczas `Iter` opisuje obiekt, który może służyć jako dwukierunkowy Iterator.
 
 ## <a name="example"></a>Przykład
 
-Zobacz [random_access_iterator_tag](../standard-library/random-access-iterator-tag-struct.md) przykład sposobu użycia `bidirectional_iterator_tag`.
+Zobacz [random_access_iterator_tag —](../standard-library/random-access-iterator-tag-struct.md) przykład sposobu użycia `bidirectional_iterator_tag`.
 
 ## <a name="requirements"></a>Wymagania
 
-**Nagłówek:** \<iteratora >
+**Nagłówek:** \<iterator >
 
-**Namespace:** Standard
+**Namespace:** standardowe
 
 ## <a name="see-also"></a>Zobacz także
 

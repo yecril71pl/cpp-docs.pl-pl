@@ -1,5 +1,5 @@
 ---
-title: regex_traits —&lt;wchar_t&gt; klasy | Dokumentacja firmy Microsoft
+title: regex_traits&lt;wchar_t&gt; klasy | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,16 +16,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b847280209b7844da6b1b9093a9a514aad7b423a
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 45710c4a1abca000b5cc8bca4a9db8032e874d9c
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33853953"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38958961"
 ---
-# <a name="regextraitsltwchartgt-class"></a>regex_traits —&lt;wchar_t&gt; — klasa
+# <a name="regextraitsltwchartgt-class"></a>regex_traits&lt;wchar_t&gt; klasy
 
-Specjalizacja regex_traits — dla wchar_t.
+Specjalizacja regex_traits dla wchar_t.
 
 ## <a name="syntax"></a>Składnia
 
@@ -36,22 +36,22 @@ class regex_traits<wchar_t>
 
 ## <a name="remarks"></a>Uwagi
 
-Klasa jest jawnej specjalizacji szablonu klasy [regex_traits —](../standard-library/regex-traits-class.md) dla elementów typu `wchar_t` (dzięki czemu może korzystać funkcji biblioteki, które manipulowania obiektów tego typu).
+Klasa jest jawną specjalizacją klasy szablonu [regex_traits](../standard-library/regex-traits-class.md) dla elementów typu **wchar_t** (tak, aby go korzystać z zalet funkcji biblioteki, które manipulowania obiektów tego typu).
 
 ## <a name="requirements"></a>Wymagania
 
-**Nagłówek:** \<regex >
+**Nagłówek:** \<wyrażenia regularnego >
 
-**Namespace:** Standard
+**Namespace:** standardowe
 
 ## <a name="see-also"></a>Zobacz także
 
 [\<regex>](../standard-library/regex.md)<br/>
 [regex_constants, klasa](../standard-library/regex-constants-class.md)<br/>
 [regex_error, klasa](../standard-library/regex-error-class.md)<br/>
-[\<wyrażenie regularne > Funkcje](../standard-library/regex-functions.md)<br/>
+[\<wyrażenie regularne > funkcji](../standard-library/regex-functions.md)<br/>
 [regex_iterator, klasa](../standard-library/regex-iterator-class.md)<br/>
-[\<wyrażenie regularne > operatory](../standard-library/regex-operators.md)<br/>
+[\<wyrażenie regularne > operatorów](../standard-library/regex-operators.md)<br/>
 [regex_token_iterator, klasa](../standard-library/regex-token-iterator-class.md)<br/>
 [regex_traits, klasa](../standard-library/regex-traits-class.md)<br/>
 [\<wyrażenie regularne > definicje typów](../standard-library/regex-typedefs.md)<br/>

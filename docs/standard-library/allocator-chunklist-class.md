@@ -18,16 +18,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: aaa7b01fe4008089cb8a773fc866d62a269ae717
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 20e601608b1a6b0f076040c10e027f7dc78db17a
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33850512"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38955361"
 ---
 # <a name="allocatorchunklist-class"></a>allocator_chunklist — Klasa
 
-Opisuje obiekt, który zarządza Alokacja magazynu i zwalnianie obiektów przy użyciu pamięci podręcznej typu [cache_chunklist —](../standard-library/cache-chunklist-class.md).
+Opisuje obiekt, który zarządza alokacją pamięci i zwalnianiem dla obiektów przy użyciu pamięci podręcznej typu [cache_chunklist](../standard-library/cache-chunklist-class.md).
 
 ## <a name="syntax"></a>Składnia
 
@@ -40,17 +40,17 @@ class allocator_chunklist;
 
 |Parametr|Opis|
 |---------------|-----------------|
-|`Type`|Typ elementów przydzielonej przez program przydzielania.|
+|*Typ*|Typ elementów przydzielonej przez alokator.|
 
 ## <a name="remarks"></a>Uwagi
 
-[Allocator_decl —](../standard-library/allocators-functions.md#allocator_decl) makro przekazuje tę klasę jako `name` parametru w następujących instrukcji: `ALLOCATOR_DECL(CACHE_CHUNKLIST, SYNC_DEFAULT, allocator_chunklist);`
+[ALLOCATOR_DECL](../standard-library/allocators-functions.md#allocator_decl) — makro przekazuje tę klasę jako *nazwa* parametru w następującej instrukcji: `ALLOCATOR_DECL(CACHE_CHUNKLIST, SYNC_DEFAULT, allocator_chunklist);`
 
 ## <a name="requirements"></a>Wymagania
 
-**Nagłówek:** \<allocators — >
+**Nagłówek:** \<buforów >
 
-**Namespace:** stdext —
+**Namespace:** stdext
 
 ## <a name="see-also"></a>Zobacz także
 

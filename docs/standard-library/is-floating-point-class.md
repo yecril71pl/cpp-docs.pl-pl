@@ -17,16 +17,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 63129ad04e2e74cdae9c590c76e1910e95117431
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 52bc5ff0fe53dc89f932bf62dc98f7c8a03a725f
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33844435"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38957008"
 ---
 # <a name="isfloatingpoint-class"></a>is_floating_point — Klasa
 
-Testy, jeśli typ jest liczba zmiennoprzecinkowa.
+Sprawdza, czy typ jest liczba zmiennoprzecinkowa.
 
 ## <a name="syntax"></a>Składnia
 
@@ -37,13 +37,13 @@ struct is_floating_point;
 
 ### <a name="parameters"></a>Parametry
 
-`Ty` Typ do zapytania.
+*Ty* typ do zapytania.
 
 ## <a name="remarks"></a>Uwagi
 
-Wystąpienie typu predykatu posiada wartość true Jeśli typ `Ty` jest liczbą zmiennoprzecinkową typ punktu lub `cv-qualified` wpisz formularza zmiennoprzecinkowej, w przeciwnym razie ma wartość false.
+Wystąpienie typu predykatu ma wartość true, jeśli typ *Ty* jest zmiennoprzecinkowy typu punktu lub `cv-qualified` typu formularza zmiennoprzecinkowej, w przeciwnym razie przechowuje wartość false.
 
-A zmiennoprzecinkową typ punktu jest jednym z `float`, `double`, lub `long double`.
+A punktem typu zmiennoprzecinkowego jest jednym z **float**, **double**, lub **typu long double**.
 
 ## <a name="example"></a>Przykład
 
@@ -82,7 +82,7 @@ is_floating_point<float> == true
 
 **Nagłówek:** \<type_traits >
 
-**Namespace:** Standard
+**Namespace:** standardowe
 
 ## <a name="see-also"></a>Zobacz także
 

@@ -1,5 +1,5 @@
 ---
-title: ATL — klasy zasad kopii | Dokumentacja firmy Microsoft
+title: Klasy zasad kopii ATL | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,17 +18,17 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 34b9ed5dca45633a5ab980d38b8a7cda151f5dc7
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: e633395c9662bde0ad5fa4289294ef4098ab371c
+ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32358530"
+ms.lasthandoff: 07/05/2018
+ms.locfileid: "37849204"
 ---
 # <a name="atl-copy-policy-classes"></a>Klasy zasad kopii ATL
-Kopiowanie zasady klasy są [klasy narzędzi](../atl/utility-classes.md) używany do inicjowania, kopiowanie i usuwanie danych. Klasy zasad kopii pozwalają Aby zdefiniować semantykę kopiowania dla dowolnego typu danych oraz do definiowania konwersje między różnych typów danych.  
+Klasy zasad kopii są [klasy narzędzi](../atl/utility-classes.md) używane do zainicjowania, kopiowania i usuwania danych. Klasy zasad kopii pozwalają zdefiniować semantyka kopiowania dla dowolnego typu danych i do definiowania konwersje między różnymi typami danych.  
   
- Używa kopii zasad klasy ATL w ich implementacji następujące szablony:  
+ Używa klasy zasad kopii ATL w ich implementacji następujące szablony:  
   
 -   [CComEnumImpl](../atl/reference/ccomenumimpl-class.md)  
   
@@ -36,10 +36,10 @@ Kopiowanie zasady klasy są [klasy narzędzi](../atl/utility-classes.md) używan
   
 -   [ICollectionOnSTLImpl](../atl/reference/icollectiononstlimpl-class.md)  
   
- Hermetyzując informacje potrzebne do kopiowania lub przekonwertować danych w klasie zasad kopiowania, które mogą być przekazywane jako argument szablonu, deweloperzy ATL zostały podane dla wyjątkową możliwość ponownego wykorzystania tych klas. Na przykład jeśli musisz wdrożyć kolekcji danych dowolnego typu, wystarczy podać jest kopiowania odpowiednich zasad; nigdy nie mają dostępu do kodu, który implementuje kolekcji.  
+ Poprzez hermetyzację informacji potrzebnych do kopiowania lub przekonwertować danych w kopii klasy zasad, który może być przekazywany jako argument szablonu, deweloperzy ATL zostały podane dla extreme możliwość ponownego wykorzystania tych klas. Na przykład jeśli musisz wdrożyć kolekcji za pomocą dowolnego typu dowolne dane, wszystko, co należy podać to polityki odpowiedniej kopii. nigdy nie mają dostępu do kodu, który implementuje kolekcji.  
   
 ## <a name="definition"></a>Definicja  
- Zgodnie z definicją klasy, która zapewnia następujące funkcje statyczne jest klasą kopiowania zasad:  
+ Zgodnie z definicją klasa, która oferuje następujące funkcje statyczne jest klasy zasad kopii:  
   
  `static void init(` `DestinationType` `* p);`  
   
@@ -47,42 +47,42 @@ Kopiowanie zasady klasy są [klasy narzędzi](../atl/utility-classes.md) używan
   
  `static void destroy(` `DestinationType` `* p);`  
   
- Można zastąpić typy `DestinationType` i *źródłowa* z typami dowolne dane dla każdej zasady kopiowania.  
+ Możesz zastąpić typy `DestinationType` i *SourceType* z typami dowolne dane dla każdej zasady kopii.  
   
 > [!NOTE]
->  Mimo że można zdefiniować klasy zasad kopii dla wszystkich typów dowolne dane, użyj klasy w kodzie ATL należy ograniczyć typy, które sensu. Na przykład, gdy przy użyciu zasad kopii klasy z kolekcji w ATL lub implementacje modułu wyliczającego `DestinationType` musi być typem, który może służyć jako parametru w metodzie interfejsu COM.  
+>  Chociaż można zdefiniować klasy zasad kopii dla wszystkich typów dowolne dane, użyj klasy w kodzie ATL należy ograniczyć typy, które są uwzględnione. Na przykład, gdy za pomocą zasad kopii klasy kolekcji ATL lub implementacji modułu wyliczającego `DestinationType` musi być typem, który może służyć jako parametr metody interfejsu COM.  
   
- Użyj **init** zainicjować danych, **kopiowania** Aby skopiować dane, i **zniszczyć** zwolnienia danych. Znaczenie inicjowania, kopiowanie i zniszczenie domeny klasy zasad kopii i będą się różnić w zależności od typów danych związane.  
+ Użyj **init** zainicjować danych, **kopiowania** do kopiowania danych i **zniszczyć** zwolnienie danych. Znaczenie inicjalizacji, kopiowanie i niszczeniem domeny klasy zasad kopii i różnią się w zależności od typów danych związane.  
   
  Istnieją dwa wymagania dotyczące użycia i implementacja klasy zasad kopii:  
   
--   Pierwszy parametr **kopiowania** tylko musi otrzymać wskaźnikiem do danych, które zostały wcześniej zainicjowana przy użyciu **init**.  
+-   Pierwszy parametr **kopiowania** tylko musi otrzymać bit wskaźnik do danych, które zostały wcześniej zainicjowana przy użyciu **init**.  
   
--   **Destroy** tylko musi otrzymać wskaźnikiem do danych, które zostały wcześniej zainicjowana przy użyciu **init** lub kopiowane za pośrednictwem **kopiowania**.  
+-   **zniszcz** tylko musi otrzymać bit wskaźnik do danych, które zostały wcześniej zainicjowana przy użyciu **init** lub kopiowany za pośrednictwem **kopiowania**.  
   
-## <a name="standard-implementations"></a>Standardowa implementacji  
- ATL oferuje dwie klasy zasad kopii w formie **_Copy** i **_CopyInterface** szablonu klasy:  
+## <a name="standard-implementations"></a>Standardowe wdrożenia  
+ ATL zawiera dwie klasy zasad kopii w formie `_Copy` i `_CopyInterface` klasy szablonów:  
   
--   **_Copy** klasa umożliwia jednorodnych kopiowanie tylko (nie Konwersja typów danych), ponieważ zapewnia ona tylko określić parametr jednego szablonu `DestinationType` i *źródłowa*. Ogólną implementację ten szablon nie zawiera inicjowanie lub niszczenie kodu i używa `memcpy` Aby skopiować dane. ATL udostępnia również specjalizacjach **_Copy** dla **VARIANT**, `LPOLESTR`, **OLEVERB**, i **CONNECTDATA** typów danych.  
+-   `_Copy` Klasa umożliwia jednorodnych kopiowanie tylko (nie konwersji między typami danych), ponieważ oferuje ona tylko określić zarówno parametr jednego szablonu `DestinationType` i *SourceType*. Ogólną implementację ten szablon nie zawiera inicjowanie lub niszczenie kodu i używa `memcpy` do kopiowania danych. ATL udostępnia również specjalizacje `_Copy` wariant, LPOLESTR, OLEVERB i CONNECTDATA typów danych.  
   
--   **_CopyInterface** klasa zawiera implementację kopiowanie wskaźniki interfejsu standardowe reguły COM. Ponownie ta klasa umożliwia tylko jednorodnych kopiowania, więc używa przypisanie proste i wywołanie `AddRef` do wykonania kopii.  
+-   `_CopyInterface` Klasa udostępnia implementację na potrzeby kopiowania wskaźniki interfejsu następujące standardowe reguły COM. Ponownie ta klasa umożliwia tylko jednorodnych kopiowanie, więc używa przypisanie proste i wywołania `AddRef` do wykonania kopii.  
   
-## <a name="custom-implementations"></a>Implementacje niestandardowe  
- Zazwyczaj należy definiować własne klasy zasad kopii heterogenicznych kopiowania (to znaczy Konwersja typów danych). Niektóre przykłady klas zasady niestandardowe kopiowania przyjrzeć się pliki VCUE_Copy.h i VCUE_CopyString.h w [ATLCollections](../visual-cpp-samples.md) próbki. Te pliki zawierają dwa kopiowania szablonu zasad, klasy `GenericCopy` i `MapCopy`, oraz liczbę specjalizacjach `GenericCopy` dla różnych typów danych.  
+## <a name="custom-implementations"></a>Niestandardowe implementacje  
+ Zazwyczaj należy zdefiniować własne klasy zasad kopii heterogenicznych kopiowania (czyli konwersji między typami danych). Niektóre przykłady kopii niestandardowych zasad klas, Przyjrzyj się pliki VCUE_Copy.h i VCUE_CopyString.h w [ATLCollections](../visual-cpp-samples.md) próbki. Te pliki zawierają dwie klasy zasad kopię szablonu, `GenericCopy` i `MapCopy`, oraz liczbę specjalizacje `GenericCopy` dla różnych typów danych.  
   
 ### <a name="genericcopy"></a>GenericCopy  
- `GenericCopy` Umożliwia określenie *źródłowa* i `DestinationType` jako argumenty szablonu. W tym miejscu jest najbardziej ogólnym formę `GenericCopy` klasy z VCUE_Copy.h:  
+ `GenericCopy` Umożliwia określenie *SourceType* i `DestinationType` jako argumenty szablonu. Poniżej przedstawiono najbardziej ogólny kształt `GenericCopy` klasy z VCUE_Copy.h:  
   
  [!code-cpp[NVC_ATL_COM#30](../atl/codesnippet/cpp/atl-copy-policy-classes_1.h)]  
   
- VCUE_Copy.h zawiera również następujące specjalizacje tej klasy: `GenericCopy<BSTR>`, `GenericCopy<VARIANT, BSTR>`, `GenericCopy<BSTR, VARIANT>`. VCUE_CopyString.h zawiera specjalizacje kopiowania z **std::string**s: `GenericCopy<std::string>`, `GenericCopy<VARIANT, std::string>`, i `GenericCopy<BSTR, std::string>`. Można zwiększyć `GenericCopy` zapewniając dodatkowe specjalizacje własny.  
+ VCUE_Copy.h zawiera również następujące specjalizacje tej klasy: `GenericCopy<BSTR>`, `GenericCopy<VARIANT, BSTR>`, `GenericCopy<BSTR, VARIANT>`. VCUE_CopyString.h zawiera specjalizacje kopiowania z **std::string**s: `GenericCopy<std::string>`, `GenericCopy<VARIANT, std::string>`, i `GenericCopy<BSTR, std::string>`. Można zwiększyć `GenericCopy` , zapewniając dalsze specjalizacje samodzielnie.  
   
 ### <a name="mapcopy"></a>MapCopy  
- `MapCopy` przyjęto założenie, że kopiowane dane są przechowywane w mapie stylu biblioteki C++ Standard, więc umożliwia określenie typu mapy, w którym dane są przechowywane i typu docelowego. Implementacja klasy używa tylko definicje typów dostarczonych przez *MapType* klasy można ustalić typu źródła danych oraz wywołanie odpowiednie `GenericCopy` klasy. Nie są konieczne nie specjalizacje tej klasy.  
+ `MapCopy` przyjęto założenie, że dane są kopiowane są przechowywane w mapę C++ Standard Library-style, więc umożliwia określenie typu mapy, w którym są przechowywane dane, a następnie wpisz docelowy. Implementacja klasy używa tylko definicje typów dostarczonych przez *MapType* klasy można ustalić typu źródła danych oraz wywołanie odpowiedniego `GenericCopy` klasy. Nie specjalizacje tej klasy są wymagane.  
   
  [!code-cpp[NVC_ATL_COM#31](../atl/codesnippet/cpp/atl-copy-policy-classes_2.h)]  
   
 ## <a name="see-also"></a>Zobacz też  
- [Implementowanie kolekcję C++ Standard biblioteki](../atl/implementing-an-stl-based-collection.md)   
+ [Implementowanie kolekcję C++ Standard Library](../atl/implementing-an-stl-based-collection.md)   
  [Przykładowe ATLCollections](../visual-cpp-samples.md)
 

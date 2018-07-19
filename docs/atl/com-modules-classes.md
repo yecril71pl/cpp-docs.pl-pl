@@ -16,31 +16,31 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: abf5449135bd0220f82400aed5e1c0aba0b90591
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 8485f9565c75796cdb7a10f303469c1393b9f55f
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32354984"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38958221"
 ---
 # <a name="com-modules-classes"></a>Klasy modułów COM
-Następujące klasy zapewniają obsługę modułem COM:  
+Następujące klasy obsługi modułu COM:  
   
--   [CAtlBaseModule](../atl/reference/catlbasemodule-class.md) w każdym projekcie ATL tworzenia wystąpienia tej klasy.  
+-   [CAtlBaseModule](../atl/reference/catlbasemodule-class.md) Klasa ta zostanie uruchomiony w każdym projekcie ATL.  
   
--   [CAtlComModule](../atl/reference/catlcommodule-class.md) ta klasa implementuje moduł serwera COM.  
+-   [CAtlComModule](../atl/reference/catlcommodule-class.md) ta klasa implementuje modułu serwera COM.  
   
 -   [CAtlModule](../atl/reference/catlmodule-class.md) ta klasa udostępnia metody używane przez kilka klasy modułów ALT.  
   
--   [CAtlModuleT](../atl/reference/catlmodulet-class.md) ta klasa implementuje moduł ATL.  
+-   [CAtlModuleT](../atl/reference/catlmodulet-class.md) ta klasa implementuje modułu ATL.  
   
--   [CAtlExeModuleT](../atl/reference/catlexemodulet-class.md) ta klasa reprezentuje module dla aplikacji.  
+-   [CAtlExeModuleT](../atl/reference/catlexemodulet-class.md) ta klasa reprezentuje modułu dla aplikacji.  
   
 -   [CAtlServiceModuleT](../atl/reference/catlservicemodulet-class.md) ta klasa implementuje usługi.  
   
--   [CAtlWinModule](../atl/reference/catlwinmodule-class.md) ta klasa obsługuje składniki okien ALT.  
+-   [CAtlWinModule](../atl/reference/catlwinmodule-class.md) tej klasy zapewnia obsługę składników obsługi okien ATL.  
   
--   [Ccommodule —](../atl/reference/ccommodule-class.md) ta klasa implementuje moduł biblioteki DLL lub EXE. Przestarzałe w ATL 7.0.  
+-   [CComModule](../atl/reference/ccommodule-class.md) ta klasa implementuje modułu DLL lub EXE. Przestarzałe w ATL 7.0.  
   
 -   [CComAutoThreadModule](../atl/reference/ccomautothreadmodule-class.md) ta klasa implementuje moduł EXE z obsługą wielu wątków w puli apartamentach. Przestarzałe w ATL 7.0.  
   
@@ -48,6 +48,6 @@ Następujące klasy zapewniają obsługę modułem COM:
  [Klasy modułów ATL](../atl/atl-module-classes.md)  
   
 ## <a name="see-also"></a>Zobacz też  
- [Przegląd klas](../atl/atl-class-overview.md)   
+ [Klasa — Przegląd](../atl/atl-class-overview.md)   
  [Klasy modułów](../atl/atl-module-classes.md)
 

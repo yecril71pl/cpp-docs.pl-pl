@@ -1,5 +1,5 @@
 ---
-title: Crecttracker — klasa | Dokumentacja firmy Microsoft
+title: Klasa CRectTracker | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -48,15 +48,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c4ce3c4dbfbf49791673392a1e1234728a680611
-ms.sourcegitcommit: be0e3457f2884551f18e183ef0ea65c3ded7f689
+ms.openlocfilehash: b39561c19754d35fc08755d7c8cf49b07ec95995
+ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/28/2018
-ms.locfileid: "37079671"
+ms.lasthandoff: 07/05/2018
+ms.locfileid: "37851417"
 ---
 # <a name="crecttracker-class"></a>Crecttracker — klasa
-Umożliwia element do wyświetlenia, przenieść i zmiany rozmiaru w różnych fashions.  
+Umożliwia elementu wyświetlany, przenoszone i zmiany rozmiaru w różnych fashions.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -76,37 +76,37 @@ class CRectTracker
   
 |Nazwa|Opis|  
 |----------|-----------------|  
-|[CRectTracker::AdjustRect](#adjustrect)|Wywoływane, gdy zmieni się rozmiar prostokąta.|  
+|[CRectTracker::AdjustRect](#adjustrect)|Wywołuje się, gdy zmieniany jest rozmiar prostokąta.|  
 |[CRectTracker::Draw](#draw)|Renderuje prostokąta.|  
-|[CRectTracker::DrawTrackerRect](#drawtrackerrect)|Wywoływane, gdy rysunek obramowania `CRectTracker` obiektu.|  
+|[CRectTracker::DrawTrackerRect](#drawtrackerrect)|Wywołuje się, gdy rysunek obramowania `CRectTracker` obiektu.|  
 |[CRectTracker::GetHandleMask](#gethandlemask)|Wywołuje się, by pobrać maska `CRectTracker` uchwyty zmiany rozmiaru elementu.|  
-|[CRectTracker::GetTrueRect](#gettruerect)|Zwraca szerokość i wysokość prostokąta, w tym uchwytów zmiany rozmiaru.|  
-|[CRectTracker::HitTest](#hittest)|Zwraca wartość bieżącej pozycji kursora związane z `CRectTracker` obiektu.|  
-|[CRectTracker::NormalizeHit](#normalizehit)|Normalizuje kod testu trafień.|  
-|[CRectTracker::OnChangedRect](#onchangedrect)|Wywoływane podczas zmiany rozmiaru lub przenieść prostokąta.|  
-|[CRectTracker::SetCursor](#setcursor)|Ustawia kursor, w zależności od położenia za pośrednictwem prostokąta.|  
+|[CRectTracker::GetTrueRect](#gettruerect)|Zwraca szerokość i wysokość prostokąta, łącznie z uchwytami zmiany rozmiaru.|  
+|[CRectTracker::HitTest](#hittest)|Zwraca bieżącą pozycję kursora związane z `CRectTracker` obiektu.|  
+|[CRectTracker::NormalizeHit](#normalizehit)|Normalizuje kodu testowania trafienia.|  
+|[CRectTracker::OnChangedRect](#onchangedrect)|Wywoływane podczas zmiany rozmiaru lub przenieść prostokąt.|  
+|[CRectTracker::SetCursor](#setcursor)|Ustawia kursor, w zależności od jego pozycja w ciągu prostokąta.|  
 |[CRectTracker::Track](#track)|Umożliwia użytkownikowi manipulowania prostokąta.|  
-|[CRectTracker::TrackRubberBand](#trackrubberband)|Umożliwia użytkownikowi "gumki" zaznaczenia.|  
+|[CRectTracker::TrackRubberBand](#trackrubberband)|Zezwala użytkownikowi na "gumki" wybór.|  
   
 ### <a name="public-data-members"></a>Publiczne elementy członkowskie danych  
   
 |Nazwa|Opis|  
 |----------|-----------------|  
-|[CRectTracker::m_nHandleSize](#m_nhandlesize)|Określa rozmiar uchwyt zmiany rozmiaru.|  
-|[CRectTracker::m_nStyle](#m_nstyle)|Bieżący style(s) śledzący.|  
-|[CRectTracker::m_rect](#m_rect)|Bieżąca pozycja (w pikselach) prostokąta.|  
-|[CRectTracker::m_sizeMin](#m_sizemin)|Określa prostokątne minimalna szerokość i wysokość.|  
+|[CRectTracker::m_nHandleSize](#m_nhandlesize)|Określa rozmiar uchwytami zmiany rozmiaru.|  
+|[CRectTracker::m_nStyle](#m_nstyle)|Bieżący style(s) z obiektem śledzącym.|  
+|[CRectTracker::m_rect](#m_rect)|Bieżące położenie (w pikselach) krawędzi prostokąta.|  
+|[CRectTracker::m_sizeMin](#m_sizemin)|Określa wysokość i szerokość minimalna prostokąta.|  
   
 ## <a name="remarks"></a>Uwagi  
- `CRectTracker` nie ma klasy podstawowej.  
+ `CRectTracker` nie ma klasy bazowej.  
   
- Mimo że `CRectTracker` klasy zaprojektowano w celu Zezwalaj użytkownikom na interakcję z elementami OLE przy użyciu interfejsu graficznego, jego użycie nie jest ograniczony do aplikacji obsługujących OLE. Mogą być używane wszędzie interfejs użytkownika jest wymagana.  
+ Mimo że `CRectTracker` klasa jest przeznaczona do umożliwiają użytkownikowi interakcję z elementami OLE przy użyciu interfejsu graficznego, jego użycie nie jest ograniczona do aplikacji obsługujących OLE. Może służyć wszędzie interfejs użytkownika jest wymagana.  
   
- `CRectTracker` Obramowanie może być stałe lub przerywana wierszy. Element można podany kreskowane obramowanie lub umieszczenia wzorem kreskowanym wskazująca innych stanów elementu. Osiem uchwytów zmiany rozmiaru można umieścić na zewnątrz lub wewnątrz obramowania elementu. (Aby uzyskać informacje o uchwytów zmiany rozmiaru, zobacz [GetHandleMask](#gethandlemask).) Na koniec `CRectTracker` umożliwia zmianę orientacji elementu podczas zmiany rozmiaru.  
+ `CRectTracker` krawędzie mogą być stałe lub linii kropkowanej. Biorąc pod uwagę kreskowanym obramowaniem lub nałożony wzorem kreskowanym do wskazania różnych stanów elementu elementu. Osiem uchwytami zmiany rozmiaru można umieścić na zewnątrz i wewnątrz obramowania elementu. (Objaśnienia dotyczące uchwytów zmiany rozmiaru, zobacz [GetHandleMask](#gethandlemask).) Na koniec `CRectTracker` pozwala zmienić orientację elementu podczas zmiany rozmiaru.  
   
- Aby użyć `CRectTracker`, utworzyć `CRectTracker` obiektu i określić, które stany wyświetlania są inicjowane. Następnie można ten interfejs Prześlij opinię visual użytkownika na bieżący stan elementu OLE skojarzonego z `CRectTracker` obiektu.  
+ Aby użyć `CRectTracker`, konstruowania `CRectTracker` obiekt i określić, które stany wyświetlania są inicjowane. Następnie można ten interfejs zapewniają wizualną opinię użytkownika z bieżącym stanem elementu OLE skojarzonego z `CRectTracker` obiektu.  
   
- Aby uzyskać więcej informacji na temat używania `CRectTracker`, zapoznaj się z artykułem [Trackerów](../../mfc/trackers.md).  
+ Aby uzyskać więcej informacji na temat korzystania z `CRectTracker`, zapoznaj się z artykułem [Trackery](../../mfc/trackers.md).  
   
 ## <a name="inheritance-hierarchy"></a>Hierarchia dziedziczenia  
  `CRectTracker`  
@@ -128,14 +128,14 @@ virtual void AdjustRect(
  Indeks uchwyt używany.  
   
  *lprect —*  
- Wskaźnik do bieżącego rozmiaru prostokąta. (Rozmiar prostokąta znajduje się przez jego wysokość i szerokość).  
+ Wskaźnik na bieżący rozmiar prostokąta. (Rozmiar prostokąta znajduje się przez jego wysokości i szerokości).  
   
 ### <a name="remarks"></a>Uwagi  
- Domyślnie ta funkcja umożliwia orientacji prostokąta można zmienić tylko wtedy, gdy `Track` i `TrackRubberBand` są nazywane z odwracanie dozwolone.  
+ Domyślne zachowanie tej funkcji umożliwia orientacji prostokąt można zmienić tylko wtedy, gdy `Track` i `TrackRubberBand` volat odwracanie dozwolone.  
   
- Należy przesłonić tę funkcję, aby kontrolować dostosowania prostokąt śledzenia podczas operacji przeciągania. Na przykład dopasować współrzędne określone przez *lprect —* przed zwróceniem.  
+ Należy przesłonić tę funkcję, aby kontrolować dostosowania prostokąt śledzenia podczas operacji przeciągania. Jedną z metod jest dostosowanie współrzędnych określonych przez *lprect —* przed zwróceniem.  
   
- Specjalne funkcje, które nie są bezpośrednio obsługiwane przez `CRectTracker`, takie jak przyciąganie do siatki lub keep proporcje, może być zaimplementowany przez zastępowanie tej funkcji.  
+ Specjalne funkcje, które nie są bezpośrednio obsługiwane przez `CRectTracker`, takie jak przyciągania do siatki lub keep proporcje, może być implementowany przez zastąpienie tej funkcji.  
   
 ##  <a name="crecttracker"></a>  CRectTracker::CRectTracker  
  Tworzy i inicjuje `CRectTracker` obiektu.  
@@ -156,23 +156,23 @@ CRectTracker(
  *nStyle*  
  Określa styl `CRectTracker` obiektu. Obsługiwane są następujące style:  
   
-- **CRectTracker::solidLine** Użyj linię ciągłą obramowania prostokąta.  
+- `CRectTracker::solidLine` Linia ciągła na użytek obramowania prostokąta.  
   
-- **CRectTracker::dottedLine** Użyj przerywana linia obramowania prostokąta.  
+- `CRectTracker::dottedLine` Linia kropkowana na użytek obramowania prostokąta.  
   
-- **CRectTracker::hatchedBorder** stosowany jest wzorzec kreskowanym obramowania prostokąta.  
+- `CRectTracker::hatchedBorder` Użyj wzorca zakreskowane obramowania prostokąta.  
   
-- **CRectTracker::resizeInside** uchwyty znajdujących się w prostokącie zmiany rozmiaru.  
+- `CRectTracker::resizeInside` Zmień rozmiar obsługuje znajdujący się wewnątrz prostokąta.  
   
-- **CRectTracker::resizeOutside** znajduje się poza prostokątem uchwyty zmiany rozmiaru.  
+- `CRectTracker::resizeOutside` Zmień rozmiar obsługuje znajdujących się poza prostokąta.  
   
-- **CRectTracker::hatchInside** Hatched wzorzec obejmuje całą prostokąta.  
+- `CRectTracker::hatchInside` Wyklutych wzorzec obejmuje cały prostokąta.  
   
 ### <a name="remarks"></a>Uwagi  
- Konstruktor domyślny inicjuje `CRectTracker` obiektu wartościami z *lpSrcRect* i inicjuje innych rozmiarach do wartości domyślnych systemu. Jeśli obiekt jest tworzony bez parametrów `m_rect` i `m_nStyle` elementy członkowskie danych są niezainicjowany.  
+ Konstruktor domyślny inicjuje `CRectTracker` obiektu z wartościami z *lpSrcRect* i inicjuje ustawienia domyślne systemu o innych rozmiarach. Jeśli obiekt jest tworzony bez parametrów `m_rect` i `m_nStyle` elementy członkowskie danych są niezainicjowany.  
   
 ##  <a name="draw"></a>  CRectTracker::Draw  
- Wywołanie tej funkcji do rysowania linii zewnętrzne i wewnętrzne region prostokąta.  
+ Wywołaj tę funkcję, aby rysować linie zewnętrzne i wewnętrzne region prostokąta.  
   
 ```  
 void Draw(CDC* pDC) const;  
@@ -180,13 +180,13 @@ void Draw(CDC* pDC) const;
   
 ### <a name="parameters"></a>Parametry  
  *podstawowego kontrolera domeny*  
- Wskaźnik do kontekstu urządzenia, na którym ma zostać narysowany.  
+ Wskaźnik do kontekstu urządzenia, na którym do rysowania.  
   
 ### <a name="remarks"></a>Uwagi  
- Styl śledzący Określa, jak jest wykonywane rysunku. Zobacz Konstruktor `CRectTracker` uzyskać więcej informacji o dostępnych style.  
+ Styl śledzący Określa, jak jest wykonywane rysunku. Zobacz Konstruktor `CRectTracker` więcej informacji na temat dostępnych stylów.  
   
 ##  <a name="drawtrackerrect"></a>  CRectTracker::DrawTrackerRect  
- Wywoływana przez platformę, gdy pozycja śledzący została zmieniona podczas wewnątrz `Track` lub `TrackRubberBand` funkcję elementu członkowskiego.  
+ Wywoływane przez platformę, zawsze wtedy, gdy zmienił stanowisko z obiektem śledzącym podczas wewnątrz `Track` lub `TrackRubberBand` funkcja elementu członkowskiego.  
   
 ```  
 virtual void DrawTrackerRect(
@@ -198,24 +198,24 @@ virtual void DrawTrackerRect(
   
 ### <a name="parameters"></a>Parametry  
  *lprect —*  
- Wskaźnik do `RECT` zawierający prostokąta do rysowania.  
+ Wskaźnik do `RECT` zawierający narysować prostokąt.  
   
  *pWndClipTo*  
- Wskaźnik do okna do użycia w wycinka prostokąta.  
+ Wskaźnik do okna do użycia w Prostokątny wycinek.  
   
  *podstawowego kontrolera domeny*  
- Wskaźnik do kontekstu urządzenia, na którym ma zostać narysowany.  
+ Wskaźnik do kontekstu urządzenia, na którym do rysowania.  
   
  *pWnd*  
- Wskaźnik do okna, na którym zostanie przeprowadzona rysunku.  
+ Wskaźnik do okna, na którym nastąpi rysunku.  
   
 ### <a name="remarks"></a>Uwagi  
- Domyślna implementacja wywołuje `CDC::DrawFocusRect`, która rysuje prostokąt kropkami.  
+ Domyślna implementacja wywołuje `CDC::DrawFocusRect`, który rysuje prostokąt kropkami.  
   
  Należy przesłonić tę funkcję, aby przekazać opinię różnych podczas operacji śledzenia.  
   
 ##  <a name="gethandlemask"></a>  CRectTracker::GetHandleMask  
- Struktura wywołuje tę funkcję elementu członkowskiego, aby pobrać maski dla prostokąta uchwyty zmiany rozmiaru.  
+ Struktura wywołuje tę funkcję elementu członkowskiego, aby pobrać maska dla uchwyty zmiany rozmiaru prostokąta.  
   
 ```  
 virtual UINT GetHandleMask() const;  
@@ -225,18 +225,18 @@ virtual UINT GetHandleMask() const;
  Maska `CRectTracker` uchwyty zmiany rozmiaru elementu.  
   
 ### <a name="remarks"></a>Uwagi  
- Uchwyty zmiany rozmiaru są wyświetlane na stronach i narożników prostokąta i Zezwalaj użytkownikowi na kontrolowanie kształt i rozmiar.  
+ Uchwytami zmiany rozmiaru są wyświetlane na stronach i narożników prostokąta i Zezwalaj użytkownikowi na kontrolowanie kształtu i rozmiaru prostokąta.  
   
- Prostokąt ma 8 uchwytów zmiany rozmiaru nr 7-0. Każdy uchwyt zmiany rozmiaru odpowiada bit maski; wartość tego bit jest równa 2 ^ *n*, gdzie *n* jest numerem uchwyt zmiany rozmiaru. Bity 0-3 odpowiadają rogu uchwytów zmiany rozmiaru, zaczynając od góry po lewej przenoszenie do ruchu wskazówek zegara. Bity 4-7 odpowiadają stronie Zmień rozmiar dojść, począwszy od góry z ruchem wskazówek zegara. Na poniższej ilustracji przedstawiono zmiany rozmiaru prostokąta obsługuje i odpowiednie Zmień rozmiar uchwytu liczb i wartości:  
+ Prostokąt ma 8 uchwytami zmiany rozmiaru numerowane 0-7. Uchwyt zmiany rozmiaru, każdy jest reprezentowany przez z nieco maski; wartość ten bit jest równa 2 ^ *n*, gdzie *n* jest liczbą uchwyt zmiany rozmiaru. Usługa BITS 0 – 3 odpowiadają rogu uchwytów zmiany rozmiaru, od lewego górnego rogu przenoszenie do ruchu wskazówek zegara. Usługa BITS 4 – 7 odnoszą się do strony zmiany rozmiaru uchwyty, począwszy od góry z ruchem wskazówek zegara. Na poniższej ilustracji przedstawiono uchwyty zmiany rozmiaru prostokąt i odpowiadające im Zmień rozmiar uchwytu liczby i wartości:  
   
  ![Zmień rozmiar uchwytu numery](../../mfc/reference/media/vc35dp1.gif "vc35dp1")  
   
- Domyślna implementacja **GetHandleMask** zwraca maską bitów, dzięki czemu uchwytów zmiany rozmiaru. Jeśli jeden bit jest włączona, będzie rysowany odpowiedniego uchwyt zmiany rozmiaru.  
+ Domyślna implementacja klasy `GetHandleMask` zwraca maski bitów, tak aby były wyświetlane uchwytami zmiany rozmiaru. Jeśli pojedynczy bit jest włączona, będą rysowane odpowiedniego uchwyt zmiany rozmiaru.  
   
- Przesłonić tę funkcję elementu członkowskiego do ukrywania lub pokazywania się, że wskazany uchwyty zmiany rozmiaru.  
+ Zastąpienie tej funkcji elementu członkowskiego, aby ukryć lub pokazać, że wskazany uchwyty zmiany rozmiaru.  
   
 ##  <a name="gettruerect"></a>  CRectTracker::GetTrueRect  
- Wywołanie tej funkcji można pobrać współrzędne prostokąta.  
+ Wywołaj tę funkcję, aby pobrać współrzędnych prostokąta.  
   
 ```  
 void GetTrueRect(LPRECT lpTrueRect) const;  
@@ -244,13 +244,13 @@ void GetTrueRect(LPRECT lpTrueRect) const;
   
 ### <a name="parameters"></a>Parametry  
  *lpTrueRect*  
- Wskaźnik do `RECT` struktury, która będzie zawierać urządzenia współrzędne `CRectTracker` obiektu.  
+ Wskaźnik do `RECT` strukturę, która będzie zawierać urządzenia współrzędne `CRectTracker` obiektu.  
   
 ### <a name="remarks"></a>Uwagi  
- Wymiary prostokąta obejmują wysokość i szerokość uchwytów wszelkie zmiany rozmiaru znajduje się na granicy zewnętrznej. Na zwrócenie, *lpTrueRect* jest zawsze znormalizowane prostokąt we współrzędnych urządzenia.  
+ Wymiary prostokąta obejmują wysokość i szerokość z uchwytami zmiany rozmiaru, wszystkie znajdujące się na granicy zewnętrznego. Podczas zwracania, *lpTrueRect* jest zawsze prostokąt znormalizowanych współrzędnych urządzenia.  
   
 ##  <a name="hittest"></a>  CRectTracker::HitTest  
- Wywołanie tej funkcji, aby dowiedzieć się, czy użytkownik ma chwycić uchwyt zmiany rozmiaru.  
+ Wywołaj tę funkcję, aby dowiedzieć się, czy użytkownik ma złapał uchwyt zmiany rozmiaru.  
   
 ```  
 int HitTest(CPoint point) const;  
@@ -261,40 +261,40 @@ int HitTest(CPoint point) const;
  Punkt we współrzędnych urządzenia, aby przetestować.  
   
 ### <a name="return-value"></a>Wartość zwracana  
- Wartość zwracana jest oparta na typ wyliczeniowy **CRectTracker::TrackerHit** i może mieć jeden z następujących wartości:  
+ Wartość zwracana, opiera się na typ wyliczany `CRectTracker::TrackerHit` i może mieć jedną z następujących wartości:  
   
-- **CRectTracker::hitNothing** -1  
+- `CRectTracker::hitNothing` -1  
   
-- **CRectTracker::hitTopLeft** 0  
+- `CRectTracker::hitTopLeft` 0  
   
-- **CRectTracker::hitTopRight** 1  
+- `CRectTracker::hitTopRight` 1  
   
-- **CRectTracker::hitBottomRight** 2  
+- `CRectTracker::hitBottomRight` 2  
   
-- **CRectTracker::hitBottomLeft** 3  
+- `CRectTracker::hitBottomLeft` 3  
   
-- **CRectTracker::hitTop** 4  
+- `CRectTracker::hitTop` 4  
   
-- **CRectTracker::hitRight** 5  
+- `CRectTracker::hitRight` 5  
   
-- **CRectTracker::hitBottom** 6  
+- `CRectTracker::hitBottom` 6  
   
-- **CRectTracker::hitLeft** 7  
+- `CRectTracker::hitLeft` 7  
   
-- **CRectTracker::hitMiddle** 8  
+- `CRectTracker::hitMiddle` 8  
   
 ##  <a name="m_nhandlesize"></a>  CRectTracker::m_nHandleSize  
- Rozmiar wyrażony w pikselach, o `CRectTracker` uchwyty zmiany rozmiaru.  
+ Rozmiar w pikselach, o `CRectTracker` uchwyty zmiany rozmiaru.  
   
 ```  
 int m_nHandleSize;  
 ```  
   
 ### <a name="remarks"></a>Uwagi  
- Zainicjowany z wartością domyślną systemu.  
+ Inicjowany z wartością domyślną systemu.  
   
 ##  <a name="m_rect"></a>  CRectTracker::m_rect  
- Bieżąca pozycja prostokąta we współrzędnych klienta (w pikselach).  
+ Bieżąca pozycja prostokąta w współrzędne klienta (w pikselach).  
   
 ```  
 CRect m_rect;  
@@ -308,7 +308,7 @@ CSize m_sizeMin;
 ```  
   
 ### <a name="remarks"></a>Uwagi  
- Obie wartości domyślne **cx** i **cy**, jest obliczana na podstawie wartości domyślne systemu szerokości obramowania. Ten element członkowski danych jest używany tylko przez `AdjustRect` funkcję elementu członkowskiego.  
+ Obie wartości domyślne `cx` i `cy`, są obliczane na podstawie domyślna wartość system szerokość obramowania. Ten element członkowski danych jest używany wyłącznie przez `AdjustRect` funkcja elementu członkowskiego.  
   
 ##  <a name="m_nstyle"></a>  CRectTracker::m_nStyle  
  Bieżący styl krawędzi prostokąta.  
@@ -321,7 +321,7 @@ UINT m_nStyle;
  Zobacz [CRectTracker::CRectTracker](#crecttracker) listę możliwych stylów.  
   
 ##  <a name="normalizehit"></a>  CRectTracker::NormalizeHit  
- Wywołanie tej funkcji można przekonwertować uchwyt potencjalnie odwrócony.  
+ Wywołaj tę funkcję, aby przekonwertować potencjalnie odwróconą dojście.  
   
 ```  
 int NormalizeHit(int nHandle) const;  
@@ -329,16 +329,16 @@ int NormalizeHit(int nHandle) const;
   
 ### <a name="parameters"></a>Parametry  
  *nHandle*  
- Dojście wybrane przez użytkownika.  
+ Dojście do wybranego przez użytkownika.  
   
 ### <a name="return-value"></a>Wartość zwracana  
- Indeks znormalizowane dojścia.  
+ Indeks znormalizowane dojście.  
   
 ### <a name="remarks"></a>Uwagi  
- Gdy `CRectTracker::Track` lub `CRectTracker::TrackRubberBand` jest wywoływana z odwracanie dozwolone, jest możliwe, prostokąt, aby być zmieniany na osi x i y. W takim przypadku `HitTest` zwróci dojść, które są także odwracane względem prostokąta. Może to być nieodpowiednie rysowania opinii kursora, ponieważ opinii jest zależna od pozycji ekranu prostokąta nie część prostokąt struktury danych, które zostaną zmodyfikowane.  
+ Gdy `CRectTracker::Track` lub `CRectTracker::TrackRubberBand` jest wywoływana z odwracanie dozwolone, istnieje możliwość, że prostokąt, który chcesz odwrócić na osi x i osi y. W takim przypadku `HitTest` zwróci uchwyty, które są także odwracane względem prostokąta. Może to być nieodpowiednie dla rysowania opinii kursora, ponieważ opinii jest zależna od pozycję prostokąt, a nie część struktury danych prostokąt, który zostanie zmodyfikowany na ekranie.  
   
 ##  <a name="onchangedrect"></a>  CRectTracker::OnChangedRect  
- Wywoływane przez platformę, gdy prostokąt śledzenia został zmieniony podczas wywoływania `Track`.  
+ Wywoływane przez platformę, zawsze wtedy, gdy prostokąt monitor został zmieniony podczas wywoływania `Track`.  
   
 ```  
 virtual void OnChangedRect(const CRect& rectOld);
@@ -346,15 +346,15 @@ virtual void OnChangedRect(const CRect& rectOld);
   
 ### <a name="parameters"></a>Parametry  
  *rectOld*  
- Zawiera współrzędne urządzenia starego `CRectTracker` obiektu.  
+ Zawiera stary współrzędne urządzenia `CRectTracker` obiektu.  
   
 ### <a name="remarks"></a>Uwagi  
- W tym czasie ta funkcja jest wywoływana, wszystkie opinie narysowany `DrawTrackerRect` został usunięty. Domyślna implementacja ta funkcja nie działa.  
+ W tym czasie ta funkcja jest wywoływana, wszystkie opinie z `DrawTrackerRect` został usunięty. Domyślna implementacja tej funkcji, nic nie robi.  
   
- Należy przesłonić tę funkcję, jeśli chcesz wykonać żadnej akcji po zmianie rozmiaru okna.  
+ Należy przesłonić tę funkcję, jeśli chcesz wykonać żadnych innych akcji po zmianie rozmiaru prostokąta.  
   
 ##  <a name="setcursor"></a>  CRectTracker::SetCursor  
- Wywołanie tej funkcji, aby zmienić kształt kursora, gdy znajduje się nad `CRectTracker` region obiektu.  
+ Wywołaj tę funkcję, aby zmienić kształt kursora jest przemieszczany nad `CRectTracker` region obiektu.  
   
 ```  
 BOOL SetCursor(
@@ -367,16 +367,16 @@ BOOL SetCursor(
  Wskazuje okna zawierającego kursora.  
   
  *nHitTest*  
- Wyniki poprzedniego testu trafienia z komunikat WM_SETCURSOR.  
+ Wyniki poprzedni test trafień z komunikat WM_SETCURSOR.  
   
 ### <a name="return-value"></a>Wartość zwracana  
- Różna od zera, jeżeli Poprzednie trafienie za pośrednictwem prostokąt tracker; w przeciwnym razie 0.  
+ Wartość różną od zera, jeżeli poprzednie trafień za pośrednictwem prostokąt tracker; w przeciwnym razie 0.  
   
 ### <a name="remarks"></a>Uwagi  
- Wywołanie tej funkcji z wewnątrz funkcji okna obsługująca komunikat WM_SETCURSOR (zazwyczaj `OnSetCursor`).  
+ Wywołaj tę funkcję z wewnątrz funkcji okna, które obsługuje komunikat WM_SETCURSOR (zazwyczaj `OnSetCursor`).  
   
 ##  <a name="track"></a>  CRectTracker::Track  
- Wywołanie tej funkcji, aby wyświetlić interfejs użytkownika do zmiany rozmiaru okna.  
+ Wywołaj tę funkcję, aby wyświetlić interfejs użytkownika do zmiany rozmiaru prostokąta.  
   
 ```  
 BOOL Track(
@@ -391,26 +391,26 @@ BOOL Track(
  Obiekt okna, który zawiera prostokąta.  
   
  *Punkt*  
- Współrzędne urządzenia bieżącego położenia kursora myszy względem obszaru klienckiego.  
+ Współrzędne urządzenia bieżącego położenia kursora myszy względem pola klienta.  
   
  *bAllowInvert*  
- Jeśli **TRUE**, prostokąt może być odwrócony wzdłuż osi x i y; w przeciwnym razie **FALSE**.  
+ W przypadku opcji TRUE prostokąt można odwrócić wzdłuż osi x lub osi y; w przeciwnym razie wartość FALSE.  
   
  *pWndClipTo*  
- Okno operacje rysowania zostanie obcięta do. Jeśli **NULL**, *pWnd* jest używany jako Prostokątny wycinek.  
+ W oknie, w którym rysowania operacje zostaną przycięte do. Jeśli ma wartość NULL, *pWnd* służy jako prostokątny.  
   
 ### <a name="return-value"></a>Wartość zwracana  
- Zostanie naciśnięty klawisz ESC, proces śledzenie jest zatrzymywane, prostokąt przechowywane w module śledzącym nie ulega zmianie i zwracane jest 0. Jeśli zmiana zostaje zatwierdzona, przesuwanie wskaźnika myszy i zwolnienie lewego przycisku myszy, nowe położenie i/lub rozmiar jest rejestrowany w monitorze prostokąt i zwracany jest różna od zera.  
+ Zostanie naciśnięty klawisz ESC, proces śledzenie jest zatrzymywane, prostokąt, przechowywane w śledzący nie ulega zmianie i zwracany jest 0. Jeśli zmiana zostaje zatwierdzona, przesuwanie wskaźnika myszy, a następnie zwolnij przycisk myszy po lewej stronie, nowe położenie i/lub rozmiaru jest rejestrowana w prostokącie modułu śledzącego i zwracana jest wartość różną od zera.  
   
 ### <a name="remarks"></a>Uwagi  
- Jest to zazwyczaj wywoływana z wewnątrz funkcji aplikacji, która obsługuje `WM_LBUTTONDOWN` komunikatu (zazwyczaj `OnLButtonDown`).  
+ To jest zazwyczaj wywoływana z wewnątrz funkcji aplikacji, który obsługuje `WM_LBUTTONDOWN` wiadomości (zazwyczaj `OnLButtonDown`).  
   
- Ta funkcja będzie przechwytywać mysz, dopóki użytkownik zwalnia lewego przycisku myszy, naciśnie klawisz ESC lub naciśnie prawym przyciskiem myszy. Jako użytkownik przesuwa wskaźnik myszy, opinii jest aktualizowany przez wywołanie metody `DrawTrackerRect` i `OnChangedRect`.  
+ Ta funkcja będzie przechwytywać mysz, dopóki użytkownik zwolni przycisk myszy po lewej stronie, naciśnięcie klawisza ESC lub naciśnie prawym przyciskiem myszy. Gdy użytkownik przesuwa wskaźnik myszy, opinii jest aktualizowana przez wywołanie metody `DrawTrackerRect` i `OnChangedRect`.  
   
- Jeśli *bAllowInvert* jest **TRUE**, prostokąt śledzenia może być zmieniany na osi x lub osi y.  
+ Jeśli *bAllowInvert* ma wartość PRAWDA, prostokąt śledzenia może być zmieniany na osi x lub osi y.  
   
 ##  <a name="trackrubberband"></a>  CRectTracker::TrackRubberBand  
- Wywołanie tej funkcji w celu zaznaczenia gumki —.  
+ Wywołaj tę funkcję w celu zaznaczenia gumki.  
   
 ```  
 BOOL TrackRubberBand(
@@ -424,24 +424,24 @@ BOOL TrackRubberBand(
  Obiekt okna, który zawiera prostokąta.  
   
  *Punkt*  
- Współrzędne urządzenia bieżącego położenia kursora myszy względem obszaru klienckiego.  
+ Współrzędne urządzenia bieżącego położenia kursora myszy względem pola klienta.  
   
  *bAllowInvert*  
- Jeśli **ma wartość TRUE,** prostokąt może być odwrócony wzdłuż osi x i y; w przeciwnym razie **FALSE**.  
+ W przypadku opcji TRUE prostokąt można odwrócić wzdłuż osi x lub osi y; w przeciwnym razie wartość FALSE.  
   
 ### <a name="return-value"></a>Wartość zwracana  
- Różna od zera, jeśli wskaźnik myszy została przeniesiona i prostokąt nie jest pusty; w przeciwnym razie 0.  
+ Wartość różną od zera, jeśli przeniesiono myszy i prostokąt nie jest pusta. w przeciwnym razie 0.  
   
 ### <a name="remarks"></a>Uwagi  
- Zazwyczaj jest wywoływana z wewnątrz funkcji aplikacji, która obsługuje wiadomość WM_LBUTTONDOWN (zazwyczaj `OnLButtonDown`).  
+ Zwykle jest wywoływana z wewnątrz funkcji aplikacji, który obsługuje wiadomości WM_LBUTTONDOWN (zazwyczaj `OnLButtonDown`).  
   
- Ta funkcja będzie przechwytywać mysz, dopóki użytkownik zwalnia lewego przycisku myszy, naciśnie klawisz ESC lub naciśnie prawym przyciskiem myszy. Jako użytkownik przesuwa wskaźnik myszy, opinii jest aktualizowany przez wywołanie metody `DrawTrackerRect` i `OnChangedRect`.  
+ Ta funkcja będzie przechwytywać mysz, dopóki użytkownik zwolni przycisk myszy po lewej stronie, naciśnięcie klawisza ESC lub naciśnie prawym przyciskiem myszy. Gdy użytkownik przesuwa wskaźnik myszy, opinii jest aktualizowana przez wywołanie metody `DrawTrackerRect` i `OnChangedRect`.  
   
- Śledzenie jest wykonywane z zaznaczenia kauczuku pasmem typu dojścia prawym dolnym. Jeśli odwracanie jest dozwolone, prostokąt mogą być określane przez przeciągnięcie w górę i w lewo lub w dół i po prawej stronie.  
+ Śledzenie odbywa się przy zaznaczeniem Gumka poza pasmem typu dojścia prawym dolnym. Jeśli odwracanie jest dozwolone, prostokąt rozmiar można zmieniać, przeciągając w górę i w lewo lub w dół i po prawej stronie.  
   
 ## <a name="see-also"></a>Zobacz też  
- [Przykładowe MFC śledzenia](../../visual-cpp-samples.md)   
- [Przykładowe MFC DRAWCLI](../../visual-cpp-samples.md)   
+ [Próbki MFC śledzenia](../../visual-cpp-samples.md)   
+ [Próbki MFC DRAWCLI](../../visual-cpp-samples.md)   
  [Diagram hierarchii](../../mfc/hierarchy-chart.md)   
  [Klasa COleResizeBar](../../mfc/reference/coleresizebar-class.md)   
  [CRect, klasa](../../atl-mfc-shared/reference/crect-class.md)

@@ -20,15 +20,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b4f013589b509781d217e521b680f1d529189a0a
-ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
+ms.openlocfilehash: add135c353366ed54a24c63fcce2101c49d24fe7
+ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/26/2018
-ms.locfileid: "36954269"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37338584"
 ---
 # <a name="cclientdc-class"></a>Cclientdc — klasa
-Odpowiada on za wywoływanie funkcji Windows [GetDC](http://msdn.microsoft.com/library/windows/desktop/dd144871) podczas konstruowania i [ReleaseDC](http://msdn.microsoft.com/library/windows/desktop/dd162920) w chwili zniszczenia.  
+Zajmuje się wywoływanie funkcji Windows [getdc —](http://msdn.microsoft.com/library/windows/desktop/dd144871) podczas konstruowania i [ReleaseDC](http://msdn.microsoft.com/library/windows/desktop/dd162920) w trakcie niszczenia.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -44,11 +44,11 @@ class CClientDC : public CDC
 |----------|-----------------|  
 |[CClientDC::CClientDC](#cclientdc)|Konstruuje `CClientDC` obiekt połączony `CWnd`.|  
   
-### <a name="protected-data-members"></a>Dane chronione elementy członkowskie  
+### <a name="protected-data-members"></a>Chronione elementy członkowskie danych  
   
 |Nazwa|Opis|  
 |----------|-----------------|  
-|[CClientDC::m_hWnd](#m_hwnd)|`HWND` Okna, w których `CClientDC` jest nieprawidłowy.|  
+|[CClientDC::m_hWnd](#m_hwnd)|HWND okna, w których `CClientDC` jest prawidłowy.|  
   
 ## <a name="remarks"></a>Uwagi  
  Oznacza to, że kontekst urządzenia skojarzone z `CClientDC` obiekt jest w klienckim obszarze okna.  
@@ -58,7 +58,7 @@ class CClientDC : public CDC
 ## <a name="inheritance-hierarchy"></a>Hierarchia dziedziczenia  
  [CObject](../../mfc/reference/cobject-class.md)  
   
- [CDC](../../mfc/reference/cdc-class.md)  
+ [PRZECHWYTYWANIE ZMIAN DANYCH](../../mfc/reference/cdc-class.md)  
   
  `CClientDC`  
   
@@ -66,7 +66,7 @@ class CClientDC : public CDC
  **Nagłówek:** afxwin.h  
   
 ##  <a name="cclientdc"></a>  CClientDC::CClientDC  
- Konstruuje `CClientDC` obiektu, który uzyskuje dostęp do obszaru klienckiego [CWnd](../../mfc/reference/cwnd-class.md) wskazywana przez *pWnd*.  
+ Konstruuje `CClientDC` obiektu, który uzyskuje dostęp do obszaru klienckiego [CWnd](../../mfc/reference/cwnd-class.md) wskazywany przez *pWnd*.  
   
 ```  
 explicit CClientDC(CWnd* pWnd);
@@ -74,18 +74,18 @@ explicit CClientDC(CWnd* pWnd);
   
 ### <a name="parameters"></a>Parametry  
  *pWnd*  
- Którego obszaru klienckiego obiektu kontekstu urządzenia będą uzyskiwać dostęp do okna.  
+ Okno obszaru klienta, którego obiekt kontekstu urządzenia będą miały dostęp.  
   
 ### <a name="remarks"></a>Uwagi  
- Konstruktor wywołuje funkcję Windows [GetDC](http://msdn.microsoft.com/library/windows/desktop/dd144871).  
+ Konstruktor wywołuje funkcję Windows [getdc —](http://msdn.microsoft.com/library/windows/desktop/dd144871).  
   
- Wystąpił wyjątek (typu `CResourceException`) jest zgłaszany w przypadku systemu Windows `GetDC` wywołać kończy się niepowodzeniem. Kontekst urządzenia nie może być dostępna w przypadku systemu Windows zawiera już przydzielone wszystkie konteksty jego dostępnego urządzenia. Aplikacja konkuruje dla pięciu typowych kontekstach wyświetlania dostępnych w danym momencie w systemie Windows.  
+ Wyjątek (typu `CResourceException`) jest generowany, jeśli Windows `GetDC` wywołanie zakończy się niepowodzeniem. Kontekst urządzenia może nie być dostępne w przypadku Windows został już przydzielony wszystkie jego kontekstów dostępnego urządzenia. Aplikacja konkuruje dla pięciu typowych kontekstach wyświetlania dostępnych w danym momencie w obszarze Windows.  
   
 ### <a name="example"></a>Przykład  
  [!code-cpp[NVC_MFCDocView#42](../../mfc/codesnippet/cpp/cclientdc-class_1.cpp)]  
   
 ##  <a name="m_hwnd"></a>  CClientDC::m_hWnd  
- `HWND` z `CWnd` wskaźnik został użyty do utworzenia `CClientDC` obiektu.  
+ `HWND` z `CWnd` wskaźnik użytego do stworzenia `CClientDC` obiektu.  
   
 ```  
 HWND m_hWnd;  
@@ -98,7 +98,7 @@ HWND m_hWnd;
   Zobacz przykład [CClientDC::CClientDC](#cclientdc).  
   
 ## <a name="see-also"></a>Zobacz też  
- [Przykładowe MFC MDI](../../visual-cpp-samples.md)   
+ [Próbki MFC MDI](../../visual-cpp-samples.md)   
  [Klasa CDC](../../mfc/reference/cdc-class.md)   
  [Diagram hierarchii](../../mfc/hierarchy-chart.md)   
  [Klasa CDC](../../mfc/reference/cdc-class.md)

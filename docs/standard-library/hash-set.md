@@ -17,19 +17,19 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: dccf608b9949ad9e1502b489a237adf60a4d50a6
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: f163ef7d0e5ec05dd0f41c11ea77c558cfef4919
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33845742"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38955706"
 ---
 # <a name="lthashsetgt"></a>&lt;hash_set —&gt;
 
 > [!NOTE]
-> Ten nagłówek jest przestarzała. Alternatywą jest [< unordered_set >](../standard-library/unordered-set.md).
+> Tego pliku nagłówkowego jest przestarzała. Alternatywą jest [< unordered_set >](../standard-library/unordered-set.md).
 
-Definiuje hash_set klasy szablonu kontenera i hash_multiset i ich obsługi szablonów.
+Definiuje hash_set klasy szablonu kontenera i hash_multiset i ich szablonów pomocniczych.
 
 ## <a name="syntax"></a>Składnia
 
@@ -44,22 +44,22 @@ Definiuje hash_set klasy szablonu kontenera i hash_multiset i ich obsługi szabl
 
 |Hash_set — wersja|Hash_multiset — wersja|Opis|
 |-----------------------|----------------------------|-----------------|
-|[Operator! = (hash_set)](../standard-library/hash-set-operators.md#op_neq)|[Operator! = (hash_multiset)](../standard-library/hash-set-operators.md#op_neq)|Testy, jeśli obiekt hash_set lub hash_multiset po lewej stronie operatora nie jest taki sam jak obiekt hash_set lub hash_multiset po prawej stronie.|
-|[Operator == (hash_set)](../standard-library/hash-set-operators.md#op_eq_eq)|[Operator == (hash_multiset)](../standard-library/hash-set-operators.md#op_eq_eq)|Testy, jeśli obiekt hash_set lub hash_multiset po lewej stronie operatora jest taki sam jak obiekt hash_set lub hash_multiset po prawej stronie.|
+|[Operator! = (hash_set)](../standard-library/hash-set-operators.md#op_neq)|[Operator! = (hash_multiset)](../standard-library/hash-set-operators.md#op_neq)|Sprawdza, czy obiekt hash_set lub hash_multiset po lewej stronie operatora nie jest równy obiektowi hash_set lub hash_multiset po prawej stronie.|
+|[Operator == (hash_set)](../standard-library/hash-set-operators.md#op_eq_eq)|[Operator == (hash_multiset)](../standard-library/hash-set-operators.md#op_eq_eq)|Sprawdza, czy obiekt hash_set lub hash_multiset po lewej stronie operatora jest równy obiektowi hash_set lub hash_multiset po prawej stronie.|
 
 ### <a name="specialized-template-functions"></a>Specialized Template — Funkcje
 
 |Hash_set — wersja|Hash_multiset — wersja|Opis|
 |-----------------------|----------------------------|-----------------|
-|[swap (hash_set)](../standard-library/hash-set-functions.md#swap)|[swap (hash_multiset)](../standard-library/hash-set-functions.md#swap_hash_multiset)|Zamienia elementy dwóch hash_sets lub hash_multisets.|
+|[swap (hash_set)](../standard-library/hash-set-functions.md#swap)|[swap (hash_multiset)](../standard-library/hash-set-functions.md#swap_hash_multiset)|Zamienia elementy z dwóch hash_sets lub hash_multisets.|
 
 ### <a name="classes"></a>Klasy
 
 |Class|Opis|
 |-|-|
-|[hash_compare, klasa](../standard-library/hash-compare-class.md)|Opisuje obiekt, który mogą być używane przez dowolny kontener asocjacyjna skrótu — hash_map hash_multimap, hash_set, lub hash_multiset — domyślnie **cech** obiektu parameter kolejność i wyznaczania wartości skrótu elementy zawierają.|
-|[hash_set, klasa](../standard-library/hash-set-class.md)|Używany do przechowywania i szybkie pobieranie danych z kolekcji, w której wartości elementy zawarte są unikatowe i służyć jako wartości klucza.|
-|[hash_multiset, klasa](../standard-library/hash-multiset-class.md)|Używany do przechowywania i szybkie pobieranie danych z kolekcji, w której wartości elementy zawarte są unikatowe i służyć jako wartości klucza.|
+|[hash_compare, klasa](../standard-library/hash-compare-class.md)|Opisuje obiekt, który może służyć przez żaden z kontenerów asocjacyjnych wyznaczania wartości skrótu — hash_map hash_multimap, hash_set, lub hash_multiset — domyślnie `Traits` parametr obiektu do porządkowania i wyznaczania wartości skrótu elementy zawierają.|
+|[hash_set, klasa](../standard-library/hash-set-class.md)|Używane do przechowywania i szybkiego pobierania danych z kolekcji, w której wartości zawartych elementów są unikatowe i służą jako wartości klucza.|
+|[hash_multiset, klasa](../standard-library/hash-multiset-class.md)|Używane do przechowywania i szybkiego pobierania danych z kolekcji, w której wartości zawartych elementów są unikatowe i służą jako wartości klucza.|
 
 ## <a name="see-also"></a>Zobacz także
 

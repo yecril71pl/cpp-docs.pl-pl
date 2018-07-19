@@ -29,12 +29,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fe7108c2eb370739494a2c6b8bc95fbdc1001840
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: b32031103e6e6d9922fdb3b0fc3a0d95e5eb280c
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33860882"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38957044"
 ---
 # <a name="ltregexgt-typedefs"></a>&lt;wyrażenie regularne&gt; definicje typów
 
@@ -49,7 +49,7 @@ ms.locfileid: "33860882"
 
 ## <a name="cmatch"></a>  cmatch — Typedef
 
-Typ definicji match_results — char.
+Wpisz definicję dla match_results — char.
 
 ```cpp
 typedef match_results<const char*> cmatch;
@@ -57,11 +57,11 @@ typedef match_results<const char*> cmatch;
 
 ### <a name="remarks"></a>Uwagi
 
-Typ w tym artykule opisano specjalizacji szablonu klasy [match_results — klasa](../standard-library/match-results-class.md) dla Iteratory typu `const char*`.
+Typ opisuje specjalizacji szablonu klasy [match_results, klasa](../standard-library/match-results-class.md) dla iteratorów typu `const char*`.
 
 ## <a name="cregex_iterator"></a>  cregex_iterator — Typedef
 
-Typ definicji regex_iterator — char.
+Wpisz definicję dla regex_iterator — char.
 
 ```cpp
 typedef regex_iterator<const char*> cregex_iterator;
@@ -69,11 +69,11 @@ typedef regex_iterator<const char*> cregex_iterator;
 
 ### <a name="remarks"></a>Uwagi
 
-Typ w tym artykule opisano specjalizacji szablonu klasy [regex_iterator — klasa](../standard-library/regex-iterator-class.md) dla Iteratory typu `const char*`.
+Typ opisuje specjalizacji szablonu klasy [regex_iterator, klasa](../standard-library/regex-iterator-class.md) dla iteratorów typu `const char*`.
 
 ## <a name="cregex_token_iterator"></a>  cregex_token_iterator — Typedef
 
-Definicja typu char regex_token_iterator —
+Regex_token_iterator — char w definicji typu
 
 ```cpp
 typedef regex_token_iterator<const char*> cregex_token_iterator;
@@ -81,11 +81,11 @@ typedef regex_token_iterator<const char*> cregex_token_iterator;
 
 ### <a name="remarks"></a>Uwagi
 
-Typ w tym artykule opisano specjalizacji szablonu klasy [regex_token_iterator — klasa](../standard-library/regex-token-iterator-class.md) dla Iteratory typu `const char*`.
+Typ opisuje specjalizacji szablonu klasy [regex_token_iterator, klasa](../standard-library/regex-token-iterator-class.md) dla iteratorów typu `const char*`.
 
 ## <a name="csub_match"></a>  csub_match — Typedef
 
-Typ definicji sub_match — char.
+Wpisz definicję dla sub_match — char.
 
 ```cpp
 typedef sub_match<const char*> csub_match;
@@ -93,11 +93,11 @@ typedef sub_match<const char*> csub_match;
 
 ### <a name="remarks"></a>Uwagi
 
-Typ w tym artykule opisano specjalizacji szablonu klasy [sub_match — klasa](../standard-library/sub-match-class.md) dla Iteratory typu `const char*`.
+Typ opisuje specjalizacji szablonu klasy [sub_match, klasa](../standard-library/sub-match-class.md) dla iteratorów typu `const char*`.
 
 ## <a name="regex"></a>  regex — Typedef
 
-Typ definicji basic_regex — char.
+Wpisz definicję dla char basic_regex.
 
 ```cpp
 typedef basic_regex<char> regex;
@@ -105,14 +105,14 @@ typedef basic_regex<char> regex;
 
 ### <a name="remarks"></a>Uwagi
 
-Typ w tym artykule opisano specjalizacji szablonu klasy [basic_regex — klasa](../standard-library/basic-regex-class.md) dla elementów typu `char`.
+Typ opisuje specjalizacji szablonu klasy [basic_regex, klasa](../standard-library/basic-regex-class.md) dla elementów typu **char**.
 
 > [!NOTE]
-> Znaki wysokobitowe może spowodować nieprzewidywalne skutki z `regex`. Wartości spoza zakresu od 0 do 127 znaków może spowodować niezdefiniowane zachowanie.
+> Znaki wysokobitowe może spowodować nieprzewidywalne skutki z `regex`. Wartości poza zakresem od 0 do 127 może spowodować niezdefiniowane zachowanie.
 
 ## <a name="smatch"></a>  smatch — Typedef
 
-Typ definicji match_results — ciąg.
+Wpisz definicję dla match_results — ciąg.
 
 ```cpp
 typedef match_results<string::const_iterator> smatch;
@@ -120,11 +120,11 @@ typedef match_results<string::const_iterator> smatch;
 
 ### <a name="remarks"></a>Uwagi
 
-Typ w tym artykule opisano specjalizacji szablonu klasy [match_results — klasa](../standard-library/match-results-class.md) dla Iteratory typu `string::const_iterator`.
+Typ opisuje specjalizacji szablonu klasy [match_results, klasa](../standard-library/match-results-class.md) dla iteratorów typu `string::const_iterator`.
 
 ## <a name="sregex_iterator"></a>  sregex_iterator — Typedef
 
-Typ definicji regex_iterator — ciąg.
+Wpisz definicję dla regex_iterator — ciąg.
 
 ```cpp
 typedef regex_iterator<string::const_iterator> sregex_iterator;
@@ -132,11 +132,11 @@ typedef regex_iterator<string::const_iterator> sregex_iterator;
 
 ### <a name="remarks"></a>Uwagi
 
-Typ w tym artykule opisano specjalizacji szablonu klasy [regex_iterator — klasa](../standard-library/regex-iterator-class.md) dla Iteratory typu `string::const_iterator`.
+Typ opisuje specjalizacji szablonu klasy [regex_iterator, klasa](../standard-library/regex-iterator-class.md) dla iteratorów typu `string::const_iterator`.
 
 ## <a name="sregex_token_iterator"></a>  sregex_token_iterator — Typedef
 
-Typ definicji regex_token_iterator — ciąg.
+Wpisz definicję dla regex_token_iterator — ciąg.
 
 ```cpp
 typedef regex_token_iterator<string::const_iterator> sregex_token_iterator;
@@ -144,11 +144,11 @@ typedef regex_token_iterator<string::const_iterator> sregex_token_iterator;
 
 ### <a name="remarks"></a>Uwagi
 
-Typ w tym artykule opisano specjalizacji szablonu klasy [regex_token_iterator — klasa](../standard-library/regex-token-iterator-class.md) dla Iteratory typu `string::const_iterator`.
+Typ opisuje specjalizacji szablonu klasy [regex_token_iterator, klasa](../standard-library/regex-token-iterator-class.md) dla iteratorów typu `string::const_iterator`.
 
 ## <a name="ssub_match"></a>  ssub_match — Typedef
 
-Typ definicji sub_match — ciąg.
+Wpisz definicję dla sub_match — ciąg.
 
 ```cpp
 typedef sub_match<string::const_iterator> ssub_match;
@@ -156,11 +156,11 @@ typedef sub_match<string::const_iterator> ssub_match;
 
 ### <a name="remarks"></a>Uwagi
 
-Typ w tym artykule opisano specjalizacji szablonu klasy [sub_match — klasa](../standard-library/sub-match-class.md) dla Iteratory typu `string::const_iterator`.
+Typ opisuje specjalizacji szablonu klasy [sub_match, klasa](../standard-library/sub-match-class.md) dla iteratorów typu `string::const_iterator`.
 
 ## <a name="wcmatch"></a>  wcmatch — Typedef
 
-Typ definicji match_results — wchar_t.
+Wpisz definicję dla match_results — wchar_t.
 
 ```cpp
 typedef match_results<const wchar_t *> wcmatch;
@@ -168,11 +168,11 @@ typedef match_results<const wchar_t *> wcmatch;
 
 ### <a name="remarks"></a>Uwagi
 
-Typ w tym artykule opisano specjalizacji szablonu klasy [match_results — klasa](../standard-library/match-results-class.md) dla Iteratory typu `const wchar_t*`.
+Typ opisuje specjalizacji szablonu klasy [match_results, klasa](../standard-library/match-results-class.md) dla iteratorów typu `const wchar_t*`.
 
 ## <a name="wcregex_iterator"></a>  wcregex_iterator — Typedef
 
-Typ definicji regex_iterator — wchar_t.
+Wpisz definicję dla regex_iterator — wchar_t.
 
 ```cpp
 typedef regex_iterator<const wchar_t*> wcregex_iterator;
@@ -180,11 +180,11 @@ typedef regex_iterator<const wchar_t*> wcregex_iterator;
 
 ### <a name="remarks"></a>Uwagi
 
-Typ w tym artykule opisano specjalizacji szablonu klasy [regex_iterator — klasa](../standard-library/regex-iterator-class.md) dla Iteratory typu `const wchar_t*`.
+Typ opisuje specjalizacji szablonu klasy [regex_iterator, klasa](../standard-library/regex-iterator-class.md) dla iteratorów typu `const wchar_t*`.
 
 ## <a name="wcregex_token_iterator"></a>  wcregex_token_iterator — Typedef
 
-Typ definicji regex_token_iterator — wchar_t.
+Wpisz definicję dla regex_token_iterator — wchar_t.
 
 ```cpp
 typedef regex_token_iterator<const wchar_t*> wcregex_token_iterator;
@@ -192,11 +192,11 @@ typedef regex_token_iterator<const wchar_t*> wcregex_token_iterator;
 
 ### <a name="remarks"></a>Uwagi
 
-Typ w tym artykule opisano specjalizacji szablonu klasy [regex_token_iterator — klasa](../standard-library/regex-token-iterator-class.md) dla Iteratory typu `const wchar_t*`.
+Typ opisuje specjalizacji szablonu klasy [regex_token_iterator, klasa](../standard-library/regex-token-iterator-class.md) dla iteratorów typu `const wchar_t*`.
 
 ## <a name="wcsub_match"></a>  wcsub_match — Typedef
 
-Typ definicji sub_match — wchar_t.
+Wpisz definicję dla sub_match — wchar_t.
 
 ```cpp
 typedef sub_match<const wchar_t*> wcsub_match;
@@ -204,11 +204,11 @@ typedef sub_match<const wchar_t*> wcsub_match;
 
 ### <a name="remarks"></a>Uwagi
 
-Typ w tym artykule opisano specjalizacji szablonu klasy [sub_match — klasa](../standard-library/sub-match-class.md) dla Iteratory typu `const wchar_t*`.
+Typ opisuje specjalizacji szablonu klasy [sub_match, klasa](../standard-library/sub-match-class.md) dla iteratorów typu `const wchar_t*`.
 
 ## <a name="wregex"></a>  wregex — Typedef
 
-Typ definicji basic_regex — wchar_t.
+Wpisz definicję dla wchar_t basic_regex.
 
 ```cpp
 typedef basic_regex<wchar_t> wregex;
@@ -216,11 +216,11 @@ typedef basic_regex<wchar_t> wregex;
 
 ### <a name="remarks"></a>Uwagi
 
-Typ w tym artykule opisano specjalizacji szablonu klasy [basic_regex — klasa](../standard-library/basic-regex-class.md) dla elementów typu `wchar_t`.
+Typ opisuje specjalizacji szablonu klasy [basic_regex, klasa](../standard-library/basic-regex-class.md) dla elementów typu **wchar_t**.
 
 ## <a name="wsmatch"></a>  wsmatch — Typedef
 
-Typ definicji match_results wstring —.
+Wpisz definicję dla match_results wstring —.
 
 ```cpp
 typedef match_results<wstring::const_iterator> wsmatch;
@@ -228,11 +228,11 @@ typedef match_results<wstring::const_iterator> wsmatch;
 
 ### <a name="remarks"></a>Uwagi
 
-Typ w tym artykule opisano specjalizacji szablonu klasy [match_results — klasa](../standard-library/match-results-class.md) dla Iteratory typu `wstring::const_iterator`.
+Typ opisuje specjalizacji szablonu klasy [match_results, klasa](../standard-library/match-results-class.md) dla iteratorów typu `wstring::const_iterator`.
 
 ## <a name="wsregex_iterator"></a>  wsregex_iterator — Typedef
 
-Typ definicji regex_iterator wstring —.
+Wpisz definicję dla regex_iterator wstring —.
 
 ```cpp
 typedef regex_iterator<wstring::const_iterator> wsregex_iterator;
@@ -240,11 +240,11 @@ typedef regex_iterator<wstring::const_iterator> wsregex_iterator;
 
 ### <a name="remarks"></a>Uwagi
 
-Typ w tym artykule opisano specjalizacji szablonu klasy [regex_iterator — klasa](../standard-library/regex-iterator-class.md) dla Iteratory typu `wstring::const_iterator`.
+Typ opisuje specjalizacji szablonu klasy [regex_iterator, klasa](../standard-library/regex-iterator-class.md) dla iteratorów typu `wstring::const_iterator`.
 
 ## <a name="wsregex_token_iterator"></a>  wsregex_token_iterator — Typedef
 
-Typ definicji regex_token_iterator wstring —.
+Wpisz definicję dla regex_token_iterator wstring —.
 
 ```cpp
 typedef regex_token_iterator<wstring::const_iterator> wsregex_token_iterator;
@@ -252,11 +252,11 @@ typedef regex_token_iterator<wstring::const_iterator> wsregex_token_iterator;
 
 ### <a name="remarks"></a>Uwagi
 
-Typ w tym artykule opisano specjalizacji szablonu klasy [regex_token_iterator — klasa](../standard-library/regex-token-iterator-class.md) dla Iteratory typu `wstring::const_iterator`.
+Typ opisuje specjalizacji szablonu klasy [regex_token_iterator, klasa](../standard-library/regex-token-iterator-class.md) dla iteratorów typu `wstring::const_iterator`.
 
 ## <a name="wssub_match"></a>  wssub_match — Typedef
 
-Typ definicji sub_match wstring —.
+Wpisz definicję dla sub_match wstring —.
 
 ```cpp
 typedef sub_match<wstring::const_iterator> wssub_match;
@@ -264,15 +264,15 @@ typedef sub_match<wstring::const_iterator> wssub_match;
 
 ### <a name="remarks"></a>Uwagi
 
-Typ w tym artykule opisano specjalizacji szablonu klasy [sub_match — klasa](../standard-library/sub-match-class.md) dla Iteratory typu `wstring::const_iterator`.
+Typ opisuje specjalizacji szablonu klasy [sub_match, klasa](../standard-library/sub-match-class.md) dla iteratorów typu `wstring::const_iterator`.
 
 ## <a name="see-also"></a>Zobacz także
 
 [\<regex>](../standard-library/regex.md)<br/>
 [regex_constants, klasa](../standard-library/regex-constants-class.md)<br/>
 [regex_error, klasa](../standard-library/regex-error-class.md)<br/>
-[\<wyrażenie regularne > Funkcje](../standard-library/regex-functions.md)<br/>
+[\<wyrażenie regularne > funkcji](../standard-library/regex-functions.md)<br/>
 [regex_iterator, klasa](../standard-library/regex-iterator-class.md)<br/>
-[\<wyrażenie regularne > operatory](../standard-library/regex-operators.md)<br/>
+[\<wyrażenie regularne > operatorów](../standard-library/regex-operators.md)<br/>
 [regex_token_iterator, klasa](../standard-library/regex-token-iterator-class.md)<br/>
 [regex_traits, klasa](../standard-library/regex-traits-class.md)<br/>

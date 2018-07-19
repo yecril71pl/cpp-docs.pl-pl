@@ -24,18 +24,18 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 49fe725c700a46e59625289de7ca5edf4b4d25b2
-ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
+ms.openlocfilehash: ad48c78d46928a34a43fab5bbe660750928baf51
+ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/26/2018
-ms.locfileid: "36955690"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37336764"
 ---
 # <a name="cgopherconnection-class"></a>Klasa CGopherConnection
-Zarządza połączenie z serwerem Internet gopher.  
+Zarządza połączeniem z serwerem Internet gopher.  
   
 > [!NOTE]
->  Klasy `CGopherConnection`, `CGopherFile`, `CGopherFileFind`, `CGopherLocator` i ich elementy członkowskie są przestarzałe, ponieważ nie działają na platformie Windows XP, ale będą one nadal działać na starszych platformach.  
+>  Klasy `CGopherConnection`, `CGopherFile`, `CGopherFileFind`, `CGopherLocator` i ich elementów członkowskich są przestarzałe, ponieważ nie działają na platformie Windows XP, ale będą one nadal działały na starszych platformach.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -55,18 +55,18 @@ class CGopherConnection : public CInternetConnection
   
 |Nazwa|Opis|  
 |----------|-----------------|  
-|[CGopherConnection::CreateLocator](#createlocator)|Tworzy [CGopherLocator](../../mfc/reference/cgopherlocator-class.md) obiektu można znaleźć plików na serwerze gopher.|  
-|[CGopherConnection::GetAttribute](#getattribute)|Pobiera informacje o atrybutach dotyczące gopher obiektu.|  
+|[CGopherConnection::CreateLocator](#createlocator)|Tworzy [CGopherLocator](../../mfc/reference/cgopherlocator-class.md) obiektu, aby znaleźć pliki na serwerze gophera.|  
+|[CGopherConnection::GetAttribute](#getattribute)|Pobiera informacje o atrybutach dotyczące obiektu gopher.|  
 |[CGopherConnection::OpenFile](#openfile)|Otwiera plik gopher.|  
   
 ## <a name="remarks"></a>Uwagi  
- Usługa gopher jest jednym z trzech usług internetowych, rozpoznaje klas MFC WinInet.  
+ Usługa gopher jest jednym z trzech usług internetowych, które rozpoznają klas MFC WinInet.  
   
  Klasa `CGopherConnection` zawiera konstruktora i trzy funkcje Członkowskie dodatkowe, które zarządzać usługą gopher: [OpenFile](#openfile), [CreateLocator](#createlocator), i [GetAttribute](#getattribute).  
   
- Do komunikacji z serwerem gopher Internet, należy najpierw utworzyć wystąpienie [CInternetSession](../../mfc/reference/cinternetsession-class.md), a następnie wywołać [CInternetSession::GetGopherConnection](../../mfc/reference/cinternetsession-class.md#getgopherconnection), co powoduje `CGopherConnection` obiektu i zwraca wskaźnik do niego. Nigdy nie twórz `CGopherConnection` obiekt bezpośrednio.  
+ Aby komunikować się z serwerem Internet gopher, należy najpierw utworzyć wystąpienie [CInternetSession](../../mfc/reference/cinternetsession-class.md), a następnie wywołaj [CInternetSession::GetGopherConnection](../../mfc/reference/cinternetsession-class.md#getgopherconnection), co powoduje utworzenie `CGopherConnection` obiektu i zwraca wskaźnik do niego. Nigdy nie twórz `CGopherConnection` obiektu bezpośrednio.  
   
- Aby dowiedzieć się więcej na temat `CGopherConnection` współpracuje z innych klas MFC Internet, zapoznaj się z artykułem [Internet programowanie za pomocą interfejsu WinInet](../../mfc/win32-internet-extensions-wininet.md). Więcej informacji o używaniu pozostałe dwa obsługiwane usługi internetowe, FTP i HTTP Zobacz klasy [CHttpConnection](../../mfc/reference/chttpconnection-class.md) i [CFtpConnection](../../mfc/reference/cftpconnection-class.md).  
+ Aby dowiedzieć się więcej o tym, jak `CGopherConnection` współpracuje z innych klas MFC Internet, zapoznaj się z artykułem [Internet programowanie za pomocą interfejsu WinInet](../../mfc/win32-internet-extensions-wininet.md). Więcej informacji o używaniu dla pozostałych obsługiwanych usług internetowych, FTP i HTTP zawiera opis klas [CHttpConnection](../../mfc/reference/chttpconnection-class.md) i [CFtpConnection](../../mfc/reference/cftpconnection-class.md).  
   
 ## <a name="inheritance-hierarchy"></a>Hierarchia dziedziczenia  
  [CObject](../../mfc/reference/cobject-class.md)  
@@ -79,7 +79,7 @@ class CGopherConnection : public CInternetConnection
  **Nagłówek:** afxinet.h  
   
 ##  <a name="cgopherconnection"></a>  CGopherConnection::CGopherConnection  
- Ta funkcja elementu członkowskiego jest wywoływana w celu utworzenia `CGopherConnection` obiektu.  
+ Ta funkcja członkowska jest wywoływana, aby skonstruować `CGopherConnection` obiektu.  
   
 ```  
 CGopherConnection(
@@ -100,38 +100,38 @@ CGopherConnection(
   
 ### <a name="parameters"></a>Parametry  
  *pSession*  
- Wskaźnik do pokrewny [CInternetSession](../../mfc/reference/cinternetsession-class.md) obiektu.  
+ Wskaźnik do powiązane [CInternetSession](../../mfc/reference/cinternetsession-class.md) obiektu.  
   
  *hConnected*  
- Dojście systemu Windows w bieżącej sesji Internet.  
+ Uchwyt Windows bieżącej sesji internetowej.  
   
  *pstrServer*  
- Wskaźnik do ciąg zawierający nazwę serwera FTP.  
+ Wskaźnik do ciągu zawierającego nazwę serwera FTP.  
   
  *dwContext*  
- Identyfikator kontekstu dla tej operacji. *dwContext* identyfikuje operacji informacje o stanie zwracanych przez [CInternetSession::OnStatusCallback](../../mfc/reference/cinternetsession-class.md#onstatuscallback). Wartość domyślna jest ustawiona na 1; jednak można jawnie przypisać identyfikator kontekstu określonych dla tej operacji. Obiekt i pracę go nie będą skojarzone z tym identyfikatorem kontekstu.  
+ Identyfikator kontekstu dla tej operacji. *dwContext* określa informacje o stanie operacji zwrócony przez [CInternetSession::OnStatusCallback](../../mfc/reference/cinternetsession-class.md#onstatuscallback). Wartość domyślna jest ustawiona na 1; Jednakże można jawnie przypisać identyfikator kontekstu określonego dla operacji. Obiekt i wszelkie prace, które wykonuje zostanie skojarzona z tym identyfikatorem kontekstu.  
   
  *pstrUserName*  
- Wskaźnik do zerem ciąg, który określa nazwę użytkownika, aby się zalogować. Jeśli **NULL**, wartością domyślną jest anonimowy.  
+ Wskaźnik na ciąg zakończony znakiem null, określający nazwę użytkownika, aby zalogować się. Jeśli ma wartość NULL, wartość domyślna jest anonimowy.  
   
  *pstrPassword*  
- Wskaźnik do zerem ciąg, który określa hasło używane do logowania. Jeśli oba *pstrPassword* i *pstrUserName* są **NULL**, domyślne hasła anonimowego jest nazwa e-mail użytkownika. Jeśli *pstrPassword* jest **NULL** (lub ciąg pusty), ale *pstrUserName* nie jest **NULL**, puste hasło jest używane. W poniższej tabeli opisano zachowanie cztery ustawienia możliwe *pstrUserName* i *pstrPassword*:  
+ Wskaźnik Określa hasło używane do logowania się w ciąg zakończony znakiem null. Jeśli oba *pstrPassword* i *pstrUserName* mają wartość NULL, domyślne hasło anonimowe to nazwa adres e-mail użytkownika. Jeśli *pstrPassword* ma wartość NULL (lub pustego ciągu), ale *pstrUserName* nie ma wartości NULL, puste hasło jest używane. W poniższej tabeli opisano zachowanie cztery ustawienia możliwe *pstrUserName* i *pstrPassword*:  
   
-|*pstrUserName*|*pstrPassword*|Nazwa użytkownika jest wysyłane do serwera FTP|Hasło wysłane do serwera FTP|  
+|*pstrUserName*|*pstrPassword*|Nazwa użytkownika jest wysyłane do serwera FTP|Hasła przesyłanych do serwera FTP|  
 |--------------------|--------------------|---------------------------------|---------------------------------|  
-|**Wartość NULL** lub ""|**Wartość NULL** lub ""|"anonymous"|Nazwa e-mail użytkownika|  
-|Nie- **NULL** ciągu|**Wartość NULL** lub ""|*pstrUserName*|" "|  
-|**Wartość NULL** z systemem innym niż **NULL** ciągu|**ERROR**|**ERROR**||  
-|Nie- **NULL** ciągu|Nie- **NULL** ciągu|*pstrUserName*|*pstrPassword*|  
+|Wartość NULL lub ""|Wartość NULL lub ""|"anonimowy"|Nazwa e-mail użytkownika|  
+|Ciąg znaków innych niż NULL|Wartość NULL lub ""|*pstrUserName*|" "|  
+|PUSTY ciąg inną niż NULL|BŁĄD|BŁĄD||  
+|Ciąg znaków innych niż NULL|Ciąg znaków innych niż NULL|*pstrUserName*|*pstrPassword*|  
   
  *nPort*  
  Liczba, która identyfikuje port TCP/IP używany na serwerze.  
   
 ### <a name="remarks"></a>Uwagi  
- Nigdy nie twórz `CGopherConnection` bezpośrednio. Zamiast wywoływać [CInternetSession::GetGopherConnection](../../mfc/reference/cinternetsession-class.md#getgopherconnection), co powoduje `CGopherConnection` obiektu i zwraca wskaźnik do niego.  
+ Nigdy nie twórz `CGopherConnection` bezpośrednio. Zamiast wywoływać [CInternetSession::GetGopherConnection](../../mfc/reference/cinternetsession-class.md#getgopherconnection), co powoduje utworzenie `CGopherConnection` obiektu i zwraca wskaźnik do niego.  
   
 ##  <a name="createlocator"></a>  CGopherConnection::CreateLocator  
- Wywołanie tej funkcji członkowskiej, aby utworzyć Lokalizator gopher można znaleźć lub określić plik na serwerze gopher.  
+ Wywołaj tę funkcję elementu członkowskiego, aby utworzyć Lokalizator gopher, aby znaleźć lub określić plik na serwerze gophera.  
   
 ```  
 CGopherLocator CreateLocator(
@@ -152,33 +152,33 @@ static CGopherLocator CreateLocator(
   
 ### <a name="parameters"></a>Parametry  
  *pstrDisplayString*  
- Wskaźnik do ciąg zawierający nazwę dokumentu gopher lub katalogu, które mają zostać pobrane. Jeśli *pstrDisplayString* parametr jest **NULL**, jest zwracany domyślny katalog gopher serwera.  
+ Wskaźnik do ciągu zawierającego nazwę gopher dokumentu lub katalogu, które mają zostać pobrane. Jeśli *pstrDisplayString* parametr ma wartość NULL, jest zwracana domyślny katalog dla serwera gopher.  
   
  *pstrSelectorString*  
- Wskaźnik do ciągu selektor do wysłania na serwer gopher w celu pobrania elementu. *pstrSelectorString* może być **NULL**.  
+ Wskaźnik do ciągu selektor do wysłania do serwera gopher, aby pobrać element. *pstrSelectorString* może mieć wartości NULL.  
   
  *dwGopherType*  
- To ustawienie określa, czy *pstrSelectorString* odwołuje się do katalogu lub dokument, i określa, czy żądanie jest gopher lub gopher +. Zobacz atrybuty dla struktury [GOPHER_FIND_DATA](http://msdn.microsoft.com/library/windows/desktop/aa384215) w zestawie Windows SDK.  
+ Określa, czy *pstrSelectorString* odwołuje się do katalogu lub dokumentu, oraz tego, czy żądanie jest gopher lub gopher +. Zobacz atrybuty dla struktury [GOPHER_FIND_DATA](http://msdn.microsoft.com/library/windows/desktop/aa384215) w zestawie Windows SDK.  
   
  *pstrLocator*  
- Wskaźnik do ciąg identyfikujący otworzyć plik. Ogólnie rzecz biorąc, ten ciąg jest zwracana z wywołania [CGopherFileFind::GetLocator](../../mfc/reference/cgopherfilefind-class.md#getlocator).  
+ Wskaźnik na ciąg, który identyfikuje plik do otwarcia. Ogólnie rzecz biorąc, ten ciąg jest zwracany z wywołania [CGopherFileFind::GetLocator](../../mfc/reference/cgopherfilefind-class.md#getlocator).  
   
  *pstrServerName*  
- Wskaźnik do ciąg zawierający nazwę serwera gopher.  
+ Wskaźnik do ciągu zawierającego nazwę serwera gopher.  
   
  *nPort*  
- Liczba identyfikująca portu internetowego dla tego połączenia.  
+ Numer identyfikujący portu internetowego dla tego połączenia.  
   
 ### <a name="return-value"></a>Wartość zwracana  
  A [CGopherLocator](../../mfc/reference/cgopherlocator-class.md) obiektu.  
   
 ### <a name="remarks"></a>Uwagi  
- Wersji statycznej funkcji członkowskiej, należy określić serwer, a wersja niestatyczna używa nazwy serwera na podstawie obiektu połączenia.  
+ W wersji statycznej funkcji składowej wymaga określenia serwera, nazwę serwera z obiektu połączenia jest używana wersja statyczna.  
   
- Aby pobrać informacje z serwera gopher, aplikacja musi najpierw uzyskać lokalizatora gopher. Aplikacji następnie należy traktować jako token nieprzezroczyste Lokalizator (oznacza to, aplikacji można użyć Lokalizator, ale nie bezpośrednio manipulowania lub porównaj je). Zwykle aplikacja używa Lokalizator wywołań [CGopherFileFind::FindFile](../../mfc/reference/cgopherfilefind-class.md#findfile) funkcji członkowskiej do pobrania konkretnych danych.  
+ Aby pobrać informacje z serwera gopher, aplikacji musi najpierw uzyskać lokalizatora gopher. Aplikacja następnie potraktować jako token nieprzezroczyste Lokalizator (oznacza to, że aplikacja użyć Lokalizator, ale nie są bezpośrednio manipulowania lub porównaj je). Zazwyczaj aplikacja używa Lokalizator wywołania [CGopherFileFind::FindFile](../../mfc/reference/cgopherfilefind-class.md#findfile) funkcja elementu członkowskiego w celu pobrania konkretnych danych.  
   
 ##  <a name="getattribute"></a>  CGopherConnection::GetAttribute  
- Wywołanie tej funkcji członkowskich można pobrać z serwera gopher określony atrybut informacje o elemencie.  
+ Wywołaj tę funkcję elementu członkowskiego, aby pobrać określony atrybut informacji na temat elementu z serwera gopher.  
   
 ```  
 BOOL GetAttribute(
@@ -191,16 +191,16 @@ BOOL GetAttribute(
  Odwołanie do [CGopherLocator](../../mfc/reference/cgopherlocator-class.md) obiektu.  
   
  *strRequestedAttributes*  
- Ciąg rozdzielonych spacjami Określanie nazw wymaganych atrybutów.  
+ Rozdzielany spacjami ciąg, określanie nazw wymaganych atrybutów.  
   
  *strResult*  
- Odwołanie do [cstring —](../../atl-mfc-shared/reference/cstringt-class.md) odbierająca Typ lokalizatora.  
+ Odwołanie do [CString](../../atl-mfc-shared/reference/cstringt-class.md) , która otrzymuje Typ lokalizatora.  
   
 ### <a name="return-value"></a>Wartość zwracana  
- Różna od zera, w przypadku powodzenia; w przeciwnym razie 0. W przypadku niepowodzenia wywołania funkcji Win32 [GetLastError](http://msdn.microsoft.com/library/windows/desktop/ms679360) może zostać wywołana w celu ustalenia przyczyny błędu.  
+ Wartość różną od zera, jeśli to się powiedzie; w przeciwnym razie 0. W przypadku niepowodzenia wywołania funkcji Win32 [GetLastError](http://msdn.microsoft.com/library/windows/desktop/ms679360) może zostać wywołana w celu ustalenia przyczyny błędu.  
   
 ##  <a name="openfile"></a>  CGopherConnection::OpenFile  
- Wywołanie tej funkcji elementu członkowskiego, aby otworzyć plik na serwerze gopher.  
+ Wywołaj tę funkcję elementu członkowskiego, aby otworzyć plik na serwerze gophera.  
   
 ```  
 CGopherFile* OpenFile(
@@ -214,20 +214,20 @@ CGopherFile* OpenFile(
  *refLocator*  
  Odwołanie do [CGopherLocator](../../mfc/reference/cgopherlocator-class.md) obiektu.  
   
- *wartość elementu dwFlags*  
- Dowolna kombinacja flag INTERNET_FLAG_ *. Zobacz [CInternetSession::OpenUrl](../../mfc/reference/cinternetsession-class.md#openurl) więcej informacji o INTERNET_FLAG_\* flagi.  
+ *Flagidw*  
+ Dowolna kombinacja flag INTERNET_FLAG_ *. Zobacz [CInternetSession::OpenUrl](../../mfc/reference/cinternetsession-class.md#openurl) więcej informacji na temat INTERNET_FLAG_\* flag.  
   
  *pstrView*  
- Wskaźnik do ciągu widoku pliku. Jeśli istnieje kilka widoków pliku na serwerze, ten parametr określa, aby otworzyć widok pliku. Jeśli *pstrView* jest **NULL**, widok domyślny plik jest używany.  
+ Wskaźnik do ciągu widok pliku. Jeśli istnieje kilka widoków pliku na serwerze, ten parametr określa widok plików, które można otworzyć. Jeśli *pstrView* ma wartość NULL, jest używany domyślny widok plików.  
   
  *dwContext*  
- Identyfikator kontekstu otwierany plik. Zobacz **uwagi** uzyskać więcej informacji o *dwContext*.  
+ Identyfikator kontekstu otwierany plik. Zobacz **uwagi** Aby uzyskać więcej informacji na temat *dwContext*.  
   
 ### <a name="return-value"></a>Wartość zwracana  
- Wskaźnik do [cgopherfile —](../../mfc/reference/cgopherfile-class.md) obiekt, aby go otworzyć.  
+ Wskaźnik do [CGopherFile](../../mfc/reference/cgopherfile-class.md) obiekt ma zostać otwarty.  
   
 ### <a name="remarks"></a>Uwagi  
- Zastąpienie *dwContext* domyślne, aby skonfigurować identyfikator kontekstu wartości wybrane. Identyfikator kontekstu jest skojarzony z tym działania związane z `CGopherConnection` obiektu utworzonego przez jego [CInternetSession](../../mfc/reference/cinternetsession-class.md) obiektu. Wartość jest zwracana do [CInternetSession::OnStatusCallback](../../mfc/reference/cinternetsession-class.md#onstatuscallback) zapewnienie stan operacji, z którą zostanie zidentyfikowana. Zapoznaj się z artykułem [pierwsze kroki Internet: WinInet](../../mfc/wininet-basics.md) uzyskać więcej informacji o identyfikatorze kontekstu.  
+ Zastąp *dwContext* domyślne, aby ustawić identyfikator kontekstu do wybranej wartości. Identyfikator kontekstu jest skojarzony z tym działania związane z `CGopherConnection` obiekt utworzony przez jego [CInternetSession](../../mfc/reference/cinternetsession-class.md) obiektu. Zwracana jest wartość [CInternetSession::OnStatusCallback](../../mfc/reference/cinternetsession-class.md#onstatuscallback) do udostępniania informacji o stanie operacji za pomocą którego jest identyfikowana. Zapoznaj się z artykułem [Internet pierwszych kroków: WinInet](../../mfc/wininet-basics.md) uzyskać więcej informacji o identyfikatorze kontekstu.  
   
 ## <a name="see-also"></a>Zobacz też  
  [Klasa CInternetConnection](../../mfc/reference/cinternetconnection-class.md)   

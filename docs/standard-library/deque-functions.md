@@ -10,12 +10,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8acde4167d9115180282b26f93cc2629c9f72638
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 409b9593d0c4d853e325502f4cc47c57a81c6264
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33841931"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38959183"
 ---
 # <a name="ltdequegt-functions"></a>&lt;deque —&gt; funkcji
 
@@ -23,9 +23,9 @@ ms.locfileid: "33841931"
 |-|
 |[swap](#swap)|
 
-## <a name="swap"></a>  Swap
+## <a name="swap"></a>  swap
 
-Zamienia deques dwa elementy.
+Zamienia elementy z dwóch deques.
 
 ```cpp
 void swap(
@@ -35,9 +35,9 @@ void swap(
 
 ### <a name="parameters"></a>Parametry
 
-`left` Obiekt typu `deque`.
+*po lewej stronie* obiektu typu `deque`.
 
-`right` Obiekt typu `deque`.
+*prawy* obiektu typu `deque`.
 
 ### <a name="example"></a>Przykład
 
@@ -45,4 +45,4 @@ Zobacz przykład [deque::swap](../standard-library/deque-class.md#swap).
 
 ## <a name="see-also"></a>Zobacz także
 
-[\<deque — >](../standard-library/deque.md)<br/>
+[\<deque >](../standard-library/deque.md)<br/>

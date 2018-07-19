@@ -1,5 +1,5 @@
 ---
-title: Klasa is_constructible | Dokumentacja firmy Microsoft
+title: is_constructible, klasa | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,16 +17,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c2461d7986e87bed846d09d6e3938a339237c8f8
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 8f9e3f71a0d8647000f77863ecc9243b069f0521
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33845170"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38955834"
 ---
-# <a name="isconstructible-class"></a>is_constructible — klasa
+# <a name="isconstructible-class"></a>is_constructible, klasa
 
-Sprawdza, czy typ jest umożliwia konstrukcji, gdy określone typy argumentów są używane.
+Sprawdza, czy typ jest konstrukcyjną, gdy są używane określone typy argumentów.
 
 ## <a name="syntax"></a>Składnia
 
@@ -37,19 +37,19 @@ struct is_constructible;
 
 ### <a name="parameters"></a>Parametry
 
-`T` Typ do zapytania.
+*T* typ do zapytania.
 
-`Args` Typy argumentów do dopasowania w konstruktora `T`.
+*Argumenty* typy argumentów, aby dopasować w Konstruktorze z *T*.
 
 ## <a name="remarks"></a>Uwagi
 
-Wystąpienie typu predykatu posiada wartość true Jeśli typ `T` jest umożliwia konstrukcji, korzystając z typami argumentów w `Args`, w przeciwnym razie ma wartość false. Typ `T` umożliwia konstrukcji Jeśli definicja zmiennej `T t(std::declval<Args>()...);` jest poprawnie sformułowany. Zarówno `T` i wszystkie typy w `Args` musi być ukończone typy `void`, lub tablic z nieznanym powiązaniem.
+Wystąpienie typu predykatu ma wartość true, jeśli typ *T* jest konstrukcyjną, korzystając z typami argumentów w elemencie *Args*, w przeciwnym razie przechowuje wartość false. Typ *T* jest konstrukcyjną Jeśli definicja zmiennej `T t(std::declval<Args>()...);` jest poprawnie sformułowany. Zarówno *T* i wszystkie typy w *Args* muszą być typami pełnymi **void**, lub tablic nieznany powiązane z.
 
 ## <a name="requirements"></a>Wymagania
 
 **Nagłówek:** \<type_traits >
 
-**Namespace:** Standard
+**Namespace:** standardowe
 
 ## <a name="see-also"></a>Zobacz także
 

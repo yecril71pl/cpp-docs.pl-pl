@@ -1,5 +1,5 @@
 ---
-title: ATL i Marshaler trybu wolnych wątków | Dokumentacja firmy Microsoft
+title: ATL i Marshaler trybu wolnych | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,26 +18,26 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1716985adf65b714a418f20d3873f45c32d368b4
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 015b07e5870aa6269dc76af8610d42fb469a6d33
+ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32355829"
+ms.lasthandoff: 07/05/2018
+ms.locfileid: "37848353"
 ---
 # <a name="atl-and-the-free-threaded-marshaler"></a>ATL i marshaler trybu wolnych wątków
-Strona atrybutów ATL prosty obiekt kreatora zawiera opcję umożliwiającą klasy agregacji Organizator trybu wolnych wątków (FTM).  
+Strona atrybutów ATL prostego obiektu kreatora zawiera opcję umożliwiającą klasy agregacji marshaler trybu (programu FTM).  
   
- Kreator generuje kod w celu utworzenia wystąpienia Organizator trybu wolnych wątków w `FinalConstruct` i wersji tego wystąpienia w `FinalRelease`. A `COM_INTERFACE_ENTRY_AGGREGATE` makro jest automatycznie dodawany do mapy COM, aby upewnić się, że `QueryInterface` żądań dotyczących [IMarshal](http://msdn.microsoft.com/library/windows/desktop/dd542707) są obsługiwane przez Organizator trybu wolnych wątków.  
+ Kreator generuje kod, aby utworzyć wystąpienie marshaler trybu w `FinalConstruct` i wersji tego wystąpienia w `FinalRelease`. Makra COM_INTERFACE_ENTRY_AGGREGATE jest automatycznie dodawana do mapy COM, aby upewnić się, że `QueryInterface` żądań dla [IMarshal](http://msdn.microsoft.com/library/windows/desktop/dd542707) są obsługiwane przez marshaler trybu.  
   
- Organizator trybu wolnych wątków umożliwia bezpośredni dostęp do interfejsów na obiekt z dowolnego wątku, w tym samym procesie przyspieszania wywołań między apartamentu. Ta opcja jest przeznaczona dla klas, które używają obu modelu wątkowości.  
+ Marshaler trybu umożliwia bezpośredni dostęp do interfejsów na obiekcie z żadnym z wątków w tym samym procesie przyspieszenia apartamentu dla wielu wywołań. Ta opcja jest przeznaczona dla klas, które używają obu modelu wątkowości.  
   
- Korzystając z tej opcji, klasy, należy wykonać odpowiedzialność za bezpieczeństwo wątków ich danych. Ponadto obiekty agregacji Organizator trybu wolnych wątków, które muszą używać wskaźniki interfejsu uzyskane z innych obiektów muszą wykonać dodatkowe czynności, aby upewnić się, że interfejsy są poprawnie przekazywane. Obejmuje to zwykle przechowywania wskaźniki interfejsu w tabeli interfejsu globalnego (GIT) i uzyskiwanie wskaźnika z GIT każdym razem, gdy jest używany. ATL zawiera klasę [CComGITPtr](../atl/reference/ccomgitptr-class.md) ułatwiają wskaźniki interfejsu przechowywane w usłudze GIT.  
+ Przy użyciu tej opcji, klasy musi ponosi odpowiedzialność za bezpieczeństwo wątków ich danych. Ponadto obiekty, które agregacji marshaler trybu i muszą korzystać wskaźniki interfejsu uzyskane z innych obiektów, należy wykonać dodatkowe kroki, aby upewnić się, że interfejsy są organizowane poprawnie. Obejmuje to zwykle przechowywania wskaźniki interfejsu w tabeli interfejsu globalnego (GIT) i pobieranie wskaźnika z GIT każdorazowo, gdy jest używany. ATL dostarcza klasę [CComGITPtr](../atl/reference/ccomgitptr-class.md) przydatne podczas używania wskaźniki interfejsu, przechowywane w usłudze GIT.  
   
 ## <a name="see-also"></a>Zobacz też  
  [Pojęcia](../atl/active-template-library-atl-concepts.md)   
  [CoCreateFreeThreadedMarshaler](http://msdn.microsoft.com/library/windows/desktop/ms694500)   
  [IMarshal](http://msdn.microsoft.com/library/windows/desktop/dd542707)   
- [Kiedy należy używać Tabela interfejsu globalnego](http://msdn.microsoft.com/library/windows/desktop/ms693729)   
- [Problemy wielowątkowości Server wewnątrzprocesowe](http://msdn.microsoft.com/library/windows/desktop/ms687205)
+ [Kiedy używać tabeli interfejsu globalnego](http://msdn.microsoft.com/library/windows/desktop/ms693729)   
+ [Problemy wielowątkowości dotyczące serwera przetwarzania](http://msdn.microsoft.com/library/windows/desktop/ms687205)
 

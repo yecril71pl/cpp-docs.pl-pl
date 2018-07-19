@@ -1,5 +1,5 @@
 ---
-title: 'Informacje o formantach ATL: Klasy obsługi ogólne | Dokumentacja firmy Microsoft'
+title: 'Kontrolki ATL: Ogólne klasy obsługi | Dokumentacja firmy Microsoft'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,25 +17,25 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8c0aa30487edb3a5998a0b9777017015aeb7b675
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 6674bbdc29a6945cb26ea6b2caa03cc8c72be230
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32354858"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38958520"
 ---
-# <a name="controls-general-support-classes"></a>Kontrolki: Klasy obsługi ogólne
-Następujące klasy zapewniają ogólne obsługę formantów ATL:  
+# <a name="controls-general-support-classes"></a>Kontrolki: Ogólne klasy obsługi
+Następujące klasy zapewniają ogólną pomoc techniczną dla kontrolek ATL:  
   
--   [CComControl](../atl/reference/ccomcontrol-class.md) składa się z pomocy funkcji i danych elementów członkowskich, które są niezbędne do kontrolek ALT.  
+-   [CComControl](../atl/reference/ccomcontrol-class.md) składa się z pomocy funkcji i danych elementów członkowskich, które są niezbędne do kontrolek ATL.  
   
 -   [IOleControlImpl](../atl/reference/iolecontrolimpl-class.md) udostępnia metody wymagane dla formantów.  
   
--   [IOleObjectImpl](../atl/reference/ioleobjectimpl-class.md) udostępnia metody głównej za pomocą których kontener komunikuje się z formantem. Zarządza Aktywacja i dezaktywacja formantów w miejscu.  
+-   [IOleObjectImpl](../atl/reference/ioleobjectimpl-class.md) zapewnia metody podmiotu zabezpieczeń, za pomocą których kontener komunikuje się za pomocą kontrolki. Zarządza Aktywacja i dezaktywacja kontrolek w miejscu.  
   
--   [IQuickActivateImpl](../atl/reference/iquickactivateimpl-class.md) łączy inicjowania do pojedynczego wywołanie w celu ułatwienia kontenery uniknąć opóźnienia podczas ładowania kontrolki.  
+-   [IQuickActivateImpl](../atl/reference/iquickactivateimpl-class.md) łączy inicjowania w pojedyncze wywołanie, aby pomóc uniknąć opóźnień, podczas ładowania formantów kontenerów.  
   
--   [IPointerInactiveImpl](../atl/reference/ipointerinactiveimpl-class.md) zapewnia interakcji z myszą minimalnego dla formantu w przeciwnym razie nieaktywne.  
+-   [IPointerInactiveImpl](../atl/reference/ipointerinactiveimpl-class.md) zapewnia interakcji z myszą minimalny dla formantu w przeciwnym razie nieaktywne.  
   
 ## <a name="sample-program"></a>Przykładowy Program  
  [ATLFire](../visual-cpp-samples.md)  
@@ -44,5 +44,5 @@ Następujące klasy zapewniają ogólne obsługę formantów ATL:
  [ALT — samouczek](../atl/active-template-library-atl-tutorial.md)  
   
 ## <a name="see-also"></a>Zobacz też  
- [Przegląd klas](../atl/atl-class-overview.md)
+ [Klasa — Przegląd](../atl/atl-class-overview.md)
 

@@ -36,15 +36,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 24981d2544c2b3e2c8be6a3307829f8a1e1c29ad
-ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
+ms.openlocfilehash: eec19c574d9555fdfefaedd1b5ac05d896d15152
+ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/27/2018
-ms.locfileid: "37040223"
+ms.lasthandoff: 07/05/2018
+ms.locfileid: "37850764"
 ---
 # <a name="cmfcribbonprogressbar-class"></a>Klasa CMFCRibbonProgressBar
-Implementuje formant, który wskazuje wizualnie postępu długotrwałej operacji.  
+Implementuje formant, który wizualnie wskazuje postęp długiej operacji.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -68,17 +68,17 @@ class CMFCRibbonProgressBar : public CMFCRibbonBaseElement
 |[CMFCRibbonProgressBar::GetRangeMax](#getrangemax)|Zwraca maksymalną wartość bieżącego zakresu.|  
 |[CMFCRibbonProgressBar::GetRangeMin](#getrangemin)|Zwraca minimalną wartość bieżącego zakresu.|  
 |[CMFCRibbonProgressBar::GetRegularSize](#getregularsize)|Zwraca zwykłego rozmiaru elementu wstążki. (Przesłania [CMFCRibbonBaseElement::GetRegularSize](../../mfc/reference/cmfcribbonbaseelement-class.md#getregularsize).)|  
-|[CMFCRibbonProgressBar::IsInfiniteMode](#isinfinitemode)|Określa, czy pasek postępu działa w trybie nieskończoną.|  
-|[CMFCRibbonProgressBar::OnDraw](#ondraw)|Wywoływane przez platformę, by narysować elementem wstążki. (Przesłania [CMFCRibbonBaseElement::OnDraw](../../mfc/reference/cmfcribbonbaseelement-class.md#ondraw).)|  
-|[CMFCRibbonProgressBar::SetInfiniteMode](#setinfinitemode)|Ustawia pasek postępu do pracy w trybie nieskończoną.|  
+|[CMFCRibbonProgressBar::IsInfiniteMode](#isinfinitemode)|Określa, czy pasek postępu działa w trybie nieskończone.|  
+|[CMFCRibbonProgressBar::OnDraw](#ondraw)|Metoda wywoływana przez platformę, by narysować elementem wstążki. (Przesłania [CMFCRibbonBaseElement::OnDraw](../../mfc/reference/cmfcribbonbaseelement-class.md#ondraw).)|  
+|[CMFCRibbonProgressBar::SetInfiniteMode](#setinfinitemode)|Ustawia pasek postępu do pracy w trybie nieskończone.|  
 |[CMFCRibbonProgressBar::SetPos](#setpos)|Ustawia bieżący postęp.|  
-|[CMFCRibbonProgressBar::SetRange](#setrange)|Ustawia wartości minimalną i maksymalną.|  
+|[CMFCRibbonProgressBar::SetRange](#setrange)|Ustawia wartości minimalne i maksymalne.|  
   
 ## <a name="remarks"></a>Uwagi  
- A `CMFCRibbonProgressBar` może działać w dwóch trybach: regularne i nieskończoną. W trybie regularne paska postępu jest wypełniany od lewej do prawej i zatrzymuje się wartość maksymalna. W trybie nieskończone paska postępu jest wielokrotnie wypełnione z wartością minimalną wartość maksymalna. Można użyć trybu nieskończone aby wskazać, że operacja jest wykonywana, ale że czas zakończenia jest nieznany.  
+ Element `CMFCRibbonProgressBar` może działać w dwóch trybach: regularne i nieskończona. W regularnym trybie paska postępu jest wypełniany od lewej do prawej i zatrzymuje się wartość maksymalna. W trybie nieskończoną pasek postępu jest wielokrotnie wypełnione z minimalną wartość maksymalnej wartości. Można użyć trybu nieskończonej aby wskazać, że trwa operacja, ale że czas ukończenia jest nieznany.  
   
 ## <a name="example"></a>Przykład  
- W poniższym przykładzie pokazano sposób użycia różnych metod w `CMFCRibbonProgressBar` klasy. W przykładzie ustawiania pasek postępu do pracy w trybie nieskończone (gdzie czas ukończenia operacji jest nieznany), ustaw wartość minimalną i maksymalną dla paska postępu i ustaw bieżąca pozycja paska postępu. Następujący fragment kodu jest częścią [próbka MS Office 2007 Demo](../../visual-cpp-samples.md).  
+ Poniższy przykład pokazuje, jak korzystać z różnych metod w `CMFCRibbonProgressBar` klasy. W przykładzie pokazano sposób ustawiania pasek postępu do pracy w trybie infinite (których czas ukończenia operacji jest nieznany), ustawienie minimalne i maksymalne wartości dla paska postępu i ustawienie bieżącej pozycji pasek postępu. Ten fragment kodu jest częścią [próbka MS Office 2007 Demo](../../visual-cpp-samples.md).  
   
  [!code-cpp[NVC_MFC_MSOffice2007Demo#11](../../mfc/reference/codesnippet/cpp/cmfcribbonprogressbar-class_1.cpp)]  
   
@@ -107,13 +107,13 @@ CMFCRibbonProgressBar(
   
 ### <a name="parameters"></a>Parametry  
  [in] *nID*  
- Określa identyfikator polecenia pasek postępu wstążki.  
+ Określa identyfikator polecenia dla paska postępu wstążki.  
   
  [in] *nWidth*  
- Określa szerokość w pikselach, pasek postępu wstążki.  
+ Określa szerokość w pikselach, na wstążce paska postępu.  
   
  [in] *nHeight*  
- Określa wysokość w pikselach, pasek postępu wstążki.  
+ Określa wysokość w pikselach, na wstążce paska postępu.  
   
 ##  <a name="getpos"></a>  CMFCRibbonProgressBar::GetPos  
  Zwraca bieżącą pozycję pasek postępu.  
@@ -123,13 +123,13 @@ int GetPos () const;
 ```  
   
 ### <a name="return-value"></a>Wartość zwracana  
- Wartość reprezentującą bieżąca pozycja paska postępu.  
+ Wartość reprezentująca bieżącego położenia obiektu pasek postępu.  
   
 ### <a name="remarks"></a>Uwagi  
- Zakres ustawiany musi znajdować się w zakresie określonym przez [CMFCRibbonProgressBar::SetRange](#setrange) metody.  
+ Zakres ustawiania musi być w zakresie określonym przez [CMFCRibbonProgressBar::SetRange](#setrange) metody.  
   
 ##  <a name="getrangemax"></a>  CMFCRibbonProgressBar::GetRangeMax  
- Zwraca bieżącego użytkownika pasek postępu wartość maksymalna.  
+ Zwraca pasek postępu jego bieżąca wartość maksymalna.  
   
 ```  
 int GetRangeMax() const;  
@@ -141,14 +141,14 @@ int GetRangeMax() const;
 ### <a name="remarks"></a>Uwagi  
   
 ##  <a name="getrangemin"></a>  CMFCRibbonProgressBar::GetRangeMin  
- Zwraca bieżącego użytkownika pasek postępu minimalną wartość zakresu.  
+ Zwraca bieżącego użytkownika na pasku postępu minimalną wartość zakresu.  
   
 ```  
 int GetRangeMin() const;  
 ```  
   
 ### <a name="return-value"></a>Wartość zwracana  
- Minimalna wartość bieżącego zakresu.  
+ Wartość minimalna bieżącego zakresu.  
   
 ##  <a name="getregularsize"></a>  CMFCRibbonProgressBar::GetRegularSize  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
@@ -165,17 +165,17 @@ virtual CSize GetRegularSize(CDC* pDC);
 ### <a name="remarks"></a>Uwagi  
   
 ##  <a name="isinfinitemode"></a>  CMFCRibbonProgressBar::IsInfiniteMode  
- Określa, czy pasek postępu działa w trybie nieskończoną.  
+ Określa, czy pasek postępu działa w trybie nieskończone.  
   
 ```  
 BOOL IsInfiniteMode() const;  
 ```  
   
 ### <a name="return-value"></a>Wartość zwracana  
- `TRUE` Jeśli pasek postępu jest w trybie nieskończone; w przeciwnym razie `FALSE`.  
+ Wartość TRUE, jeśli pasek postępu jest w trybie nieskończona w przeciwnym razie wartość FALSE.  
   
 ### <a name="remarks"></a>Uwagi  
- W trybie nieskończone pasek postępu wypełnia wielokrotnie z wartością minimalną wartość maksymalna. Można użyć trybu nieskończone aby wskazać, że operacja jest wykonywana, ale że czas zakończenia jest nieznany.  
+ W trybie nieskończonej pasek postępu wypełni wielokrotnie z minimalną wartość maksymalnej wartości. Można użyć trybu nieskończonej aby wskazać, że trwa operacja, ale że czas ukończenia jest nieznany.  
   
 ##  <a name="ondraw"></a>  CMFCRibbonProgressBar::OnDraw  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
@@ -190,7 +190,7 @@ virtual void OnDraw(CDC* pDC);
 ### <a name="remarks"></a>Uwagi  
   
 ##  <a name="setinfinitemode"></a>  CMFCRibbonProgressBar::SetInfiniteMode  
- Ustawia pasek postępu do pracy w trybie nieskończoną.  
+ Ustawia pasek postępu do pracy w trybie nieskończone.  
   
 ```  
 void SetInfiniteMode(BOOL bSet = TRUE);
@@ -198,13 +198,13 @@ void SetInfiniteMode(BOOL bSet = TRUE);
   
 ### <a name="parameters"></a>Parametry  
  [in] *bUstawienie*  
- `TRUE` Aby określić, czy pasek postępu jest w trybie nieskończone; w przeciwnym razie `FALSE`.  
+ Wartość TRUE, aby określić, że pasek postępu jest w trybie nieskończonej; w przeciwnym razie wartość FALSE.  
   
 ### <a name="remarks"></a>Uwagi  
- Zwykle Jeśli pasek postępu jest w trybie nieskończone, go informuje użytkownika czy operacja jest wykonywana, ale że czas zakończenia jest nieznany. W związku z tym pasek postępu wypełnia wielokrotnie z wartością minimalną wartość maksymalna.  
+ Zwykle Jeśli pasek postępu jest w trybie nieskończoną, jego informacją dla użytkownika, trwa operacja, ale że czas ukończenia jest nieznany. W związku z tym pasek postępu wypełni wielokrotnie z minimalną wartość maksymalnej wartości.  
   
 ##  <a name="setpos"></a>  CMFCRibbonProgressBar::SetPos  
- Ustawia bieżąca pozycja paska postępu.  
+ Ustawia bieżącej pozycji pasek postępu.  
   
 ```  
 void SetPos(
@@ -213,17 +213,17 @@ void SetPos(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *nPos*  
- Określa położenie, do którego jest ustawiona na pasku postępu.  
+ [in] *npos —*  
+ Określa położenie, do którego ustawiono pasek postępu.  
   
  [in] *bRedraw*  
  Określa, czy pasek postępu powinien być narysowany ponownie.  
   
 ### <a name="remarks"></a>Uwagi  
- Zakres ustawiany musi znajdować się w zakresie określonym przez [CMFCRibbonProgressBar::SetRange](#setrange) metody.  
+ Zakres ustawiania musi być w zakresie określonym przez [CMFCRibbonProgressBar::SetRange](#setrange) metody.  
   
 ##  <a name="setrange"></a>  CMFCRibbonProgressBar::SetRange  
- Ustawia wartości minimalną i maksymalną dla pasek postępu.  
+ Określa minimalne i maksymalne wartości dla paska postępu.  
   
 ```  
 void SetRange(
@@ -232,14 +232,14 @@ void SetRange(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *nMin*  
- Określa minimalną wartość zakresu.  
+ [in] *Nmin.*  
+ Określa wartość minimum zakresu.  
   
- [in] *nMax*  
+ [in] *nmaks.*  
  Określa maksymalną wartość zakresu.  
   
 ### <a name="remarks"></a>Uwagi  
- Ta metoda umożliwia zdefiniowanie zakresu pasek postępu przez ustawienie wartości minimalną i maksymalną.  
+ Ta metoda umożliwia zdefiniowanie zakresu pasek postępu, ustawiając wartości minimalne i maksymalne.  
   
 ## <a name="see-also"></a>Zobacz też  
  [Diagram hierarchii](../../mfc/hierarchy-chart.md)   

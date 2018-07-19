@@ -16,16 +16,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6f902e7a1a3ae4bcb35a4822228425747476d5bc
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: d4069dc5151dd231773e926aadf17de7c03d3770
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33864076"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38958282"
 ---
 # <a name="linearcongruentialengine-class"></a>linear_congruential_engine — Klasa
 
-Generuje losowe sekwencji przez algorytm congruential liniowej.
+Generuje losową sekwencję przez liniowego algorytmu liczb pseudolosowych.
 
 ## <a name="syntax"></a>Składnia
 
@@ -55,13 +55,13 @@ class linear_congruential_engine{
 
 ### <a name="parameters"></a>Parametry
 
-`UIntType` Typ wyniku liczbę całkowitą bez znaku. Dla typów możliwych [ \<losowe >](../standard-library/random.md).
+*UIntType* typ wyniku liczby całkowitej bez znaku. Aby możliwych typów, zobacz [ \<losowy >](../standard-library/random.md).
 
-`A` **Mnożnik**. **Warunek wstępny**: sekcji Zobacz uwagi.
+*A* **mnożnik**. **Warunek wstępny**: sekcję Zobacz uwagi.
 
-`C` **Przyrost**. **Warunek wstępny**: sekcji Zobacz uwagi.
+*C* **przyrostu**. **Warunek wstępny**: sekcję Zobacz uwagi.
 
-`M` **Modulo**. **Warunek wstępny**: Zobacz uwagi.
+*M* **modulo**. **Warunek wstępny**: Zobacz uwagi.
 
 ## <a name="members"></a>Elementy członkowskie
 
@@ -70,42 +70,42 @@ class linear_congruential_engine{
 |`linear_congruential_engine::linear_congruential_engine`|`linear_congruential_engine::min`|`linear_congruential_engine::discard`|
 |`linear_congruential_engine::operator()`|`linear_congruential_engine::max`|`linear_congruential_engine::seed`|
 
-`default_seed` jest elementem członkowskim stałej, zdefiniowanej jako `1u`, używana jako domyślna wartość parametru `linear_congruential_engine::seed` i Konstruktor pojedynczej wartości.
+`default_seed` jest elementem członkowskim stałą, definiowany jako `1u`, który jest używany jako wartość domyślna parametru `linear_congruential_engine::seed` i konstruktora pojedynczej wartości.
 
-Aby uzyskać więcej informacji na temat aparatu członków zobacz [ \<losowe >](../standard-library/random.md).
+Aby uzyskać więcej informacji na temat elementów członkowskich aparatu zobacz [ \<losowy >](../standard-library/random.md).
 
 ## <a name="remarks"></a>Uwagi
 
-`linear_congruential_engine` Klasy szablonu jest najprostsza aparat generator, ale nie najszybszym lub najwyższej jakości. Poprawa za pośrednictwem tego aparatu jest [substract_with_carry_engine](../standard-library/subtract-with-carry-engine-class.md). Żadna z tych aparaty jest tak szybko, lub za pomocą jako wysokiej jakości wyniki w postaci [mersenne_twister_engine —](../standard-library/mersenne-twister-engine-class.md).
+`linear_congruential_engine` Klasy szablonu jest najprostszym aparatu generator, ale nie najszybszy lub najwyższej jakości. Poprawa przez ten aparat jest [substract_with_carry_engine](../standard-library/subtract-with-carry-engine-class.md). Żadna z tych aparaty nie jest tak szybko, lub jako wysokiej jakości wyniki w postaci [mersenne_twister_engine —](../standard-library/mersenne-twister-engine-class.md).
 
-Ten aparat tworzy wartości określonych przez użytkownika bez znaku typu całkowitego przy użyciu relacji cyklu ( *okres*) `x(i) = (A * x(i-1) + C) mod M`.
+Ten aparat tworzy wartości określonych przez użytkownika typ bez znaku typu całkowitego przy użyciu relacji cyklu ( *okres*) `x(i) = (A * x(i-1) + C) mod M`.
 
-Jeśli `M` wynosi zero, używana dla tej operacji modulo wartość `numeric_limits<result_type>::max() + 1`. Stan aparatu jest ostatnią wartość zwracana lub wartości początkowej, jeśli dokonano Brak wywołania `operator()`.
+Jeśli *M* wynosi zero, wartość używana dla tej operacji modulo jest `numeric_limits<result_type>::max() + 1`. Stan aparatu jest ostatnią wartość zwracana lub wartość początkową, jeśli wprowadzono Brak wywołania `operator()`.
 
-Jeśli `M` jest nie jest zerowa, wartości argumentów szablonu `A` i `C` musi być mniejsza niż `M`.
+Jeśli *M* jest nie jest zerowa, wartości argumentów szablonu *A* i *C* musi być mniejsza niż *M*.
 
-Mimo że można bezpośrednio utworzyć generator z tym aparatem, umożliwia także jeden z tych wstępnie zdefiniowanych definicje typów.
+Chociaż można utworzyć generatora z tego aparatu bezpośrednio, umożliwia także jeden z tych wstępnie zdefiniowanych definicji typów.
 
-`minstd_rand0`: 1988 minimalnego standardowe aparat (Nowak, Goodman i Tomaszewski, 1969).
+`minstd_rand0`: 1988 minimalne standardowa aparat (Lewis Goodman i Miller 1969).
 
 ```cpp
 typedef linear_congruential_engine<unsigned int, 16807, 0, 2147483647> minstd_rand0;
 ```
 
-`minstd_rand`: Zaktualizowany aparat standardowe minimalnego `minstd_rand0` (wstrzymywanie Tomaszewski i Stockmeyer, 1993).
+`minstd_rand`: Zaktualizowany aparat standard minimalny `minstd_rand0` (Park Miller i Stockmeyer, 1993).
 
 ```cpp
 typedef linear_congruential_engine<unsigned int, 48271, 0, 2147483647> minstd_rand;
 ```
 
-Aby uzyskać szczegółowe informacje o algorytm liniowej aparat congruential, zobacz artykuł Wikipedia [liniowej generator congruential](http://go.microsoft.com/fwlink/p/?linkid=402446).
+Aby uzyskać szczegółowe informacje dotyczące algorytmu aparatu bloku liniowy złożony, zobacz artykułu w Wikipedii [liniowej generatora liczb pseudolosowych](http://go.microsoft.com/fwlink/p/?linkid=402446).
 
 ## <a name="requirements"></a>Wymagania
 
-**Nagłówek:** \<losowe >
+**Nagłówek:** \<losowy >
 
-**Namespace:** Standard
+**Namespace:** standardowe
 
 ## <a name="see-also"></a>Zobacz także
 
-[\<losowe >](../standard-library/random.md)<br/>
+[\<losowy >](../standard-library/random.md)<br/>

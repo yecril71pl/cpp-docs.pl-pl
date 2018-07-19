@@ -1,5 +1,5 @@
 ---
-title: Funkcje elementów członkowskich strumienia pliku wyjściowego | Dokumentacja firmy Microsoft
+title: Funkcje elementów członkowskich Stream pliku wyjściowego | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -14,26 +14,26 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7a1cba80b18f94d5a833b238e19be8190a442146
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 0b79700277486c43035bd7d448fc942f785f4cc8
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33858464"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38959942"
 ---
 # <a name="output-file-stream-member-functions"></a>Funkcje elementów członkowskich strumienia pliku danych wyjściowych
 
-Funkcje elementów członkowskich strumienia wyjściowego ma trzy typy: te, które są równoważne manipulatory, które wykonać niesformatowany operacji zapisu, a te, które w przeciwnym razie zmodyfikować strumienia o stanie i nie równoważne manipulatora ani operator wstawiania. Dla danych wyjściowych sekwencyjnych, sformatowany może używać tylko operatorów wstawiania i manipulatory. Dla danych wyjściowych dostępie swobodnym binarne dysku Użyj innych funkcji elementów członkowskich z lub bez operatorów wstawiania.
+Funkcje składowe strumienia wyjściowego ma trzy typy: te, które są równoważne manipulatory, te, które wykonują niesformatowany operacje zapisu w magazynie, a te, które w przeciwnym razie zmodyfikuj strumienia stanu i mieć równoważne manipulator lub operator wstawiania. Sekwencyjne sformatowanych danych wyjściowych można skorzystać tylko z operatorów wstawiania i manipulatory. W danych wyjściowych dysku binarne dostępu swobodnego należy użyć innych funkcji Członkowskich z lub bez operatorów wstawiania.
 
-## <a name="the-open-function-for-output-streams"></a>Otwórz funkcja dla strumienie wyjściowe
+## <a name="the-open-function-for-output-streams"></a>Otwórz funkcję dla strumieni wyjściowych
 
-Umożliwia strumienia pliku wyjściowego ([ofstream](../standard-library/basic-ofstream-class.md)), strumieniu należy skojarzyć z plikiem dysku określonego w konstruktorze lub **Otwórz** funkcji. Jeśli używasz **Otwórz** funkcji, można ponownie użyć tego samego obiektu strumienia z szeregu plików. W obu przypadkach argumenty opisujące pliku są takie same.
+Za pomocą usługi stream pliku wyjściowego ([ofstream](../standard-library/basic-ofstream-class.md)), strumieniu należy skojarzyć z plikiem dyskowym określonych w konstruktorze lub `open` funkcji. Jeśli używasz `open` funkcji, można ponownie użyć tego samego obiektu strumienia z serii plików. W obu przypadkach argumenty opisujące pliku są takie same.
 
-Po otwarciu pliku skojarzone z strumienia wyjściowego należy określają **open_mode** flagi. Można połączyć te flagi, które są zdefiniowane jako wyliczenia w `ios` klasy z bitowego OR ( &#124; ) operatora. Zobacz [ios_base::openmode](../standard-library/ios-base-class.md#openmode) listę wyliczenia.
+Gdy otworzysz plik skojarzony ze strumienia wyjściowego, zwykle określasz `open_mode` flagi. Można połączyć te flagi, które są zdefiniowane jako moduły wyliczające w `ios` klasy za pomocą bitowej OR ( &#124; ) — operator. Zobacz [ios_base::openmode](../standard-library/ios-base-class.md#openmode) lista modułów wyliczających.
 
-Trzy typowe problemy strumienia wyjściowego wymaga opcji trybu:
+Trzy typowe sytuacje strumień danych wyjściowych obejmują opcje trybu:
 
-- Tworzenie pliku. Jeśli plik już istnieje, stara wersja została usunięta.
+- Tworzenie pliku. Jeśli plik już istnieje, stara wersja jest usuwany.
 
    ```cpp
    ostream ofile("FILENAME");
@@ -43,13 +43,13 @@ Trzy typowe problemy strumienia wyjściowego wymaga opcji trybu:
    // Equivalent to above
    ```
 
-- Rekordy są dołączane do istniejącego pliku lub utworzenie jednego, jeśli nie istnieje.
+- Rekordy są dołączane do istniejącego pliku lub Tworzenie katalogu, jeśli nie istnieje.
 
    ```cpp
    ofstream ofile("FILENAME", ios::app);
    ```
 
-- Otwieranie dwóch plików, jeden z nich na tym samym strumienia.
+- Otwieranie dwóch plików pojedynczo, w tym samym strumieniu.
 
    ```cpp
    ofstream ofile();
@@ -62,9 +62,9 @@ Trzy typowe problemy strumienia wyjściowego wymaga opcji trybu:
    // When ofile goes out of scope it is destroyed.
    ```
 
-## <a name="the-put"></a>Metody put
+## <a name="the-put"></a>Put
 
-**Put** funkcja zapisuje jeden znak w strumieniu wyjściowym. Dwa poniższe instrukcje są takie same, domyślnie, ale druga dotyczy argumenty format strumienia:
+**Umieścić** funkcja zapisuje znak do strumienia wyjściowego. Następujące dwie instrukcje są takie same, domyślnie, ale druga jest zależna od argumentów format strumienia:
 
 ```cpp
 cout.put('A');
@@ -73,9 +73,9 @@ cout.put('A');
 cout <<'A'; // Format arguments 'width' and 'fill' apply
 ```
 
-## <a name="the-write"></a>Zapisu
+## <a name="the-write"></a>Zapis
 
-**Zapisu** funkcja zapisuje bloku pamięci do strumienia pliku wyjściowego. Długość argumentu określa liczba zapisanych bajtów. W tym przykładzie tworzy strumień pliku wyjściowego i zapisuje wartość binarna `Date` struktury do niej:
+`write` Funkcja zapisuje blok pamięci w strumieniu wyjściowym pliku. Długość argumentu określa liczba zapisanych bajtów. W tym przykładzie tworzy strumień wyjściowy plik i zapisuje wartość binarna `Date` struktury do niego:
 
 ```cpp
 // write_function.cpp
@@ -96,56 +96,56 @@ int main( )
 }
 ```
 
-**Zapisu** funkcji nie zatrzymać po osiągnięciu znak null, są zapisywane w strukturze klas ukończone. Funkcja przyjmuje dwa argumenty: `char` wskaźnik i liczbę znaków do zapisu. Należy pamiętać, wymagane Rzutowanie na **char\***  przed adresu obiektu struktury.
+`write` — Funkcja nie zatrzymuje się po osiągnięciu znak null, więc są zapisywane w strukturze klas ukończone. Funkcja przyjmuje dwa argumenty: **char** wskaźnik i liczba znaków do zapisania. Należy pamiętać, wymagane Rzutowanie na **char\***  przed adres obiektu, struktury.
 
-## <a name="the-seekp-and-tellp-functions"></a>Funkcje seekp i tellp
+## <a name="the-seekp-and-tellp-functions"></a>Seekp — i tellp — funkcje
 
-Strumień pliku wyjściowego zachowuje wewnętrznego wskaźnika, który wskazuje miejsce, w których są dane do zapisania obok. `seekp` Funkcji członkowskiej ustawia ten wskaźnik, a tym samym zapewnia dostęp losowy dysku pliku wyjściowego. `tellp` Funkcji członkowskiej zwraca położenie pliku. Przykłady używających odpowiedniki strumień wejściowy `seekp` i `tellp`, zobacz [funkcji seekg i tellg](../standard-library/input-stream-member-functions.md).
+Strumień wyjściowy plik przechowuje wewnętrzny wskaźnik, który wskazuje miejsce, w którym dane są następnie zapisanie. `seekp` Funkcja elementu członkowskiego ustawia ten wskaźnik, a tym samym zapewnia dane wyjściowe pliku dysku dostępu swobodnego. `tellp` Funkcja elementu członkowskiego zwraca położenie pliku. Aby uzyskać przykłady z zastosowaniem odpowiedniki strumienia wejściowego, do `seekp` i `tellp`, zobacz [funkcji seekg — i tellg —](../standard-library/input-stream-member-functions.md).
 
-## <a name="the-close-function-for-output-streams"></a>Zamknij funkcja dla strumienie wyjściowe
+## <a name="the-close-function-for-output-streams"></a>Zamknij funkcję dla strumieni wyjściowych
 
-**Zamknąć** funkcji członkowskiej zamyka plik dysku skojarzonego z strumienia pliku danych wyjściowych. Plik musi zostać zamknięty do ukończenia wszystkich dysków danych wyjściowych. W razie potrzeby `ofstream` destruktora zamyka plik dla Ciebie, ale może użyć **zamknąć** funkcji, aby otworzyć inny plik dla tego samego obiektu strumienia.
+`close` Funkcja elementu członkowskiego zamyka pliku dysku skojarzonego z strumienia pliku wyjściowego. Plik musi zostać zamknięty do ukończenia wszystkich dysków danych wyjściowych. Jeśli to konieczne, `ofstream` destruktor zamyka plik dla Ciebie, ale można użyć `close` działać, jeśli trzeba otworzyć inny plik dla tego samego obiektu strumienia.
 
-Destruktor strumień wyjściowy jest automatycznie zamykany strumienia pliku tylko wtedy, gdy Konstruktor lub **Otwórz** funkcji członkowskiej otworzyć plik. Przekazania pliku deskryptora już otwartego pliku lub użyj Konstruktora **dołączyć** funkcji członkowskiej, musisz zamknąć plik jawnie.
+Destruktor strumienia wyjściowego automatycznie zamyka strumienia pliku tylko wtedy, gdy Konstruktor lub `open` plik otwarty dla funkcji członkowskiej. W przypadku przekazania deskryptor pliku dla pliku już open lub użyj Konstruktora `attach` funkcja elementu członkowskiego musi jawnie Zamknij plik.
 
-## <a name="vclrferrorprocessingfunctionsanchor10"></a> Wystąpił błąd podczas przetwarzania funkcje
+## <a name="vclrferrorprocessingfunctionsanchor10"></a> Wystąpił błąd podczas przetwarzania funkcji
 
-Użyj tych funkcji elementu członkowskiego, aby sprawdzić błędy podczas zapisywania do strumienia:
+Aby sprawdzić błędy podczas zapisywania do strumienia za pomocą tych funkcji elementu członkowskiego:
 
 |Funkcja|Wartość zwracana|
 |--------------|------------------|
-|[bad](http://msdn.microsoft.com/Library/4038d331-e9c9-48b0-bf49-c6505744469c)|Zwraca **true** Jeśli wystąpił nieodwracalny błąd.|
-|[Niepowodzenie](http://msdn.microsoft.com/Library/619f1b36-1e72-4551-8b48-888ae4e370d2)|Zwraca **true** przypadku nieodwracalny błąd lub warunek "Oczekiwano", na przykład błąd konwersji, lub jeśli plik nie został znaleziony. Przetwarzanie często można wznowić po wywołaniu **wyczyść** z argumentem zero.|
-|[Dobra](http://msdn.microsoft.com/Library/77f0aa17-2ae1-48ae-8040-592d301e3972)|Zwraca **true** Jeśli nie jest brak błędu (nieodwracalny ani w inny sposób) i nie jest ustawiona flaga końca pliku.|
+|[bad](http://msdn.microsoft.com/Library/4038d331-e9c9-48b0-bf49-c6505744469c)|Zwraca **true** przypadku wystąpił nieodwracalny błąd.|
+|[Niepowodzenie](http://msdn.microsoft.com/Library/619f1b36-1e72-4551-8b48-888ae4e370d2)|Zwraca **true** przypadku wystąpił nieodwracalny błąd lub warunek "Oczekiwano", takie jak błąd konwersji, lub jeśli plik nie zostanie znaleziony. Przetwarzanie często wznowienie jest możliwe po wywołaniu `clear` z argumentem zero.|
+|[dobre](http://msdn.microsoft.com/Library/77f0aa17-2ae1-48ae-8040-592d301e3972)|Zwraca **true** Jeśli brak jest nie błędu (nieodwracalny lub w inny sposób), a nie jest ustawiona flaga końca pliku.|
 |[eof](http://msdn.microsoft.com/Library/3087f631-1268-49cd-86cf-ff4108862329)|Zwraca **true** pod warunkiem końca pliku.|
-|[Wyczyść](http://msdn.microsoft.com/Library/dc172694-1267-45f8-8f5c-e822e16fc271)|Ustawia stan błąd wewnętrzny. Jeśli wywołana z argumentami domyślnymi, czyści wszystkie bity błędu.|
+|[Usuń zaznaczenie](http://msdn.microsoft.com/Library/dc172694-1267-45f8-8f5c-e822e16fc271)|Ustawia stan błędu wewnętrznego. Jeśli wywołana z argumentami domyślnymi, czyści wszystkie bity błędu.|
 |[rdstate](http://msdn.microsoft.com/Library/e235e4e2-7e95-4777-a160-3938d263dd9c)|Zwraca bieżący stan błędu.|
 
-**!** operator jest przeciążone w celu wykonania taką samą funkcję jak **niepowodzenie** funkcji. W związku z tym wyrażenie:
+**!** operator jest przeciążony przeprowadzić taką samą funkcję jak `fail` funkcji. Ten sposób wyrażenie:
 
 ```cpp
 if(!cout)...
 ```
 
-odpowiada to:
+jest równoważne:
 
 ```cpp
 if(cout.fail())...
 ```
 
-**Void\*()** operator jest przeciążony być przeciwieństwem **!** operator; w związku z tym wyrażenie:
+**Void\*()** operator jest przeciążony być przeciwieństwem **!** operator; ten sposób wyrażenie:
 
 ```cpp
 if(cout)...
 ```
 
-jest równe:
+wynosi:
 
 ```cpp
 if(!cout.fail())...
 ```
 
-**Void\*()** operator nie jest odpowiednikiem **dobrej** ponieważ Testuj na końcu pliku.
+**Void\*()** nie jest odpowiednikiem `good` ponieważ Testuj je na końcu pliku.
 
 ## <a name="see-also"></a>Zobacz także
 

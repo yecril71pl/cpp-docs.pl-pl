@@ -19,14 +19,14 @@ helpviewer_keywords:
 - std::operator!= (complex)
 - std::operator&gt;&gt; (complex)
 - std::operator&lt;&lt; (complex), std::operator== (complex)
-ms.openlocfilehash: e0ab9f6cf54393b5c1d58cb00ec9238015b5c5d0
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: b65178b171b8717096eb19206877b033a52d1e44
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33848141"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38957701"
 ---
-# <a name="ltcomplexgt-operators"></a>&lt;złożone&gt; operatory
+# <a name="ltcomplexgt-operators"></a>&lt;złożone&gt; operatorów
 
 ||||
 |-|-|-|
@@ -36,7 +36,7 @@ ms.locfileid: "33848141"
 
 ## <a name="op_neq"></a>  operator! =
 
-Testy pod kątem nierówności między dwie liczb zespolonych, jeden lub oba mogą należeć do podzbioru typ części rzeczywistych i urojony.
+Testuje pod kątem nierówności pomiędzy dwóch liczb zespolonych, jednego lub obu z nich mogą należeć do podzbioru typu rzeczywiste i urojone części.
 
 ```
 
@@ -58,19 +58,19 @@ bool operator!=(
 
 ### <a name="parameters"></a>Parametry
 
-`left` Liczby złożone lub obiektu typu parametru pod kątem nierówności.
+*po lewej stronie* liczby zespolonej lub obiektu typu parametru ma zostać przetestowana pod kątem nierówności.
 
-`right` Liczby złożone lub obiektu typu parametru pod kątem nierówności.
+*prawy* liczby zespolonej lub obiektu typu parametru ma zostać przetestowana pod kątem nierówności.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-**wartość true,** liczby nie są równe; **false** numery są równe.
+**wartość true,** liczby nie są równe; **false** liczby są równe.
 
 ### <a name="remarks"></a>Uwagi
 
-Dwie liczb zespolonych są takie same, tylko wtedy, gdy ich rzeczywistym części są takie same i ich urojony części są takie same. W przeciwnym razie ich nie są równe.
+Dwie liczby zespolone są równe tylko wtedy, gdy ich rzeczywistego części są równe, i ich urojone części są takie same. W przeciwnym razie są nierówne.
 
-Operacji jest przeciążona, dzięki czemu testy porównania mogą być wykonywane bez konwersji danych do określonego formatu.
+Operacji jest przeciążony tak, aby testy porównania mogą być wykonywane bez konwersji danych do określonego formatu.
 
 ### <a name="example"></a>Przykład
 
@@ -174,7 +174,7 @@ The complex numbers cl3b & cr3b are equal.
 
 ## <a name="op_star"></a>  operator *
 
-Mnoży dwie liczby złożone, przynajmniej jeden z nich może należeć do podzbioru typ części rzeczywistych i urojony.
+Mnoży dwie liczby zespolone, jednego lub obu z nich może należeć do podzbioru typu rzeczywiste i urojone części.
 
 ```
 
@@ -196,17 +196,17 @@ complex<Type> operator*(
 
 ### <a name="parameters"></a>Parametry
 
-`left` Pierwszy z dwóch liczb zespolonych lub typu parametru dla liczby złożonej, który ma zostać pomnożona przez liczbę * operacji.
+*po lewej stronie* pierwsza z dwóch liczb zespolonych lub liczbą, która jest typu parametru dla liczby zespolonej, który ma zostać pomnożona przez * operacji.
 
-`right` Drugi dwie liczb zespolonych lub typu parametru dla liczby złożonej, który ma zostać pomnożona przez liczbę * operacji.
+*prawy* drugi z dwóch liczb zespolonych lub liczbą, która jest typu parametru dla liczby zespolonej, który ma zostać pomnożona przez * operacji.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Liczby złożonej, będącą wynikiem iloczyn dwóch liczb, których wartości i typ są określone przez parametr danych wejściowych.
+Liczby zespolonej, która wynika z mnożenia dwóch liczb, których wartość i typ są określone przez parametr danych wejściowych.
 
 ### <a name="remarks"></a>Uwagi
 
-Operacja jest przeciążona, dzięki czemu można wykonywać proste operacje arytmetyczne bez konwersji danych do określonego formatu.
+Operacji jest przeciążona, tak aby proste operacje arytmetyczne, mogą być wykonywane bez konwersji danych do określonego formatu.
 
 ### <a name="example"></a>Przykład
 
@@ -270,7 +270,7 @@ int main( )
 
 ## <a name="op_add"></a>  operator +
 
-Dodaje dwie liczb zespolonych, przynajmniej jeden z nich może należeć do podzbioru typ części rzeczywistych i urojony.
+Dodaje dwie liczby zespolone, jeden lub oba może należeć do podzbioru typu rzeczywiste i urojone części.
 
 ```
 
@@ -295,17 +295,17 @@ complex<Type> operator+(const complex<Type>& left);
 
 ### <a name="parameters"></a>Parametry
 
-`left` Pierwszy z dwóch liczb zespolonych lub jest typu parametru dla liczby złożonej, który ma zostać dodana do + operacji.
+*po lewej stronie* pierwsza z dwóch liczb zespolonych lub liczbą, która jest typu parametru dla liczby zespolonej, który ma zostać dodany przez + operacji.
 
-`right` Drugi dwie liczb zespolonych lub jest typu parametru dla liczby złożonej, który ma zostać dodana do + operacji.
+*prawy* drugi z dwóch liczb zespolonych lub liczbą, która jest typu parametru dla liczby zespolonej, który ma zostać dodany przez + operacji.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Liczba złożonych, która wynika z dodania dwóch liczb, których wartości i typ są określane przez danych wejściowych parametru.
+Liczby zespolonej, która wynika z dodanie dwóch liczb, których wartość i typ są określone przez parametr danych wejściowych.
 
 ### <a name="remarks"></a>Uwagi
 
-Operacja jest przeciążona, dzięki czemu można wykonywać proste operacje arytmetyczne bez konwersji danych do określonego formatu. Operator jednoargumentowy zwraca `left`.
+Operacji jest przeciążona, tak aby proste operacje arytmetyczne, mogą być wykonywane bez konwersji danych do określonego formatu. Jednoargumentowy operator zwraca *po lewej stronie*.
 
 ### <a name="example"></a>Przykład
 
@@ -409,7 +409,7 @@ The argument of cs4 is: 0.927295 radians, which is 53.1301 degrees.
 
 ## <a name="operator-"></a>  operator-
 
-Odejmuje dwie liczby złożone, przynajmniej jeden z nich może należeć do podzbioru typ części rzeczywistych i urojony.
+Odejmuje dwie liczby zespolone, jednego lub obu z nich może należeć do podzbioru typu rzeczywiste i urojone części.
 
 ```cpp
 template <class Type>
@@ -433,19 +433,19 @@ complex<Type> operator-(const complex<Type>& left);
 
 ### <a name="parameters"></a>Parametry
 
-`left` Pierwsze dwie liczb zespolonych lub jest typu parametru dla liczby złożonej, który można odejmować — operacja.
+*po lewej stronie* pierwsza z dwóch liczb zespolonych lub liczbą, która jest typu parametru dla liczby zespolonej do odjęcia — operacja.
 
-`right` Drugi z dwóch liczb zespolonych lub jest typu parametru dla liczby złożonej, który można odejmować — operacja.
+*prawy* drugi z dwóch liczb zespolonych lub liczbą, która jest typu parametru dla liczby zespolonej do odjęcia — operacja.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Liczba złożonych, będąca wynikiem odejmowanie `right` z `left`, dwóch liczb, których wartości są określone w danych wejściowych parametru.
+Liczby zespolonej, który jest wynikiem odejmowania *prawo* z *po lewej stronie*, dwie liczby, w których wartości są określone przez parametr danych wejściowych.
 
 ### <a name="remarks"></a>Uwagi
 
-Operacja jest przeciążona, dzięki czemu można wykonywać proste operacje arytmetyczne bez konwersji danych do określonego formatu.
+Operacji jest przeciążona, tak aby proste operacje arytmetyczne, mogą być wykonywane bez konwersji danych do określonego formatu.
 
-Operator jednoargumentowy zmiany znak liczbą i zwraca wartość, której część rzeczywista jest ujemnego część rzeczywista liczba wprowadzona i której urojony część jest ujemna urojony części liczba wprowadzona.
+Jednoargumentowy operator zmienia znak liczby zespolonej i zwraca wartość, z których część rzeczywista jest negacją część rzeczywista liczba danych wejściowych i którego urojone części jest ujemna urojone części liczb danych wejściowych.
 
 ### <a name="example"></a>Przykład
 
@@ -549,7 +549,7 @@ The argument of cs4 is: -2.2143 radians, which is -126.87 degrees.
 
 ## <a name="op_div"></a>  operator /
 
-Dzieli dwie liczby złożone, przynajmniej jeden z nich może należeć do podzbioru typ części rzeczywistych i urojony.
+Dzieli dwie liczby zespolone, jednego lub obu z nich mogą należeć do podzbioru typu rzeczywiste i urojone części.
 
 ```cpp
 template <class Type>
@@ -570,17 +570,17 @@ complex<Type> operator*(
 
 ### <a name="parameters"></a>Parametry
 
-`left` Liczbą lub liczbą, która jest typu parametru dla liczby złożonej, który jest podzielony przez denominator z licznikiem / operacji.
+*po lewej stronie* liczbą lub liczbą, która jest typu parametru dla liczby zespolonej, który jest licznikiem podzielenia przez dzielnik z / operacji.
 
-`right` Liczbą lub liczbą, która jest typu parametru dla będącego denominator ma być używany do dzielenia licznik z liczbą / operacji.
+*prawy* liczbą lub liczbą, która jest typu parametru dla numeru złożone, który jest mianownikiem ma być używany do dzielenia licznik z / operacji.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Liczba złożonych będącą wynikiem podziału licznik przez dzielnik wartości, które są określone w danych wejściowych parametru.
+Liczby zespolonej, która wynika z podziału licznik przez denominator, wartości, które są określone przez parametr danych wejściowych.
 
 ### <a name="remarks"></a>Uwagi
 
-Operacja jest przeciążona, dzięki czemu można wykonywać proste operacje arytmetyczne bez konwersji danych do określonego formatu.
+Operacji jest przeciążona, tak aby proste operacje arytmetyczne, mogą być wykonywane bez konwersji danych do określonego formatu.
 
 ### <a name="example"></a>Przykład
 
@@ -667,7 +667,7 @@ The argument of cs3 is: -0.523599 radians, which is -30 degrees.
 
 ## <a name="op_lt_lt"></a>  Operator&lt;&lt;
 
-Wstawia liczbą określonego do strumienia wyjściowego.
+Wstawia liczby zespolonej określony do strumienia wyjściowego.
 
 ```cpp
 template <class Type, class Elem, class Traits>
@@ -678,17 +678,17 @@ basic_ostream<Elem, Traits>& operator<<(
 
 ### <a name="parameters"></a>Parametry
 
-`Ostr` Strumień wyjściowy, w którym jest wprowadzana liczby złożonej.
+*OSTR* strumienia wyjściowego, w którym jest wprowadzana liczby zespolonej.
 
-`right` Liczby złożone wprowadzonych do strumienia wyjściowego.
+*prawy* liczby zespolonej wprowadzonych do strumienia wyjściowego.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Zapisuje wartość określonej liczby złożonej do `Ostr` w formacie kartezjańskimi: ( *część rzeczywista, część urojony* ).
+Zapisuje wartość logarytmu określonej liczby złożonej do *Ostr* w formacie Kartezjańskiego: ( *część rzeczywistych, urojone części* ).
 
 ### <a name="remarks"></a>Uwagi
 
-Strumień wyjściowy jest przeciążona, aby akceptował dowolnej formy liczbą i kartezjańskimi format jest domyślny format danych wyjściowych.
+Strumień wyjściowy jest przeciążona, aby akceptował jakiejkolwiek formy liczby zespolonej i przywrócić domyślny format danych wyjściowych jest format kartezjańskich wizualizacji.
 
 ### <a name="example"></a>Przykład
 
@@ -727,7 +727,7 @@ The argument of c2 is: 0.523599 radians, which is 30 degrees.
 
 ## <a name="op_eq_eq"></a>  operator ==
 
-Testy równości między dwie liczb zespolonych, jeden lub oba mogą należeć do podzbioru typ części rzeczywistych i urojony.
+Testuje pod kątem równości pomiędzy dwóch liczb zespolonych, jednego lub obu z nich mogą należeć do podzbioru typu rzeczywiste i urojone części.
 
 ```
 
@@ -749,9 +749,9 @@ bool operator==(
 
 ### <a name="parameters"></a>Parametry
 
-`left` Liczby złożone lub obiektu typu parametru pod kątem nierówności.
+*po lewej stronie* liczby zespolonej lub obiektu typu parametru ma zostać przetestowana pod kątem nierówności.
 
-`right` Liczby złożone lub obiektu typu parametru pod kątem nierówności.
+*prawy* liczby zespolonej lub obiektu typu parametru ma zostać przetestowana pod kątem nierówności.
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -759,9 +759,9 @@ bool operator==(
 
 ### <a name="remarks"></a>Uwagi
 
-Dwie liczb zespolonych są takie same, tylko wtedy, gdy ich rzeczywistym części są takie same i ich urojony części są takie same. W przeciwnym razie ich nie są równe.
+Dwie liczby zespolone są równe tylko wtedy, gdy ich rzeczywistego części są równe, i ich urojone części są takie same. W przeciwnym razie są nierówne.
 
-Operacji jest przeciążona, dzięki czemu testy porównania mogą być wykonywane bez konwersji danych do określonego formatu.
+Operacji jest przeciążony tak, aby testy porównania mogą być wykonywane bez konwersji danych do określonego formatu.
 
 ### <a name="example"></a>Przykład
 
@@ -865,7 +865,7 @@ The complex numbers cl3b & cr3b are equal.
 
 ## <a name="op_gt_gt"></a>  Operator&gt;&gt;
 
-Wyodrębnianie wartości złożonych ze strumienia wejściowego.
+Wyodrębnia wartość złożoną ze strumienia wejściowego.
 
 ```
 
@@ -877,19 +877,19 @@ basic_istream<Elem, Traits>& operator>>(
 
 ### <a name="parameters"></a>Parametry
 
-`Istr` Strumień wejściowy, z której jest wyodrębniany liczby złożonej.
+*Istr* strumienia wejściowego, z której jest wyodrębniany liczby zespolonej.
 
-`right` Liczba złożonych, która jest wyodrębniania ze strumienia wejściowego.
+*prawy* liczby zespolonej, wyodrębniona ze strumienia wejściowego.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Odczytuje wartość określonej liczby złożonej z `Istr` i zwraca go do `right`.
+Odczytuje wartość logarytmu określonej liczby zespolonej z *Istr* i zwraca go do *prawo*.
 
 ### <a name="remarks"></a>Uwagi
 
-Prawidłowe formaty wejściowych
+Prawidłowe formaty danych wejściowych
 
-- *(część prawdziwe, urojony część)*
+- *(real część i urojone części)*
 
 - *(część prawdziwe)*
 

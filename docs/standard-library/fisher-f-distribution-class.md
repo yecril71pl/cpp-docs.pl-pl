@@ -36,16 +36,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 79ddd6ad1d27f1479bb653373517f7d8c1f1d3bc
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 8ab5c5c790813f57da483878cb6a86fcf2ab0f04
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33847354"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38959654"
 ---
 # <a name="fisherfdistribution-class"></a>fisher_f_distribution — Klasa
 
-Generuje dystrybucji Fishera F.
+Generuje rozkład F Fishera.
 
 ## <a name="syntax"></a>Składnia
 
@@ -79,13 +79,13 @@ public:
 
 ### <a name="parameters"></a>Parametry
 
-*RealType* wartość domyślna typu wynik zmiennoprzecinkowy to `double`. Dla typów możliwych [ \<losowe >](../standard-library/random.md).
+*RealType* typu wyniku zmiennoprzecinkowych, wartość domyślna to **double**. Aby możliwych typów, zobacz [ \<losowy >](../standard-library/random.md).
 
-*URNG* uniform losowych liczb aparat generatora. Dla typów możliwych [ \<losowe >](../standard-library/random.md).
+*URNG* jednolitego numer generator aparat losowy. Aby możliwych typów, zobacz [ \<losowy >](../standard-library/random.md).
 
 ## <a name="remarks"></a>Uwagi
 
-Klasa szablonu opisuje dystrybucji tworzącego wartości określony użytkownik liczb zmiennoprzecinkowych typu lub typu `double` Jeśli nie zostanie podana, rozdzielonych Fishera F-dystrybucji. Poniższe łącza tabeli do artykułów na temat poszczególnych członków.
+Klasa szablonu opisuje dystrybucji tworzącego wartości określonych przez użytkownika zmiennoprzecinkowych wpisać lub typ **double** rozkładane Jeśli nie zostanie podana, rozkład F Fishera. Poniższa tabela zawiera linki do artykułów na temat poszczególnych elementów członkowskich.
 
 ||||
 |-|-|-|
@@ -94,17 +94,17 @@ Klasa szablonu opisuje dystrybucji tworzącego wartości określony użytkownik 
 
 Funkcje właściwości `m()` i `n()` zwracane wartości dla parametrów przechowywanych dystrybucji `m` i `n` odpowiednio.
 
-Element członkowski właściwości `param()` Ustawia lub zwraca `param_type` dystrybucji składowanych parametr pakietu.
+Właściwość elementu członkowskiego `param()` Ustawia lub zwraca `param_type` pakiet parametrów przechowywanych dystrybucji.
 
-`min()` i `max()` funkcje Członkowskie zwracają najmniejsza możliwa wynik i największa możliwa wynik, odpowiednio.
+`min()` i `max()` funkcje Członkowskie zwracają najmniejsza możliwa wynik i największych możliwych wyników, odpowiednio.
 
-`reset()` Funkcji członkowskiej odrzuca wszystkie buforowane wartości, tak aby wynik następne wywołanie `operator()` nie zależy od wartości uzyskane z aparatu przed wywołaniem.
+`reset()` Funkcja elementu członkowskiego odrzuca wszystkie wartości z pamięci podręcznej, tak aby wynik następnego wywołania metody `operator()` nie zależy od żadnych wartości uzyskane z aparatu przed wywołaniem.
 
-`operator()` Elementu członkowskiego zwracają wartość następnego wygenerowanego oparty na aparacie URNG, z bieżącego pakietu parametrów lub pakiet określony parametr.
+`operator()` Funkcje Członkowskie zwracają dalej wygenerowaną wartość opartą na aparacie URNG, z bieżącego pakietu parametrów lub pakietu określony parametr.
 
-Aby uzyskać więcej informacji o dystrybucji klasy i ich elementy członkowskie, zobacz [ \<losowe >](../standard-library/random.md).
+Aby uzyskać więcej informacji o dystrybucji klasy i składowe, zobacz [ \<losowy >](../standard-library/random.md).
 
-Aby uzyskać szczegółowe informacje na temat dystrybucji F, zobacz artykuł Wolfram MathWorld [rozkład F](http://go.microsoft.com/fwlink/p/?linkid=400899).
+Aby uzyskać szczegółowe informacje na temat rozkład F, zobacz artykuł Wolfram MathWorld [rozkład F](http://go.microsoft.com/fwlink/p/?linkid=400899).
 
 ## <a name="example"></a>Przykład
 
@@ -192,7 +192,7 @@ Distribution for 10 samples:
     10: 3.4320929653
 ```
 
-Druga instalacja:
+Uruchom drugie:
 
 ```Output
 Enter a floating point value for the 'm' distribution parameter (must be greater than zero): 1
@@ -242,13 +242,13 @@ Distribution for 10 samples:
 
 ## <a name="requirements"></a>Wymagania
 
-**Nagłówek:** \<losowe >
+**Nagłówek:** \<losowy >
 
-**Namespace:** Standard
+**Namespace:** standardowe
 
 ## <a name="fisher_f_distribution"></a>  fisher_f_distribution::fisher_f_distribution
 
-Tworzy dystrybucji.
+Tworzy rozkład.
 
 ```cpp
 explicit fisher_f_distribution(result_type m = 1.0, result_type n = 1.0);
@@ -261,15 +261,15 @@ explicit fisher_f_distribution(const param_type& parm);
 
 *n* `n` parametru dystrybucji.
 
-*Parametr* `param_type` struktury użyta do skonstruowania dystrybucji.
+*Parametr* `param_type` struktura używana do konstruowania dystrybucji.
 
 ### <a name="remarks"></a>Uwagi
 
 **Warunek wstępny:** `0.0 < m` i `0.0 < n`
 
-Pierwszy Konstruktor konstrukcji obiektu których przechowywane `m` wartość zawiera wartość *m* i których przechowywane `n` wartość przechowuje wartość *n*.
+Pierwszy Konstruktor konstruuje obiekt, którego przechowywane `m` wartość przechowuje wartość *m* i którego przechowywane `n` wartość przechowuje wartość *n*.
 
-Drugi Konstruktor konstrukcji obiektu, którego parametry przechowywane są inicjowane z *parametr*. Możesz uzyskać i ustawić bieżących parametrów istniejącego dystrybucji przez wywołanie metody `param()` funkcję elementu członkowskiego.
+Drugi Konstruktor konstruuje obiekt, którego przechowywane parametry są inicjowane z *parametr*. Możesz uzyskać i ustawić bieżących parametrów istniejącego dystrybucji przez wywołanie metody `param()` funkcja elementu członkowskiego.
 
 ## <a name="param_type"></a>  fisher_f_distribution::param_type
 
@@ -299,8 +299,8 @@ struct param_type {
 
 **Warunek wstępny:** `0.0 < m` i `0.0 < n`
 
-Ta struktura może być przekazany do konstruktora klasy dystrybucji przy tworzeniu wystąpienia, do `param()` funkcji członkowskiej, aby ustawić parametry przechowywane istniejących dystrybucji oraz do `operator()` do użycia zamiast przechowywane parametry.
+Ta struktura może być przekazywany do konstruktora klasy dystrybucji przy konkretyzacji, do `param()` funkcję elementu członkowskiego, aby ustawić przechowywanych parametrów istniejącego dystrybucji oraz do `operator()` ma być używany zamiast przechowywanych parametrów.
 
 ## <a name="see-also"></a>Zobacz także
 
-[\<losowe >](../standard-library/random.md)<br/>
+[\<losowy >](../standard-library/random.md)<br/>

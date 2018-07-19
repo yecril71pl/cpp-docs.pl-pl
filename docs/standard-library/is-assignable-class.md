@@ -1,5 +1,5 @@
 ---
-title: Klasa is_assignable | Dokumentacja firmy Microsoft
+title: is_assignable, klasa | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,14 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bd8b757ab46d462bd5d6a596f7dbbfdd18061a8d
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: d5666aca2d6a855b64af26d38a1ae834fecec5d6
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33843002"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38958468"
 ---
-# <a name="isassignable-class"></a>is_assignable — klasa
+# <a name="isassignable-class"></a>is_assignable, klasa
 
 Sprawdza, czy wartość `From` typu mogą być przypisane do `To` typu.
 
@@ -38,17 +38,17 @@ struct is_assignable;
 
 Typ obiektu, który odbiera przypisania.
 
-Z typu obiektu, który zawiera wartość.
+Od typu obiektu, który zawiera wartość.
 
 ## <a name="remarks"></a>Uwagi
 
-Wyrażenie, którego nie obliczono `declval<To>() = declval<From>()` musi być poprawnie sformułowany. Zarówno `From` i `To` musi być ukończone typy `void`, lub tablic z nieznanym powiązaniem.
+Wyrażenie nieobliczonym `declval<To>() = declval<From>()` musi być poprawnie sformułowany. Zarówno `From` i `To` muszą być typami pełnymi **void**, lub tablic nieznany powiązane z.
 
 ## <a name="requirements"></a>Wymagania
 
 **Nagłówek:** \<type_traits >
 
-**Namespace:** Standard
+**Namespace:** standardowe
 
 ## <a name="see-also"></a>Zobacz także
 

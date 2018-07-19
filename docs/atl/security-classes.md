@@ -14,37 +14,37 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8c3ba3675196e0e6e3564beeca5bc76a57e8903a
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 5fecc4865d0138a08ba7dd264e95d3cc9809ff7b
+ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32362342"
+ms.lasthandoff: 07/05/2018
+ms.locfileid: "37848648"
 ---
 # <a name="security-classes"></a>Klasy zabezpieczeń
-Te klasy są otoki dla typowych Win32 zabezpieczeń klas i obiektów.  
+Te klasy są otoki dla obiektów i typowych klas zabezpieczeń systemu Win32.  
   
--   [CAccessToken](../atl/reference/caccesstoken-class.md) ta klasa jest otoki dla tokenu dostępu.  
+-   [CAccessToken](../atl/reference/caccesstoken-class.md) tej klasy jest otoką dla tokenu dostępu.  
   
--   [CAcl](../atl/reference/cacl-class.md) ta klasa jest otoki dla **ACL** struktury (lista kontroli dostępu).  
+-   [CAcl](../atl/reference/cacl-class.md) tej klasy jest otoką `ACL` struktury (lista kontroli dostępu).  
   
--   [CDacl](../atl/reference/cdacl-class.md) ta klasa jest otoki dla **DACL** struktury (listy DACL kontroli dostępu).  
+-   [CDacl](../atl/reference/cdacl-class.md) tej klasy jest otoką `DACL` struktury (list arbitralnej kontroli dostępu).  
   
 -   [CPrivateObjectSecurityDesc](../atl/reference/cprivateobjectsecuritydesc-class.md) ta klasa reprezentuje obiekt deskryptora zabezpieczeń obiektu prywatnego.  
   
--   [CSacl](../atl/reference/csacl-class.md) ta klasa jest otoki dla **SACL** struktury (lista kontroli dostępu systemu).  
+-   [CSacl](../atl/reference/csacl-class.md) tej klasy jest otoką `SACL` struktury (systemowa lista kontroli dostępu).  
   
--   [CSecurityAttributes](../atl/reference/csecurityattributes-class.md) ta klasa jest cienką otoką dla **SECURITY_ATTRIBUTES** struktury.  
+-   [CSecurityAttributes](../atl/reference/csecurityattributes-class.md) tej klasy jest otoką alokowania elastycznego `SECURITY_ATTRIBUTES` struktury.  
   
--   [CSecurityDesc](../atl/reference/csecuritydesc-class.md) ta klasa jest otoki dla **SECURITY_DESCRIPTOR** struktury.  
+-   [CSecurityDesc](../atl/reference/csecuritydesc-class.md) tej klasy jest otoką `SECURITY_DESCRIPTOR` struktury.  
   
--   [CSid](../atl/reference/csid-class.md) ta klasa jest otoki dla `SID` struktury (identyfikator zabezpieczeń).  
+-   [CSid](../atl/reference/csid-class.md) tej klasy jest otoką `SID` struktury (identyfikator zabezpieczeń).  
   
--   [CTokenGroups](../atl/reference/ctokengroups-class.md) ta klasa jest otoki dla **TOKEN_GROUPS** struktury.  
+-   [CTokenGroups](../atl/reference/ctokengroups-class.md) tej klasy jest otoką `TOKEN_GROUPS` struktury.  
   
--   [CTokenPrivileges](../atl/reference/ctokenprivileges-class.md) ta klasa jest otoki dla **TOKEN_PRIVILEGES** struktury.  
+-   [CTokenPrivileges](../atl/reference/ctokenprivileges-class.md) tej klasy jest otoką `TOKEN_PRIVILEGES` struktury.  
   
 ## <a name="see-also"></a>Zobacz też  
- [Przegląd klas](../atl/atl-class-overview.md)   
+ [Klasa — Przegląd](../atl/atl-class-overview.md)   
  [Funkcje globalne zabezpieczeń](../atl/reference/security-global-functions.md)
 

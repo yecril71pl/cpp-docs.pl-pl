@@ -17,16 +17,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a117a7f9299591d971ecbfdd0a681b008937da33
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: c7d8b87b51bfeef68ef8bfe22c8e7e201929aa3f
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33847936"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38957077"
 ---
 # <a name="chartraitsltwchartgt-struct"></a>char_traits&lt;wchar_t&gt; — struktura
 
-Klasa, która jest specjalizacją szablonu struktury **char_traits\<CharType >** do elementu typu `wchar_t`.
+Klasa, która jest specjalizacją szablonu struktury **char_traits\<CharType >** do elementu typu **wchar_t**.
 
 ## <a name="syntax"></a>Składnia
 
@@ -37,13 +37,13 @@ struct char_traits<wchar_t>;
 
 ## <a name="remarks"></a>Uwagi
 
-Struktury móc korzystać z funkcji biblioteki, które manipulowania obiektów tego typu umożliwia specjalizacji `wchar_t`.
+Specjalizacja umożliwia struktury móc korzystać z funkcji biblioteki, które manipulowania obiektów tego typu **wchar_t**.
 
 ## <a name="requirements"></a>Wymagania
 
 **Nagłówek:** \<ciąg >
 
-**Namespace:** Standard
+**Namespace:** standardowe
 
 ## <a name="see-also"></a>Zobacz także
 

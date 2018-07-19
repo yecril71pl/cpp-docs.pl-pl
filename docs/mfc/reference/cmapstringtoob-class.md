@@ -44,15 +44,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7e4ea4ea24dfae26b1b43fe6480cac7f7a480fa4
-ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
+ms.openlocfilehash: 6cbeecff722ba25d28ba38a60d3b577ce108b61d
+ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/27/2018
-ms.locfileid: "37042251"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37337359"
 ---
 # <a name="cmapstringtoob-class"></a>Klasa CMapStringToOb
-Klasy kolekcji słownik mapujący unikatowy `CString` obiekty do `CObject` wskaźników.  
+Klasa kolekcji słownika, która mapuje unikatowe `CString` obiekty do `CObject` wskaźników.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -73,16 +73,16 @@ class CMapStringToOb : public CObject
 |Nazwa|Opis|  
 |----------|-----------------|  
 |[CMapStringToOb::GetCount](#getcount)|Zwraca liczbę elementów na tej mapie.|  
-|[CMapStringToOb::GetHashTableSize](#gethashtablesize)|Określa bieżąca liczba elementów w tablicy skrótów.|  
-|[CMapStringToOb::GetNextAssoc](#getnextassoc)|Pobiera następnego elementu potrzeby iteracji.|  
+|[CMapStringToOb::GetHashTableSize](#gethashtablesize)|Określa aktualną liczbę elementów w tabeli wyznaczania wartości skrótu.|  
+|[CMapStringToOb::GetNextAssoc](#getnextassoc)|Pobiera następny element do wykonania iteracji.|  
 |[CMapStringToOb::GetSize](#getsize)|Zwraca liczbę elementów na tej mapie.|  
 |[CMapStringToOb::GetStartPosition](#getstartposition)|Zwraca pozycję pierwszego elementu.|  
-|[CMapStringToOb::HashKey](#hashkey)|Oblicza wartość skrótu z określonym kluczem.|  
-|[CMapStringToOb::InitHashTable](#inithashtable)|Inicjuje tablicy skrótów.|  
-|[CMapStringToOb::IsEmpty](#isempty)|Testy dla warunku pusta Mapa (Brak elementów).|  
-|[CMapStringToOb::Lookup](#lookup)|Wyszukuje void wskaźnik oparte na kluczu wskaźnika typu void. Wartość wskaźnika, nie jednostki, który wskazuje, służy do porównywania klucza.|  
+|[CMapStringToOb::HashKey](#hashkey)|Oblicza wartość skrótu dla określonego klucza.|  
+|[CMapStringToOb::InitHashTable](#inithashtable)|Inicjuje tabelę mieszania.|  
+|[CMapStringToOb::IsEmpty](#isempty)|Testuje pod kątem warunku pusta Mapa (Brak elementów).|  
+|[CMapStringToOb::Lookup](#lookup)|Wyszukuje wskaźnika void oparte na kluczu wskaźnika void. Wartość wskaźnika, a nie jednostki, który wskazuje, służy do porównywania kluczy.|  
 |[CMapStringToOb::LookupKey](#lookupkey)|Zwraca odwołanie do klucz skojarzony z określoną wartością klucza.|  
-|[CMapStringToOb::RemoveAll](#removeall)|Usuwa wszystkie elementy z tej mapy.|  
+|[CMapStringToOb::RemoveAll](#removeall)|Usuwa wszystkie elementy z tej mapie.|  
 |[CMapStringToOb::RemoveKey](#removekey)|Usuwa element określony przez klucz.|  
 |[CMapStringToOb::SetAt](#setat)|Wstawia element do mapy; zastępuje istniejący element, jeśli dopasowany klucz zostanie znaleziony.|  
   
@@ -90,20 +90,20 @@ class CMapStringToOb : public CObject
   
 |Nazwa|Opis|  
 |----------|-----------------|  
-|[[CMapStringToOb::operator]](#operator_at)|Wstawia element do mapy — operator podstawienia dla `SetAt`.|  
+|[[] CMapStringToOb::operator](#operator_at)|Wstawia element do mapy — operator podstawienia dla `SetAt`.|  
   
 ## <a name="remarks"></a>Uwagi  
- Po wstawieniu `CString` -  `CObject*` pary (element) do mapy, można efektywnie pobrać lub usunąć pary za pomocą ciągu lub `CString` wartość jako klucza. Można również iteracja wszystkie elementy na mapie.  
+ Po wstawieniu `CString` -  `CObject*` pary (element) do mapy, mogą efektywnie pobierania i usuwania pary za pomocą ciągu lub `CString` wartość jako klucz. Można również wykonać iterację przez wszystkie elementy na mapie.  
   
- Zmienna typu **pozycji** jest używane do dostępu alternatywnego wpis w wszystkie odmiany mapy. Można użyć **pozycji** wpis "pamiętać" i do iteracji mapy. Może uważasz, że ten iteracji jest sekwencyjnych przez wartość klucza; nie jest. Sekwencja pobrane elementów jest nieokreślony.  
+ Zmienna typu pozycja jest używane do dostępu alternatywnego wpis w wszystkie odmiany mapy. Można użyć pozycji, wpis "pamiętać" i do iteracji na mapie. Może się wydawać, sekwencyjnych według wartości kluczy; to tej iteracji nie jest dostępne. Sekwencja elementów pobrane jest nieokreślony.  
   
- `CMapStringToOb` zawiera `IMPLEMENT_SERIAL` makro do obsługi serializacji i zrzucanie swoich elementów. Każdy element jest serializowany z kolei jeśli mapy jest przechowywany w archiwum, za pomocą przeciążenia wstawiania ( **<<**) — operator lub `Serialize` funkcję elementu członkowskiego.  
+ `CMapStringToOb` dołącza `IMPLEMENT_SERIAL` makra do obsługi serializacji i zrzucanie z jego elementów. Każdy element jest serializowana z kolei Jeśli mapa jest przechowywany do archiwum, przy użyciu przeciążonych wstawiania ( **<<**) — operator lub `Serialize` funkcja elementu członkowskiego.  
   
- Jeśli potrzebujesz diagnostycznych zrzut poszczególne elementy na mapie ( `CString` wartość i `CObject` zawartość), musisz ustawić głębokość kontekstu zrzutu 1 lub większą.  
+ Jeśli potrzebujesz diagnostycznych zrzut poszczególnych elementów w mapie ( `CString` wartość i `CObject` zawartość), należy ustawić głębokość kontekstu zrzutu 1 lub większą.  
   
- Gdy `CMapStringToOb` obiekt jest usunięty lub gdy jego elementy są usuwane, `CString` obiektów i `CObject` wskaźniki zostaną usunięte. Obiekty odwołuje się `CObject` wskaźniki nie zostaną zniszczone.  
+ Gdy `CMapStringToOb` obiekt zostanie usunięty lub gdy jego elementy są usuwane, `CString` obiektów i `CObject` wskaźniki są usuwane. Obiektów, odwołuje się `CObject` wskaźniki nie są niszczone.  
   
- Mapy pochodnym klasy jest podobna do listy pochodnym. Zapoznaj się z artykułem [kolekcje](../../mfc/collections.md) ilustrację pochodnym klasy listy specjalnych.  
+ Wyprowadzanie klasy mapy jest podobny do wyprowadzania listy. Zapoznaj się z artykułem [kolekcje](../../mfc/collections.md) ilustrację pochodnym klasy listy specjalnych.  
   
 ## <a name="inheritance-hierarchy"></a>Hierarchia dziedziczenia  
  [CObject](../../mfc/reference/cobject-class.md)  
@@ -122,12 +122,12 @@ CMapStringToOb(INT_PTR nBlockSize = 10);
   
 ### <a name="parameters"></a>Parametry  
  *nBlockSize*  
- Określa poziom szczegółowości Alokacja pamięci dla rozszerzanie mapy.  
+ Określa stopień szczegółowości alokacji pamięci do rozszerzania możliwości programu na mapie.  
   
 ### <a name="remarks"></a>Uwagi  
- Wraz z rozwojem mapy, w jednostkach jest przydzielana pamięć *nBlockSize* wpisów.  
+ Wraz z rozwojem mapy pamięć została przydzielona w jednostkach *nBlockSize* wpisów.  
   
- W poniższej tabeli przedstawiono innego członka funkcje, które są podobne do **CMapStringToOb:: CMapStringToOb**.  
+ W poniższej tabeli przedstawiono innego członka funkcje, które są podobne do `CMapStringToOb:: CMapStringToOb`.  
   
 |Class|Funkcja elementów członkowskich|  
 |-----------|---------------------|  
@@ -141,10 +141,10 @@ CMapStringToOb(INT_PTR nBlockSize = 10);
 ### <a name="example"></a>Przykład  
  [!code-cpp[NVC_MFCCollections#63](../../mfc/codesnippet/cpp/cmapstringtoob-class_1.cpp)]  
   
- Zobacz [CObList::CObList](../../mfc/reference/coblist-class.md#coblist) listę `CAge` klasa używana w wszystkie przykłady w kolekcji.  
+ Zobacz [CObList::CObList](../../mfc/reference/coblist-class.md#coblist) listę `CAge` klasa używana we wszystkich przykładach w kolekcji.  
   
 ##  <a name="getcount"></a>  CMapStringToOb::GetCount  
- Określa, ile elementów są na mapie.  
+ Określa liczbę elementów w mapie.  
   
 ```  
 INT_PTR GetCount() const;  
@@ -166,19 +166,19 @@ INT_PTR GetCount() const;
 |[CMapWordToPtr](../../mfc/reference/cmapwordtoptr-class.md)|**INT_PTR GetCount () const;**|  
   
 ### <a name="example"></a>Przykład  
- Zobacz [CObList::CObList](../../mfc/reference/coblist-class.md#coblist) listę `CAge` klasa używana w wszystkie przykłady w kolekcji.  
+ Zobacz [CObList::CObList](../../mfc/reference/coblist-class.md#coblist) listę `CAge` klasa używana we wszystkich przykładach w kolekcji.  
   
  [!code-cpp[NVC_MFCCollections#64](../../mfc/codesnippet/cpp/cmapstringtoob-class_2.cpp)]  
   
 ##  <a name="gethashtablesize"></a>  CMapStringToOb::GetHashTableSize  
- Określa bieżąca liczba elementów w tablicy skrótów.  
+ Określa aktualną liczbę elementów w tabeli wyznaczania wartości skrótu.  
   
 ```  
 UINT GetHashTableSize() const;  
 ```  
   
 ### <a name="return-value"></a>Wartość zwracana  
- Zwraca liczbę elementów w tablicy skrótów.  
+ Zwraca liczbę elementów w tabeli wyznaczania wartości skrótu.  
   
 ### <a name="remarks"></a>Uwagi  
  W poniższej tabeli przedstawiono innego członka funkcje, które są podobne do `CMapStringToOb::GetHashTableSize`.  
@@ -193,7 +193,7 @@ UINT GetHashTableSize() const;
 |[CMapWordToPtr](../../mfc/reference/cmapwordtoptr-class.md)|**UINT GetHashTableSize () const;**|  
   
 ##  <a name="getnextassoc"></a>  CMapStringToOb::GetNextAssoc  
- Pobiera element mapy pod *rNextPosition*, następnie aktualizuje *rNextPosition* do odwoływania się do następnego elementu na mapie.  
+ Pobiera element mapy w *rNextPosition*, następnie aktualizuje *rNextPosition* do odwoływania się do następnego elementu w mapie.  
   
 ```  
 void GetNextAssoc(
@@ -204,38 +204,38 @@ void GetNextAssoc(
   
 ### <a name="parameters"></a>Parametry  
  *rNextPosition*  
- Określa odwołania do **pozycji** wartość zwrócona przez poprzednie **GetNextAssoc** lub **GetStartPosition** wywołania.  
+ Określa odwołanie do wartości pozycji zwrócony przez poprzednie `GetNextAssoc` lub `GetStartPosition` wywołania.  
   
  *rKey*  
  Określa klucz zwróconego elementu pobrane (ciąg).  
   
  *r-wartości*  
- Określa wartość elementu pobrane ( **CObject** wskaźnika). Aby uzyskać więcej informacji na temat tego parametru, zobacz uwagi.  
+ Określa wartość elementu pobrane ( `CObject` wskaźnika). Aby uzyskać więcej informacji o tym parametrze, zobacz uwagi.  
   
 ### <a name="remarks"></a>Uwagi  
- Ta funkcja jest najbardziej przydatny w przypadku iteracja przez wszystkie elementy na mapie. Należy pamiętać, że sekwencji pozycji nie jest zawsze taki sam jak wartości klucza sekwencji.  
+ Ta funkcja jest najbardziej przydatne do iteracji na elementach na mapie. Należy pamiętać, że sekwencja pozycji niekoniecznie jest taka sama jak wartość klucza sekwencji.  
   
- Jeśli element pobrane przez ostatnie na mapie jest następnie nowa wartość *rNextPosition* ustawiono **NULL**.  
+ Jeśli element pobrane jest ostatni w mapie, nowa wartość *rNextPosition* ma wartość NULL.  
   
- Dla *prawostronnie* parametru, należy rzutować tego typu obiektu **CObject\*&**, czyli co wymaga kompilatora, jak pokazano w poniższym przykładzie:  
+ Dla *rValue* parametru, pamiętaj rzutować typu obiektu do **CObject\*&**, czyli co wymaga kompilatora, jak pokazano w poniższym przykładzie:  
   
  [!code-cpp[NVC_MFCCollections#65](../../mfc/codesnippet/cpp/cmapstringtoob-class_3.cpp)]  
   
- Nie jest to istotne w **GetNextAssoc** map oparte na szablonach.  
+ To nie jest prawdziwa `GetNextAssoc` dla map, oparte na szablonach.  
   
- W poniższej tabeli przedstawiono innego członka funkcje, które są podobne do **CMapStringToOb::GetNextAssoc**.  
+ W poniższej tabeli przedstawiono innego członka funkcje, które są podobne do `CMapStringToOb::GetNextAssoc`.  
   
 |Class|Funkcja elementów członkowskich|  
 |-----------|---------------------|  
-|[CMapPtrToPtr](../../mfc/reference/cmapptrtoptr-class.md)|**void GetNextAssoc (pozycja &** *rNextPosition* **, void\* &**  *rKey* **, void\* &**  *prawostronnie* **) const;**|  
-|[CMapPtrToWord](../../mfc/reference/cmapptrtoword-class.md)|**void GetNextAssoc (pozycja &** *rNextPosition* **, void\* &**  *rKey* **, WORD &** *prawostronnie* **) const;**|  
-|[CMapStringToPtr](../../mfc/reference/cmapstringtoptr-class.md)|**void GetNextAssoc (pozycja &** *rNextPosition* **, cstring — &** *rKey* **, void\* &**  *prawostronnie* **) const;**|  
-|[CMapStringToString](../../mfc/reference/cmapstringtostring-class.md)|**void GetNextAssoc (pozycja &** *rNextPosition* **, cstring — &** *rKey* **, cstring — &** *prawostronnie* **) const;**|  
-|[CMapWordToOb](../../mfc/reference/cmapwordtoob-class.md)|**void GetNextAssoc (pozycja &** *rNextPosition* **, WORD &** *rKey* **, CObject\* &**  *prawostronnie* **) const;**|  
-|[CMapWordToPtr](../../mfc/reference/cmapwordtoptr-class.md)|**void GetNextAssoc (pozycja &** *rNextPosition* **, WORD &** *rKey* **, void\* &**  *prawostronnie* **) const;**|  
+|[CMapPtrToPtr](../../mfc/reference/cmapptrtoptr-class.md)|**void GetNextAssoc (pozycja &** *rNextPosition* **, void\* &**  *rKey* **, void\* &**  *rValue* **) const;**|  
+|[CMapPtrToWord](../../mfc/reference/cmapptrtoword-class.md)|**void GetNextAssoc (pozycja &** *rNextPosition* **, void\* &**  *rKey* **, WORD i** *rValue* **) const;**|  
+|[CMapStringToPtr](../../mfc/reference/cmapstringtoptr-class.md)|**void GetNextAssoc (pozycja &** *rNextPosition* **, CString &** *rKey* **, void\* &**  *rValue* **) const;**|  
+|[CMapStringToString](../../mfc/reference/cmapstringtostring-class.md)|**void GetNextAssoc (pozycja &** *rNextPosition* **, CString &** *rKey* **, CString &** *rValue* **) const;**|  
+|[CMapWordToOb](../../mfc/reference/cmapwordtoob-class.md)|**void GetNextAssoc (pozycja &** *rNextPosition* **, WORD &** *rKey* **, CObject\* &**  *rValue* **) const;**|  
+|[CMapWordToPtr](../../mfc/reference/cmapwordtoptr-class.md)|**void GetNextAssoc (pozycja &** *rNextPosition* **, WORD &** *rKey* **, void\* &**  *rValue* **) const;**|  
   
 ### <a name="example"></a>Przykład  
- Zobacz [CObList::CObList](../../mfc/reference/coblist-class.md#coblist) listę `CAge` klasa używana w wszystkie przykłady w kolekcji.  
+ Zobacz [CObList::CObList](../../mfc/reference/coblist-class.md#coblist) listę `CAge` klasa używana we wszystkich przykładach w kolekcji.  
   
  [!code-cpp[NVC_MFCCollections#66](../../mfc/codesnippet/cpp/cmapstringtoob-class_4.cpp)]  
   
@@ -257,37 +257,37 @@ INT_PTR GetSize() const;
 ```  
   
 ### <a name="return-value"></a>Wartość zwracana  
- Liczba elementów w planie.  
+ Liczba elementów w mapie.  
   
 ### <a name="remarks"></a>Uwagi  
- Wywołaj tę metodę, aby pobrać liczbę elementów w planie.  
+ Wywołaj tę metodę, aby pobrać liczbę elementów w mapie.  
   
  W poniższej tabeli przedstawiono innego członka funkcje, które są podobne do `CMapStringToOb::GetSize`.  
   
 |Class|Funkcja elementów członkowskich|  
 |-----------|---------------------|  
-|[CMapPtrToPtr](../../mfc/reference/cmapptrtoptr-class.md)|**INT_PTR GetSize () const;**|  
-|[CMapPtrToWord](../../mfc/reference/cmapptrtoword-class.md)|**INT_PTR GetSize () const;**|  
-|[CMapStringToPtr](../../mfc/reference/cmapstringtoptr-class.md)|**INT_PTR GetSize () const;**|  
-|[CMapStringToString](../../mfc/reference/cmapstringtostring-class.md)|**INT_PTR GetSize () const;**|  
-|[CMapWordToOb](../../mfc/reference/cmapwordtoob-class.md)|**INT_PTR GetSize () const;**|  
-|[CMapWordToPtr](../../mfc/reference/cmapwordtoptr-class.md)|**INT_PTR GetSize () const;**|  
+|[CMapPtrToPtr](../../mfc/reference/cmapptrtoptr-class.md)|**INT_PTR getsize — () const;**|  
+|[CMapPtrToWord](../../mfc/reference/cmapptrtoword-class.md)|**INT_PTR getsize — () const;**|  
+|[CMapStringToPtr](../../mfc/reference/cmapstringtoptr-class.md)|**INT_PTR getsize — () const;**|  
+|[CMapStringToString](../../mfc/reference/cmapstringtostring-class.md)|**INT_PTR getsize — () const;**|  
+|[CMapWordToOb](../../mfc/reference/cmapwordtoob-class.md)|**INT_PTR getsize — () const;**|  
+|[CMapWordToPtr](../../mfc/reference/cmapwordtoptr-class.md)|**INT_PTR getsize — () const;**|  
   
 ### <a name="example"></a>Przykład  
  [!code-cpp[NVC_MFCCollections#67](../../mfc/codesnippet/cpp/cmapstringtoob-class_5.cpp)]  
   
 ##  <a name="getstartposition"></a>  CMapStringToOb::GetStartPosition  
- Uruchamia iteracji mapy zwracając **pozycji** wartości, które mogą zostać przekazane do `GetNextAssoc` wywołania.  
+ Uruchamia iteracji mapy, zwracając wartość pozycji, które mogą być przekazywane do `GetNextAssoc` wywołania.  
   
 ```  
 POSITION GetStartPosition() const;  
 ```  
   
 ### <a name="return-value"></a>Wartość zwracana  
- A **pozycji** wartość, która wskazuje pozycję początkową, które mapy; lub **NULL** Jeśli mapy jest pusta.  
+ Wartość pozycji, która wskazuje pozycja początkowa które mapy; lub wartość NULL, jeśli mapa jest pusta.  
   
 ### <a name="remarks"></a>Uwagi  
- Sekwencja iteracji nie jest przewidywalne; w związku z tym "pierwszy element w mapie" ma specjalnego znaczenia.  
+ Sekwencja iteracji nie jest przewidywalne; Dlatego "pierwszego elementu w mapie" ma specjalnego znaczenia.  
   
  W poniższej tabeli przedstawiono innego członka funkcje, które są podobne do `CMapStringToOb::GetStartPosition`.  
   
@@ -304,7 +304,7 @@ POSITION GetStartPosition() const;
  Zobacz przykład [CMapStringToOb::GetNextAssoc](#getnextassoc).  
   
 ##  <a name="hashkey"></a>  CMapStringToOb::HashKey  
- Oblicza wartość skrótu z określonym kluczem.  
+ Oblicza wartość skrótu dla określonego klucza.  
   
 ```  
 UINT HashKey(LPCTSTR key) const;  
@@ -312,7 +312,7 @@ UINT HashKey(LPCTSTR key) const;
   
 ### <a name="parameters"></a>Parametry  
  *Klucz*  
- Klucz wartości skrótu, którego ma zostać obliczona.  
+ Klucz, którego wartość skrótu, które ma zostać obliczona.  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Wartość skrótu klucza  
@@ -326,11 +326,11 @@ UINT HashKey(LPCTSTR key) const;
 |[CMapPtrToWord](../../mfc/reference/cmapptrtoword-class.md)|**UINT HashKey (void\***  `key` **) const;**|  
 |[CMapStringToString](../../mfc/reference/cmapstringtostring-class.md)|**UINT HashKey (LPCTSTR** `key` **) const;**|  
 |[CMapStringToPtr](../../mfc/reference/cmapstringtoptr-class.md)|**UINT HashKey (LPCTSTR** `key` **) const;**|  
-|[CMapWordToOb](../../mfc/reference/cmapwordtoob-class.md)|**UINT HashKey (WORD** `key` **) const;**|  
-|[CMapWordToPtr](../../mfc/reference/cmapwordtoptr-class.md)|**UINT HashKey (WORD** `key` **) const;**|  
+|[CMapWordToOb](../../mfc/reference/cmapwordtoob-class.md)|**UINT HashKey (program WORD** `key` **) const;**|  
+|[CMapWordToPtr](../../mfc/reference/cmapwordtoptr-class.md)|**UINT HashKey (program WORD** `key` **) const;**|  
   
 ##  <a name="inithashtable"></a>  CMapStringToOb::InitHashTable  
- Inicjuje tablicy skrótów.  
+ Inicjuje tabelę mieszania.  
   
 ```  
 void InitHashTable(
@@ -340,13 +340,13 @@ void InitHashTable(
   
 ### <a name="parameters"></a>Parametry  
  *hashSize*  
- Liczba wpisów w tablicy skrótów.  
+ Liczba wpisów w tabeli wyznaczania wartości skrótu.  
   
  *bAllocNow*  
- Jeśli **TRUE**, przydziela tablicy skrótów po zainicjowaniu; w przeciwnym razie tabeli jest przydzielane w razie potrzeby.  
+ W przypadku opcji TRUE przydziela tablicy skrótów po zainicjowaniu; w przeciwnym razie tabeli jest przydzielany, gdy potrzebne.  
   
 ### <a name="remarks"></a>Uwagi  
- Aby uzyskać najlepszą wydajność rozmiar tabeli skrótów powinna być liczba pierwsza. Aby zminimalizować problemy, rozmiar powinien mieścić się około 20 procent większy niż największy oczekiwanego zestawu danych.  
+ Aby uzyskać najlepszą wydajność rozmiar tabeli wyznaczania wartości skrótu powinien być liczba pierwsza. Aby zminimalizować konflikty, rozmiar powinien być około 20% większa niż największa przewidywanego zestawu danych.  
   
  W poniższej tabeli przedstawiono innego członka funkcje, które są podobne do `CMapStringToOb::InitHashTable`.  
   
@@ -367,7 +367,7 @@ BOOL IsEmpty() const;
 ```  
   
 ### <a name="return-value"></a>Wartość zwracana  
- Różna od zera, jeśli ta mapa nie zawiera żadnych elementów; w przeciwnym razie 0.  
+ Wartość różną od zera, jeśli to mapowanie nie zawiera elementów; w przeciwnym razie 0.  
   
 ### <a name="example"></a>Przykład  
  Zobacz przykład [RemoveAll](#removeall).  
@@ -395,16 +395,16 @@ BOOL Lookup(
   
 ### <a name="parameters"></a>Parametry  
  *Klucz*  
- Określa klucz ciąg identyfikujący elementu, który ma być wyszukiwane.  
+ Określa klucz ciąg, który identyfikuje elementu, który ma być wyszukiwana.  
   
  *r-wartości*  
- Określa wartość zwrócona z elementu wyszukiwanego w górę.  
+ Określa wartość zwrócona z elementu oglądałem się w górę.  
   
 ### <a name="return-value"></a>Wartość zwracana  
- Różna od zera, jeśli znaleziono element; w przeciwnym razie 0.  
+ Wartość różną od zera, jeśli element został znaleziony; w przeciwnym razie 0.  
   
 ### <a name="remarks"></a>Uwagi  
- `Lookup` używa algorytmu wyznaczania wartości skrótu można szybko znaleźć za pomocą klucza dokładnie pasujący map element ( `CString` wartości).  
+ `Lookup` używa algorytmu wyznaczania wartości skrótu, aby szybko znaleźć element mapy za pomocą klucza, który dokładnie pasuje ( `CString` wartości).  
   
  W poniższej tabeli przedstawiono innego członka funkcje, które są podobne do `CMapStringToOb::LookUp`.  
   
@@ -413,12 +413,12 @@ BOOL Lookup(
 |[CMapPtrToPtr](../../mfc/reference/cmapptrtoptr-class.md)|**Wyszukiwanie BOOL (void\***  `key` **, void\* &**  `rValue` **) const;**|  
 |[CMapPtrToWord](../../mfc/reference/cmapptrtoword-class.md)|**Wyszukiwanie BOOL (void\***  `key` **, WORD &** `rValue` **) const;**|  
 |[CMapStringToPtr](../../mfc/reference/cmapstringtoptr-class.md)|**Wyszukiwanie BOOL (LPCTSTR** `key` **, void\* &**  `rValue` **) const;**|  
-|[CMapStringToString](../../mfc/reference/cmapstringtostring-class.md)|**Wyszukiwanie BOOL (LPCTSTR** `key` **, cstring — &** `rValue` **) const;**|  
-|[CMapWordToOb](../../mfc/reference/cmapwordtoob-class.md)|**Wyszukiwanie BOOL (WORD** `key` **, CObject\* &**  `rValue` **) const;**|  
-|[CMapWordToPtr](../../mfc/reference/cmapwordtoptr-class.md)|**Wyszukiwanie BOOL (WORD** `key` **, void\* &**  `rValue` **) const;**|  
+|[CMapStringToString](../../mfc/reference/cmapstringtostring-class.md)|**Wyszukiwanie BOOL (LPCTSTR** `key` **, CString &** `rValue` **) const;**|  
+|[CMapWordToOb](../../mfc/reference/cmapwordtoob-class.md)|**Wyszukiwanie BOOL (program WORD** `key` **, CObject\* &**  `rValue` **) const;**|  
+|[CMapWordToPtr](../../mfc/reference/cmapwordtoptr-class.md)|**Wyszukiwanie BOOL (program WORD** `key` **, void\* &**  `rValue` **) const;**|  
   
 ### <a name="example"></a>Przykład  
- Zobacz [CObList::CObList](../../mfc/reference/coblist-class.md#coblist) listę `CAge` klasa używana w wszystkie przykłady w kolekcji.  
+ Zobacz [CObList::CObList](../../mfc/reference/coblist-class.md#coblist) listę `CAge` klasa używana we wszystkich przykładach w kolekcji.  
   
  [!code-cpp[NVC_MFCCollections#68](../../mfc/codesnippet/cpp/cmapstringtoob-class_6.cpp)]  
   
@@ -433,40 +433,40 @@ BOOL LookupKey(
   
 ### <a name="parameters"></a>Parametry  
  *Klucz*  
- Określa klucz ciąg identyfikujący elementu, który ma być wyszukiwane.  
+ Określa klucz ciąg, który identyfikuje elementu, który ma być wyszukiwana.  
   
  *rKey*  
- Odwołanie do skojarzony klucz.  
+ Odwołanie do skojarzonego klucza.  
   
 ### <a name="return-value"></a>Wartość zwracana  
- Różna od zera, jeśli znaleziono klucz; w przeciwnym razie 0.  
+ Wartość różną od zera, jeśli klucz został znaleziony; w przeciwnym razie 0.  
   
 ### <a name="remarks"></a>Uwagi  
- Przy użyciu odwołania do klucza jest niebezpieczne, jeśli są używane po skojarzony element został usunięty z mapy lub po mapy została zniszczona.  
+ Za pomocą odwołania do klucza jest niebezpieczne, jeśli są używane po skojarzony element został usunięty z mapy lub po mapy została zniszczona.  
   
- W poniższej tabeli przedstawiono innego członka funkcje, które są podobne do **CMapStringToOb:: LookupKey**.  
+ W poniższej tabeli przedstawiono innego członka funkcje, które są podobne do `CMapStringToOb:: LookupKey`.  
   
 |Class|Funkcja elementów członkowskich|  
 |-----------|---------------------|  
 |[CMapStringToPtr](../../mfc/reference/cmapstringtoptr-class.md)|**BOOL LookupKey (LPCTSTR** `key` **, LPCTSTR &** `rKey` **) const;**|  
 |[CMapStringToString](../../mfc/reference/cmapstringtostring-class.md)|**BOOL LookupKey (LPCTSTR** `key` **, LPCTSTR &** `rKey` **) const;**|  
   
-##  <a name="operator_at"></a>  [CMapStringToOb::operator]  
- Zastępuje wygodne `SetAt` funkcję elementu członkowskiego.  
+##  <a name="operator_at"></a>  [] CMapStringToOb::operator  
+ Zastępuje wygodne `SetAt` funkcja elementu członkowskiego.  
   
 ```  
 CObject*& operator[ ](lpctstr key);
 ```  
   
 ### <a name="return-value"></a>Wartość zwracana  
- Odwołanie do wskaźnika do `CObject` obiekt; lub **NULL** Jeśli mapy jest pusta lub *klucza* jest poza zakresem.  
+ Odwołanie do wskaźnika do `CObject` obiektu lub wartość NULL, jeśli mapa jest pusta lub *klucz* znajduje się poza zakresem.  
   
 ### <a name="remarks"></a>Uwagi  
- W związku z tym można używać tylko po lewej stronie instrukcji przypisania (wartością l-value). Jeśli nie ma mapy elementu z określonym kluczem, jest tworzony nowy element.  
+ Dlatego może służyć tylko z lewej instrukcji przypisania (l wartości). Jeśli nie ma żadnego elementu na mapie, z określonym kluczem, nowy element zostanie utworzony.  
   
- Nie jest równoważna tego operatora nie "po prawej stronie" (r), ponieważ istnieje możliwość, że nie można odnaleźć klucza na mapie. Użyj `Lookup` funkcji członkowskiej dla elementu pobierania.  
+ Istnieje nie "po prawej stronie" (r) odpowiednikiem tego operatora, ponieważ istnieje możliwość, że nie można znaleźć klucza w mapie. Użyj `Lookup` funkcja elementu członkowskiego do elementu pobierania.  
   
- W poniższej tabeli przedstawiono innego członka funkcje, które są podobne do **[CMapStringToOb::operator]**.  
+ W poniższej tabeli przedstawiono innego członka funkcje, które są podobne do `CMapStringToOb::operator []`.  
   
 |Class|Funkcja elementów członkowskich|  
 |-----------|---------------------|  
@@ -474,11 +474,11 @@ CObject*& operator[ ](lpctstr key);
 |[CMapPtrToWord](../../mfc/reference/cmapptrtoword-class.md)|**WORD & — operator [] (void\***  `key`  **\);**|  
 |[CMapStringToPtr](../../mfc/reference/cmapstringtoptr-class.md)|**void\*& — operator [] (lpctstr** `key`  **\);**|  
 |[CMapStringToString](../../mfc/reference/cmapstringtostring-class.md)|**Cstring — & — operator [] (lpctstr** `key`  **\);**|  
-|[CMapWordToOb](../../mfc/reference/cmapwordtoob-class.md)|**CObject\*& — operator [] (word** `key`  **\);**|  
-|[CMapWordToPtr](../../mfc/reference/cmapwordtoptr-class.md)|**void\*& — operator [] (word** `key`  **\);**|  
+|[CMapWordToOb](../../mfc/reference/cmapwordtoob-class.md)|**CObject\*& — operator [] (program word** `key`  **\);**|  
+|[CMapWordToPtr](../../mfc/reference/cmapwordtoptr-class.md)|**void\*& — operator [] (program word** `key`  **\);**|  
   
 ### <a name="example"></a>Przykład  
- Zobacz [CObList::CObList](../../mfc/reference/coblist-class.md#coblist) listę `CAge` klasa używana w wszystkie przykłady w kolekcji.  
+ Zobacz [CObList::CObList](../../mfc/reference/coblist-class.md#coblist) listę `CAge` klasa używana we wszystkich przykładach w kolekcji.  
   
  [!code-cpp[NVC_MFCCollections#72](../../mfc/codesnippet/cpp/cmapstringtoob-class_7.cpp)]  
   
@@ -498,9 +498,9 @@ void RemoveAll();
 ```  
   
 ### <a name="remarks"></a>Uwagi  
- `CObject` Obiektów odwołuje się każdy klucz nie zostaną zniszczone. `RemoveAll` Funkcja może powodować przecieki pamięci, jeśli użytkownik nie upewnij się, że przywoływana `CObject` obiekty zostaną zniszczone.  
+ `CObject` Przywoływane przez każdy klucz obiekty nie są niszczone. `RemoveAll` Funkcji może spowodować przecieki pamięci, jeśli użytkownik nie upewnij się, że występujących w odwołaniu `CObject` obiekty są niszczone.  
   
- Funkcja działa prawidłowo, jeśli mapy już jest pusta.  
+ Funkcja działa prawidłowo, jeśli mapa jest pusty.  
   
  W poniższej tabeli przedstawiono innego członka funkcje, które są podobne do `CMapStringToOb::RemoveAll`.  
   
@@ -514,12 +514,12 @@ void RemoveAll();
 |[CMapWordToPtr](../../mfc/reference/cmapwordtoptr-class.md)|**void RemoveAll( );**|  
   
 ### <a name="example"></a>Przykład  
- Zobacz [CObList::CObList](../../mfc/reference/coblist-class.md#coblist) listę `CAge` klasa używana w wszystkie przykłady w kolekcji.  
+ Zobacz [CObList::CObList](../../mfc/reference/coblist-class.md#coblist) listę `CAge` klasa używana we wszystkich przykładach w kolekcji.  
   
  [!code-cpp[NVC_MFCCollections#69](../../mfc/codesnippet/cpp/cmapstringtoob-class_8.cpp)]  
   
 ##  <a name="removekey"></a>  CMapStringToOb::RemoveKey  
- Wyszukuje wpisu mapy odpowiadający podany klucz; następnie Jeśli klucz zostanie znaleziony, usuwa wpis.  
+ Wyszukuje wpisu mapowania odpowiadający podany klucz; następnie Jeśli klucz zostanie znaleziony, usuwa wpis.  
   
 ```  
 BOOL RemoveKey(LPCTSTR key);
@@ -527,13 +527,13 @@ BOOL RemoveKey(LPCTSTR key);
   
 ### <a name="parameters"></a>Parametry  
  *Klucz*  
- Określa ciąg używany do wyszukiwania mapy.  
+ Określa ciąg używany do wyszukiwania na mapie.  
   
 ### <a name="return-value"></a>Wartość zwracana  
- Różna od zera, jeśli wpis został znaleziony i pomyślnie usunął; w przeciwnym razie 0.  
+ Wartość różną od zera, jeśli wpis zostało znalezione i pomyślnie usunął; w przeciwnym razie 0.  
   
 ### <a name="remarks"></a>Uwagi  
- Może to powodować przecieki pamięci, jeśli `CObject` obiektu nie jest usuwany w innym miejscu.  
+ Może to powodować przecieki pamięci, jeśli `CObject` obiekt nie zostanie usunięty gdzie indziej.  
   
  W poniższej tabeli przedstawiono innego członka funkcje, które są podobne do `CMapStringToOb::RemoveKey`.  
   
@@ -543,11 +543,11 @@ BOOL RemoveKey(LPCTSTR key);
 |[CMapPtrToWord](../../mfc/reference/cmapptrtoword-class.md)|**BOOL RemoveKey (void\***  `key` **);**|  
 |[CMapStringToPtr](../../mfc/reference/cmapstringtoptr-class.md)|**BOOL RemoveKey (LPCTSTR** `key` **);**|  
 |[CMapStringToString](../../mfc/reference/cmapstringtostring-class.md)|**BOOL RemoveKey (LPCTSTR** `key` **);**|  
-|[CMapWordToOb](../../mfc/reference/cmapwordtoob-class.md)|**BOOL RemoveKey (WORD** `key` **);**|  
-|[CMapWordToPtr](../../mfc/reference/cmapwordtoptr-class.md)|**BOOL RemoveKey (WORD** `key` **);**|  
+|[CMapWordToOb](../../mfc/reference/cmapwordtoob-class.md)|**BOOL RemoveKey (program WORD** `key` **);**|  
+|[CMapWordToPtr](../../mfc/reference/cmapwordtoptr-class.md)|**BOOL RemoveKey (program WORD** `key` **);**|  
   
 ### <a name="example"></a>Przykład  
- Zobacz [CObList::CObList](../../mfc/reference/coblist-class.md#coblist) listę `CAge` klasa używana w wszystkie przykłady w kolekcji.  
+ Zobacz [CObList::CObList](../../mfc/reference/coblist-class.md#coblist) listę `CAge` klasa używana we wszystkich przykładach w kolekcji.  
   
  [!code-cpp[NVC_MFCCollections#70](../../mfc/codesnippet/cpp/cmapstringtoob-class_9.cpp)]  
   
@@ -562,7 +562,7 @@ BOOL RemoveKey(LPCTSTR key);
  `[Bart] = a CAge at $4634 13`  
   
 ##  <a name="setat"></a>  CMapStringToOb::SetAt  
- Podstawowy oznacza, że wstawić element na mapie.  
+ Podstawowy oznacza, że można wstawić elementu na mapie.  
   
 ```  
 void SetAt(
@@ -575,10 +575,10 @@ void SetAt(
  Określa ciąg, który jest kluczem nowego elementu.  
   
  *newValue*  
- Określa `CObject` wskaźnika, która jest wartością nowego elementu.  
+ Określa `CObject` wskaźnika, który jest wartością nowego elementu.  
   
 ### <a name="remarks"></a>Uwagi  
- Po pierwsze wyszukiwania klucza. Jeśli klucz zostanie znaleziony, a następnie zostanie zmieniona wartość odpowiadająca; w przeciwnym razie jest tworzony nowy element klucz wartość.  
+ Najpierw jest wyszukiwana klucza. Jeśli klucz zostanie znaleziony, a następnie odpowiednią wartość zostanie zmieniona; w przeciwnym razie zostanie utworzony nowy element pary klucz wartość.  
   
  W poniższej tabeli przedstawiono innego członka funkcje, które są podobne do `CMapStringToOb::SetAt`.  
   
@@ -588,11 +588,11 @@ void SetAt(
 |[CMapPtrToWord](../../mfc/reference/cmapptrtoword-class.md)|**void SetAt (void\***  `key` **, WORD** `newValue` **);**|  
 |[CMapStringToPtr](../../mfc/reference/cmapstringtoptr-class.md)|**void SetAt (LPCTSTR** `key` **, void\***  `newValue` **);**|  
 |[CMapStringToString](../../mfc/reference/cmapstringtostring-class.md)|**void SetAt (LPCTSTR** `key` **, LPCTSTR** `newValue` **);**|  
-|[CMapWordToOb](../../mfc/reference/cmapwordtoob-class.md)|**void SetAt (WORD** `key` **, CObject\***  `newValue` **);**|  
-|[CMapWordToPtr](../../mfc/reference/cmapwordtoptr-class.md)|**void SetAt (WORD** `key` **, void\***  `newValue` **);**|  
+|[CMapWordToOb](../../mfc/reference/cmapwordtoob-class.md)|**void SetAt (program WORD** `key` **, CObject\***  `newValue` **);**|  
+|[CMapWordToPtr](../../mfc/reference/cmapwordtoptr-class.md)|**void SetAt (program WORD** `key` **, void\***  `newValue` **);**|  
   
 ### <a name="example"></a>Przykład  
- Zobacz [CObList::CObList](../../mfc/reference/coblist-class.md#coblist) listę `CAge` klasa używana w wszystkie przykłady w kolekcji.  
+ Zobacz [CObList::CObList](../../mfc/reference/coblist-class.md#coblist) listę `CAge` klasa używana we wszystkich przykładach w kolekcji.  
   
  [!code-cpp[NVC_MFCCollections#71](../../mfc/codesnippet/cpp/cmapstringtoob-class_10.cpp)]  
   
@@ -611,7 +611,7 @@ void SetAt(
  `[Bart] = a CAge at $4654 13`  
   
 ## <a name="see-also"></a>Zobacz też  
- [CObject — klasa](../../mfc/reference/cobject-class.md)   
+ [Klasa CObject](../../mfc/reference/cobject-class.md)   
  [Diagram hierarchii](../../mfc/hierarchy-chart.md)   
  [Klasa CMapPtrToPtr](../../mfc/reference/cmapptrtoptr-class.md)   
  [Klasa CMapPtrToWord](../../mfc/reference/cmapptrtoword-class.md)   

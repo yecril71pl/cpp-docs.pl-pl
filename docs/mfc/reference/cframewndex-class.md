@@ -188,15 +188,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 71ec3bae44bd9365891c3a87fd33dfd3e1db2700
-ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
+ms.openlocfilehash: 97548fca6b47e8d765eb7744a86ab0d4cfa27b17
+ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/26/2018
-ms.locfileid: "36957419"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37337489"
 ---
 # <a name="cframewndex-class"></a>Klasa CFrameWndEx
-Implementuje funkcje systemu Windows pojedynczy interfejs dokumentu (SDI) nakłada lub menu podręczne okno ramowe i zawiera elementy członkowskie zarządzania okna. Rozszerza [cframewnd —](../../mfc/reference/cframewnd-class.md) klasy.  
+Implementuje funkcje Windows pojedynczego dokumentu (SDI) okna nachodzącego lub interfejsu okna podręcznego ramki i oferuje elementy członkowskie do zarządzania oknem. Rozszerza [CFrameWnd](../../mfc/reference/cframewnd-class.md) klasy.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -210,96 +210,96 @@ class CFrameWndEx : public CFrameWnd
   
 |Nazwa|Opis|  
 |----------|-----------------|  
-|[CFrameWndEx::ActiveItemRecalcLayout](#activeitemrecalclayout)|Dostosowuje układ elementu klienta OLE i obszaru klienckiego ramki.|  
+|[CFrameWndEx::ActiveItemRecalcLayout](#activeitemrecalclayout)|Dostosowuje układ elementu klienta OLE i obszaru klienta ramki.|  
 |`CFrameWndEx::AddDockSite`|Ta metoda nie jest używana.|  
 |[CFrameWndEx::AddPane](#addpane)|Rejestruje pasek sterowania przy użyciu Menedżera dokowania.|  
-|[CFrameWndEx::AdjustDockingLayout](#adjustdockinglayout)|Ponownie oblicza układ wszystkich okienek, które są zadokowane do ramki okna.|  
+|[CFrameWndEx::AdjustDockingLayout](#adjustdockinglayout)|Ponownie oblicza układ wszystkich okienek, które są zadokowane w oknie ramki.|  
 |[CFrameWndEx::DelayUpdateFrameMenu](#delayupdateframemenu)|Ustawia menu ramki, a następnie aktualizuje podczas przetwarzania polecenia jest w stanie bezczynności.|  
-|[CFrameWndEx::DockPane](#dockpane)|Stacje dokujące okienko określony do ramki okna.|  
-|[CFrameWndEx::DockPaneLeftOf](#dockpaneleftof)|Doków jedno okienko na lewo od innego okienka.|  
-|[CFrameWndEx::EnableAutoHidePanes](#enableautohidepanes)|Włącza tryb automatyczne ukrywanie okienka zadokowany do określonej strony głównego okna ramowego.|  
-|[CFrameWndEx::EnableDocking](#enabledocking)|Umożliwia Dokowanie okienka, które należą do ramki okna.|  
+|[CFrameWndEx::DockPane](#dockpane)|Dokowane okienka określonego okna ramki.|  
+|[CFrameWndEx::DockPaneLeftOf](#dockpaneleftof)|Doków jedno okienko po lewej stronie okienka innego.|  
+|[CFrameWndEx::EnableAutoHidePanes](#enableautohidepanes)|Włącza tryb automatyczne ukrywanie okienka zadokowany do określonej strony ramki głównego okna.|  
+|[CFrameWndEx::EnableDocking](#enabledocking)|Umożliwia dokowanie okienek, które należą do ramki okna.|  
 |[CFrameWndEx::EnableFullScreenMainMenu](#enablefullscreenmainmenu)|Pokazuje lub ukrywa menu głównego w trybie pełnoekranowym.|  
-|[CFrameWndEx::EnableFullScreenMode](#enablefullscreenmode)|Włącza tryb pełnoekranowy ramki okna.|  
-|[CFrameWndEx::EnableLoadDockState](#enableloaddockstate)|Włącza lub wyłącza ładowania stanu dokowania.|  
+|[CFrameWndEx::EnableFullScreenMode](#enablefullscreenmode)|Włącza tryb pełnoekranowy dla ramki okna.|  
+|[CFrameWndEx::EnableLoadDockState](#enableloaddockstate)|Włącza lub wyłącza ładowanie stanie dokowania.|  
 |[CFrameWndEx::EnablePaneMenu](#enablepanemenu)|Włącza lub wyłącza automatyczną obsługę menu okienka.|  
-|[CFrameWndEx::GetActivePopup](#getactivepopup)|Zwraca wskaźnik do aktualnie wyświetlanego menu podręczne.|  
-|[CFrameWndEx::GetDefaultResId](#getdefaultresid)|Zwraca identyfikator zasobu, które zostało określone podczas okno ramowe ładowane ramach.|  
-|[CFrameWndEx::GetDockingManager](#getdockingmanager)|Pobiera [klasy CDockingManager](../../mfc/reference/cdockingmanager-class.md) obiektu ramki okna.|  
-|[CFrameWndEx::GetMenuBar](#getmenubar)|Zwraca wskaźnik do obiektu paska menu dołączony do ramki okna.|  
-|[CFrameWndEx::GetPane](#getpane)|Zwraca wskaźnik do okienka ma określony identyfikator.|  
+|[CFrameWndEx::GetActivePopup](#getactivepopup)|Zwraca wskaźnik do aktualnie wyświetlonego menu podręcznego.|  
+|[CFrameWndEx::GetDefaultResId](#getdefaultresid)|Zwraca identyfikator zasobu, który określiłeś, gdy struktura ładowany ramki okna.|  
+|[CFrameWndEx::GetDockingManager](#getdockingmanager)|Pobiera [klasa CDockingManager](../../mfc/reference/cdockingmanager-class.md) obiektu dla ramki okna.|  
+|[CFrameWndEx::GetMenuBar](#getmenubar)|Zwraca wskaźnik do obiekt paska menu, które są dołączone do ramki okna.|  
+|[CFrameWndEx::GetPane](#getpane)|Zwraca wskaźnik do okienka, który ma określony identyfikator.|  
 |[CFrameWndEx::GetRibbonBar](#getribbonbar)|Pobiera formantu paska wstążki ramki.|  
-|[CFrameWndEx::GetTearOffBars](#gettearoffbars)|Zwraca listę okienko obiekty, które są w stanie oderwania.|  
-|[CFrameWndEx::GetToolbarButtonToolTipText](#gettoolbarbuttontooltiptext)|Wywoływane przez platformę, gdy aplikacja zostanie wyświetlona etykietkę narzędzia dla przycisku paska narzędzi.|  
-|[CFrameWndEx::InsertPane](#insertpane)|Rejestruje okienko dokujące menedżera.|  
-|[CFrameWndEx::IsFullScreen](#isfullscreen)|Określa, czy okno ramowe jest w trybie pełnoekranowym.|  
-|[CFrameWndEx::IsMenuBarAvailable](#ismenubaravailable)|Określa, czy wskaźnik do obiektu paska menu jest nieprawidłowy.|  
+|[CFrameWndEx::GetTearOffBars](#gettearoffbars)|Zwraca listę obiektów okienko, które są w stanie odrywania.|  
+|[CFrameWndEx::GetToolbarButtonToolTipText](#gettoolbarbuttontooltiptext)|Wywoływane przez platformę, gdy aplikacja wyświetli etykietkę narzędzia dla przycisku paska narzędzi.|  
+|[CFrameWndEx::InsertPane](#insertpane)|Rejestruje okienko dokowania menedżera.|  
+|[CFrameWndEx::IsFullScreen](#isfullscreen)|Określa, czy okno ramki jest w trybie pełnoekranowym.|  
+|[CFrameWndEx::IsMenuBarAvailable](#ismenubaravailable)|Określa, czy wskaźnik do obiektu pasek menu jest prawidłowa.|  
 |[CFrameWndEx::IsPointNearDockSite](#ispointneardocksite)|Wskazuje, czy punkt znajduje się w strefie wyrównania.|  
-|[CFrameWndEx::IsPrintPreview](#isprintpreview)|Wskazuje, czy okno ramowe jest w trybie podglądu wydruku.|  
-|[CFrameWndEx::LoadFrame](#loadframe)|Ta metoda jest wywoływana po wykonaniu konstrukcji, aby utworzyć okno ramowe i załadować jej zasobów.|  
-|[CFrameWndEx::NegotiateBorderSpace](#negotiateborderspace)|Implementuje negocjowanie obramowania klienta OLE.|  
-|[CFrameWndEx::OnActivate](#onactivate)|Struktura wywołuje tę metodę po przełączeniu do lub od ramki danych wejściowych użytkownika.|  
-|[CFrameWndEx::OnActivateApp](#onactivateapp)|Wywoływane przez platformę, gdy aplikacja jest zaznaczany lub odznaczany.|  
-|[CFrameWndEx::OnChangeVisualManager](#onchangevisualmanager)|Wywoływane przez platformę, gdy zmiana ramki wymaga zmiany wizualne menedżera.|  
+|[CFrameWndEx::IsPrintPreview](#isprintpreview)|Wskazuje, czy okno ramki jest w trybie podglądu wydruku.|  
+|[CFrameWndEx::LoadFrame](#loadframe)|Ta metoda jest wywoływana po konstrukcji, aby utworzyć okno ramowe i załadować jej zasobów.|  
+|[CFrameWndEx::NegotiateBorderSpace](#negotiateborderspace)|Implementuje negocjacji krawędź klienta OLE.|  
+|[CFrameWndEx::OnActivate](#onactivate)|Struktura wywołuje tę metodę po przełączeniu do lub opuszczenie ramki danych wejściowych użytkownika.|  
+|[CFrameWndEx::OnActivateApp](#onactivateapp)|Wywoływane przez platformę, gdy aplikacja jest zaznaczenia lub usunięcia zaznaczenia.|  
+|[CFrameWndEx::OnChangeVisualManager](#onchangevisualmanager)|Jest wywoływane przez platformę, gdy zmiany w ramce wymaga zmiany wizualne menedżera.|  
 |[CFrameWndEx::OnClose](#onclose)|Struktura wywołuje tę metodę, aby zamknąć ramkę.|  
-|[CFrameWndEx::OnCloseDockingPane](#onclosedockingpane)|Wywoływane przez platformę, gdy użytkownik kliknie **Zamknij** przycisk na dokowania panelu.|  
-|[CFrameWndEx::OnCloseMiniFrame](#oncloseminiframe)|Wywoływane przez platformę, gdy użytkownik kliknie **Zamknij** przycisk na przestawne okno ramowe mini.|  
+|[CFrameWndEx::OnCloseDockingPane](#onclosedockingpane)|Wywoływane przez platformę, gdy użytkownik kliknie **Zamknij** przycisk okienka dokowania.|  
+|[CFrameWndEx::OnCloseMiniFrame](#oncloseminiframe)|Wywoływane przez platformę, gdy użytkownik kliknie **Zamknij** przycisk na przestawne okno mini ramki.|  
 |[CFrameWndEx::OnClosePopupMenu](#onclosepopupmenu)|Wywoływane przez platformę, gdy aktywne menu podręczne przetwarza komunikat WM_DESTROY.|  
 |[CFrameWndEx::OnCmdMsg](#oncmdmsg)|Wysyła polecenie wiadomości.|  
-|[CFrameWndEx::OnContextHelp](#oncontexthelp)|Wywoływane przez platformę, aby wyświetlić kontekstu związanych z pomocy.|  
-|[CFrameWndEx::OnCreate](#oncreate)|Wywoływane przez platformę po utworzeniu ramki.|  
-|[CFrameWndEx::OnDestroy](#ondestroy)|Wywoływane przez platformę, gdy zostanie zniszczony ramki.|  
-|[CFrameWndEx::OnDrawMenuImage](#ondrawmenuimage)|Wywoływane przez platformę, gdy aplikacja jest rysowane obrazu skojarzonego z elementem menu.|  
-|[CFrameWndEx::OnDrawMenuLogo](#ondrawmenulogo)|Wywoływane przez platformę, gdy `CMFCPopupMenu` obiekt procesów [WM_PAINT](http://msdn.microsoft.com/library/windows/desktop/dd145213) wiadomości.|  
-|[CFrameWndEx::OnDWMCompositionChanged](#ondwmcompositionchanged)|Wywoływane przez platformę, gdy włączono lub wyłączono kompozycji Menedżera okien pulpitu (DWM).|  
-|[CFrameWndEx::OnExitSizeMove](#onexitsizemove)|Wywoływane przez platformę, gdy ramki zatrzymuje zmiany rozmiaru lub położenia.|  
-|[CFrameWndEx::OnGetMinMaxInfo](#ongetminmaxinfo)|Wywoływane przez platformę, gdy zmieniany jest rozmiar ramki można ustawić limity wymiaru okna.|  
-|[CFrameWndEx::OnIdleUpdateCmdUI](#onidleupdatecmdui)|Wywoływane przez platformę, aby zaktualizować wyświetlane ramki, podczas przetwarzania polecenia jest w stanie bezczynności.|  
-|[CFrameWndEx::OnLButtonDown](#onlbuttondown)|Struktura wywołuje tę metodę po naciśnięciu lewego przycisku myszy.|  
-|[CFrameWndEx::OnLButtonUp](#onlbuttonup)|Struktura wywołuje tej metody, gdy użytkownik zwalnia lewego przycisku myszy.|  
-|[CFrameWndEx::OnMenuButtonToolHitTest](#onmenubuttontoolhittest)|Wywoływane przez platformę, gdy `CMFCToolBarButton` obiekt procesów `WM_NCHITTEST` wiadomości.|  
-|[CFrameWndEx::OnMenuChar](#onmenuchar)|Wywoływane przez platformę, gdy zostanie wyświetlone menu, a użytkownik naciśnie klawisz, który nie odpowiada na polecenie.|  
-|[CFrameWndEx::OnMouseMove](#onmousemove)|Struktura wywołuje tę metodę, gdy wskaźnik myszy przesuwa się.|  
-|[CFrameWndEx::OnMoveMiniFrame](#onmoveminiframe)|Wywoływane przez platformę, gdy przesuwa okno na okienka.|  
+|[CFrameWndEx::OnContextHelp](#oncontexthelp)|Wywoływane przez platformę, aby wyświetlić kontekstu powiązana Pomoc.|  
+|[CFrameWndEx::OnCreate](#oncreate)|Wywoływane przez platformę, po utworzeniu ramki.|  
+|[CFrameWndEx::OnDestroy](#ondestroy)|Wywoływane przez platformę, kiedy niszczony jest ramki.|  
+|[CFrameWndEx::OnDrawMenuImage](#ondrawmenuimage)|Wywoływane przez platformę, gdy aplikacja rysuje obrazu skojarzonego z elementem menu.|  
+|[CFrameWndEx::OnDrawMenuLogo](#ondrawmenulogo)|Wywoływane przez platformę, gdy `CMFCPopupMenu` obiektu procesy [WM_PAINT](http://msdn.microsoft.com/library/windows/desktop/dd145213) wiadomości.|  
+|[CFrameWndEx::OnDWMCompositionChanged](#ondwmcompositionchanged)|Wywoływane przez platformę, gdy włączono lub wyłączono kompozycję Menedżera okien pulpitu (DWM).|  
+|[CFrameWndEx::OnExitSizeMove](#onexitsizemove)|Wywoływane przez platformę, po zatrzymaniu ramki, przenoszenia lub zmieniania jej rozmiaru.|  
+|[CFrameWndEx::OnGetMinMaxInfo](#ongetminmaxinfo)|Wywoływane przez platformę, gdy zmieniany jest rozmiar ramki pozwala zastosować limity wymiaru okna.|  
+|[CFrameWndEx::OnIdleUpdateCmdUI](#onidleupdatecmdui)|Metoda wywoływana przez platformę, aby zaktualizować wyświetlane ramki, podczas przetwarzania polecenia jest w stanie bezczynności.|  
+|[CFrameWndEx::OnLButtonDown](#onlbuttondown)|Struktura wywołuje tę metodę, gdy użytkownik naciśnie przycisk myszy po lewej stronie.|  
+|[CFrameWndEx::OnLButtonUp](#onlbuttonup)|Struktura wywołuje tę metodę, gdy użytkownik zwolni przycisk myszy po lewej stronie.|  
+|[CFrameWndEx::OnMenuButtonToolHitTest](#onmenubuttontoolhittest)|Wywoływane przez platformę, gdy `CMFCToolBarButton` obiektu przetwarza komunikat WM_NCHITTEST.|  
+|[CFrameWndEx::OnMenuChar](#onmenuchar)|Wywoływane przez platformę, gdy zostanie wyświetlone menu i naciśnięciu klawisza, który nie odpowiada na polecenie.|  
+|[CFrameWndEx::OnMouseMove](#onmousemove)|Struktura wywołuje tę metodę, gdy wskaźnik myszy jest przesuwany.|  
+|[CFrameWndEx::OnMoveMiniFrame](#onmoveminiframe)|Wywoływane przez platformę, gdy okno okienka.|  
 |[CFrameWndEx::OnNcActivate](#onncactivate)|Wywoływane przez platformę, gdy obszaru nieklienckiego ramki musi być narysowany ponownie w celu wskazania zmiany w stanie aktywnym.|  
-|[CFrameWndEx::OnNcCalcSize](#onnccalcsize)|Wywoływane przez platformę, gdy rozmiar i położenie obszaru klienckiego muszą zostać obliczone.|  
-|[CFrameWndEx::OnNcHitTest](#onnchittest)|Wywoływane przez platformę, gdy wskaźnik myszy przesuwa się lub przycisk myszy jest wciśnięty lub zwolnione.|  
-|[CFrameWndEx::OnNcMouseMove](#onncmousemove)|Wywoływane przez platformę, gdy wskaźnik myszy przesuwa się obszaru nieklienckiego.|  
-|[CFrameWndEx::OnNcPaint](#onncpaint)|Wywoływane przez platformę, gdy musi zostać narysowany obszaru nieklienckiego.|  
-|[CFrameWndEx::OnPaneCheck](#onpanecheck)|Wywoływane przez platformę, by ustawić widoczność okienka.|  
+|[CFrameWndEx::OnNcCalcSize](#onnccalcsize)|Wywoływane przez platformę, gdy rozmiar i położenie obszaru klienta muszą zostać obliczone.|  
+|[CFrameWndEx::OnNcHitTest](#onnchittest)|Wywoływane przez platformę, gdy wskaźnik myszy jest przesuwany lub przycisk myszy jest wciśnięty lub wydania.|  
+|[CFrameWndEx::OnNcMouseMove](#onncmousemove)|Wywoływane przez platformę, gdy wskaźnik myszy jest przesuwany w obszaru nieklienckiego.|  
+|[CFrameWndEx::OnNcPaint](#onncpaint)|Wywoływane przez platformę, gdy musi być rysowane obszaru nieklienckiego.|  
+|[CFrameWndEx::OnPaneCheck](#onpanecheck)|Metoda wywoływana przez platformę, by ustawić widoczność okienka.|  
 |[CFrameWndEx::OnPostPreviewFrame](#onpostpreviewframe)|Wywoływane przez platformę, gdy użytkownik zmienił tryb podglądu wydruku.|  
 |[CFrameWndEx::OnPowerBroadcast](#onpowerbroadcast)|Wywoływane przez platformę, gdy wystąpi zdarzenie zarządzania energią.|  
-|[CFrameWndEx::OnSetMenu](#onsetmenu)|Wywoływane przez platformę, aby zastąpić menu ramki okna.|  
-|[CFrameWndEx::OnSetPreviewMode](#onsetpreviewmode)|Wywoływane przez platformę, by ustawić tryb podglądu wydruku dla ramki.|  
-|[CFrameWndEx::OnSetText](#onsettext)|Wywoływane przez platformę, by ustawić tekst okna.|  
-|[CFrameWndEx::OnShowCustomizePane](#onshowcustomizepane)|Wywoływane przez platformę, gdy szybkiego dostosowywania okienka jest włączona.|  
-|[CFrameWndEx::OnShowPanes](#onshowpanes)|Wywoływane przez platformę, by pokazać lub ukryć okienka.|  
+|[CFrameWndEx::OnSetMenu](#onsetmenu)|Metoda wywoływana przez platformę, aby zastąpić w menu Okno ramki.|  
+|[CFrameWndEx::OnSetPreviewMode](#onsetpreviewmode)|Metoda wywoływana przez platformę, by ustawić tryb podglądu wydruku dla ramki.|  
+|[CFrameWndEx::OnSetText](#onsettext)|Metoda wywoływana przez platformę, by ustawić tekst okna.|  
+|[CFrameWndEx::OnShowCustomizePane](#onshowcustomizepane)|Wywoływane przez platformę, gdy szybkie dostosowywanie okienko jest włączona.|  
+|[CFrameWndEx::OnShowPanes](#onshowpanes)|Metoda wywoływana przez platformę, by pokazać lub ukryć okienka.|  
 |[CFrameWndEx::OnShowPopupMenu](#onshowpopupmenu)|Wywoływane przez platformę, gdy menu podręczne jest włączona.|  
 |[CFrameWndEx::OnSize](#onsize)|Struktura wywołuje tę metodę po zmianie rozmiaru ramki.|  
 |[CFrameWndEx::OnSizing](#onsizing)|Struktura wywołuje tę metodę, gdy użytkownik zmienia rozmiar ramki.|  
-|[CFrameWndEx::OnSysColorChange](#onsyscolorchange)|Wywoływane przez platformę, gdy kolory systemowe zostaną zmienione.|  
+|[CFrameWndEx::OnSysColorChange](#onsyscolorchange)|Wywoływane przez platformę, gdy zmieniają się kolory systemowe.|  
 |[CFrameWndEx::OnTearOffMenu](#ontearoffmenu)|Wywoływane przez platformę, gdy menu z paskiem oderwania jest włączona.|  
-|[CFrameWndEx::OnToolbarContextMenu](#ontoolbarcontextmenu)|Wywoływane przez platformę, by kompilacji menu kontekstowe paska narzędzi.|  
+|[CFrameWndEx::OnToolbarContextMenu](#ontoolbarcontextmenu)|Metoda wywoływana przez platformę, by tworzyć menu kontekstowe narzędzi.|  
 |[CFrameWndEx::OnToolbarCreateNew](#ontoolbarcreatenew)|Struktura wywołuje tę metodę, aby utworzyć nowy pasek narzędzi.|  
-|[CFrameWndEx::OnToolbarDelete](#ontoolbardelete)|Wywoływane przez platformę, gdy pasek narzędzi zostanie usunięta.|  
-|[CFrameWndEx::OnUpdateFrameMenu](#onupdateframemenu)|Wywoływane przez platformę, by ustawić menu ramki.|  
+|[CFrameWndEx::OnToolbarDelete](#ontoolbardelete)|Wywoływane przez platformę, gdy pasek narzędzi zostanie usunięty.|  
+|[CFrameWndEx::OnUpdateFrameMenu](#onupdateframemenu)|Metoda wywoływana przez platformę, by ustawić menu ramki.|  
 |[CFrameWndEx::OnUpdateFrameTitle](#onupdateframetitle)|Struktura wywołuje tę metodę, aby zaktualizować pasek tytułu okna ramki.|  
-|[CFrameWndEx::OnUpdatePaneMenu](#onupdatepanemenu)|Wywoływane przez platformę, by zaktualizować menu okienka.|  
-|[CFrameWndEx::OnWindowPosChanged](#onwindowposchanged)|Wywoływane przez platformę, gdy zmieniono rozmiar ramki, pozycja lub porządek osi z powodu wywołanie do metody zarządzania okna.|  
-|[CFrameWndEx::PaneFromPoint](#panefrompoint)|Zwraca okienko dokujące, który zawiera określony punkt.|  
-|[CFrameWndEx::PreTranslateMessage](#pretranslatemessage)|Obsługuje komunikaty określonego okna przed ich wysłaniem.|  
+|[CFrameWndEx::OnUpdatePaneMenu](#onupdatepanemenu)|Metoda wywoływana przez platformę, by zaktualizować menu okienka.|  
+|[CFrameWndEx::OnWindowPosChanged](#onwindowposchanged)|Wywoływane przez platformę, gdy zmieniono rozmiar ramki, pozycja lub porządek ze względu na wywołanie metody zarządzania okna.|  
+|[CFrameWndEx::PaneFromPoint](#panefrompoint)|Zwraca okienko dokowania, który zawiera określony punkt.|  
+|[CFrameWndEx::PreTranslateMessage](#pretranslatemessage)|Obsługuje określone okno komunikatu, przed ich wysłaniem.|  
 |[CFrameWndEx::RecalcLayout](#recalclayout)|Dostosowuje układ ramki i jego okien podrzędnych.|  
 |[CFrameWndEx::RemovePaneFromDockManager](#removepanefromdockmanager)|Wyrejestrowuje okienko i usuwa go z listy wewnętrzny w Menedżerze dokowania.|  
-|[CFrameWndEx::SetDockState](#setdockstate)|Przywraca stan dokowania przechowywane w rejestrze dokowania układu.|  
+|[CFrameWndEx::SetDockState](#setdockstate)|Przywraca stan dokowania, przechowywane w rejestrze układ dokowania.|  
 |[CFrameWndEx::SetPrintPreviewFrame](#setprintpreviewframe)|Ustawia okno ramowe podglądu wydruku.|  
-|[CFrameWndEx::SetupToolbarMenu](#setuptoolbarmenu)|Wstawia polecenia zdefiniowane przez użytkownika w menu paska narzędzi.|  
-|[CFrameWndEx::ShowFullScreen](#showfullscreen)|Zmienia ramki głównej między pełny ekran i regularnego trybów.|  
+|[CFrameWndEx::SetupToolbarMenu](#setuptoolbarmenu)|Wstawia polecenia zdefiniowanych przez użytkownika w menu narzędzi.|  
+|[CFrameWndEx::ShowFullScreen](#showfullscreen)|Przełącza głównej ramki między trybem pełnoekranowym i regularnego tryby.|  
 |[CFrameWndEx::ShowPane](#showpane)|Pokazuje lub ukrywa okienko określony.|  
-|[CFrameWndEx::UpdateCaption](#updatecaption)|Wywoływane przez platformę, by zaktualizować podpis ramki okna.|  
-|[CFrameWndEx::WinHelp](#winhelp)|Wywołuje albo `WinHelp` aplikacji lub w kontekście związane z pomocy.|  
+|[CFrameWndEx::UpdateCaption](#updatecaption)|Metoda wywoływana przez platformę, aby zaktualizować tytuł ramki okna.|  
+|[CFrameWndEx::WinHelp](#winhelp)|Wywołuje albo `WinHelp` aplikacji lub kontekst powiązana Pomoc.|  
   
 ## <a name="example"></a>Przykład  
- W poniższym przykładzie pokazano sposób dziedziczyć klasy z `CFrameWndEx` klasy. Podpisy metod w podklasy i jak pokazano w przykładzie `OnShowPopupMenu` metody. Następujący fragment kodu jest częścią [przykład konsola programu Word](../../visual-cpp-samples.md).  
+ Poniższy przykład pokazuje, jak dziedziczyć klasy z `CFrameWndEx` klasy. W przykładzie pokazano podpisy metod w podklasy i jak przesłonić `OnShowPopupMenu` metody. Ten fragment kodu jest częścią [przykład konsola programu Word](../../visual-cpp-samples.md).  
   
  [!code-cpp[NVC_MFC_WordPad#3](../../mfc/reference/codesnippet/cpp/cframewndex-class_1.h)]  
 [!code-cpp[NVC_MFC_WordPad#4](../../mfc/reference/codesnippet/cpp/cframewndex-class_2.cpp)]  
@@ -311,7 +311,7 @@ class CFrameWndEx : public CFrameWnd
   
  [CWnd](../../mfc/reference/cwnd-class.md)  
   
- [Cframewnd —](../../mfc/reference/cframewnd-class.md)  
+ [CFrameWnd](../../mfc/reference/cframewnd-class.md)  
   
  [CFrameWndEx](../../mfc/reference/cframewndex-class.md)  
   
@@ -319,7 +319,7 @@ class CFrameWndEx : public CFrameWnd
  **Nagłówek:** afxframewndex.h  
   
 ##  <a name="activeitemrecalclayout"></a>  CFrameWndEx::ActiveItemRecalcLayout  
- Dostosowuje układ elementu klienta OLE i obszaru klienckiego ramki.  
+ Dostosowuje układ elementu klienta OLE i obszaru klienta ramki.  
   
 ```  
 void ActiveItemRecalcLayout();
@@ -338,16 +338,16 @@ BOOL AddPane(
   
 ### <a name="parameters"></a>Parametry  
  [in] *pControlBar*  
- Okienko pasek sterowania do zarejestrowania.  
+ W okienku paska sterowania do zarejestrowania.  
   
  [in] *bTail*  
- `TRUE` Jeśli chcesz dodać okienka pasek sterowania na końcu listy; `FALSE` inaczej.  
+ Wartość TRUE, jeśli chcesz dodać okienka paska sterowania na końcu listy Wartość FALSE w przeciwnym razie.  
   
 ### <a name="return-value"></a>Wartość zwracana  
- `TRUE` Jeśli pasek sterowania został pomyślnie zarejestrowany; `FALSE` inaczej.  
+ Wartość TRUE, jeśli pomyślnie zarejestrowano paska sterowania; Wartość FALSE w przeciwnym razie.  
   
 ##  <a name="adjustdockinglayout"></a>  CFrameWndEx::AdjustDockingLayout  
- Ponownie oblicza układ wszystkich okienek, które są zadokowane do ramki okna.  
+ Ponownie oblicza układ wszystkich okienek, które są zadokowane w oknie ramki.  
   
 ```  
 virtual void AdjustDockingLayout(HDWP hdwp=NULL);
@@ -355,7 +355,7 @@ virtual void AdjustDockingLayout(HDWP hdwp=NULL);
   
 ### <a name="parameters"></a>Parametry  
  *hdwp*  
- Dojście do struktura, która zawiera pozycje wiele okien. .  
+ Dojście do struktury, która zawiera pozycje wiele okien. .  
   
 ### <a name="remarks"></a>Uwagi  
  Struktura hdwp jest inicjowany przez [BeginDeferWindowPos](http://msdn.microsoft.com/library/windows/desktop/ms632672) metody.  
@@ -369,12 +369,12 @@ virtual void DelayUpdateFrameMenu(HMENU hMenuAlt);
   
 ### <a name="parameters"></a>Parametry  
  [in] *hMenuAlt*  
- Dojście do menu alternatywny.  
+ Dojście do alternatywnego menu.  
   
 ### <a name="remarks"></a>Uwagi  
   
 ##  <a name="dockpane"></a>  CFrameWndEx::DockPane  
- Stacje dokujące okienko określony do ramki okna.  
+ Dokowane okienka określonego okna ramki.  
   
 ```  
 void DockPane(
@@ -385,13 +385,13 @@ void DockPane(
   
 ### <a name="parameters"></a>Parametry  
  [in] *pBar*  
- Wskaźnik do pasek sterowania możliwości dokowania.  
+ Wskaźnik do paska sterowania bez możliwości dokowania.  
   
  [in] *nDockBarID*  
- Identyfikator strony zostało zadokowane do ramki okna.  
+ Identyfikator strony okna ramki, aby zadokować do.  
   
  [in] *lprect —*  
- Wskaźnik do stałej struktura Rect, która określa ekranu położenia i rozmiaru okna.  
+ Wskaźnik do stałej struktura Rect, która określa położenie ekranu i rozmiar okna.  
   
 ### <a name="remarks"></a>Uwagi  
  *NDockBarID* parametr może mieć jedną z następujących wartości:  
@@ -405,7 +405,7 @@ void DockPane(
 -   AFX_IDW_DOCKBAR_RIGHT  
   
 ##  <a name="dockpaneleftof"></a>  CFrameWndEx::DockPaneLeftOf  
- Stacje dokujące okienko określony na lewo od innego okienka.  
+ Dokowane okienka określonego innego okienka po lewej stronie.  
   
 ```  
 BOOL DockPaneLeftOf(
@@ -415,19 +415,19 @@ BOOL DockPaneLeftOf(
   
 ### <a name="parameters"></a>Parametry  
  [in] *pBar*  
- Wskaźnik do obiektu okienku możliwości dokowania.  
+ Wskaźnik do obiektu w okienku bez możliwości dokowania.  
   
  [in] *pLeftOf*  
- Wskaźnik do okienka po lewej na dock okienko określony przez *pBar*.  
+ Wskaźnik do okienka po lewej stronie, które zadokować okienka określony przez *pBar*.  
   
 ### <a name="return-value"></a>Wartość zwracana  
- `TRUE` Jeśli *pBar* jest zadokowany pomyślnie. `FALSE` w przeciwnym razie wartość.  
+ Wartość TRUE, jeśli *pBar* jest zadokowany pomyślnie. Wartość FALSE w przeciwnym razie.  
   
 ### <a name="remarks"></a>Uwagi  
- Metoda korzysta z narzędzi określony przez *pBar* parametr i doków go po lewej stronie paska narzędzi określony przez *pLeftOf* parametru.  
+ Ta metoda przyjmuje narzędzi określony przez *pBar* parametr i doków go na pasku narzędzi po lewej stronie określonego przez *pLeftOf* parametru.  
   
 ##  <a name="enableautohidepanes"></a>  CFrameWndEx::EnableAutoHidePanes  
- Umożliwia automatyczne ukrywanie tryb dla tego okienka, gdy jest zadokowany do określonej strony głównego okna ramowego.  
+ Umożliwia automatyczne ukrywanie tryb dla tego okienka, gdy jest zadokowany do określonej strony ramki głównego okna.  
   
 ```  
 BOOL EnableAutoHidePanes(DWORD dwDockStyle);
@@ -435,24 +435,24 @@ BOOL EnableAutoHidePanes(DWORD dwDockStyle);
   
 ### <a name="parameters"></a>Parametry  
  [in] *dwDockStyle*  
- Określa stronę główną ramkę okna, do którego ma zostać dock w okienku.  
+ Określa strony ramki głównego okna, do którego ma zostać okienka dokowania.  
   
 ### <a name="return-value"></a>Wartość zwracana  
- `TRUE` Jeśli pasek okienko pomyślnie jest zadokowane po stronie okno ramowe, określonym przez *dwDockStyle*, `FALSE` inaczej.  
+ Wartość TRUE, jeśli pasek okienko pomyślnie jest zadokowany po stronie okna ramki, który jest określony przez *dwDockStyle*, wartość FALSE w przeciwnym razie.  
   
 ### <a name="remarks"></a>Uwagi  
- *dwDockStyle* może mieć jeden z następujących wartości:  
+ *dwDockStyle* może mieć jedną z następujących wartości:  
   
--   CBRS_ALIGN_TOP: umożliwia pasek sterowania możliwości dokowania u góry obszaru klienckiego okna ramki.  
+-   CBRS_ALIGN_TOP: umożliwia pasek sterowania bez możliwości dokowania na górze obszaru klienckiego okna ramki.  
   
--   CBRS_ALIGN_BOTTOM: umożliwia pasek sterowania możliwości dokowania z dolną krawędzią obszaru klienckiego okna ramki.  
+-   CBRS_ALIGN_BOTTOM: umożliwia pasek sterowania być zadokowane w dolnej części obszaru klienckiego okna ramki.  
   
--   CBRS_ALIGN_LEFT: umożliwia pasek sterowania na jest zadokowany do lewej strony obszaru klienckiego okna ramki.  
+-   CBRS_ALIGN_LEFT: umożliwia pasek sterowania być zadokowane po lewej stronie obszaru klienckiego okna ramki.  
   
--   CBRS_ALIGN_RIGHT: umożliwia pasek sterowania możliwości dokowania do prawej krawędzi obszaru klienckiego okna ramki.  
+-   CBRS_ALIGN_RIGHT: umożliwia pasek sterowania być zadokowane, aby po prawej stronie obszaru klienckiego okna ramki.  
   
 ##  <a name="enabledocking"></a>  CFrameWndEx::EnableDocking  
- Umożliwia Dokowanie okienka ramki okna.  
+ Umożliwia dokujące okienka ramki okna.  
   
 ```  
 BOOL EnableDocking(DWORD dwDockStyle);
@@ -460,10 +460,10 @@ BOOL EnableDocking(DWORD dwDockStyle);
   
 ### <a name="parameters"></a>Parametry  
  [in] *dwDockStyle*  
- Określa stronę główną ramkę okna, gdy stacje dokujące okienko paska.  
+ Określa strony ramki głównego okna, gdzie dokowane paska okienka.  
   
 ### <a name="return-value"></a>Wartość zwracana  
- `TRUE` Jeśli pasek okienko może być zadokowany pomyślnie określonej strony. `FALSE` w przeciwnym razie wartość.  
+ Wartość TRUE, jeśli pasek okienko może być pomyślnie zadokowane w określonej strony. Wartość FALSE w przeciwnym razie.  
   
 ### <a name="remarks"></a>Uwagi  
  *DwDockStyle* parametr może mieć jedną z następujących wartości:  
@@ -485,10 +485,10 @@ void EnableFullScreenMainMenu(BOOL bEnableMenu);
   
 ### <a name="parameters"></a>Parametry  
  [in] *bEnableMenu*  
- `TRUE` Aby wyświetlić menu głównego w trybie pełnoekranowym, `FALSE` inaczej.  
+ Wartość true, Pokaż menu głównego w całości ekranu trybu, wartość FALSE w przeciwnym razie.  
   
 ##  <a name="enablefullscreenmode"></a>  CFrameWndEx::EnableFullScreenMode  
- Włącza tryb pełnoekranowy ramki okna.  
+ Włącza tryb pełnoekranowy dla ramki okna.  
   
 ```  
 void EnableFullScreenMode(UINT uiFullScreenCmd);
@@ -496,17 +496,17 @@ void EnableFullScreenMode(UINT uiFullScreenCmd);
   
 ### <a name="parameters"></a>Parametry  
  [in] *uiFullScreenCmd*  
- Identyfikator polecenia, które włącza i wyłącza tryb pełnoekranowy.  
+ Identyfikator polecenia, który włącza i wyłącza tryb pełnego ekranu.  
   
 ### <a name="remarks"></a>Uwagi  
- W trybie pełnoekranowym dokowania pasków kontrolki, paski narzędzi i menu są ukryte i rozmiaru widoku aktywnego zajmować pełnego ekranu.  
+ W trybie pełnoekranowym dokowania pasków kontrolki, paski narzędzi i menu są ukryte, a bieżącym widokiem rozmiar będzie zajmować pełnego ekranu.  
   
- Po włączeniu trybu pełnego ekranu, należy określić identyfikator polecenia, które włącza lub wyłącza tryb pełnoekranowy. Możesz wywołać `EnableFullScreenMode` z ramki głównej `OnCreate` funkcji. Gdy okno ramowe jest przełączany do trybu pełnego ekranu, platformę tworzy swobodny pasek narzędzi z jednego przycisku, który ma identyfikator określonego polecenia.  
+ Po włączeniu trybu pełnoekranowego, należy określić identyfikator polecenia, która włącza lub wyłącza tryb pełnoekranowy. Możesz wywołać `EnableFullScreenMode` z głównej ramki `OnCreate` funkcji. Gdy okno ramowe jest przełączany do trybu pełnoekranowego, szablon tworzy swobodny pasek narzędzi przy użyciu jednego przycisku, który ma identyfikator określonego polecenia.  
   
- Jeśli chcesz zachować menu głównego na ekranie, wywołanie [CFrameWndEx::EnableFullScreenMainMenu](#enablefullscreenmainmenu).  
+ Jeśli chcesz zachować menu głównego na ekranie, należy wywołać [CFrameWndEx::EnableFullScreenMainMenu](#enablefullscreenmainmenu).  
   
 ##  <a name="enableloaddockstate"></a>  CFrameWndEx::EnableLoadDockState  
- Włącza lub wyłącza ładowania stanu dokowania.  
+ Włącza lub wyłącza ładowanie stanie dokowania.  
   
 ```  
 void EnableLoadDockState(BOOL bEnable=TRUE);
@@ -514,7 +514,7 @@ void EnableLoadDockState(BOOL bEnable=TRUE);
   
 ### <a name="parameters"></a>Parametry  
  [in] *bWłączenie*  
- `TRUE` Aby włączyć ładowanie stanu dokowania `FALSE` można wyłączyć ładowania stanu dokowania.  
+ Wartość TRUE, aby umożliwić ładowanie stan dokowania FALSE można wyłączyć ładowania stanu dokowania.  
   
 ##  <a name="enablepanemenu"></a>  CFrameWndEx::EnablePaneMenu  
  Włącza lub wyłącza automatyczną obsługę menu okienka.  
@@ -531,68 +531,68 @@ void EnablePaneMenu(
   
 ### <a name="parameters"></a>Parametry  
  [in] *bWłączenie*  
- `TRUE` Aby włączyć automatyczną obsługę formantu paska menu podręcznego; `FALSE` wyłączyć automatyczną obsługę formantu paska menu podręczne.  
+ Wartość TRUE, aby włączyć automatyczną obsługę formantu paska menu wyskakujących; Wartość FALSE, aby wyłączyć automatyczną obsługę formantu paska menu podręcznego.  
   
  [in] *uiCustomizeCmd*  
  Identyfikator polecenia **Dostosuj** elementu menu.  
   
  [in] *strCustomizeLabel*  
- Etykiety, który będzie wyświetlany dla **Dostosuj** elementu menu  
+ Etykieta ma być wyświetlany dla **Dostosuj** elementu menu.  
   
  [in] *uiViewToolbarsMenuEntryID*  
- Identyfikator elementu menu paska narzędzi, która otwiera menu podręcznego w pasek sterowania.  
+ Identyfikator elementu menu paska narzędzi, w wyświetlonym menu podręcznym pasku sterowania.  
   
  [in] *bContextMenuShowsToolbarsOnly*  
- Jeśli `TRUE`, formantu paska menu kontekstowe wyświetlane są tylko pasków narzędzi. Jeśli `FALSE`, rozwijalna lista paski narzędzi i dokujące paski.  
+ W przypadku opcji TRUE menu kontekstowe paska sterowania Wyświetla listę tylko paski narzędzi. W przypadku wartości FAŁSZ menu wyświetla listę paski narzędzi i dokowania pasków.  
   
  [in] *bViewMenuShowsToolbarsOnly*  
- Jeśli `TRUE`, menu pasek sterowania wyświetlane są tylko pasków narzędzi. Jeśli `FALSE`, rozwijalna lista paski narzędzi i dokujące paski.  
+ W przypadku opcji TRUE menu paska sterowania Wyświetla listę tylko paski narzędzi. W przypadku wartości FAŁSZ menu wyświetla listę paski narzędzi i dokowania pasków.  
   
 ##  <a name="getactivepopup"></a>  CFrameWndEx::GetActivePopup  
- Zwraca wskaźnik do aktualnie wyświetlanego menu podręczne.  
+ Zwraca wskaźnik do aktualnie wyświetlonego menu podręcznego.  
   
 ```  
 CMFCPopupMenu* GetActivePopup() const;  
 ```  
   
 ### <a name="return-value"></a>Wartość zwracana  
- Wskaźnik do aktualnie wyświetlanego menu podręcznego; w przeciwnym razie `NULL`.  
+ Wskaźnik do aktualnie wyświetlonego menu podręcznego; w przeciwnym razie wartość NULL.  
   
 ##  <a name="getdefaultresid"></a>  CFrameWndEx::GetDefaultResId  
- Zwraca identyfikator zasobu, które zostało określone podczas okno ramowe ładowane ramach.  
+ Zwraca identyfikator zasobu, który określiłeś, gdy struktura ładowany ramki okna.  
   
 ```  
 UINT GetDefaultResId() const;  
 ```  
   
 ### <a name="return-value"></a>Wartość zwracana  
- Wartość Identyfikatora zasobu, czy określona przez użytkownika, kiedy platformę ładowane ramkę okna. Zero, jeśli okno ramowe nie ma paska menu.  
+ Wartość Identyfikatora zasobu, określony przez użytkownika, kiedy struktura ładowane ramki okna. Zero, jeśli okno ramowe nie ma paska menu.  
   
 ##  <a name="getdockingmanager"></a>  CFrameWndEx::GetDockingManager  
- Pobiera [klasy CDockingManager](../../mfc/reference/cdockingmanager-class.md) obiektu ramki okna.  
+ Pobiera [klasa CDockingManager](../../mfc/reference/cdockingmanager-class.md) obiektu dla ramki okna.  
   
 ```  
 CDockingManager* GetDockingManager();
 ```  
   
 ### <a name="return-value"></a>Wartość zwracana  
- Wskaźnik do [CDockingManager klasy](../../mfc/reference/cdockingmanager-class.md).  
+ Wskaźnik do [klasa CDockingManager](../../mfc/reference/cdockingmanager-class.md).  
   
 ### <a name="remarks"></a>Uwagi  
- Okno ramowe tworzone i używane [klasy CDockingManager](../../mfc/reference/cdockingmanager-class.md) obiektu do zarządzania dokowanie okien podrzędnych.  
+ Okno ramowe tworzy i używa [klasa CDockingManager](../../mfc/reference/cdockingmanager-class.md) obiektów do zarządzania, podrzędnego okna dokującego.  
   
 ##  <a name="getmenubar"></a>  CFrameWndEx::GetMenuBar  
- Zwraca wskaźnik do obiektu paska menu dołączony do ramki okna.  
+ Zwraca wskaźnik do obiekt paska menu, które są dołączone do ramki okna.  
   
 ```  
 const CMFCMenuBar* GetMenuBar() const;  
 ```  
   
 ### <a name="return-value"></a>Wartość zwracana  
- Wskaźnik do obiektu paska menu dołączony do ramki okna.  
+ Wskaźnik do obiektu paska menu, które są dołączone do ramki okna.  
   
 ##  <a name="getpane"></a>  CFrameWndEx::GetPane  
- Zwraca wskaźnik do okienka ma określony identyfikator.  
+ Zwraca wskaźnik do okienka, który ma określony identyfikator.  
   
 ```  
 CBasePane* GetPane(UINT nID);
@@ -600,10 +600,10 @@ CBasePane* GetPane(UINT nID);
   
 ### <a name="parameters"></a>Parametry  
  [in] *nID*  
- Identyfikator formantu.  
+ Identyfikator kontrolki.  
   
 ### <a name="return-value"></a>Wartość zwracana  
- Wskaźnik do okienka ma określony identyfikator. `NULL` Jeśli nie istnieje żadne takie okienka.  
+ Wskaźnik do okienka, który ma określony identyfikator. Wartość NULL, jeśli istnieje nie takich okienka.  
   
 ##  <a name="getribbonbar"></a>  CFrameWndEx::GetRibbonBar  
  Pobiera formantu paska wstążki ramki.  
@@ -613,22 +613,22 @@ CMFCRibbonBar* GetRibbonBar();
 ```  
   
 ### <a name="return-value"></a>Wartość zwracana  
- Wskaźnik do [klasy CMFCRibbonBar](../../mfc/reference/cmfcribbonbar-class.md) ramki.  
+ Wskaźnik do [klasa CMFCRibbonBar](../../mfc/reference/cmfcribbonbar-class.md) ramki.  
   
 ### <a name="remarks"></a>Uwagi  
   
 ##  <a name="gettearoffbars"></a>  CFrameWndEx::GetTearOffBars  
- Zwraca listę okienko obiekty, które są w stanie oderwania.  
+ Zwraca listę obiektów okienko, które są w stanie odrywania.  
   
 ```  
 const CObList& GetTearOffBars() const;  
 ```  
   
 ### <a name="return-value"></a>Wartość zwracana  
- Odwołanie do `CObList` obiekt, który zawiera kolekcję wskaźników do obiektów w okienku, które są w stanie oderwania.  
+ Odwołanie do `CObList` obiekt, który zawiera zbiór wskaźników do obiektów w okienku, które są w stanie odrywania.  
   
 ##  <a name="gettoolbarbuttontooltiptext"></a>  CFrameWndEx::GetToolbarButtonToolTipText  
- Wywoływane przez platformę, gdy aplikacja zostanie wyświetlona etykietkę narzędzia dla przycisku paska narzędzi.  
+ Wywoływane przez platformę, gdy aplikacja wyświetli etykietkę narzędzia dla przycisku paska narzędzi.  
   
 ```  
 virtual BOOL GetToolbarButtonToolTipText(
@@ -638,19 +638,19 @@ virtual BOOL GetToolbarButtonToolTipText(
   
 ### <a name="parameters"></a>Parametry  
  [in] *pButton*  
- Wskaźnik do przycisku paska narzędzi.  
+ Wskaźnik na przycisku paska narzędzi.  
   
  [in] *strTTText*  
- Tekst etykietki narzędzia, która ma być wyświetlany dla przycisku.  
+ Tekst etykietki narzędzia dla przycisku.  
   
 ### <a name="return-value"></a>Wartość zwracana  
- `TRUE` Jeśli został wyświetlony element tooltip. `FALSE` w przeciwnym razie wartość.  
+ Wartość TRUE, jeśli została wyświetlona etykietka narzędzia. Wartość FALSE w przeciwnym razie.  
   
 ### <a name="remarks"></a>Uwagi  
  Domyślnie ta metoda nie działa. Należy przesłonić tę metodę, jeśli chcesz wyświetlić etykietkę narzędzia dla przycisku paska narzędzi.  
   
 ##  <a name="insertpane"></a>  CFrameWndEx::InsertPane  
- Wstawia okienko na listę wartości paski sterowania i rejestruje go przy użyciu Menedżera dokowania.  
+ Wstawia okienko do listy paskami sterowania i rejestruje je za pomocą Menedżera dokowania.  
   
 ```  
 BOOL InsertPane(
@@ -661,42 +661,42 @@ BOOL InsertPane(
   
 ### <a name="parameters"></a>Parametry  
  *pControlBar*  
- Wskaźnik do pasek sterowania umieszczone na liście paski sterowania i zarejestrowane przy użyciu Menedżera dokowania.  
+ Wskaźnik na pasku sterowania umieszczone na liście paskami sterowania i zarejestrowane w usłudze Menedżer dokowania.  
   
  *pTarget*  
- Wskaźnik do pasek sterowania przed lub po upływie którego do wstawienia w okienku.  
+ Wskaźnik na pasku sterowania przed lub po upływie którego do wstawienia w okienku.  
   
  *bPo*  
- `TRUE` Jeśli chcesz wstawić *pControlBar* po *pTarget*, `FALSE` inaczej.  
+ Wartość TRUE, jeśli chcesz wstawić *pControlBar* po *pTarget*, wartość FALSE w przeciwnym razie.  
   
 ### <a name="return-value"></a>Wartość zwracana  
- `TRUE` Jeśli pasek sterowania został pomyślnie wstawione i zarejestrowane, `FALSE` inaczej.  
+ Wartość TRUE, jeśli pasek sterowania zostało pomyślnie wstawione i zarejestrowany, wartość FALSE w przeciwnym razie.  
   
 ### <a name="remarks"></a>Uwagi  
- Należy zarejestrować każdy pasek sterowania przy użyciu [klasy CDockingManager](../../mfc/reference/cdockingmanager-class.md) do udziału w układzie dokowania.  
+ Należy zarejestrować każdy pasek sterowania za pomocą [klasa CDockingManager](../../mfc/reference/cdockingmanager-class.md) do wzięcia udziału w układ dokowania.  
   
 ##  <a name="isfullscreen"></a>  CFrameWndEx::IsFullScreen  
- Określa, czy okno ramowe jest w trybie pełnoekranowym.  
+ Określa, czy okno ramki jest w trybie pełnoekranowym.  
   
 ```  
 BOOL IsFullScreen() const;  
 ```  
   
 ### <a name="return-value"></a>Wartość zwracana  
- `TRUE` Jeśli okno ramowe jest w trybie pełnoekranowym; w przeciwnym razie `FALSE`.  
+ Wartość TRUE, jeśli okno ramki jest w trybie pełnoekranowym; w przeciwnym razie wartość FALSE.  
   
 ### <a name="remarks"></a>Uwagi  
- Można ustawić trybu pełnego ekranu, wywołując [CFrameWndEx::EnableFullScreenMode](#enablefullscreenmode) metody.  
+ Można ustawić trybu pełnoekranowego, wywołując [CFrameWndEx::EnableFullScreenMode](#enablefullscreenmode) metody.  
   
 ##  <a name="ismenubaravailable"></a>  CFrameWndEx::IsMenuBarAvailable  
- Określa, czy wskaźnik do obiektu paska menu jest nieprawidłowy.  
+ Określa, czy wskaźnik do obiektu pasek menu jest prawidłowa.  
   
 ```  
 BOOL IsMenuBarAvailable() const;  
 ```  
   
 ### <a name="return-value"></a>Wartość zwracana  
- `TRUE` Jeśli okno ramowe ma pasku menu; w przeciwnym razie `FALSE`.  
+ Wartość TRUE, jeśli okno ramowe pasku menu; w przeciwnym razie wartość FALSE.  
   
 ##  <a name="ispointneardocksite"></a>  CFrameWndEx::IsPointNearDockSite  
  Określa, czy punkt znajduje się w strefie wyrównania.  
@@ -713,43 +713,43 @@ BOOL IsPointNearDockSite(
  Położenie punktu.  
   
  [out] *dwBarAlignment*  
- Gdy punkt jest wyrównany. Poniższa tabela w sekcji uwag prawidłowych wartości.  
+ Gdy punkt jest wyrównany. Zobacz tabelę w sekcji uwag uzyskać odpowiednie wartości.  
   
  [out] *bOuterEdge*  
- `TRUE` Jeśli punkt znajduje się w pobliżu obramowanie ramki; `FALSE` czy punkt znajduje się w obszarze klienta.  
+ Wartość TRUE, jeśli punkt znajduje się w pobliżu obramowanie ramki; Wartość FALSE, jeśli punkt znajduje się w obszarze klienta.  
   
 ### <a name="return-value"></a>Wartość zwracana  
- `TRUE` Jeśli punkt znajduje się w strefie wyrównanie; w przeciwnym razie `FALSE`.  
+ Wartość TRUE, jeśli punkt znajduje się w strefie wyrównanie; w przeciwnym razie wartość FALSE.  
   
 ### <a name="remarks"></a>Uwagi  
- W poniższej tabeli przedstawiono możliwe wartości *dwBarAlignment* parametru.  
+ Poniższa tabela zawiera listę możliwych wartości dla *dwBarAlignment* parametru.  
   
- `CBRS_ALIGN_TOP`  
- Wyrównana do góry.  
+ CBRS_ALIGN_TOP  
+ Wyrównanym do górnej.  
   
- `CBRS_ALIGN_RIGHT`  
+ CBRS_ALIGN_RIGHT  
  Wyrównany do prawej.  
   
- `CBRS_ALIGN_BOTTOM`  
- Wyrównane do dolnej.  
+ CBRS_ALIGN_BOTTOM  
+ Wyrównane do dołu.  
   
- `CBRS_ALIGN_LEFT`  
+ CBRS_ALIGN_LEFT  
  Wyrównane do lewej.  
   
 ##  <a name="isprintpreview"></a>  CFrameWndEx::IsPrintPreview  
- Określa, czy okno ramowe jest w trybie podglądu wydruku.  
+ Określa, czy okno ramki jest w trybie podglądu wydruku.  
   
 ```  
 BOOL IsPrintPreview();
 ```  
   
 ### <a name="return-value"></a>Wartość zwracana  
- `TRUE` Jeśli okno ramowe jest w trybie podglądu wydruku w przeciwnym razie `FALSE`.  
+ Wartość TRUE, jeśli w oknie ramki jest w trybie podglądu wydruku w przeciwnym razie wartość FALSE.  
   
 ### <a name="remarks"></a>Uwagi  
   
 ##  <a name="loadframe"></a>  CFrameWndEx::LoadFrame  
- Ta metoda jest wywoływana po wykonaniu konstrukcji, aby utworzyć okno ramowe i załadować jej zasobów.  
+ Ta metoda jest wywoływana po konstrukcji, aby utworzyć okno ramowe i załadować jej zasobów.  
   
 ```  
 virtual BOOL LoadFrame(
@@ -761,24 +761,24 @@ virtual BOOL LoadFrame(
   
 ### <a name="parameters"></a>Parametry  
  [in] *nIDResource*  
- Identyfikator zasobu jest używana do załadowania wszystkie zasoby ramki.  
+ Identyfikator zasobu, która jest używana do ładowania wszystkie zasoby ramki.  
   
  [in] *dwDefaultStyle*  
  Domyślny styl okna ramki.  
   
  [in] *pParentWnd*  
- Wskaźnik do ramki okna nadrzędnego.  
+ Wskaźnik do nadrzędnego okna ramki.  
   
  [in] *pContext*  
- Wskaźnik do [struktury CCreateContext](../../mfc/reference/ccreatecontext-structure.md) klasy, która jest używana przez platformę, podczas tworzenia aplikacji.  
+ Wskaźnik do [struktura CCreateContext](../../mfc/reference/ccreatecontext-structure.md) klasę, która jest używana przez platformę podczas tworzenia aplikacji.  
   
 ### <a name="return-value"></a>Wartość zwracana  
- `TRUE` Jeśli metoda zakończyło się pomyślnie; w przeciwnym razie `FALSE`.  
+ Wartość TRUE, jeśli metoda zakończyła się pomyślnie; w przeciwnym razie wartość FALSE.  
   
 ### <a name="remarks"></a>Uwagi  
   
 ##  <a name="negotiateborderspace"></a>  CFrameWndEx::NegotiateBorderSpace  
- Implementuje negocjowanie obramowania klienta OLE.  
+ Implementuje negocjacji krawędź klienta OLE.  
   
 ```  
 virtual BOOL NegotiateBorderSpace(
@@ -788,16 +788,16 @@ virtual BOOL NegotiateBorderSpace(
   
 ### <a name="parameters"></a>Parametry  
  [in] *nBorderCmd*  
- Polecenie negocjacji obramowania. W sekcji uwag możliwych wartości.  
+ Polecenie negocjacji obramowania. Zobacz sekcję Spostrzeżenia, aby możliwe wartości.  
   
- [w, out] *lpRectBorder*  
+ [out w] *lpRectBorder*  
  Wymiary obramowania.  
   
 ### <a name="return-value"></a>Wartość zwracana  
- `TRUE` Jeśli musi być obliczany ponownie układ; w przeciwnym razie `FALSE`.  
+ Wartość TRUE, jeśli należy obliczyć ponownie układ; w przeciwnym razie wartość FALSE.  
   
 ### <a name="remarks"></a>Uwagi  
- W poniższej tabeli przedstawiono możliwe wartości *nBorderCmd* parametru.  
+ Poniższa tabela zawiera listę możliwych wartości dla *nBorderCmd* parametru.  
   
  *borderGet*  
  Pobierz dostępne miejsce klienta OLE.  
@@ -809,7 +809,7 @@ virtual BOOL NegotiateBorderSpace(
  Ustawienia obszaru klienta OLE.  
   
 ##  <a name="onactivate"></a>  CFrameWndEx::OnActivate  
- Struktura wywołuje tę metodę po przełączeniu do lub od ramki danych wejściowych użytkownika.  
+ Struktura wywołuje tę metodę po przełączeniu do lub opuszczenie ramki danych wejściowych użytkownika.  
   
 ```  
 afx_msg void OnActivate(
@@ -820,28 +820,28 @@ afx_msg void OnActivate(
   
 ### <a name="parameters"></a>Parametry  
  [in] *nInformacje*  
- Czy ramki jest aktywny lub nieaktywny. Poniższa tabela w sekcji uwag prawidłowych wartości.  
+ Czy ramki jest aktywne lub nieaktywne. Zobacz tabelę w sekcji uwag uzyskać odpowiednie wartości.  
   
  [in] *pWndOther*  
- Wskaźnik do innego okna, które jest przełączanie danych wejściowych użytkownika z bieżącej.  
+ Wskaźnik do innego okna, które jest przełączenie na dane wejściowe użytkownika z bieżącej subskrypcji.  
   
  [in] *bMinimized*  
- Stan zminimalizowane ramki. `TRUE` Jeśli ramki jest zminimalizowany; w przeciwnym razie `FALSE`.  
+ Stanie zminimalizowanym ramki. Wartość TRUE, jeśli ramka jest zminimalizowany; w przeciwnym razie wartość FALSE.  
   
 ### <a name="remarks"></a>Uwagi  
- W poniższej tabeli przedstawiono możliwe wartości *nInformacje* parametru.  
+ Poniższa tabela zawiera listę możliwych wartości dla *nInformacje* parametru.  
   
- `WA_ACTIVE`  
- Ramki jest wybierany przez innej metody niż kliknięcia myszą.  
+ WA_ACTIVE  
+ Ramki jest wybierany przez metody innej niż kliknięcia myszą.  
   
- `WA_CLICKACTIVE`  
+ WA_CLICKACTIVE  
  Ramki jest wybierany przez kliknięcie myszą.  
   
- `WA_INACTIVE`  
+ WA_INACTIVE  
  Nie wybrano ramki.  
   
 ##  <a name="onactivateapp"></a>  CFrameWndEx::OnActivateApp  
- Wywoływane przez platformę, gdy aplikacja jest zaznaczany lub odznaczany.  
+ Wywoływane przez platformę, gdy aplikacja jest zaznaczenia lub usunięcia zaznaczenia.  
   
 ```  
 afx_msg void OnActivateApp(
@@ -851,7 +851,7 @@ afx_msg void OnActivateApp(
   
 ### <a name="parameters"></a>Parametry  
  [in] *bWykonywanie aktywnych*  
- `TRUE` Jeśli aplikacja jest zaznaczone. `FALSE` Jeśli aplikacja nie jest zaznaczone.  
+ Wartość TRUE, jeśli jest zaznaczone, aplikacja. Wartość FALSE, jeśli aplikacja nie jest zaznaczone.  
   
  [in] *dwThreadID*  
  Ten parametr nie jest używany.  
@@ -859,7 +859,7 @@ afx_msg void OnActivateApp(
 ### <a name="remarks"></a>Uwagi  
   
 ##  <a name="onchangevisualmanager"></a>  CFrameWndEx::OnChangeVisualManager  
- Wywoływane przez platformę, gdy zmiana ramki wymaga zmiany wizualne menedżera.  
+ Jest wywoływane przez platformę, gdy zmiany w ramce wymaga zmiany wizualne menedżera.  
   
 ```  
 afx_msg LRESULT OnChangeVisualManager(
@@ -887,33 +887,33 @@ afx_msg void OnClose();
 ```  
   
 ### <a name="remarks"></a>Uwagi  
- Jeśli ramki jest w trybie podglądu wydruku, wysyła komunikatów systemu Windows, aby zamknąć podglądu wydruku; w przeciwnym razie jeśli ramki obsługuje klienta OLE, klient jest nieaktywny.  
+ Jeśli ramki jest w trybie podglądu wydruku, wysyła komunikat Windows, aby zamknąć Podgląd wydruku; w przeciwnym razie jeśli ramki hostuje klienta OLE, klient jest nieaktywny.  
   
 ##  <a name="onclosedockingpane"></a>  CFrameWndEx::OnCloseDockingPane  
- Wywoływane przez platformę, gdy użytkownik kliknie **Zamknij** przycisk na dokowania panelu.  
+ Wywoływane przez platformę, gdy użytkownik kliknie **Zamknij** przycisk okienka dokowania.  
   
 ```  
 virtual BOOL OnCloseDockingPane(CDockablePane* pPane);
 ```  
   
 ### <a name="return-value"></a>Wartość zwracana  
- `TRUE` Jeśli dokowania paska może zostać zamknięty. `FALSE` W przeciwnym razie  
+ Wartość TRUE, jeśli pasek dokowania może zostać zamknięty. Wartość FALSE w przeciwnym razie  
   
 ### <a name="remarks"></a>Uwagi  
- Domyślna implementacja nie działa. Przesłania tę metodę, jeśli chcesz obsługiwać ukrywanie dokowania paska.  
+ Implementowanie domyślny nic nie robi. Przesłania tę metodę, jeśli chcesz obsługiwać ukrywanie pasek dokowania.  
   
 ##  <a name="oncloseminiframe"></a>  CFrameWndEx::OnCloseMiniFrame  
- Wywoływane przez platformę, gdy użytkownik kliknie **Zamknij** przycisk na przestawne okno ramowe mini.  
+ Wywoływane przez platformę, gdy użytkownik kliknie **Zamknij** przycisk na przestawne okno mini ramki.  
   
 ```  
 virtual BOOL OnCloseMiniFrame(CPaneFrameWnd* pWnd);
 ```  
   
 ### <a name="return-value"></a>Wartość zwracana  
- `TRUE` Jeśli przestawne okno ramowe mini może zostać zamknięty. `FALSE` w przeciwnym razie wartość.  
+ Wartość TRUE, jeśli przestawne okno mini ramki, może zostać zamknięty. Wartość FALSE w przeciwnym razie.  
   
 ### <a name="remarks"></a>Uwagi  
- Domyślna implementacja nie działa. Należy przesłonić tę metodę, aby przetworzyć ukrywanie przestawne okno ramowe mini.  
+ Domyślna implementacja nic nie robi. Należy przesłonić tę metodę, aby przetworzyć ukrywanie przestawne okno mini ramki.  
   
 ##  <a name="onclosepopupmenu"></a>  CFrameWndEx::OnClosePopupMenu  
  Wywoływane przez platformę, gdy aktywne menu podręczne przetwarza komunikat WM_DESTROY.  
@@ -924,10 +924,10 @@ virtual void OnClosePopupMenu(CMFCPopupMenu* pMenuPopup);
   
 ### <a name="parameters"></a>Parametry  
  *pMenuPopup*  
- Wskaźnik do menu podręczne.  
+ Wskaźnik do menu podręcznego.  
   
 ### <a name="remarks"></a>Uwagi  
- Platformę wysyła komunikat WM_DESTROY po około, aby zamknąć okno. Przesłonić tę metodę, jeśli chcesz obsługiwać powiadomień z `CMFCPopupMenu` obiektów, które należą do okno ramowe podczas `CMFCPopupMenu` przetwarzania obiektu `WM_DESTROY` komunikat wysyłany przez platformę, gdy okno jest zamykane.  
+ Struktura jest wysyłana wiadomość WM_DESTROY po około, aby zamknąć okno. Przesłonić tę metodę, jeśli chcesz obsługiwać powiadomienia z `CMFCPopupMenu` obiektów, które należą do okna ramki podczas `CMFCPopupMenu` obiektu przetwarza komunikat WM_DESTROY wysyłane przez platformę, gdy okno jest zamykane.  
   
 ##  <a name="oncmdmsg"></a>  CFrameWndEx::OnCmdMsg  
  Wysyła polecenie wiadomości.  
@@ -945,21 +945,21 @@ virtual BOOL OnCmdMsg(
  Identyfikator polecenia.  
   
  [in] *nCode*  
- Polecenie kategorię.  
+ Kategoria wiadomości polecenia.  
   
- [w, out] *pExtra*  
+ [out w] *pExtra*  
  Wskaźnik do obiektu command.  
   
- [w, out] *pHandlerInfo*  
- Wskaźnik do struktury obsługi poleceń.  
+ [out w] *pHandlerInfo*  
+ Wskaźnik do struktury obsługi polecenia.  
   
 ### <a name="return-value"></a>Wartość zwracana  
- `TRUE` Jeśli komunikat polecenia został obsłużony; w przeciwnym razie `FALSE`.  
+ Wartość TRUE, jeśli komunikat polecenia został obsłużony; w przeciwnym razie wartość FALSE.  
   
 ### <a name="remarks"></a>Uwagi  
   
 ##  <a name="oncontexthelp"></a>  CFrameWndEx::OnContextHelp  
- Wywoływane przez platformę, by wyświetlić Pomoc związanych z kontekstu.  
+ Metoda wywoływana przez platformę, by wyświetlić związane z kontekstu pomocy.  
   
 ```  
 afx_msg void OnContextHelp();
@@ -968,7 +968,7 @@ afx_msg void OnContextHelp();
 ### <a name="remarks"></a>Uwagi  
   
 ##  <a name="oncreate"></a>  CFrameWndEx::OnCreate  
- Wywoływane przez platformę po utworzeniu ramki.  
+ Wywoływane przez platformę, po utworzeniu ramki.  
   
 ```  
 afx_msg int OnCreate(LPCREATESTRUCT lpCreateStruct);
@@ -979,22 +979,22 @@ afx_msg int OnCreate(LPCREATESTRUCT lpCreateStruct);
  Wskaźnik do [struktura CREATESTRUCT](../../mfc/reference/createstruct-structure.md) dla nowej ramki.  
   
 ### <a name="return-value"></a>Wartość zwracana  
- 0, aby kontynuować tworzenie ramki; -1 do zniszczenia ramki.  
+ 0, aby kontynuować tworzenie ramki; -1 do likwidacji ramki.  
   
 ### <a name="remarks"></a>Uwagi  
   
 ##  <a name="ondestroy"></a>  CFrameWndEx::OnDestroy  
- Wywoływane przez platformę, gdy zostanie zniszczony ramki.  
+ Wywoływane przez platformę, kiedy niszczony jest ramki.  
   
 ```  
 afx_msg void OnDestroy();
 ```  
   
 ### <a name="remarks"></a>Uwagi  
- Tabela akceleratora i wszystkich okien zostaną zniszczone.  
+ Tabela akceleratora i wszystkich okien są niszczone.  
   
 ##  <a name="ondrawmenuimage"></a>  CFrameWndEx::OnDrawMenuImage  
- Wywoływane przez platformę, gdy aplikacja jest rysowane obrazu skojarzonego z elementem menu.  
+ Wywoływane przez platformę, gdy aplikacja rysuje obrazu skojarzonego z elementem menu.  
   
 ```  
 virtual BOOL OnDrawMenuImage(
@@ -1008,16 +1008,16 @@ virtual BOOL OnDrawMenuImage(
  Wskaźnik do kontekstu urządzenia.  
   
  [in] *pMenuButton*  
- Wskaźnik do przycisku menu jest renderowany obraz, którego.  
+ Wskaźnik do przycisku menu, którego obraz jest renderowany.  
   
  [in] *rectImage*  
- Wskaźnik do `Rect` strukturę, która określa ekranu położenie i rozmiar obrazu.  
+ Wskaźnik do `Rect` strukturę, która określa położenie ekranu i rozmiar obrazu.  
   
 ### <a name="return-value"></a>Wartość zwracana  
- `TRUE` Jeśli w ramach pomyślnie renderowania obrazu. `FALSE` inaczej.  
+ Wartość TRUE, jeśli w ramach pomyślnie powoduje wyświetlenie obrazu. Wartość FALSE w przeciwnym razie.  
   
 ### <a name="remarks"></a>Uwagi  
- Przesłonić tę metodę, jeśli chcesz dostosować renderowanie obrazów dla elementów menu, które należą do paska menu własnością `CFrameWndEx` pochodzi z obiektu.  
+ Przesłonić tę metodę, jeśli chcesz dostosować renderowania obrazów dla elementów menu, które należą do paska menu własnością `CFrameWndEx` pochodzi z obiektu.  
   
 ##  <a name="ondrawmenulogo"></a>  CFrameWndEx::OnDrawMenuLogo  
  Wywoływane przez platformę, gdy `CMFCPopupMenu` obiektu przetwarza komunikat WM_PAINT.  
@@ -1037,13 +1037,13 @@ virtual void OnDrawMenuLogo(
  Wskaźnik do elementu menu.  
   
  [in] *rectLogo*  
- Odwołanie do stałej `CRect` strukturę, która określa ekranu położenie i rozmiar logo menu.  
+ Odwołanie do stałej `CRect` strukturę, która określa położenie ekranu i rozmiar menu logo.  
   
 ### <a name="remarks"></a>Uwagi  
- Przesłonić tę funkcję, jeśli mają być wyświetlane logo w menu podręcznym należącą do paska menu własnością `CFrameWndEx` pochodzi z obiektu.  
+ Przesłonić tę funkcję, jeśli mają być wyświetlane logo które w menu podręcznym należącą do paska menu własnością `CFrameWndEx` pochodzi z obiektu.  
   
 ##  <a name="ondwmcompositionchanged"></a>  CFrameWndEx::OnDWMCompositionChanged  
- Wywoływane przez platformę, gdy włączono lub wyłączono kompozycji Menedżera okien pulpitu (DWM).  
+ Wywoływane przez platformę, gdy włączono lub wyłączono kompozycję Menedżera okien pulpitu (DWM).  
   
 ```  
 afx_msg LRESULT OnDWMCompositionChanged(
@@ -1064,7 +1064,7 @@ afx_msg LRESULT OnDWMCompositionChanged(
 ### <a name="remarks"></a>Uwagi  
   
 ##  <a name="onexitsizemove"></a>  CFrameWndEx::OnExitSizeMove  
- Wywoływane przez platformę, gdy ramki zatrzymuje zmiany rozmiaru lub położenia.  
+ Wywoływane przez platformę, po zatrzymaniu ramki, przenoszenia lub zmieniania jej rozmiaru.  
   
 ```  
 LRESULT OnExitSizeMove(
@@ -1085,7 +1085,7 @@ LRESULT OnExitSizeMove(
 ### <a name="remarks"></a>Uwagi  
   
 ##  <a name="ongetminmaxinfo"></a>  CFrameWndEx::OnGetMinMaxInfo  
- Wywoływane przez platformę, gdy zmieniany jest rozmiar ramki można ustawić limity wymiaru okna.  
+ Wywoływane przez platformę, gdy zmieniany jest rozmiar ramki pozwala zastosować limity wymiaru okna.  
   
 ```  
 afx_msg void OnGetMinMaxInfo(MINMAXINFO FAR* lpMMI);
@@ -1098,7 +1098,7 @@ afx_msg void OnGetMinMaxInfo(MINMAXINFO FAR* lpMMI);
 ### <a name="remarks"></a>Uwagi  
   
 ##  <a name="onidleupdatecmdui"></a>  CFrameWndEx::OnIdleUpdateCmdUI  
- Wywoływane przez platformę, aby zaktualizować wyświetlane ramki, podczas przetwarzania polecenia jest w stanie bezczynności.  
+ Metoda wywoływana przez platformę, aby zaktualizować wyświetlane ramki, podczas przetwarzania polecenia jest w stanie bezczynności.  
   
 ```  
 afx_msg LRESULT OnIdleUpdateCmdUI(
@@ -1119,7 +1119,7 @@ afx_msg LRESULT OnIdleUpdateCmdUI(
 ### <a name="remarks"></a>Uwagi  
   
 ##  <a name="onlbuttondown"></a>  CFrameWndEx::OnLButtonDown  
- Struktura wywołuje tę metodę po naciśnięciu lewego przycisku myszy.  
+ Struktura wywołuje tę metodę, gdy użytkownik naciśnie przycisk myszy po lewej stronie.  
   
 ```  
 afx_msg void OnLButtonDown(
@@ -1129,15 +1129,15 @@ afx_msg void OnLButtonDown(
   
 ### <a name="parameters"></a>Parametry  
  [in] *nFlags*  
- Wskazuje, czy użytkownik nacisnął klawisz klawisze modyfikujące. Możliwe wartości można znaleźć parametru *wParam* w [powiadomień WM_LBUTTONDOWN](http://msdn.microsoft.com/library/windows/desktop/ms645607).  
+ Wskazuje, czy użytkownik nacisnął klawisz klawisze modyfikujące. Możliwe wartości parametru można znaleźć *wParam* w [powiadomień WM_LBUTTONDOWN](http://msdn.microsoft.com/library/windows/desktop/ms645607).  
   
  [in] *punktu*  
- Określa x i y współrzędne wskaźnika, względem lewego górnego rogu okna.  
+ Określa x i współrzędne y wskaźnika, względem lewego górnego rogu okna.  
   
 ### <a name="remarks"></a>Uwagi  
   
 ##  <a name="onlbuttonup"></a>  CFrameWndEx::OnLButtonUp  
- Struktura wywołuje tej metody, gdy użytkownik zwalnia lewego przycisku myszy.  
+ Struktura wywołuje tę metodę, gdy użytkownik zwolni przycisk myszy po lewej stronie.  
   
 ```  
 afx_msg void OnLButtonUp(
@@ -1147,15 +1147,15 @@ afx_msg void OnLButtonUp(
   
 ### <a name="parameters"></a>Parametry  
  [in] *nFlags*  
- Wskazuje, czy użytkownik nacisnął klawisz klawisze modyfikujące. Możliwe wartości można znaleźć parametru *wParam* w [powiadomień WM_LBUTTONUP](http://msdn.microsoft.com/library/windows/desktop/ms645608).  
+ Wskazuje, czy użytkownik nacisnął klawisz klawisze modyfikujące. Możliwe wartości parametru można znaleźć *wParam* w [powiadomień WM_LBUTTONUP](http://msdn.microsoft.com/library/windows/desktop/ms645608).  
   
  [in] *punktu*  
- Określa x i y współrzędne wskaźnika, względem lewego górnego rogu okna.  
+ Określa x i współrzędne y wskaźnika, względem lewego górnego rogu okna.  
   
 ### <a name="remarks"></a>Uwagi  
   
 ##  <a name="onmenubuttontoolhittest"></a>  CFrameWndEx::OnMenuButtonToolHitTest  
- Wywoływane przez platformę, gdy `CMFCToolBarButton` obiekt procesów `WM_NCHITTEST` wiadomości.  
+ Wywoływane przez platformę, gdy `CMFCToolBarButton` obiektu przetwarza komunikat WM_NCHITTEST.  
   
 ```  
 virtual BOOL OnMenuButtonToolHitTest(
@@ -1165,19 +1165,19 @@ virtual BOOL OnMenuButtonToolHitTest(
   
 ### <a name="parameters"></a>Parametry  
  [in] *pButton*  
- Wskaźnik do przycisku paska narzędzi.  
+ Wskaźnik na przycisku paska narzędzi.  
   
  [out] *pTI*  
- Wskaźnik do struktury informacji narzędzia.  
+ Wskaźnik do struktury informacji o narzędziu.  
   
 ### <a name="return-value"></a>Wartość zwracana  
- `TRUE` Jeśli aplikacja wypełnia *pTI* parametru. `FALSE` w przeciwnym razie wartość.  
+ Wartość TRUE, jeśli aplikacja wypełnia *pTI* parametru. Wartość FALSE w przeciwnym razie.  
   
 ### <a name="remarks"></a>Uwagi  
- Przesłania tę metodę, jeśli chcesz podać informacje etykietka narzędzia elementu menu określone.  
+ Należy przesłonić tę metodę, aby dowiedzieć się etykietka narzędzia elementu menu określone.  
   
 ##  <a name="onmenuchar"></a>  CFrameWndEx::OnMenuChar  
- Wywoływane przez platformę, gdy zostanie wyświetlone menu, a użytkownik naciśnie klawisz, który nie odpowiada na polecenie.  
+ Wywoływane przez platformę, gdy zostanie wyświetlone menu i naciśnięciu klawisza, który nie odpowiada na polecenie.  
   
 ```  
 afx_msg LRESULT OnMenuChar(
@@ -1188,30 +1188,30 @@ afx_msg LRESULT OnMenuChar(
   
 ### <a name="parameters"></a>Parametry  
  [in] *nChar*  
- Kod znaku naciśnięty klawisz.  
+ Kod znaku po naciśnięciu klawisza.  
   
  [in] *nFlags*  
- Zawiera `MF_POPUP` flagi, czy menu, wyświetlane jest podmenu; zawiera `MF_SYSMENU` Flaga Jeśli menu, wyświetlane jest menu kontroli.  
+ Zawiera flagę MF_POPUP, jeśli wyświetlonego menu jest podmenu; zawiera flagę MF_SYSMENU, jeśli wyświetlonego menu jest menu kontroli.  
   
  [in] *pMenu*  
  Wskaźnik do menu.  
   
 ### <a name="return-value"></a>Wartość zwracana  
- Word znaczących musi mieć jedną z następujących wartości.  
+ Word wyższego rzędu musi mieć jedną z następujących wartości.  
   
  `0`  
- Platformę ignorować naciśnięcie klawisza.  
+ Struktura powinien ignorować naciśnięcia klawisza.  
   
  `1`  
- Platformę należy zamknąć menu.  
+ Struktura należy zamknąć menu.  
   
  `2`  
- Platformę należy wybrać jeden z elementów wyświetlanych w menu. Word znaczącymi bitami zawiera identyfikator polecenia wyboru.  
+ Struktura wybrać jeden z elementów wyświetlanych w menu. Word niskiego rzędu zawiera identyfikator polecenie, aby wybrać.  
   
 ### <a name="remarks"></a>Uwagi  
   
 ##  <a name="onmousemove"></a>  CFrameWndEx::OnMouseMove  
- Struktura wywołuje tę metodę, gdy wskaźnik myszy przesuwa się.  
+ Struktura wywołuje tę metodę, gdy wskaźnik myszy jest przesuwany.  
   
 ```  
 afx_msg void OnMouseMove(
@@ -1221,7 +1221,7 @@ afx_msg void OnMouseMove(
   
 ### <a name="parameters"></a>Parametry  
  [in] *nFlags*  
- Wskazuje, czy użytkownik Naciśnięto klawisze modyfikujące. Możliwe wartości można znaleźć parametru *wParam* w [powiadomień WM_MOUSEMOVE](http://msdn.microsoft.com/library/windows/desktop/ms645616).  
+ Wskazuje, czy użytkownik Naciśnięto klawisze modyfikujące. Możliwe wartości parametru można znaleźć *wParam* w [powiadomień WM_MOUSEMOVE](http://msdn.microsoft.com/library/windows/desktop/ms645616).  
   
  [in] *punktu*  
  Określa x i y współrzędne wskaźnika względem lewego górnego rogu okna.  
@@ -1229,7 +1229,7 @@ afx_msg void OnMouseMove(
 ### <a name="remarks"></a>Uwagi  
   
 ##  <a name="onmoveminiframe"></a>  CFrameWndEx::OnMoveMiniFrame  
- Wywoływane przez platformę, gdy przesuwa okno na okienka.  
+ Wywoływane przez platformę, gdy okno okienka.  
   
 ```  
 virtual BOOL OnMoveMiniFrame(CWnd* pFrame);
@@ -1237,10 +1237,10 @@ virtual BOOL OnMoveMiniFrame(CWnd* pFrame);
   
 ### <a name="parameters"></a>Parametry  
  [in] *pFrame*  
- Wskaźnik do [klasy CPaneFrameWnd](../../mfc/reference/cpaneframewnd-class.md) okienko.  
+ Wskaźnik do [klasa CPaneFrameWnd](../../mfc/reference/cpaneframewnd-class.md) okno okienka.  
   
 ### <a name="return-value"></a>Wartość zwracana  
- `TRUE` Jeśli nie zostało zadokowane okienko; `FALSE` Jeśli okienko okno zostało zadokowane.  
+ Wartość TRUE, jeśli okno okienka nie jest zadokowany; Wartość FALSE, jeśli okno okienka był zadokowany.  
   
 ### <a name="remarks"></a>Uwagi  
   
@@ -1253,15 +1253,15 @@ afx_msg BOOL OnNcActivate(BOOL bActive);
   
 ### <a name="parameters"></a>Parametry  
  [in] *bWykonywanie aktywnych*  
- `TRUE` Rysowanie ramki active; `FALSE` do rysowania nieaktywne ramki.  
+ Wartość true, rysowania active; ramki Wartość FALSE, aby narysować nieaktywne ramki.  
   
 ### <a name="return-value"></a>Wartość zwracana  
- Różna od zera, aby kontynuować przetwarzanie domyślne; 0, aby zapobiec dezaktywowany obszaru nieklienckiego.  
+ Różna od zera, aby kontynuować przetwarzanie domyślną; 0, aby uniemożliwić obszaru nieklienckiego dezaktywowane.  
   
 ### <a name="remarks"></a>Uwagi  
   
 ##  <a name="onnccalcsize"></a>  CFrameWndEx::OnNcCalcSize  
- Wywoływane przez platformę, gdy rozmiar i położenie obszaru klienckiego muszą zostać obliczone.  
+ Wywoływane przez platformę, gdy rozmiar i położenie obszaru klienta muszą zostać obliczone.  
   
 ```  
 afx_msg void OnNcCalcSize(
@@ -1271,7 +1271,7 @@ afx_msg void OnNcCalcSize(
   
 ### <a name="parameters"></a>Parametry  
  [in] *bCalcValidRects*  
- `TRUE` gdy aplikacji należy określić obszaru prawidłowego klienta; w przeciwnym razie `FALSE`.  
+ Wartość TRUE, gdy w aplikacji należy określić obszar prawidłowego klienta; w przeciwnym razie wartość FALSE.  
   
  [in] *lpncsp*  
  Wskaźnik do `NCCALCSIZE_PARAMS` strukturę, która zawiera zmiany wymiaru ramki.  
@@ -1279,7 +1279,7 @@ afx_msg void OnNcCalcSize(
 ### <a name="remarks"></a>Uwagi  
   
 ##  <a name="onnchittest"></a>  CFrameWndEx::OnNcHitTest  
- Wywoływane przez platformę, gdy wskaźnik myszy przesuwa się lub przycisk myszy jest wciśnięty lub zwolnione.  
+ Wywoływane przez platformę, gdy wskaźnik myszy jest przesuwany lub przycisk myszy jest wciśnięty lub wydania.  
   
 ```  
 afx_msg LRESULT OnNcHitTest(CPoint point);
@@ -1290,12 +1290,12 @@ afx_msg LRESULT OnNcHitTest(CPoint point);
  Lokalizacja wskaźnika w współrzędne ekranu.  
   
 ### <a name="return-value"></a>Wartość zwracana  
- Wskaźnik osiągnęła wartość wyliczenia. Lista możliwych wartości [powiadomień WM_NCHITTEST](http://msdn.microsoft.com/library/windows/desktop/ms645618).  
+ Wskaźnik trafień wyliczany wartości. Aby uzyskać listę możliwych wartości, zobacz [powiadomień WM_NCHITTEST](http://msdn.microsoft.com/library/windows/desktop/ms645618).  
   
 ### <a name="remarks"></a>Uwagi  
   
 ##  <a name="onncmousemove"></a>  CFrameWndEx::OnNcMouseMove  
- Wywoływane przez platformę, gdy wskaźnik myszy przesuwa się obszaru nieklienckiego.  
+ Wywoływane przez platformę, gdy wskaźnik myszy jest przesuwany w obszaru nieklienckiego.  
   
 ```  
 afx_msg void OnNcMouseMove(
@@ -1305,7 +1305,7 @@ afx_msg void OnNcMouseMove(
   
 ### <a name="parameters"></a>Parametry  
  [in] *nHitTest*  
- Wskaźnik osiągnęła wartość wyliczenia. Lista możliwych wartości [powiadomień WM_NCHITTEST](http://msdn.microsoft.com/library/windows/desktop/ms645618).  
+ Wskaźnik trafień wyliczany wartości. Aby uzyskać listę możliwych wartości, zobacz [powiadomień WM_NCHITTEST](http://msdn.microsoft.com/library/windows/desktop/ms645618).  
   
  [in] *punktu*  
  Lokalizacja wskaźnika w współrzędne ekranu.  
@@ -1313,7 +1313,7 @@ afx_msg void OnNcMouseMove(
 ### <a name="remarks"></a>Uwagi  
   
 ##  <a name="onncpaint"></a>  CFrameWndEx::OnNcPaint  
- Wywoływane przez platformę, gdy musi zostać narysowany obszaru nieklienckiego.  
+ Wywoływane przez platformę, gdy musi być rysowane obszaru nieklienckiego.  
   
 ```  
 afx_msg void OnNcPaint();
@@ -1322,7 +1322,7 @@ afx_msg void OnNcPaint();
 ### <a name="remarks"></a>Uwagi  
   
 ##  <a name="onpanecheck"></a>  CFrameWndEx::OnPaneCheck  
- Wywoływane przez platformę, by ustawić widoczność okienka.  
+ Metoda wywoływana przez platformę, by ustawić widoczność okienka.  
   
 ```  
 afx_msg BOOL OnPaneCheck(UINT nID);
@@ -1330,10 +1330,10 @@ afx_msg BOOL OnPaneCheck(UINT nID);
   
 ### <a name="parameters"></a>Parametry  
  [in] *nID*  
- Identyfikator formantu okienka.  
+ Identyfikator kontrolki okienka.  
   
 ### <a name="return-value"></a>Wartość zwracana  
- `TRUE` Jeśli polecenie zostało obsłużone; `FALSE` aby kontynuować przetwarzanie poleceń.  
+ Wartość TRUE, jeśli polecenie został obsłużony; Wartość FALSE, aby kontynuować przetwarzanie poleceń.  
   
 ### <a name="remarks"></a>Uwagi  
   
@@ -1351,7 +1351,7 @@ afx_msg LRESULT OnPostPreviewFrame(
  Ten parametr nie jest używany.  
   
  [in] *lParam*  
- `TRUE` gdy ramki jest w trybie podglądu wydruku; `FALSE` gdy tryb podglądu wydruku jest wyłączona.  
+ Wartość PRAWDA, jeśli ramka jest w trybie podglądu wydruku Wartość FALSE, gdy tryb podglądu wydruku jest wyłączony.  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Zawsze zwraca wartość 0.  
@@ -1369,7 +1369,7 @@ afx_msg LRESULT OnPowerBroadcast(
   
 ### <a name="parameters"></a>Parametry  
  [in] *wp*  
- Zdarzenie zarządzania energią. Lista możliwych wartości [komunikat WM_POWERBROADCAST](http://msdn.microsoft.com/library/windows/desktop/aa373247).  
+ Zdarzenie zarządzania energią. Aby uzyskać listę możliwych wartości, zobacz [komunikat WM_POWERBROADCAST](http://msdn.microsoft.com/library/windows/desktop/aa373247).  
   
  [in] *lp*  
  Ten parametr nie jest używany.  
@@ -1380,7 +1380,7 @@ afx_msg LRESULT OnPowerBroadcast(
 ### <a name="remarks"></a>Uwagi  
   
 ##  <a name="onsetmenu"></a>  CFrameWndEx::OnSetMenu  
- Wywoływane przez platformę, aby zastąpić menu ramki okna.  
+ Metoda wywoływana przez platformę, aby zastąpić w menu Okno ramki.  
   
 ```  
 afx_msg LRESULT OnSetMenu(
@@ -1392,23 +1392,23 @@ BOOL OnSetMenu(HMENU hmenu);
   
 ### <a name="parameters"></a>Parametry  
  [in] *wp*  
- Dojście do menu Okno ramowe.  
+ Dojście do menu Okno ramki.  
   
  [in] *lp*  
- Dojście do nowego menu okna.  
+ Dojście do nowego menu Okno.  
   
  [in] *hmenu*  
- Dojście do menu Okno ramowe.  
+ Dojście do menu Okno ramki.  
   
 ### <a name="return-value"></a>Wartość zwracana  
- `LRESULT` wynika z wywołaniem domyślną procedurę okna.  
+ LRESULT jest wynikiem wywołania domyślną procedurę okna.  
   
- `BOOL` jest `TRUE` Jeśli zdarzenie zostało obsłużone; w przeciwnym razie `FALSE`.  
+ BOOL ma wartość TRUE, jeśli zdarzenie został obsłużony; w przeciwnym razie wartość FALSE.  
   
 ### <a name="remarks"></a>Uwagi  
   
 ##  <a name="onsetpreviewmode"></a>  CFrameWndEx::OnSetPreviewMode  
- Wywoływane przez platformę, by ustawić tryb podglądu wydruku dla ramki.  
+ Metoda wywoływana przez platformę, by ustawić tryb podglądu wydruku dla ramki.  
   
 ```  
 virtual void OnSetPreviewMode(
@@ -1418,15 +1418,15 @@ virtual void OnSetPreviewMode(
   
 ### <a name="parameters"></a>Parametry  
  [in] *bPreview*  
- `TRUE` Aby włączyć Podgląd wydruku; `FALSE` wyłączyć podglądu wydruku.  
+ Wartość TRUE, aby włączyć Podgląd wydruku; Wartość FALSE umożliwia wyłączenie podglądu wydruku.  
   
  [in] *stanu wydajności*  
- Wskaźnik do `CPrintPreviewState` ramki struktury stanu.  
+ Wskaźnik do `CPrintPreviewState` strukturze ramkę.  
   
 ### <a name="remarks"></a>Uwagi  
   
 ##  <a name="onsettext"></a>  CFrameWndEx::OnSetText  
- Wywoływane przez platformę, by ustawić tekst okna.  
+ Metoda wywoływana przez platformę, by ustawić tekst okna.  
   
 ```  
 afx_msg LRESULT OnSetText(
@@ -1439,15 +1439,15 @@ afx_msg LRESULT OnSetText(
  Ten parametr nie jest używany.  
   
  [in] *lParam*  
- Wskaźnik do tekst okna.  
+ Wskaźnik na tekst okna.  
   
 ### <a name="return-value"></a>Wartość zwracana  
- Wartość zwracana z wywołania [DefWindowProc](http://msdn.microsoft.com/library/windows/desktop/ms633572).  
+ Wartość zwracana z wywołania do [DefWindowProc](http://msdn.microsoft.com/library/windows/desktop/ms633572).  
   
 ### <a name="remarks"></a>Uwagi  
   
 ##  <a name="onshowcustomizepane"></a>  CFrameWndEx::OnShowCustomizePane  
- Wywoływane przez platformę, gdy Wyświetla `QuickCustomizePane`.  
+ Wywoływane przez platformę, gdy zostanie wyświetlony `QuickCustomizePane`.  
   
 ```  
 virtual BOOL OnShowCustomizePane(
@@ -1460,16 +1460,16 @@ virtual BOOL OnShowCustomizePane(
  Wskaźnik do szybkiego dostosowywania okienka.  
   
  [in] *uiToolbarID*  
- Identyfikator formantu paska narzędzi, aby dostosować.  
+ Identyfikator formantu paska narzędzi do dostosowywania.  
   
 ### <a name="return-value"></a>Wartość zwracana  
- Ta metoda zawsze zwracany `TRUE`.  
+ Ta metoda zawsze zwraca wartość TRUE.  
   
 ### <a name="remarks"></a>Uwagi  
- Dostosowywanie szybki menu jest menu podręczne, które pojawia się po kliknięciu przycisku Dostosowywanie paska narzędzi  
+ Szybkie dostosowywanie menu jest menu podręcznego, który pojawia się po kliknięciu przycisku paska narzędzi Dostosowywanie przycisku  
   
 ##  <a name="onshowpanes"></a>  CFrameWndEx::OnShowPanes  
- Wywoływane przez platformę, by pokazać lub ukryć okienka.  
+ Metoda wywoływana przez platformę, by pokazać lub ukryć okienka.  
   
 ```  
 virtual BOOL OnShowPanes(BOOL bShow);
@@ -1477,20 +1477,20 @@ virtual BOOL OnShowPanes(BOOL bShow);
   
 ### <a name="parameters"></a>Parametry  
  [in] *bShow*  
- `TRUE` Jeśli aplikacja zawiera okienka; `FALSE` inaczej.  
+ Wartość TRUE, jeśli aplikacja zawiera okienka; Wartość FALSE w przeciwnym razie.  
   
 ### <a name="return-value"></a>Wartość zwracana  
- Ta metoda zawsze zwracany `FALSE`.  
+ Ta metoda zawsze zwraca wartość FALSE.  
   
 ### <a name="remarks"></a>Uwagi  
- Domyślna implementacja pokazuje okienka Jeśli *bShow* jest `TRUE` i okienka są ukryte lub gdy *bShow* jest `FALSE` i okienku są widoczne.  
+ Domyślna implementacja pokazuje okienka Jeśli *bShow* ma wartość TRUE a okienka są ukryte lub *bShow* ma wartość FAŁSZ i okienka są widoczne.  
   
- Domyślna implementacja powoduje ukrycie okienka, jeśli *bShow* jest `TRUE` i okienku są widoczne lub gdy *bShow* jest `FALSE` i okienka są ukryte.  
+ Domyślna implementacja powoduje ukrycie okienka, jeśli *bShow* ma wartość TRUE a okienka są widoczne lub *bShow* ma wartość FAŁSZ i okienka są ukryte.  
   
- Zastępuje tę metodę w klasie pochodnej w celu wykonania kodu niestandardowego, gdy w ramach wyświetlenie lub ukrycie okienka.  
+ Zastępuje tę metodę w klasie pochodnej do wykonania kodu niestandardowego, gdy w ramach wyświetlenie lub ukrycie okienka.  
   
 ##  <a name="onshowpopupmenu"></a>  CFrameWndEx::OnShowPopupMenu  
- Wywoływane przez platformę, gdy zawiera menu podręczne.  
+ Wywoływane przez platformę, gdy Wyświetla menu podręczne.  
   
 ```  
 virtual BOOL OnShowPopupMenu(CMFCPopupMenu* pMenu);
@@ -1498,13 +1498,13 @@ virtual BOOL OnShowPopupMenu(CMFCPopupMenu* pMenu);
   
 ### <a name="parameters"></a>Parametry  
  [in] *pMenu*  
- Wskaźnik do menu podręczne.  
+ Wskaźnik do menu podręcznego.  
   
 ### <a name="return-value"></a>Wartość zwracana  
- `TRUE` Jeśli menu podręczne jest widoczna; w przeciwnym razie `FALSE`.  
+ Wartość TRUE, jeśli menu podręczne jest widoczny; w przeciwnym razie wartość FALSE.  
   
 ### <a name="remarks"></a>Uwagi  
- Zastępuje tę metodę w klasie pochodnej w celu wykonania kodu niestandardowego, gdy w ramach Wyświetla menu podręczne. Na przykład przesłonić tę metodę, aby zmienić kolor tła poleceń w menu podręczne.  
+ Zastępuje tę metodę w klasie pochodnej do wykonania kodu niestandardowego, gdy struktura Wyświetla menu podręczne. Na przykład zastąpić tę metodę, aby zmienić kolor tła poleceń w menu podręcznym.  
   
 ##  <a name="onsize"></a>  CFrameWndEx::OnSize  
  Wywoływane przez platformę po zmianie rozmiaru ramki.  
@@ -1517,8 +1517,8 @@ afx_msg void OnSize(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *Npowiadomienia*  
- Typ zmiany rozmiaru. Możliwe wartości można znaleźć parametru *wParam* w [powiadomień WM_SIZE](http://msdn.microsoft.com/library/windows/desktop/ms632646).  
+ [in] *nNie*  
+ Typ zmiany rozmiaru. Możliwe wartości parametru można znaleźć *wParam* w [powiadomień WM_SIZE](http://msdn.microsoft.com/library/windows/desktop/ms632646).  
   
  [in] *cx*  
  Nową szerokość ramki w pikselach.  
@@ -1539,15 +1539,15 @@ afx_msg void OnSizing(
   
 ### <a name="parameters"></a>Parametry  
  [in] *fwSide*  
- Krawędź ramki, w której jest przenoszony. Zobacz parametr *wParam* w [powiadomień WM_SIZING](http://msdn.microsoft.com/library/windows/desktop/ms632647).  
+ Krawędzi ramki, który jest przenoszony. Zobacz parametr *wParam* w [powiadomień WM_SIZING](http://msdn.microsoft.com/library/windows/desktop/ms632647).  
   
- [w, out] *pRect*  
- Wskaźnik do [CRect](../../atl-mfc-shared/reference/crect-class.md) lub [RECT](../../mfc/reference/rect-structure1.md) struktury, która zawiera współrzędne ramki.  
+ [out w] *pRect*  
+ Wskaźnik do [CRect](../../atl-mfc-shared/reference/crect-class.md) lub [Prostokąt](../../mfc/reference/rect-structure1.md) strukturę, która zawiera współrzędne ramki.  
   
 ### <a name="remarks"></a>Uwagi  
   
 ##  <a name="onsyscolorchange"></a>  CFrameWndEx::OnSysColorChange  
- Wywoływane przez platformę, gdy kolory systemowe zostaną zmienione.  
+ Wywoływane przez platformę, gdy zmieniają się kolory systemowe.  
   
 ```  
 void OnSysColorChange();
@@ -1556,7 +1556,7 @@ void OnSysColorChange();
 ### <a name="remarks"></a>Uwagi  
   
 ##  <a name="ontearoffmenu"></a>  CFrameWndEx::OnTearOffMenu  
- Wywoływane przez platformę, gdy aplikacja zostanie wyświetlone menu z paskiem oderwania.  
+ Wywoływane przez platformę, gdy aplikacja wyświetli menu z paskiem oderwania.  
   
 ```  
 virtual BOOL OnTearOffMenu(
@@ -1566,21 +1566,21 @@ virtual BOOL OnTearOffMenu(
   
 ### <a name="parameters"></a>Parametry  
  [in] *pMenuPopup*  
- Wskaźnik do menu podręczne.  
+ Wskaźnik do menu podręcznego.  
   
  [in] *pBar*  
  Wskaźnik do paskiem oderwania.  
   
 ### <a name="return-value"></a>Wartość zwracana  
- `TRUE` Jeśli menu podręczne z paskiem oderwania jest włączone; w przeciwnym razie `FALSE`.  
+ Wartość TRUE, jeśli wyskakujących menu z paskiem oderwania jest włączony; w przeciwnym razie wartość FALSE.  
   
 ### <a name="remarks"></a>Uwagi  
- Zastępuje tę metodę w klasie pochodnej w celu wykonania kodu niestandardowego, gdy w ramach Wyświetla pasek sterowania.  
+ Zastępuje tę metodę w klasie pochodnej do wykonania kodu niestandardowego, gdy struktura Wyświetla pasek sterowania.  
   
- Domyślna implementacja nie robi nic i zwraca `TRUE`.  
+ Domyślna implementacja nic nie robi i zwraca wartość TRUE.  
   
 ##  <a name="ontoolbarcontextmenu"></a>  CFrameWndEx::OnToolbarContextMenu  
- Wywoływane przez platformę, by utworzyć menu podręcznego paska narzędzi.  
+ Metoda wywoływana przez platformę, by tworzyć menu podręcznego paska narzędzi.  
   
 ```  
 afx_msg LRESULT OnToolbarContextMenu(
@@ -1617,12 +1617,12 @@ afx_msg LRESULT OnToolbarCreateNew(
  Wskaźnik do tekstu na pasku tytułu paska narzędzi.  
   
 ### <a name="return-value"></a>Wartość zwracana  
- Wskaźnik do nowego paska narzędzi; lub `NULL` Jeśli paska narzędzi nie została utworzona.  
+ Wskaźnik na nowy pasek narzędzi; lub wartość NULL, jeśli nie utworzono paska narzędzi.  
   
 ### <a name="remarks"></a>Uwagi  
   
 ##  <a name="ontoolbardelete"></a>  CFrameWndEx::OnToolbarDelete  
- Wywoływane przez platformę, gdy pasek narzędzi zostanie usunięta.  
+ Wywoływane przez platformę, gdy pasek narzędzi zostanie usunięty.  
   
 ```  
 afx_msg LRESULT OnToolbarDelete(
@@ -1638,12 +1638,12 @@ afx_msg LRESULT OnToolbarDelete(
  Wskaźnik do paska narzędzi.  
   
 ### <a name="return-value"></a>Wartość zwracana  
- `TRUE` Jeśli pasek narzędzi została usunięta; w przeciwnym razie `FALSE`.  
+ Wartość TRUE, jeśli pasek narzędzi została usunięta; w przeciwnym razie wartość FALSE.  
   
 ### <a name="remarks"></a>Uwagi  
   
 ##  <a name="onupdateframemenu"></a>  CFrameWndEx::OnUpdateFrameMenu  
- Wywoływane przez platformę, by ustawić menu ramki.  
+ Metoda wywoływana przez platformę, by ustawić menu ramki.  
   
 ```  
 virtual void OnUpdateFrameMenu(HMENU hMenuAlt);
@@ -1651,7 +1651,7 @@ virtual void OnUpdateFrameMenu(HMENU hMenuAlt);
   
 ### <a name="parameters"></a>Parametry  
  [in] *hMenuAlt*  
- Dojście do menu alternatywny.  
+ Dojście do alternatywnego menu.  
   
 ### <a name="remarks"></a>Uwagi  
   
@@ -1664,12 +1664,12 @@ virtual void OnUpdateFrameTitle(BOOL bAddToTitle);
   
 ### <a name="parameters"></a>Parametry  
  [in] *bAddToTitle*  
- `TRUE` Aby dodać tytuł aktywnego dokumentu na pasku tytułu okna ramowe; w przeciwnym razie `FALSE.`  
+ Wartość TRUE, aby dodać tytuł aktywnego dokumentu, aby pasek tytułu okna ramki. w przeciwnym razie wartość FALSE.  
   
 ### <a name="remarks"></a>Uwagi  
   
 ##  <a name="onupdatepanemenu"></a>  CFrameWndEx::OnUpdatePaneMenu  
- Wywoływane przez platformę, by zaktualizować menu okienka.  
+ Metoda wywoływana przez platformę, by zaktualizować menu okienka.  
   
 ```  
 afx_msg void OnUpdatePaneMenu(CCmdUI* pCmdUI);
@@ -1682,7 +1682,7 @@ afx_msg void OnUpdatePaneMenu(CCmdUI* pCmdUI);
 ### <a name="remarks"></a>Uwagi  
   
 ##  <a name="onwindowposchanged"></a>  CFrameWndEx::OnWindowPosChanged  
- Wywoływane przez platformę, gdy zmieniono rozmiar ramki, pozycja lub porządek osi z powodu wywołanie do metody zarządzania okna.  
+ Wywoływane przez platformę, gdy zmieniono rozmiar ramki, pozycja lub porządek ze względu na wywołanie metody zarządzania okna.  
   
 ```  
 afx_msg void OnWindowPosChanged(WINDOWPOS FAR* lpwndpos);
@@ -1695,7 +1695,7 @@ afx_msg void OnWindowPosChanged(WINDOWPOS FAR* lpwndpos);
 ### <a name="remarks"></a>Uwagi  
   
 ##  <a name="panefrompoint"></a>  CFrameWndEx::PaneFromPoint  
- Przeszukuje każdy okienko dla danego punktu.  
+ Wyszukuje każde okienko dla danego punktu.  
   
 ```  
 CBasePane* PaneFromPoint(
@@ -1716,27 +1716,27 @@ CBasePane* PaneFromPoint(
  Współrzędne ekranu punktu do sprawdzenia.  
   
  [in] *nSensitivity*  
- Rozwiń węzeł prostokątem każdego pasek sterowania o tę wartość, wyszukując punkt.  
+ Rozwiń węzeł prostokąt otaczający każdego paska sterowania o tę wartość podczas wyszukiwania punktu.  
   
  [in] *bExactBar*  
- `TRUE` ignorowanie *nSensitivity* parametru; w przeciwnym razie `FALSE`.  
+ Wartość TRUE, aby zignorować *nSensitivity* parametru; w przeciwnym razie wartość FALSE.  
   
  [in] *pRTCBarType*  
- Jeśli nie `NULL`, metoda szuka tylko paski sterowania określonego typu.  
+ Jeśli nie ma wartość NULL, metoda szuka tylko paski sterowania określonego typu.  
   
  [out] *dwAlignment*  
- Jeśli to się powiedzie, ten parametr zawiera stronie pasek sterowania zbliżony do określonego punktu. W przeciwnym razie ten parametr nie został zainicjowany.  
+ Jeśli to się powiedzie, ten parametr zawiera boku pasek sterowania, który jest najbardziej zbliżony do określonego punktu. W przeciwnym razie ten parametr nie został zainicjowany.  
   
 ### <a name="return-value"></a>Wartość zwracana  
- Wskaźnik do pasek sterowania, który zawiera *punktu*; `NULL` Jeśli formant nie zostanie znaleziony.  
+ Wskaźnik do pasek sterowania, który zawiera *punktu*; Wartość NULL, jeśli nie zostanie znaleziony.  
   
 ### <a name="remarks"></a>Uwagi  
- Ta metoda przeszukuje wszystkie paski sterowania w aplikacji w celu *punktu*.  
+ Metoda ta wyszukuje wszystkich pasków sterowania w aplikacji na potrzeby *punktu*.  
   
- Użyj *nSensitivity* zwiększyć rozmiar obszaru wyszukiwania. Użyj *pRTCBarType* do ograniczania typów paski sterowania, metoda wyszukiwania.  
+ Użyj *nSensitivity* zwiększenie rozmiaru obszaru search. Użyj *pRTCBarType* Aby ograniczyć typy paski kontroli, które metoda szuka.  
   
 ##  <a name="pretranslatemessage"></a>  CFrameWndEx::PreTranslateMessage  
- Obsługuje komunikaty określonego okna przed ich wysłaniem.  
+ Obsługuje określone okno komunikatu, przed ich wysłaniem.  
   
 ```  
 virtual BOOL PreTranslateMessage(MSG* pMsg);
@@ -1744,10 +1744,10 @@ virtual BOOL PreTranslateMessage(MSG* pMsg);
   
 ### <a name="parameters"></a>Parametry  
  [in] *pMsg*  
- Wskaźnik do [MSG](../../mfc/reference/msg-structure1.md) strukturę, która zawiera komunikat do przetworzenia.  
+ Wskaźnik do [MSG](../../mfc/reference/msg-structure1.md) strukturę, która zawiera komunikat, który ma przetwarzać.  
   
 ### <a name="return-value"></a>Wartość zwracana  
- Inne niż zero, jeśli komunikat został obsłużony i nie powinien być wysyłany; 0, jeśli komunikat nie został obsłużony i powinien zostać wysłane.  
+ Non-zero, jeśli komunikat został obsłużony i nie powinny być wysyłane; 0, jeśli komunikat nie został obsłużony i powinny być wysyłane.  
   
 ### <a name="remarks"></a>Uwagi  
   
@@ -1760,10 +1760,10 @@ virtual void RecalcLayout(BOOL bNotify = TRUE);
   
 ### <a name="parameters"></a>Parametry  
  [in] *bNotify*  
- Określa, czy powiadomienia o zmianie układu elementu klienta OLE.  
+ Określa, czy należy powiadomić elementu klienta OLE dotyczące zmiany układu.  
   
 ### <a name="remarks"></a>Uwagi  
- Ta metoda jest wywoływana, gdy zmieniono rozmiar ramki okna lub gdy paski sterowania są wyświetlane lub ukryte.  
+ Ta metoda jest wywoływana, gdy zmieniono rozmiar okna ramki lub wyświetlania i ukrywania pasków sterowania.  
   
 ##  <a name="removepanefromdockmanager"></a>  CFrameWndEx::RemovePaneFromDockManager  
  Wyrejestrowuje okienko i usuwa go z Menedżera dokowania.  
@@ -1779,27 +1779,27 @@ void RemovePaneFromDockManager(
   
 ### <a name="parameters"></a>Parametry  
  [in] *pControlBar*  
- Wskaźnik do okienka pasek sterowania do usunięcia.  
+ Wskaźnik do okienka paska sterowania do usunięcia.  
   
  [in] *bDestroy*  
- `TRUE` Aby zniszczyć pasek sterowania po usunięciu. `FALSE` inaczej.  
+ Wartość TRUE, aby zniszczyć paska sterowania po usunięciu. Wartość FALSE w przeciwnym razie.  
   
  [in] *bAdjustLayout*  
- `TRUE` Aby dostosować układ dokowania; `FALSE` inaczej.  
+ Wartość TRUE, aby dostosować układ dokowania; Wartość FALSE w przeciwnym razie.  
   
  [in] *bAutoHide*  
- `TRUE` Jeśli pasek sterowania jest w trybie autoukrywania; `FALSE` inaczej.  
+ Wartość TRUE, jeśli pasek sterowania jest w trybie autoukrywania; Wartość FALSE w przeciwnym razie.  
   
  [in] *pBarReplacement*  
- Wskaźnik do okienka zastępujący okienku usunięte.  
+ Wskaźnik do okienka w którym zastępuje okienka usunięte.  
   
 ### <a name="remarks"></a>Uwagi  
- Użyj tej metody, aby usunąć pasek sterowania z dokowania układ okna ramki.  
+ Metoda ta jest przydatna do usuwania pasek sterowania dokowania układ okna ramki.  
   
- [Klasy CDockingManager](../../mfc/reference/cdockingmanager-class.md) obsługuje układ paski sterowania. Należy zarejestrować każdy pasek sterowania przy użyciu Menedżera dokowania przy użyciu [CFrameWndEx::AddPane](#addpane) metody lub [CFrameWndEx::InsertPane](#insertpane) metody.  
+ [Klasa CDockingManager](../../mfc/reference/cdockingmanager-class.md) obsługuje układ pasków sterowania. Należy zarejestrować każdy pasek sterowania dokowania manager przy użyciu [CFrameWndEx::AddPane](#addpane) metody lub [CFrameWndEx::InsertPane](#insertpane) metody.  
   
 ##  <a name="setdockstate"></a>  CFrameWndEx::SetDockState  
- Przywraca stan dokowania przechowywane w rejestrze dokowania układu.  
+ Przywraca stan dokowania, przechowywane w rejestrze układ dokowania.  
   
 ```  
 void SetDockState(const CDockState& state);
@@ -1818,12 +1818,12 @@ void SetPrintPreviewFrame(CFrameWnd* pWnd);
   
 ### <a name="parameters"></a>Parametry  
  [in] *pWnd*  
- Wskaźnik do podglądu wydruku ramki okna.  
+ Wskaźnik do ramki okna podglądu wydruku.  
   
 ### <a name="remarks"></a>Uwagi  
   
 ##  <a name="setuptoolbarmenu"></a>  CFrameWndEx::SetupToolbarMenu  
- Wstawia polecenia zdefiniowane przez użytkownika w menu paska narzędzi.  
+ Wstawia polecenia zdefiniowanych przez użytkownika w menu narzędzi.  
   
 ```  
 void SetupToolbarMenu(
@@ -1843,10 +1843,10 @@ void SetupToolbarMenu(
  Ostatnie polecenie zdefiniowane przez użytkownika.  
   
 ### <a name="remarks"></a>Uwagi  
- Platformę przechowuje poleceń zdefiniowanych przez użytkownika na liście. Użyj *uiViewUserToolbarCmdFirst* i *uiViewUserToolbarCmdList* do określenia indeksy poleceń do wstawienia.  
+ Struktura przechowuje poleceń zdefiniowanych przez użytkownika na liście. Użyj *uiViewUserToolbarCmdFirst* i *uiViewUserToolbarCmdList* do określenia indeksy polecenia, aby wstawić.  
   
 ##  <a name="showfullscreen"></a>  CFrameWndEx::ShowFullScreen  
- Zmienia ramki głównej między trybu pełnego ekranu ani regularne.  
+ Przełącza głównej ramki między trybem pełnoekranowym i do trybu normalnego.  
   
 ```  
 void ShowFullScreen();
@@ -1868,16 +1868,16 @@ void ShowPane(
  Wskaźnik do pasek sterowania, aby pokazać lub ukryć.  
   
  [in] *bShow*  
- Jeśli `TRUE`, aplikacja zawiera pasek sterowania. W przeciwnym razie aplikacja ukrywa pasek sterowania.  
+ W przypadku opcji TRUE aplikacji przedstawia pasek sterowania. W przeciwnym razie aplikacja powoduje ukrycie paska sterowania.  
   
  [in] *bDelay*  
- Jeśli `TRUE`, opóźnienie dostosowania układu dokowania do wywołania framework [CFrameWndEx::AdjustDockingLayout](#adjustdockinglayout). W przeciwnym razie ponownie Oblicz układ dokowania natychmiast.  
+ W przypadku opcji TRUE, opóźnienie dostosowania układu dokowania do struktura wywołuje [CFrameWndEx::AdjustDockingLayout](#adjustdockinglayout). W przeciwnym razie ponownie Oblicz układ dokowania natychmiast.  
   
  [in] *bActivate*  
- Jeśli `TRUE`, uaktywnić pasek sterowania. W przeciwnym wypadku Wyświetl pasek sterowania nieaktywny.  
+ W przypadku opcji TRUE uaktywnić paska sterowania. W przeciwnym razie wyświetlenia paska sterowania nieaktywny.  
   
 ##  <a name="updatecaption"></a>  CFrameWndEx::UpdateCaption  
- Wywoływane przez platformę, by zaktualizować podpis ramki okna.  
+ Metoda wywoływana przez platformę, aby zaktualizować tytuł ramki okna.  
   
 ```  
 void UpdateCaption();
@@ -1886,7 +1886,7 @@ void UpdateCaption();
 ### <a name="remarks"></a>Uwagi  
   
 ##  <a name="winhelp"></a>  CFrameWndEx::WinHelp  
- Wywołuje WinHelp aplikacji lub kontekstu związane z pomocy.  
+ Wywołuje się, by wyświetlić WinHelp aplikacji albo kontekstu powiązana Pomoc.  
   
 ```  
 virtual void WinHelp(
@@ -1896,14 +1896,14 @@ virtual void WinHelp(
   
 ### <a name="parameters"></a>Parametry  
  *dwData*  
- Dane, które jest zależna od *nCmd* parametru. Lista możliwych wartości [WinHelp](http://msdn.microsoft.com/library/windows/desktop/bb762267).  
+ Dane, które jest zależna od *nCmd* parametru. Aby uzyskać listę możliwych wartości, zobacz [WinHelp](http://msdn.microsoft.com/library/windows/desktop/bb762267).  
   
  *nCmd*  
- Polecenie Pomoc. Lista możliwych wartości [WinHelp](http://msdn.microsoft.com/library/windows/desktop/bb762267).  
+ Polecenie help. Aby uzyskać listę możliwych wartości, zobacz [WinHelp](http://msdn.microsoft.com/library/windows/desktop/bb762267).  
   
 ### <a name="remarks"></a>Uwagi  
   
 ## <a name="see-also"></a>Zobacz też  
  [Diagram hierarchii](../../mfc/hierarchy-chart.md)   
  [Klasy](../../mfc/reference/mfc-classes.md)   
- [Cframewnd —](../../mfc/reference/cframewnd-class.md)
+ [CFrameWnd](../../mfc/reference/cframewnd-class.md)

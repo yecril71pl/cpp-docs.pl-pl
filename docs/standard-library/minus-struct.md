@@ -17,16 +17,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 10145e52931fc9ef993108c2373bf3d0fbf0519e
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 6fdbcc396b77c6e0eb13262b80ca30df704f0c62
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33858084"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38959108"
 ---
 # <a name="minus-struct"></a>minus — Struktura
 
-Obiekt wstępnie zdefiniowanych funkcji, który wykonuje operację odejmowania (binarne `operator-`) na jego argumenty.
+Obiekt wstępnie zdefiniowana funkcja, która wykonuje operację odejmowania (binarne `operator-`) na jego argumenty.
 
 ## <a name="syntax"></a>Składnia
 
@@ -49,15 +49,15 @@ struct minus<void>
 
 ### <a name="parameters"></a>Parametry
 
-`Type`, `T`, `U` Typu, który obsługuje dane binarne `operator-` pobierającej argumentów operacji typu określonego lub wywnioskowany.
+*Typ*, *T*, *U* typu, który obsługuje dane binarne `operator-` przyjmującej argumentów operacji typu określonego lub wywnioskowane uprawnienie.
 
-`Left` Lewy argument operacji. Szablon klasy niespecjalizowanej przyjmuje argument odwołania l-wartością typu `Type`. Specjalne szablonu doskonała przekazującej lewostronnie i argumenty odwołanie do r-wartości wywnioskować typu `T`.
+*Po lewej stronie* lewy operand operacji. Szablon Niewyspecjalizowana przyjmuje argument odwołania l-wartości typu *typu*. Wyspecjalizowane szablonu doskonała przekazywania l-wartością i argumenty odwołania rvalue wywnioskować typu *T*.
 
-`Right` Prawy argument operacji. Szablon klasy niespecjalizowanej przyjmuje argument odwołania l-wartością typu `Type`. Specjalne szablonu doskonała przekazującej lewostronnie i argumenty odwołanie do r-wartości wywnioskować typu `U`.
+*Po prawej stronie* prawy operand operacji. Szablon Niewyspecjalizowana przyjmuje argument odwołania l-wartości typu *typu*. Wyspecjalizowane szablonu doskonała przekazywania l-wartością i argumenty odwołania rvalue wywnioskować typu *U*.
 
 ## <a name="return-value"></a>Wartość zwracana
 
-Wynik `Left - Right`. Specjalne szablonu doskonała przekazywanie wynik, który ma typ zwracany przez `operator-`.
+Wynik `Left - Right`. Szablon wyspecjalizowane doskonała przekazywania wyniku, który ma typ zwracany przez `operator-`.
 
 ## <a name="example"></a>Przykład
 
@@ -118,7 +118,7 @@ The element-wise differences between v1 and v2 are: ( 2 3 4 5 6 7 )
 
 **Nagłówek:** \<funkcjonalności >
 
-**Namespace:** Standard
+**Namespace:** standardowe
 
 ## <a name="see-also"></a>Zobacz także
 

@@ -1,5 +1,5 @@
 ---
-title: Klasa is_trivially_assignable | Dokumentacja firmy Microsoft
+title: is_trivially_assignable, klasa | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,16 +17,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b604a4c9a2fc11a9c7274d0e29ab98acfd260907
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 47fabb7120cc13eeca38bc9d06428f686fc9f1b9
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33912657"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38955569"
 ---
-# <a name="istriviallyassignable-class"></a>is_trivially_assignable — klasa
+# <a name="istriviallyassignable-class"></a>is_trivially_assignable, klasa
 
-Sprawdza, czy wartość `From` typu mogą być trivially przypisane do `To` typu
+Sprawdza, czy wartość `From` typu mogą być w przypadku przypisane do `To` typu
 
 ## <a name="syntax"></a>Składnia
 
@@ -39,17 +39,17 @@ struct is_trivially_assignable;
 
 Typ obiektu, który odbiera przypisania.
 
-Z typu obiektu, który zawiera wartość.
+Od typu obiektu, który zawiera wartość.
 
 ## <a name="remarks"></a>Uwagi
 
-Wyrażenie `declval<To>() = declval<From>()` musi być poprawnie sformułowany, a musi być znane w kompilatorze wymagające ma nieuproszczone operacji. Zarówno `From` i `To` musi być ukończone typy `void`, lub tablic z nieznanym powiązaniem.
+Wyrażenie `declval<To>() = declval<From>()` musi być poprawnie sformułowany, a musi być znane w kompilatorze, będą musieli ma nieuproszczone operacji. Zarówno `From` i `To` muszą być typami pełnymi **void**, lub tablic nieznany powiązane z.
 
 ## <a name="requirements"></a>Wymagania
 
 **Nagłówek:** \<type_traits >
 
-**Namespace:** Standard
+**Namespace:** standardowe
 
 ## <a name="see-also"></a>Zobacz także
 
