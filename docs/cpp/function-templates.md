@@ -1,5 +1,5 @@
 ---
-title: Szablony funkcji | Dokumentacja firmy Microsoft
+title: Funkcja szablonów | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 65d5ed1bae5f4571cad6b942af9d6e9b4ff646ed
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 71bb3985fe870b29d06ebc01d0b7dab4712f1797
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32414551"
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37941070"
 ---
 # <a name="function-templates"></a>Szablony funkcji
 Szablony klas definiują rodzinę powiązanych klas, które są oparte na argumentach typu przekazywanych do klasy podczas tworzenia jej wystąpienia. Szablony funkcji są podobne do szablonów klas, ale definiują rodzinę funkcji. Dzięki szablonom funkcji, możesz określić zestaw funkcji, które są oparte na tym samym kodzie, ale działają na różnych typach lub klasach. Następujący szablon funkcji zamienia dwa elementy:  
@@ -37,9 +37,9 @@ int main() {
 }  
 ```  
   
- Ten kod definiuje rodzinę funkcji, które zamieniają wartości argumentów. Za pomocą tego szablonu można wygenerować funkcji, które będą wymiany **int** i **długi** typów, a także typy danych zdefiniowane przez użytkownika. `MySwap` będzie zamieniać nawet klasy, jeśli w klasie został poprawnie zdefiniowany konstruktor kopiujący i operator przypisania.  
+ Ten kod definiuje rodzinę funkcji, które zamieniają wartości argumentów. Za pomocą tego szablonu możesz wygenerować funkcje, które będą zamieniać **int** i **długie** typów, a także typy zdefiniowane przez użytkownika. `MySwap` będzie zamieniać nawet klasy, jeśli w klasie został poprawnie zdefiniowany konstruktor kopiujący i operator przypisania.  
   
- Ponadto, szablon funkcji zapobiega zamienianiu obiektów różnych typów, ponieważ kompilator zna typy parametrów `a` i `b` podczas kompilacji.  
+ Ponadto, szablon funkcji zapobiega zamienianiu obiektów różnych typów, ponieważ kompilator zna typy *a* i *b* parametrów w czasie kompilacji.  
   
  Mimo że funkcja ta może zostać wykonana przez funkcję nieszablonową, za pomocą wskaźników o typie void, wersja z szablonem jest bezpiecznego typu. Rozważ następujące wywołania:  
   
@@ -64,7 +64,7 @@ int main(int j) {
 }  
 ```  
   
- Gdy argument szablonu jest określony jawnie, wykonywane są zwykłe konwersje niejawne, aby przekonwertować argument funkcji na typ odpowiadający parametrom szablonu funkcji. W powyższym przykładzie przekonwertuje kompilator `char j` na typ `int`.  
+ Gdy argument szablonu jest określony jawnie, wykonywane są zwykłe konwersje niejawne, aby przekonwertować argument funkcji na typ odpowiadający parametrom szablonu funkcji. W powyższym przykładzie, kompilator konwertuje `char j` na typ **int**.  
   
 ## <a name="see-also"></a>Zobacz też  
  [Szablony](../cpp/templates-cpp.md)   
