@@ -51,18 +51,18 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6d83407efee1da2bc1c59cf0d869f54f6022a4eb
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 459192f5936db3c47d2377885cf3ca30dadb92df
+ms.sourcegitcommit: 04d327940787df1297b72d534f388a035d472af0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32415534"
+ms.lasthandoff: 07/20/2018
+ms.locfileid: "39180793"
 ---
 # <a name="strchr-wcschr-mbschr-mbschrl"></a>strchr, wcschr, _mbschr, _mbschr_l
-Przy użyciu bieżących ustawień regionalnych lub określona kategoria Stan konwersji lc_ctype — umożliwia znalezienie znak w ciągu.
+Umożliwia znalezienie znak w ciągu, przy użyciu bieżących ustawień regionalnych lub określonej kategorii stanu konwersji LC_CTYPE.
 
 > [!IMPORTANT]
-> **_mbschr —** i **_mbschr_l —** nie można używać w aplikacjach, które są wykonywane w środowisku wykonawczym systemu Windows. Aby uzyskać więcej informacji, zobacz [funkcje CRT, nie są obsługiwane w aplikacjach platformy uniwersalnej systemu Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
+> `_mbschr` i `_mbschr_l` nie można używać w aplikacjach korzystających ze środowiska wykonawczego Windows. Aby uzyskać więcej informacji, zobacz [funkcje CRT nieobsługiwane w aplikacjach platformy uniwersalnej Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
 
 ## <a name="syntax"></a>Składnia
 
@@ -123,42 +123,42 @@ const unsigned char *_mbschr_l(
 ### <a name="parameters"></a>Parametry
 
 *str*<br/>
-Ciąg źródłowy zerem.
+Ciąg źródłowy zakończony wartością null.
 
 *c*<br/>
-Znak lokalizacji.
+Znak się znajdować.
 
 *Ustawienia regionalne*<br/>
 Ustawienia regionalne do użycia.
 
 ## <a name="return-value"></a>Wartość zwracana
 
-Każda z tych funkcji zwraca wskaźnik do pierwszego wystąpienia *c* w *str*, lub **NULL** Jeśli *c* nie znaleziono.
+Każda z tych funkcji zwraca wskaźnik do pierwszego wystąpienia *c* w *str*, lub wartość NULL, jeśli *c* nie zostanie znaleziony.
 
 ## <a name="remarks"></a>Uwagi
 
-**Strchr —** funkcja znajduje pierwsze wystąpienie *c* w *str*, lub zwraca **NULL** Jeśli *c* jest Nie można odnaleźć. Wartość null znaku zakończenia jest uwzględniany w wyszukiwaniu.
+`strchr` Funkcja znajduje pierwsze wystąpienie *c* w *str*, lub zwraca wartość NULL, jeśli *c* nie zostanie znaleziony. Kończący znak null jest uwzględniany w wyszukiwaniu.
 
-**wcschr —**, **_mbschr —** i **_mbschr_l —** znaków dwubajtowych i znaków wielobajtowych wersji **strchr —**. Argumenty i zwracana wartość **wcschr —** są znaków dwubajtowych ciągi; tych **_mbschr —** są ciągami znaków wielobajtowych. **_mbschr —** rozpoznaje wielobajtowych sekwencji znaków. Ponadto, jeśli ciąg jest pusty wskaźnik **_mbschr —** wywołuje program obsługi nieprawidłowych parametrów, zgodnie z opisem w [sprawdzanie poprawności parametru](../../c-runtime-library/parameter-validation.md). Jeśli jest dozwolone wykonywanie, aby kontynuować, **_mbschr —** zwraca **NULL** i ustawia **errno** do **einval —**. **strchr —** i **wcschr —** nie weryfikują ich parametrów. Te trzy funkcje działają tak samo w przeciwnym razie wartość.
+`wcschr`, `_mbschr` i `_mbschr_l` są wersjami znaków dwubajtowych i znaków wielobajtowych `strchr`. Argumenty i wartość zwracana przez `wcschr` są znakami dwubajtowymi ciągów; te z `_mbschr` są ciągami znaków wielobajtowych. `_mbschr` rozpoznaje sekwencje znaków wielobajtowych. Ponadto, jeśli ciąg jest pustym wskaźnikiem, `_mbschr` wywołuje procedurę obsługi nieprawidłowego parametru, zgodnie z opisem w [Parameter Validation](../../c-runtime-library/parameter-validation.md). Jeśli wykonanie może być kontynuowane, `_mbschr` zwraca wartość NULL i ustawia `errno` do EINVAL. `strchr` i `wcschr` nie sprawdzają poprawność swoich parametrów. Te trzy funkcje zachowują się identycznie.
 
-Wartość wyjściowa jest zagrożony ustawienie **lc_ctype —** kategorii ustawienie ustawień regionalnych; Aby uzyskać więcej informacji, zobacz [setlocale](setlocale-wsetlocale.md). Wersje tych funkcji bez **_l** Użyj sufiksu bieżące ustawienia regionalne tego zachowania zależnych od ustawień regionalnych; wersje z **_l** sufiks są identyczne, z wyjątkiem tego, aby używały parametr ustawień regionalnych Przekazano zamiast tego. Aby uzyskać więcej informacji, zobacz [ustawień regionalnych](../../c-runtime-library/locale.md).
+Wartość wyjściowa jest zależna od ustawienia LC_CTYPE ustawienia kategorii ustawień regionalnych; Aby uzyskać więcej informacji, zobacz [setlocale](setlocale-wsetlocale.md). Wersje tych funkcji, bez **_l** sufiks używają bieżących ustawień regionalnych dla zachowania zależnego od ustawień regionalnych; wersje **_l** sufiksem są identyczne, z tą różnicą, że używają parametru ustawień regionalnych w zamian przekazanych. Aby uzyskać więcej informacji, zobacz [ustawień regionalnych](../../c-runtime-library/locale.md).
 
-W języku C, te funkcje pobierać ** const ** wskaźnik dla pierwszego argumentu. W języku C++ dostępne są dwa przeciążenia. Biorąc wskaźnik do przeciążenia ** const ** zwraca wskaźnik do **const **; wersję, która przyjmuje wskaźnik do innego niż**const ** zwraca wskaźnik do innego niż**const **. Makro **_CRT_CONST_CORRECT_OVERLOADS** jest zdefiniowana, jeśli obie **const ** i -** const ** są dostępne wersje tych funkcji. Jeśli potrzebujesz nienależących**const ** zachowanie dla obu przeciążeń C++, zdefiniuj symbol **_CONST_RETURN**.
+W języku C, te funkcje biorą **const** wskaźnik dla pierwszego argumentu. W języku C++ dostępne są dwa przeciążenia. Przeciążenie wskaźnika do **const** zwraca wskaźnik do **const**; wersja, która przyjmuje wskaźnik do non -**const** zwraca wskaźnik do non -**const** . _CRT_CONST_CORRECT_OVERLOADS — makro jest zdefiniowany, jeśli oba **const** i innych niż-**const** wersje tych funkcji są dostępne. Jeśli potrzebujesz non -**const** zachowanie dla obu przeciążeń C++, określ symbol _CONST_RETURN.
 
 ### <a name="generic-text-routine-mappings"></a>Mapowania procedur zwykłego tekstu
 
-|Procedura TCHAR.H|_Unicode — & _MBCS nie zdefiniowany|_MBCS zdefiniowano|_UNICODE zdefiniowano|
+|Procedura TCHAR.H|_UNICODE & _MBCS nie zdefiniowano|_MBCS zdefiniowano|_UNICODE zdefiniowano|
 |---------------------|------------------------------------|--------------------|-----------------------|
-|**_tcschr —**|**strchr**|**_mbschr**|**wcschr**|
-|**_ n/d**|**n/d**|**_mbschr_l**|**n/d**|
+|`_tcschr`|`strchr`|`_mbschr`|`wcschr`|
+|**_ n/d**|**n/d**|`_mbschr_l`|**n/d**|
 
 ## <a name="requirements"></a>Wymagania
 
 |Procedura|Wymagany nagłówek|
 |-------------|---------------------|
-|**strchr**|\<string.h>|
-|**wcschr**|\<String.h > lub \<wchar.h >|
-|**_mbschr —**, **_mbschr_l —**|\<mbstring.h>|
+|`strchr`|\<string.h>|
+|`wcschr`|\<Włącz String.h > lub \<wchar.h >|
+|`_mbschr`, `_mbschr_l`|\<mbstring.h>|
 
 Aby uzyskać więcej informacji na temat zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md).
 

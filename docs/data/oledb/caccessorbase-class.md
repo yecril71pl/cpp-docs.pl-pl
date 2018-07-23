@@ -7,25 +7,44 @@ ms.technology:
 ms.topic: reference
 f1_keywords:
 - CAccessorBase
+- CAccessorBase.Close
+- CAccessorBase::Close
+- GetHAccessor
+- CAccessorBase::GetHAccessor
+- CAccessorBase.GetHAccessor
+- CAccessorBase::GetNumAccessors
+- GetNumAccessors
+- CAccessorBase.GetNumAccessors
+- IsAutoAccessor
+- CAccessorBase.IsAutoAccessor
+- CAccessorBase::IsAutoAccessor
+- CAccessorBase::ReleaseAccessors
+- CAccessorBase.ReleaseAccessors
+- ReleaseAccessors
 dev_langs:
 - C++
 helpviewer_keywords:
 - CAccessorBase class
+- Close method
+- GetHAccessor method
+- GetNumAccessors method
+- IsAutoAccessor method
+- ReleaseAccessors method
 ms.assetid: 389b65be-11ca-4ae0-9290-60c621c4982b
 author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: f598f49d279085b23e0bd3b94c48620363b5a816
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 99f6be0815572b88f7c46406262ed21eaefdb77d
+ms.sourcegitcommit: 04d327940787df1297b72d534f388a035d472af0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33090799"
+ms.lasthandoff: 07/20/2018
+ms.locfileid: "39181201"
 ---
 # <a name="caccessorbase-class"></a>CAccessorBase — Klasa
-Wszystkie metody dostępu w szablonach OLE DB dziedziczyć po tej klasie. `CAccessorBase` Umożliwia jednego zestawu wierszy do zarządzania wielu metod dostępu. Umożliwia także powiązanie dla parametrów i kolumn wyjściowych.  
+Wszystkie metody dostępu przesłanianej w szablonach OLE DB pochodzi od tej klasy. `CAccessorBase` Umożliwia jeden zestaw wierszy do zarządzania wielu metod dostępu. Umożliwia także powiązanie dla kolumny wyjściowe i parametry.  
   
 ## <a name="syntax"></a>Składnia
 
@@ -39,15 +58,93 @@ Wszystkie metody dostępu w szablonach OLE DB dziedziczyć po tej klasie. `CAcce
   
 |||  
 |-|-|  
-|[Zamknij](../../data/oledb/caccessorbase-close.md)|Zamyka metody dostępu.|  
-|[GetHAccessor](../../data/oledb/caccessorbase-gethaccessor.md)|Pobiera dojście metody dostępu.|  
-|[GetNumAccessors](../../data/oledb/caccessorbase-getnumaccessors.md)|Pobiera liczbę metod dostępu tworzone przez klasę.|  
-|[IsAutoAccessor](../../data/oledb/caccessorbase-isautoaccessor.md)|Sprawdza, czy określona metoda dostępu jest autoaccessor.|  
-|[ReleaseAccessors](../../data/oledb/caccessorbase-releaseaccessors.md)|Udostępnia metody dostępu.|  
-  
+|[Zamknij](#close)|Zamyka metod dostępu.|  
+|[GetHAccessor](#geth)|Pobiera dojście metody dostępu.|  
+|[Getnumaccessors —](#getnum)|Pobiera liczbę metod dostępu tworzone przez klasę.|  
+|[IsAutoAccessor](#isauto)|Sprawdza, czy określonej metody dostępu jest autoaccessor.|  
+|[Releaseaccessors —](#release)|Udostępnia metody dostępu.|  
+
 ## <a name="requirements"></a>Wymagania  
  **Nagłówek:** atldbcli.h  
+
+## <a name="close"></a> CAccessorBase::Close
+Zamyka metod dostępu.  
+  
+### <a name="syntax"></a>Składnia  
+  
+```cpp
+void Close();  
+  
+```  
+  
+### <a name="remarks"></a>Uwagi  
+ Należy wywołać [releaseaccessors —](../../data/oledb/caccessorbase-releaseaccessors.md) pierwszy.  
+
+## <a name="geth"></a> CAccessorBase::GetHAccessor
+Pobiera dojście metody dostępu określonej metody dostępu.  
+  
+### <a name="syntax"></a>Składnia  
+  
+```cpp
+      HACCESSOR GetHAccessor(ULONG nAccessor) const;  
+```  
+  
+#### <a name="parameters"></a>Parametry  
+ *nAccessor*  
+ [in] Numer przesunięcie zero akcesor.  
+  
+### <a name="return-value"></a>Wartość zwracana  
+ Dojście metody dostępu.  
+
+## <a name="getnum"></a> CAccessorBase::GetNumAccessors
+Pobiera liczbę metod dostępu tworzone przez klasę.  
+  
+### <a name="syntax"></a>Składnia  
+  
+```cpp
+ULONG GetNumAccessors() const;  
+  
+```  
+  
+### <a name="return-value"></a>Wartość zwracana  
+ Liczba metod dostępu tworzone przez klasę.  
+
+## <a name="isauto"></a> CAccessorBase::IsAutoAccessor
+Zwraca wartość PRAWDA, jeśli dane są automatycznie pobierane dla metody dostępu podczas operacji przenoszenia.  
+  
+### <a name="syntax"></a>Składnia  
+  
+```cpp
+      bool IsAutoAccessor(ULONG nAccessor) const;  
+```  
+  
+#### <a name="parameters"></a>Parametry  
+ *nAccessor*  
+ [in] Numer przesunięcie zero akcesor.  
+  
+### <a name="return-value"></a>Wartość zwracana  
+ Zwraca **true** autoaccessor przypadku akcesor. W przeciwnym razie zwraca **false**.  
+
+## <a name="release"></a> CAccessorBase::ReleaseAccessors
+Udostępnia metody dostępu tworzone przez klasę.  
+  
+### <a name="syntax"></a>Składnia  
+  
+```cpp
+HRESULT ReleaseAccessors(IUnknown* pUnk);  
+```  
+  
+#### <a name="parameters"></a>Parametry  
+ *pUnk*  
+ [in] Wskaźnik do `IUnknown` interfejs dla obiektu COM, dla którego utworzono metody dostępu.  
+  
+### <a name="return-value"></a>Wartość zwracana  
+ Standardowa HRESULT.  
+  
+### <a name="remarks"></a>Uwagi  
+ Wywoływane z [CAccessorRowset::Close](../../data/oledb/caccessorrowset-close.md). 
   
 ## <a name="see-also"></a>Zobacz też  
  [Szablony konsumentów OLE DB](../../data/oledb/ole-db-consumer-templates-cpp.md)   
- [Szablony konsumentów OLE DB — dokumentacja](../../data/oledb/ole-db-consumer-templates-reference.md)
+ [OLE DB — Kompendium szablonów konsumentów](../../data/oledb/ole-db-consumer-templates-reference.md)   
+ [CAccessorBase, klasa](../../data/oledb/caccessorbase-class.md)

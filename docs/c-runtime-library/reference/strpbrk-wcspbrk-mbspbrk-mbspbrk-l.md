@@ -54,19 +54,19 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bd62d95e971ac5fd927cce1b7b4eb600ebcf7df6
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: db26c60badceab6c1422146a32de3d6dd2ecb8bd
+ms.sourcegitcommit: 04d327940787df1297b72d534f388a035d472af0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32415881"
+ms.lasthandoff: 07/20/2018
+ms.locfileid: "39181136"
 ---
 # <a name="strpbrk-wcspbrk-mbspbrk-mbspbrkl"></a>strpbrk, wcspbrk, _mbspbrk, _mbspbrk_l
 
-Skanowanie ciągów znaków w określonych zestawów znaków.
+Skanuje ciągi znaków w określonych zestawach znaków.
 
 > [!IMPORTANT]
-> **_mbspbrk —** i **_mbspbrk_l —** nie można używać w aplikacjach, które są wykonywane w środowisku wykonawczym systemu Windows. Aby uzyskać więcej informacji, zobacz [funkcje CRT, nie są obsługiwane w aplikacjach platformy uniwersalnej systemu Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
+> `_mbspbrk` i `_mbspbrk_l` nie można używać w aplikacjach korzystających ze środowiska wykonawczego Windows. Aby uzyskać więcej informacji, zobacz [funkcje CRT nieobsługiwane w aplikacjach platformy uniwersalnej Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
 
 ## <a name="syntax"></a>Składnia
 
@@ -127,7 +127,7 @@ const unsigned char *_mbspbrk_l(
 ### <a name="parameters"></a>Parametry
 
 *str*<br/>
-Ciąg zerem, przeszukiwane.
+Ciąg zakończony znakiem null, przeszukane.
 
 *strCharSet*<br/>
 Zestaw znaków zakończony znakiem null.
@@ -137,36 +137,36 @@ Ustawienia regionalne do użycia.
 
 ## <a name="return-value"></a>Wartość zwracana
 
-Zwraca wskaźnik do pierwszego wystąpienia dowolnego znaku z *strCharSet* w *str*, lub **NULL** wskaźnika, jeśli ciąg dwa argumenty mają wspólną żadne znaki.
+Zwraca wskaźnik do pierwszego wystąpienia dowolnego znaku z *strCharSet* w *str*, lub wskaźnika o wartości NULL, jeśli ciąg dwóch argumentów nie ma znaków wspólnych.
 
 ## <a name="remarks"></a>Uwagi
 
-**Strpbrk —** funkcja zwraca wskaźnik do pierwszego wystąpienia znaku w *str* należący do zbioru znaków *strCharSet*. Wyszukiwanie nie zawiera znak końcowy null.
+`strpbrk` Funkcja zwraca wskaźnik do pierwszego wystąpienia znaku w *str* należącej do zestawu znaków w *strCharSet*. Wyszukiwanie nie obejmuje kończącego znaku null.
 
-**wcspbrk —** i **_mbspbrk —** znaków dwubajtowych i znaków wielobajtowych wersji **strpbrk —**. Argumenty i zwracana wartość **wcspbrk —** są znaków dwubajtowych ciągi; tych **_mbspbrk —** są ciągami znaków wielobajtowych.
+`wcspbrk` i `_mbspbrk` są wersjami znaków dwubajtowych i znaków wielobajtowych `strpbrk`. Argumenty i wartość zwracana przez `wcspbrk` są znakami dwubajtowymi ciągów; te z `_mbspbrk` są ciągami znaków wielobajtowych.
 
-**_mbspbrk —** sprawdza poprawność parametrów. Jeśli *str* lub *strCharSet* jest **NULL**, program obsługi nieprawidłowych parametrów zostanie wywołany, zgodnie z opisem w [sprawdzanie poprawności parametru](../../c-runtime-library/parameter-validation.md). Jeśli jest dozwolone wykonywanie, aby kontynuować, **_mbspbrk —** zwraca **NULL** i ustawia **errno** do **einval —**. **strpbrk —** i **wcspbrk —** nie weryfikują ich parametrów. Te trzy funkcje działają tak samo w przeciwnym razie wartość.
+`_mbspbrk` sprawdza poprawność parametrów. Jeśli *str* lub *strCharSet* ma wartość NULL, procedura obsługi nieprawidłowego parametru zostanie wywołana, zgodnie z opisem w [Parameter Validation](../../c-runtime-library/parameter-validation.md). Jeśli wykonanie może być kontynuowane, `_mbspbrk` zwraca wartość NULL i ustawia `errno` do EINVAL. `strpbrk` i `wcspbrk` nie sprawdzają poprawność swoich parametrów. Te trzy funkcje zachowują się identycznie.
 
-**_mbspbrk —** jest podobny do **_mbscspn —** z tą różnicą, że **_mbspbrk —** zwraca wskaźnik zamiast wartości typu [size_t](../../c-runtime-library/standard-types.md).
+`_mbspbrk` jest podobny do `_mbscspn` z tą różnicą, że `_mbspbrk` zwraca wskaźnik, a nie wartość typu [size_t](../../c-runtime-library/standard-types.md).
 
-W języku C, te funkcje pobierać ** const ** wskaźnik dla pierwszego argumentu. W języku C++ dostępne są dwa przeciążenia. Biorąc wskaźnik do przeciążenia ** const ** zwraca wskaźnik do **const **; wersję, która przyjmuje wskaźnik do innego niż**const ** zwraca wskaźnik do innego niż**const **. Makro **_CRT_CONST_CORRECT_OVERLOADS** jest zdefiniowana, jeśli obie **const ** i -** const ** są dostępne wersje tych funkcji. Jeśli potrzebujesz nienależących**const ** zachowanie dla obu przeciążeń C++, zdefiniuj symbol **_CONST_RETURN**.
+W języku C, te funkcje biorą **const** wskaźnik dla pierwszego argumentu. W języku C++ dostępne są dwa przeciążenia. Przeciążenie wskaźnika do **const** zwraca wskaźnik do **const**; wersja, która przyjmuje wskaźnik do non -**const** zwraca wskaźnik do non -**const** . _CRT_CONST_CORRECT_OVERLOADS — makro jest zdefiniowany, jeśli oba **const** i innych niż-**const** wersje tych funkcji są dostępne. Jeśli potrzebujesz non -**const** zachowanie dla obu przeciążeń C++, określ symbol _CONST_RETURN.
 
-Wartość wyjściowa jest zagrożony ustawienie **lc_ctype —** kategorii ustawienie ustawień regionalnych; Aby uzyskać więcej informacji, zobacz [setlocale](setlocale-wsetlocale.md). Wersje tych funkcji bez **_l** Użyj sufiksu bieżące ustawienia regionalne tego zachowania zależnych od ustawień regionalnych; wersja z **_l** sufiks jest identyczny z tą różnicą, że parametr ustawień regionalnych Przekazano zamiast tego. Aby uzyskać więcej informacji, zobacz [ustawień regionalnych](../../c-runtime-library/locale.md).
+Wartość wyjściowa jest zależna od ustawienia LC_CTYPE ustawienia kategorii ustawień regionalnych; Aby uzyskać więcej informacji, zobacz [setlocale](setlocale-wsetlocale.md). Wersje tych funkcji, bez **_l** sufiks używają bieżących ustawień regionalnych dla zachowania zależnego od ustawień regionalnych; wersja, która **_l** sufiks jest identyczny, z tą różnicą, że użyto parametru ustawień regionalnych w zamian przekazanych. Aby uzyskać więcej informacji, zobacz [ustawień regionalnych](../../c-runtime-library/locale.md).
 
 ### <a name="generic-text-routine-mappings"></a>Mapowania procedur zwykłego tekstu
 
-|Procedura TCHAR.H|_Unicode — & _MBCS nie zdefiniowany|_MBCS zdefiniowano|_UNICODE zdefiniowano|
+|Procedura TCHAR.H|_UNICODE & _MBCS nie zdefiniowano|_MBCS zdefiniowano|_UNICODE zdefiniowano|
 |---------------------|------------------------------------|--------------------|-----------------------|
-|**_tcspbrk —**|**strpbrk**|**_mbspbrk**|**wcspbrk —**|
-|**n/d**|**n/d**|**_mbspbrk_l**|**n/d**|
+|`_tcspbrk`|`strpbrk`|`_mbspbrk`|`wcspbrk`|
+|**n/d**|**n/d**|`_mbspbrk_l`|**n/d**|
 
 ## <a name="requirements"></a>Wymagania
 
 |Procedura|Wymagany nagłówek|
 |-------------|---------------------|
-|**strpbrk**|\<string.h>|
-|**wcspbrk —**|\<String.h > lub \<wchar.h >|
-|**_mbspbrk —**, **_mbspbrk_l —**|\<mbstring.h>|
+|`strpbrk`|\<string.h>|
+|`wcspbrk`|\<Włącz String.h > lub \<wchar.h >|
+|`_mbspbrk`, `_mbspbrk_l`|\<mbstring.h>|
 
 Aby uzyskać więcej informacji na temat zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md).
 

@@ -14,12 +14,12 @@ ms.author: corob
 ms.workload:
 - cplusplus
 - linux
-ms.openlocfilehash: 014d23996777d0660d4978e307b80e4f94c19686
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: 285c1fcd38ef20ea38fe03e2cbd27f77469775cf
+ms.sourcegitcommit: 30192458404618039fdadddf37dc269baa559860
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37849262"
+ms.lasthandoff: 07/20/2018
+ms.locfileid: "39182541"
 ---
 # <a name="configure-a-linux-cmake-project"></a>Konfigurowanie projektu CMake systemu Linux
 
@@ -29,7 +29,7 @@ Po zainstalowaniu obciążenia języka Linux C++, obsługa CMake dla systemu Lin
 W tym temacie założono, że masz podstawowe znajomość Obsługa CMake w programie Visual Studio. Aby uzyskać więcej informacji, zobacz [narzędzia CMake w języku Visual C++](../ide/cmake-tools-for-visual-cpp.md). Aby uzyskać więcej informacji na temat narzędzia CMake, sama zobacz [kompilacji, testów i pakietów usługi oprogramowania za pomocą narzędzia CMake](https://cmake.org/).
 
 > [!NOTE]  
-> Obsługa CMake w programie Visual Studio wymaga obsługi trybu serwera, która została wprowadzona w CMake 3.8. Jeśli Menedżer pakietów zapewnia starszą wersję CMake, można obejść, jego [tworzenia CMake ze źródła](#build-a-supported-cmake release-from-source) lub pobierania go z oficjalną [strony pobierania narzędzia CMake](https://cmake.org/download/).
+> Obsługa CMake w programie Visual Studio wymaga obsługi trybu serwera, która została wprowadzona w CMake 3.8. Jeśli Menedżer pakietów zapewnia starszą wersję CMake, można obejść, jego [tworzenia CMake ze źródła](#build-a-supported-cmake release-from-source) lub pobierania go z oficjalną [strony pobierania narzędzia CMake](https://cmake.org/download/). Dla wariantu CMake dostarczonych przez firmę Microsoft, który obsługuje [widok elementów docelowych narzędzia CMake](https://blogs.msdn.microsoft.com/vcblog/2018/04/09/cmake-support-in-visual-studio-targets-view-single-file-compilation-and-cache-generation-settings/) okienko w programie Visual Studio, pobrać najnowsze wstępnie utworzone pliki binarne w [ https://github.com/Microsoft/CMake/releases ](https://github.com/Microsoft/CMake/releases).
 
 ## <a name="open-a-folder"></a>Otwieranie folderu
 
@@ -143,7 +143,7 @@ Następnie uruchom następujące polecenie, aby sprawdzić, wersja jest > = 3.8 
 cmake -E capabilities
 ```
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Praca z właściwościami projektu](../ide/working-with-project-properties.md)  
 [Narzędzia CMake w języku Visual C++](../ide/cmake-tools-for-visual-cpp.md)  

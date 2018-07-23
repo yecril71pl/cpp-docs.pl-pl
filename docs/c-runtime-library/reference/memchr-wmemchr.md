@@ -33,16 +33,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5c2ba300275f0154e84f7d2ced21b0893bbe3d85
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 43c76ae09f491ff163391f0ee46564af7bb629fe
+ms.sourcegitcommit: 04d327940787df1297b72d534f388a035d472af0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32401688"
+ms.lasthandoff: 07/20/2018
+ms.locfileid: "39181175"
 ---
 # <a name="memchr-wmemchr"></a>memchr, wmemchr
 
-Znajdź znaków w buforze.
+Znajdowanie znaków w buforze.
 
 ## <a name="syntax"></a>Składnia
 
@@ -92,26 +92,26 @@ Liczba znaków do sprawdzenia.
 
 ## <a name="return-value"></a>Wartość zwracana
 
-Jeśli to się powiedzie, zwraca wskaźnik do pierwszego lokalizację *c* w *buforu*. W przeciwnym razie zwraca **NULL**.
+Jeśli to się powiedzie, zwraca wskaźnik do pierwszej lokalizacji *c* w *buforu*. W przeciwnym razie zwraca wartość NULL.
 
 ## <a name="remarks"></a>Uwagi
 
-**memchr** i **wmemchr —** wyszukiwania dla pierwszego wystąpienia *c* w pierwszym *liczba* bajtów *buforu*. Zatrzymuje się, gdy znajdzie *c* lub gdy zaznaczone pierwszy *liczba* bajtów.
+`memchr` i `wmemchr` wyszukiwania dla pierwszego wystąpienia *c* w pierwszym *liczba* bajtów *buforu*. Zatrzymuje się, gdy znajdzie *c* lub gdy zaznaczone pierwszy *liczba* bajtów.
 
-W języku C, te funkcje pobierać ** const ** wskaźnik dla pierwszego argumentu. W języku C++ dostępne są dwa przeciążenia. Biorąc wskaźnik do przeciążenia ** const ** zwraca wskaźnik do **const **; wersję, która przyjmuje wskaźnik do innego niż**const ** zwraca wskaźnik do innego niż**const **. _CRT_CONST_CORRECT_OVERLOADS makro jest zdefiniowana, jeśli obie **const ** i -** const ** są dostępne wersje tych funkcji. Jeśli potrzebujesz nienależących**const ** zachowanie dla obu overloadsin C++, C++, zdefiniuj _CONST_RETURN symbolu.
+W języku C, te funkcje biorą **const** wskaźnik dla pierwszego argumentu. W języku C++ dostępne są dwa przeciążenia. Przeciążenie wskaźnika do **const** zwraca wskaźnik do **const**; wersja, która przyjmuje wskaźnik do non -**const** zwraca wskaźnik do non -**const** . _CRT_CONST_CORRECT_OVERLOADS — makro jest zdefiniowany, jeśli oba **const** i innych niż-**const** wersje tych funkcji są dostępne. Jeśli potrzebujesz non -**const** zachowanie dla obu overloadsin C++, C++, określ symbol _CONST_RETURN.
 
 ## <a name="requirements"></a>Wymagania
 
 |Procedura|Wymagany nagłówek|
 |-------------|---------------------|
-|**memchr**|\<Memory.h > lub \<string.h >|
-|**wmemchr —**|\<WChar.h >|
+|`memchr`|\<Memory.h > lub \<string.h >|
+|`wmemchr`|\<WChar.h >|
 
 Aby uzyskać więcej informacji na temat zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md).
 
 ## <a name="libraries"></a>Biblioteki
 
-Wszystkie wersje [biblioteki wykonawcze języka C](../../c-runtime-library/crt-library-features.md).
+Wszystkie wersje [biblioteki wykonawczej C](../../c-runtime-library/crt-library-features.md).
 
 ## <a name="example"></a>Przykład
 

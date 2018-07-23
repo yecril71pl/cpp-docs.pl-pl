@@ -54,18 +54,18 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cbb937cfdce7ed933c637cb48d370515134b66dd
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 5ea5ed6c4441ebd98462562ac9405d6f8c115c61
+ms.sourcegitcommit: 04d327940787df1297b72d534f388a035d472af0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32415712"
+ms.lasthandoff: 07/20/2018
+ms.locfileid: "39181097"
 ---
 # <a name="strstr-wcsstr-mbsstr-mbsstrl"></a>strstr, wcsstr, _mbsstr, _mbsstr_l
-Zwraca wskaźnik do pierwszego wystąpienia ciągu wyszukiwania w ciągu.
+Zwraca wskaźnik do pierwszego wystąpienia wyszukiwanego ciągu w ciągu.
 
 > [!IMPORTANT]
-> **_mbsstr —** i **_mbsstr_l —** nie można używać w aplikacjach, które są wykonywane w środowisku wykonawczym systemu Windows. Aby uzyskać więcej informacji, zobacz [funkcje CRT, nie są obsługiwane w aplikacjach platformy uniwersalnej systemu Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
+> `_mbsstr` i `_mbsstr_l` nie można używać w aplikacjach korzystających ze środowiska wykonawczego Windows. Aby uzyskać więcej informacji, zobacz [funkcje CRT nieobsługiwane w aplikacjach platformy uniwersalnej Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
 
 ## <a name="syntax"></a>Składnia
 
@@ -126,43 +126,43 @@ const unsigned char *_mbsstr_l(
 ### <a name="parameters"></a>Parametry
 
 *str*<br/>
-Zerem ciąg do wyszukania.
+Ciąg zakończony wartością null do wyszukania.
 
 *strSearch*<br/>
-Zerem ciąg do wyszukania.
+Ciąg zakończony wartością null do wyszukania.
 
 *Ustawienia regionalne*<br/>
 Ustawienia regionalne do użycia.
 
 ## <a name="return-value"></a>Wartość zwracana
 
-Zwraca wskaźnik do pierwszego wystąpienia *strSearch* w *str*, lub **NULL** Jeśli *strSearch* nie ma *str* . Jeśli *strSearch* wskazuje ciąg o zerowej długości, funkcja zwraca *str*.
+Zwraca wskaźnik do pierwszego wystąpienia *strSearch* w *str*, lub wartość NULL, jeśli *strSearch* nie jest widoczna w *str*. Jeśli *strSearch* wskazuje ciąg o zerowej długości, funkcja zwraca *str*.
 
 ## <a name="remarks"></a>Uwagi
 
-**Strstr —** funkcja zwraca wskaźnik do pierwszego wystąpienia *strSearch* w *str*. Wyszukiwanie nie obejmuje Kończenie znaki null. **wcsstr —** jest wersja znaków dwubajtowych **strstr —** i **_mbsstr —** jest wersja znaków wielobajtowych. Argumenty i zwracana wartość **wcsstr —** są znaków dwubajtowych ciągi; tych **_mbsstr —** są ciągami znaków wielobajtowych. **_mbsstr —** sprawdza poprawność parametrów. Jeśli *str* lub *strSearch* jest **NULL**, program obsługi nieprawidłowych parametrów zostanie wywołany, zgodnie z opisem w [sprawdzanie poprawności parametru](../../c-runtime-library/parameter-validation.md) . Jeśli jest dozwolone wykonywanie, aby kontynuować, **_mbsstr —** ustawia **errno** do **einval —** i zwraca wartość 0. **strstr —** i **wcsstr —** nie weryfikują ich parametrów. Te trzy funkcje działają tak samo w przeciwnym razie wartość.
+`strstr` Funkcja zwraca wskaźnik do pierwszego wystąpienia *strSearch* w *str*. Wyszukiwanie nie obejmuje kończących się pustych znaków. `wcsstr` jest wersją znaków dwubajtowych `strstr` i `_mbsstr` jest wersją znaków wielobajtowych. Argumenty i wartość zwracana przez `wcsstr` są znakami dwubajtowymi ciągów; te z `_mbsstr` są ciągami znaków wielobajtowych. `_mbsstr` sprawdza poprawność parametrów. Jeśli *str* lub *strSearch* ma wartość NULL, procedura obsługi nieprawidłowego parametru zostanie wywołana, zgodnie z opisem w [Parameter Validation](../../c-runtime-library/parameter-validation.md) . Jeśli wykonanie może być kontynuowane, `_mbsstr` ustawia `errno` EINVAL i zwraca wartość 0. `strstr` i `wcsstr` nie sprawdzają poprawność swoich parametrów. Te trzy funkcje zachowują się identycznie.
 
 > [!IMPORTANT]
-> Funkcje te może pociągnąć za sobą ryzyko ze strony problem przepełnienie buforu. Problemy przepełnienie buforu może służyć do atakowania systemu, ponieważ umożliwiają one wykonywanie dowolnego kodu, co może spowodować nieuzasadnione podniesienie uprawnień. Aby uzyskać więcej informacji, zobacz [unikanie Overruns buforu](http://msdn.microsoft.com/library/windows/desktop/ms717795).
+> Te funkcje mogą zostać naliczone zagrożenie z problemem przepełnienia buforu. Problemy z przepełnieniem buforu może służyć do ataków systemu, ponieważ umożliwiają one wykonywanie dowolnego kodu, co może spowodować nieuzasadnione podniesienie poziomu uprawnień. Aby uzyskać więcej informacji, zobacz [unikanie przepełnień bufora](http://msdn.microsoft.com/library/windows/desktop/ms717795).
 
-W języku C, te funkcje pobierać ** const ** wskaźnik dla pierwszego argumentu. W języku C++ dostępne są dwa przeciążenia. Przeciążenie, które przyjmuje wskaźnik do ** const ** zwraca wskaźnik do **const **; wersję, która przyjmuje wskaźnik do innego niż**const ** zwraca wskaźnik do innego niż**const **. Makro **_CRT_CONST_CORRECT_OVERLOADS** jest zdefiniowana, jeśli obie **const ** i -** const ** są dostępne wersje tych funkcji. Jeśli potrzebujesz nienależących**const ** zachowanie dla obu przeciążeń C++, zdefiniuj symbol **_CONST_RETURN**.
+W języku C, te funkcje biorą **const** wskaźnik dla pierwszego argumentu. W języku C++ dostępne są dwa przeciążenia. Przeciążenia, które przyjmuje wskaźnik do **const** zwraca wskaźnik do **const**; wersja, która przyjmuje wskaźnik do non -**const** zwraca wskaźnik do non - **Const**. _CRT_CONST_CORRECT_OVERLOADS — makro jest zdefiniowany, jeśli oba **const** i innych niż-**const** wersje tych funkcji są dostępne. Jeśli potrzebujesz non -**const** zachowanie dla obu przeciążeń C++, określ symbol _CONST_RETURN.
 
-Wartość wyjściowa ma to wpływ na ustawienia regionalne kategorii **lc_ctype —**; Aby uzyskać więcej informacji, zobacz [setlocale, _wsetlocale —](setlocale-wsetlocale.md). Wersje tych funkcji, które nie mają **_l** Użyj sufiksu bieżące ustawienia regionalne tego zachowania zależnych od ustawień regionalnych; wersje, które mają **_l** sufiks są identyczne z tą różnicą, że zamiast tego użyć Parametr ustawień regionalnych, który jest przekazywany w. Aby uzyskać więcej informacji, zobacz [ustawień regionalnych](../../c-runtime-library/locale.md).
+Wartość wyjściowa jest zależna od ustawienia kategorii ustawień regionalnych LC_CTYPE; Aby uzyskać więcej informacji, zobacz [setlocale, _wsetlocale](setlocale-wsetlocale.md). Wersje tych funkcji, które nie mają **_l** sufiks używają bieżących ustawień regionalnych dla zachowania zależnego od ustawień regionalnych; wersje, które mają **_l** sufiksem są identyczne, z tą różnicą, że używają w zamian parametru ustawień regionalnych, które zostały przekazane. Aby uzyskać więcej informacji, zobacz [ustawień regionalnych](../../c-runtime-library/locale.md).
 
 ### <a name="generic-text-routine-mappings"></a>Mapowania procedur zwykłego tekstu
 
-|Procedura TCHAR.H|_Unicode — & _MBCS nie zdefiniowany|_MBCS zdefiniowano|_UNICODE zdefiniowano|
+|Procedura TCHAR.H|_UNICODE & _MBCS nie zdefiniowano|_MBCS zdefiniowano|_UNICODE zdefiniowano|
 |---------------------|------------------------------------|--------------------|-----------------------|
-|**_tcsstr —**|**strstr**|**_mbsstr —**|**wcsstr —**|
-|**n/d**|**n/d**|**_mbsstr_l**|**n/d**|
+|`_tcsstr`|`strstr`|`_mbsstr`|`wcsstr`|
+|**n/d**|**n/d**|`_mbsstr_l`|**n/d**|
 
 ## <a name="requirements"></a>Wymagania
 
 |Procedura|Wymagany nagłówek|
 |-------------|---------------------|
-|**strstr**|\<string.h>|
-|**wcsstr —**|\<String.h > lub \<wchar.h >|
-|**_mbsstr —**, **_mbsstr_l —**|\<mbstring.h>|
+|`strstr`|\<string.h>|
+|`wcsstr`|\<Włącz String.h > lub \<wchar.h >|
+|`_mbsstr`, `_mbsstr_l`|\<mbstring.h>|
 
 Aby uzyskać więcej informacji na temat zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md).
 
