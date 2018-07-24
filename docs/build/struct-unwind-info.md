@@ -12,15 +12,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 14b17a79905ffc7814e2aecf92e90f3db526453f
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: a6046dffd74824b05c7b7b10be57bb0b2274ffdc
+ms.sourcegitcommit: 7eadb968405bcb92ffa505e3ad8ac73483e59685
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32383244"
+ms.lasthandoff: 07/23/2018
+ms.locfileid: "39207575"
 ---
 # <a name="struct-unwindinfo"></a>struktura UNWIND_INFO
-Struktury informacji o danych unwind służy do rejestrowania wpływ, jaki ma funkcji na wskaźnik stosu i którym nieulotnej rejestrów są zapisywane na stosie:  
+Struktury informacji o danych unwind jest używana do rejestrowania efekty, które funkcja ma na wskaźnik stosu i gdzie nieulotnej rejestrów są zapisywane na stos:  
   
 |||  
 |-|-|  
@@ -28,10 +28,10 @@ Struktury informacji o danych unwind służy do rejestrowania wpływ, jaki ma fu
 |UBYTE: 5|Flagi|  
 |UBYTE|Rozmiar prologu|  
 |UBYTE|Liczba kodów unwind|  
-|UBYTE: 4|Rejestr ramki|  
-|UBYTE: 4|Przesunięcie rejestru ramki (skalowane)|  
-|USHORT * n|Tablica kody unwind|  
-|zmienna|Albo można formularza (1) lub (2) poniżej|  
+|UBYTE: 4|Zarejestruj się ramki|  
+|UBYTE: 4|Przesunięcie rejestru ramki (skalowanie)|  
+|USHORT \* n|Operacja unwind kody tablicy|  
+|zmienna|Formularz (1) lub (2) poniżej albo być|  
   
  (1) Obsługa wyjątków  
   
@@ -40,51 +40,51 @@ Struktury informacji o danych unwind służy do rejestrowania wpływ, jaki ma fu
 |ULONG|Adres obsługi wyjątków|  
 |zmienna|Obsługa określonego języka danych (opcjonalnie)|  
   
- (2) łańcuchowej Unwind informacji  
+ (2) łańcuchowej Unwind Info  
   
 |||  
 |-|-|  
 |ULONG|Adres początkowy — funkcja|  
 |ULONG|Adres końcowy — funkcja|  
-|ULONG|Informacje o adres unwind|  
+|ULONG|Operacja unwind info adresu|  
   
- Struktura UNWIND_INFO musi być typu DWORD wyrównane w pamięci. Znaczenie każde pole jest następujący:  
+ Struktura UNWIND_INFO muszą być wyrównane w pamięci typu DWORD. Znaczenie każde pole jest następująca:  
   
  **Wersja**  
  Numer wersji dane odwinięcia aktualnie 1.  
   
- **Flagi**  
+ **flagi**  
  Trzy flagi są obecnie zdefiniowane:  
   
- Funkcja UNW_FLAG_EHANDLER ma obsługi wyjątków, która powinna być wywoływana podczas wyszukiwania dla funkcji, które należy zbadać wyjątków.  
+ UNW_FLAG_EHANDLER funkcji ma obsługi wyjątków, która powinna być wywoływana podczas wyszukiwania dla funkcji, które są konieczne przeanalizowanie wyjątków.  
   
- UNW_FLAG_UHANDLER funkcja ma programu obsługi zakończenia, która powinna być wywoływana, gdy rozwinięcia Wystąpił wyjątek.  
+ UNW_FLAG_UHANDLER funkcja ma powinna być wywoływana, gdy odwijanie wyjątków programu obsługi zakończenia.  
   
- UNW_FLAG_CHAININFO unwind to struktura nie jest to podstawowy w procedurze informacji. Zamiast tego łańcuchowa unwind informacje, że wpis jest zawartość poprzedniego zapisu RUNTIME_FUNCTION. Zobacz następujący tekst, aby uzyskać informacje o łańcuchowej unwind struktury informacji o. Jeśli ta flaga jest ustawiona, flag UNW_FLAG_EHANDLER i UNW_FLAG_UHANDLER muszą zostać wyczyszczone. Ponadto pola ramki rejestru i stosu stałej alokacji musi mieć takie same wartości jak podstawowy unwind informacji.  
+ UNW_FLAG_CHAININFO to unwind info struktura nie jest to podstawowy dla procedury. Zamiast tego łańcuchowych elementu unwind info wpis jest zawartość poprzedniego zapisu RUNTIME_FUNCTION. Zobacz poniższy tekst objaśnienia dotyczące łańcuchowej unwind info struktury. Jeśli ta flaga jest ustawiona, flagi UNW_FLAG_EHANDLER i UNW_FLAG_UHANDLER muszą zostać wyczyszczone. Ponadto ramki rejestr stosu stałej alokacji pola i musi mieć takie same wartości jak podstawowego elementu unwind info.  
   
  **Rozmiar prologu**  
- Długość w bajtach prologu funkcji.  
+ Długość prologu funkcji w bajtach.  
   
  **Liczba kodów unwind**  
- Jest to liczba gniazd w tablicy kody unwind. Należy pamiętać, że niektóre unwind kody (na przykład UWOP_SAVE_NONVOL) wymagają więcej niż jednego miejsca w tablicy.  
+ Jest to liczba miejsc, w tablicy kody unwind. Należy pamiętać, że unwind niektóre kody (na przykład UWOP_SAVE_NONVOL) wymaga więcej niż jednego miejsca, w tablicy.  
   
- **Rejestr ramki**  
- Jeśli jest różna od zera, następnie funkcja wskaźnika ramki, a to pole jest to liczba nieulotnej rejestru używane jako wskaźnika ramki, przy użyciu tego samego kodowania w polu informacje o operacji UNWIND_CODE węzłów.  
+ **Zarejestruj się ramki**  
+ Jeśli wartość jest niezerowa, następnie funkcja używa wskaźnik ramki, a to pole jest to liczba nieulotnej rejestru używana jako wskaźnik ramki, przy użyciu tego samego kodowania dla pola informacje o operacji UNWIND_CODE węzłów.  
   
- **Ramki zarejestrować przesunięcie (skalowane)**  
- Jeśli pole rejestru ramki jest różna od zera, to jest skalowana przesunięcie od źródło stosowany do rejestru FP po jego nawiązaniu. Rzeczywiste reg FP ustawiono źródło + 16 * ten numer, dzięki czemu przesunięcia od 0 do 240. Umożliwia wskazanie FP reg do środka alokacji stosu lokalnego ramek stosu dynamicznej, co lepiej gęstość kodu przy użyciu krótszej instrukcje (dodatkowe instrukcje formularz 8-bitową podpisem przesunięcia).  
+ **Ramka zarejestrować przesunięcie (skalowanie)**  
+ Jeśli pola rejestru ramki jest różna od zera, to skalowany przesunięcie od RSP, która jest stosowana do FP reg, gdy zostanie stwierdzone. Rzeczywiste reg FP ustawiono RSP + 16 \* tę liczbę, dzięki czemu przesunięcia z zakresu od 0 do 240. Pozwala to na, wskazując FP reg do środka alokacji stosu lokalnego ramek stosu dynamiczne, umożliwiając lepsze gęstość kodu za pomocą krótszy instrukcje (więcej instrukcji użyć formularz przesunięcia podpisany 8-bitowa).  
   
- **Tablica kody unwind**  
- To jest tablica elementów opisano wpływ prologu w nieulotnej rejestrów i źródło. Zobacz sekcję dotyczącą UNWIND_CODE dla znaczenie poszczególnych elementów. Do celów wyrównanie tej tablicy zawsze będą mieć parzysta liczba wpisów wpisem końcowej potencjalnie nieużywane (w takim przypadku tablicy będzie być dłuższy niż określona według liczby unwind kody pól).  
+ **Operacja unwind kody tablicy**  
+ Jest to tablica elementów opisano wpływ prologu nieulotnej rejestrów i RSP. Zobacz sekcję dotyczącą UNWIND_CODE na znaczenie wybranych elementów. Ze względów wyrównanie tej tablicy jest parzysta liczba wpisów z ostatnim wpisem potencjalnie nieużywane (w którym to przypadku tablicy będzie być dłuższy niż określona przez liczbę unwind kodów pola).  
   
  **Adres obsługi wyjątków**  
- Jest to wskaźnik względem obrazu do obsługi wyjątków specyficzne dla języka/zakończenia przez funkcję (Jeśli flaga UNW_FLAG_CHAININFO jest wyczyszczone i jest on flagi UNW_FLAG_EHANDLER lub UNW_FLAG_UHANDLER ustawiony).  
+ Jest to wskaźnik względem obrazu do obsługi wyjątków specyficzne dla języka/zakończeniem przez funkcję (jeśli UNW_FLAG_CHAININFO flaga jest wyczyszczona, i jest on flagi UNW_FLAG_EHANDLER lub UNW_FLAG_UHANDLER ustawiony).  
   
  **Dane specyficzne dla języka programu obsługi**  
- To są dane programu obsługi wyjątków specyficzne dla języka funkcji. Format tych danych jest nieokreślona i całkowicie określany przez program obsługi określony wyjątek w użyciu.  
+ Jest to funkcja specyficzny dla języka programu obsługi wyjątku. Format danych nie zostanie podany, całkowicie jest określana przez program obsługi określonego wyjątku w użyciu.  
   
- **Łańcuchowej Unwind informacji**  
- Jeśli jest ustawiona flaga UNW_FLAG_CHAININFO struktura UNWIND_INFO kończy się z trzech UWORDs.  Te UWORDs reprezentuje informacje RUNTIME_FUNCTION łańcuchowej unwind dla funkcji.  
+ **Łańcuchowej Unwind Info**  
+ Jeśli jest ustawiona flaga UNW_FLAG_CHAININFO struktura UNWIND_INFO kończy się z trzech UWORDs.  Te UWORDs reprezentują informacje RUNTIME_FUNCTION funkcji łańcuchowej unwind.  
   
 ## <a name="see-also"></a>Zobacz też  
  [Dane operacji Unwind dla obsługi wyjątków, obsługa debugera](../build/unwind-data-for-exception-handling-debugger-support.md)

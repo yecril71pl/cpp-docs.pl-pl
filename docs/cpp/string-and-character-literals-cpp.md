@@ -26,12 +26,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 16a4d3e663c0cb8d80d3b154f23082d88b446b6f
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: 360945f8156c5c92c62cb2209308c7cdd2860cbc
+ms.sourcegitcommit: 7eadb968405bcb92ffa505e3ad8ac73483e59685
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37942097"
+ms.lasthandoff: 07/23/2018
+ms.locfileid: "39208552"
 ---
 # <a name="string-and-character-literals--c"></a>Literały ciągów i znakowe (C++)
 C++ obsługuje różne typy ciągów i znakowe i zapewnia metody do wyrażenia wartości literału w każdej z tych typów. W kodzie źródłowym można wyrazić zawartość literały znakowe i przy użyciu zestawu znaków. Uniwersalne nazwy znaków i znaków ucieczki umożliwiają express dowolny ciąg przy użyciu tylko zestaw znaków podstawowego źródła. Nieprzetworzony literał ciągu pozwala uniknąć przy użyciu znaków ucieczki i może służyć do express wszystkie rodzaje literałów ciągów. Można również utworzyć literały std::string, bez konieczności wykonywania dodatkowych konstrukcji lub konwersji kroki.  
@@ -310,7 +310,7 @@ const wchar_t* str = L"Hello!";
 const size_t byteSize = (wcslen(str) + 1) * sizeof(wchar_t);  
 ```  
   
- Należy zauważyć, że `strlen()` i `wcslen()` nie zawierają rozmiaru kończącego znaku null, którego rozmiar jest równy rozmiarowi elementu typu string: jednego bajtu w ciągu char *, dwóch bajtów na wchar_t\* lub char16_t\* ciągów i cztery bajty na char32_t\* ciągów.  
+ Należy zauważyć, że `strlen()` i `wcslen()` nie zawierają rozmiaru kończącego znaku null, którego rozmiar jest równy rozmiarowi elementu typu string: jeden bajt na znak\* ciąg dwóch bajtów na wchar_t\* lub char16_t\*ciągów i cztery bajty na char32_t\* ciągów.  
   
  Maksymalna długość literału ciągu wynosi 65 535 bajtów. Ten limit dotyczy zarówno literałów wąskich, jak i szerokich.  
   
@@ -380,7 +380,7 @@ auto x4 = u8"hello" " "s u8"world"z; // C3688, disagree on suffixes
 ```  
   
 ### <a name="string-literals-with-universal-character-names"></a>Literały ciągów ze uniwersalne nazwy znaków  
- (Natywne inne niż surowe) Literały ciągu można używać uniwersalne nazwy znaków do reprezentowania dowolny znak, tak długo, jak nazwa znaki uniwersalne mogą być zakodowane jako jeden lub więcej znaków w typu string.  Na przykład nazwę znaki uniwersalne reprezentujący znak rozszerzony nie może zostać zakodowana w ciągu wąskiego przy użyciu strony kodowej ANSI, ale mogą być zakodowane w ciągach wąskie w niektórych stron kodu wielobajtowego lub UTF-8 ciągów lub ciąg znaków dwubajtowych. W języku C ++ 11, obsługa formatu Unicode rozszerzoną char16_t * i char32_t\* typów ciągów:  
+ (Natywne inne niż surowe) Literały ciągu można używać uniwersalne nazwy znaków do reprezentowania dowolny znak, tak długo, jak nazwa znaki uniwersalne mogą być zakodowane jako jeden lub więcej znaków w typu string.  Na przykład nazwę znaki uniwersalne reprezentujący znak rozszerzony nie może zostać zakodowana w ciągu wąskiego przy użyciu strony kodowej ANSI, ale mogą być zakodowane w ciągach wąskie w niektórych stron kodu wielobajtowego lub UTF-8 ciągów lub ciąg znaków dwubajtowych. W języku C ++ 11, char16_t rozszerzoną obsługę standardu Unicode\* i char32_t\* typów ciągów:  
   
 ```cpp  
 // ASCII smiling face  

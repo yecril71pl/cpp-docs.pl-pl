@@ -20,43 +20,43 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 76f6721ce4561e9c2b4323fef9c2eed3231f73cb
-ms.sourcegitcommit: be0e3457f2884551f18e183ef0ea65c3ded7f689
+ms.openlocfilehash: 747d9a67f7796b5a62115acf55343370aea77bdf
+ms.sourcegitcommit: 7eadb968405bcb92ffa505e3ad8ac73483e59685
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/28/2018
-ms.locfileid: "37079163"
+ms.lasthandoff: 07/23/2018
+ms.locfileid: "39207868"
 ---
 # <a name="overview-of-marshaling-in-c"></a>Omówienie marshalingu w języku C++
-W trybie mieszanym możesz czasami należy kierować danych między typami natywnych i zarządzanych. Program Visual Studio 2008 wprowadzono *biblioteki marshalingu* ułatwiające kierować i przekonwertować danych w prosty sposób.  Biblioteka organizowania składa się z zestawem funkcji i `marshal_context` klasy, która wykonuje organizowanie popularnych typów. Biblioteka jest zdefiniowany w tych nagłówków w **obejmują msclr** katalogu używanej wersji programu Visual Studio:
+W trybie mieszanym czasami musisz zarządzać dane między typami macierzystym i zarządzanym. Program Visual Studio 2008 wprowadzono *Biblioteka dotycząca organizowania* ułatwiające kierować i przekonwertować danych w prosty sposób.  Biblioteka dotycząca organizowania zawiera zestaw funkcji i `marshal_context` klasy służące do przeprowadzania marshaling dla popularnych typów. Biblioteka jest zdefiniowany w tych nagłówków w **obejmują msclr** katalog dla posiadanej wersji programu Visual Studio:
 
 |nagłówek|Opis|  
 |---------------|-----------------|
-|Marshal.h|`marshal_context` klasy i funkcje kierowania bez kontekstu|
-|marshal_atl.h| Funkcje dla organizowanie typów ATL|
+|Marshal.h|`marshal_context` klasy i funkcje organizowania bezpłatne kontekstu|
+|marshal_atl.h| Funkcje dla marshaling typów ATL|
 |marshal_cppstd.h|Funkcje na przekazywanie standardowych typów języka C++|
-|marshal_windows.h|Funkcje dla przekazywanie typów systemu Windows|
+|marshal_windows.h|Marshaling typów Windows funkcji|
 
 
-Domyślna ścieżka dla **msclr** folder jest podobny do następującego w zależności od używanej wersji masz i numer kompilacji:
+Domyślna ścieżka dla **msclr** folder jest podobny do poniższego w zależności od używanej wersji masz i numer kompilacji:
 
 ```cmd
 C:\\Program Files (x86)\\Microsoft Visual Studio\\Preview\\Enterprise\\VC\\Tools\\MSVC\\14.15.26528\\include\\msclr
 ```
 
- Możesz użyć biblioteki marshalingu z lub bez [marshal_context — klasa](../dotnet/marshal-context-class.md). Niektóre konwersje wymagają kontekst. Inne konwersje można implementować przy użyciu [marshal_as —](../dotnet/marshal-as.md) funkcji. W poniższej tabeli przedstawiono bieżące konwersje obsługiwane, czy kontekst jest wymagany i jakiego pliku kierowanie musi zawierać:  
+ Można użyć Biblioteka dotycząca organizowania z lub bez [marshal_context Class](../dotnet/marshal-context-class.md). Niektóre konwersje wymaga kontekstu. Inne konwersje można zaimplementować przy użyciu [marshal_as](../dotnet/marshal-as.md) funkcji. W tabeli poniżej wymieniono konwersje bieżący obsługiwany, czy kontekst jest wymagany i jakie pliku marshal powinien obejmować:  
   
-|Z typu|Wprowadzenie|Kierowanie — metoda|Plik dołączania|  
+|Z typu|Na typ|Metoda Marshal|Dołącz plik|  
 |---------------|-------------|--------------------|------------------|  
-|System::String ^|Const char *|marshal_context —|Marshal.h|  
-|Const char *|System::String ^|marshal_as|Marshal.h|  
-|char *|System::String ^|marshal_as|Marshal.h|  
-|System::String ^|wchar_t const *|marshal_context —|Marshal.h|  
-|Const wchar_t *|System::String ^|marshal_as|Marshal.h|  
-|wchar_t *|System::String ^|marshal_as|Marshal.h|  
-|System::IntPtr|DOJŚCIE|marshal_as|marshal_windows.h|  
-|DOJŚCIE|System::IntPtr|marshal_as|marshal_windows.h|  
-|System::String ^|BSTR|marshal_context —|marshal_windows.h|  
+|System::String ^|Const char \*|marshal_context|Marshal.h|  
+|Const char \*|System::String ^|marshal_as|Marshal.h|  
+|Char \*|System::String ^|marshal_as|Marshal.h|  
+|System::String ^|Const wchar_t\*|marshal_context|Marshal.h|  
+|Const wchar_t \*|System::String ^|marshal_as|Marshal.h|  
+|wchar_t \*|System::String ^|marshal_as|Marshal.h|  
+|System::IntPtr|UCHWYT|marshal_as|marshal_windows.h|  
+|UCHWYT|System::IntPtr|marshal_as|marshal_windows.h|  
+|System::String ^|BSTR|marshal_context|marshal_windows.h|  
 |BSTR|System::String ^|marshal_as|Marshal.h|  
 |System::String ^|bstr_t|marshal_as|marshal_windows.h|  
 |bstr_t|System::String ^|marshal_as|marshal_windows.h|  
@@ -71,18 +71,18 @@ C:\\Program Files (x86)\\Microsoft Visual Studio\\Preview\\Enterprise\\VC\\Tools
 |System::String ^|CComBSTR|marshal_as|marshal_atl.h|  
 |CComBSTR|System::String ^|marshal_as|marshal_atl.h|  
   
- Organizowanie wymaga kontekstu, tylko w przypadku organizowania danych zarządzanego do natywnych typów typu macierzystego, który ma zostać zmieniony na nie ma destruktora do automatycznego czyszczenia. Kontekst kierowania niszczy przydzielone macierzystego typu danych w jego destruktora. W związku z tym konwersje, które wymagają kontekst będzie obowiązywać, aż kontekst zostanie usunięty. Aby zapisać wartości organizowane, należy skopiować wartości do własnych zmiennych.  
+ Marshaling wymaga kontekstu, tylko wtedy, gdy kierować dane zarządzanego do natywnych typów i typu macierzystego, który jest konwertowane na nie ma destruktora do automatycznego czyszczenia. Marshaling kontekstu niszczy przydzielone macierzystego typu danych w jego destruktor. W związku z tym konwersje, które wymagają kontekstu, będzie obowiązywał tylko do momentu kontekst zostanie usunięty. Aby zapisać wszystkie zorganizowanej wartości, należy skopiować wartości do własnych zmiennych.  
   
 > [!NOTE]
->  Po osadzeniu `NULL`s w ciągu, wynik organizowanie ciąg nie jest gwarantowana. Osadzonego `NULL`s może powodować ciągu obcięte lub mogą zostać zachowane.  
+>  Po osadzeniu `NULL`s w ciągu, wynikiem marshaling ciąg nie jest gwarantowana. Osadzonego `NULL`s może spowodować, że ciągu obcięte lub mogą one zostać zachowane.  
   
-W tym przykładzie pokazano, jak dołączyć podanego katalogu msclr w deklaracji Dołącz nagłówek:  
+W tym przykładzie pokazano jak dołączyć katalogu msclr w deklaracji nagłówka include:  
   
  `#include "msclr\marshal_cppstd.h"`  
   
- Biblioteki marshalingu jest otwarty, aby mogli dodawać własne kierowania typy. Aby uzyskać więcej informacji na temat rozszerzanie biblioteki marshalingu, zobacz [porady: rozszerzanie biblioteki Marshalingu](../dotnet/how-to-extend-the-marshaling-library.md).  
+ Biblioteka organizatora jest rozszerzalny, tak, aby można było dodać organizowania typów. Aby uzyskać więcej informacji na temat rozszerzania Biblioteka dotycząca organizowania, zobacz [porady: rozszerzanie biblioteki Marshalingu](../dotnet/how-to-extend-the-marshaling-library.md).  
   
- W starszych wersjach, można kierować danych przy użyciu [wywołanie platformy](/dotnet/framework/interop/consuming-unmanaged-dll-functions). Aby uzyskać więcej informacji na temat `PInvoke`, zobacz [wywoływanie funkcji natywnych z kodu zarządzanego](../dotnet/calling-native-functions-from-managed-code.md).  
+ We wcześniejszych wersjach, można kierować dane za pomocą [wywołania platformy](/dotnet/framework/interop/consuming-unmanaged-dll-functions). Aby uzyskać więcej informacji na temat `PInvoke`, zobacz [podczas wywoływania funkcji natywnych z kodu zarządzanego](../dotnet/calling-native-functions-from-managed-code.md).  
   
 ## <a name="see-also"></a>Zobacz też  
  [Biblioteka obsługi języka C++](../dotnet/cpp-support-library.md)   

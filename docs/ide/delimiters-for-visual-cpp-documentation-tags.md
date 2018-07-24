@@ -14,35 +14,35 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8fe65dfec3befa15ffebde3d074081ee11364f4d
-ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
+ms.openlocfilehash: e4d22df877ab757134ee6da86a5ff22ec106f958
+ms.sourcegitcommit: 7eadb968405bcb92ffa505e3ad8ac73483e59685
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "33337577"
+ms.lasthandoff: 07/23/2018
+ms.locfileid: "39208578"
 ---
 # <a name="delimiters-for-visual-c-documentation-tags"></a>Ograniczniki tagów dokumentacji Visual C++
-Korzystanie z tagów dokumentacji wymaga ograniczników, które wskazują w kompilatorze, gdzie komentarzy dokumentacji rozpoczęcia i zakończenia.  
+Korzystanie z tagów dokumentacji wymaga ograniczników, które wskazują kompilatora, gdzie rozpoczyna się i kończy w komentarzu dokumentacji.  
   
- Można użyć następujące rodzaje ograniczniki tagów dokumentacji XML:  
+ Za pomocą następujących rodzajów ograniczniki tagów dokumentacji XML:  
   
  `///`  
- Jest to formularz, który jest wyświetlany w przykładach dokumentacji i używane przez Szablony projektów Visual C++.  
+ Jest to forma, pokazano w przykładach dokumentacji i używane przez Szablony projektów Visual C++.  
   
  `/** */`  
  Są to wielowierszowy ograniczników.  
   
- Istnieją reguły niektóre formatowania w przypadku korzystania z `/** */` ogranicznik:  
+ Istnieją reguły niektóre formatowania, korzystając z `/** */` ograniczniki:  
   
--   Dla wiersza, który zawiera `/**` ogranicznik, jeśli do końca wiersza jest białe, wiersz nie został przetworzony przeznaczone do komentarzy. Jeśli pierwszym znakiem jest białe, czy biały znak jest ignorowane, a pozostałe wiersz jest przetwarzany. W przeciwnym razie cały tekst wiersza po `/**` ogranicznik jest przetwarzany jako część komentarza.  
+-   Dla wiersza, który zawiera `/**` ogranicznik, jeśli pozostałą część wiersza jest biały znak, wiersz nie został przetworzony komentarzy. Jeśli pierwszy znak odstępu, że biały znak jest ignorowana, a pozostała część wiersza jest przetwarzany. W przeciwnym razie cały tekst wiersza po `/**` ogranicznik jest przetwarzany jako część komentarza.  
   
--   Dla wiersza, który zawiera `*/` ogranicznik, jeśli istnieje tylko biały znak do `*/` ogranicznika wiersza jest ignorowana. W przeciwnym razie tekst w wierszu do `*/` ogranicznik jest przetwarzany jako część komentarza, opisane w poniższych punktor zasadom dopasowywanie do wzorca.  
+-   Dla wiersza, który zawiera `*/` ogranicznik, jeśli występuje maksymalnie białych znaków `*/` ogranicznik, w tym wierszu jest ignorowany. W przeciwnym razie tekst w wierszu do `*/` ogranicznik jest przetwarzany jako część komentarza, zgodnie z regułami dopasowywania wzorca opisanego w następny.  
   
--   Po tym, który rozpoczyna się od linii `/**` ogranicznik, kompilator szuka wspólnego wzorca na początku każdego wiersza składa się z opcjonalne białe oraz znak gwiazdki (`*`), a następnie opcjonalnie biały znak. Jeśli kompilator znajdzie ze wspólnego zestawu znaków na początku każdego wiersza, zignoruje ten wzorzec dla wszystkich wierszy po `/**` ogranicznika, prawdopodobnie łącznie wiersza, który zawiera `*/` ogranicznika.  
+-   Wiersze po ten, który rozpoczyna się od `/**` ogranicznik, kompilator szuka wspólny wzorzec na początku każdego wiersza, opcjonalny odstęp i znak gwiazdki (`*`), a następnie więcej opcjonalny odstęp. Jeśli kompilator znajdzie ze wspólnego zestawu znaków na początku każdego wiersza, zignoruje ten wzorzec dla wszystkich wierszy po `/**` ogranicznika, prawdopodobnie łącznie wiersza, który zawiera `*/` ogranicznika.  
   
  Kilka przykładów:  
   
--   Tylko część następujące komentarz, który zostanie przetworzona jest wiersza, który rozpoczyna się od `<summary>`. Następujące dwa formaty utworzy komentarze w tym samym:  
+-   To jedyna część Poniższy komentarz, które będą przetwarzane jest wiersz, który rozpoczyna się od `<summary>`. Następujące dwa formaty generuje ten sam komentarzy:  
   
     ```  
     /**  
@@ -51,7 +51,7 @@ Korzystanie z tagów dokumentacji wymaga ograniczników, które wskazują w komp
     /** <summary>text</summary> */  
     ```  
   
--   Kompilator stosuje wzorzec "*" do ignorowania na początku linii drugiego i trzeciego.  
+-   Kompilator stosuje wzorzec " \* " ignorowanie na początku linii drugiego i trzeciego.  
   
     ```  
     /**  
@@ -59,7 +59,7 @@ Korzystanie z tagów dokumentacji wymaga ograniczników, które wskazują w komp
      *  text </summary>*/  
     ```  
   
--   Kompilator znajduje nie wzorca w komentarz, ponieważ nie istnieje żadne gwiazdki w drugim wierszu. W związku z tym cały tekst w wierszach drugiego i trzeciego do `*/`, będą przetwarzane w ramach komentarza.  
+-   Kompilator znajdzie nie wzorca w komentarz, ponieważ nie istnieje żadne gwiazdki w drugim wierszu. W związku z tym, cały tekst w wierszach drugi i trzeci do `*/`, będą przetwarzane w ramach komentarza.  
   
     ```  
     /**  
@@ -67,7 +67,7 @@ Korzystanie z tagów dokumentacji wymaga ograniczników, które wskazują w komp
        text </summary>*/  
     ```  
   
--   Kompilator znajduje nie wzorca w komentarz dwóch powodów. Najpierw nie istnieje żaden wiersz rozpoczynający się spójne liczbę spacji przed znakiem gwiazdki. Drugie piątej wiersz rozpoczyna się od kartę, która jest niezgodna z spacji. W związku z tym cały tekst z drugiego wiersza do `*/` będą przetwarzane w ramach komentarza.  
+-   Kompilator znajduje nie wzorca w ten komentarz z dwóch przyczyn. Po pierwsze jest nie wiersza, który rozpoczyna się od spójne liczby spacji przed znakiem gwiazdki. Po drugie piąty wiersz rozpoczyna się od kartę, która jest niezgodna z miejsc do magazynowania. W związku z tym, cały tekst z drugiego wiersza do momentu `*/` będą przetwarzane w ramach komentarza.  
   
     ```  
     /**  

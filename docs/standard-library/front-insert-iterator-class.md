@@ -20,12 +20,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3e94b9f748924c9711c814f0f823467b313affcd
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: e709ce37d60281bbc56a0e8ecf3cc7eafef5b0ee
+ms.sourcegitcommit: 7eadb968405bcb92ffa505e3ad8ac73483e59685
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38964388"
+ms.lasthandoff: 07/23/2018
+ms.locfileid: "39207614"
 ---
 # <a name="frontinsertiterator-class"></a>front_insert_iterator — Klasa
 
@@ -63,9 +63,9 @@ Kontener musi spełniać wymagania dla sekwencji wstawiania na przód, gdzie jes
 
 |Operator|Opis|
 |-|-|
-|[operator *](#op_star)|Operator dereferencji używany do implementowania wyrażenie iteratora wyjściowego * `i`  =  `x` dla wstawiania na przód.|
+|[operator *](#op_star)|Operator dereferencji używany do implementowania wyrażenia iteratora danych wyjściowych \* `i`  =  `x` dla wstawiania na przód.|
 |[operator++](#op_add_add)|Zwiększa `front_insert_iterator` do następnej lokalizacji, w której może być przechowywana wartość.|
-|[operator=](#op_eq)|Operator przypisania używany do implementowania wyrażenie iteratora wyjściowego * `i`  =  `x` dla wstawiania na przód.|
+|[operator=](#op_eq)|Operator przypisania używany do implementowania wyrażenia iteratora danych wyjściowych \* `i`  =  `x` dla wstawiania na przód.|
 
 ## <a name="requirements"></a>Wymagania
 
@@ -177,7 +177,7 @@ After the front insertions, the list L is:
 *\
 ```
 
-## <a name="op_star"></a>  front_insert_iterator::operator *
+## <a name="op_star"></a>  front_insert_iterator::operator\*
 
 Wyłuskań iteratorów wstawiania zwracanie elementów, które ona rozwiązuje.
 

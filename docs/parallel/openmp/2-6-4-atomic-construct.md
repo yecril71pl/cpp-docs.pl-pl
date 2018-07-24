@@ -1,5 +1,5 @@
 ---
-title: 2.6.4 konstrukcja niepodzielna | Dokumentacja firmy Microsoft
+title: 2.6.4, konstrukcja atomic | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -12,47 +12,47 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 66f0dc8469d1d70b2697df1fe120f10142d90dbe
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: 3c906a9a9b781f742f525688b77d5f58da16bb10
+ms.sourcegitcommit: 7eadb968405bcb92ffa505e3ad8ac73483e59685
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33688131"
+ms.lasthandoff: 07/23/2018
+ms.locfileid: "39208136"
 ---
 # <a name="264-atomic-construct"></a>2.6.4 — konstrukcja niepodzielna
-`atomic` Dyrektywy zapewnia atomowo, aktualizowanie lokalizacji pamięci zamiast ujawnienie go możliwości wielu równoczesnych zapisywania wątków. Składnia `atomic` dyrektywy wygląda następująco:  
+`atomic` Dyrektywy oznacza, że lokalizacja pamięci niepodzielne, aktualizowane zamiast uwidaczniania go do możliwości wielu jednoczesnych, zapisywanie wątków. Składnia `atomic` dyrektywy jest następująca:  
   
 ```  
 #pragma omp atomic new-lineexpression-stmt  
 ```  
   
- Instrukcja wyrażeń musi mieć jeden z następujących formatów:  
+ Instrukcja wyrażeń musi mieć jedną z następujących form:  
   
- *x binop*= *wyrażenie*  
+ *x binop*= *expr*  
   
  x ++  
   
  ++ x  
   
- x--  
+ x —  
   
  --x  
   
  W poprzednim wyrażenia:  
   
--   *x* wyrażenie l-wartością skalarną typu.  
+-   *x* jest wyrażeniem l-wartości o typie skalarnym.  
   
--   *wyrażenie* wyrażenie skalarne, typ i nie odwołuje się obiekt wskazywany przez *x*.  
+-   *wyrażenie* to wyrażenie skalarne typu, a nie odwołuje się do obiekcie wyznaczonym przez *x*.  
   
--   `binop` nie jest przeciążony operator i jest jednym z +, *, -, / &, ^, &#124;, <\<, lub >>.  
+-   `binop` nie jest przeciążony operator i jest jednym z +, \*, -, / &, ^, &#124;, <\<, lub >>.  
   
- Mimo że jest zdefiniowane w implementacji czy implementację zastępuje wszystkie `atomic` dyrektywy z **krytyczne** dyrektywy, które mają taki sam unikatowy *nazwa*, `atomic` — dyrektywa zezwala lepsze optymalizacji. Dostępne są często sprzętu instrukcjami który można wykonać aktualizacji atomic o najmniejszej obciążenie.  
+ Mimo że jest zdefiniowane w implementacji tego, czy implementacja zastępuje wszystkie `atomic` dyrektyw z **krytyczne** dyrektyw, które mają taki sam unikatowy *nazwa*, `atomic` — dyrektywa zezwala lepiej optymalizacji. Często sprzętu instrukcje są dostępne, można wykonać aktualizację atomic o najmniejszej obciążenie.  
   
- Tylko obciążenia i magazynu obiekt wskazywany przez *x* są atomic; oceny *wyrażenie* nie jest atomic. Aby uniknąć wyścigu, wszystkie aktualizacje lokalizacji równolegle powinien być chroniony za `atomic` dyrektywy, z wyjątkiem tych, które są znane wolnych wyścigu.  
+ Tylko obciążenia i magazynu obiekcie wyznaczonym przez *x* są niepodzielne; oceny *expr* nie jest atomic. Aby uniknąć Sytuacje wyścigu, wszystkie aktualizacje lokalizacji, w sposób równoległy powinny być chronione przy użyciu `atomic` dyrektywy, z wyjątkiem tych, które są znane jako bez wyścigu.  
   
- Ograniczenia `atomic` dyrektywy są następujące:  
+ Ograniczenia `atomic` dyrektywy jest następująca:  
   
--   Wszystkie atomic odwołania do lokalizacji magazynu x w programie muszą mieć zgodne z typem.  
+-   Wszystkie odwołania niepodzielną do lokalizacji magazynu x w całym programie muszą mieć zgodne z typem.  
   
 ## <a name="examples"></a>Przykłady:  
   

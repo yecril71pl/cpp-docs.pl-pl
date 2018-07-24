@@ -44,16 +44,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 012315e11ccf2dbe63e32c6208487f324ef29289
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 8ead91ce542ce547f9453f52455dc76d61045b87
+ms.sourcegitcommit: 7eadb968405bcb92ffa505e3ad8ac73483e59685
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32401425"
+ms.lasthandoff: 07/23/2018
+ms.locfileid: "39208418"
 ---
 # <a name="ldexp-ldexpf-ldexpl"></a>ldexp —, ldexpf —, ldexpl
 
-Mnoży liczba zmiennoprzecinkowa przez całkowitą potęgą liczby dwa.
+Mnoży liczbę zmiennoprzecinkową przez całkowitą potęgą liczby dwa.
 
 ## <a name="syntax"></a>Składnia
 
@@ -86,25 +86,25 @@ long double ldexpl(
 Wartość zmiennoprzecinkowa.
 
 *EXP*<br/>
-Wykładnik liczby całkowitej.
+Wykładnik potęgi liczby całkowitej.
 
 ## <a name="return-value"></a>Wartość zwracana
 
-**Ldexp —** zwracają wartość *x* * 2<sup>*exp* </sup> w przypadku powodzenia. Na przepełnienia, a także w zależności od jej znaku *x*, **ldexp —** zwraca **huge_val —**; **errno** ma wartość **erange —** .
+**Ldexp —** funkcje zwracają wartość *x* \* 2<sup>*exp* </sup> w przypadku powodzenia. Przy przepełnieniu oraz od jej znaku *x*, **ldexp —** zwraca wartość +/- **HUGE_VAL**; **errno** wartość jest równa **ERANGE** .
 
-Aby uzyskać więcej informacji na temat **errno** i może zawierać błąd zwracają wartości, zobacz [errno _doserrno —, _sys_errlist — i _sys_nerr —](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
+Aby uzyskać więcej informacji na temat **errno** i błędach zwracają wartości, zobacz [errno, _doserrno, _sys_errlist i _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
 ## <a name="remarks"></a>Uwagi
 
-Ponieważ C++ pozwala przeładowanie, można wywoływać przeciążenia **ldexp —** które trwają **float** lub **długi** **podwójne** typów. W programie C **ldexp —** zawsze ma **podwójne** i **int** i zwraca **podwójne**.
+Ponieważ C++ pozwala na przeciążenie, można wywoływać przeciążenia **ldexp —** o **float** lub **długie** **double** typów. W programie C **ldexp —** zawsze ma **double** i **int** i zwraca **double**.
 
 ## <a name="requirements"></a>Wymagania
 
-|Procedura|Nagłówek C|Nagłówek C++|
+|Procedura|Nagłówek języka C|Nagłówek języka C++|
 |-------------|--------------|------------------|
 |**ldexp —**, **ldexpf —**, **ldexpl**|\<math.h>|\<cmath >|
 
-Aby uzyskać informacje dotyczące zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md).
+Aby uzyskać informacje o zgodności – zobacz [zgodności](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Przykład
 

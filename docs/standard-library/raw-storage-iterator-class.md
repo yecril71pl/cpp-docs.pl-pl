@@ -20,12 +20,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1d259040ec5f4d7f1148b9a782479b6db8617602
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 470fb497bb52fa51fec06ac0edb3e1996aa1e5e8
+ms.sourcegitcommit: 7eadb968405bcb92ffa505e3ad8ac73483e59685
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38954633"
+ms.lasthandoff: 07/23/2018
+ms.locfileid: "39208529"
 ---
 # <a name="rawstorageiterator-class"></a>raw_storage_iterator — Klasa
 
@@ -69,8 +69,8 @@ Ta klasa adaptera jest używana, gdy jest to konieczne oddzielać alokacji pami�
 
 |Operator|Opis|
 |-|-|
-|[operator *](#op_star)|Operator dereferencji używany do implementowania wyrażenie iteratora wyjściowego * `ii`  =  `x`.|
-|[operator=](#op_eq)|Operator przypisania używany do implementowania wyrażenia iteratora magazynu * `i`  =  `x` do przechowywania w pamięci.|
+|[operator *](#op_star)|Operator dereferencji używany do implementowania wyrażenia iteratora danych wyjściowych \* `ii`  =  `x`.|
+|[operator=](#op_eq)|Operator przypisania używany do implementowania wyrażenia iteratora magazynu \* `i`  =  `x` do przechowywania w pamięci.|
 |[operator++](#op_add_add)|Operatory preincrement i postinkrementacyjne dla iteratorów magazynu.|
 
 ## <a name="requirements"></a>Wymagania
@@ -103,7 +103,7 @@ typedef ForwardIterator iter_type;
 
 Typ jest synonimem dla parametru szablonu `ForwardIterator`.
 
-## <a name="op_star"></a>  raw_storage_iterator::operator *
+## <a name="op_star"></a>  raw_storage_iterator::operator\*
 
 Operator dereferencji używany do implementowania wyrażenia iteratora magazynu \* *ii* = *x*.
 

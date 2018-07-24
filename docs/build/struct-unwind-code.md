@@ -12,15 +12,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 068acacf88e9ac968b34c26bf76657fd33adf4f3
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 919568b5b1f7feba403a4bdbc838f69ca5da70e5
+ms.sourcegitcommit: 7eadb968405bcb92ffa505e3ad8ac73483e59685
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32390102"
+ms.lasthandoff: 07/23/2018
+ms.locfileid: "39207777"
 ---
 # <a name="struct-unwindcode"></a>struktura UNWIND_CODE
-Tablica kodu unwind jest używana do rejestrowania sekwencja operacji w prologu, które mają wpływ na nieulotnej rejestrów i źródło. Każdy element kodu ma następujący format:  
+Tablica kodu odwijania jest używana do rejestrowania sekwencji operacji w prologu, na które wpływają na nieulotnej rejestrów i RSP. Każdy element kodu ma następujący format:  
   
 |||  
 |-|-|  
@@ -28,91 +28,91 @@ Tablica kodu unwind jest używana do rejestrowania sekwencja operacji w prologu,
 |UBYTE: 4|Kod operacji unwind|  
 |UBYTE: 4|Informacje o operacji|  
   
- Tablica jest sortowana według malejącej przesunięcie w prologu.  
+ Tablica jest posortowana według malejącej przesunięcie w prologu.  
   
  **Przesunięcie w prologu**  
- Przesunięcie od początku prologu końca instrukcji, które wykonuje tę operację, a także 1 (to znaczy Przesunięcie początku następną instrukcję).  
+ Przesunięcie od początku prologu końca instrukcji, która wykonuje tę operację powiększoną o 1 (czyli Przesunięcie początku następnej instrukcji).  
   
  **Kod operacji unwind**  
- Uwaga: Niektóre kody operacji wymaga niepodpisane przesunięcie wartości w ramce stosu lokalnego. Jest to przesunięcie od początku alokacji stosu stałego (najniższym adresem). Jeśli pole zarejestrować ramki w UNWIND_INFO wynosi zero, to przesunięcie jest źródło. Jeśli pole zarejestrować ramki jest różna od zera, to przesunięcie, z którym źródło znajdował się, gdy FP reg zostało ustanowione. To jest równe reg FP minus przesunięcie reg FP (16 * skalowana ramki zarejestrować przesunięcie w UNWIND_INFO). Jeśli używana jest reg FP, następnie dowolny kod unwind biorąc przesunięcia może być używana tylko po ustanowieniu FP reg w prologu.  
+ Uwaga: Niektóre kody operacji wymagają niepodpisane przesunięcie wartości w ramce stosu lokalnego. Jest to przesunięcie od początku alokacji stosu stałych (najniższy adres). Jeśli pole zarejestrować ramki UNWIND_INFO wynosi zero, to przesunięcie pochodzi z RSP. Jeśli pole zarejestrować ramki jest różna od zera, to przesunięcie, z którym RSP znajdował się w przypadku FP reg zostało ustanowione. To jest równe reg FP minus przesunięcie reg FP (16 \* skalowanych ramki zarejestrować przesunięcie w UNWIND_INFO). Jeśli reg FP jest używany, następnie jakiegokolwiek kodu unwind biorąc przesunięcia może być używana tylko po nawiązaniu FP reg w prologu.  
   
- Dla wszystkich opcodes z wyjątkiem UWOP_SAVE_XMM128 i UWOP_SAVE_XMM128_FAR przesunięcie będą zawsze miały wielokrotnością liczby 8, ponieważ wszystkie wartości stosu istotnych znajdują się na granice 8 bajtów (stosu sam jest zawsze 16-bajtowych wyrównane). Kodów operacji, które przyjmują krótkich przesunięcie (mniej niż 512 KB) końcowych USHORT w węzłach tego kodu przechowuje przesunięcie podzielić przez 8. Dla kody operacji, które przyjmują długi przesunięcie (512 KB < = przesunięcie < 4GB), końcowego dwa węzły USHORT dla tego kodu utrzymywanie przesunięcie (w formacie little endian).  
+ Dla wszystkich rozkazów z wyjątkiem UWOP_SAVE_XMM128 i UWOP_SAVE_XMM128_FAR przesunięcie jest zawsze wielokrotnością liczby 8, ponieważ interesujących wszystkie wartości stosu są przechowywane w granicach 8 bajtów (stosu, sam jest zawsze 16-bajtowy wyrównane). Kody operacji, które przyjmują krótki przesunięcie (mniej niż 512K) końcowy USHORT w węzłach dla tego kodu przechowuje przesunięcie podzielić przez 8. Dla kodów operacji, które przyjmują długie przesunięcie (512 KB < = przesunięcie < 4GB), końcowy dwa węzły USHORT ten kod przechowywania przesunięcie (w formacie little-endian).  
   
- Dla opcodes UWOP_SAVE_XMM128 i UWOP_SAVE_XMM128_FAR przesunięcie będą zawsze miały wielokrotnością 16, ponieważ wszystkie operacje XMM 128-bitowego musi wystąpić 16-bajtowych wyrównany pamięci. W związku z tym współczynnik skali, 16 jest używana do UWOP_SAVE_XMM128 umożliwiający przesunięcia mniej niż 1M.  
+ Rozkazów UWOP_SAVE_XMM128 i UWOP_SAVE_XMM128_FAR przesunięcie będzie zawsze być wielokrotnością liczby 16, ponieważ wszystkie operacje XMM 128-bitowego musi przypadać na 16-bajtowy wyrównanej pamięci. W związku z tym współczynnik skali 16 jest używany dla UWOP_SAVE_XMM128, pozwalające przesunięcia mniej niż 1 mln.  
   
- Kod operacji unwind jest jednym z następujących czynności:  
+ Kod operacji odwijania jest jedną z następujących czynności:  
   
- UWOP_PUSH_NONVOL (0) 1 węzła  
+ UWOP_PUSH_NONVOL (0) 1 węzeł  
   
- Wypchnij rejestru nieulotnej liczba całkowita, dekrementacja źródło przez 8. Informacje o operacji jest numer rejestru. Zauważ, że, ze względu na ograniczenia dotyczące epilogs, kody unwind UWOP_PUSH_NONVOL musi występować jako pierwszy w prologu i odpowiednio ostatni w tablicy unwind kodu. Względne uporządkowanie ma zastosowanie do wszystkich innych kodów unwind z wyjątkiem UWOP_PUSH_MACHFRAME.  
+ Wypchnij nieulotnej całkowitoliczbowym, zmniejszanie RSP przez 8. Informacje o operacji są numer rejestru. Pamiętaj, że, ze względu na ograniczenia dotyczące epilogs, kody unwind UWOP_PUSH_NONVOL musi występować jako pierwszy w prologu i odpowiednio ostatni w tablicy kodu unwind. Względne uporządkowanie ma zastosowanie do wszystkich innych kodów odwijania, z wyjątkiem UWOP_PUSH_MACHFRAME.  
   
- UWOP_ALLOC_LARGE (1) węzły 2 lub 3  
+ UWOP_ALLOC_LARGE (1) 2 lub 3 węzłów  
   
- Przydziel obszar dużych na stosie. Istnieją dwie formy. Jeśli informacje o operacji jest równa 0, a następnie rozmiar alokacji podzielona przez 8 jest rejestrowany w gnieździe dalej stosowanie alokacji maksymalnie 512 KB - 8. Jeśli informacje o operacji jest równa 1, a następnie nieskalowanego rozmiar alokacji jest rejestrowana w kolejnych dwóch miejsc w formacie little endian, dzięki czemu alokacje do 4GB - 8.  
+ Przydziel obszar o dużych rozmiarach na stosie. Istnieją dwie formy. Jeśli informacje o operacji jest równa 0, a następnie rozmiar alokacji podzielona przez 8 są rejestrowane w następnym gniazda, umożliwiając alokacji maksymalnie 512 K - 8. Jeśli informacje o operacji jest równa 1, a następnie nieskalowanego rozmiar alokacji jest rejestrowana w następnych dwóch miejsc w formacie little-endian, dzięki czemu alokacji do 4GB - 8.  
   
- UWOP_ALLOC_SMALL (2) 1 węzła  
+ UWOP_ALLOC_SMALL (2) 1 węzeł  
   
- Przydziel obszar małe na stosie. Rozmiar alokacji to pola informacje o operacji * 8 + 8, umożliwiając alokacji od 8 do 128.  
+ Przydziel obszar małe na stosie. Rozmiar alokacji to pola informacje o operacji \* 8 + 8, dzięki czemu alokacje od 8 do 128.  
   
- Kod unwind alokacji stosu zawsze należy używać najmniejszej kodowanie możliwe:  
+ Kod unwind alokacji stosu zawsze należy używać w możliwie najkrótszym możliwe kodowanie:  
   
 |||  
 |-|-|  
 |**Rozmiar alokacji**|**Kodzie operacji unwind**|  
-|8 – 128 bajtów|UWOP_ALLOC_SMALL|  
-|136 do 512-8 KB|UWOP_ALLOC_LARGE, informacje o operacji = 0|  
+|8 do 128 bajtów|UWOP_ALLOC_SMALL|  
+|136 do 512-8 kilobajtów|UWOP_ALLOC_LARGE, informacje o operacji = 0|  
 |512 KB do 4G - 8 bajtów|UWOP_ALLOC_LARGE, informacje o operacji = 1|  
   
- (3) UWOP_SET_FPREG węzła 1  
+ UWOP_SET_FPREG (3) 1 węzeł  
   
- Rejestr wskaźnika ramki należy ustanowić przez ustawienie rejestru do niektórych przesunięcie bieżące źródło. Przesunięcie jest równa zarejestrować ramki (skalowanie) pole przesunięcia UNWIND_INFO * 16, dzięki czemu przesunięcia od 0 do 240. Przesunięcie pozwala ustanawianie wskaźnika ramki, wskazujące środka alokacji stosu stały, ułatwienia gęstość kodu, zezwalając więcej uzyskuje dostęp do używania formularzy krótkie instrukcje. Należy pamiętać, że w polu informacje o operacji jest zarezerwowany i nie powinna być używana.  
+ Przez ustawienie rejestru na niektórych przesunięcie bieżącego RSP, należy ustanowić rejestr wskaźnika ramki. Przesunięcie jest równa zarejestrować ramki (skalowanych) pole przesunięcia UNWIND_INFO \* 16, dzięki czemu przesunięcia z zakresu od 0 do 240. Zezwala na użycie przesunięcie, ustanawiania wskaźnik ramki, który wskazuje na środku alokacji stosu stały, pomagając gęstość kodu, umożliwiając więcej uzyskuje dostęp do używania formularzy krótkich instrukcji. Należy zauważyć, że pola informacje o operacji jest zarezerwowany i nie powinna być używana.  
   
- UWOP_SAVE_NONVOL (4) węzły 2  
+ UWOP_SAVE_NONVOL (4) 2 węzły  
   
- Zapisz rejestru nieulotnej całkowitą na stosie za pomocą MOV zamiast WYPYCHANIA. To jest używany głównie dla shrink-wrapping, której jest zapisywany nieulotnej rejestru do stosu w pozycji, która była przydzielona wcześniej. Informacje o operacji jest numer rejestru. Przesunięcie skalowana przez 8 stosu jest rejestrowany w następnej operacji unwind gniazda kod operacji, zgodnie z opisem w powyższej Uwaga.  
+ Zapisz nieulotnej całkowitoliczbowym na stosie przy użyciu MOV zamiast powiadomienie WYPYCHANE. To jest używany głównie dla shrink-wrapping, gdzie nieulotnej rejestru są zapisywane na stos w stanie, która była przydzielona wcześniej. Informacje o operacji są numer rejestru. Przesunięcie skalowany przy 8 stosu są zapisywane w następnej operacji unwind miejsca kod operacji zgodnie z opisem w powyższej Uwaga.  
   
- UWOP_SAVE_NONVOL_FAR (5) węzły 3  
+ UWOP_SAVE_NONVOL_FAR (5) 3 węzły  
   
- Zapisz rejestru nieulotnej całkowitą na stosie z przesunięciem długie, użycie MOV zamiast WYPYCHANIA. To jest używany głównie dla shrink-wrapping, której jest zapisywany nieulotnej rejestru do stosu w pozycji, która była przydzielona wcześniej. Informacje o operacji jest numer rejestru. Przesunięcie nieskalowanego stosu jest rejestrowany w ciągu następnych dwóch miejsc kod operacji unwind zgodnie z opisem w powyższej Uwaga.  
+ Zapisz nieulotnej całkowitoliczbowym na stosie z przesunięciem długie, użycie MOV zamiast powiadomienie WYPYCHANE. To jest używany głównie dla shrink-wrapping, gdzie nieulotnej rejestru są zapisywane na stos w stanie, która była przydzielona wcześniej. Informacje o operacji są numer rejestru. Przesunięcie nieskalowanego stosu jest rejestrowana w ciągu następnych dwóch miejsc kod operacji unwind zgodnie z opisem w powyższej Uwaga.  
   
- UWOP_SAVE_XMM128 (8) węzły 2  
+ UWOP_SAVE_XMM128 (8) 2 węzły  
   
- Zapisz wszystkie 128 bitów nieulotnej, zarejestruj XMM na stosie. Informacje o operacji jest numer rejestru. Przesunięcie stosu skalowany przy 16 jest rejestrowana w gnieździe dalej.  
+ Zapisz wszystkie 128 bitów nieulotnej, zarejestruj XMM na stosie. Informacje o operacji są numer rejestru. Przesunięcie stosu skalowany przy 16 są rejestrowane w gnieździe dalej.  
   
- UWOP_SAVE_XMM128_FAR (9) węzły 3  
+ UWOP_SAVE_XMM128_FAR (9) 3 węzły  
   
- Zapisz wszystkie 128 bitów nieulotnej, zarejestruj XMM na stosie z przesunięciem długo. Informacje o operacji jest numer rejestru. Przesunięcie nieskalowanego stosu jest rejestrowana w kolejnych dwóch miejsc.  
+ Zapisz wszystkie 128 bitów nieulotnej, zarejestruj XMM na stosie z przesunięciem długie. Informacje o operacji są numer rejestru. Przesunięcie nieskalowanego stosu jest rejestrowana w dwóch następnych miejsc.  
   
- UWOP_PUSH_MACHFRAME (10) 1 węzła  
+ UWOP_PUSH_MACHFRAME (10) 1 węzeł  
   
- Wypchnij ramki maszyny.  Służy do rejestrowania przerwań sprzętowych lub wyjątek. Istnieją dwie formy. Jeśli informacje o operacji równa 0, następujące ma został naciśnięty na stosie:  
-  
-|||  
-|-|-|  
-|ŹRÓDŁO + 32|SS|  
-|ŹRÓDŁO + 24|Stary źródło|  
-|ŹRÓDŁO + 16|EFLAGS|  
-|ŹRÓDŁO + 8|CS|  
-|ŹRÓDŁO|PROTOKÓŁ RIP|  
-  
- Jeśli informacje o operacji jest równa 1, a następnie następujące ma zamiast tego wypychana:  
+ Wypchnij ramki maszyny.  Służy do rejestrowania efekt sprzętu, przerwania lub wyjątku. Istnieją dwie formy. Jeśli informacje o operacji jest równa 0, że zostało wypchnięte na stosie:  
   
 |||  
 |-|-|  
-|ŹRÓDŁO + 40|SS|  
-|ŹRÓDŁO + 32|Stary źródło|  
-|ŹRÓDŁO + 24|EFLAGS|  
-|ŹRÓDŁO + 16|CS|  
-|ŹRÓDŁO + 8|PROTOKÓŁ RIP|  
-|ŹRÓDŁO|Kod błędu:|  
+|RSP + 32|SS|  
+|RSP + 24|Stary RSP|  
+|RSP + 16|EFLAGS|  
+|RSP + 8|CS|  
+|RSP|PROTOKÓŁ RIP|  
   
- Ten kod unwind zawsze będą wyświetlane w prologu fikcyjny, co faktycznie nigdy nie jest wykonywana, ale zamiast tego jest umieszczany przed punkt wejścia rzeczywistych procedury przerwań i istnieje tylko w celu zapewnienia miejsca do symulowania wypychania ramki maszyny. UWOP_PUSH_MACHFRAME rejestruje tego symulacji, co oznacza, że maszynie koncepcyjnie wykonaniu następujących czynności:  
+ Jeśli o operacji jest równa 1, a następnie wypchnięto zamiast tego następujące:  
   
- POP RIP Adres zwrotny z góry stosu w *Temp*  
+|||  
+|-|-|  
+|RSP + 40|SS|  
+|RSP + 32|Stary RSP|  
+|RSP + 24|EFLAGS|  
+|RSP + 16|CS|  
+|RSP + 8|PROTOKÓŁ RIP|  
+|RSP|Kod błędu:|  
+  
+ Ten kod unwind zawsze pojawi się w prologu fikcyjnego z rolą, która faktycznie nigdy nie jest wykonywane, ale zamiast tego jest umieszczany przed punktu wejścia rzeczywistych procedury przerwań i istnieje tylko po to, aby zapewnić miejsce, aby zasymulować wypychania ramki maszyny. UWOP_PUSH_MACHFRAME rejestruje symulacji i wskazuje, że komputer ma pod względem koncepcyjnym wykonać następujące czynności:  
+  
+ Adres zwrotny RIP z góry stosu do POP *Temp*  
   
  Wypychanie SS  
   
- Źródło starego wypychania  
+ Stary RSP wypychania  
   
  Wypychanie EFLAGS  
   
@@ -120,12 +120,12 @@ Tablica kodu unwind jest używana do rejestrowania sekwencja operacji w prologu,
   
  Wypychanie *Temp*  
   
- Wypychanie kodu błędu (Jeśli informacje o op jest równa 1)  
+ Wypychanie kodu błędu (Jeśli informacje o operacji jest równa 1)  
   
- Symulowane UWOP_PUSH_MACHFRAME operacji zmniejsza źródło przez 40 (informacje o op równe 0) lub 48 (op informacji jest równa 1).  
+ Symulowane UWOP_PUSH_MACHFRAME zmniejsza operacji RSP, przez 40 (op informacji jest równa 0) lub 48 (op informacji jest równa 1).  
   
  **Informacje o operacji**  
- Znaczenie te 4 bity zależy od kodu operacji. Aby zakodować rejestru ogólnego przeznaczenia (liczba całkowita), służy następującego mapowania:  
+ Znaczenie tych 4 bitów zależy od kodu operacji. Do zakodowania rejestru ogólnego przeznaczenia (liczba całkowita), służy następujące mapowania:  
   
 |||  
 |-|-|  
@@ -133,11 +133,11 @@ Tablica kodu unwind jest używana do rejestrowania sekwencja operacji w prologu,
 |1|RCX|  
 |2|RDX|  
 |3|RBX|  
-|4|ŹRÓDŁO|  
+|4|RSP|  
 |5|RBP|  
 |6|RSI|  
 |7|RDI|  
-|8 – 15|R8 do R15|  
+|8-15|R8 do R15|  
   
 ## <a name="see-also"></a>Zobacz też  
  [Dane operacji Unwind dla obsługi wyjątków, obsługa debugera](../build/unwind-data-for-exception-handling-debugger-support.md)

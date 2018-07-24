@@ -22,12 +22,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4ee931abb2273ab3119fa62b9219ad69448b2048
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 308254fded0ac38a794233fb3f4eacd4d7d6fd19
+ms.sourcegitcommit: 7eadb968405bcb92ffa505e3ad8ac73483e59685
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38963527"
+ms.lasthandoff: 07/23/2018
+ms.locfileid: "39207922"
 ---
 # <a name="ostreamiterator-class"></a>ostream_iterator — Klasa
 
@@ -68,9 +68,9 @@ Klasa ostream_iterator musi spełniać wymagania dla iteratora wyjściowego. Alg
 
 |Operator|Opis|
 |-|-|
-|[operator *](#op_star)|Operator dereferencji używany do implementowania wyrażenie iteratora wyjściowego * `i`  =  `x`.|
+|[operator *](#op_star)|Operator dereferencji używany do implementowania wyrażenia iteratora danych wyjściowych \* `i`  =  `x`.|
 |[operator++](#op_add_add)|Operator inkrementacji prawidłowo, który zwraca `ostream_iterator` ten sam obiekt się odnosił przed wywołaniem operacji.|
-|[operator=](#op_eq)|Operator przypisania używany do implementowania wyrażenie iteratora wyjściowego * `i`  =  `x` do zapisywania do strumienia wyjściowego.|
+|[operator=](#op_eq)|Operator przypisania używany do implementowania wyrażenia iteratora danych wyjściowych \* `i`  =  `x` do zapisywania do strumienia wyjściowego.|
 
 ## <a name="requirements"></a>Wymagania
 
@@ -228,7 +228,7 @@ Elements written to output stream:
 
 ## <a name="op_eq"></a>  ostream_iterator::operator =
 
-Operator przypisania używany do implementowania wyrażenia output_iterator * `i`  =  `x` do zapisywania do strumienia wyjściowego.
+Operator przypisania używany do implementowania wyrażenia output_iterator \* `i`  =  `x` do zapisywania do strumienia wyjściowego.
 
 ```cpp
 ostream_iterator<Type, CharType, Traits>& operator=(const Type& val);
@@ -244,7 +244,7 @@ Wstawia operator *val* do strumienia wyjściowego, skojarzony z obiektem, a nast
 
 ### <a name="remarks"></a>Uwagi
 
-Wymagania dla iteratora wyjściowego, `ostream_iterator` musi spełniać wymagają tylko wyrażenia * `ii`  =  `t` ważność i nie mówi nic o operator lub operator = własnych. Ten operator elementu członkowskiego zwraca `*this`.
+Wymagania dla iteratora wyjściowego, `ostream_iterator` musi spełniać wymagają tylko wyrażenia \* `ii`  =  `t` ważność i nie mówi nic o operator lub operator = własnych. Ten operator elementu członkowskiego zwraca `*this`.
 
 ### <a name="example"></a>Przykład
 

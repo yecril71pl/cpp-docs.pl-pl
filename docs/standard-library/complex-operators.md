@@ -19,12 +19,12 @@ helpviewer_keywords:
 - std::operator!= (complex)
 - std::operator&gt;&gt; (complex)
 - std::operator&lt;&lt; (complex), std::operator== (complex)
-ms.openlocfilehash: b65178b171b8717096eb19206877b033a52d1e44
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 2491cb859de8908bbe0710f03d12f836bbd80e2f
+ms.sourcegitcommit: 7eadb968405bcb92ffa505e3ad8ac73483e59685
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38957701"
+ms.lasthandoff: 07/23/2018
+ms.locfileid: "39208679"
 ---
 # <a name="ltcomplexgt-operators"></a>&lt;złożone&gt; operatorów
 
@@ -172,7 +172,7 @@ The 2nd right-side complex number is cr3b = (5,0)
 The complex numbers cl3b & cr3b are equal.
 ```
 
-## <a name="op_star"></a>  operator *
+## <a name="op_star"></a>  Operator\*
 
 Mnoży dwie liczby zespolone, jednego lub obu z nich może należeć do podzbioru typu rzeczywiste i urojone części.
 
@@ -196,9 +196,9 @@ complex<Type> operator*(
 
 ### <a name="parameters"></a>Parametry
 
-*po lewej stronie* pierwsza z dwóch liczb zespolonych lub liczbą, która jest typu parametru dla liczby zespolonej, który ma zostać pomnożona przez * operacji.
+*po lewej stronie* pierwsza z dwóch liczb zespolonych lub liczbą, która jest typu parametru dla liczby zespolonej, który ma zostać pomnożona przez \* operacji.
 
-*prawy* drugi z dwóch liczb zespolonych lub liczbą, która jest typu parametru dla liczby zespolonej, który ma zostać pomnożona przez * operacji.
+*prawy* drugi z dwóch liczb zespolonych lub liczbą, która jest typu parametru dla liczby zespolonej, który ma zostać pomnożona przez \* operacji.
 
 ### <a name="return-value"></a>Wartość zwracana
 

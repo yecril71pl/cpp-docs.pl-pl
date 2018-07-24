@@ -14,12 +14,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ad931eb1c62c4ee9ed8213704cc4be8d1f2aeecd
-ms.sourcegitcommit: d1f576a0f59678edc3d93508cf46485138332178
+ms.openlocfilehash: 8cdd0c5d8e89d41e24bf980093f5994c1c9fc495
+ms.sourcegitcommit: 7eadb968405bcb92ffa505e3ad8ac73483e59685
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34753672"
+ms.lasthandoff: 07/23/2018
+ms.locfileid: "39209277"
 ---
 # <a name="x86-intrinsics-list"></a>Lista funkcji wewnętrznych x86
 
@@ -27,39 +27,39 @@ Ten dokument zawiera listę funkcji wewnętrznych obsługiwanych przez kompilato
 
 Aby uzyskać informacje o poszczególnych funkcjach wewnętrznych, zapoznaj się z tymi zasobami, odpowiednio dla docelowej architektury procesora:
 
-- Plik nagłówka. Wiele funkcji wewnętrznych są udokumentowane w komentarzach w pliku nagłówka.
+- Plik nagłówkowy. Wiele obiektów wewnętrznych są udokumentowane w komentarzach w pliku nagłówkowym.
 
-- [Przewodnik funkcje wewnętrzne Intel](https://software.intel.com/sites/landingpage/IntrinsicsGuide/). Użyj pola wyszukiwania, aby znaleźć określone funkcje wewnętrzne.
+- [Przewodnik po funkcjach wewnętrznych Intel](https://software.intel.com/sites/landingpage/IntrinsicsGuide/). Użyj pola wyszukiwania, aby znaleźć określone funkcje wewnętrzne.
 
-- [Podręczniki deweloperów oprogramowania architektur 64 i IA-32 Intel](https://go.microsoft.com/fwlink/p/?LinkID=510021)
+- [Podręczniki dewelopera oprogramowania architektury 64 i IA-32 firmy Intel](https://go.microsoft.com/fwlink/p/?LinkID=510021)
 
-- [Dokumentacja programowania Intel architektura instrukcji zestawu rozszerzenia](https://go.microsoft.com/fwlink/p/?linkid=874960)
+- [Dokumentacja programowania Intel architektury instrukcji zestawu rozszerzeń](https://go.microsoft.com/fwlink/p/?linkid=874960)
 
 - [Wprowadzenie do Intel Advanced Vector Extensions](https://go.microsoft.com/fwlink/p/?linkid=874961)
 
-- [Przewodniki Developer AMD, instrukcje i dokumenty ISA](https://go.microsoft.com/fwlink/p/?linkid=874958)
+- [Podręczniki dla projektantów AMD, podręczników & dokumentów ISA](https://go.microsoft.com/fwlink/p/?linkid=874958)
 
-W poniższej tabeli wymieniono funkcje wewnętrzne dostępne na x86 procesorów. Kolumna technologii zawiera zestaw instrukcji obsługi technicznej. Użyj [__cpuid](../intrinsics/cpuid-cpuidex.md) wewnętrznego, aby określić zestaw instrukcji obsługi w czasie wykonywania. W przypadku dwóch wpisów w jednym wierszu, reprezentują one różne punkty wejścia dla tego samego wewnętrznej. [1] wskazuje, że wewnętrznej jest dostępna tylko na procesory AMD. [2] wskazuje, że wewnętrznej jest dostępna tylko na procesory Intel. [3] wskazuje, że makro jest prototypu. Nagłówek wymaganych przez prototypu funkcji znajduje się w nagłówku kolumny. Nagłówek intrin.h zawiera immintrin.h i ammintrin.h dla uproszczenia.
+W poniższej tabeli wymieniono funkcje wewnętrzne dostępne na x86 procesorów. Kolumna technologii zawiera zestaw instrukcji obsługi technicznej. Użyj [__cpuid](../intrinsics/cpuid-cpuidex.md) wewnętrznych, aby określić zestaw instrukcji obsługi w czasie wykonywania. W przypadku dwóch wpisów w jednym wierszu, stanowią one różne punkty wejścia dla tej samej wewnętrznej. [1] wskazuje, że wewnętrznych jest dostępna tylko na procesory AMD. [2] wskazuje, że wewnętrznych jest dostępna tylko na procesorach Intel. [3] wskazuje, że prototyp jest makra. Nagłówek, wymagane do prototypu funkcji znajduje się w nagłówku kolumny. Nagłówek intrin.h obejmuje zarówno immintrin.h, jak i ammintrin.h dla uproszczenia.
 
 |Nazwa funkcji wewnętrznej|Technologia|nagłówek|Prototyp funkcji|
 |--------------------|----------------|------------|------------------------|
-|_addcarry_u16||intrin.h|unsigned char _addcarry_u16 (unsigned char c_in, niepodpisane src1 krótkich, niepodpisane src2 krótkie, bez znaku krótko * Suma)|
-|[_addcarry_u32](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_addcarry_u32)||intrin.h|unsigned char _addcarry_u32 (unsigned char c_in, src1 unsigned int, src2 unsigned int, int bez znaku * Suma)|
-|_addcarry_u8||intrin.h|unsigned char _addcarry_u8 (unsigned char c_in, src1 char bez znaku, src2 unsigned char unsigned char * Suma)|
-|[_addcarryx_u32](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_addcarryx_u32)|ADX [2]|immintrin.h|unsigned char _addcarryx_u32 (unsigned char c_in, src1 unsigned int, src2 unsigned int, int bez znaku * Suma)|
-|[__addfsbyte](../intrinsics/addfsbyte-addfsword-addfsdword.md)||intrin.h|void __addfsbyte (unsigned char długie, bez znaku)|
-|[__addfsdword](../intrinsics/addfsbyte-addfsword-addfsdword.md)||intrin.h|void __addfsdword (unsigned long, unsigned long)|
-|[__addfsword](../intrinsics/addfsbyte-addfsword-addfsdword.md)||intrin.h|void __addfsword (bez znaku krótkiej długie, bez znaku)|
-|[_AddressOfReturnAddress](../intrinsics/addressofreturnaddress.md)||intrin.h|void * _AddressOfReturnAddress(void)|
-|_andn_u32|BMI [1]|ammintrin.h|unsigned int _andn_u32 (unsigned int, int bez znaku)|
-|[_bextr_u32](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_bextr_u32)|BMI|ammintrin.h, immintrin.h|unsigned int _bextr_u32 (unsigned int, int bez znaku, unsigned int)|
-|_bextri_u32|ABM [1]|ammintrin.h|unsigned int _bextri_u32 (unsigned int, int bez znaku)|
-|[_BitScanForward](../intrinsics/bitscanforward-bitscanforward64.md)||intrin.h|Wartość logiczna _BitScanForward (OUT ULONG * maska ULONG indeksu, IN)|
-|[_BitScanReverse](../intrinsics/bitscanreverse-bitscanreverse64.md)||intrin.h|Wartość logiczna _BitScanReverse (OUT ULONG * maska ULONG indeksu, IN)|
-|[_bittest](../intrinsics/bittest-bittest64.md)||intrin.h|unsigned char _bittest (długo const *, długi b).|
-|[_bittestandcomplement](../intrinsics/bittestandcomplement-bittestandcomplement64.md)||intrin.h|unsigned char _bittestandcomplement (Liczba długa *, długi b).|
-|[_bittestandreset](../intrinsics/bittestandreset-bittestandreset64.md)||intrin.h|unsigned char _bittestandreset (Liczba długa *, długi b).|
-|[_bittestandset](../intrinsics/bittestandset-bittestandset64.md)||intrin.h|unsigned char _bittestandset (Liczba długa *, długi b).|
+|_addcarry_u16||intrin.h|unsigned char _addcarry_u16 (unsigned char c_in, niepodpisane krótka src1, niepodpisane krótka src2, typ unsigned short \*Suma)|
+|[_addcarry_u32](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_addcarry_u32)||intrin.h|unsigned char _addcarry_u32 (unsigned char c_in, src1 unsigned int, src2 unsigned int, niepodpisane int \*Suma)|
+|_addcarry_u8||intrin.h|unsigned char _addcarry_u8 (unsigned char c_in, src1 unsigned char, src2 unsigned char unsigned char * Suma)|
+|[_addcarryx_u32](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_addcarryx_u32)|ADX [2]|immintrin.h|unsigned char _addcarryx_u32 (unsigned char c_in, src1 unsigned int, src2 unsigned int, niepodpisane int \*Suma)|
+|[__addfsbyte](../intrinsics/addfsbyte-addfsword-addfsdword.md)||intrin.h|__addfsbyte void (bez znaku długie, unsigned char)|
+|[__addfsdword](../intrinsics/addfsbyte-addfsword-addfsdword.md)||intrin.h|__addfsdword void (long long nieoznaczona, nieoznaczona liczba)|
+|[__addfsword](../intrinsics/addfsbyte-addfsword-addfsdword.md)||intrin.h|__addfsword void (krótki unsigned long, bez znaku)|
+|[_AddressOfReturnAddress](../intrinsics/addressofreturnaddress.md)||intrin.h|void \* _AddressOfReturnAddress(void)|
+|_andn_u32|BMI [1]|ammintrin.h|unsigned int _andn_u32 (unsigned int, niepodpisane int)|
+|[_bextr_u32](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_bextr_u32)|BMI|ammintrin.h, immintrin.h|unsigned int _bextr_u32 (unsigned int, niepodpisane int, niepodpisane int)|
+|_bextri_u32|ABM [1]|ammintrin.h|unsigned int _bextri_u32 (unsigned int, niepodpisane int)|
+|[_BitScanForward](../intrinsics/bitscanforward-bitscanforward64.md)||intrin.h|LOGICZNA _BitScanForward (się ULONG\* maska ULONG indeksu, Indie)|
+|[_BitScanReverse](../intrinsics/bitscanreverse-bitscanreverse64.md)||intrin.h|LOGICZNA _BitScanReverse (się ULONG\* maska ULONG indeksu, Indie)|
+|[_bittest](../intrinsics/bittest-bittest64.md)||intrin.h|unsigned char _bittest (długo const \*long, (b).|
+|[_bittestandcomplement](../intrinsics/bittestandcomplement-bittestandcomplement64.md)||intrin.h|unsigned char _bittestandcomplement (long \*long, (b).|
+|[_bittestandreset](../intrinsics/bittestandreset-bittestandreset64.md)||intrin.h|unsigned char _bittestandreset (long \*long, (b).|
+|[_bittestandset](../intrinsics/bittestandset-bittestandset64.md)||intrin.h|unsigned char _bittestandset (long \*long, (b).|
 |_blcfill_u32|ABM [1]|ammintrin.h|_blcfill_u32(unsigned int) unsigned int|
 |_blci_u32|ABM [1]|ammintrin.h|_blci_u32(unsigned int) unsigned int|
 |_blcic_u32|ABM [1]|ammintrin.h|_blcic_u32(unsigned int) unsigned int|
@@ -70,195 +70,195 @@ W poniższej tabeli wymieniono funkcje wewnętrzne dostępne na x86 procesorów.
 |_blsic_u32|ABM [1]|ammintrin.h|_blsic_u32(unsigned int) unsigned int|
 |[_blsmsk_u32](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_blsmsk_u32)|BMI|ammintrin.h, immintrin.h|_blsmsk_u32(unsigned int) unsigned int|
 |[_blsr_u32](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_blsr_u32)|BMI|ammintrin.h, immintrin.h|_blsr_u32(unsigned int) unsigned int|
-|[_bzhi_u32](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_bzhi_u32)|BMI [2]|immintrin.h|unsigned int _bzhi_u32 (unsigned int, int bez znaku)|
+|[_bzhi_u32](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_bzhi_u32)|BMI [2]|immintrin.h|unsigned int _bzhi_u32 (unsigned int, niepodpisane int)|
 |_clac|SMAP|intrin.h|void _clac(void)|
-|[__cpuid](../intrinsics/cpuid-cpuidex.md)||intrin.h|void __cpuid (int * int, (b).|
-|[__cpuidex](../intrinsics/cpuid-cpuidex.md)||intrin.h|void __cpuidex (int * b, int, int c).|
+|[__cpuid](../intrinsics/cpuid-cpuidex.md)||intrin.h|void __cpuid (int \*int, b).|
+|[__cpuidex](../intrinsics/cpuid-cpuidex.md)||intrin.h|void __cpuidex (int \*b, int, int c).|
 |[__debugbreak](../intrinsics/debugbreak.md)||intrin.h|void __debugbreak(void)|
 |[_disable](../intrinsics/disable.md)||intrin.h|void _disable(void)|
 |[__emul](../intrinsics/emul-emulu.md)||intrin.h|__int64 [pascal/cdecl] \__emul(int,int)|
-|[__emulu](../intrinsics/emul-emulu.md)||intrin.h|__int64 bez znaku [pascal/cdecl]\__emulu (unsigned int, int bez znaku)|
+|[__emulu](../intrinsics/emul-emulu.md)||intrin.h|__int64 bez znaku [pascal/cdecl]\__emulu (unsigned int, niepodpisane int)|
 |[_enable](../intrinsics/enable.md)||intrin.h|void _enable(void)|
 |[__fastfail](../intrinsics/fastfail.md)||intrin.h|void __fastfail(unsigned int)|
-|[_fxrstor](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_fxrstor)|FXSR [2]|immintrin.h|void _fxrstor (void const *)|
-|[_fxsave](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_fxsave)|FXSR [2]|immintrin.h|void _fxsave(void*)|
+|[_fxrstor](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_fxrstor)|FXSR [2]|immintrin.h|void _fxrstor (void const\*)|
+|[_fxsave](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_fxsave)|FXSR [2]|immintrin.h|void _fxsave (void\*)|
 |[__getcallerseflags](../intrinsics/getcallerseflags.md)||intrin.h|(unsigned int __getcallerseflags())|
 |[__halt](../intrinsics/halt.md)||intrin.h|void __halt(void)|
-|[__inbyte](../intrinsics/inbyte.md)||intrin.h|__inbyte char bez znaku (bez znaku krótkich Port)|
-|[__inbytestring](../intrinsics/inbytestring.md)||intrin.h|void __inbytestring (bez znaku portu krótkich, unsigned char * buforu, bez znaku liczba długa)|
+|[__inbyte](../intrinsics/inbyte.md)||intrin.h|__inbyte char bez znaku (Port krótka bez znaku)|
+|[__inbytestring](../intrinsics/inbytestring.md)||intrin.h|void __inbytestring (niepodpisanych krótki Port, unsigned char \*Buffer i niepodpisane długa liczba)|
 |[__incfsbyte](../intrinsics/incfsbyte-incfsword-incfsdword.md)||intrin.h|void __incfsbyte(unsigned long)|
 |[__incfsdword](../intrinsics/incfsbyte-incfsword-incfsdword.md)||intrin.h|void __incfsdword(unsigned long)|
 |[__incfsword](../intrinsics/incfsbyte-incfsword-incfsdword.md)||intrin.h|void __incfsword(unsigned long)|
-|[__indword](../intrinsics/indword.md)||intrin.h|niepodpisane __indword długi (bez znaku krótkich Port)|
-|[__indwordstring](../intrinsics/indwordstring.md)||intrin.h|void __indwordstring (unsigned portu krótkie, unsigned long * buforu, bez znaku liczba długa)|
+|[__indword](../intrinsics/indword.md)||intrin.h|unsigned long __indword (Port krótka bez znaku)|
+|[__indwordstring](../intrinsics/indwordstring.md)||intrin.h|void __indwordstring (niepodpisane krótka Port, unsigned long \*Buffer i niepodpisane długa liczba)|
 |[__int2c](../intrinsics/int2c.md)||intrin.h|void __int2c(void)|
-|[_InterlockedAddLargeStatistic](../intrinsics/interlockedaddlargestatistic.md)||intrin.h|długie _InterlockedAddLargeStatistic (\__int64 volatile * długim)|
-|[_InterlockedAnd](../intrinsics/interlockedand-intrinsic-functions.md)||intrin.h|długie _InterlockedAnd (długo volatile * długim)|
-|[_InterlockedAnd_HLEAcquire](../intrinsics/interlockedand-intrinsic-functions.md)|HLE [2]|immintrin.h|długie _InterlockedAnd_HLEAcquire (długo volatile * długim)|
-|[_InterlockedAnd_HLERelease](../intrinsics/interlockedand-intrinsic-functions.md)|HLE [2]|immintrin.h|długie _InterlockedAnd_HLERelease (długo volatile * długim)|
-|[_InterlockedAnd16](../intrinsics/interlockedand-intrinsic-functions.md)||intrin.h|krótki _InterlockedAnd16 (krótka volatile *, krótki)|
-|[_InterlockedAnd8](../intrinsics/interlockedand-intrinsic-functions.md)||intrin.h|CHAR — _InterlockedAnd8 (char volatile *, char)|
-|[_interlockedbittestandreset](../intrinsics/interlockedbittestandreset-intrinsic-functions.md)||intrin.h|unsigned char _interlockedbittestandreset (Liczba długa *, długi b).|
-|[_interlockedbittestandreset_HLEAcquire](../intrinsics/interlockedbittestandreset-intrinsic-functions.md)|HLE [2]|immintrin.h|unsigned char _interlockedbittestandreset_HLEAcquire (Liczba długa *, długi b).|
-|[_interlockedbittestandreset_HLERelease](../intrinsics/interlockedbittestandreset-intrinsic-functions.md)|HLE [2]|immintrin.h|unsigned char _interlockedbittestandreset_HLERelease (Liczba długa *, długi b).|
-|[_interlockedbittestandset](../intrinsics/interlockedbittestandset-intrinsic-functions.md)||intrin.h|unsigned char _interlockedbittestandset (Liczba długa *, długi b).|
-|[_interlockedbittestandset_HLEAcquire](../intrinsics/interlockedbittestandset-intrinsic-functions.md)|HLE [2]|immintrin.h|unsigned char _interlockedbittestandset_HLEAcquire (Liczba długa *, długi b).|
-|[_interlockedbittestandset_HLERelease](../intrinsics/interlockedbittestandset-intrinsic-functions.md)|HLE [2]|immintrin.h|unsigned char _interlockedbittestandset_HLERelease (Liczba długa *, długi b).|
-|[_InterlockedCompareExchange](../intrinsics/interlockedcompareexchange-intrinsic-functions.md)||intrin.h|długie _InterlockedCompareExchange (długo volatile *, długie, długie)|
-|[_InterlockedCompareExchange_HLEAcquire](../intrinsics/interlockedcompareexchange-intrinsic-functions.md)|HLE [2]|immintrin.h|długie _InterlockedCompareExchange_HLEAcquire (długo volatile *, długie, długie)|
-|[_InterlockedCompareExchange_HLERelease](../intrinsics/interlockedcompareexchange-intrinsic-functions.md)|HLE [2]|immintrin.h|długie _InterlockedCompareExchange_HLERelease (długo volatile *, długie, długie)|
-|[_InterlockedCompareExchange16](../intrinsics/interlockedcompareexchange-intrinsic-functions.md)||intrin.h|krótki _InterlockedCompareExchange16 (krótki volatile * wzorzec krótkiej przeznaczenia, krótki Exchange)|
-|[_InterlockedCompareExchange64](../intrinsics/interlockedcompareexchange-intrinsic-functions.md)||intrin.h|__int64 _InterlockedCompareExchange64 (\__int64 volatile *,\__int64,\__int64)|
-|[_InterlockedCompareExchange64_HLEAcquire](../intrinsics/interlockedcompareexchange-intrinsic-functions.md)|HLE [2]|immintrin.h|__int64 _InterlockedCompareExchange64_HLEAcquire (\__int64 volatile *,\__int64,\__int64)|
-|[_InterlockedCompareExchange64_HLERelease](../intrinsics/interlockedcompareexchange-intrinsic-functions.md)|HLE [2]|immintrin.h|__int64 _InterlockedCompareExchange64_HLERelease (\__int64 volatile *,\__int64,\__int64)|
-|[_InterlockedCompareExchange8](../intrinsics/interlockedcompareexchange-intrinsic-functions.md)||intrin.h|CHAR — _InterlockedCompareExchange8 (char volatile * przeznaczenia, char programu Exchange, char wzorzec)|
-|[_InterlockedCompareExchangePointer](../intrinsics/interlockedcompareexchangepointer-intrinsic-functions.md)||intrin.h|void * _InterlockedCompareExchangePointer (void \*volatile \*, void \*, void \*)|
-|[_InterlockedCompareExchangePointer_HLEAcquire](../intrinsics/interlockedcompareexchangepointer-intrinsic-functions.md)|HLE [2]|immintrin.h|void * _InterlockedCompareExchangePointer_HLEAcquire (void \*volatile \*, void \*, void \*)|
-|[_InterlockedCompareExchangePointer_HLERelease](../intrinsics/interlockedcompareexchangepointer-intrinsic-functions.md)|HLE [2]|immintrin.h|void * _InterlockedCompareExchangePointer_HLERelease (void \*volatile \*, void \*, void \*)|
-|[_InterlockedDecrement](../intrinsics/interlockeddecrement-intrinsic-functions.md)||intrin.h|długie _InterlockedDecrement(long volatile *)|
-|[_InterlockedDecrement16](../intrinsics/interlockeddecrement-intrinsic-functions.md)||intrin.h|krótki _InterlockedDecrement16 (krótka volatile * składnik dodawania)|
-|[_InterlockedExchange](../intrinsics/interlockedexchange-intrinsic-functions.md)||intrin.h|długie _InterlockedExchange (długo volatile * długim)|
-|[_InterlockedExchange_HLEAcquire](../intrinsics/interlockedexchange-intrinsic-functions.md)|HLE [2]|immintrin.h|długie _InterlockedExchange_HLEAcquire (długo volatile * długim)|
-|[_InterlockedExchange_HLERelease](../intrinsics/interlockedexchange-intrinsic-functions.md)|HLE [2]|immintrin.h|długie _InterlockedExchange_HLERelease (długo volatile * długim)|
-|[_InterlockedExchange16](../intrinsics/interlockedexchange-intrinsic-functions.md)||intrin.h|krótki _InterlockedExchange16 (krótka volatile *, krótki)|
-|[_InterlockedExchange8](../intrinsics/interlockedexchange-intrinsic-functions.md)||intrin.h|CHAR — _InterlockedExchange8 (char volatile *, char)|
-|[_InterlockedExchangeAdd](../intrinsics/interlockedexchangeadd-intrinsic-functions.md)||intrin.h|_InterlockedExchangeAdd długi (długo volatile * długim)|
-|[_InterlockedExchangeAdd_HLEAcquire](../intrinsics/interlockedexchangeadd-intrinsic-functions.md)|HLE [2]|immintrin.h|_InterlockedExchangeAdd_HLEAcquire długi (długo volatile * długim)|
-|[_InterlockedExchangeAdd_HLERelease](../intrinsics/interlockedexchangeadd-intrinsic-functions.md)|HLE [2]|immintrin.h|_InterlockedExchangeAdd_HLERelease długi (długo volatile * długim)|
-|[_InterlockedExchangeAdd16](../intrinsics/interlockedexchangeadd-intrinsic-functions.md)||intrin.h|_InterlockedExchangeAdd16 krótkich (krótka volatile *, krótki)|
-|[_InterlockedExchangeAdd8](../intrinsics/interlockedexchangeadd-intrinsic-functions.md)||intrin.h|CHAR _InterlockedExchangeAdd8 (char volatile *, char)|
-|[_InterlockedExchangePointer](../intrinsics/interlockedexchangepointer-intrinsic-functions.md)||intrin.h|void * _InterlockedExchangePointer (void \*volatile \*, void \*)|
-|[_InterlockedExchangePointer_HLEAcquire](../intrinsics/interlockedexchangepointer-intrinsic-functions.md)|HLE [2]|immintrin.h|void * _InterlockedExchangePointer_HLEAcquire (void \*volatile \*, void \*)|
-|[_InterlockedExchangePointer_HLERelease](../intrinsics/interlockedexchangepointer-intrinsic-functions.md)|HLE [2]|immintrin.h|void * _InterlockedExchangePointer_HLERelease (void \*volatile \*, void \*)|
-|[_InterlockedIncrement](../intrinsics/interlockedincrement-intrinsic-functions.md)||intrin.h|długie _InterlockedIncrement(long volatile *)|
-|[_InterlockedIncrement16](../intrinsics/interlockedincrement-intrinsic-functions.md)||intrin.h|krótki _InterlockedIncrement16 (krótka volatile * składnik dodawania)|
-|[_InterlockedOr](../intrinsics/interlockedor-intrinsic-functions.md)||intrin.h|długie _InterlockedOr (długo volatile * długim)|
-|[_InterlockedOr_HLEAcquire](../intrinsics/interlockedor-intrinsic-functions.md)|HLE [2]|immintrin.h|długie _InterlockedOr_HLEAcquire (długo volatile * długim)|
-|[_InterlockedOr_HLERelease](../intrinsics/interlockedor-intrinsic-functions.md)|HLE [2]|immintrin.h|długie _InterlockedOr_HLERelease (długo volatile * długim)|
-|[_InterlockedOr16](../intrinsics/interlockedor-intrinsic-functions.md)||intrin.h|krótki _InterlockedOr16 (krótka volatile *, krótki)|
-|[_InterlockedOr8](../intrinsics/interlockedor-intrinsic-functions.md)||intrin.h|CHAR — _InterlockedOr8 (char volatile *, char)|
-|[_InterlockedXor](../intrinsics/interlockedxor-intrinsic-functions.md)||intrin.h|długie _InterlockedXor (długo volatile * długim)|
-|[_InterlockedXor_HLEAcquire](../intrinsics/interlockedxor-intrinsic-functions.md)|HLE [2]|immintrin.h|długie _InterlockedXor_HLEAcquire (długo volatile * długim)|
-|[_InterlockedXor_HLERelease](../intrinsics/interlockedxor-intrinsic-functions.md)|HLE [2]|immintrin.h|długie _InterlockedXor_HLERelease (długo volatile * długim)|
-|[_InterlockedXor16](../intrinsics/interlockedxor-intrinsic-functions.md)||intrin.h|krótki _InterlockedXor16 (krótka volatile *, krótki)|
-|[_InterlockedXor8](../intrinsics/interlockedxor-intrinsic-functions.md)||intrin.h|CHAR — _InterlockedXor8 (char volatile *, char)|
-|[__invlpg](../intrinsics/invlpg.md)||intrin.h|void __invlpg(void*)|
-|[_invpcid](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_invpcid)|INVPCID [2]|immintrin.h|void _invpcid (unsigned int, void *)|
-|[__inword](../intrinsics/inword.md)||intrin.h|niepodpisane krótki __inword (bez znaku krótkich Port)|
-|[__inwordstring](../intrinsics/inwordstring.md)||intrin.h|void __inwordstring (unsigned krótkich portu, bez znaku krótko * buforu, bez znaku liczba długa)|
-|_lgdt||intrin.h|void _lgdt(void*)|
-|[__lidt](../intrinsics/lidt.md)||intrin.h|void __lidt(void*)|
+|[_InterlockedAddLargeStatistic](../intrinsics/interlockedaddlargestatistic.md)||intrin.h|długi _InterlockedAddLargeStatistic (\__int64 volatile \*długie)|
+|[_InterlockedAnd](../intrinsics/interlockedand-intrinsic-functions.md)||intrin.h|długi _InterlockedAnd (długo volatile \*długie)|
+|[_InterlockedAnd_HLEAcquire](../intrinsics/interlockedand-intrinsic-functions.md)|HLE [2]|immintrin.h|długi _InterlockedAnd_HLEAcquire (długo volatile \*długie)|
+|[_InterlockedAnd_HLERelease](../intrinsics/interlockedand-intrinsic-functions.md)|HLE [2]|immintrin.h|długi _InterlockedAnd_HLERelease (długo volatile \*długie)|
+|[_InterlockedAnd16](../intrinsics/interlockedand-intrinsic-functions.md)||intrin.h|krótki _InterlockedAnd16 (krótki volatile \*, krótki)|
+|[_InterlockedAnd8](../intrinsics/interlockedand-intrinsic-functions.md)||intrin.h|CHAR _InterlockedAnd8 (char volatile \*, char)|
+|[_interlockedbittestandreset](../intrinsics/interlockedbittestandreset-intrinsic-functions.md)||intrin.h|unsigned char _interlockedbittestandreset (long \*long, (b).|
+|[_interlockedbittestandreset_HLEAcquire](../intrinsics/interlockedbittestandreset-intrinsic-functions.md)|HLE [2]|immintrin.h|unsigned char _interlockedbittestandreset_HLEAcquire (long \*long, (b).|
+|[_interlockedbittestandreset_HLERelease](../intrinsics/interlockedbittestandreset-intrinsic-functions.md)|HLE [2]|immintrin.h|unsigned char _interlockedbittestandreset_HLERelease (long \*long, (b).|
+|[_interlockedbittestandset](../intrinsics/interlockedbittestandset-intrinsic-functions.md)||intrin.h|unsigned char _interlockedbittestandset (long \*long, (b).|
+|[_interlockedbittestandset_HLEAcquire](../intrinsics/interlockedbittestandset-intrinsic-functions.md)|HLE [2]|immintrin.h|unsigned char _interlockedbittestandset_HLEAcquire (long \*long, (b).|
+|[_interlockedbittestandset_HLERelease](../intrinsics/interlockedbittestandset-intrinsic-functions.md)|HLE [2]|immintrin.h|unsigned char _interlockedbittestandset_HLERelease (long \*long, (b).|
+|[_InterlockedCompareExchange](../intrinsics/interlockedcompareexchange-intrinsic-functions.md)||intrin.h|długi _InterlockedCompareExchange (długo volatile \*, long, długi)|
+|[_InterlockedCompareExchange_HLEAcquire](../intrinsics/interlockedcompareexchange-intrinsic-functions.md)|HLE [2]|immintrin.h|długi _InterlockedCompareExchange_HLEAcquire (długo volatile \*, long, długi)|
+|[_InterlockedCompareExchange_HLERelease](../intrinsics/interlockedcompareexchange-intrinsic-functions.md)|HLE [2]|immintrin.h|długi _InterlockedCompareExchange_HLERelease (długo volatile \*, long, długi)|
+|[_InterlockedCompareExchange16](../intrinsics/interlockedcompareexchange-intrinsic-functions.md)||intrin.h|krótki _InterlockedCompareExchange16 (krótki volatile \*wzorzec krótkiej miejsca docelowego, krótkich wymiany)|
+|[_InterlockedCompareExchange64](../intrinsics/interlockedcompareexchange-intrinsic-functions.md)||intrin.h|__int64 _InterlockedCompareExchange64 (\__int64 volatile \*,\__int64,\__int64)|
+|[_InterlockedCompareExchange64_HLEAcquire](../intrinsics/interlockedcompareexchange-intrinsic-functions.md)|HLE [2]|immintrin.h|__int64 _InterlockedCompareExchange64_HLEAcquire (\__int64 volatile \*,\__int64,\__int64)|
+|[_InterlockedCompareExchange64_HLERelease](../intrinsics/interlockedcompareexchange-intrinsic-functions.md)|HLE [2]|immintrin.h|__int64 _InterlockedCompareExchange64_HLERelease (\__int64 volatile \*,\__int64,\__int64)|
+|[_InterlockedCompareExchange8](../intrinsics/interlockedcompareexchange-intrinsic-functions.md)||intrin.h|CHAR _InterlockedCompareExchange8 (char volatile \*miejsca docelowego, char programu Exchange, char wzorzec)|
+|[_InterlockedCompareExchangePointer](../intrinsics/interlockedcompareexchangepointer-intrinsic-functions.md)||intrin.h|void \*_InterlockedCompareExchangePointer (void \*volatile \*, void \*, void \*)|
+|[_InterlockedCompareExchangePointer_HLEAcquire](../intrinsics/interlockedcompareexchangepointer-intrinsic-functions.md)|HLE [2]|immintrin.h|void \*_InterlockedCompareExchangePointer_HLEAcquire (void \*volatile \*, void \*, void \*)|
+|[_InterlockedCompareExchangePointer_HLERelease](../intrinsics/interlockedcompareexchangepointer-intrinsic-functions.md)|HLE [2]|immintrin.h|void \*_InterlockedCompareExchangePointer_HLERelease (void \*volatile \*, void \*, void \*)|
+|[_InterlockedDecrement](../intrinsics/interlockeddecrement-intrinsic-functions.md)||intrin.h|długi _InterlockedDecrement (długo volatile \*)|
+|[_InterlockedDecrement16](../intrinsics/interlockeddecrement-intrinsic-functions.md)||intrin.h|krótki _InterlockedDecrement16 (krótki volatile \*składnik dodawania)|
+|[_InterlockedExchange](../intrinsics/interlockedexchange-intrinsic-functions.md)||intrin.h|długi _InterlockedExchange (długo volatile \*długie)|
+|[_InterlockedExchange_HLEAcquire](../intrinsics/interlockedexchange-intrinsic-functions.md)|HLE [2]|immintrin.h|długi _InterlockedExchange_HLEAcquire (długo volatile \*długie)|
+|[_InterlockedExchange_HLERelease](../intrinsics/interlockedexchange-intrinsic-functions.md)|HLE [2]|immintrin.h|długi _InterlockedExchange_HLERelease (długo volatile \*długie)|
+|[_InterlockedExchange16](../intrinsics/interlockedexchange-intrinsic-functions.md)||intrin.h|krótki _InterlockedExchange16 (krótki volatile \*, krótki)|
+|[_InterlockedExchange8](../intrinsics/interlockedexchange-intrinsic-functions.md)||intrin.h|CHAR _InterlockedExchange8 (char volatile \*, char)|
+|[_InterlockedExchangeAdd](../intrinsics/interlockedexchangeadd-intrinsic-functions.md)||intrin.h|_interlockedexchangeadd — długi (długo volatile \*długie)|
+|[_InterlockedExchangeAdd_HLEAcquire](../intrinsics/interlockedexchangeadd-intrinsic-functions.md)|HLE [2]|immintrin.h|_interlockedexchangeadd_hleacquire — długi (długo volatile \*długie)|
+|[_InterlockedExchangeAdd_HLERelease](../intrinsics/interlockedexchangeadd-intrinsic-functions.md)|HLE [2]|immintrin.h|_interlockedexchangeadd_hlerelease — długi (długo volatile \*długie)|
+|[_InterlockedExchangeAdd16](../intrinsics/interlockedexchangeadd-intrinsic-functions.md)||intrin.h|_interlockedexchangeadd16 — krótki (krótki volatile *, krótki)|
+|[_InterlockedExchangeAdd8](../intrinsics/interlockedexchangeadd-intrinsic-functions.md)||intrin.h|_interlockedexchangeadd8 — char (char volatile \*, char)|
+|[_InterlockedExchangePointer](../intrinsics/interlockedexchangepointer-intrinsic-functions.md)||intrin.h|void \* _InterlockedExchangePointer (void \*volatile \*, void \*)|
+|[_InterlockedExchangePointer_HLEAcquire](../intrinsics/interlockedexchangepointer-intrinsic-functions.md)|HLE [2]|immintrin.h|void \* _InterlockedExchangePointer_HLEAcquire (void \*volatile \*, void \*)|
+|[_InterlockedExchangePointer_HLERelease](../intrinsics/interlockedexchangepointer-intrinsic-functions.md)|HLE [2]|immintrin.h|void \* _InterlockedExchangePointer_HLERelease (void \*volatile \*, void \*)|
+|[_InterlockedIncrement](../intrinsics/interlockedincrement-intrinsic-functions.md)||intrin.h|długi _InterlockedIncrement (długo volatile \*)|
+|[_InterlockedIncrement16](../intrinsics/interlockedincrement-intrinsic-functions.md)||intrin.h|krótki _InterlockedIncrement16 (krótki volatile \*składnik dodawania)|
+|[_InterlockedOr](../intrinsics/interlockedor-intrinsic-functions.md)||intrin.h|długi _InterlockedOr (długo volatile \*długie)|
+|[_InterlockedOr_HLEAcquire](../intrinsics/interlockedor-intrinsic-functions.md)|HLE [2]|immintrin.h|długi _InterlockedOr_HLEAcquire (długo volatile \*długie)|
+|[_InterlockedOr_HLERelease](../intrinsics/interlockedor-intrinsic-functions.md)|HLE [2]|immintrin.h|długi _InterlockedOr_HLERelease (długo volatile \*długie)|
+|[_InterlockedOr16](../intrinsics/interlockedor-intrinsic-functions.md)||intrin.h|krótki _InterlockedOr16 (krótki volatile \*, krótki)|
+|[_InterlockedOr8](../intrinsics/interlockedor-intrinsic-functions.md)||intrin.h|CHAR _InterlockedOr8 (char volatile \*, char)|
+|[_InterlockedXor](../intrinsics/interlockedxor-intrinsic-functions.md)||intrin.h|długi _InterlockedXor (długo volatile \*długie)|
+|[_InterlockedXor_HLEAcquire](../intrinsics/interlockedxor-intrinsic-functions.md)|HLE [2]|immintrin.h|długi _InterlockedXor_HLEAcquire (długo volatile \*długie)|
+|[_InterlockedXor_HLERelease](../intrinsics/interlockedxor-intrinsic-functions.md)|HLE [2]|immintrin.h|długi _InterlockedXor_HLERelease (długo volatile \*długie)|
+|[_InterlockedXor16](../intrinsics/interlockedxor-intrinsic-functions.md)||intrin.h|krótki _InterlockedXor16 (krótki volatile \*, krótki)|
+|[_InterlockedXor8](../intrinsics/interlockedxor-intrinsic-functions.md)||intrin.h|CHAR _InterlockedXor8 (char volatile \*, char)|
+|[__invlpg](../intrinsics/invlpg.md)||intrin.h|void __invlpg (void\*)|
+|[_invpcid](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_invpcid)|INVPCID [2]|immintrin.h|void _invpcid (unsigned int void \*)|
+|[__inword](../intrinsics/inword.md)||intrin.h|niepodpisane krótka __inword (Port krótka bez znaku)|
+|[__inwordstring](../intrinsics/inwordstring.md)||intrin.h|void __inwordstring (niepodpisane krótka Port, typ unsigned short \*Buffer i niepodpisane długa liczba)|
+|_lgdt||intrin.h|void _lgdt (void\*)|
+|[__lidt](../intrinsics/lidt.md)||intrin.h|void __lidt (void\*)|
 |[__ll_lshift](../intrinsics/ll-lshift.md)||intrin.h|__int64 bez znaku [pascal/cdecl] \__ll_lshift (bez znaku \__int64, int)|
 |[__ll_rshift](../intrinsics/ll-rshift.md)||intrin.h|__int64 [pascal/cdecl] \__ll_rshift (\__int64, int)|
-|_load_be_u16<br /><br /> [_loadbe_i16](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_loadbe_i16&expand=3071)|MOVBE|immintrin.h|niepodpisane _load_be_u16 krótkich (void const *);<br /><br /> krótki _loadbe_i16 (void const\*); [3]|
-|_load_be_u32<br /><br /> [_loadbe_i32](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_loadbe_i32&expand=3072)|MOVBE|immintrin.h|unsigned int _load_be_u32 (void const *);<br /><br /> int _loadbe_i32 (void const\*); [3]|
-|__llwpcb|LWP [1]|ammintrin.h|void __llwpcb(void *)|
-|__lwpins32|LWP [1]|ammintrin.h|unsigned char __lwpins32 (unsigned int, int bez znaku, unsigned int)|
-|__lwpval32|LWP [1]|ammintrin.h|void __lwpval32 (unsigned int, int bez znaku, unsigned int)|
+|_load_be_u16<br /><br /> [_loadbe_i16](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_loadbe_i16&expand=3071)|MOVBE|immintrin.h|niepodpisane krótka _load_be_u16 (void const\*);<br /><br /> krótki _loadbe_i16 (void const\*); [3]|
+|_load_be_u32<br /><br /> [_loadbe_i32](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_loadbe_i32&expand=3072)|MOVBE|immintrin.h|unsigned int _load_be_u32 (void const\*);<br /><br /> int _loadbe_i32 (void const\*); [3]|
+|__llwpcb|LWP [1]|ammintrin.h|void __llwpcb (void \*)|
+|__lwpins32|LWP [1]|ammintrin.h|unsigned char __lwpins32 (unsigned int, niepodpisane int, niepodpisane int)|
+|__lwpval32|LWP [1]|ammintrin.h|void __lwpval32 (unsigned int, niepodpisane int, niepodpisane int)|
 |[__lzcnt](../intrinsics/lzcnt16-lzcnt-lzcnt64.md)|LZCNT|intrin.h|__lzcnt(unsigned int) unsigned int|
 |[_lzcnt_u32](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_lzcnt_u32)|BMI|ammintrin.h, immintrin.h|_lzcnt_u32(unsigned int) unsigned int|
-|[__lzcnt16](../intrinsics/lzcnt16-lzcnt-lzcnt64.md)|LZCNT|intrin.h|__lzcnt16(unsigned short) krótkich bez znaku|
+|[__lzcnt16](../intrinsics/lzcnt16-lzcnt-lzcnt64.md)|LZCNT|intrin.h|__lzcnt16(unsigned short) krótka bez znaku|
 |[_m_empty](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_m_empty)|MMX|intrin.h|void _m_empty(void)|
 |_m_femms|3DNOW|intrin.h|void _m_femms(void)|
 |_m_from_float|3DNOW|intrin.h|__m64 _m_from_float(float)|
 |[_m_from_int](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_m_from_int)|MMX|intrin.h|__m64 _m_from_int(int)|
-|[_m_maskmovq](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_m_maskmovq)|SSE|intrin.h|void _m_maskmovq (\_typu _m64,\_typu _m64, char *)|
-|[_m_packssdw](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_m_packssdw)|MMX|intrin.h|__m64 _m_packssdw (\_typu _m64,\_typu _m64)|
-|[_m_packsswb](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_m_packsswb)|MMX|intrin.h|__m64 _m_packsswb (\_typu _m64,\_typu _m64)|
-|[_m_packuswb](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_m_packuswb)|MMX|intrin.h|__m64 _m_packuswb (\_typu _m64,\_typu _m64)|
-|[_m_paddb](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_m_paddb)|MMX|intrin.h|__m64 _m_paddb (\_typu _m64,\_typu _m64)|
-|[_m_paddd](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_m_paddd)|MMX|intrin.h|__m64 _m_paddd (\_typu _m64,\_typu _m64)|
-|[_m_paddsb](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_m_paddsb)|MMX|intrin.h|__m64 _m_paddsb (\_typu _m64,\_typu _m64)|
-|[_m_paddsw](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_m_paddsw)|MMX|intrin.h|__m64 _m_paddsw (\_typu _m64,\_typu _m64)|
-|[_m_paddusb](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_m_paddusb)|MMX|intrin.h|__m64 _m_paddusb (\_typu _m64,\_typu _m64)|
-|[_m_paddusw](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_m_paddusw)|MMX|intrin.h|__m64 _m_paddusw (\_typu _m64,\_typu _m64)|
-|[_m_paddw](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_m_paddw)|MMX|intrin.h|__m64 _m_paddw (\_typu _m64,\_typu _m64)|
-|[_m_pand](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_m_pand)|MMX|intrin.h|__m64 _m_pand (\_typu _m64,\_typu _m64)|
-|[_m_pandn](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_m_pandn)|MMX|intrin.h|__m64 _m_pandn (\_typu _m64,\_typu _m64)|
-|[_m_pavgb](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_m_pavgb)|SSE|intrin.h|__m64 _m_pavgb (\_typu _m64,\_typu _m64)|
-|_m_pavgusb|3DNOW|intrin.h|__m64 _m_pavgusb (\_typu _m64,\_typu _m64)|
-|[_m_pavgw](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_m_pavgw)|SSE|intrin.h|__m64 _m_pavgw (\_typu _m64,\_typu _m64)|
-|[_m_pcmpeqb](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_m_pcmpeqb)|MMX|intrin.h|__m64 _m_pcmpeqb (\_typu _m64,\_typu _m64)|
-|[_m_pcmpeqd](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_m_pcmpeqd)|MMX|intrin.h|__m64 _m_pcmpeqd (\_typu _m64,\_typu _m64)|
-|[_m_pcmpeqw](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_m_pcmpeqw)|MMX|intrin.h|__m64 _m_pcmpeqw (\_typu _m64,\_typu _m64)|
-|[_m_pcmpgtb](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_m_pcmpgtb)|MMX|intrin.h|__m64 _m_pcmpgtb (\_typu _m64,\_typu _m64)|
-|[_m_pcmpgtd](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_m_pcmpgtd)|MMX|intrin.h|__m64 _m_pcmpgtd (\_typu _m64,\_typu _m64)|
-|[_m_pcmpgtw](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_m_pcmpgtw)|MMX|intrin.h|__m64 _m_pcmpgtw (\_typu _m64,\_typu _m64)|
-|[_m_pextrw](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_m_pextrw)|SSE|intrin.h|int _m_pextrw (\_typu _m64, int)|
+|[_m_maskmovq](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_m_maskmovq)|SSE|intrin.h|void _m_maskmovq (\__m64,\__m64, char\*)|
+|[_m_packssdw](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_m_packssdw)|MMX|intrin.h|__m64 _m_packssdw (\__m64,\__m64)|
+|[_m_packsswb](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_m_packsswb)|MMX|intrin.h|__m64 _m_packsswb (\__m64,\__m64)|
+|[_m_packuswb](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_m_packuswb)|MMX|intrin.h|__m64 _m_packuswb (\__m64,\__m64)|
+|[_m_paddb](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_m_paddb)|MMX|intrin.h|__m64 _m_paddb (\__m64,\__m64)|
+|[_m_paddd](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_m_paddd)|MMX|intrin.h|__m64 _m_paddd (\__m64,\__m64)|
+|[_m_paddsb](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_m_paddsb)|MMX|intrin.h|__m64 _m_paddsb (\__m64,\__m64)|
+|[_m_paddsw](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_m_paddsw)|MMX|intrin.h|__m64 _m_paddsw (\__m64,\__m64)|
+|[_m_paddusb](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_m_paddusb)|MMX|intrin.h|__m64 _m_paddusb (\__m64,\__m64)|
+|[_m_paddusw](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_m_paddusw)|MMX|intrin.h|__m64 _m_paddusw (\__m64,\__m64)|
+|[_m_paddw](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_m_paddw)|MMX|intrin.h|__m64 _m_paddw (\__m64,\__m64)|
+|[_m_pand](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_m_pand)|MMX|intrin.h|__m64 _m_pand (\__m64,\__m64)|
+|[_m_pandn](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_m_pandn)|MMX|intrin.h|__m64 _m_pandn (\__m64,\__m64)|
+|[_m_pavgb](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_m_pavgb)|SSE|intrin.h|__m64 _m_pavgb (\__m64,\__m64)|
+|_m_pavgusb|3DNOW|intrin.h|__m64 _m_pavgusb (\__m64,\__m64)|
+|[_m_pavgw](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_m_pavgw)|SSE|intrin.h|__m64 _m_pavgw (\__m64,\__m64)|
+|[_m_pcmpeqb](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_m_pcmpeqb)|MMX|intrin.h|__m64 _m_pcmpeqb (\__m64,\__m64)|
+|[_m_pcmpeqd](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_m_pcmpeqd)|MMX|intrin.h|__m64 _m_pcmpeqd (\__m64,\__m64)|
+|[_m_pcmpeqw](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_m_pcmpeqw)|MMX|intrin.h|__m64 _m_pcmpeqw (\__m64,\__m64)|
+|[_m_pcmpgtb](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_m_pcmpgtb)|MMX|intrin.h|__m64 _m_pcmpgtb (\__m64,\__m64)|
+|[_m_pcmpgtd](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_m_pcmpgtd)|MMX|intrin.h|__m64 _m_pcmpgtd (\__m64,\__m64)|
+|[_m_pcmpgtw](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_m_pcmpgtw)|MMX|intrin.h|__m64 _m_pcmpgtw (\__m64,\__m64)|
+|[_m_pextrw](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_m_pextrw)|SSE|intrin.h|int _m_pextrw (\__m64, int)|
 |_m_pf2id|3DNOW|intrin.h|__m64 _m_pf2id(\__m64)|
 |_m_pf2iw|3DNOWEXT|intrin.h|__m64 _m_pf2iw(\__m64)|
-|_m_pfacc|3DNOW|intrin.h|__m64 _m_pfacc (\_typu _m64,\_typu _m64)|
-|_m_pfadd|3DNOW|intrin.h|__m64 _m_pfadd (\_typu _m64,\_typu _m64)|
-|_m_pfcmpeq|3DNOW|intrin.h|__m64 _m_pfcmpeq (\_typu _m64,\_typu _m64)|
-|_m_pfcmpge|3DNOW|intrin.h|__m64 _m_pfcmpge (\_typu _m64,\_typu _m64)|
-|_m_pfcmpgt|3DNOW|intrin.h|__m64 _m_pfcmpgt (\_typu _m64,\_typu _m64)|
-|_m_pfmax|3DNOW|intrin.h|__m64 _m_pfmax (\_typu _m64,\_typu _m64)|
-|_m_pfmin|3DNOW|intrin.h|__m64 _m_pfmin (\_typu _m64,\_typu _m64)|
-|_m_pfmul|3DNOW|intrin.h|__m64 _m_pfmul (\_typu _m64,\_typu _m64)|
-|_m_pfnacc|3DNOWEXT|intrin.h|__m64 _m_pfnacc (\_typu _m64,\_typu _m64)|
-|_m_pfpnacc|3DNOWEXT|intrin.h|__m64 _m_pfpnacc (\_typu _m64,\_typu _m64)|
+|_m_pfacc|3DNOW|intrin.h|__m64 _m_pfacc (\__m64,\__m64)|
+|_m_pfadd|3DNOW|intrin.h|__m64 _m_pfadd (\__m64,\__m64)|
+|_m_pfcmpeq|3DNOW|intrin.h|__m64 _m_pfcmpeq (\__m64,\__m64)|
+|_m_pfcmpge|3DNOW|intrin.h|__m64 _m_pfcmpge (\__m64,\__m64)|
+|_m_pfcmpgt|3DNOW|intrin.h|__m64 _m_pfcmpgt (\__m64,\__m64)|
+|_m_pfmax|3DNOW|intrin.h|__m64 _m_pfmax (\__m64,\__m64)|
+|_m_pfmin|3DNOW|intrin.h|__m64 _m_pfmin (\__m64,\__m64)|
+|_m_pfmul|3DNOW|intrin.h|__m64 _m_pfmul (\__m64,\__m64)|
+|_m_pfnacc|3DNOWEXT|intrin.h|__m64 _m_pfnacc (\__m64,\__m64)|
+|_m_pfpnacc|3DNOWEXT|intrin.h|__m64 _m_pfpnacc (\__m64,\__m64)|
 |_m_pfrcp|3DNOW|intrin.h|__m64 _m_pfrcp(\__m64)|
-|_m_pfrcpit1|3DNOW|intrin.h|__m64 _m_pfrcpit1 (\_typu _m64,\_typu _m64)|
-|_m_pfrcpit2|3DNOW|intrin.h|__m64 _m_pfrcpit2 (\_typu _m64,\_typu _m64)|
+|_m_pfrcpit1|3DNOW|intrin.h|__m64 _m_pfrcpit1 (\__m64,\__m64)|
+|_m_pfrcpit2|3DNOW|intrin.h|__m64 _m_pfrcpit2 (\__m64,\__m64)|
 |_m_pfrsqit1|3DNOW|intrin.h|__m64 _m_pfrsqit1(\__m64,\__m64)|
 |_m_pfrsqrt|3DNOW|intrin.h|__m64 _m_pfrsqrt(\__m64)|
-|_m_pfsub|3DNOW|intrin.h|__m64 _m_pfsub (\_typu _m64,\_typu _m64)|
-|_m_pfsubr|3DNOW|intrin.h|__m64 _m_pfsubr (\_typu _m64,\_typu _m64)|
-|_m_pi2fd|3DNOW|intrin.h|__m64 _m_pi2fd (\_typu _m64)|
+|_m_pfsub|3DNOW|intrin.h|__m64 _m_pfsub (\__m64,\__m64)|
+|_m_pfsubr|3DNOW|intrin.h|__m64 _m_pfsubr (\__m64,\__m64)|
+|_m_pi2fd|3DNOW|intrin.h|__m64 _m_pi2fd (\__m64)|
 |_m_pi2fw|3DNOWEXT|intrin.h|__m64 _m_pi2fw(\__m64)|
-|[_m_pinsrw](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_m_pinsrw)|SSE|intrin.h|__m64 _m_pinsrw (\_typu _m64, int, int)|
-|[_m_pmaddwd](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_m_pmaddwd)|MMX|intrin.h|__m64 _m_pmaddwd (\_typu _m64,\_typu _m64)|
-|[_m_pmaxsw](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_m_pmaxsw)|SSE|intrin.h|__m64 _m_pmaxsw (\_typu _m64,\_typu _m64)|
-|[_m_pmaxub](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_m_pmaxub)|SSE|intrin.h|__m64 _m_pmaxub (\_typu _m64,\_typu _m64)|
-|[_m_pminsw](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_m_pminsw)|SSE|intrin.h|__m64 _m_pminsw (\_typu _m64,\_typu _m64)|
-|[_m_pminub](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_m_pminub)|SSE|intrin.h|__m64 _m_pminub (\_typu _m64,\_typu _m64)|
-|[_m_pmovmskb](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_m_pmovmskb)|SSE|intrin.h|int _m_pmovmskb (\_typu _m64)|
-|_m_pmulhrw|3DNOW|intrin.h|__m64 _m_pmulhrw (\_typu _m64,\_typu _m64)|
-|[_m_pmulhuw](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_m_pmulhuw)|SSE|intrin.h|__m64 _m_pmulhuw (\_typu _m64,\_typu _m64)|
-|[_m_pmulhw](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_m_pmulhw)|MMX|intrin.h|__m64 _m_pmulhw (\_typu _m64,\_typu _m64)|
-|[_m_pmullw](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_m_pmullw)|MMX|intrin.h|__m64 _m_pmullw (\_typu _m64,\_typu _m64)|
-|[_m_por](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_m_por)|MMX|intrin.h|__m64 _m_por (\_typu _m64,\_typu _m64)|
-|_m_prefetch|3DNOW|intrin.h|void _m_prefetch(void*)|
-|_m_prefetchw|3DNOW|intrin.h|void _m_prefetchw(void*)|
-|[_m_psadbw](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_m_psadbw)|SSE|intrin.h|__m64 _m_psadbw (\_typu _m64,\_typu _m64)|
-|[_m_pshufw](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_m_pshufw)|SSE|intrin.h|__m64 _m_pshufw (\_typu _m64, int)|
-|[_m_pslld](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_m_pslld)|MMX|intrin.h|__m64 _m_pslld (\_typu _m64,\_typu _m64)|
-|[_m_pslldi](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_m_pslldi)|MMX|intrin.h|__m64 _m_pslldi (\_typu _m64, int)|
-|[_m_psllq](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_m_psllq)|MMX|intrin.h|__m64 _m_psllq (\_typu _m64,\_typu _m64)|
-|[_m_psllqi](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_m_psllqi)|MMX|intrin.h|__m64 _m_psllqi (\_typu _m64, int)|
-|[_m_psllw](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_m_psllw)|MMX|intrin.h|__m64 _m_psllw (\_typu _m64,\_typu _m64)|
-|[_m_psllwi](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_m_psllwi)|MMX|intrin.h|__m64 _m_psllwi (\_typu _m64, int)|
-|[_m_psrad](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_m_psrad)|MMX|intrin.h|__m64 _m_psrad (\_typu _m64,\_typu _m64)|
-|[_m_psradi](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_m_psradi)|MMX|intrin.h|__m64 _m_psradi (\_typu _m64, int)|
-|[_m_psraw](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_m_psraw)|MMX|intrin.h|__m64 _m_psraw (\_typu _m64,\_typu _m64)|
-|[_m_psrawi](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_m_psrawi)|MMX|intrin.h|__m64 _m_psrawi (\_typu _m64, int)|
-|[_m_psrld](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_m_psrld)|MMX|intrin.h|__m64 _m_psrld (\_typu _m64,\_typu _m64)|
-|[_m_psrldi](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_m_psrldi)|MMX|intrin.h|__m64 _m_psrldi (\_typu _m64, int)|
+|[_m_pinsrw](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_m_pinsrw)|SSE|intrin.h|__m64 _m_pinsrw (\__m64, int, int)|
+|[_m_pmaddwd](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_m_pmaddwd)|MMX|intrin.h|__m64 _m_pmaddwd (\__m64,\__m64)|
+|[_m_pmaxsw](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_m_pmaxsw)|SSE|intrin.h|__m64 _m_pmaxsw (\__m64,\__m64)|
+|[_m_pmaxub](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_m_pmaxub)|SSE|intrin.h|__m64 _m_pmaxub (\__m64,\__m64)|
+|[_m_pminsw](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_m_pminsw)|SSE|intrin.h|__m64 _m_pminsw (\__m64,\__m64)|
+|[_m_pminub](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_m_pminub)|SSE|intrin.h|__m64 _m_pminub (\__m64,\__m64)|
+|[_m_pmovmskb](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_m_pmovmskb)|SSE|intrin.h|int _m_pmovmskb (\__m64)|
+|_m_pmulhrw|3DNOW|intrin.h|__m64 _m_pmulhrw (\__m64,\__m64)|
+|[_m_pmulhuw](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_m_pmulhuw)|SSE|intrin.h|__m64 _m_pmulhuw (\__m64,\__m64)|
+|[_m_pmulhw](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_m_pmulhw)|MMX|intrin.h|__m64 _m_pmulhw (\__m64,\__m64)|
+|[_m_pmullw](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_m_pmullw)|MMX|intrin.h|__m64 _m_pmullw (\__m64,\__m64)|
+|[_m_por](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_m_por)|MMX|intrin.h|__m64 _m_por (\__m64,\__m64)|
+|_m_prefetch|3DNOW|intrin.h|void _m_prefetch (void\*)|
+|_m_prefetchw|3DNOW|intrin.h|void _m_prefetchw (void\*)|
+|[_m_psadbw](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_m_psadbw)|SSE|intrin.h|__m64 _m_psadbw (\__m64,\__m64)|
+|[_m_pshufw](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_m_pshufw)|SSE|intrin.h|__m64 _m_pshufw (\__m64, int)|
+|[_m_pslld](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_m_pslld)|MMX|intrin.h|__m64 _m_pslld (\__m64,\__m64)|
+|[_m_pslldi](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_m_pslldi)|MMX|intrin.h|__m64 _m_pslldi (\__m64, int)|
+|[_m_psllq](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_m_psllq)|MMX|intrin.h|__m64 _m_psllq (\__m64,\__m64)|
+|[_m_psllqi](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_m_psllqi)|MMX|intrin.h|__m64 _m_psllqi (\__m64, int)|
+|[_m_psllw](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_m_psllw)|MMX|intrin.h|__m64 _m_psllw (\__m64,\__m64)|
+|[_m_psllwi](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_m_psllwi)|MMX|intrin.h|__m64 _m_psllwi (\__m64, int)|
+|[_m_psrad](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_m_psrad)|MMX|intrin.h|__m64 _m_psrad (\__m64,\__m64)|
+|[_m_psradi](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_m_psradi)|MMX|intrin.h|__m64 _m_psradi (\__m64, int)|
+|[_m_psraw](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_m_psraw)|MMX|intrin.h|__m64 _m_psraw (\__m64,\__m64)|
+|[_m_psrawi](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_m_psrawi)|MMX|intrin.h|__m64 _m_psrawi (\__m64, int)|
+|[_m_psrld](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_m_psrld)|MMX|intrin.h|__m64 _m_psrld (\__m64,\__m64)|
+|[_m_psrldi](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_m_psrldi)|MMX|intrin.h|__m64 _m_psrldi (\__m64, int)|
 |[_m_psrlq](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_m_psrlq)|MMX|intrin.h|__m64 _m_psrlq(\__m64,\__m64)|
-|[_m_psrlqi](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_m_psrlqi)|MMX|intrin.h|__m64 _m_psrlqi (\_typu _m64, int)|
-|[_m_psrlw](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_m_psrlw)|MMX|intrin.h|__m64 _m_psrlw (\_typu _m64,\_typu _m64)|
-|[_m_psrlwi](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_m_psrlwi)|MMX|intrin.h|__m64 _m_psrlwi (\_typu _m64, int)|
-|[_m_psubb](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_m_psubb)|MMX|intrin.h|__m64 _m_psubb (\_typu _m64,\_typu _m64)|
-|[_m_psubd](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_m_psubd)|MMX|intrin.h|__m64 _m_psubd (\_typu _m64,\_typu _m64)|
-|[_m_psubsb](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_m_psubsb)|MMX|intrin.h|__m64 _m_psubsb (\_typu _m64,\_typu _m64)|
-|[_m_psubsw](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_m_psubsw)|MMX|intrin.h|__m64 _m_psubsw (\_typu _m64,\_typu _m64)|
-|[_m_psubusb](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_m_psubusb)|MMX|intrin.h|__m64 _m_psubusb (\_typu _m64,\_typu _m64)|
-|[_m_psubusw](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_m_psubusw)|MMX|intrin.h|__m64 _m_psubusw (\_typu _m64,\_typu _m64)|
-|[_m_psubw](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_m_psubw)|MMX|intrin.h|__m64 _m_psubw (\_typu _m64,\_typu _m64)|
-|_m_pswapd|3DNOWEXT|intrin.h|__m64 _m_pswapd (\_typu _m64)|
-|[_m_punpckhbw](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_m_punpckhbw)|MMX|intrin.h|__m64 _m_punpckhbw (\_typu _m64,\_typu _m64)|
-|[_m_punpckhdq](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_m_punpckhdq)|MMX|intrin.h|__m64 _m_punpckhdq (\_typu _m64,\_typu _m64)|
-|[_m_punpckhwd](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_m_punpckhwd)|MMX|intrin.h|__m64 _m_punpckhwd (\_typu _m64,\_typu _m64)|
-|[_m_punpcklbw](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_m_punpcklbw)|MMX|intrin.h|__m64 _m_punpcklbw (\_typu _m64,\_typu _m64)|
-|[_m_punpckldq](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_m_punpckldq)|MMX|intrin.h|__m64 _m_punpckldq (\_typu _m64,\_typu _m64)|
-|[_m_punpcklwd](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_m_punpcklwd)|MMX|intrin.h|__m64 _m_punpcklwd (\_typu _m64,\_typu _m64)|
-|[_m_pxor](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_m_pxor)|MMX|intrin.h|__m64 _m_pxor (\_typu _m64,\_typu _m64)|
-|_m_to_float|3DNOW|intrin.h|float _m_to_float (\_typu _m64)|
+|[_m_psrlqi](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_m_psrlqi)|MMX|intrin.h|__m64 _m_psrlqi (\__m64, int)|
+|[_m_psrlw](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_m_psrlw)|MMX|intrin.h|__m64 _m_psrlw (\__m64,\__m64)|
+|[_m_psrlwi](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_m_psrlwi)|MMX|intrin.h|__m64 _m_psrlwi (\__m64, int)|
+|[_m_psubb](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_m_psubb)|MMX|intrin.h|__m64 _m_psubb (\__m64,\__m64)|
+|[_m_psubd](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_m_psubd)|MMX|intrin.h|__m64 _m_psubd (\__m64,\__m64)|
+|[_m_psubsb](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_m_psubsb)|MMX|intrin.h|__m64 _m_psubsb (\__m64,\__m64)|
+|[_m_psubsw](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_m_psubsw)|MMX|intrin.h|__m64 _m_psubsw (\__m64,\__m64)|
+|[_m_psubusb](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_m_psubusb)|MMX|intrin.h|__m64 _m_psubusb (\__m64,\__m64)|
+|[_m_psubusw](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_m_psubusw)|MMX|intrin.h|__m64 _m_psubusw (\__m64,\__m64)|
+|[_m_psubw](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_m_psubw)|MMX|intrin.h|__m64 _m_psubw (\__m64,\__m64)|
+|_m_pswapd|3DNOWEXT|intrin.h|__m64 _m_pswapd (\__m64)|
+|[_m_punpckhbw](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_m_punpckhbw)|MMX|intrin.h|__m64 _m_punpckhbw (\__m64,\__m64)|
+|[_m_punpckhdq](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_m_punpckhdq)|MMX|intrin.h|__m64 _m_punpckhdq (\__m64,\__m64)|
+|[_m_punpckhwd](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_m_punpckhwd)|MMX|intrin.h|__m64 _m_punpckhwd (\__m64,\__m64)|
+|[_m_punpcklbw](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_m_punpcklbw)|MMX|intrin.h|__m64 _m_punpcklbw (\__m64,\__m64)|
+|[_m_punpckldq](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_m_punpckldq)|MMX|intrin.h|__m64 _m_punpckldq (\__m64,\__m64)|
+|[_m_punpcklwd](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_m_punpcklwd)|MMX|intrin.h|__m64 _m_punpcklwd (\__m64,\__m64)|
+|[_m_pxor](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_m_pxor)|MMX|intrin.h|__m64 _m_pxor (\__m64,\__m64)|
+|_m_to_float|3DNOW|intrin.h|float _m_to_float (\__m64)|
 |[_m_to_int](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_m_to_int)|MMX|intrin.h|int _m_to_int(\__m64)|
 |[_mm_abs_epi16](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_abs_epi16)|SSSE3|intrin.h|__m128i _mm_abs_epi16 (\__m128i)|
 |[_mm_abs_epi32](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_abs_epi32)|SSSE3|intrin.h|__m128i _mm_abs_epi32(\__m128i)|
 |[_mm_abs_epi8](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_abs_epi8)|SSSE3|intrin.h|__m128i _mm_abs_epi8 (\__m128i)|
-|[_mm_abs_pi16](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_abs_pi16)|SSSE3|intrin.h|__m64 _mm_abs_pi16 (\_typu _m64)|
+|[_mm_abs_pi16](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_abs_pi16)|SSSE3|intrin.h|__m64 _mm_abs_pi16 (\__m64)|
 |[_mm_abs_pi32](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_abs_pi32)|SSSE3|intrin.h|__m64 _mm_abs_pi32(\__m64)|
 |[_mm_abs_pi8](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_abs_pi8)|SSSE3|intrin.h|__m64 _mm_abs_pi8(\__m64)|
 |[_mm_add_epi16](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_add_epi16)|SSE2|intrin.h|__m128i _mm_add_epi16 (\__m128i,\__m128i)|
@@ -268,7 +268,7 @@ W poniższej tabeli wymieniono funkcje wewnętrzne dostępne na x86 procesorów.
 |[_mm_add_pd](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_add_pd)|SSE2|intrin.h|__m128d _mm_add_pd (\__m128d,\__m128d)|
 |[_mm_add_ps](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_add_ps)|SSE|intrin.h|__m128 _mm_add_ps (\__m128,\__m128)|
 |[_mm_add_sd](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_add_sd)|SSE2|intrin.h|__m128d _mm_add_sd (\__m128d,\__m128d)|
-|[_mm_add_si64](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_add_si64)|SSE2|intrin.h|__m64 _mm_add_si64 (\_typu _m64,\_typu _m64)|
+|[_mm_add_si64](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_add_si64)|SSE2|intrin.h|__m64 _mm_add_si64 (\__m64,\__m64)|
 |[_mm_add_ss](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_add_ss)|SSE|intrin.h|__m128 _mm_add_ss (\__m128,\__m128)|
 |[_mm_adds_epi16](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_adds_epi16)|SSE2|intrin.h|__m128i _mm_adds_epi16 (\__m128i,\__m128i)|
 |[_mm_adds_epi8](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_adds_epi8)|SSE2|intrin.h|__m128i _mm_adds_epi8 (\__m128i,\__m128i)|
@@ -283,7 +283,7 @@ W poniższej tabeli wymieniono funkcje wewnętrzne dostępne na x86 procesorów.
 |[_mm_aesimc_si128](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_aesimc_si128)|AESNI [2]|immintrin.h|__m128i _mm_aesimc_si128 (\__m128i )|
 |[_mm_aeskeygenassist_si128](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_aeskeygenassist_si128)|AESNI [2]|immintrin.h|__m128i _mm_aeskeygenassist_si128 (\__m128i, const int)|
 |[_mm_alignr_epi8](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_alignr_epi8)|SSSE3|intrin.h|__m128i _mm_alignr_epi8 (\__m128i,\__m128i, int)|
-|[_mm_alignr_pi8](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_alignr_pi8)|SSSE3|intrin.h|__m64 _mm_alignr_pi8 (\_typu _m64,\_typu _m64, int)|
+|[_mm_alignr_pi8](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_alignr_pi8)|SSSE3|intrin.h|__m64 _mm_alignr_pi8 (\__m64,\__m64, int)|
 |[_mm_and_pd](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_and_pd)|SSE2|intrin.h|__m128d _mm_and_pd (\__m128d,\__m128d)|
 |[_mm_and_ps](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_and_ps)|SSE|intrin.h|__m128 _mm_and_ps (\__m128,\__m128)|
 |[_mm_and_si128](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_and_si128)|SSE2|intrin.h|__m128i _mm_and_si128(\__m128i,\__m128i)|
@@ -312,9 +312,9 @@ W poniższej tabeli wymieniono funkcje wewnętrzne dostępne na x86 procesorów.
 |[_mm_castps_si128](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_castps_si128)|SSSE3|intrin.h|__m128i _mm_castps_si128(\__m128)|
 |[_mm_castsi128_pd](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_castsi128_pd)|SSSE3|intrin.h|__m128d _mm_castsi128_pd(\__m128i)|
 |[_mm_castsi128_ps](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_castsi128_ps)|SSSE3|intrin.h|__m128 _mm_castsi128_ps (\__m128i)|
-|[_mm_clflush](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_clflush)|SSE2|intrin.h|void _mm_clflush(void const *)|
+|[_mm_clflush](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_clflush)|SSE2|intrin.h|void _mm_clflush (void const \*)|
 |[_mm_clmulepi64_si128](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_clmulepi64_si128)|PCLMULQDQ [2]|immintrin.h|__m128i _mm_clmulepi64_si128 (\__m128i,\__m128i, const int)|
-|_mm_cmov_si128|ELEMENT XOP [1]|ammintrin.h|__m128i _mm_cmov_si128(\__m128i,\__m128i,\__m128i)|
+|_mm_cmov_si128|XOP [1]|ammintrin.h|__m128i _mm_cmov_si128(\__m128i,\__m128i,\__m128i)|
 |[_mm_cmp_pd](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_cmp_pd)|AVX [2]|immintrin.h|__m128d _mm_cmp_pd (\__m128d,\__m128d, const int)|
 |[_mm_cmp_ps](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_cmp_ps)|AVX [2]|immintrin.h|__m128 _mm_cmp_ps (\__m128,\__m128, const int)|
 |[_mm_cmp_sd](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_cmp_sd)|AVX [2]|immintrin.h|__m128d _mm_cmp_sd (\__m128d,\__m128d, const int)|
@@ -392,14 +392,14 @@ W poniższej tabeli wymieniono funkcje wewnętrzne dostępne na x86 procesorów.
 |[_mm_cmpunord_ps](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_cmpunord_ps)|SSE|intrin.h|__m128 _mm_cmpunord_ps (\__m128,\__m128)|
 |[_mm_cmpunord_sd](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_cmpunord_sd)|SSE2|intrin.h|__m128d _mm_cmpunord_sd (\__m128d,\__m128d)|
 |[_mm_cmpunord_ss](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_cmpunord_ss)|SSE|intrin.h|__m128 _mm_cmpunord_ss (\__m128,\__m128)|
-|_mm_com_epi16|ELEMENT XOP [1]|ammintrin.h|__m128i _mm_com_epi16 (\__m128i,\__m128i, int)|
-|_mm_com_epi32|ELEMENT XOP [1]|ammintrin.h|__m128i _mm_com_epi32 (\__m128i,\__m128i, int)|
-|_mm_com_epi64|ELEMENT XOP [1]|ammintrin.h|__m128i _mm_com_epi32 (\__m128i,\__m128i, int)|
-|_mm_com_epi8|ELEMENT XOP [1]|ammintrin.h|__m128i _mm_com_epi8 (\__m128i,\__m128i, int)|
-|_mm_com_epu16|ELEMENT XOP [1]|ammintrin.h|__m128i _mm_com_epu16 (\__m128i,\__m128i, int)|
-|_mm_com_epu32|ELEMENT XOP [1]|ammintrin.h|__m128i _mm_com_epu32 (\__m128i,\__m128i, int)|
-|_mm_com_epu64|ELEMENT XOP [1]|ammintrin.h|__m128i _mm_com_epu32 (\__m128i,\__m128i, int)|
-|_mm_com_epu8|ELEMENT XOP [1]|ammintrin.h|__m128i _mm_com_epu8 (\__m128i,\__m128i, int)|
+|_mm_com_epi16|XOP [1]|ammintrin.h|__m128i _mm_com_epi16 (\__m128i,\__m128i, int)|
+|_mm_com_epi32|XOP [1]|ammintrin.h|__m128i _mm_com_epi32 (\__m128i,\__m128i, int)|
+|_mm_com_epi64|XOP [1]|ammintrin.h|__m128i _mm_com_epi32 (\__m128i,\__m128i, int)|
+|_mm_com_epi8|XOP [1]|ammintrin.h|__m128i _mm_com_epi8 (\__m128i,\__m128i, int)|
+|_mm_com_epu16|XOP [1]|ammintrin.h|__m128i _mm_com_epu16 (\__m128i,\__m128i, int)|
+|_mm_com_epu32|XOP [1]|ammintrin.h|__m128i _mm_com_epu32 (\__m128i,\__m128i, int)|
+|_mm_com_epu64|XOP [1]|ammintrin.h|__m128i _mm_com_epu32 (\__m128i,\__m128i, int)|
+|_mm_com_epu8|XOP [1]|ammintrin.h|__m128i _mm_com_epu8 (\__m128i,\__m128i, int)|
 |[_mm_comieq_sd](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_comieq_sd)|SSE2|intrin.h|int _mm_comieq_sd(\__m128d,\__m128d)|
 |[_mm_comieq_ss](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_comieq_ss)|SSE|intrin.h|int _mm_comieq_ss (\__m128,\__m128)|
 |[_mm_comige_sd](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_comige_sd)|SSE2|intrin.h|int _mm_comige_sd (\__m128d,\__m128d)|
@@ -412,8 +412,8 @@ W poniższej tabeli wymieniono funkcje wewnętrzne dostępne na x86 procesorów.
 |[_mm_comilt_ss](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_comilt_ss)|SSE|intrin.h|int _mm_comilt_ss (\__m128,\__m128)|
 |[_mm_comineq_sd](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_comineq_sd)|SSE2|intrin.h|int _mm_comineq_sd (\__m128d,\__m128d)|
 |[_mm_comineq_ss](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_comineq_ss)|SSE|intrin.h|int _mm_comineq_ss (\__m128,\__m128)|
-|[_mm_crc32_u16](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_crc32_u16)|SSE42|intrin.h|unsigned int _mm_crc32_u16 (unsigned int, krótko bez znaku)|
-|[_mm_crc32_u32](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_crc32_u32)|SSE42|intrin.h|unsigned int _mm_crc32_u32 (unsigned int, int bez znaku)|
+|[_mm_crc32_u16](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_crc32_u16)|SSE42|intrin.h|unsigned int _mm_crc32_u16 (unsigned int typ unsigned short)|
+|[_mm_crc32_u32](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_crc32_u32)|SSE42|intrin.h|unsigned int _mm_crc32_u32 (unsigned int, niepodpisane int)|
 |[_mm_crc32_u8](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_crc32_u8)|SSE42|intrin.h|unsigned int _mm_crc32_u8 (unsigned int, char bez znaku)|
 |[_mm_cvt_pi2ps](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_cvt_pi2ps)|SSE|intrin.h|__m128 _mm_cvt_pi2ps(\__m128,\__m64)|
 |[_mm_cvt_ps2pi](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_cvt_ps2pi)|SSE|intrin.h|__m64 _mm_cvt_ps2pi(\__m128)|
@@ -437,11 +437,11 @@ W poniższej tabeli wymieniono funkcje wewnętrzne dostępne na x86 procesorów.
 |[_mm_cvtpd_pi32](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_cvtpd_pi32)|SSE2|intrin.h|__m64 _mm_cvtpd_pi32(\__m128d)|
 |[_mm_cvtpd_ps](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_cvtpd_ps)|SSE2|intrin.h|__m128 _mm_cvtpd_ps(\__m128d)|
 |[_mm_cvtph_ps](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_cvtph_ps)|F16C [2]|immintrin.h|__m128 _mm_cvtph_ps (\__m128i)|
-|[_mm_cvtpi32_pd](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_cvtpi32_pd)|SSE2|intrin.h|__m128d _mm_cvtpi32_pd (\_typu _m64)|
+|[_mm_cvtpi32_pd](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_cvtpi32_pd)|SSE2|intrin.h|__m128d _mm_cvtpi32_pd (\__m64)|
 |[_mm_cvtps_epi32](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_cvtps_epi32)|SSE2|intrin.h|__m128i _mm_cvtps_epi32(\__m128)|
 |[_mm_cvtps_pd](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_cvtps_pd)|SSE2|intrin.h|__m128d _mm_cvtps_pd(\__m128)|
 |[_mm_cvtps_ph](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_cvtps_ph)|F16C [2]|immintrin.h|__m128i _mm_cvtps_ph (\__m128, const int)|
-|[_mm_cvtsd_f64](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_cvtsd_f64)|SSSE3|intrin.h|Podwójna _mm_cvtsd_f64 (\__m128d)|
+|[_mm_cvtsd_f64](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_cvtsd_f64)|SSSE3|intrin.h|podwójne _mm_cvtsd_f64 (\__m128d)|
 |[_mm_cvtsd_si32](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_cvtsd_si32)|SSE2|intrin.h|int _mm_cvtsd_si32(\__m128d)|
 |[_mm_cvtsd_ss](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_cvtsd_ss)|SSE2|intrin.h|__m128 _mm_cvtsd_ss (\__m128,\__m128d)|
 |[_mm_cvtsi128_si32](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_cvtsi128_si32)|SSE2|intrin.h|int _mm_cvtsi128_si32(\__m128i)|
@@ -487,114 +487,114 @@ W poniższej tabeli wymieniono funkcje wewnętrzne dostępne na x86 procesorów.
 |[_mm_fnmsub_ps](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_fnmsub_ps)|FMA [2]|immintrin.h|__m128 _mm_fnmsub_ps (\__m128,\__m128 b\__m128 c).|
 |[_mm_fnmsub_sd](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_fnmsub_sd)|FMA [2]|immintrin.h|__m128d _mm_fnmsub_sd (\__m128d,\__m128d b\__m128d c).|
 |[_mm_fnmsub_ss](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_fnmsub_ss)|FMA [2]|immintrin.h|__m128 _mm_fnmsub_ss (\__m128,\__m128 b\__m128 c).|
-|_mm_frcz_pd|ELEMENT XOP [1]|ammintrin.h|__m128d _mm_frcz_pd(\__m128d)|
-|_mm_frcz_ps|ELEMENT XOP [1]|ammintrin.h|__m128 _mm_frcz_ps(\__m128)|
-|_mm_frcz_sd|ELEMENT XOP [1]|ammintrin.h|__m128d _mm_frcz_sd(\__m128d,\__m128d)|
-|_mm_frcz_ss|ELEMENT XOP [1]|ammintrin.h|__m128 _mm_frcz_ss (\__m128,\__m128)|
+|_mm_frcz_pd|XOP [1]|ammintrin.h|__m128d _mm_frcz_pd(\__m128d)|
+|_mm_frcz_ps|XOP [1]|ammintrin.h|__m128 _mm_frcz_ps(\__m128)|
+|_mm_frcz_sd|XOP [1]|ammintrin.h|__m128d _mm_frcz_sd(\__m128d,\__m128d)|
+|_mm_frcz_ss|XOP [1]|ammintrin.h|__m128 _mm_frcz_ss (\__m128,\__m128)|
 |[_mm_getcsr](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_getcsr)|SSE|intrin.h|_mm_getcsr(void) unsigned int|
 |[_mm_hadd_epi16](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_hadd_epi16)|SSSE3|intrin.h|__m128i _mm_hadd_epi16 (\__m128i,\__m128i)|
 |[_mm_hadd_epi32](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_hadd_epi32)|SSSE3|intrin.h|__m128i _mm_hadd_epi32 (\__m128i,\__m128i)|
 |[_mm_hadd_pd](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_hadd_pd)|SSE3|intrin.h|__m128d _mm_hadd_pd (\__m128d,\__m128d)|
-|[_mm_hadd_pi16](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_hadd_pi16)|SSSE3|intrin.h|__m64 _mm_hadd_pi16 (\_typu _m64,\_typu _m64)|
-|[_mm_hadd_pi32](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_hadd_pi32)|SSSE3|intrin.h|__m64 _mm_hadd_pi32 (\_typu _m64,\_typu _m64)|
+|[_mm_hadd_pi16](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_hadd_pi16)|SSSE3|intrin.h|__m64 _mm_hadd_pi16 (\__m64,\__m64)|
+|[_mm_hadd_pi32](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_hadd_pi32)|SSSE3|intrin.h|__m64 _mm_hadd_pi32 (\__m64,\__m64)|
 |[_mm_hadd_ps](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_hadd_ps)|SSE3|intrin.h|__m128 _mm_hadd_ps (\__m128,\__m128)|
-|_mm_haddd_epi16|ELEMENT XOP [1]|ammintrin.h|__m128i _mm_haddd_epi16 (\__m128i)|
-|_mm_haddd_epi8|ELEMENT XOP [1]|ammintrin.h|__m128i _mm_haddd_epi8 (\__m128i)|
-|_mm_haddd_epu16|ELEMENT XOP [1]|ammintrin.h|__m128i _mm_haddd_epu16 (\__m128i)|
-|_mm_haddd_epu8|ELEMENT XOP [1]|ammintrin.h|__m128i _mm_haddd_epu8 (\__m128i)|
-|_mm_haddq_epi16|ELEMENT XOP [1]|ammintrin.h|__m128i _mm_haddq_epi16 (\__m128i)|
-|_mm_haddq_epi32|ELEMENT XOP [1]|ammintrin.h|__m128i _mm_haddq_epi32(\__m128i)|
-|_mm_haddq_epi8|ELEMENT XOP [1]|ammintrin.h|__m128i _mm_haddq_epi8 (\__m128i)|
-|_mm_haddq_epu16|ELEMENT XOP [1]|ammintrin.h|__m128i _mm_haddq_epu16 (\__m128i)|
-|_mm_haddq_epu32|ELEMENT XOP [1]|ammintrin.h|__m128i _mm_haddq_epu32 (\__m128i)|
-|_mm_haddq_epu8|ELEMENT XOP [1]|ammintrin.h|__m128i _mm_haddq_epu8 (\__m128i)|
+|_mm_haddd_epi16|XOP [1]|ammintrin.h|__m128i _mm_haddd_epi16 (\__m128i)|
+|_mm_haddd_epi8|XOP [1]|ammintrin.h|__m128i _mm_haddd_epi8 (\__m128i)|
+|_mm_haddd_epu16|XOP [1]|ammintrin.h|__m128i _mm_haddd_epu16 (\__m128i)|
+|_mm_haddd_epu8|XOP [1]|ammintrin.h|__m128i _mm_haddd_epu8 (\__m128i)|
+|_mm_haddq_epi16|XOP [1]|ammintrin.h|__m128i _mm_haddq_epi16 (\__m128i)|
+|_mm_haddq_epi32|XOP [1]|ammintrin.h|__m128i _mm_haddq_epi32(\__m128i)|
+|_mm_haddq_epi8|XOP [1]|ammintrin.h|__m128i _mm_haddq_epi8 (\__m128i)|
+|_mm_haddq_epu16|XOP [1]|ammintrin.h|__m128i _mm_haddq_epu16 (\__m128i)|
+|_mm_haddq_epu32|XOP [1]|ammintrin.h|__m128i _mm_haddq_epu32 (\__m128i)|
+|_mm_haddq_epu8|XOP [1]|ammintrin.h|__m128i _mm_haddq_epu8 (\__m128i)|
 |[_mm_hadds_epi16](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_hadds_epi16)|SSSE3|intrin.h|__m128i _mm_hadds_epi16 (\__m128i,\__m128i)|
-|[_mm_hadds_pi16](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_hadds_pi16)|SSSE3|intrin.h|__m64 _mm_hadds_pi16 (\_typu _m64,\_typu _m64)|
-|_mm_haddw_epi8|ELEMENT XOP [1]|ammintrin.h|__m128i _mm_haddw_epi8 (\__m128i)|
-|_mm_haddw_epu8|ELEMENT XOP [1]|ammintrin.h|__m128i _mm_haddw_epu8 (\__m128i)|
+|[_mm_hadds_pi16](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_hadds_pi16)|SSSE3|intrin.h|__m64 _mm_hadds_pi16 (\__m64,\__m64)|
+|_mm_haddw_epi8|XOP [1]|ammintrin.h|__m128i _mm_haddw_epi8 (\__m128i)|
+|_mm_haddw_epu8|XOP [1]|ammintrin.h|__m128i _mm_haddw_epu8 (\__m128i)|
 |[_mm_hsub_epi16](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_hsub_epi16)|SSSE3|intrin.h|__m128i _mm_hsub_epi16 (\__m128i,\__m128i)|
 |[_mm_hsub_epi32](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_hsub_epi32)|SSSE3|intrin.h|__m128i _mm_hsub_epi32 (\__m128i,\__m128i)|
 |[_mm_hsub_pd](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_hsub_pd)|SSE3|intrin.h|__m128d _mm_hsub_pd (\__m128d,\__m128d)|
-|[_mm_hsub_pi16](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_hsub_pi16)|SSSE3|intrin.h|__m64 _mm_hsub_pi16 (\_typu _m64,\_typu _m64)|
-|[_mm_hsub_pi32](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_hsub_pi32)|SSSE3|intrin.h|__m64 _mm_hsub_pi32 (\_typu _m64,\_typu _m64)|
+|[_mm_hsub_pi16](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_hsub_pi16)|SSSE3|intrin.h|__m64 _mm_hsub_pi16 (\__m64,\__m64)|
+|[_mm_hsub_pi32](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_hsub_pi32)|SSSE3|intrin.h|__m64 _mm_hsub_pi32 (\__m64,\__m64)|
 |[_mm_hsub_ps](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_hsub_ps)|SSE3|intrin.h|__m128 _mm_hsub_ps (\__m128,\__m128)|
-|_mm_hsubd_epi16|ELEMENT XOP [1]|ammintrin.h|__m128i _mm_hsubd_epi16 (\__m128i)|
-|_mm_hsubq_epi32|ELEMENT XOP [1]|ammintrin.h|__m128i _mm_hsubq_epi32(\__m128i)|
+|_mm_hsubd_epi16|XOP [1]|ammintrin.h|__m128i _mm_hsubd_epi16 (\__m128i)|
+|_mm_hsubq_epi32|XOP [1]|ammintrin.h|__m128i _mm_hsubq_epi32(\__m128i)|
 |[_mm_hsubs_epi16](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_hsubs_epi16)|SSSE3|intrin.h|__m128i _mm_hsubs_epi16 (\__m128i,\__m128i)|
-|[_mm_hsubs_pi16](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_hsubs_pi16)|SSSE3|intrin.h|__m64 _mm_hsubs_pi16 (\_typu _m64,\_typu _m64)|
-|_mm_hsubw_epi8|ELEMENT XOP [1]|ammintrin.h|__m128i _mm_hsubw_epi8 (\__m128i)|
-|[_mm_i32gather_epi32](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_i32gather_epi32)|AVX2 [2]|immintrin.h|__m128i _mm_i32gather_epi32 (int const * elementu bazowego,\__m128i indeksu, const int skali)|
-|[_mm_i32gather_epi64](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_i32gather_epi64)|AVX2 [2]|immintrin.h|__m128i _mm_i32gather_epi64 (\__int64 const * podstawowej,\__m128i indeksu, const int skali)|
-|[_mm_i32gather_pd](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_i32gather_pd)|AVX2 [2]|immintrin.h|__m128d _mm_i32gather_pd (dwa razy const * elementu bazowego,\__m128i indeksu, const int skali)|
-|[_mm_i32gather_ps](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_i32gather_ps)|AVX2 [2]|immintrin.h|__m128 _mm_i32gather_ps (float const * elementu bazowego,\__m128i indeksu, const int skali)|
-|[_mm_i64gather_epi32](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_i64gather_epi32)|AVX2 [2]|immintrin.h|__m128i _mm_i64gather_epi32 (int const * elementu bazowego,\__m128i indeksu, const int skali)|
-|[_mm_i64gather_epi64](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_i64gather_epi64)|AVX2 [2]|immintrin.h|__m128i _mm_i64gather_epi64 (\__int64 const * podstawowej,\__m128i indeksu, const int skali)|
-|[_mm_i64gather_pd](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_i64gather_pd)|AVX2 [2]|immintrin.h|__m128d _mm_i64gather_pd (dwa razy const * elementu bazowego,\__m128i indeksu, const int skali)|
-|[_mm_i64gather_ps](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_i64gather_ps)|AVX2 [2]|immintrin.h|__m128 _mm_i64gather_ps (float const * elementu bazowego,\__m128i indeksu, const int skali)|
+|[_mm_hsubs_pi16](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_hsubs_pi16)|SSSE3|intrin.h|__m64 _mm_hsubs_pi16 (\__m64,\__m64)|
+|_mm_hsubw_epi8|XOP [1]|ammintrin.h|__m128i _mm_hsubw_epi8 (\__m128i)|
+|[_mm_i32gather_epi32](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_i32gather_epi32)|AVX2 [2]|immintrin.h|__m128i _mm_i32gather_epi32 (int const \*base\__m128i indeksu, const int skalowania)|
+|[_mm_i32gather_epi64](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_i32gather_epi64)|AVX2 [2]|immintrin.h|__m128i _mm_i32gather_epi64 (\__int64 const \*bazy\__m128i indeksu, const int skalowania)|
+|[_mm_i32gather_pd](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_i32gather_pd)|AVX2 [2]|immintrin.h|__m128d _mm_i32gather_pd (podwójny const \*base\__m128i indeksu, const int skalowania)|
+|[_mm_i32gather_ps](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_i32gather_ps)|AVX2 [2]|immintrin.h|__m128 _mm_i32gather_ps (float const \*base\__m128i indeksu, const int skalowania)|
+|[_mm_i64gather_epi32](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_i64gather_epi32)|AVX2 [2]|immintrin.h|__m128i _mm_i64gather_epi32 (int const \*base\__m128i indeksu, const int skalowania)|
+|[_mm_i64gather_epi64](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_i64gather_epi64)|AVX2 [2]|immintrin.h|__m128i _mm_i64gather_epi64 (\__int64 const \*bazy\__m128i indeksu, const int skalowania)|
+|[_mm_i64gather_pd](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_i64gather_pd)|AVX2 [2]|immintrin.h|__m128d _mm_i64gather_pd (podwójny const \*base\__m128i indeksu, const int skalowania)|
+|[_mm_i64gather_ps](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_i64gather_ps)|AVX2 [2]|immintrin.h|__m128 _mm_i64gather_ps (float const \*base\__m128i indeksu, const int skalowania)|
 |[_mm_insert_epi16](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_insert_epi16)|SSE2|intrin.h|__m128i _mm_insert_epi16 (\__m128i, int, int)|
 |[_mm_insert_epi32](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_insert_epi32)|SSE41|intrin.h|__m128i _mm_insert_epi32 (\__m128i, int, const int)|
 |[_mm_insert_epi8](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_insert_epi8)|SSE41|intrin.h|__m128i _mm_insert_epi8 (\__m128i, int, const int)|
 |[_mm_insert_ps](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_insert_ps)|SSE41|intrin.h|__m128 _mm_insert_ps (\__m128,\__m128, const int)|
 |[_mm_insert_si64](../intrinsics/mm-insert-si64-mm-inserti-si64.md)|SSE4a|intrin.h|__m128i _mm_insert_si64 (\__m128i,\__m128i)|
 |[_mm_inserti_si64](../intrinsics/mm-insert-si64-mm-inserti-si64.md)|SSE4a|intrin.h|__m128i _mm_inserti_si64 (\__m128i,\__m128i, int, int)|
-|[_mm_lddqu_si128](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_lddqu_si128)|SSE3|intrin.h|__m128i _mm_lddqu_si128 (\__m128i const *)|
+|[_mm_lddqu_si128](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_lddqu_si128)|SSE3|intrin.h|__m128i _mm_lddqu_si128 (\__m128i const\*)|
 |[_mm_lfence](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_lfence)|SSE2|intrin.h|void _mm_lfence(void)|
-|[_mm_load_pd](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_load_pd)|SSE2|intrin.h|__m128d _mm_load_pd(double*)|
-|[_mm_load_ps](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_load_ps)|SSE|intrin.h|__m128 _mm_load_ps(float*)|
-|[_mm_load_ps1](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_load_ps1)|SSE|intrin.h|__m128 _mm_load_ps1(float*)|
-|[_mm_load_sd](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_load_sd)|SSE2|intrin.h|__m128d _mm_load_sd(double*)|
-|[_mm_load_si128](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_load_si128)|SSE2|intrin.h|__m128i _mm_load_si128 (\__m128i *)|
-|[_mm_load_ss](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_load_ss)|SSE|intrin.h|__m128 _mm_load_ss(float*)|
-|[_mm_load1_pd](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_load1_pd)|SSE2|intrin.h|__m128d _mm_load1_pd(double*)|
-|[_mm_loaddup_pd](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_loaddup_pd)|SSE3|intrin.h|__m128d _mm_loaddup_pd (dwa razy const *)|
-|[_mm_loadh_pd](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_loadh_pd)|SSE2|intrin.h|__m128d _mm_loadh_pd (\__m128d, double *)|
-|[_mm_loadh_pi](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_loadh_pi)|SSE|intrin.h|__m128 _mm_loadh_pi (\__m128,\_typu _m64 *)|
-|[_mm_loadl_epi64](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_loadl_epi64)|SSE2|intrin.h|__m128i _mm_loadl_epi64 (\__m128i *)|
-|[_mm_loadl_pd](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_loadl_pd)|SSE2|intrin.h|__m128d _mm_loadl_pd (\__m128d, double *)|
-|[_mm_loadl_pi](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_loadl_pi)|SSE|intrin.h|__m128 _mm_loadl_pi (\__m128,\_typu _m64 *)|
-|[_mm_loadr_pd](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_loadr_pd)|SSE2|intrin.h|__m128d _mm_loadr_pd(double*)|
-|[_mm_loadr_ps](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_loadr_ps)|SSE|intrin.h|__m128 _mm_loadr_ps(float*)|
-|[_mm_loadu_pd](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_loadu_pd)|SSE2|intrin.h|__m128d _mm_loadu_pd(double*)|
-|[_mm_loadu_ps](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_loadu_ps)|SSE|intrin.h|__m128 _mm_loadu_ps(float*)|
-|[_mm_loadu_si128](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_loadu_si128)|SSE2|intrin.h|__m128i _mm_loadu_si128 (\__m128i *)|
-|_mm_macc_epi16|ELEMENT XOP [1]|ammintrin.h|__m128i _mm_macc_epi16 (\__m128i,\__m128i,\__m128i)|
-|_mm_macc_epi32|ELEMENT XOP [1]|ammintrin.h|__m128i _mm_macc_epi32 (\__m128i,\__m128i,\__m128i)|
+|[_mm_load_pd](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_load_pd)|SSE2|intrin.h|__m128d _mm_load_pd (double\*)|
+|[_mm_load_ps](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_load_ps)|SSE|intrin.h|__m128 _mm_load_ps (float\*)|
+|[_mm_load_ps1](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_load_ps1)|SSE|intrin.h|__m128 _mm_load_ps1 (float\*)|
+|[_mm_load_sd](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_load_sd)|SSE2|intrin.h|__m128d _mm_load_sd (double\*)|
+|[_mm_load_si128](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_load_si128)|SSE2|intrin.h|__m128i _mm_load_si128 (\__m128i\*)|
+|[_mm_load_ss](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_load_ss)|SSE|intrin.h|__m128 _mm_load_ss (float\*)|
+|[_mm_load1_pd](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_load1_pd)|SSE2|intrin.h|__m128d _mm_load1_pd (double\*)|
+|[_mm_loaddup_pd](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_loaddup_pd)|SSE3|intrin.h|__m128d _mm_loaddup_pd (podwójny const\*)|
+|[_mm_loadh_pd](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_loadh_pd)|SSE2|intrin.h|__m128d _mm_loadh_pd (\__m128d double\*)|
+|[_mm_loadh_pi](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_loadh_pi)|SSE|intrin.h|__m128 _mm_loadh_pi (\__m128,\__m64\*)|
+|[_mm_loadl_epi64](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_loadl_epi64)|SSE2|intrin.h|__m128i _mm_loadl_epi64 (\__m128i\*)|
+|[_mm_loadl_pd](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_loadl_pd)|SSE2|intrin.h|__m128d _mm_loadl_pd (\__m128d double\*)|
+|[_mm_loadl_pi](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_loadl_pi)|SSE|intrin.h|__m128 _mm_loadl_pi (\__m128,\__m64\*)|
+|[_mm_loadr_pd](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_loadr_pd)|SSE2|intrin.h|__m128d _mm_loadr_pd (double\*)|
+|[_mm_loadr_ps](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_loadr_ps)|SSE|intrin.h|__m128 _mm_loadr_ps (float\*)|
+|[_mm_loadu_pd](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_loadu_pd)|SSE2|intrin.h|__m128d _mm_loadu_pd (double\*)|
+|[_mm_loadu_ps](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_loadu_ps)|SSE|intrin.h|__m128 _mm_loadu_ps (float\*)|
+|[_mm_loadu_si128](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_loadu_si128)|SSE2|intrin.h|__m128i _mm_loadu_si128 (\__m128i\*)|
+|_mm_macc_epi16|XOP [1]|ammintrin.h|__m128i _mm_macc_epi16 (\__m128i,\__m128i,\__m128i)|
+|_mm_macc_epi32|XOP [1]|ammintrin.h|__m128i _mm_macc_epi32 (\__m128i,\__m128i,\__m128i)|
 |_mm_macc_pd|FMA4 [1]|ammintrin.h|__m128d _mm_macc_pd (\__m128d,\__m128d,\__m128d)|
 |_mm_macc_ps|FMA4 [1]|ammintrin.h|__m128 _mm_macc_ps (\__m128,\__m128,\__m128)|
 |_mm_macc_sd|FMA4 [1]|ammintrin.h|__m128d _mm_macc_sd (\__m128d,\__m128d,\__m128d)|
 |_mm_macc_ss|FMA4 [1]|ammintrin.h|__m128 _mm_macc_ss (\__m128,\__m128,\__m128)|
-|_mm_maccd_epi16|ELEMENT XOP [1]|ammintrin.h|__m128i _mm_maccd_epi16 (\__m128i,\__m128i,\__m128i)|
-|_mm_macchi_epi32|ELEMENT XOP [1]|ammintrin.h|__m128i _mm_macchi_epi32(\__m128i,\__m128i,\__m128i)|
-|_mm_macclo_epi32|ELEMENT XOP [1]|ammintrin.h|__m128i _mm_macclo_epi32 (\__m128i,\__m128i,\__m128i)|
-|_mm_maccs_epi16|ELEMENT XOP [1]|ammintrin.h|__m128i _mm_maccs_epi16 (\__m128i,\__m128i,\__m128i)|
-|_mm_maccs_epi32|ELEMENT XOP [1]|ammintrin.h|__m128i _mm_maccs_epi32(\__m128i,\__m128i,\__m128i)|
-|_mm_maccsd_epi16|ELEMENT XOP [1]|ammintrin.h|__m128i _mm_maccsd_epi16 (\__m128i,\__m128i,\__m128i)|
-|_mm_maccshi_epi32|ELEMENT XOP [1]|ammintrin.h|__m128i _mm_maccshi_epi32 (\__m128i,\__m128i,\__m128i)|
-|_mm_maccslo_epi32|ELEMENT XOP [1]|ammintrin.h|__m128i _mm_maccslo_epi32 (\__m128i,\__m128i,\__m128i)|
+|_mm_maccd_epi16|XOP [1]|ammintrin.h|__m128i _mm_maccd_epi16 (\__m128i,\__m128i,\__m128i)|
+|_mm_macchi_epi32|XOP [1]|ammintrin.h|__m128i _mm_macchi_epi32(\__m128i,\__m128i,\__m128i)|
+|_mm_macclo_epi32|XOP [1]|ammintrin.h|__m128i _mm_macclo_epi32 (\__m128i,\__m128i,\__m128i)|
+|_mm_maccs_epi16|XOP [1]|ammintrin.h|__m128i _mm_maccs_epi16 (\__m128i,\__m128i,\__m128i)|
+|_mm_maccs_epi32|XOP [1]|ammintrin.h|__m128i _mm_maccs_epi32(\__m128i,\__m128i,\__m128i)|
+|_mm_maccsd_epi16|XOP [1]|ammintrin.h|__m128i _mm_maccsd_epi16 (\__m128i,\__m128i,\__m128i)|
+|_mm_maccshi_epi32|XOP [1]|ammintrin.h|__m128i _mm_maccshi_epi32 (\__m128i,\__m128i,\__m128i)|
+|_mm_maccslo_epi32|XOP [1]|ammintrin.h|__m128i _mm_maccslo_epi32 (\__m128i,\__m128i,\__m128i)|
 |[_mm_madd_epi16](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_madd_epi16)|SSE2|intrin.h|__m128i _mm_madd_epi16 (\__m128i,\__m128i)|
-|_mm_maddd_epi16|ELEMENT XOP [1]|ammintrin.h|__m128i _mm_maddd_epi16 (\__m128i,\__m128i,\__m128i)|
-|_mm_maddsd_epi16|ELEMENT XOP [1]|ammintrin.h|__m128i _mm_maddsd_epi16 (\__m128i,\__m128i,\__m128i)|
+|_mm_maddd_epi16|XOP [1]|ammintrin.h|__m128i _mm_maddd_epi16 (\__m128i,\__m128i,\__m128i)|
+|_mm_maddsd_epi16|XOP [1]|ammintrin.h|__m128i _mm_maddsd_epi16 (\__m128i,\__m128i,\__m128i)|
 |_mm_maddsub_pd|FMA4 [1]|ammintrin.h|__m128d _mm_maddsub_pd (\__m128d,\__m128d,\__m128d)|
 |_mm_maddsub_ps|FMA4 [1]|ammintrin.h|__m128 _mm_maddsub_ps (\__m128,\__m128,\__m128)|
 |[_mm_maddubs_epi16](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_maddubs_epi16)|SSSE3|intrin.h|__m128i _mm_maddubs_epi16 (\__m128i,\__m128i)|
-|[_mm_maddubs_pi16](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_maddubs_pi16)|SSSE3|intrin.h|__m64 _mm_maddubs_pi16 (\_typu _m64,\_typu _m64)|
-|[_mm_mask_i32gather_epi32](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_mask_i32gather_epi32)|AVX2 [2]|immintrin.h|__m128i _mm_mask_i32gather_epi32 (\__m128i src, int const * podstawowej,\_indeksu _m128i\__m128i maski, const int skali)|
-|[_mm_mask_i32gather_epi64](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_mask_i32gather_epi64)|AVX2 [2]|immintrin.h|__m128i _mm_mask_i32gather_epi64 (\__m128i src\__int64 const * podstawowej,\_indeksu _m128i\__m128i maski, const int skali)|
-|[_mm_mask_i32gather_pd](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_mask_i32gather_pd)|AVX2 [2]|immintrin.h|__m128d _mm_mask_i32gather_pd (\__m128d src, double const * podstawowej,\_indeksu _m128i\__m128d maski, const int skali)|
-|[_mm_mask_i32gather_ps](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_mask_i32gather_ps)|AVX2 [2]|immintrin.h|__m128 _mm_mask_i32gather_ps (\__m128 src, float const * podstawowej,\_indeksu _m128i\__m128 maski, const int skali)|
-|[_mm_mask_i64gather_epi32](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_mask_i64gather_epi32)|AVX2 [2]|immintrin.h|__m128i _mm_mask_i64gather_epi32 (\__m128i src, int const * podstawowej,\_indeksu _m128i\__m128i maski, const int skali)|
-|[_mm_mask_i64gather_epi64](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_mask_i64gather_epi64)|AVX2 [2]|immintrin.h|__m128i _mm_mask_i64gather_epi64 (\__m128i src\__int64 const * podstawowej,\_indeksu _m128i\__m128i maski, const int skali)|
-|[_mm_mask_i64gather_pd](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_mask_i64gather_pd)|AVX2 [2]|immintrin.h|__m128d _mm_mask_i64gather_pd (\__m128d src, double const * podstawowej,\_indeksu _m128i\__m128d maski, const int skali)|
-|[_mm_mask_i64gather_ps](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_mask_i64gather_ps)|AVX2 [2]|immintrin.h|__m128 _mm_mask_i64gather_ps (\__m128 src, float const * podstawowej,\_indeksu _m128i\__m128 maski, const int skali)|
-|[_mm_maskload_epi32](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_maskload_epi32)|AVX2 [2]|immintrin.h|__m128i _mm_maskload_epi32 (int const *,\__m128i)|
-|[_mm_maskload_epi64](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_maskload_epi64)|AVX2 [2]|immintrin.h|__m128i _mm_maskload_epi64 ( \__int64 const *,\__m128i)|
-|[_mm_maskload_pd](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_maskload_pd)|AVX [2]|immintrin.h|__m128d _mm_maskload_pd (dwa razy const *,\__m128i)|
-|[_mm_maskload_ps](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_maskload_ps)|AVX [2]|immintrin.h|__m128 _mm_maskload_ps (float const *,\__m128i)|
-|[_mm_maskmoveu_si128](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_maskmoveu_si128)|SSE2|intrin.h|void _mm_maskmoveu_si128 (\__m128i,\__m128i, char *)|
-|[_mm_maskstore_epi32](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_maskstore_epi32)|AVX2 [2]|immintrin.h|void _mm_maskstore_epi32 (int *,\__m128i,\__m128i)|
-|[_mm_maskstore_epi64](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_maskstore_epi64)|AVX2 [2]|immintrin.h|void _mm_maskstore_epi64 (\__int64 *,\__m128i,\__m128i)|
-|[_mm_maskstore_pd](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_maskstore_pd)|AVX [2]|immintrin.h|void _mm_maskstore_pd (o podwójnej precyzji *,\__m128i,\__m128d)|
-|[_mm_maskstore_ps](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_maskstore_ps)|AVX [2]|immintrin.h|void _mm_maskstore_ps (float *,\__m128i,\__m128)|
+|[_mm_maddubs_pi16](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_maddubs_pi16)|SSSE3|intrin.h|__m64 _mm_maddubs_pi16 (\__m64,\__m64)|
+|[_mm_mask_i32gather_epi32](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_mask_i32gather_epi32)|AVX2 [2]|immintrin.h|__m128i _mm_mask_i32gather_epi32 (\__m128i src, int const \*bazy\_indeksu _m128i\__m128i maska, const int skalowania)|
+|[_mm_mask_i32gather_epi64](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_mask_i32gather_epi64)|AVX2 [2]|immintrin.h|__m128i _mm_mask_i32gather_epi64 (\__m128i src\__int64 const \*bazy\_indeksu _m128i\__m128i maska, const int skalowania)|
+|[_mm_mask_i32gather_pd](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_mask_i32gather_pd)|AVX2 [2]|immintrin.h|__m128d _mm_mask_i32gather_pd (\__m128d src, double const \*bazy\_indeksu _m128i\__m128d maska, const int skalowania)|
+|[_mm_mask_i32gather_ps](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_mask_i32gather_ps)|AVX2 [2]|immintrin.h|__m128 _mm_mask_i32gather_ps (\__m128 src, float const \*bazy\_indeksu _m128i\__m128 maska, const int skalowania)|
+|[_mm_mask_i64gather_epi32](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_mask_i64gather_epi32)|AVX2 [2]|immintrin.h|__m128i _mm_mask_i64gather_epi32 (\__m128i src, int const \*bazy\_indeksu _m128i\__m128i maska, const int skalowania)|
+|[_mm_mask_i64gather_epi64](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_mask_i64gather_epi64)|AVX2 [2]|immintrin.h|__m128i _mm_mask_i64gather_epi64 (\__m128i src\__int64 const \*bazy\_indeksu _m128i\__m128i maska, const int skalowania)|
+|[_mm_mask_i64gather_pd](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_mask_i64gather_pd)|AVX2 [2]|immintrin.h|__m128d _mm_mask_i64gather_pd (\__m128d src, double const \*bazy\_indeksu _m128i\__m128d maska, const int skalowania)|
+|[_mm_mask_i64gather_ps](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_mask_i64gather_ps)|AVX2 [2]|immintrin.h|__m128 _mm_mask_i64gather_ps (\__m128 src, float const \*bazy\_indeksu _m128i\__m128 maska, const int skalowania)|
+|[_mm_maskload_epi32](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_maskload_epi32)|AVX2 [2]|immintrin.h|__m128i _mm_maskload_epi32 (int const \*,\__m128i)|
+|[_mm_maskload_epi64](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_maskload_epi64)|AVX2 [2]|immintrin.h|__m128i _mm_maskload_epi64 ( \__int64 const \*,\__m128i)|
+|[_mm_maskload_pd](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_maskload_pd)|AVX [2]|immintrin.h|__m128d _mm_maskload_pd (podwójny const \*,\__m128i)|
+|[_mm_maskload_ps](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_maskload_ps)|AVX [2]|immintrin.h|__m128 _mm_maskload_ps (float const \*,\__m128i)|
+|[_mm_maskmoveu_si128](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_maskmoveu_si128)|SSE2|intrin.h|void _mm_maskmoveu_si128 (\__m128i,\__m128i, char\*)|
+|[_mm_maskstore_epi32](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_maskstore_epi32)|AVX2 [2]|immintrin.h|void _mm_maskstore_epi32 (int \*,\__m128i,\__m128i)|
+|[_mm_maskstore_epi64](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_maskstore_epi64)|AVX2 [2]|immintrin.h|void _mm_maskstore_epi64 (\__int64 \*,\__m128i,\__m128i)|
+|[_mm_maskstore_pd](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_maskstore_pd)|AVX [2]|immintrin.h|void _mm_maskstore_pd (double \*,\__m128i,\__m128d)|
+|[_mm_maskstore_ps](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_maskstore_ps)|AVX [2]|immintrin.h|void _mm_maskstore_ps (float \*,\__m128i,\__m128)|
 |[_mm_max_epi16](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_max_epi16)|SSE2|intrin.h|__m128i _mm_max_epi16 (\__m128i,\__m128i)|
 |[_mm_max_epi32](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_max_epi32)|SSE41|intrin.h|__m128i _mm_max_epi32 (\__m128i,\__m128i)|
 |[_mm_max_epi8](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_max_epi8)|SSE41|intrin.h|__m128i _mm_max_epi8 (\__m128i,\__m128i)|
@@ -617,7 +617,7 @@ W poniższej tabeli wymieniono funkcje wewnętrzne dostępne na x86 procesorów.
 |[_mm_min_sd](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_min_sd)|SSE2|intrin.h|__m128d _mm_min_sd (\__m128d,\__m128d)|
 |[_mm_min_ss](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_min_ss)|SSE|intrin.h|__m128 _mm_min_ss (\__m128,\__m128)|
 |[_mm_minpos_epu16](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_minpos_epu16)|SSE41|intrin.h|__m128i _mm_minpos_epu16 (\__m128i)|
-|[_mm_monitor](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_monitor)|SSE3|intrin.h|void _mm_monitor (void const *, unsigned int, int bez znaku)|
+|[_mm_monitor](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_monitor)|SSE3|intrin.h|void _mm_monitor (void const *, niepodpisane int, niepodpisane int)|
 |[_mm_move_epi64](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_move_epi64)|SSE2|intrin.h|__m128i _mm_move_epi64 (\__m128i)|
 |[_mm_move_sd](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_move_sd)|SSE2|intrin.h|__m128d _mm_move_sd (\__m128d,\__m128d)|
 |[_mm_move_ss](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_move_ss)|SSE|intrin.h|__m128 _mm_move_ss (\__m128,\__m128)|
@@ -644,14 +644,14 @@ W poniższej tabeli wymieniono funkcje wewnętrzne dostępne na x86 procesorów.
 |[_mm_mul_ps](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_mul_ps)|SSE|intrin.h|__m128 _mm_mul_ps (\__m128,\__m128)|
 |[_mm_mul_sd](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_mul_sd)|SSE2|intrin.h|__m128d _mm_mul_sd (\__m128d,\__m128d)|
 |[_mm_mul_ss](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_mul_ss)|SSE|intrin.h|__m128 _mm_mul_ss (\__m128,\__m128)|
-|[_mm_mul_su32](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_mul_su32)|SSE2|intrin.h|__m64 _mm_mul_su32 (\_typu _m64,\_typu _m64)|
+|[_mm_mul_su32](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_mul_su32)|SSE2|intrin.h|__m64 _mm_mul_su32 (\__m64,\__m64)|
 |[_mm_mulhi_epi16](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_mulhi_epi16)|SSE2|intrin.h|__m128i _mm_mulhi_epi16 (\__m128i,\__m128i)|
 |[_mm_mulhi_epu16](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_mulhi_epu16)|SSE2|intrin.h|__m128i _mm_mulhi_epu16 (\__m128i,\__m128i)|
 |[_mm_mulhrs_epi16](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_mulhrs_epi16)|SSSE3|intrin.h|__m128i _mm_mulhrs_epi16 (\__m128i,\__m128i)|
-|[_mm_mulhrs_pi16](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_mulhrs_pi16)|SSSE3|intrin.h|__m64 _mm_mulhrs_pi16 (\_typu _m64,\_typu _m64)|
+|[_mm_mulhrs_pi16](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_mulhrs_pi16)|SSSE3|intrin.h|__m64 _mm_mulhrs_pi16 (\__m64,\__m64)|
 |[_mm_mullo_epi16](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_mullo_epi16)|SSE2|intrin.h|__m128i _mm_mullo_epi16 (\__m128i,\__m128i)|
 |[_mm_mullo_epi32](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_mullo_epi32)|SSE41|intrin.h|__m128i _mm_mullo_epi32 (\__m128i,\__m128i)|
-|[_mm_mwait](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_mwait)|SSE3|intrin.h|void _mm_mwait (unsigned int, int bez znaku)|
+|[_mm_mwait](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_mwait)|SSE3|intrin.h|_mm_mwait void (unsigned int, niepodpisane int)|
 |_mm_nmacc_pd|FMA4 [1]|ammintrin.h|__m128d _mm_nmacc_pd (\__m128d,\__m128d,\__m128d)|
 |_mm_nmacc_ps|FMA4 [1]|ammintrin.h|__m128 _mm_nmacc_ps (\__m128,\__m128,\__m128)|
 |_mm_nmacc_sd|FMA4 [1]|ammintrin.h|__m128d _mm_nmacc_sd (\__m128d,\__m128d,\__m128d)|
@@ -668,25 +668,25 @@ W poniższej tabeli wymieniono funkcje wewnętrzne dostępne na x86 procesorów.
 |[_mm_packus_epi16](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_packus_epi16)|SSE2|intrin.h|__m128i _mm_packus_epi16 (\__m128i,\__m128i)|
 |[_mm_packus_epi32](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_packus_epi32)|SSE41|intrin.h|__m128i _mm_packus_epi32 (\__m128i,\__m128i)|
 |[_mm_pause](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_pause)|SSE2|intrin.h|void _mm_pause(void)|
-|_mm_perm_epi8|ELEMENT XOP [1]|ammintrin.h|__m128i _mm_perm_epi8 (\__m128i,\__m128i,\__m128i)|
+|_mm_perm_epi8|XOP [1]|ammintrin.h|__m128i _mm_perm_epi8 (\__m128i,\__m128i,\__m128i)|
 |[_mm_permute_pd](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_permute_pd)|AVX [2]|immintrin.h|__m128d _mm_permute_pd (\__m128d, int)|
 |[_mm_permute_ps](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_permute_ps)|AVX [2]|immintrin.h|__m128 _mm_permute_ps (\__m128, int)|
-|_mm_permute2_pd|ELEMENT XOP [1]|ammintrin.h|__m128d _mm_permute2_pd (\__m128d,\__m128d,\__m128i, int)|
-|_mm_permute2_ps|ELEMENT XOP [1]|ammintrin.h|__m128 _mm_permute2_ps (\__m128,\__m128,\__m128i, int)|
+|_mm_permute2_pd|XOP [1]|ammintrin.h|__m128d _mm_permute2_pd (\__m128d,\__m128d,\__m128i, int)|
+|_mm_permute2_ps|XOP [1]|ammintrin.h|__m128 _mm_permute2_ps (\__m128,\__m128,\__m128i, int)|
 |[_mm_permutevar_pd](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_permutevar_pd)|AVX [2]|immintrin.h|__m128d _mm_permutevar_pd (\__m128d,\__m128i)|
 |[_mm_permutevar_ps](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_permutevar_ps)|AVX [2]|immintrin.h|__m128 _mm_permutevar_ps (\__m128,\__m128i)|
 |[_mm_popcnt_u32](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_popcnt_u32)|POPCNT|intrin.h|int _mm_popcnt_u32(unsigned int)|
 |[_mm_prefetch](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_prefetch)|SSE|intrin.h|void _mm_prefetch(char*,int)|
 |[_mm_rcp_ps](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_rcp_ps)|SSE|intrin.h|__m128 _mm_rcp_ps(\__m128)|
 |[_mm_rcp_ss](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_rcp_ss)|SSE|intrin.h|__m128 _mm_rcp_ss (\__m128)|
-|_mm_rot_epi16|ELEMENT XOP [1]|ammintrin.h|__m128i _mm_rot_epi16 (\__m128i,\__m128i)|
-|_mm_rot_epi32|ELEMENT XOP [1]|ammintrin.h|__m128i _mm_rot_epi32 (\__m128i,\__m128i)|
-|_mm_rot_epi64|ELEMENT XOP [1]|ammintrin.h|__m128i _mm_rot_epi64 (\__m128i,\__m128i)|
-|_mm_rot_epi8|ELEMENT XOP [1]|ammintrin.h|__m128i _mm_rot_epi8 (\__m128i,\__m128i)|
-|_mm_roti_epi16|ELEMENT XOP [1]|ammintrin.h|__m128i _mm_rot_epi16 (\__m128i, int)|
-|_mm_roti_epi32|ELEMENT XOP [1]|ammintrin.h|__m128i _mm_rot_epi32 (\__m128i, int)|
-|_mm_roti_epi64|ELEMENT XOP [1]|ammintrin.h|__m128i _mm_rot_epi64 (\__m128i, int)|
-|_mm_roti_epi8|ELEMENT XOP [1]|ammintrin.h|__m128i _mm_rot_epi8 (\__m128i, int)|
+|_mm_rot_epi16|XOP [1]|ammintrin.h|__m128i _mm_rot_epi16 (\__m128i,\__m128i)|
+|_mm_rot_epi32|XOP [1]|ammintrin.h|__m128i _mm_rot_epi32 (\__m128i,\__m128i)|
+|_mm_rot_epi64|XOP [1]|ammintrin.h|__m128i _mm_rot_epi64 (\__m128i,\__m128i)|
+|_mm_rot_epi8|XOP [1]|ammintrin.h|__m128i _mm_rot_epi8 (\__m128i,\__m128i)|
+|_mm_roti_epi16|XOP [1]|ammintrin.h|__m128i _mm_rot_epi16 (\__m128i, int)|
+|_mm_roti_epi32|XOP [1]|ammintrin.h|__m128i _mm_rot_epi32 (\__m128i, int)|
+|_mm_roti_epi64|XOP [1]|ammintrin.h|__m128i _mm_rot_epi64 (\__m128i, int)|
+|_mm_roti_epi8|XOP [1]|ammintrin.h|__m128i _mm_rot_epi8 (\__m128i, int)|
 |[_mm_round_pd](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_round_pd)|SSE41|intrin.h|__m128d _mm_round_pd (\__m128d, const int)|
 |[_mm_round_ps](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_round_ps)|SSE41|intrin.h|__m128 _mm_round_ps (\__m128, const int)|
 |[_mm_round_sd](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_round_sd)|SSE41|intrin.h|__m128d _mm_round_sd (\__m128d,\__m128d, const int)|
@@ -696,7 +696,7 @@ W poniższej tabeli wymieniono funkcje wewnętrzne dostępne na x86 procesorów.
 |[_mm_sad_epu8](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_sad_epu8)|SSE2|intrin.h|__m128i _mm_sad_epu8 (\__m128i,\__m128i)|
 |[_mm_set_epi16](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_set_epi16)|SSE2|intrin.h|__m128i _mm_set_epi16(short,short,short,short,short,short,short,short)|
 |[_mm_set_epi32](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_set_epi32)|SSE2|intrin.h|__m128i _mm_set_epi32(int,int,int,int)|
-|[_mm_set_epi64](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_set_epi64)|SSE2|intrin.h|__m128i _mm_set_epi64 (\_typu _m64,\_typu _m64)|
+|[_mm_set_epi64](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_set_epi64)|SSE2|intrin.h|__m128i _mm_set_epi64 (\__m64,\__m64)|
 |[_mm_set_epi8](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_set_epi8)|SSE2|intrin.h|__m128i _mm_set_epi8(char,char,char,char,char,char,char,char,char,char,char,char,char,char,char,char)|
 |[_mm_set_pd](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_set_pd)|SSE2|intrin.h|__m128d _mm_set_pd(double,double)|
 |[_mm_set_pi16](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_set_pi16)|MMX|intrin.h|__m64 _mm_set_pi16(short,short,short,short)|
@@ -708,7 +708,7 @@ W poniższej tabeli wymieniono funkcje wewnętrzne dostępne na x86 procesorów.
 |[_mm_set_ss](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_set_ss)|SSE|intrin.h|__m128 _mm_set_ss(float)|
 |[_mm_set1_epi16](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_set1_epi16)|SSE2|intrin.h|__m128i _mm_set1_epi16(short)|
 |[_mm_set1_epi32](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_set1_epi32)|SSE2|intrin.h|__m128i _mm_set1_epi32(int)|
-|[_mm_set1_epi64](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_set1_epi64)|SSE2|intrin.h|__m128i _mm_set1_epi64 (\_typu _m64)|
+|[_mm_set1_epi64](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_set1_epi64)|SSE2|intrin.h|__m128i _mm_set1_epi64 (\__m64)|
 |[_mm_set1_epi8](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_set1_epi8)|SSE2|intrin.h|__m128i _mm_set1_epi8(char)|
 |[_mm_set1_pd](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_set1_pd)|SSE2|intrin.h|__m128d _mm_set1_pd(double)|
 |[_mm_set1_pi16](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_set1_pi16)|MMX|intrin.h|__m64 _mm_set1_pi16(short)|
@@ -718,7 +718,7 @@ W poniższej tabeli wymieniono funkcje wewnętrzne dostępne na x86 procesorów.
 |_mm_setl_epi64|SSE2|intrin.h|__m128i _mm_setl_epi64 (\__m128i)|
 |[_mm_setr_epi16](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_setr_epi16)|SSE2|intrin.h|__m128i _mm_setr_epi16(short,short,short,short,short,short,short,short)|
 |[_mm_setr_epi32](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_setr_epi32)|SSE2|intrin.h|__m128i _mm_setr_epi32(int,int,int,int)|
-|[_mm_setr_epi64](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_setr_epi64)|SSE2|intrin.h|__m128i _mm_setr_epi64 (\_typu _m64,\_typu _m64)|
+|[_mm_setr_epi64](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_setr_epi64)|SSE2|intrin.h|__m128i _mm_setr_epi64 (\__m64,\__m64)|
 |[_mm_setr_epi8](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_setr_epi8)|SSE2|intrin.h|__m128i _mm_setr_epi8(char,char,char,char,char,char,char,char,char,char,char,char,char,char,char,char)|
 |[_mm_setr_pd](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_setr_pd)|SSE2|intrin.h|__m128d _mm_setr_pd(double,double)|
 |[_mm_setr_pi16](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_setr_pi16)|MMX|intrin.h|__m64 _mm_setr_pi16(short,short,short,short)|
@@ -730,27 +730,27 @@ W poniższej tabeli wymieniono funkcje wewnętrzne dostępne na x86 procesorów.
 |[_mm_setzero_si128](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_setzero_si128)|SSE2|intrin.h|__m128i _mm_setzero_si128(void)|
 |[_mm_setzero_si64](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_setzero_si64)|MMX|intrin.h|__m64 _mm_setzero_si64(void)|
 |[_mm_sfence](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_sfence)|SSE|intrin.h|void _mm_sfence(void)|
-|_mm_sha_epi16|ELEMENT XOP [1]|ammintrin.h|__m128i _mm_sha_epi16 (\__m128i,\__m128i)|
-|_mm_sha_epi32|ELEMENT XOP [1]|ammintrin.h|__m128i _mm_sha_epi32 (\__m128i,\__m128i)|
-|_mm_sha_epi64|ELEMENT XOP [1]|ammintrin.h|__m128i _mm_sha_epi64 (\__m128i,\__m128i)|
-|_mm_sha_epi8|ELEMENT XOP [1]|ammintrin.h|__m128i _mm_sha_epi8 (\__m128i,\__m128i)|
-|_mm_shl_epi16|ELEMENT XOP [1]|ammintrin.h|__m128i _mm_shl_epi16 (\__m128i,\__m128i)|
-|_mm_shl_epi32|ELEMENT XOP [1]|ammintrin.h|__m128i _mm_shl_epi32 (\__m128i,\__m128i)|
-|_mm_shl_epi64|ELEMENT XOP [1]|ammintrin.h|__m128i _mm_shl_epi64 (\__m128i,\__m128i)|
-|_mm_shl_epi8|ELEMENT XOP [1]|ammintrin.h|__m128i _mm_shl_epi8 (\__m128i,\__m128i)|
+|_mm_sha_epi16|XOP [1]|ammintrin.h|__m128i _mm_sha_epi16 (\__m128i,\__m128i)|
+|_mm_sha_epi32|XOP [1]|ammintrin.h|__m128i _mm_sha_epi32 (\__m128i,\__m128i)|
+|_mm_sha_epi64|XOP [1]|ammintrin.h|__m128i _mm_sha_epi64 (\__m128i,\__m128i)|
+|_mm_sha_epi8|XOP [1]|ammintrin.h|__m128i _mm_sha_epi8 (\__m128i,\__m128i)|
+|_mm_shl_epi16|XOP [1]|ammintrin.h|__m128i _mm_shl_epi16 (\__m128i,\__m128i)|
+|_mm_shl_epi32|XOP [1]|ammintrin.h|__m128i _mm_shl_epi32 (\__m128i,\__m128i)|
+|_mm_shl_epi64|XOP [1]|ammintrin.h|__m128i _mm_shl_epi64 (\__m128i,\__m128i)|
+|_mm_shl_epi8|XOP [1]|ammintrin.h|__m128i _mm_shl_epi8 (\__m128i,\__m128i)|
 |[_mm_shuffle_epi32](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_shuffle_epi32)|SSE2|intrin.h|__m128i _mm_shuffle_epi32 (\__m128i, int)|
 |[_mm_shuffle_epi8](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_shuffle_epi8)|SSSE3|intrin.h|__m128i _mm_shuffle_epi8 (\__m128i,\__m128i)|
 |[_mm_shuffle_pd](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_shuffle_pd)|SSE2|intrin.h|__m128d _mm_shuffle_pd (\__m128d,\__m128d, int)|
-|[_mm_shuffle_pi8](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_shuffle_pi8)|SSSE3|intrin.h|__m64 _mm_shuffle_pi8 (\_typu _m64,\_typu _m64)|
-|[_mm_shuffle_ps](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_shuffle_ps)|SSE|intrin.h|__m128 _mm_shuffle_ps (\__m128,\__m128, unsigned int)|
+|[_mm_shuffle_pi8](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_shuffle_pi8)|SSSE3|intrin.h|__m64 _mm_shuffle_pi8 (\__m64,\__m64)|
+|[_mm_shuffle_ps](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_shuffle_ps)|SSE|intrin.h|__m128 _mm_shuffle_ps (\__m128,\__m128, niepodpisane int)|
 |[_mm_shufflehi_epi16](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_shufflehi_epi16)|SSE2|intrin.h|__m128i _mm_shufflehi_epi16 (\__m128i, int)|
 |[_mm_shufflelo_epi16](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_shufflelo_epi16)|SSE2|intrin.h|__m128i _mm_shufflelo_epi16 (\__m128i, int)|
 |[_mm_sign_epi16](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_sign_epi16)|SSSE3|intrin.h|__m128i _mm_sign_epi16 (\__m128i,\__m128i)|
 |[_mm_sign_epi32](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_sign_epi32)|SSSE3|intrin.h|__m128i _mm_sign_epi32 (\__m128i,\__m128i)|
 |[_mm_sign_epi8](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_sign_epi8)|SSSE3|intrin.h|__m128i _mm_sign_epi8 (\__m128i,\__m128i)|
-|[_mm_sign_pi16](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_sign_pi16)|SSSE3|intrin.h|__m64 _mm_sign_pi16 (\_typu _m64,\_typu _m64)|
-|[_mm_sign_pi32](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_sign_pi32)|SSSE3|intrin.h|__m64 _mm_sign_pi32 (\_typu _m64,\_typu _m64)|
-|[_mm_sign_pi8](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_sign_pi8)|SSSE3|intrin.h|__m64 _mm_sign_pi8 (\_typu _m64,\_typu _m64)|
+|[_mm_sign_pi16](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_sign_pi16)|SSSE3|intrin.h|__m64 _mm_sign_pi16 (\__m64,\__m64)|
+|[_mm_sign_pi32](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_sign_pi32)|SSSE3|intrin.h|__m64 _mm_sign_pi32 (\__m64,\__m64)|
+|[_mm_sign_pi8](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_sign_pi8)|SSSE3|intrin.h|__m64 _mm_sign_pi8 (\__m64,\__m64)|
 |[_mm_sll_epi16](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_sll_epi16)|SSE2|intrin.h|__m128i _mm_sll_epi16 (\__m128i,\__m128i)|
 |[_mm_sll_epi32](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_sll_epi32)|SSE2|intrin.h|__m128i _mm_sll_epi32 (\__m128i,\__m128i)|
 |[_mm_sll_epi64](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_sll_epi64)|SSE2|intrin.h|__m128i _mm_sll_epi64 (\__m128i,\__m128i)|
@@ -778,31 +778,31 @@ W poniższej tabeli wymieniono funkcje wewnętrzne dostępne na x86 procesorów.
 |[_mm_srli_si128](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_srli_si128)|SSE2|intrin.h|__m128i _mm_srli_si128(\__m128i,int)|
 |[_mm_srlv_epi32](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_srlv_epi32)|AVX2 [2]|immintrin.h|__m128i _mm_srlv_epi32(\__m128i,\__m128i)|
 |[_mm_srlv_epi64](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_srlv_epi64)|AVX2 [2]|immintrin.h|__m128i _mm_srlv_epi64 (\__m128i,\__m128i)|
-|[_mm_store_pd](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_store_pd)|SSE2|intrin.h|void _mm_store_pd (o podwójnej precyzji *\__m128d)|
-|[_mm_store_ps](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_store_ps)|SSE|intrin.h|void _mm_store_ps (float *\__m128)|
-|[_mm_store_ps1](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_store_ps1)|SSE|intrin.h|void _mm_store_ps1 (float *\__m128)|
-|[_mm_store_sd](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_store_sd)|SSE2|intrin.h|void _mm_store_sd (o podwójnej precyzji *\__m128d)|
-|[_mm_store_si128](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_store_si128)|SSE2|intrin.h|void _mm_store_si128 (\__m128i *\__m128i)|
-|[_mm_store_ss](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_store_ss)|SSE|intrin.h|void _mm_store_ss (float *\__m128)|
-|[_mm_store1_pd](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_store1_pd)|SSE2|intrin.h|void _mm_store1_pd (o podwójnej precyzji *\__m128d)|
-|[_mm_storeh_pd](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_storeh_pd)|SSE2|intrin.h|void _mm_storeh_pd (o podwójnej precyzji *\__m128d)|
-|[_mm_storeh_pi](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_storeh_pi)|SSE|intrin.h|void _mm_storeh_pi (\_typu _m64 *\__m128)|
-|[_mm_storel_epi64](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_storel_epi64)|SSE2|intrin.h|void _mm_storel_epi64 (\__m128i *\__m128i)|
-|[_mm_storel_pd](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_storel_pd)|SSE2|intrin.h|void _mm_storel_pd (o podwójnej precyzji *\__m128d)|
-|[_mm_storel_pi](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_storel_pi)|SSE|intrin.h|void _mm_storel_pi (\_typu _m64 *\__m128)|
-|[_mm_storer_pd](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_storer_pd)|SSE2|intrin.h|void _mm_storer_pd (o podwójnej precyzji *\__m128d)|
-|[_mm_storer_ps](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_storer_ps)|SSE|intrin.h|void _mm_storer_ps (float *\__m128)|
-|[_mm_storeu_pd](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_storeu_pd)|SSE2|intrin.h|void _mm_storeu_pd (o podwójnej precyzji *\__m128d)|
-|[_mm_storeu_ps](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_storeu_ps)|SSE|intrin.h|void _mm_storeu_ps (float *\__m128)|
-|[_mm_storeu_si128](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_storeu_si128)|SSE2|intrin.h|void _mm_storeu_si128 (\__m128i *\__m128i)|
-|[_mm_stream_load_si128](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_stream_load_si128)|SSE41|intrin.h|__m128i _mm_stream_load_si128 (\__m128i *)|
-|[_mm_stream_pd](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_stream_pd)|SSE2|intrin.h|void _mm_stream_pd (o podwójnej precyzji *\__m128d)|
-|[_mm_stream_pi](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_stream_pi)|SSE|intrin.h|void _mm_stream_pi (\_typu _m64 *\_typu _m64)|
-|[_mm_stream_ps](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_stream_ps)|SSE|intrin.h|void _mm_stream_ps (float *\__m128)|
-|[_mm_stream_sd](../intrinsics/mm-stream-sd.md)|SSE4a|intrin.h|void _mm_stream_sd (o podwójnej precyzji *\__m128d)|
-|[_mm_stream_si128](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_stream_si128)|SSE2|intrin.h|void _mm_stream_si128 (\__m128i *\__m128i)|
-|[_mm_stream_si32](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_stream_si32)|SSE2|intrin.h|void _mm_stream_si32(int*,int)|
-|[_mm_stream_ss](../intrinsics/mm-stream-ss.md)|SSE4a|intrin.h|void _mm_stream_ss (float *\__m128)|
+|[_mm_store_pd](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_store_pd)|SSE2|intrin.h|void _mm_store_pd (double\*,\__m128d)|
+|[_mm_store_ps](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_store_ps)|SSE|intrin.h|void _mm_store_ps (float\*,\__m128)|
+|[_mm_store_ps1](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_store_ps1)|SSE|intrin.h|void _mm_store_ps1 (float\*,\__m128)|
+|[_mm_store_sd](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_store_sd)|SSE2|intrin.h|void _mm_store_sd (double\*,\__m128d)|
+|[_mm_store_si128](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_store_si128)|SSE2|intrin.h|void _mm_store_si128 (\__m128i\*,\__m128i)|
+|[_mm_store_ss](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_store_ss)|SSE|intrin.h|void _mm_store_ss (float\*,\__m128)|
+|[_mm_store1_pd](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_store1_pd)|SSE2|intrin.h|void _mm_store1_pd (double\*,\__m128d)|
+|[_mm_storeh_pd](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_storeh_pd)|SSE2|intrin.h|void _mm_storeh_pd (double\*,\__m128d)|
+|[_mm_storeh_pi](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_storeh_pi)|SSE|intrin.h|void _mm_storeh_pi (\__m64\*,\__m128)|
+|[_mm_storel_epi64](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_storel_epi64)|SSE2|intrin.h|void _mm_storel_epi64 (\__m128i\*,\__m128i)|
+|[_mm_storel_pd](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_storel_pd)|SSE2|intrin.h|void _mm_storel_pd (double\*,\__m128d)|
+|[_mm_storel_pi](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_storel_pi)|SSE|intrin.h|void _mm_storel_pi (\__m64\*,\__m128)|
+|[_mm_storer_pd](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_storer_pd)|SSE2|intrin.h|void _mm_storer_pd (double\*,\__m128d)|
+|[_mm_storer_ps](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_storer_ps)|SSE|intrin.h|void _mm_storer_ps (float\*,\__m128)|
+|[_mm_storeu_pd](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_storeu_pd)|SSE2|intrin.h|void _mm_storeu_pd (double\*,\__m128d)|
+|[_mm_storeu_ps](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_storeu_ps)|SSE|intrin.h|void _mm_storeu_ps (float\*,\__m128)|
+|[_mm_storeu_si128](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_storeu_si128)|SSE2|intrin.h|void _mm_storeu_si128 (\__m128i\*,\__m128i)|
+|[_mm_stream_load_si128](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_stream_load_si128)|SSE41|intrin.h|__m128i _mm_stream_load_si128 (\__m128i\* )|
+|[_mm_stream_pd](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_stream_pd)|SSE2|intrin.h|void _mm_stream_pd (double\*,\__m128d)|
+|[_mm_stream_pi](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_stream_pi)|SSE|intrin.h|void _mm_stream_pi (\__m64\*,\__m64)|
+|[_mm_stream_ps](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_stream_ps)|SSE|intrin.h|void _mm_stream_ps (float\*,\__m128)|
+|[_mm_stream_sd](../intrinsics/mm-stream-sd.md)|SSE4a|intrin.h|void _mm_stream_sd (double\*,\__m128d)|
+|[_mm_stream_si128](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_stream_si128)|SSE2|intrin.h|void _mm_stream_si128 (\__m128i\*,\__m128i)|
+|[_mm_stream_si32](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_stream_si32)|SSE2|intrin.h|void _mm_stream_si32 (int\*, int)|
+|[_mm_stream_ss](../intrinsics/mm-stream-ss.md)|SSE4a|intrin.h|void _mm_stream_ss (float\*,\__m128)|
 |[_mm_sub_epi16](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_sub_epi16)|SSE2|intrin.h|__m128i _mm_sub_epi16 (\__m128i,\__m128i)|
 |[_mm_sub_epi32](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_sub_epi32)|SSE2|intrin.h|__m128i _mm_sub_epi32 (\__m128i,\__m128i)|
 |[_mm_sub_epi64](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_sub_epi64)|SSE2|intrin.h|__m128i _mm_sub_epi64 (\__m128i,\__m128i)|
@@ -810,7 +810,7 @@ W poniższej tabeli wymieniono funkcje wewnętrzne dostępne na x86 procesorów.
 |[_mm_sub_pd](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_sub_pd)|SSE2|intrin.h|__m128d _mm_sub_pd (\__m128d,\__m128d)|
 |[_mm_sub_ps](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_sub_ps)|SSE|intrin.h|__m128 _mm_sub_ps (\__m128,\__m128)|
 |[_mm_sub_sd](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_sub_sd)|SSE2|intrin.h|__m128d _mm_sub_sd (\__m128d,\__m128d)|
-|[_mm_sub_si64](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_sub_si64)|SSE2|intrin.h|__m64 _mm_sub_si64 (\_typu _m64,\_typu _m64)|
+|[_mm_sub_si64](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_sub_si64)|SSE2|intrin.h|__m64 _mm_sub_si64 (\__m64,\__m64)|
 |[_mm_sub_ss](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_sub_ss)|SSE|intrin.h|__m128 _mm_sub_ss (\__m128,\__m128)|
 |[_mm_subs_epi16](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_subs_epi16)|SSE2|intrin.h|__m128i _mm_subs_epi16 (\__m128i,\__m128i)|
 |[_mm_subs_epi8](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_subs_epi8)|SSE2|intrin.h|__m128i _mm_subs_epi8 (\__m128i,\__m128i)|
@@ -883,10 +883,10 @@ W poniższej tabeli wymieniono funkcje wewnętrzne dostępne na x86 procesorów.
 |[_mm256_blendv_epi8](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm256_blendv_epi8)|AVX2 [2]|immintrin.h|__m256i _mm256_blendv_epi8 (\__m256i,\__m256i,\__m256i)|
 |[_mm256_blendv_pd](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm256_blendv_pd)|AVX [2]|immintrin.h|__m256d _mm256_blendv_pd (\__m256d,\__m256d,\__m256d)|
 |[_mm256_blendv_ps](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm256_blendv_ps)|AVX [2]|immintrin.h|__m256 _mm256_blendv_ps (\__m256,\__m256,\__m256)|
-|[_mm256_broadcast_pd](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm256_broadcast_pd)|AVX [2]|immintrin.h|__m256d _mm256_broadcast_pd (\__m128d const *)|
-|[_mm256_broadcast_ps](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm256_broadcast_ps)|AVX [2]|immintrin.h|__m256 _mm256_broadcast_ps (\__m128 const *)|
-|[_mm256_broadcast_sd](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm256_broadcast_sd)|AVX [2]|immintrin.h|__m256d _mm256_broadcast_sd(double const *)|
-|[_mm256_broadcast_ss](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm256_broadcast_ss)|AVX [2]|immintrin.h|__m256 _mm256_broadcast_ss(float const *)|
+|[_mm256_broadcast_pd](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm256_broadcast_pd)|AVX [2]|immintrin.h|__m256d _mm256_broadcast_pd (\__m128d const \*)|
+|[_mm256_broadcast_ps](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm256_broadcast_ps)|AVX [2]|immintrin.h|__m256 _mm256_broadcast_ps (\__m128 const \*)|
+|[_mm256_broadcast_sd](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm256_broadcast_sd)|AVX [2]|immintrin.h|__m256d _mm256_broadcast_sd (podwójny const \*)|
+|[_mm256_broadcast_ss](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm256_broadcast_ss)|AVX [2]|immintrin.h|__m256 _mm256_broadcast_ss (float const \*)|
 |[_mm256_broadcastb_epi8](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm256_broadcastb_epi8)|AVX2 [2]|immintrin.h|__m256i _mm256_broadcastb_epi8 (\__m128i)|
 |[_mm256_broadcastd_epi32](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm256_broadcastd_epi32)|AVX2 [2]|immintrin.h|__m256i _mm256_broadcastd_epi32 (\__m128i)|
 |[_mm256_broadcastq_epi64](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm256_broadcastq_epi64)|AVX2 [2]|immintrin.h|__m256i _mm256_broadcastq_epi64(\__m128i)|
@@ -906,7 +906,7 @@ W poniższej tabeli wymieniono funkcje wewnętrzne dostępne na x86 procesorów.
 |[_mm256_castsi256_pd](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm256_castsi256_pd)|AVX [2]|immintrin.h|__m256d _mm256_castsi256_pd (\__m256i)|
 |[_mm256_castsi256_ps](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm256_castsi256_ps)|AVX [2]|immintrin.h|__m256 _mm256_castsi256_ps(\__m256i)|
 |[_mm256_castsi256_si128](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm256_castsi256_si128)|AVX [2]|immintrin.h|__m128i _mm256_castsi256_si128(\__m256i)|
-|_mm256_cmov_si256|ELEMENT XOP [1]|ammintrin.h|__m256i _mm256_cmov_si256(\__m256i,\__m256i,\__m256i)|
+|_mm256_cmov_si256|XOP [1]|ammintrin.h|__m256i _mm256_cmov_si256(\__m256i,\__m256i,\__m256i)|
 |[_mm256_cmp_pd](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm256_cmp_pd)|AVX [2]|immintrin.h|__m256d _mm256_cmp_pd (\__m256d,\__m256d, const int)|
 |[_mm256_cmp_ps](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm256_cmp_ps)|AVX [2]|immintrin.h|__m256 _mm256_cmp_ps (\__m256,\__m256, const int)|
 |[_mm256_cmpeq_epi16](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm256_cmpeq_epi16)|AVX2 [2]|immintrin.h|__m256i _mm256_cmpeq_epi16 (\__m256i,\__m256i)|
@@ -945,7 +945,7 @@ W poniższej tabeli wymieniono funkcje wewnętrzne dostępne na x86 procesorów.
 |[_mm256_extractf128_pd](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm256_extractf128_pd)|AVX [2]|immintrin.h|__m128d _mm256_extractf128_pd (\__m256d, const int)|
 |[_mm256_extractf128_ps](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm256_extractf128_ps)|AVX [2]|immintrin.h|__m128 _mm256_extractf128_ps (\__m256, const int)|
 |[_mm256_extractf128_si256](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm256_extractf128_si256)|AVX [2]|immintrin.h|__m128i _mm256_extractf128_si256 (\__m256i, const int)|
-|[_mm256_extracti128_si256](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm256_extracti128_si256)|AVX2 [2]|immintrin.h|__m128i _mm256_extracti128_si256 (\__m256i, int offset)|
+|[_mm256_extracti128_si256](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm256_extracti128_si256)|AVX2 [2]|immintrin.h|__m128i _mm256_extracti128_si256 (\__m256i offset, int)|
 |[_mm256_fmadd_pd](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm256_fmadd_pd)|FMA [2]|immintrin.h|__m256d _mm256_fmadd_pd (\__m256d,\__m256d b\__m256d c).|
 |[_mm256_fmadd_ps](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm256_fmadd_ps)|FMA [2]|immintrin.h|__m256 _mm256_fmadd_ps (\__m256,\__m256 b\__m256 c).|
 |[_mm256_fmaddsub_pd](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm256_fmaddsub_pd)|FMA [2]|immintrin.h|__m256d _mm256_fmaddsub_pd (\__m256d,\__m256d b\__m256d c).|
@@ -958,8 +958,8 @@ W poniższej tabeli wymieniono funkcje wewnętrzne dostępne na x86 procesorów.
 |[_mm256_fnmadd_ps](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm256_fnmadd_ps)|FMA [2]|immintrin.h|__m256 _mm256_fnmadd_ps (\__m256,\__m256 b\__m256 c).|
 |[_mm256_fnmsub_pd](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm256_fnmsub_pd)|FMA [2]|immintrin.h|__m256d _mm256_fnmsub_pd (\__m256d,\__m256d b\__m256d c).|
 |[_mm256_fnmsub_ps](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm256_fnmsub_ps)|FMA [2]|immintrin.h|__m256 _mm256_fnmsub_ps (\__m256,\__m256 b\__m256 c).|
-|_mm256_frcz_pd|ELEMENT XOP [1]|ammintrin.h|__m256d _mm256_frcz_pd(\__m256d)|
-|_mm256_frcz_ps|ELEMENT XOP [1]|ammintrin.h|__m256 _mm256_frcz_ps(\__m256)|
+|_mm256_frcz_pd|XOP [1]|ammintrin.h|__m256d _mm256_frcz_pd(\__m256d)|
+|_mm256_frcz_ps|XOP [1]|ammintrin.h|__m256 _mm256_frcz_ps(\__m256)|
 |[_mm256_hadd_epi16](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm256_hadd_epi16)|AVX2 [2]|immintrin.h|__m256i _mm256_hadd_epi16 (\__m256i,\__m256i)|
 |[_mm256_hadd_epi32](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm256_hadd_epi32)|AVX2 [2]|immintrin.h|__m256i _mm256_hadd_epi32 (\__m256i,\__m256i)|
 |[_mm256_hadd_pd](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm256_hadd_pd)|AVX [2]|immintrin.h|__m256d _mm256_hadd_pd (\__m256d,\__m256d)|
@@ -970,47 +970,47 @@ W poniższej tabeli wymieniono funkcje wewnętrzne dostępne na x86 procesorów.
 |[_mm256_hsub_pd](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm256_hsub_pd)|AVX [2]|immintrin.h|__m256d _mm256_hsub_pd (\__m256d,\__m256d)|
 |[_mm256_hsub_ps](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm256_hsub_ps)|AVX [2]|immintrin.h|__m256 _mm256_hsub_ps (\__m256,\__m256)|
 |[_mm256_hsubs_epi16](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm256_hsubs_epi16)|AVX2 [2]|immintrin.h|__m256i _mm256_hsubs_epi16 (\__m256i,\__m256i)|
-|[_mm256_i32gather_epi32](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm256_i32gather_epi32)|AVX2 [2]|immintrin.h|__m256i _mm256_i32gather_epi32 (int const * elementu bazowego,\__m256i indeksu, const int skali)|
-|[_mm256_i32gather_epi64](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm256_i32gather_epi64)|AVX2 [2]|immintrin.h|__m256i _mm256_i32gather_epi64 (\__int64 const * podstawowej,\__m128i indeksu, const int skali)|
-|[_mm256_i32gather_pd](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm256_i32gather_pd)|AVX2 [2]|immintrin.h|__m256d _mm256_i32gather_pd (dwa razy const * elementu bazowego,\__m128i indeksu, const int skali)|
-|[_mm256_i32gather_ps](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm256_i32gather_ps)|AVX2 [2]|immintrin.h|__m256 _mm256_i32gather_ps (float const * elementu bazowego,\__m256i indeksu, const int skali)|
-|[_mm256_i64gather_epi32](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm256_i64gather_epi32)|AVX2 [2]|immintrin.h|__m256i _mm256_i64gather_epi32 (int const * elementu bazowego,\__m256i indeksu, const int skali)|
-|[_mm256_i64gather_epi64](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm256_i64gather_epi64)|AVX2 [2]|immintrin.h|__m256i _mm256_i64gather_epi64 (\__int64 const * podstawowej,\__m256i indeksu, const int skali)|
-|[_mm256_i64gather_pd](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm256_i64gather_pd)|AVX2 [2]|immintrin.h|__m256d _mm256_i64gather_pd (dwa razy const * elementu bazowego,\__m256i indeksu, const int skali)|
-|[_mm256_i64gather_ps](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm256_i64gather_ps)|AVX2 [2]|immintrin.h|__m128 _mm256_i64gather_ps (float const * elementu bazowego,\__m256i indeksu, const int skali)|
+|[_mm256_i32gather_epi32](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm256_i32gather_epi32)|AVX2 [2]|immintrin.h|__m256i _mm256_i32gather_epi32 (int const \*base\__m256i indeksu, const int skalowania)|
+|[_mm256_i32gather_epi64](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm256_i32gather_epi64)|AVX2 [2]|immintrin.h|__m256i _mm256_i32gather_epi64 (\__int64 const \*bazy\__m128i indeksu, const int skalowania)|
+|[_mm256_i32gather_pd](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm256_i32gather_pd)|AVX2 [2]|immintrin.h|__m256d _mm256_i32gather_pd (podwójny const \*base\__m128i indeksu, const int skalowania)|
+|[_mm256_i32gather_ps](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm256_i32gather_ps)|AVX2 [2]|immintrin.h|__m256 _mm256_i32gather_ps (float const \*base\__m256i indeksu, const int skalowania)|
+|[_mm256_i64gather_epi32](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm256_i64gather_epi32)|AVX2 [2]|immintrin.h|__m256i _mm256_i64gather_epi32 (int const \*base\__m256i indeksu, const int skalowania)|
+|[_mm256_i64gather_epi64](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm256_i64gather_epi64)|AVX2 [2]|immintrin.h|__m256i _mm256_i64gather_epi64 (\__int64 const \*bazy\__m256i indeksu, const int skalowania)|
+|[_mm256_i64gather_pd](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm256_i64gather_pd)|AVX2 [2]|immintrin.h|__m256d _mm256_i64gather_pd (podwójny const \*base\__m256i indeksu, const int skalowania)|
+|[_mm256_i64gather_ps](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm256_i64gather_ps)|AVX2 [2]|immintrin.h|__m128 _mm256_i64gather_ps (float const \*base\__m256i indeksu, const int skalowania)|
 |[_mm256_insertf128_pd](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm256_insertf128_pd)|AVX [2]|immintrin.h|__m256d _mm256_insertf128_pd (\__m256d,\__m128d, int)|
 |[_mm256_insertf128_ps](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm256_insertf128_ps)|AVX [2]|immintrin.h|__m256 _mm256_insertf128_ps (\__m256,\__m128, int)|
 |[_mm256_insertf128_si256](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm256_insertf128_si256)|AVX [2]|immintrin.h|__m256i _mm256_insertf128_si256 (\__m256i,\__m128i, int)|
 |[_mm256_inserti128_si256](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm256_inserti128_si256)|AVX2 [2]|immintrin.h|__m256i _mm256_inserti128_si256 (\__m256i,\__m128i, int)|
-|[_mm256_lddqu_si256](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm256_lddqu_si256)|AVX [2]|immintrin.h|__m256i _mm256_lddqu_si256(\__m256i *)|
-|[_mm256_load_pd](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm256_load_pd)|AVX [2]|immintrin.h|__m256d _mm256_load_pd(double const *)|
-|[_mm256_load_ps](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm256_load_ps)|AVX [2]|immintrin.h|__m256 _mm256_load_ps(float const *)|
-|[_mm256_load_si256](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm256_load_si256)|AVX [2]|immintrin.h|__m256i _mm256_load_si256(\__m256i *)|
-|[_mm256_loadu_pd](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm256_loadu_pd)|AVX [2]|immintrin.h|__m256d _mm256_loadu_pd(double const *)|
-|[_mm256_loadu_ps](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm256_loadu_ps)|AVX [2]|immintrin.h|__m256 _mm256_loadu_ps(float const *)|
-|[_mm256_loadu_si256](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm256_loadu_si256)|AVX [2]|immintrin.h|__m256i _mm256_loadu_si256(\__m256i *)|
+|[_mm256_lddqu_si256](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm256_lddqu_si256)|AVX [2]|immintrin.h|__m256i _mm256_lddqu_si256 (\__m256i \*)|
+|[_mm256_load_pd](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm256_load_pd)|AVX [2]|immintrin.h|__m256d _mm256_load_pd (podwójny const \*)|
+|[_mm256_load_ps](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm256_load_ps)|AVX [2]|immintrin.h|__m256 _mm256_load_ps (float const \*)|
+|[_mm256_load_si256](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm256_load_si256)|AVX [2]|immintrin.h|__m256i _mm256_load_si256 (\__m256i \*)|
+|[_mm256_loadu_pd](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm256_loadu_pd)|AVX [2]|immintrin.h|__m256d _mm256_loadu_pd (podwójny const \*)|
+|[_mm256_loadu_ps](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm256_loadu_ps)|AVX [2]|immintrin.h|__m256 _mm256_loadu_ps (float const \*)|
+|[_mm256_loadu_si256](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm256_loadu_si256)|AVX [2]|immintrin.h|__m256i _mm256_loadu_si256 (\__m256i \*)|
 |_mm256_macc_pd|FMA4 [1]|ammintrin.h|__m256d _mm_macc_pd(\__m256d,\__m256d,\__m256d)|
 |_mm256_macc_ps|FMA4 [1]|ammintrin.h|__m256 _mm_macc_ps(\__m256,\__m256,\__m256)|
 |[_mm256_madd_epi16](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm256_madd_epi16)|AVX2 [2]|immintrin.h|__m256i _mm256_madd_epi16 (\__m256i,\__m256i)|
 |_mm256_maddsub_pd|FMA4 [1]|ammintrin.h|__m256d _mm_maddsub_pd (\__m256d,\__m256d,\__m256d)|
 |_mm256_maddsub_ps|FMA4 [1]|ammintrin.h|__m256 _mm_maddsub_ps (\__m256,\__m256,\__m256)|
 |[_mm256_maddubs_epi16](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm256_maddubs_epi16)|AVX2 [2]|immintrin.h|__m256i _mm256_maddubs_epi16 (\__m256i,\__m256i)|
-|[_mm256_mask_i32gather_epi32](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm256_mask_i32gather_epi32)|AVX2 [2]|immintrin.h|__m256i _mm256_mask_i32gather_epi32 (\__m256i src, int const * podstawowej,\_indeksu _m256i\__m256i maski, const int skali)|
-|[_mm256_mask_i32gather_epi64](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm256_mask_i32gather_epi64)|AVX2 [2]|immintrin.h|__m256i _mm256_mask_i32gather_epi64 (\__m256i src\__int64 const * podstawowej,\_indeksu _m128i\__m256i maski, const int skali)|
-|[_mm256_mask_i32gather_pd](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm256_mask_i32gather_pd)|AVX2 [2]|immintrin.h|__m256d _mm256_mask_i32gather_pd (\__m256d src, double const * podstawowej,\_indeksu _m128i\__m256d maski, const int skali)|
-|[_mm256_mask_i32gather_ps](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm256_mask_i32gather_ps)|AVX2 [2]|immintrin.h|__m256 _mm256_mask_i32gather_ps (\__m256 src, float const * podstawowej,\_indeksu _m256i\__m256 maski, const int skali)|
-|[_mm256_mask_i64gather_epi32](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm256_mask_i64gather_epi32)|AVX2 [2]|immintrin.h|__m128i _mm256_mask_i64gather_epi32 (\__m128i src, int const * podstawowej,\_indeksu _m256i\__m128i maski, const int skali)|
-|[_mm256_mask_i64gather_epi64](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm256_mask_i64gather_epi64)|AVX2 [2]|immintrin.h|__m256i _mm256_mask_i64gather_epi64 (\__m256i src\__int64 const * podstawowej,\_indeksu _m256i\__m256i maski, const int skali)|
-|[_mm256_mask_i64gather_pd](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm256_mask_i64gather_pd)|AVX2 [2]|immintrin.h|__m256d _mm256_mask_i64gather_pd (\__m256d src, double const * podstawowej,\_indeksu _m256i\__m256d maski, const int skali)|
-|[_mm256_mask_i64gather_ps](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm256_mask_i64gather_ps)|AVX2 [2]|immintrin.h|__m128 _mm256_mask_i64gather_ps (\__m128 src, float const * podstawowej,\_indeksu _m256i\__m128 maski, const int skali)|
-|[_mm256_maskload_epi32](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm256_maskload_epi32)|AVX2 [2]|immintrin.h|__m256i _mm256_maskload_epi32 (int const *,\__m256i)|
-|[_mm256_maskload_epi64](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm256_maskload_epi64)|AVX2 [2]|immintrin.h|__m256i _mm256_maskload_epi64 ( \__int64 const *,\__m256i)|
-|[_mm256_maskload_pd](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm256_maskload_pd)|AVX [2]|immintrin.h|__m256d _mm256_maskload_pd (dwa razy const *,\__m256i)|
-|[_mm256_maskload_ps](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm256_maskload_ps)|AVX [2]|immintrin.h|__m256 _mm256_maskload_ps (float const *,\__m256i)|
-|[_mm256_maskstore_epi32](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm256_maskstore_epi32)|AVX2 [2]|immintrin.h|void _mm256_maskstore_epi32 (int *,\__m256i,\__m256i)|
-|[_mm256_maskstore_epi64](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm256_maskstore_epi64)|AVX2 [2]|immintrin.h|void _mm256_maskstore_epi64 (\__int64 *,\__m256i,\__m256i)|
-|[_mm256_maskstore_pd](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm256_maskstore_pd)|AVX [2]|immintrin.h|void _mm256_maskstore_pd (o podwójnej precyzji *,\__m256i,\__m256d)|
-|[_mm256_maskstore_ps](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm256_maskstore_ps)|AVX [2]|immintrin.h|void _mm256_maskstore_ps (float *,\__m256i,\__m256)|
+|[_mm256_mask_i32gather_epi32](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm256_mask_i32gather_epi32)|AVX2 [2]|immintrin.h|__m256i _mm256_mask_i32gather_epi32 (\__m256i src, int const \*bazy\_indeksu _m256i\__m256i maska, const int skalowania)|
+|[_mm256_mask_i32gather_epi64](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm256_mask_i32gather_epi64)|AVX2 [2]|immintrin.h|__m256i _mm256_mask_i32gather_epi64 (\__m256i src\__int64 const \*bazy\_indeksu _m128i\__m256i maska, const int skalowania)|
+|[_mm256_mask_i32gather_pd](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm256_mask_i32gather_pd)|AVX2 [2]|immintrin.h|__m256d _mm256_mask_i32gather_pd (\__m256d src, double const \*bazy\_indeksu _m128i\__m256d maska, const int skalowania)|
+|[_mm256_mask_i32gather_ps](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm256_mask_i32gather_ps)|AVX2 [2]|immintrin.h|__m256 _mm256_mask_i32gather_ps (\__m256 src, float const \*bazy\_indeksu _m256i\__m256 maska, const int skalowania)|
+|[_mm256_mask_i64gather_epi32](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm256_mask_i64gather_epi32)|AVX2 [2]|immintrin.h|__m128i _mm256_mask_i64gather_epi32 (\__m128i src, int const \*bazy\_indeksu _m256i\__m128i maska, const int skalowania)|
+|[_mm256_mask_i64gather_epi64](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm256_mask_i64gather_epi64)|AVX2 [2]|immintrin.h|__m256i _mm256_mask_i64gather_epi64 (\__m256i src\__int64 const \*bazy\_indeksu _m256i\__m256i maska, const int skalowania)|
+|[_mm256_mask_i64gather_pd](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm256_mask_i64gather_pd)|AVX2 [2]|immintrin.h|__m256d _mm256_mask_i64gather_pd (\__m256d src, double const \*bazy\_indeksu _m256i\__m256d maska, const int skalowania)|
+|[_mm256_mask_i64gather_ps](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm256_mask_i64gather_ps)|AVX2 [2]|immintrin.h|__m128 _mm256_mask_i64gather_ps (\__m128 src, float const \*bazy\_indeksu _m256i\__m128 maska, const int skalowania)|
+|[_mm256_maskload_epi32](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm256_maskload_epi32)|AVX2 [2]|immintrin.h|__m256i _mm256_maskload_epi32 (int const \*,\__m256i)|
+|[_mm256_maskload_epi64](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm256_maskload_epi64)|AVX2 [2]|immintrin.h|__m256i _mm256_maskload_epi64 ( \__int64 const \*,\__m256i)|
+|[_mm256_maskload_pd](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm256_maskload_pd)|AVX [2]|immintrin.h|__m256d _mm256_maskload_pd (podwójny const \*,\__m256i)|
+|[_mm256_maskload_ps](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm256_maskload_ps)|AVX [2]|immintrin.h|__m256 _mm256_maskload_ps (float const \*,\__m256i)|
+|[_mm256_maskstore_epi32](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm256_maskstore_epi32)|AVX2 [2]|immintrin.h|void _mm256_maskstore_epi32 (int \*,\__m256i,\__m256i)|
+|[_mm256_maskstore_epi64](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm256_maskstore_epi64)|AVX2 [2]|immintrin.h|void _mm256_maskstore_epi64 (\__int64 \*,\__m256i,\__m256i)|
+|[_mm256_maskstore_pd](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm256_maskstore_pd)|AVX [2]|immintrin.h|void _mm256_maskstore_pd (double \*,\__m256i,\__m256d)|
+|[_mm256_maskstore_ps](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm256_maskstore_ps)|AVX [2]|immintrin.h|void _mm256_maskstore_ps (float \*,\__m256i,\__m256)|
 |[_mm256_max_epi16](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm256_max_epi16)|AVX2 [2]|immintrin.h|__m256i _mm256_max_epi16 (\__m256i,\__m256i)|
 |[_mm256_max_epi32](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm256_max_epi32)|AVX2 [2]|immintrin.h|__m256i _mm256_max_epi32 (\__m256i,\__m256i)|
 |[_mm256_max_epi8](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm256_max_epi8)|AVX2 [2]|immintrin.h|__m256i _mm256_max_epi8 (\__m256i,\__m256i)|
@@ -1060,8 +1060,8 @@ W poniższej tabeli wymieniono funkcje wewnętrzne dostępne na x86 procesorów.
 |[_mm256_packus_epi32](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm256_packus_epi32)|AVX2 [2]|immintrin.h|__m256i _mm256_packus_epi32 (\__m256i,\__m256i)|
 |[_mm256_permute_pd](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm256_permute_pd)|AVX [2]|immintrin.h|__m256d _mm256_permute_pd (\__m256d, int)|
 |[_mm256_permute_ps](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm256_permute_ps)|AVX [2]|immintrin.h|__m256 _mm256_permute_ps (\__m256, int)|
-|_mm256_permute2_pd|ELEMENT XOP [1]|ammintrin.h|__m256d _mm256_permute2_pd (\__m256d,\__m256d,\__m256i, int)|
-|_mm256_permute2_ps|ELEMENT XOP [1]|ammintrin.h|__m256 _mm256_permute2_ps (\__m256,\__m256,\__m256i, int)|
+|_mm256_permute2_pd|XOP [1]|ammintrin.h|__m256d _mm256_permute2_pd (\__m256d,\__m256d,\__m256i, int)|
+|_mm256_permute2_ps|XOP [1]|ammintrin.h|__m256 _mm256_permute2_ps (\__m256,\__m256,\__m256i, int)|
 |[_mm256_permute2f128_pd](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm256_permute2f128_pd)|AVX [2]|immintrin.h|__m256d _mm256_permute2f128_pd (\__m256d,\__m256d, int)|
 |[_mm256_permute2f128_ps](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm256_permute2f128_ps)|AVX [2]|immintrin.h|__m256 _mm256_permute2f128_ps (\__m256,\__m256, int)|
 |[_mm256_permute2f128_si256](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm256_permute2f128_si256)|AVX [2]|immintrin.h|__m256i _mm256_permute2f128_si256 (\__m256i,\__m256i, int)|
@@ -1129,16 +1129,16 @@ W poniższej tabeli wymieniono funkcje wewnętrzne dostępne na x86 procesorów.
 |[_mm256_srli_si256](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm256_srli_si256)|AVX2 [2]|immintrin.h|__m256i _mm256_srli_si256(\__m256i,int)|
 |[_mm256_srlv_epi32](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm256_srlv_epi32)|AVX2 [2]|immintrin.h|__m256i _mm256_srlv_epi32 (\__m256i,\__m256i)|
 |[_mm256_srlv_epi64](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm256_srlv_epi64)|AVX2 [2]|immintrin.h|__m256i _mm256_srlv_epi64 (\__m256i,\__m256i)|
-|[_mm256_store_pd](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm256_store_pd)|AVX [2]|immintrin.h|void _mm256_store_pd (o podwójnej precyzji *,\__m256d)|
-|[_mm256_store_ps](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm256_store_ps)|AVX [2]|immintrin.h|void _mm256_store_ps (float *,\__m256)|
-|[_mm256_store_si256](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm256_store_si256)|AVX [2]|immintrin.h|void _mm256_store_si256 (\__m256i *,\__m256i)|
-|[_mm256_storeu_pd](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm256_storeu_pd)|AVX [2]|immintrin.h|void _mm256_storeu_pd (o podwójnej precyzji *,\__m256d)|
-|[_mm256_storeu_ps](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm256_storeu_ps)|AVX [2]|immintrin.h|void _mm256_storeu_ps (float *,\__m256)|
-|[_mm256_storeu_si256](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm256_storeu_si256)|AVX [2]|immintrin.h|void _mm256_storeu_si256 (\__m256i *,\__m256i)|
-|[_mm256_stream_load_si256](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm256_stream_load_si256)|AVX2 [2]|immintrin.h|__m256i _mm256_stream_load_si256 (\__m256i const *)|
-|[_mm256_stream_pd](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm256_stream_pd)|AVX [2]|immintrin.h|void __mm256_stream_pd (o podwójnej precyzji *,\__m256d)|
-|[_mm256_stream_ps](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm256_stream_ps)|AVX [2]|immintrin.h|void _mm256_stream_ps (float * p,\__m256)|
-|[_mm256_stream_si256](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm256_stream_si256)|AVX [2]|immintrin.h|void __mm256_stream_si256 (\__m256i *,\__m256i)|
+|[_mm256_store_pd](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm256_store_pd)|AVX [2]|immintrin.h|void _mm256_store_pd (double \*,\__m256d)|
+|[_mm256_store_ps](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm256_store_ps)|AVX [2]|immintrin.h|void _mm256_store_ps (float \*,\__m256)|
+|[_mm256_store_si256](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm256_store_si256)|AVX [2]|immintrin.h|void _mm256_store_si256 (\__m256i \*,\__m256i)|
+|[_mm256_storeu_pd](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm256_storeu_pd)|AVX [2]|immintrin.h|void _mm256_storeu_pd (double \*,\__m256d)|
+|[_mm256_storeu_ps](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm256_storeu_ps)|AVX [2]|immintrin.h|void _mm256_storeu_ps (float \*,\__m256)|
+|[_mm256_storeu_si256](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm256_storeu_si256)|AVX [2]|immintrin.h|void _mm256_storeu_si256 (\__m256i \*,\__m256i)|
+|[_mm256_stream_load_si256](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm256_stream_load_si256)|AVX2 [2]|immintrin.h|__m256i _mm256_stream_load_si256 (\__m256i const \*)|
+|[_mm256_stream_pd](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm256_stream_pd)|AVX [2]|immintrin.h|void __mm256_stream_pd (double \*,\__m256d)|
+|[_mm256_stream_ps](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm256_stream_ps)|AVX [2]|immintrin.h|void _mm256_stream_ps (float \*p,\__m256)|
+|[_mm256_stream_si256](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm256_stream_si256)|AVX [2]|immintrin.h|void __mm256_stream_si256 (\__m256i \*,\__m256i)|
 |[_mm256_sub_epi16](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm256_sub_epi16)|AVX2 [2]|immintrin.h|__m256i _mm256_sub_epi16 (\__m256i,\__m256i)|
 |[_mm256_sub_epi32](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm256_sub_epi32)|AVX2 [2]|immintrin.h|__m256i _mm256_sub_epi32 (\__m256i,\__m256i)|
 |[_mm256_sub_epi64](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm256_sub_epi64)|AVX2 [2]|immintrin.h|__m256i _mm256_sub_epi64 (\__m256i,\__m256i)|
@@ -1175,70 +1175,70 @@ W poniższej tabeli wymieniono funkcje wewnętrzne dostępne na x86 procesorów.
 |[_mm256_xor_si256](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm256_xor_si256)|AVX2 [2]|immintrin.h|__m256i _mm256_xor_si256(\__m256i,\__m256i)|
 |[_mm256_zeroall](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm256_zeroall)|AVX [2]|immintrin.h|void _mm256_zeroall(void)|
 |[_mm256_zeroupper](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm256_zeroupper)|AVX [2]|immintrin.h|void _mm256_zeroupper(void)|
-|[__movsb](../intrinsics/movsb.md)||intrin.h|VOID __movsb (IN PBYTE, BAJTÓW w const *, IN SIZE_T)|
-|[__movsd](../intrinsics/movsd.md)||intrin.h|VOID __movsd (IN PDWORD, DWORD w const *, IN SIZE_T)|
-|[__movsw](../intrinsics/movsw.md)||intrin.h|VOID __movsw (PWORD w, WORD w const *, IN SIZE_T)|
-|_mulx_u32|BMI [2]|immintrin.h|unsigned int _mulx_u32 (unsigned int, unsigned int, int bez znaku *)|
+|[__movsb](../intrinsics/movsb.md)||intrin.h|VOID __movsb (PBYTE Indie, IN BAJT const \*, SIZE_T Indie)|
+|[__movsd](../intrinsics/movsd.md)||intrin.h|VOID __movsd (PDWORD Indie, IN DWORD const \*, SIZE_T Indie)|
+|[__movsw](../intrinsics/movsw.md)||intrin.h|VOID __movsw (pword — w, WORD w const \*, SIZE_T Indie)|
+|_mulx_u32|BMI [2]|immintrin.h|unsigned int _mulx_u32 (unsigned int, niepodpisane int, niepodpisane int\*)|
 |[__nop](../intrinsics/nop.md)||intrin.h|void __nop(void)|
 |__nvreg_restore_fence||intrin.h|void __nvreg_restore_fence(void)|
 |__nvreg_save_fence||intrin.h|void __nvreg_save_fence(void)|
-|[__outbyte](../intrinsics/outbyte.md)||intrin.h|void __outbyte (bez znaku portu krótkich, bez znaku char danych)|
-|[__outbytestring](../intrinsics/outbytestring.md)||intrin.h|void __outbytestring (bez znaku portu krótkich, unsigned char * buforu, bez znaku liczba długa)|
-|[__outdword](../intrinsics/outdword.md)||intrin.h|void __outdword (bez znaku krótkich portu, danych unsigned long)|
-|[__outdwordstring](../intrinsics/outdwordstring.md)||intrin.h|void __outdwordstring (unsigned portu krótkie, unsigned long * buforu, bez znaku liczba długa)|
-|[__outword](../intrinsics/outword.md)||intrin.h|void __outword (bez znaku Port krótkie, krótki danych bez podpisu)|
-|[__outwordstring](../intrinsics/outwordstring.md)||intrin.h|void __outwordstring (unsigned krótkich portu, bez znaku krótko * buforu, bez znaku liczba długa)|
-|[_pdep_u32](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_pdep_u32)|BMI [2]|immintrin.h|unsigned int _pdep_u32 (unsigned int, int bez znaku)|
-|[_pext_u32](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_pext_u32)|BMI [2]|immintrin.h|unsigned int _pext_u32 (unsigned int, int bez znaku)|
+|[__outbyte](../intrinsics/outbyte.md)||intrin.h|__outbyte void (niepodpisanych krótki Port, unsigned char danych)|
+|[__outbytestring](../intrinsics/outbytestring.md)||intrin.h|void __outbytestring (niepodpisanych krótki Port, unsigned char \*Buffer i niepodpisane długa liczba)|
+|[__outdword](../intrinsics/outdword.md)||intrin.h|__outdword void (Port krótka bez znaku, unsigned long danych)|
+|[__outdwordstring](../intrinsics/outdwordstring.md)||intrin.h|void __outdwordstring (niepodpisane krótka Port, unsigned long \*Buffer i niepodpisane długa liczba)|
+|[__outword](../intrinsics/outword.md)||intrin.h|__outword void (Port krótka bez znaku, niepodpisane krótka danych)|
+|[__outwordstring](../intrinsics/outwordstring.md)||intrin.h|void __outwordstring (niepodpisane krótka Port, typ unsigned short \*Buffer i niepodpisane długa liczba)|
+|[_pdep_u32](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_pdep_u32)|BMI [2]|immintrin.h|unsigned int _pdep_u32 (unsigned int, niepodpisane int)|
+|[_pext_u32](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_pext_u32)|BMI [2]|immintrin.h|unsigned int _pext_u32 (unsigned int, niepodpisane int)|
 |[__popcnt](../intrinsics/popcnt16-popcnt-popcnt64.md)|POPCNT|intrin.h|__popcnt(unsigned int) unsigned int|
-|[__popcnt16](../intrinsics/popcnt16-popcnt-popcnt64.md)|POPCNT|intrin.h|__popcnt16(unsigned short) krótkich bez znaku|
-|[_rdrand16_step](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_rdrand16_step)|RDRAND [2]|immintrin.h|int _rdrand16_step(unsigned short *)|
-|[_rdrand32_step](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_rdrand32_step)|RDRAND [2]|immintrin.h|int _rdrand32_step(unsigned int *)|
-|[_rdseed16_step](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_rdseed16_step)|RDSEED [2]|immintrin.h|int _rdseed16_step(unsigned short *)|
-|[_rdseed32_step](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_rdseed32_step)|RDSEED [2]|immintrin.h|int _rdseed32_step(unsigned int *)|
-|[__rdtsc](../intrinsics/rdtsc.md)||intrin.h|niepodpisane __int64 \__rdtsc(void)|
-|[__rdtscp](../intrinsics/rdtscp.md)|RDTSCP|intrin.h|niepodpisane __int64 \__rdtscp (unsigned int *)|
+|[__popcnt16](../intrinsics/popcnt16-popcnt-popcnt64.md)|POPCNT|intrin.h|__popcnt16(unsigned short) krótka bez znaku|
+|[_rdrand16_step](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_rdrand16_step)|RDRAND [2]|immintrin.h|int _rdrand16_step (typ unsigned short \*)|
+|[_rdrand32_step](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_rdrand32_step)|RDRAND [2]|immintrin.h|int _rdrand32_step (unsigned int \*)|
+|[_rdseed16_step](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_rdseed16_step)|RDSEED [2]|immintrin.h|int _rdseed16_step (typ unsigned short \*)|
+|[_rdseed32_step](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_rdseed32_step)|RDSEED [2]|immintrin.h|int _rdseed32_step (unsigned int \*)|
+|[__rdtsc](../intrinsics/rdtsc.md)||intrin.h|unsigned __int64 \__rdtsc(void)|
+|[__rdtscp](../intrinsics/rdtscp.md)|RDTSCP|intrin.h|unsigned __int64 \__rdtscp (unsigned int\*)|
 |[_ReadBarrier](../intrinsics/readbarrier.md)||intrin.h|void _ReadBarrier(void)|
-|[__readcr0](../intrinsics/readcr0.md)||intrin.h|__readcr0(void) długa bez znaku|
-|[__readcr2](../intrinsics/readcr2.md)||intrin.h|__readcr2(void) długa bez znaku|
-|[__readcr3](../intrinsics/readcr3.md)||intrin.h|__readcr3(void) długa bez znaku|
-|[__readcr4](../intrinsics/readcr4.md)||intrin.h|__readcr4(void) długa bez znaku|
-|[__readcr8](../intrinsics/readcr8.md)||intrin.h|__readcr8(void) długa bez znaku|
+|[__readcr0](../intrinsics/readcr0.md)||intrin.h|unsigned long __readcr0(void)|
+|[__readcr2](../intrinsics/readcr2.md)||intrin.h|unsigned long __readcr2(void)|
+|[__readcr3](../intrinsics/readcr3.md)||intrin.h|unsigned long __readcr3(void)|
+|[__readcr4](../intrinsics/readcr4.md)||intrin.h|unsigned long __readcr4(void)|
+|[__readcr8](../intrinsics/readcr8.md)||intrin.h|unsigned long __readcr8(void)|
 |[__readdr](../intrinsics/readdr.md)||intrin.h|__readdr(unsigned) bez znaku|
 |[__readeflags](../intrinsics/readeflags.md)||intrin.h|__readeflags(void) bez znaku|
-|[__readfsbyte](../intrinsics/readfsbyte-readfsdword-readfsqword-readfsword.md)||intrin.h|__readfsbyte char bez znaku (przesunięcie długa bez znaku)|
-|[__readfsdword](../intrinsics/readfsbyte-readfsdword-readfsqword-readfsword.md)||intrin.h|niepodpisane __readfsdword długi (przesunięcie długa bez znaku)|
-|[__readfsword](../intrinsics/readfsbyte-readfsdword-readfsqword-readfsword.md)||intrin.h|niepodpisane krótki __readfsword (przesunięcie długa bez znaku)|
-|[__readmsr](../intrinsics/readmsr.md)||intrin.h|niepodpisane __int64 \__readmsr (unsigned long)|
-|[__readpmc](../intrinsics/readpmc.md)||intrin.h|niepodpisane __int64 \__readpmc(unsigned long a)|
+|[__readfsbyte](../intrinsics/readfsbyte-readfsdword-readfsqword-readfsword.md)||intrin.h|__readfsbyte char bez znaku (unsigned long przesunięcie)|
+|[__readfsdword](../intrinsics/readfsbyte-readfsdword-readfsqword-readfsword.md)||intrin.h|unsigned long __readfsdword (unsigned long przesunięcie)|
+|[__readfsword](../intrinsics/readfsbyte-readfsdword-readfsqword-readfsword.md)||intrin.h|niepodpisane krótka __readfsword (unsigned long przesunięcie)|
+|[__readmsr](../intrinsics/readmsr.md)||intrin.h|unsigned __int64 \__readmsr (unsigned long)|
+|[__readpmc](../intrinsics/readpmc.md)||intrin.h|unsigned __int64 \__readpmc(unsigned long a)|
 |[_ReadWriteBarrier](../intrinsics/readwritebarrier.md)||intrin.h|void _ReadWriteBarrier(void)|
-|[_ReturnAddress](../intrinsics/returnaddress.md)||intrin.h|void * _ReturnAddress(void)|
+|[_ReturnAddress](../intrinsics/returnaddress.md)||intrin.h|void \* _ReturnAddress(void)|
 |_rorx_u32|BMI [2]|immintrin.h|unsigned int _rorx_u32 (unsigned int, const unsigned int)|
-|[_rotl16](../intrinsics/rotl8-rotl16.md)||intrin.h|niepodpisane _rotl16 krótkich (krótszej wartości bez znaku, shift char bez znaku)|
-|[_rotl8](../intrinsics/rotl8-rotl16.md)||intrin.h|unsigned char _rotl8 (wartość char bez znaku, shift char bez znaku)|
-|[_rotr16](../intrinsics/rotr8-rotr16.md)||intrin.h|niepodpisane _rotr16 krótkich (krótszej wartości bez znaku, shift char bez znaku)|
-|[_rotr8](../intrinsics/rotr8-rotr16.md)||intrin.h|unsigned char _rotr8 (wartość char bez znaku, shift char bez znaku)|
+|[_rotl16](../intrinsics/rotl8-rotl16.md)||intrin.h|niepodpisane krótka _rotl16 (wartość nieoznaczona krótka, shift unsigned char)|
+|[_rotl8](../intrinsics/rotl8-rotl16.md)||intrin.h|unsigned char _rotl8 (wartość char bez znaku, shift unsigned char)|
+|[_rotr16](../intrinsics/rotr8-rotr16.md)||intrin.h|niepodpisane krótka _rotr16 (wartość nieoznaczona krótka, shift unsigned char)|
+|[_rotr8](../intrinsics/rotr8-rotr16.md)||intrin.h|unsigned char _rotr8 (wartość char bez znaku, shift unsigned char)|
 |_rsm||intrin.h|void _rsm(void)|
-|_sarx_i32|BMI [2]|immintrin.h|int _sarx_i32 (int, int bez znaku)|
+|_sarx_i32|BMI [2]|immintrin.h|int _sarx_i32 (int, niepodpisane int)|
 |[__segmentlimit](../intrinsics/segmentlimit.md)||intrin.h|unsigned long __segmentlimit(unsigned long a)|
-|_sgdt||intrin.h|void _sgdt(void*)|
-|_shlx_u32|BMI [2]|immintrin.h|unsigned int _shlx_u32 (unsigned int, int bez znaku)|
-|_shrx_u32|BMI [2]|immintrin.h|unsigned int _shrx_u32 (unsigned int, int bez znaku)|
-|[__sidt](../intrinsics/sidt.md)||intrin.h|void __sidt(void*)|
-|__slwpcb|LWP [1]|ammintrin.h|void *__slwpcb(void)|
+|_sgdt||intrin.h|void _sgdt (void\*)|
+|_shlx_u32|BMI [2]|immintrin.h|unsigned int _shlx_u32 (unsigned int, niepodpisane int)|
+|_shrx_u32|BMI [2]|immintrin.h|unsigned int _shrx_u32 (unsigned int, niepodpisane int)|
+|[__sidt](../intrinsics/sidt.md)||intrin.h|void __sidt (void\*)|
+|__slwpcb|LWP [1]|ammintrin.h|void \*__slwpcb(void)|
 |_stac|SMAP|intrin.h|void _stac(void)|
-|_store_be_u16<br /><br /> [_storebe_i16](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_storebe_i16&expand=5141)|MOVBE|immintrin.h|void _store_be_u16 (void * bez znaku krótko);<br /><br /> void _storebe_i16 (void \*, krótki); [3]|
-|_store_be_u32<br /><br /> [_storebe_i32](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_storebe_i32&expand=5142)|MOVBE|immintrin.h|void _store_be_u32 (void *, unsigned int);<br /><br /> void _storebe_i32 (void \*, int); [3]|
-|_Store_HLERelease|HLE [2]|immintrin.h|void _Store_HLERelease (długo volatile * długim)|
-|_StorePointer_HLERelease|HLE [2]|immintrin.h|void _StorePointer_HLERelease (void * volatile \*, void \*)|
-|[__stosb](../intrinsics/stosb.md)||intrin.h|void __stosb (PBYTE IN, BAJTÓW w IN SIZE_T)|
-|[__stosd](../intrinsics/stosd.md)||intrin.h|void __stosd (PDWORD IN, DWORD w IN SIZE_T)|
-|[__stosw](../intrinsics/stosw.md)||intrin.h|void __stosw (PWORD w, WORD w IN SIZE_T)|
-|_subborrow_u16||intrin.h|unsigned char _subborrow_u16 (unsigned char b_in, niepodpisane src1 krótkich, niepodpisane src2 krótkie, bez znaku krótko * diff)|
-|[_subborrow_u32](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_subborrow_u32)||intrin.h|unsigned char _subborrow_u32 (unsigned char b_in, src1 unsigned int, src2 unsigned int, int bez znaku * diff)|
-|_subborrow_u8||intrin.h|unsigned char _subborrow_u8 (unsigned char b_in, src1 char bez znaku, src2 unsigned char unsigned char * diff)|
+|_store_be_u16<br /><br /> [_storebe_i16](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_storebe_i16&expand=5141)|MOVBE|immintrin.h|void _store_be_u16 (void \*, unsigned short);<br /><br /> void _storebe_i16 (void \*, krótki); [3]|
+|_store_be_u32<br /><br /> [_storebe_i32](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_storebe_i32&expand=5142)|MOVBE|immintrin.h|void _store_be_u32 (void \*, niepodpisane int);<br /><br /> void _storebe_i32 (void \*, int); [3]|
+|_Store_HLERelease|HLE [2]|immintrin.h|void _Store_HLERelease (długo volatile \*długie)|
+|_StorePointer_HLERelease|HLE [2]|immintrin.h|void _StorePointer_HLERelease (void \* volatile \*, void \*)|
+|[__stosb](../intrinsics/stosb.md)||intrin.h|__stosb void (SIZE_T PBYTE Indie, IN BAJT, Indie)|
+|[__stosd](../intrinsics/stosd.md)||intrin.h|__stosd void (SIZE_T PDWORD Indie, IN DWORD, Indie)|
+|[__stosw](../intrinsics/stosw.md)||intrin.h|__stosw void (SIZE_T pword — Indie, w programie WORD, Indie)|
+|_subborrow_u16||intrin.h|unsigned char _subborrow_u16 (unsigned char b_in, niepodpisane krótka src1, niepodpisane krótka src2, typ unsigned short \*różnic)|
+|[_subborrow_u32](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_subborrow_u32)||intrin.h|unsigned char _subborrow_u32 (unsigned char b_in, src1 unsigned int, src2 unsigned int, niepodpisane int \*różnic)|
+|_subborrow_u8||intrin.h|unsigned char _subborrow_u8 (unsigned char b_in, src1 unsigned char, src2 unsigned char unsigned char \*różnic)|
 |[__svm_clgi](../intrinsics/svm-clgi.md)||intrin.h|void __svm_clgi(void)|
-|[__svm_invlpga](../intrinsics/svm-invlpga.md)||intrin.h|void __svm_invlpga(void*,int)|
+|[__svm_invlpga](../intrinsics/svm-invlpga.md)||intrin.h|void __svm_invlpga (void\*, int)|
 |[__svm_skinit](../intrinsics/svm-skinit.md)||intrin.h|void __svm_skinit(int)|
 |[__svm_stgi](../intrinsics/svm-stgi.md)||intrin.h|void __svm_stgi(void)|
 |[__svm_vmload](../intrinsics/svm-vmload.md)||intrin.h|void __svm_vmload(size_t)|
@@ -1250,7 +1250,7 @@ W poniższej tabeli wymieniono funkcje wewnętrzne dostępne na x86 procesorów.
 |[__ud2](../intrinsics/ud2.md)||intrin.h|void __ud2(void)|
 |[__ull_rshift](../intrinsics/ull-rshift.md)||intrin.h|__int64 bez znaku [pascal/cdecl] \__ull_rshift (bez znaku \__int64, int)|
 |[__vmx_off](../intrinsics/vmx-off.md)||intrin.h|void __vmx_off(void)|
-|[__vmx_vmptrst](../intrinsics/vmx-vmptrst.md)||intrin.h|void __vmx_vmptrst (bez znaku \__int64 *)|
+|[__vmx_vmptrst](../intrinsics/vmx-vmptrst.md)||intrin.h|void __vmx_vmptrst (bez znaku \__int64 \*)|
 |[__wbinvd](../intrinsics/wbinvd.md)||intrin.h|void __wbinvd(void)|
 |[_WriteBarrier](../intrinsics/writebarrier.md)||intrin.h|void _WriteBarrier(void)|
 |[__writecr0](../intrinsics/writecr0.md)||intrin.h|void __writecr0(unsigned long)|
@@ -1259,18 +1259,18 @@ W poniższej tabeli wymieniono funkcje wewnętrzne dostępne na x86 procesorów.
 |[__writecr8](../intrinsics/writecr8.md)||intrin.h|void __writecr8(unsigned long)|
 |[__writedr](../intrinsics/writedr.md)||intrin.h|void __writedr(unsigned,unsigned)|
 |[__writeeflags](../intrinsics/writeeflags.md)||intrin.h|void __writeeflags(unsigned)|
-|[__writefsbyte](../intrinsics/writefsbyte-writefsdword-writefsqword-writefsword.md)||intrin.h|void __writefsbyte (bez znaku długo przesunięcie, unsigned char danych)|
-|[__writefsdword](../intrinsics/writefsbyte-writefsdword-writefsqword-writefsword.md)||intrin.h|void __writefsdword (bez znaku długo przesunięcie, bez znaku danych long)|
-|[__writefsword](../intrinsics/writefsbyte-writefsdword-writefsqword-writefsword.md)||intrin.h|void __writefsword (bez znaku długo przesunięcie, bez znaku krótkich danych)|
-|[__writemsr](../intrinsics/writemsr.md)||intrin.h|void __writemsr (unsigned long, bez znaku \__int64)|
+|[__writefsbyte](../intrinsics/writefsbyte-writefsdword-writefsqword-writefsword.md)||intrin.h|__writefsbyte void (bez znaku długo przesunięcia, unsigned char danych)|
+|[__writefsdword](../intrinsics/writefsbyte-writefsdword-writefsqword-writefsword.md)||intrin.h|__writefsdword void (bez znaku długo przesunięcia, nieoznaczona długa danych)|
+|[__writefsword](../intrinsics/writefsbyte-writefsdword-writefsqword-writefsword.md)||intrin.h|__writefsword void (bez znaku długo przesunięcie, niepodpisane krótka danych)|
+|[__writemsr](../intrinsics/writemsr.md)||intrin.h|void __writemsr (unsigned long, niepodpisane \__int64)|
 |[_xabort](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_xabort)|RTM [2]|immintrin.h|void _xabort(unsigned int)|
 |[_xbegin](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_xbegin)|RTM [2]|immintrin.h|_xbegin(void) bez znaku|
 |[_xend](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_xend)|RTM [2]|immintrin.h|void _xend(void)|
 |[_xgetbv](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_xgetbv)|XSAVE [2]|immintrin.h|_xgetbv(unsigned int) __int64 bez znaku|
-|[_xrstor](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_xrstor)|XSAVE [2]|immintrin.h|void _xrstor (void const *, bez znaku \__int64)|
-|[_xsave](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_xsave)|XSAVE [2]|immintrin.h|void _xsave (void *, bez znaku \__int64)|
-|[_xsaveopt](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_xsaveopt)|XSAVEOPT [2]|immintrin.h|void _xsaveopt (void *, bez znaku \__int64)|
-|[_xsetbv](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_xsetbv)|XSAVE [2]|immintrin.h|void _xsetbv (unsigned int, bez znaku \__int64)|
+|[_xrstor](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_xrstor)|XSAVE [2]|immintrin.h|void _xrstor (void const\*bez znaku \__int64)|
+|[_xsave](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_xsave)|XSAVE [2]|immintrin.h|void _xsave (void\*bez znaku \__int64)|
+|[_xsaveopt](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_xsaveopt)|XSAVEOPT [2]|immintrin.h|void _xsaveopt (void\*bez znaku \__int64)|
+|[_xsetbv](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_xsetbv)|XSAVE [2]|immintrin.h|void _xsetbv (unsigned int, niepodpisane \__int64)|
 |[_xtest](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_xtest)|XTEST [2]|immintrin.h|_xtest(void) char bez znaku|
 
 ## <a name="see-also"></a>Zobacz także

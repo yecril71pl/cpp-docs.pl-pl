@@ -66,12 +66,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 53b5970f9d0ea6e3b0c7ed4715c8ff9c3578dc00
-ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
+ms.openlocfilehash: 2f19461b04f98ab06a2c828b0f61fb556f9a7d7d
+ms.sourcegitcommit: 7eadb968405bcb92ffa505e3ad8ac73483e59685
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37337424"
+ms.lasthandoff: 07/23/2018
+ms.locfileid: "39209173"
 ---
 # <a name="cdrawingmanager-class"></a>Klasa CDrawingManager
 `CDrawingManager` Klasa implementuje złożonych algorytmów rysowania.  
@@ -932,7 +932,7 @@ static COLORREF __stdcall SmartMixColors(
 ### <a name="remarks"></a>Uwagi  
  Ta metoda kończy się niepowodzeniem z powodu błędu Jeśli *k1* lub *k2* jest mniejsza niż zero. Jeśli oba te parametry są ustawione na 0, metoda zwraca `RGB(0, 0, 0)`.  
   
- Ważona współczynnik oblicza się przy użyciu następującej formuły: (kolorem1 * k1 + color2 \* k2) /(k1 + k2). Po ważona stosunek jest określony, metoda oblicza jasność koloru mieszanego. Następnie mnoży jasność przez *dblLumRatio*. Jeśli wartość jest większa niż 1.0, metody ustawia jasność koloru mieszane na nową wartość. W przeciwnym razie jasność jest równa 1.0.  
+ Ważona współczynnik oblicza się przy użyciu następującej formuły: (kolorem1 \* k1 + color2 \* k2) /(k1 + k2). Po ważona stosunek jest określony, metoda oblicza jasność koloru mieszanego. Następnie mnoży jasność przez *dblLumRatio*. Jeśli wartość jest większa niż 1.0, metody ustawia jasność koloru mieszane na nową wartość. W przeciwnym razie jasność jest równa 1.0.  
   
 ##  <a name="drawrotated"></a>  CDrawingManager::DrawRotated  
  Źródłowy kontroler domeny zawartość wewnątrz danego prostokąt obraca się o 90 stopni.  

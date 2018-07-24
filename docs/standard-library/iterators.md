@@ -15,20 +15,20 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d1c6b7ef094715e052bdea023bcff0437492325c
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 8bb8efba0146a0a230a85a7980f1e71381fcf4b2
+ms.sourcegitcommit: 7eadb968405bcb92ffa505e3ad8ac73483e59685
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33854759"
+ms.lasthandoff: 07/23/2018
+ms.locfileid: "39208405"
 ---
 # <a name="iterators"></a>Iteratory
 
-Iteratora jest obiekt, który można iteracja elementów w kontenerze standardowa biblioteka C++ i zapewnienia dostępu do poszczególnych elementów. Standardowa biblioteka C++ kontenery oferować Iteratory umożliwiając algorytmów dostęp do swoich elementów w standardowy sposób bez konieczności zajmować się typ kontenera elementy są przechowywane w.
+Iterator jest obiektem, który można przejść przez elementy kontenera standardowej biblioteki języka C++ i zapewniają dostęp do poszczególnych elementów. Kontenery standardowej biblioteki języka C++, podane przez wszystkie Iteratory, tak aby algorytmy mogą uzyskać dostęp do ich elementów w standardowy sposób bez konieczności zainteresowanych przy użyciu typu kontenera elementy są przechowywane w.
 
-Można użyć Iteratory jawnie przy użyciu elementu członkowskiego i funkcje globalne, takie jak begin() i end() i operatory takich jak ++ i--przenoszenia do przodu i do tyłu. Można również używać Iteratory niejawnie z zakresu-pętli for lub (w przypadku niektórych typów iteratora) operator indeksu dolnego [].
+Możesz użyć Iteratory, które jawnie przy użyciu elementu członkowskiego i funkcje globalne, takie jak begin() i metodę end() i operatorów takich jak ++ i--do przechodzenia do przodu lub Wstecz. Umożliwia także Iteratory niejawnie zakres-pętli for lub (w przypadku niektórych typów iteratora) operator indeksu dolnego [].
 
-W standardowej bibliotece C++ na początku sekwencji lub zakres jest pierwszym elementem. Koniec sekwencji lub zakres zawsze jest definiowany jako jeden po ostatnim elemencie. Funkcje globalne rozpoczęcia i zakończenia Iteratory powrotu do określonego kontenera. Pętla typowe iteratora jawne przez wszystkie elementy w kontenerze wygląda następująco:
+W standardowej bibliotece języka C++ na początek sekwencji lub zakres jest pierwszym elementem. Koniec sekwencji lub zakres, zawsze jest definiowany jako jednym elementem. Funkcje globalne początku i końcu zwracany Iteratory do określonego kontenera. Pętla typowe iteratora jawne za pośrednictwem wszystkich elementów w kontenerze wygląda następująco:
 
 ```cpp
 vector<int> vec{ 0,1,2,3,4 };
@@ -42,7 +42,7 @@ it++)
 }
 ```
 
-Ten sam efekt można zrobić po prostu zakres-Pętla for:
+Ten sam efekt można osiągnąć po prostu z szerokim zakresem — Pętla for:
 
 ```cpp
 for (auto num : vec)
@@ -51,54 +51,54 @@ for (auto num : vec)
  }
 ```
 
-Istnieje pięć kategorii iteratorów. W porządku rosnących zasilania kategorie są:
+Istnieje pięć kategorii iteratorów. W kolejności power zwiększenia dostępne są następujące kategorie:
 
-- **Dane wyjściowe**. Iteratora dane wyjściowe `X` można przejść do przodu przez sekwencję przy użyciu ++ operatora i można zapisać elementu tylko raz przy użyciu * — operator.
+- **Dane wyjściowe**. Iterator danych wyjściowych `X` może przejść do przodu przez sekwencję przy użyciu ++ operatora i można zapisać elementu tylko raz przy użyciu \* operatora.
 
-- **Dane wejściowe**. Wejściowy iteratora `X` można przejść do przodu przez sekwencję przy użyciu ++ operatora i można odczytać elementu dowolną liczbę razy przy użyciu * — operator. Możesz porównać Iteratory wejściowego przy użyciu ++ i! = operatory. Po zwiększa się wszystkie kopie iteratora wejściowych, brak pozostałe kopie można bezpiecznie porównać, wyłuskiwany lub zwiększany później.
+- **Dane wejściowe**. Iterator danych wejściowych `X` może przejść do przodu przez sekwencję przy użyciu ++ operatora i może odczytać element dowolną liczbę razy za pomocą \* operatora. Możesz porównać Iteratory wejściowych przy użyciu ++ i! = operatorów. Po zwiększa się wszystkie kopie iterator danych wejściowych, brak pozostałe kopie bezpiecznie można porównywać, wyłuskiwany lub zwiększona po tej dacie.
 
-- **Przekazuj**. Do przodu iteratora `X` można przejść do przodu przez przy użyciu sekwencji ++ — operator i można czytać dowolny element lub zapisywania elementów z systemem innym niż stała dowolną liczbę razy przy użyciu * — operator. Dostęp do elementów członkowskich elementu przy użyciu -> — operator i porównać do przodu Iteratory przy użyciu == i! = operatory. Można tworzyć kopie iteratora do przodu, z których każdy wyłuskiwany i zwiększany niezależnie. Iteratora do przodu, który został zainicjowany bez odwołania do dowolnego kontenera jest nazywany null iteratora do przodu. Wartości null do przodu Iteratory zawsze Porównuj takie same.
+- **Do przodu**. Iterator do przodu `X` może przejść do przodu przez przy użyciu sekwencji ++ — operator i może odczytać dowolny element lub zapisać elementy o wartości innej niż stała dowolną liczbę razy przy użyciu \* operatora. Dostęp do elementów członkowskich elementu przy użyciu -> — operator i porównać tworzyć Iteratory do przodu przy użyciu == i! = operatorów. Można tworzyć kopie iterator do przodu, z których każdy może być wyłuskany i zwiększany niezależnie. Iterator do przodu, który jest inicjowany bez odwołania do dowolnego kontenera jest nazywany iterator do przodu o wartości null. Iteratory do przodu o wartości null zawsze są sobie równe.
 
-- Dwukierunkowego. Iterator dwukierunkowego `X` można przeprowadzać iteratora do przodu. Możesz można jednak również zmniejszyć iteratora dwukierunkowego, podobnie jak w--`X`, `X`—, lub (`V` = *`X`--). Możesz dostęp do elementów członkowskich elementu i porównania Iteratory dwukierunkowego w taki sam sposób jak Iteratory do przodu.
+- Dwukierunkowy. Iterator dwukierunkowy `X` mogą być wykonywane iterator do przodu. Możesz można jednak również zmniejszyć iteratora dwukierunkowego, podobnie jak w —`X`, `X`—, lub (`V` = \*`X`—). Można dostęp do elementów członkowskich elementu, a następnie porównaj dwukierunkowe Iteratory w taki sam sposób, jak tworzyć Iteratory do przodu.
 
-- **Dostęp losowy**. Iterator dostępie swobodnym `X` można przeprowadzać iteratora dwukierunkowego. Z iteratora dostępie swobodnym służy [] — operator indeksu dolnego do dostępu do elementów. Można użyć +, -, += i-= operatory przenoszenia do przodu i do tyłu określoną liczbę elementów, jak i do obliczania odległość między Iteratory. Możesz porównać Iteratory dwukierunkowego przy użyciu ==,! =, \<, >, \<=, a > =.
+- **Losowym**. Iterator dostępu swobodnego `X` mogą być wykonywane iterator dwukierunkowy. Za pomocą iteratora dostępu swobodnego, można użyć [] operator indeksu dolnego do dostępu do elementów. Możesz użyć +, -, operatory += i-= przenoszenia do przodu lub Wstecz określonej liczby elementów i obliczyć odległość między Iteratory. Możesz porównać dwukierunkowe Iteratory przy użyciu ==,! =, \<, >, \<= i > =.
 
-Iteratory wszystkich można przypisać lub skopiowane. Obiekty lekkie są rozpatrywane i są często przekazane i zwrócony przez wartość, nie przez odwołanie. Należy pamiętać, że żadna z operacji opisany wcześniej throw Wystąpił wyjątek podczas wykonywania na prawidłową iteratora.
+Wszystkie Iteratory można przypisać lub kopiowany. Są zakłada się, że obiekty lekkie i są one często przekazane i zwracane przez wartość, nie przez odwołanie. Należy zauważyć, że żadne operacje opisane wcześniej może zgłosić wyjątek podczas wykonywania na prawidłowe iteratora.
 
-Hierarchia kategorii iteratora można podsumować pokazując trzy sekwencji. Aby uzyskać dostęp tylko do zapisu do sekwencji można użyć dowolnego z:
+Hierarchia kategorii iteratora można podsumować, pokazując sekwencje trzech. Aby uzyskać dostęp tylko do zapisu do sekwencji użyć dowolnego z:
 
-> dane wyjściowe iteratora<br/>
-> -> do przodu iteratora<br/>
-> -> dwukierunkowego iteratora<br/>
-> -> dostępie swobodnym iteratora<br/>
+> iterator danych wyjściowych<br/>
+> -> iterator do przodu<br/>
+> -> iteratora dwukierunkowego<br/>
+> -> iteratora dostępu swobodnego<br/>
 
-Strzałka w prawo oznacza "może zostać zastąpiona." Dowolny algorytm, który wywołuje iteratora dane wyjściowe powinny działa dobrze z iteratora do przodu, na przykład, ale *nie* odwrotnie.
+Strzałka w prawo oznacza "może być zastąpiony." Dowolny algorytm, który wywołuje dla iteratora danych wyjściowych powinien działać dobrze z iterator do przodu, na przykład, ale *nie* odwrotnie.
 
 Aby uzyskać dostęp tylko do odczytu do sekwencji można użyć dowolnego z:
 
-> wejściowy iteratora<br/>
-> -> do przodu iteratora<br/>
-> -> dwukierunkowego iteratora<br/>
-> -> dostępie swobodnym iteratora<br/>
+> iterator danych wejściowych<br/>
+> -> iterator do przodu<br/>
+> -> iteratora dwukierunkowego<br/>
+> -> iteratora dostępu swobodnego<br/>
 
-W tym przypadku jest najsłabszą wszystkich kategorii wejściowych iteratora.
+Iterator danych wejściowych jest najsłabsza wszystkie kategorie, w tym przypadku.
 
-Na koniec do odczytu i zapisu do sekwencji, możesz można użyć dowolnego z:
+Na koniec uzyskać dostęp do odczytu/zapisu do sekwencji, umożliwiają wszystkich:
 
-> do przodu iteratora<br/>
-> -> dwukierunkowego iteratora<br/>
-> -> dostępie swobodnym iteratora<br/>
+> iterator do przodu<br/>
+> -> iteratora dwukierunkowego<br/>
+> -> iteratora dostępu swobodnego<br/>
 
-Wskaźnik do obiektu zawsze może stanowić iteratora dostępie swobodnym, więc jeśli obsługuje dostęp do odczytu/zapisu do sekwencji, który wyznacza ona może służyć jako każdej kategorii iteratora.
+Wskaźnik do obiektu zawsze może służyć jako iterator dostępu swobodnego, dzięki czemu może służyć jako dowolnej kategorii iteratora, gdy obsługuje dostęp do odczytu/zapisu do sekwencji, który ją określa.
 
-Iterator `Iterator` innej niż obiekt wskaźnika musi także definiować typy elementów członkowskich wymaganych przez specjalizacji `iterator_traits<Iterator>`. Należy pamiętać, że tych wymagań można spełnić przez wyprowadzanie `Iterator` z publicznej klasy podstawowej [iterator](../standard-library/iterator-struct.md).
+Iterator `Iterator` innego niż obiekt wskaźnika musi także definiować typy elementów członkowskich, wymagane przez specjalizację `iterator_traits<Iterator>`. Należy pamiętać, że te wymagania mogą zostać spełnione przez wyprowadzanie `Iterator` z publicznej klasy bazowej [iteratora](../standard-library/iterator-struct.md).
 
-Należy zapoznać się z ze zobowiązania i ograniczenia dotyczące każdej kategorii iteratora, aby zobaczyć, jak Iteratory używanych przez kontenery i algorytmy standardowa biblioteka C++.
+Należy zapoznać się z ze zobowiązania i ograniczenia wystąpienia każdej kategorii iteratora, aby zobaczyć, jak Iteratory są używane przez kontenery i algorytmy standardowej biblioteki języka C++.
 
 > [!NOTE]
-> Możesz uniknąć używania Iteratory jawnie za pomocą zakresu — dla pętli. Aby uzyskać więcej informacji, zobacz [na podstawie zakresu dla instrukcji](../cpp/range-based-for-statement-cpp.md).
+> Możesz uniknąć używania iteratorów jawnie przy użyciu zakresu-pętli for. Aby uzyskać więcej informacji, zobacz [Range-based for, instrukcja](../cpp/range-based-for-statement-cpp.md).
 
-Visual C++ oferuje teraz zaznaczone Iteratory i debugowania Iteratory zapewnienia niezastępowanie granice z kontenera. Aby uzyskać więcej informacji, zobacz [zaznaczone Iteratory](../standard-library/checked-iterators.md) i [Obsługa iteratora debugowania](../standard-library/debug-iterator-support.md).
+Visual C++ oferuje teraz Iteratory sprawdzane i Iteratory debugowania, aby upewnić się, że nie zastępuj granice kontenera. Aby uzyskać więcej informacji, zobacz [Checked Iterators](../standard-library/checked-iterators.md) i [Debug Iterator Support](../standard-library/debug-iterator-support.md).
 
 ## <a name="see-also"></a>Zobacz także
 

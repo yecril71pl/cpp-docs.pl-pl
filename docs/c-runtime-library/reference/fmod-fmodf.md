@@ -1,5 +1,5 @@
 ---
-title: fmod —, fmodf —, fmodl | Dokumenty Microsoft
+title: fmod, fmodf —, fmodl | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 04/05/2018
 ms.technology:
@@ -39,16 +39,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9f6cc8cc10c026c5ecd621657c556da883c187f5
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: c473b5cb6822df07f4972ff2c964c828b14b5966
+ms.sourcegitcommit: 7eadb968405bcb92ffa505e3ad8ac73483e59685
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32399039"
+ms.lasthandoff: 07/23/2018
+ms.locfileid: "39207536"
 ---
-# <a name="fmod-fmodf-fmodl"></a>fmod —, fmodf —, fmodl
+# <a name="fmod-fmodf-fmodl"></a>fmod, fmodf —, fmodl
 
-Oblicza resztę zmiennoprzecinkowych.
+Oblicza pozostałą zmiennoprzecinkową.
 
 ## <a name="syntax"></a>Składnia
 
@@ -78,17 +78,17 @@ long double fmodl(
 ### <a name="parameters"></a>Parametry
 
 *x*, *y*<br/>
-Wartości zmiennoprzecinkowych.
+Wartości zmiennoprzecinkowe.
 
 ## <a name="return-value"></a>Wartość zwracana
 
-**fmod —** zwraca zmiennoprzecinkowe pozostałej części *x* / *y*. Jeśli wartość *y* jest 0.0, **fmod —** zwraca quiet NaN. Informacji o reprezentację quiet NaN przez **printf** rodziny, zobacz [printf](printf-printf-l-wprintf-wprintf-l.md).
+**fmod —** zwraca zmiennoprzecinkową resztę działania *x* / *y*. Jeśli wartość *y* jest 0,0, Metoda **fmod** zwraca ciche NaN. Aby uzyskać informacje o reprezentację cichych NaN przez **printf** rodziny, zobacz [printf](printf-printf-l-wprintf-wprintf-l.md).
 
 ## <a name="remarks"></a>Uwagi
 
-**Fmod —** funkcja oblicza resztę zmiennoprzecinkowe *f* z *x* / *y* tak, aby *x*  =  *i* * *y* + *f*, gdzie *i* jest liczbą całkowitą *f* ma ten sam znak co *x*i wartość bezwzględną liczby *f* jest mniejsza niż wartość bezwzględną liczby *y*.
+**Fmod** funkcja oblicza zmiennoprzecinkową resztę *f* z *x* / *y* tak, aby *x*  =  *i* \* *y* + *f*, gdzie *i* jest liczbą całkowitą *f* ma ten sam znak co *x*, a wartość bezwzględna *f* jest mniejsza niż wartość bezwzględna *y*.
 
-C++ pozwala przeładowanie, dlatego można wywoływać przeciążenia **fmod —** który przyjmować i zwracać **float** i **długi** **podwójne** wartości. W programie C **fmod —** zawsze ma dwa **podwójne** argumentów i zwraca **podwójne**.
+Język C++ pozwala na przeciążenie, można więc wywoływać przeciążenia **fmod** przyjmujące i zwracające **float** i **długie** **double** wartości. W programie C **fmod** zawsze przyjmuje dwa **double** argumenty i zwraca **double**.
 
 ## <a name="requirements"></a>Wymagania
 

@@ -46,16 +46,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 26f3d4945ef339f5166bdd07bc8d5615b161d266
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 3bcaebf6578bfb4168d17131989b9b200a7ef8f9
+ms.sourcegitcommit: 7eadb968405bcb92ffa505e3ad8ac73483e59685
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32407080"
+ms.lasthandoff: 07/23/2018
+ms.locfileid: "39209459"
 ---
 # <a name="scalbn-scalbnf-scalbnl-scalbln-scalblnf-scalblnl"></a>scalbn, scalbnf, scalbnl, scalbln, scalblnf, scalblnl
 
-Mnoży liczba zmiennoprzecinkowa przez całkowitą potęgą liczby flt_radix —.
+Mnoży liczbę zmiennoprzecinkową przez całkowite możliwości FLT_RADIX.
 
 ## <a name="syntax"></a>Składnia
 
@@ -108,23 +108,23 @@ long double scalblnl(
 Wartość zmiennoprzecinkowa.
 
 *EXP*<br/>
-Wykładnik liczby całkowitej.
+Wykładnik potęgi liczby całkowitej.
 
 ## <a name="return-value"></a>Wartość zwracana
 
-**Scalbn —** zwracają wartość *x* * **flt_radix —**<sup>exp</sup> zakończone powodzeniem. Na przepełnienia (w zależności od jej znaku *x*), **scalbn —** zwraca **huge_val —**; **errno** ma wartość **erange —** .
+**Scalbn —** funkcje zwracają wartość *x* \* **FLT_RADIX**<sup>exp</sup> po pomyślnym wykonaniu. Przy przepełnieniu (w zależności od jej znaku *x*), **scalbn —** zwraca wartość +/- **HUGE_VAL**; **errno** wartość jest równa **ERANGE** .
 
-Aby uzyskać więcej informacji na temat **errno** i może zawierać błąd zwracają wartości, zobacz [errno _doserrno —, _sys_errlist — i _sys_nerr —](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
+Aby uzyskać więcej informacji na temat **errno** i błędach zwracają wartości, zobacz [errno, _doserrno, _sys_errlist i _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
 ## <a name="remarks"></a>Uwagi
 
-**Flt_radix —** jest zdefiniowany w \<float.h — > jako podstawa natywnych liczb zmiennoprzecinkowych; w systemach pliku binarnego, jest równa 2, a **scalbn —** jest odpowiednikiem [ldexp —](ldexp.md).
+**FLT_RADIX** jest zdefiniowany w \<float.h > jako natywny podstawy zmiennoprzecinkowych; w systemach dane binarne, jest równa 2, a **scalbn —** jest odpowiednikiem [ldexp —](ldexp.md).
 
-Ponieważ C++ pozwala przeładowanie, można wywoływać przeciążenia **scalbn —** i **scalbln** który przyjmować i zwracać **float** lub **długi** **podwójne** typów. W programie C **scalbn —** zawsze ma **podwójne** i **int** i zwraca **podwójne**, i **scalbln**zawsze ma **podwójne** i **długi** i zwraca **podwójne**.
+Ponieważ C++ pozwala na przeciążenie, można wywoływać przeciążenia **scalbn —** i **scalbln** przyjmujące i zwracające **float** lub **długie** **double** typów. W programie C **scalbn —** zawsze ma **double** i **int** i zwraca **double**, i **scalbln**zawsze ma **double** i **długie** i zwraca **double**.
 
 ## <a name="requirements"></a>Wymagania
 
-|Funkcja|Nagłówek C|Nagłówek C++|
+|Funkcja|Nagłówek języka C|Nagłówek języka C++|
 |--------------|--------------|------------------|
 |**scalbn —**, **scalbnf —**, **scalbnl**, **scalbln**, **scalblnf**, **scalblnl**|\<math.h>|\<cmath >|
 

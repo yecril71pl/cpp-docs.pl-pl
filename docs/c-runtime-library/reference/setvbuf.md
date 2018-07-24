@@ -33,16 +33,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4c516932eb8d50fb8c9fdbe6f8c48a3f590b1ffb
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 279fb5f7c400a3c7160a9dc66c6cfce7ccaf2bc4
+ms.sourcegitcommit: 7eadb968405bcb92ffa505e3ad8ac73483e59685
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32408487"
+ms.lasthandoff: 07/23/2018
+ms.locfileid: "39208500"
 ---
 # <a name="setvbuf"></a>setvbuf
 
-Buforowanie strumienia formantów i rozmiar buforu.
+Kontroluje buforowanie strumienia i rozmiar buforu.
 
 ## <a name="syntax"></a>Składnia
 
@@ -57,37 +57,37 @@ int setvbuf(
 
 ### <a name="parameters"></a>Parametry
 
-*Strumień*<br/>
+*Stream*<br/>
 Wskaźnik do **pliku** struktury.
 
 *buffer*<br/>
-Bufor przydzielone przez użytkownika.
+Bufor przydzielony przez użytkownika.
 
 *Tryb*<br/>
 Tryb buforowania.
 
 *Rozmiar*<br/>
-Rozmiar buforu w bajtach. Dopuszczalny zakres: 2 < = *rozmiar* < = int_max — (2147483647). Wewnętrznie, wartość podana dla *rozmiar* jest zaokrąglana do najbliższej wielokrotności 2.
+Rozmiar buforu w bajtach. Dozwolony zakres: 2 < = *rozmiar* < = INT_MAX (2147483647). Wewnętrznie, wartość podana dla *rozmiar* jest zaokrąglana do najbliższej wielokrotności 2.
 
 ## <a name="return-value"></a>Wartość zwracana
 
-Zwraca wartość 0 w przypadku powodzenia.
+Zwraca wartość 0, jeśli kończy się pomyślnie.
 
-Jeśli *strumienia* jest **NULL**, lub jeśli *tryb* lub *rozmiar* jest w nieprawidłowa zmiana, zostanie wywołany program obsługi nieprawidłowych parametrów, zgodnie z opisem w [Sprawdzanie poprawności parametru](../../c-runtime-library/parameter-validation.md). Jeśli jest dozwolone wykonywanie, aby kontynuować, ta funkcja zwraca wartość -1 i zestawy **errno** do **einval —**.
+Jeśli *strumienia* jest **NULL**, lub jeśli *tryb* lub *rozmiar* jest poza prawidłowe zmianę, zostanie wywołana procedura obsługi nieprawidłowego parametru, zgodnie z opisem w [Parameter Validation](../../c-runtime-library/parameter-validation.md). Jeśli wykonanie może być kontynuowane, ta funkcja zwraca wartość -1 i ustawia **errno** do **EINVAL**.
 
-Aby uzyskać informacje na temat tych i innych kodów błędów, zobacz [_doserrno —, errno, _sys_errlist — i _sys_nerr —](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
+Aby uzyskać informacje na temat tych i innych kodów błędu, zobacz [_doserrno, errno, _sys_errlist i _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
 ## <a name="remarks"></a>Uwagi
 
-**Setvbuf —** funkcja pozwala programowi na sterowanie zarówno buforowanie i rozmiar dla buforu *strumienia*. *strumień* musi odwoływać się do otwartego pliku, która nie została poddana operacji We/Wy, ponieważ zostało otwarte. Tablica wskazywana przez *buforu* pełni rolę bufora, chyba że jest **NULL**, w którym to przypadku **setvbuf —** używa automatycznie przydzielonego buforu o długości  *rozmiar*/2 * 2 bajtów.
+**Setvbuf —** funkcja pozwala programowi na kontrolowanie zarówno buforowanie i rozmiar buforu *strumienia*. *strumień* musi odwoływać się do otwartego pliku, które nie zostało poddane operacji We/Wy, ponieważ zostało otwarte. Tablica wskazywany przez *buforu* służy jako bufor, chyba że jest to **NULL**, w którym to przypadku **setvbuf —** używa automatycznie przydzielonego buforu o długości  *rozmiar*/2 \* 2 bajty.
 
-Tryb musi być **_iofbf —**, **_iolbf —**, lub **_ionbf —**. Jeśli *tryb* jest **_iofbf —** lub **_iolbf —**, następnie *rozmiar* jest używany jako rozmiar buforu. Jeśli *tryb* jest **_ionbf —**, strumień jest Niebuforowane i *rozmiar* i *buforu* są ignorowane. Wartości *tryb* i ich znaczenie:
+Tryb musi mieć wartość **_IOFBF**, **_IOLBF**, lub **_IONBF**. Jeśli *tryb* jest **_IOFBF** lub **_IOLBF**, następnie *rozmiar* jest używany jako rozmiar buforu. Jeśli *tryb* jest **_IONBF**, strumień jest Niebuforowane i *rozmiar* i *buforu* są ignorowane. Wartości *tryb* i ich znaczenie:
 
 |*tryb* wartość|Znaczenie|
 |-|-|
-**_IOFBF —**|Pełne buforowanie; oznacza to *buforu* jest używany jako bufor i *rozmiar* jest używany jako rozmiar buforu. Jeśli *buforu* jest **NULL**, automatycznie przydzielonego buforu *rozmiar* bajtów jest używany.
-**_IOLBF —**|W niektórych systemach zapewnia buforowanie wiersza. Jednak systemu Win32, zachowanie jest taka sama jak **_iofbf —** — pełne buforowanie.
-**_IONBF —**|Bufor nie jest używane, bez względu na to *buforu* lub *rozmiar*.
+**_IOFBF**|Pełne buforowanie; oznacza to, że *buforu* służy jako bufor i *rozmiar* jest używany jako rozmiar buforu. Jeśli *buforu* jest **NULL**, automatycznie przydzielonego buforu *rozmiar* bajtów jest używany.
+**_IOLBF**|W przypadku niektórych systemów zapewnia buforowanie wiersza. Jednak dla Win32, zachowanie jest taka sama jak **_IOFBF** — pełna buforowania.
+**_IONBF**|Bufor nie jest używane, niezależnie od tego, *buforu* lub *rozmiar*.
 
 ## <a name="requirements"></a>Wymagania
 
@@ -99,7 +99,7 @@ Aby uzyskać dodatkowe informacje o zgodności, zobacz [zgodności](../../c-runt
 
 ## <a name="libraries"></a>Biblioteki
 
-Wszystkie wersje [biblioteki wykonawcze języka C](../../c-runtime-library/crt-library-features.md).
+Wszystkie wersje [biblioteki wykonawczej C](../../c-runtime-library/crt-library-features.md).
 
 ## <a name="example"></a>Przykład
 
@@ -140,7 +140,7 @@ int main( void )
 
 ## <a name="see-also"></a>Zobacz także
 
-[We/Wy strumienia](../../c-runtime-library/stream-i-o.md)<br/>
+[Stream operacji We/Wy](../../c-runtime-library/stream-i-o.md)<br/>
 [fclose, _fcloseall](fclose-fcloseall.md)<br/>
 [fflush](fflush.md)<br/>
 [fopen, _wfopen](fopen-wfopen.md)<br/>

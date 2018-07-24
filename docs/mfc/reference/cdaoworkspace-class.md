@@ -72,12 +72,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: aa0067e3054972ccc60253bb7205dc7a4f1fe4bd
-ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
+ms.openlocfilehash: 7e6210f8c1b1fd1bd19efb74ca68c7a1bed3f7f1
+ms.sourcegitcommit: 7eadb968405bcb92ffa505e3ad8ac73483e59685
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37337450"
+ms.lasthandoff: 07/23/2018
+ms.locfileid: "39209134"
 ---
 # <a name="cdaoworkspace-class"></a>Klasa CDaoWorkspace
 Zarządza sesję o nazwie bazy danych chronionej hasłem z logowania do wylogowania przez pojedynczego użytkownika.  
@@ -745,7 +745,7 @@ static void PASCAL SetDefaultUser(LPCTSTR lpszDefaultUser);
   
 ### <a name="parameters"></a>Parametry  
  *lpszDefaultUser*  
- Domyślna nazwa użytkownika. Nazwa użytkownika może mieć 1-20 znaków i zawierać znaki alfabetyczne, znaki akcentowane, liczby, spacje i symbole, z wyjątkiem: "(cudzysłów) / (ukośnik), \ (ukośnik odwrotny), \[ \] (nawiasy kwadratowe): (dwukropek), &#124; () potok) \< (mniej — znak), > (większe — znak), + (znak plus), = (równa logowania); (średnik), (przecinkami) (znak zapytania) * (gwiazdka), wiodące spacje i znaki sterujące (ASCII 00 do ASCII 31). Aby uzyskać powiązane informacje zobacz temat "Właściwości nazwy użytkownika" w Pomocy programu DAO.  
+ Domyślna nazwa użytkownika. Nazwa użytkownika może mieć 1-20 znaków i zawierać znaki alfabetyczne, znaki akcentowane, liczby, spacje i symbole, z wyjątkiem: "(cudzysłów) / (ukośnik), \ (ukośnik odwrotny), \[ \] (nawiasy kwadratowe): (dwukropek), &#124; () potok) \< (mniej — znak), > (większe — znak), + (znak plus), = (równa logowania); (średnik), (przecinkami) (znak zapytania) \* (gwiazdka), wiodące spacje i znaki sterujące (ASCII 00 do ASCII 31). Aby uzyskać powiązane informacje zobacz temat "Właściwości nazwy użytkownika" w Pomocy programu DAO.  
   
 ### <a name="remarks"></a>Uwagi  
  Domyślna nazwa użytkownika, który został ustawiony ma zastosowanie do nowych obszarów roboczych, utworzonych po wywołaniu. Podczas tworzenia kolejnych obszarów roboczych, nie należy określić nazwę użytkownika w [Utwórz](#create) wywołania.  

@@ -12,12 +12,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ef0756875a799aacaf7308c406d98cbbf3a9a2a2
-ms.sourcegitcommit: 76fd30ff3e0352e2206460503b61f45897e60e4f
+ms.openlocfilehash: 2047938e25ed235d04b7a851a21a44090194660a
+ms.sourcegitcommit: 7eadb968405bcb92ffa505e3ad8ac73483e59685
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/13/2018
-ms.locfileid: "39027969"
+ms.lasthandoff: 07/23/2018
+ms.locfileid: "39209121"
 ---
 # <a name="arm-exception-handling"></a>Obsługa wyjątków ARM
 
@@ -248,25 +248,25 @@ W poniższej tabeli przedstawiono mapowanie kody unwind rozkazów. Najbardziej t
 
 |1 bajt|Bajt 2|Bajt 3|4 bajtów|Opsize|Wyjaśnienie|
 |------------|------------|------------|------------|------------|-----------------|
-|00 7F||||16|`add   sp,sp,#X`<br /><br /> gdzie X jest (kod & 0x7F) * 4|
+|00 7F||||16|`add   sp,sp,#X`<br /><br /> gdzie X jest (kod & 0x7F) \* 4|
 |80 BF|00 DO FF|||32|`pop   {r0-r12, lr}`<br /><br /> gdzie jest zdejmowany LR, jeśli kod i 0x2000 i r0 r12 są zdjęte ze stosu jeśli odnośny bit jest ustawiony w 0x1FFF & kodu|
 |C0 CF||||16|`mov   sp,rX`<br /><br /> gdzie X jest 0x0F & kodu|
 |D0 D7||||16|`pop   {r4-rX,lr}`<br /><br /> gdzie X jest (kod & 0x03) + 4 i LR jest zdejmowany, jeśli 0x04 & kodu|
 |D8 DF||||32|`pop   {r4-rX,lr}`<br /><br /> gdzie X jest (kod & 0x03) + 8 i LR jest zdejmowany, jeśli 0x04 & kodu|
 |E0 E7||||32|`vpop  {d8-dX}`<br /><br /> gdzie X jest (kod & 0x07) + 8|
-|E8 EB|00 DO FF|||32|`addw  sp,sp,#X`<br /><br /> gdzie X jest (kod & 0x03FF) * 4|
+|E8 EB|00 DO FF|||32|`addw  sp,sp,#X`<br /><br /> gdzie X jest (kod & 0x03FF) \* 4|
 |WE ED|00 DO FF|||16|`pop   {r0-r7,lr}`<br /><br /> gdzie jest zdejmowany LR, jeśli kod & 0x0100 i r0 r7 są zdjęte ze stosu jeśli odnośny bit jest ustawiony w 0x00FF & kodu|
 |EE|00 0F|||16|specyficzne dla firmy Microsoft|
 |EE|10-FF|||16|Dostępne|
-|EF|00 0F|||32|`ldr   lr,[sp],#X`<br /><br /> gdzie X jest (kod & 0x000F) * 4|
+|EF|00 0F|||32|`ldr   lr,[sp],#X`<br /><br /> gdzie X jest (kod & 0x000F) \* 4|
 |EF|10-FF|||32|Dostępne|
 |F0 F4||||-|Dostępne|
 |F5|00 DO FF|||32|`vpop  {dS-dE}`<br /><br /> gdzie S jest (kod & 0x00F0) >> 4 i E jest 0x000F & kodu|
 |F6|00 DO FF|||32|`vpop  {dS-dE}`<br /><br /> gdzie jest S ((Code & 0x00F0) >> 4) + 16 i E jest (kod & 0x000F) + 16|
-|F7|00 DO FF|00 DO FF||16|`add   sp,sp,#X`<br /><br /> gdzie X jest (kod & 0x00FFFF) * 4|
-|F8|00 DO FF|00 DO FF|00 DO FF|16|`add   sp,sp,#X`<br /><br /> gdzie X jest (kod & 0x00FFFFFF) * 4|
-|F9|00 DO FF|00 DO FF||32|`add   sp,sp,#X`<br /><br /> gdzie X jest (kod & 0x00FFFF) * 4|
-|FA|00 DO FF|00 DO FF|00 DO FF|32|`add   sp,sp,#X`<br /><br /> gdzie X jest (kod & 0x00FFFFFF) * 4|
+|F7|00 DO FF|00 DO FF||16|`add   sp,sp,#X`<br /><br /> gdzie X jest (kod & 0x00FFFF) \* 4|
+|F8|00 DO FF|00 DO FF|00 DO FF|16|`add   sp,sp,#X`<br /><br /> gdzie X jest (kod & 0x00FFFFFF) \* 4|
+|F9|00 DO FF|00 DO FF||32|`add   sp,sp,#X`<br /><br /> gdzie X jest (kod & 0x00FFFF) \* 4|
+|FA|00 DO FF|00 DO FF|00 DO FF|32|`add   sp,sp,#X`<br /><br /> gdzie X jest (kod & 0x00FFFFFF) \* 4|
 |PLATFORMY FB||||16|NOP (16-bitowy)|
 |FC||||32|NOP (32-bitowy)|
 |FD||||16|End + nop 16-bitowych w epilogu|
@@ -751,3 +751,4 @@ Function:
 
 [Przegląd konwencji ABI ARM](../build/overview-of-arm-abi-conventions.md)  
 [Typowe problemy przy migracji Visual C++ ARM](../build/common-visual-cpp-arm-migration-issues.md)  
+

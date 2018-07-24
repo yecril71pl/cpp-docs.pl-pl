@@ -20,12 +20,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6830baf3d474b80f2e7906a7aadd27d2eee27f9a
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 22f96b81836a8c1a9daa971ff8fb1961edb60cfb
+ms.sourcegitcommit: 7eadb968405bcb92ffa505e3ad8ac73483e59685
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38958623"
+ms.lasthandoff: 07/23/2018
+ms.locfileid: "39209007"
 ---
 # <a name="backinsertiterator-class"></a>back_insert_iterator — Klasa
 
@@ -63,9 +63,9 @@ Kontener musi spełniać wymagania dla sekwencji wstawiania na tył, gdzie jest 
 
 |Operator|Opis|
 |-|-|
-|[operator *](#op_star)|Operator dereferencji używany do implementowania wyrażenie iteratora wyjściowego * `i`  =  `x` dla wstawiania na tył.|
+|[operator *](#op_star)|Operator dereferencji używany do implementowania wyrażenia iteratora danych wyjściowych \* `i`  =  `x` dla wstawiania na tył.|
 |[operator++](#op_add_add)|Zwiększa `back_insert_iterator` do następnej lokalizacji, w której może być przechowywana wartość.|
-|[operator=](#op_eq)|Operator przypisania używany do implementowania wyrażenie iteratora wyjściowego * `i`  =  `x` dla wstawiania na tył.|
+|[operator=](#op_eq)|Operator przypisania używany do implementowania wyrażenia iteratora danych wyjściowych \* `i`  =  `x` dla wstawiania na tył.|
 
 ## <a name="requirements"></a>Wymagania
 
@@ -191,7 +191,7 @@ The original vector vec is: ( 1 2 3 ).
 After the insertion, the vector is: ( 1 2 3 40 ).
 ```
 
-## <a name="op_star"></a>  back_insert_iterator::operator *
+## <a name="op_star"></a>  back_insert_iterator::operator\*
 
 Operator dereferencji używany do implementowania wyrażenia iteratora danych wyjściowych \* *i* = *x*.
 

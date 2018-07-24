@@ -1,5 +1,5 @@
 ---
-title: Klasa platform::Collections::InputIterator | Dokumentacja firmy Microsoft
+title: 'Platform::Collections:: inputiterator, klasa | Dokumentacja firmy Microsoft'
 ms.custom: ''
 ms.date: 12/30/2016
 ms.technology: cpp-windows
@@ -15,15 +15,15 @@ author: ghogen
 ms.author: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7188cba0655e2ca89f82b60ffe9ee4b8ce94633a
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: fbd80f649b27bcb3af720871d6d1378f5fe220c8
+ms.sourcegitcommit: 7eadb968405bcb92ffa505e3ad8ac73483e59685
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33089094"
+ms.lasthandoff: 07/23/2018
+ms.locfileid: "39208487"
 ---
-# <a name="platformcollectionsinputiterator-class"></a>Klasa platform::Collections::InputIterator
-Zawiera standardowe InputIterator biblioteki szablonu kolekcje pochodzące z środowiska uruchomieniowego systemu Windows.  
+# <a name="platformcollectionsinputiterator-class"></a>Platform::Collections:: inputiterator, klasa
+Zawiera standardowe InputIterator biblioteki szablonu dla kolekcji, pochodzące ze środowiska wykonawczego Windows.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -34,16 +34,16 @@ class InputIterator;
   
 #### <a name="parameters"></a>Parametry  
  `X`  
- Właściwość typename klasy InputIterator szablonu.  
+ Element typename InputIterator szablonu klasy.  
   
 ### <a name="members"></a>Elementy członkowskie  
   
-### <a name="public-typedefs"></a>Definicje typów publicznych  
+### <a name="public-typedefs"></a>Publiczne definicje typów  
   
 |Nazwa|Opis|  
 |----------|-----------------|  
-|`difference_type`|Różnica wskaźników (ptrdiff_t —).|  
-|`iterator_category`|Kategoria iteratora wejściowych (:: std::input_iterator_tag).|  
+|`difference_type`|Różnica wskaźników przy obliczaniu (ptrdiff_t —).|  
+|`iterator_category`|Do kategorii iteratora danych wejściowych (:: std::input_iterator_tag).|  
 |`pointer`|Wskaźnik do `const X`|  
 |`reference`|Odwołanie do `const X`|  
 |`value_type`|`X` Typename.|  
@@ -59,10 +59,10 @@ class InputIterator;
 |Nazwa|Opis|  
 |----------|-----------------|  
 |[InputIterator::operator! = — Operator](#operator-inequality)|Wskazuje, czy bieżący InputIterator nie jest równa określonej InputIterator.|  
-|[InputIterator::operator * — Operator](#operator-decrement)|Pobiera odwołanie do określonego przez InputIterator bieżącego elementu.|  
-|[InputIterator::operator ++ — Operator](#operator-increment)|Zwiększa InputIterator bieżącej.|  
-|[InputIterator::operator == — Operator](#operator-equality)|Wskazuje, czy bieżący InputIterator jest równa określonej InputIterator.|  
-|[InputIterator::operator -> — Operator](#operator-arrow)|Pobiera adres odwołuje się InputIterator bieżącego elementu.|  
+|[InputIterator::operator * — Operator](#operator-decrement)|Pobiera odwołanie do elementu określonego przez bieżący InputIterator.|  
+|[InputIterator::operator ++ — Operator](#operator-increment)|Zwiększa narastająco InputIterator bieżącego.|  
+|[InputIterator::operator == — Operator](#operator-equality)|Wskazuje, czy bieżący InputIterator jest równe określonej InputIterator.|  
+|[InputIterator::operator -> — Operator](#operator-arrow)|Pobiera adres elementu przywoływane przez bieżący InputIterator.|  
   
 ## <a name="inheritance-hierarchy"></a>Hierarchia dziedziczenia  
  `InputIterator`  
@@ -88,8 +88,8 @@ explicit InputIterator(Windows::Foundation::Collections<X>^ iter);
   
 
 
-## <a name="operator-arrow"></a>  InputIterator::operator —&gt; — Operator
-Pobiera adres określony przez InputIterator bieżącego elementu.  
+## <a name="operator-arrow"></a>  InputIterator::operator -&gt; — Operator
+Pobiera adres określony przez InputIterator bieżący element.  
   
 ### <a name="syntax"></a>Składnia  
   
@@ -102,8 +102,8 @@ pointer operator->() const;
   
 
 
-## <a name="operator-dereference"></a>  InputIterator::operator * — Operator
-Pobiera odwołanie do określonego przez InputIterator bieżącego elementu.  
+## <a name="operator-dereference"></a>  InputIterator::operator\* — Operator
+Pobiera odwołanie do elementu określonego przez bieżący InputIterator.  
   
 ### <a name="syntax"></a>Składnia  
   
@@ -117,7 +117,7 @@ reference operator*() const;
 
 
 ## <a name="operator-equality"></a>  InputIterator::operator == — Operator
-Wskazuje, czy bieżący InputIterator jest równa określonej InputIterator.  
+Wskazuje, czy bieżący InputIterator jest równe określonej InputIterator.  
   
 ### <a name="syntax"></a>Składnia  
   
@@ -127,7 +127,7 @@ bool operator== (const InputIterator& other) const;
   
 ### <a name="parameters"></a>Parametry  
  `other`  
- Inny InputIterator.  
+ InputIterator innego.  
   
 ### <a name="return-value"></a>Wartość zwracana  
  `true` Jeśli bieżący InputIterator jest równa `other`; w przeciwnym razie `false`.  
@@ -135,7 +135,7 @@ bool operator== (const InputIterator& other) const;
 
 
 ## <a name="operator-increment"></a>  InputIterator::operator ++ — Operator
-Zwiększa InputIterator bieżącej.  
+Zwiększa narastająco InputIterator bieżącego.  
   
 ### <a name="syntax"></a>Składnia  
   
@@ -145,12 +145,12 @@ InputIterator operator++(int);
 ```  
   
 ### <a name="return-value"></a>Wartość zwracana  
- Pierwszy składni zwiększa, a następnie zwraca bieżące InputIterator. Drugi składni zwraca kopię bieżącego InputIterator i następnie zwiększa InputIterator bieżącej.  
+ Pierwszy składni zwiększa, a następnie zwraca bieżący InputIterator. Składnia drugiego zwraca kopię bieżącego InputIterator i następnie zwiększa InputIterator bieżącego.  
   
 ### <a name="remarks"></a>Uwagi  
- Pierwszy składni InputIterator zwiększa wstępnie InputIterator bieżącej.  
+ Pierwszy składni InputIterator zwiększa wstępnie InputIterator bieżącego.  
   
- Drugi składni zwiększa po bieżącym InputIterator. `int` Typu w drugiej składni wskazuje operację po przyrostu nie operand rzeczywista liczba całkowita.  
+ Składnia drugiego zwiększa po bieżącym InputIterator. `int` Typu w drugim składni wskazuje operacji po inkrementacji, nie operandu rzeczywistej liczby całkowitej.  
   
 
 
@@ -165,7 +165,7 @@ bool operator!=(const InputIterator& other) const;
   
 ### <a name="parameters"></a>Parametry  
  `other`  
- Inny InputIterator.  
+ InputIterator innego.  
   
 ### <a name="return-value"></a>Wartość zwracana  
  `true` Jeśli bieżący InputIterator nie jest równa `other`; w przeciwnym razie `false`.   

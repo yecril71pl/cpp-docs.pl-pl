@@ -44,12 +44,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bf1c64aa2139764bcb26782c344a90379bafda23
-ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
+ms.openlocfilehash: a384f79944ace90fcb289511e18297de7a7da233
+ms.sourcegitcommit: 7eadb968405bcb92ffa505e3ad8ac73483e59685
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37336777"
+ms.lasthandoff: 07/23/2018
+ms.locfileid: "39208013"
 ---
 # <a name="clinkctrl-class"></a>Klasa CLinkCtrl
 Oferuje funkcje formantu typowego SysLink Windows.  
@@ -238,7 +238,7 @@ int GetIdealSize(
 |Parametr|Opis|  
 |---------------|-----------------|  
 |[in] *cxMaxWidth*|Maksymalna szerokość łącza, w pikselach.|  
-|[out] * *pSize*|Wskaźnik do Windows [rozmiar](http://msdn.microsoft.com/library/windows/desktop/dd145106) struktury. Po powrocie z tej metody *cy* członkiem `SIZE` struktura zawiera wysokość tekstu łącza idealne rozwiązanie dla szerokość tekstu łącza, który jest określony przez *cxMaxWidth*. *Cx* element członkowski struktury zawiera szerokość tekstu łącza, wymaganej w danym momencie.|  
+|[out] \* *pSize*|Wskaźnik do Windows [rozmiar](http://msdn.microsoft.com/library/windows/desktop/dd145106) struktury. Po powrocie z tej metody *cy* członkiem `SIZE` struktura zawiera wysokość tekstu łącza idealne rozwiązanie dla szerokość tekstu łącza, który jest określony przez *cxMaxWidth*. *Cx* element członkowski struktury zawiera szerokość tekstu łącza, wymaganej w danym momencie.|  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Preferowany wysokość tekstu łącza, w pikselach. Zwracana wartość jest taka sama jak wartość *cy* członkiem `SIZE` struktury.  

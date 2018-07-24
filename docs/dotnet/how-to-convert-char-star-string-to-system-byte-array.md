@@ -1,5 +1,5 @@
 ---
-title: 'Porady: konwertowanie char * ciąg na tablicę System::Byte | Dokumentacja firmy Microsoft'
+title: 'Porady: konwertowanie char * ciągu na tablicę System::Byte | Dokumentacja firmy Microsoft'
 ms.custom: get-started-article
 ms.date: 11/04/2016
 ms.technology:
@@ -18,15 +18,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: e42294ad2c2e0bef77d29f6d47a5373dc0f728bd
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 1afb7548af704fc81d7cab8ac4e1a2476d661717
+ms.sourcegitcommit: 7eadb968405bcb92ffa505e3ad8ac73483e59685
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33129492"
+ms.lasthandoff: 07/23/2018
+ms.locfileid: "39209446"
 ---
-# <a name="how-to-convert-char--string-to-systembyte-array"></a>Porady: konwertowanie ciągu char * na tablicę System::Byte
-Najbardziej wydajnym sposobem konwersji `char *` ciąg <xref:System.Byte> tablicy jest użycie <xref:System.Runtime.InteropServices.Marshal> klasy.  
+# <a name="how-to-convert-char--string-to-systembyte-array"></a>Porady: konwertowanie char \* ciągu na tablicę System::Byte
+Najbardziej efektywny sposób, aby przekonwertować `char *` ciągu do <xref:System.Byte> tablicy jest użycie <xref:System.Runtime.InteropServices.Marshal> klasy.  
   
 ## <a name="example"></a>Przykład  
   

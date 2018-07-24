@@ -14,12 +14,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fe5866c3e945d55722a4cf8530c543b0e8ca5163
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: 405ef6da02c15e93e516069c1fedc22f002bdf2c
+ms.sourcegitcommit: 7eadb968405bcb92ffa505e3ad8ac73483e59685
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37947775"
+ms.lasthandoff: 07/23/2018
+ms.locfileid: "39208565"
 ---
 # <a name="overview-of-declarators"></a>Przegląd deklaratorów
 Deklaratory są składnikami deklaracji, które określają nazwy obiektów lub funkcji. Deklaratory określają również, czy nazwany obiekt jest obiektem, wskaźnikiem, odwołaniem lub tablicą.  Deklaratory nie określają typu podstawowego, ale modyfikują informacje o typie w obrębie typu podstawowego w celu określenia typów pochodnych, takich jak wskaźniki, odwołania i tablice.  Deklarator w zastosowaniu do funkcji współpracuje ze specyfikatorem typu, aby w pełni określić, że typ zwracany funkcji jest obiektem, wskaźnikiem lub odwołaniem. (Specyfikatory omówione w [deklaracje i definicje](declarations-and-definitions-cpp.md), przekazują właściwości, takie jak typ i Klasa magazynu. Modyfikatory omówione w tej sekcji i w [Modyfikatory specyficzne dla Microsoft](../cpp/microsoft-specific-modifiers.md), modyfikowania deklaratorów.) Na poniższej ilustracji pokazano pełną deklarację `MyFunction` i wywołano składniki deklaracji.  
@@ -127,7 +127,7 @@ int i, *j, f(int k);  // int, pointer to int, function returning int
 int* i, f(int k);  // pointer to int, function returning int (not int*)  
 ```  
   
- może wyglądać jak deklaracja **int** wskaźnik i funkcja zwracająca `int*`, ale nie jest.  To dlatego, że * jest częścią deklaratora dla `i`, a nie częścią deklaratora dla `f`.  
+ może wyglądać jak deklaracja **int** wskaźnik i funkcja zwracająca `int*`, ale nie jest.  To dlatego, że \* jest częścią deklaratora dla `i`, nie jest częścią deklaratora dla `f`.  
   
  **Upraszczanie składni deklaratora z użyciem typedef**  
   
@@ -175,8 +175,8 @@ int a, *b, c[5], **d, &e=a;
   
 - i *operator wskaźnika* jest jednym z:  
   
-  - * [kwalifikatory cv]  
-  - & [kwalifikatory cv]:: zagnieżdżone name-specifier * [kwalifikatory cv]  
+  - \* [kwalifikatory cv]  
+  - & [kwalifikatory cv]:: zagnieżdżone name-specifier \* [kwalifikatory cv]  
 
   
  Ponieważ deklarator może składać się z deklaratorów, istnieje możliwość konstruowania bardziej złożonych typów pochodnych, takich jak tablice wskaźników, funkcji zwracających tablice wskaźników do funkcji, używając powyższych reguł.  Aby wykonać każdy krok konstrukcji, rozpocznij od identyfikatora reprezentującego podstawowy typ danych i zastosuj powyższą regułę dotyczącą składni, przy poprzednim wyrażeniu będącym `declarator`.  Kolejność stosowania reguł dotyczących składni powinna być odwrotnością sposobu, w jaki określono wyrażenie w języku angielskim.  Jeśli zastosowanie *operator wskaźnika* reguły składni wyrażenia tablicy lub funkcji, Użyj nawiasów, jeśli chcesz, aby wskaźnik do tablicy lub funkcji, jak ostatni wiersz w tabeli poniżej.  
@@ -190,4 +190,4 @@ int a, *b, c[5], **d, &e=a;
 |tablicy 10|`(*i)[10]`|4|  
 |wskaźnik do|`*((*i)[10])`|6, a następnie 5|  
   
- Gdy używa się wielokrotnych modyfikatorów wskaźników, odwołań, tablic lub funkcji, deklaratory mogą stać się dość skomplikowane.  Temat [interpretowanie Deklaratorów bardziej złożonych](../c-language/interpreting-more-complex-declarators.md) opisuje jak odczytywać bardziej złożoną składnię deklaratorów.  Temat ma zastosowanie do C i C++, mimo że w języku C++ wszędzie * jest używany do wskazania wskaźnika, kwalifikowana nazwa taka jak MyClass::\* może służyć do określenia wskaźnika do składowej klasy.
+ Gdy używa się wielokrotnych modyfikatorów wskaźników, odwołań, tablic lub funkcji, deklaratory mogą stać się dość skomplikowane.  Temat [interpretowanie Deklaratorów bardziej złożonych](../c-language/interpreting-more-complex-declarators.md) opisuje jak odczytywać bardziej złożoną składnię deklaratorów.  Temat ma zastosowanie do C i C++, mimo że w języku C++ wszędzie \* służy do wskazania wskaźnika, kwalifikowana nazwa taka jak MyClass::\* może służyć do określenia wskaźnika do składowej klasy.

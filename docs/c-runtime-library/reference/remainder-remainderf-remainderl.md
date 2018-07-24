@@ -1,5 +1,5 @@
 ---
-title: remainderf — pozostałe, remainderl | Dokumentacja firmy Microsoft
+title: remainderf — resztę, remainderl | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 04/05/2018
 ms.technology:
@@ -37,16 +37,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f277292f413e09b9c41a87cd82e438e0e1e883a8
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 96d87a213029ab33e4d3c0269c4e7ba41e1aed43
+ms.sourcegitcommit: 7eadb968405bcb92ffa505e3ad8ac73483e59685
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32406670"
+ms.lasthandoff: 07/23/2018
+ms.locfileid: "39209420"
 ---
 # <a name="remainder-remainderf-remainderl"></a>remainder, remainderf, remainderl
 
-Oblicza w pozostałej części iloraz dwóch wartości zmiennoprzecinkowych zaokrąglona do najbliższej wartości całkowite.
+Oblicza pozostałą część iloraz dwóch wartości zmiennoprzecinkowych zaokrąglona do najbliższej wartości całkowitej.
 
 ## <a name="syntax"></a>Składnia
 
@@ -67,25 +67,25 @@ long double remainder( long double x, long double y ); /* C++ only */
 Licznik.
 
 *y*<br/>
-Denominator.
+Mianownik.
 
 ## <a name="return-value"></a>Wartość zwracana
 
-Zmiennoprzecinkowe pozostałej części *x* / *y*. Jeśli wartość *y* jest 0.0, **pozostałej** zwraca quiet NaN. Informacji o reprezentację quiet NaN przez **printf** rodziny, zobacz [printf, _printf_l —, wprintf, _wprintf_l —](printf-printf-l-wprintf-wprintf-l.md).
+Zmiennoprzecinkową resztę działania *x* / *y*. Jeśli wartość *y* jest 0,0, Metoda **resztę** zwraca ciche NaN. Aby uzyskać informacje o reprezentowaniu cichych NaN przez **printf** rodziny, zobacz [printf, _printf_l —, wprintf, _wprintf_l —](printf-printf-l-wprintf-wprintf-l.md).
 
 ## <a name="remarks"></a>Uwagi
 
-**Pozostałej** funkcje obliczyć reszta zmiennoprzecinkowe *r* z *x* / *y* tak, aby *x*   =  *n* * *y* + *r*, gdzie *n*jest wartości do najbliższej liczby całkowitej *x* / *y* i *n*jest nawet przy każdym &#124; *n*  -  *x* / *y* &#124; = 1/2. Gdy *r* = 0, *r* ma ten sam znak co *x*.
+**Resztę** funkcje obliczają zmiennoprzecinkową resztę *r* z *x* / *y* tak, aby *x*   =  *n* \* *y* + *r*, gdzie *n*jest całkowitą najbliższej wartości do *x* / *y* i *n*jest parzysta zawsze wtedy, gdy &#124; *n*  -  *x* / *y* &#124; = 1/2. Gdy *r* = 0, *r* ma ten sam znak co *x*.
 
-Ponieważ C++ pozwala przeładowanie, można wywoływać przeciążenia **pozostałej** który przyjmować i zwracać **float** lub **długi** **podwójne** wartości. W programie C **pozostałej** zawsze ma dwa **podwójne** argumentów i zwraca **podwójne**.
+Ponieważ C++ pozwala na przeciążenie, można wywoływać przeciążenia **resztę** przyjmujące i zwracające **float** lub **długie** **double** wartości. W programie C **resztę** zawsze przyjmuje dwa **double** argumenty i zwraca **double**.
 
 ## <a name="requirements"></a>Wymagania
 
-|Funkcja|Wymagany nagłówek (C)|Wymaganego nagłówka (C++)|
+|Funkcja|Wymagany nagłówek (C)|Wymagany nagłówek (C++)|
 |--------------|---------------------|-|
-|**pozostałe**, **remainderf —**, **remainderl**|\<math.h>|\<cmath > lub \<math.h >|
+|**resztę**, **remainderf —**, **remainderl**|\<math.h>|\<cmath > lub \<math.h >|
 
-Aby uzyskać informacje dotyczące zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md).
+Aby uzyskać informacje o zgodności – zobacz [zgodności](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Przykład
 

@@ -1,7 +1,7 @@
 ---
-title: Utwórz nowy projekt C++ Linux w programie Visual Studio | Dokumentacja firmy Microsoft
+title: Tworzenie nowego projektu systemu Linux w języku C++ w programie Visual Studio | Dokumentacja firmy Microsoft
 ms.custom: ''
-ms.date: 11/15/2017
+ms.date: 07/20/2018
 ms.technology:
 - cpp-linux
 ms.tgt_pltfrm: Linux
@@ -12,27 +12,27 @@ ms.author: corob
 ms.workload:
 - cplusplus
 - linux
-ms.openlocfilehash: 4d4d11ec459215d81996d1daea420513c21b10b9
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: f64f8eaf09e92df3dd776180db5904af039d6ad7
+ms.sourcegitcommit: 7eadb968405bcb92ffa505e3ad8ac73483e59685
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33339232"
+ms.lasthandoff: 07/23/2018
+ms.locfileid: "39207973"
 ---
-# <a name="create-a-new-linux-project"></a>Utwórz nowy projekt systemu Linux
-Podczas pisania kodu dla systemu Linux, jest możliwe utworzenia projektu programu Visual Studio lub CMake projektu. W tym temacie opisano sposób tworzenia projektu programu Visual Studio. Informacje dla projektów CMake, zobacz [Konfigurowanie projektu CMake Linux ](cmake-linux-project.md).
+# <a name="create-a-new-linux-project"></a>Tworzenie nowego projektu systemu Linux
+Podczas pisania kodu C++ w programie Visual Studio dla systemu Linux, masz możliwość tworzenia projektu programu Visual Studio lub projektu narzędzia CMake. W tym temacie opisano sposób tworzenia projektu programu Visual Studio. Aby uzyskać informacji na temat projektów CMake, zobacz [Konfigurowanie projektu CMake systemu Linux ](cmake-linux-project.md).
 
-Aby utworzyć nowy projekt systemu Linux w programie Visual Studio, wykonaj następujące czynności:
+Aby utworzyć nowego projektu systemu Linux w programie Visual Studio, wykonaj następujące czynności:
 
 1. Wybierz **Plik > Nowy projekt** w programie Visual Studio lub naciśnij klawisz **Ctrl + Shift + N**.
-1. Wybierz **Visual C++ > Cross Platform > Linux** węzeł, a następnie wybierz typ projektu chcesz utworzyć, wprowadź nazwę/lokalizację i kliknij przycisk OK.
+1. Wybierz **Visual C++ > wiele Platform > Linux** węzeł, a następnie wybierz typ projektu chcesz utworzyć, wprowadź nazwę/lokalizację i kliknij przycisk OK.
 
-   ![Nowy projekt systemu Linux](media/newproject.png)
+   ![Nowego projektu systemu Linux](media/newproject.png)
 
    | Typ projektu | Opis
    | ------------ | ---
-   | **BLINK (malina)**           | Projekt przeznaczony dla urządzenia Pi malina z przykładowy kod napisany miga LED
-   | **Aplikacja konsolowa (Linux)** | Projekt przeznaczony dla dowolnego komputera z systemem Linux z przykładowym kodzie zapisany do wyjścia tekstu do konsoli
-   | **Pusty projekt (Linux)**       | Projekt przeznaczony dla dowolnego komputera Linux z nie przykładowy kod napisany
-   | **Projektu pliku reguł programu make (Linux)**    | Projekt przeznaczony dla dowolnego komputera z systemem Linux, która zostanie utworzona przy użyciu standardowego pliku reguł programu make systemu kompilacji
+   | **Miganie (Raspberry)**           | Projekt przeznaczony dla urządzenia Raspberry Pi z przykładowym kodem zapisywane blink diody LED
+   | **Aplikacja konsoli (Linux)** | Projekt przeznaczony dla dowolnego komputera z systemem Linux przy użyciu przykładowy kod napisany w danych wyjściowych tekst do konsoli
+   | **Pusty projekt (Linux)**       | Docelowe dowolnego komputera z systemem Linux przy użyciu nie przykładowy kod napisany projektu
+   | **Projekt pliku reguł programu make (Linux)**    | Projekt przeznaczony dla dowolnego komputera z systemem Linux, która zostanie utworzona przy użyciu standardowego pliku reguł programu make systemu kompilacji
 

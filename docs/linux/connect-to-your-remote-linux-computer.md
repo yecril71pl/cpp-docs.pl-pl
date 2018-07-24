@@ -1,7 +1,8 @@
 ---
-title: Łączenie się z komputerem zdalnym systemu Linux | Dokumentacja firmy Microsoft
+title: Nawiązywanie zdalnego komputer z systemem Linux w programie Visual Studio | Dokumentacja firmy Microsoft
+description: Jak połączyć się z komputera zdalnego systemu Linux z wewnątrz projektu Visual Studio C++.
 ms.custom: ''
-ms.date: 11/06/2017
+ms.date: 07/20/2018
 ms.technology:
 - cpp-linux
 ms.tgt_pltfrm: Linux
@@ -12,37 +13,37 @@ ms.author: corob
 ms.workload:
 - cplusplus
 - linux
-ms.openlocfilehash: dd7f73a01b3b0941144ff59a683a9e42467f5a18
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 9b3977c46e05ab0b175dad3658d1dcc390d33354
+ms.sourcegitcommit: 7eadb968405bcb92ffa505e3ad8ac73483e59685
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33329325"
+ms.lasthandoff: 07/23/2018
+ms.locfileid: "39207669"
 ---
-# <a name="connect-to-your-remote-linux-computer"></a>Łączenie się z komputerem zdalnym systemu Linux
+# <a name="connect-to-your-remote-linux-computer"></a>Podłącz do komputera zdalnego systemu Linux
 
-Podczas kompilowania, kod systemu Linux jest kopiowany do komputera zdalnego systemu Linux, a następnie skompilowany w tym systemie zgodnie z ustawieniami w programie Visual Studio.  Do instalacji tego połączenia zdalnego:
+Podczas kompilowania projektu systemu Linux w języku C++ w programie Visual Studio, Linux, kod jest kopiowany do komputera zdalnego systemu Linux, a następnie kompilowane zgodnie z ustawieniami programu Visual Studio. Aby skonfigurować tego połączenia zdalnego:
 
-1. Skompiluj projekt po raz pierwszy lub ręcznie utwórz nowy wpis wybierając **Narzędzia > Opcje** , a następnie otwórz **Cross Platform > Menedżera połączeń** węzeł i kliknij przycisk **Dodaj** przycisku.
+1. Skompiluj projekt po raz pierwszy, albo ręcznie utworzyć nowy wpis, wybierając **Narzędzia > Opcje** , a następnie otwórz **wiele Platform > Menedżer połączeń** węzła i kliknij przycisk **Dodaj** przycisku.
 
-   ![Menedżera połączeń](media/settings_connectionmanager.png)
+   ![Menedżer połączeń](media/settings_connectionmanager.png)
 
-   W każdym z tych scenariuszy **Połącz z systemu zdalnego** będzie wyświetlane okno.
+   W dowolnym scenariuszu **nawiązywanie połączenia z systemem zdalnym** zostanie wyświetlone okno.
    
-   ![Połącz do systemu zdalnego](media/connect.png)
+   ![Łączenie z systemem zdalnym](media/connect.png)
 
 1. Wprowadź następujące informacje:
 
    | Wpis | Opis
    | ----- | ---
    | **Nazwa hosta**           | Nazwa lub adres IP urządzenia docelowego
-   | **Port**                | Port, czy usługa SSH jest uruchomiona na zwykle 22
-   | **Nazwa użytkownika**           | Uwierzytelnienia jako użytkownika
-   | **Typ uwierzytelniania** | Hasła lub klucza prywatnego są obsługiwane
+   | **Port**                | Port, czy usługa SSH jest uruchomiona na ogół 22
+   | **Nazwa użytkownika**           | Użytkownika do uwierzytelnienia się jako
+   | **Typ uwierzytelniania** | Hasło lub klucz prywatny są obsługiwane
    | **Hasło**            | Hasło dla wprowadzona nazwa użytkownika
-   | **Plik klucza prywatnego**    | Wygenerowany klucz prywatny dla ssh połączenia
-   | **Hasło**          | Hasło używane z kluczem prywatnym wybranej powyżej
+   | **Plik klucza prywatnego**    | Wygenerowany klucz prywatny dla protokołu ssh połączenia
+   | **Hasło**          | Hasło używane razem z kluczem prywatnym w wybranym powyżej
 
-1. Kliknij przycisk **Connect** przycisk prób połączenia z komputerem zdalnym.  Jeśli połączenie nie powiedzie się, pola wejścia, które muszą zostać zmienione zostaną podane w czerwony.
+1. Kliknij przycisk **Connect** przycisk prób połączenia z komputerem zdalnym.  Jeśli połączenie nie powiedzie się, pola wpisu, które muszą zostać zmienione zostaną opisane w kolorze czerwonym.
 
    ![Błąd Menedżera połączeń](media/settings_connectionmanagererror.png)

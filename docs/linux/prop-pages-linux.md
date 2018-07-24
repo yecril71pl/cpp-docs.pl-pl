@@ -1,7 +1,7 @@
 ---
-title: Strony właściwości projektu systemu Linux | Dokumentacja firmy Microsoft
+title: Strony właściwości projektu C++ Linux w programie Visual Studio | Dokumentacja firmy Microsoft
 ms.custom: ''
-ms.date: 10/26/2017
+ms.date: 07/20/2018
 ms.technology:
 - cpp-linux
 ms.tgt_pltfrm: Linux
@@ -12,16 +12,16 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - linux
-ms.openlocfilehash: ac222eb89cd0d2fee27e67fdb0c9ffb6a06fbc26
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 7f6f7361a32e69461f6420cd94a1b7b34ceedd83
+ms.sourcegitcommit: 7eadb968405bcb92ffa505e3ad8ac73483e59685
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33324015"
+ms.lasthandoff: 07/23/2018
+ms.locfileid: "39208744"
 ---
-# <a name="linux-project-property-page-reference"></a>Odwołania do strony właściwości projektu systemu Linux
+# <a name="linux-project-property-page-reference"></a>Dokumentacja strony właściwości projektu systemu Linux
 
-Ta sekcja zawiera zawartości referencyjnej dla stron właściwości projektu Visual C++ systemu Linux.
+Ta sekcja zawiera zawartość odniesienia dla stron właściwości w projekcie Visual C++ Linux.
 
 - [Właściwości ogólne (Linux)](prop-pages/general-linux.md)
 - [Właściwości debugowania (Linux)](prop-pages/debugging-linux.md)

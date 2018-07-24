@@ -27,12 +27,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c7abcfcfe6aec722fa3540ad974017ab47e6cf71
-ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
+ms.openlocfilehash: 26e2984a3b52152b54d5f35ae72b8f3fdeaff474
+ms.sourcegitcommit: 7eadb968405bcb92ffa505e3ad8ac73483e59685
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37885454"
+ms.lasthandoff: 07/23/2018
+ms.locfileid: "39209225"
 ---
 # <a name="ccomptrbase-class"></a>Klasa CComPtrBase
 Ta klasa stanowi podstawę dla klas inteligentnego wskaźnika za pomocą procedury opartym na modelu COM pamięci.  
@@ -77,7 +77,7 @@ class CComPtrBase
 |[CComPtrBase::operator T *](#operator_t_star)|Operator rzutowania.|  
 |[CComPtrBase::operator!](#operator_not)|NOT operator.|  
 |[CComPtrBase::operator &](#operator_amp)|& — Operator.|  
-|[CComPtrBase::operator *](#operator_star)|* — Operator.|  
+|[CComPtrBase::operator *](#operator_star)|Operator \*.|  
 |[CComPtrBase::operator <](#ccomptrbase__operator lt)|Mniej-niż operator.|  
 |[CComPtrBase::operator ==](#operator_eq_eq)|Operator równości.|  
 |[CComPtrBase::operator ->](#operator_ptr)|Operator wskaźników do elementów członkowskich.|  
@@ -246,8 +246,8 @@ T** operator&() throw();
 ### <a name="return-value"></a>Wartość zwracana  
  Zwraca adres obiektu wskazywanego przez `CComPtrBase` obiektu.  
   
-##  <a name="operator_star"></a>  CComPtrBase::operator *  
- * — Operator.  
+##  <a name="operator_star"></a>  CComPtrBase::operator \*  
+ Operator \*.  
   
 ```
 T& operator*() const throw();
@@ -300,7 +300,7 @@ bool operator<(T* pT) const throw();
 ### <a name="return-value"></a>Wartość zwracana  
  Zwraca wartość PRAWDA, jeśli wskaźnik jest zarządzany przez bieżący obiekt jest mniejszy niż wskaźnika, które są porównywane.  
   
-##  <a name="operator_t_star"></a>  CComPtrBase::operator T *  
+##  <a name="operator_t_star"></a>  CComPtrBase::operator T\*  
  Operator rzutowania.  
   
 ```  

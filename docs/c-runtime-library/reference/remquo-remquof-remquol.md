@@ -37,16 +37,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8d2bcb774d7ebe7e71c3877af326177bbf8d7160
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 480bf65d61581866fe447c9563a267d08d17c838
+ms.sourcegitcommit: 7eadb968405bcb92ffa505e3ad8ac73483e59685
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32407005"
+ms.lasthandoff: 07/23/2018
+ms.locfileid: "39207656"
 ---
 # <a name="remquo-remquof-remquol"></a>remquo, remquof, remquol
 
-Oblicza resztę z dwóch wartości całkowitych i przechowuje wartość całkowitą logowania i przybliżonej wielkości iloraz w lokalizacji określonej w parametrze.
+Oblicza pozostałą część dwóch wartości całkowitych i przechowuje wartość całkowitą ze znakiem i przybliżoną wielkością współczynnika w lokalizacji, która jest określona w parametrze.
 
 ## <a name="syntax"></a>Składnia
 
@@ -67,28 +67,28 @@ long double remquo( long double numer, long double denom, int* quo ); /* C++ onl
 Licznik.
 
 *denom*<br/>
-Denominator.
+Mianownik.
 
 *informacje o istniejącym*<br/>
-Wskaźnik do liczby całkowitej w celu przechowywania wartości, które ma logowania i przybliżonej wielkości iloraz.
+Wskaźnik na liczbę całkowitą określającą wartość, która ma znak i przybliżonej wielkości ilorazu.
 
 ## <a name="return-value"></a>Wartość zwracana
 
-**remquo —** zwraca zmiennoprzecinkowe pozostałej części *x* / *y*. Jeśli wartość *y* jest 0.0, **remquo —** zwraca quiet NaN. Informacji o reprezentację quiet NaN przez **printf** rodziny, zobacz [printf, _printf_l —, wprintf, _wprintf_l —](printf-printf-l-wprintf-wprintf-l.md).
+**remquo —** zwraca zmiennoprzecinkową resztę działania *x* / *y*. Jeśli wartość *y* jest 0,0, Metoda **remquo —** zwraca ciche NaN. Aby uzyskać informacje o reprezentowaniu cichych NaN przez **printf** rodziny, zobacz [printf, _printf_l —, wprintf, _wprintf_l —](printf-printf-l-wprintf-wprintf-l.md).
 
 ## <a name="remarks"></a>Uwagi
 
-**Remquo —** funkcja oblicza resztę zmiennoprzecinkowe *f* z *x* / *y* tak, aby *x*   =  *i* * *y* + *f*, gdzie *i* jest liczbą całkowitą , *f* ma ten sam znak co *x*i wartość bezwzględną liczby *f* jest mniejsza niż wartość bezwzględną liczby *y*.
+**Remquo —** funkcja oblicza zmiennoprzecinkową resztę *f* z *x* / *y* tak, aby *x*   =  *i* \* *y* + *f*, gdzie *i* jest liczbą całkowitą , *f* ma ten sam znak co *x*, a wartość bezwzględna *f* jest mniejsza niż wartość bezwzględna *y*.
 
-C++ pozwala przeładowanie, dlatego można wywoływać przeciążenia **remquo —** który przyjmować i zwracać **float** lub **długi** **podwójne** wartości. W programie C **remquo —** zawsze ma dwa **podwójne** argumentów i zwraca **podwójne**.
+Język C++ pozwala na przeciążenie, można więc wywoływać przeciążenia **remquo —** przyjmujące i zwracające **float** lub **długie** **double** wartości. W programie C **remquo —** zawsze przyjmuje dwa **double** argumenty i zwraca **double**.
 
 ## <a name="requirements"></a>Wymagania
 
-|Funkcja|Wymagany nagłówek (C)|Wymaganego nagłówka (C++)|
+|Funkcja|Wymagany nagłówek (C)|Wymagany nagłówek (C++)|
 |--------------|---------------------|-|
 |**remquo —**, **remquof —**, **remquol —**|\<math.h>|\<cmath > lub \<math.h >|
 
-Aby uzyskać informacje dotyczące zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md).
+Aby uzyskać informacje o zgodności – zobacz [zgodności](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Przykład
 

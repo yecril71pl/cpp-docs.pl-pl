@@ -16,24 +16,24 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5acccf52d3738985c7a83432342952af03bf78b4
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: fcc109fe3ccf06e0461deed449517850271a2024
+ms.sourcegitcommit: 7eadb968405bcb92ffa505e3ad8ac73483e59685
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33302870"
+ms.lasthandoff: 07/23/2018
+ms.locfileid: "39209394"
 ---
 # <a name="linker-tools-warning-lnk4237"></a>Ostrzeżenie LNK4237 narzędzi konsolidatora
-/SUBSYSTEM:NATIVE określony podczas importowania z 'dll'; Użyj opcji lub/Subsystem: Windows.  
+Subsystem określony podczas importowania pozycji z 'dll'; Użyj opcji lub/Subsystem: Windows.  
   
- [/SUBSYSTEM:NATIVE](../../build/reference/subsystem-specify-subsystem.md) został określony podczas tworzenia aplikacji systemu windows (Win32), który bezpośrednio jest używana co najmniej jeden z następujących czynności:  
+ [Subsystem](../../build/reference/subsystem-specify-subsystem.md) została określona podczas tworzenia aplikacji systemu windows (Win32), który bezpośrednio korzysta z co najmniej jeden z następujących czynności:  
   
--   Kernel32.dll  
+-   Kernel32.dll.  
   
 -   Gdi32.dll  
   
 -   User32.dll  
   
--   jeden z biblioteki DLL msvcrt *.  
+-   jedną z msvcrt\* biblioteki dll.  
   
- Rozwiązanie to ostrzeżenie, nie określając **/SUBSYSTEM:NATIVE**.
+ Rozwiązanie to ostrzeżenie, nie określając **Subsystem**.

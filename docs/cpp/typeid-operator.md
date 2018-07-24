@@ -14,12 +14,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9646678398ff1e18d0acf45c45bc931ce37cd54a
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: b51d2a3861cb26073063058aa4124244d94df40b
+ms.sourcegitcommit: 7eadb968405bcb92ffa505e3ad8ac73483e59685
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37948271"
+ms.lasthandoff: 07/23/2018
+ms.locfileid: "39207455"
 ---
 # <a name="typeid-operator"></a>typeid — operator
 ## <a name="syntax"></a>Składnia  
@@ -41,7 +41,7 @@ typeid(expression)
   
 -   Odwołaniem do klasy  
   
--   Wskaźnikiem, wyłuskanym za pomocą *  
+-   Wskaźnikiem, wyłuskanym za pomocą \*  
   
 -   Indeksem wskaźnika (tj.) [ ]). (Należy zauważyć, że ogólnie nie jest bezpiecznie korzystać z indeksu dolnego ze wskaźnikiem do typu polimorficznego).  
   

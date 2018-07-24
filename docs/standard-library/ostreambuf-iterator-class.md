@@ -26,12 +26,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c2d26ecc120565556651057b764a5fdd7ae64d43
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 6693fe0c4e34ce4749feef05bf0a1fe0213ac866
+ms.sourcegitcommit: 7eadb968405bcb92ffa505e3ad8ac73483e59685
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38958256"
+ms.lasthandoff: 07/23/2018
+ms.locfileid: "39207724"
 ---
 # <a name="ostreambufiterator-class"></a>Klasa ostreambuf_iterator
 
@@ -78,7 +78,7 @@ Klasa ostreambuf_iterator musi spełniać wymagania dla iteratora wyjściowego. 
 
 |Operator|Opis|
 |-|-|
-|[operator *](#op_star)|Operator dereferencji używany do implementowania wyrażenie iteratora wyjściowego * `i`  =  `x`.|
+|[operator *](#op_star)|Operator dereferencji używany do implementowania wyrażenia iteratora danych wyjściowych \* `i`  =  `x`.|
 |[operator++](#op_add_add)|Operator inkrementacji prawidłowo, który zwraca `ostreambuf_iterator` ten sam obiekt się odnosił przed wywołaniem operacji.|
 |[operator=](#op_eq)|Operator wstawia znak do bufora skojarzonego strumienia.|
 
@@ -189,7 +189,7 @@ No insertions failed.
 *\
 ```
 
-## <a name="op_star"></a>  ostreambuf_iterator::operator *
+## <a name="op_star"></a>  ostreambuf_iterator::operator\*
 
 Prawidłowo operator dereferencji używany do implementowania wyrażenia iteratora danych wyjściowych \* *i* = *x*.
 

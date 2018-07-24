@@ -37,16 +37,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a465ca74af72a5114eac949439ab8493f89bcb39
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 47b6e20c6395337113088aa51d8ba75744421922
+ms.sourcegitcommit: 7eadb968405bcb92ffa505e3ad8ac73483e59685
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32406267"
+ms.lasthandoff: 07/23/2018
+ms.locfileid: "39207523"
 ---
 # <a name="scalb-scalbf"></a>_scalb —, _scalbf
 
-Skaluje argumentu przez potęgą liczby 2.
+Argument skali przez potęgą liczby 2.
 
 ## <a name="syntax"></a>Składnia
 
@@ -67,17 +67,17 @@ float _scalbf(
 Wartość podwójnej precyzji, zmiennoprzecinkowych.
 
 *EXP*<br/>
-Wykładnik długich liczb całkowitych.
+Wykładnik liczba całkowita typu Long.
 
 ## <a name="return-value"></a>Wartość zwracana
 
-Zwraca wartość wykładniczej, jeśli to się powiedzie. Na przepełnienia (w zależności od jej znaku *x*), **_scalb —** zwraca **huge_val —**; **errno** zmienna jest ustawiona na  **Erange —**.
+Zwraca wartość wykładniczą, jeśli to się powiedzie. Przy przepełnieniu (w zależności od jej znaku *x*), **_scalb —** zwraca wartość +/- **HUGE_VAL**; **errno** zmienna jest ustawiona na  **ERANGE**.
 
-Aby uzyskać więcej informacji dotyczących tego i innych kody powrotu, zobacz [_doserrno —, errno, _sys_errlist — i _sys_nerr —](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
+Aby uzyskać więcej informacji na temat tego i innych kodach powrotnych, zobacz [_doserrno, errno, _sys_errlist i _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
 ## <a name="remarks"></a>Uwagi
 
-**_Scalb —** funkcja oblicza wartość *x* * 2<sup>*exp*</sup>.
+**_Scalb —** funkcja oblicza wartość *x* \* 2<sup>*exp*</sup>.
 
 ## <a name="requirements"></a>Wymagania
 
@@ -85,7 +85,7 @@ Aby uzyskać więcej informacji dotyczących tego i innych kody powrotu, zobacz 
 |-------------|---------------------|
 |**_scalb —**, **_scalbf**|\<float.h>|
 
-Aby uzyskać więcej informacji o zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md).
+Aby uzyskać więcej informacji na temat zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md).
 
 ## <a name="see-also"></a>Zobacz także
 

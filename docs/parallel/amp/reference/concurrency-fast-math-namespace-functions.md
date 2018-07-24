@@ -1,5 +1,5 @@
 ---
-title: CONCURRENCY::fast_math — przestrzeń nazw funkcji | Dokumentacja firmy Microsoft
+title: CONCURRENCY::fast_math, funkcje przestrzeni nazw | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.topic: reference
@@ -54,27 +54,27 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9bd20e2e1d88564c7e688e1e0c9c2392f1f4f2ac
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: c4fad0d6f5823a205490038755f9de4eef10eae8
+ms.sourcegitcommit: 7eadb968405bcb92ffa505e3ad8ac73483e59685
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33695314"
+ms.lasthandoff: 07/23/2018
+ms.locfileid: "39208513"
 ---
-# <a name="concurrencyfastmath-namespace-functions"></a>CONCURRENCY::fast_math — przestrzeń nazw funkcji
+# <a name="concurrencyfastmath-namespace-functions"></a>CONCURRENCY::fast_math, funkcje przestrzeni nazw
 ||||  
 |-|-|-|  
 |[ACOS](#acos)|[acosf](#acosf)|[ASIN](#asin)|  
 |[asinf —](#asinf)|[atan](#atan)|[atan2](#atan2)|  
-|[atan2f](#atan2f)|[atanf](#atanf)|[ceil](#ceil)|  
+|[atan2f](#atan2f)|[atanf](#atanf)|[Ceil —](#ceil)|  
 |[ceilf](#ceilf)|[COS](#cos)|[cosf](#cosf)|  
 |[COSH](#cosh)|[coshf](#coshf)|[EXP](#exp)|  
 |[exp2](#exp2)|[exp2f](#exp2f)|[expf](#expf)|  
 |[fabs —](#fabs)|[fabsf —](#fabsf)|[FLOOR](#floor)|  
 |[floorf](#floorf)|[fmax](#fmax)|[fmaxf](#fmaxf)|  
-|[fmin](#fmin)|[fminf —](#fminf)|[fmod —](#fmod)|  
+|[fmin](#fmin)|[fminf —](#fminf)|[Fmod —](#fmod)|  
 |[fmodf](#fmodf)|[frexp](#frexp)|[frexpf](#frexpf)|  
-|[isfinite](#isfinite)|[isinf —](#isinf)|[isNaN](#isnan)|  
+|[isfinite](#isfinite)|[isinf —](#isinf)|[isNaN —](#isnan)|  
 |[ldexp](#ldexp)|[ldexpf](#ldexpf)|[log](#log)|  
 |[log10](#log10)|[log10f](#log10f)|[log2](#log2)|  
 |[log2f](#log2f)|[logf](#logf)|[modf](#modf)|  
@@ -88,7 +88,7 @@ ms.locfileid: "33695314"
 |[TRUNC —](#trunc)|[truncf](#truncf)|  
   
 ##  <a name="acos"></a>  ACOS  
- Oblicza cosinus argumentu  
+ Oblicza arcus cosinus argumentu  
   
 ```  
 inline float acos(float _X) restrict(amp);
@@ -99,10 +99,10 @@ inline float acos(float _X) restrict(amp);
  Wartość zmiennoprzecinkowa  
   
 ### <a name="return-value"></a>Wartość zwracana  
- Zwraca arcus cosinus wartość argumentu  
+ Zwraca wartość cosinus argumentu  
   
 ##  <a name="acosf"></a>  acosf —  
- Oblicza cosinus argumentu  
+ Oblicza arcus cosinus argumentu  
   
 ```  
 inline float acosf(float _X) restrict(amp);
@@ -113,10 +113,10 @@ inline float acosf(float _X) restrict(amp);
  Wartość zmiennoprzecinkowa  
   
 ### <a name="return-value"></a>Wartość zwracana  
- Zwraca arcus cosinus wartość argumentu  
+ Zwraca wartość cosinus argumentu  
   
 ##  <a name="asin"></a>  ASIN  
- Oblicza sinus argumentu  
+ Oblicza arcus sinus argumentu  
   
 ```  
 inline float asin(float _X) restrict(amp);
@@ -127,10 +127,10 @@ inline float asin(float _X) restrict(amp);
  Wartość zmiennoprzecinkowa  
   
 ### <a name="return-value"></a>Wartość zwracana  
- Zwraca arcus sinus wartość argumentu  
+ Zwraca wartość arcus sinus argumentu  
   
 ##  <a name="asinf"></a>  asinf —  
- Oblicza sinus argumentu  
+ Oblicza arcus sinus argumentu  
   
 ```  
 inline float asinf(float _X) restrict(amp);
@@ -141,10 +141,10 @@ inline float asinf(float _X) restrict(amp);
  Wartość zmiennoprzecinkowa  
   
 ### <a name="return-value"></a>Wartość zwracana  
- Zwraca arcus sinus wartość argumentu  
+ Zwraca wartość arcus sinus argumentu  
   
 ##  <a name="atan"></a>  ATAN  
- Oblicza tangens argumentu  
+ Oblicza arcus tangens argumentu  
   
 ```  
 inline float atan(float _X) restrict(amp);
@@ -155,10 +155,10 @@ inline float atan(float _X) restrict(amp);
  Wartość zmiennoprzecinkowa  
   
 ### <a name="return-value"></a>Wartość zwracana  
- Zwraca arcus tangens wartość argumentu  
+ Zwraca wartość arcus tangens argumentu  
   
-##  <a name="atan2"></a>  ATAN2  
- Oblicza tangens _Y/_X  
+##  <a name="atan2"></a>  funkcja ATAN2  
+ Oblicza arcus tangens dla _Y/_X  
   
 ```  
 inline float atan2(
@@ -174,10 +174,10 @@ inline float atan2(
  Wartość zmiennoprzecinkowa  
   
 ### <a name="return-value"></a>Wartość zwracana  
- Zwraca arcus tangens wartość _Y/_X  
+ Zwraca wartość arcus tangens dla _Y/_X  
   
 ##  <a name="atan2f"></a>  atan2f —  
- Oblicza tangens _Y/_X  
+ Oblicza arcus tangens dla _Y/_X  
   
 ```  
 inline float atan2f(
@@ -193,10 +193,10 @@ inline float atan2f(
  Wartość zmiennoprzecinkowa  
   
 ### <a name="return-value"></a>Wartość zwracana  
- Zwraca arcus tangens wartość _Y/_X  
+ Zwraca wartość arcus tangens dla _Y/_X  
   
 ##  <a name="atanf"></a>  atanf —  
- Oblicza tangens argumentu  
+ Oblicza arcus tangens argumentu  
   
 ```  
 inline float atanf(float _X) restrict(amp);
@@ -207,10 +207,10 @@ inline float atanf(float _X) restrict(amp);
  Wartość zmiennoprzecinkowa  
   
 ### <a name="return-value"></a>Wartość zwracana  
- Zwraca arcus tangens wartość argumentu  
+ Zwraca wartość arcus tangens argumentu  
   
-##  <a name="ceil"></a>  ceil  
- Oblicza Zaokrąglenie w górę argument  
+##  <a name="ceil"></a>  Ceil —  
+ Oblicza Zaokrąglenie w górę argumentu  
   
 ```  
 inline float ceil(float _X) restrict(amp);
@@ -221,10 +221,10 @@ inline float ceil(float _X) restrict(amp);
  Wartość zmiennoprzecinkowa  
   
 ### <a name="return-value"></a>Wartość zwracana  
- Zwraca limitu argumentu  
+ Zwraca limit argumentu  
   
 ##  <a name="ceilf"></a>  ceilf —  
- Oblicza Zaokrąglenie w górę argument  
+ Oblicza Zaokrąglenie w górę argumentu  
   
 ```  
 inline float ceilf(float _X) restrict(amp);
@@ -235,7 +235,7 @@ inline float ceilf(float _X) restrict(amp);
  Wartość zmiennoprzecinkowa  
   
 ### <a name="return-value"></a>Wartość zwracana  
- Zwraca limitu argumentu  
+ Zwraca limit argumentu  
   
 ##  <a name="cosf"></a>  cosf —  
  Oblicza cosinus argumentu  
@@ -249,10 +249,10 @@ inline float cosf(float _X) restrict(amp);
  Wartość zmiennoprzecinkowa  
   
 ### <a name="return-value"></a>Wartość zwracana  
- Zwraca cosinus wartość argumentu  
+ Zwraca wartość funkcji cosinus argumentu  
   
 ##  <a name="coshf"></a>  coshf —  
- Oblicza cosinus hiperboliczny wartość argumentu  
+ Oblicza wartość funkcji cosinus hiperboliczny dla argumentu  
   
 ```  
 inline float coshf(float _X) restrict(amp);
@@ -263,7 +263,7 @@ inline float coshf(float _X) restrict(amp);
  Wartość zmiennoprzecinkowa  
   
 ### <a name="return-value"></a>Wartość zwracana  
- Zwraca cosinus hiperboliczny wartość argumentu  
+ Zwraca wartość funkcji cosinus hiperboliczny dla argumentu  
   
 ##  <a name="cos"></a>  COS  
  Oblicza cosinus argumentu  
@@ -277,10 +277,10 @@ inline float cos(float _X) restrict(amp);
  Wartość zmiennoprzecinkowa  
   
 ### <a name="return-value"></a>Wartość zwracana  
- Zwraca cosinus wartość argumentu  
+ Zwraca wartość funkcji cosinus argumentu  
   
 ##  <a name="cosh"></a>  COSH  
- Oblicza cosinus hiperboliczny wartość argumentu  
+ Oblicza wartość funkcji cosinus hiperboliczny dla argumentu  
   
 ```  
 inline float cosh(float _X) restrict(amp);
@@ -291,10 +291,10 @@ inline float cosh(float _X) restrict(amp);
  Wartość zmiennoprzecinkowa  
   
 ### <a name="return-value"></a>Wartość zwracana  
- Zwraca cosinus hiperboliczny wartość argumentu  
+ Zwraca wartość funkcji cosinus hiperboliczny dla argumentu  
   
 ##  <a name="exp"></a>  EXP  
- Oblicza base e wykładniczej argumentu  
+ Oblicza eksponentę argumentu  
   
 ```  
 inline float exp(float _X) restrict(amp);
@@ -305,10 +305,10 @@ inline float exp(float _X) restrict(amp);
  Wartość zmiennoprzecinkowa  
   
 ### <a name="return-value"></a>Wartość zwracana  
- Zwraca wykładniczej argumentu base-e  
+ Zwraca eksponentę argumentu  
   
 ##  <a name="exp2"></a>  exp2 —  
- Oblicza base 2 wykładniczej argumentu  
+ Oblicza base 2 wykładniczego argumentu  
   
 ```  
 inline float exp2(float _X) restrict(amp);
@@ -319,10 +319,10 @@ inline float exp2(float _X) restrict(amp);
  Wartość zmiennoprzecinkowa  
   
 ### <a name="return-value"></a>Wartość zwracana  
- Zwraca wykładniczej argumentu base-2  
+ Zwraca base 2 wykładniczego argumentu  
   
 ##  <a name="exp2f"></a>  exp2f —  
- Oblicza base 2 wykładniczej argumentu  
+ Oblicza base 2 wykładniczego argumentu  
   
 ```  
 inline float exp2f(float _X) restrict(amp);
@@ -333,10 +333,10 @@ inline float exp2f(float _X) restrict(amp);
  Wartość zmiennoprzecinkowa  
   
 ### <a name="return-value"></a>Wartość zwracana  
- Zwraca wykładniczej argumentu base-2  
+ Zwraca base 2 wykładniczego argumentu  
   
 ##  <a name="expf"></a>  expf —  
- Oblicza base e wykładniczej argumentu  
+ Oblicza eksponentę argumentu  
   
 ```  
 inline float expf(float _X) restrict(amp);
@@ -347,7 +347,7 @@ inline float expf(float _X) restrict(amp);
  Wartość zmiennoprzecinkowa  
   
 ### <a name="return-value"></a>Wartość zwracana  
- Zwraca wykładniczej argumentu base-e  
+ Zwraca eksponentę argumentu  
   
 ##  <a name="fabs"></a>  fabs —  
  Zwraca wartość bezwzględną argumentu  
@@ -405,8 +405,8 @@ inline float floorf(float _X) restrict(amp);
 ### <a name="return-value"></a>Wartość zwracana  
  Zwraca floor argumentu  
   
-##  <a name="fmax"></a>  Fmax  
- Określić maksymalną wartość liczbową argumentów  
+##  <a name="fmax"></a>  Fmax —  
+ Określić maksymalną wartość liczbową z podanych argumentów  
   
 ```  
 inline float max(
@@ -422,10 +422,10 @@ inline float max(
  Wartość całkowita  
   
 ### <a name="return-value"></a>Wartość zwracana  
- Zwraca maksymalną wartość liczbową argumentów  
+ Zwraca największą wartość liczbową z podanych argumentów  
   
 ##  <a name="fmaxf"></a>  fmaxf —  
- Określić maksymalną wartość liczbową argumentów  
+ Określić maksymalną wartość liczbową z podanych argumentów  
   
 ```  
 inline float fmaxf(
@@ -441,10 +441,10 @@ inline float fmaxf(
  Wartość zmiennoprzecinkowa  
   
 ### <a name="return-value"></a>Wartość zwracana  
- Zwraca maksymalną wartość liczbową argumentów  
+ Zwraca największą wartość liczbową z podanych argumentów  
   
 ##  <a name="fmin"></a>  Fmin —  
- Określić minimalną wartość liczbową argumentów  
+ Określić minimalną wartość liczbową z podanych argumentów  
   
 ```  
 inline float min(
@@ -460,10 +460,10 @@ inline float min(
  Wartość całkowita  
   
 ### <a name="return-value"></a>Wartość zwracana  
- Zwraca minimalną wartość liczbowa argumentów  
+ Zwraca minimalną wartość liczbową argumentów  
   
 ##  <a name="fminf"></a>  fminf —  
- Określić minimalną wartość liczbową argumentów  
+ Określić minimalną wartość liczbową z podanych argumentów  
   
 ```  
 inline float fminf(
@@ -479,10 +479,10 @@ inline float fminf(
  Wartość zmiennoprzecinkowa  
   
 ### <a name="return-value"></a>Wartość zwracana  
- Zwraca minimalną wartość liczbowa argumentów  
+ Zwraca minimalną wartość liczbową argumentów  
   
-##  <a name="fmod"></a>  fmod —  
- Oblicza resztę zmiennoprzecinkowe z _X/_Y  
+##  <a name="fmod"></a>  Fmod —  
+ Oblicza zmiennoprzecinkową resztę działania _X/_Y  
   
 ```  
 inline float fmod(
@@ -498,10 +498,10 @@ inline float fmod(
  Wartość zmiennoprzecinkowa  
   
 ### <a name="return-value"></a>Wartość zwracana  
- Zwraca zmiennoprzecinkowe pozostałej części _X/_Y  
+ Zwraca zmiennoprzecinkową resztę działania _X/_Y  
   
 ##  <a name="fmodf"></a>  fmodf —  
- Oblicza resztę zmiennoprzecinkowe z _X/_Y.  
+ Oblicza zmiennoprzecinkową resztę działania _X/_Y.  
   
 ```  
 inline float fmodf(
@@ -517,10 +517,10 @@ inline float fmodf(
  Wartość zmiennoprzecinkowa  
   
 ### <a name="return-value"></a>Wartość zwracana  
- Zwraca zmiennoprzecinkowe pozostałej części _X/_Y  
+ Zwraca zmiennoprzecinkową resztę działania _X/_Y  
   
 ##  <a name="frexp"></a>  frexp —  
- Pobiera mantysa i wykładnik _X  
+ Pobiera mantysę i wykładnik _X  
   
 ```  
 inline float frexp(
@@ -533,13 +533,13 @@ inline float frexp(
  Wartość zmiennoprzecinkowa  
   
  `_Exp`  
- Zwraca wykładnik całkowitą _X wartości zmiennoprzecinkowych  
+ Zwraca wartość zmiennoprzecinkową całkowitą wykładnik _X  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Zwraca _X mantysy  
   
 ##  <a name="frexpf"></a>  frexpf —  
- Pobiera mantysa i wykładnik _X  
+ Pobiera mantysę i wykładnik _X  
   
 ```  
 inline float frexpf(
@@ -552,13 +552,13 @@ inline float frexpf(
  Wartość zmiennoprzecinkowa  
   
  `_Exp`  
- Zwraca wykładnik całkowitą _X wartości zmiennoprzecinkowych  
+ Zwraca wartość zmiennoprzecinkową całkowitą wykładnik _X  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Zwraca _X mantysy  
   
-##  <a name="isfinite"></a>  isfinite  
- Określa, czy argument ma wartością skończoną  
+##  <a name="isfinite"></a>  isfinite —  
+ Określa, czy argument ma skończoną wartość  
   
 ```  
 inline int isfinite(float _X) restrict(amp);
@@ -569,10 +569,10 @@ inline int isfinite(float _X) restrict(amp);
  Wartość zmiennoprzecinkowa  
   
 ### <a name="return-value"></a>Wartość zwracana  
- Zwraca wartość niezerową tylko wtedy, gdy argument jest wartością skończoną  
+ Zwraca wartość różną od zera, tylko wtedy, gdy argument ma skończoną wartość  
   
 ##  <a name="isinf"></a>  isinf —  
- Określa, czy argument jest nieskończoność.  
+ Określa, czy argument jest nieskończony  
   
 ```  
 inline int isinf(float _X) restrict(amp);
@@ -583,10 +583,10 @@ inline int isinf(float _X) restrict(amp);
  Wartość zmiennoprzecinkowa  
   
 ### <a name="return-value"></a>Wartość zwracana  
- Zwraca wartość niezerową tylko wtedy, gdy argument ma wartość nieskończona  
+ Zwraca wartość różną od zera, tylko wtedy, gdy argument ma wartość nieskończona  
   
-##  <a name="isnan"></a>  isNaN  
- Określa, czy argument jest wartością typu NaN  
+##  <a name="isnan"></a>  isNaN —  
+ Określa, czy argument jest NaN.  
   
 ```  
 inline int isnan(float _X) restrict(amp);
@@ -597,10 +597,10 @@ inline int isnan(float _X) restrict(amp);
  Wartość zmiennoprzecinkowa  
   
 ### <a name="return-value"></a>Wartość zwracana  
- Zwraca wartość niezerową tylko wtedy, gdy argument ma wartość NaN  
+ Zwraca wartość różną od zera, tylko wtedy, gdy argument ma wartość NaN  
   
 ##  <a name="ldexp"></a>  ldexp —  
- Oblicza liczba rzeczywista z mantysa i wykładnik  
+ Oblicza liczbę rzeczywistą z mantysy i wykładnika  
   
 ```  
 inline float ldexp(
@@ -610,16 +610,16 @@ inline float ldexp(
   
 ### <a name="parameters"></a>Parametry  
  `_X`  
- Wartość zmiennoprzecinkowa mentissa  
+ Wartość zmiennoprzecinkowa, mentissa  
   
  `_Exp`  
- Wykładnik liczba całkowita  
+ Wykładnik potęgi liczby całkowitej  
   
 ### <a name="return-value"></a>Wartość zwracana  
- Zwraca _X * 2 ^ _Exp  
+ Zwraca _X \* 2 ^ _Exp  
   
 ##  <a name="ldexpf"></a>  ldexpf —  
- Oblicza liczba rzeczywista z mantysa i wykładnik  
+ Oblicza liczbę rzeczywistą z mantysy i wykładnika  
   
 ```  
 inline float ldexpf(
@@ -629,16 +629,16 @@ inline float ldexpf(
   
 ### <a name="parameters"></a>Parametry  
  `_X`  
- Wartość zmiennoprzecinkowa mentissa  
+ Wartość zmiennoprzecinkowa, mentissa  
   
  `_Exp`  
- Wykładnik liczba całkowita  
+ Wykładnik potęgi liczby całkowitej  
   
 ### <a name="return-value"></a>Wartość zwracana  
- Zwraca _X * 2 ^ _Exp  
+ Zwraca _X \* 2 ^ _Exp  
   
 ##  <a name="log"></a>  Dziennik  
- Oblicza logarytm naturalny argumentu  
+ Oblicza logarytm podstawa e argumentu  
   
 ```  
 inline float log(float _X) restrict(amp);
@@ -649,7 +649,7 @@ inline float log(float _X) restrict(amp);
  Wartość zmiennoprzecinkowa  
   
 ### <a name="return-value"></a>Wartość zwracana  
- Zwraca logarytm naturalny argumentu  
+ Zwraca logarytm o podstawie base e argumentu  
   
 ##  <a name="log10"></a>  LOG10  
  Oblicza logarytm base 10 argumentu  
@@ -679,8 +679,8 @@ inline float log10f(float _X) restrict(amp);
 ### <a name="return-value"></a>Wartość zwracana  
  Zwraca logarytm o podstawie base 10 argumentu  
   
-##  <a name="log2"></a>  log2  
- Oblicza logarytm base-2 argumentu  
+##  <a name="log2"></a>  log2 —  
+ Oblicza logarytm podstawie 2 dla podanego argumentu  
   
 ```  
 inline float log2(float _X) restrict(amp);
@@ -691,10 +691,10 @@ inline float log2(float _X) restrict(amp);
  Wartość zmiennoprzecinkowa  
   
 ### <a name="return-value"></a>Wartość zwracana  
- Zwraca logarytm base-2 argumentu  
+ Zwraca logarytm o podstawie 2 dla podanego argumentu  
   
 ##  <a name="log2f"></a>  log2f —  
- Oblicza logarytm base-2 argumentu  
+ Oblicza logarytm podstawie 2 dla podanego argumentu  
   
 ```  
 inline float log2f(float _X) restrict(amp);
@@ -708,7 +708,7 @@ inline float log2f(float _X) restrict(amp);
  Zwraca logarytm o podstawie base 10 argumentu  
   
 ##  <a name="logf"></a>  logf —  
- Oblicza logarytm naturalny argumentu  
+ Oblicza logarytm podstawa e argumentu  
   
 ```  
 inline float logf(float _X) restrict(amp);
@@ -719,10 +719,10 @@ inline float logf(float _X) restrict(amp);
  Wartość zmiennoprzecinkowa  
   
 ### <a name="return-value"></a>Wartość zwracana  
- Zwraca logarytm naturalny argumentu  
+ Zwraca logarytm o podstawie base e argumentu  
   
 ##  <a name="modf"></a>  modf —  
- Dzieli _X do ułamkowa i części liczby całkowitej.  
+ Dzieli _X na ułamkową i całkowitą części.  
   
 ```  
 inline float modf(
@@ -737,10 +737,10 @@ inline float modf(
  `_Ip`  
   
 ### <a name="return-value"></a>Wartość zwracana  
- Zwraca podpisem części ułamkowej _X  
+ Zwraca część ułamkową ze znakiem _X  
   
 ##  <a name="modff"></a>  modff —  
- Dzieli _X do ułamkowa i części liczby całkowitej.  
+ Dzieli _X na ułamkową i całkowitą części.  
   
 ```  
 inline float modff(
@@ -755,10 +755,10 @@ inline float modff(
  `_Ip`  
   
 ### <a name="return-value"></a>Wartość zwracana  
- Zwraca podpisem części ułamkowej _X  
+ Zwraca część ułamkową ze znakiem _X  
   
 ##  <a name="pow"></a>  Pow  
- Oblicza _X podniesionej do potęgi _Y  
+ Oblicza _X podniesione do potęgi _y  
   
 ```  
 inline float pow(
@@ -768,16 +768,16 @@ inline float pow(
   
 ### <a name="parameters"></a>Parametry  
  `_X`  
- Wartość zmiennoprzecinkowa podstawowej  
+ Wartość zmiennoprzecinkowa, podstawowy  
   
  `_Y`  
- Wartość zmiennoprzecinkowa wykładnika  
+ Wartość zmiennoprzecinkowa, wykładnika  
   
 ### <a name="return-value"></a>Wartość zwracana  
- Zwraca wartość _X podniesionej do potęgi _Y  
+ Zwraca wartość _X podniesione do potęgi _y  
   
 ##  <a name="powf"></a>  powf —  
- Oblicza _X podniesionej do potęgi _Y  
+ Oblicza _X podniesione do potęgi _y  
   
 ```  
 inline float powf(
@@ -787,15 +787,15 @@ inline float powf(
   
 ### <a name="parameters"></a>Parametry  
  `_X`  
- Wartość zmiennoprzecinkowa podstawowej  
+ Wartość zmiennoprzecinkowa, podstawowy  
   
  `_Y`  
- Wartość zmiennoprzecinkowa wykładnika  
+ Wartość zmiennoprzecinkowa, wykładnika  
   
 ### <a name="return-value"></a>Wartość zwracana  
   
 ##  <a name="round"></a>  ROUND  
- Zaokrągla _X do najbliższej liczby całkowitej.  
+ Zaokrągla liczbę _X do najbliższej liczby całkowitej.  
   
 ```  
 inline float round(float _X) restrict(amp);
@@ -806,10 +806,10 @@ inline float round(float _X) restrict(amp);
  Wartość zmiennoprzecinkowa  
   
 ### <a name="return-value"></a>Wartość zwracana  
- Zwraca najbliższej liczby całkowitej z _X  
+ Zwraca liczbę całkowitą najbliższej _x  
   
 ##  <a name="roundf"></a>  roundf —  
- Zaokrągla _X do najbliższej liczby całkowitej.  
+ Zaokrągla liczbę _X do najbliższej liczby całkowitej.  
   
 ```  
 inline float roundf(float _X) restrict(amp);
@@ -820,7 +820,7 @@ inline float roundf(float _X) restrict(amp);
  Wartość zmiennoprzecinkowa  
   
 ### <a name="return-value"></a>Wartość zwracana  
- Zwraca najbliższej liczby całkowitej z _X  
+ Zwraca liczbę całkowitą najbliższej _x  
   
 ##  <a name="rsqrt"></a>  rsqrt —  
  Zwraca odwrotność pierwiastek kwadratowy argumentu  
@@ -862,7 +862,7 @@ inline int signbit(float _X) restrict(amp);
  Wartość zmiennoprzecinkowa  
   
 ### <a name="return-value"></a>Wartość zwracana  
- Zwraca wartość niezerową tylko wtedy, gdy znak _X jest ujemna.  
+ Zwraca wartość różną od zera, tylko wtedy, gdy znak _X jest ujemna  
   
 ##  <a name="signbitf"></a>  signbitf —  
  Określa, czy znak _X jest ujemna  
@@ -876,10 +876,10 @@ inline int signbitf(float _X) restrict(amp);
  Wartość zmiennoprzecinkowa  
   
 ### <a name="return-value"></a>Wartość zwracana  
- Zwraca wartość niezerową tylko wtedy, gdy znak _X jest ujemna.  
+ Zwraca wartość różną od zera, tylko wtedy, gdy znak _X jest ujemna  
   
 ##  <a name="sin"></a>  SIN  
- Oblicza sinus wartość argumentu  
+ Oblicza wartość funkcji sinus argumentu  
   
 ```  
 inline float sin(float _X) restrict(amp);
@@ -890,10 +890,10 @@ inline float sin(float _X) restrict(amp);
  Wartość zmiennoprzecinkowa  
   
 ### <a name="return-value"></a>Wartość zwracana  
- Zwraca sinus wartość argumentu  
+ Zwraca wartość funkcji sinus argumentu  
   
 ##  <a name="sinf"></a>  sinf —  
- Oblicza sinus wartość argumentu  
+ Oblicza wartość funkcji sinus argumentu  
   
 ```  
 inline float sinf(float _X) restrict(amp);
@@ -904,10 +904,10 @@ inline float sinf(float _X) restrict(amp);
  Wartość zmiennoprzecinkowa  
   
 ### <a name="return-value"></a>Wartość zwracana  
- Zwraca sinus wartość argumentu  
+ Zwraca wartość funkcji sinus argumentu  
   
 ##  <a name="sincos"></a>  sincos —  
- Oblicza sinus i cosinus wartość _X  
+ Oblicza wartość funkcji sinus i cosinus z _X  
   
 ```  
 inline void sincos(
@@ -921,13 +921,13 @@ inline void sincos(
  Wartość zmiennoprzecinkowa  
   
  `_S`  
- Zwraca sinus wartość _X  
+ Zwraca wartość funkcji sinus _X  
   
  `_C`  
- Zwraca cosinus wartość _X  
+ Zwraca wartość funkcji cosinus z _X  
   
 ##  <a name="sincosf"></a>  sincosf —  
- Oblicza sinus i cosinus wartość _X  
+ Oblicza wartość funkcji sinus i cosinus z _X  
   
 ```  
 inline void sincosf(
@@ -941,13 +941,13 @@ inline void sincosf(
  Wartość zmiennoprzecinkowa  
   
  `_S`  
- Zwraca sinus wartość _X  
+ Zwraca wartość funkcji sinus _X  
   
  `_C`  
- Zwraca cosinus wartość _X  
+ Zwraca wartość funkcji cosinus z _X  
   
 ##  <a name="sinh"></a>  SINH  
- Oblicza sinus hiperboliczny wartość argumentu  
+ Oblicza wartość funkcji sinus hiperboliczny dla argumentu  
   
 ```  
 inline float sinh(float _X) restrict(amp);
@@ -961,7 +961,7 @@ inline float sinh(float _X) restrict(amp);
  Zwraca sinus hiperboliczny wartość argumentu  
   
 ##  <a name="sinhf"></a>  sinhf —  
- Oblicza sinus hiperboliczny wartość argumentu  
+ Oblicza wartość funkcji sinus hiperboliczny dla argumentu  
   
 ```  
 inline float sinhf(float _X) restrict(amp);
@@ -975,7 +975,7 @@ inline float sinhf(float _X) restrict(amp);
  Zwraca sinus hiperboliczny wartość argumentu  
   
 ##  <a name="sqrt"></a>  SQRT  
- Oblicza pierwiastek squre argumentu  
+ Oblicza squre kwadratowy argumentu  
   
 ```  
 inline float sqrt(float _X) restrict(amp);
@@ -986,10 +986,10 @@ inline float sqrt(float _X) restrict(amp);
  Wartość zmiennoprzecinkowa  
   
 ### <a name="return-value"></a>Wartość zwracana  
- Zwraca pierwiastek squre argumentu  
+ Zwraca katalog główny squre argumentu  
   
 ##  <a name="sqrtf"></a>  sqrtf —  
- Oblicza pierwiastek squre argumentu  
+ Oblicza squre kwadratowy argumentu  
   
 ```  
 inline float sqrtf(float _X) restrict(amp);
@@ -1000,10 +1000,10 @@ inline float sqrtf(float _X) restrict(amp);
  Wartość zmiennoprzecinkowa  
   
 ### <a name="return-value"></a>Wartość zwracana  
- Zwraca pierwiastek squre argumentu  
+ Zwraca katalog główny squre argumentu  
   
 ##  <a name="tan"></a>  tan  
- Oblicza tangens wartość argumentu  
+ Oblicza wartość funkcji tangens argumentu  
   
 ```  
 inline float tan(float _X) restrict(amp);
@@ -1014,10 +1014,10 @@ inline float tan(float _X) restrict(amp);
  Wartość zmiennoprzecinkowa  
   
 ### <a name="return-value"></a>Wartość zwracana  
- Zwraca tangens wartość argumentu  
+ Zwraca wartość funkcji tangens argumentu  
   
 ##  <a name="tanf"></a>  tanf —  
- Oblicza tangens wartość argumentu  
+ Oblicza wartość funkcji tangens argumentu  
   
 ```  
 inline float tanf(float _X) restrict(amp);
@@ -1028,10 +1028,10 @@ inline float tanf(float _X) restrict(amp);
  Wartość zmiennoprzecinkowa  
   
 ### <a name="return-value"></a>Wartość zwracana  
- Zwraca tangens wartość argumentu  
+ Zwraca wartość funkcji tangens argumentu  
   
 ##  <a name="tanh"></a>  TANH  
- Oblicza tangens hiperboliczny wartość argumentu  
+ Oblicza wartość funkcji tangens hiperboliczny dla argumentu  
   
 ```  
 inline float tanh(float _X) restrict(amp);
@@ -1042,10 +1042,10 @@ inline float tanh(float _X) restrict(amp);
  Wartość zmiennoprzecinkowa  
   
 ### <a name="return-value"></a>Wartość zwracana  
- Zwraca tangens hiperboliczny wartość argumentu  
+ Zwraca wartość funkcji tangens hiperboliczny dla argumentu  
   
 ##  <a name="tanhf"></a>  tanhf —  
- Oblicza tangens hiperboliczny wartość argumentu  
+ Oblicza wartość funkcji tangens hiperboliczny dla argumentu  
   
 ```  
 inline float tanhf(float _X) restrict(amp);
@@ -1056,10 +1056,10 @@ inline float tanhf(float _X) restrict(amp);
  Wartość zmiennoprzecinkowa  
   
 ### <a name="return-value"></a>Wartość zwracana  
- Zwraca tangens hiperboliczny wartość argumentu  
+ Zwraca wartość funkcji tangens hiperboliczny dla argumentu  
   
 ##  <a name="trunc"></a>  TRUNC —  
- Obcina argument składnika liczba całkowita  
+ Obcina argument do składnika całkowitego  
   
 ```  
 inline float trunc(float _X) restrict(amp);
@@ -1073,7 +1073,7 @@ inline float trunc(float _X) restrict(amp);
  Zwraca liczbę całkowitą argumentu  
   
 ##  <a name="truncf"></a>  truncf —  
- Obcina argument składnika liczba całkowita  
+ Obcina argument do składnika całkowitego  
   
 ```  
 inline float truncf(float _X) restrict(amp);
@@ -1087,7 +1087,7 @@ inline float truncf(float _X) restrict(amp);
  Zwraca liczbę całkowitą argumentu  
 
 ## <a name="requirements"></a>Wymagania
-**Nagłówek:** amp_math.h **Namespace:** CONCURRENCY::fast_math —
+**Nagłówek:** amp_math.h **Namespace:** Concurrency::fast_math
   
 ## <a name="see-also"></a>Zobacz też  
  [Concurrency::fast_math, przestrzeń nazw](concurrency-fast-math-namespace.md)

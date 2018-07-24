@@ -1,7 +1,8 @@
 ---
 title: Konfigurowanie projektu CMake systemu Linux w programie Visual Studio | Dokumentacja firmy Microsoft
+description: Konfigurowanie projektu CMake systemu Linux w programie Visual Studio
 ms.custom: ''
-ms.date: 04/28/2018
+ms.date: 07/20/2018
 ms.reviewer: ''
 ms.suite: ''
 ms.technology:
@@ -14,17 +15,17 @@ ms.author: corob
 ms.workload:
 - cplusplus
 - linux
-ms.openlocfilehash: 285c1fcd38ef20ea38fe03e2cbd27f77469775cf
-ms.sourcegitcommit: 30192458404618039fdadddf37dc269baa559860
+ms.openlocfilehash: b96c44f978be18e83736736b6edd5965f0f49ef6
+ms.sourcegitcommit: 7eadb968405bcb92ffa505e3ad8ac73483e59685
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/20/2018
-ms.locfileid: "39182541"
+ms.lasthandoff: 07/23/2018
+ms.locfileid: "39207790"
 ---
 # <a name="configure-a-linux-cmake-project"></a>Konfigurowanie projektu CMake systemu Linux
 
 **Visual Studio 2017 w wersji 15.4 lub nowszy**  
-Po zainstalowaniu obciążenia języka Linux C++, obsługa CMake dla systemu Linux jest domyślnie zaznaczone. Teraz możesz pracować na istniejącej bazie kodu używającej narzędzia CMake bez konieczności konwertowania go do projektu programu Visual Studio. Jeśli baza kodu jest dla wielu platform, mogą kierować zarówno Windows, jak i Linux z poziomu programu Visual Studio.
+Po zainstalowaniu obciążenia języka Linux C++ dla Visual Studio Obsługa CMake dla systemu Linux jest domyślnie zaznaczone. Teraz możesz pracować na istniejącej bazie kodu używającej narzędzia CMake bez konieczności konwertowania go do projektu programu Visual Studio. Jeśli baza kodu jest dla wielu platform, mogą kierować zarówno Windows, jak i Linux z poziomu programu Visual Studio.
 
 W tym temacie założono, że masz podstawowe znajomość Obsługa CMake w programie Visual Studio. Aby uzyskać więcej informacji, zobacz [narzędzia CMake w języku Visual C++](../ide/cmake-tools-for-visual-cpp.md). Aby uzyskać więcej informacji na temat narzędzia CMake, sama zobacz [kompilacji, testów i pakietów usługi oprogramowania za pomocą narzędzia CMake](https://cmake.org/).
 

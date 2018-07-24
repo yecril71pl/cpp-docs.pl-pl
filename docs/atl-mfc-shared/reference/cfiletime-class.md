@@ -30,12 +30,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c984b2ef59e022a355d7c24915b5edbcf7f7e74d
-ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
+ms.openlocfilehash: 7a1e7abe1fbbf3667999852dd1810a8a337cac79
+ms.sourcegitcommit: 7eadb968405bcb92ffa505e3ad8ac73483e59685
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37880950"
+ms.lasthandoff: 07/23/2018
+ms.locfileid: "39208666"
 ---
 # <a name="cfiletime-class"></a>CFileTime, klasa
 Ta klasa dostarcza metody do zarządzania skojarzonych z plikiem wartości daty i godziny.  
@@ -101,11 +101,11 @@ class CFileTime :  public FILETIME
 |Zmienna składowa|Liczbę 100-nanosekundowych interwałów|  
 |---------------------|-----------------------------------------|  
 |Milisekundy|10 000|  
-|Sekunda|Milisekunda * 1000|  
-|Minuta|Drugi * 60|  
-|Godzina|Minutę * 60|  
-|Dzień|Godzina * 24|  
-|Tydzień|Dzień * 7|  
+|Sekunda|Milisekunda \* 1000|  
+|Minuta|Drugi \* 60|  
+|Godzina|Minuty \* 60|  
+|Dzień|Godzina \* 24|  
+|Tydzień|Dzień \* 7|  
   
  **Uwaga** nie wszystkie systemy plików mogą rejestrować tworzenia i czas ostatniego dostępu i nie wszystkie systemy plików zarejestruj je w taki sam sposób. Na przykład w systemie plików FAT Windows NT, utworzyć czasu ma rozdzielczość 10 milisekund, czas zapisu ma rozdzielczość 2 sekundy, a czas dostępu ma rozdzielczość 1 dzień (data access). W systemie plików NTFS czas dostępu ma rozdzielczość równej 1 godz. Ponadto system plików FAT rejestruje czas na dysku w czasie lokalnym, ale NTFS rejestruje czas na dysku w formacie UTC. Aby uzyskać więcej informacji, zobacz [czasy](http://msdn.microsoft.com/library/windows/desktop/ms724290).  
   

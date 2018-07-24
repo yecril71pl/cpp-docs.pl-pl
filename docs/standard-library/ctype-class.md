@@ -46,12 +46,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 49329d97343cfd210a93879961b0492454be9efa
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 5a65008b01262ad6252e9942444a4e80602d4292
+ms.sourcegitcommit: 7eadb968405bcb92ffa505e3ad8ac73483e59685
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38954776"
+ms.lasthandoff: 07/23/2018
+ms.locfileid: "39208640"
 ---
 # <a name="ctype-class"></a>ctype — Klasa
 
@@ -275,7 +275,7 @@ Wskaźnik do pierwszego znaku w zakresie, który pasuje do określonej maski. Je
 
 ### <a name="remarks"></a>Uwagi
 
-Chroniona funkcja elementu członkowskiego zwraca najmniejszy wskaźnik `ptr` w zakresie [ `first`, `last`) dla której [do_is —](#do_is)( `maskVal`, * `ptr`) ma wartość true.
+Chroniona funkcja elementu członkowskiego zwraca najmniejszy wskaźnik `ptr` w zakresie [ `first`, `last`) dla której [do_is —](#do_is)( `maskVal`, \* `ptr`) ma wartość true.
 
 ### <a name="example"></a>Przykład
 
@@ -306,7 +306,7 @@ Wskaźnik do pierwszego znaku w zakresie, który nie pasuje do określonej maski
 
 ### <a name="remarks"></a>Uwagi
 
-Chroniona funkcja elementu członkowskiego zwraca najmniejszy wskaźnik `ptr` w zakresie [ `first`, `last`) dla której [do_is —](#do_is)( `maskVal`, * `ptr`) ma wartość false.
+Chroniona funkcja elementu członkowskiego zwraca najmniejszy wskaźnik `ptr` w zakresie [ `first`, `last`) dla której [do_is —](#do_is)( `maskVal`, \* `ptr`) ma wartość false.
 
 ### <a name="example"></a>Przykład
 
