@@ -9,31 +9,58 @@ f1_keywords:
 - ATL::CManualAccessor
 - ATL.CManualAccessor
 - CManualAccessor
+- ATL::CManualAccessor::AddBindEntry
+- ATL.CManualAccessor.AddBindEntry
+- CManualAccessor::AddBindEntry
+- AddBindEntry
+- CManualAccessor.AddBindEntry
+- CManualAccessor::AddParameterEntry
+- ATL.CManualAccessor.AddParameterEntry
+- CManualAccessor.AddParameterEntry
+- AddParameterEntry
+- ATL::CManualAccessor::AddParameterEntry
+- ATL::CManualAccessor::CreateAccessor
+- CreateAccessor
+- ATL.CManualAccessor.CreateAccessor
+- CManualAccessor.CreateAccessor
+- CManualAccessor::CreateAccessor
+- ATL::CManualAccessor::CreateParameterAccessor
+- ATL.CManualAccessor.CreateParameterAccessor
+- CManualAccessor.CreateParameterAccessor
+- CreateParameterAccessor
+- CManualAccessor::CreateParameterAccessor
 dev_langs:
 - C++
 helpviewer_keywords:
 - CManualAccessor class
+- AddBindEntry method
+- AddParameterEntry method
+- CreateAccessor method
+- CreateParameterAccessor method
 ms.assetid: a0088074-7135-465c-b228-69097a50b8cc
 author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 7b8efc46971b1aa72f8c5e572aa540bfed250d2b
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 9b0cf71ce31d9f4d96d2064ebafd28b7ea5ff70d
+ms.sourcegitcommit: b217daee32d3413cf33753d9b4dc35a0022b1bfa
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33098176"
+ms.lasthandoff: 07/24/2018
+ms.locfileid: "39233473"
 ---
 # <a name="cmanualaccessor-class"></a>CManualAccessor — Klasa
-Reprezentuje typ metody dostępu przeznaczony dla zaawansowanych.  
+Reprezentuje typ metody dostępu przeznaczony dla zaawansowanych użytkowników.  
   
 ## <a name="syntax"></a>Składnia
 
 ```cpp
 class CManualAccessor : public CAccessorBase  
 ```  
+
+## <a name="requirements"></a>Wymagania  
+ **Nagłówek:** atldbcli.h  
   
 ## <a name="members"></a>Elementy członkowskie  
   
@@ -41,21 +68,150 @@ class CManualAccessor : public CAccessorBase
   
 |||  
 |-|-|  
-|[AddBindEntry](../../data/oledb/cmanualaccessor-addbindentry.md)|Dodaje wpis powiązanie kolumn danych wyjściowych.|  
-|[AddParameterEntry](../../data/oledb/cmanualaccessor-addparameterentry.md)|Dodaje wpis parametru do akcesor parametru.|  
-|[CreateAccessor](../../data/oledb/cmanualaccessor-createaccessor.md)|Przydziela pamięć dla kolumny struktury powiązania i inicjuje elementów członkowskich danych kolumny.|  
-|[CreateParameterAccessor](../../data/oledb/cmanualaccessor-createparameteraccessor.md)|Przydziela pamięć dla parametru wiązania struktury i inicjuje elementy członkowskie danych parametru.|  
+|[AddBindEntry](#addbindentry)|Dodaje wpis powiązanie kolumn danych wyjściowych.|  
+|[AddParameterEntry](#addparameterentry)|Dodaje wpis parametru do metody dostępu parametru.|  
+|[CreateAccessor](#createaccessor)|Przydziela pamięć dla kolumny struktury powiązania i inicjuje elementy członkowskie danych kolumny.|  
+|[Createparameteraccessor —](#createparameteraccessor)|Przydziela pamięć dla parametru powiązania struktury i inicjuje elementy członkowskie danych parametru.|  
   
 ## <a name="remarks"></a>Uwagi  
- Przy użyciu `CManualAccessor`, należy określić parametr, a dane wyjściowe powiązanie kolumny według wywołania funkcji środowiska wykonawczego.  
+ Za pomocą `CManualAccessor`, można określić parametr i powiązanie kolumny danych wyjściowych przez funkcję wywołania funkcji środowiska uruchomieniowego.  
+
+## <a name="addbindentry"></a> CManualAccessor::AddBindEntry
+Dodaje wpis powiązanie kolumn danych wyjściowych.  
   
-## <a name="requirements"></a>Wymagania  
- **Nagłówek:** atldbcli.h  
+### <a name="syntax"></a>Składnia  
   
+```cpp
+void AddBindEntry(DBORDINAL nOrdinal,  
+   DBTYPE wType,  DBLENGTH nColumnSize,  
+   void* pData,  
+   void* pLength = NULL,  
+   void* pStatus = NULL) throw ();  
+```  
+  
+#### <a name="parameters"></a>Parametry  
+ Zobacz [DBBINDING](https://msdn.microsoft.com/library/ms716845.aspx) w *OLE DB Podręcznik programisty*.  
+  
+ *nOrdinal*  
+ [in] Numer kolumny.  
+  
+ *wType*  
+ [in] Typ danych.  
+  
+ *nColumnSize*  
+ [in] Kolumna rozmiar w bajtach.  
+  
+ *pData*  
+ [in] Wskaźnik do danych kolumny, przechowywane w buforze.  
+  
+ *pLength*  
+ [in] Wskaźnik do długość pola, jeśli jest to wymagane.  
+  
+ *pStatus*  
+ [in] Wskaźnik do zmiennej może być powiązane z stan kolumny, jeśli jest to wymagane.  
+  
+### <a name="remarks"></a>Uwagi  
+ Aby użyć tej funkcji, należy najpierw wywołać [createaccessor —](../../data/oledb/cmanualaccessor-createaccessor.md). Nie można dodać więcej wpisów niż liczba kolumn określona w `CreateAccessor`. 
+  
+## <a name="addparameterentry"></a> CManualAccessor::AddParameterEntry
+Dodaje wpis parametr do parametru struktury wpisu.  
+  
+### <a name="syntax"></a>Składnia  
+  
+```cpp
+void AddParameterEntry(DBORDINAL nOrdinal,  
+   DBTYPE wType,  DBLENGTH nColumnSize,  
+   void* pData,  
+   void* pLength = NULL,  
+   void* pStatus = NULL,  
+   DBPARAMIO eParamIO = DBPARAMIO_INPUT) throw ();  
+```  
+  
+#### <a name="parameters"></a>Parametry  
+ Zobacz [DBBINDING](https://msdn.microsoft.com/library/ms716845.aspx) w *OLE DB Podręcznik programisty*.  
+  
+ *nOrdinal*  
+ [in] Liczba parametrów.  
+  
+ *wType*  
+ [in] Typ danych.  
+  
+ *nColumnSize*  
+ [in] Kolumna rozmiar w bajtach.  
+  
+ *pData*  
+ [in] Wskaźnik do danych kolumny, przechowywane w buforze.  
+  
+ *pLength*  
+ [in] Wskaźnik do długość pola, jeśli jest to wymagane.  
+  
+ *pStatus*  
+ [in] Wskaźnik do zmiennej może być powiązane z stan kolumny, jeśli jest to wymagane.  
+  
+ *eParamIO*  
+ [in] Określa, czy parametr, z którym jest skojarzona wiązanie parametru wejściowego, wejścia/wyjścia lub dane wyjściowe.  
+  
+### <a name="remarks"></a>Uwagi  
+ Aby użyć tej funkcji, należy najpierw wywołać [createparameteraccessor —](../../data/oledb/cmanualaccessor-createparameteraccessor.md). 
+
+## <a name="createaccessor"></a> CManualAccessor::CreateAccessor
+Przydziela pamięć dla kolumny struktury powiązania i inicjuje elementy członkowskie danych kolumny.  
+  
+### <a name="syntax"></a>Składnia  
+  
+```cpp
+HRESULT CreateAccessor(int nBindEntries,   
+  void* pBuffer,   
+   DBLENGTH nBufferSize) throw();  
+```  
+  
+#### <a name="parameters"></a>Parametry  
+ *nBindEntries*  
+ [in] Liczba kolumn. Liczba ta powinna odpowiadać liczbie wywołań [CManualAccessor::AddBindEntry](../../data/oledb/cmanualaccessor-addbindentry.md) funkcji.  
+  
+ *pBuffer*  
+ [in] Wskaźnik do buforu, gdzie są przechowywane kolumn wyjściowych.  
+  
+ *nBufferSize*  
+ [in] Rozmiar buforu w bajtach.  
+  
+### <a name="return-value"></a>Wartość zwracana  
+ Jedna z wartości HRESULT standardowych.  
+  
+### <a name="remarks"></a>Uwagi  
+ Wywołaj tę funkcję, zanim wywołasz `CManualAccessor::AddBindEntry` funkcji.  
+
+## <a name="createparameteraccessor"></a> CManualAccessor::CreateParameterAccessor
+Przydziela pamięć dla parametru powiązania struktury i inicjuje elementy członkowskie danych parametru.  
+  
+### <a name="syntax"></a>Składnia  
+  
+```cpp
+HRESULT CreateParameterAccessor(int nBindEntries,   
+  void* pBuffer,   
+   DBLENGTH nBufferSize) throw();  
+```  
+  
+#### <a name="parameters"></a>Parametry  
+ *nBindEntries*  
+ [in] Liczba kolumn.  
+  
+ *pBuffer*  
+ [in] Wskaźnik do buforu, w którym kolumny wejściowe są przechowywane.  
+  
+ *nBufferSize*  
+ [in] Rozmiar buforu w bajtach.  
+  
+### <a name="return-value"></a>Wartość zwracana  
+ Jedna z wartości HRESULT standardowych.  
+  
+### <a name="remarks"></a>Uwagi  
+ Musisz wywołać tę funkcję, przed wywołaniem [addparameterentry —](../../data/oledb/cmanualaccessor-addparameterentry.md).
+
 ## <a name="see-also"></a>Zobacz też  
  [DBViewer](../../visual-cpp-samples.md)   
  [Szablony konsumentów OLE DB](../../data/oledb/ole-db-consumer-templates-cpp.md)   
- [Dokumentacja szablonów konsumentów OLE DB](../../data/oledb/ole-db-consumer-templates-reference.md)   
- [CAccessor — klasa](../../data/oledb/caccessor-class.md)   
+ [OLE DB — Kompendium szablonów konsumentów](../../data/oledb/ole-db-consumer-templates-reference.md)   
+ [Klasa CAccessor](../../data/oledb/caccessor-class.md)   
  [Cdynamicaccessor — klasa](../../data/oledb/cdynamicaccessor-class.md)   
  [CDynamicParameterAccessor, klasa](../../data/oledb/cdynamicparameteraccessor-class.md)

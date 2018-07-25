@@ -9,22 +9,51 @@ f1_keywords:
 - ATL::CEnumeratorAccessor
 - CEnumeratorAccessor
 - ATL.CEnumeratorAccessor
+- CEnumeratorAccessor.m_bIsParent
+- ATL::CEnumeratorAccessor::m_bIsParent
+- m_bIsParent
+- ATL.CEnumeratorAccessor.m_bIsParent
+- CEnumeratorAccessor::m_bIsParent
+- ATL::CEnumeratorAccessor::m_nType
+- CEnumeratorAccessor.m_nType
+- CEnumeratorAccessor::m_nType
+- ATL.CEnumeratorAccessor.m_nType
+- m_nType
+- ATL::CEnumeratorAccessor::m_szDescription
+- CEnumeratorAccessor.m_szDescription
+- CEnumeratorAccessor::m_szDescription
+- ATL.CEnumeratorAccessor.m_szDescription
+- CEnumeratorAccessor::m_szName
+- ATL.CEnumeratorAccessor.m_szName
+- m_szName
+- ATL::CEnumeratorAccessor::m_szName
+- CEnumeratorAccessor.m_szName
+- CEnumeratorAccessor::m_szParseName
+- ATL::CEnumeratorAccessor::m_szParseName
+- m_szParseName
+- CEnumeratorAccessor.m_szParseName
+- ATL.CEnumeratorAccessor.m_szParseName
 dev_langs:
 - C++
 helpviewer_keywords:
 - CEnumeratorAccessor class
+- m_bIsParent
+- m_nType
+- m_szDescription
+- m_szName
+- m_szParseName
 ms.assetid: 21e8e7ea-3511-4afe-b33f-d520f4ff82bb
 author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: bb071f47eb7079c8de63da47ee0d837f44442c1a
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: d6275b07cd06c82d2b9531c3b206b81eedef10db
+ms.sourcegitcommit: b217daee32d3413cf33753d9b4dc35a0022b1bfa
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33097244"
+ms.lasthandoff: 07/24/2018
+ms.locfileid: "39233428"
 ---
 # <a name="cenumeratoraccessor-class"></a>CEnumeratorAccessor — Klasa
 Używane przez [CEnumerator](../../data/oledb/cenumerator-class.md) dostępu do danych z zestawu wierszy modułu wyliczającego.  
@@ -34,6 +63,9 @@ Używane przez [CEnumerator](../../data/oledb/cenumerator-class.md) dostępu do 
 ```cpp
 class CEnumeratorAccessor  
 ```  
+
+## <a name="requirements"></a>Wymagania  
+ **Nagłówek:** atldbcli.h  
   
 ## <a name="members"></a>Elementy członkowskie  
   
@@ -41,17 +73,79 @@ class CEnumeratorAccessor
   
 |||  
 |-|-|  
-|[m_bIsParent](../../data/oledb/cenumeratoraccessor-m-bisparent.md)|Zmienna wskazującą, czy moduł wyliczający jest wyliczający nadrzędnego, jeśli wiersz jest moduł wyliczający.|  
-|[m_nType](../../data/oledb/cenumeratoraccessor-m-ntype.md)|Zmienna wskazującą, czy wiersz zawiera opis źródła danych lub moduł wyliczający.|  
-|[m_szDescription](../../data/oledb/cenumeratoraccessor-m-szdescription.md)|Opis źródła danych lub modułu wyliczającego.|  
-|[m_szName](../../data/oledb/cenumeratoraccessor-m-szname.md)|Nazwa źródła danych lub modułu wyliczającego.|  
-|[m_szParseName](../../data/oledb/cenumeratoraccessor-m-szparsename.md)|Parametry do przekazania do [IParseDisplayName](http://msdn.microsoft.com/library/windows/desktop/ms680604) uzyskanie moniker dla źródła danych lub modułu wyliczającego.|  
+|[m_bIsParent](#bisparent)|Zmienną określającą, czy moduł wyliczający jest wyliczający nadrzędnego, jeśli wiersz jest moduł wyliczający.|  
+|[m_nType](#ntype)|Zmienną określającą, czy wiersz zawiera opis źródła danych lub moduł wyliczający.|  
+|[m_szDescription](#szdescription)|Opis źródła danych lub modułu wyliczającego.|  
+|[m_szName](#szname)|Nazwa źródła danych lub modułu wyliczającego.|  
+|[m_szParseName](#szparsename)|Parametry do przekazania do [IParseDisplayName](http://msdn.microsoft.com/library/windows/desktop/ms680604) uzyskać krótka nazwa dla źródła danych lub modułu wyliczającego.|  
   
 ## <a name="remarks"></a>Uwagi  
  Ten zestaw wierszy składa się z źródła danych i moduły wyliczające widoczne z bieżącej modułu wyliczającego.  
   
-## <a name="requirements"></a>Wymagania  
- **Nagłówek:** atldbcli.h  
+## <a name="bisparent"></a> CEnumeratorAccessor::m_bIsParent
+Zmienną określającą, czy moduł wyliczający jest wyliczający nadrzędnego, jeśli wiersz jest moduł wyliczający.  
+  
+### <a name="syntax"></a>Składnia  
+  
+```cpp
+VARIANT_BOOL m_bIsParent;  
+  
+```  
+  
+### <a name="remarks"></a>Uwagi  
+ Zobacz [ISourcesRowset::GetSourcesRowset](https://msdn.microsoft.com/library/ms711200.aspx) w *OLE DB Podręcznik programisty* Aby uzyskać więcej informacji. 
+
+## <a name="ntype"></a> CEnumeratorAccessor::m_nType
+Zmienną określającą, czy wiersz zawiera opis źródła danych lub moduł wyliczający.  
+  
+### <a name="syntax"></a>Składnia  
+  
+```cpp
+USHORT m_nType;  
+  
+```  
+  
+### <a name="remarks"></a>Uwagi  
+ Zobacz [ISourcesRowset::GetSourcesRowset](https://msdn.microsoft.com/library/ms711200.aspx) w *OLE DB Podręcznik programisty* Aby uzyskać więcej informacji.
+
+## <a name="szdescription"></a> CEnumeratorAccessor::m_szDescription
+Opis źródła danych lub modułu wyliczającego.  
+  
+### <a name="syntax"></a>Składnia  
+  
+```cpp
+WCHAR m_szDescription[129];  
+  
+```  
+  
+### <a name="remarks"></a>Uwagi  
+ Zobacz [ISourcesRowset::GetSourcesRowset](https://msdn.microsoft.com/library/ms711200.aspx) w *OLE DB Podręcznik programisty* Aby uzyskać więcej informacji.
+
+## <a name="szname"></a> CEnumeratorAccessor::m_szName
+Nazwa źródła danych lub modułu wyliczającego.  
+  
+### <a name="syntax"></a>Składnia  
+  
+```cpp
+WCHAR m_szName[129];  
+  
+```  
+  
+### <a name="remarks"></a>Uwagi  
+ Zobacz [ISourcesRowset::GetSourcesRowset](https://msdn.microsoft.com/library/ms711200.aspx) w *OLE DB Podręcznik programisty* Aby uzyskać więcej informacji.  
+
+## <a name="szparsename"></a> CEnumeratorAccessor::m_szParseName
+Parametry do przekazania do [IParseDisplayName](http://msdn.microsoft.com/library/windows/desktop/ms680604) uzyskać krótka nazwa dla źródła danych lub modułu wyliczającego.  
+  
+### <a name="syntax"></a>Składnia  
+  
+```cpp
+WCHAR m_szParseName[129];  
+  
+```  
+  
+### <a name="remarks"></a>Uwagi  
+ Zobacz [ISourcesRowset::GetSourcesRowset](https://msdn.microsoft.com/library/ms711200.aspx) w *OLE DB Podręcznik programisty* Aby uzyskać więcej informacji.  
   
 ## <a name="see-also"></a>Zobacz też  
  [Szablony konsumentów OLE DB](../../data/oledb/ole-db-consumer-templates-cpp.md)   
