@@ -7,25 +7,33 @@ ms.technology:
 ms.topic: reference
 f1_keywords:
 - ISessionPropertiesImpl
+- ISessionPropertiesImpl::GetProperties
+- ISessionPropertiesImpl.GetProperties
+- GetProperties
+- ISessionPropertiesImpl.SetProperties
+- SetProperties
+- ISessionPropertiesImpl::SetProperties
 dev_langs:
 - C++
 helpviewer_keywords:
 - ISessionPropertiesImpl class
+- GetProperties method
+- SetProperties method
 ms.assetid: ca0ba254-c7dc-4c52-abec-cf895a0c6a63
 author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 62b1321c9d7d50ff2cd459b395efa1e8147a06ea
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: a3759b67ef5d9ee9832649b3b0d516dbfb04440b
+ms.sourcegitcommit: e5792fcb89b9ba64c401f90f4f26a8e45d4a2359
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33106052"
+ms.lasthandoff: 07/27/2018
+ms.locfileid: "39322023"
 ---
 # <a name="isessionpropertiesimpl-class"></a>ISessionPropertiesImpl — Klasa
-Udostępnia implementację elementu [ISessionProperties](https://msdn.microsoft.com/en-us/library/ms713721.aspx) interfejsu.  
+Udostępnia implementację [ISessionProperties](https://msdn.microsoft.com/library/ms713721.aspx) interfejsu.  
   
 ## <a name="syntax"></a>Składnia
 
@@ -36,12 +44,15 @@ class ATL_NO_VTABLE ISessionPropertiesImpl :
    public CUtlProps<PropClass>  
 ```  
   
-#### <a name="parameters"></a>Parametry  
- `T`  
+### <a name="parameters"></a>Parametry  
+ *T*  
  Z klasą pochodną `ISessionPropertiesImpl`.  
   
- `PropClass`  
- Klasa właściwości definiowane przez użytkownika, która domyślnie `T`.  
+ *PropClass*  
+ Klasa definiowanych przez użytkownika właściwości, która domyślnie *T*.  
+
+## <a name="requirements"></a>Wymagania  
+ **Nagłówek:** atldb.h  
   
 ## <a name="members"></a>Elementy członkowskie  
   
@@ -49,14 +60,39 @@ class ATL_NO_VTABLE ISessionPropertiesImpl :
   
 |||  
 |-|-|  
-|[GetProperties](../../data/oledb/isessionpropertiesimpl-getproperties.md)|Zwraca listę właściwości grupy właściwości sesji, które są aktualnie ustawione w tej sesji.|  
-|[SetProperties](../../data/oledb/isessionpropertiesimpl-setproperties.md)|Ustawia właściwości w grupie właściwości sesji.|  
+|[Getproperties —](#getproperties)|Zwraca listę właściwości, w grupie właściwości sesji, które obecnie są ustawiane w sesji.|  
+|[Setproperties —](#setproperties)|Ustawia właściwości w grupie właściwości sesji.|  
   
 ## <a name="remarks"></a>Uwagi  
- Obowiązkowego interfejsu na sesji. Ta klasa implementuje właściwości sesji przez wywołanie metody statycznej funkcji zdefiniowanej przez [mapę zestaw właściwości](../../data/oledb/begin-propset-map.md). Mapa zestaw właściwości powinny być określone w klasie sesji.  
+ Obowiązkowego interfejsu w ramach sesji. Ta klasa implementuje właściwości sesji przez wywołanie statycznego funkcją zdefiniowaną przez [Mapa zestawu właściwości](../../data/oledb/begin-propset-map.md). Mapa zestawu właściwości powinny być określone w swojej klasy sesji.  
   
-## <a name="requirements"></a>Wymagania  
- **Nagłówek:** atldb.h  
+## <a name="getproperties"></a> ISessionPropertiesImpl::GetProperties
+Zwraca listę wszystkich właściwości w `DBPROPSET_SESSION` grupy właściwości, które obecnie są ustawiane w sesji.  
+  
+### <a name="syntax"></a>Składnia  
+  
+```cpp
+      STDMETHOD(GetProperties)(ULONG cPropertyIDSets,   
+   const DBPROPIDSET rgPropertyIDSets[],   
+   ULONG * pcPropertySets,   
+   DBPROPSET ** prgPropertySets);  
+```  
+  
+#### <a name="parameters"></a>Parametry  
+ Zobacz [ISessionProperties::GetProperties](https://msdn.microsoft.com/library/ms723643.aspx) w *OLE DB Podręcznik programisty*. 
+
+## <a name="setproperties"></a> ISessionPropertiesImpl::SetProperties
+Ustawia właściwości w `DBPROPSET_SESSION` grupy właściwości.  
+  
+### <a name="syntax"></a>Składnia  
+  
+```cpp
+      STDMETHOD(SetProperties)(ULONG cPropertySets,   
+   DBPROPSET rgPropertySets[]);  
+```  
+  
+#### <a name="parameters"></a>Parametry  
+ Zobacz [ISessionProperties::SetProperties](https://msdn.microsoft.com/library/ms714405.aspx) w *OLE DB Podręcznik programisty*.  
   
 ## <a name="see-also"></a>Zobacz też  
  [Szablony dostawców OLE DB](../../data/oledb/ole-db-provider-templates-cpp.md)   

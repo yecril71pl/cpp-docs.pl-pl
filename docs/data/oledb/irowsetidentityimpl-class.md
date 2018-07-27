@@ -9,25 +9,31 @@ f1_keywords:
 - ATL::IRowsetIdentityImpl
 - ATL.IRowsetIdentityImpl
 - IRowsetIdentityImpl
+- IsSameRow
+- IRowsetIdentityImpl.IsSameRow
+- ATL.IRowsetIdentityImpl.IsSameRow
+- IRowsetIdentityImpl::IsSameRow
+- ATL::IRowsetIdentityImpl::IsSameRow
 dev_langs:
 - C++
 helpviewer_keywords:
 - IRowsetIdentityImpl class
+- IsSameRow method
 ms.assetid: 56821edf-e045-40c8-96bd-231552cd5799
 author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 29ec88546a622ee42ce0e81efa9400305e2e14ae
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 5cbafe7f43d8a6c7acfaccb52fd22b595bdd0ec4
+ms.sourcegitcommit: e5792fcb89b9ba64c401f90f4f26a8e45d4a2359
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33101425"
+ms.lasthandoff: 07/27/2018
+ms.locfileid: "39322101"
 ---
 # <a name="irowsetidentityimpl-class"></a>IRowsetIdentityImpl — Klasa
-Implementuje OLE DB [IRowsetIdentity](https://msdn.microsoft.com/en-us/library/ms715913.aspx) interfejsu, co umożliwia testowanie tożsamości wiersza.  
+Implementuje OLE DB [IRowsetIdentity](https://msdn.microsoft.com/library/ms715913.aspx) interfejs, który umożliwia testowanie pod kątem tożsamość wiersza.  
   
 ## <a name="syntax"></a>Składnia
 
@@ -37,12 +43,15 @@ class ATL_NO_VTABLE IRowsetIdentityImpl
    : public IRowsetIdentity  
 ```  
   
-#### <a name="parameters"></a>Parametry  
- `T`  
- Klasa pochodna od `IRowsetIdentityImpl`.  
+### <a name="parameters"></a>Parametry  
+ *T*  
+ Klasa pochodząca z `IRowsetIdentityImpl`.  
   
- `RowClass`  
- Jednostki magazynu dla **HROW**.  
+ *RowClass*  
+ Jednostki magazynu na potrzeby `HROW`.  
+
+## <a name="requirements"></a>Wymagania  
+ **Nagłówek:** atldb.h  
   
 ## <a name="members"></a>Elementy członkowskie  
   
@@ -50,10 +59,23 @@ class ATL_NO_VTABLE IRowsetIdentityImpl
   
 |||  
 |-|-|  
-|[IsSameRow](../../data/oledb/irowsetidentityimpl-issamerow.md)|Porównuje dwa dojść do wierszy czy odnoszą się do tego samego wiersza.|  
+|[Issamerow —](#issamerow)|Porównuje dwa uchwytów wierszy, aby sprawdzić, czy odnoszą się do tego samego wiersza.|  
   
-## <a name="requirements"></a>Wymagania  
- **Nagłówek:** atldb.h  
+## <a name="issamerow"></a> IRowsetIdentityImpl::IsSameRow
+Porównuje dwa uchwytów wierszy, aby sprawdzić, czy odnoszą się do tego samego wiersza.  
+  
+### <a name="syntax"></a>Składnia  
+  
+```cpp
+      STDMETHOD(IsSameRow )(HROW hThisRow,  
+   HROW hThatRow);  
+```  
+  
+#### <a name="parameters"></a>Parametry  
+ Zobacz [IRowsetIdentity::IsSameRow](https://msdn.microsoft.com/library/ms719629.aspx) w *OLE DB Podręcznik programisty*.  
+  
+### <a name="remarks"></a>Uwagi  
+ Aby porównać dojść do wierszy, ta metoda rzutuje `HROW` uchwytów na `RowClass` elementów członkowskich i wywołania `memcmp` na wskaźniki.  
   
 ## <a name="see-also"></a>Zobacz też  
  [Szablony dostawców OLE DB](../../data/oledb/ole-db-provider-templates-cpp.md)   

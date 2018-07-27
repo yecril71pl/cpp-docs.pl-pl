@@ -1,7 +1,7 @@
 ---
 title: EKSPORTY | Dokumentacja firmy Microsoft
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 07/11/2018
 ms.technology:
 - cpp-tools
 ms.topic: reference
@@ -16,70 +16,78 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7cc7a9995fdc5be786712752e30015337b9f1607
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: c642a623e76a9e1344a90efd4f0a47ad195c553e
+ms.sourcegitcommit: e5792fcb89b9ba64c401f90f4f26a8e45d4a2359
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32376829"
+ms.lasthandoff: 07/27/2018
+ms.locfileid: "39322192"
 ---
 # <a name="exports"></a>EKSPORTY
-Wprowadza sekcję definicje eksportu, określających wyeksportowanego nazwy lub porządkowe danych lub funkcji. Każda definicja musi być w oddzielnym wierszu.  
+
+Wprowadza sekcji definicji eksportu, które określają nazwy eksportowanych lub liczby porządkowe funkcji lub danych. Każda definicja musi być w oddzielnym wierszu.  
   
-```  
+```DEF  
 EXPORTS  
    definition  
 ```  
   
 ## <a name="remarks"></a>Uwagi  
- Pierwszy `definition` może znajdować się na tej samej linii co `EXPORTS` — słowo kluczowe lub na kolejny wiersz. . DEF pliku może zawierać jeden lub więcej `EXPORTS` instrukcje.  
+
+Pierwszy *definicji* mogą znajdować się na tym samym wierszu co `EXPORTS` — słowo kluczowe lub na kolejny wiersz. . Plik DEF mogą zawierać jeden lub więcej `EXPORTS` instrukcji.  
   
- Składnia eksportu `definition` jest:  
+Składnia służąca do eksportu *definicji* jest:  
   
-```  
+```DEF
+entryname[=internal_name|other_module.another_exported_name] [@Ordinal [NONAME]] [[PRIVATE] | [DATA]]
+```
+
+*Nazwa_wpisu* jest nazwa zmiennej lub funkcji, który chcesz wyeksportować. Jest to wymagane. Jeśli eksportujesz nazwa różni się od nazwy w bibliotece DLL, określ nazwę eksportu w bibliotece DLL, używając *internal_name*. Na przykład, jeśli biblioteka DLL eksportuje funkcję `func1` i wywołań, aby użyć go jako `func2`, należy określić:
+
+```DEF
+EXPORTS
+   func2=func1
+```
+
+W przypadku nazwy, który eksportujesz z innego modułu, określ nazwę eksportu w bibliotece DLL, używając *other_module.exported_name*. Na przykład, jeśli biblioteka DLL eksportuje funkcję `other_module.func1` i wywołań, aby użyć go jako `func2`, należy określić:
+
+```DEF
+EXPORTS
+   func2=other_module.func1
+```
+
+Ponieważ kompilator języka Visual C++ używa dekorowania nazwy dla funkcji języka C++, możesz użyć internal_name również nazwę uzupełnioną lub zdefiniować eksportowane funkcji za pomocą funkcji extern "C" w kodzie źródłowym. Kompilator również rozszerza funkcje języka C, które używają [__stdcall](../../cpp/stdcall.md) Konwencji prefiks podkreślenia (_) i sufiks, który składa się z wywołania znakiem (@) następuje liczba bajtów (w zapisie dziesiętnym na liście argumentów).  
   
-entryname[=internalname] [@ordinal [NONAME]] [[PRIVATE] | [DATA]]  
-```  
+Aby znaleźć nazwy dekoracyjne wytworzone przez kompilator, użyj [DUMPBIN](../../build/reference/dumpbin-reference.md) narzędzia lub konsolidator [/MAP](../../build/reference/map-generate-mapfile.md) opcji. Nazwy ozdobione są specyficzne dla kompilatora. Jeśli eksportujesz nazwy dekorowane w. Plik DEF, pliki wykonywalne, które łącze do biblioteki DLL muszą być także kompilowane przy użyciu tej samej wersji kompilatora. Daje to gwarancję, że nazwy dekorowane w obiekcie wywołującym odpowiadały nazwom eksportowanym w. Plik DEF.  
   
- `entryname` jest to nazwa funkcji lub zmienna, który chcesz wyeksportować. Jest to wymagane. Jeśli nazwa eksportowania różni się od nazwy w bibliotece DLL, określ nazwę eksportu w bibliotece DLL przy użyciu `internalname`. Na przykład, jeśli biblioteki DLL eksportuje funkcję `func1` i chcesz wywołań w celu używania go jako `func2`, należy określić:  
+Możesz użyć*porządkowe* do określenia, czy numer, a nie nazwę funkcji, zostaną umieszczone w tabeli eksportu biblioteki DLL. Wiele bibliotek DLL Windows wyeksportować liczb porządkowych do obsługi starszego kodu. Było często używa się w kodzie Windows 16-bitowych liczb porządkowych, ponieważ może to pomóc zminimalizować rozmiar biblioteki DLL. Nie zaleca się eksportowanie funkcji według liczby porządkowej, chyba że klientów biblioteki DLL potrzebny do obsługi starszych wersji. Ponieważ. Plik biblioteki będzie zawierać mapowania między numeru porządkowego a funkcją, można użyć nazwy funkcji, tak jak zwykle w projektach korzystających z biblioteki DLL.  
   
-```  
-EXPORTS  
-   func2=func1  
-```  
+Przy użyciu opcjonalnego `NONAME` — słowo kluczowe, możesz wyeksportować według liczby porządkowej tylko i Zmniejsz rozmiar tabeli eksportu w wynikowy DLL. Jednakże jeśli chcesz używać [GetProcAddress](http://msdn.microsoft.com/library/windows/desktop/ms683212.aspx) w pliku DLL, należy znać numer porządkowy, ponieważ nazwa straci ważność.  
   
- Ponieważ nazwij dekorację jest używana przez kompilator Visual C++ dla funkcji języka C++, należy użyć jako nazwa `entryname` lub `internalname`, lub zdefiniuj eksportowane funkcje za pomocą `extern "C"` w kodzie źródłowym. Kompilator decorates również funkcje języka C, które używają [__stdcall](../../cpp/stdcall.md) wywoływanie Konwencji z prefiksem podkreślenia (_) i sufiks, który składa się z znak @ (@) następuje liczba bajtów (dziesiętna) na liście argumentów.  
+Optional-słowo kluczowe `PRIVATE` zapobiega *Nazwa_wpisu* zostaną uwzględnione w Biblioteka importowana, generowana przez łącze. Nie ma ona wpływu na eksport na ilustracji, również jest generowany przez łącze.  
   
- Aby znaleźć nazwy ozdobione generowane przez kompilator, użyj [DUMPBIN](../../build/reference/dumpbin-reference.md) narzędzia lub konsolidator [/MAP](../../build/reference/map-generate-mapfile.md) opcji. Nazwy ozdobione są specyficzne dla kompilatora. Podczas eksportowania nazwy ozdobione w. Plik DEF, pliki wykonywalne, która łączy do biblioteki DLL muszą zostać skompilowane również przy użyciu tej samej wersji kompilatora. Dzięki temu, że nazwy ozdobione w wywołującego odpowiadać nazwom wyeksportowanego w. DEF pliku.  
+Optional-słowo kluczowe `DATA` Określa, że Eksport danych, a nie kod. Ten przykład przedstawia, jak można wyeksportować dane zmiennej o nazwie `exported_global`:  
   
- Można użyć`ordinal` do określenia, czy numer, a nie nazwą funkcji, zostaną umieszczone w tabeli eksportu biblioteki DLL. Wiele bibliotek DLL systemu Windows wyeksportować porządkowe do obsługi starszego kodu. Było wspólnego do użycia porządkowe w 16-bitowy kod systemu Windows, ponieważ może pomóc zminimalizować rozmiar pliku dll. Nie zaleca się eksportowanie funkcji według liczby porządkowej, chyba że klientów biblioteki DLL potrzebne do obsługi starszych wersji. Ponieważ. LIB plik będzie zawierał mapowanie między numer porządkowy i funkcji, można użyć nazwy funkcji, jak zwykle w projektach, które używają biblioteki DLL.  
-  
- Przy użyciu opcjonalnego `NONAME` — słowo kluczowe, możesz wyeksportować według liczby porządkowej tylko i zmniejszyć rozmiar tabeli eksportu w wynikowym pliku DLL. Jednak jeśli chcesz użyć [GetProcAddress](http://msdn.microsoft.com/library/windows/desktop/ms683212.aspx) w pliku DLL, należy znać numer porządkowy, ponieważ nazwa nie jest prawidłowy.  
-  
- Optional-słowo kluczowe `PRIVATE` uniemożliwia `entryname` zostaną uwzględnione w Biblioteka importowana, generowana przez łącze. Nie ma ona wpływu na eksportu w obrazie również generowany przez łącze.  
-  
- Optional-słowo kluczowe `DATA` Określa, że eksportowania danych, nie kod. W tym przykładzie pokazano, jak można wyeksportować danych zmiennej o nazwie `exported_global`:  
-  
-```  
+```DEF  
 EXPORTS  
    exported_global DATA  
 ```  
   
- Istnieją cztery sposoby eksportowania definicję w kolejności zalecane:  
+Istnieją cztery sposoby eksportowania definicji, wymienione w zalecanej kolejności:  
   
 1.  [__Declspec(dllexport)](../../cpp/dllexport-dllimport.md) — słowo kluczowe w kodzie źródłowym  
   
-2.  `EXPORTS` Oświadczenie. Plików DEF  
+2.  `EXPORTS` Instrukcji w. Plik DEF  
   
-3.  [/EXPORT](../../build/reference/export-exports-a-function.md) Specyfikacja polecenia łącza  
+3.  [/EXPORT](../../build/reference/export-exports-a-function.md) specyfikacji za pomocą polecenia łącza  
   
-4.  A [komentarz](../../preprocessor/comment-c-cpp.md) dyrektywy w kodzie źródłowym formularza `#pragma comment(linker, "/export: definition ")`  
+4.  A [komentarz](../../preprocessor/comment-c-cpp.md) dyrektywę w kodzie źródłowym w formularzu `#pragma comment(linker, "/export: definition ")`  
   
- Wszystkie cztery metody można użyć w ten sam program. Gdy łącze tworzy program, który zawiera eksportu, tworzy również biblioteki importowanej, chyba że. EXP, plik jest używany w kompilacji.  
+Wszystkie cztery metody może służyć w tym samym programie. Łączenie kompilacji program, który zawiera eksporty, powoduje również utworzenie biblioteki importowanej, chyba że. EXP, plik jest używany w kompilacji.  
   
- Poniżej przedstawiono przykład sekcji eksportu:  
+Oto przykład sekcji:  
   
-```  
+```DEF  
 EXPORTS  
    DllCanUnloadNow      @1          PRIVATE  
    DllWindowName = WindowName       DATA  
@@ -88,7 +96,8 @@ EXPORTS
    DllUnregisterServer  
 ```  
   
- Podczas eksportowania zmienną z biblioteki DLL przy użyciu. Plik DEF, nie trzeba określić `__declspec(dllexport)` zmiennej. Jednak w pliku, który korzysta z biblioteki DLL, należy nadal używać `__declspec(dllimport)` w deklaracji danych.  
+Podczas eksportowania zmienną z biblioteki DLL za pomocą. Plik DEF, nie trzeba określić `__declspec(dllexport)` na zmiennej. Jednak w dowolnym pliku, który korzysta z biblioteki DLL, należy nadal używać `__declspec(dllimport)` w deklaracji danych.  
   
-## <a name="see-also"></a>Zobacz też  
- [Zasady dla instrukcji definicji modułu](../../build/reference/rules-for-module-definition-statements.md)
+## <a name="see-also"></a>Zobacz także
+
+[Zasady dla instrukcji definicji modułu](../../build/reference/rules-for-module-definition-statements.md)
