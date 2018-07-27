@@ -11,25 +11,42 @@ f1_keywords:
 - IColumnsInfoImpl
 - ATL.IColumnsInfoImpl
 - ATL::IColumnsInfoImpl<T>
+- GetColumnInfo
+- ATL::IColumnsInfoImpl::GetColumnInfo
+- ATL.IColumnsInfoImpl.GetColumnInfo
+- ATL::IColumnsInfoImpl<T>::GetColumnInfo
+- IColumnsInfoImpl::GetColumnInfo
+- IColumnsInfoImpl<T>::GetColumnInfo
+- IColumnsInfoImpl.GetColumnInfo
+- IColumnsInfoImpl<T>::MapColumnIDs
+- MapColumnIDs
+- ATL::IColumnsInfoImpl::MapColumnIDs
+- IColumnsInfoImpl.MapColumnIDs
+- ATL::IColumnsInfoImpl<T>::MapColumnIDs
+- IColumnsInfoImpl::MapColumnIDs
+- ATL.IColumnsInfoImpl<T>.MapColumnIDs
+- ATL.IColumnsInfoImpl.MapColumnIDs
 dev_langs:
 - C++
 helpviewer_keywords:
 - IColumnsInfoImpl class
+- GetColumnInfo method
+- MapColumnIDs method
 ms.assetid: ba74c1c5-2eda-4452-8b57-84919fa0d066
 author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 93cc4c44031d2091de64f2d82c1866135d1702cd
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 1aa70a8efea82660632cf0219c76009eea44f606
+ms.sourcegitcommit: b0d6777cf4b580d093eaf6104d80a888706e7578
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33101061"
+ms.lasthandoff: 07/26/2018
+ms.locfileid: "39269816"
 ---
 # <a name="icolumnsinfoimpl-class"></a>IColumnsInfoImpl — Klasa
-Udostępnia implementację elementu [IColumnsInfo](https://msdn.microsoft.com/en-us/library/ms724541.aspx) interfejsu.  
+Udostępnia implementację [IColumnsInfo](https://msdn.microsoft.com/library/ms724541.aspx) interfejsu.  
   
 ## <a name="syntax"></a>Składnia
 
@@ -40,9 +57,12 @@ class ATL_NO_VTABLE IColumnsInfoImpl :
    public CDBIDOps  
 ```  
   
-#### <a name="parameters"></a>Parametry  
- `T`  
+### <a name="parameters"></a>Parametry  
+ *T*  
  Z klasą pochodną `IColumnsInfoImpl`.  
+
+## <a name="requirements"></a>Wymagania  
+ **Nagłówek:** atldb.h  
   
 ## <a name="members"></a>Elementy członkowskie  
   
@@ -50,14 +70,39 @@ class ATL_NO_VTABLE IColumnsInfoImpl :
   
 |||  
 |-|-|  
-|[GetColumnInfo](../../data/oledb/icolumnsinfoimpl-getcolumninfo.md)|Zwraca metadane kolumny wymagane przez większość konsumentów.|  
-|[MapColumnIDs](../../data/oledb/icolumnsinfoimpl-mapcolumnids.md)|Zwraca tablicę porządkowe kolumn w zestawie wierszy, które są identyfikowane za pomocą określonej kolumny identyfikatorów.|  
+|[GetColumnInfo](#getcolumninfo)|Zwraca metadane kolumny wymagane przez większość klientów.|  
+|[MapColumnIDs](#mapcolumnids)|Zwraca tablicę liczb porządkowych kolumn w zestawie wierszy, które są identyfikowane za pomocą określonej kolumny identyfikatorów.|  
   
 ## <a name="remarks"></a>Uwagi  
- Obowiązkowego interfejsu na polecenia i zestawy wierszy. Aby zmodyfikować zachowanie Twój dostawca `IColumnsInfo` implementacji, należy zmodyfikować dostawcy mapowania kolumn.  
+ Obowiązkowego interfejsu na polecenia i zestawy wierszy. Aby zmodyfikować zachowanie Twój dostawca `IColumnsInfo` wdrożenia, należy zmodyfikować dostawcy mapy kolumny.  
+
+## <a name="getcolumninfo"></a> IColumnsInfoImpl::GetColumnInfo
+Zwraca metadane kolumny wymagane przez większość klientów.  
   
-## <a name="requirements"></a>Wymagania  
- **Nagłówek:** atldb.h  
+### <a name="syntax"></a>Składnia  
+  
+```cpp
+      STDMETHOD (GetColumnInfo)(DBORDINAL* pcColumns,  
+   DBCOLUMNINFO** prgInfo,  
+   OLECHAR** ppStringsBuffer);  
+```  
+  
+#### <a name="parameters"></a>Parametry  
+ Zobacz [IColumnsInfo::GetColumnInfo](https://msdn.microsoft.com/library/ms722704.aspx) w *OLE DB Podręcznik programisty*.  
+
+## <a name="mapcolumnids"></a> IColumnsInfoImpl::MapColumnIDs
+Zwraca tablicę liczb porządkowych kolumn w zestawie wierszy, które są identyfikowane za pomocą określonej kolumny identyfikatorów.  
+  
+### <a name="syntax"></a>Składnia  
+  
+```cpp
+      STDMETHOD (MapColumnIDs)(DBORDINAL cColumnIDs,  
+   const DBID rgColumnIDs[],  
+   DBORDINAL rgColumns[]);  
+```  
+  
+#### <a name="parameters"></a>Parametry  
+ Zobacz [IColumnsInfo::MapColumnIDs](https://msdn.microsoft.com/library/ms714200.aspx) w *OLE DB Podręcznik programisty*.  
   
 ## <a name="see-also"></a>Zobacz też  
  [Szablony dostawców OLE DB](../../data/oledb/ole-db-provider-templates-cpp.md)   
