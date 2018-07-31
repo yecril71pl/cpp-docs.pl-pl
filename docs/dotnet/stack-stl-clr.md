@@ -69,21 +69,21 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: b24bf0eab913285559ec9905762e239841c93a00
-ms.sourcegitcommit: be0e3457f2884551f18e183ef0ea65c3ded7f689
+ms.openlocfilehash: 09368f3a43a5ba7a5a1c4247fdbbccdf345b0b21
+ms.sourcegitcommit: bad2441d1930275ff506d44759d283d94cccd1c0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/28/2018
-ms.locfileid: "37079736"
+ms.lasthandoff: 07/31/2018
+ms.locfileid: "39376212"
 ---
 # <a name="stack-stlclr"></a>stack (STL/CLR)
-Klasa szablonu opisuje obiekt, który określa sekwencję zróżnicowanych długość elementów, która ma dostęp w ostatniej FIFO. Użyj karty kontenera `stack` Zarządzanie kontenerem podstawowej jako stosu rozwijana wypychania.  
+Klasa szablonu opisuje obiekt, który kontroluje różnej długości sekwencje elementów mającego dostęp ostatni na wejściu. Użyj karty kontenera `stack` do zarządzania kontenerem podstawowej jako wypychania w dół stosu.  
   
- W polu poniżej, opis `GValue` jest taka sama jak `Value` o ile nie jest typu ref, w którym to przypadku jest `Value^`. Podobnie `GContainer` jest taka sama jak `Container` o ile nie jest typu ref, w którym to przypadku jest `Container^`.  
+ W poniższym opisie `GValue` jest taka sama jak *wartość* o ile nie jest typem odwołania, w którym to przypadku jest `Value^`. Podobnie `GContainer` jest taka sama jak *kontenera* o ile nie jest typem odwołania, w którym to przypadku jest `Container^`.  
   
 ## <a name="syntax"></a>Składnia  
   
-```  
+```cpp  
 template<typename Value,  
     typename Container>  
     ref class stack  
@@ -94,26 +94,26 @@ template<typename Value,
 ```  
   
 ### <a name="parameters"></a>Parametry  
- Wartość  
+ *Wartość*  
  Typ elementu w kontrolowanej sekwencji.  
   
- Kontener  
- Typ podstawowy kontenera.  
+ *Kontener*  
+ Typ podstawowy kontener.  
 
 ## <a name="requirements"></a>Wymagania  
- **Nagłówek:** \<cliext/stack >  
+ **Nagłówek:** \<cliext — / stack >  
   
- **Namespace:** cliext  
+ **Namespace:** cliext —  
   
 ## <a name="declarations"></a>Deklaracje  
   
 |Definicja typu|Opis|  
 |---------------------|-----------------|  
 |[stack::const_reference (STL/CLR)](#const_reference)|Typ stałego odwołania do elementu.|  
-|[stack::container_type (STL/CLR)](#container_type)|Typ podstawowy kontenera.|  
+|[stack::container_type (STL/CLR)](#container_type)|Typ podstawowy kontener.|  
 |[stack::difference_type (STL/CLR)](#difference_type)|Typ odległości ze znakiem między dwoma elementami.|  
-|[stack::generic_container (STL/CLR)](#generic_container)|Typ ogólny interfejs umożliwiający karty kontenera.|  
-|[stack::generic_value (STL/CLR)](#generic_value)|Typ elementu ogólnego interfejsu dla karty kontenera.|  
+|[stack::generic_container (STL/CLR)](#generic_container)|Typ ogólny interfejs dla karty kontenera.|  
+|[stack::generic_value (STL/CLR)](#generic_value)|Typ elementu dla ogólnego interfejsu dla karty kontenera.|  
 |[stack::reference (STL/CLR)](#reference)|Typ odwołania do elementu.|  
 |[stack::size_type (STL/CLR)](#size_type)|Typ odległości ze znakiem między dwoma elementami.|  
 |[stack::value_type (STL/CLR)](#value_type)|Typ elementu.|  
@@ -123,7 +123,7 @@ template<typename Value,
 |[stack::assign (STL/CLR)](#assign)|Zamienia wszystkie elementy.|  
 |[stack::empty (STL/CLR)](#empty)|Sprawdza, czy nie ma żadnych elementów.|  
 |[stack::get_container (STL/CLR)](#get_container)|Uzyskuje dostęp do podstawowych kontenera.|  
-|[stack::pop (STL/CLR)](#pop)|Usuwa ostatnim elemencie.|  
+|[stack::pop (STL/CLR)](#pop)|Usuwa ostatni element.|  
 |[stack::push (STL/CLR)](#push)|Dodaje nowy element ostatni.|  
 |[stack::size (STL/CLR)](#size)|Liczy liczbę elementów.|  
 |[stack::stack (STL/CLR)](#stack)|Konstruuje obiekt kontenera.|  
@@ -137,22 +137,22 @@ template<typename Value,
 |Operator|Opis|  
 |--------------|-----------------|  
 |[stack::operator= (STL/CLR)](#op_as)|Zastępuje kontrolowanej sekwencji.|  
-|[operator!= (stack) (STL/CLR)](#op_neq)|Określa, czy `stack` obiekt nie jest równa innej `stack` obiektu.|  
-|[operator< (stack) (STL/CLR)](#op_lt)|Określa, czy `stack` obiekt jest mniejszy niż innego `stack` obiektu.|  
-|[operator<= (stack) (STL/CLR)](#op_lteq)|Określa, czy `stack` obiekt jest mniejszy niż lub równy do innego `stack` obiektu.|  
-|[operator== (stack) (STL/CLR)](#op_eq)|Określa, czy `stack` obiekt jest taki sam do innego `stack` obiektu.|  
-|[operator> (stack) (STL/CLR)](#op_gt)|Określa, czy `stack` obiekt jest większy niż innego `stack` obiektu.|  
-|[operator>= (stack) (STL/CLR)](#op_gteq)|Określa, czy `stack` obiektu jest większa lub równa innej `stack` obiektu.|  
+|[operator!= (stack) (STL/CLR)](#op_neq)|Określa, czy `stack` obiekt nie jest równy innemu `stack` obiektu.|  
+|[operator< (stack) (STL/CLR)](#op_lt)|Określa, czy `stack` obiekt jest mniejszy niż inny `stack` obiektu.|  
+|[operator<= (stack) (STL/CLR)](#op_lteq)|Określa, czy `stack` obiekt jest mniejszy niż lub równy innemu `stack` obiektu.|  
+|[operator== (stack) (STL/CLR)](#op_eq)|Określa, czy `stack` obiekt jest równy innemu `stack` obiektu.|  
+|[operator> (stack) (STL/CLR)](#op_gt)|Określa, czy `stack` obiekt jest większy niż inny `stack` obiektu.|  
+|[operator>= (stack) (STL/CLR)](#op_gteq)|Określa, czy `stack` obiekt jest większy niż lub równy innemu `stack` obiektu.|  
   
 ## <a name="interfaces"></a>Interfejsy  
   
 |Interface|Opis|  
 |---------------|-----------------|  
-|<xref:System.ICloneable>|Zduplikowany obiekt.|  
+|<xref:System.ICloneable>|Duplikowanie obiektów.|  
 |IStack\<wartość, kontener >|Obsługa karty Ogólne kontenera.|  
   
 ## <a name="remarks"></a>Uwagi  
- Przydziela i zwalnia magazynu na potrzeby sekwencji steruje się za pomocą podstawowej kontenera, typu obiektu `Container`, który przechowuje `Value` elementów i rozwoju na żądanie. Obiekt ogranicza dostęp do wypychania i wyświetlanie tylko ostatni element, implementacja kolejki w ostatniej FIFO (znanej także jako kolejka LIFO, lub stos).  
+ Obiekt przydziela i zwalnia pamięć dla sekwencji za pośrednictwem podstawowych kontenera, typu *kontenera*, który przechowuje *wartość* elementy i rośnie na żądanie. Obiekt ogranicza dostęp do wypychanie i usuwanie tylko ostatni element, implementowanie kolejki ostatni na wejściu (znany także jako kolejki LIFO lub stosu).  
  
 ## <a name="members"></a>Elementy członkowskie
 
@@ -161,16 +161,16 @@ Zamienia wszystkie elementy.
   
 ### <a name="syntax"></a>Składnia  
   
-```  
+```cpp  
 void assign(stack<Value, Container>% right);  
 ```  
   
 #### <a name="parameters"></a>Parametry  
- w prawo  
- Karta kontenera do wstawienia.  
+ *right*  
+ Adapter kontenera do wstawienia.  
   
 ### <a name="remarks"></a>Uwagi  
- Funkcja członkowska przypisuje `right.get_container()` do podstawowej kontenera. Możesz użyć do zmiany całej zawartości stosu.  
+ Funkcja elementu członkowskiego przypisuje `right.get_container()` do bazowego kontenera. Możesz użyć do zmiany zawartości całego stosu.  
   
 ### <a name="example"></a>Przykład  
   
@@ -200,7 +200,6 @@ int main()
     System::Console::WriteLine();   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -213,12 +212,12 @@ Typ stałego odwołania do elementu.
   
 ### <a name="syntax"></a>Składnia  
   
-```  
+```cpp  
 typedef value_type% const_reference;  
 ```  
   
 ### <a name="remarks"></a>Uwagi  
- Typ w tym artykule opisano stałej odwołanie do elementu.  
+ Typ opisuje stałe odwołanie do elementu.  
   
 ### <a name="example"></a>Przykład  
   
@@ -244,7 +243,6 @@ int main()
     System::Console::WriteLine();   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -252,16 +250,16 @@ c b a
 ```  
 
 ## <a name="container_type"></a> Stack::container_type (STL/CLR)
-Typ podstawowy kontenera.  
+Typ podstawowy kontener.  
   
 ### <a name="syntax"></a>Składnia  
   
-```  
+```cpp  
 typedef Container value_type;  
 ```  
   
 ### <a name="remarks"></a>Uwagi  
- Typ jest synonimem parametru szablonu `Container`.  
+ Typ jest synonimem dla parametru szablonu *kontenera*.  
   
 ### <a name="example"></a>Przykład  
   
@@ -284,8 +282,7 @@ int main()
         System::Console::Write(" {0}", elem);   
     System::Console::WriteLine();   
     return (0);   
-    }  
-  
+    }   
 ```  
   
 ```Output  
@@ -293,16 +290,16 @@ a b c
 ```  
 
 ## <a name="difference_type"></a> Stack::difference_type (STL/CLR)
-Typy podpisane odległość między dwoma elementami.  
+Typy odległości ze znakiem między dwoma elementami.  
   
 ### <a name="syntax"></a>Składnia  
   
-```  
+```cpp  
 typedef int difference_type;  
 ```  
   
 ### <a name="remarks"></a>Uwagi  
- Typ w tym artykule opisano liczba ujemna prawdopodobnie elementu.  
+ Typ opisuje liczba element prawdopodobnie ujemna.  
   
 ### <a name="example"></a>Przykład  
   
@@ -340,7 +337,6 @@ int main()
     System::Console::WriteLine("popping 3 = {0}", diff);   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -354,12 +350,12 @@ Sprawdza, czy nie ma żadnych elementów.
   
 ### <a name="syntax"></a>Składnia  
   
-```  
+```cpp  
 bool empty();  
 ```  
   
 ### <a name="remarks"></a>Uwagi  
- Funkcja członkowska zwraca wartość true dla pustego kontrolowanej sekwencji. Jest to równoważne [stack::size (STL/CLR)](../dotnet/stack-size-stl-clr.md)`() == 0`. Można użyć do sprawdzenia, czy stos jest pusty.  
+ Funkcja elementu członkowskiego zwraca wartość true dla pustą kontrolowaną sekwencję. Jest to równoważne [stack::size (STL/CLR)](../dotnet/stack-size-stl-clr.md)`() == 0`. Możesz użyć do sprawdzenia, czy stos jest pusty.  
   
 ### <a name="example"></a>Przykład  
   
@@ -391,7 +387,6 @@ int main()
     System::Console::WriteLine("empty() = {0}", c1.empty());   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -403,17 +398,17 @@ empty() = True
 ```  
   
 ## <a name="generic_container"></a> Stack::generic_container (STL/CLR)
-Typ ogólny interfejs umożliwiający karty kontenera.  
+Typ ogólny interfejs dla karty kontenera.  
   
 ### <a name="syntax"></a>Składnia  
   
-```  
+```cpp  
 typedef Microsoft::VisualC::StlClr::IStack<Value>  
     generic_container;  
 ```  
   
 ### <a name="remarks"></a>Uwagi  
- Typ w tym artykule opisano ogólny interfejs dla tej klasy szablonu kontenera karty.  
+ Typ opisuje ogólny interfejs dla tej klasy szablonu kontenera karty.  
   
 ### <a name="example"></a>Przykład  
   
@@ -454,7 +449,6 @@ int main()
     System::Console::WriteLine();   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -465,16 +459,16 @@ a b c d e
 ```  
   
 ## <a name="generic_value"></a> Stack::generic_value (STL/CLR)
-Typ elementu do użytku ogólnego interfejs dla kontenera.  
+Typ elementu do użycia przy użyciu interfejsu ogólnego dla kontenera.  
   
 ### <a name="syntax"></a>Składnia  
   
-```  
+```cpp  
 typedef GValue generic_value;  
 ```  
   
 ### <a name="remarks"></a>Uwagi  
- Typ w tym artykule opisano typu obiektu `GValue` opisujący wartość elementu przechowywane do użytku ogólnego interfejs dla tej klasy kontenera szablonu. (`GValue` jest `value_type` lub `value_type^` Jeśli `value_type` jest typu referencyjnego.)  
+ Typ opisuje obiekt typu `GValue` wartość elementu przechowywane do użytku z ogólny interfejs dla tej klasy kontenera szablonu, który opisuje. (`GValue` jest `value_type` lub `value_type^` Jeśli `value_type` jest typem odwołania.)  
   
 ### <a name="example"></a>Przykład  
   
@@ -512,7 +506,6 @@ int main()
     System::Console::WriteLine();   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -526,12 +519,12 @@ Uzyskuje dostęp do podstawowych kontenera.
   
 ### <a name="syntax"></a>Składnia  
   
-```  
+```cpp  
 container_type^ get_container();  
 ```  
   
 ### <a name="remarks"></a>Uwagi  
- Funkcja członkowska zwraca uchwyt dla podstawowej kontenera. Umożliwia ona obejścia ograniczenia narzucone przez otoki kontenera.  
+ Element członkowski funkcji zwraca uchwyt bazowego kontenera. Umożliwia ona obejścia ograniczeń nałożonych przez otokę kontenera.  
   
 ### <a name="example"></a>Przykład  
   
@@ -555,7 +548,6 @@ int main()
     System::Console::WriteLine();   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -567,16 +559,16 @@ Zastępuje kontrolowanej sekwencji.
   
 ### <a name="syntax"></a>Składnia  
   
-```  
+```cpp  
 stack <Value, Container>% operator=(stack <Value, Container>% right);  
 ```  
   
 #### <a name="parameters"></a>Parametry  
- w prawo  
- Karta kontenera do skopiowania.  
+ *right*  
+ Adapter kontenera do skopiowania.  
   
 ### <a name="remarks"></a>Uwagi  
- Element członkowski operatora kopie `right` do obiektu, zwraca `*this`. Umożliwia ona Zamień kontrolowanej sekwencji kopię w kontrolowanej sekwencji `right`.  
+ Kopiuje operator składowej *prawo* do obiektu, następnie zwraca `*this`. Umożliwia ona Zastąp kopię kontrolowanej sekwencji w kontrolowanej sekwencji *prawo*.  
   
 ### <a name="example"></a>Przykład  
   
@@ -605,8 +597,7 @@ int main()
         System::Console::Write(" {0}", elem);   
     System::Console::WriteLine();   
     return (0);   
-    }  
-  
+    }   
 ```  
   
 ```Output  
@@ -615,16 +606,16 @@ a b c
 ```  
 
 ## <a name="pop"></a> Stack::POP (STL/CLR)
-Usuwa ostatnim elemencie.  
+Usuwa ostatni element.  
   
 ### <a name="syntax"></a>Składnia  
   
-```  
+```cpp  
 void pop();  
 ```  
   
 ### <a name="remarks"></a>Uwagi  
- Funkcja członkowska usuwa ostatniego elementu w kontrolowanej sekwencji musi być niepusta. Umożliwia ona skrócić czas stosu przez jeden element z tyłu.  
+ Funkcja członkowska usuwa ostatniego elementu w kontrolowanej sekwencji, która musi być niepusta. Umożliwia ona skrócić czas na stosie przez jeden element w tle.  
   
 ### <a name="example"></a>Przykład  
   
@@ -653,7 +644,6 @@ int main()
     System::Console::WriteLine();   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -666,12 +656,12 @@ Dodaje nowy element ostatni.
   
 ### <a name="syntax"></a>Składnia  
   
-```  
+```cpp  
 void push(value_type val);  
 ```  
   
 ### <a name="remarks"></a>Uwagi  
- Funkcja członkowska wstawia element z wartością `val` na końcu kontrolowanej sekwencji. Umożliwia ona dołączyć inny element na stosie.  
+ Funkcja elementu członkowskiego wstawia element z wartością `val` na koniec kontrolowanej sekwencji. Możesz użyć do dołączania innego elementu stosu.  
   
 ### <a name="example"></a>Przykład  
   
@@ -694,7 +684,6 @@ int main()
     System::Console::WriteLine();   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -706,12 +695,12 @@ Typ odwołania do elementu.
   
 ### <a name="syntax"></a>Składnia  
   
-```  
+```cpp  
 typedef value_type% reference;  
 ```  
   
 ### <a name="remarks"></a>Uwagi  
- Typ w tym artykule opisano odwołanie do elementu.  
+ Typ opisuje odwołanie do elementu.  
   
 ### <a name="example"></a>Przykład  
   
@@ -741,7 +730,6 @@ int main()
     System::Console::WriteLine();   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -754,12 +742,12 @@ Liczy liczbę elementów.
   
 ### <a name="syntax"></a>Składnia  
   
-```  
+```cpp  
 size_type size();  
 ```  
   
 ### <a name="remarks"></a>Uwagi  
- Funkcja członkowska zwraca długość kontrolowanej sekwencji. Można użyć do określenia liczby elementów aktualnie w kontrolowanej sekwencji. Jeśli wszystkie najważniejsze informacje dotyczące tego, czy sekwencja ma rozmiar różną od zera, zobacz [stack::empty (STL/CLR)](../dotnet/stack-empty-stl-clr.md)`()`.  
+ Funkcja elementu członkowskiego zwraca długość kontrolowanej sekwencji. Umożliwia ona określenie liczby elementów aktualnie w kontrolowanej sekwencji. Jeśli jest wszystkich interesujących Cię, czy sekwencja ma wartość różną od zera rozmiaru, zobacz [stack::empty (STL/CLR)](../dotnet/stack-empty-stl-clr.md)`()`.  
   
 ### <a name="example"></a>Przykład  
   
@@ -792,7 +780,6 @@ int main()
     System::Console::WriteLine("size() = {0} after adding 2", c1.size());   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -803,16 +790,16 @@ size() = 4 after adding 2
 ```  
 
 ## <a name="size_type"></a> Stack::size_type (STL/CLR)
-Typ podpisem odległość między dwoma elementu.  
+Typ odległości ze znakiem między dwoma elementu.  
   
 ### <a name="syntax"></a>Składnia  
   
-```  
+```cpp  
 typedef int size_type;  
 ```  
   
 ### <a name="remarks"></a>Uwagi  
- Typ w tym artykule opisano liczbą nieujemną elementu.  
+ Typ opisuje liczby nieujemnej wartości elementu.  
   
 ### <a name="example"></a>Przykład  
   
@@ -842,7 +829,6 @@ int main()
     System::Console::WriteLine("size difference = {0}", diff);   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -851,11 +837,11 @@ size difference = 2
 ```  
   
 ## <a name="stack"></a> Stack::Stack (STL/CLR)
-Tworzy obiekt Karta kontenera.  
+Konstruuje obiekt kontenera karty.  
   
 ### <a name="syntax"></a>Składnia  
   
-```  
+```cpp  
 stack();  
 stack(stack<Value, Container>% right);  
 stack(stack<Value, Container>^ right);  
@@ -863,10 +849,10 @@ explicit stack(container_type% wrapped);
 ```  
   
 #### <a name="parameters"></a>Parametry  
- w prawo  
- Obiekt przeznaczony do skopiowania.  
+ *right*  
+ Obiekt do skopiowania.  
   
- opakowana  
+ *opakowana*  
  Opakowana kontener do użycia.  
   
 ### <a name="remarks"></a>Uwagi  
@@ -874,25 +860,25 @@ explicit stack(container_type% wrapped);
   
  `stack();`  
   
- tworzy pusty kontener opakowana. Umożliwia ona Określ pusty początkowej kontrolowanej sekwencji.  
+ tworzy pusty kontener opakowana. Umożliwia ona określenie pustą kontrolowaną sekwencję początkowej.  
   
  Konstruktor:  
   
  `stack(stack<Value, Container>% right);`  
   
- Tworzy opakowana kontener, który jest kopią `right.get_container()`. Należy użyć do określenia początkowej kontrolowanej sekwencji, który jest kopią sekwencji kontrolowane przez obiekt stosu `right`.  
+ Tworzy opakowana kontener, który jest kopią `right.get_container()`. Umożliwia ona określenie początkowej kontrolowanej sekwencji, który jest kopią na sekwencję kontrolowaną przez obiekt stack *prawo*.  
   
  Konstruktor:  
   
  `stack(stack<Value, Container>^ right);`  
   
- Tworzy opakowana kontener, który jest kopią `right->get_container()`. Należy użyć do określenia początkowej kontrolowanej sekwencji, który jest kopią sekwencji kontrolowane przez obiekt stosu `*right`.  
+ Tworzy opakowana kontener, który jest kopią `right->get_container()`. Umożliwia ona określenie początkowej kontrolowanej sekwencji, który jest kopią na sekwencję kontrolowaną przez obiekt stack `*right`.  
   
  Konstruktor:  
   
  `explicit stack(container_type% wrapped);`  
   
- używa istniejącego kontenera `wrapped` jako kontener opakowana. Można użyć do utworzenia stosu z istniejącego kontenera.  
+ wykorzystuje istniejący kontener *opakowane* jako kontener opakowana. Możesz użyć do konstruowania stosu z istniejącego kontenera.  
   
 ### <a name="example"></a>Przykład  
   
@@ -930,8 +916,7 @@ int main()
         System::Console::Write(" {0}", elem);   
     System::Console::WriteLine();   
     return (0);   
-    }  
-  
+    }   
 ```  
   
 ```Output  
@@ -946,12 +931,12 @@ Kopiuje kontrolowanej sekwencji do nowej tablicy.
   
 ### <a name="syntax"></a>Składnia  
   
-```  
+```cpp  
 cli::array<Value>^ to_array();  
 ```  
   
 ### <a name="remarks"></a>Uwagi  
- Funkcja członkowska zwraca tablicę zawierającą kontrolowanej sekwencji. Umożliwia ona uzyskać kopię kontrolowanej sekwencji w postaci tablicy.  
+ Funkcja elementu członkowskiego zwraca tablicę zawierającą kontrolowanej sekwencji. Umożliwia ona otrzymać kopię kontrolowanej sekwencji w postaci tablicy.  
   
 ### <a name="example"></a>Przykład  
   
@@ -982,7 +967,6 @@ int main()
     System::Console::WriteLine();   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -995,12 +979,12 @@ Uzyskuje dostęp do ostatniego elementu.
   
 ### <a name="syntax"></a>Składnia  
   
-```  
+```cpp  
 reference top();  
 ```  
   
 ### <a name="remarks"></a>Uwagi  
- Funkcja członkowska zwraca odwołanie do ostatniego elementu w kontrolowanej sekwencji musi być niepusta. Umożliwia ona dostęp do ostatniego elementu, gdy wiesz, że istnieje.  
+ Funkcja elementu członkowskiego zwraca odwołanie do ostatniego elementu w kontrolowanej sekwencji, która musi być niepusta. Umożliwia ona dostęp do ostatniego elementu, gdy wiadomo, że istnieje.  
   
 ### <a name="example"></a>Przykład  
   
@@ -1032,7 +1016,6 @@ int main()
     System::Console::WriteLine();   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -1046,12 +1029,12 @@ Uzyskuje dostęp do ostatniego elementu.
   
 ### <a name="syntax"></a>Składnia  
   
-```  
+```cpp  
 property value_type top_item;  
 ```  
   
 ### <a name="remarks"></a>Uwagi  
- Właściwość uzyskuje dostęp do ostatniego elementu w kontrolowanej sekwencji musi być niepusta. Możesz użyć do odczytu lub zapisu ostatniego elementu, gdy wiesz, że istnieje.  
+ Właściwość uzyskuje dostęp do ostatniego elementu w kontrolowanej sekwencji, która musi być niepusta. Możesz użyć do odczytu lub zapisu ostatniego elementu, gdy wiadomo, że istnieje.  
   
 ### <a name="example"></a>Przykład  
   
@@ -1083,7 +1066,6 @@ int main()
     System::Console::WriteLine();   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -1097,12 +1079,12 @@ Typ elementu.
   
 ### <a name="syntax"></a>Składnia  
   
-```  
+```cpp  
 typedef Value value_type;  
 ```  
   
 ### <a name="remarks"></a>Uwagi  
- Typ jest synonimem parametru szablonu `Value`.  
+ Typ jest synonimem dla parametru szablonu *wartość*.  
   
 ### <a name="example"></a>Przykład  
   
@@ -1128,8 +1110,7 @@ int main()
         }   
     System::Console::WriteLine();   
     return (0);   
-    }  
-  
+    }   
 ```  
   
 ```Output  
@@ -1137,11 +1118,11 @@ c b a
 ```  
 
 ## <a name="op_neq"></a> Operator! = (stosu) (STL/CLR)
-Stos nie równa porównania.  
+Stos nie jest równe porównania.  
   
 ### <a name="syntax"></a>Składnia  
   
-```  
+```cpp  
 template<typename Value,  
     typename Container>  
     bool operator!=(stack<Value, Container>% left,  
@@ -1149,14 +1130,14 @@ template<typename Value,
 ```  
   
 #### <a name="parameters"></a>Parametry  
- left  
+ *left*  
  Po lewej stronie kontenera do porównania.  
   
- w prawo  
+ *right*  
  Kontener prawo do porównania.  
   
 ### <a name="remarks"></a>Uwagi  
- Funkcja operatora `!(left == right)`. Można go użyć do przetestowania czy `left` nie jest taka sama jak określona `right` po dwóch stosy są porównaniu elementu przez element.  
+ Funkcja operator zwraca `!(left == right)`. Można go używać do testowania czy *po lewej stronie* nie jest taka sama jak określona *prawo* po dwóch stosów są w porównaniu element po elemencie.  
   
 ### <a name="example"></a>Przykład  
   
@@ -1194,8 +1175,7 @@ int main()
     System::Console::WriteLine("[a b c] != [a b d] is {0}",   
         c1 != c2);   
     return (0);   
-    }  
-  
+    }   
 ```  
   
 ```Output  
@@ -1210,7 +1190,7 @@ Stos mniejsza niż porównania.
   
 ### <a name="syntax"></a>Składnia  
   
-```  
+```cpp  
 template<typename Value,  
     typename Container>  
     bool operator<(stack<Value, Container>% left,  
@@ -1218,14 +1198,14 @@ template<typename Value,
 ```  
   
 #### <a name="parameters"></a>Parametry  
- left  
+ *left*  
  Po lewej stronie kontenera do porównania.  
   
- w prawo  
+ *right*  
  Kontener prawo do porównania.  
   
 ### <a name="remarks"></a>Uwagi  
- Operator funkcja zwraca wartość true, jeśli, dla najniżej `i` dla którego `!(right[i] < left[i])` jest również wartość true, który `left[i] < right[i]`. W przeciwnym razie zwraca `left->` [stack::size (STL/CLR)](../dotnet/stack-size-stl-clr.md) `() <` `right->size()` używanej do testowania czy `left` jest umieszczane przed `right` po dwóch stosy są porównaniu elementu przez element.  
+ Operator funkcja zwraca wartość true, jeśli, na najniższą pozycję `i` dla którego `!(right[i] < left[i])` jest również wartość true, który `left[i] < right[i]`. W przeciwnym razie zwraca `left->` [stack::size (STL/CLR)](../dotnet/stack-size-stl-clr.md) `() <` `right->size()` używanej do testowania czy *po lewej stronie* był zamówiony przed *prawo* po dwóch stosów są w porównaniu element po elemencie.  
   
 ### <a name="example"></a>Przykład  
   
@@ -1263,8 +1243,7 @@ int main()
     System::Console::WriteLine("[a b c] < [a b d] is {0}",   
         c1 < c2);   
     return (0);   
-    }  
-  
+    }   
 ```  
   
 ```Output  
@@ -1279,7 +1258,7 @@ Mniejsze niż lub równe stosu porównania.
   
 ### <a name="syntax"></a>Składnia  
   
-```  
+```cpp  
 template<typename Value,  
     typename Container>  
     bool operator<=(stack<Value, Container>% left,  
@@ -1287,14 +1266,14 @@ template<typename Value,
 ```  
   
 #### <a name="parameters"></a>Parametry  
- left  
+ *left*  
  Po lewej stronie kontenera do porównania.  
   
- w prawo  
+ *right*  
  Kontener prawo do porównania.  
   
 ### <a name="remarks"></a>Uwagi  
- Funkcja operatora `!(right < left)`. Można go użyć do przetestowania czy `left` porządkowania nie po `right` po dwóch stosy są porównaniu elementu przez element.  
+ Funkcja operator zwraca `!(right < left)`. Można go używać do testowania czy *po lewej stronie* nie są porządkowane po *prawo* po dwóch stosów są w porównaniu element po elemencie.  
   
 ### <a name="example"></a>Przykład  
   
@@ -1332,8 +1311,7 @@ int main()
     System::Console::WriteLine("[a b d] <= [a b c] is {0}",   
         c2 <= c1);   
     return (0);   
-    }  
-  
+    }   
 ```  
   
 ```Output  
@@ -1344,11 +1322,11 @@ int main()
 ```  
 
 ## <a name="op_eq"></a> Operator == (stosu) (STL/CLR)
-Porównanie równy stosu.  
+Porównanie równego stosu.  
   
 ### <a name="syntax"></a>Składnia  
   
-```  
+```cpp  
 template<typename Value,  
     typename Container>  
     bool operator==(stack<Value, Container>% left,  
@@ -1356,14 +1334,14 @@ template<typename Value,
 ```  
   
 #### <a name="parameters"></a>Parametry  
- left  
+ *left*  
  Po lewej stronie kontenera do porównania.  
   
- w prawo  
+ *right*  
  Kontener prawo do porównania.  
   
 ### <a name="remarks"></a>Uwagi  
- Funkcja operatora zwraca wartość true, tylko wtedy, gdy w sekwencji, które są kontrolowane przez `left` i `right` ma taką samą długość i dla każdej pozycji `i`, `left[i] ==` `right[i]`. Służy do testowania czy `left` jest taka sama jak określona `right` po dwóch stosy są porównaniu elementu przez element.  
+ Funkcja operator zwraca wartość true, tylko wtedy, gdy sekwencje kontrolowane przez *po lewej stronie* i *prawo* tę samą długość, a dla każdej pozycji `i`, `left[i] ==` `right[i]`. Można go używać do testowania czy *po lewej stronie* jest taka sama jak określona *prawo* po dwóch stosów są w porównaniu element po elemencie.  
   
 ### <a name="example"></a>Przykład  
   
@@ -1401,8 +1379,7 @@ int main()
     System::Console::WriteLine("[a b c] == [a b d] is {0}",   
         c1 == c2);   
     return (0);   
-    }  
-  
+    }   
 ```  
   
 ```Output  
@@ -1417,7 +1394,7 @@ Stos jest większa niż porównania.
   
 ### <a name="syntax"></a>Składnia  
   
-```  
+```cpp  
 template<typename Value,  
     typename Container>  
     bool operator>(stack<Value, Container>% left,  
@@ -1425,14 +1402,14 @@ template<typename Value,
 ```  
   
 #### <a name="parameters"></a>Parametry  
- left  
+ *left*  
  Po lewej stronie kontenera do porównania.  
   
- w prawo  
+ *right*  
  Kontener prawo do porównania.  
   
 ### <a name="remarks"></a>Uwagi  
- Funkcja operatora `right` `<` `left`. Można go użyć do przetestowania czy `left` porządkowania po `right` po dwóch stosy są porównaniu elementu przez element.  
+ Funkcja operator zwraca `right` `<` `left`. Można go używać do testowania czy *po lewej stronie* są porządkowane po *prawo* po dwóch stosów są w porównaniu element po elemencie.  
   
 ### <a name="example"></a>Przykład  
   
@@ -1470,8 +1447,7 @@ int main()
     System::Console::WriteLine("[a b d] > [a b c] is {0}",   
         c2 > c1);   
     return (0);   
-    }  
-  
+    }   
 ```  
   
 ```Output  
@@ -1486,7 +1462,7 @@ Stos jest większa niż lub równe porównania.
   
 ### <a name="syntax"></a>Składnia  
   
-```  
+```cpp  
 template<typename Value,  
     typename Container>  
     bool operator>=(stack<Value, Container>% left,  
@@ -1494,18 +1470,18 @@ template<typename Value,
 ```  
   
 #### <a name="parameters"></a>Parametry  
- left  
+ *left*  
  Po lewej stronie kontenera do porównania.  
   
- w prawo  
+ *right*  
  Kontener prawo do porównania.  
   
 ### <a name="remarks"></a>Uwagi  
- Funkcja operatora `!(left < right)`. Można go użyć do przetestowania czy `left` nie jest umieszczane przed `right` po dwóch stosy są porównaniu elementu przez element.  
+ Funkcja operator zwraca `!(left < right)`. Można go używać do testowania czy *po lewej stronie* nie był zamówiony przed *prawo* po dwóch stosów są w porównaniu element po elemencie.  
   
 ### <a name="example"></a>Przykład  
   
-```  
+```cpp  
 // cliext_stack_operator_ge.cpp   
 // compile with: /clr   
 #include <cliext/stack>   
@@ -1540,7 +1516,6 @@ int main()
         c1 >= c2);   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -1548,4 +1523,4 @@ int main()
  a b d  
 [a b c] >= [a b c] is True  
 [a b c] >= [a b d] is False  
-```  
+``` 

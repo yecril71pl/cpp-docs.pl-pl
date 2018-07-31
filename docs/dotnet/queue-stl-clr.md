@@ -73,21 +73,21 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 1ae23bf845e3fa78a1971def6ea0034c94b57991
-ms.sourcegitcommit: be0e3457f2884551f18e183ef0ea65c3ded7f689
+ms.openlocfilehash: adf65c4af70b0ba6bc1f089576d69160ab21a5b6
+ms.sourcegitcommit: bad2441d1930275ff506d44759d283d94cccd1c0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/28/2018
-ms.locfileid: "37079710"
+ms.lasthandoff: 07/31/2018
+ms.locfileid: "39376000"
 ---
 # <a name="queue-stlclr"></a>queue (STL/CLR)
-Klasa szablonu opisuje obiekt, który określa sekwencję zróżnicowanych długość elementów, która ma dostęp w pierwszym FIFO. Użyj karty kontenera `queue` Zarządzanie kontenerem podstawowej jako kolejki.  
+Klasa szablonu opisuje obiekt, który kontroluje różnej długości sekwencje elementów mającym pierwszy na wejściu dostęp. Użyj karty kontenera `queue` do zarządzania kontenerem podstawowej jako kolejki.  
   
- W polu poniżej, opis `GValue` jest taka sama jak `Value` o ile nie jest typu ref, w którym to przypadku jest `Value^`. Podobnie `GContainer` jest taka sama jak `Container` o ile nie jest typu ref, w którym to przypadku jest `Container^`.  
+ W poniższym opisie `GValue` jest taka sama jak *wartość* o ile nie jest typem odwołania, w którym to przypadku jest `Value^`. Podobnie `GContainer` jest taka sama jak *kontenera* o ile nie jest typem odwołania, w którym to przypadku jest `Container^`.  
   
 ## <a name="syntax"></a>Składnia  
   
-```  
+```cpp  
 template<typename Value,  
     typename Container>  
     ref class queue  
@@ -98,26 +98,26 @@ template<typename Value,
 ```  
   
 ### <a name="parameters"></a>Parametry  
- Wartość  
+ *Wartość*  
  Typ elementu w kontrolowanej sekwencji.  
   
- Kontener  
- Typ podstawowy kontenera.  
+ *Kontener*  
+ Typ podstawowy kontener.  
   
 ## <a name="requirements"></a>Wymagania  
- **Nagłówek:** \<cliext/kolejki >  
+ **Nagłówek:** \<cliext — / kolejki >  
   
- **Namespace:** cliext  
+ **Namespace:** cliext —  
 
 ## <a name="declarations"></a>Deklaracje  
   
 |Definicja typu|Opis|  
 |---------------------|-----------------|  
 |[queue::const_reference (STL/CLR)](#const_reference)|Typ stałego odwołania do elementu.|  
-|[queue::container_type (STL/CLR)](#container_type)|Typ podstawowy kontenera.|  
+|[queue::container_type (STL/CLR)](#container_type)|Typ podstawowy kontener.|  
 |[queue::difference_type (STL/CLR)](#difference_type)|Typ odległości ze znakiem między dwoma elementami.|  
-|[queue::generic_container (STL/CLR)](#generic_container)|Typ ogólny interfejs umożliwiający karty kontenera.|  
-|[queue::generic_value (STL/CLR)](#generic_value)|Typ elementu ogólnego interfejsu dla karty kontenera.|  
+|[queue::generic_container (STL/CLR)](#generic_container)|Typ ogólny interfejs dla karty kontenera.|  
+|[queue::generic_value (STL/CLR)](#generic_value)|Typ elementu dla ogólnego interfejsu dla karty kontenera.|  
 |[queue::reference (STL/CLR)](#reference)|Typ odwołania do elementu.|  
 |[queue::size_type (STL/CLR)](#size_type)|Typ odległości ze znakiem między dwoma elementami.|  
 |[queue::value_type (STL/CLR)](#value_type)|Typ elementu.|  
@@ -129,7 +129,7 @@ template<typename Value,
 |[queue::empty (STL/CLR)](#empty)|Sprawdza, czy nie ma żadnych elementów.|  
 |[queue::front (STL/CLR)](#front)|Uzyskuje dostęp do pierwszego elementu.|  
 |[queue::get_container (STL/CLR)](#get_container)|Uzyskuje dostęp do podstawowych kontenera.|  
-|[queue::pop (STL/CLR)](#pop)|Usuwa pierwszego elementu.|  
+|[queue::pop (STL/CLR)](#pop)|Usuwa pierwszy element.|  
 |[queue::push (STL/CLR)](#push)|Dodaje nowy element ostatni.|  
 |[queue::queue (STL/CLR)](#queue)|Konstruuje obiekt kontenera.|  
 |[queue::size (STL/CLR)](#size)|Liczy liczbę elementów.|  
@@ -143,22 +143,22 @@ template<typename Value,
 |Operator|Opis|  
 |--------------|-----------------|  
 |[queue::operator= (STL/CLR)](#op_as)|Zastępuje kontrolowanej sekwencji.|  
-|[operator!= (queue) (STL/CLR)](#op_neq)|Określa, czy `queue` obiekt nie jest równa innej `queue` obiektu.|  
-|[operator< (queue) (STL/CLR)](#op_lt)|Określa, czy `queue` obiekt jest mniejszy niż innego `queue` obiektu.|  
-|[operator<= (queue) (STL/CLR)](#op_lteq)|Określa, czy `queue` obiekt jest mniejszy niż lub równy do innego `queue` obiektu.|  
-|[operator== (queue) (STL/CLR)](#op_eq)|Określa, czy `queue` obiekt jest taki sam do innego `queue` obiektu.|  
-|[operator> (queue) (STL/CLR)](#op_gt)|Określa, czy `queue` obiekt jest większy niż innego `queue` obiektu.|  
-|[operator>= (queue) (STL/CLR)](#op_gteq)|Określa, czy `queue` obiektu jest większa lub równa innej `queue` obiektu.|  
+|[operator!= (queue) (STL/CLR)](#op_neq)|Określa, czy `queue` obiekt nie jest równy innemu `queue` obiektu.|  
+|[operator< (queue) (STL/CLR)](#op_lt)|Określa, czy `queue` obiekt jest mniejszy niż inny `queue` obiektu.|  
+|[operator<= (queue) (STL/CLR)](#op_lteq)|Określa, czy `queue` obiekt jest mniejszy niż lub równy innemu `queue` obiektu.|  
+|[operator== (queue) (STL/CLR)](#op_eq)|Określa, czy `queue` obiekt jest równy innemu `queue` obiektu.|  
+|[operator> (queue) (STL/CLR)](#op_gt)|Określa, czy `queue` obiekt jest większy niż inny `queue` obiektu.|  
+|[operator>= (queue) (STL/CLR)](#op_gteq)|Określa, czy `queue` obiekt jest większy niż lub równy innemu `queue` obiektu.|  
   
 ## <a name="interfaces"></a>Interfejsy  
   
 |Interface|Opis|  
 |---------------|-----------------|  
-|<xref:System.ICloneable>|Zduplikowany obiekt.|  
+|<xref:System.ICloneable>|Duplikowanie obiektów.|  
 |IQueue\<wartość, kontener >|Obsługa karty Ogólne kontenera.|  
   
 ## <a name="remarks"></a>Uwagi  
- Przydziela i zwalnia magazynu na potrzeby sekwencji steruje się za pomocą podstawowej kontenera, typu obiektu `Container`, który przechowuje `Value` elementów i rozwoju na żądanie. Obiekt ogranicza dostęp do wypychania tylko pierwszy element i wyświetlanie ostatnim elementem, implementacja FIFO w pierwszej kolejki (znanej także jako kolejce FIFO lub po prostu kolejki).  
+ Obiekt przydziela i zwalnia pamięć dla sekwencji za pośrednictwem podstawowych kontenera, typu `Container`, który przechowuje `Value` elementy i rośnie na żądanie. Obiekt ogranicza dostęp do właśnie wypychanie pierwszego elementu, a usuwanie ostatniego elementu, implementowanie pierwszy na wejściu kolejki (znany także jako kolejki FIFO lub po prostu kolejki).  
   
 ## <a name="members"></a>Elementy członkowskie
 
@@ -167,16 +167,16 @@ Zamienia wszystkie elementy.
   
 ### <a name="syntax"></a>Składnia  
   
-```  
+```cpp  
 void assign(queue<Value, Container>% right);  
 ```  
   
 #### <a name="parameters"></a>Parametry  
- w prawo  
- Karta kontenera do wstawienia.  
+ *right*  
+ Adapter kontenera do wstawienia.  
   
 ### <a name="remarks"></a>Uwagi  
- Funkcja członkowska przypisuje `right.get_container()` do podstawowej kontenera. Możesz użyć do zmiany całej zawartości kolejki.  
+ Funkcja elementu członkowskiego przypisuje `right.get_container()` do bazowego kontenera. Możesz użyć do zmiany całej zawartości kolejki.  
   
 ### <a name="example"></a>Przykład  
   
@@ -206,7 +206,6 @@ int main()
     System::Console::WriteLine();   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -219,12 +218,12 @@ Uzyskuje dostęp do ostatniego elementu.
   
 ### <a name="syntax"></a>Składnia  
   
-```  
+```cpp  
 reference back();  
 ```  
   
 ### <a name="remarks"></a>Uwagi  
- Funkcja członkowska zwraca odwołanie do ostatniego elementu w kontrolowanej sekwencji musi być niepusta. Umożliwia ona dostęp do ostatniego elementu, gdy wiesz, że istnieje.  
+ Funkcja elementu członkowskiego zwraca odwołanie do ostatniego elementu w kontrolowanej sekwencji, która musi być niepusta. Umożliwia ona dostęp do ostatniego elementu, gdy wiadomo, że istnieje.  
   
 ### <a name="example"></a>Przykład  
   
@@ -256,7 +255,6 @@ int main()
     System::Console::WriteLine();   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -270,12 +268,12 @@ Uzyskuje dostęp do ostatniego elementu.
   
 ### <a name="syntax"></a>Składnia  
   
-```  
+```cpp  
 property value_type back_item;  
 ```  
   
 ### <a name="remarks"></a>Uwagi  
- Właściwość uzyskuje dostęp do ostatniego elementu w kontrolowanej sekwencji musi być niepusta. Możesz użyć do odczytu lub zapisu ostatniego elementu, gdy wiesz, że istnieje.  
+ Właściwość uzyskuje dostęp do ostatniego elementu w kontrolowanej sekwencji, która musi być niepusta. Możesz użyć do odczytu lub zapisu ostatniego elementu, gdy wiadomo, że istnieje.  
   
 ### <a name="example"></a>Przykład  
   
@@ -307,7 +305,6 @@ int main()
     System::Console::WriteLine();   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -321,12 +318,12 @@ Typ stałego odwołania do elementu.
   
 ### <a name="syntax"></a>Składnia  
   
-```  
+```cpp  
 typedef value_type% const_reference;  
 ```  
   
 ### <a name="remarks"></a>Uwagi  
- Typ w tym artykule opisano stałej odwołanie do elementu.  
+ Typ opisuje stałe odwołanie do elementu.  
   
 ### <a name="example"></a>Przykład  
   
@@ -352,7 +349,6 @@ int main()
     System::Console::WriteLine();   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -360,16 +356,16 @@ a b c
 ```  
 
 ## <a name="container_type"></a> Queue::container_type (STL/CLR)
-Typ podstawowy kontenera.  
+Typ podstawowy kontener.  
   
 ### <a name="syntax"></a>Składnia  
   
-```  
+```cpp  
 typedef Container value_type;  
 ```  
   
 ### <a name="remarks"></a>Uwagi  
- Typ jest synonimem parametru szablonu `Container`.  
+ Typ jest synonimem dla parametru szablonu `Container`.  
   
 ### <a name="example"></a>Przykład  
   
@@ -393,7 +389,6 @@ int main()
     System::Console::WriteLine();   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -401,16 +396,16 @@ a b c
 ```  
 
 ## <a name="difference_type"></a> Queue::difference_type (STL/CLR)
-Typy podpisane odległość między dwoma elementami.  
+Typy odległości ze znakiem między dwoma elementami.  
   
 ### <a name="syntax"></a>Składnia  
   
-```  
+```cpp  
 typedef int difference_type;  
 ```  
   
 ### <a name="remarks"></a>Uwagi  
- Typ w tym artykule opisano liczba ujemna prawdopodobnie elementu.  
+ Typ opisuje liczba element prawdopodobnie ujemna.  
   
 ### <a name="example"></a>Przykład  
   
@@ -448,7 +443,6 @@ int main()
     System::Console::WriteLine("popping 3 = {0}", diff);   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -462,12 +456,12 @@ Sprawdza, czy nie ma żadnych elementów.
   
 ### <a name="syntax"></a>Składnia  
   
-```  
+```cpp  
 bool empty();  
 ```  
   
 ### <a name="remarks"></a>Uwagi  
- Funkcja członkowska zwraca wartość true dla pustego kontrolowanej sekwencji. Jest to równoważne [queue::size (STL/CLR)](../dotnet/queue-size-stl-clr.md)`() == 0`. Można użyć do sprawdzenia, czy kolejka jest pusta.  
+ Funkcja elementu członkowskiego zwraca wartość true dla pustą kontrolowaną sekwencję. Jest to równoważne [queue::size (STL/CLR)](../dotnet/queue-size-stl-clr.md)`() == 0`. Możesz użyć do sprawdzenia, czy kolejka jest pusta.  
   
 ### <a name="example"></a>Przykład  
   
@@ -499,7 +493,6 @@ int main()
     System::Console::WriteLine("empty() = {0}", c1.empty());   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -515,12 +508,12 @@ Uzyskuje dostęp do pierwszego elementu.
   
 ### <a name="syntax"></a>Składnia  
   
-```  
+```cpp  
 reference front();  
 ```  
   
 ### <a name="remarks"></a>Uwagi  
- Funkcja członkowska zwraca odwołanie do pierwszego elementu w kontrolowanej sekwencji musi być niepusta. Umożliwia ona dostęp do pierwszego elementu, gdy wiesz, że istnieje.  
+ Funkcja elementu członkowskiego zwraca odwołanie do pierwszego elementu w kontrolowanej sekwencji, która musi być niepusta. Umożliwia ona dostęp do pierwszego elementu, gdy wiadomo, że istnieje.  
   
 ### <a name="example"></a>Przykład  
   
@@ -552,7 +545,6 @@ int main()
     System::Console::WriteLine();   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -566,12 +558,12 @@ Uzyskuje dostęp do pierwszego elementu.
   
 ### <a name="syntax"></a>Składnia  
   
-```  
+```cpp  
 property value_type front_item;  
 ```  
   
 ### <a name="remarks"></a>Uwagi  
- Właściwość uzyskuje dostęp do pierwszego elementu obiektu kontrolowanej sekwencji musi być niepusta. Możesz używać do odczytywania lub zapisywania pierwszego elementu, gdy wiesz, że istnieje.  
+ Właściwość uzyskuje dostęp do pierwszego elementu w kontrolowanej sekwencji, która musi być niepusta. Możesz użyć do odczytu lub zapisu pierwszego elementu, gdy wiadomo, że istnieje.  
   
 ### <a name="example"></a>Przykład  
   
@@ -603,7 +595,6 @@ int main()
     System::Console::WriteLine();   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -613,17 +604,17 @@ front_item = a
 ```  
 
 ## <a name="generic_container"></a> Queue::generic_container (STL/CLR)
-Typ ogólny interfejs umożliwiający karty kontenera.  
+Typ ogólny interfejs dla karty kontenera.  
   
 ### <a name="syntax"></a>Składnia  
   
-```  
+```cpp  
 typedef Microsoft::VisualC::StlClr::IQueue<Value>  
     generic_container;  
 ```  
   
 ### <a name="remarks"></a>Uwagi  
- Typ w tym artykule opisano ogólny interfejs dla tej klasy szablonu kontenera karty.  
+ Typ opisuje ogólny interfejs dla tej klasy szablonu kontenera karty.  
   
 ### <a name="example"></a>Przykład  
   
@@ -664,7 +655,6 @@ int main()
     System::Console::WriteLine();   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -675,16 +665,16 @@ a b c d e
 ```  
 
 ## <a name="generic_value"></a> Queue::generic_value (STL/CLR)
-Typ elementu do użytku ogólnego interfejs dla kontenera.  
+Typ elementu do użycia przy użyciu interfejsu ogólnego dla kontenera.  
   
 ### <a name="syntax"></a>Składnia  
   
-```  
+```cpp  
 typedef GValue generic_value;  
 ```  
   
 ### <a name="remarks"></a>Uwagi  
- Typ w tym artykule opisano typu obiektu `GValue` opisujący wartość elementu przechowywane do użytku ogólnego interfejs dla tej klasy kontenera szablonu. (`GValue` jest `value_type` lub `value_type^` Jeśli `value_type` jest typu referencyjnego.)  
+ Typ opisuje obiekt typu `GValue` wartość elementu przechowywane do użytku z ogólny interfejs dla tej klasy kontenera szablonu, który opisuje. (`GValue` jest `value_type` lub `value_type^` Jeśli `value_type` jest typem odwołania.)  
   
 ### <a name="example"></a>Przykład  
   
@@ -722,7 +712,6 @@ int main()
     System::Console::WriteLine();   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -736,12 +725,12 @@ Uzyskuje dostęp do podstawowych kontenera.
   
 ### <a name="syntax"></a>Składnia  
   
-```  
+```cpp  
 container_type^ get_container();  
 ```  
   
 ### <a name="remarks"></a>Uwagi  
- Funkcja członkowska zwraca podstawowej kontenera. Umożliwia ona obejścia ograniczenia narzucone przez otoki kontenera.  
+ Funkcja elementu członkowskiego zwraca bazowego kontenera. Umożliwia ona obejścia ograniczeń nałożonych przez otokę kontenera.  
   
 ### <a name="example"></a>Przykład  
   
@@ -764,7 +753,6 @@ int main()
     System::Console::WriteLine();   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -776,16 +764,16 @@ Zastępuje kontrolowanej sekwencji.
   
 ### <a name="syntax"></a>Składnia  
   
-```  
+```cpp  
 queue <Value, Container>% operator=(queue <Value, Container>% right);  
 ```  
   
 #### <a name="parameters"></a>Parametry  
- w prawo  
- Karta kontenera do skopiowania.  
+ *right*  
+ Adapter kontenera do skopiowania.  
   
 ### <a name="remarks"></a>Uwagi  
- Element członkowski operatora kopie `right` do obiektu, zwraca `*this`. Umożliwia ona Zamień kontrolowanej sekwencji kopię w kontrolowanej sekwencji `right`.  
+ Kopiuje operator składowej *prawo* do obiektu, następnie zwraca `*this`. Umożliwia ona Zastąp kopię kontrolowanej sekwencji w kontrolowanej sekwencji *prawo*.  
   
 ### <a name="example"></a>Przykład  
   
@@ -814,8 +802,7 @@ int main()
         System::Console::Write(" {0}", elem);   
     System::Console::WriteLine();   
     return (0);   
-    }  
-  
+    }   
 ```  
   
 ```Output  
@@ -824,20 +811,20 @@ a b c
 ```  
 
 ## <a name="pop"></a> Queue::POP (STL/CLR)
-Usuwa ostatnim elemencie.  
+Usuwa ostatni element.  
   
 ### <a name="syntax"></a>Składnia  
   
-```  
+```cpp  
 void pop();  
 ```  
   
 ### <a name="remarks"></a>Uwagi  
- Funkcja członkowska usuwa ostatniego elementu w kontrolowanej sekwencji musi być niepusta. Umożliwia ona skrócić czas kolejki przez jeden element z tyłu.  
+ Funkcja członkowska usuwa ostatniego elementu w kontrolowanej sekwencji, która musi być niepusta. Umożliwia ona skrócić czas kolejki przez jeden element w tle.  
   
 ### <a name="example"></a>Przykład  
   
-```  
+```cpp  
 // cliext_queue_pop.cpp   
 // compile with: /clr   
 #include <cliext/queue>   
@@ -862,7 +849,6 @@ int main()
     System::Console::WriteLine();   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -875,12 +861,12 @@ Dodaje nowy element ostatni.
   
 ### <a name="syntax"></a>Składnia  
   
-```  
+```cpp  
 void push(value_type val);  
 ```  
   
 ### <a name="remarks"></a>Uwagi  
- Funkcja członkowska dodaje element z wartością `val` na końcu kolejki. Umożliwia ona dołączyć elementu do kolejki.  
+ Funkcja elementu członkowskiego dodaje element z wartością `val` na końcu kolejki. Umożliwia ona dołączyć element w kolejce.  
   
 ### <a name="example"></a>Przykład  
   
@@ -903,7 +889,6 @@ int main()
     System::Console::WriteLine();   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -911,11 +896,11 @@ a b c
 ```  
 
 ## <a name="queue"></a> Queue::Queue (STL/CLR)
-Tworzy obiekt Karta kontenera.  
+Konstruuje obiekt kontenera karty.  
   
 ### <a name="syntax"></a>Składnia  
   
-```  
+```cpp  
 queue();  
 queue(queue<Value, Container>% right);  
 queue(queue<Value, Container>^ right);  
@@ -923,10 +908,10 @@ explicit queue(container_type% wrapped);
 ```  
   
 #### <a name="parameters"></a>Parametry  
- w prawo  
- Obiekt przeznaczony do skopiowania.  
+ *right*  
+ Obiekt do skopiowania.  
   
- opakowana  
+ *opakowana*  
  Opakowana kontener do użycia.  
   
 ### <a name="remarks"></a>Uwagi  
@@ -934,25 +919,25 @@ explicit queue(container_type% wrapped);
   
  `queue();`  
   
- tworzy pusty kontener opakowana. Umożliwia ona Określ pusty początkowej kontrolowanej sekwencji.  
+ tworzy pusty kontener opakowana. Umożliwia ona określenie pustą kontrolowaną sekwencję początkowej.  
   
  Konstruktor:  
   
  `queue(queue<Value, Container>% right);`  
   
- Tworzy opakowana kontener, który jest kopią `right.get_container()`. Należy użyć do określenia początkowej kontrolowanej sekwencji, który jest kopią sekwencji kontrolowane przez obiekt kolejki `right`.  
+ Tworzy opakowana kontener, który jest kopią `right.get_container()`. Umożliwia ona określenie początkowej kontrolowanej sekwencji, który jest kopią na sekwencję kontrolowaną przez obiekt kolejki *prawo*.  
   
  Konstruktor:  
   
  `queue(queue<Value, Container>^ right);`  
   
- Tworzy opakowana kontener, który jest kopią `right->get_container()`. Należy użyć do określenia początkowej kontrolowanej sekwencji, który jest kopią sekwencji kontrolowane przez obiekt kolejki `*right`.  
+ Tworzy opakowana kontener, który jest kopią `right->get_container()`. Umożliwia ona określenie początkowej kontrolowanej sekwencji, który jest kopią na sekwencję kontrolowaną przez obiekt kolejki `*right`.  
   
  Konstruktor:  
   
  `explicit queue(container_type wrapped);`  
   
- używa istniejącego kontenera `wrapped` jako kontener opakowana. Możesz użyć do utworzenia kolejki z istniejącego kontenera.  
+ wykorzystuje istniejący kontener *opakowane* jako kontener opakowana. Możesz użyć do utworzenia kolejki z istniejącego kontenera.  
   
 ### <a name="example"></a>Przykład  
   
@@ -991,7 +976,6 @@ int main()
     System::Console::WriteLine();   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -1006,12 +990,12 @@ Typ odwołania do elementu.
   
 ### <a name="syntax"></a>Składnia  
   
-```  
+```cpp  
 typedef value_type% reference;  
 ```  
   
 ### <a name="remarks"></a>Uwagi  
- Typ w tym artykule opisano odwołanie do elementu.  
+ Typ opisuje odwołanie do elementu.  
   
 ### <a name="example"></a>Przykład  
   
@@ -1041,7 +1025,6 @@ int main()
     System::Console::WriteLine();   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -1054,12 +1037,12 @@ Liczy liczbę elementów.
   
 ### <a name="syntax"></a>Składnia  
   
-```  
+```cpp  
 size_type size();  
 ```  
   
 ### <a name="remarks"></a>Uwagi  
- Funkcja członkowska zwraca długość kontrolowanej sekwencji. Można użyć do określenia liczby elementów aktualnie w kontrolowanej sekwencji. Jeśli wszystkie najważniejsze informacje dotyczące tego, czy sekwencja ma rozmiar różną od zera, zobacz [queue::empty (STL/CLR)](../dotnet/queue-empty-stl-clr.md)`()`.  
+ Funkcja elementu członkowskiego zwraca długość kontrolowanej sekwencji. Umożliwia ona określenie liczby elementów aktualnie w kontrolowanej sekwencji. Jeśli jest wszystkich interesujących Cię, czy sekwencja ma wartość różną od zera rozmiaru, zobacz [queue::empty (STL/CLR)](../dotnet/queue-empty-stl-clr.md)`()`.  
   
 ### <a name="example"></a>Przykład  
   
@@ -1092,7 +1075,6 @@ int main()
     System::Console::WriteLine("size() = {0} after adding 2", c1.size());   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -1103,16 +1085,16 @@ size() = 4 after adding 2
 ```  
 
 ## <a name="size_type"></a> Queue::size_type (STL/CLR)
-Typ podpisem odległość między dwoma elementu.  
+Typ odległości ze znakiem między dwoma elementu.  
   
 ### <a name="syntax"></a>Składnia  
   
-```  
+```cpp  
 typedef int size_type;  
 ```  
   
 ### <a name="remarks"></a>Uwagi  
- Typ w tym artykule opisano liczbą nieujemną elementu.  
+ Typ opisuje liczby nieujemnej wartości elementu.  
   
 ### <a name="example"></a>Przykład  
   
@@ -1142,7 +1124,6 @@ int main()
     System::Console::WriteLine("size difference = {0}", diff);   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -1155,16 +1136,16 @@ Kopiuje kontrolowanej sekwencji do nowej tablicy.
   
 ### <a name="syntax"></a>Składnia  
   
-```  
+```cpp  
 cli::array<Value>^ to_array();  
 ```  
   
 ### <a name="remarks"></a>Uwagi  
- Funkcja członkowska zwraca tablicę zawierającą kontrolowanej sekwencji. Umożliwia ona uzyskać kopię kontrolowanej sekwencji w postaci tablicy.  
+ Funkcja elementu członkowskiego zwraca tablicę zawierającą kontrolowanej sekwencji. Umożliwia ona otrzymać kopię kontrolowanej sekwencji w postaci tablicy.  
   
 ### <a name="example"></a>Przykład  
   
-```  
+```cpp  
 // cliext_queue_to_array.cpp   
 // compile with: /clr   
 #include <cliext/queue>   
@@ -1191,7 +1172,6 @@ int main()
     System::Console::WriteLine();   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -1204,12 +1184,12 @@ Typ elementu.
   
 ### <a name="syntax"></a>Składnia  
   
-```  
+```cpp  
 typedef Value value_type;  
 ```  
   
 ### <a name="remarks"></a>Uwagi  
- Typ jest synonimem parametru szablonu `Value`.  
+ Typ jest synonimem dla parametru szablonu *wartość*.  
   
 ### <a name="example"></a>Przykład  
   
@@ -1235,8 +1215,7 @@ int main()
         }   
     System::Console::WriteLine();   
     return (0);   
-    }  
-  
+    }   
 ```  
   
 ```Output  
@@ -1244,11 +1223,11 @@ a b c
 ```  
 
 ## <a name="op_neq"></a> Operator! = (kolejki) (STL/CLR)
-Kolejka jest równa porównania.  
+Kolejka nie równa się porównania.  
   
 ### <a name="syntax"></a>Składnia  
   
-```  
+```cpp  
 template<typename Value,  
     typename Container>  
     bool operator!=(queue<Value, Container>% left,  
@@ -1256,14 +1235,14 @@ template<typename Value,
 ```  
   
 #### <a name="parameters"></a>Parametry  
- left  
+ *left*  
  Po lewej stronie kontenera do porównania.  
   
- w prawo  
+ *right*  
  Kontener prawo do porównania.  
   
 ### <a name="remarks"></a>Uwagi  
- Funkcja operatora `!(left == right)`. Można go użyć do przetestowania czy `left` nie jest taka sama jak określona `right` kiedy dwie kolejki są porównaniu elementu przez element.  
+ Funkcja operator zwraca `!(left == right)`. Można go używać do testowania czy *po lewej stronie* nie jest taka sama jak określona *prawo* po dwóch kolejek znajdują się w porównaniu element po elemencie.  
   
 ### <a name="example"></a>Przykład  
   
@@ -1302,7 +1281,6 @@ int main()
         c1 != c2);   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -1313,11 +1291,11 @@ int main()
 ```  
 
 ## <a name="op_lt"></a> operator&lt; (kolejki) (STL/CLR)
-Kolejki mniej niż porównania.  
+Dodaj do kolejki mniej niż porównania.  
   
 ### <a name="syntax"></a>Składnia  
   
-```  
+```cpp  
 template<typename Value,  
     typename Container>  
     bool operator<(queue<Value, Container>% left,  
@@ -1325,14 +1303,14 @@ template<typename Value,
 ```  
   
 #### <a name="parameters"></a>Parametry  
- left  
+ *left*  
  Po lewej stronie kontenera do porównania.  
   
- w prawo  
+ *right*  
  Kontener prawo do porównania.  
   
 ### <a name="remarks"></a>Uwagi  
- Operator funkcja zwraca wartość true, jeśli, dla najniżej `i` dla którego `!(right[i] < left[i])` jest również wartość true, który `left[i] < right[i]`. W przeciwnym razie zwraca `left->` [queue::size (STL/CLR)](../dotnet/queue-size-stl-clr.md) `() <` `right->size()` używanej do testowania czy `left` jest umieszczane przed `right` kiedy dwie kolejki są porównaniu elementu przez element.  
+ Operator funkcja zwraca wartość true, jeśli, na najniższą pozycję `i` dla którego `!(right[i] < left[i])` jest również wartość true, który `left[i] < right[i]`. W przeciwnym razie zwraca `left->` [queue::size (STL/CLR)](../dotnet/queue-size-stl-clr.md) `() <` `right->size()` używanej do testowania czy *po lewej stronie* był zamówiony przed *prawo* po dwóch kolejek znajdują się w porównaniu element po elemencie.  
   
 ### <a name="example"></a>Przykład  
   
@@ -1370,8 +1348,7 @@ int main()
     System::Console::WriteLine("[a b c] < [a b d] is {0}",   
         c1 < c2);   
     return (0);   
-    }  
-  
+    }   
 ```  
   
 ```Output  
@@ -1382,11 +1359,11 @@ int main()
 ```  
 
 ## <a name="op_lteq"></a> operator&lt;= (kolejki) (STL/CLR)
-Kolejka mniejsza lub równa porównania.  
+Mniejsze niż lub równe kolejki porównania.  
   
 ### <a name="syntax"></a>Składnia  
   
-```  
+```cpp  
 template<typename Value,  
     typename Container>  
     bool operator<=(queue<Value, Container>% left,  
@@ -1394,14 +1371,14 @@ template<typename Value,
 ```  
   
 #### <a name="parameters"></a>Parametry  
- left  
+ *left*  
  Po lewej stronie kontenera do porównania.  
   
- w prawo  
+ *right*  
  Kontener prawo do porównania.  
   
 ### <a name="remarks"></a>Uwagi  
- Funkcja operatora `!(right < left)`. Można go użyć do przetestowania czy `left` porządkowania nie po `right` kiedy dwie kolejki są porównaniu elementu przez element.  
+ Funkcja operator zwraca `!(right < left)`. Można go używać do testowania czy *po lewej stronie* nie są porządkowane po *prawo* po dwóch kolejek znajdują się w porównaniu element po elemencie.  
   
 ### <a name="example"></a>Przykład  
   
@@ -1439,8 +1416,7 @@ int main()
     System::Console::WriteLine("[a b d] <= [a b c] is {0}",   
         c2 <= c1);   
     return (0);   
-    }  
-  
+    }   
 ```  
   
 ```Output  
@@ -1451,11 +1427,11 @@ int main()
 ```  
 
 ## <a name="op_eq"></a> Operator == (kolejki) (STL/CLR)
-Porównanie równy kolejki.  
+Porównanie równego kolejki.  
   
 ### <a name="syntax"></a>Składnia  
   
-```  
+```cpp  
 template<typename Value,  
     typename Container>  
     bool operator==(queue<Value, Container>% left,  
@@ -1463,14 +1439,14 @@ template<typename Value,
 ```  
   
 #### <a name="parameters"></a>Parametry  
- left  
+ *left*  
  Po lewej stronie kontenera do porównania.  
   
- w prawo  
+ *right*  
  Kontener prawo do porównania.  
   
 ### <a name="remarks"></a>Uwagi  
- Funkcja operatora zwraca wartość true, tylko wtedy, gdy w sekwencji, które są kontrolowane przez `left` i `right` ma taką samą długość i dla każdej pozycji `i`, `left[i] ==` `right[i]`. Można go użyć do przetestowania czy `left` jest taka sama jak określona `right` kiedy dwie kolejki są porównaniu elementu przez element.  
+ Funkcja operator zwraca wartość true, tylko wtedy, gdy sekwencje kontrolowane przez *po lewej stronie* i *prawo* tę samą długość, a dla każdej pozycji `i`, `left[i] ==` `right[i]`. Można go używać do testowania czy *po lewej stronie* jest taka sama jak określona *prawo* po dwóch kolejek znajdują się w porównaniu element po elemencie.  
   
 ### <a name="example"></a>Przykład  
   
@@ -1508,8 +1484,7 @@ int main()
     System::Console::WriteLine("[a b c] == [a b d] is {0}",   
         c1 == c2);   
     return (0);   
-    }  
-  
+    }   
 ```  
   
 ```Output  
@@ -1524,7 +1499,7 @@ Kolejka jest większa niż porównania.
   
 ### <a name="syntax"></a>Składnia  
   
-```  
+```cpp  
 template<typename Value,  
     typename Container>  
     bool operator>(queue<Value, Container>% left,  
@@ -1532,14 +1507,14 @@ template<typename Value,
 ```  
   
 #### <a name="parameters"></a>Parametry  
- left  
+ *left*  
  Po lewej stronie kontenera do porównania.  
   
- w prawo  
+ *right*  
  Kontener prawo do porównania.  
   
 ### <a name="remarks"></a>Uwagi  
- Funkcja operatora `right` `<` `left`. Można go użyć do przetestowania czy `left` porządkowania po `right` kiedy dwie kolejki są porównaniu elementu przez element.  
+ Funkcja operator zwraca `right` `<` `left`. Można go używać do testowania czy *po lewej stronie* są porządkowane po *prawo* po dwóch kolejek znajdują się w porównaniu element po elemencie.  
   
 ### <a name="example"></a>Przykład  
   
@@ -1577,8 +1552,7 @@ int main()
     System::Console::WriteLine("[a b d] > [a b c] is {0}",   
         c2 > c1);   
     return (0);   
-    }  
-  
+    }   
 ```  
   
 ```Output  
@@ -1589,11 +1563,11 @@ int main()
 ```  
 
 ## <a name="op_gteq"></a> operator&gt;= (kolejki) (STL/CLR)
-Kolejka jest większa niż lub równa porównania.  
+Kolejka jest większa niż lub równe porównania.  
   
 ### <a name="syntax"></a>Składnia  
   
-```  
+```cpp  
 template<typename Value,  
     typename Container>  
     bool operator>=(queue<Value, Container>% left,  
@@ -1601,14 +1575,14 @@ template<typename Value,
 ```  
   
 #### <a name="parameters"></a>Parametry  
- left  
+ *left*  
  Po lewej stronie kontenera do porównania.  
   
- w prawo  
+ *right*  
  Kontener prawo do porównania.  
   
 ### <a name="remarks"></a>Uwagi  
- Funkcja operatora `!(left < right)`. Można go użyć do przetestowania czy `left` nie jest umieszczane przed `right` kiedy dwie kolejki są porównaniu elementu przez element.  
+ Funkcja operator zwraca `!(left < right)`. Można go używać do testowania czy *po lewej stronie* nie był zamówiony przed *prawo* po dwóch kolejek znajdują się w porównaniu element po elemencie.  
   
 ### <a name="example"></a>Przykład  
   
@@ -1646,8 +1620,7 @@ int main()
     System::Console::WriteLine("[a b c] >= [a b d] is {0}",   
         c1 >= c2);   
     return (0);   
-    }  
-  
+    }   
 ```  
   
 ```Output  

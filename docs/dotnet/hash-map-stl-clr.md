@@ -109,29 +109,29 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 9c42a1d546af7818d0eb9d3d97d395f74d5acccf
-ms.sourcegitcommit: 301bb19056e5bae84ff50f7d1df1e546efe225ba
+ms.openlocfilehash: 1af95d53041c343bc3328beae4e796d3a316b461
+ms.sourcegitcommit: bad2441d1930275ff506d44759d283d94cccd1c0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/21/2018
-ms.locfileid: "36305787"
+ms.lasthandoff: 07/31/2018
+ms.locfileid: "39376342"
 ---
 # <a name="hashmap-stlclr"></a>hash_map (STL/CLR)
-Klasa szablonu opisuje obiekt, który określa sekwencję zróżnicowanych długość elementów, która ma dostęp dwukierunkowego. Użyj kontenera `hash_map` do zarządzania sekwencję elementów jako tablicy skrótów, każdego wpisu tabeli przechowywania dwukierunkowy połączone listy węzłów i w każdym węźle przechowywania jeden element. Element składa się z kluczem porządkowania sekwencji i zmapowane wartość, która dotyczy jazdy.  
+Klasa szablonu opisuje obiekt, który kontroluje różnej długości sekwencje elementów mającego dostęp dwukierunkowy. Korzystasz z kontenera `hash_map` każdego wpisu tabeli przechowywania dwukierunkowy, aby zarządzać sekwencję elementów w postaci tabeli wyznaczania wartości skrótu, połączoną listę węzłów i w każdym węźle przechowywania jeden element. Element składa się z kluczem porządkowania sekwencji, a wartość zamapowanego się do jazdy.  
   
- W polu poniżej, opis `GValue` jest taka sama jak:  
+ W poniższym opisie `GValue` jest taka sama jak:  
   
  `Microsoft::VisualC::StlClr::GenericPair<GKey, GMapped>`  
   
  gdzie:  
   
- `GKey` jest taka sama jak `Key` o ile nie jest typu ref, w którym to przypadku jest `Key^`  
+ `GKey` jest taka sama jak `Key` o ile nie jest typem odwołania, w którym to przypadku jest `Key^`  
   
- `GMapped` jest taka sama jak `Mapped` o ile nie jest typu ref, w którym to przypadku jest `Mapped^`  
+ `GMapped` jest taka sama jak `Mapped` o ile nie jest typem odwołania, w którym to przypadku jest `Mapped^`  
   
 ## <a name="syntax"></a>Składnia  
   
-```  
+```cpp  
 template<typename Key,  
     typename Mapped>  
     ref class hash_map  
@@ -148,16 +148,16 @@ template<typename Key,
 ```  
   
 ### <a name="parameters"></a>Parametry  
- Key  
- Typ części klucza elementu w kontrolowanej sekwencji.  
+ *Key*  
+ Typ kluczowy składnik elementu w kontrolowanej sekwencji.  
   
- zamapowane  
- Typ składnika dodatkowe elementu w kontrolowanej sekwencji.  
+ *Zamapowane*  
+ Typ dodatkowego składnika elementu w kontrolowanej sekwencji.  
 
 ## <a name="requirements"></a>Wymagania  
- **Nagłówek:** \<cliext/hash_map >  
+ **Nagłówek:** \<cliext — / hash_map >  
   
- **Namespace:** cliext  
+ **Namespace:** cliext —  
 
 ## <a name="declarations"></a>Deklaracje  
   
@@ -165,100 +165,100 @@ template<typename Key,
 |---------------------|-----------------|  
 |[hash_map::const_iterator (STL/CLR)](#const_iterator)|Typ iteratora stałego dla kontrolowanej sekwencji.|  
 |[hash_map::const_reference (STL/CLR)](#const_reference)|Typ stałego odwołania do elementu.|  
-|[hash_map::const_reverse_iterator (STL/CLR)](#const_reverse_iterator)|Typ stałej iteratora wstecznego w kontrolowanej sekwencji.|  
-|[hash_map::difference_type (STL/CLR)](#difference_type)|Typ (prawdopodobnie podpisanego) odległość między dwoma elementami.|  
-|[hash_map::generic_container (STL/CLR)](#generic_container)|Typ ogólny interfejs umożliwiający kontenera.|  
-|[hash_map::generic_iterator (STL/CLR)](#generic_iterator)|Typ iteratora dla ogólnego interfejsu do kontenera.|  
-|[hash_map::generic_reverse_iterator (STL/CLR)](#generic_reverse_iterator)|Typ odwrotnej iteratora dla ogólnego interfejsu do kontenera.|  
-|[hash_map::generic_value (STL/CLR)](#generic_value)|Typ elementu dla ogólnego interfejsu do kontenera.|  
-|[hash_map::hasher (STL/CLR)](#hasher)|Delegat funkcji skrótu dla klucza.|  
+|[hash_map::const_reverse_iterator (STL/CLR)](#const_reverse_iterator)|Typ iteratora odwrotnego stałego dla kontrolowanej sekwencji.|  
+|[hash_map::difference_type (STL/CLR)](#difference_type)|Typ (prawdopodobnie odległości ze znakiem) między dwoma elementami.|  
+|[hash_map::generic_container (STL/CLR)](#generic_container)|Typ ogólny interfejs dla kontenera.|  
+|[hash_map::generic_iterator (STL/CLR)](#generic_iterator)|Typ iteratora dla ogólny interfejs dla kontenera.|  
+|[hash_map::generic_reverse_iterator (STL/CLR)](#generic_reverse_iterator)|Typ iteratora odwrotnego dla ogólny interfejs dla kontenera.|  
+|[hash_map::generic_value (STL/CLR)](#generic_value)|Typ elementu dla ogólny interfejs dla kontenera.|  
+|[hash_map::hasher (STL/CLR)](#hasher)|Delegat wyznaczania wartości skrótu dla klucza.|  
 |[hash_map::iterator (STL/CLR)](#iterator)|Typ iteratora dla kontrolowanej sekwencji.|  
-|[hash_map::key_compare (STL/CLR)](#key_compare)|Delegat porządkowania dla dwa klucze.|  
+|[hash_map::key_compare (STL/CLR)](#key_compare)|Szeregowania delegat dla obiektu dwa klucze.|  
 |[hash_map::key_type (STL/CLR)](#key_type)|Typ klucza sortowania.|  
-|[hash_map::mapped_type (STL/CLR)](#mapped_type)|Typ zamapowanych wartość skojarzoną z każdego klucza.|  
+|[hash_map::mapped_type (STL/CLR)](#mapped_type)|Typ mapowaną wartość skojarzonych z poszczególnymi kluczami.|  
 |[hash_map::reference (STL/CLR)](#reference)|Typ odwołania do elementu.|  
-|[hash_map::reverse_iterator (STL/CLR)](#reverse_iterator)|Typ odwrotnej iteratora w kontrolowanej sekwencji.|  
-|[hash_map::size_type (STL/CLR)](#size_type)|Typ (nieujemną) odległość między dwoma elementami.|  
-|[hash_map::value_compare (STL/CLR)](#value_compare)|Delegat porządkowania dla dwóch wartości elementu.|  
+|[hash_map::reverse_iterator (STL/CLR)](#reverse_iterator)|Typ iteratora odwrotnego dla kontrolowanej sekwencji.|  
+|[hash_map::size_type (STL/CLR)](#size_type)|Typ odległości (wartość nieujemną) między dwoma elementami.|  
+|[hash_map::value_compare (STL/CLR)](#value_compare)|Szeregowania delegat dla obiektu dwie wartości elementów.|  
 |[hash_map::value_type (STL/CLR)](#value_type)|Typ elementu.|  
   
 |Funkcja elementów członkowskich|Opis|  
 |---------------------|-----------------|  
 |[hash_map::begin (STL/CLR)](#begin)|Określa początek kontrolowanej sekwencji.|  
-|[hash_map::bucket_count (STL/CLR)](#bucket_count)|Zlicza zasobników.|  
+|[hash_map::bucket_count (STL/CLR)](#bucket_count)|Zlicza liczbę przedziałów.|  
 |[hash_map::clear (STL/CLR)](#clear)|Usuwa wszystkie elementy.|  
-|[hash_map::count (STL/CLR)](#count)|Liczba elementów pasujących określonego klucza.|  
+|[hash_map::count (STL/CLR)](#count)|Liczba elementów pasujących do określonego klucza.|  
 |[hash_map::empty (STL/CLR)](#empty)|Sprawdza, czy nie ma żadnych elementów.|  
 |[hash_map::end (STL/CLR)](#end)|Określa koniec kontrolowanej sekwencji.|  
 |[hash_map::equal_range (STL/CLR)](#equal_range)|Wyszukuje zakres, który odpowiada określonemu kluczowi.|  
 |[hash_map::erase (STL/CLR)](#erase)|Usuwa elementy z określonych pozycji.|  
 |[hash_map::find (STL/CLR)](#find)|Wyszukuje element, który odpowiada określonemu kluczowi.|  
-|[hash_map::hash_delegate (STL/CLR)](#hash_delegate)|Kopiuje delegat wyznaczania wartości skrótu z kluczem.|  
+|[hash_map::hash_delegate (STL/CLR)](#hash_delegate)|Kopiuje delegata wyznaczania wartości skrótu dla klucza.|  
 |[hash_map::hash_map (STL/CLR)](#hash_map)|Konstruuje obiekt kontenera.|  
 |[hash_map::insert (STL/CLR)](#insert)|Dodaje elementy.|  
-|[hash_map::key_comp (STL/CLR)](#key_comp)|Kopiuje porządkowania delegowanie dla dwa klucze.|  
+|[hash_map::key_comp (STL/CLR)](#key_comp)|Kopiuje szeregowania delegata dwa klucze.|  
 |[hash_map::load_factor (STL/CLR)](#load_factor)|Oblicza średnią liczbę elementów na przedział.|  
-|[hash_map::lower_bound (STL/CLR)](#lower_bound)|Wyszukuje początek zakresu, który jest zgodny z określonym kluczem.|  
-|[hash_map::make_value (STL/CLR)](#make_value)|Tworzy obiekt wartość.|  
+|[hash_map::lower_bound (STL/CLR)](#lower_bound)|Znajduje początek zakresu, który odpowiada określonemu kluczowi.|  
+|[hash_map::make_value (STL/CLR)](#make_value)|Tworzy obiekt wartości.|  
 |[hash_map::max_load_factor (STL/CLR)](#max_load_factor)|Pobiera lub ustawia maksymalną liczbę elementów na przedział.|  
-|[hash_map::rbegin (STL/CLR)](#rbegin)|Określa początek odwróconej kontrolowanej sekwencji.|  
+|[hash_map::rbegin (STL/CLR)](#rbegin)|Określa początek kontrolowanej sekwencji odwróconej.|  
 |[hash_map::rehash (STL/CLR)](#rehash)|Przebudowuje tabelę mieszania.|  
-|[hash_map::rend (STL/CLR)](#rend)|Określa koniec odwróconej kontrolowanej sekwencji.|  
+|[hash_map::rend (STL/CLR)](#rend)|Określa koniec kontrolowanej sekwencji odwróconej.|  
 |[hash_map::size (STL/CLR)](#size)|Liczy liczbę elementów.|  
 |[hash_map::swap (STL/CLR)](#swap)|Zamienia zawartości dwóch kontenerów.|  
 |[hash_map::to_array (STL/CLR)](#to_array)|Kopiuje kontrolowanej sekwencji do nowej tablicy.|  
-|[hash_map::upper_bound (STL/CLR)](#upper_bound)|Wyszukuje koniec zakresu, który jest zgodny z określonym kluczem.|  
-|[hash_map::value_comp (STL/CLR)](#value_comp)|Kopiuje porządkowania delegowanie dla dwóch wartości elementu.|  
+|[hash_map::upper_bound (STL/CLR)](#upper_bound)|Znajduje koniec zakresu, który odpowiada określonemu kluczowi.|  
+|[hash_map::value_comp (STL/CLR)](#value_comp)|Kopiuje szeregowania delegata dwie wartości elementów.|  
   
 |Operator|Opis|  
 |--------------|-----------------|  
 |[hash_map::operator= (STL/CLR)](#op_as)|Zastępuje kontrolowanej sekwencji.|  
-|[hash_map::operator(STL/CLR)](#op)|Mapuje klucz, do jej powiązaną wartość mapowane.|  
+|[hash_map::operator(STL/CLR)](#op)|Mapuje klucz, do jej powiązaną wartość zamapowany.|  
   
 ## <a name="interfaces"></a>Interfejsy  
   
 |Interface|Opis|  
 |---------------|-----------------|  
-|<xref:System.ICloneable>|Zduplikowany obiekt.|  
-|<xref:System.Collections.IEnumerable>|Sekwencji za pomocą elementów.|  
+|<xref:System.ICloneable>|Duplikowanie obiektów.|  
+|<xref:System.Collections.IEnumerable>|Przeprowadzaj sekwencjonowanie przez elementy.|  
 |<xref:System.Collections.ICollection>|Obsługa grupy elementów.|  
-|<xref:System.Collections.Generic.IEnumerable%601>|Sekwencji za pośrednictwem typu elementów.|  
-|<xref:System.Collections.Generic.ICollection%601>|Obsługa grupę elementów typu.|  
-|<xref:System.Collections.Generic.IDictionary%602>|Obsługa grupy {klucza, wartość} pary.|  
-|IHash < klucz, wartość >|Obsługa ogólnego kontenera.|  
+|<xref:System.Collections.Generic.IEnumerable%601>|Przeprowadzaj Sekwencjonowanie za pośrednictwem typizowanych elementów.|  
+|<xref:System.Collections.Generic.ICollection%601>|Obsługa grupy typizowanych elementów.|  
+|<xref:System.Collections.Generic.IDictionary%602>|Obsługa grupy {klucz, wartość} pary.|  
+|IHash < klucz, wartość >|Obsługa kontenerów ogólnego.|  
   
 ## <a name="remarks"></a>Uwagi  
- Obiekt przydziela i zwalnia magazynu w sekwencji, które kontroluje jako poszczególne węzły połączonej listy dwukierunkowego. Aby przyśpieszyć dostępu, obiekt przechowuje zróżnicowanych długość tablicy wskaźników do listy (tablicy skrótów) efektywne zarządzanie całą listę sekwencję podlist, lub pakiety w ramach Agreement. Wstawia elementy na zasobnik, który utrzymuje uporządkowanych, zmieniając łącza między węzłami, nigdy nie, kopiując zawartość z jednego węzła do innego. Oznacza to, można wstawiać i usuwanie elementów za darmo, bez zakłóceń pozostałe elementy.  
+ Obiekt przydziela i zwalnia pamięć dla sekwencji, które kontroluje jako poszczególnych węzłów w połączonej listy dwukierunkowej. Aby przyspieszyć dostęp, obiekt przechowuje różnej długości tablicy wskaźników do listy (Tabela skrótów), efektywne zarządzanie całą listę jako sekwencja podlisty, lub przedziałów. Wstawia elementy do zasobnika, który utrzymuje uporządkowanym, zmieniając linki między węzłami, nigdy, kopiując zawartość jednego węzła do drugiego. Oznacza to, można wstawić i usuwanie elementów za darmo, bez zakłóceń pozostałe elementy.  
   
- Obiekt porządkuje każdego zasobnika kontroluje przez wywołanie metody typu obiektu delegowanego przechowywanych [hash_set::key_compare (STL/CLR)](../dotnet/hash-set-key-compare-stl-clr.md). Można określić obiektu delegowanego przechowywanych podczas konstruowania hash_set; Jeśli określisz ma obiektu delegowanego, wartość domyślna to porównanie `operator<=(key_type, key_type)`.  
+ Obiekt porządkuje każdego przedziału, którą kontroluje, przez wywołanie obiektu przechowywanej delegat typu [hash_set::key_compare (STL/CLR)](../dotnet/hash-set-key-compare-stl-clr.md). Można określić obiektu delegowanego przechowywanych podczas konstruowania hash_set; Jeśli obiekt delegowany nie zostanie określony, wartością domyślną jest porównanie `operator<=(key_type, key_type)`.  
   
- Dostęp do obiektu delegowanego przechowywanych przez wywołanie funkcji Członkowskich [hash_set::key_comp (STL/CLR)](../dotnet/hash-set-key-comp-stl-clr.md)`()`. Obiekt delegowany musi definiować równoważne kolejności między kluczami typu [hash_set::key_type (STL/CLR)](../dotnet/hash-set-key-type-stl-clr.md). Oznacza to, na dowolne dwa klucze `X` i `Y`:  
+ Dostęp do obiektu delegowanego przechowywanych przez wywołanie funkcji elementu członkowskiego [hash_set::key_comp (STL/CLR)](../dotnet/hash-set-key-comp-stl-clr.md)`()`. Obiektu delegowanego musi definiować równoważną kolejność pomiędzy kluczami typu [hash_set::key_type (STL/CLR)](../dotnet/hash-set-key-type-stl-clr.md). Oznacza to, dla dowolnego dwa klucze `X` i `Y`:  
   
- `key_comp()(X, Y)` Zwraca wyniku tego samego typu Boolean przy każdym wywołaniu.  
+ `key_comp()(X, Y)` Zwraca wynik tego samego typu Boolean przy każdym wywołaniu.  
   
- Jeśli `key_comp()(X, Y) && key_comp()(Y, X)` ma wartość true, następnie `X` i `Y` są określane jako mają równoważne porządkowania.  
+ Jeśli `key_comp()(X, Y) && key_comp()(Y, X)` ma wartość true, następnie `X` i `Y` są określane jako mają równoważną kolejność.  
   
- Reguły porządkowania zachowuje się jak `operator<=(key_type, key_type)`, `operator>=(key_type, key_type)` lub `operator==(key_type, key_type)` definiuje kolejność eqivalent.  
+ Szeregowania reguł, który zachowuje się jak `operator<=(key_type, key_type)`, `operator>=(key_type, key_type)` lub `operator==(key_type, key_type)` definiuje kolejność eqivalent.  
   
- Należy pamiętać, że kontener zagwarantuje tylko elementy którego klucze będą miały równoważne porządkowanie (i które skrót do tej samej wartości całkowitej) to sąsiadujących ze sobą w pojemniku. W odróżnieniu od klasy szablonu [hash_multimap (STL/CLR)](../dotnet/hash-multimap-stl-clr.md), obiekt klasy szablonu `hash_map` zagwarantuje to unikatowy kluczy dla wszystkich elementów. (Nie dwa klucze jest równoważne kolejności).  
+ Należy pamiętać, że kontener gwarantuje tylko elementy którego klucze mają równoważną kolejność (i skrótu na tę samą wartość liczby całkowitej) sąsiadująco w pojemniku. W odróżnieniu od klasy szablonu [hash_multimap (STL/CLR)](../dotnet/hash-multimap-stl-clr.md), obiekt klasy szablonu `hash_map` gwarantuje, że klucze dla wszystkich elementów są unikatowe. (Nie dwa klucze mają równoważną kolejność).  
   
- Obiekt Określa, które zasobnika powinna zawierać klucz porządkowania przez wywołanie metody typu obiektu delegowanego przechowywanych [hash_set::hasher (STL/CLR)](../dotnet/hash-set-hasher-stl-clr.md). Dostęp do tego obiektu przechowywanych przez wywołanie funkcji Członkowskich [hash_set::hash_delegate (STL/CLR)](../dotnet/hash-set-hash-delegate-stl-clr.md) `()` można uzyskać wartość całkowitą, która jest zależna od wartości klucza. Można określić obiektu delegowanego przechowywanych podczas konstruowania hash_set; Jeśli określisz ma obiektu delegowanego, wartość domyślna to funkcja `System::Object::hash_value(key_type)`. Oznacza to, żadnych kluczy `X` i `Y`:  
+ Obiektu określa, w którym zasobniku powinien zawierać danego klucza sortowania przez wywołanie obiektu przechowywanej delegat typu [hash_set::hasher (STL/CLR)](../dotnet/hash-set-hasher-stl-clr.md). Ten przechowywany obiekt jest dostępu przez wywołanie funkcji elementu członkowskiego [hash_set::hash_delegate (STL/CLR)](../dotnet/hash-set-hash-delegate-stl-clr.md) `()` można uzyskać wartość całkowitą, która jest zależna od wartości klucza. Można określić obiektu delegowanego przechowywanych podczas konstruowania hash_set; Jeśli żaden obiekt delegowany jest określony, wartość domyślna to funkcja `System::Object::hash_value(key_type)`. Oznacza to, do żadnych kluczy `X` i `Y`:  
   
- `hash_delegate()(X)` Zwraca takiego samego wyniku całkowitą przy każdym wywołaniu.  
+ `hash_delegate()(X)` zwraca ten sam wynik liczby całkowitej na każde wywołanie.  
   
- Jeśli `X` i `Y` mają równoważne określania kolejności, następnie `hash_delegate()(X)` powinien zwrócić takiego samego wyniku całkowitą jako `hash_delegate()(Y)`.  
+ Jeśli `X` i `Y` mają równoważną kolejność, następnie `hash_delegate()(X)` powinna zwracać ten sam wynik liczby całkowitej jako `hash_delegate()(Y)`.  
   
- Każdy element zawiera osobne klucza i wartości mapowane. Sekwencja jest reprezentowana w taki sposób, który umożliwia wyszukiwanie, wstawiania i usuwania elementu umownego z liczba operacji, która jest niezależna od liczby elementów w sekwencji (czas stałej)--co najmniej w najlepszym przypadku. Ponadto, wstawianie elementu nie unieważnia iteratorów, a usuwanie elementu unieważnia tylko te iteratory, które wskazują na usunięty element.  
+ Każdy element zawiera oddzielny klucz i wartość zamapowany. Sekwencja jest reprezentowana w sposób, który pozwala na wyszukiwania, wstawiania i usuwania dowolnego elementu z liczba operacji, która jest niezależna od liczbę elementów w sekwencji (stały czas) — co najmniej w najlepszym przypadku. Ponadto, wstawianie elementu nie unieważnia iteratorów, a usuwanie elementu unieważnia tylko te iteratory, które wskazują na usunięty element.  
   
- Jeśli wartości skrótu nie są dystrybuowane jednolicie, jednak tablicy skrótów można dwa degeneracji. W extreme — dla funkcji skrótu, która zawsze zwraca tę samą wartość — wyszukiwanie, wstawiania i usuwania są proporcjonalny do liczby elementów w sekwencji (czas liniowej). Kontener usiłują wybierz funkcji skrótu uzasadnione, Zasobnik średniej wielkości, a rozmiar tablicy skrótów (całkowita liczba zasobników), ale możesz zastąpić dowolne z tych opcji. Zobacz na przykład funkcje [hash_set::max_load_factor (STL/CLR)](../dotnet/hash-set-max-load-factor-stl-clr.md) i [hash_set::rehash (STL/CLR)](../dotnet/hash-set-rehash-stl-clr.md).  
+ Jeśli wartości skrótu nie są równomiernie rozłożone, jednak tabeli mieszania może dwa wymiary degeneracji. W skrajnej — dla funkcji skrótu, która zawsze zwraca taką samą wartość — wyszukiwania, wstawiania i usuwania są proporcjonalne do liczby elementów w sekwencji (liniowy czas). Kontener usiłują wybierz funkcję mieszania uzasadnione, mean zasobnika rozmiar, a rozmiar tabeli skrótów (całkowita liczba zasobników), ale można zastąpić niektóre lub wszystkie z tych opcji. Zobacz na przykład funkcje [hash_set::max_load_factor (STL/CLR)](../dotnet/hash-set-max-load-factor-stl-clr.md) i [hash_set::rehash (STL/CLR)](../dotnet/hash-set-rehash-stl-clr.md).  
   
- Hash_map — obsługuje Iteratory dwukierunkowego, co oznacza, że można przejść do sąsiadujących elementów podane iterację wyznacza elementu w kontrolowanej sekwencji. Specjalne węzła głównego odpowiada zwrócony przez iterator [hash_map::end (STL/CLR)](../dotnet/hash-map-end-stl-clr.md)`()`. Jeśli jest obecny, można zmniejszyć tego iteratora do ostatniego elementu w kontrolowanej sekwencji. Można zwiększyć iteratora hash_map, aby osiągnąć węzła głównego, a następnie będzie Porównaj równa `end()`. Ale nie można wyłuskać zwrócony przez iterator `end()`.  
+ Hash_map — obsługują Iteratory dwukierunkowe, co oznacza, że użytkownik może przechodzić do sąsiadujących elementów podany iterator, który wskazuje element w kontrolowanej sekwencji. Specjalne węzłem odnosi się do iteratora zwrócony przez [hash_map::end (STL/CLR)](../dotnet/hash-map-end-stl-clr.md)`()`. Można zmniejszyć tego iteratora, aby dotrzeć do ostatniego elementu w kontrolowanej sekwencji, jeśli jest obecny. Inkrementacji iteratora hash_map, aby dotrzeć do węzła głównego, a następnie porównaj równa `end()`. Ale nie można wyłuskać iteratora zwrócony przez `end()`.  
   
- Należy pamiętać, że nie może odwoływać się do elementu hash_map bezpośrednio podanej pozycji numeryczny — wymagającego iteratora dostępie swobodnym.  
+ Należy pamiętać, że nie można odwołać się do elementu hash_map bezpośrednio podanej pozycji liczbowych — wymagającego iteratora dostępu swobodnego.  
   
- Hash_map iterator przechowuje dojścia do węzła hash_map skojarzony, który z kolei przechowuje dojście do jego skojarzony kontenera. Iteratory można użyć tylko w przypadku ich obiekty skojarzone kontenera. Hash_map iterator pozostaje ważny tak długo, jak jego węzła hash_map skojarzony jest skojarzony z niektórych hash_map. Ponadto prawidłowy iteratora jest dereferencable — służy do dostępu lub zmienić wartości elementu ustanowi — tak długo, jak nie jest równa `end()`.  
+ Hash_map iterator przechowuje dojścia do węzła hash_map skojarzone, który z kolei przechowuje dojście do jego skojarzony kontener. Iteratory można użyć tylko w nich obiekty skojarzony kontener. Hash_map iterator zachowuje ważność tak długo, jak jego hash_map skojarzony węzeł jest skojarzony z niektórych hash_map. Ponadto, prawidłowy iteratora jest wyłuskiwania — służy do uzyskiwania dostępu lub zmienić wartości elementu ustanowi — tak długo, jak nie jest równa `end()`.  
   
- Wymazywanie lub usunięcie elementu wywołuje destruktor dla jej wartości przechowywanej. Niszczenie kontenera powoduje wymazanie wszystkich elementów. W związku z tym kontenera, której typ elementów jest klasa ref gwarantuje, że żadnych elementów outlive kontenera. Należy jednak pamiętać, że jest kontenerem dojść `not` zniszczyć elementów.  
+ Wymazywanie lub usunięcie elementu wywołuje destruktor do jego przechowywanej wartości. Niszczenie kontenera usuwa wszystkie elementy. W związku z tym kontener, którego typ elementu jest klasą ref gwarantuje, że żadne elementy on nakreślał kontenera. Należy jednak pamiętać, że kontener dojścia nie *nie* zniszczyć jego elementów.  
   
 ## <a name="members"></a>Elementy członkowskie
 
@@ -267,12 +267,12 @@ Określa początek kontrolowanej sekwencji.
   
 ### <a name="syntax"></a>Składnia  
   
-```  
+```cpp  
 iterator begin();  
 ```  
   
 ### <a name="remarks"></a>Uwagi  
- Funkcja członkowska zwraca iteratora dwukierunkowego, który wyznacza pierwszego elementu w kontrolowanej sekwencji lub bezpośrednio po zakończeniu pustej sekwencji. Służy do uzyskania iterację wyznacza `current` początku kontrolowanej sekwencji, ale jej stan można zmieniać w przypadku zmiany długości kontrolowanej sekwencji.  
+ Funkcja elementu członkowskiego zwraca iteratora dwukierunkowego, który wyznacza pierwszego elementu w kontrolowanej sekwencji lub tuż za koniec pustą sekwencją. Służy do uzyskiwania iterator, który wyznacza `current` początek kontrolowanej sekwencji, ale jej stan można zmienić, jeśli zmieni się długość kontrolowanej sekwencji.  
   
 ### <a name="example"></a>Przykład  
   
@@ -303,7 +303,6 @@ int main()
         it->first, it->second);   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -313,16 +312,16 @@ int main()
 ```  
 
 ## <a name="bucket_count"></a> hash_map::bucket_count (STL/CLR)
-Zlicza zasobników.  
+Zlicza liczbę przedziałów.  
   
 ### <a name="syntax"></a>Składnia  
   
-```  
+```cpp  
 int bucket_count();  
 ```  
   
 ### <a name="remarks"></a>Uwagi  
- Funkcje Członkowskie zwraca bieżącą liczbę zasobników. Można użyć do określenia rozmiaru tablicy skrótów.  
+ Funkcje elementów członkowskich zwraca bieżącej liczby przedziałów. Możesz użyć do określenia rozmiaru tablicy skrótów.  
   
 ### <a name="example"></a>Przykład  
   
@@ -367,7 +366,6 @@ int main()
         c1.max_load_factor());   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -390,12 +388,12 @@ Usuwa wszystkie elementy.
   
 ### <a name="syntax"></a>Składnia  
   
-```  
+```cpp  
 void clear();  
 ```  
   
 ### <a name="remarks"></a>Uwagi  
- Wywołuje funkcję elementu członkowskiego [hash_map::erase (STL/CLR)](../dotnet/hash-map-erase-stl-clr.md) `(` [hash_map::begin (STL/CLR)](../dotnet/hash-map-begin-stl-clr.md) `(),` [hash_map::end (STL/CLR)](../dotnet/hash-map-end-stl-clr.md) `())`. Umożliwia ona upewnij się, że kontrolowanej sekwencji jest pusty.  
+ Funkcja elementu członkowskiego skutecznie wywołuje [hash_map::erase (STL/CLR)](../dotnet/hash-map-erase-stl-clr.md) `(` [hash_map::begin (STL/CLR)](../dotnet/hash-map-begin-stl-clr.md) `(),` [hash_map::end (STL/CLR)](../dotnet/hash-map-end-stl-clr.md) `())`. Umożliwia ona upewnij się, że kontrolowanej sekwencji jest pusty.  
   
 ### <a name="example"></a>Przykład  
   
@@ -432,7 +430,6 @@ int main()
     System::Console::WriteLine("size() = {0}", c1.size());   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -447,12 +444,12 @@ Typ iteratora stałego dla kontrolowanej sekwencji.
   
 ### <a name="syntax"></a>Składnia  
   
-```  
+```cpp  
 typedef T2 const_iterator;  
 ```  
   
 ### <a name="remarks"></a>Uwagi  
- Typ zawiera opis obiektu nieokreślonego typu `T2` który może służyć jako iterator stałej dwukierunkowego, dla kontrolowanej sekwencji.  
+ Typ opisuje obiekt nieokreślonego typu `T2` który może służyć jako iterator dwukierunkowy stałe dla kontrolowanej sekwencji.  
   
 ### <a name="example"></a>Przykład  
   
@@ -476,7 +473,6 @@ int main()
     System::Console::WriteLine();   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -488,12 +484,12 @@ Typ stałego odwołania do elementu.
   
 ### <a name="syntax"></a>Składnia  
   
-```  
+```cpp  
 typedef value_type% const_reference;  
 ```  
   
 ### <a name="remarks"></a>Uwagi  
- Typ w tym artykule opisano stałej odwołanie do elementu.  
+ Typ opisuje stałe odwołanie do elementu.  
   
 ### <a name="example"></a>Przykład  
   
@@ -520,7 +516,6 @@ int main()
     System::Console::WriteLine();   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -528,16 +523,16 @@ int main()
 ```   
 
 ## <a name="const_reverse_iterator"></a> hash_map::const_reverse_iterator (STL/CLR)
-Typ stałej iteratora wstecznego w kontrolowanej sekwencji.  
+Typ iteratora odwrotnego stałego dla kontrolowanej sekwencji...  
   
 ### <a name="syntax"></a>Składnia  
   
-```  
+```cpp  
 typedef T4 const_reverse_iterator;  
 ```  
   
 ### <a name="remarks"></a>Uwagi  
- Typ zawiera opis obiektu nieokreślonego typu `T4` który może służyć jako stałej iteratora wstecznego w kontrolowanej sekwencji.  
+ Typ opisuje obiekt nieokreślonego typu `T4` który może służyć jako stałe odwrotnego iteratora dla kontrolowanej sekwencji.  
   
 ### <a name="example"></a>Przykład  
   
@@ -561,7 +556,6 @@ int main()
     System::Console::WriteLine();   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -573,16 +567,16 @@ Wyszukuje liczbę elementów pasujących do określonego klucza.
   
 ### <a name="syntax"></a>Składnia  
   
-```  
+```cpp  
 size_type count(key_type key);  
 ```  
   
 #### <a name="parameters"></a>Parametry  
- klawisz  
+ *Klucz*  
  Wartość klucza do wyszukania.  
   
 ### <a name="remarks"></a>Uwagi  
- Funkcja członkowska zwraca liczbę elementów w kontrolowanej sekwencji mające porządkowanie równoważne z `key`. Można użyć do określenia liczby elementów aktualnie w kontrolowanej sekwencji zgodne z określonym kluczem.  
+ Element członkowski funkcji zwraca liczbę elementów w kontrolowanej sekwencji, które mają równoważną kolejność z *klucz*. Umożliwia ona określenie liczby elementów aktualnie w kontrolowanej sekwencji, które odpowiadają określonemu kluczowi.  
   
 ### <a name="example"></a>Przykład  
   
@@ -609,7 +603,6 @@ int main()
     System::Console::WriteLine("count(L'C') = {0}", c1.count(L'C'));   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -620,16 +613,16 @@ count(L'C') = 0
 ``` 
 
 ## <a name="difference_type"></a> hash_map::difference_type (STL/CLR)
-Typy podpisane odległość między dwoma elementami.  
+Typy odległości ze znakiem między dwoma elementami.  
   
 ### <a name="syntax"></a>Składnia  
   
-```  
+```cpp  
 typedef int difference_type;  
 ```  
   
 ### <a name="remarks"></a>Uwagi  
- Typ w tym artykule opisano liczba ujemna prawdopodobnie elementu.  
+ Typ opisuje liczba element prawdopodobnie ujemna.  
   
 ### <a name="example"></a>Przykład  
   
@@ -664,7 +657,6 @@ int main()
     System::Console::WriteLine("begin()-end() = {0}", diff);   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -678,16 +670,16 @@ Sprawdza, czy nie ma żadnych elementów.
   
 ### <a name="syntax"></a>Składnia  
   
-```  
+```cpp  
 bool empty();  
 ```  
   
 ### <a name="remarks"></a>Uwagi  
- Funkcja członkowska zwraca wartość true dla pustego kontrolowanej sekwencji. Jest to równoważne [hash_map::size (STL/CLR)](../dotnet/hash-map-size-stl-clr.md)`() == 0`. Można użyć do sprawdzenia, czy hash_map jest pusta.  
+ Funkcja elementu członkowskiego zwraca wartość true dla pustą kontrolowaną sekwencję. Jest to równoważne [hash_map::size (STL/CLR)](../dotnet/hash-map-size-stl-clr.md)`() == 0`. Możesz użyć do sprawdzenia, czy hash_map jest pusty.  
   
 ### <a name="example"></a>Przykład  
   
-```  
+```cpp  
 // cliext_hash_map_empty.cpp   
 // compile with: /clr   
 #include <cliext/hash_map>   
@@ -713,7 +705,6 @@ int main()
     System::Console::WriteLine("empty() = {0}", c1.empty());   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -729,12 +720,12 @@ Określa koniec kontrolowanej sekwencji.
   
 ### <a name="syntax"></a>Składnia  
   
-```  
+```cpp  
 iterator end();  
 ```  
   
 ### <a name="remarks"></a>Uwagi  
- Funkcja członkowska zwraca iteratora dwukierunkowego tego punkty bezpośrednio po zakończeniu kontrolowanej sekwencji. Służy do uzyskania iterację Określa koniec kontrolowanej sekwencji; jego stan zmieniać w przypadku zmiany długości kontrolowanej sekwencji.  
+ Funkcja elementu członkowskiego zwraca iterator dwukierunkowy, który wskazuje tuż za koniec kontrolowanej sekwencji. Służy do uzyskiwania iterator, który określa koniec kontrolowanej sekwencji; jego stan nie zmieniać, jeśli zmieni się długość kontrolowanej sekwencji.  
   
 ### <a name="example"></a>Przykład  
   
@@ -767,7 +758,6 @@ int main()
         it->first, it->second);   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -781,16 +771,16 @@ Wyszukuje zakres, który odpowiada określonemu kluczowi.
   
 ### <a name="syntax"></a>Składnia  
   
-```  
+```cpp  
 cliext::pair<iterator, iterator> equal_range(key_type key);  
 ```  
   
 #### <a name="parameters"></a>Parametry  
- `key`  
+ *Klucz*  
  Wartość klucza do wyszukania.  
   
 ### <a name="remarks"></a>Uwagi  
- Funkcja członkowska zwraca parę Iteratory `cliext::pair<iterator, iterator>(lower_bound(key), upper_bound(key))`. Można użyć do określenia zakresu elementów aktualnie w kontrolowanej sekwencji zgodne z określonym kluczem.  
+ Funkcja elementu członkowskiego zwraca parę iteratorów `cliext::pair<iterator, iterator>(lower_bound(key), upper_bound(key))`. Możesz użyć do określenia zakresu elementów aktualnie w kontrolowanej sekwencji, które odpowiadają określonemu kluczowi.  
   
 ### <a name="example"></a>Przykład  
   
@@ -826,7 +816,6 @@ int main()
     System::Console::WriteLine();   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -840,33 +829,33 @@ Usuwa elementy z określonych pozycji.
   
 ### <a name="syntax"></a>Składnia  
   
-```  
+```cpp  
 iterator erase(iterator where);  
 iterator erase(iterator first, iterator last);  
 bool erase(key_type key)  
 ```  
   
 #### <a name="parameters"></a>Parametry  
- pierwszy  
+ *pierwszy*  
  Początek zakresu, aby wymazać.  
   
- klawisz  
- Wartość klucza, aby wymazać.  
+ *Klucz*  
+ Wartość klucza do wymazania.  
   
- ostatni  
+ *ostatni*  
  Koniec zakresu, aby wymazać.  
   
- gdzie  
+ *gdzie*  
  Element, aby wymazać.  
   
 ### <a name="remarks"></a>Uwagi  
- Pierwszy funkcji członkowskiej spowoduje usunięcie elementu w kontrolowanej sekwencji wskazywana przez `where`i zwraca iterację wyznacza pierwszy element pozostałych poza element usunięty, lub [hash_map::end (STL/CLR)](../dotnet/hash-map-end-stl-clr.md) `()` Jeśli nie zawiera żadnego takiego elementu. Umożliwia ona Usuń pojedynczy element.  
+ Pierwsza funkcja członkostwa usuwa element kontrolowanej sekwencji wskazywany przez *gdzie*i zwraca iterator opisujący pierwszy element pozostający poza elementem, który został usunięty, lub [hash_map::end (STL / CLR)](../dotnet/hash-map-end-stl-clr.md) `()` jeśli taki element nie istnieje. Umożliwia ona usunąć pojedynczy element.  
   
- Drugi funkcji członkowskiej usuwa elementy kontrolowanej sekwencji z zakresu [`first`, `last`) i zwraca iterację wyznacza pierwszy element pozostałych poza wszelkie elementy usunięte, lub `end()` w przypadku braku takiego elementu istnieje.. Można użyć do usunięcia zero lub więcej elementów ciągłe.  
+ Funkcja drugiego członka usuwa elementy kontrolowanej sekwencji w zakresie [`first`, `last`) i zwraca iterator opisujący pierwszy element pozostający poza wszelkimi elementami usuniętymi lub `end()` jeśli taki element nie istnieje... Umożliwia ona usunąć zero lub więcej elementów sąsiadujących.  
   
- Trzeci funkcji członkowskiej usuwa dowolny element kontrolowanej sekwencji, którego klucz został równoważne kolejności do `key`i zwraca liczbę liczba elementów usuniętych. Można użyć do usunięcia, a liczba wszystkie elementy zgodne z określonym kluczem.  
+ Trzecia funkcja członkowska usuwa jakiegokolwiek elementu w kontrolowanej sekwencji, których klucz ma równoważną kolejność do *klucz*i zwraca liczbę elementów usuniętych. Możesz użyć do usunięcia, a liczba wszystkich elementów, które odpowiadają określonemu kluczowi.  
   
- Każdy element usunięcia czas proporcjonalna do logarytmu liczba elementów w kontrolowanej sekwencji.  
+ Każdy element wymazywania czasochłonne proporcjonalny do logarytmu liczby elementów w kontrolowanej sekwencji.  
   
 ### <a name="example"></a>Przykład  
   
@@ -913,7 +902,6 @@ int main()
     System::Console::WriteLine("erase(L'e') = {0}", c1.erase(L'e'));   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -931,16 +919,16 @@ Wyszukuje element, który odpowiada określonemu kluczowi.
   
 ### <a name="syntax"></a>Składnia  
   
-```  
+```cpp  
 iterator find(key_type key);  
 ```  
   
 #### <a name="parameters"></a>Parametry  
- klawisz  
+ *Klucz*  
  Wartość klucza do wyszukania.  
   
 ### <a name="remarks"></a>Uwagi  
- Jeśli co najmniej jednego elementu w kontrolowanej sekwencji ma porządkowanie równoważne z `key`, funkcją członkowską zwracającą iterator wyznaczenie jednego z tych elementów; w przeciwnym razie zwraca [hash_map::end (STL/CLR)](../dotnet/hash-map-end-stl-clr.md) `()`. Umożliwia ona obecnie zlokalizować elementu w kontrolowanej sekwencji zgodny z określonym kluczem.  
+ Jeśli co najmniej jednego elementu w kontrolowanej sekwencji ma równoważną kolejność z *klucz*, funkcja elementu członkowskiego zwraca iterację, wyznaczanie jednego z tych elementów; w przeciwnym razie zwraca [hash_map::end (STL/CLR)](../dotnet/hash-map-end-stl-clr.md) `()`. Umożliwia ona obecnie Znajdź element w kontrolowanej sekwencji, który odpowiada określonemu kluczowi.  
   
 ### <a name="example"></a>Przykład  
   
@@ -973,7 +961,6 @@ int main()
         L'C', c1.find(L'C') != c1.end());   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -984,18 +971,18 @@ find C = False
 ```  
 
 ## <a name="generic_container"></a> hash_map::generic_container (STL/CLR)
-Typ ogólny interfejs umożliwiający kontenera.  
+Typ ogólny interfejs dla kontenera.  
   
 ### <a name="syntax"></a>Składnia  
   
-```  
+```cpp  
 typedef Microsoft::VisualC::StlClr::  
     IHash<GKey, GValue>  
     generic_container;  
 ```  
   
 ### <a name="remarks"></a>Uwagi  
- Typ w tym artykule opisano ogólny interfejs dla tej klasy kontenera szablonu.  
+ Typ opisuje ogólny interfejs dla tej klasy szablonu w kontenerze.  
   
 ### <a name="example"></a>Przykład  
   
@@ -1036,7 +1023,6 @@ int main()
     System::Console::WriteLine();   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -1047,18 +1033,18 @@ int main()
 ```  
 
 ## <a name="generic_iterator"></a> hash_map::generic_iterator (STL/CLR)
-Typ iteratora do użytku ogólnego interfejs dla kontenera.  
+Typ iteratora do użytku z ogólny interfejs dla kontenera.  
   
 ### <a name="syntax"></a>Składnia  
   
-```  
+```cpp  
 typedef Microsoft::VisualC::StlClr::Generic::  
     ContainerBidirectionalIterator<generic_value>  
     generic_iterator;  
 ```  
   
 ### <a name="remarks"></a>Uwagi  
- Typ w tym artykule opisano iteratora rodzajowy, używaną z ogólnym interfejsem dla tej klasy kontenera szablonu.  
+ Typ opisuje iterator ogólny, który mogą być używane z ogólny interfejs dla tej klasy szablonu w kontenerze.  
   
 ### <a name="example"></a>Przykład  
   
@@ -1093,7 +1079,6 @@ int main()
     System::Console::WriteLine();   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -1103,18 +1088,18 @@ int main()
 ``` 
 
 ## <a name="generic_reverse_iterator"></a> hash_map::generic_reverse_iterator (STL/CLR)
-Typ odwrotnej iteratora do użytku ogólnego interfejs dla kontenera.  
+Typ iteratora odwrotnego do użytku z ogólny interfejs dla kontenera.  
   
 ### <a name="syntax"></a>Składnia  
   
-```  
+```cpp  
 typedef Microsoft::VisualC::StlClr::Generic::  
     ReverseRandomAccessIterator<generic_value>  
     generic_reverse_iterator;  
 ```  
   
 ### <a name="remarks"></a>Uwagi  
- Typ w tym artykule opisano ogólny iteratora odwrotnej służący z ogólnym interfejsem dla tej klasy kontenera szablonu.  
+ Typ opisuje iterator odwrotny ogólnego, które mogą być używane z ogólny interfejs dla tej klasy kontenera szablonu.  
   
 ### <a name="example"></a>Przykład  
   
@@ -1148,7 +1133,6 @@ int main()
     System::Console::WriteLine(" [{0} {1}]", gcval->first, gcval->second);   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -1158,16 +1142,16 @@ int main()
 ```   
 
 ## <a name="generic_value"></a> hash_map::generic_value (STL/CLR)
-Typ elementu do użytku ogólnego interfejs dla kontenera.  
+Typ elementu do użycia przy użyciu interfejsu ogólnego dla kontenera.  
   
 ### <a name="syntax"></a>Składnia  
   
-```  
+```cpp  
 typedef GValue generic_value;  
 ```  
   
 ### <a name="remarks"></a>Uwagi  
- Typ w tym artykule opisano typu obiektu `GValue` opisujący wartość elementu przechowywane do użytku ogólnego interfejs dla tej klasy kontenera szablonu.  
+ Typ opisuje obiekt typu `GValue` wartość elementu przechowywane do użytku z ogólny interfejs dla tej klasy kontenera szablonu, który opisuje.  
   
 ### <a name="example"></a>Przykład  
   
@@ -1201,7 +1185,6 @@ int main()
     System::Console::WriteLine(" [{0} {1}]", gcval->first, gcval->second);   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -1215,12 +1198,12 @@ Wyszukuje element, który odpowiada określonemu kluczowi.
   
 ### <a name="syntax"></a>Składnia  
   
-```  
+```cpp  
 hasher^ hash_delegate();  
 ```  
   
 ### <a name="remarks"></a>Uwagi  
- Funkcja członkowska zwraca delegata służący do konwertowania wartości klucza na liczbę całkowitą. Służy do wyznaczania wartości skrótu klucza.  
+ Funkcja elementu członkowskiego zwraca delegata używany do konwersji wartości klucza na liczbę całkowitą. Możesz użyć do tworzenia skrótu klucza.  
   
 ### <a name="example"></a>Przykład  
   
@@ -1239,7 +1222,6 @@ int main()
     System::Console::WriteLine("hash(L'b') = {0}", myhash(L'b'));   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -1252,7 +1234,7 @@ Konstruuje obiekt kontenera.
   
 ### <a name="syntax"></a>Składnia  
   
-```  
+```cpp  
 hash_map();  
 explicit hash_map(key_compare^ pred);  
 hash_map(key_compare^ pred, hasher^ hashfn);  
@@ -1274,19 +1256,19 @@ hash_map(System::Collections::Generic::IEnumerable<GValue>^ right,
 ```  
   
 #### <a name="parameters"></a>Parametry  
- pierwszy  
+ *pierwszy*  
  Początek zakresu do wstawienia.  
   
- hashfn  
- Hash — funkcja kluczy mapowania do zasobników.  
+ *hashfn*  
+ Hash — funkcja klucze mapowania do zasobników.  
   
- ostatni  
+ *ostatni*  
  Koniec zakresu do wstawienia.  
   
- pred  
- Porządkowanie predykatu w kontrolowanej sekwencji.  
+ *P.*  
+ Kolejność predykat dla kontrolowanej sekwencji.  
   
- w prawo  
+ *right*  
  Obiekt lub zakresu do wstawienia.  
   
 ### <a name="remarks"></a>Uwagi  
@@ -1294,67 +1276,67 @@ hash_map(System::Collections::Generic::IEnumerable<GValue>^ right,
   
  `hash_map();`  
   
- Inicjuje kontrolowanej sekwencji z żadnych elementów przy użyciu domyślnego porządkowanie predykatu `key_compare()`i przy użyciu funkcji skrótu domyślne. Umożliwia ona Określ pusty początkowej kontrolowanej sekwencji, przy użyciu domyślnego porządkowanie funkcji predykatu i wyznaczania wartości skrótu.  
+ Inicjuje kontrolowanej sekwencji bez elementów z domyślną kolejność predykatu `key_compare()`i za pomocą domyślnej funkcji skrótu. Umożliwia ona określenie początkowej pustą kontrolowaną sekwencję, przy użyciu domyślnego porządkowanie funkcji predykatu i wyznaczania wartości skrótu.  
   
  Konstruktor:  
   
  `explicit hash_map(key_compare^ pred);`  
   
- Inicjuje kontrolowanej sekwencji z żadnych elementów z porządkowania predykatu `pred`i przy użyciu funkcji skrótu domyślne. Umożliwia ona Określ pusty początkowej kontrolowanej sekwencji, określony predykat porządkowania i domyślnej funkcji skrótu.  
+ Inicjuje kontrolowanej sekwencji bez elementów, z predykatem szeregowania *pred*i za pomocą domyślnej funkcji skrótu. Umożliwia ona określenie początkowej pustą kontrolowaną sekwencję, określony predykat szeregowania i domyślnej funkcji skrótu.  
   
  Konstruktor:  
   
  `hash_map(key_compare^ pred, hasher^ hashfn);`  
   
- Inicjuje kontrolowanej sekwencji z żadnych elementów z porządkowania predykatu `pred`i przy użyciu funkcji skrótu `hashfn`. Umożliwia ona Określ pusty początkowej kontrolowanej sekwencji, przy użyciu określonego sortowania funkcji predykatu i wyznaczania wartości skrótu.  
+ Inicjuje kontrolowanej sekwencji bez elementów, z predykatem szeregowania *pred*i za pomocą funkcji skrótu *hashfn*. Umożliwia ona określenie początkowej pustą kontrolowaną sekwencję, za pomocą określonego szeregowania funkcji predykatu i wyznaczania wartości skrótu.  
   
  Konstruktor:  
   
  `hash_map(hash_map<Key, Mapped>% right);`  
   
- Inicjuje kontrolowanej sekwencji z sekwencją [`right.begin()`, `right.end()`), przy użyciu domyślnego porządkowanie predykat i przy użyciu funkcji skrótu domyślne. Należy użyć do określenia początkowej kontrolowanej sekwencji, który jest kopią sekwencji kontrolowane przez obiekt hash_map `right`, przy użyciu domyślnego sortowania predykat i funkcji skrótu.  
+ Inicjuje kontrolowanej sekwencji za pomocą sekwencji [`right.begin()`, `right.end()`) przy użyciu domyślnego porządkowanie predykat i za pomocą domyślnej funkcji skrótu. Umożliwia ona określenie początkowej kontrolowanej sekwencji, który jest kopią na sekwencję kontrolowaną przez obiekt hash_map *prawo*z predykatem, po którym sortowania domyślnego i funkcji skrótu.  
   
  Konstruktor:  
   
  `hash_map(hash_map<Key, Mapped>^ right);`  
   
- Inicjuje kontrolowanej sekwencji z sekwencją [`right->begin()`, `right->end()`), przy użyciu domyślnego porządkowanie predykat i przy użyciu funkcji skrótu domyślne. Należy użyć do określenia początkowej kontrolowanej sekwencji, który jest kopią sekwencji kontrolowane przez obiekt hash_map `right`, przy użyciu domyślnego sortowania predykat i funkcji skrótu.  
+ Inicjuje kontrolowanej sekwencji za pomocą sekwencji [`right->begin()`, `right->end()`) przy użyciu domyślnego porządkowanie predykat i za pomocą domyślnej funkcji skrótu. Umożliwia ona określenie początkowej kontrolowanej sekwencji, który jest kopią na sekwencję kontrolowaną przez obiekt hash_map *prawo*z predykatem, po którym sortowania domyślnego i funkcji skrótu.  
   
  Konstruktor:  
   
  `template<typename InIter> hash_map(InIter first, InIter last);`  
   
- Inicjuje kontrolowanej sekwencji z sekwencją [`first`, `last`), przy użyciu domyślnego porządkowanie predykat i przy użyciu funkcji skrótu domyślne. Umożliwia ona kopię kontrolowanej sekwencji innej sekwencji przy użyciu domyślnego porządkowanie funkcji predykatu i wyznaczania wartości skrótu.  
+ Inicjuje kontrolowanej sekwencji za pomocą sekwencji [`first`, `last`) przy użyciu domyślnego porządkowanie predykat i za pomocą domyślnej funkcji skrótu. Umożliwia ona Utwórz kopię innej sekwencji kontrolowanej sekwencji z domyślną kolejność funkcji predykatu i wyznaczania wartości skrótu.  
   
  Konstruktor:  
   
  `template<typename InIter> hash_map(InIter first, InIter last, key_compare^ pred);`  
   
- Inicjuje kontrolowanej sekwencji z sekwencją [`first`, `last`), z porządkowania predykatu `pred`i przy użyciu funkcji skrótu domyślne. Umożliwia ona kopię kontrolowanej sekwencji innej sekwencji określony predykat porządkowania i domyślnej funkcji skrótu.  
+ Inicjuje kontrolowanej sekwencji za pomocą sekwencji [`first`, `last`), z predykatem szeregowania *pred*i za pomocą domyślnej funkcji skrótu. Umożliwia ona kopię sekwencji kontrolowanej innej sekwencji, określony predykat szeregowania i domyślnej funkcji skrótu.  
   
  Konstruktor:  
   
  `template<typename InIter> hash_map(InIter first, InIter last, key_compare^ pred, hasher^ hashfn);`  
   
- Inicjuje kontrolowanej sekwencji z sekwencją [`first`, `last`), z porządkowania predykatu `pred`i przy użyciu funkcji skrótu `hashfn`. Umożliwia ona kopię kontrolowanej sekwencji innej sekwencji o określonej porządkowania funkcji wyznaczania wartości skrótu i predykatu.  
+ Inicjuje kontrolowanej sekwencji za pomocą sekwencji [`first`, `last`), z predykatem szeregowania *pred*i za pomocą funkcji skrótu *hashfn*. Umożliwia ona kopię sekwencji kontrolowanej sekwencji innego, określonego szeregowania funkcji predykatu i wyznaczania wartości skrótu.  
   
  Konstruktor:  
   
  `hash_map(System::Collections::Generic::IEnumerable<Key>^ right);`  
   
- Inicjuje kontrolowanej sekwencji z sekwencją wskazywany przez moduł wyliczający `right`, przy użyciu domyślnego porządkowanie predykat i przy użyciu funkcji skrótu domyślne. Umożliwia ona kopię kontrolowanej sekwencji innej sekwencji opisanego przez moduł wyliczający przy użyciu domyślnego porządkowanie funkcji predykatu i wyznaczania wartości skrótu.  
+ Inicjuje kontrolowanej sekwencji za pomocą sekwencji wyznaczonym przez moduł wyliczający *prawo*z domyślną kolejność predykat i za pomocą domyślnej funkcji skrótu. Umożliwia ona kopię sekwencji kontrolowanej innej sekwencji opisanego przez moduł wyliczający z domyślną kolejność funkcji predykatu i wyznaczania wartości skrótu.  
   
  Konstruktor:  
   
  `hash_map(System::Collections::Generic::IEnumerable<Key>^ right, key_compare^ pred);`  
   
- Inicjuje kontrolowanej sekwencji z sekwencją wskazywany przez moduł wyliczający `right`, z porządkowania predykatu `pred`i przy użyciu funkcji skrótu domyślne. Umożliwia ona kopię kontrolowanej sekwencji innej sekwencji opisanego przez moduł wyliczający, przy użyciu określonego sortowania predykat i domyślnej funkcji skrótu.  
+ Inicjuje kontrolowanej sekwencji za pomocą sekwencji wyznaczonym przez moduł wyliczający *prawo*, z predykatem szeregowania *pred*i za pomocą domyślnej funkcji skrótu. Umożliwia ona kopię sekwencji kontrolowanej innej sekwencji opisanego przez moduł wyliczający, przy użyciu określonego szeregowania predykat i domyślnej funkcji skrótu.  
   
  Konstruktor:  
   
  `hash_map(System::Collections::Generic::IEnumerable<Key>^ right, key_compare^ pred, hasher^ hashfn);`  
   
- Inicjuje kontrolowanej sekwencji z sekwencją wskazywany przez moduł wyliczający `right`, z porządkowania predykatu `pred`i przy użyciu funkcji skrótu `hashfn`. Umożliwia ona kopię kontrolowanej sekwencji innej sekwencji opisanego przez moduł wyliczający o określonej porządkowania funkcji wyznaczania wartości skrótu i predykatu.  
+ Inicjuje kontrolowanej sekwencji za pomocą sekwencji wyznaczonym przez moduł wyliczający *prawo*, z predykatem szeregowania *pred*i za pomocą funkcji skrótu *hashfn*. Umożliwia ona kopię sekwencji kontrolowanej innej sekwencji opisanego przez moduł wyliczający, za pomocą określonego szeregowania funkcji predykatu i wyznaczania wartości skrótu.  
   
 ### <a name="example"></a>Przykład  
   
@@ -1465,7 +1447,6 @@ int main()
     System::Console::WriteLine();   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -1489,17 +1470,17 @@ size() = 0
 ```   
 
 ## <a name="hasher"></a> hash_map::hasher (STL/CLR)
-Delegat funkcji skrótu dla klucza.  
+Delegat wyznaczania wartości skrótu dla klucza.  
   
 ### <a name="syntax"></a>Składnia  
   
-```  
+```cpp  
 Microsoft::VisualC::StlClr::UnaryDelegate<GKey, int>  
     hasher;  
 ```  
   
 ### <a name="remarks"></a>Uwagi  
- Typ w tym artykule opisano delegata, który konwertuje wartości klucza na liczbę całkowitą.  
+ Typ opisuje obiekt delegowany, który konwertuje wartość klucza na liczbę całkowitą.  
   
 ### <a name="example"></a>Przykład  
   
@@ -1518,7 +1499,6 @@ int main()
     System::Console::WriteLine("hash(L'b') = {0}", myhash(L'b'));   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -1531,7 +1511,7 @@ Dodaje elementy.
   
 ### <a name="syntax"></a>Składnia  
   
-```  
+```cpp  
 cliext::pair<iterator, bool> insert(value_type val);  
 iterator insert(iterator where, value_type val);  
 template<typename InIter>  
@@ -1540,33 +1520,33 @@ void insert(System::Collections::Generic::IEnumerable<value_type>^ right);
 ```  
   
 #### <a name="parameters"></a>Parametry  
- pierwszy  
+ *pierwszy*  
  Początek zakresu do wstawienia.  
   
- ostatni  
+ *ostatni*  
  Koniec zakresu do wstawienia.  
   
- w prawo  
+ *right*  
  Wyliczenie do wstawienia.  
   
- Val  
+ *Val*  
  Wartość klucza do wstawienia.  
   
- gdzie  
- Gdzie w kontenerze, aby wstawić (tylko wskazówka).  
+ *gdzie*  
+ Miejsce w kontenerze, aby wstawić (tylko wskazówki).  
   
 ### <a name="remarks"></a>Uwagi  
- Każda z funkcji Członkowskich wstawia sekwencję określony przez pozostałych argumentów operacji.  
+ Każda z tych funkcji elementu członkowskiego wstawia sekwencję określone przez pozostałe argumenty operacji.  
   
- Pierwszy funkcji członkowskiej usiłują Wstaw element z wartością `val`i zwraca pary wartości `X`. Jeśli `X.second` ma wartość true, `X.first` wyznacza nowo wstawionej elementu; w przeciwnym razie `X.first` wskazuje element z równoważne porządkowania, która już istnieje i jest wstawiany nie nowego elementu. Umożliwia ona wstawić jeden element.  
+ Pierwsza funkcja elementu członkowskiego usiłują Wstaw element z wartością `val`i zwraca parę wartości `X`. Jeśli `X.second` ma wartość true, `X.first` wyznacza nowo wstawionego elementu; w przeciwnym razie `X.first` wskazuje element ekwiwalent kolejność, która już istnieje i nie nowy element zostanie wstawiony. Umożliwia ona wstawić jeden element.  
   
- Drugi funkcji członkowskiej wstawia element z wartością `val`za pomocą `where` jako wskazówkę (Aby poprawić wydajność) i zwraca iterację wyznacza nowo wstawiony element. Umożliwia ona pojedynczy element, który może być obok elementu, który znasz Wstaw.  
+ Funkcja drugiego członka wstawia element z wartością *val*przy użyciu *gdzie* jako wskazówkę (Aby poprawić wydajność) i zwraca iterator, który wyznacza nowo wstawionego elementu. Umożliwia ona Wstaw pojedynczy element, który może być w przylegającymi do elementu, które znasz.  
   
- Trzeci funkcji członkowskiej wstawia sekwencji [`first`, `last`). Umożliwia ona Wstawianie zero lub więcej elementów skopiowanych z innej sekwencji.  
+ Trzecia funkcja członkowska wstawia sekwencję [`first`, `last`). Umożliwia ona Wstawianie zero lub więcej elementów, skopiowane z innej sekwencji.  
   
- Czwarty funkcji członkowskiej wstawia sekwencji wskazywany przez `right`. Umożliwia ona Wstaw sekwencję opisanego przez moduł wyliczający.  
+ Czwarty funkcja elementu członkowskiego wstawia sekwencję wyznaczonym przez *prawo*. Umożliwia ona Wstaw sekwencję opisanego przez moduł wyliczający.  
   
- Każdy element wstawiania czas proporcjonalna do logarytmu liczba elementów w kontrolowanej sekwencji. Wstawiania może występować w amortyzowanego stałej czasu jednak podane wskazówki, który wskazuje element sąsiadujące punkt wstawiania.  
+ Każdy element wstawiania czasochłonne proporcjonalny do logarytmu liczby elementów w kontrolowanej sekwencji. Wstawiania może wystąpić w amortyzowanym stałym czasie, jednak podane wskazówkę, opisująca element przylegające do punktu wstawiania.  
   
 ### <a name="example"></a>Przykład  
   
@@ -1630,7 +1610,6 @@ int main()
     System::Console::WriteLine();   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -1649,12 +1628,12 @@ Typ iteratora dla kontrolowanej sekwencji.
   
 ### <a name="syntax"></a>Składnia  
   
-```  
+```cpp  
 typedef T1 iterator;  
 ```  
   
 ### <a name="remarks"></a>Uwagi  
- Typ zawiera opis obiektu nieokreślonego typu `T1` który może służyć jako iterator dwukierunkowego, dla kontrolowanej sekwencji.  
+ Typ opisuje obiekt nieokreślonego typu `T1` który może służyć jako iterator dwukierunkowy dla kontrolowanej sekwencji.  
   
 ### <a name="example"></a>Przykład  
   
@@ -1678,7 +1657,6 @@ int main()
     System::Console::WriteLine();   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -1686,16 +1664,16 @@ int main()
 ```  
 
 ## <a name="key_comp"></a> hash_map::key_comp (STL/CLR)
-Kopiuje porządkowania delegowanie dla dwa klucze.  
+Kopiuje szeregowania delegata dwa klucze.  
   
 ### <a name="syntax"></a>Składnia  
   
-```  
+```cpp  
 key_compare^key_comp();  
 ```  
   
 ### <a name="remarks"></a>Uwagi  
- Funkcja członkowska zwraca delegata porządkowania porządkowania kontrolowanej sekwencji. Umożliwia ona porównać dwa klucze.  
+ Funkcja elementu członkowskiego zwraca szeregowania obiektu delegowanego porządkowania kontrolowanej sekwencji. Umożliwia ona porównać dwa klucze.  
   
 ### <a name="example"></a>Przykład  
   
@@ -1730,7 +1708,6 @@ int main()
         kcomp(L'b', L'a'));   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -1744,17 +1721,17 @@ compare(L'b', L'a') = True
 ``` 
 
 ## <a name="key_compare"></a> hash_map::key_compare (STL/CLR)
-Delegat porządkowania dla dwa klucze.  
+Szeregowania delegat dla obiektu dwa klucze.  
   
 ### <a name="syntax"></a>Składnia  
   
-```  
+```cpp  
 Microsoft::VisualC::StlClr::BinaryDelegate<GKey, GKey, bool>  
     key_compare;  
 ```  
   
 ### <a name="remarks"></a>Uwagi  
- Typ jest synonimem delegata, który określa kolejność argumentów klucza.  
+ Typ jest synonimem dla delegata, która określa kolejność argumentów klucza.  
   
 ### <a name="example"></a>Przykład  
   
@@ -1789,7 +1766,6 @@ int main()
         kcomp(L'b', L'a'));   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -1807,12 +1783,12 @@ Typ klucza sortowania.
   
 ### <a name="syntax"></a>Składnia  
   
-```  
+```cpp  
 typedef Key key_type;  
 ```  
   
 ### <a name="remarks"></a>Uwagi  
- Typ jest synonimem parametru szablonu `Key`.  
+ Typ jest synonimem dla parametru szablonu *klucz*.  
   
 ### <a name="example"></a>Przykład  
   
@@ -1839,7 +1815,6 @@ int main()
     System::Console::WriteLine();   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -1851,12 +1826,12 @@ Oblicza średnią liczbę elementów na przedział.
   
 ### <a name="syntax"></a>Składnia  
   
-```  
+```cpp  
 float load_factor();  
 ```  
   
 ### <a name="remarks"></a>Uwagi  
- Funkcja członkowska zwraca `(float)` [hash_map::size (STL/CLR)](../dotnet/hash-map-size-stl-clr.md) `() /` [hash_map::bucket_count (STL/CLR)](../dotnet/hash-map-bucket-count-stl-clr.md)`()`. Można użyć do określenia rozmiaru średni zasobnika.  
+ Funkcja elementu członkowskiego zwraca `(float)` [hash_map::size (STL/CLR)](../dotnet/hash-map-size-stl-clr.md) `() /` [hash_map::bucket_count (STL/CLR)](../dotnet/hash-map-bucket-count-stl-clr.md)`()`. Możesz użyć do określenia rozmiaru przedziału średniej.  
   
 ### <a name="example"></a>Przykład  
   
@@ -1901,7 +1876,6 @@ int main()
         c1.max_load_factor());   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -1920,20 +1894,20 @@ max_load_factor() = 0.25
 ```   
 
 ## <a name="lower_bound"></a> hash_map::lower_bound (STL/CLR)
-Wyszukuje początek zakresu, który jest zgodny z określonym kluczem.  
+Znajduje początek zakresu, który odpowiada określonemu kluczowi.  
   
 ### <a name="syntax"></a>Składnia  
   
-```  
+```cpp  
 iterator lower_bound(key_type key);  
 ```  
   
 #### <a name="parameters"></a>Parametry  
- klawisz  
+ *Klucz*  
  Wartość klucza do wyszukania.  
   
 ### <a name="remarks"></a>Uwagi  
- Funkcja członkowska Określa pierwszy element `X` w kontrolowanej sekwencji, który tworzy skrót do tego samego zasobnika jako `key` i ma równoważne kolejności do `key`. Jeśli żaden taki element istnieje, zwraca [hash_map::end (STL/CLR)](../dotnet/hash-map-end-stl-clr.md)`()`; w przeciwnym razie zwraca iterację wyznacza `X`. Możesz użyć do zlokalizowania na początku sekwencji elementów aktualnie w kontrolowanej sekwencji, który jest zgodny z określonym kluczem.  
+ Funkcja elementu członkowskiego Określa pierwszy element `X` w kontrolowanej sekwencji, która tworzy skrót do tego samego zasobnika jako *klucz* i ma równoważną kolejność, tak aby *klucz*. Jeśli taki element nie istnieje, zwraca [hash_map::end (STL/CLR)](../dotnet/hash-map-end-stl-clr.md)`()`; w przeciwnym razie zwraca iterator, który wyznacza `X`. Umożliwia ona obecnie zlokalizuj na początku sekwencji elementów w kontrolowanej sekwencji, które odpowiadają określonemu kluczowi.  
   
 ### <a name="example"></a>Przykład  
   
@@ -1966,7 +1940,6 @@ int main()
         it->first, it->second);   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -1977,23 +1950,23 @@ lower_bound(L'x')==end() = True
 ```  
 
 ## <a name="make_value"></a> hash_map::make_value (STL/CLR)
-Tworzy obiekt wartość.  
+Tworzy obiekt wartości.  
   
 ### <a name="syntax"></a>Składnia  
   
-```  
+```cpp  
 static value_type make_value(key_type key, mapped_type mapped);  
 ```  
   
 #### <a name="parameters"></a>Parametry  
- klawisz  
+ *Klucz*  
  Wartość klucza do użycia.  
   
- zamapowane  
- Zmapowane wartość do wyszukania.  
+ *Zamapowane*  
+ Mapowaną wartość do wyszukania.  
   
 ### <a name="remarks"></a>Uwagi  
- Funkcja członkowska zwraca `value_type` obiektu, którego klucz jest `key` , którego wartość zamapowanego jest `mapped`. Można go użyć do zredagowania odpowiednie do użycia z wielu innych funkcji elementów członkowskich obiektu.  
+ Funkcja elementu członkowskiego zwraca `value_type` obiektu, którego klucz jest *klucz* , którego wartość zmapowanego jest *mapowane*. Możesz użyć do redagowania odpowiedni do użytku z wielu innych funkcji Członkowskich obiektu.  
   
 ### <a name="example"></a>Przykład  
   
@@ -2016,7 +1989,6 @@ int main()
     System::Console::WriteLine();   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -2028,12 +2000,12 @@ Typ mapowanej wartości skojarzonej z poszczególnymi kluczami.
   
 ### <a name="syntax"></a>Składnia  
   
-```  
+```cpp  
 typedef Mapped mapped_type;  
 ```  
   
 ### <a name="remarks"></a>Uwagi  
- Typ jest synonimem parametru szablonu `Mapped`.  
+ Typ jest synonimem dla parametru szablonu `Mapped`.  
   
 ### <a name="example"></a>Przykład  
   
@@ -2060,7 +2032,6 @@ int main()
     System::Console::WriteLine();   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -2072,19 +2043,19 @@ Pobiera lub ustawia maksymalną liczbę elementów na przedział.
   
 ### <a name="syntax"></a>Składnia  
   
-```  
+```cpp  
 float max_load_factor();  
 void max_load_factor(float new_factor);  
 ```  
   
 #### <a name="parameters"></a>Parametry  
- new_factor  
+ *new_factor*  
  Maksymalna nowe obciążenia współczynnik do przechowywania.  
   
 ### <a name="remarks"></a>Uwagi  
- Pierwszy element członkowski funkcja bieżący współczynnik przechowywanych maksymalne obciążenie. Można użyć do określenia rozmiar maksymalny średni zasobnika.  
+ Pierwsza funkcja elementu członkowskiego zwraca bieżący współczynnik przechowywanych maksymalnego obciążenia. Możesz użyć do określenia rozmiar maksymalny przedział średniej.  
   
- Drugi funkcji członkowskiej zastępuje współczynnik maksymalne obciążenie magazynu z `new_factor`. Nie automatycznego rehashing występuje do kolejnych insert.  
+ Funkcja drugiego członka zastępuje współczynnik maksymalnego obciążenia magazynu za pomocą *new_factor*. Nie automatycznego rehashing występuje aż do kolejnych insert.  
   
 ### <a name="example"></a>Przykład  
   
@@ -2129,7 +2100,6 @@ int main()
         c1.max_load_factor());   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -2152,16 +2122,16 @@ Zastępuje kontrolowanej sekwencji.
   
 ### <a name="syntax"></a>Składnia  
   
-```  
+```cpp  
 hash_map<Key, Mapped>% operator=(hash_map<Key, Mapped>% right);  
 ```  
   
 #### <a name="parameters"></a>Parametry  
- w prawo  
+ *right*  
  Kontener do skopiowania.  
   
 ### <a name="remarks"></a>Uwagi  
- Element członkowski operatora kopie `right` do obiektu, zwraca `*this`. Umożliwia ona Zamień kontrolowanej sekwencji kopię w kontrolowanej sekwencji `right`.  
+ Kopiuje operator składowej *prawo* do obiektu, następnie zwraca `*this`. Umożliwia ona Zastąp kopię kontrolowanej sekwencji w kontrolowanej sekwencji *prawo*.  
   
 ### <a name="example"></a>Przykład  
   
@@ -2192,7 +2162,6 @@ int main()
     System::Console::WriteLine();   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -2201,20 +2170,20 @@ int main()
 ``` 
 
 ## <a name="op"></a> hash_map::operator(STL/CLR)
-Mapuje klucz, do jej powiązaną wartość mapowane.  
+Mapuje klucz, do jej powiązaną wartość zamapowany.  
   
 ### <a name="syntax"></a>Składnia  
   
-```  
+```cpp  
 mapped_type operator[](key_type key);  
 ```  
   
 #### <a name="parameters"></a>Parametry  
- klawisz  
+ *Klucz*  
  Wartość klucza do wyszukania.  
   
 ### <a name="remarks"></a>Uwagi  
- Funkcje Członkowskie kwot można znaleźć elementu za równoważne kolejności do `key`. Jeśli zostanie znaleziony, zwraca skojarzona wartość zamapowanego; w przeciwnym razie wstawia `value_type(key, mapped_type())` i zwraca skojarzony wartość mapowane (ustawienie domyślne). Możesz użyć wartość mapowane na podany skojarzonego z nim klucza lub upewnij się, że istnieje wpis dla klucza, w przypadku nieodnalezienia.  
+ Element członkowski funkcji przedsięwzięciach, aby znaleźć element z równoważną kolejność, tak aby *klucz*. Jeśli zostanie znaleziony, zwraca wartość skojarzoną wartość zamapowanego; w przeciwnym razie wstawia `value_type(key, mapped_type())` i zwraca skojarzony (ustawienie domyślne) mapowane wartości. Możesz użyć do wyszukiwania mapowanej wartości podane skojarzonego z nim klucza lub upewnij się, że istnieje wpis dla klucza, jeśli nie zostanie znaleziony.  
   
 ### <a name="example"></a>Przykład  
   
@@ -2254,7 +2223,6 @@ int main()
     System::Console::WriteLine();   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -2266,16 +2234,16 @@ c1[b] = 2
 ```  
 
 ## <a name="rbegin"></a> hash_map::rbegin (STL/CLR)
-Określa początek odwróconej kontrolowanej sekwencji.  
+Określa początek kontrolowanej sekwencji odwróconej.  
   
 ### <a name="syntax"></a>Składnia  
   
-```  
+```cpp  
 reverse_iterator rbegin();  
 ```  
   
 ### <a name="remarks"></a>Uwagi  
- Funkcja członkowska zwraca odwrotnej iteratora, który wyznacza ostatniego elementu w kontrolowanej sekwencji lub poza początku pustej sekwencji. W związku z tym wyznacza `beginning` odwrotnej kolejności. Służy do uzyskania iterację wyznacza `current` początku kontrolowanej sekwencji występuje w odwrotnej kolejności, ale jej stan można zmieniać w przypadku zmiany długości kontrolowanej sekwencji.  
+ Funkcja elementu członkowskiego zwraca odwrotnego iteratora, który wyznacza wartość ostatniego elementu w kontrolowanej sekwencji lub tuż za koniec pustą sekwencją. Dzięki temu wyznacza `beginning` odwrotnej kolejności. Służy do uzyskiwania iterator, który wyznacza `current` początek kontrolowanej sekwencji występuje w odwrotnej kolejności, ale jej stan można zmienić, jeśli zmieni się długość kontrolowanej sekwencji.  
   
 ### <a name="example"></a>Przykład  
   
@@ -2306,7 +2274,6 @@ int main()
         rit->first, rit->second);   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -2320,12 +2287,12 @@ Typ odwołania do elementu.
   
 ### <a name="syntax"></a>Składnia  
   
-```  
+```cpp  
 typedef value_type% reference;  
 ```  
   
 ### <a name="remarks"></a>Uwagi  
- Typ w tym artykule opisano odwołanie do elementu.  
+ Typ opisuje odwołanie do elementu.  
   
 ### <a name="example"></a>Przykład  
   
@@ -2352,7 +2319,6 @@ int main()
     System::Console::WriteLine();   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -2364,12 +2330,12 @@ Przebudowuje tabelę mieszania.
   
 ### <a name="syntax"></a>Składnia  
   
-```  
+```cpp  
 void rehash();  
 ```  
   
 ### <a name="remarks"></a>Uwagi  
- Funkcja członkowska odtwarza tablicy skrótów, upewniając się, że [hash_map::load_factor (STL/CLR)](../dotnet/hash-map-load-factor-stl-clr.md) `() <=` [hash_map::max_load_factor (STL/CLR)](../dotnet/hash-map-max-load-factor-stl-clr.md). W przeciwnym razie tablicy skrótów zwiększa rozmiar tylko w razie potrzeby po wstawieniu. (Nigdy nie automatycznie zmniejsza rozmiar.) Umożliwia ona dostosować rozmiar tablicy skrótów.  
+ Funkcja elementu członkowskiego przebudowuje tabelę mieszania, upewniając się, że [hash_map::load_factor (STL/CLR)](../dotnet/hash-map-load-factor-stl-clr.md) `() <=` [hash_map::max_load_factor (STL/CLR)](../dotnet/hash-map-max-load-factor-stl-clr.md). W przeciwnym razie tabeli mieszania rozmiar zwiększa się tylko w razie potrzeby po wstawieniu. (Nigdy automatycznie zmniejszenie rozmiaru.) Umożliwia ona Dopasowywanie rozmiaru tablicy skrótów.  
   
 ### <a name="example"></a>Przykład  
   
@@ -2414,7 +2380,6 @@ int main()
         c1.max_load_factor());   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -2433,16 +2398,16 @@ max_load_factor() = 0.25
 ```  
 
 ## <a name="rend"></a> hash_map::rend (STL/CLR)
-Określa koniec odwróconej kontrolowanej sekwencji.  
+Określa koniec kontrolowanej sekwencji odwróconej.  
   
 ### <a name="syntax"></a>Składnia  
   
-```  
+```cpp  
 reverse_iterator rend();  
 ```  
   
 ### <a name="remarks"></a>Uwagi  
- Funkcja członkowska zwraca odwrotnej iteratora tego punktów poza początku kontrolowanej sekwencji. W związku z tym wyznacza `end` odwrotnej kolejności. Służy do uzyskania iterację wyznacza `current` koniec kontrolowanej sekwencji występuje w odwrotnej kolejności, ale jej stan można zmieniać w przypadku zmiany długości kontrolowanej sekwencji.  
+ Funkcja elementu członkowskiego zwraca odwrotnego iteratora, który wskazuje tuż za początek kontrolowanej sekwencji. Dzięki temu wyznacza `end` odwrotnej kolejności. Służy do uzyskiwania iterator, który wyznacza `current` koniec kontrolowanej sekwencji występuje w odwrotnej kolejności, ale jej stan można zmienić, jeśli zmieni się długość kontrolowanej sekwencji.  
   
 ### <a name="example"></a>Przykład  
   
@@ -2475,7 +2440,6 @@ int main()
         rit->first, rit->second);   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -2485,16 +2449,16 @@ int main()
 ```  
 
 ## <a name="reverse_iterator"></a> hash_map::reverse_iterator (STL/CLR)
-Typ odwrotnej iteratora w kontrolowanej sekwencji.  
+Typ iteratora odwrotnego dla kontrolowanej sekwencji.  
   
 ### <a name="syntax"></a>Składnia  
   
-```  
+```cpp  
 typedef T3 reverse_iterator;  
 ```  
   
 ### <a name="remarks"></a>Uwagi  
- Typ zawiera opis obiektu nieokreślonego typu `T3` który może służyć jako odwrotnej iteratora w kontrolowanej sekwencji.  
+ Typ opisuje obiekt nieokreślonego typu `T3` który może służyć jako odwrotnego iteratora dla kontrolowanej sekwencji.  
   
 ### <a name="example"></a>Przykład  
   
@@ -2518,7 +2482,6 @@ int main()
     System::Console::WriteLine();   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -2530,12 +2493,12 @@ Liczy liczbę elementów.
   
 ### <a name="syntax"></a>Składnia  
   
-```  
+```cpp  
 size_type size();  
 ```  
   
 ### <a name="remarks"></a>Uwagi  
- Funkcja członkowska zwraca długość kontrolowanej sekwencji. Można użyć do określenia liczby elementów aktualnie w kontrolowanej sekwencji. Jeśli wszystkie najważniejsze informacje dotyczące tego, czy sekwencja ma rozmiar różną od zera, zobacz [hash_map::empty (STL/CLR)](../dotnet/hash-map-empty-stl-clr.md)`()`.  
+ Funkcja elementu członkowskiego zwraca długość kontrolowanej sekwencji. Umożliwia ona określenie liczby elementów aktualnie w kontrolowanej sekwencji. Jeśli jest wszystkich interesujących Cię, czy sekwencja ma wartość różną od zera rozmiaru, zobacz [hash_map::empty (STL/CLR)](../dotnet/hash-map-empty-stl-clr.md)`()`.  
   
 ### <a name="example"></a>Przykład  
   
@@ -2567,7 +2530,6 @@ int main()
     System::Console::WriteLine("size() = {0} after adding 2", c1.size());   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -2577,16 +2539,16 @@ size() = 2 after adding 2
 ```  
   
 ## <a name="size_type"></a> hash_map::size_type (STL/CLR)
-Typ podpisem odległość między dwoma elementu.  
+Typ odległości ze znakiem między dwoma elementu.  
   
 ### <a name="syntax"></a>Składnia  
   
-```  
+```cpp  
 typedef int size_type;  
 ```  
   
 ### <a name="remarks"></a>Uwagi  
- Typ w tym artykule opisano liczbą nieujemną elementu.  
+ Typ opisuje liczby nieujemnej wartości elementu.  
   
 ### <a name="example"></a>Przykład  
   
@@ -2615,7 +2577,6 @@ int main()
     System::Console::WriteLine("end()-begin() = {0}", diff);   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -2628,16 +2589,16 @@ Zamienia zawartości dwóch kontenerów.
   
 ### <a name="syntax"></a>Składnia  
   
-```  
+```cpp  
 void swap(hash_map<Key, Mapped>% right);  
 ```  
   
 #### <a name="parameters"></a>Parametry  
- w prawo  
+ *right*  
  Kontener do wymiany zawartości z.  
   
 ### <a name="remarks"></a>Uwagi  
- Funkcja członkowska zamienia kontrolowanej sekwencji między `this` i `right`. Robi to w czasie stałej i zgłasza żadnych wyjątków. Możesz używać go jako szybko do wymiany zawartości dwóch kontenerów.  
+ Funkcja elementu członkowskiego zamienia kontrolowanej sekwencji między `this` i *prawo*. Robi to w stałym czasie i w wyniku weryfikacji zgłasza wyjątek bez wyjątków. Możesz użyć go w prosty sposób do wymiany zawartości dwóch kontenerów.  
   
 ### <a name="example"></a>Przykład  
   
@@ -2679,7 +2640,6 @@ int main()
     System::Console::WriteLine();   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -2694,12 +2654,12 @@ Kopiuje kontrolowanej sekwencji do nowej tablicy.
   
 ### <a name="syntax"></a>Składnia  
   
-```  
+```cpp  
 cli::array<value_type>^ to_array();  
 ```  
   
 ### <a name="remarks"></a>Uwagi  
- Funkcja członkowska zwraca tablicę zawierającą kontrolowanej sekwencji. Umożliwia ona uzyskać kopię kontrolowanej sekwencji w postaci tablicy.  
+ Funkcja elementu członkowskiego zwraca tablicę zawierającą kontrolowanej sekwencji. Umożliwia ona otrzymać kopię kontrolowanej sekwencji w postaci tablicy.  
   
 ### <a name="example"></a>Przykład  
   
@@ -2730,7 +2690,6 @@ int main()
     System::Console::WriteLine();   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -2739,20 +2698,20 @@ int main()
 ```  
 
 ## <a name="upper_bound"></a> hash_map::upper_bound (STL/CLR)
-Wyszukuje koniec zakresu, który jest zgodny z określonym kluczem.  
+Znajduje koniec zakresu, który odpowiada określonemu kluczowi.  
   
 ### <a name="syntax"></a>Składnia  
   
-```  
+```cpp  
 iterator upper_bound(key_type key);  
 ```  
   
 #### <a name="parameters"></a>Parametry  
- klawisz  
+ *Klucz*  
  Wartość klucza do wyszukania.  
   
 ### <a name="remarks"></a>Uwagi  
- Funkcja członkowska Określa ostatni element `X` w kontrolowanej sekwencji, który tworzy skrót do tego samego zasobnika jako `key` i ma równoważne kolejności do `key`. Jeśli nie zawiera żadnego takiego elementu lub `X` jest ostatniego elementu w kontrolowanej sekwencji zwraca [hash_map::end (STL/CLR)](../dotnet/hash-map-end-stl-clr.md)`()`; w przeciwnym razie zwraca określający pierwszy element poza iteratora`X`. Umożliwia ona obecnie Znajdź koniec sekwencję elementów w kontrolowanej sekwencji, który jest zgodny z określonym kluczem.  
+ Funkcja elementu członkowskiego określa po ostatnim elemencie `X` w kontrolowanej sekwencji, która tworzy skrót do tego samego zasobnika jako *klucz* i ma równoważną kolejność, tak aby *klucz*. Jeśli taki element nie istnieje lub `X` jest ostatnim elementem w kontrolowanej sekwencji, funkcja zwraca [hash_map::end (STL/CLR)](../dotnet/hash-map-end-stl-clr.md)`()`; w przeciwnym razie zwraca iterator, który wyznacza pierwszego elementu poza `X`. Umożliwia ona obecnie Znajdź koniec sekwencji elementów w kontrolowanej sekwencji, które odpowiadają określonemu kluczowi.  
   
 ### <a name="example"></a>Przykład  
   
@@ -2785,7 +2744,6 @@ int main()
         it->first, it->second);   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -2796,16 +2754,16 @@ upper_bound(L'x')==end() = True
 ```  
 
 ## <a name="value_comp"></a> hash_map::value_comp (STL/CLR)
-Kopiuje porządkowania delegowanie dla dwóch wartości elementu.  
+Kopiuje szeregowania delegata dwie wartości elementów.  
   
 ### <a name="syntax"></a>Składnia  
   
-```  
+```cpp  
 value_compare^ value_comp();  
 ```  
   
 ### <a name="remarks"></a>Uwagi  
- Funkcja członkowska zwraca delegata porządkowania porządkowania kontrolowanej sekwencji. Można użyć do porównania dwóch wartości elementu.  
+ Funkcja elementu członkowskiego zwraca szeregowania obiektu delegowanego porządkowania kontrolowanej sekwencji. Umożliwia ona porównać dwie wartości elementów.  
   
 ### <a name="example"></a>Przykład  
   
@@ -2832,7 +2790,6 @@ int main()
     System::Console::WriteLine();   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -2842,17 +2799,17 @@ compare([L'b', 2], [L'a', 1]) = False
 ```  
 
 ## <a name="value_compare"></a> hash_map::value_compare (STL/CLR)
-Delegat porządkowania dla dwóch wartości elementu.  
+Szeregowania delegat dla obiektu dwie wartości elementów.  
   
 ### <a name="syntax"></a>Składnia  
   
-```  
+```cpp  
 Microsoft::VisualC::StlClr::BinaryDelegate<generic_value, generic_value, bool>  
     value_compare;  
 ```  
   
 ### <a name="remarks"></a>Uwagi  
- Typ jest synonimem delegata, który określa kolejność argumentów wartości.  
+ Typ jest synonimem dla delegata, który określa kolejność wartości argumentów.  
   
 ### <a name="example"></a>Przykład  
   
@@ -2879,7 +2836,6 @@ int main()
     System::Console::WriteLine();   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -2893,12 +2849,12 @@ Typ elementu.
   
 ### <a name="syntax"></a>Składnia  
   
-```  
+```cpp  
 typedef generic_value value_type;  
 ```  
   
 ### <a name="remarks"></a>Uwagi  
- Typ jest synonimem `generic_value`.  
+ Typ jest synonimem dla `generic_value`.  
   
 ### <a name="example"></a>Przykład  
   
@@ -2924,10 +2880,8 @@ int main()
     System::Console::WriteLine();   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
 [a 1] [b 2] [c 3]  
 ```  
-  
