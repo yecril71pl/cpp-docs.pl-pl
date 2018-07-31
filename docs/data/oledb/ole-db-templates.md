@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 3133341b3dffa27cb5a6cec60ab58254fbe12dea
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: af146c37490d86a839f717d387c4072fbd649a87
+ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33109576"
+ms.lasthandoff: 07/30/2018
+ms.locfileid: "39339440"
 ---
 # <a name="ole-db-templates"></a>Szablony OLE DB
-Szablony OLE DB ułatwić dostęp do danych OLE DB. Visual C++ udostępnia szablonu klasy, które implementuje wiele często używane interfejsy OLE DB. Można użyć szablonów konsumentów Visual C++ do pisania aplikacji klienta (użytkownik) OLE DB i szablony dostawcy do pisania aplikacji serwera (dostawcy).  
+Szablony OLE DB ułatwiają dostęp do danych OLE DB. Visual C++ zapewnia klasy szablonów, które implementują wiele powszechnie używanych interfejsów OLE DB. Można użyć szablonów konsumentów Visual C++ do pisania aplikacji klienckich (użytkownik) OLE DB i szablony dostawcy do pisania aplikacji serwera (dostawcy).  
   
 ## <a name="in-this-section"></a>W tej sekcji  
  [Szablony konsumentów OLE DB](../../data/oledb/ole-db-consumer-templates-reference.md)  
@@ -36,13 +36,13 @@ Szablony OLE DB ułatwić dostęp do danych OLE DB. Visual C++ udostępnia szabl
   
 ## <a name="related-sections"></a>Sekcje pokrewne  
  [Omówienie programowania OLE DB](../../data/oledb/ole-db-programming-overview.md)  
- W tym artykule opisano, co to jest OLE DB i omówiono Uniwersalny dostęp do danych w bazie danych OLE DB.  
+ W tym artykule opisano, co to jest OLE DB, a w tym artykule omówiono Uniwersalny dostęp do danych w OLE DB.  
   
- [OLE DB Podręcznik programisty](https://msdn.microsoft.com/en-us/library/ms713643.aspx)  
- Zawiera łącza do dokumentacji zestawu SDK systemu Windows w OLE DB.  
+ [Dokumentacja dotycząca OLE DB](https://msdn.microsoft.com/library/ms713643.aspx)  
+ Zawiera łącza do dokumentacji zestawu Windows SDK dla OLE DB.  
   
  [Przykłady szablonów OLE DB](../../visual-cpp-samples.md)  
- Zawiera łącza do przykłady szablonów OLE DB, które pokazują, jak używać OLE DB w projektach.  
+ Zawiera łącza do przykładów szablonów OLE DB, które pokazują, jak korzystać z OLE DB w swoich projektach.  
   
  [Szablony konsumentów OLE DB](../../data/oledb/ole-db-consumer-templates-cpp.md)  
  W tym artykule omówiono koncepcyjnego materiału informacje o szablonach klientów bazy danych OLE.  
@@ -51,19 +51,19 @@ Szablony OLE DB ułatwić dostęp do danych OLE DB. Visual C++ udostępnia szabl
  W tym artykule omówiono koncepcyjnego materiału o szablony OLE DB Provider.  
   
  [Tworzenie konsumenta OLE DB](../../data/oledb/creating-an-ole-db-consumer.md)  
- W tym artykule opisano tworzenie konsumenta OLE DB szablonów lub bez OLE DB Kreator konsumenta ATL.  
+ W tym artykule opisano tworzenie konsumenta OLE DB szablony z lub bez ATL OLE DB Kreator konsumenta.  
   
  [Tworzenie prostego dostawcy tylko do odczytu](../../data/oledb/creating-a-simple-read-only-provider.md)  
- W tym artykule opisano tworzenie prostego dostawcy tylko do odczytu, odczytujący pary ciągów.  
+ W tym artykule opisano tworzenie prostego dostawcy tylko do odczytu, która odczytuje pary ciągów.  
   
  [Tworzenie aktualizowalnego dostawcy](../../data/oledb/creating-an-updatable-provider.md)  
- W tym artykule opisano tworzenie dostawców, które można zapisać w magazynie danych.  
+ W tym artykule opisano tworzenie dostawców, którzy mogą zapisywać dane w magazynie danych.  
   
  [Atrybuty konsumentów OLE DB](../../windows/ole-db-consumer-attributes.md)  
- W tym artykule omówiono uproszczony interfejs iniekcję kodu opartego na OLE DB konsumenta szablony do tworzenia pracy konsumentów OLE DB.  
+ W tym artykule omówiono uproszczony interfejs iniekcję kodu opartego na OLE DB konsumenta szablony do tworzenia konsumentów OLE DB pracy.  
   
  [Odwołanie do Active Template Library (ATL)](../../atl/atl-com-desktop-components.md)  
- Udostępnia materiału odwołanie do biblioteki ATL, zestaw na podstawie szablonu klasy C++, które upraszczają programowanie obiektów COM.  
+ Oferuje materiały źródłowe dotyczące biblioteki ATL, zestaw na podstawie szablonu klasy C++, które upraszczają programowanie obiektów COM.  
   
  [Debugowanie](/visualstudio/debugger/debugging-in-visual-studio)  
- Zawiera łącza do poprawianie błędów logikę w aplikacji lub procedury składowane za pomocą debugera programu Visual Studio.
+ Zawiera łącza do przy użyciu debugera programu Visual Studio, aby poprawić błędy logiczne w aplikacji lub procedur składowanych.
