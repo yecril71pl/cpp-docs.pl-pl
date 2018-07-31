@@ -26,21 +26,21 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: aea6b4b2ebb1a02e4ef669b437fbe7eb30937f9b
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 8e9549070acf08e566110ea30f4a0259caeca047
+ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33109810"
+ms.lasthandoff: 07/30/2018
+ms.locfileid: "39339675"
 ---
 # <a name="user-records"></a>Rekordy użytkownika
-Aby użyć statycznej metody dostępu (czyli metody dostępu pochodzi od **CAccessor)**, Twoje konsumenta muszą mieć rekord użytkownika. Rekord użytkownika jest klasę C++, która zawiera elementy danych do obsługi danych wejściowych lub wyjściowych. OLE DB Kreator konsumenta ATL generuje rekord użytkownika dla użytkownika konsumenta. Metody można dodać do rekordu użytkownika, która ma być opcjonalne zadania, takie jak obsługa poleceń.  
+Aby użyć statycznej metody dostępu (oznacza to, że metody dostępu pochodzi od `CAccessor`), konsumentów muszą mieć rekord użytkownika. Rekord użytkownika jest klasy języka C++, który zawiera elementy danych, aby uchwyt dane wejściowe lub wyjściowe. OLE DB Kreator konsumenta ATL generuje rekord użytkownika dla konsumentów. Metody można dodać do rekordu użytkownika dla opcjonalnych zadań, takich jak obsługa poleceń.  
   
- Poniższy kod przedstawia przykładowy rekord, który obsługuje poleceń. W rekordzie użytkownika `BEGIN_COLUMN_MAP` reprezentuje zestawu wierszy danych przekazany do użytkownika od dostawcy. `BEGIN_PARAM_MAP` reprezentuje zestaw parametrów polecenia. W tym przykładzie użyto [CCommand](../../data/oledb/ccommand-class.md) klasę, aby obsłużyć parametry polecenia. Elementy członkowskie danych w wpisy mapy reprezentują przesunięcia do jednego ciągłego bloku pamięci dla każdego wystąpienia klasy. `COLUMN_ENTRY` Makra odpowiadają `PROVIDER_COLUMN_ENTRY` makra po stronie dostawcy.  
+ Poniższy kod przedstawia rekord przykładowy, który obsługuje polecenia. W rekordzie użytkownika BEGIN_COLUMN_MAP reprezentuje zestawu wierszy danych przekazany klientowi od dostawcy. BEGIN_PARAM_MAP reprezentuje zestaw parametrów polecenia. W tym przykładzie użyto [CCommand](../../data/oledb/ccommand-class.md) klasy, aby obsłużyć parametry polecenia. Elementy członkowskie danych we wpisach w mapie reprezentują przesunięcia w jednym ciągłym bloku pamięci dla każdego wystąpienia klasy. Makra COLUMN_ENTRY odpowiadają makra PROVIDER_COLUMN_ENTRY po stronie dostawcy.  
   
- Aby uzyskać więcej informacji na temat **COLUMN_MAP** i **atrybut PARAM_MAP** makra, zobacz [makra dla OLE DB szablonów konsumentów](../../data/oledb/macros-and-global-functions-for-ole-db-consumer-templates.md).  
+ Aby uzyskać więcej informacji na temat COLUMN_MAP i PARAM_MAP makra, zobacz [makra dla OLE DB szablonów konsumentów](../../data/oledb/macros-and-global-functions-for-ole-db-consumer-templates.md).  
   
-```  
+```cpp  
 class CArtists  
 {  
 public:  
@@ -63,15 +63,15 @@ END_PARAM_MAP()
 };  
 ```  
   
-## <a name="wizard-generated-user-records"></a>Rekordy użytkowników generowane przez kreatora  
- Jeśli używasz OLE DB Kreator konsumenta ATL do generowania konsumenta, jest to możliwe przy użyciu szablonów OLE DB lub OLE DB atrybutów. Wygenerowany kod różni się w każdym przypadku. Aby uzyskać więcej informacji o tym kodzie, zobacz [Consumer Wizard-Generated klasy](../../data/oledb/consumer-wizard-generated-classes.md).  
+## <a name="wizard-generated-user-records"></a>Rekordy generowane przez Kreatora użytkowników  
+ Możesz generować za pomocą biblioteki ATL OLE DB konsumenta kreatora konsumenta, masz do wyboru używania szablony OLE DB lub OLE DB atrybutów. Wygenerowany kod różni się w każdym przypadku. Aby uzyskać więcej informacji na temat tego kodu, zobacz [klasy Consumer Wizard-Generated](../../data/oledb/consumer-wizard-generated-classes.md).  
   
 ## <a name="user-record-support-for-multiple-accessors"></a>Obsługa rekordu użytkownika dla wielu metod dostępu  
- Szczegółowe omówienie scenariuszy, w których należy użyć wielu metod dostępu, zobacz [przy użyciu wielu metod dostępu w zestawie wierszy](../../data/oledb/using-multiple-accessors-on-a-rowset.md).  
+ Aby uzyskać szczegółowe omówienie scenariuszy, w których należy użyć wielu metod dostępu, zobacz [przy użyciu wielu metod dostępu w zestawie wierszy](../../data/oledb/using-multiple-accessors-on-a-rowset.md).  
   
- W poniższym przykładzie przedstawiono rekordu użytkownika, zmodyfikowany w celu obsługi wielu metod dostępu w zestawie wierszy. Zamiast `BEGIN_COLUMN_MAP` i `END_COLUMN_MAP`, używa [begin_accessor_map —](../../data/oledb/begin-accessor-map.md) i [begin_accessor —](../../data/oledb/begin-accessor.md) dla każdej metody dostępu. `BEGIN_ACCESSOR` Makro określa numer metody dostępu (przesunięcie od zera) oraz czy jest autoaccessor w metodzie dostępu. Wywołanie Autoaccessors `GetData` do pobierania danych automatycznie na wywołanie [MoveNext](../../data/oledb/crowset-movenext.md). Nonautomatic metody dostępu wymaga jawnie pobierania danych. Użyj nonautomatic dostępu są wiązane do pola dużej ilości danych (takich jak obraz mapy bitowej), którego nie można pobrać dla każdego rekordu.  
+ Poniższy przykład przedstawia rekord użytkownika zmodyfikowany w celu obsługi wielu metod dostępu w zestawie wierszy. Zamiast BEGIN_COLUMN_MAP i END_COLUMN_MAP używa [BEGIN_ACCESSOR_MAP](../../data/oledb/begin-accessor-map.md) i [BEGIN_ACCESSOR](../../data/oledb/begin-accessor.md) dla każdej metody dostępu. BEGIN_ACCESSOR — makro określa liczbę metody dostępu (przesunięcie od zera) i czy metody dostępu jest autoaccessor. Wywołanie Autoaccessors `GetData` można pobrać dane automatycznie w wywołaniu [MoveNext](../../data/oledb/crowset-movenext.md). Akcesory nonautomatic wymagają jawnie pobierania danych. Użyj nonautomatic metody dostępu są wiązane z polem dużych ilości danych (na przykład obraz mapy bitowej), możesz nie chcieć pobierania dla każdego rekordu.  
   
-```  
+```cpp  
 class CMultiArtists  
 {  
 public:  

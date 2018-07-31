@@ -16,45 +16,45 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 5d43e452d0fffcb4dc6eddcae722f8056dbd39dd
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 7fedb77b6ede8d9fa843e7e7cdd344e03efecede
+ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33109290"
+ms.lasthandoff: 07/30/2018
+ms.locfileid: "39337901"
 ---
 # <a name="setting-properties-in-your-provider"></a>Ustawianie właściwości w dostawcy
-Znajdź grupy właściwości i Identyfikatora właściwości dla właściwości, które mają. Aby uzyskać więcej informacji, zobacz [właściwości OLE DB](https://msdn.microsoft.com/en-us/library/ms722734.aspx) w *OLE DB Podręcznik programisty*.  
+Znajdź grupy właściwości i Identyfikatora właściwości dla właściwości, które chcesz. Aby uzyskać więcej informacji, zobacz [właściwości OLE DB](https://msdn.microsoft.com/library/ms722734.aspx) w *OLE DB Podręcznik programisty*.  
   
- W kodzie dostawcy generowane przez kreatora należy znaleźć mapę właściwości odpowiadającej właściwości grupy. Nazwa grupy właściwości zazwyczaj odpowiada zakresowi nazwę obiektu. Właściwości polecenia i zestawu wierszy znajdują się w poleceniu lub zestawu wierszy; właściwości źródła i Inicjowanie danych można znaleźć w obiekt źródła danych.  
+ W kodzie dostawcy generowane przez kreatora należy znaleźć map właściwości odpowiadającego grupie właściwości. Nazwa grupy właściwości zazwyczaj odnosi się do nazwy obiektu. Właściwości polecenia i zestawu wierszy można znaleźć w polecenia lub zestaw wierszy; właściwości źródła i Inicjowanie danych można znaleźć w obiektu źródła danych.  
   
  Mapy właściwości, należy dodać [PROPERTY_INFO_ENTRY_EX](../../data/oledb/property-info-entry-ex.md) makra. PROPERTY_INFO_ENTRY_EX przyjmuje cztery parametry:  
   
--   Identyfikator właściwości odpowiadającej właściwości użytkownika. Najpierw siedmiu znaków ("DBPROP_") należy usunąć z przodu nazwę właściwości. Na przykład, jeśli chcesz dodać **DBPROP_MAXROWS**, Przekaż `MAXROWS` jako pierwszy element. Jeśli jest to właściwość niestandardową, należy przekazać Pełna nazwa identyfikatora GUID (na przykład `DBMYPROP_MYPROPERTY`).  
+-   Identyfikator właściwości odpowiadający Twojej właściwości. Najpierw siedem znaków ("DBPROP_") należy usunąć z przodu nazwy właściwości. Na przykład, jeśli chcesz dodać `DBPROP_MAXROWS`, przekazać `MAXROWS` jako pierwszy element. Jeśli jest to właściwość niestandardowa, należy przekazać Pełna nazwa identyfikatora GUID (na przykład `DBMYPROP_MYPROPERTY`).  
   
--   Typ wariantu właściwości (w [właściwości OLE DB](https://msdn.microsoft.com/en-us/library/ms722734.aspx) w *OLE DB Podręcznik programisty*). Wprowadź **VT_** typu (takich jak `VT_BOOL` lub `VT_I2`) odpowiednio do typu danych.  
+-   Typ wariantu właściwości (w [właściwości OLE DB](https://msdn.microsoft.com/library/ms722734.aspx) w *OLE DB Podręcznik programisty*). Wprowadź VT_ odpowiadającego typowi (lub VT_I2 VT_BOOL.) na typ danych.  
   
--   Flagi, aby wskazać, czy właściwość jest do odczytu i zapisu oraz grupy, do którego należy. Na przykład następujący kod wskazuje właściwości odczytu/zapisu, należącego do grupy wierszy:  
+-   Flagi, aby wskazać, czy właściwość jest czytelny i zapisywalny i grupy, do której należy. Na przykład poniższy kod wskazuje właściwości odczytu/zapisu, należącego do grupy wierszy:  
   
     ```  
     DBPROPFLAGS_ROWSET | DBPROPFLAGS_READ | DBPROPFLAGS_WRITE  
     ```  
   
--   Podstawową wartość właściwości. Może to być **wartość VARIANT_FALSE** wpisz wartość typu Boolean lub zero dla typu integer, na przykład. Właściwość ma tę wartość, o ile nie zostanie on zmieniony.  
+-   Podstawowa wartość właściwości. Może to być `VARIANT_FALSE` dla logicznego wpisz lub zero dla typu integer, na przykład. Właściwość ma tę wartość, chyba że zostanie on zmieniony.  
   
     > [!NOTE]
-    >  Niektóre właściwości są połączone lub powiązane łańcuchem zależności innych właściwości, takie jak zakładki lub aktualizacji. Jeśli konsumenta ustawia jedną właściwość na wartość true, mogą też skonfigurować ustawienie dla innej właściwości. Szablony dostawców OLE DB obsługuje to za pośrednictwem metody [CUtlProps::OnPropertyChanged](../../data/oledb/cutlprops-onpropertychanged.md).  
+    >  Niektóre właściwości są połączone lub łączyć je do innych właściwości, takie jak zakładek lub aktualizacji. Po użytkownik ustawia jedną właściwość na wartość true, mogą również ustawić inną właściwość. Szablony dostawców OLE DB obsługuje to za pomocą metody [CUtlProps::OnPropertyChanged](../../data/oledb/cutlprops-onpropertychanged.md).  
   
 ## <a name="properties-ignored-by-microsoft-ole-db-providers"></a>Właściwości ignorowane przez dostawców OLE DB firmy Microsoft  
  Dostawcy OLE DB firmy Microsoft Ignoruj następujące właściwości OLE DB:  
   
--   **DBPROP_MAXROWS** działa tylko dla dostawcy tylko do odczytu (oznacza to, gdzie DBPROP_IRowsetChange i DBPROP_IRowsetUpdate są false); w przeciwnym razie ta właściwość nie jest obsługiwana.  
+-   `DBPROP_MAXROWS` działa tylko w przypadku dostawcy tylko do odczytu (oznacza to, gdzie DBPROP_IRowsetChange i DBPROP_IRowsetUpdate są false); w przeciwnym razie ta właściwość nie jest obsługiwana.  
   
--   **DBPROP_MAXPENDINGROWS** jest zignorowana; dostawcy określa własnej limit.  
+-   `DBPROP_MAXPENDINGROWS` jest ignorowana. Dostawca określa swój własny limit.  
   
--   **DBPROP_MAXOPENROWS** jest zignorowana; dostawcy określa własnej limit.  
+-   `DBPROP_MAXOPENROWS` jest ignorowana. Dostawca określa swój własny limit.  
   
--   **DBPROP_CANHOLDROWS** jest zignorowana; dostawcy określa własnej limit.  
+-   `DBPROP_CANHOLDROWS` jest ignorowana. Dostawca określa swój własny limit.  
   
 ## <a name="see-also"></a>Zobacz też  
  [Praca z szablonami dostawców OLE DB](../../data/oledb/working-with-ole-db-provider-templates.md)

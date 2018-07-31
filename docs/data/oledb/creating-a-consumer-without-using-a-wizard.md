@@ -15,72 +15,72 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: c9f6bbc1ba45ec0b510dac015688fd29801c8449
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 843c2d79af8acaff835e8500f1f1d67870c4b63e
+ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33097695"
+ms.lasthandoff: 07/30/2018
+ms.locfileid: "39339909"
 ---
 # <a name="creating-a-consumer-without-using-a-wizard"></a>Tworzenie konsumenta bez użycia kreatora
-W poniższym przykładzie założono do istniejącego projektu ATL dodajesz Obsługa konsumenta OLE DB. Jeśli chcesz dodać obsługę konsumenta OLE DB do aplikacji MFC, należy uruchomić Kreator aplikacji MFC, która tworzy niezbędne pomocy technicznej i wywołuje MFC procedury niezbędne do wykonywania aplikacji.  
+W poniższym przykładzie założono, że dodajesz Obsługa konsumenta OLE DB istniejący projekt ATL. Jeśli chcesz dodać obsługę konsumenta OLE DB dla aplikacji MFC, należy uruchomić Kreatora aplikacji MFC tworzy niezbędne do pomocy technicznej, a następnie wywołuje MFC procedury niezbędne do wykonania aplikacji.  
   
- Aby dodać obsługę konsumenta OLE DB bez użycia OLE DB Kreator konsumenta ATL:  
+ Aby dodać obsługę konsumenta OLE DB bez korzystania z OLE DB Kreator konsumenta ATL:  
   
--   W pliku Stdafx.h Dołącz następujące `#include` instrukcji:  
+-   Dołącz następujący ciąg w pliku Stdafx.h `#include` instrukcji:  
   
-    ```  
+    ```cpp  
     #include <atlbase.h>  
     #include <atldbcli.h>  
     #include <atldbsch.h> // if you are using schema templates  
     ```  
   
- Programowo konsumenta przeważnie wykonuje następujące kolejność operacji:  
+ Programowo odbiorcy zwykle wykonuje następującą sekwencję czynności:  
   
--   Tworzenie klasy rekordu użytkownika, który wiąże kolumn do zmiennych lokalnych. W tym przykładzie `CMyTableNameAccessor` jest klasy rekordów użytkowników (zobacz [rekordów użytkowników](../../data/oledb/user-records.md)). Ta klasa zawiera mapowania kolumn i parametr mapy. Deklaruje element członkowski danych klasy rekordu użytkownika, dla każdego pola, które określisz na mapie kolumny; dla każdego z tych elementów członkowskich danych deklarować także członkiem danych stanu i długość elementu członkowskiego danych. Aby uzyskać więcej informacji, zobacz [elementy członkowskie dotyczących stanu pola w metodach dostępu Wizard-Generated](../../data/oledb/field-status-data-members-in-wizard-generated-accessors.md).  
+-   Utwórz klasę rekord użytkownika, która wiąże kolumn do zmiennych lokalnych. W tym przykładzie `CMyTableNameAccessor` jest klasa rekordów użytkowników (zobacz [rekordów użytkowników](../../data/oledb/user-records.md)). Ta klasa zawiera kolumny mapy i mapy parametru. Zadeklaruj element członkowski danych w klasie rekordu użytkownika dla każdego pola, którą określisz w mapie kolumny; dla każdej z tych składowych danych należy również zadeklarować element członkowski danych stanu i element członkowski danych długości. Aby uzyskać więcej informacji, zobacz [elementy członkowskie danych stanu pola w metodach dostępu Wizard-Generated](../../data/oledb/field-status-data-members-in-wizard-generated-accessors.md).  
   
     > [!NOTE]
-    >  Jeśli piszesz własne konsumenta, zmiennych danych musi występować przed zmienne stanu i długości.  
+    >  Jeśli piszesz własnego klienta, danych zmienne musi występować przed zmienne stanu i długości.  
   
--   Utworzenie wystąpienia źródła danych i sesji. Jakiego typu metody dostępu i zestawu wierszy zdecydować, a następnie utworzyć wystąpienia przy użyciu zestawu wierszy [CCommand](../../data/oledb/ccommand-class.md) lub [CTable](../../data/oledb/ctable-class.md):  
+-   Utwórz wystąpienie źródła danych i sesji. Zdecyduj, jakiego typu metody dostępu i zestawu wierszy a, tworzy zestaw wierszy przy użyciu [CCommand](../../data/oledb/ccommand-class.md) lub [CTable](../../data/oledb/ctable-class.md):  
   
-    ```  
+    ```cpp  
     CDataSource ds;  
     CSession ss;  
     class CMyTableName : public CCommand<CAccessor<CMyTableNameAccessor>>  
     ```  
   
--   Wywołanie **CoInitialize** zainicjować modelu COM. Zazwyczaj jest to główny kodu. Na przykład:  
+-   Wywołaj `CoInitialize` zainicjować modelu COM. Zazwyczaj jest to w kodzie głównego. Na przykład:  
   
-    ```  
+    ```cpp  
     HRESULT hr = CoInitialize(NULL);  
     ```  
   
--   Wywołanie [CDataSource::Open](../../data/oledb/cdatasource-open.md) lub jednego z jego zmiany.  
+-   Wywołaj [CDataSource::Open](../../data/oledb/cdatasource-open.md) lub jeden z jego zmiany.  
   
--   Otwórz połączenie ze źródłem danych, otwórz sesję i otwórz zainicjować zestawu wierszy (i jeśli polecenie również wykonać go):  
+-   Otwórz połączenie ze źródłem danych, otwórz sesję i Otwórz i zainicjować zestawu wierszy (i jeśli polecenie również uruchomić go):  
   
-    ```  
+    ```cpp  
     hr = ds.Open();  
     hr = ss.Open(ds);  
     hr = rs.Open();            // (Open also executes the command)  
     ```  
   
--   Opcjonalnie wierszy zestaw właściwości za pomocą `CDBPropSet::AddProperty` i przekazać je jako parametr `rs.Open`. Na przykład, jak to zrobić, zobacz GetRowsetProperties w [metody Consumer Wizard-Generated](../../data/oledb/consumer-wizard-generated-methods.md).  
+-   Opcjonalnie zestawu wierszy zestaw właściwości za pomocą `CDBPropSet::AddProperty` i przekazywać je jako parametr do `rs.Open`. Aby uzyskać przykład jak to zrobić, zobacz getrowsetproperties — w [metody Consumer Wizard-Generated](../../data/oledb/consumer-wizard-generated-methods.md).  
   
 -   Można teraz używać zestawu wierszy pobierania/operacje na danych.  
   
--   Po zakończeniu aplikacji, zamknij połączenie sesji i zestawu wierszy:  
+-   Po zakończeniu aplikacji zamknij połączenie, sesji i zestawu wierszy:  
   
-    ```  
+    ```cpp  
     rs.Close();  
     ss.Close();  
     ds.Close();  
     ```  
   
-     Jeśli używane są polecenia, można wywołać `ReleaseCommand` po **Zamknij**. Przykładowy kod w [CCommand::Close](../../data/oledb/ccommand-close.md) pokazuje sposób wywoływania **Zamknij** i `ReleaseCommand`.  
+     Jeśli używasz polecenia można wywołać `ReleaseCommand` po `Close`. Przykładowy kod z [CCommand::Close](../../data/oledb/ccommand-close.md) przedstawiono sposób wywoływania `Close` i `ReleaseCommand`.  
   
--   Wywołanie **CoUnInitialize** do uninitialize modelu COM. Zazwyczaj jest to główny kodu.  
+-   Wywołaj `CoUnInitialize` do uninitialize modelu COM. Zazwyczaj jest to w kodzie głównego.  
   
     ```  
     CoUninitialize();  

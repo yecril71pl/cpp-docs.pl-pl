@@ -18,38 +18,38 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 703d33f44fae534b206050e85086edb1ccc816f9
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 4e8df26063a8d854f643b78fa127d1c17ef43589
+ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33112683"
+ms.lasthandoff: 07/30/2018
+ms.locfileid: "39339467"
 ---
 # <a name="testing-the-read-only-provider"></a>Testowanie dostawcy tylko do odczytu
-Aby przetestować dostawcę, należy konsumenta. Pomaga, jeśli użytkownika można dopasować do dostawcy. Szablony konsumentów OLE DB są cienką otoką wokół OLE DB i zgodne z obiektami COM dostawcy. Ponieważ źródłem jest dostarczany z szablonami konsumentów, jest łatwe debugowanie dostawcy z nimi. Szablony konsumentów są również bardzo mała i szybkie sposób tworzenia aplikacji klienta.  
+Aby przetestować dostawcę, należy użytkownik. Pomaga ono, jeśli można dopasować użytkownika z dostawcą. Szablony konsumentów OLE DB są alokowania elastycznego otokę OLE DB i zgodne z obiektami COM dostawcy. Ponieważ źródłem jest dostarczany z szablonami konsumentów, jest łatwo debugować dostawcy z nimi. Szablony konsumentów są również bardzo małe i szybki sposób rozwijać aplikacje komercyjne.  
   
- W tym temacie tworzona domyślnej aplikacji Kreator aplikacji MFC dla użytkownika testowego. Aplikacja testowa jest proste okna dialogowego z kodem szablon konsumenta OLE DB dodane.  
+ W przykładzie w tym temacie tworzy domyślną aplikację Kreator aplikacji MFC dla użytkownika testowego. Aplikacja testowa jest proste okno dialogowe z szablonu kod konsumenta OLE DB, dodane.  
   
 ### <a name="to-create-the-test-application"></a>Aby utworzyć aplikację testu  
   
-1.  Na **pliku** menu, kliknij przycisk **nowy**, a następnie kliknij przycisk **projektu**.  
+1.  Na **pliku** menu, kliknij przycisk **New**, a następnie kliknij przycisk **projektu**.  
   
-2.  Wybierz w okienku typów projektów **projekty Visual C++** folderu. W okienku szablonów wybierz **aplikacji MFC**.  
+2.  W okienku typów projektów wybierz **projekty języka Visual C++** folderu. W okienku szablonów zaznacz **aplikacji MFC**.  
   
 3.  Wprowadź nazwę projektu **TestProv**, a następnie kliknij przycisk **OK**.  
   
      Zostanie wyświetlony Kreator aplikacji MFC.  
   
-4.  Na **typu aplikacji** wybierz pozycję **okno dialogowe na podstawie**.  
+4.  Na **typ aplikacji** wybierz opcję **oparte o okna dialogowe**.  
   
-5.  Na **funkcje zaawansowane** wybierz pozycję **automatyzacji**, a następnie kliknij przycisk **Zakończ**.  
+5.  Na **funkcje zaawansowane** wybierz opcję **automatyzacji**, a następnie kliknij przycisk **Zakończ**.  
   
 > [!NOTE]
->  Aplikacja nie wymaga Obsługa automatyzacji, jeśli dodasz **CoInitialize** w **CTestProvApp::InitInstance**.  
+>  Aplikacja nie wymaga obsługi automatyzacji, jeśli dodasz **CoInitialize** w **CTestProvApp::InitInstance**.  
   
- Możesz wyświetlić i edytować okno dialogowe TestProv (IDD_TESTPROV_DIALOG), wybierz je w widoku zasobów. Umieść dwa pola listy, po jednej dla każdego ciągu w zestawie wierszy w oknie dialogowym. Wyłącz właściwości sortowania dla obu pola listy, naciskając klawisze ALT + Enter gdy zaznaczone jest pole listy, klikając **style** , a następnie wyczyszczenie **sortowania** pole wyboru. Również umieścić **Uruchom** przycisk w oknie dialogowym, aby pobrać plik. Okno dialogowe zakończono TestProv powinien mieć dwa pola listy z etykietą "W ciągu 1" i "W ciągu 2", odpowiednio; obejmuje ona również **OK**, **anulować**, i **Uruchom** przycisków.  
+ Można wyświetlić i edytować okno dialogowe TestProv (IDD_TESTPROV_DIALOG), wybierając go w widoku zasobu. W oknie dialogowym, należy umieścić dwa pola listy, po jednym dla każdego ciągu w zestawie wierszy. Wyłączyć właściwość sortowania dla obu pola listy, naciskając klawisz ALT + Enter, gdy zaznaczono pole listy, klikając **style** kartę, a następnie usuwając zaznaczenie **sortowania** pole wyboru. Ponadto Umieść **Uruchom** przycisku na okno dialogowe, aby pobrać plik. Okno dialogowe zakończone TestProv powinien mieć dwa pola listy, oznaczone jako "W ciągu 1" i "Ciąg 2". ma on także **OK**, **anulować**, i **Uruchom** przycisków.  
   
- Otwórz plik nagłówka klasy okien dialogowych (w tym TestProvDlg.h przypadków). Dodaj następujący kod do pliku nagłówka (poza wszelkimi deklaracjami klasy):  
+ Otwórz plik nagłówkowy klasy okien dialogowych (w tym TestProvDlg.h wielkości liter). Dodaj następujący kod do pliku nagłówka (poza wszelkimi deklaracjami klasy):  
   
 ```cpp
 ////////////////////////////////////////////////////////////////////////  
@@ -70,9 +70,9 @@ END_COLUMN_MAP()
 };  
 ```  
   
- Kod reprezentuje rekord użytkownika, który definiuje, jakie będą kolumn w zestawie wierszy. Kiedy klient wywołuje **IAccessor::CreateAccessor**, używa te wpisy, aby określić, które kolumny do powiązania. Szablony konsumentów OLE DB pozwalają również na dynamiczne powiązanie kolumn. Column_entry — makra są makra PROVIDER_COLUMN_ENTRY wersję klienta. Dwa makra column_entry — Określ numer, członka typu, długość i danych dla dwóch ciągów.  
+ Kod reprezentuje rekord użytkownika, który definiuje kolumny będą w zestawie wierszy. Kiedy klient wywołuje `IAccessor::CreateAccessor`, aby określić kolumny, które można powiązać używa tych wpisów. Szablony konsumentów OLE DB pozwalają również na dynamiczne powiązanie kolumn. Makra COLUMN_ENTRY są makra PROVIDER_COLUMN_ENTRY w wersji po stronie klienta. Dwa makra COLUMN_ENTRY Określ numer i typ, długość oraz dane elementu członkowskiego dla dwóch ciągów.  
   
- Dodanie funkcji programu obsługi dla **Uruchom** przycisku, naciskając klawisz CTRL i klikając dwukrotnie **Uruchom** przycisku. Umieść następujący kod w funkcji:  
+ Dodawanie funkcji obsługi dla **Uruchom** przycisku, naciskając klawisz CTRL i klikając dwukrotnie **Uruchom** przycisku. Umieść następujący kod w funkcji:  
   
 ```cpp
 ///////////////////////////////////////////////////////////////////////  
@@ -101,9 +101,9 @@ void CtestProvDlg::OnRun()
 }  
 ```  
   
- `CCommand`, `CDataSource`, I `CSession` klasy wszystkie należą do szablony konsumentów OLE DB. Każda klasa naśladuje obiektów COM w dostawcy. `CCommand` Obiekt ma `CProvider` klasy, zadeklarowanej w pliku nagłówka, jako parametr szablonu. `CProvider` Parametr reprezentuje powiązań, które umożliwiają dostęp do danych od dostawcy. Oto `Open` kodu dla źródła danych, sesji i polecenia:  
+ `CCommand`, `CDataSource`, I `CSession` klasy wszystkie należeć do szablony konsumentów OLE DB. Każda klasa naśladuje obiektów COM w dostawcy. `CCommand` Przyjmuje obiekt `CProvider` klasy, zadeklarowana w pliku nagłówkowym, jako parametr szablonu. `CProvider` Parametr reprezentuje powiązań, które umożliwiają dostęp do danych od dostawcy. Oto `Open` kod dla źródła danych, sesji i polecenia:  
   
-```  
+```cpp  
 if (source.Open("MyProvider.MyProvider.1", NULL) != S_OK)  
    return;  
   
@@ -114,15 +114,15 @@ if (table.Open(session, _T("c:\\samples\\myprov\\myData.txt")) != S_OK)
    return;  
 ```  
   
- Wiersze, aby otworzyć klas tworzenie każdego obiektu modelu COM w dostawcy. Aby zlokalizować dostawcy, użyj identyfikatora ProgID dostawcy. Identyfikator ProgID można uzyskać z rejestru systemowego lub przez przeszukiwanie w pliku MyProvider.rgs (Otwórz katalog i wyszukaj klucz ProgID dostawcy).  
+ Wiersze, które można otworzyć każdą z klas tworzenia każdego obiektu modelu COM w dostawcy. Aby zlokalizować dostawcy, użyj identyfikatora ProgID dostawcy. Identyfikator ProgID można uzyskać z rejestru systemowego lub przez wyszukiwanie w pliku MyProvider.rgs (Otwórz katalog i wyszukaj ProgID klucza dostawcy).  
   
- Plik MyData.txt znajduje się przykład MyProv. Aby utworzyć własny plik, użyj edytora i wpisz parzysta liczba ciągów, naciskając klawisz ENTER między każdym ciągu. Zmień nazwę ścieżki, jeśli plik zostanie przeniesiony.  
+ Plik MyData.txt jest dołączony do przykładu MyProv. Aby utworzyć plik samodzielnie, należy użyć edytora, a następnie wpisz parzystą liczbę ciągów, naciskając klawisz ENTER między każdego ciągu. Jeśli plik zostanie przeniesiony, należy zmienić nazwę ścieżki.  
   
- Podaj ciąg "c:\\\samples\\\myprov\\\MyData.txt" w `table.Open` wiersza. Jeśli krok do `Open` wywołanie, zostanie wyświetlony że ten ciąg jest przekazywany do `SetCommandText` metody w dostawcy. Należy pamiętać, że `ICommandText::Execute` metody użyć tego ciągu.  
+ Przekaż w ciągu "c:\\\samples\\\myprov\\\MyData.txt" w `table.Open` wiersza. Jeśli znajdujesz się w `Open` wywołanie, zobaczysz, że ten ciąg jest przekazywany do `SetCommandText` metody w dostawcy. Należy pamiętać, że `ICommandText::Execute` metody używane te parametry.  
   
- Aby pobrać dane, należy wywołać `MoveNext` w tabeli. `MoveNext` wywołania **IRowset::GetNextRows**, `GetRowCount`, i `GetData` funkcji. Jeśli nie ma żadnych więcej wierszy (bieżącą pozycję w zestawie wierszy jest większa niż `GetRowCount`), kończy Pętla:  
+ Aby pobrać dane, należy wywołać `MoveNext` w tabeli. `MoveNext` wywołania `IRowset::GetNextRows`, `GetRowCount`, i `GetData` funkcji. Gdy nie ma żadnych więcej wierszy (bieżąca pozycja w zestawie wierszy jest większa niż `GetRowCount`), kończy się pętla:  
   
-```  
+```cpp  
 while (table.MoveNext() == S_OK)  
 {  
    m_ctlString1.AddString(table.szField1);  
@@ -130,9 +130,9 @@ while (table.MoveNext() == S_OK)
 }  
 ```  
   
- Należy pamiętać, że jeśli nie ma żadnych więcej wierszy, zwracać dostawców **DB_S_ENDOFROWSET**. **DB_S_ENDOFROWSET** wartość nie jest błąd. Należy zawsze sprawdzić przed `S_OK` Aby anulować pętli pobierania danych i nie używać makro zakończyło się pomyślnie.  
+ Należy pamiętać, że w przypadku Brak kolejnych wierszy dostawców zwracają DB_S_ENDOFROWSET. Wartość DB_S_ENDOFROWSET nie jest błąd. Należy zawsze sprawdzić, względem S_OK, aby anulować pętli pobierania danych i używaj makro zakończone POWODZENIEM.  
   
- Teraz można umożliwiający zbudowanie i przetestowanie program.  
+ Powinny teraz mieć możliwość tworzenia i testowania programu.  
   
 ## <a name="see-also"></a>Zobacz też  
  [Udoskonalanie prostego dostawcy tylko do odczytu](../../data/oledb/enhancing-the-simple-read-only-provider.md)

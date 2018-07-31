@@ -25,39 +25,39 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: c0e03d24f61b3eba1ff4c6fa1e4d888a0252a21b
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 9c8a3605a94e0feffa1072d1c7cd92a8bdfecb66
+ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33098605"
+ms.lasthandoff: 07/30/2018
+ms.locfileid: "39340883"
 ---
 # <a name="consumer-wizard-generated-methods"></a>Metody konsumenta generowane przez kreatora
-Generowanie niektórych funkcji, które należy zwrócić uwagę, OLE DB Kreator konsumenta ATL i Kreator aplikacji MFC. Należy pamiętać, że niektóre metody są implementowane inaczej w przypisanych projektów, więc istnieje kilka ostrzeżenia; każdej sprawy zostało opisane poniżej. Aby uzyskać informacje o wyświetlaniu wprowadzony kod, zobacz [debugowania wstrzyknięcie kodu](/visualstudio/debugger/how-to-debug-injected-code).  
+OLE DB Kreator konsumenta ATL i Kreator aplikacji MFC generuje pewne funkcje, których należy wiedzieć. Należy zauważyć, że niektóre metody są implementowane w inny sposób w opartego na atrybutach projektów, więc istnieje kilka zastrzeżenia; Każdy przypadek jest opisane poniżej. Aby uzyskać informacje o wyświetlaniu wprowadzonego kodu, zobacz [debugowania kodu wprowadzony](/visualstudio/debugger/how-to-debug-injected-code).  
   
--   `OpenAll` Otwiera ze źródłem danych, zestawy wierszy i włącza zakładki, jeśli są dostępne.  
+-   `OpenAll` Otwiera źródło danych, zestawy wierszy i powoduje włączenie zakładki, jeśli są one dostępne.  
   
--   `CloseAll` powoduje zamknięcie wszystkich otwartych zestawów wierszy i zwalnia wszystkie wykonania polecenia.  
+-   `CloseAll` Zamyka wszystkie otwarte zestawów wierszy i wersje wszystkich wykonań poleceń.  
   
--   `OpenRowset` wywołuje OpenAll, aby otworzyć konsumenta lub zbiory wierszy.  
+-   `OpenRowset` jest wywoływana przez openall —, aby otworzyć konsumenta lub zbiory wierszy.  
   
--   `GetRowsetProperties` pobiera wskaźnik do ustawiony za pomocą właściwości, które można ustawić właściwość zestawu wierszy.  
+-   `GetRowsetProperties` pobiera wskaźnik do za pomocą właściwości, które można ustawić właściwość zestawu wierszy.  
   
--   `OpenDataSource` Otwiera źródła danych, używając określonego w ciągu inicjowania **właściwości Linku danych** okno dialogowe.  
+-   `OpenDataSource` Otwiera źródło danych przy użyciu parametrów inicjacji określone w **właściwości Linku danych** okno dialogowe.  
   
 -   `CloseDataSource` Zamyka źródła danych w odpowiedni sposób.  
   
-## <a name="openall-and-closeall"></a>OpenAll i CloseAll  
+## <a name="openall-and-closeall"></a>Openall — i closeall —  
   
-```  
+```cpp  
 HRESULT OpenAll();   
 
 void CloseAll();  
 ```  
   
- W poniższym przykładzie pokazano, jak można wywołać `OpenAll` i `CloseAll` podczas wykonywania tego samego polecenia wielokrotnie. Porównanie przykładowy kod z [CCommand::Close](../../data/oledb/ccommand-close.md), który zawiera zmiany, która wywołuje **Zamknij** i `ReleaseCommand` zamiast `CloseAll`.  
+ W poniższym przykładzie pokazano, jak można wywołać `OpenAll` i `CloseAll` podczas wykonywania tego samego polecenia wielokrotnie. Porównaj przykładowy kod z [CCommand::Close](../../data/oledb/ccommand-close.md), który wskazuje odmiany, który wywołuje `Close` i `ReleaseCommand` zamiast `CloseAll`.  
   
-```  
+```cpp  
 int main(int argc, char* argv[])  
 {  
    HRESULT hr;  
@@ -89,18 +89,18 @@ int main(int argc, char* argv[])
 ```  
   
 ## <a name="remarks"></a>Uwagi  
- Należy pamiętać, że w przypadku definiowania `HasBookmark` metody `OpenAll` kod ustawia właściwość DBPROP_IRowsetLocate; upewnij się, że tylko w tym przypadku dostawca obsługuje tej właściwości.  
+ Należy pamiętać, że jeśli zdefiniujesz `HasBookmark` metody `OpenAll` kod ustawia właściwość DBPROP_IRowsetLocate; upewnij się, możesz to zrobić tylko jeśli Twój dostawca obsługuje tej właściwości.  
   
 ## <a name="openrowset"></a>OpenRowset  
   
-```  
+```cpp  
 // OLE DB Template version:   
 HRESULT OpenRowset(DBPROPSET* pPropSet = NULL)  
 // Attribute-injected version:  
 HRESULT OpenRowset(const CSession& session, LPCWSTR szCommand = NULL);  
 ```  
   
- **OpenAll** wywołuje tę metodę, aby otworzyć wierszy lub zestawy wierszy w konsumenta. Zazwyczaj nie trzeba wywołać `OpenRowset` chyba że chcesz pracować z wieloma danych źródeł/sesje/zestawów wierszy. `OpenRowset` jest zadeklarowany w pliku nagłówka klasy poleceń lub tabeli:  
+ `OpenAll` wywołuje tę metodę, aby otworzyć wierszy lub zestawy wierszy w konsumenta. Zazwyczaj nie trzeba wywoływać `OpenRowset` , chyba że chcesz pracować z wieloma danych źródła/sesje/zestawów wierszy. `OpenRowset` jest zadeklarowana w pliku nagłówkowym klasę polecenia lub tabeli:  
   
 ```  
 // OLE DB Template version:  
@@ -115,9 +115,9 @@ HRESULT OpenRowset(DBPROPSET *pPropSet = NULL)
 }  
 ```  
   
- Atrybuty inaczej zaimplementować tę metodę. Ta wersja ma obiekt sesji i ciąg polecenia, który domyślnie ciąg polecenia określony w db_command —, mimo że można przekazać inny. Należy pamiętać, że w przypadku definiowania `HasBookmark` metody `OpenRowset` kod ustawia właściwość DBPROP_IRowsetLocate; upewnij się, że tylko w tym przypadku dostawca obsługuje tej właściwości.  
+ Atrybuty zaimplementować tę metodę w różny sposób. Ta wersja przyjmuje obiekt sesji i ciąg polecenia, który domyślnie przyjmuje wartość ciągu polecenia określony w db_command —, mimo że można przekazać inny. Należy pamiętać, że jeśli zdefiniujesz `HasBookmark` metody `OpenRowset` kod ustawia właściwość DBPROP_IRowsetLocate; upewnij się, możesz to zrobić tylko jeśli Twój dostawca obsługuje tej właściwości.  
   
-```  
+```cpp  
 // Attribute-injected version:  
 HRESULT OpenRowset(const CSession& session, LPCWSTR szCommand=NULL)  
 {  
@@ -134,15 +134,15 @@ HRESULT OpenRowset(const CSession& session, LPCWSTR szCommand=NULL)
 }  
 ```  
   
-## <a name="getrowsetproperties"></a>GetRowsetProperties  
+## <a name="getrowsetproperties"></a>Getrowsetproperties —  
   
-```  
+```cpp 
 void GetRowsetProperties(CDBPropSet* pPropSet);  
 ```  
   
- Ta metoda pobiera wskaźnik do zestawu właściwości zestawu wierszy; this, wskaźnik służy do ustawiania właściwości, takie jak DBPROP_IRowsetChange. `GetRowsetProperties` jest używany w następujący sposób w klasie rekordu użytkownika. Można zmodyfikować ten kod, aby ustawić właściwości dodatkowych wierszy:  
+ Ta metoda pobiera wskaźnik do zestawu właściwości zestawu wierszy; za pomocą tego wskaźnika można ustawić właściwości, takie jak DBPROP_IRowsetChange. `GetRowsetProperties` jest używany w następujący sposób w klasie rekordu użytkownika. Można zmodyfikować ten kod, aby ustawić właściwości dodatkowych wierszy:  
   
-```  
+```cpp  
 void GetRowsetProperties(CDBPropSet* pPropSet)  
 {  
    pPropSet->AddProperty(DBPROP_CANFETCHBACKWARDS, true, DBPROPOPTIONS_OPTIONAL);  
@@ -153,11 +153,11 @@ void GetRowsetProperties(CDBPropSet* pPropSet)
 ```  
   
 ## <a name="remarks"></a>Uwagi  
- Nie powinna definiować globalnym `GetRowsetProperties` — metoda, ponieważ może ona konflikt z jednym zdefiniowany przez kreatora. Należy pamiętać, że jest to metoda generowane przez kreatora, który można pobrać z szablonem i atrybutami projektów; atrybuty nie wstrzyknąć tego kodu.  
+ Nie należy zdefiniować globalną `GetRowsetProperties` metoda, ponieważ może ona konflikt z wersją zdefiniowana przez kreatora. Należy pamiętać, że jest generowane przez kreatora metody, której można korzystać z projektów oparte na szablonach i opartego na atrybutach; atrybuty nie wstrzyknąć tego kodu.  
   
-## <a name="opendatasource-and-closedatasource"></a>OpenDataSource i CloseDataSource  
+## <a name="opendatasource-and-closedatasource"></a>OpenDataSource i closedatasource —  
   
-```  
+```cpp  
 HRESULT OpenDataSource();   
 
 void CloseDataSource();  

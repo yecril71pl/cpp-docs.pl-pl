@@ -22,44 +22,44 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 55b214ba3513f95533e3892fb93ad9298c44415d
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 47b301e054f2bcd0a37e0ea8e5e71730fafb9ef7
+ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33090198"
+ms.lasthandoff: 07/30/2018
+ms.locfileid: "39340527"
 ---
 # <a name="odbc-administrator"></a>Administrator ODBC
-ODBC Administrator rejestruje i konfiguruje [źródeł danych](../../data/odbc/data-source-odbc.md) dostępne lokalnie lub w sieci. Kreatorzy Użyj informacji dostarczonych przez administratora ODBC, aby utworzyć kod w aplikacjach, które łączy użytkowników ze źródłami danych.  
+ODBC Administrator rejestruje i konfiguruje [źródeł danych](../../data/odbc/data-source-odbc.md) dostępne lokalnie lub w sieci. Kreatory korzystają informacje podane przez administratora ODBC do pisania kodu w aplikacjach, które łączy się użytkowników ze źródłami danych.  
   
- Aby skonfigurować źródła danych ODBC do użycia z klas MFC ODBC lub klas MFC obiekt DAO (Data Access), najpierw musisz zarejestrować i skonfiguruj źródło danych. ODBC Administrator umożliwia dodawanie i usuwanie źródeł danych. W zależności od sterownika ODBC można również utworzyć nowe źródła danych.  
+ Aby skonfigurować źródła danych ODBC do użytku z klas MFC ODBC lub klas MFC obiekt DAO (Data Access), najpierw musisz zarejestrować i konfigurowanie źródła danych. Dodawanie i usuwanie źródeł danych, należy użyć konta administratora ODBC. W zależności od sterownik ODBC można również utworzyć nowe źródła danych.  
   
- ODBC Administrator jest instalowana podczas instalacji. Jeśli została wybrana opcja **niestandardowy** instalacji i nie wybrano żadnych sterowników ODBC w **opcje bazy danych** okno dialogowe, należy uruchomić ponownie Instalatora, aby zainstalować potrzebne pliki.  
+ ODBC Administrator jest instalowana podczas instalacji. Jeśli została wybrana opcja **niestandardowe** instalacji i nie wybrano wszystkie sterowniki ODBC w **opcje bazy danych** okno dialogowe, musisz uruchomić ponownie Instalatora, aby zainstalować wymagane pliki.  
   
- Podczas instalacji można wybrać sterowniki ODBC, które chcesz zainstalować. Później można zainstalować dodatkowe sterowniki, które są dostarczane z programem Visual C++ przy użyciu Instalatora programu Visual C++.  
+ Podczas instalacji możesz wybrać sterowników ODBC, który chcesz zainstalować. Później można zainstalować dodatkowe sterowniki, które są dostarczane z programem Visual C++ przy użyciu Instalatora programu Visual C++.  
   
- Jeśli chcesz zainstalować sterowniki ODBC, które nie są dostarczane z programem Visual C++, należy uruchomić programu instalacyjnego, który towarzyszy sterownika.  
+ Jeśli chcesz zainstalować sterowniki ODBC, które nie są dostarczane z programem Visual C++, należy uruchomić program instalacyjny, który towarzyszy sterownika.  
   
 #### <a name="to-install-odbc-drivers-that-ship-with-visual-c"></a>Aby zainstalować sterowniki ODBC, które są dostarczane z programem Visual C++  
   
 1.  Uruchom Instalatora z dysku CD dystrybucji Visual C++.  
   
-     Otwarcie jest pojawi się okno dialogowe programu instalacyjnego.  
+     Otwieranie wydaje się okno dialogowe programu instalacyjnego.  
   
-2.  Kliknij przycisk **dalej** dotyczące każdego okna dialogowego aż **opcje instalacji** okno dialogowe. Wybierz **niestandardowy**, a następnie kliknij przycisk `Next`.  
+2.  Kliknij przycisk **dalej** dotyczące każdego okna dialogowego aż **opcje instalacji** okno dialogowe. Wybierz **niestandardowe**, a następnie kliknij przycisk **dalej**.  
   
-3.  Usuń zaznaczenie pól wyboru w **Instalator programu Microsoft Visual C++** okno dialogowe z wyjątkiem **opcje bazy danych** pole wyboru, a następnie kliknij przycisk **szczegóły** do wyświetlenia **Opcje bazy danych** okno dialogowe.  
+3.  Usuń zaznaczenie wszystkich pól wyboru w **Instalator programu Microsoft Visual C++** okno dialogowe z wyjątkiem **opcje bazy danych** pole wyboru, a następnie kliknij przycisk **szczegóły** do wyświetlenia **Opcje bazy danych** okno dialogowe.  
   
-4.  Wyczyść **Microsoft Data Access Objects** zaznacz pole wyboru **sterowniki ODBC firmy Microsoft** pole wyboru, a następnie kliknij przycisk **szczegóły**.  
+4.  Wyczyść **Microsoft Data Access Objects** pole wyboru, wybierz opcję **sterowniki ODBC firmy Microsoft** pole wyboru, a następnie kliknij przycisk **szczegóły**.  
   
-     **Sterowniki ODBC firmy Microsoft** zostanie wyświetlone okno dialogowe.  
+     **Sterowniki ODBC firmy Microsoft** pojawi się okno dialogowe.  
   
 5.  Wybierz sterowniki, należy zainstalować, a następnie kliknij przycisk **OK** dwa razy.  
   
-6.  Kliknij przycisk **dalej** w pozostałych oknach dialogowych, aby rozpocząć instalację. Instalator powiadamia po zakończeniu instalacji.  
+6.  Kliknij przycisk **dalej** w pozostałych oknach dialogowych, aby rozpocząć instalację. Instalator powiadamia o zakończeniu instalacji.  
   
- Podczas instalowania sterowników, można skonfigurować źródło danych za pomocą Administratora ODBC. Ikona ODBC można znaleźć w Panelu sterowania.  
+ Jeśli sterowniki zostały zainstalowane, można skonfigurować źródło danych przy użyciu Administratora ODBC. Ikona ODBC znajdzie się w Panelu sterowania.  
   
 ## <a name="see-also"></a>Zobacz też  
- [Otwórz połączenie z bazą danych (ODBC)](../../data/odbc/open-database-connectivity-odbc.md)   
+ [Open Database Connectivity (ODBC)](../../data/odbc/open-database-connectivity-odbc.md)   
  [Źródło danych (ODBC)](../../data/odbc/data-source-odbc.md)

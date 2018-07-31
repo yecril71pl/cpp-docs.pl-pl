@@ -19,17 +19,17 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 5c58807dac8ae320ee69c8e1a372fff5b9d3db02
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 6b53410c8116f88d51734bb302026a03994e520a
+ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33111058"
+ms.lasthandoff: 07/30/2018
+ms.locfileid: "39338197"
 ---
 # <a name="user-record"></a>Rekord użytkownika
-Rekord użytkownika zawiera struktura kodu i danych, która reprezentuje dane kolumn dla zestawu wierszy. Rekord użytkownika mogą być tworzone w czasie kompilacji lub w czasie wykonywania. Podczas tworzenia dostawcę przy użyciu ATL OLE DB Provider kreatora, Kreator tworzy domyślny rekord użytkownika, który wygląda następująco (przy założeniu, że określono nazwę dostawcy [krótką nazwę] "MyProvider"):  
+Rekord użytkownika zapewnia struktury kodu i danych, który reprezentuje dane kolumn dla zestawu wierszy. Rekord użytkownika mogą być tworzone w czasie kompilacji lub w czasie wykonywania. Po utworzeniu dostawcy usługi przy użyciu biblioteki ATL OLE DB Provider kreatora, Kreator tworzy domyślny rekord użytkownika, który wygląda w następujący sposób (przy założeniu, że określono nazwę dostawcy [krótką nazwę] "MyProvider"):  
   
-```  
+```cpp  
 class CWindowsFile:  
    public WIN32_FIND_DATA  
 {  
@@ -46,35 +46,35 @@ END_PROVIDER_COLUMN_MAP()
 };  
 ```  
   
- Szablony dostawców OLE DB obsługiwać wszystkie szczegóły OLE DB dotyczące interakcji z klientem. Uzyskanie kolumny danych potrzebnych do odpowiedzi, wywołuje dostawcę `GetColumnInfo` funkcji, które należy umieścić w rekordzie użytkownika. Można jawnie przesłonić `GetColumnInfo` w rekordzie użytkownika, na przykład przez zadeklarowanie go w pliku .h w sposób pokazany poniżej:  
+ Szablony dostawców OLE DB obsługiwać wszystkie szczegóły OLE DB dotyczące interakcji z klientem. Uzyskanie danych kolumny służące do odpowiedzi, wywołuje dostawcę `GetColumnInfo` funkcji, które należy umieścić w rekordzie użytkownika. Można wyraźnie przezwyciężyć `GetColumnInfo` rekordów użytkowników, na przykład przez deklarując jej w plik .h jak pokazano poniżej:  
   
-```  
+```cpp  
 template <class T>  
 static ATLCOLUMNINFO* GetColumnInfo(T* pThis, ULONG* pcCols)   
 ```  
   
  Jest to równoważne:  
   
-```  
+```cpp  
 static ATLCOLUMNINFO* GetColumnInfo(CommandClass* pThis, ULONG* pcCols)  
 static ATLCOLUMNINFO* GetColumnInfo(RowsetClass* pThis, ULONG* pcCols)  
 ```  
   
- Musi implementować też `GetColumnInfo` w pliku .cpp rekordu użytkownika.  
+ Należy także zaimplementować `GetColumnInfo` w pliku .cpp rekordu użytkownika.  
   
- Makra PROVIDER_COLUMN_MAP pomoc w tworzeniu `GetColumnInfo` funkcji:  
+ Makra PROVIDER_COLUMN_MAP pomocy w tworzeniu `GetColumnInfo` funkcji:  
   
--   BEGIN_PROVIDER_COLUMN_MAP definiuje prototyp funkcji i statyczne tablicę **ATLCOLUMNINFO** struktury.  
+-   BEGIN_PROVIDER_COLUMN_MAP definiuje prototyp funkcji i statyczne tablicę `ATLCOLUMNINFO` struktury.  
   
--   PROVIDER_COLUMN_ENTRY definiuje i inicjuje pojedynczy **ATLCOLUMNINFO**.  
+-   PROVIDER_COLUMN_ENTRY definiuje i inicjuje pojedynczy `ATLCOLUMNINFO`.  
   
--   END_PROVIDER_COLUMN_MAP zamyka tablicy i funkcji. Pulpit zapewnia również licznik elementów tablicy w `pcCols` parametru.  
+-   END_PROVIDER_COLUMN_MAP zamyka tablicy i funkcji. Również umieszcza liczba elementów tablicy do *pcCols* parametru.  
   
- Po utworzeniu rekordu użytkownika w czasie wykonywania, **GetColumnInfo** używa `pThis` parametr, aby otrzymywać wskaźnik do zestawu wierszy lub polecenie wystąpienia. Polecenia i zestawy wierszy musi obsługiwać `IColumnsInfo` interfejsu, dlatego można uzyskać informacji o kolumnie ten wskaźnik.  
+ Po utworzeniu rekordu użytkownika w czasie wykonywania, `GetColumnInfo` używa *pThis* parametru, aby uzyskać wskaźnik do wystąpienia polecenia lub zestaw wierszy. Polecenia i zestawy wierszy musi obsługiwać `IColumnsInfo` interfejsu, aby z tego wskaźnika można uzyskać informacji o kolumnie.  
   
- **CommandClass** i **RowsetClass** polecenia i zestawu wierszy, które przy użyciu rekordu użytkownika.  
+ `CommandClass` i `RowsetClass` polecenia i zestawu wierszy, które rekordu użytkownika.  
   
- Aby bardziej szczegółowy przykład zastąpić `GetColumnInfo` rekordów użytkowników, zobacz [dynamicznie Określanie kolumn zwracanych do konsumenta](../../data/oledb/dynamically-determining-columns-returned-to-the-consumer.md).  
+ Aby uzyskać bardziej szczegółowy przykład sposobu zastąpienia `GetColumnInfo` w rekordzie użytkownika, zobacz [dynamicznie Określanie kolumn zwracanych do konsumenta](../../data/oledb/dynamically-determining-columns-returned-to-the-consumer.md).  
   
 ## <a name="see-also"></a>Zobacz też  
  [Architektura szablonu dostawcy OLE DB](../../data/oledb/ole-db-provider-template-architecture.md)

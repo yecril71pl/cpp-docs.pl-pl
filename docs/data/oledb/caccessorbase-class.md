@@ -36,12 +36,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 99f6be0815572b88f7c46406262ed21eaefdb77d
-ms.sourcegitcommit: 04d327940787df1297b72d534f388a035d472af0
+ms.openlocfilehash: 18199a700cbc5065d987a57cc076a5d0cf670577
+ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/20/2018
-ms.locfileid: "39181201"
+ms.lasthandoff: 07/30/2018
+ms.locfileid: "39340667"
 ---
 # <a name="caccessorbase-class"></a>CAccessorBase — Klasa
 Wszystkie metody dostępu przesłanianej w szablonach OLE DB pochodzi od tej klasy. `CAccessorBase` Umożliwia jeden zestaw wierszy do zarządzania wielu metod dostępu. Umożliwia także powiązanie dla kolumny wyjściowe i parametry.  
@@ -74,7 +74,6 @@ Zamyka metod dostępu.
   
 ```cpp
 void Close();  
-  
 ```  
   
 ### <a name="remarks"></a>Uwagi  
@@ -86,7 +85,7 @@ Pobiera dojście metody dostępu określonej metody dostępu.
 ### <a name="syntax"></a>Składnia  
   
 ```cpp
-      HACCESSOR GetHAccessor(ULONG nAccessor) const;  
+HACCESSOR GetHAccessor(ULONG nAccessor) const;  
 ```  
   
 #### <a name="parameters"></a>Parametry  
@@ -103,7 +102,6 @@ Pobiera liczbę metod dostępu tworzone przez klasę.
   
 ```cpp
 ULONG GetNumAccessors() const;  
-  
 ```  
   
 ### <a name="return-value"></a>Wartość zwracana  
@@ -115,7 +113,7 @@ Zwraca wartość PRAWDA, jeśli dane są automatycznie pobierane dla metody dost
 ### <a name="syntax"></a>Składnia  
   
 ```cpp
-      bool IsAutoAccessor(ULONG nAccessor) const;  
+bool IsAutoAccessor(ULONG nAccessor) const;  
 ```  
   
 #### <a name="parameters"></a>Parametry  

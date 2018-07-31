@@ -19,38 +19,38 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: f591e62874bd6924dd60077b921bbfc67600af1c
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 01d08fb35a1e954aad07153f63ad3ed34282570d
+ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33112930"
+ms.lasthandoff: 07/30/2018
+ms.locfileid: "39337849"
 ---
 # <a name="session-object-interfaces"></a>Interfejsy obiektu sesji
-W poniższej tabeli przedstawiono interfejsów obowiązkowe i opcjonalne zdefiniowanych przez OLE DB dla obiekt sesji.  
+W poniższej tabeli przedstawiono interfejsów obowiązkowych i opcjonalnych, zdefiniowane przez OLE DB dla obiektu sesji.  
   
 |Interface|Wymagany?|Implementowany przez Szablony OLE DB?|  
 |---------------|---------------|--------------------------------------|  
-|[IGetDataSource](https://msdn.microsoft.com/en-us/library/ms709721.aspx)|Obowiązkowy|Tak|  
-|[IOpenRowset](https://msdn.microsoft.com/en-us/library/ms716946.aspx)|Obowiązkowy|Tak|  
-|[ISessionProperties](https://msdn.microsoft.com/en-us/library/ms713721.aspx)|Obowiązkowy|Tak|  
-|[IAlterIndex](https://msdn.microsoft.com/en-us/library/ms714943.aspx)|Optional|Nie|  
-|[IAlterTable](https://msdn.microsoft.com/en-us/library/ms719764.aspx)|Optional|Nie|  
-|[IBindResource](https://msdn.microsoft.com/en-us/library/ms714936.aspx)|Optional|Nie|  
-|[ICreateRow](https://msdn.microsoft.com/en-us/library/ms716832.aspx)|Optional|Nie|  
-|[IDBCreateCommand](https://msdn.microsoft.com/en-us/library/ms711625.aspx)|Optional|Tak|  
-|[IDBSchemaRowset](https://msdn.microsoft.com/en-us/library/ms713686.aspx)|Optional|Tak|  
-|[IIndexDefinition](https://msdn.microsoft.com/en-us/library/ms711593.aspx)|Optional|Nie|  
-|[ISupportErrorInfo](https://msdn.microsoft.com/en-us/library/ms715816.aspx)|Optional|Tak|  
-|[ITableCreation](https://msdn.microsoft.com/en-us/library/ms713639.aspx)|Optional|Nie|  
-|[ITableDefinition](https://msdn.microsoft.com/en-us/library/ms714277.aspx)|Optional|Nie|  
-|[ITableDefinitionWithConstraints](https://msdn.microsoft.com/en-us/library/ms720947.aspx)|Optional|Nie|  
-|[ITransaction](https://msdn.microsoft.com/en-us/library/ms723053.aspx)|Optional|Nie|  
-|[ITransactionJoin](https://msdn.microsoft.com/en-us/library/ms718071.aspx)|Optional|Nie|  
-|[ITransactionLocal](https://msdn.microsoft.com/en-us/library/ms714893.aspx)|Optional|Nie|  
-|[ITransactionObject](https://msdn.microsoft.com/en-us/library/ms713659.aspx)|Optional|Nie|  
+|[IGetDataSource](https://msdn.microsoft.com/library/ms709721.aspx)|Obowiązkowy|Tak|  
+|[IOpenRowset](https://msdn.microsoft.com/library/ms716946.aspx)|Obowiązkowy|Tak|  
+|[ISessionProperties](https://msdn.microsoft.com/library/ms713721.aspx)|Obowiązkowy|Tak|  
+|[IAlterIndex](https://msdn.microsoft.com/library/ms714943.aspx)|Optional|Nie|  
+|[IAlterTable](https://msdn.microsoft.com/library/ms719764.aspx)|Optional|Nie|  
+|[IBindResource](https://msdn.microsoft.com/library/ms714936.aspx)|Optional|Nie|  
+|[ICreateRow](https://msdn.microsoft.com/library/ms716832.aspx)|Optional|Nie|  
+|[IDBCreateCommand](https://msdn.microsoft.com/library/ms711625.aspx)|Optional|Tak|  
+|[IDBSchemaRowset](https://msdn.microsoft.com/library/ms713686.aspx)|Optional|Tak|  
+|[IIndexDefinition](https://msdn.microsoft.com/library/ms711593.aspx)|Optional|Nie|  
+|[Interfejs ISupportErrorInfo](https://msdn.microsoft.com/library/ms715816.aspx)|Optional|Tak|  
+|[ITableCreation](https://msdn.microsoft.com/library/ms713639.aspx)|Optional|Nie|  
+|[ITableDefinition](https://msdn.microsoft.com/library/ms714277.aspx)|Optional|Nie|  
+|[ITableDefinitionWithConstraints](https://msdn.microsoft.com/library/ms720947.aspx)|Optional|Nie|  
+|[Metody ITransaction](https://msdn.microsoft.com/library/ms723053.aspx)|Optional|Nie|  
+|[ITransactionJoin](https://msdn.microsoft.com/library/ms718071.aspx)|Optional|Nie|  
+|[ITransactonLocal](https://msdn.microsoft.com/library/ms714893.aspx)|Optional|Nie|  
+|[ITransactionObject](https://msdn.microsoft.com/library/ms713659.aspx)|Optional|Nie|  
   
- Obiekt sesji tworzy obiektu zestawu wierszy. Jeśli dostawca obsługuje poleceń, sesja również tworzy obiekt polecenia (`CCommand`, implementowanie OLE DB **TCommand**). Obiekt polecenia implementuje `ICommand` interfejsu i używa `ICommand::Execute` metodę można wykonać polecenia w zestawie wierszy, jak pokazano na poniższej ilustracji.  
+ Obiekt sesji tworzy się obiektu zestawu wierszy. Jeśli dostawca obsługuje poleceń, sesja wzrasta, powstaje obiekt polecenia (`CCommand`, implementowanie OLE DB `TCommand`). Obiekt polecenia implementuje `ICommand` interfejsu i używa `ICommand::Execute` metody do wykonywania poleceń w zestawie wierszy, jak pokazano na poniższej ilustracji.  
   
  ![Diagram koncepcyjny dostawcy](../../data/oledb/media/vc4u551.gif "vc4u551")  
   

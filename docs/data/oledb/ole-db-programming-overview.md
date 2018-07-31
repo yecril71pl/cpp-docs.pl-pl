@@ -16,24 +16,23 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: fdeca20ad97a09f9d5862fa43be680a2f907405f
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 735e753412498d3285ad26e02b017fb931960daf
+ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33106196"
+ms.lasthandoff: 07/30/2018
+ms.locfileid: "39336897"
 ---
 # <a name="ole-db-programming-overview"></a>Omówienie programowania OLE DB
-OLE DB to technologia wysokiej wydajności, oparte na modelu COM bazy danych. Zapewnia to często stosowana metoda dostępu do danych niezależnie od tego formularza, w której jest przechowywany. W przypadku typowych godzin pracy ogromnych ilości informacji znajduje się poza baz danych firmowych. Te informacje znajdują się w systemie plików (np. FAT lub NTFS), pliki indeksowane sekwencji, osobiste bazy danych (takich jak dostęp) arkuszy kalkulacyjnych (takich jak program Excel), aplikacje planowania projektu (na przykład projekt) i wiadomości e-mail (np. Outlook). OLE DB umożliwia dostęp do dowolnego rodzaju magazynu danych w taki sam sposób, dopóki magazyn danych ma dostawcy OLE DB.
+OLE DB jest technologią bazy danych o wysokiej wydajności, oparte na modelu COM. Zapewnia popularny sposób dostępu do danych niezależnie od tego, w postaci, w którym są przechowywane. W przypadku typowych godzin pracy ogromna ilość informacji znajduje się poza firmową baz danych. Te informacje znajdują się w systemach plików (np. FAT lub NTFS), pliki indeksowane sekwencji, osobiste bazy danych (np. dostępu), arkuszy kalkulacyjnych (np. Excel), aplikacje planowania projektu (na przykład projekt) i poczty e-mail (np. Outlook). OLE DB pozwala na uzyskiwanie dostępu do dowolnego rodzaju magazynu danych w taki sam sposób, tak długo, jak magazyn danych ma dostawcy OLE DB.
   
- OLE DB służy do opracowywania aplikacji, które uzyskują dostęp do danych z różnych źródeł, czy są one DBMS lub nie. OLE DB umożliwia uniwersalnych praw dostępu za pomocą interfejsów modelu COM, które obsługuje odpowiedniej funkcji DBMS dla źródła danych danego. COM zmniejsza niepotrzebnego dublowania usług i zmaksymalizowane współdziałanie nie tylko między źródłami danych, ale również między innymi aplikacjami.  
+ OLE DB pozwala tworzyć aplikacje, które uzyskują dostęp do danych z różnych źródeł, czy są one bazami danych, czy nie. OLE DB pozwala uniwersalnych praw dostępu za pomocą interfejsów COM, obsługujące poprawne działanie systemu DBMS dla danego źródła danych. COM zmniejsza niepotrzebne duplikacji usług i zmaksymalizowane współdziałanie nie tylko wśród źródeł danych, ale także wśród innych aplikacji.  
   
-## <a name="benefits-of-com"></a>Korzyści wynikające z modelu COM  
- Jest to, gdzie COM jest dostarczany. OLE DB to zestaw interfejsów COM. Uzyskując dostęp do danych za pośrednictwem jednolitego zestaw interfejsów, bazy danych można organizować w macierzy współpracujących składników.  
+## <a name="benefits-of-com"></a>Korzyści z modelu COM  
+ Jest to, gdzie jest oferowana w modelu COM. OLE DB to zbiór interfejsów COM. Uzyskując dostęp do danych za pomocą jednolitego zestawu interfejsów, można organizować bazy danych w macierzy, współpracujących składników.  
   
- Oparte na specyfikacji modelu COM, OLE DB definiuje extensible i łatwy w obsłudze zbiór interfejsów, które współczynnika i Hermetyzowanie stałą, wielokrotnego użytku zestawy funkcji systemu DBMS. Te interfejsy należy zdefiniować granice DBMS składniki, takie jak kontenery wiersza, procesory zapytania i koordynatora transakcji, które umożliwiają uniform transakcyjne dostęp do informacji o różnych źródeł.  
+ Oparte na specyfikacji modelu COM, OLE DB definiuje rozszerzalny i łatwego w utrzymaniu zbiór interfejsów, które wziąć pod uwagę i hermetyzacji spójny, wielokrotnego użytku części funkcjonalności systemu DBMS. Niniejsze interfejsy określają granice DBMS składników, takich jak kontenery wiersza, procesory zapytań i transakcji koordynatorów, umożliwiających jednolity transakcyjnych dostęp do informacji z różnych źródeł.  
  
-  
 ## <a name="see-also"></a>Zobacz też  
  [Programowanie OLE DB](../../data/oledb/ole-db-programming.md)   
  [Szablony konsumentów OLE DB](../../data/oledb/ole-db-consumer-templates-cpp.md)   

@@ -17,19 +17,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 420e863fcd5d4c666bf8e9a25a2f0f53e726c871
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: dcd166e205f35133fe2c466175e07ea82970e31f
+ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33105208"
+ms.lasthandoff: 07/30/2018
+ms.locfileid: "39339278"
 ---
 # <a name="retrieving-a-blob"></a>Pobieranie obiektu BLOB
-Można pobrać dużego obiektu binarnego (BLOB) na różne sposoby. Można użyć **DBTYPE_BYTES** można pobrać obiektu BLOB jako sekwencję bajtów lub korzystają z interfejsu, takich jak `ISequentialStream`. Aby uzyskać więcej informacji, zobacz [obiekty BLOB i obiektów OLE](https://msdn.microsoft.com/en-us/library/ms711511.aspx) w *OLE DB Podręcznik programisty*.  
+Możesz pobrać dużego obiektu binarnego (BLOB) na różne sposoby. Możesz użyć `DBTYPE_BYTES` można pobrać obiektu BLOB jako sekwencja bajtów lub korzystają z interfejsu, takich jak `ISequentialStream`. Aby uzyskać więcej informacji, zobacz [obiektów blob oraz obiekty OLE](https://msdn.microsoft.com/library/ms711511.aspx) w *OLE DB Podręcznik programisty*.  
   
- Poniższy kod przedstawia sposób pobrać za pomocą obiektu BLOB `ISequentialStream`. Makro [BLOB_ENTRY](../../data/oledb/blob-entry.md) umożliwia określenie interfejsu oraz flagi używane dla interfejsu. Po otwarciu tabeli, kod wywołuje **odczytu** wielokrotnie na `ISequentialStream` do odczytywania bajtów z obiektu BLOB. Kod wywołuje **wersji** zlikwidować wskaźnika interfejsu przed wywołaniem `MoveNext` uzyskać następnego rekordu.  
+ Poniższy kod przedstawia sposób pobierania obiektu BLOB przy użyciu `ISequentialStream`. Makro [BLOB_ENTRY](../../data/oledb/blob-entry.md) pozwala określić interfejs i flagi używane do interfejsu. Po otwarciu w tabeli, kod wywołuje `Read` wielokrotnie w `ISequentialStream` do odczytywania bajtów z obiektu BLOB. Kod wywołuje `Release` do rozporządzania wskaźnika interfejsu przed wywołaniem `MoveNext` uzyskać następnego rekordu.  
   
-```  
+```cpp  
 class CCategories  
 {  
 public:  
@@ -57,7 +57,7 @@ while (categories.MoveNext() == S_OK)
 }  
 ```  
   
- Aby uzyskać więcej informacji na temat makr, które obsługują dane obiektów BLOB, zobacz "Makra mapy kolumny" w [makra i funkcje globalne dla OLE DB szablonów konsumentów](../../data/oledb/macros-and-global-functions-for-ole-db-consumer-templates.md).  
+ Aby uzyskać więcej informacji na temat makra, które obsługują danych obiektów BLOB, zobacz "Makra mapy kolumny" w [makra i funkcje globalne dla OLE DB szablonów konsumentów](../../data/oledb/macros-and-global-functions-for-ole-db-consumer-templates.md).  
   
 ## <a name="see-also"></a>Zobacz też  
  [Korzystanie z metod dostępu](../../data/oledb/using-accessors.md)   

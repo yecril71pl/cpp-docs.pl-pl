@@ -1,5 +1,5 @@
 ---
-title: 'Zestaw rekordów: Jak AddNew, Edit i Delete działają (ODBC) | Dokumentacja firmy Microsoft'
+title: 'Zestaw rekordów: Jak działają funkcje AddNew, Edit i Delete działają (ODBC) | Dokumentacja firmy Microsoft'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -28,141 +28,141 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: e3d9dc82f4ea31557c4ec330b9737579021a8d35
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 52b469a53d48dcde8c28c0a0c984598875684778
+ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33094133"
+ms.lasthandoff: 07/30/2018
+ms.locfileid: "39338317"
 ---
 # <a name="recordset-how-addnew-edit-and-delete-work-odbc"></a>Zestaw rekordów: jak działają funkcje AddNew, Edit i Delete (ODBC)
-Ten temat dotyczy klasach MFC ODBC.  
+Ten temat dotyczy klas MFC ODBC.  
   
- W tym temacie opisano sposób `AddNew`, **Edytuj**, i **usunąć** funkcji elementów członkowskich klasy `CRecordset` pracy. Tematy obejmują:  
+ W tym temacie opisano sposób, w jaki `AddNew`, `Edit`, i `Delete` funkcji elementów członkowskich klasy `CRecordset` pracy. Omawiane tematy to m.in.:  
   
--   [Jak dodać rekordy działania](#_core_adding_a_record)  
+-   [Jak działa rekordy dodawania](#_core_adding_a_record)  
   
--   [Widoczność dodanych rekordów](#_core_visibility_of_added_records)  
+-   [Widoczność dodano rekordów](#_core_visibility_of_added_records)  
   
 -   [Jak działa edytowanie rekordów](#_core_editing_an_existing_record)  
   
--   [Sposób usuwania działania rekordów](#_core_deleting_a_record)  
+-   [Jak usunąć działa rekordów](#_core_deleting_a_record)  
   
 > [!NOTE]
->  Ten temat dotyczy obiektów pochodzących od `CRecordset` w wiersz, który zbiorczego pobierania nie została zaimplementowana. Jeśli korzystasz z zbiorcze pobieranie z wiersza, zobacz [zestaw rekordów: pobieranie rekordów zbiorczego (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md).  
+>  Ten temat dotyczy obiektów pochodzących od `CRecordset` w wierszu zbiorczego, które podczas pobierania nie została zaimplementowana. Jeśli używasz zbiorcze pobieranie z wiersza, zobacz [zestaw rekordów: pobieranie rekordów w zbiorcze (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md).  
   
- Jako uzupełnienie, należy przeczytać [wymiana pól rekordów: jak działa RFX](../../data/odbc/record-field-exchange-how-rfx-works.md), która opisuje odpowiedniej roli RFX w operacjach aktualizowania.  
+ Jako uzupełnienie, warto przeczytać [wymiana pól rekordów: jak działa RFX](../../data/odbc/record-field-exchange-how-rfx-works.md), która opisuje odpowiedniej roli RFX podczas operacji aktualizacji.  
   
-##  <a name="_core_adding_a_record"></a> Dodawanie rekordów  
+##  <a name="_core_adding_a_record"></a> Dodawanie rekordu  
 
- Dodawanie nowego rekordu do zestawu rekordów obejmuje wywoływanie w zestawie rekordów [AddNew](../../mfc/reference/crecordset-class.md#addnew) funkcji członkowskiej, ustawienie wartości elementy członkowskie danych pola w nowym rekordzie i wywoływania [aktualizacji](../../mfc/reference/crecordset-class.md#update) funkcji członkowskiej do zapisania rekord w źródle danych.  
+ Dodawanie nowego rekordu do zestawu rekordów polega na wywołaniu zestawu rekordów [działają funkcje AddNew](../../mfc/reference/crecordset-class.md#addnew) funkcji członkowskiej, ustawianie wartości elementów członkowskich danych pola nowego rekordu i wywoływania [aktualizacji](../../mfc/reference/crecordset-class.md#update) funkcja elementu członkowskiego, aby zapisać rekord do źródła danych.  
   
- Jako warunek wstępny dotyczący wywołania `AddNew`, zestaw rekordów musi nie został otwarty jako tylko do odczytu. `CanUpdate` i `CanAppend` funkcji członkowskich pozwalają określić te warunki.  
+ Jako warunek wstępny do wywoływania `AddNew`, zestaw rekordów musi nie został otwarty jako tylko do odczytu. `CanUpdate` i `CanAppend` funkcje Członkowskie pozwalają na określenie tych warunków.  
   
- Podczas wywoływania `AddNew`:  
+ Gdy wywołujesz `AddNew`:  
   
--   Rekord w buforze edycji są przechowywane, mogą zostać przywrócone jego zawartość, jeśli operacja została anulowana.  
+-   Rekord w buforze edycji są przechowywane, dzięki czemu można go przywrócić jego zawartość, jeśli operacja została anulowana.  
   
--   Elementy członkowskie danych pola są oznaczane, dzięki czemu można wykryć zmiany w ich później. Elementy członkowskie są również oznaczane danych pola czyszczenia (bez zmian) i ustawić na wartość Null.  
+-   Elementy członkowskie danych pola są oznaczone, dzięki czemu umożliwia wykrywanie zmian w ich później. Pola danych elementów członkowskich są również oznaczane wyczyścić (bez zmian) i ustaw na wartość Null.  
   
- Po wywołaniu metody `AddNew`buforu edycji reprezentuje nowy, pusty rekord, gotowe w celu wprowadzenia wartości. Aby to zrobić, należy ręcznie ustawić wartości przez przypisanie do nich. Zamiast określania wartości rzeczywistych danych pola, można wywołać `SetFieldNull` można określić wartości Null.  
+ Po wywołaniu metody `AddNew`buforu edycji reprezentuje nowy, pusty rekord, gotowe w celu wprowadzenia wartości. Aby to zrobić, możesz ręcznie ustawić wartości przez przypisywanie do nich. Zamiast określania rzeczywista wartość danych dla pola, można wywołać `SetFieldNull` określić wartość Null.  
   
- Aby zatwierdzić zmiany, należy wywołać **aktualizacji**. Podczas wywoływania **aktualizacji** w nowym rekordzie:  
+ Aby zatwierdzić zmiany, należy wywołać `Update`. Gdy wywołujesz `Update` dla nowego rekordu:  
   
--   Jeśli sterownik ODBC obsługuje **:: SQLSetPos** funkcji interfejsu API ODBC MFC za pomocą funkcji Dodaj rekord w źródle danych. Z **:: SQLSetPos**, MFC można dodać rekordu wydajniej, ponieważ nie ma do tworzenia i przetwarzania instrukcji SQL.  
+-   Jeśli sterownik ODBC obsługuje `::SQLSetPos` funkcji interfejsu API ODBC i MFC używa funkcji, aby dodać rekord w źródle danych. Za pomocą `::SQLSetPos`, MFC można dodać rekord wydajniej, ponieważ nie ma do tworzenia i przetwarzania instrukcji języka SQL.  
   
--   Jeśli **:: SQLSetPos** nie może być używany, MFC wykonuje następujące czynności:  
+-   Jeśli `::SQLSetPos` nie może być używany, MFC wykonuje następujące czynności:  
   
-    1.  Jeśli nie wykryto żadnych zmian, **aktualizacji** nie robi nic i zwraca wartość 0.  
+    1.  Jeśli nie wykryto żadnych zmian, `Update` nic nie robi i zwraca wartość 0.  
   
-    2.  Jeśli istnieją zmiany, **aktualizacji** tworzy SQL **Wstaw** instrukcji. Kolumn reprezentowanych przez wszystkie elementy członkowskie danych pola z zanieczyszczeniu są wymienione w **Wstaw** instrukcji. Aby wymusić kolumny, które zostaną uwzględnione, należy wywołać [SetFieldDirty](../../mfc/reference/crecordset-class.md#setfielddirty) funkcji członkowskiej:  
+    2.  W przypadku zmian, `Update` konstrukcji SQL **Wstaw** instrukcji. Kolumny, reprezentowane przez wszystkie elementy członkowskie danych pola zanieczyszczeniu są wymienione w **Wstaw** instrukcji. Aby wymusić kolumny do uwzględnienia, należy wywołać [SetFieldDirty](../../mfc/reference/crecordset-class.md#setfielddirty) funkcja elementu członkowskiego:  
   
         ```  
         SetFieldDirty( &m_dataMember, TRUE );  
         ```  
   
-    3.  **Aktualizacja** zatwierdza nowy rekord — **Wstaw** instrukcja jest wykonywana i rekord zostanie przekazany do tabeli w źródle danych (i zestaw rekordów, jeśli nie migawkę), chyba że transakcja jest w toku.  
+    3.  `Update` zatwierdza nowy rekord — **Wstaw** zostaje wykonana instrukcja i rekord jest zaangażowana w tabeli w źródle danych (i zestawu rekordów, jeśli nie migawki), chyba że transakcja jest w toku.  
   
-    4.  Po przywróceniu rekordu przechowywanych w buforze edycji. Rekord, które były aktualne przed `AddNew` wywołanie jest ponownie niezależnie od tego, czy bieżący **Wstaw** została pomyślnie wykonana.  
-  
-    > [!TIP]
-    >  Dla pełną kontrolę nad nowego rekordu, należy wykonać następujące podejście: Ustaw wartości wszystkich pól, które będzie mieć wartości, a następnie jawnie ustaw wszystkie pola, które pozostanie Null przez wywołanie metody `SetFieldNull` za pomocą wskaźnika do pola i parametr **TRUE**  (ustawienie domyślne). Jeśli chcesz upewnić się, czy pole nie jest zapisywany w źródle danych, wywołanie `SetFieldDirty` za pomocą wskaźnika do pola i parametr **FALSE**i nie należy modyfikować wartości pola. Aby ustalić, czy pole może mieć wartości Null, należy wywołać `IsFieldNullable`.  
+    4.  Po przywróceniu rekordów przechowywanych w buforze edycji. Rekord, który były aktualne przed `AddNew` wywołanie jest bieżącym ponownie niezależnie od tego, czy **Wstaw** pomyślnie wykonano instrukcję.  
   
     > [!TIP]
-    >  Do wykrycia, gdy elementy członkowskie danych zestawu rekordów, zmień wartość używa MFC **PSEUDO_NULL** wartość odpowiednią dla każdego typu danych, które można przechowywać w zestawie rekordów. Jeśli pole musi jawnie ustawiona na **PSEUDO_NULL** pola i wartość już stanie się być oznaczone Null, należy także wywołać `SetFieldNull`, przekazywanie adresu pola w pierwszym parametrze i **FALSE**w drugi parametr.  
+    >  Aby uzyskać pełną kontrolę nad nowy rekord, wykonaj następujące podejście: Ustaw wartości wszystkich pól, które będą mieć wartości i jawnie ustawić wszystkie pola, które pozostaną o wartości Null, wywołując `SetFieldNull` za pomocą wskaźnika do pola i parametr TRUE (ustawienie domyślne). Jeśli chcesz upewnić się, że pola są one zapisywane do źródła danych, wywołanie `SetFieldDirty` za pomocą wskaźnika do pola i wartość FALSE, parametr i nie należy modyfikować wartości pola. Aby ustalić, czy pole może mieć wartości Null, należy wywołać `IsFieldNullable`.  
   
-##  <a name="_core_visibility_of_added_records"></a> Widoczność dodanych rekordów  
- Gdy dodano rekord jest widoczny dla zestawu rekordów Dodano rekordów czasami pojawiają się i czasami nie są widoczne w zależności od dwie czynności:  
+    > [!TIP]
+    >  Aby wykryć, kiedy zestaw rekordów składowe danych, zmień wartość, MFC wykorzystuje wartość PSEUDO_NULL odpowiednią dla każdego typu danych, które mogą być przechowywane w zestawie rekordów. Jeśli musisz jawnie ustawić wartość PSEUDO_NULL pola, a pole się zmieni dla już być oznaczone Null, musisz również wywołać `SetFieldNull`, przekazując adres pola pierwszy parametr i wartość FALSE w drugim parametrze.  
   
--   Jakie sterownik jest w stanie.  
+##  <a name="_core_visibility_of_added_records"></a> Widoczność dodano rekordów  
+ Jeśli dodano rekord jest widoczny dla rekordów? Dodano rekordów czasami widoczne i czasami nie są widoczne, w zależności od dwie rzeczy:  
   
--   Jaką platformę można korzystać z.  
+-   Jakie sterownika jest w stanie.  
   
- Jeśli sterownik ODBC obsługuje **:: SQLSetPos** funkcji interfejsu API ODBC MFC używa funkcji, aby dodać rekordy. Z **:: SQLSetPos**, dodać rekordy są widoczne dla żadnych nadaje się do aktualizacji zestawu rekordów MFC. Bez obsługi funkcji, należy dodać rekordy nie są widoczne i należy wywołać **Requery** je wyświetlić. Przy użyciu **:: SQLSetPos** jest również bardziej efektywne.  
+-   Jakiej platformy, jak korzystać z zalet.  
+  
+ Jeśli sterownik ODBC obsługuje `::SQLSetPos` funkcji interfejsu API ODBC i MFC używa funkcji, aby dodać rekordy. Za pomocą `::SQLSetPos`, dodać rekordy są widoczne dla żadnych nadaje się do aktualizacji rekordów MFC. Bez obsługi funkcji, dodawany rekordy nie są widoczne, a następnie należy wywołać `Requery` widoczne. Za pomocą `::SQLSetPos` również jest bardziej wydajne.  
   
 ##  <a name="_core_editing_an_existing_record"></a> Edytowanie istniejącego rekordu  
- Edytowanie istniejącego rekordu w zestawie rekordów obejmuje przewijanie do rekordu wywoływanie w zestawie rekordów [Edytuj](../../mfc/reference/crecordset-class.md#edit) funkcji członkowskiej, ustawienie wartości elementy członkowskie danych pola w nowym rekordzie i wywoływania [aktualizacji](../../mfc/reference/crecordset-class.md#update)funkcji członkowskiej można zapisać zmienionych rekordów w źródle danych.  
+ Edytowanie istniejącego rekordu w zestawie rekordów obejmuje przewinięcie do rekordu, wywoływanie w zestawie rekordów [Edytuj](../../mfc/reference/crecordset-class.md#edit) funkcji członkowskiej, ustawianie wartości elementów członkowskich danych pola nowego rekordu i wywoływania [aktualizacji](../../mfc/reference/crecordset-class.md#update)funkcja elementu członkowskiego, aby zapisać zmienionych rekordów do źródła danych.  
   
- Jako warunek wstępny dotyczący wywołania **Edytuj**, zestaw rekordów musi być nadaje się do aktualizacji i w rekordzie. `CanUpdate` i `IsDeleted` funkcji członkowskich pozwalają określić te warunki. Bieżącego rekordu również musi nie już zostać usunięte, a musi być rekordy w zestawie rekordów (zarówno `IsBOF` i `IsEOF` zwraca 0).  
+ Jako warunek wstępny do wywoływania `Edit`, zestaw rekordów musi być nadaje się do aktualizacji i rekord. `CanUpdate` i `IsDeleted` funkcje Członkowskie pozwalają na określenie tych warunków. Bieżącego rekordu również musi nie już zostały usunięte, a musi być rekordów w zestawie rekordów (zarówno `IsBOF` i `IsEOF` zwracają 0).  
   
- Podczas wywoływania **Edytuj**, znajduje rekord w buforze edycji (bieżącego). Rekord przechowywanej wartości później są używane do wykrywania, czy wszystkie pola zostały zmienione.  
+ Gdy wywołujesz `Edit`, znajduje się rekord w buforze edycji (bieżącego rekordu). Wartości rekordu przechowywanych później są używane do wykrywania, czy wszystkie pola zostały zmienione.  
   
- Po wywołaniu metody **Edytuj**, buforu edycji nadal reprezentuje bieżącego rekordu, ale jest teraz gotowy do przyjęcia zmian elementy członkowskie danych pola. Aby zmienić rekordu, możesz ręcznie ustawić wartości wszystkie elementy członkowskie danych pola, które chcesz edytować. Zamiast określania wartości rzeczywistych danych pola, można wywołać `SetFieldNull` można określić wartości Null. Aby zatwierdzić zmiany, należy wywołać **aktualizacji**.  
+ Po wywołaniu metody `Edit`, bufor edycji nadal reprezentuje bieżącego rekordu, ale jest teraz gotowy do przyjęcia zmian elementy członkowskie danych pola. Aby zmienić rekord, ręcznie ustawić wartości wszystkie elementy członkowskie danych pola, który chcesz edytować. Zamiast określania rzeczywista wartość danych dla pola, można wywołać `SetFieldNull` określić wartość Null. Aby zatwierdzić zmiany, należy wywołać `Update`.  
   
 > [!TIP]
->  Można pobrać z `AddNew` lub **Edytuj** tryb, wywołanie **Przenieś** z parametrem **AFX_MOVE_REFRESH**.  
+>  Aby uzyskać z `AddNew` lub `Edit` tryb, wywołanie `Move` z parametrem *AFX_MOVE_REFRESH*.  
   
- Jako warunek wstępny dotyczący wywołania **aktualizacji**, zestaw rekordów nie może być pusta i bieżącego rekordu nie musiały zostać usunięte. `IsBOF`, `IsEOF`, i `IsDeleted` powinien zwrócić 0.  
+ Jako warunek wstępny do wywoływania `Update`bieżącego rekordu nie musiały zostać usunięte i zestawu rekordów nie może być pusta. `IsBOF`, `IsEOF`, i `IsDeleted` powinna zwrócić 0.  
   
- Podczas wywoływania **aktualizacji** edytowanego rekordu:  
+ Gdy wywołujesz `Update` edytowany rekord:  
   
--   Jeśli sterownik ODBC obsługuje **:: SQLSetPos** funkcji interfejsu API ODBC MFC funkcja do zaktualizowania rekordu w źródle danych. Z **:: SQLSetPos**, sterownik porównuje z buforu edycji z odpowiedniego rekordu na serwerze, aktualizacja rekordu na serwerze, jeśli dwa są różne. Z **:: SQLSetPos**, MFC można zaktualizować rekord wydajniej, ponieważ nie ma do tworzenia i przetwarzania instrukcji SQL.  
+-   Jeśli sterownik ODBC obsługuje `::SQLSetPos` funkcji interfejsu API ODBC i MFC za pomocą funkcji aktualizacji rekordu w źródle danych. Za pomocą `::SQLSetPos`, sterownik porównuje usługi buforu edycji za pomocą odpowiedniego rekordu na serwerze, aktualizuje rekord na serwerze, jeśli dwa są różne. Za pomocą `::SQLSetPos`, MFC można zaktualizować rekord wydajniej, ponieważ nie ma do tworzenia i przetwarzania instrukcji języka SQL.  
   
      —lub—  
   
--   Jeśli **:: SQLSetPos** nie może być używany, MFC wykonuje następujące czynności:  
+-   Jeśli `::SQLSetPos` nie może być używany, MFC wykonuje następujące czynności:  
   
-    1.  Jeżeli nie dokonano żadnych zmian, **aktualizacji** nie robi nic i zwraca wartość 0.  
+    1.  Jeśli nie było żadnych zmian `Update` nic nie robi i zwraca wartość 0.  
   
-    2.  Jeśli istnieją zmiany, **aktualizacji** tworzy SQL **aktualizacji** instrukcji. Kolumn na liście **aktualizacji** instrukcji są oparte na elementy członkowskie danych pola, które zostały zmienione.  
+    2.  W przypadku zmian, `Update` konstrukcji SQL **aktualizacji** instrukcji. Kolumn na liście **aktualizacji** instrukcji opierają się na elementy członkowskie danych pola, które uległy zmianie.  
   
-    3.  **Aktualizacja** zatwierdza zmiany — wykonuje **aktualizacji** instrukcji — i rekord zostało zmienione w źródle danych, ale jeśli nie zatwierdzić transakcji jest w toku (zobacz [transakcja: wykonywanie transakcji w zestaw rekordów (ODBC)](../../data/odbc/transaction-performing-a-transaction-in-a-recordset-odbc.md) informacji o wpływ aktualizacja transakcji). ODBC przechowuje kopie rekordu, co spowoduje również zmianę.  
+    3.  `Update` zatwierdza zmiany — wykonuje **aktualizacji** instrukcji — rekord zostało zmienione w źródle danych, ale nie zatwierdzone Jeśli transakcja jest w toku (zobacz [transakcja: wykonywanie transakcji w zestawie rekordów (ODBC)](../../data/odbc/transaction-performing-a-transaction-in-a-recordset-odbc.md) uzyskać informacji na temat wpływ transakcji aktualizacji). ODBC przechowuje kopię rekord, który zmienia także.  
   
-    4.  W przeciwieństwie do procesu `AddNew`, **Edytuj** proces nie powoduje przywrócenia przechowywanych rekordu. Edytowany rekord jest uwzględniany jako bieżącego rekordu.  
+    4.  W przeciwieństwie do procesu `AddNew`, `Edit` proces nie powoduje przywrócenia rekordów przechowywanych. Edytowany rekord pozostaje w miejscu jako bieżącego rekordu.  
   
     > [!CAUTION]
-    >  Podczas przygotowania do aktualizacji zestawu rekordów przez wywołanie metody **aktualizacji**, zwrócić uwagę, że zestawu rekordów zawiera wszystkie kolumny tworzące klucz podstawowy tabeli (lub wszystkie kolumny dowolny unikatowy indeks w tabeli lub wystarczającej liczby kolumn do jednoznacznie Określ wiersz). W niektórych przypadkach framework może być zidentyfikować rekordy w tabeli, aby zaktualizować tylko kolumny wybrana w twoim zestawie rekordów. Nie wszystkie kolumny niezbędne wiele rekordów mogły zostać zaktualizowane w tabeli. W takim przypadku platformę zgłasza wyjątki podczas wywoływania **aktualizacji**.  
+    >  Po przygotowaniu zaktualizuj zestaw rekordów, wywołując `Update`, zajmie się, że rekordów zawiera wszystkich kolumn tworzących klucza podstawowego tabeli (lub wszystkie kolumny wszelkie unikatowego indeksu dla tabeli lub za mało kolumn, do jednoznacznego identyfikowania wiersza). W niektórych przypadkach ramach służy tylko do kolumn, które zostały wybrane w twoim zestawie rekordów do zidentyfikować rekordy w tabeli, aby zaktualizować. Nie wszystkie niezbędne kolumny wielu rekordów mogły zostać zaktualizowane w tabeli. W tym przypadku ramach zgłasza wyjątki podczas wywoływania `Update`.  
   
     > [!TIP]
-    >  Jeśli wywołujesz `AddNew` lub **Edytuj** po wywołaniu funkcji albo wcześniej, ale zanim zajdzie wywołania **aktualizacji**, buforu edycji jest odświeżany z rekordem przechowywane, zastępując rekordu nowe lub zmodyfikowane w postęp. To zachowanie umożliwia przerwania `AddNew` lub **Edytuj** i rozpocząć nową: Jeśli okaże się, że rekord postępu jest uszkodzony, po prostu Wywołaj **Edytuj** lub `AddNew` ponownie.  
+    >  Jeśli wywołasz `AddNew` lub `Edit` po wywołaniu jednej z tych funkcji wcześniej, ale zanim zajdzie wywołania `Update`, bufor edycji zostaną odświeżone przy użyciu przechowywanych rekordu, zastępując rekordu nowe lub zmodyfikowane w toku. To zachowanie umożliwia przerwania `AddNew` lub `Edit` i rozpocząć nową: Jeśli okaże się, że rekord postęp jest uszkodzony, wystarczy wywołać `Edit` lub `AddNew` ponownie.  
   
-##  <a name="_core_deleting_a_record"></a> Usunięcie rekordu  
- Usunięcie rekordu z zestawu rekordów obejmuje przewijanie do rekordu i wywoływanie w zestawie rekordów [usunąć](../../mfc/reference/crecordset-class.md#delete) funkcję elementu członkowskiego. W odróżnieniu od `AddNew` i **Edytuj**, **usunąć** nie wymaga miejsce odpowiadające wywołanie **aktualizacji**.  
+##  <a name="_core_deleting_a_record"></a> Usuwanie rekordu  
+ Usuwanie rekordu z zestawu rekordów obejmuje przewijanie do rekordu i wywoływanie w zestawie rekordów [Usuń](../../mfc/reference/crecordset-class.md#delete) funkcja elementu członkowskiego. W odróżnieniu od `AddNew` i `Edit`, `Delete` nie wymaga pasujących wywołanie `Update`.  
   
- Jako warunek wstępny dotyczący wywołania **usunąć**, zestaw rekordów musi zezwalać na aktualizacje, i musi znajdować się na rekordu. `CanUpdate`, `IsBOF`, `IsEOF`, I `IsDeleted` funkcji członkowskich pozwalają określić te warunki.  
+ Jako warunek wstępny do wywoływania `Delete`, zestaw rekordów musi zostać nadaje się do aktualizacji, a musi być rekord. `CanUpdate`, `IsBOF`, `IsEOF`, I `IsDeleted` funkcje Członkowskie pozwalają na określenie tych warunków.  
   
- Podczas wywoływania **usunąć**:  
+ Gdy wywołujesz `Delete`:  
   
--   Jeśli sterownik ODBC obsługuje **:: SQLSetPos** funkcji interfejsu API ODBC MFC funkcja usuwanie rekordu w źródle danych. Przy użyciu **:: SQLSetPos** jest zazwyczaj bardziej efektywne niż przy użyciu programu SQL.  
+-   Jeśli sterownik ODBC obsługuje `::SQLSetPos` funkcji interfejsu API ODBC i MFC używa funkcji, aby usunąć rekord w źródle danych. Za pomocą `::SQLSetPos` jest zazwyczaj bardziej efektywne niż przy użyciu języka SQL.  
   
      —lub—  
   
--   Jeśli **:: SQLSetPos** nie może być używany, MFC wykonuje następujące czynności:  
+-   Jeśli `::SQLSetPos` nie może być używany, MFC wykonuje następujące czynności:  
   
-    1.  Rekord bieżący w buforze Edycja nie jest kopii zapasowej jako w `AddNew` i **Edytuj**.  
+    1.  Bieżący rekord w buforze Edycja nie jest obsługiwane jako w `AddNew` i `Edit`.  
   
-    2.  **Usuń** tworzy SQL **usunąć** instrukcji, która spowoduje usunięcie rekordu.  
+    2.  `Delete` konstruuje SQL **Usuń** instrukcję, która usuwa rekord.  
   
-         Rekord bieżący w buforze Edycja nie jest przechowywana jako w `AddNew` i **Edytuj**.  
+         Bieżący rekord w buforze edycji nie są przechowywane jako w `AddNew` i `Edit`.  
   
-    3.  **Usuń** zatwierdza usunięcia — wykonuje **usunąć** instrukcji. Rekord jest oznaczony jako usunięte w źródle danych i, jeśli rekord jest migawka w ODBC.  
+    3.  `Delete` usuwanie zatwierdzenia — wykonuje **Usuń** instrukcji. Rekord oznaczony usuniętych w źródle danych i, jeśli rekord jest migawką, w ODBC.  
   
-    4.  Usuniętego rekordu wartości są nadal w elementy członkowskie danych pola zestawu rekordów, ale elementy członkowskie danych pola są oznaczone Null i w zestawie rekordów `IsDeleted` — członek, funkcja zwraca wartość różną od zera.  
+    4.  Usuniętego rekordu wartości wciąż znajdują się w elementy członkowskie danych pola zestawu rekordów, ale elementy członkowskie danych pola są oznaczone Null i zestawu rekordów `IsDeleted` funkcja elementu członkowskiego zwraca wartość różną od zera.  
   
     > [!NOTE]
-    >  Po usunięciu rekordu, powinien przewiń do innego rekordu uzupełnienie edycji bufor nowego rekordu danych. Błąd do wywołania **usunąć** ponownie lub wywołać **Edytuj**.  
+    >  Po usunięciu rekordu, powinien przewiń do innego rekordu uzupełnienie buforu edycji danych nowy rekord. Jest to błąd, aby wywołać `Delete` ponownie lub wywołać `Edit`.  
   
- Uzyskać informacje na temat instrukcji SQL, używane podczas wykonywania operacji aktualizacji, zobacz [SQL](../../data/odbc/sql.md).  
+ Aby uzyskać informacji na temat instrukcji SQL używane podczas operacji aktualizacji, zobacz [SQL](../../data/odbc/sql.md).  
   
 ## <a name="see-also"></a>Zobacz też  
  [Zestaw rekordów (ODBC)](../../data/odbc/recordset-odbc.md)   

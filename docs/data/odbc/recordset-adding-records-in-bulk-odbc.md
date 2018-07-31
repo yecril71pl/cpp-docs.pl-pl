@@ -1,5 +1,5 @@
 ---
-title: 'Zestaw rekordów: Dodawanie rekordów (ODBC) zbiorczo | Dokumentacja firmy Microsoft'
+title: 'Zestaw rekordów: Dodawanie rekordów zbiorcze (ODBC) | Dokumentacja firmy Microsoft'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,26 +17,26 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 7bb39b910eae797f360513954ad0c32d5e99bb86
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 167cf817074a992fae5492ba387ea8a3589a10ec
+ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33089288"
+ms.lasthandoff: 07/30/2018
+ms.locfileid: "39337232"
 ---
 # <a name="recordset-adding-records-in-bulk-odbc"></a>Zestaw rekordów: zbiorcze dodawanie rekordów (ODBC)
-Ten temat dotyczy klasach MFC ODBC.  
+Ten temat dotyczy klas MFC ODBC.  
   
- MFC [crecordset —](../../mfc/reference/crecordset-class.md) klasa ma nowy optymalizacji, która zwiększa wydajność podczas dodawania nowych rekordów zbiorczo do tabeli.  
+ MFC [CRecordset](../../mfc/reference/crecordset-class.md) klasa ma nowy optymalizacji, które zwiększa wydajność podczas dodawania nowych rekordów zbiorczo do tabeli.  
   
 > [!NOTE]
->  Ten temat dotyczy obiektów pochodzących od `CRecordset` w wiersz, który zbiorczego pobierania nie została zaimplementowana. Jeśli korzystasz z zbiorcze pobieranie z wiersza, zobacz [zestaw rekordów: pobieranie rekordów zbiorczego (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md).  
+>  Ten temat dotyczy obiektów pochodzących od `CRecordset` w wierszu zbiorczego, które podczas pobierania nie została zaimplementowana. Jeśli używasz zbiorcze pobieranie z wiersza, zobacz [zestaw rekordów: pobieranie rekordów w zbiorcze (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md).  
   
- Nową opcję **dwOptions** parametr [CRecordset::Open](../../mfc/reference/crecordset-class.md#open) funkcji członkowskiej **optimizeBulkAdd**, zwiększa wydajność podczas dodawania wielu rekordów po kolei bez wywoływania elementu **Requery** lub **Zamknij**. Tylko pola, które zostały zmienione przed pierwszym **aktualizacji** wywołania oznaczonych jako zakłócone dla kolejnych `AddNew` / **aktualizacji** wywołania.  
+ Nowa opcja dla *dwOptions* parametr [CRecordset::Open](../../mfc/reference/crecordset-class.md#open) funkcja elementu członkowskiego `optimizeBulkAdd`, zwiększa wydajność podczas dodawania wielu rekordów pod rząd bez wywoływania `Requery` lub `Close`. Te pola, które zostały zmienione przed pierwszym `Update` wywołania są oznaczane jako zmienione kolejnych `AddNew` / `Update` wywołania.  
   
- Jeśli używasz klasy baz danych, aby móc korzystać z **:: SQLSetPos** interfejsu API ODBC funkcji dodawania, edytowania i usuwania rekordów, ten rodzaj optymalizacji jest niepotrzebna.  
+ Jeśli używasz klasy bazy danych, aby móc korzystać z `::SQLSetPos` interfejsu API ODBC funkcji dodawania, edytowania i usuwania rekordów, tego rodzaju optymalizacji jest niepotrzebne.  
   
- Jeśli z biblioteki kursorów ODBC został załadowany lub sterownik ODBC nie obsługuje dodawania, edytowania i usuwania za pośrednictwem **:: SQLSetPos**, tego rodzaju optymalizacji należy poprawić zbiorcze Dodawanie wydajności. Aby włączyć tego rodzaju optymalizacji, ustaw **dwOptions** parametru w **Otwórz** wywołania dla zestawu rekordów do następującego:  
+ Jeśli jest ładowany z biblioteki kursorów ODBC lub sterownik ODBC nie obsługuje dodawania, edytowania i usuwania za pośrednictwem `::SQLSetPos`, tego rodzaju optymalizacji należy poprawić zbiorcze Dodawanie wydajności. Aby włączyć tego rodzaju optymalizacji, należy ustawić *dwOptions* parametru w `Open` wywołania dla rekordów do następującego:  
   
 ```  
 appendOnly | optimizeBulkAdd  

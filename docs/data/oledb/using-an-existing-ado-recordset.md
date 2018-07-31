@@ -17,19 +17,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 36c74ec0d17c296707334930736d0cf237ecfe7e
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: be948293947d4f007d151e4a89e0ff87fc897bbd
+ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33103567"
+ms.lasthandoff: 07/30/2018
+ms.locfileid: "39338941"
 ---
 # <a name="using-an-existing-ado-recordset"></a>Korzystanie z istniejącego zestawu rekordów ADO
-Aby utworzyć szablony konsumentów OLE DB i aktywne obiektów ADO (Data), umożliwia otwieranie zestawu rekordów (odpowiadający zestawu wierszy w OLE DB szablony konsumentów) ADO. Jeśli masz zestawu rekordów, wykonaj następujące czynności do nawiązania połączenia zestawu wierszy OLE DB:  
+Aby łączyć, szablony konsumentów OLE DB i aktywne Data Objects (ADO), należy użyć ADO można otworzyć zestawu rekordów (odpowiadających dla zestawu wierszy OLE DB konsumenta szablonów). W przypadku zestawu rekordów, wykonaj następujące polecenie, aby nawiązać połączenie z zestawu wierszy OLE DB:  
   
-1.  Wywołanie `QueryInterface` dla `IRowset` i `IAccessor` wskaźniki.  
+1.  Wywołaj `QueryInterface` dla `IRowset` i `IAccessor` wskaźników.  
   
-    ```  
+    ```cpp  
     IRowset* lpRowset = NULL;  
     IAccessor* lpAccessor = NULL;  
     lpUnk->QueryInterface(IID_IRowset, (void**)&lpRowset);  
@@ -37,11 +37,11 @@ Aby utworzyć szablony konsumentów OLE DB i aktywne obiektów ADO (Data), umoż
     ```  
   
     > [!NOTE]
-    >  *lpUnk* wskazuje **IUnknown** obiektu zestawu rekordów ADO.  
+    >  *lpUnk* wskazuje `IUnknown` obiekt zestawu rekordów ADO.  
   
 2.  Dołącz metody dostępu i zestawu wierszy do ich odpowiednich klas szablonów konsumentów OLE DB.  
   
-    ```  
+    ```cpp  
     CRowset rs;  
     CAccessor accessor;  
   

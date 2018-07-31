@@ -18,15 +18,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 8f0ba90bdcbaa4255757ee31015d0f6986862916
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 0f18f5a524cbfbfa7f17dfd3964c68329bc8a042
+ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33097929"
+ms.lasthandoff: 07/30/2018
+ms.locfileid: "39338509"
 ---
 # <a name="cmyproviderwindowsfile"></a>CMyProviderWindowsFile
-Kreator utworzy klasę, aby zawierać jeden wiersz danych. w tym przypadku jest to `CMyProviderWindowsFile`. Poniższy kod dla `CMyProviderWindowsFile` jest generowany kreatora i listę wszystkich plików w katalogu za pomocą **WIN32_FIND_DATA** struktury. `CMyProviderWindowsFile` dziedziczy **WIN32_FIND_DATA** struktury:  
+Kreator tworzy klasę umożliwiającą zawierają jeden wiersz danych. w tym przypadku jest to `CMyProviderWindowsFile`. Poniższy kod dla `CMyProviderWindowsFile` jest generowany kreatora i wyświetla listę wszystkich plików w katalogu przy użyciu `WIN32_FIND_DATA` struktury. `CMyProviderWindowsFile` dziedziczy `WIN32_FIND_DATA` strukturę:  
   
 ```cpp
 /////////////////////////////////////////////////////////////////////  
@@ -46,9 +46,9 @@ END_PROVIDER_COLUMN_MAP()
 };  
 ```  
   
- `CMyProviderWindowsFile` jest nazywana [klasy rekordów użytkowników](../../data/oledb/user-record.md) ponieważ zawiera ona również mapy zawierająca opis kolumn w zestawie wierszy dostawcy. Mapowania kolumn dostawcy zawiera jeden wpis dla każdego pola w zestawie wierszy za pomocą makra PROVIDER_COLUMN_ENTRY. Makra Określ nazwę kolumny, numer porządkowy i przesunięcia wpisu struktury. Dostawca wpisów kolumn w powyższym kodzie zawierają przesunięcia do **WIN32_FIND_DATA** struktury. Kiedy klient wywołuje **IRowset::GetData**, dane są przesyłane w ciągłego buforu. Zamiast co możesz zrobić arytmetyka wskaźnika, mapy służy do określenia członka danych.  
+ `CMyProviderWindowsFile` nosi nazwę [klasy rekordów użytkowników](../../data/oledb/user-record.md) ponieważ zawiera ona także mapę zawierająca opis kolumn w zestawie wierszy z dostawcy. Dostawcy mapy kolumny zawiera jeden wpis dla każdego pola w zestawie wierszy przy użyciu makr PROVIDER_COLUMN_ENTRY. Makra Określ nazwę kolumny, porządkowe i przesunięcia wpisu struktury. Wpisów kolumn dostawcy w powyższym kodzie zawierają przesunięcia do `WIN32_FIND_DATA` struktury. Gdy użytkownik wywołuje `IRowset::GetData`, dane są przesyłane w ciągłym buforu. Zamiast co możesz zrobić arytmetyka wskaźnika, mapa pozwala określić element członkowski danych.  
   
- `CMyProviderRowset` Klasa zawiera także `Execute` metody. `Execute` to, co faktycznie odczytuje dane w z natywnego źródła. Poniższy kod przedstawia generowane przez kreatora `Execute` metody. Funkcja używa Win32 **FindFirstFile** i `FindNextFile` interfejsów API, aby pobrać informacje o plikach w katalogu i umieścić je w wystąpieniach `CMyProviderWindowsFile` klasy.  
+ `CMyProviderRowset` Klasa zawiera także `Execute` metody. `Execute` to, co faktycznie odczytuje dane w natywnej źródła. Poniższy kod pokazuje generowane przez kreatora `Execute` metody. Funkcja używa Win32 `FindFirstFile` i `FindNextFile` interfejsów API, aby pobrać informacje o plikach w katalogu i umieścić je w wystąpieniach `CMyProviderWindowsFile` klasy.  
   
 ```cpp
 /////////////////////////////////////////////////////////////////////  
@@ -81,9 +81,9 @@ HRESULT Execute(DBPARAMS * pParams, LONG* pcRowsAffected)
 }  
 ```  
   
- Katalog do wyszukiwania jest reprezentowana przez `m_strCommandText`; zawiera tekst reprezentowany przez `ICommandText` interfejsu w obiekcie command. Jeśli nie określono katalogu, używa bieżącego katalogu.  
+ Katalog do przeszukania jest reprezentowany przez `m_strCommandText`; zawiera tekst, reprezentowane przez `ICommandText` interfejsu w obiekcie command. Jeśli nie określono katalogu, używa bieżącego katalogu.  
   
- Metoda tworzy jeden wpis dla każdego pliku (odpowiadającego na wiersz) i umieszcza je w **m_rgRowData** element członkowski danych. `CRowsetImpl` Klasa definiuje **m_rgRowData** element członkowski danych. Dane w tej tablicy reprezentuje całą tabelę i jest używane w szablonach.  
+ Metoda tworzy jeden wpis dla każdego pliku (odpowiadających na wiersz) i umieszcza je w `m_rgRowData` element członkowski danych. `CRowsetImpl` Klasa definiuje `m_rgRowData` element członkowski danych. Dane w tej tablicy reprezentuje całą tabelę i jest używana w całej szablonów.  
   
 ## <a name="see-also"></a>Zobacz też  
  [Pliki dostawcy generowane przez kreatora](../../data/oledb/provider-wizard-generated-files.md)

@@ -63,12 +63,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 18174281baf76b383b56b10e86e2659279037b6c
-ms.sourcegitcommit: b0d6777cf4b580d093eaf6104d80a888706e7578
+ms.openlocfilehash: 07453e3040594332857ba75455b1847a3914fdd2
+ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/26/2018
-ms.locfileid: "39269602"
+ms.lasthandoff: 07/30/2018
+ms.locfileid: "39337797"
 ---
 # <a name="icommandimpl-class"></a>ICommandImpl — Klasa
 Udostępnia implementację dla [ICommand](https://msdn.microsoft.com/library/ms709737.aspx) interfejsu.  
@@ -121,7 +121,6 @@ Anuluje bieżące wykonywanie polecenia.
   
 ```cpp
 STDMETHOD(Cancel)();  
-  
 ```  
   
 ### <a name="remarks"></a>Uwagi  
@@ -134,7 +133,6 @@ Anuluje bieżące wykonywanie polecenia.
   
 ```cpp
 HRESULT CancelExecution();  
-  
 ```  
 
 ## <a name="createrowset"></a> ICommandImpl::CreateRowset
@@ -143,8 +141,7 @@ Wywoływane przez [Execute](../../data/oledb/icommandimpl-execute.md) do utworze
 ### <a name="syntax"></a>Składnia  
   
 ```cpp
-      template template <class RowsetClass  
-      >  
+template template <class RowsetClass>  
 HRESULT CreateRowset(IUnknown* pUnkOuter,  
    REFIID riid,  
    DBPARAMS* pParams,  
@@ -210,7 +207,7 @@ Zwraca wskaźnik interfejsu do sesja, która utworzyła polecenia.
 ### <a name="syntax"></a>Składnia  
   
 ```cpp
-      STDMETHOD (GetDBSession) (REFIID riid,  
+STDMETHOD (GetDBSession) (REFIID riid,  
    IUnknown** ppSession);  
 ```  
   
@@ -227,7 +224,6 @@ Konstruktor.
   
 ```cpp
 ICommandImpl();  
-  
 ```  
 
 ## <a name="bcancel"></a> ICommandImpl::m_bCancel
@@ -237,7 +233,6 @@ Wskazuje, czy polecenie zostało anulowane.
   
 ```cpp
 unsigned m_bCancel:1;  
-  
 ```  
   
 ### <a name="remarks"></a>Uwagi  
@@ -250,7 +245,6 @@ Wskazuje, czy polecenie może być anulowane podczas wykonywania.
   
 ```cpp
 unsigned m_bCancelWhenExecuting:1;  
-  
 ```  
   
 ### <a name="remarks"></a>Uwagi  
@@ -263,7 +257,6 @@ Wskazuje, czy polecenie jest w trakcie wykonywania.
   
 ```cpp
 unsigned m_bIsExecuting:1;  
-  
 ```  
   
 ### <a name="remarks"></a>Uwagi  

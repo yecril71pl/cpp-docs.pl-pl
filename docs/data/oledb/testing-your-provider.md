@@ -17,21 +17,21 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: c35b1391e5b8cbfb073255b3680b0376d19ae040
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 906156a24cfb58697ff4dd95e922f5ee326fd07d
+ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33104792"
+ms.lasthandoff: 07/30/2018
+ms.locfileid: "39339731"
 ---
 # <a name="testing-your-provider"></a>Testowanie dostawcy
-Przed udostępnieniem dostawcę, należy wykonać następujące testy w kolejności wskazanej. Te testy upewnij się, że funkcje dostawcy prawidłowo dla większości użytkowników potencjalnych.  
+Przed publikacją dostawcę, należy wykonać następujące testy we wskazanej kolejności. Te testy upewnij się, że funkcje dostawcy prawidłowo dla większości użytkowników potencjalnych.  
   
-1.  Testowanie dostawcy przy użyciu [konsumenta](../../data/oledb/creating-an-ole-db-consumer.md) Aplikacja napisana z szablonami konsumentów OLE DB. Konsument testu powinno obejmować wszystkich obszarów funkcjonalnych dostawcy (całego kodu, które zostały dodane lub zmodyfikowane).  
+1.  Testowanie dostawcy przy użyciu [konsumenta](../../data/oledb/creating-an-ole-db-consumer.md) aplikacji napisanych z szablonami konsumentów OLE DB. Konsument testu powinien obejmować wszystkich obszarów funkcjonalnych w dostawcy (cały kod, który zostanie dodany lub zmodyfikowany).  
   
-2.  Testowanie dostawcy przy użyciu aplikacji konsumenta napisany za pomocą ADO. Większość deweloperów (szczególnie deweloperów języka Visual Basic i Microsoft C#) Użyj ADO lub ADO.NET dla aplikacji klienta. Konsument testu powinno obejmować wszystkich obszarów funkcjonalnych dostawcy. Na przykład aplikacja konsumenta ADO zobacz [ADO przykłady kodu w języku Microsoft Visual Basic](https://msdn.microsoft.com/en-us/library/ms807514.aspx).  
+2.  Testowanie dostawcy za pomocą aplikacji konsumentów napisane przy użyciu obiektów ADO. Większość deweloperów (szczególnie deweloperzy języka Visual Basic i Microsoft C#) na użytek ADO lub ADO.NET aplikacje komercyjne. Konsument testu powinien obejmować wszystkich obszarów funkcjonalnych w dostawcy. Na przykład aplikacja konsumenta ADO zobacz [przykłady kodu ADO w programie Microsoft Visual Basic](https://msdn.microsoft.com/library/ms807514.aspx).  
   
-3.  Uruchom testy zgodności OLE DB (w tym testy zgodności ADO), aby upewnić się, że Twój dostawca spełnia poziom 0 standardowe dla dostawcy OLE DB. (Aby uzyskać informacje o poziomie 0, wyszukaj "OLE DB poziom 0 testów zgodności" w [OLE DB przewodnik](http://go.microsoft.com/fwlink/p/?linkid=121548). Te testy i skojarzone dokumentacji są dołączone do programu Visual C++ w zestawie SDK dostępu do danych. Te testy również ułatwić zapewnienie, że dostawcy działa również w przypadku, gdy agregowana przez inne [dostawców usług](../../data/oledb/ole-db-resource-pooling-and-services.md) i są szczególnie przydatne w przypadku modyfikowanie lub dodawanie właściwości. Aby uzyskać więcej informacji dotyczących testów zgodności zobacz plik Readme dla zestawu SDK dostępu do danych, który znajduje się na jednym z dysków CD programu Visual Studio.  
+3.  Uruchom testów zgodności OLE DB (w tym testów zgodności z ADO), aby upewnić się, że Twój dostawca spełnia poziom 0 standardowych dla dostawcy OLE DB. (Objaśnienia dotyczące poziom 0, wyszukaj "OLE DB poziom 0 testów zgodności" w [OLE DB przewodnik](http://go.microsoft.com/fwlink/p/?linkid=121548). Te testy i dokumentacji skojarzone są dołączone do Visual C++ w programie Data Access SDK. Testy te ułatwiają również upewnić się, że Twój dostawca działa dobrze w przypadku, gdy zagregowane przez inne [dostawców usług](../../data/oledb/ole-db-resource-pooling-and-services.md) i są szczególnie przydatne, jeśli modyfikujesz lub dodać właściwości. Aby uzyskać więcej informacji na temat testów zgodności zobacz plik Readme dla Data Access SDK, który znajduje się na jednym z dysków CD z pakietu Visual Studio.  
   
 ## <a name="see-also"></a>Zobacz też  
  [Praca z szablonami dostawców OLE DB](../../data/oledb/working-with-ole-db-provider-templates.md)

@@ -18,48 +18,48 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 8ca0ef94ba6c60bd43e24672fe7db669a3930fd7
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: d2936a65023b32f994ed7260260476bc7b0457c2
+ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33112385"
+ms.lasthandoff: 07/30/2018
+ms.locfileid: "39336420"
 ---
 # <a name="updating-rowsets"></a>Aktualizowanie zestawów wierszy
-Operacja bardzo podstawowe bazy danych jest aktualizacji lub zapisać danych w magazynie danych. W OLE DB, mechanizmu aktualizacji jest prosty: aplikacja klienta ustawia wartości składników powiązana z danymi, a następnie zapisuje te wartości na wierszy; następnie konsumenta żądania, czy dostawca aktualizacji do magazynu danych.  
+Operacja wykraczającego poza podstawowe bazy danych jest aktualizacji lub zapisywać dane w magazynie danych. W OLE DB, jest prosty mechanizm aktualizacji: aplikacja odbiorcy ustawia wartości składników powiązane dane, a następnie zapisuje te wartości, do zestawu wierszy; następnie konsumenta żądań, czy dostawca zaktualizuj magazyn danych.  
   
- Konsumenci mogą wykonywać następujące rodzaje aktualizacje na wierszy danych: Ustawianie wartości kolumn w wierszu, wstawiania wiersza i usuwanie wiersza. Do wykonania tych operacji klasy szablonów OLE DB [CRowset](../../data/oledb/crowset-class.md) implementuje [IRowsetChange](https://msdn.microsoft.com/en-us/library/ms715790.aspx) interfejsu i zastępuje następujące metody interfejsu:  
+ Konsumenci mogą wykonywać następujące rodzaje aktualizacje na zestaw wierszy danych: Ustawianie wartości kolumn w wierszu, wstawienie wiersza i usuwanie wiersza. Wykonywać te operacje klasy szablonów OLE DB [CRowset](../../data/oledb/crowset-class.md) implementuje [IRowsetChange](https://msdn.microsoft.com/library/ms715790.aspx) interfejs i zastępuje następujące metody interfejsu:  
   
--   [SetData](../../data/oledb/crowset-setdata.md) wartości kolumny zmiany w wierszu zestawu wierszy; jest odpowiednikiem polecenia SQL UPDATE.  
+-   [SetData](../../data/oledb/crowset-setdata.md) zmiany kolumny wartości w wierszu zestawu wierszy; jest to równoważne polecenia aktualizacji programu SQL.  
   
--   [Wstaw](../../data/oledb/crowset-insert.md) wstawia wiersza do zestawu wierszy; jest odpowiednikiem polecenia SQL INSERT.  
+-   [Wstaw](../../data/oledb/crowset-insert.md) wstawia wiersz do zestawu wierszy; jest to równoważne polecenia SQL INSERT.  
   
--   [Usuń](../../data/oledb/crowset-delete.md) usuwa wiersze z zestawu wierszy; jest odpowiednikiem polecenia SQL DELETE.  
+-   [Usuń](../../data/oledb/crowset-delete.md) usuwa wiersze z wierszy; jest to równoważne polecenia SQL DELETE.  
   
 ## <a name="supporting-update-operations"></a>Obsługa operacje aktualizacji  
- Po utworzeniu konsumenta OLE DB Kreator konsumenta ATL należy może obsługiwać operacje aktualizacji, wybierając jedną lub więcej z trzech pól wyboru **zmiany**, **Wstaw**, i **usunąć**. W przypadku wybrania te kreatora modyfikuje kod odpowiednio do obsługi rodzaju zmiany, którą wybierzesz. Jednak jeśli nie używasz kreatora, należy określić następujące właściwości zestawu wierszy `VARIANT_TRUE` do obsługi aktualizacji:  
+ W przypadku utworzenia konsumenta OLE DB Kreator konsumenta ATL, może obsługiwać operacje aktualizacji, wybierając jedną lub więcej z trzech pól wyboru **zmiany**, **Wstaw**, i **Usuń**. Wybranie tych kreatora modyfikuje kod odpowiednio do obsługi typu zmian, które wybierzesz. Jednak jeśli nie używasz kreatora, należy ustawić następujące właściwości zestawu wierszy `VARIANT_TRUE` do obsługi aktualizacji:  
   
--   **DBPROPVAL_UP_CHANGE** umożliwia zmianę wartości danych w wierszu.  
+-   `DBPROPVAL_UP_CHANGE` Umożliwia zmianę wartości danych w wierszu.  
   
--   **DBPROPVAL_UP_INSERT** służy do wstawienia wiersza.  
+-   `DBPROPVAL_UP_INSERT` Umożliwia wstawianie wiersza.  
   
--   **DBPROPVAL_UP_DELETE** służy do usunięcia wiersza.  
+-   `DBPROPVAL_UP_DELETE` zezwala na usunięcia wiersza.  
   
  Ustaw właściwości w następujący sposób:  
   
-```  
+```cpp  
 CDBPropSet ps(DBPROPSET_ROWSET);  
 
 ps.AddProperty(DBPROP_IRowsetChange, true)  
 ps.AddProperty(DBPROP_UPDATABILITY, DBPROPVAL_UP_CHANGE | DBPROPVAL_UP_INSERT | DBPROPVAL_UP_DELETE)  
 ```  
   
- Zmiany, wstawiania lub usuwania mogą wystąpić błędy, jeśli co najmniej jedna kolumna nie jest zapisywalny. Zmodyfikuj mapy kursora, aby rozwiązać ten problem.  
+ Zmiana, insert nebo operacje usuwania może zakończyć się niepowodzeniem, jeśli co najmniej jedna kolumna nie jest zapisywalna. Zmodyfikuj mapy kursora, aby rozwiązać ten problem.  
   
 ## <a name="setting-data-in-rows"></a>Ustawienia danych wierszy  
- [CRowset::SetData](../../data/oledb/crowset-setdata.md) ustawia wartości danych w co najmniej jedną kolumnę bieżącego wiersza. Poniższy kod ustawia wartości powiązane z kolumnami "Name" i "Jednostki w magazynie" w tabeli Produkty elementy członkowskie danych, a następnie wywołuje `SetData` można zapisać tych wartości do 100 wierszy zestawu wierszy:  
+ [CRowset::SetData](../../data/oledb/crowset-setdata.md) ustawia wartości danych w co najmniej jedną kolumnę bieżącego wiersza. Poniższy kod ustawia wartości elementów członkowskich danych powiązane z kolumnami "Name" i "Jednostki w Stock" w tabeli Produkty, a następnie wywołuje `SetData` zapisać te wartości do 100 wierszy zestawu wierszy:  
   
-```  
+```cpp  
 // Instantiate a rowset based on the user record class  
 CTable<CAccessor<CProductAccessor>> product;  
 CSession session;  
@@ -79,19 +79,19 @@ HRESULT hr = product.SetData();
 ```  
   
 ## <a name="inserting-rows-into-rowsets"></a>Wstawianie wierszy do zestawów wierszy  
- [CRowset::Insert](../../data/oledb/crowset-insert.md) tworzy i inicjuje nowy wiersz przy użyciu danych z metody dostępu. **Wstaw** tworzy całkowicie nowy wiersz po wierszu bieżącego; należy określić, czy mają być zwiększane bieżący wiersz do następnego wiersza lub pozostaw bez zmian. Możesz to zrobić przez ustawienie *bGetRow* parametru:  
+ [CRowset::Insert](../../data/oledb/crowset-insert.md) tworzy i inicjuje nowego wiersza przy użyciu danych z metody dostępu. `Insert` Tworzy całkowicie nowy wiersz po wierszu bieżącego; należy określić, czy zwiększyć bieżący wiersz do następnego wiersza, lub pozostaw bez zmian. Możesz to zrobić, ustawiając *bGetRow* parametru:  
   
-```  
+```cpp  
 HRESULT Insert(int nAccessor = 0, bool bGetRow = false)  
 ```  
   
--   **FALSE** (wartość domyślna) określa, czy bieżący wiersz zwiększyć do następnego wiersza (w takim przypadku wskazuje wstawionego wiersza).  
+-   **FALSE** (wartość domyślna) określa, czy bieżący wiersz zwiększyć do następnego wiersza (w którym to przypadku wskazuje wstawionego wiersza).  
   
--   **wartość true,** Określa, czy bieżący wiersz pozostają, gdzie jest.  
+-   **wartość true,** Określa, że bieżący wiersz pozostaje, gdzie jest.  
   
- Poniższy kod ustawia wartości powiązane z kolumnami tabeli Produkty elementy członkowskie danych, a następnie wywołuje **Wstaw** Aby wstawić nowy wiersz z tych wartości po 100 wierszu zestawu wierszy. Zaleca się, że ustawisz wszystkie wartości w kolumnach to uniknąć Niezdefiniowany danych do nowego wiersza:  
+ Poniższy kod ustawia wartości elementów członkowskich danych powiązane z kolumnami tabeli Produkty, a następnie wywołuje `Insert` Aby wstawić nowy wiersz, w którym te wartości po 100 wierszy zestawu wierszy. Zaleca się, że ustawisz wszystkie wartości kolumny, aby uniknąć niezdefiniowane danych w nowym wierszu:  
   
-```  
+```cpp  
 // Instantiate a rowset based on the user record class  
 CTable<CAccessor<CProductAccessor>> product;  
 CSession session;  
@@ -138,14 +138,14 @@ m_dwQuantityPerUnitLength = 10;        // "Pack of 10" has 10 characters
 HRESULT hr = product.Insert();  
 ```  
   
- Aby uzyskać bardziej szczegółowy przykład zobacz [CRowset::Insert](../../data/oledb/crowset-insert.md).  
+ Aby uzyskać bardziej szczegółowym przykładem, zobacz [CRowset::Insert](../../data/oledb/crowset-insert.md).  
   
- Aby uzyskać więcej informacji na temat ustawiania stanu i długość elementy członkowskie danych, zobacz [elementy członkowskie dotyczących stanu pola w metodach dostępu Wizard-Generated](../../data/oledb/field-status-data-members-in-wizard-generated-accessors.md).  
+ Aby uzyskać więcej informacji na temat ustawiania stanu i długość składowych danych, zobacz [elementy członkowskie danych stanu pola w metodach dostępu Wizard-Generated](../../data/oledb/field-status-data-members-in-wizard-generated-accessors.md).  
   
 ## <a name="deleting-rows-from-rowsets"></a>Usuwanie wierszy z zestawów wierszy  
- [CRowset::Delete](../../data/oledb/crowset-delete.md) usuwa bieżący wiersz z zestawu wierszy. Poniższy kod wywołania **usunąć** usunąć 100 wierszy zestawu wierszy:  
+ [CRowset::Delete](../../data/oledb/crowset-delete.md) usuwa bieżący wiersz z zestawu wierszy. Poniższy kod wywoła `Delete` do usunięcia 100 wierszy zestawu wierszy:  
   
-```  
+```cpp  
 // Instantiate a rowset based on the user record class  
 CTable<CAccessor<CProductAccessor>> product;  
 CSession session;  
@@ -159,25 +159,25 @@ HRESULT hr = product.Delete();
 ```  
   
 ## <a name="immediate-and-deferred-updates"></a>Natychmiastowe i odroczone aktualizacje  
- O ile nie określono inaczej, wywołań `SetData`, **Wstaw**, i **usunąć** metody natychmiast zaktualizować źródła danych. Można jednak odroczenie aktualizacji, dzięki czemu klient przechowuje wszystkie zmiany w lokalnej pamięci podręcznej i przesyła je do magazynu danych podczas wywoływania jednej z następujących metod aktualizacji:  
+ O ile nie określono inaczej, wywołania `SetData`, `Insert`, i `Delete` metody natychmiast zaktualizować magazynu danych. Można jednak odroczenie aktualizacji, dzięki czemu odbiorcy przechowuje wszystkie zmiany w lokalnej pamięci podręcznej i przesyła je do magazynu danych podczas wywoływania jednej z następujących metod aktualizacji:  
   
--   [CRowset::Update](../../data/oledb/crowset-update.md) przenosi wszystkie oczekujące zmiany do bieżącego wiersza od czasu ostatniego pobrania lub **aktualizacji** wywoływać w nim.  
+-   [CRowset::Update](../../data/oledb/crowset-update.md) przesyła wszystkie oczekujące zmiany wprowadzone do bieżącego wiersza od czasu ostatniego pobrania lub `Update` wywołania.  
   
--   [CRowset::UpdateAll](../../data/oledb/crowset-updateall.md) przenosi wszystkie oczekujące zmiany do wszystkich wierszy od czasu ostatniego pobrania lub **aktualizacji** wywoływać w nim.  
+-   [CRowset::UpdateAll](../../data/oledb/crowset-updateall.md) przesyła wszystkie oczekujące zmiany wprowadzone do wszystkich wierszy od czasu ostatniego pobrania lub `Update` wywołania.  
   
- Tę aktualizację, należy pamiętać, jako metody aktualizacji, ma szczególne znaczenie wprowadzanie zmian na polecenia i nie należy mylić z poleceniem instrukcji SQL UPDATE (`SetData` jest odpowiednikiem polecenia instrukcji SQL UPDATE).  
+ Należy pamiętać tej aktualizacji, ponieważ używane przez metody aktualizacji, ma szczególne znaczenie wprowadzanie zmian na polecenia i nie należy mylić za pomocą polecenia instrukcji SQL UPDATE (`SetData` jest odpowiednikiem polecenia instrukcji SQL UPDATE).  
   
- Odroczone aktualizacje są przydatne, na przykład w sytuacji, szereg transakcji bankowych; Jeśli jedna transakcja została anulowana, ponieważ nie wysyłaj serii zmiany dopiero po dba ostatnią można cofnąć zmiany. Ponadto dostawca może pakietu zmiany w jednej sieci wywołanie, które jest bardziej wydajny.  
+ Odroczone aktualizacje są przydatne, na przykład w sytuacjach, takich jak serie transakcji bankowych; Jeśli jedna transakcja została anulowana, możesz cofnąć zmiany, ponieważ nie wysyłaj serię zmian, aż po ostatnim jest zatwierdzona. Ponadto dostawca może pakietu zmiany do wywołania jednej sieci, co jest bardziej wydajne.  
   
- Aby obsługiwać odroczone aktualizacje, musisz ustawić **DBPROP_IRowsetChange** właściwość oprócz właściwości opisane w "Obsługujące operacje aktualizacji":  
+ Obsługują odroczone aktualizacje, należy ustawić `DBPROP_IRowsetChange` właściwość oprócz właściwości opisane w "Obsługujące operacje aktualizacji":  
   
-```  
+```cpp  
 pPropSet->AddProperty(DBPROP_IRowsetUpdate, true);  
 ```  
   
- Podczas wywoływania **aktualizacji** lub `UpdateAll`, metody przetransferować zmiany wprowadzone w lokalnej pamięci podręcznej w magazynie danych, a następnie zniszczyć lokalnej pamięci podręcznej. Ponieważ aktualizacji przesyła zmiany tylko dla bieżącego wiersza, należy zachować informacje o którym wiersz do aktualizacji i kiedy należy zaktualizować je aplikacji. Poniższy przykład pokazuje, jak zaktualizować dwóch kolejnych wierszy:  
+ Gdy wywołujesz `Update` lub `UpdateAll`, metody przetransferować zmiany wprowadzone z lokalnej pamięci podręcznej w magazynie danych, a następnie zniszczyć lokalnej pamięci podręcznej. Ponieważ aktualizacja przesyła zmiany tylko w przypadku bieżącego wiersza, należy zachować informacje o wiersz do zaktualizowania oraz kiedy należy go zaktualizować aplikację. Poniższy przykład pokazuje, jak zaktualizować dwóch następujących po sobie wierszy:  
   
-```  
+```cpp  
 // Instantiate a rowset based on the user record class  
 CTable<CAccessor<CProductAccessor>> product;  
 CSession session;  
@@ -207,13 +207,13 @@ HRESULT hr = product.SetData();  // No changes made to row 101 yet
 product.Update();                 // Update row 101 now  
 ```  
   
- Aby upewnić się, że oczekujące zmiany są przesyłane, należy wywołać **aktualizacji** przed przejściem do kolejnego wiersza. Jednak gdy jest to niewygodny lub nieskuteczne, na przykład, gdy aplikacja musi zaktualizować setki wierszy, można `UpdateAll` jednocześnie zaktualizować wszystkie wiersze.  
+ Aby upewnić się, że oczekujące zmiany są przesyłane, należy wywołać `Update` przed przejściem do kolejnego wiersza. Jednak gdy jest to uciążliwe lub nieskuteczne, na przykład, gdy Twoja aplikacja musi zaktualizować setki wierszy, służy `UpdateAll` można jednocześnie uaktualnić wszystkie wiersze.  
   
- Na przykład jeśli pierwszy **aktualizacji** wywołania brakowało kodu powyżej, wiersza 100 pozostanie bez zmian, gdy wiersz 101 zostałaby zmieniona. Od tego momentu aplikacja musi wywołać `UpdateAll` lub powrót do wiersza 100 i wywołanie **aktualizacji** dla danego wiersza do zaktualizowania.  
+ Na przykład jeśli pierwszy `Update` wywołań brakuje powyższy kod, wiersza 100 pozostaje bez zmian, gdy zostaną zmienione wiersz 101. Od tego momentu aplikacja musi wywoływać `UpdateAll` lub przenieść z powrotem do wiersza 100 i wywołanie `Update` dla tego wiersza do zaktualizowania.  
   
- Na koniec głównym powodem odroczenie zmiany ma być można cofnąć je. Wywoływanie [CRowset::Undo](../../data/oledb/crowset-undo.md) przywraca stan zmiany w lokalnej pamięci podręcznej do stanu magazynu danych przed wszystkie oczekujące zmiany zostały wprowadzone. Należy zauważyć, że **Cofnij** nie Przywróć kopię stan lokalnej pamięci podręcznej w jednym kroku (stan przed tylko najnowsze zmiany); zamiast tego czyści lokalnej pamięci podręcznej dla tego wiersza. Ponadto **Cofnij** dotyczy tylko bieżącego wiersza.  
+ Na koniec głównym celem Odrocz zmian jest aby można było cofnąć ich. Wywoływanie [CRowset::Undo](../../data/oledb/crowset-undo.md) wycofanie stan zmiany w lokalnej pamięci podręcznej do stanu magazynu danych przed wszelkie oczekujące zmiany zostały wprowadzone. Ważne jest, aby pamiętać, że `Undo` nieoperacyjnym kopii stanu lokalnej pamięci podręcznej w jednym kroku (stan przed ostatnią zmianę); zamiast tego powoduje wyczyszczenie lokalnej pamięci podręcznej dla tego wiersza. Ponadto `Undo` dotyczy tylko bieżącego wiersza.  
   
 ## <a name="see-also"></a>Zobacz też  
  [Praca z szablonami konsumentów OLE DB](../../data/oledb/working-with-ole-db-consumer-templates.md)   
- [Crowset — klasa](../../data/oledb/crowset-class.md)   
- [IRowsetChange](https://msdn.microsoft.com/en-us/library/ms715790.aspx)
+ [Klasa CRowset](../../data/oledb/crowset-class.md)   
+ [IRowsetChange](https://msdn.microsoft.com/library/ms715790.aspx)

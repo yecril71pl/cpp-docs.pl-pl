@@ -29,58 +29,58 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: af3a3eb08ce5749c0cfe5ca2d1f59213826ff7ce
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 5a8844da684d8afa3fe4dd13d8323d2bb3138d6c
+ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33095199"
+ms.lasthandoff: 07/30/2018
+ms.locfileid: "39338002"
 ---
 # <a name="recordset-adding-updating-and-deleting-records-odbc"></a>Zestaw rekordów: dodawanie, aktualizowanie i usuwanie rekordów (ODBC)
-Ten temat dotyczy klasach MFC ODBC.  
+Ten temat dotyczy klas MFC ODBC.  
   
 > [!NOTE]
->  Rekordy można teraz dodawać zbiorczo bardziej efektywnie. Aby uzyskać więcej informacji, zobacz [zestaw rekordów: dodawanie rekordów zbiorczego (ODBC)](../../data/odbc/recordset-adding-records-in-bulk-odbc.md).  
+>  Możesz teraz dodać rekordy, w trybie zbiorczym wydajniej. Aby uzyskać więcej informacji, zobacz [zestaw rekordów: dodawanie rekordów w zbiorcze (ODBC)](../../data/odbc/recordset-adding-records-in-bulk-odbc.md).  
   
 > [!NOTE]
->  Ten temat dotyczy obiektów pochodzących od `CRecordset` w wiersz, który zbiorczego pobierania nie została zaimplementowana. Jeśli korzystasz z zbiorcze pobieranie z wiersza, zobacz [zestaw rekordów: pobieranie rekordów zbiorczego (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md).  
+>  Ten temat dotyczy obiektów pochodzących od `CRecordset` w wierszu zbiorczego, które podczas pobierania nie została zaimplementowana. Jeśli używasz zbiorcze pobieranie z wiersza, zobacz [zestaw rekordów: pobieranie rekordów w zbiorcze (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md).  
   
- Można aktualizować migawki i zestawów dynamicznych umożliwiają dodawanie, edytowanie (aktualizacji) i usuwania rekordów. W tym temacie opisano:  
+ Migawki można aktualizować zestawów dynamicznych zezwala na dodawanie, edytowanie (aktualizacja) i usuwania rekordów. W tym temacie opisano:  
   
--   [Jak ustalić, czy zestawu rekordów nadaje się do](#_core_determining_whether_your_recordset_is_updatable).  
+-   [Jak ustalić, czy rekordów nadaje się do](#_core_determining_whether_your_recordset_is_updatable).  
   
 -   [Jak dodać nowy rekord](#_core_adding_a_record_to_a_recordset).  
   
--   [Edytowanie istniejącego rekordu](#_core_editing_a_record_in_a_recordset).  
+-   [Jak edytować istniejący rekord](#_core_editing_a_record_in_a_recordset).  
   
 -   [Jak usunąć rekord](#_core_deleting_a_record_from_a_recordset).  
   
- Aby uzyskać więcej informacji na temat sposobu aktualizacji są wykonywane się, a aktualizacje są wyświetlane dla innych użytkowników, zobacz [zestaw rekordów: jak zestawy rekordów aktualizacji rekordów (ODBC)](../../data/odbc/recordset-how-recordsets-update-records-odbc.md). Zwykle po dodać, edytować lub usunąć rekord zestawu rekordów zmienia natychmiast źródła danych. Można zamiast tego partii grup odpowiednich aktualizacji w transakcji. Jeśli transakcja jest w toku, aktualizacja nie ostatecznie do momentu zatwierdzić transakcji. Dzięki temu można przejąć ani wycofać zmian. Informacje o transakcjach, zobacz [transakcja (ODBC)](../../data/odbc/transaction-odbc.md).  
+ Aby uzyskać więcej informacji na temat sposobu aktualizacji są przenoszone poza, a aktualizacje są wyświetlane na innych użytkowników, zobacz [zestaw rekordów: jak zestawy rekordów uaktualniają rekordy (ODBC)](../../data/odbc/recordset-how-recordsets-update-records-odbc.md). Normalnie Jeśli dodawanie, edytowanie lub usuwanie rekordu zestawu rekordów ulega zmianie źródła danych natychmiast. Można zamiast tego partii grupy powiązane aktualizacje na transakcji. Jeśli transakcja jest w toku, aktualizacja nie ostatecznie do czasu zatwierdzania transakcji. Dzięki temu można przejąć lub wycofać zmiany. Aby uzyskać informacje dotyczące transakcji, zobacz [transakcja (ODBC)](../../data/odbc/transaction-odbc.md).  
   
- W poniższej tabeli przedstawiono opcje dostępne dla zestawów rekordów o charakterystyce innej aktualizacji.  
+ W poniższej tabeli przedstawiono opcje dostępne dla zestawów rekordów przy użyciu właściwości inną aktualizację.  
   
 ### <a name="recordset-readupdate-options"></a>Opcje Read/Update zestawu rekordów  
   
-|Typ|Odczyt|Edycja rekordów|Usuwanie rekordu|Dodaj nowy (Dołącz)|  
+|Typ|Odczyt|Edytowanie rekordu|Usuwanie rekordu|Dodaj nowy (Dołącz)|  
 |----------|----------|-----------------|-------------------|------------------------|  
 |tylko do odczytu|T|N|N|N|  
-|Tylko Dołącz|T|N|N|T|  
-|Pełni nadaje się do aktualizacji|T|T|T|T|  
+|Tylko do dołączania|T|N|N|T|  
+|W pełni nadaje się do aktualizacji|T|T|T|T|  
   
-##  <a name="_core_determining_whether_your_recordset_is_updatable"></a> Określanie rekordów Your czy to Updateable  
- Obiekty zestawów rekordów jest można aktualizować, jeśli źródło danych jest można aktualizować i otworzyć zestawu rekordów, jak można aktualizować. Czy można ją aktualizować zależy również od instrukcji SQL, można użyć funkcji sterownika ODBC i określa, czy Biblioteka kursorów ODBC znajduje się w pamięci. Nie można zaktualizować tylko do odczytu źródła danych lub zestawu rekordów.  
+##  <a name="_core_determining_whether_your_recordset_is_updatable"></a> Określanie czy Twój zestaw rekordów jest Updateable  
+ Obiekt zestawu rekordów jest można aktualizować, jeśli źródło danych jest można aktualizować i otworzyć zestawu rekordów, co można aktualizować. Jego updateability zależy również od instrukcji SQL, można użyć możliwości sterownika ODBC i tego, czy Biblioteka kursorów ODBC znajduje się w pamięci. Nie można zaktualizować tylko do odczytu rekordów lub źródła danych.  
   
-#### <a name="to-determine-whether-your-recordset-is-updatable"></a>Aby określić, czy nadaje zestawu rekordów  
+#### <a name="to-determine-whether-your-recordset-is-updatable"></a>Aby ustalić, czy rekordów nadaje się do  
   
-1.  Wywołanie obiektu zestawu rekordów [CanUpdate](../../mfc/reference/crecordset-class.md#canupdate) funkcję elementu członkowskiego.  
+1.  Wywołanie obiektu zestawu rekordów [CanUpdate](../../mfc/reference/crecordset-class.md#canupdate) funkcja elementu członkowskiego.  
   
-     `CanUpdate` Zwraca wartość niezerową, jeśli można aktualizować zestawu rekordów.  
+     `CanUpdate` Zwraca wartość różną od zera, jeśli zestaw rekordów jest można aktualizować.  
   
- Zestawy rekordów są domyślnie pełni aktualizowalne (można wykonywać `AddNew`, **Edytuj**, i **usunąć** operacji). Można używać również [TylkoDołącz](../../mfc/reference/crecordset-class.md#open) opcję, aby otworzyć można aktualizować zestawów rekordów. Zestaw rekordów otworzyć w ten sposób umożliwia dodawanie nowych rekordów z `AddNew`. Nie można edytować lub usunąć istniejące rekordy. Można sprawdzić, czy zestaw rekordów jest otwarty tylko w przypadku dołączania wywołując [CanAppend](../../mfc/reference/crecordset-class.md#canappend) funkcję elementu członkowskiego. `CanAppend` Zwraca wartość niezerową, jeśli zestaw rekordów jest całkowicie można aktualizować lub Otwórz tylko do dołączenia.  
+ Domyślnie zestawy rekordów są w pełni można aktualizować (można wykonywać `AddNew`, `Edit`, i `Delete` operacji). Ale można również użyć [TylkoDołącz](../../mfc/reference/crecordset-class.md#open) opcję, aby otworzyć można aktualizować zestawy rekordów. Zestaw rekordów, otworzyć w ten sposób umożliwia dodawanie nowych rekordów z `AddNew`. Nie można edytować ani usunąć istniejące rekordy. Możesz sprawdzić, czy zestaw rekordów jest otwarty tylko w przypadku dołączania, wywołując [CanAppend](../../mfc/reference/crecordset-class.md#canappend) funkcja elementu członkowskiego. `CanAppend` Zwraca wartość różną od zera, jeśli zestaw rekordów jest w pełni można aktualizować lub otwarty tylko do dołączania.  
   
- Poniższy kod przedstawia, jak można użyć `CanUpdate` dla obiekt zestaw rekordów o nazwie `rsStudentSet`:  
+ Poniższy kod pokazuje, jak można wykorzystać `CanUpdate` dla obiektu zestaw rekordów o nazwie `rsStudentSet`:  
   
-```  
+```cpp  
 if( !rsStudentSet.Open( ) )  
     return FALSE;  
 if( !rsStudentSet.CanUpdate( ) )  
@@ -91,32 +91,32 @@ if( !rsStudentSet.CanUpdate( ) )
 ```  
   
 > [!CAUTION]
->  Podczas przygotowania do aktualizacji zestawu rekordów przez wywołanie metody **aktualizacji**, zwrócić uwagę, że zestawu rekordów zawiera wszystkie kolumny tworzące klucz podstawowy tabeli (lub wszystkie kolumny żadnych unikatowy indeks w tej tabeli). W niektórych przypadkach framework może być zidentyfikować rekordy w tabeli, aby zaktualizować tylko kolumny wybrana w twoim zestawie rekordów. Nie wszystkie kolumny niezbędne wiele rekordów mogły zostać zaktualizowane w tabeli, prawdopodobnie uszkodzenia integralności referencyjnej w tabeli. W takim przypadku platformę zgłasza wyjątki podczas wywoływania **aktualizacji**.  
+>  Po przygotowaniu zaktualizuj zestaw rekordów, wywołując `Update`, zajmie się, że rekordów zawiera wszystkich kolumn tworzących klucza podstawowego tabeli (lub wszystkie kolumny wszelkie unikatowego indeksu dla tabeli). W niektórych przypadkach ramach służy tylko do kolumn, które zostały wybrane w twoim zestawie rekordów do zidentyfikować rekordy w tabeli, aby zaktualizować. Nie wszystkie niezbędne kolumny wielu rekordów mogły zostać zaktualizowane w tabeli, a w konsekwencji uszkodzenia integralności referencyjnej w tabeli. W tym przypadku ramach zgłasza wyjątki podczas wywoływania `Update`.  
   
 ##  <a name="_core_adding_a_record_to_a_recordset"></a> Dodawanie rekordu do zestawu rekordów  
- Można dodać nowych rekordów do zestawu rekordów, jeśli jego [CanAppend](../../mfc/reference/crecordset-class.md#canappend) — członek, funkcja zwraca wartość różną od zera.  
+ Można dodać nowych rekordów do zestawu rekordów, jeśli jego [CanAppend](../../mfc/reference/crecordset-class.md#canappend) funkcja elementu członkowskiego zwraca wartość różną od zera.  
   
-#### <a name="to-add-a-new-record-to-a-recordset"></a>Aby dodać nowego rekordu do zestawu rekordów  
+#### <a name="to-add-a-new-record-to-a-recordset"></a>Aby dodać nowy rekord do zestawu rekordów  
   
 1.  Upewnij się, że zestaw rekordów jest appendable.  
   
-2.  Wywołanie obiektu zestawu rekordów [AddNew](../../mfc/reference/crecordset-class.md#addnew) funkcję elementu członkowskiego.  
+2.  Wywołanie obiektu zestawu rekordów [działają funkcje AddNew](../../mfc/reference/crecordset-class.md#addnew) funkcja elementu członkowskiego.  
   
-     `AddNew` przygotowuje rekordów do działania jako bufor edycji. Wszystkie elementy członkowskie danych pola są specjalne wartość Null, jest oznaczona jako bez zmian, tylko zmienione (brudne) wartości są zapisywane do źródła danych podczas wywoływania [aktualizacji](../../mfc/reference/crecordset-class.md#update).  
+     `AddNew` przygotowuje rekordów pełnić rolę buforu edycji. Wszystkie elementy członkowskie danych pola są ustawiane na specjalna wartość Null i oznaczona jako niezmieniony, więc tylko zmienione (zakłóconych) wartości są zapisywane do źródła danych, gdy wywołujesz [aktualizacji](../../mfc/reference/crecordset-class.md#update).  
   
-3.  Ustaw wartości elementy członkowskie danych pola w nowym rekordzie.  
+3.  Ustaw wartości elementów członkowskich danych pola nowego rekordu.  
   
-     Przypisanie wartości do elementy członkowskie danych pola. Te, które nie należy przypisywać nie są zapisywane w źródle danych.  
+     Przypisz wartości do pól składowych danych. Te, które nie należy przypisywać nie są zapisywane do źródła danych.  
   
-4.  Wywołanie obiektu zestawu rekordów **aktualizacji** funkcję elementu członkowskiego.  
+4.  Wywołanie obiektu zestawu rekordów `Update` funkcja elementu członkowskiego.  
   
-     **Aktualizacja** wykonuje dodanie przez Zapisywanie nowego rekordu w źródle danych. Dla informacji o się stanie, jeśli nie zostanie wywołać **aktualizacji**, zobacz [zestaw rekordów: jak zestawy rekordów aktualizacji rekordów (ODBC)](../../data/odbc/recordset-how-recordsets-update-records-odbc.md).  
+     `Update` Wykonuje dodawanie, pisząc nowy rekord w źródle danych. Dla informacji na temat się dzieje w przypadku awarii do wywołania `Update`, zobacz [zestaw rekordów: jak zestawy rekordów uaktualniają rekordy (ODBC)](../../data/odbc/recordset-how-recordsets-update-records-odbc.md).  
   
- Aby uzyskać informacje dotyczące sposobu dodawania rejestruje działania i kiedy dodano rekordy są widoczne w zestawu rekordów, zobacz [zestaw rekordów: jak AddNew, Edit i usunąć pracy (ODBC)](../../data/odbc/recordset-how-addnew-edit-and-delete-work-odbc.md).  
+ Aby uzyskać informacje dotyczące sposobu dodawania rejestruje działania i kiedy dodano rekordy są widoczne w twoim zestawie rekordów, zobacz [zestaw rekordów: jak działają funkcje AddNew, Edit i Usuń pracy (ODBC)](../../data/odbc/recordset-how-addnew-edit-and-delete-work-odbc.md).  
   
- Poniższy przykład przedstawia sposób dodawania nowego rekordu:  
+ Poniższy przykład pokazuje, jak dodać nowy rekord:  
   
-```  
+```cpp  
 if( !rsStudent.Open( ) )  
     return FALSE;  
 if( !rsStudent.CanAppend( ) )  
@@ -133,10 +133,10 @@ if( !rsStudent.Update( ) )
 ```  
   
 > [!TIP]
->  Aby anulować `AddNew` lub **Edytuj** wywołać, po prostu wywoływania innego `AddNew` lub **Edytuj** lub zadzwoń **Przenieś** z **AFX_MOVE_REFRESH**  parametru. Elementy członkowskie danych zostaną przywrócone poprzednie wartości i są w dalszym ciągu w **Edytuj** lub **Dodaj** tryb.  
+>  Aby anulować `AddNew` lub `Edit` wywołanie, po prostu wywoływania innej `AddNew` lub `Edit` lub zadzwoń `Move` z *AFX_MOVE_REFRESH* parametru. Elementy członkowskie danych zostaną przywrócone poprzednie wartości i są w dalszym ciągu w `Edit` lub `Add` trybu.  
   
 ##  <a name="_core_editing_a_record_in_a_recordset"></a> Edytowanie rekordu w zestawie rekordów  
- Można edytować istniejące rekordy w zestawie rekordów [CanUpdate](../../mfc/reference/crecordset-class.md#canupdate) — członek, funkcja zwraca wartość różną od zera.  
+ Jeśli możesz edytować istniejące rekordy w zestawie rekordów [CanUpdate](../../mfc/reference/crecordset-class.md#canupdate) funkcja elementu członkowskiego zwraca wartość różną od zera.  
   
 #### <a name="to-edit-an-existing-record-in-a-recordset"></a>Aby edytować istniejący rekord w zestawie rekordów  
   
@@ -144,23 +144,23 @@ if( !rsStudent.Update( ) )
   
 2.  Przewiń do rekordu, który chcesz zaktualizować.  
   
-3.  Wywołanie obiektu zestawu rekordów [Edytuj](../../mfc/reference/crecordset-class.md#edit) funkcję elementu członkowskiego.  
+3.  Wywołanie obiektu zestawu rekordów [Edytuj](../../mfc/reference/crecordset-class.md#edit) funkcja elementu członkowskiego.  
   
-     **Edytuj** przygotowuje rekordów do działania jako bufor edycji. Wszystkie elementy członkowskie danych pola są oznaczone tak, aby zestaw rekordów stwierdzić później, czy zostały zmienione. Nowe wartości dla pola zmienione elementy członkowskie danych są zapisywane do źródła danych podczas wywoływania [aktualizacji](../../mfc/reference/crecordset-class.md#update).  
+     `Edit` przygotowuje rekordów pełnić rolę buforu edycji. Wszystkie elementy członkowskie danych pola są oznaczone i zestawu rekordów stwierdzić później, czy zostały zmienione. Nowe wartości dla elementów członkowskich danych zmienionego pola są zapisywane do źródła danych, gdy wywołujesz [aktualizacji](../../mfc/reference/crecordset-class.md#update).  
   
-4.  Ustaw wartości elementy członkowskie danych pola w nowym rekordzie.  
+4.  Ustaw wartości elementów członkowskich danych pola nowego rekordu.  
   
-     Przypisanie wartości do elementy członkowskie danych pola. Te wartości nie należy przypisywać pozostają niezmienione.  
+     Przypisz wartości do pól składowych danych. Te wartości nie należy przypisywać pozostaną bez zmian.  
   
-5.  Wywołanie obiektu zestawu rekordów **aktualizacji** funkcję elementu członkowskiego.  
+5.  Wywołanie obiektu zestawu rekordów `Update` funkcja elementu członkowskiego.  
   
-     **Aktualizacja** zakończeniu edycji przez zapisywanie zmienionych rekordów w źródle danych. Dla informacji o się stanie, jeśli nie zostanie wywołać **aktualizacji**, zobacz [zestaw rekordów: jak zestawy rekordów aktualizacji rekordów (ODBC)](../../data/odbc/recordset-how-recordsets-update-records-odbc.md).  
+     `Update` kończy edycji, pisząc zmienionego rekordu w źródle danych. Dla informacji na temat się dzieje w przypadku awarii do wywołania `Update`, zobacz [zestaw rekordów: jak zestawy rekordów uaktualniają rekordy (ODBC)](../../data/odbc/recordset-how-recordsets-update-records-odbc.md).  
   
- Po przeprowadzeniu edycji rekordu, edytowanego rekordu pozostaje bieżącego rekordu.  
+ Po zakończeniu edycji rekordu, edytowany rekord pozostaje bieżącego rekordu.  
   
- W poniższym przykładzie przedstawiono **Edytuj** operacji. Zakłada się, że użytkownik został przeniesiony do rekordu, które użytkownik chce edytować.  
+ W poniższym przykładzie przedstawiono `Edit` operacji. Założono, że użytkownik został przeniesiony do rekordu, które użytkownik chce edytować.  
   
-```  
+```cpp  
 rsStudent.Edit( );  
 rsStudent.m_strStreet = strNewStreet;  
 rsStudent.m_strCity = strNewCity;  
@@ -174,10 +174,10 @@ if( !rsStudent.Update( ) )
 ```  
   
 > [!TIP]
->  Aby anulować `AddNew` lub **Edytuj** wywołać, po prostu wywoływania innego `AddNew` lub **Edytuj** lub zadzwoń **Przenieś** z **AFX_MOVE_REFRESH**  parametru. Elementy członkowskie danych zostaną przywrócone poprzednie wartości i są w dalszym ciągu w **Edytuj** lub **Dodaj** tryb.  
+>  Aby anulować `AddNew` lub `Edit` wywołanie, po prostu wywoływania innej `AddNew` lub `Edit` lub zadzwoń `Move` z *AFX_MOVE_REFRESH* parametru. Elementy członkowskie danych zostaną przywrócone poprzednie wartości i są w dalszym ciągu w `Edit` lub `Add` trybu.  
   
-##  <a name="_core_deleting_a_record_from_a_recordset"></a> Usunięcie rekordu z zestawu rekordów  
- Rekordy można usunąć, jeśli w zestawie rekordów [CanUpdate](../../mfc/reference/crecordset-class.md#canupdate) — członek, funkcja zwraca wartość różną od zera.  
+##  <a name="_core_deleting_a_record_from_a_recordset"></a> Usuwanie rekordu z zestawu rekordów  
+ Rekordy można usunąć, jeśli w zestawie rekordów [CanUpdate](../../mfc/reference/crecordset-class.md#canupdate) funkcja elementu członkowskiego zwraca wartość różną od zera.  
   
 #### <a name="to-delete-a-record"></a>Aby usunąć rekord  
   
@@ -185,25 +185,25 @@ if( !rsStudent.Update( ) )
   
 2.  Przewiń do rekordu, który chcesz zaktualizować.  
   
-3.  Wywołanie obiektu zestawu rekordów [usunąć](../../mfc/reference/crecordset-class.md#delete) funkcję elementu członkowskiego.  
+3.  Wywołanie obiektu zestawu rekordów [Usuń](../../mfc/reference/crecordset-class.md#delete) funkcja elementu członkowskiego.  
   
-     **Usuń** natychmiast oznacza rekord jako usunięte, zarówno w zestawie rekordów, jak i w źródle danych.  
+     `Delete` natychmiast oznacza rekord jako usunięty, zarówno w zestawie danych, jak i w źródle danych.  
   
-     W odróżnieniu od `AddNew` i **Edytuj**, **usunąć** nie ma odpowiedniego **aktualizacji** wywołania.  
+     W odróżnieniu od `AddNew` i `Edit`, `Delete` nie ma odpowiedniego `Update` wywołania.  
   
 4.  Przewiń do innego rekordu.  
   
     > [!NOTE]
-    >  Podczas przenoszenia za pomocą zestawu rekordów, usuniętych rekordów nie mogły zostać pominięte. Aby uzyskać więcej informacji, zobacz [IsDeleted](../../mfc/reference/crecordset-class.md#isdeleted) funkcję elementu członkowskiego.  
+    >  Podczas przechodzenia przez zestaw rekordów, usuniętych rekordów nie mogły zostać pominięte. Aby uzyskać więcej informacji, zobacz [IsDeleted](../../mfc/reference/crecordset-class.md#isdeleted) funkcja elementu członkowskiego.  
   
- W poniższym przykładzie przedstawiono **usunąć** operacji. Przyjęto założenie, że użytkownik został przeniesiony rekordu, który chcesz usunąć. Po **usunąć** jest wywoływana, ważne jest, aby przenieść do nowego rekordu.  
+ W poniższym przykładzie przedstawiono `Delete` operacji. Przyjęto założenie, że użytkownik została przeniesiona do rekordu, który użytkownik chce usunąć. Po `Delete` jest wywoływana, ważne jest, aby przejść do nowego rekordu.  
   
 ```  
 rsStudent.Delete( );  
 rsStudent.MoveNext( );  
 ```  
   
- Aby uzyskać więcej informacji o skutkach `AddNew`, **Edytuj**, i **usunąć** funkcji członkowskiej, zobacz [zestaw rekordów: jak zestawy rekordów aktualizacji rekordów (ODBC)](../../data/odbc/recordset-how-recordsets-update-records-odbc.md).  
+ Aby uzyskać więcej informacji o skutkach `AddNew`, `Edit`, i `Delete` funkcji elementów członkowskich, zobacz [zestaw rekordów: jak zestawy rekordów uaktualniają rekordy (ODBC)](../../data/odbc/recordset-how-recordsets-update-records-odbc.md).  
   
 ## <a name="see-also"></a>Zobacz też  
  [Zestaw rekordów (ODBC)](../../data/odbc/recordset-odbc.md)   

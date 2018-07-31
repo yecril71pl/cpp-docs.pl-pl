@@ -19,31 +19,31 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: e5b49daa44fc8c88316134915945ad7ee01bb81a
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: fe62aff7e8828dcb17c04fc3e05eedc9eefe9d16
+ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33112241"
+ms.lasthandoff: 07/30/2018
+ms.locfileid: "39337284"
 ---
 # <a name="using-stored-procedures"></a>korzystanie z procedur składowanych
-Procedura składowana jest obiektem pliku wykonywalnego, przechowywane w bazie danych. Wywołanie procedury składowanej jest podobny do wywoływania polecenia SQL. Korzystanie z procedur składowanych w źródle danych (zamiast wykonywania lub przygotowywanie do instrukcji w aplikacji klienckiej) zapewniają wiele korzyści, w tym większą wydajność, obciążenie sieci obniżona, ulepszona spójność i dokładność.  
+Procedura składowana jest obiekt pliku wykonywalnego, przechowywane w bazie danych. Wywoływanie procedury składowanej jest podobny do wywoływania za pomocą polecenia SQL. Korzystanie z procedur składowanych w źródle danych (zamiast wykonywania lub Trwa przygotowywanie do instrukcji w aplikacji klienckiej) zapewnia kilka korzyści, w tym wyższej wydajności, obciążenie sieci mniejsze i ulepszona spójność i dokładność.  
   
- Procedura składowana może mieć dowolną liczbę (w tym zero) wejściowy lub parametry wyjściowe i można przekazać wartości zwracanej. Można albo wartości parametrów kodu twardych określonych danych wartości lub użyć znacznika parametr (znak zapytania "?").  
-  
-> [!NOTE]
->  Procedury składowane utworzone za pomocą języka Visual C++ musi być kompilowana przy użyciu programu SQL Server CLR **/CLR: Safe** — opcja kompilatora.  
-  
- Dostawca OLE DB dla programu SQL Server (SQLOLEDB) obsługuje następujące mechanizmy, które przechowywane Użyj procedur, aby zwrócić dane:  
-  
--   Każdy instrukcji SELECT w procedurze generuje zestawu wyników.  
-  
--   Procedura może zwrócić danych za pomocą parametrów wyjściowych.  
-  
--   Procedura może mieć całkowitą kod powrotu.  
+ Procedura składowana może mieć dowolną liczbę (w tym zero) danych wejściowych lub wyjściowych, parametrów i przekazać wartość zwracaną. Możesz albo wartości parametru twardych kodu, jak określone dane wartości lub użyć znaczników parametru (znak zapytania "?").  
   
 > [!NOTE]
->  Nie można użyć procedur składowanych z dostawcy OLE DB dla Jet ponieważ ten dostawca nie obsługuje procedur składowanych; dozwolone są tylko zmienne w ciągi zapytań.  
+>  Procedury przechowywane utworzone za pomocą języka Visual C++ muszą być skompilowane przy użyciu programu SQL Server CLR `/clr:safe` — opcja kompilatora.  
+  
+ Dostawca OLE DB dla programu SQL Server (SQLOLEDB) obsługuje następujących mechanizmów, które przechowywane Użyj procedur, aby zwrócić dane:  
+  
+-   Co instrukcja SELECT w procedurze generuje zestaw wyników.  
+  
+-   Procedura może zwrócić danych za pośrednictwem parametrów wyjściowych.  
+  
+-   Procedura może mieć kod powrotny liczby całkowitej.  
+  
+> [!NOTE]
+>  Nie można użyć procedur składowanych z dostawcy OLE DB dla aparatu Jet ponieważ ten dostawca nie obsługuje procedury składowane; dozwolone są tylko zmienne w ciągach zapytań.  
   
 ## <a name="see-also"></a>Zobacz też  
  [Praca z szablonami konsumentów OLE DB](../../data/oledb/working-with-ole-db-consumer-templates.md)

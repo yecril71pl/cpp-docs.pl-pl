@@ -21,72 +21,72 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 4aa6de58e7e2c530a7a353281ba5af747f48cd4e
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 6d3b1988f9448e9b63fa0263e27d6db6532fdc68
+ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33092076"
+ms.lasthandoff: 07/30/2018
+ms.locfileid: "39337271"
 ---
 # <a name="recordset-obtaining-sums-and-other-aggregate-results-odbc"></a>Zestaw rekordów: uzyskiwanie sum i innych wyników agregacji (ODBC)
-Ten temat dotyczy klasach MFC ODBC.  
+Ten temat dotyczy klas MFC ODBC.  
   
- W tym temacie wyjaśniono sposób uzyskiwania wyników agregacji, użycie następujących [SQL](../../data/odbc/sql.md) słowa kluczowe:  
+ W tym temacie wyjaśniono sposób uzyskiwania agregowanie wyników za pomocą następujących [SQL](../../data/odbc/sql.md) słowa kluczowe:  
   
--   **Suma** oblicza sumę wartości w kolumnie z dane typu liczbowego.  
+-   **Suma** oblicza sumę wartości w kolumnie z typem danych liczbowych.  
   
--   **MIN** wyodrębnia najmniejszą wartość w kolumnie z dane typu liczbowego.  
+-   **MIN** wyodrębnia najmniejszą wartość w kolumnie z typem danych liczbowych.  
   
--   **Maksymalna liczba** wyodrębnia największą wartość w kolumnie z dane typu liczbowego.  
+-   **Maksymalna liczba** wyodrębnia największą wartość w kolumnie z typem danych liczbowych.  
   
--   **Średni** oblicza wartość średnią wszystkich wartości w kolumnie z dane typu liczbowego.  
+-   **Średnia liczba** oblicza wartość średnią wszystkich wartości w kolumnie z typem danych liczbowych.  
   
--   **Liczba** zlicza rekordów w kolumnie każdego typu danych.  
+-   **Liczba** zlicza rekordy w kolumnie dowolnego typu danych.  
   
- Aby uzyskać informacje statystyczne na temat rekordów w źródle danych, a nie można wyodrębnić rekordy ze źródła danych korzystania z tych funkcji SQL. Zestaw rekordów, które jest tworzone zazwyczaj składa się z pojedynczego rekordu (Jeśli wszystkie kolumny są wartości zagregowanych), który zawiera wartość. (Może być więcej niż jeden rekord, jeśli używasz **GROUP BY** klauzuli.) Ta wartość jest wynikiem obliczenia lub wyodrębniania wykonywane przez funkcję SQL.  
+ Aby uzyskać informacje statystyczne na temat rekordów w źródle danych, a nie można wyodrębnić rekordy ze źródła danych korzystania z tych funkcji SQL. Zestaw rekordów, które jest zazwyczaj tworzony składa się z pojedynczego rekordu (Jeśli wszystkie kolumny są wartości zagregowane), który zawiera wartość. (Może być więcej niż jeden rekord, jeśli użyto **GROUP BY** klauzuli.) Ta wartość jest wynikiem obliczenia lub wyodrębniania, wykonywane przez funkcję SQL.  
   
 > [!TIP]
->  Aby dodać SQL **GROUP BY** klauzuli (i prawdopodobnie **HAVING** klauzuli) do instrukcji SQL, dołącz go do końca **m_strFilter**. Na przykład:  
+>  Aby dodać SQL **GROUP BY** — klauzula (i ewentualnie **HAVING** klauzuli) do instrukcji SQL, dołącz go do końca `m_strFilter`. Na przykład:  
   
 ```  
 m_strFilter = "sales > 10 GROUP BY SALESPERSON_ID";  
 ```  
   
- Można ograniczyć liczbę rekordów, które umożliwia uzyskanie wyników agregacji przez filtrowanie i sortowanie kolumny.  
+ Można ograniczyć liczbę rekordów, którego używasz do uzyskania agregacji wyników, filtrowanie i sortowanie kolumn.  
   
 > [!CAUTION]
->  Niektóre operatorów agregacji zwrócić na inny typ danych kolumny, w których są agregowanie.  
+>  Niektóre operatory agregacji Zwróć innego typu danych kolumny, w których są agregowania.  
   
--   **Suma** i **AVG** może zwrócić następny większy typ danych (na przykład wywoływanie z `int` zwraca **DŁUGI** lub **podwójne**).  
+-   **Suma** i **AVG** może zwrócić następny większy typ danych (na przykład, wywołanie za pomocą `int` zwraca **długie** lub **double**).  
   
--   **Liczba** zwykle zwraca **DŁUGI** niezależnie od typu kolumny docelowej.  
+-   **Liczba** zwykle zwraca **długie** niezależnie od typu kolumny docelowej.  
   
--   **Maksymalna liczba** i **MIN** zwracać taki sam typ danych jak kolumny ich obliczania.  
+-   **Maksymalna liczba** i **MIN** zwracać taki sam typ danych jako kolumny ich obliczania.  
   
-     Na przykład **Dodaj klasę** Kreator tworzy `long` `m_lSales` aby zmieścił się w kolumnie sprzedaży, ale należy zamienić na ten z `double m_dblSumSales` element członkowski danych w celu uwzględnienia łączny wynik. Zobacz poniższy przykład.  
+     Na przykład **Dodaj klasę** Kreator tworzy `long` `m_lSales` umożliwiających kolumny Sprzedaż, ale trzeba zastąpić za pomocą `double m_dblSumSales` element członkowski danych umożliwiających agregacji wyników. Zobacz poniższy przykład.  
   
 #### <a name="to-obtain-an-aggregate-result-for-a-recordset"></a>Aby uzyskać wynik agregacji dla zestawu rekordów  
   
-1.  Tworzenie zestawu rekordów, zgodnie z opisem w [Dodawanie konsumenta MFC ODBC](../../mfc/reference/adding-an-mfc-odbc-consumer.md) zawierającą kolumny, z których chcesz uzyskać wyników agregacji.  
+1.  Tworzenie zestawu rekordów, zgodnie z opisem w [Dodawanie konsumenta MFC ODBC](../../mfc/reference/adding-an-mfc-odbc-consumer.md) zawierająca kolumny, z których chcesz uzyskać agregacji wyników.  
   
-2.  Modyfikowanie [DoFieldExchange](../../mfc/reference/crecordset-class.md#dofieldexchange) funkcji zestawu rekordów. Zastąp ciąg reprezentujący nazwę kolumny (drugi argument funkcji [RFX](../../data/odbc/record-field-exchange-using-rfx.md) wywołania funkcji) z ciąg reprezentujący funkcją agregacji w kolumnie. Zamień na przykład:  
+2.  Modyfikowanie [dofieldexchange —](../../mfc/reference/crecordset-class.md#dofieldexchange) funkcji dla zestawu rekordów. Zastąp ciąg reprezentujący nazwę kolumny (drugi argument [RFX](../../data/odbc/record-field-exchange-using-rfx.md) wywołaniach funkcji) z ciągu reprezentującego funkcję agregacji w kolumnie. Na przykład Zastąp ciąg:  
   
     ```  
     RFX_Long(pFX, "Sales", m_lSales);  
     ```  
   
-     Z:  
+     Za pomocą:  
   
     ```  
     RFX_Double(pFX, "Sum(Sales)", m_dblSumSales)  
     ```  
   
-3.  Otwórz zestaw rekordów. Wynik operacji agregacji pozostanie w `m_dblSumSales`.  
+3.  Otwórz zestaw rekordów. Wynik operacji agregacji jest pozostawiany w `m_dblSumSales`.  
   
 > [!NOTE]
->  Kreator przypisuje faktycznie nazwy elementów członkowskich danych bez Węgierskiej prefiksy. Na przykład Kreator dałby w efekcie `m_Sales` dla kolumny sprzedaży, a nie `m_lSales` nazwa używana wcześniej na ilustracji.  
+>  Kreator przypisuje faktycznie nazwy elementów członkowskich danych bez Węgierskiej, poprzedź prefiksy. Na przykład Kreator dałby w efekcie `m_Sales` dla kolumny sprzedaży, a nie `m_lSales` nazwę wcześniej używane do celów informacyjnych.  
   
- Jeśli używasz [CRecordView](../../mfc/reference/crecordview-class.md) klasy, aby wyświetlić dane, trzeba zmienić wywołanie funkcji DDX, aby wyświetlić nową wartość elementu członkowskiego danych; w przypadku zmiany z poziomu:  
+ Jeśli używasz [CRecordView](../../mfc/reference/crecordview-class.md) klasy, aby wyświetlić dane, należy zmienić wywołanie funkcji DDX, aby wyświetlić wartość nowy element członkowski danych; w takim przypadku zmianę z:  
   
 ```  
 DDX_FieldText(pDX, IDC_SUMSALES, m_pSet->m_lSales, m_pSet);  

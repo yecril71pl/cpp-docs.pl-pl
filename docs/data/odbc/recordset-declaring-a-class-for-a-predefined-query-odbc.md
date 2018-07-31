@@ -19,81 +19,81 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: cbbb9202aaf56681a792e1acf2a0c02eff5636d9
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 7805a923ddf0935a12b93430cb378a5a85cee97e
+ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33092378"
+ms.lasthandoff: 07/30/2018
+ms.locfileid: "39340589"
 ---
 # <a name="recordset-declaring-a-class-for-a-predefined-query-odbc"></a>Zestaw rekordów: deklarowanie klasy dla wstępnie zdefiniowanego zapytania (ODBC)
-Ten temat dotyczy klasach MFC ODBC.  
+Ten temat dotyczy klas MFC ODBC.  
   
- W tym temacie wyjaśniono, jak utworzyć zestaw rekordów klasy dla wstępnie zdefiniowanego zapytania (nazywane również procedury składowanej, jak Microsoft SQL Server).  
+ W tym temacie wyjaśniono, jak utworzyć zestaw rekordów klasy dla wstępnie zdefiniowanego zapytania (nazywane również procedury składowanej, tak jak w programie Microsoft SQL Server).  
   
 > [!NOTE]
->  Ten temat dotyczy obiektów pochodzących od `CRecordset` w wiersz, który zbiorczego pobierania nie została zaimplementowana. Jeśli zaimplementowano zbiorcze pobieranie z wiersza proces jest bardzo podobne. Aby poznać różnice między zestawami rekordów, który implementuje zbiorcze pobieranie z wiersza oraz te, które nie zawierają, zobacz [zestaw rekordów: pobieranie rekordów zbiorczego (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md).  
+>  Ten temat dotyczy obiektów pochodzących od `CRecordset` w wierszu zbiorczego, które podczas pobierania nie została zaimplementowana. Jeśli zbiorcze pobieranie z wiersza jest zaimplementowana, proces jest bardzo podobne. Aby zrozumieć różnice między zestawami rekordów, który implementuje zbiorcze pobieranie z wiersza, które nie obsługują, zobacz [zestaw rekordów: pobieranie rekordów w zbiorcze (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md).  
   
- Niektóre systemy zarządzania bazami danych (DBMS) pozwalają na tworzenie wstępnie zdefiniowanego zapytania i wywołać go z programów, takich jak funkcja. Zapytanie o nazwie, może przyjmować parametrów i może zwrócić rekordów. Procedury w tym temacie opisano sposób wywołania wstępnie zdefiniowane zapytanie zwraca rekordy (i prawdopodobnie przyjmuje parametry).  
+ Niektóre systemy zarządzania bazami danych (DBMS) pozwalają na tworzenie wstępnie zdefiniowanego zapytania i wywołać go z Twojego programów, takich jak funkcja. Zapytanie o nazwie, może potrwać parametrów i może zwrócić rekordów. Procedury przedstawione w tym temacie opisano sposób wywoływania wstępnie zdefiniowanego zapytania, które zwraca rekordy (i prawdopodobnie przyjmuje parametry).  
   
- Klasy baz danych nie obsługuje ich aktualizowania wstępnie zdefiniowane zapytania. Różnica między wstępnie zdefiniowanego zapytania migawki i dynamiczny wstępnie zdefiniowanego zapytania nie jest czy można je aktualizować, ale czy zmiany wprowadzone przez innych użytkowników (lub innych zestawów rekordów w programie) są widoczne w twoim zestawie rekordów.  
+ Klasy bazy danych nie obsługuje ich aktualizowania wstępnie zdefiniowanych zapytań. Różnica między wstępnie zdefiniowanego zapytania migawki i wstępnie zdefiniowanego zapytania dynamiczny nie jest updateability, ale czy zmiany wprowadzone przez innych użytkowników (lub innych zestawów rekordów w programie) są widoczne w twoim zestawie rekordów.  
   
 > [!TIP]
->  Zestaw rekordów do wywołania wstępnie zdefiniowanego zapytania, który nie zwraca rekordów nie jest konieczne. Przygotowanie instrukcji SQL, zgodnie z poniższym opisem, ale ją wykonać wywołując `CDatabase` funkcji członkowskiej [ExecuteSQL](../../mfc/reference/cdatabase-class.md#executesql).  
+>  Zestaw rekordów do wywołania wstępnie zdefiniowanego zapytania, która nie zwraca rekordów nie jest konieczne. Przygotowanie instrukcji SQL, zgodnie z poniższym opisem, ale wykonanie go przez wywołanie metody `CDatabase` funkcja elementu członkowskiego [ExecuteSQL](../../mfc/reference/cdatabase-class.md#executesql).  
   
- Można utworzyć klasy pojedynczy zestaw rekordów do zarządzania wywoływania wstępnie zdefiniowanego zapytania, ale należy wykonać część obciążenia pracą samodzielnie. Kreatorzy nie obsługują tworzenia klasy specjalnie do tego celu.  
+ Można utworzyć klasy jednym zestawie rekordów do zarządzania, wywołanie wstępnie zdefiniowanego zapytania, ale należy wykonać część obciążenia pracą samodzielnie. Kreatory nie obsługują tworzenia klasy specjalnie do tego celu.  
   
 #### <a name="to-create-a-class-for-calling-a-predefined-query-stored-procedure"></a>Aby utworzyć klasę wywoływania wstępnie zdefiniowanego zapytania (procedury składowanej)  
   
-1.  Użyj [Kreator konsumenta MFC ODBC](../../mfc/reference/adding-an-mfc-odbc-consumer.md) z **Dodaj klasę** do utworzenia klasy rekordów dla tabeli, która wspiera najbardziej kolumny zwracane przez zapytanie. Dzięki temu można utworzyć.  
+1.  Użyj [Kreator użytkownika interfejsu ODBC MFC](../../mfc/reference/adding-an-mfc-odbc-consumer.md) z **Dodaj klasę** do utworzenia klasy zestawu rekordów dla tabeli, która wspiera najbardziej kolumny zwracane przez zapytanie. Dzięki temu można łatwiej rozpocząć pracę.  
   
-2.  Ręcznie Dodaj elementy członkowskie danych pola dla kolumn wszystkich tabel, które zapytanie zwraca, ale ten kreator nie może utworzyć dla Ciebie.  
+2.  Ręcznie Dodaj elementy członkowskie danych pola dla kolumn wszystkich tabel, które zapytanie zwraca jednak, że Kreator nie utworzono dla Ciebie.  
   
-     Na przykład jeśli zapytanie zwraca trzy kolumny z dwóch dodatkowych tabel, należy dodać sześciu elementy członkowskie danych pola (typów danych) do klasy.  
+     Na przykład jeśli zapytanie zwraca trzy kolumny z dwóch dodatkowych tabel, należy dodać sześć pól składowych danych (typy danych) do klasy.  
   
-3.  Ręcznie Dodaj [RFX](../../data/odbc/record-field-exchange-rfx.md) odwołuje się funkcja [DoFieldExchange](../../mfc/reference/crecordset-class.md#dofieldexchange) funkcji członkowskiej klasy, jeden odpowiadającego typowi danych poszczególnych dodany członek pola danych.  
+3.  Ręcznie Dodaj [RFX](../../data/odbc/record-field-exchange-rfx.md) funkcja wywołuje [dofieldexchange —](../../mfc/reference/crecordset-class.md#dofieldexchange) funkcji składowej klasy, jedną odpowiadającą typowi danych każdego typu dodano element członkowski danych pola.  
   
-    ```  
+    ```cpp  
     Immediately before these RFX calls, call <MSHelp:link keywords="_mfc_CFieldExchange.3a3a.SetFieldType" TABINDEX="0">SetFieldType</MSHelp:link>, as shown here:   
     pFX->SetFieldType( CFieldExchange::outputColumn );  
     ```  
   
     > [!NOTE]
-    >  Należy znać typy danych i ustaw kolejność kolumn zwracanych w wyniku. Kolejność funkcji RFX wywołuje w `DoFieldExchange` musi odpowiadać kolejności kolumn zestawu wyników.  
+    >  Musisz znać typów danych i kolejność kolumn zwracanych w wyniku zestawu. Kolejność funkcji RFX wywołuje `DoFieldExchange` musi być zgodna z kolejnością kolumny zestawu wyników.  
   
-4.  Ręcznie Dodaj inicjowanie dla nowe elementy członkowskie danych pola w konstruktorze klasy zestawu rekordów.  
+4.  Ręcznie Dodaj inicjowania dla nowych elementów członkowskich danych pól w konstruktorze klasy zestawu rekordów.  
   
-     Należy również zwiększyć wartość inicjowania [m_nfields —](../../mfc/reference/crecordset-class.md#m_nfields) element członkowski danych. Kreator zapisuje inicjowania, ale obejmuje wyłącznie elementy członkowskie danych pola, które są dodawane automatycznie. Na przykład:  
+     Należy również zwiększyć wartość inicjowania [m_nfields —](../../mfc/reference/crecordset-class.md#m_nfields) element członkowski danych. Kreator zapisuje inicjowania, ale obejmuje tylko elementy członkowskie danych pola, które dodaje się go dla Ciebie. Na przykład:  
   
-    ```  
+    ```cpp  
     m_nFields += 6;  
     ```  
   
-     Niektóre typy danych powinny nie można zainicjować, na przykład `CLongBinary` lub tablice typu byte.  
+     Niektóre typy danych powinna nie można zainicjować w tym miejscu, na przykład `CLongBinary` lub tablice typu byte.  
   
-5.  Jeśli zapytanie pobiera parametry, należy dodać element członkowski danych parametru dla każdego parametru, wywołanie funkcji RFX dla każdego i inicjowania dla każdego.  
+5.  Jeśli zapytanie pobiera parametry, należy dodać element członkowski danych parametru dla każdego parametru, wywołanie funkcji RFX dla każdego i Inicjowanie dla każdego.  
   
-6.  Należy zwiększyć `m_nParams` dla poszczególnych dodanych parametru, tak samo jak `m_nFields` dla dodano pola w kroku 4 tej procedury. Aby uzyskać więcej informacji, zobacz [zestaw rekordów: parametryzacja zestawu rekordów (ODBC)](../../data/odbc/recordset-parameterizing-a-recordset-odbc.md).  
+6.  Należy zwiększyć `m_nParams` dla każdego dodano parametr, tak jak `m_nFields` przypadku należy dodać pola w kroku 4 tej procedury. Aby uzyskać więcej informacji, zobacz [zestaw rekordów: parametryzacja zestawu rekordów (ODBC)](../../data/odbc/recordset-parameterizing-a-recordset-odbc.md).  
   
-7.  Ręcznie napisać ciągu instrukcji SQL z następującą postać:  
+7.  Ręcznie napisać parametry instrukcji SQL w następującej postaci:  
   
     ```  
     {CALL proc-name [(? [, ?]...)]}  
     ```  
   
-     gdzie **WYWOŁANIA** jest kluczowym ODBC **nazwa proc** jest nazwa zapytania, ponieważ jest ona znana w źródle danych i "?" elementy są symbole zastępcze wartości parametrów, możesz podać do zestawu rekordów w czasie wykonywania (jeśli istnieje) . Poniższy przykład przygotowuje symbol zastępczy dla jednego parametru:  
+     gdzie **WYWOŁANIA** jest kluczowym ODBC **nazwa proc** jest nazwa zapytania jest znany w źródle danych i "?" elementy są symbole zastępcze wartości parametrów, należy dostarczyć do zestawu rekordów w czasie wykonywania (jeśli istnieje) . Poniższy przykład przygotowuje symbolem zastępczym dla jednego parametru:  
   
     ```  
     CString mySQL = "{CALL Delinquent_Accts (?)}";  
     ```  
   
-8.  W kodzie, którego kliknięcie spowoduje otwarcie zestawu rekordów, ustaw wartości parametrów w zestawie rekordów elementy członkowskie danych, a następnie wywołać **Otwórz** funkcji członkowskiej, przekazywanie ciągu SQL dla **lpszSQL** parametru. Lub zamiast tego należy zastąpić ciąg zwrócony przez `GetDefaultSQL` funkcji Członkowskich w klasie.  
+8.  W kodzie, który zostanie otwarty zestaw rekordów, ustaw wartości parametrów w zestawie rekordów elementów członkowskich danych, a następnie wywołać `Open` funkcję elementu członkowskiego, przekazując ciąg usługi SQL *lpszSQL* parametru. Lub zamiast tego należy zastąpić ciąg zwracany przez `GetDefaultSQL` funkcja elementu członkowskiego w klasie.  
   
- W poniższych przykładach pokazano procedurę wywoływania wstępnie zdefiniowanego zapytania o nazwie `Delinquent_Accts`, który przyjmuje jeden parametr dla liczbę okręgu sprzedaży. Ta kwerenda zwraca trzy kolumny: `Acct_No`, `L_Name`, `Phone`. Są wszystkie kolumny z tabeli Klienci.  
+ W poniższych przykładach pokazano procedurę wywoływania wstępnie zdefiniowanego zapytania o nazwie `Delinquent_Accts`, która przyjmuje jeden parametr numeru Okręg sprzedaży. Ta kwerenda zwraca trzy kolumny: `Acct_No`, `L_Name`, `Phone`. Są wszystkie kolumny z tabeli Customers.  
   
- Następujący zestaw rekordów określa elementy członkowskie danych pola kolumn zwraca zapytania i parametr sprzedaży Dystrykt żądana w czasie wykonywania.  
+ Poniższy zestaw rekordów określa elementy członkowskie danych pola kolumn zwraca zapytania i parametr dla sprzedaży Dystrykt żądana w czasie wykonywania.  
   
-```  
+```cpp  
 class CDelinquents : public CRecordset  
 {  
 // Field/Param Data  
@@ -105,11 +105,11 @@ class CDelinquents : public CRecordset
 };  
 ```  
   
- Ta deklaracja klasy się kreator zapisuje, z wyjątkiem `m_lDistParam` Członkowskie dodane ręcznie. O innych elementach członkowskich nie są wyświetlane tutaj.  
+ Ta deklaracja klasy jest jak Kreator zapisuje, z wyjątkiem `m_lDistParam` ręcznie dodano element członkowski. Inne elementy członkowskie nie są wyświetlane w tym miejscu.  
   
- W kolejnym przykładzie pokazano operacji inicjowania elementów członkowskich danych w `CDelinquents` konstruktora.  
+ W kolejnym przykładzie pokazano inicjowania dla elementów członkowskich danych w `CDelinquents` konstruktora.  
   
-```  
+```cpp  
 CDelinquents::CDelinquents(CDatabase* pdb)  
    : CRecordset(pdb)  
 {  
@@ -124,11 +124,11 @@ CDelinquents::CDelinquents(CDatabase* pdb)
 }  
 ```  
   
- Należy pamiętać, inicjowanie dla [m_nfields —](../../mfc/reference/crecordset-class.md#m_nfields) i [m_nparams —](../../mfc/reference/crecordset-class.md#m_nparams). Inicjuje kreatora `m_nFields`; należy zainicjować `m_nParams`.  
+ Należy pamiętać, inicjowania dla [m_nfields —](../../mfc/reference/crecordset-class.md#m_nfields) i [m_nparams —](../../mfc/reference/crecordset-class.md#m_nparams). Inicjuje kreatora `m_nFields`; inicjowania `m_nParams`.  
   
  W kolejnym przykładzie pokazano funkcje RFX w `CDelinquents::DoFieldExchange`:  
   
-```  
+```cpp  
 void CDelinquents::DoFieldExchange(CFieldExchange* pFX)  
 {  
     pFX->SetFieldType(CFieldExchange::outputColumn);  
@@ -140,11 +140,11 @@ void CDelinquents::DoFieldExchange(CFieldExchange* pFX)
 }  
 ```  
   
- Oprócz wykonywania wywołań RFX dla trzy kolumny zwracane, ten kod zarządza wiązanie parametru, przebiegu w czasie wykonywania. Parametr jest określonemu `Dist_No` kolumny (liczbę okręgu).  
+ Oprócz wywołań RFX dla trzech kolumn zwrócone, ten kod zarządza wiązanie parametru, które należy przekazać w czasie wykonywania. Parametr jest kluczem do `Dist_No` kolumny (Dystrykt number).  
   
- W kolejnym przykładzie pokazano, jak skonfigurować ciągu SQL i jak z niego korzystać, aby otworzyć zestaw rekordów.  
+ W kolejnym przykładzie pokazano, jak skonfigurować parametry SQL i jak z niej korzystać, aby otworzyć zestawu rekordów.  
   
-```  
+```cpp  
 // Construct a CDelinquents recordset object  
 CDelinquents rsDel( NULL );  
 CString strSQL = "{CALL Delinquent_Accts (?)}"  
@@ -155,10 +155,10 @@ if( rsDel.Open( CRecordset::snapshot, strSQL ) )
     // Use the recordset ...  
 ```  
   
- Ten kod tworzy migawkę, przekazuje on parametr uzyskanymi wcześniej z użytkownika i wywołuje wstępnie zdefiniowanego zapytania. Podczas wykonywania kwerendy, zwraca rejestruje określony region sprzedaży. Każdy rekord zawiera kolumny dla numeru konta, nazwiska i numer telefonu klienta.  
+ Ten kod tworzy migawkę, przekazuje on parametr uzyskanymi wcześniej z użytkownika i wywołuje wstępnie zdefiniowanego zapytania. Podczas wykonywania kwerendy, zwraca rekordy określony region sprzedaży. Każdy rekord zawiera kolumny numer konta, nazwiska i numer telefonu klienta.  
   
 > [!TIP]
->  Można obsługiwać (parametr wyjściowy) wartość zwracana z procedury składowanej. Aby uzyskać więcej informacji i przykład zobacz [CFieldExchange::SetFieldType](../../mfc/reference/cfieldexchange-class.md#setfieldtype).  
+>  Być może chcesz obsługiwać (parametr wyjściowy) wartość zwracana z procedury składowanej. Aby uzyskać więcej informacji i obejrzeć przykład, zobacz [CFieldExchange::SetFieldType](../../mfc/reference/cfieldexchange-class.md#setfieldtype).  
   
 ## <a name="see-also"></a>Zobacz też  
  [Zestaw rekordów (ODBC)](../../data/odbc/recordset-odbc.md)   

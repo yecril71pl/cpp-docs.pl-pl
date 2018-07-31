@@ -19,17 +19,17 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 7bfd7c927342790fee3be2b5a7d48bccba3ea168
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 936c8fe849e2eb92b8eb46170fc3e67842ad6beb
+ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33097344"
+ms.lasthandoff: 07/30/2018
+ms.locfileid: "39338853"
 ---
 # <a name="cmyproviderrowset-myproviderrsh"></a>CMyProviderRowset (MyProviderRS.H)
-Kreator generuje wpis dla obiektu zestawu wierszy. W tym przypadku jest to `CMyProviderRowset`. `CMyProviderRowset` Klasa dziedziczy z klasy dostawcy OLE DB o nazwie `CRowsetImpl`, który implementuje interfejsów wymaganych dla obiektu zestawu wierszy. Poniższy kod przedstawia łańcuch dziedziczenia dla `CRowsetImpl`:  
+Kreator generuje wpis dla obiektu zestawu wierszy. W tym przypadku jest to `CMyProviderRowset`. `CMyProviderRowset` Klasa dziedziczy z klasy dostawcy OLE DB o nazwie `CRowsetImpl`, który implementuje wszystkie niezbędne interfejsy obiektu zestawu wierszy. Poniższy kod pokazuje łańcuch dziedziczenia dla `CRowsetImpl`:  
   
-```  
+```cpp  
 template <class T, class Storage, class CreatorClass,   
    class ArrayType = CAtlArray<Storage>>  
 class CMyRowsetImpl:  
@@ -37,13 +37,13 @@ class CMyRowsetImpl:
       CSimpleRow, IRowsetLocateImpl< T >>  
 ```  
   
- `CRowsetImpl` używa również `IAccessor` i `IColumnsInfo` interfejsów. Używa tych interfejsów dla pól danych wyjściowych w tabelach. Udostępnia implementację klasy **IRowsetIdentity**, dzięki czemu konsumentów do ustalenia, czy dwa wiersze są identyczne. `IRowsetInfo` Interfejsu implementuje właściwości dla obiektu zestawu wierszy. **IConvertType** interfejs umożliwia dostawcy Rozwiąż problemy dotyczące różnic między typami danych żądanej przez klienta i używanych przez dostawcę.  
+ `CRowsetImpl` używa również `IAccessor` i `IColumnsInfo` interfejsów. Te interfejsy używa dla pól danych wyjściowych w tabelach. Ta klasa oferuje również implementację `IRowsetIdentity`, co pozwala, aby sprawdzić, czy dwa wiersze są identyczne. `IRowsetInfo` Interfejsu implementuje właściwości dla obiektu zestawu wierszy. `IConvertType` Interfejs umożliwia dostawcą rozwiązać różnice między typami danych żądanego przez klienta i używanych przez dostawcę.  
   
- `IRowset` Interfejsu faktycznie obsługuje pobierania danych. Konsument najpierw wywołuje metodę o nazwie `GetNextRows` do zwrócenia dojściem do wiersza, znany jako **HROW**. Następnie wywołuje konsumenta **IRowset::GetData** z tym **HROW** można pobrać żądanych danych.  
+ `IRowset` Interfejsu faktycznie obsługuje pobieranie danych. Konsument najpierw wywołuje metodę o nazwie `GetNextRows` do zwrócenia dojście do wiersza, znane jako `HROW`. Następnie wywołuje konsumenta `IRowset::GetData` z tym `HROW` można pobrać żądanych danych.  
   
- `CRowsetImpl` ma również kilka parametrów szablonu. Parametry te umożliwiają ustalenie sposobu `CRowsetImpl` klasy obsługi danych. `ArrayType` Argument pozwala określić, jakie mechanizmu magazynowania jest używany do przechowywania danych wiersza. **RowClass** parametr określa, jakie klasa zawiera **HROW**.  
+ `CRowsetImpl` pobiera również kilka parametrów szablonu. Parametry te umożliwiają ustalenie sposobu `CRowsetImpl` klasa służy do obsługi danych. `ArrayType` Argument pozwala określić, jakie mechanizm magazynu jest używane do przechowywania danych wiersza. *RowClass* parametr określa, jakie klasa zawiera `HROW`.  
   
- **RowsetInterface** parametr umożliwia także użycie `IRowsetLocate` lub `IRowsetScroll` interfejsu. `IRowsetLocate` i `IRowsetScroll` interfejsy zarówno dziedziczyć `IRowset`. W związku z tym szablony dostawców OLE DB musi podać specjalnej obsługi dla tych interfejsów. Jeśli chcesz użyć dowolnej z tych interfejsów, należy użyć tego parametru.  
+ *RowsetInterface* parametr umożliwia również `IRowsetLocate` lub `IRowsetScroll` interfejsu. `IRowsetLocate` i `IRowsetScroll` interfejsy, oba dziedziczyć `IRowset`. W związku z tym szablony dostawców OLE DB należy podać specjalnej obsługi tych interfejsów. Jeśli chcesz użyć jednej z tych interfejsów, należy użyć tego parametru.  
   
 ## <a name="see-also"></a>Zobacz też  
  [Pliki dostawcy generowane przez kreatora](../../data/oledb/provider-wizard-generated-files.md)

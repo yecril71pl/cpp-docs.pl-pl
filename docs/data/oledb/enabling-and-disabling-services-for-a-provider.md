@@ -16,24 +16,24 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: ef36e35234aa4878e30e70748a5b2ba2975c38dc
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 36cb39b467cb413cdf74bef52430cf8caf746199
+ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33099735"
+ms.lasthandoff: 07/30/2018
+ms.locfileid: "39340693"
 ---
 # <a name="enabling-and-disabling-services-for-a-provider"></a>Włączanie i wyłączanie usług dla dostawcy
-Usługi OLE DB mogą można włączać lub wyłączać domyślne dla wszystkich aplikacji, które uzyskują dostęp do jednego dostawcy. Jest to realizowane przez dodanie **OLEDB_SERVICES** wpisu rejestru dostawcy na CLSID z `DWORD` wartość określającą usług, aby włączyć lub wyłączyć, jak pokazano w poniższej tabeli.  
+Poszczególne usługi OLE DB można włączać lub wyłączać domyślnie dla wszystkich aplikacji uzyskujących dostęp do jednego dostawcy. Jest to realizowane przez dodanie wpisu rejestru OLEDB_SERVICES CLSID dostawcy z `DWORD` wartość określającą usług, aby włączyć lub wyłączyć, jak pokazano w poniższej tabeli.  
   
 |Włączone usługi domyślne|Wartość — słowo kluczowe|  
 |------------------------------|-------------------|  
 |Wszystkie usługi (ustawienie domyślne)|0xffffffff|  
-|Wszystkie z wyjątkiem puli i AutoEnlistment|0xFFFFFFFE|  
-|Wszystkie z wyjątkiem kursora klienta|0xfffffffb|  
-|Wszystkie z wyjątkiem puli AutoEnlistment i kursora klienta|0xfffffff0|  
-|Nie usługi|0x00000000|  
-|Nie agregacji wszystkich usług wyłączone|\<Brak klucza >|  
+|Wszystkie regiony z wyjątkiem puli i AutoEnlistment|0xFFFFFFFE|  
+|Wszystkie regiony z wyjątkiem kursor kliencki|0xfffffffb|  
+|Wszystkie z wyjątkiem buforowanie AutoEnlistment i kursor kliencki|0xfffffff0|  
+|Brak usług|0x00000000|  
+|Brak agregacji wszystkie usługi wyłączone|\<Brak klucza >|  
   
 ## <a name="see-also"></a>Zobacz też  
  [Włączanie i wyłączanie usług OLE DB](../../data/oledb/enabling-and-disabling-ole-db-services.md)

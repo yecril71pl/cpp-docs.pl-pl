@@ -54,12 +54,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 3b367fc74fdbb03a6e5193f3fc9be08f74111a09
-ms.sourcegitcommit: 7eadb968405bcb92ffa505e3ad8ac73483e59685
+ms.openlocfilehash: b7975c91631df24ab12858677a770c38dc0f6411
+ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/23/2018
-ms.locfileid: "39207490"
+ms.lasthandoff: 07/30/2018
+ms.locfileid: "39338915"
 ---
 # <a name="carrayrowset-class"></a>CArrayRowset — Klasa
 Uzyskuje dostęp do elementów zestawu wierszy, za pomocą składni tablicy.  
@@ -68,8 +68,8 @@ Uzyskuje dostęp do elementów zestawu wierszy, za pomocą składni tablicy.
 
 ```cpp
 template < class TAccessor >  
-class CArrayRowset :   
-   public CVirtualBuffer <TAccessor>,   
+class CArrayRowset : 
+   public CVirtualBuffer <TAccessor>, 
    protected CBulkRowset <TAccessor>  
 ```  
   
@@ -107,7 +107,7 @@ Tworzy nową `CArrayRowset` obiektu.
 ### <a name="syntax"></a>Składnia  
   
 ```cpp
-      CArrayRowset(int nMax = 100000);  
+CArrayRowset(int nMax = 100000);  
 ```  
   
 #### <a name="parameters"></a>Parametry  
@@ -121,7 +121,6 @@ Odczytuje całego zestawu wierszy do pamięci, tworzenia obrazu lub migawkę go.
   
 ```cpp
 HRESULT Snapshot() throw();  
-  
 ```  
 
 ## <a name="operator"></a> CArrayRowset::operator
@@ -130,8 +129,7 @@ Udostępnia składni tablicy do uzyskiwania dostępu do wierszy w zestawie wiers
 ### <a name="syntax"></a>Składnia  
   
 ```cpp
-      TAccessor  
-      & operator[](int nrow);  
+TAccessor & operator[](int nrow);  
 ```  
   
 #### <a name="parameters"></a>Parametry  
@@ -154,7 +152,6 @@ Zawiera liczbę wierszy w zestawie wierszy, które już przeczytana.
   
 ```cpp
 ULONG m_nRowsRead;  
-  
 ```  
   
 ## <a name="see-also"></a>Zobacz też  

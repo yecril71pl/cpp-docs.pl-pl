@@ -19,15 +19,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 8d211277a8354d94f1892b97ea8f808cc0b22c30
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 4c55b2e10112c38835bb1f230970db56a6f53d4e
+ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33095323"
+ms.lasthandoff: 07/30/2018
+ms.locfileid: "39341065"
 ---
 # <a name="ccolumnaccessor-class"></a>CColumnAccessor — Klasa
-Generuje kod wprowadzony konsumenta.  
+Generuje kod wprowadzonego konsumenta.  
   
 ## <a name="syntax"></a>Składnia
 
@@ -36,25 +36,25 @@ class CColumnAccessor : public CAccessorBase
 ```  
   
 ## <a name="remarks"></a>Uwagi  
- Wprowadzony kod każdej kolumny jest powiązana jako osobne metody dostępu. Należy pamiętać, że ta klasa jest używana w wprowadzony kod (na przykład mogą wystąpić go podczas debugowania), ale zwykle nie trzeba korzystać bezpośrednio lub jego metody.  
+ W wprowadzonego kodu każda kolumna jest powiązany jako osobne metody dostępu. Należy pamiętać, że ta klasa jest używana w wprowadzonego kodu (na przykład, można napotkać go podczas debugowania), ale zwykle nie trzeba używać jej lub jego metod bezpośrednio.  
   
- `CColumnAccessor` implementuje następujące metody klasy zastępczej, z których każdy odpowiada funkcji do innych metod klasy dostępu:  
+ `CColumnAccessor` implementuje następujących metod klasy zastępczej, z których każdy odpowiadają w działaniu innych metod klasy dostępu:  
   
 -   `CColumnAccessor` Konstruktor; Tworzy i inicjuje `CColumnAccessor` obiektu.  
   
--   `CreateAccessor` Przydziela pamięć dla kolumny struktury powiązania i inicjuje elementów członkowskich danych kolumny.  
+-   `CreateAccessor` Przydziela pamięć dla kolumny struktury powiązania i inicjuje elementy członkowskie danych kolumny.  
   
--   **BindColumns** wiąże kolumn metody dostępu.  
+-   `BindColumns` Tworzy powiązanie kolumn z metod dostępu.  
   
--   **SetParameterBuffer** przydziela buforów dla parametrów.  
+-   `SetParameterBuffer` Przydziela buforów dla parametrów.  
   
--   `AddParameter` Dodaje wpis parametru do struktury zapis parametru.  
+-   `AddParameter` Dodaje wpis parametr do parametru struktury wpisu.  
   
--   **HasOutputColumns** Określa, czy akcesor ma produkt wyjściowy kolumn  
+-   `HasOutputColumns` Określa, czy akcesor ma produkt wyjściowy kolumn  
   
--   **HasParameters** Określa, czy akcesor ma parametrów.  
+-   `HasParameters` Określa, czy akcesor ma następujące parametry.  
   
--   `BindParameters` Wiąże utworzony parametry kolumny.  
+-   `BindParameters` Wiąże parametry utworzonych kolumn.  
   
 ## <a name="requirements"></a>Wymagania  
  **Nagłówek:** atldbcli.h  

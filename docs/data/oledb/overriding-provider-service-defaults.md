@@ -16,30 +16,30 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: be802c1c3c6ba4b77d1418c9c620840e9ab10170
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 106d1991f5312065aa78330888e55383d1f9506a
+ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33110083"
+ms.lasthandoff: 07/30/2018
+ms.locfileid: "39337021"
 ---
 # <a name="overriding-provider-service-defaults"></a>Zastępowanie ustawień domyślnych usługi dostawcy
-Wartość rejestru dostawcy **OLEDB_SERVICES** jest zwracana wartość domyślną dla [DBPROP_INIT_OLEDBSERVICES](https://msdn.microsoft.com/en-us/library/ms716898.aspx) właściwości inicjowania obiektu źródła danych.  
+Wartość rejestru dostawcy dla OLEDB_SERVICES jest zwracana jako wartość domyślna dla [DBPROP_INIT_OLEDBSERVICES](https://msdn.microsoft.com/library/ms716898.aspx) inicjowania właściwości obiektu źródła danych.  
   
- Tak długo, jak istnieje wpis rejestru, obiektów dostawcy jest agregowana, użytkownika można zmienić ustawienia dla usług włączone przez ustawienie domyślnego dostawcy **DBPROP_INIT_OLEDBSERVICES** właściwości przed zainicjowaniem. Aby włączyć lub wyłączyć określonej usługi, użytkownik ogólnie pobiera bieżącą wartość **DBPROP_INIT_OLEDBSERVICES** właściwości, ustawia lub czyści dla określonej właściwości włączyć lub wyłączyć i resetuje właściwość. **DBPROP_INIT_OLEDBSERVICES** można ustawić bezpośrednio w bazie danych OLE DB lub w parametrach połączenia przekazany do ADO lub **IDataInitialize::GetDatasource**. W poniższej tabeli wymieniono odpowiednie wartości, aby włączyć lub wyłączyć poszczególne usługi.  
+ Tak długo, jak istnieje wpis rejestru, obiektów dostawcy są agregowane i użytkownik może przesłonić ustawienia usługi włączone przez ustawienie domyślnego dostawcy `DBPROP_INIT_OLEDBSERVICES` właściwości przed zainicjowaniem. Aby włączyć lub wyłączyć określonej usługi, użytkownik jest ogólnie pobiera bieżącą wartość `DBPROP_INIT_OLEDBSERVICES` właściwość, ustawia lub czyści dla danej właściwości, które można włączać lub wyłączać i resetuje właściwości. `DBPROP_INIT_OLEDBSERVICES` można ustawić bezpośrednio w OLE DB lub w parametrach połączenia przekazano do ADO lub `IDataInitialize::GetDatasource`. Odpowiednie wartości, aby włączyć/wyłączyć poszczególne usługi są wymienione w poniższej tabeli.  
   
 |Włączone usługi domyślne|Wartość właściwości DBPROP_INIT_OLEDBSERVICES|Wartość w parametrach połączenia|  
 |------------------------------|------------------------------------------------|--------------------------------|  
-|Wszystkie usługi (ustawienie domyślne)|**DBPROPVAL_OS_ENABLEALL**|"Usług OLE DB = -1;"|  
-|Wszystkie z wyjątkiem puli i AutoEnlistment|**DBPROPVAL_OS_ENABLEALL &AMP;**<br /><br /> **~ DBPROPVAL_OS_RESOURCEPOOLING &AMP;**<br /><br /> **~DBPROPVAL_OS_TXNENLISTMENT**|"Usług OLE DB = -4;"|  
-|Wszystkie z wyjątkiem kursora klienta|**DBPROPVAL_OS_ENABLEALL** &<br /><br /> ~**DBPROPVAL_OS_CLIENTCURSOR**|"Usług OLE DB = -5;"|  
-|Wszystkie z wyjątkiem puli AutoEnlistment i kursora klienta|**DBPROPVAL_OS_ENABLEALL &AMP;**<br /><br /> **~ DBPROPVAL_OS_TXNENLISTMENT &AMP;**<br /><br /> **~DBPROPVAL_OS_CLIENTCURSOR**|"Usług OLE DB = -7;"|  
-|Nie usługi|~**DBPROPVAL_OS_ENABLEALL**|"Usług OLE DB = 0;"|  
+|Wszystkie usługi (ustawienie domyślne)|`DBPROPVAL_OS_ENABLEALL`|"Usług OLE DB = -1;"|  
+|Wszystkie regiony z wyjątkiem puli i AutoEnlistment|`DBPROPVAL_OS_ENABLEALL &`<br /><br /> `~DBPROPVAL_OS_RESOURCEPOOLING &`<br /><br /> `~DBPROPVAL_OS_TXNENLISTMENT`|"Usług OLE DB = -4;"|  
+|Wszystkie regiony z wyjątkiem kursor kliencki|`DBPROPVAL_OS_ENABLEALL &`<br /><br /> `~DBPROPVAL_OS_CLIENTCURSOR`|"Usług OLE DB = -5;"|  
+|Wszystkie z wyjątkiem buforowanie AutoEnlistment i kursor kliencki|`DBPROPVAL_OS_ENABLEALL &`<br /><br /> `~DBPROPVAL_OS_TXNENLISTMENT &`<br /><br /> `~DBPROPVAL_OS_CLIENTCURSOR`|"Usług OLE DB = -7;"|  
+|Brak usług|`~DBPROPVAL_OS_ENABLEALL`|"Usług OLE DB = 0;"|  
   
- Jeśli wpis rejestru nie istnieje dla dostawcy, menedżerów składników nie zostaną zagregowane obiektów dostawcy, a żadne usługi zostanie wywołany, nawet jeśli jawnie żądanej przez użytkownika.  
+ Jeśli wpis rejestru nie istnieje dla dostawcy, menedżerów składników nie spowoduje zagregowanie obiektów dostawcy i żadnych usług, zostanie wywołany, nawet wtedy, gdy wyraźnie żąda przez użytkownika.  
   
 ## <a name="see-also"></a>Zobacz też  
- [Korzystanie z puli zasobów](https://msdn.microsoft.com/en-us/library/ms713655.aspx)   
- [Jak używać konsumentów pule zasobów](https://msdn.microsoft.com/en-us/library/ms715907.aspx)   
- [Jak dostawców działał efektywnie z puli zasobów](https://msdn.microsoft.com/en-us/library/ms714906.aspx)   
+ [Korzystanie z puli zasobów](https://msdn.microsoft.com/library/ms713655.aspx)   
+ [Jaki sposób użytkownicy korzystają w puli zasobów](https://msdn.microsoft.com/library/ms715907.aspx)   
+ [Jak dostawców wydajnie pracować z puli zasobów](https://msdn.microsoft.com/library/ms714906.aspx)   
  [Włączanie i wyłączanie usług OLE DB](../../data/oledb/enabling-and-disabling-ole-db-services.md)

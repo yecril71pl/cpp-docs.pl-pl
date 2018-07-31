@@ -18,45 +18,45 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: a30108ec344091631094cd55f6a3bd3f0f4a4a54
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: b3d6d41bb705559711187b58243772b668734b16
+ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33111318"
+ms.lasthandoff: 07/30/2018
+ms.locfileid: "39336716"
 ---
 # <a name="using-multiple-accessors-on-a-rowset"></a>Używanie wielu metod dostępu w zestawie wierszy
 Istnieją trzy podstawowe scenariusze, w których należy użyć wielu metod dostępu:  
   
--   **Wiele odczytu/zapisu zestawów wierszy.** W tym scenariuszu istnieje tabela o kluczu podstawowym. Chcesz mieć możliwość odczytu wszystkich kolumn w wierszu, włączając klucz podstawowy. Należy mieć możliwość zapisywania danych do wszystkich kolumn z wyjątkiem klucza podstawowego (ponieważ nie można zapisać kolumna klucza podstawowego). W takim przypadku można skonfigurować dwie metody dostępu:  
+-   **Wiele odczytu/zapisu zestawów wierszy.** W tym scenariuszu masz tabelę z kluczem podstawowym. Chcesz można było odczytać wszystkie kolumny w wierszu, w tym klucza podstawowego. Należy mieć uprawnienia zapisu danych do wszystkich kolumn z wyjątkiem klucza podstawowego (ponieważ nie można zapisać kolumny klucza podstawowego). W takim przypadku można skonfigurować dwie metody dostępu:  
   
-    -   Metoda dostępu 0 zawiera wszystkie kolumny.  
+    -   Akcesor 0 zawiera wszystkie kolumny.  
   
     -   Metoda dostępu 1 zawiera wszystkie kolumny z wyjątkiem klucza podstawowego.  
   
--   **Wydajność.** W tym scenariuszu jeden lub więcej kolumn zawierają dużą ilość danych, na przykład grafiki, plików audio i wideo. Za każdym razem, gdy zostanie przeniesiony do wiersza, prawdopodobnie nie chcesz pobrać kolumny z plikiem dużej ilości danych, ponieważ spowoduje to może spowolnić wydajności aplikacji.  
+-   **Wydajność.** W tym scenariuszu co najmniej jedna kolumna zawiera dużą ilość danych, na przykład grafiki, dźwięku lub wideo pliki. Za każdym razem, gdy przeniesiesz się do wiersza, prawdopodobnie nie chcesz pobrać kolumny z plikiem dużych ilości danych, ponieważ wykonanie tej tak może spowolnić wydajność aplikacji.  
   
-     Możesz skonfigurować oddzielne metod dostępu, w których pierwszego dostępu zawiera wszystkich kolumn, oprócz jednego z dużej ilości danych, a jego pobiera dane z tych kolumn automatycznie; jest to akcesor automatycznie. Druga metoda dostępu pobiera tylko kolumnę zawierającą dużej ilości danych, ale go nie pobiera dane z tej kolumny automatycznie. Może mieć inne metody aktualizacji lub pobrać dużej ilości danych na żądanie.  
+     Możesz skonfigurować oddzielne metod dostępu, w których pierwszą metodę dostępu zawiera wszystkie kolumny z wyjątkiem tego, z dużej ilości danych i pobiera dane z tych kolumn automatycznie; jest to akcesor automatycznie. Druga metoda dostępu pobiera tylko wartości w kolumnie zawierających duże ilości danych, ale go nie pobierania danych z tej kolumny automatycznie. Może mieć inne metody aktualizacji lub pobierania dużych ilości danych na żądanie.  
   
-    -   Metoda dostępu 0 jest automatyczne akcesora; pobiera on wszystkich kolumn, oprócz jednego z dużej ilości danych.  
+    -   Akcesor 0 jest automatyczne akcesora; pobiera wszystkie kolumny z wyjątkiem tego, z dużej ilości danych.  
   
-    -   Metoda dostępu 1 nie jest automatyczne akcesora; pobiera on kolumna o dużej ilości danych.  
+    -   Metody dostępu 1 nie jest automatyczna akcesora; pobiera kolumnę z dużych ilości danych.  
   
-     Aby określić, czy akcesor jest to metoda dostępu automatycznie, użyj argumentu automatycznie.  
+     Argument automatycznego umożliwia określenie, czy akcesor jest akcesora automatycznie.  
   
--   **Wiele kolumn ISequentialStream.** W tym scenariuszu użytkownik ma więcej niż jednej kolumny zawierające `ISequentialStream` danych. Jednak każdy akcesor jest tylko jeden `ISequentialStream` strumienia danych. Aby rozwiązać ten problem, skonfiguruj kilka metod dostępu, każdy zawiera jedną `ISequentialStream` wskaźnika.  
+-   **Wiele kolumn ISequentialStream.** W tym scenariuszu użytkownik ma więcej niż jeden zawierający kolumny `ISequentialStream` danych. Jednak każdej metody dostępu jest ograniczona do jednego `ISequentialStream` strumienia danych. Aby rozwiązać ten problem, należy skonfigurować kilka metod dostępu, każdy z nich zawierający jedną `ISequentialStream` wskaźnika.  
   
- Zwykle tworzy się przy użyciu metody dostępu [begin_accessor —](../../data/oledb/begin-accessor.md) i [END_ACCESSOR](../../data/oledb/end-accessor.md) makra. Można również użyć [db_accessor —](../../windows/db-accessor.md) atrybutu. (Metody dostępu są opisane dalej w [rekordów użytkowników](../../data/oledb/user-records.md).) Makra lub atrybut Określ, czy metoda dostępu jest automatyczne czy akcesor nie automatyczne:  
+ Zwykle tworzy się przy użyciu metod dostępu [BEGIN_ACCESSOR](../../data/oledb/begin-accessor.md) i [END_ACCESSOR](../../data/oledb/end-accessor.md) makra. Można również użyć [db_accessor —](../../windows/db-accessor.md) atrybutu. (Metody dostępu są dokładniejszym opisem zawartym w [rekordów użytkowników](../../data/oledb/user-records.md).) Makra lub atrybutu należy określić, czy metoda dostępu jest automatyczne czy akcesor nie automatyczne:  
   
--   W metodzie dostępu automatyczne, Przenieś metody takie jak **MoveFirst**, `MoveLast`, `MoveNext`, i `MovePrev` pobieranie danych dla wszystkich określonych kolumn automatycznie. Akcesor 0 powinny być automatyczne metody dostępu.  
+-   Automatyczne akcesor przesunięcie w metody takie jak `MoveFirst`, `MoveLast`, `MoveNext`, i `MovePrev` pobierania danych dla wszystkich określonych kolumn automatycznie. Akcesor 0 powinny być automatyczne metody dostępu.  
   
--   W metodę dostępu-automatyczne pobieranie przeprowadzona dopiero po jawnie wywołania metody takie jak **aktualizacji**, **Wstaw**, **pobrać**, lub **usunąć**. W opisanych powyżej scenariuszy nie można pobrać wszystkich kolumn w każdym ruchu. Można umieścić co najmniej jedną kolumnę w oddzielnych metody dostępu i upewnij, że akcesor nie automatyczne, jak pokazano poniżej.  
+-   W metodę dostępu nie automatyczne pobieranie przeprowadzona dopiero po użytkownik jawnie wywołać metody takie jak `Update`, `Insert`, `Fetch`, lub `Delete`. W scenariuszach opisanych powyżej nie można pobrać wszystkich kolumn na każdy ruch. Można umieścić co najmniej jedną kolumnę w oddzielnych metody dostępu i upewnij, że akcesor nie automatyczne, jak pokazano poniżej.  
   
- W poniższym przykładzie użyto wielu metod dostępu do odczytu i zapisu do tabeli zadań bazy danych programu SQL Server pubs używanie wielu metod dostępu. Jest to najbardziej typowe użycie wielu metod dostępu; zobacz scenariusz "wiele zestawów wierszy odczytu/zapisu" powyżej.  
+ W poniższym przykładzie użyto wielu metod dostępu do odczytu i zapisu do tabeli zadań bazy danych programu SQL Server pubs używanie wielu metod dostępu. Jest to najbardziej typowe użycie wielu metod dostępu; Zobacz powyższy scenariusz "wiele zestawów wierszy odczytu/zapisu".  
   
- Klasy rekordów użytkowników ma następującą składnię. Konfiguruje dwie metody dostępu: akcesor 0 zawiera tylko kolumna klucza podstawowego (ID), a akcesor 1 innych kolumn.  
+ Klasa rekord użytkownika jest w następujący sposób. Obejmuje to skonfigurowanie dwóch metod dostępu: akcesor 0 zawiera tylko kolumny klucza podstawowego (identyfikator), a metoda dostępu 1 innych kolumn.  
   
-```  
+```cpp  
 class CJobs  
 {  
 public:  
@@ -89,9 +89,9 @@ END_ACCESSOR_MAP()
 };  
 ```  
   
- Główne kod ma następującą składnię. Wywoływanie `MoveNext` automatycznie pobiera dane z Identyfikatora kolumny klucza podstawowego, przy użyciu metody dostępu 0. Uwaga jak **Wstaw** metody niemal dostępu końcowe zastosowania 1, aby uniknąć zastępowania do kolumny klucza podstawowego.  
+ Głównego kodu wyglądają następująco. Wywoływanie `MoveNext` automatycznie pobiera dane z Identyfikatora kolumny klucza podstawowego, przy użyciu metody dostępu 0. Uwaga jak `Insert` metoda niemal akcesor używa zakończenia 1 w celu uniknięcia zapisywania kolumna klucza podstawowego.  
   
-```  
+```cpp  
 int main(int argc, char* argv[])  
 {  
     // Initalize COM  

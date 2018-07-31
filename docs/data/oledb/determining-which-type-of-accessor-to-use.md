@@ -16,30 +16,30 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 89a55127b8f7e5e0e7d338a9e7ba4f85e8c568d2
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: f21a4545bb24b0a4a9e19efa2a6ff9738272cc9f
+ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33104012"
+ms.lasthandoff: 07/30/2018
+ms.locfileid: "39340446"
 ---
 # <a name="determining-which-type-of-accessor-to-use"></a>Ustalanie, jakiego typu metody dostępu użyć
-Typy danych w zestawie wierszy można określić w czasie kompilacji lub w czasie wykonywania.  
+W czasie kompilacji lub w czasie wykonywania, można określić typy danych w zestawie wierszy.  
   
- Jeśli chcesz określić typy danych w czasie kompilacji, statycznej metody dostępu użyć (takie jak `CAccessor`). Typy danych można określić ręcznie lub za pomocą biblioteki ATL OLE DB użytkownika kreatora.  
+ Jeśli potrzebujesz określić typy danych w czasie kompilacji, należy użyć statycznej metody dostępu (takich jak `CAccessor`). Typy danych można określić ręcznie lub przy użyciu biblioteki ATL OLE DB Kreator konsumenta.  
   
- Aby określić typy danych w czasie wykonywania, należy użyć dynamiczny (`CDynamicAccessor` lub jego elementach podrzędnych) lub ręczne metody dostępu (`CManualAccessor`). W takich przypadkach można wywołać `GetColumnInfo` na wierszy do zwracania informacji powiązanie kolumny, w którym można określić typy.  
+ Jeśli potrzebujesz określić typy danych w czasie wykonywania, użyj dynamiczny (`CDynamicAccessor` lub jego elementy podrzędne) lub ręczne metody dostępu (`CManualAccessor`). W takich przypadkach można wywołać `GetColumnInfo` na wierszy, aby zwrócić informacje o powiązaniu kolumny, z której można określić typy.  
   
- W poniższej tabeli wymieniono typy metod dostępu w szablony konsumentów. Każda metoda dostępu ma zalety i wady. W zależności od sytuacji jeden typ metody dostępu należy własnych potrzeb.  
+ W poniższej tabeli wymieniono typy metod dostępu w szablonami konsumentów. Metoda dostępu do każdego ma zalety i wady. W zależności od sytuacji jeden typ metody dostępu powinny odpowiadać Twoim potrzebom.  
   
 |Klasa metody dostępu|Powiązanie|Parametr|Komentarz|  
 |--------------------|-------------|---------------|-------------|  
-|`CAccessor`|Utwórz rekord użytkownika z `COLUMN_ENTRY` makra. Makra powiązać element członkowski danych w tym rekordzie metodzie dostępu. Po utworzeniu zestawu wierszy kolumn nie może być zwolnione.|Tak, przy użyciu **atrybut PARAM_MAP** makro wpisu. Raz powiązania parametrów nie może być zwolnione.|Najszybszym dostępu z powodu małej ilości kodu.|  
-|`CDynamicAccessor`|Automatyczne.|Nie.|Przydatne, jeśli nie jest znany typ danych w zestawie wierszy.|  
-|`CDynamicParameterAccessor`|Automatyczne, ale może być [przesłonięcia](../../data/oledb/overriding-a-dynamic-accessor.md).|Tak, jeśli dostawca obsługuje `ICommandWithParameters`. Parametry powiązane automatycznie.|Wolniej niż `CDynamicAccessor` ale przydatne w przypadku wywoływania procedury składowanej ogólne.|  
-|**CDynamicStringAccessor[A,W]**|Automatyczne.|Nie.|Pobiera dane uzyskiwane ze źródła danych jako dane ciągu.|  
-|`CManualAccessor`|Ręczne przy użyciu `AddBindEntry`.|Ręcznie przy użyciu `AddParameterEntry`.|Bardzo szybko; Parametry i kolumny powiązane tylko raz. Należy określić typ danych do użycia. (Zobacz [DBVIEWER](http://msdn.microsoft.com/en-us/07620f99-c347-4d09-9ebc-2459e8049832) przykładowa, np.) Wymaga większej ilości kodu niż `CDynamicAccessor` lub `CAccessor`. Jest kilka dodatkowych bezpośrednie wywoływanie OLE DB.|  
-|`CXMLAccessor`|Automatyczne.|Nie.|Pobiera dane uzyskiwane ze źródła danych jako ciągu dane i formatuje go jako oznakowane XML dane.|  
+|`CAccessor`|Utwórz rekord użytkownika za pomocą makra COLUMN_ENTRY. Makra powiązać element członkowski danych rekordu akcesor. Po utworzeniu zestawu wierszy kolumn nie może być zwolnione.|Tak, przy użyciu wpisu — makro PARAM_MAP. Raz powiązania parametrów nie może być zwolnione.|Metoda najszybszy dostępu z powodu małej ilości kodu.|  
+|`CDynamicAccessor`|Automatyczne.|Nie.|Parametr jest przydatne, jeśli nie jest znany typ danych w zestawie wierszy.|  
+|`CDynamicParameterAccessor`|Automatyczne, ale może być [zastąpione](../../data/oledb/overriding-a-dynamic-accessor.md).|Tak, jeśli dostawca obsługuje `ICommandWithParameters`. Automatycznie wiązania parametrów.|Wolniejsza niż `CDynamicAccessor` ale przydatne w przypadku wywoływania ogólnych procedurach składowanych.|  
+|`CDynamicStringAccessor[A,W]`|Automatyczne.|Nie.|Pobiera dane otwierane z magazynu danych jako dane ciągu.|  
+|`CManualAccessor`|Ręczne przy użyciu `AddBindEntry`.|Ręcznie przy użyciu `AddParameterEntry`.|Bardzo szybko; Parametry i kolumny powiązane tylko raz. Należy określić typ danych do użycia. (Zobacz [DBVIEWER](http://msdn.microsoft.com/07620f99-c347-4d09-9ebc-2459e8049832) próbki, na przykład.) Wymaga większej ilości kodu niż `CDynamicAccessor` lub `CAccessor`. Istnieje bardziej bezpośrednie wywoływanie OLE DB.|  
+|`CXMLAccessor`|Automatyczne.|Nie.|Pobiera dane otwierane z magazynu danych jako dane ciągu i formatuje ją danych oznaczone jako XML.|  
   
 ## <a name="see-also"></a>Zobacz też  
  [Korzystanie z metod dostępu](../../data/oledb/using-accessors.md)

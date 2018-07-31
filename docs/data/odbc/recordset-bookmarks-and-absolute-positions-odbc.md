@@ -32,17 +32,17 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: e5e45d2f9dd942e76ccce4231e8280a142e66e56
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 84288a5da836661bfda5720872008adf248fb246
+ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33091320"
+ms.lasthandoff: 07/30/2018
+ms.locfileid: "39338330"
 ---
 # <a name="recordset-bookmarks-and-absolute-positions-odbc"></a>Zestaw rekordów: zakładki i położenia bezwzględne (ODBC)
-Ten temat dotyczy klasach MFC ODBC.  
+Ten temat dotyczy klas MFC ODBC.  
   
- Podczas nawigowania do zestawu rekordów, często konieczne jest sposób zwracania do określonego rekordu. Zakładka i położenie bezwzględne rekordu Podaj dwa z tych metod.  
+ Podczas przechodzenia przez zestaw rekordów, potrzebny jest często sposób wracania do określonego rekordu. Zakładki i położenia bezwzględne rekordu Podaj dwie z tych metod.  
   
  W tym temacie opisano:  
   
@@ -51,15 +51,15 @@ Ten temat dotyczy klasach MFC ODBC.
 -   [Jak ustawić bieżącego rekordu przy użyciu położenia bezwzględne](#_core_absolute_positions_in_mfc_odbc).  
   
 ##  <a name="_core_bookmarks_in_mfc_odbc"></a> Zakładki w MFC ODBC  
- Zakładki unikatowo określa rekord. Po przejściu do zestawu rekordów, nie zawsze polegać na położenie bezwzględne rekordu ponieważ rekordy, można usunąć z tego zestawu rekordów. Niezawodny sposób, aby śledzić położenie rekord jest użyć jego zakładki. Klasa `CRecordset` udostępnia funkcje elementu członkowskiego dla:  
+ Zakładki jednoznacznie identyfikuje rekord. Po przejściu do zestawu rekordów nie zawsze polegasz absolutną pozycję elementów rekord ponieważ rekordy mogą być usunięte z zestawu rekordów. Niezawodny sposób, aby śledzić położenie rekord jest użyć jej zakładki. Klasa `CRecordset` dostarcza funkcji elementów członkowskich dla:  
   
--   Pobieranie zakładki bieżącego rekordu, więc można go zapisać w zmiennej ([GetBookmark](../../mfc/reference/crecordset-class.md#getbookmark)).  
+-   Wprowadzenie zakładki bieżącego rekordu, więc Zapisz go w zmiennej ([getbookmark —](../../mfc/reference/crecordset-class.md#getbookmark)).  
   
--   Szybko przenoszenie do rekordów, określając jego zakładki, która zapisane wcześniej w zmiennej ([SetBookmark](../../mfc/reference/crecordset-class.md#setbookmark)).  
+-   Przenoszenie szybko do danego rekordu, określając jego zakładki, który został zapisany we wcześniejszej części zmienną ([setbookmark —](../../mfc/reference/crecordset-class.md#setbookmark)).  
   
- Poniższy przykład przedstawia sposób używania tych funkcji Członkowskich do oznaczania bieżącego rekordu, a później wrócić do niej:  
+ Poniższy przykład ilustruje sposób używania te funkcje elementów członkowskich do oznaczania bieżącego rekordu i później wrócić do niego:  
   
-```  
+```cpp  
 // rs is a CRecordset or  
 // CRecordset-derived object  
   
@@ -72,23 +72,23 @@ rs.GetBookmark( varRecordToReturnTo );
 rs.SetBookmark( varRecordToReturnTo );  
 ```  
   
- Nie należy wyodrębnić podstawowy typ danych z [cdbvariant — klasa](../../mfc/reference/cdbvariant-class.md) obiektu. Przypisz wartości z `GetBookmark` i wróć do tej zakładki z `SetBookmark`.  
+ Nie musisz wyodrębnić odpowiedniego typu danych z [klasa CDBVariant](../../mfc/reference/cdbvariant-class.md) obiektu. Przypisz wartość z `GetBookmark` i wróć do tej zakładki z `SetBookmark`.  
   
 > [!NOTE]
->  W zależności od sterownika ODBC i zestaw rekordów typu zakładki może nie być obsługiwany. Użytkownik może łatwo ustalić, czy zakładki są obsługiwane przez wywołanie metody [CRecordset::CanBookmark](../../mfc/reference/crecordset-class.md#canbookmark). Ponadto jeśli zakładki są obsługiwane, należy jawnie wybrać ich implementacji, określając **CRecordset::useBookmarks** opcji [CRecordset::Open](../../mfc/reference/crecordset-class.md#open) funkcję elementu członkowskiego. Należy także sprawdzić trwałości zakładek po pewnych operacji zestawu rekordów. Na przykład jeśli użytkownik **Requery** zestawu rekordów zakładki może nie być już prawidłowe. Wywołanie [CDatabase::GetBookmarkPersistence](../../mfc/reference/cdatabase-class.md#getbookmarkpersistence) do sprawdzenia, czy można bezpiecznie wywołać `SetBookmark`.  
+>  W zależności od sterownik ODBC i typ zbioru rekordów zakładek nie mogą być obsługiwane. Można łatwo określić, czy zakładki są obsługiwane przez wywołanie metody [CRecordset::CanBookmark](../../mfc/reference/crecordset-class.md#canbookmark). Ponadto, jeśli zakładki są obsługiwane, należy jawnie wybierzesz do zaimplementowania je, określając `CRecordset::useBookmarks` opcji [CRecordset::Open](../../mfc/reference/crecordset-class.md#open) funkcja elementu członkowskiego. Należy także sprawdzić stan trwały zakładek, po niektórych operacjach zestawu rekordów. Na przykład jeśli użytkownik `Requery` zestaw rekordów zakładek może nie być już prawidłowa. Wywołaj [CDatabase::GetBookmarkPersistence](../../mfc/reference/cdatabase-class.md#getbookmarkpersistence) do sprawdzenia, czy można bezpiecznie wywołać `SetBookmark`.  
   
 ##  <a name="_core_absolute_positions_in_mfc_odbc"></a> Położenia bezwzględne w MFC ODBC  
- Oprócz zakładki, klasa `CRecordset` można ustawić bieżącego rekordu, określając porządkowym. Jest to bezwzględny.  
+ Oprócz zakładek, klasy `CRecordset` można ustawić bieżącego rekordu, określając porządkowym. Jest to nazywane pozycjonowanie absolutne.  
   
 > [!NOTE]
->  Bezwzględny nie jest dostępna w zestawy rekordów tylko do przodu. Aby uzyskać więcej informacji na temat zestawów rekordów tylko do przodu, zobacz [zestawu rekordów (ODBC)](../../data/odbc/recordset-odbc.md).  
+>  Pozycjonowanie absolutne nie jest dostępna w zestawach rekordów tylko do przodu. Aby uzyskać więcej informacji na temat zestawów rekordów tylko do przodu, zobacz [zestawu rekordów (ODBC)](../../data/odbc/recordset-odbc.md).  
   
- Aby przenieść wskaźnik bieżącego rekordu przy użyciu położenie bezwzględne, należy wywołać [CRecordset::SetAbsolutePosition](../../mfc/reference/crecordset-class.md#setabsoluteposition). Podczas przekazywania wartości do `SetAbsolutePosition`, rekord odpowiadający, że porządkowym staje się bieżącego rekordu.  
+ Aby przenieść bieżący wskaźnik rekordu przy użyciu położenie bezwzględne, należy wywołać [CRecordset::SetAbsolutePosition](../../mfc/reference/crecordset-class.md#setabsoluteposition). Podczas przekazywania wartości do `SetAbsolutePosition`, rekord odpowiadający, że porządkowym staje się bieżącym rekordem.  
   
 > [!NOTE]
->  Położenie bezwzględne rekordu jest potencjalnie tymczasowy. Jeśli użytkownik usuwa rekordy w zestawie numerem porządkowym o wszelkich zmianach kolejnych rekordu. Zakładki to zalecana metoda przenoszenia bieżącego rekordu. Aby uzyskać więcej informacji, zobacz [zakładki w MFC ODBC](#_core_bookmarks_in_mfc_odbc).  
+>  Położenie bezwzględne rekordu jest potencjalnie zawodnych. Jeśli użytkownik usuwa rekordy w zestawie porządkowym kolejnych rekord zmiany. Zakładki są zalecaną metodą przeniesienie bieżącego rekordu. Aby uzyskać więcej informacji, zobacz [zakładki w MFC ODBC](#_core_bookmarks_in_mfc_odbc).  
   
- Aby uzyskać więcej informacji na temat nawigacji zestawu rekordów, zobacz [zestaw rekordów: przewijanie (ODBC)](../../data/odbc/recordset-scrolling-odbc.md).  
+ Aby uzyskać więcej informacji na temat rekordów nawigacji zobacz [zestaw rekordów: przewijanie (ODBC)](../../data/odbc/recordset-scrolling-odbc.md).  
   
 ## <a name="see-also"></a>Zobacz też  
  [Zestaw rekordów (ODBC)](../../data/odbc/recordset-odbc.md)

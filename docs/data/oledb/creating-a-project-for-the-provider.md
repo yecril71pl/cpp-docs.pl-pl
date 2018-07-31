@@ -17,27 +17,27 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 08ceb80842d8552e19b62ff2ac2252d3f291b4ee
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: dad3b020cb7f66fc4ba6535f79393c2d0ad0333f
+ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33098358"
+ms.lasthandoff: 07/30/2018
+ms.locfileid: "39339844"
 ---
 # <a name="creating-a-project-for-the-provider"></a>Tworzenie projektu dla dostawcy
-#### <a name="to-create-a-project-in-which-the-ole-db-provider-will-reside"></a>Aby utworzyć projekt, w której będą znajdować się dostawcy OLE DB  
+### <a name="to-create-a-project-in-which-the-ole-db-provider-will-reside"></a>Aby utworzyć projekt, w której będą znajdować się w dostawcy OLE DB  
   
-1.  Z **pliku** menu, kliknij przycisk `New`, a następnie kliknij przycisk **projektu**.  
+1.  Z **pliku** menu, kliknij przycisk **New**, a następnie kliknij przycisk **projektu**.  
   
-     **Nowy projekt** zostanie wyświetlone okno dialogowe.  
+     **Nowy projekt** pojawi się okno dialogowe.  
   
-2.  W okienku typów projektów kliknij folder projekty Visual C++. W okienku szablonów kliknij **Projekt ATL**.  
+2.  W okienku typów projektów kliknij folder projekty języka Visual C++. W okienku szablonów kliknij **Projekt ATL**.  
   
-3.  W **nazwa** , wprowadź nazwę dla projektu, a następnie kliknij przycisk **OK**.  
+3.  W **nazwa** , wprowadź nazwę dla projektu, a następnie kliknij **OK**.  
   
      Zostanie wyświetlony Kreator projektu ATL.  
   
-4.  Kreator projektu ATL wybierz **biblioteki dołączanej dynamicznie (DLL)** dla **typ serwera**.  
+4.  W Kreatorze projektu ATL wybierz **Biblioteka dołączana dynamicznie (DLL)** dla **typ serwera**.  
   
 5.  Kliknij przycisk **Zakończ**.  
   

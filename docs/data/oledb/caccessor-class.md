@@ -21,34 +21,33 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: dffefb74faf6836b9f2fc81a7800dc34084657cf
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 9e7f722d4d1759bdec7a23bb15076b38de000eb6
+ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33093912"
+ms.lasthandoff: 07/30/2018
+ms.locfileid: "39337420"
 ---
 # <a name="caccessor-class"></a>Klasa CAccessor
 Reprezentuje jeden z typów dostępu.  
   
 ## <a name="syntax"></a>Składnia  
   
-```  
-  
+```cpp
 template <class T>  
 class CAccessor : public CAccessorBase, public T  
 ```  
   
-#### <a name="parameters"></a>Parametry  
- `T`  
+### <a name="parameters"></a>Parametry  
+ *T*  
  Klasa rekordu użytkownika.  
   
 ## <a name="remarks"></a>Uwagi  
- Jest używany, gdy rekord statycznie jest powiązana ze źródłem danych. Rekord zawiera buforu. Ta klasa obsługuje wiele metod dostępu w zestawie wierszy.  
+ Jest używany, gdy rekord statycznie jest powiązana ze źródłem danych. Rekord zawiera buforu. Ta klasa obsługuje wielu metod dostępu w zestawie wierszy.  
   
- Użyj tego typu dostępu, gdy wiesz, struktury i typ bazy danych.  
+ Użyj tego typu dostępu wiadomo, struktury i typ bazy danych.  
   
- Jeśli Twoje akcesor zawiera pola, które wskazują pamięci (takich jak `BSTR` lub interface) który musi być zwolniony, wywołanie funkcji Członkowskich [CAccessorRowset::FreeRecordMemory](../../data/oledb/caccessorrowset-freerecordmemory.md) podjęcia kolejnej rekord jest do odczytu.  
+ Jeśli metoda dostępu do sieci zawiera pola, które wskazują na pamięci (takie jak `BSTR` lub interfejsu) który musi być zwolniona, wywołaj funkcję elementu członkowskiego [CAccessorRowset::FreeRecordMemory](../../data/oledb/caccessorrowset-freerecordmemory.md) przed następnego rekordu jest do odczytu.  
   
 ## <a name="requirements"></a>Wymagania  
  **Nagłówek:** atldbcli.h  

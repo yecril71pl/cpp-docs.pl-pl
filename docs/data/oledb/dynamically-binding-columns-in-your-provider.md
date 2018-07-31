@@ -1,5 +1,5 @@
 ---
-title: Dynamiczne wiązanie kolumn w dostawcy | Dokumentacja firmy Microsoft
+title: Dynamiczne powiązanie kolumn w dostawcy | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,35 +17,35 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 566a7248fabc1fcdb66224ccbc302e3f8038c5f6
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 345bc66200ea4a1d6d4bbb79313157e81b9a2edb
+ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33101695"
+ms.lasthandoff: 07/30/2018
+ms.locfileid: "39336693"
 ---
 # <a name="dynamically-binding-columns-in-your-provider"></a>Dynamiczne powiązanie kolumn w dostawcy
-Upewnij się, że naprawdę potrzebny dynamiczne wiązanie kolumn. Użytkownik może być konieczne, ponieważ:  
+Upewnij się, że naprawdę potrzebujesz dynamiczne powiązanie kolumn. Możesz go potrzebować, ponieważ:  
   
--   Nie zdefiniowano kolumny zestawu wierszy w czasie kompilacji.  
+-   Kolumny zestawu wierszy nie są zdefiniowane w czasie kompilacji.  
   
--   Obsługuje jest element takich jak zakładki, który dodaje kolumn.  
+-   Obsługujesz elementu, takiego jak zakładki, który dodaje kolumn.  
   
 ### <a name="to-implement-dynamic-column-binding"></a>Aby zaimplementować dynamiczne powiązanie kolumn  
   
-1.  Usuń wszystkie **PROVIDER_COLUMN_MAP**s w kodzie.  
+1.  Usuń wszystkie `PROVIDER_COLUMN_MAP`s w kodzie.  
   
-2.  W rekordzie użytkownika (struktury) dodaj następujące oświadczenie:  
+2.  W rekordzie użytkownika (struktura) dodaj następującą deklarację:  
   
-    ```  
+    ```cpp  
     static ATLCOLUMNINFO* GetColumnInfo(void* pThis, ULONG* pcCols);  
     ```  
   
-3.  Implementowanie `GetColumnInfo` funkcji. Ta funkcja wychodzi poza sposób przechowywania informacji. Konieczne może uzyskać właściwości lub inne informacje dla tej funkcji. Należy utworzyć makro, podobnie jak [column_entry —](../../data/oledb/column-entry.md) makra, aby dodać własne informacje.  
+3.  Implementowanie `GetColumnInfo` funkcji. Ta funkcja określa się, jak informacje są przechowywane. Konieczne może być pobieranie właściwości lub inne informacje dla tej funkcji. Możesz chcieć utworzyć makro, podobnie jak [COLUMN_ENTRY](../../data/oledb/column-entry.md) makra, aby dodać własne informacje.  
   
      W poniższym przykładzie przedstawiono `GetColumnInfo` funkcji.  
   
-    ```  
+    ```cpp  
     // Check the property flag for bookmarks, if it is set, set the zero  
     // ordinal entry in the column map with the bookmark information.  
     CAgentRowset* pRowset = (CAgentRowset*) pThis;  

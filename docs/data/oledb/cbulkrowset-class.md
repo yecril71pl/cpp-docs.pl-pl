@@ -113,12 +113,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 457091d5dc0a76ce0cd495679d7c5f978e483574
-ms.sourcegitcommit: 7eadb968405bcb92ffa505e3ad8ac73483e59685
+ms.openlocfilehash: 2fa455bbe4a5aa902232b502e129f6c8e21463a9
+ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/23/2018
-ms.locfileid: "39207630"
+ms.lasthandoff: 07/30/2018
+ms.locfileid: "39337725"
 ---
 # <a name="cbulkrowset-class"></a>CBulkRowset — Klasa
 Pobiera i obsługuje wiersze, aby pracować nad dane zbiorcze Pobieranie wielu dojść do wierszy za pomocą jednego wywołania.  
@@ -166,7 +166,6 @@ Wywołania [IRowset::AddRefRows](https://msdn.microsoft.com/library/ms719619.asp
   
 ```cpp
 HRESULT AddRefRows() throw();  
-  
 ```  
   
 ### <a name="return-value"></a>Wartość zwracana  
@@ -179,7 +178,6 @@ Tworzy nową `CBulkRowset` obiektu i ustawia domyślną liczbę wierszy do 10.
   
 ```cpp
 CBulkRowset();  
-  
 ```  
 
 ## <a name="movefirst"></a> CBulkRowset::MoveFirst
@@ -189,7 +187,6 @@ Pobiera pierwszy wiersz danych.
   
 ```cpp
 HRESULT MoveFirst() throw();  
-  
 ```  
   
 ### <a name="return-value"></a>Wartość zwracana  
@@ -202,7 +199,6 @@ Przenosi do ostatniego wiersza.
   
 ```cpp
 HRESULT MoveLast() throw();  
-  
 ```  
   
 ### <a name="return-value"></a>Wartość zwracana  
@@ -215,7 +211,6 @@ Pobiera następny wiersz danych.
   
 ```cpp
 HRESULT MoveNext() throw();  
-  
 ```  
   
 ### <a name="return-value"></a>Wartość zwracana  
@@ -228,7 +223,6 @@ Przenosi do poprzedniego wiersza.
   
 ```cpp
 HRESULT MovePrev() throw();  
-  
 ```  
   
 ### <a name="return-value"></a>Wartość zwracana  
@@ -240,7 +234,7 @@ Pobiera wiersz oznaczone przez zakładki lub wiersz w określonym przesunięciu 
 ### <a name="syntax"></a>Składnia  
   
 ```cpp
-HRESULT MoveToBookmark(const CBookmarkBase& bookmark,  
+HRESULT MoveToBookmark(const CBookmarkBase& bookmark, 
    DBCOUNTITEM lSkip = 0) throw();  
 ```  
   
@@ -259,8 +253,8 @@ Pobiera wiersze, rozpoczynając od ułamków pozycji w zestawie wierszy.
   
 ### <a name="syntax"></a>Składnia  
   
-```
-HRESULT MoveToRatio(DBCOUNTITEM nNumerator,  
+```cpp
+HRESULT MoveToRatio(DBCOUNTITEM nNumerator, 
    DBCOUNTITEM nDenominator)throw();  
 ```  
   
@@ -287,8 +281,7 @@ Wywołania [IRowset::ReleaseRows](https://msdn.microsoft.com/library/ms719771.as
 ### <a name="syntax"></a>Składnia  
   
 ```cpp
-HRESULT ReleaseRows() throw();  
-  
+HRESULT ReleaseRows() throw();   
 ```  
   
 ### <a name="return-value"></a>Wartość zwracana  
@@ -300,7 +293,7 @@ Ustawia liczbę dojść do wierszy pobierane przez każde wywołanie.
 ### <a name="syntax"></a>Składnia  
   
 ```cpp
-      void SetRows(DBROWCOUNT nRows) throw();  
+void SetRows(DBROWCOUNT nRows) throw();  
 ```  
   
 #### <a name="parameters"></a>Parametry  

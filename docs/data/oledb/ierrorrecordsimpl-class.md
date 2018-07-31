@@ -76,12 +76,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: a4f12bd935e7dedf46e531d46e2ec91084059e9d
-ms.sourcegitcommit: b0d6777cf4b580d093eaf6104d80a888706e7578
+ms.openlocfilehash: 7339b345ad63f59a2db24251c06b80774305ab00
+ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/26/2018
-ms.locfileid: "39269689"
+ms.lasthandoff: 07/30/2018
+ms.locfileid: "39338122"
 ---
 # <a name="ierrorrecordsimpl-class"></a>IErrorRecordsImpl — Klasa
 Implementuje OLE DB [IErrorRecords](https://msdn.microsoft.com/library/ms718112.aspx) interfejsu, dodawanie rekordów do i pobierania rekordów z element członkowski danych ([m_rgErrors](../../data/oledb/ierrorrecordsimpl-m-rgerrors.md)) typu **CAtlArray <** `RecordClass`**>**.  
@@ -138,7 +138,7 @@ Pobiera ciąg opisu błędu z rekord błędu.
 ### <a name="syntax"></a>Składnia  
   
 ```cpp
-      LPOLESTR GetErrorDescriptionString(ERRORINFO& rCurError);  
+LPOLESTR GetErrorDescriptionString(ERRORINFO& rCurError);  
 ```  
   
 #### <a name="parameters"></a>Parametry  
@@ -154,7 +154,7 @@ Pobiera błąd identyfikatora GUID z rekord błędu.
 ### <a name="syntax"></a>Składnia  
   
 ```cpp
-      REFGUID GetErrorGUID(ERRORINFO& rCurError);  
+REFGUID GetErrorGUID(ERRORINFO& rCurError);  
 ```  
   
 #### <a name="parameters"></a>Parametry  
@@ -170,7 +170,7 @@ Pobiera identyfikator kontekstu pomocy z rekord błędu.
 ### <a name="syntax"></a>Składnia  
   
 ```cpp
-      DWORD GetErrorHelpContext(ERRORINFO& rCurError);  
+DWORD GetErrorHelpContext(ERRORINFO& rCurError);  
 ```  
   
 #### <a name="parameters"></a>Parametry  
@@ -186,7 +186,7 @@ Pobiera nazwę ścieżki pliku pomocy z rekord błędu.
 ### <a name="syntax"></a>Składnia  
   
 ```cpp
-      LPOLESTR GetErrorHelpFile(ERRORINFO& rCurError);  
+LPOLESTR GetErrorHelpFile(ERRORINFO& rCurError);  
 ```  
   
 #### <a name="parameters"></a>Parametry  
@@ -202,7 +202,7 @@ Pobiera kod źródłowy, który spowodował błąd z rekord błędu.
 ### <a name="syntax"></a>Składnia  
   
 ```cpp
-      LPOLESTR GetErrorSource(ERRORINFO& rCurError);  
+LPOLESTR GetErrorSource(ERRORINFO& rCurError);  
 ```  
   
 #### <a name="parameters"></a>Parametry  
@@ -218,7 +218,7 @@ Dodaje rekord do obiektu błąd OLE DB.
 ### <a name="syntax"></a>Składnia  
   
 ```cpp
-      STDMETHOD(AddErrorRecord )(ERRORINFO *pErrorInfo,  
+STDMETHOD(AddErrorRecord )(ERRORINFO *pErrorInfo,  
    DWORD dwLookupID,  
    DISPPARAMS *pdispparams,  
    IUnknown *punkCustomError,  
@@ -234,7 +234,7 @@ Zwraca podstawowe informacje o błędzie, np. kod powrotny i numer błędu specy
 ### <a name="syntax"></a>Składnia  
   
 ```cpp
-      STDMETHOD(GetBasicErrorInfo )(ULONG ulRecordNum,  
+STDMETHOD(GetBasicErrorInfo )(ULONG ulRecordNum,  
    ERRORINFO *pErrorInfo);  
 ```  
   
@@ -247,7 +247,7 @@ Zwraca wskaźnik do interfejsu na obiekt błędu niestandardowego.
 ### <a name="syntax"></a>Składnia  
   
 ```cpp
-      STDMETHOD(GetCustomErrorObject )(ULONG ulRecordNum,  
+STDMETHOD(GetCustomErrorObject )(ULONG ulRecordNum,  
    REFIID riid,  
    IUnknown **ppObject);  
 ```  
@@ -261,7 +261,7 @@ Zwraca [IErrorInfo](https://msdn.microsoft.com/library/ms718112.aspx) wskaźnik 
 ### <a name="syntax"></a>Składnia  
   
 ```cpp
-      STDMETHOD(GetErrorInfo )(ULONG ulRecordNum,  
+STDMETHOD(GetErrorInfo )(ULONG ulRecordNum,  
    LCID lcid,  
    IErrorInfo **ppErrorInfo);  
 ```  
@@ -275,7 +275,7 @@ Zwraca parametry błędów.
 ### <a name="syntax"></a>Składnia  
   
 ```cpp
-      STDMETHOD(GetErrorParameters )(ULONG ulRecordNum,  
+STDMETHOD(GetErrorParameters )(ULONG ulRecordNum,  
    DISPPARAMS *pdispparams);  
 ```  
   
@@ -288,7 +288,7 @@ Zwraca liczbę rekordów w obiektach rekordów OLE DB.
 ### <a name="syntax"></a>Składnia  
   
 ```cpp
-      STDMETHOD(GetRecordCount )(ULONG *pcRecords);  
+STDMETHOD(GetRecordCount )(ULONG *pcRecords);  
 ```  
   
 #### <a name="parameters"></a>Parametry  
@@ -300,10 +300,7 @@ Tablica rekordów błędów.
 ### <a name="syntax"></a>Składnia  
   
 ```cpp
-CAtlArray<  
-RecordClass  
-> m_rgErrors;  
-  
+CAtlArray< RecordClass > m_rgErrors;  
 ```  
   
 ## <a name="see-also"></a>Zobacz też  

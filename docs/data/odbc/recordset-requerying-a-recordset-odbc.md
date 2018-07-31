@@ -19,50 +19,50 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: a3157f416cf6fb7e0fd3b5ad4797b83de218c9ef
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: d043045823806453d509e91e61284fadd5326d23
+ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33091584"
+ms.lasthandoff: 07/30/2018
+ms.locfileid: "39340719"
 ---
 # <a name="recordset-requerying-a-recordset-odbc"></a>Zestaw rekordów: ponowne wysyłanie zapytania do zestawu rekordów (ODBC)
-Ten temat dotyczy klasach MFC ODBC.  
+Ten temat dotyczy klas MFC ODBC.  
   
- W tym temacie wyjaśniono, jak można obiekty zestawów rekordów requery (to znaczy Odśwież) z bazy danych i chcesz to zrobić z [Requery](../../mfc/reference/crecordset-class.md#requery) funkcję elementu członkowskiego.  
+ W tym temacie wyjaśniono, jak obiekty zestawów rekordów umożliwia requery (oznacza to, Odśwież) z bazy danych i warto to zrobić za pomocą [Requery](../../mfc/reference/crecordset-class.md#requery) funkcja elementu członkowskiego.  
   
- Główne powody ponowne wysyłanie zapytania do zestawu rekordów są:  
+ Ponowne wysyłanie zapytania do zestawu rekordów głównej przyczyny są:  
   
--   Przełącz rekordów aktualne względem dodane przez użytkownika lub przez innych użytkowników rekordów i rekordy zostały usunięte przez innych użytkowników (te, które należy usunąć są już uwzględnione w zestawie danych).  
+-   Przenieś rekordów na bieżąco pod kątem rekordów dodanych przez Ciebie lub przez innych użytkowników i rekordy zostały usunięte przez innych użytkowników (te, które możesz usunąć są odzwierciedlone w zestawie danych).  
   
--   Odśwież zestawu rekordów opartego na zmianę wartości parametru.  
+-   Odśwież zestaw rekordów, w zależności od zmieniających się wartości parametrów.  
   
-##  <a name="_core_bringing_the_recordset_up_to_date"></a> Przywracanie w górę rekordów do daty  
- Często warto requery nazwę obiektu zestawu rekordów, aby przenieść ją do aktualne. W środowisku wielodostępnym bazy danych innych użytkownicy mogą wprowadzać zmiany do danych w okresie obowiązywania zestawu rekordów. Aby uzyskać więcej informacji na temat po zestawu rekordów odzwierciedla zmiany wprowadzone przez innych użytkowników i gdy inni użytkownicy zestawów rekordów odzwierciedlać wprowadzone zmiany, zobacz [zestaw rekordów: jak zestawy rekordów aktualizacji rekordów (ODBC)](../../data/odbc/recordset-how-recordsets-update-records-odbc.md) i [dynamiczny](../../data/odbc/dynaset.md).  
+##  <a name="_core_bringing_the_recordset_up_to_date"></a> Dzięki temu zestaw rekordów w górę do daty  
+ Często warto Requery — obiekt zestawu rekordów przełoży się na bieżąco. W środowisku wielodostępnym bazy danych innych użytkownicy mogą wprowadzać zmiany w danych, w czasie trwania rekordów. Aby uzyskać więcej informacji na temat po rekordów odzwierciedla zmiany dokonane przez innych użytkowników i kiedy zestawy rekordów innych użytkowników będą odzwierciedlać wprowadzone zmiany, zobacz [zestaw rekordów: jak zestawy rekordów uaktualniają rekordy (ODBC)](../../data/odbc/recordset-how-recordsets-update-records-odbc.md) i [dynamiczny](../../data/odbc/dynaset.md).  
   
 ##  <a name="_core_requerying_based_on_new_parameters"></a> Ponowne wysyłanie zapytania na podstawie nowych parametrów  
- Inny częste — i równie ważne — użycie [Requery](../../mfc/reference/crecordset-class.md#requery) , należy wybrać nowy zestaw rekordów w oparciu o zmiany wartości parametrów.  
+ Innym często — i są równie ważne — użycie [Requery](../../mfc/reference/crecordset-class.md#requery) , należy wybrać nowy zestaw rekordów, w zależności od zmieniających się wartości parametrów.  
   
 > [!TIP]
->  Szybkość zapytania jest prawdopodobnie znacznie szybsze, jeśli wywołujesz **Requery** ze zmianą wartości parametrów niż Jeśli wywołujesz **Otwórz** ponownie.  
+>  Prędkość wysyłania zapytań jest prawdopodobnie znacznie szybsze, jeśli wywołasz `Requery` zmieniającymi się wartości parametrów niż Jeśli wywołujesz `Open` ponownie.  
   
-##  <a name="_core_requerying_dynasets_vs.._snapshots"></a> Ponowne wysyłanie zapytania vs zestawów dynamicznych. Migawki  
- Zestawy dynamiczne są przeznaczone do wyświetlania zestawu rekordów z danymi dynamicznymi aktualne, chcesz requery zestawów dynamicznych często, jeśli chcesz odzwierciedlić dodatki do innych użytkowników. Migawki, z drugiej strony są przydatne, ponieważ można bezpiecznie polegać na ich zawartości statycznej podczas przygotowania raportów, obliczeń i tak dalej. Nadal czasami może być requery również migawki. W środowisku wielodostępnym migawki danych może spowodować utratę synchronizacji ze źródłem danych w innych użytkowników zmiany bazy danych.  
+##  <a name="_core_requerying_dynasets_vs.._snapshots"></a> Ponowne wysyłanie zapytania zestawów dynamicznych programu vs. Migawki  
+ Ponieważ zestawów dynamicznych są przeznaczone do wyświetlania zestawu rekordów z danymi dynamicznymi aktualne, ma zostać ponowiona zestawów dynamicznych, często, jeśli chcesz odzwierciedlić dodatki innych użytkowników. Migawki, z drugiej strony są przydatne, ponieważ możesz bezpiecznie polegać na ich zawartości statycznej podczas przygotowania raportów, obliczeń i tak dalej. Jednak czasami warto requery również migawki. W środowisku wielodostępnym dane migawki mogą utracić synchronizację ze źródłem danych, jak inni użytkownicy zmiany bazy danych.  
   
-#### <a name="to-requery-a-recordset-object"></a>Aby requery obiekty zestawów rekordów  
+#### <a name="to-requery-a-recordset-object"></a>Aby Requery — obiekty zestawów rekordów  
   
-1.  Wywołanie [Requery](../../mfc/reference/crecordset-class.md#requery) funkcji członkowskiej klasy obiektu.  
+1.  Wywołaj [Requery](../../mfc/reference/crecordset-class.md#requery) funkcja elementu członkowskiego obiektu.  
   
- Alternatywnie możesz zamknąć i ponownie otworzyć oryginalny zestaw rekordów. W obu przypadkach nowych rekordów reprezentuje bieżący stan źródła danych.  
+ Alternatywnie można zamknąć i otworzyć oryginalny zestaw rekordów przez użytkownika. W obu przypadkach nowy zestaw rekordów reprezentuje bieżący stan źródła danych.  
   
- Na przykład zobacz [widoków rekordów: wypełnianie pola listy z drugiego zestawu wierszy](../../data/filling-a-list-box-from-a-second-recordset-mfc-data-access.md).  
+ Aby uzyskać przykład, zobacz [widoków rekordów: wypełnianie pola listy z drugiego zestawu rekordów](../../data/filling-a-list-box-from-a-second-recordset-mfc-data-access.md).  
   
 > [!TIP]
->  Aby zoptymalizować **Requery** wydajności, należy unikać zmiany w zestawie rekordów [filtru](../../data/odbc/recordset-filtering-records-odbc.md) lub [sortowania](../../data/odbc/recordset-sorting-records-odbc.md). Zmień wartość w parametru przed wywołaniem **Requery**.  
+>  Aby zoptymalizować `Requery` wydajność, unikanie zmieniania zestawu rekordów [filtru](../../data/odbc/recordset-filtering-records-odbc.md) lub [sortowania](../../data/odbc/recordset-sorting-records-odbc.md). Zmień wartość w parametrze przed wywołaniem `Requery`.  
   
- Jeśli **Requery** wywołanie się nie powiedzie, można ponowić próby połączenia; w przeciwnym razie aplikacji należy zakończyć bezpiecznie zamknąć. Wywołanie **Requery** lub **Otwórz** może zakończyć się niepowodzeniem dla każdego z kilku powodów. Być może występuje błąd sieciowy; lub podczas wywołania po wydaniu istniejących danych, ale przed nowe dane są uzyskiwane, inny użytkownik może uzyskać wyłączny dostęp; lub można go usunąć tabeli, od którego zależy zestawu rekordów.  
+ Jeśli `Requery` wywołanie zakończy się niepowodzeniem, możesz ponowić próbę wywołania; w przeciwnym razie aplikacja powinna zakończyć działanie zostanie wyłączone poprawnie. Wywołanie `Requery` lub `Open` może zakończyć się niepowodzeniem dla każdego z kilku powodów. Być może występuje błąd sieciowy; Możesz również podczas wywołania po wydaniu istniejących danych, ale zanim nowe dane są uzyskiwane, inny użytkownik może uzyskać wyłącznego dostępu; lub można go usunąć tabeli, od którego zależy rekordów.  
   
 ## <a name="see-also"></a>Zobacz też  
  [Zestaw rekordów (ODBC)](../../data/odbc/recordset-odbc.md)   
- [Zestaw rekordów: Dynamiczne wiązanie kolumn danych (ODBC)](../../data/odbc/recordset-dynamically-binding-data-columns-odbc.md)   
+ [Zestaw rekordów: Dynamiczne powiązanie kolumn danych (ODBC)](../../data/odbc/recordset-dynamically-binding-data-columns-odbc.md)   
  [Zestaw rekordów: tworzenie i zamykanie zestawów rekordów (ODBC)](../../data/odbc/recordset-creating-and-closing-recordsets-odbc.md)

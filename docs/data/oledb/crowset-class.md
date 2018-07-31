@@ -211,7 +211,7 @@ f1_keywords:
 - CRowset<TAccessor>.UpdateAll
 - ATL.CRowset<TAccessor>.UpdateAll
 - UpdateAll
-- CRowset.UpdateAll
+- CRowset.UpdateAl
 - ATL::CRowset<TAccessor>::UpdateAll
 - CRowset<TAccessor>::UpdateAll
 - ATL::CRowset::UpdateAll
@@ -249,12 +249,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: d65f9c7c796724a77935693690ac73357867dab0
-ms.sourcegitcommit: b217daee32d3413cf33753d9b4dc35a0022b1bfa
+ms.openlocfilehash: f63fa932de6dc578fa29dd66c9b4030a8aa3140c
+ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/24/2018
-ms.locfileid: "39233519"
+ms.lasthandoff: 07/30/2018
+ms.locfileid: "39338236"
 ---
 # <a name="crowset-class"></a>Klasa CRowset
 Hermetyzuje obiektu zestawu wierszy OLE DB i kilka powiązanych interfejsów i dostarcza metod manipulowania wierszy danych.  
@@ -266,7 +266,7 @@ template <class TAccessor = CAccessorBase>
 class CRowset  
 ```  
   
-#### <a name="parameters"></a>Parametry  
+### <a name="parameters"></a>Parametry  
  *TAccessor*  
  Klasa metody dostępu. Wartość domyślna to `CAccessorBase`.  
   
@@ -316,7 +316,6 @@ Wywołania [IRowset::AddRefRows](https://msdn.microsoft.com/library/ms719619.asp
   
 ```cpp
 HRESULT AddRefRows() throw();  
-  
 ```  
   
 ### <a name="return-value"></a>Wartość zwracana  
@@ -332,7 +331,6 @@ Wersje wierszy i bieżący [IRowset](https://msdn.microsoft.com/library/ms720986
   
 ```cpp
 void Close() throw();  
-  
 ```  
   
 ### <a name="remarks"></a>Uwagi  
@@ -373,7 +371,7 @@ Tworzy nową `CRowset` obiektu i (opcjonalnie) kojarzy ją z [IRowset](https://m
 ### <a name="syntax"></a>Składnia  
   
 ```cpp
-      CRowset();   
+CRowset();   
 
 CRowset(IRowset* pRowset);  
 ```  
@@ -389,7 +387,6 @@ Wywołania [IRowsetChange::DeleteRows](https://msdn.microsoft.com/library/ms7243
   
 ```cpp
 HRESULT Delete() const throw();  
-  
 ```  
   
 ### <a name="return-value"></a>Wartość zwracana  
@@ -402,7 +399,7 @@ Wyszukuje następny zgodny wiersz po zakładką.
   
 ```cpp
 HRESULT FindNextRow(DBCOMPAREOP op,   
-  BYTE* pData,   
+   BYTE* pData,   
    DBTYPE wType,   
    DBLENGTH nLength,   
    BYTE bPrecision,   
@@ -481,7 +478,6 @@ Pobiera dane z zestawu wierszy kopię wiersza.
 ```cpp
 HRESULT GetData() throw();   
 
-
 HRESULT GetData(int nAccessor) throw();  
 ```  
   
@@ -502,7 +498,7 @@ Pobiera dane z bieżącego wiersza i umieszcza go w określonego bufora.
   
 ```cpp
 HRESULT GetDataHere(int nAccessor,   
-  void* pBuffer) throw();  
+   void* pBuffer) throw();  
 ```  
   
 #### <a name="parameters"></a>Parametry  
@@ -525,7 +521,6 @@ Wywołania `IRowsetUpdate::GetOriginalData` można pobrać danych ostatnio pobra
   
 ```cpp
 HRESULT GetOriginalData() throw();  
-  
 ```  
   
 ### <a name="return-value"></a>Wartość zwracana  
@@ -610,7 +605,6 @@ Przenosi kursor do położenie początkowe i pobiera początkowy wiersz.
   
 ```cpp
 HRESULT MoveFirst() throw();  
-  
 ```  
   
 ### <a name="return-value"></a>Wartość zwracana  
@@ -626,7 +620,6 @@ Przenosi kursor do ostatniego wiersza.
   
 ```cpp
 HRESULT MoveLast() throw();  
-  
 ```  
   
 ### <a name="return-value"></a>Wartość zwracana  
@@ -643,7 +636,9 @@ Przenosi kursor do następnego rekordu.
 ### <a name="syntax"></a>Składnia  
   
 ```cpp
-HRESULT MoveNext() throw();HRESULT MoveNext(LONG lSkip,   
+HRESULT MoveNext() throw();
+
+HRESULT MoveNext(LONG lSkip,   
    bool bForward= true) throw();  
 ```  
   
@@ -675,7 +670,6 @@ Przenosi kursor do poprzedniego rekordu.
   
 ```cpp
 HRESULT MovePrev() throw();  
-  
 ```  
   
 ### <a name="return-value"></a>Wartość zwracana  
@@ -748,7 +742,6 @@ Wywołania [IRowset::ReleaseRows](https://msdn.microsoft.com/library/ms719771.as
   
 ```cpp
 HRESULT ReleaseRows() throw();  
-  
 ```  
   
 ### <a name="return-value"></a>Wartość zwracana  
@@ -761,7 +754,6 @@ Ustawia wartości danych w jednej lub kilku kolumn w wierszu.
   
 ```cpp
 HRESULT SetData() const throw();   
-
 
 HRESULT SetData(int nAccessor) const throw();  
 ```  

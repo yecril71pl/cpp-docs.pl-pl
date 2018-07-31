@@ -1,5 +1,5 @@
 ---
-title: Dokumentacja szablonów OLE DB Provider | Dokumentacja firmy Microsoft
+title: Szablony dostawcy OLE DB dokumentacja | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,105 +17,105 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 040e8a5e244b7978a2b9ead394e243207939655c
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 42909a9ddc24131c759886c4d169c4fd7484ca98
+ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33112423"
+ms.lasthandoff: 07/30/2018
+ms.locfileid: "39340420"
 ---
 # <a name="ole-db-provider-templates-reference"></a>Szablony dostawców OLE DB — kompendium
-Klasy i interfejsy dla OLE DB szablonów dostawców można podzielić na następujące kategorie. Materiałów referencyjnych zawiera także informacje o [makra dla szablony OLE DB Provider](../../data/oledb/macros-for-ole-db-provider-templates.md).  
+Klasy i interfejsy dla szablony OLE DB Provider można podzielić na następujące kategorie. Materiały referencyjne zawiera również informacje o [makra szablony OLE DB Provider](../../data/oledb/macros-for-ole-db-provider-templates.md).  
   
- Klasy, użyj następującej konwencji nazewnictwa: klasa o nazwie przy użyciu wzorca **IWidgetImpl** może zapewniać implementację interfejsu **IWidget**.  
+ Klasy, użyj następującej konwencji nazewnictwa: klasa o nazwie za pomocą wzorca `IWidgetImpl` będzie zapewniać implementację interfejsu `IWidget`.  
   
 ## <a name="session-classes"></a>Klasy sesji  
  [IDBCreateSessionImpl](../../data/oledb/idbcreatesessionimpl-class.md)  
- Tworzy nową sesję z obiektu źródła danych i zwraca żądanego interfejsu na nowo utworzony sesji. Obowiązkowego interfejsu na obiekty źródła danych.  
+ Tworzy nową sesję z obiektu źródła danych i zwraca żądanego interfejsu na nowo utworzoną sesji. Obowiązkowego interfejsu na obiekty źródła danych.  
   
  [Isessionpropertiesimpl —](../../data/oledb/isessionpropertiesimpl-class.md)  
- Implementuje właściwości sesji przez wywołanie metody statycznej funkcji zdefiniowanej przez mapę zestawu właściwości. Mapa zestaw właściwości powinny być określone w klasie sesji. Obowiązkowego interfejsu na sesji.  
+ Implementuje właściwości sesji, wywołując funkcję statyczną, zdefiniowane przez mapowanie zestawu właściwości. Mapa zestawu właściwości powinny być określone w swojej klasy sesji. Obowiązkowego interfejsu w ramach sesji.  
   
 ## <a name="rowset-classes"></a>Klasy zestawów wierszy  
  [Crowsetimpl —](../../data/oledb/crowsetimpl-class.md)  
   
- Udostępnia standardowej implementacji zestawu wierszy OLE DB bez konieczności dziedziczenie wielokrotne wiele implementacji interfejsów. Jedyną metodą, dla której należy podać implementacja jest **Execute**.  
+ Zapewnia standardową implementację zestawu wierszy OLE DB bez konieczności wielokrotnego dziedziczenia wiele implementacji interfejsów. Jedyną metodą, dla którego należy podać implementacja jest `Execute`.  
   
  [CSimpleRow](../../data/oledb/csimplerow-class.md)  
- Udostępnia domyślną implementację dla dojście do wiersza, który jest używany w `IRowsetImpl` klasy. Dojście do wiersza jest logicznie unikatowy tag dla wiersza wynik. `IRowsetImpl` Tworzy nowy `CSimpleRow` dla każdego wiersza w wymagane `IRowsetImpl::GetNextRows`.  
+ Udostępnia domyślną implementację dla dojście do wiersza, który jest używany w `IRowsetImpl` klasy. Dojście do wiersza jest logicznie unikatowych tagów na podstawie wyniku wiersza. `IRowsetImpl` Tworzy nową `CSimpleRow` dla każdego wiersza w wymagane `IRowsetImpl::GetNextRows`.  
   
  [Iaccessorimpl —](../../data/oledb/iaccessorimpl-class.md)  
- OLE DB wymaga dostawców do zaimplementowania **HACCESSOR**, która jest tag do tablicy **DBBINDING** struktury. Udostępnia **HACCESSOR**, które są adresy **BindType** struktury. Obowiązkowe na polecenia i zestawy wierszy.  
+ OLE DB wymaga dostawcy zaimplementować `HACCESSOR`, który jest tag do tablicy `DBBINDING` struktury. Udostępnia `HACCESSOR`s, które są adresy `BindType` struktury. Obowiązkowe na polecenia i zestawy wierszy.  
   
  [IColumnsInfoImpl](../../data/oledb/icolumnsinfoimpl-class.md)  
- Obiekty delegowane do statycznych funkcji zdefiniowanej przez dostawcę mapowania kolumn. Obowiązkowego interfejsu na polecenia i zestawy wierszy.  
+ Delegaty do statycznej funkcji zdefiniowane przez mapowanie kolumn w dostawcy. Obowiązkowego interfejsu na polecenia i zestawy wierszy.  
   
  [IConvertTypeImpl](../../data/oledb/iconverttypeimpl-class.md)  
- Zapewnia informacje o dostępności konwersje typów polecenia lub w zestawie wierszy. Obowiązkowe poleceń, zestawy wierszy i zestawy wierszy indeksu. Implementuje **IConvertType** interfejsu przez delegowanie do obiektu konwersji dostarczonych przez OLE DB.  
+ Udostępnia informacje o dostępności konwersje typów dotyczącą polecenia lub w zestawie wierszy. Obowiązkowe w poleceń, zestawy wierszy i zestawy wierszy indeksu. Implementuje `IConvertType` interfejsu przez delegowanie do konwersji obiektu pochodzącego z OLE DB.  
   
  [Idbschemarowsetimpl —](../../data/oledb/idbschemarowsetimpl-class.md)  
- Implementuje **IDBSchemaRowset** interfejsu i funkcja twórcy szablonowej `CreateSchemaRowset`.  
+ Implementuje `IDBSchemaRowset` interfejsu i funkcja szablonowej twórcy `CreateSchemaRowset`.  
   
  [Iopenrowsetimpl —](../../data/oledb/iopenrowsetimpl-class.md)  
- Otwiera i zwraca zestaw wierszy, która obejmuje wszystkie wiersze z jednej tabeli podstawowej lub indeks. Obowiązkowego interfejsu dla obiekt sesji.  
+ Zostanie otwarty i zwraca zestawu wierszy, który zawiera wszystkie wiersze z jednej tabeli bazowej lub indeksu. Obowiązkowego interfejsu dla obiektu sesji.  
   
  [IRowsetChangeImpl](../../data/oledb/irowsetchangeimpl-class.md)  
- Implementuje OLE DB [IRowsetChange](https://msdn.microsoft.com/en-us/library/ms715790.aspx) interfejs, który umożliwia aktualizowania wartości kolumn w istniejących wierszy, usuwanie wierszy i wstawiania nowych wierszy.  
+ Implementuje OLE DB [IRowsetChange](https://msdn.microsoft.com/library/ms715790.aspx) interfejs, który umożliwia aktualizowanie wartości kolumn w istniejących wierszy: usuwanie wierszy, a następnie wstawianie nowych wierszy.  
   
  [Irowsetcreatorimpl —](../../data/oledb/irowsetcreatorimpl-class.md)  
- Ta klasa dziedziczy [IObjectWithSite](http://msdn.microsoft.com/library/windows/desktop/ms693765) i zastępuje [IObjectWithSite::SetSite](http://msdn.microsoft.com/library/windows/desktop/ms683869). `IRowsetCreatorImpl` wykonuje te same funkcje jak `IObjectWithSite` , lecz także właściwości OLE DB **DBPROPCANSCROLLBACKWARDS** i **DBPROPCANFETCHBACKWARDS**.  
+ Ta klasa dziedziczy [IObjectWithSite](http://msdn.microsoft.com/library/windows/desktop/ms693765) i zastępuje [IObjectWithSite::SetSite](http://msdn.microsoft.com/library/windows/desktop/ms683869). `IRowsetCreatorImpl` wykonuje te same funkcje co `IObjectWithSite` , lecz także właściwości OLE DB `DBPROPCANSCROLLBACKWARDS` i `DBPROPCANFETCHBACKWARDS`.  
   
  [Irowsetidentityimpl —](../../data/oledb/irowsetidentityimpl-class.md)  
- Implementuje **IRowsetIdentity** interfejs, który umożliwia porównanie, czy dwa wiersze danych są identyczne, czy nie.  
+ Implementuje `IRowsetIdentity` interfejs, który umożliwia porównanie, czy dwa wiersze danych są identyczne, czy nie.  
   
  [Irowsetimpl —](../../data/oledb/irowsetimpl-class.md)  
- Udostępnia implementację elementu `IRowset` interfejsu, który jest interfejs podstawowy zestaw wierszy.  
+ Udostępnia implementację `IRowset` interfejs, który jest interfejsem podstawowy zestaw wierszy.  
   
  [Irowsetinfoimpl —](../../data/oledb/irowsetinfoimpl-class.md)  
  Implementuje właściwości zestawu wierszy za pomocą właściwości ustaw mapy zdefiniowany w klasie polecenia. Obowiązkowego interfejsu na zestawów wierszy.  
   
  [Irowsetlocateimpl —](../../data/oledb/irowsetlocateimpl-class.md)  
- Implementuje OLE DB [irowsetlocate —](https://msdn.microsoft.com/en-us/library/ms721190.aspx) interfejs, który pobiera dowolne wiersze z zestawu wierszy. Obsługuje OLE DB zakładek w zestawie wierszy, aby wierszy pochodne względem tej klasy.  
+ Implementuje OLE DB [irowsetlocate —](https://msdn.microsoft.com/library/ms721190.aspx) interfejs, który pobiera wiersze z dowolnego z zestawu wierszy. Aby zapewnić obsługę OLE DB zakładki w zestawie wierszy, należy pochodne względem tej klasy zestawu wierszy.  
   
  [IRowsetNotifyCP](../../data/oledb/irowsetnotifycp-class.md)  
- Implementuje emisji funkcji w celu poinformowania odbiorników w punkcie połączenia **IID_IRowsetNotify** zmian zawartości zestawu wierszy. Implementowanie konsumentów, które obsługują powiadomienia [IRowsetNotify](https://msdn.microsoft.com/en-us/library/ms712959.aspx) i zarejestruj go w tym punkcie połączenia.  
+ Implementuje funkcje, które można wykonać funkcji advise odbiorników dla punktu połączenia można rozgłaszać `IID_IRowsetNotify` zmian zawartości zestawu wierszy. Implementowanie odbiorców, którzy obsługi powiadomień [IRowsetNotify](https://msdn.microsoft.com/library/ms712959.aspx) i zarejestrować ją w tym punkcie połączenia.  
   
  [IRowsetUpdateImpl](../../data/oledb/irowsetupdateimpl-class.md)  
- Implementuje OLE DB [IRowsetUpdate](https://msdn.microsoft.com/en-us/library/ms714401.aspx) interfejs, który umożliwia opóźnienia przekazania zmiany wprowadzone w [IRowsetChange](https://msdn.microsoft.com/en-us/library/ms715790.aspx) do źródła danych, a Cofnij zmiany przed ich przesłaniem.  
+ Implementuje OLE DB [IRowsetUpdate](https://msdn.microsoft.com/library/ms714401.aspx) interfejs, który umożliwia opóźnienie transmisji w trybie zmiany wprowadzone za pomocą [IRowsetChange](https://msdn.microsoft.com/library/ms715790.aspx) do źródła danych i Cofnij zmiany przed rozpoczęciem transmisji.  
   
 ## <a name="command-classes"></a>Klasy poleceń  
  [Icommandimpl —](../../data/oledb/icommandimpl-class.md)  
- Udostępnia implementację elementu `ICommand` interfejsu. Ten interfejs nie jest widoczne, ale jest obsługiwany przez **icommandtextimpl —**. Obowiązkowego interfejsu dla obiektu polecenia.  
+ Udostępnia implementację `ICommand` interfejsu. Ten interfejs nie jest widoczny, ale jest obsługiwany przez `ICommandTextImpl`. Obowiązkowego interfejsu dla obiektu polecenia.  
   
  [Icommandpropertiesimpl —](../../data/oledb/icommandpropertiesimpl-class.md)  
- Ta implementacja **ICommandProperties** interfejsu jest udostępniany przez funkcję statyczną zdefiniowane przez `BEGIN_PROPSET_MAP` makra. Obowiązkowe na polecenia.  
+ Ta implementacja `ICommandProperties` interfejsu są dostarczane przez funkcję statyczną, zdefiniowane przez `BEGIN_PROPSET_MAP` makra. Obowiązkowe w poleceniach.  
   
  [Icommandtextimpl —](../../data/oledb/icommandtextimpl-class.md)  
- Ustawia przechowuje i zwraca tekst polecenia. Obowiązkowe na polecenia.  
+ Ustawia, przechowuje i zwraca tekst polecenia. Obowiązkowe w poleceniach.  
   
  [IDBCreateCommandImpl](../../data/oledb/idbcreatecommandimpl-class.md)  
- Tworzy nowe polecenie z obiektu sesji i zwraca żądanego interfejsu na nowo utworzony polecenia. Opcjonalny interfejs dla obiektów sesji.  
+ Tworzy nowe polecenie z obiektu session i zwraca żądanego interfejsu na nowo utworzony polecenia. Opcjonalny interfejs dla obiektów sesji.  
   
- Klasy inne polecenia są `IColumnsInfoImpl` i `IAccessorImpl`, które zostały opisane w powyższej sekcji klasy zestawów wierszy.  
+ Inne klasy polecenia są `IColumnsInfoImpl` i `IAccessorImpl`, które zostały opisane w powyższej sekcji klasy zestawów wierszy.  
   
 ## <a name="data-source-classes"></a>Klasy źródła danych  
  [IDBInitializeImpl](../../data/oledb/idbinitializeimpl-class.md)  
- Tworzy i usuwa połączenie z klienta. Obowiązkowego interfejsu na obiekty źródła danych i opcjonalnie interfejs moduły wyliczające.  
+ Tworzy i usuwa połączenie z konsumenta. Obowiązkowego interfejsu na obiekty źródła danych i opcjonalnie interfejsu na modułach wyliczających.  
   
  [Idbpropertiesimpl —](../../data/oledb/idbpropertiesimpl-class.md)  
- `IDBProperties` jest obowiązkowego interfejsu dla obiekty źródła danych i opcjonalny interfejs dla wyliczenia. Jednak jeśli udostępnia moduł wyliczający **IDBInitialize**, musi on ujawniać `IDBProperties` (właściwości źródła danych).  
+ `IDBProperties` jest obowiązkowego interfejsu dla obiekty źródła danych i opcjonalny interfejs dla modułów wyliczających. Jednakże jeśli moduł wyliczający udostępnia `IDBInitialize`, musi uwidaczniać `IDBProperties` (właściwości w źródle danych).  
   
  [IGetDataSourceImpl](../../data/oledb/igetdatasourceimpl-class.md)  
- Uzyskuje wskaźnik interfejsu do obiektu źródła danych. Obowiązkowego interfejsu w tej sesji.  
+ Uzyskuje wskaźnik interfejsu do obiektu źródła danych. Obowiązkowego interfejsu sesji.  
   
 ## <a name="other-classes"></a>Inne klasy  
  [Cutlprops —](../../data/oledb/cutlprops-class.md)  
- Implementuje właściwości dla różnych interfejsy właściwości OLE DB (na przykład `IDBProperties`, **ISessionProperties**, i `IRowsetInfo`).  
+ Implementuje właściwości dla różnych interfejsów właściwość OLE DB (na przykład `IDBProperties`, `ISessionProperties`, i `IRowsetInfo`).  
   
  [Ierrorrecordsimpl —](../../data/oledb/ierrorrecordsimpl-class.md)  
   
- Implementuje OLE DB [IErrorRecords](https://msdn.microsoft.com/en-us/library/ms718112.aspx) interfejsu, dodawanie rekordów i pobieranie rekordów z elementem członkowskim danych.  
+ Implementuje OLE DB [IErrorRecords](https://msdn.microsoft.com/library/ms718112.aspx) interfejsu, dodawanie rekordów do i pobierania rekordów z element członkowski danych.  
   
 ## <a name="see-also"></a>Zobacz też  
- [Dokumentacja szablonów konsumentów OLE DB](../../data/oledb/ole-db-consumer-templates-reference.md)   
+ [OLE DB — Kompendium szablonów konsumentów](../../data/oledb/ole-db-consumer-templates-reference.md)   
  [Szablony OLE DB](../../data/oledb/ole-db-templates.md)

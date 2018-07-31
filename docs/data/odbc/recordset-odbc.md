@@ -24,63 +24,63 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 0c59de3c5db2e1ec658a09279cb42e2833a4109e
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: b6b2e26ebfc3c8ebbb2d64e499c4d49db0e3fc25
+ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33092486"
+ms.lasthandoff: 07/30/2018
+ms.locfileid: "39338288"
 ---
 # <a name="recordset-odbc"></a>Zestaw rekordów (ODBC)
-Ten temat dotyczy klasach MFC ODBC.  
+Ten temat dotyczy klas MFC ODBC.  
   
- A [crecordset —](../../mfc/reference/crecordset-class.md) obiekt reprezentuje zestaw rekordów wybrane źródła danych. Rekordy można z:  
+ A [CRecordset](../../mfc/reference/crecordset-class.md) obiekt reprezentuje zestaw rekordów wybranych ze źródła danych. Rekordy mogą pochodzić z:  
   
 -   Tabela.  
   
 -   Zapytanie.  
   
--   Procedury przechowywanej, która uzyskuje dostęp do co najmniej jedna tabela.  
+-   Procedura składowana, która uzyskuje dostęp do co najmniej jedna tabela.  
   
- Przykład zestawu rekordów z tabeli jest "wszystkich klientów", który uzyskuje dostęp do tabeli klienta. Przykładem kwerendy jest "wszystkie faktury Jan Nowak". Przykład zestawu rekordów, oparty na procedurze składowanej (nazywane również wstępnie zdefiniowanego zapytania) to "wszystkie konta delinquent," który wywołuje procedurę przechowywaną w bazie danych zaplecza. Zestaw rekordów może dołączyć do co najmniej dwie tabele z tego samego źródła danych, ale nie tabel z różnych źródeł danych.  
-  
-> [!NOTE]
->  Aby dowiedzieć się, jak wyprowadzanie klas rekordów z kreatorów, zobacz [Dodawanie konsumenta MFC ODBC](../../mfc/reference/adding-an-mfc-odbc-consumer.md) i [obsługi bazy danych, Kreator aplikacji MFC](../../mfc/reference/database-support-mfc-application-wizard.md).  
+ Przykład zestawu rekordów na podstawie tabeli jest "wszyscy klienci", który uzyskuje dostęp do tabeli klientów. Przykład zapytania to "wszystkie faktury dla Jan Kowalski". Przykład zestawu rekordów, oparte na procedury składowanej (nazywane również wstępnie zdefiniowanego zapytania) jest "wszystkie konta bardzo" który wywołuje procedurę składowaną w bazie danych zaplecza. Zestaw rekordów, mogą dołączyć do co najmniej dwóch tabel, z tego samego źródła danych, ale nie tabel pochodzących z różnych źródeł danych.  
   
 > [!NOTE]
->  Niektóre sterowniki ODBC obsługuje widoków bazy danych. Widok, w tym sensie jest kwerenda pierwotnie utworzone SQL `CREATE VIEW` instrukcji. Kreatorów aktualnie nie obsługują widoków, ale istnieje możliwość kodu ta obsługa samodzielnie.  
+>  Aby dowiedzieć się, jak wyprowadzanie klas zestawu rekordów przy użyciu kreatorów, zobacz [Dodawanie konsumenta MFC ODBC](../../mfc/reference/adding-an-mfc-odbc-consumer.md) i [obsługi bazy danych, Kreator aplikacji MFC](../../mfc/reference/database-support-mfc-application-wizard.md).  
   
-##  <a name="_core_recordset_capabilities"></a> Możliwości zestawu rekordów  
- Wszystkie obiekty rekordów mają następujące możliwości:  
+> [!NOTE]
+>  Niektóre sterowniki ODBC obsługi widoków bazy danych. Widok, w tym sensie to zapytania utworzone za pomocą języka SQL `CREATE VIEW` instrukcji. Kreatorzy aktualnie nie obsługują widoków, ale można kodu do obsługi tej samodzielnie.  
   
--   Jeśli źródło danych nie jest tylko do odczytu, można określić, że można zestawu rekordów [aktualizowalnych](../../data/odbc/recordset-adding-updating-and-deleting-records-odbc.md), [appendable](../../data/odbc/recordset-adding-updating-and-deleting-records-odbc.md), lub w trybie tylko do odczytu. Jeśli zestaw rekordów jest aktualizowalne, możesz wybrać pesymistyczne lub optymistycznej [blokowania](../../data/odbc/recordset-locking-records-odbc.md) przedstawić metody, sterownik dostarcza odpowiednią obsługę blokowania. Jeśli źródło danych jest tylko do odczytu, zestaw rekordów będą tylko do odczytu.  
+##  <a name="_core_recordset_capabilities"></a> Funkcje zestawu rekordów  
+ Wszystkie obiekty w zestawie rekordów mają następujące możliwości:  
   
--   Można wywołać elementu członkowskiego funkcji [przewijania](../../data/odbc/recordset-scrolling-odbc.md) za pośrednictwem wybranych rekordów.  
+-   Jeśli źródło danych nie jest tylko do odczytu, możesz określić, że rekordów być [aktualizowalnych](../../data/odbc/recordset-adding-updating-and-deleting-records-odbc.md), [appendable](../../data/odbc/recordset-adding-updating-and-deleting-records-odbc.md), lub tylko do odczytu. Jeśli zestaw rekordów jest można aktualizować, możesz wybrać optymistycznego lub pesymistycznego [blokowania](../../data/odbc/recordset-locking-records-odbc.md) metod, pod warunkiem sterownik dostarcza odpowiednią obsługę blokowania. Jeśli źródło danych jest tylko do odczytu, zestaw rekordów będzie tylko do odczytu.  
   
--   Możesz [filtru](../../data/odbc/recordset-filtering-records-odbc.md) rekordów, aby ograniczyć, które rekordy są wybierane spośród dostępnych.  
+-   Element członkowski można wywołać funkcji [przewijania](../../data/odbc/recordset-scrolling-odbc.md) wybrane rekordy.  
+  
+-   Możesz [filtru](../../data/odbc/recordset-filtering-records-odbc.md) rekordy, które mają ograniczenia, które rekordy są wybierane spośród dostępnych.  
   
 -   Możesz [sortowania](../../data/odbc/recordset-sorting-records-odbc.md) rekordy w kolejności rosnącej lub malejącej, oparte na co najmniej jedną kolumnę.  
   
 -   Możesz [parametryzacja](../../data/odbc/recordset-parameterizing-a-recordset-odbc.md) rekordów do kwalifikowania rekordów zaznaczenie w czasie wykonywania.  
   
 ##  <a name="_core_snapshots_and_dynasets"></a> Migawki i zestawów dynamicznych  
- Istnieją dwa główne typy zestawy rekordów: [migawki](../../data/odbc/snapshot.md) i [zestawów dynamicznych](../../data/odbc/dynaset.md). Są obsługiwane przez klasę `CRecordset`. Każdy udostępnia typowe cechy wszystkie zestawy rekordów, ale każdy rozszerzają często używane funkcje w specjalne sposób. Migawki Podaj widok statyczny danych, a także są przydatne w przypadku raportów i innych sytuacjach, w których chcesz widok danych znajdowały się w określonym czasie. Zestawy dynamiczne są przydatne, gdy wymagane są aktualizacje wprowadzone przez innych użytkowników, aby były widoczne w zestawie rekordów bez konieczności requery lub Odśwież zestaw rekordów. Migawki i zestawów dynamicznych może być można aktualizować lub tylko do odczytu. Do uwzględnienia rekordy dodane lub usunięte przez innych użytkowników, zadzwoń [CRecordset::Requery](../../mfc/reference/crecordset-class.md#requery).  
+ Istnieją dwa typy jednostki zestawów rekordów: [migawek](../../data/odbc/snapshot.md) i [zestawów dynamicznych](../../data/odbc/dynaset.md). Oba są obsługiwane przez klasę `CRecordset`. Każdy udostępnia typowe cechy wszystkich zestawów rekordów, ale każdy rozszerzają typowych funkcji w jego własnej wyspecjalizowane sposób. Migawki zapewniają widok statyczny danych i są przydatne w przypadku raportów i innych sytuacjach, w których mają wgląd w dane znajdowały się w określonym czasie. Zestawy dynamiczne są przydatne, jeśli chcesz, aby aktualizacje wprowadzone przez innych użytkowników były widoczne w zestawie rekordów bez konieczności Requery — ani nie odświeżaj zestawu rekordów. Migawki i zestawów dynamicznych, może być można aktualizować lub tylko do odczytu. Do odzwierciedlenia rekordów dodanych lub usunięty przez innych użytkowników, wywołaj [CRecordset::Requery](../../mfc/reference/crecordset-class.md#requery).  
   
- `CRecordset` Umożliwia również dwa typy zestawów rekordów: dynamiczne zestawy rekordów i zestawy rekordów tylko do przodu. Dynamiczne zestawy rekordów są podobne do zestawów dynamicznych; jednak dynamiczne zestawy rekordów odzwierciedla wszystkie rekordy dodane lub usunięte bez wywoływania elementu `CRecordset::Requery`. Z tego powodu dynamiczne zestawy rekordów są zazwyczaj kosztowne względem czasu przetwarzania w systemie DBMS i wiele sterowników ODBC ich nie obsługują. Z kolei zestawy rekordów tylko do przodu, podaj najbardziej wydajne dostęp do danych dla zestawów rekordów, które nie wymagają aktualizacji lub przewijanie do tyłu. Na przykład można użyć do migracji danych z jednego źródła danych do innego, gdzie należy tylko przenieść dane znajdujące się w kierunku do przodu rekordów. Aby użyć rekordów, należy wykonać obie następujące czynności:  
+ `CRecordset` Umożliwia również dwa inne rodzaje zestawów rekordów: dynamiczne zestawy rekordów i zestawów rekordów tylko do przodu. Dynamiczne zestawy rekordów są podobne do zestawów dynamicznych; jednak dynamiczne zestawy rekordów odzwierciedla wszelkie rekordy dodawane lub usuwane bez wywoływania `CRecordset::Requery`. Z tego powodu dynamiczne zestawy rekordów są zwykle kosztowne względem czasu przetwarzania w systemu DBMS, a wiele sterowników ODBC nie obsługiwać takiej osoby. Z kolei zestawy rekordów tylko do przodu, podaj najbardziej efektywny sposób dostępu do danych dla zestawów rekordów, które nie wymagają aktualizacji lub przewijanie do tyłu. Może na przykład użyć rekordów, aby przeprowadzić migrację danych z jednego źródła danych do innego, gdzie należy tylko przenieść dane znajdujące się w kierunku do przodu. Aby korzystać z rekordów, należy wykonać obie z następujących czynności:  
   
--   Przekaż opcję **CRecordset::forwardOnly** jako `nOpenType` parametr [Otwórz](../../mfc/reference/crecordset-class.md#open) funkcję elementu członkowskiego.  
+-   Przekaż opcję `CRecordset::forwardOnly` jako *nOpenType* parametru [Otwórz](../../mfc/reference/crecordset-class.md#open) funkcja elementu członkowskiego.  
   
--   Określ **CRecordset::readOnly** w `dwOptions` parametr **Otwórz**.  
+-   Określ `CRecordset::readOnly` w *dwOptions* parametru `Open`.  
   
     > [!NOTE]
-    >  Uzyskać informacje o pomocy technicznej dynamiczny, wymagania dotyczące sterownika ODBC, zobacz [ODBC](../../data/odbc/odbc-basics.md). Lista sterowników ODBC zawarte w tej wersji programu Visual C++ oraz informacje na temat uzyskiwania dodatkowe sterowniki, zobacz [lista sterowników ODBC](../../data/odbc/odbc-driver-list.md).  
+    >  Aby uzyskać informacji na temat obsługi dynamiczny, wymagania dotyczące sterownika ODBC, zobacz [ODBC](../../data/odbc/odbc-basics.md). Lista sterowników ODBC zawarte w tej wersji programu Visual C++ i informacji na temat uzyskiwania dodatkowych sterowników, zobacz [lista sterowników ODBC](../../data/odbc/odbc-driver-list.md).  
   
 ##  <a name="_core_your_recordsets"></a> Zestawach rekordów  
- Dla każdego różne tabeli, widoku lub procedury przechowywanej, która ma dostęp do zwykle zdefiniuj klasę pochodzącą od `CRecordset`. (Wyjątkiem jest sprzężenia bazy danych, w której jeden zestaw rekordów reprezentuje kolumnę z dwóch lub więcej tabel). Gdy klasa wyprowadzona z zestawu rekordów, można włączać mechanizm pól rekordów (RFX) programu exchange lub mechanizm wymiany (zbiorczego RFX) pól rekordów zbiorczego, które są podobne do mechanizmu okna dialogowego danych programu exchange (DDX). RFX i RFX zbiorczego uprościć transferu danych ze źródła danych do zestawu rekordów; RFX dodatkowo przesyła dane z zestawu rekordów w źródle danych. Aby uzyskać więcej informacji, zobacz [wymiany pól rekordów (RFX)](../../data/odbc/record-field-exchange-rfx.md) i [zestaw rekordów: pobieranie rekordów zbiorczego (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md).  
+ Dla każdego distinct tabeli, widoku lub procedury składowanej, który chcesz uzyskać dostęp do zazwyczaj zdefiniować klasę pochodną `CRecordset`. (Wyjątek stanowi połączenie bazy danych, w którym jeden zestaw rekordów reprezentuje kolumn z co najmniej dwóch tabel). Gdy klasa wyprowadzona z zestawu rekordów, możesz włączyć mechanizm wymiany (RFX) pola rekordów lub mechanizm wymiany (zbiorcze RFX) pola rekordów zbiorczego, które są podobne do mechanizm wymiany (DDX) danych w oknie dialogowym. RFX i zbiorcze RFX upraszczają transfer danych ze źródła danych do rekordów; RFX dodatkowo przesyła dane z rekordów w źródle danych. Aby uzyskać więcej informacji, zobacz [wymiany pól rekordu (RFX)](../../data/odbc/record-field-exchange-rfx.md) i [zestaw rekordów: pobieranie rekordów w zbiorcze (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md).  
   
- Obiekty zestawów rekordów umożliwia dostęp do wszystkich wybranych rekordów. Przewiń wiele rekordów przy użyciu `CRecordset` funkcje Członkowskie, takich jak `MoveNext` i `MovePrev`. W tym samym czasie obiekty zestawów rekordów reprezentuje tylko jeden z wybranych rekordów bieżącego rekordu. Należy zbadać pól bieżącego rekordu przez zadeklarowanie rekordów zmiennych Członkowskich klasy odpowiadające kolumn w tabeli lub rekordy, które wynikają z zapytań bazy danych. Uzyskać informacji o zestawie rekordów elementy członkowskie danych, zobacz [zestaw rekordów: Architektura (ODBC)](../../data/odbc/recordset-architecture-odbc.md).  
+ Obiekty zestawów rekordów daje dostęp do wszystkich wybranych rekordów. Przewiń do wielu rekordów przy użyciu `CRecordset` funkcjach Członkowskich, takich jak `MoveNext` i `MovePrev`. W tym samym czasie obiektem rekordem reprezentuje tylko jeden z wybranych rekordów bieżącego rekordu. Pola bieżącego rekordu można sprawdzić przez zadeklarowanie rekordów zmienne składowe klasy, które odnoszą się do kolumn w tabeli lub rekordy, które są wynikiem zapytań bazy danych. Aby uzyskać informacji na temat elementów członkowskich danych zestawu rekordów, zobacz [zestaw rekordów: Architektura (ODBC)](../../data/odbc/recordset-architecture-odbc.md).  
   
- W poniższych tematach opisano szczegóły przy użyciu obiektów zestawu rekordów. Tematy są wyświetlane w kategorie funkcjonalne i kolejność przeglądania fizycznych, pozwalające sekwencyjnego odczytu.  
+ W poniższych tematach opisano szczegóły przy użyciu obiektów zestawu rekordów. Tematy są wymienione w kategorie funkcjonalne i kolejność naturalnych przeglądania dozwolonej sekwencyjnego odczytu.  
   
 ### <a name="topics-about-the-mechanics-of-opening-reading-and-closing-recordsets"></a>Tematy dotyczące sposobu otwierania, odczytywania i zamykanie zestawów rekordów  
   
@@ -100,7 +100,7 @@ Ten temat dotyczy klasach MFC ODBC.
   
 -   [Zestaw rekordów: parametryzacja zestawu rekordów (ODBC)](../../data/odbc/recordset-parameterizing-a-recordset-odbc.md)  
   
-### <a name="topics-about-the-mechanics-of-modifying-recordsets"></a>Tematy dotyczące sposobu modyfikowania zestawy rekordów  
+### <a name="topics-about-the-mechanics-of-modifying-recordsets"></a>Tematy dotyczące sposobu modyfikowania zestawów rekordów  
   
 -   [Zestaw rekordów: dodawanie, aktualizowanie i usuwanie rekordów (ODBC)](../../data/odbc/recordset-adding-updating-and-deleting-records-odbc.md)  
   
@@ -122,13 +122,13 @@ Ten temat dotyczy klasach MFC ODBC.
   
 -   [Zestaw rekordów: uzyskiwanie sum i innych wyników agregacji (ODBC)](../../data/odbc/recordset-obtaining-sums-and-other-aggregate-results-odbc.md)  
   
-### <a name="topics-about-how-recordsets-work"></a>Tematy dotyczące działania zestawy rekordów  
+### <a name="topics-about-how-recordsets-work"></a>Tematy dotyczące informacji na temat działania zestawów rekordów  
   
 -   [Zestaw rekordów: jak zestawy rekordów pobierają rekordy (ODBC)](../../data/odbc/recordset-how-recordsets-select-records-odbc.md)  
   
 -   [Zestaw rekordów: jak zestawy rekordów aktualizują rekordy (ODBC)](../../data/odbc/recordset-how-recordsets-update-records-odbc.md)  
   
 ## <a name="see-also"></a>Zobacz też  
- [Otwórz połączenie z bazą danych (ODBC)](../../data/odbc/open-database-connectivity-odbc.md)   
+ [Open Database Connectivity (ODBC)](../../data/odbc/open-database-connectivity-odbc.md)   
  [Klient MFC ODBC](../../mfc/reference/adding-an-mfc-odbc-consumer.md)   
  [Transakcja (ODBC)](../../data/odbc/transaction-odbc.md)

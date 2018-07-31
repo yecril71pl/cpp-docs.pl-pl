@@ -20,45 +20,45 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: ecd5b7274e62508289a83d6c0420d5f76e239e4d
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 932185002032ab86ca80b2b3384bfe6cbb69f8b1
+ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33110344"
+ms.lasthandoff: 07/30/2018
+ms.locfileid: "39338713"
 ---
 # <a name="supporting-transactions-in-ole-db"></a>Obsługa transakcji w OLE DB
-A [transakcji](../../data/transactions-mfc-data-access.md) sposób grupowania lub partii szereg aktualizacji ze źródłem danych, aby albo wszystkie powiedzie się i są zatwierdzone jednocześnie (jeśli jeden z nich kończy się niepowodzeniem) żaden nie jest zatwierdzona i cała transakcja zostanie wycofana. Ten proces zapewnia integralność wyniku w źródle danych.  
+A [transakcji](../../data/transactions-mfc-data-access.md) to sposób grupowania lub usługi batch, serię aktualizacji ze źródłem danych, aby wszystkie powiedzie się i dokłada wszelkich starań, jednocześnie lub (jeśli jeden z nich ulegnie awarii) żaden nie jest zatwierdzona i cała transakcja zostanie wycofana. Ten proces zapewnia integralność wynik w źródle danych.  
   
- OLE DB obsługuje transakcje z trzech poniższych metod:  
+ OLE DB obsługuje transakcji z trzech poniższych metod:  
   
--   [ITransactionLocal::StartTransaction](https://msdn.microsoft.com/en-us/library/ms709786.aspx)  
+-   [ITransactionLocal::StartTransaction](https://msdn.microsoft.com/library/ms709786.aspx)  
   
--   [Metody ITransaction::Commit](https://msdn.microsoft.com/en-us/library/ms713008.aspx)  
+-   [Metody ITransaction::Commit](https://msdn.microsoft.com/library/ms713008.aspx)  
   
--   [ITransaction::Abort](https://msdn.microsoft.com/en-us/library/ms709833.aspx)  
+-   [ITransaction::Abort](https://msdn.microsoft.com/library/ms709833.aspx)  
   
-## <a name="relationship-of-sessions-and-transactions"></a>Relacja sesji i transakcji  
- Obiekt źródła danych można tworzyć obiektów sesji, z których każdy może być wewnątrz lub na zewnątrz zakresu transakcji w danym momencie.  
+## <a name="relationship-of-sessions-and-transactions"></a>Relacja między sesjami i transakcji  
+ Obiekt źródłowy danych jednego można tworzyć obiektów sesji, z których każdy może być wewnątrz lub na zewnątrz zakresu transakcji w danym momencie.  
   
- Podczas sesji nie wprowadził transakcji, pracy wszystkie w ramach tej sesji w magazynie danych jest natychmiast zostało zatwierdzone na poziomie każdego wywołania metody. (Jest to czasami określane jako trybie autozatwierdzania lub niejawnych.)  
+ Podczas sesji nie wprowadził transakcji, całej pracy wykonywanej w ramach tej sesji na magazyn danych jest natychmiast przydzielonej przy każdym wywołaniu metody. (To jest czasami określane jako trybie autozatwierdzania lub niejawnych.)  
   
- Podczas sesji wprowadzania transakcji, pracy wszystkie w ramach tej sesji w magazynie danych jest częścią tej transakcji i jest zatwierdzona lub przerwana jako pojedyncza jednostka. (Jest to czasami określane jako tryb ręcznego zatwierdzania.)  
+ Gdy sesja wprowadza transakcji, całej pracy wykonywanej w ramach tej sesji na magazyn danych jest częścią tej transakcji i jest zatwierdzeniu lub przerwaniu jako pojedyncza jednostka. (To jest czasami określane jako tryb ręcznego zatwierdzania.)  
   
- Obsługa transakcji jest specyficznych dla dostawcy. Jeśli używasz dostawca obsługuje transakcje, obiekt sesji, który obsługuje **ITransaction** i **ITransactionLocal** można wprowadzać proste (to znaczy-nested) transakcji. Klasy szablonów OLE DB [CSession](../../data/oledb/csession-class.md) obsługuje tych interfejsów i jest zalecanym sposobem wykonania Obsługa transakcji w programie Visual C++.  
+ Obsługa transakcji jest specyficzny dla dostawcy. Jeśli dostawca używasz obsługuje transakcje, obiekt sesji, który obsługuje `ITransaction` i `ITransactionLocal` można wprowadzić prostą (czyli-nested) transakcji. Klasy szablonów OLE DB [CSession](../../data/oledb/csession-class.md) obsługuje tych interfejsów i jest zalecany sposób wdrożenia Obsługa transakcji w programie Visual C++.  
   
-## <a name="starting-and-ending-the-transaction"></a>Początkowa i końcowa transakcji  
- Należy wywołać `StartTransaction`, **zatwierdzić**, i **przerwać** metodach obiektu zestawu wierszy w konsumenta.  
+## <a name="starting-and-ending-the-transaction"></a>Początkowe i końcowe transakcji  
+ Należy wywołać `StartTransaction`, `Commit`, i `Abort` metody obiektu zestawu wierszy u odbiorcy.  
   
- Wywoływanie **ITransactionLocal::StartTransaction** uruchamia nowej transakcji lokalnej. Po uruchomieniu transakcji upoważnieni przez kolejnych operacji zmiany nie są faktycznie stosowane do magazynu danych do momentu zatwierdzić transakcji.  
+ Wywoływanie `ITransactionLocal::StartTransaction` rozpoczyna się nowej transakcji lokalnej. Po uruchomieniu transakcji, wszelkie zmiany, które przez kolejne operacje nie są faktycznie stosowane do magazynu danych do czasu zatwierdzania transakcji.  
   
- Wywoływanie **metody ITransaction::Commit** lub **ITransaction::Abort** kończy się transakcji. **Zatwierdź** powoduje, że wszystkie zmiany w zakresie transakcji, które ma zostać zastosowany do magazynu danych. **Przerwij** powoduje, że wszystkie zmiany w zakresie transakcji do anulowania i magazynu danych jest w stanie, że pozostała miał przed rozpoczęciem transakcji.  
+ Wywoływanie `ITransaction::Commit` lub `ITransaction::Abort` kończy się transakcji. `Commit` powoduje, że wszystkie zmiany w zakresie transakcji, które mają być stosowane do magazynu danych. `Abort` powoduje, że wszystkie zmiany w zakresie transakcji zostaną anulowane i magazynem danych pozostanie w stanie go miał przed rozpoczęciem transakcji.  
   
 ## <a name="nested-transactions"></a>Transakcje zagnieżdżone  
- A [zagnieżdżonych transakcji](https://msdn.microsoft.com/en-us/library/ms716985.aspx) występuje, gdy rozpocząć nowej transakcji lokalnej, gdy istnieje już aktywna transakcja w tej sesji. Nowa transakcja jest uruchomiona jako zagnieżdżoną poniżej bieżącej transakcji. Jeśli dostawca nie obsługuje transakcji zagnieżdżonych, wywoływania `StartTransaction` gdy istnieje już aktywna transakcja w sesji zwraca **XACT_E_XTIONEXISTS**.  
+ A [zagnieżdżonych transakcji](https://msdn.microsoft.com/library/ms716985.aspx) po uruchomieniu nowej transakcji lokalnej, gdy w sesji istnieje już aktywna transakcja. Nowa transakcja jest uruchomiony jako transakcji zagnieżdżonej poniżej bieżącej transakcji. Jeśli dostawca nie obsługuje transakcji zagnieżdżonych, wywołanie `StartTransaction` gdy istnieje już aktywna transakcja sesji zwraca XACT_E_XTIONEXISTS.  
   
 ## <a name="distributed-transactions"></a>Transakcje rozproszone  
- Transakcja rozproszona jest transakcji, która aktualizuje dane rozproszonej; oznacza to, że dane na więcej niż jednego systemu komputera sieciowego. Jeśli chcesz obsługuje transakcje za pośrednictwem Rozproszony system należy użyć zamiast Obsługa transakcji w OLE DB programu .NET Framework.  
+ Transakcja rozproszona jest transakcji, która aktualizuje rozproszonych danych; oznacza to, że dane na więcej niż jednym komputerze sieciowym. Jeśli chcesz obsługiwać transakcji za pośrednictwem systemu rozproszonego, należy użyć programu .NET Framework, a nie Obsługa transakcji w OLE DB.  
   
 ## <a name="see-also"></a>Zobacz też  
  [Korzystanie z metod dostępu](../../data/oledb/using-accessors.md)

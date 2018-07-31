@@ -1,5 +1,5 @@
 ---
-title: 'SQL: SQL i typy danych języka C++ (ODBC) | Dokumentacja firmy Microsoft'
+title: 'SQL: język SQL i typy danych języka C++ (ODBC) | Dokumentacja firmy Microsoft'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,52 +17,52 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 6a137c4f648f518420d06f5cbd98ea189a030aee
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 8b978356cead1f9b74ce59e58ab0191f5e00105b
+ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33095411"
+ms.lasthandoff: 07/30/2018
+ms.locfileid: "39340771"
 ---
 # <a name="sql-sql-and-c-data-types-odbc"></a>SQL: typy danych SQL i C++ (ODBC)
 > [!NOTE]
->  Te informacje dotyczą klasach MFC ODBC. Jeśli pracujesz z klas MFC DAO, zobacz temat "Porównanie z bazy danych aparatu SQL i ANSI SQL programu Microsoft Jet" w pomocy DAO.  
+>  Te informacje dotyczą klas MFC ODBC. Pracy przy użyciu klas MFC DAO, zobacz temat "Porównanie programu Microsoft Jet bazy danych aparatu SQL i ANSI SQL" w Pomocy programu DAO.  
   
- Poniższa tabela mapowania typów danych ANSI SQL do typy danych języka C++. Rozszerza dane języka C z dodatkiem D *ODBC SDK* *Podręcznik programisty* na dysku CD biblioteki MSDN. Kreatorzy Zarządzanie większości mapowanie typu danych dla Ciebie. Jeśli nie używasz kreatora, można użyć informacje dotyczące mapowania ułatwia pisanie kodu exchange pola ręcznie.  
+ Poniższa tabela zawiera mapowanie typów danych ANSI SQL do typów danych języka C++. Rozszerza informacje o języku C, które zostały podane w dodatku D *ODBC SDK* *odwołania programisty* na dysku CD z biblioteki MSDN. Kreatorzy Zarządzanie większość mapowanie typu danych dla Ciebie. Jeśli nie używasz kreatora, można użyć informacje dotyczące mapowania ułatwiają ręcznie napisać kod programem exchange.  
   
-### <a name="ansi-sql-data-types-mapped-to-c-data-types"></a>Typy danych języka SQL ANSI zamapowane na typy danych języka C++  
+### <a name="ansi-sql-data-types-mapped-to-c-data-types"></a>Typy danych SQL ANSI mapowane na typy danych języka C++  
   
-|Typ danych ANSI SQL|Typ danych języka C++|  
+|Typ danych ANSI SQL|Typów danych języka C++|  
 |------------------------|---------------------|  
 |**CHAR**|`CString`|  
 |**DECIMAL**|`CString` 1|  
-|**SMALLINT**|`int`|  
-|`REAL`|**float**|  
+|**SMALLINT**|**int**|  
+|**RZECZYWISTE**|**float**|  
 |**LICZBA CAŁKOWITA**|**long**|  
 |**FLOAT**|**double**|  
-|**O PODWÓJNEJ PRECYZJI**|**double**|  
+|**PODWÓJNE**|**double**|  
 |**NUMERYCZNE**|`CString` 1|  
 |**VARCHAR**|`CString`|  
 |**LONGVARCHAR**|`CLongBinary`, `CString` 2|  
 |**BITOWE**|**BOOL**|  
 |**TINYINT**|**BAJTÓW**|  
 |**BIGINT**|`CString` 1|  
-|**BINARNE**|`CByteArray`|  
+|**BINARNY**|`CByteArray`|  
 |**VARBINARY**|`CByteArray`|  
 |**LONGVARBINARY**|`CLongBinary`, `CByteArray` 3|  
 |**DATA**|`CTime`, `CString`|  
-|**CZAS**|**Ctime —, cstring —**|  
-|**ZNACZNIK CZASU**|**Ctime —, cstring —**|  
+|**CZAS**|`CTime`, `CString`|  
+|**ZNACZNIK CZASU:**|`CTime`, `CString`|  
   
- 1. ANSI **DZIESIĘTNĄ** i **liczbowych** mapowania `CString` ponieważ **SQL_C_CHAR** jest to domyślny typ transferu ODBC.  
+ 1. ANSI **dziesiętna** i **liczbowych** mapowania `CString` ponieważ **SQL_C_CHAR** jest domyślnym typem transferu ODBC.  
   
- 2. Domyślnie, jeśli są mapowane na zostały obcięte dane znaków innych niż 255 znaków `CString`. Długość obcięcie można rozszerzyć, jawnie ustawiając `nMaxLength` argument `RFX_Text`.  
+ 2. Dane znak poza 255 znaków są obcinane domyślnie, gdy mapowane na `CString`. Wydłużyć obcięcie poprzez jawne ustawienie *nMaxLength* argument `RFX_Text`.  
   
- 3. Dane binarne ponad 255 znaków zostały obcięte domyślnie, jeśli są mapowane na `CByteArray`. Długość obcięcie można rozszerzyć, jawnie ustawiając `nMaxLength` argument `RFX_Binary`.  
+ 3. Domyślnie, gdy mapowane na zostały obcięte dane binarne przekracza 255 znaków `CByteArray`. Wydłużyć obcięcie poprzez jawne ustawienie *nMaxLength* argument `RFX_Binary`.  
   
- Jeśli nie używasz z biblioteki kursorów ODBC, może wystąpić problem podczas próby zaktualizowania dwa lub więcej pól długo o zmiennej długości, za pomocą sterownika ODBC programu Microsoft SQL Server i klasy baz danych MFC ODBC. Typy ODBC **SQL_LONGVARCHAR** i **SQL_LONGVARBINARY**, mapy Text i obrazów typów programu SQL Server. A `CDBException` jest zgłaszany w przypadku aktualizacji co najmniej dwoma polami długo o zmiennej długości, w tym samym wywołaniu `CRecordset::Update`. W związku z tym nie zaktualizować wiele kolumn długi równocześnie z `CRecordset::Update`. Zaktualizuj wiele kolumn długi jednocześnie przy użyciu interfejsu API ODBC **SQLPutData**. Można również korzystanie z biblioteki kursorów ODBC, ale nie jest to zalecane dla sterowników, takie jak sterownik programu SQL Server obsługuje kursorów, które nie są z biblioteki kursorów.  
+ Jeśli nie jest używany z biblioteki kursorów ODBC, może wystąpić problem podczas próby zaktualizowania dwa lub więcej pól długo o zmiennej długości, za pomocą sterownika Microsoft ODBC dla programu SQL Server i klasy baz danych MFC ODBC. Typy ODBC **SQL_LONGVARCHAR** i **SQL_LONGVARBINARY**, mapy do tekstu i obrazów typów programu SQL Server. A `CDBException` jest generowany, jeśli zaktualizujesz dwa lub więcej pól długo o zmiennej długości, w tym samym wywołaniu `CRecordset::Update`. W związku z tym, nie są uaktualniane wiele kolumn długich równocześnie z `CRecordset::Update`. Aktualizowanie wielu kolumn długich jednocześnie przy użyciu interfejsu API ODBC `SQLPutData`. Można również korzystać z biblioteki kursorów ODBC, ale nie jest to zalecane dla sterowników, takie jak sterownik programu SQL Server obsługuje kursorów, które nie są z biblioteki kursorów.  
   
- Korzystając z biblioteki kursorów ODBC z klasami baz danych MFC ODBC i sterownik Microsoft ODBC dla programu SQL Server **ASSERT** może wystąpić wraz z `CDBException` Jeśli wywołanie `CRecordset::Update` następuje po wywołaniu `CRecordset::Requery`. Zamiast tego wywołać `CRecordset::Close` i `CRecordset::Open` zamiast `CRecordset::Requery`. Innym rozwiązaniem jest nie należy używać z biblioteki kursorów ODBC, ponieważ serwer SQL i sterownik ODBC programu SQL Server zapewniają natywną obsługę kursory natywnie i Biblioteka kursorów ODBC nie jest wymagana.  
+ Jeśli korzystasz z biblioteki kursorów ODBC z klas baz danych MFC ODBC i sterownik Microsoft ODBC dla programu SQL Server **ASERCJA** mogą wystąpić wraz z `CDBException` Jeśli wywołanie `CRecordset::Update` następuje po wywołaniu `CRecordset::Requery`. Zamiast tego należy wywołać `CRecordset::Close` i `CRecordset::Open` zamiast `CRecordset::Requery`. Innym rozwiązaniem jest, aby nie korzystała z biblioteki kursorów ODBC, ponieważ serwer SQL i sterownik SQL Server ODBC zapewniają natywną obsługę kursory natywnie i z biblioteki kursorów ODBC nie jest potrzebna.  
   
 ## <a name="see-also"></a>Zobacz też  
  [SQL](../../data/odbc/sql.md)   

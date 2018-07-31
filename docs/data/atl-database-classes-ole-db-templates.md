@@ -17,33 +17,33 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: fabced79232d17807d252da9dac5b066ddf69f25
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 083ac7485ce2056ab97ca32142be3e88094573f9
+ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33089055"
+ms.lasthandoff: 07/30/2018
+ms.locfileid: "39337888"
 ---
 # <a name="atl-database-classes-ole-db-templates"></a>Klasy baz danych ATL (Szablony OLE DB)
-Firma Microsoft udostępnia kilka implementacje OLE DB, zestaw interfejsów modelu COM, które umożliwiają uniform dostęp do danych w formatach i informacje o różnych źródeł.  OLE DB oficjalnie jest przestarzały; Niniejsza dokumentacja jest dla deweloperów, którzy są utrzymywanie starszej wersji kodu. Nowe aplikacje powinny używać ODBC do łączenia się ze źródłami danych SQL.
+Firma Microsoft udostępnia kilka implementacji OLE DB, zbiór interfejsów COM, które udostępniają jednolity dostęp do danych z różnymi źródłami informacji i formatów.  OLE DB oficjalnie jest przestarzała; Ta dokumentacja jest dla deweloperów, którzy są obsługi starszego kodu. Nowe aplikacje powinny używać ODBC do łączenia ze źródłami danych SQL.
   
- Szablony OLE DB są szablonów języka C++ w ATL, które ułatwiają korzystanie zapewniając klas implementujących wiele interfejsów OLE DB często używanych technologii bazy danych OLE DB.  
+ Szablony OLE DB są szablonami języka C++ w ATL, które ułatwiają korzystanie, zapewniając klas implementujących wiele powszechnie używanych interfejsów OLE DB technologii baz danych OLE DB.  
   
- Ta biblioteka szablonów zawiera dwa składniki:  
+ Ta biblioteka szablon zawiera dwie części:  
   
--   [Szablony konsumentów OLE DB](../data/oledb/ole-db-consumer-templates-cpp.md) używaną do zaimplementowania w aplikacji OLE DB klienta (użytkownika).  
+-   [Szablony konsumentów OLE DB](../data/oledb/ole-db-consumer-templates-cpp.md) używaną do zaimplementowania aplikacja kliencka (użytkownik) OLE DB.  
   
--   [Szablony dostawców OLE DB](../data/oledb/ole-db-provider-templates-cpp.md) używaną do zaimplementowania OLE DB aplikacji serwera (dostawcy).  
+-   [Szablony dostawców OLE DB](../data/oledb/ole-db-provider-templates-cpp.md) używany do implementowania aplikacji serwera (dostawca) OLE DB.  
   
- Ponadto [atrybuty konsumentów OLE DB](../windows/ole-db-consumer-attributes.md) zapewnić wygodny sposób utworzyć konsumentów OLE DB. Atrybuty OLE DB wstrzyknięcie kodu, w oparciu o szablony konsumentów OLE DB, aby utworzyć pracy konsumentów OLE DB.  
+ Ponadto [atrybuty konsumentów OLE DB](../windows/ole-db-consumer-attributes.md) zapewniają wygodny sposób, aby utworzyć konsumentów OLE DB. Atrybuty OLE DB wstrzyknięcie kodu, w oparciu o szablony konsumentów OLE DB, aby utworzyć konsumentów OLE DB pracy.  
   
- Należy pamiętać, że biblioteka MFC zawiera jedną klasę [coledbrecordview —](../mfc/reference/coledbrecordview-class.md), który wyświetla w formantach rekordów bazy danych. Widok jest widokiem formularza bezpośrednio podłączone do `CRowset` obiektu i są wyświetlane pola `CRowset` obiektu w formantach szablonu okna dialogowego.  
+ Należy pamiętać, że biblioteka MFC zawiera jedną klasę [COleDBRecordView](../mfc/reference/coledbrecordview-class.md), który wyświetla rekordy bazy danych w kontrolkach. Widok jest podłączone bezpośrednio do widoku formularza `CRowset` obiektu, a następnie wyświetla pola `CRowset` obiektu w kontrolkach szablonu okna dialogowego.  
   
  Aby uzyskać więcej informacji, zobacz [OLE DB programowania](../data/oledb/ole-db-programming.md) i [OLE DB przewodnik](http://go.microsoft.com/fwlink/p/?linkid=121548).  
   
 ## <a name="see-also"></a>Zobacz też  
  [Tworzenie konsumenta OLE DB](../data/oledb/creating-an-ole-db-consumer.md)   
  [Tworzenie dostawcy OLE DB](../data/oledb/creating-an-ole-db-provider.md)   
- [Dokumentacja szablonów konsumentów OLE DB](../data/oledb/ole-db-consumer-templates-reference.md)   
- [Dokumentacja szablonów OLE DB Provider](../data/oledb/ole-db-provider-templates-reference.md)   
- [Przykłady szablonów OLE DB](http://msdn.microsoft.com/en-us/08958863-0b5f-41ad-ae99-fca7440c553c)
+ [OLE DB — Kompendium szablonów konsumentów](../data/oledb/ole-db-consumer-templates-reference.md)   
+ [OLE DB Provider szablony — dokumentacja](../data/oledb/ole-db-provider-templates-reference.md)   
+ [Przykłady szablonów OLE DB](http://msdn.microsoft.com/08958863-0b5f-41ad-ae99-fca7440c553c)

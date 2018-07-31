@@ -16,21 +16,21 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: a9c61aea0fec1f6d808a0a34ee74bd0ce2d399a5
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 17750a61675f9b208be69b86ec7b044b6b19f1bb
+ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33108517"
+ms.lasthandoff: 07/30/2018
+ms.locfileid: "39336680"
 ---
 # <a name="supporting-free-threading-in-your-provider"></a>Obsługa wolnych wątków w dostawcy
-Wszystkie klasy dostawcy OLE DB są wątkowo i wpisy rejestru są ustawione w związku z tym. Jest dobrym pomysłem jest obsługa wolnych wątków, aby zapewnić wysoką wydajność w sytuacji, w wielu użytkowników. Aby zapewnić dostawcy wątkowo, należy sprawdzić, czy kod jest prawidłowo zablokowany. Zawsze, gdy zapisu lub przechowywania danych, należy zablokować dostęp z sekcji krytycznych.  
+Wszystkie klasy dostawcy OLE DB są odporne na wątki i wpisy rejestru są odpowiednio ustawiane. To dobry pomysł, aby obsługa wolnych wątków w celu zapewnienia wysokiego poziomu wydajności w sytuacjach, w wielu użytkowników. Aby zapewnić dostawcą metodą o bezpiecznych wątkach, należy sprawdzić, czy kod jest zablokowany prawidłowo. Zawsze, gdy zapisu lub przechowywania danych, należy zablokować dostęp za pomocą sekcji krytycznych.  
   
- Każdy obiekt szablonu dostawcy OLE DB ma osobny rozdział krytyczne. Aby łatwiej blokuje, każda nowa klasa tworzenia powinna być biorąc klasy nadrzędnej klasy szablonu nazwa jako argument.  
+ Każdy obiekt szablonu dostawcy OLE DB ma swój własny sekcję krytyczną. Aby łatwiej blokowania, każda nowa klasa tworzenia powinna być klasą szablonu, biorąc klasy nadrzędnej nazwę jako argument.  
   
- Poniższy przykład przedstawia sposób zablokować kodu:  
+ Poniższy przykład pokazuje, jak zablokować kodu:  
   
-```  
+```cpp  
 template <class T>  
 class CMyObject<T> : public...  
   
@@ -47,9 +47,9 @@ HRESULT MyObject::MyMethod(void)
 }  
 ```  
   
- Aby uzyskać więcej informacji dotyczących sposobu ochrony sekcje krytyczne z `Lock` i `Unlock`, zobacz [Multithreading: jak używać klas synchronizacji](../../parallel/multithreading-how-to-use-the-synchronization-classes.md).  
+ Aby uzyskać więcej informacji o tym, jak chronić krytyczne sekcje z `Lock` i `Unlock`, zobacz [wielowątkowość: jak używać klas synchronizacji](../../parallel/multithreading-how-to-use-the-synchronization-classes.md).  
   
- Należy także sprawdzić, czy żadnych metod można zastąpić (takie jak `Execute`) są wątkowo.  
+ Należy również sprawdzić, czy jakiekolwiek metody zastąpisz (takie jak `Execute`) jest metodą o bezpiecznych wątkach.  
   
 ## <a name="see-also"></a>Zobacz też  
  [Praca z szablonami dostawców OLE DB](../../data/oledb/working-with-ole-db-provider-templates.md)

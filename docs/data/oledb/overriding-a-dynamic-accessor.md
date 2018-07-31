@@ -17,19 +17,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 9309180b05a6d91e6749f80c7a7b717b1bc57526
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: e1d6d3277f27c20f7b1c002590fd26e1e2f08eb7
+ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33107860"
+ms.lasthandoff: 07/30/2018
+ms.locfileid: "39340033"
 ---
 # <a name="overriding-a-dynamic-accessor"></a>Zastępowanie dynamicznej metody dostępu
-Kiedy używać dynamicznej metody dostępu takich jak `CDynamicAccessor`, polecenie **Otwórz** metoda tworzy akcesora dla automatycznie, zgodnie z informacjami kolumny zestawu wierszy otwarty. Można zastąpić dynamicznej metody dostępu do kontrolowania dokładnie, jak są powiązane kolumny.  
+Kiedy używać dynamicznej metody dostępu takich jak `CDynamicAccessor`, polecenie `Open` metoda tworzy metodę dostępu, możesz automatycznie na podstawie informacji o kolumnie otwartego zestawu wierszy. Można zastąpić dynamicznej metody dostępu do kontrolowania, dokładnie tak, jak kolumny są powiązane.  
   
- Aby zastąpić dynamicznej metody dostępu, należy przekazać **false** jako ostatni parametr `CCommand::Open` metody. Zapobiega to **Otwórz** z automatycznego tworzenia metody dostępu. Następnie można wywołać `GetColumnInfo` i Wywołaj `AddBindEntry` dla każdej kolumny, które chcesz powiązać. Poniższy kod przedstawia, jak to zrobić:  
+ Aby zastąpić dynamicznej metody dostępu, należy przekazać **false** jako ostatni parametr `CCommand::Open` metody. Zapobiega to `Open` z automatycznego tworzenia metody dostępu. Następnie możesz wywołać `GetColumnInfo` i wywołać `AddBindEntry` dla każdej kolumny, które chcesz powiązać. Poniższy kod pokazuje, jak to zrobić:  
   
-```  
+```cpp  
 USES_CONVERSION;  
 double   dblProductID;  
   

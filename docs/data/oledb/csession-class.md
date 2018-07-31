@@ -51,12 +51,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: e60c08a982fe90b36c81e87b2bcc212ea11f5ed0
-ms.sourcegitcommit: b217daee32d3413cf33753d9b4dc35a0022b1bfa
+ms.openlocfilehash: 72ac1a5be4f2e114e5b90b65542b09733c43d174
+ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/24/2018
-ms.locfileid: "39233701"
+ms.lasthandoff: 07/30/2018
+ms.locfileid: "39338866"
 ---
 # <a name="csession-class"></a>Klasa CSession
 Reprezentuje sesję dostępu do pojedynczej bazy danych.  
@@ -110,7 +110,6 @@ Zamyka sesję, który został otworzony [CSession::Open](../../data/oledb/csessi
   
 ```cpp
 void Close() throw();  
-  
 ```  
   
 ### <a name="remarks"></a>Uwagi  

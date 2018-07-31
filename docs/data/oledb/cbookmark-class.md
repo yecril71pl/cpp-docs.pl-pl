@@ -78,12 +78,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 7545a9a31ff9bd7426002ef97176c59dd308dd49
-ms.sourcegitcommit: 7eadb968405bcb92ffa505e3ad8ac73483e59685
+ms.openlocfilehash: 9bd662c827650112d0e9bcf1d59086f4205aea58
+ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/23/2018
-ms.locfileid: "39209147"
+ms.lasthandoff: 07/30/2018
+ms.locfileid: "39337621"
 ---
 # <a name="cbookmark-class"></a>Klasa CBookmark
 Przechowuje wartość zakładki w jego buforu.  
@@ -131,8 +131,8 @@ Konstruktor.
 ### <a name="syntax"></a>Składnia  
   
 ```cpp
-      CBookmark();   
-
+CBookmark();
+   
 CBookmark(DBLENGTH nSize);  
 ```  
   
@@ -153,7 +153,6 @@ Pobiera wskaźnik do buforu zakładki.
   
 ```cpp
 virtual BYTE* GetBuffer() const throw();  
-  
 ```  
   
 ### <a name="return-value"></a>Wartość zwracana  
@@ -166,7 +165,6 @@ Pobiera rozmiar buforu zakładki.
   
 ```cpp
 virtual DBLENGTH GetSize() const throw();  
-  
 ```  
   
 ### <a name="return-value"></a>Wartość zwracana  
@@ -177,9 +175,8 @@ Kopiuje wartość zakładki odwołuje się *pBuffer* do `CBookmark` buffer i ust
   
 ### <a name="syntax"></a>Składnia  
   
-```
-HRESULT SetBookmark(DBLENGTH nSize,  
-  BYTE* pBuffer) throw();  
+```cpp
+HRESULT SetBookmark(DBLENGTH nSize, BYTE* pBuffer) throw();  
 ```  
   
 #### <a name="parameters"></a>Parametry  
@@ -201,7 +198,7 @@ Przypisuje `CBookmark` obiektu do drugiego.
 ### <a name="syntax"></a>Składnia  
   
 ```cpp
-      CBookmark& operator =(const CBookmark& bookmark) throw();  
+CBookmark& operator =(const CBookmark& bookmark) throw();  
 ```  
   
 ### <a name="remarks"></a>Uwagi  

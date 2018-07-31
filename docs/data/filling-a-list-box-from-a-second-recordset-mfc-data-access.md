@@ -1,5 +1,5 @@
 ---
-title: Wypełnianie pola listy z drugiego zestawu wierszy (dostęp do danych MFC) | Dokumentacja firmy Microsoft
+title: Wypełnianie pola listy z drugiego zestawu rekordów (dostęp do danych MFC) | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -21,34 +21,34 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: ed294527b4335459ab6d0658d9f57a5cb64a8fd1
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: e980f42384052e0ab4fbd0f98889509c41accf0b
+ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33090665"
+ms.lasthandoff: 07/30/2018
+ms.locfileid: "39339773"
 ---
-# <a name="filling-a-list-box-from-a-second-recordset--mfc-data-access"></a>Wypełnianie pola listy z drugiego zestawu wierszy (dostęp do danych MFC)
-Domyślnie widoku rekordu jest skojarzony z obiektem pojedynczy zestaw rekordów, których pola są mapowane na formanty widoku rekordu. Czasami może chcesz umieścić pole listy lub pola kombi kontroli w widoku rekordów i uzupełnij go o wartości od drugiego obiektu zestawu rekordów. Użytkownik może użyć pola listy, aby wybrać nową kategorię informacje mają być wyświetlane w widoku rekordu. W tym temacie wyjaśniono, jak i kiedy w tym celu.  
+# <a name="filling-a-list-box-from-a-second-recordset--mfc-data-access"></a>Wypełnianie pola listy z drugiego zestawu rekordów (dostęp do danych MFC)
+Domyślnie w widokiem rekordu jest skojarzony z obiektem pojedynczy zestaw rekordów, których pola są zamapowane na kontrolkę widoku rekordu. Czasami możesz chcieć umieścić pola listy lub pola kombi kontrolować w widoku rekordu i wypełnić ją przy użyciu wartości z obiektu drugiego zestawu rekordów. Użytkownika można użyć pola listy, aby wybrać nową kategorię informacje mają być wyświetlane w widoku rekordu. W tym temacie wyjaśniono, jak i kiedy to zrobić.  
   
 > [!TIP]
->  Należy pamiętać, że wypełnianie pola kombi lub pola listy z źródła danych może być wolne. Zachować środki ostrożności przed próbą do wypełnienia kontrolki z zestawu rekordów z dużej liczby rekordów.  
+>  Należy pamiętać, że wypełnianie pola kombi lub pola listy z źródła danych może być wolne. Podjąć środki ostrożności przeciwko do wypełniania kontrolki z poziomu zestawu rekordów z dużą liczbę rekordów.  
   
- Model ten temat składa się z podstawowego zestawu rekordów, które wypełnia kontrolek formularza, gdy zestaw rekordów dodatkowej wypełnienia pola listy lub pola kombi. Zaznaczenie ciąg z pola listy powoduje, że programu requery podstawowy zestaw rekordów oparte na to, co zostało wybrane. Poniższa procedura używa pola kombi, ale informacje dotyczą pola listy.  
+ Model, w tym temacie składa się z podstawowego zestawu rekordów, które wypełnia kontrolek formularza, podczas gdy pomocniczego zestawu rekordów wypełnienia pola listy lub pola kombi. Wybierając ciąg w polu listy powoduje, że program requery podstawowy zestaw rekordów, co zostało wybrane w oparciu. Poniższa procedura korzysta z pola kombi, ale stosuje się jednakowo do pola listy.  
   
-#### <a name="to-fill-a-combo-box-or-list-box-from-a-second-recordset"></a>Aby wypełnić pole kombi lub pola listy z drugiego zestawu rekordów  
+#### <a name="to-fill-a-combo-box-or-list-box-from-a-second-recordset"></a>Aby wypełnić pola kombi lub pola listy z drugiego zestawu rekordów  
   
-1.  Utwórz obiekt zestawu rekordów ([crecordset —](../mfc/reference/crecordset-class.md).  
+1.  Utwórz obiekt zestawu rekordów ([CRecordset](../mfc/reference/crecordset-class.md).  
   
-2.  Wskaźnik do uzyskania [ccombobox —](../mfc/reference/ccombobox-class.md) obiektu dla kontrolki pola kombi.  
+2.  Uzyskiwanie wskaźnika do [CComboBox](../mfc/reference/ccombobox-class.md) obiekt do kontrolki pola kombi.  
   
-3.  Opróżnij wszystkie poprzednie zawartości pola kombi.  
+3.  Puste pola kombi, wszystkie poprzednie treści.  
   
-4.  Przechodzenie między wszystkie rekordy w zestawie rekordów wywoływania [CComboBox::AddString](../mfc/reference/ccombobox-class.md#addstring) dla każdego ciągu z bieżącego rekordu, które chcesz dodać do pola kombi.  
+4.  Przechodzenie między wszystkie rekordy w zestawie rekordów wywoływania [CComboBox::AddString](../mfc/reference/ccombobox-class.md#addstring) dla każdego ciągu z bieżącego rekordu, który chcesz dodać do pola kombi.  
   
-5.  Inicjowanie zaznaczenie w polu kombi.  
+5.  Inicjuj zaznaczenie w polu kombi.  
   
-```  
+```cpp  
 void CSectionForm::OnInitialUpdate()  
 {  
     // ...  
@@ -74,9 +74,9 @@ void CSectionForm::OnInitialUpdate()
 }  
 ```  
   
- Ta funkcja korzysta z drugiego zestawu wierszy `m_courseSet`, który zawiera rekord dla każdego kursu oferowane, a `CComboBox` kontroli, `m_ctlCourseList`, który jest przechowywany w klasie widoku rekordu.  
+ Ta funkcja korzysta z drugiego zestawu rekordów `m_courseSet`, która zawiera rekord dla każdego kursu oferowane i `CComboBox` kontroli `m_ctlCourseList`, który jest przechowywany w klasie widoku rekordu.  
   
- Pobiera funkcję `m_courseSet` z dokumentu i otwarcie go. A następnie go opróżnia `m_ctlCourseList` i przewija `m_courseSet`. Dla każdego rekordu, funkcja wywołuje pola kombi `AddString` funkcji członkowskiej, aby dodać wartość Identyfikatora ciągu z rekordu. Na koniec kod ustawia pole kombi pola wyboru.  
+ Funkcja pobiera `m_courseSet` z dokumentu i otwiera go. A następnie opróżnia je `m_ctlCourseList` i przewija `m_courseSet`. Dla każdego rekordu, funkcja wywołuje pola kombi `AddString` funkcja elementu członkowskiego, aby dodać wartości Identyfikatora kurs z rekordu. Na koniec kod ustawia kombi pola wyboru.  
   
 ## <a name="see-also"></a>Zobacz też  
  [Widoki rekordów (dostęp do danych MFC)](../data/record-views-mfc-data-access.md)   

@@ -18,56 +18,56 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 95f1455fde75ec835486cbcc3d590822891d14f5
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 7c0468a9df7b79e79b3e20074c43fc1621058d71
+ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33111760"
+ms.lasthandoff: 07/30/2018
+ms.locfileid: "39339708"
 ---
 # <a name="supporting-schema-rowsets"></a>Obsługa zestawów wierszy schematu
-Zestawy wierszy schematu umożliwiają konsumentów uzyskać informacje o magazynie danych bez uprzedniego uzyskania informacji o jego struktury lub schematu. Na przykład magazynu danych może być tabel zorganizowane w hierarchii zdefiniowanej przez użytkownika, więc nie byłoby żaden sposób zapewnić wiedzę na temat schematu z wyjątkiem odczytując go. (Inny przykład należy pamiętać, że kreatorów Visual C++ zestawów wierszy schematu do generowania metody dostępu dla użytkownika.) Aby zezwolić na odbiorców to zrobić, obiekt sesji dostawcy udostępnia metody na [IDBSchemaRowset](https://msdn.microsoft.com/en-us/library/ms713686.aspx) interfejsu. W aplikacji Visual C++, możesz użyć [idbschemarowsetimpl —](../../data/oledb/idbschemarowsetimpl-class.md) klasy do zaimplementowania **IDBSchemaRowset**.  
+Zestawy wierszy schematu umożliwiają konsumentów uzyskać informacje dotyczące magazynu danych nie wiedząc o tym wewnętrzna struktura lub schematu. Na przykład magazyn danych może być tabel zorganizowane w hierarchii zdefiniowanej przez użytkownika, więc będzie żaden sposób zapewnić znajomości schematu z wyjątkiem sytuacji, zapoznając się go. (Inny przykład należy pamiętać, że kreatorów Visual C++ Generuj metody dostępu dla użytkownika za pomocą zestawów wierszy schematu.) Aby zezwolić na odbiorców to zrobić, obiekt sesji dostawcy udostępnia metody na [IDBSchemaRowset](https://msdn.microsoft.com/library/ms713686.aspx) interfejsu. W aplikacji Visual C++, możesz użyć [idbschemarowsetimpl —](../../data/oledb/idbschemarowsetimpl-class.md) klasy do zaimplementowania `IDBSchemaRowset`.  
   
  `IDBSchemaRowsetImpl` obsługuje następujące metody:  
   
--   [CheckRestrictions](../../data/oledb/idbschemarowsetimpl-checkrestrictions.md) sprawdza poprawność ograniczeń dla zestawu wierszy schematu.  
+-   [Checkrestrictions —](../../data/oledb/idbschemarowsetimpl-checkrestrictions.md) sprawdza poprawność ograniczenia względem wierszy schematu.  
   
--   [CreateSchemaRowset](../../data/oledb/idbschemarowsetimpl-createschemarowset.md) implementuje funkcję twórcy obiektu COM dla obiekt określony przez parametr szablonu.  
+-   [Createschemarowset —](../../data/oledb/idbschemarowsetimpl-createschemarowset.md) implementuje funkcji twórcy obiektu COM dla obiektu określonego przez parametr szablonu.  
   
--   [SetRestrictions](../../data/oledb/idbschemarowsetimpl-setrestrictions.md) określa ograniczenia, które obsługuje w zestawie wierszy określonego schematu.  
+-   [Setrestrictions —](../../data/oledb/idbschemarowsetimpl-setrestrictions.md) określa ograniczenia, które obsługują w zestawie wierszy z określonego schematu.  
   
 -   [IDBSchemaRowset::GetRowset](../../data/oledb/idbschemarowsetimpl-getrowset.md) zwraca zestaw wierszy schematu (dziedziczone z interfejsu).  
   
--   [GetSchemas](../../data/oledb/idbschemarowsetimpl-getschemas.md) zwraca listę zestawów wierszy schematu dostępne dla `IDBSchemaRowsetImpl::GetRowset` (dziedziczone z interfejsu).  
+-   [Getschemas —](../../data/oledb/idbschemarowsetimpl-getschemas.md) zwraca listę zestawów wierszy schematu jest dostępny za pomocą `IDBSchemaRowsetImpl::GetRowset` (dziedziczone z interfejsu).  
   
-## <a name="atl-ole-db-provider-wizard-support"></a>Obsługa kreatora dostawcy ATL OLE DB  
- ATL OLE DB dostawcy Kreator tworzy trzy klasy schematu w pliku nagłówka sesji:  
+## <a name="atl-ole-db-provider-wizard-support"></a>Obsługa kreatora dla dostawcy bazy danych ATL OLE  
+ ATL OLE DB Provider Kreator tworzy trzy klasy schematu w pliku nagłówkowym sesji:  
   
--   **C** *nazwa_skrócona* **SessionTRSchemaRowset**  
+-   **C** *ShortName* **SessionTRSchemaRowset**  
   
--   **C** *nazwa_skrócona* **SessionColSchemaRowset**  
+-   **C** *ShortName* **SessionColSchemaRowset**  
   
--   **C** *nazwa_skrócona* **SessionPTSchemaRowset**  
+-   **C** *ShortName* **SessionPTSchemaRowset**  
   
- Te klasy odpowiadać na żądania klienta dla informacji o schemacie; należy pamiętać, że ze specyfikacją OLE DB wymaga obsługiwać te zestawy wierszy schematu trzy:  
+ W ramach tych zajęć, odpowiadanie na żądania klientów informacji o schemacie; należy zwrócić uwagę na to, że specyfikacji OLE DB wymaga obsługiwane tych zestawów wierszy schematu trzy:  
   
--   **C** *nazwa_skrócona* **SessionTRSchemaRowset** obsługuje żądania, aby uzyskać informacje dotyczące tabeli ( `DBSCHEMA_TABLES` zestaw wierszy schematu).  
+-   **C** *ShortName* **SessionTRSchemaRowset** obsługuje żądania na potrzeby informacji o tabeli ( `DBSCHEMA_TABLES` zestaw wierszy schematu).  
   
--   **C** *nazwa_skrócona* **SessionColSchemaRowset** obsługuje żądania, aby uzyskać informacje dotyczące kolumn ( **DBSCHEMA_COLUMNS** zestaw wierszy schematu). Kreator udostępnia przykładowy implementacji dla tych klas, które zwrócić informacje o schemacie dla dostawcy systemu DOS.  
+-   **C** *ShortName* **SessionColSchemaRowset** obsługuje żądania, aby uzyskać informacje o kolumnach ( `DBSCHEMA_COLUMNS` zestaw wierszy schematu). Kreator dostarcza przykładowe implementacje dla tych klas, które zwracają informacje o schemacie dla dostawcy systemu DOS.  
   
--   **C** *nazwa_skrócona* **SessionPTSchemaRowset** obsługuje żądania informacji schematu o typ dostawcy ( **DBSCHEMA_PROVIDER_TYPES** schematu zestaw wierszy). Domyślna implementacja kreatora zwraca `S_OK`.  
+-   **C** *ShortName* **SessionPTSchemaRowset** obsługuje żądania, aby uzyskać informacje o schemacie o typie dostawcy ( `DBSCHEMA_PROVIDER_TYPES` zestaw wierszy schematu). Zwraca domyślną implementację, które Kreator podaje `S_OK`.  
   
- Można dostosować te klasy do obsługi informacji o schemacie właściwe dla dostawcy usługi:  
+ Można dostosować te klasy do obsługi informacji o schemacie odpowiedniego dostawcy:  
   
--   W **C***nazwa_skrócona***SessionTRSchemaRowset**, musisz wypełnić pola katalogu, tabeli i opis (**trData.m_szType**, **trData.m_szTable** , i **trData.m_szDesc**). Przykład generowane przez Kreatora używa tylko jeden wiersz (tabeli). Inni dostawcy mogą zwracać więcej niż jedna tabela.  
+-   W **C***ShortName***SessionTRSchemaRowset**, należy wypełnić pola wykazu, tabeli i opis (`trData.m_szType`, `trData.m_szTable`, i `trData.m_szDesc`). Przykład generowane przez Kreatora używa tylko jeden wiersz (tabela). Innych dostawców rozwiązań może zwrócić więcej niż jedną tabelą.  
   
--   W **C***nazwa_skrócona***SessionColSchemaRowset**, przekaż nazwę tabeli jako **DBID**.  
+-   W **C***ShortName***SessionColSchemaRowset**, przekazać nazwę tabeli jako `DBID`.  
   
 ## <a name="setting-restrictions"></a>Ustawianie ograniczeń  
- Ważne pojęcia w Obsługa zestawów wierszy schematu jest ustawienie ograniczenia, które możesz wykonać przy użyciu `SetRestrictions`. Ograniczenia Zezwalaj klientom pobieranie tylko pasujących wierszy (na przykład znaleźć wszystkie kolumny w tabeli "MyTable"). Ograniczenia są opcjonalne, a w przypadku, w których żaden nie jest obsługiwane (ustawienie domyślne), zwracane są wszystkie dane zawsze. Na przykład dostawcy, który obsługuje ograniczenia zobacz [UpdatePV](http://msdn.microsoft.com/en-us/c8bed873-223c-4a7d-af55-f90138c6f38f) próbki.  
+ Obsługa zestawów wierszy schematu bardzo ważnym pojęciem jest ustawienie ograniczenia, które można zrobić za pomocą `SetRestrictions`. Ograniczenia pozwala użytkownikom można pobrać tylko pasujących wierszy (na przykład znaleźć wszystkie kolumny w tabeli "MyTable"). Ograniczenia są opcjonalne, a w przypadku, w których żaden nie jest obsługiwane (ustawienie domyślne), zwracane są wszystkie dane zawsze. Na przykład dostawca, który obsługuje ograniczenia zobacz [UpdatePV](http://msdn.microsoft.com/c8bed873-223c-4a7d-af55-f90138c6f38f) próbki.  
   
-## <a name="setting-up-the-schema-map"></a>Konfigurowanie mapy schematu  
- Konfigurowanie mapy schematu, takie jak ta, w Session.h w UpdatePV:  
+## <a name="setting-up-the-schema-map"></a>Konfigurowanie Mapa schematu  
+ Skonfiguruj Mapa schematu, taką jak ta w Session.h w UpdatePV:  
   
 ```  
 BEGIN_SCHEMA_MAP(CUpdateSession)  
@@ -77,9 +77,9 @@ BEGIN_SCHEMA_MAP(CUpdateSession)
 END_SCHEMA_MAP()  
 ```  
   
- Do obsługi **IDBSchemaRowset**, musi obsługiwać `DBSCHEMA_TABLES`, **DBSCHEMA_COLUMNS**, i **DBSCHEMA_PROVIDER_TYPES**. Zestawy wierszy schematu dodatkowe można dodać, według uznania.  
+ Aby obsługiwać `IDBSchemaRowset`, musi obsługiwać `DBSCHEMA_TABLES`, `DBSCHEMA_COLUMNS`, i `DBSCHEMA_PROVIDER_TYPES`. Możesz dodać zestawy wierszy schematu dodatkowe według uznania.  
   
- Deklarowanie klasy zestawu wierszy schematu z `Execute` metody, takie jak `CUpdateSessionTRSchemaRowset` w UpdatePV:  
+ Deklarowanie klasy zestawu wierszy schematu z `Execute` metody takie jak `CUpdateSessionTRSchemaRowset` w UpdatePV:  
   
 ```  
 class CUpdateSessionTRSchemaRowset :   
@@ -91,34 +91,34 @@ class CUpdateSessionTRSchemaRowset :
                     ULONG cRestrictions, const VARIANT* rgRestrictions)  
 ```  
   
- Należy pamiętać, że `CUpdateSession` dziedziczy `IDBSchemaRowsetImpl`, więc wszystkie ograniczenia obsługi metody. Przy użyciu `CSchemaRowsetImpl`, zadeklarować trzech klas podrzędnych (wymienione w powyższej mapie schematu): `CUpdateSessionTRSchemaRowset`, `CUpdateSessionColSchemaRowset`, i `CUpdateSessionPTSchemaRowset`. Każda z tych klas podrzędnych ma `Execute` metoda obsługująca zestawy odpowiednich ograniczeń (kryteria wyszukiwania). Każdy `Execute` metoda porównuje wartości `cRestrictions` i `rgRestrictions` parametrów. Zobacz opis tych parametrów w [SetRestrictions](../../data/oledb/idbschemarowsetimpl-setrestrictions.md).  
+ Należy pamiętać, że `CUpdateSession` dziedziczy `IDBSchemaRowsetImpl`, więc posiada wartość ograniczenia obsługi metod. Za pomocą `CSchemaRowsetImpl`, Zadeklaruj trzy klasy podrzędnej (wymienione w powyższej Mapa schematu): `CUpdateSessionTRSchemaRowset`, `CUpdateSessionColSchemaRowset`, i `CUpdateSessionPTSchemaRowset`. Każda z tych klas podrzędnych ma `Execute` metoda, która obsługuje jego odpowiedniego zestawu ograniczeń (kryteria wyszukiwania). Każdy `Execute` metoda porównuje wartości `cRestrictions` i `rgRestrictions` parametrów. Zobacz opis tych parametrów w [setrestrictions —](../../data/oledb/idbschemarowsetimpl-setrestrictions.md).  
   
- Aby uzyskać więcej informacji o tym, które odpowiadają ograniczenia wierszy określonego schematu, zapoznaj się spis zestaw wierszy schematu identyfikatorów GUID w [IDBSchemaRowset](https://msdn.microsoft.com/en-us/library/ms713686.aspx) w *OLE DB Podręcznik programisty* w Zestaw Windows SDK.  
+ Aby uzyskać więcej informacji o tym, które odpowiadają ograniczenia wierszy określonego schematu, zapoznaj się z tabeli zestaw wierszy schematu identyfikatorów GUID w [IDBSchemaRowset](https://msdn.microsoft.com/library/ms713686.aspx) w *OLE DB Podręcznik programisty* w Windows SDK.  
   
- Na przykład, jeśli użytkownik obsługiwane **nazwa_tabeli** ograniczenia `DBSCHEMA_TABLES`, należy wykonać następujące czynności:  
+ Na przykład, jeśli użytkownik obsługiwane **nazwa_tabeli** ograniczeń dotyczących `DBSCHEMA_TABLES`, może wykonać następujące czynności:  
   
- Po pierwsze, wyszukiwanie `DBSCHEMA_TABLES` i zobacz, czy obsługuje ona cztery ograniczenia (w kolejności).  
+ Po pierwsze, spójrz na `DBSCHEMA_TABLES` i zobaczyć, że obsługuje ona cztery ograniczenia (w kolejności).  
   
 |Ograniczenie zestawu wierszy schematu|Wartość ograniczenia|  
 |-------------------------------|-----------------------|  
-|**TABLE_CATALOG**|0x1 (1 binarny)|  
+|**TABLE_CATALOG**|0x1 (binarne 1)|  
 |**TABLE_SCHEMA**|0x2 (binarne 10)|  
 |**TABLE_NAME**|0x4 (binarne 100)|  
 |**TABLE_TYPE**|0x8 (binarne 1000)|  
   
- Następnie należy pamiętać, że jeden bit dla każdego ograniczenia. Aby można było obsługiwać **nazwa_tabeli** , zwróci 0x4 w `rgRestrictions` elementu. Jeśli użytkownik obsługiwane **TABLE_CATALOG** i **nazwa_tabeli**, zwróci 0x5 (101 binarny).  
+ Następnie należy pamiętać, że istnieje jeden bit dla każdego ograniczenia. Aby można było obsługiwać **nazwa_tabeli** tylko zwróci 0x4 w `rgRestrictions` elementu. Jeśli jest obsługiwany w przypadku **TABLE_CATALOG** i **nazwa_tabeli**, zwróci 0x5 (binarne 101).  
   
- Domyślnie implementacja zwraca 0 (nie obsługuje żadnych ograniczeń) dla dowolnego żądania. UpdatePV jest przykładem dostawcy, który obsługuje ograniczenia.  
+ Domyślnie implementacja zwraca wartość 0 (nie obsługuje żadnych ograniczeń) dla każdego żądania. UpdatePV znajduje się przykład dostawcy, który obsługuje ograniczenia.  
   
 ### <a name="example"></a>Przykład  
- Ten kod jest pobierana z [UpdatePV](http://msdn.microsoft.com/en-us/c8bed873-223c-4a7d-af55-f90138c6f38f) próbki. UpdatePv obsługuje trzy zestawy wierszy schematu wymagane: `DBSCHEMA_TABLES`, **DBSCHEMA_COLUMNS**, i **DBSCHEMA_PROVIDER_TYPES**. Na przykład sposobu wdrażania w dostawcy obsługi schematu w tym temacie prezentująca implementacja **DBSCHEMA_TABLE** zestawu wierszy.  
+ Ten kod jest pobierana z [UpdatePV](http://msdn.microsoft.com/c8bed873-223c-4a7d-af55-f90138c6f38f) próbki. UpdatePv obsługuje trzy zestawów wierszy schematu wymagane: `DBSCHEMA_TABLES`, `DBSCHEMA_COLUMNS`, i `DBSCHEMA_PROVIDER_TYPES`. Na przykład implementacji Obsługa schematu w dostawcy ten temat przeprowadzi Cię przez wdrażanie `DBSCHEMA_TABLE` zestawu wierszy.  
   
 > [!NOTE]
->  Przykładowy kod mogą być inne niż wymienione w tym miejscu; Przykładowy kod powinno być traktowane jako bardziej zaktualizowanej wersji.  
+>  Przykładowy kod różnić się od wymienione tutaj; w przykładowym kodzie powinno być traktowane jako bardziej aktualnej wersji.  
   
- Pierwszym krokiem podczas dodawania obsługi schematu jest ustalenie ograniczenia, które będą obsługiwać. Aby ustalić, które ograniczenia są dostępne dla użytkownika zestaw wierszy schematu, przyjrzeć się ze specyfikacją OLE DB dla definicji **IDBSchemaRowset**. Następujące główne definicji Zobacz temat tabeli zawierającej kolumny ograniczeń, liczba ograniczeń i nazwę zestawu wierszy schematu. Wybierz żądane do obsługi i zanotuj liczbę ograniczenia i ograniczenie kolumny zestawu wierszy schematu. Na przykład `DBSCHEMA_TABLES` obsługuje cztery ograniczenia (**TABLE_CATALOG**, **TABLE_SCHEMA**, **nazwa_tabeli**, i **TABLE_TYPE** ):  
+ Pierwszym krokiem podczas dodawania obsługi schematu jest ustalenie, ograniczenia, które zamierzasz obsługiwać. Aby określić ograniczenia, które są dostępne dla użytkownika zestaw wierszy schematu, Przyjrzyj się specyfikacji OLE DB dla definicji `IDBSchemaRowset`. Następujące główne definicji zobaczysz tabelę zawierającą nazwy zestawu wierszy schematu, liczba ograniczeń i kolumn ograniczeń. Wybierz zestaw wierszy schematu, potrzebne do obsługi i zanotuj liczbę ograniczenia i ograniczenie kolumny. Na przykład `DBSCHEMA_TABLES` obsługuje cztery ograniczenia (**TABLE_CATALOG**, **TABLE_SCHEMA**, **nazwa_tabeli**, i **TABLE_TYPE** ):  
   
-```  
+```cpp  
 void SetRestrictions(ULONG cRestrictions, GUID* rguidSchema,   
    ULONG* rgRestrictions)  
 {  
@@ -135,27 +135,27 @@ void SetRestrictions(ULONG cRestrictions, GUID* rguidSchema,
 }  
 ```  
   
- Bit reprezentuje każdej kolumny ograniczenia. Jeśli mają być obsługiwane ograniczenie (to znaczy można badać przy jego), ustawić tego bit na wartość 1. Jeśli nie chcesz obsługiwać ograniczenie, tego bit należy ustawić na zero. W wierszu powyższego kodu obsługuje UpdatePV **nazwa_tabeli** i **TABLE_TYPE** ograniczenia dotyczące `DBSCHEMA_TABLES` zestawu wierszy. Są to czwarty ograniczenia (maska bitowa 1000) i innych (maska bitowa 100). W związku z tym maski bitów dla UpdatePv jest 1100 (lub 0x0C):  
+ Bit reprezentuje każda kolumna ograniczeń. Jeśli chcesz obsługiwać ograniczenie (oznacza to, że można tworzyć zapytania przez niego), ustaw ten bit na 1. Jeśli nie chcesz obsługiwać ograniczenie, należy ustawić na zero tego bitu. W wierszu powyższy kod obsługuje UpdatePV **nazwa_tabeli** i **TABLE_TYPE** ograniczenia dotyczące `DBSCHEMA_TABLES` zestawu wierszy. Są to czwarta ograniczenia (maska bitowa 1000) i innych (maska bitowa 100). W związku z tym maski bitów dla UpdatePv jest 1100 (lub 0x0C):  
   
 ```  
 if (InlineIsEqualGUID(rguidSchema[l], DBSCHEMA_TABLES))  
     rgRestrictions[l] = 0x0C;  
 ```  
   
- Następujące `Execute` funkcji jest podobne do zestawów wierszy regularnego. Masz trzech argumentów: `pcRowsAffected`, `cRestrictions`, i `rgRestrictions`. `pcRowsAffected` Zmiennej jest parametrem wyjściowym dostawca może zwracać liczbę wierszy w zestawie wierszy schematu. `cRestrictions` Parametr jest parametrem wejściowym zawierającą liczbę ograniczenia przekazywane przez klienta do dostawcy. `rgRestrictions` Parametr jest tablicą **VARIANT** wartości, które zawierają wartości ograniczeń.  
+ Następujące `Execute` funkcji jest podobne do tych w regularnych zestawów wierszy. Masz trzy argumenty: *pcRowsAffected*, *cRestrictions*, i *rgRestrictions*. *PcRowsAffected* zmienna jest parametrem wyjściowym, dostawca może zwracać liczbę wierszy w zestawie wierszy schematu. *CRestrictions* parametr jest parametrem wejściowym, zawierającą liczbę ograniczenia przekazywane przez klienta do dostawcy. *RgRestrictions* parametr jest tablicą `VARIANT` wartości, które zawierają wartości ograniczeń.  
   
 ```  
 HRESULT Execute(DBROWCOUNT* pcRowsAffected, ULONG cRestrictions,   
                 const VARIANT* rgRestrictions)  
 ```  
   
- `cRestrictions` Zmienna jest oparta na całkowitą liczbę ograniczeń dla zestawu wierszy schematu, niezależnie od tego, czy dostawca obsługuje je. Ponieważ UpdatePv obsługuje dwa ograniczenia (trzecia i czwarta), ten kod wyszukuje tylko `cRestrictions` o wartości większej lub równej 3.  
+ `cRestrictions` Zmienna jest oparta na całkowita liczba ograniczeń dla zestawu wierszy schematu, niezależnie od tego, czy dostawca obsługuje je. Ponieważ UpdatePv obsługuje dwa ograniczenia (trzecia i czwarta), ten kod wyszukuje tylko `cRestrictions` wartość większą lub równą 3.  
   
- Wartość **nazwa_tabeli** ograniczeń są przechowywane w `rgRestrictions[2]` (ponownie trzeci ograniczeń w tablicę wartości nieujemnych to 2). Należy sprawdzić, czy nie ma ograniczenia `VT_EMPTY` do faktycznie jego obsługi. Należy pamiętać, że **VT_NULL** nie jest równa `VT_EMPTY`. **VT_NULL** określa wartość prawidłowym ograniczeniem.  
+ Wartość **nazwa_tabeli** ograniczeń znajduje się w `rgRestrictions[2]` (ponownie trzeci ograniczenie w tablicę indeksowaną od zera jest 2). Należy sprawdzić, czy ograniczenia nie jest VT_EMPTY do faktycznie jego obsługi. Należy pamiętać, że VT_NULL nie jest równa VT_EMPTY. VT_NULL określa wartość prawidłowym ograniczeniem.  
   
- Definicja UpdatePv Nazwa tabeli jest pełną ścieżkę do pliku tekstowego. Wyodrębnij wartość ograniczenia, a następnie spróbuj otworzyć plik, aby upewnić się, że plik istnieje faktycznie. Jeśli plik nie istnieje, zwracany `S_OK`. To rozwiązanie może wydawać się nieco z poprzednimi wersjami, ale jakie kod naprawdę informuje klienta jest czy nie było żadnych tabel obsługiwanych przez określona nazwa. `S_OK` Return oznacza, że kod wykonane prawidłowo.  
+ Definicja UpdatePv Nazwa tabeli jest w pełni kwalifikowaną ścieżkę do pliku tekstowego. Wyodrębnić wartość ograniczenia, a następnie ponów próbę otwarcia pliku, aby upewnić się, że plik istnieje. Jeśli plik nie istnieje, zwraca S_OK. Może to wydawać się nieco z poprzednimi wersjami, ale jaki kod naprawdę informuje użytkownika jest istnienie żadnych tabel obsługiwanych przez nazwę, który został określony. Zwracany S_OK oznacza, że kod wykonany prawidłowo.  
   
-```  
+```cpp  
 USES_CONVERSION;  
 enum {  
             sizeOfszFile = 255  
@@ -190,7 +190,7 @@ if (cRestrictions >= 3 && rgRestrictions[2].vt != VT_EMPTY)
 }  
 ```  
   
- Obsługa ograniczeń czwarty (**TABLE_TYPE**) jest podobny do ograniczeń trzecich. Sprawdź, czy wartość nie jest `VT_EMPTY`. To ograniczenie zwraca tylko z typem tabeli **tabeli**. Aby określić prawidłowe wartości dla `DBSCHEMA_TABLES`, Szukaj w dodatku B *OLE DB Podręcznik programisty* w **tabel** sekcji zestawu wierszy.  
+ Obsługa ograniczeń czwarty (**TABLE_TYPE**) jest podobny do trzeciego ograniczeń. Sprawdź, czy wartość nie jest VT_EMPTY. To ograniczenie zwraca tylko typ tabeli **tabeli**. Aby określić prawidłowe wartości dla `DBSCHEMA_TABLES`, Szukaj w dodatku B *OLE DB Podręcznik programisty* w **tabel** sekcji zestawu wierszy.  
   
 ```  
 // TABLE_TYPE restriction:  
@@ -209,9 +209,9 @@ if (cRestrictions >=4 && rgRestrictions[3].vt != VT_EMPTY)
 }  
 ```  
   
- Jest to, gdzie faktycznie utworzyć wpis wierszu w zestawie wierszy. Zmienna `trData` odpowiada **CTABLESRow**, struktury zdefiniowane w szablonach dostawcy OLE DB. **CTABLESRow** odpowiada **tabel** definicji zestawu wierszy dodatek b ze specyfikacją OLE DB. Masz tylko jeden wiersz można dodać, ponieważ jedna tabela może obsługiwać tylko w czasie.  
+ Jest to, gdzie rzeczywiście utworzeniu wpisu wiersza w zestawie wierszy. Zmienna `trData` odpowiada `CTABLESRow`, struktury, zdefiniowanych w szablonach dostawcy OLE DB. `CTABLESRow` odnosi się do **tabel** definicji zestawu wierszy dodatek b specyfikacji OLE DB. Masz tylko jeden wiersz, aby dodać, ponieważ w danym momencie może obsługiwać tylko jedną tabelę.  
   
-```  
+```cpp  
 // Bring over the data:  
 wcspy_s(trData.m_szType, OLESTR("TABLE"), 5);  
 
@@ -220,9 +220,9 @@ wcspy_s(trData.m_szDesc, OLESTR("The Directory Table"), 19);
 wcsncpy_s(trData.m_szTable, T2OLE(szFile), _TRUNCATE());  
 ```  
   
- UpdatePV ustawia tylko trzy kolumny: **nazwa_tabeli**, **TABLE_TYPE**, i **opis**. Należy następnie zanotuj kolumny, dla których zwracają informacje, ponieważ te informacje są niezbędne podczas implementowania `GetDBStatus`:  
+ UpdatePV ustawia tylko dla trzech kolumnach: **nazwa_tabeli**, **TABLE_TYPE**, i **opis**. Należy notatkę kolumny, dla których zwrócić informacje, ponieważ ta informacja będzie potrzebna podczas implementowania `GetDBStatus`:  
   
-```  
+```cpp  
     _ATLTRY  
     {  
         m_rgRowData.Add(trData);  
@@ -238,9 +238,9 @@ wcsncpy_s(trData.m_szTable, T2OLE(szFile), _TRUNCATE());
 }  
 ```  
   
- `GetDBStatus` Funkcji jest bardzo ważne dla poprawnego działania zestawu wierszy schematu. Ponieważ nie zwraca dane dla każdej kolumny w **tabel** zestawu wierszy, należy określić, które kolumny zwracane dane i nie chcesz.  
+ `GetDBStatus` Funkcji jest bardzo istotne dla poprawnego działania zestawu wierszy schematu. Ponieważ nie zwraca dane dla każdej kolumny w **tabel** zestawu wierszy, należy określić kolumny, które zwracają dane, które nie obsługują.  
   
-```  
+```cpp  
 virtual DBSTATUS GetDBStatus(CSimpleRow* , ATLCOLUMNINFO* pColInfo)  
 {  
     ATLASSERT(pColInfo != NULL);  
@@ -259,13 +259,13 @@ virtual DBSTATUS GetDBStatus(CSimpleRow* , ATLCOLUMNINFO* pColInfo)
 }  
 ```  
   
- Ponieważ Twoje `Execute` funkcja zwraca dane dotyczące **nazwa_tabeli**, **TABLE_TYPE**, i **opis** pola z **tabel**wierszy można Szukaj dodatek b ze specyfikacją OLE DB i określić (licząc od góry w) są porządkowe 3, 4 i 6. Dla każdego z tych kolumn, zwróć **DBSTATUS_S_OK**. W przypadku wszystkich innych kolumn, zwracają **DBSTATUS_S_ISNULL**. Ważne jest, aby zwrócić ten stan, ponieważ klient nie może zrozumieć, czy wartość powrócisz jest **NULL** lub inny. Ponownie, należy pamiętać, że **NULL** nie jest odpowiednikiem puste.  
+ Ponieważ Twoje `Execute` funkcja zwraca dane dla **nazwa_tabeli**, **TABLE_TYPE**, i **opis** pola z **tabel**zestawu wierszy, możesz przeszukania dodatek B specyfikacji OLE DB i określić (licząc od góry w dół) są liczby porządkowe, 3, 4 i 6. Dla każdego z tych kolumn Zwróć DBSTATUS_S_OK. W przypadku wszystkich innych kolumn zwracają DBSTATUS_S_ISNULL. Ważne jest zwrócić ten stan, ponieważ użytkownik może ich nie zrozumieć to wartość, którą należy zwrócić wartość NULL lub jest coś innego. Ponownie należy pamiętać o wartości NULL nie jest odpowiednikiem pustego.  
   
- Aby uzyskać więcej informacji na temat interfejsu zestawu wierszy schematu OLE DB, zobacz [IDBSchemaRowset](../../data/oledb/idbschemarowsetimpl-class.md) interfejsu OLE DB Podręcznik programisty.  
+ Aby uzyskać więcej informacji na temat interfejsu zestawu wierszy schematu OLE DB, zobacz [IDBSchemaRowset](../../data/oledb/idbschemarowsetimpl-class.md) interfejsu dokumencie OLE DB programisty.  
   
- Aby dowiedzieć się jak klienci mogą korzystać **IDBSchemaRowset** metod, zobacz [uzyskiwanie metadanych za pomocą zestawów wierszy schematu](../../data/oledb/obtaining-metadata-with-schema-rowsets.md).  
+ Aby dowiedzieć się jak klienci mogą korzystać `IDBSchemaRowset` metod, zobacz [uzyskiwanie metadanych za pomocą zestawów wierszy schematu](../../data/oledb/obtaining-metadata-with-schema-rowsets.md).  
   
- Na przykład dostawcę, który obsługuje zestawów wierszy schematu zobacz [UpdatePV](http://msdn.microsoft.com/en-us/c8bed873-223c-4a7d-af55-f90138c6f38f) próbki.  
+ Na przykład dostawcę, który obsługuje zestawów wierszy schematu zobacz [UpdatePV](http://msdn.microsoft.com/c8bed873-223c-4a7d-af55-f90138c6f38f) próbki.  
   
 ## <a name="see-also"></a>Zobacz też  
  [Zaawansowane techniki dostawcy](../../data/oledb/advanced-provider-techniques.md)

@@ -1,5 +1,5 @@
 ---
-title: Odwołanie do właściwości w dostawcy | Dokumentacja firmy Microsoft
+title: Odwoływanie się do właściwości w dostawcy | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,27 +17,27 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 36965ac33fc0a563951c0c0dfdce60d9d0e4f55b
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: ec2a52949754e6b19730d5ef025f958d517f6fd0
+ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33106547"
+ms.lasthandoff: 07/30/2018
+ms.locfileid: "39341039"
 ---
 # <a name="referencing-a-property-in-your-provider"></a>Odwoływanie się do właściwości w dostawcy
-Znajdź grupy właściwości i Identyfikatora właściwości dla właściwości, które mają. Aby uzyskać więcej informacji, zobacz [właściwości OLE DB](https://msdn.microsoft.com/en-us/library/ms722734.aspx) w *OLE DB Podręcznik programisty*.  
+Znajdź grupy właściwości i Identyfikatora właściwości dla właściwości, które chcesz. Aby uzyskać więcej informacji, zobacz [właściwości OLE DB](https://msdn.microsoft.com/library/ms722734.aspx) w *OLE DB Podręcznik programisty*.  
   
- W poniższym przykładzie założono, że próbujesz uzyskać właściwości z zestawu wierszy. Kod za pomocą sesji lub polecenia jest podobny, ale używa innego interfejsu.  
+ W poniższym przykładzie założono, próby pobrania właściwości z zestawu wierszy. Kod przy użyciu sesji lub polecenia są podobne, ale używa innego interfejsu.  
   
- Utwórz [cdbpropset —](../../data/oledb/cdbpropset-class.md) obiekt, za pomocą grupy właściwości jako parametr do konstruktora. Na przykład:  
+ Tworzenie [cdbpropset —](../../data/oledb/cdbpropset-class.md) przy użyciu grupy właściwości jako parametr do konstruktora. Na przykład:  
   
-```  
+```cpp  
 CDBPropSet propset(DBPROPSET_ROWSET);  
 ```  
   
- Wywołanie [AddProperty](../../data/oledb/cdbpropset-addproperty.md), przekazanie jej Identyfikatora właściwości i wartość do przypisania do właściwości. Typ wartości jest zależna od właściwości, które są używane.  
+ Wywołaj [AddProperty](../../data/oledb/cdbpropset-addproperty.md), przekazanie jej identyfikator właściwości i wartość do przypisania do właściwości. Typ wartości jest zależna od właściwości, którego używasz.  
   
-```  
+```cpp  
 CDBPropSet propset(DBPROPSET_ROWSET);  
 
 propset.AddProperty(DBPROP_IRowsetChange, true);  
@@ -45,9 +45,9 @@ propset.AddProperty(DBPROP_IRowsetChange, true);
 propset.AddProperty(DBPROP_UPDATABILITY, DBPROPVAL_UP_INSERT | DBPROPVAL_UP_CHANGE | DBPROPVAL_UP_DELETE);  
 ```  
   
- Użyj `IRowset` interfejs do wywołania **GetProperties**. Przekaż właściwość ustawić jako parametr. Oto kod końcowego:  
+ Użyj `IRowset` interfejsu do wywołania `GetProperties`. Przekaż właściwość, Ustaw jako parametr. Poniżej przedstawiono końcowy kodu:  
   
-```  
+```cpp  
 CAgentRowset<CMyProviderCommand>* pRowset = (CAgentRowset<CMyProviderCommand>*) pThis;  
   
 CComQIPtr<IRowsetInfo, &IID_IRowsetInfo> spRowsetProps = pRowset;  

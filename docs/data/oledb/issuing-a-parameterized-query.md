@@ -15,17 +15,17 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: b377df31e9166ee5288d37b0843944a3b2eb6bc7
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 02ce5cbfdc6c5305ab356fc32993b6bdd34f1fac
+ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33104578"
+ms.lasthandoff: 07/30/2018
+ms.locfileid: "39339539"
 ---
 # <a name="issuing-a-parameterized-query"></a>Uruchamianie zapytania parametrycznego
-Poniższy przykład problemy z prostego zapytania parametrycznego pobierający rekordy z pola wiek (która jest większa niż 30) z tabeli w bazie danych programu Microsoft Access. Aby obsługiwać parametr, rekord użytkownika musi mieć dodatkowe mapy. Następujący kod w Projekt ATL używa `CCommand` klasy zamiast `CTable` klasa używana w poprzednim przykładzie [przechodzenie przez prosty zestaw wierszy](../../data/oledb/traversing-a-simple-rowset.md).  
+Poniższy przykład generuje proste zapytanie parametryczne, które pobiera rekordy z polem wiek, (która jest większa niż 30) z tabeli w bazie danych programu Microsoft Access. Aby zapewnić obsługę parametru, rekord użytkownika musi mieć dodatkowe mapy. W poniższym kodzie w projekcie ATL, użyto `CCommand` klasy zamiast `CTable` klasa używana w poprzednim przykładzie [przechodzenie przez prosty zestaw wierszy](../../data/oledb/traversing-a-simple-rowset.md).  
   
-```  
+```cpp  
 #include <atldbcli.h>  
   
 CDataSource connection;  
@@ -51,9 +51,9 @@ while (artists.MoveNext() == S_OK)
 }  
 ```  
   
- Rekord użytkownika `CArtists`, wygląda podobnie do następującej:  
+ Rekord użytkownika `CArtists`, wygląda następująco:  
   
-```  
+```cpp  
 class CArtists  
 {  
 public:  

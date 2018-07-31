@@ -1083,12 +1083,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 6c7b2cd83c9c0ce5dcaa32f04257bbbbe9618ca6
-ms.sourcegitcommit: 0bf5f6634d66ed92fffb32291ad9f854d9895b17
+ms.openlocfilehash: 02d0787ebb40379ac438880ab7a23aa36a0b0f56
+ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/25/2018
-ms.locfileid: "39250657"
+ms.lasthandoff: 07/30/2018
+ms.locfileid: "39338301"
 ---
 # <a name="schema-rowset-classes-and-typedef-classes"></a>Klasy zestawów wierszy schematu i klasy Typedef
 Schemat jest kolekcją obiektów bazy danych, które należą do firmy lub zostały utworzone przez określonego użytkownika. Katalog może zawierać co najmniej jednego schematu, ale musi zawsze zawierać schematu o nazwie INFORMATION_SCHEMA, zawierającą widoków i domen schematu informacji. Informacje o schemacie w OLE DB są pobierane za pomocą zestawów wierszy schematu wstępnie zdefiniowanych i zawiera typy, tabele, kolumny, indeksów, widoków, potwierdzenia i ograniczeń, statystyki, zestawów znaków, sortowania i domen.  

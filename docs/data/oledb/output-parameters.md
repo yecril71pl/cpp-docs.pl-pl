@@ -19,23 +19,23 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 8733b967ddab7e6f68fcbee1c80e78500a679f96
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: ae742f27f7e2fd13de9acfc3c814b36c85e9e106
+ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33104389"
+ms.lasthandoff: 07/30/2018
+ms.locfileid: "39339029"
 ---
 # <a name="output-parameters"></a>Parametry wyjściowe
-Wywołanie procedury składowanej jest podobny do wywoływania polecenia SQL. Główna różnica polega na czy procedury składowane za pomocą parametrów wyjściowych (lub "outparameters") i wartości zwracane.  
+Wywoływanie procedury składowanej jest podobny do wywoływania za pomocą polecenia SQL. Główna różnica polega na czy procedury składowane parametry danych wyjściowych (lub "outparameters") i wartości zwracane.  
   
- Następujące przechowywane procedury, pierwszy '? "jest zwracana wartość (telefon), a drugi"? "jest parametr wejściowy (nazwa):  
+ W poniższym procedurą składowaną, pierwszego "?"jest zwracana wartość (telefon), a druga"?" jest parametr wejściowy (nazwa):  
   
 ```  
 DEFINE_COMMAND(CMySProcAccessor, _T("{ ? = SELECT phone FROM shippers WHERE name = ? }")  
 ```  
   
- I parametry wyjściowe można określić w mapowaniu parametru:  
+ Należy określić w i parametrów out w mapie parametru:  
   
 ```  
 BEGIN_PARAM_MAP(CMySProcAccessor)  
@@ -46,14 +46,14 @@ BEGIN_PARAM_MAP(CMySProcAccessor)
 END_PARAM_MAP()  
 ```  
   
- Aplikacja musi obsługiwać dane wyjściowe zwrócone z procedury składowane. Różnych dostawców OLE DB zwracać parametrów wyjściowych i wartości zwracane w różnym czasie podczas przetwarzania wyników. Na przykład dostawcy Microsoft OLE DB dla programu SQL Server (SQLOLEDB) podać parametry wyjściowe i nie zwracać kody do po klienta ma pobrać lub anulowane zestawów wyników zwróconych przez procedurę składowaną. Wynik jest zwracany w ostatnim pakiecie TDS z serwera.  
+ Twoja aplikacja musi obsłużyć dane wyjściowe zwrócone z procedury składowane. Różnych dostawców OLE DB wróć parametrów wyjściowych i wartości zwracane w różnym czasie podczas przetwarzania wyników. Na przykład dostawcy Microsoft OLE DB dla programu SQL Server (SQLOLEDB) Podaj parametry wyjściowe i nie zwracają kodów, aż po użytkownik ma pobrać lub anulowane zestawy wyników zwrócone przez procedurę składowaną. Wynik jest zwracany w ostatnim pakiecie TDS z serwera.  
   
 ## <a name="row-count"></a>Liczba wierszy  
- Jeśli używasz szablony OLE DB konsumentów do wykonania procedury przechowywanej, która ma outparameters liczba wierszy nie jest ustawiony do czasu zamknięcia zestawu wierszy.  
+ Jeśli używasz szablony OLE DB odbiorców do wykonania procedury przechowywanej, która ma outparameters liczba wierszy nie jest ustawiona, dopóki nie zamkniesz zestawu wierszy.  
   
- Rozważmy na przykład procedury składowanej z zestawu wierszy i outparameter:  
+ Na przykład należy wziąć pod uwagę procedury składowanej przy użyciu zestawu wierszy i outparameter:  
   
-```  
+```sql  
 create procedure sp_test  
    @_rowcount integer output  
 as  
@@ -62,7 +62,7 @@ as
 return 0  
 ```  
   
- @_rowcount Outparameter zgłasza liczbę wierszy zwróconych z tabeli testu. Jednak ta procedura składowana ogranicza liczbę wierszy do maksymalnie 50. Na przykład jeśli w teście 100 wierszy, rowcount byłoby 50, (ponieważ ten kod pobiera tylko 50 pierwszych wierszy). Jeśli jest tylko 30 wierszy w tabeli, rowcount byłoby 30. Należy wywołać **Zamknij** lub **CloseAll** do wypełnienia outparameter, aby pobrać jej wartość.  
+ @_rowcount Outparameter raporty zwróconych liczbę wierszy z tabeli testu. Jednakże tę procedurę składowaną ogranicza liczbę wierszy do maksymalnie 50. Na przykład jeśli wystąpiły 100 wierszy w teście, rowcount będzie 50, (ponieważ ten kod pobiera tylko pierwszych 50 wierszy). Jeśli tylko 30 wierszy w tabeli, rowcount byłoby 30. Należy wywołać `Close` lub `CloseAll` do wypełniania outparameter, aby pobrać jego wartość.  
   
 ## <a name="see-also"></a>Zobacz też  
  [Korzystanie z procedur składowanych](../../data/oledb/using-stored-procedures.md)

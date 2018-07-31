@@ -19,15 +19,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 3110d20330d42fcb0816873ff3e8a25d1f8436ea
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 0527f4b154b4b5d0dc07b2b152a3975f49746abf
+ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33097357"
+ms.lasthandoff: 07/30/2018
+ms.locfileid: "39336742"
 ---
 # <a name="cnoaccessor-class"></a>CNoAccessor — Klasa
-Mogą być używane jako argument szablonu (`TAccessor`) dla klasy szablonów, takich jak `CCommand` i `CTable`, wymagających argumentu klasy metody dostępu.  
+Może służyć jako argument szablonu (`TAccessor`) dla klasy szablonów, takich jak `CCommand` i `CTable`, który wymaga argumentu klasy dostępu.  
   
 ## <a name="syntax"></a>Składnia
 
@@ -36,33 +36,33 @@ class CNoAccessor
 ```  
   
 ## <a name="remarks"></a>Uwagi  
- Użyj `CNoAccessor` jako argument szablonu nie można się z klasy do obsługi parametry lub kolumny wyjściowe.  
+ Użyj `CNoAccessor` jako argument szablonu, jeśli nie chcesz, aby klasy, która ma obsługiwać parametry lub kolumny wyjściowe.  
   
- `CNoAccessor` implementuje następujące metody klasy zastępczej, które odpowiadają innych metod klasy dostępu:  
+ `CNoAccessor` implementuje następujących metod klasy zastępczej, z których każdy odnoszą się do innych metod klasy dostępu:  
   
--   **BindColumns** -wiąże kolumn metody dostępu.  
+-   `BindColumns` — Wiąże kolumn metod dostępu.  
   
--   `BindParameters` — Wiąże utworzony parametry kolumny.  
+-   `BindParameters` — Wiąże parametry utworzonych kolumn.  
   
--   **Powiąż** — tworzy wiązania.  
+-   `Bind` -Tworzy wiązania.  
   
--   **Zamknij** -zamyka metodzie dostępu.  
+-   `Close` -Zamyka akcesor.  
   
--   `ReleaseAccessors` -Zwalnia akcesorów utworzone przez klasę.  
+-   `ReleaseAccessors` -Zwalnia Akcesory utworzone przez klasę.  
   
--   `FreeRecordMemory` -Zwalnia żadnych kolumn z bieżącego rekordu, który musi zostać zwolniony.  
+-   `FreeRecordMemory` -Zwalnia żadnej kolumny w bieżącym rekordzie, które muszą zostać uwolniona.  
   
--   `GetColumnInfo` -Pobiera informacji o kolumnie z otwartego zestawu wierszy.  
+-   `GetColumnInfo` — Pobiera informacje o kolumnach z otwartego zestawu wierszy.  
   
 -   `GetNumAccessors` -Pobiera liczbę metod dostępu tworzone przez klasę.  
   
--   `IsAutoAccessor` -Zwraca wartość PRAWDA, jeśli dane są automatycznie pobierane dla metody dostępu podczas operacji przenoszenia.  
+-   `IsAutoAccessor` — Zwraca wartość PRAWDA, jeśli dane są automatycznie pobierane dla metody dostępu podczas operacji przenoszenia.  
   
 -   `GetHAccessor` -Pobiera dojście metody dostępu określonej metody dostępu.  
   
 -   `GetBuffer` -Pobiera wskaźnik do buforu zakładki.  
   
--   **NoBindOnNullRowset** — uniemożliwia wiązania z danymi na pusty zestawów wierszy.  
+-   `NoBindOnNullRowset` -Zapobiega powiązania danych na pusty zestawów wierszy.  
   
 ## <a name="requirements"></a>Wymagania  
  **Nagłówek:** atldbcli.h  

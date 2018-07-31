@@ -19,17 +19,17 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 8c18742d9b3b1039033ad8d42939e0f5a4578fbb
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: b437f02a0df4f4ff0e34c44939c2a40f3ccebf74
+ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33098150"
+ms.lasthandoff: 07/30/2018
+ms.locfileid: "39339744"
 ---
 # <a name="cmyprovidercommand-myproviderrsh"></a>CMyProviderCommand (MyProviderRS.H)
-`CMyProviderCommand` Klasa jest implementacją dla obiekt polecenia dostawcy. Zapewnia implementację `IAccessor`, `ICommandText`, i **ICommandProperties** interfejsów. `IAccessor` Interfejsu jest taka sama jak w zestawie wierszy. Obiekt polecenia użyto metody dostępu do określenia powiązania parametrów. Obiektu zestawu wierszy używa ich, aby określić powiązania dla kolumny wyjściowe. `ICommandText` Interfejsu jest to wygodny sposób, aby określić polecenie w postaci tekstu. W tym przykładzie użyto `ICommandText` interfejs później, gdy dodaje kod niestandardowy; zastępuje ona również `ICommand::Execute` metody. **ICommandProperties** interfejs obsługuje wszystkie właściwości dla obiektów poleceń i zestawu wierszy.  
+`CMyProviderCommand` Klasa jest implementacją dla obiektu polecenia dostawcy. Zapewnia to implementacja `IAccessor`, `ICommandText`, i `ICommandProperties` interfejsów. `IAccessor` Interfejs jest taka sama jak w zestawie wierszy. Obiekt polecenia używa metody dostępu w celu określenia powiązania parametrów. Obiektu zestawu wierszy są one używane do określenia powiązania dla kolumny wyjściowe. `ICommandText` Interfejsu jest to wygodny sposób, aby określić polecenie w formie tekstu. W tym przykładzie użyto `ICommandText` interfejs później, gdy dodaje niestandardowy kod; zastępuje ona również `ICommand::Execute` metody. `ICommandProperties` Interfejs obsługuje wszystkie właściwości dla obiektów poleceń i wierszy.  
   
-```  
+```cpp  
 // CMyProviderCommand  
 class ATL_NO_VTABLE CMyProviderCommand :   
 class ATL_NO_VTABLE CMyProviderCommand :   
@@ -42,11 +42,11 @@ class ATL_NO_VTABLE CMyProviderCommand :
    public IColumnsInfoImpl<CMyProviderCommand>  
 ```  
   
- `IAccessor` Interfejsu do zarządzania wszystkimi powiązaniami, które są używane w poleceń i zestawy wierszy. Wywołania konsumenta **IAccessor::CreateAccessor** z tablicą **DBBINDING** struktury. Każdy **DBBINDING** struktura zawiera informacje dotyczące obsługi powiązania kolumny (na przykład typ i długości). Dostawca odbiera struktur i określa, jak powinny być przesyłane dane i określa, czy jakakolwiek są konieczne. `IAccessor` Interfejsu jest używane w obiekcie command do obsługi żadnych parametrów w poleceniu.  
+ `IAccessor` Interfejsu zarządza wszystkie powiązania, używany w poleceniach i zestawy wierszy. Wywołania konsumenta `IAccessor::CreateAccessor` z tablicą `DBBINDING` struktury. Każdy `DBBINDING` struktura zawiera informacje dotyczące obsługi powiązania kolumny (takie jak typ i długość). Dostawca otrzymuje struktur i określa, jak należy przenieść dane oraz czy wszystkie konwersje niezbędne. `IAccessor` Interfejs jest używany w obiekcie polecenia do obsługi parametrów w poleceniu.  
   
- Udostępnia implementację obiektu polecenia `IColumnsInfo`. OLE DB wymaga `IColumnsInfo` interfejsu. Interfejs umożliwia konsumenta można pobrać informacji o parametrach polecenia. Używa obiektu zestawu wierszy `IColumnsInfo` interfejs do zwracania informacji dotyczących kolumn wyjściowych dla dostawcy.  
+ Obiekt polecenia oferuje również implementację `IColumnsInfo`. OLE DB wymaga `IColumnsInfo` interfejsu. Interfejs umożliwia, aby pobrać informacje o parametrach z polecenia. Używa obiektu zestawu wierszy `IColumnsInfo` interfejsu do zwracania informacji dotyczących kolumn wyjściowych dostawcy.  
   
- Dostawca zawiera również interfejs o nazwie `IObjectWithSite`. `IObjectWithSite` Interfejs został wdrożony w ATL 2.0 i umożliwia implementujący w celu przekazywania informacji o sobie do jego podrzędny. Obiekt polecenia używa `IObjectWithSite` informacje, aby sprawdzić wszelkie wygenerowane obiekty zestawu wierszy o który je utworzył.  
+ Dostawca zawiera również interfejs o nazwie `IObjectWithSite`. `IObjectWithSite` Interfejs został wdrożony w wersji 2.0 biblioteki ATL i umożliwia implementujący do przekazywania informacji o sobie samym do jego podrzędny. Obiekt polecenia używa `IObjectWithSite` informacje, aby poinformować dowolne wygenerowane obiekty zestawu wierszy o który je utworzył.  
   
 ## <a name="see-also"></a>Zobacz też  
  [Pliki dostawcy generowane przez kreatora](../../data/oledb/provider-wizard-generated-files.md)

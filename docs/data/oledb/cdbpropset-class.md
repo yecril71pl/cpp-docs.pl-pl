@@ -44,12 +44,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 6e8415fdac405f0a639b03cc90a710214d2c8d0c
-ms.sourcegitcommit: 7eadb968405bcb92ffa505e3ad8ac73483e59685
+ms.openlocfilehash: 15a1506980519880652abc637549ec2c7bf17e1d
+ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/23/2018
-ms.locfileid: "39207841"
+ms.lasthandoff: 07/30/2018
+ms.locfileid: "39337600"
 ---
 # <a name="cdbpropset-class"></a>CDBPropSet — Klasa
 Dziedziczy `DBPROPSET` struktury i dodaje konstruktora, który inicjuje pola klucza, jak również `AddProperty` dostęp do metody.  
@@ -136,7 +136,7 @@ Konstruktor. Inicjuje `rgProperties`, `cProperties`, i `guidPropertySet` pola [D
 ### <a name="syntax"></a>Składnia  
   
 ```cpp
-      CDBPropSet(const GUID& guid);  
+CDBPropSet(const GUID& guid);  
 
 CDBPropSet(const CDBPropSet& propset);  
 
@@ -156,7 +156,7 @@ Zestawy `guidPropertySet` pole `DBPROPSET` struktury.
 ### <a name="syntax"></a>Składnia  
   
 ```cpp
-      void SetGUID(const GUID& guid) throw();  
+void SetGUID(const GUID& guid) throw();  
 ```  
   
 #### <a name="parameters"></a>Parametry  
@@ -172,7 +172,7 @@ Przypisuje zawartość jedną właściwość, ustaw do innego zbioru właściwo�
 ### <a name="syntax"></a>Składnia  
   
 ```cpp
-      CDBPropSet& operator =(CDBPropSet& propset) throw();  
+CDBPropSet& operator =(CDBPropSet& propset) throw();  
 ```  
   
 ## <a name="see-also"></a>Zobacz też  

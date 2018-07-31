@@ -23,12 +23,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 1ffc92cecb3b28423aa2e869171f730c956996cd
-ms.sourcegitcommit: b0d6777cf4b580d093eaf6104d80a888706e7578
+ms.openlocfilehash: 6a2457ed01214750091bd9ec5a59c9aeac819357
+ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/26/2018
-ms.locfileid: "39269754"
+ms.lasthandoff: 07/30/2018
+ms.locfileid: "39336997"
 ---
 # <a name="idbcreatecommandimpl-class"></a>IDBCreateCommandImpl — Klasa
 Udostępnia implementację [IDBCreateCommand](https://msdn.microsoft.com/library/ms711625.aspx) interfejsu.  
@@ -68,7 +68,7 @@ Tworzy nowe polecenie i zwraca żądanego interfejsu.
 ### <a name="syntax"></a>Składnia  
   
 ```cpp
-      STDMETHOD(CreateCommand)(IUnknown * pUnkOuter,   
+STDMETHOD(CreateCommand)(IUnknown * pUnkOuter,   
    REFIID riid,   
    IUnknown ** ppvCommand);  
 ```  

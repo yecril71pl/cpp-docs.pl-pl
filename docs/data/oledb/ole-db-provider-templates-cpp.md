@@ -18,53 +18,52 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: a331e72433ca25d280d35edfd33a56402675aea9
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 204abfb28ed58051f27f62b522ed0b02a0a78585
+ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33112748"
+ms.lasthandoff: 07/30/2018
+ms.locfileid: "39339578"
 ---
 # <a name="ole-db-provider-templates-c"></a>Szablony dostawców OLE DB (C++)
-OLE DB jest ważną częścią strategii uniwersalnej Microsoft Data Access. Projekt OLE DB umożliwia dostęp do danych wysokiej wydajności z dowolnego źródła danych. Wszystkie dane tabelaryczne są widoczne za pośrednictwem OLE DB niezależnie od tego, czy pochodzi z bazy danych. Elastyczność zapewnia szeroką zasilania.  
+OLE DB stanowi ważną część strategii Microsoft Universal Data Access. Konstrukcja OLE DB umożliwia dostęp do danych o wysokiej wydajności z dowolnego źródła danych. Wszelkie dane tabelaryczne są widoczne w OLE DB, niezależnie od tego, czy pochodzi z bazy danych. Elastyczność daje ogromne ilości mocy.  
   
- Zgodnie z objaśnieniem w [konsumentów OLE DB i dostawców](../../data/oledb/ole-db-consumers-and-providers.md), OLE DB korzysta z koncepcji konsumenci i dostawcy. Klient przesyła żądań dotyczących danych; Dostawca zwraca dane w formacie tabelarycznym klientowi. Z punktu widzenia programowania najważniejszych implikacji ten model jest czy dostawca musi implementować każde wywołanie przez klienta.  
+ Jak wyjaśniono w [konsumentów OLE DB i dostawców](../../data/oledb/ole-db-consumers-and-providers.md), OLE DB korzysta z koncepcji konsumenci i dostawcy. Konsument wysyła żądania dotyczące danych. Dostawca zwraca dane w formacie tabelarycznym konsumenta. Z punktu widzenia programowania najważniejszych domniemanie tego modelu jest, czy dostawca musi implementować wybranego przez konsumenta w ten sposób wywołania.  
   
-## <a name="what-is-a-provider"></a>Co to jest dostawcę?  
- Dostawcy OLE DB to zbiór obiektów COM, które służą wywołania interfejsu z obiektu konsumenta, transfer danych w formacie tabelarycznym źródła trwałe (nazywane magazynu danych) do użytkownika.  
+## <a name="what-is-a-provider"></a>Co to jest dostawca?  
+ Dostawcy OLE DB to zestaw obiektów COM, które obsługują interfejs wywołania z obiektu konsumenta, transfer danych w formacie tabelarycznym z trwałe źródła (nazywane magazynu danych), do konsumenta.  
   
- Dostawcy mogą być prostymi lub złożonymi. Dostawca może obsługiwać minimalnego czasu funkcji lub dostawca jakości pełnej wersji produkcyjnej implementując kilka interfejsów. Dostawcę można Zwróć tabelę, pozwalają klientowi określają format tej tabeli i wykonywać operacje na danych.  
+ Dostawców może być proste lub złożone. Dostawca może obsługiwać minimalnego czasu funkcji lub dostawcy jakości produkcji całego implementując kilka interfejsów. Dostawcę można zwracają tabelę, umożliwia klientowi określenie format tabeli i wykonywać operacje na tych danych.  
   
- Każdy dostawca implementuje standardowy zestaw obiektów COM do obsługi żądań od klienta, o znaczeniu standardowe konsumenta OLE DB dostęp do danych z każdego dostawcy, niezależnie od języka (takich jak C++ i podstawowe).  
+ Każdy dostawca implementuje zestaw standardowych obiektów COM może obsługiwać żądania od klienta, za pomocą standardowych znaczenie każdy konsument OLE DB dostęp do danych z dowolnego dostawcę, niezależnie od języka (takie jak C++ i podstawowa).  
   
- Każdy obiekt COM zawiera kilka interfejsów, niektóre z nich są wymagane i niektóre z nich są opcjonalne. Zaimplementowanie obowiązkowe interfejsy dostawcę gwarantuje minimalny poziom funkcjonalności (zwane zgodności), który dowolnego klienta powinno być możliwe do użycia. Dostawcę można zaimplementować interfejsów opcjonalne oferowanie dodatkowych funkcji. [OLE DB architektura szablonu dostawcy](../../data/oledb/ole-db-provider-template-architecture.md) opisano te interfejsy szczegółowo. Klient zawsze powinny wywoływać `QueryInterface` do określenia, czy dostawca obsługuje danego interfejsu.  
+ Każdy obiekt COM, zawiera kilka interfejsów, niektóre z nich są wymagane, a niektóre z nich są opcjonalne. Poprzez implementację interfejsów obowiązkowe, dostawca gwarantuje minimalny poziom funkcjonalności (o nazwie zgodności), który dowolny klient powinien mieć możliwość użycia. Dostawcę można zaimplementować interfejsów opcjonalne oferowanie dodatkowych funkcji. [OLE DB architektura szablonu dostawcy](../../data/oledb/ole-db-provider-template-architecture.md) w tym artykule opisano te interfejsy szczegółowo. Klient zawsze powinna wywołać `QueryInterface` do określenia, czy dostawca obsługuje danego interfejsu.  
   
 ## <a name="ole-db-specification-level-support"></a>Obsługa poziomu specyfikacji OLE DB  
- Szablony dostawców OLE DB obsłużyć specyfikacji wersji 2.7 OLE DB. Szablony dostawców OLE DB można zaimplementować dostawcę zgodne poziom 0. Przykładowe dostawcy, na przykład używa szablonów do implementacji serwer non-MS-DOS polecenia, który wykonuje polecenie DOS DIR zapytania do systemu plików. Przykładowe dostawcy zwraca informacje katalogu w zestawie wierszy przeznaczonym standardowego mechanizmu OLE DB dla zwracania danych tabelarycznych.  
+ Szablony dostawców OLE DB obsługuje specyfikację wersji 2.7 OLE DB. Szablony dostawców OLE DB można zaimplementować dostawcę zgodne poziom 0. Przykład dostawcy, na przykład używa szablonów do wdrożenia serwera non-MS-DOS polecenia, który wykonuje polecenie DOS DIR do wykonywania zapytań w systemie plików. Przykład dostawcy zwraca informacje katalogu w zestawie wierszy, czyli standardowego mechanizmu OLE DB dla zwracania danych tabelarycznych.  
   
- Najprostsza typ dostawcy obsługiwane przez Szablony OLE DB jest dostawcą tylko do odczytu z żadnych poleceń. Dostawców za pomocą polecenia są również obsługiwane, jak możliwość tworzenie zakładek i odczytu/zapisu. Pisanie kodu dodatkowe mogą implementowania dostawcy odczytu/zapisu. Dynamiczne zestawy wierszy i transakcje nie są obsługiwane przez bieżącą wersję, ale można je dodać.  
+ Najprostszy typ dostawcy obsługiwanego przez Szablony OLE DB jest dostawcy tylko do odczytu, za pomocą nie poleceń. Dostawcy za pomocą poleceń są również obsługiwane, jakie są możliwości zakładek i odczytu/zapisu. Aby zaimplementować dostawcę odczytu/zapisu, tworzenia dodatkowego kodu. Dynamiczne zestawy wierszy i transakcje nie są obsługiwane przez bieżącą wersję, ale można je dodać.  
   
 ## <a name="when-do-you-need-to-create-an-ole-db-provider"></a>Kiedy należy utworzyć dostawcy OLE DB?  
- Użytkownik nie zawsze jest konieczne do utworzenia własnego dostawcę; Firma Microsoft udostępnia kilka opakowaniach jednostkowych, standardowych dostawców w **właściwości Linku danych** okno dialogowe w programie Visual C++. Głównym celem można utworzyć dostawcy OLE DB jest przeprowadzać strategii Uniwersalny dostęp do danych. Niektóre zalety takiego tak to:  
+ Nie zawsze należy utworzyć własnego dostawcę; Firma Microsoft udostępnia kilka to wstępnie spakowane zestawy, standardowych dostawców **właściwości Linku danych** okno dialogowe w programie Visual C++. Głównym powodem tworzenia dostawcy OLE DB jest korzystanie z zalet strategii Uniwersalny dostęp do danych. Niektóre zalety spowoduje więc to:  
   
--   Uzyskiwanie dostępu do danych za pomocą dowolnego języka C++, Basic i Visual Basic Scripting Edition. Umożliwia programistom różnych w organizacji dostęp do tych samych danych w taki sam sposób, niezależnie od tego, jakie języka korzystają z.  
+-   Uzyskiwanie dostępu do danych za pomocą dowolnego języka, takich jak C++, Basic i Visual Basic Scripting Edition. Umożliwia ona różnych ekspertów w programowaniu w Twojej organizacji uzyskiwanie dostępu do tych samych danych w taki sam sposób niezależnie od tego, jakiego języka korzystają.  
   
--   Udostępnianie danych do innych danych źródeł, takich jak SQL Server, Excel i dostępu. Może to być bardzo przydatne w przypadku transferu danych między różne formaty.  
+-   Udostępnianie danych z innymi danymi źródeł, takich jak SQL Server, programu Excel i Access. Może to być bardzo przydatne, jeśli chcesz przesyłać dane między różne formaty.  
   
--   Uczestniczy w operacjach źródła danych między (heterogenicznych). Może to być bardzo efektywnym sposobem magazynowania danych. Przy użyciu dostawcy OLE DB, można przechowywać dane w formacie native i nadal mogli uzyskać dostępu do prostą operacją.  
+-   Uczestniczy w operacjach źródła danych dla wielu (heterogenicznych). Może to być bardzo skuteczny sposób magazynowania danych. Za pomocą dostawcy OLE DB, możesz przechowywać dane w formacie natywnym i nadal mogli uzyskać do niego dostęp przy użyciu prostych operacji.  
   
--   Dodawanie dodatkowych funkcji do danych, takich jak przetwarzanie zapytań.  
+-   Dodawanie dodatkowych możliwości na dane, takie jak przetwarzanie zapytań.  
   
--   Zwiększanie wydajności uzyskiwania dostępu do danych przez kontrolowanie sposobu zmieniany.  
+-   Zwiększa wydajność dostępu do danych przez kontrolowanie sposobu jest przetwarzany.  
   
--   Zwiększa niezawodność. Jeśli masz format zastrzeżonych danych mogą uzyskiwać dostęp do tego tylko jeden programisty, są narażeni na ataki. Przy użyciu dostawcy OLE DB, można otworzyć tego formatu zastrzeżonych dla wszystkich sieci programistów.  
+-   Zwiększanie niezawodności. Jeśli ma format zastrzeżonych danych mogą uzyskiwać dostęp do tego tylko jeden programisty, są zagrożone. Przy użyciu dostawcy OLE DB, możesz otworzyć ten własnościowego formatu programistom wszystkie usługi.  
   
 ## <a name="read-only-and-updatable-providers"></a>Dostawcy tylko do odczytu i nadaje się do aktualizacji  
- Dostawców w dużym stopniu złożoności i funkcji. Warto kategoryzowanie dostawców do dostawcy tylko do odczytu i aktualizowalni dostawcy:  
+ Dostawców może się znacznie różnić złożoności i funkcji. Warto kategoryzowanie dostawcy do dostawcy tylko do odczytu i aktualizowalni dostawcy:  
   
--   Visual C++ 6.0 obsługiwane są tylko dostawcy tylko do odczytu. [Tworzenie dostawcy OLE DB](../../data/oledb/creating-an-ole-db-provider.md) omówiono sposób tworzenia dostawcy tylko do odczytu.  
-  
--   Visual C++ obsługuje aktualizowalni dostawcy, które można zaktualizować (zapisu) magazynu danych. Aby uzyskać informacji o dostawcach nadaje się do aktualizacji, zobacz [tworzenie aktualizowalnego dostawcy](../../data/oledb/creating-an-updatable-provider.md); [UpdatePV](http://msdn.microsoft.com/en-us/c8bed873-223c-4a7d-af55-f90138c6f38f) próbki jest przykładem aktualizowalnego dostawcy.  
+-   Visual C++ 6.0 obsługiwane są tylko dostawcy tylko do odczytu. [Tworzenie dostawcy OLE DB](../../data/oledb/creating-an-ole-db-provider.md) w tym artykule omówiono sposób tworzenia dostawcy tylko do odczytu.  
+-   Visual C++ obsługuje aktualizowalni dostawcy, które można zaktualizować (zapisu) do magazynu danych. Aby uzyskać informacji o dostawcach nadaje się do aktualizacji, zobacz [tworzenie aktualizowalnego dostawcy](../../data/oledb/creating-an-updatable-provider.md); [UpdatePV](http://msdn.microsoft.com/c8bed873-223c-4a7d-af55-f90138c6f38f) przykładowe dane stanowią przykład aktualizowalnego dostawcy.  
   
  Aby uzyskać więcej informacji, zobacz:  
   
@@ -76,5 +75,5 @@ OLE DB jest ważną częścią strategii uniwersalnej Microsoft Data Access. Pro
   
 ## <a name="see-also"></a>Zobacz też  
  [Dostęp do danych](../data-access-in-cpp.md)   
- [Dokumentacja zestawu SDK OLE DB](https://msdn.microsoft.com/en-us/library/ms722784.aspx)   
- [OLE DB Podręcznik programisty](https://msdn.microsoft.com/en-us/library/ms713643.aspx)
+ [Dokumentacja zestawu SDK usługi OLE DB](https://msdn.microsoft.com/library/ms722784.aspx)   
+ [Dokumentacja dotycząca OLE DB](https://msdn.microsoft.com/library/ms713643.aspx)

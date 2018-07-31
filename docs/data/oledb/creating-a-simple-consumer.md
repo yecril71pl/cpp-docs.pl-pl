@@ -15,49 +15,49 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 711aaaff2bc4e012ba4c4ef78465f06c51b9d307
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: e9f7c5a51765e2ce29df503aeefa9f850b71b1d4
+ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33098527"
+ms.lasthandoff: 07/30/2018
+ms.locfileid: "39339857"
 ---
 # <a name="creating-a-simple-consumer"></a>Tworzenie prostego konsumenta
-Służy Kreator projektu ATL i OLE DB Kreator konsumenta ATL do generowania konsumenta szablony OLE DB.  
+Użyj Kreatora projektów ATL i OLE DB Kreator konsumenta ATL do wygenerowania konsumenta szablony OLE DB.  
   
-#### <a name="to-create-a-console-application-for-an-ole-db-consumer"></a>Aby utworzyć aplikację konsoli dla konsumentów OLE DB  
+### <a name="to-create-a-console-application-for-an-ole-db-consumer"></a>Aby utworzyć aplikację konsolową w języku dla konsumenta OLE DB  
   
-1.  Na **pliku** menu, kliknij przycisk **nowy**, a następnie kliknij przycisk **projektu**.  
+1.  Na **pliku** menu, kliknij przycisk **New**, a następnie kliknij przycisk **projektu**.  
   
-     **Nowy projekt** zostanie wyświetlone okno dialogowe.  
+     **Nowy projekt** pojawi się okno dialogowe.  
   
-2.  W okienku typów projektów kliknij **projekty Visual C++** folder, a następnie kliknij przycisk **projektu Win32** ikonę w okienku szablonów. W **nazwa** wprowadź nazwę projektu, na przykład **MyCons**.  
+2.  W okienku typów projektów, kliknij przycisk **projekty języka Visual C++** folder, a następnie kliknij **projekt systemu Win32** ikonę w okienku szablonów. W **nazwa** wprowadź nazwę projektu, na przykład **MyCons**.  
   
 3.  Kliknij przycisk **OK**.  
   
      Zostanie wyświetlony Kreator projektu Win32.  
   
-4.  Na **ustawienia aplikacji** wybierz pozycję **aplikacja Konsolowa**, a następnie wybierz **Dodaj obsługę ATL**.  
+4.  Na **ustawienia aplikacji** wybierz opcję **aplikacji konsolowej programu**, a następnie wybierz pozycję **Dodaj obsługę ATL**.  
   
 5.  Kliknij przycisk **Zakończ** aby zamknąć kreatora i generowania projektu.  
   
  Następnie użyj OLE DB Kreator konsumenta ATL, aby dodać obiekt konsumenta OLE DB.  
   
-#### <a name="to-create-a-consumer-with-the-atl-ole-db-consumer-wizard"></a>Aby utworzyć z klientem za pomocą OLE DB Kreator konsumenta ATL  
+#### <a name="to-create-a-consumer-with-the-atl-ole-db-consumer-wizard"></a>Aby utworzyć odbiorcę z OLE DB Kreator konsumenta ATL  
   
-1.  W widoku klas, kliknij prawym przyciskiem myszy `MyCons` projektu.  
+1.  W widoku klas kliknij prawym przyciskiem myszy `MyCons` projektu.  
   
 2.  W menu skrótów kliknij **Dodaj**, a następnie kliknij przycisk **Dodaj klasę**.  
   
-     **Dodaj klasę** zostanie wyświetlone okno dialogowe.  
+     **Dodaj klasę** pojawi się okno dialogowe.  
   
-3.  W okienku kategorii kliknij **Visual C++**, kliknij przycisk **OLE DB konsumenta ATL** ikony w okienku szablonów, a następnie kliknij przycisk **Otwórz**.  
+3.  W okienku kategorii kliknij **Visual C++**, kliknij przycisk **OLE DB konsumenta ATL** ikonę w okienku szablonów, a następnie kliknij **Otwórz**.  
   
-     OLE DB Kreator konsumenta ATL zostanie wyświetlone.  
+     Zostanie wyświetlony Kreator biblioteki ATL OLE DB konsumenta.  
   
 4.  Kliknij przycisk **źródła danych** przycisku.  
   
-     **Właściwości Linku danych** zostanie wyświetlone okno dialogowe.  
+     **Właściwości Linku danych** pojawi się okno dialogowe.  
   
 5.  W **właściwości Linku danych** okna dialogowego pole, wykonaj następujące czynności:  
   
@@ -66,47 +66,47 @@ Służy Kreator projektu ATL i OLE DB Kreator konsumenta ATL do generowania kons
     -   Na **połączenia** karcie, określ nazwę serwera, identyfikator logowania i hasło dla źródła danych i bazy danych na serwerze.  
   
     > [!NOTE]
-    >  Istnieje problem z **Zezwalaj na zapisywanie haseł** funkcji **właściwości Linku danych** okno dialogowe. W **wprowadź informacje do logowania się do serwera**, dostępne są dwa przyciski radiowe: **zabezpieczenia zintegrowane systemu Windows NT użyj** i **Użyj określonej nazwy użytkownika i hasła**.  
+    >  Występuje problem z zabezpieczeniami z **Zezwalaj na zapisywanie hasła** funkcji **właściwości Linku danych** okno dialogowe. W **wprowadź informacje, aby zalogować się do serwera**, istnieją dwa przyciski radiowe: **Użyj Windows NT zintegrowane zabezpieczenia** i **Użyj określonej nazwy użytkownika i hasła**.  
   
     > [!NOTE]
-    >  W przypadku wybrania **Użyj określonej nazwy użytkownika i hasła**, ma możliwość zapisania hasło (przy użyciu **Zezwalaj na zapisywanie haseł** pole wyboru), jednak ta opcja nie jest bezpieczne. Zaleca się, że wybrano **zabezpieczenia zintegrowane systemu Windows NT użyj**; ta opcja używa systemu Windows NT, aby zweryfikować swoją tożsamość.  
+    >  Jeśli wybierzesz **Użyj określonej nazwy użytkownika i hasła**, masz możliwość zapisania hasła (przy użyciu **Zezwalaj na zapisywanie hasła** pole wyboru); Jednakże, ta opcja nie jest bezpieczne. Zaleca się, że wybrano **Użyj Windows NT zintegrowane zabezpieczenia**; ta opcja używa systemu Windows NT, aby zweryfikować swoją tożsamość.  
   
     > [!NOTE]
-    >  Jeśli nie możesz użyć zabezpieczenia zintegrowane systemu Windows NT, należy użyć aplikacji warstwy środkowej monitowanie użytkownika o podanie hasła lub do przechowywania hasła w miejscu z mechanizmy zabezpieczeń, aby go lepiej chronić (a nie w kodzie źródłowym).  
+    >  Jeśli nie mogą używać zabezpieczeń zintegrowanych w systemu Windows NT, należy użyć aplikacji warstwy środkowej monitować użytkownika o podanie hasła lub hasło są przechowywane w lokalizacji za pomocą mechanizmów zabezpieczeń, aby go lepiej chronić (a nie w kodzie źródłowym).  
   
-     Po wybraniu dostawcy i inne ustawienia, kliknij przycisk **Testuj połączenie** można zweryfikować wybrane na poprzedniej strony — okno dialogowe. Jeśli **wyniki** polu raporty `Test connection succeeded`, kliknij przycisk **OK** do utworzenia połączenia danych.  
+     Po wybraniu dostawcy i inne ustawienia, kliknij przycisk **Testuj połączenie** Aby zweryfikować wybranych na stronach poprzednie okno dialogowe. Jeśli **wyniki** polu raporty `Test connection succeeded`, kliknij przycisk **OK** do utworzenia linku danych.  
   
-     **Obiektu bazy danych wybierz** zostanie wyświetlone okno dialogowe.  
+     **Obiektu bazy danych wybierz** pojawi się okno dialogowe.  
   
-6.  Formant drzewa wybierz tabeli, widoku lub procedury składowanej. Na potrzeby tej procedury należy wybierać tabeli Produkty bazy danych Northwind.  
+6.  Użyj kontrolki drzewa, aby wybrać tabeli, widoku lub procedury składowanej. Na potrzeby tej procedury należy wybierać tabeli Produkty bazy danych Northwind.  
   
-7.  Kliknij przycisk **OK**. Nastąpi powrót do OLE DB Kreator konsumenta ATL.  
+7.  Kliknij przycisk **OK**. Nastąpi powrót do ATL OLE DB konsumenta kreatora.  
   
-8.  Kreator zakończy pracę nazwy dla `Class` i **pliku .h** na podstawie nazwy tabeli, widoku lub wybrania procedurę składowaną. Jeśli chcesz, możesz edytować te nazwy.  
+8.  Kreator zakończy pracę nazwy `Class` i **plik .h klasy** na podstawie nazwy tabeli, widoku lub przechowywane procedury, które wybrano. Jeśli chcesz, możesz edytować te nazwy.  
   
-9. Wyczyść **atrybutami** pole wyboru, aby Kreator tworzy przy użyciu kodu konsumenta [klasy szablonów OLE DB](../../data/oledb/ole-db-consumer-templates-reference.md) zamiast domyślnej [atrybuty konsumentów OLE DB](../../windows/ole-db-consumer-attributes.md).  
+9. Wyczyść **atrybutami** pole wyboru, aby Kreator tworzy kod konsumenta za pomocą [klasy szablonów OLE DB](../../data/oledb/ole-db-consumer-templates-reference.md) zamiast domyślnego [atrybuty konsumentów OLE DB](../../windows/ole-db-consumer-attributes.md).  
   
-10. W obszarze **typu**, wybierz pozycję **polecenia**.  
+10. W obszarze **typu**, wybierz opcję **polecenia**.  
   
-     Kreator tworzy [CCommand](../../data/oledb/ccommand-class.md)— na podstawie użytkownika, w przypadku wybrania **polecenia** lub [CTable](../../data/oledb/ctable-class.md)— na podstawie użytkownika, w przypadku wybrania **tabeli**. Po wybrany obiekt nosi nazwę klasy tabeli lub polecenia, ale można edytować nazwy.  
+     Kreator utworzy [CCommand](../../data/oledb/ccommand-class.md)— na podstawie konsumenta, jeśli zostanie wybrana **polecenia** lub [CTable](../../data/oledb/ctable-class.md)— na podstawie konsumenta, jeśli zostanie wybrana **tabeli**. Klasa tabeli lub polecenia jest nazwana na wybrany obiekt, ale można edytować nazwę.  
   
-11. W obszarze **Obsługa**, pozostaw **zmiany**, **Wstaw**, i **usunąć** zaznaczaj pól.  
+11. W obszarze **pomocy technicznej**, pozostaw **zmiany**, **Wstaw**, i **Usuń** żadnych pól.  
   
-     Wybierz **zmiany**, **Wstaw**, i **usunąć** pola wyboru, aby obsługiwać zmiana, wstawianie i usuwanie rekordów w zestawie wierszy, jeśli jest to wymagane. Aby uzyskać więcej informacji na temat zapisywania danych z danymi, przechowywanie, zobacz [aktualizowanie zestawów wierszy](../../data/oledb/updating-rowsets.md).  
+     Wybierz **zmiany**, **Wstaw**, i **Usuń** pola wyboru, aby obsługiwać zmiany, wstawianie i usuwanie rekordów w zestawie wierszy, w razie potrzeby. Aby uzyskać więcej informacji na temat zapisywania danych do danych przechowywania, zobacz [aktualizowanie zestawów wierszy](../../data/oledb/updating-rowsets.md).  
   
-12. Kliknij przycisk **Zakończ** można utworzyć użytkownika.  
+12. Kliknij przycisk **Zakończ** utworzyć konsumenta.  
   
- Kreator generuje klasę polecenie i klasy rekordu użytkownika, jak pokazano w [Consumer Wizard-Generated klasy](../../data/oledb/consumer-wizard-generated-classes.md). Klasy poleceń będzie mieć nazwę, wprowadzony w `Class` pola kreatora (w tym przypadku `CProducts`), i klasy rekordów użytkowników mają nazwy w postaci "*ClassName*metody dostępu" (w tym przypadku `CProductsAccessor`).  
+ Kreator wygeneruje klasę polecenie i klasy rekordów użytkowników, jak pokazano w [klasy Consumer Wizard-Generated](../../data/oledb/consumer-wizard-generated-classes.md). Klasy poleceń będzie mieć nazwę, które wprowadziłeś w `Class` polu w Kreatorze (w tym przypadku `CProducts`), a klasa rekordu użytkownika będzie zawierał nazwę w postaci "*ClassName*metody dostępu" (w tym przypadku `CProductsAccessor`).  
   
 > [!NOTE]
->  Kreator umieszcza Products.h następujący wiersz:  
+>  Kreator umieszcza następujący wiersz w Products.h:  
   
-```  
+```cpp  
 #error Security Issue: The connection string may contain a password  
 ```  
   
 > [!NOTE]
->  Ten wiersz uniemożliwia Kompilowanie aplikacji klienta i przypomina Sprawdź ciąg połączenia ustalony haseł. Po sprawdzeniu parametrów połączenia, należy usunąć ten wiersz kodu.  
+>  Ten wiersz zapobiega Kompilowanie aplikacji klienta i przypomina o tym, aby sprawdzić parametry połączenia dla zakodowanych hasła. Po sprawdzeniu parametry połączenia, możesz usunąć ten wiersz kodu.  
   
 ## <a name="see-also"></a>Zobacz też  
  [Tworzenie konsumenta OLE DB przy użyciu kreatora](../../data/oledb/creating-an-ole-db-consumer-using-a-wizard.md)

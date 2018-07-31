@@ -27,12 +27,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 13f170aa27cdc52b98729b0953568575292f6f6b
-ms.sourcegitcommit: b0d6777cf4b580d093eaf6104d80a888706e7578
+ms.openlocfilehash: b360b56066ecbb5cc605012b234c0ac11afb2a11
+ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/26/2018
-ms.locfileid: "39269589"
+ms.lasthandoff: 07/30/2018
+ms.locfileid: "39339415"
 ---
 # <a name="icommandpropertiesimpl-class"></a>ICommandPropertiesImpl — Klasa
 Udostępnia implementację [ICommandProperties](https://msdn.microsoft.com/library/ms723044.aspx) interfejsu.  
@@ -73,7 +73,7 @@ Zwraca wszystkie zestawy żądanej właściwości z użyciem mapowania właściw
 ### <a name="syntax"></a>Składnia  
   
 ```cpp
-      STDMETHOD(GetProperties)(const ULONG cPropertyIDSets,   
+STDMETHOD(GetProperties)(const ULONG cPropertyIDSets,   
    const DBPROPIDSET rgPropertyIDSets[],   
    ULONG * pcPropertySets,   
    DBPROPSET ** prgPropertySets);  
@@ -91,7 +91,7 @@ Ustawia właściwości dla obiektu polecenia.
 ### <a name="syntax"></a>Składnia  
   
 ```cpp
-      STDMETHOD(SetProperties)(ULONG cPropertySets,   
+STDMETHOD(SetProperties)(ULONG cPropertySets,   
    DBPROPSET rgPropertySets[]);  
 ```  
   
