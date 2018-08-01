@@ -23,12 +23,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d6e1ea4abadc3b751b8bad9f9521462d510c5227
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: 3eb98f0b66090a9c9e5f09b0cde3e3f94a6c0248
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37947931"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39405191"
 ---
 # <a name="raising-software-exceptions"></a>Występowanie wyjątków programowych
 Niektóre z najczęstszych źródeł błędów programu nie są oflagowane jako wyjątki przez system. Na przykład, jeśli użytkownik spróbuje przydzielić blok pamięci, ale ilość pamięci jest niewystarczająca, czas wykonywania lub funkcja interfejsu API nie zgłosi wyjątku, ale zwróci kod błędu.  
@@ -60,7 +60,7 @@ Niektóre z najczęstszych źródeł błędów programu nie są oflagowane jako 
 #define STATUS_FILE_BAD_FORMAT        0xE0000002  
 ```  
   
- Po zdefiniowaniu kodu wyjątku można go użyć, aby zgłosić wyjątek. Na przykład, poniższy kod zgłasza wyjątek STATUS_INSUFFICIENT_MEM w odpowiedzi na problem z alokacją pamięci:  
+ Po zdefiniowaniu kodu wyjątku można go użyć, aby zgłosić wyjątek. Na przykład, poniższy kod generuje `STATUS_INSUFFICIENT_MEM` wyjątek w odpowiedzi na problem z alokacją pamięci:  
   
 ```cpp 
 lpstr = _malloc( nBufferSize );  
@@ -80,6 +80,6 @@ __except (GetExceptionCode() == STATUS_INSUFFICIENT_MEM ||
         GetExceptionCode() == STATUS_FILE_BAD_FORMAT )  
 ```  
   
-## <a name="see-also"></a>Zobacz też  
+## <a name="see-also"></a>Zobacz także  
  [Pisanie programu do obsługi wyjątków](../cpp/writing-an-exception-handler.md)   
  [Obsługa wyjątków strukturalnych (C/C++)](../cpp/structured-exception-handling-c-cpp.md)

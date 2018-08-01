@@ -19,12 +19,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0dd4643c21ebb8626252230b90880af9f9499c0d
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: eec47e9810e0cc846cc351330512256a32f95aac
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37947755"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39406848"
 ---
 # <a name="overview-of-file-translation"></a>Przegląd tłumaczenia pliku
 Programy napisane w języku C++ (podobnie jak programy napisane w języku C), składają się z co najmniej jednego pliku. Każdy z tych plików jest tłumaczony w następującej, koncepcyjnej kolejności (rzeczywista kolejność postępuje zgodnie z regułą „jak gdyby”: tłumaczenie musi wystąpić, jak gdyby wykonano następujące kroki):  
@@ -56,5 +56,5 @@ Programy napisane w języku C++ (podobnie jak programy napisane w języku C), sk
   
 - Preprocesor języka C nie rozpoznaje operatorów języka C++: **.\*** , **-> \***, i `::`. Zobacz [operatory](../cpp/cpp-built-in-operators-precedence-and-associativity.md) i [wyrażeń](../cpp/expressions-cpp.md), aby uzyskać więcej informacji dotyczących operatorów.  
   
-## <a name="see-also"></a>Zobacz też  
+## <a name="see-also"></a>Zobacz także  
  [Konwencje leksykalne](../cpp/lexical-conventions.md)

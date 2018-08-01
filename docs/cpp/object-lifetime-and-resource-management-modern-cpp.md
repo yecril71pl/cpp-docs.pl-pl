@@ -12,12 +12,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fccba0fe09c6e2fcc636d478824c7dfcc699d653
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: 365f9196f3d482098c29bf4b04610120ecbbeec4
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37941554"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39406045"
 ---
 # <a name="object-lifetime-and-resource-management-modern-c"></a>Okres istnienia obiektów i zarządzanie zasobami (Modern C++)
 W odróżnieniu od języków zarządzanych C++ nie ma wyrzucania elementów bezużytecznych (GC), który automatycznie zwalnia wszystkie zasoby pamięci nie dłużej — używane podczas działania programu. W języku C++ zarządzania zasobami bezpośrednio dotyczą okres istnienia obiektu. Ten dokument zawiera opis czynników wpływających na okres istnienia obiektów w języku C++ i sposobu zarządzania nimi.  
@@ -42,7 +42,6 @@ auto p = make_shared<widget>(); // no leak, and exception safe
 p->draw();   
   
 } // no delete required, out-of-scope triggers smart pointer destructor  
-  
 ```  
   
  Użyj `unique_ptr` dla unikatowe własności, na przykład w *pimpl* idiom. (Zobacz [Pimpl hermetyzacji w czasie kompilacji](../cpp/pimpl-for-compile-time-encapsulation-modern-cpp.md).) Wprowadź `unique_ptr` podstawowym celem wszystkie jawne **nowe** wyrażenia.  
@@ -61,7 +60,6 @@ class node {
   ...  
 };  
 node::node() : parent(...) { children.emplace_back(new node(...) ); }  
-  
 ```  
   
  Gdy Optymalizacja wydajności jest wymagana, użytkownik może być konieczne użycie *dobrze zhermetyzowany* będącej właścicielem, wskaźniki i jawnych wywołań do usunięcia. Przykładem jest podczas implementowania strukturę danych niskiego poziomu.  
@@ -90,7 +88,7 @@ void functionUsingWidget () {
   
  Oszczędnie korzystać statyczny okres istnienia (globalne statyczne, funkcji lokalnej statycznej), ponieważ mogą wystąpić problemy. Co się stanie, gdy Konstruktor dla obiektów globalnych zgłasza wyjątek? Zazwyczaj błędy aplikacji w sposób, który może być trudne do debugowania. Kolejność konstrukcji jest problematyczne statyczny okres istnienia obiektów i nie jest bezpieczna pod kątem współbieżności. Nie tylko jest konstruowanie obiektu problemu, kolejność zniszczenia może być skomplikowane, zwłaszcza w przypadku polimorfizmu. Nawet jeśli zmiennej lub obiektu nie jest polimorficzny, nie ma złożone tworzenie/niszczenie obiektu porządkowanie się nadal istnieje problem współbieżności metodą o bezpiecznych wątkach. Aplikacja wielowątkowa bezpiecznie nie można zmodyfikować danych w obiektach statycznych bez konieczności lokalny magazyn wątków, blokad zasobów i innych specjalne środki ostrożności.  
   
-## <a name="see-also"></a>Zobacz też  
+## <a name="see-also"></a>Zobacz także  
  [Witamy z powrotem w C++](../cpp/welcome-back-to-cpp-modern-cpp.md)   
  [Dokumentacja języka C++](../cpp/cpp-language-reference.md)   
  [Standardowa biblioteka C++](../standard-library/cpp-standard-library-reference.md)

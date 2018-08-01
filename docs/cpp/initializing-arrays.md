@@ -15,18 +15,19 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: eacd447d27f3dd8bd2d2d88e6d975cdb29a82026
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: e1ecb15cfc34ec518f46474497a3577a51b00c4e
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39408576"
 ---
 # <a name="initializing-arrays"></a>Inicjowanie tablic
-Jeśli klasa zawiera konstruktora, tablic tej klasy są inicjowane przez konstruktora. W przypadku mniejszej liczby elementów na liście inicjatora niż elementów w tablicy, domyślny konstruktor jest używany dla pozostałe elementy. Jeśli żaden konstruktor domyślny jest zdefiniowany w klasie, lista inicjatora musi być ukończone — to znaczy musi być jednego inicjatora dla każdego elementu w tablicy.  
+Jeśli klasa ma Konstruktor, tablice tej klasy są inicjowane przez konstruktora. W przypadku mniej elementów niż elementów w tablicy na liście inicjatora, domyślny konstruktor jest używany dla pozostałych elementów. Jeśli nie zdefiniowano domyślnego konstruktora dla klasy, na liście inicjatora muszą być kompletne — oznacza to, musi istnieć jeden inicjator dla każdego elementu w tablicy.  
   
- Należy wziąć pod uwagę `Point` klasy, który definiuje dwa konstruktory:  
+ Należy wziąć pod uwagę `Point` klasę, która definiuje dwa konstruktory:  
   
-```  
+```cpp 
 // initializing_arrays1.cpp  
 class Point  
 {  
@@ -51,9 +52,9 @@ int main()
   
  Pierwszy element `aPoint` jest tworzony przy użyciu konstruktora `Point( int, int )`; pozostałe dwa elementy są konstruowane przy użyciu domyślnego konstruktora.  
   
- Statyczny element członkowski tablic (czy **const** lub nie) mogą być inicjowane w ich definicje (poza deklaracją klasy). Na przykład:  
+ Tablice statyczny element członkowski (czy **const** lub nie) mogą być inicjowane w ich definicji (poza deklaracją klasy). Na przykład:  
   
-```  
+```cpp 
 // initializing_arrays2.cpp  
 class WindowColors  
 {  
@@ -68,4 +69,3 @@ int main()
 {  
 }  
 ```  
-  

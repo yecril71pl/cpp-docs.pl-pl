@@ -12,12 +12,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 80efab13dfe28c7ecec2da1d3d932ed90d46f0f8
-ms.sourcegitcommit: 76fd30ff3e0352e2206460503b61f45897e60e4f
+ms.openlocfilehash: b22bbcfd2055a362a3ee9b3fcfd4498cdb089586
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/13/2018
-ms.locfileid: "39026912"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39407959"
 ---
 # <a name="how-to-create-and-use-ccomptr-and-ccomqiptr-instances"></a>Porady: tworzenie wystąpień CComPtr i CComQIPtr i korzystanie z nich
 W klasycznym programowaniu Windows, bibliotek są często implementowane jako obiekty COM (lub dokładniej, jako serwery COM). Wiele składników systemu operacyjnego Windows są implementowane jako serwerów COM, a wiele współautorzy podają bibliotek w tym formularzu. Aby uzyskać informacje dotyczące podstawowych informacji o modelu COM, zobacz [składnik modelu COM](http://msdn.microsoft.com/3578ca42-a4b6-44b3-ad5b-aeb5fa61f3f4).  
@@ -41,5 +41,5 @@ W klasycznym programowaniu Windows, bibliotek są często implementowane jako ob
   
  [!code-cpp[COM_smart_pointers#03](../cpp/codesnippet/CPP/how-to-create-and-use-ccomptr-and-ccomqiptr-instances_3.cpp)]  
   
-## <a name="see-also"></a>Zobacz też  
+## <a name="see-also"></a>Zobacz także  
  [Wskaźniki inteligentne](../cpp/smart-pointers-modern-cpp.md)

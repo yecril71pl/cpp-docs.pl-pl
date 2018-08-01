@@ -14,21 +14,21 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 17eb18438f4b39c7f07d144dad2c16db2f49553b
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 52e1dcd3ab6697a2d4643389d1a70cda86b04f80
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32409579"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39403579"
 ---
 # <a name="basic-concepts--c"></a>Koncepcje podstawowe (C++)
-W tej sekcji opisano pojęcia, które są niezbędne do zrozumienia C++. Programiści C będzie należy zapoznać się z wielu z tych pojęć, ale istnieją pewne różnice niewielkie, które mogą spowodować program nieoczekiwane wyniki. Omówiono następujące zagadnienia:  
+W tej sekcji opisano pojęcia, które są niezbędne do interpretacji języka C++. Programiści C będzie należy zapoznać się z wielu z tych koncepcji, ale istnieją pewne niewielkie różnice, które może spowodować, że program nieoczekiwane wyniki. Uwzględnione są następujące tematy:  
   
 -   [Deklaracje i definicje](../cpp/declarations-and-definitions-cpp.md)  
   
--   [Zakres obiektów C++ lub funkcja](../cpp/scope-visual-cpp.md)  
+-   [Zakres obiektu języka C++ lub funkcji](../cpp/scope-visual-cpp.md)  
   
--   [Powiązanie i definicji reguł programu](../cpp/program-and-linkage-cpp.md)  
+-   [Powiązania i definicji reguł programu](../cpp/program-and-linkage-cpp.md)  
   
 -   [Uruchamianie i kończenie działania](../cpp/startup-and-termination-cpp.md)  
   
@@ -40,7 +40,7 @@ W tej sekcji opisano pojęcia, które są niezbędne do zrozumienia C++. Program
   
 -   [alignof i alignas](../cpp/alignof-and-alignas-cpp.md)  
   
--   [Prosta standard układ i typy POD](../cpp/trivial-standard-layout-and-pod-types.md)  
+-   [Prosta standardowego układu i typy POD](../cpp/trivial-standard-layout-and-pod-types.md)  
   
-## <a name="see-also"></a>Zobacz też  
+## <a name="see-also"></a>Zobacz także  
  [Dokumentacja języka C++](../cpp/cpp-language-reference.md)

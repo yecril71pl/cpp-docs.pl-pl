@@ -1,5 +1,5 @@
 ---
-title: Mechanizm pimpl hermetyzacji kompilacji (Modern C++) w czasie | Dokumentacja firmy Microsoft
+title: Pimpl hermetyzacji w czasie kompilacji (Modern C++) | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -12,26 +12,26 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f611a898018cee5edc031be1db2fd35af8857e16
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 2e80c4bd86cd4c7400e3937fcb8d164fe6b14106
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32420158"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39404658"
 ---
 # <a name="pimpl-for-compile-time-encapsulation-modern-c"></a>Mechanizm pimpl hermetyzacji w czasie kompilacji (Modern C++)
-*Idiom mechanizm pimpl w czasie* to technika C++ nowoczesnych, aby ukryć implementacji, aby zminimalizować sprzężenia, a do oddzielania interfejsów. Mechanizm pimpl w czasie jest skrót od "wskaźnik do implementacji." Może już należy zapoznać się z pojęciem, ale o tym przez inne nazwy, takie jak idiom Cheshire Cat lub Zapora kompilatora.  
+*Pimpl idiom* to technika nowoczesnego języka C++ do ukrywania implementacji, aby zminimalizować sprzężenia i do oddzielnych interfejsów. Pimpl jest skrót od "wskaźnik do implementacji." Może być już można zapoznać się z pojęciem, ale wiedzieć, przy użyciu innych nazw, takich jak idiom Cheshire Cat lub kompilatora zapory.  
   
-## <a name="why-use-pimpl"></a>Dlaczego warto używać mechanizm pimpl w czasie?  
- Oto, jak poprawić idiom mechanizm pimpl w czasie cyklu tworzenia oprogramowania:  
+## <a name="why-use-pimpl"></a>Dlaczego warto używać pimpl?  
+ Poniżej przedstawiono, jak poprawić pimpl idiom życia tworzenia oprogramowania:  
   
--   Minimalizacja zależności kompilacji.  
+-   Minimalizacji zależności kompilacji.  
   
--   Rozdzielenie interfejsu i implementacji.  
+-   Oddzielenie interfejsu i implementacji.  
   
 -   Przenośność.  
   
-## <a name="pimpl-header"></a>Mechanizm pimpl w czasie nagłówka  
+## <a name="pimpl-header"></a>Nagłówek Pimpl  
   
 ```cpp  
 // my_class.h  
@@ -40,12 +40,11 @@ class my_class {
 private:  
    class impl; unique_ptr<impl> pimpl; // opaque type here  
 };  
-  
 ```  
   
- Mechanizm pimpl w czasie idiom pozwala uniknąć kaskady Odbuduj i układy łamliwa obiektu. Nadaje się również do (przechodnie) popularnych typów.  
+ Pimpl idiom pozwala uniknąć kaskady ponownej kompilacji i kruchy obiektu układów. Dobrze nadaje się dla (przechodnio) popularnych typów.  
   
-## <a name="pimpl-implementation"></a>Mechanizm pimpl w czasie wykonania  
+## <a name="pimpl-implementation"></a>Implementacja Pimpl  
  Zdefiniuj `impl` klasy w pliku .cpp.  
   
 ```cpp  
@@ -60,10 +59,10 @@ my_class::my_class(): pimpl( new impl )
 }  
 ```  
   
-## <a name="best-practices"></a>Najlepsze praktyki  
- Należy rozważyć, czy dodać obsługę-zgłaszanie specjalizacji wymiany.  
+## <a name="best-practices"></a>Najlepsze rozwiązania  
+ Należy rozważyć dodanie obsługi niezgłaszające specjalizacji wymiany.  
   
-## <a name="see-also"></a>Zobacz też  
- [Zapraszamy ponownie do języka C++](../cpp/welcome-back-to-cpp-modern-cpp.md)   
+## <a name="see-also"></a>Zobacz także  
+ [Witamy z powrotem w C++](../cpp/welcome-back-to-cpp-modern-cpp.md)   
  [Dokumentacja języka C++](../cpp/cpp-language-reference.md)   
  [Standardowa biblioteka C++](../standard-library/cpp-standard-library-reference.md)

@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 178c75efa84ebc7d27c19feb81e81314dc4c5bd7
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: a445e9c435f9e077899a2a473dc5862f98a36bf4
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37947879"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39405522"
 ---
 # <a name="numeric-boolean-and-pointer-literals--c"></a>Literały numeryczne, atrybut typu wartość logiczna i wskaźnika (C++)
 Literał jest element program, który bezpośrednio reprezentuje wartość. W tym artykule opisano literałów typu całkowitego, zmiennoprzecinkowego, wartości logicznych i wskaźników. Dla informacji na temat literały ciągów i znakowe [ciąg znaków i literały znaków (C++)](../cpp/string-and-character-literals-cpp.md). Można również definiować własne literały według dowolnej z tych kategorii; Aby uzyskać więcej informacji, zobacz [literały zdefiniowane przez użytkownika (C++)](../cpp/user-defined-literals-cpp.md)  
@@ -33,7 +33,6 @@ const int answer = 42; // integer literal
 double d = sin(108.87);     //floating point literal passed to sin function  
 bool b = true;              // boolean literal  
 MyClass* mc = nullptr;      // pointer literal  
-  
 ```  
   
  Czasami jest ważne poinformować kompilator, jak interpretować literału lub jakie określonego typu, aby zapewnić do niego. Można to zrobić, dodając prefiksów lub sufiksów do literału. Na przykład prefiksu 0 x informuje kompilator, aby zinterpretować numer, który po nim następuje jako wartość szesnastkową, na przykład 0x35. Sufiks EŁNY informuje kompilator, aby traktować wartości jako **unsigned long long** typu, tak jak 5894345ULL. Zobacz poniższe sekcje, aby uzyskać pełną listę prefiksów i sufiksów dla każdego typu literału.  
@@ -129,7 +128,6 @@ void func( long double );
  Można określić przy użyciu literału binarnego `0B` lub `0b` prefiksu, następuje Sekwencja 1 i 0:  
   
 ```cpp 
-  
 auto x = 0B001101 ; // int  
 auto y = 0b000001 ; // int  
 ```  
@@ -140,12 +138,11 @@ auto y = 0b000001 ; // int
 ```cpp 
 if (num < 100)  
     return "Success";  
-  
 ```  
   
  W poprzednim przykładzie może być lepiej używać nazwanych stałą, która wywołuje wyczyść znaczenia, na przykład "MAXIMUM_ERROR_THRESHOLD". A jeśli wartość zwracaną, którą "Success" jest widoczny dla użytkowników końcowych, a następnie ją może być lepiej używać stałą ciągu o nazwie, które mogą być przechowywane w jednej lokalizacji w pliku, z którym może być lokalizowana w innych językach. Za pomocą nazwanych stałych pomaga innych użytkowników, a także aby zrozumieć intencje kodu.  
   
-## <a name="see-also"></a>Zobacz też  
+## <a name="see-also"></a>Zobacz także  
  [Konwencje leksykalne](../cpp/lexical-conventions.md)   
  [Literały ciągu języka C++](../cpp/string-and-character-literals-cpp.md)   
  [Literały zdefiniowane przez użytkownika języka C++](../cpp/user-defined-literals-cpp.md)

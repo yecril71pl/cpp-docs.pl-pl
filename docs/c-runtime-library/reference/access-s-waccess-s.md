@@ -40,16 +40,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 24c269951eacfc2f7a5d40c8fad1e4fb67cc1d2f
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 82390f7afe45b48539fb5c33130900ef75cf1967
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32392094"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39403306"
 ---
 # <a name="accesss-waccesss"></a>_access_s, _waccess_s
 
-Określa uprawnienia odczytu/zapisu do pliku. To jest wersja [_access —, _waccess —](access-waccess.md) ulepszeń zabezpieczeń zgodnie z opisem w [funkcje zabezpieczeń w CRT](../../c-runtime-library/security-features-in-the-crt.md).
+Określa uprawnienia odczytu/zapisu pliku. To jest wersja [_access, _waccess —](access-waccess.md) ze wzmocnieniem zabezpieczeń, zgodnie z opisem w [funkcje zabezpieczeń w CRT](../../c-runtime-library/security-features-in-the-crt.md).
 
 ## <a name="syntax"></a>Składnia
 
@@ -66,46 +66,46 @@ errno_t _waccess_s(
 
 ### <a name="parameters"></a>Parametry
 
-*Ścieżka*<br/>
+*Ścieżka*  
 Ścieżka pliku lub katalogu.
 
-*Tryb*<br/>
-Ustawienie uprawnień.
+*Tryb*  
+Ustawienie uprawnienia.
 
 ## <a name="return-value"></a>Wartość zwracana
 
-Każda funkcja zwraca wartość 0, jeśli plik ma danej metody. Jeśli plik o nazwie nie istnieje lub nie jest dostępny w trybie danego, funkcja zwraca kod błędu. W takim przypadku funkcja zwraca kod błędu z zestawu w następujący sposób i ustawia również **errno** na tę samą wartość.
+Każda funkcja zwraca 0, jeśli plik ma w danym trybie. Funkcja zwraca kod błędu, jeśli plik o nazwie nie istnieje lub nie jest dostępna w danym trybie. W takim przypadku funkcja zwraca kod błędu z zestawu w następujący sposób, a także ustawia `errno` taką samą wartość.
 
 |errno wartość|Warunek|
 |-|-|
-**EACCES**|Odmowa dostępu. Ustawienie uprawnień pliku nie zezwala na dostęp określonym.
-**ENOENT —**|Nazwa pliku lub nie można odnaleźć ścieżki.
-**EINVAL —**|Nieprawidłowy parametr.
+`EACCES`|Odmowa dostępu. Ustawienie uprawnienia pliku zezwalają na dostęp określonym.
+`ENOENT`|Nazwa pliku lub nie można odnaleźć ścieżki.
+`EINVAL`|Nieprawidłowy parametr.
 
-Aby uzyskać więcej informacji, zobacz [errno _doserrno —, _sys_errlist — i _sys_nerr —](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
+Aby uzyskać więcej informacji, zobacz [errno, _doserrno, _sys_errlist i _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
 ## <a name="remarks"></a>Uwagi
 
-W przypadku użycia z plików, **_access_s —** funkcji określa, czy określony plik istnieje i jest dostępny jako określony przez wartość *tryb*. W przypadku użycia z katalogów, **_access_s —** tylko określa, czy istnieje określony katalog. W systemie Windows 2000 i nowszych systemów operacyjnych, wszystkie katalogi ma uprawnienia odczytu i zapisu.
+Gdy jest używana z plikami, **_access_s —** funkcja określa, czy określony plik istnieje i czy może być dostępna jako określony przez wartość *tryb*. Gdy jest używana z katalogami, **_access_s —** określa jedynie, czy istnieje określony katalog. Windows 2000 i nowszych systemach operacyjnych, wszystkie katalogi ma uprawnienia odczytu i zapisu.
 
-|wartość trybu|Sprawdzanie pliku|
+|wartość trybu|Plik kontroli|
 |----------------|---------------------|
 |00|Istnienie tylko.|
 |02|Uprawnienie do zapisu.|
-|04|Uprawnienie do odczytu.|
+|04|Uprawnienia do odczytu.|
 |06|Uprawnienia odczytu i zapisu.|
 
-Uprawnienia do odczytu lub zapisu pliku nie jest wystarczająco, aby zapewnić możliwość otwarcia pliku. Na przykład, jeśli plik jest zablokowany przez inny proces, może nie być on dostępny nawet jeśli **_access_s —** zwraca wartość 0.
+Uprawnienia do odczytu lub zapisu pliku nie jest wystarczająco, aby zapewnić możliwość otwarcia pliku. Na przykład, jeśli plik jest zablokowany przez inny proces, może nie być dostępne nawet jeśli **_access_s —** zwraca wartość 0.
 
-**_waccess_s —** jest wersja znaków dwubajtowych **_access_s —**, gdzie *ścieżki* argument **_waccess_s —** jest ciągiem znaków dwubajtowych. W przeciwnym razie **_waccess_s —** i **_access_s —** zachowują się tak samo.
+**_waccess_s —** to wersja znaku dwubajtowego **_access_s —**, gdzie *ścieżki* argument **_waccess_s —** jest ciągiem znaku dwubajtowego. W przeciwnym razie **_waccess_s —** i **_access_s —** zachowują się identycznie.
 
-Te funkcje walidację ich parametrów. Jeśli *ścieżki* jest **NULL** lub *tryb* nie określa prawidłowego trybu, program obsługi nieprawidłowych parametrów zostanie wywołany, zgodnie z opisem w [sprawdzanie poprawności parametru](../../c-runtime-library/parameter-validation.md). Jeśli dozwolone jest wykonywanie aby kontynuować, ustawianie tych funkcji **errno** do **einval —** i zwracać **einval —**.
+Te funkcje sprawdzają poprawność swoich parametrów. Jeśli *ścieżki* ma wartość NULL lub *tryb* nie określa prawidłowego trybu wywołany nieprawidłowy parametr uchwytu, zgodnie z opisem w [Parameter Validation](../../c-runtime-library/parameter-validation.md). Jeśli wykonanie może być kontynuowane, te funkcje ustawiają `errno` do `EINVAL` i zwracają `EINVAL`.
 
 ### <a name="generic-text-routine-mappings"></a>Mapowania procedur zwykłego tekstu
 
 |Procedura tchar.h|_UNICODE i _MBCS niezdefiniowane|_MBCS zdefiniowano|_UNICODE zdefiniowano|
 |---------------------|--------------------------------------|--------------------|-----------------------|
-|**_taccess_s —**|**_access_s**|**_access_s**|**_waccess_s**|
+|`_taccess_s`|**_access_s**|**_access_s**|**_waccess_s**|
 
 ## <a name="requirements"></a>Wymagania
 
@@ -116,7 +116,7 @@ Te funkcje walidację ich parametrów. Jeśli *ścieżki* jest **NULL** lub *try
 
 ## <a name="example"></a>Przykład
 
-W tym przykładzie użyto **_access_s —** sprawdzić plik o nazwie crt_access_s.c, aby sprawdzić, czy istnieje i czy jest dozwolone zapisu.
+W tym przykładzie użyto **_access_s —** można znaleźć w pliku o nazwie crt_access_s.c, aby zobaczyć, czy istnieje i czy jest dozwolone zapisywanie.
 
 ```C
 // crt_access_s.c
@@ -160,9 +160,9 @@ File crt_access_s.c does not have write permission.
 
 ## <a name="see-also"></a>Zobacz także
 
-[Obsługa plików](../../c-runtime-library/file-handling.md)<br/>
-[_access, _waccess](access-waccess.md)<br/>
-[_chmod, _wchmod](chmod-wchmod.md)<br/>
-[_fstat, _fstat32, _fstat64, _fstati64, _fstat32i64, _fstat64i32](fstat-fstat32-fstat64-fstati64-fstat32i64-fstat64i32.md)<br/>
-[_open, _wopen](open-wopen.md)<br/>
-[_stat, _wstat — funkcje](stat-functions.md)<br/>
+[Obsługa plików](../../c-runtime-library/file-handling.md)  
+[_access, _waccess](access-waccess.md)  
+[_chmod, _wchmod](chmod-wchmod.md)  
+[_fstat, _fstat32, _fstat64, _fstati64, _fstat32i64, _fstat64i32](fstat-fstat32-fstat64-fstati64-fstat32i64-fstat64i32.md)  
+[_open, _wopen](open-wopen.md)  
+[_stat, _wstat — funkcje](stat-functions.md)  

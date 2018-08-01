@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 495f0fe9faf0c75257f2ac7bbe0a3457438ffdf9
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: 6e632faddb3b4f59733710a915ed121a12f4e0c6
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37942045"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39404866"
 ---
 # <a name="mixing-c-structured-and-c-exceptions"></a>Połączenie wyjątków języka C (strukturalnych) i C++
 Aby napisać bardziej przenośny kod, nie jest zalecane wykorzystanie strukturalnej obsługi wyjątków w programie w języku C++. Jednak czasami warto skompilować z **/eha** i wymieszać strukturalne wyjątki kodu źródłowego języka C++, a zatem potrzebne są funkcje obsługi obu rodzajów wyjątków. Ponieważ program obsługi wyjątków strukturalnych nie ma koncepcji obiektów lub wyjątków z określonym typem, nie może obsługiwać wyjątki generowane przez kod języka C++; jednak C++ **catch** obsługi mogą obsługiwać wyjątki strukturalne. Jako taka, składnia obsługi wyjątków C++ (**spróbuj**, **throw**, **catch**) nie jest akceptowana przez kompilator C, natomiast składnia obsługi wyjątków strukturalnych (**__try** , **__except**, **__finally**) jest obsługiwana przez kompilator języka C++.  
@@ -46,5 +46,5 @@ Aby napisać bardziej przenośny kod, nie jest zalecane wykorzystanie struktural
   
 -   [Różnice między SEH i EH w języku C++](../cpp/exception-handling-differences.md)  
   
-## <a name="see-also"></a>Zobacz też  
+## <a name="see-also"></a>Zobacz także  
  [Obsługa wyjątków języka C++](../cpp/cpp-exception-handling.md)

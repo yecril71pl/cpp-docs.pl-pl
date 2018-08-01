@@ -1,5 +1,5 @@
 ---
-title: Znaki interpunkcyjne (C++) | Dokumentacja firmy Microsoft
+title: Przerywniki (C++) | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -14,24 +14,24 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ecaa90598ce07cd0db52b7a4c30cfacc12566aba
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 1602857896745daae6e7af969add76ca2c1e1ead
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32420093"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39406757"
 ---
-# <a name="punctuators-c"></a>Znaki interpunkcyjne (C++)
-Znaki interpunkcyjne w języku C++ mają znaczenie składni i semantyczne w kompilatorze, ale nie, z sobą, określono operacja, której wynikiem jest wartość. Niektóre znaki interpunkcyjne, samodzielnie lub w połączeniu, można być operatory języka C++ lub być istotne dla preprocesora.  
+# <a name="punctuators-c"></a>Przerywniki (C++)
+Przerywniki języka w języku C++ mają syntaktyczna i semantyczna znaczenie dla kompilatora, ale, sobie, określa operację, która daje wartość. Niektórych znaków autonomicznie lub w połączeniu, można być operatorów języka C++ lub być znaczące preprocesora.  
 
- Żadnego z następujących znaków są traktowane jako znaki interpunkcyjne:  
+ Jedną z następujących znaków są uważane za przerywniki języka:  
 
 ```  
 ! % ^ & * ( ) - + = { } | ~  
 [ ] \ ; ' : " < > ? , . / #  
 ```  
 
- Znaki interpunkcyjne **[**, **()**, i **{}** muszą występować parami po [fazy tłumaczenia](../preprocessor/phases-of-translation.md) 4.  
+ Przerywniki języka **[**, **()**, i **{}** musi znajdować się w parach po [fazie tłumaczenia](../preprocessor/phases-of-translation.md) 4.  
 
-## <a name="see-also"></a>Zobacz też  
+## <a name="see-also"></a>Zobacz także  
  [Konwencje leksykalne](../cpp/lexical-conventions.md)

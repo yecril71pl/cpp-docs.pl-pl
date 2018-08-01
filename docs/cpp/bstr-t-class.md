@@ -18,17 +18,17 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 15ed9c32a204bdef726a5ace88d811d2eeeb2c53
-ms.sourcegitcommit: 76fd30ff3e0352e2206460503b61f45897e60e4f
+ms.openlocfilehash: f7cb3d05997cfe3d803f522962ed9e7382269bd3
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/13/2018
-ms.locfileid: "39027251"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39404928"
 ---
 # <a name="bstrt-class"></a>_bstr_t — Klasa
 **Microsoft Specific**  
   
- A `_bstr_t` hermetyzuje [typ danych](http://msdn.microsoft.com/1b2d7d2c-47af-4389-a6b6-b01b7e915228). Klasa zarządza alokacją i dezalokacją za pośrednictwem wywołania funkcji zasobów `SysAllocString` i `SysFreeString` i innych `BSTR` interfejsów API, gdy jest to konieczne. `_bstr_t` Klasa używa zliczania odniesień, by uniknąć nadmiernego obciążenia.  
+ A `_bstr_t` hermetyzuje [typ danych](http://msdn.microsoft.com/1b2d7d2c-47af-4389-a6b6-b01b7e915228). Klasa zarządza alokacją i dezalokacją za pośrednictwem wywołania funkcji zasobów `SysAllocString` i `SysFreeString` i innych `BSTR` interfejsów API, gdy jest to konieczne. **_Bstr_t** klasa używa zliczania odniesień, by uniknąć nadmiernego obciążenia.  
   
 ### <a name="construction"></a>Konstrukcja  
   
@@ -66,5 +66,5 @@ ms.locfileid: "39027251"
   
  **Lib:** comsuppw.lib lub comsuppwd.lib (zobacz [/Zc: wchar_t (wchar_t jest typem natywnym)](../build/reference/zc-wchar-t-wchar-t-is-native-type.md) Aby uzyskać więcej informacji)  
   
-## <a name="see-also"></a>Zobacz też  
+## <a name="see-also"></a>Zobacz także  
  [Kompilator klas obsługi COM](../cpp/compiler-com-support-classes.md)

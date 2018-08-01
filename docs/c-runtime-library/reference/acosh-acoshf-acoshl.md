@@ -40,16 +40,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cc5ec18eec5be6ee0cc696768be65cd62b74bdc7
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 546006fcf1c559317b4afff424976db8109442e7
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32392786"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39404755"
 ---
 # <a name="acosh-acoshf-acoshl"></a>acosh, acoshf, acoshl
 
-Oblicza cosinus hiperboliczny.
+Oblicza arcus cosinus hiperboliczny.
 
 ## <a name="syntax"></a>Składnia
 
@@ -66,25 +66,25 @@ long double acosh( long double x );  // C++ only
 
 ### <a name="parameters"></a>Parametry
 
-*x*<br/>
+*x*  
 Wartość zmiennoprzecinkowa.
 
 ## <a name="return-value"></a>Wartość zwracana
 
-**Acosh** hyberbolic odwrotny cosinus (arcus cosinus hiperboliczny) zwracają *x*. Te funkcje są prawidłowe w domenie *x* ≥ 1. Jeśli *x* jest mniejszy niż 1 **errno** ustawiono **edom —** i quiet NaN. Jeśli *x* jest NaN quiet — nieokreślony, lub nieskończoności, jest zwracana przez tę samą wartość.
+**Acosh** funkcje zwracają Zwraca arcus cosinus (arcus cosinus hiperboliczny) *x*. Te funkcje są prawidłowe w domenie *x* ≥ 1. Jeśli *x* jest mniejszy niż 1 `errno` ustawiono `EDOM` i wynikiem jest dyskretne NaN. Jeśli *x* jest dyskretne NaN nieokreślony, lub w nieskończoność, jest zwracana przez tę samą wartość.
 
-|Dane wejściowe|Wyjątek SEH|**_matherr —** wyjątku|
+|Dane wejściowe|Wyjątek SEH|`_matherr` wyjątek|
 |-----------|-------------------|--------------------------|
-|INF QNAN, IND GRANICACH|brak|brak|
+|GRANICACH QNAN, ZNAJDŹ INF|brak|brak|
 |*x* < 1|brak|brak|
 
 ## <a name="remarks"></a>Uwagi
 
-Korzystając z języka C++, można wywoływać przeciążenia **acosh** który przyjmować i zwracać **float** lub **długi** **podwójne** wartości. W programie C **acosh** zawsze przyjmuje i zwraca **podwójne**.
+Korzystając z języka C++, można wywoływać przeciążenia **acosh** przyjmujące i zwracające **float** lub **długie** **double** wartości. W programie C **acosh** zawsze przyjmuje i zwraca **double**.
 
 ## <a name="requirements"></a>Wymagania
 
-|Funkcja|Nagłówek C|Nagłówek C++|
+|Funkcja|Nagłówek języka C|Nagłówek języka C++|
 |--------------|--------------|------------------|
 |**ACOSH**, **acoshf —**, **acoshl**|\<math.h>|\<cmath >|
 
@@ -120,9 +120,9 @@ acosh( 1.324609 ) = 0.785398
 
 ## <a name="see-also"></a>Zobacz także
 
-[Obsługa liczb zmiennoprzecinkowych](../../c-runtime-library/floating-point-support.md)<br/>
-[asinh, asinhf, asinhl](asinh-asinhf-asinhl.md)<br/>
-[atanh, atanhf, atanhl](atanh-atanhf-atanhl.md)<br/>
-[cosh, coshf, coshl](cosh-coshf-coshl.md)<br/>
-[sinh, sinhf, sinhl](sinh-sinhf-sinhl.md)<br/>
-[tanh, tanhf, tanhl](tanh-tanhf-tanhl.md)<br/>
+[Obsługa liczb zmiennoprzecinkowych](../../c-runtime-library/floating-point-support.md)  
+[asinh, asinhf, asinhl](asinh-asinhf-asinhl.md)  
+[atanh, atanhf, atanhl](atanh-atanhf-atanhl.md)  
+[cosh, coshf, coshl](cosh-coshf-coshl.md)  
+[sinh, sinhf, sinhl](sinh-sinhf-sinhl.md)  
+[tanh, tanhf, tanhl](tanh-tanhf-tanhl.md)  

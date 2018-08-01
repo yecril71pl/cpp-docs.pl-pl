@@ -16,17 +16,17 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f27d6f1a09f46dfb3906825bdf4f2347a02f2d38
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: 1ee32e9c94f9bd9d1da4e3d3beaf9bfa0039b8cf
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37939074"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39403829"
 ---
 # <a name="comptrtcomptrt"></a>_com_ptr_t::_com_ptr_t
 **Microsoft Specific**  
   
- Konstruuje `_com_ptr_t` obiektu.  
+ Konstruuje **_com_ptr_t** obiektu.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -150,10 +150,10 @@ explicit _com_ptr_t(
  W przypadku opcji TRUE `AddRef` jest wywoływana, aby zwiększyć licznik odwołań interfejsu zhermetyzowanego wskaźnika.  
   
  *CP*  
- Element `_com_ptr_t` obiektu.  
+ A **_com_ptr_t** obiektu.  
   
  *p*  
- Surowego wskaźnika interfejsu, jego typ jest inny niż typ inteligentnego wskaźnika `_com_ptr_t` obiektu.  
+ Surowego wskaźnika interfejsu, jego typ jest inny niż typ inteligentnego wskaźnika **_com_ptr_t** obiektu.  
   
  *varSrc*  
  Element `_variant_t` obiektu.  
@@ -170,5 +170,5 @@ explicit _com_ptr_t(
  *pOuter*  
  Zewnętrzne nieznany dla [agregacji](http://msdn.microsoft.com/library/windows/desktop/ms686558).  
   
-## <a name="see-also"></a>Zobacz też  
+## <a name="see-also"></a>Zobacz także  
  [_com_ptr_t, klasa](../cpp/com-ptr-t-class.md)

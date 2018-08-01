@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 25bb47c0297d7e1e472f69334c17aa458aaa57b6
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: a84e14cbac5eb04e63f85708e3ca8ae100ec56ab
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37940452"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39406324"
 ---
 # <a name="keywords-c"></a>Słowa kluczowe (C++)
 Słowa kluczowe są wstępnie zdefiniowanymi zarezerwowanymi identyfikatorami, które mają specjalne znaczenie. Nie mogą one służyć jako identyfikatorów w Twoim programie. Następujące słowa kluczowe są zarezerwowane dla Microsoft C++. Nazwy z wiodących znaków podkreślenia są rozszerzeniami Microsoft.  
@@ -102,6 +102,6 @@ Słowa kluczowe są wstępnie zdefiniowanymi zarezerwowanymi identyfikatorami, k
   
 **END specyficzny dla Microsoft**  
   
-## <a name="see-also"></a>Zobacz też  
+## <a name="see-also"></a>Zobacz także  
  [Konwencje leksykalne](../cpp/lexical-conventions.md)   
  [Wbudowane operatory, pierwszeństwo i kojarzenie języka C++](../cpp/cpp-built-in-operators-precedence-and-associativity.md)

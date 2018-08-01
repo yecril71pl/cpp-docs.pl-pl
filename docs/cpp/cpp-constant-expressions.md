@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fef56154f34f645b279ffccd99915d366388cb06
-ms.sourcegitcommit: 76fd30ff3e0352e2206460503b61f45897e60e4f
+ms.openlocfilehash: 06a07c9d37994b4214da9b2eb53d02104525d7c4
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/13/2018
-ms.locfileid: "39026705"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39408115"
 ---
 # <a name="c-constant-expressions"></a>Wyrażenia stałe języka C++
 A *stałej* wartość to taki, który nie powoduje zmiany. C++ zawiera dwa słowa kluczowe umożliwiające express celem obiektu nie jest przeznaczony do modyfikacji i wymusić tym przeznaczeniem.  
@@ -53,9 +53,9 @@ const double Size = 11.0;
 char chArray[(int)Size];  
 ```  
   
-Jawne konwersje typów całkowitych są niedozwolone w wyrażeniach stałych innych typów i typów pochodnych są niedozwolone z wyjątkiem sytuacji, gdy używana jako argumenty do `sizeof` operatora.  
+Jawne konwersje typów całkowitych są niedozwolone w wyrażeniach stałych innych typów i typów pochodnych są niedozwolone z wyjątkiem sytuacji, gdy używana jako argumenty do **sizeof** operatora.  
   
 Nie można użyć operatora przecinka i operatory przypisania w wyrażeniach stałych.  
   
-## <a name="see-also"></a>Zobacz też  
+## <a name="see-also"></a>Zobacz także  
  [Typy wyrażeń](../cpp/types-of-expressions.md)

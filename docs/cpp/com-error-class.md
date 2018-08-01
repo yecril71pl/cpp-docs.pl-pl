@@ -16,29 +16,29 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0d59782b62ddfb51601505be6d12f01ce14cd4f1
-ms.sourcegitcommit: 76fd30ff3e0352e2206460503b61f45897e60e4f
+ms.openlocfilehash: 60fc445d51cfa72a6c72984ff19b877d916ded53
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/13/2018
-ms.locfileid: "39026637"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39407764"
 ---
 # <a name="comerror-class"></a>_com_error — Klasa
 **Microsoft Specific**  
   
- Element `_com_error` obiektu przedstawia warunek wyjątku, wykrywany przez funkcje otoki obsługi błędów w plikach nagłówkowych wygenerowane z biblioteki typów lub za pomocą jednej z klas obsługi COM. `_com_error` Klasa hermetyzuje kod błędu HRESULT i wszelkie powiązane `IErrorInfo Interface` obiektu.  
+ A **_com_error** obiektu przedstawia warunek wyjątku, wykrywany przez funkcje otoki obsługi błędów w plikach nagłówkowych wygenerowane z biblioteki typów lub za pomocą jednej z klas obsługi COM. **_Com_error** klasa hermetyzuje kod błędu HRESULT i wszelkie powiązane `IErrorInfo Interface` obiektu.  
   
 ### <a name="construction"></a>Konstrukcja  
   
 |||  
 |-|-|  
-|[_com_error](../cpp/com-error-com-error.md)|Konstruuje `_com_error` obiektu.|  
+|[_com_error](../cpp/com-error-com-error.md)|Konstruuje **_com_error** obiektu.|  
   
 ### <a name="operators"></a>Operatory  
   
 |||  
 |-|-|  
-|[operator =](../cpp/com-error-operator-equal.md)|Przypisuje istniejące `_com_error` obiektu do drugiego.|  
+|[operator =](../cpp/com-error-operator-equal.md)|Przypisuje istniejące **_com_error** obiektu do drugiego.|  
   
 ### <a name="extractor-functions"></a>Ekstraktor funkcji  
   
@@ -62,7 +62,7 @@ ms.locfileid: "39026637"
   
 |||  
 |-|-|  
-|[Komunikat o błędzie](../cpp/com-error-errormessage.md)|Pobiera ciąg komunikatu dla przechowywanych we właściwości HRESULT `_com_error` obiektu.|  
+|[Komunikat o błędzie](../cpp/com-error-errormessage.md)|Pobiera ciąg komunikatu dla przechowywanych we właściwości HRESULT **_com_error** obiektu.|  
   
 ### <a name="exepinfowcode-to-hresult-mappers"></a>ExepInfo.wCode do liczby Maperów HRESULT  
   
@@ -78,6 +78,6 @@ ms.locfileid: "39026637"
   
  `Lib:` comsuppw.lib lub comsuppwd.lib (zobacz [/Zc: wchar_t (wchar_t jest typem natywnym)](../build/reference/zc-wchar-t-wchar-t-is-native-type.md) Aby uzyskać więcej informacji)  
   
-## <a name="see-also"></a>Zobacz też  
+## <a name="see-also"></a>Zobacz także  
  [Kompilator klas obsługi COM](../cpp/compiler-com-support-classes.md)   
  [Interfejs IErrorInfo](http://msdn.microsoft.com/4dda6909-2d9a-4727-ae0c-b5f90dcfa447)

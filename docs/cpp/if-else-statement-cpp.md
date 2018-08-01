@@ -19,12 +19,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 42174837f0f60f9a4e3ba9f19702210d6d34ccca
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: 15748249a39813edc4446fa25511d20361b0706c
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37947745"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39405113"
 ---
 # <a name="if-else-statement-c"></a>if-else — instrukcja (C++)
 Formanty warunkowych gałęzi. Instrukcje w *bloku if* są wykonywane tylko wtedy, gdy *wyrażenie if* daje w wyniku wartość różna od zera (lub wartość PRAWDA). Jeśli wartość *wyrażenie* jest różna od zera, *instrukcja1* i wszelkie inne instrukcje w bloku są wykonywane, oraz innego bloku, jeśli jest obecny, jest pomijana. Jeśli wartość *wyrażenie* wynosi zero, a następnie bloku if zostanie pominięta i innego bloku, jeśli jest obecny, jest wykonywany. Wyrażenia, które dają różna od zera są
@@ -36,7 +36,6 @@ Formanty warunkowych gałęzi. Instrukcje w *bloku if* są wykonywane tylko wted
 ## <a name="syntax"></a>Składnia  
   
 ```  
-  
 if ( expression )  
 {
    statement1;
@@ -131,7 +130,6 @@ int main()
 #include <string>
 #include <algorithm>
 
-
 using namespace std;
 
 map<int, string> m;
@@ -159,13 +157,11 @@ int main()
         shared_flag = false;
     }
 
-
     string s{ "if" };
     if (auto keywords = { "if", "for", "while" }; any_of(keywords.begin(), keywords.end(), [&s](const char* kw) { return s == kw; }))
     {
         cout << "Error! Token must not be a keyword\n";
     }
-
 }
 ```
 
@@ -196,9 +192,7 @@ void f(T&& t, Rest&&... r)
 }
 ```
 
-  
- 
-## <a name="see-also"></a>Zobacz też  
+## <a name="see-also"></a>Zobacz także  
  [Instrukcje wyboru](../cpp/selection-statements-cpp.md)   
  [Keywords](../cpp/keywords-cpp.md)   
  [switch, instrukcja (C++)](../cpp/switch-statement-cpp.md)

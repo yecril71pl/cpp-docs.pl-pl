@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5b358bc38ad055ed5e485dea566238de06242e7f
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: bdc97982b9e8292dec1e8b5c2c49489f6803dea6
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37942032"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39407926"
 ---
 # <a name="comerroroperator-"></a>_com_error::operator =
 **Microsoft Specific**  
@@ -33,8 +33,7 @@ ms.locfileid: "37942032"
 ## <a name="syntax"></a>Składnia  
   
 ```  
-  
-      _com_error& operator = (  
+_com_error& operator = (  
    const _com_error& that   
 ) throw ( );  
 ```  
@@ -45,5 +44,5 @@ ms.locfileid: "37942032"
   
  **END specyficzny dla Microsoft**  
   
-## <a name="see-also"></a>Zobacz też  
+## <a name="see-also"></a>Zobacz także  
  [_com_error, klasa](../cpp/com-error-class.md)

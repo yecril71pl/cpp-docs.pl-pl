@@ -12,12 +12,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3dd7448d50debc54cde075b8a6879af8b1be62c9
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: 1a9eaee55c806ea2efc82300cad47cc744c0a491
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37940327"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39403696"
 ---
 # <a name="how-to-design-for-exception-safety"></a>Porady: projektowanie pod kątem bezpieczeństwa wyjątków
 Jedna z zalet mechanizmu wyjątków polega na tym, że wykonywanie, wraz z danymi o wyjątku, przechodzi bezpośrednio z instrukcji generującej wyjątek do pierwszej instrukcji „catch” zdolnej go obsłużyć. Program obsługi może się znajdować o dowolną liczbę poziomów wyżej w stosie wywołań. Funkcje wywoływane między instrukcjami „try” i „throw” nie muszą nic wiedzieć o zgłaszanym wyjątku.  Muszą jednak być zaprojektowane w taki sposób, aby mogły wykroczyć poza zakres „niespodziewanie” w każdym momencie, gdy istnieje ryzyko rozpowszechnienia wyjątku z niższego poziomu, nie pozostawiając przy tym za sobą żadnych częściowo utworzonych obiektów, przecieków pamięci ani struktur danych w bezużytecznych stanach.  
@@ -86,7 +86,6 @@ private:
 public:  
     SPShapeResourceClass() : m_p(new Circle), m_q(new Triangle) { }  
 };  
-  
 ```  
   
 ### <a name="use-the-raii-idiom-to-manage-resources"></a>Zarządzanie zasobami przy użyciu idiomu RAII  
@@ -119,6 +118,6 @@ public:
   
 -   Nie pozwól, aby jakikolwiek wyjątek został pominięty przez destruktora. Podstawowy aksjomat języka C++ mówi, że destruktory nigdy nie powinny pozwalać na przekazywanie wyjątków do wyższych poziomów stosu wywołań. Jeśli destruktor musi wykonać operację, która może się skończyć zgłoszeniem wyjątku, musi zrobić to w bloku „try catch” i wchłonąć wyjątek. Standardowa biblioteka zapewnia tę gwarancję wszystkim destruktorom, które definiuje.  
   
-## <a name="see-also"></a>Zobacz też  
+## <a name="see-also"></a>Zobacz także  
  [Błędy w obsłudze wyjątków](../cpp/errors-and-exception-handling-modern-cpp.md)   
  [Instrukcje: interfejs między kodem obsługi wyjątków a innym kodem](../cpp/how-to-interface-between-exceptional-and-non-exceptional-code.md)

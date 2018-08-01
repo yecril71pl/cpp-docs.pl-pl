@@ -16,22 +16,21 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1278ab84ea8888b34290c9738e0eb88a4485e99c
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: db1f512b10bdedffa5b6978b735c881dc21370ce
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37947847"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39406705"
 ---
 # <a name="convertbstrtostring"></a>ConvertBSTRToString
 **Microsoft Specific**  
   
- Konwertuje `BSTR` wartość **char \*** .  
+ Konwertuje `BSTR` wartość `char *`.  
   
 ## <a name="syntax"></a>Składnia  
   
 ```  
-  
 char* __stdcall ConvertBSTRToString(BSTR pSrc);  
 ```  
   
@@ -40,7 +39,7 @@ char* __stdcall ConvertBSTRToString(BSTR pSrc);
  Zmienna BSTR.  
   
 ## <a name="remarks"></a>Uwagi  
- `ConvertBSTRToString` przydziela ciąg znaków, które należy usunąć.  
+ **Convertbstrtostring —** przydziela ciąg, należy usunąć.  
   
 ## <a name="example"></a>Przykład  
   
@@ -75,5 +74,5 @@ char * text: Test
   
  **Lib:** comsuppw.lib lub comsuppwd.lib (zobacz [/Zc: wchar_t (wchar_t jest typem natywnym)](../build/reference/zc-wchar-t-wchar-t-is-native-type.md) Aby uzyskać więcej informacji)  
   
-## <a name="see-also"></a>Zobacz też  
+## <a name="see-also"></a>Zobacz także  
  [Funkcje globalne kompilatora COM](../cpp/compiler-com-global-functions.md)

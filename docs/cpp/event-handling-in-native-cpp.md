@@ -14,20 +14,20 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7b233c8329119753e5753e19fd641c6bea5d8e42
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: b58bf010be4b05d8c9f024954b51e8cdb176cd4d
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32414184"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39405785"
 ---
 # <a name="event-handling-in-native-c"></a>Obsługa zdarzeń w natywnym kodzie C++
 
-W obsłudze zdarzeń natywnych języka C++, konfigurowanie obsługiwanego odbiornika źródła i zdarzeń za pomocą [event_source —](../windows/event-source.md) i [event_receiver](../windows/event-receiver.md) atrybutów, określając `type` = `native`. Te atrybuty Zezwalaj klasy, do których są stosowane do wyzwalać zdarzeń i obsługa zdarzeń w kontekście macierzystego, -COM.
+W obsłudze zdarzeń natywnego języka C++, można skonfigurować zdarzenia źródło i zdarzenie odbiornika zdarzenia za pomocą [event_source](../windows/event-source.md) i [event_receiver](../windows/event-receiver.md) , odpowiednio, atrybutów, określając `type` = `native`. Te atrybuty zezwalać na klasy, do których są stosowane klasom wywoływanie zdarzeń i obsługa zdarzeń w kontekście natywnego, innego niż COM.
 
 ## <a name="declaring-events"></a>Deklarowanie zdarzeń
 
-W klasie źródła zdarzeń, użyj [__event](../cpp/event.md) — słowo kluczowe w deklaracji metody, aby zadeklarować metodę jako zdarzenie. Upewnij się zadeklarować metodę, ale nie definiują Aby to zrobić wygeneruje błąd kompilatora, ponieważ kompilator definiuje niejawnie metodę, jeśli są wysyłane do zdarzenia. Zdarzenia natywnych może być metody z parametrami zero lub więcej. Zwracany typ może być typu void lub dowolnego całkowitego.  
+W klasie źródła zdarzeń, użyj [__event](../cpp/event.md) — słowo kluczowe w deklaracji metody, aby zadeklarować metodę jako zdarzenie. Upewnij się zadeklarować metody, ale nie zostanie zdefiniowana. Aby to zrobić wygeneruje błąd kompilatora, ponieważ kompilator określa niejawnie metodę, gdy staje się do zdarzenia. Natywne zdarzenia mogą być metod z zero lub więcej parametrów. Zwracany typ może być typu void lub dowolnego całkowitego.  
   
 ## <a name="defining-event-handlers"></a>Definiowanie programów obsługi zdarzeń
 
@@ -35,15 +35,15 @@ W klasie odbiornika zdarzeń należy zdefiniować programy obsługi zdarzeń, kt
   
 ## <a name="hooking-event-handlers-to-events"></a>Podłączanie programów obsługi zdarzeń do zdarzeń  
 
-Również w klasy odbiorcy zdarzeń, można używać funkcji wewnętrznej [__hook](../cpp/hook.md) do skojarzenia zdarzeń z obsługi zdarzeń i [__unhook](../cpp/unhook.md) można usunąć skojarzenia zdarzenia z obsługi zdarzeń. Można podłączyć kilka zdarzeń do programu obsługi zdarzeń lub kilka programów obsługi zdarzeń do zdarzenia.  
+Również w klasie odbiornika zdarzeń, możesz użyć Wewnętrzna funkcja [__hook](../cpp/hook.md) umożliwia kojarzenie zdarzeń z programami obsługi zdarzeń i [__unhook](../cpp/unhook.md) do zdarzenia z programu obsługi zdarzeń. Można podłączyć kilka zdarzeń do programu obsługi zdarzeń lub kilka programów obsługi zdarzeń do zdarzenia.  
   
 ## <a name="firing-events"></a>Wyzwalanie zdarzeń  
 
-Zdarzenia, po prostu Wywołaj metodę zadeklarowany jako zdarzenie w przypadku klasy źródłowej. Jeśli programy obsługi zostały podłączone do zdarzenia, zostaną wywołane programy obsługi.  
+Aby wywołać zdarzenie, po prostu Wywołaj metodę zadeklarowany jako zdarzenie w przypadku klasy źródłowej. Jeśli programy obsługi zostały podłączone do zdarzenia, zostaną wywołane programy obsługi.  
   
-### <a name="native-c-event-code"></a>Kod natywny zdarzenia C++  
+### <a name="native-c-event-code"></a>Kod natywny zdarzenia języka C++  
 
-Poniższy przykład pokazuje, jak zdarzenia w natywnym kodzie C++. Aby skompilować i uruchomić przykład, zobacz komentarze w kodzie.  
+Poniższy przykład pokazuje, jak wywołać zdarzenie w natywnym kodzie C++. Aby skompilować i uruchomić przykład, zobacz komentarze w kodzie.  
   
 ## <a name="example"></a>Przykład  
   
@@ -98,7 +98,5 @@ MyHandler2 was called with value 123.
 MyHandler1 was called with value 123.  
 ```  
   
-## <a name="see-also"></a>Zobacz też
-
-[Obsługa zdarzeń](../cpp/event-handling.md)  
-
+## <a name="see-also"></a>Zobacz także
+ [Obsługa zdarzeń](../cpp/event-handling.md)  

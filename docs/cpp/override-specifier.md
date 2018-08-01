@@ -14,12 +14,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b50ffc096cc710f4028c7effc2dda8822f077f29
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: c95a67df03f62279b7b9c46ef41b6cafe7ff3df1
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37940657"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39408154"
 ---
 # <a name="override-specifier"></a>override, specyfikator
 Możesz użyć **zastąpienia** — słowo kluczowe, aby wyznaczyć element członkowski funkcji, które zastępują funkcję wirtualną w klasie bazowej.  
@@ -27,7 +27,6 @@ Możesz użyć **zastąpienia** — słowo kluczowe, aby wyznaczyć element czł
 ## <a name="syntax"></a>Składnia  
   
 ```  
-  
 function-declaration override;  
 ```  
   
@@ -56,9 +55,7 @@ class DerivedClass: public BaseClass
     virtual void funcC(double = 0.0); // DerivedClass::funcC(double) has a different  
                                       // parameter type than BaseClass::funcC(int), so  
                                       // DerivedClass::funcC(double) is a new member function  
-  
 };  
-  
 ```  
   
  Kiedy używasz **zastąpienia**, kompilator generuje błędy zamiast dyskretnie tworzyć nowe funkcje Członkowskie.  
@@ -86,12 +83,10 @@ class DerivedClass: public BaseClass
     void funcD() override; // compiler error: DerivedClass::funcD() does not   
                            // override the non-virtual BaseClass::funcD()  
 };  
-  
 ```  
   
  Aby określić funkcje nie mogą być zastępowane i że klasy nie może być dziedziczona, użyj [końcowego](../cpp/final-specifier.md) — słowo kluczowe.  
   
-## <a name="see-also"></a>Zobacz też  
+## <a name="see-also"></a>Zobacz także  
  [final, Specyfikator](../cpp/final-specifier.md)   
  [Słowa kluczowe](../cpp/keywords-cpp.md)   
- 

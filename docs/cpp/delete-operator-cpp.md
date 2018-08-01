@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 89ad061dc2be090abbcfbc147f1ea5fbddb8ae6a
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: f4f563a424fd5a019b2094f931236f4af6f0ecb4
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37947774"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39407731"
 ---
 # <a name="delete-operator-c"></a>delete — Operator (C++)
 Zwalnia blok pamięci.  
@@ -97,8 +97,7 @@ int main()
   
  Dla obiektów nie typu klasy ([klasy](../cpp/class-cpp.md), [struktury](../cpp/struct-cpp.md), lub [Unii](../cpp/unions.md)), operatora delete globalny jest wywoływany. Dla obiektów typu klasy nazwą funkcji dezalokacji został rozwiązany w zakresie globalnym, jeśli wyrażenie usunięcia zaczyna się od jednoargumentowego operatora rozpoznawania zakresu (:). W przeciwnym razie operatora delete wywołuje destruktor obiektu przed cofanie przydziału pamięci (jeśli jest to wskaźnik nie jest równa null). Delete operator mogą być definiowane na podstawie klasy; Jeśli istnieje taka definicja dla danej klasy, globalny operator delete jest wywoływana. Jeśli wyrażenie usunięcia umożliwia cofnięcie przydziału obiektu klasy, którego typu statycznego ma destruktor wirtualny, dezalokacji funkcji jest rozpoznawane za pomocą destruktor wirtualny typu dynamicznego obiektu.  
   
-## <a name="see-also"></a>Zobacz też  
+## <a name="see-also"></a>Zobacz także  
  [Wyrażenia z operatorami Jednoargumentowymi](../cpp/expressions-with-unary-operators.md)   
  [Keywords](../cpp/keywords-cpp.md)   
  [new i delete, operatory](../cpp/new-and-delete-operators.md)   
- 

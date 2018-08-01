@@ -12,29 +12,30 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4f39fe0cf3706a67e2aa42aa89de5914808e9cec
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 9031bea449968e22212c241b8418b505710cca8d
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39408630"
 ---
 # <a name="alignment-c-declarations"></a>Wyrównanie (deklaracje języka C++)
-Jedną z niskiego poziomu funkcji C++ jest możliwość określenia dokładne dostosowanie obiektów w pamięci, aby wykorzystać maksymalną architektury sprzętu. Domyślnie kompilator wyrównuje klasy i struktury elementów członkowskich na ich wartość rozmiaru: bool i char są wyrównane co granice jednego bajtu, short na dwubajtowo, int na 4 bajty, long double i long double 8 bajtów. W większości przypadków nie trzeba być związane z wyrównania, ponieważ domyślne wyrównanie już jest optymalna. W niektórych przypadkach jednak można osiągnąć znaczną poprawę wydajności lub zużycie pamięci, określając niestandardowy Wyrównanie struktury danych użytkownika. Przed Visual Studio 2015 umożliwiają __alignof słowa kluczowe specyficzne dla firmy Microsoft i declspec(alignas) określ wyrównanie większe niż wartość domyślna. Poczynając od programu Visual Studio 2015 należy używać języka C ++ 11 standardowe słowa kluczowe [alignof i alignas](../cpp/alignof-and-alignas-cpp.md) przenośności maksymalną kodu. Zachowanie nowych słów kluczowych w taki sam sposób kulisy jako rozszerzenia specyficzne dla firmy Microsoft, a w dokumentacji tych rozszerzeń ma również zastosowanie do nowych słów kluczowych. Zobacz [__alignof Operator](../cpp/alignof-operator.md) i [Dopasuj](../cpp/align-cpp.md) Aby uzyskać więcej informacji. C++ standard nie określa zachowanie pakowania wyrównywania na granicach mniejszą niż domyślne kompilatora dla platformy docelowej, dzięki czemu nadal trzeba korzystać z usługi Microsoft #pragma [pakietu](../preprocessor/pack.md) w takiej sytuacji.  
+Jedną z niższego poziomu funkcji języka C++ jest możliwość określenia dokładne dostosowanie obiektów w pamięci, aby w maksymalnym wykorzystaniu architektury określonego sprzętu. Domyślnie kompilator wyrównywany klasy i struktury elementów członkowskich w ich wartość rozmiaru: bool i char są wyrównane co granice jednobajtowego krótki na dwóch bajtów, int na czterech bajtów, long, double i long double na 8 bajtów. W większości przypadków nie trzeba być zaniepokojona wyrównanie, ponieważ domyślne wyrównanie już jest optymalna. W niektórych przypadkach jednak może osiągnąć znaczne ulepszenia wydajności i oszczędności pamięci, określając niestandardowy Wyrównanie struktury danych użytkownika. Przed Visual Studio 2015 można Użyj __alignof słowa kluczowe specyficzne dla firmy Microsoft i declspec(alignas), aby określić wyrównanie, które są większe niż domyślna. Uruchamianie programu Visual Studio 2015 należy używać języka C ++ 11 standardowe słowa kluczowe [alignof i alignas](../cpp/alignof-and-alignas-cpp.md) przenośności maksymalna kodu. Nowych słów kluczowych zachowują się w taki sam sposób kulisy jako rozszerzenia specyficzne dla firmy Microsoft i dokumentacji dotyczącej tych rozszerzeń ma również zastosowanie do nowych słów kluczowych. Zobacz [__alignof Operator](../cpp/alignof-operator.md) i [wyrównać](../cpp/align-cpp.md) Aby uzyskać więcej informacji. C++ standard nie określa zachowanie pakowania wyrównywanie w granicach mniejszy niż domyślna wartość kompilatora dla platformy docelowej, dlatego musisz nadal korzystać z usługi Microsoft #pragma [pakiet](../preprocessor/pack.md) w takiej sytuacji.  
   
- Udostępnia standardowa biblioteka C++ [aligned_storage — klasa](../standard-library/aligned-storage-class.md) alokacji pamięci dla struktur danych z niestandardowych wyrównanie i [aligned_union — klasa](../standard-library/aligned-union-class.md) służący do określania wyrównanie unie z nieuproszczony konstruktorów ani destruktorów.  
+ Standardowej biblioteki języka C++ udostępnia [aligned_storage, klasa](../standard-library/aligned-storage-class.md) do przydzielania pamięci dla struktur danych przy użyciu niestandardowych wyrównanie i [aligned_union, klasa](../standard-library/aligned-union-class.md) do określenia wyrównania Unii z nietrywialnymi konstruktorów i destruktorów.  
   
-## <a name="about-alignment"></a>Wyrównanie — informacje  
- Wyrównanie jest właściwością adres pamięci, wyrażone jako adres numeryczny modulo potęgą liczby 2. Na przykład adres 0x0001103F modulo 4 jest 3; Ten adres jest nazywany wyrównać je do 4 n + 3, w którym 4 oznacza wybrane potęgą liczby 2. Wyrównanie adres zależy od wybranej potęgą liczby dwa. Ten sam adres modulo 8 to 7. Adres jest nazywany wyrównywana X, jeśli jego wyrównania jest Xn + 0.  
+## <a name="about-alignment"></a>Temat wyrównania  
+ Wyrównanie jest właściwością adres pamięci, wyrażone jako adres numeryczny modulo potęgą liczby 2. Na przykład adres 0x0001103F modulo 4 to 3; Ten adres jest nazywany zostanie wyrównany do 4 n + 3, gdzie 4 oznacza wybranym potęgą liczby 2. Wyrównanie adres zależy od wybranego potęgą liczby dwa. Ten sam adres modulo 8 to 7. Adres jest nazywany wyrównane do X, jeśli jego wyrównania jest Xn + 0.  
   
- Procesory wykonania instrukcji, które działają na dane przechowywane w pamięci, a dane są identyfikowane przez adresy w pamięci. Oprócz jego adres pojedynczego elementu danych ma rozmiar. Datum jest nazywana naturalnie wyrównane, jeśli jego adres jest wyrównany do jego rozmiaru i niewyrównanych w przeciwnym razie wartość. Na przykład jeśli adres używany do identyfikowania jest wyrównane do 8 podstawy wymiarowej 8-bajtowych liczb zmiennoprzecinkowych jest wyrównany naturalny.  
+ Procesory CPU wykonania instrukcji, które działają na danych przechowywanych w pamięci, a dane są identyfikowane przez ich adresy w pamięci. Oprócz jego adres pojedynczego datum ma rozmiar. Datum jest nazywana naturalnie wyrównane, jeśli jego adres jest wyrównany do jej rozmiaru i niewyrównane inaczej. Na przykład jeśli adres używany do identyfikowania pokrywa się z 8 datum zmiennoprzecinkowego 8-bajtowych jest wyrównany naturalnie.  
   
- Obsługa kompilatora próby kompilatory alignmentDevice danych można przydzielić dane w taki sposób, który uniemożliwia niespójność danych.  
+ Obsługa kompilatora danych alignmentDevice kompilatory próbę przydzielenia danych w taki sposób, że Niedopasowanie typów danych.  
   
- Proste typy danych kompilator przypisuje adresy, które są wielokrotności rozmiar w bajtach typu danych. W związku z tym kompilator przypisywania adresów na zmiennych typu long wielokrotności 4, ustawienia dwa bity adres od zera.  
+ Proste typy danych kompilator przypisuje adresy, które stanowią wielokrotność rozmiar w bajtach typu danych. W efekcie kompilator przypisuje adresy zmiennych typu long, które stanowią wielokrotność czterech, ustawienie dwa bity adres na zero.  
   
- Ponadto kompilator dopełnia struktury w sposób naturalny wyrównuje poszczególne elementy struktury. Należy wziąć pod uwagę x_ struktury struktury w poniższym przykładzie kodu:  
+ Ponadto kompilator dopełnia struktury w sposób naturalny pasującą do każdego elementu struktury. Należy wziąć pod uwagę x_ struktury struktury w poniższym przykładzie kodu:  
   
-```  
+```cpp 
 struct x_  
 {  
    char a;     // 1 byte  
@@ -45,11 +46,11 @@ struct x_
   
 ```  
   
- Kompilator dopełnia tej struktury naturalnie wymusić wyrównania.  
+ Kompilator dopełnia tej struktury, aby wymusić wyrównanie naturalnie.  
   
  Poniższy przykład kodu pokazuje, jak kompilator umieszcza wypełniony struktury w pamięci: kopiowanie  
   
-```  
+```cpp 
 // Shows the actual memory layout  
 struct x_  
 {  
@@ -60,20 +61,19 @@ struct x_
    char d;           // 1 byte  
    char _pad1[1];    // padding to make sizeof(x_) multiple of 4  
 }  
-  
 ```  
   
-1.  Obie deklaracje zwrócić sizeof(struct x_) 12 bajtów.  
+1.  Obie deklaracje zwrócić sizeof(struct x_) jako 12-bajtowy.  
   
-2.  Druga deklaracja zawiera dwa elementy uzupełnienie:  
+2.  Deklaracja drugi zawiera dwa elementy dopełnienie:  
   
-3.  CHAR — _pad0 [3], aby wyrównać element członkowski b int w granicach 4 bajtowych  
+3.  CHAR _pad0 [3], aby wyrównać element członkowski b int na granicy czwartego bajtu  
   
-4.  CHAR — _pad1 [1], aby wyrównać elementy tablicy _x struktury struktury paska [3];  
+4.  CHAR _pad1 [1], aby wyrównać elementów tablicy _x struktury struktury paska [3];  
   
-5.  Dopełnienie wyrównuje elementy paska [3] w sposób umożliwiający dostęp do fizycznych.  
+5.  Dopełnienie wyrównuje elementy paska [3] w sposób umożliwiający dostęp do naturalnym.  
   
- Poniższy przykład kodu pokazuje pasek układu tablicy [3]:  
+ Poniższy przykład kodu pokazuje pasek układ tablicy [3]:  
   
 ```  
 adr offset   element  
@@ -98,8 +98,7 @@ adr offset   element
 0x0020   short c;  
 0x0022   char d;  
 0x0023   char _pad1[1];  
-  
 ```  
   
-## <a name="see-also"></a>Zobacz też  
+## <a name="see-also"></a>Zobacz także  
  [Wyrównanie struktury danych](http://en.wikipedia.org/wiki/Data_structure_alignment)

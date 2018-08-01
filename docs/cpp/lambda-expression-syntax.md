@@ -14,12 +14,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: eff66cb2efd1f095fee18e6db428b9f29c9f7812
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: cae12ecefebe81bf73ffdbc32c0ce253e726dda2
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37938944"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39405045"
 ---
 # <a name="lambda-expression-syntax"></a>Składnia wyrażenia lambda
 W tym artykule przedstawiono składnię i elementy strukturalne wyrażeń lambda. Aby uzyskać opis wyrażeń lambda, zobacz [wyrażeń Lambda](../cpp/lambda-expressions-in-cpp.md).  
@@ -84,16 +84,15 @@ int main()
 8 is even  
 9 is odd  
 There are 4 even numbers in the vector.  
-  
 ```  
   
 ### <a name="comments"></a>Komentarze  
  W przykładzie trzeci argument **for_each** funkcji jest wyrażeniem lambda. `[&evenCount]` Część określa klauzulę przechwytywania wyrażenia, `(int n)` Określa listę parametrów, a pozostała część określa treść wyrażenia.  
   
 ## <a name="example-2-using-a-function-object"></a>Przykład 2: Używanie obiektu funkcyjnego  
- Czasami wyrażenie lambda byłoby zbyt niewygodne do rozszerzenia dalszego niż w poprzednim przykładzie. W następnym przykładzie użyto obiektu funkcyjnego zamiast wyrażenia lambda, wraz z **for_each** funkcji w celu uzyskania tych samych wyników jak z przykładu 1. Oba przykłady przechowują liczbę liczb parzystych w `vector` obiektu. Aby utrzymywać stan operacji `FunctorClass` klasa przechowuje `m_evenCount` zmiennych przez odwołanie jako zmienną składową. Do wykonania tej operacji `FunctorClass` implementuje operator wywołania funkcji `operator()`. Kompilator Visual C++ generuje kod o rozmiarze i wydajności porównywalnej z kodem wyrażenia lambda z przykładu 1. Dla podstawowego problemu, takiego jak w tym artykule, prostsza konstrukcja lambda jest prawdopodobnie lepsza niż konstrukcja obiektu funkcyjnego. Jednak, jeśli istnieje możliwość, że funkcjonalność będzie wymagać znacznego rozszerzenia w przyszłości, można użyć obiektu funkcyjnego, aby ułatwić utrzymywanie kodu.  
+ Czasami wyrażenie lambda byłoby zbyt niewygodne do rozszerzenia dalszego niż w poprzednim przykładzie. W następnym przykładzie użyto obiektu funkcyjnego zamiast wyrażenia lambda, wraz z **for_each** funkcji w celu uzyskania tych samych wyników jak z przykładu 1. Oba przykłady przechowują liczbę liczb parzystych w `vector` obiektu. Aby utrzymywać stan operacji `FunctorClass` klasa przechowuje `m_evenCount` zmiennych przez odwołanie jako zmienną składową. Do wykonania tej operacji `FunctorClass` implementuje operator wywołania funkcji **operator()**. Kompilator Visual C++ generuje kod o rozmiarze i wydajności porównywalnej z kodem wyrażenia lambda z przykładu 1. Dla podstawowego problemu, takiego jak w tym artykule, prostsza konstrukcja lambda jest prawdopodobnie lepsza niż konstrukcja obiektu funkcyjnego. Jednak, jeśli istnieje możliwość, że funkcjonalność będzie wymagać znacznego rozszerzenia w przyszłości, można użyć obiektu funkcyjnego, aby ułatwić utrzymywanie kodu.  
   
- Aby uzyskać więcej informacji na temat `operator()`, zobacz [wywołania funkcji](../cpp/function-call-cpp.md). Aby uzyskać więcej informacji na temat **for_each** funkcji, zobacz [for_each](../standard-library/algorithm-functions.md#for_each).  
+ Aby uzyskać więcej informacji na temat **operator()**, zobacz [wywołania funkcji](../cpp/function-call-cpp.md). Aby uzyskać więcej informacji na temat **for_each** funkcji, zobacz [for_each](../standard-library/algorithm-functions.md#for_each).  
   
 ### <a name="code"></a>Kod  
   
@@ -150,7 +149,6 @@ int main()
     cout << "There are " << evenCount  
         << " even numbers in the vector." << endl;  
 }  
-  
 ```  
   
 ## <a name="output"></a>Dane wyjściowe  
@@ -166,10 +164,9 @@ int main()
 8 is even  
 9 is odd  
 There are 4 even numbers in the vector.  
-  
 ```  
   
-## <a name="see-also"></a>Zobacz też  
+## <a name="see-also"></a>Zobacz także  
  [Wyrażenia lambda](../cpp/lambda-expressions-in-cpp.md)   
  [Przykłady wyrażeń Lambda](../cpp/examples-of-lambda-expressions.md)   
  [Generowanie](../standard-library/algorithm-functions.md#generate)   

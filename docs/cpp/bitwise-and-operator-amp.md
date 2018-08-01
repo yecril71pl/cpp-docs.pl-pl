@@ -18,21 +18,19 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 428e3634898f50e7737c5fc5dae2ce7d0445572e
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: 3122cb3622469adeda3b8c0a2437fe4db7dfca62
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37947751"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39404216"
 ---
 # <a name="bitwise-and-operator-amp"></a>Bitowy Operator AND: &amp;
 
 ## <a name="syntax"></a>Składnia  
   
 ```
-
 expression & expression  
-
 ```
   
 ## <a name="remarks"></a>Uwagi  
@@ -61,7 +59,7 @@ int main() {
 }  
 ```  
   
-## <a name="see-also"></a>Zobacz też  
+## <a name="see-also"></a>Zobacz także  
  [Wbudowane operatory, pierwszeństwo i kojarzenie języka C++](cpp-built-in-operators-precedence-and-associativity.md)  
  [C++ wbudowane operatory, pierwszeństwo i kojarzenie](../cpp/cpp-built-in-operators-precedence-and-associativity.md)   
  [Operatory bitowe języka C](../c-language/c-bitwise-operators.md)

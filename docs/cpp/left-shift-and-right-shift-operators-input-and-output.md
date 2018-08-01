@@ -23,12 +23,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d6f38b5ec30626f73ab3681f674fb39c5492eb49
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: 50a177468795ae0e288910fa51192d9cc9a24502
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37939733"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39403157"
 ---
 # <a name="left-shift-and-right-shift-operators-gtgt-and-ltlt"></a>Operatory przesunięcia w lewo i w prawo (&gt; &gt; i &lt; &lt;)
 Operatory przesunięcia bitowego to operator przesunięcia w prawo (>>), który przesuwa bity *shift-expression* w prawo i operator przesunięcia w lewo (<<), który przesuwa bity *shift-expression* po lewej stronie. <sup>1</sup>  
@@ -66,7 +66,6 @@ int main() {
     bitset<16> bitset3{short3};  
     cout << bitset3 << endl;  // 0000000000010000  
 }  
-  
 ```  
   
  Jeśli przesuniesz liczbę ze znakiem w lewo, tak że bit znaku zostanie objęty zmianą, wynik będzie nieokreślony. Poniższy przykład pokazuje, co się dzieje w Visual C++, gdy 1 bit jest przesunięty w lewo do pozycji bitu znaku.  
@@ -230,6 +229,6 @@ int main() {
   
  Wartość `E1 >> E2` jest `E1` przesunięte w prawo `E2` pozycje bitów. Jeśli `E1` ma typ bez znaku lub jeśli `E1` ma typ ze znakiem i wartość nieujemną, wartość wyniku jest integralną częścią ilorazu **E1/2**<sup>**E2** </sup>. Jeśli `E1` ma typ ze znakiem i wartość ujemną, wartość wynikowa zależy od implementacji.  
   
-## <a name="see-also"></a>Zobacz też  
+## <a name="see-also"></a>Zobacz także  
  [Wyrażenia z operatorami Dwuargumentowymi](../cpp/expressions-with-binary-operators.md)   
  [Wbudowane operatory, pierwszeństwo i kojarzenie języka C++](../cpp/cpp-built-in-operators-precedence-and-associativity.md)

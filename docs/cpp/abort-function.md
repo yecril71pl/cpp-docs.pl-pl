@@ -14,17 +14,16 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4acfbb5a0790dec6f7b5770832cc6b09f69a28d7
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 3e5679ce718c564ee40fb07b676756ef79344a99
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32408035"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39403625"
 ---
 # <a name="abort-function"></a>abort — funkcja
 
-**Przerwać** funkcji również zadeklarowany w pliku dołączanego standardowe \<stdlib.h >, program w języku C++ kończy. Różnica między **zakończyć** i **przerwać** jest to, że **zakończyć** pozwala na przetwarzanie zakończenia środowiska wykonawczego języka C++ została wykonana (globalny obiekt będzie można wywołać destruktorów), podczas gdy **przerwać** natychmiast kończy program. Aby uzyskać więcej informacji, zobacz [przerwać](../c-runtime-library/reference/abort.md) w *odwołanie do biblioteki wykonawczej*.
+**Przerwać** funkcji, również są deklarowane w pliku standardowych dołączonych \<stdlib.h >, kończy program w języku C++. Różnica między `exit` i **przerwać** jest fakt, że `exit` pozwala na przetwarzanie zakończenia środowiska wykonawczego języka C++, wyznacz (globalny obiekt zostaną wywołane destruktory), natomiast **przerwać** natychmiast kończy program. Aby uzyskać więcej informacji, zobacz [przerwać](../c-runtime-library/reference/abort.md) w *odwołanie do biblioteki wykonawczej*.
 
 ## <a name="see-also"></a>Zobacz także
-
 [Kończenie działania programu](../cpp/program-termination.md)

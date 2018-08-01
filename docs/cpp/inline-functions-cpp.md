@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3c2fc99d4349a158bc4ce944be96e9c6141700cf
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: 5b39a6889dfd8a28d65aebcab04881d4bc28ce1e
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37947785"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39403670"
 ---
 # <a name="inline-functions-c"></a>Funkcje śródwierszowe (C++)
 Funkcję zdefiniowaną w treści deklaracji klasy jest funkcją śródwierszową.  
@@ -235,7 +235,6 @@ int main() {
 }  
 //  Sample Input:  xyz  
 // Sample Output:  Z  
-  
 ```  
   
  Celem wyrażenie `toupper(getc(stdin))` jest, że znak są odczytywane z urządzenia z konsoli (`stdin`) i, jeśli to konieczne, są konwertowane na wielkie litery.  
@@ -265,6 +264,6 @@ Sample Input: a
 Sample Output: A  
 ```  
   
-## <a name="see-also"></a>Zobacz też  
+## <a name="see-also"></a>Zobacz także  
  [noinline](../cpp/noinline.md)   
  [auto_inline](../preprocessor/auto-inline.md)

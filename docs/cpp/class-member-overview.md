@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ee52b42c65a34316454ea6653447938712590327
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: 1c454872a3f8d1c7f41ba2f6cea7d81402b6327f
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37948256"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39403472"
 ---
 # <a name="class-member-overview"></a>Omówienie elementu członkowskiego klasy
 Klasa lub Struktura składa się z jej członków. Pracy, która jest klasą odbywa się przez jego elementów członkowskich. Stan, który przechowuje są przechowywane w składowych danych. Inicjowanie elementów członkowskich jest wykonywane przez konstruktory i pracy czyszczenia, taką jak zwalnianie pamięci, a przy zwalnianiu zasobów jest wykonywane przez destruktory. W języku C ++ 11 i nowszych wersjach elementy członkowskie danych można i zwykle należy zostać zainicjowana w punkcie deklaracji.  
@@ -124,7 +124,6 @@ Aby uzyskać więcej informacji, zobacz [specjalnych funkcji Członkowskich](../
  W języku C ++ 11 i nowszych wersjach niestatycznej składowej deklaratory mogą zawierać inicjatory.  
   
 ```cpp 
-  
 class CanInit  
 {  
 public:  
@@ -174,5 +173,5 @@ int CanInit2::j = i;
 > [!NOTE]
 >  Nazwa klasy `CanInit2` musi znajdować się przed `i`, aby określić, że definiowany `i` jest składową klasy `CanInit2`.  
   
-## <a name="see-also"></a>Zobacz też  
+## <a name="see-also"></a>Zobacz także  
  [Klasy i struktury](../cpp/classes-and-structs-cpp.md)

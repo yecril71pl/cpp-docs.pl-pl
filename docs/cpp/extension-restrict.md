@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e402fc9a32b92960f251796365199a608d6d1137
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: b1ed49662b28f2ac84fc8c53f677b2deada974d3
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37948259"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39403508"
 ---
 # <a name="restrict"></a>__restrict
 Podobnie jak **__declspec ( [ograniczyć](../cpp/restrict.md) )** , modyfikator **element __restrict** słowo kluczowe wskazuje, że symbol nie jest aliasem w bieżącym zakresie. **Element __restrict** — słowo kluczowe różni się od `__declspec ( restrict )` modyfikator w następujący sposób:  
@@ -63,5 +63,5 @@ union z {
 };  
 ```  
   
-## <a name="see-also"></a>Zobacz też  
+## <a name="see-also"></a>Zobacz także  
  [Słowa kluczowe](../cpp/keywords-cpp.md)

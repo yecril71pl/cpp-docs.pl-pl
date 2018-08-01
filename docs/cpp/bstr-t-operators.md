@@ -14,15 +14,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f7d9776579aef7ef4cd32a2fe61fd1f1758e0640
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 5db61b6106d34725e2edba8b5681391c6a7147a5
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32407996"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39405684"
 ---
 # <a name="bstrt-operators"></a>_bstr_t — Operatory
 Aby uzyskać informacje o `_bstr_t` operatorów, zobacz [_bstr_t — klasa](../cpp/bstr-t-class.md).  
   
-## <a name="see-also"></a>Zobacz też  
+## <a name="see-also"></a>Zobacz także  
  [_bstr_t, klasa](../cpp/bstr-t-class.md)

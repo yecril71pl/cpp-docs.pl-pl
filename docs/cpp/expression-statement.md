@@ -15,15 +15,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 60879ca8792e3259a69b7a9a3de6cd83dce0d6d7
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: d94acdfff2fdea2cc35d0856940270ba82e131af
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32411589"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39405259"
 ---
 # <a name="expression-statement"></a>Instrukcja wyrażeń
-Instrukcje wyrażeń spowodować wyrażenia do obliczenia. Transfer nie formant lub iteracji odbywa się w wyniku wyrażenia instrukcji.  
+Instrukcje wyrażeń spowodować wyrażeń, które ma zostać obliczone. Żaden transfer formantu lub iteracji odbywa się w wyniku instrukcji wyrażenia.  
   
  Składnia instrukcji wyrażenia jest po prostu  
   
@@ -34,7 +34,7 @@ Instrukcje wyrażeń spowodować wyrażenia do obliczenia. Transfer nie formant 
 ```  
   
 ## <a name="remarks"></a>Uwagi  
- Wszystkie wyrażenia w instrukcji wyrażenia są oceniane i wykonywane są wszystkie efekty uboczne, przed wykonaniem następnej instrukcji. Najbardziej typowe instrukcje wyrażenia są zadania i wywołania funkcji.  Ponieważ wyrażenie jest opcjonalne, tylko średnik jest uznawany za instrukcji puste wyrażenie określone jako [null](../cpp/null-statement.md) instrukcji.  
+ Wszystkie wyrażenia w instrukcji wyrażenia są obliczane i wszystkie efekty uboczne są zakończone przed wykonaniem następnej instrukcji. Najbardziej typowe instrukcje wyrażeń są przypisania i wywołania funkcji.  Ponieważ wyrażenie jest opcjonalne, samodzielnie średnik jest uznawany za instrukcji wyrażenia empty, nazywane [null](../cpp/null-statement.md) instrukcji.  
   
-## <a name="see-also"></a>Zobacz też  
+## <a name="see-also"></a>Zobacz także  
  [Przegląd instrukcji C++](../cpp/overview-of-cpp-statements.md)

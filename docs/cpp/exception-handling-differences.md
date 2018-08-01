@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: dafb3c41bd490e7c123e1aefe9ccaa04a4e6b233
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: b9c17c0abbd8286d05423ac52abc2e2109253f6d
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37947870"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39404626"
 ---
 # <a name="exception-handling-differences"></a>Różnice w obsłudze wyjątków
 Główna różnica pomiędzy obsługą wyjątków strukturalnych i obsługa wyjątków języka C++ jest, że model operuje na różnych typach obsługi wyjątków C++, podczas C strukturalny model obsługi wyjątków zajmuje się wyjątkami jednego typu — w szczególności  **unsigned int**. Oznacza to, że wyjątki C są identyfikowane przez nieoznaczoną wartość całkowitą, natomiast wyjątki C++ są identyfikowane przez typ danych. Gdy tworzony jest wyjątek w C, każdy możliwy program obsługi wykonuje filtr, który sprawdza kontekst wyjątków C i określa, czy należy zaakceptować wyjątek, przekazać go do innego programu obsługi lub zignorować. Gdy wyjątek jest zgłaszany w języku C++, może być dowolnego typu.  
@@ -87,7 +87,6 @@ public:
       return nSE;  
    }  
 };  
-  
 ```  
   
  Aby użyć tej klasy, należy zainstalować funkcję tłumaczenia niestandardowych wyjątków C, która jest wywoływana przez mechanizm obsługi wyjątków, każdorazowo, kiedy zgłaszany jest wyjątek w języku C. W ramach funkcji tłumaczenia, możliwe jest zgłoszenie wyjątku dowolnego typu (być może `SE_Exception` wpisać lub typ klasy pochodnej z `SE_Exception`), może zostać przechwycony przez odpowiednie języka C++ **catch** programu obsługi. Funkcja tłumaczenia może po prostu może nic nie zwracać, co oznacza, że nie obsłużyła wyjątku. Jeżeli sama funkcja tłumaczenia zgłasza wyjątek C, [zakończyć](../c-runtime-library/reference/terminate-crt.md) jest wywoływana.  
@@ -150,5 +149,5 @@ Caught a __try exception with SE_Exception.
 nSE = 0xc0000094  
 ```  
   
-## <a name="see-also"></a>Zobacz też  
+## <a name="see-also"></a>Zobacz także  
  [Połączenie wyjątków języka C (strukturalnych) i C++](../cpp/mixing-c-structured-and-cpp-exceptions.md)

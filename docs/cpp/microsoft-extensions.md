@@ -14,26 +14,26 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: beac75a8a27fc4638b541228330e83e7b665fbcb
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 70b1e0e6ef1294ff23952816db6f468022609f4f
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32419826"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39408378"
 ---
 # <a name="microsoft-extensions"></a>Rozszerzenia Microsoft
-*instrukcji Asm*:  
- **__asm***zestaw instrukcji* **;** OPT    
+*Instrukcja Asm*:  
+ **__asm***instrukcji montażu* **;** zoptymalizowany pod kątem    
   
- **__asm {***zestaw instrukcji listy***};** OPT      
+ **__asm {***instrukcji montażu***};** zoptymalizowany pod kątem      
   
- *zestaw instrukcji listy*:  
- *zestaw instrukcji* **;** OPT  
+ *instrukcji montażu*:  
+ *instrukcji montażu* **;** zoptymalizowany pod kątem  
   
- *zestaw instrukcji* **;** *zestaw instrukcji listy* **;** OPT  
+ *instrukcji montażu* **;** *instrukcji montażu* **;** zoptymalizowany pod kątem  
   
- *MS modyfikator listy*:  
- *Modyfikator MS w ms listy modyfikator*opcjonalnych  
+ *MS modyfikator list*:  
+ *Modyfikator MS ms modyfikator list*zoptymalizowany pod kątem  
   
  *Modyfikator MS*:  
  **__cdecl**  
@@ -42,11 +42,11 @@ ms.locfileid: "32419826"
   
  **__stdcall**  
   
- **__syscall** (zastrzeżone do przyszłych wdrożeń)  
+ **__syscall** (zarezerwowane dla przyszłych wdrożeń)  
   
- **__oldcall** (zastrzeżone do przyszłych wdrożeń)  
+ **__oldcall** (zarezerwowane dla przyszłych wdrożeń)  
   
- **__unaligned** (zastrzeżone do przyszłych wdrożeń)  
+ **__unaligned** (zarezerwowane dla przyszłych wdrożeń)  
   
  *na podstawie modyfikator*  
   

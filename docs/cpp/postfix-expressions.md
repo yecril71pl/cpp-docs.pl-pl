@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6299249b477b568579063f7ee61060514c3028bd
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: a951c45da8c5c6b672540c03bc1d97b5d54d9338
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37948236"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39403144"
 ---
 # <a name="postfix-expressions"></a>Wyrażenia przyrostków
 Wyrażenia przyrostkowe składają się z podstawowego wyrażenia lub wyrażeń, w których operatory przyrostkowe następują po wyrażeniu podstawowym. Operatory przyrostkowe są wymienione w poniższej tabeli.  
@@ -34,13 +34,12 @@ Wyrażenia przyrostkowe składają się z podstawowego wyrażenia lub wyrażeń,
 |[Operator wywołania funkcji](../cpp/function-call-operator-parens.md)|**( )**|  
 |[Operator jawnej konwersji typu](../cpp/explicit-type-conversion-operator-parens.md)|*Nazwa typu* **)**|  
 |[Operator dostępu do elementu członkowskiego](../cpp/member-access-operators-dot-and.md)|**.** lub **->**|  
-|[Operator inkrementacji przyrostkowej](../cpp/postfix-increment-and-decrement-operators-increment-and-decrement.md)|`++`|  
+|[Operator inkrementacji przyrostkowej](../cpp/postfix-increment-and-decrement-operators-increment-and-decrement.md)|**++**|  
 |[Operator dekrementacji przyrostkowej](../cpp/postfix-increment-and-decrement-operators-increment-and-decrement.md)|**--**|  
   
  Następująca składnia opisuje możliwe wyrażenia przyrostkowe:  
   
 ```  
-  
 primary-expression   
 postfix-expression[expression]postfix-expression(expression-list)simple-type-name(expression-list)postfix-expression.namepostfix-expression->namepostfix-expression++postfix-expression--cast-keyword < typename > (expression )typeid ( typename )  
 ```  
@@ -51,7 +50,7 @@ postfix-expression[expression]postfix-expression(expression-list)simple-type-nam
 func(1)->GetValue()++  
 ```  
   
- W powyższym wyrażeniu, func jest wyrażeniem podstawowym, func(1) jest wyrażeniem przyrostkowym funkcji, func(1)->GetData jest wyrażeniem przyrostkowym określającym składową klasy, func(1)->GetData() jest innym wyrażeniem przyrostkowym funkcji, a całe wyrażenie jest wyrażeniem przyrostkowym, zwiększającym wartość zwracaną GetData.  Znaczenie wyrażenia jako całości to „wywołaj funkcję przekazywania 1 jako argument i uzyskaj wskaźnik do klasy jako wartość zwracaną.  Następnie wywołaj GetValue() dla tej klasy i zwiększ wartość zwracaną.  
+ W powyższym wyrażeniu `func` jest wyrażeniem podstawowym `func(1)` jest wyrażeniem przyrostkowym funkcji `func(1)->GetData` jest wyrażeniem przyrostkowym składowej klasy, `func(1)->GetData()` jest innym wyrażeniem przyrostkowym funkcji, a cały wyrażenie jest wyrażeniem przyrostkowym, zwiększającym wartość zwracaną GetData.  Znaczenie wyrażenia jako całości to „wywołaj funkcję przekazywania 1 jako argument i uzyskaj wskaźnik do klasy jako wartość zwracaną.  Następnie wywołaj `GetValue()` dla tej klasy, a następnie zwiększ wartość zwracaną.  
   
  Wyrażenia wymienione powyżej są wyrażeniami przypisania, co oznacza, że wyniki wyrażenia muszą być r-wartościami.  
   
@@ -191,7 +190,7 @@ void print( const char *string, const char *terminator )
 }  
 ```  
   
- Poprzedni program deklaruje funkcję, `print`, która przyjmuje dwa argumenty. Jednakże drugi argument `terminator`, ma wartość domyślną `"\n"`. W `main`, dwa pierwsze wywołania `print` Zezwalaj domyślnemu drugiemu argumentowi dostarczyć nowy wiersz, aby zakończyć drukowany ciąg. Trzecie wywołanie określa wartość dla drugiego argumentu. Dane wyjściowe z programu  
+ Poprzedni program deklaruje funkcję, `print`, która przyjmuje dwa argumenty. Jednakże drugi argument *terminator*, ma wartość domyślną `"\n"`. W `main`, dwa pierwsze wywołania `print` Zezwalaj domyślnemu drugiemu argumentowi dostarczyć nowy wiersz, aby zakończyć drukowany ciąg. Trzecie wywołanie określa wartość dla drugiego argumentu. Dane wyjściowe z programu  
   
 ```Output 
 hello,  
@@ -199,5 +198,5 @@ world!
 good morning, sunshine.  
 ```  
   
-## <a name="see-also"></a>Zobacz też  
+## <a name="see-also"></a>Zobacz także  
  [Typy wyrażeń](../cpp/types-of-expressions.md)

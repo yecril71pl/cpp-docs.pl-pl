@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 43e28aa7d7b3682c45f4f8b7a94e990374d83b46
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: 3dfed780e0769e342ff368af453fc70764a372f0
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37947741"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39404476"
 ---
 # <a name="bstrtoperator-"></a>_bstr_t::operator =
 **Microsoft Specific**  
@@ -32,7 +32,6 @@ ms.locfileid: "37947741"
 ## <a name="syntax"></a>Składnia  
   
 ```  
-  
 _bstr_t& operator=(const _bstr_t& s1) throw ( );  
 _bstr_t& operator=(const char* s2);  
 _bstr_t& operator=(const wchar_t* s3);  
@@ -57,5 +56,5 @@ _bstr_t& operator=(const _variant_t& var);
 ## <a name="example"></a>Przykład  
  Zobacz [_bstr_t::przypisanie](../cpp/bstr-t-assign.md) na przykład za pomocą **operator =**.  
   
-## <a name="see-also"></a>Zobacz też  
+## <a name="see-also"></a>Zobacz także  
  [_bstr_t, klasa](../cpp/bstr-t-class.md)

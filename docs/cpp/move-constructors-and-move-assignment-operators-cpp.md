@@ -14,12 +14,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: af1220cbb6b872ebd0370cfa526aba47338e70e6
-ms.sourcegitcommit: 76fd30ff3e0352e2206460503b61f45897e60e4f
+ms.openlocfilehash: 33ed35d02547acdbc9a08928a6e698c3e039d745
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/13/2018
-ms.locfileid: "39028154"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39405574"
 ---
 # <a name="move-constructors-and-move-assignment-operators-c"></a>Konstruktory przenoszące i przenoszące operatory przypisania (C++)
 W tym temacie opisano sposób pisania *Konstruktor przenoszący* i operator przypisania przenoszenia dla klasy języka C++. Konstruktor przenoszący umożliwia zasoby należące do obiektem wartościowanym prawostronnie do przeniesienia do l-wartości bez kopiowania. Aby uzyskać więcej informacji dotyczących semantyki przenoszenia, zobacz [Rvalue Reference Declarator: & &](../cpp/rvalue-reference-declarator-amp-amp.md).  
@@ -250,7 +250,7 @@ int main()
   
  Ten przykład generuje następujące wyniki:  
   
-```  
+```Output  
 In MemoryBlock(size_t). length = 25.  
 In MemoryBlock(MemoryBlock&&). length = 25. Moving resource.  
 In ~MemoryBlock(). length = 0.  
@@ -273,7 +273,7 @@ In ~MemoryBlock(). length = 75. Deleting resource.
   
  Przed Visual Studio 2010 w tym przykładzie utworzone następujące dane wyjściowe:  
   
-```  
+```Output  
 In MemoryBlock(size_t). length = 25.  
 In MemoryBlock(const MemoryBlock&). length = 25. Copying resource.  
 In ~MemoryBlock(). length = 25. Deleting resource.  
@@ -304,7 +304,6 @@ In ~MemoryBlock(). length = 75. Deleting resource.
  Jeśli podasz zarówno konstruktora przenoszącego, jak i operator przypisania przenoszenia dla klasy, można wyeliminować nadmiarowy kod, pisząc Konstruktor przenoszący, aby wywołać operator przypisania przenoszenia. Poniższy przykład przedstawia poprawioną wersję konstruktora przenoszącego, który wywołuje operator przypisania przenoszenia:  
   
 ```cpp
-  
 // Move constructor.  
 MemoryBlock(MemoryBlock&& other)  
    : _data(nullptr)  
@@ -316,6 +315,6 @@ MemoryBlock(MemoryBlock&& other)
   
  [Std::move](../standard-library/utility-functions.md#move) funkcji zachowuje własność rvalue *innych* parametru.  
   
-## <a name="see-also"></a>Zobacz też  
+## <a name="see-also"></a>Zobacz także  
  [Deklarator odwołania do wartości r: & &](../cpp/rvalue-reference-declarator-amp-amp.md)   
  [\<Narzędzia > Przenieś](http://msdn.microsoft.com/abef7e85-9dd6-4724-85da-d7f7fe95dca9)

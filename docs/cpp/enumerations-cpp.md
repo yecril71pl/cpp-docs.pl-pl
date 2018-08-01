@@ -20,12 +20,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 75344e8fef933b493177f812b06edd3c187046f6
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: 48f9328ef6a862ffc8888b99b16764978b0005c2
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37948232"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39406256"
 ---
 # <a name="enumerations-c"></a>Wyliczenia (C++)
 Wyliczenie to typ zdefiniowany przez użytkownika, który składa się z szeregu nazwanych stałych liczbach całkowitych, które są znane jako moduły wyliczające.  
@@ -98,12 +98,11 @@ namespace CardGame_NonScoped
   
 ```cpp  
 enum Suit { Diamonds = 1, Hearts, Clubs, Spades };  
-  
 ```  
   
  Moduł wyliczający `Diamonds` jest przypisywana wartość `1`. Kolejne enumeratory, jeśli nie posiadają wartości jawnej, otrzymują wartość poprzedniego enumeratora plus jeden. W poprzednim przykładzie `Hearts` miałby wartość 2, `Clubs` mogłoby być 3 i tak dalej.  
   
- Każdy moduł wyliczający jest traktowany jako stała i musi mieć unikatową nazwę w zakresie gdzie `enum` zdefiniowano (dla wyliczeń poza zakresem) lub w obrębie samego wyliczenia (dla wyliczeń objętych zakresem). Wartości nadane nazwom nie muszą być unikatowe. Na przykład jeśli deklaracja wyliczenia niewystępującego w zakresie `Suit` to:  
+ Każdy moduł wyliczający jest traktowany jako stała i musi mieć unikatową nazwę w zakresie gdzie **wyliczenia** zdefiniowano (dla wyliczeń poza zakresem) lub w ramach **wyliczenia** sam (dla wyliczeń objętych zakresem). Wartości nadane nazwom nie muszą być unikatowe. Na przykład jeśli deklaracja wyliczenia niewystępującego w zakresie `Suit` to:  
   
 ```cpp  
 enum Suit { Diamonds = 5, Hearts, Clubs = 4, Spades };  
@@ -119,7 +118,6 @@ enum Suit { Diamonds = 5, Hearts, Clubs = 4, Spades };
 int account_num = 135692;  
 Suit hand;  
 hand = account_num; // error C2440: '=' : cannot convert from 'int' to 'Suit'  
-  
 ```  
   
  Obsada jest wymagana do konwertowania **int** do zakresem lub bez zakresu modułu wyliczającego. Możesz jednak podwyższyć poziom modułu wyliczającego nieobjętego zakresem do wartości będącej liczbą całkowitą bez rzutowania.  
@@ -147,7 +145,6 @@ namespace ScopedEnumConversions
         account_num = Suit::Hearts; // error C2440: '=' : cannot convert from 'Suit' to 'int'  
         account_num = static_cast<int>(Suit::Hearts); // OK  
 }  
-  
 ```  
   
  Należy zauważyć, że wiersz `hand = account_num;` nadal powoduje błąd występujący z wyliczeniami nieobjętymi zakresem, jak pokazano wcześniej. Jest ona dozwolona z jawnym rzutowaniem. Jednakże przy typach wyliczeniowych w zakresie próba konwersji w następnej instrukcji `account_num = Suit::Hearts;`, nie jest już dozwolona bez jawnego rzutowania. 
@@ -190,6 +187,6 @@ int main()
 }
 ``` 
   
-## <a name="see-also"></a>Zobacz też  
+## <a name="see-also"></a>Zobacz także  
  [Deklaracje modułów Wyliczających języka C](../c-language/c-enumeration-declarations.md)   
  [Słowa kluczowe](../cpp/keywords-cpp.md)

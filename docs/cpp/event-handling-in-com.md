@@ -26,18 +26,18 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f60a0a8a53d77c2d8aa111ce812bf64ab11c4910
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: 1a4fddaa53aed54fd33afee9205fcc9a3819f1b6
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37947779"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39406870"
 ---
 # <a name="event-handling-in-com"></a>Obsługa zdarzeń w modelu COM
 W obsłudze zdarzeń COM, można skonfigurować zdarzenia źródło i zdarzenie odbiornika zdarzenia za pomocą [event_source](../windows/event-source.md) i [event_receiver](../windows/event-receiver.md) , odpowiednio, atrybutów, określając `type` = `com`. Te atrybuty wprowadzają odpowiedni kod dla interfejsów niestandardowych, wysyłania i dualnych, aby umożliwić odpowiednim klasom wywoływanie zdarzeń i obsługę zdarzeń za pośrednictwem punktów połączenia COM.  
   
 ## <a name="declaring-events"></a>Deklarowanie zdarzeń  
- W klasie źródła zdarzeń, użyj [__event](../cpp/event.md) — słowo kluczowe w deklaracji interfejsu do deklarowania metod tego interfejsu jako zdarzeń. Zdarzenia tego interfejsu są uruchamiane podczas wywoływania ich jako metod interfejsu. Metody interfejsów zdarzeń mogą mieć zero lub więcej parametrów (które powinny być `in` parametrów). Zwracany typ może być typu void lub dowolnego całkowitego.  
+ W klasie źródła zdarzeń, użyj [__event](../cpp/event.md) — słowo kluczowe w deklaracji interfejsu do deklarowania metod tego interfejsu jako zdarzeń. Zdarzenia tego interfejsu są uruchamiane podczas wywoływania ich jako metod interfejsu. Metody interfejsów zdarzeń mogą mieć zero lub więcej parametrów (które powinny być *w* parametrów). Zwracany typ może być typu void lub dowolnego całkowitego.  
   
 ## <a name="defining-event-handlers"></a>Definiowanie programów obsługi zdarzeń  
  W klasie odbiornika zdarzeń należy zdefiniować programy obsługi zdarzeń, które są metodami z podpisami (typy zwracane, konwencje wywoływania i argumenty), które odpowiadają obsługiwanemu zdarzeniu. Dla zdarzeń COM Konwencje wywoływania nie muszą sobie odpowiadać; zobacz [zależne zdarzenia COM układu](#vcconeventhandlingincomanchorlayoutdependentcomevents) poniżej szczegółowe informacje.  
@@ -216,5 +216,5 @@ public:
 };  
 ```  
   
-## <a name="see-also"></a>Zobacz też  
+## <a name="see-also"></a>Zobacz także  
  [Obsługa zdarzeń](../cpp/event-handling.md)

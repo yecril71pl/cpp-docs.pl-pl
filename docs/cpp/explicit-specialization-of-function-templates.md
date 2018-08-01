@@ -18,21 +18,21 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e35eda35a7d2474826ce151292121be224955420
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: d8b6a56a0a1dce5d07007898dec486d0e3b080c4
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32410736"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39407692"
 ---
 # <a name="explicit-specialization-of-function-templates"></a>Jawna specjalizacja szablonów funkcji
-Z szablonem funkcji można zdefiniować specjalnego zachowania w przypadku określonego typu, zapewniając jawna specjalizacja szablonu funkcji (Zastąp) dla tego typu. Na przykład:  
+Za pomocą funkcji szablonu można zdefiniować specjalne zachowanie dla określonego typu, zapewniając jawna specjalizacja szablonu funkcji (override) dla tego typu. Na przykład:  
   
 ```cpp
 template<> void MySwap(double a, double b);  
 ```  
   
- Ta deklaracja umożliwia zdefiniowanie innej funkcji dla **podwójne** zmiennych. Funkcje nieszablonowe, konwersje standardowe, takich jak (np. podwyższenie poziomu zmiennej typu **float** do **podwójne**) są stosowane.  
+ Ta deklaracja umożliwia zdefiniowanie różnych funkcji dla **double** zmiennych. Funkcje nieszablonowe, konwersje standardowe, takie jak (np. promowanie zmienną typu **float** do **double**) są stosowane.  
   
 ## <a name="example"></a>Przykład  
   
@@ -60,5 +60,5 @@ int main()
 }  
 ```  
   
-## <a name="see-also"></a>Zobacz też  
+## <a name="see-also"></a>Zobacz także  
  [Szablony funkcji](../cpp/function-templates.md)

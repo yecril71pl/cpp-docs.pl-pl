@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1ef6bf658cd290e23be59eb7d26a6b0d353b52c6
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: 2d112e7ca192e56ede21d06e7ff17a775d661d01
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37941775"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39405233"
 ---
 # <a name="identifiers-c"></a>Identyfikatory (C++)
 Identyfikator jest sekwencja znaków używany do określenia jednej z następujących czynności:  
@@ -81,7 +81,7 @@ N O P Q R S T U V W X Y Z
   
  Znak dolara `$` jest znakiem prawidłowym identyfikatorem języka Visual C++. Visual C++ pozwala również na używanie rzeczywiste znaki, które są reprezentowane przez dozwolone zakresy uniwersalne nazwy znaków w identyfikatorach. Aby korzystać z tych znaków, musisz zapisać plik przy użyciu pliku kodowania stronę kodową, która je zawiera.  Ten przykład przedstawia, jak rozszerzyć zarówno znaki i uniwersalne nazwy znaków mogą być używane zamiennie w kodzie.  
   
-```  
+```cpp  
 // extended_identifier.cpp  
 // In Visual Studio, use File, Advanced Save Options to set  
 // the file encoding to Unicode codepage 1200  
@@ -106,5 +106,5 @@ int main() {
   
  Użycie dwóch podkreślników ( **__** ) na początku identyfikatora lub pojedynczego wiodącego podkreślnika, a po nim wielkiej litery, jest zarezerwowane dla implementacji C++ we wszystkich zakresach. Należy unikać używania jednego wiodącego podkreślenia następuje mała litera dla nazw z zakresem pliku z powodu możliwych konfliktów z bieżącym lub przyszłymi zarezerwowanymi identyfikatorami.  
   
-## <a name="see-also"></a>Zobacz też  
+## <a name="see-also"></a>Zobacz także  
  [Konwencje leksykalne](../cpp/lexical-conventions.md)

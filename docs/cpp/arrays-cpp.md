@@ -16,18 +16,17 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 60c7baaaf20158c29c34aea364e70c0d040a42e3
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: ce914f47f62a742b24830d848fd9d82b91796f31
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37947867"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39408056"
 ---
 # <a name="arrays-c"></a>Tablice (C++)
 Tablica jest zbiorem podobnych obiektów. Najprostszym przypadku tablicy jest wektor, który może być zdeklarowany przez poniższą sekwencję:  
   
 ```  
-  
 decl-specifier identifier [ constant-expression ]  
 decl-specifier identifier []  
 decl-specifier identifer [][ constant-expression] . . .  
@@ -174,7 +173,4 @@ The minimum cost to Market 3 is: 17.29
 ```  
   
 ## <a name="comments"></a>Komentarze  
- Funkcja `FindMinToMkt` są zapisywane w taki sposób, że dodanie nowych fabryk nie wymaga żadnych zmian w kodzie, tylko ponownej kompilacji.  
-  
-## <a name="see-also"></a>Zobacz też  
- 
+ Funkcja `FindMinToMkt` są zapisywane w taki sposób, że dodanie nowych fabryk nie wymaga żadnych zmian w kodzie, tylko ponownej kompilacji. 

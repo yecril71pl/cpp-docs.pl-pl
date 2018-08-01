@@ -17,28 +17,28 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d63fbe4042bb86f1ac7810302eeaa1b7978422b8
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 80fdbe14539c5b32c2da80a5de75fbe0a2b64241
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39408627"
 ---
 # <a name="indirection-operator-"></a>Operator bezpośredni: *
 ## <a name="syntax"></a>Składnia  
   
 ```  
-  
 * cast-expression  
 ```  
   
 ## <a name="remarks"></a>Uwagi  
- Jednoargumentowy operator pośredni (**\***) wyłuskań wskaźnika; oznacza to, konwertuje wartość wskaźnika na l wartość. Argument operacji operatora pośredni musi być wskaźnikiem do typu. Wynik wyrażenia pośredni jest typu, z którego pochodzi typu wskaźnika. Korzystanie z **\*** operatora w tym kontekście różni się od jego znaczenie jako operator binarny, który jest mnożenia.  
+ Jednoargumentowy operator pośredni (**\***) wyłuskania wskaźnika; oznacza to, konwertuje wartość wskaźnika do l wartością. Argument operacji operatora pośredniego musi być wskaźnikiem do typu. Wynik wyrażenia pośredni to typ, z którego jest tworzony na typ wskaźnika. Korzystanie z **\*** operatora w tym kontekście różni się od jego znaczenie jako operator binarny, który jest mnożenia.  
   
  Jeśli operand wskazuje funkcję, wynik jest oznaczeniem funkcji. Jeśli wskazuje on lokalizację magazynu, wynikiem jest l-wartość opisująca lokalizację magazynu.  
   
- Operator pośredni pozwala zbiorczo usunąć odwołania do wskaźników do wskaźników. Na przykład:  
+ Operator pośredni mogą łącznie używane w celu wyłuskania wskaźniki do wskaźników. Na przykład:  
   
-```  
+```cpp 
 // expre_Indirection_Operator.cpp  
 // compile with: /EHsc  
 // Demonstrate indirection operator  
@@ -58,7 +58,7 @@ int main() {
 }  
 ```  
   
- Jeśli wartość wskaźnika jest nieprawidłowy, wynikiem jest niezdefiniowany. Następująca lista zawiera niektóre z najbardziej typowych warunków, które unieważniają wartość wskaźnika.  
+ Jeśli wartość wskaźnika jest nieprawidłowa, wynik jest niezdefiniowany. Następująca lista zawiera niektóre z najbardziej typowych warunków, które unieważniają wartość wskaźnika.  
   
 -   Wskaźnik jest pustym wskaźnikiem.  
   
@@ -68,8 +68,8 @@ int main() {
   
 -   Wskaźnik określa adres nieużywany przez program wykonujący.  
   
-## <a name="see-also"></a>Zobacz też  
+## <a name="see-also"></a>Zobacz także  
  [Wyrażenia z operatorami Jednoargumentowymi](../cpp/expressions-with-unary-operators.md)   
- [Operatory C++ wbudowanych, priorytet i łączność](../cpp/cpp-built-in-operators-precedence-and-associativity.md)   
+ [C++ wbudowane operatory, pierwszeństwo i kojarzenie](../cpp/cpp-built-in-operators-precedence-and-associativity.md)   
  [Operator Address-of: &](../cpp/address-of-operator-amp.md)   
  [Operatory pośrednie i „Address-of”](../c-language/indirection-and-address-of-operators.md)

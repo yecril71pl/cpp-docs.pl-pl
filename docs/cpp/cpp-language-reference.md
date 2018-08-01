@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0c3886e710d0262068848304d9f2419c835b67c2
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: df532fca3c1ecbb19126a8692377517d240bd2f8
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38954196"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39408219"
 ---
 # <a name="c-language-reference"></a>Materiał referencyjny na temat języka C++
 To źródło odniesienia wyjaśnia sposób implementacji C++ w Microsoft Visual C++. Organizacja jest oparta na *The Annotated C++ Reference Manual* autorstwa Margaret Ellis i Bjarne'a Stroustrupa oraz na ANSI/ISO C++ Międzynarodowy Standard (ISO/IEC FDIS 14882). Implementacje funkcji języka C++ specyficzne dla Microsoft są uwzględnione.  
@@ -59,16 +59,16 @@ Omówienie rozwiązania w zakresie programowania nowoczesnym języku C++, zobacz
  Instrukcje wyrażeń, wartości null, złożeń, wyboru, iteracji, skoku i deklaracji.  
   
  [Deklaracje i definicje](declarations-and-definitions-cpp.md)  
- Specyfikatory klasy magazynowej, definicje funkcji, inicjalizacje, wyliczenia, deklaracje class, struct i union oraz deklaracje typedef. Ponadto wbudowane funkcje, słowo kluczowe const, przestrzenie nazw.  
+ Specyfikatory klasy magazynowej, definicje funkcji, inicjalizacje, wyliczenia, **klasy**, **struktury**, i **Unii** deklaracji, i **— typedef**  deklaracji. Ponadto **wbudowane** funkcji **const** — słowo kluczowe, przestrzenie nazw.  
   
  [Klas, struktur i Unii](../cpp/classes-and-structs-cpp.md)  
- Wprowadzenie do klas, struktur i unii. Ponadto funkcje Członkowskie, funkcji specjalnych elementów członkowskich, składowe danych, pola bitowe, wskaźnik this, klasy zagnieżdżone.  
+ Wprowadzenie do klas, struktur i unii. Ponadto funkcje Członkowskie, specjalnych funkcji składowych, składowe danych, pola bitowe, **to** wskaźnika, klasy zagnieżdżone.  
   
  [Klasy pochodne](../cpp/inheritance-cpp.md)  
- Dziedziczenie pojedyncze lub wielokrotne, funkcje wirtualne, wiele klas bazowych, klasy abstrakcyjne, reguły zakresu. Ponadto __super i \__interfejsu słów kluczowych.  
+ Dziedziczenie pojedyncze lub wielokrotne, **wirtualnego** funkcje, wiele klas bazowych, **abstrakcyjne** klasy, reguły zakresu. Ponadto **__super** i **__interface** słów kluczowych.  
   
  [Kontrola dostępu do elementu członkowskiego](../cpp/member-access-control-cpp.md)  
- Kontrolowanie dostępu do składowych klasy: słowa kluczowe public, private i protected. Funkcje i klasy zaprzyjaźnione.  
+ Kontrolowanie dostępu do składowych klasy: **publicznych**, **prywatnej**, i **chronione** słów kluczowych. Funkcje i klasy zaprzyjaźnione.  
   
  [Przeciążenie](operator-overloading.md)  
  Przeciążone operatory, zasady dotyczące przeciążania operatorów.  
@@ -80,16 +80,16 @@ Omówienie rozwiązania w zakresie programowania nowoczesnym języku C++, zobacz
  `#error` dyrektywy, **static_assert** — słowo kluczowe, `assert` makra.  
   
  [Szablony](../cpp/templates-cpp.md)  
- Specyfikacje szablonów, szablony funkcji, szablony klas, słowo kluczowe typename, szablony a makra, szablony i inteligentne wskaźniki.  
+ Specyfikacje szablonu, funkcja szablonów, szablony klas **typename** — słowo kluczowe, szablony a makra, szablony i inteligentne wskaźniki.  
   
  [Obsługa zdarzeń](../cpp/event-handling.md)  
  Deklarowanie zdarzeń i programów obsługi zdarzeń.  
   
  [Modyfikatory specyficzne dla firmy Microsoft](../cpp/microsoft-specific-modifiers.md)  
- Modyfikatory specyficzne dla Microsoft C++. Pamięć adresowania, Konwencje wywoływania, funkcje bez dodatków, rozszerzone atrybuty klasy magazynu (__declspec), \__w64.  
+ Modyfikatory specyficzne dla Microsoft C++. Pamięć adresowania, Konwencje wywoływania, **"naked"** funkcje, rozszerzone atrybuty klasy magazynu (**__declspec**), **__w64**.  
   
  [Wbudowany asembler](../assembler/inline/inline-assembler.md)  
- Korzystanie z języka asembler i C++ w blokach __asm.  
+ Korzystanie z języka asembler i C++ w **__asm** bloków.  
   
  [Obsługa kompilatora COM](../cpp/compiler-com-support.md)  
  Odwołanie do klas specyficznych dla Microsoft i globalne funkcje używane do obsługi typów modelu COM.  
@@ -115,5 +115,5 @@ Omówienie rozwiązania w zakresie programowania nowoczesnym języku C++, zobacz
  [Biblioteki Visual C++](../standard-library/cpp-standard-library-reference.md)  
  Lista łączy do referencyjnych stron startowych na temat różnych bibliotek Visual C++.  
   
-## <a name="see-also"></a>Zobacz też  
+## <a name="see-also"></a>Zobacz także  
  [Dokumentacja języka C](../c-language/c-language-reference.md)

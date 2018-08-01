@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 52935c81849ded072cb20d6c835b3a71b66c2871
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: f3f4d105efb7269c0c1344d6a9399ebbe4fa9fd2
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37941317"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39404297"
 ---
 # <a name="comerrorerrorinfo"></a>_com_error::ErrorInfo
 **Microsoft Specific**  
@@ -31,9 +31,7 @@ ms.locfileid: "37941317"
 ## <a name="syntax"></a>Składnia  
   
 ```  
-  
 IErrorInfo * ErrorInfo( ) const throw( );  
-  
 ```  
   
 ## <a name="return-value"></a>Wartość zwracana  
@@ -44,5 +42,5 @@ IErrorInfo * ErrorInfo( ) const throw( );
   
  **END specyficzny dla Microsoft**  
   
-## <a name="see-also"></a>Zobacz też  
+## <a name="see-also"></a>Zobacz także  
  [_com_error, klasa](../cpp/com-error-class.md)

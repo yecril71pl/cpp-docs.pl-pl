@@ -23,11 +23,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 071f21080bd093e5cb299471c8de7009741482f6
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: a1af68c630717a71df11e4ac22b96058356354f1
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39408654"
 ---
 # <a name="prefix-increment-and-decrement-operators--and---"></a>Operatory prefiksów inkrementacji i dekrementacji: ++ i --
 ## <a name="syntax"></a>Składnia  
@@ -38,15 +39,15 @@ ms.lasthandoff: 05/03/2018
 ```  
   
 ## <a name="remarks"></a>Uwagi  
- Operator inkrementacji prefiksu (`++`) dodaje je do jej argument operacji; ta wartość zwiększany jest wynikiem wyrażenia. Argument musi być l wartość nie jest typu **const**. Wynik jest wartością l-value tego samego typu jako argument.  
+ Operator inkrementacji prefiksu (**++**) dodaje je do swojego operandu; Ta zwiększona wartość jest wynikiem wyrażenia. Argument musi być l wartością nie jest typu **const**. Wynik jest l wartością tego samego typu jako argumentu operacji.  
   
- Operator dekrementacji prefiksu (**--**) jest odpowiednikiem operatora inkrementacji prefiksu, że argument jest zmniejszana o jeden wynik jest zmniejszany wartości.  
+ Operator dekrementacji prefiksu (**--**) jest odpowiednikiem operator inkrementacji prefiksu, z tą różnicą, że argument jest zmniejszana o jeden, a wynik jest ta zmniejszona wartość.  
 
- **Visual Studio 2017 wersji 15.3 i nowszych** (dostępnych z [/std:c ++ 17](../build/reference/std-specify-language-standard-version.md)): argument operacji operatora inkrementacji lub dekrementacji nie może być typu `bool`.
+ **Visual Studio 2017 w wersji 15.3 lub nowszej** (udostępniono [/STD: c ++ 17](../build/reference/std-specify-language-standard-version.md)): operand operatora inkrementacji lub dekrementacji nie może być typu **bool**.
   
- Prefiks i operatory przyrostka inkrementacji i dekrementacji operatorów mają wpływ na ich argumentów operacji. Najważniejsza różnica między nimi polega na kolejność, w którym zwiększania lub zmniejszania ma miejsce podczas obliczania wyrażenia. (Aby uzyskać więcej informacji, zobacz [przyrostka inkrementacji i dekrementacji](../cpp/postfix-increment-and-decrement-operators-increment-and-decrement.md).) W formularzu prefiks zwiększania lub zmniejszania ma miejsce przed wartość wyrażenia, więc wartość wyrażenia jest inna niż wartość argumentu operacji. W formularzu operatory przyrostka inkrementacji lub dekrementacji odbywa się po wartość jest używana podczas oceny wyrażenia, więc wartość wyrażenia jest taka sama jak wartość operandu. Na przykład następujące program odbitek "`++i = 6`":  
+ Prefiks i przyrostka inkrementacji i dekrementacji operatory mają wpływ na ich argumentów. Główną różnicą między nimi jest kolejność, w którym inkrementacyjna lub dekrementacyjna odbywa się w wyniku obliczenia wyrażenia. (Aby uzyskać więcej informacji, zobacz [operatory przyrostka inkrementacji i dekrementacji](../cpp/postfix-increment-and-decrement-operators-increment-and-decrement.md).) W formularzu prefiks inkrementacyjna lub dekrementacyjna odbywa się przed zostanie użyta wartość obliczania wyrażeń, więc wartość wyrażenia jest inny niż wartość operandu. W formularzu przyrostka inkrementacji lub dekrementacji odbywa się po zostanie użyta wartość obliczania wyrażeń, więc wartość wyrażenia jest taka sama jak wartość operandu. Na przykład, poniższy program odbitek "`++i = 6`":  
   
-```  
+```cpp 
 // expre_Increment_and_Decrement_Operators.cpp  
 // compile with: /EHsc  
 #include <iostream>  
@@ -59,11 +60,11 @@ int main() {
 }  
 ```  
   
- Argument typu całkowitą lub zmiennoprzecinkową jest zwiększone lub zmniejszone przez całkowitą wartość 1. Typ wyniku jest taki sam jak typ argumentu. Argument typu wskaźnika jest zwiększone lub zmniejszone według rozmiaru obiektu, który spełnia. Wskazuje zwiększany wskaźnik do następnego obiektu. zmniejszona wskaźnik wskazuje poprzedniego obiektu.  
+ Argument operacji typu całkowitego lub zmiennoprzecinkowego jest zwiększone lub zmniejszone wartość całkowita 1. Typ wyniku jest taki sam jak typ operandu. Argument operacji typu wskaźnika jest zwiększone lub zmniejszone rozmiar obiektu, które ona rozwiązuje. Wskazuje zwiększona wskaźnik do następnego obiektu. zmniejszony wskaźnik wskazuje poprzedniego obiektu.  
   
- Ponieważ operatory inkrementacji i dekrementacji ma efekty uboczne, za pomocą wyrażenia z operatorami zwiększania lub zmniejszania w [makro preprocesora](../preprocessor/macros-c-cpp.md) może mieć niepożądane wyniki. Rozważmy następujący przykład:  
+ Ponieważ operatory inkrementacji i dekrementacji mają skutki uboczne, za pomocą wyrażenia z operatorami inkrementacyjna lub dekrementacyjna w [makro preprocesora](../preprocessor/macros-c-cpp.md) może mieć niepożądane wyniki. Rozważmy następujący przykład:  
   
-```  
+```cpp 
 // expre_Increment_and_Decrement_Operators2.cpp  
 #define max(a,b) ((a)<(b))?(b):(a)  
   
@@ -74,18 +75,18 @@ int main()
 }  
 ```  
   
- Makro rozwijany do:  
+ Makro rozszerza się, aby:  
   
-```  
+```cpp 
 k = ((++i)<(j))?(j):(++i);  
 ```  
   
- Jeśli `i` jest większa niż lub równa `j` lub mniej niż `j` na 1, jego jest zwiększany dwa razy.  
+ Jeśli `i` jest większa niż lub równa `j` lub mniej niż `j` o 1, jego jest zwiększany dwa razy.  
   
 > [!NOTE]
->  Funkcji śródwierszowych języka C++ są preferowane makra w wielu przypadkach, ponieważ eliminuje efekty uboczne, takich jak opisane tutaj i Zezwalaj na język do sprawdzania bardziej szczegółowy typu.  
+>  Funkcji śródwierszowych języka C++ są preferowane w porównaniu do makr w wielu przypadkach, ponieważ eliminuje efekty uboczne, takich jak te opisane w tym miejscu i Zezwalaj na język do wykonywania bardziej szczegółowy sprawdzania typu.  
   
-## <a name="see-also"></a>Zobacz też  
+## <a name="see-also"></a>Zobacz także  
  [Wyrażenia z operatorami Jednoargumentowymi](../cpp/expressions-with-unary-operators.md)   
- [Operatory C++ wbudowanych, priorytet i łączność](../cpp/cpp-built-in-operators-precedence-and-associativity.md)   
+ [C++ wbudowane operatory, pierwszeństwo i kojarzenie](../cpp/cpp-built-in-operators-precedence-and-associativity.md)   
  [Operatory prefiksów inkrementacji i dekrementacji](../c-language/prefix-increment-and-decrement-operators.md)

@@ -1,5 +1,5 @@
 ---
-title: ABS, laboratoria, llabs — _abs64 — | Dokumentacja firmy Microsoft
+title: Funkcje ABS, laboratoria, llabs — _abs64 — | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 04/05/2018
 ms.technology:
@@ -46,16 +46,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cc426bbbc28e6eb3b7e6e4a0fa9fab7e74f62093
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: b783ee6e4a5ea511a26068ffb89fcc09236f20b1
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32391756"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39408131"
 ---
-# <a name="abs-labs-llabs-abs64"></a>ABS, laboratoria, llabs — _abs64 —
+# <a name="abs-labs-llabs-abs64"></a>Funkcje ABS, laboratoria, llabs — _abs64 —
 
-Oblicza wartość bezwzględna argumentu.
+Oblicza wartość bezwzględną argumentu.
 
 ## <a name="syntax"></a>Składnia
 
@@ -76,31 +76,31 @@ float abs( float n );   // C++ only
 
 ### <a name="parameters"></a>Parametry
 
-*N*<br/>
+*N*  
 Wartość liczbowa.
 
 ## <a name="return-value"></a>Wartość zwracana
 
-**Abs**, **labs**, **llabs —** i **_abs64 —** zwracają wartość bezwzględna parametru *n*. Nie ma żadnych zwracany błąd.
+**Abs**, **labs**, **llabs —** i **_abs64 —** funkcje zwracają wartość bezwzględna parametru *n*. Nie będzie zwrotu błędu.
 
 ## <a name="remarks"></a>Uwagi
 
-Ponieważ C++ pozwala przeładowanie, można wywoływać przeciążenia **abs** który przyjmować i zwracać **długi**, **długi** **długi**,  **float**, **podwójne**, i **długi** **podwójne** wartości. Te przeciążenia są zdefiniowane w \<cmath > nagłówka. W programie C **abs** zawsze przyjmuje i zwraca int.
+Ponieważ C++ pozwala na przeciążenie, można wywoływać przeciążenia **abs** przyjmujące i zwracające **długie**, **długie** **długie**,  **float**, **double**, i **długie** **double** wartości. Te przeciążenia są zdefiniowane w \<cmath > nagłówka. W programie C **abs** zawsze przyjmuje i zwraca **int**.
 
-**Microsoft Specific**: ponieważ zakres liczb całkowitych ujemna, które może być reprezentowany przez przy użyciu dowolnego typu całkowitego jest większy niż zakres dodatnie liczby całkowite, które może być reprezentowany przez przy użyciu tego typu, jest możliwość podać argument prowadzące do Funkcje, których nie można przekonwertować. Jeśli wartość bezwzględna argumentu nie może być reprezentowany przez typ zwracany **abs** zwracają wartość argumentu bez zmian. W szczególności `abs(INT_MIN)` zwraca **int_min —**, `labs(LONG_MIN)` zwraca **long_min —**, `llabs(LLONG_MIN)` zwraca **LLONG_MIN**, i `_abs64(_I64_MIN)` Zwraca **_I64_MIN**. Oznacza to, że **abs** funkcji nie może służyć do zagwarantowania wartość dodatnią.
+**Microsoft Specific**: ponieważ zakres ujemnych liczb całkowitych, które mogą być reprezentowane za pomocą dowolnego typu integralnego, jest większy niż zakres dodatnich liczb całkowitych, które mogą być reprezentowane za pomocą tego typu, jest możliwe, aby podać argument do tych Funkcje, które nie może zostać przekonwertowany. Jeśli wartość bezwzględna argumentu nie może być przedstawiona przez zwracany typ **abs** funkcje zwracają niezmienioną wartość argumentu. W szczególności `abs(INT_MIN)` zwraca `INT_MIN`, `labs(LONG_MIN)` zwraca `LONG_MIN`, `llabs(LLONG_MIN)` zwraca `LLONG_MIN`, i `_abs64(_I64_MIN)` zwraca `_I64_MIN`. Oznacza to, że **abs** funkcji nie może służyć do zagwarantowania wartości dodatniej.
 
 ## <a name="requirements"></a>Wymagania
 
-|Procedura|Wymagany nagłówek C|Wymagany nagłówek C++|
+|Procedura|Wymagany nagłówek języka C|Wymagany nagłówek C++|
 |-------------|-----------------------|---------------------------|
 |**ABS**, **labs**, **llabs —**|\<Math.h > lub \<stdlib.h >|\<cmath >, \<cstdlib — >, \<stdlib.h > lub \<math.h >|
 |**_abs64**|\<stdlib.h>|\<cstdlib — > lub \<stdlib.h >|
 
-Przeciążone wersjach programu **abs** w języku C++ musi zawierać \<cmath > nagłówka.
+Aby użyć przeciążone wersje **abs** w języku C++, należy uwzględnić \<cmath > nagłówka.
 
 ## <a name="example"></a>Przykład
 
-Ten program oblicza i wyświetla wartości bezwzględne liczb kilku.
+Program ten wylicza i wyświetla wartości bezwzględne dla kilku numerów.
 
 ```C
 // crt_abs.c
@@ -157,8 +157,8 @@ _abs64(_I64_MIN) returns 0x8000000000000000
 
 ## <a name="see-also"></a>Zobacz także
 
-[Konwersja danych](../../c-runtime-library/data-conversion.md)<br/>
-[Obsługa liczb zmiennoprzecinkowych](../../c-runtime-library/floating-point-support.md)<br/>
-[_cabs](cabs.md)<br/>
-[fabs, fabsf, fabsl](fabs-fabsf-fabsl.md)<br/>
-[imaxabs](imaxabs.md)<br/>
+[Konwersja danych](../../c-runtime-library/data-conversion.md)  
+[Obsługa liczb zmiennoprzecinkowych](../../c-runtime-library/floating-point-support.md)  
+[_cabs](cabs.md)  
+[fabs, fabsf, fabsl](fabs-fabsf-fabsl.md)  
+[imaxabs](imaxabs.md)  

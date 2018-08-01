@@ -16,25 +16,25 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: eb343431a52df9fae32bb17f3303738c04385cf5
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: 0e9e3d7f16e40d41774dd1def89ef9bdd0ba1c82
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37947770"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39404600"
 ---
 # <a name="comptrt-class"></a>_com_ptr_t — Klasa
 **Microsoft Specific**  
   
- A `_com_ptr_t` obiekt hermetyzuje wskaźnika interfejsu COM i nosi nazwę "eleganckie" wskaźnik. Tej klasy szablonu zarządza alokacją i dezalokacją za pośrednictwem wywołania funkcji zasobów `IUnknown` elementów członkowskich: `QueryInterface`, `AddRef`, i `Release`.  
+ A **_com_ptr_t** obiekt hermetyzuje wskaźnika interfejsu COM i nosi nazwę "eleganckie" wskaźnik. Tej klasy szablonu zarządza alokacją i dezalokacją za pośrednictwem wywołania funkcji zasobów `IUnknown` elementów członkowskich: `QueryInterface`, `AddRef`, i `Release`.  
   
- Zazwyczaj odwołuje się w zgodnie z definicją typedef, dostarczone przez makra _COM_SMARTPTR_TYPEDEF inteligentnego wskaźnika. To makro przyjmuje nazwę interfejsu i identyfikatora IID i deklaruje specjalizacją `_com_ptr_t` nazwą interfejsu oraz sufiks `Ptr`. Na przykład:  
+ Zazwyczaj odwołuje się w zgodnie z definicją typedef, dostarczone przez makra _COM_SMARTPTR_TYPEDEF inteligentnego wskaźnika. To makro przyjmuje nazwę interfejsu i identyfikatora IID i deklaruje specjalizacją **_com_ptr_t** nazwą interfejsu oraz sufiks `Ptr`. Na przykład:  
   
 ```cpp 
 _COM_SMARTPTR_TYPEDEF(IMyInterface, __uuidof(IMyInterface));  
 ```  
   
- deklaruje `_com_ptr_t` specjalizacji `IMyInterfacePtr`.  
+ deklaruje **_com_ptr_t** specjalizacji `IMyInterfacePtr`.  
   
  Zbiór [funkcji szablonów](../cpp/relational-function-templates.md), niebędących członkami tego szablonu klasy pomocy technicznej porównania z wartością inteligentny wskaźnik po prawej stronie operatora porównania.  
   
@@ -42,7 +42,7 @@ _COM_SMARTPTR_TYPEDEF(IMyInterface, __uuidof(IMyInterface));
   
 |||  
 |-|-|  
-|[_com_ptr_t](../cpp/com-ptr-t-com-ptr-t.md)|Konstruuje `_com_ptr_t` obiektu.|  
+|[_com_ptr_t](../cpp/com-ptr-t-com-ptr-t.md)|Konstruuje **_com_ptr_t** obiektu.|  
   
 ### <a name="low-level-operations"></a>Operacje na niskim poziomie  
   
@@ -61,7 +61,7 @@ _COM_SMARTPTR_TYPEDEF(IMyInterface, __uuidof(IMyInterface));
   
 |||  
 |-|-|  
-|[operator =](../cpp/com-ptr-t-operator-equal.md)|Przypisuje nową wartość do istniejącej `_com_ptr_t` obiektu.|  
+|[operator =](../cpp/com-ptr-t-operator-equal.md)|Przypisuje nową wartość do istniejącej **_com_ptr_t** obiektu.|  
 |[operatory ==,! =, \<, >, \<=, > =](../cpp/com-ptr-t-relational-operators.md)|Porównuje obiekt inteligentny wskaźnik do innego wskaźnika inteligentnego, surowego wskaźnika interfejsu, lub wartość NULL.|  
 |[Ekstraktory](../cpp/com-ptr-t-extractors.md)|Wyodrębnij zhermetyzowanego wskaźnika interfejsu COM.|  
   
@@ -72,5 +72,5 @@ _COM_SMARTPTR_TYPEDEF(IMyInterface, __uuidof(IMyInterface));
   
  **Lib:** comsuppw.lib lub comsuppwd.lib (zobacz [/Zc: wchar_t (wchar_t jest typem natywnym)](../build/reference/zc-wchar-t-wchar-t-is-native-type.md) Aby uzyskać więcej informacji)  
   
-## <a name="see-also"></a>Zobacz też  
+## <a name="see-also"></a>Zobacz także  
  [Kompilator klas obsługi COM](../cpp/compiler-com-support-classes.md)

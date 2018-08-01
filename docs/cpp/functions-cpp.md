@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 62a46e7d314281bd19773a5c86e70a63f3c93e14
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: 25172bc44c21fcb11ec3f7c77224d3214e21c5f2
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37940330"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39404613"
 ---
 # <a name="functions-c"></a>Funkcje (C++)
 
@@ -82,7 +82,7 @@ Wymagane elementy deklarację funkcji są następujące:
 
 Opcjonalnych części deklaracji funkcji są następujące:
 
-1. **wyrażenia constexpr**, co oznacza, że wartość zwracana przez funkcję jest wartością stałą, może zostać obliczony w czasie kompilacji.
+1. `constexpr`, co oznacza, że wartość zwracana przez funkcję jest wartością stałą, może zostać obliczony w czasie kompilacji.
 
     ```cpp
     constexpr float exp(float x, int n)
@@ -114,7 +114,7 @@ Opcjonalnych części deklaracji funkcji są następujące:
 
      Aby uzyskać więcej informacji, zobacz [funkcji śródwierszowych](../cpp/inline-functions-cpp.md).
 
-1. A **noexcept** wyrażenie, które określa, czy funkcja może zgłosić wyjątek. W poniższym przykładzie funkcja nie zgłasza wyjątku Jeśli `is_pod` wyrażenie daje w wyniku **true**.
+1. A `noexcept` wyrażenie, które określa, czy funkcja może zgłosić wyjątek. W poniższym przykładzie funkcja nie zgłasza wyjątku Jeśli `is_pod` wyrażenie daje w wyniku **true**.
 
     ```cpp
     #include <type_traits>
@@ -127,7 +127,7 @@ Opcjonalnych części deklaracji funkcji są następujące:
 
 1. (Tylko w przypadku funkcji elementów członkowskich) Kwalifikatory cv, które określają, czy funkcja jest **const** lub **volatile**.
 
-1. (Tylko w przypadku funkcji elementów członkowskich) **wirtualnego**, **zastąpienia**, lub **końcowego**. **wirtualne** Określa, czy funkcja może zostać przesłonięta w klasie pochodnej. **Zastąp** oznacza, że funkcja w klasie pochodnej zastępują funkcję wirtualną. **końcowe** oznacza, że funkcja nie może być zastąpiona we wszystkich dalszych klasy pochodnej. Aby uzyskać więcej informacji, zobacz [funkcji wirtualnych](../cpp/virtual-functions.md).
+1. (Tylko w przypadku funkcji elementów członkowskich) **wirtualnego**, `override`, lub `final`. **wirtualne** Określa, czy funkcja może zostać przesłonięta w klasie pochodnej. `override` oznacza to, że funkcja w klasie pochodnej zastępują funkcję wirtualną. `final` oznacza, że funkcja nie może być zastąpiona we wszystkich dalszych klasy pochodnej. Aby uzyskać więcej informacji, zobacz [funkcji wirtualnych](../cpp/virtual-functions.md).
 
 1. (tylko w przypadku funkcji elementów członkowskich) **statyczne** stosowany do składowej funkcji oznacza, że funkcja nie jest skojarzony z dowolnego wystąpienia obiektu klasy.
 
@@ -170,7 +170,7 @@ Zmienne zadeklarowane wewnątrz treści są nazywane, zmienne lokalne lub zmienn
 
 Można zadeklarować funkcji składowej jako **const** do określenia, że funkcja nie może zmienić wartości żadnych składowych danych klasy. DEKLARUJĄC funkcji składowej jako **const**, pomoc kompilator, aby wymusić *poprawność const*. Jeśli ktoś przez pomyłkę próbuje zmodyfikować obiekt przy użyciu funkcji deklarowane jako **const**, zgłaszany jest błąd kompilatora. Aby uzyskać więcej informacji, zobacz [const](const-cpp.md).
 
-Zadeklarować funkcję jako **constexpr** kiedy wartość generuje prawdopodobnie można określić w czasie kompilacji. Funkcja constexpr zwykle wykonuje szybciej niż normalne działanie. Aby uzyskać więcej informacji, zobacz [constexpr](constexpr-cpp.md).
+Zadeklarować funkcję jako `constexpr` kiedy wartość generuje prawdopodobnie można określić w czasie kompilacji. Funkcja constexpr zwykle wykonuje szybciej niż normalne działanie. Aby uzyskać więcej informacji, zobacz [constexpr](constexpr-cpp.md).
 
 ## <a name="function-templates"></a>Szablony funkcji
 
@@ -269,11 +269,11 @@ Gdy **automatycznie** jest używany w połączeniu z końcowym typem zwracanym, 
 
 Nosi nazwę zmiennej, która jest zadeklarowana wewnątrz treści funkcji *zmienna lokalna* lub po prostu *lokalnego*. Niestatycznych zmienne lokalne są tylko widoczne wewnątrz treści funkcji, a jeśli są one zadeklarowane na stosie wykraczają poza zakres, gdy funkcja kończy działanie. Podczas konstruowania zmiennej lokalnej, a następnie przywrócić go przez wartość, kompilator będzie mógł zwykle wykonać Optymalizacja zwracanej wartości, aby uniknąć niepotrzebnego kopiowania operacji. Jeśli zmienna lokalna można zwrócić przez odwołanie, kompilator wyświetli ostrzeżenie, ponieważ każda próba użycia tego odwołania przez obiekt wywołujący nastąpi po zniszczeniu lokalnej.
 
-W języku C++ zmienna lokalna może być zadeklarowane jako statyczne. Zmienna jest widoczna tylko w wewnątrz treści funkcji, ale istnieje jego kopia jednej zmiennej dla wszystkich wystąpień funkcji. Lokalnych obiektów statycznych są niszczone podczas przerywania określony przez **atexit**. Jeśli nie można skonstruować obiekt statyczny, ponieważ przepływ sterowania w programie pomijane swojej deklaracji, jest podejmowana próba do zniszczenia obiektu.
+W języku C++ zmienna lokalna może być zadeklarowane jako statyczne. Zmienna jest widoczna tylko w wewnątrz treści funkcji, ale istnieje jego kopia jednej zmiennej dla wszystkich wystąpień funkcji. Lokalnych obiektów statycznych są niszczone podczas przerywania określony przez `atexit`. Jeśli nie można skonstruować obiekt statyczny, ponieważ przepływ sterowania w programie pomijane swojej deklaracji, jest podejmowana próba do zniszczenia obiektu.
 
 ##  <a name="type_deduction"></a> Wnioskowanie typu w typy zwracane (C ++ 14)
 
-W języku C ++ 14, można użyć **automatycznie** aby poinstruować kompilator wywnioskuje typ zwracany w treści funkcji bez konieczności podawania końcowym typem zwracanym. Należy pamiętać, że **automatycznie** zawsze wywnioskowuje, że zwracany przez wartość. Użyj **auto & &** można nakazać kompilatorowi na wywnioskowanie odwołania.
+W języku C ++ 14, można użyć **automatycznie** aby poinstruować kompilator wywnioskuje typ zwracany w treści funkcji bez konieczności podawania końcowym typem zwracanym. Należy pamiętać, że **automatycznie** zawsze wywnioskowuje, że zwracany przez wartość. Użyj `auto&&` można nakazać kompilatorowi na wywnioskowanie odwołania.
 
 W tym przykładzie **automatycznie** zostanie wywnioskowany; dotyczy to jako suma lhs i rhs kopię wartości innej niż stała wartość.
 
@@ -434,11 +434,10 @@ int (*myFunction(char* s))(int);
 
 Poprzednia deklaracja jest równoważna z deklaracją przy użyciu elementu typedef powyżej.
 
-## <a name="see-also"></a>Zobacz też
-
-- [Przeładowywanie funkcji](../cpp/function-overloading.md)
-- [Funkcje ze zmiennymi listami argumentów](../cpp/functions-with-variable-argument-lists-cpp.md)
-- [Jawnie domyślne i usunięte funkcje](../cpp/explicitly-defaulted-and-deleted-functions.md)
-- [Odnośnik do nazwy zależnej od argumentu (Koenig) funkcji](../cpp/argument-dependent-name-koenig-lookup-on-functions.md)
-- [Argumenty domyślne](../cpp/default-arguments.md)
-- [Funkcje śródwierszowe](../cpp/inline-functions-cpp.md)
+## <a name="see-also"></a>Zobacz także
+ [Przeładowywanie funkcji](../cpp/function-overloading.md)  
+ [Funkcje ze zmiennymi listami argumentów](../cpp/functions-with-variable-argument-lists-cpp.md)  
+ [Jawnie domyślne i usunięte funkcje](../cpp/explicitly-defaulted-and-deleted-functions.md)  
+ [Odnośnik do nazwy zależnej od argumentu (Koenig) funkcji](../cpp/argument-dependent-name-koenig-lookup-on-functions.md)  
+ [Argumenty domyślne](../cpp/default-arguments.md)  
+ [Funkcje śródwierszowe](../cpp/inline-functions-cpp.md)

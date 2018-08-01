@@ -16,45 +16,45 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d8533012a921cbfb2861bcc7e1c5f2a6de81aadd
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 9a139efed1fadd8f7b821363b7cb9cdbf97c9a29
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39408645"
 ---
 # <a name="comma-operator-"></a>Operator przecinkowy: ,
-Umożliwia grupowanie dwie instrukcje, gdzie oczekiwany jest jeden wiersz.  
+Umożliwia grupowanie dwóch instrukcji, gdzie oczekiwany jest jeden wiersz.  
   
 ## <a name="syntax"></a>Składnia  
   
 ```  
-  
 expression , expression  
 ```  
   
 ## <a name="remarks"></a>Uwagi  
- Operator przecinkowy ma łączność od lewej do prawej. Dwóch wyrażeń oddzielonych przecinkami są wykonywane od lewej do prawej. Lewy argument operacji zawsze jest obliczane, a wszystkie efekty uboczne są wykonywane przed prawy operand jest obliczane.  
+ Operator przecinkowy ma łączność od lewej do prawej. Dwóch wyrażeń, oddzielając wartości przecinkami są obliczane od lewej do prawej. Lewy operand zawsze jest obliczane, a wszystkie efekty uboczne są wykonywane przed prawy operand jest oceniany.  
   
- Jako separatorów w niektórych kontekstach, takie jak listy argumentów funkcji można używać przecinków. Nie należy mylić użycie przecinka jako separatora z jako operatora; używa dwóch różnią się całkowicie.  
+ Przecinki może służyć jako separatorów w niektórych kontekstach, takich jak listy argumentów funkcji. Nie należy mylić użycie przecinka jako separatora przy jego użyciu jako operator; używa dwóch całkowicie różnią się.  
   
- Należy wziąć pod uwagę wyrażenie  
+ Rozważ wyrażenie  
   
  *E1* , *e2*  
   
- Typ i wartość wyrażenia są typu i wartości *e2*; wynikiem obliczenia *e1* zostaną odrzucone. Wynik jest wartością l-value, jeśli prawy operand jest wartością l-value.  
+ Typ i wartość wyrażenia są typu i wartości *e2*; wynik obliczania wartości *e1* jest odrzucany. Wynik jest wartością l, jeśli prawy operand jest l wartością.  
   
- W przypadku, gdy przecinek jest zwykle używany jako separator (na przykład w rzeczywistych argumentów do funkcji lub agregacji inicjatory), przecinka i argumentów musi być ujęta w nawiasy. Na przykład:  
+ W przypadku, gdy przecinek jest zwykle używany jako separator (na przykład w rzeczywiste argumenty do funkcji lub inicjatory agregacji), operatora przecinka i jego operandy muszą być ujęte w nawiasy. Na przykład:  
   
-```  
+```cpp 
 func_one( x, y + 2, z );  
 func_two( (x--, y + 2), z );  
 ```  
   
- W funkcji wywołanie `func_one` powyżej, trzech argumentów rozdzielonych przecinkami, są przekazywane: `x`, `y + 2`, i `z`. W funkcji wywołanie `func_two`, kompilator, aby zinterpretować przecinkiem jako operator obliczania sekwencyjnego wymusić nawiasów. Wywołanie tej funkcji przekazuje dwa argumenty do `func_two`. Pierwszy argument jest wynik operacji obliczania sekwencyjnego `(x--, y + 2)`, która zawiera wartości i typ wyrażenia `y + 2`; drugi argument jest `z`.  
+ W funkcji wywołanie `func_one` powyżej, trzech argumentów, oddzielając je średnikami, są przekazywane: `x`, `y + 2`, i `z`. W funkcji wywołanie `func_two`, nawiasy wymuszają na kompilatorze interpretowanie przecinkiem jako operator obliczania sekwencyjnego. Wywołanie tej funkcji przekazuje dwa argumenty `func_two`. Pierwszy argument jest wynikiem operacji obliczania sekwencyjnego `(x--, y + 2)`, który ma wartość i typ wyrażenia `y + 2`; drugi argument funkcji jest `z`.  
   
 ## <a name="example"></a>Przykład  
   
-```  
+```cpp 
 // cpp_comma_operator.cpp  
 #include <stdio.h>  
 int main () {  
@@ -72,7 +72,7 @@ int main () {
 30  
 ```  
   
-## <a name="see-also"></a>Zobacz też  
+## <a name="see-also"></a>Zobacz także  
  [Wyrażenia z operatorami Dwuargumentowymi](../cpp/expressions-with-binary-operators.md)   
- [Operatory C++ wbudowanych, priorytet i łączność](../cpp/cpp-built-in-operators-precedence-and-associativity.md)   
+ [C++ wbudowane operatory, pierwszeństwo i kojarzenie](../cpp/cpp-built-in-operators-precedence-and-associativity.md)   
  [Operator obliczania sekwencyjnego](../c-language/sequential-evaluation-operator.md)

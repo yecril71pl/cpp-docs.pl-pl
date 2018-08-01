@@ -16,37 +16,37 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: eeb114a33d3ac356bff16aeab47b8d894b7513e6
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: f9f69811b7b25a793d11ef6d53aaf0638c752a11
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39408621"
 ---
 # <a name="bstrtattach"></a>_bstr_t::Attach
 **Microsoft Specific**  
   
- Łącza `_bstr_t` otoki do `BSTR`.  
+ Linki `_bstr_t` opakowanie `BSTR`.  
   
 ## <a name="syntax"></a>Składnia  
   
 ```  
-  
-      void Attach(  
+void Attach(  
    BSTR s  
 );  
 ```  
   
 #### <a name="parameters"></a>Parametry  
  *s*  
- A `BSTR` skojarzone z lub przypisane do, `_bstr_t` zmiennej.  
+ A `BSTR` skojarzony lub przypisane do, `_bstr_t` zmiennej.  
   
 ## <a name="remarks"></a>Uwagi  
- Jeśli `_bstr_t` wcześniej był dołączony do innego `BSTR`, `_bstr_t` spowoduje oczyszczenie `BSTR` zasobu, jeśli żaden inny `_bstr_t` używania zmiennych `BSTR`.  
+ Jeśli `_bstr_t` był wcześniej przypisany do innego `BSTR`, `_bstr_t` spowoduje oczyszczenie `BSTR` zasobu, jeśli żadne inne `_bstr_t` używają zmiennych `BSTR`.  
   
 ## <a name="example"></a>Przykład  
- Zobacz [_bstr_t::przypisanie](../cpp/bstr-t-assign.md) na przykład za pomocą **Attach**.  
+ Zobacz [_bstr_t::przypisanie](../cpp/bstr-t-assign.md) dla przykłady dotyczące używania **Dołącz**.  
   
- **KOŃCOWY określonych firmy Microsoft**  
+ **END specyficzny dla Microsoft**  
   
-## <a name="see-also"></a>Zobacz też  
+## <a name="see-also"></a>Zobacz także  
  [_bstr_t, klasa](../cpp/bstr-t-class.md)

@@ -15,18 +15,18 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2fcfda308ed3a5723b32729e7986a7063e9928fd
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 9f9ee05b55a0945d18e78dc67df5653c06c8a1bc
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32409374"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39404385"
 ---
 # <a name="calling-example-function-prototype-and-call"></a>Przykład wywołania: prototyp funkcji i wywołanie
 ## <a name="microsoft-specific"></a>Specyficzne dla firmy Microsoft  
- W poniższym przykładzie przedstawiono wyniki wywołania funkcji przy użyciu różnych konwencji wywoływania.  
+ Poniższy przykład pokazuje wyniki wywołania funkcji, za pomocą różnych konwencji wywoływania.  
   
- Ten przykład jest oparty na następującą szkieletową funkcji. Zastąp `calltype` z odpowiednią konwencji wywoływania.  
+ Ten przykład jest oparty na następujący szkielet funkcji. Zastąp `calltype` przy użyciu odpowiednich konwencji wywoływania.  
   
 ```  
 void    calltype MyFunc( char c, short s, int i, double f );  
@@ -45,9 +45,9 @@ void    MyFunc( char c, short s, int i, double f )
 MyFunc ('x', 12, 8192, 2.7183);  
 ```  
   
- Aby uzyskać więcej informacji, zobacz [wyniki wywoływania przykład](../cpp/results-of-calling-example.md).  
+ Aby uzyskać więcej informacji, zobacz [wyniki podczas wywoływania przykład](../cpp/results-of-calling-example.md).  
   
-**KOŃCOWY określonych firmy Microsoft**  
+**END specyficzny dla Microsoft**  
   
-## <a name="see-also"></a>Zobacz też  
+## <a name="see-also"></a>Zobacz także  
  [Konwencje wywoływania](../cpp/calling-conventions.md)

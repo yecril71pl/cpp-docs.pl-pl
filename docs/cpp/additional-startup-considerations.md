@@ -16,29 +16,29 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c05ce0fa1a80de8f5ab8b9335bbab22628f3f158
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: c23f18a04010ba62d3651344464ff1668b2127d9
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32409725"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39405074"
 ---
 # <a name="additional-startup-considerations"></a>Dodatkowe zagadnienia dotyczące uruchamiania
-W języku C++ konstrukcji obiektów i likwidacja może obejmować wykonywanie kodu użytkownika. W związku z tym należy zrozumieć, których inicjowanie stanie przed wejściem do **głównego** i destruktory, które są wywoływane po wyjściu z **głównego**. (Aby uzyskać szczegółowe informacje dotyczące konstruowania i niszczenie obiektów, zobacz [konstruktorów](../cpp/constructors-cpp.md) i [destruktory](../cpp/destructors-cpp.md).)  
+W języku C++ obiekt konstrukcje i zniszczenie ruchu może obejmować wykonywanie kodu użytkownika. Dlatego jest ważne, aby zrozumieć, które inicjalizacje się odbyć przed wpis, aby `main` i które destruktory są wywoływane po wyjściu z `main`. (Aby uzyskać szczegółowe informacje dotyczące budowa i niszczenie obiektów, zobacz [konstruktory](../cpp/constructors-cpp.md) i [destruktory](../cpp/destructors-cpp.md).)  
   
- Inicjowanie następujące została wykonana przed wejściem do **głównego**:  
+ Następujące inicjowanie odbywać się przed wejściem do `main`:  
   
--   Domyślne inicjowanie danych statycznych od zera. Wszystkie dane statyczne bez jawnego inicjatory są ustawione na zero, przed wykonaniem innego kodu, w tym inicjowania środowiska wykonawczego. Statyczne elementy członkowskie danych nadal musi być jawnie zdefiniowany.  
+-   Domyślna inicjalizacja danych statycznych do zera. Wszystkie dane statyczne, bez jawnego inicjatory są ustawiane na zero, przed wykonaniem wszelkich innych kodu, w tym inicjowania środowiska wykonawczego. Statyczne elementy członkowskie danych nadal muszą być jawnie zdefiniowane.  
   
--   Inicjowanie statyczne obiektów globalnych w jednostce tłumaczenia. To może wystąpić przed wejściem do **głównego** lub przed pierwszym użyciem dowolnej funkcji lub obiektu w jednostce tłumaczenia obiektu.  
+-   Inicjowanie statycznych obiektów globalnych w jednostce translacji. Taka sytuacja może wystąpić przed wpis `main` lub przed pierwszym użyciem dowolnej funkcji lub obiektu w jednostce translacji obiektu.  
   
  **Microsoft Specific**  
   
- W Microsoft C++ statycznych obiektów globalnych są inicjowane przed wejściem do **głównego**.  
+ W Microsoft C++, obiekty globalne statyczne są inicjowane przed wejściem do `main`.  
   
- **KOŃCOWY określonych firmy Microsoft**  
+ **END specyficzny dla Microsoft**  
   
- Globalne obiekty statycznych, które są wykluczają się wzajemnie, ale w różnych tłumaczenia jednostki mogą spowodować nieprawidłowe zachowanie.  
+ Statycznych obiektów globalnych, które są wzajemnie się wzajemnie, ale w jednostki translacji różnych mogą spowodować niepoprawne zachowanie.  
   
-## <a name="see-also"></a>Zobacz też  
+## <a name="see-also"></a>Zobacz także  
  [Uruchomienie i zakończenie](../cpp/startup-and-termination-cpp.md)

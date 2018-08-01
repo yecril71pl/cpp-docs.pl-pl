@@ -24,12 +24,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e6021de0e012797b811fa032547f2b95142176cc
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: b1a878fe1c18889c1abfef995786ffcc9a267981
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37947868"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39404057"
 ---
 # <a name="postfix-increment-and-decrement-operators--and---"></a>Operatory przyrostka inkrementacji i dekrementacji: ++ i --
 ## <a name="syntax"></a>Składnia  
@@ -46,7 +46,7 @@ postfix-expression --
 i++;  
 ```  
   
- Efektem zastosowania przyrostkowego operatora inkrementacyjnego (`++`) jest zwiększenie wartości argumentu operacji o jedną jednostkę odpowiedniego typu. Podobnie efektem zastosowania przyrostkowego operatora dekrementacyjnego (**--**) jest, że wartość argumentu operacji zostaje zmniejszona o jedną jednostkę odpowiedniego typu.  
+ Efektem zastosowania przyrostkowego operatora inkrementacyjnego (**++**) jest, że wartość argumentu operacji jest zwiększana o jedną jednostkę odpowiedniego typu. Podobnie efektem zastosowania przyrostkowego operatora dekrementacyjnego (**--**) jest, że wartość argumentu operacji zostaje zmniejszona o jedną jednostkę odpowiedniego typu.  
   
  Ważne jest, aby należy pamiętać, że zwiększenie przyrostkowe lub dekrementacji wyrażenie zwróci wartość wyrażenia *przed* zastosowaniem odpowiedniego operatora. Operacja inkrementacyjna lub dekrementacyjna występuje *po* operand zostaje oceniony. Problem występuje tylko wtedy, gdy przyrostkowa operacja inkrementacyjna lub dekrementacyjna występuje w kontekście większego wyrażenia.  
   
@@ -81,7 +81,7 @@ Compass myCompass;
 for( myCompass = North; myCompass != West; myCompass++ ) // Error  
 ```  
   
-## <a name="see-also"></a>Zobacz też  
+## <a name="see-also"></a>Zobacz także  
  [Wyrażenia przyrostków](../cpp/postfix-expressions.md)   
  [C++ wbudowane operatory, pierwszeństwo i kojarzenie](../cpp/cpp-built-in-operators-precedence-and-associativity.md)   
  [Operatory przyrostka inkrementacji i dekrementacji języka C](../c-language/c-postfix-increment-and-decrement-operators.md)

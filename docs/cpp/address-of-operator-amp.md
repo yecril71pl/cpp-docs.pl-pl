@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 144e770a90427d12d79a18c346d74140d07c5c5c
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 8acd615cb2f05e62019f5076a423ae0f8218815a
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38958588"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39406009"
 ---
 # <a name="address-of-operator-amp"></a>Operator Address-of: &amp;
 ## <a name="syntax"></a>Składnia  
@@ -37,7 +37,7 @@ ms.locfileid: "38958588"
   
  Operator address-of można stosować tylko do zmiennych o strukturze podstawowych, klasy lub typy Unii, które są zadeklarowane na poziomie zakresu pliku lub do indeksowanych odwołań do tablic. W tych wyrażeniach wyrażenie stałe, które nie zawiera operatora address-of można dodać do lub odjęte od wyrażenia adresu.  
   
- Po zastosowaniu do funkcji lub l wartości, wynikiem wyrażenia typu wskaźnika (r) pochodzi od typu operand. Na przykład, jeśli argument jest typu **char**, wynikiem wyrażenia jest typ wskaźnika do **char**. Operator address-of, dotyczą **const** lub **volatile** obiektów, daje w wyniku **typ const \***  lub **typ volatile \*** , gdzie **typu** jest typem obiektu oryginalnego.  
+ Po zastosowaniu do funkcji lub l wartości, wynikiem wyrażenia typu wskaźnika (r) pochodzi od typu operand. Na przykład, jeśli argument jest typu **char**, wynikiem wyrażenia jest typ wskaźnika do **char**. Operator address-of, dotyczą **const** lub **volatile** obiektów, daje w wyniku `const type *` lub `volatile type *`, gdzie **typu** jest typ pierwotny obiekt.  
   
  Po zastosowaniu operatora address-of kwalifikowaną nazwę, wynik zależy od tego, czy *kwalifikowana nazwa* określa statyczny element członkowski. Jeśli tak, wynik jest wskaźnikiem do typu określonego w deklaracji elementu członkowskiego. Jeśli element członkowski nie jest statyczna, wynik jest wskaźnikiem do elementu członkowskiego *nazwa* klasy wskazanego przez *kwalifikowana class-name*. (Zobacz [wyrażenia podstawowe](../cpp/primary-expressions.md) więcej informacji na temat *kwalifikowana class-name*.) Poniższy fragment kodu przedstawia, jak wynik różnią się zależnie od tego, czy jest statyczny element członkowski:  
   
@@ -82,7 +82,7 @@ int main() {
   
 ## <a name="output"></a>Dane wyjściowe  
   
-```  
+```Output  
 &d equals &rd  
 ```  
   
@@ -109,11 +109,11 @@ int main() {
   
 ## <a name="output"></a>Dane wyjściowe  
   
-```  
+```Output  
 25  
 ```  
   
-## <a name="see-also"></a>Zobacz też  
+## <a name="see-also"></a>Zobacz także  
  [Wyrażenia z operatorami Jednoargumentowymi](../cpp/expressions-with-unary-operators.md)   
  [C++ wbudowane operatory, pierwszeństwo i kojarzenie](../cpp/cpp-built-in-operators-precedence-and-associativity.md)   
  [Deklarator odwołania do wartości: &](../cpp/lvalue-reference-declarator-amp.md)   

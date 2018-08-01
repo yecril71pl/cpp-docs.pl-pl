@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1cc84a0190430caea9592bf4eb8e47ad5bc1f6ce
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: 7c610d7f72c76e8c761de0cb01c42c8d6006e4b7
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37947948"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39407783"
 ---
 # <a name="pointers-to-members"></a>Wskaźniki do elementów członkowskich
 Deklaracje wskaźników do elementów członkowskich są specjalne przypadki deklaracje wskaźników.  Są deklarowane za pomocą następującej sekwencji:  
@@ -79,7 +79,7 @@ int main()
 }  
 ```  
   
- W powyższym przykładzie `pwCaption` jest wskaźnikiem do wszystkich elementów członkowskich klasy `Window` zawierający typ **char\***. Typ `pwCaption` jest `char * Window::* `. Następny fragment kodu deklaruje wskaźniki do `SetCaption` i `GetCaption` funkcji elementów członkowskich.  
+ W powyższym przykładzie `pwCaption` jest wskaźnikiem do wszystkich elementów członkowskich klasy `Window` zawierający typ `char*`. Typ `pwCaption` jest `char * Window::* `. Następny fragment kodu deklaruje wskaźniki do `SetCaption` i `GetCaption` funkcji elementów członkowskich.  
   
 ```cpp 
 const char * (Window::*pfnwGC)() = &Window::GetCaption;  
@@ -103,7 +103,7 @@ strcpy_s( pwChildWindow->*pwCaption, cUntitledLen, szUntitled );
   
  Różnica między **.\***  i **-> \*** operatorów (operatory wskaźników do elementów członkowskich) jest to, że **.\***  operator wybiera elementy członkowskie danego obiektu lub odwołanie do obiektu, podczas gdy **-> \*** operator wybiera elementy członkowskie za pomocą wskaźnika. (Aby uzyskać więcej informacji o tych operatorów, zobacz [wyrażenia zawierające operatory wskaźników do elementów członkowskich](../cpp/pointer-to-member-operators-dot-star-and-star.md).)  
   
- Wynik operatory wskaźników do elementów członkowskich jest typ elementu członkowskiego — w tym przypadku **char \*** .  
+ Wynik operatory wskaźników do elementów członkowskich jest typ elementu członkowskiego — w tym przypadku `char *`.  
   
  Poniższy fragment kodu wywołuje funkcje elementów członkowskich `GetCaption` i `SetCaption` za pomocą wskaźników do elementów członkowskich:  
   
@@ -174,6 +174,3 @@ int main()
 //Output: Print function for class Base  
 Print function for class Derived  
 ```  
-  
-## <a name="see-also"></a>Zobacz też  
- 

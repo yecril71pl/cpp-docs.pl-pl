@@ -12,12 +12,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e66371ead4c2070769b45bf5b181677431936c84
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: 895a2e3a78c425511f978454d07cf9574f7d8337
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37947876"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39403722"
 ---
 # <a name="declarations-and-definitions-c"></a>Deklaracje i definicje (C++)
 Deklaracje wprowadzają nazwy w programie, na przykład nazwy zmiennych, przestrzenie nazw, funkcji i klas. Deklaracje również określić informacje o typie, a także innych charakterystyk obiekt, który jest został zadeklarowany. Nazwa musi być zadeklarowany, zanim będzie można używać; w języku C++ punktu, w którym jest zadeklarowany nazwa określa, czy jest widoczny w kompilatorze. Nie można odwołać się do funkcji lub klasy, która jest zadeklarowana w pewnym momencie później w jednostce kompilacji; Możesz użyć *Przekaż dalej deklaracje* Aby obejść to ograniczenie.  
@@ -61,7 +61,6 @@ public:
  Kilka deklaracji, które nie są definicjami są:  
   
 ```cpp 
-  
 extern int i;  
 char *strchr( const char *Str, const char Target );  
 ```  
@@ -94,6 +93,6 @@ char *strchr( const char *Str, const char Target );
     }  
     ```  
   
-## <a name="see-also"></a>Zobacz też  
+## <a name="see-also"></a>Zobacz także  
  [Podstawowe pojęcia](../cpp/basic-concepts-cpp.md)   
  [Punkt deklaracji](../cpp/point-of-declaration-in-cpp.md)

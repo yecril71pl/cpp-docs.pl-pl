@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b7a94ee7df512262c58d7a90e3dbf461270b5d4c
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: 79deaacbb00638c690d052668f60d9d072a2060d
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37939869"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39408167"
 ---
 # <a name="initializers"></a>Inicjatory
 Inicjator określa wartość początkową zmiennej. Można zainicjować zmienne w tych kontekstach:  
@@ -46,7 +46,6 @@ Inicjator określa wartość początkową zmiennej. Można zainicjować zmienne 
     ```cpp  
     Point get_new_point(int x, int y) { return { x, y }; }  
     Point get_new_point(int x, int y) { return Point{ x, y }; }  
-  
     ```  
   
  Inicjatory mogą przybierać następujące formy:  
@@ -93,7 +92,7 @@ Inicjator określa wartość początkową zmiennej. Można zainicjować zmienne 
   
 -   Zmienne char są inicjowane na `'\0'`.  
   
--   Wskaźniki są inicjowane na `nullptr`.  
+-   Wskaźniki są inicjowane na **nullptr**.  
   
 -   Tablice, [ZASOBNIKA](../standard-library/is-pod-class.md) klas, struktur i Unii członkowie ich inicjowane z wartością zero.  
   
@@ -214,7 +213,6 @@ int main() {
     int a{};     // value of a is 0  
     double b{};  // value of b is 0.00000000000000000  
 }  
-  
 ```  
   
 ### <a name="copy-initialization"></a>Inicjalizacja kopiująca.  
@@ -533,4 +531,3 @@ Wykres decyzji dla inicjowania typów referencyjnych
   
 ### <a name="initialization-of-external-variables"></a>Inicjalizacja zmiennych zewnętrznych  
  Deklaracje zmiennych automatycznych, statycznych i zewnętrznych mogą zawierać inicjatory. Deklaracje zmiennych zewnętrznych może jednak zawierać inicjatory tylko wtedy, gdy zmienne nie są deklarowane jako **extern**.
-  

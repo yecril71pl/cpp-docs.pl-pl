@@ -1,5 +1,5 @@
 ---
-title: _access —, _waccess — | Dokumentacja firmy Microsoft
+title: _access, _waccess — | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -41,16 +41,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 775d0b699c6ac9664bae8cd0e6e28438ef019e69
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: ada1377efea8bd05dea1fd59dbbe6cd4495e6ea2
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32393746"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39404645"
 ---
 # <a name="access-waccess"></a>_access, _waccess
 
-Określa, czy plik jest tylko do odczytu lub nie. Bezpieczniejsza wersje są dostępne; zobacz [_access_s —, _waccess_s —](access-s-waccess-s.md).
+Określa, czy plik jest tylko do odczytu, czy nie. Bardziej bezpieczne wersje są dostępne; zobacz [_access_s —, _waccess_s —](access-s-waccess-s.md).
 
 ## <a name="syntax"></a>Składnia
 
@@ -67,46 +67,46 @@ int _waccess(
 
 ### <a name="parameters"></a>Parametry
 
-*Ścieżka*<br/>
+*Ścieżka*  
 Ścieżka pliku lub katalogu.
 
-*Tryb*<br/>
+*Tryb*  
 Atrybut odczytu/zapisu.
 
 ## <a name="return-value"></a>Wartość zwracana
 
-Każda funkcja zwraca wartość 0, jeśli plik ma danej metody. Funkcja zwraca wartość -1, jeśli plik o nazwie nie istnieje lub nie ma podanego trybu; w takim przypadku **errno** jest ustawiona, jak pokazano w poniższej tabeli.
+Każda funkcja zwraca 0, jeśli plik ma w danym trybie. Funkcja zwraca wartość -1, jeśli plik o nazwie nie istnieje lub nie ma podanego trybu; w tym przypadku `errno` jest ustawiona, jak pokazano w poniższej tabeli.
 
 |||
 |-|-|
-**EACCES**|Odmowa dostępu: ustawienie uprawnienia pliku zezwalają na dostęp określony.
-**ENOENT —**|Nazwa pliku lub nie można odnaleźć ścieżki.
-**EINVAL —**|Nieprawidłowy parametr.
+`EACCES`|Odmowa dostępu: ustawienie uprawnienia pliku zezwalają na dostęp określonym.
+`ENOENT`|Nazwa pliku lub nie można odnaleźć ścieżki.
+`EINVAL`|Nieprawidłowy parametr.
 
-Aby uzyskać więcej informacji na temat tych i innych kody powrotu, zobacz [_doserrno —, errno, _sys_errlist — i _sys_nerr —](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
+Aby uzyskać więcej informacji na temat tych i innych kodach powrotnych, zobacz [_doserrno, errno, _sys_errlist i _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
 ## <a name="remarks"></a>Uwagi
 
-W przypadku użycia z plików, **_access —** funkcji określa, czy określony plik lub katalog istnieje i ma atrybuty określone przez wartość *tryb*. W przypadku użycia z katalogów, **_access —** tylko określa, czy określony katalog istnieje; w systemie Windows 2000 i nowsze systemy operacyjne, wszystkie katalogi ma uprawnienia odczytu i zapisu.
+Gdy jest używana z plikami, **_access** funkcja określa, czy określony plik lub katalog istnieje i ma atrybuty określone przez wartość *tryb*. Gdy jest używana z katalogami, **_access** określa jedynie, czy podany katalog istnieje; w Windows 2000 i nowszych systemów operacyjnych, wszystkie katalogi ma uprawnienia odczytu i zapisu.
 
-|*tryb* wartość|Sprawdzanie pliku|
+|*tryb* wartość|Plik kontroli|
 |------------------|---------------------|
 |00|Istnienie tylko|
 |02|Tylko do zapisu|
 |04|tylko do odczytu|
 |06|Odczyt i zapis|
 
-Ta funkcja tylko sprawdza, czy plików i katalogów są tylko do odczytu lub nie, nie sprawdza ustawienia zabezpieczeń systemu plików. W tym należy tokenu dostępu. Aby uzyskać więcej informacji dotyczących zabezpieczeń systemu plików, zobacz [tokenów dostępu](http://msdn.microsoft.com/library/windows/desktop/aa374909). Klasy ATL istnieje w celu zapewnienia tej funkcji; zobacz [CAccessToken klasy](../../atl/reference/caccesstoken-class.md).
+Ta funkcja sprawdza tylko, czy plików i katalogów są tylko do odczytu lub nie, nie sprawdza ustawienia zabezpieczeń systemu plików. W tym należy tokenu dostępu. Aby uzyskać więcej informacji na temat zabezpieczeń systemu plików, zobacz [tokenów dostępu](http://msdn.microsoft.com/library/windows/desktop/aa374909). Klasy ATL istnieje w celu zapewnienia tej funkcji; zobacz [klasa CAccessToken](../../atl/reference/caccesstoken-class.md).
 
-**_waccess —** jest wersja znaków dwubajtowych **_access —**; *ścieżki* argument **_waccess —** jest ciągiem znaków dwubajtowych. **_waccess —** i **_access —** zachowują się tak samo w przeciwnym razie wartość.
+**_waccess —** to wersja znaku dwubajtowego **_access**; *ścieżki* argument **_waccess —** jest ciągiem znaku dwubajtowego. **_waccess —** i **_access** zachowują się identycznie.
 
-Ta funkcja weryfikuje jego parametrów. Jeśli *ścieżki* jest **NULL** lub *tryb* nie określa prawidłowego trybu, program obsługi nieprawidłowych parametrów zostanie wywołany, zgodnie z opisem w [sprawdzanie poprawności parametru](../../c-runtime-library/parameter-validation.md). Jeśli wykonanie może kontynuować, funkcja ustawia **errno** do **einval —** i zwraca wartość -1.
+Ta funkcja sprawdza poprawność swoich parametrów. Jeśli *ścieżki* ma wartość NULL lub *tryb* nie określa prawidłowego trybu wywołany nieprawidłowy parametr uchwytu, zgodnie z opisem w [Parameter Validation](../../c-runtime-library/parameter-validation.md). Jeśli wykonanie może być kontynuowane, funkcja ustawia `errno` do `EINVAL` i zwraca wartość -1.
 
 ### <a name="generic-text-routine-mappings"></a>Mapowania procedur zwykłego tekstu
 
 |Procedura tchar.h|_UNICODE i _MBCS niezdefiniowane|_MBCS zdefiniowano|_UNICODE zdefiniowano|
 |---------------------|--------------------------------------|--------------------|-----------------------|
-|**_taccess —**|**_access**|**_access**|**_waccess**|
+|`_taccess`|**_access**|**_access**|**_waccess**|
 
 ## <a name="requirements"></a>Wymagania
 
@@ -117,7 +117,7 @@ Ta funkcja weryfikuje jego parametrów. Jeśli *ścieżki* jest **NULL** lub *tr
 
 ## <a name="example"></a>Przykład
 
-W poniższym przykładzie użyto **_access —** sprawdzić plik o nazwie crt_ACCESS. C, aby sprawdzić, czy istnieje i czy jest dozwolone zapisu.
+W poniższym przykładzie użyto **_access** można znaleźć w pliku o nazwie crt_ACCESS. C, aby zobaczyć, czy istnieje i czy jest dozwolone zapisywanie.
 
 ```C
 // crt_access.c
@@ -151,8 +151,8 @@ File crt_ACCESS.C does not have write permission.
 
 ## <a name="see-also"></a>Zobacz także
 
-[Obsługa plików](../../c-runtime-library/file-handling.md)<br/>
-[_chmod, _wchmod](chmod-wchmod.md)<br/>
-[_fstat, _fstat32, _fstat64, _fstati64, _fstat32i64, _fstat64i32](fstat-fstat32-fstat64-fstati64-fstat32i64-fstat64i32.md)<br/>
-[_open, _wopen](open-wopen.md)<br/>
-[_stat, _wstat — funkcje](stat-functions.md)<br/>
+[Obsługa plików](../../c-runtime-library/file-handling.md)  
+[_chmod, _wchmod](chmod-wchmod.md)  
+[_fstat, _fstat32, _fstat64, _fstati64, _fstat32i64, _fstat64i32](fstat-fstat32-fstat64-fstati64-fstat32i64-fstat64i32.md)  
+[_open, _wopen](open-wopen.md)  
+[_stat, _wstat — funkcje](stat-functions.md)  

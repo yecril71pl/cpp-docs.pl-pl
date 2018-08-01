@@ -14,12 +14,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 405ef6da02c15e93e516069c1fedc22f002bdf2c
-ms.sourcegitcommit: 7eadb968405bcb92ffa505e3ad8ac73483e59685
+ms.openlocfilehash: 1f09df81587012703d8ba1fc883413d6d35929e8
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/23/2018
-ms.locfileid: "39208565"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39404941"
 ---
 # <a name="overview-of-declarators"></a>Przegląd deklaratorów
 Deklaratory są składnikami deklaracji, które określają nazwy obiektów lub funkcji. Deklaratory określają również, czy nazwany obiekt jest obiektem, wskaźnikiem, odwołaniem lub tablicą.  Deklaratory nie określają typu podstawowego, ale modyfikują informacje o typie w obrębie typu podstawowego w celu określenia typów pochodnych, takich jak wskaźniki, odwołania i tablice.  Deklarator w zastosowaniu do funkcji współpracuje ze specyfikatorem typu, aby w pełni określić, że typ zwracany funkcji jest obiektem, wskaźnikiem lub odwołaniem. (Specyfikatory omówione w [deklaracje i definicje](declarations-and-definitions-cpp.md), przekazują właściwości, takie jak typ i Klasa magazynu. Modyfikatory omówione w tej sekcji i w [Modyfikatory specyficzne dla Microsoft](../cpp/microsoft-specific-modifiers.md), modyfikowania deklaratorów.) Na poniższej ilustracji pokazano pełną deklarację `MyFunction` i wywołano składniki deklaracji.  
@@ -172,13 +172,11 @@ int a, *b, c[5], **d, &e=a;
   - deklarator wskaźnik-— operator   
   - (specyfikator)  
 
-  
 - i *operator wskaźnika* jest jednym z:  
   
   - \* [kwalifikatory cv]  
   - & [kwalifikatory cv]:: zagnieżdżone name-specifier \* [kwalifikatory cv]  
 
-  
  Ponieważ deklarator może składać się z deklaratorów, istnieje możliwość konstruowania bardziej złożonych typów pochodnych, takich jak tablice wskaźników, funkcji zwracających tablice wskaźników do funkcji, używając powyższych reguł.  Aby wykonać każdy krok konstrukcji, rozpocznij od identyfikatora reprezentującego podstawowy typ danych i zastosuj powyższą regułę dotyczącą składni, przy poprzednim wyrażeniu będącym `declarator`.  Kolejność stosowania reguł dotyczących składni powinna być odwrotnością sposobu, w jaki określono wyrażenie w języku angielskim.  Jeśli zastosowanie *operator wskaźnika* reguły składni wyrażenia tablicy lub funkcji, Użyj nawiasów, jeśli chcesz, aby wskaźnik do tablicy lub funkcji, jak ostatni wiersz w tabeli poniżej.  
   
  W poniższym przykładzie pokazano konstrukcję „wskaźnika do tablicy 10 wskaźników do int”.  

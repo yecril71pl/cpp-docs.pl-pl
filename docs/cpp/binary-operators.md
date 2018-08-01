@@ -1,7 +1,7 @@
 ---
-title: Operatory binarne | Dokumentacja firmy Microsoft
+title: Operatory dwuargumentowe | Dokumentacja firmy Microsoft
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 06/14/2018
 ms.technology:
 - cpp-language
 ms.topic: language-reference
@@ -16,66 +16,68 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3b930c548ea411beb03255d694f2423903053288
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 4b76250926ab89c14dfa26f0df3bb5571c1dae10
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39408534"
 ---
 # <a name="binary-operators"></a>Operatory binarne
-W poniższej tabeli przedstawiono listę podmiotów, które mogą być przeciążone.  
-  
-### <a name="redefinable-binary-operators"></a>Operatory binarne które można definiować ponownie  
-  
-|Operator|Nazwa|  
-|--------------|----------|  
-|**,**|Przecinek|  
-|`!=`|Nierówność|  
-|`%`|Modulo|  
-|`%=`|Moduł/przypisania|  
-|**&**|Bitowe ORAZ|  
-|**&&**|AND logiczne|  
-|**&=**|Iloczynu bitowego AND / przypisania|  
-|**\***|Mnożenie|  
-|**\*=**|Przypisanie/mnożenia|  
-|**+**|Dodawanie|  
-|`+=`|Dodanie/przypisania|  
-|**-**|Odejmowanie|  
-|**-=**|Przypisanie odejmowania /|  
-|**->**|Wybór elementu członkowskiego|  
-|**->\***|Wybór wskaźnika do elementu członkowskiego|  
-|**/**|Dzielenie|  
-|`/=`|Dzielenie/przypisania|  
-|**<**|Mniejsze niż|  
-|**<<**|Przesunięcie w lewo|  
-|**<<=**|Po lewej stronie przypisania przesunięcia /|  
-|**<=**|Mniejsze niż lub równe|  
-|**=**|Przypisanie|  
-|`==`|Równość|  
-|**>**|Większe niż|  
-|**>=**|Większe niż lub równe|  
-|**>>**|Przesunięcie w prawo|  
-|**>>=**|Przypisania/przesunięcia w prawo|  
-|**^**|Wyłączny OR|  
-|`^=`|Wyłączny OR / przypisania|  
-|**&#124;**|Bitowe alternatywne OR|  
-|`&#124;=`|Operator włącznie lub / przypisania|  
-|`&#124;&#124;`|OR logiczne|  
-  
- Do zadeklarowania funkcji operatora binarnego jako niestatycznego elementu członkowskiego, muszą deklarować go w postaci:  
-  
- *Typ RET* **operator**`op`**(** `arg` **)**  
-  
- gdzie *ret typu* jest zwracany typ `op` jest jednym z podmiotów wymienione w powyższej tabeli i `arg` jest argumentem typu.  
-  
- Do zadeklarowania funkcji operatora binarnego jako funkcję globalną, muszą deklarować go w postaci:  
-  
- *Typ RET* **operator**`op`**(** `arg1` **,** `arg2` **)**  
-  
- gdzie *ret typu* i `op` są zgodnie z opisem dla funkcji Członkowskich operatora i `arg1` i `arg2` argumentów. Co najmniej jeden z argumentów musi być typu klasy.  
-  
+
+W poniższej tabeli przedstawiono listę operatorów, które mogą być przeciążone.
+
+## <a name="redefinable-binary-operators"></a>Operatory dwuargumentowe które można definiować ponownie
+
+|Operator|Nazwa|
+|--------------|----------|
+|**,**|Przecinek|
+|**\!=**|Nierówność|
+|**%**|Modulo|
+|**%=**|Modulo i i przypisanie|
+|**&**|Bitowe ORAZ|
+|**&&**|AND logiczne|
+|**&=**|Bitowe AND / przydziału|
+|**&#42;**|Mnożenie|
+|**&#42;=**|Mnożenie i przypisanie|
+|**+**|Dodawanie|
+|**+=**|Dodawanie i przypisanie|
+|**-**|Odejmowanie|
+|**-=**|Odejmowanie i przypisanie|
+|**->**|Wybór elementu członkowskiego|
+|**->&#42;**|Wybór wskaźników do elementów członkowskich|
+|**/**|Dzielenie|
+|**/=**|Dzielenie i przypisanie|
+|**<**|Mniejsze niż|
+|**<<**|Przesunięcie w lewo|
+|**<<=**|Lewy shift/przypisania|
+|**<=**|Mniejsze niż lub równe|
+|**=**|Przypisanie|
+|**==**|Równość|
+|**>**|Większe niż|
+|**>=**|Większe niż lub równe|
+|**>>**|Przesunięcie w prawo|
+|**>>=**|Przesunięcia w prawo/przypisania|
+|**^**|Wykluczające OR|
+|**^=**|Wykluczające OR / przydziału|
+|**&#124;**|Bitowe alternatywne OR|
+|**&#124;=**|Bitowe alternatywne OR / przydziału|
+|**&#124;&#124;**|OR logiczne|
+
+Aby zadeklarować funkcję operatora binarnego jako niestatyczny element członkowski, należy zadeklarować ją w postaci:
+
+> *RET-type* **operator** *op* **(** *arg* **)**
+
+gdzie *ret-type* jest typem zwracanym *op* jest jednym z operatorów wymienionych w powyższej tabeli i *arg* jest argumentem typu.
+
+Aby zadeklarować funkcję operatora binarnego jako funkcję globalną, należy zadeklarować ją w postaci:
+
+> *RET-type* **operator** *op* **(** _arg1_**,** _argument2_ **)**
+
+gdzie *ret-type* i *op* są opisane dla funkcji operatora składowej i *arg1* i *argument2* argumentów. Co najmniej jeden z argumentów musi być typem klasy.
+
 > [!NOTE]
->  Nie podlega ograniczeniom typ zwracany operatorów binarnych; Jednak większość zdefiniowane przez użytkownika operatory binarne zwracać typu klasy lub odwołanie do typu klasy.  
-  
-## <a name="see-also"></a>Zobacz też  
+> Nie ma żadnych ograniczeń względem typów zwracanych operatorów binarnych; Jednak większość zdefiniowanych przez użytkownika operatory dwuargumentowe Zwróć odwołanie do typu klasy lub typu klasy.
+
+## <a name="see-also"></a>Zobacz także
  [Przeładowanie operatora](../cpp/operator-overloading.md)

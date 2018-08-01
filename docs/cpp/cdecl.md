@@ -16,31 +16,31 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d07c34c11037132b9f9695ec889bb681c7f43951
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: c0a9e4db3e1fcbd24358d6dedd2d4ada80672c2a
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32414496"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39406549"
 ---
 # <a name="cdecl"></a>__cdecl
 **Microsoft Specific**  
   
- `__cdecl` jest domyślnie Konwencja wywoływania dla programów C i C++. Ponieważ stos jest czyszczona przez obiekt wywołujący, można wykonać **vararg** funkcji. `__cdecl` Konwencji wywoływania tworzy większe pliki wykonywalne niż [__stdcall](../cpp/stdcall.md), ponieważ wymaga ona każde wywołanie funkcji obejmują stosu oczyszczanie kodu. Na poniższej liście przedstawiono implementację niniejszej konwencji wywoływania.  
+ **__cdecl** jest domyślna konwencja wywołania dla programów C i C++. Ponieważ stos jest czyszczony przez obiekt wywołujący, można wykonać `vararg` funkcji. **__Cdecl** konwencji wywoływania tworzy większe pliki wykonywalne niż [__stdcall](../cpp/stdcall.md), ponieważ wymaga, aby każde wywołanie funkcji kod porządkujący stosu. Na poniższej liście przedstawiono implementację niniejszej konwencji wywoływania.  
   
 |Element|Implementacja|  
 |-------------|--------------------|  
 |Kolejność przekazywania argumentów|Od prawej do lewej.|  
 |Odpowiedzialność za utrzymanie stosu|Funkcja wywołująca pobiera argumenty ze stosu.|  
-|Konwencja dekorowania nazw|Znak podkreślenia (_) jest prefiksem nazwy, chyba że \__cdecl funkcje programu wykorzystujące powiązanie C są eksportowane.|  
+|Konwencja dekorowania nazw|Znak podkreślenia (_) jest umieszczany przez nazwami, z wyjątkiem sytuacji, gdy \__cdecl funkcje, które używają połączenia są eksportowane.|  
 |Konwencja translacji wielkości liter|Translacja wielkości liter nie jest wykonywana.|  
   
 > [!NOTE]
->  Aby uzyskać odpowiednie informacje, zobacz [dekorowane nazwy](../build/reference/decorated-names.md).  
+>  Aby uzyskać powiązane informacje, zobacz [nazwy dekorowane](../build/reference/decorated-names.md).  
   
- Miejsce `__cdecl` modyfikator przed zmiennej lub nazwę funkcji. Ponieważ C nazewnictwa i Konwencje wywoływania są domyślnymi, tylko musisz użyć `__cdecl` w x86 kod jest po określeniu **GV** (vectorcall), **GZ** (stdcall) lub  **GR** — opcja kompilatora (fastcall). [/Gd](../build/reference/gd-gr-gv-gz-calling-convention.md) wymusza — opcja kompilatora `__cdecl` konwencji wywoływania.  
+ Miejsce **__cdecl** modyfikator przed zmienną lub nazwą funkcji. Ponieważ nazewnictwo C i Konwencje wywoływania są domyślne tylko wtedy należy użyć **__cdecl** w x86 kod jest po określeniu `/Gv` (vectorcall), `/Gz` (stdcall) lub `/Gr` (fastcall) — Opcja kompilatora. [/Gd](../build/reference/gd-gr-gv-gz-calling-convention.md) wymusza — opcja kompilatora **__cdecl** konwencji wywoływania.  
   
- Na ARM i x64 procesorów, `__cdecl` jest akceptowane, ale zazwyczaj są ignorowane przez kompilator. Przez konwencję na ARM i x64, argumenty są przekazywane w rejestrach, jeżeli jest to możliwe, a pozostałe argumenty są przekazywane na stosie. W x64 kodu, użyj `__cdecl` do przesłonięcia **GV** — opcja kompilatora i użyj x64 niedomyślną konwencję wywołania.  
+ Na ARM i x64 procesorów, **__cdecl** jest akceptowana, ale zazwyczaj są ignorowane przez kompilator. Przez konwencję na ARM i x64, argumenty są przekazywane w rejestrach, jeżeli jest to możliwe, a pozostałe argumenty są przekazywane na stosie. W x64 kodu, należy użyć **__cdecl** do zastąpienia **GV** — opcja kompilatora i użyj domyślnej x64 konwencji wywoływania.  
   
  W przypadku funkcji niestatycznych klas, jeśli funkcja jest zdefiniowana poza wierszem, modyfikator konwencji wywoływania nie musi być określony w definicji poza wierszem. Oznacza to, że dla metod niestatycznej składowej klasy przyjmowana jest konwencja wywoływania określona podczas deklaracji w punkcie definicji. Biorąc pod uwagę tę definicję klasy:  
   
@@ -63,7 +63,7 @@ void __cdecl CMyClass::mymethod() { return; }
 ```  
   
 ## <a name="example"></a>Przykład  
- W poniższym przykładzie, kompilator jest zalecane jest używanie C nazywania i Konwencje wywoływania `system` funkcji.  
+ W poniższym przykładzie kompilator jest zobowiązany do używania konwencji nazewnictwa i konwencji wywoływania `system` funkcji.  
   
 ```cpp  
 // Example of the __cdecl keyword on function  
@@ -72,6 +72,6 @@ int __cdecl system(const char *);
 typedef BOOL (__cdecl *funcname_ptr)(void * arg1, const char * arg2, DWORD flags, ...);  
 ```  
   
-## <a name="see-also"></a>Zobacz też  
+## <a name="see-also"></a>Zobacz także  
  [Przekazywanie argumentów i konwencje nazewnictwa](../cpp/argument-passing-and-naming-conventions.md)   
  [Słowa kluczowe](../cpp/keywords-cpp.md)

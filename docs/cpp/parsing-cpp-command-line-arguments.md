@@ -18,35 +18,36 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 147461584f1a978be55502d783bc527b5632d20f
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: eca85baea71052525d70c90ac521ef5fa95a5118
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39408651"
 ---
 # <a name="parsing-c-command-line-arguments"></a>Analizowanie argumentów wiersza polecenia języka C++
 **Microsoft Specific**  
   
- Kod uruchomienia Microsoft C/C++ stosowane są następujące reguły przy interpretowaniu argumenty podane w wierszu polecenia systemu operacyjnego:  
+ Kod startowy w Microsoft C/C++ używa następujących reguł interpretując argumenty podane w wierszu polecenia systemu operacyjnego:  
   
--   Argumenty są rozdzielone biały znak, który jest spację lub tabulator.  
+-   Argumenty są rozdzielone biały znak, który jest spacja lub tabulator.  
   
--   Znak daszek (^) nie został rozpoznany jako znak ucieczki lub ogranicznika. Znak jest obsługiwany w całkowicie przez analizator składni wiersza polecenia w systemie operacyjnym przed przesłaniem do `argv` tablicy w programie.  
+-   Znak daszka (^) nie została rozpoznana jako znak ucieczki lub ogranicznik. Znak odbywa się całkowicie przez parser wiersza polecenia w systemie operacyjnym przed przesłaniem do `argv` tablicy w programie.  
   
--   Ciąg ujęta w znaki podwójnego cudzysłowu ("*ciąg*") jest interpretowana jako jeden argument, niezależnie od biały znak zawartych w. Ciąg w cudzysłowie, można ją osadzić w argumencie.  
+-   W ciąg ujęty w znaki podwójnego cudzysłowu ("*ciąg*") jest interpretowany jako jeden argument, niezależnie od tego, biały znak zawarty w. Ciąg w cudzysłowach można osadzać w argumencie.  
   
--   Podwójny cudzysłów poprzedzony ukośnikiem (\\") jest interpretowany jako znak literału podwójnego cudzysłowu (").  
+-   Podwójny cudzysłów poprzedzone znakiem ukośnika odwrotnego (\\") jest interpretowany jako znak literału podwójny cudzysłów (").  
   
--   Używanie ukośników odwrotnych będą interpretowane jako literału, chyba że bezpośrednio poprzedzać podwójny cudzysłów.  
+-   Ukośników odwrotnych jest interpretowany dosłownie, chyba że bezpośrednio poprzedzać znak podwójnego cudzysłowu.  
   
--   Jeśli parzystą liczbą ukośników odwrotnych następuje podwójny cudzysłów, jeden ukośnik odwrotny jest umieszczany w `argv` tablicy dla każdej pary ukośników odwrotnych i podwójny cudzysłów jest interpretowana jako ogranicznik ciągu.  
+-   Jeśli parzysta liczba ukośników odwrotnych następuje podwójny cudzysłów, jednej kreski ułamkowej odwróconej jest umieszczana w `argv` tablicy dla każdej pary ukośników odwrotnych i podwójnego cudzysłowu jest interpretowany jako ogranicznik ciągu.  
   
--   Jeśli nieparzystą liczbę ukośników odwrotnych następuje podwójny cudzysłów, jeden ukośnik odwrotny jest umieszczany w `argv` tablicy dla każdej pary ukośników odwrotnych i podwójny cudzysłów jest "wpisywany" z pozostałych ukośnik odwrotny, powodując literału podwójny cudzysłów (" ) należy umieścić w `argv`.  
+-   Jeśli nieparzysta liczba ukośników odwrotnych następuje podwójny cudzysłów, jednej kreski ułamkowej odwróconej jest umieszczana w `argv` tablicy dla każdej pary ukośników odwrotnych i podwójnego cudzysłowu jest "poprzedzone znakiem zmiany znaczenia" przez pozostałe ukośnik odwrotny powoduje literał podwójny cudzysłów (" ) mają być umieszczone w `argv`.  
   
 ## <a name="example"></a>Przykład  
- Następujący program przedstawiono argumenty jak wiersza polecenia są przekazywane:  
+ Następujący program pokazuje jak wiersza polecenia argumenty są przekazywane:  
   
-```  
+```cpp 
 // command_line_arguments.cpp  
 // compile with: /EHsc  
 #include <iostream>  
@@ -66,18 +67,18 @@ int main( int argc,      // Number of strings in array argv
 }  
 ```  
   
- W poniższej tabeli przedstawiono przykładowe dane wejściowe i oczekiwane dane wyjściowe prezentacja reguły z powyższej listy.  
+ W poniższej tabeli przedstawiono przykładowe dane wejściowe i oczekiwanych danych wyjściowych, demonstrując reguły na powyższej liście.  
   
 ### <a name="results-of-parsing-command-lines"></a>Wyniki analizy wiersze poleceń  
   
-|Dane wejściowe wiersza polecenia|ARGV — [1]|ARGV — [2]|ARGV — [3]|  
+|Dane wejściowe wiersza polecenia|ARGV [1]|ARGV [2]|ARGV [3]|  
 |-------------------------|---------------|---------------|---------------|  
 |`"abc" d e`|`abc`|`d`|`e`|  
 |`a\\b d"e f"g h`|`a\\b`|`de fg`|`h`|  
 |`a\\\"b c d`|`a\"b`|`c`|`d`|  
 |`a\\\\"b c" d e`|`a\\b c`|`d`|`e`|  
   
-**KOŃCOWY określonych firmy Microsoft**  
+**END specyficzny dla Microsoft**  
   
-## <a name="see-also"></a>Zobacz też  
+## <a name="see-also"></a>Zobacz także  
  [main: uruchamianie programu](../cpp/main-program-startup.md)

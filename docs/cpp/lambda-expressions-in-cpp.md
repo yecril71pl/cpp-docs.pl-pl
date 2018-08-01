@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bc8457371ef266c5628e225eff8f05328190e52d
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: 7c7b6d49ae82048d5223eea385f1503c28a990ed
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37941970"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39402968"
 ---
 # <a name="lambda-expressions-in-c"></a>Wyrażenia lambda w języku C++
 W języku C ++ 11 i nowszych wersjach Wyrażenie lambda — często nazywana *lambda*— to wygodny sposób definiowania obiektu funkcja anonimowa ( *zamknięcia*) bezpośrednio w lokalizacji, gdzie jest wywoływana lub przekazywany jako argument do funkcji. Wyrażenia lambda są zazwyczaj używane w celu hermetyzacji kilku wierszy kodu, które są przekazywane do algorytmów lub metod asynchronicznych. W tym artykule zdefiniowano, czym są lambdy, porównano je z innymi technikami programowania, omówiono ich zalety i dostarczono podstawowe przykłady.  
@@ -46,7 +46,6 @@ void abssort(float* x, unsigned n) {
         } // end of lambda expression  
     );  
 }  
-  
 ```  
   
  Ta ilustracja przedstawia części wyrażenia lambda:  
@@ -107,7 +106,7 @@ void f(Args... args) {
 }  
 ```  
   
- Aby używać wyrażeń lambda w treści metody klasy, należy przekazać `this` wskaźnik do klauzuli przechwytywania, aby zapewnić dostęp do metod i składowych danych otaczającej klasy. 
+ Aby używać wyrażeń lambda w treści metody klasy, należy przekazać **to** wskaźnik do klauzuli przechwytywania, aby zapewnić dostęp do metod i składowych danych otaczającej klasy. 
  
 **Visual Studio 2017 w wersji 15.3 lub nowszej** (udostępniono [/STD: c ++ 17](../build/reference/std-specify-language-standard-version.md)): **to** wskaźnik mogą być przechwytywane przez wartość, określając `*this` w klauzuli przechwytywania. Przechwytywania przez wartość oznacza, że cały *zamknięcia*, które jest obiektem funkcja anonimowa tego encapulates Wyrażenie lambda, jest kopiowany do każdej lokacji wywołania, gdy wyrażenie lambda jest wywoływana. Przechwytywania przez wartość jest przydatne, gdy wyrażenie lambda będzie wykonywany w operacji równoległych lub asynchroniczny, zwłaszcza w przypadku niektórych architektur sprzętu, takich jak architektura NUMA. 
 
@@ -141,8 +140,7 @@ pNums = make_unique<vector<int>>(nums);
 auto y = [] (int first, int second)  
 {  
     return first + second;  
-};  
-  
+};   
 ```  
   
  W **C++ 14**, jeśli typ parametru jest ogólna, można użyć słowa kluczowego auto jako Specyfikator typu. Informuje kompilator, aby utworzyć operator wywołania funkcji jako szablon. Każde wystąpienie automatycznie na liście parametrów jest równoważna z parametrem distinct typu.  
@@ -340,7 +338,6 @@ vector v after 2nd call to fillVector(): 10 11 12 13 14 15 16 17 18
     {
         return [n] { return n + 1; }();
     }
-
 ``` 
 Wyrażenie lambda jest niejawnie `constexpr` Jeśli wynik nie spełnia wymagań `constexpr` funkcji:
 ```cpp
@@ -375,7 +372,7 @@ auto Sqr = [](int t) __declspec(code_seg("PagedMem")) -> int { return t*t; };
   
  Oprócz funkcje C ++ 11 standardowa lambda program Visual Studio obsługuje bezstanowe lambdy, które można uniwersalnie przekonwertować do wskaźników funkcji, które używają dowolne Konwencje wywoływania.  
   
-## <a name="see-also"></a>Zobacz też  
+## <a name="see-also"></a>Zobacz także  
  [Dokumentacja języka C++](../cpp/cpp-language-reference.md)   
  [Obiekty funkcji w standardowej bibliotece C++](../standard-library/function-objects-in-the-stl.md)   
  [Wywołanie funkcji](../cpp/function-call-cpp.md)   

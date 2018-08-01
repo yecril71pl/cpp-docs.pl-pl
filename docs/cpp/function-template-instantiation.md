@@ -16,19 +16,19 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6374dcd9dad263afd0961be91971d3283ba863ab
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: e773fd8e2c38311a1c36aff4c97199cbebb503e8
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32412127"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39406484"
 ---
 # <a name="function-template-instantiation"></a>Tworzenie wystąpienia szablonu funkcji
-Gdy szablonu funkcji najpierw zostanie wywołana dla każdego typu, kompilator tworzy wystąpienia. Każdego wystąpienia jest wersja szablonem funkcji przeznaczone dla typu. Tego wystąpienia zostanie wywołana za każdym razem, gdy funkcja jest używana dla typu. Jeśli masz kilka wystąpień identyczne, nawet w różnych modułach tylko jedna kopia wystąpienia zakończą się w pliku wykonywalnego.  
+Gdy szablon funkcji najpierw jest wywoływana dla każdego typu, kompilator utworzy podczas tworzenia wystąpienia. Każdego wystąpienia to wersja z szablonem funkcji przeznaczone specjalnie do tego typu. Za każdym razem, gdy jest używana funkcja dla danego typu zostanie wywołana tego wystąpienia. Jeśli masz kilka wystąpień identyczny, nawet w przypadku różnych modułów, tylko jedna kopia utworzenia wystąpienia zakończą się w pliku wykonywalnym.  
   
- Konwersja argumentów funkcji jest dozwolony w szablonów funkcji dla każdej pary argumentów i parametrów, gdy parametr nie jest zależny od argumentu szablonu.  
+ Konwersja argumenty funkcji jest dozwolona w szablonów funkcji dla każdej pary argumentów i parametrów, gdy parametr nie zależy od argumentu szablonu.  
   
- Szablony funkcji może zostać jawnie utworzone przez zadeklarowanie szablonu z określonego typu jako argumentu. Na przykład następujący kod jest dozwolone:  
+ Szablony funkcji można jawnie tworzone przez zadeklarowanie szablonu przy użyciu określonego typu jako argumentu. Na przykład poniższy kod jest dozwolony:  
   
 ```cpp
 // function_template_instantiation.cpp  
@@ -46,5 +46,5 @@ int main()
 }  
 ```  
   
-## <a name="see-also"></a>Zobacz też  
+## <a name="see-also"></a>Zobacz także  
  [Szablony funkcji](../cpp/function-templates.md)

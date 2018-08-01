@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: dad1f9a223d8eb97c8e59e955bd5358b27dafd08
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: aa741a794d0e6735ae2cecea07a87481abc18cec
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37947859"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39404112"
 ---
 # <a name="pointers-c"></a>Wskaźników (C++)
 Wskaźniki zadeklarowane za pomocą następującej sekwencji.  
@@ -32,7 +32,7 @@ Wskaźniki zadeklarowane za pomocą następującej sekwencji.
 [ms-modifier] declarator ;  
 ```  
   
- gdzie wszelkie deklaratora nieprawidłowy wskaźnik mogą być używane do `declarator`.  Składnia deklaratora wskaźnika prostego jest następująca:  
+ gdzie wszelkie deklaratora nieprawidłowy wskaźnik mogą być używane do `declarator`. Składnia deklaratora wskaźnika prostego jest następująca:  
   
 ```  
 * [cv-qualifiers] identifier [= expression]  
@@ -249,8 +249,7 @@ int main() {
 ```  
   
 ```Output  
-  
-      a  
+a  
 45  
 d  
 a  
@@ -268,6 +267,6 @@ node 2 = 789
 a (add node)  d (display list)  q (quit)  
 ```  
   
-## <a name="see-also"></a>Zobacz też  
+## <a name="see-also"></a>Zobacz także  
  [Operator bezpośredni: *](../cpp/indirection-operator-star.md)   
  [Operator Address-of: &](../cpp/address-of-operator-amp.md)

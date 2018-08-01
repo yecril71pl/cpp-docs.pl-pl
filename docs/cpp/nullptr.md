@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: dd7d7c9ccf70286040d06e7e01400299b806157e
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: 07e05e3a1c1b25e87053e15244f3c5fb9db442d9
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37940982"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39404164"
 ---
 # <a name="nullptr"></a>nullptr
 Określa stałą pustego wskaźnika typu `std::nullptr_t`, który jest konwertowany na dowolny typ surowy wskaźnik.  Chociaż można używać słowa kluczowego **nullptr** bez uwzględniania żadnych nagłówków, jeśli kod używa typu `std::nullptr_t`, a następnie zdefiniuj, łącznie z nagłówkiem `<cstddef>`.  
@@ -32,6 +32,6 @@ Określa stałą pustego wskaźnika typu `std::nullptr_t`, który jest konwertow
 ## <a name="remarks"></a>Uwagi  
  Należy unikać wartość NULL lub wartość zero (`0`) jako stała wskaźnika o wartości null; **nullptr** mniej podatne na nadużycie i sprawdzi się najlepiej w większości sytuacji.  Na przykład, biorąc pod uwagę `func(std::pair<const char *, double>)`, następnie wywoływania `func(std::make_pair(NULL, 3.14))` powoduje błąd kompilatora.  Makro rozszerza się o wartości NULL, aby `0`, tak aby wywołanie `std::make_pair(0, 3.14)` zwraca `std::pair<int, double>`, który nie jest możliwa do przekonwertowania na (func) `std::pair<const char *, double>` typ parametru.  Wywoływanie `func(std::make_pair(nullptr, 3.14))` kompiluje pomyślnie, ponieważ `std::make_pair(nullptr, 3.14)` zwraca `std::pair<std::nullptr_t, double>`, który jest konwertowany na `std::pair<const char *, double>`.  
   
-## <a name="see-also"></a>Zobacz też  
+## <a name="see-also"></a>Zobacz także  
  [Keywords](../cpp/keywords-cpp.md)   
  [nullptr](../windows/nullptr-cpp-component-extensions.md)

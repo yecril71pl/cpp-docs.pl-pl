@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0b6fea501724b24c07ab8b2199410a369d62dc9d
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: 73e030ede8305db4ea05826f0ce7704420ac0400
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37947894"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39403404"
 ---
 # <a name="const-c"></a>const (C++)
 Podczas modyfikowania deklarację danych **const** — słowo kluczowe Określa, że obiekt lub zmienna nie można modyfikować.  
@@ -29,7 +29,6 @@ Podczas modyfikowania deklarację danych **const** — słowo kluczowe Określa,
 ## <a name="syntax"></a>Składnia  
   
 ```  
-  
 const declaration ;  
 member-function const ;  
 ```  
@@ -172,5 +171,5 @@ extern "C" const int x=10;
   
 -   [#define](../preprocessor/hash-define-directive-c-cpp.md).  
   
-## <a name="see-also"></a>Zobacz też  
+## <a name="see-also"></a>Zobacz także  
  [Słowa kluczowe](../cpp/keywords-cpp.md)

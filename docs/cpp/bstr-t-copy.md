@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d23f204e7e8a545fbee7ab516495ed711d7984a9
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: 5b7032d9344ec9375059d5584d080854ffe5c775
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37947909"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39405343"
 ---
 # <a name="bstrtcopy"></a>_bstr_t::copy
 **Microsoft Specific**  
@@ -32,13 +32,12 @@ ms.locfileid: "37947909"
 ## <a name="syntax"></a>Składnia  
   
 ```  
-  
 BSTR copy( bool fCopy = true ) const;  
 ```  
   
 #### <a name="parameters"></a>Parametry  
  *fCopy*  
- W przypadku opcji TRUE `copy` zwraca kopię obiektu zamkniętego `BSTR`, w przeciwnym razie `copy` zwraca rzeczywiste BSTR.  
+ W przypadku opcji TRUE **kopiowania** zwraca kopię obiektu zamkniętego `BSTR`, w przeciwnym razie **kopiowania** zwraca rzeczywiste BSTR.  
   
 ## <a name="remarks"></a>Uwagi  
  Zwraca nowo przydzielonego kopię zhermetyzowanego `BSTR` obiektu.  
@@ -53,5 +52,5 @@ STDMETHODIMP CAlertMsg::get_ConnectionStr(BSTR *pVal){ //  m_bsConStr is _bstr_t
   
  **END specyficzny dla Microsoft**  
   
-## <a name="see-also"></a>Zobacz też  
+## <a name="see-also"></a>Zobacz także  
  [_bstr_t, klasa](../cpp/bstr-t-class.md)

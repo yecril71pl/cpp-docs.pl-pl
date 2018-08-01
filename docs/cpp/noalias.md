@@ -17,30 +17,30 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1cbb5c1b4162f3326aade092c7e20ca42a825d13
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 56ee12f65ff9efe9f3b048d061b80aef691eb0f2
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32420122"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39404398"
 ---
 # <a name="noalias"></a>noalias
 
 **Microsoft Specific**
 
-`noalias` oznacza, że wywołanie funkcji nie Modyfikuj lub odwołać widoczny stan globalny i tylko modyfikuje pamięci wskazywał *bezpośrednio* przez parametry wskaźnika (pierwszego poziomu elementów pośrednich).
+**noalias** oznacza, że wywołanie funkcji nie Modyfikuj lub odwoływać się widoczny stan globalny i modyfikuje tylko wskazywana pamięć *bezpośrednio* przez wskaźnik parametry (pierwszy na poziomie elementów pośrednich).
 
-Jeśli funkcja jest oznaczony jako `noalias`, optymalizator może przyjmować, że oprócz parametrów się elementów pośrednich tylko pierwszy poziom parametrów wskaźnika są odwołuje się do lub zmodyfikować wewnątrz funkcji. Zbiór wszystkich danych, które nie jest zdefiniowana lub do których odwołuje się poza zasięgiem kompilacji jest widoczny stan globalny, a ich adres nie jest brana. Zakres kompilacji jest wszystkich plików źródłowych ([opcję/LTCG (Generowanie kodu w czasie Link)](../build/reference/ltcg-link-time-code-generation.md) kompilacje) lub jednym pliku źródłowym (z systemem innym niż**opcję/LTCG** kompilacji).
+Jeśli funkcja jest oznaczona jako **noalias**, optymalizator, można założyć, że oprócz parametrów samodzielnie, tylko pierwszy poziom elementów pośrednich, wskaźnik parametrów są przywoływane lub modyfikowane wewnątrz funkcji. Widoczny stan globalny to zestaw wszystkich danych, które nie jest zdefiniowany lub do których odwołuje się poza zakresem kompilacji, a nie wykonują swojego adresu. Zakres kompilacji jest wszystkie pliki źródłowe ([opcję/LTCG (Generowanie kodu Link-time)](../build/reference/ltcg-link-time-code-generation.md) kompilacje) lub w jednym pliku źródłowym (non -**opcję/LTCG** kompilacji).
 
-`noalias` Adnotacja ma zastosowanie tylko w treści funkcji adnotacjami. Funkcja jako oznaczenie `__declspec(noalias)` nie ma wpływu na aliasów wskaźników zwracane przez funkcję.
+**Noalias** adnotacja ma zastosowanie tylko w treści funkcji adnotacjami. Oznaczanie funkcję jako **__declspec(noalias)** nie ma wpływu na tworzenie aliasów wskaźników zwróconą przez funkcję.
 
-Dla innej adnotacji może wpłynąć na aliasów, zobacz [słowo kluczowe __declspec(restrict)](../cpp/restrict.md).
+Aby inną adnotację, które mogą mieć wpływ na tworzenie aliasów, zobacz [__declspec(restrict)](../cpp/restrict.md).
 
 ## <a name="example"></a>Przykład
 
-W poniższym przykładzie pokazano użycie `__declspec(noalias)`.
+W poniższym przykładzie pokazano użycie **__declspec(noalias)**.
 
-Gdy funkcja `multiply` odnoszący się uzyskuje dostęp do pamięci `__declspec(noalias)`, informuje kompilator tej funkcji nie modyfikuje stan globalny z wyjątkiem za pośrednictwem wskaźniki w jego listy parametrów.
+Gdy funkcja `multiply` że dostępy do pamięci jest oznaczona **__declspec(noalias)**, jego informuje kompilator, ta funkcja nie zmodyfikuje stan globalny, z wyjątkiem przez wskaźniki na liście parametrów.
 
 ```C
 // declspec_noalias.c
@@ -108,8 +108,7 @@ int main()
 }
 ```
 
-## <a name="see-also"></a>Zobacz też
-
-[__declspec](../cpp/declspec.md)  
-[Słowa kluczowe](../cpp/keywords-cpp.md)  
-[__declspec(restrict)](../cpp/restrict.md)  
+## <a name="see-also"></a>Zobacz także
+ [__declspec](../cpp/declspec.md)  
+ [Słowa kluczowe](../cpp/keywords-cpp.md)  
+ [__declspec(restrict)](../cpp/restrict.md)  

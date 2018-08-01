@@ -1,5 +1,5 @@
 ---
-title: Wyrażenia Lambda w języku C++ constexpr | Dokumentacja firmy Microsoft
+title: constexpr, wyrażenia Lambda w języku C++ | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 07/19/2017
 ms.technology:
@@ -14,15 +14,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1e01f41aaf8b761020f57625e7cbf06f8fba2659
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: b78fa3de7777ffc6702902cf967a405595caf12f
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32418903"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39408206"
 ---
-# <a name="constexpr-lambda-expressions-in-c"></a>constexpr wyrażenia Lambda w języku C++
-**Visual Studio 2017 wersji 15.3 i nowszych** (dostępnych z [/std:c ++ 17](../build/reference/std-specify-language-standard-version.md)): wyrażenia lambda, może być zadeklarowana jako `constexpr` lub użyć w wyrażeniu zawartość podczas inicjowania dla każdego elementu członkowskiego danych it Przechwytuje lub wprowadza jest dozwolona w wyrażeniu stałym.  
+# <a name="constexpr-lambda-expressions-in-c"></a>constexpr, wyrażenia Lambda w języku C++
+**Visual Studio 2017 w wersji 15.3 lub nowszej** (udostępniono [/STD: c ++ 17](../build/reference/std-specify-language-standard-version.md)): Wyrażenie lambda może być zadeklarowana jako **constexpr** lub używana w wyrażeniu zawartość podczas inicjowania każdego z nich element członkowski danych przechwytuje, lub wprowadza jest dozwolona w wyrażeniu stałym.  
 
 ```cpp
     int y = 32;
@@ -36,9 +36,8 @@ ms.locfileid: "32418903"
     {
         return [n] { return n + 1; }();
     }
-
 ``` 
-Wyrażenie lambda jest niejawnie `constexpr` Jeśli wynik spełnia wymagania `constexpr` funkcji:
+Wyrażenie lambda jest niejawnie **constexpr** Jeśli wynik nie spełnia wymagań **constexpr** funkcji:
 ```cpp
     auto answer = [](int n) 
     {
@@ -47,7 +46,7 @@ Wyrażenie lambda jest niejawnie `constexpr` Jeśli wynik spełnia wymagania `co
 
     constexpr int response = answer(10);
 ``` 
-Jeśli wyrażenie lambda jest jawnie lub niejawnie `constexpr`i przekonwertować go na wskaźnik funkcji, wynikowa funkcja jest również `constexpr`:
+Jeśli wyrażenie lambda jest jawnie lub niejawnie **constexpr**i przekonwertuj go na wskaźnik funkcji, wynikowy funkcja jest również **constexpr**:
 
 ```cpp
     auto Increment = [](int n)
@@ -58,8 +57,8 @@ Jeśli wyrażenie lambda jest jawnie lub niejawnie `constexpr`i przekonwertować
     constexpr int(*inc)(int) = Increment;
 ```
   
-## <a name="see-also"></a>Zobacz też  
+## <a name="see-also"></a>Zobacz także  
  [Dokumentacja języka C++](../cpp/cpp-language-reference.md)   
  [Obiekty funkcji w standardowej bibliotece C++](../standard-library/function-objects-in-the-stl.md)   
- [Wywołania funkcji](../cpp/function-call-cpp.md)   
+ [Wywołanie funkcji](../cpp/function-call-cpp.md)   
  [for_each](../standard-library/algorithm-functions.md#for_each)

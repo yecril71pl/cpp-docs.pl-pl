@@ -12,12 +12,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1284e4f6e096ab8021c597b841a8e983673561bd
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: 0edf350289d04824dc2e06e4e11144a4f3141770
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37947882"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39407036"
 ---
 # <a name="range-based-for-statement-c"></a>Range-based for — instrukcja (C++)
 Wykonuje `statement` wielokrotnie i sekwencyjnie dla każdego elementu w `expression`.  
@@ -25,7 +25,6 @@ Wykonuje `statement` wielokrotnie i sekwencyjnie dla każdego elementu w `expres
 ## <a name="syntax"></a>Składnia  
   
 ```  
-  
 for ( for-range-declaration : expression )  
    statement   
 ```  
@@ -90,7 +89,6 @@ int main()
     cout << endl;  
     cout << "end of vector test" << endl;  
 }  
-  
 ```  
   
  Oto dane wyjściowe:  
@@ -121,7 +119,7 @@ int main()
   
 -   Używa wyszukiwania zależnego od argumentów `begin()` i `end()` dla żadnych innych czynności.  
   
-## <a name="see-also"></a>Zobacz też  
+## <a name="see-also"></a>Zobacz także  
  [Automatycznie](../cpp/auto-cpp.md)   
  [Instrukcje iteracji](../cpp/iteration-statements-cpp.md)   
  [Keywords](../cpp/keywords-cpp.md)   

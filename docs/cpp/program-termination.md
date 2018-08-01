@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 643718dc0b58f74fbb1ed957c8dc3212a4408073
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: f0ba2e8452defef14816993a2c1851de58bf624f
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37939926"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39407286"
 ---
 # <a name="program-termination"></a>Kończenie działania programu
 W języku C++ istnieje kilka sposobów, aby zakończyć program:  
@@ -33,5 +33,5 @@ W języku C++ istnieje kilka sposobów, aby zakończyć program:
   
 -   Wykonaj [zwracają](../cpp/return-statement-in-program-termination-cpp.md) instrukcji z `main`.  
   
-## <a name="see-also"></a>Zobacz też  
+## <a name="see-also"></a>Zobacz także  
  [main: uruchamianie programu](../cpp/main-program-startup.md)

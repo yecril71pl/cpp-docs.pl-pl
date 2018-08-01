@@ -1,5 +1,5 @@
 ---
-title: Jawne zastąpienia (C++) | Dokumentacja firmy Microsoft
+title: Jawne przesłonięcia (C++) | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,25 +18,26 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5bda87a0241e61cfc3fa26d4829f0504b784e8ae
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: b7b333d42f5e5e309ffa17e8c267dcb22ec30e6d
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39408723"
 ---
 # <a name="explicit-overrides-c"></a>Jawne przesłonięcia (C++)
 **Microsoft Specific**  
   
- Jeśli tej samej funkcji wirtualnej jest zadeklarowana w co najmniej dwóch [interfejsów](../cpp/interface.md) i jeśli klasa pochodzi od tych interfejsów, można jawnie przesłonić każdej funkcji wirtualnej.  
+ Jeśli ten sam funkcji wirtualna jest zadeklarowana w co najmniej dwóch [interfejsów](../cpp/interface.md) i jeśli klasa jest pochodną tych interfejsów, można wyraźnie przezwyciężyć każdej funkcji wirtualnej.  
   
- Dla informacji na temat jawnego przesłania w kodzie zarządzanym przy użyciu nowej składni zarządzanych, zobacz [jawne zastąpienia](../windows/explicit-overrides-cpp-component-extensions.md).  
+ Aby uzyskać informacji na temat jawne zastąpienia w kodzie zarządzanym za pomocą nowej składni zarządzanych, zobacz [jawne zastępowanie](../windows/explicit-overrides-cpp-component-extensions.md).  
   
- **KOŃCOWY określonych firmy Microsoft**  
+ **END specyficzny dla Microsoft**  
   
 ## <a name="example"></a>Przykład  
- Poniższy przykładowy kod przedstawia sposób użycia jawne zastąpienia:  
+ Poniższy przykład kodu ilustruje sposób użycia jawne przesłonięcia:  
   
-```  
+```cpp 
 // deriv_ExplicitOverrides.cpp  
 // compile with: /GR  
 extern "C" int printf_s(const char *, ...);  
@@ -126,5 +127,5 @@ In CMyClass::IMyInt2::mf2()
 In CMyClass::IMyInt2::mf2(int)  
 ```  
   
-## <a name="see-also"></a>Zobacz też  
+## <a name="see-also"></a>Zobacz także  
  [Dziedziczenie](../cpp/inheritance-cpp.md)

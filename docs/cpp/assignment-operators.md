@@ -43,11 +43,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4318d7913b180c3fbadcf9d655e402c9b0ad7ccc
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: dd26c8b9fd044c9f6372ef0a680fbc770620e43d
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/07/2018
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39408585"
 ---
 # <a name="assignment-operators"></a>Operatory przypisania
 ## <a name="syntax"></a>Składnia  
@@ -61,11 +62,11 @@ assignment-operator : one of
 ## <a name="remarks"></a>Uwagi  
  Operatory przypisania przechowują wartość w obiekcie wyznaczonym przez lewy operand. Istnieją trzy rodzaje operacji przypisania: 
 
-1. Przypisanie proste, w której wartość drugiego operandu jest przechowywany w obiekcie określonej przez pierwszy argument operacji. 1. przydział złożony, w którym arytmetyczne, shift lub operacji jest wykonywane przed przechowywania wyniku.
-1. Przenieś przypisania (dla typu klasy) w zasobów, do których są przekazywane bez kopiowania.
+1. Przypisanie proste, w którym wartość drugiego operandu jest przechowywana w obiekcie określonym przez pierwszy operand. 1. przydział złożony, w którym operacje arytmetyczne, przesunięcia lub operacji na poziomie bitowym są wykonywane przed zachowaniem wyniku.
+1. Przenieś przypisania (typy klas) zasoby są przenoszone bez kopiowania.
 
 
-Wszystkie operatory przypisania w poniższej tabeli, z wyjątkiem = i & & = operatory są złożone operatory przypisania.  
+Wszystkie operatory przypisania w poniższej tabeli, z wyjątkiem = i & & = operatory są operatorami przypisania złożonego.  
   
 ### <a name="assignment-operators"></a>Operatory przypisania  
   
@@ -82,7 +83,7 @@ Wszystkie operatory przypisania w poniższej tabeli, z wyjątkiem = i & & = oper
 |**&=**|Uzyskuje bitowe AND pierwszego i drugiego operandu; przechowuje wynik w obiekcie określonym przez pierwszy operand.|  
 |**^=**|Uzyskuje bitowe wykluczające OR pierwszego i drugiego operandu; przechowuje wynik w obiekcie określonym przez pierwszy operand.|  
 |**\|=**|Uzyskuje bitowe zawierające OR pierwszego i drugiego operandu; przechowuje wynik w obiekcie określonym przez pierwszy operand.|
-|**&&=**| Operator przypisania przenoszenia (dotyczy tylko typów klasy). Jeśli drugi operand jest r-wartości, Przenieś jej zasobów do pierwszy argument operacji (bez ich kopiowania). Zobacz [konstruktory przenoszenia i operatory przypisania przenoszenia](move-constructors-and-move-assignment-operators-cpp.md) Aby uzyskać więcej informacji.|
+|**&&=**| Operator przypisania przenoszenia (dotyczy tylko typów klasy). Jeśli drugi argument to rvalue, należy przenieść jego zasobów do pierwszego operandu (bez kopiowania ich). Zobacz [konstruktory przenoszenia i operatory przypisania przenoszenia](move-constructors-and-move-assignment-operators-cpp.md) Aby uzyskać więcej informacji.|
   
  **Słowa kluczowe operatora**  
   
@@ -94,11 +95,11 @@ Wszystkie operatory przypisania w poniższej tabeli, z wyjątkiem = i & & = oper
 |**\|=**|`or_eq`|  
 |**^=**|`xor_eq`|  
   
- Istnieją dwa sposoby słowa kluczowe operatora w programach: uwzględnić plik nagłówka `iso646.h`, lub skompiluj z [/Za](../build/reference/za-ze-disable-language-extensions.md) — opcja kompilatora (Wyłącz rozszerzenia językowe).  
+ Istnieją dwa sposoby dostępu do tych słów kluczowych operatora w programach: dołączanie pliku nagłówka `iso646.h`, lub kompilowanie z [/za](../build/reference/za-ze-disable-language-extensions.md) — opcja kompilatora (Wyłącz rozszerzenia językowe).  
   
 ## <a name="example"></a>Przykład  
   
-```  
+```cpp 
 // expre_Assignment_Operators.cpp  
 // compile with: /EHsc  
 // Demonstrate assignment operators  
@@ -129,7 +130,7 @@ int main() {
   
  Obiekt dowolnej jednoznacznej klasy pochodnej od danej klasy bazowej może być przypisany do obiektu klasy bazowej. Przeciwny warunek nie jest spełniony, ponieważ istnieje niejawna konwersja z klasy pochodnej do klasy bazowej, ale nie z klasy bazowej do klasy pochodnej. Na przykład:  
   
-```  
+```cpp 
 // expre_SimpleAssignment.cpp  
 // compile with: /EHsc  
 #include <iostream>  
@@ -160,14 +161,14 @@ int main()
   
  Dla obiektów typu klasy, przypisanie różni się od inicjowania. Aby zilustrować jak różne może być przypisanie i inicjowanie, należy rozważyć kod  
   
-```  
+```cpp 
 UserType1 A;  
 UserType2 B = A;  
 ```  
   
  W poprzednim kodzie zaprezentowano inicjator; wywołuje on konstruktor dla `UserType2`, który pobiera argument typu `UserType1` Dany kod  
   
-```  
+```cpp 
 UserType1 A;  
 UserType2 B;  
   
@@ -176,7 +177,7 @@ B = A;
   
  instrukcja przypisania  
   
-```  
+```cpp 
 B = A;   
 ```  
   
@@ -189,22 +190,22 @@ B = A;
 -   Wywołanie konstruktora `UserType2::UserType2`, jeśli taki konstruktor istnieje, który przyjmuje argument `UserType1` i kopiuje wynik.  
   
 ## <a name="compound-assignment"></a>Przydział złożony  
- Złożone operatory przypisania, w tabeli w [operatory przypisania](../cpp/assignment-operators.md), są określone w formie *e1* `op` =  *e2*, gdzie *e1* jest modyfikowalną l wartość nie jest typu const i *e2* jest jednym z następujących czynności:  
+ Złożone operatory przypisania, jak pokazano w tabeli w [operatory przypisania](../cpp/assignment-operators.md), są określone w formie *e1* `op` =  *e2*, gdzie *e1* jest modyfikowalną l wartością nie jest typu const i *e2* jest jednym z następujących czynności:  
   
 -   Typ arytmetyczny  
   
 -   Wskaźnik, jeśli `op` jest + lub -  
   
- *E1* `op` =  *e2* działanie formularza jako *e1* *= e1* `op` *e2*, ale *e1* jest oceniane tylko raz.  
+ *E1* `op` =  *e2* formularz, który zachowuje się jak *e1* *= e1* `op` *e2*, ale *e1* jest oceniane tylko raz.  
   
- Przydział złożony, aby Typ wyliczany generuje komunikat o błędzie. Jeśli lewy operand jest typu wskaźnika, prawy operand musi być typu wskaźnika lub musi być wyrażenie stałe, którego wynikiem jest 0. Jeśli lewy operand jest typu całkowitego, prawy operand nie musi być typu wskaźnika.  
+ Przydział złożony, aby Typ wyliczany generuje komunikat o błędzie. Jeśli lewy operand jest typu wskaźnika, prawy operand musi być typem wskaźnika lub musi być wyrażeniem stałym, którego wynikiem jest 0. Jeśli lewy operand jest typu całkowitego, prawy operand nie musi być typu wskaźnika.  
   
 ## <a name="result-of-assignment-operators"></a>Wynik dla operatorów przypisania  
- Operatory przypisania zwróć wartość obiektu określonego przez lewy operand po przypisania. Wynikowy typ jest typem lewego operandu. Wynik wyrażenia przypisania zawsze jest wartością l-value. Operatorzy te mają łączność od prawej do lewej. Lewy operand musi być modyfikowalną l wartość.  
+ Operatory przypisania zwróć wartość obiektu określonego przez lewy argument operacji po przypisaniu. Wynikowy typ jest typem operandu po lewej stronie. Wynik wyrażenia przypisania zawsze jest l wartością. Te operatory mają łączność od prawej do lewej. Lewy operand musi być modyfikowalną l wartością.  
   
- W ANSI C wynik wyrażenia przypisania nie jest wartością l-value. W związku z tym prawne wyrażenie C++ `(a += b) += c` jest niedozwolony w C.  
+ W ANSI C wynik wyrażenia przypisania nie jest l wartością. W związku z tym, prawne wyrażenie C++ `(a += b) += c` jest niedozwolony w C.  
   
-## <a name="see-also"></a>Zobacz też  
+## <a name="see-also"></a>Zobacz także  
  [Wyrażenia z operatorami Dwuargumentowymi](../cpp/expressions-with-binary-operators.md)   
- [Operatory C++ wbudowanych, priorytet i łączność](../cpp/cpp-built-in-operators-precedence-and-associativity.md)   
+ [C++ wbudowane operatory, pierwszeństwo i kojarzenie](../cpp/cpp-built-in-operators-precedence-and-associativity.md)   
  [Operatory przypisania w języku C](../c-language/c-assignment-operators.md)

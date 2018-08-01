@@ -1,5 +1,5 @@
 ---
-title: 'Operator wyłączny sumy bitowej OR — Operator: ^ | Dokumentacja firmy Microsoft'
+title: 'Operator wyłączny sumy bitowej OR: ^ | Dokumentacja firmy Microsoft'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -20,12 +20,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0d080fa28e8f70cb6a4086709c4a5fc6215c4519
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: fe2f64c20c0d741608dfb2631c2e36026a31e8bb
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32409855"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39406679"
 ---
 # <a name="bitwise-exclusive-or-operator-"></a>Operator wyłączny sumy bitowej OR: ^
 ## <a name="syntax"></a>Składnia  
@@ -35,12 +35,12 @@ expression ^ expression
 ```  
   
 ## <a name="remarks"></a>Uwagi  
-Bitowy operator OR wyłączne (**^**) porównuje każdy bit jego pierwszego operandu na odpowiadający mu bit jej drugi argument operacji. Jeśli jeden bit ma wartość 0, a inne bit ma wartość 1, odpowiadający mu bit wynik jest równa 1. W przeciwnym razie odpowiadający mu bit wynik jest równa 0.  
+Bitowy operator OR wyłączne (**^**) porównuje każdy bit pierwszy argument operacji na odpowiadający mu bit drugim argumentem. Jeśli jeden bit ma wartość 0, a inne bit ma wartość 1, odpowiadający mu bit wynik jest równa 1. W przeciwnym razie odnośny bit wynik jest równa 0.  
   
-Obydwa argumenty operacji na poziomie bitowym wyłączny operator OR musi być typów całkowitych. Popularne konwersje arytmetyczne objęte [konwersje standardowe](standard-conversions.md) są stosowane do argumentów operacji.  
+Oba operandy bitowe wyłączny operator OR musi być typu całkowitoliczbowego. Popularne konwersje arytmetyczne omówione w [konwersje standardowe](standard-conversions.md) są stosowane do operandów.  
   
 ## <a name="operator-keyword-for-"></a>Operator — słowo kluczowe dla ^  
-**Xor** operator jest odpowiednikiem tekst **^**. Istnieją dwa sposoby **xor** operatora w programach: uwzględnić plik nagłówka `iso646.h`, lub skompiluj z [/Za](../build/reference/za-ze-disable-language-extensions.md) — opcja kompilatora (Wyłącz rozszerzenia językowe).  
+**Xor** operator jest odpowiednikiem tekstu **^**. Istnieją dwa sposoby dostępu do **xor** operatora w programach: uwzględnić plik nagłówka `iso646.h`, lub kompilowanie z [/Za](../build/reference/za-ze-disable-language-extensions.md) — opcja kompilatora (Wyłącz rozszerzenia językowe).  
   
 ## <a name="example"></a>Przykład  
   
@@ -58,7 +58,5 @@ int main() {
 }  
 ```  
   
-## <a name="see-also"></a>Zobacz też  
+## <a name="see-also"></a>Zobacz także  
  [Wbudowane operatory, pierwszeństwo i kojarzenie języka C++](../cpp/cpp-built-in-operators-precedence-and-associativity.md)   
-
-

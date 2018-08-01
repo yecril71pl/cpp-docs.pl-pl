@@ -15,46 +15,46 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c610da3545e7269c307542930140616dc6af9dce
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 4358712e5573095229a48a6d08b78706c608874d
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32418292"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39403651"
 ---
 # <a name="declspec"></a>__declspec
 
 **Microsoft Specific**
 
-Składnia rozszerzonych atrybutów do określenia klasy magazynowania informacji używa **__declspec** — słowo kluczowe, które określa, że mają być przechowywane z atrybutem klasy magazynu specyficzne dla firmy Microsoft wymienione poniżej wystąpienia danego typu. Przykładami innych modyfikatorów klasy magazynowania **statycznych** i **extern** słów kluczowych. Jednak te słowa kluczowe są częścią specyfikacji ANSI w językach C i C++ i jako takie nie są objęte składnią atrybutów rozszerzonych. Składnia atrybutu rozszerzonego upraszcza i standaryzuje rozszerzenia języków C i C++ specyficzne dla Microsoft.
+Składnia atrybutów rozszerzonych służących do określania informacji klasy magazynowania wykorzystuje **__declspec** słowo kluczowe, które określa, że wystąpienie danego typu jest mają być przechowywane z atrybutem klasy magazynowania specyficzne dla firmy Microsoft wymienione poniżej. Przykłady innych modyfikatorów klasy magazynowania **statyczne** i **extern** słów kluczowych. Jednak te słowa kluczowe są częścią specyfikacji ANSI w językach C i C++ i jako takie nie są objęte składnią atrybutów rozszerzonych. Składnia atrybutu rozszerzonego upraszcza i standaryzuje rozszerzenia języków C i C++ specyficzne dla Microsoft.
 
 ## <a name="grammar"></a>Gramatyka
 
-*Specyfikator Decl*:  
-&nbsp;&nbsp;&nbsp;&nbsp;**__declspec (***rozszerzony decl — modyfikator seq***)** 
+*Decl-specifier*:  
+&nbsp;&nbsp;&nbsp;&nbsp;**__declspec (***extended-decl modyfikator seq***)** 
 
-*rozszerzony decl — modyfikator seq*:  
-&nbsp;&nbsp;&nbsp;&nbsp;*rozszerzony decl — modyfikator*<sub>opcjonalnych</sub>  
-&nbsp;&nbsp;&nbsp;&nbsp;*rozszerzony decl — modyfikator* *rozszerzony decl — modyfikator seq*
+*rozszerzony decl modyfikator seq*:  
+&nbsp;&nbsp;&nbsp;&nbsp;*rozszerzony decl modyfikator*<sub>zoptymalizowany pod kątem</sub>  
+&nbsp;&nbsp;&nbsp;&nbsp;*rozszerzony decl modyfikator* *extended-decl modyfikator seq*
 
-*rozszerzony decl — modyfikator*:  
-&nbsp;&nbsp;&nbsp;&nbsp;**Dopasuj (** *#* **)**  
+*rozszerzony decl modyfikator*:  
+&nbsp;&nbsp;&nbsp;&nbsp;**Wyrównaj (** *#* **)**  
 &nbsp;&nbsp;&nbsp;&nbsp;**Przydziel ("** *segname* **")**  
 &nbsp;&nbsp;&nbsp;&nbsp;**domeny aplikacji**  
 &nbsp;&nbsp;&nbsp;&nbsp;**code_seg ("** *segname* **")**  
-&nbsp;&nbsp;&nbsp;&nbsp;**Przestarzałe**  
+&nbsp;&nbsp;&nbsp;&nbsp;**przestarzałe**  
 &nbsp;&nbsp;&nbsp;&nbsp;**DllImport**  
 &nbsp;&nbsp;&nbsp;&nbsp;**dllexport**  
 &nbsp;&nbsp;&nbsp;&nbsp;**jitintrinsic**  
-&nbsp;&nbsp;&nbsp;&nbsp;**naked**  
+&nbsp;&nbsp;&nbsp;&nbsp;**"naked"**  
 &nbsp;&nbsp;&nbsp;&nbsp;**noalias**  
 &nbsp;&nbsp;&nbsp;&nbsp;**noinline**  
 &nbsp;&nbsp;&nbsp;&nbsp;**noreturn**  
 &nbsp;&nbsp;&nbsp;&nbsp;**nothrow**  
 &nbsp;&nbsp;&nbsp;&nbsp;**novtable**  
 &nbsp;&nbsp;&nbsp;&nbsp;**Proces**  
-&nbsp;&nbsp;&nbsp;&nbsp;**Właściwość (** { **uzyskać =**_get_func_name_ &#124; **, umieść =**_put_func_name_ } **)**  
-&nbsp;&nbsp;&nbsp;&nbsp;**Ogranicz**  
+&nbsp;&nbsp;&nbsp;&nbsp;**właściwości (** { **uzyskać =**_get_func_name_ &#124; **, umieść =**_put_func_name_ } **)**  
+&nbsp;&nbsp;&nbsp;&nbsp;**ograniczenia**  
 &nbsp;&nbsp;&nbsp;&nbsp;**safebuffers**  
 &nbsp;&nbsp;&nbsp;&nbsp;**selectany**  
 &nbsp;&nbsp;&nbsp;&nbsp;**spectre(nomitigation)**  
@@ -63,31 +63,31 @@ Składnia rozszerzonych atrybutów do określenia klasy magazynowania informacji
 
 Spacja oddziela sekwencje modyfikatora deklaracji. Przykłady są zamieszczone w kolejnych sekcjach.
 
-Atrybut rozszerzony gramatyki obsługuje te atrybuty klasy magazynu specyficzne dla firmy Microsoft: [Dopasuj](../cpp/align-cpp.md), [przydzielić](../cpp/allocate.md), [elementu appdomain](../cpp/appdomain.md), [code_seg](../cpp/code-seg-declspec.md), [przestarzałe](../cpp/deprecated-cpp.md), [dllexport](../cpp/dllexport-dllimport.md), [dllimport](../cpp/dllexport-dllimport.md), [jitintrinsic](../cpp/jitintrinsic.md), [naked](../cpp/naked-cpp.md), [noalias](../cpp/noalias.md), [noinline](../cpp/noinline.md), [noreturn](../cpp/noreturn.md), [nothrow](../cpp/nothrow-cpp.md), [novtable](../cpp/novtable.md) , [procesu](../cpp/process.md), [ograniczyć](../cpp/restrict.md), [safebuffers](../cpp/safebuffers.md), [selectany](../cpp/selectany.md), [spectre](../cpp/spectre.md), i [wątku](../cpp/thread.md). Obsługuje ona również te atrybuty obiektu COM: [właściwości](../cpp/property-cpp.md) i [uuid](../cpp/uuid-cpp.md).
+Gramatyka atrybutów rozszerzonych obsługuje te atrybuty klasy magazynu specyficzne dla firmy Microsoft: [wyrównać](../cpp/align-cpp.md), [przydzielić](../cpp/allocate.md), [appdomain](../cpp/appdomain.md), [code_seg](../cpp/code-seg-declspec.md), [przestarzałe](../cpp/deprecated-cpp.md), [dllexport](../cpp/dllexport-dllimport.md), [dllimport](../cpp/dllexport-dllimport.md), [jitintrinsic](../cpp/jitintrinsic.md), ["naked"](../cpp/naked-cpp.md), [noalias](../cpp/noalias.md), [noinline](../cpp/noinline.md), [noreturn](../cpp/noreturn.md), [nothrow](../cpp/nothrow-cpp.md), [novtable](../cpp/novtable.md) , [procesu](../cpp/process.md), [ograniczyć](../cpp/restrict.md), [safebuffers](../cpp/safebuffers.md), [selectany](../cpp/selectany.md), [krokami zaradczymi dla luki](../cpp/spectre.md), i [wątku](../cpp/thread.md). Obsługuje również te atrybuty obiektu COM: [właściwość](../cpp/property-cpp.md) i [uuid](../cpp/uuid-cpp.md).
 
-**Code_seg**, **dllexport**, **dllimport**, **naked**, **noalias**, **nothrow** , **właściwości**, **ograniczyć**, **selectany**, **wątku**, i **uuid**atrybuty klasy magazynu są tylko właściwości deklaracji obiektu lub funkcja, do której są stosowane. **Wątku** atrybut wpływa na dane i tylko obiekty. **Naked** i **spectre** tylko funkcje wpływają na atrybuty. **Dllimport** i **dllexport** atrybuty mają wpływ na funkcje, danych i obiektów. **Właściwości**, **selectany**, i **uuid** atrybuty wpływają na obiekty COM.
+**Code_seg**, **dllexport**, **dllimport**, **"naked"**, **noalias**, **nothrow** , **właściwość**, **ograniczyć**, **selectany**, **wątku**, i **uuid**atrybuty klasy magazynu są właściwości tylko dla deklaracji obiektu lub funkcji, do której są stosowane. **Wątku** atrybut ma wpływ na dane i obiekty tylko. **"Naked"** i **krokami zaradczymi dla luki** tylko funkcje mają wpływ na atrybuty. **Dllimport** i **dllexport** atrybuty mają wpływ na funkcje, dane i obiekty. **Właściwość**, **selectany**, i **uuid** atrybuty mają wpływ na obiekty COM.
 
-**__Declspec** słów kluczowych powinna zostać umieszczona na początku deklaracji proste. Kompilator ignoruje bez ostrzeżenia, w każdym **__declspec** słów kluczowych jest umieszczany po * lub & i przed identyfikatorem zmiennej w deklaracji.
+**__Declspec** słów kluczowych, powinny być umieszczone na początku zwykłej deklaracji. Kompilator ignoruje, bez ostrzeżenia, wszelkie **__declspec** słowa kluczowe umieszczone po * lub & i przed identyfikatorem zmiennej w deklaracji.
 
-A **__declspec** określony na początku deklaracji typu zdefiniowanego przez użytkownika atrybut ma zastosowanie do zmiennej typu. Na przykład:
+A **__declspec** atrybutu wskazanego w początku deklaracji typu zdefiniowanego przez użytkownika stosuje się do zmiennej tego typu. Na przykład:
 
 ```cpp
 __declspec(dllimport) class X {} varX;
 ```
 
-W takim przypadku atrybut ma zastosowanie do `varX`. A **__declspec** atrybut umieszczany po **klasy** lub **struktury** — słowo kluczowe dotyczy typ zdefiniowany przez użytkownika. Na przykład:
+W tym przypadku atrybut dotyczy `varX`. A **__declspec** atrybut umieszczone po **klasy** lub **struktury** słowa kluczowego ma zastosowanie do typu zdefiniowanego przez użytkownika. Na przykład:
 
 ```cpp
 class __declspec(dllimport) X {};
 ```
 
-W takim przypadku atrybut ma zastosowanie do `X`.
+W tym przypadku atrybut dotyczy `X`.
 
-Ogólne wytyczne dotyczące korzystania z **__declspec** atrybutu proste deklaracje wygląda następująco:
+Ogólne wytyczne dotyczące korzystania **__declspec** atrybutu dla prostych deklaracji są następujące:
 
 *decl-specifier-seq* *init-declarator-list*;
 
-*Decl — specyfikator seq* powinien zawierać między innymi typu podstawowego (np. **int**, **float**, **typedef**, lub nazwy klasy), Klasa magazynu (np. **statycznych**, **extern**), lub **__declspec** rozszerzenia. *Init deklarator listy* powinien zawierać między innymi wskaźnika część deklaracji. Na przykład:
+*Decl-specifier-seq* powinien zawierać, między innymi, typ podstawowy (np. **int**, **float**, **typedef**, lub nazwy klasy), Klasa magazynu (np. **statyczne**, **extern**), lub **__declspec** rozszerzenia. *Init-declarator-list* powinien zawierać, między innymi, część wskaźnika deklaracji. Na przykład:
 
 ```cpp
 __declspec(selectany) int * pi1 = 0;   //Recommended, selectany & int both part of decl-specifier
@@ -102,9 +102,8 @@ Poniższy kod deklaruje zmienną całkowitoliczbową wątku lokalnego i inicjuje
 __declspec( thread ) int tls_i = 1;
 ```
 
-**KOŃCOWY określonych firmy Microsoft**
+**END specyficzny dla Microsoft**
 
 ## <a name="see-also"></a>Zobacz także
-
-[Słowa kluczowe](../cpp/keywords-cpp.md)  
-[Rozszerzone atrybuty klasy magazynu języka C](../c-language/c-extended-storage-class-attributes.md)  
+ [Słowa kluczowe](../cpp/keywords-cpp.md)  
+ [Rozszerzone atrybuty klasy magazynu języka C](../c-language/c-extended-storage-class-attributes.md)  

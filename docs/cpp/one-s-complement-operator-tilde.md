@@ -1,5 +1,5 @@
 ---
-title: 'Jeden&#39;s Operator dopełnienia jednostkowego: ~ | Dokumentacja firmy Microsoft'
+title: 'Jeden&#39;operatorem dopełnienia s: ~ | Dokumentacja firmy Microsoft'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -20,29 +20,29 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a10c8f3df2a1f2f27ee33450a52132e8184d4232
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 79d34a4057ccbe5c10a6d22a14eed4317e62c464
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39408636"
 ---
-# <a name="one39s-complement-operator-"></a>Jeden&#39;s Operator dopełnienia jednostkowego: ~
+# <a name="one39s-complement-operator-"></a>Jeden&#39;operatorem dopełnienia s: ~
 ## <a name="syntax"></a>Składnia  
   
 ```  
-  
 ~ cast-expression  
 ```  
   
 ## <a name="remarks"></a>Uwagi  
- Operator dopełnienia jednostkowego swoich (`~`), czasami nazywane operator "dopełnienia bitowego", daje bitowej, jeden dla dopełnienia jej argument. Każdy bit, który jest 1 argument operacji jest 0, w wyniku. Z drugiej strony każdy bit, który ma wartość 0 argument wynosi 1, w wyniku. Argument operacji do swoich operatorem dopełnienia musi być typem całkowitym.  
+ Operator dopełnienia jednostkowego (`~`), czasami nazywane operator "dopełnienia bitowego", daje bitowej, jeden na uzupełnienie swojego operandu. Każdego bitu, który ma wartość 1 w argumencie operacji jest 0, w wyniku. Z drugiej strony każdego bitu, który ma wartość 0 w argumencie operacji wynosi 1, w wyniku. Argument operacji do operator dopełnienia jednostkowego musi być typu całkowitego.  
   
 ## <a name="operator-keyword-for-"></a>Operator — słowo kluczowe dla ~  
- `compl` Operator jest odpowiednikiem tekstu `~`. Istnieją dwa sposoby `compl` operatora w programach: uwzględnić plik nagłówka `iso646.h`, lub skompiluj z [/Za](../build/reference/za-ze-disable-language-extensions.md).  
+ **Compl** operator jest odpowiednikiem tekstu `~`. Istnieją dwa sposoby dostępu do **compl** operatora w programach: dołączanie pliku nagłówka `iso646.h`, lub kompilowanie z [/za](../build/reference/za-ze-disable-language-extensions.md).  
   
 ## <a name="example"></a>Przykład  
   
-```  
+```cpp 
 // expre_One_Complement_Operator.cpp  
 // compile with: /EHsc  
 #include <iostream>  
@@ -57,11 +57,11 @@ int main () {
 }  
 ```  
   
- W tym przykładzie, nowa wartość jest przypisywana do `y` jest uzupełnieniem, w wartości bez znaku 0xFFFF lub 0x0000.  
+ W tym przykładzie nowa wartość przypisana do `y` to uzupełnienie jedynkowe 0xFFFF lub 0x0000 wartości bez znaku.  
   
- Promocję typu całkowitego odbywa się na całkowite argumentów operacji, a wynikowy typ jest typem, do którego zostanie podniesiona argument. Zobacz [konwersje standardowe](standard-conversions.md) uzyskać więcej informacji na temat jak jest wykonywane podwyższenia poziomu.  
+ Promocja typu całkowitego odbywa się w przypadku argumentów operacji typu całkowitego, a wynikowy typ jest typem, do którego argument jest podnoszony. Zobacz [konwersje standardowe](standard-conversions.md) więcej informacji na temat jak jest wykonywane podwyższenia poziomu.  
   
-## <a name="see-also"></a>Zobacz też  
+## <a name="see-also"></a>Zobacz także  
  [Wyrażenia z operatorami Jednoargumentowymi](../cpp/expressions-with-unary-operators.md)   
- [Operatory C++ wbudowanych, priorytet i łączność](../cpp/cpp-built-in-operators-precedence-and-associativity.md)   
+ [C++ wbudowane operatory, pierwszeństwo i kojarzenie](../cpp/cpp-built-in-operators-precedence-and-associativity.md)   
  [Jednoargumentowe operatory arytmetyczne](../c-language/unary-arithmetic-operators.md)

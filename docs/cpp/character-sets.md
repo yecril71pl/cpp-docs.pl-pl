@@ -1,5 +1,5 @@
 ---
-title: Zestawy znaków | Dokumentacja firmy Microsoft
+title: Zestawów znaków | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 04/12/2018
 ms.technology:
@@ -15,21 +15,21 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0627eaa2606d13ced457ae336bd2a0fb4dc83801
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 25370d7b7e5ddf460ace1ce349c9fc501feb2343
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32414786"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39407078"
 ---
 # <a name="character-sets"></a>Zestawy znaków
-Tekst program w języku C++ są przechowywane w plikach źródłowych, korzystających z kodowania znaków określonego. C++ standard określa zestaw znaków źródła podstawowe dla plików źródłowych i zestaw znaków wykonania podstawowych dla skompilowanych plików. Visual C++ pozwala dodatkowy zestaw znaków specyficzne dla ustawień regionalnych do użycia w plikach źródłowych i skompilowane pliki.  
+Tekst program w języku C++ są przechowywane w plikach źródłowych, korzystających z kodowaniem określonego znaku. C++ standard określa zestawu znaków podstawowgoe źródła dla plików źródłowych i podstawowym zestawie egzekucji znaków dla skompilowanych plików. Visual C++ umożliwia dodatkowego zestawu znaków specyficznych dla ustawień regionalnych, które ma być używany w plikach źródłowych i skompilowane pliki.  
   
 ## <a name="character-sets"></a>Zestawy znaków  
- Określa C++ standard *zestaw znaków źródła podstawowe* które mogą być używane w plikach źródłowych. Do reprezentowania znaków spoza tego zestawu, można określić dodatkowe znaki przy użyciu *Uniwersalna nazwa znaku*. Podczas kompilacji, *zestaw znaków wykonania podstawowych* i *zestaw znaków dwubajtowych wykonywania podstawowych* reprezentują znaków i ciągi, które mogą być wyświetlane w programie. Implementacja Visual C++ pozwala dodatkowe znaki w kodzie źródłowym i skompilowanego kodu.  
+ Określa C++ standard *zestaw znaków podstawowego źródła* , mogą być używane w plikach źródłowych. Do reprezentowania znaków spoza tego zestawu, można określić dodatkowe znaki przy użyciu *znaki uniwersalne nazwy*. Po skompilowaniu *zestaw znaków wykonania podstawowego* i *zestaw znaków dwubajtowych wykonania podstawowego* reprezentują znaków i ciągów, które mogą być wyświetlane w programie. Implementacja języka Visual C++ umożliwia dodatkowe znaki w kodzie źródłowym i skompilowanego kodu.  
   
-### <a name="basic-source-character-set"></a>Zestaw znaków źródła podstawowe  
- *Zestaw znaków źródła podstawowe* składa się z 96 znaków, które mogą być używane w plikach źródłowych. Ten zestaw zawiera znak spacji, tabulator poziomy, tabulator pionowy, źródła danych formularza i znaki nowego wiersza, a to zestaw znaków graficznych:  
+### <a name="basic-source-character-set"></a>Zestaw znaków podstawowego źródła  
+ *Zestaw znaków podstawowego źródła* składa się z 96 znaków, które mogą być używane w plikach źródłowych. Ten zestaw zawiera znak spacji, tabulator poziomy, tabulator pionowy, wciągnięcia kartki i znaki nowego wiersza, a to zestaw znaków graficznych:  
   
  `a b c d e f g h i j k l m n o p q r s t u v w x y z`  
   
@@ -41,28 +41,27 @@ Tekst program w języku C++ są przechowywane w plikach źródłowych, korzystaj
   
  **Microsoft Specific**  
   
- Visual C++ obejmuje `$` znak jako członek zestaw znaków źródła podstawowych. Visual C++ pozwala dodatkowy zestaw znaków do użycia w plikach źródłowych oparte na kodowanie pliku. Domyślnie program Visual Studio przechowuje pliki źródłowe za pomocą domyślną stronę kodową. Gdy pliki źródłowe zostaną zapisane przy użyciu ustawień regionalnych codepage lub Unicode codepage, Visual C++ umożliwia użycie znaków tę stronę kodową w kodzie źródłowym z wyjątkiem kody kontrolki nie jawnie dozwolone w znak podstawowe źródło zestaw. Na przykład można umieścić japońskie znaki w komentarze, identyfikatory lub literałów ciągów, jeśli zapiszesz plik przy użyciu japońskiego stronę kodową. Visual C++ nie zezwala na sekwencji znaków, których nie można przetłumaczyć prawidłowych znaków wielobajtowych lub kody znaków Unicode. W zależności od opcji kompilatora nie wszystkie dozwolonych znaków mogą występować w identyfikatorach. Aby uzyskać więcej informacji, zobacz [identyfikatory](../cpp/identifiers-cpp.md).  
+ Visual C++ dołącza `$` znaków będący członkiem zestaw znaków podstawowego źródła. Visual C++ pozwala uzyskać dodatkowy zestaw znaków do użycia w plikach źródłowych, w oparciu o kodowanie pliku. Domyślnie program Visual Studio są przechowywane pliki źródłowe przy użyciu domyślną stroną kodową. Gdy pliki źródłowe są zapisywane przy użyciu strony kodowej specyficzne dla ustawień regionalnych lub na stronę kodową Unicode, Visual C++ pozwala na używanie znaków tę stronę kodową w kodzie źródłowym z wyjątkiem kody sterujące, nie są jawnie dozwolone w znaków podstawowgoe źródła ustawiona. Na przykład można umieścić znaki japońskie komentarze, identyfikatory lub literałów ciągów, jeśli zapiszesz plik przy użyciu japoński stronę kodową. Visual C++ nie zezwala na sekwencje znaków, które nie można przetłumaczyć prawidłowych znaków wielobajtowych lub punkty kodowe Unicode. W zależności od opcji kompilatora nie wszystkie dozwolonych znaków mogą występować w identyfikatorów. Aby uzyskać więcej informacji, zobacz [identyfikatory](../cpp/identifiers-cpp.md).  
   
- **KOŃCOWY określonych firmy Microsoft**  
+ **END specyficzny dla Microsoft**  
   
 ### <a name="universal-character-names"></a>Uniwersalne nazwy znaków  
- Ponieważ programy C++ mogą używać wielu więcej znaków niż określone w zestawie znaków źródła podstawowe, te znaki można określić w sposób przenośnych za pomocą *uniwersalne nazwy znaków*. Nazwa zawierająca znaki uniwersalne składa się z sekwencji znaków, które reprezentują punkt kodu Unicode.  Te mieć dwie formy. Użyj `\UNNNNNNNN` reprezentuje punkt kodu Unicode w formularzu U + NNNNNNNN, gdzie NNNNNNNN jest numerem punktu 8 cyfr kodu szesnastkowego. Użyj czterocyfrowe `\uNNNN` reprezentuje punkt kodu Unicode w formularzu U + 0000NNNN.  
+ Ponieważ programy C++ mogą używać wielu więcej znaków niż określone w zestawie znaków podstawowego źródła, należy określić te znaki w taki sposób, przenośne za pomocą *uniwersalne nazwy znaków*. Nazwa znaki uniwersalne składa się z sekwencji znaków, które reprezentują punkt kodu Unicode.  Wykonaj te dwie formy. Użyj `\UNNNNNNNN` reprezentuje punkt kodu Unicode w postaci U + NNNNNNNN, gdzie NNNNNNNN to numer punktu osiem cyfr kodu szesnastkowego. Użycie czterech cyfr `\uNNNN` reprezentuje punkt kodu Unicode w postaci U + 0000NNNN.  
   
- Uniwersalne nazwy znaków można w identyfikatorów i literały ciągów i znakowe. Nazwa zawierająca znaki uniwersalne nie może być używana do reprezentowania zastępczego punktu kodu z zakresu od 0xD800 — 0xDFFF. Zamiast tego należy użyć punktu odpowiedni kod; kompilator automatycznie generuje wszelkie wymagane części znaku dwuskładnikowego. Dodatkowe ograniczenia dotyczą uniwersalne nazwy znaków, które mogą być używane w identyfikatorów. Aby uzyskać więcej informacji, zobacz [identyfikatory](../cpp/identifiers-cpp.md) i [literały ciągów i znakowe](../cpp/string-and-character-literals-cpp.md).  
+ Uniwersalne nazwy znaków może służyć w identyfikatorach, a w literałach ciągów i znakowe. Nazwa znaki uniwersalne nie może służyć do reprezentowania punkt kodu zastępczy z zakresu od 0xD800-0xDFFF. Zamiast tego należy użyć punktu odpowiedni kod; kompilator automatycznie generuje wszelkie wymagane surogaty. Dodatkowe ograniczenia dotyczą uniwersalne nazwy znaków, które mogą być używane w identyfikatorach. Aby uzyskać więcej informacji, zobacz [identyfikatory](../cpp/identifiers-cpp.md) i [literały ciągów i znakowe](../cpp/string-and-character-literals-cpp.md).  
   
  **Microsoft Specific**  
   
- Kompilator Visual C++ zamiennie traktuje znaku w formularzach nazwa zawierająca znaki uniwersalne i literału. Na przykład można zadeklarować identyfikatora za pomocą formularza nazwa zawierająca znaki uniwersalne i używać go w formie literału:  
+ Kompilator języka Visual C++ traktuje znak w charakterze uniwersalnym nazwa literału w formularzach i zamiennie. Na przykład można zadeklarować identyfikatora przy użyciu formy nazwy znaki uniwersalne i używać go w postaci literału:  
   
 ```cpp  
 auto \u30AD = 42; // \u30AD is 'キ'  
 if (キ == 42) return true; // \u30AD and キ are the same to the compiler  
-  
 ```  
   
- Format znaki rozszerzone do Schowka systemu Windows jest specyficzne dla aplikacji, ustawienia regionalne. Wycinanie i wklejanie te znaki w kodzie z innej aplikacji może powodować kodowania nieoczekiwany znak. Może to spowodować analizowanie błędów nie Przyczyna widoczne w kodzie. Firma Microsoft zaleca ustawienie Twojego źródła kodowanie pliku na stronę kodową Unicode przed wklejeniem znaki rozszerzone. Zalecamy również użyć aplikacji tablicy znaków lub edytorze IME można wygenerować znaki rozszerzone.  
+ Format znaków rozszerzonych w Schowku Windows jest specyficzne dla ustawień regionalnych aplikacji. Wycinanie i wklejanie tych znaków w kodzie z innej aplikacji może spowodować nieoczekiwany znak kodowania. Może to spowodować błędów analizy przy użyciu bez widocznej przyczyny w kodzie. Firma Microsoft zaleca, ustaw źródło pliku kodowania na Unicode stronę kodową przed wklejeniem znaków rozszerzonych. Firma Microsoft zaleca, użyj edytora IME lub aplikacji tablicy znaków do generowania znaków rozszerzonych.  
   
- **KOŃCOWY określonych firmy Microsoft**  
+ **END specyficzny dla Microsoft**  
   
-### <a name="basic-execution-character-set"></a>Zestaw znaków wykonania podstawowych  
- *Zestaw znaków wykonania podstawowych* i *zestaw znaków dwubajtowych wykonywania podstawowych* składają się wszystkie znaki w zestawie znaków źródła podstawowe i znaków kontrolnych, które reprezentują alertu, BACKSPACE, znaków powrotu karetki i znakiem pustym.   *Zestaw znaków wykonania* i *zestaw znaków dwubajtowych wykonywania* są nadzbiorami podstawowe zestawy. Obejmują one zdefiniowane w implementacji źródła znaki spoza zestawu znaków podstawowego źródła. Zestaw znaków wykonania ma reprezentację ustawień regionalnych.
+### <a name="basic-execution-character-set"></a>Zestaw znaków wykonania podstawowego  
+ *Zestaw znaków wykonania podstawowego* i *zestaw znaków dwubajtowych wykonania podstawowego* składają się z wszystkich znaków w zestawie znaków podstawowego źródła oraz znaki kontrolne, które reprezentują alertu BACKSPACE, znaku powrotu karetki i znaku null. *Zestaw znaków wykonania* i *zestaw znaków dwubajtowych wykonywania* są nadzbiorami podstawowe zestawy. Obejmują one znaków zdefiniowanych w implementacji źródła poza zestaw znaków podstawowego źródła. Zestaw znaków wykonania jej reprezentacji specyficzne dla ustawień regionalnych.

@@ -12,12 +12,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c67c1eab1be6cb1e9e1eadbaaba780bbf23b5a30
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: ba43df09773f15c44875335bdb63234502d94587
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38964902"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39406366"
 ---
 # <a name="microsoft-specific-modifiers"></a>Modyfikatory specyficzne dla firmy Microsoft
 Ten rozdział opisuje specyficzne dla Microsoft rozszerzenia do C++ w następujących obszarach:  
@@ -29,4 +29,3 @@ Ten rozdział opisuje specyficzne dla Microsoft rozszerzenia do C++ w następuj�
 -   Rozszerzone atrybuty klasy magazynowania zadeklarowane za pomocą [__declspec](../cpp/declspec.md) — słowo kluczowe  
   
 -   [__W64](../cpp/w64.md) — słowo kluczowe  
-  

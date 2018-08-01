@@ -18,31 +18,31 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 55225ba97848b2b503742d15ccf032e99342f0be
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: ebe1f3ad7b0fc46e1edba013f4cc986f1771972d
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39408633"
 ---
 # <a name="bstrtwchart-bstrtchar"></a>_bstr_t::wchar_t *, _bstr_t::char*
 **Microsoft Specific**  
   
- Zwraca znaki BSTR jako tablica znaków wąskie lub szerokie.  
+ Zwraca znaki BSTR jako tablica wąskiego lub szerokiego znaku.  
   
 ## <a name="syntax"></a>Składnia  
   
 ```  
-  
-      operator const wchar_t*( ) const throw( );   
+operator const wchar_t*( ) const throw( );   
 operator wchar_t*( ) const throw( );   
 operator const char*( ) const;   
 operator char*( ) const;  
 ```  
   
 ## <a name="remarks"></a>Uwagi  
- Te operatorów można używać do wyodrębniania danych znakowych hermetyzowaną przez `BSTR` obiektu. Przypisywanie nową wartość do zwrócony wskaźnik nie powoduje modyfikacji oryginalnych danych BSTR.  
+ Te operatory może służyć do wyodrębniania danych znakowych hermetyzowaną przez `BSTR` obiektu. Przypisywanie nową wartość do zwrócony wskaźnik nie powoduje modyfikacji oryginalnych danych BSTR.  
   
- **KOŃCOWY określonych firmy Microsoft**  
+ **END specyficzny dla Microsoft**  
   
-## <a name="see-also"></a>Zobacz też  
+## <a name="see-also"></a>Zobacz także  
  [_bstr_t, klasa](../cpp/bstr-t-class.md)

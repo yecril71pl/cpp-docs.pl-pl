@@ -15,12 +15,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4d64a25475ad7ac40f63d29798768f8f57866b3c
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: 5b2aa683f539e643127f8f71ff536d4c2ca2c9c0
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37941628"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39407529"
 ---
 # <a name="casting-operators"></a>Operatory rzutowania
 Wiele operatorów rzutowania są specyficzne dla języka C++. Te operatory są przeznaczone do usunięcia części niejednoznaczności i zagrożenia związane z stare rzutowań języka C w stylu. Są to:  
@@ -35,7 +35,7 @@ Wiele operatorów rzutowania są specyficzne dla języka C++. Te operatory są p
   
 -   [safe_cast](../windows/safe-cast-cpp-component-extensions.md) użyta do wyprodukowania podlegające weryfikacji MSIL.  
   
- Użyj `const_cast` i `reinterpret_cast` w ostateczności, ponieważ te operatory przedstawić same zagrożenia jako stary rzutowań w stylu. Jednak są nadal niezbędne w celu całkowitego zastąpienia starego rzutowań w stylu.  
+ Użyj **const_cast** i **reinterpret_cast** w ostateczności, ponieważ te operatory przedstawić same zagrożenia jako stary rzutowań w stylu. Jednak są nadal niezbędne w celu całkowitego zastąpienia starego rzutowań w stylu.  
   
-## <a name="see-also"></a>Zobacz też  
+## <a name="see-also"></a>Zobacz także  
  [Rzutowanie](../cpp/casting.md)

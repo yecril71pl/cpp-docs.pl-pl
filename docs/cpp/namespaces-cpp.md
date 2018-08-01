@@ -21,12 +21,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 223bf6996d5142cbe8d3521c65596beb40312f2c
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: 5a68a0a67748e79fe4379cb5f820cca0c845f392
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37941188"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39405486"
 ---
 # <a name="namespaces-c"></a>Przestrzenie nazw (C++)
 Przestrzeń nazw jest deklaratywne region, który obejmuje zakres do identyfikatorów (nazwy typów, funkcje, zmienne itp.) wewnątrz niego. Przestrzenie nazw są używane do organizowania kodu w logiczne grupy i aby zapobiec kolizjom nazw, które mogą wystąpić, szczególnie w przypadku, gdy bazy kodu obejmuje wiele bibliotek. Wszystkie identyfikatory w zakresie przestrzeni nazw są widoczne dla siebie nawzajem bez kwalifikacji. Identyfikatory poza przestrzenią nazw, mogą uzyskiwać dostęp do elementów członkowskich przy użyciu w pełni kwalifikowanej nazwy dla każdego identyfikatora, na przykład `std::vector<std::string> vec;`, lub przez [użycie — deklaracja](../cpp/using-declaration.md) dla pojedynczego identyfikatora (`using std::string`), lub [użycie dyrektywy](../cpp/namespaces-cpp.md#using_directives) dla wszystkich identyfikatorów w przestrzeni nazw (`using namespace std;`). Kod w plikach nagłówkowych zawsze należy używać w pełni kwalifikowanej nazwy obszaru nazw.  
@@ -59,7 +59,6 @@ ContosoData::Func(mgr);
 using ContosoData::ObjectManager;  
 ObjectManager mgr;  
 mgr.DoSomething();  
-  
 ```  
   
  Użyj, przy użyciu dyrektywy, aby wyświetlić wszystkie elementy w przestrzeni nazw do zakresu:  
@@ -70,7 +69,6 @@ using namespace ContosoData;
 ObjectManager mgr;  
 mgr.DoSomething();  
 Func(mgr);  
-  
 ```  
   
 ## <a id="using_directives"></a> dyrektywy Using  
@@ -91,11 +89,10 @@ namespace ContosoDataServer
 {  
     void Foo();  
     int Bar();  
-  
 }  
 ```  
   
- Implementacje funkcji w contosodata.cpp należy używać w pełni kwalifikowana nazwa, nawet wtedy, gdy umieścisz `using` dyrektywę w górnej części pliku:  
+ Implementacje funkcji w contosodata.cpp należy używać w pełni kwalifikowana nazwa, nawet wtedy, gdy umieścisz **przy użyciu** dyrektywę w górnej części pliku:  
   
 ```cpp  
 #include "contosodata.h"  
@@ -154,7 +151,6 @@ namespace ContosoDataServer
   
     int Bar(){...};  
     int Baz(int i) { return Details::CountImpl; }      
-  
 }  
 ```  
   
@@ -211,7 +207,6 @@ namespace Parent
      template<>  
      class C<int> {};  
 }  
-  
 ```  
   
  Wbudowane przestrzenie nazw można użyć jako mechanizm obsługi wersji, zarządzanie zmianami w bibliotece interfejsu publicznego. Na przykład można utworzyć pojedynczy nadrzędna przestrzeń nazw i hermetyzacji każdą wersję interfejsu w jego własnej przestrzeni nazw zagnieżdżone wewnątrz obiektu nadrzędnego. Przestrzeń nazw, która zawiera najbardziej ostatnie lub preferowaną wersję kwalifikuje się jako wbudowane i dlatego jest narażony, tak jakby bezpośrednimi członkami nadrzędna przestrzeń nazw. Kod klienta, który wywołuje Parent::Class będzie automatycznie wiązany nowego kodu. Klienci, którzy wolą używać starszej wersji nadal do niego dostęp przy użyciu w pełni kwalifikowana ścieżka do zagnieżdżone przestrzenie nazw, który ma kod.  
@@ -252,7 +247,6 @@ namespace Contoso
       };  
     }  
 }  
-  
 ```  
   
 ## <a id="namespace_aliases"></a> Aliasy Namespace  
@@ -262,7 +256,6 @@ namespace Contoso
 namespace a_very_long_namespace_name { class Foo {}; }  
 namespace AVLNN = a_very_long_namespace_name;  
 void Bar(AVLNN::Foo foo){ }  
-  
 ```  
   
 ## <a name="anonymous-or-unnamed-namespaces"></a>anonimowe lub nienazwane przestrzenie nazw  
@@ -277,5 +270,5 @@ namespace
   
  Jest to nazywane nienazwane lub anonimowe przestrzeni nazw i jest to przydatne, gdy użytkownik chce ukrywanie deklaracje zmiennych do kodu w innych plikach (czyli ciągowych powiązanie wewnętrzne) bez konieczności tworzenia nazwanego przestrzeni nazw. Cały kod w tym samym pliku widoczne identyfikatorów w przestrzeni nazw usługi bez nazwy, ale identyfikatorów, wraz z przestrzeni nazw, nie są widoczne poza ten plik, lub bardziej precyzyjne poza jednostki translacji.  
   
-## <a name="see-also"></a>Zobacz też  
+## <a name="see-also"></a>Zobacz także  
  [Deklaracje i definicje](declarations-and-definitions-cpp.md)

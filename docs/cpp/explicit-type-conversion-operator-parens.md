@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0f749f8cd43588eea8476c2746134b706737b6f5
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 3f6f0017bcc4e26802093f449742f9a2cfb137b8
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38966662"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39406786"
 ---
 # <a name="explicit-type-conversion-operator-"></a>Operator jawnej konwersji typu: ()
 Język C++ pozwala na jawną konwersję typu przy użyciu składni podobnej do składni wywołania funkcji.  
@@ -108,15 +108,12 @@ d = float( i );
  Jawne konwersje typu mogą być również określone przy użyciu składni „rzutowania”. Poprzedni przykład przepisany przy użyciu składni rzutowania:  
   
 ```cpp
-
 d = (float)i;  
-
 ```  
   
  Zarówno rzutowanie, jak i konwersje w stylu funkcji, dają te same wyniki podczas konwertowania z pojedynczych wartości. Jednakże, w składni stylu funkcji można określić więcej niż jeden argument do konwersji. Różnica jest ważna dla typów zdefiniowanych przez użytkownika. Rozważ klasę `Point` i jej konwersje:  
   
 ```cpp
-
 struct Point  
 {  
     Point( short x, short y ) { _x = x; _y = y; }  
@@ -125,7 +122,6 @@ struct Point
 };  
 ...  
 Point pt = Point( 3, 10 );  
-
 ```
   
  Poprzedni przykład, który używa konwersji stylu funkcji, pokazuje, jak konwertować dwie wartości (jedną dla *x* i jeden dla *y*) do typu zdefiniowanego przez użytkownika `Point`.  
@@ -137,6 +133,6 @@ Point pt = Point( 3, 10 );
   
  W ramach rzutowań niedozwolone są definicje typu.  
   
-## <a name="see-also"></a>Zobacz też  
+## <a name="see-also"></a>Zobacz także  
  [Wyrażenia przyrostków](../cpp/postfix-expressions.md)   
  [Wbudowane operatory, pierwszeństwo i kojarzenie języka C++](../cpp/cpp-built-in-operators-precedence-and-associativity.md)

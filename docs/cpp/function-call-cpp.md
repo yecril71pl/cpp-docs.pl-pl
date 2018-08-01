@@ -21,35 +21,35 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 85e7a752630b391d09140fa7552a452b3d2b751a
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: a2c3e28d4d69265c86e3c88d07de460558b3f71b
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39408696"
 ---
 # <a name="function-call-c"></a>Wywołanie funkcji (C++)
-Operator wywołania funkcji, wywołana za pomocą nawiasów, jest operator binarny.  
+Operator wywołania funkcji, wywoływane przy użyciu nawiasów jest operator binarny.  
   
 ## <a name="syntax"></a>Składnia  
   
 ```  
-  
 primary-expression ( expression-list )  
 ```  
   
 ## <a name="remarks"></a>Uwagi  
- W tym kontekście `primary-expression` jest pierwszym argumentem i `expression-list`, prawdopodobnie pusta lista argumentów jest drugi argument operacji. Operator wywołania funkcji jest używana w operacjach wymagających liczbą parametrów. To działa, ponieważ `expression-list` jest listą zamiast jeden argument. Operator wywołania funkcji musi być niestatyczną funkcją członkowską.  
+ W tym kontekście `primary-expression` jest pierwszym operandem, a `expression-list`, może być pusta lista argumentów, to drugi operand. Operator wywołania funkcji jest używana w operacjach wymagających liczbą parametrów. To działa, ponieważ `expression-list` jest lista zamiast jeden argument operacji. Operator wywołania funkcji musi być funkcją niestatycznej składowej.  
   
- Operator wywołania funkcji, gdy przeciążona, nie modyfikuje sposób funkcje są nazywane; zamiast modyfikuje jak operator jest interpretowane, gdy jest stosowany do obiektów klasy danego typu. Na przykład następujący kod będzie zazwyczaj znaczenia:  
+ Operator wywołania funkcji, gdy przeciążona, nie powoduje modyfikacji, jak funkcje są wywoływane; przeciwnie modyfikuje, jak operator ma być interpretowany w przypadku zastosowania do obiektów typu danej klasy. Na przykład poniższy kod zazwyczaj może być nieistotna:  
   
-```  
+```cpp 
 Point pt;  
 pt( 3, 2 );  
 ```  
   
- Podana w operatorze odpowiednie wywołanie przeciążonej funkcji, jednak ta składnia może służyć do przesunięcia `x` koordynować 3 jednostki i `y` koordynować 2 jednostki. Poniższy kod przedstawia takie definicji:  
+ Biorąc pod uwagę odpowiednie wywołanie przeciążonej funkcji operatora, jednak ta składnia może służyć do przesunięcia `x` koordynować 3 jednostki i `y` koordynować 2 jednostki. Poniższy kod przedstawia definicję takie:  
   
-```  
+```cpp 
 // function_call.cpp  
 class Point  
 {  
@@ -68,9 +68,9 @@ int main()
 }  
 ```  
   
- Uwaga zastosowana do nazwy obiektu, a nie nazwą funkcji operator wywołania funkcji.  
+ Należy pamiętać, że operator wywołania funkcji jest stosowany do nazwę obiektu, a nie nazwą funkcji.  
   
- Można także przeciążyć operator wywołania funkcji przy użyciu wskaźnika do funkcji (zamiast funkcji, sam).  
+ Można także przeciążyć operator wywołania funkcji za pomocą wskaźnika do funkcji (a nie samej funkcji).  
   
 ```cpp  
 typedef void(*ptf)();  
@@ -92,5 +92,5 @@ int main()
 }  
 ```  
   
-## <a name="see-also"></a>Zobacz też  
+## <a name="see-also"></a>Zobacz także  
  [Przeładowanie operatora](../cpp/operator-overloading.md)

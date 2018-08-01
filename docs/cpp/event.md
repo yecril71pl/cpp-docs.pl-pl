@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: abfda38c6c35c3e7172b187c89fa78bed5ee7616
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: 74b79edb24396896a6c8a50965081e9466720ca4
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37947869"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39407828"
 ---
 # <a name="event"></a>__event
 Deklaruje zdarzenie.  
@@ -31,7 +31,6 @@ Deklaruje zdarzenie.
 ## <a name="syntax"></a>Składnia  
   
 ```  
-  
 __event method-declarator;  
 __event __interface interface-specifier;  
 __event member-declarator;  
@@ -67,7 +66,7 @@ __event HRESULT OnClick(int* b, char* s);
  Zobacz [zdarzenie obsługi w natywnym kodzie C++](../cpp/event-handling-in-native-cpp.md) przykładowy kod.  
   
 ## <a name="com-events"></a>Zdarzenia COM  
- Zdarzenia COM to interfejsy. Parametry metody w interfejsie źródła zdarzeń powinny być `in` parametrów (ale nie jest to wymuszane rygorystycznie), ponieważ `out` parametr jest przydatne, gdy multiemisji. Ostrzeżenia poziomu 1 będą wystawiane, jeśli używasz `out` parametru.  
+ Zdarzenia COM to interfejsy. Parametry metody w interfejsie źródła zdarzeń powinny być *w* parametrów (ale nie jest to wymuszane rygorystycznie), ponieważ *się* parametr jest przydatne, gdy multiemisji. Ostrzeżenia poziomu 1 będą wystawiane, jeśli używasz *się* parametru.  
   
  Typ zwracany jest zazwyczaj HRESULT lub **void**, ale może być dowolnym typem integralnym, w tym **wyliczenia**. Gdy zdarzenie używa zwracanym typem całkowitym i program obsługi zdarzeń zwraca wartość różną od zera, jest warunkiem błędu, w których przypadku dla wywoływanego zdarzenia przerywa wywołań do innych obiektów delegowanych. Należy pamiętać, kompilator automatycznie oznaczy interfejsu źródła zdarzeń jako [źródła](../windows/source-cpp.md) w wygenerowanym pliku IDL.  
   
@@ -133,7 +132,7 @@ public:
 };  
 ```  
   
-## <a name="see-also"></a>Zobacz też  
+## <a name="see-also"></a>Zobacz także  
  [Keywords](../cpp/keywords-cpp.md)   
  [Obsługa zdarzeń](../cpp/event-handling.md)   
  [event_source](../windows/event-source.md)   

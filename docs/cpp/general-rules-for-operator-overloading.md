@@ -14,12 +14,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cd7e7a64b1dfc30d1827da614f67a5b47bd42218
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: 80058aa22de10088c3901d0c129635288bf880b5
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37947783"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39403459"
 ---
 # <a name="general-rules-for-operator-overloading"></a>Zasady ogólne dotyczące przeciążania operatorów
 Następujące reguły ograniczają sposób implementacji przeciążonych operatorów. Jednak nie mają zastosowania do [nowe](../cpp/new-operator-cpp.md) i [Usuń](../cpp/delete-operator-cpp.md) operatorów, które zostały omówione oddzielnie.  
@@ -59,7 +59,7 @@ Następujące reguły ograniczają sposób implementacji przeciążonych operato
   
 -   Przeciążone operatory nie mogą mieć argumentów domyślnych.  
   
--   Wszystkie przeciążone operatory z wyjątkiem przypisania (`operator=`) są dziedziczone przez klasy pochodne.  
+-   Wszystkie przeciążone operatory z wyjątkiem przypisania (**operator =**) są dziedziczone przez klasy pochodne.  
   
 -   Pierwszy argument dla przeciążonego operatora funkcji składowej jest zawsze typem klasy obiektu, dla którego operator jest wywoływany (klasy, w której operator jest zadeklarowany lub klasa pochodnej dla tej klasy). Konwersje nie są dostarczane dla pierwszego argumentu.  
   
@@ -72,10 +72,10 @@ var++;
 ++var;  
 ```  
   
- Ta tożsamość nie może polegać na typach klasy, które przeciążają operatory. Ponadto, niektóre wymagania niejawne w korzystaniu z tych operatorów dla typów podstawowych są złagodzone dla operatorów przeciążonych. Na przykład, operator dodawania/przypisania `+=`, wymaga, aby lewy operand miał l-wartość po zastosowaniu do podstawowych typów; taki wymóg nie istnieje, gdy operator jest przeciążony.  
+ Ta tożsamość nie może polegać na typach klasy, które przeciążają operatory. Ponadto, niektóre wymagania niejawne w korzystaniu z tych operatorów dla typów podstawowych są złagodzone dla operatorów przeciążonych. Na przykład operator dodawania/przypisania **+=**, wymaga lewy operand miał l wartością po zastosowaniu do podstawowych typów; nie jest takie wymagany, gdy operator jest przeciążony.  
   
 > [!NOTE]
 > Aby zapewnić spójność, najlepiej posługiwać się modelem typów wbudowanych podczas definiowania operatorów przeciążonych. Jeżeli semantyka operatorów przeciążonych różni się znacznie od ich znaczenia w innych kontekstach, może być to bardziej skomplikowane niż użyteczne.  
   
-## <a name="see-also"></a>Zobacz też  
+## <a name="see-also"></a>Zobacz także  
  [Przeładowanie operatora](../cpp/operator-overloading.md)

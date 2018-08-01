@@ -19,12 +19,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cb8f04962593dff13559f49f7f7c23014968c266
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: c2648d3628b8edd8b864dcf69dcfa7acb6d07339
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37940763"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39406666"
 ---
 # <a name="new-and-delete-operators"></a>new i delete — operatory
 
@@ -152,11 +152,11 @@ void operator delete( void * );
 void operator delete( void *, size_t );  
 ```  
   
- Tylko jeden z poprzednich dwóch formach mogą być obecne dla danej klasy. Pierwszy formularz przyjmuje pojedynczy argument typu **void \*** , który zawiera wskaźnik do obiektu można cofnąć alokacji. Druga forma — rozmiar dezalokacji — przyjmuje dwa argumenty, pierwszy z nich jest wskaźnik do bloku pamięci, które można cofnąć alokacji, a drugi z nich jest liczba bajtów, które można cofnąć alokacji. Zwracany typ obie formy jest **void** (**operatora delete** nie może zwracać wartości).  
+ Tylko jeden z poprzednich dwóch formach mogą być obecne dla danej klasy. Pierwszy formularz przyjmuje pojedynczy argument typu `void *`, który zawiera wskaźnik do obiektu można cofnąć alokacji. Druga forma — rozmiar dezalokacji — przyjmuje dwa argumenty, pierwszy z nich jest wskaźnik do bloku pamięci, które można cofnąć alokacji, a drugi z nich jest liczba bajtów, które można cofnąć alokacji. Zwracany typ obie formy jest **void** (**operatora delete** nie może zwracać wartości).  
   
  Celem drugi formularz jest przyspieszenie wyszukiwania dla kategorii właściwy rozmiar obiektu, który ma zostać usunięte, co często nie jest przechowywane w pobliżu alokacji, sama i prawdopodobnie niebuforowanych; Druga forma jest szczególnie przydatne, gdy **operatora delete** funkcja z klasy bazowej służy do usuwania obiektu klasy pochodnej.  
   
- **Operatora delete** funkcja jest statyczna; dlatego nie może być wirtualny. `operator delete` Funkcja przestrzegają kontroli dostępu, zgodnie z opisem w [kontroli dostępu do elementu członkowskiego](../cpp/member-access-control-cpp.md).  
+ **Operatora delete** funkcja jest statyczna; dlatego nie może być wirtualny. **Operatora delete** funkcja przestrzegają kontroli dostępu, zgodnie z opisem w [kontroli dostępu do elementu członkowskiego](../cpp/member-access-control-cpp.md).  
   
  W poniższym przykładzie pokazano zdefiniowane przez użytkownika **nowy operator** i **operatora delete** funkcje przeznaczone do rejestrowania alokacji i cofnięcia alokacji pamięci:  
   
@@ -229,4 +229,3 @@ void f() {
    delete [] pX;  
 }  
 ```  
-

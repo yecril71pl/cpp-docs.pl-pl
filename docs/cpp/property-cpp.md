@@ -17,42 +17,42 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a791615f7fd91a7ccfcda45b23fc524ebd9b6400
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: c4673101d41b896ed3fc19aa1998aa9329064b41
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39408609"
 ---
 # <a name="property-c"></a>właściwość (C++)
 **Microsoft Specific**  
   
- Ten atrybut można stosować do niestatycznego "danych wirtualnych elementów członkowskich" w definicji klasy lub struktury. Kompilator traktuje te "wirtualnych elementów członkowskich danych" jako elementy członkowskie danych, zmieniając ich odwołań do wywołania funkcji.  
+ Ten atrybut można stosować do niestatycznych "elementy członkowskie danych wirtualnej" w definicji klasy lub struktury. Kompilator traktuje te "wirtualnych elementów członkowskich danych" jako elementy członkowskie danych, zmieniając ich odwołań do wywołania funkcji.  
   
 ## <a name="syntax"></a>Składnia  
   
 ```  
-  
    __declspec( property( get=get_func_name ) ) declarator  
    __declspec( property( put=put_func_name ) ) declarator  
    __declspec( property( get=get_func_name, put=put_func_name ) ) declarator  
 ```  
   
 ## <a name="remarks"></a>Uwagi  
- Gdy kompilator widzi zadeklarowany z tym atrybutem po prawej stronie operatora wyboru elementu członkowskiego elementu członkowskiego danych ("**.**"lub"**->**"), są konwertowane na operacji **uzyskać** lub **put** funkcji, w zależności od tego, czy takie wyrażenie jest wartością l i r. Bardziej skomplikowane kontekstów, takie jak "`+=`", napisz ponownie jest wykonywane przez zastosowanie obu **uzyskać** i **put**.  
+ Gdy kompilator będzie widział element członkowski danych zadeklarowana za pomocą tego atrybutu po prawej stronie operatora wyboru składowej ("**.**"or"**->**"), konwertuje operacji `get` lub `put` funkcji, w zależności od tego, czy takie wyrażenie jest wartością l i r-wartości. Bardziej skomplikowane kontekstach, takich jak "`+=`", nadpisania odbywa się przez zastosowanie obu podejść `get` i `put`.  
   
- Ten atrybut można także w deklaracji pustą tablicę w definicji klasy lub struktury. Na przykład:  
+ Ten atrybut umożliwia także w deklaracji pustą tablicę w definicji klasy lub struktury. Na przykład:  
   
-```  
+```cpp 
 __declspec(property(get=GetX, put=PutX)) int x[];  
 ```  
   
- Powyższe stwierdzenie wskazuje, że `x[]` może być używany z co najmniej jeden indeksy tablicy. W takim przypadku `i=p->x[a][b]` przekonwertowany `i=p->GetX(a, b)`, i `p->x[a][b] = i` są konwertowane `p->PutX(a, b, i);`  
+ Powyższe stwierdzenie wskazuje, że `x[]` mogą być używane z co najmniej jeden indeksy tablicy. W tym przypadku `i=p->x[a][b]` będą przekształcane w `i=p->GetX(a, b)`, i `p->x[a][b] = i` będą przekształcane w `p->PutX(a, b, i);`  
   
- **KOŃCOWY określonych firmy Microsoft**  
+ **END specyficzny dla Microsoft**  
   
 ## <a name="example"></a>Przykład  
   
-```  
+```cpp 
 // declspec_property.cpp  
 struct S {  
    int i;  
@@ -74,6 +74,6 @@ int main() {
 }  
 ```  
   
-## <a name="see-also"></a>Zobacz też  
+## <a name="see-also"></a>Zobacz także  
  [__declspec](../cpp/declspec.md)   
  [Słowa kluczowe](../cpp/keywords-cpp.md)

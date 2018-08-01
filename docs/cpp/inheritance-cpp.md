@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3181369f492f82fca1590e07655e728dbbcd40ff
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: b75140879f44423e73c343f7567cc830d97a7b5e
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38958601"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39403131"
 ---
 # <a name="inheritance--c"></a>Dziedziczenie (C++)
 W tej sekcji wyjaśniono, jak za pomocą klasy pochodne tworzyć rozszerzalne programów.  
@@ -61,5 +61,5 @@ Po tagu (nazwa) dla klasy dwukropek pojawia się po nich lista podstawowej specy
   
  [__Super](../cpp/super.md) i [__interface](../cpp/interface.md) słowa kluczowe są opisane w tej sekcji.  
   
-## <a name="see-also"></a>Zobacz też  
+## <a name="see-also"></a>Zobacz także  
  [Dokumentacja języka C++](../cpp/cpp-language-reference.md)

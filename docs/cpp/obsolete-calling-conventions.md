@@ -22,20 +22,20 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9d2a6188cf9d8c8283a6c03a2ca6c701e28baf0d
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 922103e808541e2829350749a04d6004ba36577f
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32419849"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39403423"
 ---
 # <a name="obsolete-calling-conventions"></a>Przestarzałe konwencje wywoływania
 ## <a name="microsoft-specific"></a>Specyficzne dla firmy Microsoft  
- **__Pascal**, **__fortran**, i **__syscall** konwencji wywoływania nie są już obsługiwane. Za pomocą jednego z obsługiwanych konwencji wywoływania i opcje konsolidatora odpowiednie, możesz emulować ich funkcje.  
+ **__Pascal**, **__fortran**, i **__syscall** konwencji wywoływania nie są już obsługiwane. Przy użyciu jednego z obsługiwanych Konwencje wywoływania i opcje konsolidatora w odpowiednie, może emulować ich funkcje.  
   
- \<Windows.h > obsługuje teraz **WINAPI** makra, co oznacza odpowiednie Konwencja wywoływania dla elementu docelowego. Użyj **WINAPI** gdzie wcześniej używane **PASCAL** lub **__far \__pascal**.  
+ \<Windows.h > obsługuje teraz makro WINAPI, co przekłada się na odpowiednie konwencja wywołania dla obiektu docelowego. Użyj WINAPI, na którym wcześniej używano PASCAL lub **__far \__pascal**.  
   
-**KOŃCOWY określonych firmy Microsoft**  
+**END specyficzny dla Microsoft**  
   
-## <a name="see-also"></a>Zobacz też  
+## <a name="see-also"></a>Zobacz także  
  [Przekazywanie argumentów i konwencje nazewnictwa](../cpp/argument-passing-and-naming-conventions.md)

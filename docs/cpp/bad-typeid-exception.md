@@ -18,27 +18,27 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0771f5e93ba473c9ae1101996e8276bec4cd432a
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 55718522bdbf618fb656eedc5c6afd59bfcaca08
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39408591"
 ---
 # <a name="badtypeid-exception"></a>bad_typeid — Wyjątek
-`bad_typeid` Wyjątku przez [operatora typeid](../cpp/typeid-operator.md) podczas argument `typeid` wskaźnik NULL.  
+**Bad_typeid** wyjątek jest generowany przez [typeid operator](../cpp/typeid-operator.md) gdy argument **typeid** jest wskaźnikiem typu NULL.  
   
 ## <a name="syntax"></a>Składnia  
   
 ```  
-  
-      catch (bad_typeid)  
+catch (bad_typeid)  
    statement  
 ```  
   
 ## <a name="remarks"></a>Uwagi  
- Interfejs dla `bad_typeid` jest:  
+ Interfejs **bad_typeid** jest:  
   
-```  
+```cpp 
 class bad_typeid : public exception  
 {  
 public:  
@@ -48,9 +48,9 @@ public:
 };  
 ```  
   
- W poniższym przykładzie przedstawiono `typeid` operator zgłaszanie `bad_typeid` wyjątku.  
+ W poniższym przykładzie przedstawiono **typeid** operator zgłaszanie **bad_typeid** wyjątku.  
   
-```  
+```cpp 
 // expre_bad_typeid.cpp  
 // compile with: /EHsc /GR  
 #include <typeinfo.h>  
@@ -78,10 +78,10 @@ catch (bad_typeid){
   
 ## <a name="output"></a>Dane wyjściowe  
   
-```  
+```Output 
 Object is NULL  
 ```  
   
-## <a name="see-also"></a>Zobacz też  
+## <a name="see-also"></a>Zobacz także  
  [Informacje typu Run-Time](../cpp/run-time-type-information.md)   
  [Słowa kluczowe](../cpp/keywords-cpp.md)

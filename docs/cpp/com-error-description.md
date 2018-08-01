@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4be038bff05ce7a37b09ec3b3c61572635747864
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: 848709fa6cbbbfb4166750f86540de2433a73023
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37939900"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39404031"
 ---
 # <a name="comerrordescription"></a>_com_error::Description
 **Microsoft Specific**  
@@ -31,9 +31,7 @@ ms.locfileid: "37939900"
 ## <a name="syntax"></a>Składnia  
   
 ```  
-  
 _bstr_t Description( ) const;  
-  
 ```  
   
 ## <a name="return-value"></a>Wartość zwracana  
@@ -44,5 +42,5 @@ _bstr_t Description( ) const;
   
  **END specyficzny dla Microsoft**  
   
-## <a name="see-also"></a>Zobacz też  
+## <a name="see-also"></a>Zobacz także  
  [_com_error, klasa](../cpp/com-error-class.md)

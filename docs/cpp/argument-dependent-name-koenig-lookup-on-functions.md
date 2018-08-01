@@ -1,5 +1,5 @@
 ---
-title: Odnośnik do nazwy zależnej od argumentu (Koenig) funkcji | Dokumentacja firmy Microsoft
+title: Wyszukiwanie nazwy zależnej od argumentu (Koenig) funkcji | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,19 +15,20 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6a06140522f9d4074eaa0403d0d05fe0f79adec0
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 9d1977948eae8844b1b8c44310141abaab33b940
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39408699"
 ---
 # <a name="argument-dependent-name-koenig-lookup-on-functions"></a>Odnośnik do nazwy zależnej od argumentu (Koenig) funkcji
-Kompilator umożliwia znalezienie definicji wywołanie funkcji niekwalifikowane nazwy zależnej od argumentu. Odnośnik do nazwy zależnej od argumentu jest również nazywany wyszukiwanie Koeniga. Typ każdy argument w wywołaniu funkcji jest zdefiniowany w ramach hierarchii z przestrzeni nazw, klasy, struktury, złożenia lub szablonów. Po określeniu niekwalifikowane [przyrostka](../cpp/postfix-expressions.md) wywołanie funkcji Kompilator szuka definicji funkcji w hierarchii skojarzone z każdym typem argumentu.  
+Kompilator może być Znajdź definicję wywołanie funkcji niekwalifikowanej odnośnik do nazwy zależnej od argumentu. Odnośnik do nazwy zależnej od argumentu jest również nazywany wyszukiwanie Koeniga. Typ każdego argumentu w wywołaniu funkcji jest zdefiniowany w ramach hierarchii przestrzenie nazw, klasy, struktury, Unii lub szablonów. Po określeniu niekwalifikowanej [przyrostkowe](../cpp/postfix-expressions.md) wywołanie funkcji, kompilator szuka definicji funkcji w hierarchii, skojarzone z poszczególnymi typami argumentów.  
   
 ## <a name="example"></a>Przykład  
- W przykładzie kompilator uwagi dotyczące tej funkcji `f()` przyjmuje argument `x`. Argument `x` jest typu `A::X`, który jest zdefiniowany w przestrzeni nazw `A`. Kompilator szuka przestrzeni nazw `A` i klient znajdzie definicji dla funkcji `f()` które przyjmuje argument typu `A::X`.  
+ W tym przykładzie kompilator — informacje o tej funkcji `f()` przyjmuje argument `x`. Argument `x` typu `A::X`, który jest zdefiniowany w przestrzeni nazw `A`. Kompilator wyszukuje przestrzeni nazw `A` i odnajduje definicję funkcji `f()` która przyjmuje argument typu `A::X`.  
   
-```  
+```cpp 
 // argument_dependent_name_koenig_lookup_on_functions.cpp  
 namespace A  
 {  

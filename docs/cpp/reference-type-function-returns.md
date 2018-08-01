@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 12b86ee4505792fbc3a90d34ece8e714eb3565ff
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: 47b2ce26ea9cba7f0c38d06546eb0d162332d047
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37947760"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39408300"
 ---
 # <a name="reference-type-function-returns"></a>Zwracanie funkcji typu odwołania
 Funkcje mogą być zadeklarowane do zwrócenia typu odwołania. Istnieją dwa powody, aby taką deklarację:  
@@ -117,5 +117,5 @@ Foo& GetFoo()
   
  Kompilator generuje ostrzeżenie, w tym przypadku: `warning C4172: returning address of local variable or temporary`. W programach proste jest możliwe, że od czasu do czasu nie naruszenie zasad dostępu wystąpi, jeśli odwołanie jest dostępny przez obiekt wywołujący, zanim zostanie zastąpiony lokalizacji pamięci. Jest to spowodowane szczęścia znaczne zmniejszenie. Uwzględnianie ostrzeżenia.  
   
-## <a name="see-also"></a>Zobacz też  
+## <a name="see-also"></a>Zobacz także  
  [Odwołania](../cpp/references-cpp.md)

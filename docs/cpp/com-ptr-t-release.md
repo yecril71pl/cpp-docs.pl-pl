@@ -17,30 +17,28 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7a8a734eae486ca5e88009301b13d71b21473d9f
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: 1c5da56c3c85c17bcd2cd91f9fa5a5f8399e9528
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37939259"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39404278"
 ---
 # <a name="comptrtrelease"></a>_com_ptr_t::Release
 **Microsoft Specific**  
   
- Wywołania `Release` funkcji składowej typu `IUnknown` interfejsu zhermetyzowanego wskaźnika.  
+ Wywołania **wersji** funkcji składowej typu `IUnknown` interfejsu zhermetyzowanego wskaźnika.  
   
 ## <a name="syntax"></a>Składnia  
   
 ```  
-  
 void Release( );  
-  
 ```  
   
 ## <a name="remarks"></a>Uwagi  
- Wywołania `IUnknown::Release` wskaźnika zhermetyzowany interfejs wywoływanie E_POINTER błąd, jeśli ten wskaźnik interfejsu ma wartość NULL.  
+ Wywołania `IUnknown::Release` wskaźnika zhermetyzowany interfejs wywoływanie `E_POINTER` błąd, jeśli ten wskaźnik interfejsu ma wartość NULL.  
   
  **END specyficzny dla Microsoft**  
   
-## <a name="see-also"></a>Zobacz też  
+## <a name="see-also"></a>Zobacz także  
  [_com_ptr_t, klasa](../cpp/com-ptr-t-class.md)

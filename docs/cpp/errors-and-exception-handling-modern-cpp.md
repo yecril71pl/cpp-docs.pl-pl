@@ -12,12 +12,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ee05e7008795056ee197ce45f68084e6c633f23c
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: f9d9d21514b0ea90021c9b0543cd742ed6a6206f
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37939744"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39407237"
 ---
 # <a name="errors-and-exception-handling-modern-c"></a>Błędy w obsłudze wyjątków (Modern C++)
 W nowoczesnym C++, w większości scenariuszy preferowanym sposobem raportowania i obsługi błędów logicznych oraz błędów środowiska uruchomieniowego jest skorzystanie z wyjątków. Jest to szczególnie istotne w przypadku, gdy stos może zawierać kilka wywołać funkcji między funkcją, która wykryje błąd i funkcję, która posiada kontekst pozwalający na jego obsługę. Wyjątki umożliwiają formalny, dobrze zdefiniowany kodowi wykrywającemu błędy przekazywanie informacji w górę stosu wywołań.  
@@ -68,7 +68,6 @@ int main()
    //...  
    return 0;  
 }  
-  
 ```  
   
  Wyjątki w języku C++ przypominają wyjątki w językach takich jak C# i Java. W **spróbuj** zablokować, jeśli wyjątek jest *zgłoszony* będzie *przechwycono* przez pierwszy związany **catch** blok, którego typ jest zgodny z typem wyjątek. Innymi słowy, wykonywanie przeskakuje z **throw** instrukcję, aby **catch** instrukcji. Jeśli zostanie znalezione nie bloku catch można używać, `std::terminate` jest wywoływany i program jest zamykany. W języku C++ można wygenerować dowolny typ; Jednak firma Microsoft zaleca generowanie typu, który pochodzi bezpośrednio lub pośrednio z `std::exception`. W poprzednim przykładzie, typ wyjątku [invalid_argument](../standard-library/invalid-argument-class.md), jest zdefiniowany w bibliotece standardowej w [ \<stdexcept >](../standard-library/stdexcept.md) pliku nagłówka. C++ nie udostępnia i nie wymaga **na koniec** bloku, aby upewnić się, że wszystkie zasoby są zwalniane, jeśli wyjątek jest zgłaszany. Pobieranie źródeł to idiom inicjalizacji (RAII), który wykorzystuje inteligentne wskaźniki, zapewnia wymaganą funkcję czyszczenia źródeł. Aby uzyskać więcej informacji, zobacz [porady: Projektowanie pod kątem bezpieczeństwa wyjątków](../cpp/how-to-design-for-exception-safety.md). Aby uzyskać informacje o mechanizmie odwracania stosu C++, zobacz [wyjątków i rozwijania stosu](../cpp/exceptions-and-stack-unwinding-in-cpp.md).  
@@ -97,14 +96,14 @@ int main()
  Wyjątki i potwierdzenia to dwa odrębne mechanizmy wykrywania błędów czasu wykonywania programu. Użyj zapewnień, aby skontrolować przetestować warunki podczas rozwoju które nigdy nie może mieć wartość true, jeśli Twój kod jest poprawny. Brak ma sensu obsługi takiego błędu przy użyciu wyjątku, ponieważ błąd oznacza, że w kodzie coś musi zostać naprawione, a nie oznacza warunek, którego program musi odzyskać w czasie wykonywania. Potwierdzenie zatrzymuje wykonywanie w instrukcji, dzięki czemu można sprawdzić stan programu w debugerze; wyjątek kontynuuje wykonywanie od pierwszego odpowiedniego elemetu obsługi catch. Użyj wyjątków, aby sprawdzić warunki błędów, które mogą wystąpić w czasie wykonywania, nawet jeżeli Twój kod jest poprawny, na przykład "nie znaleziono pliku" lub "za mało pamięci." Można odzyskać z tych warunków, nawet jeśli odzyskiwanie po prostu wyświetla komunikat w dzienniku i kończy się program. Zawsze sprawdzaj argumenty do funkcji publicznych za pomocą wyjątków. Nawet jeśli funkcja jest wolna od błędów, możesz nie mieć pełną kontrolę nad argumentami, które użytkownik może przenieść do niegho.  
   
 ## <a name="c-exceptions-versus-windows-seh-exceptions"></a>Wyjątki C++ a wyjątki Windows SEH  
- Programy C i C++ mogą wykorzystywać mechanizm (SEH), w systemie operacyjnym Windows obsługi wyjątków strukturalnych. Koncepcje w SEH przypominają te w wyjątkach C++, z tą różnicą, że używa SEH `__try`, `__except`, i `__finally` tworzy zamiast **spróbuj** i **catch**. W programie Visual C++ wyjątki C++ są implementowane dla SEH. Jednak podczas pisania kodu w języku C++, należy użyć składni wyjątków języka C++.  
+ Programy C i C++ mogą wykorzystywać mechanizm (SEH), w systemie operacyjnym Windows obsługi wyjątków strukturalnych. Koncepcje w SEH przypominają te w wyjątkach C++, z tą różnicą, że używa SEH **__try**, **__except**, i **__finally** tworzy zamiast **spróbuj** i **catch**. W programie Visual C++ wyjątki C++ są implementowane dla SEH. Jednak podczas pisania kodu w języku C++, należy użyć składni wyjątków języka C++.  
   
  Aby uzyskać więcej informacji o bibliotece SEH, zobacz [obsługi wyjątków strukturalnych, (C/C++)](../cpp/structured-exception-handling-c-cpp.md).  
   
 ## <a name="exception-specifications-and-noexcept"></a>Specyfikacje wyjątków i noexcept  
  Specyfikacje wyjątków zostały wprowadzone w języku C++ jako sposób określania wyjątków, które mogą zgłosić funkcji. Jednak specyfikacje wyjątków okazały się w praktyce problematyczne i zostały zaniechane w standardzie roboczym C++ 11. Firma Microsoft zaleca, nie używaj specyfikacji wyjątków z wyjątkiem `throw()`, co oznacza, że funkcja pozwala bez wyjątków anulować. Jeśli musisz użyć specyfikacji wyjątku typu `throw(` *typu*`)`, należy pamiętać, że Visual C++ odbiega od normy w określony sposób. Aby uzyskać więcej informacji, zobacz [specyfikacje wyjątków (throw)](../cpp/exception-specifications-throw-cpp.md). `noexcept` Specyfikator został wprowadzony w C ++ 11 jako preferowana alternatywa dla `throw()`.  
   
-## <a name="see-also"></a>Zobacz też  
+## <a name="see-also"></a>Zobacz także  
  [Porady: interfejs między kodem obsługi wyjątków a innym kodem](../cpp/how-to-interface-between-exceptional-and-non-exceptional-code.md)   
  [Witamy z powrotem w C++](../cpp/welcome-back-to-cpp-modern-cpp.md)   
  [Dokumentacja języka C++](../cpp/cpp-language-reference.md)   

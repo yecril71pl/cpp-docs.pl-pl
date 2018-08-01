@@ -18,16 +18,17 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 83d78aad4285ad711581dbed1c88ef6b9a8a9b24
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: fad8fc85a37aec80d09ed6df9280a78de0540f01
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39408606"
 ---
 # <a name="reference-type-function-arguments"></a>Argumenty funkcji typu odwołania
-Jest często bardziej wydajne do przekazania odwołania, a nie duże obiekty, do funkcji. Dzięki temu kompilator, aby przekazać adres obiektu przy zachowaniu składni, które będzie używane do dostępu do obiektu. Rozważmy następujący przykład, który używa `Date` struktury:  
+Jest często bardziej wydajnym sposobem przekazywania odwołania, a nie dużych obiektów, do funkcji. Dzięki temu kompilator mógł przekazać adres obiektu, przy zachowaniu składni, która będzie używana do dostępu do obiektu. Rozważmy następujący przykład, który używa `Date` strukturę:  
   
-```  
+```cpp 
 // reference_type_function_arguments.cpp  
 struct Date  
 {  
@@ -66,17 +67,17 @@ int main()
 }  
 ```  
   
- Poprzedni kod pokazuje, że elementy członkowskie struktury przekazywana przez odwołanie, są dostępne przy użyciu operatora wyboru elementu członkowskiego (**.**) zamiast operatora wyboru elementu członkowskiego wskaźnika (**->**).  
+ Poprzedni kod pokazuje dostępne elementy członkowskie struktury przekazywany przez odwołanie za pomocą operatora wyboru składowej (**.**) zamiast operatora wyboru elementu członkowskiego wskaźnika (**->**).  
   
- Mimo że argumenty przekazane jako typów referencyjnych obserwować składni typów nie będącego wskaźnikiem, zachowują pojedynczy parametr ważne typów wskaźnika: są można modyfikować, chyba że zadeklarowany jako **const**. Nie można zmodyfikować obiektu, ponieważ celem poprzedni kod `GDate`, jest bardziej odpowiednia prototypu funkcji:  
+ Mimo że argumenty przekazane jako typy odwołań, Sprawdź składnię typów nie będącego wskaźnikiem, zachowują jedną z ważnych cech typów wskaźnika: są one można modyfikować, chyba że zadeklarowany jako **const**. Ponieważ celem poprzedni kod nie może modyfikować dany obiekt `GDate`, jest bardziej odpowiednia prototypu funkcji:  
   
-```  
+```cpp 
 long JulianFromGregorian( const Date& GDate );  
 ```  
   
- To prototyp gwarantuje, że funkcja `JulianFromGregorian` nie zmienia jej argument.  
+ Prototyp to gwarantuje, że funkcja `JulianFromGregorian` nie zmieni się z jej argument.  
   
- Dowolnej funkcji prototypowana jako biorąc typu odwołania może akceptować obiektu tego samego typu w tym miejscu, ponieważ nie istnieje konwersja standardowa ze *typename* do * typename ***&**.  
+ Dowolnej funkcji prototypowej jako biorąc typu odwołania może zaakceptować obiekt tego samego typu, w tym miejscu, ponieważ nie istnieje konwersja standardowa ze *typename* do * typename ***&**.  
   
-## <a name="see-also"></a>Zobacz też  
+## <a name="see-also"></a>Zobacz także  
  [Odwołania](../cpp/references-cpp.md)

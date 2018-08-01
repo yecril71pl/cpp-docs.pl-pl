@@ -17,29 +17,30 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1ec2506b406166ac5316de4724db27a6cd7ffcc1
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 3efc793e5030fa86c3bd1214ef4b8b408361a4ef
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39408615"
 ---
 # <a name="deprecated-c"></a>przestarzałe (C++)
-Ten temat dotyczy specyficzne dla firmy Microsoft przestarzała deklaracja declspec. Informacje o C ++ 14 `[[deprecated]]` atrybutu i wskazówki na użycie tego atrybutu, a declspec specyficzne dla firmy Microsoft lub pragma, zobacz [atrybuty Standard C++](attributes.md).
+Ten temat dotyczy specyficzne dla firmy Microsoft przestarzałe declspec deklaracji. Aby uzyskać informacje o C ++ 14 `[[deprecated]]` atrybutu i wskazówki dotyczące kiedy należy używać tego atrybutu, a declspec specyficzne dla firmy Microsoft lub pragma, zobacz [atrybuty Standard C++](attributes.md).
 
- Z wyjątkiem wymienionych poniżej **przestarzałe** deklaracji oferuje te same funkcje co [przestarzałe](../preprocessor/deprecated-c-cpp.md) pragma:  
+ Z wyjątkiem wymienionych poniżej **przestarzałe** deklaracji oferuje te same funkcje co [przestarzałe](../preprocessor/deprecated-c-cpp.md) pragmy:  
   
--   **Przestarzałe** deklaracji pozwala określić formy określonego przeciążenia funkcji jako przestarzałe, formularz pragma ma zastosowanie do wszystkich formularzy przeciążone nazwy funkcji.  
+-   **Przestarzałe** deklaracji umożliwia określenie konkretnego rodzaje przeciążenia funkcji jako przestarzałe, formularz pragma ma zastosowanie do wszystkich formularzy przeciążona nazwy funkcji.  
   
--   **Przestarzałe** deklaracji pozwala określić wiadomość, która będzie wyświetlana w czasie kompilacji. Tekst komunikatu może być przy pomocy makra.  
+-   **Przestarzałe** deklaracji pozwala określić komunikat, który będzie wyświetlana w czasie kompilacji. Tekst komunikatu można przy pomocy makra.  
   
--   Makra tylko może być oznaczony jako przestarzały z **przestarzałe** pragma.  
+-   Makra tylko może być oznaczony jako przestarzały z **przestarzałe** pragmy.  
   
- Jeśli kompilator napotka użycia przestarzały identyfikator lub standardowego [ `[[deprecated]]` ](attributes.md) atrybutu, [C4996](../error-messages/compiler-warnings/compiler-warning-level-3-c4996.md) generowany jest ostrzeżenie.  
+ Gdy kompilator napotka użytkowania przestarzały identyfikator lub standardem [ `[[deprecated]]` ](attributes.md) atrybutu [C4996](../error-messages/compiler-warnings/compiler-warning-level-3-c4996.md) ostrzeżenie jest zgłaszane.  
   
 ## <a name="example"></a>Przykład  
- Poniższy przykład przedstawia sposób zostać oznaczone jako przestarzałe funkcje oraz sposobu określania komunikat, który będzie wyświetlany w czasie kompilacji, gdy jest używany przestarzały funkcji.  
+ Poniższy przykład pokazuje sposób oznaczania funkcji jako przestarzały i jak określić wiadomość, która będzie wyświetlana w czasie kompilacji, gdy jest używany przestarzały — funkcja.  
   
-```  
+```cpp 
 // deprecated.cpp  
 // compile with: /W3  
 #define MY_TEXT "function is deprecated"  
@@ -57,9 +58,9 @@ int main() {
 ```  
   
 ## <a name="example"></a>Przykład  
- Poniższy przykład przedstawia sposób klasy zostać oznaczone jako przestarzałe oraz sposobu określania komunikat, który będzie wyświetlany w czasie kompilacji, gdy jest używany przestarzały klasy.  
+ Poniższy przykład pokazuje sposób oznaczania klasy jako przestarzały i jak określić wiadomość, która będzie wyświetlana w czasie kompilacji, gdy jest używany przestarzały klasy.  
   
-```  
+```cpp 
 // deprecate_class.cpp  
 // compile with: /W3  
 struct __declspec(deprecated) X {  
@@ -76,6 +77,6 @@ int main() {
 }  
 ```  
   
-## <a name="see-also"></a>Zobacz też  
+## <a name="see-also"></a>Zobacz także  
  [__declspec](../cpp/declspec.md)   
  [Słowa kluczowe](../cpp/keywords-cpp.md)

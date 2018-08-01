@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d056cb99c9da17622a115c1a250fb0a932397bfa
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: 027b7a78f46d2bd9fce6ed55b089da1517124da0
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37939718"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39407335"
 ---
 # <a name="defining-inline-c-functions-with-dllexport-and-dllimport"></a>Definiowanie funkcji śródwierszowych języka C++ z dllexport i dllimport
 ## <a name="microsoft-specific"></a>Specyficzne dla firmy Microsoft  
@@ -36,5 +36,5 @@ ms.locfileid: "37939718"
   
 **END specyficzny dla Microsoft**  
   
-## <a name="see-also"></a>Zobacz też  
+## <a name="see-also"></a>Zobacz także  
  [dllexport, dllimport](../cpp/dllexport-dllimport.md)

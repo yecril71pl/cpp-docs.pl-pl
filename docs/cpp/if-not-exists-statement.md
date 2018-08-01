@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 37148a3849e859d7ca77595416616cfa0b952ecf
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: bee63ace276863a30c4ec81d970ba3bf5fd29e40
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37939952"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39405288"
 ---
 # <a name="ifnotexists-statement"></a>__if_not_exists — Instrukcja
 **__If_not_exists** instrukcji sprawdza, czy istnieje określony identyfikator. Jeśli identyfikator nie istnieje, jest wykonywany blok określonej instrukcji.  
@@ -38,8 +38,8 @@ statements
   
 |Parametr|Opis|  
 |---------------|-----------------|  
-|`identifier`|Identyfikator, którego istnienie, którą chcesz przetestować.|  
-|`statements`|Jedna lub więcej instrukcji do wykonania, jeśli `identifier` nie istnieje.|  
+|*Identyfikator*|Identyfikator, którego istnienie, którą chcesz przetestować.|  
+|*Instrukcje*|Jedna lub więcej instrukcji do wykonania, jeśli *identyfikator* nie istnieje.|  
   
 ## <a name="remarks"></a>Uwagi  
   
@@ -59,7 +59,7 @@ statements
 ## <a name="example"></a>Przykład  
  Na przykład o tym, jak używać **__if_not_exists**, zobacz [__if_exists — instrukcja](../cpp/if-exists-statement.md).  
   
-## <a name="see-also"></a>Zobacz też  
+## <a name="see-also"></a>Zobacz także  
  [Instrukcje wyboru](../cpp/selection-statements-cpp.md)   
  [Keywords](../cpp/keywords-cpp.md)   
  [__if_exists, instrukcja](../cpp/if-exists-statement.md)

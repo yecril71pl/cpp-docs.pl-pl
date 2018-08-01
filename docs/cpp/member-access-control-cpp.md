@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6116baca2303807748a4d282acda81233ed32957
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 28f0cedbe20ebea21b3b10e5016605c1bce51383
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38957390"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39407390"
 ---
 # <a name="member-access-control-c"></a>Kontrola dostępu do elementów członkowskich (C++)
 Mechanizmy kontroli dostępu umożliwiają oddzielenie [publicznych](../cpp/public-cpp.md) interfejsu klasy z [prywatnej](../cpp/private-cpp.md) szczegółów implementacji i [chronione](../cpp/protected-cpp.md) elementów członkowskich, które służą tylko do użycia przez klasy pochodne. Specyfikator dostępu ma zastosowanie do wszystkich elementów członkowskich zadeklarowanych po nim, dopóki nie zostanie osiągnięty następnego specyfikatora dostępu.  
@@ -42,7 +42,6 @@ private:                 // Declare private state variables.
 protected:      // Declare protected function for derived classes only.  
     Point ToWindowCoords();  
 };  
-  
 ``` 
   
  Dostęp do domyślnej jest **prywatnej** w klasie i **publicznych** w strukturze lub Unii. Specyfikatory dostępu w klasie mogą być używane z dowolną liczbę razy w dowolnej kolejności. Alokacja pamięci dla obiektów typów klasy jest zależy od implementacji, ale elementy członkowskie są gwarantowane przypisanie kolejno adresów pamięci między specyfikatory dostępu.  
@@ -229,5 +228,5 @@ Dostęp wzdłuż ścieżek Wykres dziedziczenia
   
  Na rysunku, nazwa zadeklarowana w klasie `VBase` zawsze zostanie osiągnięty za pośrednictwem klasy `RightPath`. Właściwym rozwiązaniem jest bardziej dostępny ponieważ `RightPath` deklaruje `VBase` jako publiczne klasy bazowej, natomiast `LeftPath` deklaruje `VBase` jako prywatny.  
   
-## <a name="see-also"></a>Zobacz też  
+## <a name="see-also"></a>Zobacz także  
  [Dokumentacja języka C++](../cpp/cpp-language-reference.md)

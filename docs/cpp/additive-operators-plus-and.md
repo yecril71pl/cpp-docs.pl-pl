@@ -22,12 +22,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 89fc0f122f0859e6fc891ddfccd4bc99e7034bfe
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: 313e4602c06c1baf090ed7a66c51b308a3f6f586
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37948240"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39402753"
 ---
 # <a name="additive-operators--and--"></a>Operatory dodawania: + i -
 ## <a name="syntax"></a>Składnia  
@@ -115,11 +115,11 @@ for( int i = 0; i < 10; ++i )
 >  Kod w postaci `pIntArray = pIntArray + 1` rzadko zostanie znaleziony w programach języka C++; przeprowadzić przyrostu te formularze są preferowane: `pIntArray++` lub `pIntArray += 1`.  
   
 ## <a name="pointer-subtraction"></a>Odejmowanie wskaźnika  
- Jeśli oba operandy są wskaźnikami, wynik odejmowania różni (w elementach tablicy) argumentów. Wyrażenie odejmowania daje podpisem całkowitego wynik o typie **ptrdiff_t —** (zdefiniowane w pliku standardowych dołączonych \<stddef.h >).  
+ Jeśli oba operandy są wskaźnikami, wynik odejmowania różni (w elementach tablicy) argumentów. Wyrażenie odejmowania daje podpisem całkowitego wynik o typie `ptrdiff_t` (zdefiniowane w pliku standardowych dołączonych \<stddef.h >).  
   
  Jeden z argumentów może być typu całkowitego, tak długo, jak jest drugi argument operacji. Wynik odejmowania jest taki sam typ co oryginalny wskaźnik. Wartość odejmowania jest wskaźnikiem do (*n* - *i*) th elementu tablicy, której *n* jest element wskazywany przez oryginalny wskaźnik i *i* jest całkowitą wartość drugiego operandu.  
   
-## <a name="see-also"></a>Zobacz też  
+## <a name="see-also"></a>Zobacz także  
  [Wyrażenia z operatorami Dwuargumentowymi](../cpp/expressions-with-binary-operators.md)   
  [C++ wbudowane operatory, pierwszeństwo i kojarzenie](../cpp/cpp-built-in-operators-precedence-and-associativity.md)   
  [Operatory dodawania języka C](../c-language/c-additive-operators.md)

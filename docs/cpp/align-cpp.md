@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 54a83adda5acc51bd7e2d85e907d84e62a70d5cb
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: 1e591ad979d6c995fd5559b22a826766b02d50dd
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37940731"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39405873"
 ---
 # <a name="align-c"></a>align (C++)
 
@@ -50,7 +50,7 @@ Kompilator nie gwarantuje lub próba zachowują atrybut wyrównania danych podcz
 
 Nie można określić wyrównania dla parametrów funkcji. W przypadku danych, który ma atrybut wyrównania jest przekazywany przez wartość na stosie, jego wyrównania jest kontrolowana przez Konwencję wywoływania. Jeśli wyrównanie danych jest ważne dla wywołanej funkcji, skopiuj parametr do pamięci prawidłowo wyrównane przed użyciem.
 
-Bez `__declspec(align(#))`, kompilator ogólnie Wyrównuje dane na naturalnych uwzględniając procesor docelowy i rozmiar danych, maksymalnie 4-bajtowych granicach na 32-bitowe procesory i 8-bajtowych granicach na 64-bitowych procesorach. Dane klasach lub strukturach są wyrównane w klasie lub strukturze co najmniej do ich naturalnego wyrównania i bieżące ustawienia pakietów (z #pragma **pakiet** lub **/ZP** — opcja kompilatora).
+Bez `__declspec(align(#))`, kompilator ogólnie Wyrównuje dane na naturalnych uwzględniając procesor docelowy i rozmiar danych, maksymalnie 4-bajtowych granicach na 32-bitowe procesory i 8-bajtowych granicach na 64-bitowych procesorach. Dane klasach lub strukturach są wyrównane w klasie lub strukturze co najmniej do ich naturalnego wyrównania i bieżące ustawienia pakietów (z #pragma `pack` lub `/Zp` — opcja kompilatora).
 
 W tym przykładzie pokazano użycie `__declspec(align(#))`:
 
@@ -179,7 +179,7 @@ void fn() {
 }
 ```
 
-Wyrównanie, jeśli pamięć została przydzielona na stosie, zależy od tego, która funkcja alokacji jest wywoływana.  Na przykład, jeśli używasz **— funkcja malloc**, wynik zależy od wielkości operandu. Jeśli *arg* > = 8, pamięć, zwracany jest wyrównany 8 bajtów. Jeśli *arg* < 8, wyrównanie pamięci, zwracany jest pierwszy potęgą liczby 2 mniej niż *arg*. Na przykład jeśli korzystasz z malloc(7), wyrównanie wynosi 4 bajty.
+Wyrównanie, jeśli pamięć została przydzielona na stosie, zależy od tego, która funkcja alokacji jest wywoływana.  Na przykład, jeśli używasz `malloc`, wynik zależy od wielkości operandu. Jeśli *arg* > = 8, pamięć, zwracany jest wyrównany 8 bajtów. Jeśli *arg* < 8, wyrównanie pamięci, zwracany jest pierwszy potęgą liczby 2 mniej niż *arg*. Na przykład jeśli korzystasz z malloc(7), wyrównanie wynosi 4 bajty.
 
 ##  <a name="vclrf_declspecaligntypedef"></a> Definiowanie nowych typów z __declspec(align(#))
 
@@ -219,9 +219,9 @@ __declspec(thread) struct S9 a;
 
 ##  <a name="vclrfhowalignworkswithdatapacking"></a> Jak dopasować pakowania danych
 
-**/ZP** — opcja kompilatora i **pakiet** pragma zapewniają efekt pakowania danych dla członków struktur i związków. Ten przykład pokazuje, jak **/ZP** i `__declspec(align(#))` współpracują ze sobą:
+`/Zp` — Opcja kompilatora i `pack` pragma zapewniają efekt pakowania danych dla członków struktur i związków. Ten przykład pokazuje, jak `/Zp` i `__declspec(align(#))` współpracują ze sobą:
 
-```c[[]]
+```cpp
 struct S {
    char a;
    short b;
@@ -232,7 +232,7 @@ struct S {
 };
 ```
 
-W poniższej tabeli wymieniono przesunięcie każdego członka w różnych **/ZP** (lub #pragma **pakiet**) wartości, pokazujący, jak dwa oddziałują ze sobą.
+W poniższej tabeli wymieniono przesunięcie każdego członka w różnych `/Zp` (lub #pragma `pack`) wartości, pokazujący, jak dwa oddziałują ze sobą.
 
 |Zmienna|/Zp1|/Zp2|/Zp4|/Zp8|
 |--------------|-----------|-----------|-----------|-----------|
@@ -251,7 +251,6 @@ Przesunięcie obiektu bazuje na przesunięciu poprzedniego obiektu i bieżącemu
 **END specyficzny dla Microsoft**
 
 ## <a name="see-also"></a>Zobacz także
-
 [__declspec](../cpp/declspec.md)  
 [Przegląd konwencji ABI ARM](../build/overview-of-arm-abi-conventions.md)  
 [Przegląd konwencji wywoływania x64](../build/overview-of-x64-calling-conventions.md)  

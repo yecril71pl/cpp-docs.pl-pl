@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 813c90db941f2eb760c4e3a36d15eca64a293bec
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 73c15cfb08bab96acf85bc517165926faced86ad
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38955468"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39406194"
 ---
 # <a name="multiple-base-classes"></a>Wiele klas podstawowych
 Klasy mogą pochodzić z więcej niż jednej klasy bazowej. W modelu dziedziczenia wielokrotnego (gdzie klasy pochodzą z więcej niż jednej klasy bazowej) klasy bazowe są określane za pomocą *lista_bazowa* elementu gramatyki. Na przykład, można określić deklarację klasy dla `CollectionOfBook`, pochodzącej z `Collection` i `Book`:  
@@ -97,9 +97,9 @@ Układ obiektu z wirtualnym i niewirtualnym dziedziczeniem
 > [!NOTE]
 >  Dziedziczenie wirtualne zapewnia znaczące korzyści dotyczące rozmiaru w porównaniu do dziedziczenia niewirtualnego. Jednak może to wprowadzić dodatkowe obciążenie dotyczące przetwarzania.  
   
- Jeśli w klasie pochodnej przeciążono funkcję wirtualną, która jest dziedziczona z wirtualnej klasy bazowej, oraz jeśli konstruktor lub destruktor klasy pochodnej wywołuje tę funkcję za pomocą wskaźnika do wirtualnej klasy bazowej, kompilator może wprowadzić dodatkowe ukryte pola „vtordisp” do klas z bazami wirtualnymi. Opcja kompilatora /vd0 pomija dodanie ukrytego elementu członkowskiego przemieszczenia konstruktora/destruktora vtordisp. Domyślna opcja kompilatora /vd1 włącza je wtedy, gdy są niezbędne. Wyłącz vtordisps tylko wtedy, gdy masz pewność, że wszystkie konstruktory i destruktory klas wywołują funkcje wirtualne w sposób wirtualny.  
+ Jeśli w klasie pochodnej przeciążono funkcję wirtualną, która jest dziedziczona z wirtualnej klasy bazowej, oraz jeśli konstruktor lub destruktor klasy pochodnej wywołuje tę funkcję za pomocą wskaźnika do wirtualnej klasy bazowej, kompilator może wprowadzić dodatkowe ukryte pola „vtordisp” do klas z bazami wirtualnymi. `/vd0` — Opcja kompilatora pomija dodanie elementu członkowskiego przemieszczenia konstruktora/destruktora vtordisp ukryte. `/vd1` — Opcja kompilatora, domyślnie, włącza je gdzie są one niezbędne. Wyłącz vtordisps tylko wtedy, gdy masz pewność, że wszystkie konstruktory i destruktory klas wywołują funkcje wirtualne w sposób wirtualny.  
   
- Opcja kompilatora /vd wpływa na cały moduł kompilacji. Użyj **vtordisp** pragmy do pominięcia i ponownego włączenia pól vtordisp działające na zasadzie klasa po klasie:  
+ `/vd` — Opcja kompilatora ma wpływ na cały moduł kompilacji. Użyj `vtordisp` pragmy do pominięcia i ponownego `vtordisp` pola na zasadzie klasa po klasie:  
   
 ```cpp 
 #pragma vtordisp( off )  
@@ -217,5 +217,5 @@ Wirtualne programu vs. Niewirtualne informacje
   
  Na rysunku, uzyskiwanie dostępu do dowolnego elementu członkowskiego klasy `A` za pośrednictwem niewirtualnych klas podstawowych przyczyn wiadomość niejednoznaczności; kompilator nie ma informacji o który objaśnia, czy ma być używany podobiektu skojarzone z `B` lub podobiektów skojarzone z `C`. Jednak gdy `A` jest określony jako wirtualnej klasy bazowej, nie ma żadnych pytanie podobiektów, który jest dostępny.  
   
-## <a name="see-also"></a>Zobacz też  
+## <a name="see-also"></a>Zobacz także  
  [Dziedziczenie](../cpp/inheritance-cpp.md)

@@ -12,12 +12,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1c8df38f1869ab4c3b8e80101ca4dbbc27f9018e
-ms.sourcegitcommit: 76fd30ff3e0352e2206460503b61f45897e60e4f
+ms.openlocfilehash: 5b5a91caab06f4d03beeea8ba542e1ebc12a8ecb
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/13/2018
-ms.locfileid: "39027277"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39407864"
 ---
 # <a name="c-type-system-modern-c"></a>System typów języka C++ (Modern C++)
 Pojęcie *typu* jest bardzo ważna w języku C++. Zwracana wartość każdej zmiennej, argumentu funkcji oraz funkcji musi mieć typ, aby mogła zostać skompilowana. Ponadto, kompilator niejawnie nadaje typ każdemu wyrażeniu (w tym wartości literału), zanim zostanie on oceniony. Niektóre przykłady typów uwzględniają **int** do przechowywania wartości całkowitych **double** do przechowywania wartości zmiennoprzecinkowych (znany także jako *skalarne* typy danych), lub klasa biblioteki standardowej [std::basic_string](../standard-library/basic-string-class.md) do przechowywania tekstu. Możesz utworzyć swój własny typ definiując **klasy** lub **struktury**. Typ określa wielkość pamięci, która zostanie zaalokowana dla zmiennej (lub wyniku wyrażenia), rodzaje wartości, które mogą być przechowywane w tej zmiennej, sposób interpretacji tych wartości (jako wzorców bajtów) oraz operacje, jakie mogą zostać na nich wykonane. Ten artykuł zawiera nieformalny przegląd głównych funkcji systemu typów C++.  
@@ -41,7 +41,6 @@ Pojęcie *typu* jest bardzo ważna w języku C++. Zwracana wartość każdej zmi
  Poniższy przykład pokazuje kilka prostych deklaracji zmiennych z opisami każdej z nich. W przykładzie pokazano również, jak kompilator używa informacji o typie, aby umożliwiać lub uniemożliwiać pewne kolejne operacje na zmiennej.  
   
 ```cpp  
-  
 int result = 0;              // Declare and initialize an integer.  
 double coefficient = 10.8;   // Declare and initialize a floating   
                              // point value.  
@@ -56,7 +55,6 @@ string result = "zero";      // error. Can’t redefine a variable with
                              // new type.  
 int maxValue;                // Not recommended! maxValue contains   
                              // garbage bits until it is initialized.  
-  
 ```  
   
 ## <a name="fundamental-built-in-types"></a>Podstawowe (wbudowane) typy  
@@ -96,10 +94,10 @@ PI = .75 //Error. Cannot modify const variable.
   
  **Const** kwalifikator jest szeroko stosowany w deklaracjach funkcji i zmiennych i "poprawność const" jest bardzo ważnym pojęciem języka C++; zasadniczo oznacza wykorzystanie **const** w celu zagwarantowania, w czasie kompilacji czy wartości nie zostaną zmodyfikowane przypadkowo. Aby uzyskać więcej informacji, zobacz [const](../cpp/const-cpp.md).  
   
- A **const** typu różni się od jego wartości niestałej wersji; na przykład `const int` jest typem samodzielnym z **int**. Można użyć C++ **const_cast** operatora w tych rzadkich przypadkach kiedy konieczne jest usunięcie *const-ness* ze zmiennej. Aby uzyskać więcej informacji, zobacz [konwersje i bezpieczeństwo typów](../cpp/type-conversions-and-type-safety-modern-cpp.md).  
+ A **const** typu różni się od jego wartości niestałej wersji; na przykład **const int** jest typem samodzielnym z **int**. Można użyć C++ **const_cast** operatora w tych rzadkich przypadkach kiedy konieczne jest usunięcie *const-ness* ze zmiennej. Aby uzyskać więcej informacji, zobacz [konwersje i bezpieczeństwo typów](../cpp/type-conversions-and-type-safety-modern-cpp.md).  
   
 ## <a name="string-types"></a>Typy ciągu  
- Ściśle rzecz ujmując język C++ nie ma wbudowanych parametry typu; **char** i `wchar_t` przechowywania pojedynczych znaków — należy zadeklarować tablicy tych typów w celu uzyskania przybliżonego ciągu, dodanie końcowej wartości zerowej (na przykład ASCII `'\0'`) do pierwszego elementu tablicy ostatni prawidłowy znak (nazywane również *ciąg stylu C*). Ciągi stylu C wymagały znacznie więcej kodu lub korzystania z funkcji zewnętrznej biblioteki obsługującej ciągi. Ale w nowoczesnym C++, mamy standardową biblioteki typów `std::string` (dla 8-bitowych **char**-typów ciągów znaków) lub `std::wstring` (dla 16-bitowych `wchar_t`-typów ciągów znaków). Te kontenery standardowej biblioteki języka C++ mogą być uważane za natywne typy ciągów, ponieważ są one częścią standardowych bibliotek, które są zawarte w zgodnym środowisku kompilacji C++. Po prostu użyć `#include <string>` dyrektywy, aby te typy były dostępe w programie. (Jeśli używasz biblioteki ATL lub MFC, klasa CString jest również dostępna, ale nie jest częścią standardowego języka C++.) Używanie tablic zakończonych znakiem zerowym (wcześniej wspomniane ciągi stylu C) jest odradzane w nowoczesnym C++.  
+ Ściśle rzecz ujmując język C++ nie ma wbudowanych parametry typu; **char** i **wchar_t** przechowywania pojedynczych znaków — należy zadeklarować tablicy tych typów w celu uzyskania przybliżonego ciągu, dodanie końcowej wartości zerowej (na przykład ASCII `'\0'`) do pierwszego elementu tablicy poza ostatnim prawidłowym znakiem (nazywane również *ciąg stylu C*). Ciągi stylu C wymagały znacznie więcej kodu lub korzystania z funkcji zewnętrznej biblioteki obsługującej ciągi. Ale w nowoczesnym C++, mamy standardową biblioteki typów `std::string` (dla 8-bitowych **char**-typów ciągów znaków) lub `std::wstring` (dla 16-bitowych **wchar_t**-typów ciągów znaków). Te kontenery standardowej biblioteki języka C++ mogą być uważane za natywne typy ciągów, ponieważ są one częścią standardowych bibliotek, które są zawarte w zgodnym środowisku kompilacji C++. Po prostu użyć `#include <string>` dyrektywy, aby te typy były dostępe w programie. (Jeśli używasz biblioteki ATL lub MFC, klasa CString jest również dostępna, ale nie jest częścią standardowego języka C++.) Używanie tablic zakończonych znakiem zerowym (wcześniej wspomniane ciągi stylu C) jest odradzane w nowoczesnym C++.  
   
 ## <a name="user-defined-types"></a>Typy definiowane przez użytkownika  
  Podczas definiowania **klasy**, **struktury**, **Unii**, lub **wyliczenia**, ten koncept jest wykorzystywany w reszcie kodu, tak jakby był to typ podstawowy . Zajmuje znany obszar w pamięci, a niektóre zasady sposobu, w jaki można go używać, dotyczą sprawdzania w czasie kompilacji i w trakcie uruchomienia, przez cały okres istnienia programu. Główne różnice między głównymi wbudowanymi typami a typami definiowanymi przez użytkownika są następujące:  
@@ -116,19 +114,16 @@ PI = .75 //Error. Cannot modify const variable.
  Pierwszą rzeczą, którą należy wiedzieć przy deklarowaniu zmiennej surowego wskaźnika, jest to, że zmienna przydzieli tylko pamięć, która jest niezbędna do przechowania adresu lokalizacji pamięci, do którego odwoła się wskaźnik po wyłuskaniu. Alokacja pamięci dla samych wartości danych (nazywane również *magazyn zapasowy*) nie jest jeszcze przydzielone. Innymi słowy, przez zadeklarowanie zmiennej surowego wskaźnika tworzysz zmienną adresu pamięci, a nie zmienną rzeczywistych danych. \Wyłuskanie zmiennej wskaźnika przed upewnieniem się, że zawiera ona prawidłowy adres magazynu zapasowego, spowoduje niezdefiniowane zachowanie (zwykle błąd krytyczny) w programie. Poniższy przykład przedstawia ten rodzaj błędu:  
   
 ```cpp  
-  
 int* pNumber;       // Declare a pointer-to-int variable.  
 *pNumber = 10;      // error. Although this may compile, it is  
                     // a serious error. We are dereferencing an  
                     // uninitialized pointer variable with no  
                     // allocated memory to point to.  
-  
 ```  
   
  Przykład wyłuskuje typ wskaźnika, bez przydzielania pamięci na przechowywanie rzeczywistych danych całkowitoliczbowych lub prawidłowego przypisanego adresu pamięci. Poniższy kod poprawia te błędy:  
   
 ```cpp  
-  
     int number = 10;          // Declare and initialize a local integer  
                               // variable for data backing store.  
     int* pNumber = &number;   // Declare and initialize a local integer  
@@ -140,7 +135,6 @@ int* pNumber;       // Declare a pointer-to-int variable.
                               // pNumber, the integer variable called  
                               // "number". Note "number" was changed, not  
                               // "pNumber".  
-  
 ```  
   
  Poprawiony kod przykład wykorzystuje lokalną pamięć stosu do utworzenia zapasowy magazyn, który `pNumber` wskazuje. Dla uproszczenia używamy podstawowego typu. W praktyce magazyn zapasowy wskaźników to większość typów zdefiniowane przez użytkownika, które są dynamicznie przydzielane w obszarze pamięci o nazwie *sterty* (lub *wolnym magazynie*) przy użyciu **nowe** wyrażenia słowa kluczowego (w programowaniu w stylu języka C, starszy `malloc()` użyto funkcji biblioteki środowiska uruchomieniowego C). Po przydzieleniu, te zmienne są zwykle określane jako obiekty, zwłaszcza, jeśli są one oparte na definicji klasy. Pamięć, która została przydzielona z **nowe** musi zostać usunięta przez odpowiednią **Usuń** instrukcji (lub, jeśli użyto `malloc()` funkcji do jej przydzielenia, funkcja środowiska uruchomieniowego języka C `free()`).  
@@ -148,14 +142,12 @@ int* pNumber;       // Declare a pointer-to-int variable.
  Jednak to łatwo zapomnieć o usunięciu dynamicznie przydzielanego obiektu szczególnie w złożonym kodzie, co powoduje błąd zasobu o nazwie *przeciek pamięci*. Z tego powodu zdecydowanie odradza się stosowanie surowych wskaźników w nowoczesnym języku C++. Prawie zawsze jest lepiej owinąć surowy wskaźnik w [inteligentny wskaźnik](../cpp/smart-pointers-modern-cpp.md), który automatycznie zwolni pamięć, gdy jego destruktor jest wywoływany (gdy kod wykracza poza zakres sprytnego wskaźnika); za pomocą inteligentnego wskaźnika można praktycznie wyeliminować całą klasę usterek w programach języka C++. W poniższym przykładzie przyjęto założenie, `MyClass` jest typ zdefiniowany przez użytkownika, który posiada publiczną metodę `DoSomeWork();`  
   
 ```cpp  
-  
 void someFunction() {  
     unique_ptr<MyClass> pMc(new MyClass);  
     pMc->DoSomeWork();  
 }  
   // No memory leak. Out-of-scope automatically calls the destructor  
   // for the unique_ptr, freeing the resource.  
-  
 ```  
   
  Aby uzyskać więcej informacji dotyczących inteligentnych wskaźników, zobacz [inteligentne wskaźniki](../cpp/smart-pointers-modern-cpp.md).  
@@ -175,7 +167,7 @@ void someFunction() {
 |[Typy wartości](../cpp/value-types-modern-cpp.md)|W tym artykule opisano *typy wartości* oraz zagadnienia odnoszące się do ich wykorzystania.|  
 |[Konwersje i bezpieczeństwo typów](../cpp/type-conversions-and-type-safety-modern-cpp.md)|Opisuje typowe problemy przy konwersji typu i pokazuje, jak ich unikać.|  
   
-## <a name="see-also"></a>Zobacz też  
+## <a name="see-also"></a>Zobacz także  
  [Witamy z powrotem w C++](../cpp/welcome-back-to-cpp-modern-cpp.md)   
  [Dokumentacja języka C++](../cpp/cpp-language-reference.md)   
  [Standardowa biblioteka C++](../standard-library/cpp-standard-library-reference.md)

@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1506870ff0b5bb2aea55874d32f62b1da63c7302
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: f57ae6a7d084a497ec41c9b66b314ad1fdb3e7fc
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37947789"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39406574"
 ---
 # <a name="function-overloading"></a>Przeładowywanie funkcji
 C++ umożliwia określenie więcej niż jednej funkcji o tej samej nazwie w tym samym zakresie. Są to tak zwane *przeciążone* funkcji. Przeciążone funkcje umożliwiają podanie różnego znaczenia dla funkcji, w zależności od typu i liczby argumentów. 
@@ -163,7 +163,7 @@ F1 = Add( F2, 23 );
   
  Poprzednia instrukcja tworzy dwa zestawy:  
   
-|Zestaw 1: Release Candidate funkcji, które mają pierwszy Argument typu ułamka|Zestaw 2: Release Candidate funkcje Whose drugi Argument można przekonwertować na typ int|  
+|Zestaw 1: Release Candidate funkcji, które mają pierwszy Argument typu ułamka|Zestaw 2: Release Candidate funkcje Whose drugi Argument można przekonwertować na typ **int**|  
 |--------------------------------------------------------------------------|-----------------------------------------------------------------------------------|  
 |Wariantu 1|Wariantu 1 (**int** mogą być konwertowane na **długie** za pomocą konwersji standardowej)|  
 |Variant 3||  
@@ -178,7 +178,7 @@ F1 = Add( 3, 6 );
   
  Poprzedniego wywołania funkcji kompilacje następujących zestawów:  
   
-|Zestaw 1: Release Candidate funkcje, mają pierwszy Argument typu int|Zestaw 2: Release Candidate funkcje, mieć drugi Argument typu int|  
+|Zestaw 1: Release Candidate funkcje, mają pierwszy Argument typu **int**|Zestaw 2: Release Candidate funkcje, mieć drugi Argument typu **int**|  
 |---------------------------------------------------------------------|----------------------------------------------------------------------|  
 |Variant 2 (**int** mogą być konwertowane na **długie** za pomocą konwersji standardowej)|Wariantu 1 (**int** mogą być konwertowane na **długie** za pomocą konwersji standardowej)|  
   
@@ -282,7 +282,7 @@ volatile Over&
   
 3.  Dopasuj je przy użyciu standardowych konwersji. Dowolnej sekwencji nie sklasyfikowane jako dopasowanie dokładne lub dopasowania przy użyciu w promocjach, zawierający tylko konwersje standardowe i prosta konwersje zostanie sklasyfikowany jako dopasowanie przy użyciu standardowych konwersji. W ramach tej kategorii są stosowane następujące reguły:  
   
-    -   Konwersja ze wskaźnika do klasy pochodnej na wskaźnik do bezpośredniej lub pośredniej klasy bazowej jest konwertowanie **void \***  lub **const void \*** .  
+    -   Konwersja ze wskaźnika do klasy pochodnej na wskaźnik do bezpośredniej lub pośredniej klasy bazowej jest konwertowanie `void *` lub `const void *`.  
   
     -   Konwersja ze wskaźnika do klasy pochodnej na wskaźnik do klasy bazowej daje lepsze dopasowanie bliżej klasa bazowa ma bezpośrednią klasą bazową. Załóżmy, że jest hierarchii klas, jak pokazano na poniższej ilustracji.  
   
@@ -439,7 +439,6 @@ int main()
     auto v2 = C().get_data(); // get the original. prints "rvalue"
     return 0;
 }
-
 ```
   
 ## <a name="restrictions-on-overloading"></a>Ograniczenia przeciążania  
@@ -466,7 +465,7 @@ int main()
     void Print( PSTR szToPrint );  
     ```  
   
-     Poprzedni dwie funkcje mają listy argumentów identyczne. `PSTR` jest synonimem typu **char \*** . W zakresie członka ten kod generuje błąd.  
+     Poprzedni dwie funkcje mają listy argumentów identyczne. `PSTR` jest synonimem typu `char *`. W zakresie członka ten kod generuje błąd.  
   
 -   Typy wyliczone są różnych typów i może służyć do rozróżnienia przeciążonych funkcji.  
   
@@ -573,8 +572,5 @@ double Account::Deposit( double dAmount, char *szPassword )
 }  
 ```
 
-
-
-  
-## <a name="see-also"></a>Zobacz też  
+## <a name="see-also"></a>Zobacz także  
  [Funkcje (C++)](../cpp/functions-cpp.md)

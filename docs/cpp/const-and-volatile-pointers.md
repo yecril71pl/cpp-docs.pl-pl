@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b63e2da6286e6a8e10ecf29a37ec9d74e9f1dfc0
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: e32312e8c6f3dc149f6e5e1f8dc37b1395732d02
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37947762"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39408193"
 ---
 # <a name="const-and-volatile-pointers"></a>Wskaźniki stałe i nietrwałe
 [Const](../cpp/const-cpp.md) i [volatile](../cpp/volatile-cpp.md) słowa kluczowe zmienić sposób traktowania wskaźników. **Const** — słowo kluczowe Określa, że wskaźnik nie może być modyfikowany po inicjalizacji; wskaźnik jest odtąd chroniony przed.  
@@ -70,7 +70,7 @@ char *pch2 = &cch;   // Error
 char *const pch3 = &cch;   // Error  
 ```  
   
- Deklaracja `pch2` deklaruje wskaźnik, dzięki któremu można zmodyfikować obiekt stały i dlatego jest niedozwolona. Deklaracja `pch3` Określa, że **wskaźnik** jest stałą, a nie obiektem; ta deklaracja jest niedozwolona z tego samego powodu `pch2` deklaracja jest niedozwolona.  
+ Deklaracja `pch2` deklaruje wskaźnik, dzięki któremu można zmodyfikować obiekt stały i dlatego jest niedozwolona. Deklaracja `pch3` Określa, że wskaźnik jest wartością stałą, nie obiektem; ta deklaracja jest niedozwolona z tego samego powodu `pch2` deklaracja jest niedozwolona.  
   
  Poniższe osiem przypisań pokazuje przypisania poprzez wskaźnik i zmianę wartości wskaźnika dla wcześniejszych deklaracji; na chwilę obecną załóżmy, że inicjalizacja `pch1` poprzez `pch8` była poprawna.  
   
@@ -96,7 +96,7 @@ errno_t strcpy_s( char *strDestination, size_t numberOfElements, const char *str
  Poprzednia instrukcja deklaruje funkcję, [strcpy_s](../c-runtime-library/reference/strcpy-s-wcscpy-s-mbscpy-s.md), gdzie dwa z trzech argumentów są wskaźnikami typu do **char**. Ponieważ argumenty są przekazywane przez odwołanie, a nie przez wartość, funkcja będzie mogła swobodnie modyfikować zarówno `strDestination` i `strSource` Jeśli `strSource` nie zostało zadeklarowane jako **const**. Deklaracja `strSource` jako **const** zapewnia obiekt wywołujący `strSource` nie można zmienić przez wywoływaną funkcję.  
   
 > [!NOTE]
->  Ponieważ nie istnieje konwersja standardowa ze *typename* **\*** do **const** *typename* **\***, dozwolone jest przekazanie argumentu typu **char \***  do [strcpy_s](../c-runtime-library/reference/strcpy-s-wcscpy-s-mbscpy-s.md). Jednakże odwrotna sytuacja nie jest PRAWDA. nie istnieje niejawna konwersja do usunięcia **const** atrybut z obiektu lub wskaźnika.  
+>  Ponieważ nie istnieje konwersja standardowa ze *typename* **\*** do **const** *typename* **\***, dozwolone jest przekazanie argumentu typu `char *` do [strcpy_s](../c-runtime-library/reference/strcpy-s-wcscpy-s-mbscpy-s.md). Jednakże odwrotna sytuacja nie jest PRAWDA. nie istnieje niejawna konwersja do usunięcia **const** atrybut z obiektu lub wskaźnika.  
   
  A **const** wskaźnik danego typu mogą być przypisane do wskaźnika tego samego typu. Jednak wskaźnik nie jest **const** nie można przypisać do **const** wskaźnika. Poniższy kod pokazuje poprawne i niepoprawne przypisania:  
   
@@ -133,5 +133,5 @@ int main() {
 }  
 ```  
   
-## <a name="see-also"></a>Zobacz też  
+## <a name="see-also"></a>Zobacz także  
  [Wskaźniki](../cpp/pointers-cpp.md)

@@ -20,14 +20,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: eb1cdd4ec5dc556f0427914ca8ec746ad3ad2ccc
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 1b0c4cde0c50064c5a88469e8f9061a0321902e4
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39408588"
 ---
 # <a name="function-call-operator-"></a>Operator wywołania funkcji: ()
-Wyrażenie przyrostek następuje operator wywołania funkcji **()**, określa wywołania funkcji.  
+Wyrażenie przyrostkowe następują operator wywołania funkcji **()**, określa wywołania funkcji.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -37,33 +38,33 @@ postfix-expression
 ```  
   
 ## <a name="remarks"></a>Uwagi  
- Argumenty operator wywołania funkcji są zero lub więcej wyrażeń oddzielonych przecinkami — rzeczywistych argumentów do funkcji.  
+ Argumenty dla operatora wywołania funkcji są zero lub więcej wyrażeń oddzielonych przecinkami — rzeczywiste argumenty do funkcji.  
   
- *Wyrażenie przyrostek* musi być adresem funkcji (na przykład identyfikator funkcji lub wartość wskaźnika funkcji), i *lista wyrażeń argument* znajduje się lista wyrażeń (oddzielone przecinkami) których wartości (argumenty) są przekazywane do funkcji. *Lista wyrażeń argument* argument może być pusta.  
+ *Wyrażeniem przyrostkowym* musi zwrócić adresu funkcji (na przykład identyfikator funkcji lub wartość wskaźnika funkcji), a *argument-expression-list* jest listą wyrażeń (oddzielonych przecinkami) których wartości (argumenty) są przekazywane do funkcji. *Argument-expression-list* argument może być pusta.  
   
- *Wyrażenie przyrostek* musi mieć jeden z następujących typów:  
+ *Wyrażeniem przyrostkowym* musi być jedną z następujących typów:  
   
--   Funkcja zwracająca typ `T`. Przykład deklaracja jest  
+-   Funkcja zwracająca typ `T`. Deklaracja przykład jest  
   
-    ```  
+    ```cpp 
     T func( int i )  
     ```  
   
--   Wskaźnik do funkcji zwracającej typ `T`. Przykład deklaracja jest  
+-   Wskaźnik do funkcji zwracająca typ `T`. Deklaracja przykład jest  
   
-    ```  
+    ```cpp 
     T (*func)( int i )  
     ```  
   
--   Odwołanie do funkcji zwracającej typ `T`. Przykład deklaracja jest  
+-   Odwołanie do funkcji zwracająca typ `T`. Deklaracja przykład jest  
   
-    ```  
+    ```cpp 
     T (&func)(int i)  
     ```  
   
--   Funkcja wskaźnik do elementu członkowskiego wyłuskania zwracająca typ `T`. Przykład wywołania funkcji są  
+-   Funkcja wskaźnika do elementu członkowskiego wyłuskania typ zwracanych `T`. Przykład wywołania funkcji są  
   
-    ```  
+    ```cpp 
     (pObject->*pmf)();  
     (Object.*pmf)();  
     ```  
@@ -71,7 +72,7 @@ postfix-expression
 ## <a name="example"></a>Przykład  
  Poniższy przykład wywołuje funkcję biblioteki standardowej `strcat_s` z trzech argumentów:  
   
-```  
+```cpp 
 // expre_Function_Call_Operator.cpp  
 // compile with: /EHsc  
   
@@ -102,9 +103,9 @@ Welcome to C++
 ```  
   
 ## <a name="function-call-results"></a>Wyniki wywołania funkcji  
- Wywołanie funkcji ma r, chyba, że funkcja jest zadeklarowany jako typ referencyjny. Funkcje z typem zwracanym odwołanie obliczyć wartości l i może służyć po lewej stronie instrukcji przypisania w następujący sposób:  
+ Wywołania funkcji ocenia do r-wartości, chyba że funkcja jest zadeklarowana jako typ odwołania. Funkcje z typem zwracanym odwołanie l-wartościami i może służyć po lewej stronie instrukcji przypisania w następujący sposób:  
   
-```  
+```cpp 
 // expre_Function_Call_Results.cpp  
 // compile with: /EHsc  
 #include <iostream>  
@@ -134,11 +135,11 @@ int main()
 }  
 ```  
   
- Poprzedni kod definiuje klasę o nazwie `Point`, który zawiera dane prywatne obiekty reprezentujące *x* i *y* współrzędnych. Obiekty te dane muszą zostać zmodyfikowane i pobrać ich wartości. Ten program jest tylko jeden z kilku projektów dla klasy; użycie `GetX` i `SetX` lub `GetY` i `SetY` funkcji jest inny projekt możliwe.  
+ Powyższy kod definiuje klasę o nazwie `Point`, który zawiera dane prywatne obiekty reprezentujące *x* i *y* współrzędnych. Obiekty te dane muszą zostać zmodyfikowane, a następnie pobrać ich wartości. Ten program jest tylko jeden z kilku projektów dla klasy; Korzystanie z `GetX` i `SetX` lub `GetY` i `SetY` funkcji jest inny projekt to możliwe.  
   
- Funkcje tego typu zwracanego klasy, wskaźniki do typu klasy ani odwołania do typu klasy może być używany jako lewy operand operatory wyboru elementu członkowskiego. W związku z tym następujący kod jest prawnych:  
+ Funkcje tego typu zwracanego klasy, wskaźniki do typu klasy lub odwołania do typu klasy, które mogą być używane jako lewy operand operatory wyboru elementu członkowskiego. W związku z tym poniższy kod jest dozwolony:  
   
-```  
+```cpp 
 // expre_Function_Results2.cpp  
 class A {  
 public:  
@@ -179,9 +180,9 @@ int main() {
 }  
 ```  
   
- Rekursywnie można wywołać funkcji. Aby uzyskać więcej informacji na temat deklaracje funkcji, zobacz [funkcji](functions-cpp.md). Trwa pokrewnego [Program i połączenie](../cpp/program-and-linkage-cpp.md).  
+ Funkcje mogą być wywoływane cyklicznie. Aby uzyskać więcej informacji na temat deklaracji funkcji, zobacz [funkcji](functions-cpp.md). Trwa pokrewnego [Program i połączenie](../cpp/program-and-linkage-cpp.md).  
   
-## <a name="see-also"></a>Zobacz też  
+## <a name="see-also"></a>Zobacz także  
  [Wyrażenia przyrostków](../cpp/postfix-expressions.md)   
- [Operatory C++ wbudowanych, priorytet i łączność](../cpp/cpp-built-in-operators-precedence-and-associativity.md)   
+ [C++ wbudowane operatory, pierwszeństwo i kojarzenie](../cpp/cpp-built-in-operators-precedence-and-associativity.md)   
  [Wywołanie funkcji](../c-language/function-call-c.md)   

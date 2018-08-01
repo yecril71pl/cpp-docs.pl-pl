@@ -15,12 +15,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 79588c700201a8b59053af3e0007216bfc8f4aec
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: b9a9011912b0c187d9aa9e75dd9e484c4688e3c0
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32419132"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39405912"
 ---
 # <a name="lexical-conventions"></a>Konwencje leksykalne
 Ten rozdział przedstawia główne elementy programu C++. Te elementy, zwane „elementami leksykalnymi” lub „tokenami”, są używane do konstruowania instrukcji, definicji, deklaracji i tak dalej, które z kolei są wykorzystywane do konstruowania całych programów. W tej sekcji omówiono następujące elementy leksykalne:
@@ -38,12 +38,12 @@ Ten rozdział przedstawia główne elementy programu C++. Te elementy, zwane „
 
 - [Znaki interpunkcyjne](../cpp/punctuators-cpp.md)
 
-- [Liczbowe, Boolean i literały wskaźnika](../cpp/numeric-boolean-and-pointer-literals-cpp.md)
+- [Literały numeryczne, atrybut typu wartość logiczna i wskaźnik](../cpp/numeric-boolean-and-pointer-literals-cpp.md)
 
 - [Literały ciągów i znakowe](../cpp/string-and-character-literals-cpp.md)
 
 - [Literały definiowane przez użytkownika](../cpp/user-defined-literals-cpp.md)
 
-## <a name="see-also"></a>Zobacz też
-- [Dokumentacja języka C++](../cpp/cpp-language-reference.md)
-- [Program i połączenie](program-and-linkage-cpp.md)
+## <a name="see-also"></a>Zobacz także
+ [Dokumentacja języka C++](../cpp/cpp-language-reference.md)  
+ [Program i połączenie](program-and-linkage-cpp.md)

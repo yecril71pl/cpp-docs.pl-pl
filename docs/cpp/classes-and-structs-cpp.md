@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 88836d93d6ce3ba4dff817c7b470e87f48f61b14
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: ffd822aa59af9c703d00f8fc195fe4eeb91ce833
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38954180"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39405473"
 ---
 # <a name="classes-and-structs-c"></a>Klasy i struktury (C++)
 Ta sekcja wprowadza C++ klas i struktur. Konstrukcje dwa są identyczne w języku C++, z tą różnicą, że w strukturach publiczne, jest wartość domyślna dostępu, natomiast w klasach, wartością domyślną jest prywatny.  
@@ -70,5 +70,5 @@ Ta sekcja wprowadza C++ klas i struktur. Konstrukcje dwa są identyczne w język
 |Dostęp domyślny jest publiczny|Dostęp domyślny jest prywatny|Dostęp domyślny jest publiczny|  
 |Bez ograniczeń użycia|Bez ograniczeń użycia|Użyj tylko jednego członka w czasie|  
   
-## <a name="see-also"></a>Zobacz też  
+## <a name="see-also"></a>Zobacz także  
  [Dokumentacja języka C++](../cpp/cpp-language-reference.md)

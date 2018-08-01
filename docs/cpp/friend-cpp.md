@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9938e8bb2128def7d5f507acb111de854dfd4977
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: 931f9d7cc17afe974837c8a622b82c124ef6be57
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37942084"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39407020"
 ---
 # <a name="friend-c"></a>friend (C++)
 W niektórych sytuacjach jest bardziej wygodne do udzielania dostępu poziom elementu członkowskiego do funkcji, które nie są elementami członkowskimi klasę lub do wszystkich elementów członkowskich w osobnej klasy. Można zadeklarować tylko implementujący klasy, którzy swoich znajomych. Funkcji lub klasy nie można zadeklarować sam jako zaprzyjaźniona z dowolnej klasy. W definicji klasy, należy użyć **friend** — słowo kluczowe i nazwy funkcji składowej lub innej klasy, aby przyznać jej dostęp do prywatnych i chronionych składowych klasy. W definicji szablonu parametr typu może być zadeklarowana jako zaprzyjaźniona.  
@@ -59,7 +59,7 @@ friend class F;
 friend F;  
 ```  
   
- Pierwszy formularz wprowadza nową klasę F, jeśli żadna z istniejących klas o tej nazwie został znaleziony w najbardziej przestrzeni nazw.  **C ++ 11**: drugi formularz nie wprowadza nową klasę; można używać, gdy klasa została już zadeklarowana. Ponadto należy użyć podczas deklarowania parametrowi typu szablonu lub typedef jako zaprzyjaźniona.  
+ Pierwszy formularz wprowadza nową klasę F, jeśli żadna z istniejących klas o tej nazwie został znaleziony w najbardziej przestrzeni nazw. **C ++ 11**: drugi formularz nie wprowadza nową klasę; można używać, gdy klasa została już zadeklarowana. Ponadto należy użyć podczas deklarowania parametrowi typu szablonu lub typedef jako zaprzyjaźniona.  
   
  Użyj `class friend F` kiedy przywoływany typ nie ma jeszcze zadeklarowana:  
   
@@ -244,5 +244,5 @@ Implikacje friend relacji
   
  Friend — funkcje zdefiniowane w obrębie deklaracji klasy nie są uwzględniane w zakresie otaczającej klasy; są one w zakresie pliku.  
   
-## <a name="see-also"></a>Zobacz też  
+## <a name="see-also"></a>Zobacz także  
  [Słowa kluczowe](../cpp/keywords-cpp.md)

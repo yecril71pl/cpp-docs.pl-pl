@@ -14,15 +14,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 111db8502355638558796ecb54672ea6e8d4fa03
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 2b152be150e284462bddf0940df5656744925da5
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32419033"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39405499"
 ---
 # <a name="jump-statements-c"></a>Instrukcje skoku (C++)
-Instrukcja skok C++ wykonuje natychmiastowego lokalnego przekazanie sterowania.  
+Instrukcja skoku C++ wykonuje natychmiastowego lokalnego transfer kontroli.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -34,7 +34,7 @@ goto identifier;
 ```  
   
 ## <a name="remarks"></a>Uwagi  
- Zobacz poniższe tematy zawierają opis instrukcji skok C++.  
+ Zobacz poniższe tematy zawierają opis instrukcji skoku C++.  
   
 -   [break, instrukcja](../cpp/break-statement-cpp.md)  
   
@@ -44,5 +44,5 @@ goto identifier;
   
 -   [goto, instrukcja](../cpp/goto-statement-cpp.md)  
   
-## <a name="see-also"></a>Zobacz też  
+## <a name="see-also"></a>Zobacz także  
  [Przegląd instrukcji C++](../cpp/overview-of-cpp-statements.md)

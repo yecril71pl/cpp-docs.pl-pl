@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9301d4fdb09c63b7dc8e875e2b03a4990acec054
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: 78808ba4ce8d54ecc8e88516ae5f9b2521f50979
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37941161"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39403982"
 ---
 # <a name="expressions-with-unary-operators"></a>Wyrażenia z operatorami jednoargumentowymi
 Operatory jednoargumentowe działa tylko jeden argument w wyrażeniu. Operatory jednoargumentowe, są następujące:  
@@ -86,5 +86,5 @@ Operatory jednoargumentowe działa tylko jeden argument w wyrażeniu. Operatory 
   
  *Wyrażenie alokacji* odwołuje się do **nowe** operatora. *Wyrażenie dezalokacji* odwołuje się do **Usuń** operatora. Aby uzyskać więcej informacji zobacz linki we wcześniejszej części tego tematu.  
   
-## <a name="see-also"></a>Zobacz też  
+## <a name="see-also"></a>Zobacz także  
  [Typy wyrażeń](../cpp/types-of-expressions.md)
