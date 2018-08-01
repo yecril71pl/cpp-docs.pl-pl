@@ -1,6 +1,6 @@
 ---
 title: Instalowanie obsługi języka C++ w programie Visual Studio | Dokumentacja firmy Microsoft
-description: Zainstaluj obsługę programu Visual Studio dla programu Visual C++
+description: Instalowanie obsługi programu Visual Studio dla języka Visual C++
 ms.custom: mvc
 ms.date: 06/21/2018
 ms.topic: tutorial
@@ -14,66 +14,66 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5807110caf730c72d93de7e1265199b63f1d6bff
-ms.sourcegitcommit: e013acba70aa29fed60ae7945162adee23e19c3b
+ms.openlocfilehash: 3cc9c124a5b3f2fea92f729d7d11df579cc25a39
+ms.sourcegitcommit: bad2441d1930275ff506d44759d283d94cccd1c0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/22/2018
-ms.locfileid: "36322488"
+ms.lasthandoff: 07/31/2018
+ms.locfileid: "39376062"
 ---
 # <a name="install-c-support-in-visual-studio"></a>Instalowanie obsługi języka C++ w programie Visual Studio
 
-Jeśli nie zostały pobrane i jeszcze zainstalowany program Visual Studio i narzędzia Visual C++, Oto jak rozpocząć pracę.
+Jeśli jeszcze nie został pobrany i zainstalowany program Visual Studio i narzędzi Visual C++ jeszcze, Oto jak rozpocząć pracę.
 
 ## <a name="prerequisites"></a>Wymagania wstępne
 
-- Połączenie szerokopasmowe. Instalator programu Visual Studio można pobrać kilka GB danych.
+- Połączenie szerokopasmowe. Instalator programu Visual Studio można pobrać kilku gigabajtów danych.
 
-- Komputer z systemem Microsoft Windows 7 lub nowszy. Zalecamy systemu Windows 10 dla najlepsze środowisko programistyczne. Upewnij się, że najnowsze aktualizacje są stosowane do systemu, przed zainstalowaniem programu Visual Studio.
+- Komputer z systemem Microsoft Windows 7 lub nowszy. Zalecamy systemu Windows 10 dla najlepszego komfortu programowania. Upewnij się, że najnowsze aktualizacje są stosowane do systemu, przed zainstalowaniem programu Visual Studio.
 
-- Za mało wolnego miejsca na dysku. Visual Studio wymaga co najmniej 7GB miejsca na dysku i może zająć 50GB lub więcej, jeśli zainstalowano wiele typowych opcji. Firma Microsoft zaleca się, że należy ją zainstalować na dysku C:.
+- Za mało wolnego miejsca na dysku. Visual Studio wymaga co najmniej 7GB miejsca na dysku i może potrwać 50GB lub więcej, jeśli zainstalowano wiele typowych opcji. Zaleca się, że masz zainstalowane na dysku C:.
 
-Szczegółowe informacje dotyczące miejsca na dysku i wymagania dotyczące systemu operacyjnego, zobacz [wymagania systemowe rodziny produktów Visual Studio](/visualstudio/productinfo/vs2017-system-requirements-vs). Instalator raporty ilość miejsca na dysku jest wymagana dla opcji, którą wybierzesz.
+Aby uzyskać szczegółowe informacje dotyczące miejsca na dysku i wymagania dotyczące systemu operacyjnego, zobacz [wymagania systemowe rodziny produktów Visual Studio](/visualstudio/productinfo/vs2017-system-requirements-vs). Instalator raporty, ilość miejsca na dysku jest wymagana dla wybranych opcji.
 
 ## <a name="installation"></a>Instalacja
 
-1. Pobierz najnowszą wersję Instalatora programu Visual Studio 2017 r dla systemu Windows.
+1. Pobierz najnowszą wersję Instalatora programu Visual Studio 2017 for Windows.
 
    > [!div class="nextstepaction"]
-   > <a target="frameTarget" href="https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=button+cta&utm_content=download+vs2017">Zainstaluj program Visual Studio 2017 Community</a>
+   > [Zainstaluj program Visual Studio Community 2017 r.](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=button+cta&utm_content=download+vs2017)
 
    >[!Tip]
-   > Wersja Community to dla indywidualnych deweloperów, uczenie klasy academic badań i rozwoju typu open source. Do innych celów, należy zainstalować <a target="frameTarget" href="https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=button+cta&utm_content=download+vs2017">Visual Studio 2017 Professional</a> lub <a target="frameTarget" href="https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=button+cta&utm_content=download+vs2017">Visual Studio 2017 Enterprise</a>.
+   > Wersja Community to dla indywidualnych deweloperów, edukacyjne, badań akademickich i programowania typu open source. Do innych celów, należy zainstalować <a target="frameTarget" href="https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=button+cta&utm_content=download+vs2017">Visual Studio 2017 Professional</a> lub <a target="frameTarget" href="https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=button+cta&utm_content=download+vs2017">Visual Studio 2017 Enterprise</a>.
 
-1. Znajdź plik Instalatora należy pobrać i uruchom go. Może być wyświetlany w przeglądarce lub może go znaleźć w folderze pobrane. Instalator wymaga uprawnień administratora do uruchomienia. Może zostać wyświetlony **Kontrola konta użytkownika** okno dialogowe z pytaniem, aby udzielić uprawnień, aby umożliwić Instalator wprowadzić zmiany w systemie; wybierz **tak**. Jeśli masz problem, Znajdź pobrany plik w Eksploratorze plików, kliknij prawym przyciskiem myszy ikonę Instalatora, a następnie wybierz pozycję **Uruchom jako Administrator** z menu kontekstowego.
+1. Znajdź plik Instalatora został pobrany i uruchom go. Może być wyświetlany w przeglądarce lub może okazać się w folderze pobrane. Instalator wymaga uprawnień administratora do uruchomienia. Może zostać wyświetlony **Kontrola konta użytkownika** okno dialogowe z monitem o nadanie uprawnień umożliwiających Instalatora, wprowadzić zmiany do systemu; wybierz **tak**. Jeśli występują problemy, Znajdź pobrany plik w Eksploratorze plików, kliknij prawym przyciskiem myszy na ikonie Instalatora, a następnie wybierz **Uruchom jako Administrator** z menu kontekstowego.
 
-   ![Uruchom Instalatora programu Visual Studio 2017](../build/media/vscpp-concierge-run-installer.gif "uruchom Instalator programu Visual Studio")
+   ![Uruchom Instalatora programu Visual Studio 2017](../build/media/vscpp-concierge-run-installer.gif "uruchom Instalatora programu Visual Studio")
 
-1. Instalator wyświetla listę obciążeń, grup powiązane opcje dla rozwoju określonych obszarów. Obsługa dla języka C++ jest obecnie częścią opcjonalne obciążeń, które nie są instalowane domyślnie.
+1. Instalator przedstawia listy obciążeń, powiązane opcje obszary rozwoju określonych grup. Podpora androidu Pro C++ jest teraz częścią opcjonalne obciążeń, które nie są instalowane domyślnie.
 
-   ![Tworzenie pulpitu za pomocą języka C++](../build/media/desktop-development-with-cpp.png "tworzenia klasycznych aplikacji w języku C++")
+   ![Programowanie aplikacji klasycznych w języku C++](../build/media/desktop-development-with-cpp.png "programowanie aplikacji klasycznych w języku C++")
 
-    Dla języka C++, wybierz **tworzenia klasycznych aplikacji w języku C++** obciążenia, a następnie wybierz **zainstalować**.
+    Dla języka C++, wybierz **programowanie aplikacji klasycznych w języku C++** obciążenia, a następnie wybierz **zainstalować**.
 
-   ![Instalowanie tworzenia klasycznych aplikacji przy użyciu języka C++ obciążenia](../build/media/vscpp-concierge-choose-workload.gif "instalowanie tworzenia klasycznych aplikacji przy użyciu obciążenia C++")
+   ![Zainstaluj programowanie aplikacji klasycznych w języku C++](../build/media/vscpp-concierge-choose-workload.gif "zainstalować programowanie aplikacji klasycznych w języku C++")
 
-1. Po zakończeniu instalacji wybierz **uruchamianie** przycisk, aby uruchomić program Visual Studio.
+1. Po zakończeniu instalacji wybierz **Uruchom** przycisk, aby uruchomić program Visual Studio.
 
-   Przy pierwszym uruchomieniu programu Visual Studio, zostanie wyświetlona prośba o zalogowanie się Account Microsoft. Jeśli nie masz, można utworzyć jedną bezpłatnie. Należy wybrać motywu. Nie martw się, można zmienić go później, jeśli chcesz. 
+   Podczas pierwszego uruchomienia programu Visual Studio, zostanie wyświetlony monit o zalogowanie Account firmy Microsoft. Jeśli nie masz, możesz go utworzyć za darmo. Należy także wybrać motyw. Nie martw się, możesz go zmienić później, jeśli chcesz. 
 
-   Visual Studio może potrwać kilka minut w celu przygotowania do użycia przy pierwszym uruchomieniu go. Oto, co wygląda w szybkiego ujęć poklatkowych:
+   Visual Studio może potrwać kilka minut w celu przygotowania do użycia przy pierwszym uruchomieniu. Poniżej przedstawiono, jak to wygląda w ujęć poklatkowych szybkie:
 
-   ![Zaloguj się do niego Visual Studio 2017](../build/media/vscpp-quickstart-first-run.gif "programu Visual Studio 2017 Zaloguj")
+   ![Zaloguj się do niego programu Visual Studio 2017](../build/media/vscpp-quickstart-first-run.gif "Zaloguj się do niego programu Visual Studio 2017")
 
-   Visual Studio rozpoczyna się znacznie szybciej, gdy zostanie uruchomiony ponownie.
+   Program Visual Studio rozpoczyna się znacznie szybciej, gdy zostanie uruchomiony ponownie.
 
-1. Po otwarciu programu Visual Studio należy sprawdzić, czy zostanie wyróżniona ikony flagi na pasku tytułu:
+1. Po otwarciu programu Visual Studio, należy sprawdzić, jeśli zostanie wyróżniona ikonę flagi na pasku tytułu:
 
-   ![Flaga powiadomienia usługi Visual Studio 2017](../build/media/vscpp-first-start-page-flag.png "flagę powiadomienia programu Visual Studio 2017 r.")
+   ![Flaga powiadomienia w usłudze Visual Studio 2017](../build/media/vscpp-first-start-page-flag.png "flagę powiadomienia programu Visual Studio 2017")
 
-   Podświetlony, zaznacz go, aby otworzyć **powiadomienia** okna. Jeśli wszystkie aktualizacje są dostępne dla programu Visual Studio, zaleca się ich teraz zainstalować. Po zakończeniu instalacji uruchom ponownie program Visual Studio.
+   Jeśli jest wyróżniona, zaznacz ją, aby otworzyć **powiadomienia** okna. Jeśli istnieją jakiekolwiek aktualizacje dostępne dla programu Visual Studio, zalecamy możesz zainstalować je teraz. Po zakończeniu instalacji uruchom ponownie program Visual Studio.
 
-Po uruchomieniu programu Visual Studio można przystąpić do przejdź do następnego kroku.
+Po uruchomieniu programu Visual Studio jesteś gotowy przejść do następnego kroku.
 
 ## <a name="next-steps"></a>Następne kroki
 
