@@ -17,15 +17,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2dc38eb9742459139747578a8227bdfaee8bb8a2
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 2d0c89df02c624d96c613f6241c9beefd466827e
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32413898"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39402617"
 ---
 # <a name="char-wchart-char16t-char32t"></a>char, wchar_t, char16_t, char32_t
-Typy **char**, **wchar_t**, **char16_t** i **char32_t** są wbudowane typy, które reprezentują znaki alfanumeryczne oraz Symbole inne niż alfanumeryczne oraz znaki niedrukowalne.
+Typy **char**, **wchar_t**, **char16_t** i **char32_t** są wbudowanych typów, które reprezentują znaki alfanumeryczne oraz Symbole inne niż alfanumeryczne i znaki niedrukowalne.
 
 ## <a name="syntax"></a>Składnia
 
@@ -38,11 +38,10 @@ char32_t ch4{ U'a' };
   
 ## <a name="remarks"></a>Uwagi
 
-**Char** typu została oryginalnego typu znaków w C i C++. Typ **unsigned char** jest często używana do reprezentowania *bajtów*, który nie jest typem wbudowanym w języku C++. **Char** typu może być używana do przechowywania znaki z zestawu znaków ASCII lub dowolne ISO 8859 zestawów znaków, a poszczególnych bajtach wielobajtowego znaki, takie jak Shift JIS lub kodowania UTF-8 zestawu znaków Unicode. Ciągi **char** typu są określane jako *zawęzić* ciągów, nawet wtedy, gdy jest używany do kodowania znaków wielobajtowego. W kompilatorze Microsoft **char** jest typem 8-bitową.
+**Char** typ to oryginalny typ znaku, w językach C i C++. Typ **unsigned char** jest często używana do reprezentowania *bajtów*, która nie jest typem wbudowanym w języku C++. **Char** typu mogą być używane do przechowywania znaków z zestawu znaków ASCII lub żadnego z zestawów znaków ISO-8859 i pojedynczych bajtów znaków wielobajtowych, takiego jak Shift-JIS lub kodowania UTF-8 zestawu znaków Unicode. Ciągi **char** typu są określane jako *zawęzić* ciągów, nawet wtedy, gdy jest używany do kodowania znaków wielobajtowych. W kompilatorze Microsoft **char** jest typem 8-bitowych.
 
-**Wchar_t** typ jest typem zdefiniowane w implementacji znaków dwubajtowych. W kompilatorze Microsoft reprezentuje 16-bitowych znaków dwubajtowych używany do przechowywania Unicode został zakodowany jako UTF-16LE, typu natywnego znaków w systemach operacyjnych Windows. Wersje znaków typu wide korzystanie z funkcji biblioteki Biblioteka Universal C Runtime (UCRT) **wchar_t** i jego wskaźnika i tablicy typy jako parametrów i zwracanych wartości, jak wersji znaków typu wide natywnego interfejsu API systemu Windows.
+**Wchar_t** typ jest typem znaków dwubajtowych zdefiniowanych w implementacji. W kompilatorze Microsoft znakiem dwubajtowym 16-bitowych, używany do przechowywania Unicode zakodowanymi w formacie UTF-16LE, reprezentuje typ znaków natywnych w systemach operacyjnych Windows. Znak dwubajtowy wersje korzystanie z funkcji biblioteki Universal C Runtime (UCRT) **wchar_t** i jego wskaźnika i tablicy typów jako parametrów i zwracanych wartości, jak znak dwubajtowy wersje natywnych interfejsów API Windows.
 
-**Char16_t** i **char32_t** typy reprezentują odpowiednio 16-bitowe i 32-bitowe znaki dwubajtowe. Unicode zakodowane jako UTF-16, mogą być przechowywane w **char16_t** typu i Unicode zakodowane jako UTF-32 mogą być przechowywane w **char32_t** typu. Parametry te typy i **wchar_t** są wszystkie określone jako *szeroki* ciągów, chociaż termin często dotyczy w szczególności ciągów **wchar_t** typu.
+**Char16_t** i **char32_t** typy reprezentują 16-bitowe i 32-bitowych znaków dwubajtowych, odpowiednio. Unicode zakodowanych jak UTF-16, mogą być przechowywane w **char16_t** typu i Unicode zakodowanych jak UTF-32 mogą być przechowywane w **char32_t** typu. Ciągi z tych typów i **wchar_t** są wszystkie są nazywane *szeroki* ciągów, chociaż ten termin często odnosi się to do ciągów **wchar_t** typu.
 
-W standardowej bibliotece C++ `basic_string` typu jest przeznaczone dla ciągów zarówno wąskie i dwubajtowe. Użyj `std::string` po znaki są typu **char**, `std::u16string` po znaki są typu **char16_t**, `std::u32string` po znaki są typu **char32_t** , i `std::wstring` po znaki są typu **wchar_t**. Inne typy, które reprezentują tekst, w tym `std::stringstream` i `std::cout` ma specjalizacje wąskie i dwubajtowe ciągów.  
-  
+W bibliotece standardowej C++ `basic_string` typu jest przeznaczone dla szerokości i wąskie ciągów. Użyj `std::string` po znaki są typu **char**, `std::u16string` po znaki są typu **char16_t**, `std::u32string` po znaki są typu **char32_t** , i `std::wstring` po znaki są typu **wchar_t**. Inne typy, które reprezentują tekstu, w tym `std::stringstream` i `std::cout` mają specjalizacje wąskie i dwubajtowe ciągów.  

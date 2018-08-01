@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1057754b5c98086de42daedd5e7aab70656eba69
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: 3366995105f6295fd1d4d89ad85896fbb625519d
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37947768"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39402499"
 ---
 # <a name="naked-c"></a>naked (C++)
 **Microsoft Specific**  
@@ -41,7 +41,6 @@ __declspec(naked) declarator
 
  Kompilator nie może wygenerować wbudowanej funkcji dla funkcji z atrybutem "naked", nawet wtedy, gdy funkcja jest również oznaczona za pomocą [__forceinline](inline-functions-cpp.md) — słowo kluczowe.  
 
-  
  Kompilator generuje błąd, jeśli **"naked"** atrybut jest stosowany do coś innego niż definicji metody nieczłonkowską.  
   
 ## <a name="examples"></a>Przykłady  
@@ -73,7 +72,7 @@ __declspec( naked ) int func();  // Error--naked attribute not permitted on func
   
  **END specyficzny dla Microsoft**  
   
-## <a name="see-also"></a>Zobacz też  
+## <a name="see-also"></a>Zobacz także  
  [__declspec](../cpp/declspec.md)   
  [Keywords](../cpp/keywords-cpp.md)   
  [Wywołania funkcji Naked](../cpp/naked-function-calls.md)

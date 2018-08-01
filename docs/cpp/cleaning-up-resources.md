@@ -19,27 +19,28 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 960e19400ae1d00108d57eb85d3df01ebf1dbc33
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 1c7c589f5ac6baef0ef4420d997fa6497f4e03d5
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39408510"
 ---
 # <a name="cleaning-up-resources"></a>Oczyszczanie zasobów
-Podczas wykonywania programu obsługi zakończenia może nie wiedzieć, który faktycznie przydzielania zasobów przed programu obsługi zakończenia została wywołana. Istnieje możliwość, że `__try` blok instrukcji zostało przerwane przed wszystkie zasoby przydzielone, tak aby nie wszystkie zasoby zostały otwarte.  
+Podczas wykonywania programu obsługi zakończenia może nie wiedzieć, które zasoby są przydzielane faktycznie, zanim został wywołany program obsługi przerwania. Istnieje możliwość, że **__try** blok instrukcji zostało przerwane przed wszystkie zasoby przydzielone, tak, aby nie wszystkie zasoby zostały otwarte.  
   
- W związku z tym być bezpieczne, należy sprawdzić, zobacz zasoby są faktycznie otwarte przed rozpoczęciem oczyszczania obsługi zakończenia. Procedury zalecane jest:  
+ W związku z tym aby zapewnić bezpieczne, należy sprawdzić aby zobaczyć, jakie zasoby są faktycznie otwarte przed kontynuowaniem oczyszczania obsługę przerwania. Jest zalecaną procedurą:  
   
 1.  Inicjowanie dojścia do wartości NULL.  
   
-2.  W `__try` instrukcji bloków, przydzielanie zasobów. Uchwyty są ustawiane na wartości dodatnie zasobu jest przydzielony.  
+2.  W **__try** instrukcji zablokować, przydzielania zasobów. Uchwyty są ustawione na wartości dodatnich, zasób jest przydzielony.  
   
-3.  W `__finally` blok instrukcji, zwolnij każdy zasób, którego odpowiednie dojścia lub flagi zmiennej jest różna od zera lub not NULL.  
+3.  W **__finally** blok instrukcji wersji każdego zasobu, którego odpowiednie dojścia lub zmiennej flaga jest różna od zera lub not NULL.  
   
 ## <a name="example"></a>Przykład  
- Na przykład w poniższym kodzie użyto programu obsługi zakończenia, aby zamknąć trzy pliki i blok pamięci, która była przydzielona w `__try` blok instrukcji. Przed czyszczenie zasobu, kod najpierw sprawdza, jeśli zasób został przydzielony.  
+ Na przykład w poniższym kodzie użyto programu obsługi zakończenia Zamknij trzy pliki i blok pamięci, która została przydzielona w **__try** blok instrukcji. Przed Oczyszczanie zasobu, kod najpierw sprawdza, jeśli zasób został przydzielony.  
   
-```  
+```cpp 
 // exceptions_Cleaning_up_Resources.cpp  
 #include <stdlib.h>  
 #include <malloc.h>  
@@ -77,6 +78,6 @@ int main() {
 }  
 ```  
   
-## <a name="see-also"></a>Zobacz też  
+## <a name="see-also"></a>Zobacz także  
  [Pisanie programu obsługi zakończenia](../cpp/writing-a-termination-handler.md)   
  [Obsługa wyjątków strukturalnych (C/C++)](../cpp/structured-exception-handling-c-cpp.md)

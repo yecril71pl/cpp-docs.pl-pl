@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 65d2fc42021a01a1260b57f9516e53c439c8e604
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: adc8f9c456d28089d57bc1f13b61ad8efa10b6b6
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37947958"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39402923"
 ---
 # <a name="mutable-data-members-c"></a>Modyfikowalne elementy członkowskie danych (C++)
 This — słowo kluczowe dotyczą wyłącznie elementy członkowskie danych niestatyczna i wartości innej niż stała klasy. Zadeklarowana składowa danych **mutable**, a następnie jest legalne, aby przypisać wartość do tego elementu członkowskiego danych, z **const** funkcja elementu członkowskiego.  
@@ -29,7 +29,6 @@ This — słowo kluczowe dotyczą wyłącznie elementy członkowskie danych nies
 ## <a name="syntax"></a>Składnia  
   
 ```  
-  
 mutable member-variable-declaration;  
 ```  
   
@@ -56,5 +55,5 @@ int main()
 }  
 ```  
   
-## <a name="see-also"></a>Zobacz też  
+## <a name="see-also"></a>Zobacz także  
  [Słowa kluczowe](../cpp/keywords-cpp.md)

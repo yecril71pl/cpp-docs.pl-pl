@@ -14,19 +14,19 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3d4a0e2867c5057eb5808c4d39687961eabba6dd
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 62041f78af18d6ac2f521fea763a11bb2859fbf5
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32420031"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39401928"
 ---
 # <a name="overload-resolution-of-function-template-calls"></a>Rozpoznawanie przeciążenia wywołań szablonów funkcji
-Szablon funkcji można przeciążyć funkcji nieszablonu o takiej samej nazwie. W tym scenariuszu wywołania funkcji są rozpoznawane przy pierwszym przy użyciu Wnioskowanie argumentu szablonu do utworzenia wystąpienia szablonu funkcji z specjalizacji unikatowy. W przypadku niepowodzenia Wnioskowanie argumentu szablonu inne przeciążenia funkcji są traktowane jako wywołanie rozpoznawania. Te inne przeciążenia, tzw. zestaw candidate obejmują funkcje nieszablonu i innych szablonów funkcji wystąpień. Jeśli Wnioskowanie argumentu szablonu zakończy się powodzeniem, generowanej funkcji jest porównywany z innymi funkcjami, aby określić najlepsze dopasowanie, zgodnie z regułami Rozpoznanie przeciążenia. Aby uzyskać więcej informacji, zobacz [przeciążanie funkcji](function-overloading.md).  
+Szablon funkcji może doprowadzić do przeciążenia funkcji nieszablonu o takiej samej nazwie. W tym scenariuszu wywołania funkcji są rozwiązywane przez pierwszy przy użyciu odliczanie argumentu szablon do tworzenia wystąpienia szablonu funkcji przy użyciu unikatowych specjalizacji. W przypadku niepowodzenia odliczanie argumentu szablon przeciążeń funkcji są traktowane jako wywołanie rozpoznawania. Te inne przeciążenia, zestaw Release candidate, nazywana również obejmują funkcje nieszablonu i innych szablonów wystąpień funkcji. Jeśli odliczanie argumentu szablon zakończy się powodzeniem, generowanej funkcji jest porównywana z innych funkcji, aby określić najlepsze dopasowanie, zgodnie z regułami dla rozwiązania przeciążenia. Aby uzyskać więcej informacji, zobacz [przeciążanie funkcji](function-overloading.md).  
   
 ## <a name="example"></a>Przykład
 
- Jeśli funkcja nieszablonu jest równie dobrej dopasowany do funkcji szablonu, funkcja nieszablonu wybrano (chyba że jawnie zostały podane argumenty szablonu), ponieważ w wywołaniu `f(1, 1)` w poniższym przykładzie.  
+ Jeśli funkcja nieszablonu jest równie dobre dopasowanie do funkcji szablonu, funkcja nieszablonu zostanie wybrana (chyba że wyraźnie określono argumentów szablonu), ponieważ w wywołaniu `f(1, 1)` w poniższym przykładzie.  
   
 ```cpp
 // template_name_resolution9.cpp  
@@ -59,7 +59,7 @@ void f(T1, T2)
   
 ## <a name="example"></a>Przykład
 
- Funkcja dokładnie zgodnego szablonu jest preferowana, jeśli funkcja nieszablonu wymaga konwersji pokazano w przykładzie dalej.  
+ W następnym przykładzie pokazano, dokładnie pasujących funkcji szablonu jest preferowana, jeśli funkcja nieszablonu wymaga konwersji.  
   
 ```cpp
 // template_name_resolution10.cpp  
@@ -89,8 +89,6 @@ int main()
 void f(T1, T2)  
 ```  
   
-## <a name="see-also"></a>Zobacz też
-
+## <a name="see-also"></a>Zobacz także
  [Rozpoznawanie nazw](../cpp/templates-and-name-resolution.md)   
  [typename](../cpp/typename.md)   
- 

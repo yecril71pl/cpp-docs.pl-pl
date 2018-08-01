@@ -15,12 +15,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a21b7dd00aa0bb0894da4cc13cf0f6f40078ee1b
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: 7c2204e69ee6df64a08e3f5cf03191ad1e7e0535
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37941830"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39402464"
 ---
 # <a name="compiler-com-support"></a>Obsługa kompilatora COM
 ## <a name="microsoft-specific"></a>Specyficzne dla firmy Microsoft  
@@ -28,7 +28,7 @@ ms.locfileid: "37941830"
   
  Za pomocą [#import — dyrektywa preprocesora](../preprocessor/hash-import-directive-cpp.md), kompilator może odczytywać bibliotekę typów i przekonwertować go na plik nagłówka C++, który opisuje COM interfejsy klas. Zbiór `#import` atrybutów jest dostępna dla kontrolki użytkownika zawartości wynikowe pliki nagłówkowe biblioteki typów.  
   
- Możesz użyć [__declspec](../cpp/declspec.md) atrybutów rozszerzonych [uuid](../cpp/uuid-cpp.md) można przypisać unikatowy identyfikator globalny (GUID) do obiektu COM. Słowo kluczowe [__uuidof](../cpp/uuidof-operator.md) pozwala wyodrębnić identyfikator GUID skojarzony z obiektem COM. Inny `__declspec` atrybutu, [właściwość](../cpp/property-cpp.md), może służyć do określania **uzyskać** i **ustaw** metody element członkowski danych obiektu COM.  
+ Możesz użyć [__declspec](../cpp/declspec.md) atrybutów rozszerzonych [uuid](../cpp/uuid-cpp.md) można przypisać unikatowy identyfikator globalny (GUID) do obiektu COM. Słowo kluczowe [__uuidof](../cpp/uuidof-operator.md) pozwala wyodrębnić identyfikator GUID skojarzony z obiektem COM. Inny **__declspec** atrybutu [właściwość](../cpp/property-cpp.md), może służyć do określania `get` i `set` metody element członkowski danych obiektu COM.  
   
  Zestaw klasy i funkcje globalne obsługi COM znajduje się do obsługi `VARIANT` i `BSTR` typów, implementować inteligentne wskaźniki i hermetyzacji obiekt błędu zgłoszony przez `_com_raise_error`:  
   
@@ -44,6 +44,6 @@ ms.locfileid: "37941830"
   
 **END specyficzny dla Microsoft**  
   
-## <a name="see-also"></a>Zobacz też  
+## <a name="see-also"></a>Zobacz także  
  [Kompilator klas obsługi COM](../cpp/compiler-com-support-classes.md)   
  [Funkcje globalne kompilatora COM](../cpp/compiler-com-global-functions.md)

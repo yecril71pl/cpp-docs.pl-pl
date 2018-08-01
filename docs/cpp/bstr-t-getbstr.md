@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3041e8a4ece0ddff813b7ef9cd2ccb258e520a82
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: 8863f3a6c37693ec28f931c2af4cb0d299788daa
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37940485"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39402666"
 ---
 # <a name="bstrtgetbstr"></a>_bstr_t::GetBSTR
 **Microsoft Specific**  
@@ -31,21 +31,19 @@ ms.locfileid: "37940485"
 ## <a name="syntax"></a>Składnia  
   
 ```  
-  
 BSTR& GetBSTR( );  
-  
 ```  
   
 ## <a name="return-value"></a>Wartość zwracana  
  Na początek `BSTR` opakowane przez `_bstr_t`.  
   
 ## <a name="remarks"></a>Uwagi  
- `GetBSTR` ma wpływ na wszystkie `_bstr_t` obiekty udziału `BSTR`. Więcej niż jeden `_bstr_t` mogą udostępniać `BSTR` za pomocą konstruktora kopiującego i i **operator =**.  
+ **Getbstr —** ma wpływ na wszystkie `_bstr_t` obiekty udziału `BSTR`. Więcej niż jeden `_bstr_t` mogą udostępniać `BSTR` za pomocą konstruktora kopiującego i i **operator =**.  
   
 ## <a name="example"></a>Przykład  
- Zobacz [_bstr_t::przypisanie](../cpp/bstr-t-assign.md) dla przykłady dotyczące używania `GetBSTR`.  
+ Zobacz [_bstr_t::przypisanie](../cpp/bstr-t-assign.md) dla przykłady dotyczące używania **getbstr —**.  
   
  **END specyficzny dla Microsoft**  
   
-## <a name="see-also"></a>Zobacz też  
+## <a name="see-also"></a>Zobacz także  
  [_bstr_t, klasa](../cpp/bstr-t-class.md)

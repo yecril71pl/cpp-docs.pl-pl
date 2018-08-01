@@ -12,18 +12,18 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: dfd3f1df54e5b5881ed15efeb98a6e6070f400a1
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 265eccc4c1a9f51a03e5a84433a9f7e9cc6d6a92
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32419936"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39402139"
 ---
 # <a name="objects-own-resources-raii"></a>Obiekty posiadają zasoby (RAII)
-Upewnij się, które obiekty własnych. Ta zasada jest nazywane również "nabywania zasobów inicjowania" lub "RAII."  
+Upewnij się, że obiekty własnych zasobów. Ta zasada jest znany także jako "pozyskiwanie zasobów jest zainicjowanie" lub "RAII."  
   
 ## <a name="example"></a>Przykład  
- Przekaż każdy obiekt "new" jako argument konstruktora do innego obiektu o nazwie, posiadającym go (prawie zawsze unique_ptr).  
+ Przekaż każdy obiekt "new" jako argumentu konstruktora do innego obiektu o nazwie, który jest właścicielem go (prawie zawsze unique_ptr).  
   
 ```cpp  
 void f() {  
@@ -34,7 +34,7 @@ void f() {
   // automatic exception safety, as if "finally { p->dispose(); x.w.dispose(); }"  
 ```  
   
- Zawsze natychmiast przekazać dowolnego nowego zasobu do innego obiektu, który jest jego właścicielem.  
+ Zawsze od razu przekazania nowego zasobu do innego obiektu, który jest jego właścicielem.  
   
 ```cpp  
 void g() {  
@@ -44,7 +44,7 @@ void g() {
   // automatic exception safety, as if "finally { y.file.dispose(); }"  
 ```  
   
-## <a name="see-also"></a>Zobacz też  
- [Zapraszamy ponownie do języka C++](../cpp/welcome-back-to-cpp-modern-cpp.md)   
+## <a name="see-also"></a>Zobacz także  
+ [Witamy z powrotem w C++](../cpp/welcome-back-to-cpp-modern-cpp.md)   
  [Dokumentacja języka C++](../cpp/cpp-language-reference.md)   
  [Standardowa biblioteka C++](../standard-library/cpp-standard-library-reference.md)

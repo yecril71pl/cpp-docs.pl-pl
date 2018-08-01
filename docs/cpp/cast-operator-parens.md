@@ -15,31 +15,30 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7ef2d370f4344e4a66c70989582da8d7ac7d5186
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 8e7f9c723f605a4f66d5e2bdbb4c39f50645b58b
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39408513"
 ---
 # <a name="cast-operator-"></a>Operator rzutowania: ()
-Rzutowanie typu zapewnia metodę jawnej konwersji typu obiektu w konkretnej sytuacji.  
+Rzutowanie typu udostępnia metodę jawnej konwersji typu obiektu w konkretnej sytuacji.  
   
 ## <a name="syntax"></a>Składnia  
   
 ```  
-  
-      unary-expression  
-( type-name ) cast-expression  
+unary-expression ( type-name ) cast-expression  
 ```  
   
 ## <a name="remarks"></a>Uwagi  
- Dowolne wyrażenie jednoargumentowe jest uważany za wyrażeniem rzutowania.  
+ Dowolne wyrażenie jednoargumentowe jest traktowany jako wyrażenia rzutowania.  
   
- Kompilator traktuje *wyrażenie cast* jako typ *nazwy typu* po dokonaniu rzutowanie typu. Rzutowania może służyć do przekonwertowania obiekty dowolnego typu skalarnych do lub z innych typów skalarnych. Rzutowania jawnego typu są ograniczone przez tego samego zasady, które określają skutków niejawne konwersje. Dodatkowe ograniczenia na prezentacji mogą wynikać z rzeczywistego rozmiarów lub reprezentację określonych typów.  
+ Kompilator traktuje *wyrażenie cast* jako typ *nazwy typu* po dokonaniu rzutowanie typu. Rzutowania może służyć do konwersji obiektów o dowolnym typie skalarnym do lub z innych typów skalarnych. Rzutowania jawnego typu są ograniczone przez te same zasady, które określają skutki niejawne konwersje. Dodatkowe ograniczenia na rzutowania mogą wynikać z rzeczywistych rozmiarów lub reprezentację określonych typów.  
   
 ## <a name="example"></a>Przykład  
   
-```  
+```cpp  
 // expre_CastOperator.cpp  
 // compile with: /EHsc  
 // Demonstrate cast operator  
@@ -59,7 +58,7 @@ int main()
   
 ## <a name="example"></a>Przykład  
   
-```  
+```cpp 
 // expre_CastOperator2.cpp  
 // The following sample shows how to define and use a cast operator.   
 #include <string.h>  
@@ -127,9 +126,9 @@ Note that the cast changed the raw internal string
 Raw Bytes after cast:   Exciting  
 ```  
   
-## <a name="see-also"></a>Zobacz też  
+## <a name="see-also"></a>Zobacz także  
  [Wyrażenia z operatorami Jednoargumentowymi](../cpp/expressions-with-unary-operators.md)   
- [Operatory C++ wbudowanych, priorytet i łączność](../cpp/cpp-built-in-operators-precedence-and-associativity.md)   
+ [C++ wbudowane operatory, pierwszeństwo i kojarzenie](../cpp/cpp-built-in-operators-precedence-and-associativity.md)   
  [Operator jawnej konwersji typu:)](../cpp/explicit-type-conversion-operator-parens.md)   
  [Operatory rzutowania](../cpp/casting-operators.md)   
  [Operatory rzutowania](../c-language/cast-operators.md)

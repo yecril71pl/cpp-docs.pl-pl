@@ -12,15 +12,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c31a609345408727d53abd314e30bd523526833c
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: d6421c634fb6d27bf79ea0ead9f0b6b8f5829f19
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32419914"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39402689"
 ---
 # <a name="name-resolution-for-dependent-types"></a>Rozpoznawanie nazwy dla typów zależnych
-Użyj **typename** dla nazwy kwalifikowane w definicji szablonu kompilator stwierdzić, że podana nazwa kwalifikowana identyfikuje typ. Aby uzyskać więcej informacji, zobacz [typename](../cpp/typename.md).  
+Użyj **typename** dla kwalifikowanych nazw w definicjach szablonów, aby poinformować kompilator, że dany kwalifikowana nazwa identyfikuje typ. Aby uzyskać więcej informacji, zobacz [typename](../cpp/typename.md).  
   
 ```cpp  
 // template_name_resolution1.cpp  
@@ -49,9 +49,9 @@ int main()
 Name resolved by using typename keyword.  
 ```  
   
- Wyszukiwanie nazwy dla nazwy zależne sprawdza, czy nazwy z kontekstu definicji szablonu — w poniższym przykładzie tego kontekstu może być `myFunction(char)`— oraz kontekst utworzenie wystąpienia szablonu. W poniższym przykładzie szablon zostanie uruchomiony w głównym; w związku z tym `MyNamespace::myFunction` jest widoczna od momentu wystąpienia i jest wybierany jako lepszym dopasowaniem. Jeśli `MyNamespace::myFunction` nazwy zostały zmienione, `myFunction(char)` czy zamiast tego wywołać.  
+ Wyszukiwanie nazw dla nazwy zależne sprawdza nazwy w kontekście definicji szablonu — w poniższym przykładzie spowoduje znalezienie tego kontekstu `myFunction(char)`— i obiekt context Tworzenie wystąpienia szablonu. W poniższym przykładzie zostanie utworzone wystąpienie szablonu w głównym; w związku z tym `MyNamespace::myFunction` jest widoczna od momentu utworzenia wystąpienia i jest wybrany jako lepsze dopasowanie. Jeśli `MyNamespace::myFunction` zostały zmienione, `myFunction(char)` czy zamiast tego wywoływany.  
   
- Wszystkie nazwy są rozpoznawane, tak jakby były nazwy zależne. Niemniej jednak zalecane jest użycie w pełni kwalifikowane nazwy, jeśli wszystkie możliwe konfliktu.  
+ Wszystkie nazwy są rozpoznawane tak, jakby były one nazwy zależne. Niemniej jednak zaleca się korzystać z w pełni kwalifikowane nazwy, jeśli możliwych konfliktów.  
   
 ```cpp  
 // template_name_resolution2.cpp  
@@ -93,12 +93,12 @@ int main()
   
 ### <a name="output"></a>Dane wyjściowe  
   
-```  
+```Output  
 Int MyNamespace::myFunction  
 ```  
   
 ### <a name="template-disambiguation"></a>Uściślanie szablonu  
- [!INCLUDE[cpp_dev11_long](../build/includes/cpp_dev11_long_md.md)] Wymusza C ++ 98/03/11 standardowych zasad na Uściślanie ze słowem kluczowym "szablon". W poniższym przykładzie Visual C++ 2010 będzie akceptować niezgodnych linii i zgodnych wierszy.  [!INCLUDE[cpp_dev11_long](../build/includes/cpp_dev11_long_md.md)] akceptuje tylko zgodnych wierszy.  
+ [!INCLUDE[cpp_dev11_long](../build/includes/cpp_dev11_long_md.md)] Wymusza C ++ 98/03/11 standardowych zasad na Uściślanie za pomocą słowa kluczowego "szablon". W poniższym przykładzie Visual C++ 2010 będzie akceptować niezgodnych wierszy i zgodnych wierszy.  [!INCLUDE[cpp_dev11_long](../build/includes/cpp_dev11_long_md.md)] akceptuje tylko zgodnych wierszy.  
   
 ```cpp  
 #include <iostream>  
@@ -127,7 +127,7 @@ int main() {
 }  
 ```  
   
- Zgodność z regułami Uściślanie jest wymagana, ponieważ domyślnie C++ zakłada się, że `AY::Rebind` nie jest szablonem, i dlatego kompilator interpretuje następujące "`<`" jako mniej-niż. Należy pamiętać, że `Rebind` jest szablonem, dzięki czemu można poprawnie przeanalizować "`<`" jako nawias.  
+ Zgodność z zasadami uściślania jest wymagana, ponieważ domyślnie C++ założono, że `AY::Rebind` nie jest szablonem, i dlatego kompilator interpretuje następujące "`<`" jako mniej-niż. Ma poinformować, że `Rebind` jest szablonem, dzięki czemu można poprawnie przeanalizować "`<`" jako nawias ostry.  
   
-## <a name="see-also"></a>Zobacz też  
+## <a name="see-also"></a>Zobacz także  
  [Rozpoznawanie nazw](../cpp/templates-and-name-resolution.md)

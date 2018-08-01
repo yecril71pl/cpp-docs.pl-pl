@@ -12,18 +12,18 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1e2988d1260cac91e2614765aba8ae1b9be9b922
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: c10821f7e71c928fa749c2b85bd076cb9af6d04a
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32407989"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39402419"
 ---
 # <a name="alignof-and-alignas-c"></a>alignof i alignas (C++)
-`alignas` Specyfikatora typu jest przenośny, C++ standardowy sposób Określanie wyrównania niestandardowych zmiennych i typów zdefiniowanych przez użytkownika. `alignof` Operator jest również standardowe, przenośne sposobem uzyskania wyrównania określonego typu lub zmiennej.  
+**Alignas** Specyfikator typu jest przenośny, C++ standardowy sposób określić niestandardowe wyrównania zmiennych i typów zdefiniowanych przez użytkownika. **Alignof** operator podobnie jest standardowa, przenośne sposobem uzyskania wyrównanie określonego typu lub zmiennej.  
   
 ## <a name="example"></a>Przykład  
- Można użyć `alignas` na klasie uderzeniu lub union, lub na poszczególne elementy. Gdy wiele `alignas` specyfikatory zostaną napotkane, kompilator wybierze najbardziej rygorystyczne nich (jeden o największej wartości).  
+ Możesz użyć **alignas** na klasę uderzeniu lub Unii, lub na poszczególnych elementów członkowskich. Gdy wiele **alignas** specyfikatory zostaną napotkane, kompilator wybierze najbardziej rygorystyczne z nich (jedna o największej wartości).  
   
 ```cpp  
 // alignas_alignof.cpp
@@ -44,5 +44,5 @@ int main()
 }  
 ```  
   
-## <a name="see-also"></a>Zobacz też  
+## <a name="see-also"></a>Zobacz także  
  [Wyrównanie](../cpp/alignment-cpp-declarations.md)

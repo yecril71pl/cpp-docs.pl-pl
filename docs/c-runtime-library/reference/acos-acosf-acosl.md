@@ -1,5 +1,5 @@
 ---
-title: ACOS acosf —, acosl — | Dokumentacja firmy Microsoft
+title: Funkcje ACOS, acosf —, acosl — | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 04/05/2018
 ms.technology:
@@ -41,16 +41,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 664c3555602dfc16ce811b065e0d38f8fe93e733
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 5384d4e97ebb4f3f6152278e916c02bb350090ea
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32392773"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39401941"
 ---
 # <a name="acos-acosf-acosl"></a>acos, acosf, acosl
 
-Oblicza cosinus.
+Oblicza arcus cosinus.
 
 ## <a name="syntax"></a>Składnia
 
@@ -67,24 +67,24 @@ long double acos( long double x );   // C++ only
 
 ### <a name="parameters"></a>Parametry
 
-*x*<br/>
-Wartości od -1 do 1, dla którego mają być obliczane cosinus (arcus cosinus).
+*x*  
+Wartość od -1 do 1, dla którego ma zostać obliczona arcus cosinus (odwrotność funkcji cosinus).
 
 ## <a name="return-value"></a>Wartość zwracana
 
-**Acos** funkcja Zwraca arcus cosinus liczby *x* w zakresie od 0 do π radianów.
+**Acos** funkcja Zwraca arcus cosinus *x* z zakresu od 0 do π wartość w radianach.
 
-Domyślnie jeśli *x* jest mniejsza niż -1 lub większą niż 1, **acos** zwraca nieokreślony.
+Domyślnie jeśli *x* jest mniejsza niż -1 lub większa niż 1, **acos** zwraca wartość nieokreśloną.
 
-|Dane wejściowe|Wyjątek SEH|Matherr — wyjątek|
+|Dane wejściowe|Wyjątek SEH|Wyjątek Matherr|
 |-----------|-------------------|-----------------------|
-|± ∞|**NIEPRAWIDŁOWY**|**_DOMAIN —**|
-|GRANICACH QNAN, IND|brak|**_DOMAIN —**|
-|&#124;x&#124;>1|**NIEPRAWIDŁOWY**|**_DOMAIN —**|
+|± ∞|NIEPRAWIDŁOWY|_DOMAIN|
+|GRANICACH QNAN, ZNAJDŹ|brak|_DOMAIN|
+|&#124;x&#124;>1|NIEPRAWIDŁOWY|_DOMAIN|
 
 ## <a name="remarks"></a>Uwagi
 
-Ponieważ C++ pozwala przeładowanie, można wywoływać przeciążenia **acos** który przyjmować i zwracać **float** i **długi** **podwójne** typów. W programie C **acos** zawsze przyjmuje i zwraca **podwójne**.
+Ponieważ C++ pozwala na przeciążenie, można wywoływać przeciążenia **acos** przyjmujące i zwracające **float** i **długie** **double** typów. W programie C **acos** zawsze przyjmuje i zwraca **double**.
 
 ## <a name="requirements"></a>Wymagania
 
@@ -94,7 +94,7 @@ Ponieważ C++ pozwala przeładowanie, można wywoływać przeciążenia **acos**
 
 ## <a name="example"></a>Przykład
 
-Ten program monituje o podanie wartości z zakresu od -1 do 1. Wartości wejściowe poza tym zakresem utworzyć **_domain —** komunikaty o błędach. W przypadku wprowadzenia jest prawidłową wartością program drukuje arcus sinus i cosinus tej wartości.
+Ten program wyświetli monit o wartości z zakresu od -1 do 1. Wartości wejściowe poza tym zakresem dają `_DOMAIN` komunikaty o błędach. W przypadku wprowadzenia jest prawidłową wartością program drukuje arcus sinus i cosinus tej wartości.
 
 ```C
 // crt_asincos.c
@@ -144,10 +144,10 @@ Arccosine of 0.000000 = 1.570796
 
 ## <a name="see-also"></a>Zobacz także
 
-[Obsługa liczb zmiennoprzecinkowych](../../c-runtime-library/floating-point-support.md)<br/>
-[asin, asinf, asinl](asin-asinf-asinl.md)<br/>
-[atan, atanf, atanl, atan2, atan2f, atan2l](atan-atanf-atanl-atan2-atan2f-atan2l.md)<br/>
-[COS cosf —, cosl —](cos-cosf-cosl.md)<br/>
-[_matherr](matherr.md)<br/>
-[sin, sinf, sinl](sin-sinf-sinl.md)<br/>
-[tan, tanf, tanl](tan-tanf-tanl.md)<br/>
+[Obsługa liczb zmiennoprzecinkowych](../../c-runtime-library/floating-point-support.md)  
+[asin, asinf, asinl](asin-asinf-asinl.md)  
+[atan, atanf, atanl, atan2, atan2f, atan2l](atan-atanf-atanl-atan2-atan2f-atan2l.md)  
+[COS cosf —, cosl —](cos-cosf-cosl.md)  
+[_matherr](matherr.md)  
+[sin, sinf, sinl](sin-sinf-sinl.md)  
+[tan, tanf, tanl](tan-tanf-tanl.md)  

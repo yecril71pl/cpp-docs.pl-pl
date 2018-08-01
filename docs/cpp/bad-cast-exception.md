@@ -18,15 +18,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b50995ff1d5eb730bf6593679194d32d5300b9d7
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: 8a37ae011ec2f06a505063678f481e6e41696c86
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37947740"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39401370"
 ---
 # <a name="badcast-exception"></a>bad_cast — Wyjątek
-`bad_cast` Wyjątek jest generowany przez `dynamic_cast` operatora w wyniku zakończone niepowodzeniem Rzutowanie na typ odwołania.  
+**Bad_cast** wyjątek jest generowany przez **dynamic_cast** operatora w wyniku zakończone niepowodzeniem Rzutowanie na typ odwołania.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -36,7 +36,7 @@ catch (bad_cast)
 ```  
   
 ## <a name="remarks"></a>Uwagi  
- Interfejs `bad_cast` jest:  
+ Interfejs **bad_cast** jest:  
   
 ```cpp 
 class bad_cast : public exception {  
@@ -47,7 +47,7 @@ public:
 };  
 ```  
   
- Poniższy kod zawiera przykład niepowodzenia `dynamic_cast` która zgłasza `bad_cast` wyjątku.  
+ Poniższy kod zawiera przykład niepowodzenia **dynamic_cast** która zgłasza **bad_cast** wyjątku.  
   
 ```cpp 
 // expre_bad_cast_Exception.cpp  
@@ -78,7 +78,7 @@ int main() {
 }  
 ```  
   
- Wyjątek jest zgłaszany, ponieważ obiekt rzutowany (kształt) nie pochodzi od typu określone rzutowanie (Circle). Aby uniknąć wyjątek, należy dodać te deklaracje **głównego**:  
+ Wyjątek jest zgłaszany, ponieważ obiekt rzutowany (kształt) nie pochodzi od typu określone rzutowanie (Circle). Aby uniknąć wyjątek, należy dodać te deklaracje `main`:  
   
 ```cpp 
 Circle circle_instance;  
@@ -91,7 +91,7 @@ Circle& ref_circle = circle_instance;
 Shape& ref_shape = dynamic_cast<Shape&>(ref_circle);  
 ```  
   
-## <a name="see-also"></a>Zobacz też  
+## <a name="see-also"></a>Zobacz także  
  [Operator dynamic_cast](../cpp/dynamic-cast-operator.md)   
  [Keywords](../cpp/keywords-cpp.md)   
  [Obsługa wyjątków języka C++](../cpp/cpp-exception-handling.md)

@@ -22,19 +22,19 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2f78a122837fc2cb9a89083d5be8fd2b488c1772
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: d78ca2a195ac60e31e01bbe271b7f92536cc1a05
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37939227"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39401485"
 ---
 # <a name="main-program-startup"></a>main: uruchamianie programu
-Specjalną funkcję o nazwie `main` jest punktem początkowym wykonanie wszystkich programów C i C++. Jeśli jesteś pisanie kodu, która jest zgodna [!INCLUDE[TLA#tla_unicode](../atl-mfc-shared/reference/includes/tlasharptla_unicode_md.md)] modelu programowania, można użyć `wmain`, która jest wersją znaków dwubajtowych z `main`.  
+Specjalną funkcję o nazwie **głównego** jest punktem początkowym wykonanie wszystkich programów C i C++. Jeśli jesteś pisanie kodu, która jest zgodna [!INCLUDE[TLA#tla_unicode](../atl-mfc-shared/reference/includes/tlasharptla_unicode_md.md)] modelu programowania, można użyć `wmain`, która jest wersją znaków dwubajtowych, dla **głównego**.  
   
- `main` Funkcja nie jest wstępnie zdefiniowana przez kompilator. Wymagane jest podanie tekstu programu.  
+ **Głównego** funkcja nie jest wstępnie zdefiniowana przez kompilator. Wymagane jest podanie tekstu programu.  
   
- Składnia deklaracji `main` jest  
+ Składnia deklaracji **głównego** jest  
   
 ```cpp 
 int main();  
@@ -59,14 +59,14 @@ int wmain( );
 int wmain(int argc, wchar_t *argv[], wchar_t *envp[]);  
 ```  
   
- Można również użyć `_tmain`, która została zdefiniowana w TCHAR.h. `_tmain` jest rozpoznawana jako `main` , chyba że _UNICODE zdefiniowano. W takim przypadku `_tmain` jest rozpoznawana jako `wmain`.  
+ Można również użyć `_tmain`, która została zdefiniowana w TCHAR.h. `_tmain` jest rozpoznawana jako **głównego** , chyba że _UNICODE zdefiniowano. W takim przypadku `_tmain` jest rozpoznawana jako `wmain`.  
   
- Alternatywnie `main` i `wmain` funkcje mogą być zadeklarowane jako zwracanie **void** (nie zwraca wartości). Jeśli zadeklarujesz `main` lub `wmain` powrotu **void**, nie można zwrócić kod wyjścia procesu nadrzędnego lub systemu operacyjnego za pomocą [zwracają](../cpp/return-statement-in-program-termination-cpp.md) instrukcji. Do zwrócenia wyjście kodu, gdy `main` lub `wmain` jest zadeklarowany jako **void**, należy użyć [wyjść](../cpp/exit-function.md) funkcji.  
+ Alternatywnie **głównego** i `wmain` funkcje mogą być zadeklarowane jako zwracanie **void** (nie zwraca wartości). Jeśli zadeklarujesz **głównego** lub `wmain` powrotu **void**, nie można zwrócić kod wyjścia procesu nadrzędnego lub systemu operacyjnego za pomocą [zwracają](../cpp/return-statement-in-program-termination-cpp.md) instrukcji. Do zwrócenia wyjście kodu, gdy **głównego** lub `wmain` jest zadeklarowany jako **void**, należy użyć [wyjść](../cpp/exit-function.md) funkcji.  
   
 **END specyficzny dla Microsoft**  
  Typy dla `argc` i `argv` są definiowane przez język. Nazwy `argc`, `argv`, i `envp` są tradycyjne, ale nie są wymagane przez kompilator. Aby uzyskać więcej informacji i obejrzeć przykład, zobacz [definicje argumentu](../cpp/argument-definitions.md).  
   
-## <a name="see-also"></a>Zobacz też  
+## <a name="see-also"></a>Zobacz także  
  [Keywords](../cpp/keywords-cpp.md)   
  [Korzystanie z wmain zamiast main](../cpp/using-wmain-instead-of-main.md)   
  [Ograniczenia funkcji Main](../cpp/main-function-restrictions.md)   

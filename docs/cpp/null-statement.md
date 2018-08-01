@@ -1,5 +1,5 @@
 ---
-title: Instrukcja o wartości null | Dokumentacja firmy Microsoft
+title: Wartość null, poufności informacji | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,20 +16,21 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 624ff1051977804e6cefd97a813dce36cacdc3e5
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: ab391bb75dd6e7a2ef1ccf0951fa93770e6cd316
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39408522"
 ---
 # <a name="null-statement"></a>Instrukcja o wartości Null
-"Instrukcja o wartości null" jest instrukcja wyrażenia z *wyrażenie* Brak. Jest przydatne w przypadku składni języka odwołuje się do instrukcji, ale nie Obliczanie wyrażenia. Składa się z średnikiem.  
+"Instrukcja o wartości null" jest za pomocą instrukcji wyrażenia *wyrażenie* Brak. Jest to przydatne, gdy składni języka wywołuje dla instrukcji, ale nie Obliczanie wyrażenia. Składa się z średnikiem.  
   
- Instrukcje null są często używane jako symbole zastępcze w instrukcji iteracji lub instrukcji, w której ma zostać umieszczony etykiet na końcu instrukcje złożone lub funkcji.  
+ Instrukcji o wartości null są często używane jako symbole zastępcze w wywołaniach iteracja — instrukcje lub instrukcji, na którym ma zostać umieszczony etykiet na końcu instrukcji złożonej lub funkcji.  
   
- Poniższy fragment kodu przedstawia sposób kopiowania jednego ciągu na inny i dołącza instrukcja o wartości null:  
+ Poniższy fragment kodu pokazuje, jak skopiować jednego ciągu do innego i dołącza instrukcja o wartości null:  
   
-```  
+```cpp 
 // null_statement.cpp  
 char *myStrCpy( char *Dest, const char *Source )  
 {  
@@ -49,5 +50,5 @@ int main()
 }  
 ```  
   
-## <a name="see-also"></a>Zobacz też  
+## <a name="see-also"></a>Zobacz także  
  [Instrukcja wyrażeń](../cpp/expression-statement.md)

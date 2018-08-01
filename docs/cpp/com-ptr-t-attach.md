@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f8e982ebd9a09d4dfcb5e4b5e150b42a1e8d5c75
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: c48da9a0ff3b9cadf0b7e228f3108277154e8417
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37947936"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39402887"
 ---
 # <a name="comptrtattach"></a>_com_ptr_t::Attach
 **Microsoft Specific**  
@@ -32,7 +32,6 @@ ms.locfileid: "37947936"
 ## <a name="syntax"></a>Składnia  
   
 ```  
-  
 void Attach( Interface* pInterface ) throw( );  
 void Attach( Interface* pInterface, bool fAddRef ) throw( );  
 ```  
@@ -46,11 +45,11 @@ void Attach( Interface* pInterface, bool fAddRef ) throw( );
   
 ## <a name="remarks"></a>Uwagi  
   
--   **Dołącz (***pInterface***)** `AddRef` nie zostanie wywołana.     Własność interfejsu jest przekazywany do tego `_com_ptr_t` obiektu. `Release` jest wywoływana, aby zmniejszyć licznikiem odwołań do wcześniej zhermetyzowanego wskaźnika.  
+-   **Dołącz (***pInterface***)** `AddRef` nie zostanie wywołana. Własność interfejsu jest przekazywany do tego `_com_ptr_t` obiektu. `Release` jest wywoływana, aby zmniejszyć licznikiem odwołań do wcześniej zhermetyzowanego wskaźnika.  
   
 -   **Dołącz (***pInterface* **,***fAddRef***)** Jeśli *fAddRef* ma wartość PRAWDA, `AddRef`jest wywoływana, aby zwiększyć licznik odwołań dla interfejsu zhermetyzowanego wskaźnika.       Jeśli *fAddRef* ma wartość FAŁSZ, to `_com_ptr_t` obiektu przejmuje na własność surowego wskaźnika interfejsu bez wywoływania `AddRef`. `Release` jest wywoływana, aby zmniejszyć licznikiem odwołań do wcześniej zhermetyzowanego wskaźnika.  
   
  **END specyficzny dla Microsoft**  
   
-## <a name="see-also"></a>Zobacz też  
+## <a name="see-also"></a>Zobacz także  
  [_com_ptr_t, klasa](../cpp/com-ptr-t-class.md)

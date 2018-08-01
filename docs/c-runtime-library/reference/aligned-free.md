@@ -33,16 +33,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bd89d0c8657df4bec2da5bf021c8964ad418cd9b
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 51220aaf47056f63d37471c61857f8a128a67179
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32393371"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39402451"
 ---
 # <a name="alignedfree"></a>_aligned_free
 
-Zwalnia blok pamięci przydzielony przy [_aligned_malloc —](aligned-malloc.md) lub [_aligned_offset_malloc —](aligned-offset-malloc.md).
+Zwalnia blok pamięci, która została przydzielona za pomocą [_aligned_malloc](aligned-malloc.md) lub [_aligned_offset_malloc —](aligned-offset-malloc.md).
 
 ## <a name="syntax"></a>Składnia
 
@@ -54,13 +54,13 @@ void _aligned_free (
 
 ### <a name="parameters"></a>Parametry
 
-*memblock* wskaźnik do bloku pamięci, który został zwrócony do **_aligned_malloc —** lub **_aligned_offset_malloc —** funkcji.
+*memblock* wskaźnik do bloku pamięci, który został zwrócony do `_aligned_malloc` lub `_aligned_offset_malloc` funkcji.
 
 ## <a name="remarks"></a>Uwagi
 
-**_aligned_free —** jest oznaczony jako `__declspec(noalias)`, co oznacza zagwarantowanie funkcji nie można modyfikować zmienne globalne. Aby uzyskać więcej informacji, zobacz [noalias](../../cpp/noalias.md).
+**_aligned_free —** jest oznaczony jako `__declspec(noalias)`, co oznacza, że funkcja daje gwarancję niemodyfikowania zmiennych globalnych. Aby uzyskać więcej informacji, zobacz [noalias](../../cpp/noalias.md).
 
-Ta funkcja nie można zweryfikować jej parametr, w przeciwieństwie do innych funkcji CRT _aligned. Jeśli *memblock* jest **NULL** wskaźnika, funkcja ta po prostu wykonuje żadnych akcji. Nie zmienia **errno** i nie jest wywoływany program obsługi nieprawidłowych parametrów. Jeśli wystąpi błąd w funkcji z powodu nie można przydzielić bloku pamięci używa wcześniej funkcje _aligned lub występuje niezgodność pamięci z powodu niektóre nieprzewidzianego calamity, funkcja generuje raport debugowania z [_RPT, _RPTF, _RPTW, _ Rptfw — makra](rpt-rptf-rptw-rptfw-macros.md).
+Ta funkcja nie można zweryfikować parametr, w przeciwieństwie do innych funkcji CRT _aligned. Jeśli *memblock* jest wskaźnikiem typu NULL, funkcja ta po prostu wykonuje żadnych akcji. Nie zmienia `errno` i nie wywołuje program obsługi nieprawidłowych parametrów. Jeśli wystąpi błąd w funkcji ze względu na nie przy użyciu funkcji _aligned wcześniej przydzielić blok pamięci lub występuje niezgodność pamięci z powodu niektóre nieprzewidziane calamity, funkcja generuje raport debugowania z [_RPT, _RPTF, _RPTW, _ Rptfw — makra](rpt-rptf-rptw-rptfw-macros.md).
 
 ## <a name="requirements"></a>Wymagania
 
@@ -70,8 +70,8 @@ Ta funkcja nie można zweryfikować jej parametr, w przeciwieństwie do innych f
 
 ## <a name="example"></a>Przykład
 
-Aby uzyskać więcej informacji, zobacz [_aligned_malloc —](aligned-malloc.md).
+Aby uzyskać więcej informacji, zobacz [_aligned_malloc](aligned-malloc.md).
 
 ## <a name="see-also"></a>Zobacz także
 
-[Wyrównywanie danych](../../c-runtime-library/data-alignment.md)<br/>
+[Wyrównywanie danych](../../c-runtime-library/data-alignment.md)  

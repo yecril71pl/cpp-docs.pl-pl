@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: dbcbd73f1a4a6d80ed30a5d70ca43d5fe45677f9
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: f0ddac28c4f39cdf11abbdf38c3af5d00c22413a
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37941720"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39401909"
 ---
 # <a name="comerrorhresulttowcode"></a>_com_error::HRESULTToWCode
 **Microsoft Specific**  
@@ -31,8 +31,7 @@ ms.locfileid: "37941720"
 ## <a name="syntax"></a>Składnia  
   
 ```  
-  
-      static WORD HRESULTToWCode(  
+static WORD HRESULTToWCode(  
    HRESULT hr   
 ) throw( );  
 ```  
@@ -49,7 +48,7 @@ ms.locfileid: "37941720"
   
  **END specyficzny dla Microsoft**  
   
-## <a name="see-also"></a>Zobacz też  
+## <a name="see-also"></a>Zobacz także  
  [_com_error::WCode](../cpp/com-error-wcode.md)   
  [_com_error::WCodeToHRESULT](../cpp/com-error-wcodetohresult.md)   
  [_com_error, klasa](../cpp/com-error-class.md)

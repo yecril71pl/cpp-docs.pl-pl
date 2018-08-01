@@ -1,5 +1,5 @@
 ---
-title: __clrcall | Dokumentacja firmy Microsoft
+title: Wywołanie __clrcall | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,36 +16,36 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4012eac44f376ccdeeb57227e562c672f6ba7ffe
-ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
+ms.openlocfilehash: 27564ce9c3cf795d7999745e82c733092bccd719
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34704584"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39401860"
 ---
 # <a name="clrcall"></a>__clrcall
 
 **Microsoft Specific**
 
-Określa, że funkcja może być wywoływana tylko z kodu zarządzanego.  Użyj `__clrcall` dla wszystkich funkcji wirtualnych, które będą wywoływane tylko z kodu zarządzanego. Jednak ta Konwencja wywoływania nie może służyć do funkcji, które będą wywoływane z kodu macierzystego.
+Określa, że funkcja może zostać wywołana tylko z kodu zarządzanego.  Użyj **__clrcall** dla wszystkich funkcji wirtualnych, które będą wywoływane tylko z kodu zarządzanego. Jednak ta konwencja wywołania nie można użyć funkcji, które zostaną wywołane z kodu natywnego.
 
-Użyj `__clrcall` do zwiększenia wydajności podczas wywoływania metody z funkcją zarządzaną do funkcji wirtualnych zarządzanych lub zarządzanych funkcja funkcji zarządzanych za pomocą wskaźnika.
+Użyj **__clrcall** aby poprawić wydajność podczas wywoływania funkcji zarządzanej funkcji wirtualnej zarządzanych lub funkcji zarządzanej funkcji zarządzanych za pomocą wskaźnika.
 
-Punkty wejścia ma oddzielny, generowane przez kompilator funkcji. Jeśli funkcja oba punkty wejścia natywnego i zarządzanego, jeden z nich będzie rzeczywista funkcja z implementacją funkcji. Innych funkcji będzie oddzielne funkcji (thunk), która wywołuje funkcję rzeczywiste i umożliwia środowisko uruchomieniowe języka wspólnego wykonania funkcji PInvoke. Gdy funkcja jako oznaczenie `__clrcall`, wskazać implementacja funkcji musi być MSIL i funkcję punktu wejścia macierzysty nie zostanie wygenerowany.
+Punkty wejścia są oddzielne, generowane przez kompilator funkcje. Jeśli funkcja ma zarówno punkty wejścia natywnych i zarządzanych, jeden z nich będzie rzeczywiste funkcji z implementacją funkcji. Innych funkcji, będzie to oddzielna funkcja (wywołanie), wywołuje funkcję rzeczywiste, która umożliwia środowiska uruchomieniowego języka wspólnego wykonywania funkcji PInvoke. Kiedy oznaczanie funkcję jako **__clrcall**, wskazujesz, implementacja funkcji musi być MSIL i funkcję punktu wejścia natywne nie będą generowane.
 
-Jeśli pobieranie adresu funkcji macierzystej, jeśli `__clrcall` nie zostanie określony, kompilator używa punktu wejścia macierzystego. `__clrcall` Wskazuje, że funkcja jest zarządzany i istnieje, nie trzeba przechodzić przez przejście od zarządzanych do kodu natywnego. W takim przypadku kompilator używa zarządzany punkt wejścia.
+Gdy przełącza adresu w funkcji natywnej, jeśli **__clrcall** nie zostanie określony, kompilator używa natywnego punktu wejścia. **Wywołanie __clrcall** wskazuje, że funkcja jest zarządzana i ma, nie trzeba przechodzić przez przejście z zarządzanego do kodu natywnego. W takim przypadku kompilator używa zarządzany punkt wejścia.
 
-Podczas **/CLR** (nie **/CLR: pure** lub **/CLR: Safe**) jest używany i `__clrcall` jest nie jest używany, pobieranie adresu funkcji zawsze zwraca adres natywnego wpisu wskaż funkcji. Gdy `__clrcall` jest używana, funkcję punktu wejścia natywnego nie jest tworzony, dzięki czemu możesz uzyskać adresu funkcji zarządzanego, nie funkcję punktu wejścia thunk. Aby uzyskać więcej informacji, zobacz [podwójna konwersja bitowa adresów](../dotnet/double-thunking-cpp.md). **/CLR: pure** i **/CLR: Safe** — opcje kompilatora są używane w programie Visual Studio 2015 i nieobsługiwane w programie Visual Studio 2017 r.
+Gdy `/clr` (nie `/clr:pure` lub `/clr:safe`) jest używany i **__clrcall** jest nieużywane, biorąc adresu funkcji zawsze zwraca adres funkcję punktu wejścia natywnych. Gdy **__clrcall** jest używany, funkcja punktu wejścia natywne nie zostało utworzone, dzięki czemu możesz uzyskać adresu funkcji zarządzanej nie funkcję punktu wejścia thunk. Aby uzyskać więcej informacji, zobacz [podwójna](../dotnet/double-thunking-cpp.md). **/CLR: pure** i **/CLR: Safe** opcje kompilatora są przestarzałe w programie Visual Studio 2015 i obsługiwane w programie Visual Studio 2017.
 
-[/ CLR (kompilacja języka wspólnego środowiska uruchomieniowego)](../build/reference/clr-common-language-runtime-compilation.md) oznacza, że wszystkie funkcje i wskaźniki funkcji są `__clrcall` i kompilator nie będzie zezwalać funkcja wewnątrz compiland może być oznaczony cokolwiek innego niż `__clrcall`. Gdy **/CLR: pure** jest używana, `__clrcall` można określić tylko dla wskaźników funkcji i deklaracje zewnętrzne.
+[/ CLR (kompilacja języka wspólnego środowiska uruchomieniowego)](../build/reference/clr-common-language-runtime-compilation.md) oznacza, że wszystkie funkcje i wskaźniki funkcji mają **__clrcall** i kompilator nie pozwoli na funkcji wewnątrz compiland — był oznaczony jako coś innego niż **__clrcall**. Gdy **/CLR: pure** jest używany, **__clrcall** można określić tylko dla wskaźników funkcji i deklaracje zewnętrzne.
 
-Można bezpośrednio wywołać `__clrcall` funkcji z istniejącego kodu C++, który został skompilowany przy użyciu **/CLR** tak długo, jak ta funkcja ma implementację MSIL. `__clrcall` Nie można wywołać funkcji bezpośrednio z funkcji, które wbudowanego asm i wywołać intrinisics specyficznych dla procesora CPU, na przykład, nawet jeśli te funkcje są kompilowane przy użyciu **/CLR**.
+Można bezpośrednio wywoływać **__clrcall** funkcji z istniejącego kodu C++, który został skompilowany przy użyciu **/CLR** tak długo, jak ta funkcja zawiera implementację MSIL. **Wywołanie __clrcall** funkcji nie można wywołać bezpośrednio z funkcji, które mają wbudowanego asm i wywołać intrinisics specyficznych dla procesora CPU, na przykład, nawet jeśli te funkcje są kompilowane przy użyciu `/clr`.
 
-`__clrcall` wskaźniki funkcji są przeznaczone tylko do użycia w domenie aplikacji, w którym zostały utworzone.  Zamiast przekazywanie `__clrcall` funkcji wskaźniki między domenami aplikacji, użyj <xref:System.CrossAppDomainDelegate>. Aby uzyskać więcej informacji, zobacz [i domen aplikacji Visual C++](../dotnet/application-domains-and-visual-cpp.md).
+**Wywołanie __clrcall** wskaźników funkcji są przeznaczone tylko do użycia w domenie aplikacji, w którym zostały utworzone.  Zamiast **__clrcall** wskaźniki funkcji w różnych domenach aplikacji, należy użyć <xref:System.CrossAppDomainDelegate>. Aby uzyskać więcej informacji, zobacz [domeny aplikacji i programu Visual C++](../dotnet/application-domains-and-visual-cpp.md).
 
 ## <a name="example"></a>Przykład
 
-Należy pamiętać, że gdy funkcja zadeklarowana ze `__clrcall`, zostanie wygenerowany kod w razie potrzeby; na przykład, gdy jest wywoływana funkcja.
+Należy pamiętać, że gdy funkcja jest zadeklarowana za pomocą **__clrcall**, kod zostanie wygenerowany, gdy potrzebne; na przykład, gdy funkcja jest wywoływana.
 
 ```cpp
 // clrcall2.cpp
@@ -84,7 +84,7 @@ in Func1
 
 ## <a name="example"></a>Przykład
 
-Poniższy przykład pokazuje, że wskaźnik funkcji, można zdefiniować tak, aby zadeklarować, że funkcja wskaźnik będzie można wywołać tylko z kodu zarządzanego. Dzięki temu kompilatora bezpośrednio wywołać funkcję zarządzanych i uniknąć punktu wejścia natywnego (podwójna konwersja bitowa problem).
+Poniższy przykład pokazuje, czy można zdefiniować wskaźnik funkcji tak, aby zadeklarować, że wskaźnik funkcji będzie można wywołać tylko z kodu zarządzanego. Dzięki temu kompilator, aby bezpośrednio wywołać funkcji zarządzanej i uniknąć natywnego punktu wejścia (podwójny thunk problem).
 
 ```cpp
 // clrcall3.cpp
@@ -103,6 +103,5 @@ int main() {
 ```
 
 ## <a name="see-also"></a>Zobacz także
-
-- [Przekazywanie argumentów i konwencje nazewnictwa](../cpp/argument-passing-and-naming-conventions.md)
-- [Słowa kluczowe](../cpp/keywords-cpp.md)
+ [Przekazywanie argumentów i konwencje nazewnictwa](../cpp/argument-passing-and-naming-conventions.md)  
+ [Słowa kluczowe](../cpp/keywords-cpp.md)

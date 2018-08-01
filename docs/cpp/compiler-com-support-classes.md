@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: eba4ae92f9db67dfff58ec111b294b6cd26eff5a
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: 7dc931e643235bc6edb4a1121628ac5185b76cc7
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37939822"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39402552"
 ---
 # <a name="compiler-com-support-classes"></a>Kompilator klas obsługi COM
 **Microsoft Specific**  
@@ -38,7 +38,7 @@ ms.locfileid: "37939822"
   
 **END specyficzny dla Microsoft**  
   
-## <a name="see-also"></a>Zobacz też  
+## <a name="see-also"></a>Zobacz także  
  [Obsługa kompilatora COM](../cpp/compiler-com-support.md)   
  [Funkcje globalne kompilatora COM](../cpp/compiler-com-global-functions.md)   
  [Dokumentacja języka C++](../cpp/cpp-language-reference.md)

@@ -14,12 +14,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b38b608d1d254d304c7182d5063f870e2bbfcffe
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: feb14056e3054cdf0e802b16ce9ff20f67da43fe
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37940822"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39401577"
 ---
 # <a name="for-statement-c"></a>for — instrukcja (C++)
 Wykonuje instrukcję wielokrotnie, dopóki warunek przestaje być prawdziwy. Informacje na temat bazująca na zakresie dla instrukcji można zobaczyć [Range-based for Statement (C++)](../cpp/range-based-for-statement-cpp.md).  
@@ -137,9 +137,9 @@ for (int i = 0 ; i < 5 ; i++) {
   
  Domyślnie w ramach [/Ze](../build/reference/za-ze-disable-language-extensions.md), Zmienna zadeklarowana w **dla** pętli pozostaje w zakresie aż do zakończenia **dla** pętli otaczającego zakresu.  
   
- [/ Zc: forscope](../build/reference/zc-forscope-force-conformance-in-for-loop-scope.md) włącza standardowe zachowanie zmiennych zadeklarowanych w pętlach for bez konieczności określania/za.  
+ [/ Zc: forscope](../build/reference/zc-forscope-force-conformance-in-for-loop-scope.md) włącza standardowe zachowanie zmiennych zadeklarowanych w pętlach for bez konieczności określania `/Za`.  
   
- Istnieje również możliwość użycia różnic zakresu **dla** pętli do ponownego zadeklarowania zmiennych pod /Ze w następujący sposób:  
+ Istnieje również możliwość użycia różnic zakresu **dla** pętli do ponownego zadeklarowania zmiennych pod `/Ze` w następujący sposób:  
   
 ```cpp  
 // for_statement5.cpp  
@@ -153,7 +153,7 @@ int main(){
   
  To bardziej ścisłe naśladowanie standardowego zachowania zmiennej zadeklarowanej w **dla** pętli, która wymaga, aby zmienne zadeklarowane w **dla** pętli wykraczają poza zakres po zakończeniu pętli. Gdy zmienna jest zadeklarowana w **dla** pętli, kompilator wewnętrznie Awansuje ją do zmiennej lokalnej w **dla** otaczającym zakresie pętli, nawet jeśli zmienna lokalna o takiej samej nazwie już istnieje.  
   
-## <a name="see-also"></a>Zobacz też  
+## <a name="see-also"></a>Zobacz także  
  [Instrukcje iteracji](../cpp/iteration-statements-cpp.md)   
  [Keywords](../cpp/keywords-cpp.md)   
  [while — instrukcja (C++)](../cpp/while-statement-cpp.md)   

@@ -16,15 +16,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 50cf3d7e5168ba40acde386b62cf02c0933f8ca4
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: 54780b11e07819ca78eba89d9af5a8ba018cc9e4
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37941252"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39401811"
 ---
 # <a name="additional-termination-considerations"></a>Dodatkowe zagadnienia dotyczące kończenia
-Możesz zakończyć program w języku C++ za pomocą **wyjść**, **zwracają**, lub **przerwać**. Można dodać przy użyciu przetwarzania zakończenia `atexit` funkcji. W poniższych sekcjach omówiono te.  
+Możesz zakończyć program w języku C++ za pomocą `exit`, **zwracają**, lub `abort`. Można dodać przy użyciu przetwarzania zakończenia `atexit` funkcji. W poniższych sekcjach omówiono te.  
   
-## <a name="see-also"></a>Zobacz też  
+## <a name="see-also"></a>Zobacz także  
  [Uruchomienie i zakończenie](../cpp/startup-and-termination-cpp.md)

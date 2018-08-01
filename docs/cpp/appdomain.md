@@ -1,5 +1,5 @@
 ---
-title: elementu AppDomain | Dokumentacja firmy Microsoft
+title: Obiekt AppDomain | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,30 +17,30 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 52108e79a50d596dbb1f1afdfb2f64b93421d860
-ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
+ms.openlocfilehash: 52b371d0dedc03c3f14ede1472221077d081ae8f
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34705234"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39402305"
 ---
 # <a name="appdomain"></a>appdomain
 
-Określa, że w każdej domenie aplikacji zarządzanych aplikacji powinny mieć własną kopię zmiennej określonej globalne zmienna lub statyczny element członkowski. Zobacz [i domen aplikacji Visual C++](../dotnet/application-domains-and-visual-cpp.md) Aby uzyskać więcej informacji.
+Określa, że każda domena aplikacji zarządzanych aplikacji powinny mieć własną kopię zmiennej określonej globalnego zmienna lub statyczna elementu członkowskiego. Zobacz [domeny aplikacji i programu Visual C++](../dotnet/application-domains-and-visual-cpp.md) Aby uzyskać więcej informacji.
 
-Wszystkich domen aplikacji ma własną kopię zmienną domeny appdomain. Konstruktor zmiennej elementu appdomain jest wykonywany, gdy zestaw jest ładowany do domeny aplikacji, a destruktor jest wykonywane, gdy domena aplikacji jest zwolniony.
+W każdej domenie aplikacji jest własną kopię zmiennej dla domeny appdomain. Konstruktor obiektu appdomain zmiennej jest wykonywany, gdy zestaw jest ładowany do domeny aplikacji i destruktor jest wykonywany, gdy domena aplikacji jest zwalniana.
 
-Wszystkich domen aplikacji w ramach procesu w środowisku uruchomieniowym języka Aby udostępnić zmiennej globalnej, należy użyć `__declspec(process)` modyfikator. `__declspec(process)` jest włączona domyślnie w obszarze [/CLR](../build/reference/clr-common-language-runtime-compilation.md). **/CLR: pure** i **/CLR: Safe** — opcje kompilatora są używane w programie Visual Studio 2015 i nieobsługiwane w programie Visual Studio 2017 r.
+Jeśli chcesz, aby wszystkie domeny aplikacji w ramach procesu w środowisko uruchomieniowe języka wspólnego udostępnianie zmienną globalną, użyj `__declspec(process)` modyfikator. `__declspec(process)` obowiązuje domyślny w obszarze [/CLR](../build/reference/clr-common-language-runtime-compilation.md). **/CLR: pure** i **/CLR: Safe** opcje kompilatora są przestarzałe w programie Visual Studio 2015 i obsługiwane w programie Visual Studio 2017.
 
-`__declspec(appdomain)` jest prawidłowa tylko gdy jeden z **/CLR** — opcje kompilatora jest używany. Tylko zmiennej globalnej, statycznym elementem członkowskim zmiennej lub statyczna zmienna lokalna może być oznaczony przez `__declspec(appdomain)`. Błąd, aby zastosować `__declspec(appdomain)` do statyczne elementy członkowskie typy zarządzane, ponieważ mają one zawsze to zachowanie.
+`__declspec(appdomain)` jest prawidłowa tylko gdy jeden z **/CLR** opcje kompilatora jest używany. Tylko zmienną globalną, statyczny element członkowski, zmienna lub statyczna zmienna lokalna może być oznaczony za pomocą `__declspec(appdomain)`. Jest to błąd, aby zastosować `__declspec(appdomain)` do statycznych elementów członkowskich typy zarządzane, ponieważ mają one zawsze to zachowanie.
 
-Przy użyciu `__declspec(appdomain)` jest podobny do sposobu używania [wątku lokalnego magazynu (TLS)](../parallel/thread-local-storage-tls.md). Wątki mają własne magazynu, tak jak domen aplikacji. Przy użyciu `__declspec(appdomain)` zapewnia zmiennej globalnej ma własny magazyn w każdej domenie aplikacji utworzonych dla tej aplikacji.
+Za pomocą `__declspec(appdomain)` jest podobne do [wątku lokalnego magazynu (TLS)](../parallel/thread-local-storage-tls.md). Wątki mają własne magazynu, tak jak domeny aplikacji. Za pomocą `__declspec(appdomain)` zapewnia zmienna globalna ma własny magazyn, w każdej domenie aplikacji utworzonych dla tej aplikacji.
 
-Istnieją pewne ograniczenia mieszanie użycia dla poszczególnych procesów i zmiennych elementu appdomain; zobacz [procesu](../cpp/process.md) Aby uzyskać więcej informacji.
+Istnieją ograniczenia dotyczące mieszania użytkowania według procesu i zmiennych domeny aplikacji; zobacz [procesu](../cpp/process.md) Aby uzyskać więcej informacji.
 
-Na przykład podczas uruchamiania programu, są inicjowane wszystkie zmienne na proces, a następnie wszystkie domeny appdomain zmienne są inicjowane. W związku z tym po zainicjowaniu zmiennej na proces nie może zależeć na wartość zmiennej wszystkie domeny dla poszczególnych aplikacji. Zły rozwiązaniem łączyć użycie (przypisanie) dla poszczególnych appdomain i zmienne procesu jest.
+Na przykład podczas uruchamiania programu, są inicjowane wszystkie zmienne na proces, a następnie wszystkie zmienne dla domeny appdomain są inicjowane. W związku z tym podczas inicjowania zmiennej na proces nie może zależeć na wartość dowolnej zmiennej domeny na aplikację. Jest złym zwyczajem mieszać użytkowania (przypisanie) według domeny aplikacji i zmiennych procesów.
 
-Aby uzyskać informacje na temat sposobu wywołania funkcji w określonej domenie aplikacji, zobacz [call_in_appdomain — funkcja](../dotnet/call-in-appdomain-function.md).
+Aby uzyskać informacje na temat sposobu wywoływania funkcji w określonej domenie aplikacji, zobacz [call_in_appdomain, funkcja](../dotnet/call-in-appdomain-function.md).
 
 ## <a name="example"></a>Przykład
 
@@ -145,6 +145,5 @@ __declspec(process) CGlobal::~CGlobal destructor
 ```
 
 ## <a name="see-also"></a>Zobacz także
-
-- [__declspec](../cpp/declspec.md)
-- [Słowa kluczowe](../cpp/keywords-cpp.md)
+[__declspec](../cpp/declspec.md)  
+[Słowa kluczowe](../cpp/keywords-cpp.md)  

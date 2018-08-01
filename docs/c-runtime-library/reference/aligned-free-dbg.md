@@ -32,16 +32,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 88c7eb281ecc7a7175614c5c72c54c7267cf55e8
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 23e76c5fc4881f0689bf83ee96acd2a7cce8c948
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32393462"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39401564"
 ---
 # <a name="alignedfreedbg"></a>_aligned_free_dbg
 
-Zwalnia blok pamięci przydzielony przy [_aligned_malloc —](aligned-malloc.md) lub [_aligned_offset_malloc —](aligned-offset-malloc.md) (tylko debugowanie).
+Zwalnia blok pamięci, która została przydzielona za pomocą [_aligned_malloc](aligned-malloc.md) lub [_aligned_offset_malloc —](aligned-offset-malloc.md) (tylko debugowanie).
 
 ## <a name="syntax"></a>Składnia
 
@@ -53,17 +53,17 @@ void _aligned_free_dbg(
 
 ### <a name="parameters"></a>Parametry
 
-*memblock* wskaźnik do bloku pamięci, który został zwrócony do [_aligned_malloc —](aligned-malloc.md) lub [_aligned_offset_malloc —](aligned-offset-malloc.md) funkcji.
+*memblock* wskaźnik do bloku pamięci, który został zwrócony do [_aligned_malloc](aligned-malloc.md) lub [_aligned_offset_malloc —](aligned-offset-malloc.md) funkcji.
 
 ## <a name="remarks"></a>Uwagi
 
-**_Aligned_free_dbg —** funkcji jest wersja debugowania [_aligned_free —](aligned-free.md) funkcji. Gdy [_DEBUG](../../c-runtime-library/debug.md) nie jest zdefiniowana, każde wywołanie **_aligned_free_dbg —** zostanie zmniejszona do wywołania **_aligned_free —**. Zarówno **_aligned_free —** i **_aligned_free_dbg —** wolne blok pamięci w stosie podstawowej, ale **_aligned_free_dbg —** bierze pod uwagę funkcja debugowania: możliwość przechowywania zwolnionych bloki w połączonej listy sterty celu symulacji warunków braku pamięci.
+**_Aligned_free_dbg —** funkcja jest wersją debugowania [_aligned_free —](aligned-free.md) funkcji. Gdy [_DEBUG](../../c-runtime-library/debug.md) nie jest zdefiniowany, każde wywołanie **_aligned_free_dbg —** jest ograniczone do wywołania `_aligned_free`. Zarówno `_aligned_free` i **_aligned_free_dbg —** zwolnieniu bloku pamięci w stosie podstawowym, ale **_aligned_free_dbg —** obsługuje funkcję debugowania: możliwość zachowania zwolnionych bloków w stosie połączonej listy Symulowanie warunków małej ilości pamięci.
 
-**_aligned_free_dbg —** wykonuje sprawdzanie poprawności dla wszystkich określonych plików i lokalizacje bloku przed wykonaniem operacji wolne. Aplikacja nie powinien zapewniać te informacje. Gdy zostanie zwolniona blok pamięci, menedżera sterty debugowania automatycznie sprawdza spójność buforów po obu stronach części użytkownika i wystawia raportu o błędach, jeśli przeprowadzono zastępowanie. Jeśli **_crtdbg_delay_free_mem_df —** pola bitowego ze [_crtdbgflag —](../../c-runtime-library/crtdbgflag.md) flaga jest ustawiona, zwolnionych bloku jest wypełniony przypisanej wartości 0xDD, **_free_block —** zablokować typu i zachowane w stercie połączonej listy bloków pamięci.
+**_aligned_free_dbg —** wykonuje sprawdzanie poprawności dla wszystkich określonych plików i lokalizacje bloku przed wykonaniem tej operacji bezpłatne. Nie oczekiwano aplikacji może przekazać tę informację. Gdy blok pamięci jest zwalniana, Menedżer stosu debugowania automatycznie sprawdza spójność buforów po obu stronach części użytkownika i generuje raport o błędach, jeżeli zastąpienie wystąpiło. Jeśli _CRTDBG_DELAY_FREE_MEM_DF bit pole [_crtDbgFlag](../../c-runtime-library/crtdbgflag.md) flaga jest ustawiona, wypełnione wartością 0xDD, przypisywany jest typ bloku _FREE_BLOCK i trzymane w połączonej liście stosu bloków pamięci zwolnione bloku.
 
-W przypadku wystąpienia błędu w zwolnić pamięć, **errno** ustawiono informacje z systemu operacyjnego od charakteru błędu. Aby uzyskać więcej informacji, zobacz [errno _doserrno —, _sys_errlist — i _sys_nerr —](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
+Jeśli wystąpi błąd w pamięci, zwalniając `errno` została ustawiona za pomocą informacji z systemu operacyjnego od charakteru błędu. Aby uzyskać więcej informacji, zobacz [errno, _doserrno, _sys_errlist i _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
-Aby dowiedzieć się jak bloki pamięci są przydzielone, zainicjować i zarządzane w wersji podstawowej sterty debugowania, zobacz [szczegóły dotyczące sterty debugowania CRT](/visualstudio/debugger/crt-debug-heap-details). Informacje o typach bloku alokacji i sposobu ich używania, zobacz [typów bloków w stercie debugowania](/visualstudio/debugger/crt-debug-heap-details). Aby uzyskać informacje o różnicach między wywoływanie funkcji sterty standardowe i jego wersji do debugowania w kompilację debugowania aplikacji, zobacz [debugowania wersji z funkcji alokacji sterty](/visualstudio/debugger/debug-versions-of-heap-allocation-functions).
+Aby dowiedzieć się jak bloki pamięci są przydzielane, inicjowane i zarządzane w wersji debugowania podstawowej sterty, zobacz [szczegóły dotyczące sterty debugowania CRT](/visualstudio/debugger/crt-debug-heap-details). Aby uzyskać informacje dotyczące alokacji typów bloków i sposobu ich używania, zobacz [typy bloków na stercie debugowania](/visualstudio/debugger/crt-debug-heap-details). Aby uzyskać informacji na temat różnic między wywołaniem funkcji sterty standard oraz jego wersję debugowania do kompilacji debugowanej aplikacji, zobacz [Debuguj wersje z funkcji alokacji sterty](/visualstudio/debugger/debug-versions-of-heap-allocation-functions).
 
 ## <a name="requirements"></a>Wymagania
 
@@ -71,8 +71,8 @@ Aby dowiedzieć się jak bloki pamięci są przydzielone, zainicjować i zarząd
 |-------------|---------------------|
 |**_aligned_free_dbg**|\<crtdbg.h>|
 
-Aby uzyskać więcej informacji o zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md).
+Aby uzyskać więcej informacji na temat zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md).
 
 ## <a name="see-also"></a>Zobacz także
 
-[Procedury debugowania](../../c-runtime-library/debug-routines.md)<br/>
+[Procedury debugowania](../../c-runtime-library/debug-routines.md)  

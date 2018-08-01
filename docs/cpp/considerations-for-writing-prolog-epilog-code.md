@@ -18,16 +18,16 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5b7f4e2c25d7ead3399020221c1e0e9633557d24
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: 68eff54ff2465706f5a7459b7c6c21d87c7a1b7f
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37942110"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39402318"
 ---
 # <a name="considerations-for-writing-prologepilog-code"></a>Zagadnienia dotyczące pisania kodu prologu/epilogu
 ## <a name="microsoft-specific"></a>Specyficzne dla firmy Microsoft  
- Przed napisaniem własnej sekwencji kodu prologu i epilogu należy zrozumieć ułożenie ramki stosu. Warto również wiedzieć, jak użyć symbolu __LOCAL_SIZE.  
+ Przed napisaniem własnej sekwencji kodu prologu i epilogu należy zrozumieć ułożenie ramki stosu. Warto też wiedzieć, jak używać `__LOCAL_SIZE` symboli.  
   
 ##  <a name="_pluslang_c.2b2b_.stack_frame_layout"></a> Układ ramki stosu  
  W tym przykładzie pokazano standardowy kod prologu, który może pojawić się w 32-bitowej funkcji:  
@@ -51,16 +51,16 @@ ret                       ; Return from function
  Stos zawsze powiększa się w dół (od najwyższego do najniższego adresu pamięci). Podstawowy wskaźnik (`ebp`) wskazuje na umieszczoną wartość `ebp`. Obszar zmiennych lokalnych rozpoczyna się od `ebp-4`. Aby uzyskać dostęp do zmiennych lokalnych, należy obliczyć przesunięcie z `ebp` przez odjęcie odpowiedniej wartości od `ebp`.  
   
 ##  <a name="_pluslang___local_size"></a> __LOCAL_SIZE  
- Kompilator zawiera symbol __LOCAL_SIZE do użycia w bloku asemblera wbudowanego w kodzie prologu funkcji. Ten symbol jest używany do alokowania miejsca dla zmiennych lokalnych na ramce stosu w niestandardowym kodzie prologu.  
+ Kompilator zapewnia symbol, `__LOCAL_SIZE`, do użycia w bloku asemblera wbudowanego w kodzie prologu funkcji. Ten symbol jest używany do alokowania miejsca dla zmiennych lokalnych na ramce stosu w niestandardowym kodzie prologu.  
   
- Kompilator określa wartość __LOCAL_SIZE. Jego wartość to całkowita liczba bajtów wszystkich zmiennych lokalnych zdefiniowanych przez użytkownika i zmiennych tymczasowych wygenerowanych przez kompilator. __LOCAL_SIZE mogą być używane tylko jako bezpośredni argument; Nie można użyć w wyrażeniu. Nie musisz zmienić lub ponownie definiować wartości tego symbolu. Na przykład:  
+ Kompilator określa wartość `__LOCAL_SIZE`. Jego wartość to całkowita liczba bajtów wszystkich zmiennych lokalnych zdefiniowanych przez użytkownika i zmiennych tymczasowych wygenerowanych przez kompilator. `__LOCAL_SIZE` może być używana tylko jako bezpośredni argument; Nie można użyć w wyrażeniu. Nie musisz zmienić lub ponownie definiować wartości tego symbolu. Na przykład:  
   
 ```  
 mov        eax, __LOCAL_SIZE           ;Immediate operand--Okay  
 mov        eax, [ebp - __LOCAL_SIZE]   ;Error  
 ```  
   
- Poniższy przykład funkcji "naked", zawierający niestandardową sekwencję prologu i epilogu sekwencji używa __LOCAL_SIZE symbol w sekwencji prologu:  
+ Poniższy przykład funkcji "naked", zawierający niestandardową sekwencję prologu i epilogu sekwencji używa `__LOCAL_SIZE` symboli w sekwencji prologu:  
   
 ```  
 // the__local_size_symbol.cpp  
@@ -86,5 +86,5 @@ __declspec ( naked ) int main() {
   
 **END specyficzny dla Microsoft**  
   
-## <a name="see-also"></a>Zobacz też  
+## <a name="see-also"></a>Zobacz także  
  [Wywołania funkcji Naked](../cpp/naked-function-calls.md)

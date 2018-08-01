@@ -19,29 +19,28 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d8896e473f1a419f24636d7c503924b51426be24
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 99f65d2b03f54eb16db56bf81948aadfb184cfa1
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32420092"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39402370"
 ---
 # <a name="member-access"></a>Dostęp do elementu członkowskiego
-Dostęp do elementu członkowskiego klasy mogą być kontrolowane przez przeciążanie operatora dostępu do elementu członkowskiego (**->**). Ten operator jest uznawany za operatora jednoargumentowego w ten sposób użycia i funkcji przeciążenia operatora musi być funkcją członkowską klasy. W związku z tym jest deklaracja dla tych funkcji:  
+Dostęp do składowej klasy mogą być kontrolowane przez przeciążania operatora dostępu do elementu członkowskiego (**->**). Ten operator jest uznawany za operatora jednoargumentowego to wykorzystania, a funkcja przeciążonego operatora musi być funkcją składową klasy. Dlatego jest deklaracji pod kątem takich funkcji:  
   
 ## <a name="syntax"></a>Składnia  
   
 ```  
-  
 class-type *operator->()  
 ```  
   
 ## <a name="remarks"></a>Uwagi  
- gdzie *typu klasy* jest nazwa klasy, do której należy ten operator. Funkcja operatora dostępu do elementu członkowskiego musi być niestatyczną funkcją członkowską.  
+ gdzie *typu klasy* jest nazwą klasy, do której należy ten operator. Funkcja operatora dostępu do elementu członkowskiego musi być funkcją niestatycznej składowej.  
   
- Ten operator jest używana (często w połączeniu z operatora wyłuskania wskaźnika) do zaimplementowania "wskaźniki inteligentne" sprawdzania poprawności wskaźniki przed wyłuskania lub liczba użycia.  
+ Ten operator jest używany (często w połączeniu z operatorem wyłuskanie wskaźnika) do zaimplementowania "inteligentne wskaźniki", sprawdzające przed wskaźniki wyłuskania lub liczba użycia.  
   
- **.** operator dostępu do elementu członkowskiego nie może być przeciążony.  
+ **.** Nie można przeciążyć operator dostępu do elementu członkowskiego.  
   
-## <a name="see-also"></a>Zobacz też  
+## <a name="see-also"></a>Zobacz także  
  [Przeładowanie operatora](../cpp/operator-overloading.md)

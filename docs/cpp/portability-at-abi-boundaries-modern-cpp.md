@@ -12,18 +12,18 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c214ed18e5afec51f52514abdd73e0e5b658635a
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: fb9ce8012db8617afc7af3183bd7439ddeb8fab7
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32419669"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39402354"
 ---
 # <a name="portability-at-abi-boundaries-modern-c"></a>Przenośność na granicach ABI (Modern C++)
-Użyj typów wystarczająco przenośnych i konwencje na granicach binarny interfejsu. "Typ portable" jest typem wbudowanym C lub struktury, która zawiera tylko typy wbudowane C. Typy klas można użyć tylko, gdy obiekt wywołujący i wywoływany uzgodnić układu, wywoływanie Konwencji, np. Jest to możliwe tylko wtedy, gdy oba są kompilowane przy użyciu tego samego kompilatora i ustawienia kompilatora.  
+Użyj typów wystarczająco przenośnych i konwencje na granicach interfejsem binarnym. "Przenośne type" jest typem wbudowanym C lub struktura, która zawiera tylko typy wbudowane C. Typy klas należy używać tylko podczas obiektami wywołującym i wywoływanym wyrażanie zgody na układ, wywołanie Konwencji itp. Jest to możliwe tylko wtedy, gdy oba są kompilowane przy użyciu tego samego środowiska kompilatora i ustawienia kompilatora.  
   
 ## <a name="how-to-flatten-a-class-for-c-portability"></a>Jak spłaszczanie klasy przenośności C  
- Podczas wywoływania może być kompilowana przy użyciu innego kompilatora/języka, a następnie "spłaszczanie", aby **zewnętrzne "C"** interfejsu API za pomocą określonego konwencja wywołania:  
+ Podczas wywoływania może być skompilowana przy użyciu innego językowi kompilatora, a następnie "spłaszczanie", aby **extern "C"** interfejsu API za pomocą określonych konwencji wywoływania:  
   
 ```cpp  
 // class widget {  
@@ -39,7 +39,7 @@ extern "C" {        // functions using explicit "this"
 }  
 ```  
   
-## <a name="see-also"></a>Zobacz też  
- [Zapraszamy ponownie do języka C++](../cpp/welcome-back-to-cpp-modern-cpp.md)   
+## <a name="see-also"></a>Zobacz także  
+ [Witamy z powrotem w C++](../cpp/welcome-back-to-cpp-modern-cpp.md)   
  [Dokumentacja języka C++](../cpp/cpp-language-reference.md)   
  [Standardowa biblioteka C++](../standard-library/cpp-standard-library-reference.md)
