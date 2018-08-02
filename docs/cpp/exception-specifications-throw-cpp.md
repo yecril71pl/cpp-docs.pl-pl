@@ -18,55 +18,55 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9ab09d5aadb489208b2e7591c2bf0f60ab836da4
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 15e872faab5beee296e4543c8404141428345842
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32417603"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39402406"
 ---
 # <a name="exception-specifications-throw-noexcept-c"></a>Specyfikacje wyjątków (throw, noexcept) (C++)
 
-Specyfikacje wyjątków są funkcją języka C++, która wskazuje zamiar programisty o typów wyjątków, które mogą być przekazywane przez funkcję. Można określić, czy funkcja może lub nie może zamknąć przez wyjątek przy użyciu *specyfikacji wyjątku*. Kompilator można wykorzystać te informacje do optymalizacji wywołania funkcji, a zakończenie program, jeśli wystąpił nieoczekiwany wyjątek specjalne funkcji. 
+Specyfikacje wyjątków są funkcją języka C++, wskazujące intencji programisty dotyczące typów wyjątków, które mogą być przekazywane przez funkcję. Można określić, że funkcja może lub nie może zakończyć przez wyjątek przy użyciu *Specyfikacja wyjątku*. Kompilator może dzięki tym informacjom można zoptymalizować wywołań funkcji, a następnie zakończyć program, jeśli wystąpił nieoczekiwany wyjątek specjalne funkcji. 
 
-Przed C ++ 17 wystąpiły dwa rodzaje specyfikacji wyjątku. *Specyfikacji noexcept* nowych funkcji w języku C ++ 11. Określa, czy zestaw potencjalnych wyjątki, które można wprowadzić funkcji jest pusta. *Specyfikacji wyjątków dynamicznych*, lub `throw(optional_type_list)` specyfikacja, została uznana za przestarzałą w języku C ++ 11 i usunięte w języku C ++ 17, z wyjątkiem `throw()`, który jest aliasem `noexcept(true)`. Specyfikacja tego wyjątku została zaprojektowana w celu zapewnienia podsumowanie informacji o jakie wyjątki może zostać wygenerowany poza funkcją, ale w praktyce znaleziono problemów. Jedną specyfikację wyjątków dynamicznych, które okazać się przydatne w pewnym stopniu został bezwarunkowe `throw()` specyfikacji. Na przykład deklaracji funkcji:
+Przed C ++ 17 wystąpiły dwa rodzaje Specyfikacja wyjątku. *Specyfikacji noexcept* nowych funkcji w języku C ++ 11. Określa, czy zestaw potencjalne wyjątki, które można udosłownić funkcji jest pusta. *Specyfikacji wyjątków dynamicznych*, lub `throw(optional_type_list)` specyfikacji zostało uznane za przestarzałe w C ++ 11 i usunięte w języku C ++ 17, z wyjątkiem `throw()`, która jest aliasem `noexcept(true)`. Ta specyfikacja wyjątku zaprojektowano tak, aby podawać sumaryczne informacje o tym, jakie wyjątki mogą zostać wygenerowane z funkcji, ale w praktyce okazało się być problematyczne. Jeden specyfikacji wyjątków dynamicznych, która miała być nieco użyteczne został bezwarunkowe `throw()` specyfikacji. Na przykład deklaracji funkcji:
 
 ```cpp
 void MyFunction(int i) throw();
 ```
-informuje kompilator, funkcja generują żadnych wyjątków. Jednak w **/std:c ++ 14** może prowadzić do trybu niezdefiniowane zachowanie, jeśli funkcja Zgłoś wyjątek. Dlatego zaleca się używanie [noexcept](../cpp/noexcept-cpp.md) operator zamiast powyżej:
+informuje kompilator, że funkcja nie generuje żadnych wyjątków. Jednak w **/STD: c ++ 14** trybu, może to spowodować niezdefiniowane zachowanie, jeśli funkcja zgłosi wyjątek. W związku z tym zaleca się używanie [noexcept](../cpp/noexcept-cpp.md) operator zamiast powyżej:
 
 ```cpp
 void MyFunction(int i) noexcept;
 ```
-Poniższa tabela zawiera podsumowanie wdrożenia programu Microsoft Visual C++ specyfikacje wyjątków:
+Poniższa tabela zawiera podsumowanie implementacji specyfikacji wyjątków Microsoft Visual C++:
 
 |Specyfikacja wyjątku|Znaczenie|
 |-----------------------------|-------------|
-|`noexcept`<br>`noexcept(true)`<br>`throw()`|Funkcja nie zgłasza wyjątek. W [/std:c ++ 14](../build/reference/std-specify-language-standard-version.md) trybu (która jest wartością domyślną), `noexcept` i `noexcept(true)` są równoważne. Jeśli wyjątek jest funkcja, która jest zadeklarowana jako `noexcept` lub `noexcept(true)`, [std::terminate](../standard-library/exception-functions.md#terminate) jest wywoływana. Jeśli wyjątek jest funkcji zadeklarowany jako `throw()` w **/std:c ++ 14** tryb, wynik jest niezdefiniowane zachowanie. Nie określonego funkcja jest wywoływana. Jest to rozbieżność z języka C ++ 14 standardowe, wymagająca kompilatora do wywołania [std::unexpected](../standard-library/exception-functions.md#unexpected).  <br> **Visual Studio 2017 wersji 15.5 i nowszych**: W **/std:c ++ 17** trybie `noexcept`, `noexcept(true)`, i `throw()` wszystkie równoważne. W **/std:c ++ 17** trybie `throw()` jest aliasem `noexcept(true)`. W **/std:c ++ 17** tryb, gdy wyjątek funkcja zadeklarowana ze wszystkimi tymi specyfikacjami [std::terminate](../standard-library/exception-functions.md#terminate) wywoływany jest zgodnie z żądaniem standardzie C ++ 17.|
+|`noexcept`<br>`noexcept(true)`<br>`throw()`|Funkcja nie zgłasza wyjątku. W [/STD: c ++ 14](../build/reference/std-specify-language-standard-version.md) tryb (jest to ustawienie domyślne), `noexcept` i `noexcept(true)` są równoważne. Gdy wyjątek jest generowany przez funkcję, która jest zadeklarowana `noexcept` lub `noexcept(true)`, [std::terminate](../standard-library/exception-functions.md#terminate) zostanie wywołana. Gdy wyjątek jest generowany przez funkcję zadeklarowane jako `throw()` w **/STD: c ++ 14** tryb, wynik jest niezdefiniowane zachowanie. Brak określonej funkcji jest wywoływana. Jest to rozbieżności z C ++ 14 w warstwie standardowa, który wymagany kompilator, aby wywołać [std::unexpected](../standard-library/exception-functions.md#unexpected).  <br> **Visual Studio 2017 w wersji 15.5 lub nowszej**: W **/STD: c ++ 17** trybie `noexcept`, `noexcept(true)`, i `throw()` są wszystkie równoważne. W **/STD: c ++ 17** trybie `throw()` jest aliasem `noexcept(true)`. W **/STD: c ++ 17** tryb, gdy wyjątek jest generowany przez funkcję zadeklarowane za pomocą dowolnego z tych specyfikacji [std::terminate](../standard-library/exception-functions.md#terminate) wywoływaną zgodnie z wymaganiami C ++ 17 standardowych.|
 |`noexcept(false)`<br/>`throw(...)`<br/>Brak specyfikacji|Funkcja może zgłosić wyjątek dowolnego typu.|
-|`throw(type)`| (**C ++ 14 i wcześniejszych**) funkcja może zgłosić wyjątek typu `type`. Kompilator akceptuje składnię, ale zinterpretuje ją jako `noexcept(false)`. W **/std:c ++ 17** tryb kompilator generuje ostrzeżenie C5040.|
+|`throw(type)`| (**C ++ 14 i starszych**) funkcja może zgłosić wyjątek typu `type`. Kompilator akceptuje składni, ale zinterpretuje ją jako `noexcept(false)`. W **/STD: c ++ 17** tryb kompilator generuje ostrzeżenie C5040.|
 
-Jeśli obsługa wyjątków jest używany w aplikacji, musi istnieć funkcji w stosie wywołań, który oznaczony uchwytów zgłaszane wyjątki przed ich zakończyć zewnętrznym zakresie funkcji `noexcept`, `noexcept(true)`, lub `throw()`. Jeśli wszystkie funkcje wywoływane między jedną, która zgłasza wyjątek i jedną, która obsługuje wyjątek są określone jako `noexcept`, `noexcept(true)` (lub `throw()` w **/std:c ++ 17** tryb), program zostanie zakończony, kiedy Funkcja noexcept propaguje wyjątek.
+Jeśli w aplikacji zastosowano obsługę wyjątków, musi istnieć funkcji w stosie wywołań, który obsługuje zgłaszane wyjątki, zanim zamykania zewnętrznym zakresem funkcji oznaczony `noexcept`, `noexcept(true)`, lub `throw()`. Jeśli wszystkie funkcje wywołane między tą, która zgłosiła wyjątek oraz jedną, która obsługuje wyjątek, są określane jako `noexcept`, `noexcept(true)` (lub `throw()` w **/STD: c ++ 17** tryb), program zostanie zakończony, kiedy Funkcja noexcept propaguje wyjątek.
 
-Zachowanie wyjątek funkcji jest zależna od następujących czynników:
+Zachowanie wyjątku przez funkcję zależy od następujących czynników:
 
 - Które [Tryb standardowy kompilacji języka](../build/reference/std-specify-language-standard-version.md) jest ustawiona.
-- Określa, czy kompilacja funkcji w obszarze C lub C++.
+- Czy kompilujesz funkcję w C lub C++.
 
-- Które [/EH](../build/reference/eh-exception-handling-model.md) używasz — opcja kompilatora.
+- Które [/EH](../build/reference/eh-exception-handling-model.md) — opcja kompilatora używasz.
 
-- Określa, czy jawnie określić specyfikacji wyjątku.
+- Czy jawnie określasz wyjątek specyfikacji.
 
-Specyfikacje wyjątków jawne są niedozwolone w funkcji języka C. Funkcja C założono, że nie zgłaszają wyjątki w obszarze **/ehsc**i może zgłaszać wyjątki strukturalne w obszarze **/EHS**, **/eha**, lub **/EHac**.
+Jawne specyfikacje wyjątku nie są dozwolone w funkcjach c. Funkcja języka C założono, że nie zgłaszają wyjątki, w obszarze **/ehsc**i może zgłaszać wyjątki strukturalne, w obszarze **/EHS**, **/eha**, lub **/EHac**.
 
-Poniższa tabela zawiera podsumowanie, czy funkcja C++ potencjalnie może zgłaszać w różnych wyjątek kompilatora opcje obsługi:
+W poniższej tabeli podsumowano, czy funkcja C++ potencjalnie może zgłaszać w ramach różnych wyjątków kompilatora, opcje obsługi:
 
 |Funkcja|/EHsc|/ EHs|/EHa|/EHac|
 |--------------|------------|-----------|-----------|------------|
-|Funkcja języka C++ z Brak specyfikacji wyjątku|Tak|Tak|Tak|Tak|
-|Funkcja języka C++ z `noexcept`, `noexcept(true)`, lub `throw()` specyfikacji wyjątku|Nie|Nie|Tak|Tak|
-|Funkcja języka C++ z `noexcept(false)`, `throw(...)`, lub `throw(type)` specyfikacji wyjątku|Tak|Tak|Tak|Tak|
+|Funkcja języka C++ bez określenia wyjątków|Tak|Tak|Tak|Tak|
+|Funkcja języka C++ z `noexcept`, `noexcept(true)`, lub `throw()` Specyfikacja wyjątku|Nie|Nie|Tak|Tak|
+|Funkcja języka C++ z `noexcept(false)`, `throw(...)`, lub `throw(type)` Specyfikacja wyjątku|Tak|Tak|Tak|Tak|
 
 ## <a name="example"></a>Przykład
 
@@ -137,6 +137,6 @@ About to throw 1
 in handler
 ```
 
-## <a name="see-also"></a>Zobacz też
-
- [Spróbuj, throw i catch instrukcji (C++)](../cpp/try-throw-and-catch-statements-cpp.md) [Obsługa wyjątków języka C++](../cpp/cpp-exception-handling.md)
+## <a name="see-also"></a>Zobacz także
+ [Instrukcje try, throw i catch (C++)](../cpp/try-throw-and-catch-statements-cpp.md)  
+ [Obsługa wyjątków języka C++](../cpp/cpp-exception-handling.md)

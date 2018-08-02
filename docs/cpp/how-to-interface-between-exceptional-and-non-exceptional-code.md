@@ -12,12 +12,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 74805c7ecd4b4ecef71d8ac1358fd6c2014e27d5
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: e6c3217360f504d2433551d6ad624a378f4403af
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37940121"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39407975"
 ---
 # <a name="how-to-interface-between-exceptional-and-non-exceptional-code"></a>Porady: interfejs między kodem obsługi wyjątków a innym kodem
 W tym artykule opisano, jak wdrożyć spójne obsługi wyjątków w module języka C++, a także tłumaczenie tych wyjątków do i z kodów błędów na granicach wyjątków.  
@@ -161,7 +161,6 @@ int main ( int argc, char* argv[] )
         cout.copyfmt(state); // restore previous formatting  
     }  
 }  
-  
 ```  
   
 ## <a name="calling-exceptional-code-from-non-exceptional-code"></a>Wywołanie kodu wyjątkowego z kodu Niewyjątkowego  
@@ -194,7 +193,6 @@ BOOL DiffFiles2(const string& file1, const string& file2)
     }   
     return FALSE;   
 }  
-  
 ```  
   
  Podczas konwersji z wyjątków do kodów błędów jeden potencjalny problem jest, że kody błędów często nie zawierają bogactwa informacji, które mogą być przechowywane w drodze wyjątku. Aby rozwiązać ten problem, możesz podać **catch** blok dla każdego typu określonego wyjątku, który może zostać wygenerowany i wykonać logowanie do rejestrowania szczegółów wyjątku, przed konwersją do kodu błędu. Takie podejście może utworzyć wiele powtarzających się kodów, jeśli wiele funkcji używa tego samego zestawu **catch** bloków. Dobrym sposobem na uniknięcie powtórzenia kodu jest Refaktoryzacja tych bloków w jedną funkcję narzędzi prywatnych, który implementuje **spróbuj** i **catch** blokuje i akceptuje obiekt funkcji, która jest wywoływana w **spróbuj** bloku. W każdej funkcji publicznej należy przekazać kod do funkcji narzędzia jako wyrażenie lambda.  
@@ -217,7 +215,6 @@ bool Win32ExceptionBoundary(Func&& f)
     }   
     return false;   
 }  
-  
 ```  
   
  Poniższy przykład pokazuje, jak napisać wyrażenie lambda, które definiuje funkcję. Gdy teoria jest zdefiniowana "inline" przy użyciu wyrażenia lambda, często jest łatwiejsza do odczytania niż byłaby, jeśli zostałaby napisana jako obiekt o nazwie funkcji.  
@@ -237,11 +234,10 @@ bool DiffFiles3(const string& file1, const string& file2)
         return true;   
     });   
 }  
-  
 ```  
   
  Aby uzyskać więcej informacji na temat wyrażeń lambda, zobacz [wyrażeń Lambda](../cpp/lambda-expressions-in-cpp.md).  
   
-## <a name="see-also"></a>Zobacz też  
+## <a name="see-also"></a>Zobacz także  
  [Błędy w obsłudze wyjątków](../cpp/errors-and-exception-handling-modern-cpp.md)   
  [Instrukcje: projektowanie pod kątem bezpieczeństwa wyjątków](../cpp/how-to-design-for-exception-safety.md)

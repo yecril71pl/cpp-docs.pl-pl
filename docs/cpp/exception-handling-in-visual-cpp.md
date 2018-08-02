@@ -14,37 +14,37 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0acd5df644f097d19e5f9708f0a059a31f3e9ee9
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 850050d4307d7b0c1170c24ca9d13d6f339de189
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32413326"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39406994"
 ---
 # <a name="exception-handling-in-visual-c"></a>Obsługa wyjątków w języku Visual C++
 Wyjątek jest warunkiem błędu, możliwie poza kontrolą programu, który uniemożliwia kontynuowanie wykonywania programu wzdłuż zwykłej ścieżki. Niektóre operacje, w tym tworzenie obiektu, odczyt z/zapis do pliku i wywołania funkcji z innych modułów, są potencjalnymi źródłami wyjątków, nawet wtedy, gdy program działa poprawnie. Niezawodny kod przewiduje wyjątki i je obsługuje.  
   
- Aby wykryć błędy logiczne w ramach jednego programu lub moduł, użyj potwierdzenia zamiast wyjątków (zobacz [przy użyciu potwierdzenia](/visualstudio/debugger/c-cpp-assertions)).  
+ Aby wykryć błędy logiczne w ramach pojedynczego programu lub modułu, należy używać asercji zamiast wyjątków (zobacz [wykorzystanie asercji](/visualstudio/debugger/c-cpp-assertions)).  
   
  Visual C++ wspiera trzy rodzaje obsługi wyjątków:  
   
--   [C++, obsługa wyjątków](../cpp/cpp-exception-handling.md)  
+-   [Obsługa wyjątków języka C++](../cpp/cpp-exception-handling.md)  
   
      W większości programów, należy używać obsługę wyjątków C++, co jest bezpieczne względem typu i zapewnia wywołanie destruktorów obiektów podczas wykonywania operacji odwijania stosu.  
   
 -   [Obsługa wyjątków strukturalnych](../cpp/structured-exception-handling-c-cpp.md)  
   
-     System Windows zawiera własny mechanizm wyjątków, nazywany SEH. Nie zaleca się stosowania tego systemu w programowaniu C++ lub MFC. Użyj strukturalnej obsługi tylko w programach innych niż MFC C.  
+     System Windows zawiera własny mechanizm wyjątków, nazywany SEH. Nie zaleca się stosowania tego systemu w programowaniu C++ lub MFC. SEH należy używać tylko w programach innych niż MFC c.  
   
--   [Wyjątków MFC](../mfc/exception-handling-in-mfc.md)  
+-   [Wyjątki MFC](../mfc/exception-handling-in-mfc.md)  
   
      Od wersji 3.0, MFC wykorzystuje wyjątki C++, ale nadal obsługuje jego starsze makra obsługi wyjątków, które mają podobną formę do wyjątków C++. Chociaż wykorzystanie tych makr nie jest zalecane w przypadku nowych programów, nadal są one obsługiwane w celu zapewnienia zgodności z poprzednimi wersjami. W programach, które już używają makr, można bez ograniczeń wykorzystywać również wyjątki C++. Podczas wstępnego przetwarzania, makra szacują do słów kluczowych obsługi wyjątków zdefiniowanych w implementacji Visual C++ języka C++ od Visual C++ w wersji 2.0. Podczas korzystania z języka C++, można pozostawić na miejscu istniejące makra wyjątków.  
   
- Użyj [/EH](../build/reference/eh-exception-handling-model.md) opcję kompilatora, aby określić typ obsługi wyjątków do użycia w projekcie; C++, obsługa wyjątków jest ustawieniem domyślnym. Nie należy ich łączyć obsługę mechanizmów; błędów na przykład nie należy używać wyjątków języka C++ z Obsługa wyjątków strukturalnych. Przy użyciu C++, obsługa wyjątków powoduje przenośną kodu i umożliwia obsługę wyjątków dowolnego typu. Aby uzyskać więcej informacji na temat wady Obsługa wyjątków strukturalnych, zobacz [obsługi wyjątków strukturalnych](../cpp/structured-exception-handling-c-cpp.md). Uzyskać porady na temat mieszanie makr MFC i wyjątków języka C++, zobacz [wyjątkami: za pomocą makr MFC i wyjątków języka C++](../mfc/exceptions-using-mfc-macros-and-cpp-exceptions.md).  
+ Użyj [/EH](../build/reference/eh-exception-handling-model.md) opcję kompilatora, aby określić typ obsługi wyjątku do użycia w projekcie; Obsługa wyjątków języka C++ jest ustawieniem domyślnym. Nie należy mieszać mechanizmów; obsługi błędów na przykład nie należy używać wyjątków języka C++ z obsługi wyjątków strukturalnych. Przy użyciu obsługi wyjątków C++ sprawia, że Twój kod bardziej przenośny i pozwala obsługiwać wyjątki dowolnego typu. Aby uzyskać więcej informacji na temat wad strukturalna Obsługa wyjątków, zobacz [obsługi wyjątków strukturalnych](../cpp/structured-exception-handling-c-cpp.md). Aby uzyskać porady na temat mieszania makr MFC i wyjątków języka C++, zobacz [wyjątki: wykorzystanie makr MFC i wyjątków języka C++](../mfc/exceptions-using-mfc-macros-and-cpp-exceptions.md).  
   
- Aby uzyskać informacji na temat obsługi wyjątków w aplikacji do środowiska CLR, zobacz [obsługi wyjątków](../windows/exception-handling-cpp-component-extensions.md).  
+ Aby uzyskać informacje dotyczące obsługi wyjątków w aplikacjach CLR, zobacz [wyjątków](../windows/exception-handling-cpp-component-extensions.md).  
   
- Aby uzyskać informacje o wyjątku obsługuje na x64 procesorów, zobacz [(x64) obsługi wyjątków](../build/exception-handling-x64.md).  
+ Aby uzyskać informacje dotyczące obsługi wyjątków na x64 procesorów, zobacz [wyjątków (x64)](../build/exception-handling-x64.md).  
   
-## <a name="see-also"></a>Zobacz też  
+## <a name="see-also"></a>Zobacz także  
  [Dokumentacja języka C++](../cpp/cpp-language-reference.md)
