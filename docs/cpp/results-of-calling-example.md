@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0e7b022925e22f021a2ddad1b3b9ef52924b25a3
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: 9c49457aecb93b16ffb294f88e4f6643826492e2
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37939110"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39465701"
 ---
 # <a name="results-of-calling-example"></a>Wyniki przykładu wywołania
 ## <a name="microsoft-specific"></a>Specyficzne dla firmy Microsoft  
@@ -32,7 +32,7 @@ ms.locfileid: "37939110"
  Nazwy ozdobione funkcji języka C jest "_MyFunc."  
   
  ![Konwencja wywoływania CDECL](../cpp/media/vc37i01.gif "vc37I01")  
-Konwencja wywoływania __cdecl  
+**__Cdecl** konwencji wywoływania  
   
 ## <a name="stdcall-and-thiscall"></a>__stdcall i thiscall  
  Nazwy ozdobionej C (**__stdcall**) jest "_MyFunc@20." Nazwy ozdobionej C++ jest zastrzeżone.  
@@ -48,5 +48,5 @@ Konwencja wywoływania __fastcall
   
 **END specyficzny dla Microsoft**  
   
-## <a name="see-also"></a>Zobacz też  
+## <a name="see-also"></a>Zobacz także  
  [Przykład wywołania: prototyp funkcji i wywołanie](../cpp/calling-example-function-prototype-and-call.md)

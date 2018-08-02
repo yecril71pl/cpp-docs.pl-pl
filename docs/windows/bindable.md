@@ -1,5 +1,5 @@
 ---
-title: powiązania | Dokumentacja firmy Microsoft
+title: może być powiązana | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: a1cf16bfbeee2231133e60429a4a25e9d4fe85c8
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 1a216aa5fb5be727e82313c30aa2aa72d887cb4c
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33861808"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39467147"
 ---
 # <a name="bindable"></a>bindable
 Wskazuje, że właściwość obsługuje powiązanie danych.  
@@ -30,26 +30,24 @@ Wskazuje, że właściwość obsługuje powiązanie danych.
 ## <a name="syntax"></a>Składnia  
   
 ```  
-  
 [bindable]  
-  
 ```  
   
 ## <a name="remarks"></a>Uwagi  
- **Powiązania** atrybut C++ ma te same funkcje co [powiązania](http://msdn.microsoft.com/library/windows/desktop/aa366738) MIDL atrybutu. Można go używać na właściwości zdefiniowane z [propget](../windows/propget.md), [propput](../windows/propput.md), lub [propputref](../windows/propputref.md) atrybutów, albo ręcznie zdefiniować można powiązać metodę.  
+ **Możliwej do wiązania** atrybut C++ ma taką samą funkcjonalność jak [możliwej do wiązania](http://msdn.microsoft.com/library/windows/desktop/aa366738) atrybutów w MIDL. Służy zdefiniowane za pomocą właściwości [propget](../windows/propget.md), [propput](../windows/propput.md), lub [propputref](../windows/propputref.md) atrybutów lub można ręcznie zdefiniować metodę możliwej do wiązania.  
   
- Poniższe przykłady MFC Pokaż stosowania **powiązania**:  
+ Poniższe przykłady MFC pokazują użycie **możliwej do wiązania**:  
   
--   [Próbki kontrolki: Kontrolki ActiveX MFC na podstawie](http://msdn.microsoft.com/en-us/a44adf86-0ba0-4504-bedb-512b6cba2e63)  
+-   [Próbki kontrolki: Kontrolki ActiveX oparty na bibliotece MFC](http://msdn.microsoft.com/a44adf86-0ba0-4504-bedb-512b6cba2e63)  
   
--   [Próbka OK: Formant ActiveX](http://msdn.microsoft.com/en-us/9ba34d04-280e-49f4-90ae-41a6be44c95b)  
+-   [Przykład OK: Kontrolki ActiveX](http://msdn.microsoft.com/9ba34d04-280e-49f4-90ae-41a6be44c95b)  
   
--   [Przykład TESTHELP: Formantu ActiveX Pomocy i etykietki narzędzi](http://msdn.microsoft.com/en-us/d822861d-c6f0-4d0a-ad11-970eebb1e8cd)  
+-   [Przykład TESTHELP: Formant ActiveX przy użyciu etykietek narzędzi i pomocy](http://msdn.microsoft.com/d822861d-c6f0-4d0a-ad11-970eebb1e8cd)  
   
 ## <a name="example"></a>Przykład  
- Poniższy kod przedstawia sposób korzystania **powiązania** we właściwości:  
+ Poniższy kod pokazuje, jak można użyć **możliwej do wiązania** we właściwości:  
   
-```  
+```cpp  
 // cpp_attr_ref_bindable.cpp  
 // compile with: /LD  
 #include <windows.h>  
@@ -72,7 +70,7 @@ __interface IPropDemo : IDispatch {
   
 ## <a name="requirements"></a>Wymagania  
   
-### <a name="attribute-context"></a>Atrybut kontekstu  
+### <a name="attribute-context"></a>Kontekst atrybutu  
   
 |||  
 |-|-|  
@@ -81,11 +79,11 @@ __interface IPropDemo : IDispatch {
 |**Wymaganych atrybutów**|Brak|  
 |**Nieprawidłowe atrybuty**|Brak|  
   
- Aby uzyskać więcej informacji na temat konteksty atrybutu, zobacz [konteksty atrybutu](../windows/attribute-contexts.md).  
+ Aby uzyskać więcej informacji na temat konteksty atrybutu zobacz [konteksty atrybutu](../windows/attribute-contexts.md).  
   
 ## <a name="see-also"></a>Zobacz też  
  [Atrybuty IDL](../windows/idl-attributes.md)   
- [Atrybuty — metoda](../windows/method-attributes.md)   
+ [Atrybuty metody](../windows/method-attributes.md)   
  [defaultbind —](../windows/defaultbind.md)   
  [displaybind —](../windows/displaybind.md)   
  [immediatebind —](../windows/immediatebind.md)   

@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 2f1bae2c503f4e5f0c887a46956248184ece9a1e
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 9e2e7b2301ae4dd38a40bdf4583e963e55a8b12d
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33857327"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39461396"
 ---
 # <a name="activationfactorycallback-function"></a>ActivationFactoryCallback — Funkcja
 Obsługuje infrastrukturę biblioteki WRL i nie jest przeznaczona do użycia bezpośrednio w kodzie.  
@@ -37,24 +37,24 @@ inline HRESULT STDAPICALLTYPE ActivationFactoryCallback(
 ```  
   
 #### <a name="parameters"></a>Parametry  
- `activationId`  
- Dojście do ciąg określający nazwę klasy środowiska wykonawczego.  
+ *activationid —*  
+ Obsługa na ciąg, który określa nazwę klasy środowiska uruchomieniowego.  
   
- `ppFactory`  
- Po zakończeniu tej operacji, fabryki aktywacji, który odpowiada parametrowi `activationId`.  
+ *ppFactory*  
+ Po zakończeniu tej operacji, fabryką aktywacji, który odpowiada parametrowi *activationid —*.  
   
 ## <a name="return-value"></a>Wartość zwracana  
- S_OK w przypadku powodzenia; w przeciwnym razie wartość HRESULT opisujący błąd. Błąd prawdopodobnie wyników HRESULT są CLASS_E_CLASSNOTAVAILABLE i E_INVALIDARG.  
+ S_OK w przypadku powodzenia; w przeciwnym razie wartość HRESULT, który opisuje błąd. Prawdopodobnie niepowodzenie HRESULTs są CLASS_E_CLASSNOTAVAILABLE i E_INVALIDARG.  
   
 ## <a name="remarks"></a>Uwagi  
- Pobiera fabryki aktywacji dla aktywacji określonego identyfikatora.  
+ Pobiera fabrykę aktywacji dla identyfikatora określonego aktywacji.  
   
- Środowisko wykonawcze systemu Windows Wywołanie tej funkcji wywołania zwrotnego, aby zażądać obiekt określony przez jego nazwa klasy środowiska uruchomieniowego.  
+ Środowisko wykonawcze Windows wywołuje tę funkcję wywołania zwrotnego, aby zażądać obiektu określonego przez nazwę klasy środowiska uruchomieniowego.  
   
 ## <a name="requirements"></a>Wymagania  
  **Nagłówek:** module.h  
   
- **Namespace:** Microsoft::wrl:: details —  
+ **Namespace:** Microsoft::wrl:: details  
   
 ## <a name="see-also"></a>Zobacz też  
  [Microsoft::WRL::Details, przestrzeń nazw](../windows/microsoft-wrl-details-namespace.md)

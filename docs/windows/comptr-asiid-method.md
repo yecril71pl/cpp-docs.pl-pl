@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: db5bc6b2547fb77dd887f96b6c33dee536e43f77
-ms.sourcegitcommit: 76fd30ff3e0352e2206460503b61f45897e60e4f
+ms.openlocfilehash: 1de2bedf9a582d0adbb5b99c9e719327f3b8b90a
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/13/2018
-ms.locfileid: "39025906"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39465997"
 ---
 # <a name="comptrasiid-method"></a>ComPtr::AsIID — Metoda
-Zwraca obiekt ComPtr, który reprezentuje interfejs identyfikowane przez identyfikator określonego interfejsu.  
+Zwraca **ComPtr** obiekt, który reprezentuje interfejs identyfikowane przez identyfikator określonego interfejsu.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -37,11 +37,11 @@ WRL_NOTHROW HRESULT AsIID(
 ```  
   
 #### <a name="parameters"></a>Parametry  
- `riid`  
+ *Parametr riid*  
  Identyfikator interfejsu.  
   
- `p`  
- Jeśli obiekt ma interfejs, którego identyfikator jest równy `riid`, podwójnie pośredniego wskaźnika do interfejsu, określonego przez `riid` parametru; w przeciwnym razie wskaźnik IUnknown.  
+ *p*  
+ Jeśli obiekt ma interfejs, którego identyfikator jest równy *riid*, podwójnie pośredniego wskaźnika do interfejsu, określonego przez *riid* parametru; w przeciwnym razie wskaźnik do `IUnknown`.  
   
 ## <a name="return-value"></a>Wartość zwracana  
  S_OK w przypadku powodzenia; w przeciwnym razie wartość HRESULT, która wskazuje błąd.  

@@ -1,5 +1,5 @@
 ---
-title: AsyncBase::PutOnProgress — metoda | Dokumentacja firmy Microsoft
+title: AsyncBase::PutOnProgress, metoda | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: c12709bdcac615937c938468bcf0e2daca437675
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 1a9460664ed58cf39f7b295e1406649ad1d66ca9
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33859790"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39467420"
 ---
 # <a name="asyncbaseputonprogress-method"></a>AsyncBase::PutOnProgress — Metoda
-Ustawia adres programu obsługi zdarzeń postępu na określoną wartość.  
+Ustawia adres obsługi zdarzenia postępu z podaną wartością.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -36,8 +36,8 @@ STDMETHOD(
 ```  
   
 #### <a name="parameters"></a>Parametry  
- `progressHandler`  
- Adres, do którego program obsługi zdarzeń postępu jest ustawiona.  
+ *progressHandler*  
+ Adres, w którym ustawiono program obsługi zdarzeń postępu.  
   
 ## <a name="return-value"></a>Wartość zwracana  
  S_OK w przypadku powodzenia; w przeciwnym razie E_ILLEGAL_METHOD_CALL.  
@@ -45,7 +45,7 @@ STDMETHOD(
 ## <a name="requirements"></a>Wymagania  
  **Nagłówek:** async.h  
   
- **Namespace:** Microsoft::wrl —  
+ **Namespace:** Microsoft::WRL  
   
 ## <a name="see-also"></a>Zobacz też  
  [AsyncBase, klasa](../windows/asyncbase-class.md)

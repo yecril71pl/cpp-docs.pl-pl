@@ -13,15 +13,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: dd2ce820367b15cb5dad8baf691a835499457a55
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 6edbe333ddb634d8657712695250ec627a171780
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33870770"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39461087"
 ---
 # <a name="comptrreset"></a>ComPtr::Reset
-Zwalnia wszystkie odwołania dla wskaźnika interfejsu, który jest skojarzony z tym comptr —.  
+Zwalnia wszystkie odwołania dla wskaźnika do interfejsu, który jest skojarzony z tym **ComPtr**.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -30,12 +30,12 @@ unsigned long Reset();
 ```  
   
 ## <a name="return-value"></a>Wartość zwracana  
- Liczba odwołań dopuszczone, jeśli istnieje.  
+ Liczba odwołań do wydania, jeśli istnieje.  
   
 ## <a name="requirements"></a>Wymagania  
  **Nagłówek:** client.h  
   
- **Namespace:** Microsoft::wrl —  
+ **Namespace:** Microsoft::WRL  
   
 ## <a name="see-also"></a>Zobacz też  
  [ComPtr, klasa](../windows/comptr-class.md)

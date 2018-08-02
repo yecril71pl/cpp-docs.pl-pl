@@ -1,5 +1,5 @@
 ---
-title: Modyfikatory __sptr, __uptr | Dokumentacja firmy Microsoft
+title: __sptr —, __uptr — | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,21 +18,22 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ca00f34f2b527ac7c2c6fc8ac4cccbdfc932fde3
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 7e059b8144518f3d0cacdde5d7f438c04b7933a2
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39467507"
 ---
 # <a name="sptr-uptr"></a>__sptr, __uptr
-## <a name="microsoft-specific"></a>Specyficzne dla firmy Microsoft  
- Należy użyć modyfikatora `__sptr` lub `__uptr` w deklaracji 32-bitowego wskaźnika do określenia, jak kompilator będzie konwertował wskaźnik 32-bitowy na wskaźnik 64-bitowy. Wskaźnik 32-bitowy jest konwertowany, na przykład gdy jest przypisany do zmiennej wskaźnika 64-bitowego lub wyłuskany na platformie 64-bitowej.  
+**Microsoft Specific**  
+ Użyj **__sptr —** lub **__uptr —** modyfikatora w deklaracji wskaźnika 32-bitowego, aby określić, jak kompilator konwertuje wskaźnik 32-bitowy na wskaźnik 64-bitowych. Wskaźnik 32-bitowy jest konwertowany, na przykład gdy jest przypisany do zmiennej wskaźnika 64-bitowego lub wyłuskany na platformie 64-bitowej.  
   
  Dokumentacja obsługi technicznej Microsoft dla 64-bitowych platform czasami dotyczy najważniejszego bitu wskaźnika 32-bitowego, jako bitu znaku. Domyślnie kompilator używa rozszerzenia znaku, aby konwertować wskaźnik 32-bitowy na wskaźnik 64-bitowy. Oznacza to, że najmniej znaczące 32 bity wskaźnika 64-bitowego są ustawione na wartość wskaźnika 32-bitowego i najbardziej znaczące 32 bity są ustawione na wartość bitu znaku wskaźnika 32-bitowego. Ta konwersja daje poprawne wyniki, jeśli bit znaku ma wartość 0, ale nie jeśli bitem znaku jest 1. Na przykład 32-bitowy adres 0x7FFFFFFF daje równoważny 64-bitowy adres 0x000000007FFFFFFF, ale 32-bitowy adres 0x80000000 zostanie niepoprawnie zmieniony na 0xFFFFFFFF80000000.  
   
- Modyfikator `__sptr` lub wskaźnik oznaczony określa, że konwersja wskaźnika ustawia najbardziej znaczące bity wskaźnika 64-bitowego na bit znaku wskaźnika 32-bitowego. Modyfikator `__uptr` lub wskaźnik nieoznaczony określa, że konwersja ustawi najbardziej znaczące bity na wartość zero. Pokaż następujące deklaracje `__sptr` i `__uptr` Modyfikatory używane z dwóch niekwalifikowanych wskaźnikami, dwóch wskaźników kwalifikowany za pomocą [__ptr32](../cpp/ptr32-ptr64.md) typu, a parametr funkcji.  
+ **__Sptr —**, lub wskaźnik, oznaczony modyfikator Określa, że konwersja wskaźnika ustawia najbardziej znaczące bity wskaźnika 64-bitowego na bit znaku wskaźnika 32-bitowego. **__Uptr —**, lub wskaźnik nieoznaczony modyfikator Określa, że konwersja ustawi najbardziej znaczące bity na wartość zero. Następujące deklaracje pokazują **__sptr —** i **__uptr —** modyfikatorów używane z dwoma niekwalifikowanymi wskaźnikami, dwoma wskaźnikami kwalifikowanymi za pomocą [__ptr32](../cpp/ptr32-ptr64.md) typ i funkcję parametr.  
   
-```  
+```cpp 
 int * __sptr psp;  
 int * __uptr pup;  
 int * __ptr32 __sptr psp32;  
@@ -40,10 +41,10 @@ int * __ptr32 __uptr pup32;
 void MyFunction(char * __uptr __ptr32 myValue);  
 ```  
   
- Użycie modyfikatorów `__sptr` i `__uptr` z deklaracjami wskaźników. Używać modyfikatorów w pozycji [kwalifikator typu wskaźnika](../c-language/pointer-declarations.md), co oznacza, że modyfikator wykonaj gwiazdki. Nie można używać modyfikatorów z [wskaźników do elementów członkowskich](../cpp/pointers-to-members.md). Modyfikatory nie wpływają na deklaracje niewskaźnikowe.  
+ Użyj **__sptr —** i **__uptr —** Modyfikatory z deklaracjami wskaźników. Modyfikatorów należy używać w pozycji [kwalifikatora typu wskaźnika](../c-language/pointer-declarations.md), co oznacza, że modyfikator musi wystąpić po gwiazdce. Nie można używać modyfikatorów z [wskaźników do elementów członkowskich](../cpp/pointers-to-members.md). Modyfikatory nie wpływają na deklaracje niewskaźnikowe.  
   
 ## <a name="example"></a>Przykład  
- W poniższym przykładzie deklarowane są wskaźniki 32-bitowe, które używają modyfikatorów `__sptr` i `__uptr`, każdy 32-bitowy wskaźnik jest przypisywany do zmiennej wskaźnika 64-bitowego, a następnie wyświetlana jest wartość szesnastkowa każdego wskaźnika 64-bitowego. Przykład jest kompilowany za pomocą natywnego 64-bitowego kompilatora i jest wykonywany na platformie 64-bitowej.  
+ Poniższy przykład deklaruje 32-bitowych wskaźników, które używają **__sptr —** i **__uptr —** modyfikatorów, przypisuje każdego wskaźnika 32-bitowego do zmiennej wskaźnika 64-bitowego, a następnie wyświetla wartość szesnastkową każdego 64 - bitowy wskaźnik. Przykład jest kompilowany za pomocą natywnego 64-bitowego kompilatora i jest wykonywany na platformie 64-bitowej.  
   
 ```cpp  
 // sptr_uptr.cpp  
@@ -92,7 +93,7 @@ p32s: p64 = FFFFFFFF87654321
 p32u: p64 = 0000000087654321  
 ```  
   
-**KOŃCOWY określonych firmy Microsoft**  
+**END specyficzny dla Microsoft**  
   
-## <a name="see-also"></a>Zobacz też  
+## <a name="see-also"></a>Zobacz także  
  [Modyfikatory specyficzne dla firmy Microsoft](../cpp/microsoft-specific-modifiers.md)

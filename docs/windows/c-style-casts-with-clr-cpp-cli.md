@@ -1,5 +1,5 @@
 ---
-title: Z - clr Rzutowań w stylu języka C (C + +/ CLI) | Dokumentacja firmy Microsoft
+title: Stylu C rzutuje z / clr (C + +/ CLI) | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,36 +15,36 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 384aa6d1d7a4329f52157f1d002dcda2feb5cb8a
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 0ffb2e5a7276925c5f03d06a909803d001532f35
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33860401"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39464587"
 ---
 # <a name="c-style-casts-with-clr-ccli"></a>Rzutowania w stylu C i kompilator /clr (C++/CLI)
-Poniższy temat dotyczy tylko środowiska CLR.  
+Poniższy temat dotyczy tylko środowiska uruchomieniowego języka wspólnego.  
   
- W przypadku użycia z typów CLR, kompilator próbuje zamapować stylu języka C rzutować rzutowania wymienione poniżej, w następującej kolejności:  
+ W przypadku użycia z typami CLR, kompilator próbuje zamapować C rzutowania w stylu do jednego z rzutowania wymienione poniżej pod warunkiem w następującej kolejności:  
   
 1.  Operator const_cast  
   
 2.  safe_cast  
   
-3.  safe_cast plus operator const_cast  
+3.  safe_cast, a także operator const_cast  
   
 4.  static_cast  
   
-5.  static_cast plus operator const_cast  
+5.  operatora static_cast, a także operator const_cast  
   
- Jeśli żaden z powyższych rzutowania nie jest prawidłowy, a typ wyrażenia i typ docelowy są typy referencyjne CLR, rzutowania w stylu C mapuje Sprawdzanie czasu wykonywania (instrukcja MSIL castclass). W przeciwnym razie jest nieprawidłowe rzutowanie w stylu języka C i kompilator generuje błąd.  
+ Jeśli żaden z rzutowania wymienionych powyżej nie jest prawidłowy i typ wyrażenia i typ docelowy są typami odwołań CLR, rzutowania w stylu C jest mapowany na sprawdzanie czasu wykonywania (castclass instrukcji MSIL). W przeciwnym razie rzutowania w stylu C jest uznawane za nieprawidłowe i kompilator generuje błąd.  
   
 ## <a name="remarks"></a>Uwagi  
  Rzutowania w stylu języka C nie jest zalecane. Podczas kompilowania za pomocą [/CLR (kompilacja języka wspólnego środowiska uruchomieniowego)](../build/reference/clr-common-language-runtime-compilation.md), użyj [safe_cast](../windows/safe-cast-cpp-component-extensions.md).  
   
- Poniższy przykład przedstawia C rzutowanie w stylu mapowanego `const_cast`.  
+ Poniższy przykład pokazuje C rzutowania w stylu mapowana na **const_cast**.  
   
-```  
+```cpp  
 // cstyle_casts_1.cpp  
 // compile with: /clr  
 using namespace System;  
@@ -56,9 +56,9 @@ int main() {
 }  
 ```  
   
- Poniższy przykład przedstawia C rzutowanie w stylu mapowanego `safe_cast`.  
+ Poniższy przykład pokazuje C rzutowania w stylu mapowana na **safe_cast**.  
   
-```  
+```cpp  
 // cstyle_casts_2.cpp  
 // compile with: /clr  
 using namespace System;  
@@ -68,9 +68,9 @@ int main() {
 }  
 ```  
   
- Poniższy przykład przedstawia C rzutowanie w stylu mapowanego `safe_cast` plus `const_cast`.  
+ Poniższy przykład pokazuje C rzutowania w stylu mapowana na **safe_cast** oraz **const_cast**.  
   
-```  
+```cpp  
 // cstyle_casts_3.cpp  
 // compile with: /clr  
 using namespace System;  
@@ -89,9 +89,9 @@ int main() {
 }  
 ```  
   
- Poniższy przykład przedstawia C rzutowanie w stylu mapowanego `static_cast`.  
+ Poniższy przykład pokazuje C rzutowania w stylu mapowana na **static_cast**.  
   
-```  
+```cpp  
 // cstyle_casts_4.cpp  
 // compile with: /clr  
 using namespace System;  
@@ -110,9 +110,9 @@ int main() {
 }  
 ```  
   
- Poniższy przykład przedstawia C rzutowanie w stylu mapowanego `static_cast` plus `const_cast`.  
+ Poniższy przykład pokazuje C rzutowania w stylu mapowana na **static_cast** oraz **const_cast**.  
   
-```  
+```cpp  
 // cstyle_casts_5.cpp  
 // compile with: /clr  
 using namespace System;  
@@ -131,9 +131,9 @@ int main() {
 }  
 ```  
   
- Poniższy przykład przedstawia C rzutowanie w stylu mapujący do wyboru czasu wykonywania.  
+ Poniższy przykład pokazuje C rzutowania w stylu mapowana na sprawdzanie w czasie wykonania.  
   
-```  
+```cpp  
 // cstyle_casts_6.cpp  
 // compile with: /clr  
 using namespace System;  
@@ -152,9 +152,9 @@ int main() {
 }  
 ```  
   
- Poniższy przykład zawiera nieprawidłowy C rzutowanie w stylu, co powoduje, że kompilator wydania wystąpił błąd.  
+ Poniższy przykład pokazuje nieprawidłowy C rzutowania w stylu, co powoduje, że kompilator na błąd.  
   
-```  
+```cpp  
 // cstyle_casts_7.cpp  
 // compile with: /clr  
 using namespace System;  

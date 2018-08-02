@@ -16,15 +16,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1bb0c89c34b5107326a961e874289d20cbd2385c
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: f4acd81a5420f9fe2685e7570f26fea61691b845
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32420970"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39467407"
 ---
 # <a name="using-atexit"></a>Używanie funkcji atexit
-Z [atexit —](../c-runtime-library/reference/atexit.md) funkcji, można określić funkcji przetwarzania zakończenia, która wykonuje przed Kończenie działania programu. Nie statycznych obiektów globalnych zainicjowany przed wywołaniem do `atexit` zostaną zniszczone przed wykonywanie funkcji przetwarzania zakończenia.  
+Za pomocą [atexit](../c-runtime-library/reference/atexit.md) funkcji, można określić funkcji zakończenia przetwarzania, który jest wykonywany przed Kończenie działania programu. Nie statycznych obiektów globalnych zainicjowany przed wywołaniem do **atexit** zostaną zniszczone przed wykonywania funkcji zakończenia przetwarzania.  
   
-## <a name="see-also"></a>Zobacz też  
+## <a name="see-also"></a>Zobacz także  
  [Dodatkowe zagadnienia dotyczące kończenia](../cpp/additional-termination-considerations.md)

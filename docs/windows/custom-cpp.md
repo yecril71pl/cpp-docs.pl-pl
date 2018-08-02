@@ -17,21 +17,20 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 7b37d87d5380b9d4dac69cee702654285461ead6
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 7222d7021665a76c7e087033f5152d2836008caa
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33871630"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39460935"
 ---
 # <a name="custom-c"></a>custom (C++)
-Definiuje metadanych obiektu w bibliotece typów.  
+Definiuje metadanych dla obiektu w bibliotece typów.  
   
 ## <a name="syntax"></a>Składnia  
   
 ```  
-  
-      [ custom(  
+[ custom(  
    uuid,   
    value  
 ) ];  
@@ -42,31 +41,31 @@ Definiuje metadanych obiektu w bibliotece typów.
  Unikatowy identyfikator.  
   
  *value*  
- Wartość, która może znajdować się w typ variant.  
+ Wartość, które można umieścić w wariant.  
   
 ## <a name="remarks"></a>Uwagi  
- **Niestandardowych** atrybutu C++ spowoduje, że informacje na umieszczenie w bibliotece typów. Konieczne będzie narzędzie, które odczytuje niestandardowej wartości z biblioteki typów.  
+ **Niestandardowe** atrybut C++ spowoduje, że informacje, aby zostać umieszczone w bibliotece typów. Należy to narzędzie, które odczytuje wartość niestandardowej z biblioteki typów.  
   
- **Niestandardowych** atrybut ma te same funkcje co [niestandardowych](http://msdn.microsoft.com/library/windows/desktop/aa366766) MIDL atrybutu.  
+ **Niestandardowe** atrybut ma taką samą funkcjonalność jak [niestandardowe](http://msdn.microsoft.com/library/windows/desktop/aa366766) atrybutów w MIDL.  
   
 ## <a name="requirements"></a>Wymagania  
   
-### <a name="attribute-context"></a>Atrybut kontekstu  
+### <a name="attribute-context"></a>Kontekst atrybutu  
   
 |||  
 |-|-|  
-|**Dotyczy**|Inne niż COM `interface`, **klasy**, `enum`s, `idl_module` metod, elementy członkowskie interfejsu, parametry interfejsu `typedef`s, **Unii**s, `struct`s|  
+|**Dotyczy**|COM bez **interfejsu**, **klasy**, **wyliczenia**s, `idl_module` metod, składowych interfejsu i parametry interfejsu **typedef**s, **Unii**s, **struktury**s|  
 |**Powtarzalne**|Tak|  
-|**Wymaganych atrybutów**|**coclass** (jeśli jest używany dla klasy)|  
+|**Wymaganych atrybutów**|**Klasa coclass** (jeśli jest używany w klasie)|  
 |**Nieprawidłowe atrybuty**|Brak|  
   
- Aby uzyskać więcej informacji na temat konteksty atrybutu, zobacz [konteksty atrybutu](../windows/attribute-contexts.md).  
+ Aby uzyskać więcej informacji na temat konteksty atrybutu zobacz [konteksty atrybutu](../windows/attribute-contexts.md).  
   
 ## <a name="see-also"></a>Zobacz też  
  [Atrybuty IDL](../windows/idl-attributes.md)   
  [Oddzielne atrybuty](../windows/stand-alone-attributes.md)   
- [Element TypeDef, Enum, Unii i struct — atrybuty](../windows/typedef-enum-union-and-struct-attributes.md)   
- [Atrybuty parametrów](../windows/parameter-attributes.md)   
- [Atrybuty — metoda](../windows/method-attributes.md)   
+ [Element TypeDef, Enum, Union i struct — atrybuty](../windows/typedef-enum-union-and-struct-attributes.md)   
+ [Atrybuty parametru](../windows/parameter-attributes.md)   
+ [Atrybuty metody](../windows/method-attributes.md)   
  [Atrybuty klasy](../windows/class-attributes.md)   
  [Atrybuty interfejsu](../windows/interface-attributes.md)   

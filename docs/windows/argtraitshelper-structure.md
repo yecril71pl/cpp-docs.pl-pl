@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 6205d69962d70d9da76c932fdd8b3f66f491ebc9
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 1bb8dfeff0e1f3e659e0d3c6514904df39286c45
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33857704"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39466640"
 ---
 # <a name="argtraitshelper-structure"></a>ArgTraitsHelper — Struktura
 Obsługuje infrastrukturę biblioteki WRL i nie jest przeznaczona do użycia bezpośrednio w kodzie.  
@@ -35,26 +35,26 @@ struct ArgTraitsHelper;
 ```  
   
 #### <a name="parameters"></a>Parametry  
- `TDelegateInterface`  
+ *TDelegateInterface*  
  Interfejs delegata.  
   
 ## <a name="remarks"></a>Uwagi  
- Pomaga zdefiniować wspólne cechy argumentów delegata.  
+ Pomaga zdefiniować typowe cechy argumenty delegata.  
   
 ## <a name="members"></a>Elementy członkowskie  
   
-### <a name="public-typedefs"></a>Definicje typów publicznych  
+### <a name="public-typedefs"></a>Publiczne definicje typów  
   
 |Nazwa|Opis|  
 |----------|-----------------|  
-|`methodType`|Jest to synonim `decltype(&TDelegateInterface::Invoke)`.|  
-|`Traits`|Jest to synonim `ArgTraits<methodType>`.|  
+|`methodType`|Synonim dla `decltype(&TDelegateInterface::Invoke)`.|  
+|`Traits`|Synonim dla `ArgTraits<methodType>`.|  
   
-### <a name="public-constants"></a>Publiczny — stałe  
+### <a name="public-constants"></a>Publiczne stałe  
   
 |Nazwa|Opis|  
 |----------|-----------------|  
-|[ArgTraitsHelper::args, stała](../windows/argtraitshelper-args-constant.md)|Pomaga [argtraits::args —](../windows/argtraits-args-constant.md) na bieżąco z informacjami liczba parametrów metody Invoke interfejsu delegata.|  
+|[ArgTraitsHelper::args, stała](../windows/argtraitshelper-args-constant.md)|Pomaga [ArgTraits::args](../windows/argtraits-args-constant.md) liczbę parametrów bądź na bieżąco z `Invoke` metodę interfejsu delegata.|  
   
 ## <a name="inheritance-hierarchy"></a>Hierarchia dziedziczenia  
  `ArgTraitsHelper`  
@@ -62,7 +62,7 @@ struct ArgTraitsHelper;
 ## <a name="requirements"></a>Wymagania  
  **Nagłówek:** event.h  
   
- **Namespace:** Microsoft::wrl:: details —  
+ **Namespace:** Microsoft::wrl:: details  
   
 ## <a name="see-also"></a>Zobacz też  
  [Microsoft::WRL::Details, przestrzeń nazw](../windows/microsoft-wrl-details-namespace.md)

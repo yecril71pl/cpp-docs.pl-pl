@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 14eafc1ebb50faaffb4c0a95e0cc929c89fb7c0b
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: 77584e5fdd731c499629149a9163dbacb5eafb5e
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37938918"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39467329"
 ---
 # <a name="run-time-type-information"></a>Informacje o typie uzyskiwanym w czasie rzeczywistym
 Informacje typu Run-time (RTTI) to mechanizm, który pozwala, aby typ obiektu był ustalony podczas wykonywania programu. RTTI został dodany do języka C++, ponieważ wielu dostawców bibliotek klas zostały Implementowanie tę funkcję samodzielnie. Przyczyną niezgodności między bibliotekami. W związku z tym, stała się oczywista, obsługa informacje typu run-time wymaganego na poziomie języka.  
@@ -44,5 +44,5 @@ Informacje typu Run-time (RTTI) to mechanizm, który pozwala, aby typ obiektu by
   
      Używane do przechowywania informacji o typie zwrócony przez **typeid** operatora.  
   
-## <a name="see-also"></a>Zobacz też  
+## <a name="see-also"></a>Zobacz także  
  [Rzutowanie](../cpp/casting.md)

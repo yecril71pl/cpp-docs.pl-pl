@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 14386e737d136b91f8864eeaa182038b62df72e0
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: 4ef7551047449167ff60372da146618fbdc4e564
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37947790"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39464165"
 ---
 # <a name="varianttvariantt"></a>_variant_t::_variant_t
 **Microsoft Specific**  
@@ -32,7 +32,6 @@ ms.locfileid: "37947790"
 ## <a name="syntax"></a>Składnia  
   
 ```  
-  
 _variant_t( ) throw( );  
   
 _variant_t(  
@@ -200,7 +199,7 @@ _variant_t(
  **Unsigned int** wartość do skopiowania w nowe `_variant_t` obiektu.  
   
  *i8Src*  
- __**Int64** wartość do skopiowania w nowe `_variant_t` obiektu.  
+ **__Int64** wartość do skopiowania w nowe `_variant_t` obiektu.  
   
  *ui8Src*  
  **Unsigned __int64** wartość do skopiowania w nowe `_variant_t` obiektu.  
@@ -215,7 +214,7 @@ _variant_t(
   
 -   **_variant_t — (_variant_t &***var_t_Src***)** tworzy `_variant_t` obiektu z innego `_variant_t` obiektu.     Typ wariantu są zachowywane.  
   
--   **_variant_t — (WARIANTU &***varSrc* **, bool**`fCopy`**)** tworzy `_variant_t` obiektu z istniejącego `VARIANT` obiekt.       Jeśli `fCopy` jest **false**, **VARIANT** obiekt jest dołączony do nowego obiektu bez tworzenia kopii.  
+-   **_variant_t — (WARIANTU &***varSrc* **, bool**`fCopy`**)** tworzy `_variant_t` obiektu z istniejącego `VARIANT` obiekt.       Jeśli *fCopy* jest **false**, **VARIANT** obiekt jest dołączony do nowego obiektu bez tworzenia kopii.  
   
 -   **_variant_t — (krótki***sSrc* **, VARTYPE**`vtSrc`**= VT_I2)** tworzy `_variant_t` obiektu typu VT_I2 lub VT_BOOL, z **krótki** wartość całkowitą.       Inne `VARTYPE` powoduje błąd E_INVALIDARG.  
   
@@ -245,5 +244,5 @@ _variant_t(
   
  **END specyficzny dla Microsoft**  
   
-## <a name="see-also"></a>Zobacz też  
+## <a name="see-also"></a>Zobacz także  
  [_variant_t, klasa](../cpp/variant-t-class.md)

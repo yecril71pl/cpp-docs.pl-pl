@@ -1,5 +1,5 @@
 ---
-title: Odwołanie atrybutów języka C++ | Dokumentacja firmy Microsoft
+title: C++ atrybuty odwołania | Dokumentacja firmy Microsoft
 ms.custom: index-page
 ms.date: 11/04/2016
 ms.technology:
@@ -15,24 +15,24 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 307f2e8e99e469face090acd19e7c5f28c5d9140
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 29c3aacf63396e96b4520fc849e082c6781e5d64
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33870848"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39460909"
 ---
 # <a name="c-attributes-reference"></a>Atrybuty (C++)
-Microsoft definiuje zestaw atrybutów, które upraszczają programowanie COM i rozwoju środowiska uruchomieniowego języka wspólnego .NET Framework. Po dołączeniu atrybutów w plikach źródłowych kompilator współpracuje z dostawcą biblioteki dll, aby wstawić kod lub zmodyfikować kod w plikach wygenerowanego obiektu.  
+Firma Microsoft definiuje zestaw atrybutów, które upraszczają programowanie COM i .NET Framework — programowanie środowiska uruchomieniowego języka wspólnego. Gdy atrybuty zostaną umieszczone w plikach źródłowych, kompilator będzie współpracuje z dostawcą biblioteki dll, Wstaw kod lub zmodyfikować kod w plikach obiektowych wygenerowany.  
   
- **Uwaga:** Jeśli szukasz atrybuty standard C++, zobacz [atrybutów](../cpp/attributes.md).  
+ **Uwaga:** Jeśli szukasz atrybuty standard C++, zobacz [atrybuty](../cpp/attributes.md).  
   
 ## <a name="in-this-section"></a>W tej sekcji  
  [Pojęcia](../windows/attributed-programming-concepts.md)  
- Zawiera opis różnych pojęć związanych z atrybutów.  
+ W tym artykule opisano różne pojęcia, które są powiązane z atrybutami.  
   
  [Atrybuty według grup](../windows/attributes-by-group.md)  
- Zawiera łącza do atrybutu tematy dokumentacji, pogrupowane według funkcji.  
+ Zawiera łącza do atrybutu tematy referencyjne, pogrupowane według funkcji.  
   
  [Atrybuty w zależności od zastosowania](../windows/attributes-by-usage.md)  
  Zawiera łącza do tematów odwołania, pogrupowane według użycia atrybutu.  
@@ -42,10 +42,10 @@ Microsoft definiuje zestaw atrybutów, które upraszczają programowanie COM i r
   
 ## <a name="related-sections"></a>Sekcje pokrewne  
  [Programowanie oparte na atrybutach](../windows/attributed-programming-concepts.md)  
- Zawiera omówienie atrybutów.  
+ Omówienie koncepcyjne atrybutów.  
   
- [Dokumentacja](http://msdn.microsoft.com/en-us/1ba03b5c-8229-4f63-b08c-6c12141d6ab1)  
- Zawiera łącza do tematów opisujących C i C++ języka odwołań, bibliotek języka Visual C++, Visual C++ modelu obiektów rozszerzających i asemblera makr firmy Microsoft (MASM).  
+ [Dokumentacja](http://msdn.microsoft.com/1ba03b5c-8229-4f63-b08c-6c12141d6ab1)  
+ Zawiera łącza do tematów opisujących C i C++ language odwołania, biblioteki dostarczane z Visual C++, Model obiektowy rozszerzalności Visual C++ i Microsoft Macro Assembler (MASM).  
   
  [Przykłady Visual C++](../visual-cpp-samples.md)  
- Zawiera łącza do przykładowy kod, przedstawiający możliwości Visual C++, biblioteki i technologii, który go obsługuje.
+ Zawiera łącza do przykładowego kodu pokazując możliwości programu Visual C++ i bibliotek oraz technologii, które obsługuje.

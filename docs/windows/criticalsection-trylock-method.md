@@ -1,5 +1,5 @@
 ---
-title: CriticalSection::TryLock — metoda | Dokumentacja firmy Microsoft
+title: CriticalSection::TryLock, metoda | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: b4ee99d82212d0d6cdd610b4565bd9292a0265dc
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: e1b9d238d4f5475475e5dc367aae196937630a0e
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33883955"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39465425"
 ---
 # <a name="criticalsectiontrylock-method"></a>CriticalSection::TryLock — Metoda
-Próbuje wpisz sekcja krytyczna bez blokowania. Jeśli połączenie zostanie nawiązane, wątek wywołujący przejmuje sekcja krytyczna.  
+Próbuje wprowadzić sekcję krytyczną bez blokowania. Jeśli wywołanie zakończy się pomyślnie, wątek wywołujący przejmuje na własność sekcję krytyczną.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -38,19 +38,19 @@ static SyncLock TryLock(
 ```  
   
 #### <a name="parameters"></a>Parametry  
- `cs`  
- Obiekt określony przez użytkownika sekcja krytyczna.  
+ *CS*  
+ Obiekt sekcję krytyczną określonych przez użytkownika.  
   
 ## <a name="return-value"></a>Wartość zwracana  
- Wartość niezerową, jeśli pomyślnie wprowadzono sekcja krytyczna lub bieżący wątek już jest właścicielem sekcja krytyczna. Zero, jeśli inny wątek już właścicielem sekcja krytyczna.  
+ Wartość różną od zera, jeśli pomyślnie podano sekcję krytyczną lub bieżący wątek jest już właścicielem sekcję krytyczną. Zero, jeśli inny wątek jest już właścicielem sekcję krytyczną.  
   
 ## <a name="remarks"></a>Uwagi  
- Pierwszy **TryLock** funkcji ma wpływ na bieżący obiekt sekcja krytyczna. Drugi **TryLock** funkcji ma wpływ na określone przez użytkownika sekcja krytyczna.  
+ Pierwszy **trylock —** funkcji ma wpływ na bieżący obiekt sekcję krytyczną. Drugi **trylock —** funkcji ma wpływ na sekcję krytyczną określonych przez użytkownika.  
   
 ## <a name="requirements"></a>Wymagania  
  **Nagłówek:** corewrappers.h  
   
- **Namespace:** Microsoft::wrl:: wrappers —  
+ **Namespace:** Microsoft::wrl:: wrappers  
   
 ## <a name="see-also"></a>Zobacz też  
  [CriticalSection, klasa](../windows/criticalsection-class.md)

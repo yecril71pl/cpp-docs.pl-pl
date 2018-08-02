@@ -1,5 +1,5 @@
 ---
-title: AsyncBase::put_Id — metoda | Dokumentacja firmy Microsoft
+title: AsyncBase::put_Id, metoda | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: a439d94cd84ef2d94abcd9bb7a8e895db47290bf
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 6e9a0203bd0da2ea62d015264c1f4e8c58fcae66
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33859842"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39463197"
 ---
 # <a name="asyncbaseputid-method"></a>AsyncBase::put_Id — Metoda
-Ustawia dojście operację asynchroniczną.  
+Ustawia uchwyt operację asynchroniczną.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -36,8 +36,8 @@ STDMETHOD(
 ```  
   
 #### <a name="parameters"></a>Parametry  
- `id`  
- Uchwyt różną od zera.  
+ *id*  
+ Dojście wartość różną od zera.  
   
 ## <a name="return-value"></a>Wartość zwracana  
  S_OK w przypadku powodzenia; w przeciwnym razie E_INVALIDARG lub E_ILLEGAL_METHOD_CALL.  
@@ -45,7 +45,7 @@ STDMETHOD(
 ## <a name="requirements"></a>Wymagania  
  **Nagłówek:** async.h  
   
- **Namespace:** Microsoft::wrl —  
+ **Namespace:** Microsoft::WRL  
   
 ## <a name="see-also"></a>Zobacz też  
  [AsyncBase, klasa](../windows/asyncbase-class.md)

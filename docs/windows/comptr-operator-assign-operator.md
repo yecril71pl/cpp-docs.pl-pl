@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: f4066db37de8a993802970784f09141352fef028
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: fac3a845ea7c512f5a7ccffdabdf67ce26029ff8
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33871204"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39466166"
 ---
 # <a name="comptroperator-operator"></a>ComPtr::operator= Operator
-Przypisuje wartość do bieżącego comptr —.  
+Przypisuje wartość do bieżącego **ComPtr**.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -57,34 +57,34 @@ WRL_NOTHROW ComPtr& operator=(
 ```  
   
 #### <a name="parameters"></a>Parametry  
- `U`  
+ *U*  
  Klasa.  
   
- `other`  
- Wskaźnik, typu odwołania lub r-wartości odwołanie do typu lub innego comptr —.  
+ *other*  
+ Wskaźnik, odwołanie lub odwołanie rvalue typu lub innej **ComPtr**.  
   
 ## <a name="return-value"></a>Wartość zwracana  
- Odwołanie do bieżącego comptr —.  
+ Odwołanie do bieżącego **ComPtr**.  
   
 ## <a name="remarks"></a>Uwagi  
- Bieżący comptr — pierwszej wersji tego operatora przypisuje pustą wartość.  
+ Pierwsza wersja tego operatora przypisuje wartość pustą do bieżącego **ComPtr**.  
   
- W drugiej wersji Jeśli przypisanie wskaźnika interfejsu nie jest taka sama jak bieżący wskaźnik interfejsu comptr — drugi wskaźnika interfejsu jest przypisany do bieżącego comptr —.  
+ W drugiej wersji, jeśli przypisanie wskaźnika interfejsu nie jest taka sama jak bieżący **ComPtr** wskaźnik interfejsu, drugi wskaźnik interfejsu jest przypisany do bieżącego **ComPtr**.  
   
- W trzeciej wersji przypisanie wskaźnika interfejsu jest przypisany do bieżącego comptr —.  
+ W trzeciej wersji przypisywanie wskaźnika interfejsu jest przypisany do bieżącego **ComPtr**.  
   
- W czwartym wersji Jeśli wskaźnik interfejsu przypisywanie wartości nie jest taka sama jak bieżący wskaźnik interfejsu comptr — drugi wskaźnika interfejsu jest przypisany do bieżącego comptr —.  
+ W czwartym wersji, jeśli wskaźnik interfejsu, przypisywanie wartości nie jest taka sama jak bieżący **ComPtr** wskaźnik interfejsu, drugi wskaźnik interfejsu jest przypisany do bieżącego **ComPtr**.  
   
- Wersja piątej jest operatora kopii; Odwołanie do comptr — jest przypisany do bieżącego comptr —.  
+ Piąta wersja jest operator kopiowania; Odwołanie do **ComPtr** jest przypisany do bieżącego **ComPtr**.  
   
- Wersja szóstego jest operatora kopii, która używa Przenieś semantyki; odwołania do r-wartości do comptr — Jeśli dowolny typ jest statyczny, rzutowania i następnie przypisane do bieżącej comptr —.  
+ Szósty wersji jest operator kopii, który używa semantyki; przenoszenia odwołania rvalue do **ComPtr** Jeśli dowolnego typu jest statycznego, cast i przypisywany do bieżącego **ComPtr**.  
   
- Wersja siódmego jest operatora kopii, która używa Przenieś semantyki; odwołania do r-wartości do comptr — typu `U` jest statyczna rzutowanie następnie i przypisane do bieżącej comptr —.  
+ Wersja siódmego jest operator kopii, który używa semantyki; przenoszenia odwołania rvalue do **ComPtr** typu *U* statyczne następnie rzutowania i ma przypisaną do bieżącego **ComPtr**.  
   
 ## <a name="requirements"></a>Wymagania  
  **Nagłówek:** client.h  
   
- **Namespace:** Microsoft::wrl —  
+ **Namespace:** Microsoft::WRL  
   
 ## <a name="see-also"></a>Zobacz też  
  [ComPtr, klasa](../windows/comptr-class.md)

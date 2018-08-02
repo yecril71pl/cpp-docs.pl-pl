@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 6294634652ffc6a53a577ccd75c348ed63c502e7
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 97c07b5cf97578c49da9d4a72b5a232b559ec0ab
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33858396"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39463869"
 ---
 # <a name="classfactory-class"></a>ClassFactory — Klasa
-Implementuje podstawowych funkcji interfejsu IClassFactory.  
+Implementuje podstawowe funkcje `IClassFactory` interfejsu.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -46,19 +46,19 @@ class ClassFactory : public Details::RuntimeClass<
 ```  
   
 #### <a name="parameters"></a>Parametry  
- `I0`  
- Interfejs zeroth.  
+ *I0*  
+ Interfejsu zerowego.  
   
- `I1`  
+ *I1*  
  Pierwszy interfejs.  
   
- `I2`  
+ *I2*  
  Drugi interfejs.  
   
 ## <a name="remarks"></a>Uwagi  
- Korzystanie z `ClassFactory` do implementacji fabryki zdefiniowane przez użytkownika.  
+ Korzystanie z `ClassFactory` do implementacji fabryki zdefiniowanych przez użytkownika.  
   
- Następujący wzór programowania przedstawiono sposób użycia [implementuje](../windows/implements-structure.md) struktury, aby określić więcej niż trzy interfejsy na fabrykę klas.  
+ Następujący wzorzec programowania pokazuje sposób użycia [implementuje](../windows/implements-structure.md) struktury, aby określić więcej niż trzy interfejsy na fabrykę klas.  
   
  `struct MyFactory : ClassFactory<Implements<I1, I2, I3>, I4, I5>`  
   
@@ -74,10 +74,10 @@ class ClassFactory : public Details::RuntimeClass<
   
 |Nazwa|Opis|  
 |----------|-----------------|  
-|[ClassFactory::AddRef, metoda](../windows/classfactory-addref-method.md)|Zwiększa liczbę odwołania dla bieżącego obiektu ClassFactory —.|  
+|[ClassFactory::AddRef, metoda](../windows/classfactory-addref-method.md)|Zwiększa liczbę odwołań dla bieżącego obiektu ClassFactory —.|  
 |[ClassFactory::LockServer, metoda](../windows/classfactory-lockserver-method.md)|Zwiększa lub zmniejsza liczbę podstawowych obiektów, które są śledzone przez bieżący obiekt ClassFactory —.|  
-|[ClassFactory::QueryInterface, metoda](../windows/classfactory-queryinterface-method.md)|Pobiera wskaźnik do interfejsu określonego przez parametr.|  
-|[ClassFactory::Release, metoda](../windows/classfactory-release-method.md)|Liczba odwołania dla bieżącego obiektu ClassFactory — zmniejsza.|  
+|[ClassFactory::QueryInterface, metoda](../windows/classfactory-queryinterface-method.md)|Pobiera wskaźnik do interfejsu, określony przez parametr.|  
+|[ClassFactory::Release, metoda](../windows/classfactory-release-method.md)|Dekrementuje liczbę odwołań dla bieżącego obiektu ClassFactory —.|  
   
 ## <a name="inheritance-hierarchy"></a>Hierarchia dziedziczenia  
  `I0`  
@@ -103,8 +103,8 @@ class ClassFactory : public Details::RuntimeClass<
 ## <a name="requirements"></a>Wymagania  
  **Nagłówek:** module.h  
   
- **Namespace:** Microsoft::wrl —  
+ **Namespace:** Microsoft::WRL  
   
 ## <a name="see-also"></a>Zobacz też  
- [Microsoft::wrl — Namespace](../windows/microsoft-wrl-namespace.md)   
+ [Microsoft::WRL Namespace](../windows/microsoft-wrl-namespace.md)   
  [RuntimeClassType, wyliczenie](../windows/runtimeclasstype-enumeration.md)

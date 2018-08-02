@@ -1,5 +1,5 @@
 ---
-title: Creatormap::factorycache — członek danych | Dokumentacja firmy Microsoft
+title: CreatorMap::factoryCache, składowa danych | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 7ce9beccabd06e4182e05e4a1e447db189986ef2
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 2c472ba45042711fc12f3dad07184a393f894e78
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33871152"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39466780"
 ---
 # <a name="creatormapfactorycache-data-member"></a>CreatorMap::factoryCache — Członek danych
 Obsługuje infrastrukturę biblioteki WRL i nie jest przeznaczona do użycia bezpośrednio w kodzie.  
@@ -34,12 +34,12 @@ FactoryCache* factoryCache;
 ```  
   
 ## <a name="remarks"></a>Uwagi  
- Creatormap — przechowuje wskaźnik do pamięci podręcznej fabryki.  
+ Przechowuje wskaźnik do pamięci podręcznej fabryki dla **creatormap —**.  
   
 ## <a name="requirements"></a>Wymagania  
  **Nagłówek:** module.h  
   
- **Namespace:** Microsoft::wrl:: details —  
+ **Namespace:** Microsoft::wrl:: details  
   
 ## <a name="see-also"></a>Zobacz też  
  [Creatormap — struktura](../windows/creatormap-structure.md)   

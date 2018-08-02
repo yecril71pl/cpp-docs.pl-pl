@@ -1,35 +1,35 @@
 ---
-title: Prosta, układ standard, POD i typy literału | Dokumentacja firmy Microsoft
+title: Prosta, standardowego układu, ZASOBNIKÓW i typy literałów | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 04/05/2018
 ms.topic: language-reference
 ms.assetid: 2b23a7be-9bad-49fc-8298-31a9a7c556b0
-ms.openlocfilehash: 7a80db109df1d9aa25f471312a9ff7103b90df7b
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 33b24c20c93f9bf0160536f5d6149c073c6ca7a5
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32424854"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39464016"
 ---
-# <a name="trivial-standard-layout-pod-and-literal-types"></a>Prosta, układ standard, POD i typy literału
+# <a name="trivial-standard-layout-pod-and-literal-types"></a>Prosta, standardowego układu, ZASOBNIKÓW i typy literałów
 
-Termin *układu* odwołuje się do sposób rozmieszczenia elementów członkowskich obiektu klasy, struktury lub Unii w pamięci. W niektórych przypadkach układ jest dobrze zdefiniowany przez specyfikację języka. Jednak po klasie lub strukturze zawiera niektóre funkcje języka C++, takie jak wirtualne klasy podstawowe funkcje wirtualne, elementy członkowskie z kontrolą dostępu na różnych, następnie kompilator będzie mógł wybrać układ. Taki układ może się różnić w zależności od tego, jakie funkcje optymalizacji są wykonywane i w wielu przypadkach obiekt może nie nawet zajmują ciągły obszar pamięci. Na przykład jeśli klasa ma funkcje wirtualne, wszystkie wystąpienia tej klasy mogą współdzielić tabeli jednej funkcji wirtualnych. Takie typy oczywiście są bardzo przydatne, ale ma także ograniczenia. Ponieważ układ jest niezdefiniowana nie mogą być przekazywane do programów napisanych w innych językach, takich jak C, a ponieważ mogą one być nieciągłych ich nie można niezawodnie skopiować fast niskiego poziomu funkcje takie jak `memcopy` lub serializowany przez sieć.
+Termin *układ* odwołuje się do sposób rozmieszczenia elementów członkowskich obiektu klasy, struktury lub Unii w pamięci. W niektórych przypadkach układ jest dobrze zdefiniowany przez specyfikację języka. Ale jeśli klasa lub struktura zawiera niektórych funkcji języka C++, takich jak wirtualne klasy bazowe, funkcji wirtualnych elementów członkowskich przy użyciu kontroli dostępu w różnych, następnie kompilator swobodę wyboru układu. Taki układ mogą się różnić w zależności od tego, jakie optymalizacje wykonywane i w wielu przypadkach obiektu może nie nawet zajmować ciągły obszar pamięci. Na przykład jeśli klasa ma funkcje wirtualne, wszystkie wystąpienia tej klasy może udostępniać tabeli jednej funkcji wirtualnej. Typy takie oczywiście są bardzo przydatne, ale mają ograniczenia. Ponieważ układ jest niezdefiniowana nie mogą być przekazywane do programów napisanych w innych językach, takich jak C, a ponieważ mogą one być nieciągłych one nie można niezawodnie skopiować przy użyciu funkcji szybkiego niskiego poziomu takich jak `memcopy` lub serializowana za pośrednictwem sieci.
 
- Aby włączyć kompilatory oraz programy C++ i metaprograms przeglądanie informacji o przydatności danego typu w operacjach, które są zależne od układu pamięci, C ++ 14 wprowadzone trzy kategorie proste klasy i struktury: *prosta*, *układu standard*, i *POD* lub zwykły stare dane. Standardowa biblioteka ma szablonów funkcji `is_trivial<T>`, `is_standard_layout<T>` i `is_pod<T>` określające, czy dany typ należy do danej kategorii.
+ Aby włączyć programy w języku C++, a także metaprograms przeglądanie informacji o gotowości każdego typu operacji, które są zależne od układu pamięci i Kompilatory języka, C ++ 14 wprowadzone trzy kategorie proste klasy i struktury: *prosta*, *standardowego układu*, i *ZASOBNIKA* lub zwykłe stare dane. Standardowa biblioteka zawiera szablony funkcji `is_trivial<T>`, `is_standard_layout<T>` i `is_pod<T>` określające, czy dany typ należy do danej kategorii.
 
-## <a name="trivial-types"></a>Prosta typów
+## <a name="trivial-types"></a>Typy proste
 
- Po klasie lub strukturze w języku C++ został dostarczony do kompilatora lub jawnie ustawiana domyślnie specjalnych funkcji Członkowskich, wówczas jest prosta typu. Go zajmuje obszar pamięci ciągłej. Może mieć elementów członkowskich o specyfikatory różnych dostępu. W języku C++ kompilator jest swobodę kolejność elementów członkowskich w tej sytuacji. W związku z tym można memcopy takie obiekty, ale nie można niezawodnie korzystać z programu C. Prosta typu T można skopiować do tablicy znaków lub char bez znaku i bezpiecznie skopiować do zmiennej T. Należy pamiętać, że ze względu na wymagania dotyczące wyrównywania, może być bajtów uzupełnienie między elementami członkowskimi typu.
+ Po klasie lub strukturze w języku C++ ma podane do kompilatora lub jawnie przyjmujące wartości domyślne funkcji specjalnych elementów członkowskich, a następnie jest typem prosta. Zajmuje obszar pamięci ciągłej. Może mieć elementów członkowskich z specyfikatory różnych dostępu. W języku C++ kompilator jest bezpłatne wybierz sposób uporządkowania elementów członkowskich w takiej sytuacji. Dlatego możesz memcopy takie obiekty, ale nie można niezawodnie korzystać z programu C. Prosta typu T można kopiowana do tablicy znaków lub unsigned char i bezpieczne kopiowanie do zmiennej T. Należy pamiętać, że ze względu na wymagania wyrównania, może być bajtów uzupełniających między elementy członkowskie typu.
 
- Prosta typy mają trivial domyślnego konstruktora, Konstruktor kopiujący trivial, operatora przypisania kopii prosta i prosta — destruktor. W każdym przypadku *trivial* oznacza Konstruktor / — operator/destruktor nie jest dostarczane przez użytkownika i należy do klasy, która ma
+ Proste typy mają trivial domyślnego konstruktora, Konstruktor kopiujący prosta, operator przypisania kopiowania prosta i prosta — destruktor. W każdym przypadku *trivial* oznacza, że Konstruktor/operator/destruktor nie jest dostarczony przez użytkownika i należy do klasy, która ma
 
-- nie funkcje wirtualne i wirtualne klasy podstawowe,
+- nie funkcji wirtualnych lub wirtualne klasy bazowe,
 
-- nie klas podstawowych sytemu nieuproszczony odpowiedniego konstruktora / — operator/destruktora
+- nie klas bazowych nietrywialnymi odpowiedniego konstruktora/operator/destruktora
 
-- nie elementów członkowskich danych typu klasy z nieuproszczony odpowiedniego konstruktora / — operator/destruktora
+- żadnych składowych danych typu klasy z nietrywialnymi odpowiedniego konstruktora/operator/destruktorem
 
-W poniższych przykładach pokazano typów prostych. W Trivial2, obecności `Trivial2(int a, int b)` Konstruktor wymaga podania konstruktora domyślnego. Dla typu na kwalifikować się jako trivial musi jawnie domyślne tego konstruktora.
+W poniższych przykładach pokazano typy proste. W Trivial2, obecności `Trivial2(int a, int b)` Konstruktor wymaga podania domyślnego konstruktora. Dla typu zakwalifikować się jak prosta możesz jawnie tworzyć domyślne tego konstruktora.
 
 ```cpp
 struct Trivial
@@ -47,30 +47,29 @@ struct Trivial2
    private:
    int j;   // Different access control
 };
-
 ```
 
-## <a name="standard-layout-types"></a>Układ standardowe typy
+## <a name="standard-layout-types"></a>Typy standardowego układu
 
- Po klasie lub strukturze nie zawiera pewnych funkcji języka C++, takich jak funkcje wirtualne, które nie znajdują się w języku C, a wszystkie elementy członkowskie tej samej kontrolę dostępu, jest to typ układu standard. Jest w stanie memcopy i czy mogą być używane przez programy C wystarczająco zdefiniowany układ. Typy standardowe układu może mieć zdefiniowane przez użytkownika specjalnych funkcji Członkowskich. Ponadto typy standardowe układu ma tę charakterystykę:
+ Gdy klasa lub struktura nie zawierać niektórych funkcji języka C++, takich jak funkcje wirtualne, które nie znajdują się w języku C, a wszyscy członkowie mają ten sam kontroli dostępu, jest to typ standardowego układu. Jest w stanie memcopy i czy mogą być używane przez programy c. wystarczająco zdefiniowany układ. Typy standardowego układu mogą mieć zdefiniowane przez użytkownika specjalnych funkcji Członkowskich. Ponadto typy standardowego układu ma następującą charakterystykę:
 
-- nie funkcje wirtualne i wirtualne klasy podstawowe
+- nie funkcji wirtualnych lub wirtualne klasy bazowe
 
-- wszystkie elementy członkowskie danych niestatyczna mieć tej samej kontroli dostępu
+- Wszyscy członkowie danych niestatycznych mają ten sam kontroli dostępu
 
-- Wszyscy członkowie niestatyczna typu klasy są standardowe układu
+- wszystkie składowe niestatycznych o typie klasy są bezpieczne standardowego układu
 
-- wszystkie klasy podstawowe są standardowe układu
+- żadnych klas bazowych są standardowego układu
 
-- ma nie klas podstawowych tego samego typu jako pierwszego elementu członkowskiego danych niestatycznych.
+- ma nie mają tego samego typu jako pierwszy element członkowski danych niestatycznych klas bazowych.
 
 - spełnia jeden z następujących warunków:
 
-  - nie niestatyczny element członkowski danych w klasie pochodnej większość i nie więcej niż jedną klasę podstawową z elementami członkowskimi danych niestatycznych, lub
+  - nie niestatyczny element członkowski w najbardziej pochodnego klasy i nie więcej niż jedną klasę bazową przy użyciu danych niestatycznych elementów członkowskich, lub
 
-  - ma nie klas podstawowych z elementami członkowskimi danych niestatycznych
+  - ma nie klas bazowych danych niestatycznych elementów członkowskich
 
-Poniższy kod przedstawia przykład typu układu standardowe:
+Poniższy kod przedstawia przykład tego typu standardowego układu:
 
 ```cpp
 struct SL
@@ -80,10 +79,9 @@ struct SL
    int j;
    SL(int a, int b) : i(a), j(b) {} // User-defined constructor OK
 };
-
 ```
 
- Ostatnie dwa wymagania można prawdopodobnie lepiej zilustrować z kodem. Mimo że w następnym przykładzie podstawowy jest standard układu `Derived` nie jest standard układu, ponieważ zarówno przez dział it (klasa najdalszych pochodnych) i `Base` mieć elementów członkowskich danych niestatyczna:
+ Ostatnie dwa wymagania mogą być może lepiej zilustrowane konkretnymi kodu. Mimo że w następnym przykładzie podstawowy jest standardowego układu `Derived` nie jest standardowego układu, ponieważ zarówno przez dział it (najbardziej pochodnej klasy) i `Base` mają danych niestatycznych elementów członkowskich:
 
 ```cpp
 struct Base
@@ -101,7 +99,7 @@ struct Derived : public Base
 
 ```
 
- W tym przykładzie `Derived` jest standard układu ponieważ `Base` nie ma danych niestatycznych członków:
+ W tym przykładzie `Derived` jest standardowego układu ponieważ `Base` nie ma danych niestatycznych elementów członkowskich:
 
 ```cpp
 struct Base
@@ -117,15 +115,15 @@ struct Derived : public Base
 };
 ```
 
- Pochodnego również będą układu standard Jeśli `Base` ma elementów członkowskich danych i `Derived` miał tylko funkcje Członkowskie.
+ Pochodne będą również standardowego układu Jeśli `Base` miał składowych danych i `Derived` miał tylko elementów członkowskich.
 
 ## <a name="pod-types"></a>Typy POD
 
- Po klasie lub strukturze jest prosta i układu standard, jest typ POD (zwykły starych danych). W związku z tym jest ciągłe układu pamięci POD typów i każdy element członkowski ma adres wyższe niż elementu członkowskiego, który został zadeklarowany, tak, aby kopiuje bajtu na potrzeby bajt i binarne we/wy, można przeprowadzić na tych typów.  Typy skalarne, takie jak int są również POD typów. POD typy klasy mogą być tylko typy POD elementy członkowskie danych niestatycznego.
+ Gdy klasa lub struktura jest prosta i standardowego układu, jest typem POD (zwykłe stare dane). Układ pamięci typów POD w związku z tym jest ciągły, a każdy element członkowski ma adres wyższe niż elementu członkowskiego, który został zadeklarowany, tak, aby kopiuje bajtu na potrzeby bajtów i binarny we/wy, które mogą być wykonywane na tych typach.  Typy skalarne, takie jak int są również typy POD. Typy POD, które są klasy mogą być tylko typy POD danych niestatycznych elementów członkowskich.
 
 ## <a name="example"></a>Przykład
 
-W poniższym przykładzie przedstawiono różnice między trivial, standard układ i typy POD:
+W poniższym przykładzie przedstawiono różnice między prosta, standardowego układu oraz typy ZASOBNIKA:
 
 ```cpp
 #include <type_traits>
@@ -186,19 +184,17 @@ int main()
 
    return 0;
 }
-
 ```
 
-## <a name="literal_types"></a> Typy literału
+## <a name="literal_types"></a> Typy literałów
 
-Typ literału jest jednym którego układ można określić w czasie kompilacji. Poniżej przedstawiono typy literału:
+Literał jest jednym którego układ można określić w czasie kompilacji. Dostępne są następujące typy literałów:
 
 - void
 - typy skalarne
 - odwołania
 - Tablice void, typów skalarnych lub odwołuje się do
-- Klasa, która ma destruktor prosta i konstruktory constexpr, które nie są przenoszenie lub kopiowanie konstruktorów. Ponadto wszystkie jego elementy członkowskie danych niestatyczna i klasy podstawowe muszą być typy literału i nietrwałe nie.
+- Klasa, która ma destruktor proste, a konstruktory constexpr, które nie są przenoszenie lub kopiowanie konstruktorów. Ponadto wszystkie jej elementy członkowskie danych niestatyczna i klas bazowych musi być typy literałów i nie jest nietrwały.
 
-## <a name="see-also"></a>Zobacz też
-
+## <a name="see-also"></a>Zobacz także
  [Podstawowe pojęcia](../cpp/basic-concepts-cpp.md)

@@ -1,5 +1,5 @@
 ---
-title: AsyncBase::get_Id — metoda | Dokumentacja firmy Microsoft
+title: AsyncBase::get_Id, metoda | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: b6720348692e92e05922bde1100e42c24a866933
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: ea5efa31a3ebff3c86800a023e3525589952c2fc
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33859803"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39464717"
 ---
 # <a name="asyncbasegetid-method"></a>AsyncBase::get_Id — Metoda
-Pobiera dojście operację asynchroniczną.  
+Pobiera uchwyt operację asynchroniczną.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -36,19 +36,19 @@ STDMETHOD(
 ```  
   
 #### <a name="parameters"></a>Parametry  
- `id`  
- Lokalizacja, w którym ma być przechowywany dojście.  
+ *id*  
+ Lokalizacja, gdzie ma być przechowywany uchwytu.  
   
 ## <a name="return-value"></a>Wartość zwracana  
  S_OK w przypadku powodzenia; w przeciwnym razie E_ILLEGAL_METHOD_CALL.  
   
 ## <a name="remarks"></a>Uwagi  
- Ta metoda implementuje IAsyncInfo::get_Id.  
+ Ta metoda implementuje `IAsyncInfo::get_Id`.  
   
 ## <a name="requirements"></a>Wymagania  
  **Nagłówek:** async.h  
   
- **Namespace:** Microsoft::wrl —  
+ **Namespace:** Microsoft::WRL  
   
 ## <a name="see-also"></a>Zobacz też  
  [AsyncBase, klasa](../windows/asyncbase-class.md)

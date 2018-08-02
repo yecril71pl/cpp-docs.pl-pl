@@ -25,12 +25,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 08d7f5c7c244d242c3d1dd7af7d2c2af017bcc78
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: 32f9a45fcfaaff02cfb7cf765857957f20c41ba1
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37947849"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39463044"
 ---
 # <a name="variantt-relational-operators"></a>_variant_t — Operatory relacyjne
 **Microsoft Specific**  
@@ -40,7 +40,6 @@ ms.locfileid: "37947849"
 ## <a name="syntax"></a>Składnia  
   
 ```  
-  
 bool operator==(  
    const VARIANT& varSrc) const;  
 bool operator==(  
@@ -66,5 +65,5 @@ bool operator!=(
   
  **END specyficzny dla Microsoft**  
   
-## <a name="see-also"></a>Zobacz też  
+## <a name="see-also"></a>Zobacz także  
  [_variant_t, klasa](../cpp/variant-t-class.md)

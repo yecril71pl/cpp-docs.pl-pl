@@ -17,20 +17,20 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: ceea3242087d89b511f6309003efe38d155735d2
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 75476fec3dcabda2990d3ca3f5dcf017688a176d
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33871526"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39466127"
 ---
 # <a name="context-sensitive-keywords--c-component-extensions"></a>Kontekstowe słowa kluczowe (C++ Component Extensions)
-*Kontekstowe słowa kluczowe* są elementy języka, które są rozpoznawane tylko w określonych kontekstach. Poza określonym kontekście kontekstowa — słowo kluczowe może być symbol zdefiniowany przez użytkownika.  
+*Kontekstowe słowa kluczowe* są elementami języka, które są rozpoznawane tylko w określonych kontekstach. Poza określonym kontekstem kontekstowe słowo kluczowe może być symbolem zdefiniowanych przez użytkownika.  
   
 ## <a name="all-runtimes"></a>Wszystkie środowiska wykonawcze  
  **Uwagi**  
   
- Poniżej przedstawiono listę kontekstowe słowa kluczowe:  
+ Oto lista kontekstowych słów kluczowych:  
   
 -   [abstract](../windows/abstract-cpp-component-extensions.md)  
   
@@ -46,7 +46,7 @@ ms.locfileid: "33871526"
   
 -   `internal`   
   
--   [Literału](../windows/literal-cpp-component-extensions.md)  
+-   [literał](../windows/literal-cpp-component-extensions.md)  
   
 -   [override](../windows/override-cpp-component-extensions.md)  
   
@@ -56,12 +56,12 @@ ms.locfileid: "33871526"
   
 -   `where` (część [ogólne](../windows/generics-cpp-component-extensions.md))  
   
- Do celów czytelność można ograniczyć korzystanie z kontekstowe słowa kluczowe jako symbole zdefiniowane przez użytkownika.  
+ Dla potrzeb czytelności warto ograniczyć korzystanie z kontekstowych słów kluczowych jako symboli zdefiniowanych przez użytkownika.  
   
 ## <a name="windows-runtime"></a>Środowisko wykonawcze systemu Windows  
  **Uwagi**  
   
- (Istnieją nie uwagi specyficzne dla platformy, dla tej funkcji.)  
+ (Nie ma żadnych uwag specyficznych dla platformy, dla tej funkcji).  
   
 ### <a name="requirements"></a>Wymagania  
  — Opcja kompilatora: **/ZW**  
@@ -69,7 +69,7 @@ ms.locfileid: "33871526"
 ## <a name="common-language-runtime"></a>środowiska uruchomieniowe w trakcie wykonania 
  **Uwagi**  
   
- (Istnieją nie uwagi specyficzne dla platformy, dla tej funkcji.)  
+ (Nie ma żadnych uwag specyficznych dla platformy, dla tej funkcji).  
   
 ### <a name="requirements"></a>Wymagania  
  — Opcja kompilatora:   **/CLR**  
@@ -77,9 +77,9 @@ ms.locfileid: "33871526"
 ### <a name="examples"></a>Przykłady  
  **Przykład**  
   
- W poniższym przykładzie pokazano, że w kontekście odpowiednie `property` kontekstowa — słowo kluczowe może służyć do definiowania właściwości oraz zmienna.  
+ Poniższy przykład kodu pokazuje, że w odpowiedniego kontekstu **właściwość** kontekstowe słowo kluczowe może służyć do definiowania właściwości i zmiennej.  
   
-```  
+```cpp  
 // context_sensitive_keywords.cpp  
 // compile with: /clr  
 public ref class C {  

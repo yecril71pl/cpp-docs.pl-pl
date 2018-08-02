@@ -14,12 +14,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 980aaa5bf0b9472e8fb1c6d7f6b3c56aa255d00b
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: 4ff0716359c715431f9887f50be06e592d57787e
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37947764"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39463915"
 ---
 # <a name="using-arrays-c"></a>Używanie tablic (C++)
 Dostęp do poszczególnych elementów tablicy za pomocą operatora indeksu dolnej tablicy (`[ ]`). Jeśli Jednowymiarowa tablica jest używany w wyrażeniu, które nie posiada indeksu dolnego, nazwa tablicy ocenia do wskaźnika do pierwszego elementu w tablicy.  
@@ -57,5 +57,5 @@ int main() {
   
  W poprzednim kodzie `multi` jest tablicą trójwymiarową typu **double**. `p2multi` Wskaźnik wskazuje na tablicę typu **double** o rozmiarze 3. W tym przykładzie tablica jest używana z jednym, dwoma i trzema indeksami dolnymi. Mimo że jest to bardziej powszechne, aby określić wszystkie indeksy dolne, jak w `cout` instrukcji, warto czasami wybrać określony podzbiór elementów tablicy, jak pokazano w następujących instrukcjach `cout`.  
   
-## <a name="see-also"></a>Zobacz też  
+## <a name="see-also"></a>Zobacz także  
  [Tablice](../cpp/arrays-cpp.md)

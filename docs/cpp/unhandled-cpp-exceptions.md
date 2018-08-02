@@ -18,19 +18,20 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: db763ce602531b15e840013a6dd235b3fba4007e
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 2e2162034b3e9ff93ebccca0f7eb53299b19c648
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39467540"
 ---
 # <a name="unhandled-c-exceptions"></a>Nieobsługiwane wyjątki języka C++
-Jeśli pasujące obsługi (lub wielokropek **catch** obsługi) nie można odnaleźć dla bieżącego wyjątku, wstępnie zdefiniowane `terminate` została wywołana funkcja czasu wykonywania. (Można również jawnie wywołać `terminate` w żadnym z programu obsługi.) Domyślną akcję `terminate` jest wywołanie `abort`. Jeśli chcesz `terminate` wywoływanie niektórych innych funkcji w programie przed zakończeniem pracy aplikacji, należy wywołać `set_terminate` funkcji o nazwie funkcja wywoływana, jako jego jeden argument. Możesz wywołać `set_terminate` w dowolnym momencie w programie. `terminate` Procedura zawsze wywołuje ostatniej podany jako argument do funkcji `set_terminate`.  
+Jeśli pasującej klauzuli obsługi (lub wielokropek **catch** obsługi) nie można odnaleźć dla bieżącego wyjątku jest wstępnie zdefiniowane `terminate` nosi nazwę funkcji czasu wykonywania. (Można także jawnie wywołać `terminate` w dowolnym inne programy obsługi.) Domyślną akcję `terminate` jest wywołanie `abort`. Jeśli chcesz `terminate` do wywołania niektórych innych funkcji w programie przed zakończeniem działania aplikacji, należy wywołać `set_terminate` funkcji o nazwie funkcja wywoływana, jako pojedynczy argument. Możesz wywołać `set_terminate` w dowolnym momencie w programach. `terminate` Procedura zawsze wywołuje ostatniej funkcji podawana jako argument do `set_terminate`.  
   
 ## <a name="example"></a>Przykład  
- Zgłasza wyjątek w poniższym przykładzie `char *` wyjątek, ale nie zawiera obsługi wyznaczony przechwytują wyjątki typu `char *`. Wywołanie `set_terminate` nakazuje `terminate` do wywołania `term_func`.  
+ Poniższy przykład generuje `char *` wyjątku, ale nie zawiera program obsługi wyznaczone do przechwytywania wyjątków typu `char *`. Wywołanie `set_terminate` powoduje, że `terminate` do wywołania `term_func`.  
   
-```  
+```cpp 
 // exceptions_Unhandled_Exceptions.cpp  
 // compile with: /EHsc  
 #include <iostream>  
@@ -55,11 +56,11 @@ int main() {
   
 ## <a name="output"></a>Dane wyjściowe  
   
-```  
+```Output  
 term_func was called by terminate.  
 ```  
   
- `term_func` Funkcja powinna zakończyć działanie programu lub bieżący wątek, najlepiej przez wywołanie metody `exit`. Jeśli nie, a zamiast tego zwraca do swojego obiektu wywołującego `abort` jest wywoływana.  
+ `term_func` Funkcji powinna zakończyć działanie programu lub bieżącego wątku, najlepiej przez wywołanie metody `exit`. Jeśli nie, a zamiast tego zwraca do obiektu wywołującego, `abort` jest wywoływana.  
   
-## <a name="see-also"></a>Zobacz też  
+## <a name="see-also"></a>Zobacz także  
  [Obsługa wyjątków języka C++](../cpp/cpp-exception-handling.md)

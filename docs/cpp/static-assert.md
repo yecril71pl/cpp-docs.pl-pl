@@ -19,12 +19,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: dc51fab2dade4c6bed0456dd353258df82722de5
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: 6fa9b8fb7fe85aca21e90195534f33201bee59fc
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37947947"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39464937"
 ---
 # <a name="staticassert"></a>static_assert
 Testuje asercję oprogramowania w czasie kompilacji. Jeśli podane wyrażenie stałe ma wartość FALSE, kompilator Wyświetla określony komunikat, jeśli zostało ono określone, a kompilacja kończy się niepowodzeniem ze zgłoszeniem błędu C2338; w przeciwnym razie deklaracja nie ma znaczenia.  
@@ -42,15 +42,15 @@ static_assert( constant-expression );
   
 |Parametr|Opis|  
 |---------------|-----------------|  
-|`constant-expression`|Wyrażenie stałe liczby całkowitej, można przekonwertować na wartość logiczną.<br /><br /> Jeśli obliczane wyrażenie jest równa zero (false), `string-literal` parametru jest wyświetlany, a kompilacja kończy się niepowodzeniem z powodu błędu. Jeśli wyrażenie jest niezerowe (PRAWDA), **static_assert** deklaracja nie ma wpływu.|  
-|`string-literal`|Komunikat, który jest wyświetlany, gdy `constant-expression` parametr ma wartość zero. Wiadomość to ciąg znaków w [podstawowy zestaw znaków](../c-language/ascii-character-set.md) z kompilatora; oznacza to, a nie [znaki wielobajtowe ani szerokie](../c-language/multibyte-and-wide-characters.md).|  
+|*constant-expression*|Wyrażenie stałe liczby całkowitej, można przekonwertować na wartość logiczną.<br /><br /> Jeśli obliczane wyrażenie jest równa zero (false), *literał ciągu* parametru jest wyświetlany, a kompilacja kończy się niepowodzeniem z powodu błędu. Jeśli wyrażenie jest niezerowe (PRAWDA), **static_assert** deklaracja nie ma wpływu.|  
+|*literał ciągu*|Komunikat, który jest wyświetlany, gdy *wyrażenie_stałe* parametr ma wartość zero. Wiadomość to ciąg znaków w [podstawowy zestaw znaków](../c-language/ascii-character-set.md) z kompilatora; oznacza to, a nie [znaki wielobajtowe ani szerokie](../c-language/multibyte-and-wide-characters.md).|  
   
 ## <a name="remarks"></a>Uwagi  
- `constant-expression` Parametru **static_assert** reprezentuje deklaracji *asercję oprogramowania*. Potwierdzenie oprogramowania określa warunek, który będzie mieć wartość true w określonym punkcie w programie. Jeśli warunek jest spełniony, **static_assert** deklaracja nie ma wpływu. Jeśli warunek nie jest spełniony, potwierdzenie nie powiedzie się, kompilator wyświetla komunikat w `string-literal` parametr i kompilacja kończy się niepowodzeniem z powodu błędu. W programie Visual Studio 2017 i nowsze parametr literał ciągu jest opcjonalny. 
+ *Wyrażenie_stałe* parametru **static_assert** reprezentuje deklaracji *asercję oprogramowania*. Potwierdzenie oprogramowania określa warunek, który będzie mieć wartość true w określonym punkcie w programie. Jeśli warunek jest spełniony, **static_assert** deklaracja nie ma wpływu. Jeśli warunek nie jest spełniony, potwierdzenie nie powiedzie się, kompilator wyświetla komunikat w *literał ciągu* parametr i kompilacja kończy się niepowodzeniem z powodu błędu. W programie Visual Studio 2017 i nowsze parametr literał ciągu jest opcjonalny. 
   
- **Static_assert** deklaracji testuje asercję oprogramowania w czasie kompilacji. Z kolei [assert — makro, _assert, _wassert](../c-runtime-library/reference/assert-macro-assert-wassert.md) makro testuje asercję oprogramowania w czasie wykonywania i ponosi koszty wykonywania w przestrzeni lub w czasie. **Static_assert** deklaracja jest szczególnie przydatna podczas debugowania szablonów, ponieważ argumenty szablonu mogą być zawarte w `constant-expression` parametru.  
+ **Static_assert** deklaracji testuje asercję oprogramowania w czasie kompilacji. Z kolei [assert — makro, _assert, _wassert](../c-runtime-library/reference/assert-macro-assert-wassert.md) makro testuje asercję oprogramowania w czasie wykonywania i ponosi koszty wykonywania w przestrzeni lub w czasie. **Static_assert** deklaracja jest szczególnie przydatna podczas debugowania szablonów, ponieważ argumenty szablonu mogą być zawarte w *wyrażenie_stałe* parametru.  
   
- Kompilator sprawdza **static_assert** deklaracji pod kątem błędów składniowych po napotkaniu deklaracji. Kompilator ocenia `constant-expression` parametr natychmiast, jeśli go nie zależy od parametru szablonu. W przeciwnym wypadku kompilator oblicza `constant-expression` parametru podczas tworzenia wystąpienia szablonu. W związku z tym, kompilator może wydać komunikat diagnostyczny raz po napotkaniu deklaracji, a następnie ponownie podczas konkretyzacji szablonu.  
+ Kompilator sprawdza **static_assert** deklaracji pod kątem błędów składniowych po napotkaniu deklaracji. Kompilator ocenia *wyrażenie_stałe* parametr natychmiast, jeśli go nie zależy od parametru szablonu. W przeciwnym wypadku kompilator oblicza *wyrażenie_stałe* parametru podczas tworzenia wystąpienia szablonu. W związku z tym, kompilator może wydać komunikat diagnostyczny raz po napotkaniu deklaracji, a następnie ponownie podczas konkretyzacji szablonu.  
   
  Możesz użyć **static_assert** — słowo kluczowe w przestrzeni nazw, klasy lub zakresie bloku. ( **Static_assert** — słowo kluczowe jest technicznie deklaracją, mimo że nie wprowadza nowej nazwy do tego programu, ponieważ może służyć w zakresie przestrzeni nazw.)  
   
@@ -64,7 +64,7 @@ static_assert(sizeof(void *) == 4, "64-bit code generation is not supported.");
 ```  
   
 ## <a name="description"></a>Opis  
- W poniższym przykładzie **static_assert** deklaracja ma zakres klasy. **Static_assert** sprawdza, czy parametr szablonu jest *zwykłe stare dane* typu (POD). Kompilator sprawdza **static_assert** deklaracji, gdy jest zadeklarowana, ale nie może oszacować `constant-expression` parametru do momentu `basic_string` konkretyzacji szablonu klasy w `main()`.  
+ W poniższym przykładzie **static_assert** deklaracja ma zakres klasy. **Static_assert** sprawdza, czy parametr szablonu jest *zwykłe stare dane* typu (POD). Kompilator sprawdza **static_assert** deklaracji, gdy jest zadeklarowana, ale nie może oszacować *wyrażenie_stałe* parametru do momentu `basic_string` konkretyzacji szablonu klasy w `main()`.  
   
 ## <a name="example"></a>Przykład  
   
@@ -111,7 +111,7 @@ public:
 };  
 ```  
   
-## <a name="see-also"></a>Zobacz też  
+## <a name="see-also"></a>Zobacz także  
  [Potwierdzanie i komunikaty dostarczone przez użytkownika (C++)](../cpp/assertion-and-user-supplied-messages-cpp.md)   
  [#error — dyrektywa (C/C++)](../preprocessor/hash-error-directive-c-cpp.md)   
  [assert Macro, _assert, _wassert](../c-runtime-library/reference/assert-macro-assert-wassert.md)   

@@ -1,5 +1,5 @@
 ---
-title: CriticalSection::Lock — Metoda | Dokumentacja firmy Microsoft
+title: CriticalSection::Lock, metoda | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 3c873494a702802b8ead3dab9cac28557664f618
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 1a4fee4991459ddbab0ac370f025776529a6bd1e
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33871328"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39464551"
 ---
 # <a name="criticalsectionlock-method"></a>CriticalSection::Lock — Metoda
-Czeka na prawo własności obiektu określona sekcja krytyczna. Funkcja zwraca, gdy wątek wywołujący jest własność.  
+Czeka na własność obiektu określona sekcja krytycznego. Funkcja zwróci, jeśli wątek wywołujący udzielono prawa własności.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -38,19 +38,19 @@ SyncLock Lock();
 ```  
   
 #### <a name="parameters"></a>Parametry  
- `cs`  
- Obiekt określony przez użytkownika sekcja krytyczna.  
+ *CS*  
+ Obiekt sekcję krytyczną określonych przez użytkownika.  
   
 ## <a name="return-value"></a>Wartość zwracana  
- Obiekt blokady, który może służyć do odblokowania bieżącej sekcji krytycznych.  
+ Obiekt blokady, który może służyć do odblokowania bieżąca sekcja krytycznego.  
   
 ## <a name="remarks"></a>Uwagi  
- Pierwszy **blokady** funkcji ma wpływ na bieżący obiekt sekcja krytyczna. Drugi **blokady** funkcji ma wpływ na określone przez użytkownika sekcja krytyczna.  
+ Pierwszy **blokady** funkcji ma wpływ na bieżący obiekt sekcję krytyczną. Drugi **blokady** funkcji ma wpływ na sekcję krytyczną określonych przez użytkownika.  
   
 ## <a name="requirements"></a>Wymagania  
  **Nagłówek:** corewrappers.h  
   
- **Namespace:** Microsoft::wrl:: wrappers —  
+ **Namespace:** Microsoft::wrl:: wrappers  
   
 ## <a name="see-also"></a>Zobacz też  
  [CriticalSection, klasa](../windows/criticalsection-class.md)

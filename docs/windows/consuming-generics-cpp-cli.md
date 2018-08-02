@@ -15,24 +15,24 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 286d032a3ae01bf146d25583bff18ef94e6cccd6
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: d8282079099b0b67b144f768a69f724e39305385
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33870822"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39460494"
 ---
 # <a name="consuming-generics-ccli"></a>Konsumowanie typów ogólnych (C++/CLI)
-Typy ogólne w jednym języku .NET mogą być używane w innych językach .NET. W przeciwieństwie do szablonów ogólnego w skompilowanym zestawie nadal pozostaje ogólnego. W związku z tym jedną może utworzyć wystąpienia typu ogólnego w innym zestawie i nawet w innym języku niż zestaw, w którym zdefiniowano typ ogólny.  
+Typy ogólne utworzonych w jednym języku .NET mogą być używane w innych językach .NET. W przeciwieństwie do szablonów ogólny w skompilowanym zestawie ciągle ogólnego. W związku z tym jeden może utworzyć wystąpienia typu rodzajowego w innym zestawie, a nawet w innym języku niż zestaw, w którym zdefiniowano typ ogólny.  
   
 ## <a name="example"></a>Przykład  
   
 ### <a name="description"></a>Opis  
- Ten przykład przedstawia klasy ogólnej zdefiniowany w języku C#.  
+ Ten przykład przedstawia klasę ogólną zdefiniowany w języku C#.  
   
 ### <a name="code"></a>Kod  
   
-```  
+```cs  
 // consuming_generics_from_other_NET_languages.cs  
 // compile with: /target:library  
 // a C# program  
@@ -91,11 +91,11 @@ public class CircularList<ItemType> {
 ## <a name="example"></a>Przykład  
   
 ### <a name="description"></a>Opis  
- W tym przykładzie korzysta z zestawu utworzone w języku C#.  
+ W tym przykładzie używa zestawów utworzonych w języku C#.  
   
 ### <a name="code"></a>Kod  
   
-```  
+```cpp  
 // consuming_generics_from_other_NET_languages_2.cpp  
 // compile with: /clr  
 #using <consuming_generics_from_other_NET_languages.dll>  

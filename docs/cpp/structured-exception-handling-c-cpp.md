@@ -19,12 +19,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 64ff69a4ab75189dd069e774eb05266e6140ff77
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: 1edcf2cb24273f475b1ba98e5e973f5704c0cec8
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37940498"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39461705"
 ---
 # <a name="structured-exception-handling-cc"></a>Obsługa wyjątków strukturalnych (C/C++)
 Chociaż Windows i Visual C++ obsługi wyjątków strukturalnych (SEH) obsługi, zaleca się używać ISO standard C++ obsługi wyjątków, ponieważ dzięki niej kod jest bardziej przenośny i elastyczny. Niemniej jednak w istniejącym kodzie lub dla szczególnych typów programów możesz nadal może być konieczne używanie SEH.  
@@ -72,7 +72,7 @@ Chociaż Windows i Visual C++ obsługi wyjątków strukturalnych (SEH) obsługi,
 -   [Korzystanie z obsługi wyjątków strukturalnych za pomocą języka C++](../cpp/using-structured-exception-handling-with-cpp.md)  
   
 ## <a name="example"></a>Przykład  
- Jak wspomniano wcześniej, destruktory dla obiektów lokalnych są wywoływane, jeśli SEH należy używać w programie C++ i skompiluj go za pomocą **/EH** opcji z niektórych Modyfikatory — na przykład **/ehsc** i   **/eha**. Jednakże zachowanie podczas wykonywania może nie być, oczekują Jeśli używane są również wyjątki C++. W poniższym przykładzie pokazano te różnice w zachowaniu.  
+ Jak wspomniano wcześniej, destruktory dla obiektów lokalnych są wywoływane, jeśli SEH należy używać w programie C++ i skompiluj go za pomocą `/EH` opcji z niektórych Modyfikatory — na przykład `/EHsc` i `/EHa`. Jednakże zachowanie podczas wykonywania może nie być, oczekują Jeśli używane są również wyjątki C++. W poniższym przykładzie pokazano te różnice w zachowaniu.  
   
 ```cpp  
 #include <stdio.h>  
@@ -119,7 +119,6 @@ int main()
   
     return 0;  
 }  
-  
 ```  
   
  Jeśli używasz **/ehsc** skompilować ten kod, ale kontroli lokalnego testu `CPPEX` jest niezdefiniowana, istnieje nie wykonywania `TestClass` destruktor i dane wyjściowe wyglądają podobnie do następującego:  
@@ -149,7 +148,7 @@ Executing SEH __except block
   
 **END specyficzny dla Microsoft**  
   
-## <a name="see-also"></a>Zobacz też  
+## <a name="see-also"></a>Zobacz także  
  [Obsługa wyjątków](../cpp/exception-handling-in-visual-cpp.md)   
  [Keywords](../cpp/keywords-cpp.md)   
  [\<wyjątku >](../standard-library/exception.md)   

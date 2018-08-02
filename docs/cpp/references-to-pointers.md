@@ -14,21 +14,22 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f9cfec6642604fb495051d44d816d4a3370e9a8e
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 3de0974608f313a497dfb93d357995e7cc578e4d
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39467495"
 ---
 # <a name="references-to-pointers"></a>Odwołania do wskaźników
-Odwołania do wskaźników mogą być deklarowane w znacznie taki sam sposób jak odwołania do obiektów. Deklarowanie odwołania do wskaźnika wyznaczające wartość można modyfikować, który jest używany jak normalny wskaźnik.  
+Odwołania do wskaźników może być zadeklarowana w podobny sposób jak odwołania do obiektów. Deklarowanie odwołanie do wskaźnika daje modyfikowane przez wartość, która jest używany jak normalne wskaźnika.  
   
 ## <a name="example"></a>Przykład  
- Poniższe przykłady kodu przedstawiono różnica między przy użyciu wskaźnika do wskaźnika i odwołanie do wskaźnika.  
+ Poniższe przykłady kodu ilustrują różnicę między za pomocą wskaźnika do wskaźnika i odwołanie do wskaźnika.  
   
- Funkcje `Add1` i `Add2` działają tak samo (mimo że nie są one nazywane tak samo). Różnica jest to, że `Add1` używa dwukrotnie pośredni, podczas gdy `Add2` używa wygodę odwołanie do wskaźnika.  
+ Funkcje `Add1` i `Add2` są funkcjonalnie równoważne (mimo że nie są wywoływane tak samo). Różnica jest to, że `Add1` używa dwukrotnie pośredniego, natomiast `Add2` używa wygody odwołanie do wskaźnika.  
   
-```  
+```cpp 
 // references_to_pointers.cpp  
 // compile with: /EHsc  
   
@@ -166,5 +167,5 @@ where:
 Input is from stdin.  
 ```  
   
-## <a name="see-also"></a>Zobacz też  
+## <a name="see-also"></a>Zobacz także  
  [Odwołania](../cpp/references-cpp.md)

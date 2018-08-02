@@ -1,5 +1,5 @@
 ---
-title: Comptr::comptr — Konstruktor | Dokumentacja firmy Microsoft
+title: ComPtr::ComPtr, Konstruktor | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: e3a632c96c39ccd40f008556287af95944530cdc
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: d08eb264ff3b4fc2f0170d6aee742ff29611613e
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33871178"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39465373"
 ---
 # <a name="comptrcomptr-constructor"></a>ComPtr::ComPtr — Konstruktor
-Intializes nowe wystąpienie klasy comptr — klasa. Przeciążenia Podaj konstruktorów domyślnej, copy, przenoszenia i konwersji.  
+Aktywuje nowe wystąpienie klasy **ComPtr** klasy. Przeciążenia zawierają konstruktory domyślne, kopiowanie, przenoszenie i konwersji.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -59,27 +59,27 @@ WRL_NOTHROW ComPtr(
 ```  
   
 #### <a name="parameters"></a>Parametry  
- `U`  
- Typ `other` parametru.  
+ *U*  
+ Typ *innych* parametru.  
   
- `other`  
- Obiekt typu `U`.  
+ *other*  
+ Obiekt typu *U*.  
   
 ## <a name="return-value"></a>Wartość zwracana  
   
 ## <a name="remarks"></a>Uwagi  
- Pierwszy Konstruktor jest domyślny konstruktor, który implictly tworzy pusty obiekt. Określa drugi Konstruktor [__nullptr](../windows/nullptr-cpp-component-extensions.md), co powoduje jawnie pustego obiektu.  
+ Pierwszy Konstruktor jest konstruktor domyślny, która niejawnie tworzy pustego obiektu. Drugi Konstruktor Określa [__nullptr](../windows/nullptr-cpp-component-extensions.md), co powoduje jawne utworzenie pustego obiektu.  
   
- Trzeci konstruktora tworzy obiekt z obiektu określonego przez wskaźnik.  
+ Trzeci Konstruktor tworzy obiekt w obiekcie określonym przez wskaźnik.  
   
- Konstruktory czwartym i piątym są konstruktorami kopiowania. Konstruktor piątej kopiuje obiekt, czy jest możliwe do przekonwertowania na typ bieżącego.  
+ Konstruktory czwarty i piąty są konstruktorów kopiujących. Piąty Konstruktor kopiuje obiekt, jeśli jest konwertowany na typ bieżącego.  
   
- Konstruktory szóstego lub siódmego są konstruktorów przenoszenia. Konstruktor siódmego przenosi obiekt, jeśli do przekonwertowania na typ bieżącego.  
+ Konstruktory szóstego lub siódmego są konstruktorów przenoszenia. Siódmego Konstruktor przenosi obiekt, jeśli jest konwertowany na typ bieżącego.  
   
 ## <a name="requirements"></a>Wymagania  
  **Nagłówek:** client.h  
   
- **Namespace:** Microsoft::wrl —  
+ **Namespace:** Microsoft::WRL  
   
 ## <a name="see-also"></a>Zobacz też  
  [ComPtr, klasa](../windows/comptr-class.md)

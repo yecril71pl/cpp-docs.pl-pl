@@ -1,5 +1,5 @@
 ---
-title: AsyncBase::GetOnComplete — metoda | Dokumentacja firmy Microsoft
+title: AsyncBase::GetOnComplete, metoda | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: fa1bf81c8b377da44fb4b81cdb2b0142e90032e0
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 15a561924cad314d09209e205ac73430f6d8be01
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33865113"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39466575"
 ---
 # <a name="asyncbasegetoncomplete-method"></a>AsyncBase::GetOnComplete — Metoda
 Kopiuje adres bieżącej obsługi zdarzeń zakończenia do określonej zmiennej.  
@@ -36,7 +36,7 @@ STDMETHOD(
 ```  
   
 #### <a name="parameters"></a>Parametry  
- `completeHandler`  
+ *completeHandler*  
  Lokalizacja przechowywania adres bieżącej obsługi zdarzeń zakończenia.  
   
 ## <a name="return-value"></a>Wartość zwracana  
@@ -45,7 +45,7 @@ STDMETHOD(
 ## <a name="requirements"></a>Wymagania  
  **Nagłówek:** async.h  
   
- **Namespace:** Microsoft::wrl —  
+ **Namespace:** Microsoft::WRL  
   
 ## <a name="see-also"></a>Zobacz też  
  [AsyncBase, klasa](../windows/asyncbase-class.md)

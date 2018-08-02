@@ -17,17 +17,17 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a412c2b4dd87bc3e8e3e1b77a524d2a5925aaf60
-ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
+ms.openlocfilehash: a819c435135d2ee9c310f8fd4a5628d2d9d0acb1
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/01/2018
-ms.locfileid: "39405061"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39466816"
 ---
 # <a name="comments-c"></a>Komentarze (C++)
 Komentarz to tekst, który Kompilator ignoruje, ale jest to przydatne dla programistów. Komentarze są zwykle używane do Dodawanie adnotacji do kodu do użytku w przyszłości. Kompilator traktuje je jako biały znak. Komentarze w zakresie testowania można użyć do dezaktywowania pewnych linii kodu; jednak `#if` / `#endif` dyrektywy preprocesora usprawnieniu to ponieważ można otoczyć kod, który zawiera komentarze, ale nie można zagnieździć komentarzy.  
   
- Komentarz C++ są zapisywane w jednym z następujących sposobów:  
+Komentarz C++ są zapisywane w jednym z następujących sposobów:  
   
 -   `/*` (Ukośnika, gwiazdka) znaki, po których dowolnej sekwencji znaków (łącznie z nowych wierszy), a następnie `*/` znaków. Ta składnia jest taka sama jak ANSI C.  
   

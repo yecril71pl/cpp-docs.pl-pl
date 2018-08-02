@@ -17,17 +17,17 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3efc793e5030fa86c3bd1214ef4b8b408361a4ef
-ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
+ms.openlocfilehash: 77748cd69a3424bb4b2e209a0a447d39eae25147
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/01/2018
-ms.locfileid: "39408615"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39466907"
 ---
 # <a name="deprecated-c"></a>przestarzałe (C++)
 Ten temat dotyczy specyficzne dla firmy Microsoft przestarzałe declspec deklaracji. Aby uzyskać informacje o C ++ 14 `[[deprecated]]` atrybutu i wskazówki dotyczące kiedy należy używać tego atrybutu, a declspec specyficzne dla firmy Microsoft lub pragma, zobacz [atrybuty Standard C++](attributes.md).
 
- Z wyjątkiem wymienionych poniżej **przestarzałe** deklaracji oferuje te same funkcje co [przestarzałe](../preprocessor/deprecated-c-cpp.md) pragmy:  
+Z wyjątkiem wymienionych poniżej **przestarzałe** deklaracji oferuje te same funkcje co [przestarzałe](../preprocessor/deprecated-c-cpp.md) pragmy:  
   
 -   **Przestarzałe** deklaracji umożliwia określenie konkretnego rodzaje przeciążenia funkcji jako przestarzałe, formularz pragma ma zastosowanie do wszystkich formularzy przeciążona nazwy funkcji.  
   

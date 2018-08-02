@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 6775e9466ed337a070b6a234a4d65bb949a009e4
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 18ce213d6c4bedd0bcaa2be1af33281ae69f6ad1
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33857958"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39461508"
 ---
 # <a name="activationfactory-class"></a>ActivationFactory — Klasa
-Umożliwia co najmniej jedną klasę do aktywacji przez środowisko wykonawcze systemu Windows.  
+Umożliwia co najmniej jedną klasę na uaktywnianie przez środowisko wykonawcze Windows.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -39,23 +39,23 @@ class ActivationFactory : public Details::RuntimeClass<typename Details::Interfa
 ```  
   
 #### <a name="parameters"></a>Parametry  
- `I0`  
- Interfejs zeroth.  
+ *I0*  
+ Interfejsu zerowego.  
   
- `I1`  
+ *I1*  
  Pierwszy interfejs.  
   
- `I2`  
+ *I2*  
  Drugi interfejs.  
   
 ## <a name="remarks"></a>Uwagi  
- Activationfactory — udostępnia metody rejestracji i podstawowych funkcji interfejsu IActivationFactory. Activationfactory — umożliwia także fabrycznej implementacji.  
+ **Activationfactory —** udostępnia metody rejestracji i podstawowe funkcje dla `IActivationFactory` interfejsu. **Activationfactory —** oferuje również możliwość implementacji niestandardowych fabryki.  
   
- Poniższy fragment kodu symbolicznie ilustruje sposób używania activationfactory —.  
+ Poniższy fragment kodu ilustruje symbolicznie sposób użycia activationfactory —.  
   
  [!code-cpp[wrl-microsoft__wrl__activationfactory#1](../windows/codesnippet/CPP/activationfactory-class_1.cpp)]  
   
- Poniższy fragment kodu przedstawia sposób użycia [implementuje](../windows/implements-structure.md) struktury, aby określić więcej niż trzy interfejsu identyfikatorów.  
+ Poniższy fragment kodu przedstawia sposób użycia [implementuje](../windows/implements-structure.md) struktury, aby określić więcej niż trzy identyfikatory interfejsu.  
   
  `struct MyFactory : ActivationFactory<Implements<I1, I2, I3>, I4, I5>;`  
   
@@ -65,18 +65,18 @@ class ActivationFactory : public Details::RuntimeClass<typename Details::Interfa
   
 |Nazwa|Opis|  
 |----------|-----------------|  
-|[ActivationFactory::ActivationFactory, konstruktor](../windows/activationfactory-activationfactory-constructor.md)|Inicjuje activationfactory — klasa.|  
+|[ActivationFactory::ActivationFactory, konstruktor](../windows/activationfactory-activationfactory-constructor.md)|Inicjuje **activationfactory —** klasy.|  
   
 ### <a name="public-methods"></a>Metody publiczne  
   
 |Nazwa|Opis|  
 |----------|-----------------|  
-|[ActivationFactory::AddRef, metoda](../windows/activationfactory-addref-method.md)|Zwiększa liczbę odwołanie do bieżącego obiektu activationfactory —.|  
-|[ActivationFactory::GetIids, metoda](../windows/activationfactory-getiids-method.md)|Pobiera tablica zaimplementowanego interfejsu identyfikatorów.|  
-|[ActivationFactory::GetRuntimeClassName, metoda](../windows/activationfactory-getruntimeclassname-method.md)|Pobiera obiekt, który tworzy bieżącego activationfactory — Nazwa klasy środowiska wykonawczego.|  
-|[ActivationFactory::GetTrustLevel, metoda](../windows/activationfactory-gettrustlevel-method.md)|Pobiera obiekt, który tworzy bieżącego activationfactory — poziom zaufania.|  
+|[ActivationFactory::AddRef, metoda](../windows/activationfactory-addref-method.md)|Zwiększa liczbę odwołań bieżącego **activationfactory —** obiektu.|  
+|[ActivationFactory::GetIids, metoda](../windows/activationfactory-getiids-method.md)|Pobiera tablicę zaimplementowanego interfejsu identyfikatorów.|  
+|[ActivationFactory::GetRuntimeClassName, metoda](../windows/activationfactory-getruntimeclassname-method.md)|Pobiera nazwę klasy środowiska uruchomieniowego, obiektu, który bieżącego **activationfactory —** tworzy wystąpienie.|  
+|[ActivationFactory::GetTrustLevel, metoda](../windows/activationfactory-gettrustlevel-method.md)|Pobiera obiektu, który tworzy wystąpienie bieżącego activationfactory — poziom zaufania.|  
 |[ActivationFactory::QueryInterface, metoda](../windows/activationfactory-queryinterface-method.md)|Pobiera wskaźnik do określonego interfejsu.|  
-|[ActivationFactory::Release, metoda](../windows/activationfactory-release-method.md)|Zmniejsza odwołanie liczba bieżącego obiektu activationfactory —.|  
+|[ActivationFactory::Release, metoda](../windows/activationfactory-release-method.md)|Dekrementuje liczbę odwołań bieżącego **activationfactory —** obiektu.|  
   
 ## <a name="inheritance-hierarchy"></a>Hierarchia dziedziczenia  
  `I0`  
@@ -102,7 +102,7 @@ class ActivationFactory : public Details::RuntimeClass<typename Details::Interfa
 ## <a name="requirements"></a>Wymagania  
  **Nagłówek:** module.h  
   
- **Namespace:** Microsoft::wrl —  
+ **Namespace:** Microsoft::WRL  
   
 ## <a name="see-also"></a>Zobacz też  
  [Microsoft::WRL, przestrzeń nazw](../windows/microsoft-wrl-namespace.md)

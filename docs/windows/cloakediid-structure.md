@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 57ad76b48b92519eaeed089dfb14817c38273588
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 3e0155006987165f5b192aac73bb31991081a231
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33856163"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39461226"
 ---
 # <a name="cloakediid-structure"></a>CloakedIid — Struktura
-Wskazuje szablonów runtimeclass — i implementuje chaininterfaces — określonego interfejsu nie jest dostępny na liście IID.  
+Wskazuje, aby `RuntimeClass`, `Implements` i `ChainInterfaces` określonego interfejsu nie jest dostępny na liście IID szablonów.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -35,11 +35,11 @@ struct CloakedIid : T;
 ```  
   
 #### <a name="parameters"></a>Parametry  
- `T`  
- Interfejs, który jest ukryty (osłonięty).  
+ *T*  
+ Interfejs który jest ukryty (osłonięty).  
   
 ## <a name="remarks"></a>Uwagi  
- Poniżej przedstawiono przykład sposobu używania cloakediid —: `struct MyRuntimeClass : RuntimeClass<CloakedIid<IMyCloakedInterface>> {}`.  
+ Poniżej przedstawiono przykładowy sposób `CloakedIid` służy: `struct MyRuntimeClass : RuntimeClass<CloakedIid<IMyCloakedInterface>> {}`.  
   
 ## <a name="inheritance-hierarchy"></a>Hierarchia dziedziczenia  
  `T`  
@@ -49,7 +49,7 @@ struct CloakedIid : T;
 ## <a name="requirements"></a>Wymagania  
  **Nagłówek:** implements.h  
   
- **Namespace:** Microsoft::wrl —  
+ **Namespace:** Microsoft::WRL  
   
 ## <a name="see-also"></a>Zobacz też  
  [Microsoft::WRL, przestrzeń nazw](../windows/microsoft-wrl-namespace.md)

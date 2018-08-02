@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 175dcbbf94ff28b1f59804eb996254e29dfef243
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: 758862d5296cf0a51cc0e04d849b044b3694e087
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37947890"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39461891"
 ---
 # <a name="restrict-c-amp"></a>ograniczenie (C++ AMP)
 Specyfikator ograniczenia może być stosowany do funkcji i deklaracji lambda. Wymusza on ograniczenia dotyczące kodu w funkcji i zachowania funkcji w zastosowaniach, które korzystają ze środowiska uruchomieniowego C++ Accelerated Massive Parallelism (C++ AMP).  
@@ -93,7 +93,6 @@ Specyfikator ograniczenia może być stosowany do funkcji i deklaracji lambda. W
  Poniższy przykład pokazuje, jak używać `restrict(amp)`klauzuli.  
   
 ```cpp 
-  
 void functionAmp() restrict(amp) {}   
 void functionNonAmp() {}   
   
@@ -109,9 +108,8 @@ void callFunctions() restrict(amp)
   
     // Calling a non-amp-restricted function is not allowed.  
     // functionNonAmp();   
-  
 }  
 ```  
   
-## <a name="see-also"></a>Zobacz też  
+## <a name="see-also"></a>Zobacz także  
  [C++ AMP (C++ Accelerated Massive Parallelism)](../parallel/amp/cpp-amp-cpp-accelerated-massive-parallelism.md)

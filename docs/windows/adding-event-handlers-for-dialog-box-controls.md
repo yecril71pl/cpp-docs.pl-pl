@@ -1,5 +1,5 @@
 ---
-title: Dodawanie programów obsługi zdarzeń dla formantów okna dialogowego | Dokumentacja firmy Microsoft
+title: Dodawanie obsługi zdarzeń dla formantów okna dialogowego | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 06/28/2018
 ms.technology:
@@ -18,46 +18,46 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: bb39e502ccc40531e72f761a414e4088de8b147d
-ms.sourcegitcommit: 208d445fd7ea202de1d372d3f468e784e77bd666
+ms.openlocfilehash: 589318286c48351e3eae6e3a83f42741a805ce68
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/29/2018
-ms.locfileid: "37121125"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39463759"
 ---
 # <a name="adding-event-handlers-for-dialog-box-controls"></a>Dodawanie obsługi zdarzeń dla formantów okna dialogowego
 
-Dla projektu okien dialogowych, które są już skojarzone z klasą możesz można korzystać z niektórych skróty podczas tworzenia procedury obsługi zdarzeń. Może szybko utworzyć programu obsługi dla zdarzenia powiadomień kontroli domyślne lub dla dowolnego odpowiednich komunikatów systemu Windows.
+Dla projektu oknach dialogowych, które są już skojarzone z klasą możesz korzystać z zalet niektóre skróty podczas tworzenia procedur obsługi zdarzeń. Można szybko utworzyć program obsługi zdarzenia powiadomień formantu domyślne lub wszystkie odpowiednie komunikaty Windows.
 
-## <a name="to-create-a-handler-for-the-default-control-notification-event"></a>Aby utworzyć programu obsługi dla zdarzenia powiadomień kontrolki domyślne
+## <a name="to-create-a-handler-for-the-default-control-notification-event"></a>Aby utworzyć program obsługi zdarzenia powiadomień formantu domyślne
 
-1. Kliknij dwukrotnie formant. Otwiera edytora tekstu.
+1. Kliknij dwukrotnie formant. Zostanie otwarty Edytor tekstu.
 
-2. Dodaj kod obsługi powiadamiania kontrolki w edytorze tekstu.
+2. Dodaj kod procedury obsługi powiadamiania kontrolki w edytorze tekstów.
 
-## <a name="to-create-a-handler-for-any-applicable-windows-message"></a>Aby utworzyć program obsługi żadnych odpowiednich komunikatów systemu Windows
+## <a name="to-create-a-handler-for-any-applicable-windows-message"></a>Aby utworzyć procedury obsługi dla dowolnego odpowiednią wiadomość Windows
 
-1. Kliknij formant, dla którego chcesz obsługiwać zdarzenia z powiadomieniem.
+1. Kliknij formant, dla którego chcesz obsłużyć zdarzenie powiadomienia.
 
-2. W [okna właściwości](/visualstudio/ide/reference/properties-window), kliknij przycisk **ControlEvents** przycisk, aby wyświetlić listę typowych zdarzeń systemu Windows skojarzony z formantem. Na przykład standardowe **OK** znajdującego się na **o** okno dialogowe wyświetla następujące zdarzenia powiadomień:
+2. W [okno właściwości](/visualstudio/ide/reference/properties-window), kliknij przycisk **ControlEvents** przycisk, aby wyświetlić listę typowych zdarzeń Windows skojarzonego z kontrolką. Na przykład standardowy **OK** znajdujący się na **o** okno dialogowe wyświetla następujące zdarzenia powiadomień:
 
-   - **BN_CLICKED**
+   - BN_CLICKED
 
-   - **BN_DOUBLECLICKED**
+   - BN_DOUBLECLICKED
 
-   - **BN_KILLFOCUS**
+   - BN_KILLFOCUS
 
-   - **BN_SETFOCUS**
-
-    > [!NOTE]
-    > Alternatywnie okno dialogowe Wybieranie i kliknij przycisk **ControlEvents** przycisk, aby wyświetlić listę typowych zdarzeń systemu Windows dla wszystkich kontrolek w oknie dialogowym.
-
-3. W **właściwości** okna, kliknij prawy kolumnę obok zdarzenia w celu obsługi, a następnie wybierz nazwę zdarzenia sugerowane powiadomienia (na przykład **OnBnClickedOK** dojść **BN_CLICKED** ).
+   - BN_SETFOCUS
 
     > [!NOTE]
-    > Alternatywnie możesz podać nazwę programu obsługi zdarzeń wybrana, a nie wybrana domyślna nazwa programu obsługi zdarzeń.
+    > Alternatywnie, wybierz okno dialogowe i kliknij przycisk **ControlEvents** przycisk, aby wyświetlić listę typowych zdarzeń Windows dla wszystkich kontrolek w oknie dialogowym.
 
-   Po wybraniu zdarzenia programu Visual Studio otwiera edytor tekstu i wyświetla kod obsługi zdarzenia. Na przykład następujący kod jest dodawany do domyślnie **OnBnClickedOK**:
+3. W **właściwości** okna, kliknij kolumnę prawym obok zdarzenia w celu obsługi, a następnie wybierz nazwę zdarzenia sugerowane powiadomień (na przykład **OnBnClickedOK** uchwyty **BN_CLICKED** ).
+
+    > [!NOTE]
+    > Alternatywnie możesz podać nazwę procedury obsługi zdarzeń wybór, a nie wybrana domyślna nazwa programu obsługi zdarzeń.
+
+   Po wybraniu zdarzenia programu Visual Studio otwiera edytor tekstu i wyświetla kod procedury obsługi zdarzeń. Na przykład, poniższy kod zostanie dodany do domyślnej **OnBnClickedOK**:
 
     ```cpp
     void CAboutDlg::OnBnClickedOk(void)
@@ -66,9 +66,9 @@ Dla projektu okien dialogowych, które są już skojarzone z klasą możesz moż
     }
     ```
 
-Jeśli chcesz dodać procedury obsługi zdarzeń do klasy innej niż jedna implementacja okna dialogowego, użyj [Kreator obsługi zdarzeń](../ide/event-handler-wizard.md). Aby uzyskać więcej informacji, zobacz [Dodawanie obsługi zdarzeń](../ide/adding-an-event-handler-visual-cpp.md).
+Jeśli chcesz dodać program obsługi zdarzeń do klasy innej niż jedna implementacja okna dialogowego, użyj [Kreator obsługi zdarzeń](../ide/event-handler-wizard.md). Aby uzyskać więcej informacji, zobacz [Dodawanie obsługi zdarzeń](../ide/adding-an-event-handler-visual-cpp.md).
 
-Aby uzyskać informacje o dodawaniu zasobów do projektów zarządzanych, zobacz [zasobów w aplikacjach pulpitu](/dotnet/framework/resources/index) w *Przewodnik programistów platformy .NET Framework.* Aby uzyskać informacje na ręczne dodanie do projektów zarządzanych plików zasobów, uzyskiwanie dostępu do zasobów, wyświetlanie zasoby statyczne i przypisanie do właściwości ciągów zasobów, zobacz [tworzenie plików zasobów dla aplikacji pulpitu](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Informacje dotyczące globalizacji i lokalizacji zasobów w zarządzanych aplikacjach, zobacz [Globalizing i lokalizacja aplikacji .NET Framework](/dotnet/standard/globalization-localization/index).
+Aby uzyskać informacje na temat dodawania zasobów do projektów zarządzanych, zobacz [zasoby w aplikacjach pulpitu](/dotnet/framework/resources/index) w *przewodniku dewelopera .NET Framework.* Aby uzyskać informacji na temat ręcznego dodawania plików zasobów do projektów zarządzanych, uzyskiwania dostępu do zasobów, wyświetlania statycznych zasobów i przypisywania ciągów zasobów do właściwości, zobacz [Creating Resource Files dla aplikacji klasycznych](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Aby uzyskać informacji na temat globalizacja i lokalizacja zasobów w aplikacjach zarządzanych, zobacz [Globalizing i lokalizowanie aplikacji programu .NET Framework](/dotnet/standard/globalization-localization/index).
 
 ### <a name="requirements"></a>Wymagania
 

@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fc826b588f133abb93c9942e7907dd8b0fce9574
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: 5e226fdf4f8978172a187e1bfa8d53655ce368f5
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37947778"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39463304"
 ---
 # <a name="while-statement-c"></a>while — instrukcja (C++)
 Wykonuje *instrukcji* wielokrotnie do momentu *wyrażenie* osiągnie wartość zero.  
@@ -30,7 +30,6 @@ Wykonuje *instrukcji* wielokrotnie do momentu *wyrażenie* osiągnie wartość z
 ## <a name="syntax"></a>Składnia  
   
 ```  
-  
 while ( expression )  
    statement  
 ```  
@@ -71,7 +70,7 @@ int main()
   
  Warunku zakończenia jest oceniany u góry pętli. Jeśli nie ma żadnych końcowe znaki podkreślenia, pętla nigdy nie jest wykonywany.  
   
-## <a name="see-also"></a>Zobacz też  
+## <a name="see-also"></a>Zobacz także  
  [Instrukcje iteracji](../cpp/iteration-statements-cpp.md)   
  [Keywords](../cpp/keywords-cpp.md)   
  [czy-while — instrukcja (C++)](../cpp/do-while-statement-cpp.md)   

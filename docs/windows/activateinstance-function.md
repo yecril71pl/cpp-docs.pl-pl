@@ -18,15 +18,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: c0bf945dd8225ca3c153d7f497ded6b83ebd022d
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 413bf73d5aeaef2c210be89f3c6f4ca3a4254ba4
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33855578"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39461974"
 ---
 # <a name="activateinstance-function"></a>ActivateInstance — Funkcja
-Rejestruje i pobiera wystąpienia określonego typu zdefiniowane w identyfikatora dla określonej klasy.  
+Rejestruje i pobiera wystąpienia danego typu zdefiniowane w identyfikatorze określonej klasy.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -39,14 +39,14 @@ inline HRESULT ActivateInstance(
 ```  
   
 #### <a name="parameters"></a>Parametry  
- `T`  
- Typ do aktywacji.  
+ *T*  
+ Typ, aby aktywować.  
   
- `activatableClassId`  
- Nazwa Identyfikatora klasy, który definiuje parametru `T`.  
+ *activatableClassId*  
+ Nazwa Identyfikatora klasy, który definiuje parametru *T*.  
   
- `instance`  
- Po zakończeniu tej operacji, odwołania do wystąpienia `T`.  
+ *wystąpienia*  
+ Po zakończeniu tej operacji, odwołanie do wystąpienia *T*.  
   
 ## <a name="return-value"></a>Wartość zwracana  
  S_OK w przypadku powodzenia; w przeciwnym razie błąd HRESULT, która wskazuje przyczynę błędu.  
@@ -54,7 +54,7 @@ inline HRESULT ActivateInstance(
 ## <a name="requirements"></a>Wymagania  
  **Nagłówek:** client.h  
   
- **Namespace:** Windows::Foundation —  
+ **Namespace:** Windows::Foundation  
   
 ## <a name="see-also"></a>Zobacz też  
  [Windows::Foundation, przestrzeń nazw](../windows/windows-foundation-namespace.md)

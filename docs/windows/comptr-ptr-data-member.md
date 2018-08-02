@@ -1,5 +1,5 @@
 ---
-title: Comptr::ptr_ — członek danych | Dokumentacja firmy Microsoft
+title: ComPtr::ptr_, składowa danych | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: d995c8e35ed35d4581d8eec8b74fda1ebbca6519
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: d22112e3478e17e8ed9688749c83cf1c3997d7e3
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33880810"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39465103"
 ---
 # <a name="comptrptr-data-member"></a>ComPtr::ptr_ — Członek danych
-Zawiera wskaźnik do interfejsu, który jest skojarzony z i zarządzany przez ten comptr —.  
+Zawiera wskaźnik do interfejsu, który jest skojarzony z i zarządzanego przez to **ComPtr**.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -34,12 +34,12 @@ InterfaceType *ptr_;
 ```  
   
 ## <a name="remarks"></a>Uwagi  
- `ptr_` jest elementem członkowskim wewnętrzne, chronionych danych.  
+ **ptr_ — element** jest elementem członkowskim wewnętrznego, chronionych danych.  
   
 ## <a name="requirements"></a>Wymagania  
  **Nagłówek:** client.h  
   
- **Namespace:** Microsoft::wrl —  
+ **Namespace:** Microsoft::WRL  
   
 ## <a name="see-also"></a>Zobacz też  
  [ComPtr, klasa](../windows/comptr-class.md)

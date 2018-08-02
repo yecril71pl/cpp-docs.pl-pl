@@ -1,5 +1,5 @@
 ---
-title: AsyncBase::ErrorCode — metoda | Dokumentacja firmy Microsoft
+title: AsyncBase::ErrorCode, metoda | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: abd3eae18d793739866b6c0dd8a1b6a994093c93
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 580df181e544ced6594b049b85d7f147bd2fe22e
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33859582"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39464619"
 ---
 # <a name="asyncbaseerrorcode-method"></a>AsyncBase::ErrorCode — Metoda
 Pobiera kod błędu dla bieżącej operacji asynchronicznej.  
@@ -36,16 +36,16 @@ inline void ErrorCode(
 ```  
   
 #### <a name="parameters"></a>Parametry  
- `error`  
- Lokalizacja, w której przechowuje bieżącego kodu błędu w tej operacji.  
+ *Błąd*  
+ Lokalizacja, w której przechowuje bieżący kod błędu w tej operacji.  
   
 ## <a name="remarks"></a>Uwagi  
- Ta operacja jest bezpieczne wątkowo.  
+ Ta operacja jest metodą o bezpiecznych wątkach.  
   
 ## <a name="requirements"></a>Wymagania  
  **Nagłówek:** async.h  
   
- **Namespace:** Microsoft::wrl —  
+ **Namespace:** Microsoft::WRL  
   
 ## <a name="see-also"></a>Zobacz też  
  [AsyncBase, klasa](../windows/asyncbase-class.md)

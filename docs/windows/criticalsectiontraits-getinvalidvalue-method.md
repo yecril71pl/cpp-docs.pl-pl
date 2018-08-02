@@ -1,5 +1,5 @@
 ---
-title: CriticalSectionTraits::GetInvalidValue — metoda | Dokumentacja firmy Microsoft
+title: CriticalSectionTraits::GetInvalidValue, metoda | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: d72c9dce0765029ee31e079315baec72afd16a46
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: cf0d52769052a36c0b494d19204dd6c07f0b2404
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33883150"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39463388"
 ---
 # <a name="criticalsectiontraitsgetinvalidvalue-method"></a>CriticalSectionTraits::GetInvalidValue — Metoda
-Specjalizuje się szablon criticalsection — tak, aby szablon zawsze jest nieprawidłowy.  
+Specjalizuje się **CriticalSection** szablonu, aby szablon zawsze jest nieprawidłowy.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -34,7 +34,7 @@ inline static Type GetInvalidValue();
 ```  
   
 ## <a name="return-value"></a>Wartość zwracana  
- Zawsze zwraca wskaźnik do Nieprawidłowa sekcja krytyczna.  
+ Zawsze zwraca wskaźnik do Nieprawidłowa sekcja krytycznego.  
   
 ## <a name="remarks"></a>Uwagi  
  *Typu* modyfikator jest zdefiniowany jako `typedef CRITICAL_SECTION* Type;`.  

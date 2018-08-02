@@ -12,12 +12,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 835f56498d3bc19f0b31ea9047f2e76d955183f4
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: 38c3f60f7460a3d03f16141b5629bfc2d6183cae
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37947777"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39462378"
 ---
 # <a name="user-defined-literals--c"></a>Literały definiowane przez użytkownika (C++)
 Istnieje pięć głównych kategorii literałów: liczba całkowita, ciąg znaków, zmiennoprzecinkowych, atrybut typu wartość logiczna i wskaźnika.  Uruchamianie c ++ 11, można zdefiniować własne literały, na podstawie tych kategorii zapewnia składni skróty dla typowych idiomy i poprawia bezpieczeństwo typów. Załóżmy na przykład, że masz klasę odległości. Można zdefiniować literał dla kilometrów i inny dla mil, a zachęcenia użytkowników, aby była niejawna przy korzystaniu jednostki miary, po prostu pisząc: automatyczne d = 42.0_km lub auto d = 42.0_mi. Nie ma żadnych korzyści wydajności ani wadą literały definiowane przez użytkownika; są one przede wszystkim dla wygody lub wnioskowanie typu w czasie kompilacji. Standardowa biblioteka zawiera literały definiowane przez użytkownika std:string, wartość std::complex i jednostek w czas i czas trwania operacji w \<chrono > nagłówka:  
@@ -31,7 +31,7 @@ Distance d = 36.0_mi + 42.0_km;         // Custom UDL (see below)
 ```  
   
 ## <a name="user-defined-literal-operator-signatures"></a>Podpisy operatora literału zdefiniowanego przez użytkownika  
- Implementowanie literału zdefiniowanego przez użytkownika, definiując `operator""` w zakresie przestrzeni nazw przy użyciu jednego z następujących form:  
+ Implementowanie literału zdefiniowanego przez użytkownika, definiując **operator ""** w zakresie przestrzeni nazw przy użyciu jednego z następujących form:  
   
 ```cpp 
 ReturnType operator "" _a(unsigned long long int);   // Literal operator for user-defined INTEGRAL literal  
@@ -51,7 +51,7 @@ template<char...> ReturnType operator "" _t();       // Literal operator templat
  Nazwy operatora w poprzednim przykładzie są symbolami zastępczymi dowolną nazwę, możesz podać; wymagane jest jednak wiodący znak podkreślenia. (Standardowa biblioteka jest dozwolony do definiowania literałów bez znaku podkreślenia). Typ zwracany to, gdzie możesz dostosować konwersji lub innych operacji, który wykonuje literału. Ponadto dowolne z tych operatorów można zdefiniować jako `constexpr`.  
   
 ## <a name="cooked-literals"></a>Literały gotowe  
- W źródle kodu wszelkie literał, czy zdefiniowane przez użytkownika nie jest zasadniczo sekwencję znaków alfanumerycznych, takich jak `101`, lub `54.7`, lub `"hello"` lub `true`. Kompilator interpretuje słowa kluczowe, sekwencja jako liczba całkowita, float, const char\* parametry i tak dalej. Literału zdefiniowanego przez użytkownika, który przyjmuje jako dane wejściowe, niezależnie od ich rodzaju kompilatora przypisane do wartości literału jest nazywane nieformalnie *gotowe literał*. Wszystkie operatory powyżej, z wyjątkiem `_r` i `_t` są gotowane literały. Na przykład, literał `42.0_km` będzie powiązać operator o nazwie _km, który ma podpis przypominające _b i literału `42_km` będzie powiązać operatora z podpisem, podobnie jak _a.  
+ W źródle kodu wszelkie literał, czy zdefiniowane przez użytkownika nie jest zasadniczo sekwencję znaków alfanumerycznych, takich jak `101`, lub `54.7`, lub `"hello"` lub **true**. Kompilator interpretuje słowa kluczowe, sekwencja jako liczba całkowita, float, const char\* parametry i tak dalej. Literału zdefiniowanego przez użytkownika, który przyjmuje jako dane wejściowe, niezależnie od ich rodzaju kompilatora przypisane do wartości literału jest nazywane nieformalnie *gotowe literał*. Wszystkie operatory powyżej, z wyjątkiem `_r` i `_t` są gotowane literały. Na przykład, literał `42.0_km` będzie powiązać operator o nazwie _km, który ma podpis przypominające _b i literału `42_km` będzie powiązać operatora z podpisem, podobnie jak _a.  
   
  Poniższy przykład pokazuje, jak literały definiowane przez użytkownika może zwiększyć liczbę wywołań, aby była niejawna przy korzystaniu swoje dane wejściowe. Do konstruowania `Distance`, użytkownik musi jawnie określić km lub mil, za pomocą odpowiednich literału zdefiniowanego przez użytkownika. Oczywiście można również osiągnąć ten sam wynik w inny sposób, ale literały definiowane przez użytkownika są mniej szczegółowe informacje, niż alternatyw.  
   
@@ -184,5 +184,4 @@ operator "" _dump_raw(const char*)        : ===>42<===
 operator "" _dump_raw(const char*)        : ===>3.1415926<===  
 operator "" _dump_raw(const char*)        : ===>3.14e+25<===   
 *****/  
-  
 ```

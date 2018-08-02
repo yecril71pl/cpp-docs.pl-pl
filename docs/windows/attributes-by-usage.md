@@ -15,33 +15,33 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 94ac32d1eac8a22603d31e23695540fe23cdd26b
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 72da3eeebdf99ca637708e9e493f64730a350327
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33860635"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39465522"
 ---
 # <a name="attributes-by-usage"></a>Atrybuty w zależności od zastosowania
 Ten temat zawiera listę atrybutów zgodnie z elementów języka C++, których dotyczą.  
   
- Jeśli atrybut poprzedza element Visual C++, który nie znajduje się w zakresie atrybutu, blok atrybutu jest traktowany jako komentarz.  
+ Jeśli atrybut poprzedza element języka Visual C++, który nie znajduje się w zakresie ten atrybut, blok atrybutu jest traktowany jako komentarz.  
   
 |Atrybut|Opis|  
 |---------------|-----------------|  
 |[Atrybuty modułów](../windows/module-attributes.md)|Dotyczy [modułu](../windows/module-cpp.md) atrybutu.|  
 |[Atrybuty interfejsu](../windows/interface-attributes.md)|Dotyczy [__interface](../cpp/interface.md) słowa kluczowego języka C++.|  
-|[Atrybuty klasy](../windows/class-attributes.md)|Zastosowanie słowa kluczowego języka C++.|  
-|[Atrybuty metody](../windows/method-attributes.md)|Zastosowanie metody w klasie, coclass lub interfejs.|  
-|[Atrybuty parametru](../windows/parameter-attributes.md)|Dotyczy parametry metody w klasie lub interfejs.|  
-|[Atrybuty składowych danych](../windows/data-member-attributes.md)|Ma zastosowanie do elementów członkowskich danych w klasie, coclass lub interfejs.|  
-|[Atrybuty Typedef, Enum, Union oraz Struct](../windows/typedef-enum-union-and-struct-attributes.md)|Zastosowanie słowa kluczowe języka C++.|  
-|[Atrybuty tablicy](../windows/array-attributes.md)|Ma zastosowanie do tablic lub **SAFEARRAY**s.|  
-|[Oddzielne atrybuty](../windows/stand-alone-attributes.md)|Działa więcej jak linia kodu, ale nie będzie działać na słowo kluczowe języka C++. Instrukcje atrybutu autonomicznego wymagają średnik na końcu linii.|  
-|[Atrybuty niestandardowe](../windows/custom-attributes-cpp.md)|Umożliwia użytkownikowi rozszerzenie metadanych.|  
+|[Atrybuty klasy](../windows/class-attributes.md)|Ma zastosowanie do słowa kluczowego języka C++.|  
+|[Atrybuty metody](../windows/method-attributes.md)|Ma zastosowanie do metody w klasie, klasa coclass lub interfejs.|  
+|[Atrybuty parametru](../windows/parameter-attributes.md)|Dotyczy parametry metody w klasie lub interfejsie.|  
+|[Atrybuty składowych danych](../windows/data-member-attributes.md)|Stosuje się do elementów członkowskich danych w klasie, klasa coclass lub interfejs.|  
+|[Atrybuty Typedef, Enum, Union oraz Struct](../windows/typedef-enum-union-and-struct-attributes.md)|Ma zastosowanie do słów kluczowych języka C++.|  
+|[Atrybuty tablicy](../windows/array-attributes.md)|Ma zastosowanie do tablic lub `SAFEARRAY`s.|  
+|[Oddzielne atrybuty](../windows/stand-alone-attributes.md)|Działa bardziej przypominające wiersz kodu, ale nie będzie działać na słowo kluczowe języka C++. Instrukcje autonomicznego atrybutu wymagają średnik na końcu wiersza.|  
+|[Atrybuty niestandardowe](../windows/custom-attributes-cpp.md)|Umożliwia użytkownikowi rozszerzanie metadanych.|  
   
 ## <a name="see-also"></a>Zobacz też  
- [Atrybuty C++ — dokumentacja](../windows/cpp-attributes-reference.md)   
+ [Dokumentacja atrybutów języka C++](../windows/cpp-attributes-reference.md)   
  [Pojęcia](../windows/attributed-programming-concepts.md)   
  [Atrybuty według grup](../windows/attributes-by-group.md)   
  [Alfabetyczny spis atrybutów](../windows/attributes-alphabetical-reference.md)

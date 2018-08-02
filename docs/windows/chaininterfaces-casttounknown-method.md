@@ -1,5 +1,5 @@
 ---
-title: ChainInterfaces::CastToUnknown — metoda | Dokumentacja firmy Microsoft
+title: ChainInterfaces::CastToUnknown, metoda | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 696d632037f2a1fdc68e298b247e46720b81a343
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: c9479180134e8a873e1d79f91deb3d29700d40a2
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33855097"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39467173"
 ---
 # <a name="chaininterfacescasttounknown-method"></a>ChainInterfaces::CastToUnknown — Metoda
-Rzutuje wskaźnik interfejsu z typem zdefiniowanym przez `I0` parametr szablonu na wskaźnik do elementu IUnknown.  
+Rzutuje wskaźnika interfejsu typu zdefiniowanego przez *I0* wskaźnik IUnknown parametr szablonu.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -34,12 +34,12 @@ __forceinline IUnknown* CastToUnknown();
 ```  
   
 ## <a name="return-value"></a>Wartość zwracana  
- Wskaźnik do elementu IUnknown.  
+ Wskaźnik IUnknown.  
   
 ## <a name="requirements"></a>Wymagania  
  **Nagłówek:** implements.h  
   
- **Namespace:** Microsoft::wrl —  
+ **Namespace:** Microsoft::WRL  
   
 ## <a name="see-also"></a>Zobacz też  
  [ChainInterfaces, struktura](../windows/chaininterfaces-structure.md)

@@ -16,15 +16,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: eb594eb10e8068d5f5b3ed124d5e77b48ced728e
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: 6c08edff8237462cbc2c55dc5541e3da663ed0a3
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37947742"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39461116"
 ---
 # <a name="return-statement-in-program-termination-c"></a>return — instrukcja w zakończeniu działania programu (C++)
-Wystawianie `return` instrukcji z **głównego** jest funkcjonalnym odpowiednikiem wywołania **wyjść** funkcji. Rozważmy następujący przykład:  
+Wystawianie **zwracają** instrukcji z `main` jest funkcjonalnym odpowiednikiem wywołania `exit` funkcji. Rozważmy następujący przykład:  
   
 ```cpp 
 // return_statement.cpp  
@@ -36,7 +36,7 @@ int main()
 }  
 ```  
   
- **Wyjść** i **zwracają** instrukcji w powyższym przykładzie są funkcjonalnie identyczny. Jednak C++ wymaga funkcji, które mają inne niż zwracane typy **void** zwracają wartość. **Zwracają** instrukcji umożliwia zwracanie wartości z `main`.  
+ `exit` i **zwracają** instrukcji w powyższym przykładzie są funkcjonalnie identyczny. Jednak C++ wymaga funkcji, które mają inne niż zwracane typy **void** zwracają wartość. **Zwracają** instrukcji umożliwia zwracanie wartości z `main`.  
   
-## <a name="see-also"></a>Zobacz też  
+## <a name="see-also"></a>Zobacz także  
  [Kończenie działania programu](../cpp/program-termination.md)

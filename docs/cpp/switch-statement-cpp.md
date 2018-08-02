@@ -20,12 +20,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1d4ab0694936fe4ad25b3c56bf286e9416e4e935
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: a5a8858d48a38d42dea7fba0fdce7c3a4d407a3a
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37947885"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39462189"
 ---
 # <a name="switch-statement-c"></a>switch — instrukcja (C++)
 Umożliwia wybór między wielokrotnymi sekcjami kodu, w zależności od wartości wyrażenia liczby całkowitej.  
@@ -164,7 +164,6 @@ int main(int argc, char *argv[])
   
  A **Przełącz** poufności informacji mogą być zagnieżdżone. W takich przypadkach **przypadek** lub **domyślne** etykiety są skojarzone z najbliższą **Przełącz** instrukcji, która je otacza.  
 
- 
 ## <a name="microsoft-specific"></a>Specyficzne dla firmy Microsoft  
  Microsoft C nie ogranicza liczby przypadków wartości w **Przełącz** instrukcji. Liczba jest ograniczona jedynie ilością dostępnej pamięci. ANSI C wymaga co najmniej 257 etykiet wielkości liter jest dozwolone w **Przełącz** instrukcji.  
   
@@ -172,7 +171,6 @@ int main(int argc, char *argv[])
   
 **END specyficzny dla Microsoft**  
   
-## <a name="see-also"></a>Zobacz też  
+## <a name="see-also"></a>Zobacz także  
  [Instrukcje wyboru](../cpp/selection-statements-cpp.md)   
  [Słowa kluczowe](../cpp/keywords-cpp.md)   
- 

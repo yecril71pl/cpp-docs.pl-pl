@@ -19,118 +19,118 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: e60a1285f54de6b1cbfe311d4d9cbbc547785176
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: e68e2b729f8120a33b296fa485d145101b3d6e5b
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33862643"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39466712"
 ---
 # <a name="component-extensions-for-runtime-platforms"></a>Component Extensions dla platform środowiska uruchomieniowego
-Visual C++ udostępnia rozszerzenia języka aby program dla platform środowiska uruchomieniowego. Przy użyciu języka C + +/ CX, można program aplikacji platformy uniwersalnej systemu Windows i składników, które skompiluj do kodu natywnego. Mimo że można utworzyć aplikacji platformy uniwersalnej systemu Windows przez programowanie bezpośrednio przed interfejsy COM środowiska wykonawczego systemu Windows przy użyciu języka C + +/ CX, możesz pracować z konstruktorów wyjątków i innych modern C++ programowania idioms. Aby włączyć programowania w języku C++ w środowisku wykonania kodu zarządzanego na platformie .NET, można użyć C + +/ CLI.  
+Visual C++ zapewnia rozszerzeń językowych, aby ułatwić programowanie platform środowiska uruchomieniowego. Za pomocą C + +/ CX, można programować aplikacje uniwersalne platformy Windows i składników, kompilowane do kodu natywnego. Chociaż można utworzyć aplikacji platformy uniwersalnej Windows, programowanie bezpośrednio w odniesieniu do interfejsów COM środowiska wykonawczego Windows, za pomocą C + +/ CX, można pracować z konstruktorów, wyjątki i innych nowoczesne idiomy programowania w języku C++. Aby włączyć programowania C++ w zarządzanym środowisku wykonywania na platformie .NET, można użyć C + +/ interfejsu wiersza polecenia.  
   
- **Dwóch środowisk uruchomieniowych jeden zestaw rozszerzeń**  
+ **Dwa środowiska uruchomieniowe, zestaw rozszerzeń**  
   
- C + +/ CX jest podzbiorem C + +/ CLI. Dla rozszerzeń, które są wspólne dla C + +/ CX i C + +/ CLI, semantykę zależą czy przeznaczonych dla środowisko uruchomieniowe języka wspólnego (CLR) lub środowiska uruchomieniowego systemu Windows. Aby skompilować aplikację do uruchamiania na środowiska uruchomieniowego systemu Windows, określ **/ZW** — opcja kompilatora. Aby skompilować go w CLR, określ **/CLR** — opcja kompilatora. Te przełączniki są ustawiane automatycznie podczas tworzenia projektu za pomocą programu Visual Studio.  
+ C + +/ CX jest podzbiorem C + +/ interfejsu wiersza polecenia. Dla rozszerzeń, które są wspólne dla C + +/ CX i C + +/ CLI, semantyka zależą od tego, czy celem jest środowisko uruchomieniowe języka wspólnego (CLR) lub środowiska wykonawczego Windows. Aby skompilować aplikację do uruchamiania w środowisku uruchomieniowym Windows, należy określić **/ZW** — opcja kompilatora. Aby skompilować je do uruchomienia na środowisko CLR, należy określić **/CLR** — opcja kompilatora. Te przełączniki są ustawiane automatycznie, gdy używasz programu Visual Studio, aby utworzyć projekt.  
   
- Aby uzyskać więcej informacji o sposobie tworzenia aplikacji platformy uniwersalnej systemu Windows w języku C++, zobacz [aplikacji plan za dla środowiska wykonawczego systemu Windows przy użyciu języka C++](http://msdn.microsoft.com/library/windows/apps/hh700360.aspx).  
+ Aby uzyskać więcej informacji na temat tworzenia aplikacji uniwersalnych platformy Windows w języku C++, zobacz [plan for Windows aplikacji środowiska wykonawczego przy użyciu języka C++](http://msdn.microsoft.com/library/windows/apps/hh700360.aspx).  
   
- C + +/ CLI rozszerza norma ISO/ANSI C++ i jest zdefiniowany w obszarze Ecma C + +/ CLI standardowa. Aby uzyskać więcej informacji, zobacz [.NET Programowanie w języku C + +/ CLI (Visual C++)](../dotnet/dotnet-programming-with-cpp-cli-visual-cpp.md).  
+ C + +/ CLI rozszerza standard ISO/ANSI C++ i jest zdefiniowana w obszarze Ecma C + +/ interfejsu wiersza polecenia Standard. Aby uzyskać więcej informacji, zobacz [programowania .NET w języku C + +/ interfejsu wiersza polecenia (Visual C++)](../dotnet/dotnet-programming-with-cpp-cli-visual-cpp.md).  
   
 ## <a name="data-type-keywords"></a>Słowa kluczowe typu danych  
- Rozszerzenia językowe obejmują *agregacji słowa kluczowe*, będące słów kluczowych, które składają się z dwóch tokeny oddzielone biały znak. Tokeny mogą zawierać jeden znaczenia, gdy są one używane niezależnie i innego znaczenia, gdy są one używane razem. Na przykład wyraz "ref" jest identyfikatorem zwykłej i word "class" jest słowem kluczowym, który deklaruje klasy natywnej. Gdy te słowa, które są połączone do formularza, ale `ref class`, wynikowy — słowo kluczowe agregacji deklaruje jednostki, która jest nazywany *klasa środowiska uruchomieniowego*.  
+ Rozszerzenia językowe obejmują *agregacji słowa kluczowe*, służą do słów kluczowych, które składają się z dwoma tokenami rozdzielonych biały znak. Tokeny może mieć jeden znaczenie, gdy są one używane oddzielnie i innym znaczenie, gdy są one używane razem. Na przykład wyraz "ref" jest identyfikatorem zwykłe i słowo "class" jest słowem kluczowym, która deklaruje klasy natywnej. Ale kiedy te wyrazy są łączone w celu formularza **klasy referencyjnej**, wynikowy — słowo kluczowe agregacji deklaruje jednostki, która jest znany jako *klasy środowiska uruchomieniowego*.  
   
- Rozszerzenia również obejmować *kontekstowa* słów kluczowych. Słowo kluczowe jest traktowany jako kontekstowa w zależności od rodzaju instrukcji, która zawiera i umieszczania jej w tej instrukcji. Na przykład token "property" może być identyfikator lub mogą zadeklarować specjalny rodzaj elementu członkowskiego klasy publicznej.  
+ Rozszerzenia również obejmować *kontekstową* słów kluczowych. Słowo kluczowe jest traktowany jako kontekstowej, w zależności od rodzaju instrukcję, która zawiera on i jego położenie w tej instrukcji. Na przykład token "property" może być identyfikator lub je zadeklarować specjalny rodzaj składowej klasy publicznej.  
   
- Poniższa tabela zawiera listę słów kluczowych rozszerzenia języka C++.  
+ Poniższa tabela zawiera listę słów kluczowych w rozszerzenie języka C++.  
   
-|Słowo kluczowe|Kontekstowe|Cel|Tematy pomocy|  
+|Słowo kluczowe|Kontekstowa|Cel|Tematy pomocy|  
 |-------------|-----------------------|-------------|---------------|  
-|`ref class`<br /><br /> `ref struct`|Nie|Deklaruje klasy.|[Klasy i struktury](../windows/classes-and-structs-cpp-component-extensions.md)|  
-|`value class`<br /><br /> `value struct`|Nie|Deklaruje klasą wartości.|[Klasy i struktury](../windows/classes-and-structs-cpp-component-extensions.md)|  
-|`interface class`<br /><br /> `interface struct`|Nie|Deklaruje interfejsu.|[klasy interfejsu](../windows/interface-class-cpp-component-extensions.md)|  
-|`enum class`<br /><br /> `enum struct`|Nie|Deklaruje wyliczenie.|[Enum — klasa](../windows/enum-class-cpp-component-extensions.md)|  
-|`property`|Tak|Deklaruje właściwości.|[właściwość](../windows/property-cpp-component-extensions.md)|  
-|`delegate`|Tak|Deklaruje delegata.|[delegate (C++ Component Extensions)](../windows/delegate-cpp-component-extensions.md)|  
-|`event`|Tak|Deklaruje zdarzenie.|[event](../windows/event-cpp-component-extensions.md)|  
+|**Klasa REF**<br /><br /> **Struktura REF**|Nie|Deklaruje klasę.|[Klasy i struktury](../windows/classes-and-structs-cpp-component-extensions.md)|  
+|**Klasa wartości**<br /><br /> **Struktura wartości**|Nie|Deklaruje klasę wartości.|[Klasy i struktury](../windows/classes-and-structs-cpp-component-extensions.md)|  
+|**Klasa interfejsu**<br /><br /> **Struktura interfejsu**|Nie|Deklaruje interfejsu.|[Klasa interfejsu](../windows/interface-class-cpp-component-extensions.md)|  
+|**Klasa wyliczeniowa**<br /><br /> **Struktura wyliczenia**|Nie|Deklaruje wyliczenie.|[Klasa wyliczeniowa](../windows/enum-class-cpp-component-extensions.md)|  
+|**właściwość**|Tak|Deklaruje właściwości.|[właściwość](../windows/property-cpp-component-extensions.md)|  
+|**delegate**|Tak|Deklaruje delegata.|[delegate (C++ Component Extensions)](../windows/delegate-cpp-component-extensions.md)|  
+|**event**|Tak|Deklaruje zdarzenie.|[event](../windows/event-cpp-component-extensions.md)|  
   
 ## <a name="override-specifiers"></a>Specyfikatory przesłonięć  
- Można użyć następujących słów kluczowych na kwalifikować się zastąpienie zachowania w operacji wyprowadzenia. Mimo że `new` — słowo kluczowe nie jest rozszerzeniem C++, znajduje się w tym miejscu ponieważ mogą być używane w kontekście dodatkowe. Niektóre specyfikatory również są prawidłowe dla natywnej programowania. Aby uzyskać więcej informacji, zobacz [porady: deklarowanie specyfikatorów zastąpienia w kompilacjach macierzystych (C + +/ CLI)](../dotnet/how-to-declare-override-specifiers-in-native-compilations-cpp-cli.md).  
+ Następujące słowa kluczowe służy do kwalifikowania zastąpienie zachowania tworzenia wartości pochodnych. Mimo że **nowe** — słowo kluczowe nie jest rozszerzeniem języka c++, ta opcja jest wyświetlana w tym miejscu, ponieważ może służyć w dodatkowy kontekst. Niektóre specyfikatory również są prawidłowe dla natywnej programowania. Aby uzyskać więcej informacji, zobacz [porady: deklarowanie specyfikatorów zastąpienia w kompilacjach kodu natywnego (C + +/ interfejsu wiersza polecenia)](../dotnet/how-to-declare-override-specifiers-in-native-compilations-cpp-cli.md).  
   
-|Słowo kluczowe|Kontekstowe|Cel|Tematy pomocy|  
+|Słowo kluczowe|Kontekstowa|Cel|Tematy pomocy|  
 |-------------|-----------------------|-------------|---------------|  
-|`abstract`|Tak|Wskazuje, że funkcje lub klasy abstrakcyjnej.|[abstract](../windows/abstract-cpp-component-extensions.md)|  
-|`new`|Nie|Wskazuje, że funkcja nie jest przesłonięciem wersja klasy podstawowej.|[New (nowe gniazdo w vtable)](../windows/new-new-slot-in-vtable-cpp-component-extensions.md)|  
-|`override`|Tak|Wskazuje, że metoda musi być zastąpienia wersji klasy podstawowej.|[override](../windows/override-cpp-component-extensions.md)|  
-|`sealed`|Tak|Klasy uniemożliwia użycie jako klasy podstawowe.|[sealed](../windows/sealed-cpp-component-extensions.md)|  
+|**abstract**|Tak|Wskazuje, że funkcji lub klasy abstrakcyjnej.|[abstract](../windows/abstract-cpp-component-extensions.md)|  
+|**new**|Nie|Wskazuje, że funkcja nie jest przesłonięciem wersją klasy bazowej.|[New (nowe gniazdo w vtable)](../windows/new-new-slot-in-vtable-cpp-component-extensions.md)|  
+|**override**|Tak|Wskazuje, że metoda musi być przesłonięciem wersję klasy podstawowej.|[override](../windows/override-cpp-component-extensions.md)|  
+|**sealed**|Tak|Zapobiega używana jako klay bazowe klasy.|[sealed](../windows/sealed-cpp-component-extensions.md)|  
   
 ## <a name="keywords-for-generics"></a>Słowa kluczowe dla typów ogólnych  
- Poniższe słowa kluczowe zostały dodane do obsługi typów ogólnych. Aby uzyskać więcej informacji, zobacz [ogólne](../windows/generics-cpp-component-extensions.md).  
+ Następujące słowa kluczowe zostały dodane do obsługi typów ogólnych. Aby uzyskać więcej informacji, zobacz [ogólne](../windows/generics-cpp-component-extensions.md).  
   
-|Słowo kluczowe|Kontekstowe|Cel|  
+|Słowo kluczowe|Kontekstowa|Cel|  
 |-------------|-----------------------|-------------|  
-|`generic`|Nie|Deklaruje typu ogólnego.|  
-|`where`|Tak|Określa ograniczenia, które są stosowane do parametru typu ogólnego.|  
+|**Ogólny**|Nie|Deklaruje typu ogólnego.|  
+|**gdzie**|Tak|Określa ograniczenia, które są stosowane do parametru typu ogólnego.|  
   
-## <a name="miscellaneous-keywords"></a>Różne słowa kluczowe  
- Poniższe słowa kluczowe zostały dodane do rozszerzenia C++.  
+## <a name="miscellaneous-keywords"></a>Różne słów kluczowych  
+ Następujące słowa kluczowe zostały dodane do rozszerzeń języka C++.  
   
-|Słowo kluczowe|Kontekstowe|Cel|Tematy pomocy|  
+|Słowo kluczowe|Kontekstowa|Cel|Tematy pomocy|  
 |-------------|-----------------------|-------------|---------------|  
-|`finally`|Tak|Wskazuje zachowanie handlings wyjątku.|[Obsługa wyjątków](../windows/exception-handling-cpp-component-extensions.md)|  
-|`for each, in`|Nie|Wylicza elementów kolekcji.|[for each, in](../dotnet/for-each-in.md)|  
-|`gcnew`|Nie|Przydziela typy w stercie zbierane pamięci. Użyj zamiast `new` i `delete`.|[REF new, gcnew](../windows/ref-new-gcnew-cpp-component-extensions.md)|  
-|`ref new`|Tak|Przydziela typem środowiska wykonawczego systemu Windows. Użyj zamiast `new` i `delete`.|[REF new, gcnew](../windows/ref-new-gcnew-cpp-component-extensions.md)|  
-|`initonly`|Tak|Wskazuje, że element członkowski mogą być inicjowane tylko w deklaracji lub w konstruktorze statycznym.|[initonly (C++/CLI)](../dotnet/initonly-cpp-cli.md)|  
-|`literal`|Tak|Tworzy zmienną literału.|[Literału](../windows/literal-cpp-component-extensions.md)|  
-|`nullptr`|Nie|Wskazuje, że dojście lub wskaźnik nie wskazuje na obiekt.|[nullptr](../windows/nullptr-cpp-component-extensions.md)|  
+|**finally**|Tak|Określa domyślne zachowanie handlings wyjątku.|[Obsługa wyjątków](../windows/exception-handling-cpp-component-extensions.md)|  
+|**for each, in**|Nie|Wylicza elementów kolekcji.|[for each, in](../dotnet/for-each-in.md)|  
+|**gcnew**|Nie|Przydziela typy w stercie zebranych elementów bezużytecznych. Użyj zamiast **nowe** i **Usuń**.|[REF new, gcnew](../windows/ref-new-gcnew-cpp-component-extensions.md)|  
+|**nowe REF**|Tak|Przydziela typów środowiska wykonawczego Windows. Użyj zamiast **nowe** i **Usuń**.|[REF new, gcnew](../windows/ref-new-gcnew-cpp-component-extensions.md)|  
+|**InitOnly**|Tak|Wskazuje, że element członkowski może być inicjowane tylko w deklaracji lub w konstruktorze statycznym.|[initonly (C++/CLI)](../dotnet/initonly-cpp-cli.md)|  
+|**literał**|Tak|Tworzy zmienną literału.|[literał](../windows/literal-cpp-component-extensions.md)|  
+|**nullptr**|Nie|Wskazuje, że dojście lub wskaźnik nie wskazuje na obiekt.|[nullptr](../windows/nullptr-cpp-component-extensions.md)|  
   
 ## <a name="template-constructs"></a>Konstrukcje szablonu  
- Następujące konstrukcji języka są implementowane jako szablon, a nie jako słowa kluczowe. Jeśli określisz **/ZW** — opcja kompilatora, są zdefiniowane w `lang` przestrzeni nazw. Jeśli określisz **/CLR** — opcja kompilatora, są zdefiniowane w `cli` przestrzeni nazw.  
+ Następujące konstrukcji języka są implementowane jako szablon, zamiast jako słowa kluczowe. Jeśli określisz **/ZW** — opcja kompilatora, są zdefiniowane w `lang` przestrzeni nazw. Jeśli określisz **/CLR** — opcja kompilatora, są zdefiniowane w `cli` przestrzeni nazw.  
   
 |Słowo kluczowe|Cel|Tematy pomocy|  
 |-------------|-------------|---------------|  
-|`array`|Deklaruje tablicę.|[Tablice](../windows/arrays-cpp-component-extensions.md)|  
-|`interior_ptr`|(Tylko CLR) Punkty danych w typu referencyjnego.|[interior_ptr (C++/CLI)](../windows/interior-ptr-cpp-cli.md)|  
-|`pin_ptr`|(Tylko CLR) Wskazuje typy referencyjne CLR tymczasowo pominąć systemu wyrzucanie elementów bezużytecznych.|[pin_ptr (C++/CLI)](../windows/pin-ptr-cpp-cli.md)|  
-|`safe_cast`|Określa i wykonuje metodę optymalne rzutowanie typu środowiska uruchomieniowego.|[safe_cast](../windows/safe-cast-cpp-component-extensions.md)|  
-|`typeid`|(Tylko CLR) Pobiera <xref:System.Type?displayProperty=fullName> obiektu, który opisuje podanego typu lub obiektu.|[TypeID](../windows/typeid-cpp-component-extensions.md)|  
+|**Tablica**|Deklaruje tablicę.|[Tablice](../windows/arrays-cpp-component-extensions.md)|  
+|**pomocą interior_ptr**|(Tylko CLR) Punkty danych w typ odwołania.|[interior_ptr (C++/CLI)](../windows/interior-ptr-cpp-cli.md)|  
+|**pin_ptr**|(Tylko CLR) Wskazuje typy odwołań CLR, aby tymczasowo pominąć system wyrzucania elementów bezużytecznych.|[pin_ptr (C++/CLI)](../windows/pin-ptr-cpp-cli.md)|  
+|**przedstawienie operacji safe_cast**|Określa i wykonuje metodę optymalne rzutowania, typu środowiska uruchomieniowego.|[przedstawienie operacji safe_cast](../windows/safe-cast-cpp-component-extensions.md)|  
+|**TypeID**|(Tylko CLR) Pobiera <xref:System.Type?displayProperty=fullName> obiekt, który opisuje dany typ lub obiekt.|[TypeID](../windows/typeid-cpp-component-extensions.md)|  
   
 ## <a name="declarators"></a>Deklaratory  
- Następujące deklaratorów typu poinstruuj środowiska uruchomieniowego automatycznie zarządzać okres istnienia i usuwanie obiektów przydzielone.  
+ Następujący typ deklaratory poinstruować środowiska uruchomieniowego do automatycznego zarządzania okresem istnienia i usuwanie istnienia przydzielonych obiektów.  
   
 |Operator|Cel|Tematy pomocy|  
 |--------------|-------------|---------------|  
-|`^`|Deklaruje uchwyt do obiektu. oznacza to, że wskaźnik do obiektu środowiska wykonawczego systemu Windows lub CLR, który jest automatycznie usuwana, gdy nie jest już używać.|[Operator uchwytu do obiektu (^)](../windows/handle-to-object-operator-hat-cpp-component-extensions.md)|  
-|`%`|Deklaruje odwołanie śledzące; oznacza to, że odwołanie do obiektu środowiska wykonawczego systemu Windows lub CLR, który jest automatycznie usuwana, gdy nie jest już używać.|[Operator odwołania śledzenia](../windows/tracking-reference-operator-cpp-component-extensions.md)|  
+|`^`|Deklaruje dojścia do obiektu; oznacza to, wskaźnik do obiektu Windows Runtime lub CLR, są automatycznie usuwane, gdy go nie jest już możliwe.|[Operator uchwytu do obiektu (^)](../windows/handle-to-object-operator-hat-cpp-component-extensions.md)|  
+|`%`|Deklaruje odwołanie śledzenia; oznacza to, że odwołanie do obiektu Windows Runtime lub CLR, są automatycznie usuwane, gdy nie jest już można używać.|[Operator odwołania śledzenia](../windows/tracking-reference-operator-cpp-component-extensions.md)|  
   
-## <a name="additional-constructs-and-related-topics"></a>Konstrukcje dodatkowe i Tematy pokrewne  
- Ta sekcja zawiera informacje o dodatkowych narzędzi programistycznych i tematy, które odnoszą się do środowiska CLR.  
+## <a name="additional-constructs-and-related-topics"></a>Dodatkową konstrukcje i Tematy pokrewne  
+ W tej sekcji przedstawiono dodatkowe konstrukcje programowania i tematy, które odnoszą się do środowiska CLR.  
   
 |Temat|Opis|  
 |-----------|-----------------|  
-|[__identifier (C++/CLI)](../windows/identifier-cpp-cli.md)|(Środowisko wykonawcze systemu Windows i CLR) Umożliwia użycie słowa kluczowe jako identyfikatorów.|  
-|[Listy zmiennych argumentów (...) (C++/CLI)](../windows/variable-argument-lists-dot-dot-dot-cpp-cli.md)|(Środowisko wykonawcze systemu Windows i CLR) Włącza funkcję zmienną liczbę argumentów.|  
-|[Odpowiedniki typów natywnych języka C++ w programie .NET Framework (C++/CLI)](../dotnet/dotnet-framework-equivalents-to-cpp-native-types-cpp-cli.md)|Wyświetla listę typów CLR, które są używane zamiast typów całkowitych C++.|  
-|[elementu AppDomain](../cpp/appdomain.md) `__declspec` modyfikator|`__declspec` Modyfikator, która nakłada się, że zmienne statyczne i globalnych istnieje dla domeny appdomain.|  
-|[Rzutowania w stylu języka C z/CLR (C + +/ CLI)](../windows/c-style-casts-with-clr-cpp-cli.md)|Opisuje sposób interpretowania rzutowania w stylu języka C.|  
-|[__clrcall](../cpp/clrcall.md) konwencji wywoływania|Wskazuje zgodne CLR konwencję wywołania.|  
+|[__identifier (C++/CLI)](../windows/identifier-cpp-cli.md)|(Windows Runtime i środowiska CLR) Umożliwia korzystanie z słów kluczowych jako identyfikatorów.|  
+|[Listy zmiennych argumentów (...) (C++/CLI)](../windows/variable-argument-lists-dot-dot-dot-cpp-cli.md)|(Windows Runtime i środowiska CLR) Włącza funkcję do wykonania zmienną liczbę argumentów.|  
+|[Odpowiedniki typów natywnych języka C++ w programie .NET Framework (C++/CLI)](../dotnet/dotnet-framework-equivalents-to-cpp-native-types-cpp-cli.md)|Zawiera listę typów CLR, które są używane zamiast typów całkowitych C++.|  
+|[Obiekt AppDomain](../cpp/appdomain.md) **__declspec** modyfikator|**__declspec** modyfikator zezwalający na użycie istnienia zmiennych globalnych i statycznych dla domeny appdomain.|  
+|[Rzutowania w stylu języka C z/CLR (C + +/ CLI)](../windows/c-style-casts-with-clr-cpp-cli.md)|W tym artykule opisano, jak rzutowań w stylu C są interpretowane.|  
+|[Wywołanie __clrcall](../cpp/clrcall.md) konwencji wywoływania|Wskazuje CLS CLR konwencji wywoływania.|  
 |`__cplusplus_cli`|[Wstępnie zdefiniowane makra](../preprocessor/predefined-macros.md)|  
-|[Atrybuty niestandardowe](../windows/custom-attributes-cpp.md)|Opisuje sposób zdefiniowania własnych atrybuty CLR.|  
-|[Obsługa wyjątków](../windows/exception-handling-cpp-component-extensions.md)|Omówienie obsługi wyjątków.|  
-|[Jawne przesłonięcia](../windows/explicit-overrides-cpp-component-extensions.md)|Pokazuje, jak funkcje Członkowskie mogą zastąpić dowolne elementy członkowskie.|  
-|[Przyjazne zestawy (C++)](../dotnet/friend-assemblies-cpp.md)|W tym artykule omówiono, jak zestaw klienta można uzyskać dostęp do wszystkich typów w zestawie składnika.|  
-|[OPAKOWYWANIE](../windows/boxing-cpp-component-extensions.md)|Pokazuje, w wartości, które są opakowany typy warunków.|  
-|[Obsługa cech typu w kompilatorze](../windows/compiler-support-for-type-traits-cpp-component-extensions.md)|W tym artykule omówiono sposób wykryć właściwości typów w czasie kompilacji.|  
+|[Atrybuty niestandardowe](../windows/custom-attributes-cpp.md)|W tym artykule opisano sposób definiowania atrybutów CLR.|  
+|[Obsługa wyjątków](../windows/exception-handling-cpp-component-extensions.md)|Zawiera omówienie obsługi wyjątków.|  
+|[Jawne przesłonięcia](../windows/explicit-overrides-cpp-component-extensions.md)|Pokazuje, jak zastąpić dowolne elementy członkowskie funkcji elementów członkowskich.|  
+|[Przyjazne zestawy (C++)](../dotnet/friend-assemblies-cpp.md)|W tym artykule omówiono, jak zestaw klienta można dostęp do wszystkich typów w składniku zestawu.|  
+|[Konwersja boxing](../windows/boxing-cpp-component-extensions.md)|Pokazuje warunków w wartości, które są opakowany typów.|  
+|[Obsługa cech typu w kompilatorze](../windows/compiler-support-for-type-traits-cpp-component-extensions.md)|W tym artykule omówiono, jak wykrywać właściwości typów w czasie kompilacji.|  
 |[zarządzane, niezarządzane](../preprocessor/managed-unmanaged.md) dyrektywy pragma|Pokazuje, jak zarządzane i niezarządzane funkcje mogą współistnieć w tym samym module.|  
-|[proces](../cpp/process.md) `__declspec` modyfikator|`__declspec` Modyfikator, która nakłada się, że zmienne statyczne i globalnych istnieją na proces.|  
-|[Odbicie (C++/CLI)](../dotnet/reflection-cpp-cli.md)|Pokazuje informacje typu run-time wersję środowiska CLR.|  
-|[Ciąg](../windows/string-cpp-component-extensions.md)|W tym artykule omówiono konwersji kompilatora literałów ciągu do <xref:System.String>.|  
-|[Przekazywanie dalej typu (C++/CLI)](../windows/type-forwarding-cpp-cli.md)|Umożliwia przenoszenie typu w zestawie wysyłki do innego zestawu, aby kod klienta nie ma być ponownie kompilowane.|  
+|[proces](../cpp/process.md) **__declspec** modyfikator|**__declspec** modyfikator zezwalający na to, że zmiennych globalnych i statycznych istnieją na proces.|  
+|[Odbicie (C++/CLI)](../dotnet/reflection-cpp-cli.md)|Pokazuje informacje typu run-time w wersji środowiska CLR.|  
+|[Ciąg](../windows/string-cpp-component-extensions.md)|W tym artykule omówiono kompilatora konwersja z literałów ciągów do <xref:System.String>.|  
+|[Przekazywanie dalej typu (C++/CLI)](../windows/type-forwarding-cpp-cli.md)|Włącza przepływ typu w zestawie wysyłanie do innego zestawu. Dzięki temu kod klienta nie musi być ponownie kompilowane.|  
 |[Atrybuty zdefiniowane przez użytkownika](../windows/user-defined-attributes-cpp-component-extensions.md)|Pokazuje atrybuty zdefiniowane przez użytkownika.|  
 |[#using — dyrektywa](../preprocessor/hash-using-directive-cpp.md)|Importuje zestawy zewnętrzne.|  
-|[Dokumentacja XML](../ide/xml-documentation-visual-cpp.md)|Wyjaśniono dokumentacji XML na podstawie kodu za pomocą  [ /doc (przetwarzanie komentarzy dokumentacji) (C/C++)](../build/reference/doc-process-documentation-comments-c-cpp.md)|  
+|[Dokumentacja XML](../ide/xml-documentation-visual-cpp.md)|Wyjaśnia dokumentacji oparty na składni XML kodu za pomocą  [ /doc (Przetwarzaj komentarze dokumentacji) (C/C++)](../build/reference/doc-process-documentation-comments-c-cpp.md)|  
   
 ## <a name="see-also"></a>Zobacz też  
- [.NET programowania w języku C + +/ CLI (Visual C++)](../dotnet/dotnet-programming-with-cpp-cli-visual-cpp.md)   
+ [Programowanie .NET w języku C + +/ interfejsu wiersza polecenia (Visual C++)](../dotnet/dotnet-programming-with-cpp-cli-visual-cpp.md)   
  [Współdziałanie natywne i .NET](../dotnet/native-and-dotnet-interoperability.md)

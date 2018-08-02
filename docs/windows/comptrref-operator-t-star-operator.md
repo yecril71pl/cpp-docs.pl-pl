@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 25569c1c8f9e5ab733c50c7be0768f64ec51f8b1
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: f03dfeb75d11ffabe7ab9e29c29474b392dc8bda
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33881926"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39466803"
 ---
 # <a name="comptrrefoperator-t-operator"></a>ComPtrRef::operator T* Operator
 Obsługuje infrastrukturę biblioteki WRL i nie jest przeznaczona do użycia bezpośrednio w kodzie.  
@@ -34,12 +34,12 @@ operator T*();
 ```  
   
 ## <a name="remarks"></a>Uwagi  
- Zwraca wartość [ptr_ — element](../windows/comptrrefbase-ptr-data-member.md) bieżącego obiektu comptrref — element członkowski danych.  
+ Zwraca wartość [ptr_ — element](../windows/comptrrefbase-ptr-data-member.md) element członkowski danych bieżącego **comptrref —** obiektu.  
   
 ## <a name="requirements"></a>Wymagania  
  **Nagłówek:** client.h  
   
- **Namespace:** Microsoft::wrl:: details —  
+ **Namespace:** Microsoft::wrl:: details  
   
 ## <a name="see-also"></a>Zobacz też  
  [Comptrref — klasa](../windows/comptrref-class.md)   

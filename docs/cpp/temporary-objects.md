@@ -15,12 +15,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2d914b668140f1cbf372e29bcdd4f4b526397fb9
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: 3a34fa07431892493e12a6f38603965da1dbc824
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37947758"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39466858"
 ---
 # <a name="temporary-objects"></a>Obiekty tymczasowe
 W niektórych przypadkach, konieczne jest utworzenie obiektów tymczasowych przez kompilator. Takie obiekty tymczasowe mogą być utworzone z następujących powodów:  
@@ -54,4 +54,3 @@ W niektórych przypadkach, konieczne jest utworzenie obiektów tymczasowych prze
 |------------------------------|-----------------------|  
 |Wynik obliczania wyrażenia|Wszystkie obiekty tymczasowe, utworzone w wyniku obliczenia wyrażenia są niszczone na końcu instrukcji wyrażenia (to znaczy w średniku), lub na końcu wyrażeń sterujących **dla**, **Jeśli**, **podczas**, **czy**, i **Przełącz** instrukcji.|  
 |Inicjowanie **const** odwołania|Jeśli inicjator nie jest l-wartością tego samego typu co inicjowane odwołanie, tworzony jest obiekt tymczasowy o typie podstawowym obiektu i inicjowany za pomocą wyrażenia inicjowania. Obiekt tymczasowy jest niszczony natychmiast po zniszczeniu odwoływanego obiektu z którym jest powiązany.|  
-  

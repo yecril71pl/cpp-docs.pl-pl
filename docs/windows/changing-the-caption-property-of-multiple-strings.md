@@ -1,5 +1,5 @@
 ---
-title: Zmienianie właściwości podpisu wielu ciągów | Dokumentacja firmy Microsoft
+title: Zmiana właściwości podpisu lub wielu ciągów | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,29 +18,29 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 2d97cc278841f8b25636622bcb5fdc9a03a42751
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 1d2c53825cab6b14234bd030ae9167b20c30bd5b
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33860284"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39467228"
 ---
 # <a name="changing-the-caption-property-of-multiple-strings"></a>Zmiana właściwości podpisu lub wielu ciągów
-Poniższa procedura pokazuje, jak zmienić właściwości podpisu wielu ciągów.  
+Poniższa procedura pokazuje, jak zmienić właściwości podpisu lub wielu ciągów.  
   
-### <a name="to-change-the-caption-property-of-multiple-strings"></a>Aby zmienić właściwości podpisu wielu ciągów  
+### <a name="to-change-the-caption-property-of-multiple-strings"></a>Aby zmienić właściwości podpisu lub wielu ciągów  
   
-1.  Otwórz tabeli ciągów, klikając odpowiednią ikonę w [widok zasobów](../windows/resource-view-window.md).  
+1.  Otwórz tabeli ciągów, klikając dwukrotnie odpowiednią ikonę w [widok zasobów](../windows/resource-view-window.md).  
   
-     **Uwaga** Jeśli projekt nie zawiera już plik .rc, zobacz [Tworzenie nowego pliku skryptu zasobu](../windows/how-to-create-a-resource-script-file.md).  
+     **Uwaga** Jeśli projekt nie zawiera jeszcze pliku .rc, zobacz [tworzenia nowego pliku skryptu zasobów](../windows/how-to-create-a-resource-script-file.md).  
   
-2.  Wybierz parametry chcesz zmienić, przytrzymując **CTRL** klucza kliknij każdy z nich.  
+2.  Wybierz parametry, aby zmienić, przytrzymując **CTRL** klucza podczas klikania każdej z nich.  
   
-3.  W [okna właściwości](/visualstudio/ide/reference/properties-window), wpisz nową wartość dla właściwości, które chcesz zmienić.  
+3.  W [okno właściwości](/visualstudio/ide/reference/properties-window), wpisz nową wartość dla właściwości, aby zmienić.  
   
 4.  Naciśnij klawisz **ENTER**.  
   
- Aby uzyskać informacje o dodawaniu zasobów do projektów zarządzanych (te, których miejscem docelowym jest środowisko uruchomieniowe języka wspólnego), zobacz [zasobów w aplikacjach pulpitu](/dotnet/framework/resources/index) w *Przewodnik programistów platformy .NET Framework.* Aby uzyskać informacje na ręczne dodanie do projektów zarządzanych plików zasobów, uzyskiwanie dostępu do zasobów, wyświetlanie zasoby statyczne i przypisanie do właściwości ciągów zasobów, zobacz [wskazówki: Lokalizowanie formularzy systemu Windows](http://msdn.microsoft.com/en-us/9a96220d-a19b-4de0-9f48-01e5d82679e5) i [Wskazówki: Korzystanie z zasobów dla lokalizacji ASP.NET](http://msdn.microsoft.com/Library/bb4e5b44-e2b0-48ab-bbe9-609fb33900b6).  
+ Aby uzyskać informacje na temat dodawania zasobów do projektów zarządzanych, (te, których platformą docelową środowiska uruchomieniowego języka wspólnego), zobacz [zasoby w aplikacjach pulpitu](/dotnet/framework/resources/index) w *przewodniku dewelopera .NET Framework.* Aby uzyskać informacji na temat ręcznego dodawania plików zasobów do projektów zarządzanych, uzyskiwania dostępu do zasobów, wyświetlania statycznych zasobów i przypisywania ciągów zasobów do właściwości, zobacz [Instruktaż: Lokalizowanie interfejsów Windows Forms](http://msdn.microsoft.com/9a96220d-a19b-4de0-9f48-01e5d82679e5) i [Wskazówki: Korzystanie z zasobów for Localization with ASP.NET](http://msdn.microsoft.com/Library/bb4e5b44-e2b0-48ab-bbe9-609fb33900b6).  
   
  **Wymagania**  
   

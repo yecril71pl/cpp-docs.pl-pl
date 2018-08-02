@@ -19,12 +19,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a55aca3abe95d189c40c7571db39fc48edf5f4cc
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: c278c39908312f76a8b62a529beaed884c07a81d
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37947864"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39461523"
 ---
 # <a name="subscripting"></a>Tworzenie indeksów dolnych
 Operator indeksu dolnego (**[**), takiej jak operator wywołania funkcji jest uznawany za operatora binarnego. Operator indeksu dolnego, musi być funkcją niestatycznej składowej, która przyjmuje jeden argument. Ten argument może być dowolnego typu i wyznacza indeks dolny tablicy żądaną.  
@@ -98,9 +98,9 @@ Element: [10] = 10
 ```  
   
 ## <a name="comments"></a>Komentarze  
- Gdy `i` osiągnie 10 poprzedni program `operator[]` wykryje, że liczbach indeksu jest używana i wysyła komunikat o błędzie.  
+ Gdy `i` osiągnie 10 poprzedni program **— operator []** wykryje, że liczbach indeksu jest używana i wysyła komunikat o błędzie.  
   
- Należy pamiętać, że funkcja `operator[]` zwraca typ odwołania. To powoduje, że do l wartością, co pozwala na korzystanie z indeksem wyrażeń po obu stronach operatory przypisania.  
+ Należy pamiętać, że funkcja **— operator []** zwraca typ odwołania. To powoduje, że do l wartością, co pozwala na korzystanie z indeksem wyrażeń po obu stronach operatory przypisania.  
   
-## <a name="see-also"></a>Zobacz też  
+## <a name="see-also"></a>Zobacz także  
  [Przeładowanie operatora](../cpp/operator-overloading.md)

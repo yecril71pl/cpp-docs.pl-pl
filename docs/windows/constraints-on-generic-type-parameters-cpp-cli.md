@@ -18,22 +18,21 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: c9787eb87ab701d067762a436d92b2fba3fabcbb
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 33829d868eb90cde7259a482b8fc80f9cd6fd677
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33883345"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39465301"
 ---
 # <a name="constraints-on-generic-type-parameters-ccli"></a>Ograniczenia parametrów typu ogólnego (C++/CLI)
-W ogólnym typie lub metoda deklaracje kwalifikować się parametr typu z ograniczeniami. Ograniczenie jest wymaganie, które muszą spełniać typy używane jako argumentów typu. Na przykład ograniczenie może być czy argument typu musi implementować interfejs niektórych lub dziedziczyć po określonej klasy.  
+W ogólnym typie lub deklaracje metody możesz skorzystać z parametrem typu ograniczenia. Ograniczenie to wymaganie, które muszą spełniać typy używane jako argumenty typu. Na przykład może być ograniczenie, że argument typu musi implementować niektórych interfejsu lub dziedziczyć z określonej klasy.  
   
- Ograniczenia są opcjonalne; nieokreślenie ograniczenia dla parametru jest odpowiednikiem ograniczający parametru do <xref:System.Object>.  
+ Ograniczenia są opcjonalne; Brak określenia ograniczenie dotyczące parametru jest odpowiednikiem ograniczając tego parametru, aby <xref:System.Object>.  
   
 ## <a name="syntax"></a>Składnia  
   
 ```  
-  
 where type-parameter: constraint list  
 ```  
   
@@ -41,25 +40,25 @@ where type-parameter: constraint list
  *Parametr typu*  
  Jeden z parametrów typu, aby być ograniczone.  
   
- *ograniczenie listy*  
- *ograniczenie listy* jest rozdzielaną przecinkami listą ograniczenia specyfikacji. Na liście mogą znajdować interfejsy powinny być implementowane przez parametr typu.  
+ *Lista ograniczeń*  
+ *Lista ograniczeń* jest rozdzielana przecinkami lista ograniczenia specyfikacji. Na liście mogą znajdować interfejsy do zaimplementowania przez parametr typu.  
   
- Listy mogą również obejmować klasy. Dla argumentu typu spełniać ograniczenie klasy podstawowej musi być taka sama klasa co ograniczenie lub pochodzić z ograniczenia.  
+ Lista może również zawierać klasę. Dla argumentu typu spełniać ograniczenie klasy bazowej musi być taka sama klasa co ograniczenia lub pochodzić od ograniczenia.  
   
- Można również określić `gcnew()` wskazująca typ argumentu musi mieć publicznego konstruktora bez parametrów; lub `ref class` wskazująca argument typu musi być typem referencyjnym, łącznie z klasy, interfejsu, delegata lub typ tablicy; lub `value class` do wskazują, że argument typu musi być typem wartości. Wszystkie wartości typu z wyjątkiem Nullable\<T > można określić.  
+ Można również określić `gcnew()` do wskazania, argument typu musi mieć publicznego konstruktora bez parametrów; lub **klasy referencyjnej** aby wskazać typ argumentu musi być typem referencyjnym, w tym klasy, interfejsu, delegata lub tablicy Typ; lub **klasę wartości** aby wskazać typ argumentu musi być typem wartości. Wszystkie wartości typu z wyjątkiem Nullable\<T > może być określony.  
   
- Można również określić parametr ogólny jako ograniczenia. Argumentu typu dostarczonego dla typu się, że są ograniczający musi być lub pochodzić od typu ograniczenia. Jest to ograniczenie bez typu.  
+ Można również określić parametr ogólny jako ograniczenie. Typ podany argument dla typu, są ograniczając musi być lub pochodzić od typu ograniczenia. Jest to ograniczenie typu "naked".  
   
 ## <a name="remarks"></a>Uwagi  
- Klauzula ograniczenia składa się z **gdzie** następuje parametr typu, dwukropek (**:**) i ograniczenia, które określa rodzaj ograniczenia dla parametru typu. **gdzie** jest słowem kluczowym kontekstowa, zobacz [słowa kluczowe Context-Sensitive](../windows/context-sensitive-keywords-cpp-component-extensions.md) Aby uzyskać więcej informacji. Oddziel wiele **gdzie** klauzule się spacją.  
+ Klauzula constraint składa się z **gdzie** następuje dwukropek, parametr typu (**:**) i ograniczenia, które określa rodzaj ograniczenia dla parametru typu. **gdzie** jest kontekstowe słowo kluczowe; zobacz [Context-Sensitive Keywords](../windows/context-sensitive-keywords-cpp-component-extensions.md) Aby uzyskać więcej informacji. Oddziel wiele **gdzie** klauzule ze spacją.  
   
- Ograniczenia są stosowane do wpisz parametry, aby umieścić ograniczenia dotyczące typów, które mogą być używane jako argumentów typu ogólnego lub metody.  
+ Ograniczenia są stosowane do parametrów, aby umieścić ograniczenia na typy, które mogą być używane jako argumenty typu ogólnego lub metody typu.  
   
- Ograniczenia klasy i interfejs określić, że typy argumentów musi być lub dziedziczą z klasy określonej lub implementować interfejs określony.  
+ Ograniczenia klasy i interfejs określić typy argumentów musi być lub dziedziczą z klasy określonej lub implementacji określonego interfejsu.  
   
- Stosowania ograniczeń typu ogólnego lub metody umożliwia kodu w tym typie lub metodzie mógł korzystać z funkcji znanych typów ograniczone. Na przykład można zadeklarować klasy ogólnej taki sposób, że parametr typu implementuje **IComparable\<T >** interfejsu:  
+ Stosowanie ograniczeń typu ogólnego lub metody umożliwia kodu w tym typie lub metodzie, aby móc korzystać z funkcji znanych typów ograniczone. Na przykład, możesz zadeklarować klasy ogólnej taki sposób, że parametr typu implementuje `IComparable<T>` interfejsu:  
   
-```  
+```cpp  
 // generics_constraints_1.cpp  
 // compile with: /c /clr  
 using namespace System;  
@@ -68,17 +67,17 @@ where T : IComparable<T>
 ref class List {};  
 ```  
   
- To ograniczenie wymaga argumentu typu dla `T` implementuje `IComparable<T>` w czasie kompilacji. Umożliwia także metody interfejsu, takich jak **CompareTo**, aby wywołać. Na wystąpienia parametru typu można wywoływać metod interfejsu niezbędna jest rzutowania.  
+ To ograniczenie wymaga argumentu typu dla `T` implementuje `IComparable<T>` w czasie kompilacji. Umożliwia także metody interfejsu, takich jak `CompareTo`, ma zostać wywołana. Brak rzutowania pozwala na potrzeby wystąpienie parametru typu wywoływać metod interfejsu.  
   
- Nie można wywołać metody statyczne klasy argument typu za pomocą parametru typu; można ich wywołać tylko za pośrednictwem rzeczywisty typ o nazwie.  
+ Nie można wywołać metody statycznej w klasie argument typu za pomocą parametru typu; one może być wywoływana tylko za pośrednictwem rzeczywisty typ o nazwie.  
   
- Ograniczenie nie może być typem wartości, takich jak tym wbudowane typy `int` lub **podwójne**. Ponieważ typów wartości nie może mieć pochodne klasy, tylko jedna klasa kiedykolwiek będą mogli spełniać ograniczenie. W takim przypadku ogólnego może ulegną z parametrem typu zastąpiony przez typ określonej wartości.  
+ Ograniczenie nie może być typem wartości, w tym wbudowanych typów, takich jak **int** lub **double**. Ponieważ typy wartości nie może mieć pochodne klasy, tylko jedną klasę nigdy nie będzie mogła spełniać ograniczenie. W takiej sytuacji można inaczej ogólnego z parametrem typu zastąpiony przez typ określonej wartości.  
   
- Ponieważ kompilator nie zezwala na korzystanie z metod lub innych funkcji nieznanego typu, chyba że ograniczenia oznacza, że nieznany typ obsługuje metod lub interfejsów w niektórych przypadkach wymagane są ograniczenia.  
+ Ograniczenia są wymagane w niektórych przypadkach, ponieważ kompilator nie pozwoli na korzystanie z metod lub innych funkcji nieznanego typu, chyba że ograniczenia oznaczają, że nieznany typ obsługuje metody lub interfejsów.  
   
- Można określić wiele ograniczeń dla tego samego parametru typu w postaci listy rozdzielanej przecinkami  
+ Można określić wiele ograniczeń dla tego samego parametru typu na liście rozdzielanej przecinkami  
   
-```  
+```cpp  
 // generics_constraints_2.cpp  
 // compile with: /c /clr  
 using namespace System;  
@@ -88,9 +87,9 @@ where T : List<T>, IComparable<T>
 ref class List {};  
 ```  
   
- Wiele parametrów typu, za pomocą jednego **gdzie** klauzula dla każdego parametru typu. Na przykład:  
+ Z wieloma parametrami typu, użyj jednej **gdzie** klauzulę dla każdego parametru typu. Na przykład:  
   
-```  
+```cpp  
 // generics_constraints_3.cpp  
 // compile with: /c /clr  
 using namespace System;  
@@ -102,15 +101,15 @@ generic <typename K, typename V>
 ref class Dictionary {};  
 ```  
   
- Podsumowując, użyj ograniczenia w kodzie zgodnie z następującymi zasadami:  
+ Aby podsumować, użyj ograniczeń w kodzie, zgodnie z następującymi zasadami:  
   
--   Jeśli nie są wyświetlane wiele ograniczeń, ograniczenia mogą być wyświetlone w dowolnej kolejności.  
+-   Jeśli na liście wielu ograniczeń ograniczenia może być wyświetlane w dowolnej kolejności.  
   
--   Ograniczenia mogą być również typy klas, takich jak abstrakcyjnych klas podstawowych. Jednak ograniczenia nie może być typów wartości lub zapieczętowane klasy.  
+-   Ograniczenia mogą być również typy klas, takie jak abstrakcyjnych klas bazowych. Typy wartości lub klasach zapieczętowanych nie można jednak ograniczenia.  
   
--   Same ograniczenia nie może być parametrami typu, ale wymagają one parametrów typu w skonstruowanego typu otwartego. Na przykład:  
+-   Same ograniczenia nie może być parametrami typu, ale może pociągać za sobą parametrów typu w ramach skonstruowanego typu otwartego. Na przykład:  
   
-    ```  
+    ```cpp  
     // generics_constraints_4.cpp  
     // compile with: /c /clr  
     generic <typename T>  
@@ -122,9 +121,9 @@ ref class Dictionary {};
     ```  
   
 ## <a name="example"></a>Przykład  
- W poniższym przykładzie pokazano, za pomocą ograniczenia do wywołania metody wystąpienia dotyczące parametrów typu.  
+ Poniższy przykład pokazuje, za pomocą ograniczeń do wywołania metody wystąpienia w parametrach typu.  
   
-```  
+```cpp  
 // generics_constraints_5.cpp  
 // compile with: /clr  
 using namespace System;  
@@ -183,13 +182,13 @@ int main() {
 ```  
   
 ## <a name="example"></a>Przykład  
- Parametr typu ogólnego jest używany jako ograniczenie, jest nazywany ograniczenia bez typu. Ograniczenia typu naked są przydatne, gdy funkcji członkowskiej z własną parametr typu ma ograniczenie parametru typu parametru typu zawierającego.  
+ Parametr typu ogólnego jest używany jako ograniczenie, jest nazywany ograniczenia typu "naked". Ograniczenia typu "naked" są przydatne, gdy trzeba ograniczyć tego parametru na parametr typu dla typu zawierającej funkcji składowej z parametrem typu.  
   
- W poniższym przykładzie T jest ograniczenia typu naked w kontekście metody Add.  
+ W poniższym przykładzie `T` ograniczenie typu "naked" w kontekście `Add` metody.  
   
- Ograniczenia typu naked można również w definicji klasy ogólnej. Przydatność ograniczenia typu naked z klasami ogólnego są ograniczone, ponieważ kompilator można założyć, nie ma ograniczenia typu naked z tą różnicą, że pochodzi od <xref:System.Object>. Użyj typu bez ograniczenia klasy ogólne w scenariuszach, w których ma zostać wymuszone relację dziedziczenia między dwoma parametrami typu.  
+ Ograniczenia typu "naked" można również w definicji klasy ogólnej. Użyteczność ograniczenia typu "naked" przy użyciu klas ogólnych jest ograniczona, ponieważ kompilator może przyjąć nie ma ograniczenia typu "naked", z tą różnicą, że pochodzi od klasy <xref:System.Object>. Użyj ograniczeń typu "naked" w klasach ogólnych w scenariuszach, w których ma zostać wymuszone relacje dziedziczenia między dwa parametry typu.  
   
-```  
+```cpp  
 // generics_constraints_6.cpp  
 // compile with: /clr /c  
 generic <class T>  

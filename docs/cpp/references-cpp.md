@@ -19,12 +19,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 174ab622b177766a33dd55f6b3c78ac38c26ded1
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 953c03f7c8125713afddd3b3567615be585fc9db
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38956596"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39463151"
 ---
 # <a name="references-c"></a>Odwołania (C++)
 Odwołania, jak wskaźnik, przechowuje adres obiektu, który znajduje się w innym miejscu w pamięci. W przeciwieństwie do wskaźnika, odwołania po jego zainicjowaniu nie można wprowadzać odnoszą się do innego obiektu lub ustawiona na wartość null. Istnieją dwa rodzaje odwołań: odwołania lvalue, które odnoszą się do nazwanej odwołania zmiennej i r-wartości, które odnoszą się do [tymczasowy obiekt](../cpp/temporary-objects.md). & — Operator oznacza odwołanie lvalue i & & — operator oznacza odwołanie rvalue lub odwołaniem universal (rvalue lub l-wartości) w zależności od kontekstu.  
@@ -114,12 +114,8 @@ int main() {
 4  
 ```  
   
-## <a name="comment"></a>Komentarz  
- Tematy w tej sekcji:  
-  
--   [Argumenty funkcji będące odwołaniami](../cpp/reference-type-function-arguments.md)  
-  
--   [Wartości zwracane przez funkcje będące odwołaniami](../cpp/reference-type-function-returns.md)  
-  
--   [Odwołania do wskaźników](../cpp/references-to-pointers.md)  
+## <a name="see-also"></a>Zobacz także
+ [Argumenty funkcji będące odwołaniami](../cpp/reference-type-function-arguments.md)  
+ [Wartości zwracane przez funkcje będące odwołaniami](../cpp/reference-type-function-returns.md)  
+ [Odwołania do wskaźników](../cpp/references-to-pointers.md)  
   

@@ -17,15 +17,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8419ea4e446c8bf2f555c680079ccb91cc26afb5
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 3675e8bca6f62a1fbc7e30beefc6cbf6efbf197c
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32424133"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39462745"
 ---
 # <a name="semantics-of-expressions"></a>Semantyka wyrażeń
-Wyrażenia są oceniane według priorytetu i grupowanie ich operatorów. ([Priorytet i łączność](../cpp/cpp-built-in-operators-precedence-and-associativity.md) w [konwencje leksykalne](../cpp/lexical-conventions.md), przedstawiono relacje C++ operatory nakładają się na wyrażenia.)  
+Wyrażenia są obliczane według pierwszeństwa i grupowania ich operatorów. ([Pierwszeństwo i kojarzenie operatorów](../cpp/cpp-built-in-operators-precedence-and-associativity.md) w [konwencje leksykalne](../cpp/lexical-conventions.md), przedstawiono relacje języka C++, operatory nakładają się na wyrażeniach.)  
   
 ## <a name="order-of-evaluation"></a>Kolejność obliczeń  
  Rozważmy następujący przykład:  
@@ -51,26 +51,26 @@ int main()
 54  
 ```  
   
- ![Kolejność obliczania w wyrażeniu](../cpp/media/vc38zv1.gif "vc38ZV1")  
+ ![Kolejność obliczania w wyrażeniach](../cpp/media/vc38zv1.gif "vc38ZV1")  
 Kolejność obliczania wyrażenia  
   
- Kolejność, w jakiej są oceniane wyrażenia na ilustracji powyżej wynika priorytet i łączność operatorów:  
+ Kolejność, w jakiej są oceniane wyrażenia pokazano na rysunku powyżej jest określana przez pierwszeństwo i łączność operatorów:  
   
-1.  Mnożenia (*) ma najwyższy priorytet w tym wyrażeniu; Dlatego Podwyrażenie `b * c` jest szacowana jako pierwsza.  
+1.  Mnożenia (*) ma najwyższy priorytet, w tym wyrażeniu; Dlatego Podwyrażenie `b * c` jest stosowana jako pierwsza.  
   
-2.  Dodawania (+) ma najwyższy priorytet dalej, więc `a` zostanie dodany do produktu `b` i `c`.  
+2.  Dodawania (+) ma następnym największym priorytetem, dlatego `a` zostanie dodany do produktu `b` i `c`.  
   
-3.  Przesunięcia w lewo (<<) ma najniższy w wyrażeniu, ale istnieją dwa wystąpienia. Operator przesunięcia w lewo grupy od lewej do prawej, po lewej stronie wyrażenia podrzędnego dlatego najpierw ocenione, a następnie prawo jeden.  
+3.  Przesunięcie w lewo (<<) ma najniższy w wyrażeniu, ale istnieją dwa wystąpienia. Operator przesunięcia w lewo grupy od lewej do prawej, po lewej stronie wyrażenia cząstkowego dlatego najpierw ocenione, a następnie po prawej stronie jeden.  
   
- W przypadku używania nawiasów do grupowania użyto zmieniają priorytet, a także kolejności, w którym wyrażenie jest obliczane, jak pokazano na poniższej ilustracji.  
+ Gdy nawiasy są używane do grupowania podwyrażenia, zmieniają pierwszeństwo, a także kolejności, w którym wyrażenie jest obliczane, jak pokazano na poniższej ilustracji.  
   
  ![Kolejność obliczania wyrażenia w nawiasach](../cpp/media/vc38zv2.gif "vc38ZV2")  
-Kolejność obliczania wyrażenia w nawiasach  
+Kolejność oceny wyrażenia w nawiasach  
   
- Wyrażenia, takich jak te na rysunku powyżej są obliczane wyłącznie w celu ich skutki uboczne — w tym przypadku do przekazywania informacji do wyjścia standardowego urządzenia.  
+ Wyrażenia, takich jak na rysunku powyżej są obliczane wyłącznie na ich efektów ubocznych — w tym przypadku do przekazywania informacji na urządzeniu standardowe dane wyjściowe.  
   
 ## <a name="notation-in-expressions"></a>Notacja w wyrażeniach  
- Język C++ określa niektórych możliwości podczas określania argumentów operacji. W poniższej tabeli przedstawiono typy argumentów operacji dopuszczalne operatorów, które wymagają argumentów operacji typu *typu*.  
+ Język C++ określa niektóre możliwości podczas określania argumentów operacji. W poniższej tabeli przedstawiono typy argumentów operacji dopuszczalne operatorów, które wymagają argumentów operacji typu *typu*.  
   
 ### <a name="operand-types-acceptable-to-operators"></a>Typy argumentów operacji dopuszczalne operatorów  
   
@@ -81,10 +81,10 @@ Kolejność obliczania wyrażenia w nawiasach
 |`const` *Typ*|*Typ*<br /> `const` *Typ*<br />`const` *Typ*&|  
 |`volatile` *Typ*|*Typ*<br /> `volatile` *Typ*<br /> `volatile` *Typ*&|  
   
- Ponieważ poprzednie reguł zawsze można używać w połączeniu, stała wskaźnika do obiektu volatile należy podać gdy oczekiwano wskaźnika.  
+ Ponieważ powyższych zasad, można go zawsze używać w połączeniu, wskaźnika elementu const do obiektów volatile mogą być dostarczane gdy wskaźnik jest oczekiwany.  
   
 ## <a name="ambiguous-expressions"></a>Wyrażenie niejednoznaczne  
- Niektóre wyrażenia są niejednoznaczne w ich znaczenie. Wyrażenia te występują najczęściej modyfikacji wartości obiektu jest więcej niż raz w tym samym wyrażeniu. Wyrażenia te są zależne od określonej kolejności szacowania, gdy język nie definiuje jedną. Rozważmy następujący przykład:  
+ Niektóre wyrażenia są niejednoznaczne w ich znaczenie. Wyrażenia te występują najczęściej, gdy wartość obiektu zostanie zmodyfikowany w więcej niż jeden raz w jednym wyrażeniu. Wyrażenia te zależą od określonej kolejności obliczania, gdy język nie definiuje jedną. Rozważmy następujący przykład:  
   
 ```  
 int i = 7;  
@@ -92,7 +92,7 @@ int i = 7;
 func( i, ++i );  
 ```  
   
- W języku C++ nie gwarantuje kolejność, w jakiej są oceniane argumentów dla wywołania funkcji. W związku z tym w powyższym przykładzie `func` otrzymują wartości 7 i 8, lub 8 i 8 jego parametrów, w zależności od tego, czy parametry są oceniane od lewej do prawej lub od prawej do lewej.  
+ Język C++ nie gwarantuje kolejności, w jakiej są oceniane argumentów dla wywołania funkcji. Dlatego w poprzednim przykładzie `func` może odbierać wartości 7 i 8, lub 8 i 8 dla jego parametrów, w zależności od tego, czy parametry są obliczane od lewej do prawej lub od prawej do lewej.  
   
 ## <a name="c-sequence-points-microsoft-specific"></a>Punkty sekwencji języka C++ (Microsoft Specific)  
  Wyrażenie może modyfikować wartość obiektu tylko raz między kolejnymi „punktami sekwencji”.  
@@ -101,7 +101,7 @@ func( i, ++i );
   
 -   Lewy operand logicznego operatora AND (&&). Lewy operand logicznego operatora AND jest obliczany całkowicie, wraz ze wszystkimi efektami ubocznymi zakończonymi przed kontynuowaniem. Nie ma gwarancji, że prawy operand logicznego operatora AND zostanie obliczony.  
   
--   Lewej strony operatora logicznego OR (&#124;&#124;). Lewy operand logicznego operatora OR jest obliczany całkowicie, wraz ze wszystkimi efektami ubocznymi zakończonymi przed kontynuowaniem. Nie ma gwarancji, że prawy operand logicznego operatora OR zostanie obliczony.  
+-   Lewy operand logicznego operatora OR (&#124;&#124;). Lewy operand logicznego operatora OR jest obliczany całkowicie, wraz ze wszystkimi efektami ubocznymi zakończonymi przed kontynuowaniem. Nie ma gwarancji, że prawy operand logicznego operatora OR zostanie obliczony.  
   
 -   Lewy operand operatora przecinka. Lewy operand logicznego operatora przecinka jest obliczany całkowicie, wraz ze wszystkimi efektami ubocznymi zakończonymi przed kontynuowaniem. Oba operandy operatora przecinka są obliczane zawsze.  
   
@@ -121,5 +121,5 @@ func( i, ++i );
   
 -   Wyrażenie w instrukcji return. Wyrażenie jest obliczane całkowicie, wraz ze wszystkimi efektami ubocznymi zakończonymi przed zwróceniem sterowania do funkcji wywołującej.  
   
-## <a name="see-also"></a>Zobacz też  
+## <a name="see-also"></a>Zobacz także  
  [Wyrażenia](../cpp/expressions-cpp.md)

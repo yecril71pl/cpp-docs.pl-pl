@@ -20,12 +20,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9eba5462caf739d78236e10df018fc07421ea876
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: 84035f2007f3c45c33c1dfa342caf5c788580205
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37939123"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39460922"
 ---
 # <a name="virtual-c"></a>wirtualne (C++)
 **Wirtualnego** — słowo kluczowe deklaruje funkcję wirtualną lub wirtualnej klasy bazowej.  
@@ -55,5 +55,5 @@ virtual [access-specifier] base-class-name
   
  Zobacz też następujące słowa kluczowe: [klasy](../cpp/class-cpp.md), [prywatnej](../cpp/private-cpp.md), [publicznych](../cpp/public-cpp.md), i [chronione](../cpp/protected-cpp.md).  
   
-## <a name="see-also"></a>Zobacz też  
+## <a name="see-also"></a>Zobacz także  
  [Słowa kluczowe](../cpp/keywords-cpp.md)

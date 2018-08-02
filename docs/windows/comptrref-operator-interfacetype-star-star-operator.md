@@ -1,5 +1,5 @@
 ---
-title: ComPtrRef::operator InterfaceType ** — Operator | Dokumentacja firmy Microsoft
+title: Operator ComPtrRef::operator InterfaceType ** | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 416b30c55027debddc153c44e55c7a4be512703d
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 6401d78f0c410057d41a80f2345255d4876adb23
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33870515"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39464418"
 ---
 # <a name="comptrrefoperator-interfacetype-operator"></a>ComPtrRef::operator InterfaceType** Operator
 Obsługuje infrastrukturę biblioteki WRL i nie jest przeznaczona do użycia bezpośrednio w kodzie.  
@@ -34,12 +34,12 @@ operator InterfaceType**();
 ```  
   
 ## <a name="remarks"></a>Uwagi  
- Bieżący obiekt comptrref — usuwa i zwraca wskaźnik do a wskaźnik do interfejsu, który był reprezentowany przez obiekt comptrref —.  
+ Usuwa bieżący **comptrref —** obiektu i zwraca wskaźnik do a wskaźnik do interfejsu, który został przedstawiony przez **comptrref —** obiektu.  
   
 ## <a name="requirements"></a>Wymagania  
  **Nagłówek:** client.h  
   
- **Namespace:** Microsoft::wrl:: details —  
+ **Namespace:** Microsoft::wrl:: details  
   
 ## <a name="see-also"></a>Zobacz też  
  [Comptrref — klasa](../windows/comptrref-class.md)   

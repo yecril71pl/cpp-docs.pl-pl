@@ -15,31 +15,31 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 64da24a9811046672c317c24bba5332bf09303f9
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 79d89eec82725b28bdbe43f08ac2c05cdb889f6e
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33860310"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39466972"
 ---
 # <a name="attribute-parameter-types--c-component-extensions"></a>Typy parametrów atrybutu (C++ Component Extensions)
-Wartości przekazanych do atrybutów musi być znane w kompilatorze w czasie kompilacji.  Parametry atrybutów mogą być następujące:  
+Wartości przekazane do atrybutów musi być znane, aby kompilator w czasie kompilacji.  Parametry atrybutów może być następujących typów:  
   
--   `bool`  
+-   **bool**  
   
--   `char`, `unsigned char`  
+-   **CHAR**, **unsigned char**  
   
--   `short`, `unsigned short`  
+-   **krótki**, **typ unsigned short**  
   
--   `int`, `unsigned int`  
+-   **int**, **unsigned int**  
   
--   `long`, `unsigned long`  
+-   **długi**, **unsigned long**  
   
--   `__int64`, `unsigned __int64`  
+-   **__int64**, **__int64 bez znaku**  
   
--   `float`, `double`  
+-   **float**, **double**  
   
--   `wchar_t`  
+-   **wchar_t**  
   
 -   `char*` lub `wchar_t*` lub `System::String*`  
   
@@ -47,13 +47,13 @@ Wartości przekazanych do atrybutów musi być znane w kompilatorze w czasie kom
   
 -   `System::Object ^`  
   
--   `enum`  
+-   **enum**  
   
 ## <a name="example"></a>Przykład  
   
 ### <a name="code"></a>Kod  
   
-```  
+```cpp  
 // attribute_parameter_types.cpp  
 // compile with: /clr /c  
 using namespace System;  
@@ -81,7 +81,7 @@ ref struct MyStruct {
   
 ### <a name="code"></a>Kod  
   
-```  
+```cpp  
 // extending_metadata_c.cpp  
 // compile with: /clr /c  
 using namespace System;  
@@ -110,11 +110,11 @@ ref class ClassD {};   // Positional and named
 ## <a name="example"></a>Przykład  
   
 ### <a name="description"></a>Opis  
- Atrybut parametry mogą być tablice jednowymiarowe poprzednich typów.  
+ Atrybut parametry mogą być tablice jednowymiarowe poprzedniego typów.  
   
 ### <a name="code"></a>Kod  
   
-```  
+```cpp  
 // extending_metadata_d.cpp  
 // compile with: /clr /c  
 using namespace System;  

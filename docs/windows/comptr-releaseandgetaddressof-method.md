@@ -1,5 +1,5 @@
 ---
-title: ComPtr::ReleaseAndGetAddressOf — metoda | Dokumentacja firmy Microsoft
+title: ComPtr::ReleaseAndGetAddressOf, metoda | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 32d846a1fc41596812ca6e8578f25f9ae8115182
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 9d55241ddefce0e4fcd7f72698779d6e4ec97e20
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33883802"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39464996"
 ---
 # <a name="comptrreleaseandgetaddressof-method"></a>ComPtr::ReleaseAndGetAddressOf — Metoda
-Zwalnia skojarzony z tym comptr — interfejs, a następnie pobiera adres [ptr_ — element](../windows/comptr-ptr-data-member.md) danych elementu członkowskiego, który zawiera wskaźnik do interfejsu, która została opublikowana.  
+Zwalnia interfejs skojarzony z tym **ComPtr** i następnie pobiera adres [ptr_ — element](../windows/comptr-ptr-data-member.md) element członkowski danych, który zawiera wskaźnik do interfejsu, który został wydany.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -34,12 +34,12 @@ T** ReleaseAndGetAddressOf();
 ```  
   
 ## <a name="return-value"></a>Wartość zwracana  
- Adres [ptr_ — element](../windows/comptr-ptr-data-member.md) tego comptr — element członkowski danych.  
+ Adres [ptr_ — element](../windows/comptr-ptr-data-member.md) to element członkowski danych **ComPtr**.  
   
 ## <a name="requirements"></a>Wymagania  
  **Nagłówek:** client.h  
   
- **Namespace:** Microsoft::wrl —  
+ **Namespace:** Microsoft::WRL  
   
 ## <a name="see-also"></a>Zobacz też  
  [Comptr — klasa](../windows/comptr-class.md)   

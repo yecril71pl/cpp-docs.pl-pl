@@ -22,41 +22,40 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 0e5ce1fcd71f6f49532d083c7cb2dcfce9ed644c
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: feece642928db70a2b78dd3a4117b695b19f4af9
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33856420"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39466075"
 ---
 # <a name="accelerator-editor"></a>Edytor klawiszy skrótów
-Tabela akceleratora jest zasób systemu Windows, który zawiera listę klawisze skrótów (znanej także jako klawisze skrótu) i identyfikatory poleceń, które są skojarzone z nimi. Program może mieć więcej niż jednej tabeli akceleratora.  
+Tabeli klawiszy skrótu jest zasobem Windows, który zawiera listę klawisze skrótów (znany także jako klawisze skrótów) i identyfikatory poleceń, które są skojarzone z nimi. Program może mieć więcej niż jednej tabeli akceleratora.  
   
- Zwykle akceleratorów są używane jako skróty klawiaturowe dla poleceń programu, które są również dostępne w menu lub pasek narzędzi. Jednak można użyć tabeli akceleratora do definiowania kombinacje klawiszy poleceń, które nie mają obiektu interfejsu użytkownika, skojarzone z nimi.  
+ Zwykle akceleratorów są używane jako skróty klawiaturowe dla poleceń programu, które są również dostępne w menu lub paska narzędzi. Jednak można użyć tabeli akceleratora do definiowania kombinacji klawiszy dla polecenia, które nie mają skojarzonych z nimi obiektu interfejsu użytkownika.  
   
- Można użyć [widoku klasy](http://msdn.microsoft.com/en-us/8d7430a9-3e33-454c-a9e1-a85e3d2db925) na połączeniu klucza poleceń klawiszy skrótów do kodu.  
+ Możesz użyć [Widok klas](http://msdn.microsoft.com/8d7430a9-3e33-454c-a9e1-a85e3d2db925) można dołączyć klucza polecenia klawiszy skrótów do kodu.  
   
  Edytor klawiszy skrótów można:  
   
 -   [Ustawianie właściwości klawiszy skrótów](../windows/setting-accelerator-properties.md)  
   
--   [Kojarzenie klawisza skrótu z elementu Menu.](../windows/associating-an-accelerator-key-with-a-menu-item.md)  
+-   [Kojarzenie klawisza skrótu z elementem Menu](../windows/associating-an-accelerator-key-with-a-menu-item.md)  
   
 -   [Edytowanie tabel akceleratora](../windows/editing-accelerator-tables.md)  
   
 -   [Użyj wstępnie zdefiniowane klawisze skrótów](../windows/predefined-accelerator-keys.md)  
   
     > [!TIP]
-    >  Podczas używania Edytor klawiszy skrótów, należy kliknąć prawym przyciskiem myszy, aby wyświetlić menu skrótów często używanych poleceń. Dostępne polecenia zależą od tego, co wskaźnik wskazuje.  
+    >  Podczas korzystania z Edytor klawiszy skrótów, można kliknąć prawym przyciskiem myszy, aby wyświetlić menu skrótów z najczęściej używanymi poleceniami. Dostępne polecenia zależą od tego, wskaźnik wskazuje na.  
   
     > [!NOTE]
-    >  System Windows nie zezwala na tworzenie tabel akceleratora puste. Po utworzeniu tabeli akceleratora z żadnych wpisów jest usuwane automatycznie podczas zapisywania tabeli.  
+    >  Windows nie pozwalają na tworzenie tabel akceleratora puste. Jeśli utworzenia tabeli akceleratora żadnych wpisów, zostanie usunięta automatycznie po zapisaniu tabeli.  
   
- Aby uzyskać informacje o dodawaniu zasobów do projektów zarządzanych, zobacz [zasobów w aplikacjach pulpitu](/dotnet/framework/resources/index) w *Przewodnik programistów platformy .NET Framework.* Aby uzyskać informacje na ręczne dodanie do projektów zarządzanych plików zasobów, uzyskiwanie dostępu do zasobów, wyświetlanie zasoby statyczne i przypisanie do właściwości ciągów zasobów, zobacz [tworzenie plików zasobów dla aplikacji pulpitu](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Informacje dotyczące globalizacji i lokalizacji zasobów w zarządzanych aplikacjach, zobacz [Globalizing i lokalizacja aplikacji .NET Framework](/dotnet/standard/globalization-localization/index).  
+ Aby uzyskać informacje na temat dodawania zasobów do projektów zarządzanych, zobacz [zasoby w aplikacjach pulpitu](/dotnet/framework/resources/index) w *przewodniku dewelopera .NET Framework.* Aby uzyskać informacji na temat ręcznego dodawania plików zasobów do projektów zarządzanych, uzyskiwania dostępu do zasobów, wyświetlania statycznych zasobów i przypisywania ciągów zasobów do właściwości, zobacz [Creating Resource Files dla aplikacji klasycznych](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Aby uzyskać informacji na temat globalizacja i lokalizacja zasobów w aplikacjach zarządzanych, zobacz [Globalizing i lokalizowanie aplikacji programu .NET Framework](/dotnet/standard/globalization-localization/index).  
   
 ## <a name="requirements"></a>Wymagania  
  Win32  
   
 ## <a name="see-also"></a>Zobacz też  
  [Edytory zasobów](../windows/resource-editors.md)
-

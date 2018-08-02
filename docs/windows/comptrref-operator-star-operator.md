@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 03de935ab9195cddf3ea9936b694b55ba2cec34c
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 55d4fa6156c4ef2032111c0306c3cff8dce14059
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33883475"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39461455"
 ---
 # <a name="comptrrefoperator-operator"></a>ComPtrRef::operator* Operator
 Obsługuje infrastrukturę biblioteki WRL i nie jest przeznaczona do użycia bezpośrednio w kodzie.  
@@ -34,15 +34,15 @@ InterfaceType* operator *();
 ```  
   
 ## <a name="return-value"></a>Wartość zwracana  
- Wskaźnik do interfejsu reprezentowany przez bieżący obiekt comptrref —.  
+ Wskaźnik do interfejsu, reprezentowane przez bieżącą **comptrref —** obiektu.  
   
 ## <a name="remarks"></a>Uwagi  
- Pobiera wskaźnik do interfejsu reprezentowany przez bieżący obiekt comptrref —.  
+ Pobiera wskaźnik do interfejsu, reprezentowane przez bieżącą **comptrref —** obiektu.  
   
 ## <a name="requirements"></a>Wymagania  
  **Nagłówek:** client.h  
   
- **Namespace:** Microsoft::wrl:: details —  
+ **Namespace:** Microsoft::wrl:: details  
   
 ## <a name="see-also"></a>Zobacz też  
  [Comptrref — klasa](../windows/comptrref-class.md)   

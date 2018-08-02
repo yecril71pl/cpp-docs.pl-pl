@@ -15,21 +15,21 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: ad5a054d6b1cf680998dc5eb073fafc8d351e298
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: ac37f1b5b5df8f39e584b8e5476af81a4b09ecff
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33854470"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39464340"
 ---
 # <a name="array-attributes"></a>Atrybuty tablicy
-Następujące atrybuty dotyczą tablice lub **SAFEARRAY**s.  
+Następujące atrybuty dotyczą tablic lub `SAFEARRAY`s.  
   
 |Atrybut|Opis|  
 |---------------|-----------------|  
 |[library_block](../windows/library-block.md)|Umieszcza konstrukcję wewnątrz bloku biblioteki pliku .idl.|  
-|[satype](../windows/satype.md)|Określa typ danych parametru SAFEARRAY struktury.|  
-|[string](../windows/string-cpp.md)|Oznacza to, że jednowymiarowej tablicy `char`, `wchar_t`, **bajtów** (lub równoważnego) tablicy lub wskaźnika do tablicy takie muszą być traktowane jako ciąg.|  
+|[satype](../windows/satype.md)|Określa typ danych struktury SAFEARRAY.|  
+|[string](../windows/string-cpp.md)|Oznacza to, że jednowymiarowy **char**, **wchar_t**, **bajtów** (lub równoważnego) tablicy lub wskaźnika do tablicy takie, które muszą być traktowane jako ciąg.|  
   
 ## <a name="see-also"></a>Zobacz też  
  [Atrybuty w zależności od zastosowania](../windows/attributes-by-usage.md)

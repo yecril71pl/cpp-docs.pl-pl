@@ -15,12 +15,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8bec66d25be2cb56c75f42f60af2ccd5e3f759ad
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: e773a0188eb3450ab1a13a24fc556fa8e8c4f874
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37948219"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39464272"
 ---
 # <a name="transfers-of-control"></a>Transferowanie kontroli
 Możesz użyć **goto** instrukcji lub **przypadek** etykiety w **Przełącz** instrukcję, aby określić program, który gałęzie ostatnie inicjatora. Taki kod jest niedozwolone, chyba że deklaracja, która zawiera inicjator jest w bloku ujęta w bloku, w której występuje instrukcja skoku.  
@@ -60,4 +60,3 @@ int main()
  W powyższym przykładzie **goto** instrukcji spróbuje przekazać sterowanie ostatnie inicjowanie `i`. Jednak jeśli `i` zostały zadeklarowane, ale nie został zainicjowany, transfer będą prawnych.  
   
  Obiekty `total` i `ch`, zadeklarowanych w bloku, który służy jako *instrukcji* z **podczas** instrukcji, są niszczone, gdy tego bloku jest został zakończony, za pomocą  **podział** instrukcji.  
-  

@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 0c23ba7ba476b44b44f48b76119776e2f2cb188e
-ms.sourcegitcommit: 04d327940787df1297b72d534f388a035d472af0
+ms.openlocfilehash: 19e04f5415f9f7a736371c888dff7559df6c6c66
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/20/2018
-ms.locfileid: "39181149"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39462339"
 ---
 # <a name="comptrrefbaseoperator-iinspectable-operator"></a>ComPtrRefBase::operator IInspectable\* \* — Operator
 
@@ -36,9 +36,9 @@ operator IInspectable**() const;
 
 ## <a name="remarks"></a>Uwagi
 
-Rzutuje bieżącego [ptr_ — element](../windows/comptrrefbase-ptr-data-member.md) element członkowski danych do wskaźnik do a wskaźnik do interfejsie IInspectable.
+Rzutuje bieżącego [ptr_ — element](../windows/comptrrefbase-ptr-data-member.md) element członkowski danych do wskaźnik do a wskaźnik do `IInspectable` interfejsu.
 
-Błąd jest emitowane, jeśli bieżący comptrrefbase — nie pochodzi od IInspectable.
+Błąd jest emitowane, jeśli bieżący **comptrrefbase —** nie pochodzi od `IInspectable`.
 
 To rzutowanie jest dostępna tylko wtedy, gdy **&#95; &#95;WRL_CLASSIC_COM&#95; &#95;** jest zdefiniowana.
 
@@ -49,6 +49,5 @@ To rzutowanie jest dostępna tylko wtedy, gdy **&#95; &#95;WRL_CLASSIC_COM&#95; 
 **Namespace:** Microsoft::wrl:: details
 
 ## <a name="see-also"></a>Zobacz też
-
 [Comptrrefbase — klasa](../windows/comptrrefbase-class.md)   
 [Microsoft::WRL::Details, przestrzeń nazw](../windows/microsoft-wrl-details-namespace.md)

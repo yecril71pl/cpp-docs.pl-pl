@@ -12,12 +12,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 38edaa7dfa97fd34ab70b21785a416c3ed072d55
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: 7ccdbc71679a197e0464b4ec42dba948754c4c5c
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37940556"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39462267"
 ---
 # <a name="type-conversions-and-type-safety-modern-c"></a>Konwersje i bezpieczeństwo typów (Modern C++)
 W tym dokumencie wymieniono typowe problemy z konwersją typów oraz opisano sposoby ich unikania w kodzie języka C++.  
@@ -75,7 +75,6 @@ num2 = -1;
 num = num2;  
 cout << "unsigned val = " << num << " signed val = " << num2 << endl;  
 // Prints: unsigned val = 65535 signed val = -1  
-  
 ```  
   
  Należy zauważyć, że wartości są reinterpretowane w obu kierunkach. Jeśli program generuje wyniki nieparzyste, w których znak wartości jest przeciwny wobec oczekiwanego, należy poszukać niejawnych konwersji między typami całkowitymi ze znakiem i bez znaku. W poniższym przykładzie wynik wyrażenia (0 – 1) jest niejawnie konwertowany z **int** do **unsigned int** gdy jest on przechowywany w `num`. Powoduje to ponowne interpretowanie wzorca bitowego.  
@@ -83,7 +82,6 @@ cout << "unsigned val = " << num << " signed val = " << num2 << endl;
 ```cpp  
 unsigned int u3 = 0 - 1;  
 cout << u3 << endl; // prints 4294967295  
-  
 ```  
   
  Kompilator nie ostrzega o niejawnych konwersjach między typami całkowitymi ze znakiem i bez znaku. Dlatego zaleca się całkowite unikanie konwersji z typów ze znakiem na typy bez znaku. Jeśli nie jest to możliwe, należy dodać do kodu mechanizm kontroli w czasie wykonywania, który będzie wykrywał, czy konwertowana wartość jest większa lub równa zero i mniejsza lub równa maksymalnej wartości typu ze znakiem. Wartości w tym zakresie zostaną przekształcone z typów ze znakiem na typy bez znaku lub odwrotnie bez ponownego interpretowania.  
@@ -93,7 +91,6 @@ cout << u3 << endl; // prints 4294967295
   
 ```cpp  
 char* s = "Help" + 3;  
-  
 ```  
   
 ## <a name="explicit-conversions-casts"></a>Konwersje jawne (rzutowania)  
@@ -104,7 +101,6 @@ char* s = "Help" + 3;
 ```cpp  
 (int) x; // old-style cast, old-style syntax  
 int(x); // old-style cast, functional syntax  
-  
 ```  
   
  Operator rzutowania w stylu języka C jest identyczny z operatorem wywołania (), dlatego w kodzie nie rzuca się w oczy i łatwo go przegapić. Oba są nieprawidłowe, ponieważ trudno je rozpoznać na pierwszy rzut oka lub Wyszukaj, a następnie są one używane, aby wywołać dowolną kombinację **statyczne**, **const**, i **operatorareinterpret_cast**. Stwierdzenie, co faktycznie wykonuje rzutowanie w starym stylu, może być trudne i obarczone ryzykiem błędów. Z tych powodów w sytuacjach, gdy jest potrzebne rzutowanie, zalecamy użycie jednego następujących z operatorów rzutowania języka C++. Często są one znacznie bezpieczniejsze pod względem typów i lepiej wyrażają cele programistyczne:  
@@ -121,7 +117,6 @@ int(x); // old-style cast, functional syntax
     // No error but not necessarily safe.  
     Base* b = new Base();  
     Derived* d2 = static_cast<Derived*>(b);  
-  
     ```  
   
      Aby uzyskać więcej informacji, zobacz [static_cast](../cpp/static-cast-operator.md).  
@@ -147,7 +142,6 @@ int(x); // old-style cast, functional syntax
     }  
   
     //Output: d3 is null;  
-  
     ```  
   
      Aby uzyskać więcej informacji, zobacz [dynamic_cast](../cpp/dynamic-cast-operator.md).  
@@ -161,7 +155,6 @@ int(x); // old-style cast, functional syntax
        const double pi = 3.14;  
        Func(const_cast<double&>(pi)); //No error.  
     }  
-  
     ```  
   
      Aby uzyskać więcej informacji, zobacz [const_cast](../cpp/const-cast-operator.md).  
@@ -181,12 +174,11 @@ int(x); // old-style cast, functional syntax
                       // to do this?  
     int k = reinterpret_cast<int>(str);// Programming intent is clear.  
                                        // However, it is not 64-bit safe.  
-  
     ```  
   
      Aby uzyskać więcej informacji, zobacz [reinterpret_cast Operator](../cpp/reinterpret-cast-operator.md).  
   
-## <a name="see-also"></a>Zobacz też  
+## <a name="see-also"></a>Zobacz także  
  [System typów języka C++](../cpp/cpp-type-system-modern-cpp.md)   
  [Witamy z powrotem w C++](../cpp/welcome-back-to-cpp-modern-cpp.md)   
  [Dokumentacja języka C++](../cpp/cpp-language-reference.md)   

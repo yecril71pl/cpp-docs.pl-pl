@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 18814a4ad87cefa39201d369926c0778931d4d64
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: f16a10ef5119730fb492c4adb890aedcc09d3174
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33861139"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39461536"
 ---
 # <a name="chaininterfaces-structure"></a>ChainInterfaces — Struktura
-Określa weryfikacji i inicjowania funkcje, które można zastosować do zestawu interfejsu identyfikatorów.  
+Określa funkcje weryfikacji i inicjowania, które może odnosić się do zestawu interfejsu identyfikatorów.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -61,44 +61,44 @@ struct ChainInterfaces<MixIn<DerivedType, BaseType, hasImplements>, I1, I2, I3, 
 ```  
   
 #### <a name="parameters"></a>Parametry  
- `I0`  
- (Wymagane) Identyfikator interfejs: 0.  
+ *I0*  
+ (Wymagane) Identyfikator interfejsu: 0.  
   
- `I1`  
- (Wymagane) Identyfikator interfejsu 1.  
+ *I1*  
+ (Wymagane) Identyfikator interfejsu: 1.  
   
- `I2`  
- (Opcjonalnie) Identyfikator interfejsu 2.  
+ *I2*  
+ (Opcjonalnie) Identyfikator interfejsu: 2.  
   
- `I3`  
+ *I3*  
  (Opcjonalnie) Identyfikator interfejsu 3.  
   
- `I4`  
- (Opcjonalnie) Identyfikator interfejsu 4.  
+ *I4*  
+ (Opcjonalnie) Identyfikator interfejsu: 4.  
   
- `I5`  
+ *I5*  
  (Opcjonalnie) Identyfikator interfejsu 5.  
   
- `I6`  
+ *I6*  
  (Opcjonalnie) Identyfikator interfejsu 6.  
   
- `I7`  
+ *I7*  
  (Opcjonalnie) Identyfikator interfejsu 7.  
   
- `I8`  
+ *I8*  
  (Opcjonalnie) Identyfikator interfejsu 8.  
   
- `I9`  
- (Opcjonalnie) Identyfikator interfejsu 9.  
+ *I9*  
+ (Opcjonalnie) Identyfikator interfejsu: 9.  
   
- `DerivedType`  
+ *DerivedType*  
  Typ pochodny.  
   
- `BaseType`  
+ *BaseType*  
  Typ podstawowy typu pochodnego.  
   
- `hasImplements`  
- Wartość logiczna, że jeśli `true`, oznacza, że nie można użyć [domieszki](../windows/mixin-structure.md) struktury z klasy, która nie pochodzi od [implementuje](../windows/implements-structure.md) stucture.  
+ *hasImplements*  
+ Wartość logiczna, że jeśli **true**, oznacza, że nie można użyć [domieszki](../windows/mixin-structure.md) struktury z klasą, która nie pochodzi od [implementuje](../windows/implements-structure.md) stucture.  
   
 ## <a name="members"></a>Elementy członkowskie  
   
@@ -106,16 +106,16 @@ struct ChainInterfaces<MixIn<DerivedType, BaseType, hasImplements>, I1, I2, I3, 
   
 |Nazwa|Opis|  
 |----------|-----------------|  
-|[ChainInterfaces::CanCastTo, metoda](../windows/chaininterfaces-cancastto-method.md)|Wskazuje, czy identyfikator określonego interfejsu, mogą być rzutowane na każdej specjalizacje zdefiniowane przez ChainInterface parametrów szablonu.|  
-|[ChainInterfaces::CastToUnknown, metoda](../windows/chaininterfaces-casttounknown-method.md)|Rzutuje wskaźnik interfejsu z typem zdefiniowanym przez `I0` parametr szablonu na wskaźnik do elementu IUnknown.|  
-|[ChainInterfaces::FillArrayWithIid, metoda](../windows/chaininterfaces-fillarraywithiid-method.md)|Identyfikator interfejsu zdefiniowanych przez magazynów `I0` parametr szablonu do określonej lokalizacji w określonej tablicy interfejsu identyfikatorów.|  
-|[ChainInterfaces::Verify, metoda](../windows/chaininterfaces-verify-method.md)|Sprawdza, czy każdy interfejs zdefiniowane przez parametry szablonu `I0` za pośrednictwem `I9` dziedziczy IUnknown i/lub IInspectable oraz że `I0` dziedziczy `I1` za pośrednictwem `I9`.|  
+|[ChainInterfaces::CanCastTo, metoda](../windows/chaininterfaces-cancastto-method.md)|Wskazuje, czy identyfikator określonego interfejsu, mogą być rzutowane na każdej specjalizacji definicją ChainInterface parametry szablonu.|  
+|[ChainInterfaces::CastToUnknown, metoda](../windows/chaininterfaces-casttounknown-method.md)|Rzutuje wskaźnika interfejsu typu zdefiniowanego przez *I0* wskaźnik IUnknown parametr szablonu.|  
+|[ChainInterfaces::FillArrayWithIid, metoda](../windows/chaininterfaces-fillarraywithiid-method.md)|Identyfikator interfejsu zdefiniowanych przez magazynów *I0* parametru szablonu w określonej lokalizacji w określonej tablicy interfejsu identyfikatorów.|  
+|[ChainInterfaces::Verify, metoda](../windows/chaininterfaces-verify-method.md)|Sprawdza, czy każdy interfejs zdefiniowany przez parametry szablonu *I0* za pośrednictwem *I9* dziedziczy `IUnknown` i/lub `IInspectable`oraz że *I0* dziedziczy z *I1* za pośrednictwem *I9*.|  
   
 ### <a name="protected-constants"></a>Stałe chronione  
   
 |Nazwa|Opis|  
 |----------|-----------------|  
-|[ChainInterfaces::IidCount, stała](../windows/chaininterfaces-iidcount-constant.md)|Całkowita liczba interfejsu identyfikatorów zawarte w interfejsach określona przez parametry szablonu `I0` za pośrednictwem `I9`.|  
+|[ChainInterfaces::IidCount, stała](../windows/chaininterfaces-iidcount-constant.md)|Całkowita liczba interfejsu identyfikatory zawarte w interfejsach, określonego przez parametry szablonu *I0* za pośrednictwem *I9*.|  
   
 ## <a name="inheritance-hierarchy"></a>Hierarchia dziedziczenia  
  `I0`  
@@ -125,7 +125,7 @@ struct ChainInterfaces<MixIn<DerivedType, BaseType, hasImplements>, I1, I2, I3, 
 ## <a name="requirements"></a>Wymagania  
  **Nagłówek:** implements.h  
   
- **Namespace:** Microsoft::wrl —  
+ **Namespace:** Microsoft::WRL  
   
 ## <a name="see-also"></a>Zobacz też  
  [Microsoft::WRL, przestrzeń nazw](../windows/microsoft-wrl-namespace.md)

@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 969930c3918cdc0d2e38747796279c7135aba5a7
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: 3ae16363956afc7cca853307ef2888846a02864d
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37941343"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39461773"
 ---
 # <a name="restrictions-on-termination-handlers"></a>Ograniczenia dotyczące programu obsługi zakończenia
 Nie można użyć **goto** instrukcję, aby przejść do **__try** blok instrukcji lub **__finally** blok instrukcji. Zamiast tego musisz wprowadzić blok instrukcji za pomocą Normalny przepływ sterowania. (Możesz jednak przejść z **__try** blok instrukcji.) Ponadto nie można zagnieździć obsługi wyjątków lub program obsługi przerwania wewnątrz **__finally** bloku.  
@@ -30,6 +30,6 @@ Nie można użyć **goto** instrukcję, aby przejść do **__try** blok instrukc
   
  A **zwracają** instrukcji wewnątrz **__finally** blok instrukcji przedstawia informacje o około samej sytuacji. Formant powraca do bezpośredniego obiektu wywołującego funkcji zawierający programu obsługi zakończenia. Jeśli system został odwinięciu stosu, ten proces jest zatrzymywane, a program będzie kontynuowane tak, jakby była nie wystąpił wyjątek.  
   
-## <a name="see-also"></a>Zobacz też  
+## <a name="see-also"></a>Zobacz także  
  [Pisanie programu obsługi zakończenia](../cpp/writing-a-termination-handler.md)   
  [Obsługa wyjątków strukturalnych (C/C++)](../cpp/structured-exception-handling-c-cpp.md)

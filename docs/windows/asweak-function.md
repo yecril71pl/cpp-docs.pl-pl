@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 039d210e9a204c485e2f44c39ea87b4d35089d88
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: a51b7095ec654c4ebb393c9a83d1e30fb52ce019
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33854827"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39462628"
 ---
 # <a name="asweak-function"></a>AsWeak — Funkcja
 Pobiera słabe odwołanie do określonego wystąpienia.  
@@ -38,22 +38,22 @@ HRESULT AsWeak(
 ```  
   
 #### <a name="parameters"></a>Parametry  
- `T`  
- Wskaźnik do typu parametru `p`.  
+ *T*  
+ Wskaźnik do typu parametru *p*.  
   
- `p`  
+ *p*  
  Wystąpienie typu.  
   
- `pWeak`  
- Po zakończeniu tej operacji, wskaźnik do słabe odwołanie do parametru `p`.  
+ *pWeak*  
+ Po zakończeniu tej operacji, wskaźnik do słabe odwołanie do parametru *p*.  
   
 ## <a name="return-value"></a>Wartość zwracana  
- Wartość S_OK, jeśli operacja zakończy się pomyślnie; w przeciwnym razie błąd HRESULT, która wskazuje przyczynę błędu.  
+ S_OK, jeśli operacja się powiedzie; w przeciwnym razie błąd HRESULT, która wskazuje przyczynę błędu.  
   
 ## <a name="requirements"></a>Wymagania  
  **Nagłówek:** client.h  
   
- **Namespace:** Microsoft::wrl —  
+ **Namespace:** Microsoft::WRL  
   
 ## <a name="see-also"></a>Zobacz też  
  [Microsoft::WRL, przestrzeń nazw](../windows/microsoft-wrl-namespace.md)

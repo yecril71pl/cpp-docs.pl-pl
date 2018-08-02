@@ -1,5 +1,5 @@
 ---
-title: ActivationFactory::GetIids — metoda | Dokumentacja firmy Microsoft
+title: ActivationFactory::GetIids, metoda | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 6f411f3b2f9e777a4e458b64176ace77a8d13e86
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 8f937bf3da7aab803164ca968ba9fa3de227ce03
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33855513"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39463527"
 ---
 # <a name="activationfactorygetiids-method"></a>ActivationFactory::GetIids — Metoda
-Pobiera tablica zaimplementowanego interfejsu identyfikatorów.  
+Pobiera tablicę zaimplementowanego interfejsu identyfikatorów.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -36,19 +36,19 @@ STDMETHOD(
 ```  
   
 #### <a name="parameters"></a>Parametry  
- `iidCount`  
- Po zakończeniu tej operacji, liczba identyfikatorów interace w `iids` tablicy.  
+ *iidCount*  
+ Po zakończeniu tej operacji, liczba identyfikatorów interfejsu w *IID* tablicy.  
   
- `iids`  
- Po zakończeniu tej operacji, tablicę zaimplementowany interfejs identyfikatorów.  
+ *IID*  
+ Po zakończeniu tej operacji, tablicę implementowane identyfikatorów interfejsu.  
   
 ## <a name="return-value"></a>Wartość zwracana  
- S_OK w przypadku powodzenia; w przeciwnym razie wartość HRESULT opisujący błąd. E_OUTOFMEMORY jest możliwy błąd HRESULT.  
+ S_OK w przypadku powodzenia; w przeciwnym razie wartość HRESULT, który opisuje błąd. E_OUTOFMEMORY jest możliwe błąd HRESULT.  
   
 ## <a name="requirements"></a>Wymagania  
  **Nagłówek:** module.h  
   
- **Namespace:** Microsoft::wrl —  
+ **Namespace:** Microsoft::WRL  
   
 ## <a name="see-also"></a>Zobacz też  
  [ActivationFactory, klasa](../windows/activationfactory-class.md)

@@ -1,5 +1,5 @@
 ---
-title: AsyncBase::FireCompletion — metoda | Dokumentacja firmy Microsoft
+title: AsyncBase::FireCompletion, metoda | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 0cd18d340a11575ed9f6f52d92a5910dcee1faec
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: fa5988516f3836749357b15295ac228b78fe3f04
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33859738"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39467244"
 ---
 # <a name="asyncbasefirecompletion-method"></a>AsyncBase::FireCompletion — Metoda
-Wywołuje program obsługi zdarzeń zakończenia lub resetuje delegata wewnętrzny postępu.  
+Wywołuje program obsługi zdarzenia zakończenia lub resetuje delegata wewnętrznego postępu.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -38,12 +38,12 @@ virtual void FireCompletion();
 ```  
   
 ## <a name="remarks"></a>Uwagi  
- Pierwszą wersję FireCompletion() resetuje zmiennej delegata wewnętrzny postępu. Druga wersja wywołuje program obsługi zdarzeń zakończenia, jeśli operacja asynchroniczna została ukończona.  
+ Pierwsza wersja **FireCompletion()** resetuje zmiennej delegata wewnętrznego postępu. Druga wersja wywołuje program obsługi zdarzeń uzupełniania, jeśli operacja asynchroniczna została zakończona.  
   
 ## <a name="requirements"></a>Wymagania  
  **Nagłówek:** async.h  
   
- **Namespace:** Microsoft::wrl —  
+ **Namespace:** Microsoft::WRL  
   
 ## <a name="see-also"></a>Zobacz też  
  [AsyncBase, klasa](../windows/asyncbase-class.md)

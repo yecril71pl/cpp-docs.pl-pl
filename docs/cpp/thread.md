@@ -19,18 +19,18 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f268dd12ca0eca55cbc91bffe5daccbc23ef4dbe
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: 148e42a79ef7c20b7b35c3ec570212574782c1f6
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37940153"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39462095"
 ---
 # <a name="thread"></a>wątek
 
 **Microsoft Specific**
 
-**Wątku** modyfikator klasy magazynu rozszerzonego służy do deklarowania zmiennej lokalnej wątku. Przenośna równoważne w C ++ 11 i nowsze, można użyć [thread_local](../cpp/storage-classes-cpp.md#thread_local) Specyfikator klasy magazynowania dla przenośnego kodu. Na Windows `thread_local` jest implementowane za pomocą `__declspec(thread)`.
+**Wątku** modyfikator klasy magazynu rozszerzonego służy do deklarowania zmiennej lokalnej wątku. Przenośna równoważne w C ++ 11 i nowsze, można użyć [thread_local](../cpp/storage-classes-cpp.md#thread_local) Specyfikator klasy magazynowania dla przenośnego kodu. Na Windows `thread_local` jest implementowane za pomocą **__declspec(thread)**.
 
 ## <a name="syntax"></a>Składnia
 
@@ -96,7 +96,6 @@ Ponadto musisz przestrzegać następujących wytycznych podczas deklarowania zmi
 **END specyficzny dla Microsoft**
 
 ## <a name="see-also"></a>Zobacz także
-
-[__declspec](../cpp/declspec.md)  
-[Słowa kluczowe](../cpp/keywords-cpp.md)  
-[Lokalny magazyn wątków (TLS)](../parallel/thread-local-storage-tls.md)  
+ [__declspec](../cpp/declspec.md)  
+ [Słowa kluczowe](../cpp/keywords-cpp.md)  
+ [Lokalny magazyn wątków (TLS)](../parallel/thread-local-storage-tls.md)  

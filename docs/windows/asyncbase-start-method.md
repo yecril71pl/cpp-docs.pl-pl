@@ -1,5 +1,5 @@
 ---
-title: AsyncBase::Start — metoda | Dokumentacja firmy Microsoft
+title: AsyncBase::Start, metoda | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 0acc6f62530daf641a2e4d568ed511d6fd831c20
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: ab47405f81cf6fb92af215f1868d8ad7c42bffa7
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33860921"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39463733"
 ---
 # <a name="asyncbasestart-method"></a>AsyncBase::Start — Metoda
 Rozpoczyna operację asynchroniczną.  
@@ -39,12 +39,12 @@ STDMETHOD(
  S_OK, jeśli operacja rozpoczyna się lub jest już uruchomiona; w przeciwnym razie E_ILLEGAL_STATE_CHANGE.  
   
 ## <a name="remarks"></a>Uwagi  
- Start() jest domyślna implementacja elementu IAsyncInfo::Start, a nie rzeczywiste działa. Uruchamia operację asynchroniczną, przesłonić metodę wirtualną czysty OnStart().  
+ **Start()** jest domyślna Implementacja klasy `IAsyncInfo::Start`, a nie rzeczywiste działa. Uruchamia operację asynchroniczną, należy zastąpić `OnStart()` czystej wirtualnej metody.  
   
 ## <a name="requirements"></a>Wymagania  
  **Nagłówek:** async.h  
   
- **Namespace:** Microsoft::wrl —  
+ **Namespace:** Microsoft::WRL  
   
 ## <a name="see-also"></a>Zobacz też  
  [AsyncBase, klasa](../windows/asyncbase-class.md)

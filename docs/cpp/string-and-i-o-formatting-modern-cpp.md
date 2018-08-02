@@ -1,5 +1,5 @@
 ---
-title: Ciąg oraz -O formatowania (Modern C++) | Dokumentacja firmy Microsoft
+title: Ciągów i we / wy formatowanie (Modern C++) | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -12,15 +12,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 391648d71fa3d38a0f704a014c163b7f8b102e40
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 49ece9fef9122d5e2811eeb70a0ea1cba81b2e33
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32422387"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39464100"
 ---
 # <a name="string-and-io-formatting-modern-c"></a>Formatowanie ciągów i we/wy (Modern C++)
-C++ [iostream](../standard-library/iostream.md) są w stanie ciąg sformatowany we/wy. Na przykład poniższy kod przedstawia sposób ustawiania cout będą formatowane liczby całkowitej w celu danych wyjściowych w formacie szesnastkowym, najpierw zapisywanie poza bieżący stan i ponownie ustawienia później, gdy stan formatowania jest przekazywana do cout, pozostaje on objęty w ten sposób do momentu zmiany, nie tylko dla jednego wiersza kodu.  
+C++ [iostreams](../standard-library/iostream.md) są w stanie sformatować ciąg we/wy. Na przykład poniższy kod przedstawia sposób ustawiania cout do formatowania liczby całkowitej w danych wyjściowych w formacie szesnastkowym, najpierw zapisując stan bieżący, a następnie później, ponieważ gdy stan formatowania zostanie przekazany do cout, pozostaje on w ten sposób, dopóki zmianie, nie tylko dla jednej linii kodu.  
   
 ```cpp  
 #include <iostream>  
@@ -44,22 +44,21 @@ int main()
         << endl;  
     cout.copyfmt(state); // restore previous formatting  
 }  
-  
 ```  
   
- Może to być całkowicie zbyt skomplikowane, w wielu przypadkach. Alternatywnie można użyć Boost.Format z biblioteki języka C++ zwiększenie wydajności, nawet jeśli komputer jest niestandardowy. Możesz pobrać żadnej biblioteki zwiększanie wyniku z [zwiększanie wyniku](http://www.boost.org/) witryny sieci Web.  
+ Może to być zbyt kłopotliwe w wielu przypadkach. Jako alternatywę można użyć Boost.Format z biblioteki Boost C++, nawet jeśli nie jest to standardowe. Możesz pobrać każdą bibliotekę Boost z [Boost](http://www.boost.org/) witryny sieci Web.  
   
- Niektóre zalety Boost.Format są następujące:  
+ Niektóre zalety Boost.Format są:  
   
--   Palety: Bezpieczne i zgłasza wyjątek błędy — na przykład specyfikację zbyt małej lub zbyt wiele elementów.  
+-   Bezpieczny: Typ bezpieczny i zgłasza wyjątek dla błędów — na przykład Specyfikacja zbyt małej lub zbyt wiele elementów.  
   
--   Rozszerzalne: Działa w przypadku dowolnego typu, który można przesłać strumieniowo.  
+-   Rozszerzalne: Działa dowolny typ, który może być przesyłany strumieniowo.  
   
--   Wygodna: Standard Posix i podobne ciągi formatów.  
+-   Wygoda: Standard Posix i podobne ciągi formatów.  
   
- Chociaż Boost.Format jest oparty na języku C++ [iostream](../standard-library/iostream-programming.md), które są bezpieczne i rozszerzony, nie są zoptymalizowane pod kątem wydajności. Jeśli wymagasz, aby zoptymalizować wydajność, należy wziąć pod uwagę C [printf](../c-runtime-library/reference/printf-printf-l-wprintf-wprintf-l.md) i [sprintf —](../c-runtime-library/reference/sprintf-sprintf-l-swprintf-swprintf-l-swprintf-l.md), które są szybkie i łatwe w użyciu. Jednak nie są one rozszerzalnych lub bezpieczne przed lukami w zabezpieczeniach. (Istnieją bezpieczne wersje, ale ich pociągnąć za sobą zmniejszenie wydajności niewielkie. Aby uzyskać więcej informacji, zobacz [printf_s —, _printf_s_l —, wprintf_s —, _wprintf_s_l —](../c-runtime-library/reference/printf-s-printf-s-l-wprintf-s-wprintf-s-l.md) i [sprintf_s —, _sprintf_s_l —, swprintf_s —, _swprintf_s_l —](../c-runtime-library/reference/sprintf-s-sprintf-s-l-swprintf-s-swprintf-s-l.md)).  
+ Chociaż Boost.Format jest zbudowany na C++ [iostreams](../standard-library/iostream-programming.md), które są bezpieczne i rozszerzalne, nie są zoptymalizowane pod kątem wydajności. Jeśli potrzebujesz, aby zoptymalizować wydajność, należy wziąć pod uwagę C [printf](../c-runtime-library/reference/printf-printf-l-wprintf-wprintf-l.md) i [sprintf](../c-runtime-library/reference/sprintf-sprintf-l-swprintf-swprintf-l-swprintf-l.md), które są szybkie i łatwe w użyciu. Jednak nie są one rozszerzalne ani pozbawione luk w zabezpieczeniach. (Istnieją wersje bezpieczne, ale mogą spowodować zmniejszenie wydajności niewielkie. Aby uzyskać więcej informacji, zobacz [printf_s, _printf_s_l —, wprintf_s —, _wprintf_s_l —](../c-runtime-library/reference/printf-s-printf-s-l-wprintf-s-wprintf-s-l.md) i [sprintf_s —, _sprintf_s_l —, swprintf_s —, _swprintf_s_l —](../c-runtime-library/reference/sprintf-s-sprintf-s-l-swprintf-s-swprintf-s-l.md)).  
   
- Poniższy kod przedstawia niektóre funkcje formatowania zwiększanie wyniku.  
+ Poniższy kod ilustruje część zwiększenia funkcji formatowania.  
   
 ```cpp  
     string s = str( format("%2% %2% %1%\n") % "world" % "hello" );  
@@ -69,13 +68,12 @@ int main()
         cout << format("%1% %2% %|40t|%3%\n") % first[i] % last[i] % tel[i];  
     // Georges Benjamin Clemenceau             +33 (0) 123 456 789  
     // Jean de Lattre de Tassigny              +33 (0) 987 654 321  
-  
 ```  
   
-## <a name="see-also"></a>Zobacz też  
- [Zapraszamy ponownie do języka C++](../cpp/welcome-back-to-cpp-modern-cpp.md)   
+## <a name="see-also"></a>Zobacz także  
+ [Witamy z powrotem w C++](../cpp/welcome-back-to-cpp-modern-cpp.md)   
  [Dokumentacja języka C++](../cpp/cpp-language-reference.md)   
  [Standardowa biblioteka C++](../standard-library/cpp-standard-library-reference.md)   
  [\<iostream — >](../standard-library/iostream.md)   
  [\<limity >](../standard-library/limits.md)   
- [\<iomanip — >](../standard-library/iomanip.md)
+ [\<iomanip >](../standard-library/iomanip.md)

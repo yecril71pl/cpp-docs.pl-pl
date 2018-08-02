@@ -16,32 +16,32 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 7c00487b2bb7c7a67dfb81ffb638f5a46fc611bc
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 098ce812b18e64409e24d58675144f2c660bcdd7
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33863741"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39465652"
 ---
 # <a name="atl-predefined-symbols"></a>Wstępnie zdefiniowane symbole ATL
-Te symbole są definiowane w ATL pliki nagłówkowe, ale obsługuje standardowe funkcje aplikacji systemu Windows i działań. Symbole są używane głównie z okien dialogowych. Podczas pracy z okien dialogowych i formantów w [Edytor okien dialogowych](../windows/dialog-editor.md), te symbole będą wyświetlane w oknie właściwości skojarzone z formantów standardowych. Na przykład, jeśli Twoje okno dialogowe ma przycisk Anuluj, tego polecenia zostanie skojarzona z symbol IDCANCEL w [okna właściwości](/visualstudio/ide/reference/properties-window).  
+Te symbole są zdefiniowane w plikach nagłówkowych ATL, ale obsługują standardowe funkcje aplikacji Windows i akcje. Te symbole są głównie używane z okien dialogowych. Podczas pracy z okien dialogowych i formantów w [Edytor okien dialogowych](../windows/dialog-editor.md), te symbole pojawią się w **właściwości** skojarzone z wspólnych formantów okna. Na przykład jeśli Twoje okno dialogowe ma **anulować** przycisk, polecenie będzie skojarzona z symbolem IDCANCEL w [okno właściwości](/visualstudio/ide/reference/properties-window).  
   
 |||  
 |-|-|  
-|IDABORT|Formantu: Przycisk Przerwij pola okna dialogowego|  
-|IDC_STATIC|Formant: Statyczną kontrolkę|  
+|IDABORT|Sterowania: Przycisk Przerwij pola okna dialogowego|  
+|IDC_STATIC|Kontrolki: Formant statyczny|  
 |IDCANCEL|Sterowania: Przycisk Anuluj okno dialogowe|  
-|IDIGNORE|Kontroli: Przycisk Ignoruj pola dialogowe|  
-|IDNO|Kontrola: Nie przycisk okna dialogowego|  
-|IDOK|Formantu: Przycisk pola OK okna dialogowego|  
+|IDIGNORE|Sterowania: Przycisk Ignoruj pola dialogowe|  
+|IDNO|Sterowania: Okno dialogowe ma przycisku|  
+|IDOK|Sterowania: Przycisk pola OK okno dialogowe|  
 |IDR_ACCELERATOR1|Zasobów: Tabela akceleratora|  
-|IDRETRY|Sterowania: Przycisk Ponów — okno dialogowe|  
-|IDS_PROJNAME|Ciągu: Nazwa bieżącej aplikacji|  
+|IDRETRY|Sterowania: Przycisk Ponów okno dialogowe|  
+|IDS_PROJNAME|Ciąg: Bieżąca nazwa aplikacji|  
 |IDYES|Kontrola: Okno dialogowe tak przycisku.|  
   
 ## <a name="requirements"></a>Wymagania  
  ATL  
   
 ## <a name="see-also"></a>Zobacz też  
- [Wstępnie zdefiniowane symbole identyfikatorów](../windows/predefined-symbol-ids.md)   
+ [Wstępnie zdefiniowane identyfikatory symboli](../windows/predefined-symbol-ids.md)   
  [Symbole: identyfikatory zasobów](../windows/symbols-resource-identifiers.md)

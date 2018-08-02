@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 162fbdea86aef81582902340102d54777e3f861b
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 667aa3d2d29e4ce541d957b20b2246380e237a6b
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33858045"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39462046"
 ---
 # <a name="argtraits-structure"></a>ArgTraits — Struktura
 Obsługuje infrastrukturę biblioteki WRL i nie jest przeznaczona do użycia bezpośrednio w kodzie.  
@@ -118,45 +118,45 @@ struct ArgTraits<HRESULT (STDMETHODCALLTYPE TDelegateInterface::*)(TArg1, TArg2,
 ```  
   
 #### <a name="parameters"></a>Parametry  
- `TMemberFunction`  
- Parametr TypeName argtraits — struktura, która nie może być zgodna z żadną sygnaturą metody Invoke.  
+ *TMemberFunction*  
+ Parametr TypeName argtraits — struktura, która nie pasuje do żadnego `Invoke` podpis metody.  
   
- `TDelegateInterface`  
+ *TDelegateInterface*  
  Interfejs delegata.  
   
- `TArg1`  
- Typ pierwszego argumentu metody Invoke.  
+ *TArg1*  
+ Typ pierwszego argumentu `Invoke` metody.  
   
- `TArg2`  
- Typ drugiego argumentu metody Invoke.  
+ *TArg2*  
+ Typ drugiego argumentu `Invoke` metody.  
   
- `TArg3`  
- Typ trzeciego argumentu metody Invoke.  
+ *TArg3*  
+ Typ trzeciego argumentu `Invoke` metody.  
   
- `TArg4`  
- Typ czwartego argumentu metody Invoke.  
+ *TArg4*  
+ Typ czwartego argumentu `Invoke` metody.  
   
- `TArg5`  
- Typ piątego argumentu metody Invoke.  
+ *TArg5*  
+ Typ piątego argumentu `Invoke` metody.  
   
- `TArg6`  
- Typ szóstego argumentu metody Invoke.  
+ *TArg6*  
+ Typ szóstego argumentu `Invoke` metody.  
   
- `TArg7`  
- Typ siódmego argumentu metody Invoke.  
+ *TArg7*  
+ Typ siódmego argumentu `Invoke` metody.  
   
- `TArg8`  
- Typ argumentu osiem metody Invoke.  
+ *TArg8*  
+ Typ ósmego argumentu `Invoke` metody.  
   
- `TArg9`  
- Typ dziewiąty argument metody Invoke.  
+ *TArg9*  
+ Typ dziewiątego argumentu `Invoke` metody.  
   
 ## <a name="remarks"></a>Uwagi  
- `ArgTraits` Struktury deklaruje delegata określony interfejs i funkcja anonimowego elementu członkowskiego, która ma określoną liczbę parametrów.  
+ `ArgTraits` Struktury deklaruje określonego delegata interfejsu i funkcji anonimowej składowej, która ma określoną liczbę parametrów.  
   
 ## <a name="members"></a>Elementy członkowskie  
   
-### <a name="public-typedefs"></a>Definicje typów publicznych  
+### <a name="public-typedefs"></a>Publiczne definicje typów  
   
 |Nazwa|Opis|  
 |----------|-----------------|  
@@ -170,11 +170,11 @@ struct ArgTraits<HRESULT (STDMETHODCALLTYPE TDelegateInterface::*)(TArg1, TArg2,
 |`Arg8Type`|Element typedef dla TArg8.|  
 |`Arg9Type`|Element typedef dla TArg9.|  
   
-### <a name="public-constants"></a>Publiczny — stałe  
+### <a name="public-constants"></a>Publiczne stałe  
   
 |Nazwa|Opis|  
 |----------|-----------------|  
-|[ArgTraits::args, stała](../windows/argtraits-args-constant.md)|Przechowuje liczba parametrów metody Invoke interfejsu delegata.|  
+|[ArgTraits::args, stała](../windows/argtraits-args-constant.md)|Śledzi liczbę parametrów `Invoke` metodę interfejsu delegata.|  
   
 ## <a name="inheritance-hierarchy"></a>Hierarchia dziedziczenia  
  `ArgTraits`  
@@ -182,7 +182,7 @@ struct ArgTraits<HRESULT (STDMETHODCALLTYPE TDelegateInterface::*)(TArg1, TArg2,
 ## <a name="requirements"></a>Wymagania  
  **Nagłówek:** event.h  
   
- **Namespace:** Microsoft::wrl:: details —  
+ **Namespace:** Microsoft::wrl:: details  
   
 ## <a name="see-also"></a>Zobacz też  
  [Microsoft::WRL::Details, przestrzeń nazw](../windows/microsoft-wrl-details-namespace.md)

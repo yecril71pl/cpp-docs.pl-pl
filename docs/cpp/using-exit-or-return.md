@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 41c5d00efa0f827b9e1c3cd7f3647c966eed67e4
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: 47fb8ff09fc50557283a0f4e8ef0e159bc900e86
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37947761"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39460948"
 ---
 # <a name="using-exit-or-return"></a>Użycie exit lub return
 Gdy wywołujesz **wyjść** lub wykonania **zwracają** instrukcji z `main`, statyczne obiekty są niszczone w odwrotnej kolejności ich inicjowania. Poniższy kod przedstawia sposób działania takich inicjowanie i oczyszczanie.  
@@ -78,5 +78,5 @@ int main() {
 }  
 ```  
   
-## <a name="see-also"></a>Zobacz też  
+## <a name="see-also"></a>Zobacz także  
  [Dodatkowe zagadnienia dotyczące kończenia](../cpp/additional-termination-considerations.md)

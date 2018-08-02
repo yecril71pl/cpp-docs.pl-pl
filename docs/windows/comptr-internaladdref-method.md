@@ -1,5 +1,5 @@
 ---
-title: ComPtr::InternalAddRef — metoda | Dokumentacja firmy Microsoft
+title: ComPtr::InternalAddRef, metoda | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 55f2ffc540ba6680636b85e73b7b4fbe96068ab3
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: e1ae5d4216efc790fae0bc4d86bbe828fc28c473
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33870289"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39463096"
 ---
 # <a name="comptrinternaladdref-method"></a>ComPtr::InternalAddRef — Metoda
-Zwiększa liczbę odniesienia skojarzony z tym comptr — interfejs.  
+Zwiększa liczbę odwołań interfejsu skojarzony z tym **ComPtr**.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -39,7 +39,7 @@ void InternalAddRef() const;
 ## <a name="requirements"></a>Wymagania  
  **Nagłówek:** client.h  
   
- **Namespace:** Microsoft::wrl —  
+ **Namespace:** Microsoft::WRL  
   
 ## <a name="see-also"></a>Zobacz też  
  [ComPtr, klasa](../windows/comptr-class.md)

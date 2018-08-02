@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 857b10e206e5a4a3208086e5b7b1455f58bc40a8
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: c76aee3ce1e56f60e966094bb2d634269cd5e3a9
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33856908"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39466751"
 ---
 # <a name="asyncuuid"></a>async_uuid
 Określa identyfikator UUID, który określa, że kompilator MIDL, aby zdefiniować synchroniczne i asynchroniczne wersje interfejsu COM.  
@@ -30,8 +30,7 @@ Określa identyfikator UUID, który określa, że kompilator MIDL, aby zdefiniow
 ## <a name="syntax"></a>Składnia  
   
 ```  
-  
-      [async_uuid (  
+[async_uuid (  
    uuid  
 )]  
 ```  
@@ -41,11 +40,11 @@ Określa identyfikator UUID, który określa, że kompilator MIDL, aby zdefiniow
  Identyfikator UUID, który identyfikuje wersję interfejsu.  
   
 ## <a name="remarks"></a>Uwagi  
- **Async_uuid —** atrybut C++ ma te same funkcje co [async_uuid —](http://msdn.microsoft.com/library/windows/desktop/aa366735) MIDL atrybutu.  
+ **Async_uuid —** atrybut C++ ma taką samą funkcjonalność jak [async_uuid —](http://msdn.microsoft.com/library/windows/desktop/aa366735) atrybutów w MIDL.  
   
 ## <a name="example"></a>Przykład  
   
-```  
+```cpp  
 // cpp_attr_ref_async_uuid.cpp  
 // compile with: /LD  
 #include <Windows.h>  
@@ -59,7 +58,7 @@ __interface ICustom {
   
 ## <a name="requirements"></a>Wymagania  
   
-### <a name="attribute-context"></a>Atrybut kontekstu  
+### <a name="attribute-context"></a>Kontekst atrybutu  
   
 |||  
 |-|-|  
@@ -68,7 +67,7 @@ __interface ICustom {
 |**Wymaganych atrybutów**|Brak|  
 |**Nieprawidłowe atrybuty**|**Podwójna**, **dispinterface**|  
   
- Aby uzyskać więcej informacji na temat konteksty atrybutu, zobacz [konteksty atrybutu](../windows/attribute-contexts.md).  
+ Aby uzyskać więcej informacji na temat konteksty atrybutu zobacz [konteksty atrybutu](../windows/attribute-contexts.md).  
   
 ## <a name="see-also"></a>Zobacz też  
  [Atrybuty IDL](../windows/idl-attributes.md)   

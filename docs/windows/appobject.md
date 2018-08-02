@@ -17,31 +17,29 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: aca26e156bbb6a883ed6d55a6a01da128982c127
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: c0171c8cf836c95afecb74cf1909688bbbe030db
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33856976"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39466374"
 ---
 # <a name="appobject"></a>appobject
-Identyfikuje coclass jako obiekt aplikacji, który jest skojarzony z aplikacją pełne .exe i wskazuje, że właściwości klasy coclass i funkcje są ogólnie dostępna w tym [biblioteki typów](../mfc/automation-clients-using-type-libraries.md).  
+Identyfikuje coclass jako obiekt aplikacji, który jest skojarzony z aplikacją pełną .exe i wskazuje, że funkcje i właściwości z koklas, globalnie dostępną w tym [biblioteki typów](../mfc/automation-clients-using-type-libraries.md).  
   
 ## <a name="syntax"></a>Składnia  
   
 ```  
-  
 [appobject]  
-  
 ```  
   
 ## <a name="remarks"></a>Uwagi  
- **Appobject —** atrybut C++ ma te same funkcje co [appobject —](http://msdn.microsoft.com/library/windows/desktop/aa366726) MIDL atrybutu.  
+ **Appobject —** atrybut C++ ma taką samą funkcjonalność jak [appobject —](http://msdn.microsoft.com/library/windows/desktop/aa366726) atrybutów w MIDL.  
   
 ## <a name="example"></a>Przykład  
- Poniższy kod przedstawia definicję prostą klasę poprzedzone blok atrybutu, która obejmuje **appobject —**:  
+ Poniższy kod przedstawia definicję klasy prosty, poprzedzony przez blok atrybutu, który zawiera **appobject —**:  
   
-```  
+```cpp  
 // cpp_attr_ref_appobject.cpp  
 // compile with: /LD  
 #include <windows.h>  
@@ -58,16 +56,16 @@ class A : public ICustom {
   
 ## <a name="requirements"></a>Wymagania  
   
-### <a name="attribute-context"></a>Atrybut kontekstu  
+### <a name="attribute-context"></a>Kontekst atrybutu  
   
 |||  
 |-|-|  
-|**Dotyczy**|**Klasa**, `struct`|  
+|**Dotyczy**|**Klasa**, **— struktura**|  
 |**Powtarzalne**|Nie|  
-|**Wymaganych atrybutów**|**coclass**|  
+|**Wymaganych atrybutów**|`coclass`|  
 |**Nieprawidłowe atrybuty**|Brak|  
   
- Aby uzyskać więcej informacji na temat konteksty atrybutu, zobacz [konteksty atrybutu](../windows/attribute-contexts.md).  
+ Aby uzyskać więcej informacji na temat konteksty atrybutu zobacz [konteksty atrybutu](../windows/attribute-contexts.md).  
   
 ## <a name="see-also"></a>Zobacz też  
  [Atrybuty IDL](../windows/idl-attributes.md)   

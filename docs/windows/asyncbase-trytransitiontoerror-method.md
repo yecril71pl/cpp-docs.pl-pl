@@ -1,5 +1,5 @@
 ---
-title: AsyncBase::TryTransitionToError — metoda | Dokumentacja firmy Microsoft
+title: AsyncBase::TryTransitionToError, metoda | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 97fcade98e82a289c172c7651f62f3de0394fe16
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: fc677304ae7ab61e6726366869e85f731cd92484
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33863507"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39463210"
 ---
 # <a name="asyncbasetrytransitiontoerror-method"></a>AsyncBase::TryTransitionToError — Metoda
 Wskazuje, czy określonego kodu błędu, można zmodyfikować stanu błędu wewnętrznego.  
@@ -36,19 +36,19 @@ bool TryTransitionToError(
 ```  
   
 #### <a name="parameters"></a>Parametry  
- `error`  
- Wystąpił błąd HRESULT.  
+ *Błąd*  
+ Błąd HRESULT.  
   
 ## <a name="return-value"></a>Wartość zwracana  
- `true` Błąd wewnętrzny stan został zmieniony; w przeciwnym razie `false`.  
+ **wartość true,** Jeśli stan wewnętrzny błąd zostało zmienione; w przeciwnym razie **false**.  
   
 ## <a name="remarks"></a>Uwagi  
- Ta operacja modyfikuje stan błędu tylko wtedy, gdy stan błędu jest już ustawiony na wartość S_OK. Ta operacja nie ma efektu Jeśli stan błędu już jest błąd, anulowana, Zakończono lub zamknięty.  
+ Ta operacja modyfikuje stanu błędu, tylko wtedy, gdy stan błędu są już ustawione na S_OK. Ta operacja nie obowiązuje, jeśli stan błędu jest już błędu, anulowany, ukończone lub zamknięte.  
   
 ## <a name="requirements"></a>Wymagania  
  **Nagłówek:** async.h  
   
- **Namespace:** Microsoft::wrl —  
+ **Namespace:** Microsoft::WRL  
   
 ## <a name="see-also"></a>Zobacz też  
  [AsyncBase, klasa](../windows/asyncbase-class.md)

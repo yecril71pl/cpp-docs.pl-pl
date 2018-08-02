@@ -26,12 +26,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 360945f8156c5c92c62cb2209308c7cdd2860cbc
-ms.sourcegitcommit: 7eadb968405bcb92ffa505e3ad8ac73483e59685
+ms.openlocfilehash: 79ec82ec00e912d597cfeda608e1b77cf08ab4e8
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/23/2018
-ms.locfileid: "39208552"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39466946"
 ---
 # <a name="string-and-character-literals--c"></a>Literały ciągów i znakowe (C++)
 C++ obsługuje różne typy ciągów i znakowe i zapewnia metody do wyrażenia wartości literału w każdej z tych typów. W kodzie źródłowym można wyrazić zawartość literały znakowe i przy użyciu zestawu znaków. Uniwersalne nazwy znaków i znaków ucieczki umożliwiają express dowolny ciąg przy użyciu tylko zestaw znaków podstawowego źródła. Nieprzetworzony literał ciągu pozwala uniknąć przy użyciu znaków ucieczki i może służyć do express wszystkie rodzaje literałów ciągów. Można również utworzyć literały std::string, bez konieczności wykonywania dodatkowych konstrukcji lub konwersji kroki.  
@@ -146,7 +146,7 @@ int main() {
   
  **Microsoft Specific**  
   
- Aby utworzyć wartość z zakresu od zwykły znak literału (te bez prefiksu), kompilator konwertuje znaku lub sekwencji znaków między apostrofy do wartości 8-bitowa w 32-bitową liczbę całkowitą. Wielu znaków w literale wypełnienia odpowiednich bajtów, zgodnie z potrzebami z wyższego rzędu do niskiego rzędu. Aby utworzyć **char** wartości, kompilator zajmuje mniej znaczący bajt. Aby utworzyć `wchar_t` lub `char16_t` wartości, kompilator przyjmuje word niskiego rzędu. Kompilator wyświetla ostrzeżenie, że wynik został obcięty, jeśli wszystkie bity są ustawione powyżej przydzielonych bajtów lub word.  
+ Aby utworzyć wartość z zakresu od zwykły znak literału (te bez prefiksu), kompilator konwertuje znaku lub sekwencji znaków między apostrofy do wartości 8-bitowa w 32-bitową liczbę całkowitą. Wielu znaków w literale wypełnienia odpowiednich bajtów, zgodnie z potrzebami z wyższego rzędu do niskiego rzędu. Aby utworzyć **char** wartości, kompilator zajmuje mniej znaczący bajt. Aby utworzyć **wchar_t** lub `char16_t` wartości, kompilator przyjmuje word niskiego rzędu. Kompilator wyświetla ostrzeżenie, że wynik został obcięty, jeśli wszystkie bity są ustawione powyżej przydzielonych bajtów lub word.  
   
 ```cpp  
 char c0    = 'abcd';    // C4305, C4309, truncates to 'd'  
@@ -231,7 +231,7 @@ const char* str2 = u8"\U0001F607 is O:-)";
 ```  
   
 ### <a name="wide-string-literals"></a>Literały szerokiego ciągu  
- Szerokiego literału ciągu jest tablicą zakończoną znakiem null stałej `wchar_t` , jest poprzedzony przez "`L`" i zawiera dowolny znak graficzny oprócz podwójnego cudzysłowu ("), ukośnika odwrotnego (\\), lub znak nowego wiersza. Szerokiego literału ciągu może zawierać znak ucieczki, który sekwencje wymienionych powyżej i dowolną nazwę znaki uniwersalne.  
+ Szerokiego literału ciągu jest tablicą zakończoną znakiem null stałej **wchar_t** , jest poprzedzony przez "`L`" i zawiera dowolny znak graficzny oprócz podwójnego cudzysłowu ("), ukośnika odwrotnego (\\), lub znak nowego wiersza. Szerokiego literału ciągu może zawierać znak ucieczki, który sekwencje wymienionych powyżej i dowolną nazwę znaki uniwersalne.  
   
 ```cpp  
 const wchar_t* wide = L"zyxw";  
@@ -319,7 +319,7 @@ const size_t byteSize = (wcslen(str) + 1) * sizeof(wchar_t);
   
  **Microsoft Specific**  
   
- W programie Visual C++ można użyć literału ciągu do zainicjowania wskaźnika do wartości innej niż stała **char** lub `wchar_t`. Jest dozwolona w kodzie C99, ale jest przestarzała w języku C ++ 98 i usunięte w C ++ 11. Próba zmodyfikowania ciągu powoduje naruszenie zasad dostępu, jak w poniższym przykładzie:  
+ W programie Visual C++ można użyć literału ciągu do zainicjowania wskaźnika do wartości innej niż stała **char** lub **wchar_t**. Jest dozwolona w kodzie C99, ale jest przestarzała w języku C ++ 98 i usunięte w C ++ 11. Próba zmodyfikowania ciągu powoduje naruszenie zasad dostępu, jak w poniższym przykładzie:  
   
 ```cpp  
 wchar_t* str = L"hello";  
@@ -399,7 +399,7 @@ const char16_t* s4 = u"😃 = \U0001F603 is :-D";
 const char32_t* s5 = U"😎 = \U0001F60E is B-)";  
 ```  
   
-## <a name="see-also"></a>Zobacz też  
+## <a name="see-also"></a>Zobacz także  
  [Zestawy znaków](../cpp/character-sets.md)   
  [Literały numeryczne, atrybut typu wartość logiczna i wskaźnik](../cpp/numeric-boolean-and-pointer-literals-cpp.md)   
  [Literały definiowane przez użytkownika](../cpp/user-defined-literals-cpp.md)

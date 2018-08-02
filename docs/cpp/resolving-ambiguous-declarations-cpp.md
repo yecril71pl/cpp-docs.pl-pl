@@ -1,5 +1,5 @@
 ---
-title: Rozpoznawanie niejednoznacznych deklaracje (C++) | Dokumentacja firmy Microsoft
+title: Rozwiązywanie niejednoznacznych deklaracji (C++) | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -12,34 +12,32 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 530111ee439a991201debab876d485a36b7f5ac5
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 3dc5b5a2b7d8add493efc144931160afb7d15020
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39467510"
 ---
-# <a name="resolving-ambiguous-declarations-c"></a>Rozpoznawanie niejednoznacznych deklaracje (C++)
-Aby wykonać jawne konwersje z jednego typu do innego, należy użyć rzutowania, określający nazwę odpowiedniego typu. Wynik rzutowania niektóre wpisz niejednoznaczności składni. Następujące rzutowanie typu stylu funkcji jest niejednoznaczny:  
+# <a name="resolving-ambiguous-declarations-c"></a>Rozwiązywanie niejednoznacznych deklaracji (C++)
+Aby wykonywania jawnych konwersji z jednego typu na inny, należy użyć rzutowania, określający nazwę żądanego typu. Wynik rzutowania niektóre wpisz składni niejednoznaczności. Następujące rzutowanie typu w stylu funkcji jest niejednoznaczny:  
   
-```  
+```cpp 
 char *aName( String( s ) );  
 ```  
   
- Nie jest jasne, czy jest deklaracji funkcji lub deklaracji obiektu rzutowany jako inicjator funkcja stylu: można zadeklarować funkcji zwracającej typ **char \***  pobierającej jeden argument typu `String` , lub można zadeklarować obiektu `aName` i zainicjować go z wartością `s` Rzutowanie na typ `String`.  
+ Nie wiadomo, czy jest deklaracja funkcji lub deklaracja obiektu za pomocą funkcji rzutowania w stylu jako inicjator: można zadeklarować, funkcja zwracająca typ `char *` przyjmującą jeden argument typu `String`, lub można je zadeklarować obiekt `aName` i zainicjuj ją z wartością `s` Rzutowanie na typ `String`.  
   
- Jeśli deklaracji mogą zostać uwzględnione w deklaracji funkcji prawidłowe, będzie traktowane jako takie. Tylko wtedy, gdy nie może być deklaracji funkcji — to znaczy, jeśli jest nieprawidłowy — jest zbadane instrukcji, aby sprawdzić, czy jest rzutowanie typu stylu funkcji. W związku z tym kompilator uwzględnia instrukcji być deklaracji funkcji i ignoruje nawiasy, identyfikator `s`. Z drugiej strony, instrukcje:  
+ Jeśli deklaracja jest uznawana za deklaracji prawidłową funkcją, jest ona traktowana jako takie. Tylko wtedy, gdy jest to prawdopodobnie nie może być deklaracji funkcji — to znaczy, jeśli będzie składniowo niepoprawny — jest badany instrukcję, aby sprawdzić, czy jest rzutowanie typu stylu funkcji. W związku z tym, kompilator traktuje instrukcji jako deklaracja funkcji i ignoruje nawiasów wokół identyfikator `s`. Z drugiej strony, instrukcji:  
   
-```  
+```cpp 
 char *aName( (String)s );  
 ```  
   
  and  
   
-```  
+```cpp 
 char *aName = String( s );  
 ```  
   
- są wyraźnie deklaracje obiektów i zdefiniowanych przez użytkownika konwersja z typu `String` na typ **char \***  jest wywoływane w celu wykonania inicjowania `aName`.  
-  
-## <a name="see-also"></a>Zobacz też  
- 
+ są wyraźnie deklaracje obiektów i zdefiniowana przez użytkownika konwersja z typu `String` na typ `char *` wywoływana w celu wykonania inicjowanie `aName`.  

@@ -12,12 +12,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 92174ceefa350b739567ac3e67c2ca023afb6008
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: 26b4cbfb798e47b1add5b1d46c2ea1adb538898b
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37939835"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39465971"
 ---
 # <a name="uniform-initialization-and-delegating-constructors"></a>Jednolite inicjowanie i delegowanie konstruktorów
 W nowoczesnym C++, można użyć *nawiasów inicjowania* dla dowolnego typu, bez znaku równości. Ponadto możesz użyć konstruktory delegujące można uprościć kod, jeśli masz wiele konstruktorów, które mają podobne działanie.  
@@ -50,7 +50,6 @@ int main()
     class_a c3{ "yy", 4.4 };  
     class_a c3_1("zz", 5.5);  
 }  
-  
 ```  
   
  Jeśli klasa ma konstruktory inne niż domyślne, kolejności, w której klasy elementy członkowskie są wyświetlane w inicjatorze nawias klamrowy jest kolejność wyświetlania odpowiednich parametrów w konstruktorze, nie kolejności, w którym są zadeklarowane elementy członkowskie (podobnie jak w przypadku `class_a` w poprzedniego przykładu). W przeciwnym razie jeśli typ nie ma zadeklarowany konstruktora, kolejność wyświetlania elementów członkowskich w inicjatorze nawias klamrowy jest taka sama jak kolejność, w którym są one zadeklarowane; w takim przypadku można zainicjować tyle publiczne elementy członkowskie jako użytkownik chce, ale nie można pominąć dowolnego elementu członkowskiego. Poniższy przykład przedstawia kolejność, która jest używana w nawiasów klamrowych, po żaden konstruktor zadeklarowana:  
@@ -97,7 +96,6 @@ int main()
 class_d* cf = new class_d{4.5};  
 kr->add_d({ 4.5 });  
 return { 4.5 };  
-  
 ```  
   
 ## <a name="initializerlist-constructors"></a>Lista initializer_list konstruktorów  
@@ -117,7 +115,6 @@ initializer_list<int> ilist1{ 5, 6, 7 };
 initializer_list<int> ilist2( ilist1 );  
 if (ilist1.begin() == ilist2.begin())  
     cout << "yes" << endl; // expect "yes"  
-  
 ```  
   
  Klasy kontenerów standardowej biblioteki, a także `string`, `wstring`, i `regex`, mają `initializer_list` konstruktorów. W poniższych przykładach pokazano, jak być ujmowana w nawiasy inicjowania za pomocą tych konstruktorów:  
@@ -178,7 +175,6 @@ int main() {
   
     class_c c1{ 1, 3, 2 };  
 }  
-  
 ```  
   
  Podczas wykonywania kroków za pomocą poprzedniego przykładu, należy zauważyć, że Konstruktor `class_c(int, int, int)` najpierw wywołuje konstruktor `class_c(int, int)`, który z kolei wywołuje `class_c(int)`. Każda z konstruktorów wykonuje pracę, która nie jest wykonywane przez inne konstruktory.  
@@ -201,7 +197,6 @@ public:
     double m_double{ 1.0 };  
     string m_string;  
 };  
-  
 ```  
   
  W kolejnym przykładzie pokazano użycie inicjatory niestatycznego elementu członkowskiego danych. Zwróć uwagę, że jeśli Konstruktor inicjuje również element członkowski danych danego, zastąpić inicjator składowej:  

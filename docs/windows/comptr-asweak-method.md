@@ -1,5 +1,5 @@
 ---
-title: ComPtr::AsWeak — metoda | Dokumentacja firmy Microsoft
+title: ComPtr::AsWeak, metoda | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 9f262191304471a171e9c3370046dbdac71869cd
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 6e72d53f478fb1660fd0ad2fb8704916c9f04e75
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33870080"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39465229"
 ---
 # <a name="comptrasweak-method"></a>ComPtr::AsWeak — Metoda
 Pobiera słabe odwołanie do bieżącego obiektu.  
@@ -36,8 +36,8 @@ HRESULT AsWeak(
 ```  
   
 #### <a name="parameters"></a>Parametry  
- `pWeakRef`  
- Po tej operacji zakończeniu wskaźnik do obiektu słabe odwołanie.  
+ *pWeakRef*  
+ Gdy ta operacja zostanie ukończone, wskaźnik do obiektu słabe odwołanie.  
   
 ## <a name="return-value"></a>Wartość zwracana  
  S_OK w przypadku powodzenia; w przeciwnym razie wartość HRESULT, która wskazuje błąd.  
@@ -45,7 +45,7 @@ HRESULT AsWeak(
 ## <a name="requirements"></a>Wymagania  
  **Nagłówek:** client.h  
   
- **Namespace:** Microsoft::wrl —  
+ **Namespace:** Microsoft::WRL  
   
 ## <a name="see-also"></a>Zobacz też  
  [ComPtr, klasa](../windows/comptr-class.md)

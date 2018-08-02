@@ -1,5 +1,5 @@
 ---
-title: ComPtr::CopyTo — metoda | Dokumentacja firmy Microsoft
+title: ComPtr::CopyTo, metoda | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 680c1278ca2b17c7ea35e72946fb5d5030c5e7c0
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 724803fbbf04bd697dfc85f6576ed5706d708eae
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33870874"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39464444"
 ---
 # <a name="comptrcopyto-method"></a>ComPtr::CopyTo — Metoda
-Kopie interfejsu bieżąca lub określona skojarzone z tego comptr — do określonego wskaźnika.  
+Kopiuje skojarzony z tym interfejs bieżącej lub określonej **ComPtr** określony wskaźnik.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -46,29 +46,29 @@ HRESULT CopyTo(
 ```  
   
 #### <a name="parameters"></a>Parametry  
- `U`  
+ *U*  
  Nazwa typu.  
   
- `ptr`  
- Po tej operacji zakończeniu wskaźnik do żądanego interfejsu.  
+ *ptr*  
+ Gdy ta operacja zostanie ukończone, wskaźnik do żądanego interfejsu.  
   
- `riid`  
- Identyfikatora interfejsu.  
+ *Parametr riid*  
+ Identyfikator interfejsu.  
   
 ## <a name="return-value"></a>Wartość zwracana  
- S_OK w przypadku powodzenia; w przeciwnym razie wartość HRESULT wskazującą na to, dlaczego niejawne Operacja QueryInterface nie powiodła się.  
+ S_OK w przypadku powodzenia; w przeciwnym razie wartość HRESULT, która wskazuje, dlaczego niejawny `QueryInterface` operacja nie powiodła się.  
   
 ## <a name="remarks"></a>Uwagi  
- Pierwszy funkcja zwraca kopię wskaźnik skojarzony z tym comptr — interfejs. Ta funkcja zawsze zwraca wartość S_OK.  
+ Pierwsza funkcja zwraca kopię wskaźnika do interfejsu, który został skojarzony z tym **ComPtr**. Ta funkcja zawsze zwraca wartość S_OK.  
   
- Druga funkcja wykonuje operację QueryInterface na skojarzony z tym comptr — dla interfejsu określonego przez interfejs `riid` parametru.  
+ Druga funkcja wykonuje `QueryInterface` operacji w interfejsie skojarzony z tym **ComPtr** dla interfejsu, określonego przez *riid* parametru.  
   
- Trzeci funkcja wykonuje operację QueryInterface w interfejsie skojarzone z tym comptr — dla podstawowej interfejsu `U` parametru.  
+ Trzecia funkcja wykonuje `QueryInterface` operacji w interfejsie skojarzony z tym **ComPtr** dla podstawowego interfejsu *U* parametru.  
   
 ## <a name="requirements"></a>Wymagania  
  **Nagłówek:** client.h  
   
- **Namespace:** Microsoft::wrl —  
+ **Namespace:** Microsoft::WRL  
   
 ## <a name="see-also"></a>Zobacz też  
  [ComPtr, klasa](../windows/comptr-class.md)

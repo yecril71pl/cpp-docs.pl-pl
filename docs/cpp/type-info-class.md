@@ -17,17 +17,17 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 54e4f4a2ac9be9dc68320e5121bc86e5a4280807
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: 00939b514c243f673baf7f0997f1ca3860251626
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37941044"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39462654"
 ---
 # <a name="typeinfo-class"></a>type_info — Klasa
-`type_info` Klasa opisuje typ informacji generowanych w programie przez kompilator. Obiekty tej klasy skutecznie przechowują wskaźnik do nazwy typu. `type_info` Klasa zapisuje również zakodowaną wartość odpowiednią do porównywania dwóch typów dla równości lub kolejności sortowania. Reguły kodowania i sekwencja typów sortowania są nieokreślone i mogą się różnić między programami.  
+**Type_info** klasa opisuje typ informacji generowanych w programie przez kompilator. Obiekty tej klasy skutecznie przechowują wskaźnik do nazwy typu. **Type_info** Klasa zapisuje również zakodowaną wartość odpowiednią do porównywania dwóch typów dla równości lub kolejności sortowania. Reguły kodowania i sekwencja typów sortowania są nieokreślone i mogą się różnić między programami.  
   
- `<typeinfo>` Plik nagłówka musi być uwzględniony, aby można było używać `type_info` klasy. Interfejs `type_info` klasa jest:  
+ `<typeinfo>` Plik nagłówka musi być uwzględniony, aby można było używać **type_info** klasy. Interfejs **type_info** klasa jest:  
   
 ```cpp
 class type_info {  
@@ -42,11 +42,11 @@ public:
 };  
 ```  
   
- Nie można utworzyć wystąpienia obiektów `type_info` klasy bezpośrednio, ponieważ klasa ma Konstruktor kopii prywatnej. Jedynym sposobem, aby skonstruować (tymczasowo) `type_info` obiektu jest użycie [typeid](../cpp/typeid-operator.md) operatora. Ponieważ operator przypisania jest również prywatny, nie można kopiować lub przypisywać obiektów klasy `type_info`.  
+ Nie można utworzyć wystąpienia obiektów **type_info** klasy bezpośrednio, ponieważ klasa ma Konstruktor kopii prywatnej. Jedynym sposobem, aby skonstruować (tymczasowo) **type_info** obiektu jest użycie [typeid](../cpp/typeid-operator.md) operatora. Ponieważ operator przypisania jest również prywatny, nie można kopiować lub przypisywać obiektów klasy **type_info**.  
   
- `type_info::hash_code` definiuje funkcję mieszania odpowiednią do mapowania wartości typu `typeinfo` do rozłożenia wartości indeksu.  
+ `type_info::hash_code` definiuje funkcję mieszania odpowiednią do mapowania wartości typu **typeinfo** do rozłożenia wartości indeksu.  
   
- Operatory `==` i `!=` może służyć do porównywania równości i nierówności z innymi `type_info` obiektów, odpowiednio.  
+ Operatory `==` i `!=` może służyć do porównywania równości i nierówności z innymi **type_info** obiektów, odpowiednio.  
   
  Nie ma żadnego połączenia między określoną kolejnością typów i relacjami dziedziczenia. Użyj `type_info::before` funkcja elementu członkowskiego, aby określić kolejność sortowania typów. Nie ma żadnej gwarancji, `type_info::before` da ten sam wynik w różnych programach lub nawet cyklach tego samego programu. W ten sposób `type_info::before` przypomina address-of `(&)` operatora.  
   
@@ -56,5 +56,5 @@ public:
   
  Informacje o typie jest generowana dla polimorficznych klas tylko wtedy, gdy [/GR (Włącz Run-Time informacje o typie)](../build/reference/gr-enable-run-time-type-information.md) określono opcję kompilatora.  
   
-## <a name="see-also"></a>Zobacz też  
+## <a name="see-also"></a>Zobacz także  
  [Informacje o typach uzyskiwane w czasie rzeczywistym](../cpp/run-time-type-information.md)

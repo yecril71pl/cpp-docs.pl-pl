@@ -20,21 +20,20 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 9826b689e2b8a640efe66e8625b97b3cec347acf
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: d72506e3f384a784bce4d159e8e76e88098c79f7
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33862065"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39461812"
 ---
 # <a name="attribute"></a>— atrybut
-Służy do tworzenia atrybutu niestandardowego.  
+Umożliwia tworzenie atrybutów niestandardowych.  
   
 ## <a name="syntax"></a>Składnia  
   
 ```  
-  
-      [ attribute(  
+[ attribute(  
    AllowOn,  
    AllowMultiple=boolean,  
    Inherited=boolean  
@@ -43,34 +42,34 @@ Służy do tworzenia atrybutu niestandardowego.
   
 #### <a name="parameters"></a>Parametry  
  *AllowOn*  
- Określa elementy języka, do których można zastosować atrybutu niestandardowego. Domyślnie jest **System::AttributeTargets::All** (zobacz [System::AttributeTargets](https://msdn.microsoft.com/en-us/library/system.attributetargets.aspx)).  
+ Określa elementy języka, do których można zastosować atrybutu niestandardowego. Wartość domyślna to `System::AttributeTargets::All` (zobacz [System::AttributeTargets](https://msdn.microsoft.com/library/system.attributetargets.aspx)).  
   
- `AllowMultiple`  
- Określa, czy atrybut niestandardowy może odnosić się wielokrotnie do konstrukcję. Domyślnie jest **FALSE**.  
+ *AllowMultiple*  
+ Określa, czy atrybut niestandardowy mogą dotyczyć wielokrotnie konstrukcję. Domyślną jest FALSE.  
   
- `Inherited`  
- Wskazuje, czy ten atrybut ma być dziedziczone przez podklasy. Kompilator nie zapewnia specjalne obsługi dla tej funkcjonalności. zadanie konsumentów atrybutu (na przykład odbicia) jest do przestrzegania tych informacji. Jeśli `Inherited` jest **TRUE**, ten atrybut jest dziedziczona. Jeśli `AllowMultiple` jest **TRUE**, atrybut będą gromadzone w elemencie członkowskim pochodnej; Jeśli `AllowMultiple` jest **FALSE**, ten atrybut zostanie zastąpienia (lub Zastąp) w dziedziczeniu. Jeśli `Inherited` jest **FALSE**, ten atrybut nie będą dziedziczone. Domyślnie jest **TRUE**.  
+ *Dziedziczone*  
+ Wskazuje, czy ten atrybut ma być dziedziczona przez podklasy. Kompilator nie obsługuje specjalne tej funkcjonalności. zadanie konsumentów atrybutu (na przykład odbicia) jest do przestrzegania tych informacji. Jeśli *dziedziczone* ma wartość PRAWDA, ten atrybut jest dziedziczona. Jeśli *AllowMultiple* ma wartość TRUE, atrybut będą gromadzone w pochodnej składowej; Jeśli *AllowMultiple* ma wartość FALSE, atrybut spowoduje zastąpienie (lub Zastąp) w dziedziczeniu. Jeśli *dziedziczone* ma wartość FAŁSZ, ten atrybut nie będą dziedziczone. Domyślna wartość to TRUE.  
   
 ## <a name="remarks"></a>Uwagi  
   
 > [!NOTE]
->  `attribute` Atrybutu jest już przestarzały.  Umożliwia utworzenie zdefiniowanej przez użytkownika attirbutes wspólnego języka środowiska uruchomieniowego atrybut klasy System.Attribute bezpośrednio.  Aby uzyskać więcej informacji, zobacz [zdefiniowane przez użytkownika atrybuty](../windows/user-defined-attributes-cpp-component-extensions.md).  
+>  `attribute` Atrybutu jest już przestarzały.  Użyj wspólnego języka środowiska uruchomieniowego atrybut klasy System.Attribute bezpośrednio, aby utworzyć attirbutes zdefiniowanych przez użytkownika.  Aby uzyskać więcej informacji, zobacz [atrybuty zdefiniowane przez użytkownika](../windows/user-defined-attributes-cpp-component-extensions.md).  
   
- Należy zdefiniować [atrybutu niestandardowego](../windows/custom-attributes-cpp.md) przez umieszczenie `attribute` atrybutu zarządzanej definicji klasy lub struktury. Nazwa klasy jest atrybutu niestandardowego. Na przykład:  
+ Należy zdefiniować [atrybutu niestandardowego](../windows/custom-attributes-cpp.md) , umieszczając `attribute` atrybutu zarządzanych definicji klasy lub struktury. Nazwa klasy jest atrybutu niestandardowego. Na przykład:  
   
 ```  
 [ attribute(Parameter) ]  
 public ref class MyAttr {};  
 ```  
   
- Definiuje atrybut o nazwie MyAttr, który można zastosować do parametrów funkcji. Klasa musi być publiczna, jeśli atrybut ma być używane w innych zestawów.  
+ Definiuje atrybut o nazwie `MyAttr` , który można zastosować do parametrów funkcji. Klasy muszą być publiczne, jeśli atrybut ma być używane w innych zestawach.  
   
 > [!NOTE]
->  Aby uniknąć kolizji nazw, wszystkie nazwy atrybutu niejawnie kończyć "Atrybutu"; w tym przykładzie nazwa atrybutu i klasa jest rzeczywiście MyAttrAttribute, ale MyAttr i MyAttrAttribute mogą być używane zamiennie.  
+>  Aby uniknąć kolizji nazw, wszystkie nazwy atrybutu niejawnie kończą się ciągiem "Attribute"; w tym przykładzie nazwa atrybutu i klasa jest faktycznie `MyAttrAttribute`, ale `MyAttr` i `MyAttrAttribute` mogą być używane zamiennie.  
   
- Konstruktory publiczne klasy definiują parametry bez nazwy atrybutu. Przeciążone konstruktory Zezwalaj na wiele sposobów określenie atrybutu, więc atrybutu niestandardowego, który jest zdefiniowany w następujący sposób:  
+ Konstruktory publiczne klasy definiują parametry bez nazwy atrybutu. Przeciążenia konstruktorów Zezwalaj na wiele sposobów określania atrybutów, dzięki czemu niestandardowy atrybut, który jest zdefiniowany w następujący sposób:  
   
-```  
+```cpp  
 // cpp_attr_ref_attribute.cpp  
 // compile with: /c /clr  
 using namespace System;  
@@ -88,9 +87,9 @@ ref class ClassA {};   // Attribute with no parameters
 ref class ClassB {};   // Attribute with one parameter  
 ```  
   
- Publiczne elementy członkowskie danych i właściwości tej klasy są opcjonalnymi parametrami nazwanego atrybutu:  
+ Publiczne składowe danych klasy i właściwości są opcjonalne parametry nazwane atrybutu:  
   
-```  
+```cpp  
 // cpp_attr_ref_attribute_2.cpp  
 // compile with: /c /clr  
 using namespace System;  
@@ -112,13 +111,13 @@ public:
 ref class ClassC {};  
 ```  
   
- Listę atrybutów możliwe typy parametrów, zobacz [atrybuty niestandardowe](../windows/custom-attributes-cpp.md).  
+ Aby uzyskać listę typy parametrów atrybutu możliwe, zobacz [atrybuty niestandardowe](../windows/custom-attributes-cpp.md).  
   
- Zobacz [zdefiniowane przez użytkownika atrybuty](../windows/user-defined-attributes-cpp-component-extensions.md) omówienie na docelowe atrybuty.  
+ Zobacz [atrybuty zdefiniowane przez użytkownika](../windows/user-defined-attributes-cpp-component-extensions.md) do dyskusji na temat docelowe atrybuty.  
   
- `attribute` Ma atrybut `AllowMultiple` parametr, który określa, czy atrybut niestandardowy jest jednorazowe lub multiuse (może występować więcej niż raz w tej samej jednostce).  
+ `attribute` Atrybut ma *AllowMultiple* parametr, który określa, czy atrybut niestandardowy jest jednorazowego użytku lub multiuse (może wystąpić więcej niż raz w tej samej jednostce).  
   
-```  
+```cpp  
 // cpp_attr_ref_attribute_3.cpp  
 // compile with: /c /clr  
 using namespace System;  
@@ -131,38 +130,38 @@ ref struct MyAttr {
 ref class ClassA {};  
 ```  
   
- Niestandardowy atrybut klasy pochodne bezpośrednio lub pośrednio <xref:System.ComponentModel.AttributeCollection.%23ctor%2A>, która sprawia, że identyfikacji definicje atrybutów w metadanych szybkie i łatwe. `attribute` Atrybut oznacza dziedziczenia z System::Attribute, więc jawne pochodnego nie jest konieczne:  
+ Niestandardowy atrybut klasy pochodzą bezpośrednio lub pośrednio z <xref:System.ComponentModel.AttributeCollection.%23ctor%2A>, co sprawia, że identyfikowanie definicji atrybutów w metadanych jest łatwe i szybkie. `attribute` Atrybut oznacza dziedziczenie z System::Attribute, więc jawne tworzenie wartości pochodnych nie jest konieczne:  
   
 ```  
 [ attribute(Class) ]  
 ref class MyAttr  
 ```  
   
- jest równoważny  
+ odpowiada wyrażeniu  
   
 ```  
 [ attribute(Class) ]  
 ref class MyAttr : System::Attribute   // OK, but redundant.  
 ```  
   
- `attribute` alias jest <xref:System.AttributeUsageAttribute?displayProperty=fullName> (nie AttributeAttribute; jest to wyjątek reguły nazewnictwa atrybutu).  
+ `attribute` jest aliasem dla <xref:System.AttributeUsageAttribute?displayProperty=fullName> (nie AttributeAttribute; jest to wyjątek reguły nazewnictwa atrybutu).  
   
 ## <a name="requirements"></a>Wymagania  
   
-### <a name="attribute-context"></a>Atrybut kontekstu  
+### <a name="attribute-context"></a>Kontekst atrybutu  
   
 |||  
 |-|-|  
-|**Dotyczy**|`ref` **Klasa**, **ref struct**|  
+|**Dotyczy**|**Klasa REF**, **struktury ref**|  
 |**Powtarzalne**|Nie|  
 |**Wymaganych atrybutów**|Brak|  
 |**Nieprawidłowe atrybuty**|Brak|  
   
- Aby uzyskać więcej informacji na temat konteksty atrybutu, zobacz [konteksty atrybutu](../windows/attribute-contexts.md).  
+ Aby uzyskać więcej informacji na temat konteksty atrybutu zobacz [konteksty atrybutu](../windows/attribute-contexts.md).  
   
 ## <a name="example"></a>Przykład  
   
-```  
+```cpp  
 // cpp_attr_ref_attribute_4.cpp  
 // compile with: /c /clr  
 using namespace System;  
@@ -176,9 +175,9 @@ ref class MyClass {};
 ```  
   
 ## <a name="example"></a>Przykład  
- `Inherited` Nazwany argument określa, czy atrybut niestandardowy stosowane w klasie podstawowej zostaną wyświetlone na odbicia klasy pochodnej.  
+ `Inherited` Nazwany argument określa, czy atrybut niestandardowy stosowane w klasie bazowej pojawią się na podstawie odbicia klasy pochodnej.  
   
-```  
+```cpp  
 // cpp_attr_ref_attribute_5.cpp  
 // compile with: /clr  
 using namespace System;  
@@ -218,4 +217,4 @@ int main() {
   
 ## <a name="see-also"></a>Zobacz też  
  [Alfabetyczny spis atrybutów](../windows/attributes-alphabetical-reference.md)   
- [Atrybuty niestandardowe](http://msdn.microsoft.com/en-us/558ebdb2-082f-44dc-b442-d8d33bf7bdb8)
+ [Atrybuty niestandardowe](http://msdn.microsoft.com/558ebdb2-082f-44dc-b442-d8d33bf7bdb8)

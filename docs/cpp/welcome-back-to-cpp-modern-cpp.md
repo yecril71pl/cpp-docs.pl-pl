@@ -12,12 +12,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 220c8f27aec52fe707e0482eb041ea71c5bd8291
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: c4426f3d25681e3ee46bf4d5da615d185babb0f0
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37939380"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39462365"
 ---
 # <a name="welcome-back-to-c-modern-c"></a>Zapraszamy ponownie do języka C++ (Modern C++)
 Język C++ jest jednym z najczęściej używanych języków programowania na świecie. Dobrze napisane programy ++ są szybkie i wydajne. Język jest bardziej elastyczny niż inne języki, ponieważ służy do tworzenia szerokiej gamy aplikacji — od zabawnych i emocjonujących gier do wysokiej wydajności naukowego oprogramowania, sterowników urządzeń, programów osadzonych i aplikacji klienckich Windows. Ponad 20 lat firma C++ został użyty do rozwiązywania problemów, takich jak te i wiele innych. Co możesz nie znać jest, że rosnąca liczba programistów C++ ma składanych zapasową wyświechtanego stylu programowania C już przeszłość i przyjęła nowoczesny C++, zamiast tego.  
@@ -49,7 +49,6 @@ Język C++ jest jednym z najczęściej używanych języków programowania na św
  Sam język C++ także się rozwinął. Porównaj następujące fragmenty kodu. To pokazuje jak kiedyś w języku C++:  
   
 ```cpp  
-
 #include <vector>
 
 void f()
@@ -81,7 +80,6 @@ void f()
  Poniżej przedstawiono, jak to samo jest realizowane w nowoczesnym C++:  
   
 ```cpp
-
 #include <memory>  
 #include <vector>  
 
@@ -99,7 +97,6 @@ void f()
         }
     }
 }
-
 ```
 
  W nowoczesnym C++ nie trzeba używać nowy/Usuń lub obsługi jawnych wyjątków ponieważ zamiast tego można użyć sprytnych wskaźników. Kiedy używasz **automatycznie** Ustalanie typu z i [funkcji lambda](../cpp/lambda-expressions-in-cpp.md), można napisać kod szybciej, zacieśniać go i lepiej zrozumieć. I opartej na zakresie **dla** pętla jest bardziej przejrzysty, łatwiejszy w obsłudze i mniej podatny na błędy niezamierzone niż stylu C **dla** pętli. Standardowy wraz z minimalnym wierszy kodu można użyć, aby napisać własną aplikację. I sprawić, że kod wyjątku i pamięci są bezpieczne i mają nie alokacji/dezalokacji ani kodów błędu do przeciwdziałania.  
@@ -138,7 +135,7 @@ void f()
   
  Aby uzyskać więcej informacji, zobacz artykuł StackOverflow [jakie idiomy C++ zostały zaniechane w C ++ 11](http://go.microsoft.com/fwlink/p/?linkid=402836)  
   
-## <a name="see-also"></a>Zobacz też  
+## <a name="see-also"></a>Zobacz także  
  [Dokumentacja języka C++](../cpp/cpp-language-reference.md)   
  [Wyrażenia lambda](../cpp/lambda-expressions-in-cpp.md)   
  [Standardowa biblioteka C++](../standard-library/cpp-standard-library-reference.md)  

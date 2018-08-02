@@ -1,5 +1,5 @@
 ---
-title: ComPtr::Attach — metoda | Dokumentacja firmy Microsoft
+title: ComPtr::Attach, metoda | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 590a50fbaca22b088af39f31e2e6349a3ebc18dd
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: f852f8f360be90e7d17e9aaa09e7d584ad98fc33
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33870106"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39461071"
 ---
 # <a name="comptrattach-method"></a>ComPtr::Attach — Metoda
-Kojarzy tego comptr — z typu interfejsu, określony przez parametr typu bieżącego szablonu.  
+To skojarzenie **ComPtr** z typu interfejsu, określonego przez bieżący parametrowi typu szablonu.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -36,13 +36,13 @@ void Attach(
 ```  
   
 #### <a name="parameters"></a>Parametry  
- `other`  
+ *other*  
  Typ interfejsu.  
   
 ## <a name="requirements"></a>Wymagania  
  **Nagłówek:** client.h  
   
- **Namespace:** Microsoft::wrl —  
+ **Namespace:** Microsoft::WRL  
   
 ## <a name="see-also"></a>Zobacz też  
  [ComPtr, klasa](../windows/comptr-class.md)

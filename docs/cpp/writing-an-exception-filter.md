@@ -14,12 +14,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: eb4b02144f55231a7b4472cd62322fd61a543d18
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: fb9307b68b5d664e477f0139824ff02d00b7c134
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37947780"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39462121"
 ---
 # <a name="writing-an-exception-filter"></a>Pisanie filtra wyjątku
 Możesz obsłużyć wyjątek wykonując skok na poziom programu obsługi wyjątków lub kontynuując wykonywanie. Zamiast używania kodu programu obsługi wyjątków, aby obsłużyć wyjątek i przejść przez, można użyć *filtru* Aby oczyścić problem, a następnie, zwracając wartość -1, wznowić Normalny przepływ bez czyszczenia stosu.  
@@ -86,6 +86,6 @@ __except( GetExceptionCode() == STATUS_INTEGER_OVERFLOW ) {
 __except( nCode = GetExceptionCode(), nCode == STATUS_INTEGER_OVERFLOW )  
 ```  
   
-## <a name="see-also"></a>Zobacz też  
+## <a name="see-also"></a>Zobacz także  
  [Pisanie programu do obsługi wyjątków](../cpp/writing-an-exception-handler.md)   
  [Obsługa wyjątków strukturalnych (C/C++)](../cpp/structured-exception-handling-c-cpp.md)

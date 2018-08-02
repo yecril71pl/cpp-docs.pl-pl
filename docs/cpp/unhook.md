@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 069d206418fd392e28114d977b3448f8306a3119
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: 020ae54cdaaddc2f05a8c3b6e285bc2fd0403ee8
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37947957"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39463717"
 ---
 # <a name="unhook"></a>__unhook
 Dissociates metody obsługi zdarzeń.  
@@ -31,8 +31,7 @@ Dissociates metody obsługi zdarzeń.
 ## <a name="syntax"></a>Składnia  
   
 ```cpp 
-  
-      long  __unhook(  
+long  __unhook(  
    &SourceClass::EventMethod,  
    source,  
    &ReceiverClass::HandlerMethod  
@@ -61,11 +60,11 @@ long  __unhook(
  Nazwa interfejsu, jest unhooked z *odbiorcy*, tylko w przypadku odbiorników zdarzeń COM, w którym *layout_dependent* parametru [event_receiver](../windows/event-receiver.md) atrybut jest **true**.  
   
  *source*  
- Wskaźnik na wystąpienie źródła zdarzeń. W zależności od kodu `type` określonych w **event_receiver**, *źródła* może być jedną z następujących czynności:  
+ Wskaźnik na wystąpienie źródła zdarzeń. W zależności od kodu `type` określonych w `event_receiver`, *źródła* może być jedną z następujących czynności:  
   
 -   Wskaźnik obiektu źródła zdarzeń macierzystych.  
   
--   **IUnknown**-oparte wskaźnikiem (źródło modelu COM).  
+-   `IUnknown`-Oparte wskaźnikiem (źródło modelu COM).  
   
 -   Wskaźnik zarządzanego obiektu (w przypadku zarządzanych zdarzeń).  
   
@@ -107,7 +106,7 @@ long  __unhook(
 ## <a name="example"></a>Przykład  
  Zobacz [zdarzenie obsługi w natywnym kodzie C++](../cpp/event-handling-in-native-cpp.md) i [zdarzenie obsługi w modelu COM](../cpp/event-handling-in-com.md) przykładów.  
   
-## <a name="see-also"></a>Zobacz też  
+## <a name="see-also"></a>Zobacz także  
  [Keywords](../cpp/keywords-cpp.md)   
  [event_source](../windows/event-source.md)   
  [event_receiver](../windows/event-receiver.md)   

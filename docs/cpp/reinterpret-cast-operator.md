@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 18a7cdd80c1d7b6b17a988d8f3581c7757f69823
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: 27522cb4d3bb15912b7988e0152a121616480330
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37947860"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39464837"
 ---
 # <a name="reinterpretcast-operator"></a>Operator reinterpret_cast
 Umożliwia dowolny wskaźnik do przekonwertowania na dowolny inny typ wskaźnika. Umożliwia również dowolnego typu całkowitoliczbowego ma zostać przekonwertowany na dowolny typ wskaźnika i odwrotnie.  
@@ -87,6 +87,6 @@ Output:
   
  **Reinterpret_cast** umożliwia wskaźnika, który powinien być traktowany jako typ całkowitoliczbowy. Wynik jest następnie bit przesunięte i XORed z samym sobą, aby wygenerować unikatowego indeksu (unikatowe wysokiego stopnia prawdopodobieństwa). Indeks jest następnie obcięte przez standard C rzutowania w stylu zwracany typ funkcji.  
   
-## <a name="see-also"></a>Zobacz też  
+## <a name="see-also"></a>Zobacz także  
  [Operatory rzutowania](../cpp/casting-operators.md)   
  [Słowa kluczowe](../cpp/keywords-cpp.md)

@@ -17,35 +17,34 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: b0fb7de1987d77f19e04f867aac68cbcc67c1f1e
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: cd6cc88ba01d7cfc5d7d5712ddeaaef0418bb12a
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33863455"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39462787"
 ---
 # <a name="cominterfaceentry-c"></a>com_interface_entry (C++)
-Dodaje interfejs wpis w mapie modelu COM klasy docelowej.  
+Dodaje wpis interfejsu do mapy COM klasy docelowej.  
   
 ## <a name="syntax"></a>Składnia  
   
 ```  
-  
-     [ com_interface_entry(   
+[ com_interface_entry(   
   com_interface_entry  
 ) ]  
 ```  
   
 #### <a name="parameters"></a>Parametry  
  *com_interface_entry —*  
- Ciąg zawierający wpis tekstu. Aby uzyskać listę możliwych wartości, zobacz [com_interface_entry — makra](../atl/reference/com-interface-entry-macros.md).  
+ Ciąg zawierający tekst wpisu. Aby uzyskać listę możliwych wartości, zobacz [com_interface_entry — makra](../atl/reference/com-interface-entry-macros.md).  
   
 ## <a name="remarks"></a>Uwagi  
- `com_interface_entry` Atrybut C++ Wstawia zawartość retransmitowanych w systemie ciągu znaków na mapie interfejsu COM obiektu docelowego. Jeśli atrybut jest stosowany jeden raz do obiektu docelowego, wpis zostanie wstawiony do początku istniejącej mapy interfejsu. Jeśli ten atrybut jest stosowany wielokrotnie do tego samego obiektu docelowego, wpisy są wstawiane na początku na mapie interfejsu w kolejności ich odbierania.  
+ **Com_interface_entry —** atrybut C++ wstawia retransmitowanych w systemie zawartość ciągu znaków do mapy interfejsu COM, obiektu docelowego. Jeśli ten atrybut jest stosowany jeden raz do obiektu docelowego, wpis jest wstawiany do początku istniejącej mapy interfejsu. Jeśli ten atrybut jest stosowany wielokrotnie do tego samego obiektu docelowego, wpisy zostaną wstawione na początku mapę interfejsu w kolejności, w której zostały odebrane.  
   
- Ten atrybut wymaga, aby [coclass](../windows/coclass.md), [progid](../windows/progid.md), lub [vi_progid —](../windows/vi-progid.md) atrybutu (lub inny atrybut, który oznacza jeden z nich) również będą stosowane do tego samego elementu. Jeśli jest używany dowolny pojedynczy atrybut, pozostałe dwa są automatycznie stosowane. Na przykład jeśli **progid** zostanie zastosowana, **vi_progid —** i **coclass** również są stosowane.  
+ Ten atrybut wymaga, aby [coclass](../windows/coclass.md), [progid](../windows/progid.md), lub [vi_progid —](../windows/vi-progid.md) atrybutów (lub innego atrybutu, który oznacza jeden z nich) również będą stosowane do tego samego elementu. Jeśli dowolny pojedynczy atrybut jest używany, pozostałe dwa są automatycznie stosowane. Na przykład jeśli `progid` zastosowaniu `vi_progid` i `coclass` są również stosowane.  
   
- Ponieważ pierwszy użycie `com_interface_entry` powoduje, że nowy interfejs do wstawienia na początku na mapie interfejsu musi mieć jedną z następujących typów com_interface_entry —:  
+ Ponieważ pierwsze użycie **com_interface_entry —** powoduje, że nowy interfejs, który ma zostać wstawiony na początku mapę interfejsu musi mieć jedną z następujących typów com_interface_entry —:  
   
 -   COM_INTERFACE_ENTRY —  
   
@@ -55,9 +54,9 @@ Dodaje interfejs wpis w mapie modelu COM klasy docelowej.
   
 -   COM_INTERFACE_ENTRY2_IID  
   
- Dodatkowe sposoby użycia `com_interface_entry` atrybut można używać wszystkich obsługiwanych typów com_interface_entry —.  
+ Dodatkowe sposoby użycia **com_interface_entry —** atrybut można używać wszystkich obsługiwanych typów com_interface_entry —.  
   
- To ograniczenie jest konieczne, ponieważ ATL używa pierwszego wpis w mapie interfejsów jako tożsamość **IUnknown**; w związku z tym wpis musi być prawidłowym interfejsem. Na przykład następujący przykładowy kod jest nieprawidłowy, ponieważ pierwszy wpis w mapie interfejsów nie określono rzeczywistego interfejsu COM.  
+ To ograniczenie jest konieczne, ponieważ ATL używa pierwszy wpis w mapie interfejsu jako tożsamość `IUnknown`; w związku z tym, wpis musi być prawidłową interfejsu. Na przykład poniższy przykładowy kod jest nieprawidłowe, ponieważ pierwszy wpis w mapie interfejsu nie określa rzeczywistego interfejsu COM.  
   
 ```  
 [ coclass, com_interface_entry =  
@@ -69,9 +68,9 @@ Dodaje interfejs wpis w mapie modelu COM klasy docelowej.
 ```  
   
 ## <a name="example"></a>Przykład  
- Poniższy kod dodaje dwóch wpisów do istniejącej mapy interfejsu COM z **CMyBaseClass**. Pierwszy jest standardowym interfejsem, a drugi ukrywa **IDebugTest** interfejsu.  
+ Poniższy kod dodaje dwa wpisy do istniejącej mapy interfejsu COM z `CMyBaseClass`. Pierwsza to standardowy interfejs, a druga ukrywa `IDebugTest` interfejsu.  
   
-```  
+```cpp  
 // cpp_attr_ref_com_interface_entry.cpp  
 // compile with: /LD  
 #define _ATL_ATTRIBUTES  
@@ -99,7 +98,7 @@ class CMyClass: public IMyClass, public IDebugTest
 };  
 ```  
   
- Wynikowa mapy obiektu COM dla **CMyBaseClass** wygląda następująco:  
+ Wynikowy mapy obiektu COM dla `CMyBaseClass` jest następująca:  
   
 ```  
 BEGIN_COM_MAP(CMyClass)  
@@ -114,16 +113,16 @@ END_COM_MAP()
   
 ## <a name="requirements"></a>Wymagania  
   
-### <a name="attribute-context"></a>Atrybut kontekstu  
+### <a name="attribute-context"></a>Kontekst atrybutu  
   
 |||  
 |-|-|  
-|**Dotyczy**|**Klasa**, `struct`|  
+|**Dotyczy**|**Klasa**, **— struktura**|  
 |**Powtarzalne**|Tak|  
-|**Wymaganych atrybutów**|Co najmniej jeden z następujących: **coclass**, **progid**, lub **vi_progid —**.|  
+|**Wymaganych atrybutów**|Co najmniej jeden z następujących czynności: **coclass**, **progid**, lub **vi_progid —**.|  
 |**Nieprawidłowe atrybuty**|Brak|  
   
- Aby uzyskać więcej informacji na temat konteksty atrybutu, zobacz [konteksty atrybutu](../windows/attribute-contexts.md).  
+ Aby uzyskać więcej informacji na temat konteksty atrybutu zobacz [konteksty atrybutu](../windows/attribute-contexts.md).  
   
 ## <a name="see-also"></a>Zobacz też  
  [Atrybuty COM](../windows/com-attributes.md)   

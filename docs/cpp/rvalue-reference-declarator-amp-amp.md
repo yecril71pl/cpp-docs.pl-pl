@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 21d1c1ad928ef61573271263a9a1112e944e2472
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: e4fb22334e809215f5f00b7d06170f6a018e3312
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37947871"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39462391"
 ---
 # <a name="rvalue-reference-declarator-ampamp"></a>Deklarator odwołania do wartości: &amp;&amp;
 Zawiera odwołanie do wyrażenia rvalue.  
@@ -29,7 +29,6 @@ Zawiera odwołanie do wyrażenia rvalue.
 ## <a name="syntax"></a>Składnia  
   
 ```  
-  
 type-id && cast-expression  
 ```  
   
@@ -41,7 +40,7 @@ type-id && cast-expression
 ## <a name="move-semantics"></a>Semantyka przenoszenia  
  Odwołania Rvalue wspierają implementację *semantyki przenoszenia*, co może znacząco zwiększyć wydajność aplikacji. Semantykę przenoszenia umożliwia napisanie kodu, który przenosi zasoby (takie jak pamięć przydzielana dynamicznie) z jednego obiektu do innego. Przenieś semantyki działa, ponieważ umożliwia zasobów z tymczasowych obiektów, których nie można odwoływać się gdzie indziej w programie.  
   
- Aby zaimplementować semantykę przenoszenia, zazwyczaj podajesz *Konstruktor przenoszący,* i opcjonalnie operator przypisania przenoszenia (`operator=`), do swojej klasy. Kopiuj i przypisz operacje, których źródłami są r-wartości, a następnie automatycznie skorzystaj z semantyki przeniesienia. W przeciwieństwie do domyślnego konstruktora kopii kompilator nie udostępnia domyślnego konstruktora przenoszącego. Aby uzyskać więcej informacji na temat sposobu pisania konstruktora przenoszącego i jak z niej korzystać w aplikacji, zobacz [konstruktory przenoszenia i operatory przenoszenia przypisania (C++)](../cpp/move-constructors-and-move-assignment-operators-cpp.md).  
+ Aby zaimplementować semantykę przenoszenia, zazwyczaj podajesz *Konstruktor przenoszący,* i opcjonalnie operator przypisania przenoszenia (**operator =**), do swojej klasy. Kopiuj i przypisz operacje, których źródłami są r-wartości, a następnie automatycznie skorzystaj z semantyki przeniesienia. W przeciwieństwie do domyślnego konstruktora kopii kompilator nie udostępnia domyślnego konstruktora przenoszącego. Aby uzyskać więcej informacji na temat sposobu pisania konstruktora przenoszącego i jak z niej korzystać w aplikacji, zobacz [konstruktory przenoszenia i operatory przenoszenia przypisania (C++)](../cpp/move-constructors-and-move-assignment-operators-cpp.md).  
   
  Możesz także przeciążać zwykłe funkcje i operatory, aby skorzystać z semantyki przenoszenia. Visual C++ 2010 wprowadza semantykę ruchu do standardowej biblioteki języka C++. Na przykład `string` klasa implementuje operacje wykonujące semantykę przenoszenia. Rozważmy następujący przykład, który łączy kilka ciągów i wypisuje wynik:  
   
@@ -59,7 +58,7 @@ int main()
 }  
 ```  
   
- Przed Visual C++ 2010, każdy wywołanie `operator+` przydzielało i zwracało nowy tymczasowy `string` obiektu (r-wartości). `operator+` Nie można dołączyć jednego ciągu do drugiego, ponieważ nie wie, czy ciągi źródłowe są wartościami lvalue czy rvalue. Jeżeli ciągi źródłowe są oba l-wartością, może się odwoływać się gdzie indziej w programie i dlatego nie mogą zostać zmodyfikowane. Za pomocą odwołania rvalue `operator+` może zostać zmodyfikowany do r-wartości, której nie można odwoływać się gdzie indziej w programie. W związku z tym `operator+` mogą teraz łączyć jeden ciąg do innego. Może to znacznie zmniejszyć liczbę alokacji pamięci dynamicznej, `string` musi wykonać klasa. Aby uzyskać więcej informacji na temat `string` klasy, zobacz [basic_string — klasa](../standard-library/basic-string-class.md).  
+ Przed Visual C++ 2010, każdy wywołanie **operator +** przydzielało i zwracało nowy tymczasowy `string` obiektu (r-wartości). **operator +** nie może dołączyć jednego ciągu do drugiego, ponieważ nie wie, czy ciągi źródłowe są wartościami lvalue czy rvalue. Jeżeli ciągi źródłowe są oba l-wartością, może się odwoływać się gdzie indziej w programie i dlatego nie mogą zostać zmodyfikowane. Za pomocą odwołania rvalue **operator +** może zostać zmodyfikowany do r-wartości, której nie można odwoływać się gdzie indziej w programie. W związku z tym **operator +** mogą teraz łączyć jeden ciąg do innego. Może to znacznie zmniejszyć liczbę alokacji pamięci dynamicznej, `string` musi wykonać klasa. Aby uzyskać więcej informacji na temat `string` klasy, zobacz [basic_string — klasa](../standard-library/basic-string-class.md).  
   
  Semantyka przenoszenia pomaga również w przypadku, gdy kompilator nie można używać optymalizacji zwracają wartość (RVO) ani o nazwie zwracają wartość optymalizacji (NRVO). W takich przypadkach kompilator wywołuje konstruktora przenoszącego, jeśli typ Określa go. Aby uzyskać więcej informacji o optymalizacji nazwanej zwracanej wartości, zobacz [optymalizacji nazwanej zwracanej wartości w programie Visual C++ 2005](http://go.microsoft.com/fwlink/p/?linkid=131571).  
   
@@ -410,7 +409,7 @@ print_type_and_value<string&>(string& t)
 ## <a name="summary"></a>Podsumowanie  
  Odwołania Rvalue odróżniają wartości lvalues od rvalues. Mogą one pomóc Ci zwiększyć wydajność aplikacji poprzez wyeliminowanie potrzeby przydzielania niepotrzebnych alokacji pamięci i operacji kopiowania. Umożliwiają one również pisanie jednej wersji funkcji, która przyjmuje argumenty dowolne i przekazuje je do innej funkcji, tak jakby innych funkcji jakby została ona bezpośrednio wywołana.  
   
-## <a name="see-also"></a>Zobacz też  
+## <a name="see-also"></a>Zobacz także  
  [Wyrażenia z operatorami Jednoargumentowymi](../cpp/expressions-with-unary-operators.md)   
  [Deklarator odwołania do wartości: &](../cpp/lvalue-reference-declarator-amp.md)   
  [Lvalues i Rvalues](../cpp/lvalues-and-rvalues-visual-cpp.md)   

@@ -25,12 +25,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 56372764c70498aec4ccf7b23fc7d074d1df179e
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: 393cb0b23ca67877a18d2148af76c8de59d29f30
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37947857"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39465561"
 ---
 # <a name="relational-operators-lt-gt-lt-and-gt"></a>Operatory relacyjne: &lt;, &gt;, &lt;=, i &gt;=
 ## <a name="syntax"></a>Składnia  
@@ -81,25 +81,25 @@ int main() {
  Popularne konwersje arytmetyczne omówione w [konwersje standardowe](standard-conversions.md) są stosowane do operandy typów arytmetycznych.  
   
 ## <a name="comparing-pointers"></a>Porównywanie wskaźników  
- Gdy dwa wskaźniki do obiektów tego samego typu są porównywane, wynik zależy od lokalizacji obiektów wskazywanych w przestrzeni adresowej programu. Wskaźniki można również porównać do stałego wyrażenia, które jest szacowane na 0 lub do wskaźnika typu void *. Jeśli wskaźnik jest porównywany wskaźnika typu void \*, drugi wskaźnik jest niejawnie konwertowany na typ void \*. Następnie dokonywane jest porównanie.  
+ Gdy dwa wskaźniki do obiektów tego samego typu są porównywane, wynik zależy od lokalizacji obiektów wskazywanych w przestrzeni adresowej programu. Wskaźniki można również porównać do stałego wyrażenia, które ocenia na 0 lub do wskaźnika typu `void *`. Jeśli wskaźnik jest porównywany wskaźnika typu `void *`, drugi wskaźnik jest niejawnie konwertowany na typ `void *`. Następnie dokonywane jest porównanie.  
   
  Nie można porównać dwóch wskaźników różnego typu, chyba że:  
   
 -   Jeden typ to typ klasy pochodzącej z drugiego typu.  
   
--   Co najmniej jeden ze wskaźników jest jawnie konwertowany (rzutowany) na typ void *. (Drugi wskaźnik jest niejawnie konwertowany na typ void \* do konwersji.)  
+-   Co najmniej jeden ze wskaźników jest jawnie konwertowany (rzutowany) na typ `void *`. (Drugi wskaźnik jest niejawnie konwertowany na typ `void *` do konwersji.)  
   
  Wynik porównania dwóch wskaźników tego samego typu, które wskazują ten sam obiekt zawsze będzie równy. Jeżeli porównywane są dwa wskaźniki do niestatycznych elementów członkowskich obiektu, obowiązują następujące zasady:  
   
--   Jeśli typem klasy nie jest Unia, a dwa elementy członkowskie nie są rozdzielone *specyfikator dostępu*, takim jak public, protected lub private, wskaźnik do składowej zadeklarowanej ostatnio da większy wynik porównania niż wskaźnik do składowej zadeklarowanej wcześniej.  
+-   Jeśli typem klasy nie jest **Unii**, a jeśli dwa elementy członkowskie nie są rozdzielone *specyfikator dostępu*, takich jak **publicznych**, **chronione**, lub **prywatnej**, wskaźnik do składowej zadeklarowanej ostatnio da większy wynik porównania niż wskaźnik do składowej zadeklarowanej wcześniej.  
   
 -   Jeśli dwa elementy członkowskie są rozdzielone *specyfikator dostępu*, wyniki są niezdefiniowane.  
   
--   Jeśli typem klasy jest unia, wskaźniki do różnych składowych danych w tej unii są sobie równe.  
+-   Jeśli typem klasy jest **Unii**, wskaźniki do różnych składowych danych w tym **Unii** porównania równości.  
   
  Jeśli dwa wskaźniki wskazują elementy tej samej tablicy lub na pierwszy element poza tablicą, wskaźnik do obiektu z wyższym indeksem dolnym daje większy wynik porównania. Porównanie wskaźników jest gwarantowane jako prawidłowe tylko wtedy, gdy wskaźniki dotyczą obiektów w jednej tablicy lub do pierwszej lokalizacji poza tablicą.  
   
-## <a name="see-also"></a>Zobacz też  
+## <a name="see-also"></a>Zobacz także  
  [Wyrażenia z operatorami Dwuargumentowymi](../cpp/expressions-with-binary-operators.md)   
  [C++ wbudowane operatory, pierwszeństwo i kojarzenie](../cpp/cpp-built-in-operators-precedence-and-associativity.md)   
  [Operatory relacyjne i porównania języka C](../c-language/c-relational-and-equality-operators.md)

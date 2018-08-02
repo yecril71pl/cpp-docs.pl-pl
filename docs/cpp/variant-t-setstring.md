@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 68ef72cfd256a2676c73223723f37374c50cb56f
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: 090fd7ed027738ebe7bc9276e3b3f124b9212c4a
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37947872"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39463470"
 ---
 # <a name="varianttsetstring"></a>_variant_t::SetString
 **Microsoft Specific**  
@@ -31,7 +31,6 @@ ms.locfileid: "37947872"
 ## <a name="syntax"></a>Składnia  
   
 ```  
-  
 void SetString(const char* pSrc);  
 ```  
   
@@ -44,5 +43,5 @@ void SetString(const char* pSrc);
   
  **END specyficzny dla Microsoft**  
   
-## <a name="see-also"></a>Zobacz też  
+## <a name="see-also"></a>Zobacz także  
  [_variant_t, klasa](../cpp/variant-t-class.md)

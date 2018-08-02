@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: de4a8465dd61e52425a0335e171cf516591ae589
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 8171c4a57621a4f17a5f0ddb0745faa70fde6524
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33863312"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39465288"
 ---
 # <a name="asyncresulttype-enumeration"></a>AsyncResultType — Wyliczenie
-Określa typ wyniku zwracany przez metodę GetResults().  
+Określa typ wyniku zwracanego przez `GetResults()` metody.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -39,13 +39,13 @@ enum AsyncResultType;
   
 |Nazwa|Opis|  
 |----------|-----------------|  
-|`MultipleResults`|Zestaw wielu wyników, które są prezentowane stopniowo między stan początkowy i przed wywołaniem Close().|  
-|`SingleResult`|Jeden wynik, który zobaczy po wystąpieniu zdarzenie ukończenia.|  
+|`MultipleResults`|Zbiór wielu wyników, które są prezentowane stopniowo między `Start` stanu i przed `Close()` jest wywoływana.|  
+|`SingleResult`|Pojedynczy wynik, przedstawiona po wystąpieniu zdarzenia ukończone.|  
   
 ## <a name="requirements"></a>Wymagania  
  **Nagłówek:** async.h  
   
- **Namespace:** Microsoft::wrl —  
+ **Namespace:** Microsoft::WRL  
   
 ## <a name="see-also"></a>Zobacz też  
  [Microsoft::WRL, przestrzeń nazw](../windows/microsoft-wrl-namespace.md)

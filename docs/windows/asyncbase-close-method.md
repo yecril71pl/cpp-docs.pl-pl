@@ -1,5 +1,5 @@
 ---
-title: AsyncBase::Close — metoda | Dokumentacja firmy Microsoft
+title: AsyncBase::Close, metoda | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 4f3f36656b9316fb6ad980349a836fad31c3a9a0
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 9d0798a6ef593e388ce7867ee9a55763be9ae890
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33860798"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39463362"
 ---
 # <a name="asyncbaseclose-method"></a>AsyncBase::Close — Metoda
 Zamyka operację asynchroniczną.  
@@ -36,15 +36,15 @@ STDMETHOD(
 ```  
   
 ## <a name="return-value"></a>Wartość zwracana  
- Wartość S_OK, jeśli operacja zostanie zamknięte lub jest już zamknięty; w przeciwnym razie E_ILLEGAL_STATE_CHANGE.  
+ S_OK, jeśli operacja zostanie zamknięty lub już zamknięte; w przeciwnym razie E_ILLEGAL_STATE_CHANGE.  
   
 ## <a name="remarks"></a>Uwagi  
- Close() jest domyślną implementację IAsyncInfo::Close, a nie rzeczywiste działa. Aby zamknąć faktycznie operację asynchroniczną, przesłonić metodę wirtualną czysty OnClose().  
+ **Close()** jest domyślna Implementacja klasy `IAsyncInfo::Close`, a nie rzeczywiste działa. Aby rzeczywiście zamknąć operację asynchroniczną, należy zastąpić `OnClose()` czystej wirtualnej metody.  
   
 ## <a name="requirements"></a>Wymagania  
  **Nagłówek:** async.h  
   
- **Namespace:** Microsoft::wrl —  
+ **Namespace:** Microsoft::WRL  
   
 ## <a name="see-also"></a>Zobacz też  
  [AsyncBase, klasa](../windows/asyncbase-class.md)

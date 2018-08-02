@@ -18,15 +18,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: a6113737d7463354ffa273ced61b190246f63a83
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: fadba5993b7445af2386f6e0669f210e29560c6c
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33873287"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39464259"
 ---
 # <a name="creatormap-structure"></a>CreatorMap — Struktura
-Obsługuje infrastrukturę Biblioteka szablonów C++ środowiska wykonawczego systemu Windows i nie jest przeznaczona do użycia bezpośrednio w kodzie.  
+Obsługuje infrastrukturę Biblioteka szablonów C++ środowiska wykonawczego Windows i nie jest przeznaczona do użycia bezpośrednio w kodzie.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -35,15 +35,15 @@ struct CreatorMap;
 ```  
   
 ## <a name="remarks"></a>Uwagi  
- Zawiera informacje o sposobie inicjowania, rejestrowanie i wyrejestrowywanie obiektów.  
+ Zawiera informacje o sposobie inicjowania, rejestrować i wyrejestrowywać obiektów.  
   
- Creatormap — zawiera następujące informacje:  
+ **Creatormap —** zawiera następujące informacje:  
   
--   Jak zainicjować, rejestrowanie i wyrejestrowywanie obiektów.  
+-   Jak zainicjować, rejestrować i wyrejestrowywać obiektów.  
   
--   Sposób porównywania danych aktywacji w zależności od fabrykę klasycznego modelu COM lub środowiska wykonawczego systemu Windows.  
+-   Sposób porównywania danych aktywacji w zależności od fabrykę klasycznego modelu COM lub środowiska wykonawczego Windows.  
   
--   Informacje o fabryki pamięci podręcznej i nazwę serwera dla interfejsu.  
+-   Informacje o fabryce pamięci podręcznej i nazwę serwera dla interfejsu.  
   
 ## <a name="members"></a>Elementy członkowskie  
   
@@ -51,10 +51,10 @@ struct CreatorMap;
   
 |Nazwa|Opis|  
 |----------|-----------------|  
-|[CreatorMap::activationId, składowa danych](../windows/creatormap-activationid-data-member.md)|Reprezentuje identyfikator obiektu, który jest identyfikowany przez identyfikator klasy klasycznego modelu COM lub nazwę środowiska wykonawczego systemu Windows.|  
-|[CreatorMap::factoryCache, składowa danych](../windows/creatormap-factorycache-data-member.md)|Creatormap — przechowuje wskaźnik do pamięci podręcznej fabryki.|  
-|[CreatorMap::factoryCreator, składowa danych](../windows/creatormap-factorycreator-data-member.md)|Tworzy fabrykę dla określonego creatormap —.|  
-|[CreatorMap::serverName, składowa danych](../windows/creatormap-servername-data-member.md)|Przechowuje nazwę serwera dla creatormap —.|  
+|[CreatorMap::activationId, składowa danych](../windows/creatormap-activationid-data-member.md)|Reprezentuje identyfikator obiektu, który jest identyfikowany przez identyfikator klasy klasycznego modelu COM lub nazwę środowiska wykonawczego Windows.|  
+|[CreatorMap::factoryCache, składowa danych](../windows/creatormap-factorycache-data-member.md)|Przechowuje wskaźnik do pamięci podręcznej fabryki dla **creatormap —**.|  
+|[CreatorMap::factoryCreator, składowa danych](../windows/creatormap-factorycreator-data-member.md)|Tworzy fabrykę dla określonego **creatormap —**.|  
+|[CreatorMap::serverName, składowa danych](../windows/creatormap-servername-data-member.md)|Przechowuje nazwę serwera dla **creatormap —**.|  
   
 ## <a name="inheritance-hierarchy"></a>Hierarchia dziedziczenia  
  `CreatorMap`  
@@ -62,7 +62,7 @@ struct CreatorMap;
 ## <a name="requirements"></a>Wymagania  
  **Nagłówek:** module.h  
   
- **Namespace:** Microsoft::wrl:: details —  
+ **Namespace:** Microsoft::wrl:: details  
   
 ## <a name="see-also"></a>Zobacz też  
  [Microsoft::WRL::Details, przestrzeń nazw](../windows/microsoft-wrl-details-namespace.md)

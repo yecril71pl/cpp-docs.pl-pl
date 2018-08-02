@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ad9af76787780ebe2a25b3fab46ce1951085b8e8
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: 5b01e9799a1f8b03406750dca0b486c6c4d0f655
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37947952"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39466699"
 ---
 # <a name="staticcast-operator"></a>Operator static_cast
 Konwertuje *wyrażenie* do typu *identyfikator typu* wyłącznie według typów, które są obecne w wyrażeniu.  
@@ -113,6 +113,6 @@ void f() {
   
  Ze względu na niebezpieczeństwo wykonywania niesprawdzonych rzutowań na górze przenoszonego modułu odśmiecania pamięci, użycie **static_cast** powinny być tylko w kodzie wydajności krytycznej, gdy masz pewność, będą działać poprawnie. Jeśli musisz użyć **static_cast** w trybie zwolnienia, zastąp go [safe_cast](../windows/safe-cast-cpp-component-extensions.md) w swoich kompilacjach debugowania, aby zapewnić sukces.  
   
-## <a name="see-also"></a>Zobacz też  
+## <a name="see-also"></a>Zobacz także  
  [Operatory rzutowania](../cpp/casting-operators.md)   
  [Słowa kluczowe](../cpp/keywords-cpp.md)

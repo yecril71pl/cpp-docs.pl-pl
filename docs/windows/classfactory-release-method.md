@@ -1,5 +1,5 @@
 ---
-title: ClassFactory::Release — metoda | Dokumentacja firmy Microsoft
+title: ClassFactory::Release, metoda | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 6aa548bcca7f443a311e594eb3a68b4f7f2f03d1
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 293c95bb95feb1fa021fa742a90939c6680e7b0d
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33866768"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39460644"
 ---
 # <a name="classfactoryrelease-method"></a>ClassFactory::Release — Metoda
-Liczba odwołania dla bieżącego obiektu ClassFactory — zmniejsza.  
+Dekrementuje liczbę odwołań dla bieżącego **ClassFactory —** obiektu.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -37,12 +37,12 @@ STDMETHOD_(
 ```  
   
 ## <a name="return-value"></a>Wartość zwracana  
- S_OK w przypadku powodzenia; w przeciwnym razie wartość HRESULT opisujący błąd.  
+ S_OK w przypadku powodzenia; w przeciwnym razie wartość HRESULT, który opisuje błąd.  
   
 ## <a name="requirements"></a>Wymagania  
  **Nagłówek:** module.h  
   
- **Namespace:** Microsoft::wrl —  
+ **Namespace:** Microsoft::WRL  
   
 ## <a name="see-also"></a>Zobacz też  
  [ClassFactory, klasa](../windows/classfactory-class.md)

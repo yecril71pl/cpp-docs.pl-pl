@@ -15,13 +15,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 200fdb93e7baf8ff229b0445b7ad7a8ceab90d19
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 01b569bd4a752eed66f2af138a7136032b092f51
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32421263"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39464973"
 ---
 # <a name="virtual-specifier"></a>virtual — specyfikator
-[Wirtualnego](../cpp/virtual-cpp.md) — słowo kluczowe może odnosić się tylko do klasy Niestatyczne funkcje Członkowskie. Go oznacza, że powiązanie wywołań funkcji została odroczona do czasu wykonywania. Aby uzyskać więcej informacji, zobacz [funkcji wirtualnych](../cpp/virtual-functions.md).  
-  
+[Wirtualnego](../cpp/virtual-cpp.md) — słowo kluczowe można zastosować tylko do klasy Niestatyczne funkcje Członkowskie. Oznacza on, że powiązanie wywołań funkcji jest odroczone do czasu wykonywania. Aby uzyskać więcej informacji, zobacz [funkcji wirtualnych](../cpp/virtual-functions.md).  

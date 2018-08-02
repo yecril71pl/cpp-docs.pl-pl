@@ -19,54 +19,54 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b116b55dd951e3be32c23a73614e7082c4102db4
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: fbdeac996320d885e4d6e131dcb735ac369b09f5
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39467519"
 ---
 # <a name="subscript-operator"></a>Operator indeksu dolnego:
 ## <a name="syntax"></a>Składnia  
   
 ```  
-  
 postfix-expression [ expression ]  
 ```  
   
 ## <a name="remarks"></a>Uwagi  
- Operatory przyrostka wyrażenia (która również może być wyrażenie podstawowego) następuje operator indeksu dolnego **[**, określa indeksowanie tablicy.  
+ Wyrażenie przyrostkowe (który również może być wyrażeniem podstawowym) następuje operator indeksu dolnego **[**, określa indeksowanie tablicy.  
   
- Informacje dotyczące zarządzanych tablic, zobacz [tablice](../windows/arrays-cpp-component-extensions.md).  
+ Aby uzyskać informacje o zarządzanych tablic, zobacz [tablic](../windows/arrays-cpp-component-extensions.md).  
   
- Zazwyczaj reprezentowany przez wartość *wyrażenie przyrostek* jest wartość wskaźnika, na przykład identyfikator tablicy i *wyrażenie* jest wartością całkowitą (w tym typy wyliczane). Wszystko jest jednak wymagana Składnia tego jedno z wyrażeń jest typu wskaźnika i innych być typu całkowitego. W związku z tym może być wartością całkowitą w *przyrostek wyrażenie* pozycji i wartości wskaźnika, które mogą być w nawiasach w *wyrażenie* lub pozycji indeksu. Rozważmy następujący fragment kodu:  
+ Zwykle reprezentowany przez wartość *wyrażeniem przyrostkowym* jest wartością wskaźnika, takich jak identyfikator tablicy, a *wyrażenie* jest wartością całkowitą (w tym typy wyliczone). Jednakże, wszystko co jest wymagane składniowo tego jednego z wyrażeń jest typu wskaźnika i innych być typu całkowitego. Ten sposób może być wartością typu całkowitego *wyrażeniem przyrostkowym* położenie i wartość wskaźnika można w nawiasach w *wyrażenie* lub indeksu dolnego pozycji. Rozważmy następujący fragment kodu:  
   
-```  
+```cpp 
 int nArray[5] = { 0, 1, 2, 3, 4 };  
 cout << nArray[2] << endl;            // prints "2"  
 cout << 2[nArray] << endl;            // prints "2"  
 ```  
   
- W powyższym przykładzie wyrażenie `nArray[2]` jest taka sama jak `2[nArray]`. Przyczyną jest to, że wynik wyrażenia indeksu dolnego *e1 *** [** *e2* **]** jest określany przez:  
+ W powyższym przykładzie wyrażenie `nArray[2]` jest taka sama jak `2[nArray]`. Przyczyną jest to, że wynik wyrażenia indeksu dolnego *e1 *** [** *e2* **]** jest nadawana przez:  
   
  **\*( (** *e2* **)** *+* **(***e1***) )**  
   
- Adres przekazanej przez wyrażenie, które nie jest *e2* bajtów z adresu *e1*. Zamiast adresu jest skalowana umożliwiające uzyskanie następny obiekt w tablicy *e2*. Na przykład:  
+ Adres uzyskane przez wyrażenie nie jest *e2* bajtów z adresu *e1*. Zamiast skalowania adres umożliwiające uzyskanie następny obiekt w tablicy *e2*. Na przykład:  
   
-```  
+```cpp 
 double aDbl[2];  
 ```  
   
- Adresy `aDb[0]` i `aDb[1]` są od siebie 8 bajtów — rozmiar obiektu typu **podwójne**. Ta skalowania zgodnie z typem obiektu odbywają się automatycznie za pomocą języka C++ i jest zdefiniowany w [operatory dodatku](../cpp/additive-operators-plus-and.md) gdzie omówiono Dodawanie i odejmowanie argumentów operacji typu wskaźnika.  
+ Adresy `aDb[0]` i `aDb[1]` są od siebie 8 bajtów — rozmiar obiektu typu **double**. To skalowanie zgodnie z typem obiektu odbywa się automatycznie za pomocą języka C++ i jest zdefiniowany w [operatory addytywne](../cpp/additive-operators-plus-and.md) gdzie omówiono Dodawanie i odejmowanie argumentów operacji typu wskaźnika.  
   
  Wyrażenie indeksu dolnego może mieć wiele indeksów dolnych, jak pokazano poniżej:  
   
  *wyrażenie1* **[***wyrażenie2***] [***expression3***]**...  
   
- Wyrażenia indeksu dolnego są skojarzone od lewej do prawej. Po lewej stronie wyrażenia indeksu * wyrażenie1 ***[*** wyrażenie2 ***]**, jest szacowana jako pierwsza. Adres, który jest wynikiem Dodawanie *wyrażenie1* i *wyrażenie2* formularzy wyrażenia wskaźnika; następnie *expression3* zostanie dodany do tego wyrażenia wskaźnika do utworzenia nowego wyrażenia wskaźnika, i tak dalej, aż ostatniego wyrażenia indeksu został dodany. Operator pośredni (**\***) są stosowane po ostatnim jako wyrażenie jest obliczane, chyba że wartość wskaźnika końcowe adresy typem tablicy.  
+ Wyrażenia indeksu dolnego są skojarzone od lewej do prawej. Skrajnie po lewej stronie wyrażenia indeksu dolnego, * wyrażenie1 ***[*** wyrażenie2 ***]**, jest stosowana jako pierwsza. Adres, który jest wynikiem dodawania *wyrażenie1* i *wyrażenie2* stanowi wyrażenie wskaźnika; następnie *expression3* jest dodawany do tego wyrażenia wskaźnika w celu utworzenia nowego wyrażenia wskaźnika, i tak dalej, aż ostatniego wyrażenia indeksu dolnego został dodany. Operator pośredni (**\***) są stosowane po ostatnim indeksem wyrażenie jest obliczane, chyba że wartość końcowego wskaźnika adresuje typ tablicowy.  
   
- Wyrażenia z wielu indeksów dolnych odwoływać się do elementów tablic wielowymiarowych. Tablica wielowymiarowa jest tablicą, której elementy są tablicami. Na przykład, pierwszy element tablicy trójwymiarowej jest tablicą z dwoma wymiarami. W poniższym przykładzie deklaruje i inicjuje proste tablicą dwuwymiarową znaków:  
+ Wyrażenia zawierające wiele indeksów dolnych odwołują się do elementów tablic wielowymiarowych. Tablica wielowymiarowa jest tablicą, której elementy są tablicami. Na przykład, pierwszy element tablicy trójwymiarowej jest tablicą z dwoma wymiarami. Poniższy przykład deklaruje i inicjuje proste dwuwymiarową tablicę znaków:  
   
-```  
+```cpp 
 // expre_Subscript_Operator.cpp  
 // compile with: /EHsc  
 #include <iostream>  
@@ -84,9 +84,9 @@ int main() {
 ```  
   
 ## <a name="positive-and-negative-subscripts"></a>Dodatnie i ujemne indeksy dolne  
- Pierwszy element tablicy jest element 0. Zakres tablicy C++ jest z *tablicy*[0] do *tablicy*[*rozmiar* - 1]. Dodatnie i ujemne indeksy dolne obsługuje jednak C++. Ujemne indeksy dolne muszą mieścić się w granicach tablicy; Jeśli nie, wyniki są nieprzewidywalne. Poniższy kod przedstawia tablicy dodatnie i ujemne indeksy dolne:  
+ Pierwszy element tablicy jest element 0. Zakres tablicy C++ znajduje się w *tablicy*[0] Aby *tablicy*[*rozmiar* - 1]. Jednak język C++ obsługuje dodatnie i ujemne indeksy dolne. Ujemne indeksy dolne muszą mieścić się w granicach tablicy Jeśli tak się nie stanie, wyniki są nieprzewidywalne. Poniższy kod pokazuje indeksy dolne tablicy pozytywne i negatywne:  
   
-```  
+```cpp 
 #include <iostream>  
 using namespace std;  
   
@@ -107,13 +107,13 @@ int main() {
 }  
 ```  
   
- Ujemna indeks w wierszu lasta może spowodować błędów czasu wykonywania, ponieważ wskazuje adres niższy 256 bajtów w pamięci, niż pochodzenia tablicy. Wskaźnik `midArray` został zainicjowany w środku `intArray`; w związku z tym jest możliwe użycie obu indeksy tablicy dodatnie i ujemne. Błędy indeks dolny tablicy nie generują błędy kompilacji, ale dają one nieoczekiwane wyniki.  
+ Ujemny indeks dolny w wierszu lasta może spowodować błąd czasu wykonywania, ponieważ wskazuje adres niższy 256 bajtów w pamięci, niż punkt początkowy tablicy. Wskaźnik `midArray` jest inicjowany w środku `intArray`; w związku z tym jest możliwe użycie zarówno indeksy tablicy dodatnie i ujemne w nim. Błędy indeksu dolnego tablicy nie generują błędy czasu kompilacji, ale mogą przynieść nieprzewidywalne rezultaty.  
   
- Operator indeksu dolnego jest przemienne. W związku z tym wyrażenia *tablicy*[*indeksu*] i *tablicy*[*tablicy*] zapewniona jest równoważne tak długo, jak indeks dolny operator nie jest przeciążony (zobacz [przeciążone operatory](../cpp/operator-overloading.md)). Pierwszy formularz jest najbardziej typowych praktyk kodowania, ale albo działa.  
+ Operator indeksu dolnego jest przemiennego. W związku z tym, wyrażenia *tablicy*[*indeksu*] i *tablicy*[*tablicy*] są gwarantowane jako równoważne, tak długo, jak indeks dolny nie jest przeciążony operator (zobacz [przeciążone operatory](../cpp/operator-overloading.md)). Pierwszy formularz jest najbardziej powszechną praktyką programowania, ale albo działa.  
   
-## <a name="see-also"></a>Zobacz też  
+## <a name="see-also"></a>Zobacz także  
  [Wyrażenia przyrostków](../cpp/postfix-expressions.md)   
- [Operatory C++ wbudowanych, priorytet i łączność](../cpp/cpp-built-in-operators-precedence-and-associativity.md)   
+ [C++ wbudowane operatory, pierwszeństwo i kojarzenie](../cpp/cpp-built-in-operators-precedence-and-associativity.md)   
  [Tablice](../cpp/arrays-cpp.md)   
  [Tablice jednowymiarowe](../c-language/one-dimensional-arrays.md)   
  [Tablice wielowymiarowe](../c-language/multidimensional-arrays-c.md)

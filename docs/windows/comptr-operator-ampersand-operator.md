@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 0bfe8cf9091d888c33420f53f584ca5509d80527
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 0afff1699a4c7a3a14f07967cfb5ba5727ba0320
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33872409"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39461565"
 ---
 # <a name="comptroperatoramp-operator"></a>ComPtr::operator&amp; — Operator
-Zwalnia skojarzony z tym interfejs `ComPtr` obiekt, a następnie pobiera adres `ComPtr` obiektu.  
+Zwalnia interfejs skojarzony z tym **ComPtr** obiektu, a następnie pobiera adres **ComPtr** obiektu.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -36,15 +36,15 @@ const Details::ComPtrRef<const WeakRef> operator&() const
 ```  
   
 ## <a name="return-value"></a>Wartość zwracana  
- Słabe odwołanie do bieżącego `ComPtr`.  
+ Słabe odwołanie do bieżącego **ComPtr**.  
   
 ## <a name="remarks"></a>Uwagi  
- Ta metoda różni się od [ComPtr::GetAddressOf](../windows/comptr-getaddressof-method.md) , ta metoda zwalnia odwołanie do wskaźnika interfejsu. Użyj `ComPtr::GetAddressOf` Jeżeli adresu wskaźnika interfejsu, ale nie mają być wersji interfejsu.  
+ Ta metoda różni się od [ComPtr::GetAddressOf](../windows/comptr-getaddressof-method.md) w tym, że ta metoda wydaje odniesienie do wskaźnika interfejsu. Użyj `ComPtr::GetAddressOf` po adresu wskaźnik interfejsu, ale nie chcesz zwolnić interfejsu.  
   
 ## <a name="requirements"></a>Wymagania  
  **Nagłówek:** client.h  
   
- **Namespace:** Microsoft::wrl —  
+ **Namespace:** Microsoft::WRL  
   
 ## <a name="see-also"></a>Zobacz też  
  [ComPtr, klasa](../windows/comptr-class.md)

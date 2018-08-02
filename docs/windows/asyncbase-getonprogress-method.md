@@ -1,5 +1,5 @@
 ---
-title: AsyncBase::GetOnProgress — metoda | Dokumentacja firmy Microsoft
+title: AsyncBase::GetOnProgress, metoda | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 83af39180da819349e95051c57dc137835db87bb
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: e88509a77c58266c56290b84adfd1e7c143da2ef
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33859543"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39465090"
 ---
 # <a name="asyncbasegetonprogress-method"></a>AsyncBase::GetOnProgress — Metoda
-Kopiuje adres bieżący postęp obsługi zdarzeń do określonej zmiennej.  
+Kopiuje adres bieżącej obsługi zdarzeń postępu do określonej zmiennej.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -36,7 +36,7 @@ STDMETHOD(
 ```  
   
 #### <a name="parameters"></a>Parametry  
- `progressHandler`  
+ *progressHandler*  
  Lokalizacja przechowywania adres bieżącej obsługi zdarzeń postępu.  
   
 ## <a name="return-value"></a>Wartość zwracana  
@@ -45,7 +45,7 @@ STDMETHOD(
 ## <a name="requirements"></a>Wymagania  
  **Nagłówek:** async.h  
   
- **Namespace:** Microsoft::wrl —  
+ **Namespace:** Microsoft::WRL  
   
 ## <a name="see-also"></a>Zobacz też  
  [AsyncBase, klasa](../windows/asyncbase-class.md)

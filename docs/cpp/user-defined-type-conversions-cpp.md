@@ -32,12 +32,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4c41e2cf0765c036715377038357d587a755196f
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: 5040319bee3fa74319bb30ca45ff11f2f5d72720
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37948248"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39465935"
 ---
 # <a name="user-defined-type-conversions-c"></a>Konwersje typów zdefiniowane przez użytkownika (C++)
 A *konwersji* tworzy nową wartość ciągu określonego typu z wartością innego typu. *Konwersje standardowe* wbudowane funkcje języka C++ i pomocy technicznej, jego typy wbudowane i możesz utworzyć *zdefiniowane przez użytkownika konwersje* do wykonywania konwersji do z lub między typami zdefiniowanymi przez użytkownika.  
@@ -79,7 +79,7 @@ A *konwersji* tworzy nową wartość ciągu określonego typu z wartością inne
   
  **Jawne** — słowo kluczowe może odnosić się do konstruktorów konwersji od C ++ 98 i funkcje konwersji, ponieważ C ++ 11. Poniższe sekcje zawierają więcej informacji o sposobie używania **jawne** — słowo kluczowe.  
   
-##  <a name="ConvCTOR"></a> Konstruktory konwersji  
+## <a name="ConvCTOR"></a> Konstruktory konwersji  
  Konstruktory konwersji zdefiniować konwersje z typów zdefiniowanych przez użytkownika lub wbudowane do typu zdefiniowanego przez użytkownika. W poniższym przykładzie pokazano Konstruktor konwersji, która konwertuje typ wbudowany **double** na typ zdefiniowany przez użytkownika `Money`.  
   
 ```cpp 
@@ -181,7 +181,6 @@ void display_balance(const Money balance)
 {  
     std::cout << "The balance is: " << balance << std::endl;  
 }  
-  
 ```  
   
  Należy zauważyć, że zmiennej składowej `amount` wykonano prywatnych i publicznych konwersji funkcja wpisz **double** wprowadza się tylko do zwracania wartości `amount`. W funkcji `display_balance`, niejawna konwersja występuje, gdy wartość `balance` jest przesyłany strumieniowo do wyjścia standardowego za pomocą operatora wstawiania strumienia `<<`. Ponieważ żaden operator wstawiania strumienia jest zdefiniowany dla typu zdefiniowanego przez użytkownika `Money`, ale jest on dostępny dla typu wbudowanego **double**, kompilator może używać funkcji konwersji z `Money` do **podwójnejprecyzji** spełnić operator wstawiania strumienia.  
@@ -226,8 +225,6 @@ void display_balance(const Money balance)
 {  
     std::cout << "The balance is: " << (double)balance << std::endl;  
 }  
-  
 ```  
   
  Tutaj funkcję konwersji **operator double** wykonano jawnej i jawnego rzutowania na typ **double** został wprowadzony w funkcji `display_balance` dokonać konwersji. W przypadku pominięcia to rzutowanie były kompilator nie będzie można zlokalizować operator odpowiednie wstawiania strumienia `<<` dla typu `Money` i mógłby wystąpić błąd.  
-  

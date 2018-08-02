@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 9fb3cd0a4c180073499ec1bdde1ea4703ffbf9e8
-ms.sourcegitcommit: 7eadb968405bcb92ffa505e3ad8ac73483e59685
+ms.openlocfilehash: bbe9f077fd0d80a831d319660be26090ad5411f6
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/23/2018
-ms.locfileid: "39207855"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39463856"
 ---
 # <a name="comptrrefoperator-void-operator"></a>ComPtrRef::operator void\* \* — Operator
 Obsługuje infrastrukturę biblioteki WRL i nie jest przeznaczona do użycia bezpośrednio w kodzie.  
@@ -34,7 +34,7 @@ operator void**() const;
 ```  
   
 ## <a name="remarks"></a>Uwagi  
- Usuwa bieżący obiekt comptrref —, wskaźnik do interfejsu, który był reprezentowany przez obiekt comptrref — wskaźnik do wskaźnik do rzutuje `void`, a następnie zwraca wskaźnik rzutowania.  
+ Usuwa bieżący **comptrref —** obiektów, wskaźnik do interfejsu, który został przedstawiony przez rzutuje **comptrref —** obiektu jako wskaźnik do wskaźnik do **void**, a następnie Zwraca wskaźnik rzutowania.  
   
 ## <a name="requirements"></a>Wymagania  
  **Nagłówek:** client.h  

@@ -21,19 +21,19 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d37319e50e7d2429ca9b64c5fc81d8c7c4418ed5
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: d9773817337bce2f054b279724db9859cc2faa41
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32423239"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39462836"
 ---
 # <a name="writing-a-termination-handler"></a>Pisanie programu obsługi zakończenia
-W przeciwieństwie do obsługi wyjątków programu obsługi zakończenia jest zawsze wykonywane, niezależnie od tego, czy chroniony bloku kodu zakończone normalnie. Wyłącznie w celu obsługi rozwiązanie powinno być upewnij się, że zasoby, takie jak pamięć, dojść i plików, są prawidłowo zamknięty niezależnie od tego, jak sekcji kodu ukończeniem wykonywania.  
+W przeciwieństwie do obsługi wyjątków programu obsługi zakończenia zawsze jest wykonywany w całości, niezależnie od tego, czy chroniony blok kodu zostało zakończone normalnie. Wyłącznie do celów programu obsługi zakończenia powinno być upewnij się, że zasoby, takie jak pamięć, obsługi i plików, są poprawnie zamknięte niezależnie od tego, jak sekcji kodu zakończy się wykonywanie.  
   
- Programy obsługi zakończenia używać instrukcji try-finally.  
+ Programy obsługi zakończenia użyj instrukcji try-finally.  
   
-## <a name="what-do-you-want-to-know-more-about"></a>Co chcesz dowiedzieć się więcej o?  
+## <a name="what-do-you-want-to-know-more-about"></a>Co chcesz dowiedzieć się więcej na temat?  
   
 -   [Try-finally — instrukcja](../cpp/try-finally-statement.md)  
   
@@ -43,5 +43,5 @@ W przeciwieństwie do obsługi wyjątków programu obsługi zakończenia jest za
   
 -   [Ograniczenia dotyczące programu obsługi zakończenia](../cpp/restrictions-on-termination-handlers.md)  
   
-## <a name="see-also"></a>Zobacz też  
+## <a name="see-also"></a>Zobacz także  
  [Obsługa wyjątków strukturalnych (C/C++)](../cpp/structured-exception-handling-c-cpp.md)

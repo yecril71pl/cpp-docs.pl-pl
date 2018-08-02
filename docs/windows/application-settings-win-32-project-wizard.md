@@ -18,42 +18,42 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 55ae50d849a67da69cde6a9c4b1529c34ee4b428
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: d6d2cd31306baaa0d9c8f137122fed1d4ae97295
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33860063"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39464694"
 ---
 # <a name="application-settings-win-32-project-wizard"></a>Ustawienia aplikacji, kreator projektów Win 32
-Aby ustawić opcje projektu Win32, użyj tej strony kreatora.  
+Ta strona kreatora umożliwia ustawianie opcji Projekt systemu Win32.  
   
  **Typ aplikacji**  
  Tworzy typ określonej aplikacji.  
   
 |Opcja|Opis|  
 |------------|-----------------|  
-|**Aplikacji konsoli**|Tworzy aplikację konsoli. Programy konsoli są tworzone z [funkcje konsoli](https://msdn.microsoft.com/en-us/library/ms813137.aspx), które zapewniają obsługę tryb znakowy w konsoli systemu windows. Visual C++ [biblioteki wykonawczej](../c-runtime-library/c-run-time-library-reference.md) również podać dane wyjściowe i dane wejściowe z okna konsoli standardowe funkcje We/Wy, takich jak **printf_s()** i **scanf_s()**. Aplikacja konsolowa nie ma graficznego interfejsu użytkownika. Kompiluje do pliku .exe, a może działać jako aplikacja autonomiczna z wiersza polecenia.<br /><br /> Możesz dodać obsługę MFC i ATL aplikacji konsoli.|  
-|**Aplikacja systemu Windows**|Tworzy programu systemu Win32. Programu systemu Win32 jest aplikacją wykonywalną (EXE) napisana C lub C++ do utworzenia graficznego interfejsu użytkownika przy użyciu wywołania interfejsu API systemu Win32.<br /><br /> Nie można dodać MFC lub ATL wsparcie dla aplikacji systemu Windows.|  
-|**DLL**|Tworzy Win32 biblioteki dołączanej (dynamicznie DLL). Biblioteki DLL systemu Win32 jest plikiem binarnym, napisana C lub C++, która używa wywołania funkcji API Win32, a nie do klas MFC i który pełni rolę biblioteki udostępnionej funkcji, które mogą być używane równocześnie przez wiele aplikacji.<br /><br /> Nie można dodać MFC lub ATL wsparcie dla aplikacji DLL. Można wskazać, że plik DLL, który eksportuje symboli.|  
-|**Biblioteka statyczna**|Tworzy bibliotekę statyczną. Biblioteka statyczna jest plik zawierający obiekty i ich funkcji i danych, który stanowi łącze do tego programu, podczas tworzenia pliku wykonywalnego. W tym temacie wyjaśniono, jak utworzyć pliki początkowe i [właściwości projektu](../ide/property-pages-visual-cpp.md) dla biblioteki statycznej. Plik biblioteki statycznej zapewnia następujące korzyści:<br /><br /> -Win32 biblioteki statycznej jest przydatne w przypadku aplikacji, w którym pracujesz na wywołań funkcji API Win32, a nie do klas MFC.<br />-Proces łączenia jest taka sama czy rest aplikacji systemu Windows są zapisywane w języku C lub C++.<br />— Biblioteka statyczna możesz połączyć programu opartego na MFC lub program innego typu niż MFC.|  
+|**Aplikacja konsolowa**|Tworzy aplikację konsoli. Programy konsoli są tworzone z użyciem [funkcje konsoli](https://msdn.microsoft.com/library/ms813137.aspx), które zapewniają obsługę tryb znakowy w konsoli systemu windows. Visual C++ [biblioteki wykonawczej](../c-runtime-library/c-run-time-library-reference.md) również podać dane wyjściowe i dane wejściowe z okna konsoli za pomocą funkcji standardowych operacji We/Wy, takich jak `printf_s()` i `scanf_s()`. Aplikacja konsolowa nie ma graficznego interfejsu użytkownika. On kompilowany na plik .exe i mogą być uruchamiane jako autonomiczną aplikację z poziomu wiersza polecenia.<br /><br /> Możesz dodać obsługę MFC i ATL do aplikacji konsoli.|  
+|**Aplikacja Windows**|Powoduje utworzenie programu systemu Win32. Programu systemu Win32 jest aplikacja pliku wykonywalnego (EXE) w języku C lub C++, tworzenie graficznego interfejsu użytkownika przy użyciu wywołania funkcji API Win32.<br /><br /> Nie można dodać MFC lub ATL Obsługa aplikacji Windows.|  
+|**DLL**|Tworzy Win32 biblioteki dołączanej (dynamicznie DLL). Biblioteka DLL systemu Win32 jest plik binarny, napisany w języku C lub C++, który używa wywołania funkcji API Win32, a nie do klas MFC i który działa jako współdzielona biblioteka funkcji, które mogą być używane jednocześnie przez wiele aplikacji.<br /><br /> Nie można dodać MFC lub ATL pomocy technicznej dla aplikacji DLL. Można wskazać, że biblioteka DLL eksportuje symboli.|  
+|**Biblioteka statyczna**|Tworzy bibliotekę statyczną. Biblioteka statyczna jest plikiem zawierającym obiektów i ich funkcje i dane, który stanowi łącze do tego programu, podczas kompilowania pliku wykonywalnego. W tym temacie opisano sposób tworzenia plikach startowych i [właściwości projektu](../ide/property-pages-visual-cpp.md) dla biblioteki statycznej. Plik biblioteki statycznej zapewnia następujące korzyści:<br /><br /> Biblioteka statyczna Win32 jest przydatne w przypadku aplikacji, którą pracujesz nad wywołań interfejsu API Win32, a nie do klas MFC.<br />— Proces łączenia jest taki sam, czy w pozostałej części aplikacji Windows są zapisywane w języku C lub C++.<br />— Biblioteka statyczna możesz połączyć program oparty na bibliotece MFC lub program innego typu niż MFC.|  
   
  **Dodatkowe opcje**  
  Definiuje pomocy technicznej i opcje dla aplikacji, w zależności od jego typu.  
   
 |Opcja|Opis|  
 |------------|-----------------|  
-|**Pusty projekt**|Określa, czy pliki projektu są puste. Jeśli masz zestaw plików kodu źródłowego (na przykład pliki .cpp, pliki nagłówkowe, ikony, paski narzędzi, okna dialogowe i tak dalej) i chcesz utworzyć projekt w środowisku projektowym Visual C++, należy najpierw utworzyć pusty projekt, a następnie dodaj pliki do projektu.<br /><br /> Ta opcja jest niedostępna dla projektów biblioteki statycznej.|  
-|**Eksportowanie symboli**|Określa, że projekt DLL eksportuje symboli.|  
-|**Prekompilowanego nagłówka**|Określa, że projekt biblioteki statycznej używa wstępnie skompilowanym nagłówkiem.|  
-|Sprawdza Security Development Lifecycle (SDL)|Aby uzyskać więcej informacji na temat SDL, zobacz [wskazówek dotyczących procesu Microsoft Security Development Lifecycle (SDL)](../build/reference/sdl-enable-additional-security-checks.md)|  
+|**Pusty projekt**|Określa, że pliki projektu są puste. Jeśli masz zestaw plików kodu źródłowego (na przykład plików .cpp, pliki nagłówkowe, ikony, paski narzędzi, okna dialogowe i tak dalej) i chcesz utworzyć projekt w środowisku programowania Visual C++, użytkownik musi najpierw utwórz pusty projekt, a następnie dodaj pliki do projektu.<br /><br /> Zaznacz to pole wyboru jest niedostępny dla projektów biblioteki statycznej.|  
+|**Eksportuj symbole**|Określa, że projekt DLL eksportuje symboli.|  
+|**Prekompilowany plik nagłówkowy**|Określa, że projekt biblioteki statycznej używa wstępnie skompilowanym nagłówkiem.|  
+|Sprawdza, czy cykl projektowania zabezpieczeń (SDL)|Aby uzyskać więcej informacji na temat SDL, zobacz [wskazówek dotyczących procesu cykl projektowania zabezpieczeń (SDL)](../build/reference/sdl-enable-additional-security-checks.md)|  
   
- **Dodawanie obsługi**  
- Dodaj obsługę jednej z bibliotek dostarczanych w programie Visual C++.  
+ **Dodano obsługę**  
+ Dodano obsługę jednej z bibliotek dostarczane w programie Visual C++.  
   
 |Opcja|Opis|  
 |------------|-----------------|  
-|**ATL**|Tworzy w projekcie obsługę klas w Active Template Library (ATL). Win32 konsoli tylko dla aplikacji.<br /><br /> **Uwaga** ta opcja nie wskazuje Obsługa dodawania obiektów ATL za pomocą biblioteki ATL kodu kreatorów. Obiekty ATL można dodawać tylko do projektów ATL lub projekty MFC z biblioteki ATL obsługują.|  
+|**ATL**|Kompilacje do obsługi projektu dla klas w Active Template Library (ATL). Win32 console tylko dla aplikacji.<br /><br /> **Uwaga** tej opcji nie oznacza Obsługa dodawania obiektów ATL za pomocą ATL kodu kreatorów. Obiekty ATL można dodawać tylko do projektów ATL lub projektów MFC z biblioteki ATL pomocy technicznej.|  
 |**MFC**|Kompilacje do obsługi projektu biblioteki Microsoft Foundation Class (MFC). Aplikacje konsoli Win32 i tylko w przypadku bibliotek statycznych.|  
   
 ## <a name="see-also"></a>Zobacz też  

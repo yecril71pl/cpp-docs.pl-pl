@@ -30,45 +30,44 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 70fd2411eefba495478baaf5fb20fe7a27031001
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: c8ebecf984254175a15075e8d8a4125f9fc5ec17
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33882553"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39462537"
 ---
 # <a name="creating-transparent-or-inverse-regions-in-device-images-image-editor-for-icons"></a>Tworzenie obszarów przezroczystych lub odwróconych w obrazach urządzeń (Edytor obrazów dla ikon)
-W [edytor obrazów](../windows/image-editor-for-icons.md), początkowej obrazu ikony ma atrybut przezroczysty. Mimo że obrazów ikony, jak i kursor jest prostokątny, wiele nie są wyświetlane, ponieważ części obrazu są niewidoczne; przedstawia podstawowy obraz na ekranie za pomocą ikony lub kursora. Przeciągnięcie ikony części obrazu może występować w kolorze odwrócony. Utwórz w tym celu przez ustawienie koloru ekranu i kolorów odwrotnych w [kolory — okno](../windows/colors-window-image-editor-for-icons.md).  
+W [edytora obrazów](../windows/image-editor-for-icons.md), początkowego obrazu ikony ma atrybut przezroczysty. Chociaż obrazy ikon i kursorów prostokątny, wiele nie są wyświetlane tak ponieważ przezroczysty; części obrazu Pokazuje obrazu podstawowego na ekranie za pomocą ikony lub kursor. Podczas przeciągania ikony części obrazu może pojawić się w kolorze odwrócony. Ten efekt, ustawiając kolor ekranu i odwracanie kolorów w [okno kolorów](../windows/colors-window-image-editor-for-icons.md).  
   
- Kolory ekranu i odwrotność zastosować ikony i kursory kształtu i kolor obrazu pochodnej albo wyznaczyć odwracanie regionów. Kolory wskazują części obrazu posiadających te atrybuty. Można zmienić kolory reprezentujących atrybuty ekranu odwrotność kolorach i edytowania. Te zmiany nie wpływają na wygląd ikony lub kursora w aplikacji.  
+ Kolory ekranu i odwrotność, można zastosować do ikony i kursory kształt i kolor obrazu pochodnej albo wyznaczyć odwracanie regionów. Kolory wskazują części obrazu, w czym te atrybuty. Można zmienić kolory, które reprezentują ekranu odwrotność kolorach i atrybuty w edycji. Te zmiany nie wpływają na wygląd ikony lub kursor znajduje się w aplikacji.  
   
 > [!NOTE]
->  Okna dialogowe i polecenia menu mogą się różnić od tych opisanych w Pomocy, w zależności od ustawień aktywnych lub wydania. Aby zmienić ustawienia, wybierz **Import i eksport ustawień** na **narzędzia** menu. Aby uzyskać więcej informacji, zobacz [Dostosowywanie ustawień środowiska w programie Visual Studio](http://msdn.microsoft.com/en-us/22c4debb-4e31-47a8-8f19-16f328d7dcd3).  
+>  Okna dialogowe i polecenia menu mogą się różnić od tych opisanych w Pomocy, w zależności od ustawień aktywnych lub wydania. Aby zmienić swoje ustawienia, wybierz opcję **Import i eksport ustawień** na **narzędzia** menu. Aby uzyskać więcej informacji, zobacz [Dostosowywanie ustawień środowiska deweloperskiego, w programie Visual Studio](http://msdn.microsoft.com/22c4debb-4e31-47a8-8f19-16f328d7dcd3).  
   
-### <a name="to-create-transparent-or-inverse-regions"></a>Aby utworzyć obszarów przezroczystych lub odwróconych  
+### <a name="to-create-transparent-or-inverse-regions"></a>Aby utworzyć przezroczystych lub odwróconych  
   
 1.  W **kolory** okna, kliknij przycisk **koloru ekranu** selektora lub **kolor odwrotność** selektora.  
   
-2.  Zastosuj ekranu lub odwrotny kolor na przy użyciu narzędzia do rysowania obrazu. Aby uzyskać więcej informacji dotyczących narzędzi do rysowania, zobacz [przy użyciu narzędzia do rysowania](using-a-drawing-tool-image-editor-for-icons.md).  
+2.  Zastosuj ekranu lub odwróconych kolorów na obraz przy użyciu narzędzia do rysowania. Aby uzyskać więcej informacji na temat narzędzia do rysowania, zobacz [przy użyciu narzędzia do rysowania](using-a-drawing-tool-image-editor-for-icons.md).  
   
-### <a name="to-change-the-screen-or-inverse-color"></a>Aby zmienić kolor ekranu lub odwrotność  
+### <a name="to-change-the-screen-or-inverse-color"></a>Aby zmienić kolor ekranu lub odwrotne  
   
 1.  Wybierz opcję **koloru ekranu** selektora lub **kolor odwrotność** selektora.  
   
-2.  Wybierz kolor z **kolory** palety w **kolory** okna.  
+2.  Wybierz kolor na podstawie **kolory** palety w **kolory** okna.  
   
-     Kolor dopełniający automatycznie wyznaczono innych selektora.  
+     Kolor dopełniający automatycznie wyznaczona na potrzeby innych selektora.  
   
     > [!TIP]
-    >  Po dwukrotnym kliknięciu Selektor koloru ekranu lub kolor odwrotność [wybór koloru niestandardowego — okno dialogowe](../windows/custom-color-selector-dialog-box-image-editor-for-icons.md) pojawi się.  
+    >  Po dwukrotnym kliknięciu Selektor koloru ekranu lub kolor odwrotność [okno dialogowe selektora kolorów niestandardowych](../windows/custom-color-selector-dialog-box-image-editor-for-icons.md) pojawia się.  
   
- Aby uzyskać informacje o dodawaniu zasobów do projektów zarządzanych, zobacz [zasobów w aplikacjach pulpitu](/dotnet/framework/resources/index) w *Przewodnik programistów platformy .NET Framework.* Aby uzyskać informacje na ręczne dodanie do projektów zarządzanych plików zasobów, uzyskiwanie dostępu do zasobów, wyświetlanie zasoby statyczne i przypisanie do właściwości ciągów zasobów, zobacz [tworzenie plików zasobów dla aplikacji pulpitu](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Informacje dotyczące globalizacji i lokalizacji zasobów w zarządzanych aplikacjach, zobacz [Globalizing i lokalizacja aplikacji .NET Framework](/dotnet/standard/globalization-localization/index).  
+ Aby uzyskać informacje na temat dodawania zasobów do projektów zarządzanych, zobacz [zasoby w aplikacjach pulpitu](/dotnet/framework/resources/index) w *przewodniku dewelopera .NET Framework.* Aby uzyskać informacji na temat ręcznego dodawania plików zasobów do projektów zarządzanych, uzyskiwania dostępu do zasobów, wyświetlania statycznych zasobów i przypisywania ciągów zasobów do właściwości, zobacz [Creating Resource Files dla aplikacji klasycznych](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Aby uzyskać informacji na temat globalizacja i lokalizacja zasobów w aplikacjach zarządzanych, zobacz [Globalizing i lokalizowanie aplikacji programu .NET Framework](/dotnet/standard/globalization-localization/index).  
   
- Wymagania  
+## <a name="requirements"></a>Wymagania  
   
  Brak  
   
 ## <a name="see-also"></a>Zobacz też  
  [Klawisze skrótów](../windows/accelerator-keys-image-editor-for-icons.md)   
  [Ikony i kursory: zasoby obrazów do wyświetlania na urządzeniach](../windows/icons-and-cursors-image-resources-for-display-devices-image-editor-for-icons.md)
-

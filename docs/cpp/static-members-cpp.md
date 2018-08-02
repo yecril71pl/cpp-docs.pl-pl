@@ -23,12 +23,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a9cfa2dd47f14053da9ef0b9620c9ce0dc05c5da
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: 2d202e48bbcd09c3f4071af21e942cb1353f7a6b
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37941983"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39466244"
 ---
 # <a name="static-members-c"></a>Statyczne elementy członkowskie (C++)
 Klasy mogą zawierać statyczny element członkowski danych i elementów członkowskich. Gdy element członkowski danych jest zadeklarowany jako **statyczne**, tylko jedna kopia danych jest zachowywana na potrzeby wszystkich obiektów klasy.
@@ -86,5 +86,5 @@ long nBytes = Console.bytecount;
   
  Typ członka statycznego nie jest kwalifikowana przez nazwę klasy. W związku z tym, typ `BufferedOutput::bytecount` jest **długie**.  
   
-## <a name="see-also"></a>Zobacz też  
+## <a name="see-also"></a>Zobacz także  
  [Klasy i struktury](../cpp/classes-and-structs-cpp.md)

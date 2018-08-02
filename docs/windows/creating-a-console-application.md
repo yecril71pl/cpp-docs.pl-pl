@@ -17,31 +17,31 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 9a65373cdc04235f067a8cd20cf2c7c6c9b9f13c
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: de317366d16748e9fb0a8a62f3602ad9d4ce025e
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33883531"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39467280"
 ---
 # <a name="creating-a-console-application"></a>Tworzenie aplikacji konsoli
-Najprostszym sposobem tworzenia aplikacji konsoli Win32 jest Kreator aplikacji Win32.  
+Najprostszym sposobem tworzenia aplikacji konsolowej Win32 jest za pomocą Kreatora aplikacji Win32.  
   
 ### <a name="to-create-a-win32-console-application"></a>Do tworzenia aplikacji konsolowej Win32  
   
 1.  Postępuj zgodnie z instrukcjami w temacie Pomocy [Tworzenie projektu za pomocą Kreatora aplikacji Visual C++](../ide/creating-desktop-projects-by-using-application-wizards.md).  
   
-2.  W **nowy projekt** okno dialogowe, wybierz opcję **projekt konsoli Win32** w okienku szablonów, aby otworzyć kreatora.  
+2.  W **nowy projekt** okno dialogowe, wybierz opcję **projekt konsoli Win32** w **szablony** okienko, aby otworzyć kreatora.  
   
-3.  Definiowanie sieci [ustawienia aplikacji](../windows/application-settings-win-32-project-wizard.md) przy użyciu [Kreator aplikacji Win32](../windows/win32-application-wizard.md).  
+3.  Zdefiniuj swoje [ustawienia aplikacji](../windows/application-settings-win-32-project-wizard.md) przy użyciu [Kreatora aplikacji Win32](../windows/win32-application-wizard.md).  
   
     > [!NOTE]
     >  Pomiń ten krok, aby kreator ustawienia domyślne.  
   
-4.  Kliknij przycisk **Zakończ** aby zamknąć kreatora i nowo utworzony projekt zostanie otwarty w **Eksploratora rozwiązań**.  
+4.  Kliknij przycisk **Zakończ** aby zamknąć kreatora i nowo utworzonego projektu zostanie otwarty w **Eksploratora rozwiązań**.  
   
 ## <a name="see-also"></a>Zobacz też  
  [Projekty startowe](/visualstudio/debugger/debugging-preparation-console-projects)   
- [Dodawanie funkcji z kreatorami kodów](../ide/adding-functionality-with-code-wizards-cpp.md)   
+ [Dodawanie funkcji za pomocą kreatorów kodu](../ide/adding-functionality-with-code-wizards-cpp.md)   
  [Strony właściwości](../ide/property-pages-visual-cpp.md)   
- [Wdrażanie aplikacji](http://msdn.microsoft.com/en-us/4ff8881d-0daf-47e7-bfe7-774c625031b4)
+ [Wdrażanie aplikacji](http://msdn.microsoft.com/4ff8881d-0daf-47e7-bfe7-774c625031b4)

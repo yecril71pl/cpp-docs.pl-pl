@@ -1,5 +1,5 @@
 ---
-title: Asyncbase::asyncbase — Konstruktor | Dokumentacja firmy Microsoft
+title: AsyncBase::AsyncBase, Konstruktor | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: cf794e3cbd9b566dafcdd1d5928ab9598bb1f08b
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: a6b9b2b1abd9e42461f3bcfc57fcad1840382053
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33854775"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39466257"
 ---
 # <a name="asyncbaseasyncbase-constructor"></a>AsyncBase::AsyncBase — Konstruktor
-Inicjuje wystąpienie klasy asyncbase —.  
+Inicjuje wystąpienie **AsyncBase** klasy.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -36,7 +36,7 @@ AsyncBase();
 ## <a name="requirements"></a>Wymagania  
  **Nagłówek:** async.h  
   
- **Namespace:** Microsoft::wrl —  
+ **Namespace:** Microsoft::WRL  
   
 ## <a name="see-also"></a>Zobacz też  
  [AsyncBase, klasa](../windows/asyncbase-class.md)

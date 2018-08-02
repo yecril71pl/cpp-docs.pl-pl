@@ -1,5 +1,5 @@
 ---
-title: ClassFactory::LockServer — metoda | Dokumentacja firmy Microsoft
+title: ClassFactory::LockServer, metoda | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 9e09a795688c7e2b31771126f9e4036ddfbd8e4f
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 654ef60c924a14e861971c651899c8baea0300ef
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33860323"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39462709"
 ---
 # <a name="classfactorylockserver-method"></a>ClassFactory::LockServer — Metoda
-Zwiększa lub zmniejsza liczbę podstawowych obiektów, które są śledzone przez bieżący obiekt ClassFactory —.  
+Zwiększa lub zmniejsza liczbę podstawowych obiektów, które są śledzone przez bieżącą **ClassFactory —** obiektu.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -36,19 +36,19 @@ STDMETHOD(
 ```  
   
 #### <a name="parameters"></a>Parametry  
- `fLock`  
- `true` Aby zwiększyć liczbę śledzonych obiektów. `false` Aby zmniejszyć liczbę śledzonych obiektów.  
+ *Stada*  
+ **wartość true,** się zwiększać liczbę śledzonych obiektów. **FALSE** zmniejszyć liczbę obiektów śledzonych.  
   
 ## <a name="return-value"></a>Wartość zwracana  
  S_OK w przypadku powodzenia; w przeciwnym razie E_FAIL.  
   
 ## <a name="remarks"></a>Uwagi  
- ClassFactory — przechowuje informacje o obiektów w wystąpieniu podstawowej [modułu](../windows/module-class.md) klasy.  
+ ClassFactory — śledzi informacje o obiektów w wystąpieniu bazowego [modułu](../windows/module-class.md) klasy.  
   
 ## <a name="requirements"></a>Wymagania  
  **Nagłówek:** module.h  
   
- **Namespace:** Microsoft::wrl —  
+ **Namespace:** Microsoft::WRL  
   
 ## <a name="see-also"></a>Zobacz też  
  [ClassFactory, klasa](../windows/classfactory-class.md)

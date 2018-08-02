@@ -58,12 +58,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3a8480a645728808ef4eae7a42c5080313d9fc6f
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: c18605c7539636e3158bc1dd9fe3a47e1d3146d6
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37940348"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39465958"
 ---
 # <a name="variantt-extractors"></a>_variant_t — Ekstraktory
 **Microsoft Specific**  
@@ -121,5 +121,5 @@ operator unsigned __int64() const;
   
  **END specyficzny dla Microsoft**  
   
-## <a name="see-also"></a>Zobacz też  
+## <a name="see-also"></a>Zobacz także  
  [_variant_t, klasa](../cpp/variant-t-class.md)

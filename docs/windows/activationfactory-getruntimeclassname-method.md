@@ -1,5 +1,5 @@
 ---
-title: ActivationFactory::GetRuntimeClassName — metoda | Dokumentacja firmy Microsoft
+title: ActivationFactory::GetRuntimeClassName, metoda | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 6db270c88b4335be48016ff2b8bdcf2b5e3951cd
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: db26591bc4d0f1912c968c331266200baeea9917
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33854879"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39463671"
 ---
 # <a name="activationfactorygetruntimeclassname-method"></a>ActivationFactory::GetRuntimeClassName — Metoda
-Pobiera obiekt, który tworzy bieżącego activationfactory — Nazwa klasy środowiska wykonawczego.  
+Pobiera nazwę klasy środowiska uruchomieniowego, obiektu, który bieżącego **activationfactory —** tworzy wystąpienie.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -36,16 +36,16 @@ STDMETHOD(
 ```  
   
 #### <a name="parameters"></a>Parametry  
- `runtimeName`  
- Po ukończeniu tej operacji dojścia do ciągu zawierający obiekt, który tworzy bieżącego activationfactory — Nazwa klasy środowiska wykonawczego.  
+ *runtimeName*  
+ Po zakończeniu tej operacji, dojścia do ciągu, który zawiera nazwę klasy środowiska uruchomieniowego obiektu, bieżący **activationfactory —** tworzy wystąpienie.  
   
 ## <a name="return-value"></a>Wartość zwracana  
- S_OK w przypadku powodzenia; w przeciwnym razie wartość HRESULT opisujący błąd.  
+ S_OK w przypadku powodzenia; w przeciwnym razie wartość HRESULT, który opisuje błąd.  
   
 ## <a name="requirements"></a>Wymagania  
  **Nagłówek:** module.h  
   
- **Namespace:** Microsoft::wrl —  
+ **Namespace:** Microsoft::WRL  
   
 ## <a name="see-also"></a>Zobacz też  
  [ActivationFactory, klasa](../windows/activationfactory-class.md)

@@ -19,12 +19,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f89651ba671bf66d7d27edb047db6d1b6b15ee06
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: e8f7939d42aa246c9b7d5924979357fb6301e726
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37940927"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39466588"
 ---
 # <a name="storage-classes-c"></a>Klasy magazynu (C++)  
   
@@ -228,7 +228,7 @@ Uwagi dotyczące `thread_local` specyfikator:
 
 -  Należy określić `thread_local` dla deklaracji i definicji lokalnego obiektu wątku, czy deklaracja i definicja występują w tym samym pliku lub osobnych plików.
 
-W Windows `thread_local` jest funkcjonalnym odpowiednikiem [__declspec(thread)](../cpp/thread.md) z tą różnicą, że `__declspec(thread)` może odnosić się do definicji typu i jest prawidłowy w kodzie C. Możliwe, używaj `thread_local` ponieważ jest częścią standardu języka C++ i dlatego jest bardziej przenośny.
+W Windows `thread_local` jest funkcjonalnym odpowiednikiem [__declspec(thread)](../cpp/thread.md) z tą różnicą, że **__declspec(thread)** może odnosić się do definicji typu i jest prawidłowy w kodzie C. Możliwe, używaj `thread_local` ponieważ jest częścią standardu języka C++ i dlatego jest bardziej przenośny.
 
 ##  <a name="register"></a>  Zarejestruj się
 
@@ -321,6 +321,5 @@ Istnieje kilka punktów, które należy zwrócić uwagę na program:
 
 - Na koniec statyczne zmienne lokalne, takie jak `I3` zachowują swoje wartości czasu trwania programu, ale są niszczone, gdy program zakończy działanie.
 
-## <a name="see-also"></a>Zobacz też
-
+## <a name="see-also"></a>Zobacz także
  [Deklaracje i definicje](../cpp/declarations-and-definitions-cpp.md)

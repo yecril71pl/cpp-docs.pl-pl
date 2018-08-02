@@ -18,21 +18,20 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 9863786e5e017b69217f984e3aa6d1db597e74d3
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 22f8dc4dfc3268930c80caece85b06b9a1a25d58
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33864918"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39461026"
 ---
 # <a name="classes-and-structs--c-component-extensions"></a>Klasy i struktury (C++ Component Extensions)
-Deklaruje klasie lub strukturze których *okres istnienia obiektu* podawana jest automatycznie. Gdy obiekt nie jest już dostępny lub poza zakresem, Visual C++ spowoduje odrzucenie na pamięci, która jest przydzielona do obiektu.  
+Deklaruje klasie lub strukturze którego *okres istnienia obiektu* są zarządzane automatycznie. Gdy obiekt nie jest już dostępny, lub wykracza poza zakres, Visual C++ powoduje odrzucenie na pamięć, która jest przydzielona do obiektu.  
   
 ## <a name="all-runtimes"></a>Wszystkie środowiska wykonawcze  
  **Składnia**  
   
 ```  
-  
       class_access  
       ref class  
       name  
@@ -46,7 +45,7 @@ class_accessvalue structnamemodifier :  inherit_accessbase_type {};
  **Parametry**  
   
  *class_access* (opcjonalnie)  
- Dostępność klasie lub strukturze poza zestaw. Możliwe wartości to **publicznego** i `private` (`private` jest ustawieniem domyślnym). Zagnieżdżone klasy lub struktury nie mogą mieć *class_access* specyfikator.  
+ Dostępność klasy lub struktury spoza zestawu. Możliwe wartości to **publicznych** i **prywatnej** (**prywatnej** jest ustawieniem domyślnym). Zagnieżdżone klasy lub struktury nie mogą mieć *class_access* specyfikator.  
   
  *Nazwa*  
  Nazwa klasy lub struktury.  
@@ -55,26 +54,24 @@ class_accessvalue structnamemodifier :  inherit_accessbase_type {};
  [abstrakcyjna](../windows/abstract-cpp-component-extensions.md) i [zapieczętowanego](../windows/sealed-cpp-component-extensions.md) są prawidłowe modyfikatorów.  
   
  *inherit_access* (opcjonalnie)  
- Dostępność `base_type`. Tylko dostępność dozwolonych jest `public` (`public` jest ustawieniem domyślnym).  
+ Dostępność `base_type`. Tylko dozwolone ułatwień dostępu jest **publicznych** (**publicznych** jest ustawieniem domyślnym).  
   
  *base_type* (opcjonalnie)  
- Typ podstawowy. Jednak typ wartości nie może działać jako typu podstawowego.  
+ Typ podstawowy. Jednak typ wartościowy nie może działać jako typu podstawowego.  
   
- Aby uzyskać więcej informacji zobacz opisy specyficzny dla języka tego parametru środowiska wykonawczego systemu Windows i Runtimesections języka wspólnego.  
+ Aby uzyskać więcej informacji zobacz opisy specyficzny dla języka tego parametru w Windows środowiska uruchomieniowego i typowych Runtimesections języka.  
   
  **Uwagi**  
   
- Dostępność elementu członkowskiego domyślnego obiektu zadeklarowana z **klasy referencyjnej** lub **klasę wartości** jest `private`. I dostępność elementu członkowskiego domyślnego obiektu zadeklarowana z **ref struct** lub **struktury wartość** jest `public`.  
+ Wartość domyślna dostępu elementu członkowskiego obiektu zadeklarowane za pomocą **klasy referencyjnej** lub **klasę wartości** jest **prywatnej**. I ułatwienia dostępu członków domyślnego obiektu zadeklarowane za pomocą **ref struct** lub **struktury wartości** jest **publicznych**.  
   
- Gdy typ referencyjny z innego typu odwołania, jawnie musi zostać zastąpiona funkcji wirtualnych w klasie podstawowej (z [zastąpienia](../windows/override-cpp-component-extensions.md)), czy ukryty (z [new (nowe gniazdo w vtable)](../windows/new-new-slot-in-vtable-cpp-component-extensions.md)). Funkcje klasy pochodnej również muszą być jawnie oznaczone jako `virtual`.  
+ Gdy typ odwołania dziedziczy z innego typu odwołania, funkcje wirtualne w klasie bazowej jawnie musi zostać zastąpiona (przy użyciu [zastąpienia](../windows/override-cpp-component-extensions.md)) lub ukryte (przy użyciu [new (nowe gniazdo w vtable)](../windows/new-new-slot-in-vtable-cpp-component-extensions.md)). Funkcje klasy pochodnej musi również jawnie oznaczona jako **wirtualnego**.  
   
- Aby wykryć w czasie kompilacji, czy typ jest `ref class` lub `ref struct`, lub `value class` lub `value struct`, użyj `__is_ref_class (type)`, `__is_value_class (type)`, lub `__is_simple_value_class (type)`. Aby uzyskać więcej informacji, zobacz [Obsługa cech typu w kompilatorze](../windows/compiler-support-for-type-traits-cpp-component-extensions.md).  
+ Aby wykryć w czasie kompilacji, czy typ jest **klasy referencyjnej** lub **ref struct**, lub **klasę wartości** lub **struktury wartości**, użyj `__is_ref_class (type)`, `__is_value_class (type)`, lub `__is_simple_value_class (type)`. Aby uzyskać więcej informacji, zobacz [Obsługa cech typu w kompilatorze](../windows/compiler-support-for-type-traits-cpp-component-extensions.md).  
   
- Aby uzyskać więcej informacji dotyczących klas i struktur zobacz  
+ Aby uzyskać więcej informacji na temat klas i struktur zobacz  
   
 -   [Utworzenie wystąpienia klasy i struktury](../dotnet/how-to-define-and-consume-classes-and-structs-cpp-cli.md)  
-  
- 
   
 -   [Semantyka stosu języka C++ dla typów odwołań](../dotnet/cpp-stack-semantics-for-reference-types.md)  
   
@@ -93,16 +90,16 @@ class_accessvalue structnamemodifier :  inherit_accessbase_type {};
 ## <a name="windows-runtime"></a>Środowisko wykonawcze systemu Windows  
  **Uwagi**  
   
- Zobacz [Ref klas i struktur](http://msdn.microsoft.com/library/windows/apps/hh699870.aspx) i [wartość klas i struktur](http://msdn.microsoft.com/library/windows/apps/hh699861.aspx).  
+ Zobacz [klasy i struktury odwołania](http://msdn.microsoft.com/library/windows/apps/hh699870.aspx) i [klasy i struktury wartości](http://msdn.microsoft.com/library/windows/apps/hh699861.aspx).  
   
  **Parametry**  
   
  *base_type* (opcjonalnie)  
- Typ podstawowy. A `ref class` lub `ref struct` może dziedziczyć zero lub więcej interfejsów i zero lub jeden `ref` typów. A `value class` lub `value struct` może dziedziczyć tylko zero lub więcej interfejsów.  
+ Typ podstawowy. A **klasy referencyjnej** lub **ref struct** może dziedziczyć z zero lub więcej interfejsów i zero lub jeden `ref` typów. A **klasę wartości** lub **struktury wartości** może dziedziczyć tylko z zero lub więcej interfejsów.  
   
- Gdy deklarowanie obiektu za pomocą `ref class` lub `ref struct` słów kluczowych, obiekt jest dostępny przez dojście do obiektu; oznacza to, że wskaźnik licznika odwołanie do obiektu. Zadeklarowana zmienna odbędzie się poza zakresem, kompilator automatycznie usuwa obiekt źródłowy. Gdy obiekt jest używany jako parametr w wywołaniu lub jest przechowywana w zmiennej, uchwyt do obiektu jest rzeczywiście przekazany lub przechowywane.  
+ Kiedy Deklarujesz obiektu za pomocą **klasy referencyjnej** lub **ref struct** słów kluczowych, obiekt jest dostępny po dojścia do obiektu, czyli wskaźnik licznika odwołań do obiektu. Gdy zadeklarowana zmienna wykracza poza zakres, kompilator automatycznie usuwa obiekt źródłowy. Gdy obiekt jest używany jako parametr w wywołaniu lub jest przechowywana w zmiennej, dojścia do obiektu jest faktycznie przekazywane lub przechowywane.  
   
- Gdy deklarowanie obiektu za pomocą `value class` lub `value struct` słów kluczowych, okres istnienia obiektu zadeklarowane obiektu nie jest nadzorowane. Obiekt jest podobnie jak inne standard C++ klasy lub struktury.  
+ Kiedy Deklarujesz obiektu za pomocą **klasę wartości** lub **struktury wartości** słów kluczowych, okres istnienia obiektów zadeklarowanych obiektu nie jest nadzorowane. Obiekt jest podobnie jak inne standard C++ klasy lub struktury.  
   
 ### <a name="requirements"></a>Wymagania  
  — Opcja kompilatora: **/ZW**  
@@ -110,16 +107,16 @@ class_accessvalue structnamemodifier :  inherit_accessbase_type {};
 ## <a name="common-language-runtime"></a>środowiska uruchomieniowe w trakcie wykonania 
  **Uwagi**  
   
- W poniższej tabeli wymieniono różnice składni pokazano **wszystkich środowisk uruchomieniowych** sekcji, które są specyficzne dla języka C + +/ CLI.  
+ W poniższej tabeli przedstawiono różnice w składni przedstawionej w **wszystkie środowiska wykonawcze** sekcji, które są specyficzne dla języka C + +/ interfejsu wiersza polecenia.  
   
  **Parametry**  
   
  *base_type* (opcjonalnie)  
- Typ podstawowy. A `ref class` lub `ref struct` może dziedziczyć zero lub więcej zarządzane interfejsy i zero lub jeden ref typów. A `value class` lub `value struct` może dziedziczyć tylko zero lub więcej interfejsów zarządzanych.  
+ Typ podstawowy. A **klasy referencyjnej** lub **ref struct** może dziedziczyć od zera lub jednego zarządzanego, interfejsy i zero lub jeden ref typów. A **klasę wartości** lub **struktury wartości** może dziedziczyć tylko z zero lub więcej interfejsów zarządzanych.  
   
- `ref class` i `ref struct` słowa kluczowe Poinformuj kompilator, który ma zostać przydzielone na stercie klasy lub struktury. Gdy obiekt jest używany jako parametr w wywołaniu lub jest przechowywana w zmiennej, odwołanie do obiektu jest rzeczywiście przekazany lub przechowywane.  
+ **Klasy referencyjnej** i **ref struct** słowa kluczowe poinformować kompilator, który ma zostać przydzielone na stercie klasy lub struktury. Gdy obiekt jest używany jako parametr w wywołaniu lub jest przechowywana w zmiennej, odwołanie do obiektu jest faktycznie przekazywane lub przechowywane.  
   
- `value class` i `value struct` słowa kluczowe informuje kompilator, że wartość przydzielone klasy lub struktury jest przekazany do funkcji lub przechowywane w elementach członkowskich.  
+ **Klasę wartości** i **struktury wartości** słowa kluczowe informuje kompilator, że wartość przydzielone klasy lub struktury jest przekazywane do funkcji lub przechowywany w elementów członkowskich.  
   
 ### <a name="requirements"></a>Wymagania  
  — Opcja kompilatora:   **/CLR**  

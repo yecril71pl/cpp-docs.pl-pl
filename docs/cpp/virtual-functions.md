@@ -16,20 +16,21 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3d1fc04a09e48ac50f6f27d4ffd3e01dbd3dac8a
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 54444200b9a38c427a8192d1c16e6835712ff1f6
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39467522"
 ---
 # <a name="virtual-functions"></a>Funkcje wirtualne
 Funkcja wirtualna jest funkcją składową, która powinna zostać ponownie zdefiniowana w klasach pochodnych. Przy odwoływaniu się do obiektu klasy pochodnej za pomocą wskaźnika lub odwołania do klasy bazowej, można wywołać funkcję wirtualną dla tego obiektu i wykonać wersję klasy pochodnej tej funkcji.  
   
  Funkcje wirtualne zapewniają wywołanie poprawnej funkcji dla obiektu, bez względu na wyrażenie użyte do wywołania funkcji.  
   
- Załóżmy, że klasa podstawowa zawiera funkcję zadeklarowany jako [wirtualnego](../cpp/virtual-cpp.md) i Klasa pochodna definiuje tej samej funkcji. Funkcja z klasy pochodnej jest wywoływana dla obiektów klasy pochodnej, nawet jeśli jest wywoływana przy użyciu wskaźnika lub odwołania do klasy bazowej. W poniższym przykładzie przedstawiono klasę bazową, która dostarcza implementację funkcji `PrintBalance` i dwie klasy pochodne  
+ Załóżmy, że klasa bazowa zawiera funkcję zadeklarowaną jako [wirtualnego](../cpp/virtual-cpp.md) i Klasa pochodna definiuje tę samą funkcję. Funkcja z klasy pochodnej jest wywoływana dla obiektów klasy pochodnej, nawet jeśli jest wywoływana przy użyciu wskaźnika lub odwołania do klasy bazowej. W poniższym przykładzie przedstawiono klasę bazową, która dostarcza implementację funkcji `PrintBalance` i dwie klasy pochodne  
   
-```  
+```cpp 
 // deriv_VirtualFunctions.cpp  
 // compile with: /EHsc  
 #include <iostream>  
@@ -85,7 +86,7 @@ int main() {
   
  W poniższym przykładzie pokazano sposób, w jaki wirtualne i niewirtualne funkcje zachowują się po wywołaniu przez wskaźniki:  
   
-```  
+```cpp 
 // deriv_VirtualFunctions2.cpp  
 // compile with: /EHsc  
 #include <iostream>  
@@ -140,7 +141,7 @@ int main() {
   
 ### <a name="output"></a>Dane wyjściowe  
   
-```  
+```Output  
 Derived::NameOf  
 Invoked by Base  
 Derived::NameOf  
@@ -149,15 +150,15 @@ Invoked by Derived
   
  Należy zauważyć, że bez względu na to, czy funkcja `NameOf` jest wywoływana za pomocą wskaźnika do `Base`, czy wskaźnika do `Derived`, wywołuje funkcję dla `Derived`. Wywołuje funkcję dla `Derived`, ponieważ `NameOf` jest funkcją wirtualną i zarówno `pBase`, jak i `pDerived` wskazują obiekt typu `Derived`.  
   
- Ponieważ funkcje wirtualne są wywoływane tylko dla obiektów typu klasy, nie można zadeklarować funkcji globalnych lub statycznych jako **wirtualnego**.  
+ Ponieważ wirtualne funkcje są wywoływane tylko dla obiektów typu klasy, nie można zadeklarować globalnych lub statycznych funkcji jako **wirtualnego**.  
   
- **Wirtualnego** — słowo kluczowe można użyć w przypadku deklarowanie zastępowanie działa w klasie pochodnej, ale nie jest konieczne; przesłonięcia funkcji wirtualnych są zawsze wirtualnego.  
+ **Wirtualnego** — słowo kluczowe można używać podczas deklarowania zastępowanych funkcji w klasie pochodnej, ale nie jest konieczne; zastąpienia funkcji wirtualnych są zawsze wirtualne.  
   
- Funkcje wirtualne w klasie podstawowej musi być zdefiniowana, chyba że są one uznane za pomocą *czysty specyfikator*. (Aby uzyskać więcej informacji na temat czystych funkcji wirtualnych, zobacz [klas abstrakcyjnych](../cpp/abstract-classes-cpp.md).)  
+ Muszą być zdefiniowane funkcje wirtualne w klasie bazowej, chyba że są deklarowane za pomocą *czysty specyfikator*. (Aby uzyskać więcej informacji dotyczących czystych funkcji wirtualnych, zobacz [klasy abstrakcyjne](../cpp/abstract-classes-cpp.md).)  
   
  Mechanizm wywołania funkcji wirtualnych można pominąć przez jawną kwalifikację nazwy funkcji za pomocą operatora rozpoznawania zakresu (`::`). Rozważmy wcześniejszy przykład obejmujący klasę `Account`. Aby wywołać `PrintBalance` w klasie bazowej, należy użyć następującego kodu:  
   
-```  
+```cpp 
 CheckingAccount *pChecking = new CheckingAccount( 100.00 );  
   
 pChecking->Account::PrintBalance();  //  Explicit qualification.  
@@ -168,4 +169,3 @@ pAccount->Account::PrintBalance();   //  Explicit qualification.
 ```  
   
  Oba wywołania `PrintBalance` w poprzednim przykładzie pomijają mechanizm wywołania funkcji wirtualnej.  
-  

@@ -19,33 +19,32 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 42c275d085434cc8077a0629429c7c0e1cbbfcc3
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: 567a3387e79244443b784549d6223a14f78103ce
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37947935"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39464687"
 ---
 # <a name="varianttattach"></a>_variant_t::Attach
 **Microsoft Specific**  
   
- Dołącza `VARIANT` do obiektu `_variant_t` obiektu.  
+ Dołącza `VARIANT` do obiektu **_variant_t** obiektu.  
   
 ## <a name="syntax"></a>Składnia  
   
 ```  
-  
 void Attach(VARIANT& varSrc);  
 ```  
   
 #### <a name="parameters"></a>Parametry  
  *varSrc*  
- A `VARIANT` obiekt dołączony do tego `_variant_t` obiektu.  
+ A `VARIANT` obiekt dołączony do tego **_variant_t** obiektu.  
   
 ## <a name="remarks"></a>Uwagi  
- Przejmuje na własność `VARIANT` poprzez hermetyzację go. Ta funkcja elementu członkowskiego zwalnia wszystkie istniejące hermetyzowane `VARIANT`, następnie kopiuje podane `VARIANT`i ustawia jego `VARTYPE` do VT_EMPTY, aby upewnić się, że można zwolnić tylko jej zasoby, `_variant_t` destruktora.  
+ Przejmuje na własność `VARIANT` poprzez hermetyzację go. Ta funkcja elementu członkowskiego zwalnia wszystkie istniejące hermetyzowane `VARIANT`, następnie kopiuje podane `VARIANT`i ustawia jego `VARTYPE` do VT_EMPTY, aby upewnić się, że można zwolnić tylko jej zasoby, **_variant_t** destruktor.  
   
  **END specyficzny dla Microsoft**  
   
-## <a name="see-also"></a>Zobacz też  
+## <a name="see-also"></a>Zobacz także  
  [_variant_t, klasa](../cpp/variant-t-class.md)

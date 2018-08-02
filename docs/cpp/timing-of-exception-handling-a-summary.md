@@ -21,12 +21,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ff2ac5abb13ae700e464635efc90a91c4a5835ab
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: 8f45b6ee85924106e949a7487f133b8e3fbe0b9e
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37939419"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39465012"
 ---
 # <a name="timing-of-exception-handling-a-summary"></a>Chronometraż dla obsługi wyjątków: podsumowanie
 Program obsługi przerwania jest wykonywany niezależnie od tego, jak **__try** został przerwany blok instrukcji. Przyczyny obejmują skok na zewnątrz **__try** bloku `longjmp` instrukcję, która przenosi sterowanie na zewnątrz bloku i odwinięcie stosu wskutek obsługi wyjątku.  
@@ -56,6 +56,6 @@ Program obsługi przerwania jest wykonywany niezależnie od tego, jak **__try** 
   
     -   Sterowanie jest przekazywane do wiersza kodu następującego po programie obsługi wyjątków.  
   
-## <a name="see-also"></a>Zobacz też  
+## <a name="see-also"></a>Zobacz także  
  [Pisanie programu obsługi zakończenia](../cpp/writing-a-termination-handler.md)   
  [Obsługa wyjątków strukturalnych (C/C++)](../cpp/structured-exception-handling-c-cpp.md)

@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d150d2419885c2f0273e376fd58750417ced6756
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: f63b2d129e0eb6e9986942e4286eb1728d4be797
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37947850"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39462222"
 ---
 # <a name="this-pointer"></a>this — wskaźnik
 **To** wskaźnik jest dostępny tylko w niestatycznej składowej funkcje wskaźnik **klasy**, **struktury**, lub **Unii** typu. Wskazuje na obiekt, dla którego funkcja członkowska jest wywoływana. Statyczne funkcje Członkowskie nie mają **to** wskaźnika.  
@@ -31,7 +31,6 @@ ms.locfileid: "37947850"
 ## <a name="syntax"></a>Składnia  
   
 ```  
-  
 this   
 this->member-identifier  
 ```  
@@ -199,6 +198,5 @@ int main()
 > [!NOTE]
 >  Konstruktory i destruktory nie można zadeklarować jako **const** lub **volatile**. Jednak mogą być wywoływane na **const** lub **volatile** obiektów.  
   
-## <a name="see-also"></a>Zobacz też  
+## <a name="see-also"></a>Zobacz także  
  [Słowa kluczowe](../cpp/keywords-cpp.md)   
- 

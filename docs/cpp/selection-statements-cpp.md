@@ -15,19 +15,19 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6f72e3c8145b2909495e53645af8ba500a102ebc
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 10e1d9d6a86b4379575c100316ef8e9832bad6d8
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32421276"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39464431"
 ---
 # <a name="selection-statements-c"></a>Instrukcje wyboru (C++)
-Instrukcje wyboru języka C++, [Jeśli](../cpp/if-else-statement-cpp.md) i [przełącznika](../cpp/switch-statement-cpp.md), umożliwiają wykonanie warunkowo fragmentów kodu.  
+Instrukcje wyboru języka C++, [Jeśli](../cpp/if-else-statement-cpp.md) i [Przełącz](../cpp/switch-statement-cpp.md), umożliwiają wykonywanie warunkowe sekcje kodu.  
   
- [__If_exists](../cpp/if-exists-statement.md) i [__if_not_exists](../cpp/if-not-exists-statement.md) instrukcje umożliwiają warunkowo obejmują kodu w zależności od istnienia symbolu.  
+ [__If_exists](../cpp/if-exists-statement.md) i [__if_not_exists](../cpp/if-not-exists-statement.md) instrukcje umożliwiają warunkowo dołączyć kod, w zależności od istnienia symbolu.  
   
- Zobacz Tematy składni dla każdej instrukcji.  
+ Zobacz Tematy dla składni dla każdej instrukcji.  
   
-## <a name="see-also"></a>Zobacz też  
+## <a name="see-also"></a>Zobacz także  
  [Przegląd instrukcji C++](../cpp/overview-of-cpp-statements.md)

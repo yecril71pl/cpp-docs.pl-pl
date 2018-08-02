@@ -17,36 +17,35 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 68707ea7e00665d12165c7838b1a2ad3440f944d
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 8fb431c6aad10f7e974ed139ddf83cfb0a58d30a
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33860869"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39465873"
 ---
 # <a name="callas"></a>call_as
-Umożliwia [lokalnego](../windows/local-cpp.md) funkcji można mapować na funkcję zdalną, tak aby po wywołaniu funkcji zdalnego jest wywoływana funkcja lokalna.  
+Włącza [lokalnego](../windows/local-cpp.md) funkcji, które mają być mapowane na funkcję zdalną, więc, że po wywołaniu funkcji zdalnego jest wywoływana funkcja lokalna.  
   
 ## <a name="syntax"></a>Składnia  
   
 ```  
-  
-      [ call_as(  
+[ call_as(  
    function  
 ) ]  
 ```  
   
 #### <a name="parameters"></a>Parametry  
- *Funkcja*  
- Funkcja lokalna, która ma być wywoływana po wywołaniu funkcji zdalnego.  
+ *— Funkcja*  
+ Funkcja lokalna, który ma być wywoływana, gdy zostanie wywołana funkcja zdalnego.  
   
 ## <a name="remarks"></a>Uwagi  
- **Call_as** atrybut C++ ma te same funkcje co [call_as](http://msdn.microsoft.com/library/windows/desktop/aa366748) MIDL atrybutu.  
+ **Call_as** atrybut C++ ma taką samą funkcjonalność jak [call_as](http://msdn.microsoft.com/library/windows/desktop/aa366748) atrybutów w MIDL.  
   
 ## <a name="example"></a>Przykład  
- Poniższy kod przedstawia sposób korzystania **call_as** na mapowanie funkcji nonremotable (**f1**) do funkcji może być zastosowana zdalnie (**Remf1**):  
+ Poniższy kod pokazuje, jak można użyć **call_as** na mapowanie funkcji nonremotable (**f1**) do funkcji może być zastosowana zdalnie (**Remf1**):  
   
-```  
+```cpp  
 // cpp_attr_ref_call_as.cpp  
 // compile with: /LD  
 #include "unknwn.h"  
@@ -60,7 +59,7 @@ __interface IMInterface {
   
 ## <a name="requirements"></a>Wymagania  
   
-### <a name="attribute-context"></a>Atrybut kontekstu  
+### <a name="attribute-context"></a>Kontekst atrybutu  
   
 |||  
 |-|-|  
@@ -69,9 +68,9 @@ __interface IMInterface {
 |**Wymaganych atrybutów**|Brak|  
 |**Nieprawidłowe atrybuty**|Brak|  
   
- Aby uzyskać więcej informacji na temat konteksty atrybutu, zobacz [konteksty atrybutu](../windows/attribute-contexts.md).  
+ Aby uzyskać więcej informacji na temat konteksty atrybutu zobacz [konteksty atrybutu](../windows/attribute-contexts.md).  
   
 ## <a name="see-also"></a>Zobacz też  
  [Atrybuty IDL](../windows/idl-attributes.md)   
- [Atrybuty — metoda](../windows/method-attributes.md)   
+ [Atrybuty metody](../windows/method-attributes.md)   
  [lokalne](../windows/local-cpp.md)   

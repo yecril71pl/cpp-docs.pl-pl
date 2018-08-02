@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 674be7ebd819b48cfdf22376565f2bea90787330
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: 48c9962c7a0798b9c3fd4d5d9e1af223d41ac552
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37939212"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39460882"
 ---
 # <a name="unions"></a>Unie
 A **Unii** jest typ zdefiniowany przez użytkownika, w którym wszystkie elementy członkowskie udostępnianie tej samej lokalizacji pamięci. Oznacza to, że w danym momencie Unia może zawierać nie więcej niż jeden obiekt z listy jej składowych. Oznacza to również, że niezależnie od tego, jak wiele elementów członkowskich Unii ma, zawsze używa tylko wystarczającej ilości pamięci do przechowywania zajmuje największy element członkowski.  
@@ -35,7 +35,7 @@ A **Unii** jest typ zdefiniowany przez użytkownika, w którym wszystkie element
 union [name]  { member-list };  
 ```  
   
-#### <a name="parameters"></a>Parametry  
+### <a name="parameters"></a>Parametry  
  *Nazwa*  
  Nazwa typu nadana unii.  
   
@@ -149,7 +149,6 @@ void Initialize()
     second.wind = { 204,1418859354, 14, 27 };  
     inputs.push(second);  
 }  
-  
 ```  
   
  W poprzednim przykładzie należy pamiętać, że Unii w strukturze danych wejściowych nie ma nazwy. Jest to anonimowej Unii i składowych jest możliwy, tak jakby były one bezpośredni członkowie struktury. Aby uzyskać więcej informacji na temat związki anonimowe zobacz sekcję poniżej.  
@@ -603,7 +602,6 @@ private:
         WindData wind;  
     };  
 };  
-  
 ```  
   
  Unie nie można zapisać odwołania. Unie nie obsługują dziedziczenia, w związku z tym samego Unii nie można użyć jako klasę bazową dziedziczył z innej klasy lub mieć funkcji wirtualnych.  
@@ -633,7 +631,6 @@ int main()
  10  
  3.141600  
 */  
-  
 ```  
   
  Unia `NumericType` jest umieszczona w pamięci (koncepcyjnie), jak pokazano na poniższym rysunku.  
@@ -654,11 +651,11 @@ Oprócz ograniczeń Unii o nazwie związki anonimowe podlegają następującymi 
   
 -   Musi być także zadeklarowana jako **statyczne** zadeklarowana w zakresie pliku lub przestrzeni nazw.  
   
--   Mogą mieć tylko publiczne składowe prywatnych i chronionych elementów członkowskich w związki anonimowe generować błędy.  
+-   Może mieć tylko **publicznych** członków; **prywatnej** i **chronione** elementów członkowskich w związki anonimowe generować błędy.  
   
 -   Nie mają elementów członkowskich.  
   
-## <a name="see-also"></a>Zobacz też  
+## <a name="see-also"></a>Zobacz także  
  [Klasy i struktury](../cpp/classes-and-structs-cpp.md)   
  [Keywords](../cpp/keywords-cpp.md)   
  [Klasa](../cpp/class-cpp.md)   

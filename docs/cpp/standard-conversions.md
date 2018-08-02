@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e08daba1e80523e7992f52ec353826bb53417682
-ms.sourcegitcommit: 76fd30ff3e0352e2206460503b61f45897e60e4f
+ms.openlocfilehash: 1365e950077a65150d8f71fd640f69d1750068c9
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/13/2018
-ms.locfileid: "39028362"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39462313"
 ---
 # <a name="standard-conversions"></a>Konwersje standardowe
 Język C++ definiuje konwersje między typami podstawowymi. Definiuje również konwersji do wskaźnik, odniesieni i typy pochodne wskaźników do elementów członkowskich. Konwersje te są nazywane "konwersje standardowe". (Aby uzyskać więcej informacji na temat typów, standardowych typów i typów pochodnych, zobacz [typy](http://msdn.microsoft.com/6882ee83-ea32-4373-8d57-c3efbbc15af0).)  
@@ -95,7 +95,6 @@ long_num2 = int_num * long_num2;
  Obiekty z podpisanych typów całkowitych można przekonwertować odpowiednie typy bez znaku. W przypadku wystąpienia takiej konwersji nie zmienia się wzorca bitowego rzeczywiste; jednak zmienia interpretację danych. Rozważmy ten kod:  
   
 ```cpp 
-  
 #include <iostream>  
   
 using namespace std;  
@@ -107,7 +106,6 @@ int main()
     cout << (u = i) << "\n";  
 }  
 // Output: 65533  
-  
 ```  
   
  W powyższym przykładzie **short ze znakiem**, `i`, został zdefiniowany i jest ustawiana na wartość ujemną. Wyrażenie `(u = i)` powoduje, że `i` są konwertowane na **typ unsigned short** przed przypisanie do `u`.  
@@ -163,7 +161,6 @@ cout << (float)1E300 << endl;
  Następujący kod ilustruje reguły konwersji opisane w tabeli:  
   
 ```cpp 
-  
 double dVal;  
 float fVal;  
 int iVal;  
@@ -249,12 +246,12 @@ int main()
  Wskaźnik `pA` typu `A *`, który może być interpretowany jako znaczenie "wskaźnik do obiektu typu `A`." Elementy członkowskie `bObject` `(`takich jak `BComponent` i `BMemberFunc`) są unikatowe dla typu `B` i dlatego są niedostępne za pośrednictwem `pA`. `pA` Wskaźnik zezwala na dostęp tylko do tych właściwości (funkcje składowe i dane) obiektu, które są zdefiniowane w klasie `A`.  
   
 ### <a name="pointer-to-function"></a>Wskaźnik do funkcji  
- Wskaźnik do funkcji może być konwertowany na typ **void \*** , jeśli typ **void \***  jest wystarczająco duży, aby pomieścić ten wskaźnik.  
+ Wskaźnik do funkcji może być konwertowany na typ `void *`, jeśli typ `void *` jest wystarczająco duży, aby pomieścić ten wskaźnik.  
   
 ### <a name="pointer-to-void"></a>Wskaźnik do typu void  
  Wskaźniki do typu **void** mogą być konwertowane do wskaźników do jakichkolwiek innych typów, ale tylko w przypadku typu jawnego rzutowania (w przeciwieństwie do w języku C). (Zobacz [wyrażenia z jawne konwersje typów](http://msdn.microsoft.com/060ad6b4-9592-4f3e-8509-a20ac84a85ae) Aby uzyskać więcej informacji na temat typu rzutowania.) Wskaźnik do dowolnego typu można niejawnie przekonwertować na wskaźnik do typu **void**. Wskaźnik do obiektu niekompletnego typu można przekonwertować na wskaźnik do **void** (niejawnie) i wykonać ich kopię (jawne). Wynik konwersji elementu jest równa wartości oryginalny wskaźnik. Obiekt jest traktowany jako niekompletne, jeśli jest on zadeklarowany, ale ma za mało informacji do określenia jego rozmiar lub klasa bazowa.  
   
- Wskaźnik do dowolnego obiektu, który nie jest **const** lub **volatile** można niejawnie przekonwertować na wskaźnik typu **void \*** .  
+ Wskaźnik do dowolnego obiektu, który nie jest **const** lub **volatile** można niejawnie przekonwertować na wskaźnik typu `void *`.  
   
 ### <a name="const-and-volatile-pointers"></a>wskaźniki stałe i nietrwałe  
  C++ nie dostarcza konwersja standardowa ze **const** lub **volatile** typu do typu, który nie jest **const** lub **volatile**. Jednak dowolny rodzaj konwersji można określić za pomocą typu jawnego rzutowania (w tym konwersje niebezpieczne).  
@@ -325,5 +322,5 @@ int main()
 }  
 ```  
   
-## <a name="see-also"></a>Zobacz też  
+## <a name="see-also"></a>Zobacz także  
  [Dokumentacja języka C++](../cpp/cpp-language-reference.md)

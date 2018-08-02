@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 5534173d594b8fc09ceca8ec44a1c1223bc550b2
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 8b10d130190308520771e37e97d34238f75670ad
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33870554"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39466686"
 ---
 # <a name="criticalsectiontraits-structure"></a>CriticalSectionTraits — Struktura
-Specjalizuje się obiekt criticalsection — Obsługa Nieprawidłowa sekcja krytyczna lub funkcję, aby zwolnić sekcja krytyczna.  
+Specjalizuje się obiekt criticalsection — na potrzeby obsługi nieprawidłową sekcję krytyczną lub funkcję, aby zwolnić sekcję krytyczną.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -35,18 +35,18 @@ struct CriticalSectionTraits;
   
 ## <a name="members"></a>Elementy członkowskie  
   
-### <a name="public-typedefs"></a>Definicje typów publicznych  
+### <a name="public-typedefs"></a>Publiczne definicje typów  
   
 |Nazwa|Opis|  
 |----------|-----------------|  
-|`Type`|A `typedef` definiuje wskaźnik do sekcja krytyczna. `Type` nie zdefiniowano jako `typedef CRITICAL_SECTION* Type;`.|  
+|`Type`|A **typedef** definiujący wskaźnikiem na sekcję krytyczną. `Type` jest zdefiniowany jako `typedef CRITICAL_SECTION* Type;`.|  
   
 ### <a name="public-methods"></a>Metody publiczne  
   
 |Nazwa|Opis|  
 |----------|-----------------|  
-|[CriticalSectionTraits::GetInvalidValue, metoda](../windows/criticalsectiontraits-getinvalidvalue-method.md)|Specjalizuje się szablon criticalsection — tak, aby szablon zawsze jest nieprawidłowy.|  
-|[CriticalSectionTraits::Unlock, metoda](../windows/criticalsectiontraits-unlock-method.md)|Specjalizuje się szablon criticalsection —, dzięki czemu obsługuje zwolnić prawo własności obiektu określona sekcja krytyczna.|  
+|[CriticalSectionTraits::GetInvalidValue, metoda](../windows/criticalsectiontraits-getinvalidvalue-method.md)|Specjalizuje się `CriticalSection` szablonu, aby szablon zawsze jest nieprawidłowy.|  
+|[CriticalSectionTraits::Unlock, metoda](../windows/criticalsectiontraits-unlock-method.md)|Specjalizuje się `CriticalSection` szablonu, tak że obsługuje uwalniający własności obiektu określona sekcja krytycznego.|  
   
 ## <a name="inheritance-hierarchy"></a>Hierarchia dziedziczenia  
  `CriticalSectionTraits`  

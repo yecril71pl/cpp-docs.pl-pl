@@ -1,5 +1,5 @@
 ---
-title: Comptrref::comptrref — Konstruktor | Dokumentacja firmy Microsoft
+title: ComPtrRef::ComPtrRef, Konstruktor | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: d738d6d00a3ca4c344bcea37b09db7e9c494b50b
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 24844588a18f269ee6f3a19286e6755b11b1c6bf
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33870662"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39463635"
 ---
 # <a name="comptrrefcomptrref-constructor"></a>ComPtrRef::ComPtrRef — Konstruktor
 Obsługuje infrastrukturę biblioteki WRL i nie jest przeznaczona do użycia bezpośrednio w kodzie.  
@@ -36,16 +36,16 @@ ComPtrRef(
 ```  
   
 #### <a name="parameters"></a>Parametry  
- `ptr`  
- Odpowiednia wartość innego obiektu comptrref —.  
+ *ptr*  
+ Podstawową wartość innego **comptrref —** obiektu.  
   
 ## <a name="remarks"></a>Uwagi  
- Inicjuje nowe wystąpienie klasy comptrref — od określonego wskaźnika do innego obiektu comptrref —.  
+ Inicjuje nowe wystąpienie klasy **comptrref —** klasy z określonym wskaźnika **comptrref —** obiektu.  
   
 ## <a name="requirements"></a>Wymagania  
  **Nagłówek:** client.h  
   
- **Namespace:** Microsoft::wrl:: details —  
+ **Namespace:** Microsoft::wrl:: details  
   
 ## <a name="see-also"></a>Zobacz też  
  [Comptrref — klasa](../windows/comptrref-class.md)   
