@@ -1,5 +1,5 @@
 ---
-title: coclass | Dokumentacja firmy Microsoft
+title: Klasa coclass | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 5eb9c7e632151c039b76a0f389cd18c68c0740ab
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 99a8924776249a3a919a03ca76b4562c39994d4f
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33867015"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39463120"
 ---
 # <a name="coclass"></a>coclass
 Tworzy obiekt COM, które można zaimplementować interfejsu COM.  
@@ -30,62 +30,60 @@ Tworzy obiekt COM, które można zaimplementować interfejsu COM.
 ## <a name="syntax"></a>Składnia  
   
 ```  
-  
 [coclass]  
-  
 ```  
   
 ## <a name="remarks"></a>Uwagi  
- **Coclass** atrybutu C++ umieszcza konstrukcję klasy coclass w pliku .idl wygenerowany.  
+ **Coclass** atrybut C++ umieszcza konstrukcję klasy coclass w pliku .idl wygenerowany.  
   
- Podczas definiowania klasy coclass, można również określić [uuid](../windows/uuid-cpp-attributes.md), [wersji](../windows/version-cpp.md), [wątkowość](../windows/threading-cpp.md), [vi_progid —](../windows/vi-progid.md), i [progid ](../windows/progid.md) atrybutów. Jednym z nich nie jest określona, zostanie wygenerowany.  
+ Podczas definiowania klasy coclass, można również określić [uuid](../windows/uuid-cpp-attributes.md), [wersji](../windows/version-cpp.md), [wątkowości](../windows/threading-cpp.md), [vi_progid —](../windows/vi-progid.md), i [progid ](../windows/progid.md) atrybutów. Jednym z nich nie jest określona, zostanie wygenerowany.  
   
- Jeśli dwa pliki nagłówkowe zawierają klasy z **coclass** atrybutu i nie podaje identyfikator GUID, kompilator użyje tego samego identyfikatora GUID w obu klasach i który spowoduje błąd MIDL.  W związku z tym należy używać `uuid` atrybutu, gdy używasz **coclass**.  
+ Jeśli dwa pliki nagłówkowe zawierają klasach z atrybutem **coclass** atrybutu i określać identyfikator GUID, kompilator będzie używał tego samego identyfikatora GUID dla obu klas i który spowoduje błąd MIDL.  Dlatego należy używać `uuid` atrybutu, gdy używasz **coclass**.  
   
  **Projekty ATL**  
   
- Jeśli ten atrybut poprzedza definicji klasy lub struktury w projekcie ATL go:  
+ Gdy ten atrybut poprzedza definicji klasy lub struktury w projekcie ATL go:  
   
--   Injects kod lub dane do obsługi rejestracji automatycznej dla tego obiektu.  
+-   Wprowadza kodu lub danych w celu obsługi rejestracji automatycznej dla tego obiektu.  
   
--   Injects kod lub dane do obsługi fabryki klasy COM dla obiekt.  
+-   Wprowadza kodu lub danych w celu obsługi COM fabryki klas dla obiektu.  
   
--   Injects kod lub dane do zaimplementowania **IUnknown** i powoduje, że obiekt COM możliwość utworzenia obiektu.  
+-   Wprowadza kod lub dane, aby zaimplementować `IUnknown` i obiekt COM możliwość utworzenia obiektu.  
   
- W szczególności następujące klasy podstawowej są dodawane do obiektu docelowego:  
+ W szczególności następujące klasy bazowe są dodawane do obiektu docelowego:  
   
--   [Klasa klasy CComCoClass](../atl/reference/ccomcoclass-class.md) zawiera klasy domyślny model fabryki i agregację dla obiekt.  
+-   [Klasa CComCoClass](../atl/reference/ccomcoclass-class.md) udostępnia klasy domyślny model fabryki i agregację dla obiektu.  
   
--   [Klasa CComObjectRootEx](../atl/reference/ccomobjectrootex-class.md) ma szablon oparty na klasie model wątkowości, określony przez [wątkowość](../windows/threading-cpp.md) atrybutu. Jeśli **wątkowość** atrybut nie jest określony, domyślny model wątkowości typu apartment.  
+-   [Klasa CComObjectRootEx](../atl/reference/ccomobjectrootex-class.md) znajduje się szablon, na podstawie klasy modelu wątkowości, określony przez [wątkowości](../windows/threading-cpp.md) atrybutu. Jeśli `threading` atrybut nie jest określony, domyślny model wątkowości typu apartment.  
   
 -   [IProvideClassInfo2Impl](../atl/reference/iprovideclassinfo2impl-class.md) jest dodana gdy [noncreatable —](../windows/noncreatable.md) atrybut nie jest określony dla obiektu docelowego.  
   
- Na koniec żadnych podwójną interfejs, który nie jest zdefiniowany przy użyciu osadzonych IDL jest zastępowany odpowiadającego [elementem IDispatchImpl](../atl/reference/idispatchimpl-class.md) klasy. Jeśli dwie interfejsu jest zdefiniowany w osadzonych IDL, konkretnego interfejsu na liście podstawowej nie jest modyfikowany.  
+ Na koniec podwójnego interfejsu, który nie został zdefiniowany przy użyciu osadzonych IDL zostaje zastąpiona opcją odpowiednich [IDispatchImpl](../atl/reference/idispatchimpl-class.md) klasy. Jeśli podwójnego interfejsu jest zdefiniowany w osadzonych IDL, konkretnego interfejsu na liście bazowych nie jest modyfikowany.  
   
- **Coclass** atrybutu także udostępnia następujące funkcje za pomocą wprowadzonego kodu lub w przypadku `GetObjectCLSID`, jako statycznej metody w klasie podstawowej `CComCoClass`:  
+ **Coclass** atrybutu sprawia, że następujące funkcje dostępne za pośrednictwem wprowadzonego kodu lub w przypadku `GetObjectCLSID`, jako metody statycznej w klasie bazowej `CComCoClass`:  
   
 -   `UpdateRegistry` rejestruje fabryki klas klasy docelowej.  
   
 -   `GetObjectCLSID`, która jest powiązana z rejestracją, można również uzyskać identyfikator CLSID klasy docelowej.  
   
--   **GetObjectFriendlyName** domyślnie zwraca ciąg w formacie "\<*nazwę klasy docelowej*> `Object`". Jeśli ta funkcja jest już obecne, nie został dodany. Dodaj tę funkcję do klasy docelowej, aby zwrócić nazwę bardziej przyjazny niż generowane automatycznie.  
+-   `GetObjectFriendlyName` Domyślnie zwraca ciąg formatu "\<*Nazwa klasy docelowej*> `Object`". Jeśli ta funkcja jest już istnieje, nie został dodany. Dodaj tę funkcję do klasy docelowej, aby powrócić do bardziej przyjaznej nazwy, niż generowane automatycznie.  
   
--   **GetProgID**, która jest powiązana z rejestracji, zwraca ciąg określonego z [progid](../windows/progid.md) atrybutu.  
+-   `GetProgID`, która jest powiązana z rejestracją, zwraca ciąg określony za pomocą [progid](../windows/progid.md) atrybutu.  
   
--   **GetVersionIndependentProgID** ma te same funkcje co **GetProgID**, ale zwraca ciąg określony za pomocą [vi_progid —](../windows/vi-progid.md).  
+-   `GetVersionIndependentProgID` ma taką samą funkcjonalność jak `GetProgID`, ale zwraca ciąg określony za pomocą [vi_progid —](../windows/vi-progid.md).  
   
- Zostały wprowadzone następujące zmiany, które są powiązane z mapą COM, Klasa docelowa:  
+ Następujące zmiany, które są związane z mapy interfejsu COM, zostały wprowadzone do klasy docelowej:  
   
--   Dodaje się wpisy dla wszystkich interfejsów pochodną klasy docelowej i wszystkie wpisy określone przez mapy COM [punkty wejścia interfejsu COM](../mfc/com-interface-entry-points.md) atrybutu lub wymagane przez [agreguje](../windows/aggregates.md) atrybutu.  
+-   Mapy COM jest dodawana z wpisy dla wszystkich interfejsów pochodną klasy docelowej i wszystkie wpisy określone przez [punkty wejścia interfejsu COM](../mfc/com-interface-entry-points.md) atrybutu lub wymagane przez [agregacje](../windows/aggregates.md) atrybutu.  
   
 -   [OBJECT_ENTRY_AUTO](../atl/reference/object-map-macros.md#object_entry_auto) makra są wstawiane do mapy COM.
   
- Nazwa klasy coclass w pliku .idl dla klasy generowane będzie mieć taką samą nazwę jak klasa.  Na przykład i odwołujące się do poniższego przykładu Aby uzyskać dostęp do Identyfikatora klasy dla klasy coclass CMyClass, w kliencie za pośrednictwem pliku nagłówka wygenerowane MIDL, należy użyć CLSID_CMyClass.  
+ Nazwa klasy coclass wygenerowane w pliku .idl dla klasy będzie mieć taką samą nazwę jak klasa.  Na przykład i odwołujące się do poniższego przykładu Aby uzyskać dostęp identyfikator klasy dla klasy coclass CMyClass, na kliencie przy użyciu pliku nagłówka wygenerowane w MIDL, użyj CLSID_CMyClass.  
   
 ## <a name="example"></a>Przykład  
  Poniższy kod przedstawia sposób użycia **coclass** atrybutu:  
   
-```  
+```cpp  
 // cpp_attr_ref_coclass1.cpp  
 // compile with: /LD  
 #include "unknwn.h"  
@@ -101,9 +99,9 @@ appobject, uuid("9E66A294-4365-11D2-A997-00C04FA37DDB")]
 class CMyClass : public I {};  
 ```  
   
- Poniższy przykład przedstawia sposób przesłonięcia domyślną implementację funkcji, która jest wyświetlana w kodzie wstrzyknięte przez **coclass** atrybutu. Zobacz [/Fx](../build/reference/fx-merge-injected-code.md) Aby uzyskać więcej informacji o wyświetlaniu wprowadzony kod. Wszystkie klasy podstawowe lub interfejsów, które używają dla klasy pojawi się wprowadzony kod.   Co więcej Jeśli klasa jest domyślnie włączone w wprowadzony kod, zostaną jawnie określone tej klasy jako podstawa dla Twojego — klasa coclass dostawcy atrybutu będzie formularz określona w kodzie.  
+ Poniższy przykład przedstawia sposób przesłonięcia Domyślna implementacja funkcji, która pojawia się w kodzie wstrzyknięte przez **coclass** atrybutu. Zobacz [/Fx](../build/reference/fx-merge-injected-code.md) Aby uzyskać więcej informacji o wyświetlaniu wprowadzonego kodu. Wszystkie klasy podstawowe lub interfejsów, których używasz dla klasy będą wyświetlane w wprowadzonego kodu.   Dodatkowo Jeśli klasa jest domyślnie włączone w wprowadzonego kodu, możesz jawnie określić tę klasę jako podstawa dla swojej klasy coclass dostawca atrybucie użyje formularza, określonych w kodzie.  
   
-```  
+```cpp  
 // cpp_attr_ref_coclass2.cpp  
 // compile with: /LD  
 #include <atlbase.h>  
@@ -139,20 +137,20 @@ public:
   
 ## <a name="requirements"></a>Wymagania  
   
-### <a name="attribute-context"></a>Atrybut kontekstu  
+### <a name="attribute-context"></a>Kontekst atrybutu  
   
 |||  
 |-|-|  
-|**Dotyczy**|**Klasa**, `struct`|  
+|**Dotyczy**|**Klasa**, **— struktura**|  
 |**Powtarzalne**|Nie|  
 |**Wymaganych atrybutów**|Brak|  
 |**Nieprawidłowe atrybuty**|Brak|  
   
- Aby uzyskać więcej informacji na temat konteksty atrybutu, zobacz [konteksty atrybutu](../windows/attribute-contexts.md).  
+ Aby uzyskać więcej informacji na temat konteksty atrybutu zobacz [konteksty atrybutu](../windows/attribute-contexts.md).  
   
 ## <a name="see-also"></a>Zobacz też  
  [Atrybuty IDL](../windows/idl-attributes.md)   
  [Atrybuty COM](../windows/com-attributes.md)   
  [Atrybuty klasy](../windows/class-attributes.md)   
- [Element TypeDef, Enum, Unii i struct — atrybuty](../windows/typedef-enum-union-and-struct-attributes.md)   
+ [Element TypeDef, Enum, Union i struct — atrybuty](../windows/typedef-enum-union-and-struct-attributes.md)   
  [appobject](../windows/appobject.md)

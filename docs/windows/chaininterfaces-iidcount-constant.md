@@ -1,5 +1,5 @@
 ---
-title: Chaininterfaces::iidcount — stała | Dokumentacja firmy Microsoft
+title: ChainInterfaces::IidCount, stała | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: d5327b706fb6b461d7bbe449df5482c8f0c485ae
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 6d089e9639d83150e501b32577de94fc43b516c1
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33860005"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39463944"
 ---
 # <a name="chaininterfacesiidcount-constant"></a>ChainInterfaces::IidCount — Stała
-Całkowita liczba interfejsu identyfikatorów zawarte w interfejsach określona przez parametry szablonu `I0` za pośrednictwem `I9`.  
+Całkowita liczba interfejsu identyfikatory zawarte w interfejsach, określonego przez parametry szablonu *I0* za pośrednictwem *I9*.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -37,12 +37,12 @@ static const unsigned long IidCount = Details::InterfaceTraits<I0>::IidCount + D
  Całkowita liczba identyfikatorów interfejsu.  
   
 ## <a name="remarks"></a>Uwagi  
- Parametry szablonu `I0` i `I1` są wymagane, parametry i `I2` za pośrednictwem `I9` są opcjonalne. Liczba identyfikatora IID interfejsu każdego zwykle wynosi 1.  
+ Parametry szablonu *I0* i *I1* są wymagane i parametry *I2* za pośrednictwem *I9* są opcjonalne. Liczba IID każdego interfejsu, jest zazwyczaj 1.  
   
 ## <a name="requirements"></a>Wymagania  
  **Nagłówek:** implements.h  
   
- **Namespace:** Microsoft::wrl —  
+ **Namespace:** Microsoft::WRL  
   
 ## <a name="see-also"></a>Zobacz też  
  [ChainInterfaces, struktura](../windows/chaininterfaces-structure.md)

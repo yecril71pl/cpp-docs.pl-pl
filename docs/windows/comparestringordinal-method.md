@@ -1,5 +1,5 @@
 ---
-title: CompareStringOrdinal — metoda | Dokumentacja firmy Microsoft
+title: CompareStringOrdinal, metoda | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,12 +15,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: e3abf87340671d1ac4851b055a57896e340d0c20
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 58e808510868e375672ee5de0b27c4bed3c568e0
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33860814"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39464054"
 ---
 # <a name="comparestringordinal-method"></a>CompareStringOrdinal — Metoda
 Obsługuje infrastrukturę biblioteki WRL i nie jest przeznaczona do użycia bezpośrednio w kodzie.  
@@ -34,22 +34,22 @@ inline INT32 CompareStringOrdinal(
 ```  
   
 #### <a name="parameters"></a>Parametry  
- `lhs`  
- Pierwszy HSTRING do porównania.  
+ *Lewa strona reguły przepisywania*  
+ Pierwszy obiekt HSTRING do porównania.  
   
- `rhs`  
- Drugi HSTRING do porównania.  
+ *RHS*  
+ Drugi obiekt HSTRING do porównania.  
   
 ## <a name="return-value"></a>Wartość zwracana  
   
 |Wartość|Warunek|  
 |-----------|---------------|  
-|-1|`lhs` jest mniejsza niż `rhs`.|  
-|0|`lhs` Equals `rhs`.|  
-|1|`lhs` jest większa niż `rhs`.|  
+|-1|*Lewa strona reguły przepisywania* jest mniejsza niż *rhs*.|  
+|0|*Lewa strona reguły przepisywania* jest równa *rhs*.|  
+|1|*Lewa strona reguły przepisywania* jest większa niż *rhs*.|  
   
 ## <a name="remarks"></a>Uwagi  
- Porównuje dwa obiekty HSTRING określonego i zwraca liczbę całkowitą wskazującą ich względne położenie w kolejności sortowania.  
+ Porównuje dwa obiekty HSTRING określonego i zwraca liczbę całkowitą, która wskazuje ich względne położenie w kolejności sortowania.  
   
 ## <a name="requirements"></a>Wymagania  
  **Nagłówek:** corewrappers.h  

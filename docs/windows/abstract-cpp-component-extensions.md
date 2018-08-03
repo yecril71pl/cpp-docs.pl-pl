@@ -18,46 +18,44 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: dcaef98df96b54025cd44a52a2e27a7bc5a83545
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: ac043a76ab70c77bd8cdb3a2dd0c66498e409171
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33857558"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39463245"
 ---
 # <a name="abstract--c-component-extensions"></a>abstract (C++ Component Extensions)
-`abstract` — Słowo kluczowe deklaruje albo:  
+**Abstrakcyjne** — słowo kluczowe deklaruje albo:  
   
--   Typem może służyć jako typu podstawowego, ale nie można utworzyć wystąpienia samego typu.  
+-   Typ może być używany jako typ podstawowy, ale nie można utworzyć wystąpienia samego typu.  
   
--   Funkcja członkowska typu można zdefiniować tylko w typie pochodnym.  
+-   Funkcja składowa typu można zdefiniować tylko w typie pochodnym.  
   
 ## <a name="all-platforms"></a>Wszystkie platformy  
  **Składnia**  
   
 ```  
-  
       class-declaration  
       class-identifier  
       abstract {}  
 virtualreturn-typemember-function-identifier() abstract ;  
-  
 ```  
   
  **Uwagi**  
   
- Pierwszy przykładowej składni deklaruje klasę, aby być abstrakcyjne. *Deklaracji klasy* składnik może być natywna deklaracja C++ (`class` lub `struct`), lub deklaracji rozszerzenia języka C++ (`ref class` lub `ref struct`) Jeśli **/ZW** lub **/CLR** określono opcję kompilatora.  
+ Pierwszy składni przykład deklaruje klasa może być abstrakcyjna. *Deklaracji klasy* składnik może być natywna deklaracja C++ (**klasy** lub **struktury**), lub deklaracja rozszerzenie języka C++ (**klasy referencyjnej** lub **ref struct**) Jeśli `/ZW` lub `/clr` określono opcję kompilatora.  
   
- Druga Przykładowa składnia deklaruje funkcję wirtualny element członkowski jako abstrakcyjny. Deklarowanie abstrakcyjna funkcja jest taka sama jak deklarowanie go czystej funkcji wirtualnej. Deklarowanie abstrakcyjna funkcja elementu członkowskiego powoduje także, że otaczającej klasy, która ma być zadeklarowany jako abstrakcyjny.  
+ Drugi składni przykład deklaruje wirtualnej funkcji składowej jako abstrakcyjny. Deklarowanie abstrakcyjnej funkcji jest taka sama jak deklarując jej czystej funkcji wirtualnej. Deklarowanie abstrakcyjna funkcja elementu członkowskiego również powoduje, że otaczającej klasy, która ma być zadeklarowany jako abstrakcyjny.  
   
- `abstract` — Słowo kluczowe jest obsługiwana w kodu natywnego i specyficzne dla platformy; oznacza to, może zostać skompilowany bez **/ZW** lub **/CLR** — opcja kompilatora.  
+ **Abstrakcyjne** — słowo kluczowe jest obsługiwane w kodzie macierzystym i specyficzne dla platformy; oznacza to, może być kompilowane z lub bez `/ZW` lub `/clr` — opcja kompilatora.  
   
- Można wykrywać w czasie kompilacji, jeśli typ jest abstrakcyjny z `__is_abstract(type)` typu cechy. Aby uzyskać więcej informacji, zobacz [Obsługa cech typu w kompilatorze](../windows/compiler-support-for-type-traits-cpp-component-extensions.md).  
+ Można wykrywać w czasie kompilacji, jeśli typ jest abstrakcyjny z `__is_abstract(type)` cechy typu. Aby uzyskać więcej informacji, zobacz [Obsługa cech typu w kompilatorze](../windows/compiler-support-for-type-traits-cpp-component-extensions.md).  
   
- `abstract` — Słowo kluczowe jest specyfikator override kontekstowa. Aby uzyskać więcej informacji na temat kontekstowe słowa kluczowe, zobacz [słowa kluczowe Context-Sensitive](../windows/context-sensitive-keywords-cpp-component-extensions.md). Aby uzyskać więcej informacji na temat specyfikatorów zastąpienia, zobacz [porady: deklarowanie specyfikatorów zastąpienia w kompilacjach macierzystych](../dotnet/how-to-declare-override-specifiers-in-native-compilations-cpp-cli.md).  
+ **Abstrakcyjne** — słowo kluczowe jest specyfikator przesłonięcia kontekstowej. Aby uzyskać więcej informacji na temat kontekstowych słów kluczowych, zobacz [Context-Sensitive Keywords](../windows/context-sensitive-keywords-cpp-component-extensions.md). Aby uzyskać więcej informacji na temat nadpisania specyfikatorów, zobacz [porady: deklarowanie specyfikatorów zastąpienia w kompilacjach kodu natywnego](../dotnet/how-to-declare-override-specifiers-in-native-compilations-cpp-cli.md).  
   
 ## <a name="windows-runtime"></a>Środowisko wykonawcze systemu Windows  
- Aby uzyskać więcej informacji, zobacz [Ref klas i struktur](http://msdn.microsoft.com/library/windows/apps/hh699870.aspx).  
+ Aby uzyskać więcej informacji, zobacz [klasy i struktury odwołania](http://msdn.microsoft.com/library/windows/apps/hh699870.aspx).  
   
 ### <a name="requirements"></a>Wymagania  
  — Opcja kompilatora: **/ZW**  
@@ -70,9 +68,9 @@ virtualreturn-typemember-function-identifier() abstract ;
 ### <a name="examples"></a>Przykłady  
  **Przykład**  
   
- Poniższy przykład kodu generuje błąd, ponieważ klasa `X` jest oznaczony jako `abstract`.  
+ Poniższy kod generuje błąd, ponieważ klasa `X` jest oznaczony jako `abstract`.  
   
-```  
+```cpp  
 // abstract_keyword.cpp  
 // compile with: /clr  
 ref class X abstract {  
@@ -87,9 +85,9 @@ int main() {
   
  **Przykład**  
   
- Poniższy przykład kodu generuje błąd, ponieważ metoda tworzy natywnego klasy, która jest oznaczony jako `abstract`. Ten błąd wystąpi z lub bez **/CLR** — opcja kompilatora.  
+ Poniższy kod generuje błąd, ponieważ tworzenia wystąpienia klasy natywnej, która jest oznaczona `abstract`. Ten błąd wystąpi, z lub bez `/clr` — opcja kompilatora.  
   
-```  
+```cpp  
 // abstract_keyword_2.cpp  
 class X abstract {  
 public:  
@@ -99,14 +97,13 @@ public:
 int main() {  
    X * MyX = new X; // C3622: 'X': a class declared as 'abstract'  
                     // cannot be instantiated. See declaration of 'X'}  
-  
 ```  
   
  **Przykład**  
   
- Poniższy przykład kodu generuje błąd, ponieważ funkcja `f` obejmuje definicję, ale jest oznaczony jako `abstract`. Końcowej instrukcji w tym przykładzie pokazuje, że deklarowania funkcji wirtualnych abstrakcyjnej odpowiednikiem deklarowanie czystej funkcji wirtualnej.  
+ Poniższy kod generuje błąd, ponieważ funkcja `f` zawiera definicję, ale jest oznaczony jako `abstract`. Końcowe zestawienie w przykładzie pokazuje, że deklarowania funkcji wirtualnych abstrakcyjnej równoważne do deklarowania czystej funkcji wirtualnej.  
   
-```  
+```cpp  
 // abstract_keyword_3.cpp  
 // compile with: /clr  
 ref class X {  

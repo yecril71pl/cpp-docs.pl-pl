@@ -12,12 +12,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7a604ee36bf7d410f9e176278cc98a934874fbac
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: 1d78b37971cda2ca1bcf468a794abf69555efc3e
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37939887"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39462254"
 ---
 # <a name="smart-pointers-modern-c"></a>Wskaźniki inteligentne (Modern C++)
 W nowoczesnym programowaniu C++, standardowa biblioteka zawiera *inteligentne wskaźniki*, które są używane, aby mieć pewność, że programy są wolne od pamięci i wycieki zasobów są bezpieczne pod względem wyjątków.  
@@ -117,7 +117,7 @@ W nowoczesnym programowaniu C++, standardowa biblioteka zawiera *inteligentne ws
  [Klasa CAutoPtrList](../atl/reference/cautoptrlist-class.md)  
  Klasa, która hermetyzuje metody do manipulowania listą `CAutoPtr` węzłów.  
   
-## <a name="see-also"></a>Zobacz też  
+## <a name="see-also"></a>Zobacz także  
  [Witamy z powrotem w C++](../cpp/welcome-back-to-cpp-modern-cpp.md)   
  [Dokumentacja języka C++](../cpp/cpp-language-reference.md)   
  [Standardowa biblioteka C++](../standard-library/cpp-standard-library-reference.md)   

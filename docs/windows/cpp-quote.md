@@ -17,51 +17,50 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 38ecabcde55f49687abf7caff66fb2c316fab0fe
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 3dc81eacdbadb971ab86f4cfde1353e89bbe1342
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33871165"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39463830"
 ---
 # <a name="cppquote"></a>cpp_quote
-Emituje określony ciąg bez znaków cudzysłowu do pliku .idl wygenerowany.  
+Generuje określony ciąg bez znaków cudzysłowu do pliku .idl wygenerowany.  
   
 ## <a name="syntax"></a>Składnia  
   
 ```  
-  
-      [ cpp_quote(  
+[ cpp_quote(  
    "statement"  
 ) ];  
 ```  
   
 #### <a name="parameters"></a>Parametry  
- *— Instrukcja*  
- Instrukcja C.  
+ *Instrukcja*  
+ Instrukcja języka C.  
   
 ## <a name="remarks"></a>Uwagi  
- **Cpp_quote —** atrybut C++ jest przydatne, jeśli chcesz umieścić dyrektywy preprocesora w pliku .idl.  
+ **Cpp_quote —** C++ atrybut jest przydatna, jeśli chcesz umieścić dyrektywy preprocesora w pliku .idl.  
   
- Można również użyć **cpp_quote —** i Wygeneruj plik .h jako część kompilacji MIDL. Na przykład jeśli masz pliku nagłówka C++ używającego atrybuty C++ IDL, ale nie można użyć tego pliku dla niektórych zadań, następnie będzie można kompilować go w celu utworzenia pliku .h generowanych przez MIDL, powinno być możliwe do użycia.  
+ Można również użyć **cpp_quote —** i Wygeneruj plik .h jako część kompilacji MIDL. Na przykład jeśli masz plik nagłówka C++, który używa atrybuty C++ IDL, ale nie można użyć tego pliku dla niektórych zadań, następnie będzie można kompilować go, aby utworzyć plik MIDL generowane .h, powinno być możliwe do użycia.  
   
- **Cpp_quote —** atrybut ma te same funkcje co [cpp_quote —](http://msdn.microsoft.com/library/windows/desktop/aa366765) MIDL atrybutu.  
+ **Cpp_quote —** atrybut ma taką samą funkcjonalność jak [cpp_quote —](http://msdn.microsoft.com/library/windows/desktop/aa366765) atrybutów w MIDL.  
   
 ## <a name="example"></a>Przykład  
- Zobacz przykład [podwójną](../windows/dual.md) na przykład użyć sposób użycia **cpp_quote —**.  
+ Zobacz przykład [podwójną](../windows/dual.md) na przykład użyć sposób używania **cpp_quote —**.  
   
 ## <a name="requirements"></a>Wymagania  
   
-### <a name="attribute-context"></a>Atrybut kontekstu  
+### <a name="attribute-context"></a>Kontekst atrybutu  
   
 |||  
 |-|-|  
-|**Dotyczy**|Dowolnego miejsca|  
+|**Dotyczy**|Dowolne miejsce|  
 |**Powtarzalne**|Nie|  
 |**Wymaganych atrybutów**|Brak|  
 |**Nieprawidłowe atrybuty**|Brak|  
   
- Aby uzyskać więcej informacji na temat konteksty atrybutu, zobacz [konteksty atrybutu](../windows/attribute-contexts.md).  
+ Aby uzyskać więcej informacji na temat konteksty atrybutu zobacz [konteksty atrybutu](../windows/attribute-contexts.md).  
   
 ## <a name="see-also"></a>Zobacz też  
  [Atrybuty IDL](../windows/idl-attributes.md)   
