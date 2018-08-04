@@ -1,7 +1,7 @@
 ---
 title: Eksportowanie z systemu UNIX do Win32 | Dokumentacja firmy Microsoft
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 08/02/2018
 ms.technology:
 - cpp-language
 ms.topic: conceptual
@@ -20,68 +20,64 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 628d032ff00205b3f511a613a866f025d62dc50a
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 08958de9f756ac005f966245e22a44afd7125bc0
+ms.sourcegitcommit: 66f4f12d3851c897ca69cf62da1697e95b2b97c2
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33843291"
+ms.lasthandoff: 08/03/2018
+ms.locfileid: "39496678"
 ---
 # <a name="porting-from-unix-to-win32"></a>Eksportowanie z systemu UNIX do Win32
-Podczas migrowania aplikacji z systemu UNIX do systemu Windows, masz kilka opcji:  
+Podczas migracji aplikacji z systemu UNIX do Windows, masz kilka opcji:  
   
 -   Przy użyciu biblioteki systemu UNIX do portu aplikacji z systemu UNIX do Win32  
   
--   Natywnie eksportowanie aplikacji z systemu UNIX do Win32  
+-   Przenoszenie aplikacji z systemu UNIX do Win32 natywnie  
   
--   Uruchamianie aplikacji systemu UNIX w systemie Windows przy użyciu podsystemu POSIX  
+-   Uruchamianie aplikacji systemu UNIX w Windows, za pomocą podsystemu POSIX  
   
 ## <a name="unix-libraries"></a>Biblioteki systemu UNIX  
- Jedną z opcji UNIX programistów zwykle należy wziąć pod uwagę umożliwi ich kompilacji kodu UNIX jako plik wykonywalny systemu Win32 za pomocą biblioteki systemu UNIX przypominającej innych firm. Kilka komercyjnej (i co najmniej jednej domeny publicznej) biblioteki w tym celu. Jest to opcja dla niektórych aplikacji. Korzystać z tych eksportowanie bibliotek jest, że ich zminimalizować ilość pracy od początkowego przenoszenia. Główną wadą produktu konkurencyjnych oprogramowania, jest zazwyczaj będzie szybsze portu natywnego Win32 aplikacji oraz będą mieć więcej funkcji. Może to być nieodpowiednich dla aplikacji, aby krok poza powłoki systemu UNIX, wymaga wykonywania wywołań Win32, aby uzyskać więcej mocy z systemu Windows.  
+ Jedną z opcji UNIX programistów zwykle należy wziąć pod uwagę przy użyciu bibliotek podobnymi do systemu UNIX innych firm umożliwiające ich kompilacji kodu systemu UNIX jako plikiem wykonywalnym środowiska Win32. Wiele komercyjnych (i co najmniej jedną domenę publiczną) biblioteki to zrobić. Jest to opcja dla niektórych aplikacji. Te przenoszenie bibliotek zaletą jest to, że one zminimalizować początkowy przenoszenia. Główne wady, konkurencyjnych oprogramowania jest, zwykle krócej portu macierzystego systemu Win32 w aplikacji i będą mieć więcej funkcji. Może być nieodpowiednich dla aplikacji wkraczać poza powłoki systemu UNIX, wymaga wykonywania wywołań Win32, aby uzyskać więcej energii z Windows.  
   
- Poniższa lista zawiera firmy Microsoft i innych firm zasobów dla przenoszenia i obsługę UNIX migracji do programu Visual C++:  
+ Na poniższej liście przedstawiono firmy Microsoft i innych zasobów przenoszenie i UNIX migrację do programu Visual C++:  
   
-### <a name="unix-migration-guides"></a>Przewodniki migracji systemu UNIX  
- Przewodnik migracji aplikacji niestandardowe UNIX zawiera pomoc techniczną po migracji kodu z systemu UNIX do środowiska Win32.  
+### <a name="unix-migration-guides"></a>Przewodniki dotyczące migracji z systemu UNIX  
+ [Przewodnik migracji aplikacji niestandardowych UNIX](https://technet.microsoft.com/library/bb656290.aspx) zapewnia pomoc techniczną na migrację kodu z systemu UNIX do środowiska Win32.  
   
- [http://go.microsoft.com/fwlink/p/?linkid=95428](http://go.microsoft.com/fwlink/p/?linkid=95428)  
+ [Przewodnik projektu migracji Unix](https://technet.microsoft.com/library/bb656287.aspx) uzupełnia Przewodnik migracji aplikacji niestandardowego systemu UNIX, zapewniając wysokiego poziomu pomocy w przypadku migrowania projektów istotne z systemu UNIX do Win32. Przewodnik zawiera porady dotyczące zagadnień do uwzględnienia na każdym etapie migracji projektu.
   
- Przewodnik po programie Project migracji Unix uzupełnia Przewodnik migracji aplikacji niestandardowe UNIX przez zapewnienie wysokiego poziomu pomocy w przypadku migrowania projektów znacznej z systemu UNIX do systemu Win32. Przewodnik zawiera wskazówki dotyczące zagadnień do uwzględnienia na każdym etapie migracji projektu. Przewodnik może zostać pobrana z:  
+### <a name="microsoft-windows-services-for-unix-sfu"></a>Program Microsoft Windows Services for UNIX (SFU)  
+ Microsoft Windows Services for UNIX (SFU) zapewnia pełną gamę usług dla wielu platform zintegrować Windows istniejących środowisk opartych na systemie UNIX. Usługi dla systemu UNIX zapewnia udostępniania plików, dostępu zdalnego i administracji, synchronizacja haseł, wspólne zarządzanie katalogu, ze wspólnego zestawu narzędzi i powłoki.  
   
- [http://go.microsoft.com/fwlink/p/?linkid=20012](http://go.microsoft.com/fwlink/p/?linkid=20012)  
-  
-### <a name="microsoft-windows-services-for-unix-sfu"></a>Usługi systemu Microsoft Windows dla systemu UNIX (SFU)  
- Microsoft Windows Services dla systemu UNIX (SFU) udostępnia szeroką gamę między platformami usługi integracji systemu Windows w istniejących środowiskach systemu UNIX. Usługi dla systemu UNIX zapewnia udostępniania plików, dostępu zdalnego i administracji, synchronizacji haseł, wspólnego zarządzania katalogu, ze wspólnego zestawu narzędzi i powłoki.  
-  
- [Usługi systemu Windows dla systemu UNIX](http://www.microsoft.com/downloads/details.aspx?FamilyID=896c9688-601b-44f1-81a4-02878ff11778&displaylang=en)  
+ [Windows Services for UNIX](http://www.microsoft.com/downloads/details.aspx?FamilyID=896c9688-601b-44f1-81a4-02878ff11778&displaylang=en)  
   
 ### <a name="interopsystemscom"></a>InteropSystems.com  
  [http://www.interopsystems.com/](http://www.interopsystems.com/)  
   
- Inna witryna firmy zapewnienie programów obsługi przenoszenia systemu UNIX do Win32.  
+ Innej lokacji w firmie zapewnienie im programów obsługi przenoszenia systemu UNIX do Win32.  
   
-### <a name="c-boost-web-site"></a>Zwiększanie wyniku C++ witryny sieci Web  
+### <a name="c-boost-web-site"></a>C++ zwiększenie wydajności witryny sieci Web  
  [http://boost.sourceforge.net/regression-logs/](http://boost.sourceforge.net/regression-logs/)  
   
  [http://boost.sourceforge.net/boost-build2/](http://boost.sourceforge.net/boost-build2/)  
   
-## <a name="porting-unix-applications-directly-to-win32"></a>Eksportowanie aplikacji systemu UNIX bezpośrednio do systemu Win32  
- Inną opcją jest przenoszenie aplikacji systemu UNIX bezpośrednio do systemu Win32. Przy użyciu biblioteki ANSI C/C++ i komercyjnych biblioteki kompilatora C, wiele tradycyjnego systemu wywołania zależał od aplikacji systemu UNIX są dostępne w aplikacji Win32.  
+## <a name="porting-unix-applications-directly-to-win32"></a>Przenoszenie aplikacji systemu UNIX bezpośrednio do systemu Win32  
+ Innym rozwiązaniem jest przenoszenie aplikacji systemu UNIX bezpośrednio do systemu Win32. Przy użyciu biblioteki ANSI C/C++ i komercyjnych bibliotek kompilator C, wiele tradycyjny system, który wywołuje opiera się na aplikacji systemu UNIX są dostępne w aplikacji Win32.  
   
- Model danych wyjściowych **stdio —**-aplikacji nie musi zostać zmienione od czasu konsoli Win32 API naśladować **stdio —** modelu i wersje *curses* istnieje używające konsoli Win32 API. Aby uzyskać więcej informacji, zobacz [SetConsoleCursorPosition](http://msdn.microsoft.com/library/windows/desktop/ms686025).  
+ Model danych wyjściowych **stdio —**-aplikacji nie musi zostać zmienione w stosunku konsoli Win32 API naśladować **stdio —** modelu i wersji *curses* istnieje używające konsoli Win32 API. Aby uzyskać więcej informacji, zobacz [SetConsoleCursorPosition](http://msdn.microsoft.com/library/windows/desktop/ms686025).  
   
- Aplikacje oparte na gniazdo Berkeley muszą bardzo kilka zmian w pracy aplikacji Win32. Interfejsu Windows Sockets zostało zaprojektowane na potrzeby przenośność z gniazda BSD, przy minimalnych zmianach, które są wymienione w sekcji wprowadzenie specyfikacji interfejsu WinSock.  
+ Aplikacje oparte na gniazdo Berkeley muszą bardzo kilka zmian, aby pracować w aplikacji Win32. Interfejsu Windows Sockets został zaprojektowany do celów przenośności przy użyciu gniazd BSD, przy minimalnych zmianach, które zostały wymienione w sekcjach wprowadzające specyfikacji interfejsu WinSock.  
   
- System Windows obsługuje zgodne DCE RPC, tak więc łatwo można używać aplikacji opartych na RPC. Zobacz [funkcji RPC](http://msdn.microsoft.com/library/windows/desktop/aa378623).  
+ Windows obsługuje CLS DCE RPC, tak aby łatwo można używać aplikacji opartego na protokole RPC. Zobacz [funkcji RPC](http://msdn.microsoft.com/library/windows/desktop/aa378623).  
   
- Jest jednym z największych obszarów różnicy w modelu procesów. Ma UNIX **rozwidlenia**; Nie ma Win32. W zależności od użycia **rozwidlenia** i bazowej kodu Win32 ma dwa interfejsy API, które mogą być używane: **CreateProcess** i `CreateThread`. Aplikacji systemu UNIX, który rozwidlenia wiele kopii samego można ponownie obrobione, w systemie Win32 wiele procesów lub jeden proces o wiele wątków. Jeśli wiele procesów są używane, istnieje wiele metod IPC, który może służyć do komunikacji między procesami (i prawdopodobnie można zaktualizować kodu i danych nowy proces, na przykład element nadrzędny, jeśli funkcji który **rozwidlenia** udostępnia jest potrzebny). Aby uzyskać więcej informacji na temat IPC, zobacz [komunikacji międzyprocesowej](http://msdn.microsoft.com/library/windows/desktop/aa365574).  
+ Jest jednym z największych obszarów różnica w modelu procesów. Ma UNIX **rozwidlenia**; Win32 — nie. W zależności od użycia **rozwidlenia** i kodzie podstawowym, Win32 ma dwa interfejsy API, które mogą być używane: **CreateProcess** i `CreateThread`. Aplikacji systemu UNIX, który rozwidlenia wielu kopii sam można przekształcił w systemie Win32 wiele procesów lub jeden proces w wielu wątkach. Wiele procesów są używane, dostępnych jest wiele metod IPC, który może służyć do komunikacji między procesami (i prawdopodobnie aktualizowania kodu i danych nowego procesu jako element nadrzędny, np. Jeśli funkcjonalność, **rozwidlenia** zapewnia to wymagane). Aby uzyskać więcej informacji o IPC, zobacz [komunikacji międzyprocesowej](http://msdn.microsoft.com/library/windows/desktop/aa365574).  
   
- Systemu Windows i UNIX graficznego modeli są bardzo różnią się. UNIX używa X GUI systemu Windows, gdy system Windows używa interfejsu GDI. Chociaż jest to podobna, nie ma mapowania prostego interfejsu API X do interfejsu API interfejsu GDI. Jednak OpenGL obsługa jest dostępna dla migracji aplikacji OpenGL systemu UNIX. Jednak X klientów i X serwerów dla systemu Windows. Zobacz [konteksty urządzenia](http://msdn.microsoft.com/library/windows/desktop/dd183553) dla informacji na temat interfejsu GDI.  
+ Windows i UNIX graficzny modeli są bardzo różne. UNIX używa X okna systemu graficznego interfejsu użytkownika, gdy Windows korzysta z użyciem interfejsu GDI. Chociaż jest to podobne, nie ma żadnych mapowania proste interfejsu API X do interfejsu API z użyciem interfejsu GDI. Jednak obsługa OpenGL jest dostępne do migracji aplikacji OpenGL systemu UNIX. Wiąże się z X klientów i X serwerów Windows. Zobacz [konteksty urządzenia](http://msdn.microsoft.com/library/windows/desktop/dd183553) informacji z użyciem interfejsu GDI.  
   
- Podstawowe aplikacje systemu UNIX, w tym wiele aplikacji CGI, powinien łatwo portu dla Visual C++ z systemem Windows. Funkcji, takich jak **Otwórz**, `fopen`, **odczytu**, **zapisu** , a inne są dostępne w bibliotece środowiska wykonawczego Visual C++. Ponadto istnieje mapowanie jeden do jednego między interfejsów API systemu UNIX C i Win32 API: **Otwórz** do **CreateFile**, **odczytu** do **ReadFile**, **zapisu** do **WriteFile**, `ioctl` do **DeviceIOControl**, **zamknąć** do **CloseFile**i tak dalej.  
+ Podstawowe aplikacji systemu UNIX, w tym wiele aplikacji CGI, powinien portu łatwe do programu Visual C++ w systemie Windows. Funkcje, takie jak **Otwórz**, `fopen`, **odczytu**, **zapisu** i inne są dostępne w bibliotece środowiska wykonawczego Visual C++. Ponadto istnieje mapowanie jeden do jednego między interfejsów API systemu UNIX C i Win32: **Otwórz** do **CreateFile**, **odczytu** do **ReadFile**, **zapisu** do **WriteFile**, `ioctl` do **DeviceIOControl**, **Zamknij** do **CloseFile**i tak dalej.  
   
-## <a name="windows-posix-subsystem"></a>Podsystem POSIX w systemie Windows  
- Inną opcję UNIX programistów przyjrzeć jest podsystemu POSIX w systemie Windows. Jednak tylko obsługuje 1003.1 POSIX, która była tylko wersji POSIX standaryzowane podczas tworzenia systemu Windows NT. Od tego czasu wprowadzono niewielkie wymagania dotyczące rozszerzania tego podsystemu ponieważ większość aplikacji zostały przekonwertowane do systemu Win32. 1003.1 systemu jest ograniczone istotnych dla wszystkich funkcji aplikacji, ponieważ nie zawiera wiele funkcji (takich jak te w 1003.2 obsługi sieci i tak dalej). Pełna polecanych aplikacji uruchamiana z podsystem POSIX w systemie Windows nie mają dostępu do funkcji systemu Windows, dostępne dla aplikacji Win32, takich jak pliki mapowane w pamięci, sieci i grafiki. Aplikacje, takie jak VI, LS i GREP są elementy docelowe głównej podsystemu POSIX w systemie Windows.  
+## <a name="windows-posix-subsystem"></a>Podsystem Windows POSIX  
+ Inną opcja UNIX programistów przyjrzeć to podsystemu Windows POSIX. Jednakże obsługuje on tylko 1003.1 POSIX, który jedynie wersja POSIX standaryzowane podczas tworzenia systemu Windows NT. Od tamtej pory nastąpiła nieco żądanie do ten podsystem rozszerzania, ponieważ większość aplikacji zostały przekonwertowane na Win32. 1003.1 system jest ograniczone znaczenie w odniesieniu do aplikacji w pełni wyposażone, ponieważ nie zawiera wiele funkcji (takich jak te w 1003.2 sieci pomocy technicznej i tak dalej). Pełne polecanych aplikacji uruchamiana z podsystem Windows POSIX nie mają dostępu do funkcji Windows, które są dostępne do aplikacji Win32, takich jak pliki mapowane w pamięci, sieci i grafiki. Aplikacje, takie jak VI, LS i GREP są główne cele podsystemu Windows POSIX.  
   
 ## <a name="see-also"></a>Zobacz też  
  [Visual C++, przenoszenie i uaktualnianie przewodnik](visual-cpp-change-history-2003-2015.md)   
