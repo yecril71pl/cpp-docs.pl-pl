@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 673eadf3651d15f480ee2cff9ef3f7319dee4d84
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: c5a9aa15839169de846439c73af1df92d7342358
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37947880"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39463931"
 ---
 # <a name="templates-c"></a>Szablony (C++)
 Szablony są podstawą ogólnego programowania w języku C++. Jako silnie typizowane języka C++ wymaga, aby wszystkie zmienne mieć określonego typu, jawnie zadeklarowane przez programistę lub ustalane przez kompilator. Jednak wiele struktur danych i algorytmów wyglądają tak samo, niezależnie od tego, jakiego typu, które działają na. Szablony pozwalają zdefiniować operacje klasy lub funkcji i zezwolić użytkownikowi na określenie, jakie konkretny typy tych operacji, powinny działać na.  
@@ -38,7 +38,7 @@ T minimum(const T& lhs, const T& rhs)
 }  
 ```  
   
- Powyższy kod w tym artykule opisano szablon jest funkcja ogólna, korzystając z jednego typu parametru `T`, którego wartość zwracana i wywoływać parametry (lewa strona reguły przepisywania i rhs) są wszystkie tego typu. Nazwa parametru typu można niczego, podobnie jak, ale przy Konwencji pojedynczego wielkich liter są najczęściej używane. `T` Parametr szablonu; **typename** — słowo kluczowe mówi, że ten parametr jest symbolem zastępczym dla typu. Gdy funkcja jest wywoływana, kompilator zastąpi każde wystąpienie `T` przy użyciu argumentu typu konkretnego, który jest określony przez użytkownika lub ustalane przez kompilator. Proces, w którym kompilator generuje klasę lub funkcji z szablonu jest określany jako *Tworzenie wystąpienia szablonu*;   `minimum<int>` jest egzemplarzem szablonu `minimum<T>`.  
+ Powyższy kod w tym artykule opisano szablon jest funkcja ogólna, korzystając z jednego typu parametru *T*, którego wartość zwracana i wywoływać parametry (lewa strona reguły przepisywania i rhs) są wszystkie tego typu. Nazwa parametru typu można niczego, podobnie jak, ale przy Konwencji pojedynczego wielkich liter są najczęściej używane. *T* jest parametrem szablonu; **typename** — słowo kluczowe mówi, że ten parametr jest symbolem zastępczym dla typu. Gdy funkcja jest wywoływana, kompilator zastąpi każde wystąpienie `T` przy użyciu argumentu typu konkretnego, który jest określony przez użytkownika lub ustalane przez kompilator. Proces, w którym kompilator generuje klasę lub funkcji z szablonu jest określany jako *Tworzenie wystąpienia szablonu*; `minimum<int>` jest egzemplarzem szablonu `minimum<T>`.  
   
  W innym miejscu użytkownik może zadeklarować wystąpienie szablonu, który jest przeznaczone do int. Załóżmy, że get_a() i get_b() są funkcje, które zwracają int:  
   
@@ -48,7 +48,7 @@ int b = get_b();
 int i = minimum<int>(a, b);  
 ```  
   
- Jednakże, ponieważ jest szablonem funkcji i kompilator może wywnioskować typ `T` z argumentów `a` i `b`, wywołując podobnie jak zwykłej funkcji:  
+ Jednakże, ponieważ jest szablonem funkcji i kompilator może wywnioskować typ `T` z argumentów *a* i *b*, wywołując podobnie jak zwykłej funkcji:  
   
 ```cpp  
 int i = minimum(a, b);  
@@ -56,9 +56,8 @@ int i = minimum(a, b);
   
  Gdy kompilator napotka tego ostatnią instrukcję, w której każde wystąpienie generuje nową funkcję *T* w szablonie jest zastępowany **int**:  
   
-```cpp 
-  
-      int minimum(const int& lhs, const int& rhs)  
+```cpp   
+int minimum(const int& lhs, const int& rhs)  
 {  
     return lhs < rhs ? lhs : rhs;  
 }  
@@ -67,13 +66,12 @@ int i = minimum(a, b);
  Reguły dotyczące jak kompilator wykonuje wnioskowanie typu w Szablony funkcji są oparte na zasady zwykłe funkcje. Aby uzyskać więcej informacji, zobacz [przeciążenia rozwiązania z wywołań szablonów funkcji](../cpp/overload-resolution-of-function-template-calls.md).  
   
 ## <a id="type_parameters"></a> Parametry typu  
- W `minimum` powyższego szablonu, należy pamiętać, że parametr typu `T` nie jest kwalifikowana w jakikolwiek sposób, dopóki nie jest on używany w parametrów wywołania funkcji, której są dodawane kwalifikatory odwołań i const.  
+ W `minimum` powyższego szablonu, należy pamiętać, że parametr typu *T* nie jest kwalifikowana w jakikolwiek sposób, dopóki nie jest on używany w parametrów wywołania funkcji, której są dodawane kwalifikatory odwołań i const.  
   
  Nie ma żadnych praktyczne limitu liczby parametrów typu. Wiele parametrów należy oddzielić przecinkami:  
   
 ```cpp  
 template <typename T, typename U, typename V> class Foo{};  
-  
 ```  
   
  Słowo kluczowe **klasy** jest odpowiednikiem **typename** w tym kontekście. Można wyrazić poprzedniego przykładu jako:  
@@ -108,7 +106,6 @@ int main()
     MyClass mc2 {2, L"goodbye"};  
     auto result = minimum(mc1, mc2); // Error! C2678  
 }  
-  
 ```  
   
  Błąd kompilatora zostanie wygenerowany, ponieważ MyClass nie zapewnia przeciążenie dla elementu < — operator.  
@@ -138,7 +135,6 @@ class MyArray
 public:  
     MyArray() { ... }  
 };  
-  
 ```  
   
  Należy pamiętać, w składni deklaracji szablonu. Wartość size_t jest przekazywany jako argument szablonu w czasie kompilacji i musi być stałą lub wyrażenia constexpr. Możesz użyć następująco:  
@@ -150,7 +146,7 @@ MyArray<MyClass*, 10> arr;
  Inne rodzaje wartości, w tym wskaźniki i odwołania mogą być przekazywane w jako parametry bez typu. Można na przykład przekazanej wskaźnik do funkcji lub obiektu funkcji, aby dostosować pewnej operacji wewnątrz kodu szablonu.  
   
 ## <a id="template_parameters"></a> Szablony jako parametry szablonu  
- Szablon może być parametrem szablonu. W tym przykładzie MyClass2 zawiera dwa parametry szablonu: parametr typename `T` i parametrem szablonu `Arr`:  
+ Szablon może być parametrem szablonu. W tym przykładzie MyClass2 zawiera dwa parametry szablonu: parametr typename *T* i parametrem szablonu *Arr*:  
   
 ```cpp  
 template<typename T, template<typename U, int I> class Arr>  
@@ -162,7 +158,7 @@ class MyClass2
 };  
 ```  
   
- Ponieważ `Arr` parametru sam ma bez treści, jego nazwy parametrów nie są wymagane. W rzeczywistości jest błędem do odwoływania się do `Arr`firmy typename lub klasy nazwy parametrów z treści `MyClass2`. Z tego powodu `Arr`firmy nazwy parametrów typu można pominąć, jak pokazano w poniższym przykładzie:  
+ Ponieważ *Arr* parametru sam ma bez treści, jego nazwy parametrów nie są wymagane. W rzeczywistości jest błędem do odwoływania się do *Arr*firmy typename lub klasy nazwy parametrów z treści `MyClass2`. Z tego powodu *Arr*firmy nazwy parametrów typu można pominąć, jak pokazano w poniższym przykładzie:  
   
 ```cpp  
 template<typename T, template<typename, int> class Arr>  
@@ -207,7 +203,6 @@ int main()
 {  
     Bar<> bar; // use all default type arguments  
 }  
-  
 ```  
   
 ## <a name="template-specialization"></a>Specjalizacja szablonu  
@@ -223,9 +218,8 @@ class MyMap<string, V> {/*...*/};
 ...  
 MyMap<int, MyClass> classes; // uses original template  
 MyMap<string, MyClass> classes2; // uses the partial specialization  
-  
 ```  
   
- Szablon może mieć dowolną liczbę specjalizacji, tak długo, jak długo każdy parametr specjalistyczną odmianą jest unikatowy.   Tylko szablony klas mogą być częściowo specjalizowany. Wszystkie pełne i częściowe specjalizacje szablonu musi być zadeklarowana w tej samej przestrzeni nazw jako oryginalnego szablonu.  
+ Szablon może mieć dowolną liczbę specjalizacji, tak długo, jak długo każdy parametr specjalistyczną odmianą jest unikatowy. Tylko szablony klas mogą być częściowo specjalizowany. Wszystkie pełne i częściowe specjalizacje szablonu musi być zadeklarowana w tej samej przestrzeni nazw jako oryginalnego szablonu.  
   
  Aby uzyskać więcej informacji, zobacz [specjalizacja szablonu](../cpp/template-specialization-cpp.md).

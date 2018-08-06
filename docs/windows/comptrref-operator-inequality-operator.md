@@ -15,12 +15,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 3d5a6e7389215452177add30b587004c312aeae1
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 7ebe71706ce1091ee21fc6fbd63e65b201c096b5
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33883557"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39462927"
 ---
 # <a name="comptrrefoperator-operator"></a>ComPtrRef::operator!= Operator
 Obsługuje infrastrukturę biblioteki WRL i nie jest przeznaczona do użycia bezpośrednio w kodzie.  
@@ -55,27 +55,27 @@ bool operator!=(
 ```  
   
 #### <a name="parameters"></a>Parametry  
- `a`  
- Odwołanie do obiektu comptrref —.  
+ *a*  
+ Odwołanie do **comptrref —** obiektu.  
   
- `b`  
- Odwołanie do innego obiektu comptrref — lub wskaźnik do obiektu anonimowego (`void*`).  
+ *b*  
+ Odwołanie do innego **comptrref —** obiekt lub wskaźnik do obiektu anonimowego (`void*`).  
   
 ## <a name="return-value"></a>Wartość zwracana  
- Pierwszy wydajności operator `true` Jeśli obiekt `a` nie jest równa obiekt `b`; w przeciwnym razie `false`.  
+ Pierwszy plony operator **true** Jeśli obiekt *a* nie jest równa obiektu *b*; w przeciwnym razie **false**.  
   
- Operatory drugi i trzeci yield `true` Jeśli obiekt `a` nie jest równa `nullptr`; w przeciwnym razie `false`.  
+ Operatory drugi i trzeci uzyskanie **true** Jeśli obiekt *a* nie jest równa **nullptr**; w przeciwnym razie **false**.  
   
- Operatory czwartym i piątym yield `true` Jeśli obiekt `a` nie jest równa obiekt `b`; w przeciwnym razie `false`.  
+ Operatory czwarty i piąty uzyskanie **true** Jeśli obiekt *a* nie jest równa obiektu *b*; w przeciwnym razie **false**.  
   
 ## <a name="remarks"></a>Uwagi  
- Wskazuje, czy dwa obiekty comptrref — nie są takie same.  
+ Wskazuje, czy dwa **comptrref —** obiekty nie są równe.  
   
 ## <a name="requirements"></a>Wymagania  
  **Nagłówek:** client.h  
   
- **Namespace:** Microsoft::wrl —  
+ **Namespace:** Microsoft::WRL  
   
 ## <a name="see-also"></a>Zobacz też  
- [Microsoft::wrl:: details — Namespace](../windows/microsoft-wrl-details-namespace.md)   
+ [Microsoft::wrl:: details Namespace](../windows/microsoft-wrl-details-namespace.md)   
  [ComPtrRef, klasa](../windows/comptrref-class.md)
