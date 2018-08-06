@@ -15,15 +15,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 2450b5d473d1caadae171516cf337479bfd5d603
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 0a4c15946862a66c0d4d830f590230763ce3e6f9
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33881884"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39461825"
 ---
 # <a name="comptroperator-operator"></a>ComPtr::operator!= Operator
-Wskazuje, czy dwa obiekty comptr — nie są takie same.  
+Wskazuje, czy dwa **ComPtr** obiekty nie są równe.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -42,26 +42,25 @@ bool operator!=(
    decltype(__nullptr),  
    const ComPtr<T>& a  
 );  
-  
 ```  
   
 #### <a name="parameters"></a>Parametry  
- `a`  
- Odwołanie do obiektu comptr —.  
+ *a*  
+ Odwołanie do **ComPtr** obiektu.  
   
- `b`  
- Odwołanie do innego obiektu comptr —.  
+ *b*  
+ Odwołanie do innego **ComPtr** obiektu.  
   
 ## <a name="return-value"></a>Wartość zwracana  
- Pierwszy wydajności operator `true` Jeśli obiekt `a` nie jest równa obiekt `b`; w przeciwnym razie `false`.  
+ Pierwszy plony operator **true** Jeśli obiekt *a* nie jest równa obiektu *b*; w przeciwnym razie **false**.  
   
- Operatory drugi i trzeci yield `true` Jeśli obiekt `a` nie jest równa `nullptr`; w przeciwnym razie `false`.  
+ Operatory drugi i trzeci uzyskanie **true** Jeśli obiekt *a* nie jest równa **nullptr**; w przeciwnym razie **false**.  
   
 ## <a name="requirements"></a>Wymagania  
  **Nagłówek:** client.h  
   
- **Namespace:** Microsoft::wrl —  
+ **Namespace:** Microsoft::WRL  
   
 ## <a name="see-also"></a>Zobacz też  
- [Microsoft::wrl — Namespace](../windows/microsoft-wrl-namespace.md)   
+ [Microsoft::WRL Namespace](../windows/microsoft-wrl-namespace.md)   
  [ComPtr, klasa](../windows/comptr-class.md)
