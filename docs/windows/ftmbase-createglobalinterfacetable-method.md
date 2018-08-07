@@ -1,5 +1,5 @@
 ---
-title: FtmBase::CreateGlobalInterfaceTable — metoda | Dokumentacja firmy Microsoft
+title: FtmBase::CreateGlobalInterfaceTable, metoda | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 6b17749d5f20007e05f181de8f4e069d3fc736f0
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: de98932420cf5eb0d5b9b13011044e5bfc7b400d
+ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33872396"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39569007"
 ---
 # <a name="ftmbasecreateglobalinterfacetable-method"></a>FtmBase::CreateGlobalInterfaceTable — Metoda
 Tworzy tabelę interfejsu globalnego (GIT).  
@@ -35,20 +35,20 @@ static HRESULT CreateGlobalInterfaceTable(
 );  
 ```  
   
-#### <a name="parameters"></a>Parametry  
- `git`  
- Po tej operacji zakończeniu wskaźnik do Tabela interfejsu globalnego.  
+### <a name="parameters"></a>Parametry  
+ *usługi git*  
+ Gdy ta operacja zostanie ukończone, wskaźnik tabeli interfejsu globalnego.  
   
 ## <a name="return-value"></a>Wartość zwracana  
  S_OK w przypadku powodzenia; w przeciwnym razie wartość HRESULT, która wskazuje błąd.  
   
 ## <a name="remarks"></a>Uwagi  
- Aby uzyskać więcej informacji zobacz temat "IGlobalInterfaceTable" w podrzędny "Interfejsy COM" w temacie "Odwołania COM" w bibliotece MSDN.  
+ Aby uzyskać więcej informacji zobacz temat "IGlobalInterfaceTable", który w podrzędny "Interfejsów COM", "COM" temacie w bibliotece MSDN.  
   
 ## <a name="requirements"></a>Wymagania  
  **Nagłówek:** ftm.h  
   
- **Namespace:** Microsoft::wrl —  
+ **Namespace:** Microsoft::WRL  
   
 ## <a name="see-also"></a>Zobacz też  
  [FtmBase, klasa](../windows/ftmbase-class.md)

@@ -1,5 +1,5 @@
 ---
-title: HANDLETraits::Close — metoda | Dokumentacja firmy Microsoft
+title: HANDLETraits::Close, metoda | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 1f45f95fb1b060f3892def6dc2962bfffef70c77
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 581c7b8447b800d9a3401cd76f3adc5ada25994d
+ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33875617"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39569833"
 ---
 # <a name="handletraitsclose-method"></a>HANDLETraits::Close — Metoda
 Zamyka określone dojście.  
@@ -35,12 +35,12 @@ inline static bool Close(
 );  
 ```  
   
-#### <a name="parameters"></a>Parametry  
- `h`  
+### <a name="parameters"></a>Parametry  
+ *h*  
  Dojście do zamknięcia.  
   
 ## <a name="return-value"></a>Wartość zwracana  
- **wartość true,** Jeśli obsługi `h` zamknięty pomyślnie; w przeciwnym razie **false**.  
+ **wartość true,** Jeśli obsługi *h* zamknięta pomyślnie; w przeciwnym razie **false**.  
   
 ## <a name="requirements"></a>Wymagania  
  **Nagłówek:** corewrappers.h  

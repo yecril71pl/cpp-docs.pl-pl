@@ -17,35 +17,34 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 97b4b43f8cbd8f08cca4f6cf2f21294a625f289c
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 16f113610beb4c6427af5627ea8dfd725e02600d
+ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33874580"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39570002"
 ---
 # <a name="helpstringcontext"></a>helpstringcontext
-Określa identyfikator tematu pomocy w formacie pliku .hlp lub .chm.  
+Określa identyfikator tematu pomocy w pliku hlp lub chm.  
   
 ## <a name="syntax"></a>Składnia  
   
 ```  
-  
-      [ helpstringcontext(  
+[ helpstringcontext(  
    contextID  
 ) ]  
 ```  
   
-#### <a name="parameters"></a>Parametry  
- `contextID`  
+### <a name="parameters"></a>Parametry  
+ *Identyfikator kontekstu*  
  32-bitowy identyfikator kontekstu pomocy w pliku pomocy.  
   
 ## <a name="remarks"></a>Uwagi  
- **Helpstringcontext —** atrybut C++ ma te same funkcje co [helpstringcontext —](http://msdn.microsoft.com/library/windows/desktop/aa366858) ODL — atrybut.  
+ **Helpstringcontext —** atrybut C++ ma taką samą funkcjonalność jak [helpstringcontext —](http://msdn.microsoft.com/library/windows/desktop/aa366858) odl — atrybut.  
   
 ## <a name="example"></a>Przykład  
   
-```  
+```cpp  
 // cpp_attr_ref_helpstringcontext.cpp  
 // compile with: /LD  
 #include <unknwn.h>  
@@ -64,11 +63,11 @@ __interface IMyI
   
 ## <a name="requirements"></a>Wymagania  
   
-### <a name="attribute-context"></a>Atrybut kontekstu  
+### <a name="attribute-context"></a>Kontekst atrybutu  
   
 |||  
 |-|-|  
-|**Dotyczy**|**Klasa**, `interface`, interfejsu — metoda|  
+|**Dotyczy**|**Klasa**, **interfejsu**, interfejs — metoda|  
 |**Powtarzalne**|Nie|  
 |**Wymaganych atrybutów**|Brak|  
 |**Nieprawidłowe atrybuty**|Brak|  
@@ -79,5 +78,5 @@ __interface IMyI
  [Atrybuty IDL](../windows/idl-attributes.md)   
  [Atrybuty interfejsu](../windows/interface-attributes.md)   
  [Atrybuty klasy](../windows/class-attributes.md)   
- [Atrybuty — metoda](../windows/method-attributes.md)   
+ [Atrybuty metody](../windows/method-attributes.md)   
  [Moduł](../windows/module-cpp.md)   
