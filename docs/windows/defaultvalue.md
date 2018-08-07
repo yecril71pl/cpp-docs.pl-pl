@@ -17,20 +17,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: c838f057d9c5e59193d0578fe8aa871b1b75ee9d
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 11ec7cf883fe8c9454cf538efc0835b9c77b1f92
+ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33873420"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39569989"
 ---
 # <a name="defaultvalue"></a>defaultvalue
-Umożliwia określenie wartości domyślnej parametru opcjonalnego typu.  
+Umożliwia określenie wartości domyślnej dla typizowany parametr opcjonalny.  
   
 ## <a name="syntax"></a>Składnia  
   
 ```  
-  
 [ defaultvalue= value ]  
 ```  
   
@@ -39,12 +38,12 @@ Umożliwia określenie wartości domyślnej parametru opcjonalnego typu.
  Wartość domyślna parametru.  
   
 ## <a name="remarks"></a>Uwagi  
- **Defaultvalue** atrybut C++ ma te same funkcje co [defaultvalue](http://msdn.microsoft.com/library/windows/desktop/aa366793) MIDL atrybutu.  
+ **Defaultvalue** atrybut C++ ma taką samą funkcjonalność jak [defaultvalue](http://msdn.microsoft.com/library/windows/desktop/aa366793) atrybutów w MIDL.  
   
 ## <a name="example"></a>Przykład  
- Poniższy kod przedstawia metody interfejsu za pomocą **defaultvalue** atrybutu:  
+ Poniższy kod przedstawia metodę interfejsu przy użyciu **defaultvalue** atrybutu:  
   
-```  
+```cpp  
 // cpp_attr_ref_defaultvalue.cpp  
 // compile with: /LD  
 #include <windows.h>  
@@ -68,11 +67,11 @@ __interface IFireTabCtrl : IDispatch {
   
 ## <a name="requirements"></a>Wymagania  
   
-### <a name="attribute-context"></a>Atrybut kontekstu  
+### <a name="attribute-context"></a>Kontekst atrybutu  
   
 |||  
 |-|-|  
-|**Dotyczy**|Parametr — interfejs|  
+|**Dotyczy**|Parametr interfejsu|  
 |**Powtarzalne**|Nie|  
 |**Wymaganych atrybutów**|Brak|  
 |**Nieprawidłowe atrybuty**|Brak|  
@@ -81,7 +80,7 @@ __interface IFireTabCtrl : IDispatch {
   
 ## <a name="see-also"></a>Zobacz też  
  [Atrybuty IDL](../windows/idl-attributes.md)   
- [Atrybuty parametrów](../windows/parameter-attributes.md)   
+ [Atrybuty parametru](../windows/parameter-attributes.md)   
  [limit](../windows/out-cpp.md)   
  [retval](../windows/retval.md)   
  [in](../windows/in-cpp.md)   

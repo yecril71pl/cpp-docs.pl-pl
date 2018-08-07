@@ -1,5 +1,5 @@
 ---
-title: FtmBase::GetMarshalSizeMax — metoda | Dokumentacja firmy Microsoft
+title: FtmBase::GetMarshalSizeMax, metoda | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 5a298e63bc67dadf33a5e653d0eecf165a530d82
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: c39c313f06bb4dd1f4dbc095df159a38625e9db8
+ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33873797"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39570217"
 ---
 # <a name="ftmbasegetmarshalsizemax-method"></a>FtmBase::GetMarshalSizeMax — Metoda
-Pobierz górnej granicy liczby bajtów potrzebne do organizowania wskaźników określonego interfejsu w określonym obiekcie.  
+Uzyskaj górnej granicy liczby bajtów potrzebnych do organizowania określony wskaźnik interfejsu do określonego obiektu.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -40,36 +40,36 @@ STDMETHODIMP GetMarshalSizeMax(
 ) override;  
 ```  
   
-#### <a name="parameters"></a>Parametry  
- `riid`  
- Odwołanie do identyfikatora interfejsu, który ma być przekazywane.  
+### <a name="parameters"></a>Parametry  
+ *Parametr riid*  
+ Odwołanie do identyfikatora interfejsu aby być organizowany.  
   
- `pv`  
- Wskaźnik interfejsu zorganizowanie; może mieć wartości NULL.  
+ *Wa*  
+ Wskaźnik interfejsu do przekazywania; może mieć wartości NULL.  
   
- `dwDestContext`  
- Docelowy kontekst, w którym ma zostać wycofana określonego interfejsu.  
+ *dwDestContext*  
+ Miejsce docelowe kontekst, w którym ma zostać wycofana określonego interfejsu.  
   
- Określ jedną lub więcej wartości wyliczenia MSHCTX.  
+ Określ co najmniej jednej wartości wyliczenia MSHCTX.  
   
- Obecnie unmarshaling może wystąpić innego apartamentu bieżącego procesu (MSHCTX_INPROC) lub inny proces na tym samym komputerze co bieżący proces (MSHCTX_LOCAL).  
+ Obecnie unmarshaling może wystąpić w innym apartamentu bieżącego procesu (MSHCTX_INPROC) lub w inny proces na tym samym komputerze, co bieżący proces (MSHCTX_LOCAL).  
   
- `pvDestContext`  
- Zarezerwowane do użytku w przyszłości; musi mieć wartość NULL.  
+ *pvDestContext*  
+ Zarezerwowane dla przyszłego użytku; musi mieć wartość NULL.  
   
- `mshlflags`  
- Flaga wskazująca, czy można zorganizować dane mają być przekazywane do procesu klienta — typową sytuacją — lub zapisywane w tabeli globalnej, skąd mogą zostać pobrane przez wielu klientów. Określ jedną lub więcej wartości wyliczenia MSHLFLAGS.  
+ *mshlflags*  
+ Flaga wskazująca, czy ma być przesyłane z powrotem do procesu klienta dane, które mają być przekazywane — typowy przypadek — lub zapisywane w tabeli globalne, gdzie mogą być pobierane przez wielu klientów. Określ co najmniej jednej wartości wyliczenia MSHLFLAGS.  
   
- `pSize`  
- Po tej operacji zakończeniu wskaźnik do górnej granicy ilości danych do zapisania w strumieniu kierowania.  
+ *pSize*  
+ Gdy ta operacja zostanie ukończone, wskaźnik do górnej granicy ilości danych do zapisania do organizowania strumienia.  
   
 ## <a name="return-value"></a>Wartość zwracana  
- S_OK w przypadku powodzenia; w przeciwnym razie lub E_NOINTERFACE E_FAIL.  
+ S_OK w przypadku powodzenia; w przeciwnym razie, lub E_NOINTERFACE E_FAIL.  
   
 ## <a name="requirements"></a>Wymagania  
  **Nagłówek:** ftm.h  
   
- **Namespace:** Microsoft::wrl —  
+ **Namespace:** Microsoft::WRL  
   
 ## <a name="see-also"></a>Zobacz też  
  [FtmBase, klasa](../windows/ftmbase-class.md)

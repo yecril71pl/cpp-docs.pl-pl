@@ -1,5 +1,5 @@
 ---
-title: HString::Attach — metoda | Dokumentacja firmy Microsoft
+title: HString::Attach, metoda | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,33 +15,32 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: e8738c44c11c69f8d2479335ce3effc4135dfe0f
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 20a05bf603b874d260c95c010e6f0e8312b35649
+ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33876069"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39570992"
 ---
 # <a name="hstringattach-method"></a>HString::Attach — Metoda
-Kojarzy dany obiekt HString z bieżącym obiektem HString.  
+Kojarzy określonego **HString** obiekt z bieżącego **HString** obiektu.  
   
 ## <a name="syntax"></a>Składnia  
   
 ```  
-  
 void Attach(  
        HSTRING hstr  
        ) throw()  
 ```  
   
 #### <a name="parameters"></a>Parametry  
- `hstr`  
- Istniejący obiekt HString.  
+ *HSTR*  
+ Istniejące **HString** obiektu.  
   
 ## <a name="requirements"></a>Wymagania  
  **Nagłówek:** corewrappers.h  
   
- **Namespace:** Microsoft::wrl:: wrappers —  
+ **Namespace:** Microsoft::wrl:: wrappers  
   
 ## <a name="see-also"></a>Zobacz też  
  [HString, klasa](../windows/hstring-class.md)

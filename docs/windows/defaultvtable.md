@@ -17,36 +17,35 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: cb853e10b1745151c12f1855f841a21c2a7e126b
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 83949616f204ae37b42b91b03d69d8d803a1582f
+ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33882540"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39569673"
 ---
 # <a name="defaultvtable"></a>defaultvtable
-Definiuje interfejsu jako interfejsu domyślnego vtable dla obiekt COM.  
+Definiuje interfejs jako domyślnym interfejsem obiektu COM vtable.  
   
 ## <a name="syntax"></a>Składnia  
   
 ```  
-  
-      [ defaultvtable(  
+[ defaultvtable(  
    interface  
 ) ]  
 ```  
   
 #### <a name="parameters"></a>Parametry  
- `interface`  
- Wyznaczonych interfejs, który ma być vtable domyślny dla obiekt COM.  
+ *interface*  
+ Wyznaczonym interfejsu, który ma być vtable domyślnego dla obiektu COM.  
   
 ## <a name="remarks"></a>Uwagi  
- **Defaultvtable** atrybut C++ ma te same funkcje co [defaultvtable](http://msdn.microsoft.com/library/windows/desktop/aa366795) MIDL atrybutu.  
+ **Defaultvtable** atrybut C++ ma taką samą funkcjonalność jak [defaultvtable](http://msdn.microsoft.com/library/windows/desktop/aa366795) atrybutów w MIDL.  
   
 ## <a name="example"></a>Przykład  
- Poniższy kod przedstawia atrybuty dla klasy, która użyj **defaultvtable** do określania domyślnego interfejsu:  
+ Poniższy kod pokazuje atrybuty dla klasy, która będzie używać **defaultvtable** do określenia domyślnego interfejsu:  
   
-```  
+```cpp  
 // cpp_attr_ref_defaultvtable.cpp  
 // compile with: /LD  
 #include <unknwn.h>  
@@ -74,11 +73,11 @@ class CMyC3 : public IMyI3 {};
   
 ## <a name="requirements"></a>Wymagania  
   
-### <a name="attribute-context"></a>Atrybut kontekstu  
+### <a name="attribute-context"></a>Kontekst atrybutu  
   
 |||  
 |-|-|  
-|**Dotyczy**|**Klasa**, `struct`|  
+|**Dotyczy**|**Klasa**, **— struktura**|  
 |**Powtarzalne**|Nie|  
 |**Wymaganych atrybutów**|**coclass**|  
 |**Nieprawidłowe atrybuty**|Brak|  

@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: ad7af9f507a29531b14ff75aa97e0aee327db380
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 70031553e6a0585dc9f86df336ec2199cd7660ea
+ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33871370"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39571349"
 ---
 # <a name="derefhelper-structure"></a>DerefHelper — Struktura
 Obsługuje infrastrukturę biblioteki WRL i nie jest przeznaczona do użycia bezpośrednio w kodzie.  
@@ -42,17 +42,17 @@ struct DerefHelper<T*>;
 ```  
   
 #### <a name="parameters"></a>Parametry  
- `T`  
+ *T*  
  Parametr szablonu.  
   
 ## <a name="remarks"></a>Uwagi  
- Reprezentuje wyłuskiwany wskaźnik do `T*` parametru szablonu.  
+ Reprezentuje wskaźnik wyłuskiwany `T*` parametru szablonu.  
   
- Derefhelper — jest używany w wyrażeniu, takich jak: `ComPtr<Details::DerefHelper<ProgressTraits::Arg1Type>::DerefType> operationInterface;`.  
+ Derefhelper — jest używana w wyrażeniu, takich jak: `ComPtr<Details::DerefHelper<ProgressTraits::Arg1Type>::DerefType> operationInterface;`.  
   
 ## <a name="members"></a>Elementy członkowskie  
   
-### <a name="public-typedefs"></a>Definicje typów publicznych  
+### <a name="public-typedefs"></a>Publiczne definicje typów  
   
 |Nazwa|Opis|  
 |----------|-----------------|  
@@ -64,7 +64,7 @@ struct DerefHelper<T*>;
 ## <a name="requirements"></a>Wymagania  
  **Nagłówek:** async.h  
   
- **Namespace:** Microsoft::wrl:: details —  
+ **Namespace:** Microsoft::wrl:: details  
   
 ## <a name="see-also"></a>Zobacz też  
  [Microsoft::WRL::Details, przestrzeń nazw](../windows/microsoft-wrl-details-namespace.md)

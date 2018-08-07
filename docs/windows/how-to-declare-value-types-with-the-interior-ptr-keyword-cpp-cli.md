@@ -16,27 +16,27 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 6015d5a61589b8ed2d38b6491392fd42e4f38ef1
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 38cbfb171e218f70d45e5ef2e6e850d791803611
+ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33879480"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39571191"
 ---
 # <a name="how-to-declare-value-types-with-the-interiorptr-keyword-ccli"></a>Poradnik: Deklarowanie typów wartości za pomocą słowa kluczowego interior_ptr (C++/CLI)
-`interior_ptr` Może być używany z typem wartości.  
+**Pomocą interior_ptr** może być używany z typem wartości.  
   
 > [!IMPORTANT]
->  Ta funkcja językowa jest obsługiwana przez **/CLR** — opcja kompilatora, ale nie przez **/ZW** — opcja kompilatora.  
+>  Tej funkcji języka jest obsługiwana przez `/clr` — opcja kompilatora, ale nie za `/ZW` — opcja kompilatora.  
   
 ## <a name="example"></a>Przykład  
   
 ### <a name="description"></a>Opis  
- Następujące C + +/ CLI pokazano sposób użycia `interior_ptr` z typem wartości.  
+ Następujące C + +/ interfejsu wiersza polecenia przykład pokazuje, jak używać **pomocą interior_ptr** z typem wartości.  
   
 ### <a name="code"></a>Kod  
   
-```  
+```cpp  
 // interior_ptr_value_types.cpp  
 // compile with: /clr  
 value struct V {  
@@ -66,7 +66,7 @@ int main() {
   
 ### <a name="output"></a>Dane wyjściowe  
   
-```  
+```Output  
 1  
 2  
 2  
@@ -78,13 +78,13 @@ int main() {
 ## <a name="example"></a>Przykład  
   
 ### <a name="description"></a>Opis  
- W typie wartości `this` wskaźnika daje w wyniku interior_ptr.  
+ Utworzenie typu wartości **to** wskaźnika, daje w wyniku pomocą interior_ptr.  
   
- W treści niestatycznej funkcji członkowskiej typu wartości `V`, `this` jest wyrażeniem typu `interior_ptr<V>` którego wartość jest adresem obiektu, dla której wywołano tę funkcję.  
+ W treści niestatycznej funkcji składowej typu wartości `V`, **to** to wyrażenie typu `interior_ptr<V>` którego wartość jest adres obiektu, dla której wywołano tę funkcję.  
   
 ### <a name="code"></a>Kod  
   
-```  
+```cpp  
 // interior_ptr_value_types_this.cpp  
 // compile with: /clr /LD  
 value struct V {  
@@ -99,13 +99,13 @@ value struct V {
 ## <a name="example"></a>Przykład  
   
 ### <a name="description"></a>Opis  
- Poniższy przykład przedstawia sposób użycia operator address-of ze statycznymi elementami członkowskimi.  
+ Poniższy przykład pokazuje sposób użycia operatora address-of przy użyciu statycznych elementów członkowskich.  
   
- Adres statyczny element członkowski typu Visual C++ daje wskaźnik natywny.  Adresu elementu członkowskiego typu wartości statycznej jest wskaźnik zarządzanych, ponieważ element członkowski typu wartość jest przydzielony na stosie środowiska uruchomieniowego i mogą być przenoszone przez moduł garbage collector.  
+ Adres statyczny element członkowski typu Visual C++ daje wskaźnik natywny.  Adres elementu członkowskiego typu wartości statycznej jest wskaźnika zarządzanych, ponieważ składowa typu wartości jest przydzielony na stosie uruchomieniowym i mogą być przenoszone przez moduł odśmiecania pamięci.  
   
 ### <a name="code"></a>Kod  
   
-```  
+```cpp  
 // interior_ptr_value_static.cpp  
 // compile with: /clr  
 using namespace System;  
@@ -131,7 +131,7 @@ int main() {
   
 ### <a name="output"></a>Dane wyjściowe  
   
-```  
+```Output 
 22  
 23  
 hello  

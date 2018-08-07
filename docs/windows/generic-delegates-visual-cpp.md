@@ -16,15 +16,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: ecbfebc49f76eee7bb753af3d07052d1e05d73be
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 96c4c878edb0125aca2d4782afd53ce0967452a5
+ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33875601"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39571314"
 ---
 # <a name="generic-delegates-visual-c"></a>Delegaty ogólne (Visual C++)
-Z obiektów delegowanych można używać parametrów typu ogólnego. Aby uzyskać więcej informacji na delegatów, zobacz [delegata (C++ Component Extensions)](../windows/delegate-cpp-component-extensions.md).  
+Można używać parametrów typu ogólnego, przy użyciu delegatów. Aby uzyskać więcej informacji na temat obiektów delegowanych, zobacz [delegate (C++ Component Extensions)](../windows/delegate-cpp-component-extensions.md).  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -37,31 +37,31 @@ generic < [class | typename] type-parameter-identifiers>
 ```  
   
 #### <a name="parameters"></a>Parametry  
- `attributes` (Opcjonalnie)  
- Dodatkowe informacje deklaratywne. Aby uzyskać więcej informacji na atrybuty i klasy atrybutów Zobacz atrybutów.  
+ *atrybuty* (opcjonalnie)  
+ Dodatkowe informacje deklaratywnego. Aby uzyskać więcej informacji o atrybuty i klasy atrybutów Zobacz atrybutów.  
   
  *Typ — parametr-identyfikatory*  
  Rozdzielana przecinkami lista identyfikatorów dla parametrów typu.  
   
- `type-parameter-constraints-clauses`  
+ *Typ — parametr ograniczenia — klauzule*  
  Ma postać określone w [ograniczenia dotyczące parametrów typu ogólnego (C + +/ CLI)](../windows/constraints-on-generic-type-parameters-cpp-cli.md)  
   
  *modyfikatory dostępności* (opcjonalnie)  
- Modyfikatory dostępności (np. **publicznego**, `private`).  
+ Modyfikatory dostępności (np. **publicznych**, **prywatnej**).  
   
  *result-type*  
- Typ zwracany delegata.  
+ Zwracany typ delegata.  
   
  *Identyfikator*  
  Nazwa obiektu delegowanego.  
   
- *parametrów formalnych* (opcjonalnie)  
+ *parametry_formalne* (opcjonalnie)  
  Lista parametrów delegata.  
   
 ## <a name="example"></a>Przykład  
- Określono parametry typu delegata w momencie, gdy tworzony jest obiekt delegowany. Zarówno delegata, jak i metody skojarzonych z nim musi mieć taką samą sygnaturę. Oto przykład deklaracja Delegat ogólny.  
+ Parametry typu delegata są określone w punkcie, w którym tworzony jest obiekt delegowany. Delegat i skojarzona metoda musi mieć taki sam podpis. Oto przykład deklaracja delegata ogólnego.  
   
-```  
+```cpp  
 // generics_generic_delegate1.cpp  
 // compile with: /clr /c  
 generic <class ItemType>  
@@ -71,13 +71,13 @@ delegate ItemType GenDelegate(ItemType p1, ItemType% p2);
 ## <a name="example"></a>Przykład  
  Poniższy przykład pokazuje, że  
   
--   Nie można używać tego samego obiektu delegowanego różne typy utworzone. Tworzenie delegata różnych obiektów dla różnych typów.  
+-   Nie można użyć tego samego obiektu delegowanego z różnymi typami skonstruowany. Utwórz delegata różnych obiektów dla różnych typów.  
   
 -   Delegat ogólny może być skojarzony z metody rodzajowej.  
   
--   Po wywołaniu metody rodzajowej bez określania argumentów typu, kompilator próbuje wywnioskować argumentów typu dla wywołania.  
+-   Po wywołaniu metody ogólnej bez określania argumentów typu kompilator próbuje wywnioskować argumentów typu na wywołanie.  
   
-```  
+```cpp  
 // generics_generic_delegate2.cpp  
 // compile with: /clr  
 generic <class ItemType>  
@@ -112,9 +112,9 @@ int main() {
 ```  
   
 ## <a name="example"></a>Przykład  
- Poniższy przykład deklaruje Delegat ogólny `GenDelegate<ItemType>`i tworzy on przez skojarzenie jej z metodą `MyMethod` używającą parametr typu `ItemType`. Dwa wystąpienia delegata (całkowitą i wartość o podwójnej precyzji) są tworzone i wywoływane.  
+ Poniższy przykład deklaruje Delegat ogólny `GenDelegate<ItemType>`, a następnie tworzy wystąpienie przez skojarzenie jej z metodą `MyMethod` używającą parametrów typu `ItemType`. Dwa wystąpienia delegata (całkowitą i wartość o podwójnej precyzji) są tworzone i wywołana.  
   
-```  
+```cpp  
 // generics_generic_delegate.cpp  
 // compile with: /clr  
 using namespace System;  

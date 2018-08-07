@@ -1,5 +1,5 @@
 ---
-title: FtmBase::GetUnmarshalClass — metoda | Dokumentacja firmy Microsoft
+title: FtmBase::GetUnmarshalClass, metoda | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 09afd9f977dbc779eb1dc10e9553d2ca88538fcc
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 329d43227aa131728db72086f99cb86797a5e1e3
+ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33873306"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39571155"
 ---
 # <a name="ftmbasegetunmarshalclass-method"></a>FtmBase::GetUnmarshalClass — Metoda
-Pobiera identyfikator klasy, który COM używa do lokalizowania biblioteki DLL zawierającej kod dla odpowiedniego serwera proxy. COM ładuje tę bibliotekę DLL, można utworzyć niezainicjowanych wystąpienia serwera proxy.  
+Pobiera identyfikator klasy, który używa modelu COM, aby zlokalizować bibliotekę DLL zawierającego kod dla odpowiedniego serwera proxy. COM ładuje tę bibliotekę DLL, aby utworzyć wystąpienie niezainicjowanej serwera proxy.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -40,35 +40,35 @@ STDMETHODIMP GetUnmarshalClass(
 ) override;  
 ```  
   
-#### <a name="parameters"></a>Parametry  
- `riid`  
- Odwołanie do identyfikatora interfejsu, który ma być przekazywane.  
+### <a name="parameters"></a>Parametry  
+ *Parametr riid*  
+ Odwołanie do identyfikatora interfejsu aby być organizowany.  
   
- `pv`  
- Wskaźnik do interfejsu, który ma być organizowany; może mieć wartości NULL, jeśli element wywołujący nie ma wskaźnik do żądanego interfejsu.  
+ *Wa*  
+ Wskaźnik do interfejsu, aby zorganizować; może mieć wartości NULL, jeśli obiekt wywołujący nie ma wskaźnik do żądanego interfejsu.  
   
- `dwDestContext`  
- Docelowy kontekst, w którym ma zostać wycofana określonego interfejsu.  
+ *dwDestContext*  
+ Miejsce docelowe kontekst, w którym ma zostać wycofana określonego interfejsu.  
   
- Określ jedną lub więcej wartości wyliczenia MSHCTX.  
+ Określ co najmniej jednej wartości wyliczenia MSHCTX.  
   
- Unmarshaling może wystąpić w innego apartamentu bieżącego procesu (MSHCTX_INPROC) lub w inny proces na tym samym komputerze co bieżący proces (MSHCTX_LOCAL).  
+ Unmarshaling może wystąpić w innym apartamentu bieżącego procesu (MSHCTX_INPROC) lub w inny proces na tym samym komputerze, co bieżący proces (MSHCTX_LOCAL).  
   
- `pvDestContext`  
- Zarezerwowane do użytku w przyszłości; musi mieć wartość NULL.  
+ *pvDestContext*  
+ Zarezerwowane dla przyszłego użytku; musi mieć wartość NULL.  
   
- `mshlflags`  
- Po tej operacji zakończeniu wskaźnik do identyfikatora CLSID ma być używany do utworzenia obiektu pośredniczącego w procesie klienta.  
+ *mshlflags*  
+ Gdy ta operacja zostanie ukończone, wskaźnik do CLSID, który ma być używany do tworzenia serwera proxy w procesie klienta.  
   
- `pCid`  
+ *pCid*  
   
 ## <a name="return-value"></a>Wartość zwracana  
- S_OK w przypadku powodzenia; w przeciwnym razie wartości S_FALSE.  
+ S_OK w przypadku powodzenia; w przeciwnym razie wartość S_FALSE.  
   
 ## <a name="requirements"></a>Wymagania  
  **Nagłówek:** ftm.h  
   
- **Namespace:** Microsoft::wrl —  
+ **Namespace:** Microsoft::WRL  
   
 ## <a name="see-also"></a>Zobacz też  
  [FtmBase, klasa](../windows/ftmbase-class.md)

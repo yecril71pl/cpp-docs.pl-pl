@@ -1,5 +1,5 @@
 ---
-title: helpcontext | Dokumentacja firmy Microsoft
+title: helpcontext — | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,42 +17,41 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 317e204c7292c4a7cccb1f81f6bc9d2a2fbfd407
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 2089bca316fb37304765ac14475b73cadaf79342
+ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33877218"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39571363"
 ---
 # <a name="helpcontext"></a>helpcontext
-Określa identyfikator kontekstu, która pozwala użytkownikowi oglądać informacje o tym elemencie w pliku pomocy.  
+Określa identyfikator kontekstu, który pozwala użytkownikowi oglądać informacje o tym elemencie w pliku pomocy.  
   
 ## <a name="syntax"></a>Składnia  
   
 ```  
-  
-      [ helpcontext(  
+[ helpcontext(  
    id  
 ) ]  
 ```  
   
-#### <a name="parameters"></a>Parametry  
- `id`  
- Identyfikator kontekstu tematu Pomocy. Zobacz [Pomoc HTML: Context-Sensitive Pomoc dla programów Your](../mfc/html-help-context-sensitive-help-for-your-programs.md) uzyskać więcej informacji o kontekście identyfikatorów.  
+### <a name="parameters"></a>Parametry  
+ *id*  
+ Identyfikator kontekstu tematu Pomocy. Zobacz [HTML Help: Context-Sensitive Help for Your Programs](../mfc/html-help-context-sensitive-help-for-your-programs.md) więcej informacji na temat kontekstu identyfikatorów.  
   
 ## <a name="remarks"></a>Uwagi  
- **Helpcontext** atrybut C++ ma te same funkcje co [helpcontext](http://msdn.microsoft.com/library/windows/desktop/aa366851) MIDL atrybutu.  
+ **Helpcontext —** atrybut C++ ma taką samą funkcjonalność jak [helpcontext —](http://msdn.microsoft.com/library/windows/desktop/aa366851) atrybutów w MIDL.  
   
 ## <a name="example"></a>Przykład  
- Zobacz przykład [defaultvalue](../windows/defaultvalue.md) przykład sposobu użycia **helpcontext**.  
+ Zobacz przykład [defaultvalue](../windows/defaultvalue.md) przykład sposobu użycia **helpcontext —**.  
   
 ## <a name="requirements"></a>Wymagania  
   
-### <a name="attribute-context"></a>Atrybut kontekstu  
+### <a name="attribute-context"></a>Kontekst atrybutu  
   
 |||  
 |-|-|  
-|**Dotyczy**|`interface`, `typedef`, **klasy**, metody, właściwości|  
+|**Dotyczy**|**interfejs**, **typedef**, **klasy**, metody, właściwości|  
 |**Powtarzalne**|Nie|  
 |**Wymaganych atrybutów**|Brak|  
 |**Nieprawidłowe atrybuty**|Brak|  
@@ -63,7 +62,7 @@ Określa identyfikator kontekstu, która pozwala użytkownikowi oglądać inform
  [Atrybuty IDL](../windows/idl-attributes.md)   
  [Atrybuty interfejsu](../windows/interface-attributes.md)   
  [Atrybuty klasy](../windows/class-attributes.md)   
- [Atrybuty — metoda](../windows/method-attributes.md)   
- [Element TypeDef, Enum, Unii i struct — atrybuty](../windows/typedef-enum-union-and-struct-attributes.md)   
- [HelpFile](../windows/helpfile.md)   
+ [Atrybuty metody](../windows/method-attributes.md)   
+ [Element TypeDef, Enum, Union i struct — atrybuty](../windows/typedef-enum-union-and-struct-attributes.md)   
+ [HelpFile —](../windows/helpfile.md)   
  [helpstring](../windows/helpstring.md)   

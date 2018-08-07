@@ -26,33 +26,31 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 67d84840bb981eab05d923a3f430c9b3972cd1e7
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: e94945212b9a7215397a1179432e87178d236b42
+ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33871240"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39571288"
 ---
 # <a name="customizing-or-changing-colors-image-editor-for-icons"></a>Dostosowywanie lub zmiana kolorów (Edytor obrazów dla ikon)
-Edytor obrazów [palety kolorów](../windows/colors-window-image-editor-for-icons.md) początkowo wyświetlane 16 kolorów standardowych. Oprócz wyświetlanych kolory można tworzyć kolory niestandardowe. Następnie możesz [zapisać i załadować paletę kolorów niestandardowych](../windows/saving-and-loading-different-color-palettes-image-editor-for-icons.md).  
+Edytor obrazów [paleta kolorów](../windows/colors-window-image-editor-for-icons.md) początkowo wyświetlane są kolory standardowe 16. Oprócz wyświetlanych kolorów można utworzyć własne niestandardowe kolory. Następnie możesz [zapisać i załadować dostosowany palety kolorów](../windows/saving-and-loading-different-color-palettes-image-editor-for-icons.md).  
   
 ### <a name="to-change-colors-on-the-colors-palette"></a>Aby zmienić kolory palety kolorów  
   
-1.  Z **obrazu** menu, wybierz **Dopasuj kolory**.  
+1.  Z **obraz** menu, wybierz **Dopasuj kolory**.  
   
-2.  W [wybór koloru niestandardowego — okno dialogowe](../windows/custom-color-selector-dialog-box-image-editor-for-icons.md), Zdefiniuj kolor, wpisując wartości RGB lub HSL w odpowiednich polach lub wybierz kolor w **wyświetlania kolor gradientu** pole.  
+2.  W [okno dialogowe selektora kolorów niestandardowych](../windows/custom-color-selector-dialog-box-image-editor-for-icons.md), Zdefiniuj kolor, wpisując wartości RGB lub HSL w odpowiednie pola tekstowe, lub wybierz kolor w **gradientu wyświetlania kolorów** pole.  
   
 3.  Ustaw jasność za pomocą suwaka **jasność** paska.  
   
-4.  Wiele kolory niestandardowe są symulowane. Pełny kolor najbliżej kolor symulowany, kliknij dwukrotnie **kolor** pole.  
+4.  Wiele kolorów niestandardowych są symulowane. Pełny kolor najbliżej kolor symulowany, kliknij dwukrotnie **kolor** pole.  
   
-     Jeśli później zdecydujesz się ma kolor symulowany, przesuń suwak **jasność** pasek lub Przenieś krzyżyka w **wyświetlania kolor gradientu** pole ponownie, aby przywrócić symulowanie.  
+     Jeśli później zdecydujesz, ma kolor symulowany, przesuń suwak **jasność** pasek lub przenieść krzyżyka **gradientu wyświetlania kolorów** okno ponownie, aby przywrócić symulowania kolorów.  
   
 5.  Kliknij przycisk **OK** Aby dodać nowy kolor.  
   
-
-  
- Wymagania  
+## <a name="requirements"></a>Wymagania  
   
  Brak  
   

@@ -17,31 +17,29 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 460e3f5316bc4b4509e563fda2354106164b3b1a
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: b52359d1f50f5ea3bad4075432fd8ae0e468d2df
+ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33872383"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39571021"
 ---
 # <a name="dual"></a>dual
-Umieszcza interfejsu w pliku .idl jako interfejs podwójny.  
+Przełącza interfejsu w pliku .idl, jako podwójnego interfejsu.  
   
 ## <a name="syntax"></a>Składnia  
   
 ```  
-  
 [dual]  
-  
 ```  
   
 ## <a name="remarks"></a>Uwagi  
- Gdy **podwójną** atrybutu C++ poprzedza interfejs, powoduje interfejsu, który ma być umieszczony wewnątrz bloku biblioteki w pliku .idl wygenerowany.  
+ Gdy **podwójną** atrybut C++ poprzedza interfejs, sprawia, że interfejs, który ma być umieszczony wewnątrz bloku biblioteki w pliku .idl wygenerowany.  
   
 ## <a name="example"></a>Przykład  
- Następujący kod jest blok atrybutu, który używa **podwójną** przed definicji interfejsu:  
+ Poniższy kod jest blokiem atrybut, który używa **podwójną** przed definicję interfejsu:  
   
-```  
+```cpp  
 // cpp_attr_ref_dual.cpp  
 // compile with: /LD  
 #include <windows.h>  
@@ -75,11 +73,11 @@ __interface IStatic : IDispatch
   
 ## <a name="requirements"></a>Wymagania  
   
-### <a name="attribute-context"></a>Atrybut kontekstu  
+### <a name="attribute-context"></a>Kontekst atrybutu  
   
 |||  
 |-|-|  
-|**Dotyczy**|`interface`|  
+|**Dotyczy**|**interface**|  
 |**Powtarzalne**|Nie|  
 |**Wymaganych atrybutów**|Brak|  
 |**Nieprawidłowe atrybuty**|**dispinterface**|  
@@ -91,5 +89,5 @@ __interface IStatic : IDispatch
  [Atrybuty w zależności od użycia](../windows/attributes-by-usage.md)   
  [Niestandardowe](../windows/custom-cpp.md)   
  [Dispinterface](../windows/dispinterface.md)   
- [Obiekt](../windows/object-cpp.md)   
+ [obiekt](../windows/object-cpp.md)   
  [__interface](../cpp/interface.md)   

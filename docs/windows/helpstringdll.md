@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: d7cb3ab5fc624494d3292cd7a47031782ce7da70
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 27303f294f2414e2ea3f15de0c5bbfb1723628aa
+ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33877348"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39570083"
 ---
 # <a name="helpstringdll"></a>helpstringdll
 Określa nazwę biblioteki DLL, aby wykonać wyszukiwanie ciągu dokumentu (lokalizacja).  
@@ -30,22 +30,21 @@ Określa nazwę biblioteki DLL, aby wykonać wyszukiwanie ciągu dokumentu (loka
 ## <a name="syntax"></a>Składnia  
   
 ```  
-  
-      [ helpstringdll(  
+[ helpstringdll(  
    "string"  
 ) ]  
 ```  
   
-#### <a name="parameters"></a>Parametry  
- `string`  
- Biblioteki DLL, wykonać dokumentu ciąg wyszukiwania.  
+### <a name="parameters"></a>Parametry  
+ *string*  
+ Biblioteki DLL, użyj, aby wykonać wyszukiwanie ciągu dokumentu.  
   
 ## <a name="remarks"></a>Uwagi  
- **Helpstringdll —** atrybut C++ ma te same funkcje co [helpstringdll —](http://msdn.microsoft.com/library/windows/desktop/aa366860) MIDL atrybutu.  
+ **Helpstringdll —** atrybut C++ ma taką samą funkcjonalność jak [helpstringdll —](http://msdn.microsoft.com/library/windows/desktop/aa366860) atrybutów w MIDL.  
   
 ## <a name="example"></a>Przykład  
   
-```  
+```cpp  
 // cpp_attr_ref_helpstringdll.cpp  
 // compile with: /LD  
 #include <unknwn.h>  
@@ -60,11 +59,11 @@ __interface IMyI
   
 ## <a name="requirements"></a>Wymagania  
   
-### <a name="attribute-context"></a>Atrybut kontekstu  
+### <a name="attribute-context"></a>Kontekst atrybutu  
   
 |||  
 |-|-|  
-|**Dotyczy**|**Klasa**, `interface`, interfejsu — metoda|  
+|**Dotyczy**|**Klasa**, **interfejsu**, interfejs — metoda|  
 |**Powtarzalne**|Nie|  
 |**Wymaganych atrybutów**|Brak|  
 |**Nieprawidłowe atrybuty**|Brak|  

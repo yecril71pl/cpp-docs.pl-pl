@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 9785ea27c79ff0a118ff3697a22804c520b265ee
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 59354062dded7792dca1cd84683bba64f6a64aa0
+ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33873683"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39571428"
 ---
 # <a name="dontusenewusemakeoperator-new-operator"></a>DontUseNewUseMake::operator nowy operator
 Obsługuje infrastrukturę biblioteki WRL i nie jest przeznaczona do użycia bezpośrednio w kodzie.  
@@ -37,22 +37,22 @@ void* operator new(
 ```  
   
 #### <a name="parameters"></a>Parametry  
- `__unnamed0`  
- Parametr nienazwany określająca liczbę bajtów pamięci do przydzielenia.  
+ *__unnamed0*  
+ Nienazwany parametr, który określa liczbę bajtów pamięci do przydzielenia.  
   
- `placement`  
+ *placement*  
  Typ do przydzielenia.  
   
 ## <a name="return-value"></a>Wartość zwracana  
- Zapewnia sposób, aby przekazać dodatkowe argumenty, jeśli przeciążenia operatora `new`.  
+ Zapewnia sposób przekazywania dodatkowych argumentów, jeśli przeciążenia operatora **nowe**.  
   
 ## <a name="remarks"></a>Uwagi  
- Overloads operator `new` i uniemożliwia użycie w runtimeclass —.  
+ Przeciążenia operatora **nowe** i zapobiega używana w `RuntimeClass`.  
   
 ## <a name="requirements"></a>Wymagania  
  **Nagłówek:** implements.h  
   
- **Namespace:** Microsoft::wrl:: details —  
+ **Namespace:** Microsoft::wrl:: details  
   
 ## <a name="see-also"></a>Zobacz też  
  [Dontusenewusemake — klasa](../windows/dontusenewusemake-class.md)   

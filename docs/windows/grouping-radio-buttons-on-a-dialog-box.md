@@ -21,53 +21,52 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: aee3245a65ccdccc32b40c313eecdd45cb3ea8bf
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 7712927a10fa34c5b6436aecd002c9621546638b
+ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33879331"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39571506"
 ---
 # <a name="grouping-radio-buttons-on-a-dialog-box"></a>Grupowanie przycisków radiowych w oknie dialogowym
-Po dodaniu przycisków radiowych do okna dialogowego potraktować je jako grupę, przez ustawienie właściwości grupy w oknie dialogowym Właściwości przycisku pierwszej w grupie. Identyfikator formantu dla tego przycisku radiowego pojawia się w [Kreator dodawania zmiennej elementu członkowskiego](../ide/add-member-variable-wizard.md), co umożliwia dodawanie zmiennej członkowskiej w grupie przycisków radiowych.  
+Po dodaniu przycisków radiowych w oknie dialogowym potraktować je jako grupę, przez ustawienie właściwości grupy w oknie dialogowym właściwości pierwszy przycisk w grupie. Pojawi się w polu Identyfikator kontrolki, dla tego przycisku radiowego [Kreator dodawania zmiennej składowej](../ide/add-member-variable-wizard.md), co pozwala dodać zmienną członkowską, grupy przycisków radiowych.  
   
- Może mieć więcej niż jedna grupa przycisków radiowych w oknie dialogowym, a każda grupa powinny zostać dodane przy użyciu poniższej procedury.  
+ Może mieć więcej niż jedna grupa przycisków radiowych w oknie dialogowym, a każda grupa powinny zostać dodane, korzystając z następującej procedury.  
   
-### <a name="to-add-a-group-of-radio-buttons-to-a-dialog-box"></a>Aby dodać grupy przycisków radiowych do okna dialogowego  
+### <a name="to-add-a-group-of-radio-buttons-to-a-dialog-box"></a>Aby dodać grupę przycisków radiowych w oknie dialogowym  
   
-1.  Wybierz kontrolkę przycisku radiowego w [okno przybornika](/visualstudio/ide/reference/toolbox) i kliknij pozycję w oknie dialogowym, na którym chcesz umieścić kontrolkę.  
+1.  Zaznacz formant przycisku radiowego w [okno przybornika](/visualstudio/ide/reference/toolbox) i kliknij lokalizację, w którym chcesz umieścić kontrolkę w oknie dialogowym.  
   
-2.  Powtórz krok 1, aby dodać dowolną liczbę przycisków radiowych, zgodnie z potrzebami. Upewnij się, że w grupie przycisków radiowych są kolejne w kolejności tabulacji (Aby uzyskać więcej informacji, zobacz [zmiana kolejności formanty karty](../windows/changing-the-tab-order-of-controls.md)).  
+2.  Powtórz krok 1, aby dodać dowolną liczbę przyciski radiowe, ile potrzebujesz. Upewnij się, że przyciski radiowe w grupie są kolejne w kolejności tabulacji (Aby uzyskać więcej informacji, zobacz [zmiana kolejności formanty karty](../windows/changing-the-tab-order-of-controls.md)).  
   
-3.  W [okna właściwości](/visualstudio/ide/reference/properties-window)ustaw **grupy** właściwość *pierwszy* przycisku radiowego w kolejności tabulacji na **True**.  
+3.  W [okno właściwości](/visualstudio/ide/reference/properties-window)ustaw **grupy** właściwość *pierwszy* przycisku radiowego w kolejności tabulacji na **True**.  
   
-     Zmiana **grupy** właściwości **True** dodaje ws_group — styl do przycisku wpisu w obiekcie okna dialogowego skryptu zasobu i zapewnia, że użytkownik można wybrać tylko jeden przycisk radiowy naraz w przycisku grupy (po kliknięciu przycisku radiowego co inne osoby w grupie zostaną wyczyszczone).  
+     Zmiana **grupy** właściwości **True** dodaje WS_GROUP styl do przycisku wpis obiektu okna dialogowego skryptu zasobu i gwarantuje, że użytkownik może wybrać tylko jeden przycisk radiowy jednocześnie przycisku grupy (po kliknięciu przycisku radiowego co inne osoby w grupie zostaną wyczyszczone).  
   
     > [!NOTE]
-    >  Tylko pierwszy przycisk radiowy w grupie powinny mieć **grupy** ustawioną właściwość **True**. Jeśli masz dodatkowe funkcje kontroli, które nie są częścią grupy przycisk Ustaw **grupy** właściwości pierwszego formantu *jest spoza grupy* do **True** również. Pierwszą kontrolkę spoza grupy można szybko określić, naciskając klawisze CTRL + D, aby wyświetlić kolejność tabulacji.  
+    >  Tylko pierwszy przycisk radiowy w grupie powinny mieć **grupy** właściwością **True**. Jeśli masz dodatkowe formanty, które nie są częścią grupy przycisk, ustaw **grupy** właściwość pierwszy formant *jest spoza grupy* do **True** także. Pierwszy formant spoza grupy można szybko zidentyfikować, naciskając klawisze CTRL + D, aby wyświetlić kolejność tabulacji.  
   
-### <a name="to-add-a-member-variable-for-the-radio-button-group"></a>Aby dodać zmiennej członka w grupie przycisków radiowych  
+### <a name="to-add-a-member-variable-for-the-radio-button-group"></a>Aby dodać zmiennej składowej w grupie przycisków radiowych  
   
-1.  Kliknij prawym przyciskiem myszy pierwszy kontrolkę przycisku radiowego w kolejności tabulacji (formantu dominującego i z **grupy** właściwość, ustaw wartość True).  
+1.  Kliknij prawym przyciskiem myszy pierwszą kontrolkę przycisku radiowego w kolejności tabulacji (formant dominujący i z **grupy** właściwość ustawioną na wartość True).  
   
 2.  Wybierz **Dodaj zmienną** z menu skrótów.  
   
-3.  W [Kreator dodawania zmiennej członkowskiej](../ide/add-member-variable-wizard.md), wybierz pozycję **zmienna sterująca** pole wyboru, a następnie wybierz **wartość** przycisk radiowy.  
+3.  W [Kreator dodawania zmiennej składowej](../ide/add-member-variable-wizard.md), wybierz opcję **zmienna sterująca** pole wyboru, a następnie wybierz **wartość** przycisku radiowego.  
   
-4.  W **nazwa zmiennej** wpisz nazwę nowej zmiennej elementu członkowskiego.  
+4.  W **nazwa zmiennej** wpisz nazwę dla nowej zmiennej elementu członkowskiego.  
   
 5.  W **typ zmiennej** pola listy, wybierz opcję **int** lub typ **int**.  
   
-6.  Można również zmodyfikować swój kod, aby określić przycisku radiowego, która powinna zostać wyświetlona wybrane. Na przykład m_radioBox1 = 0; wybiera pierwszy przycisk radiowy w grupie.  
+6.  Teraz można edytować swój kod, aby określić, który przycisk radiowy powinien zostaną wyświetlone jako zaznaczone. Na przykład m_radioBox1 = 0. wybiera pierwszy przycisk radiowy w grupie.  
   
- Aby uzyskać informacje o dodawaniu zasobów do projektów zarządzanych, zobacz [zasobów w aplikacjach pulpitu](/dotnet/framework/resources/index) w *Przewodnik programistów platformy .NET Framework.* Aby uzyskać informacje na ręczne dodanie do projektów zarządzanych plików zasobów, uzyskiwanie dostępu do zasobów, wyświetlanie zasoby statyczne i przypisanie do właściwości ciągów zasobów, zobacz [tworzenie plików zasobów dla aplikacji pulpitu](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Informacje dotyczące globalizacji i lokalizacji zasobów w zarządzanych aplikacjach, zobacz [Globalizing i lokalizacja aplikacji .NET Framework](/dotnet/standard/globalization-localization/index).  
+ Aby uzyskać informacje na temat dodawania zasobów do projektów zarządzanych, zobacz [zasoby w aplikacjach pulpitu](/dotnet/framework/resources/index) w *przewodniku dewelopera .NET Framework*. Aby uzyskać informacji na temat ręcznego dodawania plików zasobów do projektów zarządzanych, uzyskiwania dostępu do zasobów, wyświetlania statycznych zasobów i przypisywania ciągów zasobów do właściwości, zobacz [Creating Resource Files dla aplikacji klasycznych](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Aby uzyskać informacji na temat globalizacja i lokalizacja zasobów w aplikacjach zarządzanych, zobacz [Globalizing i lokalizowanie aplikacji programu .NET Framework](/dotnet/standard/globalization-localization/index).  
   
- Wymagania  
+## <a name="requirements"></a>Wymagania  
   
  Win32  
   
 ## <a name="see-also"></a>Zobacz też  
- [Rozmieszczenie formantów w oknach dialogowych](../windows/arrangement-of-controls-on-dialog-boxes.md)   
+ [Rozmieszczenie kontrolek w oknach dialogowych](../windows/arrangement-of-controls-on-dialog-boxes.md)   
  [Formanty w oknach dialogowych](../windows/controls-in-dialog-boxes.md)   
  [Kontrolki](../mfc/controls-mfc.md)
-

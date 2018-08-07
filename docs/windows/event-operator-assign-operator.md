@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: d3da41ff7fd145889ec799bb2f8ebe99aed36934
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: a523d6ba8679bf7d0bdf98563b86946e16e7bfca
+ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33871126"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39571301"
 ---
 # <a name="eventoperator-operator"></a>Event::operator= Operator
-Przypisuje określonego zdarzenia odwołanie do bieżącego wystąpienia zdarzenia.  
+Przypisuje określonego **zdarzeń** referencję do bieżącego **zdarzeń** wystąpienia.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -36,16 +36,16 @@ WRL_NOTHROW Event& operator=(
 ```  
   
 #### <a name="parameters"></a>Parametry  
- `h`  
- R-wartości — odwołanie do wystąpienia zdarzenia.  
+ *h*  
+ Odwołania rvalue do **zdarzeń** wystąpienia.  
   
 ## <a name="return-value"></a>Wartość zwracana  
- Wskaźnik do bieżącego wystąpienia zdarzenia.  
+ Wskaźnik do bieżącego **zdarzeń** wystąpienia.  
   
 ## <a name="requirements"></a>Wymagania  
  **Nagłówek:** corewrappers.h  
   
- **Namespace:** Microsoft::wrl:: wrappers —  
+ **Namespace:** Microsoft::wrl:: wrappers  
   
 ## <a name="see-also"></a>Zobacz też  
  [Event, klasa (Biblioteka szablonów języka C++ środowiska uruchomieniowego systemu Windows)](../windows/event-class-windows-runtime-cpp-template-library.md)

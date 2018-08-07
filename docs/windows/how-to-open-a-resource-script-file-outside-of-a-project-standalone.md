@@ -20,56 +20,54 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 87dd0cb1e54b6e74c9c4f4fd7d9baff6461ad470
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 70cba5145f64fd88d1d6f1c4a68ac4c0730968cc
+ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33879168"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39570385"
 ---
 # <a name="how-to-open-a-resource-script-file-outside-of-a-project-standalone"></a>Porady: otwieranie pliku skryptu zasobu spoza projektu (autonomicznego)
-Można wyświetlić zasobów w plik .rc, bez konieczności otwierania projektu. Plik .rc zostanie otwarty w oknie dokumentu w przeciwieństwie do otwierania w [widok zasobów](../windows/resource-view-window.md) okna (jak w przypadku plik jest otwarty w projekcie).  
+Zasoby można wyświetlić w pliku .rc, bez konieczności jest otwarty projekt. Plik .rc zostanie otwarty w oknie dokumentu, w przeciwieństwie do otwarcia w [widok zasobów](../windows/resource-view-window.md) okna (co jest wykonywane, gdy plik jest otwarty w projekcie).  
   
 > [!NOTE]
->  Jest to ważna różnica, ponieważ niektóre polecenia są dostępne tylko, gdy plik jest otwarty autonomiczny (spoza projektu). Na przykład można tylko zapisywania pliku w innym formacie lub inną nazwę pliku po otwarciu pliku spoza projektu ( **Zapisz jako** polecenie jest niedostępne, gdy plik jest otwarty w projekcie).  
+>  Jest to ważna różnica, ponieważ niektóre polecenia są dostępne tylko wtedy, gdy plik jest otwarty autonomiczny (spoza projektu). Na przykład, można tylko zapisywania pliku w innym formacie lub innej nazwy pliku po otwarciu pliku spoza projektu ( **Zapisz jako** polecenie jest niedostępne, gdy plik jest otwarty w projekcie).  
   
 ### <a name="to-open-an-rc-file-outside-a-project"></a>Aby otworzyć plik .rc poza projektem  
   
 1.  Z **pliku** menu, wybierz **Otwórz**, następnie kliknij przycisk **pliku**.  
   
-2.  W **Otwórz plik** okna dialogowego Przejdź do pliku skryptu zasobu chcesz wyświetlić, zaznacz plik, a następnie kliknij pozycję **Otwórz**.  
+2.  W **Otwórz plik** okno dialogowe, przejdź do pliku skryptu zasobu, aby wyświetlić, zaznacz plik i kliknij przycisk **Otwórz**.  
   
     > [!NOTE]
-    >  Jeśli Otwórz projekt (**pliku**, **Otwórz**, **projektu**), niektóre polecenia nie będą dostępne dla Ciebie. Otwierania pliku "autonomiczny" oznacza otwarcie go bez pierwszy ładowania projektu.  
+    >  Jeśli Otwórz projekt (**pliku**, **Otwórz**, **projektu**), niektóre polecenia nie będą dostępne dla Ciebie. Otwieranie pliku "autonomicznej" oznacza, otwierając go bez pierwszego ładowania projektu.  
   
- Aby otworzyć i wyświetlić plik zasobu w formacie tekstowym, zobacz [edycji skrypt zasobu (.rc) pliku](../windows/how-to-open-a-resource-script-file-in-text-format.md).  
+ Aby otworzyć i wyświetlić plik zasobów w formacie tekstowym, zobacz [edycji skrypt zasobu (.rc) pliku](../windows/how-to-open-a-resource-script-file-in-text-format.md).  
   
-#### <a name="to-open-multiple-rc-files-outside-a-project"></a>Do otwarcia wielu plików .rc poza projektem  
+### <a name="to-open-multiple-rc-files-outside-a-project"></a>Aby otworzyć wiele plików .rc poza projektem  
   
-1.  Otwórz zarówno zasobów plików autonomicznych. Na przykład otwórz Source1.rc i Source2.rc.  
+1.  Otwórz zarówno autonomiczne pliki zasobów. Na przykład otworzyć Source1.rc i Source2.rc.  
   
     1.  Z **pliku** menu, wybierz **Otwórz**, następnie kliknij przycisk **pliku**.  
   
-    2.  W **Otwieranie pliku** okna dialogowego Przejdź do pierwszego pliku skryptu zasobu chcesz otworzyć (Source1.rc), zaznacz plik, a następnie kliknij pozycję **Otwórz**.  
+    2.  W **Otwórz plik** okno dialogowe, przejdź do pierwszego pliku skryptu zasobu, aby otworzyć (Source1.rc), zaznacz plik i kliknij przycisk **Otwórz**.  
   
     3.  Powtórz poprzedni krok, aby otworzyć drugiego pliku .rc (Source2.rc).  
   
-         .RC — pliki są teraz otwarte w oddzielnych dokumentów w systemie windows.  
+         Pliki .rc są teraz otwarte w oddzielnych dokumentów w systemie windows.  
   
-2.  Gdy zarówno .RC — pliki są otwarte, sąsiadująco, więc możesz przeglądać jednocześnie:  
+2.  Gdy oba pliki .rc są otwarte, Kafelek systemu windows, dzięki czemu można je wyświetlić, jednocześnie:  
   
-    -   Z **okna** menu, wybierz **nową grupę kart poziomy** lub **nową grupę kart pionowy**.  
+    -   Z **okna** menu, wybierz **nową grupę karta pozioma** lub **nowej grupie pionowej karcie**.  
   
-         \- lub -  
+         \- lub —  
   
-    -   Kliknij prawym przyciskiem myszy jeden z .RC — pliki i wybierz polecenie **nową grupę kart poziomy** lub **nową grupę kart pionowy** z menu skrótów.  
+    -   Kliknij prawym przyciskiem myszy jeden z plików .rc i wybierz polecenie **nową grupę karta pozioma** lub **nowej grupie pionowej karcie** z menu skrótów.  
   
 > [!NOTE]
->  Jeśli projekt nie zawiera już plik .rc, zobacz [Tworzenie nowego pliku skryptu zasobu](../windows/how-to-create-a-resource-script-file.md).  
+>  Jeśli projekt nie zawiera jeszcze pliku .rc, zobacz [tworzenia nowego pliku skryptu zasobów](../windows/how-to-create-a-resource-script-file.md).  
   
-
-  
-### <a name="requirements"></a>Wymagania  
+## <a name="requirements"></a>Wymagania  
  Win32  
   
 ## <a name="see-also"></a>Zobacz też  

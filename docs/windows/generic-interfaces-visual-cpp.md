@@ -16,21 +16,21 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 8e16a2ab8a1ee0c9255f394d033bda2a7afc2b7e
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 428004d3390b95c700c53fd157b62a1b3fbe3d0b
+ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33878700"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39571178"
 ---
 # <a name="generic-interfaces-visual-c"></a>Interfejsy ogólne (Visual C++)
-Ograniczenia, które dotyczą parametry typu w klasach są takie same jak te, które dotyczą parametry typu w interfejsach (zobacz [klasy ogólne (C + +/ CLI)](../windows/generic-classes-cpp-cli.md)).  
+Ograniczenia, które są stosowane do parametrów typu w klasach są takie same jak te, które są stosowane do parametrów typu w interfejsach (zobacz [klasy ogólne (C + +/ CLI)](../windows/generic-classes-cpp-cli.md)).  
   
- Zasady, które kontrolują przeciążanie funkcji są takie same dla funkcji w ramach ogólnych interfejsów lub klas ogólnych.  
+ Reguły które kontrolują, przeciążanie funkcji — są takie same dla funkcji w ramach ogólnego klas lub interfejsów ogólnych.  
   
- Implementacje elementów członkowskich interfejsu jawnego współpracy z typami skonstruowanego interfejsu w taki sam sposób jak z typami prostego interfejsu (przykłady).  
+ W jawnej implementacji elementu członkowskiego pracują z typami skonstruowanego interfejsu w taki sam sposób jak z typami prosty interfejs (zobacz poniższy przykład).  
   
- Aby uzyskać więcej informacji na interfejsy, zobacz [interfejsu klasy](../windows/interface-class-cpp-component-extensions.md).  
+ Aby uzyskać więcej informacji na temat interfejsów, zobacz [interfejsu klasy](../windows/interface-class-cpp-component-extensions.md).  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -41,15 +41,15 @@ Ograniczenia, które dotyczą parametry typu w klasach są takie same jak te, kt
   
 ## <a name="remarks"></a>Uwagi  
  *atrybuty* (opcjonalnie)  
- Dodatkowe informacje deklaratywne. Aby uzyskać więcej informacji na atrybuty i klasy atrybutów Zobacz atrybutów.  
+ Dodatkowe informacje deklaratywnego. Aby uzyskać więcej informacji o atrybuty i klasy atrybutów Zobacz atrybutów.  
   
  *klucz klasy*  
  **Klasa** lub **typename**  
   
- `type-parameter-identifier(s)`  
+ *Typ — parametr-identyfikatory*  
  Lista identyfikatorów rozdzielonych przecinkami.  
   
- `type-parameter-constraints-clauses`  
+ *Typ — parametr ograniczenia — klauzule*  
  Ma postać określone w [ograniczenia dotyczące parametrów typu ogólnego (C + +/ CLI)](../windows/constraints-on-generic-type-parameters-cpp-cli.md)  
   
  *modyfikatory dostępności* (opcjonalnie)  
@@ -59,18 +59,18 @@ Ograniczenia, które dotyczą parametry typu w klasach są takie same jak te, kt
  Nazwa interfejsu.  
   
  *Lista podstawowego* (opcjonalnie)  
- Lista zawierająca jeden lub więcej jawne interfejsach podstawowych oddzielonych przecinkami.  
+ Lista, która zawiera co najmniej jeden jawne interfejsy podstawowe rozdzielonych przecinkami.  
   
- *Interfejs treści*  
+ *treść_interfejsu*  
  Deklaracje członków interfejsu.  
   
  *deklaratory* (opcjonalnie)  
  Deklaracje zmiennych na podstawie tego typu.  
   
 ## <a name="example"></a>Przykład  
- W poniższym przykładzie pokazano, jak zadeklarować i utworzenia wystąpienia interfejs generyczny. W tym przykładzie interfejs ogólny `IList<ItemType>` jest zadeklarowany. Następnie jest stosowana przez dwie klasy rodzajowe `List1<ItemType>` i `List2<ItemType>`, z różnych implementacji.  
+ Poniższy przykład pokazuje sposób deklarowania i utworzyć wystąpienie ogólny interfejs. W tym przykładzie interfejs ogólny `IList<ItemType>` jest zadeklarowana. Następnie jest implementowany przez dwie klasy ogólne, `List1<ItemType>` i `List2<ItemType>`, za pomocą różne implementacje.  
   
-```  
+```cpp  
 // generic_interface.cpp  
 // compile with: /clr  
 using namespace System;  
@@ -244,9 +244,9 @@ List2
 ```  
   
 ## <a name="example"></a>Przykład  
- W tym przykładzie deklaruje to interfejs generyczny `IMyGenIface`i dwa interfejsy nieogólnego, `IMySpecializedInt` i `ImySpecializedString`, który specialize `IMyGenIface`. Dwa interfejsy specjalne następnie są implementowane przez dwie klasy `MyIntClass` i `MyStringClass`. W przykładzie przedstawiono sposób specialize interfejsach wystąpienia interfejsy ogólne i inny niż ogólny i wywołać jawnie implementowane elementy członkowskie interfejsów.  
+ W tym przykładzie deklaruje ogólny interfejs `IMyGenIface`, a dwa interfejsy nieogólnego, `IMySpecializedInt` i `ImySpecializedString`, który specialize `IMyGenIface`. Dwa interfejsy wyspecjalizowane następnie są implementowane przez dwie klasy `MyIntClass` i `MyStringClass`. W przykładzie pokazano sposób specialize interfejsów ogólnych, wystąpienia interfejsów ogólnych i nieogólnych i wywoływać elementy członkowskie jawnie implementowane na interfejsach.  
   
-```  
+```cpp  
 // generic_interface2.cpp  
 // compile with: /clr  
 // Specializing and implementing generic interfaces.  

@@ -19,15 +19,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: f1a4bf31ff44c74362e21e8888630273fcc049e3
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 2cbb5be3603f79a7df1cb330ca06775357666854
+ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33881341"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39570314"
 ---
 # <a name="getactivationfactory-function"></a>GetActivationFactory — Funkcja
-Pobiera fabryki aktywacji dla typu określonego przez parametr szablonu.  
+Pobiera fabrykę aktywacji dla typu określonego przez parametr szablonu.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -39,15 +39,15 @@ inline HRESULT GetActivationFactory(
 );  
 ```  
   
-#### <a name="parameters"></a>Parametry  
- `T`  
- Parametr szablonu, który określa typ fabryki aktywacji.  
+### <a name="parameters"></a>Parametry  
+ *T*  
+ Parametr szablonu, który określa typ fabryką aktywacji.  
   
- `activatableClassId`  
- Nazwa klasy, która może tworzyć fabryki aktywacji.  
+ *activatableClassId*  
+ Nazwa klasy, która może spowodować fabryką aktywacji.  
   
- `factory`  
- Po zakończeniu tej operacji, odwołanie z fabryką aktywacji dla typu `T`.  
+ *Fabryka*  
+ Po zakończeniu tej operacji, odwołanie do aktywacji fabryki dla typu *T*.  
   
 ## <a name="return-value"></a>Wartość zwracana  
  S_OK w przypadku powodzenia; w przeciwnym razie błąd HRESULT, która wskazuje, dlaczego ta operacja nie powiodła się.  
@@ -55,7 +55,7 @@ inline HRESULT GetActivationFactory(
 ## <a name="requirements"></a>Wymagania  
  **Nagłówek:** client.h  
   
- **Namespace:** Windows::Foundation —  
+ **Namespace:** Windows::Foundation  
   
 ## <a name="see-also"></a>Zobacz też  
  [Windows::Foundation, przestrzeń nazw](../windows/windows-foundation-namespace.md)

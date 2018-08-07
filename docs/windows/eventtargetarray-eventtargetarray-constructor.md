@@ -1,5 +1,5 @@
 ---
-title: Eventtargetarray::eventtargetarray — Konstruktor | Dokumentacja firmy Microsoft
+title: EventTargetArray::EventTargetArray, Konstruktor | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: fbfd12ea513044f1062e60f5c73f5089683f043d
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 831c9a524f8120c855382d198a5f53ac312cada6
+ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33872718"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39569791"
 ---
 # <a name="eventtargetarrayeventtargetarray-constructor"></a>EventTargetArray::EventTargetArray — Konstruktor
 Obsługuje infrastrukturę biblioteki WRL i nie jest przeznaczona do użycia bezpośrednio w kodzie.  
@@ -36,9 +36,9 @@ EventTargetArray(
 );  
 ```  
   
-#### <a name="parameters"></a>Parametry  
- `hr`  
- Po tej operacji konstruktora parametru `hr` wskazuje, czy alokacji tablicy powodzeniem lub niepowodzeniem. W poniższej tabeli przedstawiono możliwe wartości `hr`.  
+### <a name="parameters"></a>Parametry  
+ *godz.*  
+ Po tej operacji konstruktora parametru *hr* wskazuje, czy przydział tablicy zakończonych powodzeniem lub niepowodzeniem. Poniższa tabela zawiera listę możliwych wartości dla *hr*.  
   
  S_OK  
  Operacja zakończyła się pomyślnie.  
@@ -47,20 +47,20 @@ EventTargetArray(
  Nie można przydzielić pamięci dla tablicy.  
   
  S_FALSE  
- Parametr `items` jest mniejsza niż lub równa zero.  
+ Parametr *elementów* jest mniejsza niż zero.  
   
- `items`  
- Liczba elementów tablicy do przydzielenia.  
+ *Elementy*  
+ Liczba elementów tablicy można przydzielić.  
   
 ## <a name="remarks"></a>Uwagi  
- Inicjuje nowe wystąpienie klasy eventtargetarray —.  
+ Inicjuje nowe wystąpienie klasy **EventTargetArray** klasy.  
   
- Eventtargetarray — jest używany do przechowywania tablicę procedury obsługi zdarzeń w obiektu EventSource.  
+ **EventTargetArray** jest używany do przechowywania programu obsługi zdarzeń w tablicy `EventSource` obiektu.  
   
 ## <a name="requirements"></a>Wymagania  
  **Nagłówek:** event.h  
   
- **Namespace:** Microsoft::wrl:: details —  
+ **Namespace:** Microsoft::wrl:: details  
   
 ## <a name="see-also"></a>Zobacz też  
  [Eventtargetarray — klasa](../windows/eventtargetarray-class.md)   

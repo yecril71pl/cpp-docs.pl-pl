@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 99a596bf1e086ac7b1a1a72c3504ce4f41844ba4
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 87a8718971a2da008b03dca1e9653d8454115adb
+ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33876153"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39570600"
 ---
 # <a name="handlet-class"></a>HandleT — Klasa
 Reprezentuje uchwyt do obiektu.  
@@ -36,52 +36,52 @@ template <
 class HandleT;  
 ```  
   
-#### <a name="parameters"></a>Parametry  
- `HandleTraits`  
- Wystąpienie [handletraits —](../windows/handletraits-structure.md) stucture, który definiuje wspólne cechy dojścia.  
+### <a name="parameters"></a>Parametry  
+ *Handletraits —*  
+ Wystąpienie [handletraits —](../windows/handletraits-structure.md) stucture, który definiuje typowe cechy dojście.  
   
 ## <a name="members"></a>Elementy członkowskie  
   
-### <a name="public-typedefs"></a>Definicje typów publicznych  
+### <a name="public-typedefs"></a>Publiczne definicje typów  
   
 |Nazwa|Opis|  
 |----------|-----------------|  
-|`Traits`|Jest to synonim `HandleTraits`.|  
+|`Traits`|Synonim dla `HandleTraits`.|  
   
 ### <a name="public-constructors"></a>Konstruktory publiczne  
   
 |Nazwa|Opis|  
 |----------|-----------------|  
-|[HandleT::HandleT, konstruktor](../windows/handlet-handlet-constructor.md)|Inicjuje nowe wystąpienie klasy handlet —.|  
-|[HandleT::~HandleT, destruktor](../windows/handlet-tilde-handlet-destructor.md)|Deinitializes wystąpienia klasy handlet —.|  
+|[HandleT::HandleT, konstruktor](../windows/handlet-handlet-constructor.md)|Inicjuje nowe wystąpienie klasy **HandleT** klasy.|  
+|[HandleT::~HandleT, destruktor](../windows/handlet-tilde-handlet-destructor.md)|Wyłącza wystąpienie **HandleT** klasy.|  
   
 ### <a name="public-methods"></a>Metody publiczne  
   
 |Nazwa|Opis|  
 |----------|-----------------|  
-|[HandleT::Attach, metoda](../windows/handlet-attach-method.md)|Kojarzy określone dojście z bieżącym obiektem handlet —.|  
-|[HandleT::Close, metoda](../windows/handlet-close-method.md)|Zamyka bieżący obiekt handlet —.|  
-|[HandleT::Detach, metoda](../windows/handlet-detach-method.md)|Usuwa skojarzenia bieżącego obiektu handlet — z uchwytu podstawowej.|  
-|[HandleT::Get, metoda](../windows/handlet-get-method.md)|Pobiera wartość podstawowej dojścia.|  
-|[HandleT::IsValid, metoda](../windows/handlet-isvalid-method.md)|Wskazuje, czy bieżący obiekt handlet — reprezentuje dojścia.|  
+|[HandleT::Attach, metoda](../windows/handlet-attach-method.md)|Kojarzy określone dojście z bieżącego **HandleT** obiektu.|  
+|[HandleT::Close, metoda](../windows/handlet-close-method.md)|Zamyka bieżące **HandleT** obiektu.|  
+|[HandleT::Detach, metoda](../windows/handlet-detach-method.md)|Powoduje usunięcie bieżącego **HandleT** obiekt z jego podstawowego dojścia.|  
+|[HandleT::Get, metoda](../windows/handlet-get-method.md)|Pobiera wartość podstawowego dojścia.|  
+|[HandleT::IsValid, metoda](../windows/handlet-isvalid-method.md)|Wskazuje, czy bieżący **HandleT** obiekt reprezentuje dojście.|  
   
 ### <a name="protected-methods"></a>Metody chronione  
   
 |Nazwa|Opis|  
 |----------|-----------------|  
-|[HandleT::InternalClose, metoda](../windows/handlet-internalclose-method.md)|Zamyka bieżący obiekt handlet —.|  
+|[HandleT::InternalClose, metoda](../windows/handlet-internalclose-method.md)|Zamyka bieżące **HandleT** obiektu.|  
   
 ### <a name="public-operators"></a>Operatory publiczne  
   
 |Nazwa|Opis|  
 |----------|-----------------|  
-|[Operator HandleT::operator=](../windows/handlet-operator-assign-operator.md)|Przenosi bieżący obiekt handlet — wartość określonego obiektu handlet —.|  
+|[Operator HandleT::operator=](../windows/handlet-operator-assign-operator.md)|Przenosi wartość określonego **HandleT** obiekt do bieżącego **HandleT** obiektu.|  
   
-### <a name="protected-data-members"></a>Dane chronione elementy członkowskie  
+### <a name="protected-data-members"></a>Chronione elementy członkowskie danych  
   
 |Nazwa|Opis|  
 |----------|-----------------|  
-|[HandleT::handle_, składowa danych](../windows/handlet-handle-data-member.md)|Zawiera dojście reprezentowanego przez obiekt handlet —.|  
+|[HandleT::handle_, składowa danych](../windows/handlet-handle-data-member.md)|Zawiera uchwyt, który jest reprezentowany przez **HandleT** obiektu.|  
   
 ## <a name="inheritance-hierarchy"></a>Hierarchia dziedziczenia  
  `HandleT`  
@@ -89,7 +89,7 @@ class HandleT;
 ## <a name="requirements"></a>Wymagania  
  **Nagłówek:** corewrappers.h  
   
- **Namespace:** Microsoft::wrl:: wrappers —  
+ **Namespace:** Microsoft::wrl:: wrappers  
   
 ## <a name="see-also"></a>Zobacz też  
  [Microsoft::WRL::Wrappers, przestrzeń nazw](../windows/microsoft-wrl-wrappers-namespace.md)

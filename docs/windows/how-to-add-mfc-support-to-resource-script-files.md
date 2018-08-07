@@ -20,43 +20,41 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 50c0493e630c2b141da1fced6964ffc514c761d4
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 7237366daeaa71ba423aa069bb634b1b9f6bc667
+ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33879799"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39569745"
 ---
 # <a name="how-to-add-mfc-support-to-resource-script-files"></a>Porady: dodawanie obsługi MFC do plików skryptu zasobu
-Zwykle podczas budowania aplikacji MFC dla systemu Windows przy użyciu [Kreator aplikacji MFC](../mfc/reference/mfc-application-wizard.md), Kreator generuje podstawowego zestawu plików (w tym pliku skryptu (.rc) zasobu), który zawiera podstawowe funkcje programu Microsoft Foundation klasy (MFC). Jednak w przypadku edycji plik .rc dla aplikacji systemu Windows, który nie jest oparty na MFC, następujące funkcje specyficzne dla programu MFC framework nie są dostępne:  
+Zwykle podczas kompilowania aplikacji MFC dla Windows przy użyciu [Kreator aplikacji MFC](../mfc/reference/mfc-application-wizard.md), Kreator generuje zestaw podstawowych plików (w tym pliku zasobu skryptu (.rc)), który zawiera podstawowe funkcje programu Microsoft Foundation klasy (MFC). Jednak jeśli edytujesz plik .rc dla aplikacji Windows, która nie jest oparty na bibliotece MFC, następujące funkcje specyficzne dla platformy MFC nie są dostępne:  
   
--   Kreatorzy kodów MFC (wcześniej nazywane "[MFC ClassWizard](http://msdn.microsoft.com/en-us/98dc2434-ba93-4e0b-b084-1a4bc26cdf1e)")  
+-   Kreatorzy kodu MFC (wcześniej nazywane "[Kreator klas MFC](http://msdn.microsoft.com/98dc2434-ba93-4e0b-b084-1a4bc26cdf1e)")  
   
--   Ciągi monitu menu  
+-   Ciągi menu podpowiedzi  
   
--   Wyświetlanie zawartości dla formantów pola kombi  
+-   Zawartość list dla formantów pola kombi  
   
--   Hosting kontrolki ActiveX  
+-   Obsługa formantu ActiveX  
   
- Można jednak dodać obsługę MFC do istniejących .RC — pliki, które nie mają.  
+ Można jednak dodać obsługę MFC do istniejących plików .rc, które nie mają.  
   
-### <a name="to-add-mfc-support-to-rc-files"></a>Aby dodać obsługę MFC do .RC — pliki  
+### <a name="to-add-mfc-support-to-rc-files"></a>Aby dodać obsługę MFC do plików .rc  
   
 1.  Otwórz pliku skryptu zasobu.  
   
     > [!NOTE]
-    >  Jeśli projekt nie zawiera już plik .rc, zobacz [Tworzenie nowego pliku skryptu zasobu](../windows/how-to-create-a-resource-script-file.md).  
+    >  Jeśli projekt nie zawiera jeszcze pliku .rc, zobacz [tworzenia nowego pliku skryptu zasobów](../windows/how-to-create-a-resource-script-file.md).  
   
-2.  W [widok zasobów](../windows/resource-view-window.md), zaznacz folder zasoby (na przykład MFC.rc).  
+2.  W [widok zasobów](../windows/resource-view-window.md), wyróżnij folder zasobów (na przykład MFC.rc).  
   
-3.  W [okna właściwości](/visualstudio/ide/reference/properties-window)ustaw **tryb MFC** właściwości **True**.  
+3.  W [okno właściwości](/visualstudio/ide/reference/properties-window)ustaw **tryb MFC** właściwości **True**.  
   
     > [!NOTE]
-    >  Poza ustawieniem tej flagi, plik .rc musi być częścią projektu MFC. Na przykład tylko ustawienie **tryb MFC** do **True** na plik .rc w Win32 projektu nie zapewniają funkcji MFC.  
+    >  Oprócz ustawienia tej flagi, plik .rc musi być częścią projektu MFC. Na przykład, ustawienie tylko **tryb MFC** do **True** w pliku .rc w systemie Win32 projektu nie daje żadnych funkcji MFC.  
   
-
-  
- **Wymagania**  
+## <a name="requirements"></a>Wymagania  
   
  MFC  
   

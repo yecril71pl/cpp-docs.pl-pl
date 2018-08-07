@@ -16,28 +16,28 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 53cafe8533eac024f07482563ba2c24183963978
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 45f02bff270c7049e6207d797ed2d2ca5ae339f2
+ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33873212"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39571379"
 ---
 # <a name="finding-an-entry-in-an-accelerator-table"></a>Znajdowanie wpisu w tabeli akceleratora
-### <a name="to-find-an-entry-in-an-open-accelerator-table"></a>Aby odnaleźć wpisu w tabeli akceleratora otwarte  
+### <a name="to-find-an-entry-in-an-open-accelerator-table"></a>Aby znaleźć wpisu w tabeli akceleratora Otwórz  
   
-1.  Otwórz tabeli akceleratora klikając odpowiednią ikonę w [widok zasobów](../windows/resource-view-window.md).  
+1.  Otwórz tabeli akceleratora, klikając dwukrotnie odpowiednią ikonę w [widok zasobów](../windows/resource-view-window.md).  
   
     > [!NOTE]
-    >  Jeśli projekt nie zawiera już plik .rc, zobacz [Tworzenie nowego pliku skryptu zasobu](../windows/how-to-create-a-resource-script-file.md).  
+    >  Jeśli projekt nie zawiera jeszcze pliku .rc, zobacz [tworzenia nowego pliku skryptu zasobów](../windows/how-to-create-a-resource-script-file.md).  
   
-2.  Kliknij nagłówek kolumny, aby posortować alfabetycznie zawartość kolumny. Na przykład kliknij pozycję **identyfikator** do wyświetlenia wszystkich identyfikatorów w tabeli akceleratora alfabetycznie.  
+2.  Kliknij przycisk główny kolumny, aby posortować alfabetycznie zawartości kolumny. Na przykład kliknij pozycję **identyfikator** do wyświetlenia wszystkich identyfikatorów w tabeli akceleratora alfabetycznie.  
   
  Można następnie przejrzyj listę i znajdź pozycję.  
   
- Aby uzyskać informacje o dodawaniu zasobów do projektów zarządzanych, zobacz [zasobów w aplikacjach pulpitu](/dotnet/framework/resources/index) w *Przewodnik programistów platformy .NET Framework.*  
+ Aby uzyskać informacje na temat dodawania zasobów do projektów zarządzanych, zobacz [zasoby w aplikacjach pulpitu](/dotnet/framework/resources/index) w *przewodniku dewelopera .NET Framework*.  
   
- **Wymagania**  
+## <a name="requirements"></a>Wymagania  
   
  Win32  
   

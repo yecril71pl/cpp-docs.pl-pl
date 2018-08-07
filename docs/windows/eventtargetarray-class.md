@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 4461004a1681d9095449c51fb9cb3973d5017693
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 2757589509e4a2b091c5057ef2065866a8829494
+ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33881312"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39570424"
 ---
 # <a name="eventtargetarray-class"></a>EventTargetArray — Klasa
 Obsługuje infrastrukturę biblioteki WRL i nie jest przeznaczona do użycia bezpośrednio w kodzie.  
@@ -36,7 +36,7 @@ class EventTargetArray : public Microsoft::WRL::RuntimeClass<Microsoft::WRL::Run
 ## <a name="remarks"></a>Uwagi  
  Reprezentuje tablicę procedury obsługi zdarzeń.  
   
- Programy obsługi zdarzeń, które są skojarzone z [EventSource](../windows/eventsource-class.md) obiektu są przechowywane w chroniony element członkowski danych eventtargetarray —.  
+ Programy obsługi zdarzeń, które są skojarzone z [EventSource](../windows/eventsource-class.md) obiektu są przechowywane w chronionym **EventTargetArray** element członkowski danych.  
   
 ## <a name="members"></a>Elementy członkowskie  
   
@@ -44,17 +44,17 @@ class EventTargetArray : public Microsoft::WRL::RuntimeClass<Microsoft::WRL::Run
   
 |Nazwa|Opis|  
 |----------|-----------------|  
-|[EventTargetArray::EventTargetArray, konstruktor](../windows/eventtargetarray-eventtargetarray-constructor.md)|Inicjuje nowe wystąpienie klasy eventtargetarray —.|  
-|[EventTargetArray::~EventTargetArray, destruktor](../windows/eventtargetarray-tilde-eventtargetarray-destructor.md)|Deinitializes bieżącego eventtargetarray — klasa.|  
+|[EventTargetArray::EventTargetArray, konstruktor](../windows/eventtargetarray-eventtargetarray-constructor.md)|Inicjuje nowe wystąpienie klasy **EventTargetArray** klasy.|  
+|[EventTargetArray::~EventTargetArray, destruktor](../windows/eventtargetarray-tilde-eventtargetarray-destructor.md)|Deinicjuje bieżące **EventTargetArray** klasy.|  
   
 ### <a name="public-methods"></a>Metody publiczne  
   
 |Nazwa|Opis|  
 |----------|-----------------|  
-|[EventTargetArray::AddTail, metoda](../windows/eventtargetarray-addtail-method.md)|Dołącza określona procedura obsługi zdarzeń do końca tablicy wewnętrznej procedury obsługi zdarzeń.|  
+|[EventTargetArray::AddTail, metoda](../windows/eventtargetarray-addtail-method.md)|Dołącza określona procedura obsługi zdarzeń do końca tablicy wewnętrzne programów obsługi zdarzeń.|  
 |[EventTargetArray::Begin, metoda](../windows/eventtargetarray-begin-method.md)|Pobiera adres pierwszego elementu w tablicy wewnętrznej procedury obsługi zdarzeń.|  
 |[EventTargetArray::End, metoda](../windows/eventtargetarray-end-method.md)|Pobiera adres ostatniego elementu w tablicy wewnętrznej procedury obsługi zdarzeń.|  
-|[EventTargetArray::Length, metoda](../windows/eventtargetarray-length-method.md)|Pobiera bieżącą liczbę elementów w tablicy wewnętrznej procedury obsługi zdarzeń.|  
+|[EventTargetArray::Length, metoda](../windows/eventtargetarray-length-method.md)|Pobiera aktualną liczbę elementów w tablicy wewnętrznej procedury obsługi zdarzeń.|  
   
 ## <a name="inheritance-hierarchy"></a>Hierarchia dziedziczenia  
  `EventTargetArray`  
@@ -62,7 +62,7 @@ class EventTargetArray : public Microsoft::WRL::RuntimeClass<Microsoft::WRL::Run
 ## <a name="requirements"></a>Wymagania  
  **Nagłówek:** event.h  
   
- **Namespace:** Microsoft::wrl:: details —  
+ **Namespace:** Microsoft::wrl:: details  
   
 ## <a name="see-also"></a>Zobacz też  
  [Microsoft::WRL::Details, przestrzeń nazw](../windows/microsoft-wrl-details-namespace.md)

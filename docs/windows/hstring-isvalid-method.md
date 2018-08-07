@@ -1,5 +1,5 @@
 ---
-title: HString::IsValid — metoda | Dokumentacja firmy Microsoft
+title: HString::IsValid, metoda | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,15 +15,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: fe2bea7e7971daa1c6bb169a1c049a6757d9ed8d
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 26ca5d70f6632c35da64215376e0dddd6eca9fcb
+ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33874320"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39571005"
 ---
 # <a name="hstringisvalid-method"></a>HString::IsValid — Metoda
-Wskazuje, czy bieżący obiekt HString jest pusta.  
+Wskazuje, czy bieżący **HString** obiekt jest pusty lub nie.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -32,12 +32,12 @@ bool IsValid() const throw()
 ```  
   
 #### <a name="parameters"></a>Parametry  
- `true` Jeśli bieżący obiekt HString nie jest pusty; w przeciwnym razie `false`.  
+ **wartość true,** Jeśli bieżące **HString** obiekt nie jest pusty; w przeciwnym razie **false**.  
   
 ## <a name="requirements"></a>Wymagania  
  **Nagłówek:** corewrappers.h  
   
- **Namespace:** Microsoft::wrl:: wrappers —  
+ **Namespace:** Microsoft::wrl:: wrappers  
   
 ## <a name="see-also"></a>Zobacz też  
  [HString, klasa](../windows/hstring-class.md)
