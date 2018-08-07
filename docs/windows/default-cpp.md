@@ -19,21 +19,20 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: bb701b91fc1e076dcf4e6540bf8bcaf6141ec6c6
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 16f2e9587d3fa9bc9d8472c348e92555b5bbb4bb
+ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33872968"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39570860"
 ---
 # <a name="default-c"></a>default (C++)
-Wskazuje, że niestandardowe lub dispinterface zdefiniowane w obrębie klasy coclass reprezentuje domyślny interfejs programowania.  
+Wskazuje, że niestandardowe lub zdefiniowane w obrębie klasy coclass dispinterface reprezentuje domyślny interfejs programowania.  
   
 ## <a name="syntax"></a>Składnia  
   
 ```  
-  
-      [ default(  
+[ default(  
    interface1,  
    interface2  
 ) ]  
@@ -41,22 +40,22 @@ Wskazuje, że niestandardowe lub dispinterface zdefiniowane w obrębie klasy coc
   
 #### <a name="parameters"></a>Parametry  
  *interface1*  
- Domyślny interfejs, który zostanie udostępniona w środowiskach skryptów tworzenia obiektu oparte na klasie zdefiniowane z **domyślne** atrybutu.  
+ Domyślny interfejs, które będą dostępne do wykonywania skryptów środowiska, w których utworzenia obiektu na podstawie klasy zdefiniowane za pomocą **domyślne** atrybutu.  
   
- Jeśli nie określono żadnych interfejsu domyślnego, pierwsze wystąpienie interfejsu nonsource jest używany jako domyślny.  
+ Jeśli nie domyślny interfejs jest określony, pierwsze wystąpienie interfejsu nonsource jest używany jako domyślny.  
   
  *interface2*(opcjonalnie)  
- Domyślny interfejs źródłowy. Należy także określić tego interfejsu [źródła](../windows/source-cpp.md) atrybutu.  
+ Domyślnym interfejsie źródła. Należy także określić ten interfejs, za pomocą [źródła](../windows/source-cpp.md) atrybutu.  
   
- Jeśli nie określono żadnych interfejsu źródłowego domyślne, pierwszy interfejs źródłowy jest używany jako domyślny.  
+ Jeśli nie domyślnym interfejsie źródła jest określony, pierwszy interfejs źródłowy jest używany jako domyślny.  
   
 ## <a name="remarks"></a>Uwagi  
- **Domyślne** atrybut C++ ma te same funkcje co [domyślne](http://msdn.microsoft.com/library/windows/desktop/aa366787) MIDL atrybutu. **Domyślne** również jest używany atrybut [przypadku](../windows/case-cpp.md) atrybutu.  
+ **Domyślne** atrybut C++ ma taką samą funkcjonalność jak [domyślne](http://msdn.microsoft.com/library/windows/desktop/aa366787) atrybutów w MIDL. **Domyślne** również zostanie użyty atrybut [przypadek](../windows/case-cpp.md) atrybutu.  
   
 ## <a name="example"></a>Przykład  
- Poniższy kod przedstawia sposób **domyślne** służy do określania, w definicji klasy coclass **ICustomDispatch** jako domyślny interfejs programowania:  
+ Poniższy kod przedstawia sposób **domyślne** służy do określania, w definicji klasy coclass `ICustomDispatch` jako domyślny interfejs programowania:  
   
-```  
+```cpp  
 // cpp_attr_ref_default.cpp  
 // compile with: /LD  
 #include "windows.h"  
@@ -105,17 +104,17 @@ int main() {
 }  
 ```  
   
- [Źródła](../windows/source-cpp.md) atrybutu zawiera również przykład sposobu użycia **domyślne**.  
+ [Źródła](../windows/source-cpp.md) atrybut zawiera również przykład sposobu użycia **domyślne**.  
   
 ## <a name="requirements"></a>Wymagania  
   
-### <a name="attribute-context"></a>Atrybut kontekstu  
+### <a name="attribute-context"></a>Kontekst atrybutu  
   
 |||  
 |-|-|  
-|**Dotyczy**|**Klasa**, `struct`, element członkowski danych|  
+|**Dotyczy**|**Klasa**, **struktury**, element członkowski danych|  
 |**Powtarzalne**|Nie|  
-|**Wymaganych atrybutów**|**coclass** (gdy jest stosowany do **klasy** lub `struct`)|  
+|**Wymaganych atrybutów**|**Klasa coclass** (po zastosowaniu do **klasy** lub **struktury**)|  
 |**Nieprawidłowe atrybuty**|Brak|  
   
  Aby uzyskać więcej informacji, zobacz [konteksty atrybutu](../windows/attribute-contexts.md).  

@@ -1,5 +1,5 @@
 ---
-title: Handlet::handlet — Konstruktor | Dokumentacja firmy Microsoft
+title: HandleT::HandleT, Konstruktor | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: a0caad909803a0f73987f3e1132920b0948d8d1b
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 0f8126d4a31863ab556295946ffc170fc49f7d98
+ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33881900"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39569514"
 ---
 # <a name="handlethandlet-constructor"></a>HandleT::HandleT — Konstruktor
-Inicjuje nowe wystąpienie klasy handlet —.  
+Inicjuje nowe wystąpienie klasy **HandleT** klasy.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -40,17 +40,17 @@ HandleT(
 );  
 ```  
   
-#### <a name="parameters"></a>Parametry  
- `h`  
- Uchwyt.  
+### <a name="parameters"></a>Parametry  
+ *h*  
+ Dojście.  
   
 ## <a name="remarks"></a>Uwagi  
- Pierwszy Konstruktor inicjuje obiekt handlet —, który nie jest prawidłowym dojściem do obiektu. Drugi Konstruktor tworzy nowy obiekt handlet — z parametru `h`.  
+ Pierwszy Konstruktor inicjuje **HandleT** obiekt, który nie jest prawidłowy uchwyt do obiektu. Drugi Konstruktor tworzy nową **HandleT** obiektu z parametru *h*.  
   
 ## <a name="requirements"></a>Wymagania  
  **Nagłówek:** corewrappers.h  
   
- **Namespace:** Microsoft::wrl:: wrappers —  
+ **Namespace:** Microsoft::wrl:: wrappers  
   
 ## <a name="see-also"></a>Zobacz też  
  [HandleT, klasa](../windows/handlet-class.md)

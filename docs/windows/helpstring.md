@@ -17,42 +17,41 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 81a3e45c5636fd193b7880e093711b5cc584bf99
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: e661e911cc0dd583f2ce079f8ac047a354fa596f
+ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33879009"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39570934"
 ---
 # <a name="helpstring"></a>helpstring
-Określa ciąg znaków używany do opisania elementu, którego dotyczy.  
+Określa ciąg znaków, który jest używany do opisania elementu, do której jest stosowany.  
   
 ## <a name="syntax"></a>Składnia  
   
 ```  
-  
-      [ helpstring(  
+[ helpstring(  
    "string"  
 ) ]  
 ```  
   
-#### <a name="parameters"></a>Parametry  
- `string`  
+### <a name="parameters"></a>Parametry  
+ *string*  
  Tekst Ciąg pomocy.  
   
 ## <a name="remarks"></a>Uwagi  
- **HelpString —** atrybut C++ ma te same funkcje co [HelpString —](http://msdn.microsoft.com/library/windows/desktop/aa366856) MIDL atrybutu.  
+ **HelpString —** atrybut C++ ma taką samą funkcjonalność jak [HelpString —](http://msdn.microsoft.com/library/windows/desktop/aa366856) atrybutów w MIDL.  
   
 ## <a name="example"></a>Przykład  
  Zobacz przykład [defaultvalue](../windows/defaultvalue.md) przykład sposobu użycia **HelpString —**.  
   
 ## <a name="requirements"></a>Wymagania  
   
-### <a name="attribute-context"></a>Atrybut kontekstu  
+### <a name="attribute-context"></a>Kontekst atrybutu  
   
 |||  
 |-|-|  
-|**Dotyczy**|`interface`, `typedef`, **klasy**, metody, właściwości|  
+|**Dotyczy**|**interfejs**, **typedef**, **klasy**, metody, właściwości|  
 |**Powtarzalne**|Nie|  
 |**Wymaganych atrybutów**|Brak|  
 |**Nieprawidłowe atrybuty**|Brak|  
@@ -63,7 +62,7 @@ Określa ciąg znaków używany do opisania elementu, którego dotyczy.
  [Atrybuty IDL](../windows/idl-attributes.md)   
  [Atrybuty interfejsu](../windows/interface-attributes.md)   
  [Atrybuty klasy](../windows/class-attributes.md)   
- [Atrybuty — metoda](../windows/method-attributes.md)   
- [Element TypeDef, Enum, Unii i struct — atrybuty](../windows/typedef-enum-union-and-struct-attributes.md)   
- [HelpFile](../windows/helpfile.md)   
+ [Atrybuty metody](../windows/method-attributes.md)   
+ [Element TypeDef, Enum, Union i struct — atrybuty](../windows/typedef-enum-union-and-struct-attributes.md)   
+ [HelpFile —](../windows/helpfile.md)   
  [helpcontext](../windows/helpcontext.md)   

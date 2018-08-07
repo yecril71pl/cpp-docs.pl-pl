@@ -18,41 +18,39 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: fcddbc0bb5a2afe807cbe8ca7643a831c28ad50f
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 0681a5e0c88f44d5616724f5564660ecb05fbdc3
+ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33880140"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39570499"
 ---
 # <a name="how-to-change-the-language-or-condition-of-a-resource-while-copying"></a>Porady: zmiana języka lub warunku zasobu podczas kopiowania
-Podczas kopiowania w zasobie, można zmienić jej właściwość języka i/lub właściwość condition.  
+Podczas kopiowania w zasobach, można zmienić jego właściwość języka i/lub właściwości warunku.  
   
--   Język zasobu identyfikuje właśnie tę, język dla zasobu. Ten element jest używany przez [FindResource](http://msdn.microsoft.com/library/windows/desktop/ms648042) zidentyfikować zasobu, którego szukasz. (Zasobów można jednak różnice dla każdego języka, które nie są powiązane z tekstu, na przykład akceleratorów, które mogą działać tylko na klawiaturę japoński lub mapy bitowej, które będą tylko właściwe dla języka chińskiego zlokalizowane kompilacje itp.)  
+-   Język zasobu identyfikuje taką, języka zasobu. Jest on używany przez [FindResource](http://msdn.microsoft.com/library/windows/desktop/ms648042) ułatwia zidentyfikowanie zasobów, dla których potrzebujesz. (Zasobów można jednak różnice dla każdego języka, które nie są powiązane z tekstu, na przykład akceleratorów, które może działać wyłącznie względem klawiatury japońskiej lub mapy bitowej, która byłaby tylko odpowiednie dla zlokalizowanego języka chińskiego kompilacje itp.)  
   
--   Stan zasobu jest zdefiniowany symbol, który identyfikuje warunku, pod którym ma być używany tej konkretnej kopii zasobu.  
+-   Stan zasobu jest zdefiniowany symbol, który określa warunek, w ramach której ma zostać użyty określonej kopii zasobu.  
   
- Język i warunku zasobu są wyświetlane w nawiasach po nazwie zasobu w oknie obszaru roboczego. W tym przykładzie zasobów o nazwie IDD_AboutBox używa fiński jako języka i jego stan jest XX33.  
+ Język i warunku zasobu są wyświetlane w nawiasach, po nazwie zasobu w okno obszaru roboczego. W tym przykładzie zasobu o nazwie IDD_AboutBox fiński jako używa języka, a jego stan jest XX33.  
   
 ```  
 IDD_AboutBox (Finnish - XX33)  
 ```  
   
-### <a name="to-copy-an-existing-resource-and-change-its-language-or-condition"></a>Skopiuj istniejący zasób i zmieniać jego języka lub warunku  
+### <a name="to-copy-an-existing-resource-and-change-its-language-or-condition"></a>Aby skopiować istniejący zasób i zmień jego języka lub warunku  
   
-1.  Plik .rc lub w [widok zasobów](../windows/resource-view-window.md) okna, kliknij prawym przyciskiem myszy zasób, którego chcesz skopiować.  
+1.  W pliku .rc, lub w [widok zasobów](../windows/resource-view-window.md) okna, kliknij prawym przyciskiem myszy zasób, którego chcesz skopiować.  
   
-2.  Wybierz **wstawić kopii** z menu skrótów.  
+2.  Wybierz **Wstaw kopiowania** z menu skrótów.  
   
-3.  W **wstawić kopii zasobu** okno dialogowe:  
+3.  W **Wstaw kopię zasobu** okno dialogowe:  
   
     -   Aby uzyskać **języka** pola listy, wybierz język.  
   
-    -   W **warunku** wpisz warunek.  
+    -   W **warunek** wpisz warunek.  
   
-
-  
- Wymagania  
+## <a name="requirements"></a>Wymagania  
   
  Win32  
   

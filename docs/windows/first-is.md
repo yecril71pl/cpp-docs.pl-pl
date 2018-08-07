@@ -17,36 +17,35 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 8292dfb329d5e5db15f8329cbdead443215bbee8
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 8d11fdaf451ba1e77c997f49726cd9b86f66172f
+ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33875009"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39569266"
 ---
 # <a name="firstis"></a>first_is
-Określa indeks pierwszego elementu tablicy ma zostać przesłany.  
+Określa indeks pierwszego elementu tablicy mają być przekazywane.  
   
 ## <a name="syntax"></a>Składnia  
   
 ```  
-  
-      [ first_is(  
+[ first_is(  
    "expression"  
 ) ]  
 ```  
   
-#### <a name="parameters"></a>Parametry  
- *wyrażenie*  
- Co najmniej jednego wyrażenia języka C. Pusty argument gniazda są dozwolone.  
+### <a name="parameters"></a>Parametry  
+ *Wyrażenie*  
+ Co najmniej jednego wyrażenia języka C. Pusty argument miejsca są dozwolone.  
   
 ## <a name="remarks"></a>Uwagi  
- **First_is —** atrybut C++ ma te same funkcje co [first_is —](http://msdn.microsoft.com/library/windows/desktop/aa366831) MIDL atrybutu.  
+ **First_is —** atrybut C++ ma taką samą funkcjonalność jak [first_is —](http://msdn.microsoft.com/library/windows/desktop/aa366831) atrybutów w MIDL.  
   
 ## <a name="example"></a>Przykład  
  Poniższy kod przedstawia różne sposoby, aby określić sekcji w tablicy:  
   
-```  
+```cpp  
 // cpp_attr_ref_first_is.cpp  
 // compile with: /LD  
 #include "windows.h"  
@@ -68,11 +67,11 @@ requestedit] HRESULT get_I([out, retval]long *i);
   
 ## <a name="requirements"></a>Wymagania  
   
-### <a name="attribute-context"></a>Atrybut kontekstu  
+### <a name="attribute-context"></a>Kontekst atrybutu  
   
 |||  
 |-|-|  
-|**Dotyczy**|Pole w `struct` lub **Unii**, interfejs parametru, interfejsu — metoda|  
+|**Dotyczy**|Pole **struktury** lub **Unii**, interfejs parametrów, metody interfejsu|  
 |**Powtarzalne**|Nie|  
 |**Wymaganych atrybutów**|Brak|  
 |**Nieprawidłowe atrybuty**|Brak|  
@@ -81,8 +80,8 @@ requestedit] HRESULT get_I([out, retval]long *i);
   
 ## <a name="see-also"></a>Zobacz też  
  [Atrybuty IDL](../windows/idl-attributes.md)   
- [Element TypeDef, Enum, Unii i struct — atrybuty](../windows/typedef-enum-union-and-struct-attributes.md)   
- [Atrybuty parametrów](../windows/parameter-attributes.md)   
+ [Element TypeDef, Enum, Union i struct — atrybuty](../windows/typedef-enum-union-and-struct-attributes.md)   
+ [Atrybuty parametru](../windows/parameter-attributes.md)   
  [last_is —](../windows/last-is.md)   
  [max_is —](../windows/max-is.md)   
  [length_is —](../windows/length-is.md)   

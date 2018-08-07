@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 1fec2f00c40b833cc9a65db1db58920543aa90d7
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 82a9bc4000919d2bbe2b8598351d3fe6a4730ba9
+ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33873381"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39569033"
 ---
 # <a name="enableif-structure"></a>EnableIf — Struktura
 Obsługuje infrastrukturę biblioteki WRL i nie jest przeznaczona do użycia bezpośrednio w kodzie.  
@@ -43,22 +43,22 @@ struct EnableIf<true, T>;
 ```  
   
 #### <a name="parameters"></a>Parametry  
- `T`  
+ *T*  
  Typ.  
   
- `b`  
+ *b*  
  Wyrażenie logiczne.  
   
 ## <a name="remarks"></a>Uwagi  
- Definiuje element członkowski danych o typie określonym drugi parametr szablonu, jeśli pierwszy parametr szablonu daje w wyniku `true`.  
+ Definiuje element członkowski danych o typie określonym przez drugi parametr szablonu, jeśli pierwszy parametr szablonu, które daje w wyniku **true**.  
   
 ## <a name="members"></a>Elementy członkowskie  
   
-### <a name="public-typedefs"></a>Definicje typów publicznych  
+### <a name="public-typedefs"></a>Publiczne definicje typów  
   
 |Nazwa|Opis|  
 |----------|-----------------|  
-|`type`|Jeśli parametr szablonu `b` daje w wyniku `true`, częściowa specjalizacja definiuje element członkowski danych `type` typu `T`.|  
+|`type`|Jeśli parametr szablonu *b* daje w wyniku **true**, częściowa specjalizacja definiuje element członkowski danych `type` typu `T`.|  
   
 ## <a name="inheritance-hierarchy"></a>Hierarchia dziedziczenia  
  `EnableIf`  
@@ -66,7 +66,7 @@ struct EnableIf<true, T>;
 ## <a name="requirements"></a>Wymagania  
  **Nagłówek:** internal.h  
   
- **Namespace:** Microsoft::wrl:: details —  
+ **Namespace:** Microsoft::wrl:: details  
   
 ## <a name="see-also"></a>Zobacz też  
  [Microsoft::WRL::Details, przestrzeń nazw](../windows/microsoft-wrl-details-namespace.md)

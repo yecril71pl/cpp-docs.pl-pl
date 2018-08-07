@@ -1,5 +1,5 @@
 ---
-title: HandleT::IsValid — metoda | Dokumentacja firmy Microsoft
+title: HandleT::IsValid, metoda | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 42aca81b3c2a0ad3db652bf9f77c648e503098e2
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: c0970fbdfd3b7c1885c6291b3a98f8f59775fa59
+ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33873137"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39569608"
 ---
 # <a name="handletisvalid-method"></a>HandleT::IsValid — Metoda
-Wskazuje, czy bieżący obiekt handlet — reprezentuje dojścia.  
+Wskazuje, czy bieżący **HandleT** obiekt reprezentuje dojście.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -34,12 +34,12 @@ bool IsValid() const;
 ```  
   
 ## <a name="return-value"></a>Wartość zwracana  
- `true` Jeśli handlet — reprezentuje uchwyt; w przeciwnym razie `false`.  
+ **wartość true,** Jeśli **HandleT** reprezentuje uchwyt; w przeciwnym razie **false**.  
   
 ## <a name="requirements"></a>Wymagania  
  **Nagłówek:** corewrappers.h  
   
- **Namespace:** Microsoft::wrl:: wrappers —  
+ **Namespace:** Microsoft::wrl:: wrappers  
   
 ## <a name="see-also"></a>Zobacz też  
  [HandleT, klasa](../windows/handlet-class.md)

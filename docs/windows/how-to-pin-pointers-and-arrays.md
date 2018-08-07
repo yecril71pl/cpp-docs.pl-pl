@@ -16,21 +16,21 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: b1cea9b1c7c6738c33f00e984aa8212d611b4aec
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: ba13f3d561b4f7bbd57a7678fcfbea26e09a9984
+ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33873592"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39569378"
 ---
 # <a name="how-to-pin-pointers-and-arrays"></a>Porady: unieruchamianie wskaźników oraz tablic
-Przypinanie obiektu podrzędnego zdefiniowaną w obiekcie zarządzanych skutkuje przypinanie całego obiektu.  Na przykład jeśli dowolny element tablicy jest przypięty, następnie całą tablicę również jest przypięty. Nie ma żadnych rozszerzeń języka deklarowania przypiętych tablicy. Aby przypiąć tablicy, należy zadeklarować przypiętego wskaźnika do typu elementu i kod pin jednego z jego elementów.  
+Przypinanie podobiekcie definiowane w obiekcie zarządzanych efektem przypinanie cały obiekt.  Na przykład jeśli dowolny element w tablicy jest przypięty, następnie całej tablicy również jest przypięty. Brak bez rozszerzeń języka do deklarowania przypiętych tablicy. Aby przypiąć tablicy, należy zadeklarować przypiętego wskaźnika do typu elementu i numer pin, jednego z jego elementów.  
   
 ## <a name="example"></a>Przykład  
   
 ### <a name="code"></a>Kod  
   
-```  
+```cpp  
 // pin_ptr_array.cpp  
 // compile with: /clr  
 #include <stdio.h>  
@@ -52,7 +52,7 @@ int main() {
   
 ### <a name="output"></a>Dane wyjściowe  
   
-```  
+```Output  
 ++  
 ```  
   

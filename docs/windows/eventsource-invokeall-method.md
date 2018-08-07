@@ -1,5 +1,5 @@
 ---
-title: EventSource::InvokeAll — metoda | Dokumentacja firmy Microsoft
+title: EventSource::InvokeAll, metoda | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 00bce09f9e081bb0cd5c01115b05e4d3268d7293
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 04a31c7d080ff4fbfae094e07ab02d912966f4b1
+ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33882618"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39570658"
 ---
 # <a name="eventsourceinvokeall-method"></a>EventSource::InvokeAll — Metoda
-Wywołuje każdy program obsługi zdarzeń skojarzonych z bieżącym [EventSource](../windows/eventsource-class.md) przy użyciu określone typy argumentów i argumentów.  
+Wywołuje każdy program obsługi zdarzeń skojarzonych z bieżącym [EventSource](../windows/eventsource-class.md) przy użyciu określone typy argumentów i argumenty.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -183,71 +183,71 @@ void InvokeAll(
 );  
 ```  
   
-#### <a name="parameters"></a>Parametry  
- `T0`  
- Typ argumentu procedury obsługi zdarzeń zeroth.  
+### <a name="parameters"></a>Parametry  
+ *T0*  
+ Typ argumentu procedury obsługi zdarzeń zerowego.  
   
- `T1`  
+ *T1*  
  Typ pierwszego argumentu procedury obsługi zdarzeń.  
   
- `T2`  
+ *T2*  
  Typ drugiego argumentu procedury obsługi zdarzeń.  
   
- `T3`  
+ *T3*  
  Typ trzeciego argumentu procedury obsługi zdarzeń.  
   
- `T4`  
+ *T4*  
  Typ czwartego argumentu procedury obsługi zdarzeń.  
   
- `T5`  
- Typ piątego argument procedury obsługi zdarzeń.  
+ *T5*  
+ Typ piątego argumentu procedury obsługi zdarzeń.  
   
- `T6`  
- Typ szóstego argument procedury obsługi zdarzeń.  
+ *T6*  
+ Typ szóstego argumentu procedury obsługi zdarzeń.  
   
- `T7`  
- Typ siódmego argument procedury obsługi zdarzeń.  
+ *T7*  
+ Typ siódmego argumentu procedury obsługi zdarzeń.  
   
- `T8`  
- Typ argumentu osiem obsługi zdarzenia.  
+ *T8*  
+ Typ ósmego argumentu procedury obsługi zdarzeń.  
   
- `T9`  
- Typ dziewiąty argument procedury obsługi zdarzeń.  
+ *T9*  
+ Typ dziewiątego argumentu procedury obsługi zdarzeń.  
   
- `arg0`  
- Zeroth argument procedury obsługi zdarzeń.  
+ *arg0*  
+ Argument procedury obsługi zdarzeń zerowego.  
   
- `arg1`  
+ *arg1*  
  Pierwszy argument procedury obsługi zdarzeń.  
   
- `arg2`  
+ *argument2*  
  Drugi argument procedury obsługi zdarzeń.  
   
- `arg3`  
+ *arg3*  
  Trzeci argument procedury obsługi zdarzeń.  
   
- `arg4`  
+ *Arg4*  
  Czwarty argument procedury obsługi zdarzeń.  
   
- `arg5`  
+ *arg5*  
  Piąty argument procedury obsługi zdarzeń.  
   
- `arg6`  
- Argument szóstego programu obsługi zdarzeń.  
+ *arg6*  
+ Szósty argument procedury obsługi zdarzeń.  
   
- `arg7`  
- Argument siódmego programu obsługi zdarzeń.  
+ *arg7*  
+ Siódmego argumentu procedury obsługi zdarzeń.  
   
- `arg8`  
- Osiem argument procedury obsługi zdarzeń.  
+ *arg8*  
+ Identyfikator ósmego argumentu procedury obsługi zdarzenia.  
   
- `arg9`  
- Dziewiąty argument procedury obsługi zdarzeń.  
+ *arg9*  
+ Dziewiątego argumentu procedury obsługi zdarzeń.  
   
 ## <a name="requirements"></a>Wymagania  
  **Nagłówek:** event.h  
   
- **Namespace:** Microsoft::wrl —
+ **Namespace:** Microsoft::WRL
  
  ## <a name="see-also"></a>Zobacz też
  [EventSource, klasa](../windows/eventsource-class.md)

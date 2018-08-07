@@ -1,5 +1,5 @@
 ---
-title: Hstring::hstring — Konstruktor | Dokumentacja firmy Microsoft
+title: HString::HString, Konstruktor | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,15 +15,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: a3188e137d3a39fb26ca4151f72073306038e46f
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 96b77ec87e3219206d353f56293fc201c46f5d7e
+ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33876881"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39568774"
 ---
 # <a name="hstringhstring-constructor"></a>HString::HString — Konstruktor
-Inicjuje nowe wystąpienie klasy HString.  
+Inicjuje nowe wystąpienie klasy **HString** klasy.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -33,21 +33,21 @@ HString(HString&& other) throw();
 ```  
   
 #### <a name="parameters"></a>Parametry  
- `hstr`  
- Dojście HSTRING.  
+ *HSTR*  
+ Dojścia HSTRING.  
   
- `other`  
- Istniejący obiekt HString.  
+ *other*  
+ Istniejące **HString** obiektu.  
   
 ## <a name="remarks"></a>Uwagi  
- Pierwszy Konstruktor inicjuje nowy obiekt HString, który jest pusty.  
+ Pierwszy Konstruktor inicjuje nową **HString** obiektu, który jest pusty.  
   
- Drugi Konstruktor inicjuje nowy obiekt HString wartości istniejącej `other` parametr, a następnie niszczy `other` parametru.  
+ Drugi Konstruktor inicjuje nowe **HString** obiektu do wartości istniejących *innych* parametru i następnie niszczy *innych* parametru.  
   
 ## <a name="requirements"></a>Wymagania  
  **Nagłówek:** corewrappers.h  
   
- **Namespace:** Microsoft::wrl:: wrappers —  
+ **Namespace:** Microsoft::wrl:: wrappers  
   
 ## <a name="see-also"></a>Zobacz też  
  [HString, klasa](../windows/hstring-class.md)

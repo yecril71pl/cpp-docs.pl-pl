@@ -1,5 +1,5 @@
 ---
-title: HString::CopyTo — metoda | Dokumentacja firmy Microsoft
+title: HString::CopyTo, metoda | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -13,28 +13,27 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: b44974faf5fc1f068d28d7febe3ed2a266f4869e
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 65d8e259b74bcdffbf11c6c96172d918f9db1b50
+ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33874775"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39570876"
 ---
 # <a name="hstringcopyto-method"></a>HString::CopyTo — Metoda
-Kopie HString bieżącego obiektu do obiektu HSTRING.  
+Kopiuje bieżący **HString** obiektu do obiektu HSTRING.  
   
 ## <a name="syntax"></a>Składnia  
   
 ```  
-  
 HRESULT CopyTo(  
    _Out_ HSTRING *str  
    ) const throw();  
 ```  
   
 #### <a name="parameters"></a>Parametry  
- `str`  
- HSTRING, który odbiera kopii.  
+ *str*  
+ HSTRING, który otrzymuje kopię.  
   
 ## <a name="remarks"></a>Uwagi  
  Ta metoda wywołuje [WindowsDuplicateString](http://msdn.microsoft.com/library/br224634.aspx) funkcji.  
@@ -42,7 +41,7 @@ HRESULT CopyTo(
 ## <a name="requirements"></a>Wymagania  
  **Nagłówek:** corewrappers.h  
   
- **Namespace:** Microsoft::wrl:: wrappers —  
+ **Namespace:** Microsoft::wrl:: wrappers  
   
 ## <a name="see-also"></a>Zobacz też  
  [HString, klasa](../windows/hstring-class.md)

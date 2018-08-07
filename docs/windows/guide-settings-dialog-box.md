@@ -1,5 +1,5 @@
 ---
-title: Okno dialogowe Ustawienia przewodnik | Dokumentacja firmy Microsoft
+title: Przewodnik dotyczący okno dialogowe Ustawienia | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -23,15 +23,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 7d89a4a7bf0e3a8c9452c5f9d87832b8b31deb6e
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 265c6c1931b0e48399039e507be45c73c710142d
+ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33875880"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39568894"
 ---
 # <a name="guide-settings-dialog-box"></a>Okno dialogowe Ustawienia prowadnic
-## <a name="layout-guides"></a>Prowadnic  
+## <a name="layout-guides"></a>Układ prowadnic  
  Wyświetla ustawienia prowadnic układu.  
   
  **Brak**  
@@ -40,14 +40,14 @@ ms.locfileid: "33875880"
   
  **Linijki i prowadnice**  
   
- Po włączeniu dodaje linijki do narzędzia układu; przewodniki można umieścić w linijki. Przewodniki domyślne są marginesy, które mogą być przenoszone przez przeciągnięcie. Kliknij linijki umieścić przewodnik. Formanty "snap", do przewodniki po przeniesieniu formantów za pośrednictwem lub obok nich. Formanty również przenieść z przewodnikiem po podłączeniu do niego. Gdy formant jest dołączony do przewodnika po każdej stronie, a przewodnik jest przenoszony, zmieniony rozmiar formantu.  
+ Po włączeniu narzędzia układ; dodaje linijki linie pomocnicze można umieścić w linijki. Przewodniki domyślne są marginesy, które można przenosić, przeciągając. Kliknij linijki umieścić przewodnik. Formanty "przyciągana" do przewodników po przeniesieniu kontroli nad lub obok nich. Formanty również przechodzić z przewodnikiem po podłączeniu do niego. Formant jest dołączony do przewodnika po każdej stronie, gdy wskazówki są przenoszone, zmieni się rozmiar kontrolki.  
   
  **Siatka**  
   
- Tworzy siatki układu. Nowe formanty automatycznie są wyrównane do siatki.  
+ Tworzy siatki układu. Nowe kontrolki automatycznie zostaną wyrównane do siatki.  
   
 ## <a name="grid-spacing"></a>Odstępy między liniami siatki  
- Wyświetla ustawienia odstępy między liniami siatki w jednostkach okna dla okna dialogowego (Dlu).  
+ Wyświetla ustawienia odstępy między liniami siatki w jednostkach pola okna dialogowego (Dlu).  
   
  **Szerokość: Dlu**  
   
@@ -55,9 +55,9 @@ ms.locfileid: "33875880"
   
  **Wysokość: Dlu**  
   
- Ustawia wysokość siatki układu w Dlu. DLU pionowe jest średnią wysokość okna dialogowego czcionki pole podzielić przez 8.  
+ Określa wysokość siatki układu w Dlu. DLU pionowe jest średnią wysokość czcionka pola okna dialogowego podzielić przez 8.  
   
- Aby uzyskać informacje o dodawaniu zasobów do projektów zarządzanych, zobacz [zasobów w aplikacjach pulpitu](/dotnet/framework/resources/index) w *Przewodnik programistów platformy .NET Framework.* Aby uzyskać informacje na ręczne dodanie do projektów zarządzanych plików zasobów, uzyskiwanie dostępu do zasobów, wyświetlanie zasoby statyczne i przypisanie do właściwości ciągów zasobów, zobacz [tworzenie plików zasobów dla aplikacji pulpitu](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Informacje dotyczące globalizacji i lokalizacji zasobów w zarządzanych aplikacjach, zobacz [Globalizing i lokalizacja aplikacji .NET Framework](/dotnet/standard/globalization-localization/index).  
+ Aby uzyskać informacje na temat dodawania zasobów do projektów zarządzanych, zobacz [zasoby w aplikacjach pulpitu](/dotnet/framework/resources/index) w *przewodniku dewelopera .NET Framework*. Aby uzyskać informacji na temat ręcznego dodawania plików zasobów do projektów zarządzanych, uzyskiwania dostępu do zasobów, wyświetlania statycznych zasobów i przypisywania ciągów zasobów do właściwości, zobacz [Creating Resource Files dla aplikacji klasycznych](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Aby uzyskać informacji na temat globalizacja i lokalizacja zasobów w aplikacjach zarządzanych, zobacz [Globalizing i lokalizowanie aplikacji programu .NET Framework](/dotnet/standard/globalization-localization/index).  
   
 ## <a name="requirements"></a>Wymagania  
  Win32  
@@ -65,4 +65,3 @@ ms.locfileid: "33875880"
 ## <a name="see-also"></a>Zobacz też  
  [Modyfikowanie siatki układu](../windows/modifying-the-layout-grid.md)   
  [Stany dla Edytora okien dialogowych (prowadnice i siatki)](../windows/dialog-editor-states-guides-and-grids.md)
-

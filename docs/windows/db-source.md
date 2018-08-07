@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: b826e5d630b52062892001c26efda01b5c7293f4
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: f7c1f02c3791e75d3f42db6a942f5b2055234517
+ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33873722"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39570613"
 ---
 # <a name="dbsource"></a>db_source
 Tworzy połączenie ze źródłem danych.  
@@ -30,41 +30,40 @@ Tworzy połączenie ze źródłem danych.
 ## <a name="syntax"></a>Składnia  
   
 ```  
-  
-      [ db_source(   
+[ db_source(   
    db_source,   
    name,   
    hresult   
 ) ]  
 ```  
   
-#### <a name="parameters"></a>Parametry  
+### <a name="parameters"></a>Parametry  
  *db_source*  
- Parametry połączenia używane do nawiązania połączenia ze źródłem danych. Format ciągu połączenia dla [parametry połączenia i łącza danych](https://msdn.microsoft.com/en-us/library/ms718376.aspx) w Microsoft Data Access Components (MDAC) zestawu SDK.  
+ Parametry połączenia używane do połączenia ze źródłem danych. Format parametrów połączenia, zobacz [parametrów połączeń i połączeń między danymi](https://msdn.microsoft.com/library/ms718376.aspx) w Microsoft Data Access Components (MDAC) zestawu SDK.  
   
  *Nazwa* (opcjonalnie)  
- Jeśli używasz `db_source` w klasie, *nazwa* jest wystąpieniem obiektu źródła danych, która ma `db_source` atrybut (Zobacz przykład 1). Jeśli używasz `db_source` wbudowany w implementacji metody, *nazwa* jest zmienna (lokalny do metody), która może służyć do uzyskiwania dostępu do danych źródła (Zobacz przykład 2). Przekaż to *nazwa* do `source_name` parametr **db_command —** do skojarzenia ze źródłem danych za pomocą polecenia.  
+ Kiedy używasz **db_source —** w klasie, *nazwa* jest wystąpieniem obiektu źródła danych, który ma **db_source —** zastosować atrybut (Zobacz przykład 1). Zastosowania **db_source —** bezpośrednio w implementacji metody *nazwa* jest zmienną (lokalna do metody), który może służyć do uzyskania dostępu do danych źródła (Zobacz przykład 2). Możesz przekazać ten *nazwa* do *source_name* parametru `db_command` do skojarzenia ze źródłem danych za pomocą polecenia.  
   
- `hresult` (opcjonalnie)  
- Identyfikuje zmienna, która odbierze `HRESULT` tego polecenia bazy danych. Jeśli zmienna nie istnieje, jej zostaną automatycznie dodane przez atrybut.  
+ *HRESULT* (opcjonalnie)  
+ Identyfikuje zmienna, która otrzyma `HRESULT` tego polecenia bazy danych. Jeśli zmienna nie istnieje, jego zostanie automatycznie dodany przez atrybut.  
   
 ## <a name="remarks"></a>Uwagi  
- `db_source` Tworzy [CDataSource](../data/oledb/cdatasource-class.md) i [CSession](../data/oledb/csession-class.md) obiektu, który łącznie stanowią połączenie ze źródłem danych konsumentów OLE DB.  
+ **db_source —** tworzy [CDataSource](../data/oledb/cdatasource-class.md) i [CSession](../data/oledb/csession-class.md) obiektu, który razem stanowią połączenie ze źródłem danych konsumentów OLE DB.  
   
- Jeśli używasz `db_source` w klasie, `CSession` obiektu stanie się członkiem tej klasy.  
+ Kiedy używasz **db_source —** w klasie, `CSession` obiekt staje się składową klasy.  
   
- Jeśli używasz `db_source` w metodzie, wprowadzony kod zostanie wykonany w zakresie — metoda i `CSession` obiekt jest tworzony jako zmiennej lokalnej.  
+ Kiedy używasz **db_source —** w metodzie, wprowadzony kod zostanie wykonany w zakresie metody i `CSession` obiekt zostanie utworzony jako zmienna lokalna.  
   
- `db_source` dodaje właściwości źródła danych do klasy lub w metodzie. Jest on używany w połączeniu z **db_command —** (który bierze `db_source` *nazwa* parametr jako jego `source_name` parametru).  
+ **db_source —** dodaje właściwości źródła danych do klasy lub metody. Jest używana w połączeniu z `db_command` (który bierze *db_source —* *nazwa* jako parametr jego *source_name* parametru).  
   
- Gdy dostawca atrybutu konsumenta stosuje ten atrybut do klasy, kompilator spowoduje zmianę nazwy klasy, która ma \_ *YourClassName*dostępu, gdzie *YourClassName* jest nazwa nadana klasy i kompilator utworzy klasy o nazwie *YourClassName*, co wynika ze \_ *YourClassName*metody dostępu.  W widoku klasy zostanie wyświetlona zarówno klasy.  
+ Gdy dostawca atrybucie odbiorcy dotyczy ten atrybut do klasy, kompilator spowoduje zmianę nazwy klasy, która ma \_ *YourClassName*dostępu, których *YourClassName* jest nazwa nadana klasy i kompilator utworzy klasę o nazwie *YourClassName*, która jest pochodną \_ *YourClassName*metody dostępu.  W widoku klas pojawi się, obie klasy.  
   
- Na przykład ten atrybut używany w aplikacji, zobacz przykłady [AtlAgent](http://msdn.microsoft.com/en-us/52bef5da-c1a0-4223-b4e6-9e464b6db409) i [MultiRead](http://msdn.microsoft.com/en-us/5a2a915a-77dc-492f-94b2-1b809995dd5e).  
+ Na przykład ten atrybut używany w aplikacji, zobacz przykłady [AtlAgent](http://msdn.microsoft.com/52bef5da-c1a0-4223-b4e6-9e464b6db409) i [MultiRead](http://msdn.microsoft.com/5a2a915a-77dc-492f-94b2-1b809995dd5e).  
   
 ## <a name="example"></a>Przykład  
- W tym przykładzie wywołuje `db_source` dla klasy, aby utworzyć połączenie ze źródłem danych `ds` przy użyciu bazy danych Northwind. `ds` jest dojścia dla źródła danych, która jest używana wewnętrznie do `CMyCommand` klasy.  
+ Ten przykład wywołuje **db_source —** dla klasy, aby utworzyć połączenie ze źródłem danych `ds` przy użyciu bazy danych Northwind. `ds` jest to dojście dla źródła danych, który może być używany wewnętrznie do `CMyCommand` klasy.  
   
-```  
+```cpp  
 // db_source_1.cpp  
 // compile with: /LD  
 #include <atlbase.h>  
@@ -80,16 +79,16 @@ class CMyCommand {};
   
 ## <a name="requirements"></a>Wymagania  
   
-### <a name="attribute-context"></a>Atrybut kontekstu  
+### <a name="attribute-context"></a>Kontekst atrybutu  
   
 |||  
 |-|-|  
-|**Dotyczy**|**Klasa**, `struct`, elementu członkowskiego, metoda, lokalnego|  
+|**Dotyczy**|**Klasa**, **struktury**, elementu członkowskiego, metoda, lokalne|  
 |**Powtarzalne**|Nie|  
 |**Wymaganych atrybutów**|Brak|  
 |**Nieprawidłowe atrybuty**|Brak|  
   
- Aby uzyskać więcej informacji na temat konteksty atrybutu, zobacz [konteksty atrybutu](../windows/attribute-contexts.md).  
+ Aby uzyskać więcej informacji na temat konteksty atrybutu zobacz [konteksty atrybutu](../windows/attribute-contexts.md).  
   
 ## <a name="see-also"></a>Zobacz też  
  [Atrybuty konsumentów OLE DB](../windows/ole-db-consumer-attributes.md)   

@@ -21,32 +21,31 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 815975ac693885842d2e4b2287e14957abe8375f
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: ee50f78c4fcc39561fbd94ef3a0af28746cfbaa9
+ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33873566"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39568689"
 ---
 # <a name="finding-binary-data"></a>Znajdowanie danych binarnych
-Można wyszukiwać ciągi ASCII lub bajty szesnastkowe. Na przykład aby znaleźć "tekst Hello", możesz można wyszukać dla dowolnego ciągu "Hello" lub "48 65 6C 6 C 6 f" (szesnastkowy).  
+Można wyszukiwać ciągi ASCII lub bajty szesnastkowe. Na przykład, aby wyszukać "Hello", należy można wyszukać dla dowolnego ciągu "Hello" lub "48 65 6C 6 C 6 f" (szesnastkowy).  
   
 ### <a name="to-find-binary-data"></a>Aby znaleźć dane binarne  
   
 1.  Z **Edytuj** menu, kliknij przycisk [znaleźć](/visualstudio/ide/reference/find-command).  
   
-2.  W **Znajdź** Wybierz poprzedni ciąg wyszukiwania z listy rozwijanej lub typu danych, który ma zostać znaleziony.  
+2.  W **Znajdź** Wybierz poprzedni ciąg wyszukiwania z listy rozwijanej lub typu danych, którą chcesz znaleźć.  
   
-3.  Wybierz jedno z **znaleźć** opcje.  
+3.  Wybierz dowolny z **znaleźć** opcje.  
   
 4.  Kliknij przycisk **Znajdź następny**.  
   
- Aby uzyskać informacje o dodawaniu zasobów do projektów zarządzanych, zobacz [zasobów w aplikacjach pulpitu](/dotnet/framework/resources/index) w *Przewodnik programistów platformy .NET Framework.* Aby uzyskać informacje na ręczne dodanie do projektów zarządzanych plików zasobów, uzyskiwanie dostępu do zasobów, wyświetlanie zasoby statyczne i przypisanie do właściwości ciągów zasobów, zobacz [tworzenie plików zasobów dla aplikacji pulpitu](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Informacje dotyczące globalizacji i lokalizacji zasobów w zarządzanych aplikacjach, zobacz [Globalizing i lokalizacja aplikacji .NET Framework](/dotnet/standard/globalization-localization/index).  
+ Aby uzyskać informacje na temat dodawania zasobów do projektów zarządzanych, zobacz [zasoby w aplikacjach pulpitu](/dotnet/framework/resources/index) w *przewodniku dewelopera .NET Framework*. Aby uzyskać informacji na temat ręcznego dodawania plików zasobów do projektów zarządzanych, uzyskiwania dostępu do zasobów, wyświetlania statycznych zasobów i przypisywania ciągów zasobów do właściwości, zobacz [Creating Resource Files dla aplikacji klasycznych](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Aby uzyskać informacji na temat globalizacja i lokalizacja zasobów w aplikacjach zarządzanych, zobacz [Globalizing i lokalizowanie aplikacji programu .NET Framework](/dotnet/standard/globalization-localization/index).  
   
- Wymagania  
+## <a name="requirements"></a>Wymagania  
   
  Brak  
   
 ## <a name="see-also"></a>Zobacz też  
  [Edytor plików binarnych](binary-editor.md)
-

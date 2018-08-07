@@ -1,5 +1,5 @@
 ---
-title: 'Porady: funkcje przeładowania z wewnętrznymi i Natywnymi wskaźnikami (C + +/ CLI) | Dokumentacja firmy Microsoft'
+title: 'Instrukcje: funkcje przeładowania z wewnętrznymi i Natywnymi wskaźnikami (C + +/ CLI) | Dokumentacja firmy Microsoft'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,24 +15,24 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 7e3bc7e5fca6a34f9847c913e92e523b2898068f
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 2fb1025238dc5cf5b186830d0bea3b896b7391ff
+ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33874866"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39569963"
 ---
 # <a name="how-to-overload-functions-with-interior-pointers-and-native-pointers-ccli"></a>Poradnik: Funkcje przeładowania z wewnętrznymi i natywnymi wskaźnikami (C++/CLI)
-W zależności od tego, czy typ parametru jest wskaźnik wewnętrzny lub wskaźnik natywny można przeciążać funkcji.  
+Funkcje mogą być przeciążone w zależności od tego, czy typ parametru wskaźnika wewnętrznego lub wskaźnik natywny.  
   
 > [!IMPORTANT]
->  Ta funkcja językowa jest obsługiwana przez **/CLR** — opcja kompilatora, ale nie przez **/ZW** — opcja kompilatora.  
+>  Tej funkcji języka jest obsługiwana przez `/clr` — opcja kompilatora, ale nie za `/ZW` — opcja kompilatora.  
   
 ## <a name="example"></a>Przykład  
   
 ### <a name="code"></a>Kod  
   
-```  
+```cpp  
 // interior_ptr_overload.cpp  
 // compile with: /clr  
 using namespace System;  
@@ -69,7 +69,7 @@ int main() {
   
 ### <a name="output"></a>Dane wyjściowe  
   
-```  
+```Output 
 in f( int* pi )  
 in f( interior_ptr<int> pi )  
 ```  

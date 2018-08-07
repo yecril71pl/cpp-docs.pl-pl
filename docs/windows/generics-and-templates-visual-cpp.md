@@ -16,53 +16,53 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 5d6dc0a64c5d225f6e80a21dc008e5a2486ad3d9
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 3ebb476b0a8c384759c9d44101e7bac7083103b2
+ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33878908"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39570769"
 ---
 # <a name="generics-and-templates-visual-c"></a>Typy ogólne i szablony (Visual C++)
-Typy ogólne i szablony są obie funkcje języka, które obsługują typy z parametrami. Jednak różnią się od siebie i mają różnych zastosowań. Ten temat zawiera omówienie wiele różnic.  
+Typy ogólne i szablony są obie funkcje językowe, pozwalające na obsługę typów sparametryzowanych. Jednak różnią się i mają różne sposoby zastosowania. W tym temacie omówiono wiele różnic.  
   
- Aby uzyskać więcej informacji, zobacz [środowiska wykonawczego systemu Windows i zarządzane szablony](../windows/windows-runtime-and-managed-templates-cpp-component-extensions.md).  
+ Aby uzyskać więcej informacji, zobacz [środowisko wykonawcze Windows i zarządzane szablony](../windows/windows-runtime-and-managed-templates-cpp-component-extensions.md).  
   
-## <a name="comparing-templates-and-generics"></a>Porównanie szablony i typy ogólne  
- Podstawowe różnice między typy ogólne i szablonów języka C++:  
+## <a name="comparing-templates-and-generics"></a>Porównywanie szablonami i typami ogólnymi  
+ Podstawowe różnice między typy ogólne i szablony języka C++:  
   
--   Typy ogólne są ogólne, dopóki typy są zastępowane dla nich w czasie wykonywania. Szablony są przystosowane w szczególności w czasie kompilacji, nie są one nadal sparametryzowane typów w czasie wykonywania  
+-   Typy ogólne są rodzajowe, dopóki typy są zastępowane dla nich w czasie wykonywania. Szablony są wyspecjalizowane w czasie kompilacji, więc nie są one nadal sparametryzowanych typów w czasie wykonywania  
   
--   Środowisko uruchomieniowe języka wspólnego obsługuje określone typy ogólne w MSIL. Ponieważ środowisko uruchomieniowe zna ogólne, określonych typów można zastąpić dla typów ogólnych podczas odwoływania się do zestawu zawierającego typ ogólny. Szablony, natomiast rozwiązania do zwykłych typów w czasie kompilacji, a wynikowy typów nie może być specjalizowany w innych zestawów.  
+-   Środowisko uruchomieniowe języka wspólnego obsługuje określone typy ogólne w kodzie MSIL. Ponieważ środowisko uruchomieniowe wie o ogólnych, można zastąpić określonych typów dla typów ogólnych o podczas odwoływania się do zestawu zawierającego typ ogólny. Szablony, natomiast rozwiązania do zwykłych typów w czasie kompilacji, a wynikowy typów może nie być specjalizujących się w innych zestawów.  
   
--   Typy ogólne specjalizowany w dwóch różnych zestawów tego samego typu argumenty są tego samego typu. Szablony specjalizowany w dwóch różnych zestawów tego samego typu, który argumenty są uważane przez środowisko uruchomieniowe różnych typów.  
+-   Typy ogólne specjalizujących się w dwóch różnych zestawów przy użyciu tego samego typu argumenty są tego samego typu. Szablony wyspecjalizowane w dwóch różnych zestawach za pomocą tego samego typu, który argumenty są uznawane za przez środowisko uruchomieniowe różnych typów.  
   
--   Typy ogólne są generowane jako pojedynczy kodu wykonywalnego, który służy do wszystkich argumentów typu odwołanie (nie jest to wartość true dla typów wartości, które mają unikatowe implementacji na typ wartości). Kompilator JIT zna ogólne — informacje i jest w stanie Optymalizuj kod dla typów odwołanie lub wartość, które są używane jako argumentów typu. Szablony generować kod oddzielne środowiska uruchomieniowego dla każdej specjalizacji.  
+-   Typy ogólne są generowane jako pojedynczy kod wykonywalny, który jest używany dla wszystkich argumentów typu odwołania (nie jest to wartość true dla typów wartości, które mają unikatowy implementacji na typ wartości). Kompilator JIT zna typy ogólne i jest w stanie optymalizacji kodu dla typów odwołania lub wartość, które są używane jako argumenty typu. Szablony generować kod oddzielne środowiska uruchomieniowego dla każdej specjalizacji.  
   
--   Typy ogólne nie zezwalaj na parametry szablonu bez typu, takich jak `template <int i> C {}`. Szablony umożliwiają je.  
+-   Typy ogólne nie zezwalaj na parametrów szablonu bez typu, takie jak `template <int i> C {}`. Szablony umożliwiają je.  
   
--   Typy ogólne nie zezwalają na jawna specjalizacja (to znaczy implementacja niestandardowa szablonu dla określonego typu). Czy szablony.  
+-   Typy ogólne nie zezwalają na jawną specjalizacją (oznacza to, że implementacja niestandardowa szablonu dla określonego typu). Czy szablony.  
   
--   Typy ogólne nie zezwalają na częściowej specjalizacji (niestandardowej implementacji dla podzbioru argumentów typu). Czy szablony.  
+-   Typy ogólne nie zezwalają na częściowej specjalizacji (implementacja niestandardowa dla podzbioru argumentów typu). Czy szablony.  
   
--   Typy ogólne nie zezwalają na parametr typu do użycia jako klasę podstawową dla typu ogólnego. Czy szablony.  
+-   Typy ogólne nie zezwalają na parametr typu ma być używany jako klasa bazowa dla typu ogólnego. Czy szablony.  
   
--   Szablony obsługują parametrów szablonu szablonu (np. `template<template<class T> class X> class MyClass`), ale typy ogólne nie.  
+-   Szablony obsługują parametrów szablonu dla szablonu (np. `template<template<class T> class X> class MyClass`), ale nie typy ogólne.  
   
-## <a name="combining-templates-and-generics"></a>Łączenie szablony i typy ogólne  
+## <a name="combining-templates-and-generics"></a>Łączenie z szablonami i typami ogólnymi  
   
--   Podstawowa różnica w typach ogólnych ma wpływ na tworzenie aplikacji łączące szablony i typami ogólnymi. Na przykład załóżmy, że masz klasy szablonu, który chcesz utworzyć ogólnego otoki dla do udostępnienia tego szablonu do innych języków jako ogólnego. Podejmij ogólny nie może mieć parametr typu, który następnie przekazuje do szablonu, ponieważ szablon musi mieć typ parametru w czasie kompilacji, ale ogólnych nie rozpoznać parametru typu do środowiska wykonawczego. Zagnieżdżania wewnątrz ogólnego szablonu nie będzie działać albo ponieważ nie ma możliwości rozwiń węzeł Szablony w czasie kompilacji dla dowolnych typów ogólnych, które mogła zostać utworzona w czasie wykonywania.  
+-   Podstawową różnicę w typach ogólnych ma wpływ na tworzenie aplikacji łączących się z szablonami i typami ogólnymi. Na przykład załóżmy, że masz klasą szablonu, który chcesz utworzyć otokę ogólny dla do udostępnienia tego szablonu do innych języków jako zwykły. Wypełnij ogólny nie może mieć parametr typu, który następnie przekazuje do szablonu, ponieważ szablon musi mieć parametr tego typu w czasie kompilacji, ale ogólnego rozwiąże parametr typu aż do czasu. Zagnieżdżanie wewnątrz ogólnego szablonu nie będą działać albo ponieważ nie istnieje żaden sposób rozwiń węzeł Szablony w czasie kompilacji dla dowolnych typów ogólnych, które mogła zostać utworzona w czasie wykonywania.  
   
 ## <a name="example"></a>Przykład  
   
 ### <a name="description"></a>Opis  
- Poniższy przykład przedstawia prosty przykład za pomocą szablonów i typami ogólnymi razem. W tym przykładzie klasa szablonu przekazuje jego parametrów za pomocą typu ogólnego. Sytuacja odwrotna nie jest możliwe.  
+ Poniższy przykład pokazuje prosty przykład ze sobą przy użyciu szablonów i typy ogólne. W tym przykładzie klasa szablonu przekazuje parametr za pomocą typu ogólnego. Odwrotnej nie jest możliwe.  
   
- Tego idiom można użyć, gdy chcesz skompilować na istniejące ogólnego interfejsu API z kodem szablonu, który jest lokalny dla zestawu Visual C++ lub gdy konieczne jest dodanie dodatkowej warstwy parametryzacja do typu ogólnego, aby móc korzystać z niektórych funkcji szablony nie supporte d przez ogólne.  
+ Gdy chcesz skompilować na istniejące ogólnego interfejsu API za pomocą kodu szablonu, który jest lokalny dla zestawu Visual C++ lub w przypadku, gdy trzeba dodać dodatkową warstwę parametryzacji do typu ogólnego, aby móc korzystać z niektórych funkcji szablonów supporte nie można użyć tego idiomu d według typów ogólnych.  
   
 ### <a name="code"></a>Kod  
   
-```  
+```cpp  
 // templates_and_generics.cpp  
 // compile with: /clr  
 using namespace System;  
@@ -97,7 +97,7 @@ int main() {
   
 ### <a name="output"></a>Dane wyjściowe  
   
-```  
+```Output  
 F  
 ```  
   

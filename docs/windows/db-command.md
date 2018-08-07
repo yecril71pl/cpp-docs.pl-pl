@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 70399b15081de89d8da49268c8d62d3ad390858d
-ms.sourcegitcommit: 76fd30ff3e0352e2206460503b61f45897e60e4f
+ms.openlocfilehash: 8eade0c6a77e70fe156f80c2809a8cca0ed89b38
+ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/13/2018
-ms.locfileid: "38954984"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39571441"
 ---
 # <a name="dbcommand"></a>db_command
 Tworzy polecenie OLE DB.  
@@ -133,7 +133,7 @@ Jeśli *bulk_fetch* jest mniejsza niż jeden `SetRows` zwróci wartość zero.
 ## <a name="remarks"></a>Uwagi  
 **db_command —** tworzy [CCommand](../data/oledb/ccommand-class.md) obiektu, który jest używany przez konsumenta OLE DB do wykonania polecenia.  
   
-Możesz użyć **db_command —** z zakresem klasy lub funkcji; główna różnica polega na zakres `CCommand` obiektu. Z zakresem funkcji danych, np. powiązania zakończenie na końcu funkcji. Klasa i funkcja użycia zakresu obejmują klasy OLE DB szablon konsumenta **CCommand\<>**, ale argumentów szablonu różnią się w przypadkach, funkcji i klas. W przypadku funkcji, powiązania nie zostaną wprowadzone **akcesor** zmiennych lokalnych, która obejmuje podczas wywnioskuje użycie klasy `CAccessor`-klasy jako argument. Gdy jest używana jako atrybut class **db_command —** działa w połączeniu z **db_column —**.  
+Możesz użyć **db_command —** z zakresem klasy lub funkcji; główna różnica polega na zakres `CCommand` obiektu. Z zakresem funkcji danych, np. powiązania zakończenie na końcu funkcji. Klasa i funkcja użycia zakresu obejmują klasy OLE DB szablon konsumenta `CCommand<>`, ale argumentów szablonu różnią się w przypadkach, funkcji i klas. W przypadku funkcji, powiązania nie zostaną wprowadzone **akcesor** zmiennych lokalnych, która obejmuje podczas wywnioskuje użycie klasy `CAccessor`-klasy jako argument. Gdy jest używana jako atrybut class **db_command —** działa w połączeniu z **db_column —**.  
   
 **db_command —** może służyć do wykonywania poleceń, które nie zwracają zestaw wyników.  
   

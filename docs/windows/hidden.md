@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 444994f046b58fbd54dcd3982836bb7fc4d53ed1
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: e813ce223bad48aab3807bb01e042190d28aef74
+ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33879688"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39568673"
 ---
 # <a name="hidden"></a>hidden
 Wskazuje, czy element istnieje, ale nie powinien być wyświetlany w przeglądarce zorientowanej na użytkownika.  
@@ -30,26 +30,24 @@ Wskazuje, czy element istnieje, ale nie powinien być wyświetlany w przeglądar
 ## <a name="syntax"></a>Składnia  
   
 ```  
-  
 [hidden]  
-  
 ```  
   
 ## <a name="remarks"></a>Uwagi  
- **Ukryte** atrybut C++ ma te same funkcje co [ukryte](http://msdn.microsoft.com/library/windows/desktop/aa366861) MIDL atrybutu.  
+ **Ukryte** atrybut C++ ma taką samą funkcjonalność jak [ukryte](http://msdn.microsoft.com/library/windows/desktop/aa366861) atrybutów w MIDL.  
   
 ## <a name="example"></a>Przykład  
- Zobacz przykład [powiązania](../windows/bindable.md) przykład sposobu użycia **ukryte**.  
+ Zobacz przykład [możliwej do wiązania](../windows/bindable.md) przykład sposobu użycia **ukryte**.  
   
 ## <a name="requirements"></a>Wymagania  
   
-### <a name="attribute-context"></a>Atrybut kontekstu  
+### <a name="attribute-context"></a>Kontekst atrybutu  
   
 |||  
 |-|-|  
-|**Dotyczy**|`interface`, **klasy**, `struct`, metoda, właściwość|  
+|**Dotyczy**|**interfejs**, **klasy**, **struktury**, metody, właściwości|  
 |**Powtarzalne**|Nie|  
-|**Wymaganych atrybutów**|**coclass** (gdy jest stosowany do **klasy** lub `struct`)|  
+|**Wymaganych atrybutów**|**Klasa coclass** (po zastosowaniu do **klasy** lub **struktury**)|  
 |**Nieprawidłowe atrybuty**|Brak|  
   
  Aby uzyskać więcej informacji, zobacz [konteksty atrybutu](../windows/attribute-contexts.md).  

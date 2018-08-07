@@ -1,5 +1,5 @@
 ---
-title: EventSource::targetspointerlock_ — członek danych | Dokumentacja firmy Microsoft
+title: EventSource::targetsPointerLock_, składowa danych | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: fb3c2131331521dab1b8264b696206d953762851
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 9b58aa072af5ff96093f9999d212f8b19ff0571c
+ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33873111"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39569820"
 ---
 # <a name="eventsourcetargetspointerlock-data-member"></a>EventSource::targetsPointerLock_ — Członek danych
-Synchronizuje dostępu do elementów członkowskich danych wewnętrznych, nawet wtedy, gdy programy obsługi zdarzeń dla tego elementu EventSource są dodawane, usunięte lub wywołany.  
+Synchronizuje dostęp do elementów członkowskich danych wewnętrznych, nawet w trakcie procedury obsługi zdarzeń dla tego **EventSource** są dodawane, usunięte lub wywołana.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -36,7 +36,7 @@ Wrappers::SRWLock targetsPointerLock_;
 ## <a name="requirements"></a>Wymagania  
  **Nagłówek:** event.h  
   
- **Namespace:** Microsoft::wrl —
+ **Namespace:** Microsoft::WRL
  
  ## <a name="see-also"></a>Zobacz też
  [EventSource, klasa](../windows/eventsource-class.md)

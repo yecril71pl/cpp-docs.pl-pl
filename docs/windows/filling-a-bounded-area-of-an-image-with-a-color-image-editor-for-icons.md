@@ -18,32 +18,32 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: f70decbfd0de1a31024482806594ca3c2b12aa8a
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 4ae915dbcd9e2190f33e29e236170951fcec3d01
+ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33880572"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39569875"
 ---
 # <a name="filling-a-bounded-area-of-an-image-with-a-color-image-editor-for-icons"></a>Wypełnianie kolorem ograniczonego obszaru obrazu (Edytor obrazów dla ikon)
-Edytor obrazów zapewnia **wypełnienia** narzędzia do wypełniania żadnego ujęta obszar obrazu z bieżący kolor rysunku lub bieżący kolor tła.  
+Edytor obrazów zawiera **wypełnienia** narzędzie do wypełniania dowolne ujęte obszar obrazu z bieżącym kolorem rysowania lub bieżący kolor tła.  
   
 > [!TIP]
->  Etykietki narzędzi są wyświetlane po umieszczeniu kursora na przycisku paska narzędzi. Te porady mogą pomóc w identyfikacji funkcji każdego przycisku.  
+>  Etykietki narzędzi są wyświetlane po umieszczeniu kursora na przycisku paska narzędzi. Poniższe wskazówki mogą pomóc w identyfikacji funkcji każdego przycisku.  
   
 ### <a name="to-use-the-fill-tool"></a>Aby użyć narzędzia wypełnienia  
   
-1.  Na **edytor obrazów** paska narzędzi (lub **obrazu** menu **narzędzia** polecenia), kliknij przycisk **wypełnienia** narzędzia.  
+1.  Na **edytora obrazów** paska narzędzi (lub **obrazu** menu **narzędzia** polecenie), kliknij przycisk **wypełnienia** narzędzia.  
   
-2.  W razie potrzeby wybierz rysowania kolorów: W [palety kolorów](../windows/colors-window-image-editor-for-icons.md), kliknij przycisk myszy, aby wybrać kolor pierwszego planu lub prawego przycisku myszy, aby zmienić kolor tła.  
+2.  W razie potrzeby wybierz kolory do rysowania: W [paleta kolorów](../windows/colors-window-image-editor-for-icons.md), kliknij przycisk myszy po lewej stronie, aby wybrać kolor pierwszego planu lub prawego przycisku myszy, aby zmienić kolor tła.  
   
-3.  Przenieś **wypełnienia** narzędzia aby wypełnił obszar.  
+3.  Przenieś **wypełnienia** narzędzie do obszaru, który chcesz wypełnić.  
   
-4.  Kliknij przycisk myszy lewo lub w prawo, aby wypełnić odpowiednio kolor pierwszego planu lub kolorów tła.  
+4.  Kliknij przycisk myszy w lewo lub w prawo, aby wypełnić kolor pierwszego planu lub kolorów tła, odpowiednio.  
   
- Aby uzyskać informacje o dodawaniu zasobów do projektów zarządzanych, zobacz [zasobów w aplikacjach pulpitu](/dotnet/framework/resources/index) w *Przewodnik programistów platformy .NET Framework.* Aby uzyskać informacje na ręczne dodanie do projektów zarządzanych plików zasobów, uzyskiwanie dostępu do zasobów, wyświetlanie zasoby statyczne i przypisanie do właściwości ciągów zasobów, zobacz [tworzenie plików zasobów dla aplikacji pulpitu](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Informacje dotyczące globalizacji i lokalizacji zasobów w zarządzanych aplikacjach, zobacz [Globalizing i lokalizacja aplikacji .NET Framework](/dotnet/standard/globalization-localization/index).  
+ Aby uzyskać informacje na temat dodawania zasobów do projektów zarządzanych, zobacz [zasoby w aplikacjach pulpitu](/dotnet/framework/resources/index) w *przewodniku dewelopera .NET Framework*. Aby uzyskać informacji na temat ręcznego dodawania plików zasobów do projektów zarządzanych, uzyskiwania dostępu do zasobów, wyświetlania statycznych zasobów i przypisywania ciągów zasobów do właściwości, zobacz [Creating Resource Files dla aplikacji klasycznych](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Aby uzyskać informacji na temat globalizacja i lokalizacja zasobów w aplikacjach zarządzanych, zobacz [Globalizing i lokalizowanie aplikacji programu .NET Framework](/dotnet/standard/globalization-localization/index).  
   
- Wymagania  
+## <a name="requirements"></a>Wymagania  
   
  Brak  
   

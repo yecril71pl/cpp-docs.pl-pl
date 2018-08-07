@@ -16,21 +16,21 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 40187b7da9083ddaa5342e4bdfeba556fb900e7b
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 57c6ed79f9ecb74533a7ffaf2861af8bee9e257a
+ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33880387"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39569758"
 ---
 # <a name="how-to-declare-pinning-pointers-and-value-types"></a>Porady: deklarowanie unieruchamiania wskaźników i typów wartości
-Można go niejawnie opakować typ wartości. Następnie można zadeklarować przypiętego wskaźnika do obiektu typu wartości się i użyj **pin_ptr** do typu wartości spakowanej.  
+Typ wartości może być zapakowany niejawnie. Następnie można zadeklarować przypinania wskaźnik do obiektu typu wartościowego sam i użycia **pin_ptr** typem wartości spakowanej.  
   
 ## <a name="example"></a>Przykład  
   
 ### <a name="code"></a>Kod  
   
-```  
+```cpp  
 // pin_ptr_value.cpp  
 // compile with: /clr  
 value struct V {  
@@ -50,7 +50,7 @@ int main() {
   
 ### <a name="output"></a>Dane wyjściowe  
   
-```  
+```Output  
 8  
 7  
 7  

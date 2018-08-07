@@ -17,38 +17,37 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: db90390be5313ddbea1103105f47b55fe9e23d62
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 933fc1db2a890fedd9d725c49bbeb6c363e2f4c8
+ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33872318"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39569641"
 ---
 # <a name="entry"></a>entry
-Określa wyeksportowanej funkcji lub stała w module, określając punkt wejścia w bibliotece DLL.  
+Określa eksportowanych funkcji lub stałą w module, określając punkt wejścia w DLL.  
   
 ## <a name="syntax"></a>Składnia  
   
 ```  
-  
-      [ entry(  
+[ entry(  
    id  
 ) ]  
 ```  
   
 #### <a name="parameters"></a>Parametry  
- `id`  
+ *id*  
  Identyfikator punktu wejścia.  
   
 ## <a name="remarks"></a>Uwagi  
- **Wpis** atrybut C++ ma te same funkcje co [wpis](http://msdn.microsoft.com/library/windows/desktop/aa366815) MIDL atrybutu.  
+ **Wpis** atrybut C++ ma taką samą funkcjonalność jak [wpis](http://msdn.microsoft.com/library/windows/desktop/aa366815) atrybutów w MIDL.  
   
 ## <a name="example"></a>Przykład  
- Zobacz przykład [idl_module](../windows/idl-module.md) na przykład użyj programu **wpis**.  
+ Zobacz przykład [idl_module](../windows/idl-module.md) dla przykładowe **wpis**.  
   
 ## <a name="requirements"></a>Wymagania  
   
-### <a name="attribute-context"></a>Atrybut kontekstu  
+### <a name="attribute-context"></a>Kontekst atrybutu  
   
 |||  
 |-|-|  

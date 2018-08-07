@@ -1,5 +1,5 @@
 ---
-title: HandleT::InternalClose — metoda | Dokumentacja firmy Microsoft
+title: HandleT::InternalClose, metoda | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 7b0aef97645d515a03dcf2cab90eedc06f07971c
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: a54b61902c8994397c7bd6effa74a90d43c7e512
+ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33874148"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39568644"
 ---
 # <a name="handletinternalclose-method"></a>HandleT::InternalClose — Metoda
-Zamyka bieżący obiekt handlet —.  
+Zamyka bieżące **HandleT** obiektu.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -34,15 +34,15 @@ virtual bool InternalClose();
 ```  
   
 ## <a name="return-value"></a>Wartość zwracana  
- `true` Jeśli bieżący handlet — zamknięty pomyślnie; w przeciwnym razie `false`.  
+ **wartość true,** Jeśli bieżące **HandleT** zamknięta pomyślnie; w przeciwnym razie **false**.  
   
 ## <a name="remarks"></a>Uwagi  
- InternalClose() jest chroniony.  
+ **InternalClose()** jest **chronione**.  
   
 ## <a name="requirements"></a>Wymagania  
  **Nagłówek:** corewrappers.h  
   
- **Namespace:** Microsoft::wrl:: wrappers —  
+ **Namespace:** Microsoft::wrl:: wrappers  
   
 ## <a name="see-also"></a>Zobacz też  
  [HandleT, klasa](../windows/handlet-class.md)

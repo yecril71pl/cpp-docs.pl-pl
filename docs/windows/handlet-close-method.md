@@ -1,5 +1,5 @@
 ---
-title: HandleT::Close — metoda | Dokumentacja firmy Microsoft
+title: HandleT::Close, metoda | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 4f0c1e47420106651cfe0526d6d212e9819a72ff
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 69f3f2c756d158954676f6fc42941b1b80f4345e
+ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33873254"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39569921"
 ---
 # <a name="handletclose-method"></a>HandleT::Close — Metoda
-Zamyka bieżący obiekt handlet —.  
+Zamyka bieżące **HandleT** obiektu.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -34,14 +34,14 @@ void Close();
 ```  
   
 ## <a name="remarks"></a>Uwagi  
- Dojście źródłową bieżącego handlet — jest zamknięty, a handlet — ustawiono nieprawidłowy stan.  
+ Dojście, która jest podporządkowana narzędziu bieżącego **HandleT** jest zamknięte i **HandleT** ustawiono nieprawidłowy stan.  
   
- Jeśli dojście nie zamknięty poprawnie, jest wyjątek w wątku wywołującym.  
+ Jeśli uchwyt nie zamyka się prawidłowo, tworzony jest wyjątek w wątku wywołującego.  
   
 ## <a name="requirements"></a>Wymagania  
  **Nagłówek:** corewrappers.h  
   
- **Namespace:** Microsoft::wrl:: wrappers —  
+ **Namespace:** Microsoft::wrl:: wrappers  
   
 ## <a name="see-also"></a>Zobacz też  
  [HandleT, klasa](../windows/handlet-class.md)

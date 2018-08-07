@@ -1,5 +1,5 @@
 ---
-title: event_source — | Dokumentacja firmy Microsoft
+title: event_source | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -22,12 +22,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: b7e7e287d68bac0fe69417fe21df27ed3231cce6
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: e44b5757ea7b9e469275688443ba7ed1e3810571
+ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33879386"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39571392"
 ---
 # <a name="eventsource"></a>event_source
 Tworzy źródła zdarzenia.  
@@ -35,21 +35,20 @@ Tworzy źródła zdarzenia.
 ## <a name="syntax"></a>Składnia  
   
 ```  
-  
-      [ event_source(  
+[ event_source(  
    type,  
    optimize=[speed | size],  
    decorate=[true | false]  
 ) ]  
 ```  
   
-#### <a name="parameters"></a>Parametry  
- `type`  
+### <a name="parameters"></a>Parametry  
+ *Typ*  
  Wyliczenie jednego z następujących wartości:  
   
--   `native` dla niezarządzanego kodu C/C++ (domyślnie klasy niezarządzane).  
+-   `native` dla niezarządzanego kodu C/C++ (wartość domyślna dla klasy niezarządzane).  
   
--   `com` dla modelu COM kodu. Należy użyć `coclass` podczas `type` = `com`. Ta wartość wymaga, aby uwzględnić następujące pliki nagłówka:  
+-   `com` dla kodu COM. Należy użyć `coclass` podczas `type` = `com`. Ta wartość wymaga, że zawrzesz następujące pliki nagłówków:  
   
     ```  
     #define _ATL_ATTRIBUTES  
@@ -57,29 +56,29 @@ Tworzy źródła zdarzenia.
     #include <atlcom.h>  
     ```  
   
- **optymalizuj**  
- Gdy `type` jest **natywnego**, można określić **zoptymalizować = rozmiar**, aby wskazać, że istnieje 4 bajty magazynu (minimum) dla wszystkich zdarzeń w klasie lub **optymalizacji = prędkość** (opcja domyślna), aby wskazać, że jest 4 * bajtów (liczba zdarzeń) magazynu.  
+ *optymalizuj*  
+ Gdy *typu* jest `native`, można określić `optimize=size`, aby wskazać, że istnieje 4 bajty pamięci masowej (minimum) dla wszystkich zdarzeń w klasie lub `optimize=speed` (ustawienie domyślne), aby wskazać, że jest 4 * (liczba zdarzeń) bajtów magazynu.  
   
- **dekoracji**  
- Gdy `type` jest **natywnego**, można określić **dekoracji = false**, aby wskazać, czy rozwiniętą nazwą w pliku scalony (.mrg) nie może zawierać nazwy klasy otaczającej. [/FX](../build/reference/fx-merge-injected-code.md) umożliwia wygenerowanie .mrg plików. **dekoracji = false**, który jest domyślnym, wyników w pełni kwalifikowanego typu nazw scalony plik.  
+ *dekoracji*  
+ Gdy *typu* jest `native`, można określić `decorate=false`, aby wskazać, że rozwiniętej nazwy w pliku scalonego (.mrg) nie powinna zawierać nazwę klasy otaczającej. [/FX](../build/reference/fx-merge-injected-code.md) umożliwia generowanie plików .mrg. `decorate=false`, która jest wartością domyślną, wyniki w pełni kwalifikowanego typu nazwy w scalony plik.  
   
 ## <a name="remarks"></a>Uwagi  
- **Event_source —** C++ atrybut określa, czy klasy lub struktury, do którego jest stosowana będzie źródła zdarzenia.  
+ **Event_source** atrybut C++ Określa, że klasy lub struktury, do którego jest stosowana będzie źródła zdarzenia.  
   
- **event_source —** jest używany w połączeniu z [event_receiver](../windows/event-receiver.md) atrybutu i [__event](../cpp/event.md) — słowo kluczowe. Użyj **event_receiver** do tworzenia odbiorcy zdarzeń. Użyj `__event` metod w źródle zdarzeń, aby określić tych metod jako zdarzenia.  
+ **event_source** jest używany w połączeniu z [event_receiver](../windows/event-receiver.md) atrybutu i [__event](../cpp/event.md) — słowo kluczowe. Użyj `event_receiver` do tworzenia odbiorcy zdarzeń. Użyj **__event** metod w źródle zdarzenia do określenia tych metod jako zdarzenia.  
   
 > [!NOTE]
->  Szablonu klasy lub struktury nie mogą zawierać zdarzenia.  
+>  Szablonem klasy lub struktury nie mogą zawierać zdarzenia.  
   
 ## <a name="requirements"></a>Wymagania  
   
-### <a name="attribute-context"></a>Atrybut kontekstu  
+### <a name="attribute-context"></a>Kontekst atrybutu  
   
 |||  
 |-|-|  
-|**Dotyczy**|**Klasa**, `struct`|  
+|**Dotyczy**|**Klasa**, **— struktura**|  
 |**Powtarzalne**|Nie|  
-|**Wymaganych atrybutów**|**coclass** podczas `type` = **com**|  
+|**Wymaganych atrybutów**|**Klasa coclass** po `type`=`com`|  
 |**Nieprawidłowe atrybuty**|Brak|  
   
  Aby uzyskać więcej informacji, zobacz [konteksty atrybutu](../windows/attribute-contexts.md).  

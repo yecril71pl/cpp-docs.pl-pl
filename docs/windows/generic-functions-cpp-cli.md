@@ -19,15 +19,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 66eb27b28a1b18942c0a8a9a77a877a2f0b2ef8c
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 40f79bc6afe47bfed92d096dace59ef97eed68e1
+ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33878837"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39568881"
 ---
 # <a name="generic-functions-ccli"></a>Funkcje ogólne (C++/CLI)
-Funkcja generyczna jest funkcja, która jest zadeklarowana za pomocą parametrów typu. Po wywołaniu, rzeczywiste typy są używane zamiast parametrów typu.  
+Funkcja ogólna jest funkcją, która jest zadeklarowana za pomocą parametrów typu. Gdy zostanie wywołana, rzeczywiste typy są używane zamiast parametrów typu.  
   
 ## <a name="all-platforms"></a>Wszystkie platformy  
  **Uwagi**  
@@ -37,15 +37,15 @@ Funkcja generyczna jest funkcja, która jest zadeklarowana za pomocą parametró
 ## <a name="windows-runtime"></a>Środowisko wykonawcze systemu Windows  
  **Uwagi**  
   
- Ta funkcja nie jest obsługiwana w środowisku wykonawczym systemu Windows.  
+ Ta funkcja nie jest obsługiwana w środowisku uruchomieniowym Windows.  
   
 ### <a name="requirements"></a>Wymagania  
- — Opcja kompilatora: **/ZW**  
+ — Opcja kompilatora: `/ZW`  
   
 ## <a name="common-language-runtime"></a>środowiska uruchomieniowe w trakcie wykonania 
- Funkcja generyczna jest funkcja, która jest zadeklarowana za pomocą parametrów typu. Po wywołaniu, rzeczywiste typy są używane zamiast parametrów typu.  
+ Funkcja ogólna jest funkcją, która jest zadeklarowana za pomocą parametrów typu. Gdy zostanie wywołana, rzeczywiste typy są używane zamiast parametrów typu.  
   
- **Składnia**  
+### <a name="syntax"></a>Składnia  
   
 ```  
 [attributes] [modifiers]  
@@ -56,16 +56,16 @@ return-type identifier<type-parameter identifier(s)>
 {function-body}  
 ```  
   
- **Parametry**  
+### <a name="parameters"></a>Parametry 
   
  *atrybuty* (opcjonalnie)  
- Dodatkowe informacje deklaratywne. Aby uzyskać więcej informacji na atrybuty i klasy atrybutów Zobacz atrybutów.  
+ Dodatkowe informacje deklaratywnego. Aby uzyskać więcej informacji o atrybuty i klasy atrybutów Zobacz atrybutów.  
   
  *Modyfikatory* (opcjonalnie)  
- Modyfikator dla funkcji, np. static.  `virtual` nie jest dozwolona, ponieważ metody wirtualne nie może być rodzajowy.  
+ Modyfikator właściwy dla funkcji, takich jak statyczny.  **wirtualne** jest niedozwolona, ponieważ metody wirtualne nie może być ogólny.  
   
- *zwracanego typu*  
- Typ zwracany przez metodę. Jeśli typem zwracanym jest void, brak wartości zwracanej jest wymagany.  
+ *zwracany typ*  
+ Typ zwracany przez metodę. Jeśli typ zwracany void, nie zwraca wartości jest wymagana.  
   
  *Identyfikator*  
  Nazwa funkcji.  
@@ -73,32 +73,32 @@ return-type identifier<type-parameter identifier(s)>
  *identyfikatory parametr typu*  
  Lista identyfikatorów rozdzielonych przecinkami.  
   
- *parametrów formalnych* (opcjonalnie)  
+ *parametry_formalne* (opcjonalnie)  
  Lista parametrów.  
   
  *Typ — parametr ograniczenia — klauzule*  
- To określa ograniczenia dotyczące typów, które mogą być używane jako argumentów typu i ma postać określone w [ograniczenia dotyczące parametrów typu ogólnego (C + +/ CLI)](../windows/constraints-on-generic-type-parameters-cpp-cli.md).  
+ To określa ograniczenia typów, które mogą być używane jako argumenty typu i ma postać określone w [ograniczenia dotyczące parametrów typu ogólnego (C + +/ CLI)](../windows/constraints-on-generic-type-parameters-cpp-cli.md).  
   
  *treść funkcji*  
  Treść metody, która może odwoływać się do identyfikatorów parametru typu.  
   
- **Uwagi**  
+### <a name="remarks"></a>Uwagi  
   
- Funkcje ogólne są funkcje zadeklarowany z parametrem typu ogólnego. Mogą być metod w funkcje klasy lub struktury lub autonomiczne. Pojedyncza deklaracja ogólnego niejawnie deklaruje element rodziny funkcji, które różnią się tylko w celu zastąpienia innego typu rzeczywistego parametru typu ogólnego.  
+ Funkcje ogólne są funkcje zadeklarowane za pomocą parametru typu ogólnego. Mogą one zostać metod w funkcjach klasy lub struktury lub autonomiczne. Jednej deklaracji ogólnej niejawnie deklaruje rodzinę funkcji, które różnią się tylko w celu zastąpienia inny typ rzeczywistego parametru typu ogólnego.  
   
- W programie Visual C++ nie można zadeklarować klasy lub struktury konstruktorów z parametrami typu ogólnego.  
+ W programie Visual C++ Konstruktory klasy lub struktury nie mogą być deklarowane przy użyciu parametrów typu genetycznego.  
   
- Wywołuje się, parametr typu ogólnego jest zamieniana rzeczywistego typu. Rzeczywisty typ może być jawnie określona w nawiasach, używając składni podobnej do wywołania funkcji szablonu. Jeśli wywoływana bez parametrów typu, kompilator będzie podejmować próby ustalenia typu rzeczywistego z parametry podane w wywołaniu funkcji. Jeśli argument danego typu nie można wywnioskować z parametrów użytych, kompilator zgłosi błąd.  
+ Gdy zostanie wywołana, parametr typu ogólnego jest zastępowany przez rzeczywisty typ. Rzeczywisty typ może być jawnie określona w nawiasach przy użyciu składni podobnej do wywołania funkcji szablonu. Jeśli wywołana bez parametrów typu, kompilator spróbuje ustalić rzeczywisty typ z parametry podane w wywołaniu funkcji. Jeśli argument zamierzony typu nie można wywnioskować z parametrów użytych, kompilator zgłosi błąd.  
   
 ### <a name="requirements"></a>Wymagania  
- — Opcja kompilatora:   **/CLR**  
+ — Opcja kompilatora: `/clr`  
   
 ### <a name="examples"></a>Przykłady  
  **Przykład**  
   
- Poniższy przykładowy kod przedstawia ogólny funkcji.  
+ W poniższym przykładzie kodu pokazano funkcja ogólna.  
   
-```  
+```cpp  
 // generics_generic_function_1.cpp  
 // compile with: /clr  
 generic <typename ItemType>  
@@ -131,9 +131,9 @@ int main() {
   
  **Przykład**  
   
- Funkcje ogólne może być przeciążony oparte na podpis lub argumentów, liczba parametrów typu w funkcji. Ponadto funkcje ogólne można przeciążać z funkcjami nieogólnego o takiej samej nazwie, tak długo, jak w niektórych parametrów typu są różne funkcje. Na przykład można przeciążać, następujące funkcje:  
+ Funkcje ogólne mogą być przeciążane na podstawie podpisu lub argumentów, liczba parametrów typu dla funkcji. Ponadto ogólne funkcje mogą być przeciążone funkcje nieogólnego o takiej samej nazwie, tak długo, jak funkcje różnią się w niektórych parametrach typu. Na przykład mogą być przeciążone następujące funkcje:  
   
-```  
+```cpp  
 // generics_generic_function_2.cpp  
 // compile with: /clr /c  
 ref struct MyClass {  
@@ -149,9 +149,9 @@ ref struct MyClass {
   
  **Przykład**  
   
- W poniższym przykładzie użyto funkcji ogólne do znajdowania pierwszego elementu w tablicy. Deklaruje `MyClass`, który dziedziczy z klasy podstawowej `MyBaseClass`. `MyClass` Zawiera ogólne funkcję `MyFunction`, które wywołuje innej funkcji ogólnego, `MyBaseClassFunction`, w obrębie klasy podstawowej. W **głównego**, ogólna funkcja `MyFunction`, jest wywoływana przy użyciu argumentów innego typu.  
+ W poniższym przykładzie użyto funkcja ogólna, można znaleźć pierwszego elementu w tablicy. Deklaruje `MyClass`, który dziedziczy z klasy bazowej `MyBaseClass`. `MyClass` zawiera funkcję ogólną `MyFunction`, która wywołuje inną funkcję ogólny, `MyBaseClassFunction`, w ramach klasy bazowej. W `main`, funkcja ogólna `MyFunction`, jest wywoływana przy użyciu różnych typów argumentów.  
   
-```  
+```cpp  
 // generics_generic_function_3.cpp  
 // compile with: /clr  
 using namespace System;  

@@ -1,5 +1,5 @@
 ---
-title: Delegat (C++ Component Extensions) | Dokumentacja firmy Microsoft
+title: Delegate (C++ Component Extensions) | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,23 +18,23 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 73d40bb33509f89273b37f7704cd1922a8d5adc2
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 4c2a1297fff3c4604ffb181a907b982f9d2e1de4
+ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33879662"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39570366"
 ---
 # <a name="delegate--c-component-extensions"></a>delegate (C++ Component Extensions)
 Deklaruje typ, który reprezentuje wskaźnik funkcji.  
   
 ## <a name="all-runtimes"></a>Wszystkie środowiska wykonawcze  
- Środowisko wykonawcze systemu Windows i środowisko uruchomieniowe języka wspólnego obsługuje delegatów.  
+ Środowisko uruchomieniowe Windows i środowisko uruchomieniowe języka wspólnego obsługuje delegatów.  
   
 ### <a name="remarks"></a>Uwagi  
- `delegate` jest słowem kluczowym kontekstowa. Aby uzyskać więcej informacji, zobacz [słowa kluczowe Context-Sensitive](../windows/context-sensitive-keywords-cpp-component-extensions.md).  
+ **Delegowanie** jest kontekstowej słowem kluczowym. Aby uzyskać więcej informacji, zobacz [Context-Sensitive Keywords](../windows/context-sensitive-keywords-cpp-component-extensions.md).  
   
- Aby wykrywać w czasie kompilacji, jeśli typ delegata, użyj `__is_delegate()` typu cechy. Aby uzyskać więcej informacji, zobacz [Obsługa cech typu w kompilatorze](../windows/compiler-support-for-type-traits-cpp-component-extensions.md).  
+ Aby wykryć w czasie kompilacji, jeśli typ jest delegatem, należy użyć `__is_delegate()` cechy typu. Aby uzyskać więcej informacji, zobacz [Obsługa cech typu w kompilatorze](../windows/compiler-support-for-type-traits-cpp-component-extensions.md).  
   
 ## <a name="windows-runtime"></a>Środowisko wykonawcze systemu Windows  
  C + +/ CX obsługuje delegatów przy użyciu następującej składni.  
@@ -49,24 +49,23 @@ delegate-type-identifier
 (  
 [ parameters ]  
 )  
-  
 ```  
   
 ### <a name="parameters"></a>Parametry  
- *Dostęp*  
- (opcjonalnie) Dostępność delegata, która może być `public` (ustawienie domyślne) lub `private`. Prototypu funkcji można również być kwalifikowany za pomocą `const` lub `volatile` słów kluczowych.  
+ *Dostęp do*  
+ (opcjonalnie) Dostępność delegata, która może być **publicznych** (ustawienie domyślne) lub **prywatnej**. Prototyp funkcji również może być kwalifikowana za **const** lub **volatile** słów kluczowych.  
   
- *zwracanego typu*  
- Typ zwracany prototypu funkcji.  
+ *zwracany typ*  
+ Zwracany typ prototypu funkcji.  
   
  *Delegat typu identyfikator*  
- Nazwa typu delegowanego zadeklarowane.  
+ Nazwa typu zadeklarowana delegata.  
   
  *Parametry*  
  (Opcjonalnie) Typy i identyfikatory prototypu funkcji.  
   
 ### <a name="remarks"></a>Uwagi  
- Użyj *delegowanego typu identyfikatorów* Aby zadeklarować zdarzenie z tej samej prototypu jako pełnomocnik. Aby uzyskać więcej informacji, zobacz [delegatów (C + +/ CX)](../cppcx/delegates-c-cx.md).  
+ Użyj *identyfikatora w przypadku typu delegata* Aby zadeklarować zdarzenia o ten sam prototyp jako pełnomocnik. Aby uzyskać więcej informacji, zobacz [obiektów delegowanych (C + +/ CX)](../cppcx/delegates-c-cx.md).  
   
 ### <a name="requirements"></a>Wymagania  
  — Opcja kompilatora: **/ZW**  
@@ -80,46 +79,45 @@ delegate-type-identifier
 access  
 delegate  
 function_declaration  
-  
 ```  
   
 ### <a name="parameters"></a>Parametry  
- *Dostęp*  
- (opcjonalnie) Dostępność delegata poza zestaw może być publicznych lub prywatnych.  Wartość domyślna to prywatne.  W klasie Delegat może mieć żadnych ułatwień dostępu.  
+ *Dostęp do*  
+ (opcjonalnie) Dostępność delegata spoza zestawu może być publicznym lub prywatnym.  Wartość domyślna jest prywatny.  Wewnątrz klasy delegata może mieć żadnych ułatwień dostępu.  
   
  *function_declaration*  
- Podpis funkcji, która może być powiązana z obiektem delegowanym. Typ zwracany delegata mogą być dowolnego typu zarządzanego. Ze względu na współdziałanie zaleca się, że typ zwracany delegata być typem ze specyfikacją CLS.  
+ Podpis funkcji, która może być powiązana z obiektu delegowanego. Zwracany typ delegata może być dowolnego typu zarządzanego. Ze względu na współdziałanie zalecane jest, że zwracany typ delegata być typem ze specyfikacją CLS.  
   
- Aby zdefiniować niezwiązanego delegata, pierwszy parametr w *function_declaration* powinien być typu `this` wskaźnik dla obiekt. 
+ Aby zdefiniować niezwiązanego delegata, pierwszy parametr w *function_declaration* powinien być typem **to** wskaźnik do obiektu. 
   
 ### <a name="remarks"></a>Uwagi  
- Obiekty delegowane są multiemisji: "wskaźnik funkcji" może być powiązana z co najmniej jednej metody w klasie zarządzanej. **Delegować** — słowo kluczowe definiuje typ delegata multiemisji za pomocą podpisu dla określonej metody.  
+ Obiekty delegowane są multiemisji: "wskaźnik funkcji" może być powiązany z co najmniej jednej metody w klasie zarządzanej. **Delegować** — słowo kluczowe definiuje typ delegata multiemisji za pomocą podpisu określonej metody.  
   
  Delegat może być powiązana również metody klasy wartości, takich jak metody statycznej.  
   
- Delegat ma następującą charakterystykę:  
+ Obiekt delegowany ma następujące cechy:  
   
--   Dziedziczy on z **System::MulticastDelegate**.  
+-   Dziedziczy `System::MulticastDelegate`.  
   
--   Ma on konstruktora, który przyjmuje dwa argumenty: wskaźnik do zarządzanej klasy lub **NULL** (w przypadku tworzenia powiązania z metodą statyczną), a także metodę pełną określonego typu.  
+-   Ma on konstruktora, który przyjmuje dwa argumenty: wskaźnik do klasy zarządzanej lub o wartości NULL (w przypadku powiązania na metodę statyczną) i pełną metodą określonego typu.  
   
--   Zawiera ona metodę o nazwie `Invoke`, którego podpis pasuje zadeklarowane podpis delegata.  
+-   Ma metodę o nazwie `Invoke`, którego podpis pasuje zadeklarowane podpis delegata.  
   
- Po wywołaniu delegata jego funkcje są nazywane w kolejności, które zostały dołączone.  
+ Gdy obiekt delegowany jest wywoływany, jego funkcji są wywoływane w kolejności, w której zostały dołączone.  
   
- Wartość zwracana delegata jest wartość zwracana z jej ostatniej funkcji dołączonych elementu członkowskiego.  
+ Wartość zwracana przez obiekt delegowany jest wartość zwrotną z jej ostatniej funkcji członkowskiej dołączone.  
   
- Obiekty delegowane nie może być przeciążony.  
+ Delegaci nie mogą być przeciążone.  
   
- Obiekty delegowane można powiązany lub niepowiązanych.  
+ Delegatów można powiązać lub niepowiązanych.  
   
- Gdy wystąpienia delegata powiązane, pierwszy argument musi być odwołanie do obiektu.  Drugi argument wystąpienia delegata są albo być adres metodę obiektu zarządzanej klasy lub wskaźnik do metody typu wartości.   Drugi argument wystąpienia delegata musi nazwy metody klasy pełnej składni zakresu i zastosować operator address-of.  
+ Podczas tworzenia wystąpienia delegata powiązanej pierwszy argument jest odwołanie do obiektu. Drugi argument wystąpienia delegata są albo być adresem metodę do obiektu klasy zarządzanej lub wskaźnikiem do metody typu wartości. Drugi argument wystąpienia delegata należy nazwę metody z klasy pełnej składni zakresu i zastosowania operatora address-of.  
   
- W przypadku wystąpienia niezwiązanego delegata, pierwszy argument jest adres metodę obiektu zarządzanej klasy lub wskaźnik do metody typu wartości.   Argument musi nazwę metody klasy pełnej składni zakresu i zastosować operator address-of.  
+ Podczas tworzenia wystąpienia niezwiązanego delegata pierwszy argument jest adres metodę do obiektu klasy zarządzanej lub wskaźnikiem do metody typu wartości. Argument musi nadaj nazwę metody z klasy pełnej składni zakresu i zastosowania operatora address-of.  
   
- Podczas tworzenia delegata funkcji statyczne lub globalnych, konieczne jest tylko jeden parametr: funkcja (opcjonalnie adresu funkcji).  
+ Podczas tworzenia delegata funkcji statycznych lub globalnych, tylko jeden parametr jest wymagany: — funkcja (opcjonalnie, adres funkcji).  
   
- Aby uzyskać więcej informacji na delegatów zobacz  
+ Aby uzyskać więcej informacji na temat obiektów delegowanych zobacz  
   
 -   [Instrukcje: definiowanie obiektów delegowanych (C++/CLI) oraz korzystanie z nich](../dotnet/how-to-define-and-use-delegates-cpp-cli.md)  
   
@@ -131,7 +129,7 @@ function_declaration
 ### <a name="examples"></a>Przykłady  
  **Przykład**  
   
- Poniższy przykład pokazuje, jak zadeklarować, zainicjować i wywoływać delegatów.  
+ Poniższy przykład pokazuje sposób deklarowania, zainicjować i wywoływać delegatów.  
   
 ```cpp  
 // mcppv2_delegate.cpp  

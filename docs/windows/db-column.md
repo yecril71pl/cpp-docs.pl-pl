@@ -17,21 +17,20 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 35ab2472ac9e46b620ca735d06b23806126871e0
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 20c651c6e671c7c4895fc7dba85d16fdeb998ad5
+ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33879636"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39570704"
 ---
 # <a name="dbcolumn"></a>db_column
-Wiąże określonej kolumny do zmiennej w zestawie wierszy.  
+Wiąże określoną kolumnę do zmiennej w zestawie wierszy.  
   
 ## <a name="syntax"></a>Składnia  
   
 ```  
-  
-      [ db_column(   
+[ db_column(   
    ordinal,   
    dbtype,   
    precision,   
@@ -42,42 +41,42 @@ Wiąże określonej kolumny do zmiennej w zestawie wierszy.
 ```  
   
 #### <a name="parameters"></a>Parametry  
- `ordinal`  
- Liczby porządkowej kolumny (**DBCOLUMNINFO** porządkowej) lub nazwę kolumny (ciągu ANSI lub Unicode) odpowiadającego pola w zestawie wierszy, z którym chcesz powiązać dane. Używaj liczb, można pominąć kolejne porządkowe (na przykład: 1, 2, 3, 5). Nazwa może zawierać spacji, jeśli obsługuje dostawcy OLE DB, którego używasz. Na przykład można użyć jednej z następujących formatów:  
+ *Liczba porządkowa*  
+ Numeru porządkowego kolumny (`DBCOLUMNINFO` porządkowe) lub nazwą kolumny (ciąg ANSI lub Unicode) odpowiadający pole w zestawie wierszy, do którego należy powiązać dane. Jeśli używasz liczb, możesz pominąć kolejne liczby porządkowe (na przykład: 1, 2, 3, 5). Nazwa może zawierać spacji, jeśli dostawca OLE DB, którego używasz obsługuje tę funkcję. Na przykład można użyć jednej z następujących formatów:  
   
 ```  
 [db_column("2")] TCHAR szCity[30];  
 [db_column(L"city_name")] TCHAR szCity[30];  
 ```  
   
- *wartość DbType* (opcjonalnie)  
- OLE DB [wskaźnika typu](https://msdn.microsoft.com/en-us/library/ms711251.aspx) wpisu kolumny.  
+ *Atrybut DbType* (opcjonalnie)  
+ OLE DB [wskaźnika typu](https://msdn.microsoft.com/library/ms711251.aspx) wpisu kolumny.  
   
  *dokładność* (opcjonalnie)  
- Precyzja służący do wpisu kolumny. Aby uzyskać więcej informacji, zobacz opis `bPrecision` elementu [DBBINDING — struktura](https://msdn.microsoft.com/en-us/library/ms716845.aspx)  
+ Dokładności, który ma być używany dla wpisu kolumny. Aby uzyskać szczegółowe informacje, zobacz opis `bPrecision` elementu [DBBINDING struktury](https://msdn.microsoft.com/library/ms716845.aspx)  
   
  *Skala* (opcjonalnie)  
- Skala służący do wpisu kolumny. Aby uzyskać więcej informacji, zobacz opis `bScale` elementu [DBBINDING — struktura](https://msdn.microsoft.com/en-us/library/ms716845.aspx)  
+ Skala, który ma być używany dla wpisu kolumny. Aby uzyskać szczegółowe informacje, zobacz opis `bScale` elementu [DBBINDING struktury](https://msdn.microsoft.com/library/ms716845.aspx)  
   
  *Stan* (opcjonalnie)  
- Zmiennej członkowskiej używanym do przechowywania stanu dla tej kolumny. Stan wskazuje, czy wartość kolumny jest wartość danych lub inne wartości, takich jak **NULL**. Możliwe wartości, zobacz [stan](https://msdn.microsoft.com/en-us/library/ms722617.aspx) w *OLE DB Podręcznik programisty*.  
+ Zmienną członkowską, używane do przechowywania stanu dla tej kolumny. Stan wskazuje, czy wartość kolumny jest wartość danych lub innej wartości, takie jak wartości NULL. Możliwe wartości, zobacz [stan](https://msdn.microsoft.com/library/ms722617.aspx) w *OLE DB Podręcznik programisty*.  
   
  *długość* (opcjonalnie)  
- Zmiennej członkowskiej używanym do przechowywania w bajtach rozmiar kolumny.  
+ Zmienną członkowską, używane do przechowywania rozmiar kolumny w bajtach.  
   
 ## <a name="remarks"></a>Uwagi  
- **db_column —** wiąże określonej kolumny tabeli do zmiennej w zestawie wierszy. Go rozgranicza danych elementów członkowskich, które mogą uczestniczyć w bazie danych OLE DB `IAccessor`— na podstawie powiązania. Ten atrybut ustawia mapowania kolumn zwykle zdefiniowane przy użyciu makra konsumenta OLE DB [BEGIN_COLUMN_MAP](../data/oledb/begin-column-map.md), [END_COLUMN_MAP](../data/oledb/end-column-map.md), i [column_entry —](../data/oledb/column-entry.md). Te manipulowania OLE DB [struktury DBBINDING](https://msdn.microsoft.com/en-us/library/ms716845.aspx) powiązać określonej kolumny. Każdy element członkowski oznaczyć z **db_column —** atrybutu zajmie jeden wpis w mapie kolumn w formie wpis w kolumnie. W związku z tym wywołać ten atrybut gdzie przełączyć mapowania kolumn, to znaczy w klasie polecenia lub tabeli.  
+ **db_column —** wiąże kolumna tabeli określonej w zmiennej w zestawie wierszy. Rozgranicza on dane elementu członkowskiego, które mogą uczestniczyć w OLE DB `IAccessor`— na podstawie powiązania. Ten atrybut ustawia mapy kolumny, zwykle definiowany przy użyciu makr konsumenta OLE DB [BEGIN_COLUMN_MAP](../data/oledb/begin-column-map.md), [END_COLUMN_MAP](../data/oledb/end-column-map.md), i [COLUMN_ENTRY](../data/oledb/column-entry.md). Te manipulowania OLE DB [struktury DBBINDING](https://msdn.microsoft.com/library/ms716845.aspx) powiązać określonej kolumny. Każdy element członkowski, oznacz za pomocą **db_column —** atrybut zajmie jedną pozycję w mapowaniu kolumn w formie wpisu kolumny. W związku z tym możesz wywołać ten atrybut gdzie możesz umieścić mapy kolumny, oznacza to, w klasie polecenia lub tabeli.  
   
- Użyj **db_column —** w połączeniu z albo [db_table —](../windows/db-table.md) lub [db_command —](../windows/db-command.md) atrybutów.  
+ Użyj **db_column —** w połączeniu z oboma [db_table —](../windows/db-table.md) lub [db_command —](../windows/db-command.md) atrybutów.  
   
- Gdy dostawca atrybutu konsumenta stosuje ten atrybut do klasy, kompilator spowoduje zmianę nazwy klasy, która ma \_ *YourClassName*dostępu, gdzie *YourClassName* jest nazwa nadana klasy i kompilator utworzy klasy o nazwie *YourClassName*, co wynika ze \_ *YourClassName*metody dostępu.  W widoku klasy zostanie wyświetlona zarówno klasy.  
+ Gdy dostawca atrybucie odbiorcy dotyczy ten atrybut do klasy, kompilator spowoduje zmianę nazwy klasy, która ma \_ *YourClassName*dostępu, których *YourClassName* jest nazwa nadana klasy i kompilator utworzy klasę o nazwie *YourClassName*, która jest pochodną \_ *YourClassName*metody dostępu.  W widoku klas pojawi się, obie klasy.  
   
- Przykłady tego atrybutu używane w aplikacji, można znaleźć przykłady [AtlAgent](http://msdn.microsoft.com/en-us/52bef5da-c1a0-4223-b4e6-9e464b6db409), i [MultiRead](http://msdn.microsoft.com/en-us/5a2a915a-77dc-492f-94b2-1b809995dd5e).  
+ Przykłady tego atrybutu, używane w aplikacji, zobacz przykłady [AtlAgent](http://msdn.microsoft.com/52bef5da-c1a0-4223-b4e6-9e464b6db409), i [MultiRead](http://msdn.microsoft.com/5a2a915a-77dc-492f-94b2-1b809995dd5e).  
   
 ## <a name="example"></a>Przykład  
- W tym przykładzie wiąże kolumny w tabeli, aby **długi** element członkowski danych i umożliwia określenie stanu i długość pola.  
+ W tym przykładzie tworzy powiązanie kolumny w tabeli, aby **długie** element członkowski danych i umożliwia określenie pól Stan i długości.  
   
-```  
+```cpp  
 // db_column_1.cpp  
 // compile with: /LD  
 #include <atlbase.h>  
@@ -94,9 +93,9 @@ class CProducts {
 ```  
   
 ## <a name="example"></a>Przykład  
- W tym przykładzie wiąże cztery kolumny w celu **długi**, ciąg znaków, timestamp, a **DB_NUMERIC** integer, w tej kolejności.  
+ W tym przykładzie wiąże cztery kolumny w celu **długie**, ciąg znaków, sygnaturę czasową i `DB_NUMERIC` liczba całkowita, w tej kolejności.  
   
-```  
+```cpp  
 // db_column_2.cpp  
 // compile with: /LD  
 #include <atlbase.h>  
@@ -114,16 +113,16 @@ class CProducts {
   
 ## <a name="requirements"></a>Wymagania  
   
-### <a name="attribute-context"></a>Atrybut kontekstu  
+### <a name="attribute-context"></a>Kontekst atrybutu  
   
 |||  
 |-|-|  
-|**Dotyczy**|**Klasa**, `struct`, elementu członkowskiego, metoda|  
+|**Dotyczy**|**Klasa**, **struktury**, elementu członkowskiego, metoda|  
 |**Powtarzalne**|Nie|  
 |**Wymaganych atrybutów**|Brak|  
 |**Nieprawidłowe atrybuty**|Brak|  
   
- Aby uzyskać więcej informacji na temat konteksty atrybutu, zobacz [konteksty atrybutu](../windows/attribute-contexts.md).  
+ Aby uzyskać więcej informacji na temat konteksty atrybutu zobacz [konteksty atrybutu](../windows/attribute-contexts.md).  
   
 ## <a name="see-also"></a>Zobacz też  
  [Atrybuty konsumentów OLE DB](../windows/ole-db-consumer-attributes.md)   

@@ -27,45 +27,43 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 9e526ab335436730f4132b5b7127ec9079432a4a
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 49cdee9cfed3b5694fcea899b9250c5f9dd214b7
+ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33879181"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39570483"
 ---
 # <a name="how-to-import-and-export-resources"></a>Porady: importowanie i eksportowanie zasobów
-Możesz zaimportować zasobów graficznych (mapy bitowe, ikony kursory i paski narzędzi), plików HTML i zasobów niestandardowych do użytku w programie Visual C++. Możesz wyeksportować takich samych typach plików z projektu programu Visual C++ w oddzielnych plikach, które mogą być używane poza Środowisko deweloperskie.  
+Możesz zaimportować zasobów graficznych (map bitowych, ikon, kursorów i pasków narzędzi), pliki HTML i zasobów niestandardowych do użytku w programie Visual C++. Możesz wyeksportować te same typy plików z projektu języka Visual C++ w oddzielnych plikach, które mogą być używane poza środowiskiem programowania.  
   
 > [!NOTE]
->  Typy zasobów, takich jak akceleratorów, okna dialogowe i tabele ciągów nie może zaimportować lub wyeksportować, ponieważ nie są one typów plików autonomicznych.  
+>  Typy zasobów, takich jak akceleratorów, okna dialogowe i tabele ciągów nie można zaimportować lub wyeksportować, ponieważ nie są one typy plików autonomicznych.  
   
-### <a name="to-import-an-individual-resource-into-your-current-resource-file"></a>Aby zaimportować pojedynczego zasobu do bieżącego pliku zasobów  
+### <a name="to-import-an-individual-resource-into-your-current-resource-file"></a>Aby zaimportować pojedynczy zasób do Twojego bieżącego pliku zasobu  
   
-1.  W [widok zasobów](../windows/resource-view-window.md), kliknij prawym przyciskiem myszy węzeł skrypt zasobu (* .rc) pliku, do której chcesz dodać zasobu.  
+1.  W [widok zasobów](../windows/resource-view-window.md), kliknij prawym przyciskiem myszy węzeł skrypt zasobu (* .rc) plik, do którego chcesz dodać do zasobu.  
   
-2.  Kliknij przycisk **importu** menu skrótów.  
+2.  Kliknij przycisk **importu** w menu skrótów.  
   
 3.  Znajdź i wybierz nazwę pliku, mapa bitowa (bmp), ikona (.ico), kursora (.cur), plik Html (.htm) lub innego pliku, który chcesz zaimportować.  
   
 4.  Kliknij przycisk **OK** można dodać zasobu do wybranego pliku w **zasobów** widoku.  
   
     > [!NOTE]
-    >  Wybrano działa proces importu, tak samo, niezależnie od tego, którego zasobu określonego typu. Importowanych zasobów jest automatycznie dodawany do węzła poprawne dla tego typu zasobu.  
+    >  Wybrane działa proces importowania, typ ten sam sposób niezależnie od tego, które określonego zasobu. Zaimportowane zasobów jest automatycznie dodawany do węzła poprawne dla tego typu zasobu.  
   
-### <a name="to-export-a-bitmap-icon-or-cursor-as-a-separate-file-for-use-outside-of-visual-c"></a>Aby wyeksportować mapy bitowej, ikona lub kursora w oddzielnym pliku (na potrzeby używania poza Visual C++)  
+### <a name="to-export-a-bitmap-icon-or-cursor-as-a-separate-file-for-use-outside-of-visual-c"></a>Aby wyeksportować mapy bitowej, ikona lub kursor postaci oddzielnych plików (do użytku poza programem Visual C++)  
   
-1.  W **zasobów** wyświetlić, kliknij prawym przyciskiem myszy zasobów do wyeksportowania.  
+1.  W **zasobów** wyświetlić, kliknij prawym przyciskiem myszy zasób, którą chcesz wyeksportować.  
   
-2.  Kliknij przycisk **wyeksportować** menu skrótów.  
+2.  Kliknij przycisk **wyeksportować** w menu skrótów.  
   
-3.  W **eksportu zasobu** okna dialogowego Zaakceptuj bieżącej nazwy pliku lub wpisz nową.  
+3.  W **Eksportuj zasób** okna dialogowego pole, zaakceptuj nazwę bieżącego pliku lub wpisać nową.  
   
 4.  Przejdź do folderu, w którym chcesz zapisać plik, a następnie kliknij przycisk **wyeksportować**.  
   
-
-  
- Wymagania  
+## <a name="requirements"></a>Wymagania  
   
  Win32  
   

@@ -17,37 +17,35 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 67b71639fc0b7d0039f5665d2cc187191ac14baf
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 48c4a645456e3b3c0556dfed268ce911e5799fc3
+ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33874606"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39569420"
 ---
 # <a name="export"></a>export
-Powoduje, że struktura danych mają być umieszczone w pliku .idl.  
+Powoduje to struktura danych, należy umieścić w pliku .idl.  
   
 ## <a name="syntax"></a>Składnia  
   
 ```  
-  
 [export]  
-  
 ```  
   
 ## <a name="remarks"></a>Uwagi  
- **Wyeksportować** atrybutu C++ powoduje, że struktura danych można umieścić w pliku .idl i będzie dostępna w bibliotece typów w formacie zgodnego pliku binarnego, dzięki którym można używać z dowolnego języka.  
+ **Wyeksportować** C++ atrybutu powoduje, że struktury danych, można umieścić w pliku .idl i następnie być dostępne w bibliotece typów w formacie zgodnym z pliku binarnego, który sprawia, że dostępne w dowolnym języku.  
   
- Nie można zastosować **wyeksportować** atrybutu do klasy, nawet jeśli klasa zawiera tylko publiczne elementy członkowskie (odpowiednik `struct`).  
+ Nie można zastosować **wyeksportować** atrybutów do klasy, nawet wtedy, gdy klasa ma tylko publiczne elementy członkowskie (odpowiednik **struktury**).  
   
- Podczas eksportowania nienazwane `enum`s lub `struct`s, zostaną one podanej o nazwach zaczynających **__unnamed *** x*, gdzie *x* jest to numer kolejny.  
+ Jeśli eksportujesz nienazwane **wyliczenia**s lub **struktury**s, będą one podanej nazwy, które zaczynają się od **__unnamed *** x*, gdzie *x* sekwencyjne numer.  
   
- Definicje typów prawidłowy eksportu są typów podstawowych, struktury, złożenia, wyliczenia lub wpisz identyfikatorów.  Zobacz [typedef](http://msdn.microsoft.com/library/windows/desktop/aa367287) Aby uzyskać więcej informacji.  
+ Definicje typów prawidłowe eksportu są typy podstawowe, struktury, złożenia, wyliczenia lub wpisz identyfikatory.  Zobacz [typedef](http://msdn.microsoft.com/library/windows/desktop/aa367287) Aby uzyskać więcej informacji.  
   
 ## <a name="example"></a>Przykład  
  Poniższy kod przedstawia sposób użycia **wyeksportować** atrybutu:  
   
-```  
+```cpp  
 // cpp_attr_ref_export.cpp  
 // compile with: /LD  
 [module(name="MyLibrary")];  
@@ -60,11 +58,11 @@ struct MyStruct {
   
 ## <a name="requirements"></a>Wymagania  
   
-### <a name="attribute-context"></a>Atrybut kontekstu  
+### <a name="attribute-context"></a>Kontekst atrybutu  
   
 |||  
 |-|-|  
-|**Dotyczy**|**Unia**, `typedef`, `enum`, `struct`, lub `interface`|  
+|**Dotyczy**|**Unia**, **typedef**, **wyliczenia**, **struktury**, lub **interfejsu**|  
 |**Powtarzalne**|Nie|  
 |**Wymaganych atrybutów**|Brak|  
 |**Nieprawidłowe atrybuty**|Brak|  

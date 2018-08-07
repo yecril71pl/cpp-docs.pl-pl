@@ -17,28 +17,26 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 10f398e83650dc63c002801ac999816e48f7bdd4
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 6497d6da630095f4d7691edb076fc354b87e5a13
+ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33874291"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39569217"
 ---
 # <a name="dispinterface"></a>dispinterface
-Umieszcza interfejsu w pliku .idl jako interfejs wysyłania.  
+Przełącza interfejsu w pliku .idl, jako interfejs ekspedycji.  
   
 ## <a name="syntax"></a>Składnia  
   
 ```  
-  
 [dispinterface]  
-  
 ```  
   
 ## <a name="remarks"></a>Uwagi  
- Gdy **dispinterface** atrybutu C++ poprzedza interfejs, powoduje interfejsu, który ma być umieszczony wewnątrz bloku biblioteki w pliku .idl wygenerowany.  
+ Gdy **dispinterface** atrybut C++ poprzedza interfejs, sprawia, że interfejs, który ma być umieszczony wewnątrz bloku biblioteki w pliku .idl wygenerowany.  
   
- Jeśli nie podasz klasy podstawowej, interfejs wysyłania będzie dziedziczyć `IDispatch`. Należy określić [identyfikator](../windows/id.md) dla elementów członkowskich interfejsu wysyłania.  
+ O ile nie określono klasy bazowej, interfejs ekspedycji, z której pochodzą z `IDispatch`. Należy określić [identyfikator](../windows/id.md) dla członków interfejs ekspedycji.  
   
  Przykład użycia [dispinterface](http://msdn.microsoft.com/library/windows/desktop/aa366802) w dokumentacji MIDL:  
   
@@ -50,18 +48,18 @@ dispinterface helloPro
  nie jest prawidłowa dla **dispinterface** atrybutu.  
   
 ## <a name="example"></a>Przykład  
- Zobacz przykład [powiązania](../windows/bindable.md) przykład sposobu użycia **dispinterface**.  
+ Zobacz przykład [możliwej do wiązania](../windows/bindable.md) przykład sposobu użycia **dispinterface**.  
   
 ## <a name="requirements"></a>Wymagania  
   
-### <a name="attribute-context"></a>Atrybut kontekstu  
+### <a name="attribute-context"></a>Kontekst atrybutu  
   
 |||  
 |-|-|  
-|**Dotyczy**|`interface`|  
+|**Dotyczy**|**interface**|  
 |**Powtarzalne**|Nie|  
 |**Wymaganych atrybutów**|Brak|  
-|**Nieprawidłowe atrybuty**|**Podwójna**, **obiektu**, **oleautomation**, `local`, **ms_union —**|  
+|**Nieprawidłowe atrybuty**|**Podwójna**, **obiektu**, **oleautomation —**, `local`, **ms_union —**|  
   
  Aby uzyskać więcej informacji, zobacz [konteksty atrybutu](../windows/attribute-contexts.md).  
   
@@ -69,7 +67,7 @@ dispinterface helloPro
  [Atrybuty IDL](../windows/idl-attributes.md)   
  [Atrybuty w zależności od użycia](../windows/attributes-by-usage.md)   
  [Identyfikator UUID](../windows/uuid-cpp-attributes.md)   
- [Podwójny](../windows/dual.md)   
+ [Podwójne](../windows/dual.md)   
  [Niestandardowe](../windows/custom-cpp.md)   
- [Obiekt](../windows/object-cpp.md)   
+ [obiekt](../windows/object-cpp.md)   
  [__interface](../cpp/interface.md)   

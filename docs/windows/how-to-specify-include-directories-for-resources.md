@@ -17,23 +17,23 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 9778f774464e8da003a535e3c4dba0aef6ed24cb
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: db09d29f0049152f734ada8a78c510e4424d8dd3
+ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33875282"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39569543"
 ---
 # <a name="how-to-specify-include-directories-for-resources"></a>Porady: określanie katalogów dołączenia dla zasobów
 ### <a name="to-specify-include-directories-for-a-specific-rc-file"></a>W celu określenia katalogów dołączanych dla określonego pliku .rc  
   
 1.  Kliknij prawym przyciskiem myszy plik .rc w Eksploratorze rozwiązań i wybierz **właściwości** z menu skrótów.  
   
-2.  W **strony właściwości** okno dialogowe, kliknij przycisk **zasobów** węzła w okienku po lewej stronie, następnie określ dodatkowe Dołącz katalogi w **dodatkowe katalogi dołączenia** Właściwość.  
+2.  W **stron właściwości** okno dialogowe, kliknij przycisk **zasobów** węzła w okienku po lewej stronie, następnie określ dodatkowe katalogi dołączane we **dodatkowe katalogi dołączane** Właściwość.  
   
- Aby uzyskać informacje o dodawaniu zasobów do projektów zarządzanych, zobacz [zasobów w aplikacjach pulpitu](/dotnet/framework/resources/index) w przewodniku programistów platformy .NET Framework. Aby uzyskać informacje na ręczne dodanie do projektów zarządzanych plików zasobów, uzyskiwanie dostępu do zasobów, wyświetlanie zasoby statyczne i przypisanie do właściwości ciągów zasobów, zobacz [wskazówki: przy użyciu zasobów dla lokalizacji ASP.NET](http://msdn.microsoft.com/Library/bb4e5b44-e2b0-48ab-bbe9-609fb33900b6).  
+ Aby uzyskać informacje na temat dodawania zasobów do projektów zarządzanych, zobacz [zasoby w aplikacjach pulpitu](/dotnet/framework/resources/index) w przewodniku dewelopera .NET Framework. Aby uzyskać informacji na temat ręcznego dodawania plików zasobów do projektów zarządzanych, uzyskiwania dostępu do zasobów, wyświetlania statycznych zasobów i przypisywania ciągów zasobów do właściwości, zobacz [Instruktaż: Using Resources for Localization with ASP.NET](http://msdn.microsoft.com/Library/bb4e5b44-e2b0-48ab-bbe9-609fb33900b6).  
   
- **Wymagania**  
+## <a name="requirements"></a>Wymagania  
   
  Win32  
   

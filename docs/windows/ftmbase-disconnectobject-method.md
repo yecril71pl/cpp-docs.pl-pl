@@ -1,5 +1,5 @@
 ---
-title: FtmBase::DisconnectObject — metoda | Dokumentacja firmy Microsoft
+title: FtmBase::DisconnectObject, metoda | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 2501413196e1fd6b8b7a1a4f9985304863e02549
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: f80c7e758b282c0a1976d490483c397eca43b5f5
+ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33873004"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39568631"
 ---
 # <a name="ftmbasedisconnectobject-method"></a>FtmBase::DisconnectObject — Metoda
-Wymuszanie zwalnia wszystkie połączenia zewnętrzne do obiektu. Serwer obiektu wywołuje obiektu implementacja tej metody przed zamykanie.  
+Wymuś zwalnia wszystkie połączenia zewnętrzne do obiektu. Serwer obiektu wywołuje obiekt implementacja tej metody przed zamykanie.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -35,9 +35,9 @@ STDMETHODIMP DisconnectObject(
 ) override;  
 ```  
   
-#### <a name="parameters"></a>Parametry  
- `dwReserved`  
- Zarezerwowane do użytku w przyszłości; musi być równy zero.  
+### <a name="parameters"></a>Parametry  
+ *dwReserved*  
+ Zarezerwowane dla przyszłego użytku; musi mieć wartość zero.  
   
 ## <a name="return-value"></a>Wartość zwracana  
  S_OK w przypadku powodzenia; w przeciwnym razie wartość HRESULT, która wskazuje błąd.  
@@ -45,7 +45,7 @@ STDMETHODIMP DisconnectObject(
 ## <a name="requirements"></a>Wymagania  
  **Nagłówek:** ftm.h  
   
- **Namespace:** Microsoft::wrl —  
+ **Namespace:** Microsoft::WRL  
   
 ## <a name="see-also"></a>Zobacz też  
  [FtmBase, klasa](../windows/ftmbase-class.md)

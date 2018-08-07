@@ -1,5 +1,5 @@
 ---
-title: HandleT::Detach — metoda | Dokumentacja firmy Microsoft
+title: HandleT::Detach, metoda | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 100d215099494c9b2714fd2c42dee69644a5006c
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: cc11d6be992584adb1ce2075e73d080cc3a43f47
+ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33878466"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39569482"
 ---
 # <a name="handletdetach-method"></a>HandleT::Detach — Metoda
-Usuwa skojarzenia bieżącego obiektu handlet — z uchwytu podstawowej.  
+Powoduje usunięcie bieżącego **HandleT** obiekt z jego podstawowego dojścia.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -34,15 +34,15 @@ typename HandleTraits::Type Detach();
 ```  
   
 ## <a name="return-value"></a>Wartość zwracana  
- Dojście podstawowej.  
+ Podstawowego dojścia.  
   
 ## <a name="remarks"></a>Uwagi  
- Po zakończeniu tej operacji, bieżący handlet — ustawiono nieprawidłowy stan.  
+ Po zakończeniu tej operacji, bieżący **HandleT** ustawiono nieprawidłowy stan.  
   
 ## <a name="requirements"></a>Wymagania  
  **Nagłówek:** corewrappers.h  
   
- **Namespace:** Microsoft::wrl:: wrappers —  
+ **Namespace:** Microsoft::wrl:: wrappers  
   
 ## <a name="see-also"></a>Zobacz też  
  [HandleT, klasa](../windows/handlet-class.md)

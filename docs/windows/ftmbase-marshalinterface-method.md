@@ -1,5 +1,5 @@
 ---
-title: FtmBase::MarshalInterface — metoda | Dokumentacja firmy Microsoft
+title: FtmBase::MarshalInterface, metoda | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: fc22b83aee62b03ec5e664d08440b00718325272
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: ff0c1a5e41dfe46f2d88aeeb3093dbc9ee4d4005
+ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33874619"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39570060"
 ---
 # <a name="ftmbasemarshalinterface-method"></a>FtmBase::MarshalInterface — Metoda
-Zapisuje do strumienia dane wymagane do zainicjowania obiektu serwera proxy, w niektórych procesu klienta.  
+Zapisuje w strumieniu danych wymagane do zainicjowania obiektu serwera proxy, w niektórych procesu klienta.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -40,38 +40,38 @@ STDMETHODIMP MarshalInterface(
 ) override;  
 ```  
   
-#### <a name="parameters"></a>Parametry  
- `pStm`  
- Wskaźnik do strumienia do użycia podczas przekazywania międzyprocesowego.  
+### <a name="parameters"></a>Parametry  
+ *pStm*  
+ Wskaźnik do strumienia, który ma być używany podczas kierowania.  
   
- `riid`  
- Odwołanie do identyfikatora interfejsu, który ma być przekazywane. Ten interfejs musi pochodzić z interfejsu IUnknown.  
+ *Parametr riid*  
+ Odwołanie do identyfikatora interfejsu aby być organizowany. Ten interfejs musi pochodzić od `IUnknown` interfejsu.  
   
- `pv`  
- Wskaźnik do wskaźnika interfejsu, aby zorganizować; może mieć wartości NULL, jeśli element wywołujący nie ma wskaźnik do żądanego interfejsu.  
+ *Wa*  
+ Wskaźnik do wskaźnika interfejsu, aby zorganizować; może mieć wartości NULL, jeśli obiekt wywołujący nie ma wskaźnik do żądanego interfejsu.  
   
- `dwDestContext`  
- Docelowy kontekst, w którym ma zostać wycofana określonego interfejsu.  
+ *dwDestContext*  
+ Miejsce docelowe kontekst, w którym ma zostać wycofana określonego interfejsu.  
   
- Określ jedną lub więcej wartości wyliczenia MSHCTX.  
+ Określ co najmniej jednej wartości wyliczenia MSHCTX.  
   
- Unmarshaling może wystąpić w innego apartamentu bieżącego procesu (MSHCTX_INPROC) lub inny proces na tym samym komputerze co bieżący proces (MSHCTX_LOCAL).  
+ Unmarshaling może wystąpić w innym apartamentu bieżącego procesu (MSHCTX_INPROC) lub inny proces na tym samym komputerze, co bieżący proces (MSHCTX_LOCAL).  
   
- `pvDestContext`  
- Zarezerwowane do użytku w przyszłości; musi być równy zero.  
+ *pvDestContext*  
+ Zarezerwowane dla przyszłego użytku; musi mieć wartość zero.  
   
- `mshlflags`  
- Określa, czy można zorganizować dane mają być przekazywane do procesu klienta — typową sytuacją — lub zapisywane w tabeli globalnej, skąd mogą zostać pobrane przez wielu klientów.  
+ *mshlflags*  
+ Określa, czy dane, które mają być przekazywane do być przesyłane z powrotem do procesu klienta — typowy przypadek — lub zapisywane w tabeli globalne, gdzie mogą być pobierane przez wielu klientów.  
   
 ## <a name="return-value"></a>Wartość zwracana  
  S_OK  
  Wskaźnik interfejsu zorganizować został pomyślnie.  
   
  E_NOINTERFACE  
- Określony interfejs nie jest obsługiwany.  
+ Wybrany interfejs nie jest obsługiwana.  
   
  STG_E_MEDIUMFULL  
- Strumień jest pełna.  
+ Strumień jest pełny.  
   
  E_FAIL  
  Operacja nie powiodła się.  
@@ -79,7 +79,7 @@ STDMETHODIMP MarshalInterface(
 ## <a name="requirements"></a>Wymagania  
  **Nagłówek:** ftm.h  
   
- **Namespace:** Microsoft::wrl —  
+ **Namespace:** Microsoft::WRL  
   
 ## <a name="see-also"></a>Zobacz też  
  [FtmBase, klasa](../windows/ftmbase-class.md)
