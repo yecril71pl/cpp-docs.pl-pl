@@ -1,5 +1,5 @@
 ---
-title: 'RoInitializeWrapper:: ~ RoInitializeWrapper — destruktor | Dokumentacja firmy Microsoft'
+title: 'RoInitializeWrapper:: ~ RoInitializeWrapper, destruktor | Dokumentacja firmy Microsoft'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,15 +15,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 29683e68f1f5aadcd477cdc717b03a648c5cccc7
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 1c6eaeb044cf3e169bf5927a2fec948cc8d4294c
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33892003"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39606279"
 ---
 # <a name="roinitializewrapperroinitializewrapper-destructor"></a>RoInitializeWrapper::~RoInitializeWrapper — Destruktor
-Uninitializes środowiska wykonawczego systemu Windows.  
+Deinicjuje środowiska wykonawczego Windows.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -32,12 +32,12 @@ Uninitializes środowiska wykonawczego systemu Windows.
 ```  
   
 ## <a name="remarks"></a>Uwagi  
- Roinitializewrapper — klasa wywołuje Windows::Foundation::Uninitialize().  
+ **RoInitializeWrapper** wywołuje klasę `Windows::Foundation::Uninitialize()`.  
   
 ## <a name="requirements"></a>Wymagania  
  **Nagłówek:** corewrappers.h  
   
- **Namespace:** Microsoft::wrl:: wrappers —  
+ **Namespace:** Microsoft::wrl:: wrappers  
   
 ## <a name="see-also"></a>Zobacz też  
  [HandleT, klasa](../windows/handlet-class.md)

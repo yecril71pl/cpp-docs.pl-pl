@@ -1,5 +1,5 @@
 ---
-title: Mutex::Lock — Metoda | Dokumentacja firmy Microsoft
+title: Mutex::Lock, metoda | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 37044dbd884c4e38c70677bf9a8fa0a51fda0a88
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 1c96ef497331fecf8125c51a7b8bd669ec758927
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33880875"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39603527"
 ---
 # <a name="mutexlock-method"></a>Mutex::Lock — Metoda
-Czeka, aż do bieżącego obiektu lub obiektu Mutex skojarzonego z określonego dojścia zwalnia obiektu mutex lub przed upływem określonego limitu czasu.  
+Czeka, aż do bieżącego obiektu lub **Mutex** obiekt skojarzony z określonym dojściem wersji obiektu mutex lub określony limit czasu upłynął.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -40,19 +40,19 @@ static SyncLock Lock(
 );  
 ```  
   
-#### <a name="parameters"></a>Parametry  
- `milliseconds`  
- Interwał limitu czasu w milisekundach. Wartość domyślna to bez ograniczeń czasowych, która oczekuje na nieograniczony czas.  
+### <a name="parameters"></a>Parametry  
+ *MS*  
+ Interwał limitu czasu w milisekundach. Wartość domyślna to NIESKOŃCZONE, który oczekuje w nieskończoność.  
   
- `h`  
- Dojście obiektu Mutex.  
+ *h*  
+ Dojście **Mutex** obiektu.  
   
 ## <a name="return-value"></a>Wartość zwracana  
   
 ## <a name="requirements"></a>Wymagania  
  **Nagłówek:** corewrappers.h  
   
- **Namespace:** Microsoft::wrl:: wrappers —
+ **Namespace:** Microsoft::wrl:: wrappers
  
  ## <a name="see-also"></a>Zobacz też
  [Mutex — klasa](../windows/mutex-class1.md)

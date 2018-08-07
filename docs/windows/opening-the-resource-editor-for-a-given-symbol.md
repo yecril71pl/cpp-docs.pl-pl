@@ -19,29 +19,29 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 2fc4b0940e1932d1ae55280ce59f8219fd6017a7
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 3ca604ac88e4e8c0ecbb45c764f7d22836d367b2
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33875100"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39602762"
 ---
 # <a name="opening-the-resource-editor-for-a-given-symbol"></a>Otwieranie Edytora zasobów dla podanego symbolu
-Kiedy przeglądasz symbole w [okno dialogowe symboli zasobów](../windows/resource-symbols-dialog-box.md), może być więcej informacji na temat sposobu używania określonego symbolu. **Użycie widoku** przycisk umożliwia szybkie uzyskanie tych informacji.  
+Podczas przeglądania symboli w [okno dialogowe symboli zasobów](../windows/resource-symbols-dialog-box.md), może chcesz, aby uzyskać więcej informacji dotyczących użycia określonego symbolu. **Wyświetl użycie** przycisk umożliwia szybkie uzyskanie tych informacji.  
   
 ### <a name="to-move-to-the-resource-editor-where-a-symbol-is-being-used"></a>Aby przejść do edytora zasobów, w którym używany jest symbol  
   
-1.  Wybierz symbol w **nazwa** pole **symbole zasobu** okno dialogowe.  
+1.  Wybierz symbol w **nazwa** pole **symboli zasobów** okno dialogowe.  
   
-2.  W **używane przez** wybierz interesującego typu zasobu.  
+2.  W **używane przez** wybierz typ zasobu, który Cię interesuje.  
   
-3.  Kliknij przycisk **użycie widoku** przycisku.  
+3.  Kliknij przycisk **Wyświetl użycie** przycisku.  
   
-     Zasób zostanie wyświetlony w oknie edytora odpowiednie.  
+     Te zasoby są wyświetlane w oknie edytora odpowiednie.  
   
- Aby uzyskać informacje o dodawaniu zasobów do projektów zarządzanych, zobacz [zasobów w aplikacjach pulpitu](/dotnet/framework/resources/index) w *Przewodnik programistów platformy .NET Framework.*  
+ Aby uzyskać informacje na temat dodawania zasobów do projektów zarządzanych, zobacz [zasoby w aplikacjach pulpitu](/dotnet/framework/resources/index) w *przewodniku dewelopera .NET Framework*.  
   
- Wymagania  
+## <a name="requirements"></a>Wymagania  
   
  Win32  
   

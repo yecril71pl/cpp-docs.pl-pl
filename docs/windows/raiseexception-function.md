@@ -1,5 +1,5 @@
 ---
-title: Raiseexception — funkcja | Dokumentacja firmy Microsoft
+title: RaiseException — funkcja | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 2af97ac13386db450318f4d1f384517a8dd77baf
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: e93b7281b079918641bf36ebcd72968a98eb95ec
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33882186"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39602669"
 ---
 # <a name="raiseexception-function"></a>RaiseException — Funkcja
 Obsługuje infrastrukturę biblioteki WRL i nie jest przeznaczona do użycia bezpośrednio w kodzie.  
@@ -35,22 +35,22 @@ inline void __declspec(noreturn)   RaiseException(
       DWORD dwExceptionFlags = EXCEPTION_NONCONTINUABLE);  
 ```  
   
-#### <a name="parameters"></a>Parametry  
- `hr`  
- Kod wyjątku wyjątków zgłaszanych; oznacza to, HRESULT operację zakończoną niepowodzeniem.  
+### <a name="parameters"></a>Parametry  
+ *godz.*  
+ Kod wyjątku wyjątków zgłaszanych; oznacza to, że wartość HRESULT operację zakończoną niepowodzeniem.  
   
- `dwExceptionFlags`  
- Flaga, która wskazuje, można kontynuować wyjątek (wartość flagi wynosi zero), czy wyjątek noncontinuable (wartość flagi jest różna od zera). Domyślnie wyjątek jest wystąpieniu.  
+ *dwExceptionFlags*  
+ Flaga wskazująca pozwala na kontynuację wyjątek (wartość flagi wynosi zero), lub noncontinuable wyjątek (wartość flagi jest różna od zera). Domyślnie wyjątek jest wystąpieniu.  
   
 ## <a name="remarks"></a>Uwagi  
- Zgłasza wyjątek w wątku wywołującym.  
+ Zgłasza wyjątek w wątku wywołującego.  
   
- Aby uzyskać więcej informacji, zobacz Windows **raiseexception —** funkcji.  
+ Aby uzyskać więcej informacji, zobacz Windows `RaiseException` funkcji.  
   
 ## <a name="requirements"></a>Wymagania  
  **Nagłówek:** internal.h  
   
- **Namespace:** Microsoft::wrl:: details —  
+ **Namespace:** Microsoft::wrl:: details  
   
 ## <a name="see-also"></a>Zobacz też  
  [Microsoft::WRL::Details, przestrzeń nazw](../windows/microsoft-wrl-details-namespace.md)

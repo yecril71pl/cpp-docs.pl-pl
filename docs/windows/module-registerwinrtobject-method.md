@@ -1,5 +1,5 @@
 ---
-title: Module::RegisterWinRTObject — metoda | Dokumentacja firmy Microsoft
+title: Module::RegisterWinRTObject, metoda | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 097bf70ebd280d9494ff70ea1d80f53615f3d898
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 42ec736126e2381b00542bf71afca0b9db187df7
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33874957"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39603760"
 ---
 # <a name="moduleregisterwinrtobject-method"></a>Module::RegisterWinRTObject — Metoda
-Rejestruje co najmniej jeden obiekt środowiska wykonawczego systemu Windows, więc inne aplikacje mogą łączyć się z nimi.  
+Rejestruje co najmniej jeden obiekt środowiska wykonawczego Windows, dzięki czemu inne aplikacje mogą łączyć się z nimi.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -36,26 +36,26 @@ HRESULT RegisterWinRTObject(const wchar_t* serverName,
    unsigned int count)  
 ```  
   
-#### <a name="parameters"></a>Parametry  
- `serverName`  
- Nazwa, która określa podzbiór obiektów przez tę operację.  
+### <a name="parameters"></a>Parametry  
+ *serverName*  
+ Nazwa, która określa podzbiór obiektów wpływ tej operacji.  
   
- `activatableClassIds`  
+ *activatableClassIds*  
  Tablica aktywowalnej CLSID do zarejestrowania.  
   
- `cookie`  
- Wartość, która identyfikuje obiektów klasy, które zostały zarejestrowane. Ta wartość jest używana później na odwołanie rejestracji.  
+ *Plik cookie*  
+ Wartość, która identyfikuje obiektów klas, które zostały zarejestrowane. Ta wartość jest używana później, aby można było odwołać rejestracji.  
   
- `count`  
+ *Liczba*  
  Liczba obiektów do zarejestrowania.  
   
 ## <a name="return-value"></a>Wartość zwracana  
- S_OK w przypadku powodzenia; w przeciwnym razie błąd HRESULT, takich jak CO_E_OBJISREG, która wskazuje przyczynę działanie nie powiodło się.  
+ S_OK w przypadku powodzenia; w przeciwnym razie błąd HRESULT, takich jak CO_E_OBJISREG, która wskazuje przyczynę operacja nie powiodła się.  
   
 ## <a name="requirements"></a>Wymagania  
  **Nagłówek:** module.h  
   
- **Namespace:** Microsoft::wrl —
+ **Namespace:** Microsoft::WRL
  
  ## <a name="see-also"></a>Zobacz też
  [Klasa modułu](../windows/module-class.md)

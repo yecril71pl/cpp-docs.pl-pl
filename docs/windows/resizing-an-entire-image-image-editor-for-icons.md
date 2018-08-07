@@ -18,34 +18,33 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 15bf797b56882b320368f5396c2d1755f986a3e4
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: f9104feac603819b9420d315e619182722c87474
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33882657"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39606221"
 ---
 # <a name="resizing-an-entire-image-image-editor-for-icons"></a>Zmiana rozmiaru całego obrazu (Edytor obrazów dla ikon)
-### <a name="to-resize-an-entire-image-using-the-properties-window"></a>Aby zmienić rozmiar całego obrazu przy użyciu okna właściwości  
+### <a name="to-resize-an-entire-image-using-the-properties-window"></a>Zmiana rozmiaru całego obrazu w oknie właściwości  
   
 1.  Otwórz obraz, którego właściwości chcesz zmienić.  
   
-2.  W **szerokość** i **wysokość** pól [okna właściwości](/visualstudio/ide/reference/properties-window), wpisz wymiarów, które mają.  
+2.  W **szerokość** i **wysokość** pola [okno właściwości](/visualstudio/ide/reference/properties-window), wpisz wymiary, które mają.  
   
-     Są zwiększenie rozmiaru obrazu, edytor obrazów rozszerza obraz w prawo, dół, lub obie i wstawia nowy region bieżący kolor tła. Obraz nie jest rozciągana.  
+     Rozmiar obrazu jest coraz, edytora obrazów rozszerza obraz w prawo, dół, i / lub i wypełnia nowego regionu z bieżącym kolorem tła. Obraz, który nie jest rozciągana.  
   
-     Jeśli są zmniejszyć rozmiar obrazu, edytor obrazów Przycina obraz do prawej lub dolnej krawędzi.  
+     Jeśli to zmniejszyć rozmiar obrazu, edytora obrazów Przycina obraz w prawo i/lub dolnej krawędzi.  
   
     > [!NOTE]
-    >  Aby zmienić rozmiar tylko całego obrazu, aby nie zmieniać rozmiar częściowy wybór, można użyć właściwości Width i Height.  
+    >  Aby zmienić rozmiar tylko całego obrazu, nie można zmienić rozmiar częściowy wybór, można użyć właściwości Width i Height.  
   
- Aby uzyskać informacje o dodawaniu zasobów do projektów zarządzanych, zobacz [zasobów w aplikacjach pulpitu](/dotnet/framework/resources/index) w *Przewodnik programistów platformy .NET Framework.* Aby uzyskać informacje na ręczne dodanie do projektów zarządzanych plików zasobów, uzyskiwanie dostępu do zasobów, wyświetlanie zasoby statyczne i przypisanie do właściwości ciągów zasobów, zobacz [tworzenie plików zasobów dla aplikacji pulpitu](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Informacje dotyczące globalizacji i lokalizacji zasobów w zarządzanych aplikacjach, zobacz [Globalizing i lokalizacja aplikacji .NET Framework](/dotnet/standard/globalization-localization/index).  
+ Aby uzyskać informacje na temat dodawania zasobów do projektów zarządzanych, zobacz [zasoby w aplikacjach pulpitu](/dotnet/framework/resources/index) w *przewodniku dewelopera .NET Framework*. Aby uzyskać informacji na temat ręcznego dodawania plików zasobów do projektów zarządzanych, uzyskiwania dostępu do zasobów, wyświetlania statycznych zasobów i przypisywania ciągów zasobów do właściwości, zobacz [Creating Resource Files dla aplikacji klasycznych](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Aby uzyskać informacji na temat globalizacja i lokalizacja zasobów w aplikacjach zarządzanych, zobacz [Globalizing i lokalizowanie aplikacji programu .NET Framework](/dotnet/standard/globalization-localization/index).  
   
- Wymagania  
+## <a name="requirements"></a>Wymagania  
   
  Brak  
   
 ## <a name="see-also"></a>Zobacz też  
  [Klawisze skrótów](../windows/accelerator-keys-image-editor-for-icons.md)   
  [Zmiana rozmiaru obrazu](../windows/resizing-an-image-image-editor-for-icons.md)
-

@@ -1,5 +1,5 @@
 ---
-title: MakeAllocator::Allocate — metoda | Dokumentacja firmy Microsoft
+title: MakeAllocator::Allocate, metoda | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: d0e8d387dea7687ad61d85f975d58aa47489266d
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 06f8db4c713feb69e0037d10879383411ea07007
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33876219"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39606266"
 ---
 # <a name="makeallocatorallocate-method"></a>MakeAllocator::Allocate — Metoda
 Obsługuje infrastrukturę biblioteki WRL i nie jest przeznaczona do użycia bezpośrednio w kodzie.  
@@ -34,19 +34,19 @@ __forceinline void* Allocate();
 ```  
   
 ## <a name="return-value"></a>Wartość zwracana  
- W przypadku powodzenia wskaźnik do alokacji pamięci; w przeciwnym razie `nullptr`.  
+ Jeśli to się powiedzie, wskaźnik do przydzielonego pamięci. w przeciwnym razie **nullptr**.  
   
 ## <a name="remarks"></a>Uwagi  
- Przydziela pamięć i kojarzy ją z bieżącym obiektem makeallocator —.  
+ Przydziela pamięć i kojarzy ją z bieżącymi **MakeAllocator** obiektu.  
   
- Rozmiar alokacji pamięci jest rozmiar typu określonego przez parametr szablonu makeallocator — bieżący.  
+ Rozmiar alokacji pamięci jest rozmiar o typie określonym przez bieżącą **MakeAllocator** parametru szablonu.  
   
- Deweloper musi zastąpić tylko metodę Allocate() do implementowania modelu alokacji pamięci różne.  
+ Deweloper musi zastąpić tylko **Allocate()** metodę, aby wdrożyć model przydzielania pamięci różnych.  
   
 ## <a name="requirements"></a>Wymagania  
  **Nagłówek:** implements.h  
   
- **Namespace:** Microsoft::wrl:: details —  
+ **Namespace:** Microsoft::wrl:: details  
   
 ## <a name="see-also"></a>Zobacz też  
  [Makeallocator — klasa](../windows/makeallocator-class.md)   

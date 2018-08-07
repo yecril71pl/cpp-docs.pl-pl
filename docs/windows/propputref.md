@@ -17,45 +17,43 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 3ac9784e450746a4474879aae346a4242bbe2fd2
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: fc11561401ff34b629fecdc31a00ffb845d6a2d8
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33878193"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39606803"
 ---
 # <a name="propputref"></a>propputref
-Określa funkcję ustawienie właściwości, która korzysta z odwołaniem zamiast wartości.  
+Określa funkcję ustawienie właściwości, która używa odwołania, a nie wartość.  
   
 ## <a name="syntax"></a>Składnia  
   
 ```  
-  
 [propputref]  
-  
 ```  
   
 ## <a name="remarks"></a>Uwagi  
- **Propputref** atrybut C++ ma te same funkcje co [propputref](http://msdn.microsoft.com/library/windows/desktop/aa367147) MIDL atrybutu.  
+ **Propputref** atrybut C++ ma taką samą funkcjonalność jak [propputref](http://msdn.microsoft.com/library/windows/desktop/aa367147) atrybutów w MIDL.  
   
 ## <a name="example"></a>Przykład  
- Zobacz przykład [powiązania](../windows/bindable.md) użytku próbki **propputref**.  
+ Zobacz przykład [możliwej do wiązania](../windows/bindable.md) do użytku przykładowe **propputref**.  
   
 ## <a name="requirements"></a>Wymagania  
   
-### <a name="attribute-context"></a>Atrybut kontekstu  
+### <a name="attribute-context"></a>Kontekst atrybutu  
   
 |||  
 |-|-|  
 |**Dotyczy**|Metoda|  
 |**Powtarzalne**|Nie|  
 |**Wymaganych atrybutów**|Brak|  
-|**Nieprawidłowe atrybuty**|**propget**, **propput**|  
+|**Nieprawidłowe atrybuty**|`propget`, `propput`|  
   
- Aby uzyskać więcej informacji na temat konteksty atrybutu, zobacz [konteksty atrybutu](../windows/attribute-contexts.md).  
+ Aby uzyskać więcej informacji na temat konteksty atrybutu zobacz [konteksty atrybutu](../windows/attribute-contexts.md).  
   
 ## <a name="see-also"></a>Zobacz też  
  [Atrybuty IDL](../windows/idl-attributes.md)   
- [Atrybuty — metoda](../windows/method-attributes.md)   
+ [Atrybuty metody](../windows/method-attributes.md)   
  [propget](../windows/propget.md)   
  [propput](../windows/propput.md)   

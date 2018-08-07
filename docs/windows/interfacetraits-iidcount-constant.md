@@ -1,5 +1,5 @@
 ---
-title: Interfacetraits::iidcount — stała | Dokumentacja firmy Microsoft
+title: InterfaceTraits::IidCount, stała | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 2664292324ebb395f3a5f260dec57360027c60e4
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: cf8808074e347f70290498adc83f55f488a75790
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33874070"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39602730"
 ---
 # <a name="interfacetraitsiidcount-constant"></a>InterfaceTraits::IidCount — Stała
 Obsługuje infrastrukturę biblioteki WRL i nie jest przeznaczona do użycia bezpośrednio w kodzie.  
@@ -34,12 +34,12 @@ static const unsigned long IidCount = 1;
 ```  
   
 ## <a name="remarks"></a>Uwagi  
- Przechowuje numer interfejsu identyfikatory z bieżącym obiektem interfacetraits —.  
+ Przechowuje liczbę interfejsu identyfikatorów skojarzonych z bieżącym **interfacetraits —** obiektu.  
   
 ## <a name="requirements"></a>Wymagania  
  **Nagłówek:** implements.h  
   
- **Namespace:** Microsoft::wrl:: details —  
+ **Namespace:** Microsoft::wrl:: details  
   
 ## <a name="see-also"></a>Zobacz też  
  [Interfacetraits — struktura](../windows/interfacetraits-structure.md)   

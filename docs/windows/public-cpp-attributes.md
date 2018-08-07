@@ -17,31 +17,29 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 1d798d828dd252ce8b5f3f49d5a9aaf525acc986
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 071aed04c73702bdb63f19154353794bae34f8fd
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33881734"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39603609"
 ---
 # <a name="public-c-attributes"></a>public (Atrybuty C++)
-Zapewnia, że typem typedef przejdzie do biblioteki typów nawet wtedy, gdy go nie odwołuje się w pliku .idl.  
+Zapewnia, że typedef zostaną umieszczone w biblioteki typów, nawet wtedy, gdy go nie odwołuje się w pliku .idl.  
   
 ## <a name="syntax"></a>Składnia  
   
 ```  
-  
 [public]  
-  
 ```  
   
 ## <a name="remarks"></a>Uwagi  
- **Publicznego** atrybut C++ ma te same funkcje co [publicznego](http://msdn.microsoft.com/library/windows/desktop/aa367150) MIDL atrybutu.  
+ **Publicznych** atrybut C++ ma taką samą funkcjonalność jak [publicznych](http://msdn.microsoft.com/library/windows/desktop/aa367150) atrybutów w MIDL.  
   
 ## <a name="example"></a>Przykład  
- Poniższy kod przedstawia sposób użycia **publicznego** atrybutu:  
+ Poniższy kod przedstawia sposób użycia **publicznych** atrybutu:  
   
-```  
+```cpp  
 // cpp_attr_ref_public.cpp  
 // compile with: /LD  
 #include "unknwn.h"  
@@ -57,16 +55,16 @@ __interface IFireTabCtrl : IDispatch
   
 ## <a name="requirements"></a>Wymagania  
   
-### <a name="attribute-context"></a>Atrybut kontekstu  
+### <a name="attribute-context"></a>Kontekst atrybutu  
   
 |||  
 |-|-|  
-|**Dotyczy**|`typedef`|  
+|**Dotyczy**|**Element TypeDef**|  
 |**Powtarzalne**|Nie|  
 |**Wymaganych atrybutów**|Brak|  
 |**Nieprawidłowe atrybuty**|Brak|  
   
- Aby uzyskać więcej informacji na temat konteksty atrybutu, zobacz [konteksty atrybutu](../windows/attribute-contexts.md).  
+ Aby uzyskać więcej informacji na temat konteksty atrybutu zobacz [konteksty atrybutu](../windows/attribute-contexts.md).  
   
 ## <a name="see-also"></a>Zobacz też  
  [Atrybuty IDL](../windows/idl-attributes.md)   

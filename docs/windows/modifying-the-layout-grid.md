@@ -19,37 +19,36 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 5f73b1b2e2982d02fae1de67d4e5e2947f728f02
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 9817c1f24490d333f1596292f3b9ea1aa3ba40ae
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33880322"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39606939"
 ---
 # <a name="modifying-the-layout-grid"></a>Modyfikowanie siatki układu
-Podczas wprowadzania lub rozmieszczanie formantów w oknie dialogowym, można użyć siatki układu dla bardziej dokładne rozmieszczania. Po włączeniu siatki formantów są "przyciąganie do" przerywana linii siatki tak, jakby namagnesować. Można włączyć tę funkcję "przyciąganie do siatki" i wyłączyć oraz zmienić rozmiar komórki siatki układu.  
+Podczas wprowadzania i rozmieszczanie formantów w oknie dialogowym, można użyć siatki układu do bardziej precyzyjne pozycjonowania. Po włączeniu siatki "przyciągane do" linii kropkowanej siatki tak, jakby namagnesować pojawiają się formanty. Możesz włączyć tę funkcję "przyciągania do siatki" i wyłączyć i zmienianie rozmiaru komórek siatki układu.  
   
 ### <a name="to-turn-the-layout-grid-on-or-off"></a>Aby włączyć siatki układu lub wyłączyć  
   
-1.  Z **Format** menu, wybierz **ustawień przewodnika**.  
+1.  Z **Format** menu, wybierz **ustawienia prowadnic**.  
   
 2.  W [okno dialogowe Ustawienia prowadnic](../windows/guide-settings-dialog-box.md), zaznacz lub wyczyść **siatki** przycisku.  
   
-     Możesz nadal kontrolować siatki w poszczególnych okno dialogowe Edytor systemu windows za pomocą **Przełączanie siatki** znajdującego się na [paska narzędzi edytora okien dialogowych](../windows/showing-or-hiding-the-dialog-editor-toolbar.md).  
+     Możesz nadal kontrolować siatki w poszczególnych okno dialogowe Edytor systemu windows za pomocą **Przełącz siatkę** znajdujący się na [paska narzędzi edytora okien dialogowych](../windows/showing-or-hiding-the-dialog-editor-toolbar.md).  
   
 ### <a name="to-change-the-size-of-the-layout-grid"></a>Aby zmienić rozmiar siatki układu  
   
-1.  Z **Format** menu, wybierz **ustawień przewodnika**.  
+1.  Z **Format** menu, wybierz **ustawienia prowadnic**.  
   
-2.  W [okno dialogowe Ustawienia prowadnic](../windows/guide-settings-dialog-box.md), wpisz wysokość i szerokość w Dlu komórek w siatce. Minimalna wysokość lub szerokość jest Dlu 4. Aby uzyskać więcej informacji o Dlu, zobacz [rozmieszczenie formantów w oknach dialogowych](../windows/arrangement-of-controls-on-dialog-boxes.md).  
+2.  W [okno dialogowe Ustawienia prowadnic](../windows/guide-settings-dialog-box.md), wpisać wysokość i szerokość Dlu komórek w siatce. Minimalna wysokość lub szerokość jest Dlu 4. Aby uzyskać więcej informacji na temat Dlu, zobacz [rozmieszczenie kontrolek w oknach dialogowych](../windows/arrangement-of-controls-on-dialog-boxes.md).  
   
- Aby uzyskać informacje o dodawaniu zasobów do projektów zarządzanych, zobacz [zasobów w aplikacjach pulpitu](/dotnet/framework/resources/index) w *Przewodnik programistów platformy .NET Framework.* Aby uzyskać informacje na ręczne dodanie do projektów zarządzanych plików zasobów, uzyskiwanie dostępu do zasobów, wyświetlanie zasoby statyczne i przypisanie do właściwości ciągów zasobów, zobacz [tworzenie plików zasobów dla aplikacji pulpitu](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Informacje dotyczące globalizacji i lokalizacji zasobów w zarządzanych aplikacjach, zobacz [Globalizing i lokalizacja aplikacji .NET Framework](/dotnet/standard/globalization-localization/index).  
+ Aby uzyskać informacje na temat dodawania zasobów do projektów zarządzanych, zobacz [zasoby w aplikacjach pulpitu](/dotnet/framework/resources/index) w *przewodniku dewelopera .NET Framework*. Aby uzyskać informacji na temat ręcznego dodawania plików zasobów do projektów zarządzanych, uzyskiwania dostępu do zasobów, wyświetlania statycznych zasobów i przypisywania ciągów zasobów do właściwości, zobacz [Creating Resource Files dla aplikacji klasycznych](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Aby uzyskać informacji na temat globalizacja i lokalizacja zasobów w aplikacjach zarządzanych, zobacz [Globalizing i lokalizowanie aplikacji programu .NET Framework](/dotnet/standard/globalization-localization/index).  
   
- Wymagania  
+## <a name="requirements"></a>Wymagania  
   
  Win32  
   
 ## <a name="see-also"></a>Zobacz też  
  [Stany Edytor okien dialogowych (prowadnice i siatki)](../windows/dialog-editor-states-guides-and-grids.md)   
  [Kontrolki w oknach dialogowych](../windows/controls-in-dialog-boxes.md)
-

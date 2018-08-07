@@ -17,43 +17,42 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 118487d533e8f4701f52804ebbe1e669d29fc4cb
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: d0fe0c8919eb1959dab426c3c0db47f227c51b66
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33880715"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39606465"
 ---
 # <a name="implements-c"></a>implements (C++)
-Określa wysyłania interfejsów, które muszą być członkami IDL coclass.  
+Określa interfejsach wysyłki, które muszą być składowymi typu klasy coclass IDL.  
   
 ## <a name="syntax"></a>Składnia  
   
 ```  
-  
-      [ implements(   
+[ implements(   
    interfaces={interfaces},  
    dispinterfaces={dispinterfaces}  
 )]  
 ```  
   
-#### <a name="parameters"></a>Parametry  
- **interfaces**  
- Rozdzielana przecinkami lista interfejsów, które mają być członkami IDL coclass. Jest skróconą formą służący do określania jednego interfejsu **implementuje (***nazwa_interfejsu***)**.  
+### <a name="parameters"></a>Parametry  
+ *interfaces*  
+ Lista interfejsów, które będą należeć do klasy coclass IDL rozdzielone przecinkami. Metoda skrót do określania jednego interfejsu jest **implementuje (***nazwa_interfejsu***)**.  
   
- **dispinterfaces**  
- Rozdzielana przecinkami lista dispinterface, który będzie członkiem IDL coclass. Jest skróconą formą służący do określania jednego dispinterface **implementuje (dispinterfaces** * = dispinterface_name ***)**.  
+ *dispinterfaces*  
+ Lista dispinterface, która będzie należeć do grupy IDL coclass rozdzielonych przecinkami. Metoda skrót do określania jednego dispinterface jest **implementuje (dispinterfaces** * = dispinterface_name ***)**.  
   
 ## <a name="remarks"></a>Uwagi  
- Domyślnie tylko COM-interfejsów, które są klasy podstawowe klasy coclass są dodawane w klasie coclass IDL. **implementuje** wymusić inne interfejsy są elementami członkowskimi coclass IDL.  
+ Domyślnie tylko-interfejsów COM, które są klasy bazowe klasy coclass są dodawane w klasie coclass IDL. **implementuje** wymusić inne interfejsy należeć coclass IDL.  
   
 ## <a name="requirements"></a>Wymagania  
   
-### <a name="attribute-context"></a>Atrybut kontekstu  
+### <a name="attribute-context"></a>Kontekst atrybutu  
   
 |||  
 |-|-|  
-|**Dotyczy**|**Klasa**, `struct`|  
+|**Dotyczy**|**Klasa**, **— struktura**|  
 |**Powtarzalne**|Tak|  
 |**Wymaganych atrybutów**|Brak|  
 |**Nieprawidłowe atrybuty**|Brak|  
@@ -61,9 +60,9 @@ Określa wysyłania interfejsów, które muszą być członkami IDL coclass.
  Aby uzyskać więcej informacji, zobacz [konteksty atrybutu](../windows/attribute-contexts.md).  
   
 ## <a name="example"></a>Przykład  
- Poniższy przykład znajduje się w trzech części: pliku .idl i jego .h skojarzony plik i plik C++.  
+ Poniższy przykład znajduje się w trzech części: pliku .idl i jego plik .h skojarzone i plik języka C++.  
   
- Przykładowa następującego pliku .idl, która będzie dostępna do kompilatora.  
+ Załóżmy następujące pliku .idl, która będzie dostępna w kompilatorze.  
   
 ```  
 // attr_implements.idl  
@@ -113,9 +112,9 @@ library odod
 ```  
   
 ## <a name="example"></a>Przykład  
- I następującego pliku .h również musi być dostępna do kompilatora.  
+ I następujący plik .h również muszą być dostępne dla kompilatora.  
   
-```  
+```cpp  
 // attr_implements.h  
 // this ALWAYS GENERATED file contains definitions for the interfaces  
   
@@ -430,9 +429,9 @@ CBar;
 ```  
   
 ## <a name="example"></a>Przykład  
- W programie następujące bez implementuje IBar1, IBar2 i ISna nie będzie w klasie coclass w wygenerowanym pliku IDL.  
+ Następujący program bez implementowania `IBar1`, `IBar2`, i `ISna` nie będzie w `coclass` w wygenerowanym pliku IDL.  
   
-```  
+```cpp  
 // attr_implements.cpp  
 // compile with: /LD /link /idlout:out.idl  
 #define _ATL_ATTRIBUTES 1  

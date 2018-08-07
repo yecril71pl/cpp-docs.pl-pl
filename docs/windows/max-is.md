@@ -17,39 +17,38 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 697eff3264c7e4a627086b072ae45b3c7ffedac2
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 3fae7ee95255d72d2799a5913821606f770e2b3b
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33878973"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39608433"
 ---
 # <a name="maxis"></a>max_is
-Określa maksymalną wartość indeksu tablicy prawidłowe.  
+Określa maksymalną wartość indeksu prawidłową tablicą.  
   
 ## <a name="syntax"></a>Składnia  
   
 ```  
-  
-      [ max_is(  
+[ max_is(  
    "expression"  
 ) ]  
 ```  
   
 #### <a name="parameters"></a>Parametry  
- *wyrażenie*  
- Co najmniej jednego wyrażenia języka C. Pusty argument gniazda są dozwolone.  
+ *Wyrażenie*  
+ Co najmniej jednego wyrażenia języka C. Pusty argument miejsca są dozwolone.  
   
 ## <a name="remarks"></a>Uwagi  
- **Max_is —** atrybut C++ ma te same funkcje co [max_is —](http://msdn.microsoft.com/library/windows/desktop/aa367074) MIDL atrybutu.  
+ **Max_is —** atrybut C++ ma taką samą funkcjonalność jak [max_is —](http://msdn.microsoft.com/library/windows/desktop/aa367074) atrybutów w MIDL.  
   
 ## <a name="requirements"></a>Wymagania  
   
-### <a name="attribute-context"></a>Atrybut kontekstu  
+### <a name="attribute-context"></a>Kontekst atrybutu  
   
 |||  
 |-|-|  
-|**Dotyczy**|Pole w `struct` lub **Unii**, interfejs parametru, interfejsu — metoda|  
+|**Dotyczy**|Pole **struktury** lub **Unii**, interfejs parametrów, metody interfejsu|  
 |**Powtarzalne**|Nie|  
 |**Wymaganych atrybutów**|Brak|  
 |**Nieprawidłowe atrybuty**|**size_is**|  
@@ -57,12 +56,12 @@ Określa maksymalną wartość indeksu tablicy prawidłowe.
  Aby uzyskać więcej informacji, zobacz [konteksty atrybutu](../windows/attribute-contexts.md).  
   
 ## <a name="example"></a>Przykład  
- Zobacz [first_is —](../windows/first-is.md) przykład sposobu określania sekcji tablicy.  
+ Zobacz [first_is —](../windows/first-is.md) przykład sposobu określania część tablicy.  
   
 ## <a name="see-also"></a>Zobacz też  
  [Atrybuty IDL](../windows/idl-attributes.md)   
- [Element TypeDef, Enum, Unii i struct — atrybuty](../windows/typedef-enum-union-and-struct-attributes.md)   
- [Atrybuty parametrów](../windows/parameter-attributes.md)   
+ [Element TypeDef, Enum, Union i struct — atrybuty](../windows/typedef-enum-union-and-struct-attributes.md)   
+ [Atrybuty parametru](../windows/parameter-attributes.md)   
  [first_is —](../windows/first-is.md)   
  [last_is —](../windows/last-is.md)   
  [length_is —](../windows/length-is.md)   

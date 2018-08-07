@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 52acf2f0b9936903b4359e21e23ae50c95d2f31a
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 267ef2d9e1b24028016831e050385997ac0037e6
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33876738"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39604843"
 ---
 # <a name="interfacelist-structure"></a>InterfaceList — Struktura
 Obsługuje infrastrukturę biblioteki WRL i nie jest przeznaczona do użycia bezpośrednio w kodzie.  
@@ -37,24 +37,24 @@ template <
 struct InterfaceList;  
 ```  
   
-#### <a name="parameters"></a>Parametry  
- `T`  
- Nazwa interfejsu; Pierwszy interfejs na liście cyklicznego.  
+### <a name="parameters"></a>Parametry  
+ *T*  
+ Nazwa interfejsu; Pierwszy interfejs na liście cykliczne.  
   
- `U`  
- Nazwa interfejsu; pozostałe interfejsy na liście cyklicznego.  
+ *U*  
+ Nazwa interfejsu; pozostałe interfejsy na liście cykliczne.  
   
 ## <a name="remarks"></a>Uwagi  
- Pozwala utworzyć listę cykliczne interfejsów.  
+ Użyty do utworzenia cyklicznego listę interfejsów.  
   
 ## <a name="members"></a>Elementy członkowskie  
   
-### <a name="public-typedefs"></a>Definicje typów publicznych  
+### <a name="public-typedefs"></a>Publiczne definicje typów  
   
 |Nazwa|Opis|  
 |----------|-----------------|  
-|`FirstT`|Synonim dla parametru szablonu `T`.|  
-|`RestT`|Synonim dla parametru szablonu `U`.|  
+|`FirstT`|Synonim dla parametru szablonu *T*.|  
+|`RestT`|Synonim dla parametru szablonu *U*.|  
   
 ## <a name="inheritance-hierarchy"></a>Hierarchia dziedziczenia  
  `InterfaceList`  
@@ -62,7 +62,7 @@ struct InterfaceList;
 ## <a name="requirements"></a>Wymagania  
  **Nagłówek:** implements.h  
   
- **Namespace:** Microsoft::wrl:: details —  
+ **Namespace:** Microsoft::wrl:: details  
   
 ## <a name="see-also"></a>Zobacz też  
  [Microsoft::WRL::Details, przestrzeń nazw](../windows/microsoft-wrl-details-namespace.md)

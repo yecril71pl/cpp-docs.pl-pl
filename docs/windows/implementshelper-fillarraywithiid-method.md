@@ -1,5 +1,5 @@
 ---
-title: ImplementsHelper::FillArrayWithIid — metoda | Dokumentacja firmy Microsoft
+title: ImplementsHelper::FillArrayWithIid, metoda | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 9313ade1f5731319732a2ee3efc0af191af14f05
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: da38eddae5ab9c49da98a4c5e9f383d59d110ee1
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33879926"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39608325"
 ---
 # <a name="implementshelperfillarraywithiid-method"></a>ImplementsHelper::FillArrayWithIid — Metoda
 Obsługuje infrastrukturę biblioteki WRL i nie jest przeznaczona do użycia bezpośrednio w kodzie.  
@@ -36,19 +36,19 @@ void FillArrayWithIid(
 ```  
   
 #### <a name="parameters"></a>Parametry  
- `index`  
- Liczony od zera indeks, który wskazuje element tablicy początkowy dla tej operacji. Po zakończeniu tej operacji, `index` jest zwiększana o 1.  
+ *index*  
+ Liczony od zera indeks, który wskazuje element początkowy tablicy do wykonania tej operacji. Po zakończeniu tej operacji, *indeksu* jest zwiększana o 1.  
   
- `iids`  
+ *IID*  
  Tablica typu IID.  
   
 ## <a name="remarks"></a>Uwagi  
- Wstawia podany identyfikator interfejsu przez bieżący parametr szablonu zeroth w element określonej tablicy.  
+ Wstawia identyfikator interfejsu określonego przez bieżący parametr szablonu zerowego do elementu określonej tablicy.  
   
 ## <a name="requirements"></a>Wymagania  
  **Nagłówek:** implements.h  
   
- **Namespace:** Microsoft::wrl:: details —  
+ **Namespace:** Microsoft::wrl:: details  
   
 ## <a name="see-also"></a>Zobacz też  
  [Implementshelper — struktura](../windows/implementshelper-structure.md)   

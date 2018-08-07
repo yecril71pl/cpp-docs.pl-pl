@@ -1,5 +1,5 @@
 ---
-title: Module::module — Konstruktor | Dokumentacja firmy Microsoft
+title: Module::module, Konstruktor | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: b31e9f1e4536bc124bba359ece10217ef8b7f253
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 207b1006aeb57d9c16c09f5d8101a7f64b2cb85b
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33875256"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39608722"
 ---
 # <a name="modulemodule-constructor"></a>Module::Module — Konstruktor
-Inicjuje nowe wystąpienie klasy modułu.  
+Inicjuje nowe wystąpienie klasy **modułu** klasy.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -34,12 +34,12 @@ Module();
 ```  
   
 ## <a name="remarks"></a>Uwagi  
- Ten konstruktor jest chroniona i nie można wywołać z `new` — słowo kluczowe. Zamiast tego wywołać albo [Module::GetModule — metoda](../windows/module-getmodule-method.md) lub [Module::Create — metoda](../windows/module-create-method.md).  
+ Ten konstruktor jest chroniona i nie może zostać wywołany z **nowe** — słowo kluczowe. Zamiast tego należy wywołać albo [Module::GetModule, Metoda](../windows/module-getmodule-method.md) lub [Module::Create, Metoda](../windows/module-create-method.md).  
   
 ## <a name="requirements"></a>Wymagania  
  **Nagłówek:** module.h  
   
- **Namespace:** Microsoft::wrl —
+ **Namespace:** Microsoft::WRL
  
  ## <a name="see-also"></a>Zobacz też
  [Klasa modułu](../windows/module-class.md)

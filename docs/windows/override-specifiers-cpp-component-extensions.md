@@ -1,5 +1,5 @@
 ---
-title: Specyfikatory (C++ Component Extensions) zastąpienia | Dokumentacja firmy Microsoft
+title: Specyfikatory zastąpienia (C++ Component Extensions) | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,20 +16,20 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 4eb610157d1d56c00b48e98086137351e9fd43a8
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: f84379e57dc5730227726d28c6947d0274b615c5
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33882765"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39603917"
 ---
 # <a name="override-specifiers--c-component-extensions"></a>Specyfikatory zastąpienia (C++ Component Extensions)
-*Specyfikatory zastąpienia* zmodyfikować sposób dziedziczonych typów i członków dziedziczonych typów zachowują się w typach pochodnych.  
+*Specyfikatory przesłonięć* zmodyfikować sposób dziedziczone typy i członkowie typów dziedziczonych zachowują się w typach pochodnych.  
   
 ## <a name="all-runtimes"></a>Wszystkie środowiska wykonawcze  
- **Uwagi**  
+### <a name="remarks"></a>Uwagi  
   
- Aby uzyskać więcej informacji na temat specyfikatorów zastąpienia zobacz:  
+ Aby uzyskać więcej informacji na temat nadpisania specyfikatorów zobacz:  
   
 -   [abstract](../windows/abstract-cpp-component-extensions.md)  
   
@@ -39,23 +39,23 @@ ms.locfileid: "33882765"
   
 -   [sealed](../windows/sealed-cpp-component-extensions.md)  
   
--   [Specyfikatory zastąpienia i kompilacjach kodu natywnego](../dotnet/how-to-declare-override-specifiers-in-native-compilations-cpp-cli.md)  
+-   [Zastąpienie specyfikatorów i kompilacji macierzystych](../dotnet/how-to-declare-override-specifiers-in-native-compilations-cpp-cli.md)  
   
- `abstract` i `sealed` są również prawidłowy w deklaracjach typu, którym nie działają zgodnie z specyfikatory zastąpienia.  
+ **abstrakcyjna** i **zapieczętowanego** są również prawidłowe w typach deklaracji, gdzie nie działają jak zastępujące specyfikatory.  
   
- Aby dowiedzieć się, jak jawne zastępowanie klasy podstawowej funkcji, zobacz [jawne zastąpienia](../windows/explicit-overrides-cpp-component-extensions.md).  
+ Aby uzyskać informacje dotyczące jawnego przesyłania funkcji klasy podstawowej, zobacz [jawne zastępowanie](../windows/explicit-overrides-cpp-component-extensions.md).  
   
 ## <a name="windows-runtime"></a>Środowisko wykonawcze systemu Windows  
- (Brak żadnych uwag dla tej funkcji języka, które są stosowane do środowiska uruchomieniowego systemu Windows.)  
+ (Nie ma żadnych uwag dla tej funkcji języka, które dotyczą tylko środowiska uruchomieniowego Windows).  
   
 ### <a name="requirements"></a>Wymagania  
- — Opcja kompilatora: **/ZW**  
+ — Opcja kompilatora: `/ZW`  
   
 ## <a name="common-language-runtime"></a>środowiska uruchomieniowe w trakcie wykonania  
- (Istnieją nie uwagi dla tej funkcji języka, które dotyczą tylko środowiska CLR.)  
+ (Nie ma żadnych uwag dla tej funkcji języka, które dotyczą tylko środowiska uruchomieniowego języka wspólnego).  
   
 ### <a name="requirements"></a>Wymagania  
- — Opcja kompilatora:   **/CLR**  
+ — Opcja kompilatora: `/clr`  
   
 ## <a name="see-also"></a>Zobacz też  
  [Component Extensions dla platform środowiska uruchomieniowego](../windows/component-extensions-for-runtime-platforms.md)

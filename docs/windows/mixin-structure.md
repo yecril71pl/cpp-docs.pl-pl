@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: b20dac5f189a51a1610da45e43e03e51ff1c3610
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: d0ebf8efb556aef4fbd5048fa1930f2d98a01410
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33876166"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39605727"
 ---
 # <a name="mixin-structure"></a>MixIn — Struktura
-Zapewnia, że klasa środowiska uruchomieniowego pochodzi z interfejsów środowiska wykonawczego systemu Windows, jeśli istnieje, a następnie klasycznego interfejsy modelu COM.  
+Zapewnia, że klasy środowiska uruchomieniowego pochodzi od klasy interfejsów Windows Runtime, jeśli istnieje, a następnie klasycznych interfejsów COM.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -39,18 +39,18 @@ template<
 struct MixIn;  
 ```  
   
-#### <a name="parameters"></a>Parametry  
- `Derived`  
- Typ pochodny [implementuje](../windows/implements-structure.md) struktury.  
+### <a name="parameters"></a>Parametry  
+ *Pochodne*  
+ Typ pochodzący od [implementuje](../windows/implements-structure.md) struktury.  
   
- `MixInType`  
+ *MixInType*  
  Typ podstawowy.  
   
- `hasImplements`  
- `true` Jeśli `MixInType` jest pochodną bieżąca implementacja typu podstawowego; `false` inaczej.  
+ *hasImplements*  
+ **wartość true,** Jeśli *MixInType* jest pochodną bieżąca implementacja parametru typu podstawowego; **false** inaczej.  
   
 ## <a name="remarks"></a>Uwagi  
- Jeśli klasą pochodną zarówno interfejsy klasy COM, jak i środowiska wykonawczego systemu Windows, lista deklaracji klasy najpierw musi zawierać żadnego z interfejsów środowiska wykonawczego systemu Windows, a następnie interfejsy żadnych klasycznego modelu COM. Domieszki gwarantuje, że interfejsy są określone w poprawnej kolejności.  
+ Jeśli klasa jest pochodną klasy COM, interfejsów i środowiska wykonawczego Windows, lista deklaracji klasy, najpierw musi zawierać żadnych interfejsów Windows Runtime, a następnie wszelkie Klasyczny model COM, interfejsów. **MixIn** gwarantuje, że interfejsy są określone w poprawnej kolejności.  
   
 ## <a name="inheritance-hierarchy"></a>Hierarchia dziedziczenia  
  `MixIn`  
@@ -58,7 +58,7 @@ struct MixIn;
 ## <a name="requirements"></a>Wymagania  
  **Nagłówek:** implements.h  
   
- **Namespace:** Microsoft::wrl —  
+ **Namespace:** Microsoft::WRL  
   
 ## <a name="see-also"></a>Zobacz też  
  [Microsoft::WRL, przestrzeń nazw](../windows/microsoft-wrl-namespace.md)

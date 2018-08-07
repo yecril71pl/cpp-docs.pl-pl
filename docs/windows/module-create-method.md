@@ -1,5 +1,5 @@
 ---
-title: Module::Create — metoda | Dokumentacja firmy Microsoft
+title: Module::CREATE, metoda | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 99ede64c239909956f1f767db34a2a6a14c02314
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: c0d49a6f0b5172b0971f755fc61b7767f0f4427d
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33874892"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39603306"
 ---
 # <a name="modulecreate-method"></a>Module::Create — Metoda
 Tworzy wystąpienie modułu.  
@@ -42,18 +42,18 @@ WRL_NOTHROW static Module& Create(
 );  
 ```  
   
-#### <a name="parameters"></a>Parametry  
- `T`  
+### <a name="parameters"></a>Parametry  
+ *T*  
  Typ modułu.  
   
- `callback`  
- Wywołuje się po zwolnieniu ostatniego wystąpienia obiektu modułu.  
+ *Wywołanie zwrotne*  
+ Wywołuje się, gdy ostatni obiekt wystąpienia modułu jest zwalniany.  
   
- `object`  
- `object` i `method` parametry są używane w połączeniu. Wskazuje ostatni obiekt wystąpienia po zwolnieniu ostatniego wystąpienia obiektu w module.  
+ *object*  
+ *Obiektu* i *metoda* parametry są używane w połączeniu. Wskazuje ostatni obiekt wystąpienia po udostępnieniu ostatni obiekt wystąpienia w module.  
   
- `method`  
- `object` i `method` parametry są używane w połączeniu. Wskazuje metodę ostatniego wystąpienia obiektu po zwolnieniu ostatniego wystąpienia obiektu w module.  
+ *— Metoda*  
+ *Obiektu* i *metoda* parametry są używane w połączeniu. Wskazuje metodę ostatniego wystąpienia obiektu po udostępnieniu ostatni obiekt wystąpienia w module.  
   
 ## <a name="return-value"></a>Wartość zwracana  
  Odwołanie do modułu.  
@@ -61,9 +61,7 @@ WRL_NOTHROW static Module& Create(
 ## <a name="requirements"></a>Wymagania  
  **Nagłówek:** module.h  
   
- **Namespace:** Microsoft::wrl —  
+ **Namespace:** Microsoft::WRL  
   
 ## <a name="see-also"></a>Zobacz też  
 [Klasa modułu](../windows/module-class.md)
-
- 

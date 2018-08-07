@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 11547a3fb1bd46a1e2edb8ce9dd0a6547464f796
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: bfda47ced14d7c112d27d0036b4d636e32c91907
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33882527"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39607563"
 ---
 # <a name="idlmodule"></a>idl_module
 Określa punkt wejścia w pliku dll.  
@@ -30,8 +30,7 @@ Określa punkt wejścia w pliku dll.
 ## <a name="syntax"></a>Składnia  
   
 ```  
-  
-      [ idl_module (   
+[ idl_module (   
    name=module_name,   
    dllname=dll,   
    uuid="uuid",   
@@ -44,47 +43,47 @@ Określa punkt wejścia w pliku dll.
 function declaration  
 ```  
   
-#### <a name="parameters"></a>Parametry  
- **Nazwa**  
- Zdefiniowane przez użytkownika nazwę tego bloku kodu, który będzie widoczny w pliku .idl.  
+### <a name="parameters"></a>Parametry  
+ *Nazwa*  
+ Zdefiniowana przez użytkownika nazwa dla bloku kodu, który będzie wyświetlany w pliku .idl.  
   
- **DllName** (opcjonalnie)  
+ *Parametr DllName* (opcjonalnie)  
  Plik .dll, który zawiera eksportu.  
   
- `uuid` (opcjonalnie)  
+ *Identyfikator UUID* (opcjonalnie)  
  Unikatowy identyfikator.  
   
- **HelpString —** (opcjonalnie)  
- Ciąg znaków używany do opisywania biblioteki typów.  
+ *HelpString —* (opcjonalnie)  
+ Ciąg znaków używany do opisania biblioteki typów.  
   
- **helpstringcontext —** (opcjonalnie)  
- Identyfikator tematu pomocy w formacie pliku .hlp lub .chm.  
+ *helpstringcontext —* (opcjonalnie)  
+ Identyfikator tematu pomocy w pliku hlp lub chm.  
   
- **helpcontext** (opcjonalnie)  
+ *helpcontext —* (opcjonalnie)  
  Identyfikator pomocy dla tego typu biblioteki.  
   
- **ukryte** (opcjonalnie)  
- Parametr, który zapobiega wyświetlaniu biblioteki. Zobacz [ukryte](http://msdn.microsoft.com/library/windows/desktop/aa366861) atrybutu MIDL, aby uzyskać więcej informacji.  
+ *ukryte* (opcjonalnie)  
+ Parametr, który zapobiega wyświetlaniu w bibliotece. Zobacz [ukryte](http://msdn.microsoft.com/library/windows/desktop/aa366861) atrybutu MIDL, aby uzyskać więcej informacji.  
   
- ***ograniczone*** (opcjonalnie)  
+ *ograniczone* (opcjonalnie)  
  Elementy członkowskie biblioteki nie można wywołać arbitralnie. Zobacz [ograniczeniami](http://msdn.microsoft.com/library/windows/desktop/aa367157) atrybutu MIDL, aby uzyskać więcej informacji.  
   
- *deklaracji funkcji*  
- Funkcja, który będzie definiował.  
+ *Deklaracja funkcji*  
+ Funkcja, która będą definiować.  
   
 ## <a name="remarks"></a>Uwagi  
- `idl_module` Atrybut C++ pozwala określić punkt wejścia w pliku dll, dzięki czemu można zaimportować z pliku dll.  
+ **Idl_module** atrybut C++ umożliwia określenie punktu wejścia w pliku .dll, dzięki czemu można zaimportować z pliku dll.  
   
- **Idl_module** atrybut ma podobne do funkcji [modułu](http://msdn.microsoft.com/library/windows/desktop/aa367099) MIDL atrybutu.  
+ **Idl_module** atrybut ma funkcje podobne do [modułu](http://msdn.microsoft.com/library/windows/desktop/aa367099) atrybutów w MIDL.  
   
- Możesz wyeksportować niczego z obiektu COM, który można eksportować z pliku .dll umieszczenie punktu wejścia biblioteki DLL w bloku biblioteki pliku .idl.  
+ Możesz wyeksportować nic z obiektu COM, który można eksportować z pliku .dll, umieszczając punkt wejścia biblioteki DLL w bloku biblioteki pliku .idl.  
   
- Sieci należy użyć `idl_module` w dwóch krokach. Najpierw należy zdefiniować pary nazwa/DLL. Następnie, jeśli używasz `idl_module` do określenia punktu wejścia, określ nazwę oraz wszelkie dodatkowe atrybuty.  
+ Usługi muszą używać **idl_module** w dwóch krokach. Najpierw należy zdefiniować pary nazwa/DLL. Następnie, kiedy używasz **idl_module** do określonego punktu wejścia, określ nazwę oraz wszelkie dodatkowe atrybuty.  
   
 ## <a name="example"></a>Przykład  
- Poniższy kod przedstawia sposób użycia `idl_module` atrybutu:  
+ Poniższy kod przedstawia sposób użycia **idl_module** atrybutu:  
   
-```  
+```cpp  
 // cpp_attr_ref_idl_module.cpp  
 // compile with: /LD  
 [idl_quote("midl_pragma warning(disable:2461)")];  
@@ -95,11 +94,11 @@ void FuncName(int i);
   
 ## <a name="requirements"></a>Wymagania  
   
-### <a name="attribute-context"></a>Atrybut kontekstu  
+### <a name="attribute-context"></a>Kontekst atrybutu  
   
 |||  
 |-|-|  
-|**Dotyczy**|Dowolnego miejsca|  
+|**Dotyczy**|Dowolne miejsce|  
 |**Powtarzalne**|Nie|  
 |**Wymaganych atrybutów**|Brak|  
 |**Nieprawidłowe atrybuty**|Brak|  

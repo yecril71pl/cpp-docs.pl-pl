@@ -17,15 +17,15 @@ ms.author: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 95a3f8508c17936626558ecc6a8d01e21688d403
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: a5b1c5fed776e5e9312843160a740fd3d801b196
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33892455"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39608550"
 ---
 # <a name="safecast"></a>SafeCast
-Rzutuje jednego typu liczby do innego typu.  
+Rzutuje jednym typie liczby do innego typu.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -37,23 +37,23 @@ inline bool SafeCast (
 );  
 ```  
   
-#### <a name="parameters"></a>Parametry  
- [in] `From`  
- Źródło liczbę do przekonwertowania. To musi być typu T.  
+### <a name="parameters"></a>Parametry  
+ [in] *z*  
+ Liczba źródłowych, która ma zostać przekształcona. To musi być typu `T`.  
   
- [out] `To`  
- Odwołanie do nowego typu Liczba. Musi to być typ U.  
+ [out] *Do*  
+ Odwołanie do nowego typu Liczba. To musi być typu `U`.  
   
 ## <a name="return-value"></a>Wartość zwracana  
- `true` Jeśli nie występują błędy; `false` w przypadku wystąpienia błędu.  
+ **wartość true,** Jeśli żaden błąd nie wystąpi; **false** w przypadku wystąpienia błędu.  
   
 ## <a name="remarks"></a>Uwagi  
- Ta metoda jest częścią [Biblioteka SafeInt](../windows/safeint-library.md) i jest przeznaczony dla operacji rzutowania pojedynczego bez tworzenia wystąpienia [safeint — klasa](../windows/safeint-class.md).  
+ Ta metoda jest częścią [Biblioteka SafeInt](../windows/safeint-library.md) i jest przeznaczony dla operacji rzutowania pojedynczej bez tworzenia wystąpienia obiektu [safeint — klasa](../windows/safeint-class.md).  
   
 > [!NOTE]
->  Tej metody należy używać tylko w przypadku, gdy jednej operacji musi być chroniony. Jeśli istnieje wiele operacji, należy użyć `SafeInt` klasy zamiast kontaktować się z poszczególnych funkcji autonomicznych.  
+>  Ta metoda ją stosować tylko po jednej operacji, które muszą być chronione. Jeśli istnieje wiele operacji, należy użyć `SafeInt` klasy zamiast wywoływania poszczególnych funkcjami autonomicznymi.  
   
- Aby uzyskać więcej informacji o typach szablonu T oraz U, zobacz [safeint — funkcje](../windows/safeint-functions.md).  
+ Aby uzyskać więcej informacji na temat typów szablonu T i U zobacz [safeint — funkcje](../windows/safeint-functions.md).  
   
 ## <a name="requirements"></a>Wymagania  
  **Nagłówek:** safeint.h  

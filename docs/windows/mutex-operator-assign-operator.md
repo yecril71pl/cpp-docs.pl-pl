@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 8791d3c947206be399f475bb8c895b2b5e032133
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 837c8ed508b713f790d1a6a56310705a00f12b3f
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33875490"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39602749"
 ---
 # <a name="mutexoperator-operator"></a>Mutex::operator= Operator
-Przypisuje (przenosi) określonego obiektu Mutex obiekt do bieżącego obiektu Mutex.  
+Przypisuje (ruch) określonego **Mutex** obiekt do bieżącego **Mutex** obiektu.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -35,20 +35,20 @@ Mutex& operator=(
 );  
 ```  
   
-#### <a name="parameters"></a>Parametry  
- `h`  
- R-wartości — odwołanie do obiektu Mutex.  
+### <a name="parameters"></a>Parametry  
+ *h*  
+ Odwołania rvalue do **Mutex** obiektu.  
   
 ## <a name="return-value"></a>Wartość zwracana  
- Odwołanie do bieżącego obiektu Mutex.  
+ Odwołanie do bieżącego **Mutex** obiektu.  
   
 ## <a name="remarks"></a>Uwagi  
- Aby uzyskać więcej informacji, zobacz **Przenieś semantyki** sekcji [deklarator odwołania do r-wartości: & &](../cpp/rvalue-reference-declarator-amp-amp.md).  
+ Aby uzyskać więcej informacji, zobacz **przenoszenie semantyki** części [Rvalue Reference Declarator: & &](../cpp/rvalue-reference-declarator-amp-amp.md).  
   
 ## <a name="requirements"></a>Wymagania  
  **Nagłówek:** corewrappers.h  
   
- **Namespace:** Microsoft::wrl:: wrappers —
+ **Namespace:** Microsoft::wrl:: wrappers
  
  ## <a name="see-also"></a>Zobacz też
  [Mutex — klasa](../windows/mutex-class1.md)

@@ -18,26 +18,26 @@ ms.author: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 25090eefe4f07181490f650ea4d14add9fc6ac75
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 16ec0ad37202acbae8b33f270cef15547edd77b6
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33892055"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39604190"
 ---
 # <a name="safeint-library"></a>Biblioteka SafeInt
-Biblioteka SafeInt zapobiega całkowitą przepełnienia, które może spowodować, gdy aplikacja wykonuje operacji matematycznych.  
+**SafeInt** biblioteki zapobiega przepełnienia liczby całkowitej, które może spowodować, gdy aplikacja wykonuje operacje matematyczne.  
   
 ## <a name="in-this-section"></a>W tej sekcji  
   
 |Sekcja|Opis|  
 |-------------|-----------------|  
 |[SafeInt, klasa](../windows/safeint-class.md)|Ta klasa chroni przed przepełnienia liczby całkowitej.|  
-|[SafeInt, funkcje](../windows/safeint-functions.md)|Funkcje, które mogą być używane bez tworzenia `SafeInt` obiektu.|  
-|[SafeIntException, klasa](../windows/safeintexception-class.md)|Klasy wyjątków związane z `SafeInt` klasy.|  
+|[SafeInt, funkcje](../windows/safeint-functions.md)|Funkcje, które mogą być używane bez tworzenia **SafeInt** obiektu.|  
+|[SafeIntException, klasa](../windows/safeintexception-class.md)|Klasy wyjątków związanych z **SafeInt** klasy.|  
   
 ## <a name="related-sections"></a>Sekcje pokrewne  
   
 |Sekcja|Opis|  
 |-------------|-----------------|  
-|[Dokumentacja języka C++](../cpp/cpp-language-reference.md)|Odwołanie i pojęciach zawartości dla języka C++.|
+|[Dokumentacja języka C++](../cpp/cpp-language-reference.md)|Odwołanie i zawartości koncepcyjnej dla języka C++.|

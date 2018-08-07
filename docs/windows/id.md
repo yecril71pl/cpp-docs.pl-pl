@@ -17,38 +17,37 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 6c674765a0dfc06648d64a2b3b4e820bb467e700
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: b36a45dad71f2144c3e3d0990ab7715d00e8ff21
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33882450"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39605711"
 ---
 # <a name="id"></a>identyfikator
-Określa `dispid` parametr dla funkcji członkowskiej (właściwości lub metody, w interfejsie lub dispinterface).  
+Określa *dispid* parametr dla funkcji członkowskiej (właściwość lub metodę w interfejsie lub dispinterface).  
   
 ## <a name="syntax"></a>Składnia  
   
 ```  
-  
-      [ id(  
+[ id(  
    dispid  
 ) ]  
 ```  
   
-#### <a name="parameters"></a>Parametry  
- `dispid`  
+### <a name="parameters"></a>Parametry  
+ *identyfikator DISPID*  
  Identyfikator wysyłania dla metody interfejsu.  
   
 ## <a name="remarks"></a>Uwagi  
- **Identyfikator** atrybut C++ ma te same funkcje co [identyfikator](http://msdn.microsoft.com/library/windows/desktop/aa367040) MIDL atrybutu.  
+ **Identyfikator** atrybut C++ ma taką samą funkcjonalność jak [identyfikator](http://msdn.microsoft.com/library/windows/desktop/aa367040) atrybutów w MIDL.  
   
 ## <a name="example"></a>Przykład  
- Zobacz przykład [powiązania](../windows/bindable.md) przykład sposobu użycia **identyfikator**.  
+ Zobacz przykład [możliwej do wiązania](../windows/bindable.md) przykład sposobu użycia **identyfikator**.  
   
 ## <a name="requirements"></a>Wymagania  
   
-### <a name="attribute-context"></a>Atrybut kontekstu  
+### <a name="attribute-context"></a>Kontekst atrybutu  
   
 |||  
 |-|-|  
@@ -61,8 +60,8 @@ Określa `dispid` parametr dla funkcji członkowskiej (właściwości lub metody
   
 ## <a name="see-also"></a>Zobacz też  
  [Atrybuty IDL](../windows/idl-attributes.md)   
- [Atrybuty — metoda](../windows/method-attributes.md)   
+ [Atrybuty metody](../windows/method-attributes.md)   
  [Atrybuty elementów członkowskich danych](../windows/data-member-attributes.md)   
- [Wartość domyślna](../windows/defaultvalue.md)   
+ [DefaultValue](../windows/defaultvalue.md)   
  [in](../windows/in-cpp.md)   
  [out](../windows/out-cpp.md)   

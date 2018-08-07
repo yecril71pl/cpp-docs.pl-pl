@@ -1,5 +1,5 @@
 ---
-title: 'HString:: ~ HString — destruktor | Dokumentacja firmy Microsoft'
+title: 'HString:: ~ HString, destruktor | Dokumentacja firmy Microsoft'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,15 +15,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 7ad64aa4cde3f3654c243e047f83669e5f02deea
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 177f91c0f5222144a81fa33e5418bc4baa85f99a
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33874047"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39603280"
 ---
 # <a name="hstringhstring-destructor"></a>HString::~HString — Destruktor
-Niszczy bieżące wystąpienie klasy HString.  
+Likwiduje bieżące wystąpienie **HString** klasy.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -34,7 +34,7 @@ Niszczy bieżące wystąpienie klasy HString.
 ## <a name="requirements"></a>Wymagania  
  **Nagłówek:** corewrappers.h  
   
- **Namespace:** Microsoft::wrl:: wrappers —  
+ **Namespace:** Microsoft::wrl:: wrappers  
   
 ## <a name="see-also"></a>Zobacz też  
  [HString, klasa](../windows/hstring-class.md)

@@ -18,21 +18,21 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 71c0fc9739e7ef8e1e68c5678ce56fcec4a250c1
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 82bd3baab698e013b3bfe506877bbdbf0021794b
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33880182"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39605935"
 ---
 # <a name="partial--c-component-extensions"></a>częściowy (C++ Component Extensions)
-`partial` — Słowo kluczowe umożliwia różnych części klasy ref do utworzenia niezależnie i w różnych plikach.  
+**Częściowe** — słowo kluczowe umożliwia różne części klasy ref autora, niezależnie od siebie i w różnych plikach.  
   
 ## <a name="all-runtimes"></a>Wszystkie środowiska wykonawcze  
- (Ta funkcja językowa dotyczy tylko środowiska uruchomieniowego systemu Windows).  
+ (Ta funkcja językowa dotyczy tylko środowiska wykonawczego Windows).  
   
 ## <a name="windows-runtime"></a>Środowisko wykonawcze systemu Windows  
- Dla klasy ref, który ma dwie definicje częściowe `partial` — słowo kluczowe jest stosowany do pierwszego wystąpienia definicji, a jest to zazwyczaj wykonywane przez automatycznie wygenerowany kod, tak aby człowieka koder nie użyj słowa kluczowego bardzo często. Dla wszystkich kolejnych definicji częściowej klasy, Pomiń `partial` modyfikator z *klucz klasy* identyfikator — słowo kluczowe i klasy. Gdy kompilator napotka klasy ref uprzednio zdefiniowany i identyfikator klasy, ale nie `partial` — słowo kluczowe, wszystkie części definicji klasy ref w jednej definicji wewnętrznie łączy.  
+ Dla klasy referencyjnej, która ma dwie definicje częściowe **częściowe** — słowo kluczowe jest stosowany do pierwszego wystąpienia definicji i jest to zazwyczaj wykonywane przez automatycznie wygenerowany kod, aby ludzi koder nie bardzo często używa słowa kluczowego. Wszystkie kolejne definicje częściowe klasy, można pominąć **częściowe** modyfikator z *klucz klasy* identyfikator słowa kluczowego i klasy. Gdy kompilator napotka klasy referencyjnej uprzednio zdefiniowany i identyfikator klasy, ale nie **częściowe** — słowo kluczowe, łączy wewnętrznie wszystkie części definicji klasy ref w jednej definicji.  
   
 ### <a name="syntax"></a>Składnia  
   
@@ -50,35 +50,35 @@ class-key identifier {
   
 ### <a name="parameters"></a>Parametry  
  *klucz klasy*  
- Słowo kluczowe, który deklaruje klasy lub struktury, która jest obsługiwana przez środowisko wykonawcze systemu Windows. Albo `ref class`, `value class`, `ref struct`, lub `value struct`.  
+ Słowo kluczowe, która deklaruje klasy lub struktury, która jest obsługiwana przez środowisko wykonawcze Windows. Albo **klasy referencyjnej**, **klasę wartości**, **ref struct**, lub **struktury wartości**.  
   
  *Identyfikator*  
  Nazwa zdefiniowanego typu.  
   
 ### <a name="remarks"></a>Uwagi  
- Klasy częściowej obsługuje scenariusze, w którym można zmodyfikować jedną część definicję klasy w jednym pliku i automatyczne generowanie kodu oprogramowania — na przykład projektanta XAML — modyfikuje kodu w tej samej klasie w innym pliku. Przy użyciu klasy częściowej, można zapobiec zastępowaniu kodu generatora kodu automatyczne. W projekcie programu Visual Studio `partial` modyfikator jest automatycznie stosowane do wygenerowanego pliku.  
+ Klasy częściowej obsługuje scenariusze, w którym można zmodyfikować jednej części definicji klasy, w jednym pliku i automatyczne generowanie kodu oprogramowania — na przykład projektant XAML — modyfikuje kodu w tej samej klasie w innym pliku. Za pomocą klasy częściowej, można zapobiec generatora kodu automatyczne zastępowanie kodu. W projekcie programu Visual Studio **częściowe** modyfikator, jest stosowane automatycznie wygenerowanego pliku.  
   
- Zawartość: Z dwoma wyjątkami definicji częściowej klasy może zawierać wszystkich elementów, które mogą zawierać definicji klasy pełne, jeśli `partial` — słowo kluczowe został pominięty. Jednak nie można określić klasy ułatwień dostępu (na przykład `public partial class X { ... };`), lub `declspec`.  
+ Zawartość: Z dwoma wyjątkami definicji częściowej klasy może zawierać wszystko, co może zawierać definicję klasy pełna, jeśli **częściowe** — słowo kluczowe został pominięty. Jednak nie można określić klasy ułatwień dostępu (na przykład `public partial class X { ... };`), lub **declspec**.  
   
- Używane w definicji klasy częściowej specyfikatory dostępu *identyfikator* nie ma wpływu na dostępność domyślne w definicji kolejnych klasy częściowe lub pełne *identyfikator*. Wbudowany definicji statycznych elementów członkowskich danych są dozwolone.  
+ Używane w definicji klasy częściowej specyfikatory dostępu *identyfikator* nie ma wpływu na dostępność domyślne w definicji kolejnych klas częściowego lub pełnego *identyfikator*. Wbudowane definicje statyczne elementy członkowskie danych są dozwolone.  
   
- Deklaracja: Częściową definicją klasy *identyfikator* tylko wprowadza nazwę *identyfikator*, ale *identyfikator* nie można używać w taki sposób, który wymaga klasy Definicja. Nazwa *identyfikator* nie może służyć wiedzieć, rozmiar *identyfikator*, lub Użyj podstawowego lub członek *identyfikator* aż po pełnej definicji napotka kompilatora *identyfikator*.  
+ Deklaracji: Częściową definicję klasy *identyfikator* tylko wprowadza nazwę *identyfikator*, ale *identyfikator* nie można używać w taki sposób, że wymaga klasy Definicja. Nazwa *identyfikator* nie używane do ustalenia rozmiaru *identyfikator*, czy mają być używane z obiektem bazowym ani składową z *identyfikator* aż po kompilator napotka pełna definicja *identyfikator*.  
   
- Liczba i kolejność: może być zero lub więcej definicji częściowej klasy dla *identyfikator*. Każdej definicji klasy częściowej *identyfikator* lexically musi poprzedzać jedna definicja pełne *identyfikator* (jeśli istnieje pełnej definicji; w przeciwnym razie klasa nie można użyć z wyjątkiem tak, jakby Deklaracja do przodu), ale nie muszą poprzedzać do przodu deklaracje *identyfikator*. Wszystkie klucze klasy muszą być zgodne.  
+ Liczbę i kolejność: może to być zero lub więcej częściowych definicji klasy dla *identyfikator*. Każdej definicji klasy częściowej *identyfikator* leksykalnie musi poprzedzać jeden pełna definicja *identyfikator* (Jeśli pełna definicja; w przeciwnym razie klasa nie można użyć z wyjątkiem tak, jakby Deklaracja do przodu), ale nie muszą poprzedzać deklaracje przechodzenia do przodu o *identyfikator*. Wszystkie klucze klasy muszą być zgodne.  
   
- Pełnej definicji: w punkcie pełnej definicji klasy *identyfikator*, zachowanie jest takie samo tak, jakby definicji *identyfikator* była zadeklarowana wszystkie klasy podstawowe elementy członkowskie, itp. w kolejności, w którym zostały one napotkano i określonych w klas częściowych.  
+ Pełna definicja: punkcie pełna definicja klasy *identyfikator*, zachowanie jest takie same tak, jakby definicji *identyfikator* była zadeklarowana klas bazowych, elementy członkowskie, itp., w kolejności, w którym zostały one napotkał i zdefiniowane w klasach częściowa.  
   
  Szablony: Częściowej klasy nie może być szablonem.  
   
- Ogólne: Częściowej klasy mogą być ogólnego pełnej definicji może być rodzajowy. Ale co klasy częściowe i pełne musi być dokładnie takie same ogólne parametry, łącznie z nazwami formalnych parametrów.  
+ Typy ogólne: Częściowej klasy może być ogólnego, jeśli pełna definicja może być ogólna. Ale co klasy częściowe i pełne musi mieć dokładnie tych samych parametrom, w tym nazwy parametrów formalnych.  
   
- Aby uzyskać więcej informacji o sposobie używania `partial` — słowo kluczowe, zobacz [klasy częściowe (C + +/ CX)](http://go.microsoft.com/fwlink/p/?LinkId=249023).  
+ Aby uzyskać więcej informacji o sposobie używania **częściowe** — słowo kluczowe, zobacz [klasy częściowe (C + +/ CX)](http://go.microsoft.com/fwlink/p/?LinkId=249023).  
   
 ### <a name="requirements"></a>Wymagania  
- — Opcja kompilatora: **/ZW**  
+ — Opcja kompilatora: `/ZW`  
   
 ## <a name="common-language-runtime"></a>środowiska uruchomieniowe w trakcie wykonania  
- (Ta funkcja językowa nie ma zastosowania do środowisko uruchomieniowe języka wspólnego).  
+ (Tej funkcji języka nie ma zastosowania do środowiska uruchomieniowego języka wspólnego).  
   
 ## <a name="see-also"></a>Zobacz też  
  [Klasy częściowe (C + +/ CX)](http://go.microsoft.com/fwlink/p/?LinkId=249023)

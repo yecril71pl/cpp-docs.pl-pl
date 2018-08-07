@@ -17,33 +17,31 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 7ee885c138bec9c7fea9adcc3d48b5b23e33a2ca
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 8a9979ec16009de680facdc6e8fc22b3d3cdccc3
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33876267"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39603058"
 ---
 # <a name="immediatebind"></a>immediatebind
-Wskazuje, że bazy danych zostanie niezwłocznie powiadomiona o wszystkich zmianach właściwości obiektu powiązanego z danymi.  
+Wskazuje, że baza danych zostanie niezwłocznie powiadomiona o wszystkich zmianach właściwości obiektu powiązanych z danymi.  
   
 ## <a name="syntax"></a>Składnia  
   
 ```  
-  
 [immediatebind]  
-  
 ```  
   
 ## <a name="remarks"></a>Uwagi  
- **Immediatebind —** atrybut C++ ma te same funkcje co [immediatebind —](http://msdn.microsoft.com/library/windows/desktop/aa367045) MIDL atrybutu.  
+ **Immediatebind —** atrybut C++ ma taką samą funkcjonalność jak [immediatebind —](http://msdn.microsoft.com/library/windows/desktop/aa367045) atrybutów w MIDL.  
   
 ## <a name="example"></a>Przykład  
- Zobacz [powiązania](../windows/bindable.md) przykład sposobu użycia **immediatebind —**.  
+ Zobacz [możliwej do wiązania](../windows/bindable.md) przykład sposobu użycia **immediatebind —**.  
   
 ## <a name="requirements"></a>Wymagania  
   
-### <a name="attribute-context"></a>Atrybut kontekstu  
+### <a name="attribute-context"></a>Kontekst atrybutu  
   
 |||  
 |-|-|  
@@ -56,7 +54,7 @@ Wskazuje, że bazy danych zostanie niezwłocznie powiadomiona o wszystkich zmian
   
 ## <a name="see-also"></a>Zobacz też  
  [Atrybuty IDL](../windows/idl-attributes.md)   
- [Atrybuty — metoda](../windows/method-attributes.md)   
+ [Atrybuty metody](../windows/method-attributes.md)   
  [defaultbind —](../windows/defaultbind.md)   
  [displaybind —](../windows/displaybind.md)   
  [requestedit](../windows/requestedit.md)   

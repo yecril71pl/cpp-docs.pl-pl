@@ -1,5 +1,5 @@
 ---
-title: 'Module::methodreleasenotifier:: method_ — członek danych | Dokumentacja firmy Microsoft'
+title: 'Module::methodreleasenotifier:: method_ — element członkowski danych | Dokumentacja firmy Microsoft'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 9ce9ad8ba8659fb26c7303ff5efe236535e14d8f
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 0929ac466a5f09a0ee2401111b40a969aaf7193d
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33877192"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39606816"
 ---
 # <a name="modulemethodreleasenotifiermethod-data-member"></a>Module::MethodReleaseNotifier::method_ — Członek danych
-Zawiera wskaźnik do obsługi zdarzeń dla bieżącego obiektu Module::MethodReleaseNotifier.  
+Przechowuje wskaźnik do narzędzia obsługi zdarzeń dla bieżącego **Module::MethodReleaseNotifier** obiektu.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -36,7 +36,7 @@ void (T::* method_)();
 ## <a name="requirements"></a>Wymagania  
  **Nagłówek:** module.h  
   
- **Namespace:** Microsoft::wrl —  
+ **Namespace:** Microsoft::WRL  
   
 ## <a name="see-also"></a>Zobacz też  
  [Module::MethodReleaseNotifier, klasa](../windows/module-methodreleasenotifier-class.md)

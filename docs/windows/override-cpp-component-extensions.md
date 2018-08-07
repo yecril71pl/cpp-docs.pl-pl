@@ -16,29 +16,28 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 6818256aafc64702e5423a5560c251e6d46750fa
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 855f2c18423fd6c1ca708034214e6f5c7048d6d8
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33878882"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39605564"
 ---
 # <a name="override--c-component-extensions"></a>override (C++ Component Extensions)
-`override` Kontekstowa — słowo kluczowe wskazuje, że element członkowski typu zastępuje klasy podstawowej lub elementem członkowskim interfejs podstawowy.  
+**Zastąpienia** kontekstowe słowo kluczowe wskazuje, że składowej typu zastępuje klasy bazowej lub składowej interfejsu podstawowego.  
   
 ## <a name="remarks"></a>Uwagi  
- `override` — Słowo kluczowe jest prawidłowa w przypadku kompilowania kodu natywnego obiektów docelowych (opcja kompilatora domyślna), elementy docelowe środowiska wykonawczego systemu Windows (**/ZW** — opcja kompilatora), lub wspólne elementy docelowe środowisko uruchomieniowe języka (**/CLR** kompilatora Opcja).  
+ **Zastąpienia** — słowo kluczowe jest prawidłowy, podczas kompilowania dla natywnych obiektów docelowych (opcja kompilatora domyślna), elementy docelowe środowisko uruchomieniowe Windows (`/ZW` — opcja kompilatora), lub obiektów docelowych środowiska uruchomieniowego języka wspólnego (`/clr` — opcja kompilatora).  
   
- Aby uzyskać więcej informacji na temat specyfikatorów zastąpienia, zobacz [specyfikator przesłonięcia](../cpp/override-specifier.md) i [specyfikatory Override i kompilacjach macierzystych](../dotnet/how-to-declare-override-specifiers-in-native-compilations-cpp-cli.md).  
+ Aby uzyskać więcej informacji na temat nadpisania specyfikatorów, zobacz [specyfikator override](../cpp/override-specifier.md) i [zastąpienie specyfikatorów i kompilacji macierzystych](../dotnet/how-to-declare-override-specifiers-in-native-compilations-cpp-cli.md).  
   
- Aby uzyskać więcej informacji na temat kontekstowe słowa kluczowe, zobacz [słowa kluczowe Context-Sensitive](../windows/context-sensitive-keywords-cpp-component-extensions.md).  
+ Aby uzyskać więcej informacji na temat kontekstowych słów kluczowych, zobacz [Context-Sensitive Keywords](../windows/context-sensitive-keywords-cpp-component-extensions.md).  
   
 ## <a name="examples"></a>Przykłady  
- **Przykład**  
   
- W poniższym przykładzie pokazano, że `override` można również w kompilacjach kodu natywnego.  
+ Poniższy przykład kodu pokazuje, że **zastąpienia** może również służyć w kompilacjach kodu natywnego.  
   
-```cpp#  
+```cpp  
 // override_keyword_1.cpp  
 // compile with: /c  
 struct I1 {  
@@ -50,11 +49,11 @@ struct X : public I1 {
 };  
 ```  
   
- **Przykład**  
+### <a name="example"></a>Przykład
+
+ Poniższy przykład kodu pokazuje, że **zastąpienia** mogą być używane w kompilacjach środowiska wykonawczego Windows.  
   
- W poniższym przykładzie pokazano, że `override` mogą być używane w kompilacjach środowiska wykonawczego systemu Windows.  
-  
-```cpp#  
+```cpp 
 // override_keyword_2.cpp  
 // compile with: /ZW /c  
 ref struct I1 {  
@@ -66,15 +65,15 @@ ref struct X : public I1 {
 };  
 ```  
   
- **Wymagania**  
+#### <a name="requirements"></a>Wymagania  
   
- — Opcja kompilatora: **/ZW**  
+ — Opcja kompilatora: `/ZW`  
+    
+### <a name="example"></a>Przykład
+
+ Poniższy przykład kodu pokazuje, że **zastąpienia** mogą być używane w typowych kompilacje środowiska uruchomieniowego języka.  
   
- **Przykład**  
-  
- W poniższym przykładzie pokazano, że `override` mogą być używane w typowych kompilacje środowiska uruchomieniowego języka.  
-  
-```cpp#  
+```cpp  
 // override_keyword_3.cpp  
 // compile with: /clr /c  
 ref struct I1 {  
@@ -86,10 +85,10 @@ ref struct X : public I1 {
 };  
 ```  
   
- **Wymagania**  
+#### <a name="requirements"></a>Wymagania  
   
- — Opcja kompilatora:   **/CLR**  
+ — Opcja kompilatora: `/clr`  
   
 ## <a name="see-also"></a>Zobacz też  
  [override, Specyfikator](../cpp/override-specifier.md)   
- [Specyfikatory zastąpienia](../windows/override-specifiers-cpp-component-extensions.md)
+ [Specyfikatory przesłonięć](../windows/override-specifiers-cpp-component-extensions.md)

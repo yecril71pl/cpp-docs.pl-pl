@@ -16,25 +16,25 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 73a4b243823d14cd3015a7d92f7ba52a08dc68d7
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: b7b3fefbbe402babcb5291a2c9073a311a2e6451
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33876335"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39607111"
 ---
 # <a name="inserting-a-new-menu-between-existing-menus"></a>Wstawianie nowego menu między istniejącymi menu
 ### <a name="to-insert-a-new-menu-between-existing-menus"></a>Aby wstawić nowego menu między istniejącymi menu  
   
-1.  Wybierz istniejącą nazwę menu i naciśnij klawisz **Wstaw** klucza. **Nowy element** pole dodaje się przed wybranego elementu.  
+1.  Wybierz istniejące nazwy menu i naciśnij klawisz **Wstaw** klucza. **Nowy element** pole jest wstawiany przed wybranego elementu.  
   
-     \- lub -  
+     \- lub —  
   
-2.  Kliknij prawym przyciskiem myszy na pasku menu, a następnie wybierz pozycję **Wstaw nowy** z menu skrótów.  
+2.  Kliknij prawym przyciskiem myszy na pasku menu, a następnie wybierz **Wstaw nowy** z menu skrótów.  
   
- Aby uzyskać informacje o dodawaniu zasobów do projektów zarządzanych, zobacz [zasobów w aplikacjach pulpitu](/dotnet/framework/resources/index) w *Przewodnik programistów platformy .NET Framework.*  
+ Aby uzyskać informacje na temat dodawania zasobów do projektów zarządzanych, zobacz [zasoby w aplikacjach pulpitu](/dotnet/framework/resources/index) w *przewodniku dewelopera .NET Framework*.  
   
- Wymagania  
+## <a name="requirements"></a>Wymagania  
   
  Win32  
   

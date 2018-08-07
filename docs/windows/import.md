@@ -1,5 +1,5 @@
 ---
-title: Importuj | Dokumentacja firmy Microsoft
+title: Importowanie | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,45 +17,44 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: b371cd1094a49f8a629cb6f8e880fd1210670f91
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: f0b7498ce36243d2f7a7014b8fa9041a1a7378d2
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33877270"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39604710"
 ---
 # <a name="import"></a>import
-Określa innego pliku .idl, .odl — lub nagłówek zawierający definicje, które chcesz odwołać się z sieci głównego IDL.  
+Określa innego pliku .idl, .odl — lub nagłówek zawierający definicje, który ma zostać utworzone odwołanie z sieci głównego pliku IDL.  
   
 ## <a name="syntax"></a>Składnia  
   
 ```  
-  
-      [ import(  
+[ import(  
    idl_file  
 ) ];  
 ```  
   
-#### <a name="parameters"></a>Parametry  
- `idl_file`  
- Nazwa pliku .idl, który ma zostać zaimportowany do biblioteki typu bieżącego projektu.  
+### <a name="parameters"></a>Parametry  
+ *idl_file*  
+ Nazwa pliku .idl, który ma zostać zaimportowany do biblioteki typów w bieżącym projekcie.  
   
 ## <a name="remarks"></a>Uwagi  
- **Zaimportować** atrybut C++ powoduje `#import` instrukcji do umieszczenia poniżej `import "docobj.idl"` instrukcji w pliku .idl wygenerowany. **Zaimportować** atrybut ma te same funkcje co [zaimportować](http://msdn.microsoft.com/library/windows/desktop/aa367047) MIDL atrybutu.  
+ **Zaimportować** atrybut C++ powoduje `#import` instrukcję, aby umieszczona pod `import "docobj.idl"` instrukcja w pliku .idl wygenerowany. **Zaimportować** atrybut ma taką samą funkcjonalność jak [zaimportować](http://msdn.microsoft.com/library/windows/desktop/aa367047) atrybutów w MIDL.  
   
- **Zaimportować** atrybutu tylko umieszcza określonego pliku w pliku .idl, który zostanie wygenerowany przez projekt; **zaimportować** atrybutu nie zezwala na wywołania konstrukcje w określonym pliku z kodu źródłowego w projekcie.  Aby wywołać konstrukcje w określonym pliku z kodu źródłowego w projekcie, albo użyć [#import](../preprocessor/hash-import-directive-cpp.md) i `embedded_idl` atrybutu lub użytkownik może zawierać plik .h dla `idl_file`, jeśli istnieje plik .h.  
+ **Zaimportować** atrybutu tylko umieszcza określonego pliku w pliku .idl, który zostanie wygenerowany w projekcie; **zaimportować** atrybutu nie zezwala na wywołania konstrukcje w określonym pliku z kodem źródłowym w projekcie.  Aby wywołać konstrukcje w określonym pliku z kodem źródłowym w projekcie, albo użyć [#import](../preprocessor/hash-import-directive-cpp.md) i `embedded_idl` lub atrybut może znajdować się plik .h dla *idl_file*, jeśli istnieje plik .h klasy.  
   
 ## <a name="example"></a>Przykład  
- Następujący kod:  
+ Poniższy kod:  
   
-```  
+```cpp  
 // cpp_attr_ref_import.cpp  
 // compile with: /LD  
 [module(name="MyLib")];  
 [import(import.idl)];  
 ```  
   
- Tworzy następujący kod w pliku .idl wygenerowanego:  
+ generuje następujący kod w pliku .idl wygenerowanego:  
   
 ```  
 import "docobj.idl";  
@@ -70,11 +69,11 @@ library MyLib {
   
 ## <a name="requirements"></a>Wymagania  
   
-### <a name="attribute-context"></a>Atrybut kontekstu  
+### <a name="attribute-context"></a>Kontekst atrybutu  
   
 |||  
 |-|-|  
-|**Dotyczy**|Dowolnego miejsca|  
+|**Dotyczy**|Dowolne miejsce|  
 |**Powtarzalne**|Nie|  
 |**Wymaganych atrybutów**|Brak|  
 |**Nieprawidłowe atrybuty**|Brak|  

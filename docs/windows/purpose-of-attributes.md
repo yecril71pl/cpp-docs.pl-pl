@@ -15,25 +15,25 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 0ea3b731cc22d144e2e20dc70f14e6b0b76b1479
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 2ca7757c1b9a8ebf034f68b9a380c09d4a5b08f1
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33877839"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39607027"
 ---
 # <a name="purpose-of-attributes"></a>Cel atrybutów
-Atrybuty rozszerzenia C++ w kierunkach nie jest obecnie możliwe bez przerywania klasycznego struktury języka. Atrybuty zezwalać dostawców (oddzielne dll), aby rozszerzyć funkcjonalność języka dynamicznie. Podstawowym celem atrybutów jest uproszczenie tworzenia składników modelu COM, oprócz zwiększeniu poziomu wydajności projektanta składników. Można zastosować atrybutów do niemal wszystkie konstrukcji języka C++, takich jak klasy, elementy członkowskie danych lub funkcji elementów członkowskich. Poniżej przedstawiono wyróżnienie korzyści zapewniane przez to nowa technologia:  
+Atrybuty rozszerzenia C++ w kierunkach nie jest obecnie możliwe bez przerywania klasycznej struktury języka. Atrybuty zezwalać na dostawców (oddzielne biblioteki dll) do rozszerzenia funkcji języka dynamicznie. Podstawowym celem atrybutów jest uproszczenie tworzenia składników modelu COM, oprócz zwiększenie poziomu wydajności dla deweloperów składników. Atrybuty mogą być stosowane do niemal C++ konstrukcji, takich jak klasy, elementy członkowskie danych lub elementów członkowskich. Wyróżnienie korzyści zapewniane przez nowej technologii jest następująca:  
   
--   Przedstawia znanych i proste konwencję wywołania.  
+-   Opisuje dobrze znanych i proste konwencji wywoływania.  
   
--   Używa dodaje kod, który w odróżnieniu od makra, jest rozpoznawana przez debuger.  
+-   Zastosowań wstawiony kod, który w przeciwieństwie do makra, rozpoznawanym przez debuger.  
   
--   Umożliwia łatwe tworzenie wartości pochodnych z klas podstawowych bez szczegóły implementacji uciążliwe.  
+-   Umożliwia łatwe tworzenie wartości pochodnych z klas bazowych bez szczegółów implementacji uciążliwe.  
   
--   Zastępuje dużą ilość kodu języka IDL wymagane przez składnik modelu COM o kilka atrybutów zwięzły.  
+-   Zastępuje dużą ilość kodu języka IDL wymagane przez składnik COM za pomocą kilku atrybutów zwięzły.  
   
- Na przykład, aby zaimplementować klasy ogólnej ATL w zbiorniku zdarzenie proste, należy zastosować [event_receiver](../windows/event-receiver.md) atrybutu do określonej klasy, takich jak `CMyReceiver`. **Event_receiver** atrybutu jest następnie opracowane przez kompilator języka Visual C++, która wstawia prawidłowego kodu do pliku obiektu.  
+ Na przykład, aby zaimplementować obiekt sink zdarzenia prostego ogólne klasy ATL, należy zastosować [event_receiver](../windows/event-receiver.md) atrybutu do określonej klasy, takie jak `CMyReceiver`. `event_receiver` Atrybutu są następnie kompilowane przez kompilator Visual C++, który wstawia prawidłowego kodu do pliku obiektu.  
   
 ```  
 [event_receiver(com)]  
@@ -44,7 +44,7 @@ class CMyReceiver
 }  
 ```  
   
- Następnie można ustawić **CMyReceiver** metody `handler1` i `handler2` do obsługi zdarzeń (przy użyciu funkcji wewnętrznej [__hook](../cpp/hook.md)) ze źródła zdarzeń, które można utworzyć przy użyciu [event_source —](../windows/event-source.md).  
+ Następnie można skonfigurować `CMyReceiver` metody `handler1` i `handler2` do obsługi zdarzeń (przy użyciu wewnętrznej funkcji [__hook](../cpp/hook.md)) ze źródła zdarzeń, który można utworzyć przy użyciu [event_source](../windows/event-source.md).  
   
 ## <a name="see-also"></a>Zobacz też  
  [Pojęcia](../windows/attributed-programming-concepts.md)

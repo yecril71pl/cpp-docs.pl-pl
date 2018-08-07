@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 2af8fa5bbafa76ab13f14d1a10e040a38bc6e2fb
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: a4c437035713634736a02afbce1325d14ba18229
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33880585"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39604414"
 ---
 # <a name="module-class"></a>Module — Klasa
 Reprezentuje kolekcję obiektów pokrewnych.  
@@ -30,7 +30,6 @@ Reprezentuje kolekcję obiektów pokrewnych.
 ## <a name="syntax"></a>Składnia  
   
 ```  
-  
 template<ModuleType moduleType>  
 class Module;  
   
@@ -41,50 +40,50 @@ template<>
 class Module<OutOfProc> : public Module<InProc>;  
 ```  
   
-#### <a name="parameters"></a>Parametry  
- `moduleType`  
- Kombinacja jednego lub więcej [ModuleType](../windows/moduletype-enumeration.md) wartości wyliczenia.  
+### <a name="parameters"></a>Parametry  
+ *Typ modułu*  
+ Kombinacji jednego lub więcej [ModuleType](../windows/moduletype-enumeration.md) wartości wyliczenia.  
   
 ## <a name="members"></a>Elementy członkowskie  
   
-### <a name="protected-classes"></a>Klasy chronione  
+### <a name="protected-classes"></a>Klasy chronionych  
   
 |Nazwa|Opis|  
 |----------|-----------------|  
-|[Module::GenericReleaseNotifier, klasa](../windows/module-genericreleasenotifier-class.md)|Wywołuje program obsługi zdarzeń po zwolnieniu ostatni obiekt w bieżącego modułu. Program obsługi zdarzeń jest określona przez na lambda, obiekt lub wskaźnik do funkcji.|  
-|[Module::MethodReleaseNotifier, klasa](../windows/module-methodreleasenotifier-class.md)|Wywołuje program obsługi zdarzeń po zwolnieniu ostatni obiekt w bieżącego modułu. Program obsługi zdarzeń jest określona przez obiekt i jego elementów członkowskich wskaźnika do metody.|  
-|[Module::ReleaseNotifier, klasa](../windows/module-releasenotifier-class.md)|Wywołuje program obsługi zdarzeń po zwolnieniu ostatni obiekt w module.|  
+|[Module::GenericReleaseNotifier, klasa](../windows/module-genericreleasenotifier-class.md)|Wywołuje program obsługi zdarzeń po udostępnieniu ostatni obiekt w bieżącego modułu. Program obsługi zdarzeń jest określone w lambda, funktor lub wskaźnik do funkcji.|  
+|[Module::MethodReleaseNotifier, klasa](../windows/module-methodreleasenotifier-class.md)|Wywołuje program obsługi zdarzeń po udostępnieniu ostatni obiekt w bieżącego modułu. Program obsługi zdarzeń jest określona przez obiekt i jego elementów członkowskich wskaźnika do metody.|  
+|[Module::ReleaseNotifier, klasa](../windows/module-releasenotifier-class.md)|Wywołuje program obsługi zdarzeń po udostępnieniu ostatni obiekt w module.|  
   
 ### <a name="public-constructors"></a>Konstruktory publiczne  
   
 |Nazwa|Opis|  
 |----------|-----------------|  
-|[Module::~Module, destruktor](../windows/module-tilde-module-destructor.md)|Deinitializes bieżącego wystąpienia klasy modułu.|  
+|[Module::~Module, destruktor](../windows/module-tilde-module-destructor.md)|Deinicjuje bieżące wystąpienie **modułu** klasy.|  
   
 ### <a name="protected-constructors"></a>Konstruktory chronione  
   
 |Nazwa|Opis|  
 |----------|-----------------|  
-|[Module::Module, konstruktor](../windows/module-module-constructor.md)|Inicjuje nowe wystąpienie klasy modułu.|  
+|[Module::Module, konstruktor](../windows/module-module-constructor.md)|Inicjuje nowe wystąpienie klasy **modułu** klasy.|  
   
 ### <a name="public-methods"></a>Metody publiczne  
   
 |Nazwa|Opis|  
 |----------|-----------------|  
 |[Module::Create, metoda](../windows/module-create-method.md)|Tworzy wystąpienie modułu.|  
-|[Module::DecrementObjectCount, metoda](../windows/module-decrementobjectcount-method.md)|Zmniejsza liczbę obiektów śledzone przez moduł.|  
-|[Module::GetActivationFactory, metoda](../windows/module-getactivationfactory-method.md)|Pobiera fabryki aktywacji dla modułu.|  
-|[Module::GetClassObject, metoda](../windows/module-getclassobject-method.md)|Pobiera fabryki klas pamięci podręcznej.|  
+|[Module::DecrementObjectCount, metoda](../windows/module-decrementobjectcount-method.md)|Zmniejsza liczbę obiektów śledzonych przez moduł.|  
+|[Module::GetActivationFactory, metoda](../windows/module-getactivationfactory-method.md)|Pobiera fabrykę aktywacji dla modułu.|  
+|[Module::GetClassObject, metoda](../windows/module-getclassobject-method.md)|Retreives pamięci podręcznej fabryki klas.|  
 |[Module::GetModule, metoda](../windows/module-getmodule-method.md)|Tworzy wystąpienie modułu.|  
 |[Module::GetObjectCount, metoda](../windows/module-getobjectcount-method.md)|Pobiera liczbę obiektów zarządzanych przez ten moduł.|  
-|[Module::IncrementObjectCount, metoda](../windows/module-incrementobjectcount-method.md)|Zwiększa liczbę obiektów śledzone przez moduł.|  
-|[Module::RegisterCOMObject, metoda](../windows/module-registercomobject-method.md)|Rejestruje jednego lub większej liczby obiektów COM, więc inne aplikacje mogą łączyć się z nimi.|  
-|[Module::RegisterObjects, metoda](../windows/module-registerobjects-method.md)|Rejestruje obiektów COM lub środowiska wykonawczego systemu Windows, więc inne aplikacje mogą łączyć się z nimi.|  
-|[Module::RegisterWinRTObject, metoda](../windows/module-registerwinrtobject-method.md)|Rejestruje co najmniej jeden obiekt środowiska wykonawczego systemu Windows, więc inne aplikacje mogą łączyć się z nimi.|  
-|[Module::Terminate, metoda](../windows/module-terminate-method.md)|Powoduje, że fabryki wszystkie utworzone przez moduł zamknięcia.|  
-|[Module::UnregisterCOMObject, metoda](../windows/module-unregistercomobject-method.md)|Wyrejestrowuje co najmniej jeden obiekt COM, co zapobiega inne aplikacje połączyć się z nimi.|  
-|[Module::UnregisterObjects, metoda](../windows/module-unregisterobjects-method.md)|Wyrejestrowuje obiektów określony moduł, dzięki czemu inne aplikacje nie mogą łączyć się je.|  
-|[Module::UnregisterWinRTObject, metoda](../windows/module-unregisterwinrtobject-method.md)|Wyrejestrowuje co najmniej jeden obiekt środowiska wykonawczego systemu Windows, dzięki czemu inne aplikacje nie mogą łączyć się je.|  
+|[Module::IncrementObjectCount, metoda](../windows/module-incrementobjectcount-method.md)|Zwiększa liczbę obiektów śledzonych przez moduł.|  
+|[Module::RegisterCOMObject, metoda](../windows/module-registercomobject-method.md)|Rejestruje jeden lub więcej obiektów COM, dzięki czemu inne aplikacje mogą łączyć się z nimi.|  
+|[Module::RegisterObjects, metoda](../windows/module-registerobjects-method.md)|Rejestruje obiekty COM lub środowiska wykonawczego Windows, dzięki czemu inne aplikacje mogą łączyć się z nimi.|  
+|[Module::RegisterWinRTObject, metoda](../windows/module-registerwinrtobject-method.md)|Rejestruje co najmniej jeden obiekt środowiska wykonawczego Windows, dzięki czemu inne aplikacje mogą łączyć się z nimi.|  
+|[Module::Terminate, metoda](../windows/module-terminate-method.md)|Powoduje, że wszystkie fabryki tworzone przez moduł, aby zamknąć.|  
+|[Module::UnregisterCOMObject, metoda](../windows/module-unregistercomobject-method.md)|Wyrejestrowuje jeden lub więcej obiektów COM, co uniemożliwia innych aplikacji na połączenie z nich.|  
+|[Module::UnregisterObjects, metoda](../windows/module-unregisterobjects-method.md)|Wyrejestrowuje obiektów w określonym module, tak aby inne aplikacje nie mogą nawiązać z nimi.|  
+|[Module::UnregisterWinRTObject, metoda](../windows/module-unregisterwinrtobject-method.md)|Wyrejestrowuje co najmniej jeden obiekt środowiska wykonawczego Windows, tak aby inne aplikacje nie mogą nawiązać z nimi.|  
   
 ### <a name="protected-methods"></a>Metody chronione  
   
@@ -92,20 +91,20 @@ class Module<OutOfProc> : public Module<InProc>;
 |----------|-----------------|  
 |[Module::Create, metoda](../windows/module-create-method.md)|Tworzy wystąpienie modułu.|  
   
-### <a name="protected-data-members"></a>Dane chronione elementy członkowskie  
+### <a name="protected-data-members"></a>Chronione elementy członkowskie danych  
   
 |Nazwa|Opis|  
 |----------|-----------------|  
-|[Module::objectCount_, składowa danych](../windows/module-objectcount-data-member.md)|Przechowuje informacje o ile klasy zostały utworzone z [upewnij](../windows/make-function.md) funkcji.|  
-|[Module::releaseNotifier_, składowa danych](../windows/module-releasenotifier-data-member.md)|Zawiera wskaźnik do obiektu ReleaseNotifier.|  
+|[Module::objectCount_, składowa danych](../windows/module-objectcount-data-member.md)|Przechowuje informacje o ile klasy zostały utworzone przy użyciu [wprowadzić](../windows/make-function.md) funkcji.|  
+|[Module::releaseNotifier_, składowa danych](../windows/module-releasenotifier-data-member.md)|Przechowuje wskaźnik do obiektu ReleaseNotifier.|  
   
 ### <a name="macros"></a>Makra  
   
 |||  
 |-|-|  
-|[ActivatableClass](../windows/activatableclass-macros.md)|Wypełnia wewnętrznej pamięci podręcznej zawiera fabryka, która może utworzyć wystąpienie określonej klasy. To makro określa parametrów identyfikator domyślnych ustawień fabrycznych i grupy.|  
-|[ActivatableClassWithFactory](../windows/activatableclass-macros.md)|Wypełnia wewnętrznej pamięci podręcznej zawiera fabryka, która może utworzyć wystąpienie określonej klasy. To makro można określić parametru określonego fabryki.|  
-|[ActivatableClassWithFactoryEx](../windows/activatableclass-macros.md)|Wypełnia wewnętrznej pamięci podręcznej zawiera fabryka, która może utworzyć wystąpienie określonej klasy. To makro umożliwia określenie konkretnego fabryki i parametry Identyfikatora grupy.|  
+|[ActivatableClass](../windows/activatableclass-macros.md)|Wypełnia wewnętrzną pamięć podręczną zawierającą fabryki, który można utworzyć wystąpienie określonej klasy. To makro określa domyślne parametry identyfikator fabryki i grupy.|  
+|[ActivatableClassWithFactory](../windows/activatableclass-macros.md)|Wypełnia wewnętrzną pamięć podręczną zawierającą fabryki, który można utworzyć wystąpienie określonej klasy. To makro, można określić parametru określonego fabryki.|  
+|[ActivatableClassWithFactoryEx](../windows/activatableclass-macros.md)|Wypełnia wewnętrzną pamięć podręczną zawierającą fabryki, który można utworzyć wystąpienie określonej klasy. To makro umożliwia określenie konkretnego fabryki i parametry Identyfikatora grupy.|  
   
 ## <a name="inheritance-hierarchy"></a>Hierarchia dziedziczenia  
  `ModuleBase`  
@@ -117,7 +116,7 @@ class Module<OutOfProc> : public Module<InProc>;
 ## <a name="requirements"></a>Wymagania  
  **Nagłówek:** module.h  
   
- **Namespace:** Microsoft::wrl —  
+ **Namespace:** Microsoft::WRL  
   
 ## <a name="see-also"></a>Zobacz też  
  [Microsoft::WRL, przestrzeń nazw](../windows/microsoft-wrl-namespace.md)

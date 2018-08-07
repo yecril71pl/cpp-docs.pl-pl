@@ -17,32 +17,31 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: a77021cbcf6622701a1025ef33000196ba7bb6d9
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 8a5376e0e830654c15dc31522b07ed53af4492bf
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33888685"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39603397"
 ---
 # <a name="satype"></a>satype
-Określa typ danych **SAFEARRAY** struktury.  
+Określa typ danych `SAFEARRAY` struktury.  
   
 ## <a name="syntax"></a>Składnia  
   
 ```  
-  
-      [ satype(  
+[ satype(  
    data_type  
 ) ]  
 ```  
   
-#### <a name="parameters"></a>Parametry  
+### <a name="parameters"></a>Parametry  
  *data_type*  
- Typ danych dla **SAFEARRAY** struktura danych, która jest przekazywana jako parametr do metody interfejsu.  
+ Typ danych dla `SAFEARRAY` struktury danych, który jest przekazywany jako parametr do metody interfejsu.  
   
 ## <a name="requirements"></a>Wymagania  
   
-### <a name="attribute-context"></a>Atrybut kontekstu  
+### <a name="attribute-context"></a>Kontekst atrybutu  
   
 |||  
 |-|-|  
@@ -52,14 +51,14 @@ Określa typ danych **SAFEARRAY** struktury.
 |**Nieprawidłowe atrybuty**|Brak|  
   
 ## <a name="remarks"></a>Uwagi  
- **Satype —** C++ atrybut określa typ danych **SAFEARRAY**.  
+ **Satype —** C++ atrybut określa typ danych `SAFEARRAY`.  
   
 > [!NOTE]
->  Poziom pośredni jest usuwane ze **SAFEARRAY** wskaźnika w pliku .idl wygenerowany, w jaki sposób jest zadeklarowany w pliku .cpp.  
+>  Poziom pośrednictwa zostanie usunięte ze `SAFEARRAY` wskaźnika w pliku .idl wygenerowany, w jaki sposób zostanie ona zadeklarowana w pliku .cpp.  
   
 ## <a name="example"></a>Przykład  
   
-```  
+```cpp  
 // cpp_attr_ref_satype.cpp  
 // compile with: /LD  
 #include "unknwn.h"  
@@ -72,6 +71,6 @@ __interface A {
   
 ## <a name="see-also"></a>Zobacz też  
  [Atrybuty kompilatora](../windows/compiler-attributes.md)   
- [Atrybuty parametrów](../windows/parameter-attributes.md)   
- [Atrybuty — metoda](../windows/method-attributes.md)   
+ [Atrybuty parametru](../windows/parameter-attributes.md)   
+ [Atrybuty metody](../windows/method-attributes.md)   
  [id](../windows/id.md)   

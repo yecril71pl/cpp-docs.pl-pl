@@ -17,42 +17,41 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 6d41c2c4747f69b5ddfae4cd5863c072cd2316ec
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 8e0294c7cc118c4014e998ad570d7e1e453ea2c6
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33879610"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39606504"
 ---
 # <a name="lengthis"></a>length_is
-Określa liczbę elementów tablicy ma zostać przesłany.  
+Określa liczbę elementów tablicy, które mają być przekazywane.  
   
 ## <a name="syntax"></a>Składnia  
   
 ```  
-  
-      [ length_is(  
+[ length_is(  
    "expression"  
 ) ]  
 ```  
   
-#### <a name="parameters"></a>Parametry  
- *wyrażenie*  
- Co najmniej jednego wyrażenia języka C. Pusty argument gniazda są dozwolone.  
+### <a name="parameters"></a>Parametry  
+ *Wyrażenie*  
+ Co najmniej jednego wyrażenia języka C. Pusty argument miejsca są dozwolone.  
   
 ## <a name="remarks"></a>Uwagi  
- **Length_is —** atrybut C++ ma te same funkcje co [length_is —](http://msdn.microsoft.com/library/windows/desktop/aa367068) MIDL atrybutu.  
+ **Length_is —** atrybut C++ ma taką samą funkcjonalność jak [length_is —](http://msdn.microsoft.com/library/windows/desktop/aa367068) atrybutów w MIDL.  
   
 ## <a name="example"></a>Przykład  
- Zobacz [first_is —](../windows/first-is.md) przykład sposobu określania sekcji tablicy.  
+ Zobacz [first_is —](../windows/first-is.md) przykład sposobu określania część tablicy.  
   
 ## <a name="requirements"></a>Wymagania  
   
-### <a name="attribute-context"></a>Atrybut kontekstu  
+### <a name="attribute-context"></a>Kontekst atrybutu  
   
 |||  
 |-|-|  
-|**Dotyczy**|Pole w `struct` lub **Unii**, interfejs parametru, interfejsu — metoda|  
+|**Dotyczy**|Pole **struktury** lub **Unii**, interfejs parametrów, metody interfejsu|  
 |**Powtarzalne**|Nie|  
 |**Wymaganych atrybutów**|Brak|  
 |**Nieprawidłowe atrybuty**|Brak|  
@@ -61,8 +60,8 @@ Określa liczbę elementów tablicy ma zostać przesłany.
   
 ## <a name="see-also"></a>Zobacz też  
  [Atrybuty IDL](../windows/idl-attributes.md)   
- [Element TypeDef, Enum, Unii i struct — atrybuty](../windows/typedef-enum-union-and-struct-attributes.md)   
- [Atrybuty parametrów](../windows/parameter-attributes.md)   
+ [Element TypeDef, Enum, Union i struct — atrybuty](../windows/typedef-enum-union-and-struct-attributes.md)   
+ [Atrybuty parametru](../windows/parameter-attributes.md)   
  [first_is —](../windows/first-is.md)   
  [max_is —](../windows/max-is.md)   
  [last_is —](../windows/last-is.md)   

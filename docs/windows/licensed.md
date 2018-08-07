@@ -17,30 +17,28 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: fe7d915d53b246c98372ce8647e35fb996e9a7c4
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 66e195480814fe7ebf228b180ac5999d1ab92bab
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33875750"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39603805"
 ---
 # <a name="licensed"></a>licensed
-Wskazuje, że obiekt COM, do którego jest stosowany jest licencjonowana i musi być utworzone przy użyciu **IClassFactory2**.  
+Wskazuje, że obiekt COM, do której jest stosowany jest licencjonowana i muszą być tworzone przy użyciu `IClassFactory2`.  
   
 ## <a name="syntax"></a>Składnia  
   
 ```  
-  
 [licensed]  
-  
 ```  
   
 ## <a name="remarks"></a>Uwagi  
- **Licencjonowane** atrybut C++ ma te same funkcje co [licencjonowane](http://msdn.microsoft.com/library/windows/desktop/aa367070) MIDL atrybutu.  
+ **Licencjonowane** atrybut C++ ma taką samą funkcjonalność jak [licencjonowane](http://msdn.microsoft.com/library/windows/desktop/aa367070) atrybutów w MIDL.  
   
 ## <a name="example"></a>Przykład  
   
-```  
+```cpp  
 // cpp_attr_ref_licensed.cpp  
 // compile with: /LD  
 #include "unknwn.h"  
@@ -61,13 +59,13 @@ public:
   
 ## <a name="requirements"></a>Wymagania  
   
-### <a name="attribute-context"></a>Atrybut kontekstu  
+### <a name="attribute-context"></a>Kontekst atrybutu  
   
 |||  
 |-|-|  
-|**Dotyczy**|**Klasa**, `struct`|  
+|**Dotyczy**|**Klasa**, **— struktura**|  
 |**Powtarzalne**|Nie|  
-|**Wymaganych atrybutów**|**coclass**|  
+|**Wymaganych atrybutów**|`coclass`|  
 |**Nieprawidłowe atrybuty**|Brak|  
   
  Aby uzyskać więcej informacji, zobacz [konteksty atrybutu](../windows/attribute-contexts.md).  

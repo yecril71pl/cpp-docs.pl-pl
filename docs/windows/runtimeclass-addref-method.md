@@ -1,5 +1,5 @@
 ---
-title: RuntimeClass::AddRef — metoda | Dokumentacja firmy Microsoft
+title: RuntimeClass::AddRef, metoda | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 9c570209ff612fb4fcedd77dbae92f72b2744a52
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: d7bd721d8f1edeedacc04515eef917899ed0c667
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33892263"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39608485"
 ---
 # <a name="runtimeclassaddref-method"></a>RuntimeClass::AddRef — Metoda
-Zwiększa liczbę odwołania dla bieżącego obiektu runtimeclass —.  
+Zwiększa liczbę odwołań dla bieżącego **RuntimeClass** obiektu.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -42,7 +42,7 @@ STDMETHOD_(
 ## <a name="requirements"></a>Wymagania  
  **Nagłówek:** implements.h  
   
- **Namespace:** Microsoft::wrl —  
+ **Namespace:** Microsoft::WRL  
   
 ## <a name="see-also"></a>Zobacz też  
  [RuntimeClass, klasa](../windows/runtimeclass-class.md)

@@ -1,5 +1,5 @@
 ---
-title: RuntimeClassBaseT::GetImplementedIIDS — metoda | Dokumentacja firmy Microsoft
+title: RuntimeClassBaseT::GetImplementedIIDS, metoda | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 9ea6ff871ef0ce886b393c948fc45accf3d8e245
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: bf29b5db15f88528012914476572cb1ccb21a07c
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33892237"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39603254"
 ---
 # <a name="runtimeclassbasetgetimplementediids-method"></a>RuntimeClassBaseT::GetImplementedIIDS — Metoda
 Obsługuje infrastrukturę biblioteki WRL i nie jest przeznaczona do użycia bezpośrednio w kodzie.  
@@ -38,29 +38,29 @@ __forceinline static HRESULT GetImplementedIIDS(
 );  
 ```  
   
-#### <a name="parameters"></a>Parametry  
- `T`  
- Typ `implements` parametru.  
+### <a name="parameters"></a>Parametry  
+ *T*  
+ Typ *implementuje* parametru.  
   
- `implements`  
- Wskaźnik do typu określonego przez parametr `T`.  
+ *Implementuje*  
+ Wskaźnik do typu określonego przez parametr *T*.  
   
- `iidCount`  
+ *iidCount*  
  Maksymalna liczba identyfikatorów interfejsu do pobrania.  
   
- `iids`  
- Jeśli ta operacja zakończy się pomyślnie, tablicę identyfikatorów zaimplementowany przez typ interfejsu `T`.  
+ *IID*  
+ Jeśli operacja zakończy się pomyślnie, tablicę identyfikatorów implementowana przez typ interfejsu *T*.  
   
 ## <a name="return-value"></a>Wartość zwracana  
- S_OK w przypadku powodzenia; w przeciwnym razie wartość HRESULT opisującego błąd.  
+ S_OK w przypadku powodzenia; w przeciwnym razie wartość HRESULT, który opisuje błąd.  
   
 ## <a name="remarks"></a>Uwagi  
- Pobiera tablicę interfejsu identyfikatorów implementowane za pomocą określonego typu.  
+ Pobiera tablicę identyfikatorów, które są implementowane przez określony typ interfejsu.  
   
 ## <a name="requirements"></a>Wymagania  
  **Nagłówek:** implements.h  
   
- **Namespace:** Microsoft::wrl:: details —  
+ **Namespace:** Microsoft::wrl:: details  
   
 ## <a name="see-also"></a>Zobacz też  
  [RuntimeClassBaseT, struktura](../windows/runtimeclassbaset-structure.md)

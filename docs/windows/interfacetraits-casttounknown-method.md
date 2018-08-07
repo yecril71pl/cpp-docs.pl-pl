@@ -1,5 +1,5 @@
 ---
-title: InterfaceTraits::CastToUnknown — metoda | Dokumentacja firmy Microsoft
+title: InterfaceTraits::CastToUnknown, metoda | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: a2fdc46f57f834c3e8217049574ea504aae16f03
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: ad2c0a438eee870ac86301f0a56ef525eb53d8c8
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33878128"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39608654"
 ---
 # <a name="interfacetraitscasttounknown-method"></a>InterfaceTraits::CastToUnknown — Metoda
 Obsługuje infrastrukturę biblioteki WRL i nie jest przeznaczona do użycia bezpośrednio w kodzie.  
@@ -36,25 +36,25 @@ static __forceinline IUnknown* CastToUnknown(
 );  
 ```  
   
-#### <a name="parameters"></a>Parametry  
- `T`  
- Typ parametru `ptr`.  
+### <a name="parameters"></a>Parametry  
+ *T*  
+ Typ parametru *ptr*.  
   
- `ptr`  
- Wskaźnik do typu `T`.  
+ *ptr*  
+ Wskaźnik do typu *T*.  
   
 ## <a name="return-value"></a>Wartość zwracana  
- Wskaźnik do elementu IUnknown, z którego `Base` pochodzi.  
+ Wskaźnik do IUnknown, z którego `Base` pochodzi.  
   
 ## <a name="remarks"></a>Uwagi  
- Rzutuje określony wskaźnik na wskaźnik do elementu IUnknown.  
+ Rzutuje określony wskaźnik do wskaźnika do `IUnknown`.  
   
- Aby uzyskać więcej informacji na temat `Base`, zobacz sekcję publicznego definicje typów w [interfacetraits — struktura](../windows/interfacetraits-structure.md).  
+ Aby uzyskać więcej informacji na temat `Base`, zobacz sekcję publiczne definicje typów w [interfacetraits — struktura](../windows/interfacetraits-structure.md).  
   
 ## <a name="requirements"></a>Wymagania  
  **Nagłówek:** implements.h  
   
- **Namespace:** Microsoft::wrl:: details —  
+ **Namespace:** Microsoft::wrl:: details  
   
 ## <a name="see-also"></a>Zobacz też  
  [Interfacetraits — struktura](../windows/interfacetraits-structure.md)   

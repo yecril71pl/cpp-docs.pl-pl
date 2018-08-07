@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 0cef979ae284a303b120df7d14ae71f311498423
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 508c9a5d34fa8e9c4fa339e9917ae069874159ad
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33882345"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39608381"
 ---
 # <a name="iidppvargshelper-function"></a>IID_PPV_ARGS_Helper — Funkcja
 Sprawdza, czy typ określony argument jest pochodną `IUnknown` interfejsu.  
@@ -40,20 +40,20 @@ void** IID_PPV_ARGS_Helper(
 ```  
   
 #### <a name="parameters"></a>Parametry  
- `T`  
- Typ argumentu `pp`.  
+ *T*  
+ Typ argumentu *pp*.  
   
- `pp`  
- Podwójnie pośredni wskaźnik.  
+ *strony*  
+ Wskaźnik podwójnie pośrednich.  
   
 ## <a name="return-value"></a>Wartość zwracana  
- Argument `pp` rzutowania na wskaźnik do a-wskaźnik do `void`.  
+ Argument *pp* rzutowany na wskaźnik do a-wskaźnik do **void**.  
   
 ## <a name="remarks"></a>Uwagi  
- Błąd w czasie kompilacji jest generowany, gdy parametr szablonu `T` nie pochodzi od `IUnknown`.  
+ Błąd kompilacji jest generowany, gdy wartość parametru szablonu *T* nie pochodzi od `IUnknown`.  
   
 ## <a name="requirements"></a>Wymagania  
  **Nagłówek:** client.h  
   
 ## <a name="see-also"></a>Zobacz też  
- [Odwołanie (Biblioteka środowiska uruchomieniowego systemu Windows)](http://msdn.microsoft.com/en-us/00000000-0000-0000-0000-000000000000)
+ [Odwołanie (Biblioteka środowiska uruchomieniowego Windows)](http://msdn.microsoft.com/00000000-0000-0000-0000-000000000000)

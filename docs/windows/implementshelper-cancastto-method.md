@@ -1,5 +1,5 @@
 ---
-title: ImplementsHelper::CanCastTo — metoda | Dokumentacja firmy Microsoft
+title: ImplementsHelper::CanCastTo, metoda | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 6de971f2de2421a2d7987dab30ba73fa2d225b15
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: a60f2e45e276592c7c1223526cd002bdc6e79013
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33876556"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39605483"
 ---
 # <a name="implementshelpercancastto-method"></a>ImplementsHelper::CanCastTo — Metoda
 Obsługuje infrastrukturę biblioteki WRL i nie jest przeznaczona do użycia bezpośrednio w kodzie.  
@@ -30,7 +30,6 @@ Obsługuje infrastrukturę biblioteki WRL i nie jest przeznaczona do użycia bez
 ## <a name="syntax"></a>Składnia  
   
 ```  
-  
 HRESULT CanCastTo(  
    REFIID riid,  
    _Deref_out_ void **ppv  
@@ -42,26 +41,26 @@ HRESULT CanCastTo(
 );  
 ```  
   
-#### <a name="parameters"></a>Parametry  
- `riid`  
+### <a name="parameters"></a>Parametry  
+ *Parametr riid*  
  Odwołanie do identyfikatora interfejsu.  
   
- `ppv`  
- Jeśli ta operacja zakończy się pomyślnie, wskaźnik do interfejsu określony przez `riid` lub `iid`.  
+ *ppv*  
+ Jeśli operacja się powiedzie, wskaźnik do interfejsu określonego przez *riid* lub *iid*.  
   
- `iid`  
+ *IID*  
  Odwołanie do identyfikatora interfejsu.  
   
 ## <a name="return-value"></a>Wartość zwracana  
  S_OK w przypadku powodzenia; w przeciwnym razie wartość HRESULT, która wskazuje błąd.  
   
 ## <a name="remarks"></a>Uwagi  
- Pobiera wskaźnik identyfikator określonego interfejsu.  
+ Pobiera wskaźnik do określonego interfejsu.  
   
 ## <a name="requirements"></a>Wymagania  
  **Nagłówek:** implements.h  
   
- **Namespace:** Microsoft::wrl:: details —  
+ **Namespace:** Microsoft::wrl:: details  
   
 ## <a name="see-also"></a>Zobacz też  
  [Implementshelper — struktura](../windows/implementshelper-structure.md)   

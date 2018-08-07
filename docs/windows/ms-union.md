@@ -17,31 +17,29 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: a377995149fda8efd565c30caff9b7791748ed79
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: c20b795231cad936f30ef329f015b6ff691aa0d3
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33882040"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39606702"
 ---
 # <a name="msunion"></a>ms_union
-Określa wyrównanie reprezentację danych sieci nonencapsulated Unii.  
+Steruje wyrównaniem reprezentacji danych sieci nonencapsulated Unii.  
   
 ## <a name="syntax"></a>Składnia  
   
 ```  
-  
 [ms_union]  
-  
 ```  
   
 ## <a name="remarks"></a>Uwagi  
- **Ms_union —** atrybut C++ ma te same funkcje co [ms_union —](http://msdn.microsoft.com/library/windows/desktop/aa367100) MIDL atrybutu.  
+ **Ms_union —** atrybut C++ ma taką samą funkcjonalność jak [ms_union —](http://msdn.microsoft.com/library/windows/desktop/aa367100) atrybutów w MIDL.  
   
 ## <a name="example"></a>Przykład  
  Poniższy kod przedstawia położenie **ms_union —**:  
   
-```  
+```cpp  
 // cpp_attr_ref_ms_union.cpp  
 // compile with: /LD  
 #include <unknwn.h>  
@@ -66,14 +64,14 @@ __interface IFireTabCtrl {
   
 ## <a name="requirements"></a>Wymagania  
   
-### <a name="attribute-context"></a>Atrybut kontekstu  
+### <a name="attribute-context"></a>Kontekst atrybutu  
   
 |||  
 |-|-|  
 |**Dotyczy**|Unie nonencapsulated|  
 |**Powtarzalne**|Nie|  
 |**Wymaganych atrybutów**|Brak|  
-|**Nieprawidłowe atrybuty**|**dispinterface**|  
+|**Nieprawidłowe atrybuty**|`dispinterface`|  
   
  Aby uzyskać więcej informacji, zobacz [konteksty atrybutu](../windows/attribute-contexts.md).  
   

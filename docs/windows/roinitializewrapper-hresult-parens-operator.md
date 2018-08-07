@@ -1,5 +1,5 @@
 ---
-title: RoInitializeWrapper::HRESULT() Operator | Dokumentacja firmy Microsoft
+title: 'Operator roinitializewrapper:: HRESULT() | Dokumentacja firmy Microsoft'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,15 +15,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 2cb15f4011b202a00d691d48fffa487f2bf30e61
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 94c27262e63ba1c428596dbac836e165c24d8538
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33891938"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39605688"
 ---
 # <a name="roinitializewrapperhresult-operator"></a>RoInitializeWrapper::HRESULT() Operator
-Pobiera wartość HRESULT utworzonego przez ostatnich konstruktora RoInitializeWrapper.  
+Pobiera wartość HRESULT produkowane przez ostatnią **RoInitializeWrapper** konstruktora.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -34,7 +34,7 @@ operator HRESULT()
 ## <a name="requirements"></a>Wymagania  
  **Nagłówek:** corewrappers.h  
   
- **Namespace:** Microsoft::wrl:: wrappers —  
+ **Namespace:** Microsoft::wrl:: wrappers  
   
 ## <a name="see-also"></a>Zobacz też  
  [HandleT, klasa](../windows/handlet-class.md)

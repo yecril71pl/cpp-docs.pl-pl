@@ -1,5 +1,5 @@
 ---
-title: 'Microsoft::wrl:: details — Namespace | Dokumentacja firmy Microsoft'
+title: 'Microsoft::wrl:: details Namespace | Dokumentacja firmy Microsoft'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -13,12 +13,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 1a038509912c659cc820b73f16210ce874427112
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 49256b556eddb1feadbfd01b298aba62ad1a51ee
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33881773"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39604229"
 ---
 # <a name="microsoftwrldetails-namespace"></a>Microsoft::WRL::Details — Przestrzeń nazw
 Obsługuje infrastrukturę biblioteki WRL i nie jest przeznaczona do użycia bezpośrednio w kodzie.  
@@ -35,62 +35,62 @@ namespace Microsoft::WRL::Details;
   
 |Nazwa|Opis|  
 |----------|-----------------|  
-|[ComPtrRef, klasa](../windows/comptrref-class.md)|Reprezentuje odwołanie do obiektu typu comptr —\<T >.|  
-|[ComPtrRefBase, klasa](../windows/comptrrefbase-class.md)|Reprezentuje klasę podstawową dla [comptrref —](../windows/comptrref-class.md) klasy.|  
-|[DontUseNewUseMake, klasa](../windows/dontusenewusemake-class.md)|Zapobiega przy użyciu operatora `new` w `RuntimeClass`. W związku z tym, należy użyć [Make — funkcja](../windows/make-function.md) zamiast tego.|  
+|[ComPtrRef, klasa](../windows/comptrref-class.md)|Reprezentuje odwołanie do obiektu typu ComPtr\<T >.|  
+|[ComPtrRefBase, klasa](../windows/comptrrefbase-class.md)|Reprezentuje klasę bazową dla [comptrref —](../windows/comptrref-class.md) klasy.|  
+|[DontUseNewUseMake, klasa](../windows/dontusenewusemake-class.md)|Zapobiega za pomocą operatora **nowe** w `RuntimeClass`. W związku z tym, należy użyć [funkcji](../windows/make-function.md) zamiast tego.|  
 |[EventTargetArray, klasa](../windows/eventtargetarray-class.md)|Reprezentuje tablicę procedury obsługi zdarzeń.|  
-|[MakeAllocator, klasa](../windows/makeallocator-class.md)|Przydziela pamięć dla klasy aktywowalnej, z lub bez obsługi słabe odwołanie.|  
-|[ModuleBase, klasa](../windows/modulebase-class.md)|Reprezentuje klasę podstawową [modułu](../windows/module-class.md) klasy.|  
-|[RemoveIUnknown, klasa](../windows/removeiunknown-class.md)|Sprawia, że typ, który jest odpowiednikiem `IUnknown`— oparte na typie, ale ma niewirtualną `QueryInterface`, `AddRef`, i `Release` metody.|  
-|[Weakreference — klasa](../windows/weakreference-class1.md)|Reprezentuje *słabe odwołanie* które mogą być używane z środowiska wykonawczego systemu Windows lub klasycznego modelu COM. Słabe odwołanie reprezentuje obiekt, który może lub nie mogą być niedostępne.|  
+|[MakeAllocator, klasa](../windows/makeallocator-class.md)|Przydziela pamięć dla klasy aktywowalnej, z lub bez niej odwołanie tymczasowe wsparcia.|  
+|[ModuleBase, klasa](../windows/modulebase-class.md)|Reprezentuje klasę bazową [modułu](../windows/module-class.md) klasy.|  
+|[RemoveIUnknown, klasa](../windows/removeiunknown-class.md)|Tworzy typ, który jest odpowiednikiem `IUnknown`— na podstawie typu, ale ma niewirtualną `QueryInterface`, `AddRef`, i `Release` metody.|  
+|[Weakreference — klasa](../windows/weakreference-class1.md)|Reprezentuje *słabe odwołanie* które mogą być używane z Windows Runtime lub Klasyczny model COM. Słabe odwołanie reprezentuje obiekt, który może być lub może być niedostępny.|  
   
 ### <a name="structures"></a>Struktury  
   
 |Nazwa|Opis|  
 |----------|-----------------|  
-|[ArgTraits, struktura](../windows/argtraits-structure.md)|Deklaruje delegata określony interfejs i funkcja anonimowego elementu członkowskiego, która ma określoną liczbę parametrów.|  
-|[ArgTraitsHelper, struktura](../windows/argtraitshelper-structure.md)|Pomaga zdefiniować wspólne cechy argumentów delegata.|  
-|[BoolStruct, struktura](../windows/boolstruct-structure.md)|Określa, czy comptr — Zarządzanie okres istnienia obiektu interfejsu. Boolstruct — jest używana wewnętrznie przez [BoolType()](../windows/comptr-operator-microsoft-wrl-details-booltype-operator.md) operatora.|  
-|[CreatorMap, struktura](../windows/creatormap-structure.md)|Zawiera informacje o sposobie inicjowania, rejestrowanie i wyrejestrowywanie obiektów.|  
-|[DerefHelper, struktura](../windows/derefhelper-structure.md)|Reprezentuje wyłuskiwany wskaźnik do `T*` parametru szablonu.|  
-|[EnableIf, struktura](../windows/enableif-structure.md)|Definiuje element członkowski danych o typie określonym drugi parametr szablonu, jeśli pierwszy parametr szablonu daje w wyniku `true`.|  
-|[FactoryCache, struktura](../windows/factorycache-structure.md)|Zawiera lokalizację fabrykę klas i wartość, która identyfikuje zarejestrowanego obiektu klasy środowiska wykonawczego systemu Windows lub COM.|  
+|[ArgTraits, struktura](../windows/argtraits-structure.md)|Deklaruje określonego delegata interfejsu i funkcji anonimowej składowej, która ma określoną liczbę parametrów.|  
+|[ArgTraitsHelper, struktura](../windows/argtraitshelper-structure.md)|Pomaga zdefiniować typowe cechy argumenty delegata.|  
+|[BoolStruct, struktura](../windows/boolstruct-structure.md)|Określa, czy comptr — Zarządzanie okresem istnienia interfejsu. Boolstruct — jest używana wewnętrznie przez [BoolType()](../windows/comptr-operator-microsoft-wrl-details-booltype-operator.md) operatora.|  
+|[CreatorMap, struktura](../windows/creatormap-structure.md)|Zawiera informacje o sposobie inicjowania, rejestrować i wyrejestrowywać obiektów.|  
+|[DerefHelper, struktura](../windows/derefhelper-structure.md)|Reprezentuje wskaźnik wyłuskiwany `T*` parametru szablonu.|  
+|[EnableIf, struktura](../windows/enableif-structure.md)|Definiuje element członkowski danych o typie określonym przez drugi parametr szablonu, jeśli pierwszy parametr szablonu, które daje w wyniku **true**.|  
+|[FactoryCache, struktura](../windows/factorycache-structure.md)|Zawiera lokalizację fabryki klas i wartość, która identyfikuje zarejestrowanych Windows Runtime lub COM obiektu klasy.|  
 |[ImplementsBase, struktura](../windows/implementsbase-structure.md)|Służy do sprawdzania typów parametrów szablonu w [Implements — struktura](../windows/implements-structure.md).|  
-|[ImplementsHelper, struktura](../windows/implementshelper-structure.md)|Ułatwia wdrożenie [implementuje](../windows/implements-structure.md) struktury.|  
-|[InterfaceList, struktura](../windows/interfacelist-structure.md)|Pozwala utworzyć listę cykliczne interfejsów.|  
-|[InterfaceListHelper, struktura](../windows/interfacelisthelper-structure.md)|Tworzy `InterfaceList` typu przez rekursywnie stosowania argumentów parametru określonego szablonu.|  
-|[InterfaceTraits, struktura](../windows/interfacetraits-structure.md)|Wspólne cechy zawiera implementację interfejsu.|  
-|[InvokeHelper, struktura](../windows/invokehelper-structure.md)|Udostępnia implementację metody Invoke() na podstawie określonej liczby i typy argumentów.|  
+|[ImplementsHelper, struktura](../windows/implementshelper-structure.md)|Pomaga wdrożyć [implementuje](../windows/implements-structure.md) struktury.|  
+|[InterfaceList, struktura](../windows/interfacelist-structure.md)|Użyty do utworzenia cyklicznego listę interfejsów.|  
+|[InterfaceListHelper, struktura](../windows/interfacelisthelper-structure.md)|Kompilacje `InterfaceList` typu przez rekursywnie stosowanie argumentów parametru określonego szablonu.|  
+|[InterfaceTraits, struktura](../windows/interfacetraits-structure.md)|Implementuje typowe cechy interfejsu.|  
+|[InvokeHelper, struktura](../windows/invokehelper-structure.md)|Udostępnia implementację `Invoke()` metody na podstawie określonej liczby i typów argumentów.|  
 |[IsBaseOfStrict, struktura](../windows/isbaseofstrict-structure.md)|Sprawdza, czy jest jeden typ podstawowy innego.|  
-|[IsSame, struktura](../windows/issame-structure.md)|Testy czy określić jeden typ jest taki sam jak inny określony typ.|  
-|[Nil, struktura](../windows/nil-structure.md)|Służy do wskazania parametr szablonu nieokreślony, opcjonalne.|  
-|[RemoveReference, struktura](../windows/removereference-structure.md)|Usuwa odwołanie lub odwołanie do r-wartości cechy z parametru szablonu określonej klasy.|  
-|[RuntimeClassBase, struktura](../windows/runtimeclassbase-structure.md)|Używane do wykrywania `RuntimeClass` w [upewnij](../windows/make-function.md) funkcji.|  
-|[RuntimeClassBaseT, struktura](../windows/runtimeclassbaset-structure.md)|Udostępnia metody pomocnicze do `QueryInterface` operacje i pobieranie identyfikatorów interfejsu.|  
-|[VerifyInheritanceHelper, struktura](../windows/verifyinheritancehelper-structure.md)|Sprawdza, czy jeden interfejs pochodzi z innego interfejsu.|  
-|[VerifyInterfaceHelper, struktura](../windows/verifyinterfacehelper-structure.md)|Sprawdza, czy interfejs określonej przez parametr szablonu spełnia określone wymagania.|  
+|[IsSame, struktura](../windows/issame-structure.md)|Testy, czy jeden określony typ jest taki sam jak inny określony typ.|  
+|[Nil, struktura](../windows/nil-structure.md)|Służy do wskazania parametrem szablonu nieokreślony, opcjonalne.|  
+|[RemoveReference, struktura](../windows/removereference-structure.md)|Usuwa odwołanie lub odwołaniem rvalue cech od parametru szablonu określonej klasy.|  
+|[RuntimeClassBase, struktura](../windows/runtimeclassbase-structure.md)|Używane do wykrywania `RuntimeClass` w [wprowadzić](../windows/make-function.md) funkcji.|  
+|[RuntimeClassBaseT, struktura](../windows/runtimeclassbaset-structure.md)|Zapewnia metody pomocnika do `QueryInterface` operacji oraz pobieranie identyfikatorów interfejsu.|  
+|[VerifyInheritanceHelper, struktura](../windows/verifyinheritancehelper-structure.md)|Sprawdza, czy jeden interfejs jest tworzony na podstawie innego interfejsu.|  
+|[VerifyInterfaceHelper, struktura](../windows/verifyinterfacehelper-structure.md)|Sprawdza, czy interfejs określony przez parametr szablonu spełnia określone wymagania.|  
   
 ### <a name="enumerations"></a>Wyliczenia  
   
 |Nazwa|Opis|  
 |----------|-----------------|  
-|[AsyncStatusInternal, wyliczenie](../windows/asyncstatusinternal-enumeration.md)|Określa mapowanie między wewnętrzny wyliczenia stanu operacji asynchronicznych i **Windows::Foundation::AsyncStatus** wyliczenia.|  
+|[AsyncStatusInternal, wyliczenie](../windows/asyncstatusinternal-enumeration.md)|Określa mapowanie między wewnętrznego wyliczenia stanu operacji asynchronicznych i `Windows::Foundation::AsyncStatus` wyliczenia.|  
   
 ### <a name="functions"></a>Funkcje  
   
 |Nazwa|Opis|  
 |----------|-----------------|  
-|[ActivationFactoryCallback, funkcja](../windows/activationfactorycallback-function.md)|Pobiera fabryki aktywacji dla aktywacji określonego identyfikatora.|  
-|[Move, funkcja](../windows/move-function.md)|Przenosi określony argument z jednej lokalizacji.|  
-|[RaiseException, funkcja](../windows/raiseexception-function.md)|Zgłasza wyjątek w wątku wywołującym.|  
+|[ActivationFactoryCallback, funkcja](../windows/activationfactorycallback-function.md)|Pobiera fabrykę aktywacji dla identyfikatora określonego aktywacji.|  
+|[Move, funkcja](../windows/move-function.md)|Przenosi określonego argumentu z jednej lokalizacji.|  
+|[RaiseException, funkcja](../windows/raiseexception-function.md)|Zgłasza wyjątek w wątku wywołującego.|  
 |[Swap, funkcja (Biblioteka szablonów języka C++ środowiska uruchomieniowego systemu Windows)](../windows/swap-function-windows-runtime-cpp-template-library.md)|Zamienia wartości dwóch określonych argumentów.|  
 |[TerminateMap, funkcja](../windows/terminatemap-function.md)|Zamyka fabryki klas w określonym module.|  
   
 ## <a name="requirements"></a>Wymagania  
- **Nagłówek:** async.h, client.h, corewrappers.h, event.h, ftm.h, implements.h, internal.h, module.h  
+ **Nagłówek:** async.h client.h, corewrappers.h, event.h, ftm.h, implements.h, internal.h, module.h  
   
- **Namespace:** Microsoft::wrl:: details —  
+ **Namespace:** Microsoft::wrl:: details  
   
 ## <a name="see-also"></a>Zobacz też  
- [Microsoft::wrl — Namespace](../windows/microsoft-wrl-namespace.md)   
+ [Microsoft::WRL Namespace](../windows/microsoft-wrl-namespace.md)   
  [Microsoft::WRL::Wrappers, przestrzeń nazw](../windows/microsoft-wrl-wrappers-namespace.md)

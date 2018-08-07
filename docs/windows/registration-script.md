@@ -17,38 +17,37 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: d4385dd12fccafb154a637dd5260764667d3887a
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 50029cea9e5bd7bf3a5032a2190fc71d4e893b5f
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33878726"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39607676"
 ---
 # <a name="registrationscript"></a>registration_script
-Wykonuje określoną rejestrację niestandardowych skryptów.  
+Wykonuje określoną rejestrację niestandardowego skryptu.  
   
 ## <a name="syntax"></a>Składnia  
   
 ```  
-  
-      [ registration_script(   
+[ registration_script(   
    script   
 ) ]  
 ```  
   
 #### <a name="parameters"></a>Parametry  
- *Skrypt*  
- Pełna ścieżka do pliku skryptu (.rgs) niestandardowych rejestracji. Wartość **Brak**, takich jak `script = "none"`, wskazuje, że klasa coclass nie ma rejestracji wymagań.  
+ *skrypt*  
+ Pełna ścieżka do pliku skryptu (.rgs) niestandardową rejestrację. Wartość **Brak**, takich jak `script = "none"`, wskazuje, czy klasa coclass nie ma żadnych wymagań dotyczących rejestracji.  
   
 ## <a name="remarks"></a>Uwagi  
- **Registration_script —** atrybutu C++ wykonuje skryptu niestandardowego rejestracji określony przez **skryptu**. Jeśli ten atrybut nie jest określony, używany jest pliku .rgs standardowe (zawierający informacje dotyczące rejestrowania składnika). Aby uzyskać więcej informacji na plików .rgs, zobacz [składnik rejestru Alt (Rejestrator)](../atl/atl-registry-component-registrar.md).  
+ **Registration_script —** atrybutów języka C++ uruchamia skrypt niestandardową rejestrację, określony przez *skryptu*. Jeśli ten atrybut nie jest określony, plik standard .rgs (zawierający informacje dotyczące rejestrowania składnika) jest używany. Aby uzyskać więcej informacji na temat plików .rgs, zobacz [składnik rejestru Alt (Rejestrator)](../atl/atl-registry-component-registrar.md).  
   
- Ten atrybut wymaga, aby [coclass](../windows/coclass.md), [progid](../windows/progid.md), lub [vi_progid —](../windows/vi-progid.md) atrybutu (lub inny atrybut, który oznacza jeden z nich) również będą stosowane do tego samego elementu.  
+ Ten atrybut wymaga, aby [coclass](../windows/coclass.md), [progid](../windows/progid.md), lub [vi_progid —](../windows/vi-progid.md) atrybutów (lub innego atrybutu, który oznacza jeden z nich) również będą stosowane do tego samego elementu.  
   
 ## <a name="example"></a>Przykład  
- Poniższy kod określa, czy składnik ma skryptu rejestru o nazwie cpp_attr_ref_registration_script.rgs.  
+ Poniższy kod określa, że składnik zawiera skrypt rejestru o nazwie cpp_attr_ref_registration_script.rgs.  
   
-```  
+```cpp  
 // cpp_attr_ref_registration_script.cpp  
 // compile with: /LD  
 #define _ATL_ATTRIBUTES  
@@ -69,16 +68,16 @@ class CMyClass:public IFace {};
   
 ## <a name="requirements"></a>Wymagania  
   
-### <a name="attribute-context"></a>Atrybut kontekstu  
+### <a name="attribute-context"></a>Kontekst atrybutu  
   
 |||  
 |-|-|  
-|**Dotyczy**|**Klasa**, `struct`|  
+|**Dotyczy**|**Klasa**, **— struktura**|  
 |**Powtarzalne**|Nie|  
-|**Wymaganych atrybutów**|Co najmniej jeden z następujących: **coclass**, **progid**, lub **vi_progid —**.|  
+|**Wymaganych atrybutów**|Co najmniej jeden z następujących czynności: `coclass`, `progid`, lub `vi_progid`.|  
 |**Nieprawidłowe atrybuty**|Brak|  
   
- Aby uzyskać więcej informacji na temat konteksty atrybutu, zobacz [konteksty atrybutu](../windows/attribute-contexts.md).  
+ Aby uzyskać więcej informacji na temat konteksty atrybutu zobacz [konteksty atrybutu](../windows/attribute-contexts.md).  
   
 ## <a name="see-also"></a>Zobacz też  
  [Atrybuty COM](../windows/com-attributes.md)   

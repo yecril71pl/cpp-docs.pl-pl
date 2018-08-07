@@ -1,5 +1,5 @@
 ---
-title: Roinitializewrapper — klasa | Dokumentacja firmy Microsoft
+title: RoInitializeWrapper, klasa | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 05/20/2018
 ms.technology:
@@ -15,15 +15,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: cac71857e6b472f11d1c9eaba48d181ea78fb456
-ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
+ms.openlocfilehash: 9fab2ecd259e75767728a46448c06df4c4729ef3
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34705595"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39606725"
 ---
 # <a name="roinitializewrapper-class"></a>RoInitializeWrapper — Klasa
-Inicjuje środowiska uruchomieniowego systemu Windows.  
+Inicjuje środowisko wykonawcze Windows.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -32,7 +32,7 @@ class RoInitializeWrapper
 ```  
   
 ## <a name="remarks"></a>Uwagi  
- RoInitializeWrapper jest wygodne, która inicjuje środowiska uruchomieniowego systemu Windows i zwraca HRESULT, która wskazuje, czy operacja powiodła się. Ponieważ klasa destruktor wywoła `::Windows::Foundation::Uninitialize`, wystąpień `RoInitializeWrapper` musi być zadeklarowana w zakresie globalnym, ani najwyższego poziomu.  
+ **RoInitializeWrapper** jest wygodne, inicjuje środowiska wykonawczego Windows, która zwraca wartość HRESULT, która wskazuje, czy operacja zakończyła się powodzeniem. Ponieważ wywołuje destruktor klasy `::Windows::Foundation::Uninitialize`, wystąpień **RoInitializeWrapper** musi być zadeklarowana w zakresie globalnym lub najwyższego poziomu.  
   
 ## <a name="members"></a>Elementy członkowskie  
   
@@ -40,14 +40,14 @@ class RoInitializeWrapper
   
 |Nazwa|Opis|  
 |----------|-----------------|  
-|[RoInitializeWrapper::RoInitializeWrapper, konstruktor](../windows/roinitializewrapper-roinitializewrapper-constructor.md)|Inicjuje nowe wystąpienie klasy RoInitializeWrapper.|  
-|[RoInitializeWrapper::~RoInitializeWrapper, destruktor](../windows/roinitializewrapper-tilde-roinitializewrapper-destructor.md)|Niszczy bieżące wystąpienie klasy RoInitializeWrapper.|  
+|[RoInitializeWrapper::RoInitializeWrapper, konstruktor](../windows/roinitializewrapper-roinitializewrapper-constructor.md)|Inicjuje nowe wystąpienie klasy **RoInitializeWrapper** klasy.|  
+|[RoInitializeWrapper::~RoInitializeWrapper, destruktor](../windows/roinitializewrapper-tilde-roinitializewrapper-destructor.md)|Likwiduje bieżące wystąpienie **RoInitializeWrapper** klasy.|  
   
 ### <a name="public-operators"></a>Operatory publiczne  
   
 |Nazwa|Opis|  
 |----------|-----------------|  
-|[Operator RoInitializeWrapper::HRESULT()](../windows/roinitializewrapper-hresult-parens-operator.md)|Pobiera HRESULT utworzonego przez konstruktora RoInitializeWrapper.|  
+|[Operator RoInitializeWrapper::HRESULT()](../windows/roinitializewrapper-hresult-parens-operator.md)|Pobiera wartość HRESULT produkowane przez **RoInitializeWrapper** konstruktora.|  
   
 ## <a name="inheritance-hierarchy"></a>Hierarchia dziedziczenia  
  `RoInitializeWrapper`  
@@ -55,7 +55,7 @@ class RoInitializeWrapper
 ## <a name="requirements"></a>Wymagania  
  **Nagłówek:** corewrappers.h  
   
- **Namespace:** Microsoft::wrl:: wrappers —  
+ **Namespace:** Microsoft::wrl:: wrappers  
   
 ## <a name="see-also"></a>Zobacz też  
  [Microsoft::WRL::Wrappers, przestrzeń nazw](../windows/microsoft-wrl-wrappers-namespace.md)

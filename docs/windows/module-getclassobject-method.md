@@ -1,5 +1,5 @@
 ---
-title: Module::GetClassObject — metoda | Dokumentacja firmy Microsoft
+title: Module::GetClassObject, metoda | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 9205b04fc27e1c6e0e6133a08c3c2f69ffdfc314
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 63ff6c63702cda709f4431d9c7e5be5a4bdb8449
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33878541"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39602656"
 ---
 # <a name="modulegetclassobject-method"></a>Module::GetClassObject — Metoda
-Pobiera fabryki klas pamięci podręcznej.  
+Retreives pamięci podręcznej fabryki klas.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -38,28 +38,28 @@ Pobiera fabryki klas pamięci podręcznej.
 );  
 ```  
   
-#### <a name="parameters"></a>Parametry  
- `clsid`  
+### <a name="parameters"></a>Parametry  
+ *Identyfikator klasy*  
  Identyfikator klasy.  
   
- `riid`  
- Interfejs identyfikator żądania.  
+ *Parametr riid*  
+ Identyfikator interfejsu, który w przypadku żądania.  
   
- `ppv`  
- Wskaźnik do zwrócony obiekt.  
+ *ppv*  
+ Wskaźnik zwracany obiekt.  
   
- `serverName`  
- Nazwa serwera określona w albo `ActivatableClassWithFactory`, `ActivatableClassWithFactoryEx`, lub `ActivatableClass` makro; lub `nullptr` można pobrać domyślnej nazwy serwera.  
+ *serverName*  
+ Nazwa serwera, który jest określony w jednej `ActivatableClassWithFactory`, `ActivatableClassWithFactoryEx`, lub `ActivatableClass` — makro; lub **nullptr** można pobrać domyślną nazwę serwera.  
   
 ## <a name="return-value"></a>Wartość zwracana  
   
 ## <a name="remarks"></a>Uwagi  
- Tej metody można użyć tylko dla modelu COM, nie środowiska uruchomieniowego systemu Windows. Ta metoda opisuje tylko IClassFactory metody.  
+ Użyj tej metody tylko dla modelu COM, nie środowiska wykonawczego Windows. Ta metoda ujawnia tylko `IClassFactory` metody.  
   
 ## <a name="requirements"></a>Wymagania  
  **Nagłówek:** module.h  
   
- **Namespace:** Microsoft::wrl —
+ **Namespace:** Microsoft::WRL
  
  ## <a name="see-also"></a>Zobacz też
  [Klasa modułu](../windows/module-class.md)

@@ -17,30 +17,28 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 559d149cfbe2fac7a5d648d56cb4e34d427cedc8
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 984731d85bafe3c0e6bb0d8f6092800019b40663
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33877699"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39608189"
 ---
 # <a name="odl"></a>odl
-Identyfikuje interfejsu jako interfejsu język opisu obiektów (ODL). Nie wymaga kompilatora MIDL **odl** atrybutu; uznaje się tylko w celu zapewnienia zgodności z starsze .odl — pliki.  
+Identyfikuje interfejs jako interfejs język opisu obiektów (ODL). Nie jest wymagane przez kompilator MIDL **odl** atrybutu; uznaje się tylko na potrzeby utrzymywania zgodności z starsze .odl — pliki.  
   
 ## <a name="syntax"></a>Składnia  
   
 ```  
-  
 [odl]  
-  
 ```  
   
 ## <a name="remarks"></a>Uwagi  
- **Odl** atrybut C++ ma te same funkcje co [odl](http://msdn.microsoft.com/library/windows/desktop/aa367126) MIDL atrybutu.  
+ **Odl** atrybut C++ ma taką samą funkcjonalność jak [odl](http://msdn.microsoft.com/library/windows/desktop/aa367126) atrybutów w MIDL.  
   
 ## <a name="example"></a>Przykład  
   
-```  
+```cpp  
 // cpp_attr_ref_odl.cpp  
 // compile with: /LD  
 #include <unknwn.h>  
@@ -62,16 +60,16 @@ public:
   
 ## <a name="requirements"></a>Wymagania  
   
-### <a name="attribute-context"></a>Atrybut kontekstu  
+### <a name="attribute-context"></a>Kontekst atrybutu  
   
 |||  
 |-|-|  
-|**Dotyczy**|`interface`|  
+|**Dotyczy**|**interface**|  
 |**Powtarzalne**|Nie|  
 |**Wymaganych atrybutów**|Brak|  
 |**Nieprawidłowe atrybuty**|Brak|  
   
- Aby uzyskać więcej informacji na temat konteksty atrybutu, zobacz [konteksty atrybutu](../windows/attribute-contexts.md).  
+ Aby uzyskać więcej informacji na temat konteksty atrybutu zobacz [konteksty atrybutu](../windows/attribute-contexts.md).  
   
 ## <a name="see-also"></a>Zobacz też  
  [Atrybuty IDL](../windows/idl-attributes.md)   

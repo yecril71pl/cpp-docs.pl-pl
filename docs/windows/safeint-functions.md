@@ -15,19 +15,19 @@ ms.author: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 97edd25abca3c9e80a35745165eedc93cc13a9b9
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: b8a0475b5d3ba9053cd5d2df5ffd99ce9292ba8e
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33889310"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39603458"
 ---
 # <a name="safeint-functions"></a>SafeInt — Funkcje
-Safeint — biblioteka zawiera kilka funkcji, których można użyć bez tworzenia wystąpienia [safeint — klasa](../windows/safeint-class.md). Jeśli chcesz chronić jednej operacji matematycznych z liczbą całkowitą przepełnienia, możesz użyć tych funkcji. Jeśli chcesz chronić wiele operacji matematycznych, należy utworzyć `SafeInt` obiektów. Jest bardziej wydajne, można utworzyć `SafeInt` obiektów niż można używać tych funkcji wiele razy.  
+Biblioteka SafeInt udostępnia kilka funkcji, których można używać bez tworzenia wystąpienia obiektu [safeint — klasa](../windows/safeint-class.md). Jeśli chcesz chronić jednej operacji matematycznych przepełnienie liczby całkowitej, można użyć tych funkcji. Jeśli chcesz chronić wiele operacji matematycznych, należy utworzyć **SafeInt** obiektów. Jest bardziej wydajne, aby utworzyć **SafeInt** obiektów, niż można użyć tych funkcji wiele razy.  
   
- Te funkcje umożliwiają porównanie lub wykonywania operacji matematycznych na dwa różne typy parametrów bez konieczności najpierw przekonwertować je do tego samego typu.  
+ Te funkcje umożliwiają porównywania albo do wykonywania operacji matematycznych na dwa różne typy parametrów bez konieczności konwertowania ich najpierw do tego samego typu.  
   
- Każda z tych funkcji ma dwa typy szablonu: `T` i `U`. Każdego z tych typów może być typu Boolean, znak lub typ całkowity. Typy całkowite mogą być podpisane lub niepodpisane i rozmiarze z 8 bitów na 64-bitowy.  
+ Każda z tych funkcji są dostępne dwa typy szablonów: `T` i `U`. Każdy z tych typów może być atrybut typu wartość logiczna, znak lub typu całkowitego. Typy całkowite mogą być podpisane lub niepodpisane i dowolnego rozmiaru, od 8 bitów na 64-bitowy.  
   
 ## <a name="in-this-section"></a>W tej sekcji  
   
@@ -35,15 +35,15 @@ Safeint — biblioteka zawiera kilka funkcji, których można użyć bez tworzen
 |--------------|-----------------|  
 |[SafeAdd](../windows/safeadd.md)|Dodaje dwie liczby i chroni przed przepełnienia.|  
 |[SafeCast](../windows/safecast.md)|Rzutuje jeden typ parametru do innego typu.|  
-|[SafeDivide](../windows/safedivide.md)|Dzieli dwie liczby i chroni przed dzielenia przez zero.|  
-|[SafeEquals](../windows/safeequals.md), [SafeGreaterThan](../windows/safegreaterthan.md), [SafeGreaterThanEquals](../windows/safegreaterthanequals.md), [SafeLessThan](../windows/safelessthan.md), [SafeLessThanEquals](../windows/safelessthanequals.md), [ SafeNotEquals](../windows/safenotequals.md)|Porównanie dwóch liczb. Funkcje te pozwalają porównać dwa różne typy liczby bez zmiany ich typów.|  
+|[SafeDivide](../windows/safedivide.md)|Dzieli dwie liczby i chroni przed dzielenie przez zero.|  
+|[SafeEquals](../windows/safeequals.md), [SafeGreaterThan](../windows/safegreaterthan.md), [SafeGreaterThanEquals](../windows/safegreaterthanequals.md), [SafeLessThan](../windows/safelessthan.md), [SafeLessThanEquals](../windows/safelessthanequals.md), [ SafeNotEquals](../windows/safenotequals.md)|Porównuje dwie liczby. Te funkcje pozwalają porównać dwa różne typy liczb bez zmiany ich typy.|  
 |[SafeModulus](../windows/safemodulus.md)|Wykonuje operację modulo na dwóch liczb.|  
-|[SafeMultiply](../windows/safemultiply.md)|Razem mnoży dwie liczby i chroni przed przepełnienia.|  
+|[SafeMultiply](../windows/safemultiply.md)|Mnoży dwie liczby ze sobą i chroni przed przepełnienia.|  
 |[SafeSubtract](../windows/safesubtract.md)|Odejmuje dwie liczby i chroni przed przepełnienia.|  
   
 ## <a name="related-sections"></a>Sekcje pokrewne  
   
 |Sekcja|Opis|  
 |-------------|-----------------|  
-|[SafeInt, klasa](../windows/safeint-class.md)|`SafeInt` Klasy.|  
-|[SafeIntException, klasa](../windows/safeintexception-class.md)|Klasy wyjątków specyficzne dla Biblioteka SafeInt.|
+|[SafeInt, klasa](../windows/safeint-class.md)|**SafeInt** klasy.|  
+|[SafeIntException, klasa](../windows/safeintexception-class.md)|Biblioteka SafeInt specyficzne klasy wyjątku.|

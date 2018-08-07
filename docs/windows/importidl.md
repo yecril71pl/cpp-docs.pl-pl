@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: f5284c631813271f5682343c74cff693d1ea785e
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: bd930ef70e5bb2b87c584c1d821cdf4528580a31
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33877478"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39607186"
 ---
 # <a name="importidl"></a>importidl
 Wstawia pliku .idl określony w pliku .idl wygenerowany.  
@@ -30,24 +30,23 @@ Wstawia pliku .idl określony w pliku .idl wygenerowany.
 ## <a name="syntax"></a>Składnia  
   
 ```  
-  
-      [ importidl(  
+[ importidl(  
    idl_file  
 ) ];  
 ```  
   
-#### <a name="parameters"></a>Parametry  
- `idl_file`  
- Określa nazwę pliku .idl, którego chcesz scalić z pliku .idl zostanie wygenerowany dla aplikacji.  
+### <a name="parameters"></a>Parametry  
+ *idl_file*  
+ Określa nazwę pliku .idl, którego chcesz scalić z pliku .idl, którego zostanie wygenerowany dla aplikacji.  
   
 ## <a name="remarks"></a>Uwagi  
- **Importidl —** atrybutu C++ umieszcza sekcji poza blokiem biblioteki (w `idl_file`) w pliku .idl wygenerowanego programu i w sekcji biblioteki (w `idl_file`) w sekcji biblioteki programu .idl wygenerowanego pliku.  
+ **Importidl —** atrybut C++ umieszcza sekcji poza blokiem biblioteki (w *idl_file*) w pliku .idl wygenerowanego programu i w sekcji biblioteki (w *idl_file*) w bibliotece części programu generowane pliku .idl.  
   
- Chcesz użyć **importidl —**, na przykład, jeśli chcesz użyć pliku .idl kodowane ręcznie z pliku .idl wygenerowanego.  
+ Możesz chcieć użyć **importidl —**, na przykład, aby za pomocą pliku .idl wygenerowany przy użyciu pliku .idl kodowane ręcznie.  
   
 ## <a name="example"></a>Przykład  
   
-```  
+```cpp  
 // cpp_attr_ref_importidl.cpp  
 // compile with: /LD  
 [module(name="MyLib")];  
@@ -56,11 +55,11 @@ Wstawia pliku .idl określony w pliku .idl wygenerowany.
   
 ## <a name="requirements"></a>Wymagania  
   
-### <a name="attribute-context"></a>Atrybut kontekstu  
+### <a name="attribute-context"></a>Kontekst atrybutu  
   
 |||  
 |-|-|  
-|**Dotyczy**|Dowolnego miejsca|  
+|**Dotyczy**|Dowolne miejsce|  
 |**Powtarzalne**|Nie|  
 |**Wymaganych atrybutów**|Brak|  
 |**Nieprawidłowe atrybuty**|Brak|  

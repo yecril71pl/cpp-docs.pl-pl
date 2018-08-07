@@ -1,5 +1,5 @@
 ---
-title: Module::genericreleasenotifier — klasa | Dokumentacja firmy Microsoft
+title: Module::GenericReleaseNotifier, klasa | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: c3ba58e08bac36d905fbf874546d7791f2aa3fcb
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 9e850c90ef873e64352ace64ff680cd93474a4a1
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33882011"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39606426"
 ---
 # <a name="modulegenericreleasenotifier-class"></a>Module::GenericReleaseNotifier — Klasa
-Wywołuje program obsługi zdarzeń po zwolnieniu ostatni obiekt w bieżącego modułu. Program obsługi zdarzeń jest określona przez na lambda, obiekt lub wskaźnik do funkcji.  
+Wywołuje program obsługi zdarzeń po udostępnieniu ostatni obiekt w bieżącego modułu. Program obsługi zdarzeń jest określone w lambda, funktor lub wskaźnik do funkcji.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -34,9 +34,9 @@ template<typename T>
 class GenericReleaseNotifier : public ReleaseNotifier;  
 ```  
   
-#### <a name="parameters"></a>Parametry  
- `T`  
- Typ elementu członkowskiego danych zawiera lokalizację programu obsługi zdarzeń.  
+### <a name="parameters"></a>Parametry  
+ *T*  
+ Typ składowej danych, która zawiera lokalizację programu obsługi zdarzeń.  
   
 ## <a name="members"></a>Elementy członkowskie  
   
@@ -44,19 +44,19 @@ class GenericReleaseNotifier : public ReleaseNotifier;
   
 |Nazwa|Opis|  
 |----------|-----------------|  
-|[Module::GenericReleaseNotifier::GenericReleaseNotifier, konstruktor](../windows/module-genericreleasenotifier-genericreleasenotifier-constructor.md)|Inicjuje nowe wystąpienie klasy Module::GenericReleaseNotifier.|  
+|[Module::GenericReleaseNotifier::GenericReleaseNotifier, konstruktor](../windows/module-genericreleasenotifier-genericreleasenotifier-constructor.md)|Inicjuje nowe wystąpienie klasy **Module::GenericReleaseNotifier** klasy.|  
   
 ### <a name="public-methods"></a>Metody publiczne  
   
 |Nazwa|Opis|  
 |----------|-----------------|  
-|[Module::GenericReleaseNotifier::Invoke, metoda](../windows/module-genericreleasenotifier-invoke-method.md)|Wywołuje program obsługi zdarzeń skojarzonych z bieżącym obiektem Module::GenericReleaseNotifier.|  
+|[Module::GenericReleaseNotifier::Invoke, metoda](../windows/module-genericreleasenotifier-invoke-method.md)|Wywołuje program obsługi zdarzeń skojarzonych z bieżącym **Module::GenericReleaseNotifier** obiektu.|  
   
-### <a name="protected-data-members"></a>Dane chronione elementy członkowskie  
+### <a name="protected-data-members"></a>Chronione elementy członkowskie danych  
   
 |Nazwa|Opis|  
 |----------|-----------------|  
-|[Module::GenericReleaseNotifier::callback_, składowa danych](../windows/module-genericreleasenotifier-callback-data-member.md)|Przechowuje lambda, obiekt lub program obsługi zdarzeń wskaźnika do funkcji skojarzonych z bieżącym obiektem Module::GenericReleaseNotifier.|  
+|[Module::GenericReleaseNotifier::callback_, składowa danych](../windows/module-genericreleasenotifier-callback-data-member.md)|Zawiera wyrażenie lambda, funktor lub obsługi zdarzeń wskaźnika do funkcji skojarzony z bieżącym **Module::GenericReleaseNotifier** obiektu.|  
   
 ## <a name="inheritance-hierarchy"></a>Hierarchia dziedziczenia  
  `ReleaseNotifier`  
@@ -66,7 +66,7 @@ class GenericReleaseNotifier : public ReleaseNotifier;
 ## <a name="requirements"></a>Wymagania  
  **Nagłówek:** module.h  
   
- **Namespace:** Microsoft::wrl —
+ **Namespace:** Microsoft::WRL
  
  ## <a name="see-also"></a>Zobacz też
  [Klasa modułu](../windows/module-class.md)

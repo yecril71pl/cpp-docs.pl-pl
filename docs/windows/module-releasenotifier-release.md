@@ -15,15 +15,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: bfc64a64a0fc08d417117e46bc7537a4e2ebf4ef
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 0f68e51de101ad8ef7adfb4d9ad061a66071ef48
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33877050"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39605434"
 ---
 # <a name="modulereleasenotifierrelease"></a>Module::ReleaseNotifier::Release
-Usuwa bieżący obiekt Module::ReleaseNotifier, jeśli obiekt został skonstruowany przy parametr `true`.  
+Usuwa bieżący **Module::ReleaseNotifier** obiektu, jeśli obiekt został zbudowany z parametrem **true**.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -34,7 +34,7 @@ void Release() throw();
 ## <a name="requirements"></a>Wymagania  
  **Nagłówek:** module.h  
   
- **Namespace:** Microsoft::wrl —  
+ **Namespace:** Microsoft::WRL  
   
 ## <a name="see-also"></a>Zobacz też  
  [Module::ReleaseNotifier, klasa](../windows/module-releasenotifier-class.md)

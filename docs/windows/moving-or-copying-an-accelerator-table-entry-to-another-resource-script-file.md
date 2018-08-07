@@ -1,5 +1,5 @@
 ---
-title: Przenoszenie i kopiowanie wpisu tabeli akceleratora do innego pliku skryptu zasobu | Dokumentacja firmy Microsoft
+title: Przenoszenie i kopiowanie wpisu tabeli akceleratora do innego pliku skryptu zasobów | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,20 +18,20 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 5b14e20770b89bb6863eb5fa8d7743bd3cf2efa9
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: e975ab71e4556c236ecd2e92f2d11a949a68ba5a
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33877907"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39608055"
 ---
 # <a name="moving-or-copying-an-accelerator-table-entry-to-another-resource-script-file"></a>Przenoszenie i kopiowanie wpisu tabeli akceleratora do innego pliku skryptu zasobów
-### <a name="to-move-or-copy-an-accelerator-table-entry-to-another-resource-script-file"></a>Przenoszenie lub kopiowanie wpisu tabeli akceleratora do innego pliku skryptu zasobu  
+### <a name="to-move-or-copy-an-accelerator-table-entry-to-another-resource-script-file"></a>Przenoszenie lub kopiowanie wpisu tabeli akceleratora do innego pliku skryptu zasobów  
   
-1.  Otwórz w tabelach klawiszy skrótów w obu pliki skryptów zasobów.  
+1.  Otwórz tabel akceleratora w obu plików skryptu zasobu.  
   
     > [!NOTE]
-    >  Jeśli projekt nie zawiera już plik .rc, zobacz [Tworzenie nowego pliku skryptu zasobu](../windows/how-to-create-a-resource-script-file.md).  
+    >  Jeśli projekt nie zawiera jeszcze pliku .rc, zobacz [tworzenia nowego pliku skryptu zasobów](../windows/how-to-create-a-resource-script-file.md).  
   
 2.  Wybierz wpis, który chcesz przenieść.  
   
@@ -44,9 +44,7 @@ ms.locfileid: "33877907"
     > [!NOTE]
     >  Możesz również klawisze skrótów, kopiowania i wklejania.  
   
-
-  
- **Wymagania**  
+## <a name="requirements"></a>Wymagania  
   
  Win32  
   

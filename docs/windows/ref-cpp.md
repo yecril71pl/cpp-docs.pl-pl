@@ -17,31 +17,29 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: f266c263fea33254cb8b0c706982a6d2453eed97
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 197ee3b30c257b98e2147bd030000db8dd192067
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33881474"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39607595"
 ---
 # <a name="ref-c"></a>ref (C++)
-Identyfikuje wskaźnik odwołania.  
+Określa odwołanie do wskaźnika.  
   
 ## <a name="syntax"></a>Składnia  
   
 ```  
-  
 [ref]  
-  
 ```  
   
 ## <a name="remarks"></a>Uwagi  
- `ref` Atrybut C++ ma te same funkcje co [ref](http://msdn.microsoft.com/library/windows/desktop/aa367153) MIDL atrybutu.  
+ **Ref** atrybut C++ ma taką samą funkcjonalność jak [ref](http://msdn.microsoft.com/library/windows/desktop/aa367153) atrybutów w MIDL.  
   
 ## <a name="example"></a>Przykład  
- Poniższy kod przedstawia sposób użycia `ref` atrybutu:  
+ Poniższy kod przedstawia sposób użycia **ref** atrybutu:  
   
-```  
+```cpp  
 // cpp_attr_ref_ref.cpp  
 // compile with: /LD  
 #include <windows.h>   
@@ -55,18 +53,18 @@ __interface IFireTabCtrl
   
 ## <a name="requirements"></a>Wymagania  
   
-### <a name="attribute-context"></a>Atrybut kontekstu  
+### <a name="attribute-context"></a>Kontekst atrybutu  
   
 |||  
 |-|-|  
-|**Dotyczy**|`typedef`, interfejs parametrów, metody interfejsu|  
+|**Dotyczy**|**Element TypeDef**, interfejs parametrów, metody interfejsu|  
 |**Powtarzalne**|Nie|  
 |**Wymaganych atrybutów**|Brak|  
 |**Nieprawidłowe atrybuty**|Brak|  
   
- Aby uzyskać więcej informacji na temat konteksty atrybutu, zobacz [konteksty atrybutu](../windows/attribute-contexts.md).  
+ Aby uzyskać więcej informacji na temat konteksty atrybutu zobacz [konteksty atrybutu](../windows/attribute-contexts.md).  
   
 ## <a name="see-also"></a>Zobacz też  
  [Atrybuty IDL](../windows/idl-attributes.md)   
- [Element TypeDef, Enum, Unii i struct — atrybuty](../windows/typedef-enum-union-and-struct-attributes.md)   
+ [Element TypeDef, Enum, Union i struct — atrybuty](../windows/typedef-enum-union-and-struct-attributes.md)   
  [Atrybuty parametru](../windows/parameter-attributes.md)   

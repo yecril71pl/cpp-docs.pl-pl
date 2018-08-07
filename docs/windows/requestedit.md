@@ -17,33 +17,31 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 8d741494d33cba7b1d19e2ce081bad35eaaf283e
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: a9b0102ad6ba7b11ea2f0c738983385ffda632ca
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33878258"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39606478"
 ---
 # <a name="requestedit"></a>requestedit
-Wskazuje, że właściwość obsługuje **OnRequestEdit** powiadomień.  
+Wskazuje, że właściwość obsługuje `OnRequestEdit` powiadomień.  
   
 ## <a name="syntax"></a>Składnia  
   
 ```  
-  
 [requestedit]  
-  
 ```  
   
 ## <a name="remarks"></a>Uwagi  
- **Requestedit —** atrybut C++ ma te same funkcje co [requestedit —](http://msdn.microsoft.com/library/windows/desktop/aa367155) MIDL atrybutu.  
+ **Requestedit —** atrybut C++ ma taką samą funkcjonalność jak [requestedit —](http://msdn.microsoft.com/library/windows/desktop/aa367155) atrybutów w MIDL.  
   
 ## <a name="example"></a>Przykład  
- Zobacz przykład [powiązania](../windows/bindable.md) użytku próbki **requestedit —**.  
+ Zobacz przykład [możliwej do wiązania](../windows/bindable.md) do użytku przykładowe **requestedit —**.  
   
 ## <a name="requirements"></a>Wymagania  
   
-### <a name="attribute-context"></a>Atrybut kontekstu  
+### <a name="attribute-context"></a>Kontekst atrybutu  
   
 |||  
 |-|-|  
@@ -52,11 +50,11 @@ Wskazuje, że właściwość obsługuje **OnRequestEdit** powiadomień.
 |**Wymaganych atrybutów**|Brak|  
 |**Nieprawidłowe atrybuty**|Brak|  
   
- Aby uzyskać więcej informacji na temat konteksty atrybutu, zobacz [konteksty atrybutu](../windows/attribute-contexts.md).  
+ Aby uzyskać więcej informacji na temat konteksty atrybutu zobacz [konteksty atrybutu](../windows/attribute-contexts.md).  
   
 ## <a name="see-also"></a>Zobacz też  
  [Atrybuty IDL](../windows/idl-attributes.md)   
- [Atrybuty — metoda](../windows/method-attributes.md)   
+ [Atrybuty metody](../windows/method-attributes.md)   
  [Atrybuty elementów członkowskich danych](../windows/data-member-attributes.md)   
  [defaultbind —](../windows/defaultbind.md)   
  [displaybind —](../windows/displaybind.md)   

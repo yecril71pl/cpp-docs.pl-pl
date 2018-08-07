@@ -15,15 +15,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 32cb8898cfc26297aaea888f9a382b5901ef8acf
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 7620cee350ab69f55737e6336b275218a70b6891
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33887042"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39607716"
 ---
 # <a name="hstringreferenceoperator-operator"></a>HStringReference::Operator== Operator
-Wskazuje, czy dwa parametry są takie same.  
+Wskazuje, czy dwa parametry są równe.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -39,23 +39,22 @@ inline bool operator==(
 inline bool operator==(  
                const HStringReference& lhs,   
                const HSTRING& rhs) throw()  
-  
 ```  
   
-#### <a name="parameters"></a>Parametry  
- `lhs`  
- Pierwszy parametr do porównania. `lhs` może być hstringreference — obiektu lub dojście HSTRING.  
+### <a name="parameters"></a>Parametry  
+ *Lewa strona reguły przepisywania*  
+ Pierwszy parametr do porównania. *Lewa strona reguły przepisywania* może być **HStringReference** obiektu lub dojścia HSTRING.  
   
- `rhs`  
- Drugi parametr do porównania.  `rhs` może być hstringreference — obiektu lub dojście HSTRING.  
+ *RHS*  
+ Drugi parametr do porównania.  *RHS* może być **HStringReference** obiektu lub dojścia HSTRING.  
   
 ## <a name="return-value"></a>Wartość zwracana  
- `true` Jeśli `lhs` i `rhs` parametry są równe; w przeciwnym razie `false`.  
+ **wartość true,** Jeśli *lhs* i *rhs* parametry są równe; w przeciwnym razie **false**.  
   
 ## <a name="requirements"></a>Wymagania  
  **Nagłówek:** corewrappers.h  
   
- **Namespace:** Microsoft::wrl:: wrappers —  
+ **Namespace:** Microsoft::wrl:: wrappers  
   
 ## <a name="see-also"></a>Zobacz też  
  [HStringReference, klasa](../windows/hstringreference-class.md)

@@ -1,5 +1,5 @@
 ---
-title: zapieczętowane (C++ Component Extensions) | Dokumentacja firmy Microsoft
+title: zamknięte (C++ Component Extensions) | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,18 +18,18 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 05c75aef047e914086aaf4ae2c0d0d3bdd04e8c7
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 47efadb89786b7be54f33678d2f71d2474e4deb4
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33890866"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39604554"
 ---
 # <a name="sealed--c-component-extensions"></a>sealed (C++ Component Extensions)
-`sealed` jest słowem kluczowym kontekstowej dla klasy ref, który wskazuje, że nie można zastąpić członka wirtualnego lub że typu nie można użyć jako typu podstawowego.  
+**zapieczętowane** jest słowem kluczowym kontekstowych dla klasy ref, która wskazuje, że wirtualny element członkowski nie może być zastąpiona, lub typu nie można użyć jako typu podstawowego.  
   
 > [!NOTE]
->  ISO C ++ 11 standardowe języka [końcowego](../cpp/final-specifier.md) — słowo kluczowe, który jest obsługiwany w programie Visual Studio. Użyj `final` na standardowych klas i `sealed` na klasy ref.  
+>  ISO C ++ 11 standardowy język ma [końcowego](../cpp/final-specifier.md) — słowo kluczowe, która jest obsługiwana w programie Visual Studio. Użyj **końcowego** na standardowych klas i **zapieczętowanego** na klasy ref.  
   
 ## <a name="all-runtimes"></a>Wszystkie środowiska wykonawcze  
   
@@ -45,33 +45,33 @@ virtual return-type identifier() sealed {...};
  *Identyfikator*  
  Nazwa klasy lub funkcji.  
   
- *zwracanego typu*  
- Typ zwracany przez funkcję.  
+ *zwracany typ*  
+ Typ, który jest zwracany przez funkcję.  
   
 ## <a name="remarks"></a>Uwagi  
   
- W pierwszym przykładzie składni klasy jest zapieczętowany. W drugim przykładzie funkcji wirtualnej jest zapieczętowany.  
+ W pierwszym przykładzie składni klasa jest zapieczętowany. W drugim przykładzie funkcją wirtualną jest zapieczętowany.  
   
- `sealed` — Słowo kluczowe jest prawidłowy dla celów natywnego, a także do środowiska wykonawczego systemu Windows i środowisko uruchomieniowe języka wspólnego (CLR). Aby uzyskać więcej informacji, zobacz [specyfikatory Override i kompilacjach macierzystych](../dotnet/how-to-declare-override-specifiers-in-native-compilations-cpp-cli.md).  
+ **Zapieczętowanego** — słowo kluczowe jest prawidłowy dla natywnych obiektów docelowych, a także dla środowiska uruchomieniowego Windows i środowisko uruchomieniowe języka wspólnego (CLR). Aby uzyskać więcej informacji, zobacz [zastąpienie specyfikatorów i kompilacji macierzystych](../dotnet/how-to-declare-override-specifiers-in-native-compilations-cpp-cli.md).  
   
- Można wykrywać w czasie kompilacji, czy typ jest zapieczętowany przy użyciu `__is_sealed(type)` typu cechy. Aby uzyskać więcej informacji, zobacz [Obsługa cech typu w kompilatorze](../windows/compiler-support-for-type-traits-cpp-component-extensions.md).  
+ Można wykrywać w czasie kompilacji, czy typ jest zapieczętowany przy użyciu `__is_sealed(type)` cechy typu. Aby uzyskać więcej informacji, zobacz [Obsługa cech typu w kompilatorze](../windows/compiler-support-for-type-traits-cpp-component-extensions.md).  
   
- `sealed` jest słowem kluczowym kontekstowa.  Aby uzyskać więcej informacji, zobacz [słowa kluczowe Context-Sensitive](../windows/context-sensitive-keywords-cpp-component-extensions.md).  
+ **zapieczętowane** jest kontekstowej słowem kluczowym.  Aby uzyskać więcej informacji, zobacz [Context-Sensitive Keywords](../windows/context-sensitive-keywords-cpp-component-extensions.md).  
   
 ## <a name="windows-runtime"></a>Środowisko wykonawcze systemu Windows  
- Zobacz [Ref klas i struktur](http://msdn.microsoft.com/library/windows/apps/hh699870.aspx).  
+ Zobacz [klasy i struktury odwołania](http://msdn.microsoft.com/library/windows/apps/hh699870.aspx).  
   
 ### <a name="requirements"></a>Wymagania  
- — Opcja kompilatora: **/ZW**  
+ — Opcja kompilatora: `/ZW`  
   
 ## <a name="common-language-runtime"></a>środowiska uruchomieniowe w trakcie wykonania  
- (Istnieją nie uwagi dla tej funkcji języka, które dotyczą tylko środowiska CLR.)  
+ (Nie ma żadnych uwag dla tej funkcji języka, które dotyczą tylko środowiska uruchomieniowego języka wspólnego).  
   
 ### <a name="requirements"></a>Wymagania  
- — Opcja kompilatora:   **/CLR**  
+ — Opcja kompilatora: `/clr`  
   
 ### <a name="examples"></a>Przykłady  
- Poniższy przykład kodu pokazuje wpływ `sealed` wirtualnego elementu członkowskiego.  
+ Ten poniższy kod ilustruje efekt **zapieczętowanego** na wirtualny element członkowski.  
   
 ```cpp  
 // sealed_keyword.cpp  
@@ -122,7 +122,7 @@ X::f override of I1::g
 Y::f override of I1::f  
 ```  
   
- W następnym przykładzie kodu pokazano, jak można oznaczyć klasę jako sealed.  
+ Następny przykład kodu pokazuje, jak oznaczyć klasę jako zapieczętowany.  
   
 ```cpp  
 // sealed_keyword_2.cpp  

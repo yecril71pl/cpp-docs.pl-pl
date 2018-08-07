@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: ce7925fd15a7a332dbfb18e2a22dc104783300b7
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 3dc93b6dc6d6a5fbf6bcd8899793e07bd6446de1
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33882514"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39604359"
 ---
 # <a name="module-c"></a>moduł (C++)
 Określa blok biblioteki w pliku .idl.  
@@ -30,8 +30,7 @@ Określa blok biblioteki w pliku .idl.
 ## <a name="syntax"></a>Składnia  
   
 ```  
-  
-      [ module (  
+[ module (  
    type=dll,  
    name=string,  
    version=1.0,  
@@ -50,104 +49,104 @@ Określa blok biblioteki w pliku .idl.
 ) ];  
 ```  
   
-#### <a name="parameters"></a>Parametry  
- ***Typ*** (opcjonalnie)  
+### <a name="parameters"></a>Parametry  
+ *Typ* (opcjonalnie)  
  Może to być jeden z następujących elementów:  
   
--   **biblioteki dll** dodaje funkcje i klasy, które umożliwiają wynikowa Biblioteka DLL do działania jako serwer COM w trakcie. Jest to wartość domyślna.  
+-   `dll` Dodaje funkcje i klasy, które umożliwiają wynikowy DLL do działania jako serwer COM w procesie. Jest to wartość domyślna.  
   
--   **exe** dodaje funkcje i klasy, które umożliwiają powstałe w ten sposób wykonywalnego mógł działać jako poza serwer COM procesu.  
+-   `exe` Dodaje funkcje i klasy, które pozwalają wynikowy pliku wykonywalnego, aby działały jak poza serwer COM przetwarzania.  
   
--   **Usługa** dodaje funkcje i klasy, które umożliwiają powstałe w ten sposób pliku wykonywalnego do działania jako usługa NT.  
+-   `service` Dodaje funkcje i klasy, które pozwalają wynikowy pliku wykonywalnego do działania jako usługa NT.  
   
--   **Nieokreślony** wyłącza iniekcji kodu biblioteki ATL powiązany z atrybutem modułu: iniekcji klasy modułu ATL, globalne wystąpienie _AtlModule i wpis punktu funkcji.  Pozostawienie iniekcji kodu biblioteki ATL z powodu innych atrybutów w projekcie.  
+-   `unspecified` Wyłącza iniekcji kodu biblioteki ATL, powiązany z atrybutem modułu: iniekcji modułu ATL klas, _AtlModule globalnego wystąpienia i wpis punktu funkcji. Nie wyłącza iniekcji kodu biblioteki ATL z powodu innych atrybutów w projekcie.  
   
- ***Nazwa*** (opcjonalnie)  
+ *Nazwa* (opcjonalnie)  
  Nazwa bloku biblioteki.  
   
- ***Wersja*** (opcjonalnie)  
- Numer wersji, który ma zostać przypisany do bloku biblioteki. Wartość domyślna to 1.0.  
+ *Wersja* (opcjonalnie)  
+ Numer wersji, którą chcesz przypisać do bloku biblioteki. Wartość domyślna to 1.0.  
   
- `uuid`  
- Unikatowy identyfikator w bibliotece. Jeśli ten parametr zostanie pominięty, identyfikator będą automatycznie generowane w bibliotece. Należy pobrać *uuid* bloku biblioteki można wykonać za pomocą identyfikatora **__uuidof (***libraryname***)**.  
+ *uuid*  
+ Unikatowy identyfikator dla biblioteki. Jeżeli pominięto ten parametr zostanie automatycznie wygenerowany identyfikator biblioteki. Musisz pobrać *uuid* bloku Biblioteka można wykonać przy użyciu identyfikatora **__uuidof (***libraryname***)**.  
   
- **lcid**  
- Parametr lokalizacja. Zobacz [lcid](http://msdn.microsoft.com/library/windows/desktop/aa367067) Aby uzyskać więcej informacji.  
+ *lcid*  
+ Parametr lokalizacji. Zobacz [lcid](http://msdn.microsoft.com/library/windows/desktop/aa367067) Aby uzyskać więcej informacji.  
   
- **formant** (opcjonalnie)  
- Określa, czy formanty wszystkie klasy coclass w bibliotece.  
+ *Kontrolka* (opcjonalnie)  
+ Określa, że wszystkie klasy coclass w bibliotece kontrolek.  
   
- **helpstring**  
- Określa bibliotekę typów.  
+ *helpstring*  
+ Określa plik biblioteki typów.  
   
- ***helpstringdll —*** (opcjonalnie)  
- Ustawia nazwę plik .dll, który będzie używany do wyszukiwania ciągów dokumentu. Zobacz [helpstringdll —](http://msdn.microsoft.com/library/windows/desktop/aa366860) Aby uzyskać więcej informacji.  
+ *helpstringdll —* (opcjonalnie)  
+ Określa nazwę pliku .dll, aby wykonać wyszukiwanie ciągu dokumentu. Zobacz [helpstringdll —](http://msdn.microsoft.com/library/windows/desktop/aa366860) Aby uzyskać więcej informacji.  
   
- **HelpFile** (opcjonalnie)  
+ *HelpFile —* (opcjonalnie)  
  Nazwa pliku pomocy dla biblioteki typów.  
   
- **helpcontext** (opcjonalnie)  
+ *helpcontext —* (opcjonalnie)  
  Identyfikator pomocy dla tego typu biblioteki.  
   
- **helpstringcontext —** (opcjonalnie)  
+ *helpstringcontext —* (opcjonalnie)  
  Zobacz [helpstringcontext —](../windows/helpstringcontext.md) Aby uzyskać więcej informacji.  
   
- **ukryte** (opcjonalnie)  
- Uniemożliwia wyświetlanie całej biblioteki. To użycie jest przeznaczony do użytku z formantami. Hosty muszą Utwórz nową bibliotekę typu, który opakowuje formantu o rozszerzonych właściwości. Zobacz [ukryte](http://msdn.microsoft.com/library/windows/desktop/aa366861) atrybutu MIDL, aby uzyskać więcej informacji.  
+ *ukryte* (opcjonalnie)  
+ Uniemożliwia wyświetlanie całej biblioteki. To obciążenie jest przeznaczony do użytku z formantami. Hosty muszą Utwórz nową bibliotekę typu, który opakowuje formant z rozszerzonych właściwości. Zobacz [ukryte](http://msdn.microsoft.com/library/windows/desktop/aa366861) atrybutu MIDL, aby uzyskać więcej informacji.  
   
- **ograniczone** (opcjonalnie)  
+ *ograniczone* (opcjonalnie)  
  Elementy członkowskie biblioteki nie może być wywoływana arbitralnie. Zobacz [ograniczeniami](http://msdn.microsoft.com/library/windows/desktop/aa367157) atrybutu MIDL, aby uzyskać więcej informacji.  
   
- ***niestandardowe*** (opcjonalnie)  
- Co najmniej jeden atrybut; jest to podobne do [niestandardowych](../windows/custom-cpp.md) atrybutu. Pierwszy parametr `custom` jest identyfikatorem GUID atrybutu. Na przykład:  
+ *niestandardowe* (opcjonalnie)  
+ Co najmniej jeden atrybut; jest to podobne do [niestandardowe](../windows/custom-cpp.md) atrybutu. Pierwszy parametr *niestandardowe* jest identyfikatorem GUID atrybutu. Na przykład:  
   
 ```  
 [module(custom={guid,1}, custom={guid1,2})]  
 ```  
   
- **resource_name**  
- Identyfikator zasobu ciągu pliku .rgs umożliwia zarejestrowanie tego Identyfikatora aplikacji biblioteki dll, pliku wykonywalnego lub usługi. Jeśli moduł jest typ usługi, ten argument umożliwia również uzyskać identyfikator ciągu zawierającego nazwę usługi.  
+ *resource_name*  
+ Identyfikator ciągu zasobu w pliku .rgs używane do rejestrowania Identyfikatora aplikacji, które biblioteki dll, pliku wykonywalnego lub usługi. Gdy moduł jest typu "Usługa", ten argument jest również używany do uzyskania Identyfikatora ciągu zawierającego nazwę usługi.  
   
 > [!NOTE]
->  Zarówno w pliku .rgs, jak i w ciągu zawierającego nazwę usługi powinny zawierać taką samą wartość liczbową.  
+>  Ciąg zawierający nazwę usługi i pliku .rgs powinien zawierać taką samą wartość liczbową.  
   
 ## <a name="remarks"></a>Uwagi  
- O ile nie zostanie określony **ograniczone** parametr [emitidl](../windows/emitidl.md), **modułu** jest wymagany w program, który używa atrybutów języka C++.  
+ Chyba że określisz *ograniczeniami* parametr [emitidl](../windows/emitidl.md), **modułu** jest wymagany w przypadku dowolnego programu, który używa atrybutów języka C++.  
   
- Blok biblioteki zostanie utworzony, jeśli oprócz **modułu** atrybutu, kod źródłowy używa również [dispinterface](../windows/dispinterface.md), [podwójną](../windows/dual.md), [obiektu](../windows/object-cpp.md), lub atrybut, który oznacza [coclass](../windows/coclass.md).  
+ Blok biblioteka zostanie utworzony, jeśli, oprócz **modułu** atrybutów, kod źródłowy używa również [dispinterface](../windows/dispinterface.md), [podwójną](../windows/dual.md), [obiektu](../windows/object-cpp.md), lub atrybut, który oznacza [coclass](../windows/coclass.md).  
   
- Jeden blok biblioteki jest dozwolony w pliku .idl. Wiele wpisów modułu w kodzie źródłowym zostaną scalone z ostatnich wartości parametru implementowana.  
+ Jeden blok biblioteki jest dozwolona w pliku .idl. Wiele wpisów modułu w kodzie źródłowym zostaną scalone przy użyciu najbardziej aktualnych wartości parametrów są implementowane.  
   
- Jeśli ten atrybut jest używany w projekcie, który używa ATL, zachowanie zmiany atrybutów. Oprócz powyższych zachowanie atrybutu również Wstawia obiekt global (o nazwie **_AtlModule**) poprawnego typu i dodatkowe wsparcie kodu. Jeśli ten atrybut jest autonomiczny, wstawia klasa pochodzi od typu modułu. Jeśli ten atrybut jest stosowany do klasy, dodaje klasę podstawową typu modułu. Niepoprawny typ jest określana przez wartość `type` parametru:  
+ Jeśli ten atrybut jest używany w projekcie, który korzysta z biblioteki ATL, zachowanie zmiany atrybutów. Oprócz powyższych zachowanie atrybutu są wstawiane obiektów globalnych (o nazwie `_AtlModule`) poprawnego typu i kodu dodatkowej pomocy technicznej. Jeśli ten atrybut jest autonomiczna, wstawia klasa pochodzi od typu modułu. Jeśli ten atrybut jest stosowany do klasy, dodaje klasę bazową typu modułu. Niepoprawny typ jest określana przez wartość *typu* parametru:  
   
 -   `type` = **biblioteki dll**  
   
-     [CAtlDllModuleT](../atl/reference/catldllmodulet-class.md) jest używany jako klasa podstawowa i standardowa wejścia biblioteki DLL punktów wymagane przez serwer COM. Te punkty wejścia są [DllMain](http://msdn.microsoft.com/library/windows/desktop/ms682583), [DllRegisterServer](http://msdn.microsoft.com/library/windows/desktop/ms682162), [DllUnRegisterServer](http://msdn.microsoft.com/library/windows/desktop/ms691457), [DllCanUnloadNow](http://msdn.microsoft.com/library/windows/desktop/ms690368), i [ Metody DllGetClassObject](http://msdn.microsoft.com/library/windows/desktop/dd797891).  
+     [CAtlDllModuleT](../atl/reference/catldllmodulet-class.md) służy jako klasa podstawowa i standardowa wejścia biblioteki DLL punktów wymaganych dla serwera COM. Te punkty wejścia są [DllMain](http://msdn.microsoft.com/library/windows/desktop/ms682583), [DllRegisterServer](http://msdn.microsoft.com/library/windows/desktop/ms682162), [DllUnRegisterServer](http://msdn.microsoft.com/library/windows/desktop/ms691457), [DllCanUnloadNow](http://msdn.microsoft.com/library/windows/desktop/ms690368), i [ DllGetClassObject](http://msdn.microsoft.com/library/windows/desktop/dd797891).  
   
--   `type` = **Wywołanie pliku exe**  
+-   `type` = **plik exe**  
   
-     [CAtlExeModuleT](../atl/reference/catlexemodulet-class.md) jest używany jako klasa podstawowa i punkt wejścia pliku wykonywalnego standardowe [WinMain](http://msdn.microsoft.com/library/windows/desktop/ms633559).  
+     [CAtlExeModuleT](../atl/reference/catlexemodulet-class.md) służy jako klasa bazowa i punktu wejścia pliku wykonywalnego standardowa [WinMain](http://msdn.microsoft.com/library/windows/desktop/ms633559).  
   
--   `type` = **Usługi**  
+-   `type` = **Usługa**  
   
-     [CAtlServiceModuleT](../atl/reference/catlservicemodulet-class.md) jest używany jako klasa podstawowa i punkt wejścia pliku wykonywalnego standardowe [WinMain](http://msdn.microsoft.com/library/windows/desktop/ms633559).  
+     [CAtlServiceModuleT](../atl/reference/catlservicemodulet-class.md) służy jako klasa bazowa i punktu wejścia pliku wykonywalnego standardowa [WinMain](http://msdn.microsoft.com/library/windows/desktop/ms633559).  
   
--   `type` = **Nieokreślony**  
+-   `type` = **Nie określono tego parametru**  
   
-     Wyłącza iniekcji kodu biblioteki ATL powiązany z atrybutem modułu.  
+     Wyłącza iniekcji kodu biblioteki ATL, powiązany z atrybutem modułu.  
   
 ## <a name="example"></a>Przykład  
  Poniższy kod przedstawia sposób tworzenia blok biblioteki w pliku .idl wygenerowany.  
   
-```  
+```cpp  
 // cpp_attr_ref_module1.cpp  
 // compile with: /LD  
 [module(name="MyLibrary", version="1.2", helpfile="MyHelpFile")];  
 ```  
   
- Poniższy kod przedstawia zapewniają implementacji funkcji, która będzie wyświetlana na kod, który został wprowadzonym w wyniku użycia **modułu**. Zobacz [/Fx](../build/reference/fx-merge-injected-code.md) Aby uzyskać więcej informacji o wyświetlaniu wprowadzony kod. Aby zastąpić jedną z funkcji wstawiane przez **modułu** atrybutu, należy klasa, która będzie zawierać implementacji funkcji i upewnij **modułu** atrybutu dotyczą tej klasy.  
+ Poniższy kod pokazuje, że może zapewnić implementacji funkcji, która będzie wyświetlana w kodzie, który został wprowadzony w wyniku użycia **modułu**. Zobacz [/Fx](../build/reference/fx-merge-injected-code.md) Aby uzyskać więcej informacji o wyświetlaniu wprowadzonego kodu. Aby zastąpić jedną z funkcji wstawione przez **modułu** atrybutu, wybierz klasę, która będzie zawierać implementacji funkcji upewnij **modułu** atrybut zastosowania do tej klasy.  
   
-```  
+```cpp  
 // cpp_attr_ref_module2.cpp  
 // compile with: /LD /link /OPT:NOREF  
 #include <atlbase.h>  
@@ -172,11 +171,11 @@ BOOL WINAPI DllMain(DWORD dwReason, LPVOID lpReserved) {
   
 ## <a name="requirements"></a>Wymagania  
   
-### <a name="attribute-context"></a>Atrybut kontekstu  
+### <a name="attribute-context"></a>Kontekst atrybutu  
   
 |||  
 |-|-|  
-|**Dotyczy**|Dowolnego miejsca|  
+|**Dotyczy**|Dowolne miejsce|  
 |**Powtarzalne**|Nie|  
 |**Wymaganych atrybutów**|Brak|  
 |**Nieprawidłowe atrybuty**|Brak|  
@@ -187,10 +186,10 @@ BOOL WINAPI DllMain(DWORD dwReason, LPVOID lpReserved) {
  [Atrybuty IDL](../windows/idl-attributes.md)   
  [Atrybuty klasy](../windows/class-attributes.md)   
  [Oddzielne atrybuty](../windows/stand-alone-attributes.md)   
- [Element TypeDef, Enum, Unii i struct — atrybuty](../windows/typedef-enum-union-and-struct-attributes.md)   
+ [Element TypeDef, Enum, Union i struct — atrybuty](../windows/typedef-enum-union-and-struct-attributes.md)   
  [usesgetlasterror —](../windows/usesgetlasterror.md)   
  [Biblioteka](http://msdn.microsoft.com/library/windows/desktop/aa367069)   
- [helpcontext](../windows/helpcontext.md)   
+ [helpcontext —](../windows/helpcontext.md)   
  [HelpString —](../windows/helpstring.md)   
- [HelpFile](../windows/helpfile.md)   
+ [HelpFile —](../windows/helpfile.md)   
  [Wersja](../windows/version-cpp.md)   

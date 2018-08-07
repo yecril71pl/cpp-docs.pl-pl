@@ -17,15 +17,15 @@ ms.author: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: b0450820afdde3eb330948a65f8d052fa54017dc
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 8686d0ef990e9be22ec4ebe1c81c737df9b15812
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33892719"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39607407"
 ---
 # <a name="safeadd"></a>SafeAdd
-Dodaje dwie liczb w sposób zapewniający ochronę przed przepełnienia.  
+Dodaje dwie liczby, w sposób zapewniający ochronę przed przepełnienia.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -38,26 +38,26 @@ inline bool SafeAdd (
 ) throw ();  
 ```  
   
-#### <a name="parameters"></a>Parametry  
- [in] `t`  
- Pierwszy numer do dodania. To musi być typu T.  
+### <a name="parameters"></a>Parametry  
+ [in] *t*  
+ Pierwsza liczba do dodania. To musi być typu T.  
   
- [in] `u`  
- Druga liczba do dodania. Musi to być typ U.  
+ [in] *u*  
+ Druga liczba do dodania. Musi mieć typ U.  
   
- [out] `result`  
- Parametr gdzie `SafeAdd` zapisuje wynik.  
+ [out] *wynik*  
+ Parametr gdzie **SafeAdd** zapisuje wynik.  
   
 ## <a name="return-value"></a>Wartość zwracana  
- `true` Jeśli nie występują błędy; `false` w przypadku wystąpienia błędu.  
+ **wartość true,** Jeśli żaden błąd nie wystąpi; **false** w przypadku wystąpienia błędu.  
   
 ## <a name="remarks"></a>Uwagi  
- Ta metoda jest częścią [Biblioteka SafeInt](../windows/safeint-library.md) i jest przeznaczony dla operacji dodawania jednego bez tworzenia wystąpienia [safeint — klasa](../windows/safeint-class.md).  
+ Ta metoda jest częścią [Biblioteka SafeInt](../windows/safeint-library.md) i jest przeznaczony dla operacji dodawania jednego bez tworzenia wystąpienia obiektu [safeint — klasa](../windows/safeint-class.md).  
   
 > [!NOTE]
->  Tej metody należy używać tylko w przypadku, gdy jednej operacji matematycznych muszą być chronione. Jeśli istnieje wiele operacji, należy użyć `SafeInt` klasy zamiast kontaktować się z poszczególnych funkcji autonomicznych.  
+>  Ta metoda ją stosować tylko po jednej operacji matematycznych muszą być chronione. Jeśli istnieje wiele operacji, należy użyć `SafeInt` klasy zamiast wywoływania poszczególnych funkcjami autonomicznymi.  
   
- Aby uzyskać więcej informacji o typach szablonu T oraz U, zobacz [safeint — funkcje](../windows/safeint-functions.md).  
+ Aby uzyskać więcej informacji na temat typów szablonu T i U zobacz [safeint — funkcje](../windows/safeint-functions.md).  
   
 ## <a name="requirements"></a>Wymagania  
  **Nagłówek:** safeint.h  

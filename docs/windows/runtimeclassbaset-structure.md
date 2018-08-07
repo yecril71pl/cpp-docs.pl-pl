@@ -1,5 +1,5 @@
 ---
-title: Runtimeclassbaset — struktura | Dokumentacja firmy Microsoft
+title: RuntimeClassBaseT, struktura | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,12 +15,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 3ea147ebddff03401f6151bcdc44d96efb233f90
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: ec10faf9733bbff3fb271b5465ee70a338c37898
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33888997"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39604996"
 ---
 # <a name="runtimeclassbaset-structure"></a>RuntimeClassBaseT — Struktura
 Obsługuje infrastrukturę biblioteki WRL i nie jest przeznaczona do użycia bezpośrednio w kodzie.  
@@ -34,12 +34,12 @@ template <
 friend struct Details::RuntimeClassBaseT;  
 ```  
   
-#### <a name="parameters"></a>Parametry  
- `RuntimeClassTypeT`  
- Pole flagi, które określa jedną lub więcej [runtimeclasstype —](../windows/runtimeclasstype-enumeration.md) wyliczenia.  
+### <a name="parameters"></a>Parametry  
+ *RuntimeClassTypeT*  
+ Pola flagi, które określa co najmniej jeden [RuntimeClassType](../windows/runtimeclasstype-enumeration.md) modułów wyliczających.  
   
 ## <a name="remarks"></a>Uwagi  
- Udostępnia metody pomocnicze do `QueryInterface` operacje i pobieranie identyfikatorów interfejsu.  
+ Zapewnia metody pomocnika do `QueryInterface` operacji oraz pobieranie identyfikatorów interfejsu.  
   
 ## <a name="members"></a>Elementy członkowskie  
   
@@ -49,8 +49,8 @@ friend struct Details::RuntimeClassBaseT;
 ## <a name="requirements"></a>Wymagania  
  **Nagłówek:** implements.h  
   
- **Namespace:** Microsoft::wrl:: details —  
+ **Namespace:** Microsoft::wrl:: details  
   
 ## <a name="see-also"></a>Zobacz też  
- [Odwołanie (Biblioteka środowiska uruchomieniowego systemu Windows)](http://msdn.microsoft.com/en-us/00000000-0000-0000-0000-000000000000)   
+ [Odwołanie (Biblioteka środowiska uruchomieniowego Windows)](http://msdn.microsoft.com/00000000-0000-0000-0000-000000000000)   
  [Microsoft::WRL::Details, przestrzeń nazw](../windows/microsoft-wrl-details-namespace.md)

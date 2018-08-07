@@ -17,45 +17,43 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 17a57ad56402b345aa64e4e4fd02bc57dd7f0321
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: efa937c1eaabb23fe5a360444f8c2105b735b260
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33877920"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39604203"
 ---
 # <a name="local-c"></a>local (C++)
-Gdy jest używany w nagłówku interfejsu, umożliwia przy użyciu kompilatora MIDL jako generator nagłówka. W przypadku poszczególnych funkcji wyznacza procedury lokalnym, dla których są generowane nie klas zastępczych.  
+W przypadku użycia w nagłówku interfejsu, umożliwia kompilatorowi MIDL jako generator nagłówka. W przypadku użycia w poszczególnych funkcji, wyznacza lokalnej procedury, dla którego są generowane nie wycinki.  
   
 ## <a name="syntax"></a>Składnia  
   
 ```  
-  
 [local]  
-  
 ```  
   
 ## <a name="remarks"></a>Uwagi  
- `local` Atrybut C++ ma te same funkcje co [lokalnego](http://msdn.microsoft.com/library/windows/desktop/aa367071) MIDL atrybutu.  
+ **Lokalnego** atrybut C++ ma taką samą funkcjonalność jak [lokalnego](http://msdn.microsoft.com/library/windows/desktop/aa367071) atrybutów w MIDL.  
   
 ## <a name="example"></a>Przykład  
- Zobacz [call_as](../windows/call-as.md) przykład sposobu użycia `local`.  
+ Zobacz [call_as](../windows/call-as.md) przykład sposobu użycia **lokalnego**.  
   
 ## <a name="requirements"></a>Wymagania  
   
-### <a name="attribute-context"></a>Atrybut kontekstu  
+### <a name="attribute-context"></a>Kontekst atrybutu  
   
 |||  
 |-|-|  
-|**Dotyczy**|`interface`, interfejsu — metoda|  
+|**Dotyczy**|**interfejs**, interfejs — metoda|  
 |**Powtarzalne**|Nie|  
 |**Wymaganych atrybutów**|Brak|  
-|**Nieprawidłowe atrybuty**|**dispinterface**|  
+|**Nieprawidłowe atrybuty**|`dispinterface`|  
   
  Aby uzyskać więcej informacji, zobacz [konteksty atrybutu](../windows/attribute-contexts.md).  
   
 ## <a name="see-also"></a>Zobacz też  
  [Atrybuty IDL](../windows/idl-attributes.md)   
  [Atrybuty interfejsu](../windows/interface-attributes.md)   
- [Atrybuty — metoda](../windows/method-attributes.md)   
+ [Atrybuty metody](../windows/method-attributes.md)   
  [call_as](../windows/call-as.md)   

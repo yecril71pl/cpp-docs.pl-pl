@@ -16,35 +16,34 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 11e5c964092bbd67137ed3b6084da9589b026833
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 056d20420484b29bd66827607432ebe2d6543c52
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33879838"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39607361"
 ---
 # <a name="inserting-a-space-between-buttons-on-a-toolbar"></a>Wstawianie odstępów między przyciskami na pasku narzędzi
-Ogólnie rzecz biorąc Wstaw odstęp między przyciskami, wystarczy przeciągnąć ich od siebie na pasku narzędzi. Aby usunąć miejsca, przeciągnij je do siebie.  
+Ogólnie rzecz biorąc Aby wstawić odstęp między przyciskami, wystarczy przeciągnąć je od siebie nawzajem na pasku narzędzi. Aby usunąć przestrzeń, przeciągnij je do siebie nawzajem.  
   
-### <a name="to-insert-a-space-before-a-button-that-is-not-followed-by-a-space"></a>Wstaw spację przed przycisku, który nie jest zakończony znakiem spacji  
+### <a name="to-insert-a-space-before-a-button-that-is-not-followed-by-a-space"></a>Aby wstawić odstęp przed przycisk, który nie jest zakończony znakiem spacji  
   
-1.  Przeciągnij przycisku z prawej strony lub w dół do momentu połowie o jego nakłada przycisk Dalej.  
+1.  Przeciągnij przycisk po prawej stronie lub w dół do momentu widoczny w połowie o jej nakłada przycisk Dalej.  
   
-### <a name="to-insert-a-space-before-a-button-which-is-followed-by-a-space-and-to-retain-that-trailing-space"></a>Wstaw spację przed przycisk, w której następuje spacja i zachować tego spacje końcowe  
+### <a name="to-insert-a-space-before-a-button-which-is-followed-by-a-space-and-to-retain-that-trailing-space"></a>Wstaw spację przed przycisk, który następuje spacja i zachowania tego spacji na końcu  
   
-1.  Przeciągnij przycisk, aż do prawej lub dolnej krawędzi zachodzi tylko przycisk Dalej lub po prostu pokrywa się.  
+1.  Przeciągnij przycisk, aż do prawej lub dolnej krawędzi zachodzi po prostu przycisk Dalej, lub po prostu nakłada się.  
   
-### <a name="to-insert-a-space-before-a-button-that-is-followed-by-a-space-and-close-up-that-following-space"></a>Wstaw spację przed przycisk, w którym następuje spacja i zamknij następujące miejsca  
+### <a name="to-insert-a-space-before-a-button-that-is-followed-by-a-space-and-close-up-that-following-space"></a>Wstaw spację przed przycisk, który następuje spacja i zamknąć tego następujące miejsce  
   
-1.  Przeciągnij przycisku z prawej strony lub w dół do momentu połowie o jego nakłada przycisk Dalej.  
+1.  Przeciągnij przycisk po prawej stronie lub w dół do momentu widoczny w połowie o jej nakłada przycisk Dalej.  
   
- Aby uzyskać informacje o dodawaniu zasobów do projektów zarządzanych, zobacz [zasobów w aplikacjach pulpitu](/dotnet/framework/resources/index) w *Przewodnik programistów platformy .NET Framework.* Aby uzyskać informacje na ręczne dodanie do projektów zarządzanych plików zasobów, uzyskiwanie dostępu do zasobów, wyświetlanie zasoby statyczne i przypisanie do właściwości ciągów zasobów, zobacz [tworzenie plików zasobów dla aplikacji pulpitu](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Informacje dotyczące globalizacji i lokalizacji zasobów w zarządzanych aplikacjach, zobacz [Globalizing i lokalizacja aplikacji .NET Framework](/dotnet/standard/globalization-localization/index).  
+ Aby uzyskać informacje na temat dodawania zasobów do projektów zarządzanych, zobacz [zasoby w aplikacjach pulpitu](/dotnet/framework/resources/index) w *przewodniku dewelopera .NET Framework*. Aby uzyskać informacji na temat ręcznego dodawania plików zasobów do projektów zarządzanych, uzyskiwania dostępu do zasobów, wyświetlania statycznych zasobów i przypisywania ciągów zasobów do właściwości, zobacz [Creating Resource Files dla aplikacji klasycznych](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Aby uzyskać informacji na temat globalizacja i lokalizacja zasobów w aplikacjach zarządzanych, zobacz [Globalizing i lokalizowanie aplikacji programu .NET Framework](/dotnet/standard/globalization-localization/index).  
   
- Wymagania  
+## <a name="requirements"></a>Wymagania  
   
- MFC i ATL  
+ ATL i MFC  
   
 ## <a name="see-also"></a>Zobacz też  
  [Tworzenie, przenoszenie i edytowanie przycisków paska narzędzi](../windows/creating-moving-and-editing-toolbar-buttons.md)   
  [Edytor paska narzędzi](../windows/toolbar-editor.md)
-

@@ -18,43 +18,42 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 60da452fe4373d47f5278fa45520a45235f76df0
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 8fd2160a2e9eef9165aea835d093978fec35e5fd
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33888711"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39608270"
 ---
 # <a name="selecting-multiple-controls"></a>Wybieranie wielu formantów
-### <a name="to-select-multiple-controls"></a>Aby zaznaczyć wiele formantów  
+### <a name="to-select-multiple-controls"></a>Aby wybrać wiele formantów  
   
-1.  W [okno przybornika](/visualstudio/ide/reference/toolbox), wybierz pozycję **wskaźnika** narzędzia.  
+1.  W [okno przybornika](/visualstudio/ide/reference/toolbox), wybierz opcję **wskaźnik** narzędzia.  
   
-2.  Przeciągnij wskaźnik do Rysuj pole wyboru wokół formantów, które chcesz wybrać w oknie dialogowym.  
+2.  Przeciągnij wskaźnik, aby narysować pole zaznaczenia wokół formanty, które chcesz zaznaczyć w oknie dialogowym.  
   
-     Po zwolnieniu przycisku myszy, wszystkie formanty wewnątrz i przecinające się są zaznaczone pola wyboru.  
+     Po zwolnieniu przycisku myszy kontroluje wszystkie wewnątrz i przecinające się są zaznaczone pola wyboru.  
   
-     \- lub -  
+     \- lub —  
   
--   Naciśnij i przytrzymaj klawisz SHIFT, a następnie kliknij formanty, które powinny zostać uwzględnione w zaznaczeniu.  
+-   Naciśnij i przytrzymaj **Shift** klucza, a następnie kliknij przycisk kontrolek, czy chcesz uwzględnić w zaznaczeniu.  
   
-     \- lub -  
+     \- lub —  
   
--   Naciśnij i przytrzymaj klawisz Ctrl i kliknij formanty, które powinny zostać uwzględnione w zaznaczeniu.  
+-   Naciśnij i przytrzymaj **Ctrl** klucza, a następnie kliknij przycisk kontrolek, czy chcesz uwzględnić w zaznaczeniu.  
   
-#### <a name="to-remove-a-control-from-a-group-of-selected-controls-or-to-add-a-control-to-a-group-of-selected-controls"></a>Usuwanie formantu z grupy wybranych formantów lub dodawanie formantu do grupy wybranej formantów  
+### <a name="to-remove-a-control-from-a-group-of-selected-controls-or-to-add-a-control-to-a-group-of-selected-controls"></a>Aby usunąć formant z grupą wybranych kontrolek lub dodać kontrolkę z grupą wybranych kontrolek  
   
-1.  Z grupą zaznaczonych formantów przytrzymaj naciśnięty klawisz SHIFT, a następnie kliknij przycisk formant, który chcesz usunąć z lub Dodaj do istniejącego zaznaczenia.  
+1.  Z grupą wybrano kontrolki, naciśnij i przytrzymaj **Shift** klucza, a następnie kliknij kontrolkę, która do usuwania lub Dodaj do istniejącego zaznaczenia.  
   
     > [!NOTE]
-    >  Przytrzymując klawisz CTRL i klikając formantu w wyborze spowoduje, że przez formant dominujący w ramach tego zaznaczenia. Aby uzyskać więcej informacji, zobacz [Określanie formantu dominującego](../windows/specifying-the-dominant-control.md).  
+    >  Przytrzymując naciśnięty klawisz CTRL i klikając kontrolki wyboru spowoduje, że przez formantu dominującego w ramach tego zaznaczenia. Aby uzyskać więcej informacji, zobacz [Określanie formantu dominującego](../windows/specifying-the-dominant-control.md).  
   
- Aby uzyskać informacje o dodawaniu zasobów do projektów zarządzanych, zobacz [zasobów w aplikacjach pulpitu](/dotnet/framework/resources/index) w *Przewodnik programistów platformy .NET Framework.* Aby uzyskać informacje na ręczne dodanie do projektów zarządzanych plików zasobów, uzyskiwanie dostępu do zasobów, wyświetlanie zasoby statyczne i przypisanie do właściwości ciągów zasobów, zobacz [tworzenie plików zasobów dla aplikacji pulpitu](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Informacje dotyczące globalizacji i lokalizacji zasobów w zarządzanych aplikacjach, zobacz [Globalizing i lokalizacja aplikacji .NET Framework](/dotnet/standard/globalization-localization/index).  
+ Aby uzyskać informacje na temat dodawania zasobów do projektów zarządzanych, zobacz [zasoby w aplikacjach pulpitu](/dotnet/framework/resources/index) w *przewodniku dewelopera .NET Framework*. Aby uzyskać informacji na temat ręcznego dodawania plików zasobów do projektów zarządzanych, uzyskiwania dostępu do zasobów, wyświetlania statycznych zasobów i przypisywania ciągów zasobów do właściwości, zobacz [Creating Resource Files dla aplikacji klasycznych](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Aby uzyskać informacji na temat globalizacja i lokalizacja zasobów w aplikacjach zarządzanych, zobacz [Globalizing i lokalizowanie aplikacji programu .NET Framework](/dotnet/standard/globalization-localization/index).  
   
-### <a name="requirements"></a>Wymagania  
+## <a name="requirements"></a>Wymagania  
  Win32  
   
 ## <a name="see-also"></a>Zobacz też  
- [Zaznaczanie formantów](../windows/selecting-controls.md)   
+ [Zaznaczanie kontrolek](../windows/selecting-controls.md)   
  [Kontrolki w oknach dialogowych](../windows/controls-in-dialog-boxes.md)
-

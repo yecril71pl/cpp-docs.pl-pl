@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: a8844a4770d0a4746c9d9de32a593d0770dcc9a9
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 96e316add17ff45425bd51a7e32b276b234c6906
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33878515"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39606517"
 ---
 # <a name="idlquote"></a>idl_quote
 Umożliwia użycie konstrukcji języka IDL, które nie są obsługiwane w bieżącej wersji programu Visual C++ i mieć przekazywane do pliku .idl wygenerowany.  
@@ -30,23 +30,22 @@ Umożliwia użycie konstrukcji języka IDL, które nie są obsługiwane w bież�
 ## <a name="syntax"></a>Składnia  
   
 ```  
-  
-      [ idl_quote(  
+[ idl_quote(  
    text  
 ) ]  
 ```  
   
 #### <a name="parameters"></a>Parametry  
  *Tekst*  
- Nazwa atrybutu, który ma kompilatora Visual C++ do przekazywania do pliku .idl wygenerowanego bez wystąpi błąd kompilatora powrotu.  
+ Nazwa atrybutu, który ma kompilator języka Visual C++ do przejścia do pliku .idl wygenerowany bez zwracania błędów kompilatora.  
   
 ## <a name="remarks"></a>Uwagi  
- Jeśli **idl_quote —** atrybut C++ jest używany jako atrybut autonomiczny (średnikiem po zamykający nawias kwadratowy), następnie *tekst* znajduje się w pliku .idl scalone, jak. Jeśli **idl_quote —** jest używany na symbolu, *tekst* znajduje się w bloku atrybutu dla tego symbolu.  
+ Jeśli **idl_quote —** atrybut C++ jest używany jako atrybut autonomiczny (przy użyciu średnika po zamykającym nawiasie), następnie *tekstu* zostanie umieszczony w pliku .idl scalone, ponieważ jest. Jeśli **idl_quote —** jest używana na symbol, *tekstu* znajduje się w bloku atrybutu dla tego symbolu.  
   
 ## <a name="example"></a>Przykład  
- Poniższy kod przedstawia, jak można określić nieobsługiwany atrybut (przy użyciu **w**, która jest obsługiwana) oraz sposób definiowania i użyj konstrukcji niezdefiniowany .idl:  
+ W poniższym kodzie pokazano, jak można określić nieobsługiwany atrybut (przy użyciu **w**, który jest obsługiwany) oraz jak zdefiniować i zastosować konstrukcję niezdefiniowane .idl:  
   
-```  
+```cpp  
 // cpp_attr_ref_idl_quote.cpp  
 // compile with: /LD  
 #include <unknwn.h>  
@@ -79,15 +78,15 @@ __interface IStatic{
 };  
 ```  
   
- Ten kod powoduje, że MYFLOT i MYDUB i *tekst* wpisu do umieszczenia w pliku .idl wygenerowany. *Nazwa* wymusza parametru *tekst* być umieszczone przed niczego, który odwołuje się do *nazwa* w pliku .idl wygenerowany. *Zależności* parametru wymusza definicje listy zależności, aby umieścić przed *tekst* w pliku .idl wygenerowany.  
+ Ten kod powoduje, że MYFLOT i MYDUB i *tekstu* wpis do umieszczenia w pliku .idl wygenerowany. *Nazwa* wymusza parametr *tekstu* umieścić przed niczego, który odwołuje się do *nazwa* w pliku .idl wygenerowany. *Zależności* parametru wymusza definicje list zależności można umieścić przed *tekstu* w pliku .idl wygenerowany.  
   
 ## <a name="requirements"></a>Wymagania  
   
-### <a name="attribute-context"></a>Atrybut kontekstu  
+### <a name="attribute-context"></a>Kontekst atrybutu  
   
 |||  
 |-|-|  
-|**Dotyczy**|Dowolnego miejsca|  
+|**Dotyczy**|Dowolne miejsce|  
 |**Powtarzalne**|Nie|  
 |**Wymaganych atrybutów**|Brak|  
 |**Nieprawidłowe atrybuty**|Brak|  

@@ -17,35 +17,34 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: cab41277a7e5560fd842bf720fd776961d918d99
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 5abd483fb5a680ac3dba4ec01fc4bc6ebfa09ef2
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33878151"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39602620"
 ---
 # <a name="pragma"></a>pragma
-Emituje określonego ciągu w pliku .idl wygenerowanego bez użycia cudzysłowów. .  
+Emituje określonego ciągu w pliku .idl wygenerowany bez znaków cudzysłowu. 
   
 ## <a name="syntax"></a>Składnia  
   
 ```  
-  
-      [ pragma(  
+[ pragma(  
    pragma_statement  
 ) ];  
 ```  
   
 #### <a name="parameters"></a>Parametry  
  *pragma_statement*  
- Pragma, który ma zostać umieszczone w pliku .idl wygenerowany.  
+ Pragmę, której chcesz przejść do pliku .idl wygenerowany.  
   
 ## <a name="remarks"></a>Uwagi  
- **Pragma** atrybut C++ ma te same funkcje co [pragma](http://msdn.microsoft.com/library/windows/desktop/aa367143) MIDL atrybutu.  
+ **Pragma** atrybut C++ ma taką samą funkcjonalność jak [pragma](http://msdn.microsoft.com/library/windows/desktop/aa367143) atrybutów w MIDL.  
   
 ## <a name="example"></a>Przykład  
   
-```  
+```cpp  
 // cpp_attr_ref_pragma.cpp  
 // compile with: /LD  
 #include "unknwn.h"  
@@ -61,16 +60,16 @@ __interface A
   
 ## <a name="requirements"></a>Wymagania  
   
-### <a name="attribute-context"></a>Atrybut kontekstu  
+### <a name="attribute-context"></a>Kontekst atrybutu  
   
 |||  
 |-|-|  
-|**Dotyczy**|Dowolnego miejsca|  
+|**Dotyczy**|Dowolne miejsce|  
 |**Powtarzalne**|Nie|  
 |**Wymaganych atrybutów**|Brak|  
 |**Nieprawidłowe atrybuty**|Brak|  
   
- Aby uzyskać więcej informacji na temat konteksty atrybutu, zobacz [konteksty atrybutu](../windows/attribute-contexts.md).  
+ Aby uzyskać więcej informacji na temat konteksty atrybutu zobacz [konteksty atrybutu](../windows/attribute-contexts.md).  
   
 ## <a name="see-also"></a>Zobacz też  
  [Atrybuty IDL](../windows/idl-attributes.md)   

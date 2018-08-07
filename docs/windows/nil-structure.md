@@ -1,5 +1,5 @@
 ---
-title: Nil — struktura | Dokumentacja firmy Microsoft
+title: Nil, struktura | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,12 +15,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: cb260114a8010d441f0556cf2a21734c0ac23cca
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 12346ffa30b3e309dcb845117f311cd4a63b9ad9
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33881429"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39603620"
 ---
 # <a name="nil-structure"></a>Nil — Struktura
 Obsługuje infrastrukturę biblioteki WRL i nie jest przeznaczona do użycia bezpośrednio w kodzie.  
@@ -32,9 +32,9 @@ struct Nil;
 ```  
   
 ## <a name="remarks"></a>Uwagi  
- Służy do wskazania parametr szablonu nieokreślony, opcjonalne.  
+ Służy do wskazania parametrem szablonu nieokreślony, opcjonalne.  
   
- Zero jest pustą strukturą.  
+ **Pas** jest pustą strukturą.  
   
 ## <a name="inheritance-hierarchy"></a>Hierarchia dziedziczenia  
  `Nil`  
@@ -42,7 +42,7 @@ struct Nil;
 ## <a name="requirements"></a>Wymagania  
  **Nagłówek:** implements.h  
   
- **Namespace:** Microsoft::wrl:: details —  
+ **Namespace:** Microsoft::wrl:: details  
   
 ## <a name="see-also"></a>Zobacz też  
  [Microsoft::WRL::Details, przestrzeń nazw](../windows/microsoft-wrl-details-namespace.md)

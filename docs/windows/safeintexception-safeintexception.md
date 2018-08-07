@@ -19,15 +19,15 @@ ms.author: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: ef3c1d11c0f814699ca1492f7ec1fb49c43c3d76
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 744bf034572745cd88a35f47a1ca2da03e900fd8
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33892179"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39606660"
 ---
 # <a name="safeintexceptionsafeintexception"></a>SafeIntException::SafeIntException
-Tworzy `SafeIntException` obiektu.  
+Tworzy **safeintexception —** obiektu.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -39,12 +39,12 @@ SafeIntException(
 );  
 ```  
   
-#### <a name="parameters"></a>Parametry  
- [in] `code`  
- Wartość wyliczenia danych opisujący wystąpił błąd.  
+### <a name="parameters"></a>Parametry  
+ [in] *kodu*  
+ Wartość danych wyliczany, który opisuje błąd, który wystąpił.  
   
 ## <a name="remarks"></a>Uwagi  
- Możliwe wartości `code` są zdefiniowane w pliku Safeint.h. Dla wygody możliwe wartości znajdują się w tym miejscu.  
+ Możliwe wartości parametru *kodu* są zdefiniowane w pliku Safeint.h. Dla wygody możliwe wartości są również wymienione tutaj.  
   
 -   `SafeIntNoError`  
   

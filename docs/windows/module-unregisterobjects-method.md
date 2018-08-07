@@ -1,5 +1,5 @@
 ---
-title: Module::UnregisterObjects — metoda | Dokumentacja firmy Microsoft
+title: Module::UnregisterObjects, metoda | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 7b711338c436eda3e64d9b51ef0d3137975d834a
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: bb477b2d5c0a6eabf1e3304c0cadcb34d3910fe5
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33874122"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39607443"
 ---
 # <a name="moduleunregisterobjects-method"></a>Module::UnregisterObjects — Metoda
-Wyrejestrowuje obiektów określony moduł, dzięki czemu inne aplikacje nie mogą łączyć się je.  
+Wyrejestrowuje obiektów w określonym module, tak aby inne aplikacje nie mogą nawiązać z nimi.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -35,20 +35,20 @@ HRESULT UnregisterObjects(
    const wchar_t* serverName);  
 ```  
   
-#### <a name="parameters"></a>Parametry  
- `module`  
+### <a name="parameters"></a>Parametry  
+ *Moduł*  
  Wskaźnik do modułu.  
   
- `serverName`  
- Kwalifikujące nazwę, która określa podzbiór obiektów przez tę operację.  
+ *serverName*  
+ Kwalifikującym się nazwa, która określa podzbiór obiektów wpływ tej operacji.  
   
 ## <a name="return-value"></a>Wartość zwracana  
- Wartość S_OK, jeśli operacja zakończy się pomyślnie; w przeciwnym razie błąd HRESULT, która wskazuje przyczynę ta operacja nie powiodła się.  
+ S_OK, jeśli operacja się powiedzie; w przeciwnym razie błąd HRESULT, która wskazuje przyczynę tej operacji nie powiodło się.  
   
 ## <a name="requirements"></a>Wymagania  
  **Nagłówek:** module.h  
   
- **Namespace:** Microsoft::wrl —
+ **Namespace:** Microsoft::WRL
  
  ## <a name="see-also"></a>Zobacz też
  [Klasa modułu](../windows/module-class.md)

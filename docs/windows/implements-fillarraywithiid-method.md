@@ -1,5 +1,5 @@
 ---
-title: Implements::FillArrayWithIid — metoda | Dokumentacja firmy Microsoft
+title: Implements::FillArrayWithIid, metoda | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: e020bd725d0c0f5c65ab1cfb38b45e2b8fbca62e
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 6797c274402578cfecb522c86745fb5b257e213d
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33875724"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39608861"
 ---
 # <a name="implementsfillarraywithiid-method"></a>Implements::FillArrayWithIid — Metoda
-Wstawia podany identyfikator interfejsu przez bieżący parametr szablonu zeroth w element określonej tablicy.  
+Wstawia identyfikator interfejsu określonego przez bieżący parametr szablonu zerowego do elementu określonej tablicy.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -36,11 +36,11 @@ __forceinline static void FillArrayWithIid(
 );  
 ```  
   
-#### <a name="parameters"></a>Parametry  
- `index`  
- Liczony od zera indeks, który wskazuje element tablicy początkowy dla tej operacji. Po zakończeniu tej operacji, `index` jest zwiększana o 1.  
+### <a name="parameters"></a>Parametry  
+ *index*  
+ Liczony od zera indeks, który wskazuje element początkowy tablicy do wykonania tej operacji. Po zakończeniu tej operacji, *indeksu* jest zwiększana o 1.  
   
- `iids`  
+ *IID*  
  Tablica typu IID.  
   
 ## <a name="remarks"></a>Uwagi  
@@ -49,7 +49,7 @@ __forceinline static void FillArrayWithIid(
 ## <a name="requirements"></a>Wymagania  
  **Nagłówek:** implements.h  
   
- **Namespace:** Microsoft::wrl —  
+ **Namespace:** Microsoft::WRL  
   
 ## <a name="see-also"></a>Zobacz też  
  [Implements, struktura](../windows/implements-structure.md)

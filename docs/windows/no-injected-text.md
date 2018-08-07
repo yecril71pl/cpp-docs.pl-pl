@@ -17,44 +17,43 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 74336ffaa5e1f9f1990acedf1669526c9152b82b
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: c1b629f805cf07736dd7988cac6afb857a23b5e5
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33880351"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39603423"
 ---
 # <a name="noinjectedtext"></a>no_injected_text
-Zabezpiecza kompilator przed wstrzyknięcie kodu w wyniku użycia atrybutu.  
+Zabezpiecza kompilator przed wprowadzanie kodu w wyniku użycia atrybutu.  
   
 ## <a name="syntax"></a>Składnia  
   
 ```  
-  
-      [ no_injected_text(  
+[ no_injected_text(  
    boolean  
 ) ];  
 ```  
   
 #### <a name="parameters"></a>Parametry  
- `boolean`(opcjonalnie)  
- **wartość true,** Jeśli chcesz, aby żaden kod dodane **false** do umożliwia ich wstrzyknięcie kodu. **wartość true,** jest ustawieniem domyślnym.  
+ *wartość logiczna* (opcjonalnie)  
+ **wartość true,** Jeśli chcesz, aby bez kodu, które są wstrzykiwane, **false** do kodu, ich wstrzyknięcie. **wartość true,** jest ustawieniem domyślnym.  
   
 ## <a name="remarks"></a>Uwagi  
- Najczęściej używane **no_injected_text** jest atrybut C++ [/Fx](../build/reference/fx-merge-injected-code.md) opcję kompilatora, która wstawia **no_injected_text** atrybut do pliku .mrg.  
+ Najbardziej powszechnym zastosowaniem programu **no_injected_text** polega na atrybut C++ [/Fx](../build/reference/fx-merge-injected-code.md) opcji kompilatora, która wstawia **no_injected_text** atrybutu do pliku .mrg.  
   
 ## <a name="requirements"></a>Wymagania  
   
-### <a name="attribute-context"></a>Atrybut kontekstu  
+### <a name="attribute-context"></a>Kontekst atrybutu  
   
 |||  
 |-|-|  
-|**Dotyczy**|Dowolnego miejsca|  
+|**Dotyczy**|Dowolne miejsce|  
 |**Powtarzalne**|Nie|  
 |**Wymaganych atrybutów**|Brak|  
 |**Nieprawidłowe atrybuty**|Brak|  
   
- Aby uzyskać więcej informacji na temat konteksty atrybutu, zobacz [konteksty atrybutu](../windows/attribute-contexts.md).  
+ Aby uzyskać więcej informacji na temat konteksty atrybutu zobacz [konteksty atrybutu](../windows/attribute-contexts.md).  
   
 ## <a name="see-also"></a>Zobacz też  
  [Atrybuty kompilatora](../windows/compiler-attributes.md)   

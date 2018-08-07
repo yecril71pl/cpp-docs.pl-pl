@@ -17,38 +17,37 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: a2c88dd610c1a0b8a8fee4e23da1b5ad844e989c
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 93ced38ca30a2fd4a61bb3a3664967416fcaf599
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33878427"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39603491"
 ---
 # <a name="include-c"></a>include (C++)
-Określa co najmniej jeden plik nagłówka do uwzględnienia w pliku .idl wygenerowany.  
+Określa jeden lub więcej plików nagłówka do uwzględnienia w pliku .idl wygenerowany.  
   
 ## <a name="syntax"></a>Składnia  
   
 ```  
-  
-      [ include(  
+[ include(  
    header_file  
 ) ];  
 ```  
   
-#### <a name="parameters"></a>Parametry  
+### <a name="parameters"></a>Parametry  
  *header_file*  
- Nazwa pliku, który ma zawarty w pliku .idl wygenerowany.  
+ Nazwa pliku, którego chcesz zawarte w pliku .idl wygenerowany.  
   
 ## <a name="remarks"></a>Uwagi  
- **Obejmują** atrybut C++ powoduje `#include` instrukcji do umieszczenia poniżej `import "docobj.idl"` instrukcji w pliku .idl wygenerowany.  
+ **Obejmują** atrybut C++ powoduje `#include` instrukcję, aby umieszczona pod `import "docobj.idl"` instrukcja w pliku .idl wygenerowany.  
   
- **Obejmują** atrybut C++ ma te same funkcje co [obejmują](http://msdn.microsoft.com/library/windows/desktop/aa367052) MIDL atrybutu.  
+ **Obejmują** atrybut C++ ma taką samą funkcjonalność jak [obejmują](http://msdn.microsoft.com/library/windows/desktop/aa367052) atrybutów w MIDL.  
   
 ## <a name="example"></a>Przykład  
- Poniższy kod przedstawia przykład sposobu użycia **obejmują**. Na przykład include.h plik zawiera tylko #include instrukcji.  
+ Poniższy kod przedstawia przykład sposobu użycia **obejmują**. W tym przykładzie include.h plik zawiera tylko # instrukcję include.  
   
-```  
+```cpp  
 // cpp_attr_ref_include.cpp  
 // compile with: /LD  
 [module(name="MyLib")];  
@@ -57,11 +56,11 @@ Określa co najmniej jeden plik nagłówka do uwzględnienia w pliku .idl wygene
   
 ## <a name="requirements"></a>Wymagania  
   
-### <a name="attribute-context"></a>Atrybut kontekstu  
+### <a name="attribute-context"></a>Kontekst atrybutu  
   
 |||  
 |-|-|  
-|**Dotyczy**|Dowolnego miejsca|  
+|**Dotyczy**|Dowolne miejsce|  
 |**Powtarzalne**|Nie|  
 |**Wymaganych atrybutów**|Brak|  
 |**Nieprawidłowe atrybuty**|Brak|  

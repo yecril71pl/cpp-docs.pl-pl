@@ -1,5 +1,5 @@
 ---
-title: 'Makeallocator —:: ~ MakeAllocator — destruktor | Dokumentacja firmy Microsoft'
+title: 'MakeAllocator:: ~ MakeAllocator, destruktor | Dokumentacja firmy Microsoft'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: f0734f895315f1c8ba7577d531c54a9dc11381e7
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 2e31f666ca6263a9b9b770261a0899bcad1bc8fd
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33877102"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39606312"
 ---
 # <a name="makeallocatormakeallocator-destructor"></a>MakeAllocator::~MakeAllocator — Destruktor
 Obsługuje infrastrukturę biblioteki WRL i nie jest przeznaczona do użycia bezpośrednio w kodzie.  
@@ -34,14 +34,14 @@ Obsługuje infrastrukturę biblioteki WRL i nie jest przeznaczona do użycia bez
 ```  
   
 ## <a name="remarks"></a>Uwagi  
- Deinitializes bieżące wystąpienie klasy makeallocator — klasa.  
+ Deinicjuje bieżące wystąpienie **MakeAllocator** klasy.  
   
- Ten destruktor spowoduje również usunięcie podstawowej alokacji pamięci w razie potrzeby.  
+ Ten destruktor spowoduje również usunięcie podstawowych ilość przydzielonej pamięci w razie potrzeby.  
   
 ## <a name="requirements"></a>Wymagania  
  **Nagłówek:** implements.h  
   
- **Namespace:** Microsoft::wrl:: details —  
+ **Namespace:** Microsoft::wrl:: details  
   
 ## <a name="see-also"></a>Zobacz też  
  [Makeallocator — klasa](../windows/makeallocator-class.md)   

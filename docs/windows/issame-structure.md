@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 52dd1920ad32719e4fbff5a0138e737367d97ff4
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: fc770ce418f458109ab2b047a5bb0f7e006ae499
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33877673"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39603588"
 ---
 # <a name="issame-structure"></a>IsSame — Struktura
 Obsługuje infrastrukturę biblioteki WRL i nie jest przeznaczona do użycia bezpośrednio w kodzie.  
@@ -41,19 +41,19 @@ template <
 struct IsSame<T1, T1>;  
 ```  
   
-#### <a name="parameters"></a>Parametry  
- `T1`  
+### <a name="parameters"></a>Parametry  
+ *T1*  
  Typ.  
   
- `T2`  
+ *T2*  
  Innego typu.  
   
 ## <a name="remarks"></a>Uwagi  
- Testy czy określić jeden typ jest taki sam jak inny określony typ.  
+ Testy, czy jeden określony typ jest taki sam jak inny określony typ.  
   
 ## <a name="members"></a>Elementy członkowskie  
   
-### <a name="public-constants"></a>Publiczny — stałe  
+### <a name="public-constants"></a>Publiczne stałe  
   
 |Nazwa|Opis|  
 |----------|-----------------|  
@@ -65,7 +65,7 @@ struct IsSame<T1, T1>;
 ## <a name="requirements"></a>Wymagania  
  **Nagłówek:** internal.h  
   
- **Namespace:** Microsoft::wrl:: details —  
+ **Namespace:** Microsoft::wrl:: details  
   
 ## <a name="see-also"></a>Zobacz też  
  [Microsoft::WRL::Details, przestrzeń nazw](../windows/microsoft-wrl-details-namespace.md)

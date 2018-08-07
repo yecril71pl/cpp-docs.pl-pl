@@ -17,15 +17,15 @@ ms.author: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: ed6f114d13b006425cd3e94e898b2fe924ec732d
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 0188d3f08f0d4a06fb174163dc0a837e3dc9c041
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33888429"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39605782"
 ---
 # <a name="safelessthan"></a>SafeLessThan
-Określa, czy jeden numer jest mniejsza niż innym.  
+Określa, czy jeden jest mniejszy niż inny.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -37,25 +37,25 @@ inline bool SafeLessThan (
 ) throw ();  
 ```  
   
-#### <a name="parameters"></a>Parametry  
- [in] `t`  
- Pierwsza liczba. To musi być typu T.  
+### <a name="parameters"></a>Parametry  
+ [in] *t*  
+ Pierwsza liczba. To musi być typu `T`.  
   
- [in] `u`  
- Drugi numer. Musi to być typ U.  
+ [in] *u*  
+ Drugi numer. To musi być typu `U`.  
   
 ## <a name="return-value"></a>Wartość zwracana  
- `true` Jeśli `t` jest mniejsza niż `u`; w przeciwnym razie `false`.  
+ **wartość true,** Jeśli *t* jest mniejsza niż *u*; w przeciwnym razie **false**.  
   
 ## <a name="remarks"></a>Uwagi  
- Ta metoda zwiększa operator porównania standardowych, ponieważ `SafeLessThan` można porównać dwa różne typy numer.  
+ Ta metoda zwiększa operator porównania standardowe, ponieważ **SafeLessThan** umożliwia porównywanie dwa różne typy liczby.  
   
- Ta metoda jest częścią [Biblioteka SafeInt](../windows/safeint-library.md) i jest przeznaczony dla operacji porównywania pojedynczego bez tworzenia wystąpienia [safeint — klasa](../windows/safeint-class.md).  
+ Ta metoda jest częścią [Biblioteka SafeInt](../windows/safeint-library.md) i jest przeznaczony dla operacji jedno porównanie bez tworzenia wystąpienia obiektu [safeint — klasa](../windows/safeint-class.md).  
   
 > [!NOTE]
->  Tej metody należy używać tylko w przypadku, gdy jednej operacji matematycznych muszą być chronione. Jeśli istnieje wiele operacji, należy użyć `SafeInt` klasy, a nie wywoływanie poszczególnych funkcji autonomicznych.  
+>  Ta metoda ją stosować tylko po jednej operacji matematycznych muszą być chronione. Jeśli istnieje wiele operacji, należy użyć `SafeInt` klasy zamiast wywoływania poszczególnych funkcjami autonomicznymi.  
   
- Aby uzyskać więcej informacji o typach szablonu T oraz U, zobacz [safeint — funkcje](../windows/safeint-functions.md).  
+ Aby uzyskać więcej informacji na temat typów szablonu `T` i `U`, zobacz [safeint — funkcje](../windows/safeint-functions.md).  
   
 ## <a name="requirements"></a>Wymagania  
  **Nagłówek:** safeint.h  

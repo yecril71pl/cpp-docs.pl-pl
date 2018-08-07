@@ -1,5 +1,5 @@
 ---
-title: Mutex::mutex — Konstruktor | Dokumentacja firmy Microsoft
+title: Mutex::mutex, Konstruktor | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: bb7782e44fc8598ca3b806ef922f8d0840765e28
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 7a7549371ba4648f8fcce03a98a021c8027c676e
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33876459"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39605197"
 ---
 # <a name="mutexmutex-constructor"></a>Mutex::Mutex — Konstruktor
-Inicjuje nowe wystąpienie klasy obiektu Mutex.  
+Inicjuje nowe wystąpienie klasy **Mutex** klasy.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -39,17 +39,17 @@ Mutex(
 );  
 ```  
   
-#### <a name="parameters"></a>Parametry  
- `h`  
- Dojścia lub odwołania do r-wartości uchwytu do obiektu Mutex.  
+### <a name="parameters"></a>Parametry  
+ *h*  
+ Dojście lub odwołanie rvalue do uchwytu, aby **Mutex** obiektu.  
   
 ## <a name="remarks"></a>Uwagi  
- Pierwszy Konstruktor inicjuje obiekt Mutex z określonego dojścia. Drugi Konstruktor inicjuje obiekt Mutex z określonego dojścia, a następnie przenosi prawo własności obiektu mutex do bieżącego obiektu Mutex.  
+ Pierwszy Konstruktor inicjuje **Mutex** obiekt z określonego dojścia. Drugi Konstruktor inicjuje **Mutex** obiektu z określonego dojścia, a następnie przenosi własności obiektu mutex do bieżącego **Mutex** obiektu.  
   
 ## <a name="requirements"></a>Wymagania  
  **Nagłówek:** corewrappers.h  
   
- **Namespace:** Microsoft::wrl:: wrappers —
+ **Namespace:** Microsoft::wrl:: wrappers
  
  ## <a name="see-also"></a>Zobacz też
  [Mutex — klasa](../windows/mutex-class1.md)

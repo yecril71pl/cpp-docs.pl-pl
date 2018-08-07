@@ -1,5 +1,5 @@
 ---
-title: Implements::CanCastTo — metoda | Dokumentacja firmy Microsoft
+title: Implements::CanCastTo, metoda | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 4fd6e6736c74e1ce895031e17c1d5268eb4ce646
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 53b17558998812895ece4b47f5de03700e502b8e
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33877076"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39608946"
 ---
 # <a name="implementscancastto-method"></a>Implements::CanCastTo — Metoda
 Pobiera wskaźnik do określonego interfejsu.  
@@ -36,23 +36,23 @@ __forceinline HRESULT CanCastTo(
 );  
 ```  
   
-#### <a name="parameters"></a>Parametry  
- `riid`  
+### <a name="parameters"></a>Parametry  
+ *Parametr riid*  
  Odwołanie do identyfikatora interfejsu.  
   
- `ppv`  
- Jeśli powodzenia wskaźnik do interfejsu określony przez `riid`.  
+ *ppv*  
+ Jeśli operacja się powiedzie, wskaźnik do interfejsu określonego przez *riid*.  
   
 ## <a name="return-value"></a>Wartość zwracana  
- S_OK w przypadku powodzenia; w przeciwnym razie wartość HRESULT, który wskazuje błąd, takich jak E_NOINTERFACE.  
+ S_OK w przypadku powodzenia; w przeciwnym razie HRESULT, która wskazuje błąd, takich jak E_NOINTERFACE.  
   
 ## <a name="remarks"></a>Uwagi  
- Jest to wewnętrzny pomocnika funkcji, która wykonuje operację QueryInterface.  
+ Jest to funkcja pomocnicza wewnętrznej, która wykonuje operację QueryInterface.  
   
 ## <a name="requirements"></a>Wymagania  
  **Nagłówek:** implements.h  
   
- **Namespace:** Microsoft::wrl —  
+ **Namespace:** Microsoft::WRL  
   
 ## <a name="see-also"></a>Zobacz też  
  [Implements, struktura](../windows/implements-structure.md)

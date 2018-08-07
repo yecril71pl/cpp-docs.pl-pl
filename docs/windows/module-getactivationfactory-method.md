@@ -1,5 +1,5 @@
 ---
-title: Module::GetActivationFactory — metoda | Dokumentacja firmy Microsoft
+title: Module::GetActivationFactory, metoda | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 837cb68173ca1994de6bc560882d617bb3aa03e0
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: e41b90ea56f65665ccdaff0fe4dceff292d1cdcf
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33887016"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39608108"
 ---
 # <a name="modulegetactivationfactory-method"></a>Module::GetActivationFactory — Metoda
-Pobiera fabryki aktywacji dla modułu.  
+Pobiera fabrykę aktywacji dla modułu.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -37,23 +37,24 @@ WRL_NOTHROW HRESULT GetActivationFactory(
 );  
 ```  
   
-#### <a name="parameters"></a>Parametry  
- `pActivatibleClassId`  
- Identyfikator IID klasy środowiska wykonawczego.  
+### <a name="parameters"></a>Parametry  
+ *pActivatibleClassId*  
+ IID klasy środowiska uruchomieniowego.  
   
- `ppIFactory`  
- IActivationFactory dla określonego środowiska uruchomieniowego klasy.  
+ *ppIFactory*  
+ IActivationFactory dla klasy określonego środowiska uruchomieniowego.  
   
- `serverName`  
- Nazwa podzbiór fabryki klas w bieżącego modułu. Określ nazwę serwera, używane w [ActivatableClassWithFactoryEx](../windows/activatableclass-macros.md) makra, lub określ `nullptr` można pobrać domyślnej nazwy serwera.  
+ *serverName*  
+ Nazwa podzbiór fabryki klas w bieżącego modułu. Określ nazwę serwera, używane w [ActivatableClassWithFactoryEx](../windows/activatableclass-macros.md) makro, lub określ **nullptr** można pobrać domyślną nazwę serwera.  
   
 ## <a name="return-value"></a>Wartość zwracana  
- S_OK w przypadku powodzenia; w przeciwnym razie wartość HRESULT zwrócony przez GetActivationFactory.  
+ S_OK w przypadku powodzenia; w przeciwnym razie wynik HRESULT zwracane przez getactivationfactory —.  
   
 ## <a name="requirements"></a>Wymagania  
  **Nagłówek:** module.h  
   
- **Namespace:** Microsoft::wrl —  
+ **Namespace:** Microsoft::WRL  
   
 ## <a name="see-also"></a>Zobacz też  
-[Klasa modułu](../windows/module-class.md) [ActivatableClass makra](../windows/activatableclass-macros.md)
+ [Klasa modułu](../windows/module-class.md)  
+ [Makra ActivatableClass](../windows/activatableclass-macros.md)

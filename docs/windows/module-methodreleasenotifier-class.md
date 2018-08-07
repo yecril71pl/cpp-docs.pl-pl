@@ -1,5 +1,5 @@
 ---
-title: Module::methodreleasenotifier — klasa | Dokumentacja firmy Microsoft
+title: Module::MethodReleaseNotifier, klasa | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 217e58f73130922d45f0d303e1e91858e8c2272f
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 4009be162423d9fe558dba04d7e88a7f539c4eaa
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33880830"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39602990"
 ---
 # <a name="modulemethodreleasenotifier-class"></a>Module::MethodReleaseNotifier — Klasa
-Wywołuje program obsługi zdarzeń po zwolnieniu ostatni obiekt w bieżącego modułu. Program obsługi zdarzeń jest określona przez obiekt i jego elementów członkowskich wskaźnika do metody.  
+Wywołuje program obsługi zdarzeń po udostępnieniu ostatni obiekt w bieżącego modułu. Program obsługi zdarzeń jest określona przez obiekt i jego elementów członkowskich wskaźnika do metody.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -34,9 +34,9 @@ template<typename T>
 class MethodReleaseNotifier : public ReleaseNotifier;  
 ```  
   
-#### <a name="parameters"></a>Parametry  
- `T`  
- Typ obiektu, którego funkcja członkowska jest programu obsługi zdarzeń.  
+### <a name="parameters"></a>Parametry  
+ *T*  
+ Typ obiektu, którego funkcja członkowska jest program obsługi zdarzeń.  
   
 ## <a name="members"></a>Elementy członkowskie  
   
@@ -44,20 +44,20 @@ class MethodReleaseNotifier : public ReleaseNotifier;
   
 |Nazwa|Opis|  
 |----------|-----------------|  
-|[Module::MethodReleaseNotifier::MethodReleaseNotifier, konstruktor](../windows/module-methodreleasenotifier-methodreleasenotifier-constructor.md)|Inicjuje nowe wystąpienie klasy Module::MethodReleaseNotifier.|  
+|[Module::MethodReleaseNotifier::MethodReleaseNotifier, konstruktor](../windows/module-methodreleasenotifier-methodreleasenotifier-constructor.md)|Inicjuje nowe wystąpienie klasy **Module::MethodReleaseNotifier** klasy.|  
   
 ### <a name="public-methods"></a>Metody publiczne  
   
 |Nazwa|Opis|  
 |----------|-----------------|  
-|[Module::MethodReleaseNotifier::Invoke, metoda](../windows/module-methodreleasenotifier-invoke-method.md)|Wywołuje program obsługi zdarzeń skojarzonych z bieżącym obiektem Module::MethodReleaseNotifier.|  
+|[Module::MethodReleaseNotifier::Invoke, metoda](../windows/module-methodreleasenotifier-invoke-method.md)|Wywołuje program obsługi zdarzeń skojarzonych z bieżącym **Module::MethodReleaseNotifier** obiektu.|  
   
-### <a name="protected-data-members"></a>Dane chronione elementy członkowskie  
+### <a name="protected-data-members"></a>Chronione elementy członkowskie danych  
   
 |Nazwa|Opis|  
 |----------|-----------------|  
-|[Module::MethodReleaseNotifier::method_, składowa danych](../windows/module-methodreleasenotifier-method-data-member.md)|Zawiera wskaźnik do obsługi zdarzeń dla bieżącego obiektu Module::MethodReleaseNotifier.|  
-|[Module::MethodReleaseNotifier::object_, składowa danych](../windows/module-methodreleasenotifier-object-data-member.md)|Zawiera wskaźnik do obiektu, którego funkcja członkowska jest program obsługi zdarzeń dla bieżącego obiektu Module::MethodReleaseNotifier.|  
+|[Module::MethodReleaseNotifier::method_, składowa danych](../windows/module-methodreleasenotifier-method-data-member.md)|Przechowuje wskaźnik do narzędzia obsługi zdarzeń dla bieżącego **Module::MethodReleaseNotifier** obiektu.|  
+|[Module::MethodReleaseNotifier::object_, składowa danych](../windows/module-methodreleasenotifier-object-data-member.md)|Przechowuje wskaźnik do obiektu, którego funkcja członkowska jest program obsługi zdarzeń dla bieżącego **Module::MethodReleaseNotifier** obiektu.|  
   
 ## <a name="inheritance-hierarchy"></a>Hierarchia dziedziczenia  
  `ReleaseNotifier`  
@@ -67,7 +67,7 @@ class MethodReleaseNotifier : public ReleaseNotifier;
 ## <a name="requirements"></a>Wymagania  
  **Nagłówek:** module.h  
   
- **Namespace:** Microsoft::wrl —
+ **Namespace:** Microsoft::WRL
  
  ## <a name="see-also"></a>Zobacz też
  [Klasa modułu](../windows/module-class.md)

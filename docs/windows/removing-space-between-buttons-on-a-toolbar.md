@@ -16,29 +16,28 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: ed0c35f779749ca434feeb4ca1aef4e49e8a711f
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 5734874fb77907d021a360d84c17d054b223741c
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33877966"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39605499"
 ---
 # <a name="removing-space-between-buttons-on-a-toolbar"></a>Usuwanie odstępów między przyciskami na pasku narzędzi
-Poniższa procedura przedstawia sposób usuwania odstępów między przyciskami na pasku narzędzi.  
+Poniższa procedura pokazuje, jak usunąć odstępów między przyciskami na pasku narzędzi.  
   
 ### <a name="to-remove-a-space-between-buttons-on-a-toolbar"></a>Aby usunąć odstępów między przyciskami na pasku narzędzi  
   
-1.  Przeciągnij przycisku po jednej stronie miejsca kierunku przycisku po drugiej stronie miejsca nakłada się na przycisku Dalej o połowie.  
+1.  Przeciągnij przycisk na jednej stronie miejsca kierunku przycisku po drugiej stronie miejsca, dopóki nie nakłada się przycisk Następny temat w połowie.  
   
-     Jeśli brakuje miejsca na boku przycisku, który jest przeciągany od, a przycisk przeciągnij ponad połowie poza przycisk sąsiadujących ze sobą, Edytor paska narzędzi są wstawiane miejsca w przeciwną stronę przycisku, który jest przeciągany.  
+     Jeśli nie ma już miejsca obok przycisku, który jest przeciągany opuszczenie, a przycisk przeciągnąć ponad połowie ostatnie sąsiadujących przycisku, Edytor paska narzędzi również jest wstawiana w przeciwną stronę przycisku, który jest przeciągany.  
   
- Aby uzyskać informacje o dodawaniu zasobów do projektów zarządzanych, zobacz [zasobów w aplikacjach pulpitu](/dotnet/framework/resources/index) w *Przewodnik programistów platformy .NET Framework.* Aby uzyskać informacje na ręczne dodanie do projektów zarządzanych plików zasobów, uzyskiwanie dostępu do zasobów, wyświetlanie zasoby statyczne i przypisanie do właściwości ciągów zasobów, zobacz [tworzenie plików zasobów dla aplikacji pulpitu](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Informacje dotyczące globalizacji i lokalizacji zasobów w zarządzanych aplikacjach, zobacz [Globalizing i lokalizacja aplikacji .NET Framework](/dotnet/standard/globalization-localization/index).  
+ Aby uzyskać informacje na temat dodawania zasobów do projektów zarządzanych, zobacz [zasoby w aplikacjach pulpitu](/dotnet/framework/resources/index) w *przewodniku dewelopera .NET Framework*. Aby uzyskać informacji na temat ręcznego dodawania plików zasobów do projektów zarządzanych, uzyskiwania dostępu do zasobów, wyświetlania statycznych zasobów i przypisywania ciągów zasobów do właściwości, zobacz [Creating Resource Files dla aplikacji klasycznych](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Aby uzyskać informacji na temat globalizacja i lokalizacja zasobów w aplikacjach zarządzanych, zobacz [Globalizing i lokalizowanie aplikacji programu .NET Framework](/dotnet/standard/globalization-localization/index).  
   
- Wymagania  
+## <a name="requirements"></a>Wymagania  
   
- MFC i ATL  
+ ATL i MFC  
   
 ## <a name="see-also"></a>Zobacz też  
  [Tworzenie, przenoszenie i edytowanie przycisków paska narzędzi](../windows/creating-moving-and-editing-toolbar-buttons.md)   
  [Edytor paska narzędzi](../windows/toolbar-editor.md)
-

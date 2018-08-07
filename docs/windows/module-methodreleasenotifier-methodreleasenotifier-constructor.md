@@ -17,20 +17,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 91540ca3fff03f1f0a449413c2d1ca72781c70f1
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: a8e48b6f8ec4a985bfa7fa5b8d0069e472df86e8
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33875230"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39605993"
 ---
 # <a name="modulemethodreleasenotifiermethodreleasenotifier-constructor"></a>Module::MethodReleaseNotifier::MethodReleaseNotifier — Konstruktor
-Inicjuje nowe wystąpienie klasy Module::MethodReleaseNotifier.  
+Inicjuje nowe wystąpienie klasy **Module::MethodReleaseNotifier** klasy.  
   
 ## <a name="syntax"></a>Składnia  
   
 ```  
-  
 MethodReleaseNotifier(  
    _In_ T* object,   
    _In_ void (T::* method)(),   
@@ -39,20 +38,20 @@ MethodReleaseNotifier(
             method_(method);  
 ```  
   
-#### <a name="parameters"></a>Parametry  
- `object`  
- Obiekt, którego funkcja członkowska jest obsługą zdarzeń.  
+### <a name="parameters"></a>Parametry  
+ *object*  
+ Obiekt, którego funkcja członkowska jest program obsługi zdarzeń.  
   
- `method`  
- Funkcja członkowska parametru `object` czyli obsługi zdarzeń.  
+ *— Metoda*  
+ Funkcja elementu członkowskiego parametru *obiektu* oznacza to program obsługi zdarzeń.  
   
- `release`  
- Określ `true` umożliwia wywołanie odpowiadającego [modułu:: ReleaseNotifier::Release()](../windows/module-releasenotifier-release.md) metody; w przeciwnym razie określ `false`.  
+ *Wydania*  
+ Określ **true** umożliwiające wywołanie bazowego [modułu:: ReleaseNotifier::Release()](../windows/module-releasenotifier-release.md) metody; w przeciwnym razie określ **false**.  
   
 ## <a name="requirements"></a>Wymagania  
  **Nagłówek:** module.h  
   
- **Namespace:** Microsoft::wrl —  
+ **Namespace:** Microsoft::WRL  
   
 ## <a name="see-also"></a>Zobacz też  
  [Module::MethodReleaseNotifier, klasa](../windows/module-methodreleasenotifier-class.md)

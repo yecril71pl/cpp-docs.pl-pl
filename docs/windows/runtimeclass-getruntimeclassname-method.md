@@ -1,5 +1,5 @@
 ---
-title: RuntimeClass::GetRuntimeClassName — metoda | Dokumentacja firmy Microsoft
+title: RuntimeClass::GetRuntimeClassName, metoda | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,16 +17,16 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 3cfe3cc4a8a304bbd04fde9e6c38e2b9170e2e73
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 7706a16a860cf554068dd3416e7c1f8b1fcea311
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33892442"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39608777"
 ---
 # <a name="runtimeclassgetruntimeclassname-method"></a>RuntimeClass::GetRuntimeClassName — Metoda
 
-Pobiera bieżący obiekt runtimeclass — Nazwa klasy środowiska wykonawczego.
+Pobiera nazwę klasy środowiska uruchomieniowego bieżącego **RuntimeClass** obiektu.
 
 ## <a name="syntax"></a>Składnia
 
@@ -39,7 +39,7 @@ STDMETHOD( GetRuntimeClassName )(
 ### <a name="parameters"></a>Parametry
 
 *runtimeName*  
-Po zakończeniu wykonywania tej operacji, nazwa klasy środowiska uruchomieniowego.
+Po zakończeniu tej operacji, nazwa klasy środowiska uruchomieniowego.
 
 ## <a name="return-value"></a>Wartość zwracana
 
@@ -47,14 +47,13 @@ S_OK w przypadku powodzenia; w przeciwnym razie wartość HRESULT, która wskazu
 
 ## <a name="remarks"></a>Uwagi
 
-Błąd potwierdzenia jest emitowany Jeśli &#95; &#95;WRL_STRICT&#95; &#95; lub &#95; &#95;WRL_FORCE_INSPECTABLE_CLASS_MACRO&#95; &#95; nie jest zdefiniowany.
+Błąd potwierdzenia jest emitowane, jeśli &#95; &#95;WRL_STRICT&#95; &#95; lub &#95; &#95;WRL_FORCE_INSPECTABLE_CLASS_MACRO&#95; &#95; nie jest zdefiniowany.
 
 ## <a name="requirements"></a>Wymagania
 
 **Nagłówek:** implements.h
 
-**Namespace:** Microsoft::wrl —
+**Namespace:** Microsoft::WRL
 
 ## <a name="see-also"></a>Zobacz też
-
-[RuntimeClass, klasa](../windows/runtimeclass-class.md)
+ [RuntimeClass, klasa](../windows/runtimeclass-class.md)

@@ -1,5 +1,5 @@
 ---
-title: ograniczone | Dokumentacja firmy Microsoft
+title: ograniczeniami | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,36 +17,35 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: e1d688d4ebca5d2cc01901f5fe1afaa4536b71bb
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: f79b4e53947e0e87fb70211ca40bc54f4500855f
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33892881"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39602775"
 ---
 # <a name="restricted"></a>restricted
-Określa, czy członek modułu, interfejsem lub dispinterface nie może być wywoływana arbitralnie.  
+Określa, że jest członkiem moduł, interfejs lub dispinterface nie może być wywoływana arbitralnie.  
   
 ## <a name="syntax"></a>Składnia  
   
 ```  
-  
-      [ restricted(  
+[ restricted(  
    interfaces  
 ) ]  
 ```  
   
-#### <a name="parameters"></a>Parametry  
- `interfaces`  
- Jeden lub więcej interfejsów, które mogą nie być wywoływana arbitralnie w obiekcie COM. Ten parametr jest prawidłowy tylko po zastosowaniu do klasy.  
+### <a name="parameters"></a>Parametry  
+ *interfaces*  
+ Jeden lub więcej interfejsów, które może nie być wywoływana arbitralnie obiektu COM. Ten parametr jest prawidłowy tylko w przypadku zastosowania do klasy.  
   
 ## <a name="remarks"></a>Uwagi  
- **Ograniczeniami** atrybut C++ ma te same funkcje co [ograniczeniami](http://msdn.microsoft.com/library/windows/desktop/aa367157) MIDL atrybutu.  
+ **Ograniczeniami** atrybut C++ ma taką samą funkcjonalność jak [ograniczeniami](http://msdn.microsoft.com/library/windows/desktop/aa367157) atrybutów w MIDL.  
   
 ## <a name="example"></a>Przykład  
  Poniższy kod przedstawia sposób użycia **ograniczeniami** atrybutu:  
   
-```  
+```cpp  
 // cpp_attr_ref_restricted.cpp  
 // compile with: /LD  
 #include "windows.h"  
@@ -71,16 +70,16 @@ class c : public a, public b
   
 ## <a name="requirements"></a>Wymagania  
   
-### <a name="attribute-context"></a>Atrybut kontekstu  
+### <a name="attribute-context"></a>Kontekst atrybutu  
   
 |||  
 |-|-|  
-|**Dotyczy**|Metody interfejsu `interface`, **klasy**, `struct`|  
+|**Dotyczy**|Metody interfejsu **interfejsu**, **klasy**, **— struktura**|  
 |**Powtarzalne**|Nie|  
-|**Wymaganych atrybutów**|**coclass** (gdy jest stosowany do **klasy** lub `struct`)|  
+|**Wymaganych atrybutów**|**Klasa coclass** (po zastosowaniu do **klasy** lub **struktury**)|  
 |**Nieprawidłowe atrybuty**|Brak|  
   
- Aby uzyskać więcej informacji na temat konteksty atrybutu, zobacz [konteksty atrybutu](../windows/attribute-contexts.md).  
+ Aby uzyskać więcej informacji na temat konteksty atrybutu zobacz [konteksty atrybutu](../windows/attribute-contexts.md).  
   
 ## <a name="see-also"></a>Zobacz też  
  [Atrybuty IDL](../windows/idl-attributes.md)   

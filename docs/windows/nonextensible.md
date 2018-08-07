@@ -1,5 +1,5 @@
 ---
-title: nonextensible — | Dokumentacja firmy Microsoft
+title: nonextensible | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,33 +17,31 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 87cdbf66676ed2a3e6054006270b39ad80325857
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 2f670da3ad4858f3c09903f2ed3ec6aa58268180
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33881604"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39608498"
 ---
 # <a name="nonextensible"></a>nonextensible
-Określa, że `IDispatch` implementacji zawiera tylko właściwości i metod wymienionych w opisie interfejsu i nie może zostać rozszerzony o dodatkowe elementy członkowskie w czasie wykonywania.  
+Określa, że `IDispatch` wdrożenia zawiera tylko właściwości i metod wymienionych w opisie interfejsu i nie można rozszerzyć za pomocą dodatkowe elementy członkowskie w czasie wykonywania.  
   
 ## <a name="syntax"></a>Składnia  
   
 ```  
-  
 [nonextensible]  
-  
 ```  
   
 ## <a name="remarks"></a>Uwagi  
- **Nonextensible —** atrybut C++ ma te same funkcje co [nonextensible —](http://msdn.microsoft.com/library/windows/desktop/aa367120) MIDL atrybutu.  
+ **Nonextensible** atrybut C++ ma taką samą funkcjonalność jak [nonextensible](http://msdn.microsoft.com/library/windows/desktop/aa367120) atrybutów w MIDL.  
   
- Użycie **nonextensible —** wymaga również [oleautomation](../windows/oleautomation.md) atrybutu.  
+ Korzystanie z **nonextensible** wymaga również [oleautomation —](../windows/oleautomation.md) atrybutu.  
   
 ## <a name="example"></a>Przykład  
- Poniższy kod przedstawia użycie jednego **nonextensible —** atrybutu:  
+ Poniższy kod demonstruje jedno użycie **nonextensible** atrybutu:  
   
-```  
+```cpp  
 // cpp_attr_ref_nonextensible.cpp  
 // compile with: /LD  
 #include "unknwn.h"  
@@ -60,16 +58,16 @@ __interface IFireTabCtrl
   
 ## <a name="requirements"></a>Wymagania  
   
-### <a name="attribute-context"></a>Atrybut kontekstu  
+### <a name="attribute-context"></a>Kontekst atrybutu  
   
 |||  
 |-|-|  
-|**Dotyczy**|`interface`|  
+|**Dotyczy**|**interface**|  
 |**Powtarzalne**|Nie|  
-|**Wymaganych atrybutów**|**Podwójna** i **oleautomation**, lub **dispinterface**|  
+|**Wymaganych atrybutów**|`dual` i `oleautomation`, lub `dispinterface`|  
 |**Nieprawidłowe atrybuty**|Brak|  
   
- Aby uzyskać więcej informacji na temat konteksty atrybutu, zobacz [konteksty atrybutu](../windows/attribute-contexts.md).  
+ Aby uzyskać więcej informacji na temat konteksty atrybutu zobacz [konteksty atrybutu](../windows/attribute-contexts.md).  
   
 ## <a name="see-also"></a>Zobacz też  
  [Atrybuty IDL](../windows/idl-attributes.md)   

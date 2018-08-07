@@ -18,46 +18,46 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 6871f02a1c37def05b6450e7ffad18f6fa45b461
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 78dda3c52192b0d2755bdc8f8944eb0e1443e7af
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33879360"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39604177"
 ---
 # <a name="literal-c-component-extensions"></a>literal (C++ Component Extensions)
-Zmienna (elementu członkowskiego danych) jest oznaczony jako `literal` w **/CLR** kompilacji jest odpowiednikiem natywnego `static const` zmiennej.  
+Zmienna (element członkowski danych) jest oznaczony jako **literału** w **/CLR** kompilacji odpowiada natywnych **statyczna stała** zmiennej.  
   
 ## <a name="all-platforms"></a>Wszystkie platformy  
- **Uwagi**  
+### <a name="remarks"></a>Uwagi 
   
- (Brak żadnych uwag dla tej funkcji języka, które są stosowane do wszystkich środowisk uruchomieniowych.)  
+ (Nie ma żadnych uwag dla tej funkcji języka, które są stosowane do wszystkich środowisk uruchomieniowych).  
   
 ## <a name="windows-runtime"></a>Środowisko wykonawcze systemu Windows  
- **Uwagi**  
+### <a name="remarks"></a>Uwagi 
   
- (Brak żadnych uwag dla tej funkcji języka, które są stosowane do środowiska uruchomieniowego systemu Windows.)  
+ (Nie ma żadnych uwag dla tej funkcji języka, które dotyczą tylko środowiska uruchomieniowego Windows).  
   
 ### <a name="requirements"></a>Wymagania  
- — Opcja kompilatora: **/ZW**  
+ — Opcja kompilatora: `/ZW`  
   
 ## <a name="common-language-runtime"></a>środowiska uruchomieniowe w trakcie wykonania  
   
 ## <a name="remarks"></a>Uwagi  
- Element członkowski danych jest oznaczona jako `literal` musi zostać zainicjowany po zadeklarowaniu i wartość musi być stałą typu całkowitego, wyliczeniowego lub typu string. Konwersja z typu wyrażenia inicjowania na typ statyczny const — element członkowski danych nie może wymagać konwersji zdefiniowanej przez użytkownika.  
+ Element członkowski danych oznaczone jako **literału** musi być inicjowana, gdy zadeklarowana i wartość musi być stałe całkowite, enum lub typu string. Konwersja z typu wyrażenia inicjowania na typ statyczny const-składowej danych nie może wymagać konwersji zdefiniowanej przez użytkownika.  
   
- Brak pamięci zarezerwowanej dla pola literal w czasie wykonywania; tylko zostanie wstawiona wartość metadanych dla tej klasy.  
+ Nie pamięć została przydzielona dla pola literal w czasie wykonywania; Kompilator wstawia tylko jego wartości w metadanych dla tej klasy.  
   
- Oznaczone jako zmienną `static const` nie będą dostępne w metadanych do inne kompilatory.  
+ Oznaczone jako zmienną **statyczna stała** nie będą dostępne w metadanych innych kompilatorach.  
   
- Aby uzyskać więcej informacji, zobacz [statycznych](../cpp/storage-classes-cpp.md) i [const](../cpp/const-cpp.md).  
+ Aby uzyskać więcej informacji, zobacz [statyczne](../cpp/storage-classes-cpp.md) i [const](../cpp/const-cpp.md).  
   
- `literal` jest słowem kluczowym kontekstowa. Zobacz [słowa kluczowe Context-Sensitive](../windows/context-sensitive-keywords-cpp-component-extensions.md) Aby uzyskać więcej informacji.  
+ **Literał** jest kontekstowej słowem kluczowym. Zobacz [Context-Sensitive Keywords](../windows/context-sensitive-keywords-cpp-component-extensions.md) Aby uzyskać więcej informacji.  
   
 ## <a name="example"></a>Przykład  
- W tym przykładzie pokazano, że `literal` zmienna oznacza `static`.  
+ Ten przykład pokazuje, że **literału** zmienna oznacza **statyczne**.  
   
-```  
+```cpp  
 // mcppv2_literal.cpp  
 // compile with: /clr  
 ref struct X {  
@@ -70,9 +70,9 @@ int main() {
 ```  
   
 ## <a name="example"></a>Przykład  
- Poniższy przykład pokazuje wpływ literał w metadanych:  
+ Poniższy przykład pokazuje wpływ literału w metadanych:  
   
-```  
+```cpp  
 // mcppv2_literal2.cpp  
 // compile with: /clr /LD  
 public ref struct A {  
@@ -81,7 +81,7 @@ public ref struct A {
 };  
 ```  
   
- Należy zauważyć różnicę w metadanych dla `sc` i `lit`: `modopt` dyrektywa jest stosowana do `sc`, czyli może być ignorowane przez inne kompilatory.  
+ Należy zauważyć różnicę w metadanych dla `sc` i `lit`: `modopt` dyrektywa jest stosowana do `sc`, czyli można zignorować przez inne kompilatory.  
   
 ```  
 .field public static int32 modopt([mscorlib]System.Runtime.CompilerServices.IsConst) sc = int32(0x0000000A)  
@@ -92,9 +92,9 @@ public ref struct A {
 ```  
   
 ## <a name="example"></a>Przykład  
- Poniższy przykład utworzone w języku C#, odwołuje się do metadanych utworzony w poprzednim przykładzie i pokazuje wpływ `literal` i `static const` zmiennych:  
+ Odwołuje się do metadanych utworzony w poprzednim przykładzie poniższego przykładu, utworzone w języku C# i prezentuje wpływ **literału** i **statyczna stała** zmiennych:  
   
-```  
+```cs  
 // mcppv2_literal3.cs  
 // compile with: /reference:mcppv2_literal2.dll  
 // A C# program  
@@ -124,7 +124,7 @@ class B {
 ```  
   
 ## <a name="requirements"></a>Wymagania  
- — Opcja kompilatora:   **/CLR**  
+ — Opcja kompilatora: `/clr`  
   
 ## <a name="see-also"></a>Zobacz też  
  [Component Extensions dla platform środowiska uruchomieniowego](../windows/component-extensions-for-runtime-platforms.md)

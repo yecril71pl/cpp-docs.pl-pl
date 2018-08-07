@@ -20,41 +20,40 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 9533675d2894b3c3d99e3fb57abded8ea4e99d7a
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 51aec80ee24d96cf08d55778e108492d16ecfcc9
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33879064"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39606188"
 ---
 # <a name="ref-new-gcnew--c-component-extensions"></a>ref new, gcnew (C++ Component Extensions)
-`ref new` Agregacji — słowo kluczowe przydziela wystąpienia typu, który jest bezużytecznych, gdy obiekt staje się niedostępny, i który zwraca uchwyt ([^](../windows/handle-to-object-operator-hat-cpp-component-extensions.md)) do przydzielonego obiektu.  
+**Ref nowe** agregacji — słowo kluczowe przydziela wystąpienie typu, który jest bezużyteczne, gdy obiekt staje się niedostępny, a który zwraca uchwyt ([^](../windows/handle-to-object-operator-hat-cpp-component-extensions.md)) do przydzielonego obiektu.  
   
 ## <a name="all-runtimes"></a>Wszystkie środowiska wykonawcze  
- Pamięć dla wystąpienia typu, który jest przydzielony przez `ref new` automatycznie cofnięciu przydziału.  
+ Pamięć dla wystąpienia typu, który jest przydzielany przez **ref nowe** jest automatyczne cofnięcie przydziału.  
   
- A `ref new` zgłasza operacji `OutOfMemoryException` Jeśli nie można przydzielić pamięci.  
+ A **ref nowe** zgłasza operacji `OutOfMemoryException` przypadku nie można przydzielić pamięci.  
   
- Aby uzyskać więcej informacji dotyczących sposobu przydzielone i cofnięciu przydziału pamięci dla natywnych typów języka C++, zobacz [nowy i delete — operatory](../cpp/new-and-delete-operators.md).  
+ Aby uzyskać więcej informacji dotyczących sposobu przydzielone i bez alokacji pamięci dla typów natywnych języka C++, zobacz [nowy i delete — operatory](../cpp/new-and-delete-operators.md).  
   
 ## <a name="windows-runtime"></a>Środowisko wykonawcze systemu Windows  
- Użyj `ref new` można przydzielić pamięci dla obiektów środowiska wykonawczego systemu Windows, którego okres istnienia, którą chcesz administrować automatycznie. Obiekt jest automatycznie alokację jego liczebności referencyjnej systemowi na zero, co następuje po ostatniej kopii odwołania wykroczyła poza zakres. Aby uzyskać więcej informacji, zobacz [Ref klas i struktur](http://msdn.microsoft.com/library/windows/apps/hh699870.aspx).  
+ Użyj **ref nowe** można przydzielić pamięci dla obiektów środowiska wykonawczego Windows, którego okres istnienia, którą chcesz administrować automatycznie. Obiekt jest automatycznie cofniętą alokacją, gdy jego licznik odwołań zbliża się do zera, która następuje po ostatniej kopii odwołanie stała się poza zakresem. Aby uzyskać więcej informacji, zobacz [klasy i struktury odwołania](http://msdn.microsoft.com/library/windows/apps/hh699870.aspx).  
   
 ### <a name="requirements"></a>Wymagania  
- — Opcja kompilatora: **/ZW**  
+ — Opcja kompilatora: `/ZW`  
   
 ## <a name="common-language-runtime"></a>środowiska uruchomieniowe w trakcie wykonania 
- Jest przydzielana pamięć dla typu zarządzanego (odwołanie lub wartość typu), przez `gcnew`i alokację przy użyciu wyrzucanie elementów bezużytecznych.  
+ Pamięć dla typu zarządzanego (odwołania lub typu wartości) została przydzielona przez **gcnew**i za pomocą wyrzucania elementów bezużytecznych z cofniętą alokacją.  
   
 ### <a name="requirements"></a>Wymagania  
- — Opcja kompilatora:   **/CLR**  
+ — Opcja kompilatora: `/clr`  
   
 ### <a name="examples"></a>Przykłady  
- **Przykład**  
   
- W poniższym przykładzie użyto `gcnew` można przydzielić obiektu komunikatu.  
+ W poniższym przykładzie użyto **gcnew** przydzielić obiektu wiadomości.  
   
-```  
+```cpp  
 // mcppv2_gcnew_1.cpp  
 // compile with: /clr  
 ref struct Message {  
@@ -69,11 +68,9 @@ int main() {
 }  
 ```  
   
- **Przykład**  
+ W poniższym przykładzie użyto **gcnew** utworzyć opakowanym typem wartościowym do użycia, takich jak typ odwołania.  
   
- W poniższym przykładzie użyto `gcnew` utworzyć opakowanym typem wartościowym do użycia, takie jak typ referencyjny.  
-  
-```  
+```cpp  
 // example2.cpp : main project file.  
 // compile with /clr  
 using namespace System;  

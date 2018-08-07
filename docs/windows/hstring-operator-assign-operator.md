@@ -15,15 +15,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 6fd1082beb6d84c5dded008e20683f7292cbc1e0
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 9cc496f4f1c23508b2ebba2788910ff9c9ca2066
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33873875"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39608602"
 ---
 # <a name="hstringoperator-operator"></a>HString::Operator= Operator
-Przenosi bieżący obiekt HString wartość innego obiektu HString.  
+Przenosi wartość innego **HString** obiekt do bieżącego **HString** obiektu.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -31,17 +31,17 @@ Przenosi bieżący obiekt HString wartość innego obiektu HString.
 HString& operator=(HString&& other) throw()  
 ```  
   
-#### <a name="parameters"></a>Parametry  
- `other`  
- Istniejący obiekt HString.  
+### <a name="parameters"></a>Parametry  
+ *other*  
+ Istniejące **HString** obiektu.  
   
 ## <a name="remarks"></a>Uwagi  
- Wartość istniejącej `other` obiektu jest kopiowany do bieżącego obiektu HString, a następnie `other` obiekt zostanie zniszczony.  
+ Wartość istniejącego *innych* obiekt jest kopiowany do bieżącego **HString** obiektu, a następnie *innych* niszczony jest obiekt.  
   
 ## <a name="requirements"></a>Wymagania  
  **Nagłówek:** corewrappers.h  
   
- **Namespace:** Microsoft::wrl:: wrappers —  
+ **Namespace:** Microsoft::wrl:: wrappers  
   
 ## <a name="see-also"></a>Zobacz też  
  [HString, klasa](../windows/hstring-class.md)

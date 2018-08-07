@@ -1,5 +1,5 @@
 ---
-title: Module::RegisterCOMObject — metoda | Dokumentacja firmy Microsoft
+title: Module::RegisterCOMObject, metoda | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: c002dd64049006c8ee74c709c585a3a9d0f253a5
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 8c997b4221dee913a6eaad55f6f114b0ad9d820e
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33873982"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39606543"
 ---
 # <a name="moduleregistercomobject-method"></a>Module::RegisterCOMObject — Metoda
-Rejestruje jednego lub większej liczby obiektów COM, więc inne aplikacje mogą łączyć się z nimi.  
+Rejestruje jeden lub więcej obiektów COM, dzięki czemu inne aplikacje mogą łączyć się z nimi.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -39,34 +39,34 @@ WRL_NOTHROW virtual HRESULT RegisterCOMObject(
   
 ```  
   
-#### <a name="parameters"></a>Parametry  
- `serverName`  
- Pełna nazwa serwera.  
+### <a name="parameters"></a>Parametry  
+ *serverName*  
+ W pełni kwalifikowaną nazwę serwera.  
   
- `clsids`  
+ *CLSID*  
  Tablica CLSID do zarejestrowania.  
   
- `factories`  
- Tablica IUnknown interfejsów obiektów klas, w których dostępności jest publikowana.  
+ *fabryki*  
+ Tablica interfejsów IUnknown typów obiektów klas, których udostępnienie jest on publikowany.  
   
- `cookies`  
- Po zakończeniu operacji tablicy wskaźników do wartości, które identyfikują klasę obiektów, które zostały zarejestrowane. Te wartości są później używane odwołać rejestracji.  
+ *Pliki cookie*  
+ Po zakończeniu operacji, tablicę wskaźników do wartości, które identyfikują klasy obiektów, które zostały zarejestrowane. Wartości te są później używane odwołać rejestracji.  
   
- `count`  
+ *Liczba*  
  Liczba CLSID do zarejestrowania.  
   
 ## <a name="return-value"></a>Wartość zwracana  
- S_OK Jeśli successfu; w przeciwnym razie wartość HRESULT, takich jak CO_E_OBJISREG, która wskazuje przyczynę działanie nie powiodło się.  
+ S_OK Jeśli okaż; w przeciwnym razie wartość HRESULT takich jak CO_E_OBJISREG, która wskazuje przyczynę operacja nie powiodła się.  
   
 ## <a name="remarks"></a>Uwagi  
  Obiekty COM są zarejestrowane w usłudze modułu wyliczającego CLSCTX_LOCAL_SERVER CLSCTX wyliczenia.  
   
- Typ połączenia do zarejestrowanych obiektów jest określany przy użyciu kombinacji bieżącego `comflag` parametr szablonu i modułu wyliczającego REGCLS_SUSPENDED REGCLS wyliczenia.  
+ Typ połączenia, aby zarejestrowane obiekty jest określony przy użyciu kombinacji bieżącego *comflag* parametrem szablonu i moduł wyliczający REGCLS_SUSPENDED REGCLS wyliczenia.  
   
 ## <a name="requirements"></a>Wymagania  
  **Nagłówek:** module.h  
   
- **Namespace:** Microsoft::wrl —
+ **Namespace:** Microsoft::WRL
  
  ## <a name="see-also"></a>Zobacz też
  [Klasa modułu](../windows/module-class.md)

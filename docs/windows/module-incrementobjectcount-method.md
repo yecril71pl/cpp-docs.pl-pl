@@ -1,5 +1,5 @@
 ---
-title: Module::IncrementObjectCount — metoda | Dokumentacja firmy Microsoft
+title: Module::IncrementObjectCount, metoda | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: c662d4f8752014ca785b63020fc0ef7c97b5306f
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 2f52e81a57909cfb9fa0c52b8e376d33f63fded0
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33878245"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39605009"
 ---
 # <a name="moduleincrementobjectcount-method"></a>Module::IncrementObjectCount — Metoda
-Zwiększa liczbę obiektów śledzone przez moduł.  
+Zwiększa liczbę obiektów śledzonych przez moduł.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -34,12 +34,12 @@ virtual long IncrementObjectCount();
 ```  
   
 ## <a name="return-value"></a>Wartość zwracana  
- Liczba przed operacją przyrostu.  
+ Liczba przed wykonaniem operacji przyrostu.  
   
 ## <a name="requirements"></a>Wymagania  
  **Nagłówek:** module.h  
   
- **Namespace:** Microsoft::wrl —
+ **Namespace:** Microsoft::WRL
  
- ## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz też
  [Klasa modułu](../windows/module-class.md)

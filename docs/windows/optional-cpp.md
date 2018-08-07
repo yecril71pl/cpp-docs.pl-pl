@@ -1,5 +1,5 @@
 ---
-title: opcjonalne (C++) | Dokumentacja firmy Microsoft
+title: Opcjonalnie (C++) | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 07a15be3f90c7ab1fd7d5064f8a69371560b7e71
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 50273c511ff682410252a4c9d6ddafd11d0a92dc
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33878216"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39603710"
 ---
 # <a name="optional-c"></a>optional (C++)
 Określa opcjonalny parametr dla funkcji członkowskiej.  
@@ -30,18 +30,16 @@ Określa opcjonalny parametr dla funkcji członkowskiej.
 ## <a name="syntax"></a>Składnia  
   
 ```  
-  
 [optional]  
-  
 ```  
   
 ## <a name="remarks"></a>Uwagi  
- **Opcjonalne** atrybut C++ ma te same funkcje co [opcjonalne](http://msdn.microsoft.com/library/windows/desktop/aa367132) MIDL atrybutu.  
+ **Opcjonalne** atrybut C++ ma taką samą funkcjonalność jak [opcjonalne](http://msdn.microsoft.com/library/windows/desktop/aa367132) atrybutów w MIDL.  
   
 ## <a name="example"></a>Przykład  
- Poniższy kod przedstawia sposób **opcjonalne** może być używany:  
+ Poniższy kod przedstawia sposób **opcjonalne** mogą być używane:  
   
-```  
+```cpp  
 // cpp_attr_ref_optional.cpp  
 // compile with: /LD  
 #include "unknwn.h"  
@@ -56,16 +54,16 @@ __interface IFireTabCtrl : IDispatch
   
 ## <a name="requirements"></a>Wymagania  
   
-### <a name="attribute-context"></a>Atrybut kontekstu  
+### <a name="attribute-context"></a>Kontekst atrybutu  
   
 |||  
 |-|-|  
-|**Dotyczy**|Parametr — interfejs|  
+|**Dotyczy**|Parametr interfejsu|  
 |**Powtarzalne**|Nie|  
 |**Wymaganych atrybutów**|Brak|  
 |**Nieprawidłowe atrybuty**|Brak|  
   
- Aby uzyskać więcej informacji na temat konteksty atrybutu, zobacz [konteksty atrybutu](../windows/attribute-contexts.md).  
+ Aby uzyskać więcej informacji na temat konteksty atrybutu zobacz [konteksty atrybutu](../windows/attribute-contexts.md).  
   
 ## <a name="see-also"></a>Zobacz też  
  [Atrybuty IDL](../windows/idl-attributes.md)   

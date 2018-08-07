@@ -17,59 +17,58 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 7647ca56e3159564826efa9caf438456b9ae3568
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 3908a8f06d25416999fbf2c95dd258fbc19d456d
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33878960"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39603126"
 ---
 # <a name="rdx"></a>rdx
-Klucz rejestru tworzy lub modyfikuje istniejący klucz rejestru.  
+Tworzy klucz rejestru lub modyfikuje istniejący klucz rejestru.  
   
 ## <a name="syntax"></a>Składnia  
   
 ```  
-  
-      [ rdx(   
+[ rdx(   
    key,   
    valuename=NULL,   
    regtype   
 ) ]  
 ```  
   
-#### <a name="parameters"></a>Parametry  
- `key`  
- Nazwa klucza do utworzenia lub otwarcia.  
+### <a name="parameters"></a>Parametry  
+ *Klucz*  
+ Nazwa klucza, który ma zostać utworzony lub otwarty.  
   
- `valuename`(opcjonalnie)  
- Określa pole wartość do ustawienia. Jeśli wartość pola o tej nazwie nie istnieje już w kluczu, jest dodawany.  
+ *VALUENAME* (opcjonalnie)  
+ Określa pole wartości do ustawienia. Jeśli wartość pola o tej nazwie już istnieje w kluczu, zostanie dodany.  
   
  *regtype*  
- Typ dodawany klucz rejestru. Może być jedną z następujących czynności: **tekst**, **dword**, **binary**, lub `CString`.  
+ Typ klucza rejestru dodawane. Może być jedną z następujących czynności: `text`, `dword`, `binary`, lub `CString`.  
   
 ## <a name="remarks"></a>Uwagi  
- **Rdx** atrybutu C++ tworzy lub modyfikuje istniejącego klucza rejestru dla składnika modelu COM. Atrybut dodaje makro BEGIN_RDX_MAP do obiektu, który implementuje element członkowski docelowego. `RegistryDataExchange`, funkcja wprowadzonym w wyniku makro BEGIN_RDX_MAP może służyć do transferu danych między rejestru i elementy członkowskie danych  
+ **Rdx** atrybut C++ tworzy lub modyfikuje istniejący klucz rejestru dla składnika COM. Ten atrybut dodaje makro BEGIN_RDX_MAP do obiektu, który implementuje docelowy element członkowski. `RegistryDataExchange`, funkcja wprowadzonym w wyniku makro BEGIN_RDX_MAP może służyć do przesyłania danych między rejestru i elementy członkowskie danych  
   
  Ten atrybut może być używany w połączeniu z [coclass](../windows/coclass.md), [progid](../windows/progid.md), lub [vi_progid —](../windows/vi-progid.md) atrybuty lub innych oznacza jeden z nich.  
   
 ## <a name="requirements"></a>Wymagania  
   
-### <a name="attribute-context"></a>Atrybut kontekstu  
+### <a name="attribute-context"></a>Kontekst atrybutu  
   
 |||  
 |-|-|  
-|**Dotyczy**|**Klasa** lub `struct` elementu członkowskiego|  
+|**Dotyczy**|**Klasa** lub **struktury** elementu członkowskiego|  
 |**Powtarzalne**|Nie|  
 |**Wymaganych atrybutów**|Brak|  
 |**Nieprawidłowe atrybuty**|Brak|  
   
- Aby uzyskać więcej informacji na temat konteksty atrybutu, zobacz [konteksty atrybutu](../windows/attribute-contexts.md).  
+ Aby uzyskać więcej informacji na temat konteksty atrybutu zobacz [konteksty atrybutu](../windows/attribute-contexts.md).  
   
 ## <a name="example"></a>Przykład  
- Poniższy kod dodaje klucz rejestru o nazwie MyValue opisujące składnik modelu COM CMyClass systemu.  
+ Poniższy kod dodaje klucza rejestru o nazwie MyValue systemowi opisujące składnika CMyClass COM.  
   
-```  
+```cpp  
 // cpp_attr_ref_rdx.cpp  
 // compile with: /LD /link /OPT:NOREF  
 #define _ATL_ATTRIBUTES  

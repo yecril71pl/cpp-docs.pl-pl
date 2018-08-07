@@ -18,44 +18,44 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 0da935ebdce7de61d5ed6b1a816f87b7cef7ce98
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: ccab1e53fcbb407b6af7683b7aaaef75b0bb9789
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33878440"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39606594"
 ---
 # <a name="moving-and-copying-menus-and-menu-commands"></a>Przenoszenie oraz kopiowanie menu i poleceń menu
-Można przenosić i kopiować menu i poleceń menu metodą przeciągnij i upuść lub za pomocą poleceń menu skrótów (prawym przyciskiem myszy).  
+Można przenosić i kopiować, menu i poleceń menu przy użyciu metody przeciągania i upuszczania lub za pomocą poleceń w menu skrótów (kliknij prawym przyciskiem myszy menu).  
   
-### <a name="to-move-or-copy-menus-or-menu-commands-using-the-drag-and-drop-method"></a>Aby przenieść lub skopiować menu lub poleceń metodą przeciągnij i upuść  
+### <a name="to-move-or-copy-menus-or-menu-commands-using-the-drag-and-drop-method"></a>Do przeniesienia lub skopiowania menu lub poleceń menu przy użyciu metody przeciągania i upuszczania  
   
 1.  Przeciągnij lub skopiuj element, który chcesz przenieść do:  
   
     -   Nowa lokalizacja bieżącego menu.  
   
-    -   Inne menu. (Można przechodzić do innych menu przez przeciągnięcie nad nimi wskaźnik myszy.)  
+    -   Inne menu. (Można przejść do innych menu, przeciągając wskaźnik myszy nad nimi.)  
   
-2.  Polecenia menu porzucić, gdy prowadnicę wstawiania pokazuje pozycji, które mają.  
+2.  Pomijać polecenia menu, gdy prowadnicę wstawiania pokazuje pozycji, które chcesz.  
   
-### <a name="to-move-or-copy-menus-or-menu-commands-using-shortcut-menu-commands"></a>Aby przenieść lub skopiować menu lub poleceń za pomocą poleceń menu skrótów  
+### <a name="to-move-or-copy-menus-or-menu-commands-using-shortcut-menu-commands"></a>Do przeniesienia lub skopiowania menu lub poleceń za pomocą polecenia menu skrótów  
   
-1.  Kliknij prawym przyciskiem myszy jeden lub więcej menu lub poleceń menu.  
+1.  Kliknij prawym przyciskiem myszy jednego lub kilku menu lub poleceń menu.  
   
-2.  Z menu skrótów wybierz **Wytnij** (Aby przenieść) lub **kopiowania**.  
+2.  Z menu skrótów wybierz polecenie **Wytnij** (Aby przenieść) lub **kopiowania**.  
   
 3.  Jeśli przenosisz elementy do menu inny zasób lub pliku skryptu zasobu, [otwórz go w innym oknie](/visualstudio/ide/customizing-window-layouts-in-visual-studio).  
   
 4.  Wybierz pozycję menu lub polecenia menu, który chcesz przenieść lub skopiować do.  
   
-5.  Z menu skrótów wybierz **Wklej**. Element lub przenieść znajduje się przed elementem, którą wybierzesz.  
+5.  Z menu skrótów wybierz polecenie **Wklej**. Element przenoszone lub kopiowane jest umieszczany przed elementem, którą wybierzesz.  
   
     > [!NOTE]
-    >  Można także przeciągnąć, kopiowanie i wklejanie do innych menu w innych oknach menu.  
+    >  Można również przeciągnąć, skopiuj i Wklej do innych menu w innych oknach menu.  
   
- Aby uzyskać informacje o dodawaniu zasobów do projektów zarządzanych, zobacz [zasobów w aplikacjach pulpitu](/dotnet/framework/resources/index) w *Przewodnik programistów platformy .NET Framework.* Aby uzyskać informacje o ręczne dodanie do projektów zarządzanych plików zasobów, uzyskiwanie dostępu do zasobów wyświetlania statycznych zasobów i przydzielanie zasobów ciągów do właściwości oraz [wskazówki: przy użyciu zasobów dla lokalizacji ASP.NET](http://msdn.microsoft.com/Library/bb4e5b44-e2b0-48ab-bbe9-609fb33900b6).  
+ Aby uzyskać informacje na temat dodawania zasobów do projektów zarządzanych, zobacz [zasoby w aplikacjach pulpitu](/dotnet/framework/resources/index) w *przewodniku dewelopera .NET Framework.* Instrukcje dotyczące ręcznego dodawania plików zasobów do projektów zarządzanych, uzyskiwania dostępu do zasobów, wyświetlania statycznych zasobów i przypisywania ciągów zasobów do właściwości i [Instruktaż: Using Resources for Localization with ASP.NET](http://msdn.microsoft.com/Library/bb4e5b44-e2b0-48ab-bbe9-609fb33900b6).  
   
- **Wymagania**  
+## <a name="requirements"></a>Wymagania  
   
  Win32  
   

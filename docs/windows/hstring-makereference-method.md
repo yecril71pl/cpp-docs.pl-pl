@@ -1,5 +1,5 @@
 ---
-title: HString::MakeReference — metoda | Dokumentacja firmy Microsoft
+title: HString::MakeReference, metoda | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,15 +15,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: e30b3ea3c6b791eb654a6fbbe91b3c87353f31c1
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 673d5b10706580303f179ee453495b581d96eda3
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33882644"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39608338"
 ---
 # <a name="hstringmakereference-method"></a>HString::MakeReference — Metoda
-Tworzy obiekt hstringreference — z parametru określonego ciągu.  
+Tworzy `HStringReference` obiekt z określonego parametru ciągu.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -38,23 +38,23 @@ template<unsigned int sizeDest>
               unsigned int len);  
 ```  
   
-#### <a name="parameters"></a>Parametry  
- `sizeDest`  
- Parametr szablonu, który określa rozmiar buforu hstringreference — docelowy.  
+### <a name="parameters"></a>Parametry  
+ *sizeDest*  
+ Parametr szablonu, który określa rozmiar docelowy `HStringReference` buforu.  
   
- `str`  
+ *str*  
  Odwołanie do ciągu znaków dwubajtowych.  
   
- `len`  
- Maksymalna długość `str` buforu parametr do użycia w tej operacji. Jeśli `len` parametr nie jest określony, całą `str` parametr jest używany.  
+ *Len*  
+ Maksymalna długość *str* bufora parametru w tej operacji. Jeśli *len* parametr nie jest określony, całą *str* parametr jest używany.  
   
 ## <a name="return-value"></a>Wartość zwracana  
- Hstringreference — obiektu, którego wartość jest taka sama jak określona `str` parametru.  
+ `HStringReference` Obiektu, którego wartość jest taka sama, jak określa *str* parametru.  
   
 ## <a name="requirements"></a>Wymagania  
  **Nagłówek:** corewrappers.h  
   
- **Namespace:** Microsoft::wrl:: wrappers —  
+ **Namespace:** Microsoft::wrl:: wrappers  
   
 ## <a name="see-also"></a>Zobacz też  
  [HString, klasa](../windows/hstring-class.md)

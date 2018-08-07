@@ -17,30 +17,28 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 0bb752c02eb200e952cf247684675ebd377eeaaa
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: a7bdd285ed74c7792a34cfe99e0a900d42d6bc26
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33877371"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39604593"
 ---
 # <a name="nonbrowsable"></a>nonbrowsable
-Wskazuje, że element członkowski interfejsu nie powinien być wyświetlany w przeglądarce właściwości.  
+Wskazuje, czy składowej interfejsu nie powinien być wyświetlany w przeglądarce właściwości.  
   
 ## <a name="syntax"></a>Składnia  
   
 ```  
-  
 [nonbrowsable]  
-  
 ```  
   
 ## <a name="remarks"></a>Uwagi  
- **Nonbrowsable —** atrybut C++ ma te same funkcje co [nonbrowsable —](http://msdn.microsoft.com/library/windows/desktop/aa367117) MIDL atrybutu.  
+ **Nonbrowsable —** atrybut C++ ma taką samą funkcjonalność jak [nonbrowsable —](http://msdn.microsoft.com/library/windows/desktop/aa367117) atrybutów w MIDL.  
   
 ## <a name="example"></a>Przykład  
   
-```  
+```cpp  
 // cpp_attr_ref_nonbrowsable.cpp  
 // compile with: /LD  
 #include <unknwn.h>  
@@ -56,7 +54,7 @@ __interface IMyI
   
 ## <a name="requirements"></a>Wymagania  
   
-### <a name="attribute-context"></a>Atrybut kontekstu  
+### <a name="attribute-context"></a>Kontekst atrybutu  
   
 |||  
 |-|-|  
@@ -65,7 +63,7 @@ __interface IMyI
 |**Wymaganych atrybutów**|Brak|  
 |**Nieprawidłowe atrybuty**|Brak|  
   
- Aby uzyskać więcej informacji na temat konteksty atrybutu, zobacz [konteksty atrybutu](../windows/attribute-contexts.md).  
+ Aby uzyskać więcej informacji na temat konteksty atrybutu zobacz [konteksty atrybutu](../windows/attribute-contexts.md).  
   
 ## <a name="see-also"></a>Zobacz też  
  [Atrybuty IDL](../windows/idl-attributes.md)   

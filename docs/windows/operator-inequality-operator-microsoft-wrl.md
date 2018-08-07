@@ -1,5 +1,5 @@
 ---
-title: operator! = — Operator (Microsoft::wrl —) | Dokumentacja firmy Microsoft
+title: operator! = — Operator (Microsoft::WRL) | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,15 +15,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: c972687973cbaa66d4b79a883e8b008cd588e237
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 517184dffac0c35772e61284a18eca764fbb5cc8
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33876400"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39603983"
 ---
 # <a name="operator-operator-microsoftwrl"></a>operator!= Operator (Microsoft::WRL)
-Operator nierówności [comptr —](../windows/comptr-class.md) i [comptrref —](../windows/comptrref-class.md) obiektów.  
+Operator nierówności dla [ComPtr](../windows/comptr-class.md) i [comptrref —](../windows/comptrref-class.md) obiektów.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -62,20 +62,20 @@ WRL_NOTHROW bool operator!=(
 );  
 ```  
   
-#### <a name="parameters"></a>Parametry  
- `a`  
- Po lewej stronie obiektu.  
+### <a name="parameters"></a>Parametry  
+ *a*  
+ Obiekt, który po lewej stronie.  
   
- `b`  
- Odpowiedniego obiektu.  
+ *b*  
+ Obiekt, do prawej.  
   
 ## <a name="return-value"></a>Wartość zwracana  
- `true` Jeśli obiekty nie są równe; w przeciwnym razie `false`.  
+ **wartość true,** Jeśli obiekty nie są równe; w przeciwnym razie **false**.  
   
 ## <a name="requirements"></a>Wymagania  
  **Nagłówek:** client.h  
   
- **Namespace:** Microsoft::wrl —  
+ **Namespace:** Microsoft::WRL  
   
 ## <a name="see-also"></a>Zobacz też  
  [Microsoft::WRL, przestrzeń nazw](../windows/microsoft-wrl-namespace.md)

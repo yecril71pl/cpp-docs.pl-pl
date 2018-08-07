@@ -1,5 +1,5 @@
 ---
-title: Hstringreference::hstringreference — Konstruktor | Dokumentacja firmy Microsoft
+title: HStringReference::HStringReference, Konstruktor | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,15 +15,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: dc88ea32d4384b36559a4a10da0a5975345bf0d7
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 7dce8c6fca14ad26665bf4868681234374c20f85
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33876010"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39608147"
 ---
 # <a name="hstringreferencehstringreference-constructor"></a>HStringReference::HStringReference — Konstruktor
-Inicjuje nowe wystąpienie klasy hstringreference —.  
+Inicjuje nowe wystąpienie klasy **HStringReference** klasy.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -38,30 +38,30 @@ HStringReference(wchar_t const (&str)[ sizeDest],
 HStringReference(HStringReference&& other) throw();  
 ```  
   
-#### <a name="parameters"></a>Parametry  
- `sizeDest`  
- Parametr szablonu, który określa rozmiar buforu hstringreference — docelowy.  
+### <a name="parameters"></a>Parametry  
+ *sizeDest*  
+ Parametr szablonu, który określa rozmiar docelowy **HStringReference** buforu.  
   
- `str`  
+ *str*  
  Odwołanie do ciągu znaków dwubajtowych.  
   
- `len`  
- Maksymalna długość `str` buforu parametr do użycia w tej operacji. Jeśli `len` parametr nie jest określony, całą `str` parametr jest używany. Jeśli `len` jest większa niż `sizeDest`, `len` ustawiono `sizeDest`-1.  
+ *Len*  
+ Maksymalna długość *str* bufora parametru w tej operacji. Jeśli *len* parametr nie jest określony, całą *str* parametr jest używany. Jeśli *len* jest większa niż *sizeDest*, *len* ustawiono *sizeDest*-1.  
   
- `other`  
- Inny obiekt hstringreference —.  
+ *other*  
+ Inny **HStringReference** obiektu.  
   
 ## <a name="remarks"></a>Uwagi  
- Pierwszy Konstruktor inicjuje nowy obiekt hstringreference — taki sam rozmiar jak parametr `str`.  
+ Pierwszy Konstruktor inicjuje nową **HStringReference** obiekt, który jest taki sam rozmiar jak parametr *str*.  
   
- Drugi inicjuje konstruktora nowe hstringreference — obiekt, który specifeid rozmiar przez parametr `len`.  
+ Inicjuje nowe wystąpienie drugi Konstruktor **HStringReference** obiekt specifeid rozmiaru za pomocą parametru *len*.  
   
- Trzeci Konstruktor inicjuje nowy obiekt hstringreference — wartość `other` parametr, a następnie niszczy `other` parametru.  
+ Trzeci Konstruktor inicjuje nowe **HStringReference** obiektu do wartości *innych* parametru, a następnie niszczy *innych* parametru.  
   
 ## <a name="requirements"></a>Wymagania  
  **Nagłówek:** corewrappers.h  
   
- **Namespace:** Microsoft::wrl:: wrappers —  
+ **Namespace:** Microsoft::wrl:: wrappers  
   
 ## <a name="see-also"></a>Zobacz też  
  [HStringReference, klasa](../windows/hstringreference-class.md)

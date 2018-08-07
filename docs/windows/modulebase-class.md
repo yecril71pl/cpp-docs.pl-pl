@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: bfee0c0cd7ff7bd7f4525a291184f08f1e2898e5
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: b298bcab4c2b3547f2b285fe21d4967f4696fb9d
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33878739"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39605061"
 ---
 # <a name="modulebase-class"></a>ModuleBase — Klasa
 Obsługuje infrastrukturę biblioteki WRL i nie jest przeznaczona do użycia bezpośrednio w kodzie.  
@@ -34,7 +34,7 @@ class ModuleBase;
 ```  
   
 ## <a name="remarks"></a>Uwagi  
- Reprezentuje klasę podstawową [modułu](../windows/module-class.md) klasy.  
+ Reprezentuje klasę bazową [modułu](../windows/module-class.md) klasy.  
   
 ## <a name="members"></a>Elementy członkowskie  
   
@@ -42,15 +42,15 @@ class ModuleBase;
   
 |Nazwa|Opis|  
 |----------|-----------------|  
-|[ModuleBase::ModuleBase, konstruktor](../windows/modulebase-modulebase-constructor.md)|Inicjuje wystąpienie klasy modułu.|  
-|[ModuleBase::~ModuleBase, destruktor](../windows/modulebase-tilde-modulebase-destructor.md)|Deinitializes bieżącego wystąpienia klasy modułu.|  
+|[ModuleBase::ModuleBase, konstruktor](../windows/modulebase-modulebase-constructor.md)|Inicjuje wystąpienie `Module` klasy.|  
+|[ModuleBase::~ModuleBase, destruktor](../windows/modulebase-tilde-modulebase-destructor.md)|Deinicjuje bieżące wystąpienie `Module` klasy.|  
   
 ### <a name="public-methods"></a>Metody publiczne  
   
 |Nazwa|Opis|  
 |----------|-----------------|  
-|[ModuleBase::DecrementObjectCount, metoda](../windows/modulebase-decrementobjectcount-method.md)|Po zaimplementowaniu, zmniejsza liczbę obiektów śledzone przez moduł.|  
-|[ModuleBase::IncrementObjectCount, metoda](../windows/modulebase-incrementobjectcount-method.md)|Po zaimplementowaniu, zwiększa liczbę obiektów śledzone przez moduł.|  
+|[ModuleBase::DecrementObjectCount, metoda](../windows/modulebase-decrementobjectcount-method.md)|Po wdrożeniu, zmniejsza liczbę obiektów śledzone przez moduł.|  
+|[ModuleBase::IncrementObjectCount, metoda](../windows/modulebase-incrementobjectcount-method.md)|Po wdrożeniu, zwiększa liczbę obiektów śledzonych przez moduł.|  
   
 ## <a name="inheritance-hierarchy"></a>Hierarchia dziedziczenia  
  `ModuleBase`  
@@ -58,7 +58,7 @@ class ModuleBase;
 ## <a name="requirements"></a>Wymagania  
  **Nagłówek:** implements.h  
   
- **Namespace:** Microsoft::wrl:: details —  
+ **Namespace:** Microsoft::wrl:: details  
   
 ## <a name="see-also"></a>Zobacz też  
  [Microsoft::WRL::Details, przestrzeń nazw](../windows/microsoft-wrl-details-namespace.md)

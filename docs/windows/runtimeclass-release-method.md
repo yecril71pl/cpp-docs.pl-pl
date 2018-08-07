@@ -1,5 +1,5 @@
 ---
-title: RuntimeClass::Release — metoda | Dokumentacja firmy Microsoft
+title: RuntimeClass::Release, metoda | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 3d07e941f3f8ee0d7df2df14216fa60ef3a2a706
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 1c1f9500abc1c92ea5f9aca64e379adfdcf84a44
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33888799"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39607527"
 ---
 # <a name="runtimeclassrelease-method"></a>RuntimeClass::Release — Metoda
-Wykonuje operację wydania COM w bieżącym obiekcie runtimeclass —.  
+Wykonuje operację wydania COM na bieżącym **RuntimeClass** obiektu.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -40,12 +40,12 @@ STDMETHOD_(
  S_OK w przypadku powodzenia; w przeciwnym razie wartość HRESULT, która wskazuje błąd.  
   
 ## <a name="remarks"></a>Uwagi  
- Jeśli liczba odwołań wynosi zero, obiekt runtimeclass — zostaje usunięty.  
+ Jeśli licznik odwołań staje się zerem, **RuntimeClass** obiekt zostanie usunięty.  
   
 ## <a name="requirements"></a>Wymagania  
  **Nagłówek:** implements.h  
   
- **Namespace:** Microsoft::wrl —  
+ **Namespace:** Microsoft::WRL  
   
 ## <a name="see-also"></a>Zobacz też  
  [RuntimeClass, klasa](../windows/runtimeclass-class.md)

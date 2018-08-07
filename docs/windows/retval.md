@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 1c0bf7ecd989b51a17c853c6d2986db204c3ce34
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: d6f17f44e520018f82dc82abe88427a2410d68e7
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33888724"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39606354"
 ---
 # <a name="retval"></a>retval
 Określa parametr, który otrzymuje wartość zwrotną z elementu członkowskiego.  
@@ -30,22 +30,20 @@ Określa parametr, który otrzymuje wartość zwrotną z elementu członkowskieg
 ## <a name="syntax"></a>Składnia  
   
 ```  
-  
 [retval]  
-  
 ```  
   
 ## <a name="remarks"></a>Uwagi  
- **Retval** atrybut C++ ma te same funkcje co [retval](http://msdn.microsoft.com/library/windows/desktop/aa367158) MIDL atrybutu.  
+ **Retval** atrybut C++ ma taką samą funkcjonalność jak [retval](http://msdn.microsoft.com/library/windows/desktop/aa367158) atrybutów w MIDL.  
   
- **retval** musi występować w deklaracji funkcji ostatni argument.  
+ **retval** musi znajdować się jako ostatni argument w deklaracji funkcji.  
   
 ## <a name="example"></a>Przykład  
- Zobacz przykład [powiązania](../windows/bindable.md) użytku próbki **retval**.  
+ Zobacz przykład [możliwej do wiązania](../windows/bindable.md) do użytku przykładowe **retval**.  
   
 ## <a name="requirements"></a>Wymagania  
   
-### <a name="attribute-context"></a>Atrybut kontekstu  
+### <a name="attribute-context"></a>Kontekst atrybutu  
   
 |||  
 |-|-|  
@@ -54,9 +52,9 @@ Określa parametr, który otrzymuje wartość zwrotną z elementu członkowskieg
 |**Wymaganych atrybutów**|**out**|  
 |**Nieprawidłowe atrybuty**|**in**|  
   
- Aby uzyskać więcej informacji na temat konteksty atrybutu, zobacz [konteksty atrybutu](../windows/attribute-contexts.md).  
+ Aby uzyskać więcej informacji na temat konteksty atrybutu zobacz [konteksty atrybutu](../windows/attribute-contexts.md).  
   
 ## <a name="see-also"></a>Zobacz też  
  [Atrybuty IDL](../windows/idl-attributes.md)   
- [Atrybuty parametrów](../windows/parameter-attributes.md)   
+ [Atrybuty parametru](../windows/parameter-attributes.md)   
  [Atrybuty metody](../windows/method-attributes.md)   

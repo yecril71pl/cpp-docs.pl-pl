@@ -1,5 +1,5 @@
 ---
-title: Interfejs klasy (C++ Component Extensions) | Dokumentacja firmy Microsoft
+title: Interface class (C++ Component Extensions) | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,49 +18,49 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 03c081abc457d025ca2818c887deeb5baf4c4de7
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 74b4ea6b82de65f691d5d0350e161725625e4e1f
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33880862"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39604489"
 ---
 # <a name="interface-class--c-component-extensions"></a>interface class (C++ Component Extensions)
-Deklaruje interfejsu.  Informacji dla natywnych interfejsów, temacie [__interface](../cpp/interface.md).  
+Deklaruje interfejsu.  Informacje na temat interfejsy macierzyste można zobaczyć [__interface](../cpp/interface.md).  
   
 ## <a name="all-runtimes"></a>Wszystkie środowiska wykonawcze  
- **Składnia**  
+
+### <a name="syntax"></a>Składnia  
   
 ```  
-  
 interface_access  
 interface class  
  name :  inherit_accessbase_interface{};interface_accessinterface structname :  inherit_accessbase_interface{};  
 ```  
   
- **Parametry**  
+### <a name="parameters"></a>Parametry  
   
  *interface_access*  
- Ułatwienia dostępu interfejsu poza zestaw.  Możliwe wartości to **publicznego** i `private`.  `private` jest ustawieniem domyślnym.  Zagnieżdżone interfejsów nie mogą mieć *interface_access* specyfikator.  
+ Dostępność interfejs spoza zestawu.  Możliwe wartości to **publicznych** i **prywatnej**.  **prywatne** jest ustawieniem domyślnym. Zagnieżdżone interfejsy nie mogą mieć *interface_access* specyfikator.  
   
  *Nazwa*  
  Nazwa interfejsu.  
   
  *inherit_access*  
- Dostępność *base_interface*.  Tylko dozwolone ułatwień dostępu dla interfejs podstawowy jest `public` (ustawienie domyślne).  
+ Dostępność *base_interface*.  Jedyna dozwolona w ułatwienia dostępu przypadku interfejs podstawowy **publicznych** (ustawienie domyślne).  
   
  *base_interface* (opcjonalnie)  
  Podstawowy interfejs dla interfejsu *nazwa*.  
   
- **Uwagi**  
+### <a name="remarks"></a>Uwagi  
   
- **Interface struct** jest odpowiednikiem **interfejsu klasy**.  
+ **Struktura interfejsu** jest odpowiednikiem **interfejsu klasy**.  
   
- Interfejs może zawierać deklaracje funkcji, zdarzeń i właściwości.  Wszystkie elementy członkowskie interfejsu mają powszechnej dostępności. Interfejs może również zawierać statyczne elementy członkowskie danych, funkcji, zdarzeń i właściwości i te statyczne elementy członkowskie muszą być zdefiniowane w interfejsie.  
+ Interfejs może zawierać deklaracje funkcji, właściwości i zdarzenia.  Wszyscy członkowie interfejsu mają powszechnej dostępności. Interfejs może również zawierać statycznych składowych danych, funkcje, zdarzenia i właściwości, a te statyczne elementy członkowskie muszą być zdefiniowane w interfejsie.  
   
- Interfejs definiuje, jak można zaimplementować klasy. Interfejs nie jest klasą i klasy tylko mogą implementować interfejsów. Po klasie definiuje funkcję zadeklarowany w interfejsie, funkcja jest zaimplementowana nie zastąpiona. W związku z tym wyszukiwanie nazw nie ma członków interfejsu.  
+ Interfejs definiuje, jak można zaimplementować klasę. Interfejs nie jest klasą i klasy może zawierać implementację tylko interfejsów. Gdy klasa definiuje funkcja zadeklarowana w interfejsie, że funkcja jest zaimplementowana, nie zostanie zastąpiona. W związku z tym wyszukiwanie nazw nie ma składowych interfejsu.  
   
- Klasy lub struktury, która jest pochodną interfejsu musi implementować wszystkich członków interfejsu. Podczas implementowania interfejsu *nazwa* musi także implementować interfejsów w `base_interface` listy.  
+ Klasa lub struktura, która pochodzi z interfejsu muszą implementować wszystkie elementy członkowskie interfejsu. Podczas implementowania interfejsu *nazwa* musi także implementować interfejsy w `base_interface` listy.  
   
  Aby uzyskać więcej informacji, zobacz:  
   
@@ -68,34 +68,33 @@ interface class
   
 -   [Interfejsy ogólne (Visual C++)](../windows/generic-interfaces-visual-cpp.md)  
   
- Aby uzyskać informacje na inne typy CLR, zobacz [klas i struktur](../windows/classes-and-structs-cpp-component-extensions.md).  
+ Aby uzyskać informacji o innych typach CLR, zobacz [klas i struktur](../windows/classes-and-structs-cpp-component-extensions.md).  
   
- Można wykrywać w czasie kompilacji, jeśli typ interfejsu o `__is_interface_class(type)`. Aby uzyskać więcej informacji, zobacz [Obsługa cech typu w kompilatorze](../windows/compiler-support-for-type-traits-cpp-component-extensions.md).  
+ Można wykrywać w czasie kompilacji, jeśli typ jest interfejsem z `__is_interface_class(type)`. Aby uzyskać więcej informacji, zobacz [Obsługa cech typu w kompilatorze](../windows/compiler-support-for-type-traits-cpp-component-extensions.md).  
   
- Środowisko projektowe pozwala na uzyskanie pomocy F1 w następujących słów kluczowych przez wyróżnianie słowo kluczowe (`interface class`, na przykład) i naciskając klawisz F1.  
+ W środowisku deweloperskim, możesz uzyskać Pomoc F1 na tych słów kluczowych, wyróżniając słowo kluczowe (`interface class`, na przykład) i naciskając klawisz F1.  
   
 ## <a name="windows-runtime"></a>Środowisko wykonawcze systemu Windows  
  **Uwagi**  
   
- (Brak żadnych uwag dla tej funkcji języka, które są stosowane do środowiska uruchomieniowego systemu Windows.)  
+ (Nie ma żadnych uwag dla tej funkcji języka, które dotyczą tylko środowiska uruchomieniowego Windows).  
   
 ### <a name="requirements"></a>Wymagania  
- — Opcja kompilatora: **/ZW**  
+ — Opcja kompilatora: `/ZW`  
   
 ## <a name="common-language-runtime"></a>środowiska uruchomieniowe w trakcie wykonania 
  **Uwagi**  
   
- (Istnieją nie uwagi dla tej funkcji języka, które dotyczą tylko środowiska CLR.)  
+ (Nie ma żadnych uwag dla tej funkcji języka, które dotyczą tylko środowiska uruchomieniowego języka wspólnego).  
   
 ### <a name="requirements"></a>Wymagania  
- — Opcja kompilatora:   **/CLR**  
+ — Opcja kompilatora: `/clr`  
   
 ### <a name="examples"></a>Przykłady  
- **Przykład**  
   
- W poniższym przykładzie kodu pokazano, jak interfejs można określić zachowanie funkcji zegara.  
+ Poniższy przykład kodu pokazuje, jak zdefiniować interfejs zachowanie funkcji zegara.  
   
-```  
+```cpp  
 // mcppv2_interface_class.cpp  
 // compile with: /clr  
 using namespace System;  
@@ -201,11 +200,9 @@ OnClick: 7, 3.14159
 in Function_1  
 ```  
   
- **Przykład**  
+ Poniższy przykładowy kod przedstawia dwa sposoby implementacji funkcji o tej samej sygnaturze, zadeklarowany w wielu interfejsach i której te interfejsy są używane przez klasę.  
   
- Poniższy przykładowy kod przedstawia dwa sposoby implementacji funkcji o tej samej sygnaturze zadeklarowany w wielu interfejsach i gdzie te interfejsy są używane przez klasę.  
-  
-```  
+```cpp  
 // mcppv2_interface_class_2.cpp  
 // compile with: /clr /c  
 interface class I {  

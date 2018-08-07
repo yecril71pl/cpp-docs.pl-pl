@@ -26,30 +26,30 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: a977629cbae140afa1463a7765f193a7519e1f68
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 384db46d495b342d40dd4f7588583c5b6048810c
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33881913"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39604619"
 ---
 # <a name="icons-and-cursors-image-resources-for-display-devices-image-editor-for-icons"></a>Ikony i kursory: zasoby obrazów do wyświetlania na urządzeniach (Edytor obrazów dla ikon)
-Ikony i kursory są zasobów graficznych, które mogą zawierać wiele obrazów w różnych rozmiarach i schematów kolorów dla różnych typów urządzeń wyświetlających. Ponadto kursor ma "punkt aktywny," Lokalizacja, którą system Windows używa do śledzenia położenia. Zarówno ikony i kursory są tworzone i edytować za pomocą edytora obrazów jako mapy bitowe i inne obrazy.  
+Ikony i kursory są zasobów graficznych, które zawiera wiele obrazów o różnych wielkościach i schematów kolorów dla różnych rodzajów wyświetlania na urządzeniach. Ponadto kursor ma "punkt aktywny," w lokalizacji Windows używa do śledzenia jego położenie. Ikony i kursory są tworzone i edytować za pomocą edytora obrazów, jak mapy bitowe i inne obrazy.  
   
- Tworząc nową ikonę lub kursora, edytor obrazów najpierw tworzy obraz typu standardowego. Obraz jest wstępnie wypełniony kolorem (przezroczyste) ekranu. Jeśli obraz jest kursora, punkt aktywny jest początkowo lewym górnym rogu (współrzędne 0,0).  
+ Po utworzeniu kursor lub ikonę nowego edytora obrazów najpierw tworzy obraz standardowego typu. Obraz, który początkowo jest wypełniony kolorem ekranu (przezroczyste). Jeśli obraz kursora, punkt aktywny jest początkowo lewego górnego rogu (współrzędne 0,0).  
   
- Domyślnie edytor obrazów obsługuje tworzenie obrazów dodatkowych urządzeń pokazano w poniższej tabeli. Można utworzyć obrazy w przypadku innych urządzeń, wpisując parametrów szerokości, wysokości i liczba kolorów w [okno dialogowe obrazu niestandardowego](custom-image-dialog-box-image-editor-for-icons.md).  
+ Domyślnie edytor obrazów obsługuje tworzenie dodatkowych obrazów dla urządzeń z poniższą tabelą. Można utworzyć obrazy w przypadku innych urządzeń, wpisując parametrów szerokości, wysokości i liczba kolorów w [okno dialogowe obrazu niestandardowego](custom-image-dialog-box-image-editor-for-icons.md).  
   
 > [!NOTE]
 >  Korzystając z edytora obrazów, można wyświetlać obrazy 32-bitowe, ale nie można ich edytować.  
   
 |Kolor|Szerokość (w pikselach)|Wysokość (w pikselach)|  
 |-----------|----------------------|-----------------------|  
-|W skali odcieni szarości|16|16|  
-|W skali odcieni szarości|32|32|  
-|W skali odcieni szarości|48|48|  
-|W skali odcieni szarości|64|64|  
-|W skali odcieni szarości|96|96|  
+|Monochromatyczny|16|16|  
+|Monochromatyczny|32|32|  
+|Monochromatyczny|48|48|  
+|Monochromatyczny|64|64|  
+|Monochromatyczny|96|96|  
 |16|16|16|  
 |16|32|32|  
 |16|64|64|  
@@ -61,9 +61,9 @@ Ikony i kursory są zasobów graficznych, które mogą zawierać wiele obrazów 
 |256|64|64|  
 |256|96|96|  
   
--   [Tworzenie nowego obrazu urządzenia (ikony lub kursora)](../windows/creating-a-device-image-image-editor-for-icons.md)  
+-   [Tworzenie nowego obrazu urządzenia (kursor lub ikonę)](../windows/creating-a-device-image-image-editor-for-icons.md)  
   
--   [Dodawanie obrazu dla innego ekranu urządzenia](../windows/adding-an-image-for-a-different-display-device-image-editor-for-icons.md)  
+-   [Dodawanie obrazu wyświetlania na różnych urządzeniach](../windows/adding-an-image-for-a-different-display-device-image-editor-for-icons.md)  
   
 -   [Kopiowanie obrazu urządzenia](../windows/copying-a-device-image-image-editor-for-icons.md)  
   
@@ -75,7 +75,7 @@ Ikony i kursory są zasobów graficznych, które mogą zawierać wiele obrazów 
   
 -   [Ustawianie aktywnego punktu kursora](../windows/setting-a-cursor-s-hot-spot-image-editor-for-icons.md)  
   
- Aby uzyskać informacje o dodawaniu zasobów do projektów zarządzanych, zobacz [zasobów w aplikacjach pulpitu](/dotnet/framework/resources/index) w *Przewodnik programistów platformy .NET Framework.* Aby uzyskać informacje na ręczne dodanie do projektów zarządzanych plików zasobów, uzyskiwanie dostępu do zasobów, wyświetlanie zasoby statyczne i przypisanie do właściwości ciągów zasobów, zobacz [tworzenie plików zasobów dla aplikacji pulpitu](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Informacje dotyczące globalizacji i lokalizacji zasobów w zarządzanych aplikacjach, zobacz [Globalizing i lokalizacja aplikacji .NET Framework](/dotnet/standard/globalization-localization/index).  
+ Aby uzyskać informacje na temat dodawania zasobów do projektów zarządzanych, zobacz [zasoby w aplikacjach pulpitu](/dotnet/framework/resources/index) w *przewodniku dewelopera .NET Framework*. Aby uzyskać informacji na temat ręcznego dodawania plików zasobów do projektów zarządzanych, uzyskiwania dostępu do zasobów, wyświetlania statycznych zasobów i przypisywania ciągów zasobów do właściwości, zobacz [Creating Resource Files dla aplikacji klasycznych](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Aby uzyskać informacji na temat globalizacja i lokalizacja zasobów w aplikacjach zarządzanych, zobacz [Globalizing i lokalizowanie aplikacji programu .NET Framework](/dotnet/standard/globalization-localization/index).  
   
 ## <a name="requirements"></a>Wymagania  
  Brak  
@@ -84,4 +84,3 @@ Ikony i kursory są zasobów graficznych, które mogą zawierać wiele obrazów 
  [Edytor obrazów dla ikon](../windows/image-editor-for-icons.md)   
  [Ikony](http://msdn.microsoft.com/library/windows/desktop/ms646973)   
  [Kursory](http://msdn.microsoft.com/library/windows/desktop/ms646970)
-

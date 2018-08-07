@@ -1,5 +1,5 @@
 ---
-title: Implementshelper::iidcount — stała | Dokumentacja firmy Microsoft
+title: ImplementsHelper::IidCount, stała | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: fa63cfa765d54d20b943aa3a4aabf3dc51a16984
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 2f08564088d00df332db43f207284dae9fc99109
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33874005"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39604258"
 ---
 # <a name="implementshelperiidcount-constant"></a>ImplementsHelper::IidCount — Stała
 Obsługuje infrastrukturę biblioteki WRL i nie jest przeznaczona do użycia bezpośrednio w kodzie.  
@@ -30,17 +30,16 @@ Obsługuje infrastrukturę biblioteki WRL i nie jest przeznaczona do użycia bez
 ## <a name="syntax"></a>Składnia  
   
 ```  
-  
 static const unsigned long IidCount;  
 ```  
   
 ## <a name="remarks"></a>Uwagi  
- Przechowuje numer zaimplementowany interfejs identyfikatorów w bieżącym obiekcie Implements.  
+ Przechowuje liczbę zaimplementowanego interfejsu identyfikatorów w bieżącym `Implements` obiektu.  
   
 ## <a name="requirements"></a>Wymagania  
  **Nagłówek:** implements.h  
   
- **Namespace:** Microsoft::wrl:: details —  
+ **Namespace:** Microsoft::wrl:: details  
   
 ## <a name="see-also"></a>Zobacz też  
  [Implementshelper — struktura](../windows/implementshelper-structure.md)   

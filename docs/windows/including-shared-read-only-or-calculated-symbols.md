@@ -23,66 +23,64 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: c56e8af65d27bda8ef04655f40bdd2e335067d3c
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 436ceb757f9cce5e1436b13f2d32a331295f4bf6
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33879230"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39608615"
 ---
 # <a name="including-shared-read-only-or-calculated-symbols"></a>Włączanie symboli udostępnionych (tylko do odczytu) lub obliczonych
-Środowisko projektowe odczytuje plik zasobów utworzony przez inną aplikację po raz pierwszy oznacza wszystkie pliki nagłówkowe dołączone jako tylko do odczytu. Następnie można użyć [zasób zawiera okno dialogowe](../windows/resource-includes-dialog-box.md) Aby dodać pliki nagłówkowe dodatkowego symbolu tylko do odczytu.  
+Środowisko projektowe odczytuje plik zasobów utworzony przez inną aplikację po raz pierwszy oznacza wszystkie pliki nagłówkowe dołączone jako tylko do odczytu. Następnie możesz użyć [zasób zawiera okno dialogowe](../windows/resource-includes-dialog-box.md) można dodać dodatkowe symboli tylko do odczytu plików nagłówkowych.  
   
- Jedną z przyczyn się, że chcesz używać definicje symbolu tylko do odczytu jest plików symboli, które firma zamierza udostępnić dla kilku projektów.  
+ Jest jednym z powodów warto używać definicje symboli tylko do odczytu dla plików symboli, które mają być udostępnianie dla kilku projektów.  
   
- Jeśli masz istniejące zasoby z definicji symbolu, które umożliwia definiowanie wartości symbolu wyrażenia zamiast prostego liczb całkowitych, można także użyć plików dołączone symbolu. Na przykład:  
+ Umożliwia także pliki symboli uwzględnione Jeśli masz istniejące zasoby dzięki definicje symboli, używające wyrażenia zamiast prostych liczb całkowitych do definiowania wartości symbolu. Na przykład:  
   
 ```  
 #define   IDC_CONTROL1 2100  
 #define   IDC_CONTROL2 (IDC_CONTROL1+1)  
 ```  
   
- Środowisko będzie poprawnie zinterpretować te symbole obliczane tak długo, jak:  
+ Środowisko zostanie poprawnie interpretować te symbole obliczane tak długo, jak:  
   
 -   Symbole obliczane są umieszczane w pliku symboli tylko do odczytu.  
   
--   Plik zasobów zawiera zasoby, do których te symbole obliczane są przydzielone.  
+-   Plik zasobów zawiera zasoby, do których te symbole obliczane są już przypisane.  
   
 -   Oczekiwano wyrażenia liczbowego.  
   
 > [!NOTE]
->  Jeśli Oczekiwano ciągu lub wyrażenia liczbowego wyrażenia nie jest oceniany.  
+>  Jeśli oczekiwany jest ciąg lub wyrażenie numeryczne, wyrażenie nie jest oceniany.  
   
 ### <a name="to-include-shared-read-only-symbols-in-your-resource-file"></a>Aby uwzględnić symbole udostępnione (tylko do odczytu) w pliku zasobów  
   
-1.  W [widok zasobów](../windows/resource-view-window.md), kliknij prawym przyciskiem myszy plik .rc i wybierz [zasobów zawiera](../windows/resource-includes-dialog-box.md) z menu skrótów.  
+1.  W [widok zasobów](../windows/resource-view-window.md), kliknij prawym przyciskiem myszy plik .rc i wybierz [zasób zawiera](../windows/resource-includes-dialog-box.md) z menu skrótów.  
   
     > [!NOTE]
-    >  Jeśli projekt nie zawiera już plik .rc, zobacz [Tworzenie nowego pliku skryptu zasobu](../windows/how-to-create-a-resource-script-file.md).  
+    >  Jeśli projekt nie zawiera jeszcze pliku .rc, zobacz [tworzenia nowego pliku skryptu zasobów](../windows/how-to-create-a-resource-script-file.md).  
   
-2.  W **dyrektywy symboli tylko do odczytu** , używaj **#include** dyrektywy kompilatora, aby określić plik, w którym ma symbole tylko do odczytu, które mają być przechowywane.  
+2.  W **dyrektywy symboli tylko do odczytu** , używaj **#include** dyrektywy kompilatora, aby określić plik, którego symbole tylko do odczytu, które mają być przechowywane.  
   
-     Nie wywołuj pliku Resource.h, ponieważ jest nazwa pliku, zwykle używany przez plik nagłówka symbolu głównego.  
+     Nie wywołuj pliku Resource.h, ponieważ, nazwa_pliku zwykle używane przez plik nagłówka symbolu głównego.  
   
     > [!NOTE]
-    >  **Ważne** wpisz w polu tylko do odczytu symbol dyrektywy znajduje się w pliku zasobów dokładnie podczas pisania. Upewnij się, że możesz wpisać nie zawiera żadnych błędów pisowni lub składni.  
+    >  **Ważne** wpisz w polu dyrektywy symboli tylko do odczytu jest zawarte w pliku zasobów, dokładnie tak, jak możesz wpisać. Upewnij się, w jakiej został wpisany nie zawiera błędów pisowni lub nieprawidłowa składnia.  
   
-     Użyj **dyrektywy symboli tylko do odczytu** pole, aby uwzględnić pliki z tylko definicje symbolu. Nie dołączaj definicji zasobów; w przeciwnym razie definicji zduplikowanych zasobów zostanie utworzony po zapisaniu pliku.  
+     Użyj **dyrektywy symboli tylko do odczytu** pole, aby uwzględnić pliki przy użyciu tylko definicje symbolu. Nie zawierają definicje zasobów; w przeciwnym razie definicje zduplikowany zasób zostanie utworzony po zapisaniu pliku.  
   
-3.  Umieść symbole podanego pliku.  
+3.  W pliku, który określiłeś, należy umieścić symbole.  
   
-     Symbole w plików znajdujących się w ten sposób są oceniane w każdym otwarciu Twojego pliku zasobu, ale nie zastąpienia na dysku po zapisaniu pliku.  
+     Symbole w plików znajdujących się w ten sposób są obliczane zawsze przy otwieraniu Twojego pliku zasobu, ale ich nie zostaną zastąpione na dysku po zapisaniu pliku.  
   
 4.  Kliknij przycisk **OK**.  
   
-
-  
- Wymagania  
+## <a name="requirements"></a>Wymagania  
   
  Win32  
   
 ## <a name="see-also"></a>Zobacz też  
  [Ograniczenia dotyczące nazwy symbolu](../windows/symbol-name-restrictions.md)   
  [Ograniczenia dotyczące wartości symbolu](../windows/symbol-value-restrictions.md)   
- [Wstępnie zdefiniowane symbole identyfikatorów](../windows/predefined-symbol-ids.md)   
+ [Wstępnie zdefiniowane identyfikatory symboli](../windows/predefined-symbol-ids.md)   
  [Symbole: identyfikatory zasobów](../windows/symbols-resource-identifiers.md)

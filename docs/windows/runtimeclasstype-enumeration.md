@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 43ab0a738af4c6bc92d42c0884827b574946d2ea
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 4464d236a85e06bf907f738657a4a0707e14a5e1
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33892406"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39603504"
 ---
 # <a name="runtimeclasstype-enumeration"></a>RuntimeClassType — Wyliczenie
-Określa typ [runtimeclass —](../windows/runtimeclass-class.md) wystąpienia, która jest obsługiwana.  
+Określa typ [RuntimeClass](../windows/runtimeclass-class.md) wystąpienia, która jest obsługiwana.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -40,16 +40,16 @@ enum RuntimeClassType;
 |Nazwa|Opis|  
 |----------|-----------------|  
 |`ClassicCom`|Klasa klasycznego środowiska uruchomieniowego COM.|  
-|`Delegate`|Odpowiednikiem **ClassicCom**.|  
-|`InhibitFtmBase`|Wyłącza `FtmBase` pomocy technicznej podczas `__WRL_CONFIGURATION_LEGACY__` nie jest zdefiniowany.|  
+|`Delegate`|Odpowiednikiem `ClassicCom`.|  
+|`InhibitFtmBase`|Wyłącza `FtmBase` obsługi podczas `__WRL_CONFIGURATION_LEGACY__` nie został zdefiniowany.|  
 |`InhibitWeakReference`|Wyłącza obsługę słabe odwołanie.|  
-|`WinRt`|Klasa środowiska uruchomieniowego systemu Windows.|  
-|`WinRtClassicComMix`|Kombinację `WinRt` i `ClassicCom`.|  
+|`WinRt`|Klasa środowiska wykonawczego Windows.|  
+|`WinRtClassicComMix`|Kombinacji `WinRt` i `ClassicCom`.|  
   
 ## <a name="requirements"></a>Wymagania  
  **Nagłówek:** implements.h  
   
- **Namespace:** Microsoft::wrl —  
+ **Namespace:** Microsoft::WRL  
   
 ## <a name="see-also"></a>Zobacz też  
  [Microsoft::WRL, przestrzeń nazw](../windows/microsoft-wrl-namespace.md)

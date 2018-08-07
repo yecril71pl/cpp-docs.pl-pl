@@ -17,17 +17,17 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 26c3542f5bea21d1b705cd3253e6828ff73677df
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: d777dd15e484ae296139bbe2bdc9b0cddcab2d59
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33889010"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39606335"
 ---
 # <a name="runtimeclass-class"></a>RuntimeClass — Klasa
-Reprezentuje klasę WinRT lub COM, która dziedziczy określonych interfejsów i zapewnia określonego środowiska wykonawczego systemu Windows, klasycznego modelu COM i obsługa słabe odwołanie.  
+Reprezentuje klasę WinRT lub COM, który dziedziczy określonych interfejsów i zapewnia określonego środowiska wykonawczego Windows, Klasyczny model COM i odwołanie tymczasowe wsparcia.  
   
-Ta klasa udostępnia implementacji standardowego klas WinRT i modelu COM, dostarcza implementację elementu `QueryInterface`, `AddRef`, `Release` itp., zarządza liczebności referencyjnej modułu i obsługuje zapewniające fabryki klasy dla aktywowalnej obiektów.
+Ta klasa dostarcza implementację standardowy klasy WinRT i COM, zapewniając wykonania `QueryInterface`, `AddRef`, `Release` itp., zarządza licznika odwołań modułu i obsługuje dostarczanie fabryki klas dla obiekty, którą można aktywować.
   
 ## <a name="syntax"></a>Składnia  
   
@@ -36,30 +36,30 @@ template <typename ...TInterfaces> class RuntimeClass
 template <unsigned int classFlags, typename ...TInterfaces> class RuntimeClass;
 ```
   
-#### <a name="parameters"></a>Parametry  
- `classFlags`  
-Parametr opcjonalny. Kombinacja jednego lub więcej [runtimeclasstype —](../windows/runtimeclasstype-enumeration.md) wartości wyliczenia. `__WRL_CONFIGURATION_LEGACY__` Makro można definiować w celu zmienić domyślną wartość classFlags dla wszystkich klas środowiska uruchomieniowego w projekcie. Jeśli określone, runtimeclass — wystąpienia są z systemem innym niż agile domyślnie. Jeśli nie jest zdefiniowana, runtimeclass — wystąpienia są elastyczne domyślnie. Aby uniknąć niejednoznaczności należy zawsze określić Microsoft::WRL::FtmBase w `TInterfaces` lub RuntimeClassType::InhibitFtmBase. Uwaga: Jeśli InhibitFtmBase i ftmbase — są używane obiektu będzie elastyczne.
+### <a name="parameters"></a>Parametry  
+ *classFlags*  
+Opcjonalny parametr. Kombinacji jednego lub więcej [RuntimeClassType](../windows/runtimeclasstype-enumeration.md) wartości wyliczenia. `__WRL_CONFIGURATION_LEGACY__` Makr można zdefiniować, aby zmienić domyślną wartość classFlags dla wszystkich klas środowiska uruchomieniowego w projekcie. Jeśli zdefiniowane, RuntimeClass wystąpienia są inne niż agile domyślnie. Jeśli nie zostanie zdefiniowana, RuntimeClass wystąpienia są elastyczne domyślnie. Aby uniknąć niejednoznaczności należy zawsze określić `Microsoft::WRL::FtmBase` w `TInterfaces` lub `RuntimeClassType::InhibitFtmBase`. Uwaga: Jeżeli InhibitFtmBase i FtmBase jest używany zarówno obiekt będzie agile.
  
- `TInterfaces`  
-Lista interfejsów obiekt implementuje poza IUnknown, IInspectable lub inne interfejsy kontrolowane przez [runtimeclasstype —](../windows/runtimeclasstype-enumeration.md). On również może zawierać listę innych klas pochodzących z szczególnie Microsoft::WRL::FtmBase powoduje, że obiekt elastyczne i spowodować, że plik implementacji interfejsu IMarshal.
+ *TInterfaces*  
+Na liście interfejsów obiekt implementuje poza `IUnknown`, `IInspectable` lub innych interfejsów w wartości clientauthtrustmode [RuntimeClassType](../windows/runtimeclasstype-enumeration.md). Również może go wyświetlać innych klas pochodzących z, szczególnie `Microsoft::WRL::FtmBase` na obiekt agile i spowodować, tak aby implementował `IMarshal`.
   
 ## <a name="members"></a>Elementy członkowskie  
-`RuntimeClassInitialize` Funkcja, która inicjuje obiekt, jeśli makeandinitialize — funkcja szablonu jest używana do konstruowania obiektu. Zwraca wartość S_OK, jeśli obiekt został pomyślnie zainicjowany lub kod błędu modelu COM. Jeśli inicjowanie nie powiodło się. Kod błędu modelu COM są propagowane jako wartość zwracaną makeandinitialize —. Należy pamiętać, że metoda RuntimeClassInitialize nie jest wywoływana, gdy funkcja szablonu upewnij jest używana do konstruowania obiektu.
+`RuntimeClassInitialize` Funkcja, która inicjuje obiekt, jeśli `MakeAndInitialize` funkcji szablonu jest używana do konstruowania obiektu. Zwraca S_OK, jeśli obiekt został pomyślnie zainicjowany lub kod błędu modelu COM, jeśli inicjowanie nie powiodło się. Kod błędu modelu COM są propagowane jako wartość zwracaną `MakeAndInitialize`. Należy pamiętać, że `RuntimeClassInitialize` metoda nie jest wywoływana, jeśli `Make` funkcji szablonu jest używana do konstruowania obiektu.
 
 ### <a name="public-constructors"></a>Konstruktory publiczne  
   
 |Nazwa|Opis|  
 |----------|-----------------|  
-|[RuntimeClass::RuntimeClass, konstruktor](../windows/runtimeclass-runtimeclass-constructor.md)|Inicjuje bieżące wystąpienie klasy runtimeclass — klasa.|  
-|[RuntimeClass::~RuntimeClass, destruktor](../windows/runtimeclass-tilde-runtimeclass-destructor.md)|Deinitializes bieżące wystąpienie klasy runtimeclass — klasa.|  
+|[RuntimeClass::RuntimeClass, konstruktor](../windows/runtimeclass-runtimeclass-constructor.md)|Inicjuje bieżące wystąpienie klasy RuntimeClass.|  
+|[RuntimeClass::~RuntimeClass, destruktor](../windows/runtimeclass-tilde-runtimeclass-destructor.md)|Deinicjuje bieżące wystąpienie klasy RuntimeClass.|  
   
 ## <a name="inheritance-hierarchy"></a>Hierarchia dziedziczenia  
-Jest to szczegóły implementacji.
+Jest to szczegół implementacji.
   
 ## <a name="requirements"></a>Wymagania  
 **Nagłówek:** implements.h  
   
-**Namespace:** Microsoft::wrl —  
+**Namespace:** Microsoft::WRL  
   
 ## <a name="see-also"></a>Zobacz też  
-[Microsoft::WRL, przestrzeń nazw](../windows/microsoft-wrl-namespace.md)
+ [Microsoft::WRL, przestrzeń nazw](../windows/microsoft-wrl-namespace.md)

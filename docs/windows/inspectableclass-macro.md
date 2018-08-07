@@ -1,5 +1,5 @@
 ---
-title: Inspectableclass — makro | Dokumentacja firmy Microsoft
+title: InspectableClass, makro | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,15 +15,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 922f7f74771125aed0122c408ef902da2569e5c7
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: a02e20f2b87afc312c24683417f808d636c2757f
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33873774"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39608959"
 ---
 # <a name="inspectableclass-macro"></a>InspectableClass — Makro
-Ustawia poziom nazwy i zaufania klasy środowiska wykonawczego.  
+Ustawia poziom nazwy i zaufania klasy środowiska uruchomieniowego.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -33,20 +33,20 @@ InspectableClass(
    trustLevel)  
 ```  
   
-#### <a name="parameters"></a>Parametry  
- `runtimeClassName`  
- Pełne tekstową Nazwa klasy środowiska wykonawczego.  
+### <a name="parameters"></a>Parametry  
+ *runtimeClassName*  
+ Pełna tekstowa Nazwa klasy runtime.  
   
- `trustLevel`  
- Jeden z [TrustLevel](http://msdn.microsoft.com/library/br224625.aspx) wyliczyć wartości.  
+ *trustLevel*  
+ Jedną z [TrustLevel](http://msdn.microsoft.com/library/br224625.aspx) wyliczonych wartości.  
   
 ## <a name="remarks"></a>Uwagi  
- `InspectableClass` Makro może być używany tylko z typów środowiska wykonawczego systemu Windows.  
+ **InspectableClass** makra mogą służyć tylko z typów środowiska wykonawczego Windows.  
   
 ## <a name="requirements"></a>Wymagania  
  **Nagłówek:** implements.h  
   
- **Namespace:** Microsoft::wrl —  
+ **Namespace:** Microsoft::WRL  
   
 ## <a name="see-also"></a>Zobacz też  
  [RuntimeClass, klasa](../windows/runtimeclass-class.md)

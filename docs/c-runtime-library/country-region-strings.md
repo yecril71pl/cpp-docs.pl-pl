@@ -1,5 +1,5 @@
 ---
-title: Ciągi Kraj Region | Dokumentacja firmy Microsoft
+title: Ciągi Kraj / Region | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,46 +16,50 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ffa2ac8d08e28cac4f5798868013fe9883fac5d9
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: f227feec25e3b487772f8e469651f08be825419f
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32391447"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39605633"
 ---
 # <a name="countryregion-strings"></a>Ciągi kraj/region
-Ciągi kraj lub region można łączyć z ciągiem języka Aby utworzyć specyfikację ustawień regionalnych dla `setlocale`, `_wsetlocale`, `_create_locale`, i `_wcreate_locale` funkcji. Dla listy nazw kraju/regionu, które są obsługiwane przez różne wersje systemu operacyjnego Windows, temacie [dokumentacja interfejsu API National obsługi Language (NLS)](https://www.microsoft.com/resources/msdn/goglobal/default.mspx). Na listach ciąg kraj/region może być dowolna z wartości kraju w **ustawień regionalnych - języka Kraj/Region** kolumny lub dowolnym skróty w **skrót nazwę kraju lub regionu** kolumny. Język dodatkowe informacje pomocy w systemach operacyjnych Windows w wersji, zobacz [dodatek A: produktu zachowanie](http://msdn.microsoft.com/goglobal/bb896001.aspx) w [MS-LCID]: odwołanie do identyfikatora kodu języka systemu Windows (LCID).  
-  
- Implementacja biblioteki wykonawczej języka C obsługuje również następujące ciągi kraj/region dodatkowe i skrótów:  
-  
-|Ciąg kraj/region|Skrót|Nazwa ustawień regionalnych równoważne|  
-|----------------------------|------------------|----------------------------|  
-|Stany Zjednoczone|USA|EN US|  
-|Brytania|GBR|pl pl.|  
-|Chin|CHN|zh-CN|  
-|Czeski|CZE|cs-CZ|  
-|Anglii|GBR|pl pl.|  
-|Wielka Brytania|GBR|pl pl.|  
-|Holandia|NLD|NL-NL|  
-|SRA Hongkong|HKG|zh-HK|  
-|Nowa Zelandia|NZL|EN NZ|  
-|NZ|NZL|EN NZ|  
-|Oczyść Chin|CHN|zh-CN|  
-|Oczyść Chin|CHN|zh-CN|  
-|Portoryko|PRI|Oczyść ES|  
-|Słowacki|SVK|sk-SK|  
-|Republika Południowej Afryki|ZAF|af-ZA|  
-|korea Południowa|KOR|ko-KR|  
-|Republika Południowej Afryki|ZAF|af-ZA|  
-|korea Południowa|KOR|ko-KR|  
-|Trynidad i tobago|ABY|EN TT|  
-|Wielka Brytania|GBR|pl pl.|  
-|Zjednoczone Królestwo|GBR|pl pl.|  
-|Stany Zjednoczone|USA|EN US|  
-|US|USA|EN US|  
-  
-## <a name="see-also"></a>Zobacz też  
- [Nazwy lokalne, języki i ciągi Kraj/Region](../c-runtime-library/locale-names-languages-and-country-region-strings.md)   
- [Ciągi języka](../c-runtime-library/language-strings.md)   
- [setLocale, _wsetlocale —](../c-runtime-library/reference/setlocale-wsetlocale.md)   
- [_create_locale, _wcreate_locale](../c-runtime-library/reference/create-locale-wcreate-locale.md)
+
+Ciągi kraju i regionu można połączyć z ciągiem języka, aby utworzyć specyfikację ustawień regionalnych `setlocale`, `_wsetlocale`, `_create_locale`, i `_wcreate_locale` funkcji. W przypadku list nazw kraju i regionu, które są obsługiwane przez różne wersje systemu operacyjnego Windows, zobacz **języka**, **lokalizacji**, i **tagu języka** kolumn tabelę [dodatek A: produktu zachowanie](https://msdn.microsoft.com/library/cc233982.aspx) w [MS-LCID]: odwołanie do Windows języka kodu identyfikator (LCID). Na przykład kod, który wylicza dostępnych nazw ustawień regionalnych i powiązane wartości zobacz [NLS: Przykładowe interfejsów API na podstawie nazwy](/windows/desktop/intl/nls--name-based-apis-sample).
+
+## <a name="additional-supported-country-and-region-strings"></a>Dodatkowe obsługiwanych ciągów kraju i regionu
+
+Implementacja biblioteki wykonawczej C firmy Microsoft obsługuje również następujące ciągi dodatkowe kraju/regionu i skróty:
+
+|Ciąg kraju/regionu|Skrót|Nazwy ustawień regionalnych równoważne|
+|----------------------------|------------------|----------------------------|
+|Stany Zjednoczone|STANY ZJEDNOCZONE|pl pl|
+|Brytanii|GBR|en-GB|
+|Chiny|CHN|zh-CN|
+|Czeski|CZE|cs-CZ|
+|w Anglii|GBR|en-GB|
+|Wielka Brytania|GBR|en-GB|
+|Holandia|NLD|NL-NL|
+|SRA Hongkong|HKG|zh-HK|
+|Nowa Zelandia|NZL|EN NZ|
+|NZ|NZL|EN NZ|
+|Chiny (pr)|CHN|zh-CN|
+|Chiny (pr)|CHN|zh-CN|
+|Portoryko|PRI|ES (PR)|
+|Słowacki|SVK|sk-SK|
+|Republika Południowej Afryki|ZAF|af-ZA|
+|korea Południowa|KOR|ko-KR|
+|Republika Południowej Afryki|ZAF|af-ZA|
+|korea Południowa|KOR|ko-KR|
+|Trynidad i tobago|ABY|EN TT|
+|Zjednoczone Królestwo|GBR|en-GB|
+|Zjednoczone Królestwo|GBR|en-GB|
+|Stany Zjednoczone|STANY ZJEDNOCZONE|pl pl|
+|USA|STANY ZJEDNOCZONE|pl pl|
+
+## <a name="see-also"></a>Zobacz także
+
+[Nazwy lokalne, języki i ciągi Kraj/Region](../c-runtime-library/locale-names-languages-and-country-region-strings.md)  
+[Ciągi języka](../c-runtime-library/language-strings.md)  
+[setlocale, _wsetlocale](../c-runtime-library/reference/setlocale-wsetlocale.md)  
+[_create_locale, _wcreate_locale](../c-runtime-library/reference/create-locale-wcreate-locale.md)  

@@ -18,41 +18,40 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: a96363fcfbc753e727c6cbb6a5efbbb5606b6c40
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 6eac892da91c5f3640bdd243a0b3c6525faa5c2a
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33877686"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39603348"
 ---
 # <a name="identifier-ccli"></a>__identifier (C++/CLI)
-Umożliwia użycie słowa kluczowe języka Visual C++, identyfikatory.  
+Umożliwia korzystanie z Visual C++ słów kluczowych jako identyfikatorów.  
   
 ## <a name="all-platforms"></a>Wszystkie platformy  
-**Składnia**  
+### <a name="syntax"></a>Składnia  
   
 ```  
 __identifier(  
 Visual_C++_keyword  
 )  
-  
 ```  
   
-**Uwagi**  
+### <a name="remarks"></a>Uwagi  
   
-Użycie `__identifier` — słowo kluczowe dla identyfikatorów, które nie są słów kluczowych jest dozwolone, ale zdecydowanie odradzane jako styl.  
+Korzystanie z **__identifier** — słowo kluczowe dla identyfikatorów, które nie są słowami kluczowymi jest dozwolone, ale zdecydowanie niezalecane jako stylu.  
   
 ## <a name="windows-runtime"></a>Środowisko wykonawcze systemu Windows  
   
 ### <a name="requirements"></a>Wymagania  
- — Opcja kompilatora: **/ZW**  
+ — Opcja kompilatora: `/ZW`  
   
 ### <a name="examples"></a>Przykłady  
  **Przykład**  
   
- W poniższym przykładzie klasa o nazwie `template` jest utworzony w języku C# i jest dystrybuowany jako biblioteki DLL. W programie Visual C++, która używa `template` klasy `__identifier` — słowo kluczowe zawiera fakt który `template` jest standardowe słowa kluczowego języka C++.  
+ W poniższym przykładzie klasę o nazwie `template` jest tworzone w języku C# i dystrybuowanych jako biblioteki DLL. W programie Visual C++, który używa `template` klasy **__identifier** — słowo kluczowe zawiera fakt, **szablonu** jest standardowa słowa kluczowego języka C++.  
   
-```  
+```cs  
 // identifier_template.cs  
 // compile with: /target:library  
 public class template {  
@@ -60,7 +59,7 @@ public class template {
 }  
 ```  
   
-```  
+```cpp  
 // keyword__identifier.cpp  
 // compile with: /ZW  
 #using <identifier_template.dll>  
@@ -71,19 +70,18 @@ int main() {
 ```  
   
 ## <a name="common-language-runtime"></a>środowiska uruchomieniowe w trakcie wykonania 
- **Uwagi**  
+### <a name="remarks"></a>Uwagi  
   
- `__identifier` — Słowo kluczowe jest prawidłowy dla **/CLR** — opcja kompilatora.  
+ **__Identifier** — słowo kluczowe jest prawidłowa w przypadku `/clr` — opcja kompilatora.  
   
 ### <a name="requirements"></a>Wymagania  
- — Opcja kompilatora:   **/CLR**  
+ — Opcja kompilatora: `/clr`  
   
 ### <a name="examples"></a>Przykłady  
- **Przykład**  
   
- W poniższym przykładzie klasa o nazwie `template` jest utworzony w języku C# i jest dystrybuowany jako biblioteki DLL. W programie Visual C++, która używa `template` klasy `__identifier` — słowo kluczowe zawiera fakt który `template` jest standardowe słowa kluczowego języka C++.  
+ W poniższym przykładzie klasę o nazwie `template` jest tworzone w języku C# i dystrybuowanych jako biblioteki DLL. W programie Visual C++, który używa `template` klasy **__identifier** — słowo kluczowe zawiera fakt, **szablonu** jest standardowa słowa kluczowego języka C++.  
   
-```  
+```cs  
 // identifier_template.cs  
 // compile with: /target:library  
 public class template {  
@@ -91,7 +89,7 @@ public class template {
 }  
 ```  
   
-```  
+```cpp  
 // keyword__identifier.cpp  
 // compile with: /clr  
 #using <identifier_template.dll>  

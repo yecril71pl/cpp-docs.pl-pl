@@ -1,5 +1,5 @@
 ---
-title: InterfaceTraits::CastToBase — metoda | Dokumentacja firmy Microsoft
+title: InterfaceTraits::CastToBase, metoda | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 8cd8fa2106ac3792c0352aa40ea34b049c1e5ce4
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 4f284514472796f22d176325a0223848a827c85c
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33878528"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39606452"
 ---
 # <a name="interfacetraitscasttobase-method"></a>InterfaceTraits::CastToBase — Metoda
 Obsługuje infrastrukturę biblioteki WRL i nie jest przeznaczona do użycia bezpośrednio w kodzie.  
@@ -36,25 +36,25 @@ static __forceinline Base* CastToBase(
 );  
 ```  
   
-#### <a name="parameters"></a>Parametry  
- `T`  
- Typ parametru `ptr`.  
+### <a name="parameters"></a>Parametry  
+ *T*  
+ Typ parametru *ptr*.  
   
- `ptr`  
- Wskaźnik do typu `T`.  
+ *ptr*  
+ Wskaźnik do typu *T*.  
   
 ## <a name="return-value"></a>Wartość zwracana  
  Wskaźnik do `Base`.  
   
 ## <a name="remarks"></a>Uwagi  
- Rzutuje określony wskaźnik na wskaźnik do `Base`.  
+ Rzutuje określony wskaźnik do wskaźnika do `Base`.  
   
- Aby uzyskać więcej informacji na temat `Base`, zobacz sekcję publicznego definicje typów w [interfacetraits — struktura](../windows/interfacetraits-structure.md).  
+ Aby uzyskać więcej informacji na temat `Base`, zobacz sekcję publiczne definicje typów w [interfacetraits — struktura](../windows/interfacetraits-structure.md).  
   
 ## <a name="requirements"></a>Wymagania  
  **Nagłówek:** implements.h  
   
- **Namespace:** Microsoft::wrl:: details —  
+ **Namespace:** Microsoft::wrl:: details  
   
 ## <a name="see-also"></a>Zobacz też  
  [Interfacetraits — struktura](../windows/interfacetraits-structure.md)   

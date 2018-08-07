@@ -15,42 +15,41 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 7189909f3cff84d2bb1a767e4ddeda817bcd6128
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 32452b4fd44aed2bc399165b3184d974f22d90b6
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33879786"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39607014"
 ---
 # <a name="new-new-slot-in-vtable--c-component-extensions"></a>new (nowe gniazdo w vtable) (C++ Component Extensions)
-`new` — Słowo kluczowe wskazuje, czy członek wirtualnego otrzymają nowe gniazdo w vtable.  
+**Nowe** słowo kluczowe wskazuje, że wirtualny element członkowski otrzyma nowe gniazdo w vtable.  
   
 ## <a name="all-runtimes"></a>Wszystkie środowiska wykonawcze  
- (Brak żadnych uwag dla tej funkcji języka, które są stosowane do wszystkich środowisk uruchomieniowych.)  
+ (Nie ma żadnych uwag dla tej funkcji języka, które są stosowane do wszystkich środowisk uruchomieniowych).  
   
 ## <a name="windows-runtime"></a>Środowisko wykonawcze systemu Windows  
- Nie są obsługiwane w środowisku wykonawczym systemu Windows.  
+ Nie są obsługiwane w programie Windows Runtime.  
   
 ## <a name="common-language-runtime"></a>środowiska uruchomieniowe w trakcie wykonania 
- **Uwagi**  
+### <a name="remarks"></a>Uwagi  
   
- W **/CLR** kompilacji, `new` wskazuje, czy członek wirtualnego otrzymają nowe gniazdo w vtable; funkcja nie przesłania metody klasy podstawowej.  
+ W `/clr` kompilacji, **nowe** wskazuje, że wirtualny element członkowski otrzyma nowe gniazdo w vtable; że funkcja nie zastępuje metody klasy bazowej.  
   
- `new` powoduje, że modyfikator newslot mają zostać dodane do IL dla funkcji.  Aby uzyskać więcej informacji na temat newslot zobacz:  
+ **nowe** powoduje, że modyfikatora nowego gniazda do IL dla funkcji.  Aby uzyskać więcej informacji na temat nowego gniazda zobacz:  
   
--   [MethodInfo.GetBaseDefinition — metoda](https://msdn.microsoft.com/en-us/library/system.reflection.methodinfo.getbasedefinition.aspx)  
+-   [Metoda MethodInfo.GetBaseDefinition](https://msdn.microsoft.com/library/system.reflection.methodinfo.getbasedefinition.aspx)  
   
--   [Wyliczenie MethodAttributes — wyliczenie](https://msdn.microsoft.com/en-us/library/system.reflection.methodattributes.aspx)  
+-   [Wyliczenie MethodAttributes](https://msdn.microsoft.com/library/system.reflection.methodattributes.aspx)  
   
 ### <a name="requirements"></a>Wymagania  
- — Opcja kompilatora:   **/CLR**  
+ — Opcja kompilatora: `/clr`  
   
 ### <a name="examples"></a>Przykłady  
- **Przykład**  
   
- Poniższy przykład przedstawia wynik `new`.  
+ Poniższy przykład pokazuje wpływ **nowe**.  
   
-```  
+```cpp  
 // newslot.cpp  
 // compile with: /clr  
 ref class C {  
@@ -113,4 +112,4 @@ E::f() called
   
 ## <a name="see-also"></a>Zobacz też  
  [Component Extensions dla platform środowiska uruchomieniowego](../windows/component-extensions-for-runtime-platforms.md)   
- [Specyfikatory zastąpienia](../windows/override-specifiers-cpp-component-extensions.md)
+ [Specyfikatory przesłonięć](../windows/override-specifiers-cpp-component-extensions.md)

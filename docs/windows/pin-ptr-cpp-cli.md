@@ -20,24 +20,24 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: afc99a352e0bde7918cab460293ff23061377551
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: a87dadfd4787e4bd0100efb8fe7ffe2b1e7a8899
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33880169"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39607855"
 ---
 # <a name="pinptr-ccli"></a>pin_ptr (C++/CLI)
-Deklaruje *przypiętego wskaźnika*, która jest używana tylko z środowisko uruchomieniowe języka wspólnego.  
+Deklaruje *przypiętego wskaźnika*, która jest używana tylko w przypadku środowiska uruchomieniowego języka wspólnego.  
   
 ## <a name="all-runtimes"></a>Wszystkie środowiska wykonawcze  
- (Brak żadnych uwag dla tej funkcji języka, które są stosowane do wszystkich środowisk uruchomieniowych.)  
+ (Nie ma żadnych uwag dla tej funkcji języka, które są stosowane do wszystkich środowisk uruchomieniowych).  
   
 ## <a name="windows-runtime"></a>Środowisko wykonawcze systemu Windows  
- (Ta funkcja językowa nie jest obsługiwana w środowisku wykonawczym systemu Windows).  
+ (Ta funkcja języka nie jest obsługiwana w środowisku uruchomieniowym Windows).  
   
 ## <a name="common-language-runtime"></a>środowiska uruchomieniowe w trakcie wykonania  
- A *przypiętego wskaźnika* jest wskaźnik wewnętrzny, który uniemożliwia obiektu wskazywana z przejściem stosu zebranego przez pamięci. Oznacza to, że wartość wskaźnika przypinania nie zostanie zmieniona przez środowisko uruchomieniowe języka wspólnego. Jest to wymagane, jeśli adres zarządzanej klasy do funkcji niezarządzanej tak, aby adres nie zmieni się nieoczekiwanie podczas rozpoznawania wywołania funkcji niezarządzanej.  
+ A *przypiętego wskaźnika* jest posługiwanie się nimi wskaźnik, który uniemożliwia obiekt wskazywany przenoszenia na stercie zebranych elementów bezużytecznych. Oznacza to, że wartość wskaźnika przypinania nie zostanie zmieniona przez środowisko uruchomieniowe języka wspólnego. Jest to wymagane, jeśli przekazujesz adres klasy zarządzanej do niezarządzanej funkcji tak, aby adres nie zmieni się nieoczekiwanie podczas rozpoznawania wywołania funkcji niezarządzanej.  
   
 ### <a name="syntax"></a>Składnia  
   
@@ -47,37 +47,37 @@ Deklaruje *przypiętego wskaźnika*, która jest używana tylko z środowisko ur
   
 ### <a name="parameters"></a>Parametry  
  *cv_qualifier*  
- `const` lub `volatile` kwalifikatorów. Domyślnie jest przypięty wskaźnik `volatile`. Jest nadmiarowy, ale nie jest błąd, aby zadeklarować przypiętego wskaźnika `volatile`.  
+ **Const** lub **volatile** kwalifikatorów. Domyślnie jest przypięty wskaźnik **volatile**. Jest nadmiarowy, ale nie jest błąd, aby zadeklarować wskaźnik przypinania **volatile**.  
   
  *Typ*  
- Typ `initializer`.  
+ Typ *inicjatora*.  
   
  *var*  
- Nazwa `pin_ptr` zmiennej.  
+ Nazwa **pin_ptr** zmiennej.  
   
  *initializer*  
- Element członkowski typu referencyjnego, element tablicy zarządzanej lub inny obiekt, który można przypisać do wskaźnika natywnego.  
+ Element członkowski typu odwołania, element tablicy zarządzanej lub inny obiekt, który można przypisać na wskaźnik natywny.  
   
 ### <a name="remarks"></a>Uwagi  
- A `pin_ptr` reprezentuje podzbiorem funkcji wskaźnik natywny. W związku z tym wszystkie elementy, które można przypisać na wskaźnik natywny można również przypisać do `pin_ptr`. Wskaźnik wewnętrzny może wykonać ten sam zestaw operacji jako wskaźników natywnych, w tym porównania i arytmetyka wskaźnika.  
+ A **pin_ptr** stanowi nadzbiór funkcji wskaźnik natywny. W związku z tym, wszystkie elementy, które mogą być przypisane do wskaźnik natywny można również przypisać do **pin_ptr**. Wskaźnika wewnętrznego może wykonać ten sam zestaw operacji co natywnymi wskaźnikami, w tym porównania i arytmetyka wskaźnika.  
   
- Obiekt lub obiekt podrzędny zarządzanej klasy można przypiąć, w którym to przypadku środowisko uruchomieniowe języka wspólnego nie przeniesie go podczas wyrzucania elementów bezużytecznych. Użycie podmiotu zabezpieczeń jest wskaźnikiem do danych zarządzanych jako rzeczywisty parametr wywołania funkcji niezarządzanej. Podczas cyklu zbierania środowisko wykonawcze będzie przeprowadzał inspekcję metadanych utworzone dla przypiętego wskaźnika i nie zostanie przesunięty w elemencie, który wskazuje.  
+ Obiekt lub obiekt podrzędny klasy zarządzanej można przypiąć, w którym to przypadku środowiska uruchomieniowego języka wspólnego nie przeniesie go podczas wyrzucania elementów bezużytecznych. Użycie podmiotu zabezpieczeń jest przekazać wskaźnik do danych zarządzanych jako rzeczywisty parametr wywołania funkcji niezarządzanej. Podczas cyklu zbierania środowisko uruchomieniowe Sprawdź metadane utworzone dla przypiętego wskaźnika i nie zostanie przesunięty w elemencie, który wskazuje.  
   
- Przypinanie obiektu przypięcie jego pola wartości; oznacza to pól typów pierwotnych lub wartości typu. Jednak pola deklarowana przez śledzenie uchwytu (`%`) nie jest przypięty.  
+ Przypinanie obiektu przypięcie jego wartość pola aplikacji; oznacza to, że pola podstawowego lub wartość typu. Jednak pola zadeklarowana przez śledzenie uchwytu (`%`) nie są przypięte.  
   
- Przypinanie obiektu podrzędnego zdefiniowaną w obiekcie zarządzanych skutkuje przypinanie całego obiektu.  
+ Przypinanie podobiekcie definiowane w obiekcie zarządzanych efektem przypięcie całego obiektu.  
   
- Jeśli przypięty wskaźnik jest ponownie przypisywane, aby wskazywał nową wartość, poprzednie wystąpienie wskazywał przestaje być uważany za przypięty.  
+ Jeśli przypiętego wskaźnika jest przypisywana ponownie, aby wskazywał nową wartość, poprzednie wystąpienie wskazywany przestaje być uważany za przypięty.  
   
- Obiekt jest przypięty tylko podczas `pin_ptr` punktów do niego. Obiekt jest już przypięty podczas jego przypiętego wskaźnika wykracza poza zakres lub ma wartość [nullptr](../windows/nullptr-cpp-component-extensions.md). Po `pin_ptr` zbliża się poza zakresem, obiekt, który został przypięty można przenieść na stercie przez moduł garbage collector. Natywnymi wskaźnikami, które nadal wskaż obiekt nie będzie aktualizowana i zwalnia odwołujące się do jednego z nich mogą budzić wystąpił nieodwracalny wyjątek.  
+ Obiekt jest przypięty tylko podczas **pin_ptr** na nią wskazuje. Obiekt nie jest już przypięty po jego przypiętego wskaźnika wykracza poza zakres lub jest ustawiona na [nullptr](../windows/nullptr-cpp-component-extensions.md). Po **pin_ptr** zbliża się poza zakresem, obiekt, który został przypięty można przenieść w stercie modułu odśmiecania pamięci. Natywnymi wskaźnikami, które nadal wskazują obiekt nie zostanie zaktualizowana i usuwając odwołanie do jednego z nich może zgłosić wyjątek ulegnie nieodwracalnej awarii.  
   
- Jeśli nie unieruchamiania wskaźników wskaż obiekt (wszystkie unieruchamiania wskaźników poszło poza zakresem, zostały przypisane do punktu z innymi obiektami lub zostały przypisane [nullptr](../windows/nullptr-cpp-component-extensions.md)), obiekt pewno nie jest przypięty.  
+ Jeśli nie unieruchamiania wskaźników wskazują obiekt (wszystkie unieruchamiania wskaźników poszło poza zakresem, zostały przypisane do punktu do innych obiektów lub przypisano [nullptr](../windows/nullptr-cpp-component-extensions.md)), obiekt jest gwarantowane, nie można przypiąć.  
   
- Przypiętego wskaźnika może wskazywać do dojścia odwołania, typu wartości lub dojście do typu opakowanego, elementu członkowskiego typu zarządzanego lub element tablicy zarządzanej. Nie może wskazywać typ referencyjny.  
+ Przypiętego wskaźnika można wskazać do uchwytu odwołania, typem wartości lub uchwyt typ spakowany, składowej typu zarządzanego lub element tablicy zarządzanej. Nie może wskazywać typ odwołania.  
   
- Pobieranie adresu `pin_ptr` że wskazuje obiekt natywny powoduje niezdefiniowane zachowanie.  
+ Pobieranie adresu **pin_ptr** że wskazuje na obiekt natywny powoduje niezdefiniowane zachowanie.  
   
- Unieruchamiania wskaźników mogą być deklarowane jako zmienne lokalne niestatyczna na stosie.  
+ Unieruchamiania wskaźników może zostać zadeklarowany jako zmienne lokalne niestatycznych na stosie.  
   
  Nie można użyć unieruchamiania wskaźników jako:  
   
@@ -85,25 +85,24 @@ Deklaruje *przypiętego wskaźnika*, która jest używana tylko z środowisko ur
   
 -   zwracany typ funkcji  
   
--   element członkowski klasy  
+-   składowa klasy typu  
   
--   Typ docelowy rzutowanie.  
+-   Typ docelowy rzutowania.  
   
- `pin_ptr` Trwa `cli` przestrzeni nazw. Aby uzyskać więcej informacji, zobacz [platformy, domyślna i cli przestrzenie nazw](../windows/platform-default-and-cli-namespaces-cpp-component-extensions.md).  
+ **pin_ptr** znajduje się w `cli` przestrzeni nazw. Aby uzyskać więcej informacji, zobacz [platformy, domyślna i cli przestrzenie nazw](../windows/platform-default-and-cli-namespaces-cpp-component-extensions.md).  
   
- Aby uzyskać więcej informacji o wewnętrznych wskaźników, zobacz [interior_ptr (C + +/ CLI)](../windows/interior-ptr-cpp-cli.md).  
+ Aby uzyskać więcej informacji na temat wskaźników wnętrza zobacz [pomocą interior_ptr (C + +/ CLI)](../windows/interior-ptr-cpp-cli.md).  
   
- Aby uzyskać więcej informacji na temat Unieruchamianie wskaźników, zobacz [jak: numer Pin wskaźników oraz tablic](../windows/how-to-pin-pointers-and-arrays.md) i [jak: deklarowanie Unieruchamianie wskaźników i typów wartości](../windows/how-to-declare-pinning-pointers-and-value-types.md).  
+ Aby uzyskać więcej informacji na temat Unieruchamianie wskaźników, zobacz [jak: numer Pin wskaźników oraz tablic](../windows/how-to-pin-pointers-and-arrays.md) i [instrukcje: deklarowanie przypinanie wskaźników i typów wartości](../windows/how-to-declare-pinning-pointers-and-value-types.md).  
   
 ### <a name="requirements"></a>Wymagania  
- — Opcja kompilatora:   **/CLR**  
+ — Opcja kompilatora: `/clr`  
   
 ### <a name="examples"></a>Przykłady  
- **Przykład**  
   
- W poniższym przykładzie użyto `pin_ptr` Aby ograniczyć położenie pierwszego elementu tablicy.  
+ W poniższym przykładzie użyto **pin_ptr** ograniczenie pozycja pierwszego elementu w tablicy.  
   
-```  
+```cpp  
 // pin_ptr_1.cpp  
 // compile with: /clr   
 using namespace System;  
@@ -153,11 +152,9 @@ int main() {
 45  
 ```  
   
- **Przykład**  
+ W poniższym przykładzie pokazano, że wskaźnika wewnętrznego można skonwertować do przypiętego wskaźnika, a następnie aby typ zwracany dla operatora address-of (`&`) jest wskaźnika wewnętrznego, gdy argument znajduje się na zarządzanym stosie.  
   
- W poniższym przykładzie pokazano, że można przekonwertować wskaźnik wewnętrzny do przypiętego wskaźnika i że zwracany typ funkcji address-of — operator (`&`) jest wskaźnik wewnętrzny, gdy argument jest na stercie zarządzanej.  
-  
-```  
+```cpp  
 // pin_ptr_2.cpp  
 // compile with: /clr  
 using namespace System;  
@@ -191,11 +188,9 @@ int main() {
 1  
 ```  
   
- **Przykład**  
+ Poniższy przykład pokazuje, że przypiętego wskaźnika mogą być rzutowane na innego typu.  
   
- W poniższym przykładzie pokazano, że mogą być rzutowane przypiętego wskaźnika do innego typu.  
-  
-```  
+```cpp  
 // pin_ptr_3.cpp  
 // compile with: /clr  
 using namespace System;  

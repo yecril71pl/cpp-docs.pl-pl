@@ -1,5 +1,5 @@
 ---
-title: 'Module:: ~ Module — destruktor | Dokumentacja firmy Microsoft'
+title: 'Module:: ~ Module, destruktor | Dokumentacja firmy Microsoft'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: a85f5a483b329525d44688c61ac57df8d3b2ef1c
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 6f6c27924788be435a9388c1f8e3d24560a4279e
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33881367"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39604320"
 ---
 # <a name="modulemodule-destructor"></a>Module::~Module — Destruktor
-Deinitializes bieżącego wystąpienia klasy modułu.  
+Deinicjuje bieżące wystąpienie **modułu** klasy.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -36,7 +36,7 @@ virtual ~Module();
 ## <a name="requirements"></a>Wymagania  
  **Nagłówek:** module.h  
   
- **Namespace:** Microsoft::wrl —
+ **Namespace:** Microsoft::WRL
  
  ## <a name="see-also"></a>Zobacz też
  [Klasa modułu](../windows/module-class.md)

@@ -19,71 +19,71 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: fa5b42fc846f3b4f21dc8045e67d8ebc347601ea
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 42f1151f90fa6a418564f30b9ec6570645a91b42
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33880803"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39608420"
 ---
 # <a name="predefined-accelerator-keys"></a>Wstępnie zdefiniowane klawisze skrótów
-Istnieje szereg wstępnie zdefiniowane klawisze skrótów, które mogą być częścią projekt aplikacji systemu Windows. Niektóre z tych klawiszy wirtualnych są środowiska systemu Windows. Inne przeglądarki pomocy technicznej lub aplikacje Unicode. Można użyć dowolnej z tych kluczy w dowolnym akceleratora.  
+Istnieje kilka wstępnie zdefiniowane klawisze skrótów, które mogą być częścią projektu aplikacji Windows. Niektóre z tych wirtualnych kluczy są w środowisku Windows. Inne przeglądarki pomocy technicznej lub aplikacji nieobsługujących kodu Unicode. W dowolnym akceleratora, można użyć dowolnego z tych kluczy.  
   
 |Key|Opis|  
 |---------|-----------------|  
 |VK_ACCEPT|Zaakceptuj edytora IME|  
-|VK_BROWSER_BACK|Systemu Windows: Klucz Wstecz przeglądarki|  
-|VK_BROWSER_FAVORITES|Systemu Windows: Klucz Ulubione przeglądarki|  
-|VK_BROWSER_FORWARD|Systemu Windows: Klucz do przodu przeglądarki|  
-|VK_BROWSER_HOME|Systemu Windows: Klucz uruchomienia przeglądarki i głównej|  
-|VK_BROWSER_REFRESH|Systemu Windows: Klucz odświeżania przeglądarki|  
-|VK_BROWSER_SEARCH|Systemu Windows: Klucz wyszukiwania przeglądarki|  
-|VK_BROWSER_STOP|Systemu Windows: Klucz Stop przeglądarki|  
+|VK_BROWSER_BACK|Windows: Klucz Wstecz w przeglądarce|  
+|VK_BROWSER_FAVORITES|Windows: Klucz ulubione strony w przeglądarce|  
+|VK_BROWSER_FORWARD|Windows: Klucz do przodu w przeglądarce|  
+|VK_BROWSER_HOME|Windows: Klucz uruchamiania przeglądarki i w domu|  
+|VK_BROWSER_REFRESH|Windows: Klucz Odśwież w przeglądarce|  
+|VK_BROWSER_SEARCH|Windows: Klucz wyszukiwania przeglądarki|  
+|VK_BROWSER_STOP|Windows: Klucz Stop w przeglądarce|  
 |VK_CONVERT|Konwertuj edytora IME|  
 |VK_FINAL|Końcowe tryb edytora IME|  
-|VK_HANGUEL|Tryb IME Hanguel (utrzymać zgodność; Użyj VK_HANGUL)|  
+|VK_HANGUEL|Tryb IME Hanguel (utrzymywana ze względu na zgodność; Użyj VK_HANGUL)|  
 |VK_HANGUL|Tryb IME Hangul|  
 |VK_HANJA|Tryb IME Hanja|  
 |VK_JUNJA|Tryb IME Junja|  
 |VK_KANA|Tryb IME Kana|  
 |VK_KANJI|Tryb IME Kanji|  
-|VK_LAUNCH_APP1|Systemu Windows: Klucz uruchomienia aplikacji 1|  
-|VK_LAUNCH_APP2|Systemu Windows: Klucz uruchomienia aplikacji 2|  
-|VK_LAUNCH_MAIL|Systemu Windows: Klucz uruchomienia poczty|  
-|VK_LAUNCH_MEDIA_SELECT|Systemu Windows: Klucz wybierz nośnika|  
-|VK_LCONTROL|Klucz kontroli lewej|  
-|VK_LMENU|Klawisz MENU po lewej|  
+|VK_LAUNCH_APP1|Windows: Klucz aplikacji Start 1|  
+|VK_LAUNCH_APP2|Windows: Klucz aplikacji Start 2|  
+|VK_LAUNCH_MAIL|Windows: Klucz poczty Start|  
+|VK_LAUNCH_MEDIA_SELECT|Windows: Wybierz klucz nośnika|  
+|VK_LCONTROL|Klawisz CONTROL po lewej stronie|  
+|VK_LMENU|Klawisz MENU po lewej stronie|  
 |VK_LSHIFT|Klucz PRZESUNIĘCIA w lewo|  
-|VK_MEDIA_NEXT_TRACK|Systemu Windows: Następny klucz ścieżki|  
-|VK_MEDIA_PLAY_PAUSE|Systemu Windows: Klucz Odtwórz/Wstrzymaj nośnika|  
-|VK_MEDIA_PREV_TRACK|Systemu Windows: Poprzedni klucz ścieżki|  
-|VK_MEDIA_STOP|Systemu Windows: Klucz nośnika zatrzymania|  
-|VK_MODECHANGE|Żądanie zmiany tryb IME|  
+|VK_MEDIA_NEXT_TRACK|Windows: Śledzenie kluczowi|  
+|VK_MEDIA_PLAY_PAUSE|Windows: Klucz nośnika odtwarzany/wstrzymywany|  
+|VK_MEDIA_PREV_TRACK|Windows: Poprzednie ścieżki klucza|  
+|VK_MEDIA_STOP|Windows: Klucz nośnika Stop|  
+|VK_MODECHANGE|Żądania zmiany na tryb edytora IME|  
 |VK_NONCONVERT|Nonconvert edytora IME|  
-|VK_OEM_1|System Windows: dla standardowych amerykańskim ";:" klucz|  
-|VK_OEM_102|Systemu Windows: Klucza lub klucza ukośnik odwrotny na klawiaturze 102 klawisze RT nawiasów albo kąt|  
-|VK_OEM_2|System Windows: dla standardowych amerykańskim '/'? klawisz|  
-|VK_OEM_3|System Windows: dla standardowych amerykańskim "~" klucza|  
-|VK_OEM_4|System Windows: dla standardowych amerykańskim "[{" klucza|  
-|VK_OEM_5|System Windows: dla standardowych amerykańskim "\\&#124;" klucza|  
-|VK_OEM_6|Windows: dla standardowych amerykańskim, "]}" klucza|  
-|VK_OEM_7|Systemu Windows: dla Stanów Zjednoczonych klawiatury standardowe, klucz "jednym — oferta/podwójnego cudzysłowu"|  
-|VK_OEM_COMMA|System Windows: dla dowolnego kraju/regionu, klucz ""|  
-|VK_OEM_MINUS|System Windows: dla dowolnego kraju/regionu '-' klucza|  
-|VK_OEM_PERIOD|System Windows: dla dowolnego kraj/region "." klucza|  
-|VK_OEM_PLUS|System Windows: dla dowolnego kraju/regionu, klucz "+"|  
-|VK_PACKET|System Windows: Służy do przekazywania znaków Unicode, tak jakby były naciśnięcia klawiszy.|  
-|VK_RCONTROL|Klucz kontroli prawej|  
-|VK_RMENU|Klawisz MENU z prawej|  
-|VK_RSHIFT|Klawisz SHIFT prawej|  
-|VK_SLEEP|Klucz uśpienia komputera|  
-|VK_VOLUME_DOWN|Systemu Windows: Woluminu klawisz|  
-|VK_VOLUME_MUTE|Systemu Windows: Klucz wyciszenia woluminu|  
-|VK_VOLUME_UP|Systemu Windows: Woluminu klucz|  
-|VK_XBUTTON1|System Windows: X1 przycisk myszy.|  
-|VK_XBUTTON2|System Windows: X2 przycisk myszy.|  
+|VK_OEM_1|Windows: dla Stanów Zjednoczonych, standardowy interfejs użytkownika ';: "klucz|  
+|VK_OEM_102|Windows: Ukośnik odwrotny klawisz na klawiaturze 102-key RT lub dopasowywanie albo kąt|  
+|VK_OEM_2|Windows: dla Stanów Zjednoczonych, standardowy interfejs użytkownika '/'? klawisz|  
+|VK_OEM_3|Windows: dla Stanów Zjednoczonych standardowy interfejs użytkownika "~" klucz|  
+|VK_OEM_4|Windows: dla Stanów Zjednoczonych, standardowy interfejs użytkownika "[{" klucz|  
+|VK_OEM_5|Windows: dla Stanów Zjednoczonych, standardowy interfejs użytkownika "\\&#124;" klucz|  
+|VK_OEM_6|Windows: dla Stanów Zjednoczonych, standardowy interfejs użytkownika "]}" klucza|  
+|VK_OEM_7|Windows: dla Stanów Zjednoczonych standardowy interfejs użytkownika, klucz "pojedynczego — oferta/podwójny cudzysłów"|  
+|VK_OEM_COMMA|Windows: dla jakiegokolwiek kraju/regionu, klucza ''|  
+|VK_OEM_MINUS|Windows: dla jakiegokolwiek kraju/regionu "-" klucz|  
+|VK_OEM_PERIOD|Windows: dla jakiegokolwiek kraju/regionu "." klucz|  
+|VK_OEM_PLUS|Windows: dla jakiegokolwiek kraju/regionu, klucza '+'|  
+|VK_PACKET|Windows: Używany do przekazywania znaków Unicode, tak jakby naciśnięć klawiszy.|  
+|VK_RCONTROL|Klawisz CONTROL po prawej stronie|  
+|VK_RMENU|Klawisz MENU po prawej stronie|  
+|VK_RSHIFT|Klucz PRZESUNIĘCIA w prawo|  
+|VK_SLEEP|Klucz stanu uśpienia komputera|  
+|VK_VOLUME_DOWN|Windows: Wolumin wciśnięty klawisz|  
+|VK_VOLUME_MUTE|Windows: Klucz Wycisz woluminu|  
+|VK_VOLUME_UP|Windows: Wolumin klucz|  
+|VK_XBUTTON1|Windows: X1 przycisk myszy.|  
+|VK_XBUTTON2|Windows: X2 przycisk myszy.|  
   
- Aby uzyskać informacje o dodawaniu zasobów do projektów zarządzanych, zobacz [zasobów w aplikacjach pulpitu](/dotnet/framework/resources/index) w *Przewodnik programistów platformy .NET Framework.*  
+ Aby uzyskać informacje na temat dodawania zasobów do projektów zarządzanych, zobacz [zasoby w aplikacjach pulpitu](/dotnet/framework/resources/index) w *przewodniku dewelopera .NET Framework*.  
   
 ## <a name="requirements"></a>Wymagania  
  Win32  

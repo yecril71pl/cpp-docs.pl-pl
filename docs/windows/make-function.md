@@ -1,5 +1,5 @@
 ---
-title: Make — funkcja | Dokumentacja firmy Microsoft
+title: Ustaw funkcję | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: f381a00b5ac1f105080355f1d3e3cd15efa5abf8
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 9941f2b1bce67fb09c69db6278de94c102f88473
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33878076"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39604872"
 ---
 # <a name="make-function"></a>Make — Funkcja
-Inicjuje określonej klasy środowiska wykonawczego systemu Windows. Ta funkcja służy do utworzenia wystąpienia składnika, który jest zdefiniowany w tym samym module.  
+Inicjuje określonej klasy środowiska wykonawczego Windows. Ta funkcja służy do utworzenia wystąpienia składnika, który jest zdefiniowany w tym samym module.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -171,74 +171,74 @@ template <
 ComPtr<T> Make();  
 ```  
   
-#### <a name="parameters"></a>Parametry  
- `T`  
- Określony użytkownik klasy, która dziedziczy `WRL::RuntimeClass`.  
+### <a name="parameters"></a>Parametry  
+ *T*  
+ Klasy określonych przez użytkownika, który dziedziczy z `WRL::RuntimeClass`.  
   
- `TArg1`  
- Typ argumentu 1 są przekazywane do określonego środowiska uruchomieniowego klasy.  
+ *TArg1*  
+ Typ argumentu 1, który jest przekazywany do określonego środowiska uruchomieniowego klasy.  
   
- `TArg2`  
+ *TArg2*  
  Typ argumentu 2, który jest przekazywany do określonego środowiska uruchomieniowego klasy.  
   
- `TArg3`  
+ *TArg3*  
  Typ argumentu 3, który jest przekazywany do określonego środowiska uruchomieniowego klasy.  
   
- `TArg4`  
+ *TArg4*  
  Typ argumentu 4, który jest przekazywany do określonego środowiska uruchomieniowego klasy.  
   
- `TArg5`  
+ *TArg5*  
  Typ argumentu 5, który jest przekazywany do określonego środowiska uruchomieniowego klasy.  
   
- `TArg6`  
+ *TArg6*  
  Typ argumentu 6, który jest przekazywany do określonego środowiska uruchomieniowego klasy.  
   
- `TArg7`  
+ *TArg7*  
  Typ argumentu 7, który jest przekazywany do określonego środowiska uruchomieniowego klasy.  
   
- `TArg8`  
+ *TArg8*  
  Typ argumentu 8, który jest przekazywany do określonego środowiska uruchomieniowego klasy.  
   
- `TArg9`  
+ *TArg9*  
  Typ argumentu 9, który jest przekazywany do określonego środowiska uruchomieniowego klasy.  
   
- `arg1`  
+ *arg1*  
  Argument 1, który jest przekazywany do określonego środowiska uruchomieniowego klasy.  
   
- `arg2`  
+ *argument2*  
  Argument 2, który jest przekazywany do określonego środowiska uruchomieniowego klasy.  
   
- `arg3`  
+ *arg3*  
  Argument 3, który jest przekazywany do określonego środowiska uruchomieniowego klasy.  
   
- `arg4`  
+ *Arg4*  
  Argument 4, który jest przekazywany do określonego środowiska uruchomieniowego klasy.  
   
- `arg5`  
+ *arg5*  
  Argument 5, który jest przekazywany do określonego środowiska uruchomieniowego klasy.  
   
- `arg6`  
+ *arg6*  
  Argument 6, który jest przekazywany do określonego środowiska uruchomieniowego klasy.  
   
- `arg7`  
+ *arg7*  
  Argument 7, który jest przekazywany do określonego środowiska uruchomieniowego klasy.  
   
- `arg8`  
+ *arg8*  
  Argument 8, który jest przekazywany do określonego środowiska uruchomieniowego klasy.  
   
- `arg9`  
+ *arg9*  
  Argument 9, który jest przekazywany do określonego środowiska uruchomieniowego klasy.  
   
 ## <a name="return-value"></a>Wartość zwracana  
- A `ComPtr<T>` obiektu w przypadku powodzenia; w przeciwnym razie `nullptr`.  
+ A `ComPtr<T>` obiektu w przypadku powodzenia; w przeciwnym razie **nullptr**.  
   
 ## <a name="remarks"></a>Uwagi  
- Zobacz [jak: utworzyć wystąpienia składników biblioteki WRL bezpośrednio](../windows/how-to-instantiate-wrl-components-directly.md) Aby dowiedzieć się różnic między tej funkcji i [Microsoft::WRL::Details::MakeAndInitialize](../windows/makeandinitialize-function.md)i na przykład.  
+ Zobacz [jak: bezpośrednio utworzyć wystąpienia składników biblioteki WRL](../windows/how-to-instantiate-wrl-components-directly.md) się różnice w tej funkcji i [Microsoft::WRL::Details::MakeAndInitialize](../windows/makeandinitialize-function.md)i aby uzyskać przykład.  
   
 ## <a name="requirements"></a>Wymagania  
  **Nagłówek:** implements.h  
   
- **Namespace:** Microsoft::wrl —  
+ **Namespace:** Microsoft::WRL  
   
 ## <a name="see-also"></a>Zobacz też  
  [Microsoft::WRL, przestrzeń nazw](../windows/microsoft-wrl-namespace.md)

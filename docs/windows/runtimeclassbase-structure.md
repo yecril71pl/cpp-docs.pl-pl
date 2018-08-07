@@ -1,5 +1,5 @@
 ---
-title: Runtimeclassbase — struktura | Dokumentacja firmy Microsoft
+title: RuntimeClassBase, struktura | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,12 +15,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: d80f475cf8a50dcb084ca6e953842e91c55e4502
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: b272c733dab71e615a46cb4af25609c560bdbfef
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33888412"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39602682"
 ---
 # <a name="runtimeclassbase-structure"></a>RuntimeClassBase — Struktura
 Obsługuje infrastrukturę biblioteki WRL i nie jest przeznaczona do użycia bezpośrednio w kodzie.  
@@ -32,9 +32,9 @@ struct RuntimeClassBase;
 ```  
   
 ## <a name="remarks"></a>Uwagi  
- Używane do wykrywania runtimeclass — w [upewnij](../windows/make-function.md) funkcji.  
+ Używane do wykrywania `RuntimeClass` w [wprowadzić](../windows/make-function.md) funkcji.  
   
- Runtimeclassbase — jest pustą strukturą.  
+ **RuntimeClassBase** jest pustą strukturą.  
   
 ## <a name="inheritance-hierarchy"></a>Hierarchia dziedziczenia  
  `RuntimeClassBase`  
@@ -42,7 +42,7 @@ struct RuntimeClassBase;
 ## <a name="requirements"></a>Wymagania  
  **Nagłówek:** implements.h  
   
- **Namespace:** Microsoft::wrl:: details —  
+ **Namespace:** Microsoft::wrl:: details  
   
 ## <a name="see-also"></a>Zobacz też  
  [Microsoft::WRL::Details, przestrzeń nazw](../windows/microsoft-wrl-details-namespace.md)

@@ -1,5 +1,5 @@
 ---
-title: RuntimeClass::QueryInterface — metoda | Dokumentacja firmy Microsoft
+title: RuntimeClass::QueryInterface, metoda | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,20 +17,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 84f5183d0273abfc23834099c07987dca6b3da7f
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 15f611a9fe361e401e1884cb1794f8d1ef1f5591
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33892108"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39603540"
 ---
 # <a name="runtimeclassqueryinterface-method"></a>RuntimeClass::QueryInterface — Metoda
-Pobiera wskaźnik identyfikator określonego interfejsu.  
+Pobiera wskaźnik do określonego interfejsu.  
   
 ## <a name="syntax"></a>Składnia  
   
 ```  
-  
 STDMETHOD(  
    QueryInterface  
 )  
@@ -38,12 +37,12 @@ STDMETHOD(
    _Deref_out_ void **ppvObject);  
 ```  
   
-#### <a name="parameters"></a>Parametry  
- `riid`  
- Identyfikatora interfejsu.  
+### <a name="parameters"></a>Parametry  
+ *Parametr riid*  
+ Identyfikator interfejsu.  
   
- `ppvObject`  
- Po zakończeniu tego opereation, wskaźnik do interfejsu określonego przez `riid` parametru.  
+ *ppvObject*  
+ Po zakończeniu tego opereation, wskaźnik do interfejsu, określonego przez *riid* parametru.  
   
 ## <a name="return-value"></a>Wartość zwracana  
  S_OK w przypadku powodzenia; w przeciwnym razie wartość HRESULT, która wskazuje błąd.  
@@ -51,7 +50,7 @@ STDMETHOD(
 ## <a name="requirements"></a>Wymagania  
  **Nagłówek:** implements.h  
   
- **Namespace:** Microsoft::wrl —  
+ **Namespace:** Microsoft::WRL  
   
 ## <a name="see-also"></a>Zobacz też  
  [RuntimeClass, klasa](../windows/runtimeclass-class.md)

@@ -17,39 +17,38 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: ac5f0e81a7d29d89e32735224afed67f3d9c9101
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: d8c7ab6dcfa4a085facf835343404de3ed4998a3
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33877933"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39603445"
 ---
 # <a name="range-c"></a>range (C++)
-Określa zakresu wartości dozwoloną dla argumentów lub pól, których wartości są ustawione w czasie wykonywania.  
+Określa zakres dopuszczalnych wartości dla argumentów lub pól, których wartości są ustawione w czasie wykonywania.  
   
 ## <a name="syntax"></a>Składnia  
   
 ```  
-  
-      [ range(  
+[ range(  
    low,   
    high  
 ) ]  
 ```  
   
 #### <a name="parameters"></a>Parametry  
- *Niski*  
- Wartość dolnej granicy zakresu.  
+ *Niska*  
+ Wartość zakresu niski.  
   
  *high*  
- Wartość górnej granicy zakresu.  
+ Wartość zakresu wysoka.  
   
 ## <a name="remarks"></a>Uwagi  
- **Zakres** atrybut C++ ma te same funkcje co [zakres](http://msdn.microsoft.com/library/windows/desktop/aa367151) MIDL atrybutu.  
+ **Zakres** atrybut C++ ma taką samą funkcjonalność jak [zakres](http://msdn.microsoft.com/library/windows/desktop/aa367151) atrybutów w MIDL.  
   
 ## <a name="example"></a>Przykład  
   
-```  
+```cpp  
 // cpp_attr_ref_range.cpp  
 // compile with: /LD  
 #include <unknwn.h>  
@@ -65,19 +64,19 @@ __interface ICustom {
   
 ## <a name="requirements"></a>Wymagania  
   
-### <a name="attribute-context"></a>Atrybut kontekstu  
+### <a name="attribute-context"></a>Kontekst atrybutu  
   
 |||  
 |-|-|  
-|**Dotyczy**|Metoda interfejsu, parametr — interfejs|  
+|**Dotyczy**|Metody interfejsu, parametr interfejsu|  
 |**Powtarzalne**|Nie|  
 |**Wymaganych atrybutów**|Brak|  
 |**Nieprawidłowe atrybuty**|Brak|  
   
- Aby uzyskać więcej informacji na temat konteksty atrybutu, zobacz [konteksty atrybutu](../windows/attribute-contexts.md).  
+ Aby uzyskać więcej informacji na temat konteksty atrybutu zobacz [konteksty atrybutu](../windows/attribute-contexts.md).  
   
 ## <a name="see-also"></a>Zobacz też  
  [Atrybuty IDL](../windows/idl-attributes.md)   
- [Atrybuty — metoda](../windows/method-attributes.md)   
- [Atrybuty parametrów](../windows/parameter-attributes.md)   
+ [Atrybuty metody](../windows/method-attributes.md)   
+ [Atrybuty parametru](../windows/parameter-attributes.md)   
  [Atrybuty składowych danych](../windows/data-member-attributes.md)   

@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 38724e6371f5c0ae508fc18e4bc75dc2287dbe19
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: c87f1191bc90cd2aec9207f3a4657349c9859bf4
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33878063"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39605922"
 ---
 # <a name="makeallocator-class"></a>MakeAllocator — Klasa
 Obsługuje infrastrukturę biblioteki WRL i nie jest przeznaczona do użycia bezpośrednio w kodzie.  
@@ -30,7 +30,6 @@ Obsługuje infrastrukturę biblioteki WRL i nie jest przeznaczona do użycia bez
 ## <a name="syntax"></a>Składnia  
   
 ```  
-  
 template<  
    typename T,  
    bool hasWeakReferenceSupport =   
@@ -44,19 +43,19 @@ template<typename T>
 class MakeAllocator<T, true>;  
 ```  
   
-#### <a name="parameters"></a>Parametry  
- `T`  
+### <a name="parameters"></a>Parametry  
+ *T*  
  Nazwa typu.  
   
- `hasWeakReferenceSupport`  
- `true` można przydzielić pamięci dla obiekt, który obsługuje słabe odwołania; `false` można przydzielić pamięci dla obiektu, który nie obsługuje słabe odwołania.  
+ *hasWeakReferenceSupport*  
+ **wartość true,** można przydzielić pamięci dla obiektu, który obsługuje słabe odwołania; **false** można przydzielić pamięci dla obiektu, który nie obsługuje słabe odwołania.  
   
 ## <a name="remarks"></a>Uwagi  
- Przydziela pamięć dla klasy aktywowalnej, z lub bez obsługi słabe odwołanie.  
+ Przydziela pamięć dla klasy aktywowalnej, z lub bez niej odwołanie tymczasowe wsparcia.  
   
- Zastąpienie makeallocator — klasa implementacji modelu alokacji pamięci zdefiniowane przez użytkownika.  
+ Zastąp **MakeAllocator** klasę, aby wdrożyć model przydzielania pamięci zdefiniowane przez użytkownika.  
   
- Makeallocator — zazwyczaj jest używany do chronienia przecieki pamięci, jeśli obiekt zgłasza wyjątek podczas konstruowania.  
+ **MakeAllocator** jest zazwyczaj używany do zapobiec przeciekom pamięci, jeśli obiekt zgłasza wyjątek w trakcie konstruowania.  
   
 ## <a name="members"></a>Elementy członkowskie  
   
@@ -64,15 +63,15 @@ class MakeAllocator<T, true>;
   
 |Nazwa|Opis|  
 |----------|-----------------|  
-|[MakeAllocator::MakeAllocator, konstruktor](../windows/makeallocator-makeallocator-constructor.md)|Inicjuje nowe wystąpienie klasy makeallocator —.|  
-|[MakeAllocator::~MakeAllocator, destruktor](../windows/makeallocator-tilde-makeallocator-destructor.md)|Deinitializes bieżące wystąpienie klasy makeallocator — klasa.|  
+|[MakeAllocator::MakeAllocator, konstruktor](../windows/makeallocator-makeallocator-constructor.md)|Inicjuje nowe wystąpienie klasy **MakeAllocator** klasy.|  
+|[MakeAllocator::~MakeAllocator, destruktor](../windows/makeallocator-tilde-makeallocator-destructor.md)|Deinicjuje bieżące wystąpienie **MakeAllocator** klasy.|  
   
 ### <a name="public-methods"></a>Metody publiczne  
   
 |Nazwa|Opis|  
 |----------|-----------------|  
-|[MakeAllocator::Allocate, metoda](../windows/makeallocator-allocate-method.md)|Przydziela pamięć i kojarzy ją z bieżącym obiektem makeallocator —.|  
-|[MakeAllocator::Detach, metoda](../windows/makeallocator-detach-method.md)|Usuwa skojarzenia pamięci przydzielonej przez [przydziel](../windows/makeallocator-allocate-method.md) metody z bieżącego obiektu makeallocator —.|  
+|[MakeAllocator::Allocate, metoda](../windows/makeallocator-allocate-method.md)|Przydziela pamięć i kojarzy ją z bieżącymi **MakeAllocator** obiektu.|  
+|[MakeAllocator::Detach, metoda](../windows/makeallocator-detach-method.md)|Powoduje usunięcie pamięci przydzielonej przez [przydziel](../windows/makeallocator-allocate-method.md) metody z bieżącego **MakeAllocator** obiektu.|  
   
 ## <a name="inheritance-hierarchy"></a>Hierarchia dziedziczenia  
  `MakeAllocator`  
@@ -80,7 +79,7 @@ class MakeAllocator<T, true>;
 ## <a name="requirements"></a>Wymagania  
  **Nagłówek:** implements.h  
   
- **Namespace:** Microsoft::wrl:: details —  
+ **Namespace:** Microsoft::wrl:: details  
   
 ## <a name="see-also"></a>Zobacz też  
  [Microsoft::WRL::Details, przestrzeń nazw](../windows/microsoft-wrl-details-namespace.md)

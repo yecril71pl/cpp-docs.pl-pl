@@ -19,15 +19,15 @@ ms.author: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: c7154349105c1953ad314b7928e7be8385179c42
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 0d6bcac8dec2e85f0ea7d1d4530ed6ff1b7acc08
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33888750"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39604346"
 ---
 # <a name="safeintsafeint"></a>SafeInt::SafeInt
-Konstruuje `SafeInt` obiektu.  
+Konstruuje **SafeInt** obiektu.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -53,27 +53,27 @@ SafeInt (
 )  
 ```  
   
-#### <a name="parameters"></a>Parametry  
- [in] `i`  
- Wartość dla nowej `SafeInt` obiektu. Musi to być parametr typu T lub U, w zależności od tego konstruktora.  
+### <a name="parameters"></a>Parametry  
+ [in] *i*  
+ Wartość dla nowej klasy **SafeInt** obiektu. Musi to być parametrem typu T lub U, w zależności od tego konstruktora.  
   
- [in] `b`  
- Wartość logiczna dla nowej `SafeInt` obiektu.  
+ [in] *b*  
+ Wartość logiczna dla nowej **SafeInt** obiektu.  
   
- [in] `u`  
- A `SafeInt` z typu U. Nowy `SafeInt` obiekt będzie mieć taką samą wartość jak `u`, ale będzie typu T.  
+ [in] *u*  
+ A **SafeInt** z typu U. Nowy **SafeInt** obiekt będzie miał taką samą wartość jak *u*, ale będą typu T.  
   
  U  
- Typ danych przechowywanych w `SafeInt`. Może to być typu Boolean, znak lub liczbą całkowitą. Jeśli jest typu Liczba całkowita, może być podpisu lub bez znaku i należeć do zakresu od 8 do 64 bitów.  
+ Typ danych przechowywanych w **SafeInt**. Może to być atrybut typu wartość logiczna, znaku lub liczba całkowita typu. Jeśli typ liczby całkowitej, mogą być podpisane lub niepodpisane i mieć długość od 8 do 64 bitów.  
   
 ## <a name="remarks"></a>Uwagi  
- Aby uzyskać więcej informacji o typach szablonu `T` i `E`, zobacz [safeint — klasa](../windows/safeint-class.md).  
+ Aby uzyskać więcej informacji na temat typów szablonu `T` i `E`, zobacz [safeint — klasa](../windows/safeint-class.md).  
   
- Parametr wejściowy dla konstruktora, `i` lub `u`, musi być typu Boolean, znak lub liczbą całkowitą. Jeśli jest innego typu parametru `SafeInt` klasy wywołania [static_assert](../cpp/static-assert.md) wskazująca nieprawidłowy parametr wejściowy.  
+ Parametr wejściowy dla konstruktora, *i* lub *u*, musi być typu wartość logiczna, znaku lub liczba całkowita. Jeśli jest innego typu parametru **SafeInt** klasy wywołania [static_assert](../cpp/static-assert.md) do wskazania nieprawidłowy parametr wejściowy.  
   
- Konstruktory, które używają typu szablonu `U` automatycznie przekonwertować na typ określony przez parametr wejściowy `T`. `SafeInt` Klasy konwertuje dane bez utraty danych. Przekazuje do programu obsługi błędów `E` , jeśli nie można przekonwertować danych na typ `T` bez utraty danych.  
+ Konstruktory, które używają typu szablonu `U` automatycznie przekonwertować parametru wejściowego typu określonego przez `T`. **SafeInt** klasy konwertuje dane bez utraty danych. Wysyła raporty do programu obsługi błędów `E` gdy go nie może przekonwertować danych na typ `T` bez utraty danych.  
   
- Jeśli tworzysz `SafeInt` z parametrem logicznym należy zainicjować wartość natychmiast. Nie można skonstruować `SafeInt` przy użyciu kodu `SafeInt<bool> sb;`. Zostanie wygenerowany błąd kompilacji.  
+ Jeśli tworzysz **SafeInt** z parametrem logicznym należy zainicjować wartości natychmiast. Nie można skonstruować **SafeInt** przy użyciu kodu `SafeInt<bool> sb;`. Spowoduje to wygenerowanie błędu kompilacji.  
   
 ## <a name="requirements"></a>Wymagania  
  **Nagłówek:** safeint.h  

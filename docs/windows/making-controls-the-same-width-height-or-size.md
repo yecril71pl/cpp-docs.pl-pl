@@ -1,5 +1,5 @@
 ---
-title: Tworzenie formantów o tej samej szerokości, wysokości lub rozmiaru | Dokumentacja firmy Microsoft
+title: Tworzenie formantów o tej samej szerokości, wysokości lub rozmiar | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,37 +16,36 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 3d8c475e42a490b68f6a50e071f2479748039186
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: ffbc9f7f6a242f119fd0cd164242883e904d7114
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33874801"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39607322"
 ---
 # <a name="making-controls-the-same-width-height-or-size"></a>Tworzenie formantów o tej samej szerokości, wysokości lub o tym samym rozmiarze
-Można zmienić rozmiar grupy formantów na podstawie rozmiaru formantu dominującego. Możesz również [Zmienianie rozmiaru formantu na podstawie wymiarów jego tekstu podpis](../windows/sizing-individual-controls.md).  
+Można zmienić rozmiar grupy formantów, w zależności od rozmiaru formantu dominującego. Możesz również [Zmienianie rozmiaru kontrolki, w oparciu o wymiary jego tekstu transkrypcji](../windows/sizing-individual-controls.md).  
   
-### <a name="to-make-controls-the-same-width-height-or-size"></a>Aby formanty szerokości, wysokości lub rozmiaru  
+### <a name="to-make-controls-the-same-width-height-or-size"></a>Aby wprowadzić kontroluje tej samej szerokości, wysokości lub rozmiar  
   
 1.  [Zaznacz formanty](../windows/selecting-multiple-controls.md) chcesz zmienić.  
   
-     Formant wcześniej z tej serii znajduje się formant dominujący. Rozmiar formantu dominującego zależy od rozmiaru końcowego formantów w grupie. Aby uzyskać więcej informacji na temat wybierania formantu dominującego, zobacz [Określanie formantu dominującego](../windows/specifying-the-dominant-control.md).  
+     Wcześniej w tej serii jest dominującym kontrolka. Końcowe rozmiaru formantów w grupie zależy od rozmiaru formantu dominującego. Aby uzyskać więcej informacji dotyczących zaznaczania formantu dominującego zobacz [Określanie formantu dominującego](../windows/specifying-the-dominant-control.md).  
   
 2.  Z **Format** menu, wybierz **Wyrównaj rozmiar**, a następnie wybierz jedno z następujących poleceń:  
   
-    -   **Zarówno**  
+    -   **Oba**  
   
     -   **Wysokość**  
   
     -   **Szerokość**  
   
- Aby uzyskać informacje o dodawaniu zasobów do projektów zarządzanych, zobacz [zasobów w aplikacjach pulpitu](/dotnet/framework/resources/index) w *Przewodnik programistów platformy .NET Framework.* Aby uzyskać informacje na ręczne dodanie do projektów zarządzanych plików zasobów, uzyskiwanie dostępu do zasobów, wyświetlanie zasoby statyczne i przypisanie do właściwości ciągów zasobów, zobacz [tworzenie plików zasobów dla aplikacji pulpitu](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Informacje dotyczące globalizacji i lokalizacji zasobów w zarządzanych aplikacjach, zobacz [Globalizing i lokalizacja aplikacji .NET Framework](/dotnet/standard/globalization-localization/index).  
+ Aby uzyskać informacje na temat dodawania zasobów do projektów zarządzanych, zobacz [zasoby w aplikacjach pulpitu](/dotnet/framework/resources/index) w *przewodniku dewelopera .NET Framework*. Aby uzyskać informacji na temat ręcznego dodawania plików zasobów do projektów zarządzanych, uzyskiwania dostępu do zasobów, wyświetlania statycznych zasobów i przypisywania ciągów zasobów do właściwości, zobacz [Creating Resource Files dla aplikacji klasycznych](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Aby uzyskać informacji na temat globalizacja i lokalizacja zasobów w aplikacjach zarządzanych, zobacz [Globalizing i lokalizowanie aplikacji programu .NET Framework](/dotnet/standard/globalization-localization/index).  
   
- Wymagania  
+## <a name="requirements"></a>Wymagania  
   
  Win32  
   
 ## <a name="see-also"></a>Zobacz też  
  [Formanty w oknach dialogowych](../windows/controls-in-dialog-boxes.md)   
  [Kontrolki](../mfc/controls-mfc.md)
-

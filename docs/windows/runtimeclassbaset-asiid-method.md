@@ -1,5 +1,5 @@
 ---
-title: RuntimeClassBaseT::AsIID — metoda | Dokumentacja firmy Microsoft
+title: RuntimeClassBaseT::AsIID, metoda | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 35d218666f785685e95d737574ff44e276ce84b3
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 1174db6702fc68b01f60491ef203265bbd6f4c14
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33892133"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39607430"
 ---
 # <a name="runtimeclassbasetasiid-method"></a>RuntimeClassBaseT::AsIID — Metoda
 Obsługuje infrastrukturę biblioteki WRL i nie jest przeznaczona do użycia bezpośrednio w kodzie.  
@@ -38,30 +38,30 @@ __forceinline static HRESULT AsIID(
 );  
 ```  
   
-#### <a name="parameters"></a>Parametry  
- `T`  
- Typ, który implementuje interfejs identyfikator określony przez parametr `riid`.  
+### <a name="parameters"></a>Parametry  
+ *T*  
+ Typ, który implementuje Identyfikatorem określony przez parametr *riid*.  
   
- `implements`  
- Zmienna typu określony przez parametr szablonu `T`.  
+ *Implementuje*  
+ Zmiennej o typie określonym przez parametr szablonu *T*.  
   
- `riid`  
+ *Parametr riid*  
  Identyfikator interfejsu do pobrania.  
   
- `ppvObject`  
- Jeśli ta operacja zakończy się pomyślnie, wskaźnik do a wskaźnik do interfejsu określonej przez parametr `riid`.  
+ *ppvObject*  
+ Jeśli operacja się powiedzie, wskaźnik do a wskaźnik do interfejsu określony przez parametr *riid*.  
   
 ## <a name="return-value"></a>Wartość zwracana  
- S_OK w przypadku powodzenia; w przeciwnym razie wartość HRESULT opisującego błąd.  
+ S_OK w przypadku powodzenia; w przeciwnym razie wartość HRESULT, który opisuje błąd.  
   
 ## <a name="remarks"></a>Uwagi  
- Pobiera wskaźnik identyfikator określonego interfejsu.  
+ Pobiera wskaźnik do określonego interfejsu.  
   
 ## <a name="requirements"></a>Wymagania  
  **Nagłówek:** implements.h  
   
- **Namespace:** Microsoft::wrl:: details —  
+ **Namespace:** Microsoft::wrl:: details  
   
 ## <a name="see-also"></a>Zobacz też  
- [Runtimeclassbaset — struktura](../windows/runtimeclassbaset-structure.md)   
+ [RuntimeClassBaseT, struktura](../windows/runtimeclassbaset-structure.md)   
  [Microsoft::WRL::Details, przestrzeń nazw](../windows/microsoft-wrl-details-namespace.md)

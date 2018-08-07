@@ -17,36 +17,35 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: f9ef3a14211e223b9902dc9843639d217ceaf1b3
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 0f0dd12df088d8fc55cc4f1a8eaf71bcbb7d4e93
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33878005"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39603293"
 ---
 # <a name="iidis"></a>iid_is
-Określa identyfikator IID interfejsu COM wskazywana przez wskaźnik interfejsu.  
+Określa identyfikator IID interfejsu COM, wskazywana przez wskaźnik interfejsu.  
   
 ## <a name="syntax"></a>Składnia  
   
 ```  
-  
-      [ iid_is(  
+[ iid_is(  
    "expression"  
 ) ]  
 ```  
   
 #### <a name="parameters"></a>Parametry  
- *wyrażenie*  
- Wyrażenia języka C, który określa uzyskanie identyfikatora IID interfejsu COM wskazywana przez wskaźnik interfejsu.  
+ *Wyrażenie*  
+ Wyrażenie języka C, który określa IID interfejsu COM, wskazywana przez wskaźnik interfejsu.  
   
 ## <a name="remarks"></a>Uwagi  
- **Iid_is —** atrybut C++ ma te same funkcje co [iid_is —](http://msdn.microsoft.com/library/windows/desktop/aa367044) MIDL atrybutu.  
+ **Iid_is —** atrybut C++ ma taką samą funkcjonalność jak [iid_is —](http://msdn.microsoft.com/library/windows/desktop/aa367044) atrybutów w MIDL.  
   
 ## <a name="example"></a>Przykład  
  Poniższy kod przedstawia użycie **iid_is —**:  
   
-```  
+```cpp  
 // cpp_attr_ref_iid_is.cpp  
 // compile with: /LD  
 #include "wtypes.h"  
@@ -63,7 +62,7 @@ __interface IFireTabCtrl : IDispatch
   
 ## <a name="requirements"></a>Wymagania  
   
-### <a name="attribute-context"></a>Atrybut kontekstu  
+### <a name="attribute-context"></a>Kontekst atrybutu  
   
 |||  
 |-|-|  

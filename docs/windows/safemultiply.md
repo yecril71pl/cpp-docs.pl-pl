@@ -17,12 +17,12 @@ ms.author: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 89581544e203249a548b49f0695b28662407229b
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 662f43d34494850f230723f57163383df99e4848
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33889485"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39603319"
 ---
 # <a name="safemultiply"></a>SafeMultiply
 Mnoży dwie liczby razem w sposób zapewniający ochronę przed przepełnienia.  
@@ -38,26 +38,26 @@ inline bool SafeMultiply (
 ) throw ();  
 ```  
   
-#### <a name="parameters"></a>Parametry  
- [in] `t`  
- Pierwszy liczbę Aby pomnożyć. To musi być typu T.  
+### <a name="parameters"></a>Parametry  
+ [in] *t*  
+ Pierwszy numer do pomnożenia. To musi być typu `T`.  
   
- [in] `u`  
- Druga liczba do wielokrotnie. Musi to być typ U.  
+ [in] *u*  
+ Druga liczba do pomnożenia. To musi być typu `U`.  
   
- [out] `result`  
- Parametr gdzie `SafeMultiply` zapisuje wynik.  
+ [out] *wynik*  
+ Parametr gdzie **SafeMultiply** zapisuje wynik.  
   
 ## <a name="return-value"></a>Wartość zwracana  
- `true` Jeśli nie występują błędy; `false` w przypadku wystąpienia błędu.  
+ **wartość true,** Jeśli żaden błąd nie wystąpi; **false** w przypadku wystąpienia błędu.  
   
 ## <a name="remarks"></a>Uwagi  
- Ta metoda jest częścią [Biblioteka SafeInt](../windows/safeint-library.md) i jest przeznaczony dla jednego mnożenie bez tworzenia wystąpienia [safeint — klasa](../windows/safeint-class.md).  
+ Ta metoda jest częścią [Biblioteka SafeInt](../windows/safeint-library.md) i jest przeznaczony dla jednego mnożenie bez tworzenia wystąpienia obiektu [safeint — klasa](../windows/safeint-class.md).  
   
 > [!NOTE]
->  Tej metody należy używać tylko w przypadku, gdy jednej operacji matematycznych muszą być chronione. Jeśli istnieje wiele operacji, należy użyć `SafeInt` klasy zamiast kontaktować się z poszczególnych funkcji autonomicznych.  
+>  Ta metoda ją stosować tylko po jednej operacji matematycznych muszą być chronione. Jeśli istnieje wiele operacji, należy użyć `SafeInt` klasy zamiast wywoływania poszczególnych funkcjami autonomicznymi.  
   
- Aby uzyskać więcej informacji o typach szablonu T oraz U, zobacz [safeint — funkcje](../windows/safeint-functions.md).  
+ Aby uzyskać więcej informacji na temat typów szablonu `T` i `U`, zobacz [safeint — funkcje](../windows/safeint-functions.md).  
   
 ## <a name="requirements"></a>Wymagania  
  **Nagłówek:** safeint.h  

@@ -1,5 +1,5 @@
 ---
-title: Hstringreference — klasa | Dokumentacja firmy Microsoft
+title: HStringReference, klasa | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,15 +15,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 90e94471fe114eafec91a19ddad5d47ce39a8de7
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 14ad6e511baa4c7b61a2205311bfb9ea4322a5b1
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33879558"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39605103"
 ---
 # <a name="hstringreference-class"></a>HStringReference — Klasa
-Reprezentuje wartość HSTRING utworzona na podstawie istniejących parametrów.  
+Reprezentuje HSTRING, utworzony na podstawie istniejącego ciągu.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -32,7 +32,7 @@ class HStringReference;
 ```  
   
 ## <a name="remarks"></a>Uwagi  
- Okres istnienia buforu zapasowego w nowych HSTRING nie jest zarządzany przez środowisko wykonawcze systemu Windows. Obiekt wywołujący przydziela ciąg źródła w ramce stosu, aby uniknąć alokacji sterty i wyeliminować ryzyko przeciek pamięci. Ponadto metoda wywołująca musi zapewnić ciąg źródłowy pozostaje niezmieniona podczas okresu istnienia dołączonych HSTRING. Aby uzyskać więcej informacji, zobacz [funkcja WindowsCreateStringReference](http://msdn.microsoft.com/en-us/0361bb7e-da49-4289-a93e-de7aab8712ac).  
+ Okres istnienia buforu zapasowego w nowym obiekcie HSTRING nie jest zarządzane przez środowisko wykonawcze Windows. Obiekt wywołujący przydziela ciąg źródłowy ramce stosu, aby uniknąć alokacji stosu i wyeliminować ryzyko przecieku pamięci. Ponadto wywołujący musi zapewnić, że ciąg źródłowy pozostaje niezmieniony w czasie użytkowania dołączonego HSTRING. Aby uzyskać więcej informacji, zobacz [funkcja WindowsCreateStringReference](http://msdn.microsoft.com/0361bb7e-da49-4289-a93e-de7aab8712ac).  
   
 ## <a name="members"></a>Elementy członkowskie  
   
@@ -40,22 +40,22 @@ class HStringReference;
   
 |Nazwa|Opis|  
 |----------|-----------------|  
-|[HStringReference::HStringReference, konstruktor](../windows/hstringreference-hstringreference-constructor.md)|Inicjuje nowe wystąpienie klasy hstringreference —.|  
+|[HStringReference::HStringReference, konstruktor](../windows/hstringreference-hstringreference-constructor.md)|Inicjuje nowe wystąpienie klasy **HStringReference** klasy.|  
   
 ### <a name="members"></a>Elementy członkowskie  
   
 |Element członkowski|Opis|  
 |------------|-----------------|  
-|[HStringReference::CopyTo, metoda](../windows/hstringreference-copyto-method.md)|Kopie bieżącego hstringreference — obiektu do obiektu HSTRING.|  
-|[HStringReference::Get, metoda](../windows/hstringreference-get-method.md)|Pobiera wartość uchwytu HSTRING podstawowej.|  
+|[HStringReference::CopyTo, metoda](../windows/hstringreference-copyto-method.md)|Kopiuje bieżący **HStringReference** obiektu do obiektu HSTRING.|  
+|[HStringReference::Get, metoda](../windows/hstringreference-get-method.md)|Pobiera wartość podstawowego dojścia HSTRING.|  
   
 ### <a name="public-operators"></a>Operatory publiczne  
   
 |Nazwa|Opis|  
 |----------|-----------------|  
-|[HStringReference::Operator=, operator](../windows/hstringreference-operator-assign-operator.md)|Przenosi bieżący obiekt hstringreference — wartość innego obiektu hstringreference —.|  
-|[HStringReference::Operator==, operator](../windows/hstringreference-operator-equality-operator.md)|Wskazuje, czy dwa parametry są takie same.|  
-|[HStringReference::Operator!=, operator](../windows/hstringreference-operator-inequality-operator.md)|Wskazuje, czy dwa parametry nie są takie same.|  
+|[HStringReference::Operator=, operator](../windows/hstringreference-operator-assign-operator.md)|Przenosi wartość innego **HStringReference** obiekt do bieżącego **HStringReference** obiektu.|  
+|[HStringReference::Operator==, operator](../windows/hstringreference-operator-equality-operator.md)|Wskazuje, czy dwa parametry są równe.|  
+|[HStringReference::Operator!=, operator](../windows/hstringreference-operator-inequality-operator.md)|Wskazuje, czy dwa parametry nie są równe.|  
   
 ## <a name="inheritance-hierarchy"></a>Hierarchia dziedziczenia  
  `HStringReference`  
@@ -63,7 +63,7 @@ class HStringReference;
 ## <a name="requirements"></a>Wymagania  
  **Nagłówek:** corewrappers.h  
   
- **Namespace:** Microsoft::wrl:: wrappers —  
+ **Namespace:** Microsoft::wrl:: wrappers  
   
 ## <a name="see-also"></a>Zobacz też  
  [Microsoft::WRL::Wrappers, przestrzeń nazw](../windows/microsoft-wrl-wrappers-namespace.md)

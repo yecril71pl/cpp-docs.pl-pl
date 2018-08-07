@@ -1,5 +1,5 @@
 ---
-title: ImplementsHelper::CastToUnknown — metoda | Dokumentacja firmy Microsoft
+title: ImplementsHelper::CastToUnknown, metoda | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: e5a5c71fd0a6ca8fa3b04ad39f46ba5583fbd670
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: ed779d1655cb2ab4243bb7384d8ec2e07214d8df
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33874502"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39604242"
 ---
 # <a name="implementshelpercasttounknown-method"></a>ImplementsHelper::CastToUnknown — Metoda
 Obsługuje infrastrukturę biblioteki WRL i nie jest przeznaczona do użycia bezpośrednio w kodzie.  
@@ -34,15 +34,15 @@ IUnknown* CastToUnknown();
 ```  
   
 ## <a name="return-value"></a>Wartość zwracana  
- Wskaźnik do powiązanego interfejsu IUnknown.  
+ Wskaźnik do podstawowego interfejsu IUnknown.  
   
 ## <a name="remarks"></a>Uwagi  
- Pobiera wskaźnik do podstawowego interfejsu IUnknown dla bieżącej struktury Implements.  
+ Pobiera wskaźnik do bazowego `IUnknown` interfejsu dla bieżącego `Implements` struktury.  
   
 ## <a name="requirements"></a>Wymagania  
  **Nagłówek:** implements.h  
   
- **Namespace:** Microsoft::wrl:: details —  
+ **Namespace:** Microsoft::wrl:: details  
   
 ## <a name="see-also"></a>Zobacz też  
  [Implementshelper — struktura](../windows/implementshelper-structure.md)   

@@ -20,51 +20,51 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 5626e370dbeac9339dd603781e96f64377308899
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 6aae190e20776c252b7f40651d5c0bdb13111dab
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33879441"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39606253"
 ---
 # <a name="menu-editor"></a>Edytor menu
-Menu umożliwiają Rozmieść polecenia w sposób logicznych i łatwy do znalezienia. W edytorze Menu można tworzyć i edytować menu Praca bezpośrednio z paska menu, przypominający w Zakończono aplikacji.  
+Menu umożliwiają organizuje polecenia w sposób logiczny i łatwe do znalezienia. Za pomocą edytora Menu możesz można tworzyć i edytować menu pracując bezpośrednio z paska menu, który jest bardzo podobny do pokazanego na gotowych aplikacji.  
   
- Dla projektów Visual C++ za pomocą edytora Menu do:  
+Dla projektów Visual C++ można używać w edytorze Menu:  
   
 -   [Tworzenie menu](../windows/creating-a-menu.md)  
   
 -   [Wstawianie nowego Menu między istniejącymi menu](../windows/inserting-a-new-menu-between-existing-menus.md)  
   
--   [Tworzenie polecenia Menu](../windows/adding-commands-to-a-menu.md)  
+-   [Utwórz polecenie Menu](../windows/adding-commands-to-a-menu.md)  
   
 -   [Tworzenie Menu podmenu](../windows/creating-a-submenu.md)  
   
--   [Wybierz menu i poleceń Menu](../windows/selecting-multiple-menus-or-menu-commands.md)  
+-   [Wybierz opcję menu i poleceń Menu](../windows/selecting-multiple-menus-or-menu-commands.md)  
   
 -   [Przenoszenie i kopiowanie menu i poleceń Menu](../windows/moving-and-copying-menus-and-menu-commands.md)  
   
 -   [Tworzenie menu wyskakujących](../windows/creating-pop-up-menus.md)  
   
--   [Łączenie Menu podręczne do aplikacji](../windows/connecting-a-pop-up-menu-to-your-application.md)  
+-   [Łączenie Menu wyskakującego do aplikacji](../windows/connecting-a-pop-up-menu-to-your-application.md)  
   
 -   [Wyświetlanie zasobów Menu jako Menu podręcznego](../windows/viewing-a-menu-as-a-pop-up-menu.md)  
   
--   [Kojarzenie poleceń Menu z klawiszem skrótu](../windows/associating-a-menu-command-with-an-accelerator-key.md)  
+-   [Kojarzenie polecenia Menu z klawiszem skrótu](../windows/associating-a-menu-command-with-an-accelerator-key.md)  
   
--   [Kojarzenie poleceń Menu z tekstem paska stanu](../windows/associating-menu-commands-with-status-bar-text-in-mfc-applications.md)  
+-   [Kojarzenie polecenia Menu z tekstem paska stanu](../windows/associating-menu-commands-with-status-bar-text-in-mfc-applications.md)  
   
 -   [Przypisywanie klawiszy skrótów do poleceń menu](../windows/assigning-access-keys-to-menu-commands.md)  
   
--   [Zmień właściwości polecenia Menu](../windows/menu-command-properties.md)  
+-   [Zmień właściwości poleceń Menu](../windows/menu-command-properties.md)  
   
     > [!TIP]
-    >  Podczas używania edytora Menu w wielu przypadkach, kliknięcie prawym przyciskiem myszy, aby wyświetlić menu rozwijane często używanych poleceń. Dostępne polecenia zależą od tego, co wskaźnik wskazuje.  
+    >  Podczas korzystania z edytora Menu, w wielu przypadkach, możesz kliknąć prawym przyciskiem myszy, aby wyświetlić menu rozwijane z najczęściej używanymi poleceniami. Dostępne polecenia zależą od tego, wskaźnik wskazuje na.  
   
     > [!NOTE]
-    >  Programy Microsoft Foundation Class biblioteki (MFC) oraz programy ATL umożliwia kreatorów kodu utworzenie punktu zaczepienia poleceń menu do kodu. Aby uzyskać więcej informacji, zobacz [Dodawanie zdarzenia](../ide/adding-an-event-visual-cpp.md).  
+    >  Dla programów Microsoft Foundation Class Library (MFC) oraz programów ATL można użyć kreatorów kodu, można dołączyć poleceń menu do kodu. Aby uzyskać więcej informacji, zobacz [Dodawanie zdarzenia](../ide/adding-an-event-visual-cpp.md).  
   
- Aby uzyskać informacje o dodawaniu zasobów do projektów zarządzanych, zobacz [zasobów w aplikacjach pulpitu](/dotnet/framework/resources/index) w *Przewodnik programistów platformy .NET Framework.* Aby uzyskać informacje na ręczne dodanie do projektów zarządzanych plików zasobów, uzyskiwanie dostępu do zasobów, wyświetlanie zasoby statyczne i przypisanie do właściwości ciągów zasobów, zobacz [tworzenie plików zasobów dla aplikacji pulpitu](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Informacje dotyczące globalizacji i lokalizacji zasobów w zarządzanych aplikacjach, zobacz [Globalizing i lokalizacja aplikacji .NET Framework](/dotnet/standard/globalization-localization/index).  
+ Aby uzyskać informacje na temat dodawania zasobów do projektów zarządzanych, zobacz [zasoby w aplikacjach pulpitu](/dotnet/framework/resources/index) w *przewodniku dewelopera .NET Framework*. Aby uzyskać informacji na temat ręcznego dodawania plików zasobów do projektów zarządzanych, uzyskiwania dostępu do zasobów, wyświetlania statycznych zasobów i przypisywania ciągów zasobów do właściwości, zobacz [Creating Resource Files dla aplikacji klasycznych](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Aby uzyskać informacji na temat globalizacja i lokalizacja zasobów w aplikacjach zarządzanych, zobacz [Globalizing i lokalizowanie aplikacji programu .NET Framework](/dotnet/standard/globalization-localization/index).  
   
 ## <a name="requirements"></a>Wymagania  
  Win32  
@@ -75,4 +75,3 @@ Menu umożliwiają Rozmieść polecenia w sposób logicznych i łatwy do znalezi
  [Obiekty interfejsu użytkownika i identyfikatory poleceń](../mfc/user-interface-objects-and-command-ids.md)   
  [Menu](../mfc/menus-mfc.md)   
  [Menu](http://msdn.microsoft.com/library/windows/desktop/ms646977.aspx)
-

@@ -17,45 +17,43 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 0605220b9eecce3ba042ddd0b46abd63a06c9dea
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 679b019c15d72586b5ca186e0b54c9a9172db53a
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33882956"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39608459"
 ---
 # <a name="propput"></a>propput
-Określa funkcja ustawienie właściwości.  
+Określa funkcję ustawienie właściwości.  
   
 ## <a name="syntax"></a>Składnia  
   
 ```  
-  
 [propput]  
-  
 ```  
   
 ## <a name="remarks"></a>Uwagi  
- **Propput** atrybut C++ ma te same funkcje co [propput](http://msdn.microsoft.com/library/windows/desktop/aa367146) MIDL atrybutu.  
+ **Propput** atrybut C++ ma taką samą funkcjonalność jak [propput](http://msdn.microsoft.com/library/windows/desktop/aa367146) atrybutów w MIDL.  
   
 ## <a name="example"></a>Przykład  
- Zobacz przykład [powiązania](../windows/bindable.md) użytku próbki **propput**.  
+ Zobacz przykład [możliwej do wiązania](../windows/bindable.md) do użytku przykładowe **propput**.  
   
 ## <a name="requirements"></a>Wymagania  
   
-### <a name="attribute-context"></a>Atrybut kontekstu  
+### <a name="attribute-context"></a>Kontekst atrybutu  
   
 |||  
 |-|-|  
 |**Dotyczy**|Metoda|  
 |**Powtarzalne**|Nie|  
 |**Wymaganych atrybutów**|Brak|  
-|**Nieprawidłowe atrybuty**|**propget**, **propputref**|  
+|**Nieprawidłowe atrybuty**|`propget`, `propputref`|  
   
- Aby uzyskać więcej informacji na temat konteksty atrybutu, zobacz [konteksty atrybutu](../windows/attribute-contexts.md).  
+ Aby uzyskać więcej informacji na temat konteksty atrybutu zobacz [konteksty atrybutu](../windows/attribute-contexts.md).  
   
 ## <a name="see-also"></a>Zobacz też  
  [Atrybuty IDL](../windows/idl-attributes.md)   
- [Atrybuty — metoda](../windows/method-attributes.md)   
+ [Atrybuty metody](../windows/method-attributes.md)   
  [propget](../windows/propget.md)   
  [propputref](../windows/propputref.md)

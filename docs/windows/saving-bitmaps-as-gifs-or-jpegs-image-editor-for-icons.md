@@ -26,40 +26,39 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: aed35f50e8cb874cea833439150b717034244b95
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 1a87087b4ef51c016a5165f0d997824f174ca06c
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33890193"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39608160"
 ---
 # <a name="saving-bitmaps-as-gifs-or-jpegs-image-editor-for-icons"></a>Zapisywanie map bitowych jako plików GIF lub JPEG (Edytor obrazów dla ikon)
-Podczas tworzenia mapy bitowej obraz jest tworzony w formacie Mapa bitowa (bmp). Można jednak zapisać obrazu GIF lub JPEG lub w innych formatach graficznych.  
+Gdy tworzysz mapę bitową, obraz jest tworzony w formacie mapy bitowej (bmp). Można jednak zapiszesz obraz GIF lub JPEG lub w innych formatach grafiki.  
   
 > [!NOTE]
 >  Ten proces nie ma zastosowania do ikony i kursory.  
   
-### <a name="to-create-and-save-a-bitmap-as-a-gif-or-jpeg"></a>Aby utworzyć i zapisać map bitowych jako GIF lub JPEG  
+### <a name="to-create-and-save-a-bitmap-as-a-gif-or-jpeg"></a>Aby utworzyć i zapisać mapy bitowej jako obraz GIF lub JPEG  
   
 1.  Z **pliku** menu, wybierz **Otwórz**, następnie kliknij przycisk **pliku**.  
   
-2.  W **okno dialogowe Nowy plik**, kliknij przycisk **Visual C++** folderu, następnie wybierz **pliku mapa bitowa (bmp)** w **szablony** polu i kliknij przycisk  **Otwórz**.  
+2.  W **okno dialogowe Nowy plik**, kliknij przycisk **Visual C++** folderu, następnie wybierz pozycję **plik mapy bitowej (bmp)** w **szablony** pole, a następnie kliknij przycisk  **Otwórz**.  
   
-     Otwiera mapy bitowej w **obrazu** edytora.  
+     Mapa bitowa zostanie otwarty w **obraz** edytora.  
   
-3.  Wprowadzanie zmian do nowej mapy bitowej zgodnie z potrzebami.  
+3.  Wprowadź zmiany do nowej mapy bitowej, zgodnie z potrzebami.  
   
-4.  Mapą bitową wciąż otwarty w **obrazu** edytorze kliknij **zapisać *filename*.bmp jako** na **pliku** menu.  
+4.  Z mapą bitową wciąż otwarty w **obraz** edytorze kliknij **Zapisz *filename*.bmp jako** na **pliku** menu.  
   
-5.  W **Zapisz plik jako** oknie dialogowym wpisz nazwę chcesz nadać plików i rozszerzenia plików, które określa format pliku w **nazwę pliku** pole. Na przykład myfile.gif.  
+5.  W **Zapisz plik jako** okna dialogowego wpisz nazwę, którą chcesz nadać pliku i rozszerzenie, które określa format pliku, w **nazwy pliku** pole. Na przykład myfile.gif.  
   
-     **Uwaga** należy utworzyć lub otworzyć mapy bitowej poza projektu, aby zapisać go jako innego formatu pliku. Utwórz lub otwórz go w projekcie, **Zapisz jako** polecenie jest niedostępne. Aby uzyskać więcej informacji, zobacz [wyświetlania zasobów w zasobu skryptu pliku poza of projektu (autonomicznego)](../windows/how-to-open-a-resource-script-file-outside-of-a-project-standalone.md).  
+     **Uwaga** należy utworzyć lub otworzyć mapy bitowej spoza projektu, aby można było zapisać go jako pliku w innym formacie. Jeśli tworzysz lub otwórz go w swoim projekcie **Zapisz jako** polecenie jest niedostępne. Aby uzyskać więcej informacji, zobacz [wyświetlania zasobów w zasobu skryptu pliku poza z projektu (autonomicznego)](../windows/how-to-open-a-resource-script-file-outside-of-a-project-standalone.md).  
   
-6.  Kliknij przycisk **zapisać**.  
+6.  Kliknij przycisk **Zapisz**.  
   
- Aby uzyskać informacje o dodawaniu zasobów do projektów zarządzanych, zobacz [zasobów w aplikacjach pulpitu](/dotnet/framework/resources/index) w *Przewodnik programistów platformy .NET Framework.* Aby uzyskać informacje na ręczne dodanie do projektów zarządzanych plików zasobów, uzyskiwanie dostępu do zasobów, wyświetlanie zasoby statyczne i przypisanie do właściwości ciągów zasobów, zobacz [tworzenie plików zasobów dla aplikacji pulpitu](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Informacje dotyczące globalizacji i lokalizacji zasobów w zarządzanych aplikacjach, zobacz [Globalizing i lokalizacja aplikacji .NET Framework](/dotnet/standard/globalization-localization/index).  
+ Aby uzyskać informacje na temat dodawania zasobów do projektów zarządzanych, zobacz [zasoby w aplikacjach pulpitu](/dotnet/framework/resources/index) w *przewodniku dewelopera .NET Framework*. Aby uzyskać informacji na temat ręcznego dodawania plików zasobów do projektów zarządzanych, uzyskiwania dostępu do zasobów, wyświetlania statycznych zasobów i przypisywania ciągów zasobów do właściwości, zobacz [Creating Resource Files dla aplikacji klasycznych](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Aby uzyskać informacji na temat globalizacja i lokalizacja zasobów w aplikacjach zarządzanych, zobacz [Globalizing i lokalizowanie aplikacji programu .NET Framework](/dotnet/standard/globalization-localization/index).  
   
 ## <a name="see-also"></a>Zobacz też  
  [Edytowanie zasobów graficznych](../windows/editing-graphical-resources-image-editor-for-icons.md)   
  [Edytor obrazów dla ikon](../windows/image-editor-for-icons.md)
-

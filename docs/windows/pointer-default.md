@@ -17,47 +17,46 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: ee904f9243cf642d3a942d4bc323f5ec381b0480
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 562bc3ebd0c80423eb94d2bc328f72aed8e67985
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33877465"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39604391"
 ---
 # <a name="pointerdefault"></a>pointer_default
-Określa domyślny atrybut wskaźnik dla wszystkich wskaźników, z wyjątkiem wskaźniki najwyższego poziomu, które są wyświetlane na listach parametrem.  
+Określa domyślny atrybut wskaźnik dla wszystkich wskaźników, z wyjątkiem wskaźniki najwyższego poziomu, które pojawiają się listami parametrów.  
   
 ## <a name="syntax"></a>Składnia  
   
 ```  
-  
-      [ pointer_default(  
+[ pointer_default(  
    value  
 ) ]  
 ```  
   
 #### <a name="parameters"></a>Parametry  
  *value*  
- Wartość, która opisuje typ wskaźnika: **ptr**, `ref`, lub **unikatowy**.  
+ Wartość, która opisuje typ wskaźnika: **ptr**, **ref**, lub **unikatowy**.  
   
 ## <a name="remarks"></a>Uwagi  
- **Pointer_default —** atrybut C++ ma te same funkcje co [pointer_default —](http://msdn.microsoft.com/library/windows/desktop/aa367141) MIDL atrybutu.  
+ **Pointer_default —** atrybut C++ ma taką samą funkcjonalność jak [pointer_default —](http://msdn.microsoft.com/library/windows/desktop/aa367141) atrybutów w MIDL.  
   
 ## <a name="example"></a>Przykład  
- Zobacz przykład [defaultvalue](../windows/defaultvalue.md) użytku próbki **pointer_default —**.  
+ Zobacz przykład [defaultvalue](../windows/defaultvalue.md) do użytku przykładowe **pointer_default —**.  
   
 ## <a name="requirements"></a>Wymagania  
   
-### <a name="attribute-context"></a>Atrybut kontekstu  
+### <a name="attribute-context"></a>Kontekst atrybutu  
   
 |||  
 |-|-|  
-|**Dotyczy**|`interface`|  
+|**Dotyczy**|**interface**|  
 |**Powtarzalne**|Nie|  
 |**Wymaganych atrybutów**|Brak|  
 |**Nieprawidłowe atrybuty**|Brak|  
   
- Aby uzyskać więcej informacji na temat konteksty atrybutu, zobacz [konteksty atrybutu](../windows/attribute-contexts.md).  
+ Aby uzyskać więcej informacji na temat konteksty atrybutu zobacz [konteksty atrybutu](../windows/attribute-contexts.md).  
   
 ## <a name="see-also"></a>Zobacz też  
  [Atrybuty IDL](../windows/idl-attributes.md)   

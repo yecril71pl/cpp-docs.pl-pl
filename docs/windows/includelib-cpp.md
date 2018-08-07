@@ -17,36 +17,35 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 252a5d953dd05edc494daf8c4a45322d5511f979
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: e10ab341dc4c90a26315ea5e30f03bc71e628b64
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33878895"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39603384"
 ---
 # <a name="includelib-c"></a>includelib (C++)
-Powoduje, że pliku .idl lub .h do uwzględnienia w pliku .idl wygenerowany.  
+Powoduje, że pliku .idl lub .h, mają zostać uwzględnione w pliku .idl wygenerowany.  
   
 ## <a name="syntax"></a>Składnia  
   
 ```  
-  
-      [ includelib(  
+[ includelib(  
    name.idl  
 ) ];  
 ```  
   
-#### <a name="parameters"></a>Parametry  
+### <a name="parameters"></a>Parametry  
  *name.IDL*  
- Nazwa pliku .idl, które mają być dołączane jako część pliku .idl wygenerowany.  
+ Nazwa pliku .idl, którego mają być dołączane jako część pliku .idl wygenerowany.  
   
 ## <a name="remarks"></a>Uwagi  
- `includelib` Atrybut C++ powoduje pliku .idl lub .h do uwzględnienia w pliku .idl wygenerowanego po `importlib` instrukcji.  
+ **Includelib —** atrybut C++ powoduje pliku .idl lub .h, mają zostać uwzględnione w pliku .idl wygenerowany po `importlib` instrukcji.  
   
 ## <a name="example"></a>Przykład  
- Poniższy kod jest wyświetlany w pliku .cpp:  
+ Poniższy kod jest pokazywana w pliku .cpp:  
   
-```  
+```cpp  
 // cpp_attr_ref_includelib.cpp  
 // compile with: /LD  
 [module(name="MyLib")];  
@@ -55,11 +54,11 @@ Powoduje, że pliku .idl lub .h do uwzględnienia w pliku .idl wygenerowany.
   
 ## <a name="requirements"></a>Wymagania  
   
-### <a name="attribute-context"></a>Atrybut kontekstu  
+### <a name="attribute-context"></a>Kontekst atrybutu  
   
 |||  
 |-|-|  
-|**Dotyczy**|Dowolnego miejsca|  
+|**Dotyczy**|Dowolne miejsce|  
 |**Powtarzalne**|Tak|  
 |**Wymaganych atrybutów**|Brak|  
 |**Nieprawidłowe atrybuty**|Brak|  

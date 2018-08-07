@@ -1,5 +1,5 @@
 ---
-title: HString::Set — metoda | Dokumentacja firmy Microsoft
+title: HString::Set, metoda | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,20 +15,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 39c227e19cdadae80f32c25515a10dd0810f5726
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: aecdafe81dcebc7867d30c46be1fee271e60154c
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33882420"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39606400"
 ---
 # <a name="hstringset-method"></a>HString::Set — Metoda
-Ustawia wartość bieżącego obiektu hstring — określony ciąg znaków dwubajtowych lub parametr HString.  
+Ustawia wartość bieżącego **HString** obiekt określony ciąg znaków dwubajtowych lub **HString** parametru.  
   
 ## <a name="syntax"></a>Składnia  
   
 ```  
-  
 HRESULT Set(  
           const wchar_t* str) throw();  
 HRESULT Set(   
@@ -40,20 +39,20 @@ HRESULT Set(
            ) throw();  
 ```  
   
-#### <a name="parameters"></a>Parametry  
- `str`  
+### <a name="parameters"></a>Parametry  
+ *str*  
  Ciąg znaków dwubajtowych.  
   
- `len`  
- Maksymalna długość `str` parametr, który jest przypisany do bieżącego obiektu HString.  
+ *Len*  
+ Maksymalna długość *str* parametr, który jest przypisany do bieżącego **HString** obiektu.  
   
- `hstr`  
- Istniejący obiekt HString.  
+ *HSTR*  
+ Istniejące **HString** obiektu.  
   
 ## <a name="requirements"></a>Wymagania  
  **Nagłówek:** corewrappers.h  
   
- **Namespace:** Microsoft::wrl:: wrappers —  
+ **Namespace:** Microsoft::wrl:: wrappers  
   
 ## <a name="see-also"></a>Zobacz też  
  [HString, klasa](../windows/hstring-class.md)

@@ -20,17 +20,17 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 32d0082d050ceb391a4346e2a4a38ff71c3cf2a3
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 0ff41dd0aad30382eb5229679054a74526652737
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33878674"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39605022"
 ---
 # <a name="previewing-resources"></a>Wyświetlanie podglądu zasobów
-Wyświetlanie podglądu zasobów służy do wyświetlania zasobów graficznych bez ich otwierania. Podgląd jest również przydatne dla plików wykonywalnych, po ich skompilowany, ponieważ zmiany numery identyfikatorów zasobów. Ponieważ te identyfikatory numeryczne często nie zawiera informacji wystarczających, wyświetlanie podglądu zasobów pomaga szybko zidentyfikować je.  
+Wyświetlanie podglądu zasobów służy do wyświetlania zasobów graficznych bez ich otwierania. Podgląd jest również przydatne dla plików wykonywalnych, po ich skompilowany, ponieważ zmiany numery identyfikatorów zasobów. Ponieważ te identyfikatory numeryczne często nie zapewniają wystarczających informacji, wyświetlanie podglądu zasobów pomaga szybko określić ich.  
   
- Można wyświetlić podgląd układu wizualnego z następujących zasobów:  
+ Możesz wyświetlić podgląd wizualnym układem następujących zasobów:  
   
 -   Mapy bitowej  
   
@@ -44,29 +44,28 @@ Wyświetlanie podglądu zasobów służy do wyświetlania zasobów graficznych b
   
 -   Pasek narzędzi  
   
- Funkcja wyświetlania podglądu nie ma zastosowania do zasobów akceleratora, Manifest tabeli ciągów i informacje o wersji.  
+ Funkcja wyświetlania podglądu nie ma zastosowania do zasobów akceleratora, Manifest, Tabela ciągów i informacje o wersji.  
   
 ### <a name="to-preview-resources"></a>Aby wyświetlić podgląd zasobów  
   
 1.  W [widok zasobów](../windows/resource-view-window.md) lub okno dokumentu, wybierz zasób, na przykład IDD_ABOUTBOX.  
   
-     **Uwaga** Jeśli projekt nie zawiera już plik .rc, zobacz [Tworzenie nowego pliku skryptu zasobu](../windows/how-to-create-a-resource-script-file.md).  
+     **Uwaga** Jeśli projekt nie zawiera jeszcze pliku .rc, zobacz [tworzenia nowego pliku skryptu zasobów](../windows/how-to-create-a-resource-script-file.md).  
   
-2.  W [okna właściwości](/visualstudio/ide/reference/properties-window), kliknij przycisk **strony właściwości** przycisku.  
+2.  W [okno właściwości](/visualstudio/ide/reference/properties-window), kliknij przycisk **stron właściwości** przycisku.  
   
-     \- lub -  
+     \- lub —  
   
-3.  Na **widoku** menu, kliknij przycisk **strony właściwości**.  
+3.  Na **widoku** menu, kliknij przycisk **stron właściwości**.  
   
-     Zostanie otwarta strona właściwości zasobu, wyświetlanie podglądu tego zasobu. Można następnie górę i w dół klawisze strzałek, aby przejść do drzewa w widoku zasobów lub okna dokumentu. Strona właściwości pozostanie otwarte i Pokaż dowolnego zasobu, który ma fokus i jest w stanie można wyświetlić podglądu.  
+     Strona właściwości zasobu zostanie otwarty w wersji zapoznawczej tego zasobu. Można następnie używać w górę i w dół klawiszy strzałek, aby nawigowanie formantu drzewa w widoku zasobu lub okno dokumentu. Strona właściwości będą pozostają otwarte i Pokaż dowolnego zasobu, który ma fokus i jest w stanie można wyświetlić podglądu.  
   
- Aby uzyskać informacje o dodawaniu zasobów do projektów zarządzanych, zobacz [zasobów w aplikacjach pulpitu](/dotnet/framework/resources/index) w *Przewodnik programistów platformy .NET Framework.* Aby uzyskać informacje na ręczne dodanie do projektów zarządzanych plików zasobów, uzyskiwanie dostępu do zasobów, wyświetlanie zasoby statyczne i przypisanie do właściwości ciągów zasobów, zobacz [tworzenie plików zasobów dla aplikacji pulpitu](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Informacje dotyczące globalizacji i lokalizacji zasobów w zarządzanych aplikacjach, zobacz [Globalizing i lokalizacja aplikacji .NET Framework](/dotnet/standard/globalization-localization/index).  
+ Aby uzyskać informacje na temat dodawania zasobów do projektów zarządzanych, zobacz [zasoby w aplikacjach pulpitu](/dotnet/framework/resources/index) w *przewodniku dewelopera .NET Framework*. Aby uzyskać informacji na temat ręcznego dodawania plików zasobów do projektów zarządzanych, uzyskiwania dostępu do zasobów, wyświetlania statycznych zasobów i przypisywania ciągów zasobów do właściwości, zobacz [Creating Resource Files dla aplikacji klasycznych](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Aby uzyskać informacji na temat globalizacja i lokalizacja zasobów w aplikacjach zarządzanych, zobacz [Globalizing i lokalizowanie aplikacji programu .NET Framework](/dotnet/standard/globalization-localization/index).  
   
- **Wymagania**  
+## <a name="requirements"></a>Wymagania 
   
  Win32  
   
 ## <a name="see-also"></a>Zobacz też  
- [Porady: otwieranie pliku skryptu zasobu spoza projektu (autonomiczna)](../windows/how-to-open-a-resource-script-file-outside-of-a-project-standalone.md)   
+ [Instrukcje: otwieranie pliku skryptu zasobu spoza projektu (autonomicznego)](../windows/how-to-open-a-resource-script-file-outside-of-a-project-standalone.md)  
  [Edytory zasobów](../windows/resource-editors.md)
-

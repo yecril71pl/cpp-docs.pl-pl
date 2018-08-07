@@ -20,23 +20,21 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 9f29c9698a14d5cd8773d12a1719614e19ca67c0
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: c187f0fac784bdd0c162334abcfdc23f8a6c1804
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33874083"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39608920"
 ---
 # <a name="inverting-the-colors-in-a-selection-image-editor-for-icons"></a>Odwracanie kolorów w wyborze (Edytor obrazów dla ikon)
-Edytor obrazów oferuje wygodny sposób Odwróć kolory w wybranej części obrazu, dzięki czemu można sprawdzić, jak obraz wydaje się z odwróconą kolorów.  
+Edytor obrazów zapewnia wygodny sposób Odwróć kolory, w wybranych część obrazu, dzięki czemu można sprawdzić, jak obraz zostanie wyświetlone z odwróconą kolorów.  
   
-### <a name="to-invert-colors-in-the-current-selection"></a>Aby Odwróć kolory w bieżącym zaznaczeniu  
+### <a name="to-invert-colors-in-the-current-selection"></a>Aby odwrócić kolorów w bieżącym zaznaczeniu  
   
-1.  Na **obrazu** menu, kliknij przycisk **Odwróć kolory**.  
+1.  Na **obraz** menu, kliknij przycisk **Odwróć kolory**.  
   
-
-  
- Wymagania  
+## <a name="requirements"></a>Wymagania  
   
  Brak  
   

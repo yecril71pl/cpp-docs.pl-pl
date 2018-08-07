@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 8da1a3c839add5d056674896b5a3c6a32145924f
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: d058919d0906b458c6c4e81d65c9438c95a22b85
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33876774"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39607306"
 ---
 # <a name="move-function"></a>Move — Funkcja
 Obsługuje infrastrukturę biblioteki WRL i nie jest przeznaczona do użycia bezpośrednio w kodzie.  
@@ -36,25 +36,25 @@ inline typename RemoveReference<T>::Type&& Move(
 );  
 ```  
   
-#### <a name="parameters"></a>Parametry  
- `T`  
+### <a name="parameters"></a>Parametry  
+ *T*  
  Typ argumentu.  
   
- `arg`  
- Argument przenoszenia.  
+ *ARG*  
+ Argument do przenoszenia.  
   
 ## <a name="return-value"></a>Wartość zwracana  
- Parametr `arg` po cech odwołanie lub odwołanie do r-wartości, jeśli zostały usunięte.  
+ Parametr *arg* po cech odwołanie lub odwołanie rvalue, jeśli zostały usunięte.  
   
 ## <a name="remarks"></a>Uwagi  
- Przenosi określony argument z jednej lokalizacji.  
+ Przenosi określonego argumentu z jednej lokalizacji.  
   
- Aby uzyskać więcej informacji, zobacz **Przenieś semantyki** sekcji [deklarator odwołania do r-wartości: & &](../cpp/rvalue-reference-declarator-amp-amp.md).  
+ Aby uzyskać więcej informacji, zobacz **przenoszenie semantyki** części [Rvalue Reference Declarator: & &](../cpp/rvalue-reference-declarator-amp-amp.md).  
   
 ## <a name="requirements"></a>Wymagania  
  **Nagłówek:** internal.h  
   
- **Namespace:** Microsoft::wrl:: details —  
+ **Namespace:** Microsoft::wrl:: details  
   
 ## <a name="see-also"></a>Zobacz też  
  [Microsoft::WRL::Details, przestrzeń nazw](../windows/microsoft-wrl-details-namespace.md)

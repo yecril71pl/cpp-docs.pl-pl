@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 0b612530c1a29588cd837b2cdbeef37faf84c8b4
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 2975cd066dd15f9179b2e1f0f3fc72084c9c573b
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33880410"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39604271"
 ---
 # <a name="invokehelper-structure"></a>InvokeHelper — Struktura
 Obsługuje infrastrukturę biblioteki WRL i nie jest przeznaczona do użycia bezpośrednio w kodzie.  
@@ -88,36 +88,36 @@ template<
 struct InvokeHelper<TDelegateInterface, TCallback, 9> : Microsoft::WRL::RuntimeClass<RuntimeClassFlags<Delegate>, TDelegateInterface>;  
 ```  
   
-#### <a name="parameters"></a>Parametry  
- `TDelegateInterface`  
- `TCallback`  
+### <a name="parameters"></a>Parametry  
+ *TDelegateInterface*  
+ *TCallback*  
  Typ funkcji procedury obsługi zdarzeń.  
   
- `argCount`  
- Liczba argumentów w specjalizacji invokehelper —.  
+ *argCount*  
+ Liczba argumentów w **elementu InvokeHelper** specjalizacji.  
   
 ## <a name="remarks"></a>Uwagi  
- Udostępnia implementację metody Invoke() na podstawie określonej liczby i typy argumentów.  
+ Udostępnia implementację `Invoke()` metody na podstawie określonej liczby i typów argumentów.  
   
 ## <a name="members"></a>Elementy członkowskie  
   
-### <a name="public-typedefs"></a>Definicje typów publicznych  
+### <a name="public-typedefs"></a>Publiczne definicje typów  
   
 |Nazwa|Opis|  
 |----------|-----------------|  
-|`Traits`|Synonim klasy, która definiuje typ argumentu procedury obsługi zdarzeń.|  
+|`Traits`|Synonim dla klasy, która definiuje typ każdego argumentu procedury obsługi zdarzeń.|  
   
 ### <a name="public-constructors"></a>Konstruktory publiczne  
   
 |Nazwa|Opis|  
 |----------|-----------------|  
-|[InvokeHelper::InvokeHelper, konstruktor](../windows/invokehelper-invokehelper-constructor.md)|Inicjuje nowe wystąpienie klasy invokehelper —.|  
+|[InvokeHelper::InvokeHelper, konstruktor](../windows/invokehelper-invokehelper-constructor.md)|Inicjuje nowe wystąpienie klasy **elementu InvokeHelper** klasy.|  
   
 ### <a name="public-methods"></a>Metody publiczne  
   
 |Nazwa|Opis|  
 |----------|-----------------|  
-|[InvokeHelper::Invoke, metoda](../windows/invokehelper-invoke-method.md)|Wywołuje program obsługi zdarzeń, którego sygnatura zawiera określoną liczbę argumentów.|  
+|[InvokeHelper::Invoke, metoda](../windows/invokehelper-invoke-method.md)|Wywołuje program obsługi zdarzeń, którego podpis zawiera określoną liczbę argumentów.|  
   
 ### <a name="public-data-members"></a>Publiczne elementy członkowskie danych  
   
@@ -131,7 +131,7 @@ struct InvokeHelper<TDelegateInterface, TCallback, 9> : Microsoft::WRL::RuntimeC
 ## <a name="requirements"></a>Wymagania  
  **Nagłówek:** event.h  
   
- **Namespace:** Microsoft::wrl:: details —  
+ **Namespace:** Microsoft::wrl:: details  
   
 ## <a name="see-also"></a>Zobacz też  
  [Microsoft::WRL::Details, przestrzeń nazw](../windows/microsoft-wrl-details-namespace.md)

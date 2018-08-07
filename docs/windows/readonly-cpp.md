@@ -17,33 +17,31 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 87933b214dfe91f1c9f7db88127ef83da5b7201c
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 4b4f4e6d7c3941b1e90e0c49d113afe02dfcd491
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33876569"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39604427"
 ---
 # <a name="readonly-c"></a>readonly (C++)
-Zabrania używania przypisanie do elementu członkowskiego danych.  
+Zabrania przypisania element członkowski danych.  
   
 ## <a name="syntax"></a>Składnia  
   
 ```  
-  
 [readonly]  
-  
 ```  
   
 ## <a name="remarks"></a>Uwagi  
- **Tylko do odczytu** atrybut C++ ma te same funkcje co [tylko do odczytu](http://msdn.microsoft.com/library/windows/desktop/aa367152) MIDL atrybutu.  
+ **Tylko do odczytu** atrybut C++ ma taką samą funkcjonalność jak [tylko do odczytu](http://msdn.microsoft.com/library/windows/desktop/aa367152) atrybutów w MIDL.  
   
- Jeśli chcesz zabronić używania modyfikacji parametru metody, należy użyć [w](../windows/in-cpp.md) atrybutu.  
+ Jeśli chcesz uniemożliwiają modyfikację parametru metody, należy użyć [w](../windows/in-cpp.md) atrybutu.  
   
 ## <a name="example"></a>Przykład  
- Poniższy kod przedstawia korzystanie z **tylko do odczytu** atrybutu:  
+ Poniższy kod pokazuje wykorzystanie **tylko do odczytu** atrybutu:  
   
-```  
+```cpp  
 // cpp_attr_ref_readonly.cpp  
 // compile with: /LD  
 [idl_quote("midl_pragma warning(disable:2461)")];  
@@ -59,7 +57,7 @@ __interface IFireTabCtrl
   
 ## <a name="requirements"></a>Wymagania  
   
-### <a name="attribute-context"></a>Atrybut kontekstu  
+### <a name="attribute-context"></a>Kontekst atrybutu  
   
 |||  
 |-|-|  
@@ -68,7 +66,7 @@ __interface IFireTabCtrl
 |**Wymaganych atrybutów**|Brak|  
 |**Nieprawidłowe atrybuty**|Brak|  
   
- Aby uzyskać więcej informacji na temat konteksty atrybutu, zobacz [konteksty atrybutu](../windows/attribute-contexts.md).  
+ Aby uzyskać więcej informacji na temat konteksty atrybutu zobacz [konteksty atrybutu](../windows/attribute-contexts.md).  
   
 ## <a name="see-also"></a>Zobacz też  
  [Atrybuty IDL](../windows/idl-attributes.md)   

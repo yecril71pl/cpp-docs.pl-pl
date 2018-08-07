@@ -17,31 +17,29 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: dbd97897138edffba12baf47d64465b1f6ca0df4
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 806dcb96916b2e92bffc2d217e318a8853672ae8
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33877894"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39605074"
 ---
 # <a name="libraryblock"></a>library_block
-Umieszcza konstrukcję wewnątrz bloku bibliotekę IDL.  
+Umieszcza konstrukcję wewnątrz bloku Biblioteka IDL.  
   
 ## <a name="syntax"></a>Składnia  
   
 ```  
-  
 [library_block]  
-  
 ```  
   
 ## <a name="remarks"></a>Uwagi  
- Po umieszczeniu konstrukcję wewnątrz bloku biblioteki upewnieniu się, że zostaną przekazane do biblioteki typów, niezależnie od tego, czy odwołuje się do. Domyślnie tylko konstrukcje zmodyfikowany przez [coclass](../windows/coclass.md), [dispinterface](../windows/dispinterface.md), i [idl_module](../windows/idl-module.md) atrybuty są umieszczane w bloku biblioteki.  
+ Umieszczenie konstrukcję wewnątrz bloku biblioteki pozwala mieć pewność, że zostaną przekazane do biblioteki typów, niezależnie od tego, czy jest ona przywoływana. Domyślnie tylko konstrukcje zmodyfikowane przez [coclass](../windows/coclass.md), [dispinterface](../windows/dispinterface.md), i [idl_module](../windows/idl-module.md) atrybuty są umieszczane w bloku biblioteki.  
   
 ## <a name="example"></a>Przykład  
- W poniższym kodzie niestandardowy interfejs jest umieszczony wewnątrz bloku biblioteki.  
+ W poniższym kodzie niestandardowy interfejs znajduje się wewnątrz bloku biblioteki.  
   
-```  
+```cpp  
 // cpp_attr_ref_library_block.cpp  
 // compile with: /LD  
 #include <windows.h>  
@@ -54,11 +52,11 @@ __interface IMyInterface {
   
 ## <a name="requirements"></a>Wymagania  
   
-### <a name="attribute-context"></a>Atrybut kontekstu  
+### <a name="attribute-context"></a>Kontekst atrybutu  
   
 |||  
 |-|-|  
-|**Dotyczy**|Dowolnego miejsca|  
+|**Dotyczy**|Dowolne miejsce|  
 |**Powtarzalne**|Nie|  
 |**Wymaganych atrybutów**|Brak|  
 |**Nieprawidłowe atrybuty**|Brak|  

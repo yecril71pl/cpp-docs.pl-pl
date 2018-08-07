@@ -27,52 +27,52 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 5b4b56d1f329aee29c37b15590729074d305f04d
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: dc9a9f35793b010f4cea227ed629543c82b2ce87
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33879877"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39605285"
 ---
 # <a name="resource-files-visual-studio"></a>Pliki zasobów (Visual Studio)
 > [!NOTE]
->  W tym materiale ma zastosowanie do aplikacji klasycznych systemu Windows. Aby uzyskać informacje o zasobach w aplikacjach platformy uniwersalnej systemu Windows, zobacz [Definiowanie zasobów aplikacji](http://msdn.microsoft.com/en-us/476ea844-632c-4467-9ce3-966be1350dd4).  
+>  W tym materiale dotyczy aplikacje pulpitu Windows. Aby uzyskać informacje dotyczące zasobów w aplikacji platformy uniwersalnej Windows, zobacz [Definiowanie zasobów aplikacji](http://msdn.microsoft.com/476ea844-632c-4467-9ce3-966be1350dd4).  
 >   
-> Aby uzyskać informacje o dodawaniu zasobów do projektów zarządzanych, zobacz [zasobów w aplikacjach pulpitu](/dotnet/framework/resources/index) w *Przewodnik programistów platformy .NET Framework.* Aby uzyskać informacje na ręczne dodanie do projektów zarządzanych plików zasobów, uzyskiwanie dostępu do zasobów, wyświetlanie zasoby statyczne i przypisanie do właściwości ciągów zasobów, zobacz [tworzenie plików zasobów dla aplikacji pulpitu](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Informacje dotyczące globalizacji i lokalizacji zasobów w zarządzanych aplikacjach, zobacz [Globalizing i lokalizacja aplikacji .NET Framework](/dotnet/standard/globalization-localization/index).  
+> Aby uzyskać informacje na temat dodawania zasobów do projektów zarządzanych, zobacz [zasoby w aplikacjach pulpitu](/dotnet/framework/resources/index) w *przewodniku dewelopera .NET Framework*. Aby uzyskać informacji na temat ręcznego dodawania plików zasobów do projektów zarządzanych, uzyskiwania dostępu do zasobów, wyświetlania statycznych zasobów i przypisywania ciągów zasobów do właściwości, zobacz [Creating Resource Files dla aplikacji klasycznych](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Aby uzyskać informacji na temat globalizacja i lokalizacja zasobów w aplikacjach zarządzanych, zobacz [Globalizing i lokalizowanie aplikacji programu .NET Framework](/dotnet/standard/globalization-localization/index).  
 >  
-> Ponieważ projekty w językach programowania .NET należy używać pliki skryptów zasobów, należy otworzyć zasobów z **Eksploratora rozwiązań**. Można użyć [edytor obrazów](../windows/image-editor-for-icons.md) i [Edytor plików binarnych](binary-editor.md) do pracy z plikami zasobów w projektach zarządzanych. Wszelkie zarządzane zasoby, które chcesz edytować, muszą być powiązanymi zasobami. Edytory zasobów programu Visual Studio nie obsługują edycji zasobów osadzonych.  
+> Ponieważ projekty w językach programowania .NET należy używać plików skryptu zasobu, należy otworzyć swoich zasobów przed **Eksploratora rozwiązań**. Możesz użyć [edytora obrazów](../windows/image-editor-for-icons.md) i [edytorze binarnym](binary-editor.md) do pracy z plikami zasobów w projektach zarządzanych. Wszelkie zarządzane zasoby, które chcesz edytować, muszą być powiązanymi zasobami. Edytory zasobów programu Visual Studio nie obsługują edycji zasobów osadzonych.  
   
- Termin "pliku zasobów" może odwoływać się do liczby typów plików, w tym:  
+ Termin "pliku zasobów" może odwoływać się do wielu typów plików, w tym:  
   
--   Plik skryptu (.rc) zasobu programu.  
+-   Plik skryptu (.rc) zasobów programu.  
   
--   Plik zasobów szablonu (.rct —).  
+-   Plik szablonu (.rct) zasobów.  
   
--   Istniejące jako plik samodzielny pojedynczego zasobu, takich jak plik mapy bitowej, ikona lub kursora jest określone z pliku .rc.  
+-   Pojedynczy zasób istniejące jako autonomiczny plik, takiego jak plik mapy bitowej, ikona lub kursor jest to określane w pliku .rc.  
   
--   Plik nagłówka wygenerowane przez środowisko deweloperskie, na przykład Resource.h, jest określone w pliku .rc.  
+-   Plik nagłówka, generowane przez środowisko programistyczne, na przykład Resource.h, który jest określany w pliku .rc.  
   
- Zasoby można także znaleźć w [innych typów plików](../windows/editable-file-types-for-resources.md) takich jak pliki .exe, dll i .res. Możesz pracować z zasobów i pliki zasobów w projekcie i tych, które nie są częścią bieżącego projektu. Możesz także pracować z plikami zasobów, które nie zostały utworzone w środowisku projektowania programu Visual Studio. Możesz na przykład:  
+ Zasoby można również znaleźć w [innych typów plików](../windows/editable-file-types-for-resources.md) takich jak pliki .exe i .dll, .res. Możesz pracować z zasobami i plikami zasobów z w obrębie projektu i z tymi, które nie są częścią bieżącego projektu. Może również współdziałać z plikami zasobów, które nie zostały utworzone w środowisku projektowym programu Visual Studio. Możesz na przykład:  
   
 -   Praca z plikami zasobów zagnieżdżone i dołączane warunkowo.  
   
--   Zaktualizuj istniejących zasobów lub przekonwertować je na format Visual C++.  
+-   Aktualizowanie istniejących zasobów lub konwersji do formatu Visual C++.  
   
--   Importowanie lub eksportowanie zasobów graficznych do lub z bieżącego pliku zasobu.  
+-   Importowanie lub eksportowanie zasobów graficznych do lub z bieżącego pliku zasobów.  
   
--   Obejmują udostępnione lub tylko do odczytu identyfikatorów (symboli), których nie można zmodyfikować przez środowisko deweloperskie.  
+-   Obejmują udostępnione lub tylko do odczytu identyfikatorów (symbolom), których nie można zmodyfikować przez środowisko programistyczne.  
   
--   Obejmują zasobów w pliku wykonywalnego (.exe), które nie wymagają edycji (lub nie chcesz edytować) podczas bieżącego projektu, takich jak zasoby, które są wspólne dla kilku projektów.  
+-   Obejmują zasobów w pliku wykonywalnym (.exe), które nie wymagają do edycji (lub nie chcesz edytować) w bieżącym projekcie, takich jak zasoby, które są wspólne dla kilku projektów.  
   
--   Obejmują typy zasobów, które nie są obsługiwane przez środowisko deweloperskie.  
+-   Obejmują typy zasobów, które nie są obsługiwane przez środowisko programistyczne.  
   
  W tej sekcji omówiono:  
   
--   [Tworzenie nowego pliku skryptu zasobu](../windows/how-to-create-a-resource-script-file.md)  
+-   [Tworzenie nowego pliku skryptu zasobów](../windows/how-to-create-a-resource-script-file.md)  
   
 -   [Tworzenie nowego zasobu](../windows/how-to-create-a-resource.md)  
   
--   [Wyświetlanie zasobów w pliku skryptu zasobu](../windows/how-to-open-a-resource-script-file-outside-of-a-project-standalone.md)  
+-   [Przeglądanie zasobów w pliku skryptu zasobu](../windows/how-to-open-a-resource-script-file-outside-of-a-project-standalone.md)  
   
 -   [Otwieranie pliku skryptu zasobu w formacie tekstowym](../windows/how-to-open-a-resource-script-file-in-text-format.md)  
   
@@ -80,7 +80,7 @@ ms.locfileid: "33879877"
   
 -   [Kopiowanie zasobów](../windows/how-to-copy-resources.md)  
   
--   [Za pomocą szablonów zasobów (.rct —)](../windows/how-to-use-resource-templates.md)  
+-   [Korzystanie z szablonów zasobów (.rct)](../windows/how-to-use-resource-templates.md)  
   
 -   [Importowanie i eksportowanie zasobów](../windows/how-to-import-and-export-resources.md)  
   
@@ -94,5 +94,4 @@ ms.locfileid: "33879877"
 ## <a name="see-also"></a>Zobacz też  
  [Edytory zasobów](../windows/resource-editors.md)   
  [Praca z plikami zasobów](../windows/working-with-resource-files.md)   
- [Menu i innych zasobów](http://msdn.microsoft.com/library/windows/desktop/ms632583.aspx)
-
+ [Menu i inne zasoby](http://msdn.microsoft.com/library/windows/desktop/ms632583.aspx)
