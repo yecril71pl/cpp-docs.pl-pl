@@ -1,5 +1,5 @@
 ---
-title: operator&lt; — Operator (Microsoft::wrl —) | Dokumentacja firmy Microsoft
+title: operator&lt; — Operator (Microsoft::WRL) | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,15 +15,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: cd3ea56386cadc638fd0234993ef6a8a0f5eb2be
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 2de0d40a4b506da2cec36719b8fa2fe9c22108d8
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33881832"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39604216"
 ---
-# <a name="operatorlt-operator-microsoftwrl"></a>operator&lt; — Operator (Microsoft::wrl —)
-Określa, czy adres jeden obiekt jest mniejszy niż innym.  
+# <a name="operatorlt-operator-microsoftwrl"></a>operator&lt; — Operator (Microsoft::WRL)
+Określa, czy adres jeden obiekt jest mniejszy niż inny.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -34,20 +34,20 @@ template<class T, class U>
 bool operator<(const Details::ComPtrRef<ComPtr<T>>& a, const Details::ComPtrRef<ComPtr<U>>& b) throw();  
 ```  
   
-#### <a name="parameters"></a>Parametry  
- `a`  
- Po lewej stronie obiektu.  
+### <a name="parameters"></a>Parametry  
+ *a*  
+ Obiekt, który po lewej stronie.  
   
- `b`  
- Odpowiedniego obiektu.  
+ *b*  
+ Obiekt, do prawej.  
   
 ## <a name="return-value"></a>Wartość zwracana  
- `true` Jeśli adres `a` jest mniejszy niż adres `b`; w przeciwnym razie `false`.  
+ **wartość true**, Jeśli adres *a* jest mniejszy niż adres *b*; w przeciwnym razie **false**.  
   
 ## <a name="requirements"></a>Wymagania  
  **Nagłówek:** client.h  
   
- **Namespace:** Microsoft::wrl —  
+ **Namespace:** Microsoft::WRL  
   
 ## <a name="see-also"></a>Zobacz też  
  [Microsoft::WRL, przestrzeń nazw](../windows/microsoft-wrl-namespace.md)
