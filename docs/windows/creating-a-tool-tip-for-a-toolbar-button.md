@@ -1,5 +1,5 @@
 ---
-title: Tworzenie etykietki narzędzia dla przycisku Toolbar | Dokumentacja firmy Microsoft
+title: Tworzenie etykietki narzędzia dla przycisku kontrolki Toolbar | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -19,44 +19,42 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 41c2fa538a7888a2f14ae34fde9133b2872d13ba
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 27f4c5e3da313352358223de1499ef379db02bd7
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33871770"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39647781"
 ---
 # <a name="creating-a-tool-tip-for-a-toolbar-button"></a>Tworzenie etykietki narzędzia dla przycisku paska narzędzi
 ### <a name="to-create-a-tool-tip"></a>Aby utworzyć etykietki narzędzia  
   
 1.  Wybierz przycisk paska narzędzi.  
   
-2.  W [okna właściwości](/visualstudio/ide/reference/properties-window)w **monitu** właściwości pola Dodaj opis przycisku po komunikat; na pasku stanu, Dodaj \n i nazwa Porada narzędzia.  
+2.  W [okno właściwości](/visualstudio/ide/reference/properties-window)w **monitu** właściwość pola, Dodaj opis przycisku na pasek stanu; po wiadomości, dodać `\n` i nazwa Porada narzędzia.  
   
- Typowym przykładem etykietka narzędzia, która jest przycisku Drukuj na WordPad:  
+ Typowym przykładem etykietki narzędzia jest **drukowania** znajdujący się w **WordPad**:  
   
- 1. Otwórz program WordPad.  
+ 1. Otwórz **WordPad**.  
   
  2. Umieść wskaźnik myszy nad **drukowania** przycisku paska narzędzi.  
   
- 3. Należy zauważyć, że wyraz "Drukuj" teraz jest przestawne w obszarze wskaźnik myszy.  
+ 3. Należy zauważyć, że wyraz `Print` teraz zmiennoprzecinkowych pod wskaźnika myszy.  
   
- 4. Szukaj na pasku stanu (u dołu okna WordPad) - Zwróć uwagę, że teraz widoczny jest tekst "Drukuje aktywny dokument".  
+ 4. Spójrz na pasku stanu (u dołu **WordPad** okna)-Zwróć uwagę, że teraz zawiera tekst `Prints the active document`.  
   
- W kroku 3 "Print" jest "Nazwa Porada narzędzia" i "Drukuje aktywny dokument' z kroku 4 jest"Opis przycisk paska stanu."  
+ `Print` w **kroku 3** nazywa się "narzędzia poradę," i `Prints the active document` z **kroku 4** "Opis przycisk na pasku stanu."  
   
- Jeśli chcesz przy użyciu tego efektu **narzędzi** edytor, należy ustawić **monitu** właściwości **Drukuje aktywny document\nPrint**.  
+ Jeśli chcesz, aby ten efekt przy użyciu **narzędzi** edytorze ustaw **monitu** właściwość `Prints the active document\nPrint`.  
   
 > [!NOTE]
->  Można edytować tekst monitu przy użyciu [okna właściwości](/visualstudio/ide/reference/properties-window).  
+>  Możesz edytować tekst monitu przy użyciu [okno właściwości](/visualstudio/ide/reference/properties-window).  
   
- Aby uzyskać informacje o dodawaniu zasobów do projektów zarządzanych, zobacz [zasobów w aplikacjach pulpitu](/dotnet/framework/resources/index) w *Przewodnik programistów platformy .NET Framework.* Aby uzyskać informacje na ręczne dodanie do projektów zarządzanych plików zasobów, uzyskiwanie dostępu do zasobów, wyświetlanie zasoby statyczne i przypisanie do właściwości ciągów zasobów, zobacz [tworzenie plików zasobów dla aplikacji pulpitu](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Informacje dotyczące globalizacji i lokalizacji zasobów w zarządzanych aplikacjach, zobacz [Globalizing i lokalizacja aplikacji .NET Framework](/dotnet/standard/globalization-localization/index).  
+ Aby uzyskać informacje na temat dodawania zasobów do projektów zarządzanych, zobacz [zasoby w aplikacjach pulpitu](/dotnet/framework/resources/index) w *przewodniku dewelopera .NET Framework*. Aby uzyskać informacji na temat ręcznego dodawania plików zasobów do projektów zarządzanych, uzyskiwania dostępu do zasobów, wyświetlania statycznych zasobów i przypisywania ciągów zasobów do właściwości, zobacz [Creating Resource Files dla aplikacji klasycznych](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Aby uzyskać informacji na temat globalizacja i lokalizacja zasobów w aplikacjach zarządzanych, zobacz [Globalizing i lokalizowanie aplikacji programu .NET Framework](/dotnet/standard/globalization-localization/index).  
   
- Wymagania  
-  
- MFC i ATL  
+## <a name="requirements"></a>Wymagania  
+ ATL i MFC  
   
 ## <a name="see-also"></a>Zobacz też  
  [Tworzenie, przenoszenie i edytowanie przycisków paska narzędzi](../windows/creating-moving-and-editing-toolbar-buttons.md)   
  [Edytor paska narzędzi](../windows/toolbar-editor.md)
-

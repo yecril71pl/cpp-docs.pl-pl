@@ -15,12 +15,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 606059712e60ba181998155b55ae02ba8b27c4da
-ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
+ms.openlocfilehash: a36e3068bd5211f37e6fe1f0f2a82c923b4511a6
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39463957"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39650706"
 ---
 # <a name="comptrrefoperator-operator"></a>ComPtrRef::operator== Operator
 Obsługuje infrastrukturę biblioteki WRL i nie jest przeznaczona do użycia bezpośrednio w kodzie.  
@@ -54,12 +54,12 @@ bool operator==(
 );  
 ```  
   
-#### <a name="parameters"></a>Parametry  
+### <a name="parameters"></a>Parametry  
  *a*  
- Odwołanie do obiektu comptrref —.  
+ Odwołanie do **comptrref —** obiektu.  
   
  *b*  
- Odwołanie do innego obiektu comptrref — lub wskaźnik do typu anonimowego (`void*`).  
+ Odwołanie do innego **comptrref —** obiekt lub wskaźnik do typu anonimowego (`void*`).  
   
 ## <a name="return-value"></a>Wartość zwracana  
  Pierwszy plony operator **true** Jeśli obiekt *a* jest równy obiektowi *b*; w przeciwnym razie **false**.  
@@ -69,7 +69,7 @@ bool operator==(
  Operatory czwarty i piąty uzyskanie **true** Jeśli obiekt *a* jest równy obiektowi *b*; w przeciwnym razie **false**.  
   
 ## <a name="remarks"></a>Uwagi  
- Wskazuje, czy dwa obiekty comptrref — są takie same.  
+ Wskazuje, czy dwa **comptrref —** obiekty są sobie równe.  
   
 ## <a name="requirements"></a>Wymagania  
  **Nagłówek:** client.h  
