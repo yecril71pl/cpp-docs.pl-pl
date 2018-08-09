@@ -17,19 +17,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: e8307411994fb2f850a71e91b63b44052cca40e0
-ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
+ms.openlocfilehash: debf10e3c3d7ca68bd277a32e55c21b3e8bf3421
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39461013"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39645428"
 ---
 # <a name="comptras-method"></a>ComPtr::As — Metoda
 Zwraca **ComPtr** obiekt, który reprezentuje interfejs identyfikowane za pomocą parametru określonego szablonu.  
   
 ## <a name="syntax"></a>Składnia  
   
-```  
+```cpp  
 template<typename U>  
 HRESULT As(  
    _Out_ ComPtr<U>* p  
@@ -41,7 +41,7 @@ HRESULT As(
 ) const;  
 ```  
   
-#### <a name="parameters"></a>Parametry  
+### <a name="parameters"></a>Parametry  
  *U*  
  Interfejs może być reprezentowana przez parametr *p*.  
   

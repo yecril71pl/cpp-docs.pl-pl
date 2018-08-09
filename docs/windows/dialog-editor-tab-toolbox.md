@@ -21,77 +21,77 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: eb7da9e08d44435570180859c1614f7817595833
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 40e0a13f9379200ee01e0279f9d069f1d58f3a60
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33882579"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39649425"
 ---
 # <a name="dialog-editor-tab-toolbox"></a>Karta Edytor okien dialogowych, Przybornik
-Karta Edytor okien dialogowych zostanie wyświetlony w [okno przybornika](/visualstudio/ide/reference/toolbox) podczas pracy w edytorze okien dialogowych. Aby dodać kontrolki do Twoje nowe okno dialogowe, przeciągnij formanty z przybornika do okna dialogowego, które tworzysz (Aby uzyskać więcej informacji, zobacz [Dodawanie formantu do okna dialogowego](adding-a-control-to-a-dialog-box.md)). Można przenosić formantów lub zmienić ich rozmiar i kształt.  
+**Edytor okien dialogowych** karta jest wyświetlana w [okno przybornika](/visualstudio/ide/reference/toolbox) podczas pracy **okna dialogowego** edytora. Aby dodać formanty do Twojego nowego okna dialogowego, przeciągnij formanty z **przybornika** do okna dialogowego, który tworzysz (Aby uzyskać więcej informacji, zobacz [Dodawanie formantu do okna dialogowego](adding-a-control-to-a-dialog-box.md)). Możesz przenosić kontrolki lub zmieniać ich rozmiar i kształt.  
   
- Formantów standardowych dostępnych w przyborniku są:  
+ Formanty standardowe dostępne w **przybornika** są:  
   
--   [Button — formant](../mfc/reference/cbutton-class.md)  
+-   [Kontrolka przycisku](../mfc/reference/cbutton-class.md)  
   
 -   [Kontrolka pola wyboru](../mfc/reference/styles-used-by-mfc.md#button-styles)  
   
--   [Kontrolki pola kombi](../mfc/reference/ccombobox-class.md)  
+-   [Kontrolka pola kombi](../mfc/reference/ccombobox-class.md)  
   
--   [Formant edycji](../mfc/reference/cedit-class.md)  
+-   [Edytuj kontrolkę](../mfc/reference/cedit-class.md)  
   
 -   Pole grupy  
   
--   [Pole listy](../mfc/reference/clistbox-class.md)  
+-   [Kontrolka pola listy](../mfc/reference/clistbox-class.md)  
   
 -   [Kontrolka przycisku radiowego](../mfc/reference/styles-used-by-mfc.md#button-styles)  
   
--   [Statyczny tekst formantu](../mfc/reference/cstatic-class.md)  
+-   [Kontrolka tekstu statycznego](../mfc/reference/cstatic-class.md)  
   
 -   [Formant obrazu](../mfc/reference/cpictureholder-class.md)  
   
--   [Kontrolki zaawansowanej edycji 2.0](../mfc/using-cricheditctrl.md)  
+-   [Kontrolka 2.0 edycji wzbogaconej](../mfc/using-cricheditctrl.md)  
   
 -   [Pasek przewijania](../mfc/reference/cscrollbar-class.md)  
   
- [Formanty standardowe systemu Windows](../mfc/controls-mfc.md) dostępnych w przyborniku zapewniają większą funkcjonalność w aplikacji. Obejmują one:  
+ [Wspólnych formantów Windows](../mfc/controls-mfc.md) dostępne w **przybornika** zapewniają większą funkcjonalność w aplikacji. Obejmują one:  
   
 -   [Kontrolka suwaka](../mfc/slider-control-styles.md)  
   
--   [Pokrętła](../mfc/using-cspinbuttonctrl.md)  
+-   [Kontrolki pokrętła](../mfc/using-cspinbuttonctrl.md)  
   
--   [Formantu postępu](../mfc/styles-for-the-progress-control.md)  
+-   [Kontrolki postępu](../mfc/styles-for-the-progress-control.md)  
   
 -   [Formantu klawisza dostępu](../mfc/using-a-hot-key-control.md)  
   
--   [Kontrolki listy](../mfc/list-control-and-list-view.md)  
+-   [Kontrolka listy](../mfc/list-control-and-list-view.md)  
   
--   [Formant drzewa](../mfc/tree-control-styles.md)  
+-   [Kontrolka drzewa](../mfc/tree-control-styles.md)  
   
--   [Formantu karty](../mfc/tab-controls-and-property-sheets.md)  
+-   [Kontrolki karty](../mfc/tab-controls-and-property-sheets.md)  
   
--   [Formantu animacji](../mfc/using-an-animation-control.md)  
+-   [Kontrolki animacji](../mfc/using-an-animation-control.md)  
   
--   [Formant wyboru godziny daty](../mfc/creating-the-date-and-time-picker-control.md)  
+-   [Kontrolka czasu selektora daty](../mfc/creating-the-date-and-time-picker-control.md)  
   
 -   [Kontrolowanie kalendarza miesięcznego](../mfc/month-calendar-control-examples.md)  
   
 -   [Formant adresu IP](../mfc/reference/cipaddressctrl-class.md)  
   
--   [Rozszerzone pola kombi formantu](../mfc/creating-an-extended-combo-box-control.md)  
+-   [Rozszerzone formant pola kombi](../mfc/creating-an-extended-combo-box-control.md)  
   
--   [Formant niestandardowy](custom-controls-in-the-dialog-editor.md)  
+-   [Kontrolka niestandardowa](custom-controls-in-the-dialog-editor.md)  
   
- Formanty niestandardowe można dodać do okna dialogowego, wybierając **kontrolki niestandardowej** ikonę w przyborniku i przeciągając go z okna dialogowego. Aby dodać kontrolkę Syslink, Dodaj kontrolkę niestandardową, a następnie zmień formantu **klasy** właściwości **Syslink**. Spowoduje to właściwości odświeżyć i wyświetlić właściwości formantu Syslink. Uzyskać dla klasy otoki MFC, zobacz [CLinkCtrl](../mfc/reference/clinkctrl-class.md).  
+ Można dodać niestandardowe formanty do okna dialogowego wybierając **kontrolki niestandardowej** ikonę **przybornika** i przeciągając je do swojej okna dialogowego. Aby dodać **Syslink** , Dodaj formant niestandardowy, a następnie zmienić formant **klasy** właściwości **Syslink**. Spowoduje to właściwości, aby odświeżyć i Pokaż **Syslink** właściwości formantu. Aby uzyskać informacji na temat klasy otoki MFC, zobacz [CLinkCtrl](../mfc/reference/clinkctrl-class.md).  
   
- Możesz także [Dodaj formanty ActiveX do okna dialogowego z](../windows/viewing-and-adding-activex-controls-to-a-dialog-box.md).  
+ Możesz również [Dodawanie kontrolek ActiveX do dialogowym](../windows/viewing-and-adding-activex-controls-to-a-dialog-box.md).  
   
- Można również dostosować okno przybornika łatwiejsze do użytku. Aby uzyskać więcej informacji, zobacz [przy użyciu przybornika](/visualstudio/ide/using-the-toolbox).  
+ Można również dostosować **przybornika** okna do użytku łatwiejsze. Aby uzyskać więcej informacji, zobacz [korzystanie z przybornika](/visualstudio/ide/using-the-toolbox).  
 
- Aby uzyskać więcej informacji o korzystaniu z formantu RichEdit 1.0 z MFC, zobacz [używanie formantu RichEdit 1.0 z MFC](../windows/using-the-richedit-1-0-control-with-mfc.md)  
+ Aby uzyskać więcej informacji na temat korzystania z **RichEdit 1.0** kontrolką MFC, zobacz [używanie formantu RichEdit 1.0 z MFC](../windows/using-the-richedit-1-0-control-with-mfc.md)  
   
- Aby uzyskać informacje o dodawaniu zasobów do projektów zarządzanych, zobacz [zasobów w aplikacjach pulpitu](/dotnet/framework/resources/index) w *Przewodnik programistów platformy .NET Framework.* Aby uzyskać informacje na ręczne dodanie do projektów zarządzanych plików zasobów, uzyskiwanie dostępu do zasobów, wyświetlanie zasoby statyczne i przypisanie do właściwości ciągów zasobów, zobacz [tworzenie plików zasobów dla aplikacji pulpitu](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Informacje dotyczące globalizacji i lokalizacji zasobów w zarządzanych aplikacjach, zobacz [Globalizing i lokalizacja aplikacji .NET Framework](/dotnet/standard/globalization-localization/index).  
+ Aby uzyskać informacje na temat dodawania zasobów do projektów zarządzanych, zobacz [zasoby w aplikacjach pulpitu](/dotnet/framework/resources/index) w *przewodniku dewelopera .NET Framework*. Aby uzyskać informacji na temat ręcznego dodawania plików zasobów do projektów zarządzanych, uzyskiwania dostępu do zasobów, wyświetlania statycznych zasobów i przypisywania ciągów zasobów do właściwości, zobacz [Creating Resource Files dla aplikacji klasycznych](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Aby uzyskać informacji na temat globalizacja i lokalizacja zasobów w aplikacjach zarządzanych, zobacz [Globalizing i lokalizowanie aplikacji programu .NET Framework](/dotnet/standard/globalization-localization/index).  
   
 ## <a name="requirements"></a>Wymagania  
  Win32  
@@ -102,6 +102,5 @@ Karta Edytor okien dialogowych zostanie wyświetlony w [okno przybornika](/visua
  [Klasy okien dialogowych](../mfc/dialog-box-classes.md)   
  [Style paska przewijania](../mfc/reference/styles-used-by-mfc.md#scroll-bar-styles)   
  [Przykłady formantów edycji wzbogaconej](../mfc/rich-edit-control-examples.md)   
- [Dodawanie programów obsługi zdarzeń dla formantów okna dialogowego](../windows/adding-event-handlers-for-dialog-box-controls.md)   
+ [Dodawanie obsługi zdarzeń dla formantów okna dialogowego](../windows/adding-event-handlers-for-dialog-box-controls.md)   
  [Kontrolki okna dialogowego i typy zmiennych](../ide/dialog-box-controls-and-variable-types.md)
-

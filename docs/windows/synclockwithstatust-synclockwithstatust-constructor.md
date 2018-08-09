@@ -1,5 +1,5 @@
 ---
-title: Synclockwithstatust::synclockwithstatust — Konstruktor | Dokumentacja firmy Microsoft
+title: SyncLockWithStatusT::SyncLockWithStatusT, Konstruktor | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 8f665866a43e45d6526aa33f17c05eacebdd84aa
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 21ce2054cabf257594cb3fa376236b9a1e504a59
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33891353"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39647758"
 ---
 # <a name="synclockwithstatustsynclockwithstatust-constructor"></a>SyncLockWithStatusT::SyncLockWithStatusT — Konstruktor
 Obsługuje infrastrukturę biblioteki WRL i nie jest przeznaczona do użycia bezpośrednio w kodzie.  
@@ -40,20 +40,20 @@ explicit SyncLockWithStatusT(
 );  
 ```  
   
-#### <a name="parameters"></a>Parametry  
- `other`  
- R-wartości — odwołanie do innego obiektu synclockwithstatust —.  
+### <a name="parameters"></a>Parametry  
+ *other*  
+ Odwołanie rvalue, do innego **synclockwithstatust —** obiektu.  
   
- `sync`  
- Odwołanie do innego obiektu synclockwithstatust —.  
+ *sync*  
+ Odwołanie do innego **synclockwithstatust —** obiektu.  
   
- `status`  
- Wartość [status_ —](../windows/synclockwithstatust-status-data-member.md) elementu członkowskiego danych `other` parametru lub `sync` parametru.  
+ *status*  
+ Wartość [status_ — element](../windows/synclockwithstatust-status-data-member.md) element członkowski danych *innych* parametru lub *synchronizacji* parametru.  
   
 ## <a name="remarks"></a>Uwagi  
- Inicjuje nowe wystąpienie klasy synclockwithstatust — klasa.  
+ Inicjuje nowe wystąpienie klasy **synclockwithstatust —** klasy.  
   
- Pierwszy Konstruktor inicjuje bieżącego obiektu synclockwithstatust — z innego synclockwithstatust — określonej przez parametr `other`, a następnie unieważnia obiektu synclockwithstatust —. Drugi Konstruktor jest `protected`i inicjuje bieżącego obiektu synclockwithstatust — nieprawidłowy stan.  
+ Pierwszy Konstruktor inicjuje bieżące **synclockwithstatust —** obiektu z innego **synclockwithstatust —** określony przez parametr *innych*, a następnie druga unieważnia **synclockwithstatust —** obiektu. Drugi Konstruktor jest **chronione**i inicjuje bieżące **synclockwithstatust —** obiektu nieprawidłowym stanie.  
   
 ## <a name="requirements"></a>Wymagania  
  **Nagłówek:** corewrappers.h  

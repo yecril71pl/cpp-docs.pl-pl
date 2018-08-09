@@ -17,46 +17,45 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: dc416561b36566235ed422cd8989b4218f34da81
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: a009c8e1d9a3db682a81e1f054ef999cffaf266d
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33891613"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39641447"
 ---
 # <a name="working-with-resource-files"></a>Praca z plikami zasobów
 > [!WARNING]
->  Ta sekcja dotyczy aplikacji klasycznych systemu Windows w języku C++. Aby uzyskać informacje o zasobach w aplikacjach platformy uniwersalnej systemu Windows w języku C++, zobacz [Definiowanie zasobów aplikacji](http://msdn.microsoft.com/en-us/476ea844-632c-4467-9ce3-966be1350dd4).  
+>  Ta sekcja dotyczy Windows aplikacji klasycznych w języku C++. Aby uzyskać informacji na temat zasobów w aplikacjach platformy uniwersalnej Windows w języku C++, zobacz [Definiowanie zasobów aplikacji](http://msdn.microsoft.com/476ea844-632c-4467-9ce3-966be1350dd4).  
 >   
->  Informacje o dodawaniu zasobów do C + +/ projekty interfejsu wiersza polecenia można znaleźć pod adresem [zasobów w aplikacjach pulpitu](/dotnet/framework/resources/index) w *Przewodnik programistów platformy .NET Framework.*  
+>  Aby uzyskać informacje na temat dodawania zasobów dla C + +/ projektów interfejsu wiersza polecenia, zobacz [zasoby w aplikacjach pulpitu](/dotnet/framework/resources/index) w *przewodniku dewelopera .NET Framework*.  
   
- Zasobów może składać się z wielu elementów, w tym elementów interfejsu, które zawierają informacje dla użytkownika (na przykład mapy bitowej, ikona lub kursora); zasoby niestandardowe, które zawierają dane, które potrzeb aplikacji. zasoby wersji, które są używane przez Instalatora interfejsów API; i zasoby pole menu i okien dialogowych.  
+ Zasoby mogą się składać z szerokiej gamy elementów, w tym elementy interfejsu, które zawierają informacje użytkownika (na przykład mapa bitowa, ikona lub kursora); zasoby niestandardowe, które zawierają dane, których potrzebuje aplikacja; zasoby wersji, które są używane przez Instalatora interfejsów API; i zasoby, okno menu i okien dialogowych.  
   
- Można dodać nowych zasobów do projektu i modyfikować tych zasobów za pomocą edytora odpowiednich zasobów. Większość kreatorów Visual C++ automatycznie wygeneruje plik .rc dla projektu.  
+ Można dodać nowe zasoby do projektu i zmodyfikować te zasoby za pomocą edytora odpowiedni zasób. Większość kreatorów Visual C++ automatycznie wygeneruje plik .rc w projekcie.  
   
- Aby uzyskać informacje o dodawaniu zasobów do projektów zarządzanych, zobacz [zasobów w aplikacjach pulpitu](/dotnet/framework/resources/index) w *Przewodnik programistów platformy .NET Framework.* Aby uzyskać informacje na ręczne dodanie do projektów zarządzanych plików zasobów, uzyskiwanie dostępu do zasobów, wyświetlanie zasoby statyczne i przypisanie do właściwości ciągów zasobów, zobacz [tworzenie plików zasobów dla aplikacji pulpitu](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Informacje dotyczące globalizacji i lokalizacji zasobów w zarządzanych aplikacjach, zobacz [Globalizing i lokalizacja aplikacji .NET Framework](/dotnet/standard/globalization-localization/index).  
+ Aby uzyskać informacje na temat dodawania zasobów do projektów zarządzanych, zobacz [zasoby w aplikacjach pulpitu](/dotnet/framework/resources/index) w *przewodniku dewelopera .NET Framework*. Aby uzyskać informacji na temat ręcznego dodawania plików zasobów do projektów zarządzanych, uzyskiwania dostępu do zasobów, wyświetlania statycznych zasobów i przypisywania ciągów zasobów do właściwości, zobacz [Creating Resource Files dla aplikacji klasycznych](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Aby uzyskać informacji na temat globalizacja i lokalizacja zasobów w aplikacjach zarządzanych, zobacz [Globalizing i lokalizowanie aplikacji programu .NET Framework](/dotnet/standard/globalization-localization/index).  
   
 ## <a name="in-this-section"></a>W tej sekcji  
  [Pliki zasobów](../windows/resource-files-visual-studio.md)  
- Opisuje pliki zasobów i sposób ich użycia w aplikacjach pulpitu systemu Windows. Również zawiera łącza do tematów opisujących sposób użycia plików zasobów.  
+ W tym artykule opisano plików zasobów i jak są używane w aplikacjach pulpitu Windows. Również zawiera łącza do tematów opisujących sposób korzystania z plików zasobów.  
   
  [Symbole: identyfikatory zasobów](../windows/symbols-resource-identifiers.md)  
- Opisuje symbole i zawiera informacje na temat używania **symbole zasobu** okno dialogowe Zarządzanie symbole w projektach.  
+ Opisuje symboli i zawiera informacje na temat korzystania z **symboli zasobów** okno dialogowe, aby zarządzać symbole w swoich projektach.  
   
  [Edytory zasobów](../windows/resource-editors.md)  
- Opisuje edytory zasobów dostępnych w programie Visual Studio typów zasobów możesz zmodyfikować z każdym edytorem oraz są udostępniane linki do szczegółowych informacji za pomocą edytora każdego.  
+ Opisuje edytory zasobów w programie Visual Studio typów zasobów możesz zmodyfikować z każdym edytorem i zawiera łącza do szczegółowych informacji na temat korzystania z każdym edytorem.  
   
 ## <a name="related-sections"></a>Sekcje pokrewne  
  [Visual C++](../visual-cpp-in-visual-studio.md)  
  Oferuje łącza do dokumentacji języka Visual C++.  
   
- [Wprowadzenie do programu Visual Studio](http://msdn.microsoft.com/en-us/99997089-56ff-4d60-81a9-447062dc98ac)  
- W tym artykule opisano pełny zestaw narzędzi programistycznych, które używają tego samego zintegrowane środowisko programistyczne (IDE), dzięki czemu mogą udostępnić narzędzia i ułatwia tworzenie rozwiązań dla wielu języków.  
+ [Wprowadzenie do programu Visual Studio](http://msdn.microsoft.com/99997089-56ff-4d60-81a9-447062dc98ac)  
+ W tym artykule opisano kompletny zestaw narzędzi programistycznych, które używają tego samego zintegrowanego środowiska programistycznego (IDE), umożliwiając im udostępnić narzędzia i ułatwia tworzenia rozwiązania mieszane pod względem językowym.  
   
  [Porozmawiaj z nami](/visualstudio/ide/talk-to-us)  
- Zawiera linki do informacji przy użyciu zestawu dokumentacji, kontakt z pomocą techniczną i wykorzystujących funkcje ułatwień dostępu.  
+ Zawiera łącza do informacji na temat używania zestawu dokumentacji, kontaktując się z pomocą techniczną i wykorzystujących funkcje ułatwień dostępu.  
   
 ## <a name="see-also"></a>Zobacz też  
- [Aplikacje systemu Windows](../windows/windows-desktop-applications-cpp.md)   
- [Menu i innych zasobów](http://msdn.microsoft.com/library/windows/desktop/ms632583.aspx)
-
+ [Aplikacje pulpitu Windows](../windows/windows-desktop-applications-cpp.md)   
+ [Menu i inne zasoby](http://msdn.microsoft.com/library/windows/desktop/ms632583.aspx)

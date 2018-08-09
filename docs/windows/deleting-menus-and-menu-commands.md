@@ -17,27 +17,26 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 62074a586c336bf78280548eb12699b06abdd6f6
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 9ae62b4c16c30be5384b94053ea66aa127974a81
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33871383"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39642350"
 ---
 # <a name="deleting-menus-and-menu-commands"></a>Usuwanie menu i poleceń menu
 ### <a name="to-delete-a-menu-or-menu-command"></a>Aby usunąć menu lub poleceń menu  
   
-1.  Kliknij prawym przyciskiem myszy nazwę menu lub polecenie.  
+1.  Kliknij prawym przyciskiem myszy nazwę menu lub poleceń.  
   
-2.  Wybierz **usunąć** z menu skrótów.  
+2.  Wybierz **Usuń** z menu skrótów.  
   
     > [!NOTE]
-    >  Podobnie można skorzystać z menu skrótów można wykonywać inne akcje, takie jak kopiowanie, wycinanie i wklejanie, Wstaw nowe, Wstaw Separator Edytuj identyfikatorów widoku jako okno podręczne, sprawdź Mnemoniki itp.  
+    >  Podobnie można użyć menu skrótów do wykonywania innych akcji, takich jak kopiowanie, wycinanie, wklejanie, Wstaw nowy, Wstaw Separator edycji identyfikatorów Pokaż jako okno podręczne, sprawdź mnemonik itp.  
   
- Aby uzyskać informacje o dodawaniu zasobów do projektów zarządzanych, zobacz [zasobów w aplikacjach pulpitu](/dotnet/framework/resources/index) w *Przewodnik programistów platformy .NET Framework.*  
+ Aby uzyskać informacje na temat dodawania zasobów do projektów zarządzanych, zobacz [zasoby w aplikacjach pulpitu](/dotnet/framework/resources/index) w *przewodniku dewelopera .NET Framework*.  
   
- Wymagania  
-  
+## <a name="requirements"></a>Wymagania  
  Win32  
   
 ## <a name="see-also"></a>Zobacz też  

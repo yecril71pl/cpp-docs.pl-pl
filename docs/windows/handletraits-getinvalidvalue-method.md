@@ -1,5 +1,5 @@
 ---
-title: HANDLETraits::GetInvalidValue — metoda | Dokumentacja firmy Microsoft
+title: HANDLETraits::GetInvalidValue, metoda | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,24 +17,24 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 190c327a404d19da86fdb86c32411a8ffeb06e7c
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: c4690daabd84b8127913af0a96d5b929ee986e77
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33873501"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39651236"
 ---
 # <a name="handletraitsgetinvalidvalue-method"></a>HANDLETraits::GetInvalidValue — Metoda
 Reprezentuje nieprawidłowego dojścia.  
   
 ## <a name="syntax"></a>Składnia  
   
-```  
+```cpp  
 inline static HANDLE GetInvalidValue();  
 ```  
   
 ## <a name="return-value"></a>Wartość zwracana  
- Zawsze zwraca INVALID_HANDLE_VALUE. (INVALID_HANDLE_VALUE jest zdefiniowane przez system Windows).  
+ Zawsze zwraca INVALID_HANDLE_VALUE. (INVALID_HANDLE_VALUE jest definiowany przez Windows).  
   
 ## <a name="requirements"></a>Wymagania  
  **Nagłówek:** corewrappers.h  

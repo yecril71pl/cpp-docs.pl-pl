@@ -17,25 +17,22 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 947249b4a0a9bd2233d76671b1b5bf05c70337db
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 93de27e028d0665cccc3ba373b26524d911607a0
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33882943"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39648200"
 ---
 # <a name="deleting-unassigned-symbols"></a>Usuwanie nieprzypisanych symboli
-### <a name="to-delete-an-unassigned-unused-symbol"></a>Aby usunąć nieprzypisanych symboli (i nieużywanych)  
+### <a name="to-delete-an-unassigned-unused-symbol"></a>Aby usunąć nieprzypisanych symboli (nieużywane)  
   
-1.  W [okno dialogowe symboli zasobów](../windows/resource-symbols-dialog-box.md), wybierz symbol, który chcesz usunąć, a następnie kliknij przycisk **usunąć**.  
+1.  W [okno dialogowe symboli zasobów](../windows/resource-symbols-dialog-box.md), wybierz symbol, który chcesz usunąć, a następnie kliknij przycisk **Usuń**.  
   
     > [!NOTE]
-    >  Przed usunięciem nieużywane symbolu w pliku zasobu, upewnij się, że nie jest on używany w innym miejscu w programie lub plików zasobów znajdujących się w czasie kompilacji.  
+    >  Przed usunięciem nieużywane symboli w pliku zasobów, upewnij się, że nie jest on używany gdzie indziej w programie lub plików zasobów znajdujących się w czasie kompilacji.  
   
-
-  
- **Wymagania**  
-  
+## <a name="requirements"></a>Wymagania  
  Win32  
   
 ## <a name="see-also"></a>Zobacz też  

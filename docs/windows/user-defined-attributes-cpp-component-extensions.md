@@ -16,36 +16,36 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 22f8dfa7e78568f100b0c58c881b9e84cb47a149
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 3e09d3c285c64f049cc8e1bb8aea1c5debe88932
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33891769"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39644131"
 ---
 # <a name="user-defined-attributes--c-component-extensions"></a>Atrybuty zdefiniowane przez użytkownika (C++ Component Extensions)
-Atrybuty niestandardowe umożliwiają rozszerzanie metadanych interfejsu, klasy lub struktury, — metoda, parametr lub wyliczenia.  
+Atrybutów niestandardowych, które umożliwiają poszerzanie funkcjonalności metadanych interfejsu, klasy lub struktury, metody, parametr lub wyliczenia.  
   
 ## <a name="all-runtimes"></a>Wszystkie środowiska wykonawcze  
- Wszystkich środowisk uruchomieniowych obsługuje atrybutów niestandardowych.  
+ Wszystkie środowiska wykonawcze obsługuje atrybutów niestandardowych.  
   
 ## <a name="windows-runtime"></a>Środowisko wykonawcze systemu Windows  
- C + +/ CX atrybutów obsługuje tylko właściwości, ale nie atrybutu konstruktorów lub metody.  
+ C + +/ CX atrybuty obsługuje tylko właściwości, ale nie atrybutu konstruktorów i metod.  
   
 ### <a name="remarks"></a>Uwagi  
   
 ### <a name="requirements"></a>Wymagania  
- — Opcja kompilatora: **/ZW**  
+ — Opcja kompilatora: `/ZW`  
   
 ## <a name="common-language-runtime"></a>środowiska uruchomieniowe w trakcie wykonania  
- Atrybuty niestandardowe umożliwiają rozszerzenie metadanych elementu zarządzanego. Aby uzyskać więcej informacji, zobacz [atrybutów](/dotnet/standard/attributes/index).  
+ Atrybutów niestandardowych, które umożliwiają rozszerzenie metadanych elementu zarządzanego. Aby uzyskać więcej informacji, zobacz [atrybuty](/dotnet/standard/attributes/index).  
   
 ### <a name="remarks"></a>Uwagi  
- Informacje i składni przedstawionych w tym temacie jest przeznaczona do zastępowania informacje przedstawione w [atrybutu](../windows/attribute.md).  
+ Informacje i składni przedstawione w tym temacie jest przeznaczona do zastąpienia informacje znajdujące się w [atrybutu](../windows/attribute.md).  
   
- Można określić atrybutu niestandardowego Definiowanie typu i wprowadzając <xref:System.Attribute> klasę podstawową dla typu i opcjonalnie stosowania <xref:System.AttributeUsageAttribute> atrybutu.  
+ Można zdefiniować atrybut niestandardowy typ definiujący i dokonując <xref:System.Attribute> klasę bazową dla typu i opcjonalnie stosowanie <xref:System.AttributeUsageAttribute> atrybutu.  
   
- Na przykład w Microsoft Transaction Server (MTS) 1.0, zachowanie względem transakcji, synchronizacja, równoważenie obciążenia i określonej za pomocą niestandardowych identyfikatorów GUID wstawione do biblioteki typów przy użyciu atrybutu niestandardowego ODL itd. W związku z tym klient serwera MTS może określić jego właściwości, odczytując biblioteki typów. W programie .NET Framework analogowy biblioteki typów są metadane, a analogowy atrybutu niestandardowego ODL jest atrybutów niestandardowych. Ponadto odczytu biblioteki typów jest odpowiednikiem za pomocą odbicia typów.  
+ Na przykład Równoważenie obciążenia w Microsoft Transaction Server (MTS) 1.0, zachowanie w odniesieniu do transakcji, synchronizacji i itd została określona za pomocą niestandardowych identyfikatorów GUID wstawione do biblioteki typów, przy użyciu atrybutu niestandardowego ODL. Z tego powodu klient serwera MTS można określić jego właściwości, czytając biblioteki typów. W .NET Framework analogowy biblioteki typów jest metadanych, a analogowy atrybutu niestandardowego ODL jest atrybutów niestandardowych. Ponadto odczytywanie biblioteki typów jest analogiczne do typów przy użyciu odbicia.  
   
  Aby uzyskać więcej informacji, zobacz,  
   
@@ -53,15 +53,14 @@ Atrybuty niestandardowe umożliwiają rozszerzanie metadanych interfejsu, klasy 
   
 -   [Typy parametrów atrybutu](../windows/attribute-parameter-types-cpp-component-extensions.md)  
   
- Aby uzyskać informacji na temat podpisywania zestawy w programie Visual C++, zobacz [silnych nazwach (podpisywanie zestawów) (C + +/ CLI)](../dotnet/strong-name-assemblies-assembly-signing-cpp-cli.md).  
+ Instrukcje dotyczące podpisywania zestawów w programie Visual C++, zobacz [zestawy o silnej nazwach (podpisywanie zestawów) (C + +/ CLI)](../dotnet/strong-name-assemblies-assembly-signing-cpp-cli.md).  
   
 ### <a name="requirements"></a>Wymagania  
- — Opcja kompilatora:   **/CLR**  
+ — Opcja kompilatora: `/clr`  
   
 ### <a name="examples"></a>Przykłady  
- **Przykład**  
   
- Poniższy przykład przedstawia sposób definiowania atrybutu niestandardowego.  
+ Poniższy przykład pokazuje sposób definiowania atrybutu niestandardowego.  
   
 ```cpp  
 // user_defined_attributes.cpp  
@@ -78,9 +77,7 @@ ref struct Attr : public Attribute {
 ref class MyClass {};  
 ```  
   
- **Przykład**  
-  
- Poniższy przykład przedstawia niektóre ważne funkcje atrybutów niestandardowych. Na przykład, w tym przykładzie przedstawiono typowe obciążenie atrybutów niestandardowych: utworzenie wystąpienia serwera, który można całkowicie opisania siebie klientom.  
+ W poniższym przykładzie pokazano kilka ważnych funkcji atrybutów niestandardowych. Na przykład, w tym przykładzie wspólne użycie atrybutów niestandardowych: utworzenie wystąpienia serwera, na którym można w pełni opisania siebie klientom.  
   
 ```cpp  
 // extending_metadata_b.cpp  
@@ -171,13 +168,11 @@ Service Priority = 1
 Service Access = Read  
 ```  
   
- **Przykład**  
+ `Object^` Typu zastępuje typ danych variant. W poniższym przykładzie zdefiniowano niestandardowy atrybut, który przyjmuje tablicę `Object^` jako parametry.  
   
- Obiekt ^ typ zastąpi typ danych variant. W poniższym przykładzie zdefiniowano atrybutu niestandardowego, który pobiera tablicę obiektów ^ jako parametry.  
+ Argumenty atrybutów muszą być stałymi kompilacji; w większości przypadków powinny one być stałe literały.  
   
- Argumentów atrybutu muszą być stałymi kompilacji; w większości przypadków powinny one być stałe literałami.  
-  
- Zobacz [typeid](../windows/typeid-cpp-component-extensions.md) informacji dotyczących zwracać wartość System::Type z bloku atrybutu niestandardowego.  
+ Zobacz [typeid](../windows/typeid-cpp-component-extensions.md) informacji na temat sposobu zwracania wartości System::Type z bloku atrybutów niestandardowych.  
   
 ```cpp  
 // extending_metadata_e.cpp  
@@ -195,9 +190,7 @@ public:
 public ref class SomeClass {};  
 ```  
   
- **Przykład**  
-  
- Środowisko uruchomieniowe wymaga, że publicznego część klasy atrybutu niestandardowego musi być możliwy do serializacji.  Podczas tworzenia niestandardowych atrybutów nazwanych argumentów atrybutu niestandardowego są ograniczone do kompilacji stałe.  (Go traktować jako sekwencja bitów dołączany do układu klasy w metadanych.)  
+ Środowisko uruchomieniowe wymaga, że publiczną część klasy atrybutu niestandardowego musi podlegać serializacji.  Podczas tworzenia niestandardowych atrybutów, argumenty nazwane atrybutu niestandardowego są ograniczone do stałych w czasie kompilacji.  (Go traktować jako sekwencja bitów dołączany do układu klasy w metadanych.)  
   
 ```cpp  
 // extending_metadata_f.cpp  

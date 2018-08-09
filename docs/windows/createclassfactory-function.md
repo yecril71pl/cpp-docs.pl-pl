@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: ff853fce39b2052b82df921bf6743b0db361408c
-ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
+ms.openlocfilehash: 57759e7191ecbe08e6d94dcec798f6d3203c13de
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39461328"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39645142"
 ---
 # <a name="createclassfactory-function"></a>CreateClassFactory — Funkcja
 Tworzy fabrykę, która tworzy wystąpienia określonej klasy.  
@@ -39,7 +39,7 @@ inline HRESULT STDMETHODCALLTYPE CreateClassFactory(
 ) throw();  
 ```  
   
-#### <a name="parameters"></a>Parametry  
+### <a name="parameters"></a>Parametry  
  *flagi*  
  Kombinacji jednego lub więcej [RuntimeClassType](../windows/runtimeclasstype-enumeration.md) wartości wyliczenia.  
   

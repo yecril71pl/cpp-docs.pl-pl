@@ -17,52 +17,51 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: c7f97bb82f3387e82be5bbf120db4fed9aaa092f
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: c6b5309d62db094bf706fe7d3d1bcec99c3ec9a9
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33889676"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39645454"
 ---
 # <a name="sizeis"></a>size_is
-Określ rozmiar pamięci przydzielona dla wskaźników rozmiarze o rozmiarze wskaźniki do wskaźników o rozmiarze i jedno - lub tablice wielowymiarowe.  
+Określ rozmiar pamięci przydzielonej dla wskaźników o rozmiarze rozmiar wskaźniki do wskaźników o rozmiarze i jedno - lub tablic wielowymiarowych.  
   
 ## <a name="syntax"></a>Składnia  
   
 ```  
-  
-      [ size_is(  
+[ size_is(  
    "expression"  
 ) ]  
 ```  
   
-#### <a name="parameters"></a>Parametry  
- *wyrażenie*  
- Rozmiar pamięci przydzielonej dla wskaźników o określonym rozmiarze.  
+### <a name="parameters"></a>Parametry  
+ *Wyrażenie*  
+ Rozmiar pamięci przydzielonej dla wskaźników o rozmiarze.  
   
 ## <a name="remarks"></a>Uwagi  
- **Size_is** atrybut C++ ma te same funkcje co [size_is](http://msdn.microsoft.com/library/windows/desktop/aa367164) MIDL atrybutu.  
+ **Size_is** atrybut C++ ma taką samą funkcjonalność jak [size_is](http://msdn.microsoft.com/library/windows/desktop/aa367164) atrybutów w MIDL.  
   
 ## <a name="example"></a>Przykład  
- Zobacz przykład [first_is —](../windows/first-is.md) przykład sposobu określania sekcji tablicy.  
+ Zobacz przykład [first_is —](../windows/first-is.md) przykład sposobu określania część tablicy.  
   
 ## <a name="requirements"></a>Wymagania  
   
-### <a name="attribute-context"></a>Atrybut kontekstu  
+### <a name="attribute-context"></a>Kontekst atrybutu  
   
 |||  
 |-|-|  
-|**Dotyczy**|Pole w `struct` lub **Unii**, interfejs parametru, interfejsu — metoda|  
+|**Dotyczy**|Pole **struktury** lub **Unii**, interfejs parametrów, metody interfejsu|  
 |**Powtarzalne**|Nie|  
 |**Wymaganych atrybutów**|Brak|  
-|**Nieprawidłowe atrybuty**|**max_is**|  
+|**Nieprawidłowe atrybuty**|`max_is`|  
   
- Aby uzyskać więcej informacji na temat konteksty atrybutu, zobacz [konteksty atrybutu](../windows/attribute-contexts.md).  
+ Aby uzyskać więcej informacji na temat konteksty atrybutu zobacz [konteksty atrybutu](../windows/attribute-contexts.md).  
   
 ## <a name="see-also"></a>Zobacz też  
  [Atrybuty IDL](../windows/idl-attributes.md)   
- [Element TypeDef, Enum, Unii i struct — atrybuty](../windows/typedef-enum-union-and-struct-attributes.md)   
- [Atrybuty parametrów](../windows/parameter-attributes.md)   
+ [Element TypeDef, Enum, Union i struct — atrybuty](../windows/typedef-enum-union-and-struct-attributes.md)   
+ [Atrybuty parametru](../windows/parameter-attributes.md)   
  [first_is —](../windows/first-is.md)   
  [last_is —](../windows/last-is.md)   
  [max_is —](../windows/max-is.md)   

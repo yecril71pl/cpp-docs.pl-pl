@@ -23,26 +23,26 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 0b13acb5d637b4a733f2a2b9c66c8ded977c7847
-ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
+ms.openlocfilehash: 2b1b285437170c4059d5cd0d66d19188c99badd9
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39569937"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39646789"
 ---
 # <a name="eventreceiver"></a>event_receiver
 Tworzy odbiorca zdarzenia (ujścia).  
   
 ## <a name="syntax"></a>Składnia  
   
-```  
+```cpp  
 [ event_receiver(  
    type   
    [, layout_dependent=false]   
 ) ]  
 ```  
   
-#### <a name="parameters"></a>Parametry  
+### <a name="parameters"></a>Parametry  
  *Typ*  
  Wyliczenie jednego z następujących wartości:  
   
@@ -50,13 +50,13 @@ Tworzy odbiorca zdarzenia (ujścia).
   
 -   `com` dla kodu COM. Ta wartość wymaga, że zawrzesz następujące pliki nagłówków:  
   
-    ```  
+    ```cpp  
     #define _ATL_ATTRIBUTES  
     #include <atlbase.h>  
     #include <atlcom.h>  
     ```  
   
- **layout_dependent**  
+ *layout_dependent*  
  Określ *layout_dependent* tylko wtedy, gdy `type` = **com**. *layout_dependent* jest wartością logiczną:  
   
 -   **wartość true,** oznacza, że podpis delegatów w przypadku odbiornika musi dokładnie odpowiadać tych, do których są podłączone w zdarzeniu źródła. Nazwy programów obsługi odbiorcy zdarzeń muszą być zgodne nazwy określone w interfejsie źródła istotnych zdarzeń. Należy użyć `coclass` podczas *layout_dependent* jest **true**. Jest nieco bardziej efektywne, aby określić **true**.  
@@ -81,7 +81,7 @@ Tworzy odbiorca zdarzenia (ujścia).
 |-|-|  
 |**Dotyczy**|**Klasa**, **— struktura**|  
 |**Powtarzalne**|Nie|  
-|**Wymaganych atrybutów**|**Klasa coclass** podczas *layout_dependent*=**true**|  
+|**Wymaganych atrybutów**|`coclass` gdy *layout_dependent*=**true**|  
 |**Nieprawidłowe atrybuty**|Brak|  
   
  Aby uzyskać więcej informacji, zobacz [konteksty atrybutu](../windows/attribute-contexts.md).  

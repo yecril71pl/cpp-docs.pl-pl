@@ -16,21 +16,21 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: cfab95c400aad949f06a559fffbdb42993910bb7
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: c60edae6e4eaf7cef3841a1ac03dea414f298b6a
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33889249"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39645996"
 ---
 # <a name="string--c-component-extensions"></a>Ciąg (C++ Component Extensions)
-Obsługa kompilatora Visual C++ *ciągów*, które są obiekty reprezentujące tekst sekwencję znaków. Visual C++ obsługuje zmiennych ciągu, którego wartość jest niejawnie, i literały, którego wartość jest jawne ciągu w cudzysłowie.  
+Obsługa kompilatora Visual C++ *ciągi*, które są obiektami, które reprezentują tekstu jako sekwencja znaków. Visual C++ obsługuje zmiennych ciągu, którego wartość jest niejawny, i wszystkie literały, którego wartością jest jawne ciągów w cudzysłowach.  
   
 ## <a name="all-runtimes"></a>Wszystkie środowiska wykonawcze  
- Środowisko wykonawcze systemu Windows i środowisko uruchomieniowe języka wspólnego reprezentują ciągi jako obiekty, których alokacji pamięci odbywa się automatycznie. Oznacza to, że nie są wymagane jawnie odrzucić pamięci ciągu podczas kończenia umieszczane zmiennej ciągu poza zakresem lub aplikacji. Wskazuje, że okres istnienia obiektu ciągu jest mają być automatycznie zarządzane, należy zadeklarować typ ciągu z [uchwyt do obiektu (^)](../windows/handle-to-object-operator-hat-cpp-component-extensions.md) modyfikator.  
+ Środowisko uruchomieniowe Windows i środowisko uruchomieniowe języka wspólnego reprezentuje ciągi jako obiekty, których ilość przydzielonej pamięci odbywa się automatycznie. Oznacza to nie należy jawnie odrzucić pamięci ciągu, po zakończeniu zacznie zmiennej ciągu poza zakres lub aplikacji. Aby wskazać, że okres istnienia obiektu ciągu ma odbywać się automatycznie, należy zadeklarować typ ciągu z [uchwytu do obiektu (^)](../windows/handle-to-object-operator-hat-cpp-component-extensions.md) modyfikator.  
   
 ## <a name="windows-runtime"></a>Środowisko wykonawcze systemu Windows  
- Architektura środowiska wykonawczego systemu Windows wymaga Visual C++ do zaimplementowania `String` typów danych w `Platform` przestrzeni nazw. Dla wygody udostępnia również Visual C++ `string` typ danych, który jest synonimem `Platform::String`w `default` przestrzeni nazw.  
+ Architektura Windows Runtime wymaga Visual C++ do implementacji `String` typu danych w `Platform` przestrzeni nazw. Dla Twojej wygody Visual C++ są także `string` typ danych, który jest synonimem `Platform::String`w `default` przestrzeni nazw.  
   
 ### <a name="syntax"></a>Składnia  
   
@@ -41,25 +41,24 @@ using namespace default;
    Platform::String^ MyString1 = "The quick brown fox";  
    String^ MyString2 = "jumped over the lazy dog.";  
    String^ MyString3 = "Hello, world!";  
-  
 ```  
   
 ### <a name="remarks"></a>Uwagi  
- Aby uzyskać dodatkowe informacje i przykłady dotyczące ciągów, zobacz [Platform::String, std::wstring i literały (platformy)](http://msdn.microsoft.com/en-us/ec92fbc6-edf3-4137-a85e-8e29bdb857a8)  
+ Aby uzyskać więcej informacji i przykładów dotyczących parametrów, zobacz [Platform::String, std::wstring i literały (platformy)](http://msdn.microsoft.com/ec92fbc6-edf3-4137-a85e-8e29bdb857a8)  
   
 ### <a name="requirements"></a>Wymagania  
- — Opcja kompilatora: **/ZW**  
+ — Opcja kompilatora: `/ZW`  
   
 ## <a name="common-language-runtime"></a>środowiska uruchomieniowe w trakcie wykonania  
- W tym temacie omówiono sposób kompilatora Visual C++ przetwarza literałów ciągów uruchamianych przy użyciu **/CLR** — opcja kompilatora. Aby użyć **/CLR**, należy również użyć środowisko uruchomieniowe języka wspólnego (CLR), C + +/ CLI składni i zarządzane obiekty. Aby uzyskać więcej informacji na temat **/CLR**, zobacz [/CLR (kompilacja języka wspólnego środowiska uruchomieniowego)](../build/reference/clr-common-language-runtime-compilation.md).  
+ W tym temacie omówiono, jak kompilator języka Visual C++ przetwarza Literały ciągu, po uruchomieniu przy użyciu `/clr` — opcja kompilatora. Aby użyć `/clr`, należy również użyć środowisko uruchomieniowe języka wspólnego (CLR), C + +/ składnia interfejsu wiersza polecenia i obiektów zarządzanych. Aby uzyskać więcej informacji na temat `/clr`, zobacz [/CLR (kompilacja języka wspólnego środowiska uruchomieniowego)](../build/reference/clr-common-language-runtime-compilation.md).  
   
- Podczas kompilowania za pomocą **/CLR**, kompilator przekonwertuje literały ciągów typu <xref:System.String>. Aby zachować zgodność z poprzednimi wersjami z istniejącego kodu są dwa wyjątki to:  
+ Podczas kompilowania za pomocą `/clr`, kompilator przekonwertuje literałów ciągów typu <xref:System.String>. Aby zachować zgodność z poprzednimi wersjami z istniejącym kodem są dwa wyjątki od tej reguły:  
   
--   Obsługa wyjątków. Gdy literał ciągu jest zgłaszany, kompilator będzie przechwytywać go jako literału ciągu.  
+-   Obsługa wyjątków. Gdy literał ciągu jest zgłaszany, kompilator będzie przechwytywać je jako ciąg literału.  
   
--   Wnioskowanie szablonu. Gdy literał ciągu jest przekazywany jako argument szablonu, kompilator nie przekonwertuje go do <xref:System.String>. Uwaga: literały ciągu przekazany jako argument rodzajowy zostanie podwyższony do <xref:System.String>.  
+-   Wnioskowanie szablonu. Gdy literał ciągu jest przekazywany jako argument szablonu, kompilator nie przekonwertuje go do <xref:System.String>. Uwaga: literały ciągu przekazany jako argument rodzajowy zostanie podniesiony do <xref:System.String>.  
   
- Kompilator ma także wbudowaną obsługę trzy operatory, które można zmienić, aby dostosować zachowanie przy ich:  
+ Kompilator również ma wbudowaną obsługę operatorów trzech, które można przesłonić, aby dostosować jego zachowanie:  
   
 -   System::String ^ — operator + (System::String, System::String);  
   
@@ -67,10 +66,10 @@ using namespace default;
   
 -   System::String ^ — operator + (System::String, System::Object);  
   
- Po upływie <xref:System.String>, kompilator pole, jeśli to konieczne, a następnie połącz obiekt (z ToString) z ciągiem.  
+ Przy przekazywaniu <xref:System.String>, kompilator będzie polu, jeśli to konieczne, a następnie połącz obiekt (z ToString) na ciąg.  
   
 > [!NOTE]
->  Daszek ("^") oznacza, że zadeklarowana zmienna dojścia do C + +/ CLI zarządzanego obiektu.  
+>  Daszek ("^") wskazuje, że Zmienna zadeklarowana dojścia do C + +/ CLI zarządzanego obiektu.  
   
  Aby uzyskać więcej informacji, zobacz [literały ciągów i znakowe](../cpp/string-and-character-literals-cpp.md).  
   
@@ -78,9 +77,8 @@ using namespace default;
  — Opcja kompilatora:   **/CLR**  
   
 ### <a name="examples"></a>Przykłady  
- **Przykład**  
   
- Poniższy przykład kodu pokazuje łączenie i porównywanie ciągów.  
+ Poniższy przykład kodu demonstruje, łączenie i porównywanie ciągów.  
   
 ```cpp  
 // string_operators.cpp  
@@ -169,9 +167,7 @@ abc
 n is empty  
 ```  
   
- **Przykład**  
-  
- Poniższy przykład pokazuje, że można przeciążać operatory podane do kompilatora i znaleźć kompilatora przeciążenie funkcji, na podstawie <xref:System.String> typu.  
+ Poniższy przykład pokazuje, że można przeciążać operatory podane do kompilatora i czy kompilator znajdzie przeciążenia funkcji na podstawie <xref:System.String> typu.  
   
 ```cpp  
 // string_operators_2.cpp  
@@ -230,8 +226,6 @@ String ^ a
   
 const char * a  
 ```  
-  
- **Przykład**  
   
  Poniższy przykład pokazuje, że kompilator rozróżnia ciągi natywne i <xref:System.String> ciągów.  
   

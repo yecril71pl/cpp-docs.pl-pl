@@ -17,36 +17,34 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 07bf73fdcd69866a811cd37af6ef59aef062c01c
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 4c1988e05bbdf8f700688bb4b989cf5576cb86f4
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33889656"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39642919"
 ---
 # <a name="specifying-the-dominant-control"></a>Określanie formantu dominującego
-Wybrany formant jest najpierw formantu dominującego.  
+Wybraną kontrolkę jest najpierw formantu dominującego.  
   
-### <a name="to-specify-the-dominant-control"></a>Aby określić formantu dominującego  
+### <a name="to-specify-the-dominant-control"></a>Aby określić formant dominujący  
   
-1.  Naciśnij i przytrzymaj **CTRL** klucza, a następnie kliknij przycisk kontroli chcesz użyć, aby mieć wpływ na rozmiar lub lokalizacji innych kontrolek *pierwszy*.  
+1.  Naciśnij i przytrzymaj **Ctrl** klucza i kliknij formant, którego chcesz użyć do wywierania wpływu na rozmiar lub lokalizację innych formantów *pierwszy*.  
   
-     **Uwaga** uchwyty zmiany rozmiaru formantu dominującego są wypełnione podczas uchwyty kontrolek podrzędnych są puste. Wszystkie dodatkowe zmiany rozmiaru lub wyrównania jest oparty na formantu dominującego.  
+     **Uwaga** uchwyty zmiany rozmiaru formantu dominującego są wypełnione uchwytów kontrolki podrzędne są puste. Dalsze zmiany rozmiaru lub wyrównanie opiera się na formant dominujący.  
   
-### <a name="to-change-the-dominant-control"></a>Aby zmienić formantu dominującego  
+### <a name="to-change-the-dominant-control"></a>Aby zmienić kontrolki dominującej  
   
-1.  Wyczyść bieżącego zaznaczenia, klikając poza wszystkie obecnie wybrane kontrolki.  
+1.  Wyczyść bieżący wybór, klikając poza wszystkie obecnie wybrane formanty.  
   
-2.  Powtórzyć poprzednią procedurę, wybierając inny formant najpierw.  
+2.  Powtórz poprzedniej procedury, wybierając najpierw innej kontrolki.  
   
- Aby uzyskać informacje o dodawaniu zasobów do projektów zarządzanych, zobacz [zasobów w aplikacjach pulpitu](/dotnet/framework/resources/index) w *Przewodnik programistów platformy .NET Framework.* Aby uzyskać informacje na ręczne dodanie do projektów zarządzanych plików zasobów, uzyskiwanie dostępu do zasobów, wyświetlanie zasoby statyczne i przypisanie do właściwości ciągów zasobów, zobacz [tworzenie plików zasobów dla aplikacji pulpitu](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Informacje dotyczące globalizacji i lokalizacji zasobów w zarządzanych aplikacjach, zobacz [Globalizing i lokalizacja aplikacji .NET Framework](/dotnet/standard/globalization-localization/index).  
+ Aby uzyskać informacje na temat dodawania zasobów do projektów zarządzanych, zobacz [zasoby w aplikacjach pulpitu](/dotnet/framework/resources/index) w *przewodniku dewelopera .NET Framework*. Aby uzyskać informacji na temat ręcznego dodawania plików zasobów do projektów zarządzanych, uzyskiwania dostępu do zasobów, wyświetlania statycznych zasobów i przypisywania ciągów zasobów do właściwości, zobacz [Creating Resource Files dla aplikacji klasycznych](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Aby uzyskać informacji na temat globalizacja i lokalizacja zasobów w aplikacjach zarządzanych, zobacz [Globalizing i lokalizowanie aplikacji programu .NET Framework](/dotnet/standard/globalization-localization/index).  
   
- **Wymagania**  
-  
+## <a name="requirements"></a>Wymagania 
  Win32  
   
 ## <a name="see-also"></a>Zobacz też  
  [Wybieranie wielu formantów](../windows/selecting-multiple-controls.md)   
- [Zaznaczanie formantów](../windows/selecting-controls.md)   
+ [Zaznaczanie kontrolek](../windows/selecting-controls.md)   
  [Kontrolki w oknach dialogowych](../windows/controls-in-dialog-boxes.md)
-

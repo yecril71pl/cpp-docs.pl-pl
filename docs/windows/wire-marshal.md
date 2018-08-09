@@ -17,31 +17,29 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 4c13889c15476ff263658d7b5b4024e7a5deebe5
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 37bdb19c8439e9ec6d11d0ace9c064165cf27056
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33890216"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39646686"
 ---
 # <a name="wiremarshal"></a>wire_marshal
-Określa typ danych, który będzie używany do przesłania zamiast typu dane specyficzne dla aplikacji.  
+Określa typ danych, który będzie używany do przekazywania zamiast typu danych specyficznych dla aplikacji.  
   
 ## <a name="syntax"></a>Składnia  
   
 ```  
-  
 [wire_marshal]  
-  
 ```  
   
 ## <a name="remarks"></a>Uwagi  
- **Wire_marshal —** atrybut C++ ma te same funkcje co [wire_marshal —](http://msdn.microsoft.com/library/windows/desktop/aa367309) MIDL atrybutu.  
+ **Wire_marshal —** atrybut C++ ma taką samą funkcjonalność jak [wire_marshal —](http://msdn.microsoft.com/library/windows/desktop/aa367309) atrybutów w MIDL.  
   
 ## <a name="example"></a>Przykład  
- Poniższy kod przedstawia korzystanie z **wire_marshal —**:  
+ Poniższy kod pokazuje wykorzystanie **wire_marshal —**:  
   
-```  
+```cpp  
 // cpp_attr_ref_wire_marshal.cpp  
 // compile with: /LD  
 #include "windows.h"  
@@ -59,16 +57,16 @@ Określa typ danych, który będzie używany do przesłania zamiast typu dane sp
   
 ## <a name="requirements"></a>Wymagania  
   
-### <a name="attribute-context"></a>Atrybut kontekstu  
+### <a name="attribute-context"></a>Kontekst atrybutu  
   
 |||  
 |-|-|  
-|**Dotyczy**|`typedef`|  
+|**Dotyczy**|**Element TypeDef**|  
 |**Powtarzalne**|Nie|  
 |**Wymaganych atrybutów**|Brak|  
 |**Nieprawidłowe atrybuty**|Brak|  
   
- Aby uzyskać więcej informacji na temat konteksty atrybutu, zobacz [konteksty atrybutu](../windows/attribute-contexts.md).  
+ Aby uzyskać więcej informacji na temat konteksty atrybutu zobacz [konteksty atrybutu](../windows/attribute-contexts.md).  
   
 ## <a name="see-also"></a>Zobacz też  
  [Atrybuty IDL](../windows/idl-attributes.md)   

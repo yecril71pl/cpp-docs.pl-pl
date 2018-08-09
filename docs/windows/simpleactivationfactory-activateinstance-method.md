@@ -1,5 +1,5 @@
 ---
-title: SimpleActivationFactory::ActivateInstance — metoda | Dokumentacja firmy Microsoft
+title: SimpleActivationFactory::ActivateInstance, metoda | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 5af4bfd22302b7694b9bafbc1452d636b19cb3c7
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: fe1342c3927183ae5eec30c8dd0a40ee95f37277
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33889426"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39646565"
 ---
 # <a name="simpleactivationfactoryactivateinstance-method"></a>SimpleActivationFactory::ActivateInstance — Metoda
 
@@ -39,7 +39,7 @@ STDMETHOD( ActivateInstance )(
 ### <a name="parameters"></a>Parametry
 
 *ppvObject*  
-Po zakończeniu tej operacji, wskaźnik do wystąpienia obiektu określonego przez `Base` parametr szablonu klasy.
+Po zakończeniu tej operacji, wskaźnik do wystąpienia obiektu określonego przez `Base` parametru szablonu klasy.
 
 ## <a name="return-value"></a>Wartość zwracana
 
@@ -47,14 +47,13 @@ S_OK w przypadku powodzenia; w przeciwnym razie wartość HRESULT, która wskazu
 
 ## <a name="remarks"></a>Uwagi
 
-Jeśli &#95; &#95;WRL_STRICT&#95; &#95; jest zdefiniowany, błędu potwierdzenia jest emitowany Jeśli nie jest pochodną klasy podstawowej określonej w parametrze szablonu klasy [runtimeclass —](../windows/runtimeclass-class.md), lub nie jest skonfigurowany z WinRt lub WinRtClassicComMix [runtimeclasstype —](../windows/runtimeclasstype-enumeration.md) wartość wyliczenia.
+Jeśli &#95; &#95;WRL_STRICT&#95; &#95; jest zdefiniowany, błąd potwierdzenia jest emitowane, jeśli nie jest pochodną klasy bazowej, określona w parametrze szablonu klasy [RuntimeClass](../windows/runtimeclass-class.md), lub nie jest skonfigurowany z WinRt lub WinRtClassicComMix [RuntimeClassType](../windows/runtimeclasstype-enumeration.md) wartość wyliczenia.
 
 ## <a name="requirements"></a>Wymagania
 
 **Nagłówek:** module.h
 
-**Namespace:** Microsoft::wrl —
+**Namespace:** Microsoft::WRL
 
 ## <a name="see-also"></a>Zobacz też
-
-[SimpleActivationFactory, klasa](../windows/simpleactivationfactory-class.md)
+ [SimpleActivationFactory, klasa](../windows/simpleactivationfactory-class.md)

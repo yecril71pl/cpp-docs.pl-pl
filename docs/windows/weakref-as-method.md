@@ -1,5 +1,5 @@
 ---
-title: WeakRef::As — metoda | Dokumentacja firmy Microsoft
+title: WeakRef::As, metoda | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,20 +17,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 70e694b4c86194402f48d335aac353e48c3de79a
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 938c7c796bf88d4ea1e49f1f59d274b5017aa7de
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33890706"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39649305"
 ---
 # <a name="weakrefas-method"></a>WeakRef::As — Metoda
-Ustawia określony parametr wskaźnika comptr — do reprezentowania określonego interfejsu.  
+Ustawia określony `ComPtr` parametru wskaźnika do reprezentowania określonego interfejsu.  
   
 ## <a name="syntax"></a>Składnia  
   
 ```  
-  
 template<typename U>  
 HRESULT As(  
    _Out_ ComPtr<U>* ptr  
@@ -42,32 +41,32 @@ HRESULT As(
 );  
 ```  
   
-#### <a name="parameters"></a>Parametry  
- `U`  
- Identyfikatora interfejsu.  
+### <a name="parameters"></a>Parametry  
+ *U*  
+ Identyfikator interfejsu.  
   
- `ptr`  
- Po zakończeniu tej operacji, obiekt, który reprezentuje parametr `U`.  
+ *ptr*  
+ Po zakończeniu tej operacji, obiekt, który reprezentuje parametr *U*.  
   
 ## <a name="return-value"></a>Wartość zwracana  
   
--   Wartość S_OK, jeśli operacja zakończy się pomyślnie; w przeciwnym razie wartość HRESULT, która wskazuje przyczynę działanie nie powiodło się, i `ptr` ma ustawioną wartość `nullptr`.  
+-   S_OK, jeśli operacja się powiedzie; w przeciwnym razie wartość HRESULT, która wskazuje przyczynę operacja nie powiodła się, a *ptr* ustawiono **nullptr**.  
   
--   Wartość S_OK, jeśli operacja zakończy się pomyślnie, ale bieżący obiekt weakref — zostało już zwolnione. Parametr `ptr` ma ustawioną wartość `nullptr`.  
+-   S_OK, jeśli operacja zakończy się powodzeniem, ale bieżący **WeakRef** obiekt został zwolniony. Parametr *ptr* ustawiono **nullptr**.  
   
--   Wartość S_OK, jeśli operacja zakończy się pomyślnie, ale bieżący obiekt weakref — nie pochodzi od parametru `U`. Parametr `ptr` ma ustawioną wartość `nullptr`.  
+-   S_OK, jeśli operacja zakończy się powodzeniem, ale bieżący **WeakRef** obiektu nie jest tworzony na podstawie parametru *U*. Parametr *ptr* ustawiono **nullptr**.  
   
 ## <a name="remarks"></a>Uwagi  
- Błąd jest emitowany, jeśli parametr `U` jest słabe odwołanie, lub nie jest pochodną IInspectable.  
+ Błąd jest emitowane, jeśli parametr *U* jest `IWeakReference`, lub nie jest tworzony na podstawie `IInspectable`.  
   
- Pierwszy szablon jest formularz, która powinna być używana w kodzie. Drugi szablon jest wewnętrznych specjalizacji pomocnika, który obsługuje funkcje języka C++, takie jak [automatycznie](../cpp/auto-cpp.md) wpisz wnioskowanie — słowo kluczowe.  
+ Pierwszy szablon jest formularz, który należy używać w kodzie. Drugi szablon jest wewnętrznych specjalizacji pomocnika, która obsługuje funkcje języka C++, takie jak [automatycznie](../cpp/auto-cpp.md) słowem kluczowym dedukcji typu.  
   
- Począwszy od zestawu SDK systemu Windows 10, ta metoda nie ustawiono wystąpienie weakref — `nullptr` , jeśli nie można uzyskać słabe odwołanie, dlatego należy unikać sprawdzanie błędów kodu, który sprawdza zgodność weakref — dla `nullptr`. Zamiast tego należy sprawdzić `ptr` dla `nullptr`.  
+ Począwszy od zestawu Windows 10 SDK, ta metoda nie ustawia **WeakRef** wystąpienia do **nullptr** Jeśli nie można uzyskać słabe odwołanie, więc należy unikać sprawdzanie błędów kodu, która sprawdza WeakRef dla **nullptr**. Zamiast tego należy sprawdzić *ptr* dla **nullptr**.  
   
 ## <a name="requirements"></a>Wymagania  
  **Nagłówek:** client.h  
   
- **Namespace:** Microsoft::wrl —  
+ **Namespace:** Microsoft::WRL  
   
 ## <a name="see-also"></a>Zobacz też  
  [WeakRef, klasa](../windows/weakref-class.md)

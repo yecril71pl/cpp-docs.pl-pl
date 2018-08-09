@@ -1,5 +1,5 @@
 ---
-title: SRWLockExclusiveTraits::GetInvalidValue — metoda | Dokumentacja firmy Microsoft
+title: SRWLockExclusiveTraits::GetInvalidValue, metoda | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 599fb1d4b204e170a01f01c60e03959a30075c1f
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 963c3cbc09a9ed7f56d8ec25c35af0868eeae326
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33888958"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39649237"
 ---
 # <a name="srwlockexclusivetraitsgetinvalidvalue-method"></a>SRWLockExclusiveTraits::GetInvalidValue — Metoda
-Pobiera obiekt srwlockexclusivetraits —, który zawsze jest nieprawidłowy.  
+Pobiera **srwlockexclusivetraits —** obiekt, który zawsze jest nieprawidłowy.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -34,7 +34,7 @@ inline static Type GetInvalidValue();
 ```  
   
 ## <a name="return-value"></a>Wartość zwracana  
- Obiekt srwlockexclusivetraits — pusty.  
+ Pusta **srwlockexclusivetraits —** obiektu.  
   
 ## <a name="requirements"></a>Wymagania  
  **Nagłówek:** corewrappers.h  

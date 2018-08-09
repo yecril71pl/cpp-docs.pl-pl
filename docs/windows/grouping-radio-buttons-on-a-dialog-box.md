@@ -21,15 +21,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 7712927a10fa34c5b6436aecd002c9621546638b
-ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
+ms.openlocfilehash: c3d0e20d8b2b88a7141672117d4c0b036682953e
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39571506"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39641421"
 ---
 # <a name="grouping-radio-buttons-on-a-dialog-box"></a>Grupowanie przycisków radiowych w oknie dialogowym
-Po dodaniu przycisków radiowych w oknie dialogowym potraktować je jako grupę, przez ustawienie właściwości grupy w oknie dialogowym właściwości pierwszy przycisk w grupie. Pojawi się w polu Identyfikator kontrolki, dla tego przycisku radiowego [Kreator dodawania zmiennej składowej](../ide/add-member-variable-wizard.md), co pozwala dodać zmienną członkowską, grupy przycisków radiowych.  
+Po dodaniu przycisków radiowych w oknie dialogowym je traktować jako grupa, ustawiając **grupy** właściwość **właściwości** okna dla pierwszego przycisku w grupie. Pojawi się w polu Identyfikator kontrolki, dla tego przycisku radiowego [Kreator dodawania zmiennej składowej](../ide/add-member-variable-wizard.md), co pozwala dodać zmienną członkowską, grupy przycisków radiowych.  
   
  Może mieć więcej niż jedna grupa przycisków radiowych w oknie dialogowym, a każda grupa powinny zostać dodane, korzystając z następującej procedury.  
   
@@ -44,7 +44,7 @@ Po dodaniu przycisków radiowych w oknie dialogowym potraktować je jako grupę,
      Zmiana **grupy** właściwości **True** dodaje WS_GROUP styl do przycisku wpis obiektu okna dialogowego skryptu zasobu i gwarantuje, że użytkownik może wybrać tylko jeden przycisk radiowy jednocześnie przycisku grupy (po kliknięciu przycisku radiowego co inne osoby w grupie zostaną wyczyszczone).  
   
     > [!NOTE]
-    >  Tylko pierwszy przycisk radiowy w grupie powinny mieć **grupy** właściwością **True**. Jeśli masz dodatkowe formanty, które nie są częścią grupy przycisk, ustaw **grupy** właściwość pierwszy formant *jest spoza grupy* do **True** także. Pierwszy formant spoza grupy można szybko zidentyfikować, naciskając klawisze CTRL + D, aby wyświetlić kolejność tabulacji.  
+    >  Tylko pierwszy przycisk radiowy w grupie powinny mieć **grupy** właściwością **True**. Jeśli masz dodatkowe formanty, które nie są częścią grupy przycisk, ustaw **grupy** właściwość pierwszy formant *jest spoza grupy* do **True** także. Pierwszy formant spoza grupy można szybko określić, naciskając klawisz **Ctrl**+**D** Aby wyświetlić kolejność tabulacji.  
   
 ### <a name="to-add-a-member-variable-for-the-radio-button-group"></a>Aby dodać zmiennej składowej w grupie przycisków radiowych  
   
@@ -56,14 +56,13 @@ Po dodaniu przycisków radiowych w oknie dialogowym potraktować je jako grupę,
   
 4.  W **nazwa zmiennej** wpisz nazwę dla nowej zmiennej elementu członkowskiego.  
   
-5.  W **typ zmiennej** pola listy, wybierz opcję **int** lub typ **int**.  
+5.  W **typ zmiennej** pola listy, wybierz opcję **int** lub typ `int`.  
   
-6.  Teraz można edytować swój kod, aby określić, który przycisk radiowy powinien zostaną wyświetlone jako zaznaczone. Na przykład m_radioBox1 = 0. wybiera pierwszy przycisk radiowy w grupie.  
+6.  Teraz można edytować swój kod, aby określić, który przycisk radiowy powinien zostaną wyświetlone jako zaznaczone. Na przykład `m_radioBox1 = 0;` wybiera pierwszy przycisk radiowy w grupie.  
   
  Aby uzyskać informacje na temat dodawania zasobów do projektów zarządzanych, zobacz [zasoby w aplikacjach pulpitu](/dotnet/framework/resources/index) w *przewodniku dewelopera .NET Framework*. Aby uzyskać informacji na temat ręcznego dodawania plików zasobów do projektów zarządzanych, uzyskiwania dostępu do zasobów, wyświetlania statycznych zasobów i przypisywania ciągów zasobów do właściwości, zobacz [Creating Resource Files dla aplikacji klasycznych](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Aby uzyskać informacji na temat globalizacja i lokalizacja zasobów w aplikacjach zarządzanych, zobacz [Globalizing i lokalizowanie aplikacji programu .NET Framework](/dotnet/standard/globalization-localization/index).  
   
 ## <a name="requirements"></a>Wymagania  
-  
  Win32  
   
 ## <a name="see-also"></a>Zobacz też  

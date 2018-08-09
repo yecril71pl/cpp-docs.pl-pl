@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 51e5a66358890fc20731fb5cb657616484e19db4
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 66fd02ff9af4f7a5c1cb85b58e966622bed0060a
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33890983"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39648694"
 ---
 # <a name="synclockwithstatust-class"></a>SyncLockWithStatusT — Klasa
 Obsługuje infrastrukturę biblioteki WRL i nie jest przeznaczona do użycia bezpośrednio w kodzie.  
@@ -36,14 +36,14 @@ template <
 class SyncLockWithStatusT : public SyncLockT<SyncTraits>;  
 ```  
   
-#### <a name="parameters"></a>Parametry  
- `SyncTraits`  
- Typ, które może podjąć wyłącznych lub własność zasobu udostępnionego.  
+### <a name="parameters"></a>Parametry  
+ *SyncTraits*  
+ Typ, który może zająć wyłączne lub współużytkować własność zasobu.  
   
 ## <a name="remarks"></a>Uwagi  
- Reprezentuje typ, które może podjąć wyłącznych lub własność zasobu udostępnionego.  
+ Reprezentuje typ, który może zająć wyłączne lub współużytkować własność zasobu.  
   
- Synclockwithstatust — klasa jest używana do zaimplementowania [obiektu Mutex](../windows/mutex-class1.md) i [semafora](../windows/semaphore-class.md) klasy.  
+ **Synclockwithstatust —** klasa jest używana do zaimplementowania [Mutex](../windows/mutex-class1.md) i [semafora](../windows/semaphore-class.md) klasy.  
   
 ## <a name="members"></a>Elementy członkowskie  
   
@@ -51,26 +51,26 @@ class SyncLockWithStatusT : public SyncLockT<SyncTraits>;
   
 |Nazwa|Opis|  
 |----------|-----------------|  
-|[SyncLockWithStatusT::SyncLockWithStatusT, konstruktor](../windows/synclockwithstatust-synclockwithstatust-constructor.md)|Inicjuje nowe wystąpienie klasy synclockwithstatust — klasa.|  
+|[SyncLockWithStatusT::SyncLockWithStatusT, konstruktor](../windows/synclockwithstatust-synclockwithstatust-constructor.md)|Inicjuje nowe wystąpienie klasy **synclockwithstatust —** klasy.|  
   
 ### <a name="protected-constructors"></a>Konstruktory chronione  
   
 |Nazwa|Opis|  
 |----------|-----------------|  
-|[SyncLockWithStatusT::SyncLockWithStatusT, konstruktor](../windows/synclockwithstatust-synclockwithstatust-constructor.md)|Inicjuje nowe wystąpienie klasy synclockwithstatust — klasa.|  
+|[SyncLockWithStatusT::SyncLockWithStatusT, konstruktor](../windows/synclockwithstatust-synclockwithstatust-constructor.md)|Inicjuje nowe wystąpienie klasy **synclockwithstatust —** klasy.|  
   
 ### <a name="public-methods"></a>Metody publiczne  
   
 |Nazwa|Opis|  
 |----------|-----------------|  
-|[SyncLockWithStatusT::GetStatus, metoda](../windows/synclockwithstatust-getstatus-method.md)|Pobiera bieżący obiekt synclockwithstatust — stan oczekiwania.|  
-|[SyncLockWithStatusT::IsLocked, metoda](../windows/synclockwithstatust-islocked-method.md)|Wskazuje, czy bieżący obiekt synclockwithstatust — jest właścicielem zasobu; synclockwithstatust — obiektu jest *zablokowany*.|  
+|[SyncLockWithStatusT::GetStatus, metoda](../windows/synclockwithstatust-getstatus-method.md)|Pobiera stan oczekiwania bieżącego **synclockwithstatust —** obiektu.|  
+|[SyncLockWithStatusT::IsLocked, metoda](../windows/synclockwithstatust-islocked-method.md)|Wskazuje, czy bieżący **synclockwithstatust —** obiekt posiada zasób; czyli, **synclockwithstatust —** obiekt jest *zablokowane*.|  
   
-### <a name="protected-data-members"></a>Dane chronione elementy członkowskie  
+### <a name="protected-data-members"></a>Chronione elementy członkowskie danych  
   
 |Nazwa|Opis|  
 |----------|-----------------|  
-|[SyncLockWithStatusT::status_, składowa danych](../windows/synclockwithstatust-status-data-member.md)|Blokad wynik podstawowych oczekiwania operacji po operacji blokowania na obiekt oparte na bieżący obiekt synclockwithstatust —.|  
+|[SyncLockWithStatusT::status_, składowa danych](../windows/synclockwithstatust-status-data-member.md)|Zawiera wynik podstawowych operacji oczekiwania po operacji blokadę na obiekcie na podstawie bieżącego **synclockwithstatust —** obiektu.|  
   
 ## <a name="inheritance-hierarchy"></a>Hierarchia dziedziczenia  
  `SyncLockT`  

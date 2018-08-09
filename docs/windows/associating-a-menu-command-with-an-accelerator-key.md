@@ -17,40 +17,39 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: c4f1aa4b80aec2e7c16485c08d2505695b21f4d5
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 8e4b1665e54a03bf7d5f4705aaa3d76962ed16a0
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33858091"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39649975"
 ---
 # <a name="associating-a-menu-command-with-an-accelerator-key"></a>Kojarzenie polecenia menu z klawiszem skrótu
-Są często razy ma polecenia menu oraz kombinację klawiszy, aby wystawiać tego samego polecenia programu. Aby to zrobić, aby przypisać ten sam identyfikator zasobu do polecenia menu i wpis w tabeli akceleratora aplikacji za pomocą edytora Menu. Następnie Edytuj [podpis](../windows/menu-command-properties.md) polecenia menu, aby wyświetlić nazwę klawisz skrótu.  
+Są często razy polecenia menu a kombinacja klawiszy, Wydaj to samo polecenie program. Możesz to zrobić przy użyciu **Menu** edytora, aby przypisać ten sam identyfikator zasobu, do polecenia menu i wpis w tabeli klawiszy skrótu aplikacji. Następnie Edytuj [podpis](../windows/menu-command-properties.md) polecenia menu, aby wyświetlić nazwę klawisza skrótu.  
   
 ### <a name="to-associate-a-menu-command-with-an-accelerator-key"></a>Aby skojarzyć polecenia menu z klawiszem skrótu  
   
-1.  W **Menu** edytora, wybierz polecenie menu.  
+1.  W **Menu** edytora, wybierz polecenia menu, które ma.  
   
-2.  W [okna właściwości](/visualstudio/ide/reference/properties-window), Dodaj nazwę klawisz skrótu do **podpis** właściwości:  
+2.  W [okno właściwości](/visualstudio/ide/reference/properties-window), Dodaj nazwę klawisza skrótu do **podpis** właściwości:  
   
-    -   Następujące podpis menu wpisz sekwencji unikowej tabulatora (\t) tak, aby wszystkie klawisze skrótów menu pozostaną wyrównane.  
+    -   Następujący podpis menu Typ sekwencji ucieczki dla karty (\t) tak, aby wszystkie klawisze skrótów menu są pozostawiane wyrównane.  
   
-    -   Wpisz nazwę klawisz modyfikujący (**CTRL**, **ALT**, lub **SHIFT**) i znak plus (**+**) i nazwę, list, lub symbol dodatkowego klucza.  
+    -   Wpisz nazwę klawisz modyfikujący (**Ctrl**, **Alt**, lub **Shift**) ze znakiem plus (**+**) i nazwę, litery, lub symbol dodatkowy klucz.  
   
-         Na przykład, aby przypisać **CTRL + O** do **Otwórz** na **pliku** menu, zmodyfikuj polecenia menu **podpis** tak, aby wyglądało to:  
+         Na przykład, aby przypisać **Ctrl**+**O** do **Otwórz** polecenie **pliku** menu modyfikowanie polecenia menu  **Podpis** tak, aby wygląda następująco:  
   
         ```  
         &Open...\tCtrl+O   
         ```  
   
-         Polecenia menu w edytorze Menu jest aktualizowany w celu odzwierciedlenia nowych podpis, w trakcie pisania.  
+         Polecenia menu w **Menu** edytora jest aktualizowana w celu odzwierciedlenia nowy podpis w trakcie pisania.  
   
-3.  [Utworzenia wpisu tabeli akceleratora](../windows/adding-an-entry-to-an-accelerator-table.md) w **akceleratora** edytora i przypisz go w taki sam identyfikator jak polecenie menu. Użyj kombinacji klawiszy uważasz, że będą łatwe do zapamiętania.  
+3.  [Tworzenie wpisu tabeli akceleratora](../windows/adding-an-entry-to-an-accelerator-table.md) w **akceleratora** edytora i przypisać ją w taki sam identyfikator jak polecenie menu. Użyj kombinacji klawiszy, które uważasz, że będzie łatwa do zapamiętania.  
   
- Aby uzyskać informacje o dodawaniu zasobów do projektów zarządzanych, zobacz [zasobów w aplikacjach pulpitu](/dotnet/framework/resources/index) w *Przewodnik programistów platformy .NET Framework.* Aby uzyskać informacje na ręczne dodanie do projektów zarządzanych plików zasobów, uzyskiwanie dostępu do zasobów, wyświetlanie zasoby statyczne i przypisanie do właściwości ciągów zasobów, zobacz [tworzenie plików zasobów dla aplikacji pulpitu](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Informacje dotyczące globalizacji i lokalizacji zasobów w zarządzanych aplikacjach, zobacz [Globalizing i lokalizacja aplikacji .NET Framework](/dotnet/standard/globalization-localization/index).  
+ Aby uzyskać informacje na temat dodawania zasobów do projektów zarządzanych, zobacz [zasoby w aplikacjach pulpitu](/dotnet/framework/resources/index) w *przewodniku dewelopera .NET Framework*. Aby uzyskać informacji na temat ręcznego dodawania plików zasobów do projektów zarządzanych, uzyskiwania dostępu do zasobów, wyświetlania statycznych zasobów i przypisywania ciągów zasobów do właściwości, zobacz [Creating Resource Files dla aplikacji klasycznych](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Aby uzyskać informacji na temat globalizacja i lokalizacja zasobów w aplikacjach zarządzanych, zobacz [Globalizing i lokalizowanie aplikacji programu .NET Framework](/dotnet/standard/globalization-localization/index).  
   
- **Wymagania**  
-  
+## <a name="requirements"></a>Wymagania  
  Win32  
   
 ## <a name="see-also"></a>Zobacz też  

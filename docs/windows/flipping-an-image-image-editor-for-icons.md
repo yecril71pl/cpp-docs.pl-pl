@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 0cb6c655bdc8da5341a28449a25796ad59e453b4
-ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
+ms.openlocfilehash: 582a46d35d0fe5327fa15aa0eb235ae8aa8a4cb2
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39569433"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39645509"
 ---
 # <a name="flipping-an-image-image-editor-for-icons"></a>Przerzucanie obrazu (Edytor obrazów dla ikon)
 Można przerzucić lub obrócić obraz:  
@@ -51,7 +51,6 @@ Można przerzucić lub obrócić obraz:
  Aby uzyskać informacje na temat dodawania zasobów do projektów zarządzanych, zobacz [zasoby w aplikacjach pulpitu](/dotnet/framework/resources/index) w *przewodniku dewelopera .NET Framework*. Aby uzyskać informacji na temat ręcznego dodawania plików zasobów do projektów zarządzanych, uzyskiwania dostępu do zasobów, wyświetlania statycznych zasobów i przypisywania ciągów zasobów do właściwości, zobacz [Creating Resource Files dla aplikacji klasycznych](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Aby uzyskać informacji na temat globalizacja i lokalizacja zasobów w aplikacjach zarządzanych, zobacz [Globalizing i lokalizowanie aplikacji programu .NET Framework](/dotnet/standard/globalization-localization/index).  
   
 ## <a name="requirements"></a>Wymagania  
-  
  Brak  
   
 ## <a name="see-also"></a>Zobacz też  

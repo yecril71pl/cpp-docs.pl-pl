@@ -15,17 +15,18 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 29c3aacf63396e96b4520fc849e082c6781e5d64
-ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
+ms.openlocfilehash: 24ca39b307decbf88338295ba2650b935eca2d4f
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39460909"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39645499"
 ---
 # <a name="c-attributes-reference"></a>Atrybuty (C++)
 Firma Microsoft definiuje zestaw atrybutów, które upraszczają programowanie COM i .NET Framework — programowanie środowiska uruchomieniowego języka wspólnego. Gdy atrybuty zostaną umieszczone w plikach źródłowych, kompilator będzie współpracuje z dostawcą biblioteki dll, Wstaw kod lub zmodyfikować kod w plikach obiektowych wygenerowany.  
   
- **Uwaga:** Jeśli szukasz atrybuty standard C++, zobacz [atrybuty](../cpp/attributes.md).  
+ > [!NOTE] 
+ > Jeśli szukasz atrybuty standard C++, zobacz [atrybuty](../cpp/attributes.md).  
   
 ## <a name="in-this-section"></a>W tej sekcji  
  [Pojęcia](../windows/attributed-programming-concepts.md)  

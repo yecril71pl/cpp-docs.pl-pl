@@ -1,5 +1,5 @@
 ---
-title: Factorycache::cookie — członek danych | Dokumentacja firmy Microsoft
+title: FactoryCache::cookie, składowa danych | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,19 +17,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 27daf229da4c6707afcbf97f7ab8ce08cd8ce900
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: f3636cdb2c30d08547fd9085141aa9283bdc85c7
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33874450"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39652386"
 ---
 # <a name="factorycachecookie-data-member"></a>FactoryCache::cookie — Członek danych
-Obsługuje infrastrukturę Biblioteka szablonów C++ środowiska wykonawczego systemu Windows i nie jest przeznaczona do użycia bezpośrednio w kodzie.  
+Obsługuje infrastrukturę Biblioteka szablonów C++ środowiska wykonawczego Windows i nie jest przeznaczona do użycia bezpośrednio w kodzie.  
   
 ## <a name="syntax"></a>Składnia  
   
-```  
+```cpp  
 union {   
    WINRT_REGISTRATION_COOKIE winrt;  
    DWORD com;   
@@ -37,12 +37,12 @@ union {
 ```  
   
 ## <a name="remarks"></a>Uwagi  
- Zawiera wartość, która identyfikuje zarejestrowanego obiektu klasy środowiska wykonawczego systemu Windows lub COM i jest później używany do wyrejestrowania obiektu.  
+ Zawiera wartość, która identyfikuje zarejestrowanych obiektu klasy środowiska wykonawczego Windows lub COM i jest później używany do wyrejestrowania obiektu.  
   
 ## <a name="requirements"></a>Wymagania  
  **Nagłówek:** module.h  
   
- **Namespace:** Microsoft::wrl:: details —  
+ **Namespace:** Microsoft::wrl:: details  
   
 ## <a name="see-also"></a>Zobacz też  
  [Factorycache — struktura](../windows/factorycache-structure.md)   

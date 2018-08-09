@@ -17,19 +17,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: f4f25a8f3d5cc76d1b2b8d9a3d9996449f449466
-ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
+ms.openlocfilehash: 3c2714c1418c5c9828322561ae1d7ca86dc6130a
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39570450"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39647739"
 ---
 # <a name="helpfile"></a>helpfile
 Określa nazwę pliku pomocy dla biblioteki typów.  
   
 ## <a name="syntax"></a>Składnia  
   
-```  
+```cpp  
 [ helpfile(  
    "filename"  
 ) ]  

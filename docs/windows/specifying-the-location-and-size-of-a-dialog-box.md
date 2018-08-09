@@ -16,19 +16,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: cc4c6867f5ed3791414619257fec33db4c632553
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 3a3a9a629ec138659a7b0d2aba2460aced31fc74
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33890580"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39649006"
 ---
 # <a name="specifying-the-location-and-size-of-a-dialog-box"></a>Określanie lokalizacji i rozmiaru okna dialogowego
-Lokalizacja i rozmiar okno dialogowe, jak również lokalizacja i rozmiar kontrolki, to są mierzone w jednostkach okna dialogowego. Wartości dla poszczególnych formantów i w oknie dialogowym są wyświetlane w prawej dolnej części paska po wybraniu ich stanu programu Visual Studio.  
+Lokalizacja i rozmiar, okno dialogowe, a także lokalizacji i rozmiaru formantów w nim, są mierzone w jednostkach okna dialogowego. Wartości dla poszczególnych formantów i w oknie dialogowym są wyświetlane w prawej dolnej części paska po ich wybraniu stanu programu Visual Studio.  
   
- Istnieją trzy właściwości, które można ustawić w [okna właściwości](/visualstudio/ide/reference/properties-window) do określenia, gdzie zostaną wyświetlone na ekranie okno dialogowe. Właściwość Centrum jest logiczną; Jeśli wartość jest ustawiona na wartość True, okno dialogowe zawsze będą wyświetlane w Centrum ekranu. Jeśli zostanie ustawiona na wartość False, można następnie ustawić właściwości Pozycja_x i Pozycja_y, aby jawnie zdefiniuj w przypadku, gdy na ekranie, zostanie wyświetlone okno dialogowe. Właściwości pozycji są wartości przesunięcia z lewym górnym rogu obszaru wyświetlania, która jest zdefiniowana jako {X = 0, Y = 0}. Pozycja również jest oparta na **wyrównanie bezwzględne** właściwości: w przypadku wartości PRAWDA współrzędne są podawane względem ekranu; w przypadku wartości FAŁSZ współrzędne są podawane względem okno właściciela okna dialogowego.  
+ Istnieją trzy właściwości, które można ustawić w [okno właściwości](/visualstudio/ide/reference/properties-window) do określenia, gdzie zostanie wyświetlone okno dialogowe na ekranie. Właściwość Centrum jest atrybut typu wartość logiczna; Jeśli wartość jest ustawiona na wartość True, okno dialogowe będzie zawsze pojawiają się w środku ekranu. Jeśli zostanie ustawiona na wartość False, następnie można ustawić właściwości Pozycja_x i Pozycja_y umożliwia jawne zdefiniowanie w przypadku, gdy na ekranie, zostanie wyświetlone okno dialogowe. Właściwości pozycji są wartości przesunięcia z lewym górnym rogu obszaru wyświetlania, która jest zdefiniowana jako {X = 0, Y = 0}. Pozycja również opiera się na **bezwzględnie Wyrównaj** właściwości: w przypadku opcji True współrzędne są podawane względem ekranu; w przypadku wartości FAŁSZ współrzędne są podawane względem okna dialogowego od właściciela tego okna.  
   
- Aby uzyskać informacje o dodawaniu zasobów do projektów zarządzanych, zobacz [zasobów w aplikacjach pulpitu](/dotnet/framework/resources/index) w *Przewodnik programistów platformy .NET Framework.* Aby uzyskać informacje na ręczne dodanie do projektów zarządzanych plików zasobów, uzyskiwanie dostępu do zasobów, wyświetlanie zasoby statyczne i przypisanie do właściwości ciągów zasobów, zobacz [tworzenie plików zasobów dla aplikacji pulpitu](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Informacje dotyczące globalizacji i lokalizacji zasobów w zarządzanych aplikacjach, zobacz [Globalizing i lokalizacja aplikacji .NET Framework](/dotnet/standard/globalization-localization/index).  
+ Aby uzyskać informacje na temat dodawania zasobów do projektów zarządzanych, zobacz [zasoby w aplikacjach pulpitu](/dotnet/framework/resources/index) w *przewodniku dewelopera .NET Framework*. Aby uzyskać informacji na temat ręcznego dodawania plików zasobów do projektów zarządzanych, uzyskiwania dostępu do zasobów, wyświetlania statycznych zasobów i przypisywania ciągów zasobów do właściwości, zobacz [Creating Resource Files dla aplikacji klasycznych](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Aby uzyskać informacji na temat globalizacja i lokalizacja zasobów w aplikacjach zarządzanych, zobacz [Globalizing i lokalizowanie aplikacji programu .NET Framework](/dotnet/standard/globalization-localization/index).  
   
 ## <a name="requirements"></a>Wymagania  
  Win32  
@@ -36,4 +36,3 @@ Lokalizacja i rozmiar okno dialogowe, jak również lokalizacja i rozmiar kontro
 ## <a name="see-also"></a>Zobacz też  
  [Formanty w oknach dialogowych](../windows/controls-in-dialog-boxes.md)   
  [Kontrolki](../mfc/controls-mfc.md)
-

@@ -19,15 +19,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 7510d8bb9f356620e77d862edab71d852fdec65b
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 8ee2b3a437f2b36d34fe9232356b171757643509
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33855386"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39644989"
 ---
 # <a name="changing-unassigned-symbols"></a>Zmiana nieprzypisanych symboli
-W [okno dialogowe symboli zasobów](../windows/resource-symbols-dialog-box.md), edytować lub usunąć istniejące symbole, które nie są już przypisane do zasobów lub obiektu.  
+W [okno dialogowe symboli zasobów](../windows/resource-symbols-dialog-box.md), edytować lub usunąć istniejące symboli, które nie są już przypisane do zasobu lub obiektu.  
   
 ### <a name="to-change-an-unassigned-symbol"></a>Aby zmienić nieprzypisanych symboli  
   
@@ -36,12 +36,11 @@ W [okno dialogowe symboli zasobów](../windows/resource-symbols-dialog-box.md), 
 2.  Edytuj nazwę symbolu lub wartości w polach w **Zmień Symbol** okno dialogowe.  
   
     > [!NOTE]
-    >  Aby zmienić symbol który *jest* przydzielony do zasobu lub obiekt, należy użyć edytora zasobów lub okna właściwości. Aby uzyskać więcej informacji, zobacz [zmiana symbolu lub nazwy symbolu](../windows/changing-a-symbol-or-symbol-name-id.md).  
+    >  Aby zmienić symbol, *jest* przypisany do zasobu lub obiektu, należy użyć edytora zasobów lub **właściwości** okna. Aby uzyskać więcej informacji, zobacz [zmiana symbolu lub nazwy symbolu](../windows/changing-a-symbol-or-symbol-name-id.md).  
   
- Aby uzyskać informacje o dodawaniu zasobów do projektów zarządzanych, zobacz [zasobów w aplikacjach pulpitu](/dotnet/framework/resources/index) w *Przewodnik programistów platformy .NET Framework.*  
+ Aby uzyskać informacje na temat dodawania zasobów do projektów zarządzanych, zobacz [zasoby w aplikacjach pulpitu](/dotnet/framework/resources/index) w *przewodniku dewelopera .NET Framework*.  
   
- Wymagania  
-  
+## <a name="requirements"></a>Wymagania  
  Win32  
   
 ## <a name="see-also"></a>Zobacz też  

@@ -18,12 +18,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: c91e9523b063e9decbcb97ce9f5d8229a9c670b2
-ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
+ms.openlocfilehash: 67d3d4ba38563b4716a87d4b57a4753fe1b49e9c
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39568939"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39652097"
 ---
 # <a name="finding-a-string"></a>Znajdowanie ciągów
 Wyszukaj jeden lub więcej ciągów w tabeli ciągów i użyj [wyrażeń regularnych](/visualstudio/ide/using-regular-expressions-in-visual-studio) z **Znajdź w plikach** polecenia (**Edytuj** menu) aby znaleźć wszystkie wystąpienia ciągów które pasują do wzorca.  
@@ -49,7 +49,6 @@ Wyszukaj jeden lub więcej ciągów w tabeli ciągów i użyj [wyrażeń regular
  Aby uzyskać informacje na temat dodawania zasobów do projektów zarządzanych, (te, których platformą docelową środowiska uruchomieniowego języka wspólnego), zobacz [zasoby w aplikacjach pulpitu](/dotnet/framework/resources/index) w *przewodniku dewelopera .NET Framework*. Aby uzyskać informacji na temat ręcznego dodawania plików zasobów do projektów zarządzanych, uzyskiwania dostępu do zasobów, wyświetlania statycznych zasobów i przypisywania ciągów zasobów do właściwości, zobacz [Instruktaż: Lokalizowanie interfejsów Windows Forms](http://msdn.microsoft.com/9a96220d-a19b-4de0-9f48-01e5d82679e5) i [Wskazówki: Korzystanie z zasobów for Localization with ASP.NET](http://msdn.microsoft.com/Library/bb4e5b44-e2b0-48ab-bbe9-609fb33900b6).  
   
 ## <a name="requirements"></a>Wymagania  
-  
  Win32  
   
 ## <a name="see-also"></a>Zobacz też  

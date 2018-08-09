@@ -16,26 +16,23 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 17326bdb8fe01c9ad329db0a6c7e8178fdbb25e7
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: d868c9270e23e2ee1fa0dcdc1845d9762cefb16c
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33864245"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39649405"
 ---
 # <a name="associating-menu-commands-with-status-bar-text-in-mfc-applications"></a>Kojarzenie poleceń menu z tekstem paska stanu w aplikacjach MFC
-Aplikacja może wyświetlać tekst opisowy dla poszczególnych poleceń menu, które użytkownik może wybrać. Można to zrobić, przypisując ciąg tekstowy do każdego menu polecenie za pomocą **monitu** właściwości w oknie właściwości. Jeśli w ciągu [tabeli ciągów](../windows/string-editor.md) których identyfikator jest taki sam jak polecenia, aplikacji MFC zostanie automatycznie wyświetlona tego zasobu ciągu na pasku stanu w uruchomionej aplikacji, gdy użytkownik znajduje się nad elementem menu.  
+Aplikacja może wyświetlać tekst opisu dla każdego polecenia menu, które użytkownik może wybrać. Możesz to zrobić, przypisując ciąg tekstowy do każdego menu polecenia przy użyciu **monitu** właściwość **właściwości** okna. Jeśli w ciągu [tabeli ciągów](../windows/string-editor.md) których identyfikator jest taki sam jak polecenia, aplikacji MFC będą automatycznie wyświetlać ten zasób ciąg w pasku stanu w uruchomionej aplikacji po użytkownik myszy nad element menu.  
   
 ### <a name="to-associate-a-menu-command-with-a-status-bar-text-string"></a>Aby skojarzyć polecenia menu z stanu paska ciąg tekstowy  
   
 1.  W **Menu** edytora, wybierz polecenie menu.  
   
-2.  W [okna właściwości](/visualstudio/ide/reference/properties-window), wpisz tekst na pasku stanu skojarzony w **monitu** pole.  
+2.  W [okno właściwości](/visualstudio/ide/reference/properties-window), wpisz tekst skojarzony z nim stan paska w **monitu** pole.  
   
-
-  
- **Wymagania**  
-  
+## <a name="requirements"></a>Wymagania  
  MFC  
   
 ## <a name="see-also"></a>Zobacz też  

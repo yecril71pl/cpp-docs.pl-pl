@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: c7f414189c60946264ce49c5d6065d91d92b8bd4
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: d468913dcca511702deeb77b08306dd0256d6091
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33890255"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39641252"
 ---
 # <a name="verifyinterfacehelper-structure"></a>VerifyInterfaceHelper — Struktura
-Obsługuje infrastrukturę Biblioteka szablonów C++ środowiska wykonawczego systemu Windows i nie jest przeznaczona do użycia bezpośrednio w kodzie.  
+Obsługuje infrastrukturę Biblioteka szablonów C++ środowiska wykonawczego Windows i nie jest przeznaczona do użycia bezpośrednio w kodzie.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -42,14 +42,14 @@ template <
 struct VerifyInterfaceHelper<false, I>;  
 ```  
   
-#### <a name="parameters"></a>Parametry  
- `I`  
- Interfejs można zweryfikować.  
+### <a name="parameters"></a>Parametry  
+ *I*  
+ Interfejs, aby sprawdzić.  
   
- `isWinRTInterface`  
+ *isWinRTInterface*  
   
 ## <a name="remarks"></a>Uwagi  
- Sprawdza, czy interfejs określonej przez parametr szablonu spełnia określone wymagania.  
+ Sprawdza, czy interfejs określony przez parametr szablonu spełnia określone wymagania.  
   
 ## <a name="members"></a>Elementy członkowskie  
   
@@ -65,7 +65,7 @@ struct VerifyInterfaceHelper<false, I>;
 ## <a name="requirements"></a>Wymagania  
  **Nagłówek:** implements.h  
   
- **Namespace:** Microsoft::wrl:: details —  
+ **Namespace:** Microsoft::wrl:: details  
   
 ## <a name="see-also"></a>Zobacz też  
  [Microsoft::WRL::Details, przestrzeń nazw](../windows/microsoft-wrl-details-namespace.md)

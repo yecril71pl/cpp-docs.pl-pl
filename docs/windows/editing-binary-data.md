@@ -18,33 +18,31 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 5259adc079381ce37da704a67a69b51758cb2aef
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 24b2a5eeeaa0d07ebfc1cf1a7fcdb1b2b7274f03
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33884479"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39651719"
 ---
 # <a name="editing-binary-data"></a>Edytowanie danych binarnych
-### <a name="to-edit-a-resource-in-the-binary-editor"></a>Aby edytować zasobu w edytorze binarnym  
+### <a name="to-edit-a-resource-in-the-binary-editor"></a>Edytowanie zasobów w edytorze binarnym  
   
 1.  Wybierz bajtów, którą chcesz edytować.  
   
-     Klawisz TAB przenosi fokus między szesnastkowym i ASCII części Edytor plików binarnych. Klucze PAGE UP albo PAGE DOWN służy do przenoszenia za pośrednictwem jednego ekranu zasobów w czasie.  
+     **Kartę** klucz przenosi fokus między szesnastkowym i sekcje ASCII **binarne** edytora. Możesz użyć **Page Up** i **Page Down** klucze przejście przez jeden ekran zasobów w danym momencie.  
   
 2.  Wpisz nową wartość.  
   
-     Wartość natychmiast zmienia się w sekcji ASCII i szesnastkowej i przenosi fokus do następnej wartości w wierszu.  
+     Wartość natychmiast zmienia się w sekcjach ASCII i szesnastkowym i otrzymuje fokus do następnej wartości w wierszu.  
   
     > [!NOTE]
-    >  Edytor plików binarnych akceptuje zmiany automatycznie po zamknięciu edytora.  
+    >  **Binarne** edytora akceptuje automatycznie zmian, po zamknięciu edytora.  
   
- Aby uzyskać informacje o dodawaniu zasobów do projektów zarządzanych, zobacz [zasobów w aplikacjach pulpitu](/dotnet/framework/resources/index) w *Przewodnik programistów platformy .NET Framework.* Aby uzyskać informacje na ręczne dodanie do projektów zarządzanych plików zasobów, uzyskiwanie dostępu do zasobów, wyświetlanie zasoby statyczne i przypisanie do właściwości ciągów zasobów, zobacz [tworzenie plików zasobów dla aplikacji pulpitu](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Informacje dotyczące globalizacji i lokalizacji zasobów w zarządzanych aplikacjach, zobacz [Globalizing i lokalizacja aplikacji .NET Framework](/dotnet/standard/globalization-localization/index).  
+ Aby uzyskać informacje na temat dodawania zasobów do projektów zarządzanych, zobacz [zasoby w aplikacjach pulpitu](/dotnet/framework/resources/index) w *przewodniku dewelopera .NET Framework*. Aby uzyskać informacji na temat ręcznego dodawania plików zasobów do projektów zarządzanych, uzyskiwania dostępu do zasobów, wyświetlania statycznych zasobów i przypisywania ciągów zasobów do właściwości, zobacz [Creating Resource Files dla aplikacji klasycznych](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Aby uzyskać informacji na temat globalizacja i lokalizacja zasobów w aplikacjach zarządzanych, zobacz [Globalizing i lokalizowanie aplikacji programu .NET Framework](/dotnet/standard/globalization-localization/index).  
   
-### <a name="requirements"></a>Wymagania  
-  
+## <a name="requirements"></a>Wymagania   
  Brak  
   
 ## <a name="see-also"></a>Zobacz też  
  [Edytor plików binarnych](binary-editor.md)
-

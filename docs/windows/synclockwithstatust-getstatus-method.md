@@ -1,5 +1,5 @@
 ---
-title: SyncLockWithStatusT::GetStatus — metoda | Dokumentacja firmy Microsoft
+title: SyncLockWithStatusT::GetStatus, metoda | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 03addd8d89c54eddb5deb721ab47d46e8b945edd
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 4677239bbcaff0c72eb11ade259f47531a616f19
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33889765"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39649639"
 ---
 # <a name="synclockwithstatustgetstatus-method"></a>SyncLockWithStatusT::GetStatus — Metoda
 Obsługuje infrastrukturę biblioteki WRL i nie jest przeznaczona do użycia bezpośrednio w kodzie.  
@@ -34,12 +34,12 @@ DWORD GetStatus() const;
 ```  
   
 ## <a name="return-value"></a>Wartość zwracana  
- Wynik operacji oczekiwania na obiekt, który jest oparty na klasie synclockwithstatust — takie jak [obiektu Mutex](../windows/mutex-class1.md) lub [semafora](../windows/semaphore-class.md). Zero (0) oznacza operacji oczekiwania zwrócił stan sygnałowego; w przeciwnym razie innego stanu wystąpił, takie jak limit czasu upłynął.  
+ Wynik operacji oczekiwania na obiekt, który jest oparty na **synclockwithstatust —** klasy, takie jak [Mutex](../windows/mutex-class1.md) lub [semafora](../windows/semaphore-class.md). Zero (0) oznacza, że operacji oczekiwania zwrócone sygnalizowanego stanu; w przeciwnym razie inny stan wystąpił, takie jak wartość limitu czasu, który upłynął.  
   
 ## <a name="remarks"></a>Uwagi  
- Pobiera bieżący obiekt synclockwithstatust — stan oczekiwania.  
+ Pobiera stan oczekiwania bieżącego **synclockwithstatust —** obiektu.  
   
- Funkcja GetStatus() pobiera wartości podstawowych [status_ —](../windows/synclockwithstatust-status-data-member.md) element członkowski danych. Gdy obiekt oparty na klasie synclockwithstatust — operacja wykonywana przez blokady, obiekt najpierw czeka na udostępnienie obiektu. Wynik tej operacji oczekiwania są przechowywane w `status_` element członkowski danych. Możliwe wartości `status_` element członkowski danych są zwracane wartości operacji oczekiwania. Aby uzyskać więcej informacji, zobacz zwracane wartości **WaitForSingleObjectEx()** funkcji w bibliotece MSDN.  
+ Funkcja GetStatus() pobiera wartości elementu bazowego [status_ — element](../windows/synclockwithstatust-status-data-member.md) element członkowski danych. Gdy obiekt jest oparty na **synclockwithstatust —** klasy wykonuje operację blokady, obiekt najpierw czeka na udostępnienie obiektu. Wynikiem tej operacji oczekiwania są przechowywane w `status_` element członkowski danych. Możliwe wartości `status_` element członkowski danych są zwracane wartości operacji oczekiwania. Aby uzyskać więcej informacji, zobacz wartości zwracanych metody `WaitForSingleObjectEx()` funkcji w bibliotece MSDN.  
   
 ## <a name="requirements"></a>Wymagania  
  **Nagłówek:** corewrappers.h  

@@ -19,37 +19,37 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: ac1fac3c7f96c9f8d718efa54810f4155b1ddac5
-ms.sourcegitcommit: c0ffdff538eb961f786809eb547b35846190ee48
+ms.openlocfilehash: 0915f6f506b942a7ee52eec637c9ea6631339e79
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34800089"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39643286"
 ---
 # <a name="walkthrough-creating-a-standard-c-program-c"></a>Wskazówki: Tworzenie standardowego programu C++ (C++)
-Visual C++ w programie Visual Studio zintegrowane środowisko programistyczne (IDE) służy do tworzenia programy Standard C++. Wykonując kroki opisane w tym przewodniku, można utworzyć projekt, Dodaj nowy plik do projektu, zmodyfikuj plik, aby dodać kod w języku C++, a następnie skompilować i uruchomić program przy użyciu [!INCLUDE[vsprvs](../assembler/masm/includes/vsprvs_md.md)].  
+Aby tworzyć programy standardowego C++, można użyć Visual C++ w programie Visual Studio zintegrowane środowisko programistyczne (IDE). Wykonując kroki opisane w tym instruktażu, można utworzyć projekt, Dodaj nowy plik do projektu, zmodyfikuj plik, aby dodać kod języka C++, a następnie skompilować i uruchomić program za pomocą [!INCLUDE[vsprvs](../assembler/masm/includes/vsprvs_md.md)].  
   
- Można wpisać programu C++ lub użyj jednego z programów przykładowych. Przykładowy program w tym przewodniku jest aplikacji konsoli. Ta aplikacja używa `set` kontenera w standardowej bibliotece C++.  
+ Można wpisać swój własny program C++ lub użyć jednego z przykładowych programów. Przykładowy program w tym instruktażu jest aplikacją konsoli. Ta aplikacja używa `set` kontenera w standardowej biblioteki języka C++.  
   
- Visual C++ jest zgodny z 2003 Standard C++, z następującymi wyjątkami głównych: wyszukiwanie nazw dwuetapowa, specyfikacje wyjątków i eksportowanie. Ponadto Visual C++ obsługuje kilka funkcji C ++ 0 x, na przykład wyrażenia lambda, automatycznie static_assert, odwołania do r-wartości i szablonów zewnętrzny.  
+ Visual C++, który jest zgodny ze standardem C++ 2003, z tymi wyjątkami: dwuetapowego odnośnik do nazwy, specyfikacja wyjątku i eksport. Ponadto Visual C++ obsługuje kilka C ++ 0 x funkcji, na przykład wyrażenia lambda, auto, static_assert, odwołania rvalue i szablony extern.  
   
 > [!NOTE]
->  Jeśli wymagana jest zgodności ze standardem, użyj **/Za** opcję kompilatora, aby wyłączyć rozszerzenia Microsoft do standardowego. Aby uzyskać więcej informacji, zobacz [/Za, /Ze (Wyłącz rozszerzenia językowe)](../build/reference/za-ze-disable-language-extensions.md).  
+>  Jeśli wymagana jest zgodność ze standardem, użyj `/Za` opcję kompilatora, aby wyłączyć rozszerzenia Microsoft do standardu. Aby uzyskać więcej informacji, zobacz [/za, /Ze (Wyłącz rozszerzenia językowe)](../build/reference/za-ze-disable-language-extensions.md).  
   
 ## <a name="prerequisites"></a>Wymagania wstępne  
  Aby ukończyć ten instruktaż, musisz rozumieć podstawy języka C++.  
   
-### <a name="to-create-a-project-and-add-a-source-file"></a>Aby utworzyć projekt i dodać pliku źródłowego  
+### <a name="to-create-a-project-and-add-a-source-file"></a>Aby utworzyć projekt i dodać plik źródłowy  
   
-1.  Utwórz projekt poprzez wskazanie **nowy** na **pliku** menu, a następnie klikając pozycję **projektu**.  
+1.  Utwórz projektu wskazując **New** na **pliku** menu, a następnie klikając polecenie **projektu**.  
   
-2.  W **Visual C++** okienko typy projektu, kliknij przycisk **Windows Desktop**, a następnie kliknij przycisk **aplikacji konsoli systemu Windows**.  
+2.  W **Visual C++** okienku typów projektu, kliknij przycisk **pulpitu Windows**, a następnie kliknij przycisk **aplikacji konsoli Windows**.  
   
 3.  Wpisz nazwę dla projektu.  
   
-     Domyślnie rozwiązanie, które zawiera projekt ma taką samą nazwę jak projekt, ale można wpisać inną nazwę. Możesz również wpisać inną lokalizację dla projektu.  
+     Domyślnie rozwiązanie, zawierający projekt ma taką samą nazwę jak projektu, ale można wpisać inną nazwę. Możesz również wpisać inną lokalizację dla projektu.  
   
-     Kliknij przycisk **OK** Aby utworzyć projekt.  
+     Kliknij przycisk **OK** do tworzenia projektu.  
   
 4.  Jeśli **Eksploratora rozwiązań** nie jest wyświetlany na **widoku** menu, kliknij przycisk **Eksploratora rozwiązań**.  
   
@@ -57,24 +57,24 @@ Visual C++ w programie Visual Studio zintegrowane środowisko programistyczne (I
   
     1.  W **Eksploratora rozwiązań**, kliknij prawym przyciskiem myszy **pliki źródłowe** folderu, wskaż **Dodaj**, a następnie kliknij przycisk **nowy element**.  
   
-    2.  W **kod** węzła, kliknij przycisk **plik C++ (.cpp)**, wpisz nazwę pliku, a następnie kliknij przycisk **Dodaj**.  
+    2.  W **kodu** węzła, kliknij przycisk **plik C++ (.cpp)**, wpisz nazwę pliku, a następnie kliknij **Dodaj**.  
   
-     Plik .cpp pojawia się w folderze plików źródłowych w **Eksploratora rozwiązań**, a plik jest otwarty w edytorze programu Visual Studio.  
+     Plik CPP pojawia się w folderze plików źródłowych w **Solution Explorer**, a plik jest otwarty w edytorze programu Visual Studio.  
   
-6.  W pliku w edytorze wpisz prawidłowy program w języku C++, który używa standardowa biblioteka C++ lub skopiować jeden przykładowe programy i wklej go w pliku.  
+6.  W pliku w edytorze wpisz prawidłowy program w języku C++, który używa standardowej biblioteki C++ lub skopiuj jeden z przykładowych programów i wklej go w pliku.  
   
 7.  Zapisz plik.  
   
 8. Na **kompilacji** menu, kliknij przycisk **Kompiluj rozwiązanie**.  
   
-     **Dane wyjściowe** okno wyświetla informacje o postępie kompilacji, na przykład lokalizację dziennika kompilacji i komunikat, który wskazuje stan kompilacji.  
+     **Dane wyjściowe** okna wyświetla informacje o postępie kompilacji, na przykład lokalizacja dziennika kompilacji i komunikat o statusie kompilacji.  
   
-9. Na **debugowania** menu, kliknij przycisk **uruchomić bez debugowania**.  
+9. Na **debugowania** menu, kliknij przycisk **Uruchom bez debugowania**.  
   
-     Jeśli użyto przykładowy program okno polecenia zostanie wyświetlony i pokazuje, czy niektóre liczb całkowitych znajdują się w zestawie.  
+     Jeśli użyto przykładowego programu, okno polecenia jest wyświetlane i pokazuje, czy niektóre liczby całkowite znajdują się w zestawie.  
   
 ## <a name="next-steps"></a>Następne kroki  
- **Poprzedni:** [konsoli aplikacji w programie Visual C++](../windows/console-applications-in-visual-cpp.md). **Następnie:**[wskazówki: kompilowanie natywnego programu C++ w wierszu polecenia](../build/walkthrough-compiling-a-native-cpp-program-on-the-command-line.md).  
+ **Poprzedni:** [konsoli aplikacji w języku Visual C++](../windows/console-applications-in-visual-cpp.md). **Następnie:**[wskazówki: kompilowanie natywnego programu C++ w wierszu polecenia](../build/walkthrough-compiling-a-native-cpp-program-on-the-command-line.md).  
   
 ## <a name="see-also"></a>Zobacz też  
  [Dokumentacja języka C++](../cpp/cpp-language-reference.md)   

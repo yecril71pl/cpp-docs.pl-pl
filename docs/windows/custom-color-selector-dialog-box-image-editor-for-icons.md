@@ -1,5 +1,5 @@
 ---
-title: Okno dialogowe selektora niestandardowego koloru (edytor obrazów dla ikon) | Dokumentacja firmy Microsoft
+title: Okno dialogowe wybierania niestandardowego koloru (edytor obrazów dla ikon) | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,42 +18,42 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 76a278ad0a1ba67c7c8f9fb86d20ca842b92b1e2
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: e2d32083194efc81fdfe2be1c38eec4ce9ce175d
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33880260"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39642815"
 ---
 # <a name="custom-color-selector-dialog-box-image-editor-for-icons"></a>Okno dialogowe wybierania niestandardowego koloru (Edytor obrazów dla ikon)
-To okno dialogowe pozwala dostosować kolory używane w przypadku obrazu. Aby uzyskać więcej informacji, zobacz [Dostosowywanie lub zmiana kolorów](../windows/customizing-or-changing-colors-image-editor-for-icons.md).  
+To okno dialogowe umożliwia dostosowanie kolorów używanych w przypadku obrazu. Aby uzyskać więcej informacji, zobacz [Dostosowywanie lub zmiana kolorów](../windows/customizing-or-changing-colors-image-editor-for-icons.md).  
   
- **Kolor gradientu wyświetlania**  
- Umożliwia zmianę wartości wybranego koloru. Umieść krzyżyk kolor, który chcesz zmienić. Następnie przesuń suwak w górę lub w dół, aby zmienić jasność lub wartości RGB koloru.  
+ **Wyświetlanie kolor gradientu**  
+ Umożliwia zmianę wartości wybrany kolor. Umieść krzyżyk kolor, który chcesz zmienić. Przesuń suwak w górę lub w dół, Zmień jasność lub wartości RGB koloru.  
   
- **Pasek jasność**  
- Ustawia jasność koloru wybrane w polu wyświetlania kolor gradientu. Kliknij i przeciągnij białe Strzałka w górę pasek większa jasność lub w dół na mniejsze. Należy pamiętać, że okno kolorów wyświetla kolor wybranego i wpływ jasność, które można ustawić.  
+ **Jasność paska**  
+ Ustawia jasność koloru w **gradientu wyświetlania kolorów** pole. Kliknij i przeciągnij białe Strzałka w górę paska dla jasności większy lub w dół za niższą cenę. Należy pamiętać, że **kolor** polu jest wyświetlana Kolor wybrano i wpływ jasność ustawisz.  
   
  **Kolor**  
- Wyświetla listę hue (wartość koloru koło) definiowanej koloru. Wartości z zakresu od 0 do 240, gdzie 0 jest czerwony, 60 jest żółty 120 jest zielony, 180 jest błękitny, 200 jest amarantowy i 240 jest niebieska.  
+ Wyświetla listę aplikacji hue (wartość koło kolorów) kolor, który jest definiowany. Wartości z zakresu od 0 do 240, gdzie 0 jest czerwony, 60 jest żółty, 120 jest zielony, 180 jest błękitny, 200 jest amarantowy i 240 ma kolor niebieski.  
   
  **HUE**  
- Wyświetla listę hue (wartość koloru koło) definiowanej koloru. Wartości z zakresu od 0 do 240, gdzie 0 jest czerwony, 60 jest żółty 120 jest zielony, 180 jest błękitny, 200 jest amarantowy i 240 jest niebieska.  
+ Wyświetla listę aplikacji hue (wartość koło kolorów) kolor, który jest definiowany. Wartości z zakresu od 0 do 240, gdzie 0 jest czerwony, 60 jest żółty, 120 jest zielony, 180 jest błękitny, 200 jest amarantowy i 240 ma kolor niebieski.  
   
- **SAD**  
- Określa wartość nasycenie definiowanej koloru. Nasycenie oznacza ilość koloru w określonej aplikacji hue. Wartości z zakresu od 0 do 240.  
+ **NAS.**  
+ Określa wartość nasycenie koloru, który jest definiowany. Nasycenie jest ilość koloru w określonym odcieniu. Wartości z zakresu od 0 do 240.  
   
  **Jaskr.**  
- Wyświetla listę jasność (jasność) definiowanej koloru. Wartości z zakresu od 0 do 240.  
+ Wyświetla listę jasności (jasność) kolor, który jest definiowany. Wartości z zakresu od 0 do 240.  
   
- **czerwony**  
- Określa wartość red definiowanej koloru. Wartości z zakresu od 0 do 255.  
+ **Czerwony**  
+ Określa wartość czerwony kolor, który jest definiowany. Wartości z zakresu od 0 do 255.  
   
- **zielony**  
- Określa wartość zielony definiowanej koloru. Wartości z zakresu od 0 do 255.  
+ **Zielony**  
+ Określa wartość zielony kolor, który jest definiowany. Wartości z zakresu od 0 do 255.  
   
- **niebieski**  
- Określa wartość niebieski definiowanej koloru. Wartości z zakresu od 0 do 255.  
+ **Niebieski**  
+ Określa wartość niebieskiego kolor, który jest definiowany. Wartości z zakresu od 0 do 255.  
   
 ## <a name="requirements"></a>Wymagania  
  Brak  
@@ -61,4 +61,4 @@ To okno dialogowe pozwala dostosować kolory używane w przypadku obrazu. Aby uz
 ## <a name="see-also"></a>Zobacz też  
  [Menu obrazu](../windows/image-menu-image-editor-for-icons.md)   
  [Dostosowywanie lub zmiana kolorów](../windows/customizing-or-changing-colors-image-editor-for-icons.md)   
- [Kolory — okno](../windows/colors-window-image-editor-for-icons.md)
+ [Okno kolory](../windows/colors-window-image-editor-for-icons.md)

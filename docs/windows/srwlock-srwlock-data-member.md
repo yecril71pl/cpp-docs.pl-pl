@@ -1,5 +1,5 @@
 ---
-title: Srwlock::srwlock_ — członek danych | Dokumentacja firmy Microsoft
+title: SRWLock::SRWLock_, składowa danych | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 77b6d10e4343fd17c8bd65e232d29923214eff0c
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: cf6e43c6e8672e8bd3b1f895658a1c16dbe77faa
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33889111"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39647495"
 ---
 # <a name="srwlocksrwlock-data-member"></a>SRWLock::SRWLock_ — Członek danych
-Zawiera zmienną podstawowej blokady dla bieżącego obiektu srwlock —.  
+Zawiera podstawowe zmienną blokady dla bieżącego **SRWLock** obiektu.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -36,7 +36,7 @@ SRWLOCK SRWLock_;
 ## <a name="requirements"></a>Wymagania  
  **Nagłówek:** corewrappers.h  
   
- **Namespace:** Microsoft::wrl:: wrappers —  
+ **Namespace:** Microsoft::wrl:: wrappers  
   
 ## <a name="see-also"></a>Zobacz też  
  [SRWLock, klasa](../windows/srwlock-class.md)

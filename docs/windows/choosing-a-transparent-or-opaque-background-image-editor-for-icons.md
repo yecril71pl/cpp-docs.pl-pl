@@ -24,39 +24,38 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 244e6a63bc16b5e83bb8419dbe1b53741d566e56
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 7c8a809e7cd7ed7a461149707cc9e0b2a4a62158
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33857915"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39649523"
 ---
 # <a name="choosing-a-transparent-or-opaque-background-image-editor-for-icons"></a>Wybieranie tła przezroczystego lub nieprzezroczystego (Edytor obrazów dla ikon)
-Podczas przenoszenia lub skopiowane z obrazu pikseli w zaznaczeniu, które odpowiadają bieżący kolor tła są domyślnie przezroczyste; nie ograniczają pikseli w lokalizacji docelowej.  
+Podczas przenoszenia lub skopiowane z obrazu wszystkie piksele w zaznaczeniu, które odpowiadają bieżącym kolorem tła, są domyślnie przezroczysty; nie ograniczają pikseli w lokalizacji docelowej.  
   
- Można przełączyć na tło nieprzezroczyste przezroczyste tło (ustawienie domyślne) i z powrotem. Podczas używania narzędzia wyboru **przezroczyste tło** i **tło nieprzezroczyste** dostępne są opcje w selektorze opcja **edytor obrazów** paska narzędzi (jak pokazano poniżej).  
+ Możesz przełączyć się z przezroczystym tłem (ustawienie domyślne) tło nieprzezroczyste i z powrotem. Korzystając z narzędzia zaznaczania **przezroczyste tło** i **tło nieprzezroczyste** opcje są wyświetlane na **opcji** selektor na **edytora obrazów** paska narzędzi (jak pokazano poniżej).  
   
  ![Opcje w tle &#45; przezroczystości](../windows/media/vcimageeditoropaqtranspback.gif "vcImageEditorOpaqTranspBack")  
-Przezroczyste i nieprzezroczyste opcji paska narzędzi edytora obrazów  
+**Opcje przezroczystości i nieprzezroczyste** na **paska narzędzi edytora obrazów**  
   
-### <a name="to-switch-between-a-transparent-and-opaque-background"></a>Aby przełączyć między tło przezroczyste i nieprzezroczyste  
+### <a name="to-switch-between-a-transparent-and-opaque-background"></a>Aby przełączać się między tło przezroczyste i nieprzezroczyste  
   
-1.  W **edytor obrazów** narzędzi, kliknij przycisk **opcji** selektora, a następnie kliknij odpowiednią tła:  
+1.  W **edytora obrazów** narzędzi, kliknij przycisk **opcji** selektor, a następnie kliknij odpowiednią tła:  
   
-    -   **Tło nieprzezroczyste (IE)**: istniejącego obrazu jest zasłonięty przez wszystkie części zaznaczenia.  
+    -   `Opaque Background (O)`: Istniejącego obrazu jest zasłonięte przez wszystkie części zaznaczenia.  
   
-    -   **Przezroczyste tło T**: istniejący obraz pokazuje za pośrednictwem części zaznaczenie zgodne bieżący kolor tła.  
+    -   `Transparent Background (T)`: Istniejący obraz pokazuje fragmenty zaznaczenia, które odpowiadają bieżącym kolorem tła.  
   
- \- lub -  
+ \- lub —  
   
--   Na **obrazu** menu, wybierz lub wyczyść pole wyboru **Rysowanie nieprzezroczystych**.  
+-   Na **obraz** menu, zaznacz lub wyczyść **Rysowanie nieprzezroczystych**.  
   
- Można zmienić kolor tła, gdy poprzedni wybór jest już w obiekcie do zmiany, które części obrazu są niewidoczne.  
+ Możesz zmienić kolor tła zaznaczenia już w trakcie efekt zmiany, które części obrazu są niewidoczne.  
   
- Aby uzyskać informacje o dodawaniu zasobów do projektów zarządzanych, zobacz [zasobów w aplikacjach pulpitu](/dotnet/framework/resources/index) w *Przewodnik programistów platformy .NET Framework.* Aby uzyskać informacje na ręczne dodanie do projektów zarządzanych plików zasobów, uzyskiwanie dostępu do zasobów, wyświetlanie zasoby statyczne i przypisanie do właściwości ciągów zasobów, zobacz [tworzenie plików zasobów dla aplikacji pulpitu](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Informacje dotyczące globalizacji i lokalizacji zasobów w zarządzanych aplikacjach, zobacz [Globalizing i lokalizacja aplikacji .NET Framework](/dotnet/standard/globalization-localization/index).  
+ Aby uzyskać informacje na temat dodawania zasobów do projektów zarządzanych, zobacz [zasoby w aplikacjach pulpitu](/dotnet/framework/resources/index) w *przewodniku dewelopera .NET Framework*. Aby uzyskać informacji na temat ręcznego dodawania plików zasobów do projektów zarządzanych, uzyskiwania dostępu do zasobów, wyświetlania statycznych zasobów i przypisywania ciągów zasobów do właściwości, zobacz [Creating Resource Files dla aplikacji klasycznych](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Aby uzyskać informacji na temat globalizacja i lokalizacja zasobów w aplikacjach zarządzanych, zobacz [Globalizing i lokalizowanie aplikacji programu .NET Framework](/dotnet/standard/globalization-localization/index).  
   
- Wymagania  
-  
+## <a name="requirements"></a>Wymagania  
  Brak  
   
 ## <a name="see-also"></a>Zobacz też  

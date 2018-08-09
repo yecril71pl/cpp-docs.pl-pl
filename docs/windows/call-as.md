@@ -17,25 +17,25 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 8fb431c6aad10f7e974ed139ddf83cfb0a58d30a
-ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
+ms.openlocfilehash: 73b51afda48fe0653767a40120cc6c0cdc0e831b
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39465873"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39644950"
 ---
 # <a name="callas"></a>call_as
 Włącza [lokalnego](../windows/local-cpp.md) funkcji, które mają być mapowane na funkcję zdalną, więc, że po wywołaniu funkcji zdalnego jest wywoływana funkcja lokalna.  
   
 ## <a name="syntax"></a>Składnia  
   
-```  
+```cpp  
 [ call_as(  
    function  
 ) ]  
 ```  
   
-#### <a name="parameters"></a>Parametry  
+### <a name="parameters"></a>Parametry  
  *— Funkcja*  
  Funkcja lokalna, który ma być wywoływana, gdy zostanie wywołana funkcja zdalnego.  
   
@@ -43,7 +43,7 @@ Włącza [lokalnego](../windows/local-cpp.md) funkcji, które mają być mapowan
  **Call_as** atrybut C++ ma taką samą funkcjonalność jak [call_as](http://msdn.microsoft.com/library/windows/desktop/aa366748) atrybutów w MIDL.  
   
 ## <a name="example"></a>Przykład  
- Poniższy kod pokazuje, jak można użyć **call_as** na mapowanie funkcji nonremotable (**f1**) do funkcji może być zastosowana zdalnie (**Remf1**):  
+ Poniższy kod pokazuje, jak można użyć **call_as** na mapowanie funkcji nonremotable (`f1`) do funkcji może być zastosowana zdalnie (`Remf1`):  
   
 ```cpp  
 // cpp_attr_ref_call_as.cpp  

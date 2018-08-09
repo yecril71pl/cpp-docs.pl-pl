@@ -13,25 +13,25 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: af936151b221b11c88f6dd054779b1a74fa50571
-ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
+ms.openlocfilehash: 54c4e97458e1a7322d84e012ea5609d3e29bfb0a
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39570551"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39647316"
 ---
 # <a name="enum-class--c-component-extensions"></a>enum class (C++ Component Extensions)
 Deklaruje wyliczenie w zakresie przestrzeni nazw, która jest typ zdefiniowany przez użytkownika, składających się z szeregu nazwanych stałych zwanych wyliczeniami.  
   
 ## <a name="all-runtimes"></a>Wszystkie środowiska wykonawcze  
- **Uwagi**  
+### <a name="remarks"></a>Uwagi
   
  C + +/ CX i C + +/ interfejsu wiersza polecenia **klasy publicznym typie wyliczeniowym** i **klasa wyliczeniowa prywatnej** które są podobne do standardowego języka C++ **klasa wyliczeniowa** z dodatkową dostępność Specyfikator. W obszarze **/CLR**, C ++ 11 **klasa wyliczeniowa** typ jest dozwolone, ale spowoduje wygenerowanie ostrzeżenia C4472, który jest przeznaczony do upewnij się, że naprawdę chcesz typu wyliczeniowego ISO i nie C + +/ CX i C + +/ interfejsu wiersza polecenia typu. Aby uzyskać więcej informacji na temat ISO Standard C++ **wyliczenia** — słowo kluczowe, zobacz [wyliczenia](../cpp/enumerations-cpp.md).  
   
 ## <a name="windows-runtime"></a>Środowisko wykonawcze systemu Windows  
- **Składnia**  
+### <a name="syntax"></a>Składnia  
   
-```  
+```cpp  
       access  
       enum class  
       enumeration-identifier  
@@ -39,8 +39,7 @@ Deklaruje wyliczenie w zakresie przestrzeni nazw, która jest typ zdefiniowany p
 accessenum structenumeration-identifier[:underlying-type] { enumerator-list } [var];  
 ```  
   
- **Parametry**  
-  
+### <a name="parameters"></a>Parametry  
  *Dostęp do*  
  Dostępność wyliczenia, które mogą być **publicznych** lub **prywatnej**.  
   
@@ -60,7 +59,7 @@ accessenum structenumeration-identifier[:underlying-type] { enumerator-list } [v
  *var*  
  (Opcjonalnie) Nazwa zmiennej typu wyliczenia.  
   
- **Uwagi**  
+### <a name="remarks"></a>Uwagi 
   
  Aby uzyskać więcej informacji i przykładów, zobacz [wyliczenia](http://msdn.microsoft.com/%20library/windows/apps/hh755820.aspx).  
   
@@ -73,19 +72,19 @@ accessenum structenumeration-identifier[:underlying-type] { enumerator-list } [v
 -   Jeśli *typu bazowego* jest `char16`i wartość wyliczenia zakresu od 0xD800 do 0xDFFF, może być reprezentowany wartość. Jednak wartości logicznie niepoprawne, ponieważ reprezentuje on połowa Unicode dwuskładnikowy i nie powinny być wyświetlane w izolacji.  
   
 ### <a name="requirements"></a>Wymagania  
- — Opcja kompilatora: **/ZW**  
+ — Opcja kompilatora: `/ZW`  
   
 ## <a name="common-language-runtime"></a>środowiska uruchomieniowe w trakcie wykonania 
- **Składnia**  
+### <a name="syntax"></a>Składnia
   
-```  
+```cpp  
       access  
       enum class  
       name [:type] { enumerator-list } var;  
 accessenum structname [:type] { enumerator-list } var;  
 ```  
   
- **Parametry**  
+ ### <a name="parameters"></a>Parametry  
   
  *Dostęp do*  
  Dostępność wyliczenia. Może być **publicznych** lub **prywatnej**.  
@@ -102,7 +101,7 @@ accessenum structname [:type] { enumerator-list } var;
  *var* (opcjonalnie)  
  Nazwa zmiennej typu wyliczenia.  
   
- **Uwagi**  
+### <a name="remarks"></a>Uwagi 
   
  **Klasa wyliczeniowa** i **enum struct** są równoważne deklaracji.  
   
@@ -163,13 +162,13 @@ int main() {
   
  czy emitować następujące opcje w MSIL dla sygnatury funkcji:  
   
-```  
+```cpp  
 void f(int32);  
 ```  
   
  Jednak w bieżącej wersji kompilatora standardowa wyliczenia jest emitowane, jako wyliczenie zarządzane przy użyciu [NativeEnumAttribute] i następujące opcje w MSIL dla sygnatury funkcji:  
   
-```  
+```cpp  
 void f(E)  
 ```  
   
@@ -180,12 +179,9 @@ void f(E)
 -   [Podstawowym typem wyliczenia](../dotnet/how-to-define-and-consume-enums-in-cpp-cli.md)  
   
 ### <a name="requirements"></a>Wymagania  
- — Opcja kompilatora:   **/CLR**  
+ — Opcja kompilatora: `/clr`  
   
 ### <a name="examples"></a>Przykłady  
- **Przykład**  
-  
- desc  
   
 ```cpp  
 // mcppv2_enum_2.cpp  
@@ -215,8 +211,6 @@ int main()
    System::Console::WriteLine(o);  
 }   
 ```  
-  
- **Output**  
   
 ```Output  
 no automatic conversion to int: b  

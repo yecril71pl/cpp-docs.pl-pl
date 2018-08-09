@@ -18,46 +18,44 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 03577dbf831c21ec9878a787d937d39b5e8bcd66
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 20dc5eb7af4195c9861d09761da245cdd5d3217d
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33890130"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39652217"
 ---
 # <a name="sizing-individual-controls"></a>Ustalanie rozmiaru pojedynczych formantów
-Zmień rozmiar formantu za pomocą uchwytów zmiany rozmiaru. Gdy wskaźnik myszy znajduje się na uchwyt zmiany rozmiaru, zmiany kształtu, aby wskazać z instrukcjami, w których może być zmieniony rozmiar formantu. Uchwyty rozmiaru Active są wypełnione; w przypadku pustego uchwyt zmiany rozmiaru formantu nie można zmienić rozmiaru tej osi.  
+Zmień rozmiar kontrolki za pomocą uchwytów zmiany rozmiaru. Po umieszczeniu wskaźnika na uchwyt zmiany rozmiaru, zmienia kształt, aby wskazać kierunki, w których kontrolki można zmienić rozmiar. Uchwyty zmiany rozmiaru Active są wypełnione; Jeśli uchwyt zmiany rozmiaru jest pusty, formant nie można zmienić rozmiaru na tej osi.  
   
- Możesz również zmienić rozmiar formantu przez formant prowadnice i marginesy przyciągania, lub przenosząc jedną przypięty przewodnik od innego i kontroli.  
+ Możesz również zmienić rozmiar formantu przez przyciągania formant do prowadnic i marginesów lub przenosząc jeden przypięty kontroli i przewodnik od innego.  
   
-### <a name="to-size-a-control"></a>Rozmiar formantu  
+### <a name="to-size-a-control"></a>Rozmiar kontrolki  
   
-1.  Wybierz kontrolkę.  
+1.  Zaznacz formant.  
   
-2.  Przeciągnij uchwyt zmiany rozmiaru, aby zmienić rozmiar formantu:  
+2.  Przeciągnij uchwyty zmiany rozmiaru, aby zmienić rozmiar formantu:  
   
-    -   Uchwyty zmiany rozmiaru u góry i u strony Zmień rozmiar pozioma lub pionowa.  
+    -   Uchwyty zmiany rozmiaru u góry i strony Zmień rozmiar poziomej lub pionowej.  
   
-    -   Uchwyty zmiany rozmiaru w narożnikach Zmień rozmiar zarówno w poziomie, jak i w pionie.  
+    -   Uchwyty zmiany rozmiaru w rogach Zmień rozmiar zarówno w poziomie, jak i w pionie.  
   
     > [!TIP]
-    >  Można zmienić rozmiar formantu jednostki jednego okna dialogowego (DLU) w czasie, przytrzymując naciśnięty klawisz SHIFT i używając klawiszy prawo i Strzałka w dół.  
+    >  Możesz zmienić rozmiar formantu jednostki jednego okna dialogowego (DLU) w danym momencie, przytrzymując **Shift** kluczy i korzystać z funkcji **Strzałka w prawo** i **strzałkę w dół** kluczy.  
   
-### <a name="to-automatically-size-a-control-to-fit-the-text-within-it"></a>Aby automatycznie rozmiar formantu w celu dopasowania do tekstu wewnątrz  
+### <a name="to-automatically-size-a-control-to-fit-the-text-within-it"></a>Aby automatycznie rozmiar formantu do tekstu w nim  
   
 1.  Wybierz **rozmiar do zawartości** z **Format** menu.  
   
- \- lub -  
+ \- lub —  
   
--   Kliknij prawym przyciskiem myszy formantu i wybierz polecenie **rozmiar do zawartości** z menu skrótów.  
+-   Kliknij prawym przyciskiem myszy formant, a następnie wybierz **rozmiar do zawartości** z menu skrótów.  
   
- Aby uzyskać informacje o dodawaniu zasobów do projektów zarządzanych, zobacz [zasobów w aplikacjach pulpitu](/dotnet/framework/resources/index) w *Przewodnik programistów platformy .NET Framework.* Aby uzyskać informacje na ręczne dodanie do projektów zarządzanych plików zasobów, uzyskiwanie dostępu do zasobów, wyświetlanie zasoby statyczne i przypisanie do właściwości ciągów zasobów, zobacz [tworzenie plików zasobów dla aplikacji pulpitu](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Informacje dotyczące globalizacji i lokalizacji zasobów w zarządzanych aplikacjach, zobacz [Globalizing i lokalizacja aplikacji .NET Framework](/dotnet/standard/globalization-localization/index).  
+ Aby uzyskać informacje na temat dodawania zasobów do projektów zarządzanych, zobacz [zasoby w aplikacjach pulpitu](/dotnet/framework/resources/index) w *przewodniku dewelopera .NET Framework*. Aby uzyskać informacji na temat ręcznego dodawania plików zasobów do projektów zarządzanych, uzyskiwania dostępu do zasobów, wyświetlania statycznych zasobów i przypisywania ciągów zasobów do właściwości, zobacz [Creating Resource Files dla aplikacji klasycznych](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Aby uzyskać informacji na temat globalizacja i lokalizacja zasobów w aplikacjach zarządzanych, zobacz [Globalizing i lokalizowanie aplikacji programu .NET Framework](/dotnet/standard/globalization-localization/index).  
   
- Wymagania  
-  
+## <a name="requirements"></a>Wymagania  
  Win32  
   
 ## <a name="see-also"></a>Zobacz też  
  [Formanty w oknach dialogowych](../windows/controls-in-dialog-boxes.md)   
  [Kontrolki](../mfc/controls-mfc.md)
-

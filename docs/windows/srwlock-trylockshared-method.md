@@ -1,5 +1,5 @@
 ---
-title: SRWLock::TryLockShared — metoda | Dokumentacja firmy Microsoft
+title: SRWLock::TryLockShared, metoda | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 19ff9324f946f48f201678f9c9e7403ba774b2c0
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 289fa1fbec61140e213bef7219e440c8177e19e5
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33892286"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39645815"
 ---
 # <a name="srwlocktrylockshared-method"></a>SRWLock::TryLockShared — Metoda
-Próby uzyskania obiektu srwlock — w trybie udostępniania dla bieżącego lub określonego obiektu srwlock —.  
+Próbuje pobrać **SRWLock** obiektu w tryb udostępniania dla bieżącej lub określonej **SRWLock** obiektu.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -36,17 +36,17 @@ WRL_NOTHROW static SyncLockShared TryLockShared(
 );  
 ```  
   
-#### <a name="parameters"></a>Parametry  
- `lock`  
- Wskaźnik do obiektu srwlock —.  
+### <a name="parameters"></a>Parametry  
+ *lock*  
+ Wskaźnik do **SRWLock** obiektu.  
   
 ## <a name="return-value"></a>Wartość zwracana  
- W przypadku powodzenia obiektu srwlock — w trybie udostępniania i wątku wywołującym ma na własność blokady. W przeciwnym razie srwlock — obiekt, którego stan jest nieprawidłowy.  
+ W przypadku powodzenia **SRWLock** obiektu w tryb udostępniania i Wątek wywołujący przejmuje na własność blokadę. W przeciwnym razie **SRWLock** obiektu, którego stan jest nieprawidłowy.  
   
 ## <a name="requirements"></a>Wymagania  
  **Nagłówek:** corewrappers.h  
   
- **Namespace:** Microsoft::wrl:: wrappers —  
+ **Namespace:** Microsoft::wrl:: wrappers  
   
 ## <a name="see-also"></a>Zobacz też  
  [SRWLock, klasa](../windows/srwlock-class.md)

@@ -1,5 +1,5 @@
 ---
-title: SimpleActivationFactory::GetTrustLevel — metoda | Dokumentacja firmy Microsoft
+title: SimpleActivationFactory::GetTrustLevel, metoda | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,15 +15,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: b08ce574a8370eb0029a702f8fa4a4b12c6e93c1
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 22fa30a3662897b171245da194573ec17da2f64e
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33892621"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39645191"
 ---
 # <a name="simpleactivationfactorygettrustlevel-method"></a>SimpleActivationFactory::GetTrustLevel — Metoda
-Pobiera poziom zaufania wystąpienia z klasą określoną przez `Base` parametr szablonu klasy.  
+Pobiera poziom zaufania wystąpienia klasy określonej przez `Base` parametru szablonu klasy.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -33,9 +33,9 @@ STDMETHOD(
 )(_Out_ TrustLevel* trustLvl);  
 ```  
   
-#### <a name="parameters"></a>Parametry  
- `trustLvl`  
- Po tej operacji zakończeniu poziom zaufania bieżącego obiektu klasy.  
+### <a name="parameters"></a>Parametry  
+ *trustLvl*  
+ Gdy ta operacja zostanie ukończone, poziom zaufania bieżącego obiektu klasy.  
   
 ## <a name="return-value"></a>Wartość zwracana  
  Zawsze S_OK.  
@@ -43,7 +43,7 @@ STDMETHOD(
 ## <a name="requirements"></a>Wymagania  
  **Nagłówek:** module.h  
   
- **Namespace:** Microsoft::wrl —  
+ **Namespace:** Microsoft::WRL  
   
 ## <a name="see-also"></a>Zobacz też  
  [SimpleActivationFactory, klasa](../windows/simpleactivationfactory-class.md)

@@ -20,12 +20,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 7237366daeaa71ba423aa069bb634b1b9f6bc667
-ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
+ms.openlocfilehash: 659c974fccec0e54dc42d6d1a5bdb019747f81ff
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39569745"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39647027"
 ---
 # <a name="how-to-add-mfc-support-to-resource-script-files"></a>Porady: dodawanie obsługi MFC do plików skryptu zasobu
 Zwykle podczas kompilowania aplikacji MFC dla Windows przy użyciu [Kreator aplikacji MFC](../mfc/reference/mfc-application-wizard.md), Kreator generuje zestaw podstawowych plików (w tym pliku zasobu skryptu (.rc)), który zawiera podstawowe funkcje programu Microsoft Foundation klasy (MFC). Jednak jeśli edytujesz plik .rc dla aplikacji Windows, która nie jest oparty na bibliotece MFC, następujące funkcje specyficzne dla platformy MFC nie są dostępne:  
@@ -55,7 +55,6 @@ Zwykle podczas kompilowania aplikacji MFC dla Windows przy użyciu [Kreator apli
     >  Oprócz ustawienia tej flagi, plik .rc musi być częścią projektu MFC. Na przykład, ustawienie tylko **tryb MFC** do **True** w pliku .rc w systemie Win32 projektu nie daje żadnych funkcji MFC.  
   
 ## <a name="requirements"></a>Wymagania  
-  
  MFC  
   
 ## <a name="see-also"></a>Zobacz też  

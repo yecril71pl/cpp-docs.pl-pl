@@ -23,37 +23,37 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 265c6c1931b0e48399039e507be45c73c710142d
-ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
+ms.openlocfilehash: 271a56881f2710a7fb7c18dadeb7c36d4d6a3232
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39568894"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39647999"
 ---
 # <a name="guide-settings-dialog-box"></a>Okno dialogowe Ustawienia prowadnic
 ## <a name="layout-guides"></a>Układ prowadnic  
  Wyświetla ustawienia prowadnic układu.  
   
- **Brak**  
+### <a name="none"></a>Brak  
   
  Ukrywa narzędzia układu.  
   
- **Linijki i prowadnice**  
+### <a name="rulers-and-guides"></a>Linijki i prowadnice  
   
  Po włączeniu narzędzia układ; dodaje linijki linie pomocnicze można umieścić w linijki. Przewodniki domyślne są marginesy, które można przenosić, przeciągając. Kliknij linijki umieścić przewodnik. Formanty "przyciągana" do przewodników po przeniesieniu kontroli nad lub obok nich. Formanty również przechodzić z przewodnikiem po podłączeniu do niego. Formant jest dołączony do przewodnika po każdej stronie, gdy wskazówki są przenoszone, zmieni się rozmiar kontrolki.  
   
- **Siatka**  
+### <a name="grid"></a>Siatka  
   
  Tworzy siatki układu. Nowe kontrolki automatycznie zostaną wyrównane do siatki.  
   
 ## <a name="grid-spacing"></a>Odstępy między liniami siatki  
  Wyświetla ustawienia odstępy między liniami siatki w jednostkach pola okna dialogowego (Dlu).  
   
- **Szerokość: Dlu**  
+### <a name="width-dlus"></a>Szerokość: Dlu  
   
  Ustawia szerokość siatki układu w Dlu. Poziomy DLU jest średniej szerokości czcionki okno dialogowe podzielona przez cztery.  
   
- **Wysokość: Dlu**  
+### <a name="height-dlus"></a>Wysokość: Dlu 
   
  Określa wysokość siatki układu w Dlu. DLU pionowe jest średnią wysokość czcionka pola okna dialogowego podzielić przez 8.  
   

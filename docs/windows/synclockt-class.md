@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: e05a1be5d84db52573d3c3235936ecf82dde5894
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: f6b27f45d3a9b9b308a56e1ac8f945969f8c49e2
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33892855"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39643429"
 ---
 # <a name="synclockt-class"></a>SyncLockT — Klasa
 Obsługuje infrastrukturę biblioteki WRL i nie jest przeznaczona do użycia bezpośrednio w kodzie.  
@@ -36,14 +36,14 @@ template <
 class SyncLockT;  
 ```  
   
-#### <a name="parameters"></a>Parametry  
- `SyncTraits`  
- Typ, który może przejąć na własność zasobu.  
+### <a name="parameters"></a>Parametry  
+ *SyncTraits*  
+ Typ, który można przejmować na własność zasobu.  
   
 ## <a name="remarks"></a>Uwagi  
- Reprezentuje typ, które może podjąć wyłącznych lub własność zasobu udostępnionego.  
+ Reprezentuje typ, który może zająć wyłączne lub współużytkować własność zasobu.  
   
- Synclockt — klasa jest używana na przykład pomagających w realizacji [srwlock —](../windows/srwlock-class.md) klasy.  
+ **SyncLockT** klasa jest używana, na przykład, pomagających w realizacji [SRWLock](../windows/srwlock-class.md) klasy.  
   
 ## <a name="members"></a>Elementy członkowskie  
   
@@ -51,27 +51,27 @@ class SyncLockT;
   
 |Nazwa|Opis|  
 |----------|-----------------|  
-|[SyncLockT::SyncLockT, konstruktor](../windows/synclockt-synclockt-constructor.md)|Inicjuje nowe wystąpienie klasy SyncLockT.|  
-|[SyncLockT::~SyncLockT, destruktor](../windows/synclockt-tilde-synclockt-destructor.md)|Deinitializes wystąpienia klasy SyncLockT.|  
+|[SyncLockT::SyncLockT, konstruktor](../windows/synclockt-synclockt-constructor.md)|Inicjuje nowe wystąpienie klasy **SyncLockT** klasy.|  
+|[SyncLockT::~SyncLockT, destruktor](../windows/synclockt-tilde-synclockt-destructor.md)|Wyłącza wystąpienie **SyncLockT** klasy.|  
   
 ### <a name="protected-constructors"></a>Konstruktory chronione  
   
 |Nazwa|Opis|  
 |----------|-----------------|  
-|[SyncLockT::SyncLockT, konstruktor](../windows/synclockt-synclockt-constructor.md)|Inicjuje nowe wystąpienie klasy SyncLockT.|  
+|[SyncLockT::SyncLockT, konstruktor](../windows/synclockt-synclockt-constructor.md)|Inicjuje nowe wystąpienie klasy **SyncLockT** klasy.|  
   
 ### <a name="public-methods"></a>Metody publiczne  
   
 |Nazwa|Opis|  
 |----------|-----------------|  
-|[SyncLockT::IsLocked, metoda](../windows/synclockt-islocked-method.md)|Wskazuje, czy bieżący obiekt SyncLockT jest właścicielem zasobu; Obiekt SyncLockT jest *zablokowany*.|  
-|[SyncLockT::Unlock, metoda](../windows/synclockt-unlock-method.md)|Zwalnia kontrolę nad zasobem posiadanych przez bieżący obiekt SyncLockT, jeśli istnieją.|  
+|[SyncLockT::IsLocked, metoda](../windows/synclockt-islocked-method.md)|Wskazuje, czy bieżący **SyncLockT** obiekt posiada zasób; czyli, **SyncLockT** obiekt jest *zablokowane*.|  
+|[SyncLockT::Unlock, metoda](../windows/synclockt-unlock-method.md)|Zwalnia kontrolę nad zasobów przechowywanych przez bieżącą **SyncLockT** obiektu, jeśli istnieje.|  
   
-### <a name="protected-data-members"></a>Dane chronione elementy członkowskie  
+### <a name="protected-data-members"></a>Chronione elementy członkowskie danych  
   
 |Nazwa|Opis|  
 |----------|-----------------|  
-|[SyncLockT::sync_, składowa danych](../windows/synclockt-sync-data-member.md)|Przechowuje podstawowej zasobu reprezentowanego przez synclockt — klasa.|  
+|[SyncLockT::sync_, składowa danych](../windows/synclockt-sync-data-member.md)|Przechowuje bazowego zasobu reprezentowanego przez **SyncLockT** klasy.|  
   
 ## <a name="inheritance-hierarchy"></a>Hierarchia dziedziczenia  
  `SyncLockT`  

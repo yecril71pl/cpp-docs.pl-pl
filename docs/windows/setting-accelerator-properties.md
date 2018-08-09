@@ -19,28 +19,26 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 5198fc1958863d3b5ad560ffeb8c5576506e9e46
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 5337378b54c2109d05e28cb9d1bfed82f81913f3
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33888849"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39652701"
 ---
 # <a name="setting-accelerator-properties"></a>Ustawianie właściwości klawiszy skrótów
-Można ustawić właściwości klawiszy skrótów w [okna właściwości](/visualstudio/ide/reference/properties-window) w dowolnym momencie. Edytor klawiszy skrótów umożliwia także modyfikowanie właściwości klawiszy skrótów w tabeli akceleratora. Zmiany wprowadzone przy użyciu okna właściwości lub Edytor klawiszy skrótów mają ten sam rezultat: zmiany są natychmiast odzwierciedlone w tabeli akceleratora.  
+Można ustawić właściwości klawiszy skrótów w [okno właściwości](/visualstudio/ide/reference/properties-window) w dowolnym momencie. Edytor klawiszy skrótów umożliwia również modyfikowanie właściwości klawiszy skrótów w tabeli klawiszy skrótu. Zmiany wprowadzone przy użyciu okna właściwości lub Edytor klawiszy skrótów mają ten sam wynik: zmiany są natychmiast odzwierciedlane w tabeli klawiszy skrótu.  
   
  Istnieją trzy właściwości dla każdego akceleratora [identyfikator](https://www.microsoftonedoc.com/#/organizations/e6f6a65cf14f462597b64ac058dbe1d0/projects/3fedad16-eaf1-41a6-8f96-0c1949c68f32/containers/a3daf831-1c5f-4bbe-964d-503870caf874/tocpaths/3487f185-de96-4b1d-87db-034a52223160/locales/en-US):  
   
--   [Modifier — właściwość](../windows/accelerator-modifier-property.md) formant kombinacji z klawiszem akceleratora.  
+-   [Właściwość modyfikatora](../windows/accelerator-modifier-property.md) formant kombinacje klawiszy dla akceleratora.  
   
     > [!NOTE]
-    >  W oknie właściwości tej właściwości jest wyświetlany jako trzech oddzielnych właściwości logiczne, które mogą być kontrolowane niezależnie: Alt, Ctrl i Shift.  
+    >  W oknie dialogowym właściwości właściwość ta pojawia się jako trzy osobne właściwości logiczne, które mogą być kontrolowane niezależnie: **Alt**, **Ctrl**, i **Shift**.  
   
--   [Właściwości kluczowej](../windows/accelerator-key-property.md) ustawia rzeczywisty klucz do użycia jako akcelerator.  
+-   [Właściwości klucza](../windows/accelerator-key-property.md) ustawia rzeczywistego klucza do użycia jako akcelerator.  
   
--   [Type — właściwość](../windows/accelerator-type-property.md) Określa, czy klucz jest interpretowana jako wirtualny (VIRTKEY) lub ASCII/ANSI.  
-  
-
+-   [Właściwość typu](../windows/accelerator-type-property.md) Określa, czy klucz jest interpretowane jako wirtualny (VIRTKEY) lub ASCII/ANSI.  
   
 ## <a name="requirements"></a>Wymagania  
  Win32  

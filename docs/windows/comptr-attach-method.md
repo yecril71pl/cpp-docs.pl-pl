@@ -17,25 +17,25 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: f852f8f360be90e7d17e9aaa09e7d584ad98fc33
-ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
+ms.openlocfilehash: 78b5039268bd122ade815ed6040a1df546e0f293
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39461071"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39641333"
 ---
 # <a name="comptrattach-method"></a>ComPtr::Attach — Metoda
 To skojarzenie **ComPtr** z typu interfejsu, określonego przez bieżący parametrowi typu szablonu.  
   
 ## <a name="syntax"></a>Składnia  
   
-```  
+```cpp  
 void Attach(  
    _In_opt_ InterfaceType* other  
 );  
 ```  
   
-#### <a name="parameters"></a>Parametry  
+### <a name="parameters"></a>Parametry  
  *other*  
  Typ interfejsu.  
   

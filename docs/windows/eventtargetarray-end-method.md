@@ -1,5 +1,5 @@
 ---
-title: EventTargetArray::End — Metoda | Dokumentacja firmy Microsoft
+title: EventTargetArray::End, metoda | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,24 +17,24 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 00827d42bb01263d6b4fd9b5aea3b0fc7f7c76e1
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 5e64cfcd0ad8a71a67815b592908d57725fef9f1
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33874268"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39648649"
 ---
 # <a name="eventtargetarrayend-method"></a>EventTargetArray::End — Metoda
 Obsługuje infrastrukturę biblioteki WRL i nie jest przeznaczona do użycia bezpośrednio w kodzie.  
   
 ## <a name="syntax"></a>Składnia  
   
-```  
+```cpp  
 ComPtr<IUnknown>* End();  
 ```  
   
 ## <a name="return-value"></a>Wartość zwracana  
- Adres ostatniego elementu w tablicy wewnętrznej procedury obsługi zdarzeń.  
+ Adres do ostatniego elementu w tablicy wewnętrznej procedury obsługi zdarzeń.  
   
 ## <a name="remarks"></a>Uwagi  
  Pobiera adres ostatniego elementu w tablicy wewnętrznej procedury obsługi zdarzeń.  
@@ -42,7 +42,7 @@ ComPtr<IUnknown>* End();
 ## <a name="requirements"></a>Wymagania  
  **Nagłówek:** event.h  
   
- **Namespace:** Microsoft::wrl:: details —  
+ **Namespace:** Microsoft::wrl:: details  
   
 ## <a name="see-also"></a>Zobacz też  
  [Eventtargetarray — klasa](../windows/eventtargetarray-class.md)   

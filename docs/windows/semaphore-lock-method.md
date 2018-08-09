@@ -1,5 +1,5 @@
 ---
-title: Semaphore::Lock — Metoda | Dokumentacja firmy Microsoft
+title: Semaphore::Lock, metoda | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 80b4db212236da6c9fb320ff5a5e04f4e9f4a4c6
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 39f2fe48b1e7a1a7c6b875b988d861d5fb48698a
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33892478"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39642149"
 ---
 # <a name="semaphorelock-method"></a>Semaphore::Lock — Metoda
-Czeka, aż do bieżącego obiektu lub obiektu semafora skojarzonego z określonego dojścia jest w stanie sygnałowego lub przed upływem określonego limitu czasu.  
+Czeka, aż do bieżącego obiektu lub **semafora** obiekt skojarzony z określone dojście jest w stanie sygnałowego lub przed upływem określonego limitu czasu.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -40,21 +40,20 @@ static SyncLock Lock(
 );  
 ```  
   
-#### <a name="parameters"></a>Parametry  
- `milliseconds`  
- Interwał limitu czasu w milisekundach. Wartość domyślna to bez ograniczeń czasowych, która oczekuje na nieograniczony czas.  
+### <a name="parameters"></a>Parametry  
+ *MS*  
+ Interwał limitu czasu w milisekundach. Wartość domyślna to NIESKOŃCZONE, który oczekuje w nieskończoność.  
   
- `h`  
- Dojście do obiektu semafora.  
+ *h*  
+ Dojście do **semafora** obiektu.  
   
 ## <a name="return-value"></a>Wartość zwracana  
- Details::SyncLockWithStatusT\<HandleTraits::SemaphoreTraits >  
+ A `Details::SyncLockWithStatusT<HandleTraits::SemaphoreTraits>`  
   
 ## <a name="requirements"></a>Wymagania  
  **Nagłówek:** corewrappers.h  
   
- **Namespace:** Microsoft::wrl:: wrappers —  
+ **Namespace:** Microsoft::wrl:: wrappers  
   
 ## <a name="see-also"></a>Zobacz też  
-[Semaphore, klasa](../windows/semaphore-class.md)
- 
+ [Semaphore, klasa](../windows/semaphore-class.md)

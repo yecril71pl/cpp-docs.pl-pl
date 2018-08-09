@@ -17,19 +17,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 18ce213d6c4bedd0bcaa2be1af33281ae69f6ad1
-ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
+ms.openlocfilehash: 43e4932f93c4b9954343df2aecd4db3b13ebc147
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39461508"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39649208"
 ---
 # <a name="activationfactory-class"></a>ActivationFactory — Klasa
 Umożliwia co najmniej jedną klasę na uaktywnianie przez środowisko wykonawcze Windows.  
   
 ## <a name="syntax"></a>Składnia  
   
-```  
+```cpp  
 template <  
    typename I0 = Details::Nil,  
    typename I1 = Details::Nil,  
@@ -38,7 +38,7 @@ template <
 class ActivationFactory : public Details::RuntimeClass<typename Details::InterfaceListHelper<IActivationFactory, I0, I1, I2, Details::Nil>::TypeT, RuntimeClassFlags<WinRt | InhibitWeakReference>, false>;  
 ```  
   
-#### <a name="parameters"></a>Parametry  
+### <a name="parameters"></a>Parametry  
  *I0*  
  Interfejsu zerowego.  
   
@@ -74,7 +74,7 @@ class ActivationFactory : public Details::RuntimeClass<typename Details::Interfa
 |[ActivationFactory::AddRef, metoda](../windows/activationfactory-addref-method.md)|Zwiększa liczbę odwołań bieżącego **activationfactory —** obiektu.|  
 |[ActivationFactory::GetIids, metoda](../windows/activationfactory-getiids-method.md)|Pobiera tablicę zaimplementowanego interfejsu identyfikatorów.|  
 |[ActivationFactory::GetRuntimeClassName, metoda](../windows/activationfactory-getruntimeclassname-method.md)|Pobiera nazwę klasy środowiska uruchomieniowego, obiektu, który bieżącego **activationfactory —** tworzy wystąpienie.|  
-|[ActivationFactory::GetTrustLevel, metoda](../windows/activationfactory-gettrustlevel-method.md)|Pobiera obiektu, który tworzy wystąpienie bieżącego activationfactory — poziom zaufania.|  
+|[ActivationFactory::GetTrustLevel, metoda](../windows/activationfactory-gettrustlevel-method.md)|Pobiera poziom zaufania, obiektu, który bieżącego **activationfactory —** tworzy wystąpienie.|  
 |[ActivationFactory::QueryInterface, metoda](../windows/activationfactory-queryinterface-method.md)|Pobiera wskaźnik do określonego interfejsu.|  
 |[ActivationFactory::Release, metoda](../windows/activationfactory-release-method.md)|Dekrementuje liczbę odwołań bieżącego **activationfactory —** obiektu.|  
   

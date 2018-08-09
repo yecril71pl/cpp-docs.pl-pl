@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 2de377bc31898c91bb6db63e160b536428ae8d0e
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: f842d27f6b0dfc72a48f1bc7fbcb8fcccb0c26e3
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33890970"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39650407"
 ---
 # <a name="vararg"></a>vararg
 Określa, że funkcja przyjmuje zmienną liczbę argumentów.  
@@ -30,18 +30,16 @@ Określa, że funkcja przyjmuje zmienną liczbę argumentów.
 ## <a name="syntax"></a>Składnia  
   
 ```  
-  
 [vararg]  
-  
 ```  
   
 ## <a name="remarks"></a>Uwagi  
- **Vararg** atrybut C++ ma te same funkcje co [vararg](http://msdn.microsoft.com/library/windows/desktop/aa367304) MIDL atrybutu.  
+ **Vararg** atrybut C++ ma taką samą funkcjonalność jak [vararg](http://msdn.microsoft.com/library/windows/desktop/aa367304) atrybutów w MIDL.  
   
 ## <a name="example"></a>Przykład  
- Poniższy kod przedstawia korzystanie z **vararg**:  
+ Poniższy kod pokazuje wykorzystanie **vararg**:  
   
-```  
+```cpp  
 // cpp_attr_ref_vararg.cpp  
 // compile with: /LD  
 #include "unknwn.h"  
@@ -57,7 +55,7 @@ __interface X : public IUnknown
   
 ## <a name="requirements"></a>Wymagania  
   
-### <a name="attribute-context"></a>Atrybut kontekstu  
+### <a name="attribute-context"></a>Kontekst atrybutu  
   
 |||  
 |-|-|  
@@ -66,7 +64,7 @@ __interface X : public IUnknown
 |**Wymaganych atrybutów**|Brak|  
 |**Nieprawidłowe atrybuty**|Brak|  
   
- Aby uzyskać więcej informacji na temat konteksty atrybutu, zobacz [konteksty atrybutu](../windows/attribute-contexts.md).  
+ Aby uzyskać więcej informacji na temat konteksty atrybutu zobacz [konteksty atrybutu](../windows/attribute-contexts.md).  
   
 ## <a name="see-also"></a>Zobacz też  
  [Atrybuty IDL](../windows/idl-attributes.md)   

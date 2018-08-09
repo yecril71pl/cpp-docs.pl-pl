@@ -1,5 +1,5 @@
 ---
-title: Rozmieszczenie formantów w oknach dialogowych | Dokumentacja firmy Microsoft
+title: Rozmieszczenie kontrolek w oknach dialogowych | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,19 +17,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: a449fef82b536cdea484a49a52fece86fac21604
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 3414c6856619f602ec21297ebb330e060e98906b
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33858490"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39645776"
 ---
 # <a name="arrangement-of-controls-on-dialog-boxes"></a>Rozmieszczenie formantów w oknach dialogowych
-Edytor okien dialogowych udostępnia narzędzia układu, które wyrównywanie i rozmiaru formantów automatycznie. W przypadku większości zadań można użyć [paska narzędzi edytora okien dialogowych](../windows/showing-or-hiding-the-dialog-editor-toolbar.md). Wszystkie polecenia paska narzędzi edytora okien dialogowych są również dostępne w Format menu, a większość [klawiszy skrótów](../windows/accelerator-keys-for-the-dialog-editor.md).  
+**Okna dialogowego** edytor oferuje narzędzia układu, wyrównanie, które automatycznie rozmiaru formantów. W przypadku większości zadań, można użyć [paska narzędzi edytora okien dialogowych](../windows/showing-or-hiding-the-dialog-editor-toolbar.md). Wszystkie **Edytor okien dialogowych** są również dostępne na pasku narzędzi, polecenia **Format** menu, a większość [klawiszy skrótów](../windows/accelerator-keys-for-the-dialog-editor.md).  
   
- Wiele poleceń układu dla okien dialogowych są dostępne tylko wtedy, gdy wybrano więcej niż jeden formant. Można wybrać jeden lub kilka formantów, a gdy więcej niż jeden formant jest zaznaczona, pierwsza z nich wybrane jest domyślnie formantu "dominującego". Aby uzyskać informacje dotyczące wybierania kontrolek i formantu dominującego, zobacz [wybranie kontrolki](../windows/selecting-controls.md).  
+ Wiele poleceń układu dla okien dialogowych są dostępne tylko w przypadku wybrania więcej niż jeden formant. Można wybrać jeden lub wiele kontrolek, a po wybraniu więcej niż jeden formant pierwszej, którą wybierzesz jest domyślnie formant "dominujący". Więcej informacji o dobieraniu, formantów i formant dominujący, zobacz [formanty wybierając](../windows/selecting-controls.md).  
   
- Lokalizacja, wysokość i szerokość bieżącego formantu są wyświetlane w prawym dolnym rogu paska stanu. Po wybraniu całe okno dialogowe pasek stanu wyświetla położenie okna dialogowego jako całości, a jej wysokości i szerokości.  
+ Lokalizację, wysokość i szerokość bieżącego formantu są wyświetlane w prawym dolnym rogu paska stanu. Po wybraniu całe okno dialogowe pasek stanu przedstawia położenie okna dialogowego jako całości, a jego wysokość i szerokość.  
   
 -   [Stany dla Edytora okien dialogowych (prowadnice i siatki)](../windows/dialog-editor-states-guides-and-grids.md)  
   
@@ -45,7 +45,7 @@ Edytor okien dialogowych udostępnia narzędzia układu, które wyrównywanie i 
   
 -   [Zmiana kolejności kart kontrolek](../windows/changing-the-tab-order-of-controls.md)  
   
- Aby uzyskać informacje o dodawaniu zasobów do projektów zarządzanych, zobacz [zasobów w aplikacjach pulpitu](/dotnet/framework/resources/index) w *Przewodnik programistów platformy .NET Framework.* Aby uzyskać informacje na ręczne dodanie do projektów zarządzanych plików zasobów, uzyskiwanie dostępu do zasobów, wyświetlanie zasoby statyczne i przypisanie do właściwości ciągów zasobów, zobacz [tworzenie plików zasobów dla aplikacji pulpitu](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Informacje dotyczące globalizacji i lokalizacji zasobów w zarządzanych aplikacjach, zobacz [Globalizing i lokalizacja aplikacji .NET Framework](/dotnet/standard/globalization-localization/index).  
+ Aby uzyskać informacje na temat dodawania zasobów do projektów zarządzanych, zobacz [zasoby w aplikacjach pulpitu](/dotnet/framework/resources/index) w *przewodniku dewelopera .NET Framework*. Aby uzyskać informacji na temat ręcznego dodawania plików zasobów do projektów zarządzanych, uzyskiwania dostępu do zasobów, wyświetlania statycznych zasobów i przypisywania ciągów zasobów do właściwości, zobacz [Creating Resource Files dla aplikacji klasycznych](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Aby uzyskać informacji na temat globalizacja i lokalizacja zasobów w aplikacjach zarządzanych, zobacz [Globalizing i lokalizowanie aplikacji programu .NET Framework](/dotnet/standard/globalization-localization/index).  
   
 ## <a name="requirements"></a>Wymagania  
  Win32  
@@ -53,4 +53,3 @@ Edytor okien dialogowych udostępnia narzędzia układu, które wyrównywanie i 
 ## <a name="see-also"></a>Zobacz też  
  [Formanty w oknach dialogowych](../windows/controls-in-dialog-boxes.md)   
  [Kontrolki](../mfc/controls-mfc.md)
-

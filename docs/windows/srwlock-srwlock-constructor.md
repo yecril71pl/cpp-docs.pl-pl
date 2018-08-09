@@ -1,5 +1,5 @@
 ---
-title: Srwlock::srwlock — Konstruktor | Dokumentacja firmy Microsoft
+title: SRWLock::SRWLock, Konstruktor | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 51bbd331c240079ccbb241aa970e99dd5c7d79ca
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 941a0b31224b67c9305c41e036d93744b98b915e
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33892494"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39642614"
 ---
 # <a name="srwlocksrwlock-constructor"></a>SRWLock::SRWLock — Konstruktor
-Inicjuje nowe wystąpienie klasy srwlock —.  
+Inicjuje nowe wystąpienie klasy **SRWLock** klasy.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -36,7 +36,7 @@ SRWLock();
 ## <a name="requirements"></a>Wymagania  
  **Nagłówek:** corewrappers.h  
   
- **Namespace:** Microsoft::wrl:: wrappers —  
+ **Namespace:** Microsoft::wrl:: wrappers  
   
 ## <a name="see-also"></a>Zobacz też  
  [SRWLock, klasa](../windows/srwlock-class.md)

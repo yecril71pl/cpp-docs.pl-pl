@@ -1,5 +1,5 @@
 ---
-title: Wyświetlanie i dodawanie formantów ActiveX do okna dialogowego | Dokumentacja firmy Microsoft
+title: Wyświetlanie i dodawanie kontrolek ActiveX do okna dialogowego | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -19,48 +19,46 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 61448cba890c03feaf2d9fcbda5cdb93478f4c04
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: ad663760efb5f969a7b7cf1b14d187b0382197b7
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33891169"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39643981"
 ---
 # <a name="viewing-and-adding-activex-controls-to-a-dialog-box"></a>Wyświetlanie i dodawanie kontrolek ActiveX do okna dialogowego
-Program Visual Studio umożliwia wstawianie formantów ActiveX do użytkownika — okno dialogowe.  
+Program Visual Studio umożliwia wstawianie kontrolki ActiveX z okna dialogowego.  
   
-### <a name="to-see-the-activex-controls-you-have-available"></a>Aby wyświetlić formantów ActiveX posiadanego  
+### <a name="to-see-the-activex-controls-you-have-available"></a>Aby wyświetlić kontrolki ActiveX masz dostępne  
   
-1.  Otwórz okno dialogowe w edytorze okien dialogowych.  
+1.  Otwórz okno dialogowe, w edytorze okien dialogowych.  
   
-2.  Kliknij prawym przyciskiem myszy kliknij w dowolnym miejscu w treści okna dialogowego.  
+2.  Kliknij prawym przyciskiem myszy kliknij w dowolnym miejscu w treści okno dialogowe.  
   
 3.  W menu skrótów kliknij **Wstawianie formantu ActiveX**.  
   
-     [Okno dialogowe Wstaw formant ActiveX](../windows/insert-activex-control-dialog-box.md) wyświetleniu formantów ActiveX w systemie. W dolnej części okna dialogowego jest wyświetlana ścieżka do pliku formantu ActiveX.  
+     [Wstawianie formantu ActiveX, okno dialogowe](../windows/insert-activex-control-dialog-box.md) wyświetlona kontrolek ActiveX w Twoim systemie. W dolnej części okna dialogowego jest wyświetlana ścieżka do pliku formantu ActiveX.  
   
-### <a name="to-add-an-activex-control-to-a-dialog-box"></a>Aby dodać formantu ActiveX do okna dialogowego  
+### <a name="to-add-an-activex-control-to-a-dialog-box"></a>Aby dodać formant ActiveX do okna dialogowego  
   
-1.  W [okno dialogowe Wstaw formant ActiveX](../windows/insert-activex-control-dialog-box.md), wybierz kontrolkę, aby dodać do Twojego — okno dialogowe, a następnie kliknij przycisk **OK**.  
+1.  W [Wstawianie formantu ActiveX, okno dialogowe](../windows/insert-activex-control-dialog-box.md), wybierz kontrolkę chcesz dodać do swojej okno dialogowe, a następnie kliknij przycisk **OK**.  
   
-     Ten formant jest widoczny w oknie dialogowym, w którym można go edytować lub utworzyć programy obsługi dla niego tak samo jak dowolny inny formant.  
+     Formant ma być wyświetlany w oknie dialogowym, w którym można go edytować lub tworzyć programy obsługi dla niego tak samo, jak dowolną inną kontrolką.  
   
     > [!NOTE]
-    >  Można dodawać formanty ActiveX do [okno przybornika](/visualstudio/ide/reference/toolbox). Aby uzyskać więcej informacji, zobacz [elementy zarządzania i karty w przyborniku](http://msdn.microsoft.com/en-us/21285050-cadd-455a-b1f5-a2289a89c4db).  
+    >  Można dodać formanty ActiveX do [okno przybornika](/visualstudio/ide/reference/toolbox). Aby uzyskać więcej informacji, zobacz [elementów zarządzania i karty w przyborniku](http://msdn.microsoft.com/21285050-cadd-455a-b1f5-a2289a89c4db).  
   
     > [!CAUTION]
-    >  Nie może być prawne rozpowszechnianie wszystkich kontrolek ActiveX w tym systemie. Zapoznaj się Umowa licencyjna na oprogramowanie, które zainstalowane formanty lub skontaktuj się z firmą oprogramowania.  
+    >  Może nie być prawne rozpowszechnianie wszystkich kontrolek ActiveX w Twoim systemie. Zapoznaj się z umową licencyjną dotyczącą oprogramowania, zainstalowanego kontrolki lub skontaktuj się z firmą oprogramowania.  
   
-     Formanty można umieścić w oknie przybornika, by mieć łatwy dostęp. Aby uzyskać więcej informacji, zobacz [Dostosowywanie przybornika — okno dialogowe](http://msdn.microsoft.com/en-us/bd07835f-18a8-433e-bccc-7141f65263bb).  
+     Kontrolki można umieścić w okno przybornika, aby mieć łatwy dostęp. Aby uzyskać więcej informacji, zobacz [dostosowywania przybornika, okno dialogowe](http://msdn.microsoft.com/bd07835f-18a8-433e-bccc-7141f65263bb).  
   
- Aby uzyskać informacje o dodawaniu zasobów do projektów zarządzanych, zobacz [zasobów w aplikacjach pulpitu](/dotnet/framework/resources/index) w *Przewodnik programistów platformy .NET Framework.* Aby uzyskać informacje na ręczne dodanie do projektów zarządzanych plików zasobów, uzyskiwanie dostępu do zasobów, wyświetlanie zasoby statyczne i przypisanie do właściwości ciągów zasobów, zobacz [tworzenie plików zasobów dla aplikacji pulpitu](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Informacje dotyczące globalizacji i lokalizacji zasobów w zarządzanych aplikacjach, zobacz [Globalizing i lokalizacja aplikacji .NET Framework](/dotnet/standard/globalization-localization/index).  
+ Aby uzyskać informacje na temat dodawania zasobów do projektów zarządzanych, zobacz [zasoby w aplikacjach pulpitu](/dotnet/framework/resources/index) w *przewodniku dewelopera .NET Framework*. Aby uzyskać informacji na temat ręcznego dodawania plików zasobów do projektów zarządzanych, uzyskiwania dostępu do zasobów, wyświetlania statycznych zasobów i przypisywania ciągów zasobów do właściwości, zobacz [Creating Resource Files dla aplikacji klasycznych](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Aby uzyskać informacji na temat globalizacja i lokalizacja zasobów w aplikacjach zarządzanych, zobacz [Globalizing i lokalizowanie aplikacji programu .NET Framework](/dotnet/standard/globalization-localization/index).  
   
- **Wymagania**  
-  
+## <a name="requirements"></a>Wymagania  
  Win32  
   
 ## <a name="see-also"></a>Zobacz też  
  [Formanty w oknach dialogowych](../windows/controls-in-dialog-boxes.md)   
  [Kontrolki ActiveX MFC](../mfc/mfc-activex-controls.md)   
  [Kontenery kontrolek ActiveX](../mfc/activex-control-containers.md)
-

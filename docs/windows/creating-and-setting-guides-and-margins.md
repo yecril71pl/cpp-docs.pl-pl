@@ -1,5 +1,5 @@
 ---
-title: Tworzenia i ustawiania prowadnice i marginesy | Dokumentacja firmy Microsoft
+title: Tworzenie i Ustawianie prowadnic i marży | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -22,48 +22,47 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 0b548f48fc079fe26ae43c0553bef27f2348bad6
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 11631a2ac6a2c83cd667d14a490c57b1a191c1a7
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33873514"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39642561"
 ---
 # <a name="creating-and-setting-guides-and-margins"></a>Tworzenie i ustawianie prowadnic i marginesów
-Czy przenosisz formantów, dodawanie formantów lub zmienianie rozmieszczenia bieżący układ, przewodniki może pomóc wyrównywania formantów dokładnie w oknie dialogowym. Przewodniki są wyświetlane jako niebieskie linie przerywana przez okno dialogowe wyświetlane w edytorze i odpowiednie strzałki w linijki (w górnej i lewej strony Edytor okien dialogowych).  
+Czy przenosisz się formantów, dodawanie formantów, rozmieszczanie bieżący układ, przewodniki może pomóc można wyrównać formanty dokładnie w oknie dialogowym. Przewodniki są wyświetlane jako niebieskie linie dotted przez okno dialogowe wyświetlany w edytorze i odpowiednie strzałki w linijek (w górnej i lewej strony **okna dialogowego** edytora).  
   
- Po utworzeniu okno dialogowe znajdują się cztery marginesów. Marginesy są zmodyfikowane prowadnice stanowiący niebieskie linie przerywana.  
+ Kiedy tworzysz okno dialogowe, znajdują się cztery marginesy. Marginesy są przewodniki zmodyfikowane, pojawiają się jako niebieskie linie dotted.  
   
 ### <a name="to-create-a-guide"></a>Aby utworzyć linię  
   
-1.  W ramach linijce kliknij raz, aby utworzyć linię. (Jednego kliknięcia tworzy nową przewodnik; dwukrotne kliknięcie spowoduje uruchomienie [okno dialogowe Ustawienia prowadnic](../windows/guide-settings-dialog-box.md) w którym można określić ustawienia przewodnik.)  
+1.  Na linijce kliknij raz, aby utworzyć linię. (Jednym kliknięciem tworzy nowy przewodnik; dwukrotne kliknięcie powoduje uruchomienie [okno dialogowe Ustawienia prowadnic](../windows/guide-settings-dialog-box.md) określić ustawienia prowadnic.)  
   
 ### <a name="to-set-a-guide"></a>Aby ustawić przewodnik  
   
-1.  W oknie dialogowym przewodnika kliknij i przeciągnij go do nowej pozycji. (Możesz również kliknij strzałkę w linijce przeciągnij przewodnik skojarzone).  
+1.  W oknie dialogowym kliknij przewodnika, a następnie przeciągnij go do nowej pozycji. (Możesz również kliknij strzałkę w linijkę, aby przeciągnąć skojarzonego przewodnika).  
   
-     Współrzędne przewodnika są wyświetlane na pasku stanu w dolnej części okna i na linijce. Wskaźnika na strzałkę na linijce, aby wyświetlić określone położenie przewodnika.  
+     Współrzędne przewodnika są wyświetlane na pasku stanu w dolnej części okna i linijki. Przesuń wskaźnik nad strzałką znajdującą się w linijkę, aby wyświetlić dokładnego położenia przewodnika.  
   
 ### <a name="to-delete-a-guide"></a>Aby usunąć prowadnicę  
   
 1.  Przeciągnij ją z okna dialogowego.  
   
- \- lub -  
+ \- lub —  
   
--   Przeciągnij strzałkę odpowiedniego poza linijkę.  
+-   Przeciągnij odpowiednie strzałkę z linijki.  
   
-#### <a name="to-move-margins"></a>Aby przenieść marginesów  
+### <a name="to-move-margins"></a>Aby przenieść marginesów  
   
-1.  Przeciągnij margines w nowe położenie.  
+1.  Przeciągnij margines do nowej pozycji.  
   
-     Aby można było margines znikają, Przenieś margines na pozycji zerowej. Do przywrócenia margines, umieść wskaźnik na margines pozycji zerowej i Przenieś margines w określonej pozycji.  
+     Aby margines zniknąć, należy przenieść margines do pozycji zero. Aby przywrócić margines, umieść wskaźnik na marginesie pozycji zero i przenieść margines w określonej pozycji.  
   
- Aby uzyskać informacje o dodawaniu zasobów do projektów zarządzanych, zobacz [zasobów w aplikacjach pulpitu](/dotnet/framework/resources/index) w *Przewodnik programistów platformy .NET Framework.* Aby uzyskać informacje na ręczne dodanie do projektów zarządzanych plików zasobów, uzyskiwanie dostępu do zasobów, wyświetlanie zasoby statyczne i przypisanie do właściwości ciągów zasobów, zobacz [tworzenie plików zasobów dla aplikacji pulpitu](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Informacje dotyczące globalizacji i lokalizacji zasobów w zarządzanych aplikacjach, zobacz [Globalizing i lokalizacja aplikacji .NET Framework](/dotnet/standard/globalization-localization/index).  
+ Aby uzyskać informacje na temat dodawania zasobów do projektów zarządzanych, zobacz [zasoby w aplikacjach pulpitu](/dotnet/framework/resources/index) w *przewodniku dewelopera .NET Framework*. Aby uzyskać informacji na temat ręcznego dodawania plików zasobów do projektów zarządzanych, uzyskiwania dostępu do zasobów, wyświetlania statycznych zasobów i przypisywania ciągów zasobów do właściwości, zobacz [Creating Resource Files dla aplikacji klasycznych](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Aby uzyskać informacji na temat globalizacja i lokalizacja zasobów w aplikacjach zarządzanych, zobacz [Globalizing i lokalizowanie aplikacji programu .NET Framework](/dotnet/standard/globalization-localization/index).  
   
-### <a name="requirements"></a>Wymagania  
+## <a name="requirements"></a>Wymagania  
  Win32  
   
 ## <a name="see-also"></a>Zobacz też  
  [Stany Edytor okien dialogowych (prowadnice i siatki)](../windows/dialog-editor-states-guides-and-grids.md)   
  [Kontrolki w oknach dialogowych](../windows/controls-in-dialog-boxes.md)
-

@@ -15,26 +15,26 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: d99d4656f2835f9adb60f310e429c4ccb97ac7b6
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 0788536e776661b9a84a6cccc648a7db68389ae5
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33854057"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39644258"
 ---
 # <a name="accelerator-modifier-property"></a>Właściwość modyfikatora akceleratora
-Poniżej przedstawiono prawne wpisy dla właściwości modyfikator w tabeli akceleratora.  
+Dostępne są następujące wpisy prawne dla właściwości modyfikujące w tabeli akceleratora.  
   
 |Wartość|Opis|  
 |-----------|-----------------|  
-|**Brak**|Użytkownik naciska klucz wartość. Najbardziej efektywne służy to wartościami ASCII/ANSI 001 za pośrednictwem 026, który jest interpretowany jako ^ od A do ^ Z (CTRL-A za pomocą klawiszy CTRL-Z).|  
-|**ALT**|Użytkownik musi nacisnąć klawisz ALT przed wartością klucza.|  
-|**CTRL**|Użytkownik musi naciśnij klawisz CTRL przed wartością klucza. Nieprawidłowy typ ASCII.|  
-|**SHIFT**|Użytkownik musi klawisz SHIFT przed wartością klucza.|  
-|**Ctrl + Alt**|Użytkownik musi nacisnąć klawisz CTRL i klawisz ALT przed wartością klucza. Nieprawidłowy typ ASCII.|  
-|**Ctrl + Shift**|Użytkownik musi nacisnąć klawisz CTRL i SHIFT klucza przed wartością klucza. Nieprawidłowy typ ASCII.|  
-|**Alt + Shift**|Użytkownik musi nacisnąć klawisz ALT i klawisz SHIFT przed wartością klucza. Nieprawidłowy typ ASCII.|  
-|**Ctrl + Alt + Shift**|Użytkownik musi nacisnąć klawisz CTRL, ALT i SHIFT, przed wartością klucza. Nieprawidłowy typ ASCII.|  
+|**Brak**|Użytkownik naciśnie tylko **klucz** wartość. Najbardziej efektywne służy to przy użyciu wartości ASCII/ANSI 001 za pośrednictwem 026, który jest interpretowany jako ^ od A do ^ Z (CTRL-A za pomocą klawisze CTRL + Z).|  
+|**ALT**|Użytkownik musi nacisnąć klawisz **Alt** klucza przed **klucz** wartość.|  
+|**CTRL**|Użytkownik musi nacisnąć klawisz **Ctrl** klucza przed **klucz** wartość. Nie jest prawidłowy z typem ASCII.|  
+|**SHIFT**|Użytkownik musi nacisnąć klawisz **Shift** klucza przed **klucz** wartość.|  
+|**Ctrl + Alt**|Użytkownik musi nacisnąć klawisz **Ctrl** klucza i **Alt** klucza przed **klucz** wartość. Nie jest prawidłowy z typem ASCII.|  
+|**Ctrl + Shift**|Użytkownik musi nacisnąć klawisz **Ctrl** klucza i **Shift** klucza przed **klucz** wartość. Nie jest prawidłowy z typem ASCII.|  
+|**Alt + Shift**|Użytkownik musi nacisnąć klawisz **Alt** klucza i **Shift** klucza przed **klucz** wartość. Nie jest prawidłowy z typem ASCII.|  
+|**Ctrl + Alt + Shift**|Użytkownik musi nacisnąć klawisz **Ctrl**, **Alt**, i **Shift** przed **klucz** wartość. Nie jest prawidłowy z typem ASCII.|  
   
 ## <a name="requirements"></a>Wymagania  
  Win32  

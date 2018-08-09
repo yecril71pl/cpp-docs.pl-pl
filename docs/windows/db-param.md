@@ -17,19 +17,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 2c7ce3c5b76dfa8602a46e947d1e8925ec2bf14c
-ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
+ms.openlocfilehash: 6f9938f96e65053d396cdfb608bea1e21eb1df74
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39569446"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39651385"
 ---
 # <a name="dbparam"></a>db_param
 Zmienna określonego elementu członkowskiego jest skojarzona z parametrów wejściowych lub wyjściowych, a rozgranicza zmiennej.  
   
 ## <a name="syntax"></a>Składnia  
   
-```  
+```cpp  
 [ db_param(   
    ordinal,   
    paramtype="DBPARAMIO_INPUT",   
@@ -41,7 +41,7 @@ Zmienna określonego elementu członkowskiego jest skojarzona z parametrów wej�
 ) ]  
 ```  
   
-#### <a name="parameters"></a>Parametry  
+### <a name="parameters"></a>Parametry  
  *Liczba porządkowa*  
  Numer kolumny (liczba porządkowa DBCOLUMNINFO) odpowiadający pole w zestawie wierszy, do którego należy powiązać dane.  
   

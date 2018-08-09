@@ -17,41 +17,40 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 8ba7084ea10cc502eea0e0e0f62709467750a99d
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 2d04c877fb018d1ee16a3c4643c634d2fd3961b7
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33860193"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39651249"
 ---
 # <a name="attributed-programming-concepts"></a>Pojęcia związane z programowaniem opartym na atrybutach
-Visual C++ zawiera różne informacje pomocne użyć atrybutów w programach. Atrybuty, nowa funkcja w programie Visual C++ są przeznaczone do uproszczenia programowania COM i rozwoju środowiska uruchomieniowego języka wspólnego .NET Framework. Po dołączeniu atrybutów plików źródłowych, kompilator współpracuje z dostawcy biblioteki dołączanej dynamicznie (DLL), aby wstawić kod lub zmodyfikować kod w plikach wygenerowanego obiektu. Brak atrybutów, które pomocy w przypadku tworzenia plików .idl, interfejsów, biblioteki typów i inne elementy modelu COM. W zintegrowane środowisko programistyczne (IDE) atrybutów są obsługiwane za pomocą kreatorów i okna właściwości.  
+Visual C++ zawierają wiele materiałów, które ułatwiają korzystanie z atrybutów w swoich programach. Atrybuty, nowa funkcja w programie Visual C++ są zaprojektowane w celu uproszczenia programowanie COM i .NET Framework — programowanie środowiska uruchomieniowego języka wspólnego. Gdy atrybuty zostaną umieszczone w plikach źródłowych, kompilator współpracuje z dostawcy bibliotek dołączanych dynamicznie (DLL), Wstaw kod lub zmodyfikować kod w plikach obiektowych wygenerowany. Istnieją atrybuty, które wspierają do tworzenia plików .idl, interfejsy, bibliotek typów i innych elementów modelu COM. W zintegrowanego środowiska programistycznego (IDE) atrybutów są obsługiwane przez kreatory i okna właściwości.  
   
- Gdy atrybuty wyeliminować niektóre szczegółowe kodowanie, wymagane do zapisywania obiektów COM, należy tła w [podstawy COM](http://msdn.microsoft.com/library/windows/desktop/ms694363) najlepiej ich użycia.  
+ Gdy atrybuty wyeliminować niektóre szczegółowe kodowanie, wymagane do zapisywania obiektów COM, potrzebujesz tła w [podstawy COM](http://msdn.microsoft.com/library/windows/desktop/ms694363) najlepiej je wykorzystać.  
   
 ## <a name="in-this-section"></a>W tej sekcji  
  [Cel atrybutów](../windows/purpose-of-attributes.md)  
- Zawiera omówienie programu Programowanie oparte na atrybutach.  
+ Zawiera omówienie programowania opartego na atrybutach.  
   
  [Podstawowa mechanika atrybutów](../windows/basic-mechanics-of-attributes.md)  
- W tym artykule opisano, jak działają atrybutów w projekcie.  
+ W tym artykule opisano, jak atrybuty działają w twoim projekcie.  
   
  [Kompilowanie programu opartego na atrybutach](../windows/building-an-attributed-program.md)  
- Zawiera informacje dotyczące używania opcji kompilatora C++ w projekcie.  
+ Zawiera informacje o używaniu opcji kompilatora języka C++ w projekcie.  
   
  [Kategorie atrybutów](../windows/attribute-categories.md)  
  Zawiera łącza do kategorii atrybuty używane w programie Visual C++.  
   
  [Atrybut Programmming — często zadawane pytania](../windows/attribute-programming-faq.md)  
- Odpowiedzi na często zadawane pytania dotyczące Programowanie oparte na atrybutach.  
+ Odpowiedzi na często zadawane pytania dotyczące programowania opartego na atrybutach.  
   
 ## <a name="related-sections"></a>Sekcje pokrewne  
- [Odwołanie do atrybutów](../windows/cpp-attributes-reference.md)  
- Zawiera łącza do temat informacje opisujące poszczególnych atrybutów i ich użycia.  
+ [Dokumentacja atrybutów](../windows/cpp-attributes-reference.md)  
+ Zawiera łącza do temat referencyjny opisujący poszczególne atrybuty i ich użycia.  
   
  [Debugowanie wprowadzonego kodu](/visualstudio/debugger/how-to-debug-injected-code)  
- Opisuje debugowanie programów oparte na atrybutach.  
+ W tym artykule opisano, debugowanie programów opartego na atrybutach.  
   
  [__super](../cpp/super.md)i [__interface](../cpp/interface.md)  
- Łącza do związanych z Programowanie oparte na atrybutach nowych słów kluczowych języka C++.  
-  
+ Zawiera łącza do związanych z Programowanie oparte na atrybutach nowych słów kluczowych języka C++.  

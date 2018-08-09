@@ -19,19 +19,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: e68e2b729f8120a33b296fa485d145101b3d6e5b
-ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
+ms.openlocfilehash: a9fa20fc180d9b77f5d909ea06d12d69c1ef89d1
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39466712"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39652688"
 ---
 # <a name="component-extensions-for-runtime-platforms"></a>Component Extensions dla platform środowiska uruchomieniowego
 Visual C++ zapewnia rozszerzeń językowych, aby ułatwić programowanie platform środowiska uruchomieniowego. Za pomocą C + +/ CX, można programować aplikacje uniwersalne platformy Windows i składników, kompilowane do kodu natywnego. Chociaż można utworzyć aplikacji platformy uniwersalnej Windows, programowanie bezpośrednio w odniesieniu do interfejsów COM środowiska wykonawczego Windows, za pomocą C + +/ CX, można pracować z konstruktorów, wyjątki i innych nowoczesne idiomy programowania w języku C++. Aby włączyć programowania C++ w zarządzanym środowisku wykonywania na platformie .NET, można użyć C + +/ interfejsu wiersza polecenia.  
   
- **Dwa środowiska uruchomieniowe, zestaw rozszerzeń**  
+### <a name="two-runtimes-one-set-of-extensions"></a>Dwa środowiska uruchomieniowe, zestaw rozszerzeń  
   
- C + +/ CX jest podzbiorem C + +/ interfejsu wiersza polecenia. Dla rozszerzeń, które są wspólne dla C + +/ CX i C + +/ CLI, semantyka zależą od tego, czy celem jest środowisko uruchomieniowe języka wspólnego (CLR) lub środowiska wykonawczego Windows. Aby skompilować aplikację do uruchamiania w środowisku uruchomieniowym Windows, należy określić **/ZW** — opcja kompilatora. Aby skompilować je do uruchomienia na środowisko CLR, należy określić **/CLR** — opcja kompilatora. Te przełączniki są ustawiane automatycznie, gdy używasz programu Visual Studio, aby utworzyć projekt.  
+ C + +/ CX jest podzbiorem C + +/ interfejsu wiersza polecenia. Dla rozszerzeń, które są wspólne dla C + +/ CX i C + +/ CLI, semantyka zależą od tego, czy celem jest środowisko uruchomieniowe języka wspólnego (CLR) lub środowiska wykonawczego Windows. Aby skompilować aplikację do uruchamiania w środowisku uruchomieniowym Windows, należy określić `/ZW` — opcja kompilatora. Aby skompilować je do uruchomienia na środowisko CLR, należy określić `/clr` — opcja kompilatora. Te przełączniki są ustawiane automatycznie, gdy używasz programu Visual Studio, aby utworzyć projekt.  
   
  Aby uzyskać więcej informacji na temat tworzenia aplikacji uniwersalnych platformy Windows w języku C++, zobacz [plan for Windows aplikacji środowiska wykonawczego przy użyciu języka C++](http://msdn.microsoft.com/library/windows/apps/hh700360.aspx).  
   
@@ -86,7 +86,7 @@ Visual C++ zapewnia rozszerzeń językowych, aby ułatwić programowanie platfor
 |**nullptr**|Nie|Wskazuje, że dojście lub wskaźnik nie wskazuje na obiekt.|[nullptr](../windows/nullptr-cpp-component-extensions.md)|  
   
 ## <a name="template-constructs"></a>Konstrukcje szablonu  
- Następujące konstrukcji języka są implementowane jako szablon, zamiast jako słowa kluczowe. Jeśli określisz **/ZW** — opcja kompilatora, są zdefiniowane w `lang` przestrzeni nazw. Jeśli określisz **/CLR** — opcja kompilatora, są zdefiniowane w `cli` przestrzeni nazw.  
+ Następujące konstrukcji języka są implementowane jako szablon, zamiast jako słowa kluczowe. Jeśli określisz `/ZW` — opcja kompilatora, są zdefiniowane w `lang` przestrzeni nazw. Jeśli określisz `/clr` — opcja kompilatora, są zdefiniowane w `cli` przestrzeni nazw.  
   
 |Słowo kluczowe|Cel|Tematy pomocy|  
 |-------------|-------------|---------------|  

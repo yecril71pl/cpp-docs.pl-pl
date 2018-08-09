@@ -17,19 +17,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: e813ce223bad48aab3807bb01e042190d28aef74
-ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
+ms.openlocfilehash: 7d20927b284de5c565c5fa9ebf00f8be00a4b486
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39568673"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39648853"
 ---
 # <a name="hidden"></a>hidden
 Wskazuje, czy element istnieje, ale nie powinien być wyświetlany w przeglądarce zorientowanej na użytkownika.  
   
 ## <a name="syntax"></a>Składnia  
   
-```  
+```cpp  
 [hidden]  
 ```  
   

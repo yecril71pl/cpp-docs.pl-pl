@@ -17,30 +17,30 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: af3ec58afd69f3fde6e2eb67969f1dad8848c5de
-ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
+ms.openlocfilehash: 4bddc5a453e1c3aac43fe58d105ccef863c67808
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39466725"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39652272"
 ---
 # <a name="activationfactorygettrustlevel-method"></a>ActivationFactory::GetTrustLevel — Metoda
 Pobiera poziom zaufania, obiektu, który bieżącego **activationfactory —** tworzy wystąpienie.  
   
 ## <a name="syntax"></a>Składnia  
   
-```  
+```cpp  
 STDMETHOD(  
    GetTrustLevel  
 )(_Out_ TrustLevel* trustLvl);  
 ```  
   
-#### <a name="parameters"></a>Parametry  
+### <a name="parameters"></a>Parametry  
  *trustLvl*  
  Po zakończeniu tej operacji, poziom zaufania środowiska uruchomieniowego klasy **activationfactory —** tworzy wystąpienie.  
   
 ## <a name="return-value"></a>Wartość zwracana  
- S_OK w przypadku powodzenia; w przeciwnym razie jest emitowane Błąd asercji i *trustLvl* ustawiono FullTrust.  
+ S_OK w przypadku powodzenia; w przeciwnym razie jest emitowane Błąd asercji i *trustLvl* ustawiono `FullTrust`.  
   
 ## <a name="requirements"></a>Wymagania  
  **Nagłówek:** module.h  

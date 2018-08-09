@@ -19,32 +19,30 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: adc8738f35e3018513355275b2dda43b745b011f
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 31a43e205ad2993f2b70188300800eb8f11fe8c8
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33882930"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39647937"
 ---
 # <a name="displaying-or-hiding-the-pixel-grid-image-editor-for-icons"></a>Wyświetlanie i ukrywanie siatki pikseli (Edytor obrazów dla ikon)
-Dla wszystkich okienek edytor obrazów z współczynnika powiększenia 4 lub nowszym można wyświetlić siatkę ograniczającego piksele obrazu.  
+Dla wszystkich **edytora obrazów** okienka przy użyciu współczynnika powiększenia 4 lub większą, można wyświetlić siatkę ograniczającego piksele na obrazie.  
   
 > [!TIP]
->  Etykietki narzędzi są wyświetlane po umieszczeniu kursora na przycisku paska narzędzi. Te porady mogą pomóc w identyfikacji funkcji każdego przycisku.  
+>  Etykietki narzędzi są wyświetlane po umieszczeniu kursora na przycisku paska narzędzi. Poniższe wskazówki mogą pomóc w identyfikacji funkcji każdego przycisku.  
   
-### <a name="to-display-or-hide-the-pixel-grid"></a>Umożliwia wyświetlanie lub ukrywanie siatki pikseli  
+### <a name="to-display-or-hide-the-pixel-grid"></a>Aby wyświetlić lub ukryć siatkę pikseli  
   
-1.  Na **obrazu** menu, kliknij przycisk **ustawienia siatki**.  
+1.  Na **obraz** menu, kliknij przycisk **ustawienia siatki**.  
   
-2.  Wybierz **siatki pikseli** pole wyboru, aby wyświetlić siatki, lub wyczyść pole, aby ukryć siatki.  
+2.  Wybierz **siatkę pikseli** pole wyboru, aby wyświetlić siatkę, lub wyczyść pole, aby ukryć siatkę.  
   
- Aby uzyskać informacje o dodawaniu zasobów do projektów zarządzanych, zobacz [zasobów w aplikacjach pulpitu](/dotnet/framework/resources/index) w *Przewodnik programistów platformy .NET Framework.* Aby uzyskać informacje na ręczne dodanie do projektów zarządzanych plików zasobów, uzyskiwanie dostępu do zasobów, wyświetlanie zasoby statyczne i przypisanie do właściwości ciągów zasobów, zobacz [tworzenie plików zasobów dla aplikacji pulpitu](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Informacje dotyczące globalizacji i lokalizacji zasobów w zarządzanych aplikacjach, zobacz [Globalizing i lokalizacja aplikacji .NET Framework](/dotnet/standard/globalization-localization/index).  
+ Aby uzyskać informacje na temat dodawania zasobów do projektów zarządzanych, zobacz [zasoby w aplikacjach pulpitu](/dotnet/framework/resources/index) w *przewodniku dewelopera .NET Framework*. Aby uzyskać informacji na temat ręcznego dodawania plików zasobów do projektów zarządzanych, uzyskiwania dostępu do zasobów, wyświetlania statycznych zasobów i przypisywania ciągów zasobów do właściwości, zobacz [Creating Resource Files dla aplikacji klasycznych](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Aby uzyskać informacji na temat globalizacja i lokalizacja zasobów w aplikacjach zarządzanych, zobacz [Globalizing i lokalizowanie aplikacji programu .NET Framework](/dotnet/standard/globalization-localization/index).  
   
- Wymagania  
-  
+## <a name="requirements"></a>Wymagania  
  Brak  
   
 ## <a name="see-also"></a>Zobacz też  
  [Klawisze skrótów](../windows/accelerator-keys-image-editor-for-icons.md)   
  [Okienka](../windows/window-panes-image-editor-for-icons.md)
-

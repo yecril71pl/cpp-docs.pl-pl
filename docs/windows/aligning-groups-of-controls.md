@@ -15,44 +15,42 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 743176ed52004a37718ae69db3693dde07ca7391
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: fac1c04f51b2e05213223ca3e20e4a4fcc3e54e3
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33858344"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39651811"
 ---
 # <a name="aligning-groups-of-controls"></a>Dopasowanie grup formantów
-Poniższa procedura przedstawia sposób wyrównania grup formantów.  
+Poniższa procedura pokazuje, jak dopasowanie grup formantów.  
   
 ### <a name="to-align-groups-of-controls"></a>Dopasowanie grup formantów  
   
-1.  [Zaznacz formanty](../windows/selecting-multiple-controls.md) chcesz wyrównać. Należy wybrać formant, który ma być najpierw formantu dominującego lub ustaw ją jako formant dominujący przed wykonaniem wyrównanie lub zmiany rozmiaru polecenia.  
+1.  [Zaznacz formanty](../windows/selecting-multiple-controls.md) pożądane dopasowanie. Pamiętaj o wybraniu formantu, który ma być formantu dominującego najpierw lub ustaw go jako formant dominujący przed przystąpieniem do wykonywania wyrównanie lub zmiany rozmiaru polecenia.  
   
-     Ostateczne stanowisko grupy formantów zależy od pozycji formantu dominującego. Aby uzyskać więcej informacji na temat wybierania formantu dominującego, zobacz [Określanie formantu dominującego](../windows/specifying-the-dominant-control.md).  
+     Ostateczne stanowisko grupy formantów, zależy od położenie formantu dominującego. Aby uzyskać więcej informacji dotyczących zaznaczania formantu dominującego zobacz [Określanie formantu dominującego](../windows/specifying-the-dominant-control.md).  
   
-2.  Z **Format** menu, wybierz **Wyrównaj**, a następnie wybierz jedną z następujących wyrównania:  
+2.  Z **Format** menu, wybierz **Wyrównaj**, a następnie wybierz jedną z następujących wyrównanie:  
   
-    -   **Wej**: wyrównuje zaznaczonych formantów wzdłuż ich po lewej stronie.  
+    -   `Lefts`: wyrównuje wybranych kontrolek wzdłuż ich po lewej stronie.  
   
-    -   **Centra**: Wyrównuje wybrane formanty poziomie wzdłuż ich punktów centralnych.  
+    -   `Centers`: wyrównuje wybranych kontrolek w poziomie wzdłuż ich punkty Centrum.  
   
-    -   **Prawa**: Wyrównuje wybrane formanty wraz z jego prawej strony.  
+    -   `Rights`: wyrównuje wybranych kontrolek wzdłuż jego prawej stronie.  
   
-    -   **Wierzchołki**: Wyrównuje wybrane formanty wzdłuż górnej krawędzi.  
+    -   `Tops`: wyrównuje wybranych kontrolek wzdłuż górnej krawędzi.  
   
-    -   **Lewych**: wyrównuje zaznaczonych formantów w pionie wraz z ich środkowej punktów.  
+    -   `Middles`: wyrównuje wybranych kontrolek w pionie wzdłuż punktom środkowej.  
   
-    -   **Dołu**: Wyrównuje wybrane formanty wzdłuż dolnej krawędzi.  
+    -   `Bottoms`: wyrównuje wybranych kontrolek wzdłuż dolnej krawędzi.  
   
- Aby uzyskać informacje o dodawaniu zasobów do projektów zarządzanych, zobacz [zasobów w aplikacjach pulpitu](/dotnet/framework/resources/index) w *Przewodnik programistów platformy .NET Framework.* Aby uzyskać informacje na ręczne dodanie do projektów zarządzanych plików zasobów, uzyskiwanie dostępu do zasobów, wyświetlanie zasoby statyczne i przypisanie do właściwości ciągów zasobów, zobacz [tworzenie plików zasobów dla aplikacji pulpitu](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Informacje dotyczące globalizacji i lokalizacji zasobów w zarządzanych aplikacjach, zobacz [Globalizing i lokalizacja aplikacji .NET Framework](/dotnet/standard/globalization-localization/index).  
+ Aby uzyskać informacje na temat dodawania zasobów do projektów zarządzanych, zobacz [zasoby w aplikacjach pulpitu](/dotnet/framework/resources/index) w *przewodniku dewelopera .NET Framework*. Aby uzyskać informacji na temat ręcznego dodawania plików zasobów do projektów zarządzanych, uzyskiwania dostępu do zasobów, wyświetlania statycznych zasobów i przypisywania ciągów zasobów do właściwości, zobacz [Creating Resource Files dla aplikacji klasycznych](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Aby uzyskać informacji na temat globalizacja i lokalizacja zasobów w aplikacjach zarządzanych, zobacz [Globalizing i lokalizowanie aplikacji programu .NET Framework](/dotnet/standard/globalization-localization/index).  
   
- Wymagania  
-  
+## <a name="requirements"></a>Wymagania  
  Win32  
   
 ## <a name="see-also"></a>Zobacz też  
- [Rozmieszczenie formantów w oknach dialogowych](../windows/arrangement-of-controls-on-dialog-boxes.md)   
+ [Rozmieszczenie kontrolek w oknach dialogowych](../windows/arrangement-of-controls-on-dialog-boxes.md)   
  [Formanty w oknach dialogowych](../windows/controls-in-dialog-boxes.md)   
  [Kontrolki](../mfc/controls-mfc.md)
-

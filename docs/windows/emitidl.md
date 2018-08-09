@@ -17,55 +17,55 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: e4c66ba8c49a405f9fdd93b1652626ab47488a53
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 5d508c6196ad9b9f32b4bcb0704272a500d0e952
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33876595"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39643046"
 ---
 # <a name="emitidl"></a>emitidl
-Określa, czy wszystkie atrybuty IDL kolejne są przetwarzane i umieszczony w pliku .idl wygenerowany.  
+Określa, czy wszystkie kolejne atrybuty IDL są przetwarzane i umieszczane w pliku .idl wygenerowany.  
   
 ## <a name="syntax"></a>Składnia  
   
-```
+```cpp
 [ emitidl(state, defaultimports=boolean) ];
 ```  
   
 ### <a name="parameters"></a>Parametry  
 *state*  
-Jedną z następujących wartości: **true**, **false**, **wymuszone**, **ograniczeniami**, **wypychania**, lub **pop**.  
+Jedną z następujących wartości: `true`, `false`, `forced`, `restricted`, `push`, lub `pop`.  
   
--   Jeśli **true**, wszystkie atrybuty kategorii IDL w pliku kodu źródłowego są umieszczane w pliku .idl wygenerowany. Jest to domyślne ustawienie dla **emitidl**.  
+-   Jeśli `true`, wszelkie atrybuty kategorii IDL w pliku kodu źródłowego są umieszczane w pliku .idl wygenerowany. Jest to domyślne ustawienie dla **emitidl**.  
   
--   Jeśli **false**, wszystkie atrybuty kategorii IDL w pliku kodu źródłowego nie są umieszczane w pliku .idl wygenerowany.  
+-   Jeśli `false`, wszelkie atrybuty kategorii IDL w pliku kodu źródłowego nie będą wprowadzone w pliku .idl wygenerowany.  
   
--   Jeśli **ograniczeniami**, umożliwia atrybuty IDL w pliku bez [modułu](../windows/module-cpp.md) atrybutu. Kompilator nie generuje pliku .idl.  
+-   Jeśli `restricted`, umożliwia atrybuty IDL, znajdować się w pliku bez [modułu](../windows/module-cpp.md) atrybutu. Kompilator nie generuje pliku .idl.  
   
--   Jeśli **wymuszone**, zastępuje kolejnej **ograniczeniami** atrybut, który wymaga pliku ma **modułu** atrybut, jeśli istnieją IDL atrybutów w pliku.  
+-   Jeśli `forced`, zastępuje kolejnej `restricted` atrybut, który wymaga pliku, aby zawierała `module` atrybut, jeśli istnieją IDL atrybutów w pliku.  
   
--   **wypychania** umożliwia zapisanie bieżącego **emitidl** ustawienia do wewnętrznego **emitidl** stosu i **pop** umożliwia ustawisz **emitidl**niezależnie od wartości jest na początku wewnętrznej **emitidl** stosu.  
+-   `push` Umożliwia zapisanie bieżącego **emitidl** ustawienia do wewnętrznego **emitidl** stosu, i `pop` pozwala ustawić **emitidl** na dowolną wartość znajduje się na górze wewnętrznego **emitidl** stosu.  
   
 `defaultimports=`*wartość logiczna* \(opcjonalne)  
--   Jeśli *logiczna* jest **true**, docobj.idl jest importowany do pliku .idl wygenerowany. Ponadto jeśli plik o takiej samej nazwie jak .h pliku .idl, który `#include` w źródle kod znajduje się w tym samym katalogu co plik .h, a następnie pliku .idl wygenerowanego zawiera instrukcję import dla tego pliku .idl.  
+-   Jeśli *logiczna* jest **true**, docobj.idl są importowane do pliku .idl wygenerowany. Ponadto jeśli plik o takiej samej nazwie jak .h pliku .idl, który `#include` do Twojego źródła kod znajduje się w tym samym katalogu co plik .h, a następnie pliku .idl wygenerowanego zawiera instrukcję import dla tego pliku .idl.  
   
--   Jeśli *logiczna* jest **false**, docobj.idl nie jest importowany do pliku .idl wygenerowany. .Idl — pliki z jawnie należy zaimportować [zaimportować](../windows/import.md).  
+-   Jeśli *logiczna* jest **false**, docobj.idl nie jest zaimportowany do pliku .idl wygenerowany. Należy jawnie zaimportować .IDL — pliki za pomocą [zaimportować](../windows/import.md).  
   
 ## <a name="remarks"></a>Uwagi  
-Po **emitidl** napotkano atrybut C++ w pliku kodu źródłowego, atrybuty IDL kategorii są umieszczane w pliku .idl wygenerowany. W przypadku nie **emitidl** , atrybuty IDL w pliku kodu źródłowego są dane wyjściowe do pliku .idl wygenerowany.  
+Po **emitidl** atrybut C++ występuje w pliku kodu źródłowego, IDL atrybuty kategorii są umieszczane w pliku .idl wygenerowany. W przypadku nie **emitidl** atrybutu, atrybuty IDL w pliku kodu źródłowego są dane wyjściowe do pliku .idl wygenerowany.  
   
-Użytkownik może mieć wielu **emitidl** atrybutów w pliku kodu źródłowego. Jeśli `[emitidl(false)];` napotkano w pliku bez dalszej `[emitidl(true)];`, a następnie atrybuty nie są przetwarzane w pliku .idl wygenerowany.  
+Użytkownik może mieć wielu **emitidl** atrybutów w pliku kodu źródłowego. Jeśli `[emitidl(false)];` występuje w pliku bez dalszej `[emitidl(true)];`, a następnie atrybuty nie są przetwarzane w pliku .idl wygenerowany.  
   
-Zawsze kompilator napotka nowy plik **emitidl** niejawnie ustawiono **true**.  
+Każdorazowo, kompilator napotka nowy plik **emitidl** niejawnie ustawiono **true**.  
   
 ## <a name="requirements"></a>Wymagania  
   
-### <a name="attribute-context"></a>Atrybut kontekstu  
+### <a name="attribute-context"></a>Kontekst atrybutu  
   
 |||  
 |-|-|  
-|**Dotyczy**|Dowolnego miejsca|  
+|**Dotyczy**|Dowolne miejsce|  
 |**Powtarzalne**|Nie|  
 |**Wymaganych atrybutów**|Brak|  
 |**Nieprawidłowe atrybuty**|Brak|  

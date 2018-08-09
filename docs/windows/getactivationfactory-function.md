@@ -19,19 +19,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 2cbb5be3603f79a7df1cb330ca06775357666854
-ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
+ms.openlocfilehash: 3fe0d03ead29362ea2926f6326557df2ba6a2cd9
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39570314"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39649250"
 ---
 # <a name="getactivationfactory-function"></a>GetActivationFactory — Funkcja
 Pobiera fabrykę aktywacji dla typu określonego przez parametr szablonu.  
   
 ## <a name="syntax"></a>Składnia  
   
-```  
+```cpp  
 template<typename T>  
 inline HRESULT GetActivationFactory(  
    _In_ HSTRING activatableClassId,  

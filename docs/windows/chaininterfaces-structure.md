@@ -17,19 +17,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: f16a10ef5119730fb492c4adb890aedcc09d3174
-ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
+ms.openlocfilehash: 7765ab5159f7cfd604f67b79a05fde8eaf57fad8
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39461536"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39646708"
 ---
 # <a name="chaininterfaces-structure"></a>ChainInterfaces — Struktura
 Określa funkcje weryfikacji i inicjowania, które może odnosić się do zestawu interfejsu identyfikatorów.  
   
 ## <a name="syntax"></a>Składnia  
   
-```  
+```cpp  
 template <  
    typename I0,  
    typename I1,  
@@ -60,7 +60,7 @@ template <
 struct ChainInterfaces<MixIn<DerivedType, BaseType, hasImplements>, I1, I2, I3, I4, I5, I6, I7, I8, I9>;  
 ```  
   
-#### <a name="parameters"></a>Parametry  
+### <a name="parameters"></a>Parametry  
  *I0*  
  (Wymagane) Identyfikator interfejsu: 0.  
   
@@ -106,8 +106,8 @@ struct ChainInterfaces<MixIn<DerivedType, BaseType, hasImplements>, I1, I2, I3, 
   
 |Nazwa|Opis|  
 |----------|-----------------|  
-|[ChainInterfaces::CanCastTo, metoda](../windows/chaininterfaces-cancastto-method.md)|Wskazuje, czy identyfikator określonego interfejsu, mogą być rzutowane na każdej specjalizacji definicją ChainInterface parametry szablonu.|  
-|[ChainInterfaces::CastToUnknown, metoda](../windows/chaininterfaces-casttounknown-method.md)|Rzutuje wskaźnika interfejsu typu zdefiniowanego przez *I0* wskaźnik IUnknown parametr szablonu.|  
+|[ChainInterfaces::CanCastTo, metoda](../windows/chaininterfaces-cancastto-method.md)|Wskazuje, czy identyfikator określonego interfejsu, mogą być rzutowane na każdej specjalizacji definicją **ChainInterface** parametry szablonu.|  
+|[ChainInterfaces::CastToUnknown, metoda](../windows/chaininterfaces-casttounknown-method.md)|Rzutuje wskaźnika interfejsu typu zdefiniowanego przez *I0* parametr szablonu na wskaźnik do `IUnknown`.|  
 |[ChainInterfaces::FillArrayWithIid, metoda](../windows/chaininterfaces-fillarraywithiid-method.md)|Identyfikator interfejsu zdefiniowanych przez magazynów *I0* parametru szablonu w określonej lokalizacji w określonej tablicy interfejsu identyfikatorów.|  
 |[ChainInterfaces::Verify, metoda](../windows/chaininterfaces-verify-method.md)|Sprawdza, czy każdy interfejs zdefiniowany przez parametry szablonu *I0* za pośrednictwem *I9* dziedziczy `IUnknown` i/lub `IInspectable`oraz że *I0* dziedziczy z *I1* za pośrednictwem *I9*.|  
   

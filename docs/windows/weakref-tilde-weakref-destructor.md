@@ -1,5 +1,5 @@
 ---
-title: 'Weakref —:: ~ WeakRef — destruktor | Dokumentacja firmy Microsoft'
+title: 'WeakRef:: ~ WeakRef, destruktor | Dokumentacja firmy Microsoft'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 47752b861ab5974b60f62cdfaba620e60288d09a
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: d2acc2e24b1030dc09529fdcad444e29f83ae11e
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33889891"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39651668"
 ---
 # <a name="weakrefweakref-destructor"></a>WeakRef::~WeakRef — Destruktor
-Deinitializes bieżące wystąpienie klasy weakref — klasa.  
+Deinicjuje bieżące wystąpienie **WeakRef** klasy.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -36,7 +36,7 @@ Deinitializes bieżące wystąpienie klasy weakref — klasa.
 ## <a name="requirements"></a>Wymagania  
  **Nagłówek:** client.h  
   
- **Namespace:** Microsoft::wrl —  
+ **Namespace:** Microsoft::WRL  
   
 ## <a name="see-also"></a>Zobacz też  
  [WeakRef, klasa](../windows/weakref-class.md)

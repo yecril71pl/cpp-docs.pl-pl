@@ -17,19 +17,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 6497d6da630095f4d7691edb076fc354b87e5a13
-ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
+ms.openlocfilehash: 18308cc66e2a01aa5e0396f098096ee9d49416bf
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39569217"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39644333"
 ---
 # <a name="dispinterface"></a>dispinterface
 Przełącza interfejsu w pliku .idl, jako interfejs ekspedycji.  
   
 ## <a name="syntax"></a>Składnia  
   
-```  
+```cpp  
 [dispinterface]  
 ```  
   
@@ -40,7 +40,7 @@ Przełącza interfejsu w pliku .idl, jako interfejs ekspedycji.
   
  Przykład użycia [dispinterface](http://msdn.microsoft.com/library/windows/desktop/aa366802) w dokumentacji MIDL:  
   
-```  
+```cpp  
 dispinterface helloPro   
    { interface hello; };   
 ```  
@@ -59,7 +59,7 @@ dispinterface helloPro
 |**Dotyczy**|**interface**|  
 |**Powtarzalne**|Nie|  
 |**Wymaganych atrybutów**|Brak|  
-|**Nieprawidłowe atrybuty**|**Podwójna**, **obiektu**, **oleautomation —**, `local`, **ms_union —**|  
+|**Nieprawidłowe atrybuty**|`dual`, `object`, `oleautomation`, `local`, `ms_union`|  
   
  Aby uzyskać więcej informacji, zobacz [konteksty atrybutu](../windows/attribute-contexts.md).  
   

@@ -1,5 +1,5 @@
 ---
-title: Weakref::weakref — Konstruktor | Dokumentacja firmy Microsoft
+title: WeakRef::WeakRef, Konstruktor | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: ae70dabdd86fedf82c26c0c7d9a09d842e2310e7
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: eafbddea6ae651d74d8f33be8efa58c25a8a0d3d
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33891051"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39641476"
 ---
 # <a name="weakrefweakref-constructor"></a>WeakRef::WeakRef — Konstruktor
-Inicjuje nowe wystąpienie klasy weakref —.  
+Inicjuje nowe wystąpienie klasy **WeakRef** klasy.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -52,17 +52,17 @@ WeakRef(
 );  
 ```  
   
-#### <a name="parameters"></a>Parametry  
- `ptr`  
- Wskaźnik, odwołanie lub odwołanie r-wartości do istniejącego obiektu, który inicjuje bieżący obiekt weakref —.  
+### <a name="parameters"></a>Parametry  
+ *ptr*  
+ Wskaźnik, odwołanie lub odwołanie rvalue do istniejącego obiektu, który inicjuje bieżące **WeakRef** obiektu.  
   
 ## <a name="remarks"></a>Uwagi  
- Pierwszy Konstruktor inicjuje obiekt weakref — pusty. Drugi Konstruktor inicjuje obiekt weakref — wskaźnik do interfejsu słabego odwołania. Trzeci Konstruktor inicjuje obiekt weakref — z odwołaniem do comptr —\<słabego odwołania > obiektu. Konstruktory czwartym i piątym inicjuje obiekt weakref — z innym obiektem weakref —.  
+ Pierwszy Konstruktor inicjuje pustą **WeakRef** obiektu. Drugi Konstruktor inicjuje **WeakRef** obiektu ze wskaźnika do `IWeakReference` interfejsu. Trzeci Konstruktor inicjuje **WeakRef** obiektu z odwołaniem do `ComPtr<IWeakReference>` obiektu. Czwarty i piąty Konstruktor inicjuje **WeakRef** obiektu z innego **WeakRef** obiektu.  
   
 ## <a name="requirements"></a>Wymagania  
  **Nagłówek:** client.h  
   
- **Namespace:** Microsoft::wrl —  
+ **Namespace:** Microsoft::WRL  
   
 ## <a name="see-also"></a>Zobacz też  
  [WeakRef, klasa](../windows/weakref-class.md)

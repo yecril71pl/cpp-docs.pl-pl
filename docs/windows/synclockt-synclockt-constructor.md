@@ -1,5 +1,5 @@
 ---
-title: Synclockt::synclockt — Konstruktor | Dokumentacja firmy Microsoft
+title: SyncLockT::SyncLockT, Konstruktor | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: c3353df1a73821a2009aeba2367f1892b06aba5b
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: ceaafd6230e6497ed2b7636ad5070141546cb8d6
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33889847"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39648168"
 ---
 # <a name="synclocktsynclockt-constructor"></a>SyncLockT::SyncLockT — Konstruktor
 Obsługuje infrastrukturę biblioteki WRL i nie jest przeznaczona do użycia bezpośrednio w kodzie.  
@@ -39,17 +39,17 @@ explicit SyncLockT(
 );  
 ```  
   
-#### <a name="parameters"></a>Parametry  
- `other`  
- R-wartości — odwołanie do innego obiektu SyncLockT.  
+### <a name="parameters"></a>Parametry  
+ *other*  
+ Odwołanie rvalue, do innego **SyncLockT** obiektu.  
   
- `sync`  
- Odwołanie do innego obiektu synclockwithstatust —.  
+ *sync*  
+ Odwołanie do innego `SyncLockWithStatusT` obiektu.  
   
 ## <a name="remarks"></a>Uwagi  
- Inicjuje nowe wystąpienie klasy SyncLockT.  
+ Inicjuje nowe wystąpienie klasy **SyncLockT** klasy.  
   
- Pierwszy Konstruktor inicjuje bieżącego obiektu SyncLockT z innego obiektu SyncLockT określonej przez parametr `other`, a następnie unieważnia obiektu synclockt —. Drugi Konstruktor jest `protected`i inicjuje bieżącego obiektu synclockt — nieprawidłowy stan.  
+ Pierwszy Konstruktor inicjuje bieżące **SyncLockT** obiektu z innego **SyncLockT** obiekt określony przez parametr *innych*, a następnie unieważnia innych  **SyncLockT** obiektu. Drugi Konstruktor jest **chronione**i inicjuje bieżące **SyncLockT** obiektu nieprawidłowym stanie.  
   
 ## <a name="requirements"></a>Wymagania  
  **Nagłówek:** corewrappers.h  

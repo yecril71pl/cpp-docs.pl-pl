@@ -17,19 +17,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: b469adedebda2beb64c531c82d10f90cc4114742
-ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
+ms.openlocfilehash: 3e80bf6d4313be5c90b4b4486cb31f3705252f33
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39570177"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39651268"
 ---
 # <a name="eventtargetarrayaddtail-method"></a>EventTargetArray::AddTail — Metoda
 Obsługuje infrastrukturę biblioteki WRL i nie jest przeznaczona do użycia bezpośrednio w kodzie.  
   
 ## <a name="syntax"></a>Składnia  
   
-```  
+```cpp  
 void AddTail(  
    _In_ IUnknown* element  
 );  

@@ -17,31 +17,29 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 6bdcdc6557253f8be9c6ecb20300f2338ab35d07
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: ef5a4453e0b7742a385815b5285b2aa04575eb75
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33889023"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39645412"
 ---
 # <a name="string-c"></a>string (C++)
-Oznacza to, że jednowymiarowej tablicy `char`, `wchar_t`, **bajtów** (lub równoważnego) tablicy lub wskaźnika do tablicy takie muszą być traktowane jako ciąg.  
+Oznacza to, że jednowymiarowy **char**, **wchar_t**, `byte` (lub równoważnego) tablicy lub wskaźnika do tablicy takie, które muszą być traktowane jako ciąg.  
   
 ## <a name="syntax"></a>Składnia  
   
 ```  
-  
 [string]  
-  
 ```  
   
 ## <a name="remarks"></a>Uwagi  
- **Ciąg** atrybut C++ ma te same funkcje co [ciąg](http://msdn.microsoft.com/library/windows/desktop/aa367270) MIDL atrybutu.  
+ **Ciąg** atrybut C++ ma taką samą funkcjonalność jak [ciąg](http://msdn.microsoft.com/library/windows/desktop/aa367270) atrybutów w MIDL.  
   
 ## <a name="example"></a>Przykład  
- Poniższy kod przedstawia sposób użycia **ciąg** w interfejsie i jako element typedef:  
+ Poniższy kod przedstawia sposób użycia **ciąg** w interfejsie, a także na element typedef:  
   
-```  
+```cpp  
 // cpp_attr_ref_string.cpp  
 // compile with: /LD  
 #include "unknwn.h"  
@@ -56,7 +54,7 @@ __interface IFireTabCtrl
   
 ## <a name="requirements"></a>Wymagania  
   
-### <a name="attribute-context"></a>Atrybut kontekstu  
+### <a name="attribute-context"></a>Kontekst atrybutu  
   
 |||  
 |-|-|  
@@ -65,7 +63,7 @@ __interface IFireTabCtrl
 |**Wymaganych atrybutów**|Brak|  
 |**Nieprawidłowe atrybuty**|Brak|  
   
- Aby uzyskać więcej informacji na temat konteksty atrybutu, zobacz [konteksty atrybutu](../windows/attribute-contexts.md).  
+ Aby uzyskać więcej informacji na temat konteksty atrybutu zobacz [konteksty atrybutu](../windows/attribute-contexts.md).  
   
 ## <a name="see-also"></a>Zobacz też  
  [Atrybuty IDL](../windows/idl-attributes.md)   

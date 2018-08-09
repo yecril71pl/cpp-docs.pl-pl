@@ -17,19 +17,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 82a9bc4000919d2bbe2b8598351d3fe6a4730ba9
-ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
+ms.openlocfilehash: 014099ce3e9152d2402263baaa6d6b30607756ed
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39569033"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39644976"
 ---
 # <a name="enableif-structure"></a>EnableIf — Struktura
 Obsługuje infrastrukturę biblioteki WRL i nie jest przeznaczona do użycia bezpośrednio w kodzie.  
   
 ## <a name="syntax"></a>Składnia  
   
-```  
+```cpp  
 template <  
    bool b,  
    typename T = void  
@@ -42,7 +42,7 @@ template <
 struct EnableIf<true, T>;  
 ```  
   
-#### <a name="parameters"></a>Parametry  
+### <a name="parameters"></a>Parametry  
  *T*  
  Typ.  
   

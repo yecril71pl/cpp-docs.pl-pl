@@ -19,36 +19,35 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 52c9aed6e55a11eea8eeb9b4979cbe43b016c26f
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 92f5a427399009baf1b157480f0e486e9c4ec538
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33872364"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39645226"
 ---
 # <a name="creating-a-256-color-icon-or-cursor-image-editor-for-icons"></a>Tworzenie ikony 256 kolorów (Edytor obrazów dla ikon)
-Za pomocą edytora obrazów, ikony i kursory może być rozmiarze duże (64 x 64) z palety 256 kolorów do wyboru. Po utworzeniu zasobu, styl obrazu urządzenia jest zaznaczone.  
+Za pomocą **obraz** edytora, ikon i kursorów można wielkości dużych (64 × 64) z palety 256 kolorów do wyboru. Po utworzeniu zasobu stylu obrazu urządzenia jest zaznaczone.  
   
 ### <a name="to-create-a-256-color-icon-or-cursor"></a>Tworzenie ikony 256 kolorów lub kursora  
   
-1.  W [widok zasobów](../windows/resource-view-window.md), kliknij prawym przyciskiem myszy plik .rc, a następnie wybierz **Wstaw zasób** z menu skrótów. (Jeśli masz już istniejący zasób obrazu w pliku .rc, takich jak kursora, użytkownik może po prostu kliknij prawym przyciskiem myszy **kursora** i wybierz polecenie **wstawiania kursora** z menu skrótów.)  
+1.  W [widok zasobów](../windows/resource-view-window.md), kliknij prawym przyciskiem myszy plik .rc, a następnie wybierz **Wstaw zasobów** z menu skrótów. (Jeśli masz już istniejący zasób obrazu w pliku .rc, takich jak kursora, użytkownik może po prostu kliknij prawym przyciskiem myszy **kursora** i wybierz polecenie **wstawiania kursora** z menu skrótów.)  
   
-     **Uwaga** Jeśli projekt nie zawiera już plik .rc, zobacz [Tworzenie nowego pliku skryptu zasobu](../windows/how-to-create-a-resource-script-file.md).  
+    > [!NOTE] 
+    > Jeśli projekt nie zawiera jeszcze pliku .rc, zobacz [tworzenia nowego pliku skryptu zasobów](../windows/how-to-create-a-resource-script-file.md).  
   
-2.  W [Wstaw zasób — okno dialogowe](../windows/add-resource-dialog-box.md), wybierz pozycję **ikona** lub **kursora** i kliknij przycisk **nowy**.  
+2.  W [Wstaw zasób — okno dialogowe](../windows/add-resource-dialog-box.md), wybierz opcję **ikonę** lub **kursora** i kliknij przycisk **New**.  
   
-3.  Na **obrazu** menu, kliknij przycisk **nowy obraz urządzenia**.  
+3.  Na **obraz** menu, kliknij przycisk **nowy obraz urządzenia**.  
   
-4.  Wybierz odpowiedni styl 256 kolorów obrazu.  
+4.  Wybierz żądany styl obrazu 256 kolorów.  
   
- Aby uzyskać informacje o dodawaniu zasobów do projektów zarządzanych, zobacz [zasobów w aplikacjach pulpitu](/dotnet/framework/resources/index) w *Przewodnik programistów platformy .NET Framework.* Aby uzyskać informacje na ręczne dodanie do projektów zarządzanych plików zasobów, uzyskiwanie dostępu do zasobów, wyświetlanie zasoby statyczne i przypisanie do właściwości ciągów zasobów, zobacz [tworzenie plików zasobów dla aplikacji pulpitu](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Informacje dotyczące globalizacji i lokalizacji zasobów w zarządzanych aplikacjach, zobacz [Globalizing i lokalizacja aplikacji .NET Framework](/dotnet/standard/globalization-localization/index).  
+ Aby uzyskać informacje na temat dodawania zasobów do projektów zarządzanych, zobacz [zasoby w aplikacjach pulpitu](/dotnet/framework/resources/index) w *przewodniku dewelopera .NET Framework*. Aby uzyskać informacji na temat ręcznego dodawania plików zasobów do projektów zarządzanych, uzyskiwania dostępu do zasobów, wyświetlania statycznych zasobów i przypisywania ciągów zasobów do właściwości, zobacz [Creating Resource Files dla aplikacji klasycznych](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Aby uzyskać informacji na temat globalizacja i lokalizacja zasobów w aplikacjach zarządzanych, zobacz [Globalizing i lokalizowanie aplikacji programu .NET Framework](/dotnet/standard/globalization-localization/index).  
   
- **Wymagania**  
-  
+## <a name="requirements"></a>Wymagania  
  Brak  
   
 ## <a name="see-also"></a>Zobacz też  
  [Korzystanie z palety 256 kolorów](../windows/using-the-256-color-palette-image-editor-for-icons.md)   
  [Klawisze skrótów](../windows/accelerator-keys-image-editor-for-icons.md)   
  [Ikony i kursory: zasoby obrazów do wyświetlania na urządzeniach](../windows/icons-and-cursors-image-resources-for-display-devices-image-editor-for-icons.md)
-

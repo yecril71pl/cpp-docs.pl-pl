@@ -17,32 +17,32 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 2f66f185692c200ea459b88363143c0cc1af9d55
-ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
+ms.openlocfilehash: b64f44e2188848a25e607c53171e25aa721e9bc4
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39466013"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39641369"
 ---
 # <a name="criticalsectiontraitsunlock-method"></a>CriticalSectionTraits::Unlock — Metoda
-Specjalizuje się szablonu CriticalSection, tak aby obsługuje uwalniający własności obiektu określona sekcja krytycznego.  
+Specjalizuje się `CriticalSection` szablonu, tak że obsługuje uwalniający własności obiektu określona sekcja krytycznego.  
   
 ## <a name="syntax"></a>Składnia  
   
-```  
+```cpp  
 inline static void Unlock(  
    _In_ Type cs  
 );  
 ```  
   
-#### <a name="parameters"></a>Parametry  
+### <a name="parameters"></a>Parametry  
  *CS*  
  Wskaźnik do obiektu sekcję krytyczną.  
   
 ## <a name="remarks"></a>Uwagi  
- *Typu* modyfikator jest zdefiniowany jako `typedef CRITICAL_SECTION* Type;`.  
+ `Type` Modyfikator jest zdefiniowany jako `typedef CRITICAL_SECTION* Type;`.  
   
- Aby uzyskać więcej informacji, zobacz "Funkcja LeaveCriticalSection" w sekcji "Synchronizacji funkcji" w dokumentacji interfejsu API Windows.  
+ Aby uzyskać więcej informacji, zobacz **funkcja LeaveCriticalSection** w **funkcji synchronizacji** części dokumentacji interfejsu API Windows.  
   
 ## <a name="requirements"></a>Wymagania  
  **Nagłówek:** corewrappers.h  

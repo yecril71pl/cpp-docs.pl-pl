@@ -20,17 +20,17 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: cc902a0bb90194c463ebb874234f65230cd502b4
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: fe9c73a09e2a0f220ee4454baefb07b7e65fcafa
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33891314"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39641650"
 ---
 # <a name="toolbar-editor"></a>Edytor paska narzędzi
-Edytor paska narzędzi pozwala na tworzenie zasobów narzędzi i konwertowanie map bitowych na zasoby paska narzędzi. Edytor paska narzędzi używa graficzne do wyświetlenia narzędzi i przyciski, które bardzo podobna, jak będzie wyglądać w Zakończono aplikacji.  
+Edytor paska narzędzi umożliwia tworzenie zasobów narzędzi i konwertowanie map bitowych na zasoby paska narzędzi. Edytor paska narzędzi wykorzystuje graficzny widok, aby pokazać, narzędzi i przyciski, które przypominają, jak będzie wyglądał w ukończonej aplikacji.  
   
- W edytorze paska narzędzi można wykonywać następujące czynności:  
+ Edytor paska narzędzi możesz:  
   
 -   [Tworzenie nowych pasków narzędzi i przycisków](../windows/creating-new-toolbars.md)  
   
@@ -40,19 +40,18 @@ Edytor paska narzędzi pozwala na tworzenie zasobów narzędzi i konwertowanie m
   
 -   [Tworzenie etykietek narzędzi](../windows/creating-a-tool-tip-for-a-toolbar-button.md)  
   
- Pasek narzędzi okna edytora wyświetlane są dwa widoki obrazu przycisku, taka sama jak okno edytora obrazów. Pasek podziału oddziela dwa okienka. Aby zmieniać względne rozmiary okienek, można przeciągać pasek podziału. Aktywne okienko wyświetla krawędź wyboru. Powyżej dwóch widoków obrazu jest narzędzi podmiotu.  
+ Okno Edytor paska narzędzi wyświetla dwa widoki obrazu przycisku, taka sama jak okno edytora obrazów. Pasek podziału rozdziela dwa okienka. Aby zmieniać względne rozmiary okienek, można przeciągać pasek podziału. Aktywne okienko wyświetla krawędź wyboru. Powyższe dwa widoki obrazu jest narzędzi podmiotu.  
   
  ![Edytor paska narzędzi](../mfc/media/vctoolbareditor.gif "vcToolbarEditor")  
 Edytor paska narzędzi  
   
- Edytor paska narzędzi jest podobny do edytora w funkcji. Elementy menu Narzędzia grafiki i siatki mapy bitowej są takie same jak w edytorze obrazów. Brak polecenia menu w menu Obraz pozwala przełączać się między Edytor paska narzędzi i edytora obrazów. Aby uzyskać więcej informacji na temat używania narzędzi graficznych, palety kolorów lub menu obrazu, zobacz [edytor obrazów](../windows/image-editor-for-icons.md).  
+ Edytor paska narzędzi jest podobny do edytora obrazów w działaniu. Elementy menu, Narzędzia grafiki i mapy bitowej siatki są takie same, jak w edytorze obrazu. Brak polecenia menu w menu obrazu, aby możliwe było przełączać się między Edytor paska narzędzi i edytora obrazów. Aby uzyskać więcej informacji na temat korzystania z narzędzi graficznych, paleta kolorów lub menu obrazu, zobacz [edytora obrazów](../windows/image-editor-for-icons.md).  
   
- Aby uzyskać informacje o dodawaniu zasobów do projektów zarządzanych, zobacz [zasobów w aplikacjach pulpitu](/dotnet/framework/resources/index) w *Przewodnik programistów platformy .NET Framework.* Aby uzyskać informacje na ręczne dodanie do projektów zarządzanych plików zasobów, uzyskiwanie dostępu do zasobów, wyświetlanie zasoby statyczne i przypisanie do właściwości ciągów zasobów, zobacz [tworzenie plików zasobów dla aplikacji pulpitu](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Informacje dotyczące globalizacji i lokalizacji zasobów w zarządzanych aplikacjach, zobacz [Globalizing i lokalizacja aplikacji .NET Framework](/dotnet/standard/globalization-localization/index).  
+ Aby uzyskać informacje na temat dodawania zasobów do projektów zarządzanych, zobacz [zasoby w aplikacjach pulpitu](/dotnet/framework/resources/index) w *przewodniku dewelopera .NET Framework*. Aby uzyskać informacji na temat ręcznego dodawania plików zasobów do projektów zarządzanych, uzyskiwania dostępu do zasobów, wyświetlania statycznych zasobów i przypisywania ciągów zasobów do właściwości, zobacz [Creating Resource Files dla aplikacji klasycznych](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Aby uzyskać informacji na temat globalizacja i lokalizacja zasobów w aplikacjach zarządzanych, zobacz [Globalizing i lokalizowanie aplikacji programu .NET Framework](/dotnet/standard/globalization-localization/index).  
   
 ## <a name="requirements"></a>Wymagania  
- MFC i ATL  
+ ATL i MFC  
   
 ## <a name="see-also"></a>Zobacz też  
  [Edytory zasobów](../windows/resource-editors.md)   
- [Menu i innych zasobów](http://msdn.microsoft.com/library/windows/desktop/ms632583.aspx)
-
+ [Menu i inne zasoby](http://msdn.microsoft.com/library/windows/desktop/ms632583.aspx)

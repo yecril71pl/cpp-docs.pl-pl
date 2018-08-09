@@ -1,5 +1,5 @@
 ---
-title: Synclockwithstatust::status_ — członek danych | Dokumentacja firmy Microsoft
+title: SyncLockWithStatusT::status_, składowa danych | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 0a6d8fb587ed86063e19a44cd391ea04d75b2a68
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: d1dc6cbab11a41707aa60aa37d63ae0e5042ba5a
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33888455"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39652851"
 ---
 # <a name="synclockwithstatuststatus-data-member"></a>SyncLockWithStatusT::status_ — Członek danych
 Obsługuje infrastrukturę biblioteki WRL i nie jest przeznaczona do użycia bezpośrednio w kodzie.  
@@ -34,7 +34,7 @@ DWORD status_;
 ```  
   
 ## <a name="remarks"></a>Uwagi  
- Blokad wynik podstawowych oczekiwania operacji po operacji blokowania na obiekt oparte na bieżący obiekt synclockwithstatust —.  
+ Zawiera wynik podstawowych operacji oczekiwania po operacji blokadę na obiekcie na podstawie bieżącego **synclockwithstatust —** obiektu.  
   
 ## <a name="requirements"></a>Wymagania  
  **Nagłówek:** corewrappers.h  

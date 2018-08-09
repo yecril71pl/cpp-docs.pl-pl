@@ -20,35 +20,33 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 5dc78dfa5d549b37b99125cfcef5c25ae6c76b9e
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: be817ac4bddcc169ab2ecb3a9106e9594642e2f0
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33890908"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39645155"
 ---
 # <a name="using-the-256-color-palette-image-editor-for-icons"></a>Korzystanie z palety 256 kolorów (Edytor obrazów dla ikon)
-Rysowanie z zaznaczenia z palety 256 kolorów, musisz wybrać kolory z palety kolorów w [kolory — okno](../windows/colors-window-image-editor-for-icons.md).  
+Aby narysować przy zaznaczeniem z palety 256 kolorów, musisz wybrać kolory z palety kolorów w [okno kolorów](../windows/colors-window-image-editor-for-icons.md).  
   
 ### <a name="to-choose-a-color-from-the-256-color-palette-for-large-icons"></a>Aby wybrać kolor z palety 256 kolorów dla dużych ikon  
   
-1.  Wybierz dużych ikon lub kursora, albo utworzyć nowe dużych ikon kursora.  
+1.  Wybierz kursor lub duże ikony, lub Utwórz nową ikonę dużych lub kursor.  
   
-2.  Wybierz kolor z 256 kolorów wyświetlany w **kolory** palety w **kolory** okna.  
+2.  Wybierz kolor z 256 kolorów, które są wyświetlane w **kolory** palety w **kolory** okna.  
   
-     Kolor wybrany staną się bieżący kolor w palecie kolorów w **kolory** okna.  
+     Kolor wybrany staną się bieżący kolor z palety kolorów w **kolory** okna.  
   
     > [!NOTE]
-    >  Początkowa palety 256 kolorów obrazów odpowiada palety zwracane przez interfejs API systemu Windows CreateHalftonePalette. Wszystkie ikony przeznaczone dla powłoki systemu Windows należy używać tej palety, aby zapobiec migotania podczas realizacji palety.  
+    >  Pasuje do początkowej palety 256 kolorów obrazów palety zwracany przez `CreateHalftonePalette` interfejsu Windows API. Wszystkie ikony przeznaczone dla powłoki Windows należy używać tej palety, aby zapobiec migotania podczas realizacji palety.  
   
- Aby uzyskać informacje o dodawaniu zasobów do projektów zarządzanych, zobacz [zasobów w aplikacjach pulpitu](/dotnet/framework/resources/index) w *Przewodnik programistów platformy .NET Framework.* Aby uzyskać informacje na ręczne dodanie do projektów zarządzanych plików zasobów, uzyskiwanie dostępu do zasobów, wyświetlanie zasoby statyczne i przypisanie do właściwości ciągów zasobów, zobacz [tworzenie plików zasobów dla aplikacji pulpitu](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Informacje dotyczące globalizacji i lokalizacji zasobów w zarządzanych aplikacjach, zobacz [Globalizing i lokalizacja aplikacji .NET Framework](/dotnet/standard/globalization-localization/index).  
+ Aby uzyskać informacje na temat dodawania zasobów do projektów zarządzanych, zobacz [zasoby w aplikacjach pulpitu](/dotnet/framework/resources/index) w *przewodniku dewelopera .NET Framework*. Aby uzyskać informacji na temat ręcznego dodawania plików zasobów do projektów zarządzanych, uzyskiwania dostępu do zasobów, wyświetlania statycznych zasobów i przypisywania ciągów zasobów do właściwości, zobacz [Creating Resource Files dla aplikacji klasycznych](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Aby uzyskać informacji na temat globalizacja i lokalizacja zasobów w aplikacjach zarządzanych, zobacz [Globalizing i lokalizowanie aplikacji programu .NET Framework](/dotnet/standard/globalization-localization/index).  
   
- Wymagania  
-  
+## <a name="requirements"></a>Wymagania  
  Brak  
   
 ## <a name="see-also"></a>Zobacz też  
  [Klawisze skrótów](../windows/accelerator-keys-image-editor-for-icons.md)   
  [Tworzenie ikony 256 kolorów](creating-a-256-color-icon-or-cursor-image-editor-for-icons.md)   
  [Ikony i kursory: zasoby obrazów do wyświetlania na urządzeniach](../windows/icons-and-cursors-image-resources-for-display-devices-image-editor-for-icons.md)
-

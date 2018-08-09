@@ -17,33 +17,31 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 399b9fbbcf4b449f5f91beaea89c403d120d0a21
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 3e5d7144f7e2a6fa3bf6937a377ccad0a711f746
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33890278"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39647063"
 ---
 # <a name="usesgetlasterror"></a>usesgetlasterror
-Obiekt wywołujący informuje, że jeśli występuje błąd podczas wywoływania tej funkcji, następnie obiekt wywołujący może wywoływać `GetLastError` można pobrać kod błędu.  
+Informuje obiekt wywołujący, że jeśli występuje błąd podczas wywoływania tej funkcji, następnie element wywołujący może wywoływać `GetLastError` można pobrać kod błędu.  
   
 ## <a name="syntax"></a>Składnia  
   
 ```  
-  
 [usesgetlasterror]  
-  
 ```  
   
 ## <a name="remarks"></a>Uwagi  
- **Usesgetlasterror —** atrybut C++ ma te same funkcje co [usesgetlasterror —](http://msdn.microsoft.com/library/windows/desktop/aa367297) MIDL atrybutu.  
+ **Usesgetlasterror —** atrybut C++ ma taką samą funkcjonalność jak [usesgetlasterror —](http://msdn.microsoft.com/library/windows/desktop/aa367297) atrybutów w MIDL.  
   
 ## <a name="example"></a>Przykład  
- Zobacz [idl_module](../windows/idl-module.md) przykład przykładowy sposób użycia **usesgetlasterror —**.  
+ Zobacz [idl_module](../windows/idl-module.md) przykład przykład sposobu użycia **usesgetlasterror —**.  
   
 ## <a name="requirements"></a>Wymagania  
   
-### <a name="attribute-context"></a>Atrybut kontekstu  
+### <a name="attribute-context"></a>Kontekst atrybutu  
   
 |||  
 |-|-|  
@@ -52,7 +50,7 @@ Obiekt wywołujący informuje, że jeśli występuje błąd podczas wywoływania
 |**Wymaganych atrybutów**|Brak|  
 |**Nieprawidłowe atrybuty**|Brak|  
   
- Aby uzyskać więcej informacji na temat konteksty atrybutu, zobacz [konteksty atrybutu](../windows/attribute-contexts.md).  
+ Aby uzyskać więcej informacji na temat konteksty atrybutu zobacz [konteksty atrybutu](../windows/attribute-contexts.md).  
   
 ## <a name="see-also"></a>Zobacz też  
  [Atrybuty IDL](../windows/idl-attributes.md)   

@@ -1,5 +1,5 @@
 ---
-title: Edytowalne typy plików zasobów | Dokumentacja firmy Microsoft
+title: Edytowalne typy plików dla zasobów | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -19,27 +19,25 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 11d3229341ece1bbee0820a7e2320b8ef6b0381b
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: e17bada862cf2d7c5b86815ae140e298060ecb40
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33870253"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39648434"
 ---
 # <a name="editable-file-types-for-resources"></a>Edytowalne typy plików dla zasobów
-Można otworzyć następujących typów plików i edytować zasoby, które zawierają.  
+Można otworzyć następujących typów plików i edytowanie zasobów, które zawierają.  
   
 |Nazwa pliku|Opis|  
 |---------------|-----------------|  
-|.RC —|Pliki skryptów zasobów.|  
-|.rct —|Pliki szablonów zasobów.|  
+|.RC|Pliki skryptów zasobów.|  
+|.rct|Pliki szablonów zasobów.|  
 |.res|Pliki zasobów.|  
-|.resx|Pliki zasobów zarządzanych.|  
+|.resx|Zarządzanych plików zasobów.|  
 |.exe|Pliki wykonywalne.|  
-|.dll|Pliki bibliotek dołączanych dynamicznie.|  
-|.bmp, .ico dib i .cur|Pliki map bitowych, ikona, narzędzi i kursora.|  
-  
-
+|plik .dll|Pliki bibliotek dołączanych dynamicznie.|  
+|.bmp, .ico, .dib i .cur|Pliki map bitowych, ikony, narzędzi i kursora.|  
   
 ## <a name="requirements"></a>Wymagania  
  Win32  

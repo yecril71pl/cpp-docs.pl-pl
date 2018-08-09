@@ -17,19 +17,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: b84eaca73111e4b76390bddf55d85305c08c0c22
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: da8386959fcceead688976afe5da8736618004dc
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33872786"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39652912"
 ---
 # <a name="filehandletraits-structure"></a>FileHandleTraits — Struktura
 Definiuje właściwości dojście do pliku.  
   
 ## <a name="syntax"></a>Składnia  
   
-```  
+```cpp  
 struct FileHandleTraits : HANDLETraits;  
 ```  
   

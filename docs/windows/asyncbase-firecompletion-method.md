@@ -17,19 +17,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: fa5988516f3836749357b15295ac228b78fe3f04
-ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
+ms.openlocfilehash: 199d84afe198c4fc41808144105ea704822aa00a
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39467244"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39646610"
 ---
 # <a name="asyncbasefirecompletion-method"></a>AsyncBase::FireCompletion — Metoda
 Wywołuje program obsługi zdarzenia zakończenia lub resetuje delegata wewnętrznego postępu.  
   
 ## <a name="syntax"></a>Składnia  
   
-```  
+```cpp  
 void FireCompletion(  
    void  
 ) override;  

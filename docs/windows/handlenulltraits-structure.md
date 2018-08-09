@@ -17,29 +17,29 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: c4b7daa319b927d168d39f0981c00b5fbe92063c
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: e009b31f95f2cdf80231021c38848fbc30ce20d3
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33877881"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39645441"
 ---
 # <a name="handlenulltraits-structure"></a>HANDLENullTraits — Struktura
-Definiuje wspólne cechy niezainicjowany uchwyt.  
+Definiuje typowe cechy niezainicjowany uchwyt.  
   
 ## <a name="syntax"></a>Składnia  
   
-```  
+```cpp  
 struct HANDLENullTraits;  
 ```  
   
 ## <a name="members"></a>Elementy członkowskie  
   
-### <a name="public-typedefs"></a>Definicje typów publicznych  
+### <a name="public-typedefs"></a>Publiczne definicje typów  
   
 |Nazwa|Opis|  
 |----------|-----------------|  
-|`Type`|Synonim dojścia.|  
+|`Type`|Synonim dla dojście.|  
   
 ### <a name="public-methods"></a>Metody publiczne  
   

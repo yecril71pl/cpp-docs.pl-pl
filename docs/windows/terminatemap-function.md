@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: b4787fec0a6b4b9f55c500b66786372945d9a523
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: d33cbd46903a37bf42e417a100d26c9b706058c0
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33890352"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39645941"
 ---
 # <a name="terminatemap-function"></a>TerminateMap — Funkcja
 Obsługuje infrastrukturę biblioteki WRL i nie jest przeznaczona do użycia bezpośrednio w kodzie.  
@@ -36,18 +36,18 @@ inline bool TerminateMap(
     bool forceTerminate) throw()  
 ```  
   
-## <a name="parameters"></a>Parametry  
- `module`  
+### <a name="parameters"></a>Parametry  
+ *Moduł*  
  A [modułu](../windows/module-class.md).  
   
- `serverName`  
- Nazwa podzbiór fabryki klas w moduł określony przez parametr `module`.  
+ *serverName*  
+ Nazwa podzbiór fabryki klas w module, który został określony przez parametr *modułu*.  
   
- `forceTerminate`  
- `true` Aby zakończyć klasy fabryki niezależnie od ich są aktywne; `false` nie zakończyć fabryki klas, jeśli wszystkie fabryki jest aktywny.  
+ *forceTerminate*  
+ **wartość true,** zakończenie klasy fabryk, niezależnie od ich są aktywne; **false** nie zakończyć fabryki klas, jeśli wszystkie fabryki jest aktywny.  
   
 ## <a name="return-value"></a>Wartość zwracana  
- `true` Jeśli wszystkie fabryki klas zostały przerwane; w przeciwnym razie `false`.  
+ **wartość true,** gdyby zakończone; w przeciwnym razie wszystkie fabryki klas **false**.  
   
 ## <a name="remarks"></a>Uwagi  
  Zamyka fabryki klas w określonym module.  
@@ -55,7 +55,7 @@ inline bool TerminateMap(
 ## <a name="requirements"></a>Wymagania  
  **Nagłówek:** module.h  
   
- **Namespace:** Microsoft::wrl:: details —  
+ **Namespace:** Microsoft::wrl:: details  
   
 ## <a name="see-also"></a>Zobacz też  
  [Microsoft::WRL::Details, przestrzeń nazw](../windows/microsoft-wrl-details-namespace.md)

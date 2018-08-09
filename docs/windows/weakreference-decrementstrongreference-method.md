@@ -1,5 +1,5 @@
 ---
-title: WeakReference::DecrementStrongReference — metoda | Dokumentacja firmy Microsoft
+title: WeakReference::DecrementStrongReference, metoda | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 7d5605670e05f91f9f1293c8bff0f4d74e458d25
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 5c7e2161c5451fe82e12918f00e8cb2cde37d336
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33890339"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39642318"
 ---
 # <a name="weakreferencedecrementstrongreference-method"></a>WeakReference::DecrementStrongReference — Metoda
 Obsługuje infrastrukturę biblioteki WRL i nie jest przeznaczona do użycia bezpośrednio w kodzie.  
@@ -34,18 +34,18 @@ ULONG DecrementStrongReference();
 ```  
   
 ## <a name="remarks"></a>Uwagi  
- Zmniejsza silne odwołanie liczba bieżące weakreference — obiektu.  
+ Dekrementuje silne odwołanie zliczane bieżącego **WeakReference** obiektu.  
   
- Gdy liczba silne odwołanie wynosi zero, silne odwołanie ma wartość `nullptr`.  
+ Gdy liczba silne odwołanie staje się zerem, silne odwołanie jest ustawiona na **nullptr**.  
   
 ## <a name="return-value"></a>Wartość zwracana  
- Liczba zmniejszany silne odwołanie.  
+ Liczba wraz z przydzielaniem silne odwołanie.  
   
 ## <a name="requirements"></a>Wymagania  
  **Nagłówek:** implements.h  
   
- **Namespace:** Microsoft::wrl:: details —  
+ **Namespace:** Microsoft::wrl:: details  
   
 ## <a name="see-also"></a>Zobacz też  
-[Weakreference — klasa](../windows/weakreference-class1.md)  
+ [Weakreference — klasa](../windows/weakreference-class1.md)  
  [Microsoft::WRL::Details, przestrzeń nazw](../windows/microsoft-wrl-details-namespace.md)

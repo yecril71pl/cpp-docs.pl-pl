@@ -1,5 +1,5 @@
 ---
-title: Ustawianie rozmiaru pole kombi i jego listy rozwijanej | Dokumentacja firmy Microsoft
+title: Ustawianie rozmiaru pola kombi i jego listy rozwijanej | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,47 +18,46 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 1ee46502fee6f37d926580863dfc91edb276a846
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 6a22f67bdb0d9d88cd2bb448628734db30f75885
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33889348"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39643176"
 ---
 # <a name="setting-the-size-of-the-combo-box-and-its-drop-down-list"></a>Ustawianie rozmiaru pola kombi i jego listy rozwijanej
-Rozmiar pola kombi można zmienić po dodaniu go do okna dialogowego. Można również określić rozmiar pola listy rozwijanej.  
+Po dodaniu do okna dialogowego, można rozmiar pola kombi. Można również określić rozmiar pola listy rozwijanej.  
   
 ### <a name="to-size-a-combo-box"></a>Rozmiar pola kombi  
   
-1.  Wybierz kontrolkę pola kombi w oknie dialogowym.  
+1.  Zaznacz formant pola kombi w oknie dialogowym.  
   
-     Początkowo tylko uchwyty rozmiaru lewej i prawej są aktywne.  
+     Początkowo tylko uchwyty zmiany rozmiaru lewej i prawej są aktywne.  
   
-2.  Ustawia szerokość pola kombi za pomocą uchwytów zmiany rozmiaru.  
+2.  Ustaw szerokość pola kombi za pomocą uchwytów zmiany rozmiaru.  
   
  Można również ustawić pionowy rozmiar część rozwijana pola kombi.  
   
-#### <a name="to-set-the-size-of-the-combo-box-drop-down-list"></a>Aby ustawić rozmiar pole kombi pole listy rozwijanej  
+#### <a name="to-set-the-size-of-the-combo-box-drop-down-list"></a>Aby ustawić rozmiar kombi pole listy rozwijanej  
   
-1.  Kliknij przycisk strzałki rozwijanej z prawej strony pola kombi.  
+1.  Kliknij przycisk ze strzałką listy rozwijanej z prawej strony pola kombi.  
   
-     ![Strzałka w polu kombi w projekcie MFC](../mfc/media/vccomboboxarrow.gif "vcComboBoxArrow")  
+     ![Strzałka na pola kombi w projekcie MFC](../mfc/media/vccomboboxarrow.gif "vcComboBoxArrow")  
   
-     Zarys zmian sterowania pokazanie rozmiar pola kombi z listy rozwijanej obszarem rozszerzony.  
+     Zarys zmian kontroli do wyświetlenia rozmiaru pola kombi z listy rozwijanej obszarem rozszerzony.  
   
-2.  Umożliwia zmianę początkowy rozmiar obszaru listy rozwijanej niższe uchwyt zmiany rozmiaru.  
+2.  Użyj dolnej uchwyt zmiany rozmiaru, aby zmienić początkowy rozmiar obszaru listy rozwijanej.  
   
-     ![Kombi&#45;rozmiaru pola w projekcie MFC](../mfc/media/vccomboboxsizing.gif "vcComboBoxSizing")  
+     ![Pole kombi&#45;rozmiaru pola w projekcie MFC](../mfc/media/vccomboboxsizing.gif "vcComboBoxSizing")  
   
 3.  Kliknij strzałkę listy rozwijanej ponownie, aby zamknąć część listy rozwijanej pola kombi.  
   
- Aby uzyskać informacje o dodawaniu zasobów do projektów zarządzanych, zobacz [zasobów w aplikacjach pulpitu](/dotnet/framework/resources/index) w *Przewodnik programistów platformy .NET Framework.* Aby uzyskać informacje na ręczne dodanie do projektów zarządzanych plików zasobów, uzyskiwanie dostępu do zasobów, wyświetlanie zasoby statyczne i przypisanie do właściwości ciągów zasobów, zobacz [tworzenie plików zasobów dla aplikacji pulpitu](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Informacje dotyczące globalizacji i lokalizacji zasobów w zarządzanych aplikacjach, zobacz [Globalizing i lokalizacja aplikacji .NET Framework](/dotnet/standard/globalization-localization/index).  
+ Aby uzyskać informacje na temat dodawania zasobów do projektów zarządzanych, zobacz [zasoby w aplikacjach pulpitu](/dotnet/framework/resources/index) w *przewodniku dewelopera .NET Framework*. Aby uzyskać informacji na temat ręcznego dodawania plików zasobów do projektów zarządzanych, uzyskiwania dostępu do zasobów, wyświetlania statycznych zasobów i przypisywania ciągów zasobów do właściwości, zobacz [Creating Resource Files dla aplikacji klasycznych](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Aby uzyskać informacji na temat globalizacja i lokalizacja zasobów w aplikacjach zarządzanych, zobacz [Globalizing i lokalizowanie aplikacji programu .NET Framework](/dotnet/standard/globalization-localization/index).  
   
-### <a name="requirements"></a>Wymagania  
+## <a name="requirements"></a>Wymagania  
  Win32  
   
 ## <a name="see-also"></a>Zobacz też  
  [Dodawanie wartości do kontrolki pola kombi](../windows/adding-values-to-a-combo-box-control.md)   
  [Formanty w oknach dialogowych](../windows/controls-in-dialog-boxes.md)   
  [Kontrolki](../mfc/controls-mfc.md)
-

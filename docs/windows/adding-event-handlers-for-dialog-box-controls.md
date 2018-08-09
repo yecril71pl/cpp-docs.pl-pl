@@ -18,24 +18,24 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 589318286c48351e3eae6e3a83f42741a805ce68
-ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
+ms.openlocfilehash: 2dce9b2ce59eb98c59c7a6cf04be52f3d439fdb0
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39463759"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39642854"
 ---
 # <a name="adding-event-handlers-for-dialog-box-controls"></a>Dodawanie obsługi zdarzeń dla formantów okna dialogowego
 
 Dla projektu oknach dialogowych, które są już skojarzone z klasą możesz korzystać z zalet niektóre skróty podczas tworzenia procedur obsługi zdarzeń. Można szybko utworzyć program obsługi zdarzenia powiadomień formantu domyślne lub wszystkie odpowiednie komunikaty Windows.
 
-## <a name="to-create-a-handler-for-the-default-control-notification-event"></a>Aby utworzyć program obsługi zdarzenia powiadomień formantu domyślne
+### <a name="to-create-a-handler-for-the-default-control-notification-event"></a>Aby utworzyć program obsługi zdarzenia powiadomień formantu domyślne
 
-1. Kliknij dwukrotnie formant. Zostanie otwarty Edytor tekstu.
+1. Kliknij dwukrotnie formant. **Tekstu** zostanie otwarty Edytor.
 
-2. Dodaj kod procedury obsługi powiadamiania kontrolki w edytorze tekstów.
+2. Dodaj kod procedury obsługi powiadamiania kontrolki w **tekstu** edytora.
 
-## <a name="to-create-a-handler-for-any-applicable-windows-message"></a>Aby utworzyć procedury obsługi dla dowolnego odpowiednią wiadomość Windows
+### <a name="to-create-a-handler-for-any-applicable-windows-message"></a>Aby utworzyć procedury obsługi dla dowolnego odpowiednią wiadomość Windows
 
 1. Kliknij formant, dla którego chcesz obsłużyć zdarzenie powiadomienia.
 
@@ -52,12 +52,12 @@ Dla projektu oknach dialogowych, które są już skojarzone z klasą możesz kor
     > [!NOTE]
     > Alternatywnie, wybierz okno dialogowe i kliknij przycisk **ControlEvents** przycisk, aby wyświetlić listę typowych zdarzeń Windows dla wszystkich kontrolek w oknie dialogowym.
 
-3. W **właściwości** okna, kliknij kolumnę prawym obok zdarzenia w celu obsługi, a następnie wybierz nazwę zdarzenia sugerowane powiadomień (na przykład **OnBnClickedOK** uchwyty **BN_CLICKED** ).
+3. W **właściwości** okna, kliknij kolumnę prawym obok zdarzenia w celu obsługi, a następnie wybierz nazwę zdarzenia sugerowane powiadomień (na przykład `OnBnClickedOK` obsługuje BN_CLICKED).
 
     > [!NOTE]
     > Alternatywnie możesz podać nazwę procedury obsługi zdarzeń wybór, a nie wybrana domyślna nazwa programu obsługi zdarzeń.
 
-   Po wybraniu zdarzenia programu Visual Studio otwiera edytor tekstu i wyświetla kod procedury obsługi zdarzeń. Na przykład, poniższy kod zostanie dodany do domyślnej **OnBnClickedOK**:
+   Po wybraniu zdarzenia programu Visual Studio otwiera **edytora tekstów** i wyświetla kod procedury obsługi zdarzeń. Na przykład, poniższy kod zostanie dodany do domyślnej `OnBnClickedOK`:
 
     ```cpp
     void CAboutDlg::OnBnClickedOk(void)
@@ -68,19 +68,17 @@ Dla projektu oknach dialogowych, które są już skojarzone z klasą możesz kor
 
 Jeśli chcesz dodać program obsługi zdarzeń do klasy innej niż jedna implementacja okna dialogowego, użyj [Kreator obsługi zdarzeń](../ide/event-handler-wizard.md). Aby uzyskać więcej informacji, zobacz [Dodawanie obsługi zdarzeń](../ide/adding-an-event-handler-visual-cpp.md).
 
-Aby uzyskać informacje na temat dodawania zasobów do projektów zarządzanych, zobacz [zasoby w aplikacjach pulpitu](/dotnet/framework/resources/index) w *przewodniku dewelopera .NET Framework.* Aby uzyskać informacji na temat ręcznego dodawania plików zasobów do projektów zarządzanych, uzyskiwania dostępu do zasobów, wyświetlania statycznych zasobów i przypisywania ciągów zasobów do właściwości, zobacz [Creating Resource Files dla aplikacji klasycznych](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Aby uzyskać informacji na temat globalizacja i lokalizacja zasobów w aplikacjach zarządzanych, zobacz [Globalizing i lokalizowanie aplikacji programu .NET Framework](/dotnet/standard/globalization-localization/index).
+Aby uzyskać informacje na temat dodawania zasobów do projektów zarządzanych, zobacz [zasoby w aplikacjach pulpitu](/dotnet/framework/resources/index) w *przewodniku dewelopera .NET Framework*. Aby uzyskać informacji na temat ręcznego dodawania plików zasobów do projektów zarządzanych, uzyskiwania dostępu do zasobów, wyświetlania statycznych zasobów i przypisywania ciągów zasobów do właściwości, zobacz [Creating Resource Files dla aplikacji klasycznych](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Aby uzyskać informacji na temat globalizacja i lokalizacja zasobów w aplikacjach zarządzanych, zobacz [Globalizing i lokalizowanie aplikacji programu .NET Framework](/dotnet/standard/globalization-localization/index).
 
-### <a name="requirements"></a>Wymagania
-
-Win32
+## <a name="requirements"></a>Wymagania
+ Win32
 
 ## <a name="see-also"></a>Zobacz też
-
-[Domyślne zdarzenia kontroli](../windows/default-control-events.md)  
-[Definiowanie zmiennych składowych dla kontrolek okna dialogowego](../windows/defining-member-variables-for-dialog-controls.md)  
-[Kontrolki okna dialogowego i typy zmiennych](../ide/dialog-box-controls-and-variable-types.md)  
-[Dodawanie klasy](../ide/adding-a-class-visual-cpp.md)  
-[Dodawanie funkcji członkowskiej](../ide/adding-a-member-function-visual-cpp.md)  
-[Dodawanie zmiennej członkowskiej](../ide/adding-a-member-variable-visual-cpp.md)  
-[Zastępowanie funkcji wirtualnych](../ide/overriding-a-virtual-function-visual-cpp.md)  
-[Handler komunikatów MFC](../mfc/reference/adding-an-mfc-message-handler.md)  
+ [Domyślne zdarzenia kontroli](../windows/default-control-events.md)  
+ [Definiowanie zmiennych składowych dla kontrolek okna dialogowego](../windows/defining-member-variables-for-dialog-controls.md)  
+ [Kontrolki okna dialogowego i typy zmiennych](../ide/dialog-box-controls-and-variable-types.md)  
+ [Dodawanie klasy](../ide/adding-a-class-visual-cpp.md)  
+ [Dodawanie funkcji członkowskiej](../ide/adding-a-member-function-visual-cpp.md)  
+ [Dodawanie zmiennej członkowskiej](../ide/adding-a-member-variable-visual-cpp.md)  
+ [Zastępowanie funkcji wirtualnych](../ide/overriding-a-virtual-function-visual-cpp.md)  
+ [Handler komunikatów MFC](../mfc/reference/adding-an-mfc-message-handler.md)  

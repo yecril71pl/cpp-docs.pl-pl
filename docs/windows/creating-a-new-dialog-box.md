@@ -18,37 +18,35 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 49e0fe5ddf8b54078e8578396d2ed41ebd15da66
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 101c135a5ebf4d188a1e241c9d343580c13b247a
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33872147"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39653030"
 ---
 # <a name="creating-a-new-dialog-box"></a>Tworzenie nowego okna dialogowego
 ### <a name="to-create-a-new-dialog-box"></a>Aby utworzyć nowe okno dialogowe  
   
-1.  W [widok zasobów](../windows/resource-view-window.md), kliknij prawym przyciskiem myszy plik .rc, a następnie wybierz **dodawania zasobów** z menu skrótów.  
+1.  W [widok zasobów](../windows/resource-view-window.md), kliknij prawym przyciskiem myszy plik .rc, a następnie wybierz **Dodaj zasób** z menu skrótów.  
   
     > [!NOTE]
-    >  Jeśli projekt nie zawiera już plik .rc, zobacz [Tworzenie nowego pliku skryptu zasobu](../windows/how-to-create-a-resource-script-file.md).  
+    >  Jeśli projekt nie zawiera jeszcze pliku .rc, zobacz [tworzenia nowego pliku skryptu zasobów](../windows/how-to-create-a-resource-script-file.md).  
   
-2.  W **dodawania zasobów** okno dialogowe, wybierz opcję **okna dialogowego** w **typu zasobu** listy, a następnie kliknij przycisk **nowy**.  
+2.  W **Dodaj zasób** okno dialogowe, wybierz opcję **okna dialogowego** w **typ zasobu** , a następnie kliknij przycisk **New**.  
   
-     Znak plus (+) widoczna obok typu zasobu okna dialogowego, oznacza to, że szablony okno dialogowe są dostępne. Kliknij znak plus, aby rozwinąć listę szablonów, wybierz szablon, a następnie kliknij przycisk Nowy.  
+     Jeśli znak plus (**+**) pojawia się obok **okna dialogowego** typ zasobu, oznacza to dostępnych szablonów okno dialogowe. Kliknij znak plus, aby rozwinąć listę szablonów, wybierz szablon, a następnie kliknij przycisk **New**.  
   
-     Otwiera okno dialogowe Nowy w edytorze okien dialogowych.  
+     Zostanie otwarte nowe okno dialogowe w **okna dialogowego** edytora.  
   
-     Możesz również [Otwórz istniejący okien dialogowych w edytorze okno dialogowe do edycji](../windows/viewing-and-editing-resources-in-a-resource-editor.md).  
+     Możesz również [otwarcie istniejącego okna dialogowe w edytorze okno dialogowe edycji](../windows/viewing-and-editing-resources-in-a-resource-editor.md).  
   
- Aby uzyskać informacje o dodawaniu zasobów do projektów zarządzanych, zobacz [zasobów w aplikacjach pulpitu](/dotnet/framework/resources/index) w *Przewodnik programistów platformy .NET Framework.* Aby uzyskać informacje na ręczne dodanie do projektów zarządzanych plików zasobów, uzyskiwanie dostępu do zasobów, wyświetlanie zasoby statyczne i przypisanie do właściwości ciągów zasobów, zobacz [tworzenie plików zasobów dla aplikacji pulpitu](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Informacje dotyczące globalizacji i lokalizacji zasobów w zarządzanych aplikacjach, zobacz [Globalizing i lokalizacja aplikacji .NET Framework](/dotnet/standard/globalization-localization/index).  
+ Aby uzyskać informacje na temat dodawania zasobów do projektów zarządzanych, zobacz [zasoby w aplikacjach pulpitu](/dotnet/framework/resources/index) w *przewodniku dewelopera .NET Framework*. Aby uzyskać informacji na temat ręcznego dodawania plików zasobów do projektów zarządzanych, uzyskiwania dostępu do zasobów, wyświetlania statycznych zasobów i przypisywania ciągów zasobów do właściwości, zobacz [Creating Resource Files dla aplikacji klasycznych](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Aby uzyskać informacji na temat globalizacja i lokalizacja zasobów w aplikacjach zarządzanych, zobacz [Globalizing i lokalizowanie aplikacji programu .NET Framework](/dotnet/standard/globalization-localization/index).  
   
- Wymagania  
-  
+## <a name="requirements"></a>Wymagania  
  Win32  
   
 ## <a name="see-also"></a>Zobacz też  
  [Porady: tworzenie zasobu](../windows/how-to-create-a-resource.md)   
  [Pliki zasobów](../windows/resource-files-visual-studio.md)   
  [Edytor okien dialogowych](../windows/dialog-editor.md)
-

@@ -17,29 +17,29 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 1aae09030ff6cad518028833ce5d4f7b06300a69
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 3f722745b1283f25bd284adb3b55dcb340d78f07
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33876651"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39649916"
 ---
 # <a name="handletraits-structure"></a>HANDLETraits — Struktura
-Definiuje wspólne cechy dojścia.  
+Definiuje typowe cechy dojście.  
   
 ## <a name="syntax"></a>Składnia  
   
-```  
+```cpp  
 struct HANDLETraits;  
 ```  
   
 ## <a name="members"></a>Elementy członkowskie  
   
-### <a name="public-typedefs"></a>Definicje typów publicznych  
+### <a name="public-typedefs"></a>Publiczne definicje typów  
   
 |Nazwa|Opis|  
 |----------|-----------------|  
-|`Type`|Synonim dojścia.|  
+|`Type`|Synonim dla dojście.|  
   
 ### <a name="public-methods"></a>Metody publiczne  
   

@@ -17,19 +17,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 7f7f392df62892ea0e053e9d243f85772fa0605d
-ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
+ms.openlocfilehash: 9c45aa289b4b41ddfaf141dcaf790734284af7c8
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39463083"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39643553"
 ---
 # <a name="comptrref-class"></a>ComPtrRef — Klasa
 Obsługuje infrastrukturę biblioteki WRL i nie jest przeznaczona do użycia bezpośrednio w kodzie.  
   
 ## <a name="syntax"></a>Składnia  
   
-```  
+```cpp  
 template <  
    typename T  
 >  
@@ -55,7 +55,7 @@ class ComPtrRef : public ComPtrRefBase<T>;
   
 |Nazwa|Opis|  
 |----------|-----------------|  
-|[ComPtrRef::GetAddressOf, metoda](../windows/comptrref-getaddressof-method.md)|Pobiera adres wskaźnika do interfejsu, reprezentowane przez bieżący obiekt comptrref —.|  
+|[ComPtrRef::GetAddressOf, metoda](../windows/comptrref-getaddressof-method.md)|Pobiera adres wskaźnika do interfejsu, reprezentowane przez bieżącą **comptrref —** obiektu.|  
 |[ComPtrRef::ReleaseAndGetAddressOf, metoda](../windows/comptrref-releaseandgetaddressof-method.md)|Usuwa bieżący **comptrref —** obiektu i zwraca wskaźnik do a wskaźnik do interfejsu, który został przedstawiony przez **comptrref —** obiektu.|  
   
 ### <a name="public-operators"></a>Operatory publiczne  

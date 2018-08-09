@@ -17,33 +17,31 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 8fcb46d4eeb4cede778aefc4210a022b08a22ca9
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 8fdd9efe3b60fa9dc53d1c63191e19657cb70d75
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33879890"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39641743"
 ---
 # <a name="displaybind"></a>displaybind
 Wskazuje właściwość, która powinna być wyświetlana użytkownikowi jak możliwa do powiązania.  
   
 ## <a name="syntax"></a>Składnia  
   
-```  
-  
+```cpp  
 [displaybind]  
-  
 ```  
   
 ## <a name="remarks"></a>Uwagi  
- **Displaybind —** atrybut C++ ma te same funkcje co [displaybind —](http://msdn.microsoft.com/library/windows/desktop/aa366804) MIDL atrybutu.  
+ **Displaybind —** atrybut C++ ma taką samą funkcjonalność jak [displaybind —](http://msdn.microsoft.com/library/windows/desktop/aa366804) atrybutów w MIDL.  
   
 ## <a name="example"></a>Przykład  
- Zobacz przykład [powiązania](../windows/bindable.md) przykład sposobu użycia **displaybind —**.  
+ Zobacz przykład [możliwej do wiązania](../windows/bindable.md) przykład sposobu użycia **displaybind —**.  
   
 ## <a name="requirements"></a>Wymagania  
   
-### <a name="attribute-context"></a>Atrybut kontekstu  
+### <a name="attribute-context"></a>Kontekst atrybutu  
   
 |||  
 |-|-|  
@@ -56,7 +54,7 @@ Wskazuje właściwość, która powinna być wyświetlana użytkownikowi jak mo�
   
 ## <a name="see-also"></a>Zobacz też  
  [Atrybuty IDL](../windows/idl-attributes.md)   
- [Atrybuty — metoda](../windows/method-attributes.md)   
+ [Atrybuty metody](../windows/method-attributes.md)   
  [Atrybuty elementów członkowskich danych](../windows/data-member-attributes.md)   
  [defaultbind —](../windows/defaultbind.md)   
  [immediatebind —](../windows/immediatebind.md)   

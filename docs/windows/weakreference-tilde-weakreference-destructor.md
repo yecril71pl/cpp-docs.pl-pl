@@ -1,5 +1,5 @@
 ---
-title: 'Weakreference —:: ~ WeakReference — destruktor | Dokumentacja firmy Microsoft'
+title: 'WeakReference:: ~ WeakReference, destruktor | Dokumentacja firmy Microsoft'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: c29316305983ac09714292bce20e992970cca4f5
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: a3bfd80e8c6f970fb55b681f193b4ce7c2c0df5a
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33890736"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39648610"
 ---
 # <a name="weakreferenceweakreference-destructor"></a>WeakReference::~WeakReference — Destruktor
 Obsługuje infrastrukturę biblioteki WRL i nie jest przeznaczona do użycia bezpośrednio w kodzie.  
@@ -36,12 +36,12 @@ virtual ~WeakReference();
 ## <a name="return-value"></a>Wartość zwracana  
   
 ## <a name="remarks"></a>Uwagi  
- Deinitializes bieżące wystąpienie klasy weakreference — klasa.  
+ Deinicjuje bieżące wystąpienie **WeakReference** klasy.  
   
 ## <a name="requirements"></a>Wymagania  
  **Nagłówek:** implements.h  
   
- **Namespace:** Microsoft::wrl:: details —  
+ **Namespace:** Microsoft::wrl:: details  
   
 ## <a name="see-also"></a>Zobacz też  
- [Microsoft::wrl:: details — Namespace](../windows/microsoft-wrl-details-namespace.md) [weakreference — klasa](../windows/weakreference-class1.md)
+ [Microsoft::wrl:: details Namespace](../windows/microsoft-wrl-details-namespace.md) [weakreference — klasa](../windows/weakreference-class1.md)

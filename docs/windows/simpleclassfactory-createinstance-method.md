@@ -1,5 +1,5 @@
 ---
-title: SimpleClassFactory::CreateInstance — metoda | Dokumentacja firmy Microsoft
+title: SimpleClassFactory::CreateInstance, metoda | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 8a31d364a6464962b8243cfaced03131a20f9324
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: f25e85e59769f822a6c732cc0911c564c0104f96
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33892751"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39651083"
 ---
 # <a name="simpleclassfactorycreateinstance-method"></a>SimpleClassFactory::CreateInstance — Metoda
 
@@ -40,16 +40,16 @@ STDMETHOD( CreateInstance )(
 
 ### <a name="parameters"></a>Parametry
 
-*Parametr pUnkOuter*  
-Musi być `nullptr`; w przeciwnym razie wartość zwracana jest CLASS_E_NOAGGREGATION.
+*pUnkOuter*  
+Musi być **nullptr**; w przeciwnym razie wartość zwracana jest CLASS_E_NOAGGREGATION.
 
-Simpleclassfactory — nie obsługuje agregacji. Jeśli są obsługiwane agregacji i tworzony obiekt został część agregacji, `pUnkOuter` jest wskaźnik do sterującego interfejsu IUnknown agregacji.
+Simpleclassfactory — nie obsługuje agregację. Jeśli agregacji były obsługiwane i tworzony obiekt było częścią agregacji, *pUnkOuter* będzie wskaźnik do kontrolowania `IUnknown` interfejsu agregacji.
 
 *Parametr riid*  
-Identyfikator obiektu do tworzenia interfejsu.
+Identyfikator obiektu do utworzenia interfejsu.
 
 *ppvObject*  
-Po zakończeniu tej operacji, wskaźnik do wystąpienia obiektu określonego przez `riid` parametru.
+Po zakończeniu tej operacji, wskaźnik do wystąpienia obiektu określonego przez *riid* parametru.
 
 ## <a name="return-value"></a>Wartość zwracana
 
@@ -57,14 +57,13 @@ S_OK w przypadku powodzenia; w przeciwnym razie wartość HRESULT, która wskazu
 
 ## <a name="remarks"></a>Uwagi
 
-Jeśli &#95; &#95;WRL_STRICT&#95; &#95; jest zdefiniowany, błędu potwierdzenia jest emitowany Jeśli nie jest pochodną klasy podstawowej określonej w parametrze szablonu klasy [runtimeclass —](../windows/runtimeclass-class.md), lub nie jest skonfigurowany z ClassicCom lub WinRtClassicComMix [runtimeclasstype —](../windows/runtimeclasstype-enumeration.md) wartość wyliczenia.
+Jeśli &#95; &#95;WRL_STRICT&#95; &#95; jest zdefiniowany, błąd potwierdzenia jest emitowane, jeśli nie jest pochodną klasy bazowej, określona w parametrze szablonu klasy [RuntimeClass](../windows/runtimeclass-class.md), lub nie jest skonfigurowany z ClassicCom lub WinRtClassicComMix [RuntimeClassType](../windows/runtimeclasstype-enumeration.md) wartość wyliczenia.
 
 ## <a name="requirements"></a>Wymagania
 
 **Nagłówek:** module.h
 
-**Namespace:** Microsoft::wrl —
+**Namespace:** Microsoft::WRL
 
 ## <a name="see-also"></a>Zobacz też
-
-[SimpleClassFactory, klasa](../windows/simpleclassfactory-class.md)
+ [SimpleClassFactory, klasa](../windows/simpleclassfactory-class.md)

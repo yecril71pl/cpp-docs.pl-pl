@@ -17,57 +17,56 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: e56793855b278e0631c39ebfcdc51669a001a24b
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 07258b2f7416b0747be81075f4c037a6be54e7a6
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33891535"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39647076"
 ---
 # <a name="uuid-c-attributes"></a>uuid (Atrybuty C++)
-Określa unikatowy identyfikator dla klasy ani interfejsu.  
+Określa unikatowy identyfikator dla klasy lub interfejsu.  
   
 ## <a name="syntax"></a>Składnia  
   
 ```  
-  
-      [ uuid(  
+[ uuid(  
    "uuid"  
 ) ]  
 ```  
   
-#### <a name="parameters"></a>Parametry  
+### <a name="parameters"></a>Parametry  
  *uuid*  
  128-bitowego, unikatowy identyfikator.  
   
 ## <a name="remarks"></a>Uwagi  
- Jeśli nie określono definicji klasy lub interfejsu `uuid` atrybutu C++, a następnie kompilatora Visual C++ zapewni jeden. Po określeniu `uuid`, musi zawierać cudzysłowów.  
+ Jeśli nie określono definicji klasy lub interfejsu **uuid** atrybutów języka C++, a następnie kompilator języka Visual C++ zapewni jeden. Po określeniu **uuid**, musi zawierać cudzysłowów.  
   
- Jeśli nie określisz `uuid`, a następnie kompilator wygeneruje tego samego identyfikatora GUID dla interfejsów lub klas o takiej samej nazwie w projektach inny atrybut na maszynie.  
+ Jeśli nie określisz **uuid**, a następnie kompilator wygeneruje tego samego identyfikatora GUID dla interfejsów lub klas o takiej samej nazwie w projektach innego atrybutu na maszynie.  
   
  Uuidgen.exe lub Guidgen.exe służy do generowania własnych unikatowych identyfikatorów. (Aby Uruchom dowolne z tych narzędzi, kliknij przycisk **Start** i kliknij przycisk **Uruchom** w menu. Następnie wprowadź nazwę wymagane narzędzia.)  
   
- Gdy jest używany w projekcie, który nie używa również ATL, określając `uuid` atrybut jest taki sam jak określenie [uuid](../cpp/uuid-cpp.md) __declspec — modyfikator. Aby pobrać `uuid` klasy, można użyć [__uuidof](../cpp/uuidof-operator.md)  
+ W przypadku użycia w projekcie, który nie używa również biblioteki ATL, określając **uuid** atrybutu jest taki sam jak określanie [uuid](../cpp/uuid-cpp.md) **__declspec** modyfikator. Aby pobrać **uuid** klasy, można użyć [__uuidof](../cpp/uuidof-operator.md)  
   
 ## <a name="example"></a>Przykład  
- Zobacz [powiązania](../windows/bindable.md) przykład użycie próbki `uuid`.  
+ Zobacz [możliwej do wiązania](../windows/bindable.md) przykład użycie próbki **uuid**.  
   
 ## <a name="requirements"></a>Wymagania  
   
-### <a name="attribute-context"></a>Atrybut kontekstu  
+### <a name="attribute-context"></a>Kontekst atrybutu  
   
 |||  
 |-|-|  
-|**Dotyczy**|**Klasa**, `struct`, `interface`, **Unii**, `enum`|  
+|**Dotyczy**|**Klasa**, **struktury**, **interfejsu**, **Unii**, **wyliczenia**|  
 |**Powtarzalne**|Nie|  
 |**Wymaganych atrybutów**|Brak|  
 |**Nieprawidłowe atrybuty**|Brak|  
   
- Aby uzyskać więcej informacji na temat konteksty atrybutu, zobacz [konteksty atrybutu](../windows/attribute-contexts.md).  
+ Aby uzyskać więcej informacji na temat konteksty atrybutu zobacz [konteksty atrybutu](../windows/attribute-contexts.md).  
   
 ## <a name="see-also"></a>Zobacz też  
  [Atrybuty IDL](../windows/idl-attributes.md)   
  [Atrybuty interfejsu](../windows/interface-attributes.md)   
  [Atrybuty klasy](../windows/class-attributes.md)   
- [Element TypeDef, Enum, Unii i struct — atrybuty](../windows/typedef-enum-union-and-struct-attributes.md)   
+ [Element TypeDef, Enum, Union i struct — atrybuty](../windows/typedef-enum-union-and-struct-attributes.md)   
  [uuid](http://msdn.microsoft.com/library/windows/desktop/aa367302)   

@@ -1,5 +1,5 @@
 ---
-title: SRWLock::LockExclusive — metoda | Dokumentacja firmy Microsoft
+title: SRWLock::LockExclusive, metoda | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 36ae694365b58cb10666e5d8af67269b2c4f125c
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: a32fe0e66a8f61bc17e4512f63705635cd8b5263
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33889374"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39643679"
 ---
 # <a name="srwlocklockexclusive-method"></a>SRWLock::LockExclusive — Metoda
-Uzyskuje obiekt srwlock — w trybie wyłączności.  
+Uzyskuje **SRWLock** obiektu w trybie wyłączności.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -37,17 +37,17 @@ static SyncLockExclusive LockExclusive(
 );  
 ```  
   
-#### <a name="parameters"></a>Parametry  
- `lock`  
- Wskaźnik do obiektu srwlock —.  
+### <a name="parameters"></a>Parametry  
+ *lock*  
+ Wskaźnik do **SRWLock** obiektu.  
   
 ## <a name="return-value"></a>Wartość zwracana  
- Obiekt srwlock — w trybie wyłączności.  
+ **SRWLock** obiektu w trybie wyłączności.  
   
 ## <a name="requirements"></a>Wymagania  
  **Nagłówek:** corewrappers.h  
   
- **Namespace:** Microsoft::wrl:: wrappers —  
+ **Namespace:** Microsoft::wrl:: wrappers  
   
 ## <a name="see-also"></a>Zobacz też  
  [SRWLock, klasa](../windows/srwlock-class.md)

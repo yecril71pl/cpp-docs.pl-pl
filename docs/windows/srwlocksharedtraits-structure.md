@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 6a18edef3fa658608459244143a5e48738f0c3a9
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: c606a1a7d32a02442e767a31543a76a4dccf295e
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33889649"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39652477"
 ---
 # <a name="srwlocksharedtraits-structure"></a>SRWLockSharedTraits — Struktura
-W tym artykule opisano typowe cechy srwlock — klasa w trybie blokady udostępniania.  
+W tym artykule opisano typowe cechy `SRWLock` klasy w trybie blokady udostępniania.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -35,18 +35,18 @@ struct SRWLockSharedTraits;
   
 ## <a name="members"></a>Elementy członkowskie  
   
-### <a name="public-typedefs"></a>Definicje typów publicznych  
+### <a name="public-typedefs"></a>Publiczne definicje typów  
   
 |Nazwa|Opis|  
 |----------|-----------------|  
-|`Type`|Synonim dla wskaźnika do [srwlock —](../windows/srwlock-class.md) klasy.|  
+|`Type`|Synonim dla wskaźnika do [SRWLOCK](../windows/srwlock-class.md) klasy.|  
   
 ### <a name="public-methods"></a>Metody publiczne  
   
 |Nazwa|Opis|  
 |----------|-----------------|  
-|[SRWLockSharedTraits::GetInvalidValue, metoda](../windows/srwlocksharedtraits-getinvalidvalue-method.md)|Pobiera obiekt srwlocksharedtraits —, który zawsze jest nieprawidłowy.|  
-|[SRWLockSharedTraits::Unlock, metoda](../windows/srwlocksharedtraits-unlock-method.md)|Zwalnia wyłączną kontrolę określonego obiektu srwlock —.|  
+|[SRWLockSharedTraits::GetInvalidValue, metoda](../windows/srwlocksharedtraits-getinvalidvalue-method.md)|Pobiera **srwlocksharedtraits —** obiekt, który zawsze jest nieprawidłowy.|  
+|[SRWLockSharedTraits::Unlock, metoda](../windows/srwlocksharedtraits-unlock-method.md)|Zwalnia wyłączną kontrolę określonego `SRWLock` obiektu.|  
   
 ## <a name="inheritance-hierarchy"></a>Hierarchia dziedziczenia  
  `SRWLockSharedTraits`  

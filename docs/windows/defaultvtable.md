@@ -17,25 +17,25 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 83949616f204ae37b42b91b03d69d8d803a1582f
-ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
+ms.openlocfilehash: 34850646e40ffa9cbd3185b13fdaa93d7c873787
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39569673"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39651443"
 ---
 # <a name="defaultvtable"></a>defaultvtable
 Definiuje interfejs jako domyślnym interfejsem obiektu COM vtable.  
   
 ## <a name="syntax"></a>Składnia  
   
-```  
+```cpp  
 [ defaultvtable(  
    interface  
 ) ]  
 ```  
   
-#### <a name="parameters"></a>Parametry  
+### <a name="parameters"></a>Parametry  
  *interface*  
  Wyznaczonym interfejsu, który ma być vtable domyślnego dla obiektu COM.  
   

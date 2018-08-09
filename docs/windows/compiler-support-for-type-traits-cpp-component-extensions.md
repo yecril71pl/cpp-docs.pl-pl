@@ -71,18 +71,18 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: fe1173b122e64f9b75af2f8186bf52b50003e5ab
-ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
+ms.openlocfilehash: a88994133b65432566254fb77ddc35d5f2aab47b
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39463619"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39644872"
 ---
 # <a name="compiler-support-for-type-traits-c-component-extensions"></a>Obsługa cech typu w kompilatorze (C++ Component Extensions)
 Obsługa kompilatora *typ cechy*, które wskazują różne cechy typu w czasie kompilacji.  
   
 ## <a name="all-runtimes"></a>Wszystkie środowiska wykonawcze  
- **Uwagi**  
+### <a name="remarks"></a>Uwagi  
   
  Cechy typu są szczególnie przydatne dla programistów, którzy bibliotek.  
   
@@ -92,9 +92,9 @@ Obsługa kompilatora *typ cechy*, które wskazują różne cechy typu w czasie k
   
 -   `__has_assign(` `type` `)`  
   
-     Zwraca wartość PRAWDA, jeśli platforma lub typ natywny zawiera operator przypisania kopiowania.  
+     Zwraca **true** Jeśli platforma lub typ natywny zawiera operator przypisania kopiowania.  
   
-    ```  
+    ```cpp  
     ref struct R {  
     void operator=(R% r) {}  
     };  
@@ -106,9 +106,9 @@ Obsługa kompilatora *typ cechy*, które wskazują różne cechy typu w czasie k
   
 -   `__has_copy(` `type` `)`  
   
-     Zwraca wartość PRAWDA, jeśli platforma lub typ natywny ma Konstruktor kopiujący.  
+     Zwraca **true** Jeśli platforma lub typ natywny ma Konstruktor kopiujący.  
   
-    ```  
+    ```cpp  
     ref struct R {  
     R(R% r) {}  
     };  
@@ -120,9 +120,9 @@ Obsługa kompilatora *typ cechy*, które wskazują różne cechy typu w czasie k
   
 -   `__has_finalizer(` `type` `)`  
   
-     (Nieobsługiwane w [!INCLUDE[cppwrt](../build/reference/includes/cppwrt_md.md)].) Zwraca wartość PRAWDA, jeśli typ CLR ma finalizator. Zobacz [destruktory i finalizatory w sposób: Definiowanie oraz stosowanie klas i struktur (C + +/ CLI)](../dotnet/how-to-define-and-consume-classes-and-structs-cpp-cli.md#BKMK_Destructors_and_finalizers) Aby uzyskać więcej informacji.  
+     (Nieobsługiwane w [!INCLUDE[cppwrt](../build/reference/includes/cppwrt_md.md)].) Zwraca **true** Jeśli typ CLR ma finalizator. Zobacz [destruktory i finalizatory w sposób: Definiowanie oraz stosowanie klas i struktur (C + +/ CLI)](../dotnet/how-to-define-and-consume-classes-and-structs-cpp-cli.md#BKMK_Destructors_and_finalizers) Aby uzyskać więcej informacji.  
   
-    ```  
+    ```cpp  
     using namespace System;  
     ref struct R {  
     ~R() {}  
@@ -137,9 +137,9 @@ Obsługa kompilatora *typ cechy*, które wskazują różne cechy typu w czasie k
   
 -   `__has_nothrow_assign(` `type` `)`  
   
-     Zwraca wartość PRAWDA, jeśli Specyfikacja wyjątku pusty operator przypisania kopiowania.  
+     Zwraca **true** Jeśli specyfikacja wyjątku pusty operator przypisania kopiowania.  
   
-    ```  
+    ```cpp  
     #include <stdio.h>  
     struct S {  
     void operator=(S& r) throw() {}  
@@ -153,9 +153,9 @@ Obsługa kompilatora *typ cechy*, które wskazują różne cechy typu w czasie k
   
 -   `__has_nothrow_constructor(` `type` `)`  
   
-     Zwraca wartość PRAWDA, jeśli domyślny konstruktor ma specyfikację wyjątku puste.  
+     Zwraca **true** Jeśli specyfikacja wyjątku pusty konstruktor domyślny.  
   
-    ```  
+    ```cpp  
     #include <stdio.h>  
     struct S {  
     S() throw() {}  
@@ -169,9 +169,9 @@ Obsługa kompilatora *typ cechy*, które wskazują różne cechy typu w czasie k
   
 -   `__has_nothrow_copy(` `type` `)`  
   
-     Zwraca wartość PRAWDA, jeśli Konstruktor kopiujący ma specyfikację wyjątku puste.  
+     Zwraca **true** Jeśli Konstruktor kopiujący ma specyfikację wyjątku puste.  
   
-    ```  
+    ```cpp  
     #include <stdio.h>  
     struct S {  
     S(S& r) throw() {}  
@@ -185,9 +185,9 @@ Obsługa kompilatora *typ cechy*, które wskazują różne cechy typu w czasie k
   
 -   `__has_trivial_assign(` `type` `)`  
   
-     Zwraca wartość PRAWDA, jeśli typ ma operatora przypisania prosta, generowane przez kompilator.  
+     Zwraca **true** Jeśli typ ma operatora przypisania prosta, generowane przez kompilator.  
   
-    ```  
+    ```cpp  
     #include <stdio.h>  
     struct S {};  
   
@@ -199,9 +199,9 @@ Obsługa kompilatora *typ cechy*, które wskazują różne cechy typu w czasie k
   
 -   `__has_trivial_constructor(` `type` `)`  
   
-     Zwraca wartość PRAWDA, jeśli typ ma konstruktora prosta, generowane przez kompilator.  
+     Zwraca **true** Jeśli typ ma konstruktora prosta, generowane przez kompilator.  
   
-    ```  
+    ```cpp  
     #include <stdio.h>  
     struct S {};  
   
@@ -213,9 +213,9 @@ Obsługa kompilatora *typ cechy*, które wskazują różne cechy typu w czasie k
   
 -   `__has_trivial_copy(` `type` `)`  
   
-     Zwraca wartość PRAWDA, jeśli typ ma konstruktora kopiującego prosta, generowane przez kompilator.  
+     Zwraca **true** Jeśli typ ma konstruktora kopiującego prosta, generowane przez kompilator.  
   
-    ```  
+    ```cpp  
     #include <stdio.h>  
     struct S {};  
   
@@ -227,7 +227,7 @@ Obsługa kompilatora *typ cechy*, które wskazują różne cechy typu w czasie k
   
 -   `__has_trivial_destructor(` `type` `)`  
   
-     Zwraca wartość PRAWDA, jeśli typ ma destruktor prosta, generowane przez kompilator.  
+     Zwraca **true** Jeśli typ ma destruktor prosta, generowane przez kompilator.  
   
     ``` cpp 
     // has_trivial_destructor.cpp  
@@ -242,7 +242,7 @@ Obsługa kompilatora *typ cechy*, które wskazują różne cechy typu w czasie k
   
 -   `__has_user_destructor(` `type` `)`  
   
-     Zwraca wartość PRAWDA, jeśli platforma lub typ natywny ma destruktor zgłoszone przez użytkownika.  
+     Zwraca **true** Jeśli platforma lub typ natywny ma destruktor zgłoszone przez użytkownika.  
   
     ```cpp
     // has_user_destructor.cpp  
@@ -259,7 +259,7 @@ Obsługa kompilatora *typ cechy*, które wskazują różne cechy typu w czasie k
   
 -   `__has_virtual_destructor(` `type` `)`  
   
-     Zwraca wartość PRAWDA, jeśli typ ma destruktor wirtualny.  
+     Zwraca **true** Jeśli typ ma destruktor wirtualny.  
   
      `__has_virtual_destructor` destruktor wirtualny jest również działa na typy platform i dowolny destruktor zdefiniowany przez użytkownika w typie platformy.  
   
@@ -278,7 +278,7 @@ Obsługa kompilatora *typ cechy*, które wskazują różne cechy typu w czasie k
   
 -   `__is_abstract(` `type` `)`  
   
-     Zwraca wartość PRAWDA, jeśli typ jest typem abstrakcyjnym. Aby uzyskać więcej informacji dotyczących natywnych typów abstrakcyjnych, zobacz [abstrakcyjne](../windows/abstract-cpp-component-extensions.md).  
+     Zwraca **true** Jeśli typ jest typem abstrakcyjnym. Aby uzyskać więcej informacji dotyczących natywnych typów abstrakcyjnych, zobacz [abstrakcyjne](../windows/abstract-cpp-component-extensions.md).  
   
      `__is_abstract` działa również typy platform. Interfejs z co najmniej jednego członka jest typem abstrakcyjnym, podobnie jak typ odwołania z co najmniej jedną abstrakcyjną składową. Aby uzyskać więcej informacji na typy abstrakcyjne platform, zobacz [klasy abstrakcyjne](../cpp/abstract-classes-cpp.md)  
   
@@ -297,9 +297,9 @@ Obsługa kompilatora *typ cechy*, które wskazują różne cechy typu w czasie k
   
 -   `__is_base_of(` `base` `,` `derived` `)`  
   
-     Zwraca wartość PRAWDA, jeśli pierwszy typ jest klasą bazową dla drugi typ, jeśli oba typy są takie same.  
+     Zwraca **true** Jeśli pierwszy typ jest klasą bazową dla drugi typ, jeśli oba typy są takie same.  
   
-     `__is_base_of` działa również na typy platform. Na przykład, zostanie zwrócona wartość PRAWDA, jeśli pierwszy typ to [interfejsu klasy](../windows/interface-class-cpp-component-extensions.md) i drugi typ implementuje interfejs.  
+     `__is_base_of` działa również na typy platform. Na przykład, zwróci **true** Jeśli pierwszy typ to [interfejsu klasy](../windows/interface-class-cpp-component-extensions.md) i drugi typ implementuje interfejs.  
   
     ```cpp
     // is_base_of.cpp  
@@ -318,9 +318,9 @@ Obsługa kompilatora *typ cechy*, które wskazują różne cechy typu w czasie k
   
 -   `__is_class(` `type` `)`  
   
-     Zwraca wartość PRAWDA, jeśli typ jest natywny klasy lub struktury.  
+     Zwraca **true** Jeśli typ jest natywny klasy lub struktury.  
   
-    ```
+    ```cpp
     #include <stdio.h>  
     struct S {};  
   
@@ -332,9 +332,9 @@ Obsługa kompilatora *typ cechy*, które wskazują różne cechy typu w czasie k
   
 -   `__is_convertible_to(` `from` `,`  `to` `)`  
   
-     Zwraca wartość PRAWDA, jeśli pierwszy typ mogą być konwertowane na drugi typ.  
+     Zwraca **true** Jeśli można przekonwertować na drugi typ pierwszego typu.  
   
-    ```  
+    ```cpp  
     #include <stdio.h>  
     struct S {};  
     struct T : public S {};  
@@ -350,9 +350,9 @@ Obsługa kompilatora *typ cechy*, które wskazują różne cechy typu w czasie k
   
 -   `__is_delegate(` `type` `)`  
   
-     Zwraca wartość true, jeśli `type` jest delegat. Aby uzyskać więcej informacji, zobacz [delegate (C++ Component Extensions)](../windows/delegate-cpp-component-extensions.md).  
+     Zwraca **true** Jeśli `type` jest delegat. Aby uzyskać więcej informacji, zobacz [delegate (C++ Component Extensions)](../windows/delegate-cpp-component-extensions.md).  
   
-    ```  
+    ```cpp  
     delegate void MyDel();  
     int main() {  
     System::Console::WriteLine(__is_delegate(MyDel));  
@@ -361,9 +361,9 @@ Obsługa kompilatora *typ cechy*, które wskazują różne cechy typu w czasie k
   
 -   `__is_empty(` `type` `)`  
   
-     Zwraca wartość PRAWDA, jeśli typ nie ma żadnych składowych danych wystąpienia.  
+     Zwraca **true** Jeśli typ nie ma żadnych składowych danych wystąpienia.  
   
-    ```  
+    ```cpp  
     #include <stdio.h>  
     struct S {  
     int Test() {}  
@@ -377,7 +377,7 @@ Obsługa kompilatora *typ cechy*, które wskazują różne cechy typu w czasie k
   
 -   `__is_enum(` `type` `)`  
   
-     Zwraca wartość PRAWDA, jeśli typ jest natywnym wyliczeniem.  
+     Zwraca **true** Jeśli typ jest natywnym wyliczeniem.  
   
     ```cpp
     // is_enum.cpp  
@@ -399,7 +399,7 @@ Obsługa kompilatora *typ cechy*, które wskazują różne cechy typu w czasie k
   
 -   `__is_interface_class(` `type` `)`  
   
-     Zwraca wartość PRAWDA, jeśli przekazany interfejsu platformy. Aby uzyskać więcej informacji, zobacz [interfejsu klasy](../windows/interface-class-cpp-component-extensions.md).  
+     Zwraca **true** jeśli przekazany interfejsu platformy. Aby uzyskać więcej informacji, zobacz [interfejsu klasy](../windows/interface-class-cpp-component-extensions.md).  
   
     ```cpp
     // is_interface_class.cpp  
@@ -413,11 +413,11 @@ Obsługa kompilatora *typ cechy*, które wskazują różne cechy typu w czasie k
   
 -   `__is_pod(` `type` `)`  
   
-     Zwraca wartość PRAWDA, jeśli typ jest klasą lub Unii, żaden konstruktor lub prywatnych lub chronionych niestatycznych elementów członkowskich, nie mają klas bazowych i żadnych funkcji wirtualnych. Zobacz języka C++ w warstwie standardowa sekcje 8.5.1/1, 9/4 i 3.9/10, aby uzyskać więcej informacji o zasobników.  
+     Zwraca **true** Jeśli typ jest klasą lub Unii z żaden konstruktor lub prywatnych lub chronionych niestatycznych elementów członkowskich, nie mają klas bazowych i żadnych funkcji wirtualnych. Zobacz języka C++ w warstwie standardowa sekcje 8.5.1/1, 9/4 i 3.9/10, aby uzyskać więcej informacji o zasobników.  
   
      `__is_pod` Zwraca wartość false dla typów podstawowych.  
   
-    ```  
+    ```cpp  
     #include <stdio.h>  
     struct S {};  
   
@@ -429,9 +429,9 @@ Obsługa kompilatora *typ cechy*, które wskazują różne cechy typu w czasie k
   
 -   `__is_polymorphic(` `type` `)`  
   
-     Zwraca wartość PRAWDA, jeśli typ natywny ma funkcje wirtualne.  
+     Zwraca **true** Jeśli typ natywny ma funkcje wirtualne.  
   
-    ```  
+    ```cpp  
     #include <stdio.h>  
     struct S {  
     virtual void Test(){}  
@@ -445,9 +445,9 @@ Obsługa kompilatora *typ cechy*, które wskazują różne cechy typu w czasie k
   
 -   `__is_ref_array(` `type` `)`  
   
-     Zwraca wartość PRAWDA, jeśli przekazany tablicy platformy. Aby uzyskać więcej informacji, zobacz [tablic](../windows/arrays-cpp-component-extensions.md).  
+     Zwraca **true** Jeśli przekazana tablica platformy. Aby uzyskać więcej informacji, zobacz [tablic](../windows/arrays-cpp-component-extensions.md).  
   
-    ```  
+    ```cpp  
     using namespace System;  
     int main() {  
     array<int>^ x = gcnew array<int>(10);  
@@ -457,9 +457,9 @@ Obsługa kompilatora *typ cechy*, które wskazują różne cechy typu w czasie k
   
 -   `__is_ref_class(` `type` `)`  
   
-     Zwraca wartość PRAWDA, jeśli przekazany klasy odniesienia. Aby uzyskać więcej informacji na temat typów odwołań zdefiniowanych przez użytkownika, zobacz [klas i struktur](../windows/classes-and-structs-cpp-component-extensions.md).  
+     Zwraca **true** jeśli przekazany klasy odniesienia. Aby uzyskać więcej informacji na temat typów odwołań zdefiniowanych przez użytkownika, zobacz [klas i struktur](../windows/classes-and-structs-cpp-component-extensions.md).  
   
-    ```  
+    ```cpp  
     using namespace System;  
     ref class R {};  
     int main() {  
@@ -470,9 +470,9 @@ Obsługa kompilatora *typ cechy*, które wskazują różne cechy typu w czasie k
   
 -   `__is_sealed(` `type` `)`  
   
-     Zwraca wartość PRAWDA, jeśli przekazany platformy lub typ natywny oznaczona jako zapieczętowany. Aby uzyskać więcej informacji, zobacz [zapieczętowanego](../windows/sealed-cpp-component-extensions.md).  
+     Zwraca **true** jeśli przekazany platformy lub typem natywnym, oznaczone jako zapieczętowany. Aby uzyskać więcej informacji, zobacz [zapieczętowanego](../windows/sealed-cpp-component-extensions.md).  
   
-    ```  
+    ```cpp  
     ref class R sealed{};  
     int main() {  
     System::Console::WriteLine(__is_sealed(R));  
@@ -481,9 +481,9 @@ Obsługa kompilatora *typ cechy*, które wskazują różne cechy typu w czasie k
   
 -   `__is_simple_value_class(` `type` `)`  
   
-     Zwraca wartość PRAWDA, jeśli przekazany typ wartości, która nie zawiera żadnych odwołań do stosu odśmieconej pamięci. Aby uzyskać więcej informacji na temat typów zdefiniowanych przez użytkownika wartości, zobacz [klas i struktur](../windows/classes-and-structs-cpp-component-extensions.md).  
+     Zwraca **true** jeśli przekazany typ wartości, która nie zawiera żadnych odwołań do stosu odśmieconej pamięci. Aby uzyskać więcej informacji na temat typów zdefiniowanych przez użytkownika wartości, zobacz [klas i struktur](../windows/classes-and-structs-cpp-component-extensions.md).  
   
-    ```  
+    ```cpp  
     using namespace System;  
     ref class R {};  
     value struct V {};  
@@ -499,9 +499,9 @@ Obsługa kompilatora *typ cechy*, które wskazują różne cechy typu w czasie k
   
 -   `__is_union(` `type` `)`  
   
-     Zwraca wartość PRAWDA, jeśli typ Unii.  
+     Zwraca **true** Jeśli typ Unii.  
   
-    ```  
+    ```cpp  
     #include <stdio.h>  
     union A {  
     int i;  
@@ -516,9 +516,9 @@ Obsługa kompilatora *typ cechy*, które wskazują różne cechy typu w czasie k
   
 -   `__is_value_class(` `type` `)`  
   
-     Zwraca wartość PRAWDA, jeśli przekazany typ wartości. Aby uzyskać więcej informacji na temat typów zdefiniowanych przez użytkownika wartości, zobacz [klas i struktur](../windows/classes-and-structs-cpp-component-extensions.md).  
+     Zwraca **true** jeśli przekazany typ wartości. Aby uzyskać więcej informacji na temat typów zdefiniowanych przez użytkownika wartości, zobacz [klas i struktur](../windows/classes-and-structs-cpp-component-extensions.md).  
   
-    ```  
+    ```cpp  
     value struct V {};  
   
     int main() {  
@@ -527,25 +527,25 @@ Obsługa kompilatora *typ cechy*, które wskazują różne cechy typu w czasie k
     ```  
   
 ## <a name="windows-runtime"></a>Środowisko wykonawcze systemu Windows  
- **Uwagi**  
+### <a name="remarks"></a>Uwagi  
   
  `__has_finalizer(` *Typu* `)` cechy typu nie jest obsługiwana, ponieważ ta platforma nie obsługuje finalizatorów.  
   
 ### <a name="requirements"></a>Wymagania  
- — Opcja kompilatora: **/ZW**  
+ — Opcja kompilatora: `/ZW`  
   
 ## <a name="common-language-runtime"></a>środowiska uruchomieniowe w trakcie wykonania 
- **Uwagi**  
+### <a name="remarks"></a>Uwagi  
   
  (Nie ma żadnych uwag specyficznych dla platformy, dla tej funkcji).  
   
 ### <a name="requirements"></a>Wymagania  
- — Opcja kompilatora:   **/CLR**  
+ — Opcja kompilatora: `/clr`  
   
 ### <a name="examples"></a>Przykłady  
  **Przykład**  
   
- Poniższy przykład kodu pokazuje sposób używania szablonu klasy do udostępnienia typu cechy kompilatora dla **/CLR** kompilacji. Aby uzyskać więcej informacji, zobacz [środowisko wykonawcze Windows i zarządzane szablony](../windows/windows-runtime-and-managed-templates-cpp-component-extensions.md).  
+ Poniższy przykład kodu pokazuje sposób używania szablonu klasy do udostępnienia typu cechy kompilatora dla `/clr` kompilacji. Aby uzyskać więcej informacji, zobacz [środowisko wykonawcze Windows i zarządzane szablony](../windows/windows-runtime-and-managed-templates-cpp-component-extensions.md).  
   
 ```cpp  
 // compiler_type_traits.cpp  
@@ -566,8 +566,6 @@ int main () {
       Console::WriteLine("R is not a ref class");  
 }  
 ```  
-  
- **Output**  
   
 ```Output  
 R is a ref class  

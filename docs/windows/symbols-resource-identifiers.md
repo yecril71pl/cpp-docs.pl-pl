@@ -21,30 +21,30 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: c049aa192aeb253641ab473e5675b1ee5bd685a6
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 0ea83c97a5ee59e99b4ab743348ae2268d730e5c
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33891847"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39650888"
 ---
 # <a name="symbols-resource-identifiers"></a>Symbole: identyfikatory zasobów
-Symbol jest identyfikator zasobu (ID), która składa się z dwóch części: ciąg tekstowy (nazwa symbolu) zamapowany na wartość całkowitą (symbol wartości). Na przykład:  
+Symbol jest identyfikatorem zasobu (identyfikator), który składa się z dwóch części: ciąg tekstowy (nazwa symbolu) zamapowany na wartość całkowitą (wartość symbolu). Na przykład:  
   
 ```  
 IDC_EDITNAME = 5100  
 ```  
   
- Nazwy symboli najczęściej są określane jako identyfikatorów.  
+ Nazwy symboli w większości przypadków są określane jako identyfikatorów.  
   
- Symbole Podaj opisową sposób odwoływania się do zasobów i obiektów interfejsu użytkownika, zarówno w kodzie źródłowym, jak i podczas pracy z nimi w edytory zasobów. Możesz wyświetlić i manipulowania symbole w go przy użyciu wygodne miejsce [okno dialogowe symboli zasobów](../windows/viewing-resource-symbols.md).  
+ Symbole Podaj opisową sposób odwoływania się do zasobów i obiektów interfejsu użytkownika, zarówno w kodzie źródłowym, jak i podczas pracy z nimi w edytorach zasobów. Możesz wyświetlać i manipulować symboli w jednym wygodnym miejscu przy użyciu [okno dialogowe symboli zasobów](../windows/viewing-resource-symbols.md).  
   
- Podczas tworzenia nowego zasobu lub obiektu zasobów [edytory zasobów](../windows/resource-editors.md) Podaj nazwę domyślną dla danego zasobu, na przykład `IDC_RADIO1`i przypisz jej wartość. Definicja name plus wartości są przechowywane w pliku Resource.h.  
+ Podczas tworzenia nowego zasobu lub obiektu zasobu [edytory zasobów](../windows/resource-editors.md) Podaj nazwę domyślną dla danego zasobu, na przykład `IDC_RADIO1`i przypisać jej wartości. Definicja name plus wartość jest przechowywana w pliku Resource.h.  
   
 > [!NOTE]
->  Podczas kopiowania zasobów lub obiektów zasobów z jednego pliku .rc do innego, Visual C++ może zmienić wartość symbolu lub nazwy symbolu i wartość w celu uniknięcia konfliktów z wartości w istniejącym pliku lub nazwy symbolu przekazanych zasobów.  
+>  Podczas kopiowania zasobów lub obiektów zasobów z jednego pliku .rc do innego, Visual C++ mogą ulec zmianie, przeniesione zasób wartości symbolu lub nazwy symbolu i wartości, aby uniknąć konfliktów z nazwami symboli lub wartości z istniejącego pliku.  
   
- Wraz z rozwojem aplikacji i wiedzy, co powoduje jego ilość zasobów oraz symbole. Śledzenie dużej liczby symbole rozproszone w wielu plików może być trudne. [Okno dialogowe symboli zasobów](../windows/resource-symbols-dialog-box.md) upraszcza zarządzanie symbol oferując centralnej narzędzia, za pomocą których można wykonywać następujące czynności:  
+ W miarę wzrostu aplikacji w rosnąca liczba i rozmiar, co powoduje jego ilość zasobów oraz symbole. Śledzenie dużą liczbę symboli, rozproszone w wielu plików może być trudne. [Okno dialogowe symboli zasobów](../windows/resource-symbols-dialog-box.md) upraszcza zarządzanie symboli, oferując narzędzie centralnego za pomocą którego można:  
   
 - [Wyświetlanie symboli zasobów](../windows/viewing-resource-symbols.md)  
   
@@ -54,7 +54,7 @@ IDC_EDITNAME = 5100
   
 - [Usuwanie nieprzypisanych symboli](../windows/deleting-unassigned-symbols.md)  
   
-- [Otwórz Edytor zasobów dla podanego symbolu](../windows/opening-the-resource-editor-for-a-given-symbol.md)  
+- [Otwieranie Edytora zasobów dla podanego symbolu](../windows/opening-the-resource-editor-for-a-given-symbol.md)  
   
 - [Zmiana symbolu lub nazwy symbolu (ID)](../windows/changing-a-symbol-or-symbol-name-id.md)  
   
@@ -64,9 +64,9 @@ IDC_EDITNAME = 5100
   
 - [Obejmują udostępnionych (tylko do odczytu) lub obliczonych symboli](../windows/including-shared-read-only-or-calculated-symbols.md)  
   
-- [Wyświetl wstępnie zdefiniowane symbole identyfikatorów](../windows/predefined-symbol-ids.md)  
+- [Wyświetl wstępnie zdefiniowane identyfikatory symboli](../windows/predefined-symbol-ids.md)  
   
- Aby uzyskać informacje o dodawaniu zasobów do projektów zarządzanych, zobacz [zasobów w aplikacjach pulpitu](/dotnet/framework/resources/index) w *Przewodnik programistów platformy .NET Framework.* Aby uzyskać informacje na ręczne dodanie do projektów zarządzanych plików zasobów, uzyskiwanie dostępu do zasobów, wyświetlanie zasoby statyczne i przypisanie do właściwości ciągów zasobów, zobacz [tworzenie plików zasobów dla aplikacji pulpitu](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Informacje dotyczące globalizacji i lokalizacji zasobów w zarządzanych aplikacjach, zobacz [Globalizing i lokalizacja aplikacji .NET Framework](/dotnet/standard/globalization-localization/index).  
+ Aby uzyskać informacje na temat dodawania zasobów do projektów zarządzanych, zobacz [zasoby w aplikacjach pulpitu](/dotnet/framework/resources/index) w *przewodniku dewelopera .NET Framework*. Aby uzyskać informacji na temat ręcznego dodawania plików zasobów do projektów zarządzanych, uzyskiwania dostępu do zasobów, wyświetlania statycznych zasobów i przypisywania ciągów zasobów do właściwości, zobacz [Creating Resource Files dla aplikacji klasycznych](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Aby uzyskać informacji na temat globalizacja i lokalizacja zasobów w aplikacjach zarządzanych, zobacz [Globalizing i lokalizowanie aplikacji programu .NET Framework](/dotnet/standard/globalization-localization/index).  
   
 ## <a name="requirements"></a>Wymagania  
  Win32  
@@ -75,4 +75,3 @@ IDC_EDITNAME = 5100
  [Porady: wyszukiwanie symboli w zasobach](../windows/how-to-search-for-symbols-in-resources.md)   
  [Edytory zasobów](../windows/resource-editors.md)   
  [Pliki zasobów](../windows/resource-files-visual-studio.md)
-

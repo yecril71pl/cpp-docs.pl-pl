@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 1870e1ee623d8495e9f19dd8f32ea9382070bc14
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: f79aa2683948d54f900c92304cdff29647819a74
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33890186"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39650599"
 ---
 # <a name="switchtype"></a>switch_type
 Określa typ zmiennej używanej jako discriminant Unii.  
@@ -30,23 +30,21 @@ Określa typ zmiennej używanej jako discriminant Unii.
 ## <a name="syntax"></a>Składnia  
   
 ```  
-  
 [switch_type(  
 type  
 }]  
-  
 ```  
   
-#### <a name="parameters"></a>Parametry  
- `type`  
- Typ przełącznika może być typu Liczba całkowita, znak, wartość logiczna lub wyliczenia.  
+### <a name="parameters"></a>Parametry  
+ *Typ*  
+ Typ przełącznika może być typu Liczba całkowita, znaku, wartość logiczna lub wyliczenia.  
   
 ## <a name="remarks"></a>Uwagi  
- **Switch_type —** atrybut C++ ma te same funkcje co [switch_type —](http://msdn.microsoft.com/library/windows/desktop/aa367276) MIDL atrybutu.  
+ **Switch_type —** atrybut C++ ma taką samą funkcjonalność jak [switch_type —](http://msdn.microsoft.com/library/windows/desktop/aa367276) atrybutów w MIDL.  
   
- Atrybuty C++ nie obsługują [hermetyzowany unie](http://msdn.microsoft.com/library/windows/desktop/aa366811). [Unie nonencapsulated](http://msdn.microsoft.com/library/windows/desktop/aa367119) są obsługiwane tylko w następującej postaci:  
+ Atrybuty C++ nie obsługują [hermetyzowane unie](http://msdn.microsoft.com/library/windows/desktop/aa366811). [Unie nonencapsulated](http://msdn.microsoft.com/library/windows/desktop/aa367119) są obsługiwane tylko w następującej postaci:  
   
-```  
+```cpp  
 // cpp_attr_ref_switch_type.cpp  
 // compile with: /LD  
 #include <windows.h>  
@@ -64,22 +62,22 @@ struct SizedValue2 {
 ```  
   
 ## <a name="example"></a>Przykład  
- Zobacz [przypadku](../windows/case-cpp.md) przykład użycie próbki **switch_type —**.  
+ Zobacz [przypadek](../windows/case-cpp.md) przykład użycie próbki **switch_type —**.  
   
 ## <a name="requirements"></a>Wymagania  
   
-### <a name="attribute-context"></a>Atrybut kontekstu  
+### <a name="attribute-context"></a>Kontekst atrybutu  
   
 |||  
 |-|-|  
-|**Dotyczy**|`typedef`|  
+|**Dotyczy**|**Element TypeDef**|  
 |**Powtarzalne**|Nie|  
 |**Wymaganych atrybutów**|Brak|  
 |**Nieprawidłowe atrybuty**|Brak|  
   
- Aby uzyskać więcej informacji na temat konteksty atrybutu, zobacz [konteksty atrybutu](../windows/attribute-contexts.md).  
+ Aby uzyskać więcej informacji na temat konteksty atrybutu zobacz [konteksty atrybutu](../windows/attribute-contexts.md).  
   
 ## <a name="see-also"></a>Zobacz też  
  [Atrybuty IDL](../windows/idl-attributes.md)   
- [Element TypeDef, Enum, Unii i struct — atrybuty](../windows/typedef-enum-union-and-struct-attributes.md)   
+ [Element TypeDef, Enum, Union i struct — atrybuty](../windows/typedef-enum-union-and-struct-attributes.md)   
  [export](../windows/export.md)   

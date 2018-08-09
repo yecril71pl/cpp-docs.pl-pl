@@ -17,27 +17,25 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 5c006d243af78ea7f642ec36f49ce46fcfc732c9
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: bc7ea145b76f17ccd8b29b287faa3ef921e7dc73
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33880234"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39646283"
 ---
 # <a name="copying-buttons-from-a-toolbar"></a>Kopiowanie przycisków z paska narzędzi
-### <a name="to-copy-buttons-from-a-toolbar"></a>Aby skopiować przycisków z paska narzędzi  
+### <a name="to-copy-buttons-from-a-toolbar"></a>Kopiowanie przycisków z paska narzędzi  
   
-1.  Naciśnij i przytrzymaj **CTRL** klucza.  
+1.  Naciśnij i przytrzymaj **Ctrl** klucza.  
   
-2.  W **widoku narzędzi** okienka, przeciągnij przycisk do każdego nowego położenia na pasku narzędzi lub do lokalizacji na inny pasek narzędzi.  
+2.  W **pasek narzędzi widoku** okienku przeciągnij przycisk do jednej nowej lokalizacji na pasku narzędzi lub do lokalizacji na inny pasek narzędzi.  
   
- Aby uzyskać informacje o dodawaniu zasobów do projektów zarządzanych, zobacz [zasobów w aplikacjach pulpitu](/dotnet/framework/resources/index) w *Przewodnik programistów platformy .NET Framework.* Aby uzyskać informacje na ręczne dodanie do projektów zarządzanych plików zasobów, uzyskiwanie dostępu do zasobów, wyświetlanie zasoby statyczne i przypisanie do właściwości ciągów zasobów, zobacz [tworzenie plików zasobów dla aplikacji pulpitu](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Informacje dotyczące globalizacji i lokalizacji zasobów w zarządzanych aplikacjach, zobacz [Globalizing i lokalizacja aplikacji .NET Framework](/dotnet/standard/globalization-localization/index).  
+ Aby uzyskać informacje na temat dodawania zasobów do projektów zarządzanych, zobacz [zasoby w aplikacjach pulpitu](/dotnet/framework/resources/index) w *przewodniku dewelopera .NET Framework*. Aby uzyskać informacji na temat ręcznego dodawania plików zasobów do projektów zarządzanych, uzyskiwania dostępu do zasobów, wyświetlania statycznych zasobów i przypisywania ciągów zasobów do właściwości, zobacz [Creating Resource Files dla aplikacji klasycznych](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Aby uzyskać informacji na temat globalizacja i lokalizacja zasobów w aplikacjach zarządzanych, zobacz [Globalizing i lokalizowanie aplikacji programu .NET Framework](/dotnet/standard/globalization-localization/index).  
   
- Wymagania  
-  
- MFC i ATL  
+## <a name="requirements"></a>Wymagania  
+ ATL i MFC  
   
 ## <a name="see-also"></a>Zobacz też  
  [Tworzenie, przenoszenie i edytowanie przycisków paska narzędzi](../windows/creating-moving-and-editing-toolbar-buttons.md)   
  [Edytor paska narzędzi](../windows/toolbar-editor.md)
-

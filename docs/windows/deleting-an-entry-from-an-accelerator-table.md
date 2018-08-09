@@ -16,33 +16,32 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 68f6c7e9383527e3ba77d87d6d08ce5a3e1bcc8a
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: a8f3a72f8f9a71f54a997c4ba76d51aad6fb200a
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33880501"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39648324"
 ---
 # <a name="deleting-an-entry-from-an-accelerator-table"></a>Usuwanie wpisu z tabeli akceleratora
 ### <a name="to-delete-an-entry-from-an-accelerator-table"></a>Aby usunąć wpis z tabeli akceleratora  
   
-1.  Otwórz tabeli akceleratora klikając odpowiednią ikonę w [widok zasobów](../windows/resource-view-window.md).  
+1.  Otwórz tabeli akceleratora, klikając dwukrotnie odpowiednią ikonę w [widok zasobów](../windows/resource-view-window.md).  
   
     > [!NOTE]
-    >  Jeśli projekt nie zawiera już plik .rc, zobacz [Tworzenie nowego pliku skryptu zasobu](../windows/how-to-create-a-resource-script-file.md).  
+    >  Jeśli projekt nie zawiera jeszcze pliku .rc, zobacz [tworzenia nowego pliku skryptu zasobów](../windows/how-to-create-a-resource-script-file.md).  
   
-2.  Wybierz wpis, który chcesz usunąć. (Przytrzymaj **CTRL** lub **SHIFT** klucza podczas klikania, aby wybrać wiele wpisów.)  
+2.  Wybierz wpis, który chcesz usunąć. (Naciśnij i przytrzymaj **Ctrl** lub **Shift** klucza podczas klikania, aby wybrać wiele wpisów.)  
   
-3.  Kliknij prawym przyciskiem myszy i wybierz polecenie **usunąć** z menu skrótów (lub wybierz **usunąć** z **Edytuj** menu).  
+3.  Kliknij prawym przyciskiem myszy i wybierz polecenie **Usuń** z menu skrótów (lub wybierz **Usuń** z **Edytuj** menu).  
   
- \- lub -  
+ \- lub —  
   
--   Naciśnij klawisz Delete.  
+-   Naciśnij klawisz **Usuń** klucza.  
   
- Aby uzyskać informacje o dodawaniu zasobów do projektów zarządzanych, zobacz [zasobów w aplikacjach pulpitu](/dotnet/framework/resources/index) w *Przewodnik programistów platformy .NET Framework.*  
+ Aby uzyskać informacje na temat dodawania zasobów do projektów zarządzanych, zobacz [zasoby w aplikacjach pulpitu](/dotnet/framework/resources/index) w *przewodniku dewelopera .NET Framework*.  
   
- **Wymagania**  
-  
+## <a name="requirements"></a>Wymagania  
  Win32  
   
 ## <a name="see-also"></a>Zobacz też  

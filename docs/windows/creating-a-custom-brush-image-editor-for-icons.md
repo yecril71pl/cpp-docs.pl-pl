@@ -20,59 +20,59 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: a879850c00957568065150b6c6fc1c801c049fa2
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: fa6b10f1d263db95bf6eb901e65a3111721d6226
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33873150"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39647976"
 ---
 # <a name="creating-a-custom-brush-image-editor-for-icons"></a>Tworzenie pędzla niestandardowego (Edytor obrazów dla ikon)
-Pędzla niestandardowego jest prostokątny część obrazu, który Podnieś i użyj podobny do pędzli gotowe edytor obrazów. Wszystkie operacje, które można wykonywać na wybranych, można wykonywać na również pędzla niestandardowego.  
+Niestandardowy obiekt brush jest prostokątny fragment obrazu, które przejmą i używać jak jeden z **obraz** edytora pędzle gotowych do użycia. Wszystkie operacje, które można wykonywać na wybranych, można wykonywać na niestandardowy obiekt brush także.  
   
-### <a name="to-create-a-custom-brush-from-a-portion-of-an-image"></a>Aby utworzyć pędzla niestandardowego z części obrazu  
+### <a name="to-create-a-custom-brush-from-a-portion-of-an-image"></a>Aby utworzyć niestandardowy obiekt brush z części obrazu  
   
-1.  [Wybierz część obrazu](../windows/selecting-an-area-of-an-image-image-editor-for-icons.md) , który ma być używany dla pędzla.  
+1.  [Wybierz część obrazu](../windows/selecting-an-area-of-an-image-image-editor-for-icons.md) , którą chcesz używać dla pędzla.  
   
-2.  Zawierający **SHIFT** klucza w dół, kliknij w zaznaczeniu i przeciągnij go przez obraz.  
+2.  Przytrzymanie **Shift** klucza w dół, kliknij w zaznaczeniu i przeciągnij go na obrazie.  
   
-     \- lub -  
+     \- lub —  
   
-3.  Z **obrazu** menu, wybierz **Użyj wyboru jako pędzel**.  
+3.  Z **obraz** menu, wybierz **Użyj zaznaczenia jako pędzla**.  
   
-     Wybór staje się pędzla niestandardowego dystrybuująca kolorów w wyborze w obrazie. Kopiuje zaznaczenie pozostają na ścieżce przeciągania. Przeciągnij wolniej, większej liczby kopii zostaną zastosowane.  
+     Wybór staje się pędzla niestandardowego, który rozdziela kolorów w wyborze między obrazu. Kopiuje zaznaczenie są pozostawiane w ścieżce przeciągania. Przeciągniesz wolniej, większej liczby kopii zostały wprowadzone.  
   
-     **Uwaga** kliknięcie przycisku **użyć opcji pędzla** bez polega na wybraniu część obrazu użyje całego obrazu jako pędzla. Wynik przy użyciu pędzla niestandardowego również zależy od tego, czy wybrano [tła nieprzezroczyste lub przezroczysty](../windows/choosing-a-transparent-or-opaque-background-image-editor-for-icons.md).  
+     > [!NOTE]
+     > Klikając **Użyj zaznaczenia jako pędzla** bez polega na wybraniu część obrazu użyje całego obrazu jako pędzla. Wynik za pomocą niestandardowy obiekt brush również będzie zależeć od tego, czy wybrano [tła nieprzezroczyste lub przezroczyste](../windows/choosing-a-transparent-or-opaque-background-image-editor-for-icons.md).  
   
- Pikseli pędzla niestandardowego zgodne bieżący kolor tła są zwykle niewidoczne: ich nie malowanie istniejącego obrazu. Aby zmienić to zachowanie, dzięki czemu pikseli kolor tła malowanie istniejącego obrazu.  
+ Niestandardowy obiekt brush pikseli, które odpowiadają bieżącym kolorem tła są zwykle przezroczyste: one nie malowanie istniejącego obrazu. Można zmienić to zachowanie, tak aby pikseli kolor tła malować przez istniejący obraz.  
   
- Niestandardowe pędzla sygnatury lub wzornik służy do tworzenia szerokiej gamy efekty specjalne.  
+ Niestandardowy obiekt brush sygnaturę lub wzornika służy do tworzenia szerokiej gamy efekty specjalne.  
   
-#### <a name="to-draw-custom-brush-shapes-in-the-background-color"></a>Rysowanie kształtów pędzla niestandardowego w kolor tła  
+### <a name="to-draw-custom-brush-shapes-in-the-background-color"></a>Do rysowania kształtów niestandardowy obiekt brush kolor tła  
   
-1.  [Wybierz tło przezroczystości](../windows/choosing-a-transparent-or-opaque-background-image-editor-for-icons.md).  
+1.  [Wybierz tło nieprzezroczyste lub przezroczyste](../windows/choosing-a-transparent-or-opaque-background-image-editor-for-icons.md).  
   
-2.  [Kolor tła](../windows/selecting-foreground-or-background-colors-image-editor-for-icons.md) kolor, w którym chcesz narysować.  
+2.  [Ustaw kolor tła](../windows/selecting-foreground-or-background-colors-image-editor-for-icons.md) kolor, w której chcemy narysować.  
   
-3.  Ustaw pędzla niestandardowego gdzie do rysowania.  
+3.  Ustaw niestandardowy obiekt brush, w której chcemy narysować.  
   
-4.  Kliknij prawym przyciskiem myszy. Wszystkie regiony nieprzezroczyste pędzla niestandardowego są rysowane w kolor tła.  
+4.  Kliknij prawym przyciskiem myszy. Wszelkie nieprzezroczyste regionów niestandardowy obiekt brush są rysowane w kolor tła.  
   
-#### <a name="to-double-or-halve-the-custom-brush-size"></a>Kliknij dwukrotnie lub połowę rozmiar pędzla niestandardowego  
+### <a name="to-double-or-halve-the-custom-brush-size"></a>Dwukrotnie lub połowę rozmiar niestandardowy obiekt brush  
   
-1.  Naciśnij klawisz **znak PLUS** (**+**) klucz podwojenia pędzla, lub **znak MINUS** (**-**) kluczem o połowę go .  
+1.  Naciśnij klawisz **znak Plus** (**+**) klucz dwukrotnie rozmiar pędzla lub **znak Minus** (**-**) kluczem o połowę go .  
   
-#### <a name="to-cancel-the-custom-brush"></a>Aby anulować pędzla niestandardowego  
+### <a name="to-cancel-the-custom-brush"></a>Aby anulować niestandardowy obiekt brush  
   
-1.  Naciśnij klawisz **ESC** lub wybierz inne narzędzie do rysowania.  
+1.  Naciśnij klawisz **Esc** lub innego narzędzia do rysowania.  
   
- Aby uzyskać informacje o dodawaniu zasobów do projektów zarządzanych, zobacz [zasobów w aplikacjach pulpitu](/dotnet/framework/resources/index) w *Przewodnik programistów platformy .NET Framework.* Aby uzyskać informacje na ręczne dodanie do projektów zarządzanych plików zasobów, uzyskiwanie dostępu do zasobów, wyświetlanie zasoby statyczne i przypisanie do właściwości ciągów zasobów, zobacz [tworzenie plików zasobów dla aplikacji pulpitu](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Informacje dotyczące globalizacji i lokalizacji zasobów w zarządzanych aplikacjach, zobacz [Globalizing i lokalizacja aplikacji .NET Framework](/dotnet/standard/globalization-localization/index).  
+ Aby uzyskać informacje na temat dodawania zasobów do projektów zarządzanych, zobacz [zasoby w aplikacjach pulpitu](/dotnet/framework/resources/index) w *przewodniku dewelopera .NET Framework*. Aby uzyskać informacji na temat ręcznego dodawania plików zasobów do projektów zarządzanych, uzyskiwania dostępu do zasobów, wyświetlania statycznych zasobów i przypisywania ciągów zasobów do właściwości, zobacz [Creating Resource Files dla aplikacji klasycznych](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Aby uzyskać informacji na temat globalizacja i lokalizacja zasobów w aplikacjach zarządzanych, zobacz [Globalizing i lokalizowanie aplikacji programu .NET Framework](/dotnet/standard/globalization-localization/index).  
   
-### <a name="requirements"></a>Wymagania  
+## <a name="requirements"></a>Wymagania  
  Brak  
   
 ## <a name="see-also"></a>Zobacz też  
  [Klawisze skrótów](../windows/accelerator-keys-image-editor-for-icons.md)   
  [Edytowanie zasobów graficznych](../windows/editing-graphical-resources-image-editor-for-icons.md)   
  [Edytor obrazów dla ikon](../windows/image-editor-for-icons.md)
-

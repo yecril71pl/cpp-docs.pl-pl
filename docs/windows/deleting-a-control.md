@@ -1,5 +1,5 @@
 ---
-title: Usuwanie formantu | Dokumentacja firmy Microsoft
+title: Usuwanie kontrolki | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,31 +16,29 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: f779ec16e9ecb47b5958737bc1ca6fe3075cec33
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 231e9cd3e49b7e22dfd2a0daa4f7bbc83cc967f2
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33871425"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39644921"
 ---
 # <a name="deleting-a-control"></a>Usuwanie formantu
-### <a name="to-delete-a-control"></a>Aby usunąć formantu  
+### <a name="to-delete-a-control"></a>Aby usunąć formant  
   
-1.  W oknie dialogowym Wybierz kontroli i naciśnij klawisz **usunąć** klucza.  
+1.  W oknie dialogowym Wybierz formant, a następnie naciśnij klawisz **Usuń** klucza.  
   
-     \- lub -  
+     \- lub —  
   
-2.  Na **Edytuj** menu, kliknij przycisk **usunąć**.  
+2.  Na **Edytuj** menu, kliknij przycisk **Usuń**.  
   
     > [!TIP]
-    >  Podczas używania edytora okien dialogowych, w wielu przypadkach, kliknięcie prawym przyciskiem myszy wyświetli menu skrótów z najczęściej używanymi poleceniami.  
+    >  Podczas korzystania z **okna dialogowego** edytora w wielu przypadkach, kliknięcie prawym przyciskiem myszy wyświetli menu skrótów z najczęściej używanymi poleceniami.  
   
- Aby uzyskać informacje o dodawaniu zasobów do projektów zarządzanych, zobacz [zasobów w aplikacjach pulpitu](/dotnet/framework/resources/index) w *Przewodnik programistów platformy .NET Framework.* Aby uzyskać informacje na ręczne dodanie do projektów zarządzanych plików zasobów, uzyskiwanie dostępu do zasobów, wyświetlanie zasoby statyczne i przypisanie do właściwości ciągów zasobów, zobacz [tworzenie plików zasobów dla aplikacji pulpitu](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Informacje dotyczące globalizacji i lokalizacji zasobów w zarządzanych aplikacjach, zobacz [Globalizing i lokalizacja aplikacji .NET Framework](/dotnet/standard/globalization-localization/index).  
+ Aby uzyskać informacje na temat dodawania zasobów do projektów zarządzanych, zobacz [zasoby w aplikacjach pulpitu](/dotnet/framework/resources/index) w *przewodniku dewelopera .NET Framework*. Aby uzyskać informacji na temat ręcznego dodawania plików zasobów do projektów zarządzanych, uzyskiwania dostępu do zasobów, wyświetlania statycznych zasobów i przypisywania ciągów zasobów do właściwości, zobacz [Creating Resource Files dla aplikacji klasycznych](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Aby uzyskać informacji na temat globalizacja i lokalizacja zasobów w aplikacjach zarządzanych, zobacz [Globalizing i lokalizowanie aplikacji programu .NET Framework](/dotnet/standard/globalization-localization/index).  
   
- Wymagania  
-  
+## <a name="requirements"></a>Wymagania  
  Win32  
   
 ## <a name="see-also"></a>Zobacz też  
  [Kontrolki w oknach dialogowych](../windows/controls-in-dialog-boxes.md)
-

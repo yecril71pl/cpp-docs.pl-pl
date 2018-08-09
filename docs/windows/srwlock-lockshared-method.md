@@ -1,5 +1,5 @@
 ---
-title: SRWLock::LockShared — metoda | Dokumentacja firmy Microsoft
+title: SRWLock::LockShared, metoda | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: fccc72814ca5c4fff417e0b6221ef0f3c045a5bb
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 8dfc50ae0732471f8cb91b2c380d4c4772350f47
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33895752"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39652129"
 ---
 # <a name="srwlocklockshared-method"></a>SRWLock::LockShared — Metoda
-Uzyskuje obiekt srwlock — w trybie udostępniania.  
+Uzyskuje **SRWLock** obiektu w tryb udostępniania.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -37,17 +37,17 @@ static SyncLockShared LockShared(
 );  
 ```  
   
-#### <a name="parameters"></a>Parametry  
- `lock`  
- Wskaźnik do obiektu srwlock —.  
+### <a name="parameters"></a>Parametry  
+ *lock*  
+ Wskaźnik do **SRWLock** obiektu.  
   
 ## <a name="return-value"></a>Wartość zwracana  
- Obiekt srwlock — w trybie udostępniania.  
+ **SRWLock** obiektu w tryb udostępniania.  
   
 ## <a name="requirements"></a>Wymagania  
  **Nagłówek:** corewrappers.h  
   
- **Namespace:** Microsoft::wrl:: wrappers —  
+ **Namespace:** Microsoft::wrl:: wrappers  
   
 ## <a name="see-also"></a>Zobacz też  
  [SRWLock, klasa](../windows/srwlock-class.md)

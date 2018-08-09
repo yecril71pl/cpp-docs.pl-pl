@@ -18,33 +18,30 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 28d31fc27fdc51a3a5b05dba96ab9decf4fc7e00
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: cd9d2429f1257711d766d8e51b890e2e8a59b8d1
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33857717"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39642259"
 ---
 # <a name="changing-a-symbol-or-symbol-name-id"></a>Zmiana symbolu lub nazwy symbolu (ID)
-Podczas tworzenia nowego zasobu lub obiektu zasobów, środowisko projektowe przypisuje go domyślną nazwę symbolu, na przykład IDD_DIALOG1. Można użyć [okna właściwości](/visualstudio/ide/reference/properties-window) zmienić domyślną nazwę symbolu lub zmienić nazwę symbolu, wszystkie już skojarzony z zasobem.  
+Podczas tworzenia nowego zasobu lub obiektu zasobu, środowisko programistyczne przypisuje mu nazwę symbolu domyślną, na przykład IDD_DIALOG1. Możesz użyć [okno właściwości](/visualstudio/ide/reference/properties-window) zmienić domyślną nazwę symbolu lub zmień nazwę symbolu już skojarzony z zasobem.  
   
 ### <a name="to-change-a-resources-symbol-name"></a>Aby zmienić nazwę symbolu zasobu  
   
 1.  W [widok zasobów](../windows/resource-view-window.md), wybierz zasób.  
   
     > [!NOTE]
-    >  Jeśli projekt nie zawiera już plik .rc, zobacz [Tworzenie nowego pliku skryptu zasobu](../windows/how-to-create-a-resource-script-file.md).  
+    >  Jeśli projekt nie zawiera jeszcze pliku .rc, zobacz [tworzenia nowego pliku skryptu zasobów](../windows/how-to-create-a-resource-script-file.md).  
   
 2.  W **właściwości** okna, wpisz nową nazwę symbolu lub wybierz z listy istniejących symboli w **identyfikator** pole.  
   
-     Jeśli wpiszesz nazwę symbolu, zostanie automatycznie przypisany wartość.  
+     Jeśli wpiszesz nową nazwę symbolu, jest automatycznie przypisywany wartość.  
   
- Można użyć [okno dialogowe symboli zasobów](../windows/resource-symbols-dialog-box.md) zmiana nazw symboli nie jest aktualnie przypisana do zasobu. Aby uzyskać więcej informacji, zobacz [zmiana nieprzypisanych symboli](../windows/changing-unassigned-symbols.md).  
+ Możesz użyć [okno dialogowe symboli zasobów](../windows/resource-symbols-dialog-box.md) się zmienić nazwy symboli nie jest aktualnie przypisany do zasobu. Aby uzyskać więcej informacji, zobacz [zmiana nieprzypisanych symboli](../windows/changing-unassigned-symbols.md).  
   
-
-  
- Wymagania  
-  
+## <a name="requirements"></a>Wymagania  
  Win32  
   
 ## <a name="see-also"></a>Zobacz też  

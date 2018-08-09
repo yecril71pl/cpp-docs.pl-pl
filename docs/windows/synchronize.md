@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 304ceece506465df0a51c56b247407d351fd23b3
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 371a974742975cec9fab9c2f822fe0540dc57ab0
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33889800"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39643501"
 ---
 # <a name="synchronize"></a>synchronize
 Synchronizuje dostęp do metody docelowej.  
@@ -30,22 +30,20 @@ Synchronizuje dostęp do metody docelowej.
 ## <a name="syntax"></a>Składnia  
   
 ```  
-  
 [synchronize]  
-  
 ```  
   
 ## <a name="remarks"></a>Uwagi  
- **Zsynchronizować** atrybutu C++ zapewnia obsługę synchronizowanie metody docelowego obiektu. Synchronizacji umożliwia wielu obiektów do użycia wspólnych zasobów (na przykład metoda klasy) przez kontrolowanie dostępu do metody docelowej.  
+ **Zsynchronizować** atrybut C++ zapewnia obsługę synchronizacji metodę docelowego obiektu. Synchronizacja umożliwia wielu obiektów, które korzystają z typowych zasobu (np. metody klasy) poprzez kontrolowanie dostępu do metody docelowej.  
   
- Wstawione przez atrybut ten kod wywołuje właściwego `Lock` — metoda (określoną przez model wątkowy) na początku metody docelowej. Gdy metoda zostanie zakończone, `Unlock` nazywa się automatycznie. Aby uzyskać więcej informacji na temat tych funkcji, zobacz [CComAutoThreadModule::Lock](../atl/reference/ccomautothreadmodule-class.md#lock)  
+ Kod wstawione przez ten atrybut wywołuje odpowiednią `Lock` — metoda (określany przez model wątkowy) na początku metody docelowej. Gdy metoda jest został zakończony, `Unlock` jest wywoływana automatycznie. Aby uzyskać więcej informacji na temat tych funkcji, zobacz [CComAutoThreadModule::Lock](../atl/reference/ccomautothreadmodule-class.md#lock)  
   
- Ten atrybut wymaga, aby [coclass](../windows/coclass.md), [progid](../windows/progid.md), lub [vi_progid —](../windows/vi-progid.md) atrybutu (lub inny atrybut, który oznacza jeden z nich) również będą stosowane do tego samego elementu. Jeśli jest używany dowolny pojedynczy atrybut, pozostałe dwa są automatycznie stosowane. Na przykład jeśli **progid** zostanie zastosowana, **vi_progid —** i **coclass** również są stosowane.  
+ Ten atrybut wymaga, aby [coclass](../windows/coclass.md), [progid](../windows/progid.md), lub [vi_progid —](../windows/vi-progid.md) atrybutów (lub innego atrybutu, który oznacza jeden z nich) również będą stosowane do tego samego elementu. Jeśli dowolny pojedynczy atrybut jest używany, pozostałe dwa są automatycznie stosowane. Na przykład jeśli `progid` zastosowaniu `vi_progid` i `coclass` są również stosowane.  
   
 ## <a name="example"></a>Przykład  
- Poniższy kod zapewnia synchronizację `UpdateBalance` metody `CMyClass` obiektu.  
+ Poniższy kod zawiera synchronizację `UpdateBalance` metody `CMyClass` obiektu.  
   
-```  
+```cpp  
 // cpp_attr_ref_synchronize.cpp  
 // compile with: /LD  
 #define _ATL_ATTRIBUTES  
@@ -72,16 +70,16 @@ class CMyClass {
   
 ## <a name="requirements"></a>Wymagania  
   
-### <a name="attribute-context"></a>Atrybut kontekstu  
+### <a name="attribute-context"></a>Kontekst atrybutu  
   
 |||  
 |-|-|  
-|**Dotyczy**|Metody klasy, — metoda|  
+|**Dotyczy**|Metody klasy, metoda|  
 |**Powtarzalne**|Nie|  
-|**Wymaganych atrybutów**|Co najmniej jeden z następujących: **coclass**, **progid**, lub **vi_progid —**.|  
+|**Wymaganych atrybutów**|Co najmniej jeden z następujących czynności: `coclass`, `progid`, lub `vi_progid`.|  
 |**Nieprawidłowe atrybuty**|Brak|  
   
- Aby uzyskać więcej informacji na temat konteksty atrybutu, zobacz [konteksty atrybutu](../windows/attribute-contexts.md).  
+ Aby uzyskać więcej informacji na temat konteksty atrybutu zobacz [konteksty atrybutu](../windows/attribute-contexts.md).  
   
 ## <a name="see-also"></a>Zobacz też  
  [Atrybuty COM](../windows/com-attributes.md)   

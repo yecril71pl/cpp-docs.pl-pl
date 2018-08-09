@@ -18,12 +18,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 107d721e4603fc1f22a5ff793a867b290472f10c
-ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
+ms.openlocfilehash: 6b3ee48394eede37873ce074c275290307215815
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39570405"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39649139"
 ---
 # <a name="event--c-component-extensions"></a>event (C++ Component Extensions)
 **Zdarzeń** deklaruje — słowo kluczowe *zdarzeń*, czyli powiadomienia do subskrybentów zarejestrowany (*procedury obsługi zdarzeń*) która jest przeprowadzana w stanie się coś istotnego.  
@@ -31,9 +31,9 @@ ms.locfileid: "39570405"
 ## <a name="all-runtimes"></a>Wszystkie środowiska wykonawcze  
  C + +/ CX obsługuje deklarowania *składowej zdarzenia* lub *bloku zdarzeń*. Element członkowski zdarzenia jest skrótem do deklarowania bloku zdarzeń. Domyślnie deklaruje element członkowski zdarzenia `add()`, `remove()`, i `raise()` funkcje, które są jawnie zadeklarowane w bloku zdarzeń. Aby dostosować funkcje w element członkowski zdarzenia, zamiast deklarowania bloku zdarzeń, a następnie zastąpić funkcje, których potrzebujesz.  
   
- **Składnia**  
+### <a name="syntax"></a>Składnia
   
-```  
+```cpp  
 // event data member  
 modifiereventdelegate^ event_name;     
   
@@ -46,8 +46,7 @@ modifiereventdelegate^ event_name
 }  
 ```  
   
- **Parametry**  
-  
+### <a name="parameters"></a>Parametry
  *Modyfikator*  
  Modyfikatory, które mogą być używane w zgłoszeniu zdarzenia lub metody dostępu zdarzeń.  Możliwe wartości to **statyczne** i **wirtualnego**.  
   
@@ -63,7 +62,7 @@ modifiereventdelegate^ event_name
  *Parametry*  
  (opcjonalnie) Parametry `raise` metody, która pasuje do podpisu z *delegować* parametru.  
   
- **Uwagi**  
+### <a name="remarks"></a>Uwagi
   
  Zdarzenie jest skojarzenie między delegata, a funkcja członkowska (program obsługi zdarzeń), która odpowiada wyzwolenie zdarzenia i umożliwia klientom z dowolnej klasy do zarejestrowania metod, które są zgodne z podpis i zwracany typ delegata bazowego.  
   
@@ -87,14 +86,14 @@ modifiereventdelegate^ event_name
  Jeśli zamierzasz dodać, a następnie usuń procedurę obsługi zdarzeń, musisz najpierw zapisać struktury EventRegistrationToken, który jest zwracany przez operacji dodawania. Następnie w operacji usuwania, należy użyć zapisanych struktury EventRegistrationToken do identyfikowania programu obsługi zdarzeń do usunięcia.  
   
 ### <a name="requirements"></a>Wymagania  
- — Opcja kompilatora: **/ZW**  
+ — Opcja kompilatora: `/ZW`  
   
 ## <a name="common-language-runtime"></a>środowiska uruchomieniowe w trakcie wykonania 
  **Zdarzeń** — słowo kluczowe pozwala zadeklarować zdarzenia. Zdarzenie jest się dzieje w sposób, aby klasa zapewniała powiadomienia, gdy coś w zainteresowania.  
   
- **Składnia**  
+### <a name="syntax"></a>Składnia
   
-```  
+```cpp  
 // event data member  
 modifiereventdelegate^ event_name;   
   
@@ -107,8 +106,7 @@ modifiereventdelegate^ event_name
 }  
 ```  
   
- **Parametry**  
-  
+### <a name="parameters"></a>Parametry
  *Modyfikator*  
  Modyfikatory, które mogą być używane w zgłoszeniu zdarzenia lub metody dostępu zdarzeń.  Możliwe wartości to **statyczne** i **wirtualnego**.  
   
@@ -124,8 +122,7 @@ modifiereventdelegate^ event_name
  *Parametry*  
  (opcjonalnie) Parametry `raise` metody, która pasuje do podpisu z *delegować* parametru.  
   
- **Uwagi**  
-  
+### <a name="remarks"></a>Uwagi
  Zdarzenie jest skojarzenie między delegata, a funkcja członkowska (program obsługi zdarzeń), która odpowiada wyzwolenie zdarzenia i umożliwia klientom z dowolnej klasy do zarejestrowania metod, które są zgodne z podpis i zwracany typ delegata bazowego.  
   
  Delegat może mieć co najmniej jeden skojarzone metody, które będzie wywoływany, gdy kod wskazuje, że wystąpiło zdarzenie. Zdarzenia w jednym programie mogą być udostępniane do innych programów, których platformą docelową .NET Framework środowisko uruchomieniowe języka wspólnego.  
@@ -171,11 +168,10 @@ modifiereventdelegate^ event_name
 -   [Zdarzenia w interfejsie](../dotnet/how-to-use-events-in-cpp-cli.md)  
   
 ### <a name="requirements"></a>Wymagania  
- — Opcja kompilatora:   **/CLR**  
+ — Opcja kompilatora: `/clr`  
   
 ### <a name="examples"></a>Przykłady  
- **Przykład**  
-  
+
  Poniższy przykład kodu demonstruje deklarującego pary delegatów, zdarzenia i procedury obsługi zdarzeń; Subskrypcja (dodanie) procedury obsługi zdarzeń; wywoływanie programów obsługi zdarzeń; a następnie anulowania subskrypcji (usunięcie) procedury obsługi zdarzeń.  
   
 ```cpp  
@@ -229,15 +225,11 @@ int main() {
 }  
 ```  
   
- **Output**  
-  
 ```Output  
 OnClick: 7, 3.14159  
   
 OnDblClick: Hello  
 ```  
-  
- **Przykład**  
   
  Poniższy przykład kodu demonstruje przez logikę używaną do generowania `raise` metoda trivial zdarzeń: Jeśli zdarzenie ma co najmniej jeden subskrybentów, wywołanie `raise` metoda jawnie lub niejawnie wywołuje delegata. Jeśli delegat zwracany typ nie jest **void** i jeśli zero subskrybentów zdarzeń `raise` metoda zwraca wartość domyślna dla typu delegata. W przypadku subskrybentów zdarzeń podczas wywoływania `raise` metoda po prostu zwraca i jest zgłaszany żaden wyjątek. Jeśli delegat zwracany typ jest **void**, jest zwracany typ delegata.  
   
@@ -272,8 +264,6 @@ int main() {
    Console::WriteLine(c.i);     
 }  
 ```  
-  
- **Output**  
   
 ```Output  
 0  

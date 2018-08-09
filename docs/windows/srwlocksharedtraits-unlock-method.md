@@ -1,5 +1,5 @@
 ---
-title: SRWLockSharedTraits::Unlock — Metoda | Dokumentacja firmy Microsoft
+title: SRWLockSharedTraits::Unlock, metoda | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 95be5ae4c9db7bff4ecbfb4705904f4e48c160e0
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: c0a42d1e1010f63436951beeadbd833e2a9d445d
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33889361"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39650527"
 ---
 # <a name="srwlocksharedtraitsunlock-method"></a>SRWLockSharedTraits::Unlock — Metoda
-Zwalnia wyłączną kontrolę określonego obiektu srwlock —.  
+Zwalnia wyłączną kontrolę określonego `SRWLock` obiektu.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -35,9 +35,9 @@ inline static void Unlock(
 );  
 ```  
   
-#### <a name="parameters"></a>Parametry  
- `srwlock`  
- Dojście do obiektu srwlock —.  
+### <a name="parameters"></a>Parametry  
+ *srwlock*  
+ Dojście do `SRWLock` obiektu.  
   
 ## <a name="return-value"></a>Wartość zwracana  
   

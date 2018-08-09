@@ -17,19 +17,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 0ff18dee2b8d951ab9233e92478eb967e4a02eb9
-ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
+ms.openlocfilehash: 1530f7998f2597aeb2fe46dba09f4844b471cd93
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39464301"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39644833"
 ---
 # <a name="comptroperator-gt-operator"></a>ComPtr::operator —&gt; — Operator
 Pobiera wskaźnik do typu określonego przez parametr bieżącego szablonu.  
   
 ## <a name="syntax"></a>Składnia  
   
-```  
+```cpp  
 WRL_NOTHROW Microsoft::WRL::Details::RemoveIUnknown<InterfaceType>* operator->() const;  
 ```  
   

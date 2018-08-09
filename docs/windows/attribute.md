@@ -20,19 +20,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: d72506e3f384a784bce4d159e8e76e88098c79f7
-ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
+ms.openlocfilehash: e7b1f849aff584da6f575bc822a71acc683520e6
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39461812"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39646322"
 ---
 # <a name="attribute"></a>— atrybut
 Umożliwia tworzenie atrybutów niestandardowych.  
   
 ## <a name="syntax"></a>Składnia  
   
-```  
+```cpp  
 [ attribute(  
    AllowOn,  
    AllowMultiple=boolean,  
@@ -40,7 +40,7 @@ Umożliwia tworzenie atrybutów niestandardowych.
 ) ]  
 ```  
   
-#### <a name="parameters"></a>Parametry  
+### <a name="parameters"></a>Parametry  
  *AllowOn*  
  Określa elementy języka, do których można zastosować atrybutu niestandardowego. Wartość domyślna to `System::AttributeTargets::All` (zobacz [System::AttributeTargets](https://msdn.microsoft.com/library/system.attributetargets.aspx)).  
   
@@ -48,16 +48,16 @@ Umożliwia tworzenie atrybutów niestandardowych.
  Określa, czy atrybut niestandardowy mogą dotyczyć wielokrotnie konstrukcję. Domyślną jest FALSE.  
   
  *Dziedziczone*  
- Wskazuje, czy ten atrybut ma być dziedziczona przez podklasy. Kompilator nie obsługuje specjalne tej funkcjonalności. zadanie konsumentów atrybutu (na przykład odbicia) jest do przestrzegania tych informacji. Jeśli *dziedziczone* ma wartość PRAWDA, ten atrybut jest dziedziczona. Jeśli *AllowMultiple* ma wartość TRUE, atrybut będą gromadzone w pochodnej składowej; Jeśli *AllowMultiple* ma wartość FALSE, atrybut spowoduje zastąpienie (lub Zastąp) w dziedziczeniu. Jeśli *dziedziczone* ma wartość FAŁSZ, ten atrybut nie będą dziedziczone. Domyślna wartość to TRUE.  
+ Wskazuje, czy ten atrybut ma być dziedziczona przez podklasy. Kompilator nie obsługuje specjalne tej funkcjonalności. to zadanie konsumentów atrybutu (`Reflection`, na przykład) do przestrzegania tych informacji. Jeśli *dziedziczone* ma wartość PRAWDA, ten atrybut jest dziedziczona. Jeśli *AllowMultiple* ma wartość TRUE, atrybut będą gromadzone w pochodnej składowej; Jeśli *AllowMultiple* ma wartość FALSE, atrybut spowoduje zastąpienie (lub Zastąp) w dziedziczeniu. Jeśli *dziedziczone* ma wartość FAŁSZ, ten atrybut nie będą dziedziczone. Domyślna wartość to TRUE.  
   
 ## <a name="remarks"></a>Uwagi  
   
 > [!NOTE]
->  `attribute` Atrybutu jest już przestarzały.  Użyj wspólnego języka środowiska uruchomieniowego atrybut klasy System.Attribute bezpośrednio, aby utworzyć attirbutes zdefiniowanych przez użytkownika.  Aby uzyskać więcej informacji, zobacz [atrybuty zdefiniowane przez użytkownika](../windows/user-defined-attributes-cpp-component-extensions.md).  
+>  **Atrybut** atrybutu jest już przestarzały.  Użyj wspólnego atrybutu środowisko uruchomieniowe języka `System.Attribute` można bezpośrednio utworzyć attirbutes zdefiniowanych przez użytkownika. Aby uzyskać więcej informacji, zobacz [atrybuty zdefiniowane przez użytkownika](../windows/user-defined-attributes-cpp-component-extensions.md).  
   
- Należy zdefiniować [atrybutu niestandardowego](../windows/custom-attributes-cpp.md) , umieszczając `attribute` atrybutu zarządzanych definicji klasy lub struktury. Nazwa klasy jest atrybutu niestandardowego. Na przykład:  
+ Należy zdefiniować [atrybutu niestandardowego](../windows/custom-attributes-cpp.md) , umieszczając **atrybut** atrybutu zarządzanych definicji klasy lub struktury. Nazwa klasy jest atrybutu niestandardowego. Na przykład:  
   
-```  
+```cpp  
 [ attribute(Parameter) ]  
 public ref class MyAttr {};  
 ```  
@@ -115,7 +115,7 @@ ref class ClassC {};
   
  Zobacz [atrybuty zdefiniowane przez użytkownika](../windows/user-defined-attributes-cpp-component-extensions.md) do dyskusji na temat docelowe atrybuty.  
   
- `attribute` Atrybut ma *AllowMultiple* parametr, który określa, czy atrybut niestandardowy jest jednorazowego użytku lub multiuse (może wystąpić więcej niż raz w tej samej jednostce).  
+ **Atrybut** atrybut ma *AllowMultiple* parametr, który określa, czy atrybut niestandardowy jest jednorazowego użytku lub multiuse (może wystąpić więcej niż raz w tej samej jednostce).  
   
 ```cpp  
 // cpp_attr_ref_attribute_3.cpp  
@@ -130,21 +130,21 @@ ref struct MyAttr {
 ref class ClassA {};  
 ```  
   
- Niestandardowy atrybut klasy pochodzą bezpośrednio lub pośrednio z <xref:System.ComponentModel.AttributeCollection.%23ctor%2A>, co sprawia, że identyfikowanie definicji atrybutów w metadanych jest łatwe i szybkie. `attribute` Atrybut oznacza dziedziczenie z System::Attribute, więc jawne tworzenie wartości pochodnych nie jest konieczne:  
+ Niestandardowy atrybut klasy pochodzą bezpośrednio lub pośrednio z <xref:System.ComponentModel.AttributeCollection.%23ctor%2A>, co sprawia, że identyfikowanie definicji atrybutów w metadanych jest łatwe i szybkie. **Atrybut** atrybut oznacza dziedziczenie z `System::Attribute`, więc jawne tworzenie wartości pochodnych nie jest konieczne:  
   
-```  
+```cpp  
 [ attribute(Class) ]  
 ref class MyAttr  
 ```  
   
  odpowiada wyrażeniu  
   
-```  
+```cpp  
 [ attribute(Class) ]  
 ref class MyAttr : System::Attribute   // OK, but redundant.  
 ```  
   
- `attribute` jest aliasem dla <xref:System.AttributeUsageAttribute?displayProperty=fullName> (nie AttributeAttribute; jest to wyjątek reguły nazewnictwa atrybutu).  
+ **atrybut** jest aliasem dla <xref:System.AttributeUsageAttribute?displayProperty=fullName> (nie AttributeAttribute; jest to wyjątek reguły nazewnictwa atrybutu).  
   
 ## <a name="requirements"></a>Wymagania  
   

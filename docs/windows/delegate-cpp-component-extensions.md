@@ -18,12 +18,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 4c2a1297fff3c4604ffb181a907b982f9d2e1de4
-ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
+ms.openlocfilehash: dd35674b61e61eead6118fdcc0aacccbafa6f3b4
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39570366"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39649510"
 ---
 # <a name="delegate--c-component-extensions"></a>delegate (C++ Component Extensions)
 Deklaruje typ, który reprezentuje wskaźnik funkcji.  
@@ -68,7 +68,7 @@ delegate-type-identifier
  Użyj *identyfikatora w przypadku typu delegata* Aby zadeklarować zdarzenia o ten sam prototyp jako pełnomocnik. Aby uzyskać więcej informacji, zobacz [obiektów delegowanych (C + +/ CX)](../cppcx/delegates-c-cx.md).  
   
 ### <a name="requirements"></a>Wymagania  
- — Opcja kompilatora: **/ZW**  
+ — Opcja kompilatora: `/ZW`  
   
 ## <a name="common-language-runtime"></a>środowiska uruchomieniowe w trakcie wykonania  
  Środowisko uruchomieniowe języka wspólnego obsługuje delegatów przy użyciu następującej składni.  
@@ -124,10 +124,9 @@ function_declaration
 -   [Delegaty ogólne (Visual C++)](../windows/generic-delegates-visual-cpp.md)  
   
 ### <a name="requirements"></a>Wymagania  
- — Opcja kompilatora:   **/CLR**  
+ — Opcja kompilatora: `/clr`  
   
 ### <a name="examples"></a>Przykłady  
- **Przykład**  
   
  Poniższy przykład pokazuje sposób deklarowania, zainicjować i wywoływać delegatów.  
   
@@ -187,8 +186,6 @@ int main () {
    StaticDelInst(11);  
 }  
 ```  
-  
- **Output**  
   
 ```Output  
 in func1 8  

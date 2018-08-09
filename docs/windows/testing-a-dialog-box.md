@@ -17,43 +17,41 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 57bb9e827caae0e328971077d902673f2428c80b
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: cf9e5e24e77a14b3baf86c1b83d653dd833ebbbb
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33889548"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39652073"
 ---
 # <a name="testing-a-dialog-box"></a>Testowanie okna dialogowego
-Podczas projektowania okno dialogowe, można symulować i przetestować jego zachowania w czasie wykonywania bez kompilowania programu. W tym trybie można wykonywać następujące czynności:  
+Podczas projektowania okna dialogowego, można symulować i testować jej zachowania w czasie wykonywania bez kompilacji programu. W tym trybie możesz wykonywać następujące czynności:  
   
--   Wpisz tekst, wybierz z listy pola kombi, włączanie lub wyłączanie opcji i wybrać polecenie.  
+-   Wpisz tekst, wybierz z listy pola kombi, włączanie lub wyłączanie opcji i wybierz polecenia.  
   
--   Przetestuj kolejności tabulacji.  
+-   Przetestuj kolejność tabulacji.  
   
--   Przetestuj grupowanie formanty, takie jak przycisków radiowych i pól wyboru.  
+-   Przetestuj zgrupowania formantów, takich jak pola wyboru i przyciski opcji.  
   
 -   Przetestuj skróty klawiaturowe dla formantów w oknie dialogowym.  
   
     > [!NOTE]
-    >  Połączenia wysłane za pomocą kreatorów kodu pole okna dialogowego nie znajdują się w symulacji.  
+    >  Połączenia do kodu pola dialogowego przy użyciu kreatorów nie są objęte symulacją.  
   
- Podczas testowania okno dialogowe zwykle wyświetlane w lokalizacji, która jest względem okno główne programu. Jeśli okno dialogowe właściwości wyrównanie bezwzględne ustawiono wartość true, okno dialogowe wyświetla na pozycji, która jest względem lewego górnego rogu ekranu.  
+ Podczas testowania okna dialogowego, zwykle wyświetla się ono w lokalizacji, która jest określana względem okna głównego programu. Jeśli ustawiono okno dialogowe **bezwzględnie Wyrównaj** właściwości **True**, okno dialogowe jest wyświetlane w położeniu względem lewego górnego rogu ekranu.  
   
 ### <a name="to-test-a-dialog-box"></a>Aby przetestować okno dialogowe  
   
-1.  Gdy okno edytora jest aktywne okno na pasku menu wybierz pozycję **Format**, **okno dialogowe testu**.  
+1.  Gdy Edytor okien dialogowych jest aktywnym oknem, na pasku menu wybierz pozycję **Format**, **Test dialogowy**.  
   
-2.  Aby zakończyć symulacji, naciśnij klawisz Esc, lub po prostu wybierz **Zamknij** przycisk w oknie dialogowym podczas testowania.  
+2.  Aby zakończyć symulację, naciśnij klawisz **Esc**, lub po prostu wybierz **Zamknij** przycisku w oknie dialogowym, które testujesz.  
   
- Aby uzyskać informacje o tym, jak dodać zasoby do projektów zarządzanych, zobacz [zasobów w aplikacjach pulpitu](/dotnet/framework/resources/index).  
+ Aby uzyskać informacje dotyczące sposobu dodawania zasobów do projektów zarządzanych, zobacz [zasoby w aplikacjach pulpitu](/dotnet/framework/resources/index).  
   
- Wymagania  
-  
+## <a name="requirements"></a>Wymagania  
  Win32  
   
 ## <a name="see-also"></a>Zobacz też  
  [Formanty w oknach dialogowych](../windows/controls-in-dialog-boxes.md)   
  [Edytor okien dialogowych](../windows/dialog-editor.md)   
  [Pokazywanie i ukrywanie paska narzędzi Edytora okien dialogowych](../windows/showing-or-hiding-the-dialog-editor-toolbar.md)
-

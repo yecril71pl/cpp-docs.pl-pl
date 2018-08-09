@@ -16,12 +16,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 428004d3390b95c700c53fd157b62a1b3fbe3d0b
-ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
+ms.openlocfilehash: 4efe507011d70df689162b52f72d730f0ae99f58
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39571178"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39650056"
 ---
 # <a name="generic-interfaces-visual-c"></a>Interfejsy ogólne (Visual C++)
 Ograniczenia, które są stosowane do parametrów typu w klasach są takie same jak te, które są stosowane do parametrów typu w interfejsach (zobacz [klasy ogólne (C + +/ CLI)](../windows/generic-classes-cpp-cli.md)).  
@@ -34,14 +34,14 @@ Ograniczenia, które są stosowane do parametrów typu w klasach są takie same 
   
 ## <a name="syntax"></a>Składnia  
   
-```  
+```cpp  
 [attributes] generic <class-key type-parameter-identifier[, ...]>  
 [type-parameter-constraints-clauses][accesibility-modifiers] interface class identifier [: base-list] {   interface-body} [declarators] ;  
 ```  
   
 ## <a name="remarks"></a>Uwagi  
  *atrybuty* (opcjonalnie)  
- Dodatkowe informacje deklaratywnego. Aby uzyskać więcej informacji o atrybuty i klasy atrybutów Zobacz atrybutów.  
+ Dodatkowe informacje deklaratywnego. Aby uzyskać więcej informacji na temat atrybuty i klasy atrybutów, zobacz **atrybuty**.  
   
  *klucz klasy*  
  **Klasa** lub **typename**  

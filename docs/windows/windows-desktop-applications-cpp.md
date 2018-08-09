@@ -1,5 +1,5 @@
 ---
-title: Aplikacje systemu Windows (C++) | Dokumentacja firmy Microsoft
+title: Aplikacje pulpitu Windows (C++) | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -20,20 +20,21 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: f9e24921a2a33ab31a9a5e6b7c3a33dbfec6c47e
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: f78fa02b991fbdf7c18457a8018ea46b0c240585
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33890713"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39647960"
 ---
-# <a name="windows-desktop-applications-c"></a>Aplikacje systemu Windows (C++)
-W tej sekcji omówiono sposób tworzenia aplikacji klasycznych C++, które należy uruchomić w oknie.  
+# <a name="windows-desktop-applications-c"></a>Aplikacje pulpitu Windows (C++)
+W tej sekcji omówiono sposób tworzenia aplikacji klasycznych w języku C++ działających w oknie.  
+
 > [!TIP]  
-> Dla systemu Windows 10 można konwertera aplikacji pulpitu pakietu istniejącej aplikacji klasycznych dla wdrożenia za pomocą Microsoft Store. Aby uzyskać więcej informacji, zobacz [przy użyciu środowiska uruchomieniowego Visual C++ w projekcie Centennial](https://blogs.msdn.microsoft.com/vcblog/2016/07/07/using-visual-c-runtime-in-centennial-project) i [przełączyć aplikację pulpitu do systemu Windows platformy Uniwersalnej z Mostek pulpitu](https://msdn.microsoft.com/en-us/windows/uwp/porting/desktop-to-uwp-root).
+> W systemie Windows 10 Desktop App Converter służy również do pakietu istniejącej aplikacji klasycznych dla wdrożenia przez Microsoft Store. Aby uzyskać więcej informacji, zobacz [przy użyciu środowiska uruchomieniowego Visual C++ w projekcie Centennial](https://blogs.msdn.microsoft.com/vcblog/2016/07/07/using-visual-c-runtime-in-centennial-project) i [przenieść swoją aplikację do uniwersalnej platformy Windows (UWP) przy użyciu Desktop Bridge](https://msdn.microsoft.com/windows/uwp/porting/desktop-to-uwp-root).
   
 ## <a name="prerequisites"></a>Wymagania wstępne  
- Tych tematach przyjęto założenie, że rozumiesz podstawowe informacje na temat języka C++.  
+ Te tematy założono, że rozumiesz podstawy języka C++.  
   
 ## <a name="in-this-section"></a>W tej sekcji  
   
@@ -47,4 +48,3 @@ W tej sekcji omówiono sposób tworzenia aplikacji klasycznych C++, które nale�
   
 ## <a name="see-also"></a>Zobacz też  
  [Visual C++ w programie Visual Studio](../visual-cpp-in-visual-studio.md)
-

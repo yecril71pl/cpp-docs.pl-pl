@@ -1,5 +1,5 @@
 ---
-title: Criticalsection::cs_ — członek danych | Dokumentacja firmy Microsoft
+title: CriticalSection::cs_, składowa danych | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,19 +17,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 5da07f5328f6ff75f778e44ffafd3722e0cdfca9
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: d00370014767d7b29de5f1efa592fd999af3d0bb
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33882566"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39641395"
 ---
 # <a name="criticalsectioncs-data-member"></a>CriticalSection::cs_ — Członek danych
-Deklaruje element członkowski danych sekcja krytyczna.  
+Deklaruje element członkowski danych sekcję krytyczną.  
   
 ## <a name="syntax"></a>Składnia  
   
-```  
+```cpp  
 CRITICAL_SECTION cs_;  
 ```  
   
@@ -39,7 +39,7 @@ CRITICAL_SECTION cs_;
 ## <a name="requirements"></a>Wymagania  
  **Nagłówek:** corewrappers.h  
   
- **Namespace:** Microsoft::wrl:: wrappers —  
+ **Namespace:** Microsoft::wrl:: wrappers  
   
 ## <a name="see-also"></a>Zobacz też  
  [CriticalSection, klasa](../windows/criticalsection-class.md)

@@ -1,5 +1,5 @@
 ---
-title: OPAKOWYWANIE (C++ Component Extensions) | Dokumentacja firmy Microsoft
+title: Boxing (C++ Component Extensions) | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,40 +15,37 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 1f689255af653e5dfdf69250e4988aa809393461
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 05a0d83de045ed29b20ff14acc7fc81fb684a93e
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33861360"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39650625"
 ---
 # <a name="boxing--c-component-extensions"></a>Boxing (C++ Component Extensions)
-Kompilatora Visual C++ można przekonwertować wartości typów obiektów w procesie nazywanym *boxing*i konwersji obiektów na typy wartości w procesie nazywanym *rozpakowującej*.  
+Kompilator języka Visual C++ można przekonwertować typu wartości do obiektów w procesie nazywanym *pakowania*i konwersji obiektów na typy wartości w procesie nazywanym *Rozpakowywanie*.  
   
 ## <a name="all-runtimes"></a>Wszystkie środowiska wykonawcze  
- (Brak żadnych uwag dla tej funkcji języka, które są stosowane do wszystkich środowisk uruchomieniowych.)  
+ (Nie ma żadnych uwag dla tej funkcji języka, które są stosowane do wszystkich środowisk uruchomieniowych).  
   
 ## <a name="windows-runtime"></a>Środowisko wykonawcze systemu Windows  
- C + +/ CX obsługuje składni skrótu dla typów wartości opakowywanie i rozpakowywanie typy referencyjne. Typ wartości jest opakowany, gdy jest przypisany do zmiennej typu `Object`. `Object` Zmienna jest rozpakowany, gdy jest przypisany do zmiennej typu wartości i rozpakowany typ jest określony w nawiasy; oznacza to, gdy zmienna obiektu jest Rzutowanie na typ wartości.  
+ C + +/ CX obsługuje oczekiwaliśmy składni skrótu dla typów wartości opakowywanie i rozpakowywanie typy odwołań. Typ wartości jest ramce, gdy jest ona przypisana do zmiennej typu `Object`. `Object` Zmienna jest rozpakowywany, gdy jest ona przypisana do zmiennej typu wartości i typ rozpakowany jest określona w nawiasach; oznacza to, gdy zmienna obiektu jest rzutowany na typ wartości.  
   
-```  
-  
+```cpp  
   Platform::Object^  
   object_variable  = value_variable;  
 value_variable = (value_type) object_variable;  
-  
 ```  
   
 ### <a name="requirements"></a>Wymagania  
- — Opcja kompilatora: **/ZW**  
+ — Opcja kompilatora: `/ZW`  
   
 ### <a name="examples"></a>Przykłady  
- Następujący kod przykładowy pola i unboxes `DateTime` wartość. Po pierwsze przykładzie uzyskuje wartość daty/godziny, która reprezentuje bieżącą datę i godzinę, a następnie przypisuje go do zmiennej typu DateTime. Następnie element DateTime jest opakowany przez przypisanie go do zmiennej obiektu. Na koniec wartości spakowanej jest rozpakowany przez przypisanie go do innej zmiennej typu DateTime.  
+ Następujący kod przykładowy pola i unboxes `DateTime` wartość. Po pierwsze w przykładzie uzyskano `DateTime` wartość, która reprezentuje bieżącą datę i godzinę, a następnie przypisuje go do `DateTime` zmiennej. A następnie `DateTime` jest zapakowany, przypisując go do `Object` zmiennej. Na koniec wartości spakowanej jest rozpakowywany, przypisując go do innego `DateTime` zmiennej.  
   
- W celu przetestowania przykładu, Utwórz projekt BlankApplication, Zastąp metodę BlankPage::OnNavigatedTo(), a następnie określ punkty przerwania w nawias i przypisanie do zmiennej str1. W przypadku przykładzie osiągnie zamykający nawias kwadratowy, należy sprawdzić str1.  
+ Aby przetestować w przykładzie, należy utworzyć `BlankApplication` projektu, Zastąp `BlankPage::OnNavigatedTo()` metody, a następnie określ punkty przerwania w nawias zamykający i przypisanie do zmiennej `str1`. W przypadku przykładu osiągnie nawiasem zamykającym, sprawdzić `str1`.  
   
-```  
-  
+```cpp  
 void BlankPage::OnNavigatedTo(NavigationEventArgs^ e)  
 {  
     using namespace Windows::Globalization::DateTimeFormatting;  
@@ -78,15 +75,14 @@ void BlankPage::OnNavigatedTo(NavigationEventArgs^ e)
     String^ str2 = dtf->Format(dtAnother);  
     OutputDebugString(str2->Data());  
 }  
-  
 ```  
   
  Aby uzyskać więcej informacji, zobacz [Boxing (C + +/ CX)](http://msdn.microsoft.com/library/windows/apps/hh969554.aspx).  
   
 ## <a name="common-language-runtime"></a>środowiska uruchomieniowe w trakcie wykonania  
- Kompilator Visual C++ teraz typów do wartości pola <xref:System.Object>.  Jest to możliwe z powodu konwersji zdefiniowanej przez kompilator do konwersji typów wartości do <xref:System.Object>.  
+ Kompilator języka Visual C++, teraz typów, do wartości pola <xref:System.Object>. Jest to możliwe z powodu konwersji zdefiniowanego przez kompilator do typów wartości do przekonwertowania <xref:System.Object>.  
   
- Konwersja boxing i rozpakowywanie Włącz typy wartości powinien być traktowany jako obiekty. Typy wartości, w tym zarówno typy struktur i typy wbudowane, takie jak int, mogą być konwertowane do i z typem <xref:System.Object>.  
+ Pakowania, jak i rozpakowania Włącz typy wartości powinien być traktowany jako obiekty. Typy wartości, w tym typy struktury i typy wbudowane, takie jak int, mogą być konwertowane do i z typu <xref:System.Object>.  
   
  Aby uzyskać więcej informacji, zobacz:  
   
@@ -99,12 +95,11 @@ void BlankPage::OnNavigatedTo(NavigationEventArgs^ e)
 -   [Konwersje standardowe i niejawne konwersje boxing](../dotnet/standard-conversions-and-implicit-boxing.md)  
   
 ### <a name="requirements"></a>Wymagania  
- — Opcja kompilatora:   **/CLR**  
+ — Opcja kompilatora: `/clr`  
   
 ### <a name="examples"></a>Przykłady  
- **Przykład**  
   
- Poniższy przykład przedstawia sposób niejawna konwersja boxing działa.  
+ Poniższy przykład przedstawia jak niejawna konwersja boxing działa.  
   
 ```cpp  
 // vcmcppv2_explicit_boxing2.cpp  
@@ -175,8 +170,6 @@ int main() {
    func2((V2^)v2);   // Using explicit boxing: calls func2(System::ValueType^)  
 }  
 ```  
-  
- **Output**  
   
 ```Output  
 1  

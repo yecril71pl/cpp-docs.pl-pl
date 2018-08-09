@@ -18,47 +18,46 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 43da63d75d3541915eba3e561ee08fe1048fa579
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 2c2d0c72ffbb805b526429562a5f39a09285b70f
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33890612"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39642282"
 ---
 # <a name="version-c"></a>version (C++)
-Identyfikuje określoną wersją wśród wielu wersji klasy.  
+Identyfikuje określoną wersję spośród wielu wersji klasy.  
   
 ## <a name="syntax"></a>Składnia  
   
 ```  
-  
-      [ version(  
+[ version(  
    "version"  
 ) ]  
 ```  
   
-#### <a name="parameters"></a>Parametry  
+### <a name="parameters"></a>Parametry  
  *Wersja*  
- Numer wersji klasy coclass. Jeśli nie zostanie określony, 1.0 zostaną umieszczone w pliku .idl.  
+ Numer wersji `coclass`. Jeśli nie zostanie określony, 1.0 zostanie umieszczona w pliku .idl.  
   
 ## <a name="remarks"></a>Uwagi  
- **Wersji** atrybut C++ ma te same funkcje co [wersji](http://msdn.microsoft.com/library/windows/desktop/aa367306) atrybutu MIDL i jest przekazywana do pliku .idl wygenerowany.  
+ **Wersji** atrybut C++ ma taką samą funkcjonalność jak [wersji](http://msdn.microsoft.com/library/windows/desktop/aa367306) atrybutów w MIDL i jest przekazywana do pliku .idl wygenerowany.  
   
 ## <a name="example"></a>Przykład  
- Zobacz [powiązania](../windows/bindable.md) przykład użycie próbki **wersji**.  
+ Zobacz [możliwej do wiązania](../windows/bindable.md) przykład użycie próbki **wersji**.  
   
 ## <a name="requirements"></a>Wymagania  
   
-### <a name="attribute-context"></a>Atrybut kontekstu  
+### <a name="attribute-context"></a>Kontekst atrybutu  
   
 |||  
 |-|-|  
-|**Dotyczy**|**Klasa**, `struct`|  
+|**Dotyczy**|**Klasa**, **— struktura**|  
 |**Powtarzalne**|Nie|  
 |**Wymaganych atrybutów**|**coclass**|  
 |**Nieprawidłowe atrybuty**|Brak|  
   
- Aby uzyskać więcej informacji na temat konteksty atrybutu, zobacz [konteksty atrybutu](../windows/attribute-contexts.md).  
+ Aby uzyskać więcej informacji na temat konteksty atrybutu zobacz [konteksty atrybutu](../windows/attribute-contexts.md).  
   
 ## <a name="see-also"></a>Zobacz też  
  [Atrybuty kompilatora](../windows/compiler-attributes.md)   

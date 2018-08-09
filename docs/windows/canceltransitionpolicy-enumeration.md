@@ -1,5 +1,5 @@
 ---
-title: Canceltransitionpolicy — wyliczenie | Dokumentacja firmy Microsoft
+title: CancelTransitionPolicy, wyliczenie | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -19,19 +19,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 64f588e67066fed690271aa7d78fcbe726c67177
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: bd203ee0413b60bc7aa713e7923fd4d69bde665e
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33860349"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39642961"
 ---
 # <a name="canceltransitionpolicy-enumeration"></a>CancelTransitionPolicy — Wyliczenie
-Wskazuje, jak operację asynchroniczną na próbę przejście do stanu terminali zakończone lub błąd zachowania w przypadku względem klient zażądał stan anulowane.  
+Wskazuje, jak operacja asynchroniczna użytkownika próba przejście w stan końcowy ukończone lub błąd powinien działać względem klient zażądał stanem anulowane.  
   
 ## <a name="syntax"></a>Składnia  
   
-```  
+```cpp  
 enum CancelTransitionPolicy;  
 ```  
   
@@ -41,13 +41,13 @@ enum CancelTransitionPolicy;
   
 |Nazwa|Opis|  
 |----------|-----------------|  
-|`RemainCanceled`|Jeśli operacja asynchroniczna jest obecnie w stanie Anulowane klient zażądał, oznacza to, że pozostanie w stanie anulowane w przeciwieństwie do przechodzenia do terminal zakończone lub stanu błędu.|  
-|`TransitionFromCanceled`|Jeśli operacja asynchroniczna jest obecnie w stanie Anulowane klient zażądał, wskazuje to, że stan powinien przejść od tego stanu Anulowano terminali stanu ukończone lub błędu, zgodnie z ustaleniami połączenia, który korzysta z tej flagi.|  
+|`RemainCanceled`|Jeśli operacja asynchroniczna jest aktualnie klient zażądał stanem anulowane, oznacza to, że pozostaną ze stanem anulowane, w przeciwieństwie do terminal ukończone lub stan błędu.|  
+|`TransitionFromCanceled`|Jeśli operacja asynchroniczna jest obecnie klient zażądał stanem anulowane, wskazuje to, że stan powinien przejść przy jego użyciu stanem anulowane na stan końcowy ukończone lub błąd zgodnie z ustaleniami wywołanie, które korzysta z tej flagi.|  
   
 ## <a name="requirements"></a>Wymagania  
  **Nagłówek:** async.h  
   
- **Namespace:** Microsoft::wrl —  
+ **Namespace:** Microsoft::WRL  
   
 ## <a name="see-also"></a>Zobacz też  
  [Microsoft::WRL, przestrzeń nazw](../windows/microsoft-wrl-namespace.md)

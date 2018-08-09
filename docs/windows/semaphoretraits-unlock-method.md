@@ -1,5 +1,5 @@
 ---
-title: SemaphoreTraits::Unlock — Metoda | Dokumentacja firmy Microsoft
+title: SemaphoreTraits::Unlock, metoda | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 0914c6ff83e881f92963fc8a548ddeff587db75e
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 98e210ad99a333b6abf68f574916d4f9da5ab67e
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33892250"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39650430"
 ---
 # <a name="semaphoretraitsunlock-method"></a>SemaphoreTraits::Unlock — Metoda
 Kontrola wersji zasobu udostępnionego.  
@@ -35,12 +35,12 @@ inline static void Unlock(
 );  
 ```  
   
-#### <a name="parameters"></a>Parametry  
- `h`  
- Dojście do obiektu semafora.  
+### <a name="parameters"></a>Parametry  
+ *h*  
+ Dojście do **semafora** obiektu.  
   
 ## <a name="remarks"></a>Uwagi  
- Jeśli operacja unlock zakończy się niepowodzeniem, Unlock() emituje komunikat o błędzie wskazujący przyczynę niepowodzenia.  
+ W przypadku operacji odblokowania kończy się niepowodzeniem, **Unlock()** emituje komunikat o błędzie wskazujący przyczynę błędu.  
   
 ## <a name="requirements"></a>Wymagania  
  **Nagłówek:** corewrappers.h  

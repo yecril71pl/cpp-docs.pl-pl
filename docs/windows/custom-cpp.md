@@ -17,26 +17,26 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 7222d7021665a76c7e087033f5152d2836008caa
-ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
+ms.openlocfilehash: 2c0f4f04adb9ddc847b1c22485d10512a9d684d0
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39460935"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39651898"
 ---
 # <a name="custom-c"></a>custom (C++)
 Definiuje metadanych dla obiektu w bibliotece typów.  
   
 ## <a name="syntax"></a>Składnia  
   
-```  
+```cpp  
 [ custom(  
    uuid,   
    value  
 ) ];  
 ```  
   
-#### <a name="parameters"></a>Parametry  
+### <a name="parameters"></a>Parametry  
  *uuid*  
  Unikatowy identyfikator.  
   

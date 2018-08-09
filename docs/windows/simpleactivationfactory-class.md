@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 2d10544a08fa6faebb1434cd00ca80ac30d4570a
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 97ad430bc0ab5a268ff428189da5987b6c45907d
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33889850"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39650794"
 ---
 # <a name="simpleactivationfactory-class"></a>SimpleActivationFactory — Klasa
-Udostępnia mechanizm podstawowych do utworzenia środowiska wykonawczego systemu Windows lub klasycznego modelu COM klasy podstawowej.  
+Udostępnia mechanizm podstawowych do utworzenia środowiska uruchomieniowego Windows lub klasycznego modelu COM klasy bazowej.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -34,14 +34,14 @@ template<typename Base>
 class SimpleActivationFactory : public ActivationFactory<>;  
 ```  
   
-#### <a name="parameters"></a>Parametry  
- `Base`  
- Klasa podstawowa.  
+### <a name="parameters"></a>Parametry  
+ *podstawowy*  
+ Klasa bazowa.  
   
 ## <a name="remarks"></a>Uwagi  
- Klasa podstawowa musi dostarczyć konstruktora domyślnego.  
+ Klasa bazowa musi dostarczać domyślnego konstruktora.  
   
- Poniższy przykład kodu pokazuje sposób użycia simpleactivationfactory — z [ActivatableClassWithFactoryEx](../windows/activatableclass-macros.md) makra.  
+ Poniższy przykład kodu demonstruje sposób używania simpleactivationfactory — za pomocą [ActivatableClassWithFactoryEx](../windows/activatableclass-macros.md) makra.  
   
  `ActivatableClassWithFactoryEx(MyClass, SimpleActivationFactory, MyServerName);`  
   
@@ -52,8 +52,8 @@ class SimpleActivationFactory : public ActivationFactory<>;
 |Nazwa|Opis|  
 |----------|-----------------|  
 |[SimpleActivationFactory::ActivateInstance, metoda](../windows/simpleactivationfactory-activateinstance-method.md)|Tworzy wystąpienie określonego interfejsu.|  
-|[SimpleActivationFactory::GetRuntimeClassName, metoda](../windows/simpleactivationfactory-getruntimeclassname-method.md)|Pobiera nazwę klasy środowiska uruchomieniowego wystąpienia z klasą określoną przez `Base` parametr szablonu klasy.|  
-|[SimpleActivationFactory::GetTrustLevel, metoda](../windows/simpleactivationfactory-gettrustlevel-method.md)|Pobiera poziom zaufania wystąpienia z klasą określoną przez `Base` parametr szablonu klasy.|  
+|[SimpleActivationFactory::GetRuntimeClassName, metoda](../windows/simpleactivationfactory-getruntimeclassname-method.md)|Pobiera nazwę klasy środowiska uruchomieniowego wystąpienia klasy określonej przez *Base* parametru szablonu klasy.|  
+|[SimpleActivationFactory::GetTrustLevel, metoda](../windows/simpleactivationfactory-gettrustlevel-method.md)|Pobiera poziom zaufania wystąpienia klasy określonej przez *Base* parametru szablonu klasy.|  
   
 ## <a name="inheritance-hierarchy"></a>Hierarchia dziedziczenia  
  `I0`  
@@ -81,7 +81,7 @@ class SimpleActivationFactory : public ActivationFactory<>;
 ## <a name="requirements"></a>Wymagania  
  **Nagłówek:** module.h  
   
- **Namespace:** Microsoft::wrl —  
+ **Namespace:** Microsoft::WRL  
   
 ## <a name="see-also"></a>Zobacz też  
  [Microsoft::WRL, przestrzeń nazw](../windows/microsoft-wrl-namespace.md)

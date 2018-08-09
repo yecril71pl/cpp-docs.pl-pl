@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 5cdc7bb8a97be6fbc8c77c06caaddf95a3095323
-ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
+ms.openlocfilehash: cd89a2a46535c145e4ef6f84cee0b5604346f4b2
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39463746"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39645204"
 ---
 # <a name="attribute-programming-faq"></a>Pogramowanie oparte na atrybutach - najczęściej zadawane pytania
 W tym temacie odpowiedzi na następujące często zadawane pytania:  
@@ -46,7 +46,7 @@ W tym temacie odpowiedzi na następujące często zadawane pytania:
 -   [Na klasę pochodną klasę, która używa również atrybuty można używać atrybutów?](#vcconcaniuseattributesonclassderivedfromclassthatalsousesattributesanchor)  
   
 ##  <a name="vcconattributeprogrammmingfaqanchor1"></a> Co to jest wartość HRESULT?  
- `HRESULT` To typ prosty danych, który jest często używana jako wartość zwracaną przez atrybuty i ATL ogólnie rzecz biorąc. W poniższej tabeli opisano różne wartości. Więcej wartości są zawarte w plikach winerror.h pliku nagłówka.  
+ Wartość HRESULT to typ prosty danych, który jest często używana jako wartość zwracaną przez atrybuty i ATL ogólnie rzecz biorąc. W poniższej tabeli opisano różne wartości. Więcej wartości są zawarte w plikach winerror.h pliku nagłówka.  
   
 |Nazwa|Opis|Wartość|  
 |----------|-----------------|-----------|  
@@ -65,7 +65,7 @@ W tym temacie odpowiedzi na następujące często zadawane pytania:
 ##  <a name="vcconattributeprogrammmingfaqanchor2"></a> Gdy ma do określenia nazwy parametru atrybutu  
  W większości przypadków Jeśli ten atrybut ma jeden parametr, ten parametr nosi nazwę. Ta nazwa nie jest wymagane podczas wstawiania atrybutu w kodzie. Na przykład następujące użycie polecenia [się agregowaniu](../windows/aggregatable.md) atrybutu:  
   
-```  
+```cpp  
 [coclass, aggregatable(value=allowed)]  
 class CMyClass  
 {  
@@ -75,7 +75,7 @@ class CMyClass
   
  jest dokładnie taka sama jak:  
   
-```  
+```cpp  
 [coclass, aggregatable(allowed)]  
 class CMyClass  
 {  
@@ -104,7 +104,7 @@ class CMyClass
   
  Dozwolone jest:  
   
-```  
+```cpp  
 [ coclass,  
    progid("MyClass.CMyClass.1"), /* Multiple-line  
                                        comment */  
@@ -114,7 +114,7 @@ class CMyClass
   
  Niedozwolone jest:  
   
-```  
+```cpp  
 [ coclass,  
    progid("MyClass.CMyClass.1" /* Multiple-line comment */ ),  
    threading("both" // Single-line comment)  
@@ -125,10 +125,10 @@ class CMyClass
  Inne klasy, które mogą sami można przypisać lub nie może dziedziczyć unattributed i opartego na atrybutach klas. Wynik pochodząca z atrybutami klasy jest taka sama jak pochodząca z tej klasy po dostawca atrybucie został przekształcony swój kod. Atrybuty nie są przesyłane do klasy poprzez dziedziczenie C++ pochodne. Dostawca atrybucie tylko przekształca kod spowodowanych antyaliasingiem w pobliżu jego atrybuty.  
   
 ##  <a name="vcconattributeprogrammmingfaqanchor5"></a> Jak używać atrybutów w nonattributed Projekt ATL?  
- Masz nonattributed Projekt ATL, który ma pliku .idl, i chcesz rozpocząć dodawanie obiektów opartego na atrybutach. W tym przypadku należy użyć Kreatora dodawania klasy zapewnienie kodu.  
+ Masz nonattributed Projekt ATL, który ma pliku .idl, i chcesz rozpocząć dodawanie obiektów opartego na atrybutach. W takim przypadku należy użyć **Kreator dodawania klasy** zapewnienie kodu.  
   
 ##  <a name="vcconattributeprogrammmingfaqanchor6"></a> Jak używać pliku .idl w projekcie z atrybutami?  
- Może być pliku .idl, którego chcesz użyć w projekcie ATL opartego na atrybutach. W tym przypadku używasz [importidl —](../windows/importidl.md) atrybutu, skompilować pliku .idl, aby plik .h (zobacz [strony właściwości MIDL](../ide/midl-property-pages.md) okno dialogowe strony właściwości projektu), a następnie dołącz plik .h klasy w projekcie .  
+ Może być pliku .idl, którego chcesz użyć w projekcie ATL opartego na atrybutach. W tym przypadku używasz [importidl —](../windows/importidl.md) atrybutu, skompilować pliku .idl, aby plik .h (zobacz [strony właściwości MIDL](../ide/midl-property-pages.md) w projekcie **strony właściwości** okno dialogowe), a następnie dołącz plik .h klasy w projekcie.  
   
 ##  <a name="vcconattributeprogrammmingfaqanchor7"></a> Można zmodyfikować kod, który jest wprowadzony przez atrybut?  
  Niektóre atrybuty wstrzyknięcie kodu do projektu. Zobaczysz wprowadzonego kodu za pomocą [/Fx](../build/reference/fx-merge-injected-code.md) — opcja kompilatora. Jest również możliwe, aby skopiować kod z pliku wprowadzony i wklej go w kodzie źródłowym. Umożliwia modyfikowanie zachowania atrybutu. Jednak trzeba zmodyfikować inne części kodu także.  

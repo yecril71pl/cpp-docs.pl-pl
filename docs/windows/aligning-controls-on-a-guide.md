@@ -1,5 +1,5 @@
 ---
-title: Wyrównywanie kontrolek do prowadnicy | Dokumentacja firmy Microsoft
+title: Dopasowanie kontrolek do prowadnicy | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -25,41 +25,39 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: a7c8cc57b4d2e7150ff09858cfd5b315beb37962
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: a1a586a3a17e829d883dff96c12f6a2fdabe669f
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33857841"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39643861"
 ---
 # <a name="aligning-controls-on-a-guide"></a>Dopasowanie kontrolek do prowadnicy
-Uchwyty zmiany rozmiaru formantów przyciąganie do prowadnic po przeniesieniu formantów i przewodniki przyciąganie do kontrolek (Jeśli nie istnieją żadne formanty przypięty wcześniej do przewodnika). Po przeniesieniu przewodnik także przenieść formantów, które mają być przyciągane do niego. Formanty przyciągnięte do więcej niż jeden podręcznik zmieniany jest rozmiar po jednym przewodniki jest przenoszony.  
+Uchwyty zmiany rozmiaru kontrolek przyciąganie do prowadnic formanty są przenoszone, gdy przewodniki przyciąganie do kontrolek (Jeśli nie ma żadnych formantów wcześniej przypięty do przewodnika). Po przeniesieniu przewodnik również przenieść formantów, które są wyrównywane do niego. Formanty wyrównywane do więcej niż jeden podręcznik zmieniany jest rozmiar po przeniesieniu jeden z przewodników.  
   
- Znaczniki w linijki określające odstępów prowadnice i formanty są definiowane przez jednostki okna dialogowego (Dlu). DLU opiera się na rozmiar czcionki okno dialogowe, zwykle punktu 8 MS Shell Dlg. Poziomy DLU jest średniej szerokości czcionki okno dialogowe podzielona przez cztery. DLU pionowe jest średnią wysokość czcionki podzielić przez 8.  
+ Znaczniki w linijki, określające odstępów przewodniki i formanty są definiowane przez jednostki okna dialogowego (Dlu). DLU opiera się na rozmiar czcionki okno dialogowe, zwykle 8-punktowy MS Shell Dlg. Poziomy DLU jest średniej szerokości czcionki okno dialogowe podzielona przez cztery. DLU pionowe jest średnią wysokość czcionki podzielić przez 8.  
   
 ### <a name="to-size-a-group-of-controls-with-guides"></a>Rozmiar grupy formantów z liniami  
   
-1.  Przyciąganie jednej stronie formantu (lub formantów) do prowadnicy.  
+1.  Przyciągaj obok kontrolki (lub formantów) do przewodnika.  
   
-2.  Przeciągnij Przewodnik po drugiej stronie formantu (lub formantów).  
+2.  Przeciągnij przewodnika po drugiej stronie kontrolki (lub kontrolki).  
   
-     W razie potrzeby z wielu formantów rozmiar każdego przyciągane do prowadnicy drugiego.  
+     Jeśli to konieczne z wieloma formantami, rozmiar każdego przyciągane do prowadnicy drugiego.  
   
-3.  Przenieś albo przewodnik do rozmiaru formantu (lub formantów).  
+3.  Przenieś albo przewodnika, aby rozmiar kontrolki (lub kontrolki).  
   
 ### <a name="to-change-the-intervals-of-the-tick-marks"></a>Aby zmienić interwałów znaczników  
   
-1.  Z **Format** menu, wybierz **ustawień przewodnika**.  
+1.  Z **Format** menu, wybierz **ustawienia prowadnic**.  
   
-2.  W [okno dialogowe Ustawienia prowadnic](../windows/guide-settings-dialog-box.md)w **odstępy między liniami siatki** określ nową szerokość i wysokość w Dlu.  
+2.  W [okno dialogowe Ustawienia prowadnic](../windows/guide-settings-dialog-box.md)w **odstępy między liniami siatki** określ nową wysokość i szerokość w Dlu.  
   
- Aby uzyskać informacje o dodawaniu zasobów do projektów zarządzanych, zobacz [zasobów w aplikacjach pulpitu](/dotnet/framework/resources/index) w *Przewodnik programistów platformy .NET Framework.* Aby uzyskać informacje na ręczne dodanie do projektów zarządzanych plików zasobów, uzyskiwanie dostępu do zasobów, wyświetlanie zasoby statyczne i przypisanie do właściwości ciągów zasobów, zobacz [tworzenie plików zasobów dla aplikacji pulpitu](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Informacje dotyczące globalizacji i lokalizacji zasobów w zarządzanych aplikacjach, zobacz [Globalizing i lokalizacja aplikacji .NET Framework](/dotnet/standard/globalization-localization/index).  
+ Aby uzyskać informacje na temat dodawania zasobów do projektów zarządzanych, zobacz [zasoby w aplikacjach pulpitu](/dotnet/framework/resources/index) w *przewodniku dewelopera .NET Framework*. Aby uzyskać informacji na temat ręcznego dodawania plików zasobów do projektów zarządzanych, uzyskiwania dostępu do zasobów, wyświetlania statycznych zasobów i przypisywania ciągów zasobów do właściwości, zobacz [Creating Resource Files dla aplikacji klasycznych](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Aby uzyskać informacji na temat globalizacja i lokalizacja zasobów w aplikacjach zarządzanych, zobacz [Globalizing i lokalizowanie aplikacji programu .NET Framework](/dotnet/standard/globalization-localization/index).  
   
- Wymagania  
-  
+## <a name="requirements"></a>Wymagania  
  Win32  
   
 ## <a name="see-also"></a>Zobacz też  
  [Stany Edytor okien dialogowych (prowadnice i siatki)](../windows/dialog-editor-states-guides-and-grids.md)   
  [Kontrolki w oknach dialogowych](../windows/controls-in-dialog-boxes.md)
-

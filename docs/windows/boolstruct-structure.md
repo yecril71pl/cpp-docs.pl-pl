@@ -17,24 +17,24 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: af2827d85a1df647dca2c02c5c6ee5a12a416d51
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 14e3d81ca273bf96b4812f08a46904c9d521c5cf
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33860125"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39650485"
 ---
 # <a name="boolstruct-structure"></a>BoolStruct — Struktura
 Obsługuje infrastrukturę biblioteki WRL i nie jest przeznaczona do użycia bezpośrednio w kodzie.  
   
 ## <a name="syntax"></a>Składnia  
   
-```  
+```cpp  
 struct BoolStruct;  
 ```  
   
 ## <a name="remarks"></a>Uwagi  
- Boolstruct — struktura definiuje, czy comptr — Zarządzanie okres istnienia obiektu interfejsu. Boolstruct — jest używana wewnętrznie przez [BoolType()](../windows/comptr-operator-microsoft-wrl-details-booltype-operator.md) operatora.  
+ **Boolstruct —** definiuje strukturę czy `ComPtr` Zarządzanie okresem istnienia interfejsu. **Boolstruct —** jest używana wewnętrznie przez [BoolType()](../windows/comptr-operator-microsoft-wrl-details-booltype-operator.md) operatora.  
   
 ## <a name="members"></a>Elementy członkowskie  
   
@@ -42,7 +42,7 @@ struct BoolStruct;
   
 |Nazwa|Opis|  
 |----------|-----------------|  
-|[BoolStruct::Member, składowa danych](../windows/boolstruct-member-data-member.md)|Określa, że [comptr —](../windows/comptr-class.md) jest lub nie jest okres istnienia obiektu interfejsu zarządzania.|  
+|[BoolStruct::Member, składowa danych](../windows/boolstruct-member-data-member.md)|Określa, że [ComPtr](../windows/comptr-class.md) jest lub nie jest dostępna, zarządzanie okresem istnienia obiektu interfejsu.|  
   
 ## <a name="inheritance-hierarchy"></a>Hierarchia dziedziczenia  
  `BoolStruct`  
@@ -50,8 +50,8 @@ struct BoolStruct;
 ## <a name="requirements"></a>Wymagania  
  **Nagłówek:** internal.h  
   
- **Namespace:** Microsoft::wrl:: details —  
+ **Namespace:** Microsoft::wrl:: details  
   
 ## <a name="see-also"></a>Zobacz też  
- [Microsoft::wrl:: details — Namespace](../windows/microsoft-wrl-details-namespace.md)   
+ [Microsoft::wrl:: details Namespace](../windows/microsoft-wrl-details-namespace.md)   
  [Operator ComPtr::operator Microsoft::WRL::Details::BoolType](../windows/comptr-operator-microsoft-wrl-details-booltype-operator.md)

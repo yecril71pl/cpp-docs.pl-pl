@@ -17,19 +17,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 16f113610beb4c6427af5627ea8dfd725e02600d
-ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
+ms.openlocfilehash: b71d8183921e0df66d6b9a82ff79faf24ccb41d3
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39570002"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39642337"
 ---
 # <a name="helpstringcontext"></a>helpstringcontext
 Określa identyfikator tematu pomocy w pliku hlp lub chm.  
   
 ## <a name="syntax"></a>Składnia  
   
-```  
+```cpp  
 [ helpstringcontext(  
    contextID  
 ) ]  
@@ -37,7 +37,7 @@ Określa identyfikator tematu pomocy w pliku hlp lub chm.
   
 ### <a name="parameters"></a>Parametry  
  *Identyfikator kontekstu*  
- 32-bitowy identyfikator kontekstu pomocy w pliku pomocy.  
+ Identyfikator kontekstu pomocy w 32-bitowych w **pomocy** pliku.  
   
 ## <a name="remarks"></a>Uwagi  
  **Helpstringcontext —** atrybut C++ ma taką samą funkcjonalność jak [helpstringcontext —](http://msdn.microsoft.com/library/windows/desktop/aa366858) odl — atrybut.  

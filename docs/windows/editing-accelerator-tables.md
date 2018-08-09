@@ -18,19 +18,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 7e1f20e6e50fad1f77e495fb47c62b162524cc72
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 761a5eefb80d47da0194e9c718f67bfe2d7b69de
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33872942"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39641537"
 ---
 # <a name="editing-accelerator-tables"></a>Edytowanie tabel akceleratora
-W programie Visual C++ można edytować tabeli akceleratora bezpośrednio z edycji w miejscu w Edytor klawiszy skrótów.  
+W programie Visual C++, możesz edytować bezpośrednio za pomocą edycji w miejscu, w tabeli akceleratora **akceleratora** edytora.  
   
- Poniższe procedury dotyczą używanie stron właściwości standardowych, jednak mieć takiego samego wyniku edycji w miejscu i metody strony właściwości. Zmiany dokonane za pomocą stron właściwości lub edycji w miejscu są natychmiast odzwierciedlone w tabeli akceleratora.  
+ Poniższe procedury dotyczą używanie stron właściwości standardowych, jednak zarówno edycji w miejscu, jak i metody strony właściwości mają ten sam wynik. Zmiany wprowadzone za pomocą stron właściwości lub edycji w miejscu są natychmiast odzwierciedlane w tabeli klawiszy skrótu.  
   
--   [Edytowanie tabeli akceleratora](../windows/editing-in-an-accelerator-table.md)  
+-   [Edytowanie tabel akceleratora](../windows/editing-in-an-accelerator-table.md)  
   
 -   [Znajdowanie wpisu w tabeli akceleratora](../windows/finding-an-entry-in-an-accelerator-table.md)  
   
@@ -38,11 +38,11 @@ W programie Visual C++ można edytować tabeli akceleratora bezpośrednio z edyc
   
 -   [Usuwanie wpisu z tabeli akceleratora](../windows/deleting-an-entry-from-an-accelerator-table.md)  
   
--   [Przenoszenie i kopiowanie wpisu tabeli klawiszy skrótów](../windows/moving-or-copying-an-accelerator-table-entry-to-another-resource-script-file.md)  
+-   [Przenoszenie i kopiowanie wpisu tabeli akceleratora](../windows/moving-or-copying-an-accelerator-table-entry-to-another-resource-script-file.md)  
   
 -   [Zmiana właściwości kilku klawiszy skrótów](../windows/changing-the-properties-of-multiple-accelerator-keys.md)  
   
- Aby uzyskać informacje o dodawaniu zasobów do projektów zarządzanych, zobacz [zasobów w aplikacjach pulpitu](/dotnet/framework/resources/index) w *Przewodnik programistów platformy .NET Framework.* Aby uzyskać informacje na ręczne dodanie do projektów zarządzanych plików zasobów, uzyskiwanie dostępu do zasobów, wyświetlanie zasoby statyczne i przypisanie do właściwości ciągów zasobów, zobacz [tworzenie plików zasobów dla aplikacji pulpitu](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Informacje dotyczące globalizacji i lokalizacji zasobów w zarządzanych aplikacjach, zobacz [Globalizing i lokalizacja aplikacji .NET Framework](/dotnet/standard/globalization-localization/index).  
+ Aby uzyskać informacje na temat dodawania zasobów do projektów zarządzanych, zobacz [zasoby w aplikacjach pulpitu](/dotnet/framework/resources/index) w *przewodniku dewelopera .NET Framework*. Aby uzyskać informacji na temat ręcznego dodawania plików zasobów do projektów zarządzanych, uzyskiwania dostępu do zasobów, wyświetlania statycznych zasobów i przypisywania ciągów zasobów do właściwości, zobacz [Creating Resource Files dla aplikacji klasycznych](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Aby uzyskać informacji na temat globalizacja i lokalizacja zasobów w aplikacjach zarządzanych, zobacz [Globalizing i lokalizowanie aplikacji programu .NET Framework](/dotnet/standard/globalization-localization/index).  
   
 ## <a name="requirements"></a>Wymagania  
  Win32  

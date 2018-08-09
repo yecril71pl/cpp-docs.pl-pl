@@ -18,27 +18,27 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: f8e3a1aba4040ce4e9f36cf15438cfd1c44492e4
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 46c08686d2586801aea46c23e7105dc1b6ead639
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33873579"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39643137"
 ---
 # <a name="grid-settings-dialog-box-image-editor-for-icons"></a>Okno dialogowe Ustawienia siatki (Edytor obrazów dla ikon)
-Można określić ustawienia siatki dla obrazu i wyświetla linie siatki za pośrednictwem graficznego. Wiersze są przydatne w przypadku edycji obrazu, ale nie są zapisywane jako część samego obrazu.  
+Można określić ustawienia siatki dla obrazu, a następnie wyświetla wiersze siatki za pośrednictwem graficznego. Wiersze są przydatne w przypadku edycji obrazu, ale nie są zapisywane jako część samego obrazu.  
   
  **Siatka pikseli**  
- Po zaznaczeniu tej opcji, wyświetla siatki wokół każdego piksela w edytorze obrazów. Siatka jest wyświetlany tylko na 4 x i wyższych rozdzielczościach.  
+ Po zaznaczeniu tej opcji, wyświetla siatkę wokół każdego piksela w edytorze obrazu. Siatka pojawia się tylko na 4 x i wyższych rozdzielczościach.  
   
- **Kafelek siatki**  
- Po wybraniu Wyświetla siatki wokół bloki pikseli w edytorze obrazów, określony przez wartości odstępy siatki.  
+ **Siatka**  
+ Po wybraniu Wyświetla siatkę wokół bloki pikseli w edytorze obrazu, określony przez wartości odstępy siatki.  
   
  **Szerokość**  
- Określa szerokość bloku każdego kafelka. Jest to przydatne podczas rysowania map bitowych zawierający wiele obrazów, które są rozmieszczone w regularnych odstępach czasu.  
+ Określa szerokość każdy blok kafelka. Jest to przydatne, gdy mapy bitowe zawierające wiele obrazów, które są rozmieszczone w regularnych odstępach czasu.  
   
  **Wysokość**  
- Określa wysokość każdego bloku kafelka. Jest to przydatne podczas rysowania map bitowych zawierający wiele obrazów, które są rozmieszczone w regularnych odstępach czasu.  
+ Określa wysokość każdego bloku kafelka. Jest to przydatne, gdy mapy bitowe zawierające wiele obrazów, które są rozmieszczone w regularnych odstępach czasu.  
   
 ## <a name="requirements"></a>Wymagania  
  Brak  
@@ -46,4 +46,3 @@ Można określić ustawienia siatki dla obrazu i wyświetla linie siatki za poś
 ## <a name="see-also"></a>Zobacz też  
  [Zmiana rozmiaru obrazu](../windows/resizing-an-image-image-editor-for-icons.md)   
  [Edytor obrazów dla ikon](../windows/image-editor-for-icons.md)
-

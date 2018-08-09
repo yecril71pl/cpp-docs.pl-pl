@@ -20,17 +20,17 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 90a470aa5bb1b24ab2fe549f098a83c29e5d0828
-ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
+ms.openlocfilehash: 93cf3eba3301b0ae000b9f461851b46be592a119
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39464152"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39650286"
 ---
 # <a name="adding-or-deleting-a-string"></a>Dodawanie lub usuwanie ciągu
-Można szybko wstawić nowe wpisy w tabeli ciągów za pomocą edytora ciągów. Nowych ciągów są umieszczane na końcu tabeli i podano następny dostępny identyfikator. Następnie można edytować właściwości Identyfikatora, wartość lub podpis w [okno właściwości](/visualstudio/ide/reference/properties-window) zgodnie z potrzebami.  
+Można szybko wstawić nowych wpisów do tabeli ciągów przy użyciu **ciąg** edytora. Nowych ciągów są umieszczane na końcu tabeli i podano następny dostępny identyfikator. Następnie można edytować **identyfikator**, **wartość**, lub **podpis** właściwości w [okno właściwości](/visualstudio/ide/reference/properties-window) zgodnie z potrzebami.  
   
- Edytor ciągów zapewnia, że nie używasz Identyfikatora, który jest już używana. Wybranie Identyfikatora już w użyciu, edytor ciągów będzie powiadamiał, a następnie przypisz ogólny Unikatowy identyfikator, na przykład IDS_STRING58113.  
+ **Ciąg** edytora upewnia się, nie należy używać Identyfikatora, który jest już używana. Wybranie Identyfikatora już w użyciu **ciąg** edytora zostanie powiadamiania o, a następnie przypisz ogólny Unikatowy identyfikator, na przykład `IDS_STRING58113`.  
   
 ### <a name="to-add-a-string-table-entry"></a>Aby dodać wpis tabeli ciągów  
   
@@ -64,10 +64,9 @@ Można szybko wstawić nowe wpisy w tabeli ciągów za pomocą edytora ciągów.
   
 -   Naciśnij klawisz **Usuń** klucza.  
   
- Aby uzyskać informacje na temat dodawania zasobów do projektów zarządzanych, (te, których platformą docelową środowiska uruchomieniowego języka wspólnego), zobacz [zasoby w aplikacjach pulpitu](/dotnet/framework/resources/index) w *przewodniku dewelopera .NET Framework.* Aby uzyskać informacji na temat ręcznego dodawania plików zasobów do projektów zarządzanych, uzyskiwania dostępu do zasobów, wyświetlania statycznych zasobów i przypisywania ciągów zasobów do właściwości, zobacz [Instruktaż: Lokalizowanie interfejsów Windows Forms](http://msdn.microsoft.com/9a96220d-a19b-4de0-9f48-01e5d82679e5) i [Wskazówki: Korzystanie z zasobów for Localization with ASP.NET](http://msdn.microsoft.com/Library/bb4e5b44-e2b0-48ab-bbe9-609fb33900b6).  
+ Aby uzyskać informacje na temat dodawania zasobów do projektów zarządzanych, (te, których platformą docelową środowiska uruchomieniowego języka wspólnego), zobacz [zasoby w aplikacjach pulpitu](/dotnet/framework/resources/index) w *przewodniku dewelopera .NET Framework*. Aby uzyskać informacji na temat ręcznego dodawania plików zasobów do projektów zarządzanych, uzyskiwania dostępu do zasobów, wyświetlania statycznych zasobów i przypisywania ciągów zasobów do właściwości, zobacz [Instruktaż: Lokalizowanie interfejsów Windows Forms](http://msdn.microsoft.com/9a96220d-a19b-4de0-9f48-01e5d82679e5) i [Wskazówki: Korzystanie z zasobów for Localization with ASP.NET](http://msdn.microsoft.com/Library/bb4e5b44-e2b0-48ab-bbe9-609fb33900b6).  
   
- **Wymagania**  
-  
+## <a name="requirements"></a>Wymagania  
  Win32  
   
 ## <a name="see-also"></a>Zobacz też  

@@ -1,5 +1,5 @@
 ---
-title: Unikatowy (C++) | Dokumentacja firmy Microsoft
+title: unikatowe (C++) | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,44 +17,42 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: ebb492d576e82c276aeb1cb464a39b558040fdc5
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 826d296e4c11571151ff0cd3265465b4307d2d92
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33890139"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39643968"
 ---
 # <a name="unique-c"></a>unique (C++)
-Określa unikatowy wskaźnika.  
+Określa unikatowy wskaźnik.  
   
 ## <a name="syntax"></a>Składnia  
   
 ```  
-  
 [unique]  
-  
 ```  
   
 ## <a name="remarks"></a>Uwagi  
- **Unikatowy** atrybut C++ ma te same funkcje co [unikatowy](http://msdn.microsoft.com/library/windows/desktop/aa367294) MIDL atrybutu.  
+ **Unikatowy** atrybut C++ ma taką samą funkcjonalność jak [unikatowy](http://msdn.microsoft.com/library/windows/desktop/aa367294) atrybutów w MIDL.  
   
 ## <a name="example"></a>Przykład  
  Zobacz [ref](../windows/ref-cpp.md) przykład użycie próbki **unikatowy**.  
   
 ## <a name="requirements"></a>Wymagania  
   
-### <a name="attribute-context"></a>Atrybut kontekstu  
+### <a name="attribute-context"></a>Kontekst atrybutu  
   
 |||  
 |-|-|  
-|**Dotyczy**|`typedef`, `struct`, **Unii**, interfejs parametru, interfejsu — metoda|  
+|**Dotyczy**|**Element TypeDef**, **struktury**, **Unii**, interfejs parametrów, metody interfejsu|  
 |**Powtarzalne**|Nie|  
 |**Wymaganych atrybutów**|Brak|  
 |**Nieprawidłowe atrybuty**|Brak|  
   
- Aby uzyskać więcej informacji na temat konteksty atrybutu, zobacz [konteksty atrybutu](../windows/attribute-contexts.md).  
+ Aby uzyskać więcej informacji na temat konteksty atrybutu zobacz [konteksty atrybutu](../windows/attribute-contexts.md).  
   
 ## <a name="see-also"></a>Zobacz też  
  [Atrybuty IDL](../windows/idl-attributes.md)   
- [Element TypeDef, Enum, Unii i struct — atrybuty](../windows/typedef-enum-union-and-struct-attributes.md)   
+ [Element TypeDef, Enum, Union i struct — atrybuty](../windows/typedef-enum-union-and-struct-attributes.md)   
  [Atrybuty parametru](../windows/parameter-attributes.md)   

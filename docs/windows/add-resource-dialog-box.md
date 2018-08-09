@@ -18,34 +18,34 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: c420a1d72aa4ceca7d71840fcccb451b6e0aba0f
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: dc7826b10e822b833b7a0a9361d55f74da46342a
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33857522"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39651694"
 ---
 # <a name="add-resource-dialog-box"></a>Okno dialogowe dodawania zasobów
-Użyj tego okna dialogowego, aby dodać zasoby do projektu aplikacji komputerowych Windows w języku C++.  
+To okno dialogowe służy do dodawania zasobów do projektu aplikacji pulpitu Windows w języku C++.  
   
 > [!NOTE]
->  Te informacje nie dotyczą zasobów w aplikacjach platformy uniwersalnej systemu Windows. Aby uzyskać więcej informacji o tym, zobacz [zasobów aplikacji i systemu zarządzania zasobów](/windows/uwp/app-resources/).  
+>  Te informacje nie ma zastosowania do zasobów w aplikacjach platformy uniwersalnej Windows. Aby uzyskać więcej informacji o tym, zobacz [zasobów aplikacji i systemu zarządzania zasobów](/windows/uwp/app-resources/).  
   
- **Typ zasobu**  
+### <a name="resource-type"></a>Typ zasobu 
  Określa rodzaj zasobu, który chcesz utworzyć.  
   
- Można rozwinąć kursora i okna dialogowe pole zasobu kategorie, aby ujawnić dodatkowych zasobów. Te zasoby znajdują się w programie Visual Studio ...\Microsoft `version`\VC\VCResourceTemplates\\< LCID\>\mfc.rct. Jeśli dodasz .rct — pliki, możesz je umieścić w tym katalogu lub należy określić [zawierają ścieżki](../windows/how-to-specify-include-directories-for-resources.md) dla nich. Zasoby w tych plikach są następnie wyświetlane w drugiej w odpowiedniej kategorii. Nie ma żadnego predefiniowanych limitu liczby .rct — pliki, które można dodać.  
+ Można rozwinąć kursora i okna dialogowego pole zasobów kategorie, aby ujawnić dodatkowe zasoby. Te zasoby znajdują się w programie Visual Studio ...\Microsoft `version`\VC\VCResourceTemplates\\< LCID\>\mfc.rct. Jeśli dodasz .rct — pliki, należy je umieścić w tym katalogu lub należy określić [ścieżki dołączania](../windows/how-to-specify-include-directories-for-resources.md) dla nich. Zasoby w tych plikach są następnie wyświetlane na drugim poziomie do odpowiedniej kategorii. Nie ma żadnych wstępnie limitu liczby .rct — pliki, które można dodać.  
   
- Zasoby, pokazane na najwyższym poziomie w drzewie są domyślne zasoby, które są dostarczane przez program Visual Studio.  
+ Zasoby pokazane na najwyższym poziomie w drzewie są domyślne zasoby, które są dostarczane przez program Visual Studio.  
   
- **Nowy**  
- Tworzy zasób zależy od typu wybranego w **typu zasobu** pole. Zasób zostanie otwarty w edytorze odpowiednie. Na przykład w przypadku utworzenia zasobu okna dialogowego, zostanie otwarty w [Edytor okien dialogowych](../windows/dialog-editor.md).  
+### <a name="new"></a>New
+ Tworzy zasób, w zależności od typu wybranego na liście **typ zasobu** pole. Zasób zostanie otwarty w edytorze odpowiednie. Na przykład, jeśli tworzysz zasobu okna dialogowego, zostanie on otwarty w [Edytor okien dialogowych](../windows/dialog-editor.md).  
   
- **Importujuj**  
- Otwiera **zaimportować** okno dialogowe, w którym można przejść do zasobu można czy mają zostać zaimportowane do bieżącego projektu. Możesz zaimportować mapy bitowej, ikona, kursor, plik zasobu HTML, dźwięk (. Plik zasobów WAV), lub pliku niestandardowego zasobu.  
+### <a name="import"></a>{1&gt;Importuj&lt;1}
+ Otwiera **zaimportować** okno dialogowe, w którym możesz przejść do zasobu należy czy mają zostać zaimportowane do bieżącego projektu. Możesz zaimportować mapy bitowej, ikony, kursor, plik zasobu HTML, dźwięk (. Plik zasobów WAV) lub plik zasobów niestandardowych.  
   
- **Niestandardowy**  
- Otwiera [okno dialogowe Nowy zasób niestandardowy](../windows/new-custom-resource-dialog-box.md) , w którym można utworzyć niestandardowego zasobu. Zasoby niestandardowe można edytować w edytorze binarnym tylko.  
+### <a name="custom"></a>Niestandardowe
+ Otwiera [okno dialogowe Nowy zasób niestandardowy](../windows/new-custom-resource-dialog-box.md) , w którym możesz tworzyć zasobów niestandardowych. Zasoby niestandardowe można edytować w edytorze binarnym tylko.  
   
 ## <a name="requirements"></a>Wymagania  
  Brak  

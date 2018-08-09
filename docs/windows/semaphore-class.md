@@ -17,26 +17,25 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 1219c2118f9cde18fe1909a2edd02d58a4be2341
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 5101aba24cd8a0ed4f44587ffc4ad9e973099b8a
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33889472"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39652639"
 ---
 # <a name="semaphore-class"></a>Semaphore — Klasa
-Reprezentuje obiekt synchronizacji, która kontroluje, czy obsługują ograniczoną liczbę użytkowników zasobu udostępnionego.  
+Reprezentuje obiekt synchronizacji, który kontroluje zasobu udostępnionego, który może obsługiwać ograniczoną liczbę użytkowników.  
   
 ## <a name="syntax"></a>Składnia  
   
 ```  
-  
 class Semaphore : public HandleT<HandleTraits::SemaphoreTraits>  
 ```  
   
 ## <a name="members"></a>Elementy członkowskie  
   
-### <a name="public-typedefs"></a>Definicje typów publicznych  
+### <a name="public-typedefs"></a>Publiczne definicje typów  
   
 |Nazwa|Opis|  
 |----------|-----------------|  
@@ -46,25 +45,25 @@ class Semaphore : public HandleT<HandleTraits::SemaphoreTraits>
   
 |Nazwa|Opis|  
 |----------|-----------------|  
-|[Semaphore::Semaphore, konstruktor](../windows/semaphore-semaphore-constructor.md)|Inicjuje nowe wystąpienie klasy semafora.|  
+|[Semaphore::Semaphore, konstruktor](../windows/semaphore-semaphore-constructor.md)|Inicjuje nowe wystąpienie klasy **semafora** klasy.|  
   
 ### <a name="public-methods"></a>Metody publiczne  
   
 |Nazwa|Opis|  
 |----------|-----------------|  
-|[InvokeHelper::Invoke, metoda](../windows/invokehelper-invoke-method.md)|Wywołuje program obsługi zdarzeń, którego sygnatura zawiera określoną liczbę argumentów.|  
+|[InvokeHelper::Invoke, metoda](../windows/invokehelper-invoke-method.md)|Wywołuje program obsługi zdarzeń, którego podpis zawiera określoną liczbę argumentów.|  
   
 ### <a name="public-data-members"></a>Publiczne elementy członkowskie danych  
   
 |Nazwa|Opis|  
 |----------|-----------------|  
-|[Semaphore::Lock, metoda](../windows/semaphore-lock-method.md)|Czeka, aż do bieżącego obiektu lub obiektów skojarzonych z określonego dojścia jest w stanie sygnałowego lub przed upływem określonego limitu czasu.|  
+|[Semaphore::Lock, metoda](../windows/semaphore-lock-method.md)|Czeka, aż do bieżącego obiektu lub obiektów skojarzonych z określone dojście jest w stanie sygnałowego lub przed upływem określonego limitu czasu.|  
   
 ### <a name="public-operators"></a>Operatory publiczne  
   
 |Nazwa|Opis|  
 |----------|-----------------|  
-|[Operator Semaphore::operator=](../windows/semaphore-operator-assign-operator.md)|Przenosi bieżący obiekt semafora określone dojście z obiektu semafora.|  
+|[Operator Semaphore::operator=](../windows/semaphore-operator-assign-operator.md)|Przenosi określone dojście z **semafora** obiekt do bieżącego **semafora** obiektu.|  
   
 ## <a name="inheritance-hierarchy"></a>Hierarchia dziedziczenia  
  `Semaphore`  
@@ -72,7 +71,7 @@ class Semaphore : public HandleT<HandleTraits::SemaphoreTraits>
 ## <a name="requirements"></a>Wymagania  
  **Nagłówek:** corewrappers.h  
   
- **Namespace:** Microsoft::wrl:: wrappers —  
+ **Namespace:** Microsoft::wrl:: wrappers  
   
 ## <a name="see-also"></a>Zobacz też  
  [Microsoft::WRL::Wrappers, przestrzeń nazw](../windows/microsoft-wrl-wrappers-namespace.md)

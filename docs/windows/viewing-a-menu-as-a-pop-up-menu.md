@@ -16,29 +16,26 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 5c97eef61917fec0e068b25116b96b8dd7db41eb
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 05695e834ae244d276141185a913e8f35ef45922
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33891034"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39652204"
 ---
 # <a name="viewing-a-menu-as-a-pop-up-menu"></a>Wyświetlanie jako menu podręcznego
-Zwykle podczas pracy w edytorze Menu zasobów menu jest wyświetlana jako pasek menu. Jednak może być zasoby menu, które są dodawane do paska menu aplikacji, podczas gdy program jest uruchomiony.  
+Zwykle podczas pracy w edytorze Menu zasobów menu jest wyświetlana jako pasek menu. Jednak może być zasobów menu, które są dodawane do paska menu aplikacji, podczas gdy program jest uruchomiony.  
   
-### <a name="to-view-a-menu-resource-as-a-pop-up-menu"></a>Aby wyświetlić zawartość zasobu menu jako menu podręcznego  
+### <a name="to-view-a-menu-resource-as-a-pop-up-menu"></a>Aby wyświetlić zasobów menu jako menu podręcznego  
   
-1.  Kliknij prawym przyciskiem myszy menu i wybierz polecenie **wyświetlanie jako menu podręczne** z menu skrótów.  
+1.  Kliknij prawym przyciskiem myszy menu, a następnie wybierz **Pokaż jako menu podręczne** z menu skrótów.  
   
-     To jest tylko preferencji wyświetlania i nie spowoduje jej modyfikacji z menu.  
+     To jest tylko preferencji wyświetlania i nie zostanie zmodyfikowana z poziomu menu.  
   
     > [!NOTE]
-    >  Aby zmienić widok paska menu, kliknij przycisk **wyświetlanie jako menu podręczne** ponownie (co spowoduje usunięcie znacznika wyboru i zwraca widok paska menu).  
+    >  Aby zmienić widok paska menu, kliknij przycisk **Pokaż jako menu podręczne** ponownie (który spowoduje usunięcie znacznika wyboru i zwraca widok pasek menu).  
   
-
-  
- **Wymagania**  
-  
+## <a name="requirements"></a>Wymagania  
  Win32  
   
 ## <a name="see-also"></a>Zobacz też  

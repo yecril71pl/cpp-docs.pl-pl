@@ -1,5 +1,5 @@
 ---
-title: SRWLockExclusiveTraits::Unlock — Metoda | Dokumentacja firmy Microsoft
+title: SRWLockExclusiveTraits::Unlock, metoda | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 0babd7efcae7bbd91fd81362e7b0f612f177477f
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: c1863acc925bf66aa10435f2dadd9d9d73a43300
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33892595"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39648025"
 ---
 # <a name="srwlockexclusivetraitsunlock-method"></a>SRWLockExclusiveTraits::Unlock — Metoda
-Zwalnia wyłączną kontrolę określonego obiektu srwlock —.  
+Zwalnia wyłączną kontrolę określonego `SRWLock` obiektu.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -35,9 +35,9 @@ inline static void Unlock(
 );  
 ```  
   
-#### <a name="parameters"></a>Parametry  
- `srwlock`  
- Dojście do obiektu srwlock —.  
+### <a name="parameters"></a>Parametry  
+ *srwlock*  
+ Dojście do `SRWLock` obiektu.  
   
 ## <a name="requirements"></a>Wymagania  
  **Nagłówek:** corewrappers.h  

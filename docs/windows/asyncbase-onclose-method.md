@@ -1,5 +1,5 @@
 ---
-title: AsyncBase::OnClose — metoda | Dokumentacja firmy Microsoft
+title: AsyncBase::OnClose, metoda | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,19 +17,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 95a0cce7f51ef7974d0520f0bdfd2f025a09ecaf
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 3c1b888b9d3e3f3c80c3aff40f5fd545ece9cca6
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33859608"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39650641"
 ---
 # <a name="asyncbaseonclose-method"></a>AsyncBase::OnClose — Metoda
 W przypadku przesłonięcia w klasie pochodnej, zamyka operację asynchroniczną.  
   
 ## <a name="syntax"></a>Składnia  
   
-```  
+```cpp  
 virtual void OnClose(  
    void  
 ) = 0;  
@@ -38,7 +38,7 @@ virtual void OnClose(
 ## <a name="requirements"></a>Wymagania  
  **Nagłówek:** async.h  
   
- **Namespace:** Microsoft::wrl —  
+ **Namespace:** Microsoft::WRL  
   
 ## <a name="see-also"></a>Zobacz też  
  [Asyncbase — klasa](../windows/asyncbase-class.md)   

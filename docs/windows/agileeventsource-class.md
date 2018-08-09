@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 7412968069963679db769cc2ce68169e7a8799b9
-ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
+ms.openlocfilehash: 90a2c582c2740846f90270fe9f45b96871329252
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39462072"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39642841"
 ---
 # <a name="agileeventsource-class"></a>AgileEventSource, klasa
 
@@ -30,7 +30,7 @@ Przedstawia zdarzenie, który jest wywoływany przez agile składnik, który jes
 
 ## <a name="syntax"></a>Składnia
 
-```
+```cpp
 template<typename TDelegateInterface, typename TEventSourceOptions = Microsoft::WRL::InvokeModeOptions<FireAll>>
 class AgileEventSource
     : public Microsoft::WRL::EventSource<TDelegateInterface, TEventSourceOptions>;
@@ -38,7 +38,6 @@ class AgileEventSource
 
 ## <a name="parameters"></a>Parametry  
  *TDelegateInterface*  
-
  Interfejs do delegata, który reprezentuje program obsługi zdarzeń.
 
  *TEventSourceOptions*  
@@ -64,7 +63,7 @@ Większość składników środowiska wykonawczego Windows są składnikami agil
 
 |Nazwa|Opis|
 |----------|-----------------|
-|[Metoda AgileEventSource::Add](#add)|Dołącza program obsługi zdarzeń agile, reprezentowane przez interfejs określonego delegata do zestawu programów obsługi zdarzeń dla bieżącego obiektu AgileEventSource.|
+|[Metoda AgileEventSource::Add](#add)|Dołącza program obsługi zdarzeń agile, reprezentowane przez interfejs określonego delegata do zestawu programów obsługi zdarzeń dla bieżącego **AgileEventSource** obiektu.|
 
 ## <a name="add"></a> Metoda AgileEventSource::Add
 
@@ -85,7 +84,7 @@ HRESULT Add(
 Interfejs do obiektu delegowanego, który reprezentuje program obsługi zdarzeń.
 
 *Token*  
-Po zakończeniu tej operacji, uchwyt, który reprezentuje zdarzenie. Używanie tego tokenu jako parametr do metody Remove(), aby odrzucić programu obsługi zdarzeń.
+Po zakończeniu tej operacji, uchwyt, który reprezentuje zdarzenie. Używanie tego tokenu jako parametr do `Remove()` metodę, aby odrzucić programu obsługi zdarzeń.
 
 ### <a name="return-value"></a>Wartość zwracana
 

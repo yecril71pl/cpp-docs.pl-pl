@@ -17,31 +17,29 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: b48691dde50c1f0829d5393c9023509c863ed39c
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: e842dcb70e6f4a4ec4751ed7f4f231b41af2d288
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33883984"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39645662"
 ---
 # <a name="copying-a-device-image-image-editor-for-icons"></a>Kopiowanie obrazu urządzenia (Edytor obrazów dla ikon)
 ### <a name="to-copy-a-device-image"></a>Aby skopiować obrazu urządzenia  
   
-1.  Na **obrazu** menu, kliknij przycisk **Otwórz obrazu urządzenia** i wybierz obraz z bieżącej listy obrazów. Na przykład wybierz 32 × 32, 16 kolorów wersji ikony.  
+1.  Na **obraz** menu, kliknij przycisk **Otwieranie obrazu urządzenia** i wybrania obrazu z bieżącej listy obrazów. Na przykład wybierz 32 x 32, 16 kolorów wersja ikony.  
   
-2.  Skopiuj obraz ikony aktualnie wyświetlanego (**klawisze CTRL + C**).  
+2.  Skopiuj obraz aktualnie wyświetlane ikony (**Ctrl**+**C**).  
   
-3.  Otwórz innego obrazu ikony w innym **edytor obrazów** okna. Na przykład otwórz 16 x 16, 16 kolorów wersji ikony.  
+3.  Otwórz inny obraz ikony w innym **edytora obrazów** okna. Na przykład otworzyć 16 x 16, 16 kolorów wersja ikony.  
   
-4.  Wklej obraz ikony (**klawisze CTRL + V**) z jednego **edytor obrazów** okna do drugiego. Jeśli wklejasz większy rozmiar mniejszy rozmiar, można dojść Ikona Zmień rozmiar obrazu.  
+4.  Wklej obraz ikony (**Ctrl**+**V**) z jednego **edytora obrazów** okna do innego. Jeśli wklejasz większy rozmiar mniejszy rozmiar, można użyć uchwytów ikony zmiany rozmiaru obrazu.  
   
- Aby uzyskać informacje o dodawaniu zasobów do projektów zarządzanych, zobacz [zasobów w aplikacjach pulpitu](/dotnet/framework/resources/index) w *Przewodnik programistów platformy .NET Framework.* Aby uzyskać informacje na ręczne dodanie do projektów zarządzanych plików zasobów, uzyskiwanie dostępu do zasobów, wyświetlanie zasoby statyczne i przypisanie do właściwości ciągów zasobów, zobacz [tworzenie plików zasobów dla aplikacji pulpitu](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Informacje dotyczące globalizacji i lokalizacji zasobów w zarządzanych aplikacjach, zobacz [Globalizing i lokalizacja aplikacji .NET Framework](/dotnet/standard/globalization-localization/index).  
+ Aby uzyskać informacje na temat dodawania zasobów do projektów zarządzanych, zobacz [zasoby w aplikacjach pulpitu](/dotnet/framework/resources/index) w *przewodniku dewelopera .NET Framework*. Aby uzyskać informacji na temat ręcznego dodawania plików zasobów do projektów zarządzanych, uzyskiwania dostępu do zasobów, wyświetlania statycznych zasobów i przypisywania ciągów zasobów do właściwości, zobacz [Creating Resource Files dla aplikacji klasycznych](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Aby uzyskać informacji na temat globalizacja i lokalizacja zasobów w aplikacjach zarządzanych, zobacz [Globalizing i lokalizowanie aplikacji programu .NET Framework](/dotnet/standard/globalization-localization/index).  
   
- Wymagania  
-  
+## <a name="requirements"></a>Wymagania  
  Brak  
   
 ## <a name="see-also"></a>Zobacz też  
  [Ikony i kursory: zasoby obrazów do wyświetlania na urządzeniach](../windows/icons-and-cursors-image-resources-for-display-devices-image-editor-for-icons.md)   
  [Klawisze skrótów](../windows/accelerator-keys-image-editor-for-icons.md)
-

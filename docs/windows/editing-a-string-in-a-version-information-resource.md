@@ -18,33 +18,32 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 80795f912ab41809b19e77bd33f56243541d4de1
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 306359c1479c8c67d6edc08414f601a4b560496e
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33882887"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39648106"
 ---
 # <a name="editing-a-string-in-a-version-information-resource"></a>Edytowanie ciągu w zasobach informacji o wersji
-### <a name="to-edit-a-string-in-a-version-information-resource"></a>Aby edytować ciągu w zasobach informacji o wersji  
+### <a name="to-edit-a-string-in-a-version-information-resource"></a>Edytowanie ciągu w zasobach informacji o wersji  
   
-1.  Kliknij raz element następnie ponownie wybierz go, aby rozpocząć edycji. Wprowadź zmiany bezpośrednio w tabeli informacje o wersji lub w [okna właściwości](/visualstudio/ide/reference/properties-window). Wprowadzone zmiany zostaną odzwierciedlone w obu miejscach.  
+1.  Kliknij element, jeden raz, następnie ponownie wybierz go, aby rozpocząć jego edycji. Wprowadź zmiany bezpośrednio w **informacje o wersji** tabeli lub [okno właściwości](/visualstudio/ide/reference/properties-window). Wprowadzone zmiany zostaną odzwierciedlone w obu miejscach.  
   
-     **Uwaga** podczas edytowania **FILEFLAGS** klucza w edytorze informacje o wersji, można zauważyć, nie można ustawić **debugowania**, **kompilacja prywatna**, lub **Specjalne kompilacji** właściwości .RC — pliki (w oknie właściwości):  
+     > [!NOTE] 
+     > Podczas edytowania `FILEFLAGS` w **informacje o wersji** edytora, zauważysz, nie można ustawić **debugowania**, **kompilacja prywatna**, lub **specjalne Tworzenie** właściwości (w **właściwości** okna) plików .rc:  
   
-    -   Ustawia Edytor informacje o wersji **debugowania** na podstawie właściwości o #ifdef skryptu zasobu **_DEBUG** kompilacji flagi.  
+    -   **Informacje o wersji** zestawy edytora **debugowania** właściwość o `#ifdef` w skrypcie zasobów na podstawie `_DEBUG` kompilacji flagi.  
   
-    -   Jeśli **kompilacja prywatna** klucz ma **wartość** zestawu w tabeli informacje o wersji odpowiadającego **kompilacja prywatna** właściwości (w oknie właściwości) **FILEFLAGS** klucz będzie **True**. Jeśli **wartość** jest pusta, właściwość będzie **False**. Podobnie **specjalne kompilacji** klucz (tabeli informacje o wersji) jest powiązany z **specjalne kompilacji** właściwość **FILEFLAGS** klucza.  
+    -   Jeśli `Private Build` kluczu **wartość** w **informacje o wersji** tabeli, odpowiedni **kompilacja prywatna** właściwości (w **właściwości**  okna) dla `FILEFLAGS` klucz będzie **True**. Jeśli **wartość** jest pusta, właściwość będzie **False**. Podobnie **kompilacji specjalnych** klucza (w **informacje o wersji** tabeli) jest powiązana z **kompilacji specjalnych** właściwość `FILEFLAGS` klucza.  
   
- Sekwencja informacji bloku ciągu można sortować, klikając klucz lub wartość nagłówki kolumn. Te pozycje rozmieszczanie automatycznie informacje w wybranej sekwencji.  
+ Sekwencja informacji blok ciągu można sortować, klikając nagłówki kolumn wartość lub klucz. Te nagłówki automatyczne rozmieszczanie informacji w wybranej sekwencji.  
   
- Aby uzyskać informacje o dodawaniu zasobów do projektów zarządzanych, zobacz [zasobów w aplikacjach pulpitu](/dotnet/framework/resources/index) w *Przewodnik programistów platformy .NET Framework.* Aby uzyskać informacje na ręczne dodanie do projektów zarządzanych plików zasobów, uzyskiwanie dostępu do zasobów, wyświetlanie zasoby statyczne i przypisanie do właściwości ciągów zasobów, zobacz [tworzenie plików zasobów dla aplikacji pulpitu](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Informacje dotyczące globalizacji i lokalizacji zasobów w zarządzanych aplikacjach, zobacz [Globalizing i lokalizacja aplikacji .NET Framework](/dotnet/standard/globalization-localization/index).  
+ Aby uzyskać informacje na temat dodawania zasobów do projektów zarządzanych, zobacz [zasoby w aplikacjach pulpitu](/dotnet/framework/resources/index) w *przewodniku dewelopera .NET Framework*. Aby uzyskać informacji na temat ręcznego dodawania plików zasobów do projektów zarządzanych, uzyskiwania dostępu do zasobów, wyświetlania statycznych zasobów i przypisywania ciągów zasobów do właściwości, zobacz [Creating Resource Files dla aplikacji klasycznych](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Aby uzyskać informacji na temat globalizacja i lokalizacja zasobów w aplikacjach zarządzanych, zobacz [Globalizing i lokalizowanie aplikacji programu .NET Framework](/dotnet/standard/globalization-localization/index).  
   
- **Wymagania**  
-  
+## <a name="requirements"></a>Wymagania  
  Win32  
   
 ## <a name="see-also"></a>Zobacz też  
  [Edytor informacji o wersji](../windows/version-information-editor.md)   
- [Informacje o wersji (system Windows)](https://msdn.microsoft.com/library/windows/desktop/ms646981.aspx)
-
+ [Informacje o wersji (Windows)](https://msdn.microsoft.com/library/windows/desktop/ms646981.aspx)

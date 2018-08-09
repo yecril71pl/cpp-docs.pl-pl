@@ -15,23 +15,23 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: efce034d681fc13d59020619af4731e36cd30674
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: b1405597e933e36e6a080c5c1defd98006a1064f
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33872838"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39649321"
 ---
 # <a name="dialog-editor-states-guides-and-grids"></a>Stany dla Edytora okien dialogowych (prowadnice i siatki)
-Formanty w oknach dialogowych można rozmieścić z edytora okien dialogowych w jednym z trzech różnych stanów:  
+Można rozmieścić formanty w oknach dialogowych za pomocą **okna dialogowego** edytora w jednym z trzech różnych stanów:  
   
--   Prowadnice i marginesy na (ustawienie domyślne)  
+-   Prowadnice i marginesy w (ustawienie domyślne)  
   
--   Z siatki układu w  
+-   Przy użyciu siatki układu w  
   
--   Bez żadnych funkcji przyciągania lub wyrównania  
+-   Bez żadnych funkcji przyciągania lub wyrównanie  
   
- [Paska narzędzi edytora okien dialogowych](../windows/showing-or-hiding-the-dialog-editor-toolbar.md) zawiera przyciski umożliwiające sterowanie stanu. Aby zmienić stan, kliknij odpowiednią ikonę. Możesz również zmienić stany przy użyciu **ustawień przewodnika** na **Format** menu.  
+ [Paska narzędzi edytora okien dialogowych](../windows/showing-or-hiding-the-dialog-editor-toolbar.md) zawiera przyciski, które sterują stanu. Aby zmienić stan, kliknij odpowiednią ikonę. Możesz również zmienić stany przy użyciu **ustawienia prowadnic** polecenie **Format** menu.  
   
 -   [Tworzenie i ustawianie prowadnic i marginesów](creating-and-setting-guides-and-margins.md)  
   
@@ -41,13 +41,12 @@ Formanty w oknach dialogowych można rozmieścić z edytora okien dialogowych w 
   
 -   [Modyfikowanie siatki układu](../windows/modifying-the-layout-grid.md)  
   
- Aby uzyskać informacje o dodawaniu zasobów do projektów zarządzanych, zobacz [zasobów w aplikacjach pulpitu](/dotnet/framework/resources/index) w *Przewodnik programistów platformy .NET Framework.* Aby uzyskać informacje na ręczne dodanie do projektów zarządzanych plików zasobów, uzyskiwanie dostępu do zasobów, wyświetlanie zasoby statyczne i przypisanie do właściwości ciągów zasobów, zobacz [tworzenie plików zasobów dla aplikacji pulpitu](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Informacje dotyczące globalizacji i lokalizacji zasobów w zarządzanych aplikacjach, zobacz [Globalizing i lokalizacja aplikacji .NET Framework](/dotnet/standard/globalization-localization/index).  
+ Aby uzyskać informacje na temat dodawania zasobów do projektów zarządzanych, zobacz [zasoby w aplikacjach pulpitu](/dotnet/framework/resources/index) w *przewodniku dewelopera .NET Framework*. Aby uzyskać informacji na temat ręcznego dodawania plików zasobów do projektów zarządzanych, uzyskiwania dostępu do zasobów, wyświetlania statycznych zasobów i przypisywania ciągów zasobów do właściwości, zobacz [Creating Resource Files dla aplikacji klasycznych](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Aby uzyskać informacji na temat globalizacja i lokalizacja zasobów w aplikacjach zarządzanych, zobacz [Globalizing i lokalizowanie aplikacji programu .NET Framework](/dotnet/standard/globalization-localization/index).  
   
 ## <a name="requirements"></a>Wymagania  
  Win32  
   
 ## <a name="see-also"></a>Zobacz też  
- [Rozmieszczenie formantów w oknach dialogowych](../windows/arrangement-of-controls-on-dialog-boxes.md)   
+ [Rozmieszczenie kontrolek w oknach dialogowych](../windows/arrangement-of-controls-on-dialog-boxes.md)   
  [Formanty w oknach dialogowych](../windows/controls-in-dialog-boxes.md)   
  [Kontrolki (MFC)](../mfc/controls-mfc.md)
-

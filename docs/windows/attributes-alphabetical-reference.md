@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 1bbb461fe4e8cdabf7da9925323d9271a1047440
-ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
+ms.openlocfilehash: cb7c8dc889a37ca52c527a65f68a84d81e9553cc
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39464892"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39648181"
 ---
 # <a name="attributes-alphabetical-reference"></a>Alfabetyczny spis atrybutów
 Następujące atrybuty są dostępne w programie Visual C++.  
@@ -118,7 +118,7 @@ Następujące atrybuty są dostępne w programie Visual C++.
 |[satype](../windows/satype.md)|Określa typ danych `SAFEARRAY`.|  
 |[size_is](../windows/size-is.md)|Określa rozmiar pamięci przydzielonej dla wskaźników o rozmiarze, wielkości wskaźniki do wskaźników o rozmiarze i jedno - lub tablic wielowymiarowych.|  
 |[source](../windows/source-cpp.md)|Wskazuje, że jest członkiem klasy, właściwość lub metoda jest źródłem zdarzeń.|  
-|[string](../windows/string-cpp.md)|Oznacza to, że jednowymiarowy **char**, **wchar_t**, **bajtów**, lub równoważne tablicy lub wskaźnika do takiej tablicy muszą być traktowane jako ciąg.|  
+|[string](../windows/string-cpp.md)|Oznacza to, że jednowymiarowy **char**, **wchar_t**, `byte`, lub równoważne tablicy lub wskaźnika do takiej tablicy muszą być traktowane jako ciąg.|  
 |[support_error_info](../windows/support-error-info.md)|Obsługuje raportowanie błędów dla obiektu docelowego.|  
 |[switch_is](../windows/switch-is.md)|Określa wyrażenie lub identyfikator działający jako discriminant Unii, który wybiera składowa typu Unii.|  
 |[switch_type](../windows/switch-type.md)|Określa typ zmiennej używanej jako discriminant Unii.|  

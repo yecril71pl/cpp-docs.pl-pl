@@ -20,30 +20,30 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 6d5deb511069830de5ea7aa542bb010f57be5af9
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: aa381c42f03bcc77575464af8f8c53ca83e0af81
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33857860"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39650069"
 ---
 # <a name="binary-editor"></a>Edytor plików binarnych
 > [!WARNING]
->  Edytor plików binarnych nie jest dostępna w wersji Express.  
+>  **Edytor plików binarnych** nie jest dostępny w wersji Express.  
   
- Edytor plików binarnych umożliwia edytowanie wszystkich zasobów na poziomie binarnym w formacie szesnastkowym lub w formacie ASCII. Można również użyć [znaleźć polecenia](/visualstudio/ide/reference/find-command) do wyszukiwania ciągów znaków ASCII lub bajty szesnastkowe. Edytor plików binarnych należy używać tylko wtedy, gdy należy wyświetlić lub drobne zmiany niestandardowych zasobów lub typy zasobów, które nie są obsługiwane przez środowisko Visual Studio.  
+ W edytorze binarnym służy do edytowania dowolnego zasobu w poziomie binarnym w formacie szesnastkowym lub w formacie ASCII. Można również użyć [znaleźć polecenia](/visualstudio/ide/reference/find-command) do wyszukiwania ciągów znaków ASCII lub bajty szesnastkowe. Należy używać **binarne** edytora tylko wtedy, gdy należy wyświetlić lub wprowadzić drobne zmiany zasoby niestandardowe lub typy zasobów, które nie są obsługiwane przez środowisko Visual Studio.  
   
- Aby otworzyć edytora plików binarnych, należy najpierw wybrać **pliku &#124; nowy &#124; pliku** z menu głównego, wybierz plik, który chcesz edytować, a następnie kliknij strzałkę listy obok **Otwórz** przycisk, a następnie wybierz pozycję **Otwórz za pomocą &#124; edytora plików binarnych**.  
+ Aby otworzyć **Edytor plików binarnych**, należy najpierw wybrać **pliku** > **nowy** > **pliku** wybierz z menu głównego plik który chcesz edytować, a następnie kliknij strzałkę listy obok **Otwórz** przycisk, a następnie wybierz **Otwórz za pomocą** > **Edytor plików binarnych**.  
   
 > [!CAUTION]
->  Edytowanie zasobów, takich jak okien dialogowych, obrazy lub menu w edytorze binarnym jest niebezpieczne. Niepoprawne edytowanie może spowodować uszkodzenie zasobów, dzięki czemu można odczytać w edytorze macierzystego.  
+>  Edytowanie zasobów, takich jak okna dialogowe, obrazów lub menu w edytorze binarnym jest niebezpieczne. Niepoprawne edytowanie może spowodować uszkodzenie zasobów, dzięki czemu można odczytać w edytorze natywnych.  
   
 > [!TIP]
->  Podczas używania Edytor plików binarnych w wielu przypadkach, należy kliknąć prawym przyciskiem myszy do wyświetlenia menu skrótów poleceń określonych zasobów. Dostępne polecenia zależą od tego, co Twoje kursor do. Na przykład jeśli klikniesz przycisk podczas wskazujący Edytor plików binarnych z wybranych wartości szesnastkowych, pokazuje menu skrótów **Wytnij**, **kopiowania**, i **Wklej** poleceń.  
+>  Podczas korzystania z **binarne** edytora w wielu przypadkach możesz kliknąć prawym przyciskiem myszy, aby wyświetlić menu skrótów poleceń specyficznych dla zasobów. Dostępne polecenia zależą od tego, co kursor wskazuje. Na przykład jeśli klikniesz podczas wskazujący **binarne** Edytor przy użyciu wybranej wartości szesnastkowych, pokazuje, w menu skrótów **Wytnij**, **kopiowania**, i **wklejania**  poleceń.  
   
- Edytor plików binarnych można:  
+ Za pomocą **binarne** edytora, możesz:  
   
--   [Otwieranie zasobów do edycji plików binarnych](../windows/opening-a-resource-for-binary-editing.md)  
+-   [Otwórz zasób do edycji plików binarnych](../windows/opening-a-resource-for-binary-editing.md)  
   
 -   [Edytowanie danych binarnych](../windows/editing-binary-data.md)  
   
@@ -52,13 +52,12 @@ ms.locfileid: "33857860"
 -   [Utwórz nowy zasób niestandardowy lub danych](../windows/creating-a-new-custom-or-data-resource.md)  
   
 ## <a name="managed-resources"></a>Zarządzane zasoby  
- Można użyć [edytor obrazów](../windows/image-editor-for-icons.md) i Edytor plików binarnych do pracy z plikami zasobów w projektach zarządzanych. Wszelkie zarządzane zasoby, które chcesz edytować, muszą być powiązanymi zasobami. Edytory zasobów programu Visual Studio nie obsługują edycji zasobów osadzonych.  
+ Możesz użyć [edytora obrazów](../windows/image-editor-for-icons.md) i **binarne** edytora, aby pracować z plikami zasobów w zarządzanych projektów. Wszelkie zarządzane zasoby, które chcesz edytować, muszą być powiązanymi zasobami. Edytory zasobów programu Visual Studio nie obsługują edycji zasobów osadzonych.  
   
- Aby uzyskać informacje o dodawaniu zasobów do projektów zarządzanych, zobacz [zasobów w aplikacjach pulpitu](/dotnet/framework/resources/index) w *Przewodnik programistów platformy .NET Framework.* Aby uzyskać informacje na ręczne dodanie do projektów zarządzanych plików zasobów, uzyskiwanie dostępu do zasobów, wyświetlanie zasoby statyczne i przypisanie do właściwości ciągów zasobów, zobacz [tworzenie plików zasobów dla aplikacji pulpitu](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Informacje dotyczące globalizacji i lokalizacji zasobów w zarządzanych aplikacjach, zobacz [Globalizing i lokalizacja aplikacji .NET Framework](/dotnet/standard/globalization-localization/index).  
+ Aby uzyskać informacje na temat dodawania zasobów do projektów zarządzanych, zobacz [zasoby w aplikacjach pulpitu](/dotnet/framework/resources/index) w *przewodniku dewelopera .NET Framework*. Aby uzyskać informacji na temat ręcznego dodawania plików zasobów do projektów zarządzanych, uzyskiwania dostępu do zasobów, wyświetlania statycznych zasobów i przypisywania ciągów zasobów do właściwości, zobacz [Creating Resource Files dla aplikacji klasycznych](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Aby uzyskać informacji na temat globalizacja i lokalizacja zasobów w aplikacjach zarządzanych, zobacz [Globalizing i lokalizowanie aplikacji programu .NET Framework](/dotnet/standard/globalization-localization/index).  
   
-### <a name="requirements"></a>Wymagania  
+## <a name="requirements"></a>Wymagania  
  Brak  
   
 ## <a name="see-also"></a>Zobacz też  
  [Edytory zasobów](../windows/resource-editors.md)
-

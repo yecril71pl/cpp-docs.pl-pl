@@ -17,26 +17,26 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 59354062dded7792dca1cd84683bba64f6a64aa0
-ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
+ms.openlocfilehash: b849c7578b29a3d4595a9ecd07c4339dc751e9dd
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39571428"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39652952"
 ---
 # <a name="dontusenewusemakeoperator-new-operator"></a>DontUseNewUseMake::operator nowy operator
 Obsługuje infrastrukturę biblioteki WRL i nie jest przeznaczona do użycia bezpośrednio w kodzie.  
   
 ## <a name="syntax"></a>Składnia  
   
-```  
+```cpp  
 void* operator new(  
    size_t,  
    _In_ void* placement  
 );  
 ```  
   
-#### <a name="parameters"></a>Parametry  
+### <a name="parameters"></a>Parametry  
  *__unnamed0*  
  Nienazwany parametr, który określa liczbę bajtów pamięci do przydzielenia.  
   

@@ -17,19 +17,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: a68189c461453dc72585ff4034df5ba69bb41bd5
-ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
+ms.openlocfilehash: eeaef23178829163725b78685b3460913f53f2c2
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39464879"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39652802"
 ---
 # <a name="asyncstatusinternal-enumeration"></a>AsyncStatusInternal — Wyliczenie
 Obsługuje infrastrukturę biblioteki WRL i nie jest przeznaczona do użycia bezpośrednio w kodzie.  
   
 ## <a name="syntax"></a>Składnia  
   
-```  
+```cpp  
 enum AsyncStatusInternal;  
 ```  
   
@@ -37,20 +37,20 @@ enum AsyncStatusInternal;
  Określa mapowanie między wewnętrznego wyliczenia stanu operacji asynchronicznych i `Windows::Foundation::AsyncStatus` wyliczenia.  
   
 ## <a name="members"></a>Elementy członkowskie  
- *_Created*  
- Odpowiednikiem:: Windows::Foundation::AsyncStatus:: utworzone  
+ `_Created`  
+ Wartość równoważna `::Windows::Foundation::AsyncStatus::Created`  
   
- *_Started*  
- Odpowiednikiem:: Windows::Foundation::AsyncStatus:: pracę  
+ `_Started`  
+ Wartość równoważna `::Windows::Foundation::AsyncStatus::Started`  
   
- *_Completed*  
- Odpowiednikiem:: Windows::Foundation::AsyncStatus:: ukończone  
+ `_Completed`  
+ Wartość równoważna `::Windows::Foundation::AsyncStatus::Completed`  
   
- *_Cancelled*  
- Odpowiednikiem:: Windows::Foundation::AsyncStatus:: anulowane  
+ `_Cancelled`  
+ Wartość równoważna `::Windows::Foundation::AsyncStatus::Cancelled`  
   
- *_Błąd*  
- Odpowiednikiem:: Windows::Foundation::AsyncStatus::Error  
+ `_Error`  
+ Wartość równoważna `::Windows::Foundation::AsyncStatus::Error`  
   
 ## <a name="requirements"></a>Wymagania  
  **Nagłówek:** async.h  

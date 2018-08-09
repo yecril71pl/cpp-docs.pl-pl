@@ -23,27 +23,27 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: b33a591a2f38062b5eaf81b0f56ab73a36f4c90c
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 1880853c63a236e824f9b59156181dccb2bba819
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33876855"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39647449"
 ---
 # <a name="editing-parts-of-an-image-image-editor-for-icons"></a>Edytowanie części obrazu (Edytor obrazów dla ikon)
-Można wykonywać operacje edycji standard — wycinanie, kopiowanie, czyszczenia i przenoszenie — na [wybór](../windows/selecting-an-area-of-an-image-image-editor-for-icons.md), czy zaznaczenie jest całego obrazu lub tylko jego części. Ponieważ edytor obrazów używa Schowka systemu Windows, można przenieść obrazów między edytor obrazów i inne aplikacje dla systemu Windows.  
+Można wykonywać operacje edycji standard — wycinanie, kopiowanie, czyszczenie i przenoszenie — na [wybór](../windows/selecting-an-area-of-an-image-image-editor-for-icons.md)na to, czy zaznaczenie jest całego obrazu lub po prostu jego część. Ponieważ **obraz** Edytor używa **Schowka Windows**, mogą przesyłać obrazy między **obraz** edytora i inne aplikacje dla Windows.  
   
- Ponadto można zmienić zaznaczenia, czy zawiera on całego obrazu lub tylko części.  
+ Ponadto możesz zmienić rozmiar zaznaczenia, czy obejmuje cały obraz lub po prostu części.  
   
-### <a name="to-cut-the-current-selection-and-move-it-to-the-clipboard"></a>Aby wyciąć bieżące zaznaczenie i przenieś go do Schowka  
+### <a name="to-cut-the-current-selection-and-move-it-to-the-clipboard"></a>Wytnij bieżącego zaznaczenia i przenieś go do Schowka  
   
 1.  Kliknij przycisk **Wytnij** na **Edytuj** menu.  
   
 ### <a name="to-copy-the-selection"></a>Aby skopiować zaznaczenie  
   
-1.  Umieść wskaźnik wewnątrz obramowanie wyboru lub w dowolnym miejscu na nim, oprócz uchwytów zmiany rozmiaru.  
+1.  Umieść kursor wewnątrz obramowania zaznaczenia lub dowolnego miejsca na nim, z wyjątkiem uchwytów zmiany rozmiaru.  
   
-2.  Naciśnij i przytrzymaj **CTRL** klucza, przeciągnij zaznaczenie do nowej lokalizacji. Obszar oryginalnego zaznaczenia jest bez zmian.  
+2.  Naciśnij i przytrzymaj **Ctrl** klucza jako przeciągnij je do nowej lokalizacji. Obszar oryginalnego zaznaczenia pozostaje niezmieniony.  
   
 3.  Aby skopiować zaznaczenie do obrazu w jego bieżącej lokalizacji, kliknij poza kursor wyboru.  
   
@@ -51,39 +51,37 @@ Można wykonywać operacje edycji standard — wycinanie, kopiowanie, czyszczeni
   
 1.  Z **Edytuj** menu, wybierz **Wklej**.  
   
-     Zawartość Schowka otoczone obramowaniem wyboru pojawiają się w lewym górnym rogu okienka.  
+     Zawartość Schowka otoczone obramowaniem zaznaczenia, są wyświetlane w lewym górnym rogu okienka.  
   
-2.  Umieść kursor w obrębie zaznaczenia i przeciągnij obrazu do odpowiedniej lokalizacji na obrazie.  
+2.  Umieść kursor w granicach obramowania zaznaczenia, a następnie przeciągnij obraz do żądanej lokalizacji na obrazie.  
   
-3.  Aby móc zakotwiczyć obrazu w nowej lokalizacji, kliknij przycisk poza zaznaczenia.  
+3.  Aby móc zakotwiczyć obrazu w nowej lokalizacji, kliknij poza krawędź zaznaczenia.  
   
 ### <a name="to-delete-the-current-selection-without-moving-it-to-the-clipboard"></a>Aby usunąć bieżące zaznaczenie bez przenoszenia go do Schowka  
   
-1.  Z **Edytuj** menu, wybierz **usunąć**.  
+1.  Z **Edytuj** menu, wybierz **Usuń**.  
   
-     Pierwotnym obszarze zaznaczenie jest wypełniony bieżący kolor tła.  
+     Oryginalny obszar zaznaczenia jest wypełniany z bieżącym kolorem tła.  
   
     > [!NOTE]
-    >  Dostęp do wycinania, kopiowania, wklejania i usunąć poleceń, klikając prawym przyciskiem myszy okno Widok zasobów.  
+    >  Możesz uzyskać dostęp **Wytnij**, **kopiowania**, **Wklej**, i **Usuń** polecenia, klikając prawym przyciskiem myszy w **widok zasobów** okna.  
   
-### <a name="to-move-the-selection"></a>Aby przenieść zaznaczone  
+### <a name="to-move-the-selection"></a>Aby przenieść zaznaczenie  
   
-1.  Umieść wskaźnik wewnątrz obramowanie wyboru lub w dowolnym miejscu na nim, oprócz uchwytów zmiany rozmiaru.  
+1.  Umieść kursor wewnątrz obramowania zaznaczenia lub dowolnego miejsca na nim, z wyjątkiem uchwytów zmiany rozmiaru.  
   
 2.  Przeciągnij zaznaczenie do nowej lokalizacji.  
   
-3.  Aby móc zakotwiczyć zaznaczenia w obrazie w nowej lokalizacji, kliknij poza zaznaczenia.  
+3.  Aby móc zakotwiczyć zaznaczenia w obrazie w nowej lokalizacji, kliknij poza krawędź zaznaczenia.  
   
- Aby uzyskać więcej informacji na rysunku zaznaczeniem, zobacz [Tworzenie pędzla niestandardowego](../windows/creating-a-custom-brush-image-editor-for-icons.md).  
+ Aby uzyskać więcej informacji na temat rysowanie przy zaznaczeniem, zobacz [Tworzenie pędzla niestandardowego](../windows/creating-a-custom-brush-image-editor-for-icons.md).  
   
- Aby uzyskać informacje o dodawaniu zasobów do projektów zarządzanych, zobacz [zasobów w aplikacjach pulpitu](/dotnet/framework/resources/index) w *Przewodnik programistów platformy .NET Framework.* Aby uzyskać informacje na ręczne dodanie do projektów zarządzanych plików zasobów, uzyskiwanie dostępu do zasobów, wyświetlanie zasoby statyczne i przypisanie do właściwości ciągów zasobów, zobacz [tworzenie plików zasobów dla aplikacji pulpitu](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Informacje dotyczące globalizacji i lokalizacji zasobów w zarządzanych aplikacjach, zobacz [Globalizing i lokalizacja aplikacji .NET Framework](/dotnet/standard/globalization-localization/index).  
+ Aby uzyskać informacje na temat dodawania zasobów do projektów zarządzanych, zobacz [zasoby w aplikacjach pulpitu](/dotnet/framework/resources/index) w *przewodniku dewelopera .NET Framework*. Aby uzyskać informacji na temat ręcznego dodawania plików zasobów do projektów zarządzanych, uzyskiwania dostępu do zasobów, wyświetlania statycznych zasobów i przypisywania ciągów zasobów do właściwości, zobacz [Creating Resource Files dla aplikacji klasycznych](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Aby uzyskać informacji na temat globalizacja i lokalizacja zasobów w aplikacjach zarządzanych, zobacz [Globalizing i lokalizowanie aplikacji programu .NET Framework](/dotnet/standard/globalization-localization/index).  
   
- Wymagania  
-  
+## <a name="requirements"></a>Wymagania  
  Brak  
   
 ## <a name="see-also"></a>Zobacz też  
  [Klawisze skrótów](../windows/accelerator-keys-image-editor-for-icons.md)   
  [Edytowanie zasobów graficznych](../windows/editing-graphical-resources-image-editor-for-icons.md)   
  [Edytor obrazów dla ikon](../windows/image-editor-for-icons.md)
-

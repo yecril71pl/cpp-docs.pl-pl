@@ -17,25 +17,25 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 6c536d3708141250c6e0ab19cacb22fe989dc236
-ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
+ms.openlocfilehash: bad01416427d10a7bc8c6fdf96fce28948e6a833
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39568761"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39649370"
 ---
 # <a name="ftmbasereleasemarshaldata-method"></a>FtmBase::ReleaseMarshalData — Metoda
 Niszczy pakietów danych zorganizowanej.  
   
 ## <a name="syntax"></a>Składnia  
   
-```  
+```cpp  
 STDMETHODIMP ReleaseMarshalData(  
    __in IStream *pStm  
 ) override;  
 ```  
   
-#### <a name="parameters"></a>Parametry  
+### <a name="parameters"></a>Parametry  
  *pStm*  
  Wskaźnik do strumienia, który zawiera pakiet danych, które mają zostać zniszczone.  
   

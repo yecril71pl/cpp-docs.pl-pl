@@ -17,32 +17,30 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: d7cb78eb93a5817656b6d576a7ee5f88b7aa9e9c
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 310e26d4814b621cf9c3338857dfc9f97cd42b96
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33857002"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39650166"
 ---
 # <a name="changing-the-magnification-factor-image-editor-for-icons"></a>Zmiana współczynnika powiększenia (Edytor obrazów dla ikon)
-Domyślnie edytor obrazów Wyświetla widok w lewym okienku na rzeczywisty rozmiar i widoku w okienku po prawej stronie w rzeczywistym rozmiarze 6 razy. Współczynnika powiększenia (widoczna na pasku stanu w dolnej części obszaru roboczego) jest stosunek rzeczywisty rozmiar obrazu wyświetlanego rozmiar. Współczynnik domyślna to 6 i zakres to od 1 do 10.  
+Domyślnie Edytor obrazu Wyświetla widok w lewym okienku na rzeczywisty rozmiar i widok, w okienku po prawej stronie w rzeczywistym rozmiarze 6 razy. Współczynnika powiększenia (widoczny na pasku stanu w dolnej części obszaru roboczego) jest stosunek między rzeczywisty rozmiar obrazu i wyświetlany rozmiar. Domyślny współczynnik wynosi 6 i zakres jest z zakresu od 1 do 10.  
   
-### <a name="to-change-the-magnification-factor"></a>Aby zmienić współczynnika powiększenia  
+### <a name="to-change-the-magnification-factor"></a>Aby zmienić stopień powiększenia  
   
-1.  Wybierz **edytor obrazów** okienko współczynnika powiększenia, którego chcesz zmienić.  
+1.  Wybierz **edytora obrazów** okienko współczynnika powiększenia, którego chcesz zmienić.  
   
-2.  Na [paska narzędzi edytora obrazów](../windows/toolbar-image-editor-for-icons.md), kliknij strzałkę po prawej stronie [narzędzie Magnify](../windows/toolbar-image-editor-for-icons.md) i wybierz współczynnika powiększenia z podmenu: **1 X**, **2 X**, **6 X**, lub **8 X**.  
+2.  Na [paska narzędzi edytora obrazów](../windows/toolbar-image-editor-for-icons.md), kliknij strzałkę po prawej stronie [narzędzie Powiększenie](../windows/toolbar-image-editor-for-icons.md) i wybierz współczynnika powiększenia z podmenu: **1 X**, **2 X**, **6 X**, lub **8 X**.  
   
     > [!NOTE]
-    >  Aby wybrać współczynnika powiększenia wymienionych w **Magnify** narzędzie, użyj klawiszy skrótów.  
+    >  Aby wybrać współczynnika powiększenia, inne niż te wymienione w **Magnify** narzędzie, korzystanie z klawiszy skrótów.  
   
- Aby uzyskać informacje o dodawaniu zasobów do projektów zarządzanych, zobacz [zasobów w aplikacjach pulpitu](/dotnet/framework/resources/index) w *Przewodnik programistów platformy .NET Framework.* Aby uzyskać informacje na ręczne dodanie do projektów zarządzanych plików zasobów, uzyskiwanie dostępu do zasobów, wyświetlanie zasoby statyczne i przypisanie do właściwości ciągów zasobów, zobacz [tworzenie plików zasobów dla aplikacji pulpitu](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Informacje dotyczące globalizacji i lokalizacji zasobów w zarządzanych aplikacjach, zobacz [Globalizing i lokalizacja aplikacji .NET Framework](/dotnet/standard/globalization-localization/index).  
+ Aby uzyskać informacje na temat dodawania zasobów do projektów zarządzanych, zobacz [zasoby w aplikacjach pulpitu](/dotnet/framework/resources/index) w *przewodniku dewelopera .NET Framework*. Aby uzyskać informacji na temat ręcznego dodawania plików zasobów do projektów zarządzanych, uzyskiwania dostępu do zasobów, wyświetlania statycznych zasobów i przypisywania ciągów zasobów do właściwości, zobacz [Creating Resource Files dla aplikacji klasycznych](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Aby uzyskać informacji na temat globalizacja i lokalizacja zasobów w aplikacjach zarządzanych, zobacz [Globalizing i lokalizowanie aplikacji programu .NET Framework](/dotnet/standard/globalization-localization/index).  
   
- Wymagania  
-  
+## <a name="requirements"></a>Wymagania  
  Brak  
   
 ## <a name="see-also"></a>Zobacz też  
  [Klawisze skrótów](../windows/accelerator-keys-image-editor-for-icons.md)   
  [Okienka](../windows/window-panes-image-editor-for-icons.md)
-

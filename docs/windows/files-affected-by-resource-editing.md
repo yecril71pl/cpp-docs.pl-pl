@@ -16,23 +16,21 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: b165dca13e30e12e1a4fdc85056920b7c10ee586
-ms.sourcegitcommit: d06966efce25c0e66286c8047726ffe743ea6be0
+ms.openlocfilehash: acdf7a2915fe17cba393d14d9d287a89515695fc
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36238659"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39650586"
 ---
 # <a name="files-affected-by-resource-editing"></a>Pliki, których dotyczy edytowanie zasobów
-Środowiska Visual Studio działa pliki przedstawione w poniższej tabeli w podczas sesji edytowania zasobów.  
+W środowisku Visual Studio współpracuje z plików pokazano w poniższej tabeli w czasie sesji edytowania zasobów.  
   
 |Nazwa pliku|Opis|  
 |---------------|-----------------|  
-|Resource.h|Plik nagłówka wygenerowane przez środowisko deweloperskie; zawiera definicje symbolu. (Dołącz ten plik w kontroli źródła).|  
-|Filename.APS|Binarna wersja bieżącego pliku skryptu zasobu; używany do szybkiego ładowania.<br /><br /> Edytory zasobów bezpośrednio odczytu nie .rc lub resource.h plików. Kompilator zasobów kompiluje je w .aps pliki, które są używane przez edytory zasobów. Ten plik jest to krok kompilacji i przechowuje dane tylko symboliczne danych. Jak w zwykłym skompilować procesu, informacje, które nie jest symboliczne (na przykład komentarzy) zostaną odrzucone podczas procesu kompilacji. Zawsze, gdy plik .aps pobiera synchronizację z plik .rc, zostanie ponownie wygenerowany plik .rc (na przykład podczas zapisywania, Edytor zasobów zastępuje plik .rc i plik resource.h). Zmiany wprowadzone w samych zasobach pozostaną dołączone w plik .rc, ale komentarze zostać utracone po plik .rc jest zastępowany. Aby uzyskać informacje na temat sposobu Zachowaj komentarze, zobacz [tym zasobów w czasie kompilowania](../windows/how-to-include-resources-at-compile-time.md). (Zazwyczaj nie należy używać pliku .aps w kontroli źródła.)|  
-|.RC —|Plik skryptu zasobu, który zawiera skrypt zasobów w bieżącym projekcie. Jest on zastępowany przy użyciu pliku .aps zawsze, gdy zostanie zapisany. (Dołącz ten plik w kontroli źródła).|  
-  
-
+|Resource.h|Plik nagłówkowy generowane przez środowisko programistyczne; zawiera definicje symbolu. (Dołącz ten plik w kontroli źródła).|  
+|Filename.APS|Binarna wersja bieżącego pliku skryptu zasobów; używany do szybkiego ładowania.<br /><br /> Edytory zasobów bezpośrednio odczytu nie plików .rc lub resource.h. Kompilator zasobów kompiluje je na .aps pliki, które są używane przez edytory zasobów. Ten plik jest to krok kompilacji i tylko przechowuje dane symboliczne. Jak zwykłym skompilować procesu, informacje symboliczne (na przykład komentarzy) jest pomijany w procesie kompilacji. Zawsze, gdy plik .aps pobiera synchronizację z pliku .rc, zostanie ponownie wygenerowany plik .rc (na przykład podczas zapisywania, Edytor zasobów zastąpi plików .rc i pliku resource.h). Zmiany wprowadzone w zasobach pozostaną dołączone w pliku .rc, ale komentarze zostać utracone po plik .rc jest zastępowany. Aby uzyskać informacje na temat sposobu zachowanie komentarzy, wyświetlić [tym zasobów w czasie kompilowania](../windows/how-to-include-resources-at-compile-time.md). (Zazwyczaj nie należy używać pliku .aps w kontroli źródła.)|  
+|.RC|Plik skryptu zasobu, który zawiera skrypt dla zasobów w bieżącym projekcie. Ten plik jest nadpisywany przez plik .aps przy każdym zapisywaniu. (Dołącz ten plik w kontroli źródła).|  
   
 ## <a name="requirements"></a>Wymagania  
  Win32  

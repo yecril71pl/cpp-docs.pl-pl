@@ -13,12 +13,12 @@ ms.author: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 4cd8e8c6e3b9626000a8bef3d86a89f5e122d611
-ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
+ms.openlocfilehash: 22f90be7d89a006ccbfdfde2f4c2580a7b2a13de
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39571532"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39643848"
 ---
 # <a name="desktop-applications-visual-c"></a>Aplikacje klasyczne (Visual C++)
 A *aplikacja komputerowa* w języku C++ jest natywna aplikacja, które ma dostęp do pełnego zestawu interfejsów API Windows i albo działa w oknie lub w konsoli programu system. Aplikacji klasycznych w języku C++ uruchomić na Windows XP do systemu Windows 10 (chociaż Windows XP nie jest już oficjalnie obsługiwany wiąże się z wielu interfejsów API Windows, które zostały wprowadzone od tego czasu).
@@ -26,11 +26,12 @@ A *aplikacja komputerowa* w języku C++ jest natywna aplikacja, które ma dostę
 Aplikacja komputerowa różni się od aplikacji uniwersalnych platformy Windows (UWP), które mogą być uruchamiane na komputerach z systemem Windows 10, a także na konsoli XBox, Windows Phone, urządzeniu Surface Hub i innych urządzeń. Aby uzyskać więcej informacji na temat klasycznych programu vs. Aplikacje platformy uniwersalnej systemu Windows, zobacz [wybierz swoją technologię](https://msdn.microsoft.com/library/windows/desktop/dn614993\(v=vs.85\).aspx).  
 
 
-**Desktop Bridge** zestawu Windows API w systemu Windows 10 można spakować istniejących aplikacji pulpitu lub obiektu COM jako aplikację platformy uniwersalnej systemu Windows, a także dodawać funkcje platformy uniwersalnej systemu Windows, takie jak touch lub wywoływać interfejsy API z nowoczesnym. Aplikacja platformy uniwersalnej systemu Windows można również dodać do pulpitu rozwiązania w programie Visual Studio i pakiet je razem w jednym pakietu i komunikować się między nimi za pomocą interfejsów API Windows.  
+### <a name="desktop-bridge"></a>Desktop Bridge
+W systemie Windows 10 można pakietu istniejących aplikacji pulpitu lub obiektu COM jako aplikację platformy uniwersalnej systemu Windows i Dodaj funkcje platformy uniwersalnej systemu Windows, takie jak touch lub wywoływać interfejsy API z nowoczesnych zestawu Windows API. Aplikacja platformy uniwersalnej systemu Windows można również dodać do pulpitu rozwiązania w programie Visual Studio i pakiet je razem w jednym pakietu i komunikować się między nimi za pomocą interfejsów API Windows.  
    
 W Visual Studio 2017 w wersji 15.4 lub nowszy można utworzyć projekt pakietu aplikacji Windows, do znacznego uproszczenia pracy pakowania swoją istniejącą aplikację pulpitu. Kilka ograniczenia mają zastosowanie w odniesieniu do rejestru, które wywołuje lub korzysta z interfejsów API aplikacji pulpitu, ale w wielu przypadkach można utworzyć ścieżki alternatywnej kodu do osiągnięcia podobne funkcje podczas uruchamiania w pakiecie aplikacji. Aby uzyskać więcej informacji, zobacz [Desktop Bridge](/windows-uwp/porting/desktop-to-uwp-root).  
   
- **Terminologia**  
+### <a name="terminology"></a>Terminologia  
   
 -   A *Win32* aplikacja jest Windows, aplikacji klasycznych w języku C++, który może zgłaszać korzystać z natywnych [interfejsów API języka C Windows i/lub interfejsów API modelu COM](https://msdn.microsoft.com/library/windows/desktop/ff818516\(v=vs.85\).aspx) CRT i standardowe biblioteki interfejsów API i 3 bibliotek innych firm. Aplikacja Win32, który działa w oknie wymaga deweloperowi jawnie pracować Windows komunikaty wewnątrz funkcji procedury Windows. Niezależnie od nazwy jest aplikacją systemu Win32 może być kompilowane jako (x86) 32-bitowy lub 64-bitowych (x64) binarny. W programie Visual Studio IDE to samo warunków x86 i Win32.  
   

@@ -17,21 +17,20 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 687a8a70d7f0a5381160a6515c80f6940cc0a434
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 96843c9d977b15d7fe2c645c8f655cd59a42e401
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33891288"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39642051"
 ---
 # <a name="viprogid"></a>vi_progid
-Określa niezależny od wersji formularza identyfikatora ProgID.  
+Określa formularza niezależny od wersji identyfikatora ProgID.  
   
 ## <a name="syntax"></a>Składnia  
   
 ```  
-  
-      [ vi_progid(  
+[ vi_progid(  
    name  
 ) ];  
 ```  
@@ -40,35 +39,35 @@ Określa niezależny od wersji formularza identyfikatora ProgID.
  *Nazwa*  
  Identyfikator ProgID niezależny od wersji reprezentujący obiekt.  
   
- ProgID stanowi wersję identyfikator klasy (CLSID) używany do identyfikowania obiektów COM/ActiveX zrozumiałą dla użytkownika.  
+ ProgID przedstawiają czytelny dla człowieka wersję identyfikator klasy (CLSID) używany do identyfikowania obiektów COM/ActiveX.  
   
 ## <a name="remarks"></a>Uwagi  
- **Vi_progid —** atrybutu C++ pozwala określić identyfikator ProgID niezależny od wersji dla obiekt COM. Identyfikator ProgID ma formę *name1.name2.version*. Nie ma ProgID niezależny od wersji *wersji*. Można określić zarówno **progid** i **vi_progid —** atrybuty klasy coclass. Jeśli nie określisz **vi_progid —**, wersji niezależne ProgID jest wartość określoną przez [progid](../windows/progid.md) atrybutu.  
+ **Vi_progid —** atrybut C++ pozwala określić identyfikator ProgID niezależny od wersji dla obiektu COM. Identyfikator ProgID ma formę *name1.name2.version*. Identyfikator ProgID niezależny od wersji nie ma *wersji*. Można określić zarówno `progid` i **vi_progid —** atrybuty na `coclass`. Jeśli nie określisz **vi_progid —**, niezależnie od wersji ProgID jest wartość określoną przez [progid](../windows/progid.md) atrybutu.  
   
- **vi_progid —** oznacza **coclass** atrybutu, oznacza to, że jeśli określisz **vi_progid —**, jest odpowiednikiem określenie **coclass** i **vi_progid —** atrybutów.  
+ **vi_progid —** oznacza `coclass` atrybutu, oznacza to, jeśli określisz **vi_progid —**, jest tak samo jak określanie `coclass` i **vi_progid —** atrybutów.  
   
- **Vi_progid —** atrybutu powoduje, że klasa automatycznie rejestrowana o określonej nazwie. .Idl wygenerowanego pliku nie zostanie wyświetlona wartość identyfikatora ProgID.  
+ **Vi_progid —** atrybutu powoduje, że klasy do zarejestrowania się automatycznie w ramach określonej nazwy. Pliku .idl wygenerowanego identyfikatora ProgID wartości nie są wyświetlane.  
   
- W projektach ATL Jeśli [coclass](../windows/coclass.md) atrybut również występuje, określony identyfikator ProgID jest używany przez **GetVersionIndependentProgID** — funkcja (wstawiane przez **coclass** atrybut).  
+ W projektach ATL Jeśli [coclass](../windows/coclass.md) atrybut również występuje, określony identyfikator ProgID jest używany przez `GetVersionIndependentProgID` — funkcja (wstawione przez `coclass` atrybutu).  
   
 ## <a name="example"></a>Przykład  
  Zobacz [coclass](../windows/coclass.md) przykład użycie próbki **vi_progid —**.  
   
 ## <a name="requirements"></a>Wymagania  
   
-### <a name="attribute-context"></a>Atrybut kontekstu  
+### <a name="attribute-context"></a>Kontekst atrybutu  
   
 |||  
 |-|-|  
-|**Dotyczy**|**Klasa**, `struct`|  
+|**Dotyczy**|**Klasa**, **— struktura**|  
 |**Powtarzalne**|Nie|  
 |**Wymaganych atrybutów**|Brak|  
 |**Nieprawidłowe atrybuty**|Brak|  
   
- Aby uzyskać więcej informacji na temat konteksty atrybutu, zobacz [konteksty atrybutu](../windows/attribute-contexts.md).  
+ Aby uzyskać więcej informacji na temat konteksty atrybutu zobacz [konteksty atrybutu](../windows/attribute-contexts.md).  
   
 ## <a name="see-also"></a>Zobacz też  
  [Atrybuty IDL](../windows/idl-attributes.md)   
- [Element TypeDef, Enum, Unii i struct — atrybuty](../windows/typedef-enum-union-and-struct-attributes.md)   
+ [Element TypeDef, Enum, Union i struct — atrybuty](../windows/typedef-enum-union-and-struct-attributes.md)   
  [Atrybuty klasy](../windows/class-attributes.md)   
  [Klucz identyfikatora progID](http://msdn.microsoft.com/library/windows/desktop/dd542719)   

@@ -1,5 +1,5 @@
 ---
-title: Formanty niestandardowe w edytorze okien dialogowych | Dokumentacja firmy Microsoft
+title: Kontrolki niestandardowe w edytorze okien dialogowych | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -21,36 +21,36 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 2c2bca249958e4d25ab5377540525da34802ac04
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 0b197baa61d741452219529e44be0e9ba1a154ce
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33880247"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39651054"
 ---
 # <a name="custom-controls-in-the-dialog-editor"></a>Formanty niestandardowe w Edytorze okien dialogowych
-Edytor okien dialogowych umożliwia użycie istniejących "niestandardowe" lub "użytkownika" formantów w szablonie — okno dialogowe.  
+Edytor okien dialogowych pozwala Użyj istniejącej "niestandardowe" lub "user" kontrolek w szablonu okna dialogowego.  
   
 > [!NOTE]
->  Niestandardowe formanty w tym sensie są nie należy mylić z formantami ActiveX. Formanty ActiveX były nazywane niestandardowych formantów OLE. Ponadto nie należy mylić tych kontrolek z formantami rysowanych przez właściciela w systemie Windows.  
+>  Niestandardowe formanty w tym sensie są nie należy mylić z kontrolkami ActiveX. Kontrolki ActiveX były nazywane niestandardowych formantów OLE. Ponadto nie należy mylić tych kontrolek z kontrolki rysowane przez właściciela z Windows.  
   
- Ta funkcja ma na celu umożliwiają używanie formantów innych niż te dostarczone przez system Windows. W czasie wykonywania formantu jest skojarzony z klasy okna (nie taka sama jak klasa C++). Najpopularniejszym sposobem wykonania tego samego zadania jest zainstalować żadnego formantu, takich jak kontrola statycznych, w oknie dialogowym. Następnie w czasie wykonywania w [OnInitDialog](../mfc/reference/cdialog-class.md#oninitdialog) funkcji, Usuń ten formant i Zamień własne kontrolki niestandardowej.  
+ Ta funkcja jest przeznaczona do umożliwiają używanie kontrolek w inne niż te dostarczone przez Windows. W czasie wykonywania kontrolka jest skojarzony z klasy okna (nie taka sama jak klasa C++). Jest bardziej typowym sposobem wykonania tego samego zadania do zainstalowania dowolnej kontrolki, takie jak formant statyczny w oknie dialogowym. Następnie w czasie wykonywania w [OnInitDialog](../mfc/reference/cdialog-class.md#oninitdialog) funkcji, Usuń tę kontrolkę i zastąp go własny niestandardowy formant.  
   
- Jest to technika stary. Dzisiaj zalecana w większości przypadków zapisu formantu ActiveX lub podklasy formantu wspólnego systemu Windows.  
+ Jest to technika stary. Obecnie zaleca w większości przypadków można zapisać formantu ActiveX lub podklasy formantu wspólnego Windows.  
   
- W przypadku tych kontrolek niestandardowych jest ograniczona do:  
+ W przypadku kontrolek niestandardowych są ograniczone do:  
   
 -   Ustawianie lokalizacji w oknie dialogowym.  
   
--   Wpisywanie podpis.  
+-   Wpisywanie podpisu.  
   
--   Identyfikowanie nazwę klasy systemu Windows formantu (kod aplikacji należy zarejestrować formant o tej nazwie).  
+-   Identyfikowanie nazwę klasy Windows formantu (kod aplikacji należy go zarejestrować przy użyciu tej nazwy).  
   
--   Wpisywanie 32-bitową wartość szesnastkowa, która ustawia styl formantu.  
+-   Wpisując wartość szesnastkową 32-bitowe i ustawia styl formantu.  
   
--   Ustawienie rozszerzonego stylu.  
+-   Ustawianie rozszerzonego stylu.  
   
- Aby uzyskać informacje o dodawaniu zasobów do projektów zarządzanych, zobacz [zasobów w aplikacjach pulpitu](/dotnet/framework/resources/index) w *Przewodnik programistów platformy .NET Framework.* Aby uzyskać informacje na ręczne dodanie do projektów zarządzanych plików zasobów, uzyskiwanie dostępu do zasobów, wyświetlanie zasoby statyczne i przypisanie do właściwości ciągów zasobów, zobacz [tworzenie plików zasobów dla aplikacji pulpitu](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Informacje dotyczące globalizacji i lokalizacji zasobów w zarządzanych aplikacjach, zobacz [Globalizing i lokalizacja aplikacji .NET Framework](/dotnet/standard/globalization-localization/index).  
+ Aby uzyskać informacje na temat dodawania zasobów do projektów zarządzanych, zobacz [zasoby w aplikacjach pulpitu](/dotnet/framework/resources/index) w *przewodniku dewelopera .NET Framework*. Aby uzyskać informacji na temat ręcznego dodawania plików zasobów do projektów zarządzanych, uzyskiwania dostępu do zasobów, wyświetlania statycznych zasobów i przypisywania ciągów zasobów do właściwości, zobacz [Creating Resource Files dla aplikacji klasycznych](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Aby uzyskać informacji na temat globalizacja i lokalizacja zasobów w aplikacjach zarządzanych, zobacz [Globalizing i lokalizowanie aplikacji programu .NET Framework](/dotnet/standard/globalization-localization/index).  
   
 ## <a name="requirements"></a>Wymagania  
  Win32  
@@ -58,4 +58,3 @@ Edytor okien dialogowych umożliwia użycie istniejących "niestandardowe" lub "
 ## <a name="see-also"></a>Zobacz też  
  [Formanty w oknach dialogowych](../windows/controls-in-dialog-boxes.md)   
  [Kontrolki](../mfc/controls-mfc.md)
-

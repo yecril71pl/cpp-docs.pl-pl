@@ -15,12 +15,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: fc55ab1dad4ee9ba088aaae92f76e58b29683b29
-ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
+ms.openlocfilehash: b74f4ca4ab2940dde9dfc567b8fa45ea8f03279e
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39569807"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39642773"
 ---
 # <a name="handle-to-object-operator---c-component-extensions"></a>Operator uchwytu do obiektu (^) (C++ Component Extensions)
 *Deklarator obsługi* (`^`, wymawiane "hat"), modyfikuje typ [specyfikator](../cpp/overview-of-declarators.md) oznacza, że deklarowany obiekt powinien zostać automatycznie usunięty gdy system określi, że obiekt jest nie będą już dostępne.  
@@ -36,7 +36,7 @@ ms.locfileid: "39569807"
  Aby uzyskać informacje na temat sposobu tworzenia wystąpienia obiektu, zobacz [ref nowe](../windows/ref-new-gcnew-cpp-component-extensions.md).  
   
 ## <a name="requirements"></a>Wymagania  
- — Opcja kompilatora: **/ZW**  
+ — Opcja kompilatora: `/ZW`  
   
 ## <a name="common-language-runtime"></a>środowiska uruchomieniowe w trakcie wykonania 
  System używa środowiska CLR *modułu zbierającego elementy bezużyteczne* mechanizm do określenia, czy obiekt jest już używany i czy można je usunąć. Środowisko uruchomieniowe języka wspólnego utrzymuje stertę, do której przydziela obiekty i zastosowań zarządzanych odwołania (zmiennych) w programie wskazujących lokalizację obiektów na stosie. Gdy obiekt nie jest już używany, pamięć, którą zajmował na stercie jest zwalniana. Okresowo moduł odśmiecania pamięci kompaktuje stos w celu lepszego wykorzystania zwolnionej pamięci. Przy kompaktowaniu stosu obiekty można przenosić na stosie, co unieważnia lokalizacje przewidziane przez zarządzane odwołania. Jednak moduł odśmiecania pamięci zna lokalizację wszystkich zarządzanych odwołań i automatycznie aktualizuje je, aby wskazać bieżące położenie obiektów na stosie.  
@@ -48,7 +48,6 @@ ms.locfileid: "39569807"
  Aby uzyskać więcej informacji, zobacz [porady: deklarowanie dojść w typach natywnych](../dotnet/how-to-declare-handles-in-native-types.md).  
   
 ### <a name="examples"></a>Przykłady  
- **Przykład**  
   
  W tym przykładzie przedstawiono sposób tworzenia wystąpienia typu odwołania na stosie zarządzanym.  Ten przykład pokazuje również, że można zainicjować dojście w innym, co spowoduje dwa odwołania do tego samego obiektu na stercie zarządzanej, zebranych elementów bezużytecznych. Należy zauważyć, że przypisanie [nullptr](../windows/nullptr-cpp-component-extensions.md) do określonego dojścia nie oznacza obiektu do wyrzucania elementów bezużytecznych.  
   
@@ -77,14 +76,10 @@ int main() {
 }  
 ```  
   
- **Output**  
-  
 ```Output  
 1  
 2  
 ```  
-  
- **Przykład**  
   
  Poniższy przykład pokazuje sposób deklarowania dojścia do obiektu w zarządzanym stosie, gdzie typ obiektu jest typem wartości spakowanej. Przykład pokazuje także sposób uzyskiwania typ wartości z obiektu w ramce.  
   
@@ -109,18 +104,14 @@ int main() {
    int n = 100;  
    Test(n);  
 }  
-```  
-  
- **Output**  
+```   
   
 ```Output  
 Not a boxed int  
 100  
 ```  
   
- **Przykład**  
-  
- Ten przykład pokazuje, że typowe idiom języka C++ użycia punktu do dowolnego obiektu za pomocą wskaźnika void * jest zastępowany przez obiekt ^, który ma dojścia do każdej klasy odniesienia. Pokazuje również, że wszystkie typy, takie jak tablice i pełnomocnicy, mogą być konwertowane na uchwyt obiektu.  
+ Ten przykład pokazuje, że typowe idiom języka C++ użycia `void*` wskaźnik, aby wskazywał dowolny obiekt został zastąpiony `Object^`, który ma dojścia do każdej klasy odniesienia. Pokazuje również, że wszystkie typy, takie jak tablice i pełnomocnicy, mogą być konwertowane na uchwyt obiektu.  
   
 ```cpp  
 // mcppv2_handle_3.cpp  
@@ -157,8 +148,6 @@ int main() {
 }  
 ```  
   
- **Output**  
-  
 ```Output  
 Type is System.Collections.ArrayList  
   
@@ -166,8 +155,6 @@ Type is System.Int32
   
 Type is MyDel  
 ```  
-  
- **Przykład**  
   
  Niniejszy przykład pokazuje, że można usunąć uchwyt i czy członek jest dostępny za pośrednictwem usuniętego uchwytu odwołania.  
   
@@ -209,17 +196,13 @@ int main() {
 }  
 ```  
   
- **Output**  
-  
 ```Output  
 Array value: 7  
   
 Cannot access array element 11, size is 10  
 ```  
   
- **Przykład**  
-  
- Ten przykład pokazuje, że odwołania natywnego (`&`) nie można powiązać z `int` składowej typu zarządzanego jako `int` mogą być przechowywane w stosie zebranych w pamięci i odwołania natywne nie śledzą ruchu obiektu w zarządzanym stosie. Poprawka jest używana do zmiennej lokalnej lub zmienić `&` do `%`, dzięki czemu odwołaniem śledzącym.  
+ Ten przykład pokazuje, że odwołania natywnego (`&`) nie można powiązać z **int** składowej typu zarządzanego jako **int** mogą być przechowywane w stosie zebranych w pamięci i odwołania natywne nie śledzą Przenoszenie obiektu w zarządzanym stosie. Poprawka jest używana do zmiennej lokalnej lub zmienić `&` do `%`, dzięki czemu odwołaniem śledzącym.  
   
 ```cpp  
 // mcppv2_handle_5.cpp  

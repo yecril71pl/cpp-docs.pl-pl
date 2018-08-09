@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: fd2f65bb86cdd77d4e285cee5603416fa629f940
-ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
+ms.openlocfilehash: 780fd8b6866af05007d9c99e3165b149eab956bd
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39466351"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39642906"
 ---
 # <a name="createactivationfactory-function"></a>CreateActivationFactory — Funkcja
 Tworzy fabrykę, która tworzy wystąpienia określonej klasy, które można uaktywnić przez środowisko wykonawcze Windows.  
@@ -37,7 +37,7 @@ template<typename Factory>
      _Outptr_ IUnknown **ppFactory) throw();  
 ```  
   
-#### <a name="parameters"></a>Parametry  
+### <a name="parameters"></a>Parametry  
  *flagi*  
  Kombinacji jednego lub więcej [RuntimeClassType](../windows/runtimeclasstype-enumeration.md) wartości wyliczenia.  
   

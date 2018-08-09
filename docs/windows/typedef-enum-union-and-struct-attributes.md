@@ -1,5 +1,5 @@
 ---
-title: Element TypeDef, Enum, Unii i struct — atrybuty | Dokumentacja firmy Microsoft
+title: Element TypeDef, Enum, Union i struct — atrybuty | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -19,101 +19,101 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: c14881afd000dc5fb4223a2ecfa9dcdc67e7b541
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 2e4e8ad94e96c6bfc45102f1c970476c484d756f
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33891834"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39649126"
 ---
 # <a name="typedef-enum-union-and-struct-attributes"></a>Atrybuty Typedef, Enum, Union oraz Struct
-Następujące atrybuty dotyczą [typedef](http://msdn.microsoft.com/en-us/cc96cf26-ba93-4179-951e-695d1f5fdcf1), [struktury](../cpp/struct-cpp.md), i [wyliczenia](../cpp/enumerations-cpp.md) słowa kluczowe języka C++.  
+Następujące atrybuty dotyczą [typedef](http://msdn.microsoft.com/cc96cf26-ba93-4179-951e-695d1f5fdcf1), [struktury](../cpp/struct-cpp.md), i [wyliczenia](../cpp/enumerations-cpp.md) słów kluczowych języka C++.  
   
 ### <a name="typedef"></a>— klasa typedef  
   
 |Atrybut|Opis|  
 |---------------|-----------------|  
-|[Case](../windows/case-cpp.md)|Używane z [switch_type —](../windows/switch-type.md) atrybutu w **Unii**.|  
+|[przypadek](../windows/case-cpp.md)|Używane z [switch_type —](../windows/switch-type.md) atrybutu w **Unii**.|  
 |[custom](../windows/custom-cpp.md)|Umożliwia zdefiniowanie własnego atrybutu.|  
-|[export](../windows/export.md)|Powoduje, że struktura danych mają być umieszczone w pliku .idl.|  
-|[first_is](../windows/first-is.md)|Określa indeks pierwszego elementu tablicy ma zostać przesłany.|  
-|[helpcontext](../windows/helpcontext.md)|Określa identyfikator kontekstu, która pozwala użytkownikowi oglądać informacje o tym elemencie w pliku pomocy.|  
-|[helpfile](../windows/helpfile.md)|Ustawia nazwę pliku pomocy dla biblioteki typów.|  
-|[helpstring](../windows/helpstring.md)|Określa ciąg znaków używany do opisania elementu, którego dotyczy.|  
+|[export](../windows/export.md)|Powoduje to struktura danych, należy umieścić w pliku .idl.|  
+|[first_is](../windows/first-is.md)|Określa indeks pierwszego elementu tablicy mają być przekazywane.|  
+|[helpcontext](../windows/helpcontext.md)|Określa identyfikator kontekstu, który pozwala użytkownikowi oglądać informacje o tym elemencie w pliku pomocy.|  
+|[helpfile](../windows/helpfile.md)|Określa nazwę pliku pomocy dla biblioteki typów.|  
+|[helpstring](../windows/helpstring.md)|Określa ciąg znaków, który jest używany do opisania elementu, do której jest stosowany.|  
 |[library_block](../windows/library-block.md)|Umieszcza konstrukcję wewnątrz bloku biblioteki pliku .idl.|  
-|[ptr](../windows/ptr.md)|Określa wskaźnik jako pełne wskaźnika.|  
-|[public](../windows/public-cpp-attributes.md)|Zapewnia, że typem typedef przejdzie do biblioteki typów nawet wtedy, gdy go nie odwołuje się w pliku .idl.|  
-|[ref](../windows/ref-cpp.md)|Identyfikuje wskaźnik odwołania.|  
-|[switch_is](../windows/switch-is.md)|Określa wyrażenie lub identyfikator działający jako discriminant Unii, który wybiera element członkowski typu union.|  
+|[ptr](../windows/ptr.md)|Określa wskaźnik jako pełna wskaźnika.|  
+|[public](../windows/public-cpp-attributes.md)|Zapewnia, że typedef zostaną umieszczone w biblioteki typów, nawet wtedy, gdy go nie odwołuje się w pliku .idl.|  
+|[ref](../windows/ref-cpp.md)|Określa odwołanie do wskaźnika.|  
+|[switch_is](../windows/switch-is.md)|Określa wyrażenie lub identyfikator działający jako discriminant Unii, który wybiera składowa typu Unii.|  
 |[switch_type](../windows/switch-type.md)|Określa typ zmiennej używanej jako discriminant Unii.|  
-|[unique](../windows/unique-cpp.md)|Określa unikatowy wskaźnika.|  
-|[wire_marshal](../windows/wire-marshal.md)|Określa typ danych, który będzie używany do przesłania zamiast typu dane specyficzne dla aplikacji.|  
+|[unique](../windows/unique-cpp.md)|Określa unikatowy wskaźnik.|  
+|[wire_marshal](../windows/wire-marshal.md)|Określa typ danych, który będzie używany do przekazywania zamiast typu danych specyficznych dla aplikacji.|  
   
 ### <a name="enum"></a>enum  
   
 |Atrybut|Opis|  
 |---------------|-----------------|  
 |[custom](../windows/custom-cpp.md)|Umożliwia zdefiniowanie własnego atrybutu.|  
-|[export](../windows/export.md)|Powoduje, że struktura danych mają być umieszczone w pliku .idl.|  
-|[uuid](../windows/uuid-cpp-attributes.md)|Określa unikatowy identyfikator dla klasy ani interfejsu.|  
-|[v1_enum](../windows/v1-enum.md)|Określa, że przekazywane na określony typ wyliczeniowy jako jednostki 32-bitowe zamiast domyślnego 16-bitowych.|  
+|[export](../windows/export.md)|Powoduje to struktura danych, należy umieścić w pliku .idl.|  
+|[uuid](../windows/uuid-cpp-attributes.md)|Określa unikatowy identyfikator dla klasy lub interfejsu.|  
+|[v1_enum](../windows/v1-enum.md)|Określa, że przekazywane określonego typu wyliczenia jako jednostki 32-bitowych zamiast domyślnego 16-bitowych.|  
   
 ### <a name="union"></a>unia  
   
 |Atrybut|Opis|  
 |---------------|-----------------|  
 |[custom](../windows/custom-cpp.md)|Umożliwia zdefiniowanie własnego atrybutu.|  
-|[export](../windows/export.md)|Powoduje, że struktura danych mają być umieszczone w pliku .idl.|  
-|[first_is](../windows/first-is.md)|Określa indeks pierwszego elementu tablicy ma zostać przesłany.|  
-|[last_is](../windows/last-is.md)|Określa indeks przekazywanych ostatnim elemencie tablicy.|  
-|[length_is](../windows/length-is.md)|Określa liczbę elementów tablicy ma zostać przesłany.|  
-|[max_is](../windows/max-is.md)|Określa maksymalną wartość indeksu tablicy prawidłowe.|  
-|[size_is](../windows/size-is.md)|Określa rozmiar pamięci przydzielona dla wskaźników o rozmiarze o rozmiarze wskaźniki do wskaźników o rozmiarze i jedno - lub tablice wielowymiarowe.|  
-|[unique](../windows/unique-cpp.md)|Określa unikatowy wskaźnika.|  
-|[uuid](../windows/uuid-cpp-attributes.md)|Określa unikatowy identyfikator dla klasy ani interfejsu.|  
+|[export](../windows/export.md)|Powoduje to struktura danych, należy umieścić w pliku .idl.|  
+|[first_is](../windows/first-is.md)|Określa indeks pierwszego elementu tablicy mają być przekazywane.|  
+|[last_is](../windows/last-is.md)|Określa indeks ostatniego elementu tablicy mają być przekazywane.|  
+|[length_is](../windows/length-is.md)|Określa liczbę elementów tablicy, które mają być przekazywane.|  
+|[max_is](../windows/max-is.md)|Określa maksymalną wartość indeksu prawidłową tablicą.|  
+|[size_is](../windows/size-is.md)|Określa rozmiar pamięci przydzielonej dla wskaźników o rozmiarze, wielkości wskaźniki do wskaźników o rozmiarze i jedno - lub tablic wielowymiarowych.|  
+|[unique](../windows/unique-cpp.md)|Określa unikatowy wskaźnik.|  
+|[uuid](../windows/uuid-cpp-attributes.md)|Określa unikatowy identyfikator dla klasy lub interfejsu.|  
   
 ### <a name="nonencapsulated-union"></a>Nonencapsulated Unii  
   
 |Atrybut|Opis|  
 |---------------|-----------------|  
-|[ms_union](../windows/ms-union.md)|Określa wyrównanie reprezentację danych sieci nonencapsulated Unii.|  
-|[no_injected_text](../windows/no-injected-text.md)|Zabezpiecza kompilator przed wstrzyknięcie kodu w wyniku użycia atrybutu.|  
+|[ms_union](../windows/ms-union.md)|Steruje wyrównaniem reprezentacji danych sieci nonencapsulated Unii.|  
+|[no_injected_text](../windows/no-injected-text.md)|Zabezpiecza kompilator przed wprowadzanie kodu w wyniku użycia atrybutu.|  
   
 ### <a name="struct"></a>struktura   
   
 |Atrybut|Opis|  
 |---------------|-----------------|  
-|[aggregatable](../windows/aggregatable.md)|Wskazuje, że klasa obsługuje agregacji.|  
-|[aggregates](../windows/aggregates.md)|Wskazuje, czy formant agreguje klasy docelowej.|  
-|[appobject](../windows/appobject.md)|Identyfikuje coclass jako obiekt aplikacji, który jest skojarzony z aplikacją pełne .exe i wskazuje, że właściwości klasy coclass i funkcje są ogólnie dostępna w tej bibliotece typu.|  
-|[coclass](../windows/coclass.md)|Tworzy kontrolkę ActiveX.|  
-|[com_interface_entry —](../windows/com-interface-entry-cpp.md)|Dodaje wpis interfejs do mapy COM.|  
-|[control](../windows/control.md)|Określa, że typ zdefiniowany przez użytkownika jest formantu.|  
+|[aggregatable](../windows/aggregatable.md)|Wskazuje, że klasa obsługuje agregację.|  
+|[aggregates](../windows/aggregates.md)|Wskazuje, że formant agreguje klasy docelowej.|  
+|[appobject](../windows/appobject.md)|Identyfikuje coclass jako obiekt aplikacji, który jest skojarzony z aplikacją pełną .exe i wskazuje, że funkcje i właściwości z koklas, globalnie dostępną w tej bibliotece typów.|  
+|[coclass](../windows/coclass.md)|Tworzy formant ActiveX.|  
+|[com_interface_entry —](../windows/com-interface-entry-cpp.md)|Dodaje wpis interfejsu do mapy COM.|  
+|[control](../windows/control.md)|Określa, że typ zdefiniowany przez użytkownika kontrolki.|  
 |[custom](../windows/custom-cpp.md)|Umożliwia zdefiniowanie własnego atrybutu.|  
 |[db_column](../windows/db-column.md)|Wiąże określonej kolumny zestawu wierszy.|  
-|[db_command](../windows/db-command.md)|Tworzy polecenia OLE DB.|  
-|[db_param](../windows/db-param.md)|Kojarzy zmiennej określonego elementu członkowskiego z parametrem wejściowych lub wyjściowych i rozgranicza zmiennej.|  
+|[db_command](../windows/db-command.md)|Tworzy polecenie OLE DB.|  
+|[db_param](../windows/db-param.md)|Zmienna określonego elementu członkowskiego jest skojarzona z parametrów wejściowych lub wyjściowych, a rozgranicza zmiennej.|  
 |[db_source](../windows/db-source.md)|Tworzy połączenie ze źródłem danych.|  
-|[db_table](../windows/db-table.md)|Otwiera tabeli OLE DB.|  
-|[default](../windows/default-cpp.md)|Wskazuje, że niestandardowe lub dispinterface zdefiniowane w obrębie klasy coclass reprezentuje domyślny interfejs programowania.|  
-|[defaultvtable](../windows/defaultvtable.md)|Definiuje interfejsu jako interfejsu domyślnego vtable dla formantu.|  
+|[db_table](../windows/db-table.md)|Zostanie otwarty tabeli OLE DB.|  
+|[default](../windows/default-cpp.md)|Wskazuje, że niestandardowe lub zdefiniowane w obrębie klasy coclass dispinterface reprezentuje domyślny interfejs programowania.|  
+|[defaultvtable](../windows/defaultvtable.md)|Definiuje interfejs jako domyślny interfejs vtable kontrolki.|  
 |[event_receiver](../windows/event-receiver.md)|Tworzy odbiorca zdarzenia.|  
 |[event_source](../windows/event-source.md)|Tworzy źródła zdarzenia.|  
-|[export](../windows/export.md)|Powoduje, że struktura danych mają być umieszczone w pliku .idl.|  
-|[first_is](../windows/first-is.md)|Określa indeks pierwszego elementu tablicy ma zostać przesłany.|  
+|[export](../windows/export.md)|Powoduje to struktura danych, należy umieścić w pliku .idl.|  
+|[first_is](../windows/first-is.md)|Określa indeks pierwszego elementu tablicy mają być przekazywane.|  
 |[hidden](../windows/hidden.md)|Wskazuje, czy element istnieje, ale nie powinien być wyświetlany w przeglądarce zorientowanej na użytkownika.|  
 |[implements_category](../windows/implements-category.md)|Określa kategorii składników zaimplementowane dla klasy.|  
-|[last_is](../windows/last-is.md)|Określa indeks przekazywanych ostatnim elemencie tablicy.|  
-|[length_is](../windows/length-is.md)|Określa liczbę elementów tablicy ma zostać przesłany.|  
-|[max_is](../windows/max-is.md)|Określa maksymalną wartość indeksu tablicy prawidłowe.|  
-|[requires_category](../windows/requires-category.md)|Określa wymagany składnik kategorii klasy docelowej.|  
-|[size_is](../windows/size-is.md)|Określa rozmiar pamięci przydzielona dla wskaźników o rozmiarze o rozmiarze wskaźniki do wskaźników o rozmiarze i jedno - lub tablice wielowymiarowe.|  
-|[source](../windows/source-cpp.md)|W klasie określa interfejsów źródłowego obiektu COM dla punkty połączenia. W właściwości lub metody oznacza, że element członkowski zwraca obiekt lub Typ VARIANT, który jest źródłem zdarzeń.|  
-|[Wątkowość](../windows/threading-cpp.md)|Określa model wątkowości dla obiekt COM.|  
-|[unique](../windows/unique-cpp.md)|Określa unikatowy wskaźnika.|  
-|[uuid](../windows/uuid-cpp-attributes.md)|Określa unikatowy identyfikator dla klasy ani interfejsu.|  
-|[Wersja](../windows/version-cpp.md)|Identyfikuje określoną wersją wśród wielu wersji klasy.|  
-|[vi_progid](../windows/vi-progid.md)|Określa niezależny od wersji formularza identyfikatora ProgID.|  
+|[last_is](../windows/last-is.md)|Określa indeks ostatniego elementu tablicy mają być przekazywane.|  
+|[length_is](../windows/length-is.md)|Określa liczbę elementów tablicy, które mają być przekazywane.|  
+|[max_is](../windows/max-is.md)|Określa maksymalną wartość indeksu prawidłową tablicą.|  
+|[requires_category](../windows/requires-category.md)|Określa kategorie wymaganego składnika klasy docelowej.|  
+|[size_is](../windows/size-is.md)|Określa rozmiar pamięci przydzielonej dla wskaźników o rozmiarze, wielkości wskaźniki do wskaźników o rozmiarze i jedno - lub tablic wielowymiarowych.|  
+|[source](../windows/source-cpp.md)|W klasie określa interfejsy źródła obiektu COM dla punktów połączenia. W właściwości lub metody oznacza, że elementu członkowskiego zwraca obiekt lub wariant, który jest źródłem zdarzeń.|  
+|[Wątkowość](../windows/threading-cpp.md)|Określa model wątkowości dla obiektu COM.|  
+|[unique](../windows/unique-cpp.md)|Określa unikatowy wskaźnik.|  
+|[uuid](../windows/uuid-cpp-attributes.md)|Określa unikatowy identyfikator dla klasy lub interfejsu.|  
+|[Wersja](../windows/version-cpp.md)|Identyfikuje określoną wersję spośród wielu wersji klasy.|  
+|[vi_progid](../windows/vi-progid.md)|Określa formularza niezależny od wersji identyfikatora ProgID.|  
   
 ## <a name="see-also"></a>Zobacz też  
  [Atrybuty w zależności od zastosowania](../windows/attributes-by-usage.md)

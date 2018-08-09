@@ -19,58 +19,57 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 17211518789113c11194314b57b741ab2b274ddc
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 8345829e5d561ead3be0052770e022f704eabc3b
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33891675"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39646127"
 ---
 # <a name="using-a-drawing-tool-image-editor-for-icons"></a>Używanie narzędzia do rysowania (Edytor obrazów dla ikon)
-Edytor obrazów na odręcznej rysowania i wymazywanie wszystkich działa tak samo jak narzędzia: Wybierz narzędzie i w razie potrzeby [wybierz kolory pierwszego planu i tła](../windows/selecting-foreground-or-background-colors-image-editor-for-icons.md) i opcje wielkość i kształt. Następnie przesuń wskaźnik do obrazu i kliknij lub przeciągnij do rysowania i wymazać.  
+Edytor obrazów użytkownika odręcznej do rysowania i wymazywanie wszystkich działają tak samo jak narzędzia: Wybierz narzędzie i, jeśli to konieczne, [wybierz kolory pierwszego planu i tła](../windows/selecting-foreground-or-background-colors-image-editor-for-icons.md) i opcje rozmiaru i kształtu. Następnie przesuń wskaźnik do obrazu i kliknięciu lub przeciągnij, aby narysować i wymazać.  
   
- Po wybraniu **Gumka** narzędzia **pędzla** narzędzia lub **aerografu** narzędzie, selektor opcji Wyświetla opcje tego narzędzia.  
+ Po wybraniu **Gumka** narzędzia **pędzla** narzędzia lub **Aerograf** narzędzia Selektor opcji Wyświetla opcje tego narzędzia.  
   
 > [!TIP]
->  Zamiast **Gumka** narzędzia, może być bardziej wygodne do rysowania w jednym z narzędzi do rysowania kolor tła.  
+>  Zamiast używania **Gumka** narzędzia, może okazać się bardziej wygodne do rysowania w kolor tła z jednym z narzędzi do rysowania.  
   
- Można wybrać narzędzia do rysowania z albo **edytor obrazów** paska narzędzi lub **obrazu** menu.  
+ Możesz wybrać narzędzi do rysowania za pomocą albo **edytora obrazów** paska narzędzi lub **obraz** menu.  
   
-### <a name="to-select-and-use-a-drawing-tool-from-the-image-editor-toolbar"></a>Aby wybrać i użyj narzędzia do rysowania z paska narzędzi edytora obrazów  
+### <a name="to-select-and-use-a-drawing-tool-from-the-image-editor-toolbar"></a>Aby wybrać i użyj narzędzia do rysowania na pasku narzędzi edytora obrazów  
   
-1.  Kliknięcie przycisku **edytor obrazów** paska narzędzi.  
+1.  Kliknij przycisk **edytora obrazów** paska narzędzi.  
   
-    -   **Gumka** narzędzia farby na obraz z bieżący kolor tła po naciśnięciu lewego przycisku myszy.  
+    -   **Gumka** narzędzie farby obraz z bieżącym kolorem tła po naciśnięciu lewego przycisku myszy.  
   
-    -   **Ołówka** narzędzie rysuje freehand w stałej szerokości jeden piksel.  
+    -   **Ołówka** narzędzie freehand rysuje stałej szerokości jednego piksela.  
   
-    -   **Selektor opcji określa kształt i rozmiar narzędzie Pędzel**.  
+    -   **Selektor opcji określa kształt i rozmiar pędzel-narzędzie**.  
   
-    -   **Aerografu** narzędzie losowo dystrybuuje kolorów pikseli wokół środka pędzla.  
+    -   **Aerograf** narzędzie losowo dystrybuuje kolorów pikseli wokół środka pędzla.  
   
         > [!TIP]
-        >  Etykietki narzędzi są wyświetlane po umieszczeniu kursora na przycisków na [paska narzędzi edytora obrazów](../windows/toolbar-image-editor-for-icons.md). Te wskazówki pomoże zidentyfikować określonych przyciski wymienione w tym miejscu.  
+        >  Etykietki narzędzi są wyświetlane po umieszczeniu kursora przyciski na [paska narzędzi edytora obrazów](../windows/toolbar-image-editor-for-icons.md). Te wskazówki pomoże zidentyfikować określone przyciski zostały tu wymienione.  
   
-2.  W razie potrzeby wybierz kolory i pędzla:  
+2.  Jeśli to konieczne, wybierz kolory i pędzla:  
   
-    -   W [palety kolorów](../windows/colors-window-image-editor-for-icons.md), kliknij przycisk myszy, aby wybrać kolor pierwszego planu lub prawego przycisku myszy, aby zmienić kolor tła.  
+    -   W [paleta kolorów](../windows/colors-window-image-editor-for-icons.md), kliknij przycisk myszy po lewej stronie, aby wybrać kolor pierwszego planu lub prawego przycisku myszy, aby zmienić kolor tła.  
   
     -   W [Selektor opcji](../windows/toolbar-image-editor-for-icons.md), kliknij kształt reprezentujący pędzla, którego chcesz użyć.  
   
-3.  Wskaż miejsce, na której chcesz uruchomić rysowania obrazu lub rysowania. Kursor zmienia kształtu zgodnie z wybranego narzędzia.  
+3.  Wskaż miejsce na obrazu, w którym chcesz uruchomić, rysowania lub malowania. Kursor zmienia kształt zgodnie z wybranego narzędzia.  
   
-4.  Naciśnij lewy przycisk myszy (kolor pierwszego planu) lub prawego przycisku myszy (na kolor tła) i przytrzymaj ją podczas rysowania.  
+4.  Naciśnij klawisze lewy przycisk myszy (kolor pierwszego planu) lub prawym przyciskiem myszy (na kolor tła) i przytrzymaj go podczas rysowania.  
   
-### <a name="to-select-and-use-a-drawing-tool-from-the-image-menu"></a>Aby wybrać i użyj narzędzia do rysowania z menu obrazu  
+### <a name="to-select-and-use-a-drawing-tool-from-the-image-menu"></a>Aby wybrać i użyj narzędzia do rysowania menu obrazu  
   
-1.  Kliknij przycisk **obrazu** menu i wybierz **narzędzia** polecenia.  
+1.  Kliknij przycisk **obraz** menu, a następnie wybierz **narzędzia** polecenia.  
   
-2.  W kaskadowego podmenu wybierz narzędzie, które chcesz użyć.  
+2.  Kaskadowe podmenu wybierz narzędzie którego chcesz użyć.  
   
- Aby uzyskać informacje o dodawaniu zasobów do projektów zarządzanych, zobacz [zasobów w aplikacjach pulpitu](/dotnet/framework/resources/index) w *Przewodnik programistów platformy .NET Framework.* Aby uzyskać informacje na ręczne dodanie do projektów zarządzanych plików zasobów, uzyskiwanie dostępu do zasobów, wyświetlanie zasoby statyczne i przypisanie do właściwości ciągów zasobów, zobacz [tworzenie plików zasobów dla aplikacji pulpitu](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Informacje dotyczące globalizacji i lokalizacji zasobów w zarządzanych aplikacjach, zobacz [Globalizing i lokalizacja aplikacji .NET Framework](/dotnet/standard/globalization-localization/index).  
+ Aby uzyskać informacje na temat dodawania zasobów do projektów zarządzanych, zobacz [zasoby w aplikacjach pulpitu](/dotnet/framework/resources/index) w *przewodniku dewelopera .NET Framework*. Aby uzyskać informacji na temat ręcznego dodawania plików zasobów do projektów zarządzanych, uzyskiwania dostępu do zasobów, wyświetlania statycznych zasobów i przypisywania ciągów zasobów do właściwości, zobacz [Creating Resource Files dla aplikacji klasycznych](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Aby uzyskać informacji na temat globalizacja i lokalizacja zasobów w aplikacjach zarządzanych, zobacz [Globalizing i lokalizowanie aplikacji programu .NET Framework](/dotnet/standard/globalization-localization/index).  
   
- Wymagania  
-  
+## <a name="requirements"></a>Wymagania  
  Brak  
   
 ## <a name="see-also"></a>Zobacz też  
@@ -78,4 +77,3 @@ Edytor obrazów na odręcznej rysowania i wymazywanie wszystkich działa tak sam
  [Edytowanie zasobów graficznych](../windows/editing-graphical-resources-image-editor-for-icons.md)   
  [Edytor obrazów dla ikon](../windows/image-editor-for-icons.md)   
  [Praca z kolorem](../windows/working-with-color-image-editor-for-icons.md)
-

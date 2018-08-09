@@ -1,5 +1,5 @@
 ---
-title: Edytowanie właściwości formantu ActiveX | Dokumentacja firmy Microsoft
+title: Edytowanie właściwości kontrolki ActiveX | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,38 +16,36 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 0f99caed2b0ce78635f89d884599ee6d40fc86f4
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: f64fd94eca03b132d0448147085b04e3ff6c1097
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33885155"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39648064"
 ---
 # <a name="editing-properties-for-an-activex-control"></a>Edytowanie właściwości kontrolki ActiveX
-Kontrolki ActiveX dostarczonych przez niezależnych dostawców mogą są wyposażone w ich właściwości i właściwości. W oknie właściwości są wyświetlane właściwości dla formantów ActiveX. Ponadto wszystkie strony właściwości utworzone przez autorów formantu ActiveX są wyświetlane w **stron właściwości** okno dialogowe (Aby wyświetlić stronę właściwości dla określonego formantu ActiveX, kliknij przycisk Właściwości strony w [Okno właściwości](/visualstudio/ide/reference/properties-window)).  
+Kontrolki ActiveX, dostarczone przez niezależnych dostawców może są wyposażone w ich własnych właściwości i właściwości. Właściwości formantów ActiveX są wyświetlane w **właściwości** okna. Ponadto wszystkie strony właściwości utworzone przez autorów formantu ActiveX są wyświetlane w **strony właściwości** okno dialogowe (Aby wyświetlić **strona właściwości** określonej kontrolki ActiveX, kliknij przycisk  **Strona właściwości** znajdujący się w [okno właściwości](/visualstudio/ide/reference/properties-window)).  
   
- Różne karty są wyświetlane na stronie właściwości dla formantu ActiveX, w zależności od arkuszy właściwości, które są dostarczane jako część formantu ActiveX.  
+ Na stronie właściwości dla formantu ActiveX, w zależności od arkuszy właściwości, które pochodzą z formantu ActiveX w ramach będą wyświetlane różne karty.  
   
 > [!NOTE]
->  Poniższa procedura ma zastosowanie do używając strony właściwości można edytować kontrolki ActiveX. Można również przeglądanie i edytowanie właściwości formantu ActiveX w nowym oknie właściwości.  
+>  Poniższa procedura ma zastosowanie przy użyciu strony właściwości, aby edytować kontrolki ActiveX. Możesz również przeglądać i edytować właściwości formantu ActiveX w nowym **właściwości** okna.  
   
-### <a name="to-edit-properties-for-an-activex-control"></a>Aby edytować właściwości formantu ActiveX  
+### <a name="to-edit-properties-for-an-activex-control"></a>Aby edytować właściwości kontrolki ActiveX  
   
-1.  Wybierz **ActiveX** formantu.  
+1.  Wybierz **ActiveX** kontroli.  
   
-2.  Na **widoku** menu, kliknij przycisk **strony właściwości** i wyświetlić właściwości.  
+2.  Na **widoku** menu, kliknij przycisk **strona właściwości** i Wyświetl właściwości.  
   
-3.  Wprowadź zmiany w razie potrzeby na stronie właściwości.  
+3.  W razie potrzeby na stronie właściwości, należy wprowadzić zmiany.  
   
- Aby uzyskać informacje o dodawaniu zasobów do projektów zarządzanych, zobacz [zasobów w aplikacjach pulpitu](/dotnet/framework/resources/index) w *Przewodnik programistów platformy .NET Framework.* Aby uzyskać informacje na ręczne dodanie do projektów zarządzanych plików zasobów, uzyskiwanie dostępu do zasobów, wyświetlanie zasoby statyczne i przypisanie do właściwości ciągów zasobów, zobacz [tworzenie plików zasobów dla aplikacji pulpitu](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Informacje dotyczące globalizacji i lokalizacji zasobów w zarządzanych aplikacjach, zobacz [Globalizing i lokalizacja aplikacji .NET Framework](/dotnet/standard/globalization-localization/index).  
+ Aby uzyskać informacje na temat dodawania zasobów do projektów zarządzanych, zobacz [zasoby w aplikacjach pulpitu](/dotnet/framework/resources/index) w *przewodniku dewelopera .NET Framework*. Aby uzyskać informacji na temat ręcznego dodawania plików zasobów do projektów zarządzanych, uzyskiwania dostępu do zasobów, wyświetlania statycznych zasobów i przypisywania ciągów zasobów do właściwości, zobacz [Creating Resource Files dla aplikacji klasycznych](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Aby uzyskać informacji na temat globalizacja i lokalizacja zasobów w aplikacjach zarządzanych, zobacz [Globalizing i lokalizowanie aplikacji programu .NET Framework](/dotnet/standard/globalization-localization/index).  
   
- Wymagania  
-  
+## <a name="requirements"></a>Wymagania  
  Win32  
   
 ## <a name="see-also"></a>Zobacz też  
- [Wyświetlanie i dodawanie formantów ActiveX do okna dialogowego](../windows/viewing-and-adding-activex-controls-to-a-dialog-box.md)   
+ [Wyświetlanie i dodawanie kontrolek ActiveX do okna dialogowego](../windows/viewing-and-adding-activex-controls-to-a-dialog-box.md)   
  [Formanty w oknach dialogowych](../windows/controls-in-dialog-boxes.md)   
  [Kontrolki ActiveX MFC](../mfc/mfc-activex-controls.md)   
  [Kontenery kontrolek ActiveX](../mfc/activex-control-containers.md)
-

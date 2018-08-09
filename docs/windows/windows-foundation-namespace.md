@@ -1,5 +1,5 @@
 ---
-title: Windows::Foundation — Namespace | Dokumentacja firmy Microsoft
+title: Windows::Foundation Namespace | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,15 +18,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 439746381b0b5d4932edd5c8717b2d3555005416
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 60eb32017e824397af6e4535efa5ec55f314c4b8
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33891227"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39646734"
 ---
 # <a name="windowsfoundation-namespace"></a>Windows::Foundation — Przestrzeń nazw
-Zapewnia podstawowe funkcje środowiska wykonawczego systemu Windows, takie jak tworzenie obiektu i fabryki.  
+Zapewnia podstawowe funkcje środowiska wykonawczego Windows, takie jak utworzenie obiektu i fabryki.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -40,13 +40,13 @@ namespace Windows::Foundation;
   
 |Nazwa|Opis|  
 |----------|-----------------|  
-|[ActivateInstance, funkcja](../windows/activateinstance-function.md)|Rejestruje i pobiera wystąpienia określonego typu zdefiniowane w identyfikatora dla określonej klasy.|  
-|[GetActivationFactory, funkcja](../windows/getactivationfactory-function.md)|Pobiera fabryki aktywacji dla typu określonego przez parametr szablonu.|  
+|[ActivateInstance, funkcja](../windows/activateinstance-function.md)|Rejestruje i pobiera wystąpienia danego typu zdefiniowane w identyfikatorze określonej klasy.|  
+|[GetActivationFactory, funkcja](../windows/getactivationfactory-function.md)|Pobiera fabrykę aktywacji dla typu określonego przez parametr szablonu.|  
   
 ## <a name="requirements"></a>Wymagania  
  **Nagłówek:** client.h  
   
- **Namespace:** systemu Windows  
+ **Namespace:** Windows  
   
 ## <a name="see-also"></a>Zobacz też  
- [Namespace systemu Windows](http://msdn.microsoft.com/en-us/45b08650-69cd-4f7f-a959-b7361476865c)
+ [Namespace Windows](http://msdn.microsoft.com/45b08650-69cd-4f7f-a959-b7361476865c)

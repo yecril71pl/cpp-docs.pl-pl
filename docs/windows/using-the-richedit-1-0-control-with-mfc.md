@@ -16,22 +16,21 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: d2d45de1c6bd986c2bf509ce601f80fcd3721599
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: a00642c1aefdce57c37723ef4daf23381cee3c13
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33890314"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39650751"
 ---
 # <a name="using-the-richedit-10-control-with-mfc"></a>Używanie formantu RichEdit 1.0 z MFC
-Aby korzystać z formantu RichEdit, należy najpierw wywołać [afxinitrichedit2 —](../mfc/reference/application-information-and-management.md#afxinitrichedit2) załadować formantu RichEdit 2.0 (RICHED20. Biblioteki DLL), lub zadzwoń [afxinitrichedit —](../mfc/reference/application-information-and-management.md#afxinitrichedit) załadować starsze formantu RichEdit 1.0 (RICHED32. BIBLIOTEKI DLL).  
+Aby użyć kontrolki RichEdit, najpierw musisz wywołać [afxinitrichedit2 —](../mfc/reference/application-information-and-management.md#afxinitrichedit2) można załadować kontrolki 2.0 RichEdit (RICHED20. Biblioteka DLL), lub zadzwoń [afxinitrichedit —](../mfc/reference/application-information-and-management.md#afxinitrichedit) załadować starszej kontrolki RichEdit 1.0 (RICHED32. BIBLIOTEKA DLL).  
   
- Można użyć bieżącej [CRichEditCtrl](../mfc/reference/cricheditctrl-class.md) klasy z formantu RichEdit 1.0 starsze, ale **CRichEditCtrl** jest przeznaczona wyłącznie do obsługi formantu RichEdit 2.0. Ponieważ RichEdit 1.0 i RichEdit 2.0 są bardzo podobne, będzie działać większości metod; należy jednak pamiętać, że istnieją pewne różnice między formantami 1.0 i 2.0, więc niektóre metody może działać prawidłowo lub nie działać w ogóle.  
+ Może używać bieżącego [CRichEditCtrl](../mfc/reference/cricheditctrl-class.md) klasy za pomocą starszej kontrolki RichEdit 1.0, ale `CRichEditCtrl` jest przeznaczona wyłącznie do obsługi formantu RichEdit w wersji 2.0. Większość metod będzie działać, ponieważ RichEdit 1.0 i RichEdit 2.0 są bardzo podobne, jednak należy pamiętać, że istnieją pewne różnice między kontrolkami 1.0 i 2.0, więc niektóre metody mogą nie działać prawidłowo lub nie działać w ogóle.  
   
 ## <a name="requirements"></a>Wymagania  
  MFC  
   
 ## <a name="see-also"></a>Zobacz też  
- [Rozwiązywanie problemów z edytora okien dialogowych](../windows/troubleshooting-the-dialog-editor.md)   
+ [Rozwiązywanie problemów z edytorem okien dialogowych](../windows/troubleshooting-the-dialog-editor.md)   
  [Edytor okien dialogowych](../windows/dialog-editor.md)
-

@@ -1,5 +1,5 @@
 ---
-title: Dodawanie formantu do okna dialogowego | Dokumentacja firmy Microsoft
+title: Dodawanie kontrolki do okna dialogowego | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -19,40 +19,38 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 042d2b63602d8423cfba776ca24585c3c451f4b1
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: bcf19d16843936dcd1f862b2b9bd1e2468a93a0d
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33858721"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39644807"
 ---
 # <a name="adding-a-control-to-a-dialog-box"></a>Dodawanie formantu do okna dialogowego
-### <a name="to-add-a-control-to-a-dialog-box"></a>Aby dodać kontrolkę do okna dialogowego  
+### <a name="to-add-a-control-to-a-dialog-box"></a>Aby dodać formant do okna dialogowego  
   
-1.  Upewnij się, że z kartami okno dialogowe jest bieżącym dokumentem w ramce edytora. Jeśli okno dialogowe nie jest bieżącym dokumentem, nie zobaczysz **Karta Edytor okien dialogowych** w **przybornika**.  
+1.  Upewnij się, że z kartami okno dialogowe bieżącego dokumentu w ramce edytora. Jeśli okno dialogowe nie jest bieżącym dokumencie, nie będziesz widzieć **Karta Edytor okien dialogowych** w **przybornika**.  
   
 2.  Na [Karta Edytor okien dialogowych](../windows/dialog-editor-tab-toolbox.md) z [okno przybornika](/visualstudio/ide/reference/toolbox), wybierz kontrolkę, należy następnie:  
   
-    -   Kliknij okno dialogowe w lokalizacji, w której chcesz umieścić kontrolkę. Ten formant jest widoczny, gdy została kliknięta. Aby uzyskać informacje, zobacz [Dodawanie wielu formantów](../windows/adding-multiple-controls.md).  
+    -   Kliknij okno dialogowe, w lokalizacji, w którym chcesz umieścić formant. Ten formant jest widoczny, gdy została kliknięta. Aby uzyskać informacje, zobacz [Dodawanie wielu formantów](../windows/adding-multiple-controls.md).  
   
-         \- lub -  
+         \- lub —  
   
-    -   Przeciągnij i upuść formant z przybornika okno w lokalizacji w sieci — okno dialogowe. Aby uzyskać więcej informacji, zobacz [zmiany rozmiaru formantu podczas należy dodać go](../windows/sizing-a-control-while-you-add-it.md).  
+    -   Przeciąganie i upuszczanie formantu z **przybornika** okna do lokalizacji na Twoje okno dialogowe. Aby uzyskać więcej informacji, zobacz [rozmiaru formantu podczas możesz dodać ją](../windows/sizing-a-control-while-you-add-it.md).  
   
-         \- lub -  
+         \- lub —  
   
-    -   Kliknij dwukrotnie formantu w oknie Przybornika (wydaje się na Twoje okno dialogowe), a następnie do lokalizacji, w której chcesz zmienić położenie formantu.  
+    -   Kliknij dwukrotnie formant w **przybornika** okna (jest wyświetlana na dialogowym), a następnie zmiana położenia kontrolki do lokalizacji, użytkownik sobie tego życzy.  
   
- Aby uzyskać informacje o typach formanty z przybornika okno, zobacz [Karta Edytor okien dialogowych, przybornik okno](../windows/dialog-editor-tab-toolbox.md).  
+ Informacje dotyczące typów formantów, które są dostępne na **przybornika** okna, zobacz [Karta Edytor okien dialogowych, okno przybornika](../windows/dialog-editor-tab-toolbox.md).  
   
- Aby uzyskać informacje o dodawaniu zasobów do projektów zarządzanych, zobacz [zasobów w aplikacjach pulpitu](/dotnet/framework/resources/index) w *Przewodnik programistów platformy .NET Framework.* Aby uzyskać informacje na ręczne dodanie do projektów zarządzanych plików zasobów, uzyskiwanie dostępu do zasobów, wyświetlanie zasoby statyczne i przypisanie do właściwości ciągów zasobów, zobacz [tworzenie plików zasobów dla aplikacji pulpitu](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Informacje dotyczące globalizacji i lokalizacji zasobów w zarządzanych aplikacjach, zobacz [Globalizing i lokalizacja aplikacji .NET Framework](/dotnet/standard/globalization-localization/index).  
+ Aby uzyskać informacje na temat dodawania zasobów do projektów zarządzanych, zobacz [zasoby w aplikacjach pulpitu](/dotnet/framework/resources/index) w *przewodniku dewelopera .NET Framework*. Aby uzyskać informacji na temat ręcznego dodawania plików zasobów do projektów zarządzanych, uzyskiwania dostępu do zasobów, wyświetlania statycznych zasobów i przypisywania ciągów zasobów do właściwości, zobacz [Creating Resource Files dla aplikacji klasycznych](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Aby uzyskać informacji na temat globalizacja i lokalizacja zasobów w aplikacjach zarządzanych, zobacz [Globalizing i lokalizowanie aplikacji programu .NET Framework](/dotnet/standard/globalization-localization/index).  
   
- Wymagania  
-  
+## <a name="requirements"></a>Wymagania  
  Win32  
   
 ## <a name="see-also"></a>Zobacz też  
  [Formanty w oknach dialogowych](../windows/controls-in-dialog-boxes.md)   
- [Dodawanie programów obsługi zdarzeń dla formantów okna dialogowego](../windows/adding-event-handlers-for-dialog-box-controls.md)   
+ [Dodawanie obsługi zdarzeń dla formantów okna dialogowego](../windows/adding-event-handlers-for-dialog-box-controls.md)   
  [Kontrolki okna dialogowego i typy zmiennych](../ide/dialog-box-controls-and-variable-types.md)
-

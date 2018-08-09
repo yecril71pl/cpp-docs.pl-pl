@@ -18,12 +18,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 4ae915dbcd9e2190f33e29e236170951fcec3d01
-ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
+ms.openlocfilehash: dc632f251e618e5816b1b8d8ea8280cba3d7b217
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39569875"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39652493"
 ---
 # <a name="filling-a-bounded-area-of-an-image-with-a-color-image-editor-for-icons"></a>Wypełnianie kolorem ograniczonego obszaru obrazu (Edytor obrazów dla ikon)
 Edytor obrazów zawiera **wypełnienia** narzędzie do wypełniania dowolne ujęte obszar obrazu z bieżącym kolorem rysowania lub bieżący kolor tła.  
@@ -44,7 +44,6 @@ Edytor obrazów zawiera **wypełnienia** narzędzie do wypełniania dowolne uję
  Aby uzyskać informacje na temat dodawania zasobów do projektów zarządzanych, zobacz [zasoby w aplikacjach pulpitu](/dotnet/framework/resources/index) w *przewodniku dewelopera .NET Framework*. Aby uzyskać informacji na temat ręcznego dodawania plików zasobów do projektów zarządzanych, uzyskiwania dostępu do zasobów, wyświetlania statycznych zasobów i przypisywania ciągów zasobów do właściwości, zobacz [Creating Resource Files dla aplikacji klasycznych](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Aby uzyskać informacji na temat globalizacja i lokalizacja zasobów w aplikacjach zarządzanych, zobacz [Globalizing i lokalizowanie aplikacji programu .NET Framework](/dotnet/standard/globalization-localization/index).  
   
 ## <a name="requirements"></a>Wymagania  
-  
  Brak  
   
 ## <a name="see-also"></a>Zobacz też  

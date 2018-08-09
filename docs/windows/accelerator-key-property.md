@@ -15,37 +15,37 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: e4fc56384d666026f4cc7e21f9d8af9347046fd1
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 36884376e5ff31754e4c53ef6602f6bfd129f4a4
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33857210"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39650446"
 ---
 # <a name="accelerator-key-property"></a>Właściwość klawisza skrótu
 Dostępne są następujące wpisy prawne dla właściwości klucza w tabeli akceleratora:  
   
--   Liczba całkowita między 0 a 255 w formacie dziesiętnym. Wartość określa, czy wartość jest traktowany jako ASCII lub ANSI w następujący sposób:  
+-   Liczba całkowita między 0 a 255 w formacie dziesiętnym. Wartość określa, czy wartość jest traktowana jako ASCII i ANSI w następujący sposób:  
   
-    -   Cyfr zawsze będą interpretowane jako odpowiedniego klucza, a nie jako wartości ASCII lub ANSI.  
+    -   Cyfr są zawsze interpretowane jako odpowiadający mu klucz, a nie jako wartości ASCII lub ANSI.  
   
-    -   Wartości z zakresu od 1 do 26, gdy przed zerami, są interpretowane jako ^ od A do ^ Z, który reprezentuje wartość ASCII litery alfabetu po naciśnięciu z wciśnięty klawisz CTRL.  
+    -   Wartości z zakresu od 1 do 26, gdy poprzedzony zerami, są interpretowane jako ^ od A do ^ Z, która reprezentuje wartość ASCII litery alfabetu, po naciśnięciu z **Ctrl** przytrzymanie klawisza.  
   
-    -   Wartości z 27-32 zawsze będą interpretowane jako wartości dziesiętne trzycyfrowa 027 za pośrednictwem 032.  
+    -   Wartości z 27 32 zawsze są interpretowane jako wartości dziesiętne trzycyfrowy 027 za pośrednictwem 032.  
   
-    -   Wartości z 033 do 255, czy poprzedzony 0 nie będą interpretowane jako wartości ANSI.  
+    -   Wartości z 033 do 255, czy poprzedzony przez użytkownika 0 nie będą interpretowane jako wartości ANSI.  
   
--   Znak pojedynczego klawiatury. Wielkie litery A - Z lub cyfry 0 - 9 mogą być ASCII lub wirtualny wartości klucza. inny znak jest tylko ASCII.  
+-   Znak pojedynczego klawiatury. Wielkie litery A - Z lub cyfry 0 - 9 mogą być ASCII lub wirtualny wartości klucza. jakikolwiek inny znak jest ASCII tylko.  
   
--   Klawiatury pojedynczy znak z zakresu A - Z (tylko wielkie litery), poprzedzony daszek (^) (na przykład ^ C). Wprowadza wartość ASCII klucza, gdy zostanie naciśnięty z wciśnięty klawisz CTRL.  
+-   Klawiatury pojedynczy znak z zakresu A - Z (tylko wielkie litery), poprzedzony daszek (^) (na przykład ^ C). Wprowadza wartość ASCII klucza, po naciśnięciu klawisza z **Ctrl** przytrzymanie klawisza.  
   
     > [!NOTE]
-    >  Podczas wprowadzania wartości ASCII, opcje właściwości modyfikator są ograniczone. Tylko klucza kontroli dostępne do użycia jest klawisz ALT.  
+    >  Podczas wprowadzania wartości ASCII, opcje właściwości modyfikator są ograniczone. Jest tylko klawisz control dostępne do użytku **Alt** klucza.  
   
 -   Wszystkie prawidłowe wirtualny identyfikator klawisza. Pole listy rozwijanej klucza w tabeli akceleratora zawiera standardowe wirtualnych identyfikatorów klucza.  
   
     > [!TIP]
-    >  Innym sposobem definiowania klawiszem skrótu jest kliknij prawym przyciskiem myszy wpis lub wiele wpisów w tabeli akceleratora, wybierz **dalej wpisany klucz** z menu skrótów i naciśnij klawisze lub kombinacje klawiszy na klawiaturze. **Dalej wpisany klucz** polecenia jest również dostępna z **Edytuj** menu.  
+    >  Innym sposobem zdefiniowania klawiszem skrótu jest kliknij prawym przyciskiem myszy wpis lub wiele wpisów w tabeli akceleratora, wybierz polecenie **dalej wpisany klucz** z menu skrótów, a następnie naciśnij klawisze lub kombinacji klawiszy na klawiaturze. **Dalej wpisany klucz** polecenia jest także dostępny z **Edytuj** menu.  
   
 ## <a name="requirements"></a>Wymagania  
  Win32  

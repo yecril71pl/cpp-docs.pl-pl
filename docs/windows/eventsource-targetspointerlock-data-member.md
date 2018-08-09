@@ -17,19 +17,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 9b58aa072af5ff96093f9999d212f8b19ff0571c
-ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
+ms.openlocfilehash: 718a62d627f99eff24fd7c10e0280607a52e2be7
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39569820"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39646890"
 ---
 # <a name="eventsourcetargetspointerlock-data-member"></a>EventSource::targetsPointerLock_ — Członek danych
 Synchronizuje dostęp do elementów członkowskich danych wewnętrznych, nawet w trakcie procedury obsługi zdarzeń dla tego **EventSource** są dodawane, usunięte lub wywołana.  
   
 ## <a name="syntax"></a>Składnia  
   
-```  
+```cpp  
 Wrappers::SRWLock targetsPointerLock_;  
 ```  
   

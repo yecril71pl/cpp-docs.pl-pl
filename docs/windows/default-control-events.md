@@ -1,5 +1,5 @@
 ---
-title: Domyślne zdarzenia formantów | Dokumentacja firmy Microsoft
+title: Domyślne zdarzenia kontroli | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,43 +18,43 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: a50b0deeb525481afb1da7221689924c41930bff
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: d9ffea9bf6ffbbc6d34e130b2031297ff1ef3f99
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33874099"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39649623"
 ---
 # <a name="default-control-events"></a>Domyślne zdarzenia kontroli
-Następujące nazwy formantu ma towarzyszący domyślne zdarzenia:  
+Następujące nazwy kontrolki mają towarzyszący domyślne zdarzenia:  
   
-|Nazwa formantu|Zdarzenie domyślne|  
+|Nazwa kontrolki|Domyślne zdarzenia|  
 |------------------|-------------------|  
-|Animowanie|**ACN_START**|  
-|Pole wyboru|**BN_CLICKED**|  
-|Pola kombi|**CBN_SELCHANGE**|  
-|Niestandardowe|**TTN_GETDISPINFO**|  
-|Wybór daty i godziny|**DTN_DATETIMECHANGE —**|  
-|pole edycji|**EN_CHANGE**|  
+|Animowanie|ACN_START|  
+|Pole wyboru|BN_CLICKED|  
+|Pole kombi|CBN_SELCHANGE|  
+|Niestandardowe|TTN_GETDISPINFO|  
+|Wybór daty i godziny|DTN_DATETIMECHANGE —|  
+|Pole edycji|EN_CHANGE|  
 |Pole grupy|(Nie dotyczy)|  
-|Klawisz dostępu|**NM_OUTOFMEMORY —**|  
-|Adres IP|**IPN_FIELDCHANGED**|  
-|Lista|**LVN_ITEMCHANGE**|  
-|pola listy|**LBN_SELCHANGE**|  
-|Kalendarza miesięcznego|**MCN_SELCHANGE**|  
+|Klawisz skrótu|NM_OUTOFMEMORY —|  
+|Adres IP|IPN_FIELDCHANGED|  
+|Lista|LVN_ITEMCHANGE|  
+|Pole listy|LBN_SELCHANGE|  
+|Kalendarza miesięcznego|MCN_SELCHANGE|  
 |Formant obrazu|(Nie dotyczy)|  
-|Postęp|**NM_CUSTOMDRAW**|  
-|Przycisk polecenia|**BN_CLICKED**|  
-|Przycisk radiowy|**BN_CLICKED**|  
-|Edycji wzbogaconej|**EN_CHANGE**|  
-|Pasek przewijania|**NM_THEMECHANGED**|  
-|Suwak|**NM_CUSTOMDRAW**|  
-|Pokrętła|**UDN_DELTAPOS**|  
+|Postęp|NM_CUSTOMDRAW|  
+|Przycisk polecenia|BN_CLICKED|  
+|Przycisk radiowy|BN_CLICKED|  
+|Edycji wzbogaconej|EN_CHANGE|  
+|Pasek przewijania|NM_THEMECHANGED|  
+|Suwak|NM_CUSTOMDRAW|  
+|Pokrętła|UDN_DELTAPOS|  
 |Tekst statyczny|(Nie dotyczy)|  
-|Tab|**TCN_SELCHANGE**|  
-|Drzewo|**TVN_SELCHANGE**|  
+|Tab|TCN_SELCHANGE|  
+|Drzewo|TVN_SELCHANGE|  
   
- Aby uzyskać informacje o dodawaniu zasobów do projektów zarządzanych, zobacz [zasobów w aplikacjach pulpitu](/dotnet/framework/resources/index) w *Przewodnik programistów platformy .NET Framework.* Aby uzyskać informacje na ręczne dodanie do projektów zarządzanych plików zasobów, uzyskiwanie dostępu do zasobów, wyświetlanie zasoby statyczne i przypisanie do właściwości ciągów zasobów, zobacz [tworzenie plików zasobów dla aplikacji pulpitu](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Informacje dotyczące globalizacji i lokalizacji zasobów w zarządzanych aplikacjach, zobacz [Globalizing i lokalizacja aplikacji .NET Framework](/dotnet/standard/globalization-localization/index).  
+ Aby uzyskać informacje na temat dodawania zasobów do projektów zarządzanych, zobacz [zasoby w aplikacjach pulpitu](/dotnet/framework/resources/index) w *przewodniku dewelopera .NET Framework*. Aby uzyskać informacji na temat ręcznego dodawania plików zasobów do projektów zarządzanych, uzyskiwania dostępu do zasobów, wyświetlania statycznych zasobów i przypisywania ciągów zasobów do właściwości, zobacz [Creating Resource Files dla aplikacji klasycznych](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Aby uzyskać informacji na temat globalizacja i lokalizacja zasobów w aplikacjach zarządzanych, zobacz [Globalizing i lokalizowanie aplikacji programu .NET Framework](/dotnet/standard/globalization-localization/index).  
   
 ## <a name="requirements"></a>Wymagania  
  Win32  
@@ -66,4 +66,3 @@ Następujące nazwy formantu ma towarzyszący domyślne zdarzenia:
  [Definiowanie obsługi komunikatów dla komunikatów odbitych](../mfc/reference/defining-a-message-handler-for-a-reflected-message.md)   
  [Deklarowanie zmiennej opartej na nowej klasie formantów](../mfc/reference/declaring-a-variable-based-on-your-new-control-class.md)   
  [Zastępowanie funkcji wirtualnych](../ide/overriding-a-virtual-function-visual-cpp.md)
-

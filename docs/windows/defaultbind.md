@@ -17,33 +17,31 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: a92d4a7b617b8963c3ffbd78638a7a97515d8509
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 2c9930fefabd6fb12aaad64f07c078e5e422d827
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33871464"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39644089"
 ---
 # <a name="defaultbind"></a>defaultbind
 Wskazuje pojedynczą, które można powiązać właściwość, która najlepiej reprezentuje obiekt.  
   
 ## <a name="syntax"></a>Składnia  
   
-```  
-  
+```cpp  
 [defaultbind]  
-  
 ```  
   
 ## <a name="remarks"></a>Uwagi  
- **Defaultbind —** atrybut C++ ma te same funkcje co [defaultbind —](http://msdn.microsoft.com/library/windows/desktop/aa366790) MIDL atrybutu.  
+ **Defaultbind —** atrybut C++ ma taką samą funkcjonalność jak [defaultbind —](http://msdn.microsoft.com/library/windows/desktop/aa366790) atrybutów w MIDL.  
   
 ## <a name="example"></a>Przykład  
- Zobacz przykład [powiązania](../windows/bindable.md) przykład sposobu użycia **defaultbind —**.  
+ Zobacz przykład [możliwej do wiązania](../windows/bindable.md) przykład sposobu użycia **defaultbind —**.  
   
 ## <a name="requirements"></a>Wymagania  
   
-### <a name="attribute-context"></a>Atrybut kontekstu  
+### <a name="attribute-context"></a>Kontekst atrybutu  
   
 |||  
 |-|-|  
@@ -56,7 +54,7 @@ Wskazuje pojedynczą, które można powiązać właściwość, która najlepiej 
   
 ## <a name="see-also"></a>Zobacz też  
  [Atrybuty IDL](../windows/idl-attributes.md)   
- [Atrybuty — metoda](../windows/method-attributes.md)   
+ [Atrybuty metody](../windows/method-attributes.md)   
  [Atrybuty elementów członkowskich danych](../windows/data-member-attributes.md)   
  [displaybind —](../windows/displaybind.md)   
  [immediatebind —](../windows/immediatebind.md)   

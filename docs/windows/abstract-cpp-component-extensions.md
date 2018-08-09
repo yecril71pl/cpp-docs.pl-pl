@@ -18,12 +18,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: ac043a76ab70c77bd8cdb3a2dd0c66498e409171
-ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
+ms.openlocfilehash: 6474b659070793ddfa4e21d15e65be30f16a49bb
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39463245"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39641811"
 ---
 # <a name="abstract--c-component-extensions"></a>abstract (C++ Component Extensions)
 **Abstrakcyjne** — słowo kluczowe deklaruje albo:  
@@ -33,16 +33,16 @@ ms.locfileid: "39463245"
 -   Funkcja składowa typu można zdefiniować tylko w typie pochodnym.  
   
 ## <a name="all-platforms"></a>Wszystkie platformy  
- **Składnia**  
+### <a name="syntax"></a>Składnia 
   
-```  
+```cpp  
       class-declaration  
       class-identifier  
       abstract {}  
 virtualreturn-typemember-function-identifier() abstract ;  
 ```  
   
- **Uwagi**  
+### <a name="remarks"></a>Uwagi
   
  Pierwszy składni przykład deklaruje klasa może być abstrakcyjna. *Deklaracji klasy* składnik może być natywna deklaracja C++ (**klasy** lub **struktury**), lub deklaracja rozszerzenie języka C++ (**klasy referencyjnej** lub **ref struct**) Jeśli `/ZW` lub `/clr` określono opcję kompilatora.  
   
@@ -58,17 +58,16 @@ virtualreturn-typemember-function-identifier() abstract ;
  Aby uzyskać więcej informacji, zobacz [klasy i struktury odwołania](http://msdn.microsoft.com/library/windows/apps/hh699870.aspx).  
   
 ### <a name="requirements"></a>Wymagania  
- — Opcja kompilatora: **/ZW**  
+ — Opcja kompilatora: `/ZW`  
   
 ## <a name="common-language-runtime"></a>środowiska uruchomieniowe w trakcie wykonania 
   
 ### <a name="requirements"></a>Wymagania  
- — Opcja kompilatora:   **/CLR**  
+ — Opcja kompilatora: `/clr`  
   
 ### <a name="examples"></a>Przykłady  
- **Przykład**  
   
- Poniższy kod generuje błąd, ponieważ klasa `X` jest oznaczony jako `abstract`.  
+ Poniższy kod generuje błąd, ponieważ klasa `X` jest oznaczony jako **abstrakcyjne**.  
   
 ```cpp  
 // abstract_keyword.cpp  
@@ -83,9 +82,7 @@ int main() {
 }  
 ```  
   
- **Przykład**  
-  
- Poniższy kod generuje błąd, ponieważ tworzenia wystąpienia klasy natywnej, która jest oznaczona `abstract`. Ten błąd wystąpi, z lub bez `/clr` — opcja kompilatora.  
+ Poniższy kod generuje błąd, ponieważ tworzenia wystąpienia klasy natywnej, która jest oznaczona **abstrakcyjne**. Ten błąd wystąpi, z lub bez `/clr` — opcja kompilatora.  
   
 ```cpp  
 // abstract_keyword_2.cpp  
@@ -99,9 +96,7 @@ int main() {
                     // cannot be instantiated. See declaration of 'X'}  
 ```  
   
- **Przykład**  
-  
- Poniższy kod generuje błąd, ponieważ funkcja `f` zawiera definicję, ale jest oznaczony jako `abstract`. Końcowe zestawienie w przykładzie pokazuje, że deklarowania funkcji wirtualnych abstrakcyjnej równoważne do deklarowania czystej funkcji wirtualnej.  
+ Poniższy kod generuje błąd, ponieważ funkcja `f` zawiera definicję, ale jest oznaczony **abstrakcyjne**. Końcowe zestawienie w przykładzie pokazuje, że deklarowania funkcji wirtualnych abstrakcyjnej równoważne do deklarowania czystej funkcji wirtualnej.  
   
 ```cpp  
 // abstract_keyword_3.cpp  

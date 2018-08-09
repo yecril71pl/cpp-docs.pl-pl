@@ -26,12 +26,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 0ee53735c84d586aa41cd4a1c5d3e8a70051c88e
-ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
+ms.openlocfilehash: 23befed8800027553f69032a5f5cc32816396951
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39460974"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39648213"
 ---
 # <a name="colors-window-image-editor-for-icons"></a>Okno Kolory (Edytor obrazów dla ikon)
 **Kolory** okno ma dwie części:  
@@ -46,7 +46,7 @@ Okno Kolory
 > [!NOTE]
 >  **Koloru ekranu** i **kolor odwrotność** narzędzia są dostępne tylko dla ikony i kursory.  
   
- Można użyć okna kolory z [paska narzędzi edytora obrazów](../windows/toolbar-image-editor-for-icons.md).  
+ Możesz użyć **kolory** okno z [paska narzędzi edytora obrazów](../windows/toolbar-image-editor-for-icons.md).  
   
 ## <a name="requirements"></a>Wymagania  
  Brak  

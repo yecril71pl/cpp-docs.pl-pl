@@ -16,37 +16,36 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 5defa8cdd2e2fb96ceff0d333f06698154baf977
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: b0844ab8a4233e2204c42a8d165309c89026fb01
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33871731"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39646231"
 ---
 # <a name="editing-in-an-accelerator-table"></a>Edytowanie w Tabeli akceleratora
-### <a name="to-edit-in-an-accelerator-table"></a>Aby edytować w tabeli akceleratora  
+### <a name="to-edit-in-an-accelerator-table"></a>Edytowanie w tabeli akceleratora  
   
-1.  Otwórz tabeli akceleratora klikając odpowiednią ikonę w [widok zasobów](../windows/resource-view-window.md).  
+1.  Otwórz tabeli akceleratora, klikając dwukrotnie odpowiednią ikonę w [widok zasobów](../windows/resource-view-window.md).  
   
     > [!NOTE]
-    >  Jeśli projekt nie zawiera już plik .rc, zobacz [Tworzenie nowego pliku skryptu zasobu](../windows/how-to-create-a-resource-script-file.md).  
+    >  Jeśli projekt nie zawiera jeszcze pliku .rc, zobacz [tworzenia nowego pliku skryptu zasobów](../windows/how-to-create-a-resource-script-file.md).  
   
-2.  Wybierz wpis w tabeli, a następnie kliknij, aby aktywować edycji w miejscu.  
+2.  Wybierz wpis w tabeli i kliknij, aby aktywować edycji w miejscu.  
   
 3.  Wybierz z listy rozwijanej kombi lub wpisz w miejscu, aby wprowadzić zmiany.  
   
-    -   Aby uzyskać [identyfikator](id-property.md), wybierz z listy lub wpisz do edycji.  
+    -   Aby uzyskać [identyfikator](id-property.md), wybierz z listy lub wpisz, aby edytować.  
   
     -   Aby uzyskać [modyfikator](../windows/accelerator-modifier-property.md), wybierz z listy.  
   
-    -   Aby uzyskać [klucza](../windows/accelerator-key-property.md), wybierz z listy lub wpisz do edycji.  
+    -   Aby uzyskać [klucz](../windows/accelerator-key-property.md), wybierz z listy lub wpisz, aby edytować.  
   
-    -   Aby uzyskać [typu](../windows/accelerator-type-property.md), wybierz z listy ASCII lub VIRTKEY.  
+    -   Aby uzyskać [typu](../windows/accelerator-type-property.md), wybierz opcję **ASCII** lub **VIRTKEY** z listy.  
   
- Aby uzyskać informacje o dodawaniu zasobów do projektów zarządzanych, zobacz [zasobów w aplikacjach pulpitu](/dotnet/framework/resources/index) w *Przewodnik programistów platformy .NET Framework.*  
+ Aby uzyskać informacje na temat dodawania zasobów do projektów zarządzanych, zobacz [zasoby w aplikacjach pulpitu](/dotnet/framework/resources/index) w *przewodniku dewelopera .NET Framework*.  
   
- **Wymagania**  
-  
+## <a name="requirements"></a>Wymagania  
  Win32  
   
 ## <a name="see-also"></a>Zobacz też  

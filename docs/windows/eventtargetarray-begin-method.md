@@ -1,5 +1,5 @@
 ---
-title: EventTargetArray::Begin — metoda | Dokumentacja firmy Microsoft
+title: EventTargetArray::Begin, metoda | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,24 +17,24 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: ef0c9726b089c798ff8b9a98a04da40099cf888a
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: b5dc081a24495fc8939f3069dc68bed4f75beaaf
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33871591"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39642828"
 ---
 # <a name="eventtargetarraybegin-method"></a>EventTargetArray::Begin — Metoda
 Obsługuje infrastrukturę biblioteki WRL i nie jest przeznaczona do użycia bezpośrednio w kodzie.  
   
 ## <a name="syntax"></a>Składnia  
   
-```  
+```cpp  
 ComPtr<IUnknown>* Begin();  
 ```  
   
 ## <a name="return-value"></a>Wartość zwracana  
- Adres pierwszego elementu w tablicy wewnętrznej procedury obsługi zdarzeń.  
+ Adres do pierwszego elementu w tablicy wewnętrznej procedury obsługi zdarzeń.  
   
 ## <a name="remarks"></a>Uwagi  
  Pobiera adres pierwszego elementu w tablicy wewnętrznej procedury obsługi zdarzeń.  
@@ -42,7 +42,7 @@ ComPtr<IUnknown>* Begin();
 ## <a name="requirements"></a>Wymagania  
  **Nagłówek:** event.h  
   
- **Namespace:** Microsoft::wrl:: details —  
+ **Namespace:** Microsoft::wrl:: details  
   
 ## <a name="see-also"></a>Zobacz też  
  [Eventtargetarray — klasa](../windows/eventtargetarray-class.md)   

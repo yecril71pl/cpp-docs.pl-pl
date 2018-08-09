@@ -19,26 +19,26 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 16f2e9587d3fa9bc9d8472c348e92555b5bbb4bb
-ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
+ms.openlocfilehash: fbd2ab9481d8658bac75b62a4afa18f3ff77f0d5
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39570860"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39646260"
 ---
 # <a name="default-c"></a>default (C++)
 Wskazuje, że niestandardowe lub zdefiniowane w obrębie klasy coclass dispinterface reprezentuje domyślny interfejs programowania.  
   
 ## <a name="syntax"></a>Składnia  
   
-```  
+```cpp  
 [ default(  
    interface1,  
    interface2  
 ) ]  
 ```  
   
-#### <a name="parameters"></a>Parametry  
+### <a name="parameters"></a>Parametry  
  *interface1*  
  Domyślny interfejs, które będą dostępne do wykonywania skryptów środowiska, w których utworzenia obiektu na podstawie klasy zdefiniowane za pomocą **domyślne** atrybutu.  
   

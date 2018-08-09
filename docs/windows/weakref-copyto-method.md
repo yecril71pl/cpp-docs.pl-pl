@@ -1,5 +1,5 @@
 ---
-title: WeakRef::CopyTo — metoda | Dokumentacja firmy Microsoft
+title: WeakRef::CopyTo, metoda | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 817d984e995e7ac33ba80f978a282a8c0bac3e4f
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 90756dc8ff515a8c956778bf8c6392332a8f9ca9
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33890638"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39652750"
 ---
 # <a name="weakrefcopyto-method"></a>WeakRef::CopyTo — Metoda
-Przypisuje wskaźnik interfejsu, jeśli jest dostępny do zmiennej wskaźnikowej określony.  
+Przypisuje wskaźnik interfejsu, jeśli to możliwe, do zmiennej wskaźnika określonej.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -45,28 +45,28 @@ HRESULT CopyTo(
 );  
 ```  
   
-#### <a name="parameters"></a>Parametry  
- `U`  
- Wskaźnik interfejsu IInspectable. Błąd jest emitowany Jeśli `U` nie pochodzi od IInspectable.  
+### <a name="parameters"></a>Parametry  
+ *U*  
+ Wskaźnik `IInspectable` interfejsu. Błąd jest emitowane, jeśli *U* nie pochodzi od `IInspectable`.  
   
- `riid`  
- Identyfikatora interfejsu. Błąd jest emitowany Jeśli `riid` nie pochodzi od **słabego odwołania**.  
+ *Parametr riid*  
+ Identyfikator interfejsu. Błąd jest emitowane, jeśli *riid* nie pochodzi od `IWeakReference`.  
   
- `ptr`  
- Podwójnie pośredni wskaźnik do IInspectable lub słabego odwołania.  
+ *ptr*  
+ Podwójnie pośredniego wskaźnika do `IInspectable` lub `IWeakReference`.  
   
 ## <a name="return-value"></a>Wartość zwracana  
- S_OK w przypadku powodzenia; w przeciwnym razie wartość HRESULT opisujący błąd. Aby uzyskać więcej informacji zobacz uwagi.  
+ S_OK w przypadku powodzenia; w przeciwnym razie wartość HRESULT, który opisuje błąd. Aby uzyskać więcej informacji, zobacz **uwagi**.  
   
 ## <a name="remarks"></a>Uwagi  
- Zwracana wartość S_OK oznacza, że ta operacja powiodła się, ale nie wskazuje, czy odwołanie słabe została rozpoznana jako silne odwołanie. Jeśli zostanie zwrócona wartość S_OK, przetestuj parametru `p` jest silne odwołanie; oznacza to, że parametr `p` nie jest równa `nullptr`.  
+ Zwracana wartość S_OK oznacza, że ta operacja zakończyło się pomyślnie, ale nie wskazuje, czy słabe odwołanie została rozpoznana jako silne odwołanie. Jeśli zwracana jest S_OK, przetestować ten parametr *p* jest silne odwołanie, czyli parametr *p* nie jest równa **nullptr**.  
   
- Począwszy od zestawu SDK systemu Windows 10, ta metoda nie ustawiono wystąpienie weakref — `nullptr` , jeśli nie można uzyskać słabe odwołanie, dlatego należy unikać błąd podczas sprawdzania kodu, który sprawdza weakref — dla `nullptr`. Zamiast tego należy sprawdzić `ptr` dla `nullptr`.  
+ Począwszy od zestawu Windows 10 SDK, ta metoda nie ustawia **WeakRef** wystąpienia do **nullptr** Jeśli nie można uzyskać słabe odwołanie, więc należy unikać błąd podczas sprawdzania kodu, który sprawdza WeakRef dla **nullptr**. Zamiast tego należy sprawdzić *ptr* dla **nullptr**.  
   
 ## <a name="requirements"></a>Wymagania  
  **Nagłówek:** client.h  
   
- **Namespace:** Microsoft::wrl —  
+ **Namespace:** Microsoft::WRL  
   
 ## <a name="see-also"></a>Zobacz też  
  [WeakRef, klasa](../windows/weakref-class.md)

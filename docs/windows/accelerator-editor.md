@@ -22,12 +22,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: feece642928db70a2b78dd3a4117b695b19f4af9
-ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
+ms.openlocfilehash: 0aed7c8ef617152144bbe211f83f442fe93d525e
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39466075"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39648288"
 ---
 # <a name="accelerator-editor"></a>Edytor klawiszy skrótów
 Tabeli klawiszy skrótu jest zasobem Windows, który zawiera listę klawisze skrótów (znany także jako klawisze skrótów) i identyfikatory poleceń, które są skojarzone z nimi. Program może mieć więcej niż jednej tabeli akceleratora.  
@@ -36,7 +36,7 @@ Tabeli klawiszy skrótu jest zasobem Windows, który zawiera listę klawisze skr
   
  Możesz użyć [Widok klas](http://msdn.microsoft.com/8d7430a9-3e33-454c-a9e1-a85e3d2db925) można dołączyć klucza polecenia klawiszy skrótów do kodu.  
   
- Edytor klawiszy skrótów można:  
+ Za pomocą **akceleratora** edytora, możesz:  
   
 -   [Ustawianie właściwości klawiszy skrótów](../windows/setting-accelerator-properties.md)  
   
@@ -47,12 +47,12 @@ Tabeli klawiszy skrótu jest zasobem Windows, który zawiera listę klawisze skr
 -   [Użyj wstępnie zdefiniowane klawisze skrótów](../windows/predefined-accelerator-keys.md)  
   
     > [!TIP]
-    >  Podczas korzystania z Edytor klawiszy skrótów, można kliknąć prawym przyciskiem myszy, aby wyświetlić menu skrótów z najczęściej używanymi poleceniami. Dostępne polecenia zależą od tego, wskaźnik wskazuje na.  
+    >  Podczas korzystania z **akceleratora** edytora, możesz kliknąć prawym przyciskiem myszy, aby wyświetlić menu skrótów z najczęściej używanymi poleceniami. Dostępne polecenia zależą od tego, wskaźnik wskazuje na.  
   
     > [!NOTE]
     >  Windows nie pozwalają na tworzenie tabel akceleratora puste. Jeśli utworzenia tabeli akceleratora żadnych wpisów, zostanie usunięta automatycznie po zapisaniu tabeli.  
   
- Aby uzyskać informacje na temat dodawania zasobów do projektów zarządzanych, zobacz [zasoby w aplikacjach pulpitu](/dotnet/framework/resources/index) w *przewodniku dewelopera .NET Framework.* Aby uzyskać informacji na temat ręcznego dodawania plików zasobów do projektów zarządzanych, uzyskiwania dostępu do zasobów, wyświetlania statycznych zasobów i przypisywania ciągów zasobów do właściwości, zobacz [Creating Resource Files dla aplikacji klasycznych](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Aby uzyskać informacji na temat globalizacja i lokalizacja zasobów w aplikacjach zarządzanych, zobacz [Globalizing i lokalizowanie aplikacji programu .NET Framework](/dotnet/standard/globalization-localization/index).  
+ Aby uzyskać informacje na temat dodawania zasobów do projektów zarządzanych, zobacz [zasoby w aplikacjach pulpitu](/dotnet/framework/resources/index) w *przewodniku dewelopera .NET Framework*. Aby uzyskać informacji na temat ręcznego dodawania plików zasobów do projektów zarządzanych, uzyskiwania dostępu do zasobów, wyświetlania statycznych zasobów i przypisywania ciągów zasobów do właściwości, zobacz [Creating Resource Files dla aplikacji klasycznych](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Aby uzyskać informacji na temat globalizacja i lokalizacja zasobów w aplikacjach zarządzanych, zobacz [Globalizing i lokalizowanie aplikacji programu .NET Framework](/dotnet/standard/globalization-localization/index).  
   
 ## <a name="requirements"></a>Wymagania  
  Win32  

@@ -21,41 +21,39 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 6ffcb4621bf0005e6b22991da7a2dde9372afa6c
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: b288e97030cad7e38caf19fb47f7a058c3ead61d
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33891925"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39643111"
 ---
 # <a name="switching-between-dialog-box-controls-and-code"></a>Przełączanie między kontrolkami okna dialogowego i kodem
-W aplikacjach MFC możesz kliknąć dwukrotnie na formanty okna dialogowego, aby przejść do ich obsługi kodu lub do szybkiego tworzenia szkieletu funkcje programu obsługi.  
+W aplikacjach MFC można kliknąć dwukrotnie na formantów okna dialogowego, aby przejść do swój kod procedury obsługi lub szybko utworzyć szkieletu funkcje obsługi.  
   
- Za pomocą formantu zaznaczone, kliknij przycisk **ControlEvents** przycisk lub **wiadomości** przycisk [okna właściwości](/visualstudio/ide/reference/properties-window) Aby wyświetlić listę wszystkich komunikatów systemu Windows i zdarzenia dostępna dla wybranego elementu. Wybierz z listy, aby utworzyć lub edytować funkcje programu obsługi.  
+ Dzięki nim wybrany jakiś formant, kliknij przycisk **ControlEvents** przycisk lub **wiadomości** znajdujący się w [okno właściwości](/visualstudio/ide/reference/properties-window) Aby wyświetlić pełną listę Windows komunikaty i zdarzenia dostępne dla wybranego elementu. Wybierz z listy, aby utworzyć lub edytować funkcje programu obsługi.  
   
 ### <a name="to-jump-to-code-from-the-dialog-editor"></a>Aby przejść do kodu z edytora okien dialogowych  
   
-1.  Kliknij dwukrotnie formantu w oknie dialogowym, aby przejść do deklaracji pod kątem jego obsługa funkcji ostatnio zaimplementowanym komunikatów. (Dla klasy oparty na ATL okien dialogowych, możesz zawsze przejść do definicji konstruktora.)  
+1.  Kliknij dwukrotnie formantu w oknie dialogowym, aby przejść do deklaracji pod kątem komunikat ostatnio zaimplementowano funkcji obsługi. (Dla oparty na bibliotece ATL klasy okien dialogowych, możesz zawsze przejść do definicji konstruktora.)  
   
-### <a name="to-view-events-for-a-control"></a>Aby wyświetlić zdarzenia dla formantu  
+### <a name="to-view-events-for-a-control"></a>Aby wyświetlić zdarzenia kontrolki  
   
-1.  Za pomocą formantu zaznaczone, kliknij przycisk **ControlEvents** przycisk [okna właściwości](/visualstudio/ide/reference/properties-window).  
+1.  Dzięki nim wybrany jakiś formant, kliknij przycisk **ControlEvents** znajdujący się w [okno właściwości](/visualstudio/ide/reference/properties-window).  
   
     > [!NOTE]
-    >  Kliknięcie przycisku **ControlEvents** przycisku, gdy *okno dialogowe* ma fokus udostępnia listę wszystkich kontrolek w oknie dialogowym, które następnie można rozszerzyć do edycji zdarzenia dla pojedynczych formantów.  
+    >  Klikając **ControlEvents** przycisk, kiedy *okno dialogowe* ma fokus udostępnia listę wszystkich kontrolek w oknie dialogowym, które można następnie rozszerzyć do zdarzeń dla poszczególnych formantów edycji.  
   
-     Jeśli jeden formant ma fokus w oknie dialogowym, można kliknij go prawym przyciskiem myszy i wybierz **Dodaj program obsługi zdarzeń** z menu skrótów. Dzięki temu można określić klasę, do którego jest dodawany program obsługi. Aby uzyskać więcej informacji, zobacz [Dodawanie obsługi zdarzeń](../ide/adding-an-event-handler-visual-cpp.md).  
+     Gdy jeden formant ma fokus w oknie dialogowym, można go prawym przyciskiem myszy i wybrać **dodać program obsługi zdarzeń** z menu skrótów. Dzięki temu można określić klasę, do którego jest dodawany program obsługi. Aby uzyskać więcej informacji, zobacz [Dodawanie obsługi zdarzeń](../ide/adding-an-event-handler-visual-cpp.md).  
   
 ### <a name="to-view-messages-for-a-dialog-box"></a>Aby wyświetlić wiadomości dla okna dialogowego  
   
-1.  Okno dialogowe zaznaczone, kliknij **wiadomości** przycisku na [okno właściwości](/visualstudio/ide/reference/properties-window).  
+1.  Wybrane okno dialogowe, kliknij **wiadomości** znajdujący się w [okno właściwości](/visualstudio/ide/reference/properties-window).  
   
- Aby uzyskać informacje o dodawaniu zasobów do projektów zarządzanych, zobacz [zasobów w aplikacjach pulpitu](/dotnet/framework/resources/index) w *Przewodnik programistów platformy .NET Framework.* Aby uzyskać informacje na ręczne dodanie do projektów zarządzanych plików zasobów, uzyskiwanie dostępu do zasobów, wyświetlanie zasoby statyczne i przypisanie do właściwości ciągów zasobów, zobacz [tworzenie plików zasobów dla aplikacji pulpitu](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Informacje dotyczące globalizacji i lokalizacji zasobów w zarządzanych aplikacjach, zobacz [Globalizing i lokalizacja aplikacji .NET Framework](/dotnet/standard/globalization-localization/index).  
+ Aby uzyskać informacje na temat dodawania zasobów do projektów zarządzanych, zobacz [zasoby w aplikacjach pulpitu](/dotnet/framework/resources/index) w *przewodniku dewelopera .NET Framework*. Aby uzyskać informacji na temat ręcznego dodawania plików zasobów do projektów zarządzanych, uzyskiwania dostępu do zasobów, wyświetlania statycznych zasobów i przypisywania ciągów zasobów do właściwości, zobacz [Creating Resource Files dla aplikacji klasycznych](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Aby uzyskać informacji na temat globalizacja i lokalizacja zasobów w aplikacjach zarządzanych, zobacz [Globalizing i lokalizowanie aplikacji programu .NET Framework](/dotnet/standard/globalization-localization/index).  
   
- Wymagania  
-  
+## <a name="requirements"></a>Wymagania  
  Win32  
   
 ## <a name="see-also"></a>Zobacz też  
  [Edytor okien dialogowych](../windows/dialog-editor.md)
-

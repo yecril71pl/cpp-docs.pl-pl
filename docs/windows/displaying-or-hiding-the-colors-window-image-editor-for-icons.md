@@ -18,34 +18,33 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 0aed218fb12a1d115bbcd92f058ec72182864677
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: a6300b02fccad672eef19b387d595a42e4b94ef2
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33872045"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39645113"
 ---
 # <a name="displaying-or-hiding-the-colors-window-image-editor-for-icons"></a>Wyświetlanie i ukrywanie okna Kolory (Edytor obrazów dla ikon)
 ### <a name="to-display-colors-window"></a>Aby wyświetlić okno kolorów  
   
-1.  Kliknij prawym przyciskiem myszy **edytor obrazów** okienku i wybierz polecenie **Pokaż okno kolorów** z menu skrótów.  
+1.  Kliknij prawym przyciskiem myszy **edytora obrazów** okienka i wybierz polecenie **Pokaż okno kolorów** z menu skrótów.  
   
-     \- lub -  
+     \- lub —  
   
-2.  Kliknij przycisk **Pokaż okno kolorów** na [obraz menu](../windows/image-menu-image-editor-for-icons.md).  
+2.  Kliknij przycisk **Pokaż okno kolorów** na [menu obrazu](../windows/image-menu-image-editor-for-icons.md).  
   
-### <a name="to-hide-the-colors-window"></a>Aby ukrywanie okna kolory  
+### <a name="to-hide-the-colors-window"></a>Aby ukryć okno kolorów  
   
-1.  Odepnij okna. Dzięki temu okna ukryte automatycznie, gdy nie jest używany.  
+1.  Odepnij okna. Dzięki temu okna Autoukrywanie, gdy nie jest używany.  
   
- \- lub -  
+ \- lub —  
   
 -   Kliknij przycisk **Zamknij** przycisku.  
   
- Wymagania  
-  
+## <a name="requirements"></a>Wymagania  
  Brak  
   
 ## <a name="see-also"></a>Zobacz też  
- [Kolory — okno](../windows/colors-window-image-editor-for-icons.md)   
+ [Okno kolory](../windows/colors-window-image-editor-for-icons.md)   
  [Edytor obrazów dla ikon](../windows/image-editor-for-icons.md)

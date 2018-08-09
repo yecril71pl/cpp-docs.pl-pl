@@ -20,12 +20,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: d883fbb34fe45be2ad84860ea7564350346749f2
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 9f174bb24ef7782424b07ac681aed601a719cd6d
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33873030"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39650985"
 ---
 # <a name="creating-a-new-toolbar-button"></a>Tworzenie nowego przycisku paska narzędzi
 ### <a name="to-create-a-new-toolbar-button"></a>Aby utworzyć nowego przycisku paska narzędzi  
@@ -33,26 +33,26 @@ ms.locfileid: "33873030"
 1.  W [widok zasobów](../windows/resource-view-window.md) rozwiń folder zasobów (na przykład Project1.rc).  
   
     > [!NOTE]
-    >  Jeśli projekt nie zawiera już plik .rc, zobacz [Tworzenie nowego pliku skryptu zasobu](../windows/how-to-create-a-resource-script-file.md).  
+    >  Jeśli projekt nie zawiera jeszcze pliku .rc, zobacz [tworzenia nowego pliku skryptu zasobów](../windows/how-to-create-a-resource-script-file.md).  
   
-2.  Rozwiń węzeł **narzędzi** i wybierz polecenie narzędzi do edycji.  
+2.  Rozwiń **narzędzi** folder i wybierz pasek narzędzi do edycji.  
   
-3.  Identyfikator należy przypisać pusty przycisk na prawym końcu paska narzędzi. Możesz to zrobić, edytując **identyfikator** właściwości w [okna właściwości](/visualstudio/ide/reference/properties-window). Na przykład możesz nadać tym samym identyfikatorze jako opcji menu przycisku paska narzędzi. W takim przypadku użyj listy rozwijanej, aby wybrać **identyfikator** opcji menu.  
+3.  Identyfikator należy przypisać pusty przycisk po prawej stronie paska narzędzi. Możesz to zrobić, edytując **identyfikator** właściwość [okno właściwości](/visualstudio/ide/reference/properties-window). Na przykład można podać tej samej opcji menu przycisku paska narzędzi. W tym przypadku użyj pola listy rozwijanej, aby wybrać **identyfikator** opcji menu.  
   
      —lub—  
   
-     Wybierz przycisk puste na prawym końcu paska narzędzi (w okienku widoku paska narzędzi) i rozpocząć rysunku. Identyfikator polecenia przycisk domyślny jest przypisywany (ID_BUTTON\<n >).  
+     Wybierz pusty przycisk po prawej stronie paska narzędzi (w **pasek narzędzi widoku** okienko) i rozpocząć rysowania. Domyślny przycisk polecenia identyfikator jest przypisywany (ID_BUTTON\<n >).  
   
- Można skopiować i wkleić obraz na pasku narzędzi jako przycisk Nowy.  
+ Można również skopiuj i Wklej obraz jest jako nowego przycisku paska narzędzi.  
   
-#### <a name="to-add-an-image-to-a-toolbar-as-a-button"></a>Aby dodać obraz do paska narzędzi jako przycisk  
+### <a name="to-add-an-image-to-a-toolbar-as-a-button"></a>Aby dodać obraz do paska narzędzi, jak przycisk  
   
-1.  W [widok zasobów](../windows/resource-view-window.md), Otwórz pasek narzędzi, kliknij go dwukrotnie.  
+1.  W [widok zasobów](../windows/resource-view-window.md), Otwórz pasek narzędzi, klikając go dwukrotnie.  
   
-2.  Następnie otwórz folder obraz, który chcesz dodać do paska narzędzi.  
+2.  Następnie otwórz obraz, który chcesz dodać do paska narzędzi.  
   
     > [!NOTE]
-    >  Jeśli obraz jest otwarty w programie Visual Studio, zostanie otwarty w edytorze obrazów. Można również otworzyć obrazu w innych programów graficznych.  
+    >  Jeśli otworzysz go w programie Visual Studio, zostanie on otwarty w **obraz** edytora. Można również otworzyć obrazu w innych programach grafiki.  
   
 3.  Z **Edytuj** menu, wybierz **kopiowania**.  
   
@@ -60,15 +60,14 @@ ms.locfileid: "33873030"
   
 5.  Z **Edytuj** menu, wybierz **Wklej**.  
   
-     Obraz pojawi się na pasku narzędzi przycisk Nowy.  
+     Obraz pojawi się na pasku narzędzi jako nowy przycisk.  
   
- Aby uzyskać informacje o dodawaniu zasobów do projektów zarządzanych, zobacz [zasobów w aplikacjach pulpitu](/dotnet/framework/resources/index) w *Przewodnik programistów platformy .NET Framework.* Aby uzyskać informacje na ręczne dodanie do projektów zarządzanych plików zasobów, uzyskiwanie dostępu do zasobów, wyświetlanie zasoby statyczne i przypisanie do właściwości ciągów zasobów, zobacz [tworzenie plików zasobów dla aplikacji pulpitu](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Informacje dotyczące globalizacji i lokalizacji zasobów w zarządzanych aplikacjach, zobacz [Globalizing i lokalizacja aplikacji .NET Framework](/dotnet/standard/globalization-localization/index).  
+ Aby uzyskać informacje na temat dodawania zasobów do projektów zarządzanych, zobacz [zasoby w aplikacjach pulpitu](/dotnet/framework/resources/index) w *przewodniku dewelopera .NET Framework*. Aby uzyskać informacji na temat ręcznego dodawania plików zasobów do projektów zarządzanych, uzyskiwania dostępu do zasobów, wyświetlania statycznych zasobów i przypisywania ciągów zasobów do właściwości, zobacz [Creating Resource Files dla aplikacji klasycznych](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Aby uzyskać informacji na temat globalizacja i lokalizacja zasobów w aplikacjach zarządzanych, zobacz [Globalizing i lokalizowanie aplikacji programu .NET Framework](/dotnet/standard/globalization-localization/index).  
   
-### <a name="requirements"></a>Wymagania  
- MFC i ATL  
+## <a name="requirements"></a>Wymagania  
+ ATL i MFC  
   
 ## <a name="see-also"></a>Zobacz też  
  [Właściwości przycisku paska narzędzi](../windows/toolbar-button-properties.md)   
  [Tworzenie, przenoszenie i edytowanie przycisków paska narzędzi](../windows/creating-moving-and-editing-toolbar-buttons.md)   
  [Edytor paska narzędzi](../windows/toolbar-editor.md)
-

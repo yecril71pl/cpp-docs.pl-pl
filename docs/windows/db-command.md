@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 8eade0c6a77e70fe156f80c2809a8cca0ed89b38
-ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
+ms.openlocfilehash: 532f3714bc48db545a33b76eb07b641b8e3e5490
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39571441"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39650092"
 ---
 # <a name="dbcommand"></a>db_command
 Tworzy polecenie OLE DB.  
@@ -41,7 +41,6 @@ Tworzy polecenie OLE DB.
 ```  
   
 ### <a name="parameters"></a>Parametry  
-
 *Polecenie*  
 Polecenie ciąg zawierający tekst polecenia OLE DB. Prostym przykładem jest:  
   
@@ -112,12 +111,12 @@ Nazwa uchwyt, używanej do pracy z zestawu wierszy. Jeśli określisz *nazwa*, *
 **db_command —** kontrole, aby upewnić się, że zmienna umożliwiający *source_name* jest poprawny, dlatego należy określona zmienna w funkcji lub zakresu globalnego.  
   
 *HRESULT* (opcjonalnie)  
-Identyfikuje zmienna, która otrzyma `HRESULT` tego polecenia bazy danych. Jeśli zmienna nie istnieje, jego zostanie automatycznie dodany przez atrybut.  
+Identyfikuje zmienna, która otrzyma wartość HRESULT dla tego polecenia bazy danych. Jeśli zmienna nie istnieje, jego zostanie automatycznie dodany przez atrybut.  
   
 *powiązania* (opcjonalnie)  
 Pozwala na oddzielne Parametry wiążące polecenia OLE DB.  
   
-Jeśli określono wartość dla *powiązania*, **db_command —** będzie analizować skojarzoną wartość i nie można przeanalizować \[ *bindtype*] parametru. Użycie tych umożliwia należy użyć składni dostawcy OLE DB. Aby wyłączyć analizy bez wiązania parametrów, należy określić **powiązania = ""**.  
+Jeśli określono wartość dla *powiązania*, **db_command —** będzie analizować skojarzoną wartość i nie można przeanalizować \[ *bindtype*] parametru. Użycie tych umożliwia należy użyć składni dostawcy OLE DB. Aby wyłączyć analizy bez wiązania parametrów, należy określić `Bindings=""`.  
   
 Jeśli nie określisz wartości *powiązania*, **db_command —** będzie analizować blok parametrów powiązania, wyszukiwanie "**(**", a następnie **\[** _bindtype_**]** w nawiasy kwadratowe, przez co najmniej jeden wcześniej zadeklarowanej C++ zmienne Członkowskie, a następnie "**)**". Cały tekst w nawiasach zostanie usunięta, a wynikowy polecenia, a te parametry, będą używane do konstruowania kolumny i parametru powiązania dla tego polecenia.  
   
@@ -133,7 +132,7 @@ Jeśli *bulk_fetch* jest mniejsza niż jeden `SetRows` zwróci wartość zero.
 ## <a name="remarks"></a>Uwagi  
 **db_command —** tworzy [CCommand](../data/oledb/ccommand-class.md) obiektu, który jest używany przez konsumenta OLE DB do wykonania polecenia.  
   
-Możesz użyć **db_command —** z zakresem klasy lub funkcji; główna różnica polega na zakres `CCommand` obiektu. Z zakresem funkcji danych, np. powiązania zakończenie na końcu funkcji. Klasa i funkcja użycia zakresu obejmują klasy OLE DB szablon konsumenta `CCommand<>`, ale argumentów szablonu różnią się w przypadkach, funkcji i klas. W przypadku funkcji, powiązania nie zostaną wprowadzone **akcesor** zmiennych lokalnych, która obejmuje podczas wywnioskuje użycie klasy `CAccessor`-klasy jako argument. Gdy jest używana jako atrybut class **db_command —** działa w połączeniu z **db_column —**.  
+Możesz użyć **db_command —** z zakresem klasy lub funkcji; główna różnica polega na zakres `CCommand` obiektu. Z zakresem funkcji danych, np. powiązania zakończenie na końcu funkcji. Klasa i funkcja użycia zakresu obejmują klasy OLE DB szablon konsumenta `CCommand<>`, ale argumentów szablonu różnią się w przypadkach, funkcji i klas. W przypadku funkcji, powiązania nie zostaną wprowadzone `Accessor` zmiennych lokalnych, która obejmuje podczas wywnioskuje użycie klasy `CAccessor`-klasy jako argument. Gdy jest używana jako atrybut class **db_command —** działa w połączeniu z **db_column —**.  
   
 **db_command —** może służyć do wykonywania poleceń, które nie zwracają zestaw wyników.  
   

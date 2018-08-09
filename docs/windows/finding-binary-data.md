@@ -21,12 +21,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: ee50f78c4fcc39561fbd94ef3a0af28746cfbaa9
-ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
+ms.openlocfilehash: 4a5b880e9b0425ecb0de5e59a29b216af174fa8e
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39568689"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39652285"
 ---
 # <a name="finding-binary-data"></a>Znajdowanie danych binarnych
 Można wyszukiwać ciągi ASCII lub bajty szesnastkowe. Na przykład, aby wyszukać "Hello", należy można wyszukać dla dowolnego ciągu "Hello" lub "48 65 6C 6 C 6 f" (szesnastkowy).  
@@ -44,7 +44,6 @@ Można wyszukiwać ciągi ASCII lub bajty szesnastkowe. Na przykład, aby wyszuk
  Aby uzyskać informacje na temat dodawania zasobów do projektów zarządzanych, zobacz [zasoby w aplikacjach pulpitu](/dotnet/framework/resources/index) w *przewodniku dewelopera .NET Framework*. Aby uzyskać informacji na temat ręcznego dodawania plików zasobów do projektów zarządzanych, uzyskiwania dostępu do zasobów, wyświetlania statycznych zasobów i przypisywania ciągów zasobów do właściwości, zobacz [Creating Resource Files dla aplikacji klasycznych](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Aby uzyskać informacji na temat globalizacja i lokalizacja zasobów w aplikacjach zarządzanych, zobacz [Globalizing i lokalizowanie aplikacji programu .NET Framework](/dotnet/standard/globalization-localization/index).  
   
 ## <a name="requirements"></a>Wymagania  
-  
  Brak  
   
 ## <a name="see-also"></a>Zobacz też  

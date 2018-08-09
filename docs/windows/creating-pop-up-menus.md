@@ -20,37 +20,34 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 218ed28a8b44100beead46ab13e04ad07d86c7e5
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 4e58951fe214efda0002f3ea864e67d0ea35423c
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33871500"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39648077"
 ---
 # <a name="creating-pop-up-menus"></a>Tworzenie menu wyskakujących
-[Menu wyskakujące](../mfc/menus-mfc.md) wyświetlania często używanych poleceń. Mogą to być kontekstowa do lokalizacji wskaźnika. Za pomocą menu podręcznego w aplikacji wymaga tworzenia samo menu, a następnie łącząc go do kodu aplikacji.  
+[Menu wyskakujące](../mfc/menus-mfc.md) wyświetlania często używanych poleceń. Mogą to być kontekstowo lokalizacji wskaźnika. Używanie wyskakujących menu w aplikacji wymaga tworzenia samo menu, a następnie nawiąż połączenie z kodu aplikacji.  
   
- Po utworzeniu zasobu menu kod aplikacji musi załadować zasobu menu i użyj [TrackPopupMenu](http://msdn.microsoft.com/library/windows/desktop/ms648002) spowodować są wyświetlane w menu. Po użytkownik ma ukryty menu podręczne przez kliknięcie poza nią lub po kliknięciu polecenia, ta funkcja zwróci. Jeśli użytkownik wybierze polecenie, komunikat tego polecenia będą wysyłane do okna, którego uchwyt został przekazany.  
+ Po utworzeniu zasobu menu, kod aplikacji musi załadować zasobu menu i używać [TrackPopupMenu](http://msdn.microsoft.com/library/windows/desktop/ms648002) aby spowodować, że są wyświetlane w menu. Po użytkownik został odrzucony menu podręcznego, klikając poza nim lub kliknie polecenie, że funkcja zwróci. Jeśli użytkownik wybierze polecenie, komunikat tego polecenia będą wysyłane do okna, w których uchwyt został przekazany.  
   
-### <a name="to-create-a-pop-up-menu"></a>Aby utworzyć menu podręczne  
+### <a name="to-create-a-pop-up-menu"></a>Aby utworzyć menu podręcznego  
   
-1.  [Tworzenie menu](../windows/creating-a-menu.md) z pustym tytułem (nie udostępniają **podpis**).  
+1.  [Tworzenie menu](../windows/creating-a-menu.md) z pustym tytułem (nie zapewniają **podpis**).  
   
-2.  [Dodawanie polecenia menu do nowego menu](../windows/adding-commands-to-a-menu.md). Przejście do pierwszego polecenia menu pod tytułem puste menu (tymczasowego podpis mówi typu w tym miejscu). Wpisz **podpis** i inne informacje.  
+2.  [Dodać polecenie menu do menu Nowy](../windows/adding-commands-to-a-menu.md). Przenieś do pierwszego polecenia menu poniżej tytułu menu puste (mówi tymczasowe podpis `Type Here`). Wpisz **podpis** i inne informacje.  
   
-     Powtórz te kroki dla innych poleceń menu w menu podręcznym.  
+     Powtórz ten proces dla innych poleceń menu w menu podręcznym.  
   
-3.  Zapisz zasobów menu.  
+3.  Zapisz zasób menu.  
   
     > [!TIP]
-    >  Aby uzyskać więcej informacji o wyświetlaniu menu podręczne, zobacz [wyświetlanie jako Menu podręcznego](../windows/viewing-a-menu-as-a-pop-up-menu.md).  
+    >  Aby uzyskać więcej informacji o wyświetlaniu menu podręcznego, zobacz [wyświetlanie jako Menu podręcznego](../windows/viewing-a-menu-as-a-pop-up-menu.md).  
   
-
-  
- **Wymagania**  
-  
+## <a name="requirements"></a>Wymagania  
  Win32  
   
 ## <a name="see-also"></a>Zobacz też  
- [Łączenie Menu wyskakującego do aplikacji](../windows/connecting-a-pop-up-menu-to-your-application.md)   
+ [Łączenie Menu wyskakującego z Twoją aplikacją](../windows/connecting-a-pop-up-menu-to-your-application.md)   
  [Edytor menu](../windows/menu-editor.md)

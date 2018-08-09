@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: dc8f0ec7c904355e3b5b4989a89fd13a7d9ad767
-ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
+ms.openlocfilehash: 8ff0a5fd4bee88fecb26f09eb1c2f20959d4a448
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39464574"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39651587"
 ---
 # <a name="changing-the-properties-of-a-string"></a>Zmiana właściwości ciągu
 ### <a name="to-change-a-string-or-its-identifier"></a>Aby zmienić ciąg lub jego identyfikator.  
@@ -34,7 +34,7 @@ ms.locfileid: "39464574"
   
 2.  Wybierz parametry chcesz edytować, a następnie kliknij dwukrotnie **identyfikator**, **wartość**, lub **podpis** kolumny. Teraz możesz wykonywać następujące czynności:  
   
-    -   Wybierz **identyfikator** z **identyfikator listy rozwijanej** listy lub wpisz identyfikator bezpośrednio w miejscu.  
+    -   Wybierz **identyfikator** z **identyfikator listy rozwijanej** listy lub wpisz `ID` bezpośrednio w miejscu.  
   
     -   Wpisz inny numer w **wartość** kolumny.  
   
@@ -43,10 +43,9 @@ ms.locfileid: "39464574"
         > [!NOTE]
         >  Można również edytować właściwości ciągu w [okno właściwości](/visualstudio/ide/reference/properties-window).  
   
- Aby uzyskać informacje na temat dodawania zasobów do projektów zarządzanych, (te, których platformą docelową środowiska uruchomieniowego języka wspólnego), zobacz [zasoby w aplikacjach pulpitu](/dotnet/framework/resources/index) w *przewodniku dewelopera .NET Framework.* Aby uzyskać informacji na temat ręcznego dodawania plików zasobów do projektów zarządzanych, uzyskiwania dostępu do zasobów, wyświetlania statycznych zasobów i przypisywania ciągów zasobów do właściwości, zobacz [Instruktaż: Lokalizowanie interfejsów Windows Forms](http://msdn.microsoft.com/9a96220d-a19b-4de0-9f48-01e5d82679e5) i [Wskazówki: Korzystanie z zasobów for Localization with ASP.NET](http://msdn.microsoft.com/Library/bb4e5b44-e2b0-48ab-bbe9-609fb33900b6).  
+ Aby uzyskać informacje na temat dodawania zasobów do projektów zarządzanych, (te, których platformą docelową środowiska uruchomieniowego języka wspólnego), zobacz [zasoby w aplikacjach pulpitu](/dotnet/framework/resources/index) w *przewodniku dewelopera .NET Framework*. Aby uzyskać informacji na temat ręcznego dodawania plików zasobów do projektów zarządzanych, uzyskiwania dostępu do zasobów, wyświetlania statycznych zasobów i przypisywania ciągów zasobów do właściwości, zobacz [Instruktaż: Lokalizowanie interfejsów Windows Forms](http://msdn.microsoft.com/9a96220d-a19b-4de0-9f48-01e5d82679e5) i [Wskazówki: Korzystanie z zasobów for Localization with ASP.NET](http://msdn.microsoft.com/Library/bb4e5b44-e2b0-48ab-bbe9-609fb33900b6).  
   
- **Wymagania**  
-  
+## <a name="requirements"></a>Wymagania  
  Win32  
   
 ## <a name="see-also"></a>Zobacz też  

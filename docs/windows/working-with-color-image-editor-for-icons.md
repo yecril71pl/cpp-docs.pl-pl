@@ -23,30 +23,30 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 1f9016e36ce6b081446a00136445fd7ebdd5a341
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 37e469b18af727bea29681b284fd123bcce64c93
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33891662"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39647423"
 ---
 # <a name="working-with-color-image-editor-for-icons"></a>Praca z kolorem (Edytor obrazów dla ikon)
-Edytor obrazów zawiera wiele funkcji, które w szczególności obsługiwać i dostosowywanie kolorów. Można ustawić kolor pierwszego planu i tła, wypełnianie kolorem ograniczonego obszarów lub wybrać kolor na obraz do użycia jako bieżący kolor pierwszego planu i tła. Możesz użyć narzędzia na [paska narzędzi edytora obrazów](../windows/toolbar-image-editor-for-icons.md) wraz z palety kolorów w [kolory — okno](../windows/colors-window-image-editor-for-icons.md) do tworzenia obrazów.  
+**Edytora obrazów** zawiera wiele funkcji, które w szczególności obsługiwać i dostosowywanie kolorów. Można ustawić kolor pierwszego planu i tła, wypełnij obszary ograniczonego kolorem lub wybierz kolor obrazu do użycia jako bieżący kolor pierwszego planu i tła. Możesz użyć narzędzi na [paska narzędzi edytora obrazów](../windows/toolbar-image-editor-for-icons.md) wraz z palety kolorów w [okno kolorów](../windows/colors-window-image-editor-for-icons.md) do tworzenia obrazów.  
   
- Wszystkie kolory w skali odcieni szarości i 16 kolorów obrazów są wyświetlane w palety kolorów w oknie kolorów. Oprócz standardowych 16 kolorów można tworzyć kolory niestandardowe. Zmiana któregoś z kolorów w palecie natychmiast zmieni kolor odpowiedniego obrazu.  
+ Wszystkie kolory monochromatyczny i 16 kolorów obrazów są wyświetlane w **kolory** palety w **kolory** okna. Oprócz 16 kolory standardowe można utworzyć własne niestandardowe kolory. Dowolne kolory z palety natychmiast zmiana będzie odpowiedni kolor na obrazie.  
   
- Podczas pracy z ikony 256 kolorów i kursora obrazy, właściwość kolorów w [okna właściwości](/visualstudio/ide/reference/properties-window) jest używany. Aby uzyskać więcej informacji, zobacz [Tworzenie ikony 256 kolorów](creating-a-256-color-icon-or-cursor-image-editor-for-icons.md).  
+ Podczas pracy z ikony 256 kolorów i obrazy kursora **kolory** właściwość [okno właściwości](/visualstudio/ide/reference/properties-window) jest używany. Aby uzyskać więcej informacji, zobacz [Tworzenie ikony 256 kolorów](creating-a-256-color-icon-or-cursor-image-editor-for-icons.md).  
   
 > [!NOTE]
->  Korzystając z edytora obrazów, można wyświetlać obrazy 32-bitowe, ale nie można ich edytować.  
+>  Za pomocą **edytora obrazów**, można wyświetlać obrazy 32-bitowe, ale nie można ich edytować.  
   
- Można również tworzyć obrazy koloru wartość true. Jednak true kolorów nie są wyświetlane w palecie pełna w oknie kolorów. pojawią się one w obszarze wskaźnik kolor pierwszego planu i tła. Wartość true, kolory są tworzone przy użyciu [wybór koloru niestandardowego — okno dialogowe](../windows/custom-color-selector-dialog-box-image-editor-for-icons.md). Aby uzyskać więcej informacji, zobacz [Dostosowywanie lub zmiana kolorów](../windows/customizing-or-changing-colors-image-editor-for-icons.md).  
+ Można również tworzyć obrazy True color. Jednak true koloru próbek nie są wyświetlane w palecie pełnego w **kolory** okna; pojawiają się tylko w obszarze wskaźnik kolor pierwszego planu i tła. Wartość true, kolory są tworzone przy użyciu [okno dialogowe selektora kolorów niestandardowych](../windows/custom-color-selector-dialog-box-image-editor-for-icons.md). Aby uzyskać więcej informacji, zobacz [Dostosowywanie lub zmiana kolorów](../windows/customizing-or-changing-colors-image-editor-for-icons.md).  
   
- Można zapisać palety kolorów niestandardowych na dysku i ponownie załaduj je zgodnie z potrzebami. Palety kolorów, które niedawno używane jest zapisywane w rejestrze i ładowane automatycznie przy następnym uruchomieniu programu Visual Studio.  
+ Można zapisać palety kolorów niestandardowych na dysku i ponownie załaduj je stosownie do potrzeb. Palety kolorów, ostatnio używane jest zapisywane w rejestrze i ładowane automatycznie przy następnym uruchomieniu programu Visual Studio.  
   
 -   [Ustawianie pierwszego planu lub kolorów tła](../windows/selecting-foreground-or-background-colors-image-editor-for-icons.md)  
   
--   [Wypełnianie ograniczonego obszaru obrazu kolorem](../windows/filling-a-bounded-area-of-an-image-with-a-color-image-editor-for-icons.md)  
+-   [Wypełnianie ograniczonego obszaru obrazu za pomocą koloru](../windows/filling-a-bounded-area-of-an-image-with-a-color-image-editor-for-icons.md)  
   
 -   [Pobieranie koloru z obrazu do użycia w innym miejscu](../windows/picking-up-a-color-from-an-image-to-use-elsewhere-image-editor-for-icons.md)  
   
@@ -58,13 +58,12 @@ Edytor obrazów zawiera wiele funkcji, które w szczególności obsługiwać i d
   
 -   [Zapisywanie i ładowanie różnych palet kolorów](../windows/saving-and-loading-different-color-palettes-image-editor-for-icons.md)  
   
--   [Kolory — okno](../windows/colors-window-image-editor-for-icons.md)  
+-   [Okno kolory](../windows/colors-window-image-editor-for-icons.md)  
   
- Aby uzyskać informacje o dodawaniu zasobów do projektów zarządzanych, zobacz [zasobów w aplikacjach pulpitu](/dotnet/framework/resources/index) w *Przewodnik programistów platformy .NET Framework.* Aby uzyskać informacje na ręczne dodanie do projektów zarządzanych plików zasobów, uzyskiwanie dostępu do zasobów, wyświetlanie zasoby statyczne i przypisanie do właściwości ciągów zasobów, zobacz [tworzenie plików zasobów dla aplikacji pulpitu](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Informacje dotyczące globalizacji i lokalizacji zasobów w zarządzanych aplikacjach, zobacz [Globalizing i lokalizacja aplikacji .NET Framework](/dotnet/standard/globalization-localization/index).  
+ Aby uzyskać informacje na temat dodawania zasobów do projektów zarządzanych, zobacz [zasoby w aplikacjach pulpitu](/dotnet/framework/resources/index) w *przewodniku dewelopera .NET Framework*. Aby uzyskać informacji na temat ręcznego dodawania plików zasobów do projektów zarządzanych, uzyskiwania dostępu do zasobów, wyświetlania statycznych zasobów i przypisywania ciągów zasobów do właściwości, zobacz [Creating Resource Files dla aplikacji klasycznych](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Aby uzyskać informacji na temat globalizacja i lokalizacja zasobów w aplikacjach zarządzanych, zobacz [Globalizing i lokalizowanie aplikacji programu .NET Framework](/dotnet/standard/globalization-localization/index).  
   
 ## <a name="requirements"></a>Wymagania  
  Brak  
   
 ## <a name="see-also"></a>Zobacz też  
  [Klawisze skrótów](../windows/accelerator-keys-image-editor-for-icons.md)   
-

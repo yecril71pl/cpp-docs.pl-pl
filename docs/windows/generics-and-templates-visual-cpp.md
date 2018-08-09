@@ -16,12 +16,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 3ebb476b0a8c384759c9d44101e7bac7083103b2
-ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
+ms.openlocfilehash: fbe4837a347c78bb3b7c05094adf442b69fa2f39
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39570769"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39649494"
 ---
 # <a name="generics-and-templates-visual-c"></a>Typy ogólne i szablony (Visual C++)
 Typy ogólne i szablony są obie funkcje językowe, pozwalające na obsługę typów sparametryzowanych. Jednak różnią się i mają różne sposoby zastosowania. W tym temacie omówiono wiele różnic.  
@@ -51,7 +51,7 @@ Typy ogólne i szablony są obie funkcje językowe, pozwalające na obsługę ty
   
 ## <a name="combining-templates-and-generics"></a>Łączenie z szablonami i typami ogólnymi  
   
--   Podstawową różnicę w typach ogólnych ma wpływ na tworzenie aplikacji łączących się z szablonami i typami ogólnymi. Na przykład załóżmy, że masz klasą szablonu, który chcesz utworzyć otokę ogólny dla do udostępnienia tego szablonu do innych języków jako zwykły. Wypełnij ogólny nie może mieć parametr typu, który następnie przekazuje do szablonu, ponieważ szablon musi mieć parametr tego typu w czasie kompilacji, ale ogólnego rozwiąże parametr typu aż do czasu. Zagnieżdżanie wewnątrz ogólnego szablonu nie będą działać albo ponieważ nie istnieje żaden sposób rozwiń węzeł Szablony w czasie kompilacji dla dowolnych typów ogólnych, które mogła zostać utworzona w czasie wykonywania.  
+Podstawową różnicę w typach ogólnych ma wpływ na tworzenie aplikacji łączących się z szablonami i typami ogólnymi. Na przykład załóżmy, że masz klasą szablonu, który chcesz utworzyć otokę ogólny dla do udostępnienia tego szablonu do innych języków jako zwykły. Wypełnij ogólny nie może mieć parametr typu, który następnie przekazuje do szablonu, ponieważ szablon musi mieć parametr tego typu w czasie kompilacji, ale ogólnego rozwiąże parametr typu aż do czasu. Zagnieżdżanie wewnątrz ogólnego szablonu nie będą działać albo ponieważ nie istnieje żaden sposób rozwiń węzeł Szablony w czasie kompilacji dla dowolnych typów ogólnych, które mogła zostać utworzona w czasie wykonywania.  
   
 ## <a name="example"></a>Przykład  
   
@@ -94,8 +94,6 @@ int main() {
    MyRef<int>^ mref = gcnew MyRef<int>(11);  
 }  
 ```  
-  
-### <a name="output"></a>Dane wyjściowe  
   
 ```Output  
 F  

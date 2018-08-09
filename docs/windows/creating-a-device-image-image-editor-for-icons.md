@@ -22,33 +22,32 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: d8fc1ce4bd5a6e125ece7461d100950f255dee44
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: bbdc52cca73d568cb365deb345ec6465488e3b40
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33873228"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39641346"
 ---
 # <a name="creating-a-device-image-image-editor-for-icons"></a>Tworzenie obrazu urządzenia (Edytor obrazów dla ikon)
-Podczas tworzenia nowego zasobu ikony, obraz edytora najpierw tworzy obraz w określonym stylu (32 x 32, 16 kolorów dla ikony oraz 32 × 32 dla kursory w skali odcieni szarości). Można dodać obrazy w różnych rozmiarach i style do początkowej ikony lub kursor i edytować każdy dodatkowego obrazu w razie potrzeby dla różnych ekranów. Można również edytować obrazu za pomocą operacji kopiowania i wklejania z istniejącym typem obrazu lub mapy bitowej utworzonej w programie grafiki.  
+Podczas tworzenia nowej ikony lub zasobu kursora **obraz** edytora najpierw tworzy obraz w określonym stylu (32 x 32, 16 kolorów dla ikony oraz 32 × 32, monochromatyczny liczby kursorów). Można dodać obrazy w różnych rozmiarach i style do początkowego ikony lub kursor i edytowania każdego dodatkowego obrazu zgodnie z potrzebami dla różnych ekranów. Można również edytować obraz, za pomocą operacji kopiowania i wklejania z istniejącego typu obrazu lub mapy bitowej utworzonej w programie graficznym.  
   
- Po otwarciu zasobu ikony w [edytor obrazów](../windows/image-editor-for-icons.md), większość ściśle dopasowania bieżące urządzenie wyświetlające jest domyślnie otwierany obrazu.  
+ Po otwarciu ikony zasobu w [edytora obrazów](../windows/image-editor-for-icons.md), obraz, większość ściśle dopasowując bieżące urządzenie wyświetlające jest domyślnie otwierany.  
   
 ### <a name="to-create-a-new-icon-or-cursor"></a>Aby utworzyć nową ikonę lub kursora  
   
-1.  W [widok zasobów](../windows/resource-view-window.md), kliknij prawym przyciskiem myszy plik .rc, a następnie wybierz **Wstaw zasób** z menu skrótów. (Jeśli masz już istniejący zasób obrazu w pliku .rc, takich jak kursora, użytkownik może po prostu kliknij prawym przyciskiem myszy **kursora** i wybierz polecenie **wstawiania kursora** z menu skrótów.)  
+1.  W [widok zasobów](../windows/resource-view-window.md), kliknij prawym przyciskiem myszy plik .rc, a następnie wybierz **Wstaw zasobów** z menu skrótów. (Jeśli masz już istniejący zasób obrazu w pliku .rc, takich jak kursora, użytkownik może po prostu kliknij prawym przyciskiem myszy **kursora** i wybierz polecenie **wstawiania kursora** z menu skrótów.)  
   
     > [!NOTE]
-    >  Jeśli projekt nie zawiera już plik .rc, zobacz [Tworzenie nowego pliku skryptu zasobu](../windows/how-to-create-a-resource-script-file.md).  
+    >  Jeśli projekt nie zawiera jeszcze pliku .rc, zobacz [tworzenia nowego pliku skryptu zasobów](../windows/how-to-create-a-resource-script-file.md).  
   
-2.  W [Wstaw zasób — okno dialogowe](../windows/add-resource-dialog-box.md), wybierz pozycję **ikona** lub **kursora** i kliknij przycisk **nowy**. Ikony spowoduje to utworzenie zasobu ikony z 32 × 32, ikona 16 kolorów. Dla kursorów, 32 × 32, tworzony jest monochromatyczny obrazu (w kolorze 2).  
+2.  W [Wstaw zasób — okno dialogowe](../windows/add-resource-dialog-box.md), wybierz opcję **ikonę** lub **kursora** i kliknij przycisk **New**. Dla ikon spowoduje to utworzenie zasobu ikony z 32 x 32, ikona 16 kolorów. Dla kursorów, 32 x 32, tworzony jest monochromatyczny obrazu (w kolorze 2).  
   
-     Jeśli znak plus (**+**) widoczna obok typ zasobu obrazu w **Wstaw zasób** okno dialogowe, oznacza to, że szablony narzędzi są dostępne. Kliknij znak plus, aby rozwinąć listę szablonów, wybierz szablon, a następnie kliknij przycisk **nowy**.  
+     Jeśli znak plus (**+**) pojawia się obok typ zasobu obrazu w **Wstaw zasobów** okno dialogowe, oznacza to, narzędzi szablony są dostępne. Kliknij znak plus, aby rozwinąć listę szablonów, wybierz szablon, a następnie kliknij przycisk **New**.  
   
- Aby uzyskać informacje o dodawaniu zasobów do projektów zarządzanych, zobacz [zasobów w aplikacjach pulpitu](/dotnet/framework/resources/index) w *Przewodnik programistów platformy .NET Framework.* Aby uzyskać informacje na ręczne dodanie do projektów zarządzanych plików zasobów, uzyskiwanie dostępu do zasobów, wyświetlanie zasoby statyczne i przypisanie do właściwości ciągów zasobów, zobacz [tworzenie plików zasobów dla aplikacji pulpitu](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Informacje dotyczące globalizacji i lokalizacji zasobów w zarządzanych aplikacjach, zobacz [Globalizing i lokalizacja aplikacji .NET Framework](/dotnet/standard/globalization-localization/index).  
+ Aby uzyskać informacje na temat dodawania zasobów do projektów zarządzanych, zobacz [zasoby w aplikacjach pulpitu](/dotnet/framework/resources/index) w *przewodniku dewelopera .NET Framework*. Aby uzyskać informacji na temat ręcznego dodawania plików zasobów do projektów zarządzanych, uzyskiwania dostępu do zasobów, wyświetlania statycznych zasobów i przypisywania ciągów zasobów do właściwości, zobacz [Creating Resource Files dla aplikacji klasycznych](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Aby uzyskać informacji na temat globalizacja i lokalizacja zasobów w aplikacjach zarządzanych, zobacz [Globalizing i lokalizowanie aplikacji programu .NET Framework](/dotnet/standard/globalization-localization/index).  
   
- **Wymagania**  
-  
+## <a name="requirements"></a>Wymagania  
  Brak  
   
 ## <a name="see-also"></a>Zobacz też  

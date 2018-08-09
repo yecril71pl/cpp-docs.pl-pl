@@ -25,46 +25,45 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: a60cf597a88fcf7038848be6c9e2d31269f6a906
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 960dcd17a1ff581db540aecfd536e9d2f2e98539
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33873696"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39645100"
 ---
 # <a name="defining-mnemonics-access-keys"></a>Definiowanie mnemonik (klucze dostępu)
-Zwykle użytkownicy klawiatury przenoszeniu fokus wprowadzania z jednego formantu w oknie dialogowym z kluczami kartę i strzałki. Można jednak zdefiniować klawisza dostępu (nazwę skrótu lub łatwych do zapamiętania), który umożliwia użytkownikom wybór formantu naciskając jednego klucza.  
+Zazwyczaj użytkownicy klawiatury przeniesienie fokusu wprowadzania z jednego formantu do drugiego w oknie dialogowym z **kartę** i **strzałkę** kluczy. Jednak można zdefiniować klawisz dostępu (nazwa mnemoników lub łatwa do zapamiętania) umożliwiający użytkownikom na wybór formantu przez naciśnięcie klawisza pojedynczego.  
   
-### <a name="to-define-an-access-key-for-a-control-with-a-visible-caption-push-buttons-check-boxes-and-radio-buttons"></a>Aby zdefiniować klucz dostępu dla formantu o widoczne podpis (przycisków, pól wyboru i przycisków radiowych)  
+### <a name="to-define-an-access-key-for-a-control-with-a-visible-caption-push-buttons-check-boxes-and-radio-buttons"></a>Aby zdefiniować klucza dostępu dla formantu za pomocą widoczne podpis (przyciski, pola wyboru i przyciski radiowe)  
   
 1.  Wybierz kontrolkę w oknie dialogowym.  
   
-2.  W [okna właściwości](/visualstudio/ide/reference/properties-window)w **podpis** właściwości, wpisz nową nazwę dla formantu, wpisując znak (**&**) przed literą, który ma być jako klucz dostępu dla tego formantu. Na przykład `&Radio1`.  
+2.  W [okno właściwości](/visualstudio/ide/reference/properties-window)w **podpis** właściwości, wpisz nową nazwę dla formantu, wpisując handlowe "i" (`&`) przed litery mają jako klucz dostępu dla tej kontrolki. Na przykład `&Radio1`.  
   
 3.  Naciśnij klawisz **wprowadź**.  
   
-     Podkreślenie jest wyświetlana w wyświetlana nazwa, aby wskazać klawisz dostępu, na przykład **R**adio1.  
+     Podkreślenie pojawia się w wyświetlana nazwa, aby wskazać klawisz dostępu, na przykład **R**adio1.  
   
-### <a name="to-define-an-access-key-for-a-control-without-a-visible-caption"></a>Aby zdefiniować klucz dostępu dla formantu bez podpisu widoczne  
+### <a name="to-define-an-access-key-for-a-control-without-a-visible-caption"></a>Aby zdefiniować klawisz dostępu bez podpisu widoczne kontrolki  
   
-1.  Tworzenie podpis dla formantu przy użyciu **tekst statyczny** kontroli w [przybornika](/visualstudio/ide/reference/toolbox).  
+1.  Tworzenie podpisów dla formantu przy użyciu **tekst statyczny** w kontrolce [przybornika](/visualstudio/ide/reference/toolbox).  
   
-2.  W podpisie tekst statyczny, wpisz znak (**&**) przed literą, ma klucz dostępu.  
+2.  W podpisie tekst statyczny, wpisz znak (`&`) przed litery mają jako klucz dostępu.  
   
-3.  Upewnij się, że formant tekst statyczny bezpośrednio przed formant, który go etykiety w kolejności tabulacji.  
+3.  Upewnij się, że formant statyczny tekst bezpośrednio poprzedza formant, który go etykiety w kolejności tabulacji.  
   
- Klawisze dostępu w oknie dialogowym powinna być unikatowa.  
+ Klucze dostępu w oknie dialogowym powinny być unikatowe.  
   
-#### <a name="to-check-for-duplicate-access-keys"></a>Aby sprawdzić, czy klucze dostępu zduplikowane  
+### <a name="to-check-for-duplicate-access-keys"></a>Aby sprawdzić, czy zduplikowany klucz dostępu  
   
-1.  Na **Format** menu, kliknij przycisk **Sprawdź Mnemoniki**.  
+1.  Na **Format** menu, kliknij przycisk **Sprawdź mnemonik**.  
   
- Aby uzyskać informacje o dodawaniu zasobów do projektów zarządzanych, zobacz [zasobów w aplikacjach pulpitu](/dotnet/framework/resources/index) w *Przewodnik programistów platformy .NET Framework.* Aby uzyskać informacje na ręczne dodanie do projektów zarządzanych plików zasobów, uzyskiwanie dostępu do zasobów, wyświetlanie zasoby statyczne i przypisanie do właściwości ciągów zasobów, zobacz [tworzenie plików zasobów dla aplikacji pulpitu](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Informacje dotyczące globalizacji i lokalizacji zasobów w zarządzanych aplikacjach, zobacz [Globalizing i lokalizacja aplikacji .NET Framework](/dotnet/standard/globalization-localization/index).  
+ Aby uzyskać informacje na temat dodawania zasobów do projektów zarządzanych, zobacz [zasoby w aplikacjach pulpitu](/dotnet/framework/resources/index) w *przewodniku dewelopera .NET Framework*. Aby uzyskać informacji na temat ręcznego dodawania plików zasobów do projektów zarządzanych, uzyskiwania dostępu do zasobów, wyświetlania statycznych zasobów i przypisywania ciągów zasobów do właściwości, zobacz [Creating Resource Files dla aplikacji klasycznych](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Aby uzyskać informacji na temat globalizacja i lokalizacja zasobów w aplikacjach zarządzanych, zobacz [Globalizing i lokalizowanie aplikacji programu .NET Framework](/dotnet/standard/globalization-localization/index).  
   
-### <a name="requirements"></a>Wymagania  
+## <a name="requirements"></a>Wymagania  
  Win32  
   
 ## <a name="see-also"></a>Zobacz też  
  [Formanty w oknach dialogowych](../windows/controls-in-dialog-boxes.md)   
  [Kontrolki](../mfc/controls-mfc.md)
-

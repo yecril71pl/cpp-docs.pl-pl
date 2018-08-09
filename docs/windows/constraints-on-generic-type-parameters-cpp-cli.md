@@ -18,12 +18,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 33829d868eb90cde7259a482b8fc80f9cd6fd677
-ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
+ms.openlocfilehash: bee7bf263e3537811be1b992f463b7f1269863ff
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39465301"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39649786"
 ---
 # <a name="constraints-on-generic-type-parameters-ccli"></a>Ograniczenia parametrów typu ogólnego (C++/CLI)
 W ogólnym typie lub deklaracje metody możesz skorzystać z parametrem typu ograniczenia. Ograniczenie to wymaganie, które muszą spełniać typy używane jako argumenty typu. Na przykład może być ograniczenie, że argument typu musi implementować niektórych interfejsu lub dziedziczyć z określonej klasy.  
@@ -32,11 +32,11 @@ W ogólnym typie lub deklaracje metody możesz skorzystać z parametrem typu ogr
   
 ## <a name="syntax"></a>Składnia  
   
-```  
+```cpp  
 where type-parameter: constraint list  
 ```  
   
-#### <a name="parameters"></a>Parametry  
+### <a name="parameters"></a>Parametry  
  *Parametr typu*  
  Jeden z parametrów typu, aby być ograniczone.  
   
@@ -45,7 +45,7 @@ where type-parameter: constraint list
   
  Lista może również zawierać klasę. Dla argumentu typu spełniać ograniczenie klasy bazowej musi być taka sama klasa co ograniczenia lub pochodzić od ograniczenia.  
   
- Można również określić `gcnew()` do wskazania, argument typu musi mieć publicznego konstruktora bez parametrów; lub **klasy referencyjnej** aby wskazać typ argumentu musi być typem referencyjnym, w tym klasy, interfejsu, delegata lub tablicy Typ; lub **klasę wartości** aby wskazać typ argumentu musi być typem wartości. Wszystkie wartości typu z wyjątkiem Nullable\<T > może być określony.  
+ Można również określić **gcnew()** do wskazania, argument typu musi mieć publicznego konstruktora bez parametrów; lub **klasy referencyjnej** do wskazania, argument typu musi być typem referencyjnym, łącznie z dowolnej klasy interfejsu, delegata lub tablicy typu; lub **klasę wartości** aby wskazać typ argumentu musi być typem wartości. Wszystkie wartości typu z wyjątkiem Nullable\<T > może być określony.  
   
  Można również określić parametr ogólny jako ograniczenie. Typ podany argument dla typu, są ograniczając musi być lub pochodzić od typu ograniczenia. Jest to ograniczenie typu "naked".  
   

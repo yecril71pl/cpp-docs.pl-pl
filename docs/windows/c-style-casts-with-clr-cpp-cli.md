@@ -15,12 +15,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 0ffb2e5a7276925c5f03d06a909803d001532f35
-ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
+ms.openlocfilehash: f22ca2b111cd8e408047bc051f16b6f01694b71e
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39464587"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39641492"
 ---
 # <a name="c-style-casts-with-clr-ccli"></a>Rzutowania w stylu C i kompilator /clr (C++/CLI)
 Poniższy temat dotyczy tylko środowiska uruchomieniowego języka wspólnego.  
@@ -165,7 +165,7 @@ int main() {
 ```  
   
 ## <a name="requirements"></a>Wymagania  
- — Opcja kompilatora:   **/CLR**  
+ — Opcja kompilatora: `/clr`  
   
 ## <a name="see-also"></a>Zobacz też  
  [Component Extensions dla platform środowiska uruchomieniowego](../windows/component-extensions-for-runtime-platforms.md)

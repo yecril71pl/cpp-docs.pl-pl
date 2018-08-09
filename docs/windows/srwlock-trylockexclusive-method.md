@@ -1,5 +1,5 @@
 ---
-title: SRWLock::TryLockExclusive — metoda | Dokumentacja firmy Microsoft
+title: SRWLock::TryLockExclusive, metoda | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 1cc9ee8a63d7403c3de408c924eeab07f1d0efa1
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 993031604469aa09608f936f260869a3b53dbc9c
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33892660"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39652773"
 ---
 # <a name="srwlocktrylockexclusive-method"></a>SRWLock::TryLockExclusive — Metoda
-Próby uzyskania obiektu srwlock — w trybie wyłączności dla bieżącego lub określonego obiektu srwlock —. Jeśli połączenie zostanie nawiązane, wątek wywołujący przejmuje blokady.  
+Próbuje pobrać **SRWLock** obiektu w trybie wyłączności dla bieżącej lub określonej **SRWLock** obiektu. Jeśli wywołanie zakończy się pomyślnie, wątek wywołujący przejmuje na własność blokadę.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -37,17 +37,17 @@ static SyncLockExclusive TryLockExclusive(
 );  
 ```  
   
-#### <a name="parameters"></a>Parametry  
- `lock`  
- Wskaźnik do obiektu srwlock —.  
+### <a name="parameters"></a>Parametry  
+ *lock*  
+ Wskaźnik do **SRWLock** obiektu.  
   
 ## <a name="return-value"></a>Wartość zwracana  
- W przypadku powodzenia obiektu srwlock — w trybie wyłączności i wątku wywołującym ma na własność blokady. W przeciwnym razie srwlock — obiekt, którego stan jest nieprawidłowy.  
+ W przypadku powodzenia **SRWLock** obiektu w trybie wyłączności i Wątek wywołujący przejmuje na własność blokadę. W przeciwnym razie **SRWLock** obiektu, którego stan jest nieprawidłowy.  
   
 ## <a name="requirements"></a>Wymagania  
  **Nagłówek:** corewrappers.h  
   
- **Namespace:** Microsoft::wrl:: wrappers —  
+ **Namespace:** Microsoft::wrl:: wrappers  
   
 ## <a name="see-also"></a>Zobacz też  
  [SRWLock, klasa](../windows/srwlock-class.md)

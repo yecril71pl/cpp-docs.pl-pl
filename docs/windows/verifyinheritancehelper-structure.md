@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: d758f4b44990d1f03ff698f0740c2aa8491367a5
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: a67e63748ee7650b2e99a6112f9725daf6cf13c6
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33889706"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39652939"
 ---
 # <a name="verifyinheritancehelper-structure"></a>VerifyInheritanceHelper — Struktura
 Obsługuje infrastrukturę biblioteki WRL i nie jest przeznaczona do użycia bezpośrednio w kodzie.  
@@ -41,15 +41,15 @@ template <
 struct VerifyInheritanceHelper<I, Nil>;  
 ```  
   
-#### <a name="parameters"></a>Parametry  
- `I`  
+### <a name="parameters"></a>Parametry  
+ *I*  
  Typ.  
   
- `Base`  
+ *podstawowy*  
  Innego typu.  
   
 ## <a name="remarks"></a>Uwagi  
- Sprawdza, czy jeden interfejs pochodzi z innego interfejsu.  
+ Sprawdza, czy jeden interfejs jest tworzony na podstawie innego interfejsu.  
   
 ## <a name="members"></a>Elementy członkowskie  
   
@@ -57,7 +57,7 @@ struct VerifyInheritanceHelper<I, Nil>;
   
 |Nazwa|Opis|  
 |----------|-----------------|  
-|[VerifyInheritanceHelper::Verify, metoda](../windows/verifyinheritancehelper-verify-method.md)|Testy dwa interfejsy określoną przez parametry bieżącego szablonu i określa, czy jeden interfejs pochodzi od innych.|  
+|[VerifyInheritanceHelper::Verify, metoda](../windows/verifyinheritancehelper-verify-method.md)|Testuje dwa interfejsy, które są określone przez bieżący parametry szablonu i określa, czy jeden interfejs jest tworzony na podstawie innych.|  
   
 ## <a name="inheritance-hierarchy"></a>Hierarchia dziedziczenia  
  `VerifyInheritanceHelper`  
@@ -65,7 +65,7 @@ struct VerifyInheritanceHelper<I, Nil>;
 ## <a name="requirements"></a>Wymagania  
  **Nagłówek:** implements.h  
   
- **Namespace:** Microsoft::wrl:: details —  
+ **Namespace:** Microsoft::wrl:: details  
   
 ## <a name="see-also"></a>Zobacz też  
  [Microsoft::WRL::Details, przestrzeń nazw](../windows/microsoft-wrl-details-namespace.md)

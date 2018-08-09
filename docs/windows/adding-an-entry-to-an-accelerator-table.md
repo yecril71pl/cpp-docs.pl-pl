@@ -16,38 +16,35 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 22f3e00c8ba6523f6cc615e4a766ad9206560b5e
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: e0c5e94913a705ac97407f82075ff9c83a12dd6b
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33855373"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39642792"
 ---
 # <a name="adding-an-entry-to-an-accelerator-table"></a>Dodawanie wpisu do Tabeli akceleratora
 ### <a name="to-add-an-entry-to-an-accelerator-table"></a>Aby dodać wpis do tabeli akceleratora  
   
-1.  Otwórz tabeli akceleratora klikając odpowiednią ikonę w [widok zasobów](../windows/resource-view-window.md).  
+1.  Otwórz tabeli akceleratora, klikając dwukrotnie odpowiednią ikonę w [widok zasobów](../windows/resource-view-window.md).  
   
     > [!NOTE]
-    >  Jeśli projekt nie zawiera już plik .rc, zobacz [Tworzenie nowego pliku skryptu zasobu](../windows/how-to-create-a-resource-script-file.md).  
+    >  Jeśli projekt nie zawiera jeszcze pliku .rc, zobacz [tworzenia nowego pliku skryptu zasobów](../windows/how-to-create-a-resource-script-file.md).  
   
-2.  Kliknij prawym przyciskiem myszy wewnątrz tabeli klawiszy skrótów i wybierz polecenie **nowy akcelerator** z menu skrótów, lub kliknij wpis pustego wiersza w dolnej części tabeli.  
+2.  Kliknij prawym przyciskiem myszy w tabeli klawiszy skrótów, a następnie wybierz **nowy akcelerator** z menu skrótów, lub kliknij wpis pusty wiersz na końcu tabeli.  
   
-3.  Wybierz [identyfikator](id-property.md) z listy rozwijanej w identyfikatorze pola lub wpisz nową nazwę w **identyfikator** pole.  
+3.  Wybierz [identyfikator](id-property.md) z listy rozwijanej w identyfikatorze pole lub wpisz nowy identyfikator w **identyfikator** pole.  
   
-4.  Typ [klucza](../windows/accelerator-key-property.md) ma być używany jako akcelerator lub kliknij prawym przyciskiem myszy i wybierz polecenie **dalej wpisany klucz** z menu skrótów, aby ustawić kombinacja klawiszy ( **dalej wpisany klucz** polecenie jest również dostępne z **Edytuj** menu).  
+4.  Typ [klucz](../windows/accelerator-key-property.md) chcesz użyć jako akcelerator lub kliknij prawym przyciskiem myszy i wybrać **dalej wpisany klucz** z menu skrótów, aby ustawić kombinację klawiszy ( **dalej wpisany klucz** polecenia również dostępne z **Edytuj** menu).  
   
-5.  Zmień [modyfikator](../windows/accelerator-modifier-property.md) i [typu](../windows/accelerator-type-property.md), jeśli to konieczne.  
+5.  Zmiana [modyfikator](../windows/accelerator-modifier-property.md) i [typu](../windows/accelerator-type-property.md), jeśli to konieczne.  
   
 6.  Naciśnij klawisz **ENTER**.  
   
     > [!NOTE]
-    >  Upewnij się, że wszystkie akceleratorów, definiowane są unikatowe. Może mieć kilka kombinacji klawiszy przypisane do tego samego Identyfikatora z dotknięty wpływu, na przykład CTRL + P i F8 zarówno można przypisać do ID_PRINT. Jednak o kombinację klawiszy przypisany do więcej niż jeden identyfikator nie będzie działać prawidłowo, na przykład CTRL + Z przypisane do ID_SPELL_CHECK i ID_THESAURUS.  
+    >  Upewnij się, że wszystkie akceleratorów, jaką zdefiniujesz są unikatowe. Może mieć kilka kombinacji klawiszy przypisane do tego samego Identyfikatora przy użyciu efektu wpływu, na przykład **Ctrl** + **P** i **F8** zarówno można przypisać do ID_PRINT. Jednak masz kombinację klawiszy przypisane do więcej niż jeden identyfikator nie będzie działać poprawnie, na przykład **Ctrl** + **Z** przypisane do ID_SPELL_CHECK i ID_THESAURUS.  
   
-
-  
- **Wymagania**  
-  
+## <a name="requirements"></a>Wymagania  
  Win32  
   
 ## <a name="see-also"></a>Zobacz też  

@@ -1,5 +1,5 @@
 ---
-title: Semaphore::semaphore — Konstruktor | Dokumentacja firmy Microsoft
+title: Semaphore::Semaphore, Konstruktor | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: fc7ddd6279dbdf177c8e478b7c1350647ac4a7c3
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 3646e13818297b636a888e1ad00c998a120e8379
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33888662"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39643663"
 ---
 # <a name="semaphoresemaphore-constructor"></a>Semaphore::Semaphore — Konstruktor
-Inicjuje nowe wystąpienie klasy semafora.  
+Inicjuje nowe wystąpienie klasy **semafora** klasy.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -39,14 +39,14 @@ WRL_NOTHROW Semaphore(
 );  
 ```  
   
-#### <a name="parameters"></a>Parametry  
- `h`  
- Dojścia lub odwołania do r-wartości na obiekt semafora.  
+### <a name="parameters"></a>Parametry  
+ *h*  
+ Dojście lub odwołanie rvalue, aby **semafora** obiektu.  
   
 ## <a name="requirements"></a>Wymagania  
  **Nagłówek:** corewrappers.h  
   
- **Namespace:** Microsoft::wrl:: wrappers —
+ **Namespace:** Microsoft::wrl:: wrappers
  
  ## <a name="see-also"></a>Zobacz też
  [Semaphore, klasa](../windows/semaphore-class.md)

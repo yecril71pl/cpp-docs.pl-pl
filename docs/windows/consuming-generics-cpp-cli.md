@@ -15,12 +15,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: d8282079099b0b67b144f768a69f724e39305385
-ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
+ms.openlocfilehash: cf1c7c0894eacc828a011c8c5f9fef8c2d78fba8
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39460494"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39652516"
 ---
 # <a name="consuming-generics-ccli"></a>Konsumowanie typów ogólnych (C++/CLI)
 Typy ogólne utworzonych w jednym języku .NET mogą być używane w innych językach .NET. W przeciwieństwie do szablonów ogólny w skompilowanym zestawie ciągle ogólnego. W związku z tym jeden może utworzyć wystąpienia typu rodzajowego w innym zestawie, a nawet w innym języku niż zestaw, w którym zdefiniowano typ ogólny.  
@@ -114,9 +114,7 @@ int main() {
 }  
 ```  
   
-### <a name="output"></a>Dane wyjściowe  
-  
-```  
+```Output  
 90  
 80  
 70  

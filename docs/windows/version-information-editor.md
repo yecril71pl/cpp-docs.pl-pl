@@ -19,40 +19,39 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 76a76dbb3d8b41c2366f354f9c3c8d66ccc3743f
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 0e57e550527bc906d3c1170e410719c57a877eec
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33890593"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39647384"
 ---
 # <a name="version-information-editor"></a>Edytor informacji o wersji
-Informacje o wersji składa się z firmy i identyfikator produktu, numer wersji produktu i praw autorskich i znak towarowy powiadomień. W edytorze informacje o wersji można tworzyć i obsługiwać te dane, które są przechowywane w zasobach informacji o wersji. Zasób informacje o wersji nie jest wymagane przez aplikację, ale jest to przydatne miejsce do zbierania informacji, która identyfikuje aplikację. Informacje o wersji jest również używane przez Instalatora interfejsów API.  
+Informacje o wersji składa się z firmy i identyfikacji produktu, numer wersji produktu i praw autorskich i znak towarowy powiadomień. W edytorze informacji o wersji można tworzyć i obsługiwać te dane, które jest przechowywane w zasobach informacji o wersji. Zasobach informacji o wersji nie jest wymagane przez aplikację, ale jest użytecznym miejscem, aby zebrać informacje identyfikujące aplikację. Informacje o wersji jest również używany przez Instalatora interfejsów API.  
   
- Zasobach informacji o wersji ma blok górnym i co najmniej jeden bloków niższe: jeden blok informacji stałej u góry i co najmniej jeden bloków informacyjnych wersji na dole (dla innych języków i/lub zestawów znaków). Górny bloku ma edytowalnego pola liczbowego i wybieranych list rozwijanych. Niższe bloki zawierają tylko pola tekstowe można edytować.  
+ Zasobach informacji o wersji ma blokiem górnej i jeden lub więcej bloków niższe: jeden blok informacji stałej u góry i jeden lub więcej bloków informacyjnych wersji u dołu (w przypadku innych języków i/lub zestawów znaków). Blokuj najważniejsze ma edytowalnych pól liczbowych i list rozwijanych można wybrać. Niższe bloki zawierają tylko edytowalnymi polami tekstowymi.  
   
 > [!NOTE]
->  Standardowe systemu Windows jest tylko jedna wersja zasobu o nazwie VS_VERSION_INFO.  
+>  Standardowa Windows jest tylko jedna wersja zasobu o nazwie VS_VERSION_INFO.  
   
- Edytor informacji o wersji umożliwia:  
+ Edytor informacji o wersji pozwala na:  
   
 -   [Edytowanie ciągu w zasobach informacji o wersji](../windows/editing-a-string-in-a-version-information-resource.md)  
   
--   [Dodaj informacje o wersji dla innego języka (nowy blok informacji o wersji)](../windows/adding-version-information-for-another-language.md)  
+-   [Dodaj informacje o wersji dla innego języka (nowej wersję bloku informacyjnego)](../windows/adding-version-information-for-another-language.md)  
   
--   [Usunąć blok informacji o wersji](../windows/deleting-a-version-information-block.md)  
+-   [Usuwanie bloku informacji o wersji](../windows/deleting-a-version-information-block.md)  
   
--   [Informacje o wersji dostępu w programie](../windows/accessing-version-information-from-within-your-program.md)  
+-   [Informacje o wersji dostęp z Twojego programu](../windows/accessing-version-information-from-within-your-program.md)  
   
     > [!NOTE]
-    >  Podczas używania edytora informacje o wersji, w wielu przypadkach należy kliknąć prawym przyciskiem myszy do wyświetlenia menu skrótów poleceń określonych zasobów. Na przykład jeśli klikniesz przycisk podczas wskazuje wpis nagłówek bloku, menu skrótów zawiera polecenia informacji o bloku nowej wersji i usunąć blok informacji o wersji.  
+    >  Podczas korzystania z edytora informacje o wersji, w wielu przypadkach możesz kliknąć prawym przyciskiem myszy, aby wyświetlić menu skrótów poleceń specyficznych dla zasobów. Na przykład po kliknięciu podczas wskazujący wpis nagłówka bloku menu skrótów przedstawiono polecenia informacji o blok nowej wersji i usuwanie bloku informacji o wersji.  
   
- Aby uzyskać informacje o dodawaniu zasobów do projektów zarządzanych, zobacz [zasobów w aplikacjach pulpitu](/dotnet/framework/resources/index) w *Przewodnik programistów platformy .NET Framework.* Aby uzyskać informacje na ręczne dodanie do projektów zarządzanych plików zasobów, uzyskiwanie dostępu do zasobów, wyświetlanie zasoby statyczne i przypisanie do właściwości ciągów zasobów, zobacz [tworzenie plików zasobów dla aplikacji pulpitu](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Informacje dotyczące globalizacji i lokalizacji zasobów w zarządzanych aplikacjach, zobacz [Globalizing i lokalizacja aplikacji .NET Framework](/dotnet/standard/globalization-localization/index).  
+ Aby uzyskać informacje na temat dodawania zasobów do projektów zarządzanych, zobacz [zasoby w aplikacjach pulpitu](/dotnet/framework/resources/index) w *przewodniku dewelopera .NET Framework*. Aby uzyskać informacji na temat ręcznego dodawania plików zasobów do projektów zarządzanych, uzyskiwania dostępu do zasobów, wyświetlania statycznych zasobów i przypisywania ciągów zasobów do właściwości, zobacz [Creating Resource Files dla aplikacji klasycznych](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Aby uzyskać informacji na temat globalizacja i lokalizacja zasobów w aplikacjach zarządzanych, zobacz [Globalizing i lokalizowanie aplikacji programu .NET Framework](/dotnet/standard/globalization-localization/index).  
   
 ## <a name="requirements"></a>Wymagania  
  Win32  
   
 ## <a name="see-also"></a>Zobacz też  
  [Edytory zasobów](../windows/resource-editors.md)   
- [Menu i innych zasobów](http://msdn.microsoft.com/library/windows/desktop/ms632583.aspx)
-
+ [Menu i inne zasoby](http://msdn.microsoft.com/library/windows/desktop/ms632583.aspx)

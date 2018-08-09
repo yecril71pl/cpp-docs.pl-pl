@@ -18,12 +18,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 0681a5e0c88f44d5616724f5564660ecb05fbdc3
-ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
+ms.openlocfilehash: b3ad3ef6acb06eaef04197dc4ecffe27c2d7656d
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39570499"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39650218"
 ---
 # <a name="how-to-change-the-language-or-condition-of-a-resource-while-copying"></a>Porady: zmiana języka lub warunku zasobu podczas kopiowania
 Podczas kopiowania w zasobach, można zmienić jego właściwość języka i/lub właściwości warunku.  
@@ -34,7 +34,7 @@ Podczas kopiowania w zasobach, można zmienić jego właściwość języka i/lub
   
  Język i warunku zasobu są wyświetlane w nawiasach, po nazwie zasobu w okno obszaru roboczego. W tym przykładzie zasobu o nazwie IDD_AboutBox fiński jako używa języka, a jego stan jest XX33.  
   
-```  
+```cpp  
 IDD_AboutBox (Finnish - XX33)  
 ```  
   
@@ -51,7 +51,6 @@ IDD_AboutBox (Finnish - XX33)
     -   W **warunek** wpisz warunek.  
   
 ## <a name="requirements"></a>Wymagania  
-  
  Win32  
   
 ## <a name="see-also"></a>Zobacz też  

@@ -17,31 +17,29 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: ad24d6e874b1c2efd9b57118e20fe78bfa037bd3
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: ef4cfba786bd5c310a24727b59575b9eb45bd183
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33890154"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39651616"
 ---
 # <a name="uidefault"></a>uidefault
-Wskazuje, że element członkowski typu informacji jest domyślny element członkowski do wyświetlenia w interfejsie użytkownika.  
+Wskazuje, że składowa informacji typu jest domyślny element członkowski do wyświetlania w interfejsie użytkownika.  
   
 ## <a name="syntax"></a>Składnia  
   
 ```  
-  
 [uidefault]  
-  
 ```  
   
 ## <a name="remarks"></a>Uwagi  
- **Uidefault —** atrybut C++ ma te same funkcje co [uidefault —](http://msdn.microsoft.com/library/windows/desktop/aa367292) MIDL atrybutu.  
+ **Uidefault —** atrybut C++ ma taką samą funkcjonalność jak [uidefault —](http://msdn.microsoft.com/library/windows/desktop/aa367292) atrybutów w MIDL.  
   
 ## <a name="example"></a>Przykład  
  Poniższy kod przedstawia przykład **uidefault —**:  
   
-```  
+```cpp  
 // cpp_attr_ref_uidefault.cpp  
 // compile with: /LD  
 #include "unknwn.h"  
@@ -60,7 +58,7 @@ __interface ICustom{
   
 ## <a name="requirements"></a>Wymagania  
   
-### <a name="attribute-context"></a>Atrybut kontekstu  
+### <a name="attribute-context"></a>Kontekst atrybutu  
   
 |||  
 |-|-|  
@@ -69,7 +67,7 @@ __interface ICustom{
 |**Wymaganych atrybutów**|Brak|  
 |**Nieprawidłowe atrybuty**|Brak|  
   
- Aby uzyskać więcej informacji na temat konteksty atrybutu, zobacz [konteksty atrybutu](../windows/attribute-contexts.md).  
+ Aby uzyskać więcej informacji na temat konteksty atrybutu zobacz [konteksty atrybutu](../windows/attribute-contexts.md).  
   
 ## <a name="see-also"></a>Zobacz też  
  [Atrybuty IDL](../windows/idl-attributes.md)   

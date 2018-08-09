@@ -17,23 +17,23 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 11ec7cf883fe8c9454cf538efc0835b9c77b1f92
-ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
+ms.openlocfilehash: deda09913f2774a2b3b246a285df0c8b6f1c62eb
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39569989"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39652828"
 ---
 # <a name="defaultvalue"></a>defaultvalue
 Umożliwia określenie wartości domyślnej dla typizowany parametr opcjonalny.  
   
 ## <a name="syntax"></a>Składnia  
   
-```  
+```cpp  
 [ defaultvalue= value ]  
 ```  
   
-#### <a name="parameters"></a>Parametry  
+### <a name="parameters"></a>Parametry  
  *value*  
  Wartość domyślna parametru.  
   

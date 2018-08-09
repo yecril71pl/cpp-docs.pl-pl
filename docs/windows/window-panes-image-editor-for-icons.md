@@ -19,25 +19,25 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: e899729e70db089c1c55f00aa9c4196a22c67060
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: a38341f6c6bcbcdec6bb4e6f5e5820fa759e6dab
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33892842"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39652028"
 ---
 # <a name="window-panes-image-editor-for-icons"></a>Okienka (Edytor obrazów dla ikon)
-Okno Edytor obrazów zwykle wyświetla obraz w dwie części oddzielone pasek podziału. Jeden widok jest aktualny rozmiar i innych powiększenia (współczynnik rozszerzenia domyślna to 6). Widoki te dwa okienka są automatycznie aktualizowane: zmiany wprowadzone w jednym oknie natychmiast są wyświetlane w innym. Dwa okienka ułatwiać pracę nad powiększania widoku obrazu, w którym można rozróżnić piksele i, w tym samym czasie obserwować wpływ pracę na widoku rozmiaru rzeczywistego obrazu.  
+**Edytora obrazów** okna zwykle wyświetla obraz na dwa okienka rozdzielone pasek podziału. Jeden widok jest rzeczywisty rozmiar, a druga powiększenia (domyślny współczynnik rozszerzenia jest 6). Widoki te dwa okienka są automatycznie aktualizowane: zmiany wprowadzone w jednym okienku natychmiast są wyświetlane w innym. Dwa okienka ułatwiają pracować nad powiększania widoku obrazu, w którym można odróżnić poszczególnych pikseli i, w tym samym czasie obserwować wpływ swoją pracę na widoku rzeczywisty rozmiar obrazu.  
   
- W okienku po lewej stronie używa odpowiednio dużo miejsca, ponieważ jest (maksymalnie połowę okna obrazu) do wyświetlenia widoku powiększenia 1:1 (opcja domyślna) obrazu. Prawe okienko wyświetla powiększonego (6:1 powiększenie domyślnie). Możesz [zmiana powiększenia](../windows/changing-the-magnification-factor-image-editor-for-icons.md) w każdym przy użyciu okienka **Magnify** narzędzia w [paska narzędzi edytora obrazów](../windows/toolbar-image-editor-for-icons.md) lub za pomocą klawiszy skrótów.  
+ Tyle miejsca, ile potrzeba korzysta z okienka po lewej stronie (do połowy **obraz** okna) do wyświetlenia widoku powiększeniem 1:1 (opcja domyślna) obrazu. W okienku po prawej stronie wyświetla powiększonego (6:1 powiększenie domyślnie). Możesz [zmiana powiększenia](../windows/changing-the-magnification-factor-image-editor-for-icons.md) w każdym za pomocą okienka **Magnify** narzędzie [paska narzędzi edytora obrazów](../windows/toolbar-image-editor-for-icons.md) lub za pomocą klawiszy skrótów.  
   
- Można powiększyć mniejszych okienku okna edytora obrazów i umożliwia wyświetlanie różnych regionach duży obraz dwa okienka. Kliknij okienko, aby go wybrać.  
+ Można powiększyć mniejszych okienku **edytora obrazów** okno i użyj dwa okienka, aby pokazać różnych regionach duży obraz. Kliknij w okienku, aby go zaznaczyć.  
   
- Względne rozmiary okienek można zmienić, umieszczając kursor na pasek podziału i przeniesienie pasek podziału do prawej lub lewej. Pasek podziału można przenieść do dowolnej stronie, aby pracować nad tylko jedno okienko.  
+ Względne rozmiary okienek można zmienić, ustawiając kursor na pasek podziału i przenoszenie pasek podziału w prawo lub lewo. Pasek podziału można przenieść do dowolnej stronie, aby pracować nad tylko jedno okienko.  
   
- W okienku edytora obrazów powiększenia o 4 lub nowszym, można [wyświetlania siatki pikseli](../windows/displaying-or-hiding-the-pixel-grid-image-editor-for-icons.md) który rozgranicza piksele obrazu.  
+ Jeśli **edytora obrazów** okienko jest powiększony o 4 lub nowszej, możesz [wyświetlić siatkę pikseli](../windows/displaying-or-hiding-the-pixel-grid-image-editor-for-icons.md) który rozgranicza piksele na obrazie.  
   
- Aby uzyskać informacje o dodawaniu zasobów do projektów zarządzanych, zobacz [zasobów w aplikacjach pulpitu](/dotnet/framework/resources/index) w *Przewodnik programistów platformy .NET Framework.* Aby uzyskać informacje na ręczne dodanie do projektów zarządzanych plików zasobów, uzyskiwanie dostępu do zasobów, wyświetlanie zasoby statyczne i przypisanie do właściwości ciągów zasobów, zobacz [tworzenie plików zasobów dla aplikacji pulpitu](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Informacje dotyczące globalizacji i lokalizacji zasobów w zarządzanych aplikacjach, zobacz [Globalizing i lokalizacja aplikacji .NET Framework](/dotnet/standard/globalization-localization/index).  
+ Aby uzyskać informacje na temat dodawania zasobów do projektów zarządzanych, zobacz [zasoby w aplikacjach pulpitu](/dotnet/framework/resources/index) w *przewodniku dewelopera .NET Framework*. Aby uzyskać informacji na temat ręcznego dodawania plików zasobów do projektów zarządzanych, uzyskiwania dostępu do zasobów, wyświetlania statycznych zasobów i przypisywania ciągów zasobów do właściwości, zobacz [Creating Resource Files dla aplikacji klasycznych](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Aby uzyskać informacji na temat globalizacja i lokalizacja zasobów w aplikacjach zarządzanych, zobacz [Globalizing i lokalizowanie aplikacji programu .NET Framework](/dotnet/standard/globalization-localization/index).  
   
 ## <a name="requirements"></a>Wymagania  
  Brak  
@@ -45,4 +45,3 @@ Okno Edytor obrazów zwykle wyświetla obraz w dwie części oddzielone pasek po
 ## <a name="see-also"></a>Zobacz też  
  [Klawisze skrótów](../windows/accelerator-keys-image-editor-for-icons.md)   
  [Edytor obrazów dla ikon](../windows/image-editor-for-icons.md)
-

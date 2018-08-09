@@ -17,18 +17,18 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 75476fec3dcabda2990d3ca3f5dcf017688a176d
-ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
+ms.openlocfilehash: e362ec513cb7cb14f5fd3abb8a028c6e0eab616b
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39466127"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39644232"
 ---
 # <a name="context-sensitive-keywords--c-component-extensions"></a>Kontekstowe słowa kluczowe (C++ Component Extensions)
 *Kontekstowe słowa kluczowe* są elementami języka, które są rozpoznawane tylko w określonych kontekstach. Poza określonym kontekstem kontekstowe słowo kluczowe może być symbolem zdefiniowanych przez użytkownika.  
   
 ## <a name="all-runtimes"></a>Wszystkie środowiska wykonawcze  
- **Uwagi**  
+### <a name="remarks"></a>Uwagi
   
  Oto lista kontekstowych słów kluczowych:  
   
@@ -59,23 +59,22 @@ ms.locfileid: "39466127"
  Dla potrzeb czytelności warto ograniczyć korzystanie z kontekstowych słów kluczowych jako symboli zdefiniowanych przez użytkownika.  
   
 ## <a name="windows-runtime"></a>Środowisko wykonawcze systemu Windows  
- **Uwagi**  
+### <a name="remarks"></a>Uwagi  
   
  (Nie ma żadnych uwag specyficznych dla platformy, dla tej funkcji).  
   
 ### <a name="requirements"></a>Wymagania  
- — Opcja kompilatora: **/ZW**  
+ — Opcja kompilatora: `/ZW`  
   
 ## <a name="common-language-runtime"></a>środowiska uruchomieniowe w trakcie wykonania 
- **Uwagi**  
+### <a name="remarks"></a>Uwagi  
   
  (Nie ma żadnych uwag specyficznych dla platformy, dla tej funkcji).  
   
 ### <a name="requirements"></a>Wymagania  
- — Opcja kompilatora:   **/CLR**  
+ — Opcja kompilatora: `/clr`  
   
 ### <a name="examples"></a>Przykłady  
- **Przykład**  
   
  Poniższy przykład kodu pokazuje, że w odpowiedniego kontekstu **właściwość** kontekstowe słowo kluczowe może służyć do definiowania właściwości i zmiennej.  
   
@@ -99,8 +98,6 @@ int main() {
    System::Console::WriteLine(++property);  
 }  
 ```  
-  
- **Output**  
   
 ```Output  
 100  

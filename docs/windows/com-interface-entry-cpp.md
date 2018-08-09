@@ -17,25 +17,25 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: cd6cc88ba01d7cfc5d7d5712ddeaaef0418bb12a
-ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
+ms.openlocfilehash: d79c371b98e0dd1091fc5db2280efdee3abbf6e9
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39462787"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39646192"
 ---
 # <a name="cominterfaceentry-c"></a>com_interface_entry (C++)
 Dodaje wpis interfejsu do mapy COM klasy docelowej.  
   
 ## <a name="syntax"></a>Składnia  
   
-```  
+```cpp  
 [ com_interface_entry(   
   com_interface_entry  
 ) ]  
 ```  
   
-#### <a name="parameters"></a>Parametry  
+### <a name="parameters"></a>Parametry  
  *com_interface_entry —*  
  Ciąg zawierający tekst wpisu. Aby uzyskać listę możliwych wartości, zobacz [com_interface_entry — makra](../atl/reference/com-interface-entry-macros.md).  
   
@@ -58,7 +58,7 @@ Dodaje wpis interfejsu do mapy COM klasy docelowej.
   
  To ograniczenie jest konieczne, ponieważ ATL używa pierwszy wpis w mapie interfejsu jako tożsamość `IUnknown`; w związku z tym, wpis musi być prawidłową interfejsu. Na przykład poniższy przykładowy kod jest nieprawidłowe, ponieważ pierwszy wpis w mapie interfejsu nie określa rzeczywistego interfejsu COM.  
   
-```  
+```cpp  
 [ coclass, com_interface_entry =  
     "COM_INTERFACE_ENTRY_NOINTERFACE(IDebugTest)"  
 ]  
@@ -100,7 +100,7 @@ class CMyClass: public IMyClass, public IDebugTest
   
  Wynikowy mapy obiektu COM dla `CMyBaseClass` jest następująca:  
   
-```  
+```cpp  
 BEGIN_COM_MAP(CMyClass)  
     COM_INTERFACE_ENTRY (IMyClass)  
     COM_INTERFACE_ENTRY_NOINTERFACE(IDebugTest)  
@@ -119,7 +119,7 @@ END_COM_MAP()
 |-|-|  
 |**Dotyczy**|**Klasa**, **— struktura**|  
 |**Powtarzalne**|Tak|  
-|**Wymaganych atrybutów**|Co najmniej jeden z następujących czynności: **coclass**, **progid**, lub **vi_progid —**.|  
+|**Wymaganych atrybutów**|Co najmniej jeden z następujących czynności: `coclass`, `progid`, lub `vi_progid`.|  
 |**Nieprawidłowe atrybuty**|Brak|  
   
  Aby uzyskać więcej informacji na temat konteksty atrybutu zobacz [konteksty atrybutu](../windows/attribute-contexts.md).  

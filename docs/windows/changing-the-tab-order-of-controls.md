@@ -20,68 +20,67 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 33e6e9624e7e927860a184361d45f855f3a1e4f6
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 32368ca6731c53255587a2083c9fe685eb8fefd0
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33861548"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39641850"
 ---
 # <a name="changing-the-tab-order-of-controls"></a>Zmiana kolejności kart formantów
-Kolejność tabulacji to kolejność, w którym klawisz TAB przenosi fokus wprowadzania z jednego formantu do następnego okna dialogowego. Zazwyczaj kolejności tabulacji przebieg od lewej do prawej i od góry do dołu w oknie dialogowym. Każdy formant ma **Tabstop** właściwość, która określa, czy formant uzyskuje fokus wprowadzania.  
+Kolejność tabulacji tkwi w kolejności, w którym **kartę** klucz przenosi fokus wprowadzania z jednego formantu do drugiego w oknie dialogowym. Zwykle kolejność tabulacji rozpoczynające się od lewej do prawej i od góry do dołu w oknie dialogowym. Każda kontrolka ma **Tabstop** właściwość, która określa, czy formant uzyskuje fokus wprowadzania.  
   
 ### <a name="to-set-input-focus-for-a-control"></a>Aby ustawić fokus wprowadzania kontrolki  
   
-1.  W [okna właściwości](/visualstudio/ide/reference/properties-window), wybierz pozycję **True** lub **False** w **Tabstop** właściwości.  
+1.  W [okno właściwości](/visualstudio/ide/reference/properties-window), wybierz opcję **True** lub **False** w **Tabstop** właściwości.  
   
- Nawet formantów, które nie mają właściwości Tabstop ustawioną wartość True, muszą być częścią kolejności tabulacji. Może to być istotne, na przykład, gdy użytkownik [zdefiniować klucze dostępu (klawiszy skrótu)](../windows/defining-mnemonics-access-keys.md) dla formantów, które nie mają podpisy. Statyczny tekst, który zawiera klucz dostępu do pokrewnej kontrolki musi bezpośrednio poprzedzać pokrewnej kontrolki w kolejności tabulacji.  
+ Nawet formantów, które nie mają **Tabstop** właściwością **True** muszą być częścią kolejności tabulacji. Może to być istotne, na przykład, gdy użytkownik [Definiowanie kluczy dostępu (Mnemonik)](../windows/defining-mnemonics-access-keys.md) dla formantów, które nie mają podpisy. Statyczny tekst, który zawiera klucz dostępu dla kontrolki powiązane musi bezpośrednio poprzedzać pokrewnej kontrolki w kolejności tabulacji.  
   
 > [!NOTE]
->  Jeśli Twoje okno dialogowe zawiera nakładające się formanty, zmiana kolejności kart może zmienić sposób wyświetlania kontrolki. Formanty, które są dostarczane później w kolejności tabulacji są zawsze wyświetlane u góry nakładające się formantów, które należy poprzedzić je w kolejności tabulacji.  
+>  Jeśli Twoje okno dialogowe zawiera nakładające się formanty, zmiana kolejności kart może zmienić sposób wyświetlania kontrolki. Formanty, które później w kolejności tabulacji są zawsze wyświetlane na górze nakładające się formanty, które je poprzedzają w kolejności tabulacji.  
   
-#### <a name="to-view-the-current-tab-order-for-all-controls-in-a-dialog-box"></a>Aby wyświetlić bieżące kolejności tabulacji dla wszystkich kontrolek w oknie dialogowym  
+### <a name="to-view-the-current-tab-order-for-all-controls-in-a-dialog-box"></a>Aby wyświetlić bieżące kolejność tabulacji dla wszystkich kontrolek w oknie dialogowym  
   
-1.  Na **Format** menu, kliknij przycisk **kolejności tabulacji**.  
+1.  Na **Format** menu, kliknij przycisk **kolejność tabulacji**.  
   
- \- lub -  
+ \- lub —  
   
--   Naciśnij klawisze CTRL + D.  
+-   Naciśnij klawisz **Ctrl**+**D**.  
   
-#### <a name="to-change-the-tab-order-for-all-controls-in-a-dialog-box"></a>Aby zmienić kolejność tabulacji dla wszystkich kontrolek w oknie dialogowym  
+### <a name="to-change-the-tab-order-for-all-controls-in-a-dialog-box"></a>Aby zmienić kolejność tabulacji dla wszystkich kontrolek w oknie dialogowym  
   
-1.  Na **Format** menu, kliknij przycisk **kolejności tabulacji**.  
+1.  Na **Format** menu, kliknij przycisk **kolejność tabulacji**.  
   
-     Liczba w lewym górnym rogu każdej kontrolki zawiera jego miejsce w bieżącej kolejności tabulacji.  
+     Liczba w lewym górnym rogu każdej kontrolki zawiera jej miejscu w kolejności tabulacji w bieżącym.  
   
-2.  Ustawianie kolejności tabulacji, klikając każdego formantu w kolejności, w jakiej ma klawisz TAB, aby wykonać.  
+2.  Ustawianie kolejności tabulacji, klikając pozycję każdej kontrolki w kolejności ma **kartę** klucza do wykonania.  
   
-3.  Naciśnij klawisz **ENTER** aby zakończyć **kolejności tabulacji** tryb.  
+3.  Naciśnij klawisz **Enter** aby zakończyć działanie **kolejność tabulacji** trybu.  
   
     > [!TIP]
-    >  Po wprowadzeniu tryb kolejności tabulacji, naciśnij klawisz ESC lub ENTER, aby wyłączyć możliwość zmiany kolejności tabulacji.  
+    >  Po wprowadzeniu **kolejność tabulacji** tryb, możesz nacisnąć przycisk **Esc** lub **Enter** wyłączyć możliwość zmiany kolejności tabulacji.  
   
-#### <a name="to-change-the-tab-order-for-two-or-more-controls"></a>Aby zmienić kolejność tabulacji dla dwóch lub więcej formantów  
+### <a name="to-change-the-tab-order-for-two-or-more-controls"></a>Aby zmienić kolejność tabulacji dla co najmniej dwóch formantów  
   
-1.  Z **Format** menu, wybierz **kolejności tabulacji**.  
+1.  Z **Format** menu, wybierz **kolejność tabulacji**.  
   
-2.  Określ, gdzie rozpocznie się zmiany w kolejności. Aby to zrobić, przytrzymaj **CTRL** klucza, a następnie kliknij przycisk kontroli przed jednym miejscu zmienione kolejność, aby rozpocząć.  
+2.  Określ, gdzie rozpoczyna się zmiany w kolejności. Aby to zrobić, przytrzymaj wciśnięty **Ctrl** klucza i ma miejsce kliknięcie kontrolki przed subskrypcję, w którym zmiany kolejności do rozpoczęcia.  
   
-     Na przykład jeśli chcesz zmienić kolejność formanty 7 do 9, przytrzymaj klawisz CTRL, a następnie najpierw wybrać formant 6.  
+     Na przykład, jeśli chcesz zmienić kolejność formantów `7` za pośrednictwem `9`, naciśnij i przytrzymaj **Ctrl**, następnie wybierz kontrolkę `6` pierwszy.  
   
     > [!NOTE]
-    >  Aby ustawić określonego formantu o numerze 1 (pierwszy w kolejności tabulacji), kliknij dwukrotnie formant.  
+    >  Aby ustawić numer określonej kontrolki `1` (pierwszy w kolejności tabulacji), kliknij dwukrotnie formant.  
   
-3.  Zwolnij klawisz CTRL, a następnie kliknij formanty w kolejności, w jakiej ma klawisz TAB, aby postępować zgodnie z tego punktu.  
+3.  Wersja **Ctrl** klucza, a następnie kliknij formanty w kolejności, ma **kartę** klawisz, aby wykonać kroki od tego momentu.  
   
-4.  Naciśnij klawisz **ENTER** aby zakończyć **kolejności tabulacji** tryb.  
+4.  Naciśnij klawisz **Enter** aby zakończyć działanie **kolejność tabulacji** trybu.  
   
- Aby uzyskać informacje o dodawaniu zasobów do projektów zarządzanych, zobacz [zasobów w aplikacjach pulpitu](/dotnet/framework/resources/index) w *Przewodnik programistów platformy .NET Framework.* Aby uzyskać informacje na ręczne dodanie do projektów zarządzanych plików zasobów, uzyskiwanie dostępu do zasobów, wyświetlanie zasoby statyczne i przypisanie do właściwości ciągów zasobów, zobacz [tworzenie plików zasobów dla aplikacji pulpitu](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Informacje dotyczące globalizacji i lokalizacji zasobów w zarządzanych aplikacjach, zobacz [Globalizing i lokalizacja aplikacji .NET Framework](/dotnet/standard/globalization-localization/index).  
+ Aby uzyskać informacje na temat dodawania zasobów do projektów zarządzanych, zobacz [zasoby w aplikacjach pulpitu](/dotnet/framework/resources/index) w *przewodniku dewelopera .NET Framework*. Aby uzyskać informacji na temat ręcznego dodawania plików zasobów do projektów zarządzanych, uzyskiwania dostępu do zasobów, wyświetlania statycznych zasobów i przypisywania ciągów zasobów do właściwości, zobacz [Creating Resource Files dla aplikacji klasycznych](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Aby uzyskać informacji na temat globalizacja i lokalizacja zasobów w aplikacjach zarządzanych, zobacz [Globalizing i lokalizowanie aplikacji programu .NET Framework](/dotnet/standard/globalization-localization/index).  
   
-### <a name="requirements"></a>Wymagania  
+## <a name="requirements"></a>Wymagania  
  Win32  
   
 ## <a name="see-also"></a>Zobacz też  
- [Rozmieszczenie formantów w oknach dialogowych](../windows/arrangement-of-controls-on-dialog-boxes.md)   
+ [Rozmieszczenie kontrolek w oknach dialogowych](../windows/arrangement-of-controls-on-dialog-boxes.md)   
  [Formanty w oknach dialogowych](../windows/controls-in-dialog-boxes.md)   
  [Kontrolki](../mfc/controls-mfc.md)
-

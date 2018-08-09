@@ -1,5 +1,5 @@
 ---
-title: Creatormap::servername — członek danych | Dokumentacja firmy Microsoft
+title: CreatorMap::serverName, składowa danych | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,19 +17,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 48095aa9f6a561baa03b0a529702cf97bdfb9785
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 24188c74136f0326a30b0834c99a36d3fdb5eaf3
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33870939"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39642179"
 ---
 # <a name="creatormapservername-data-member"></a>CreatorMap::serverName — Członek danych
 Obsługuje infrastrukturę biblioteki WRL i nie jest przeznaczona do użycia bezpośrednio w kodzie.  
   
 ## <a name="syntax"></a>Składnia  
   
-```  
+```cpp  
 const wchar_t* serverName;  
 ```  
   
@@ -39,7 +39,7 @@ const wchar_t* serverName;
 ## <a name="requirements"></a>Wymagania  
  **Nagłówek:** module.h  
   
- **Namespace:** Microsoft::wrl:: details —  
+ **Namespace:** Microsoft::wrl:: details  
   
 ## <a name="see-also"></a>Zobacz też  
  [Creatormap — struktura](../windows/creatormap-structure.md)   

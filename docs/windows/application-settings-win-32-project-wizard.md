@@ -18,17 +18,17 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: d6d2cd31306baaa0d9c8f137122fed1d4ae97295
-ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
+ms.openlocfilehash: 948b720df6094ddd4124bb496cabb3c83a3cacf0
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39464694"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39652991"
 ---
 # <a name="application-settings-win-32-project-wizard"></a>Ustawienia aplikacji, kreator projektów Win 32
 Ta strona kreatora umożliwia ustawianie opcji Projekt systemu Win32.  
   
- **Typ aplikacji**  
+## <a name="application-type"></a>Typ aplikacji  
  Tworzy typ określonej aplikacji.  
   
 |Opcja|Opis|  
@@ -38,7 +38,7 @@ Ta strona kreatora umożliwia ustawianie opcji Projekt systemu Win32.
 |**DLL**|Tworzy Win32 biblioteki dołączanej (dynamicznie DLL). Biblioteka DLL systemu Win32 jest plik binarny, napisany w języku C lub C++, który używa wywołania funkcji API Win32, a nie do klas MFC i który działa jako współdzielona biblioteka funkcji, które mogą być używane jednocześnie przez wiele aplikacji.<br /><br /> Nie można dodać MFC lub ATL pomocy technicznej dla aplikacji DLL. Można wskazać, że biblioteka DLL eksportuje symboli.|  
 |**Biblioteka statyczna**|Tworzy bibliotekę statyczną. Biblioteka statyczna jest plikiem zawierającym obiektów i ich funkcje i dane, który stanowi łącze do tego programu, podczas kompilowania pliku wykonywalnego. W tym temacie opisano sposób tworzenia plikach startowych i [właściwości projektu](../ide/property-pages-visual-cpp.md) dla biblioteki statycznej. Plik biblioteki statycznej zapewnia następujące korzyści:<br /><br /> Biblioteka statyczna Win32 jest przydatne w przypadku aplikacji, którą pracujesz nad wywołań interfejsu API Win32, a nie do klas MFC.<br />— Proces łączenia jest taki sam, czy w pozostałej części aplikacji Windows są zapisywane w języku C lub C++.<br />— Biblioteka statyczna możesz połączyć program oparty na bibliotece MFC lub program innego typu niż MFC.|  
   
- **Dodatkowe opcje**  
+## <a name="additional-options"></a>Dodatkowe opcje  
  Definiuje pomocy technicznej i opcje dla aplikacji, w zależności od jego typu.  
   
 |Opcja|Opis|  
@@ -48,7 +48,7 @@ Ta strona kreatora umożliwia ustawianie opcji Projekt systemu Win32.
 |**Prekompilowany plik nagłówkowy**|Określa, że projekt biblioteki statycznej używa wstępnie skompilowanym nagłówkiem.|  
 |Sprawdza, czy cykl projektowania zabezpieczeń (SDL)|Aby uzyskać więcej informacji na temat SDL, zobacz [wskazówek dotyczących procesu cykl projektowania zabezpieczeń (SDL)](../build/reference/sdl-enable-additional-security-checks.md)|  
   
- **Dodano obsługę**  
+## <a name="add-support-for"></a>Dodano obsługę  
  Dodano obsługę jednej z bibliotek dostarczane w programie Visual C++.  
   
 |Opcja|Opis|  

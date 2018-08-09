@@ -23,54 +23,53 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: c81e40de56970571ad78ceea86084b7ff7b82227
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 3760da2fad7596938acf881cd36af099ad1253cf
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33858971"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39643799"
 ---
 # <a name="adding-values-to-a-combo-box-control"></a>Dodawanie wartości do kontrolki pola kombi
-Tak długo, jak należy otworzyć edytora okien dialogowych, można dodać wartości do kontrolki pola kombi.  
+Możesz dodać wartości do kontrolki pola kombi, tak długo, jak masz **okna dialogowego** edytorze.  
   
 > [!TIP]
->  Jest dobrym rozwiązaniem, aby dodać wszystkie wartości do pola kombi *przed* rozmiaru pola w edytorze okien dialogowych lub może obciąć tekst, który powinien zostać wyświetlony w formancie kombi.  
+>  To dobry pomysł, aby dodać wszystkie wartości do pola kombi *przed* rozmiar, w tym polu **okna dialogowego** edytora lub użytkownik może obciąć tekst, który powinien zostać wyświetlony w kontrolce kombi.  
   
-#### <a name="to-enter-values-into-a-combo-box-control"></a>Aby wprowadzić wartości do kontrolki pola kombi  
+### <a name="to-enter-values-into-a-combo-box-control"></a>Aby wprowadzić wartości do kontrolki pola kombi  
   
-1.  Wybierz kontrolki pola kombi, klikając go.  
+1.  Zaznacz formant pola kombi, klikając ją.  
   
-2.  W [okna właściwości](/visualstudio/ide/reference/properties-window), przewiń w dół do **danych** właściwości.  
+2.  W [okno właściwości](/visualstudio/ide/reference/properties-window), przewiń w dół do **danych** właściwości.  
   
     > [!NOTE]
     >  W przypadku wyświetlania właściwości pogrupowane według typu, **danych** pojawia się w **różne** właściwości.  
   
-3.  Kliknij obszar wartość **danych** właściwości i wpisz wartości danych, oddzielone średnikami.  
+3.  Kliknij opcję w obszarze wartości w celu **danych** właściwości i wpisz wartości danych, oddzielając je średnikami.  
   
     > [!NOTE]
-    >  Nie należy umieszczać spacji między wartości, ponieważ spacje zakłócać w kolejności alfabetycznej na liście rozwijanej.  
+    >  Nie umieszczaj spacji między wartościami, ponieważ zakłócać w kolejności alfabetycznej na liście rozwijanej miejsc do magazynowania.  
   
 4.  Kliknij przycisk **Enter** po zakończeniu dodawania wartości.  
   
- Aby uzyskać informacje na powiększanie część rozwijana pola kombi, zobacz [ustawienie rozmiaru pole kombi i jego listy rozwijanej](setting-the-size-of-the-combo-box-and-its-drop-down-list.md).  
+ Aby uzyskać informacje na powiększanie część rozwijana pola kombi, zobacz [ustawianie rozmiaru pola kombi i jego listy rozwijanej](setting-the-size-of-the-combo-box-and-its-drop-down-list.md).  
   
 > [!NOTE]
->  Nie można dodać wartości do projektów Win32 przy użyciu tej procedury ( **danych** właściwości jest niedostępny dla projektów Win32). Ponieważ projekt Win32 nie ma bibliotek, które dodania tej możliwości, należy dodać wartości do pola kombi z projektem Win32 programowo.  
+>  Nie można dodać wartości do projektów Win32 przy użyciu tej procedury ( **danych** właściwość jest wyszarzona dla projektów Win32). Ponieważ projekty Win32 nie ma bibliotek, które dodania tej możliwości, należy dodać wartości do pola kombi w projekcie systemu Win32 programowo.  
   
-#### <a name="to-test-the-appearance-of-values-in-a-combo-box"></a>Aby przetestować wyświetlania wartości w polu kombi  
+### <a name="to-test-the-appearance-of-values-in-a-combo-box"></a>Aby przetestować wyświetlania wartości w polu kombi  
   
-1.  Po wprowadzeniu wartości w **danych** właściwości, kliknij przycisk **testu** znajdującego się na [paska narzędzi edytora okien dialogowych](../windows/showing-or-hiding-the-dialog-editor-toolbar.md).  
+1.  Po wprowadzeniu wartości w **danych** właściwości, kliknij przycisk **testu** znajdujący się na [paska narzędzi edytora okien dialogowych](../windows/showing-or-hiding-the-dialog-editor-toolbar.md).  
   
-     Spróbuj przewijania w dół listy całej wartości. Wartości są wyświetlane, dokładnie tak, jak są wpisywane **danych** właściwości w oknie właściwości. Nie jest pisowni ani kontroli wielkości liter.  
+     Wypróbuj, przewijając w dół listę całej wartości. Wartości wyświetlane dokładnie tak, jak są wpisywane **danych** właściwość **właściwości** okna. Nie ma pisowni lub sprawdzanie wielkość liter.  
   
-     Naciśnij klawisz ESC, aby powrócić do edytora — okno dialogowe.  
+     Naciśnij klawisz **Esc** aby powrócić do **okno dialogowe** edytora.  
   
- Aby uzyskać informacje o dodawaniu zasobów do projektów zarządzanych, zobacz [zasobów w aplikacjach pulpitu](/dotnet/framework/resources/index) w *Przewodnik programistów platformy .NET Framework.* Aby uzyskać informacje na ręczne dodanie do projektów zarządzanych plików zasobów, uzyskiwanie dostępu do zasobów, wyświetlanie zasoby statyczne i przypisanie do właściwości ciągów zasobów, zobacz [tworzenie plików zasobów dla aplikacji pulpitu](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Informacje dotyczące globalizacji i lokalizacji zasobów w zarządzanych aplikacjach, zobacz [Globalizing i lokalizacja aplikacji .NET Framework](/dotnet/standard/globalization-localization/index).  
+ Aby uzyskać informacje na temat dodawania zasobów do projektów zarządzanych, zobacz [zasoby w aplikacjach pulpitu](/dotnet/framework/resources/index) w *przewodniku dewelopera .NET Framework*. Aby uzyskać informacji na temat ręcznego dodawania plików zasobów do projektów zarządzanych, uzyskiwania dostępu do zasobów, wyświetlania statycznych zasobów i przypisywania ciągów zasobów do właściwości, zobacz [Creating Resource Files dla aplikacji klasycznych](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Aby uzyskać informacji na temat globalizacja i lokalizacja zasobów w aplikacjach zarządzanych, zobacz [Globalizing i lokalizowanie aplikacji programu .NET Framework](/dotnet/standard/globalization-localization/index).  
   
-### <a name="requirements"></a>Wymagania  
+## <a name="requirements"></a>Wymagania  
  Win32  
   
 ## <a name="see-also"></a>Zobacz też  
  [Formanty w oknach dialogowych](../windows/controls-in-dialog-boxes.md)   
  [Kontrolki](../mfc/controls-mfc.md)
-

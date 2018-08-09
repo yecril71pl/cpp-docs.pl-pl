@@ -21,34 +21,32 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 897dc9291c17e916be824915a467ec85a7770548
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 93682f1a12e2fe2d5dfaf715a718563c35ecddde
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33857574"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39650459"
 ---
 # <a name="adding-version-information-for-another-language"></a>Dodawanie informacji o wersji dla innego języka
 ### <a name="to-add-version-information-for-another-language-new-info-block"></a>Aby dodać informacje o wersji dla innego języka (nowy blok informacji)  
   
-1.  Otwórz zasobach informacji o wersji, klikając go w [widok zasobów](../windows/resource-view-window.md).  
+1.  Otwórz zasób informacje o wersji, klikając go dwukrotnie [widok zasobów](../windows/resource-view-window.md).  
   
     > [!NOTE]
-    >  Jeśli projekt nie zawiera już plik .rc, zobacz [Tworzenie nowego pliku skryptu zasobu](../windows/how-to-create-a-resource-script-file.md).  
+    >  Jeśli projekt nie zawiera jeszcze pliku .rc, zobacz [tworzenia nowego pliku skryptu zasobów](../windows/how-to-create-a-resource-script-file.md).  
   
-2.  Kliknij prawym przyciskiem myszy w tabeli zawierającej informacje o wersji i wybierz polecenie **nowy blok informacji o wersji** z menu skrótów.  
+2.  Kliknij prawym przyciskiem myszy w tabeli zawierającej informacje o wersji, a następnie wybierz **nowej wersję bloku informacyjnego** z menu skrótów.  
   
-     To polecenie dodaje do bieżącego zasobu informacje o wersji blok informacji dodatkowych i otwiera odpowiednie właściwości w [okna właściwości](/visualstudio/ide/reference/properties-window).  
+     To polecenie dodaje do bieżącej zasobach informacji o wersji blok dodatkowe informacje i zostanie otwarty jego odpowiednie właściwości w [okno właściwości](/visualstudio/ide/reference/properties-window).  
   
-3.  W **właściwości** okna, wybierz odpowiedni język i zestawu nowego bloku znaków.  
+3.  W **właściwości** okna, wybierz odpowiedni język i zestaw nowego bloku znaków.  
   
- Aby uzyskać informacje o dodawaniu zasobów do projektów zarządzanych, zobacz [zasobów w aplikacjach pulpitu](/dotnet/framework/resources/index) w *Przewodnik programistów platformy .NET Framework.* Aby uzyskać informacje na ręczne dodanie do projektów zarządzanych plików zasobów, uzyskiwanie dostępu do zasobów, wyświetlanie zasoby statyczne i przypisanie do właściwości ciągów zasobów, zobacz [tworzenie plików zasobów dla aplikacji pulpitu](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Informacje dotyczące globalizacji i lokalizacji zasobów w zarządzanych aplikacjach, zobacz [Globalizing i lokalizacja aplikacji .NET Framework](/dotnet/standard/globalization-localization/index).  
+ Aby uzyskać informacje na temat dodawania zasobów do projektów zarządzanych, zobacz [zasoby w aplikacjach pulpitu](/dotnet/framework/resources/index) w *przewodniku dewelopera .NET Framework*. Aby uzyskać informacji na temat ręcznego dodawania plików zasobów do projektów zarządzanych, uzyskiwania dostępu do zasobów, wyświetlania statycznych zasobów i przypisywania ciągów zasobów do właściwości, zobacz [Creating Resource Files dla aplikacji klasycznych](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Aby uzyskać informacji na temat globalizacja i lokalizacja zasobów w aplikacjach zarządzanych, zobacz [Globalizing i lokalizowanie aplikacji programu .NET Framework](/dotnet/standard/globalization-localization/index).  
   
- **Wymagania**  
-  
+## <a name="requirements"></a>Wymagania 
  Win32  
   
 ## <a name="see-also"></a>Zobacz też  
  [Edytor informacji o wersji](../windows/version-information-editor.md)   
- [Informacje o wersji (system Windows)](https://msdn.microsoft.com/library/windows/desktop/ms646981.aspx)
-
+ [Informacje o wersji (Windows)](https://msdn.microsoft.com/library/windows/desktop/ms646981.aspx)

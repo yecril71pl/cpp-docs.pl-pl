@@ -19,42 +19,40 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: c82e41544bde9cdd945e23f4ea5884e4e76ae22b
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 82d68ec7c9580cf1b95d4c678c491c4e33d12e10
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33871835"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39650849"
 ---
 # <a name="creating-a-new-custom-or-data-resource"></a>Tworzenie nowej niestandardowej lub zasobów danych
-Można utworzyć nowy zasób niestandardowy lub dane przez umieszczenie w osobnym pliku przy użyciu składni pliku skryptu (.rc) zasób normalny, a następnie łącznie z tym plikiem zasób prawym przyciskiem myszy projekt w Eksploratorze rozwiązań i klikając przycisk **zawiera zasobów**  menu skrótów.  
+Można utworzyć nowy zasób niestandardowy lub danych, umieszczając w oddzielnym pliku przy użyciu składni pliku skryptu (.rc) normalny zasób, a następnie w tym pliku zasobu, klikając prawym przyciskiem myszy projekt w **Eksploratora rozwiązań** i klikając  **Obejmuje zasobów** w menu skrótów.  
   
 ### <a name="to-create-a-new-custom-or-data-resource"></a>Aby utworzyć nowy zasób niestandardowy lub danych  
   
-1. [Utwórz plik .rc](../windows/how-to-create-a-resource-script-file.md) zawiera zasób niestandardowy lub danych.  
+1. [Utwórz plik .rc](../windows/how-to-create-a-resource-script-file.md) zawierająca zasób niestandardowy lub danych.  
   
-     Niestandardowe dane można wpisać w plik .rc jako ciągi ujętego w cudzysłów zerem lub liczbami całkowitymi format dziesiętny, szesnastkową lub ósemkowe.  
+     Niestandardowe dane można wpisać w pliku .rc, jako zakończony znakiem null cudzysłowie ciągi lub jako liczby całkowite w formacie dziesiętną, szesnastkowym lub ósemkowo.  
   
-2.  W **Eksploratora rozwiązań**, kliknij prawym przyciskiem myszy plik .rc projektu, a następnie kliknij przycisk **zasobów zawiera** menu skrótów.  
+2.  W **Eksploratora rozwiązań**, kliknij prawym przyciskiem myszy plik .rc projektu, a następnie kliknij przycisk **zasób zawiera** w menu skrótów.  
   
-3.  W **dyrektywy kompilacji** wpisz **#include** instrukcji, która nadaje nazwę pliku zawierającego niestandardowego zasobu. Na przykład:  
+3.  W **dyrektywy czasu kompilacji** wpisz `#include` instrukcję, która zawiera nazwę pliku zawierającego niestandardowego zasobu. Na przykład:  
   
- ```  
+ ```cpp  
     #include mydata.rc  
  ```  
   
-     Upewnij się, że składnia i pisownię możesz wpisać są poprawne. Zawartość **dyrektywy kompilacji** pola są wstawiane do pliku skryptu zasobu, dokładnie tak, jak został wpisany.  
+     Upewnij się, że składnia i pisownię możesz wpisać są poprawne. Zawartość **dyrektywy czasu kompilacji** pola są wstawiane do pliku skryptu zasobu, dokładnie tak, jak został wpisany.  
   
-4.  Kliknij przycisk **OK** Aby zapisać zmiany.  
+4.  Kliknij przycisk **OK** zapisaniu zmian.  
   
- Innym sposobem tworzenia niestandardowych zasobów jest zaimportować plik jako zasób niestandardowy. Aby uzyskać więcej informacji, zobacz [importowanie i eksportowanie zasobów](../windows/how-to-import-and-export-resources.md).  
+ Innym sposobem tworzenia niestandardowego zasobu jest do zaimportowania pliku zewnętrznego jako zasób niestandardowy. Aby uzyskać więcej informacji, zobacz [importowanie i eksportowanie zasobów](../windows/how-to-import-and-export-resources.md).  
   
- Aby uzyskać informacje o dodawaniu zasobów do projektów zarządzanych, zobacz [zasobów w aplikacjach pulpitu](/dotnet/framework/resources/index) w *Przewodnik programistów platformy .NET Framework.* Aby uzyskać informacje na ręczne dodanie do projektów zarządzanych plików zasobów, uzyskiwanie dostępu do zasobów, wyświetlanie zasoby statyczne i przypisanie do właściwości ciągów zasobów, zobacz [tworzenie plików zasobów dla aplikacji pulpitu](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Informacje dotyczące globalizacji i lokalizacji zasobów w zarządzanych aplikacjach, zobacz [Globalizing i lokalizacja aplikacji .NET Framework](/dotnet/standard/globalization-localization/index).  
+ Aby uzyskać informacje na temat dodawania zasobów do projektów zarządzanych, zobacz [zasoby w aplikacjach pulpitu](/dotnet/framework/resources/index) w *przewodniku dewelopera .NET Framework*. Aby uzyskać informacji na temat ręcznego dodawania plików zasobów do projektów zarządzanych, uzyskiwania dostępu do zasobów, wyświetlania statycznych zasobów i przypisywania ciągów zasobów do właściwości, zobacz [Creating Resource Files dla aplikacji klasycznych](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Aby uzyskać informacji na temat globalizacja i lokalizacja zasobów w aplikacjach zarządzanych, zobacz [Globalizing i lokalizowanie aplikacji programu .NET Framework](/dotnet/standard/globalization-localization/index).  
   
- Wymagania  
-  
+## <a name="requirements"></a>Wymagania  
  Win32  
   
 ## <a name="see-also"></a>Zobacz też  
  [Edytor plików binarnych](binary-editor.md)
-

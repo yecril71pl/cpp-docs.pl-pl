@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 8e60b23a0c63ce1415765dd1f94863540849f975
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: c872b311e6fa7aa16d7118a13bc69ef2c7ef9cc4
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33891064"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39652652"
 ---
 # <a name="weakreferenceweakreference-constructor"></a>WeakReference::WeakReference — Konstruktor
 Obsługuje infrastrukturę biblioteki WRL i nie jest przeznaczona do użycia bezpośrednio w kodzie.  
@@ -36,13 +36,12 @@ WeakReference();
 ## <a name="remarks"></a>Uwagi  
  Inicjuje nowe wystąpienie klasy [weakreference — klasa](../windows/weakreference-class1.md).  
   
- Wskaźnik silne odwołanie dla obiekt weakreference — jest ustawiana na `nullptr`, oraz liczba silne odwołanie jest ustawiana na 1.  
+ Wskaźnik silne odwołanie dla **WeakReference** obiekt jest inicjowany do **nullptr**, oraz liczba silne odwołanie jest inicjowany do 1.  
   
 ## <a name="requirements"></a>Wymagania  
  **Nagłówek:** implements.h  
   
- **Namespace:** Microsoft::wrl:: details —  
+ **Namespace:** Microsoft::wrl:: details  
   
 ## <a name="see-also"></a>Zobacz też  
-    
  [Microsoft::WRL::Details, przestrzeń nazw](../windows/microsoft-wrl-details-namespace.md)

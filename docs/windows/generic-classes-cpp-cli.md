@@ -19,19 +19,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 751c7f9efe4f5db612419d5837cc2d6f304f43da
-ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
+ms.openlocfilehash: deeb40e54c0324874d9c99a42a98e7e852394dc4
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39570675"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39643192"
 ---
 # <a name="generic-classes-ccli"></a>Klasy ogólne [C++/CLI]
 Klasa generyczna jest zadeklarowany, za pomocą następującej postaci:  
   
 ## <a name="syntax"></a>Składnia  
   
-```  
+```cpp  
 [attributes]  
 generic <class-key type-parameter-identifier(s)>  
 [constraint-clauses]  
@@ -45,7 +45,7 @@ class-body
 ## <a name="remarks"></a>Uwagi  
  W powyższej składni używane są następujące warunki:  
   
- `attributes` (opcjonalnie)  
+ *atrybuty* (opcjonalnie)  
  Dodatkowe informacje deklaratywnego. Aby uzyskać więcej informacji o atrybuty i klasy atrybutów Zobacz atrybutów.  
   
  *klucz klasy*  
@@ -57,7 +57,7 @@ class-body
  *ograniczenie — klauzule*  
  Listy (nie rozdzielanych przecinkami) **gdzie** klauzul określania ograniczenia dla parametrów typu. Ma postać:  
   
- `where`  *Typ parametru identyfikatorów*`:`*lista ograniczeń*   `...`  
+ `where`  *Typ parametru identyfikatorów*`:`*lista ograniczeń*  `...`  
   
  *Lista ograniczeń*  
  *Klasa lub interfejs*[`,` *...* ]  
@@ -429,7 +429,7 @@ ref struct Outer {
 };  
 ```  
   
- Typ zewnętrzne\<int >:: wewnętrzny nie jest taki sam jak typ zewnętrzne\<double >:: wewnętrznego.  
+ Typ `Outer<int>::Inner` nie jest taki sam jak typ `Outer<double>::Inner`.  
   
  Podobnie jak w przypadku metod rodzajowych w klasach ogólnych parametrów typu dodatkowe mogą być definiowane dla typu zagnieżdżonego. Jeśli używasz tej samej nazwy parametrów typu w klasie wewnętrznych i zewnętrznych, parametr typu wewnętrznego spowoduje ukrycie parametr typu zewnętrznego.  
   
@@ -449,7 +449,7 @@ ref class Outer {
   
  Ponieważ nie istnieje sposób do odwoływania się do parametru typu zewnętrznego, kompilator generuje ostrzeżenie w takiej sytuacji.  
   
- Gdy noszą skonstruowany zagnieżdżonych typów rodzajowych, parametr typu dla typu zewnętrznego jest niedostępna na liście parametrów typu dla typu wewnętrznego, mimo że wewnętrzny typu jest niejawnie sparametryzowany przez parametr typu zewnętrznego. W przypadku powyżej, nazwa typu skonstruowany będzie zewnętrzne\<int >:: wewnętrzny\<ciągu >.  
+ Gdy noszą skonstruowany zagnieżdżonych typów rodzajowych, parametr typu dla typu zewnętrznego jest niedostępna na liście parametrów typu dla typu wewnętrznego, mimo że wewnętrzny typu jest niejawnie sparametryzowany przez parametr typu zewnętrznego. W przypadku powyższych będzie nazwa skonstruowanego typu `Outer<int>::Inner<string>`.  
   
  Poniższy przykład ilustruje tworzenie i odczytywanie połączonej listy przy użyciu zagnieżdżonych typów ogólnych klas.  
   
@@ -548,7 +548,7 @@ Reading nodes:
   
 -   Właściwości, zdarzenia, indeksatorów i operatorów, można używać parametrów typu otaczającej klasy ogólnej jako wartości zwracane, parametry i zmienne lokalne, takie jak czas `ItemType` jest parametrem typu klasy:  
   
-    ```  
+    ```cpp  
     public ItemType MyProperty {}  
     ```  
   

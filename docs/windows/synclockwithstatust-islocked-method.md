@@ -1,5 +1,5 @@
 ---
-title: SyncLockWithStatusT::IsLocked — metoda | Dokumentacja firmy Microsoft
+title: SyncLockWithStatusT::IsLocked, metoda | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: a564c4223b09d9295ff0ac3159e165944c4d885d
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: ebe723811efe62efa85a1cc2fa35736689306c7e
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33892556"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39645636"
 ---
 # <a name="synclockwithstatustislocked-method"></a>SyncLockWithStatusT::IsLocked — Metoda
 Obsługuje infrastrukturę biblioteki WRL i nie jest przeznaczona do użycia bezpośrednio w kodzie.  
@@ -34,10 +34,10 @@ bool IsLocked() const;
 ```  
   
 ## <a name="remarks"></a>Uwagi  
- Wskazuje, czy bieżący obiekt synclockwithstatust — jest właścicielem zasobu; synclockwithstatust — obiektu jest *zablokowany*.  
+ Wskazuje, czy bieżący **synclockwithstatust —** obiekt posiada zasób; czyli, **synclockwithstatust —** obiekt jest *zablokowane*.  
   
 ## <a name="return-value"></a>Wartość zwracana  
- **wartość true,** Jeśli obiekt synclockwithstatust — jest zablokowany; w przeciwnym razie **false**.  
+ **wartość true,** Jeśli **synclockwithstatust —** obiektu jest zablokowany; w przeciwnym razie **false**.  
   
 ## <a name="requirements"></a>Wymagania  
  **Nagłówek:** corewrappers.h  

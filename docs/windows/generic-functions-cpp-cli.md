@@ -19,23 +19,23 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 40f79bc6afe47bfed92d096dace59ef97eed68e1
-ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
+ms.openlocfilehash: 2429b86ad872ea310d690187c7283b8498ece3f5
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39568881"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39645129"
 ---
 # <a name="generic-functions-ccli"></a>Funkcje ogólne (C++/CLI)
 Funkcja ogólna jest funkcją, która jest zadeklarowana za pomocą parametrów typu. Gdy zostanie wywołana, rzeczywiste typy są używane zamiast parametrów typu.  
   
 ## <a name="all-platforms"></a>Wszystkie platformy  
- **Uwagi**  
+### <a name="remarks"></a>Uwagi
   
  Ta funkcja nie ma zastosowania do wszystkich platform.  
   
 ## <a name="windows-runtime"></a>Środowisko wykonawcze systemu Windows  
- **Uwagi**  
+### <a name="remarks"></a>Uwagi
   
  Ta funkcja nie jest obsługiwana w środowisku uruchomieniowym Windows.  
   
@@ -47,7 +47,7 @@ Funkcja ogólna jest funkcją, która jest zadeklarowana za pomocą parametrów 
   
 ### <a name="syntax"></a>Składnia  
   
-```  
+```cpp  
 [attributes] [modifiers]  
 return-type identifier<type-parameter identifier(s)>  
 [type-parameter-constraints clauses]  
@@ -94,7 +94,6 @@ return-type identifier<type-parameter identifier(s)>
  — Opcja kompilatora: `/clr`  
   
 ### <a name="examples"></a>Przykłady  
- **Przykład**  
   
  W poniższym przykładzie kodu pokazano funkcja ogólna.  
   
@@ -129,8 +128,6 @@ int main() {
 }  
 ```  
   
- **Przykład**  
-  
  Funkcje ogólne mogą być przeciążane na podstawie podpisu lub argumentów, liczba parametrów typu dla funkcji. Ponadto ogólne funkcje mogą być przeciążone funkcje nieogólnego o takiej samej nazwie, tak długo, jak funkcje różnią się w niektórych parametrach typu. Na przykład mogą być przeciążone następujące funkcje:  
   
 ```cpp  
@@ -146,8 +143,6 @@ ref struct MyClass {
    void MyMythod(int i) {}  
 };  
 ```  
-  
- **Przykład**  
   
  W poniższym przykładzie użyto funkcja ogólna, można znaleźć pierwszego elementu w tablicy. Deklaruje `MyClass`, który dziedziczy z klasy bazowej `MyBaseClass`. `MyClass` zawiera funkcję ogólną `MyFunction`, która wywołuje inną funkcję ogólny, `MyBaseClassFunction`, w ramach klasy bazowej. W `main`, funkcja ogólna `MyFunction`, jest wywoływana przy użyciu różnych typów argumentów.  
   
@@ -184,8 +179,6 @@ int main() {
    myObj->MyFunction<String^>("Hello generic functions!"));  
 }  
 ```  
-  
- **Output**  
   
 ```Output  
 My function returned an int: 2003  

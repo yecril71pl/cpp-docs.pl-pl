@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 6b5d56c4e0c31b56e5bdc92a9d209b58cd15ffb1
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 49f1f50b3fa9e34da8831c1cec138b6aefec27a5
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33889280"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39649276"
 ---
 # <a name="srwlockexclusivetraits-structure"></a>SRWLockExclusiveTraits — Struktura
-W tym artykule opisano typowe cechy srwlock — klasa w trybie blokady na wyłączność.  
+W tym artykule opisano typowe cechy `SRWLock` klasy w trybie wyłączności blokady.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -35,18 +35,18 @@ struct SRWLockExclusiveTraits;
   
 ## <a name="members"></a>Elementy członkowskie  
   
-### <a name="public-typedefs"></a>Definicje typów publicznych  
+### <a name="public-typedefs"></a>Publiczne definicje typów  
   
 |Nazwa|Opis|  
 |----------|-----------------|  
-|`Type`|Synonim dla wskaźnika do [srwlock —](../windows/srwlock-class.md) klasy.|  
+|`Type`|Synonim dla wskaźnika do [SRWLOCK](../windows/srwlock-class.md) klasy.|  
   
 ### <a name="public-methods"></a>Metody publiczne  
   
 |Nazwa|Opis|  
 |----------|-----------------|  
-|[SRWLockExclusiveTraits::GetInvalidValue, metoda](../windows/srwlockexclusivetraits-getinvalidvalue-method.md)|Pobiera obiekt srwlockexclusivetraits —, który zawsze jest nieprawidłowy.|  
-|[SRWLockExclusiveTraits::Unlock, metoda](../windows/srwlockexclusivetraits-unlock-method.md)|Zwalnia wyłączną kontrolę określonego obiektu srwlock —.|  
+|[SRWLockExclusiveTraits::GetInvalidValue, metoda](../windows/srwlockexclusivetraits-getinvalidvalue-method.md)|Pobiera **srwlockexclusivetraits —** obiekt, który zawsze jest nieprawidłowy.|  
+|[SRWLockExclusiveTraits::Unlock, metoda](../windows/srwlockexclusivetraits-unlock-method.md)|Zwalnia wyłączną kontrolę określonego `SRWLock` obiektu.|  
   
 ## <a name="inheritance-hierarchy"></a>Hierarchia dziedziczenia  
  `SRWLockExclusiveTraits`  

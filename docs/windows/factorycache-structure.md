@@ -17,24 +17,24 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 04356316b67f3c341fe1dd1821750fcd3136aa40
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 8a09128bd334fc6e0987e39eaf51c19aadce34ea
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33874034"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39647550"
 ---
 # <a name="factorycache-structure"></a>FactoryCache — Struktura
-Obsługuje infrastrukturę Biblioteka szablonów C++ środowiska wykonawczego systemu Windows i nie jest przeznaczona do użycia bezpośrednio w kodzie.  
+Obsługuje infrastrukturę Biblioteka szablonów C++ środowiska wykonawczego Windows i nie jest przeznaczona do użycia bezpośrednio w kodzie.  
   
 ## <a name="syntax"></a>Składnia  
   
-```  
+```cpp  
 struct FactoryCache;  
 ```  
   
 ## <a name="remarks"></a>Uwagi  
- Zawiera lokalizację fabrykę klas i wartość, która identyfikuje zarejestrowaną activelocation lub modelu COM klasy obiektu.  
+ Zawiera lokalizację fabryki klas i wartość, która identyfikuje zarejestrowany wrt lub obiekt klasy COM.  
   
 ## <a name="members"></a>Elementy członkowskie  
   
@@ -42,8 +42,8 @@ struct FactoryCache;
   
 |Nazwa|Opis|  
 |----------|-----------------|  
-|[FactoryCache::cookie, składowa danych](../windows/factorycache-cookie-data-member.md)|Zawiera wartość, która identyfikuje zarejestrowanego obiektu klasy środowiska wykonawczego systemu Windows lub COM i jest później używany do wyrejestrowania obiektu.|  
-|[FactoryCache::factory, składowa danych](../windows/factorycache-factory-data-member.md)|Wskazuje fabrykę klas środowiska wykonawczego systemu Windows lub COM.|  
+|[FactoryCache::cookie, składowa danych](../windows/factorycache-cookie-data-member.md)|Zawiera wartość, która identyfikuje zarejestrowanych obiektu klasy środowiska wykonawczego Windows lub COM i jest później używany do wyrejestrowania obiektu.|  
+|[FactoryCache::factory, składowa danych](../windows/factorycache-factory-data-member.md)|Wskazuje fabrykę klas Windows Runtime lub COM.|  
   
 ## <a name="inheritance-hierarchy"></a>Hierarchia dziedziczenia  
  `FactoryCache`  
@@ -51,7 +51,7 @@ struct FactoryCache;
 ## <a name="requirements"></a>Wymagania  
  **Nagłówek:** module.h  
   
- **Namespace:** Microsoft::wrl:: details —  
+ **Namespace:** Microsoft::wrl:: details  
   
 ## <a name="see-also"></a>Zobacz też  
  [Microsoft::WRL::Details, przestrzeń nazw](../windows/microsoft-wrl-details-namespace.md)

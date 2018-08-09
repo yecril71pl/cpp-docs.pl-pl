@@ -1,5 +1,5 @@
 ---
-title: Swap — funkcja (Biblioteka szablonów języka C++ środowiska wykonawczego systemu Windows) | Dokumentacja firmy Microsoft
+title: Swap — funkcja (Biblioteka szablonów języka C++ środowiska wykonawczego Windows) | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,12 +15,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: b37a5e33b4d6a9e62510e79c7f72145ed0f1e128
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 63c28a18723ad1dc39669ee5a367c870451c9943
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33889387"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39651762"
 ---
 # <a name="swap-function-windows-runtime-c-template-library"></a>Swap — Funkcja (Biblioteka szablonów języka C++ środowiska wykonawczego systemu Windows)
 Obsługuje infrastrukturę biblioteki WRL i nie jest przeznaczona do użycia bezpośrednio w kodzie.  
@@ -34,11 +34,11 @@ WRL_NOTHROW inline void Swap(
 );  
 ```  
   
-#### <a name="parameters"></a>Parametry  
- `left`  
+### <a name="parameters"></a>Parametry  
+ *left*  
  Pierwszy argument.  
   
- `right`  
+ *right*  
  Drugi argument.  
   
 ## <a name="return-value"></a>Wartość zwracana  
@@ -49,7 +49,7 @@ WRL_NOTHROW inline void Swap(
 ## <a name="requirements"></a>Wymagania  
  **Nagłówek:** internal.h  
   
- **Namespace:** Microsoft::wrl:: details —  
+ **Namespace:** Microsoft::wrl:: details  
   
 ## <a name="see-also"></a>Zobacz też  
  [Microsoft::WRL::Details, przestrzeń nazw](../windows/microsoft-wrl-details-namespace.md)

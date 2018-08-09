@@ -17,19 +17,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 99a8924776249a3a919a03ca76b4562c39994d4f
-ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
+ms.openlocfilehash: 2043ca568f36d7fc0eaaffbf940cabb423de5620
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39463120"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39647843"
 ---
 # <a name="coclass"></a>coclass
 Tworzy obiekt COM, które można zaimplementować interfejsu COM.  
   
 ## <a name="syntax"></a>Składnia  
   
-```  
+```cpp  
 [coclass]  
 ```  
   
@@ -78,7 +78,7 @@ Tworzy obiekt COM, które można zaimplementować interfejsu COM.
   
 -   [OBJECT_ENTRY_AUTO](../atl/reference/object-map-macros.md#object_entry_auto) makra są wstawiane do mapy COM.
   
- Nazwa klasy coclass wygenerowane w pliku .idl dla klasy będzie mieć taką samą nazwę jak klasa.  Na przykład i odwołujące się do poniższego przykładu Aby uzyskać dostęp identyfikator klasy dla klasy coclass CMyClass, na kliencie przy użyciu pliku nagłówka wygenerowane w MIDL, użyj CLSID_CMyClass.  
+ Nazwa klasy coclass wygenerowane w pliku .idl dla klasy będzie mieć taką samą nazwę jak klasa.  Na przykład i odwołujące się do poniższego przykładu, dostęp do Identyfikatora klasy dla klasy coclass `CMyClass`, w kliencie za pomocą pliku nagłówka wygenerowane w MIDL, należy użyć `CLSID_CMyClass`.  
   
 ## <a name="example"></a>Przykład  
  Poniższy kod przedstawia sposób użycia **coclass** atrybutu:  
@@ -99,7 +99,7 @@ appobject, uuid("9E66A294-4365-11D2-A997-00C04FA37DDB")]
 class CMyClass : public I {};  
 ```  
   
- Poniższy przykład przedstawia sposób przesłonięcia Domyślna implementacja funkcji, która pojawia się w kodzie wstrzyknięte przez **coclass** atrybutu. Zobacz [/Fx](../build/reference/fx-merge-injected-code.md) Aby uzyskać więcej informacji o wyświetlaniu wprowadzonego kodu. Wszystkie klasy podstawowe lub interfejsów, których używasz dla klasy będą wyświetlane w wprowadzonego kodu.   Dodatkowo Jeśli klasa jest domyślnie włączone w wprowadzonego kodu, możesz jawnie określić tę klasę jako podstawa dla swojej klasy coclass dostawca atrybucie użyje formularza, określonych w kodzie.  
+ Poniższy przykład przedstawia sposób przesłonięcia Domyślna implementacja funkcji, która pojawia się w kodzie wstrzyknięte przez **coclass** atrybutu. Zobacz [/Fx](../build/reference/fx-merge-injected-code.md) Aby uzyskać więcej informacji o wyświetlaniu wprowadzonego kodu. Wszystkie klasy podstawowe lub interfejsów, których używasz dla klasy będą wyświetlane w wprowadzonego kodu. Dodatkowo Jeśli klasa jest domyślnie włączone w wprowadzonego kodu, możesz jawnie określić tę klasę jako podstawa dla swojej klasy coclass dostawca atrybucie użyje formularza, określonych w kodzie.  
   
 ```cpp  
 // cpp_attr_ref_coclass2.cpp  

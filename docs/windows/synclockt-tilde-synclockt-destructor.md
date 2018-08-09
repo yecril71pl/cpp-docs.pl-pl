@@ -1,5 +1,5 @@
 ---
-title: 'SyncLockT:: ~ SyncLockT — destruktor | Dokumentacja firmy Microsoft'
+title: 'SyncLockT:: ~ SyncLockT, destruktor | Dokumentacja firmy Microsoft'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: c91c677a18c66c875107f48c2e04ba45be88fb48
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 87f32ce0583154deb2e3e5cd0afc77ce8728695d
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33892738"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39646721"
 ---
 # <a name="synclocktsynclockt-destructor"></a>SyncLockT::~SyncLockT — Destruktor
 Obsługuje infrastrukturę biblioteki WRL i nie jest przeznaczona do użycia bezpośrednio w kodzie.  
@@ -34,9 +34,9 @@ Obsługuje infrastrukturę biblioteki WRL i nie jest przeznaczona do użycia bez
 ```  
   
 ## <a name="remarks"></a>Uwagi  
- Deinitializes wystąpienia klasy SyncLockT.  
+ Wyłącza wystąpienie **SyncLockT** klasy.  
   
- Ten destruktor odblokowuje również bieżącego wystąpienia SyncLockT.  
+ Ten destruktor Odblokowano również bieżącą **SyncLockT** wystąpienia.  
   
 ## <a name="requirements"></a>Wymagania  
  **Nagłówek:** corewrappers.h  

@@ -1,5 +1,5 @@
 ---
-title: WeakReference::Resolve — metoda | Dokumentacja firmy Microsoft
+title: Weakreference::Resolve — metoda | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: dccdf7554f8d102230bedc18231feb74625d621b
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: fe78f8644768563507f98157ac859993776d7fe9
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33890478"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39646205"
 ---
 # <a name="weakreferenceresolve-method"></a>WeakReference::Resolve — Metoda
 Obsługuje infrastrukturę biblioteki WRL i nie jest przeznaczona do użycia bezpośrednio w kodzie.  
@@ -30,27 +30,26 @@ Obsługuje infrastrukturę biblioteki WRL i nie jest przeznaczona do użycia bez
 ## <a name="syntax"></a>Składnia  
   
 ```  
-  
 STDMETHOD(Resolve)  
    (REFIID riid,   
    _Deref_out_opt_ IInspectable **ppvObject  
 );  
 ```  
   
-#### <a name="parameters"></a>Parametry  
- `riid`  
- Identyfikatora interfejsu.  
+### <a name="parameters"></a>Parametry  
+ *Parametr riid*  
+ Identyfikator interfejsu.  
   
- `ppvObject`  
- Po tej operacji zakończeniu kopię bieżącego silne odwołanie, jeśli liczba silne odwołanie jest różna od zera.  
+ *ppvObject*  
+ Gdy ta operacja zostanie ukończone, kopię bieżącego silne odwołanie, jeśli liczba silne odwołanie jest różna od zera.  
   
 ## <a name="return-value"></a>Wartość zwracana  
   
--   Wartość S_OK, jeśli operacja zakończy się pomyślnie, a liczba silne odwołanie wynosi zero. `ppvObject` Ustawiono parametr `nullptr`.  
+-   S_OK, jeśli operacja zakończy się pomyślnie, a liczba silne odwołanie ma wartość zero. *PpvObject* parametr ma wartość **nullptr**.  
   
--   Wartość S_OK, jeśli operacja zakończy się pomyślnie, a liczba silne odwołanie jest różna od zera. `ppvObject` Parametr ma wartość silne odwołanie.  
+-   S_OK, jeśli operacja zakończy się pomyślnie, a liczba silne odwołanie jest różna od zera. *PpvObject* parametr ma wartość silne odwołanie.  
   
--   W przeciwnym razie wartość HRESULT, która wskazuje przyczynę ta operacja nie powiodła się.  
+-   W przeciwnym razie wartość HRESULT, która wskazuje przyczynę tej operacji nie powiodło się.  
   
 ## <a name="remarks"></a>Uwagi  
  Ustawia określony wskaźnik do bieżącej wartości silne odwołanie, jeśli liczba silne odwołanie jest różna od zera.  
@@ -58,8 +57,8 @@ STDMETHOD(Resolve)
 ## <a name="requirements"></a>Wymagania  
  **Nagłówek:** implements.h  
   
- **Namespace:** Microsoft::wrl:: details —  
+ **Namespace:** Microsoft::wrl:: details  
   
 ## <a name="see-also"></a>Zobacz też  
- [Weakreference — Class1](../windows/weakreference-class1.md)   
+ [WeakReference, klasa1](../windows/weakreference-class1.md)   
  [Microsoft::WRL::Details, przestrzeń nazw](../windows/microsoft-wrl-details-namespace.md)

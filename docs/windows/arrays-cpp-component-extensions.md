@@ -23,12 +23,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 21a1dd4f26db41f7e32f3f76fd3b4c82e513397a
-ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
+ms.openlocfilehash: 58ba6d598223e63f5b28adcaedad653ffc6f386a
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39461692"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39645571"
 ---
 # <a name="arrays-c-component-extensions"></a>Tablice (C++ Component Extensions)
 `Platform::Array<T>` Typ w języku C + +/ CX lub **tablicy** — słowo kluczowe w języku C + +/ CLI, deklaruje tablicę określonego typu i wartości początkowej.  
@@ -52,7 +52,7 @@ ms.locfileid: "39461692"
   
  W pierwszym przykładzie składni użyto **ref nowe** agregacji — słowo kluczowe do przydzielania tablicy. Drugi przykład deklaruje lokalnej tablicy.  
   
-```  
+```cpp  
 [qualifiers] [Platform::]Array<[qualifiers] array-type [,rank]>^ identifier = 
     ref new[Platform::]Array<initialization-type> [{initialization-list [,...]}]  
   
@@ -83,7 +83,7 @@ ms.locfileid: "39461692"
  Można wykrywać w czasie kompilacji, czy typ jest tablicą zliczonych odwołań z `__is_ref_array(type)`. Aby uzyskać więcej informacji, zobacz [Obsługa cech typu w kompilatorze](../windows/compiler-support-for-type-traits-cpp-component-extensions.md).  
   
 ### <a name="requirements"></a>Wymagania  
- — Opcja kompilatora: **/ZW**  
+ — Opcja kompilatora: `/ZW`  
   
 ### <a name="examples"></a>Przykłady  
  Poniższy przykład tworzy jednowymiarową tablicę, która zawiera 100 elementów.  
@@ -106,7 +106,7 @@ int main() {
   
  W pierwszym przykładzie składni użyto **gcnew** — słowo kluczowe do przydzielania tablicy. Drugi przykład deklaruje lokalnej tablicy.  
   
-```  
+```cpp  
 [qualifiers] [cli::]array<[qualifiers] array-type [,rank]>^ identifier = 
     gcnew [cli::]array<initialization-type[,rank]>(rank-size-list[,...]) [{initialization-list [,...]}]  
   
@@ -139,7 +139,7 @@ int main() {
   
 ### <a name="remarks"></a>Uwagi  
   
- `array` Trwa [platformy, domyślna i cli przestrzenie nazw](../windows/platform-default-and-cli-namespaces-cpp-component-extensions.md) przestrzeni nazw.  
+ **Tablica** znajduje się w [platformy, domyślna i cli przestrzenie nazw](../windows/platform-default-and-cli-namespaces-cpp-component-extensions.md) przestrzeni nazw.  
   
  Np. standard C++ indeksy tablicy zaczynają się od zera, a tablica jest indeksowanych przy użyciu nawiasy kwadratowe ([]). W przeciwieństwie do standardowego języka C++ indeksy tablicy wielowymiarowej są określone na liście indeksów dla każdego wymiaru zamiast zestawu operatorów kwadratowym ([]) dla każdego wymiaru. Na przykład *identyfikator*[*index1*, *index2*] zamiast *identyfikator*[*index1*] [ *index2*].  
   
@@ -152,7 +152,7 @@ int main() {
  W czasie kompilacji może wykryć, czy typ jest wspólnej tablicy środowiska uruchomieniowego (języka wspólnego CLR) języka przy użyciu `__is_ref_array(type)`. Aby uzyskać więcej informacji, zobacz [Obsługa cech typu w kompilatorze](../windows/compiler-support-for-type-traits-cpp-component-extensions.md).  
   
 ### <a name="requirements"></a>Wymagania  
- — Opcja kompilatora:   **/CLR**  
+ — Opcja kompilatora: `/clr`  
   
 ### <a name="examples"></a>Przykłady  
  Poniższy przykład tworzy jednowymiarową tablicę, która zawiera 100 elementów i trójwymiarowej tablicy, która ma 3 elementy w pierwszym wymiarze, 5 elementów, w drugim i 6 elementów w trzecim.  

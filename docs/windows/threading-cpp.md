@@ -17,67 +17,66 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: f21ea8c16b4e09a5ad1845a10797be00f91b0d8f
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 0e0e8b13a74c5b232e2662f80fc1cc8f80a1ffc9
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33891327"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39653004"
 ---
 # <a name="threading-c"></a>threading (C++)
-Określa model wątkowości dla obiekt COM.  
+Określa model wątkowości dla obiektu COM.  
   
 ## <a name="syntax"></a>Składnia  
   
 ```  
-  
-      [ threading(  
+[ threading(  
    model=enumeration  
 ) ]  
 ```  
   
-#### <a name="parameters"></a>Parametry  
- ***model*** (opcjonalnie)  
- Jeden z następujących model wątkowości:  
+### <a name="parameters"></a>Parametry  
+ *model* (opcjonalnie)  
+ Jeden z następujących Modele wątkowości:  
   
--   **apartamentu** (wątkowości typu apartment)  
+-   `apartment` (wątkowości typu apartment)  
   
--   **neutralne** (składników .NET Framework bez interfejsu użytkownika)  
+-   `neutral` (Składników .NET framework bez interfejsu użytkownika)  
   
--   **pojedynczy** (proste wątków)  
+-   `single` (wątki proste)  
   
--   **bezpłatne** (bezpłatny wątków)  
+-   `free` (bezpłatnie, wątki)  
   
--   **zarówno** (apartament, jak i wolnych wątków)  
+-   `both` (apartamentu i wolnych wątków)  
   
- Wartość domyślna to **apartamentu**.  
+ Wartość domyślna to `apartment`.  
   
 ## <a name="remarks"></a>Uwagi  
- **Wątkowość** C++ atrybut nie ma w pliku .idl wygenerowany, ale będzie używany w implementacji obiektu COM.  
+ **Wątkowości** atrybut C++ nie ma pliku .idl wygenerowane, ale będą stosowane w implementacji obiektu COM.  
   
- W projektach ATL Jeśli [coclass](../windows/coclass.md) również jest obecny, atrybut określony przez model wątkowości *modelu* jest przekazywana jako parametr szablonu w celu [CComObjectRootEx](../atl/reference/ccomobjectrootex-class.md) — klasa , wstawiane przez **coclass** atrybutu.  
+ W projektach ATL Jeśli [coclass](../windows/coclass.md) również jest obecny, atrybut modelu wątku określonego przez *modelu* jest przekazywany jako parametr szablonu [CComObjectRootEx](../atl/reference/ccomobjectrootex-class.md) klasy , wstawione przez `coclass` atrybutu.  
   
- **Wątkowość** atrybut chroni także dostęp do [event_source —](../windows/event-source.md).  
+ **Wątkowości** atrybut chroni także dostęp do [event_source](../windows/event-source.md).  
   
 ## <a name="example"></a>Przykład  
- Zobacz [licencjonowane](../windows/licensed.md) przykład użycie próbki **wątkowość**.  
+ Zobacz [licencjonowane](../windows/licensed.md) przykład użycie próbki **wątkowości**.  
   
 ## <a name="requirements"></a>Wymagania  
   
-### <a name="attribute-context"></a>Atrybut kontekstu  
+### <a name="attribute-context"></a>Kontekst atrybutu  
   
 |||  
 |-|-|  
-|**Dotyczy**|**Klasa**, `struct`|  
+|**Dotyczy**|**Klasa**, **— struktura**|  
 |**Powtarzalne**|Nie|  
 |**Wymaganych atrybutów**|**coclass**|  
 |**Nieprawidłowe atrybuty**|Brak|  
   
- Aby uzyskać więcej informacji na temat konteksty atrybutu, zobacz [konteksty atrybutu](../windows/attribute-contexts.md).  
+ Aby uzyskać więcej informacji na temat konteksty atrybutu zobacz [konteksty atrybutu](../windows/attribute-contexts.md).  
   
 ## <a name="see-also"></a>Zobacz też  
  [Atrybuty COM](../windows/com-attributes.md)   
- [Element TypeDef, Enum, Unii i struct — atrybuty](../windows/typedef-enum-union-and-struct-attributes.md)   
+ [Element TypeDef, Enum, Union i struct — atrybuty](../windows/typedef-enum-union-and-struct-attributes.md)   
  [Atrybuty klasy](../windows/class-attributes.md)   
  [Obsługa wielowątkowości w przypadku starszego kodu (Visual C++)](../parallel/multithreading-support-for-older-code-visual-cpp.md)   
  [Neutralne Apartamentach](http://msdn.microsoft.com/library/windows/desktop/ms681813)   

@@ -16,32 +16,31 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 11705fcbcdb3dc73fe5c3a87844b2bc5d90cd135
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: ac3cde3d986869f16431642d5c10632e2dbeefde
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33913021"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39642505"
 ---
 # <a name="changing-the-properties-of-multiple-accelerator-keys"></a>Zmiana właściwości kilku klawiszy skrótów
 ### <a name="to-change-the-properties-of-multiple-accelerator-keys"></a>Aby zmienić właściwości kilku klawiszy skrótów  
   
-1.  Otwórz tabeli akceleratora klikając odpowiednią ikonę w [widok zasobów](../windows/resource-view-window.md).  
+1.  Otwórz tabeli akceleratora, klikając dwukrotnie odpowiednią ikonę w [widok zasobów](../windows/resource-view-window.md).  
   
     > [!NOTE]
-    >  Jeśli projekt nie zawiera już plik .rc, zobacz [Tworzenie nowego pliku skryptu zasobu](../windows/how-to-create-a-resource-script-file.md).  
+    >  Jeśli projekt nie zawiera jeszcze pliku .rc, zobacz [tworzenia nowego pliku skryptu zasobów](../windows/how-to-create-a-resource-script-file.md).  
   
-2.  Wybierz klucze akceleratora chcesz zmienić, przytrzymując **CTRL** klucza kliknij każdy z nich.  
+2.  Wybierz klawisze skrótów chcesz zmienić, przytrzymując **Ctrl** klucza podczas klikania każdej z nich.  
   
-3.  Przejdź do [okna właściwości](/visualstudio/ide/reference/properties-window) i wpisz wartości, które mają wszystkie wybrane akceleratorów, aby udostępnić.  
+3.  Przejdź do [okno właściwości](/visualstudio/ide/reference/properties-window) i wpisz wartości, które mają wszystkich wybranych akceleratorów, aby udostępnić.  
   
     > [!NOTE]
-    >  Każda wartość modyfikatora pojawia się jako właściwości typu Boolean w oknie właściwości. Jeśli zmienisz [modyfikator](../windows/accelerator-modifier-property.md) wartości w oknie właściwości tabeli akceleratora traktuje new — modyfikator jako dodatek do dowolnego modyfikatory, które były wcześniej dostępne. W związku z tym po ustawieniu wartości modyfikator należy ustawić wszystkie z nich, aby upewnić się, że każdy akceleratora obowiązują te same ustawienia modyfikator.  
+    >  Każda wartość modyfikator jest wyświetlana jako właściwość typu Boolean w **właściwości** okna. Jeśli zmienisz [modyfikator](../windows/accelerator-modifier-property.md) wartość w **właściwości** oknie tabeli akceleratora traktuje nowy modyfikator jako dodatek do wszelkich modyfikatorów, które były wcześniej dostępne. W związku z tym Jeśli ustawisz wartości modyfikatora będzie należy ustawić wszystkie z nich, aby upewnić się, że każdy akcelerator udostępnia takie same **modyfikator** ustawienia.  
   
- Aby uzyskać informacje o dodawaniu zasobów do projektów zarządzanych, zobacz [zasobów w aplikacjach pulpitu](/dotnet/framework/resources/index) w *Przewodnik programistów platformy .NET Framework.* Aby uzyskać informacje na ręczne dodanie do projektów zarządzanych plików zasobów, uzyskiwanie dostępu do zasobów, wyświetlanie zasoby statyczne i przypisanie do właściwości ciągów zasobów, zobacz [tworzenie plików zasobów dla aplikacji pulpitu](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Informacje dotyczące globalizacji i lokalizacji zasobów w zarządzanych aplikacjach, zobacz [Globalizing i lokalizacja aplikacji .NET Framework](/dotnet/standard/globalization-localization/index).  
+ Aby uzyskać informacje na temat dodawania zasobów do projektów zarządzanych, zobacz [zasoby w aplikacjach pulpitu](/dotnet/framework/resources/index) w *przewodniku dewelopera .NET Framework*. Aby uzyskać informacji na temat ręcznego dodawania plików zasobów do projektów zarządzanych, uzyskiwania dostępu do zasobów, wyświetlania statycznych zasobów i przypisywania ciągów zasobów do właściwości, zobacz [Creating Resource Files dla aplikacji klasycznych](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Aby uzyskać informacji na temat globalizacja i lokalizacja zasobów w aplikacjach zarządzanych, zobacz [Globalizing i lokalizowanie aplikacji programu .NET Framework](/dotnet/standard/globalization-localization/index).  
   
- **Wymagania**  
-  
+## <a name="requirements"></a>Wymagania  
  Win32  
   
 ## <a name="see-also"></a>Zobacz też  

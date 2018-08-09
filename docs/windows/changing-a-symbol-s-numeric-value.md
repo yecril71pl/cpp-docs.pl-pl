@@ -19,35 +19,34 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 8beacf5195e108d98a0004fe79c2a66cb2b3b610
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: ada5ed80a1077dc2fc50494dcf6fcae609b0b0c9
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33860388"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39652435"
 ---
 # <a name="changing-a-symbol39s-numeric-value"></a>Zmiana symbolu&#39;wartość liczbową s
-Symbole skojarzone z pojedynczego zasobu, można użyć [okna właściwości](/visualstudio/ide/reference/properties-window) Aby zmienić wartość symbolu. Można użyć [okno dialogowe symboli zasobów](../windows/resource-symbols-dialog-box.md) zmianę wartości symboli nie jest aktualnie przypisana do zasobu. Aby uzyskać więcej informacji, zobacz [zmiana nieprzypisanych symboli](../windows/changing-unassigned-symbols.md).  
+Symbole skojarzone z pojedynczego zasobu, można użyć [okno właściwości](/visualstudio/ide/reference/properties-window) Aby zmienić wartość symbol. Możesz użyć [okno dialogowe symboli zasobów](../windows/resource-symbols-dialog-box.md) zmianę wartości symboli nie jest aktualnie przypisany do zasobu. Aby uzyskać więcej informacji, zobacz [zmiana nieprzypisanych symboli](../windows/changing-unassigned-symbols.md).  
   
-### <a name="to-change-a-symbol-value-assigned-to-a-single-resource-or-object"></a>Aby zmienić wartość symbolu przypisane do pojedynczego zasobu lub obiektu  
+### <a name="to-change-a-symbol-value-assigned-to-a-single-resource-or-object"></a>Aby zmienić wartość symbol przypisane do jednego zasobu lub obiektu  
   
 1.  W [widok zasobów](../windows/resource-view-window.md), wybierz zasób.  
   
     > [!NOTE]
-    >  Jeśli projekt nie zawiera już plik .rc, zobacz [Tworzenie nowego pliku skryptu zasobu](../windows/how-to-create-a-resource-script-file.md).  
+    >  Jeśli projekt nie zawiera jeszcze pliku .rc, zobacz [tworzenia nowego pliku skryptu zasobów](../windows/how-to-create-a-resource-script-file.md).  
   
-2.  W **właściwości** wpisz nazwę symbolu następuje znak równości i całkowitą **identyfikator** pola, na przykład:  
+2.  W **właściwości** okna, typ nazwy symbolu następuje znak równości i całkowitą **identyfikator** polu, na przykład:  
   
     ```  
     IDC_EDITNAME=5100  
     ```  
   
- Nowa wartość jest przechowywane w plik nagłówka symbolu przy następnym Zapisz projekt. Tylko nazwa symbolu pozostaje widoczna w polu Identyfikator; znak równości i wartość nie są wyświetlane po ich są weryfikowane.  
+ Nowa wartość są przechowywane w pliku nagłówkowym symboli podczas następnego zapisany projekt. Tylko nazwa symbolu pozostaje widoczna w polu Identyfikator; znak równości i wartości nie są wyświetlane po ich są prawidłowe.  
   
- Aby uzyskać informacje o dodawaniu zasobów do projektów zarządzanych, zobacz [zasobów w aplikacjach pulpitu](/dotnet/framework/resources/index) w *Przewodnik programistów platformy .NET Framework.* Aby uzyskać informacje o ręczne dodanie do projektów zarządzanych plików zasobów, uzyskiwanie dostępu do zasobów wyświetlania statycznych zasobów i przydzielanie zasobów ciągów do właściwości oraz [wskazówki: przy użyciu zasobów dla lokalizacji ASP.NET](http://msdn.microsoft.com/Library/bb4e5b44-e2b0-48ab-bbe9-609fb33900b6).  
+ Aby uzyskać informacje na temat dodawania zasobów do projektów zarządzanych, zobacz [zasoby w aplikacjach pulpitu](/dotnet/framework/resources/index) w *przewodniku dewelopera .NET Framework*. Instrukcje dotyczące ręcznego dodawania plików zasobów do projektów zarządzanych, uzyskiwania dostępu do zasobów, wyświetlania statycznych zasobów i przypisywania ciągów zasobów do właściwości i [Instruktaż: Using Resources for Localization with ASP.NET](http://msdn.microsoft.com/Library/bb4e5b44-e2b0-48ab-bbe9-609fb33900b6).  
   
- Wymagania  
-  
+## <a name="requirements"></a>Wymagania  
  Win32  
   
 ## <a name="see-also"></a>Zobacz też  

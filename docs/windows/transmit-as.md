@@ -17,36 +17,35 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: d0c4d5fc3101e7eb0e09f33c95cb0f73dd0d2b3d
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: c1e1ecfb118fb391cf392b411a4664513972ed42
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33890415"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39642528"
 ---
 # <a name="transmitas"></a>transmit_as
-Instruuje kompilator, aby skojarzyć przedstawioną typu, który manipulowania klienta i serwera aplikacji, z typem przesyłane.  
+Instruuje kompilator, aby skojarzyć prezentowane typ, który manipulowania aplikacje klienckie i serwerowe, typem przesyłane.  
   
 ## <a name="syntax"></a>Składnia  
   
 ```  
-  
-      [ transmit_as(  
+[ transmit_as(  
    type  
 ) ]  
 ```  
   
-#### <a name="parameters"></a>Parametry  
- `type`  
- Określa typ danych przesyłanych między klientem a serwerem.  
+### <a name="parameters"></a>Parametry  
+ *Typ*  
+ Określa typ danych, które są przesyłane między klientem i serwerem.  
   
 ## <a name="remarks"></a>Uwagi  
- **Transmit_as —** atrybut C++ ma te same funkcje co [transmit_as —](http://msdn.microsoft.com/library/windows/desktop/aa367286) MIDL atrybutu.  
+ **Transmit_as —** atrybut C++ ma taką samą funkcjonalność jak [transmit_as —](http://msdn.microsoft.com/library/windows/desktop/aa367286) atrybutów w MIDL.  
   
 ## <a name="example"></a>Przykład  
- Poniższy kod przedstawia korzystanie z **transmit_as —** atrybutu:  
+ Poniższy kod pokazuje wykorzystanie **transmit_as —** atrybutu:  
   
-```  
+```cpp  
 // cpp_attr_ref_transmit_as.cpp  
 // compile with: /LD  
 #include "windows.h"  
@@ -76,18 +75,18 @@ struct _TREE_NODE_TYPE * right;
   
 ## <a name="requirements"></a>Wymagania  
   
-### <a name="attribute-context"></a>Atrybut kontekstu  
+### <a name="attribute-context"></a>Kontekst atrybutu  
   
 |||  
 |-|-|  
-|**Dotyczy**|`typedef`|  
+|**Dotyczy**|**Element TypeDef**|  
 |**Powtarzalne**|Nie|  
 |**Wymaganych atrybutów**|Brak|  
 |**Nieprawidłowe atrybuty**|Brak|  
   
- Aby uzyskać więcej informacji na temat konteksty atrybutu, zobacz [konteksty atrybutu](../windows/attribute-contexts.md).  
+ Aby uzyskać więcej informacji na temat konteksty atrybutu zobacz [konteksty atrybutu](../windows/attribute-contexts.md).  
   
 ## <a name="see-also"></a>Zobacz też  
  [Atrybuty IDL](../windows/idl-attributes.md)   
- [Element TypeDef, Enum, Unii i struct — atrybuty](../windows/typedef-enum-union-and-struct-attributes.md)   
+ [Element TypeDef, Enum, Union i struct — atrybuty](../windows/typedef-enum-union-and-struct-attributes.md)   
  [export](../windows/export.md)   

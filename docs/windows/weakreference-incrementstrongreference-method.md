@@ -1,5 +1,5 @@
 ---
-title: WeakReference::IncrementStrongReference — metoda | Dokumentacja firmy Microsoft
+title: WeakReference::IncrementStrongReference, metoda | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: ee53e068c13f52c01e997680b57915051a8efad8
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: f564f5d6197a640ef311cda8b2133ed583eec91e
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33890625"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39642697"
 ---
 # <a name="weakreferenceincrementstrongreference-method"></a>WeakReference::IncrementStrongReference — Metoda
 Obsługuje infrastrukturę biblioteki WRL i nie jest przeznaczona do użycia bezpośrednio w kodzie.  
@@ -34,16 +34,16 @@ ULONG IncrementStrongReference();
 ```  
   
 ## <a name="return-value"></a>Wartość zwracana  
- Licznik zwiększany silne odwołanie.  
+ Liczba zwiększona silne odwołanie.  
   
 ## <a name="remarks"></a>Uwagi  
- Zwiększa liczbę silne odwołanie do bieżącego obiektu weakreference —.  
+ Zwiększa liczbę silne odwołanie bieżącego **WeakReference** obiektu.  
   
 ## <a name="requirements"></a>Wymagania  
  **Nagłówek:** implements.h  
   
- **Namespace:** Microsoft::wrl:: details —  
+ **Namespace:** Microsoft::wrl:: details  
   
 ## <a name="see-also"></a>Zobacz też  
-[Weakreference — klasa](../windows/weakreference-class1.md)  
+ [Weakreference — klasa](../windows/weakreference-class1.md)  
  [Microsoft::WRL::Details, przestrzeń nazw](../windows/microsoft-wrl-details-namespace.md)

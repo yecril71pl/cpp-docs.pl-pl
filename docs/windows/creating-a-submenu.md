@@ -17,26 +17,25 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 1383e12761bc9d5cb0558072061bddac4da42d67
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 54e429281acedb716ba9a0253dabfd8754ab63d9
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33883384"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39647478"
 ---
 # <a name="creating-a-submenu"></a>Tworzenie podmenu
 ### <a name="to-create-a-submenu"></a>Aby utworzyć podmenu  
   
 1.  Kliknij polecenie menu, dla której chcesz utworzyć podmenu.  
   
-2.  W **nowy element** wyświetlonym po prawej stronie, wpisz nazwę nowego polecenia menu. To nowe polecenie zostanie wyświetlony pierwszy menu podmenu.  
+2.  W **nowy element** pole, które pojawia się po prawej stronie, wpisz nazwę nowego polecenia menu. To nowe polecenie pojawią się najpierw z menu podmenu.  
   
 3.  Dodawanie dodatkowych poleceń do menu podmenu.  
   
- Aby uzyskać informacje o dodawaniu zasobów do projektów zarządzanych, zobacz [zasobów w aplikacjach pulpitu](/dotnet/framework/resources/index) w *Przewodnik programistów platformy .NET Framework.*  
+ Aby uzyskać informacje na temat dodawania zasobów do projektów zarządzanych, zobacz [zasoby w aplikacjach pulpitu](/dotnet/framework/resources/index) w *przewodniku dewelopera .NET Framework*.  
   
- **Wymagania**  
-  
+## <a name="requirements"></a>Wymagania  
  Win32  
   
 ## <a name="see-also"></a>Zobacz też  
