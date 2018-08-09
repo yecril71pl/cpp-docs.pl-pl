@@ -19,12 +19,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 170d688988576d3cbc9c454eb84603f9660120a8
-ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
+ms.openlocfilehash: 345171742f979e488c6a4bb48cf1b57e4bb2f164
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39571223"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40018113"
 ---
 # <a name="how-to-open-a-resource-script-file-in-text-format"></a>Porady: otwieranie pliku skryptu zasobu w formacie tekstowym
 Mogą wystąpić sytuacje, gdy chcesz wyświetlić zawartość pliku skryptu (.rc) zasobu projektu bez konieczności otwierania zasobu, np. okno dialogowe wewnątrz jego Edytor określonego zasobu. Na przykład można wyszukać ciąg we wszystkich oknach dialogowych w pliku zasobów bez konieczności otwierania każdej z nich osobno.  
@@ -35,7 +35,7 @@ Mogą wystąpić sytuacje, gdy chcesz wyświetlić zawartość pliku skryptu (.r
  Łatwo można otworzyć pliku zasobów, w formacie tekstowym, aby wyświetlić wszystkie zawarte w niej zasoby i wykonywać globalne operacje obsługiwane przez [edytora tekstów](http://msdn.microsoft.com/508e1f18-99d5-48ad-b5ad-d011b21c6ab1).  
   
 > [!NOTE]
->  Edytory zasobów bezpośrednio odczytu nie plików .rc lub resource.h. Kompilator zasobów kompiluje je na .aps pliki, które są używane przez edytory zasobów. Ten plik jest to krok kompilacji i tylko przechowuje dane symboliczne. Jak zwykłym skompilować procesu, informacje symboliczne (na przykład komentarzy) jest pomijany w procesie kompilacji. Zawsze, gdy plik .aps pobiera synchronizację z pliku .rc, zostanie ponownie wygenerowany plik .rc (na przykład podczas zapisywania, Edytor zasobów zastąpi plików .rc i pliku resource.h). Zmiany wprowadzone w zasobach pozostaną dołączone w pliku .rc, ale komentarze zostać utracone po plik .rc jest zastępowany. Aby uzyskać informacje na temat sposobu zachowanie komentarzy, wyświetlić [tym zasobów w czasie kompilowania](../windows/how-to-include-resources-at-compile-time.md).  
+>  Edytory zasobów bezpośrednio odczytu nie .rc lub `resource.h` plików. Kompilator zasobów kompiluje je na .aps pliki, które są używane przez edytory zasobów. Ten plik jest to krok kompilacji i tylko przechowuje dane symboliczne. Jak zwykłym skompilować procesu, informacje symboliczne (na przykład komentarzy) jest pomijany w procesie kompilacji. Zawsze, gdy plik .aps pobiera synchronizację z pliku .rc, zostanie ponownie wygenerowany plik .rc (na przykład podczas zapisywania, Edytor zasobów zastąpi plików .rc i pliku resource.h). Zmiany wprowadzone w zasobach pozostaną dołączone w pliku .rc, ale komentarze zostać utracone po plik .rc jest zastępowany. Aby uzyskać informacje na temat sposobu zachowanie komentarzy, wyświetlić [tym zasobów w czasie kompilowania](../windows/how-to-include-resources-at-compile-time.md).  
   
 ### <a name="to-open-a-resource-script-file-as-text"></a>Można otworzyć pliku skryptu zasobu jako tekst  
   
@@ -51,7 +51,7 @@ Mogą wystąpić sytuacje, gdy chcesz wyświetlić zawartość pliku skryptu (.r
   
 6.  Z **Otwórz jako** listy rozwijanej wybierz **tekstu**.  
   
-     Zasób zostanie otwarty w edytorze kodu źródłowego.  
+     Zasób, który zostanie otwarty w **kod źródłowy** edytora.  
   
  \- lub —  
   
@@ -60,7 +60,6 @@ Mogą wystąpić sytuacje, gdy chcesz wyświetlić zawartość pliku skryptu (.r
 2.  Z menu skrótów wybierz polecenie **Otwórz za pomocą...** , a następnie wybierz **Edytor kodu źródłowego (tekst)**.  
   
 ## <a name="requirements"></a>Wymagania  
-  
  Win32  
   
 ## <a name="see-also"></a>Zobacz też  
