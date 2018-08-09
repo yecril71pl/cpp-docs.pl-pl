@@ -17,19 +17,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: ef5a4453e0b7742a385815b5285b2aa04575eb75
-ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
+ms.openlocfilehash: 459f786863f7d10797008b87e276afb0c95e184a
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39645412"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40020089"
 ---
 # <a name="string-c"></a>string (C++)
 Oznacza to, że jednowymiarowy **char**, **wchar_t**, `byte` (lub równoważnego) tablicy lub wskaźnika do tablicy takie, które muszą być traktowane jako ciąg.  
   
 ## <a name="syntax"></a>Składnia  
   
-```  
+```cpp  
 [string]  
 ```  
   

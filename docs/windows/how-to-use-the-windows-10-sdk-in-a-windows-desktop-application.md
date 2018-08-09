@@ -13,12 +13,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 07cd0d02edc586697e42e4733df478a7ae394e0f
-ms.sourcegitcommit: 9ad287c88bdccee2747832659fe50c2e5d682a0b
+ms.openlocfilehash: 937afdb400fff6f0944d8690412257cb66a9c25c
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/13/2018
-ms.locfileid: "39034783"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40018000"
 ---
 # <a name="how-to-use-the-windows-10-sdk-in-a-windows-desktop-application"></a>Porady: używanie systemu Windows 10 SDK w aplikacji pulpitu Windows
 Po utworzeniu klasycznego projektu pulpitu Windows w programie Visual Studio 2017 on skonfigurowano domyślnie do tworzenia z wersją systemu Windows 10 SDK został zainstalowany, gdy obciążenie C++ na komputerach został zainstalowany lub jego ostatniej aktualizacji. Ta wersja zestawu Windows SDK jest zgodny, system Windows 7 lub nowszy. Zobacz [przy użyciu nagłówków Windows](/windows/desktop/WinProg/using-the-windows-headers) Aby uzyskać więcej informacji na temat przeznaczony dla określonej wersji systemu Windows.
@@ -31,7 +31,6 @@ Jeśli chcesz przeanalizować wcześniejszej wersji zestawu SDK, możesz otworzy
   
 1.  Upewnij się, że zainstalowano zestaw SDK systemu Windows 10. Windows 10 SDK jest zainstalowany jako część **programowanie aplikacji klasycznych w języku C++** obciążenia. Wersja autonomiczna jest dostępna w [pliki do pobrania i narzędzia dla systemu Windows 10](https://developer.microsoft.com/windows/downloads).
 
-  
 2.  Otwórz menu skrótów dla węzła projektu, a następnie wybierz **przekierowanie wersji zestawu SDK**.  
   
      ![Przekierowanie wersji zestawu SDK](../windows/media/retargetingwindowssdk1.PNG "RetargetingWindowsSDK1")  
@@ -52,7 +51,7 @@ Jeśli chcesz przeanalizować wcześniejszej wersji zestawu SDK, możesz otworzy
   
      ![Wersja platformy docelowej](../windows/media/retargetingwindowssdk3.PNG "RetargetingWindowsSDK3")  
   
-     Ta akcja powoduje zmianę wartości makra projektu, które zawierają ścieżki do plików biblioteki i pliki nagłówkowe. Aby zobaczyć, co zmieniło w sekcji katalogi Visual C++ w oknie dialogowym właściwości projektu, wybierz jedną z właściwości, takie jak katalogi dołączenia, wybierz otworzyć listę rozwijaną, a następnie wybierz \<Edytuj >. **Dołącz katalogi** zostanie wyświetlone okno dialogowe.  
+     Ta akcja powoduje zmianę wartości makra projektu, które zawierają ścieżki do plików biblioteki i pliki nagłówkowe. Aby zobaczyć, co zmieniło w **katalogi Visual C++** części **właściwości projektu** okno dialogowe, wybierz jedną z właściwości, takie jak **Dołącz katalogi**, wybrać opcję Otwórz listę rozwijaną i wybierz polecenie \<Edytuj >. **Dołącz katalogi** zostanie wyświetlone okno dialogowe.  
   
      ![Obejmują katalogi, okno dialogowe](../windows/media/retargetingwindowssdk4.PNG "RetargetingWindowsSDK4")  
   
@@ -66,7 +65,7 @@ Jeśli chcesz przeanalizować wcześniejszej wersji zestawu SDK, możesz otworzy
   
 1.  Otwórz menu skrótów dla węzła projektu, a następnie wybierz **przekierowanie wersji zestawu SDK**.  
   
-2.  Na liście rozwijanej wersji platformy docelowej wybierz 8.1.  
+2.  W **wersji platformy docelowej** listy rozwijanej wybierz **8.1**.  
   
 ## <a name="see-also"></a>Zobacz też  
  [Windows aplikacji komputerowych (Visual C++)](../windows/how-to-use-the-windows-10-sdk-in-a-windows-desktop-application.md)

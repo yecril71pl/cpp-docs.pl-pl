@@ -1,5 +1,5 @@
 ---
-title: Module::DecrementObjectCount — metoda | Dokumentacja firmy Microsoft
+title: Module::DecrementObjectCount, metoda | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,19 +17,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: adcd964f07426fcdcd3b0d68f946e3d8af6f389f
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 075c1ae368df59e735d90d8d98d9e8fd23ac8ad9
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33875958"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40017347"
 ---
 # <a name="moduledecrementobjectcount-method"></a>Module::DecrementObjectCount — Metoda
-Zmniejsza liczbę obiektów śledzone przez moduł.  
+Zmniejsza liczbę obiektów śledzonych przez moduł.  
   
 ## <a name="syntax"></a>Składnia  
   
-```  
+```cpp  
 virtual long DecrementObjectCount();  
 ```  
   
@@ -39,7 +39,7 @@ virtual long DecrementObjectCount();
 ## <a name="requirements"></a>Wymagania  
  **Nagłówek:** module.h  
   
- **Namespace:** Microsoft::wrl —
+ **Namespace:** Microsoft::WRL
  
 ## <a name="see-also"></a>Zobacz też
 [Klasa modułu](../windows/module-class.md)

@@ -1,5 +1,5 @@
 ---
-title: VerifyInterfaceHelper::Verify — metoda | Dokumentacja firmy Microsoft
+title: VerifyInterfaceHelper::Verify, metoda | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,29 +17,29 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 9f33935bcb042a961494f7da6d34a07b0aeda9af
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: a4626e6cfa17b4cc050d10bb74fad0d791a8ceef
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33888990"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40013655"
 ---
 # <a name="verifyinterfacehelperverify-method"></a>VerifyInterfaceHelper::Verify — Metoda
 Obsługuje infrastrukturę biblioteki WRL i nie jest przeznaczona do użycia bezpośrednio w kodzie.  
   
 ## <a name="syntax"></a>Składnia  
   
-```  
+```cpp  
 static void Verify();  
 ```  
   
 ## <a name="remarks"></a>Uwagi  
- Sprawdza, czy interfejs określonej przez parametr szablonu w bieżącym spełnia określone wymagania.  
+ Sprawdza, czy interfejs określony przez bieżący parametr szablonu spełnia określone wymagania.  
   
 ## <a name="requirements"></a>Wymagania  
  **Nagłówek:** implements.h  
   
- **Namespace:** Microsoft::wrl:: details —  
+ **Namespace:** Microsoft::wrl:: details  
   
 ## <a name="see-also"></a>Zobacz też  
  [Verifyinterfacehelper — struktura](../windows/verifyinterfacehelper-structure.md)   

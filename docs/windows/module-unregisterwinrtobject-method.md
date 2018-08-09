@@ -17,30 +17,28 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 5bf681acc485b08448fcb4e936ca1096a8137384
-ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
+ms.openlocfilehash: 93c804f9e7701ab3bf021902b62ae3f1b414d61c
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/07/2018
-ms.locfileid: "39607475"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40019082"
 ---
 # <a name="moduleunregisterwinrtobject-method"></a>Module::UnregisterWinRTObject — Metoda
 Wyrejestrowuje co najmniej jeden obiekt środowiska wykonawczego Windows, tak aby inne aplikacje nie mogą nawiązać z nimi.  
   
 ## <a name="syntax"></a>Składnia  
   
-```  
+```cpp  
 virtual HRESULT UnregisterWinRTObject(  
    unsigned int,  
    _Inout_ WINRT_REGISTRATION_COOKIE* cookie  
 );  
 ```  
   
-#### <a name="parameters"></a>Parametry  
+### <a name="parameters"></a>Parametry  
  *Plik cookie*  
  Wskaźnik do wartość, która identyfikuje obiekt klasy, którego rejestracja ma zostać odwołane.  
-  
-## <a name="return-value"></a>Wartość zwracana  
   
 ## <a name="requirements"></a>Wymagania  
  **Nagłówek:** module.h  

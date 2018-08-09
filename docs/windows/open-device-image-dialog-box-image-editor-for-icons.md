@@ -17,18 +17,18 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 6fdb7fb2baf2b12105475679a237fef6b69f5728
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: e3cfcf2ec4fdd5a559cf52bc84ee6e50031797c9
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33881708"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40013330"
 ---
 # <a name="open-ltdevicegt-image-dialog-box-image-editor-for-icons"></a>Otwórz &lt;urządzenia&gt; obrazu okno dialogowe (edytor obrazów dla ikon)
-Umożliwia to okno dialogowe Otwieranie obrazy urządzeń. Wyświetla listę istniejących obrazów urządzenia w bieżącym (obrazów, które są częścią bieżącego zasobu).  
+To okno dialogowe służy do otwierania w obrazach urządzeń. Wyświetla listę istniejących obrazów urządzeń w bieżącym (obrazy, które są częścią bieżącego zasobu).  
   
- **Bieżący obrazów**  
- Listy obrazów zawartych w zasobie. Wybierz typ obrazu, który chcesz otworzyć.  
+### <a name="current-images"></a>Bieżących obrazów  
+ Wyświetla listę obrazów zawartych w zasobie. Wybierz typ obrazu, który chcesz otworzyć.  
   
 ## <a name="requirements"></a>Wymagania  
  Brak  
@@ -36,4 +36,3 @@ Umożliwia to okno dialogowe Otwieranie obrazy urządzeń. Wyświetla listę ist
 ## <a name="see-also"></a>Zobacz też  
  [Menu obrazu](../windows/image-menu-image-editor-for-icons.md)   
  [Edytor obrazów dla ikon](../windows/image-editor-for-icons.md)
-

@@ -15,90 +15,90 @@ author: ghogen
 ms.author: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2a378d46c517dfc0fbb5857ad54bc31f4c34287b
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 65db0889b36cafa4b3942b7834229d1a7d9f5783
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33859680"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40010363"
 ---
 # <a name="unicode-programming-summary"></a>Podsumowanie programowania Unicode
-Aby móc korzystać z obsługi czasu wykonywania MFC i C Unicode, musisz:  
+Aby móc korzystać z pomocy technicznej czasu wykonywania MFC i C obsługi standardu Unicode, należy:  
   
--   Zdefiniuj **_unicode —**.  
+-   Zdefiniuj `_UNICODE`.  
   
-     Zdefiniuj symbol **_unicode —** przed kompilacji programu.  
+     Zdefiniuj symbol `_UNICODE` przed dokonaniem kompilacji programu.  
   
 -   Określ punkt wejścia.  
   
-     Na **dane wyjściowe** stronę folderu konsolidatora do projektu [strony właściwości](../ide/property-pages-visual-cpp.md) okna dialogowego należy ustawić symbol punktu wejścia **wWinMainCRTStartup**.  
+     Na **dane wyjściowe** strony **konsolidatora** folderu w projekcie [stron właściwości](../ide/property-pages-visual-cpp.md) okno dialogowe, zestaw **punktu wejścia** symbol `wWinMainCRTStartup`.  
   
--   Użycie przenośne funkcje wykonawcze języka i typów.  
+-   Użyj przenośne funkcji wykonawczej i typów.  
   
-     Użyj odpowiednie funkcje wykonawcze języka C do obsługi ciąg Unicode. Można użyć **wcs** rodziny funkcji, ale łączyli portable pełni (międzynarodowych włączone) **_tchar —** makra. Następujące makra są poprzedzane prefiksem **_tcs**; one podstawić, jeden dla jednego, dla **str** rodziny funkcji. Te funkcje są opisane szczegółowo w [internacjonalizacji](../c-runtime-library/internationalization.md) sekcji *odwołanie do biblioteki wykonawczej*. Aby uzyskać więcej informacji, zobacz [mapowania zwykłego tekstu w pliku Tchar.h](../text/generic-text-mappings-in-tchar-h.md).  
+     Odpowiednie funkcje języka C w czasie wykonywania na użytek obsługi ciąg Unicode. Możesz użyć `wcs` rodzinę funkcji, możesz preferować przenośna pełni (w wielu krajach włączone) `_TCHAR` makra. Te makra są poprzedzone z `_tcs`; mogą zastąpić, jeden do jednego, dla `str` rodziny funkcji. Te funkcje są szczegółowo opisane w [internacjonalizacji](../c-runtime-library/internationalization.md) części *odwołanie do biblioteki wykonawczej*. Aby uzyskać więcej informacji, zobacz [mapowania typ ogólny-tekst w pliku Tchar.h](../text/generic-text-mappings-in-tchar-h.md).  
   
-     Użyj **_tchar —** i pokrewne przenośne typy danych opisanego w [obsługę standardu Unicode](../text/support-for-unicode.md).  
+     Użyj `_TCHAR` i powiązane przenośne typy danych opisanych w [Obsługa formatu Unicode](../text/support-for-unicode.md).  
   
--   Poprawnie obsłużyć ciągi literału.  
+-   Poprawnie obsługiwać ciągi literałowe.  
   
-     Kompilator Visual C++ interpretuje literałem zakodowane jako:  
+     Kompilator języka Visual C++ interpretuje ciąg literału zakodowane jako:  
   
     ```  
     L"this is a literal string"  
     ```  
   
-     oznacza to ciąg znaków Unicode. Można użyć tego samego prefiksu literał znaków. Użyj **_t —** makro kodu ciągi literału objęty, aby skompilować ich jako ciągów Unicode w obszarze Unicode lub ciągów ANSI (w tym MBCS) bez Unicode. Na przykład zamiast elementu:  
+     oznacza to ciąg znaków Unicode. Można użyć tego samego prefiksu dla znaki literału. Użyj `_T` makra o kodowaniu ciągi literałowe ogólną, aby skompilować ich jako ciągi Unicode w Unicode lub ciągów ANSI (w tym MBCS) bez Unicode. Na przykład zamiast programu:  
   
     ```  
     pWnd->SetWindowText( "Hello" );  
     ```  
   
-     Za pomocą:  
+     Użycie:  
   
     ```  
     pWnd->SetWindowText( _T("Hello") );  
     ```  
   
-     Z **_unicode —** zdefiniowane, **_t —** tłumaczy literału ciągu do formularza prefiksem L; w przeciwnym razie **_t —** tłumaczy ciąg bez prefiksu L.  
+     Za pomocą `_UNICODE` zdefiniowane, `_T` tłumaczy ciągiem literału formularza poprzedzone L; w przeciwnym razie `_T` tłumaczy ciąg bez przedrostka L.  
   
     > [!TIP]
-    >  **_T —** makro jest taki sam jak `_TEXT` makra.  
+    >  `_T` — Makro jest taka sama jak `_TEXT` makra.  
   
--   Należy zachować ostrożność podczas przekazywania długości ciągu do funkcji.  
+-   Należy zachować ostrożność przekazywania długości ciągów do funkcji.  
   
-     Niektóre funkcje mają liczba znaków w ciągu; inne osoby, która ma liczbę bajtów. Na przykład jeśli **_unicode —** jest zdefiniowany, następujące wywołanie do `CArchive` obiektu nie będzie działać (`str` jest `CString`):  
+     Niektóre funkcje mają liczbę znaków w ciągu; inne osoby mają liczbę bajtów. Na przykład jeśli `_UNICODE` jest zdefiniowany, wywołanie następujące `CArchive` obiekt nie będzie działać (`str` jest `CString`):  
   
     ```  
     archive.Write( str, str.GetLength( ) );    // invalid  
     ```  
   
-     W aplikacji Unicode długość daje liczba znaków, ale nie poprawną liczbę bajtów, ponieważ każdy znak jest 2 bajty szerokości. Zamiast tego należy użyć:  
+     W aplikacji Unicode długość daje liczbę znaków, ale nie poprawną liczbę bajtów, ponieważ każdy znak jest szeroki 2 bajty. Zamiast tego należy użyć:  
   
     ```  
     archive.Write( str, str.GetLength( ) * sizeof( _TCHAR ) );    // valid  
     ```  
   
-     Określa, które poprawną liczbę bajtów do zapisania.  
+     który określa poprawną liczbę bajtów do zapisania.  
   
-     Jednak funkcje Członkowskie MFC, które są zorientowane na znak zamiast zorientowane na bajt działa bez to bardzo kodowanie:  
+     Jednak funkcje Członkowskie MFC, które są zorientowane na znak, a nie zorientowane na bajt działać bez to bardzo kodowania:  
   
     ```  
     pDC->TextOut( str, str.GetLength( ) );  
     ```  
   
-     `CDC::TextOut` pobiera liczbę znaków, nie liczba bajtów.  
+     `CDC::TextOut` pobiera liczbę znaków, nie liczbę bajtów.  
   
 -   Użyj [fopen_s —, _wfopen_s —](../c-runtime-library/reference/fopen-s-wfopen-s.md) do otwierania plików Unicode.  
   
- Podsumowując, MFC i biblioteki wykonawczej zapewniają obsługę programowania Unicode:  
+ Aby podsumować, MFC i biblioteki wykonawczej zapewniają obsługę programowania Unicode:  
   
--   Z wyjątkiem funkcji Członkowskich klasy bazy danych, wszystkie funkcje MFC obsługują Unicode, łącznie z `CString`. `CString` udostępnia funkcje konwersji Unicode/ANSI.  
+-   Z wyjątkiem funkcji składowych klasy bazy danych, wszystkie funkcje MFC obsługują Unicode, w tym `CString`. `CString` udostępnia również funkcje konwersji Unicode/ANSI.  
   
--   Biblioteki wykonawczej udostępnia wszystkie funkcje obsługi ciągów Unicode wersji. (Biblioteki wykonawczej również udostępnia przenośnych odpowiedniej wersji Unicode lub MBCS. Są to **_tcs** makra.)  
+-   Biblioteka środowiska uruchomieniowego dostarcza wersje wszystkich funkcji obsługi ciągów Unicode. (Biblioteki wykonawczej dostarcza również wersje przenośnym odpowiednie dla Unicode lub MBCS. Są to `_tcs` makra.)  
   
--   Tchar.h dostarcza przenośne typy danych i **_t —** makro do tłumaczenia ciągi literału i znaki. Aby uzyskać więcej informacji, zobacz [mapowania zwykłego tekstu w pliku Tchar.h](../text/generic-text-mappings-in-tchar-h.md).  
+-   Tchar.h dostarcza przenośne typy danych i `_T` makra do tłumaczenia ciągów literałów i znaków. Aby uzyskać więcej informacji, zobacz [mapowania typ ogólny-tekst w pliku Tchar.h](../text/generic-text-mappings-in-tchar-h.md).  
   
--   Biblioteki wykonawczej dostarcza wersję znaków dwubajtowych **głównego**. Użyj **wmain** dokonanie aplikacji obsługujących Unicode.  
+-   Biblioteka środowiska uruchomieniowego zawiera wersja znaków dwubajtowych `main`. Użyj `wmain` aplikacji obsługujących Unicode.  
   
 ## <a name="see-also"></a>Zobacz też  
  [Obsługa formatu Unicode](../text/support-for-unicode.md)

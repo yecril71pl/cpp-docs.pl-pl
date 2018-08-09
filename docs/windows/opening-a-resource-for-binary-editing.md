@@ -18,12 +18,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 428c62db8f1444f497d6fede7affea34560b4b0e
-ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
+ms.openlocfilehash: 26d1b0ae8923835b0ce06c7312fa185693c6586e
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/07/2018
-ms.locfileid: "39605958"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40014510"
 ---
 # <a name="opening-a-resource-for-binary-editing"></a>Otwieranie zasobów do edycji plików binarnych
 ### <a name="to-open-a-windows-desktop-resource-for-binary-editing"></a>Aby otworzyć zasób pulpitu Windows do edycji plików binarnych  
@@ -36,7 +36,7 @@ ms.locfileid: "39605958"
 2.  Kliknij prawym przyciskiem myszy zasób, a następnie kliknij przycisk **otwartej obsługi danych binarnych** z menu skrótów.  
   
     > [!NOTE]
-    >  Jeśli używasz [widok zasobów](../windows/resource-view-window.md) okna, aby otworzyć zasobu w formacie, że Visual Studio nie może rozpoznać (na przykład RCDATA lub zasobów niestandardowych), zasób jest automatycznie otwierany w edytorze binarnym.  
+    >  Jeśli używasz [widok zasobów](../windows/resource-view-window.md) okna, aby otworzyć zasobu w formacie, że Visual Studio nie może rozpoznać (na przykład RCDATA lub zasobów niestandardowych), zasób zostanie automatycznie otwarty w **binarne** edytora.  
   
 ### <a name="to-open-a-managed-resource-for-binary-editing"></a>Aby otworzyć zarządzanych zasobów do edycji plików binarnych  
   
@@ -58,10 +58,9 @@ Dane binarne dla okna dialogowego wyświetlany w edytorze pliku binarnego
  Tylko niektóre wartości ASCII są reprezentowane w edytorze binarnym (0x20 za pośrednictwem 0x7E). Rozszerzone znaki są wyświetlane jako okresy w sekcji wartość ASCII w edytorze binarnym (prawy panel). "Drukowalnych" znaki są wartości ASCII 32 za pośrednictwem 126.  
   
 > [!NOTE]
->  Jeśli chcesz użyć edytora binarnego w zasobie już poddane edycji w innym oknie edytora, należy najpierw zamknąć pozostałe okna edytora.  
+>  Jeśli chcesz używać **binarne** edytora w zasobie już poddane edycji w innym oknie edytora najpierw zamknąć pozostałe okna edytora.  
   
 ## <a name="requirements"></a>Wymagania  
-  
  Brak  
   
 ## <a name="see-also"></a>Zobacz też  

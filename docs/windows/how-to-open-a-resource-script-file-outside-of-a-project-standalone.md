@@ -20,12 +20,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 70cba5145f64fd88d1d6f1c4a68ac4c0730968cc
-ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
+ms.openlocfilehash: 4a976e4b6c6b2fb89dfab362b13000d2e7d4327b
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39570385"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40013417"
 ---
 # <a name="how-to-open-a-resource-script-file-outside-of-a-project-standalone"></a>Porady: otwieranie pliku skryptu zasobu spoza projektu (autonomicznego)
 Zasoby można wyświetlić w pliku .rc, bez konieczności jest otwarty projekt. Plik .rc zostanie otwarty w oknie dokumentu, w przeciwieństwie do otwarcia w [widok zasobów](../windows/resource-view-window.md) okna (co jest wykonywane, gdy plik jest otwarty w projekcie).  
@@ -46,13 +46,13 @@ Zasoby można wyświetlić w pliku .rc, bez konieczności jest otwarty projekt. 
   
 ### <a name="to-open-multiple-rc-files-outside-a-project"></a>Aby otworzyć wiele plików .rc poza projektem  
   
-1.  Otwórz zarówno autonomiczne pliki zasobów. Na przykład otworzyć Source1.rc i Source2.rc.  
+1.  Otwórz zarówno autonomiczne pliki zasobów. Na przykład otworzyć `Source1.rc` i `Source2.rc`.  
   
     1.  Z **pliku** menu, wybierz **Otwórz**, następnie kliknij przycisk **pliku**.  
   
-    2.  W **Otwórz plik** okno dialogowe, przejdź do pierwszego pliku skryptu zasobu, aby otworzyć (Source1.rc), zaznacz plik i kliknij przycisk **Otwórz**.  
+    2.  W **Otwórz plik** okno dialogowe, przejdź do pierwszego pliku skryptu zasobu, który chcesz otworzyć (`Source1.rc`), zaznacz plik i kliknij przycisk **Otwórz**.  
   
-    3.  Powtórz poprzedni krok, aby otworzyć drugiego pliku .rc (Source2.rc).  
+    3.  Powtórz poprzedni krok, aby otworzyć drugiego pliku .rc (`Source2.rc`).  
   
          Pliki .rc są teraz otwarte w oddzielnych dokumentów w systemie windows.  
   

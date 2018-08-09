@@ -26,12 +26,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 1a87087b4ef51c016a5165f0d997824f174ca06c
-ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
+ms.openlocfilehash: debb2b1e8435cc53ec82ab1f957710850d7b5de3
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/07/2018
-ms.locfileid: "39608160"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40010694"
 ---
 # <a name="saving-bitmaps-as-gifs-or-jpegs-image-editor-for-icons"></a>Zapisywanie map bitowych jako plików GIF lub JPEG (Edytor obrazów dla ikon)
 Gdy tworzysz mapę bitową, obraz jest tworzony w formacie mapy bitowej (bmp). Można jednak zapiszesz obraz GIF lub JPEG lub w innych formatach grafiki.  
@@ -51,9 +51,10 @@ Gdy tworzysz mapę bitową, obraz jest tworzony w formacie mapy bitowej (bmp). M
   
 4.  Z mapą bitową wciąż otwarty w **obraz** edytorze kliknij **Zapisz *filename*.bmp jako** na **pliku** menu.  
   
-5.  W **Zapisz plik jako** okna dialogowego wpisz nazwę, którą chcesz nadać pliku i rozszerzenie, które określa format pliku, w **nazwy pliku** pole. Na przykład myfile.gif.  
+5.  W **Zapisz plik jako** okna dialogowego wpisz nazwę, którą chcesz nadać pliku i rozszerzenie, które określa format pliku, w **nazwy pliku** pole. Na przykład *myfile.gif*.  
   
-     **Uwaga** należy utworzyć lub otworzyć mapy bitowej spoza projektu, aby można było zapisać go jako pliku w innym formacie. Jeśli tworzysz lub otwórz go w swoim projekcie **Zapisz jako** polecenie jest niedostępne. Aby uzyskać więcej informacji, zobacz [wyświetlania zasobów w zasobu skryptu pliku poza z projektu (autonomicznego)](../windows/how-to-open-a-resource-script-file-outside-of-a-project-standalone.md).  
+     > [!NOTE]
+     > Należy utworzyć lub otworzyć mapy bitowej spoza projektu, aby można było zapisać go jako pliku w innym formacie. Jeśli tworzysz lub otwórz go w swoim projekcie **Zapisz jako** polecenie jest niedostępne. Aby uzyskać więcej informacji, zobacz [wyświetlania zasobów w zasobu skryptu pliku poza z projektu (autonomicznego)](../windows/how-to-open-a-resource-script-file-outside-of-a-project-standalone.md).  
   
 6.  Kliknij przycisk **Zapisz**.  
   

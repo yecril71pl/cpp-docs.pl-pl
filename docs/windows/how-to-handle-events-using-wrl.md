@@ -13,12 +13,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 287fe57868f1550e2f778bd9122d0d350011084e
-ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
+ms.openlocfilehash: eada53c74c967c4df093e094a611a726ef79d99d
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39570636"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40012537"
 ---
 # <a name="how-to-handle-events-using-wrl"></a>Porady: obsługa zdarzeń z użyciem biblioteki WRL
 W tym dokumencie pokazano, jak subskrybować i obsługiwać zdarzenia obiektu Windows Runtime za pomocą zestawu Windows środowiska uruchomieniowego C++ szablon biblioteki (WRL).  
@@ -35,7 +35,7 @@ W tym dokumencie pokazano, jak subskrybować i obsługiwać zdarzenia obiektu Wi
   
      [!code-cpp[wrl-consume-event#2](../windows/codesnippet/CPP/how-to-handle-events-using-wrl_1.cpp)]  
   
-     Windows.Devices.Enumeration.h deklaruje typy, które są wymagane do wyliczania urządzeń.  
+     `Windows.Devices.Enumeration.h` deklaruje typy, które są wymagane do wyliczania urządzeń.  
   
      Firma Microsoft zaleca używanie `using namespace` dyrektywy w pliku .cpp, aby zwiększyć czytelność kodu.  
   
@@ -90,7 +90,7 @@ W tym dokumencie pokazano, jak subskrybować i obsługiwać zdarzenia obiektu Wi
  [!code-cpp[wrl-consume-event#1](../windows/codesnippet/CPP/how-to-handle-events-using-wrl_10.cpp)]  
   
 ## <a name="compiling-the-code"></a>Kompilowanie kodu  
- Aby skompilować ten kod, skopiuj go a następnie wklej go w projekcie programu Visual Studio lub wklej go w pliku o nazwie `wrl-consume-events.cpp` , a następnie uruchom następujące polecenie w oknie wiersza polecenia programu Visual Studio.  
+ Aby skompilować ten kod, skopiuj go a następnie wklej go w projekcie programu Visual Studio lub wklej go w pliku o nazwie `wrl-consume-events.cpp` , a następnie uruchom następujące polecenie **Visual Studio Command Prompt** okna.  
   
  `cl.exe wrl-consume-events.cpp runtimeobject.lib`  
   

@@ -1,5 +1,5 @@
 ---
-title: Najlepsze rozwiązania dotyczące C++ | Dokumentacja firmy Microsoft
+title: Najlepsze rozwiązania dotyczące języka C++ | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 05/08/2018
 ms.technology:
@@ -18,53 +18,54 @@ author: mikeblome
 ms.author: mikeblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2a0ed67c85cbd42985448ef9eb1806931d1c294f
-ms.sourcegitcommit: 19a108b4b30e93a9ad5394844c798490cb3e2945
+ms.openlocfilehash: e16a00d83f7917cf21f114b2a80fa1ad55a90875
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/17/2018
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40015627"
 ---
 # <a name="security-best-practices-for-c"></a>Najlepsze praktyki w zakresie zabezpieczeń dla C++
 
-Ten artykuł zawiera informacje o narzędziach zabezpieczeń i rozwiązań. Ich użycie nie oznacza, że aplikacje odporna na ataki, ale ułatwia udanych ataków rzadziej.  
+Ten artykuł zawiera informacje dotyczące narzędzi zabezpieczeń i praktyki. Korzystanie z nich nie oznacza, że aplikacje odporna na ataki, ale to sprawia, że zakończonego pomyślnie ataku mniej prawdopodobne.  
   
 ## <a name="visual-c-security-features"></a>Funkcje zabezpieczeń w programie Visual C++
 
- Te funkcje zabezpieczeń są wbudowane w kompilatora Visual C++ i linker:  
+ Te funkcje zabezpieczeń są wbudowane w kompilator języka Visual C++ i konsolidatora:  
   
  [/guard (Włącz ochronę przepływu sterowania)](../build/reference/guard-enable-control-flow-guard.md)  
- Powoduje, że kompilator w celu analizowania przepływ kontroli dla pośredniego rozmów w czasie kompilacji, a następnie Wstaw kod, aby zweryfikować elementy docelowe w czasie wykonywania.  
+ Powoduje, że kompilator analizować przepływ kontroli dla pośredniego rozmów w czasie kompilacji, a następnie Wstaw kod, aby sprawdzić elementy docelowe w czasie wykonywania.  
   
  [/GS (Sprawdzanie zabezpieczeń bufora)](../build/reference/gs-buffer-security-check.md)  
- Instruuje kompilator, aby wstawić kod wykrywania przekroczenie do funkcji, które są zagrożone w czasie. Po wykryciu przekroczenia wykonywania została zatrzymana. Domyślnie ta opcja jest włączona.  
+ Instruuje kompilator, aby wstawić przepełnienie podczas wykrywania kod do funkcji, które są zagrożone w czasie. Po wykryciu przepełnienie podczas wykonywania została zatrzymana. Domyślnie ta opcja jest włączona.  
   
  [/SAFESEH (Obraz ma bezpieczną obsługę wyjątków)](../build/reference/safeseh-image-has-safe-exception-handlers.md)  
- Informuje konsolidator, aby dołączyć do obrazu wyjściowego tabelę, która zawiera adres każdy program obsługi wyjątku. W czasie wykonywania system operacyjny używa tej tabeli, aby upewnić się, że programy obsługi wyjątków tylko uprawnionym są wykonywane. Pomaga to zapobiec wykonywania programów obsługi wyjątków, które zostaną wprowadzone złośliwymi atakami w czasie wykonywania. Domyślnie ta opcja jest wyłączona.  
+ Nakazuje programowi łączącemu uwzględnienie w obrazie danych wyjściowych tabeli, która zawiera adres każdy program obsługi wyjątków. W czasie wykonywania system operacyjny używa tej tabeli, aby upewnić się, że programy obsługi wyjątków tylko uprawnionym są wykonywane. Pozwala to zapobiec wykonywania programów obsługi wyjątków, które są wprowadzone przez złośliwych ataków w czasie wykonywania. Domyślnie ta opcja jest wyłączona.  
   
  [/ NXCOMPAT](../build/reference/nxcompat.md), [/NXCOMPAT (zgodny z zapobieganiem wykonywaniu danych)](../build/reference/nxcompat-compatible-with-data-execution-prevention.md)  
- Te opcje konsolidatora i kompilatora zgodność zapobiegania wykonywaniu danych (DEP). DEP chroni procesora CPU na wykonanie kodowe —.  
+ Te opcje konsolidatora i kompilatora zgodność zapobieganie wykonywaniu danych (DEP). DEP chroni procesora CPU na wykonanie kodowe —.  
   
  [/analyze (Analiza kodu)](../build/reference/analyze-code-analysis.md)  
- Ta opcja kompilatora aktywuje analizy kodu, który zgłasza potencjalnych problemów z zabezpieczeniami, takich jak przepełnienie buforu, które nie zostały zainicjowane pamięci dereferencji wskaźnika o wartości null i przecieki pamięci. Domyślnie ta opcja jest wyłączona. Aby uzyskać więcej informacji, zobacz [analizy kodu dla C/C++ — omówienie](/visualstudio/code-quality/code-analysis-for-c-cpp-overview).  
+ Tę opcję kompilatora aktywuje analizy kodu, który zgłasza potencjalnych problemów z zabezpieczeniami, takich jak przepełnienia buforu, pamięci surowej zainicjowane, wyłuskanie wskaźnika o wartości null i przecieki pamięci. Domyślnie ta opcja jest wyłączona. Aby uzyskać więcej informacji, zobacz [analiza kodu C/C++ — Przegląd](/visualstudio/code-quality/code-analysis-for-c-cpp-overview).  
   
  [/DYNAMICBASE (Korzystaj z randomizacji układu przestrzeni adresowej)](../build/reference/dynamicbase-use-address-space-layout-randomization.md)  
- Ta opcja konsolidatora umożliwia tworzenie obrazu wykonywalnego, który może zostać załadowany w różnych lokalizacjach w pamięci na początku wykonywania. Ta opcja powoduje lokalizacji stosu w pamięci znacznie mniej przewidywalne.  
+ Tę opcję konsolidatora umożliwia tworzenie obrazu pliku wykonywalnego, który może zostać załadowany w różnych lokalizacjach w pamięci na początku wykonywania. Ta opcja powoduje lokalizacji stosu w pamięci znacznie mniej przewidywalne.  
   
 ## <a name="security-enhanced-crt"></a>CRT z rozszerzonymi zabezpieczeniami  
- C Runtime Library (CRT) ma zostały rozszerzone do uwzględnienia bezpiecznego wersje funkcji, które stanowią zagrożenie bezpieczeństwa — na przykład niezaznaczone `strcpy` ciągu funkcji kopiowania. Ponieważ starszej wersji niezabezpieczone tych funkcji są przestarzałe, spowodują one ostrzeżeń kompilacji. Firma Microsoft zachęca do korzystania z bezpiecznego wersje funkcji CRT zamiast pomijanie ostrzeżeń kompilacji. Aby uzyskać więcej informacji, zobacz [funkcje zabezpieczeń w CRT](../c-runtime-library/security-features-in-the-crt.md).  
+ Biblioteka środowiska uruchomieniowego C (CRT) został uzupełniony obejmujący bezpieczne wersje funkcji, które stanowić zagrożenia bezpieczeństwa — na przykład unchecked `strcpy` ciągów funkcji kopiowania. Ponieważ starsze, niezabezpieczone wersje tych funkcji są przestarzałe, spowodują ostrzeżenia kompilacji. Zachęcamy do korzystania z bezpieczne wersje tych funkcji CRT zamiast pomijanie ostrzeżeń kompilacji. Aby uzyskać więcej informacji, zobacz [funkcje zabezpieczeń w CRT](../c-runtime-library/security-features-in-the-crt.md).  
   
 ## <a name="safeint-library"></a>Biblioteka SafeInt  
- [Biblioteka SafeInt](../windows/safeint-library.md) pomaga uniknąć przepełnienia całkowitą i innych kończona błędów, które mogą wystąpić, gdy aplikacja wykonuje operacji matematycznych. `SafeInt` Biblioteka zawiera [safeint — klasa](../windows/safeint-class.md), [safeintexception — klasa](../windows/safeintexception-class.md)i kilka [safeint — funkcje](../windows/safeint-functions.md).  
+ [Biblioteka SafeInt](../windows/safeint-library.md) pomaga uniknąć przepełnienia liczby całkowitej i inne możliwe do wykorzystania błędy, które mogą wystąpić, gdy aplikacja wykonuje operacje matematyczne. `SafeInt` Biblioteka zawiera [safeint — klasa](../windows/safeint-class.md), [safeintexception — klasa](../windows/safeintexception-class.md)oraz kilka [safeint — funkcje](../windows/safeint-functions.md).  
   
- `SafeInt` Klasy chroni przed całkowitą przepełnienie i wykorzystuje dzielenie przez zero. Służy on do obsługi porównanie wartości różnych typów. I udostępnia dwie zasady obsługi błędów. Domyślna zasada jest przeznaczona dla `SafeInt` klasę, aby zgłosić `SafeIntException` klasy wyjątku do raportu, dlaczego nie można ukończyć operacji matematycznych. Drugi zasada jest przeznaczona dla `SafeInt` klasę, aby zatrzymać wykonanie programu. Istnieje również możliwość definiowania niestandardowych zasad.  
+ `SafeInt` Klasy chroni przed przepełnienie liczby całkowitej i wykorzystuje dzielenie przez zero. Służy do obsługi porównanie wartości o różnych typach. Udostępnia dwie zasady obsługi błędów. Domyślna zasada dotyczy `SafeInt` klasy, aby zgłosić `SafeIntException` klasy wyjątku do raportu, dlaczego nie można ukończyć operacji matematycznych. Drugie zasady jest `SafeInt` klasy, aby zatrzymać wykonywanie programów. Można również definiować niestandardowe zasady.  
   
- Każdy `SafeInt` funkcja uniemożliwia kończona błąd jednej operacji matematycznych. Bez potrzeby konwertowania ich na ten sam typ, można użyć dwóch różnych rodzajów parametrów. Aby chronić wiele operacji matematycznych, użyj `SafeInt` klasy.  
+ Każdy `SafeInt` funkcja zapewnia ochronę jednej operacji matematycznych sprawność po błędzie kończona. Dwa różne rodzaje parametrów można użyć bez konwertowania go na potrzeby tego samego typu. Aby chronić wiele operacji matematycznych, użyj `SafeInt` klasy.  
   
 ## <a name="checked-iterators"></a>Zaznaczone iteratory  
- Checked iteratora wymusza granice kontenera. Domyślnie gdy zaznaczone iteratora jest poza zakresem, go generuje wyjątek i kończy działanie programu. Checked iteratora zapewnia innych poziomach odpowiedzi, które są zależne od wartości, które są przypisane do preprocesora definiuje, takich jak  **\_bezpiecznego\_SCL\_ZGŁASZA** i  **\_ITERATOR\_debugowania\_poziom**. Na przykład na  **\_ITERATORA\_debugowania\_LEVEL = 2**, zaznaczone iteratora zapewnia kompleksowe poprawności sprawdza się w trybie debugowania, które są udostępniane za pomocą potwierdzeń. Aby uzyskać więcej informacji, zobacz [zaznaczone Iteratory](../standard-library/checked-iterators.md) i [ \_ITERATOR\_debugowania\_poziom](../standard-library/iterator-debug-level.md).  
+ Iterator sprawdzony wymusza granice kontenera. Domyślnie gdy sprawdzonego iteratora jest poza zakresem, go generuje wyjątek i kończy działanie programu. Iteratora sprawdzanego zapewnia innych poziomów odpowiedzi, które są zależne od wartości, które są przypisane do preprocesora definiuje takie jak  **\_bezpiecznego\_SCL\_ZGŁASZA** i  **\_ITERATORA\_debugowania\_poziom**. Np. w  **\_ITERATORA\_debugowania\_LEVEL = 2**, sprawdzonego iteratora zapewnia kompleksowe poprawność sprawdza, czy w trybie debugowania, które są udostępniane za pomocą potwierdzenia. Aby uzyskać więcej informacji, zobacz [Checked Iterators](../standard-library/checked-iterators.md) i [ \_ITERATORA\_debugowania\_poziom](../standard-library/iterator-debug-level.md).  
   
 ## <a name="code-analysis-for-managed-code"></a>Analizowanie kodu zarządzanego  
- Analiza kodu dla kodu zarządzanego, znanej także jako FxCop, sprawdza, czy zestawy dla zgodność ze środowiska.NET Framework wskazówek. FxCop analizę kodu i metadanych w każdym zestawie do sprawdzenia pod względem wad w następujących obszarach:  
+ Analiza kodu dla kodu zarządzanego, znany także jako FxCop, sprawdza, czy zestawy dla zgodności do środowiska.NET Framework — zalecenia dotyczące projektowania. FxCop analizuje kod i metadane w każdym zestawie pod kątem defektów w następujących obszarach:  
   
 -   Projekt biblioteki  
   
@@ -76,30 +77,30 @@ Ten artykuł zawiera informacje o narzędziach zabezpieczeń i rozwiązań. Ich 
   
 -   Zabezpieczenia  
   
-## <a name="windows-application-verifier"></a>Weryfikator aplikacji systemu Windows  
- Weryfikator aplikacji (użycie narzędzia AppVerifier) może pomóc w identyfikacji potencjalnych problemów ze zgodnością, stabilności i zabezpieczeń aplikacji.  
+## <a name="windows-application-verifier"></a>Weryfikator aplikacji Windows  
+ Weryfikator aplikacji (użycie narzędzia AppVerifier) może pomóc w określeniu potencjalnych problemów ze zgodnością, stabilności i zabezpieczeń aplikacji.  
   
- Użycie narzędzia AppVerifier monitoruje jak aplikacja korzysta z systemu operacyjnego. Go oczekuje systemu plików, rejestru, pamięci, i interfejsów API, podczas gdy aplikacja jest uruchomiona i zaleca kodu źródłowego poprawki dotyczące problemów z jej odkrywa.  
+ Użycie narzędzia AppVerifier monitoruje, jak aplikacja używa systemu operacyjnego. Jego obserwuje systemu plików, rejestru, pamięci i interfejsów API, gdy aplikacja jest uruchomiona i zaleca się kod źródłowy poprawki dotyczące problemów, które go znajdujący.  
   
- Można użyć narzędzia AppVerifier do:  
+ Umożliwia użycie narzędzia AppVerifier do:  
   
--   Test na potencjalne błędy zgodności aplikacji, które wynikają z typowych pomyłek programowania.  
+-   Test na potencjalne błędy zgodności aplikacji, które są spowodowane przez typowe błędy programowania.  
   
--   Sprawdź aplikację w przypadku problemów związanych z pamięcią.  
+-   Przeanalizuj aplikację w przypadku problemów związanych z pamięcią.  
 
 -   Zidentyfikuj potencjalne problemy w aplikacji.  
   
- Użycie narzędzia AppVerifier wchodzi w skład narzędzi zgodności aplikacji, która jest dostępna z [zgodności aplikacji](http://go.microsoft.com/fwlink/p/?linkid=91277) w witrynie TechNet.  
+ Użycie narzędzia AppVerifier jest częścią Application Compatibility Toolkit, który jest dostępny z [zgodności aplikacji](http://go.microsoft.com/fwlink/p/?linkid=91277) w witrynie TechNet.  
   
 
-## <a name="windows-user-accounts"></a>Konta użytkownika systemu Windows  
- Przy użyciu konta systemu Windows użytkownika należące do deweloperów ujawnia grupy Administratorzy i--przez rozszerzenie — klienci na zagrożenia bezpieczeństwa. Aby uzyskać więcej informacji, zobacz [uruchamianie jako członek grupy Użytkownicy](running-as-a-member-of-the-users-group.md) i [jak (Kontrola konta) dotyczy Twoja aplikacja](how-user-account-control-uac-affects-your-application.md).
+## <a name="windows-user-accounts"></a>Konta użytkowników Windows  
+ Przy użyciu Windows kont użytkowników należących do deweloperów ujawnia grupy Administratorzy i--przez rozszerzenie — klienci na zagrożenia bezpieczeństwa. Aby uzyskać więcej informacji, zobacz [uruchamianie jako członek grupy Użytkownicy](running-as-a-member-of-the-users-group.md) i [jak konta użytkownika kontroli (UAC) wpływa na aplikacji](how-user-account-control-uac-affects-your-application.md).
 
-## <a name="guidance-for-speculative-execution-side-channels"></a>Wskazówki dotyczące rozważana kanały po stronie wykonywania
+## <a name="guidance-for-speculative-execution-side-channels"></a>Wskazówki dotyczące spekulacyjnego kanały po stronie wykonywania
 
-Aby uzyskać informacje na temat identyfikowania i ograniczyć rozważana wykonywania po stronie kanał sprzętu luki w zabezpieczeniach oprogramowania C++, zobacz [wskazówki dla deweloperów języka C++ dla kanałów po stronie wykonywania Speculative](developer-guidance-speculative-execution.md).
+Aby uzyskać informacje dotyczące sposobu identyfikowania i łagodzi skutki związanego z wykonywaniem spekulatywnym po stronie kanału sprzętowych luk w zabezpieczeniach oprogramowania C++, zobacz [wskazówki dla deweloperów C++ dla kanałów po stronie wykonywania spekulacyjne](developer-guidance-speculative-execution.md).
 
 ## <a name="see-also"></a>Zobacz też  
-- <xref:System.Security>   
-- [Zabezpieczenia](/dotnet/standard/security/index)   
-- [Jak kontrola konta użytkownika (UAC) wpływa na aplikację?](how-user-account-control-uac-affects-your-application.md)
+<xref:System.Security>   
+[Zabezpieczenia](/dotnet/standard/security/index)   
+[Jak kontrola konta użytkownika (UAC) wpływa na aplikację?](how-user-account-control-uac-affects-your-application.md)

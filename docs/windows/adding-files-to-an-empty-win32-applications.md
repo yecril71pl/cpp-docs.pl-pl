@@ -18,12 +18,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: e3ed2559457a7fd3231c625b285dea44f81da877
-ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
+ms.openlocfilehash: 1efde876cadd5a8620bef83c37a61b8b471dba8b
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39646845"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40019241"
 ---
 # <a name="adding-files-to-an-empty-win32-applications"></a>Dodawanie plików do pustych aplikacji Win32
 ### <a name="to-add-your-files-to-an-empty-windows-desktop-application"></a>Aby dodać pliki do pustą aplikację pulpitu Windows  
@@ -43,4 +43,4 @@ ms.locfileid: "39646845"
   
 ## <a name="see-also"></a>Zobacz też  
  [Tworzenie aplikacji klasycznych Windows pusty](../windows/creating-an-empty-windows-desktop-application.md)   
- [Wdrażanie aplikacji](http://msdn.microsoft.com/en-us/4ff8881d-0daf-47e7-bfe7-774c625031b4)
+ [Wdrażanie aplikacji](http://msdn.microsoft.com/4ff8881d-0daf-47e7-bfe7-774c625031b4)

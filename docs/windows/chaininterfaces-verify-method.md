@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: b71581687ec69a4aff85f649e85ebfe10c0a844f
-ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
+ms.openlocfilehash: 81b3a166215f7731a43333e230621072d760260c
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39650472"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40013535"
 ---
 # <a name="chaininterfacesverify-method"></a>ChainInterfaces::Verify — Metoda
 Sprawdza, czy każdy interfejs zdefiniowany przez parametry szablonu *I0* za pośrednictwem *I9* dziedziczy `IUnknown` i/lub `IInspectable`oraz że *I0* dziedziczy z *I1* za pośrednictwem *I9*.  
@@ -35,8 +35,7 @@ WRL_NOTHROW __forceinline static void Verify();
   
 ## <a name="remarks"></a>Uwagi  
  W przypadku niepowodzenia operacji weryfikacji **static_assert** emituje komunikat o błędzie opisujący błąd.  
-  
-## <a name="remarks"></a>Uwagi  
+
  Parametry szablonu *I0* i *I1* są wymagane i parametry *I2* za pośrednictwem *I9* są opcjonalne.  
   
 ## <a name="requirements"></a>Wymagania  

@@ -17,19 +17,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 3dc93b6dc6d6a5fbf6bcd8899793e07bd6446de1
-ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
+ms.openlocfilehash: 3e7354dc422027207bc1dab357487ffcce48a4ca
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/07/2018
-ms.locfileid: "39604359"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40018597"
 ---
 # <a name="module-c"></a>moduł (C++)
 Określa blok biblioteki w pliku .idl.  
   
 ## <a name="syntax"></a>Składnia  
   
-```  
+```cpp  
 [ module (  
    type=dll,  
    name=string,  
@@ -50,8 +50,8 @@ Określa blok biblioteki w pliku .idl.
 ```  
   
 ### <a name="parameters"></a>Parametry  
- *Typ* (opcjonalnie)  
- Może to być jeden z następujących elementów:  
+*Typ* (opcjonalnie)  
+Może to być jeden z następujących elementów:  
   
 -   `dll` Dodaje funkcje i klasy, które umożliwiają wynikowy DLL do działania jako serwer COM w procesie. Jest to wartość domyślna.  
   
@@ -61,51 +61,51 @@ Określa blok biblioteki w pliku .idl.
   
 -   `unspecified` Wyłącza iniekcji kodu biblioteki ATL, powiązany z atrybutem modułu: iniekcji modułu ATL klas, _AtlModule globalnego wystąpienia i wpis punktu funkcji. Nie wyłącza iniekcji kodu biblioteki ATL z powodu innych atrybutów w projekcie.  
   
- *Nazwa* (opcjonalnie)  
- Nazwa bloku biblioteki.  
+*Nazwa* (opcjonalnie)  
+Nazwa bloku biblioteki.  
   
- *Wersja* (opcjonalnie)  
- Numer wersji, którą chcesz przypisać do bloku biblioteki. Wartość domyślna to 1.0.  
+*Wersja* (opcjonalnie)  
+Numer wersji, którą chcesz przypisać do bloku biblioteki. Wartość domyślna to 1.0.  
   
- *uuid*  
- Unikatowy identyfikator dla biblioteki. Jeżeli pominięto ten parametr zostanie automatycznie wygenerowany identyfikator biblioteki. Musisz pobrać *uuid* bloku Biblioteka można wykonać przy użyciu identyfikatora **__uuidof (***libraryname***)**.  
+*uuid*  
+Unikatowy identyfikator dla biblioteki. Jeżeli pominięto ten parametr zostanie automatycznie wygenerowany identyfikator biblioteki. Musisz pobrać *uuid* bloku Biblioteka można wykonać przy użyciu identyfikatora **__uuidof (***libraryname***)**.  
   
- *lcid*  
- Parametr lokalizacji. Zobacz [lcid](http://msdn.microsoft.com/library/windows/desktop/aa367067) Aby uzyskać więcej informacji.  
+*lcid*  
+Parametr lokalizacji. Zobacz [lcid](http://msdn.microsoft.com/library/windows/desktop/aa367067) Aby uzyskać więcej informacji.  
   
- *Kontrolka* (opcjonalnie)  
- Określa, że wszystkie klasy coclass w bibliotece kontrolek.  
+*Kontrolka* (opcjonalnie)  
+Określa, że wszystkie klasy coclass w bibliotece kontrolek.  
   
- *helpstring*  
- Określa plik biblioteki typów.  
+*helpstring*  
+Określa plik biblioteki typów.  
   
- *helpstringdll —* (opcjonalnie)  
- Określa nazwę pliku .dll, aby wykonać wyszukiwanie ciągu dokumentu. Zobacz [helpstringdll —](http://msdn.microsoft.com/library/windows/desktop/aa366860) Aby uzyskać więcej informacji.  
+*helpstringdll —* (opcjonalnie)  
+Określa nazwę pliku .dll, aby wykonać wyszukiwanie ciągu dokumentu. Zobacz [helpstringdll —](http://msdn.microsoft.com/library/windows/desktop/aa366860) Aby uzyskać więcej informacji.  
   
- *HelpFile —* (opcjonalnie)  
- Nazwa pliku pomocy dla biblioteki typów.  
+*HelpFile —* (opcjonalnie)  
+Nazwa **pomocy** pliku biblioteki typów.  
   
- *helpcontext —* (opcjonalnie)  
- Identyfikator pomocy dla tego typu biblioteki.  
+*helpcontext —* (opcjonalnie)  
+**Identyfikator pomocy** dla tego typu biblioteki.  
   
- *helpstringcontext —* (opcjonalnie)  
- Zobacz [helpstringcontext —](../windows/helpstringcontext.md) Aby uzyskać więcej informacji.  
+*helpstringcontext —* (opcjonalnie)  
+Zobacz [helpstringcontext —](../windows/helpstringcontext.md) Aby uzyskać więcej informacji.  
   
- *ukryte* (opcjonalnie)  
- Uniemożliwia wyświetlanie całej biblioteki. To obciążenie jest przeznaczony do użytku z formantami. Hosty muszą Utwórz nową bibliotekę typu, który opakowuje formant z rozszerzonych właściwości. Zobacz [ukryte](http://msdn.microsoft.com/library/windows/desktop/aa366861) atrybutu MIDL, aby uzyskać więcej informacji.  
+*ukryte* (opcjonalnie)  
+Uniemożliwia wyświetlanie całej biblioteki. To obciążenie jest przeznaczony do użytku z formantami. Hosty muszą Utwórz nową bibliotekę typu, który opakowuje formant z rozszerzonych właściwości. Zobacz [ukryte](http://msdn.microsoft.com/library/windows/desktop/aa366861) atrybutu MIDL, aby uzyskać więcej informacji.  
   
- *ograniczone* (opcjonalnie)  
- Elementy członkowskie biblioteki nie może być wywoływana arbitralnie. Zobacz [ograniczeniami](http://msdn.microsoft.com/library/windows/desktop/aa367157) atrybutu MIDL, aby uzyskać więcej informacji.  
+*ograniczone* (opcjonalnie)  
+Elementy członkowskie biblioteki nie może być wywoływana arbitralnie. Zobacz [ograniczeniami](http://msdn.microsoft.com/library/windows/desktop/aa367157) atrybutu MIDL, aby uzyskać więcej informacji.  
   
- *niestandardowe* (opcjonalnie)  
- Co najmniej jeden atrybut; jest to podobne do [niestandardowe](../windows/custom-cpp.md) atrybutu. Pierwszy parametr *niestandardowe* jest identyfikatorem GUID atrybutu. Na przykład:  
+*niestandardowe* (opcjonalnie)  
+Co najmniej jeden atrybut; jest to podobne do [niestandardowe](../windows/custom-cpp.md) atrybutu. Pierwszy parametr *niestandardowe* jest identyfikatorem GUID atrybutu. Na przykład:  
   
 ```  
 [module(custom={guid,1}, custom={guid1,2})]  
 ```  
   
- *resource_name*  
- Identyfikator ciągu zasobu w pliku .rgs używane do rejestrowania Identyfikatora aplikacji, które biblioteki dll, pliku wykonywalnego lub usługi. Gdy moduł jest typu "Usługa", ten argument jest również używany do uzyskania Identyfikatora ciągu zawierającego nazwę usługi.  
+*resource_name*  
+Identyfikator ciągu zasobu w pliku .rgs używane do rejestrowania Identyfikatora aplikacji, które biblioteki dll, pliku wykonywalnego lub usługi. Gdy moduł jest typu "Usługa", ten argument jest również używany do uzyskania Identyfikatora ciągu zawierającego nazwę usługi.  
   
 > [!NOTE]
 >  Ciąg zawierający nazwę usługi i pliku .rgs powinien zawierać taką samą wartość liczbową.  

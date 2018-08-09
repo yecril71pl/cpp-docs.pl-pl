@@ -19,12 +19,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 0915f6f506b942a7ee52eec637c9ea6631339e79
-ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
+ms.openlocfilehash: 4f3f01ab95237a0401394d429443804ce65a4385
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39643286"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40017331"
 ---
 # <a name="walkthrough-creating-a-standard-c-program-c"></a>Wskazówki: Tworzenie standardowego programu C++ (C++)
 Aby tworzyć programy standardowego C++, można użyć Visual C++ w programie Visual Studio zintegrowane środowisko programistyczne (IDE). Wykonując kroki opisane w tym instruktażu, można utworzyć projekt, Dodaj nowy plik do projektu, zmodyfikuj plik, aby dodać kod języka C++, a następnie skompilować i uruchomić program za pomocą [!INCLUDE[vsprvs](../assembler/masm/includes/vsprvs_md.md)].  
@@ -59,7 +59,7 @@ Aby tworzyć programy standardowego C++, można użyć Visual C++ w programie Vi
   
     2.  W **kodu** węzła, kliknij przycisk **plik C++ (.cpp)**, wpisz nazwę pliku, a następnie kliknij **Dodaj**.  
   
-     Plik CPP pojawia się w folderze plików źródłowych w **Solution Explorer**, a plik jest otwarty w edytorze programu Visual Studio.  
+     Plik CPP pojawia się w **pliki źródłowe** folderu w **Solution Explorer**, a plik jest otwarty w edytorze programu Visual Studio.  
   
 6.  W pliku w edytorze wpisz prawidłowy program w języku C++, który używa standardowej biblioteki C++ lub skopiuj jeden z przykładowych programów i wklej go w pliku.  
   

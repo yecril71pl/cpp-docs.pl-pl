@@ -21,18 +21,18 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 14cad19c53e8cd741bf16bab49420169e93f6af6
-ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
+ms.openlocfilehash: b990046e4f43e70218fc1a7f6eb885638c2051bf
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/07/2018
-ms.locfileid: "39606975"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40015946"
 ---
 # <a name="saving-and-loading-different-color-palettes-image-editor-for-icons"></a>Zapisywanie i ładowanie różnych palet kolorów (Edytor obrazów dla ikon)
-Można zapisać i załadować paleta kolorów, która zawiera [dostosować kolory](../windows/customizing-or-changing-colors-image-editor-for-icons.md). (Domyślnie paleta kolorów, ostatnio używane jest automatycznie ładowany podczas uruchamiania programu Visual Studio.)  
+Można zapisać i załadować **kolory** palety, który zawiera [dostosować kolory](../windows/customizing-or-changing-colors-image-editor-for-icons.md). (Domyślnie **kolory** palety ostatnio używane jest automatycznie ładowany podczas uruchamiania programu Visual Studio.)  
   
 > [!TIP]
->  Ponieważ edytora obrazów nie oznacza, że można przywrócić domyślną paletę kolorów, należy zapisać paleta kolorów domyślne w obszarze nazwy, takie jak standard.pal lub default.pal tak, aby można je łatwo przywrócić ustawienia domyślne.  
+>  Ponieważ **obraz** edytor nie ma żadnych środków, aby przywrócić domyślne **kolory** palety, należy zapisać domyślne **kolory** palety w obszarze nazwy, takie jak  *Standard.PAL* lub *default.pal* tak, aby można je łatwo przywrócić ustawienia domyślne.  
   
 ### <a name="to-save-a-custom-colors-palette"></a>Aby zapisać palety kolorów niestandardowych  
   
@@ -46,10 +46,9 @@ Można zapisać i załadować paleta kolorów, która zawiera [dostosować kolor
   
 1.  Z **obraz** menu, wybierz **Załaduj paletę**.  
   
-2.  W [Załaduj paletę kolorów, okno dialogowe](../windows/load-palette-colors-dialog-box-image-editor-for-icons.md), przejdź do katalogu poprawny i wybierz paletę chcesz załadować. Palety kolorów są zapisywane z rozszerzeniem pliku .pal.  
+2.  W [Załaduj paletę kolorów, okno dialogowe](../windows/load-palette-colors-dialog-box-image-editor-for-icons.md), przejdź do katalogu poprawny i wybierz paletę chcesz załadować. **Kolor** palet są zapisywane wraz z rozszerzeniem pliku .pal.  
   
 ## <a name="requirements"></a>Wymagania  
-  
  Brak  
   
 ## <a name="see-also"></a>Zobacz też  

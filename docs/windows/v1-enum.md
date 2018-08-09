@@ -17,19 +17,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 15e51719e1daecc440dc5945a54443e4bc5079ec
-ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
+ms.openlocfilehash: b057ef891a00829fd64d967ffa860a66d6d49d5d
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39644368"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40012345"
 ---
 # <a name="v1enum"></a>v1_enum
 Określa, że przekazywane określonego typu wyliczenia jako jednostki 32-bitowych, a nie domyślnej 16-bitowych.  
   
 ## <a name="syntax"></a>Składnia  
   
-```  
+```cpp  
 [v1_enum]  
 ```  
   

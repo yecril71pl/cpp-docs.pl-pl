@@ -21,12 +21,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 30656ca7271b91adf50fed5bbc4f8dfd3c6c6acb
-ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
+ms.openlocfilehash: 8d4573dfddd8287bb52f919f5fbceb0485b0911d
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/07/2018
-ms.locfileid: "39608816"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40015121"
 ---
 # <a name="picking-up-a-color-from-an-image-to-use-elsewhere-image-editor-for-icons"></a>Pobieranie koloru z obrazu do użycia w innym miejscu (Edytor obrazów dla ikon)
 **Wybierz kolor**, lub kolor odbiór, narzędzie sprawia, że każdy kolor na obrazku bieżący kolor pierwszego planu lub kolorów tła, w zależności od tego, czy naciśnięciu lewego lub prawego przycisku myszy. Aby anulować **wybierz kolor** narzędzia, wybranie innego narzędzia.  
@@ -41,14 +41,13 @@ ms.locfileid: "39608816"
 2.  Wybierz kolor, który chcesz wczytać z obrazu.  
   
     > [!NOTE]
-    >  Po pobraniu kolor edytora obrazów spowoduje ponowne uaktywnienie ostatnio używanych narzędzi.  
+    >  Po pobraniu kolor, **obraz** narzędzie uaktywnia ponownie ostatnio używane edytora.  
   
 3.  Rysowanie za pomocą lewego przycisku myszy kolor pierwszego planu lub prawego przycisku myszy kolor tła.  
   
  Aby uzyskać informacje na temat dodawania zasobów do projektów zarządzanych, zobacz [zasoby w aplikacjach pulpitu](/dotnet/framework/resources/index) w *przewodniku dewelopera .NET Framework*. Aby uzyskać informacji na temat ręcznego dodawania plików zasobów do projektów zarządzanych, uzyskiwania dostępu do zasobów, wyświetlania statycznych zasobów i przypisywania ciągów zasobów do właściwości, zobacz [Creating Resource Files dla aplikacji klasycznych](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Aby uzyskać informacji na temat globalizacja i lokalizacja zasobów w aplikacjach zarządzanych, zobacz [Globalizing i lokalizowanie aplikacji programu .NET Framework](/dotnet/standard/globalization-localization/index).  
   
 ## <a name="requirements"></a>Wymagania  
-  
  Brak  
   
 ## <a name="see-also"></a>Zobacz też  

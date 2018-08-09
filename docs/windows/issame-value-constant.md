@@ -17,20 +17,20 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: e9d1ae2b4ea4ad4769a770d503ff8bd82c91a53a
-ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
+ms.openlocfilehash: c16d16fe1965e5e3c6fa69a78dabf9be615daee1
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/07/2018
-ms.locfileid: "39608790"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40013229"
 ---
 # <a name="issamevalue-constant"></a>IsSame::value — Stała
 Obsługuje infrastrukturę biblioteki WRL i nie jest przeznaczona do użycia bezpośrednio w kodzie.  
   
 ## <a name="syntax"></a>Składnia  
   
-```  
-  template <typename T1, typename T2>  
+```cpp  
+template <typename T1, typename T2>  
 struct IsSame  
 {  
     static const bool value = false;  
@@ -46,7 +46,7 @@ struct IsSame<T1, T1>
 ## <a name="remarks"></a>Uwagi  
  Wskazuje, czy jeden typ jest taki sam jak inny.  
   
- `value` jest **true** Jeśli parametry szablonu są takie same, i **false** Jeśli parametry szablonu są różne.  
+ **wartość** jest **true** Jeśli parametry szablonu są takie same, i **false** Jeśli parametry szablonu są różne.  
   
 ## <a name="requirements"></a>Wymagania  
  **Nagłówek:** internal.h  

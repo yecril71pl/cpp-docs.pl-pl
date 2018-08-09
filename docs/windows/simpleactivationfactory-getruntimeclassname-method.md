@@ -15,12 +15,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 1c6c6731c4c7787f3d81a4e67eac2861a46bfe1a
-ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
+ms.openlocfilehash: 9c8bc1962e946a48b6ebebaf072e4cb32559a6de
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39644411"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40014711"
 ---
 # <a name="simpleactivationfactorygetruntimeclassname-method"></a>SimpleActivationFactory::GetRuntimeClassName — Metoda
 
@@ -35,7 +35,6 @@ STDMETHOD( GetRuntimeClassName )(
 ```
 
 ### <a name="parameters"></a>Parametry
-
 *runtimeName*  
 Po zakończeniu tej operacji, nazwa klasy środowiska uruchomieniowego.
 
@@ -45,7 +44,7 @@ S_OK w przypadku powodzenia; w przeciwnym razie wartość HRESULT, która wskazu
 
 ## <a name="remarks"></a>Uwagi
 
-Jeśli &#95; &#95;WRL_STRICT&#95; &#95; jest zdefiniowany, błąd potwierdzenia jest emitowane, jeśli klasa określona przez `Base` parametru szablonu klasy nie jest pochodną [RuntimeClass](../windows/runtimeclass-class.md), lub nie jest skonfigurowany z WinRt lub WinRtClassicComMix [RuntimeClassType](../windows/runtimeclasstype-enumeration.md) wartość wyliczenia.
+Jeśli `__WRL_STRICT__` jest zdefiniowany, błąd potwierdzenia jest emitowane, jeśli klasa określona przez `Base` parametru szablonu klasy nie jest pochodną [RuntimeClass](../windows/runtimeclass-class.md), lub nie jest skonfigurowany z WinRt lub WinRtClassicComMix [RuntimeClassType](../windows/runtimeclasstype-enumeration.md) wartość wyliczenia.
 
 ## <a name="requirements"></a>Wymagania
 

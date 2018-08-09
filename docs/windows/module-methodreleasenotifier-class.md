@@ -17,19 +17,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 4009be162423d9fe558dba04d7e88a7f539c4eaa
-ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
+ms.openlocfilehash: 80b2653128415cfd847db5b9592df116ffd0d470
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/07/2018
-ms.locfileid: "39602990"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40014315"
 ---
 # <a name="modulemethodreleasenotifier-class"></a>Module::MethodReleaseNotifier — Klasa
 Wywołuje program obsługi zdarzeń po udostępnieniu ostatni obiekt w bieżącego modułu. Program obsługi zdarzeń jest określona przez obiekt i jego elementów członkowskich wskaźnika do metody.  
   
 ## <a name="syntax"></a>Składnia  
   
-```  
+```cpp  
 template<typename T>  
 class MethodReleaseNotifier : public ReleaseNotifier;  
 ```  

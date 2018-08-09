@@ -17,19 +17,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 6797c274402578cfecb522c86745fb5b257e213d
-ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
+ms.openlocfilehash: f374c945312e41fd54b525dc0cb7cd84ce84985d
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/07/2018
-ms.locfileid: "39608861"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40018897"
 ---
 # <a name="implementsfillarraywithiid-method"></a>Implements::FillArrayWithIid — Metoda
 Wstawia identyfikator interfejsu określonego przez bieżący parametr szablonu zerowego do elementu określonej tablicy.  
   
 ## <a name="syntax"></a>Składnia  
   
-```  
+```cpp  
 __forceinline static void FillArrayWithIid(  
    unsigned long &index,  
    _In_ IID* iids  

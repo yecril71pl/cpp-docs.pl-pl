@@ -16,15 +16,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 88d3573c4dce5c2aba85d9482b12bd62ba9fa1ad
-ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
+ms.openlocfilehash: aa8777689581a3ba014d2fa777f6695ca3220db1
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39569950"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40014354"
 ---
 # <a name="how-to-open-a-manifest-resource"></a>Porady: otwarcie zasobu manifestu
-Jeśli otwarcie zasobu manifestu z [widok zasobów](../windows/resource-view-window.md), zasób zostanie otwarty w formacie binarnym. Aby wyświetlić zawartość zasobu manifestu w postaci bardziej widoczne, należy otworzyć zasób z Eksploratora rozwiązań.  
+Jeśli otwarcie zasobu manifestu z [widok zasobów](../windows/resource-view-window.md), zasób zostanie otwarty w formacie binarnym. Aby wyświetlić zawartość zasobu manifestu w postaci bardziej widoczne, należy otworzyć zasób z **Eksploratora rozwiązań**.  
   
 ### <a name="to-open-a-manifest-resource-in-the-text-editor"></a>Aby otworzyć zasobu manifestu w edytorze tekstu  
   
@@ -32,7 +32,7 @@ Jeśli otwarcie zasobu manifestu z [widok zasobów](../windows/resource-view-win
   
 2.  Kliknij dwukrotnie plik .manifest.  
   
-     Zasobu manifestu zostanie otwarty w edytorze tekstu.  
+     Zasobu manifestu zostanie otwarty w **edytora tekstów**.  
   
 ### <a name="to-open-a-manifest-resource-in-another-editor"></a>Aby otworzyć zasobu manifestu w innym edytorze  
   
@@ -43,7 +43,6 @@ Jeśli otwarcie zasobu manifestu z [widok zasobów](../windows/resource-view-win
  Aby uzyskać informacje na temat dodawania zasobów do projektów zarządzanych, zobacz [zasoby w aplikacjach pulpitu](/dotnet/framework/resources/index) w *przewodniku dewelopera .NET Framework*.  
   
 ## <a name="requirements"></a>Wymagania  
-  
  Win32  
   
 ## <a name="see-also"></a>Zobacz też  

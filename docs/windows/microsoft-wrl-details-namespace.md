@@ -13,19 +13,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 49256b556eddb1feadbfd01b298aba62ad1a51ee
-ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
+ms.openlocfilehash: 9effc65b150c68a5191712b364c80ad42dd276ad
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/07/2018
-ms.locfileid: "39604229"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40012131"
 ---
 # <a name="microsoftwrldetails-namespace"></a>Microsoft::WRL::Details — Przestrzeń nazw
 Obsługuje infrastrukturę biblioteki WRL i nie jest przeznaczona do użycia bezpośrednio w kodzie.  
   
 ## <a name="syntax"></a>Składnia  
   
-```  
+```cpp  
 namespace Microsoft::WRL::Details;  
 ```  
   
@@ -50,7 +50,7 @@ namespace Microsoft::WRL::Details;
 |----------|-----------------|  
 |[ArgTraits, struktura](../windows/argtraits-structure.md)|Deklaruje określonego delegata interfejsu i funkcji anonimowej składowej, która ma określoną liczbę parametrów.|  
 |[ArgTraitsHelper, struktura](../windows/argtraitshelper-structure.md)|Pomaga zdefiniować typowe cechy argumenty delegata.|  
-|[BoolStruct, struktura](../windows/boolstruct-structure.md)|Określa, czy comptr — Zarządzanie okresem istnienia interfejsu. Boolstruct — jest używana wewnętrznie przez [BoolType()](../windows/comptr-operator-microsoft-wrl-details-booltype-operator.md) operatora.|  
+|[BoolStruct, struktura](../windows/boolstruct-structure.md)|Określa, czy `ComPtr` Zarządzanie okresem istnienia interfejsu. `BoolStruct` jest używana wewnętrznie przez [BoolType()](../windows/comptr-operator-microsoft-wrl-details-booltype-operator.md) operatora.|  
 |[CreatorMap, struktura](../windows/creatormap-structure.md)|Zawiera informacje o sposobie inicjowania, rejestrować i wyrejestrowywać obiektów.|  
 |[DerefHelper, struktura](../windows/derefhelper-structure.md)|Reprezentuje wskaźnik wyłuskiwany `T*` parametru szablonu.|  
 |[EnableIf, struktura](../windows/enableif-structure.md)|Definiuje element członkowski danych o typie określonym przez drugi parametr szablonu, jeśli pierwszy parametr szablonu, które daje w wyniku **true**.|  

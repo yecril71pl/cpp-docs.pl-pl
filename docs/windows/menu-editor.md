@@ -20,17 +20,17 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 6aae190e20776c252b7f40651d5c0bdb13111dab
-ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
+ms.openlocfilehash: 21e6d35a555ecff327bcd4b68318c17da194cb41
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/07/2018
-ms.locfileid: "39606253"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40018338"
 ---
 # <a name="menu-editor"></a>Edytor menu
-Menu umożliwiają organizuje polecenia w sposób logiczny i łatwe do znalezienia. Za pomocą edytora Menu możesz można tworzyć i edytować menu pracując bezpośrednio z paska menu, który jest bardzo podobny do pokazanego na gotowych aplikacji.  
+Menu umożliwiają organizuje polecenia w sposób logiczny i łatwe do znalezienia. Za pomocą **Menu** edytora, można tworzyć i edytować menu, pracując bezpośrednio z paska menu, który jest bardzo podobny do pokazanego na gotowych aplikacji.  
   
-Dla projektów Visual C++ można używać w edytorze Menu:  
+W przypadku projektów Visual C++, można użyć **Menu** edytora, aby:  
   
 -   [Tworzenie menu](../windows/creating-a-menu.md)  
   
@@ -59,10 +59,10 @@ Dla projektów Visual C++ można używać w edytorze Menu:
 -   [Zmień właściwości poleceń Menu](../windows/menu-command-properties.md)  
   
     > [!TIP]
-    >  Podczas korzystania z edytora Menu, w wielu przypadkach, możesz kliknąć prawym przyciskiem myszy, aby wyświetlić menu rozwijane z najczęściej używanymi poleceniami. Dostępne polecenia zależą od tego, wskaźnik wskazuje na.  
+    >  Podczas korzystania z **Menu** edytora w wielu przypadkach, kliknięcie prawym przyciskiem myszy, aby wyświetlić menu rozwijane z najczęściej używanymi poleceniami. Dostępne polecenia zależą od tego, wskaźnik wskazuje na.  
   
     > [!NOTE]
-    >  Dla programów Microsoft Foundation Class Library (MFC) oraz programów ATL można użyć kreatorów kodu, można dołączyć poleceń menu do kodu. Aby uzyskać więcej informacji, zobacz [Dodawanie zdarzenia](../ide/adding-an-event-visual-cpp.md).  
+    >  Programy Microsoft Foundation Class Library (MFC) i biblioteki ATL, można użyć **kreatorów kodu** można dołączyć poleceń menu do kodu. Aby uzyskać więcej informacji, zobacz [Dodawanie zdarzenia](../ide/adding-an-event-visual-cpp.md).  
   
  Aby uzyskać informacje na temat dodawania zasobów do projektów zarządzanych, zobacz [zasoby w aplikacjach pulpitu](/dotnet/framework/resources/index) w *przewodniku dewelopera .NET Framework*. Aby uzyskać informacji na temat ręcznego dodawania plików zasobów do projektów zarządzanych, uzyskiwania dostępu do zasobów, wyświetlania statycznych zasobów i przypisywania ciągów zasobów do właściwości, zobacz [Creating Resource Files dla aplikacji klasycznych](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Aby uzyskać informacji na temat globalizacja i lokalizacja zasobów w aplikacjach zarządzanych, zobacz [Globalizing i lokalizowanie aplikacji programu .NET Framework](/dotnet/standard/globalization-localization/index).  
   

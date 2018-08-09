@@ -17,22 +17,23 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: ff08e42ac1afe3954b485e11ed6433449a6ee2ff
-ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
+ms.openlocfilehash: b44156ae26d77247a909e45061b00a6a1d892d79
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39571473"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40016931"
 ---
 # <a name="how-to-create-a-resource"></a>Porady: tworzenie zasobu
 > [!NOTE]
->  Widok zasobów nie jest obsługiwany w wersjach Express.  
+>  **Widok zasobów** nie jest obsługiwana w wersji Express.  
   
 ### <a name="to-create-a-new-resource-in-resource-view"></a>Aby utworzyć nowy zasób w widoku zasobu  
   
-1.  Fokus jest ustawiony w pliku .rc w [widok zasobów](../windows/resource-view-window.md), kliknij przycisk **Edytuj** menu i wybrać **Dodaj zasób** (lub kliknij prawym przyciskiem myszy plik .rc w widoku zasobu i wybierz pozycję  **Dodaj zasób** z menu skrótów).  
+1.  Fokus jest ustawiony w pliku .rc w [widok zasobów](../windows/resource-view-window.md), kliknij przycisk **Edytuj** menu i wybierz polecenie **Dodaj zasób** (lub kliknij prawym przyciskiem myszy plik .rc w **widok zasobów** i wybierz polecenie **Dodaj zasób** z menu skrótów).  
   
-     **Uwaga** Jeśli projekt nie zawiera jeszcze pliku .rc, zobacz [tworzenia nowego pliku skryptu zasobów](../windows/how-to-create-a-resource-script-file.md).  
+     > [!NOTE] 
+     > Jeśli projekt nie zawiera jeszcze pliku .rc, zobacz [tworzenia nowego pliku skryptu zasobów](../windows/how-to-create-a-resource-script-file.md).  
   
 2.  W [Dodaj zasób — okno dialogowe](../windows/add-resource-dialog-box.md), wybierz typ zasobu, które chcesz dodać do projektu.  
   
@@ -54,16 +55,14 @@ ms.locfileid: "39571473"
   
 1.  Z **projektu** menu, wybierz **Dodaj zasób**.  
   
- Podczas tworzenia nowego zasobu Visual C++ przypisze unikatową nazwę do niego, na przykład IDD_Dialog1. Tego Identyfikatora zasobu można dostosować, edytując właściwości zasobu w edytorze skojarzonego zasobu lub w [okno właściwości](/visualstudio/ide/reference/properties-window).  
+ Podczas tworzenia nowego zasobu, Visual C++ przypisze unikatową nazwę, na przykład `IDD_Dialog1`. Tego Identyfikatora zasobu można dostosować, edytując właściwości zasobu w edytorze skojarzonego zasobu lub w [okno właściwości](/visualstudio/ide/reference/properties-window).  
   
  Można utworzyć zasobu jako nowego zasobu domyślnego (zasób, który nie jest oparty na szablonie) lub jako zasób deseniem po [szablonu](../windows/how-to-use-resource-templates.md).  
   
- Aby uzyskać informacje na temat dodawania zasobów do projektów zarządzanych, zobacz [zasoby w aplikacjach pulpitu](/dotnet/framework/resources/index) w *przewodniku dewelopera .NET Framework.*
+ Aby uzyskać informacje na temat dodawania zasobów do projektów zarządzanych, zobacz [zasoby w aplikacjach pulpitu](/dotnet/framework/resources/index) w *przewodniku dewelopera .NET Framework*.
 
-
-## <a name="requirements"></a>Wymagania  
-  
-Win32  
+## <a name="requirements"></a>Wymagania    
+ Win32  
   
 ## <a name="see-also"></a>Zobacz też  
  [Pliki zasobów](../windows/resource-files-visual-studio.md)   

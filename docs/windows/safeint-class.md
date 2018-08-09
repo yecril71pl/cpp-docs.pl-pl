@@ -17,19 +17,19 @@ ms.author: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: c1e4ac8898b48c4b64d0b12b945ab45b1c5f1436
-ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
+ms.openlocfilehash: a575538d2527aba25d62dff1a8ba4d89402f5cfb
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/07/2018
-ms.locfileid: "39606159"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40019335"
 ---
 # <a name="safeint-class"></a>SafeInt — Klasa
 Umożliwia porównanie różnych typów całkowitych i rozszerza prymitywów liczby całkowitej w celu uniknięcia przepełnienia liczby całkowitej.  
   
 ## <a name="syntax"></a>Składnia  
   
-```  
+```cpp  
 template<typename T, typename E = _SAFEINT_DEFAULT_ERROR_POLICY>  
 class SafeInt;  
 ```  
@@ -193,19 +193,19 @@ class SafeInt;
   
  Należy zachować ostrożność, korzystając z **SafeInt** klasy wraz z `?:` operator trójargumentowy. Należy wziąć pod uwagę następujący wiersz kodu.  
   
-```  
+```cpp  
 Int x = flag ? SafeInt<unsigned int>(y) : -1;  
 ```  
   
  Kompilator konwertuje go do poniższego:  
   
-```  
+```cpp  
 Int x = flag ? SafeInt<unsigned int>(y) : SafeInt<unsigned int>(-1);  
 ```  
   
  Jeśli `flag` jest **false**, kompilator generuje wyjątek zamiast przypisywać wartość -1 do `x`. W związku z tym aby uniknąć tego zachowania, poprawny kod używany jest następujący wiersz.  
   
-```  
+```cpp  
 Int x = flag ? (int) SafeInt<unsigned int>(y) : -1;  
 ```  
   

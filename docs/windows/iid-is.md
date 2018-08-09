@@ -17,25 +17,25 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 0f0dd12df088d8fc55cc4f1a8eaf71bcbb7d4e93
-ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
+ms.openlocfilehash: 508f83b1dde590a4a8a04980895ef247f2a16123
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/07/2018
-ms.locfileid: "39603293"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40014991"
 ---
 # <a name="iidis"></a>iid_is
 Określa identyfikator IID interfejsu COM, wskazywana przez wskaźnik interfejsu.  
   
 ## <a name="syntax"></a>Składnia  
   
-```  
+```cpp  
 [ iid_is(  
    "expression"  
 ) ]  
 ```  
   
-#### <a name="parameters"></a>Parametry  
+### <a name="parameters"></a>Parametry  
  *Wyrażenie*  
  Wyrażenie języka C, który określa IID interfejsu COM, wskazywana przez wskaźnik interfejsu.  
   

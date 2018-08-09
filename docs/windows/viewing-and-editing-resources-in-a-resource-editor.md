@@ -24,15 +24,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 97816db8075d04b6d05950bb65c25aa12382b728
-ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
+ms.openlocfilehash: 5fca755c46d3fc5628adc2c724b9307a346d1fe7
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39646933"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40014006"
 ---
 # <a name="viewing-and-editing-resources-in-a-resource-editor"></a>Wyświetlanie i edytowanie zasobów w edytorze zasobów
-Każdy typ zasobu ma edytorze zasobów specyficznych dla typu zasobu. Można zmienić kolejność, zmiany rozmiaru, dodawać formanty i funkcje lub inny sposób modyfikować aspektów zasobu za pomocą edytora skojarzone. Można również edytować zasobu w [format tekstu](../windows/how-to-open-a-resource-script-file-in-text-format.md) i [format binarny](../windows/opening-a-resource-for-binary-editing.md).  
+Każdy typ zasobu ma **zasobów** edytora specyficznych dla typu zasobu. Można zmienić kolejność, zmiany rozmiaru, dodawać formanty i funkcje lub inny sposób modyfikować aspektów zasobu za pomocą edytora skojarzone. Można również edytować zasobu w [format tekstu](../windows/how-to-open-a-resource-script-file-in-text-format.md) i [format binarny](../windows/opening-a-resource-for-binary-editing.md).  
   
  Niektóre typy zasobów są pojedyncze pliki, które mogą być importowane i używane na różne sposoby; obejmują one map bitowych, ikon, kursorów, paski narzędzi i pliki html. Takie zasoby mają nazwy plików także [identyfikatory zasobów](../windows/symbols-resource-identifiers.md). Inne, takie jak okna dialogowe, menu i tabele ciągów w projektach systemu Win32, istnieje tylko jako część pliku skryptu (.rc) zasobów lub zasobu, plik szablonu (.rct).  
   
@@ -46,16 +46,16 @@ Każdy typ zasobu ma edytorze zasobów specyficznych dla typu zasobu. Można zmi
   
 1.  Wybierz **widok zasobów** z **widoku** menu.  
   
-2.  Jeśli okno Widok zasobów nie jest okna najbardziej na wierzchu, kliknij przycisk **widok zasobów** kartę, aby przełączyć go do góry.  
+2.  Jeśli **widok zasobów** okno nie jest umieszczony najwyżej okna, kliknij przycisk **widok zasobów** kartę, aby przełączyć go do góry.  
   
-3.  Przy pomocy widoku zasobów rozwiń folder dla projektu, który zawiera zasoby, które chcesz wyświetlić. Na przykład jeśli chcesz wyświetlić zasobu okna dialogowego, rozwiń Dialog folder.  
+3.  Z **widok zasobów**, rozwiń folder dla projektu, który zawiera zasoby, które chcesz wyświetlić. Na przykład, jeśli chcesz wyświetlić zasobu okna dialogowego, rozwiń **okna dialogowego** folderu.  
   
     > [!NOTE]
     >  Jeśli projekt nie zawiera jeszcze pliku .rc, zobacz [tworzenia nowego pliku skryptu zasobów](../windows/how-to-create-a-resource-script-file.md).  
   
-4.  Kliknij dwukrotnie zasób, na przykład IDD_ABOUTBOX.  
+4.  Kliknij dwukrotnie zasób, na przykład **IDD_ABOUTBOX**.  
   
-     Zasób zostanie otwarty w edytorze odpowiednie. Na przykład zasobów okna dialogowego zasobu zostanie otwarty w edytorze okien dialogowych.  
+     Zasób zostanie otwarty w edytorze odpowiednie. Na przykład dla zasobów okna dialogowego, zasobu otwiera wewnątrz **okna dialogowego** edytora.  
   
      Możesz również [wyświetlania zasobów w pliku .rc (skrypt zasobu) bez konieczności otwierania projektu](../windows/how-to-open-a-resource-script-file-outside-of-a-project-standalone.md).  
   
@@ -75,7 +75,7 @@ Każdy typ zasobu ma edytorze zasobów specyficznych dla typu zasobu. Można zmi
   
 ### <a name="to-view-a-managed-resource-in-a-resource-editor"></a>Aby wyświetlić zasobów zarządzanych w edytorze zasobów  
   
-1.  W **Eksploratora rozwiązań**, kliknij dwukrotnie zasób, na przykład Bitmap1.bmp.  
+1.  W **Eksploratora rozwiązań**, kliknij dwukrotnie zasób, na przykład **Bitmap1.bmp**.  
   
      Zasób zostanie otwarty w edytorze odpowiednie.  
   
@@ -83,7 +83,7 @@ Każdy typ zasobu ma edytorze zasobów specyficznych dla typu zasobu. Można zmi
   
 1.  W **Eksploratora rozwiązań**, kliknij prawym przyciskiem myszy zasób, o których chcesz usunąć, a następnie wybierz **Usuń** z menu skrótów.  
   
-### <a name="requirements"></a>Wymagania  
+## <a name="requirements"></a>Wymagania  
  Brak  
   
 ## <a name="see-also"></a>Zobacz też  

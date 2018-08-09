@@ -1,5 +1,5 @@
 ---
-title: 'Module::ReleaseNotifier:: Invoke — metoda | Dokumentacja firmy Microsoft'
+title: 'Module::ReleaseNotifier:: Invoke, metoda | Dokumentacja firmy Microsoft'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,26 +17,26 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 6eb51d59d2f7f1adc934332cbfa5fead56bbef0a
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 48e488188ed040d29ef70f273991d1df9cf1d63e
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33876205"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40014611"
 ---
 # <a name="modulereleasenotifierinvoke-method"></a>Module::ReleaseNotifier::Invoke — Metoda
-Po zaimplementowaniu, wywołuje program obsługi zdarzeń po zwolnieniu ostatni obiekt w module.  
+Po wdrożeniu, wywołuje program obsługi zdarzeń po udostępnieniu ostatni obiekt w module.  
   
 ## <a name="syntax"></a>Składnia  
   
-```  
+```cpp  
 virtual void Invoke() = 0;  
 ```  
   
 ## <a name="requirements"></a>Wymagania  
  **Nagłówek:** module.h  
   
- **Namespace:** Microsoft::wrl —  
+ **Namespace:** Microsoft::WRL  
   
 ## <a name="see-also"></a>Zobacz też  
  [Module::ReleaseNotifier, klasa](../windows/module-releasenotifier-class.md)

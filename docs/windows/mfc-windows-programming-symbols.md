@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 1c4091853274d04d27eb060655650a071ea64d4c
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 7f91622e4d795b7c85cdf6f304ed6a76dd5a9364
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33882696"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40012784"
 ---
 # <a name="mfc-windows-programming-symbols"></a>Symbole programowania Windows MFC
-Te symbole należą również pliki obsługi MFC, ale obsługuje standardowe funkcje aplikacji systemu Windows i działań. Symbole są używane głównie z menu. Podczas pracy z menu w edytorze Menu symbole będą wyświetlane w oknie właściwości skojarzone z typowych poleceń menu. Na przykład, jeśli aplikacja ma menu plik przy użyciu polecenia Exit, tego polecenia zostanie skojarzona z id_app_exit — symbol w [okna właściwości](/visualstudio/ide/reference/properties-window).  
+Te symbole należą również pliki obsługi MFC, ale obsługują standardowe funkcje aplikacji Windows i akcje. Te symbole są głównie używane z menu. Podczas pracy z menu w **Edytor Menu**, te symbole pojawią się w **okno właściwości** skojarzone z typowych poleceń menu. Na przykład jeśli aplikacja ma **pliku** menu z **zakończenia** polecenia, polecenie będzie skojarzona z symbolem id_app_exit — w [okno właściwości](/visualstudio/ide/reference/properties-window).  
   
 ||||  
 |-|-|-|  
@@ -42,7 +42,7 @@ Te symbole należą również pliki obsługi MFC, ale obsługuje standardowe fun
 |ID_FILE_MRU_FILE5|ID_FILE_MRU_FILE6|ID_FILE_MRU_FILE7|  
 |ID_FILE_MRU_FILE8|ID_FILE_MRU_FILE9|ID_FILE_MRU_FIRST|  
 |ID_FILE_MRU_LAST|ID_FILE_NEW —|ID_FILE_NEW_FRAME|  
-|ID_FILE_OPEN —|ID_FILE_PAGE_SETUP —|ID_FILE_PRINT —|  
+|ID_FILE_OPEN —|ID_FILE_PAGE_SETUP —|ID_FILE_PRINT|  
 |ID_FILE_PRINT_DIRECT|ID_FILE_PRINT_PREVIEW —|ID_FILE_PRINT_SETUP —|  
 |ID_FILE_SAVE —|ID_FILE_SAVE_AS —|ID_FILE_SAVE_COPY_AS —|  
 |ID_FILE_SEND_MAIL|ID_FILE_UPDATE —|ID_FORMAT_FONT|  
@@ -62,7 +62,7 @@ Te symbole należą również pliki obsługi MFC, ale obsługuje standardowe fun
 |ID_WINDOW_TILE_VERT —|ID_WIZBACK|ID_WIZFINISH|  
 |ID_WIZNEXT|IDABORT|IDC_STATIC|  
 |IDCANCEL|IDD_ABOUTBOX|IDIGNORE|  
-|IDNO|IDOK|IDP_OLE_INIT_FAILED —|  
+|IDNO|IDOK|IDP_OLE_INIT_FAILED|  
 |IDRETRY|IDYES||  
   
 ## <a name="requirements"></a>Wymagania  

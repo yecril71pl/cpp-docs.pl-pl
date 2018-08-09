@@ -17,19 +17,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 6bcbb520ba92bdf15245b2401c74c3b271111034
-ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
+ms.openlocfilehash: c953efc6e9f4b3904404ae362b6beca7f88192d2
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39645727"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40018272"
 ---
 # <a name="semaphoretraits-structure"></a>SemaphoreTraits — Struktura
 Definiuje typowe cechy **semafora** obiektu.  
   
 ## <a name="syntax"></a>Składnia  
   
-```  
+```cpp  
 struct SemaphoreTraits : HANDLENullTraits;  
 ```  
   

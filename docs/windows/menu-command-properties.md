@@ -15,32 +15,30 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 343c1ce255a26753c2b125d2a0a53e04808a0233
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 665bc76998750f32e7de03e2fdd75fcec835774c
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33878866"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40014529"
 ---
 # <a name="menu-command-properties"></a>Właściwości poleceń menu
-Poniższe informacje są zorganizowane według właściwości Menu, które są widoczne w [okna właściwości](/visualstudio/ide/reference/properties-window) po wybraniu polecenia menu. Wyliczono alfabetycznie okna właściwości umożliwia również wyświetlić te właściwości według kategorii.  
+Poniższe informacje są organizowane według **Menu** właściwości, które pojawiają się w [okno właściwości](/visualstudio/ide/reference/properties-window) po wybraniu polecenia menu. Te są wymieniane alfabetycznie mimo że **właściwości** okno umożliwia również wyświetlanie tych właściwości według kategorii.  
   
 |Właściwość|Opis|  
 |--------------|-----------------|  
-|**Podziel**|Może być jedną z następujących wartości:<br /><br /> -   **Brak** (domyślna): bez przerwy.<br />-   **Kolumna**: menu statyczne, ta wartość umieszcza polecenie w nowym wierszu. Menu wyskakujące ta wartość umieszcza polecenia menu w nową kolumnę z Brak linii podziału między kolumnami. Ustawienie tej właściwości określa wygląd menu tylko w czasie wykonywania, nie w edytorze menu.<br />-   **Pasek**: taki sam jak kolumna z wyjątkiem menu podręczne, nowej kolumny, która oddziela tej wartości od starego kolumna z linią pionową. Ustawienie tej właściwości określa wygląd menu tylko w czasie wykonywania, nie w edytorze Menu.|  
-|**Podpis**|Tekst etykiety menu polecenie (Nazwa menu). Aby jedną z liter w podpisie menu polecenie klawisz skrótu, należy poprzedzić handlowego "i" (&).|  
-|**Zaznaczone**|Jeśli PRAWDA, to polecenie jest domyślnie zaznaczone. Typ: wartość logiczna. Domyślnie: False.|  
-|**włączone**|Jeśli **False**, element menu jest wyłączony.|  
-|**Wyszarzony**|Jeśli PRAWDA, polecenia menu jest początkowo wygaszone i nieaktywne. Typ: wartość logiczna. Domyślnie: False.|  
-|**Pomoc**|Wyrównuje element menu z prawej strony. Na przykład **pomocy** polecenie jest zawsze po prawej stronie we wszystkich aplikacjach systemu Windows. Jeśli ta właściwość jest ustawiona na element menu, element pojawi się bardzo prawej i na końcu menu. Dotyczy elementów najwyższego poziomu. Wartość domyślna: **False**.|  
-|**ID**|Symbol zdefiniowany w pliku nagłówka. Typ: Symbol, liczbą całkowitą lub ciągu w cudzysłowie. Możesz użyć dowolnego symbol, który jest powszechnie dostępna w żadnym z edytora, nawet jeśli [okna właściwości](/visualstudio/ide/reference/properties-window) nie ma do wyboru z listy rozwijanej.|  
-|**Popup**|Jeśli PRAWDA, to polecenie jest menu podręczne. Typ: wartość logiczna. Domyślnie: True dla najwyższego poziomu menu na pasku menu; w przeciwnym razie wartość False.|  
-|**wiersz**|Zawiera tekst wyświetlany na pasku stanu, jeśli polecenie zostanie wyróżniona. Tekst jest umieszczany w tabeli ciągów o tym samym identyfikatorze jak polecenie menu. Ta właściwość jest dostępna dla dowolnego typu projektu, ale funkcje czasu wykonywania jest określonych MFC.|  
-|**Wyjustuj od prawej do lewej**|Wyrównuje prawo polecenia menu na pasku menu w czasie wykonywania. Typ: wartość logiczna. Domyślnie: False.|  
-|**Od prawej do lewej kolejności**|Umożliwia polecenia menu mają być wyświetlane od prawej do lewej, gdy interfejs jest zlokalizowane dla dowolnego języka, który odczytuje prawej do lewej, takich jak hebrajski lub arabski.|  
-|**Separator**|Jeśli PRAWDA, to polecenie jest separatora. Typ: wartość logiczna. Domyślnie: False.|  
-  
-
+|**BREAK**|Może być jedną z następujących wartości:<br /><br /> -   **Brak** (opcja domyślna): bez przerwy.<br />-   **Kolumna**: statyczne menu, ta wartość umieszcza polecenie menu w nowym wierszu. Ta wartość wyskakujących menu umieszcza polecenia menu w nową kolumnę z nie jednoznaczny kolumn. Ustawienie tej właściwości ma wpływ na wygląd menu tylko w czasie wykonywania, nie Edytor menu.<br />-   **Pasek**: taki sam jak **kolumny** z wyjątkiem sytuacji, menu podręczne tę wartość oddziela nowej kolumny od starego kolumnę z pionowym wierszem. Ustawienie tej właściwości określa wygląd menu tylko w czasie wykonywania, nie w **Menu** edytora.|  
+|**Podpis**|Tekst etykiety polecenia menu (Nazwa menu). Aby utworzyć kolekcję liter w podpisie menu poleceń klawisz dostępu, należy poprzedzić handlowe "i" (&).|  
+|**Zaznaczone**|Jeśli **True**, polecenia menu jest domyślnie zaznaczone. Typ: **Bool**. Wartość domyślna: **False**.|  
+|**Włączone**|Jeśli **False**, element menu jest wyłączona.|  
+|**Wyszarzony**|Jeśli **True**, polecenia menu jest początkowo wygaszone i nieaktywnych. Typ: **Bool**. Wartość domyślna: **False**.|  
+|**Pomoc**|Wyrównuje elementu menu z prawej strony. Na przykład **pomocy** polecenia menu jest zawsze po prawej stronie we wszystkich aplikacjach Windows. Jeśli ustawisz tę właściwość, element menu, ten element pojawi się po bardzo prawej stronie i na końcu menu. Dotyczy to elementów najwyższego poziomu. Wartość domyślna: **False**.|  
+|**ID**|Symbol zdefiniowany w pliku nagłówkowym. Typ: **Symbol**, **całkowitą**, lub **ciąg w cudzysłowach**. Może używać dowolny symbol, który jest powszechnie dostępne we wszystkich edytory, nawet jeśli [okno właściwości](/visualstudio/ide/reference/properties-window) nie zawiera listy rozwijanej, wybierz z.|  
+|**Popup**|Jeśli **True**, polecenia menu jest menu podręczne. Typ: **Bool**. Wartość domyślna: **True** menu najwyższego poziomu w menu paska; w przeciwnym razie **False**.|  
+|**wiersz**|Zawiera tekst wyświetlany na pasku stanu wyróżnionego to polecenie menu. Tekst jest umieszczany w tabeli ciągów zawierających ten sam identyfikator jak polecenie menu. Ta właściwość jest dostępna dla wszystkich typów projektów, ale funkcje środowiska wykonawczego jest określone MFC.|  
+|**Wyjustuj do prawej do lewej**|Po prawej stronie uzasadnia polecenia menu na pasku menu w czasie wykonywania. Typ: **Bool**. Wartość domyślna: **False**.|  
+|**Od prawej do lewej kolejności**|Umożliwia polecenia menu wyświetlić od prawej do lewej, gdy interfejs jest zlokalizowane dla dowolnego języka, który odczytuje prawej do lewej, takich jak hebrajskiego i arabskiego.|  
+|**Separator**|Jeśli **True**, polecenia menu jest separatorem. Typ: **Bool**. Wartość domyślna: **False**.|  
   
 ## <a name="requirements"></a>Wymagania  
  Win32  

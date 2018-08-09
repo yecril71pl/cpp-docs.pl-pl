@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: cf9e5e24e77a14b3baf86c1b83d653dd833ebbbb
-ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
+ms.openlocfilehash: 307b5ffeeaa21b4cb90779a9d516229bf2ab3167
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39652073"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40019681"
 ---
 # <a name="testing-a-dialog-box"></a>Testowanie okna dialogowego
 Podczas projektowania okna dialogowego, można symulować i testować jej zachowania w czasie wykonywania bez kompilacji programu. W tym trybie możesz wykonywać następujące czynności:  
@@ -42,7 +42,7 @@ Podczas projektowania okna dialogowego, można symulować i testować jej zachow
   
 ### <a name="to-test-a-dialog-box"></a>Aby przetestować okno dialogowe  
   
-1.  Gdy Edytor okien dialogowych jest aktywnym oknem, na pasku menu wybierz pozycję **Format**, **Test dialogowy**.  
+1.  Gdy **okna dialogowego** edytora jest aktywnym oknem, na pasku menu, wybierz polecenie **Format** > **Test dialogowy**.  
   
 2.  Aby zakończyć symulację, naciśnij klawisz **Esc**, lub po prostu wybierz **Zamknij** przycisku w oknie dialogowym, które testujesz.  
   

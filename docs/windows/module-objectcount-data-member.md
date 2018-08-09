@@ -1,5 +1,5 @@
 ---
-title: Module::objectcount_ — członek danych | Dokumentacja firmy Microsoft
+title: Module::objectCount_, składowa danych | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,26 +15,26 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 4a9360a7b0ce0596e9fb1bffb71864526cf92e5c
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 9e73b11ae5a29289c44bf762082397dd4ed4f826
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33875022"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40016694"
 ---
 # <a name="moduleobjectcount-data-member"></a>Module::objectCount_ — Członek danych
-Przechowuje informacje o ile klasy zostały utworzone z [upewnij](../windows/make-function.md) funkcji.  
+Przechowuje informacje o ile klasy zostały utworzone przy użyciu [wprowadzić](../windows/make-function.md) funkcji.  
   
 ## <a name="syntax"></a>Składnia  
   
-```  
+```cpp  
 volatile long objectCount_;  
 ```  
   
 ## <a name="requirements"></a>Wymagania  
  **Nagłówek:** module.h  
   
- **Namespace:** Microsoft::wrl —
+ **Namespace:** Microsoft::WRL
  
  ## <a name="see-also"></a>Zobacz też
  [Klasa modułu](../windows/module-class.md)

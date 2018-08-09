@@ -23,19 +23,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 752989b33bd0b017233ea4a105d2ad36ca2290f4
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 3f74f8fe3e5b637869af7b03bb2eaf5e13df9550
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33875555"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40020168"
 ---
 # <a name="microsoftwrlwrappersdetails-namespace"></a>Microsoft::WRL::Wrappers::Details — Przestrzeń nazw
 Obsługuje infrastrukturę biblioteki WRL i nie jest przeznaczona do użycia bezpośrednio w kodzie.  
   
 ## <a name="syntax"></a>Składnia  
   
-```  
+```cpp  
 namespace Microsoft::WRL::Wrappers::Details;  
 ```  
   
@@ -45,14 +45,14 @@ namespace Microsoft::WRL::Wrappers::Details;
   
 |Nazwa|Opis|  
 |----------|-----------------|  
-|[SyncLockT, klasa](../windows/synclockt-class.md)|Reprezentuje typ, które może podjąć wyłącznych lub własność zasobu udostępnionego.|  
-|[SyncLockWithStatusT, klasa](../windows/synclockwithstatust-class.md)|Reprezentuje typ, które może podjąć wyłącznych lub własność zasobu udostępnionego.|  
+|[SyncLockT, klasa](../windows/synclockt-class.md)|Reprezentuje typ, który może zająć wyłączne lub współużytkować własność zasobu.|  
+|[SyncLockWithStatusT, klasa](../windows/synclockwithstatust-class.md)|Reprezentuje typ, który może zająć wyłączne lub współużytkować własność zasobu.|  
   
 ### <a name="methods"></a>Metody  
   
 |Nazwa|Opis|  
 |----------|-----------------|  
-|[CompareStringOrdinal, metoda](../windows/comparestringordinal-method.md)|Porównuje dwa określone `HSTRING` obiekty i zwraca liczbę całkowitą wskazującą ich względne położenie w kolejności sortowania.|  
+|[CompareStringOrdinal, metoda](../windows/comparestringordinal-method.md)|Porównuje dwa określone `HSTRING` obiekty i zwraca liczbę całkowitą, która wskazuje ich względne położenie w kolejności sortowania.|  
   
 ## <a name="requirements"></a>Wymagania  
  **Nagłówek:** corewrappers.h  

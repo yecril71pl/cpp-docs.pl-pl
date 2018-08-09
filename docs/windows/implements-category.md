@@ -17,19 +17,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 11fecff2336163fa4f2e773244bc1ab132a15329
-ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
+ms.openlocfilehash: 28df44096f3b61eb4ada17ec824292281edee602
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/07/2018
-ms.locfileid: "39603721"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40013717"
 ---
 # <a name="implementscategory"></a>implements_category
 Określa kategorii składników implementowane przez klasy docelowej.  
   
 ## <a name="syntax"></a>Składnia  
   
-```  
+```cpp  
 [ implements_category(  
    implements_category="uuid"  
 ) ]  
@@ -45,7 +45,7 @@ Określa kategorii składników implementowane przez klasy docelowej.
  Ten atrybut wymaga, aby [coclass](../windows/coclass.md), [progid](../windows/progid.md), lub [vi_progid —](../windows/vi-progid.md) atrybutów (lub innego atrybutu, który oznacza jeden z nich) również będą stosowane do tego samego elementu. Jeśli dowolny pojedynczy atrybut jest używany, pozostałe dwa są automatycznie stosowane. Na przykład jeśli `progid` zastosowaniu `vi_progid` i `coclass` są również stosowane.  
   
 ## <a name="example"></a>Przykład  
- Poniższy kod określa, że następujący obiekt implementuje Kategoria formantu.  
+ Poniższy kod określa, że następujący obiekt implementuje `Control` kategorii.  
   
 ```cpp  
 // cpp_attr_ref_implements_category.cpp  

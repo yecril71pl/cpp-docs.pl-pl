@@ -16,12 +16,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 056d20420484b29bd66827607432ebe2d6543c52
-ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
+ms.openlocfilehash: 985dbf5ca03af3edae0ecf25796690059868ffc1
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/07/2018
-ms.locfileid: "39607361"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40019539"
 ---
 # <a name="inserting-a-space-between-buttons-on-a-toolbar"></a>Wstawianie odstępów między przyciskami na pasku narzędzi
 Ogólnie rzecz biorąc Aby wstawić odstęp między przyciskami, wystarczy przeciągnąć je od siebie nawzajem na pasku narzędzi. Aby usunąć przestrzeń, przeciągnij je do siebie nawzajem.  
@@ -41,7 +41,6 @@ Ogólnie rzecz biorąc Aby wstawić odstęp między przyciskami, wystarczy przec
  Aby uzyskać informacje na temat dodawania zasobów do projektów zarządzanych, zobacz [zasoby w aplikacjach pulpitu](/dotnet/framework/resources/index) w *przewodniku dewelopera .NET Framework*. Aby uzyskać informacji na temat ręcznego dodawania plików zasobów do projektów zarządzanych, uzyskiwania dostępu do zasobów, wyświetlania statycznych zasobów i przypisywania ciągów zasobów do właściwości, zobacz [Creating Resource Files dla aplikacji klasycznych](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Aby uzyskać informacji na temat globalizacja i lokalizacja zasobów w aplikacjach zarządzanych, zobacz [Globalizing i lokalizowanie aplikacji programu .NET Framework](/dotnet/standard/globalization-localization/index).  
   
 ## <a name="requirements"></a>Wymagania  
-  
  ATL i MFC  
   
 ## <a name="see-also"></a>Zobacz też  

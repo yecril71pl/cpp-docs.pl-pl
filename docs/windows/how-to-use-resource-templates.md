@@ -21,12 +21,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: da0d33c51fa50c7291eaa6421e9b857cd6f82d36
-ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
+ms.openlocfilehash: b0a123c336df3f47550f8bb825a621eff53a8cb5
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39569459"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40015555"
 ---
 # <a name="how-to-use-resource-templates"></a>Porady: użycie szablonów zasobów
 Szablon zasobu jest dostosowane zasobu, który został zapisany jako plik .rct. Szablonu usługi resource następnie może służyć jako punkt wyjścia do tworzenia innych zasobów. Szablony zasobów zaoszczędzić czas w opracowywaniu dodatkowe zasoby lub grupy zasobów, które mają funkcje, takie jak standardowych kontrolek i innych elementów powtórzony. Na przykład możesz chcieć objąć kilka okien dialogowych przycisk Pomoc i ikona logo firmy. Aby zrobić tak szybko, tworzenie nowego szablonu okna dialogowego i dostosować ją przy użyciu logo i przycisk Pomoc.  
@@ -46,7 +46,7 @@ Szablon zasobu jest dostosowane zasobu, który został zapisany jako plik .rct. 
   
 4.  Podaj nazwę i lokalizację nowego pliku .rct, a następnie kliknij przycisk **Otwórz**.  
   
-5.  Nowy plik .rct zostanie dodany do projektu i pojawia się w oknie Eksploratora rozwiązań pod **zasobów** folderu.  
+5.  Nowy plik .rct zostanie dodany do projektu i pojawia się w **Eksploratora rozwiązań** w obszarze **zasobów** folderu.  
   
      Możesz teraz kliknąć dwukrotnie plik .rct, aby otworzyć go w oknie dokumentu, a następnie dodać zasoby do niego (kliknij prawym przyciskiem myszy plik w oknie dokumentu, a następnie wybierz **Dodaj zasób** z menu skrótów). Następnie można dostosować te zasoby i Zapisz plik .rct.  
   
@@ -76,7 +76,6 @@ Szablon zasobu jest dostosowane zasobu, który został zapisany jako plik .rct. 
  Aby uzyskać informacje na temat dodawania zasobów do projektów zarządzanych, zobacz [zasoby w aplikacjach pulpitu](/dotnet/framework/resources/index) w *przewodniku dewelopera .NET Framework*.  
   
 ## <a name="requirements"></a>Wymagania  
-  
  Win32  
   
 ## <a name="see-also"></a>Zobacz też  

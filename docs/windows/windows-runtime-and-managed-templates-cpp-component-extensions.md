@@ -15,12 +15,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: ec064bc8ea40fd4835c4f779e0120e1daa445d7e
-ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
+ms.openlocfilehash: 6fe449842cc019520a3d73528db05a26b17dcd99
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39641463"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40011565"
 ---
 # <a name="windows-runtime-and-managed-templates-c-component-extensions"></a>Środowisko wykonawcze systemu Windows i zarządzane szablony (C++ Component Extensions)
 Szablony umożliwiają definiowanie prototyp Windows Runtime lub typ środowiska uruchomieniowego języka wspólnego i, tworzy zmian tego typu za pomocą parametrów typu inny szablon.  
@@ -44,7 +44,7 @@ Szablony umożliwiają definiowanie prototyp Windows Runtime lub typ środowiska
   
 ### <a name="examples"></a>Przykłady  
   
- Istnieje możliwość utworzenia wystąpienia typu ogólnego z parametrem szablonu typu zarządzanego, ale nie można utworzyć wystąpienia zarządzanego szablonu z parametrem szablonu typu ogólnego.  Jest to spowodowane typy ogólne są rozwiązywane w czasie wykonywania.  Aby uzyskać więcej informacji, zobacz [typy ogólne i szablony (Visual C++)](../windows/generics-and-templates-visual-cpp.md).  
+ Istnieje możliwość utworzenia wystąpienia typu ogólnego z parametrem szablonu typu zarządzanego, ale nie można utworzyć wystąpienia zarządzanego szablonu z parametrem szablonu typu ogólnego. Jest to spowodowane typy ogólne są rozwiązywane w czasie wykonywania. Aby uzyskać więcej informacji, zobacz [typy ogólne i szablony (Visual C++)](../windows/generics-and-templates-visual-cpp.md).  
   
 ```cpp  
 // managed_templates.cpp  
@@ -77,7 +77,7 @@ template<class T> public ref class R {
 };  
 ```  
   
- Nie masz dostępu do szablonów zdefiniowane w przywoływanym zestawie za pomocą C + +/ składni języka interfejsu wiersza polecenia, ale można używać odbicia.  Jeśli szablon nie zostanie uruchomiony, nie jest emitowane w metadanych.  Jeśli zostanie utworzone wystąpienie szablonu, tylko funkcje składowe odwołania pojawi się w metadanych.  
+ Nie masz dostępu do szablonów zdefiniowane w przywoływanym zestawie za pomocą C + +/ składni języka interfejsu wiersza polecenia, ale można używać odbicia. Jeśli szablon nie zostanie uruchomiony, nie jest emitowane w metadanych. Jeśli zostanie utworzone wystąpienie szablonu, tylko funkcje składowe odwołania pojawi się w metadanych.  
   
 ```cpp  
 // managed_templates_3.cpp  

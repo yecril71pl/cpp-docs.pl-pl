@@ -15,12 +15,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 2ca7757c1b9a8ebf034f68b9a380c09d4a5b08f1
-ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
+ms.openlocfilehash: 4f44d6e4db7e09033e9c3f05d94cbf5294b306a3
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/07/2018
-ms.locfileid: "39607027"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40018285"
 ---
 # <a name="purpose-of-attributes"></a>Cel atrybutów
 Atrybuty rozszerzenia C++ w kierunkach nie jest obecnie możliwe bez przerywania klasycznej struktury języka. Atrybuty zezwalać na dostawców (oddzielne biblioteki dll) do rozszerzenia funkcji języka dynamicznie. Podstawowym celem atrybutów jest uproszczenie tworzenia składników modelu COM, oprócz zwiększenie poziomu wydajności dla deweloperów składników. Atrybuty mogą być stosowane do niemal C++ konstrukcji, takich jak klasy, elementy członkowskie danych lub elementów członkowskich. Wyróżnienie korzyści zapewniane przez nowej technologii jest następująca:  
@@ -35,7 +35,7 @@ Atrybuty rozszerzenia C++ w kierunkach nie jest obecnie możliwe bez przerywania
   
  Na przykład, aby zaimplementować obiekt sink zdarzenia prostego ogólne klasy ATL, należy zastosować [event_receiver](../windows/event-receiver.md) atrybutu do określonej klasy, takie jak `CMyReceiver`. `event_receiver` Atrybutu są następnie kompilowane przez kompilator Visual C++, który wstawia prawidłowego kodu do pliku obiektu.  
   
-```  
+```cpp  
 [event_receiver(com)]  
 class CMyReceiver   
 {  

@@ -17,35 +17,35 @@ author: ghogen
 ms.author: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 020a7a16e38ee40c99a7a5b77c88002e3135bfa1
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 91c5af565ac7de14d947f2376ae408caa0f890fe
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33840921"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40013580"
 ---
 # <a name="how-user-account-control-uac-affects-your-application"></a>Jak kontrola konta użytkownika (UAC) wpływa na aplikację?
-Kontrola konta użytkownika (UAC) jest funkcją systemu Windows Vista, w którym użytkownik kont ma ograniczone uprawnienia. Można znaleźć szczegółowe informacje na temat funkcji Kontrola konta użytkownika w tych lokacjach:  
+Kontrola konta użytkownika (UAC) jest funkcją systemu Windows Vista, w którym użytkownik konta ma ograniczone uprawnienia. Można znaleźć szczegółowe informacje na temat funkcji Kontrola konta użytkownika w tych lokacjach:  
   
--   [Przewodnik krok po kroku kontroli konta użytkownika systemu Windows Vista](http://go.microsoft.com/fwlink/p/?linkid=53781)  
+-   [Przewodnik krok po kroku kontroli konta użytkownika Windows Vista](http://go.microsoft.com/fwlink/p/?linkid=53781)  
   
--   [Deweloper najlepsze rozwiązania i wskazówki dotyczące aplikacji w środowisku najniższych uprawnieniach](http://go.microsoft.com/fwlink/p/?linkid=82444)  
+-   [Najlepsze rozwiązania dla deweloperów i wytyczne dotyczące aplikacji w środowisku o najniższych uprawnieniach](http://go.microsoft.com/fwlink/p/?linkid=82444)  
   
--   [Opis i konfigurowanie Kontrola konta użytkownika w systemie Windows Vista](http://go.microsoft.com/fwlink/p/?linkid=82445)  
+-   [Opis i konfigurowanie Kontrola konta użytkownika w Windows Vista](http://go.microsoft.com/fwlink/p/?linkid=82445)  
   
 ## <a name="building-projects-after-enabling-uac"></a>Kompilowanie projektów po włączeniu funkcji Kontrola konta użytkownika  
- W przypadku kompilowania projektu Visual C++ w systemie Windows Vista z funkcji Kontrola konta użytkownika jest wyłączone, a później włączyć funkcji Kontrola konta użytkownika, należy wyczyścić, skompiluj ponownie projekt, aby działał poprawnie.  
+ Jeśli tworzysz projekt Visual C++ w Windows Vista z funkcji kontroli konta użytkownika jest wyłączona, a później włączyć funkcji Kontrola konta użytkownika, należy wyczyścić i ponownie skompiluj projekt, aby mogła działać prawidłowo.  
   
 ## <a name="applications-that-require-administrative-privileges"></a>Aplikacje, które wymagają uprawnień administratora  
- Być domyślnie, konsolidatora Visual C++ osadza fragmentu funkcji Kontrola konta użytkownika do manifestu aplikacji z poziomu wykonywania `asInvoker`. Jeśli aplikacja wymaga uprawnień administracyjnych do poprawnego działania (na przykład, jeśli modyfikuje węzła HKLM rejestru lub zapisuje w chronionych obszarach dysku, takie jak katalog systemu Windows), należy zmodyfikować aplikacji.  
+ Być domyślny, konsolidator Visual C++ osadza fragmentu funkcji Kontrola konta użytkownika do manifestu aplikacji z poziomem wykonywania `asInvoker`. Jeśli aplikacja wymaga uprawnień administracyjnych do poprawnego działania (na przykład w przypadku, gdy modyfikuje węzłem HKLM rejestru lub zapisuje w chronionych obszarach dysku, takie jak katalog Windows), należy zmodyfikować aplikację.  
   
- Pierwsza opcja jest aby zmodyfikować fragment UAC manifest, aby zmienić poziom wykonywania na *requireAdministrator*. Aplikacja zostanie następnie monit o podanie poświadczeń administracyjnych przed uruchomieniem. Aby dowiedzieć się, jak to zrobić, zobacz [/MANIFESTUAC (osadza informacje UAC w manifeście)](../build/reference/manifestuac-embeds-uac-information-in-manifest.md).  
+ Pierwsza opcja jest zmodyfikowanie fragmentu UAC manifestu, aby zmienić poziom wykonywania *requireAdministrator*. Aplikacja następnie będzie monitować użytkownika o poświadczenia administracyjne, zanim zostanie ona uruchomiona. Aby dowiedzieć się, jak to zrobić, zobacz [/MANIFESTUAC (osadza informacje UAC w manifeście)](../build/reference/manifestuac-embeds-uac-information-in-manifest.md).  
   
- Drugą opcją jest nie można osadzić fragmentu UAC w manifeście, określając **: No** — opcja konsolidatora. W takim przypadku aplikacja jest uruchamiana zwirtualizowanych. Wszystkie zmiany wprowadzane w rejestrze lub system plików nie zachowa po zakończeniu aplikacji.  
+ Drugą opcją jest osadzaj fragmentu funkcji Kontrola konta użytkownika do manifestu, określając `/MANIFESTUAC:NO` — opcja konsolidatora. W takim przypadku aplikacja jest uruchamiana zwirtualizowanych. Wszelkie zmiany wprowadzone do rejestru lub systemu plików zostanie usunięte podczas instalacji aplikacji została zakończona.  
   
- Poniższy schemat opisano, jak aplikacja jest uruchamiana w zależności od tego, czy jest włączona funkcja Kontrola konta użytkownika i określa, czy aplikacja ma manifestu kontroli konta użytkownika:  
+ Następujące schemat blokowy opisano, jak aplikacja jest uruchamiana w zależności od tego, czy jest włączona funkcja Kontrola konta użytkownika i tego, czy aplikacja ma manifestu kontroli konta użytkownika:  
   
- ![Zachowanie modułu ładującego systemu Windows Vista](media/uacflowchart.png "UACflowchart")  
+ ![Windows Vista Loader zachowanie](media/uacflowchart.png "UACflowchart")  
   
 ## <a name="see-also"></a>Zobacz też  
- [Najlepsze rozwiązania](security-best-practices-for-cpp.md)
+ [Najlepsze rozwiązania dotyczące zabezpieczeń](security-best-practices-for-cpp.md)

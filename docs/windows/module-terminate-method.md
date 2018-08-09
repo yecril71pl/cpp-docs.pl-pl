@@ -1,5 +1,5 @@
 ---
-title: Module::terminate — metoda | Dokumentacja firmy Microsoft
+title: Module::terminate, metoda | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,29 +17,29 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 2c1822f8c1a854274ff30795096bb639520ea8cd
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 40d374219e6b9eb05a74f5b62f710691b4e9342a
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33874723"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40016895"
 ---
 # <a name="moduleterminate-method"></a>Module::Terminate — Metoda
-Powoduje, że fabryki wszystkie utworzone przez moduł zamknięcia.  
+Powoduje, że wszystkie fabryki tworzone przez moduł, aby zamknąć.  
   
 ## <a name="syntax"></a>Składnia  
   
-```  
+```cpp  
 void Terminate();  
 ```  
   
 ## <a name="remarks"></a>Uwagi  
- Zwalnia fabryki w pamięci podręcznej.  
+ Zwalnia fabryk w pamięci podręcznej.  
   
 ## <a name="requirements"></a>Wymagania  
  **Nagłówek:** module.h  
   
- **Namespace:** Microsoft::wrl —
+ **Namespace:** Microsoft::WRL
  
  ## <a name="see-also"></a>Zobacz też
  [Klasa modułu](../windows/module-class.md)

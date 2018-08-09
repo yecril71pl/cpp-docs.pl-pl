@@ -18,12 +18,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: f9104feac603819b9420d315e619182722c87474
-ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
+ms.openlocfilehash: 75c4558f0d783152cee2eeb53f06ee341b785994
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/07/2018
-ms.locfileid: "39606221"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40012170"
 ---
 # <a name="resizing-an-entire-image-image-editor-for-icons"></a>Zmiana rozmiaru całego obrazu (Edytor obrazów dla ikon)
 ### <a name="to-resize-an-entire-image-using-the-properties-window"></a>Zmiana rozmiaru całego obrazu w oknie właściwości  
@@ -32,17 +32,16 @@ ms.locfileid: "39606221"
   
 2.  W **szerokość** i **wysokość** pola [okno właściwości](/visualstudio/ide/reference/properties-window), wpisz wymiary, które mają.  
   
-     Rozmiar obrazu jest coraz, edytora obrazów rozszerza obraz w prawo, dół, i / lub i wypełnia nowego regionu z bieżącym kolorem tła. Obraz, który nie jest rozciągana.  
+     Jeśli zwiększasz rozmiar obrazu, **obraz** edytora rozszerza obraz w prawo, dół, i / lub i wypełnia nowego regionu z bieżącym kolorem tła. Obraz, który nie jest rozciągana.  
   
-     Jeśli to zmniejszyć rozmiar obrazu, edytora obrazów Przycina obraz w prawo i/lub dolnej krawędzi.  
+     Jeśli to zmniejszyć rozmiar obrazu, **obraz** edytora Przycina obraz w prawo lub dolnej krawędzi i / lub.  
   
     > [!NOTE]
-    >  Aby zmienić rozmiar tylko całego obrazu, nie można zmienić rozmiar częściowy wybór, można użyć właściwości Width i Height.  
+    >  Możesz użyć **szerokość** i **wysokość** właściwości, aby zmienić rozmiar tylko całego obrazu, nie można zmienić rozmiar częściowy wybór.  
   
  Aby uzyskać informacje na temat dodawania zasobów do projektów zarządzanych, zobacz [zasoby w aplikacjach pulpitu](/dotnet/framework/resources/index) w *przewodniku dewelopera .NET Framework*. Aby uzyskać informacji na temat ręcznego dodawania plików zasobów do projektów zarządzanych, uzyskiwania dostępu do zasobów, wyświetlania statycznych zasobów i przypisywania ciągów zasobów do właściwości, zobacz [Creating Resource Files dla aplikacji klasycznych](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Aby uzyskać informacji na temat globalizacja i lokalizacja zasobów w aplikacjach zarządzanych, zobacz [Globalizing i lokalizowanie aplikacji programu .NET Framework](/dotnet/standard/globalization-localization/index).  
   
 ## <a name="requirements"></a>Wymagania  
-  
  Brak  
   
 ## <a name="see-also"></a>Zobacz też  

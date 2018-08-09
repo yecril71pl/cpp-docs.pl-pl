@@ -18,20 +18,20 @@ author: mamillmsft
 ms.author: mikeblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4c355924ce1f264ce63e02f5fda948a62675e675
-ms.sourcegitcommit: 894b3b3a91fcd8894b582747b03135c0be450c1f
+ms.openlocfilehash: abf51432e5803de001610da07d97d5bad1796085
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38102468"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40018848"
 ---
 # <a name="c-developer-guidance-for-speculative-execution-side-channels"></a>Wskazówki dla deweloperów C++ spekulacyjnego kanałów po stronie wykonywania
 
-Ten artykuł zawiera wskazówki dla deweloperów, która pomaga w identyfikacji i ograniczanie ryzyka związanego z wykonywaniem spekulatywnym po stronie kanału sprzętowych luk w zabezpieczeniach oprogramowania C++. Te luki w zabezpieczeniach może ujawnić poufne informacje w granicach zaufania i może mieć wpływ na oprogramowanie, które jest uruchamiane na procesorach obsługujących spekulacyjnego, poza kolejnością wykonywania instrukcji. Ta klasa luk w zabezpieczeniach był pierwszy opisanego w stycznia 2018 r. i dodatkowych informacji uzupełniających i wskazówki można znaleźć w [biuletyn zabezpieczeń firmy Microsoft](https://portal.msrc.microsoft.com/en-US/security-guidance/advisory/ADV180002).
+Ten artykuł zawiera wskazówki dla deweloperów, która pomaga w identyfikacji i ograniczanie ryzyka związanego z wykonywaniem spekulatywnym po stronie kanału sprzętowych luk w zabezpieczeniach oprogramowania C++. Te luki w zabezpieczeniach może ujawnić poufne informacje w granicach zaufania i może mieć wpływ na oprogramowanie, które jest uruchamiane na procesorach obsługujących spekulacyjnego, poza kolejnością wykonywania instrukcji. Ta klasa luk w zabezpieczeniach był pierwszy opisanego w stycznia 2018 r. i dodatkowych informacji uzupełniających i wskazówki można znaleźć w [biuletyn zabezpieczeń firmy Microsoft](https://portal.msrc.microsoft.com/security-guidance/advisory/ADV180002).
 
 Ze wskazówkami zawartymi w tym artykule dotyczy klasy reprezentowane przez luki w zabezpieczeniach:
 
-1. CVE-2017-5753, znany także jako luki Spectre w wariancie 1. Ta klasa luk w zabezpieczeniach sprzętu jest powiązana z kanałów po stronie, które mogą wystąpić z powodu wykonywaniem spekulatywnym, który występuje w wyniku misprediction gałąź warunkowa. Kompilator języka Visual C++ w programie Visual Studio 2017 (począwszy od wersji 15.5.5) obejmuje obsługę `/Qspectre` przełącznika, który umożliwia ograniczenie kompilacji, dla ograniczonego zestawu schematów kodowania potencjalnie zagrożone związane z CVE-2017-5753. W dokumentacji dotyczącej [/qspectre](https://docs.microsoft.com/en-us/cpp/build/reference/qspectre) flagi zawiera więcej informacji na jego skutków i użycia. 
+1. CVE-2017-5753, znany także jako luki Spectre w wariancie 1. Ta klasa luk w zabezpieczeniach sprzętu jest powiązana z kanałów po stronie, które mogą wystąpić z powodu wykonywaniem spekulatywnym, który występuje w wyniku misprediction gałąź warunkowa. Kompilator języka Visual C++ w programie Visual Studio 2017 (począwszy od wersji 15.5.5) obejmuje obsługę `/Qspectre` przełącznika, który umożliwia ograniczenie kompilacji, dla ograniczonego zestawu schematów kodowania potencjalnie zagrożone związane z CVE-2017-5753. W dokumentacji dotyczącej [/qspectre](https://docs.microsoft.com/cpp/build/reference/qspectre) flagi zawiera więcej informacji na jego skutków i użycia. 
 
 2. CVE-2018-3639, nazywana również [spekulacyjnego obejścia Store (SSB)](https://aka.ms/sescsrdssb). Ta klasa luk w zabezpieczeniach sprzętu jest powiązana z kanałów po stronie, które mogą wystąpić z powodu związanego z wykonywaniem spekulatywnym obciążenia wcześniej zależne magazynu wyniku misprediction dostępu do pamięci.
 
@@ -184,7 +184,7 @@ unsigned char WriteSlot(unsigned int untrusted_index, void *ptr) {
 }
 ```
 
-Należy zauważyć, że obu tych przykładach obejmują spekulacyjnego modyfikacji wskaźników przydzielanych ze stosów pośrednich gałęzi. Istnieje możliwość modyfikacji spekulacyjnego mógł także wystąpić dla zmiennych globalnych, pamięci przydzielony w stercie i nawet pamięci tylko do odczytu na niektórych procesorach. Dla pamięci przydzielonej przez stos kompilator języka Visual C++ ma już kroki, aby utrudnić speculatively zmodyfikować przydzielanych ze stosów pośrednich gałęzi docelowych, takich jak zmiana kolejności zmiennych lokalnych w taki sposób, że bufory są umieszczane obok plik cookie zabezpieczeń jako część [/GS](https://docs.microsoft.com/en-us/cpp/build/reference/gs-buffer-security-check) kompilatora funkcji zabezpieczeń.
+Należy zauważyć, że obu tych przykładach obejmują spekulacyjnego modyfikacji wskaźników przydzielanych ze stosów pośrednich gałęzi. Istnieje możliwość modyfikacji spekulacyjnego mógł także wystąpić dla zmiennych globalnych, pamięci przydzielony w stercie i nawet pamięci tylko do odczytu na niektórych procesorach. Dla pamięci przydzielonej przez stos kompilator języka Visual C++ ma już kroki, aby utrudnić speculatively zmodyfikować przydzielanych ze stosów pośrednich gałęzi docelowych, takich jak zmiana kolejności zmiennych lokalnych w taki sposób, że bufory są umieszczane obok plik cookie zabezpieczeń jako część [/GS](https://docs.microsoft.com/cpp/build/reference/gs-buffer-security-check) kompilatora funkcji zabezpieczeń.
 
 ## <a name="speculative-type-confusion"></a>Błąd typu spekulacyjne
 
@@ -368,6 +368,6 @@ Inna technika, który może służyć do złagodzenia związanego z wykonywaniem
 
 ## <a name="see-also"></a>Zobacz też
 
-[Wskazówki, aby uniknąć kanału po stronie wykonywania spekulacyjnego luk w zabezpieczeniach](https://portal.msrc.microsoft.com/en-US/security-guidance/advisory/ADV180002)
+[Wskazówki, aby uniknąć kanału po stronie wykonywania spekulacyjnego luk w zabezpieczeniach](https://portal.msrc.microsoft.com/security-guidance/advisory/ADV180002)
 
 [Ograniczanie ryzyka związanego z wykonywaniem spekulatywnym po stronie kanału sprzętowych luk w zabezpieczeniach](https://blogs.technet.microsoft.com/srd/2018/03/15/mitigating-speculative-execution-side-channel-hardware-vulnerabilities/)

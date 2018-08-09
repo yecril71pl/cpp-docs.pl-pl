@@ -1,5 +1,5 @@
 ---
-title: Wstępnie zdefiniowane symbole identyfikatorów | Dokumentacja firmy Microsoft
+title: Wstępnie zdefiniowane identyfikatory symboli | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,19 +16,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 3c28d5d3d04bc48e7c79d634406d40292d869e36
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: b459fbf77b75a61350fd1aa69c00749ceb1afc4c
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33876426"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40017243"
 ---
 # <a name="predefined-symbol-ids"></a>Wstępnie zdefiniowane symbole identyfikatorów
-Gdy zaczniesz nowy projekt, w zależności od typu projektu niektóre symbole identyfikatorów są wstępnie zdefiniowane do użycia. Te identyfikatory symboli obsługuje różne bibliotek i typy projektu, takie jak MFC. Reprezentują typowych zadań, które zwykle znajdują się w dowolnej aplikacji lub akcje elementy sprzętu, takie jak drukarka lub myszy.  
+Po rozpoczęciu nowego projektu, w zależności od typu projektu niektóre symbole identyfikatorów są wstępnie zdefiniowane do użycia. Te identyfikatory symboli obsługuje różnych bibliotek i typów projektów, takie jak MFC. Reprezentują one typowych zadań, które zwykle znajdują się w dowolnej aplikacji lub akcje elementów sprzętu, takich jak drukarka lub myszy.  
   
- Te identyfikatory symboli stają się ważne podczas pracy z zasobami. Są one dostępne, gdy edytowanie tabel akceleratora. Niektóre z nich są już skojarzone z klawiszy wirtualnych. Są również dostępne za pośrednictwem [okna właściwości](/visualstudio/ide/reference/properties-window). Można przypisać dowolną z wstępnie zdefiniowane symbole identyfikatorów nowe zasoby, lub można przypisać klawiszy skrótów do nich oraz funkcje skojarzone z symbol, który identyfikator automatycznie kojarzy z tej kombinacji.  
+ Te identyfikatory symboli nabierają znaczenia podczas pracy z zasobami. Są one dostępne, gdy edytowanie tabel akceleratora. Niektóre z nich są już skojarzone z klawisze wirtualne. Są one również dostępne za pośrednictwem [okno właściwości](/visualstudio/ide/reference/properties-window). Można przypisać dowolny wstępnie zdefiniowane symbole identyfikatorów nowe zasoby, lub można przypisać klawisze skrótów do nich i funkcje związane z symbolem, który identyfikator automatycznie kojarzy z tej kombinacji klawiszy.  
   
- Te biblioteki zostały wstępnie zdefiniowane symbole, które będą wyświetlane jako część projektu:  
+ Te biblioteki ma wstępnie zdefiniowane symbole, które będą wyświetlane jako część projektu:  
   
 -   [Wstępnie zdefiniowane symbole MFC](../windows/mfc-predefined-symbols.md)  
   
@@ -37,12 +37,10 @@ Gdy zaczniesz nowy projekt, w zależności od typu projektu niektóre symbole id
 -   [Wstępnie zdefiniowane symbole Win32](../windows/win32-predefined-symbols.md)  
   
     > [!NOTE]
-    >  Wstępnie zdefiniowane symbole są zawsze w trybie tylko do odczytu.  
-  
-
+    >  Wstępnie zdefiniowane symbole są zawsze tylko do odczytu.  
   
 ## <a name="requirements"></a>Wymagania  
- Win32, MFC lub ATL  
+ Win32, ATL i MFC  
   
 ## <a name="see-also"></a>Zobacz też  
  [Symbole: identyfikatory zasobów](../windows/symbols-resource-identifiers.md)

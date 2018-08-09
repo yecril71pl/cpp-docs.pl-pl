@@ -20,27 +20,27 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 41494e8b88f41c4c842e95e9f8a9f5da0247739f
-ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
+ms.openlocfilehash: 9c972f4038da4b4ed1d52fee0b8029b6f48ff3bb
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/07/2018
-ms.locfileid: "39605646"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40013876"
 ---
 # <a name="resizing-an-image-image-editor-for-icons"></a>Zmiana rozmiaru obrazu (Edytor obrazów dla ikon)
-Zachowanie edytora obrazów podczas zmiany rozmiaru obrazu zależy od tego, czy masz [wybranego](../windows/selecting-an-area-of-an-image-image-editor-for-icons.md) całego obrazu lub jego część.  
+Zachowanie **obraz** edytora podczas zmiany rozmiaru obrazu zależy od tego, czy masz [wybranego](../windows/selecting-an-area-of-an-image-image-editor-for-icons.md) całego obrazu lub jego część.  
   
- Zaznaczenie zawiera tylko część obrazu, edytora obrazów zmniejsza zaznaczenie przez usunięcie wierszy lub kolumn pikseli i wypełniania opuszczonych regionów z bieżącym kolorem tła lub rozciąga zaznaczenie zduplikowane wiersze lub kolumny w pikselach.  
+ Jeśli zaznaczenie obejmuje tylko część obrazu, **obraz** edytora zmniejsza zaznaczenie przy usuwaniu wierszy lub kolumn pikseli i wypełniania opuszczonych regionów z bieżącym kolorem tła, lub jego rozciąga zaznaczenie o zduplikowane wiersze lub kolumny w pikselach.  
   
- Jeśli zaznaczenie obejmuje cały obraz, edytora obrazów albo zmniejsza rozciąga obrazu, lub przycina i rozszerza je.  
+ Jeśli zaznaczenie obejmuje cały obraz **obraz** edytora albo zmniejsza rozciąga obrazu, lub przycina i rozszerza je.  
   
- Istnieją dwa mechanizmy do zmiany rozmiaru obrazu: uchwytów zmiany rozmiaru i [okno właściwości](/visualstudio/ide/reference/properties-window). Można przeciągnąć uchwyty zmiany rozmiaru, aby zmienić rozmiar wszystkich lub część obrazu. Uchwyty zmiany rozmiaru, które można przeciągać są wypełnione. Nie można przeciągnąć uchwyty, które są puste. Można użyć okna właściwości zmiana rozmiaru całego obrazu tylko wybranej części.  
+ Istnieją dwa mechanizmy do zmiany rozmiaru obrazu: uchwytów zmiany rozmiaru i [okno właściwości](/visualstudio/ide/reference/properties-window). Można przeciągnąć uchwyty zmiany rozmiaru, aby zmienić rozmiar wszystkich lub część obrazu. Uchwyty zmiany rozmiaru, które można przeciągać są wypełnione. Nie można przeciągnąć uchwyty, które są puste. Możesz użyć **właściwości** okna, aby zmienić rozmiar całego tylko obraz nie jest częścią wybrane.  
   
  ![Uchwytów na mapę bitową](../mfc/media/vcimageeditorsizinghandles.gif "vcImageEditorSizingHandles")  
 Uchwyty zmiany rozmiaru  
   
 > [!NOTE]
->  W przypadku kafelka siatki opcji wybranej w [okno dialogowe Ustawienia siatki](../windows/grid-settings-dialog-box-image-editor-for-icons.md), następnie zmiany rozmiaru przyciąganie do następnego wiersza siatki kafelka. Siatka pikseli, opcja jest zaznaczona (ustawienie domyślne), jeśli tylko zmiany rozmiaru przyciąganie do następnego dostępne pikseli.  
+>  Jeśli masz **Kafelek siatki** opcji wybranej w [okno dialogowe Ustawienia siatki](../windows/grid-settings-dialog-box-image-editor-for-icons.md), następnie zmiany rozmiaru przyciąganie do następnego wiersza siatki kafelka. Jeśli tylko **siatkę pikseli** opcja jest zaznaczone (ustawienie domyślne), zmiana rozmiaru przyciąganie do następnego dostępne pikseli.  
   
 -   [Zmiana rozmiaru całego obrazu](../windows/resizing-an-entire-image-image-editor-for-icons.md)  
   

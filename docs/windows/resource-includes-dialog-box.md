@@ -23,33 +23,31 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 756289bb819809fed63dba579c4ad1cd1e975780
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: d11f3abdaa4f804f9916e7313d1a4338c29a7369
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33879675"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40015082"
 ---
 # <a name="resource-includes-dialog-box"></a>Zasób zawiera okno dialogowe
-Można użyć **zasobów zawiera** okno dialogowe, aby zmodyfikować rozmieszczenie normalnej pracy w środowisku przechowywania wszystkich zasobów w plik .rc projektu i wszystkie [symbole](../windows/symbols-resource-identifiers.md) w Resource.h.  
+Możesz użyć **zasób zawiera** okno dialogowe, aby zmodyfikować środowisko normalnej pracy rozmieszczenie przechowywania wszystkich zasobów w pliku .rc projektu, a wszystkie [symbole](../windows/symbols-resource-identifiers.md) w Resource.h.  
   
- Aby otworzyć **zasobów zawiera** okno dialogowe, kliknij prawym przyciskiem myszy .rc plików w [widok zasobów](../windows/resource-view-window.md), a następnie wybierz **zasobów zawiera** z menu skrótów.  
+ Aby otworzyć **zasób zawiera** okno dialogowe, kliknij prawym przyciskiem myszy .rc w pliku [widok zasobów](../windows/resource-view-window.md), następnie wybierz **zasób zawiera** z menu skrótów.  
   
- **Plik nagłówka symbolu**  
- Umożliwia zmianę nazwy pliku nagłówka, gdzie są przechowywane definicje symbolu dla Twojego pliku zasobu. Aby uzyskać więcej informacji, zobacz [zmiana nazwy pliki nagłówka symboli](../windows/changing-the-names-of-symbol-header-files.md).  
+ **Plik nagłówkowy symboli**  
+ Umożliwia zmianę nazwy pliku nagłówkowego, w którym przechowywane są definicje symboli dla Twojego pliku zasobu. Aby uzyskać więcej informacji, zobacz [zmiana nazwy pliki nagłówkowe symboli](../windows/changing-the-names-of-symbol-header-files.md).  
   
  **Dyrektywy symboli tylko do odczytu**  
- Umożliwia dołączenie pliki nagłówkowe, które zawierają symbole, które nie powinien być modyfikowany podczas sesji. Na przykład można dołączyć plik symboli użytkowany przez kilku projektów. Mogą również obejmować pliki .h MFC. Aby uzyskać więcej informacji, zobacz [tym udostępnionych (tylko do odczytu) lub symbole obliczane](../windows/including-shared-read-only-or-calculated-symbols.md).  
+ Można dołączyć plików nagłówkowych, które zawierają symbole, które nie powinny być modyfikowane podczas sesji. Na przykład można uwzględnić plik symboli, która jest współużytkowana przez wiele projektów. Może również obejmować pliki .h MFC. Aby uzyskać więcej informacji, zobacz [tym udostępnionych (tylko do odczytu) lub symbole obliczane](../windows/including-shared-read-only-or-calculated-symbols.md).  
   
- **Dyrektywy kompilacji**  
- Umożliwia dołączyć pliki zasobów, które zostały utworzone i edytowane oddzielnie od zasobów w pliku głównym zasobów zawierać dyrektyw kompilacji (na przykład takie, które zawierają warunkowo zasobów) lub zasobów w niestandardowym formacie. Aby dołączyć pliki zasobów MFC standardowe umożliwia także pole dyrektywy kompilacji. Aby uzyskać więcej informacji, zobacz [tym zasobów w czasie kompilowania](../windows/how-to-include-resources-at-compile-time.md).  
+ **Dyrektywy czasu kompilacji**  
+ Pozwala dołączyć pliki zasobów, które są tworzone oraz edytowane oddzielnie z zasobów w głównego pliku zasobów, zawierać dyrektywy czasu kompilacji (takich jak te, które zostaną umieszczone zasoby warunkowo) lub zasobów w niestandardowym formacie. Można również użyć **pole dyrektywy czasu kompilacji** obejmujący standardowe pliki zasobów biblioteki MFC. Aby uzyskać więcej informacji, zobacz [tym zasobów w czasie kompilowania](../windows/how-to-include-resources-at-compile-time.md).  
   
 > [!NOTE]
->  Wyświetlane są pozycje w tych polach tekstowych w plik .rc oznaczony przez `TEXTINCLUDE 1`, `TEXTINCLUDE 2`, i `TEXTINCLUDE 3` odpowiednio. Aby uzyskać więcej informacji, zobacz [TN035: Korzystanie z wielu plików zasobów i plików nagłówków z programem Visual C++](../mfc/tn035-using-multiple-resource-files-and-header-files-with-visual-cpp.md).  
+>  Wpisy w tych polach tekstowych pojawiają się w pliku .rc, oznaczony za `TEXTINCLUDE 1`, `TEXTINCLUDE 2`, i `TEXTINCLUDE 3` odpowiednio. Aby uzyskać więcej informacji, zobacz [TN035: przy użyciu wielu plików zasobów i plików nagłówkowych przy użyciu języka Visual C++](../mfc/tn035-using-multiple-resource-files-and-header-files-with-visual-cpp.md).  
   
- Po dokonaniu zmiany używa pliku zasobu **zasobów zawiera** okno dialogowe, musisz zamknąć plik .rc i ponownie je, aby zmiany zaczęły obowiązywać. Aby uzyskać więcej informacji, zobacz [tym zasobów w czasie kompilowania](../windows/how-to-include-resources-at-compile-time.md).  
-  
-
+ Po wprowadzeniu zmian do pliku zasobów za pomocą **zasób zawiera** okno dialogowe, należy zamknąć plik .rc i ponownie je, aby zmiany zaczęły obowiązywać. Aby uzyskać więcej informacji, zobacz [tym zasobów w czasie kompilowania](../windows/how-to-include-resources-at-compile-time.md).  
   
 ## <a name="requirements"></a>Wymagania  
  Win32  

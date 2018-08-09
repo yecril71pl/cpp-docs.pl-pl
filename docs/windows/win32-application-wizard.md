@@ -18,46 +18,46 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 18885e36b5f598a8b1dd6128c29a9e520128dcb2
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: b9aebf4e130c30e488ec348b67add5b600108991
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33891428"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40014224"
 ---
 # <a name="win32-application-wizard"></a>Kreator aplikacji Win32
-Kreator aplikacji Win32 Visual C++ pozwala utworzyć cztery typy projektów (wymienione w pozycji w tabeli poniżej). W każdym przypadku można określić dodatkowe opcje, które są odpowiednie dla typu projektu, które będą otwierane. W poniższej tabeli przedstawiono opcje są dostępne dla każdego typu aplikacji.  
+Kreatora aplikacji Win32 Visual C++ pozwala na tworzenie każdego z czterech typów projektów (wyszczególnionych w nagłówku w poniższej tabeli). W każdym przypadku można określić dodatkowe opcje, które są odpowiednie dla typu projektu, które można otworzyć. Poniższa tabela wskazuje, które opcje są dostępne dla każdego typu aplikacji.  
   
-|Typ obsługi|Aplikacji konsoli|Aplikacja pliku wykonywalnego (system Windows)|Biblioteka DLL|Biblioteka statyczna|  
+|Typ obsługi|Aplikacja konsolowa|Aplikacja pliku wykonywalnego (Windows)|Biblioteka dołączana dynamicznie|Biblioteka statyczna|  
 |---------------------|-------------------------|----------------------------------------|---------------------------|--------------------|  
 |**Pusty projekt**|Tak|Tak|Tak|Nie|  
-|**Eksportowanie symboli**|Nie|Nie|Tak|Nie|  
-|**Prekompilowanego nagłówka**|Nie|Nie|Nie|Tak|  
-|**Obsługa ATL**|Tak|Nie|Nie|Nie|  
+|**Eksportuj symbole**|Nie|Nie|Tak|Nie|  
+|**Prekompilowany plik nagłówkowy**|Nie|Nie|Nie|Tak|  
+|**Obsługa biblioteki ATL**|Tak|Nie|Nie|Nie|  
 |**Obsługa MFC**|Tak|Nie|Nie|Tak|  
   
 ## <a name="overview"></a>Omówienie  
- Ta strona kreatora opisano bieżące ustawienia projektu dla aplikacji Win32, które tworzysz. Domyślnie ustawione są następujące opcje:  
+ Ta strona kreatora opisuje bieżące ustawienia projektu dla aplikacji Win32, którą tworzysz. Domyślnie ustawiony są następujące opcje:  
   
--   Projekt jest aplikacją systemu Windows.  
+-   Projekt jest w aplikacji Windows.  
   
 -   Projekt nie jest pusty.  
   
--   Projekt nie zawiera żadnych symboli eksportu.  
+-   Projekt nie zawiera symboli eksportu.  
   
--   Projekt nie używa prekompilowanego pliku nagłówkowego (Ta opcja jest dostępna dla projektów biblioteki statycznej tylko).  
+-   Projekt nie korzysta z prekompilowanego pliku nagłówka (Ta opcja jest dostępna dla projektów biblioteki statycznej tylko).  
   
--   Projekt zawiera obsługę MFC ani ATL.  
+-   Projekt obejmuje obsługę MFC ani ATL.  
   
- Aby zmienić te ustawienia domyślne, kliknij przycisk [ustawienia aplikacji](../windows/application-settings-win-32-project-wizard.md) w kolumnie po lewej stronie kreatora i wprowadź żądane zmiany.  
+ Aby zmienić te ustawienia domyślne, kliknij przycisk [ustawienia aplikacji](../windows/application-settings-win-32-project-wizard.md) karty w lewej kolumnie kreatora i wprowadź żądane zmiany.  
   
- Po utworzeniu aplikacji pulpitu systemu Windows, można dodać przy użyciu klasy C++ ogólne [ogólnego](../ide/generic-cpp-class-wizard.md) kodu kreatora. Można dodać inne elementy, takie jak pliki HTML, pliki nagłówkowe, zasobów lub plików tekstowych.  
+ Po utworzeniu aplikacji pulpitu Windows można dodać ogólne klasy C++ za pomocą [ogólny](../ide/generic-cpp-class-wizard.md) kreatora kodów. Możesz dodać inne elementy, takie jak pliki HTML, pliki nagłówka, zasoby lub pliki tekstowe.  
   
 > [!NOTE]
->  Nie można dodać klasy ATL i MFC — klasy można dodać tylko do tych typów aplikacji klasycznych systemu Windows, które obsługują MFC (zobacz poprzedniej tabeli).  
+>  Nie można dodawać klas ALT, a klasy MFC można dodawać tylko do tych typów aplikacji klasycznych Windows, które obsługują MFC (zob. Poprzednia tabela).  
   
- Kreator tworzy pliki można wyświetlić dla projektu w **Eksploratora rozwiązań**. Aby uzyskać więcej informacji o plikach Kreator tworzy dla projektu można znaleźć w pliku wygenerowanego projektu ReadMe.txt. Aby uzyskać więcej informacji na temat typów plików [pliku typy utworzone dla projektów Visual C++](../ide/file-types-created-for-visual-cpp-projects.md).  
+ Można wyświetlić pliki, Kreator tworzy projekt w **Eksploratora rozwiązań**. Aby uzyskać więcej informacji o plikach, Kreator tworzy dla projektu, zobacz plik wygenerowany przez projekt `ReadMe.txt`. Aby uzyskać więcej informacji dotyczących typów plików [typy plików utworzonych dla projektów Visual C++](../ide/file-types-created-for-visual-cpp-projects.md).  
   
 ## <a name="see-also"></a>Zobacz też  
- [Tworzenie aplikacji klasycznych pusty systemu Windows](../windows/creating-an-empty-windows-desktop-application.md)   
+ [Tworzenie aplikacji klasycznych Windows pusty](../windows/creating-an-empty-windows-desktop-application.md)   
  [Typy projektów Visual C++](../ide/visual-cpp-project-types.md)

@@ -27,12 +27,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 49cdee9cfed3b5694fcea899b9250c5f9dd214b7
-ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
+ms.openlocfilehash: e912e2aaae53fa0c7f9e506ce70128238bf15a78
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39570483"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40018419"
 ---
 # <a name="how-to-import-and-export-resources"></a>Porady: importowanie i eksportowanie zasobów
 Możesz zaimportować zasobów graficznych (map bitowych, ikon, kursorów i pasków narzędzi), pliki HTML i zasobów niestandardowych do użytku w programie Visual C++. Możesz wyeksportować te same typy plików z projektu języka Visual C++ w oddzielnych plikach, które mogą być używane poza środowiskiem programowania.  
@@ -64,7 +64,6 @@ Możesz zaimportować zasobów graficznych (map bitowych, ikon, kursorów i pask
 4.  Przejdź do folderu, w którym chcesz zapisać plik, a następnie kliknij przycisk **wyeksportować**.  
   
 ## <a name="requirements"></a>Wymagania  
-  
  Win32  
   
 ## <a name="see-also"></a>Zobacz też  

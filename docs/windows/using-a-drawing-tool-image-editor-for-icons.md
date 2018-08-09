@@ -19,15 +19,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 8345829e5d561ead3be0052770e022f704eabc3b
-ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
+ms.openlocfilehash: fde195d465116f2fa3055d5981c2c465c4bf31ba
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39646127"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40019467"
 ---
 # <a name="using-a-drawing-tool-image-editor-for-icons"></a>Używanie narzędzia do rysowania (Edytor obrazów dla ikon)
-Edytor obrazów użytkownika odręcznej do rysowania i wymazywanie wszystkich działają tak samo jak narzędzia: Wybierz narzędzie i, jeśli to konieczne, [wybierz kolory pierwszego planu i tła](../windows/selecting-foreground-or-background-colors-image-editor-for-icons.md) i opcje rozmiaru i kształtu. Następnie przesuń wskaźnik do obrazu i kliknięciu lub przeciągnij, aby narysować i wymazać.  
+**Obraz** odręcznej do rysowania i wymazywanie wszystkich działają tak samo jak narzędzia przez Edytor: Wybierz narzędzie i, jeśli to konieczne, [wybierz kolory pierwszego planu i tła](../windows/selecting-foreground-or-background-colors-image-editor-for-icons.md) i opcje rozmiaru i kształtu. Następnie przesuń wskaźnik do obrazu i kliknięciu lub przeciągnij, aby narysować i wymazać.  
   
  Po wybraniu **Gumka** narzędzia **pędzla** narzędzia lub **Aerograf** narzędzia Selektor opcji Wyświetla opcje tego narzędzia.  
   

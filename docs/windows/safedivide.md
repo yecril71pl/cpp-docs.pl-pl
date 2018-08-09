@@ -17,19 +17,19 @@ ms.author: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 7c5698a85e17a8dbcb483dcd5468289df8afadcc
-ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
+ms.openlocfilehash: 4d7c966db1193def6479ecfd231293212bca2b1f
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/07/2018
-ms.locfileid: "39605048"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40018023"
 ---
 # <a name="safedivide"></a>SafeDivide
 Dzieli dwie liczby, w sposób zapewniający ochronę przed dzielenie przez zero.  
   
 ## <a name="syntax"></a>Składnia  
   
-```  
+```cpp  
 template<typename T, typename U>  
 inline bool SafeDivide (  
    T t,  

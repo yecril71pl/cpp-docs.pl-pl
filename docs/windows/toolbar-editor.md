@@ -20,17 +20,17 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: fe9c73a09e2a0f220ee4454baefb07b7e65fcafa
-ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
+ms.openlocfilehash: 505b97d1b3883568fc85795898f16f9821d8b930
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39641650"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40011731"
 ---
 # <a name="toolbar-editor"></a>Edytor paska narzędzi
-Edytor paska narzędzi umożliwia tworzenie zasobów narzędzi i konwertowanie map bitowych na zasoby paska narzędzi. Edytor paska narzędzi wykorzystuje graficzny widok, aby pokazać, narzędzi i przyciski, które przypominają, jak będzie wyglądał w ukończonej aplikacji.  
+**Narzędzi** Edytor pozwala na tworzenie zasobów narzędzi i konwertowanie map bitowych na zasoby paska narzędzi. **Narzędzi** Edytor używa graficzne przedstawienie, aby pokazać pasek narzędzi i przyciski, które przypominają, jak będzie wyglądał w ukończonej aplikacji.  
   
- Edytor paska narzędzi możesz:  
+ Za pomocą **narzędzi** edytora, możesz:  
   
 -   [Tworzenie nowych pasków narzędzi i przycisków](../windows/creating-new-toolbars.md)  
   
@@ -40,12 +40,12 @@ Edytor paska narzędzi umożliwia tworzenie zasobów narzędzi i konwertowanie m
   
 -   [Tworzenie etykietek narzędzi](../windows/creating-a-tool-tip-for-a-toolbar-button.md)  
   
- Okno Edytor paska narzędzi wyświetla dwa widoki obrazu przycisku, taka sama jak okno edytora obrazów. Pasek podziału rozdziela dwa okienka. Aby zmieniać względne rozmiary okienek, można przeciągać pasek podziału. Aktywne okienko wyświetla krawędź wyboru. Powyższe dwa widoki obrazu jest narzędzi podmiotu.  
+ **Narzędzi** okna edytora wyświetla dwa widoki obrazu przycisku, taka sama jak okno edytora obrazów. Pasek podziału rozdziela dwa okienka. Aby zmieniać względne rozmiary okienek, można przeciągać pasek podziału. Aktywne okienko wyświetla krawędź wyboru. Powyższe dwa widoki obrazu jest narzędzi podmiotu.  
   
  ![Edytor paska narzędzi](../mfc/media/vctoolbareditor.gif "vcToolbarEditor")  
 Edytor paska narzędzi  
   
- Edytor paska narzędzi jest podobny do edytora obrazów w działaniu. Elementy menu, Narzędzia grafiki i mapy bitowej siatki są takie same, jak w edytorze obrazu. Brak polecenia menu w menu obrazu, aby możliwe było przełączać się między Edytor paska narzędzi i edytora obrazów. Aby uzyskać więcej informacji na temat korzystania z narzędzi graficznych, paleta kolorów lub menu obrazu, zobacz [edytora obrazów](../windows/image-editor-for-icons.md).  
+ **Narzędzi** edytora jest podobny do **obraz** edytora w działaniu. Elementy menu, Narzędzia grafiki i mapy bitowej siatki są takie same jak w **obraz** edytora. Polecenia menu **obraz** menu, aby możliwe było przełączać się między **narzędzi** edytora i **obraz** edytora. Aby uzyskać więcej informacji na temat korzystania z **grafiki** narzędzi **kolory** palety, lub **obraz** menu, zobacz [edytora obrazów](../windows/image-editor-for-icons.md).  
   
  Aby uzyskać informacje na temat dodawania zasobów do projektów zarządzanych, zobacz [zasoby w aplikacjach pulpitu](/dotnet/framework/resources/index) w *przewodniku dewelopera .NET Framework*. Aby uzyskać informacji na temat ręcznego dodawania plików zasobów do projektów zarządzanych, uzyskiwania dostępu do zasobów, wyświetlania statycznych zasobów i przypisywania ciągów zasobów do właściwości, zobacz [Creating Resource Files dla aplikacji klasycznych](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Aby uzyskać informacji na temat globalizacja i lokalizacja zasobów w aplikacjach zarządzanych, zobacz [Globalizing i lokalizowanie aplikacji programu .NET Framework](/dotnet/standard/globalization-localization/index).  
   

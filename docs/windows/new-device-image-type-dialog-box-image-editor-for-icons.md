@@ -1,5 +1,5 @@
 ---
-title: Nowy &lt;urządzenia&gt; obrazu typu — okno dialogowe (edytor obrazów dla ikon) | Dokumentacja firmy Microsoft
+title: Nowe &lt;urządzenia&gt; (edytor obrazów dla ikon) okno dialogowe typu obrazu | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,33 +17,33 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 966066be4dbbce5586860dd3bb6c99893094b6ef
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 579a74e24f0abb2af13f96a0e5171dada249c0cf
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33879623"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40019289"
 ---
-# <a name="new-ltdevicegt-image-type-dialog-box-image-editor-for-icons"></a>Nowy &lt;urządzenia&gt; obrazu typu — okno dialogowe (edytor obrazów dla ikon)
-Umożliwia utworzenie nowego obrazu urządzenia określonego typu. Aby otworzyć **nowy \<urządzenia > obrazu** okno dialogowe, kliknij przycisk **nowy typ obrazu** na **obrazu** menu.  
+# <a name="new-ltdevicegt-image-type-dialog-box-image-editor-for-icons"></a>Nowe &lt;urządzenia&gt; (edytor obrazów dla ikon) okno dialogowe typu obrazu
+Umożliwia utworzenie nowego obrazu urządzenia o określonym typie. Aby otworzyć **nowy \<urządzenia > obraz** okno dialogowe, kliknij przycisk **nowy typ obrazu** na **obraz** menu.  
   
- **Typ docelowy obrazu**  
+### <a name="target-image-type"></a>Docelowy typ obrazu  
  Wyświetla listę typów dostępnych obrazów. Wybierz typ obrazu, który chcesz otworzyć:  
   
 ||||  
 |-|-|-|  
 |-16 x 16, 16 kolorów|-48 x 48, 16 kolorów|-96 x 96, 16 kolorów|  
 |-16 x 16, 256 kolorów|-48 x 48, 256 kolorów|-96 x 96, 256 kolorów|  
-|-16 x 16, w skali odcieni szarości|-48 x 48, w skali odcieni szarości|-96 x 96, w skali odcieni szarości|  
+|-16 x 16, monochromatyczny|-48 x 48, monochromatyczny|-96 x 96, monochromatyczny|  
 |-32 x 32, 16 kolorów|-64 x 64, 16 kolorów||  
 |-32 x 32, 256 kolorów|-64 x 64, 256 kolorów||  
-|-32 x 32, w skali odcieni szarości|-64 x 64, w skali odcieni szarości||  
+|-32 x 32, monochromatyczny|-64 x 64, monochromatyczny||  
   
 > [!NOTE]
->  Żadnych istniejących obrazów nie pojawi się na tej liście.  
+>  Żadnych istniejących obrazów, nie pojawi się na tej liście.  
   
- **Niestandardowy**  
- Otwiera [niestandardowe okno dialogowe obrazu](custom-image-dialog-box-image-editor-for-icons.md) , w którym można utworzyć nowy obraz niestandardowy rozmiar i liczba kolorów.  
+### <a name="custom"></a>Niestandardowe  
+ Otwiera [niestandardowego obrazu, okno dialogowe](custom-image-dialog-box-image-editor-for-icons.md) , w którym możesz tworzyć nowy obraz niestandardowy rozmiar i liczba kolorów.  
   
 ## <a name="requirements"></a>Wymagania  
  Brak  

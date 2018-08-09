@@ -18,15 +18,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 862498b012955c3b77a13b37ae07bbee66dd8dfa
-ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
+ms.openlocfilehash: a8a19de393e7451f045d840552127743f87e00ba
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39651408"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40019176"
 ---
 # <a name="showing-or-hiding-the-dialog-editor-toolbar"></a>Pokazywanie i ukrywanie paska narzędzi Edytora okien dialogowych
-Po otwarciu edytora okien dialogowych, pasek narzędzi edytora okien dialogowych automatycznie pojawia się w górnej części rozwiązania.  
+Po otwarciu **okna dialogowego** edytorze **Edytor okien dialogowych** pasek narzędzi pojawia się automatycznie w górnej części rozwiązania.  
   
 ### <a name="dialog-editor-toolbar"></a>Pasek narzędzi edytora okien dialogowych  
   
@@ -40,9 +40,9 @@ Po otwarciu edytora okien dialogowych, pasek narzędzi edytora okien dialogowych
 |![Środkowy przycisk pionowe](../mfc/media/vcdialogeditorvertical.png "vcDialogEditorVertical")|W pionie|![Przełącz przycisk siatki](../mfc/media/vcdialogeditortogglegrid.png "vcDialogEditorToggleGrid")|Przełączanie siatki|  
 |![Środkowy przycisk poziomy](../mfc/media/vcdialogeditorhorizontal.png "vcDialogEditorHorizontal")|Poziome|![Przełącz prowadnice przycisk](../mfc/media/vcdialogeditortoggleguides.png "vcDialogEditorToggleGuides")|Przełącz prowadnice|  
   
- Pasek narzędzi edytora okien dialogowych zawiera przyciski rozmieszczanie układu kontrolek w oknie dialogowym, na przykład rozmiar i wyrównanie. Przyciski paska narzędzi edytora okien dialogowych odnoszą się do poleceń menu Format. Aby uzyskać więcej informacji, zobacz [klucze akceleratora dla edytora okien dialogowych](../windows/accelerator-keys-for-the-dialog-editor.md).  
+ **Edytor okien dialogowych** narzędzi zawiera przyciski rozmieszczanie układu kontrolek w oknie dialogowym, na przykład rozmiar i wyrównanie. **Edytor okien dialogowych** przycisków paska narzędzi odpowiadają poleceń na **Format** menu. Aby uzyskać więcej informacji, zobacz [klucze akceleratora dla edytora okien dialogowych](../windows/accelerator-keys-for-the-dialog-editor.md).  
   
- Podczas pracy w edytorze okien dialogowych można przełączać wyświetlania paska narzędzi edytora okien dialogowych, wybierając go z listy dostępnych pasków narzędzi i okien.  
+ Podczas pracy w **okna dialogowego** edytora, można przełączać wyświetlanie **Edytor okien dialogowych** narzędzi, wybierając je z listy dostępnych pasków narzędzi i okien.  
   
 ### <a name="to-show-or-hide-the-dialog-editor-toolbar"></a>Aby pokazać lub ukryć pasek narzędzi edytora okna dialogowego  
   

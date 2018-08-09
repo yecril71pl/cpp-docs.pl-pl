@@ -17,19 +17,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: d0fe0c8919eb1959dab426c3c0db47f227c51b66
-ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
+ms.openlocfilehash: 0f2f7fa3cd908612e912a58d8c789369f11fcc52
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/07/2018
-ms.locfileid: "39606465"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40010376"
 ---
 # <a name="implements-c"></a>implements (C++)
 Określa interfejsach wysyłki, które muszą być składowymi typu klasy coclass IDL.  
   
 ## <a name="syntax"></a>Składnia  
   
-```  
+```cpp  
 [ implements(   
    interfaces={interfaces},  
    dispinterfaces={dispinterfaces}  
@@ -44,7 +44,7 @@ Określa interfejsach wysyłki, które muszą być składowymi typu klasy coclas
  Lista dispinterface, która będzie należeć do grupy IDL coclass rozdzielonych przecinkami. Metoda skrót do określania jednego dispinterface jest **implementuje (dispinterfaces** * = dispinterface_name ***)**.  
   
 ## <a name="remarks"></a>Uwagi  
- Domyślnie tylko-interfejsów COM, które są klasy bazowe klasy coclass są dodawane w klasie coclass IDL. **implementuje** wymusić inne interfejsy należeć coclass IDL.  
+ Domyślnie tylko interfejsów COM, które są podstawowej klasy `coclass` są dodawane w klasie coclass IDL. **implementuje** wymusić innych interfejsów IDL `coclass` elementów członkowskich.  
   
 ## <a name="requirements"></a>Wymagania  
   

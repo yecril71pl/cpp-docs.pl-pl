@@ -21,29 +21,29 @@ author: ghogen
 ms.author: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 20e4d7b067daedcbc5ce065c096e561dbf932ac1
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 1a3b8a47e70efa3268ae9b36eda311d267be2ded
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33856599"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40018932"
 ---
 # <a name="internationalization-strategies"></a>Strategie internacjonalizacji
-W zależności od systemów operacyjnych i rynkach masz kilka strategie internacjonalizacji:  
+W zależności od systemów operacyjnych i rynków masz kilka strategie internacjonalizacji:  
   
--   Aplikacja używa Unicode.  
+-   Twoja aplikacja używa Unicode.  
   
-     Korzystać z funkcji specyficznych dla Unicode i wszystkie znaki są 16 bitów dwubajtowe (mimo że można użyć znaków ANSI w niektórych części programu do celów specjalnych). Biblioteki wykonawcze języka C udostępnia funkcje, makra i typy danych dla programowania tylko Unicode. MFC jest całkowicie włączone Unicode.  
+     Możesz korzystać z funkcji specyficznych dla standardu Unicode i wszystkie znaki są szerokie 16 bitów (chociaż znaki ANSI w niektórych części programu służy do celów specjalnych). Biblioteki wykonawczej C zawiera funkcje, makr i typy danych do programowania tylko standardu Unicode. MFC jest w pełni obsługuje standard Unicode.  
   
--   Aplikacja używa MBCS i można je uruchomić na dowolnej platformie Win32.  
+-   Aplikacja używa MBCS i może działać na dowolnej platformie systemu Win32.  
   
-     Możesz użyć funkcji MBCS. Ciągi mogą zawierać znaki jednobajtowe i znaki dwubajtowe. Biblioteki wykonawcze języka C udostępnia funkcje, makra i typy danych dla programowania MBCS — tylko do. MFC jest całkowicie włączone MBCS.  
+     Możesz skorzystać z funkcji specyficznych dla MBCS. Ciągi może zawierać znaków jednobajtowych i dwubajtowych znaków. Biblioteki wykonawczej C zawiera funkcje, makr i typy danych, do MBCS — tylko do programowania. MFC jest MBCS — włączone w pełnym zakresie.  
   
--   Kod źródłowy aplikacji jest zapisywany przenośności pełną — kompilując symbolem **_unicode —** lub symbol **_MBCS** zdefiniowane, można utworzyć wersji, które należy użyć jednego. Aby uzyskać więcej informacji, zobacz [mapowania zwykłego tekstu w pliku Tchar.h](../text/generic-text-mappings-in-tchar-h.md).  
+-   Kod źródłowy aplikacji są zapisywane pełne przenośności — przez kompilację z symbolem `_UNICODE` lub symbol `_MBCS` zdefiniowane, możesz utworzyć różne wersje korzystających z jedną. Aby uzyskać więcej informacji, zobacz [mapowania typ ogólny-tekst w pliku Tchar.h](../text/generic-text-mappings-in-tchar-h.md).  
   
-     Można użyć pełni dostosowane C czasu wykonywania funkcji, makra i danych typów. Elastyczność MFC obsługuje jedną z następujących strategii.  
+     Można użyć w pełni przenośne C czasu wykonywania funkcji, makr i danych typów. Elastyczność MFC obsługuje jedną z następujących strategii.  
   
- W pozostałej części w tych tematach skupić się na pisanie kodu całkowicie przenośny, który może stworzyć jako Unicode lub MBCS.  
+ W pozostałej części tych tematów skoncentrować się na pisaniu całkowicie przenośny kod, który może stworzyć jako Unicode lub MBCS.  
   
 ## <a name="see-also"></a>Zobacz też  
  [Unicode i MBCS](../text/unicode-and-mbcs.md)   

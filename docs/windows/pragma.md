@@ -17,25 +17,25 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 5abd483fb5a680ac3dba4ec01fc4bc6ebfa09ef2
-ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
+ms.openlocfilehash: a9c9d347b319afc3ee84818e74029a98b1aa5484
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/07/2018
-ms.locfileid: "39602620"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40014302"
 ---
 # <a name="pragma"></a>pragma
 Emituje określonego ciągu w pliku .idl wygenerowany bez znaków cudzysłowu. 
   
 ## <a name="syntax"></a>Składnia  
   
-```  
+```cpp  
 [ pragma(  
    pragma_statement  
 ) ];  
 ```  
   
-#### <a name="parameters"></a>Parametry  
+### <a name="parameters"></a>Parametry  
  *pragma_statement*  
  Pragmę, której chcesz przejść do pliku .idl wygenerowany.  
   

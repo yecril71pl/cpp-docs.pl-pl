@@ -17,25 +17,25 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 96e316add17ff45425bd51a7e32b276b234c6906
-ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
+ms.openlocfilehash: cbb36012d9a249669e3029c79dcf9c35bcdfc7a4
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/07/2018
-ms.locfileid: "39606517"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40011581"
 ---
 # <a name="idlquote"></a>idl_quote
 Umożliwia użycie konstrukcji języka IDL, które nie są obsługiwane w bieżącej wersji programu Visual C++ i mieć przekazywane do pliku .idl wygenerowany.  
   
 ## <a name="syntax"></a>Składnia  
   
-```  
+```cpp  
 [ idl_quote(  
    text  
 ) ]  
 ```  
   
-#### <a name="parameters"></a>Parametry  
+### <a name="parameters"></a>Parametry  
  *Tekst*  
  Nazwa atrybutu, który ma kompilator języka Visual C++ do przejścia do pliku .idl wygenerowany bez zwracania błędów kompilatora.  
   
@@ -78,7 +78,7 @@ __interface IStatic{
 };  
 ```  
   
- Ten kod powoduje, że MYFLOT i MYDUB i *tekstu* wpis do umieszczenia w pliku .idl wygenerowany. *Nazwa* wymusza parametr *tekstu* umieścić przed niczego, który odwołuje się do *nazwa* w pliku .idl wygenerowany. *Zależności* parametru wymusza definicje list zależności można umieścić przed *tekstu* w pliku .idl wygenerowany.  
+ Ten kod powoduje `MYFLOT` i `MYDUB` i *tekstu* wpis do umieszczenia w pliku .idl wygenerowany. *Nazwa* wymusza parametr *tekstu* umieścić przed niczego, który odwołuje się do *nazwa* w pliku .idl wygenerowany. *Zależności* parametru wymusza definicje list zależności można umieścić przed *tekstu* w pliku .idl wygenerowany.  
   
 ## <a name="requirements"></a>Wymagania  
   

@@ -16,12 +16,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: c60edae6e4eaf7cef3841a1ac03dea414f298b6a
-ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
+ms.openlocfilehash: 9d7717c8449dd1a9271878aa51571180b85584d1
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39645996"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40017919"
 ---
 # <a name="string--c-component-extensions"></a>Ciąg (C++ Component Extensions)
 Obsługa kompilatora Visual C++ *ciągi*, które są obiektami, które reprezentują tekstu jako sekwencja znaków. Visual C++ obsługuje zmiennych ciągu, którego wartość jest niejawny, i wszystkie literały, którego wartością jest jawne ciągów w cudzysłowach.  
@@ -135,8 +135,6 @@ int main() {
 }  
 ```  
   
- **Output**  
-  
 ```Output  
 abcdef  
   
@@ -213,8 +211,6 @@ int main() {
 }  
 ```  
   
- **Output**  
-  
 ```Output  
 overloaded +(String ^ a, String ^ b)   
   
@@ -265,8 +261,6 @@ int main() {
    func3("string" + "string");   // returns System::String  
 }  
 ```  
-  
- **Output**  
   
 ```Output  
 char *  

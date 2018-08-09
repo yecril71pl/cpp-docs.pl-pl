@@ -17,19 +17,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 7ab88d2853f62932177858adb6bea3c991059f6f
-ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
+ms.openlocfilehash: 57444d41efffcb36e023c7055335159b69737a8a
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39650234"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40018806"
 ---
 # <a name="srwlocksharedtraitsgetinvalidvalue-method"></a>SRWLockSharedTraits::GetInvalidValue — Metoda
 Pobiera **srwlocksharedtraits —** obiekt, który zawsze jest nieprawidłowy.  
   
 ## <a name="syntax"></a>Składnia  
   
-```  
+```cpp  
 inline static Type GetInvalidValue();  
 ```  
   

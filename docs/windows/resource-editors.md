@@ -22,15 +22,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 03922c8ca9ba767991b3440e14e4928ab6c3b0ec
-ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
+ms.openlocfilehash: 2d1a59befd405e1412c2815694c40c8d24a99cec
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/07/2018
-ms.locfileid: "39604463"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40016999"
 ---
 # <a name="resource-editors"></a>Edytory zasobów
-Edytor zasobów to specjalne środowisko służące do tworzenia lub modyfikowania zasobów, które są zawarte w projekcie programu Visual Studio. Edytory zasobów programu Visual Studio udostępnianie techniki i interfejsy, które ułatwiają tworzenie i modyfikowanie zasobów aplikacji, szybkie i łatwe. Edytory zasobów umożliwiają [umożliwia wyświetlanie i edytowanie zasobów w edytorze odpowiednie](../windows/viewing-and-editing-resources-in-a-resource-editor.md) i [zasobów w wersji zapoznawczej](../windows/previewing-resources.md).  
+A **zasobów** edytora to specjalne środowisko służące do tworzenia lub modyfikowania zasobów, które są zawarte w projekcie programu Visual Studio. Edytory zasobów programu Visual Studio udostępnianie techniki i interfejsy, które ułatwiają tworzenie i modyfikowanie zasobów aplikacji, szybkie i łatwe. Edytory zasobów umożliwiają [umożliwia wyświetlanie i edytowanie zasobów w edytorze odpowiednie](../windows/viewing-and-editing-resources-in-a-resource-editor.md) i [zasobów w wersji zapoznawczej](../windows/previewing-resources.md).  
   
  Odpowiedniego edytora jest otwierany automatycznie podczas tworzenia lub otwierania zasobu.  
   

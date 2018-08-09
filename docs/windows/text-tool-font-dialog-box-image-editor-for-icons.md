@@ -17,23 +17,23 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: aa7f1a88627cc3547e6d6f4028de4abef73bf181
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 8a197be0032c4ad42574418a153bba079366e396
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33890438"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40015914"
 ---
 # <a name="text-tool-font-dialog-box-image-editor-for-icons"></a>Okno dialogowe czcionki narzędzi tekstowych (Edytor obrazów dla ikon)
-Określa ustawienia czcionki, korzystając z [okno dialogowe narzędzi tekstowych](../windows/text-tool-dialog-box-image-editor-for-icons.md) z [edytor obrazów](../windows/image-editor-for-icons.md).  
+Określa ustawienia czcionki, gdy używasz [okno dialogowe narzędzi tekstowych](../windows/text-tool-dialog-box-image-editor-for-icons.md) z [edytora obrazów](../windows/image-editor-for-icons.md).  
   
  Użyj tego okna dialogowego dla:  
   
 -   [Zmiana czcionki tekstu obrazu](../windows/changing-the-font-of-text-on-an-image-image-editor-for-icons.md)  
   
- Aby uzyskać dostęp do tego okna dialogowego, kliknij przycisk **czcionki** przycisk w oknie dialogowym narzędzia tekst.  
+ Aby otworzyć to okno dialogowe, kliknij przycisk **czcionki** znajdujący się w **narzędzie tekstowe** okno dialogowe.  
   
- **Czcionki**  
+ **Czcionka**  
  Wyświetla listę dostępnych czcionek.  
   
  **Styl czcionki**  
@@ -42,15 +42,14 @@ Określa ustawienia czcionki, korzystając z [okno dialogowe narzędzi tekstowyc
  **Rozmiar**  
  Wyświetla listę dostępnych rozmiarów określonej czcionki.  
   
- **próbki**  
+ **Próbki**  
  Pokazuje przykładowy wygląd tekstu przy użyciu ustawień określonej czcionki.  
   
  **Skrypt**  
- Wyświetla listę dostępny język skryptów dla określonej czcionki. Po wybraniu innego skryptu językowego zestaw znaków dla języka i udostępnieniu tworzenia dokumentów wielojęzycznych.  
+ Wyświetla listę dostępnych skryptów językowych dla określonej czcionki. Po wybraniu inny język skryptu, zestawu znaków języka i udostępnieniu do tworzenia dokumentów w wielu języków.  
   
 ## <a name="requirements"></a>Wymagania  
  Brak  
   
 ## <a name="see-also"></a>Zobacz też  
  [Edytowanie zasobów graficznych](../windows/editing-graphical-resources-image-editor-for-icons.md)
-

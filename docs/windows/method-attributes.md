@@ -16,12 +16,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 1850507b9d00ab717a2602d4e230968f5222f077
-ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
+ms.openlocfilehash: fd5f7bb72e1107fe561acef4d6cc3f3ecb87ed59
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/07/2018
-ms.locfileid: "39604284"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40016859"
 ---
 # <a name="method-attributes"></a>Atrybuty metody
 Następujące atrybuty dotyczą metod w klasie, klasa coclass lub interfejs.  
@@ -39,8 +39,8 @@ Następujące atrybuty dotyczą metod w klasie, klasa coclass lub interfejs.
 |[defaultbind](../windows/defaultbind.md)|Wskazuje pojedynczą, które można powiązać właściwość, która najlepiej reprezentuje obiekt.|  
 |[defaultcollelem](../windows/defaultcollelem.md)|Używane do optymalizacji kodu języka Visual Basic.|  
 |[displaybind](../windows/displaybind.md)|Wskazuje właściwość, która powinna być wyświetlana użytkownikowi jak możliwa do powiązania.|  
-|[helpcontext](../windows/helpcontext.md)|Określa identyfikator kontekstu, który pozwala użytkownikowi oglądać informacje o tym elemencie w pliku pomocy.|  
-|[helpfile](../windows/helpfile.md)|Określa nazwę pliku pomocy dla biblioteki typów.|  
+|[helpcontext](../windows/helpcontext.md)|Określa identyfikator kontekstu, który pozwala użytkownikowi oglądać informacje o tym elemencie w **pomocy** pliku.|  
+|[helpfile](../windows/helpfile.md)|Ustawia nazwę **pomocy** pliku biblioteki typów.|  
 |[helpstring](../windows/helpstring.md)|Określa ciąg znaków, który jest używany do opisania elementu, do której jest stosowany.|  
 |[helpstringcontext](../windows/helpstringcontext.md)|Określa identyfikator tematu pomocy w pliku hlp lub chm.|  
 |[helpstringdll](../windows/helpstringdll.md)|Określa nazwę biblioteki DLL, aby wykonać wyszukiwanie ciągu dokumentu (lokalizacja).|  

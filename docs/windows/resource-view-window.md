@@ -18,12 +18,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: bf2c5cb434b07c9323594448a25da7251010bbad
-ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
+ms.openlocfilehash: 8b936b1014c2dd6640f64ca929628f6f0a74dc79
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/07/2018
-ms.locfileid: "39608312"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40012332"
 ---
 # <a name="resource-view-window"></a>Okno Widok zasobów
 > [!NOTE]
@@ -35,9 +35,9 @@ ms.locfileid: "39608312"
 >  Jeśli projekt nie zawiera jeszcze pliku .rc, zobacz [tworzenia nowego pliku skryptu zasobów](../windows/how-to-create-a-resource-script-file.md).  
   
 > [!TIP]
->  Możesz kliknąć prawym przyciskiem myszy w oknie Widok zasobów do uruchomienia poleceń menu skrótów. Możesz także dwukrotnie kliknąć na pasku tytułu, aby zadokować lub oddokować okno. Kliknij prawym przyciskiem myszy na pasku tytułu zapewni dodatkowe polecenia, które pozwalają na kontrolę zachowania okna. Aby uzyskać więcej informacji, zobacz [zarządzania Windows](/visualstudio/ide/customizing-window-layouts-in-visual-studio).  
+>  Kliknięciu prawym przyciskiem myszy **widok zasobów** okna do uruchomienia poleceń menu skrótów. Możesz także dwukrotnie kliknąć na pasku tytułu, aby zadokować lub oddokować okno. Kliknij prawym przyciskiem myszy na pasku tytułu zapewni dodatkowe polecenia, które pozwalają na kontrolę zachowania okna. Aby uzyskać więcej informacji, zobacz [zarządzania Windows](/visualstudio/ide/customizing-window-layouts-in-visual-studio).  
   
-#### <a name="to-open-the-resource-view-window"></a>Aby otworzyć okno Widok zasobów  
+### <a name="to-open-the-resource-view-window"></a>Aby otworzyć okno Widok zasobów  
   
 1.  Kliknij przycisk **widok zasobów** na **widoku** menu.  
   

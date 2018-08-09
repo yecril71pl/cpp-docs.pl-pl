@@ -18,12 +18,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 8fd2160a2e9eef9165aea835d093978fec35e5fd
-ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
+ms.openlocfilehash: 42629df8eeda1bbd2bda2057dfee619b52928cba
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/07/2018
-ms.locfileid: "39608270"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40015589"
 ---
 # <a name="selecting-multiple-controls"></a>Wybieranie wielu formantów
 ### <a name="to-select-multiple-controls"></a>Aby wybrać wiele formantów  
@@ -47,7 +47,7 @@ ms.locfileid: "39608270"
 1.  Z grupą wybrano kontrolki, naciśnij i przytrzymaj **Shift** klucza, a następnie kliknij kontrolkę, która do usuwania lub Dodaj do istniejącego zaznaczenia.  
   
     > [!NOTE]
-    >  Przytrzymując naciśnięty klawisz CTRL i klikając kontrolki wyboru spowoduje, że przez formantu dominującego w ramach tego zaznaczenia. Aby uzyskać więcej informacji, zobacz [Określanie formantu dominującego](../windows/specifying-the-dominant-control.md).  
+    >  Przytrzymanie **Ctrl** klucz i klikając kontrolki wyboru spowoduje, że, które kontrolują formantu dominującego w ramach tego zaznaczenia. Aby uzyskać więcej informacji, zobacz [Określanie formantu dominującego](../windows/specifying-the-dominant-control.md).  
   
  Aby uzyskać informacje na temat dodawania zasobów do projektów zarządzanych, zobacz [zasoby w aplikacjach pulpitu](/dotnet/framework/resources/index) w *przewodniku dewelopera .NET Framework*. Aby uzyskać informacji na temat ręcznego dodawania plików zasobów do projektów zarządzanych, uzyskiwania dostępu do zasobów, wyświetlania statycznych zasobów i przypisywania ciągów zasobów do właściwości, zobacz [Creating Resource Files dla aplikacji klasycznych](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Aby uzyskać informacji na temat globalizacja i lokalizacja zasobów w aplikacjach zarządzanych, zobacz [Globalizing i lokalizowanie aplikacji programu .NET Framework](/dotnet/standard/globalization-localization/index).  
   

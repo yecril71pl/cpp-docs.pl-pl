@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 53225576941afff3a94c3dd276feb980e2bd6562
-ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
+ms.openlocfilehash: 02293fce154fa9c4c98c583de02e8967f4d3957b
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39644859"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40020216"
 ---
 # <a name="selecting-multiple-menus-or-menu-commands"></a>Zaznaczanie kilku menu lub poleceń menu
 Możesz wybrać wiele nazw menu lub poleceń menu, aby wykonywały operacje zbiorcze, takie jak usuwanie lub zmiana właściwości.  
@@ -34,7 +34,6 @@ Możesz wybrać wiele nazw menu lub poleceń menu, aby wykonywały operacje zbio
  Aby uzyskać informacje na temat dodawania zasobów do projektów zarządzanych, zobacz [zasoby w aplikacjach pulpitu](/dotnet/framework/resources/index) w *przewodniku dewelopera .NET Framework*.  
   
 ## <a name="requirements"></a>Wymagania  
-  
  Win32  
   
 ## <a name="see-also"></a>Zobacz też  

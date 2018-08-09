@@ -17,19 +17,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: d0ebf8efb556aef4fbd5048fa1930f2d98a01410
-ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
+ms.openlocfilehash: 8fb5fa5288829ef51bf818ad8b7cf3b46edb59bf
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/07/2018
-ms.locfileid: "39605727"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40014289"
 ---
 # <a name="mixin-structure"></a>MixIn — Struktura
 Zapewnia, że klasy środowiska uruchomieniowego pochodzi od klasy interfejsów Windows Runtime, jeśli istnieje, a następnie klasycznych interfejsów COM.  
   
 ## <a name="syntax"></a>Składnia  
   
-```  
+```cpp  
 template<  
    typename Derived,  
    typename MixInType,  

@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 98bd73d2c067e6d5bbb4425782de594bbaa47bc1
-ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
+ms.openlocfilehash: adcec3f4a531a6c48e0995468994900124746e4b
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/07/2018
-ms.locfileid: "39606627"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40015134"
 ---
 # <a name="runtimeclassgettrustlevel-method"></a>RuntimeClass::GetTrustLevel — Metoda
 
@@ -37,7 +37,6 @@ STDMETHOD(GetTrustLevel)(
 ```
 
 ### <a name="parameters"></a>Parametry
-
 *trustLvl*  
 Po zakończeniu tej operacji, bieżący poziom zaufania **RuntimeClass** obiektu.
 
@@ -47,7 +46,7 @@ Zawsze S_OK.
 
 ## <a name="remarks"></a>Uwagi
 
-Błąd potwierdzenia jest emitowane, jeśli &#95; &#95;WRL_STRICT&#95; &#95; lub &#95; &#95;WRL_FORCE_INSPECTABLE_CLASS_MACRO&#95; &#95; nie jest zdefiniowany.
+Błąd potwierdzenia jest emitowane, jeśli `__WRL_STRICT__` lub `__WRL_FORCE_INSPECTABLE_CLASS_MACRO__` nie jest zdefiniowany.
 
 ## <a name="requirements"></a>Wymagania
 

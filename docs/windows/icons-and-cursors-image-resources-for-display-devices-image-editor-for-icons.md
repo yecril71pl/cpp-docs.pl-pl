@@ -26,22 +26,22 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 384db46d495b342d40dd4f7588583c5b6048810c
-ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
+ms.openlocfilehash: 9c00d4da36df4672c8e701c0a41c88e5014eeae8
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/07/2018
-ms.locfileid: "39604619"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40017837"
 ---
 # <a name="icons-and-cursors-image-resources-for-display-devices-image-editor-for-icons"></a>Ikony i kursory: zasoby obrazów do wyświetlania na urządzeniach (Edytor obrazów dla ikon)
-Ikony i kursory są zasobów graficznych, które zawiera wiele obrazów o różnych wielkościach i schematów kolorów dla różnych rodzajów wyświetlania na urządzeniach. Ponadto kursor ma "punkt aktywny," w lokalizacji Windows używa do śledzenia jego położenie. Ikony i kursory są tworzone i edytować za pomocą edytora obrazów, jak mapy bitowe i inne obrazy.  
+Ikony i kursory są zasobów graficznych, które zawiera wiele obrazów o różnych wielkościach i schematów kolorów dla różnych rodzajów wyświetlania na urządzeniach. Ponadto kursor ma "punkt aktywny," w lokalizacji Windows używa do śledzenia jego położenie. Ikony i kursory są tworzone oraz edytowane za pomocą **obraz** edytora, jak mapy bitowe i inne obrazy.  
   
- Po utworzeniu kursor lub ikonę nowego edytora obrazów najpierw tworzy obraz standardowego typu. Obraz, który początkowo jest wypełniony kolorem ekranu (przezroczyste). Jeśli obraz kursora, punkt aktywny jest początkowo lewego górnego rogu (współrzędne 0,0).  
+ Po utworzeniu kursor, lub Nowa ikona **obraz** edytora najpierw tworzy obraz standardowego typu. Obraz, który początkowo jest wypełniony kolorem ekranu (przezroczyste). Jeśli obraz kursora, punkt aktywny jest początkowo lewego górnego rogu (współrzędne 0,0).  
   
- Domyślnie edytor obrazów obsługuje tworzenie dodatkowych obrazów dla urządzeń z poniższą tabelą. Można utworzyć obrazy w przypadku innych urządzeń, wpisując parametrów szerokości, wysokości i liczba kolorów w [okno dialogowe obrazu niestandardowego](custom-image-dialog-box-image-editor-for-icons.md).  
+ Domyślnie **obraz** Edytor obsługuje tworzenie dodatkowych obrazów dla urządzeń z poniższą tabelą. Można utworzyć obrazy w przypadku innych urządzeń, wpisując parametrów szerokości, wysokości i liczba kolorów w [okno dialogowe obrazu niestandardowego](custom-image-dialog-box-image-editor-for-icons.md).  
   
 > [!NOTE]
->  Korzystając z edytora obrazów, można wyświetlać obrazy 32-bitowe, ale nie można ich edytować.  
+>  Za pomocą **edytora obrazów**, można wyświetlać obrazy 32-bitowe, ale nie można ich edytować.  
   
 |Kolor|Szerokość (w pikselach)|Wysokość (w pikselach)|  
 |-----------|----------------------|-----------------------|  

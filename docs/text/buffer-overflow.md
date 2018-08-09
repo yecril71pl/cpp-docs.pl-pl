@@ -16,15 +16,15 @@ author: ghogen
 ms.author: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 13d01460e7ed9cb95d92303d82ea136803737331
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 9bb362be360986371200c8cde292b3fff5acd7cd
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33854655"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40020190"
 ---
 # <a name="buffer-overflow"></a>Przepełnienie buforu
-Różne rozmiary znaków może spowodować problemy, po wprowadzeniu znaków w buforze. Należy rozważyć następujący kod, który kopiuje znaków z ciągu, `sz`, w buforze, `rgch`:  
+Różne rozmiary znaków może powodować problemy, znaki są umieszczane w buforze. Należy wziąć pod uwagę następujący kod, który kopiuje znaków z ciągu, `sz`, do buforu `rgch`:  
   
 ```  
 cb = 0;  
@@ -32,7 +32,7 @@ while( cb < sizeof( rgch ) )
     rgch[ cb++ ] = *sz++;  
 ```  
   
- Pytanie jest: został ostatniego bajtu skopiowane bajtu? Następujące nie rozwiązuje problem, ponieważ potencjalnie może się przelewać buforu:  
+ Pytanie: był ostatni bajt skopiowane bajt wiodący? Następujące nie rozwiązuje problem, ponieważ go może potencjalnie przepełnienie buforu:  
   
 ```  
 cb = 0;  
@@ -44,7 +44,7 @@ while( cb < sizeof( rgch ) )
 }  
 ```  
   
- `_mbccpy` Wywołania próbuje wykonać poprawną czynność — skopiować pełną znak, czy jest 1 lub 2 bajty. Ale nie przyjmuje pod uwagę, że ostatni znak skopiowane może się nie zmieścić buforu Jeśli znak jest 2 bajty szerokości. Właściwym rozwiązaniem jest:  
+ `_mbccpy` Wywołanie podejmuje próbę wykonania czynności w prawidłowy sposób — kopiowanie znak pełne, czy jest to 1 lub 2 bajtów. Ale nie przyjmuje uwagę, że ostatni znak kopiowany może nie spełniać buforu, jeśli znak jest szeroki 2 bajty. Jakie rozwiązanie będzie odpowiednie jest:  
   
 ```  
 cb = 0;  
@@ -56,7 +56,7 @@ while( (cb + _mbclen( sz )) <= sizeof( rgch ) )
 }  
 ```  
   
- Ten kod testów dla przepełnienie buforu możliwe w pętli przetestować, za pomocą `_mbclen` do testowania rozmiar bieżący znak wskazywana przez `sz`. Poprzez wywołanie `_mbsnbcpy` funkcji, można zastąpić kod w `while` pętli z jednego wiersza kodu. Na przykład:  
+ Ten kod sprawdza przepełnienie buforu możliwe w pętli przetestować, za pomocą `_mbclen` rozmiar bieżący znak wskazywany przez `sz`. Poprzez wywołanie `_mbsnbcpy` funkcji, można zastąpić kod w **podczas** pętli za pomocą jednego wiersza kodu. Na przykład:  
   
 ```  
 _mbsnbcpy( rgch, sz, sizeof( rgch ) );  

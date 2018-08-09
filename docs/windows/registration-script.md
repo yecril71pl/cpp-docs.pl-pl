@@ -17,25 +17,25 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 50029cea9e5bd7bf3a5032a2190fc71d4e893b5f
-ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
+ms.openlocfilehash: 95926c7e65210b7eaf366c0fe2a9df44fa9661d7
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/07/2018
-ms.locfileid: "39607676"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40016681"
 ---
 # <a name="registrationscript"></a>registration_script
 Wykonuje określoną rejestrację niestandardowego skryptu.  
   
 ## <a name="syntax"></a>Składnia  
   
-```  
+```cpp  
 [ registration_script(   
    script   
 ) ]  
 ```  
   
-#### <a name="parameters"></a>Parametry  
+### <a name="parameters"></a>Parametry  
  *skrypt*  
  Pełna ścieżka do pliku skryptu (.rgs) niestandardową rejestrację. Wartość **Brak**, takich jak `script = "none"`, wskazuje, czy klasa coclass nie ma żadnych wymagań dotyczących rejestracji.  
   

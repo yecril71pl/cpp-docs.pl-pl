@@ -16,17 +16,17 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: dd65b4294443de9f367ecc5a4ea64b524aabb4a2
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 068fcf9e4cfb45bb3d20d54df69d5b4bceb7cd53
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33882063"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40018497"
 ---
 # <a name="mfc-predefined-symbols"></a>Wstępnie zdefiniowane symbole MFC
-Projekty MFC, zawsze należy uwzględniać kilka pliki nagłówkowe, które obsługują system windows. Są one dodawane za pośrednictwem # instrukcji include w pliku StdAfx.h:  
+Projekty MFC zawsze zawierać kilka plików nagłówkowych, które obsługują system windows. Dodaje się je za pośrednictwem `#include` instrukcji w `StdAfx.h` pliku:  
   
-```  
+```cpp  
 #include <afxwin.h>      //MFC core and standard components  
 #include <afxext.h>      //MFC extensions  
 #include <afxdisp.h      //MFC automation classes  
@@ -34,7 +34,7 @@ Projekty MFC, zawsze należy uwzględniać kilka pliki nagłówkowe, które obs�
 #include <afxcmn.h>      //MFC support for Windows common controls.  
 ```  
   
- Pliki nagłówkowe zawierać symbolu wartości identyfikatorów dla wartości wspólnych MFC. Te symbole są dostępne tylko podczas pracy w projekcie typu MFC. Należy pamiętać, prefiks AFX_ następuje prefiksy nazw standardowego symbolu.  
+ Pliki nagłówków obejmują wartości Identyfikatora symboli dla wartości wspólnych MFC. Te symbole są dostępne tylko w przypadku, gdy użytkownik pracuje w projekcie MFC. Należy pamiętać, prefiks AFX_ następuje prefiksy nazw standardowych symboli.  
   
 |||  
 |-|-|  
@@ -221,5 +221,5 @@ Projekty MFC, zawsze należy uwzględniać kilka pliki nagłówkowe, które obs�
  MFC  
   
 ## <a name="see-also"></a>Zobacz też  
- [Wstępnie zdefiniowane symbole identyfikatorów](../windows/predefined-symbol-ids.md)   
+ [Wstępnie zdefiniowane identyfikatory symboli](../windows/predefined-symbol-ids.md)   
  [Symbole: identyfikatory zasobów](../windows/symbols-resource-identifiers.md)

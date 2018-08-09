@@ -18,12 +18,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 74b4ea6b82de65f691d5d0350e161725625e4e1f
-ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
+ms.openlocfilehash: cda56029b94d2c4be55ce133d96adb76663491ae
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/07/2018
-ms.locfileid: "39604489"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40012836"
 ---
 # <a name="interface-class--c-component-extensions"></a>interface class (C++ Component Extensions)
 Deklaruje interfejsu.  Informacje na temat interfejsy macierzyste można zobaczyć [__interface](../cpp/interface.md).  
@@ -32,14 +32,13 @@ Deklaruje interfejsu.  Informacje na temat interfejsy macierzyste można zobaczy
 
 ### <a name="syntax"></a>Składnia  
   
-```  
+```cpp  
 interface_access  
 interface class  
  name :  inherit_accessbase_interface{};interface_accessinterface structname :  inherit_accessbase_interface{};  
 ```  
   
 ### <a name="parameters"></a>Parametry  
-  
  *interface_access*  
  Dostępność interfejs spoza zestawu.  Możliwe wartości to **publicznych** i **prywatnej**.  **prywatne** jest ustawieniem domyślnym. Zagnieżdżone interfejsy nie mogą mieć *interface_access* specyfikator.  
   
@@ -75,7 +74,7 @@ interface class
  W środowisku deweloperskim, możesz uzyskać Pomoc F1 na tych słów kluczowych, wyróżniając słowo kluczowe (`interface class`, na przykład) i naciskając klawisz F1.  
   
 ## <a name="windows-runtime"></a>Środowisko wykonawcze systemu Windows  
- **Uwagi**  
+### <a name="remarks"></a>Uwagi 
   
  (Nie ma żadnych uwag dla tej funkcji języka, które dotyczą tylko środowiska uruchomieniowego Windows).  
   
@@ -83,7 +82,7 @@ interface class
  — Opcja kompilatora: `/ZW`  
   
 ## <a name="common-language-runtime"></a>środowiska uruchomieniowe w trakcie wykonania 
- **Uwagi**  
+### <a name="remarks"></a>Uwagi
   
  (Nie ma żadnych uwag dla tej funkcji języka, które dotyczą tylko środowiska uruchomieniowego języka wspólnego).  
   
@@ -183,8 +182,6 @@ int main() {
    hi->Function_1();  
 }  
 ```  
-  
- **Output**  
   
 ```Output  
 in Function_3  

@@ -17,19 +17,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: d36355c9f64f9f5c827ef8c4d5b3cb6a77d17b65
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 831f1fbcb2da205fa08286a1fbbbf414e66075d4
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33876839"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40019933"
 ---
 # <a name="moduletype-enumeration"></a>ModuleType — Wyliczenie
-Określa, czy moduł powinien obsługiwać server wewnątrzprocesowe lub serwer poza procesem.  
+Określa, czy moduł powinien obsługiwać wewnątrz procesowego lub serwera spoza procesu.  
   
 ## <a name="syntax"></a>Składnia  
   
-```  
+```cpp  
 enum ModuleType;  
 ```  
   
@@ -39,16 +39,16 @@ enum ModuleType;
   
 |Nazwa|Opis|  
 |----------|-----------------|  
-|`InProc`|W procesie serwera.|  
-|`OutOfProc`|Serwer poza procesem.|  
-|`DisableCaching`|Wyłącz mechanizm buforowania dla modułu.|  
+|`InProc`|Serwer usługi w trakcie.|  
+|`OutOfProc`|Serwer usługi poza procesem.|  
+|`DisableCaching`|Wyłącz mechanizm buforowania w Module.|  
 |`InProcDisableCaching`|Kombinacja `InProc` i `DisableCaching`.|  
 |`OutOfProcDisableCaching`|Kombinacja `OutOfProc` i `DisableCaching`.|  
   
 ## <a name="requirements"></a>Wymagania  
  **Nagłówek:** module.h  
   
- **Namespace:** Microsoft::wrl —  
+ **Namespace:** Microsoft::WRL  
   
 ## <a name="see-also"></a>Zobacz też  
  [Microsoft::WRL, przestrzeń nazw](../windows/microsoft-wrl-namespace.md)

@@ -1,5 +1,5 @@
 ---
-title: Znak przypisania | Dokumentacja firmy Microsoft
+title: Przypisania znaków | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,15 +15,15 @@ author: ghogen
 ms.author: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e403a619fc4c900aca51503862ff8f9dc315c2a3
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 084cfd69a3742db10e09e9d97974a0666fa31a47
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33856700"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40010415"
 ---
 # <a name="character-assignment"></a>Przypisanie znaku
-Rozważmy następujący przykład, w którym `while` pętli skanował ciąg, kopiowanie wszystkie znaki oprócz "X" w innym ciągu:  
+Rozważmy następujący przykład, w którym **podczas** pętli skanuje ciągu, kopiując wszystkie znaki z wyjątkiem "X" do innego ciągu:  
   
 ```  
 while( *sz2 )  
@@ -35,7 +35,7 @@ while( *sz2 )
 }  
 ```  
   
- Kod kopiuje bajtów w `sz2` w lokalizacji wskazywanej przez `sz1`, następnie zwiększa `sz1` do odbierania następny bajt. Jeśli jednak następny znak w `sz2` jest znaków dwubajtowych, przypisanie do `sz1` kopiuje tylko pierwszy bajt. W poniższym kodzie użyto przenośnych funkcja bezpiecznie skopiować znak, a inny zwiększyć `sz1` i `sz2` prawidłowo:  
+ Kod kopiuje bajt `sz2` w lokalizacji wskazywanej przez `sz1`, następnie zwiększa `sz1` do odbierania następny bajt. Ale jeśli następny znak w `sz2` jest znak dwubajtowy, przypisanie do `sz1` kopiuje tylko pierwszy bajt. W poniższym kodzie użyto funkcji przenośny, aby bezpiecznie skopiować znak i innej, aby zwiększyć `sz1` i `sz2` prawidłowo:  
   
 ```  
 while( *sz2 )  

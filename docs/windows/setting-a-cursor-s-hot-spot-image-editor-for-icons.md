@@ -18,15 +18,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 5d4c00ef825274fc9db6c71522cdb789e07c3b05
-ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
+ms.openlocfilehash: 923ff59044b57d22636c9997e6eb7268ade7860e
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39648668"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40017142"
 ---
 # <a name="setting-a-cursor39s-hot-spot-image-editor-for-icons"></a>Ustawienie kursora&#39;s aktywny (edytor obrazów dla ikon)
-Punkt aktywny o [kursora](../windows/icons-and-cursors-image-resources-for-display-devices-image-editor-for-icons.md) to punkt, do której Windows odwołuje się w śledzeniu pozycja kursora. Domyślnie ustawiono punkt aktywny w lewym górnym rogu kursora (współrzędne 0,0). Właściwości punktu aktywnego w [okno właściwości](/visualstudio/ide/reference/properties-window) zawiera współrzędne punktu aktywnego.  
+Punkt aktywny o [kursora](../windows/icons-and-cursors-image-resources-for-display-devices-image-editor-for-icons.md) to punkt, do której Windows odwołuje się w śledzeniu pozycja kursora. Domyślnie ustawiono punkt aktywny w lewym górnym rogu kursora (współrzędne 0,0). **Informacji o hotspotach** właściwość [okno właściwości](/visualstudio/ide/reference/properties-window) zawiera współrzędne punktu aktywnego.  
   
 ### <a name="to-set-a-cursors-hot-spot"></a>Aby ustawić aktywnego punktu kursora  
   
@@ -42,7 +42,6 @@ Punkt aktywny o [kursora](../windows/icons-and-cursors-image-resources-for-displ
  Aby uzyskać informacje na temat dodawania zasobów do projektów zarządzanych, zobacz [zasoby w aplikacjach pulpitu](/dotnet/framework/resources/index) w *przewodniku dewelopera .NET Framework*. Aby uzyskać informacji na temat ręcznego dodawania plików zasobów do projektów zarządzanych, uzyskiwania dostępu do zasobów, wyświetlania statycznych zasobów i przypisywania ciągów zasobów do właściwości, zobacz [Creating Resource Files dla aplikacji klasycznych](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Aby uzyskać informacji na temat globalizacja i lokalizacja zasobów w aplikacjach zarządzanych, zobacz [Globalizing i lokalizowanie aplikacji programu .NET Framework](/dotnet/standard/globalization-localization/index).  
   
 ## <a name="requirements"></a>Wymagania  
-  
  Brak  
   
 ## <a name="see-also"></a>Zobacz też  

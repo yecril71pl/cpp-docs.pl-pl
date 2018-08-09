@@ -18,12 +18,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 108447dc3e18be84bf2875c49adb600ed9636dc4
-ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
+ms.openlocfilehash: e9dc6b75cfa408ececeb533fcd75dbad0f124fda
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/07/2018
-ms.locfileid: "39605551"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40018832"
 ---
 # <a name="selecting-foreground-or-background-colors-image-editor-for-icons"></a>Ustawianie pierwszego planu lub kolorów tła (Edytor obrazów dla ikon)
 Z wyjątkiem **Gumka**, narzędzia na **edytora obrazów** rysowania narzędzi bieżącym kolorem pierwszego planu i tła po naciśnięciu przycisku myszy w lewo lub w prawo, odpowiednio.  
@@ -39,7 +39,6 @@ Z wyjątkiem **Gumka**, narzędzia na **edytora obrazów** rysowania narzędzi b
  Aby uzyskać informacje na temat dodawania zasobów do projektów zarządzanych, zobacz [zasoby w aplikacjach pulpitu](/dotnet/framework/resources/index) w *przewodniku dewelopera .NET Framework*.  
   
 ## <a name="requirements"></a>Wymagania  
-  
  Brak  
   
 ## <a name="see-also"></a>Zobacz też  

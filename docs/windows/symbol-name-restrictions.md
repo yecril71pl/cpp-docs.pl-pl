@@ -1,5 +1,5 @@
 ---
-title: Ograniczenia nazw symboli | Dokumentacja firmy Microsoft
+title: Ograniczenia dotyczące nazwy symbolu | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -19,41 +19,39 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 59ee6ce257609c4761e43630a66de9cb9b996269
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 30852b22c9ff4cc74c8f0c57b3a5ed9d79a34838
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33892338"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40011451"
 ---
 # <a name="symbol-name-restrictions"></a>Ograniczenia dotyczące nazwy symbolu
 Ograniczenia dotyczące nazwy symbolu są następujące:  
   
--   Wszystkie [symbole](../windows/symbols-resource-identifiers.md) musi być unikatowa w zakresie aplikacji. Zapobiega to konflikt definicje symbolu w plikach nagłówka.  
+-   Wszystkie [symbole](../windows/symbols-resource-identifiers.md) musi być unikatowa w zakresie aplikacji. Zapobiega to sprzecznych definicji symbolu w plikach nagłówkowych.  
   
--   Prawidłowe znaki dla nazwy symbolu to A-Z, a-z, 0-9 i znaki podkreślenia (_).  
+-   Nieprawidłowe znaki dla nazwy symbolu to A-Z, a – z, 0-9 i znaki podkreślenia (_).  
   
--   Nazwy symboli nie może rozpoczynać się cyfrą i mogą zawierać maksymalnie 247 znaków.  
+-   Nazwy symboli nie może zaczynać się liczbą i są ograniczone do 247 znaków.  
   
 -   Nazwy symboli nie może zawierać spacji.  
   
--   Nazwy symboli nie jest uwzględniana, ale jest zachowane w przypadku pierwszego definicji symbolu. Plik nagłówka, który definiuje symbole jest używany przez Edytor kompilatora zasobów i programach języka C++ w odwołaniu zasoby zdefiniowane w pliku zasobu. Dla dwóch nazw symboli który różnić tylko w przypadku, program w języku C++ zostanie wyświetlony dwa oddzielne symbole podczas kompilatora/Edytor zasobów zobaczą obie nazwy jako odnoszące się do jednego pojedynczego symbolu.  
+-   Nazwy symboli nie jest uwzględniana wielkość liter, ale są zachowywane w przypadku pierwszej definicji symbolu. Plik nagłówka, który definiuje symbole jest używany przez kompilator/Edytor zasobów i C++ programy do odwoływania się zasoby zdefiniowane w pliku zasobów. Dwie nazwy symbolu które różnią się, tylko w przypadku, program w języku C++ zostanie wyświetlony dwa oddzielne symbole, gdy kompilator/Edytor zasobów zostanie wyświetlony obie nazwy jako odnoszące się do jednego pojedynczego symbolu.  
   
     > [!NOTE]
-    >  Jeśli nie wykonuj schemat nazwę standardowego symbolu (ID*_[keyword]) opisane poniżej, a nazwę symbolu stanie się być takie same jak słowa kluczowego znane kompilator skryptu zasobu w trakcie tworzenia pliku skryptu zasobu spowoduje pozornie losowe błędu Generowanie, który jest trudne do diagnozowania. Aby tego uniknąć, należy stosować się do standardowego schemat nazewnictwa.  
+    >  Jeśli nie podlegają schemat nazwę standardowego symbolu (ID*_[keyword]) opisane poniżej, a Twoja nazwa symbolu stanie się być taka sama jak słowo kluczowe wiadomo, że kompilator skryptu zasobów, próba skompilowania pliku skryptu zasobu spowoduje błąd pozornie losowe Generowanie, który jest trudny do zdiagnozowania. Aby tego uniknąć, należy przestrzegać standardowych schemat nazewnictwa.  
   
- Nazwy symboli ma opisową prefiksy, wskazujące rodzaj zasobu lub obiekt, który reprezentuje. Tymi prefiksami opisową zaczynać się od identyfikatora kombinacja tekstu Biblioteka Microsoft Foundation Class (MFC) używa konwencji nazewnictwa symbol pokazano w poniższej tabeli.  
+ Nazwy symboli ma opisowe prefiksy, które wskazują rodzaj zasobu lub obiektów, które reprezentują. Prefiksy te opisowy zaczynają się od identyfikatora kombinację tekstu Biblioteka Microsoft Foundation Class (MFC) używa konwencji nazewnictwa symbol pokazano w poniższej tabeli.  
   
 |Kategoria|Prefiks|Zastosowanie|  
 |--------------|------------|---------|  
-|Zasoby|IDR_ IDD_ IDC_ IDI_ IDB_|Akceleratora lub menu (i skojarzone lub niestandardowych zasobów) — okno dialogowe mapy bitowej ikona kursora|  
+|Resources|IDR_ IDD_ IDC_ IDI_ IDB_|Akcelerator lub menu (i skojarzone lub niestandardowe zasoby) okno dialogowe mapę bitową ikony kursora|  
 |Elementy menu|ID_|Element menu|  
 |Polecenia|ID_|Polecenie|  
-|Formanty i okno podrzędne|IDC_|Formant|  
-|Ciągi|IDS_|Ciąg w tabeli ciągów|  
+|Formanty i okien podrzędnych|IDC_|Formant|  
+|Ciągi|IDS_|Parametry w tabeli ciągów|  
 |MFC|AFX_|Zarezerwowane dla wstępnie zdefiniowane symbole MFC|  
-  
-
   
 ## <a name="requirements"></a>Wymagania  
  Win32  

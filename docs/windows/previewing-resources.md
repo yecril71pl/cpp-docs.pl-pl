@@ -20,12 +20,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 0ff41dd0aad30382eb5229679054a74526652737
-ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
+ms.openlocfilehash: 8393988bf6d831c8b9718d6685785d523303f3fa
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/07/2018
-ms.locfileid: "39605022"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40016408"
 ---
 # <a name="previewing-resources"></a>Wyświetlanie podglądu zasobów
 Wyświetlanie podglądu zasobów służy do wyświetlania zasobów graficznych bez ich otwierania. Podgląd jest również przydatne dla plików wykonywalnych, po ich skompilowany, ponieważ zmiany numery identyfikatorów zasobów. Ponieważ te identyfikatory numeryczne często nie zapewniają wystarczających informacji, wyświetlanie podglądu zasobów pomaga szybko określić ich.  
@@ -48,9 +48,10 @@ Wyświetlanie podglądu zasobów służy do wyświetlania zasobów graficznych b
   
 ### <a name="to-preview-resources"></a>Aby wyświetlić podgląd zasobów  
   
-1.  W [widok zasobów](../windows/resource-view-window.md) lub okno dokumentu, wybierz zasób, na przykład IDD_ABOUTBOX.  
+1.  W [widok zasobów](../windows/resource-view-window.md) lub okno dokumentu, wybierz zasób, na przykład **IDD_ABOUTBOX**.  
   
-     **Uwaga** Jeśli projekt nie zawiera jeszcze pliku .rc, zobacz [tworzenia nowego pliku skryptu zasobów](../windows/how-to-create-a-resource-script-file.md).  
+     > [!NOTE]
+     > Jeśli projekt nie zawiera jeszcze pliku .rc, zobacz [tworzenia nowego pliku skryptu zasobów](../windows/how-to-create-a-resource-script-file.md).  
   
 2.  W [okno właściwości](/visualstudio/ide/reference/properties-window), kliknij przycisk **stron właściwości** przycisku.  
   
@@ -58,12 +59,11 @@ Wyświetlanie podglądu zasobów służy do wyświetlania zasobów graficznych b
   
 3.  Na **widoku** menu, kliknij przycisk **stron właściwości**.  
   
-     Strona właściwości zasobu zostanie otwarty w wersji zapoznawczej tego zasobu. Można następnie używać w górę i w dół klawiszy strzałek, aby nawigowanie formantu drzewa w widoku zasobu lub okno dokumentu. Strona właściwości będą pozostają otwarte i Pokaż dowolnego zasobu, który ma fokus i jest w stanie można wyświetlić podglądu.  
+     **Strona właściwości** zasobu zostanie otwarty w wersji zapoznawczej tego zasobu. Następnie można użyć **się** i **dół** klawiszy strzałek, aby przejść w drzewie w kontrolce **widok zasobów** lub okno dokumentu. **Strona właściwości** będzie pozostają otwarte i Pokaż dowolnego zasobu, który ma fokus i jest w stanie można wyświetlić podglądu.  
   
  Aby uzyskać informacje na temat dodawania zasobów do projektów zarządzanych, zobacz [zasoby w aplikacjach pulpitu](/dotnet/framework/resources/index) w *przewodniku dewelopera .NET Framework*. Aby uzyskać informacji na temat ręcznego dodawania plików zasobów do projektów zarządzanych, uzyskiwania dostępu do zasobów, wyświetlania statycznych zasobów i przypisywania ciągów zasobów do właściwości, zobacz [Creating Resource Files dla aplikacji klasycznych](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Aby uzyskać informacji na temat globalizacja i lokalizacja zasobów w aplikacjach zarządzanych, zobacz [Globalizing i lokalizowanie aplikacji programu .NET Framework](/dotnet/standard/globalization-localization/index).  
   
 ## <a name="requirements"></a>Wymagania 
-  
  Win32  
   
 ## <a name="see-also"></a>Zobacz też  

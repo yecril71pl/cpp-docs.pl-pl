@@ -13,12 +13,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 77a6049216137da56cc79cc6f28f1f7591015a33
-ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
+ms.openlocfilehash: 7a8705f6c1ed1030f1beeb7c2302f0d629c5d17d
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/07/2018
-ms.locfileid: "39604521"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40012196"
 ---
 # <a name="overview-of-windows-programming-in-c"></a>Omówienie programowania w systemie Windows w języku C++
 
@@ -39,7 +39,7 @@ Można napisać aplikacji platformy UWP w języku C + +/ CX, dialekt języka c++
 
    Ta kategoria zawiera również podstawowe składniki i obliczeniową kod w kontekście serwera i programowania w chmurze przy użyciu języka C++. Czasami kod intensywnie w samym sercu serwera lub aplikacji w chmurze są zapisywane w języku C++ w celu zmaksymalizowania wydajności. Można skompilować takiego kodu do biblioteki DLL i używać jej z C# lub Visual Basic.
 
-- **Aplikacje programu .NET framework**. Większość aplikacji .NET Framework jest napisana w języku C# lub Visual Basic, ale możesz też C + +/ interfejsu wiersza polecenia (/ CLR opcję kompilatora w programie Visual C++). Firma Microsoft zaleca używanie języka C + +/ interfejsu wiersza polecenia dla minimalnej warstwa międzyoperacyjności w większej aplikacji, która zawiera kodu zarządzanego i natywnego.
+- **Aplikacje programu .NET framework**. Większość aplikacji .NET Framework jest napisana w języku C# lub Visual Basic, ale możesz też C + +/ interfejsu wiersza polecenia ( `/clr` — opcja kompilatora w programie Visual C++). Firma Microsoft zaleca używanie języka C + +/ interfejsu wiersza polecenia dla minimalnej warstwa międzyoperacyjności w większej aplikacji, która zawiera kodu zarządzanego i natywnego.
 
 ##  <a name="BK_WindowsUniversal"></a> Windows Universal Apps
 

@@ -17,19 +17,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 93ced38ca30a2fd4a61bb3a3664967416fcaf599
-ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
+ms.openlocfilehash: c21bb7cf58c3c397237768942d60f79958f3278a
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/07/2018
-ms.locfileid: "39603491"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40013564"
 ---
 # <a name="include-c"></a>include (C++)
 Określa jeden lub więcej plików nagłówka do uwzględnienia w pliku .idl wygenerowany.  
   
 ## <a name="syntax"></a>Składnia  
   
-```  
+```cpp  
 [ include(  
    header_file  
 ) ];  
@@ -45,7 +45,7 @@ Określa jeden lub więcej plików nagłówka do uwzględnienia w pliku .idl wyg
  **Obejmują** atrybut C++ ma taką samą funkcjonalność jak [obejmują](http://msdn.microsoft.com/library/windows/desktop/aa367052) atrybutów w MIDL.  
   
 ## <a name="example"></a>Przykład  
- Poniższy kod przedstawia przykład sposobu użycia **obejmują**. W tym przykładzie include.h plik zawiera tylko # instrukcję include.  
+ Poniższy kod przedstawia przykład sposobu użycia **obejmują**. W tym przykładzie include.h plik zawiera tylko `#include` instrukcji.  
   
 ```cpp  
 // cpp_attr_ref_include.cpp  
