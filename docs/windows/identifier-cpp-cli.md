@@ -18,12 +18,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 6eac892da91c5f3640bdd243a0b3c6525faa5c2a
-ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
+ms.openlocfilehash: 14b68f573452d9ab8894027fd4d83c0b89f2ddf1
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/07/2018
-ms.locfileid: "39603348"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40018364"
 ---
 # <a name="identifier-ccli"></a>__identifier (C++/CLI)
 Umożliwia korzystanie z Visual C++ słów kluczowych jako identyfikatorów.  
@@ -31,7 +31,7 @@ Umożliwia korzystanie z Visual C++ słów kluczowych jako identyfikatorów.
 ## <a name="all-platforms"></a>Wszystkie platformy  
 ### <a name="syntax"></a>Składnia  
   
-```  
+```cpp  
 __identifier(  
 Visual_C++_keyword  
 )  
@@ -49,7 +49,7 @@ Korzystanie z **__identifier** — słowo kluczowe dla identyfikatorów, które 
 ### <a name="examples"></a>Przykłady  
  **Przykład**  
   
- W poniższym przykładzie klasę o nazwie `template` jest tworzone w języku C# i dystrybuowanych jako biblioteki DLL. W programie Visual C++, który używa `template` klasy **__identifier** — słowo kluczowe zawiera fakt, **szablonu** jest standardowa słowa kluczowego języka C++.  
+ W poniższym przykładzie klasę o nazwie **szablonu** jest tworzone w języku C# i dystrybuowanych jako biblioteki DLL. W programie Visual C++, który używa **szablonu** klasy **__identifier** — słowo kluczowe zawiera fakt, **szablonu** jest standardowa słowa kluczowego języka C++.  
   
 ```cs  
 // identifier_template.cs  
@@ -79,7 +79,7 @@ int main() {
   
 ### <a name="examples"></a>Przykłady  
   
- W poniższym przykładzie klasę o nazwie `template` jest tworzone w języku C# i dystrybuowanych jako biblioteki DLL. W programie Visual C++, który używa `template` klasy **__identifier** — słowo kluczowe zawiera fakt, **szablonu** jest standardowa słowa kluczowego języka C++.  
+ W poniższym przykładzie klasę o nazwie **szablonu** jest tworzone w języku C# i dystrybuowanych jako biblioteki DLL. W programie Visual C++, który używa **szablonu** klasy **__identifier** — słowo kluczowe zawiera fakt, **szablonu** jest standardowa słowa kluczowego języka C++.  
   
 ```cs  
 // identifier_template.cs  
