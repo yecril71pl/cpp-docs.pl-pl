@@ -18,17 +18,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4e8196b25b1507c92542faa6dd8ca59b4632d8f0
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: b3be04079de11642b2641260fdfe997d3fcb48d6
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33335916"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42465789"
 ---
 # <a name="readmsr"></a>__readmsr
 **Microsoft Specific**  
   
- Generuje `rdmsr` instrukcji odczytuje rejestru specyficzne dla modelu, określony przez `register` i zwraca jego wartość.  
+ Generuje `rdmsr` instrukcji, który odczytuje rejestru specyficzne dla modelu, określony przez `register` i zwraca jego wartość.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -43,22 +43,22 @@ __int64 __readmsr(
  Rejestr określonego modelu do odczytu.  
   
 ## <a name="return-value"></a>Wartość zwracana  
- Wartość w określonym rejestrze.  
+ Wartość do określonego rejestru.  
   
 ## <a name="requirements"></a>Wymagania  
   
-|— Wewnętrzne|Architektura|  
+|Wewnętrzne|Architektura|  
 |---------------|------------------|  
-|`__readmsr`|x86, [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
+|`__readmsr`|x86, x64|  
   
- **Plik nagłówka** \<intrin.h >  
+ **Plik nagłówkowy** \<intrin.h >  
   
 ## <a name="remarks"></a>Uwagi  
  Ta funkcja jest dostępna tylko w trybie jądra, a procedura jest dostępna jako funkcja wewnętrzna tylko.  
   
  Aby uzyskać więcej informacji zobacz dokumentację AMD.  
   
-**KOŃCOWY określonych firmy Microsoft**  
+**END specyficzny dla Microsoft**  
   
 ## <a name="see-also"></a>Zobacz też  
  [Funkcje wewnętrzne kompilatora](../intrinsics/compiler-intrinsics.md)

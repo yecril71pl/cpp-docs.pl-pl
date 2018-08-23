@@ -7,19 +7,19 @@ ms.topic: reference
 f1_keywords:
 - collection/Platform::Collections::UnorderedMapView
 ms.assetid: 545a3725-2efd-4cc1-b590-4a7cd2351f61
-author: ghogen
-ms.author: ghogen
+author: mikeblome
+ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ec6b1541eff80b6aac4d8d82bfb7ea6ceb977843
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 3a2d8668f0ed5d58ce3b8028fb02d572bb04f8bc
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33092680"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42613577"
 ---
 # <a name="platformcollectionsunorderedmapview-class"></a>Platform::Collections::UnorderedMapView — Klasa
-Reprezentuje widok tylko do odczytu do *mapy*, która jest kolekcją par klucz wartość.  
+Reprezentuje widok tylko do odczytu *mapy*, który stanowi kolekcję par klucz wartość.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -39,10 +39,10 @@ ref class UnorderedMapView sealed;
  Typ wartości w pary klucz wartość.  
   
  `C`  
- Typ, który udostępnia obiekt funkcji, które można porównać dwóch wartości klucza pod kątem równości. Domyślnie [std::equal_to\<K >](../standard-library/equal-to-struct.md)  
+ Typ, który dostarcza obiekt funkcji, która może porównać dwie wartości klucza dla równości. Domyślnie [std::equal_to\<K >](../standard-library/equal-to-struct.md)  
   
 ### <a name="remarks"></a>Uwagi  
- UnorderedMapView jest konkretną implementację C++ [Windows::Foundation::Collections::IMapView\<K, V >](http://go.microsoft.com/fwlink/p/?LinkId=262409) interfejs, który jest przekazywany przez interfejs binarne aplikacji (ABI). Aby uzyskać więcej informacji, zobacz [kolekcji (C + +/ CX)](../cppcx/collections-c-cx.md).  
+ UnorderedMapView jest konkretną implementację C++ [Windows::Foundation::Collections::IMapView\<K, V >](http://go.microsoft.com/fwlink/p/?LinkId=262409) interfejsu, który jest przekazywany między interfejsem binarnym aplikacji (ABI). Aby uzyskać więcej informacji, zobacz [kolekcje (C + +/ CX)](../cppcx/collections-c-cx.md).  
   
 ### <a name="members"></a>Elementy członkowskie  
   
@@ -56,11 +56,11 @@ ref class UnorderedMapView sealed;
   
 |Nazwa|Opis|  
 |----------|-----------------|  
-|[UnorderedMapView::First](#first)|Zwraca iteratora inicjowany do pierwszego elementu w widoku mapy.|  
+|[UnorderedMapView::First](#first)|Zwraca iterator, który jest inicjowany do pierwszego elementu w widoku mapy.|  
 |[UnorderedMapView::HasKey](#haskey)|Określa, czy bieżący UnorderedMapView zawiera określony klucz.|  
-|[UnorderedMapView::Lookup](#lookup)|Pobiera element pod określony klucz w bieżącym obiekcie UnorderedMapView.|  
-|[UnorderedMapView::Size](#size)|Zwraca liczbę elementów w bieżącym obiekcie UnorderedMapView.|  
-|[UnorderedMapView::Split](#split)|Dzieli oryginalny obiekt UnorderedMapView na dwa obiekty UnorderedMapView.|  
+|[Unorderedmapview::LOOKUP —](#lookup)|Pobiera element w określonym kluczu w bieżącym obiekcie UnorderedMapView.|  
+|[Unorderedmapview::size —](#size)|Zwraca liczbę elementów w bieżącym obiekcie UnorderedMapView.|  
+|[UnorderedMapView::Split](#split)|Dzieli oryginalnego obiektu UnorderedMapView na dwa obiekty UnorderedMapView.|  
   
 ## <a name="inheritance-hierarchy"></a>Hierarchia dziedziczenia  
  `UnorderedMapView`  
@@ -70,8 +70,8 @@ ref class UnorderedMapView sealed;
   
  **Namespace:** Platform::Collections  
 
-## <a name="first"></a>  UnorderedMapView::First — metoda
-Zwraca iteratora określająca pierwszy [Windows::Foundation::Collections::IKeyValuePair\<K, V >](http://msdn.microsoft.com/library/windows/apps/br226031.aspx) element nieuporządkowaną mapy.  
+## <a name="first"></a>  Unorderedmapview::First — metoda
+Zwraca iterator, który określa pierwszy [Windows::Foundation::Collections::IKeyValuePair\<K, V >](http://msdn.microsoft.com/library/windows/apps/br226031.aspx) element mapy nieuporządkowanej.  
   
 ### <a name="syntax"></a>Składnia  
   
@@ -82,14 +82,14 @@ virtual Windows::Foundation::Collections::IIterator<
 ```  
   
 ### <a name="return-value"></a>Wartość zwracana  
- Iteratora określający pierwszego elementu w widoku mapy.  
+ Iterator, który określa pierwszy element w widoku mapy.  
   
 ### <a name="remarks"></a>Uwagi  
- Jest to wygodny sposób przechowywania iteratora zwrócony przez First() można przypisać do zmiennej, która jest zadeklarowana z wartością zwracaną **automatycznie** wpisz wnioskowanie — słowo kluczowe. Na przykład `auto x = myMapView->First();`.  
+ Wygodnym sposobem przechowywania iteratorów zwróconych przez First() jest przypisanie zwracana wartość do zmiennej, która jest zadeklarowana za pomocą **automatycznie** słowem kluczowym dedukcji typu. Na przykład `auto x = myMapView->First();`.  
   
 
 
-## <a name="haskey"></a>  UnorderedMapView::HasKey — metoda
+## <a name="haskey"></a>  Unorderedmapview::haskey — metoda
 Określa, czy bieżący UnorderedMap zawiera określony klucz.  
   
 ### <a name="syntax"></a>Składnia  
@@ -100,15 +100,15 @@ bool HasKey(K key);
   
 ### <a name="parameters"></a>Parametry  
  `key`  
- Klucz używana do lokalizowania elementu. Typ `key` jest typename *K*.  
+ Klucz, używana do lokalizowania elementu. Typ `key` jest typename *K*.  
   
 ### <a name="return-value"></a>Wartość zwracana  
  `true` Jeśli klucz zostanie znaleziony; w przeciwnym razie `false`.  
   
 
 
-## <a name="lookup"></a>  UnorderedMapView::Lookup — metoda
-Pobiera wartość typu V skojarzony z określonym kluczem typu K.  
+## <a name="lookup"></a>  Unorderedmapview::LOOKUP — metoda
+Pobiera wartość typu V, który jest skojarzony z określonym kluczem typu K.  
   
 ### <a name="syntax"></a>Składnia  
   
@@ -118,14 +118,14 @@ V Lookup(K key);
   
 ### <a name="parameters"></a>Parametry  
  `key`  
- Klucz używana do lokalizowania elementu w UnorderedMapView. Typ `key` jest typename *K*.  
+ Klucz, używana do lokalizowania elementu w UnorderedMapView. Typ `key` jest typename *K*.  
   
 ### <a name="return-value"></a>Wartość zwracana  
- Wartość, która jest łączyć się z `key`. Typ zwracanej wartości to typename *V*.  
+ Wartość, która jest powiązany z `key`. Typ wartości zwracanej jest typename *V*.  
   
 
 
-## <a name="size"></a>  UnorderedMapView::Size — metoda
+## <a name="size"></a>  Unorderedmapview::size — metoda
 Zwraca liczbę [Windows::Foundation::Collections::IKeyValuePair\<K, V >](http://msdn.microsoft.com/library/windows/apps/br226031.aspx) elementów w UnorderedMapView.  
   
 ### <a name="syntax"></a>Składnia  
@@ -135,11 +135,11 @@ virtual property unsigned int Size;
 ```  
   
 ### <a name="return-value"></a>Wartość zwracana  
- Liczba elementów w nieuporządkowaną MapView.  
+ Liczba elementów w MapView nieuporządkowane.  
   
 
 
-## <a name="split"></a>  UnorderedMapView::Split — metoda
+## <a name="split"></a>  Unorderedmapview::split — metoda
 Bieżący obiekt UnorderedMapView jest podzielony na dwa obiekty UnorderedMapView. Ta metoda jest nie działa.  
   
 ### <a name="syntax"></a>Składnia  
@@ -160,7 +160,7 @@ void Split(
  Druga część oryginalnego obiektu UnorderedMapView.  
   
 ### <a name="remarks"></a>Uwagi  
- Ta metoda nie działa; nie działają.  
+ Ta metoda nie działa; nic nie robi.  
   
 
 
@@ -215,25 +215,25 @@ UnorderedMapView(
   
 ### <a name="parameters"></a>Parametry  
  n  
- Liczba elementów do przydzielenia miejsca.  
+ Liczba elementów do wstępnie przydziel miejsce dla.  
   
  `InIt`  
- Wartość atrybutu typename UnorderedMapView.  
+ Element typename UnorderedMapView.  
   
  `H`  
- Obiekt funkcji, który można wartość skrótu dla klucza. Domyślnie [std::hash\<K >](http://msdn.microsoft.com/en-us/54f67435-af9d-4217-a29d-fa4d2491a104) dla typów który `std::hash` obsługuje.  
+ Obiekt funkcji, która może być wartość skrótu dla klucza. Wartość domyślna to [std::hash\<K >](http://msdn.microsoft.com/en-us/54f67435-af9d-4217-a29d-fa4d2491a104) dla typów, `std::hash` obsługuje.  
   
  `P`  
- Typ, który udostępnia obiekt funkcji, które można porównać dwa klucze, aby określić ich równości. Domyślnie [std::equal_to\<K >](../standard-library/equal-to-struct.md).  
+ Typ, który dostarcza obiekt funkcji, która może porównać dwa klucze, aby określić ich równości. Wartość domyślna to [std::equal_to\<K >](../standard-library/equal-to-struct.md).  
   
  `m`  
- Odwołanie lub [Lvalues i Rvalues](../cpp/lvalues-and-rvalues-visual-cpp.md) do [std::unordered_map](../standard-library/unordered-map-class.md) używany do inicjowania UnorderedMapView.  
+ Odwołanie lub [Lvalues i Rvalues](../cpp/lvalues-and-rvalues-visual-cpp.md) do [std::unordered_map](../standard-library/unordered-map-class.md) używany do zainicjowania UnorderedMapView.  
   
  `first`  
- Wejściowy iteratora pierwszego elementu w zakresie elementów używaną do inicjalizacji UnorderedMapView.  
+ Iterator danych wejściowych pierwszego elementu w zakresie elementów używane do zainicjowania UnorderedMapView.  
   
  `last`  
- Wejściowy iteratora pierwszego elementu po zakres używany do inicjowania UnorderedMapView elementów.  
+ Iterator danych wejściowych od szeregu elementów używane do zainicjowania UnorderedMapView pierwszego elementu.  
    
 ## <a name="see-also"></a>Zobacz też  
  [Platform::Collections Namespace](../cppcx/platform-collections-namespace.md)   

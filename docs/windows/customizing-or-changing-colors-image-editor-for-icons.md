@@ -26,33 +26,36 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: a2aacfcda168b3abdb5d46826a0351f85a4b3d48
-ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
+ms.openlocfilehash: 5eb9b7da8b09fbac1e462394c6ae087b61814ede
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39645399"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42598778"
 ---
 # <a name="customizing-or-changing-colors-image-editor-for-icons"></a>Dostosowywanie lub zmiana kolorów (Edytor obrazów dla ikon)
-**Obraz** edytora [paleta kolorów](../windows/colors-window-image-editor-for-icons.md) początkowo wyświetlane są kolory standardowe 16. Oprócz wyświetlanych kolorów można utworzyć własne niestandardowe kolory. Następnie możesz [zapisać i załadować dostosowany palety kolorów](../windows/saving-and-loading-different-color-palettes-image-editor-for-icons.md).  
-  
-### <a name="to-change-colors-on-the-colors-palette"></a>Aby zmienić kolory palety kolorów  
-  
-1.  Z **obraz** menu, wybierz **Dopasuj kolory**.  
-  
-2.  W [okno dialogowe selektora kolorów niestandardowych](../windows/custom-color-selector-dialog-box-image-editor-for-icons.md), Zdefiniuj kolor, wpisując wartości RGB lub HSL w odpowiednie pola tekstowe, lub wybierz kolor w **gradientu wyświetlania kolorów** pole.  
-  
-3.  Ustaw jasność za pomocą suwaka **jasność** paska.  
-  
-4.  Wiele kolorów niestandardowych są symulowane. Pełny kolor najbliżej kolor symulowany, kliknij dwukrotnie **kolor** pole.  
-  
-     Jeśli później zdecydujesz, ma kolor symulowany, przesuń suwak **jasność** pasek lub przenieść krzyżyka **gradientu wyświetlania kolorów** okno ponownie, aby przywrócić symulowania kolorów.  
-  
-5.  Kliknij przycisk **OK** Aby dodać nowy kolor.  
-  
-## <a name="requirements"></a>Wymagania  
- Brak  
-  
-## <a name="see-also"></a>Zobacz też  
- [Klawisze skrótów](../windows/accelerator-keys-image-editor-for-icons.md)   
- [Praca z kolorem](../windows/working-with-color-image-editor-for-icons.md)
+
+**Obraz** edytora [paleta kolorów](../windows/colors-window-image-editor-for-icons.md) początkowo wyświetlane są kolory standardowe 16. Oprócz wyświetlanych kolorów można utworzyć własne niestandardowe kolory. Następnie możesz [zapisać i załadować dostosowany palety kolorów](../windows/saving-and-loading-different-color-palettes-image-editor-for-icons.md).
+
+### <a name="to-change-colors-on-the-colors-palette"></a>Aby zmienić kolory palety kolorów
+
+1. Z **obraz** menu, wybierz **Dopasuj kolory**.
+
+2. W [okno dialogowe selektora kolorów niestandardowych](../windows/custom-color-selector-dialog-box-image-editor-for-icons.md), Zdefiniuj kolor, wpisując wartości RGB lub HSL w odpowiednie pola tekstowe, lub wybierz kolor w **gradientu wyświetlania kolorów** pole.
+
+3. Ustaw jasność za pomocą suwaka **jasność** paska.
+
+4. Wiele kolorów niestandardowych są symulowane. Pełny kolor najbliżej kolor symulowany, kliknij dwukrotnie **kolor** pole.
+
+   Jeśli później zdecydujesz, ma kolor symulowany, przesuń suwak **jasność** pasek lub przenieść krzyżyka **gradientu wyświetlania kolorów** okno ponownie, aby przywrócić symulowania kolorów.
+
+5. Kliknij przycisk **OK** Aby dodać nowy kolor.
+
+## <a name="requirements"></a>Wymagania
+
+Brak
+
+## <a name="see-also"></a>Zobacz też
+
+[Klawisze skrótów](../windows/accelerator-keys-image-editor-for-icons.md)  
+[Praca z kolorem](../windows/working-with-color-image-editor-for-icons.md)

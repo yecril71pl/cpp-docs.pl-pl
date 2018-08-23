@@ -1,5 +1,5 @@
 ---
-title: 'Wskazówki: Usuwanie pracy z wątku interfejsu użytkownika | Dokumentacja firmy Microsoft'
+title: 'Przewodnik: Usuwanie pracy z wątku interfejsu użytkownika | Dokumentacja firmy Microsoft'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,20 +15,20 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0502ce728c35b08d927cea48ee5b82756980aec5
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: e3da35d2134daa20faf53336902ba6612f4b9904
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33694290"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42612106"
 ---
 # <a name="walkthrough-removing-work-from-a-user-interface-thread"></a>Wskazówki: usuwanie pracy z wątku interfejs użytkownika
-Ten dokument przedstawiono sposób korzystania ze współbieżności środowiska wykonawczego można przenieść pracy, które jest przeprowadzane przez wątek interfejsu użytkownika (UI) w aplikacji Microsoft Foundation Classes (MFC) do wątku roboczego. Ten dokument również pokazano, jak poprawić wydajność długotrwałej operacji rysowania.  
+W tym dokumencie przedstawiono sposób przenoszenia pracy wykonywanej przez wątek interfejsu użytkownika (UI) w aplikacji Microsoft Foundation Classes (MFC) do wątku roboczego za pomocą środowiska uruchomieniowego współbieżności. Również w tym dokumencie pokazano, jak poprawić wydajność długotrwałej operacji rysowania.  
   
- Usuwanie pracy z wątku interfejsu użytkownika, przenosząc blokowania operacje, na przykład rysunek wątków roboczych może zwiększyć szybkość reakcji aplikacji. W tym przewodniku zastosowano rysowania procedury, które generuje fraktalowy Mandelbrot, aby zademonstrować długotrwałej operacji blokowania. Generowanie fraktalowy Mandelbrot jest również dobrym kandydatem do paralelizacja, ponieważ obliczenia każdego piksela jest niezależna od wszystkich pozostałych obliczeń.  
+ Usuwanie pracy z wątku interfejsu użytkownika dzięki przeniesieniu operacji blokowania, na przykład rysunku, aby wątków może zwiększyć szybkość reakcji aplikacji. W tym instruktażu wykorzystano rysowania procedury, która generuje fraktalowy Mandelbrot, aby zademonstrować długotrwałej operacji blokowania. Generowanie fraktalowy Mandelbrot jest również dobrym kandydatem do przetwarzania równoległego, ponieważ obliczenie każdego piksela jest niezależna od wszystkich pozostałych obliczeń.  
   
 ## <a name="prerequisites"></a>Wymagania wstępne  
- Przed skorzystaniem z tego przewodnika, przeczytaj następujące tematy:  
+ Przed rozpoczęciem tego instruktażu, przeczytaj następujące tematy:  
   
 -   [Równoległość zadania](../../parallel/concrt/task-parallelism-concurrency-runtime.md)  
   
@@ -40,68 +40,68 @@ Ten dokument przedstawiono sposób korzystania ze współbieżności środowiska
   
 -   [Anulowanie w PPL](cancellation-in-the-ppl.md)  
   
- Zalecamy również że rozumiesz podstawowe informacje dotyczące tworzenia aplikacji MFC i [!INCLUDE[ndptecgdiplus](../../parallel/concrt/includes/ndptecgdiplus_md.md)] przed skorzystaniem z tego przewodnika. Aby uzyskać więcej informacji na temat MFC, zobacz [aplikacji pulpitu MFC](../../mfc/mfc-desktop-applications.md). Aby uzyskać więcej informacji na temat [!INCLUDE[ndptecgdiplus](../../parallel/concrt/includes/ndptecgdiplus_md.md)], zobacz [GDI +](https://msdn.microsoft.com/en-us/library/windows/desktop/ms533798).  
+ Zalecamy również, że rozumiesz podstawy tworzenia aplikacji MFC i GDI +, przed rozpoczęciem tego instruktażu. Aby uzyskać więcej informacji na temat MFC, zobacz [aplikacji pulpitu MFC](../../mfc/mfc-desktop-applications.md). Aby uzyskać więcej informacji na temat interfejsu GDI + zobacz [GDI +](https://msdn.microsoft.com/en-us/library/windows/desktop/ms533798).  
   
 ##  <a name="top"></a> Sekcje  
  Ten przewodnik zawiera następujące sekcje:  
   
 -   [Tworzenie aplikacji MFC](#application)  
   
--   [Implementowanie Serial wersji aplikacji Mandelbrot](#serial)  
+-   [Implementowanie Serial wersję aplikacji Mandelbrot](#serial)  
   
 -   [Usuwanie pracy z wątku interfejsu użytkownika](#removing-work)  
   
--   [Poprawianie wydajności rysowania](#performance)  
+-   [Poprawa wydajności rysowania](#performance)  
   
--   [Dodawanie obsługi anulowania](#cancellation)  
+-   [Dodanie obsługi anulowania](#cancellation)  
   
 ##  <a name="application"></a> Tworzenie aplikacji MFC  
- W tej sekcji opisano sposób tworzenia podstawowej aplikacji MFC.  
+ W tej sekcji opisano sposób tworzenia podstawowych aplikacji MFC.  
   
 ### <a name="to-create-a-visual-c-mfc-application"></a>Aby utworzyć aplikację Visual C++ MFC  
   
-1.  Na **pliku** menu, kliknij przycisk **nowy**, a następnie kliknij przycisk **projektu**.  
+1.  Na **pliku** menu, kliknij przycisk **New**, a następnie kliknij przycisk **projektu**.  
   
-2.  W **nowy projekt** okna dialogowego, **zainstalowane szablony** okienku wybierz **Visual C++**, a następnie w **szablony** okienku, wybierz opcję **Aplikacji MFC**. Wpisz nazwę projektu, na przykład `Mandelbrot`, a następnie kliknij przycisk **OK** do wyświetlenia **Kreator aplikacji MFC**.  
+2.  W **nowy projekt** dialogowym **zainstalowane szablony** okienku wybierz **Visual C++**, a następnie w **szablony** wybierz opcję **Aplikacji MFC**. Wpisz nazwę projektu, na przykład `Mandelbrot`, a następnie kliknij przycisk **OK** do wyświetlenia **Kreator aplikacji MFC**.  
   
-3.  W **typu aplikacji** okienku wybierz **pojedynczego dokumentu**. Upewnij się, że **wsparcie dla architektury dokument/widok** pole wyboru jest wyczyszczone.  
+3.  W **typ aplikacji** okienku wybierz **pojedynczego dokumentu**. Upewnij się, że **Obsługa architektury dokument/widok** pole wyboru jest wyczyszczone.  
   
-4.  Kliknij przycisk **Zakończ** do tworzenia projektu i zamknąć **Kreator aplikacji MFC**.  
+4.  Kliknij przycisk **Zakończ** Aby utworzyć projekt i zamknąć **Kreator aplikacji MFC**.  
   
-     Sprawdź, czy aplikacja została pomyślnie utworzona tworzenia i uruchamiania go. Do skompilowania aplikacji, na **kompilacji** menu, kliknij przycisk **Kompiluj rozwiązanie**. Jeśli aplikacja tworzy się pomyślnie, uruchom aplikację, klikając **Rozpocznij debugowanie** na **debugowania** menu.  
+     Sprawdź, czy aplikacja została pomyślnie utworzona, tworząc i uruchamiając go. Aby skompilować aplikację, na **kompilacji** menu, kliknij przycisk **Kompiluj rozwiązanie**. Jeśli aplikacja zostanie pomyślnie skompilowana, uruchom ją, klikając pozycję **Rozpocznij debugowanie** na **debugowania** menu.  
   
-##  <a name="serial"></a> Implementowanie Serial wersji aplikacji Mandelbrot  
- W tej sekcji opisano sposób rysowania fraktalowy Mandelbrot. Ta wersja rysuje fraktalowy Mandelbrot do [!INCLUDE[ndptecgdiplus](../../parallel/concrt/includes/ndptecgdiplus_md.md)] [mapy bitowej](https://msdn.microsoft.com/library/ms534420.aspx) obiekt, a następnie kopiuje zawartość tej mapy bitowej do okna klienta.  
+##  <a name="serial"></a> Implementowanie Serial wersję aplikacji Mandelbrot  
+ W tej sekcji opisano sposób rysowania fraktalowy Mandelbrot. Ta wersja rysuje fraktalowy Mandelbrot GDI + [mapy bitowej](/windows/desktop/api/gdiplusheaders/nl-gdiplusheaders-bitmap) obiektu, a następnie kopiuje zawartość tej mapy bitowej do okna klienta.  
   
-#### <a name="to-implement-the-serial-version-of-the-mandelbrot-application"></a>Aby zaimplementować serial wersji aplikacji Mandelbrot  
+#### <a name="to-implement-the-serial-version-of-the-mandelbrot-application"></a>Aby zaimplementować serial wersję aplikacji Mandelbrot  
   
-1.  W pliku stdafx.h, Dodaj następujący `#include` dyrektywy:  
+1.  W pliku stdafx.h należy dodać następujące `#include` dyrektywy:  
   
      [!code-cpp[concrt-mandelbrot#1](../../parallel/concrt/codesnippet/cpp/walkthrough-removing-work-from-a-user-interface-thread_1.h)]  
   
-2.  W ChildView.h po `pragma` dyrektywy, zdefiniuj `BitmapPtr` typu. `BitmapPtr` Typ umożliwia wskaźnik do `Bitmap` obiektu być współużytkowane przez kilka składników. `Bitmap` Usunąć obiektu, gdy nie jest już przywoływany przez dowolny składnik.  
+2.  W ChildView.h po `pragma` dyrektywy, zdefiniuj `BitmapPtr` typu. `BitmapPtr` Typu umożliwia wskaźnik do `Bitmap` obiektu być współużytkowane przez wiele składników. `Bitmap` Obiekt zostanie usunięty, gdy nie jest już wywoływane przez dowolny składnik.  
   
      [!code-cpp[concrt-mandelbrot#2](../../parallel/concrt/codesnippet/cpp/walkthrough-removing-work-from-a-user-interface-thread_2.h)]  
   
-3.  W ChildView.h, Dodaj następujący kod, aby `protected` sekcji `CChildView` klasy:  
+3.  W ChildView.h, Dodaj następujący kod do `protected` części `CChildView` klasy:  
   
      [!code-cpp[concrt-mandelbrot#3](../../parallel/concrt/codesnippet/cpp/walkthrough-removing-work-from-a-user-interface-thread_3.h)]  
   
-4.  W ChildView.cpp komentarz lub usuń następujące linie.  
+4.  W ChildView.cpp komentarz lub usuń następujące wiersze.  
   
      [!code-cpp[concrt-mandelbrot#4](../../parallel/concrt/codesnippet/cpp/walkthrough-removing-work-from-a-user-interface-thread_4.cpp)]  
   
-     W kompilacjach do debugowania tego kroku uniemożliwia aplikacji przy użyciu `DEBUG_NEW` przydzielania, który jest niezgodny z [!INCLUDE[ndptecgdiplus](../../parallel/concrt/includes/ndptecgdiplus_md.md)].  
+     W kompilacjach do debugowania krok ten zapobiega aplikację przy użyciu `DEBUG_NEW` alokatora, który jest niezgodny z użyciem interfejsu GDI +.  
   
-5.  W ChildView.cpp, Dodaj `using` dyrektywy do `Gdiplus` przestrzeni nazw.  
+5.  W ChildView.cpp, Dodaj `using` dyrektywę `Gdiplus` przestrzeni nazw.  
   
      [!code-cpp[concrt-mandelbrot#5](../../parallel/concrt/codesnippet/cpp/walkthrough-removing-work-from-a-user-interface-thread_5.cpp)]  
   
-6.  Dodaj następujący kod do Konstruktor i destruktor `CChildView` klasę, aby zainicjować i zamknąć [!INCLUDE[ndptecgdiplus](../../parallel/concrt/includes/ndptecgdiplus_md.md)].  
+6.  Dodaj następujący kod do Konstruktor i destruktor `CChildView` klasy do inicjowania i zamknąć GDI +.  
   
      [!code-cpp[concrt-mandelbrot#6](../../parallel/concrt/codesnippet/cpp/walkthrough-removing-work-from-a-user-interface-thread_6.cpp)]  
   
-7.  Implementowanie `CChildView::DrawMandelbrot` metody. Ta metoda pobiera fraktalowy Mandelbrot do określonego `Bitmap` obiektu.  
+7.  Implementowanie `CChildView::DrawMandelbrot` metody. Ta metoda pobiera fraktalowy Mandelbrot określonej `Bitmap` obiektu.  
   
      [!code-cpp[concrt-mandelbrot#7](../../parallel/concrt/codesnippet/cpp/walkthrough-removing-work-from-a-user-interface-thread_7.cpp)]  
   
@@ -109,88 +109,88 @@ Ten dokument przedstawiono sposób korzystania ze współbieżności środowiska
   
      [!code-cpp[concrt-mandelbrot#8](../../parallel/concrt/codesnippet/cpp/walkthrough-removing-work-from-a-user-interface-thread_8.cpp)]  
   
-9. Sprawdź, czy aplikacja została pomyślnie zaktualizowana, kompilowania i uruchamiając go.  
+9. Upewnij się, że aplikacja została pomyślnie zaktualizowana, tworząc i uruchamiając go.  
   
- Na poniższej ilustracji przedstawiono wyniki Mandelbrot aplikacji.  
+ Poniższa ilustracja przedstawia wyniki aplikacji Mandelbrot.  
   
  ![Aplikacja Mandelbrot](../../parallel/concrt/media/mandelbrot.png "mandelbrot")  
   
- Ponieważ obliczenia dla każdego piksela jest kosztowne w praktyce, wątku interfejsu użytkownika nie może przetworzyć dodatkowych komunikatów zakończenie obliczenia ogólnej. Może to zmniejszyć czas odpowiedzi aplikacji. Można jednak zwolnić ten problem, usuwając pracy z wątku interfejsu użytkownika.  
+ Ponieważ obliczenia dla każdego piksela jest obliczeniowo kosztowne, wątku interfejsu użytkownika nie może przetworzyć dodatkowe komunikaty, dopóki nie zakończy się ogólną obliczeń. Może to zmniejszyć czas odpowiedzi w aplikacji. Można jednak zwolnić ten problem, przez usuwanie pracy z wątku interfejsu użytkownika.  
   
  [[Górnej](#top)]  
   
 ##  <a name="removing-work"></a> Usuwanie pracy z wątku interfejsu użytkownika  
  W tej sekcji pokazano, jak usunąć rysowania pracy z wątku interfejsu użytkownika w aplikacji Mandelbrot. Przenosząc na rysunku pracy z wątku interfejsu użytkownika do wątku roboczego wątku interfejsu użytkownika można przetwarzania komunikatów wątku roboczego generuje obraz w tle.  
   
- Współbieżność środowiska wykonawczego zapewnia trzy sposoby uruchamiania zadań: [zadań grup](../../parallel/concrt/task-parallelism-concurrency-runtime.md), [agentów asynchronicznych](../../parallel/concrt/asynchronous-agents.md), i [zadań lekkich](../../parallel/concrt/task-scheduler-concurrency-runtime.md). Chociaż jeden z tych mechanizmów umożliwia usuwanie pracy z wątku interfejsu użytkownika, w tym przykładzie użyto [concurrency::task_group](reference/task-group-class.md) obiektu, ponieważ grupy zadań obsługuje anulowania. W tym przewodniku zastosowano anulowania później, aby zmniejszyć ilość pracy, które jest przeprowadzane, gdy zmieniany jest rozmiar okna klienta, a do wykonania oczyszczania, gdy okno zostanie zniszczone.  
+ Środowisko uruchomieniowe współbieżności zapewnia trzy sposoby uruchamiania zadań: [grupy zadań](../../parallel/concrt/task-parallelism-concurrency-runtime.md), [agentów asynchronicznych](../../parallel/concrt/asynchronous-agents.md), i [zadań lekkich](../../parallel/concrt/task-scheduler-concurrency-runtime.md). Mimo że można usunąć pracy z wątku interfejsu użytkownika, można użyć jednego z tych mechanizmów, w tym przykładzie użyto [concurrency::task_group](reference/task-group-class.md) obiektu, ponieważ grupy zadań obsługują anulowania. W tym przewodniku używa anulowania później, aby zmniejszyć ilość pracy, które jest wykonywane, gdy zmieniany jest rozmiar okna klienta i do wykonywania oczyszczania, kiedy niszczony jest okno.  
   
- W tym przykładzie również używane [concurrency::unbounded_buffer](reference/unbounded-buffer-class.md) obiekt, aby włączyć wątku interfejsu użytkownika i wątku roboczego do komunikowania się ze sobą. Po wątku roboczego tworzy obraz, wysyła wskaźnik do `Bitmap` do obiektu `unbounded_buffer` obiektów i następnie przesyła komunikat paint do wątku interfejsu użytkownika. Wątku interfejsu użytkownika otrzyma z `unbounded_buffer` obiektu `Bitmap` obiektu i go rysuje w oknie klienta.  
+ W tym przykładzie również użyto [concurrency::unbounded_buffer](reference/unbounded-buffer-class.md) obiektu, aby umożliwić wątku interfejsu użytkownika i wątku roboczego do komunikowania się ze sobą. Po wątku roboczego powoduje obrazu, wysyła wskaźnik do `Bitmap` obiekt `unbounded_buffer` obiektu, a następnie wysyła komunikat o malowaniu wątku interfejsu użytkownika. Wątek interfejsu użytkownika odbiera od `unbounded_buffer` obiektu `Bitmap` obiektu i rysuje go w oknie klienta.  
   
 #### <a name="to-remove-the-drawing-work-from-the-ui-thread"></a>Aby usunąć rysowania pracy z wątku interfejsu użytkownika  
   
-1.  W pliku stdafx.h, Dodaj następujący `#include` dyrektywy:  
+1.  W pliku stdafx.h należy dodać następujące `#include` dyrektywy:  
   
      [!code-cpp[concrt-mandelbrot#101](../../parallel/concrt/codesnippet/cpp/walkthrough-removing-work-from-a-user-interface-thread_9.h)]  
   
-2.  W ChildView.h, Dodaj `task_group` i `unbounded_buffer` zmienne Członkowskie, aby `protected` sekcji `CChildView` klasy. `task_group` Obiekt zawiera zadania, które wykonywać Rysowanie; `unbounded_buffer` obiekt zawiera obraz Mandelbrot ukończone.  
+2.  W ChildView.h, Dodaj `task_group` i `unbounded_buffer` zmienne Członkowskie `protected` części `CChildView` klasy. `task_group` Obiekt zawiera zadania, które wykonywać Rysowanie; `unbounded_buffer` obiekt zawiera obraz Mandelbrot ukończone.  
   
      [!code-cpp[concrt-mandelbrot#102](../../parallel/concrt/codesnippet/cpp/walkthrough-removing-work-from-a-user-interface-thread_10.h)]  
   
-3.  W ChildView.cpp, Dodaj `using` dyrektywy do `concurrency` przestrzeni nazw.  
+3.  W ChildView.cpp, Dodaj `using` dyrektywę `concurrency` przestrzeni nazw.  
   
      [!code-cpp[concrt-mandelbrot#103](../../parallel/concrt/codesnippet/cpp/walkthrough-removing-work-from-a-user-interface-thread_11.cpp)]  
   
 
-4.  W `CChildView::DrawMandelbrot` po wywołaniu metody `Bitmap::UnlockBits`, wywołaj [concurrency::send](reference/concurrency-namespace-functions.md#send) funkcji, aby przekazać `Bitmap` obiekt do wątku interfejsu użytkownika. Następnie wysłać wiadomość malowania w wątku interfejsu użytkownika i unieważnić obszaru klienckiego.  
+4.  W `CChildView::DrawMandelbrot` po wywołaniu metody `Bitmap::UnlockBits`, wywołaj [concurrency::send](reference/concurrency-namespace-functions.md#send) funkcję, aby przekazać `Bitmap` obiektu wątku interfejsu użytkownika. Następnie opublikuj komunikat o malowaniu wątku interfejsu użytkownika i unieważnić obszaru klienta.  
 
   
      [!code-cpp[concrt-mandelbrot#104](../../parallel/concrt/codesnippet/cpp/walkthrough-removing-work-from-a-user-interface-thread_12.cpp)]  
   
-5.  Aktualizacja `CChildView::OnPaint` metodę, aby odbierać zaktualizowane `Bitmap` obiektu i rysowania obrazu do okna klienta.  
+5.  Aktualizacja `CChildView::OnPaint` metodę, aby odbierać zaktualizowane `Bitmap` obiektu i narysuj obraz w oknie klienta.  
   
      [!code-cpp[concrt-mandelbrot#105](../../parallel/concrt/codesnippet/cpp/walkthrough-removing-work-from-a-user-interface-thread_13.cpp)]  
   
-     `CChildView::OnPaint` Metoda tworzy zadanie do generowania obrazu Mandelbrot, jeśli jeszcze nie istnieje w buforze wiadomości. Bufor komunikatów nie będą zawierać `Bitmap` obiektu w przypadkach, takich jak wiadomości paint początkowej i inne okno zostanie przeniesiony na początku okna klienta.  
+     `CChildView::OnPaint` Metoda tworzy zadanie do generowania obrazu Mandelbrot, jeśli nie istnieje w buforu komunikatu. Buforu komunikatu nie będzie zawierać `Bitmap` obiektu w przypadkach, takich jak komunikat malowania początkowej i inne okno jest przenoszony przed okna klienta.  
   
-6.  Sprawdź, czy aplikacja została pomyślnie zaktualizowana, kompilowania i uruchamiając go.  
+6.  Upewnij się, że aplikacja została pomyślnie zaktualizowana, tworząc i uruchamiając go.  
   
- Interfejs użytkownika jest teraz bardziej elastyczny rysowania praca jest wykonywana w tle.  
+ Interfejs użytkownika jest teraz bardziej dynamiczny, ponieważ rysowania praca jest wykonywana w tle.  
   
  [[Górnej](#top)]  
   
-##  <a name="performance"></a> Poprawianie wydajności rysowania  
+##  <a name="performance"></a> Poprawa wydajności rysowania  
 
- Generowanie fraktalowy Mandelbrot są odpowiednimi kandydatami do paralelizacja, ponieważ obliczenia każdego piksela jest niezależna od wszystkich pozostałych obliczeń. Aby parallelize procedury rysunku, przekonwertować zewnętrznego `for` pętli w `CChildView::DrawMandelbrot` metody do wywołania [concurrency::parallel_for](reference/concurrency-namespace-functions.md#parallel_for) algorytmu w następujący sposób.  
+ Generowanie fraktalowy Mandelbrot jest dobrym kandydatem do przetwarzania równoległego, ponieważ obliczenie każdego piksela jest niezależna od wszystkich pozostałych obliczeń. Równoległe przetwarzanie procedury rysowania, przekonwertować zewnętrzny `for` pętli w `CChildView::DrawMandelbrot` metoda do wywołania [concurrency::parallel_for](reference/concurrency-namespace-functions.md#parallel_for) algorytmu, w następujący sposób.  
 
   
  [!code-cpp[concrt-mandelbrot#301](../../parallel/concrt/codesnippet/cpp/walkthrough-removing-work-from-a-user-interface-thread_14.cpp)]  
   
- Obliczenia każdy element mapy bitowej są niezależne, nie trzeba synchronizacja operacji rysowania, które uzyskują dostęp do pamięci mapy bitowej. Dzięki temu wydajność, aby skalować jako liczba dostępnych procesorów wzrasta.  
+ Ponieważ obliczenie każdy element bitmapy jest niezależny, nie masz do synchronizowania operacji rysowania, które mają dostęp do pamięci mapy bitowej. Dzięki temu wydajność skalowania w miarę zwiększania procesorów dostępnych liczby.  
   
  [[Górnej](#top)]  
   
-##  <a name="cancellation"></a> Dodawanie obsługi anulowania  
- W tej sekcji opisano sposób obsługi zmianę rozmiaru okna i anulować wszystkie aktywne zadania rysunku, gdy okno zostanie zniszczone.  
+##  <a name="cancellation"></a> Dodanie obsługi anulowania  
+ W tej sekcji opisano, jak obsługiwać zmiany rozmiaru okna i jak anulować wszystkie aktywne zadania rysowania, kiedy niszczony jest okna.  
   
- Dokument [anulowanie w PPL](cancellation-in-the-ppl.md) wyjaśniono sposób anulowania działania w czasie wykonywania. Anulowanie jest współpraca; w związku z tym nie występuje od razu. Aby zatrzymać anulowanych zadań, środowisko uruchomieniowe zgłasza wyjątek wewnętrzny podczas wywołania kolejne zadania w czasie wykonywania. Poprzedniej sekcji przedstawia sposób użycia `parallel_for` algorytmu, aby poprawić wydajność rysowania zadań. Wywołanie `parallel_for` środowisko uruchomieniowe można zatrzymać zadania i w związku z tym umożliwia anulowanie do pracy.  
+ Dokument [anulowanie w PPL](cancellation-in-the-ppl.md) wyjaśniono, jak działa anulowanie w środowisku uruchomieniowym. Anulowanie jest wspólne; w związku z tym gdy nie występuje natychmiast. Aby zatrzymać anulowanych zadań, środowisko wykonawcze zgłasza wyjątek wewnętrzny podczas kolejnych wywołań z zadania w czasie wykonywania. Poprzedniej sekcji pokazano, jak używać `parallel_for` algorytmu, aby poprawić wydajność rysowania zadania. Wywołanie `parallel_for` umożliwia środowiska uruchomieniowego, można zatrzymać zadania, a w związku z tym umożliwia anulowanie pracy.  
   
 ### <a name="cancelling-active-tasks"></a>Anulowanie aktywnych zadań  
- Aplikacja Mandelbrot tworzy `Bitmap` obiektów, których wymiarów zgodny z rozmiarem okna klienta. Za każdym razem, gdy zmiany rozmiaru okna klienta, aplikacja tworzy dodatkowe zadania do generowania obrazu nowy rozmiar okna. Aplikacja nie wymaga tych obrazów pośredniego; wymaga on tylko obraz dla rozmiaru okna końcowego. Aby uniknąć wykonywania dodatkowej pracy aplikacji, możesz anulować wszystkie aktywne zadania rysowania w obsługi komunikatów dla `WM_SIZE` i `WM_SIZING` wiadomości, a następnie ponowne rysunku działać po zmieni się rozmiar okna.  
+ Tworzy aplikację Mandelbrot `Bitmap` obiektów, którego wymiary zgodny z rozmiarem okna klienta. Za każdym razem, gdy zmianie rozmiaru okna klienta, aplikacja tworzy zadania dodatkowych informacji uzupełniających w taki sposób, aby wygenerować obraz dla nowego rozmiaru okna. Aplikacja nie wymaga tych obrazów pośrednich; wymaga on tylko obraz dla rozmiaru okna końcowej. Aby zapobiec aplikacji z wykonywania dodatkowej pracy, możesz anulować wszystkie aktywne zadania rysowania w obsługi komunikatów dla `WM_SIZE` i `WM_SIZING` wiadomości i następnie rysowania Zaplanuj ponownie działać po zmianie rozmiaru okna.  
   
- Aby anulować aktywne zadania rysunku, gdy zmieniany jest rozmiar okna, aplikacja wywołuje [concurrency::task_group::cancel](reference/task-group-class.md#cancel) w programy obsługi dla metody `WM_SIZING` i `WM_SIZE` wiadomości. Program obsługi dla `WM_SIZE` wiadomości również wywołania [concurrency::task_group::wait](reference/task-group-class.md#wait) metody oczekiwania dla wszystkich aktywnych zadań do wykonania i zmienia harmonogram rysowania zadań dla rozmiaru okna zaktualizowane.  
+ Aby anulować aktywne zadania rysowania przy zmianie rozmiaru okna, aplikacja wywołuje [concurrency::task_group::cancel](reference/task-group-class.md#cancel) metody w procedurach obsługi dla `WM_SIZING` i `WM_SIZE` wiadomości. Obsługa `WM_SIZE` komunikatu także wywołania [CONCURRENCY::task_group:: wait](reference/task-group-class.md#wait) metoda oczekiwania dla wszystkich aktywnych zadań do wykonania, a następnie zmieni ustalony rysowania zadania dla rozmiaru okna zaktualizowane.  
   
- Gdy zostanie zniszczony okna klienta, jest dobrym rozwiązaniem, aby anulować wszystkie aktywne zadania rysowania. Anuluje wszystkie aktywne zadania rysowania upewnia się, że wątków roboczych nie publikowanie wiadomości w wątku interfejsu użytkownika po oknie klienta zostanie zniszczony. Aplikacja anuluje wszystkie aktywne zadania rysowania programu obsługi dla `WM_DESTROY` wiadomości.  
+ Kiedy niszczony jest okna klienta, jest dobrym rozwiązaniem, aby anulować wszystkie aktywne zadania rysowania. Trwa anulowanie wszelkich aktywnych zadań rysowania sprawia, że się upewnić, że wątków roboczych nie publikowały wiadomości do wątku interfejsu użytkownika po oknie klienta zostanie zniszczony. Aplikacja anuluje wszystkie aktywne zadania rysunku programu obsługi dla `WM_DESTROY` wiadomości.  
   
-### <a name="responding-to-cancellation"></a>Odpowiada na żądania anulowania  
- `CChildView::DrawMandelbrot` Metodę, która wykonuje zadanie rysunku, musi odpowiadać na anulowanie. Ponieważ środowisko uruchomieniowe używa obsługi wyjątków, aby anulować zadania, `CChildView::DrawMandelbrot` — metoda musi używać mechanizmu wyjątek bezpieczeństwa, aby zagwarantować, że wszystkie zasoby są poprawnie oczyszczony. W tym przykładzie użyto *inicjowania jest nabywania zasobów* (RAII) wzorzec do gwarantuje, że mapa bitowa są odblokowane, gdy zadanie zostało anulowane.  
+### <a name="responding-to-cancellation"></a>Odpowiadanie na anulowanie  
+ `CChildView::DrawMandelbrot` Metody, która wykonuje zadanie rysowania, musi odpowiadać na operację anulowania. Ponieważ środowisko wykonawcze używa obsługi wyjątków, aby anulować zadania, `CChildView::DrawMandelbrot` metody należy użyć mechanizmu bezpieczne pod względem wyjątków w celu zagwarantowania, że wszystkie zasoby są prawidłowo oczyszczony. W tym przykładzie użyto *inicjowania jest pozyskiwanie zasobów* wzorzec (RAII) gwarantuje, że bity mapy bitowej są odblokowane, gdy zadanie zostanie anulowane.  
   
 ##### <a name="to-add-support-for-cancellation-in-the-mandelbrot-application"></a>Aby dodać obsługę anulowania w aplikacji Mandelbrot  
   
-1.  W ChildView.h w `protected` sekcji `CChildView` klasy, Dodaj deklaracje dla `OnSize`, `OnSizing`, i `OnDestroy` funkcje mapy komunikatów.  
+1.  W ChildView.h w `protected` części `CChildView` klasy, Dodaj deklaracje dla `OnSize`, `OnSizing`, i `OnDestroy` funkcje mapy komunikatów.  
   
      [!code-cpp[concrt-mandelbrot#201](../../parallel/concrt/codesnippet/cpp/walkthrough-removing-work-from-a-user-interface-thread_15.h)]  
   
-2.  ChildView.cpp, zmodyfikuj mapy wiadomości zawiera obsługę `WM_SIZE`, `WM_SIZING`, i `WM_DESTROY` wiadomości.  
+2.  ChildView.cpp, zmodyfikuj mapy komunikatów, które ma zawierać programy obsługi dla `WM_SIZE`, `WM_SIZING`, i `WM_DESTROY` wiadomości.  
   
      [!code-cpp[concrt-mandelbrot#202](../../parallel/concrt/codesnippet/cpp/walkthrough-removing-work-from-a-user-interface-thread_16.cpp)]  
   
@@ -198,7 +198,7 @@ Ten dokument przedstawiono sposób korzystania ze współbieżności środowiska
   
      [!code-cpp[concrt-mandelbrot#203](../../parallel/concrt/codesnippet/cpp/walkthrough-removing-work-from-a-user-interface-thread_17.cpp)]  
   
-4.  Implementowanie `CChildView::OnSize` metody. Ta metoda anuluje wszystkie istniejące zadania rysowania i utworzenie nowego zadania rysowania dla rozmiaru okna zaktualizowanego klienta.  
+4.  Implementowanie `CChildView::OnSize` metody. Ta metoda anuluje wszystkie istniejące zadania rysowania i tworzy nowe zadanie rysunku dla rozmiaru okna zaktualizowanego klienta.  
   
      [!code-cpp[concrt-mandelbrot#204](../../parallel/concrt/codesnippet/cpp/walkthrough-removing-work-from-a-user-interface-thread_18.cpp)]  
   
@@ -210,19 +210,19 @@ Ten dokument przedstawiono sposób korzystania ze współbieżności środowiska
   
      [!code-cpp[concrt-mandelbrot#206](../../parallel/concrt/codesnippet/cpp/walkthrough-removing-work-from-a-user-interface-thread_20.cpp)]  
   
-7.  Dodaj następujący kod do `CChildView::DrawMandelbrot` metody po wywołaniu `Bitmap::LockBits`:  
+7.  Dodaj następujący kod do `CChildView::DrawMandelbrot` metoda po wywołaniu `Bitmap::LockBits`:  
   
      [!code-cpp[concrt-mandelbrot#207](../../parallel/concrt/codesnippet/cpp/walkthrough-removing-work-from-a-user-interface-thread_21.cpp)]  
   
-     Ten kod obsługuje anulowania, tworząc `scope_guard` obiektu. Obiekt pozostawia zakresu, umożliwia odblokowanie mapa bitowa.  
+     Ten kod obsługuje anulowanie, tworząc `scope_guard` obiektu. Gdy obiekt opuszcza zakresu, odblokowuje bity mapy bitowej.  
   
-8.  Modyfikowanie koniec `CChildView::DrawMandelbrot` metodę, aby odrzucić `scope_guard` obiektu po bitów mapy bitowej jest odblokowany, ale przed komunikaty są wysyłane do wątku interfejsu użytkownika. Dzięki temu wątku interfejsu użytkownika nie jest aktualizowana przed mapa bitowa są odblokowane.  
+8.  Modyfikowanie koniec `CChildView::DrawMandelbrot` metodę, aby odrzucić `scope_guard` obiektu po bity mapy bitowej są odblokowane, ale zanim jakiekolwiek komunikaty są wysyłane do wątku interfejsu użytkownika. Daje to gwarancję, że wątek interfejsu użytkownika nie zostanie zaktualizowana, zanim bity mapy bitowej są odblokowane.  
   
      [!code-cpp[concrt-mandelbrot#208](../../parallel/concrt/codesnippet/cpp/walkthrough-removing-work-from-a-user-interface-thread_22.cpp)]  
   
-9. Sprawdź, czy aplikacja została pomyślnie zaktualizowana, kompilowania i uruchamiając go.  
+9. Upewnij się, że aplikacja została pomyślnie zaktualizowana, tworząc i uruchamiając go.  
   
- Podczas zmiany rozmiaru okna rysowania praca odbywa się tylko do rozmiaru końcowego okna. Wszystkie aktywne zadania rysowania są również anulowany, gdy okno zostanie zniszczone.  
+ Podczas zmiany rozmiaru okna rysowania praca odbywa się tylko do rozmiaru końcowego okna. Wszystkie aktywne zadania rysowania również zostaną anulowane, kiedy niszczony jest okna.  
   
  [[Górnej](#top)]  
   

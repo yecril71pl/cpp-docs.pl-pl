@@ -17,40 +17,45 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 5426d639ffb8655466239232da7672b89564bfae
-ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
+ms.openlocfilehash: 49024e903237160cc26a9c095cf9f313b43ccb6f
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/09/2018
-ms.locfileid: "40020112"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42600768"
 ---
 # <a name="raiseexception-function"></a>RaiseException — Funkcja
-Obsługuje infrastrukturę biblioteki WRL i nie jest przeznaczona do użycia bezpośrednio w kodzie.  
-  
-## <a name="syntax"></a>Składnia  
-  
-```cpp  
-inline void __declspec(noreturn)   RaiseException(  
-      HRESULT hr,   
-      DWORD dwExceptionFlags = EXCEPTION_NONCONTINUABLE);  
-```  
-  
-### <a name="parameters"></a>Parametry  
- *godz.*  
- Kod wyjątku wyjątków zgłaszanych; oznacza to, że wartość HRESULT operację zakończoną niepowodzeniem.  
-  
- *dwExceptionFlags*  
- Flaga wskazująca pozwala na kontynuację wyjątek (wartość flagi wynosi zero), lub noncontinuable wyjątek (wartość flagi jest różna od zera). Domyślnie wyjątek jest wystąpieniu.  
-  
-## <a name="remarks"></a>Uwagi  
- Zgłasza wyjątek w wątku wywołującego.  
-  
- Aby uzyskać więcej informacji, zobacz Windows `RaiseException` funkcji.  
-  
-## <a name="requirements"></a>Wymagania  
- **Nagłówek:** internal.h  
-  
- **Namespace:** Microsoft::wrl:: details  
-  
-## <a name="see-also"></a>Zobacz też  
- [Microsoft::WRL::Details, przestrzeń nazw](../windows/microsoft-wrl-details-namespace.md)
+
+Obsługuje infrastrukturę biblioteki WRL i nie jest przeznaczona do użycia bezpośrednio w kodzie.
+
+## <a name="syntax"></a>Składnia
+
+```cpp
+inline void __declspec(noreturn)   RaiseException(
+      HRESULT hr,
+      DWORD dwExceptionFlags = EXCEPTION_NONCONTINUABLE);
+```
+
+### <a name="parameters"></a>Parametry
+
+*godz.*  
+Kod wyjątku wyjątków zgłaszanych; oznacza to, że wartość HRESULT operację zakończoną niepowodzeniem.
+
+*dwExceptionFlags*  
+Flaga wskazująca pozwala na kontynuację wyjątek (wartość flagi wynosi zero), lub noncontinuable wyjątek (wartość flagi jest różna od zera). Domyślnie wyjątek jest wystąpieniu.
+
+## <a name="remarks"></a>Uwagi
+
+Zgłasza wyjątek w wątku wywołującego.
+
+Aby uzyskać więcej informacji, zobacz Windows `RaiseException` funkcji.
+
+## <a name="requirements"></a>Wymagania
+
+**Nagłówek:** internal.h
+
+**Namespace:** Microsoft::wrl:: details
+
+## <a name="see-also"></a>Zobacz też
+
+[Microsoft::WRL::Details, przestrzeń nazw](../windows/microsoft-wrl-details-namespace.md)

@@ -15,34 +15,39 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 0dc0a5ac68a8d4354f3cf0f8f5df1bc698135b6f
-ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
+ms.openlocfilehash: 1f8b2175ef001ac3b8e934bf61033ccdb7f0da9a
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/09/2018
-ms.locfileid: "40020125"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42611665"
 ---
 # <a name="runtimeclassbase-structure"></a>RuntimeClassBase — Struktura
-Obsługuje infrastrukturę biblioteki WRL i nie jest przeznaczona do użycia bezpośrednio w kodzie.  
-  
-## <a name="syntax"></a>Składnia  
-  
-```cpp  
-struct RuntimeClassBase;  
-```  
-  
-## <a name="remarks"></a>Uwagi  
- Używane do wykrywania `RuntimeClass` w [wprowadzić](../windows/make-function.md) funkcji.  
-  
- **RuntimeClassBase** jest pustą strukturą.  
-  
-## <a name="inheritance-hierarchy"></a>Hierarchia dziedziczenia  
- `RuntimeClassBase`  
-  
-## <a name="requirements"></a>Wymagania  
- **Nagłówek:** implements.h  
-  
- **Namespace:** Microsoft::wrl:: details  
-  
-## <a name="see-also"></a>Zobacz też  
- [Microsoft::WRL::Details, przestrzeń nazw](../windows/microsoft-wrl-details-namespace.md)
+
+Obsługuje infrastrukturę biblioteki WRL i nie jest przeznaczona do użycia bezpośrednio w kodzie.
+
+## <a name="syntax"></a>Składnia
+
+```cpp
+struct RuntimeClassBase;
+```
+
+## <a name="remarks"></a>Uwagi
+
+Używane do wykrywania `RuntimeClass` w [wprowadzić](../windows/make-function.md) funkcji.
+
+**RuntimeClassBase** jest pustą strukturą.
+
+## <a name="inheritance-hierarchy"></a>Hierarchia dziedziczenia
+
+`RuntimeClassBase`
+
+## <a name="requirements"></a>Wymagania
+
+**Nagłówek:** implements.h
+
+**Namespace:** Microsoft::wrl:: details
+
+## <a name="see-also"></a>Zobacz też
+
+[Microsoft::WRL::Details, przestrzeń nazw](../windows/microsoft-wrl-details-namespace.md)

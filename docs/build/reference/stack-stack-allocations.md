@@ -22,12 +22,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c8ee3fac90bcbb972278d9b3e2cf7cebd62fedf4
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 29ed2efa73d3ec1014bf0a65e7b4b1b1b85cf879
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32377879"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42464493"
 ---
 # <a name="stack-stack-allocations"></a>/STACK (Twórz stos z alokacji)
 ```  
@@ -35,25 +35,25 @@ ms.locfileid: "32377879"
 ```  
   
 ## <a name="remarks"></a>Uwagi  
- Opcja /STACK ustawia rozmiar stosu w bajtach. Użyj tej opcji tylko wtedy, gdy tworzenie pliku .exe.  
+ Opcja /STACK ustawia rozmiar stosu w bajtach. Użyj tej opcji tylko wtedy, gdy tworzysz pliku .exe.  
   
- `reserve` Wartość określa alokacji całkowita stosu w pamięci wirtualnej. Dla ARM, x86 i [!INCLUDE[vcprx64](../../assembler/inline/includes/vcprx64_md.md)] maszyny, rozmiar stosu domyślna to 1 MB.  
+ `reserve` Wartość określa Alokacja całkowita stosu w pamięci wirtualnej. Dla ARM x86 i x64 maszyn, domyślny rozmiar stosu to 1 MB.  
   
- `commit` podlega interpretacji przez system operacyjny. W systemie Windows, Windows RT określa ilość pamięci fizycznej do przydzielenia naraz. Zadeklarowanej pamięci wirtualnej spowoduje, że miejsca, które mają zostać zarezerwowane w pliku stronicowania. Wyższy `commit` wartość zaoszczędzić czas podczas aplikacji wymaga więcej miejsca na stosie, ale zwiększa wymagania dotyczące pamięci i być może czas uruchamiania. Dla ARM, x86 i [!INCLUDE[vcprx64](../../assembler/inline/includes/vcprx64_md.md)] maszyny, zatwierdzania wartość domyślna to 4 KB.  
+ `commit` podlega interpretacji przez system operacyjny. W Windows wypchnie określa ilość pamięci fizycznej do przydzielenia w danym momencie. Zadeklarowanej pamięci wirtualnej powoduje, że miejsce, które mają zostać zarezerwowane w pliku stronicowania. Uzyskanie lepszej `commit` wartość pozwala zaoszczędzić czas, gdy potrzeba więcej miejsca na stosie aplikacji, ale zwiększa wymagania dotyczące pamięci i ewentualnie czas uruchamiania. Dla ARM maszyn x86 i x64 zatwierdzenia wartość domyślna to 4 KB.  
   
- Określ `reserve` i `commit` wartości dziesiętne lub notacji języka C.  
+ Określ `reserve` i `commit` wartości dziesiętnych lub notacji języka C.  
   
- Ustaw rozmiar stosu innym sposobem jest użycie [STACKSIZE](../../build/reference/stacksize.md) instrukcji w pliku definicji modułu (.def). **STACKSIZE** zastępuje alokacji stosu (/ STACK) opcja, jeśli określono oba. Rozmiar stosu można zmienić po utworzeniu pliku .exe przy użyciu [polecenia EDITBIN](../../build/reference/editbin-reference.md) narzędzia.  
+ Innym sposobem Ustaw rozmiar stosu jest [STACKSIZE](../../build/reference/stacksize.md) instrukcja w pliku definicji modułu (.def). **STACKSIZE** zastępuje twórz stos z alokacji (/ STACK) opcję, jeśli są określone oba. Rozmiar stosu można zmienić po utworzeniu pliku .exe przy użyciu [EDITBIN](../../build/reference/editbin-reference.md) narzędzia.  
   
 ### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>Aby ustawić tę opcję konsolidatora w środowisku programowania Visual Studio  
   
-1.  Otwórz projekt **strony właściwości** okno dialogowe. Aby uzyskać więcej informacji, zobacz [Ustawianie właściwości projektu Visual C++](../../ide/working-with-project-properties.md).  
+1.  Otwórz projekt **stron właściwości** okno dialogowe. Aby uzyskać więcej informacji, zobacz [ustawienie właściwości projektu Visual C++](../../ide/working-with-project-properties.md).  
   
 2.  Wybierz **konsolidatora** folderu.  
   
-3.  Wybierz **systemu** strony właściwości.  
+3.  Wybierz **systemu** stronę właściwości.  
   
-4.  Zmień jedną z następujących właściwości:  
+4.  Zmodyfikuj jedną z następujących właściwości:  
   
     -   **Zaalokowany rozmiar stosu**  
   

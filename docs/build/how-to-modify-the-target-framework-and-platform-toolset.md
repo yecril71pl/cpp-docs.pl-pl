@@ -16,54 +16,54 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f21ec9d205e009438fac97914ec4b684713102a3
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: c53960b7ef972d605902a260de9e7ef344a31274
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32371905"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42464751"
 ---
 # <a name="how-to-modify-the-target-framework-and-platform-toolset"></a>Porady: modyfikowanie platformy docelowej i zestawu narzędzi platformy
-Możesz zmienić ustawienia projektu Visual C++ pod kątem różnych wersji programu .NET Framework i używać innej platformie procesami. Domyślnie system projektu używa wersji programu .NET Framework i wersję zestawu narzędzi odnoszą się do wersji programu Visual Studio, która służy do tworzenia projektu. Zestaw narzędzi platformy docelowej można zmienić, modyfikując właściwości projektu. Element docelowy Framework można zmienić, modyfikując plik projektu (.vcxproj). Nie masz Obsługa oddzielny kod podstawowy dla każdego obiektu docelowego kompilacji.  
+Możesz zmienić ustawienia projektu Visual C++ pod kątem różnych wersji programu .NET Framework i używać różnych zestawów narzędzi platformy. Domyślnie system projektu używa wersji .NET Framework i wersji zestawu narzędzi, które odnoszą się do wersji programu Visual Studio, którego używasz do tworzenia projektu. Możesz zmienić zestaw narzędzi platformy docelowej modyfikując właściwości projektu. Możesz zmienić szablon docelowy modyfikując plik projektu (.vcxproj). Nie trzeba utrzymywać osobnego kodu podstawowego dla każdego celu kompilacji.  
   
 > [!IMPORTANT]
->  Niektóre wersje mogą nie obsługiwać zmodyfikowane docelowych platform lub procesami platformy. Aby uzyskać informacje dotyczące zgodności, zobacz [portu, migracji i uaktualniania projektów programu Visual Studio](/visualstudio/porting/port-migrate-and-upgrade-visual-studio-projects).  
+>  Niektóre wersje mogą nie obsługiwać modyfikowanych docelowych platform ani zestawów narzędzi platformy. Aby uzyskać informacje o zgodności – zobacz [Port, migrowanie i uaktualnianie projektów programu Visual Studio](/visualstudio/porting/port-migrate-and-upgrade-visual-studio-projects).  
   
- Jeśli zmienisz docelowej Framework również zmienić zestaw narzędzi platformy do wersji obsługującej tego Framework. Na przykład docelową programu .NET Framework 4.5, należy użyć narzędzi zgodną platformę, takiego jak Visual Studio 2015 (w wersji 140), programu Visual Studio 2013 (v120) lub programu Visual Studio 2012 (v110). Można użyć **Windows7.1SDK** zestaw narzędzi platformy .NET Framework 2.0, 3.0, 3.5, a 4 i x86, Itanium, docelowy i x64 platform.  
+ Kiedy zmieniasz szablon docelowy, należy również zmienić zestaw narzędzi platformy na wersję obsługującą ten szablon. Na przykład pod kątem programu .NET Framework 4.5, należy użyć kompatybilnego zestawu narzędzi platformy takie jak Visual Studio 2015 (wersja 140), Visual Studio 2013 (v120) lub programu Visual Studio 2012 (v110). Możesz użyć **Windows7.1SDK** zestawu narzędzi platformy docelowej .NET Framework 2.0, 3.0, 3.5 i 4 i x86, Itanium i x64 platform.  
   
 > [!NOTE]
->  Aby zmienić zestaw narzędzi platformy docelowej, musi mieć odpowiednie wersje programu Visual Studio lub zestawu SDK platformy Windows, które zostały zainstalowane. Na przykład, aby Docelowa platforma Itanium z **Windows7.1SDK** zestaw narzędzi platformy, musi mieć [Microsoft Windows SDK dla systemu Windows 7 i .NET Framework 4 z dodatkiem SP1](http://www.microsoft.com/download/details.aspx?id=8279) zainstalowany; można jednak użyć inny zgodnej wersji programu Visual Studio do pracy programowania, pod warunkiem, że docelowa poprawne Framework w wersji i zestawu narzędzi platformy.  
+>  Aby zmienić zestaw narzędzi platformy docelowej, musi mieć odpowiednie wersje programu Visual Studio lub zestawu SDK platformy Windows, które zostały zainstalowane. Na przykład, aby Docelowa platforma Itanium z **Windows7.1SDK** zestawu narzędzi platformy, konieczne jest posiadanie [Microsoft Windows SDK for Windows 7 i platformy .NET Framework 4 z dodatkiem SP1](http://www.microsoft.com/download/details.aspx?id=8279) zainstalowany; Jednakże, można użyć innej zgodnej wersji programu Visual Studio do pracy programowania, pod warunkiem, że platformą docelową jest program poprawne Framework w wersji i zestawu narzędzi platformy.  
   
- Platforma docelowa dalsze można rozszerzyć przez utworzenie zestawu narzędzi platformy niestandardowej. Aby uzyskać więcej informacji, zobacz [C++ natywnego Wielowersyjności](http://go.microsoft.com/fwlink/p/?linkid=196619) na blogu Visual C++.  
+ Możesz rozszerzyć platformę docelową dalej tworząc niestandardowy zestaw narzędzi platformy. Aby uzyskać więcej informacji, zobacz [C++ natywna Wielowersyjność](http://go.microsoft.com/fwlink/p/?linkid=196619) na blogu Visual C++.  
   
-### <a name="to-change-the-target-framework"></a>Aby zmienić docelowy Framework  
+### <a name="to-change-the-target-framework"></a>Aby zmienić platformę docelową  
   
-1.  W programie Visual Studio w **Eksploratora rozwiązań**, wybierz projekt. Na pasku menu, otwórz **projektu** menu i wybierz polecenie **Zwolnij projekt**. Zwalnia to pliku projektu (.vcxproj) dla projektu.  
+1.  W programie Visual Studio w **Eksploratora rozwiązań**, wybierz swój projekt. Na pasku menu Otwórz **projektu** menu i wybrać **Zwolnij projekt**. To wyładowuje plik projektu (.vcxproj) dla projektu.  
   
     > [!NOTE]
-    >  Nie można załadować projektu C++, gdy plik projektu jest modyfikowana w programie Visual Studio. Jednak można użyć innego edytora, takiego jak Notatnik, do zmodyfikowania pliku projektu, gdy projekt jest ładowany w programie Visual Studio. Visual Studio wykryje, że plik projektu została zmieniona i wyświetlony monit o ponowne załadowanie projektu.  
+    >  Nie można załadować projektu C++, gdy plik projektu jest modyfikowany w programie Visual Studio. Jednak służy innego edytora, takiego jak Notatnik do zmodyfikowania pliku projektu, gdy projekt jest ładowany w programie Visual Studio. Visual Studio wykryje, że plik projektu został zmieniony i wyświetlenie monitu o ponowne załadowanie projektu.  
   
-2.  Na pasku menu wybierz **pliku**, **Otwórz**, **pliku**. W **Otwieranie pliku** okno dialogowe, przejdź do folderu projektu, a następnie otwórz plik projektu (.vcxproj).  
+2.  Na pasku menu wybierz **pliku**, **Otwórz**, **pliku**. W **Otwórz plik** okno dialogowe, przejdź do folderu projektu, a następnie otwórz plik projektu (.vcxproj).  
   
-3.  W pliku projektu zlokalizować wpis dla docelowej wersji struktury. Na przykład, jeśli projekt jest przeznaczony do użycia programu .NET Framework 4.5, zlokalizuj `<TargetFrameworkVersion>v4.5</TargetFrameworkVersion>` w `<PropertyGroup Label="Globals">` elementu `<Project>` elementu. Jeśli `<TargetFrameworkVersion>` element nie jest obecny, projektu nie korzysta z programu .NET Framework i zmiana nie jest wymagane.  
+3.  W pliku projektu zlokalizuj wpis dla wersji platformy docelowej. Na przykład, jeśli projekt jest przeznaczony do użycia programu .NET Framework 4.5, zlokalizuj `<TargetFrameworkVersion>v4.5</TargetFrameworkVersion>` w `<PropertyGroup Label="Globals">` elementu `<Project>` elementu. Jeśli `<TargetFrameworkVersion>` element nie jest obecny, projektu nie korzysta z programu .NET Framework i zmiana nie jest potrzebna.  
   
-4.  Zmień wartość na wersji platformy, które mają, np. w wersji 3.5 lub 4.6.  
+4.  Zmień wartość na wersję, której potrzebujesz, takie jak 3.5 lub wersje 4.6.  
   
-5.  Zapisz zmiany i zamknij Edytor.  
+5.  Zapisz zmiany i zamknąć Edytor.  
   
-6.  W **Eksploratora rozwiązań**, otwórz menu skrótów projektu, a następnie wybierz pozycję **Załaduj ponownie projekt**.  
+6.  W **Eksploratora rozwiązań**, otwórz menu skrótów dla projektu, a następnie wybierz **Załaduj ponownie projekt**.  
   
-7.  Aby sprawdzić zmiany, w **Eksploratora rozwiązań**, kliknij prawym przyciskiem myszy, aby otworzyć menu skrótów projektu (a nie dla rozwiązania), a następnie wybierz pozycję **właściwości** można otworzyć projektu **właściwości Strony** okno dialogowe. W lewym okienku okna dialogowego rozwiń **właściwości konfiguracji** , a następnie wybierz **ogólne**. Sprawdź, czy **.NET Framework w wersji docelowej** zawiera nową wersję Framework.  
+7.  Aby sprawdzić zmiany, w **Eksploratora rozwiązań**, kliknij prawym przyciskiem myszy, aby otworzyć menu skrótów dla projektu (a nie dla rozwiązania), a następnie wybierz **właściwości** można otworzyć projektu **właściwości Strony** okno dialogowe. W lewym okienku okna dialogowego, rozwiń **właściwości konfiguracji** , a następnie wybierz **ogólne**. Upewnij się, że **wersji platformy docelowej .NET** przedstawia wersję szablonu.  
   
 ### <a name="to-change-the-project-toolset"></a>Aby zmienić zestaw narzędzi projektu  
   
-1.  W programie Visual Studio w **Eksploratora rozwiązań**, otwórz menu skrótów projektu (a nie dla rozwiązania), a następnie wybierz pozycję **właściwości** można otworzyć projektu **strony właściwości**okno dialogowe.  
+1.  W programie Visual Studio w **Eksploratora rozwiązań**, otwórz menu skrótów dla projektu (a nie dla rozwiązania), a następnie wybierz **właściwości** można otworzyć projektu **stron właściwości**okno dialogowe.  
   
-2.  W **strony właściwości** po otwarciu okna dialogowego **konfiguracji** listy rozwijanej, a następnie wybierz **wszystkie konfiguracje**.  
+2.  W **stron właściwości** po otwarciu okna dialogowego **konfiguracji** listy rozwijanej, a następnie wybierz **wszystkie konfiguracje**.  
   
-3.  W lewym okienku okna dialogowego rozwiń **właściwości konfiguracji** , a następnie wybierz **ogólne**.  
+3.  W lewym okienku okna dialogowego, rozwiń **właściwości konfiguracji** , a następnie wybierz **ogólne**.  
   
-4.  W okienku po prawej stronie zaznacz **zestaw narzędzi platformy** a następnie wybierz ma zestaw narzędzi z listy rozwijanej. Na przykład, jeśli zainstalowano [!INCLUDE[vs_dev10_long](../build/includes/vs_dev10_long_md.md)] zestawu narzędzi, wybierz opcję **programu Visual Studio 2010 (v100)** go użyć w projekcie.  
+4.  W okienku po prawej stronie wybierz **zestawu narzędzi platformy** a następnie wybierz zestaw narzędzi ma z listy rozwijanej. Na przykład jeśli zainstalowano zestaw narzędzi Visual Studio 2010, wybierz pozycję **programu Visual Studio 2010 (v100)** z niej korzystać w projekcie.  
   
 5.  Wybierz **OK** przycisku.  
   

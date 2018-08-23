@@ -1,5 +1,5 @@
 ---
-title: 'Biblioteki DLL innego typu niż MFC: Omówienie | Dokumentacja firmy Microsoft'
+title: 'Biblioteki DLL inne niż MFC: Omówienie | Dokumentacja firmy Microsoft'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,17 +15,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c61ad8e6d1107dfdacc91c32d48ca1e3624a0211
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 037f6d7bc80956536a7098ee67275425c41a2f68
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32368645"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42613222"
 ---
 # <a name="non-mfc-dlls-overview"></a>Biblioteki DLL inne niż MFC: omówienie
-Z systemem innym niż DLL MFC — jest bibliotekę DLL, która nie używa wewnętrznie MFC i funkcje wyeksportowane w bibliotece DLL może być wywoływany przez MFC lub innego typu niż MFC plików wykonywalnych. Funkcje zazwyczaj są eksportowane z innych niż - biblioteki MFC DLL przy użyciu standardowych interfejsów C.  
+Nie - MFC DLL jest biblioteki DLL, która nie używa MFC wewnętrznie i eksportowanych funkcji w bibliotece DLL może być wywoływany przez pliki wykonywalne MFC lub inne niż MFC. Funkcje eksportowane są zazwyczaj z DLL bez MFC za pomocą standardowego interfejsu C.  
   
- Aby uzyskać więcej informacji o innych niż - biblioteki DLL MFC, zobacz [bibliotek dołączanych dynamicznie](http://msdn.microsoft.com/library/windows/desktop/ms682589) w [!INCLUDE[winsdkshort](../atl-mfc-shared/reference/includes/winsdkshort_md.md)].  
+ Aby uzyskać więcej informacji na temat dll bez MFC, zobacz [bibliotek dołączanych dynamicznie](http://msdn.microsoft.com/library/windows/desktop/ms682589) w zestawie Windows SDK.  
   
 ## <a name="what-do-you-want-to-do"></a>Co chcesz zrobić?  
   
@@ -35,9 +35,9 @@ Z systemem innym niż DLL MFC — jest bibliotekę DLL, która nie używa wewnę
   
 -   [Łączenie pliku wykonywalnego z biblioteką DLL](../build/linking-an-executable-to-a-dll.md)  
   
--   [Inicjowanie biblioteki DLL](../build/run-time-library-behavior.md#initializing-a-dll)  
+-   [Zainicjuj bibliotekę DLL](../build/run-time-library-behavior.md#initializing-a-dll)  
   
-## <a name="what-do-you-want-to-know-more-about"></a>Co chcesz dowiedzieć się więcej o?  
+## <a name="what-do-you-want-to-know-more-about"></a>Co chcesz dowiedzieć się więcej na temat?  
   
 -   [Regularne biblioteki DLL MFC połączone statycznie z MFC](../build/regular-dlls-statically-linked-to-mfc.md)  
   

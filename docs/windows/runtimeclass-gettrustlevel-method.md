@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: adcec3f4a531a6c48e0995468994900124746e4b
-ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
+ms.openlocfilehash: c714f37a53e111c90333352610fd73532ac86fe7
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/09/2018
-ms.locfileid: "40015134"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42599835"
 ---
 # <a name="runtimeclassgettrustlevel-method"></a>RuntimeClass::GetTrustLevel — Metoda
 
@@ -37,6 +37,7 @@ STDMETHOD(GetTrustLevel)(
 ```
 
 ### <a name="parameters"></a>Parametry
+
 *trustLvl*  
 Po zakończeniu tej operacji, bieżący poziom zaufania **RuntimeClass** obiektu.
 
@@ -55,4 +56,5 @@ Błąd potwierdzenia jest emitowane, jeśli `__WRL_STRICT__` lub `__WRL_FORCE_IN
 **Namespace:** Microsoft::WRL
 
 ## <a name="see-also"></a>Zobacz też
- [RuntimeClass, klasa](../windows/runtimeclass-class.md)
+
+[RuntimeClass, klasa](../windows/runtimeclass-class.md)

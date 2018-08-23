@@ -17,36 +17,39 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 13c0ded165e7c1510f0112d9b3b9e93f2e356775
-ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
+ms.openlocfilehash: a585f052c42453f0eb9fe8a39a21a5561d4b00c3
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/09/2018
-ms.locfileid: "40015601"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42598963"
 ---
 # <a name="semaphoresemaphore-constructor"></a>Semaphore::Semaphore — Konstruktor
-Inicjuje nowe wystąpienie klasy **semafora** klasy.  
-  
-## <a name="syntax"></a>Składnia  
-  
-```cpp  
-explicit Semaphore(  
-   HANDLE h  
-);  
-  
-WRL_NOTHROW Semaphore(  
-   _Inout_ Semaphore&& h  
-);  
-```  
-  
-### <a name="parameters"></a>Parametry  
- *h*  
- Dojście lub odwołanie rvalue, aby **semafora** obiektu.  
-  
-## <a name="requirements"></a>Wymagania  
- **Nagłówek:** corewrappers.h  
-  
- **Namespace:** Microsoft::wrl:: wrappers
- 
- ## <a name="see-also"></a>Zobacz też
- [Semaphore, klasa](../windows/semaphore-class.md)
+
+Inicjuje nowe wystąpienie klasy **semafora** klasy.
+
+## <a name="syntax"></a>Składnia
+
+```cpp
+explicit Semaphore(
+   HANDLE h
+);
+
+WRL_NOTHROW Semaphore(
+   _Inout_ Semaphore&& h
+);
+```
+
+### <a name="parameters"></a>Parametry
+
+*h*  
+Dojście lub odwołanie rvalue, aby **semafora** obiektu.
+
+## <a name="requirements"></a>Wymagania
+
+**Nagłówek:** corewrappers.h
+
+**Namespace:** Microsoft::wrl:: wrappers
+
+## <a name="see-also"></a>Zobacz też
+[Semaphore, klasa](../windows/semaphore-class.md)

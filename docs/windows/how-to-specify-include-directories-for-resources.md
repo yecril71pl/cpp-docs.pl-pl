@@ -17,28 +17,31 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: b7444ccf4f3a03036a5363024d0794f67b6a1ad6
-ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
+ms.openlocfilehash: baa317610339e7073f2e829860e11ab15e66277e
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/09/2018
-ms.locfileid: "40018861"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42611064"
 ---
 # <a name="how-to-specify-include-directories-for-resources"></a>Porady: określanie katalogów dołączenia dla zasobów
-### <a name="to-specify-include-directories-for-a-specific-rc-file"></a>W celu określenia katalogów dołączanych dla określonego pliku .rc  
-  
-1.  Kliknij prawym przyciskiem myszy plik .rc w Eksploratorze rozwiązań i wybierz **właściwości** z menu skrótów.  
-  
-2.  W **stron właściwości** okno dialogowe, kliknij przycisk **zasobów** węzła w okienku po lewej stronie, następnie określ dodatkowe katalogi dołączane we **dodatkowe katalogi dołączane** Właściwość.  
-  
- Aby uzyskać informacje na temat dodawania zasobów do projektów zarządzanych, zobacz [zasoby w aplikacjach pulpitu](/dotnet/framework/resources/index) w przewodniku dewelopera .NET Framework. Aby uzyskać informacji na temat ręcznego dodawania plików zasobów do projektów zarządzanych, uzyskiwania dostępu do zasobów, wyświetlania statycznych zasobów i przypisywania ciągów zasobów do właściwości, zobacz [Instruktaż: Using Resources for Localization with ASP.NET](http://msdn.microsoft.com/Library/bb4e5b44-e2b0-48ab-bbe9-609fb33900b6).  
-  
-## <a name="requirements"></a>Wymagania  
- Win32  
-  
-## <a name="see-also"></a>Zobacz też  
- [Zasób zawiera okno dialogowe](../windows/resource-includes-dialog-box.md)   
- [TN035: Używanie wielu plików zasobów i plików nagłówków z programem Visual C++](../mfc/tn035-using-multiple-resource-files-and-header-files-with-visual-cpp.md)   
- [Symbole: Identyfikatory zasobów](../windows/symbols-resource-identifiers.md)   
- [Pliki zasobów](../windows/resource-files-visual-studio.md)   
- [Edytory zasobów](../windows/resource-editors.md)
+
+### <a name="to-specify-include-directories-for-a-specific-rc-file"></a>W celu określenia katalogów dołączanych dla określonego pliku .rc
+
+1. Kliknij prawym przyciskiem myszy plik .rc w Eksploratorze rozwiązań i wybierz **właściwości** z menu skrótów.
+
+2. W **stron właściwości** okno dialogowe, kliknij przycisk **zasobów** węzła w okienku po lewej stronie, następnie określ dodatkowe katalogi dołączane we **dodatkowe katalogi dołączane** Właściwość.
+
+Aby uzyskać informacje na temat dodawania zasobów do projektów zarządzanych, zobacz [zasoby w aplikacjach pulpitu](/dotnet/framework/resources/index) w przewodniku dewelopera .NET Framework. Aby uzyskać informacji na temat ręcznego dodawania plików zasobów do projektów zarządzanych, uzyskiwania dostępu do zasobów, wyświetlania statycznych zasobów i przypisywania ciągów zasobów do właściwości, zobacz [Instruktaż: Using Resources for Localization with ASP.NET](http://msdn.microsoft.com/Library/bb4e5b44-e2b0-48ab-bbe9-609fb33900b6).
+
+## <a name="requirements"></a>Wymagania
+
+Win32
+
+## <a name="see-also"></a>Zobacz też
+
+[Dołączone zasoby, okno dialogowe](../windows/resource-includes-dialog-box.md)  
+[TN035: używanie wielu plików zasobów i plików nagłówków z programem Visual C++](../mfc/tn035-using-multiple-resource-files-and-header-files-with-visual-cpp.md)  
+[Symbole: identyfikatory zasobów](../windows/symbols-resource-identifiers.md)  
+[Pliki zasobów](../windows/resource-files-visual-studio.md)  
+[Edytory zasobów](../windows/resource-editors.md)

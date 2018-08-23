@@ -22,71 +22,75 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: bd38dcf02de661a063df356b7d915eed9814f192
-ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
+ms.openlocfilehash: 6fc8d8100786f78d516bb5f880e4238b7e3a2388
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39652409"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42611867"
 ---
 # <a name="eventsource"></a>event_source
-Tworzy źródła zdarzenia.  
-  
-## <a name="syntax"></a>Składnia  
-  
-```cpp  
-[ event_source(  
-   type,  
-   optimize=[speed | size],  
-   decorate=[true | false]  
-) ]  
-```  
-  
-### <a name="parameters"></a>Parametry  
- *Typ*  
- Wyliczenie jednego z następujących wartości:  
-  
--   `native` dla niezarządzanego kodu C/C++ (wartość domyślna dla klasy niezarządzane).  
-  
--   `com` dla kodu COM. Należy użyć `coclass` podczas `type` = `com`. Ta wartość wymaga, że zawrzesz następujące pliki nagłówków:  
-  
-    ```cpp  
-    #define _ATL_ATTRIBUTES  
-    #include <atlbase.h>  
-    #include <atlcom.h>  
-    ```  
-  
- *optymalizuj*  
- Gdy *typu* jest `native`, można określić `optimize=size`, aby wskazać, że istnieje 4 bajty pamięci masowej (minimum) dla wszystkich zdarzeń w klasie lub `optimize=speed` (ustawienie domyślne), aby wskazać, że jest 4 * (liczba zdarzeń) bajtów magazynu.  
-  
- *dekoracji*  
- Gdy *typu* jest `native`, można określić `decorate=false`, aby wskazać, że rozwiniętej nazwy w pliku scalonego (.mrg) nie powinna zawierać nazwę klasy otaczającej. [/FX](../build/reference/fx-merge-injected-code.md) umożliwia generowanie plików .mrg. `decorate=false`, która jest wartością domyślną, wyniki w pełni kwalifikowanego typu nazwy w scalony plik.  
-  
-## <a name="remarks"></a>Uwagi  
- **Event_source** atrybut C++ Określa, że klasy lub struktury, do którego jest stosowana będzie źródła zdarzenia.  
-  
- **event_source** jest używany w połączeniu z [event_receiver](../windows/event-receiver.md) atrybutu i [__event](../cpp/event.md) — słowo kluczowe. Użyj `event_receiver` do tworzenia odbiorcy zdarzeń. Użyj **__event** metod w źródle zdarzenia do określenia tych metod jako zdarzenia.  
-  
+
+Tworzy źródła zdarzenia.
+
+## <a name="syntax"></a>Składnia
+
+```cpp
+[ event_source(
+   type,
+   optimize=[speed | size],
+   decorate=[true | false]
+) ]
+```
+
+### <a name="parameters"></a>Parametry
+
+*Typ*  
+Wyliczenie jednego z następujących wartości:
+
+- `native` dla niezarządzanego kodu C/C++ (wartość domyślna dla klasy niezarządzane).
+
+- `com` dla kodu COM. Należy użyć `coclass` podczas `type` = `com`. Ta wartość wymaga, że zawrzesz następujące pliki nagłówków:
+
+    ```cpp
+    #define _ATL_ATTRIBUTES
+    #include <atlbase.h>
+    #include <atlcom.h>
+    ```
+
+*optymalizuj*  
+Gdy *typu* jest `native`, można określić `optimize=size`, aby wskazać, że istnieje 4 bajty pamięci masowej (minimum) dla wszystkich zdarzeń w klasie lub `optimize=speed` (ustawienie domyślne), aby wskazać, że jest 4 * (liczba zdarzeń) bajtów magazynu.
+
+*dekoracji*  
+Gdy *typu* jest `native`, można określić `decorate=false`, aby wskazać, że rozwiniętej nazwy w pliku scalonego (.mrg) nie powinna zawierać nazwę klasy otaczającej. [/FX](../build/reference/fx-merge-injected-code.md) umożliwia generowanie plików .mrg. `decorate=false`, która jest wartością domyślną, wyniki w pełni kwalifikowanego typu nazwy w scalony plik.
+
+## <a name="remarks"></a>Uwagi
+
+**Event_source** atrybut C++ Określa, że klasy lub struktury, do którego jest stosowana będzie źródła zdarzenia.
+
+**event_source** jest używany w połączeniu z [event_receiver](../windows/event-receiver.md) atrybutu i [__event](../cpp/event.md) — słowo kluczowe. Użyj `event_receiver` do tworzenia odbiorcy zdarzeń. Użyj **__event** metod w źródle zdarzenia do określenia tych metod jako zdarzenia.
+
 > [!NOTE]
->  Szablonem klasy lub struktury nie mogą zawierać zdarzenia.  
-  
-## <a name="requirements"></a>Wymagania  
-  
-### <a name="attribute-context"></a>Kontekst atrybutu  
-  
-|||  
-|-|-|  
-|**Dotyczy**|**Klasa**, **— struktura**|  
-|**Powtarzalne**|Nie|  
-|**Wymaganych atrybutów**|**Klasa coclass** po `type`=`com`|  
-|**Nieprawidłowe atrybuty**|Brak|  
-  
- Aby uzyskać więcej informacji, zobacz [konteksty atrybutu](../windows/attribute-contexts.md).  
-  
-## <a name="see-also"></a>Zobacz też  
- [Atrybuty kompilatora](../windows/compiler-attributes.md)   
- [event_receiver](../windows/event-receiver.md)   
- [__Event](../cpp/event.md)   
- [__hook](../cpp/hook.md)   
- [__unhook](../cpp/unhook.md)   
- [Atrybuty klasy](../windows/class-attributes.md)   
+> Szablonem klasy lub struktury nie mogą zawierać zdarzenia.
+
+## <a name="requirements"></a>Wymagania
+
+### <a name="attribute-context"></a>Kontekst atrybutu
+
+|||
+|-|-|
+|**Dotyczy**|**Klasa**, **— struktura**|
+|**Powtarzalne**|Nie|
+|**Wymaganych atrybutów**|**Klasa coclass** po `type`=`com`|
+|**Nieprawidłowe atrybuty**|Brak|
+
+Aby uzyskać więcej informacji, zobacz [konteksty atrybutu](../windows/attribute-contexts.md).
+
+## <a name="see-also"></a>Zobacz też
+
+[Atrybuty kompilatora](../windows/compiler-attributes.md)  
+[event_receiver](../windows/event-receiver.md)  
+[__event](../cpp/event.md)  
+[__hook](../cpp/hook.md)  
+[__unhook](../cpp/unhook.md)  
+[Atrybuty klasy](../windows/class-attributes.md)  

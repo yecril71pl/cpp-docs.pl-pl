@@ -1,5 +1,5 @@
 ---
-title: Klasa platform::ValueType | Dokumentacja firmy Microsoft
+title: Platform::ValueType, klasa | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 02/03/2017
 ms.technology: cpp-windows
@@ -11,19 +11,19 @@ dev_langs:
 helpviewer_keywords:
 - Platform::ValueType Class
 ms.assetid: 79aa8754-b140-4974-a5b1-be046938a10a
-author: ghogen
-ms.author: ghogen
+author: mikeblome
+ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1994aa6445c67bae138a51f1d3eebb2a54f9b17d
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 12766e81ddd90b257830b6bf5adefd2562781d9e
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33088209"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42611050"
 ---
-# <a name="platformvaluetype-class"></a>Klasa platform::ValueType
-Klasa podstawowa dla wystąpień typów wartości.  
+# <a name="platformvaluetype-class"></a>Platform::ValueType, klasa
+Klasa bazowa dla wystąpień typów wartości.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -35,10 +35,10 @@ public ref class ValueType : Object
   
 |||  
 |-|-|  
-|[ValueType::ToString](#tostring)|Zwraca reprezentację ciągu obiektu. Dziedziczone z [Platform::Object](../cppcx/platform-object-class.md).|  
+|[ValueType::ToString](#tostring)|Zwraca reprezentację ciągu obiektu. Odziedziczone po [Platform::Object](../cppcx/platform-object-class.md).|  
   
 ### <a name="remarks"></a>Uwagi  
- Klasa ValueType jest używana do tworzenia typów wartości. Element ValueType pochodzi z obiektu, który zawiera podstawowe składniki. Jednak kompilator odłącza te podstawowe elementy członkowskie z typów wartości, które są pochodnymi klasy ValueType. Kompilator reattaches tych podstawowych elementów członkowskich, gdy typ wartości jest opakowany.  
+ Klasa ValueType jest używana do tworzenia typów wartości. Element ValueType pochodzi z obiektu, który zawiera podstawowe składniki. Jednak kompilator odłącza tych podstawowych członków z typów wartości, które pochodzą z klasy ValueType. Kompilator ponowne dołączenie następuje ponowne tych podstawowych elementów członkowskich, gdy typ wartości jest spakowany.  
   
 ### <a name="requirements"></a>Wymagania  
  **Minimalna obsługiwana klienta:** systemu Windows 8  
@@ -49,7 +49,7 @@ public ref class ValueType : Object
   
  **Metadane:** platform.winmd  
 
-## <a name="tostring"></a> ValueType::ToString — metoda
+## <a name="tostring"></a> Metoda ValueType::ToString
 Zwraca reprezentację ciągu obiektu.  
   
 ### <a name="syntax"></a>Składnia  

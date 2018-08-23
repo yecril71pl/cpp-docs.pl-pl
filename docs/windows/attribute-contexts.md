@@ -15,29 +15,29 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: e220eb0e7eb80d01d70aed82e773c46fe6704c7d
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 7635f49a494648f18bcd59eb8d212cc76d1f1539
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33860336"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42600803"
 ---
 # <a name="attribute-contexts"></a>Konteksty atrybutu
-Atrybuty C++ można opisać za pomocą czterech pola podstawowe: element docelowy, mogą być stosowane do (**dotyczy**), jeśli są one powtarzalne, czy nie (**Repeatable**), wymagane obecności innych atrybutów ( **Wymagane atrybuty**), a niezgodności z innymi atrybutami (**nieprawidłowe atrybuty**). Te pola są wyświetlane w towarzyszący tabeli w temacie Odwołanie do każdego atrybutu. Poniżej opisano każdy z tych pól.  
+Atrybuty C++ można opisać za pomocą cztery pola podstawowe: element docelowy, mogą być stosowane do (**dotyczy**), jeśli są one powtarzalne, czy nie (**Repeatable**), wymagane obecność innych atrybutów ( **Atrybuty wymagane**) i niezgodności z innymi atrybutami (**nieprawidłowe atrybuty**). Te pola są wymienione w towarzyszącej mu tabeli, w artykule dotyczącym każdego atrybutu. Poniżej opisano każde z tych pól.
   
-## <a name="applies-to"></a>Dotyczy:  
- To pole zawiera opis różnych elementów języka C++, które prawne elementów docelowych dla określonego atrybutu. Na przykład jeśli atrybut określa "class" w **dotyczy** pola, oznacza to, że atrybut można stosować tylko prawne klasę C++. Jeśli ten atrybut jest stosowany do funkcji członkowskiej klasy, spowoduje błąd składni.  
+## <a name="applies-to"></a>Dotyczy:
+ To pole zawiera opis różnych elementów języka C++, które prawne elementów docelowych dla określonego atrybutu. Na przykład jeśli atrybut "class" Określa **dotyczy** pola, oznacza to, że ten atrybut można dotyczą wyłącznie prawne klasy języka C++. Jeśli ten atrybut jest stosowany do funkcji składowej klasy, spowoduje błąd składni.
   
- Aby uzyskać więcej informacji, zobacz [atrybuty w zależności od użycia](../windows/attributes-by-usage.md).  
+ Aby uzyskać więcej informacji, zobacz [atrybuty w zależności od użycia](../windows/attributes-by-usage.md).
   
-## <a name="repeatable"></a>Powtarzalne  
- To pole określa, czy można wielokrotnie zastosować atrybutu, do tej samej wartości docelowej. Większość atrybuty nie są powtarzalne.  
+## <a name="repeatable"></a>Powtarzalne
+ To pole określa, czy można wielokrotnie zastosować atrybutu, do tej samej wartości docelowej. Większość atrybutów nie są powtarzalne.
   
-## <a name="required-attributes"></a>Wymaganych atrybutów  
- To pole zawiera inne atrybuty, które muszą być obecna (co oznacza, że są stosowane do tego samego obiektu docelowego) dla określonego atrybutu działać prawidłowo. Jest on nietypowe dla atrybutu do wpisów dla tego pola.  
+## <a name="required-attributes"></a>Wymaganych atrybutów
+ To pole zawiera inne atrybuty, które muszą być obecne (co oznacza, że są stosowane do tej samej wartości docelowej) dla określonego atrybutu działać prawidłowo. Jest nietypowy dla atrybutu powoduje, że wszystkie wpisy dla tego pola.
   
-## <a name="invalid-attributes"></a>Nieprawidłowe atrybuty  
- To pole zawiera inne atrybuty, które są niezgodne z określonego atrybutu. Jest on nietypowe dla atrybutu do wpisów dla tego pola.  
+## <a name="invalid-attributes"></a>Nieprawidłowe atrybuty
+ To pole zawiera atrybuty, które nie są zgodne z określonego atrybutu. Jest nietypowy dla atrybutu powoduje, że wszystkie wpisy dla tego pola.
   
-## <a name="see-also"></a>Zobacz też  
+## <a name="see-also"></a>Zobacz też
  [Dokumentacja atrybutów (C++)](../windows/cpp-attributes-reference.md)

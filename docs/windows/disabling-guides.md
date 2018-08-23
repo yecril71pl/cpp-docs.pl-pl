@@ -18,42 +18,45 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: f04a2e3c483c17a83cb5ab388c19dd9a2d0adf13
-ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
+ms.openlocfilehash: 9dd35bad3d7cf5a83ba25a6937ea606af81407c8
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39651960"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42598924"
 ---
 # <a name="disabling-guides"></a>Wyłączanie prowadnic
-Klawisze specjalne w połączeniu z myszy umożliwia wyłączanie przyciągania efekt prowadnice. Za pomocą **Alt** klucz wyłącza przyciągania skutki przewodnik wybrane. Przenoszenie Przewodnik z **Shift** klucz uniemożliwia przyciągniętą posuwał się z przewodnikiem.  
-  
-### <a name="to-disable-the-snapping-effect-of-the-guides"></a>Aby wyłączyć przyciąganie efekt prowadnice  
-  
-1.  Przeciągnij formant, przytrzymując naciśnięty **Alt** klucza.  
-  
-### <a name="to-move-guides-without-moving-the-snapped-controls"></a>Aby przenieść przewodniki bez przenoszenia przyciągniętą  
-  
-1.  Przeciągnij przewodnika, przytrzymując naciśnięty **Shift** klucza.  
-  
-### <a name="to-turn-off-the-guides"></a>Aby wyłączyć prowadnice  
-  
-1.  Z **Format** menu, wybierz **ustawienia prowadnic**.  
-  
-2.  W [okno dialogowe Ustawienia prowadnic](../windows/guide-settings-dialog-box.md)w obszarze **prowadnic układu**, wybierz opcję **Brak**.  
-  
-    > [!NOTE]
-    >  Możesz także dwukrotnie kliknąć na pasku linijkę, aby uzyskać dostęp do **ustawienia prowadnic** okno dialogowe.  
-  
- \- lub —  
-  
--   Na **Format** menu, kliknij przycisk **Przełącz prowadnice**.  
-  
- Aby uzyskać informacje na temat dodawania zasobów do projektów zarządzanych, zobacz [zasoby w aplikacjach pulpitu](/dotnet/framework/resources/index) w *przewodniku dewelopera .NET Framework*. Aby uzyskać informacji na temat ręcznego dodawania plików zasobów do projektów zarządzanych, uzyskiwania dostępu do zasobów, wyświetlania statycznych zasobów i przypisywania ciągów zasobów do właściwości, zobacz [Creating Resource Files dla aplikacji klasycznych](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Aby uzyskać informacji na temat globalizacja i lokalizacja zasobów w aplikacjach zarządzanych, zobacz [Globalizing i lokalizowanie aplikacji programu .NET Framework](/dotnet/standard/globalization-localization/index).  
-  
-## <a name="requirements"></a>Wymagania  
- Win32  
-  
-## <a name="see-also"></a>Zobacz też  
- [Stany Edytor okien dialogowych (prowadnice i siatki)](../windows/dialog-editor-states-guides-and-grids.md)   
- [Kontrolki w oknach dialogowych](../windows/controls-in-dialog-boxes.md)
+
+Klawisze specjalne w połączeniu z myszy umożliwia wyłączanie przyciągania efekt prowadnice. Za pomocą **Alt** klucz wyłącza przyciągania skutki przewodnik wybrane. Przenoszenie Przewodnik z **Shift** klucz uniemożliwia przyciągniętą posuwał się z przewodnikiem.
+
+### <a name="to-disable-the-snapping-effect-of-the-guides"></a>Aby wyłączyć przyciąganie efekt prowadnice
+
+1. Przeciągnij formant, przytrzymując naciśnięty **Alt** klucza.
+
+### <a name="to-move-guides-without-moving-the-snapped-controls"></a>Aby przenieść przewodniki bez przenoszenia przyciągniętą
+
+1. Przeciągnij przewodnika, przytrzymując naciśnięty **Shift** klucza.
+
+### <a name="to-turn-off-the-guides"></a>Aby wyłączyć prowadnice
+
+1. Z **Format** menu, wybierz **ustawienia prowadnic**.
+
+2. W [okno dialogowe Ustawienia prowadnic](../windows/guide-settings-dialog-box.md)w obszarze **prowadnic układu**, wybierz opcję **Brak**.
+
+   > [!NOTE]
+   > Możesz także dwukrotnie kliknąć na pasku linijkę, aby uzyskać dostęp do **ustawienia prowadnic** okno dialogowe.
+
+\- lub —
+
+- Na **Format** menu, kliknij przycisk **Przełącz prowadnice**.
+
+Aby uzyskać informacje na temat dodawania zasobów do projektów zarządzanych, zobacz [zasoby w aplikacjach pulpitu](/dotnet/framework/resources/index) w *przewodniku dewelopera .NET Framework*. Aby uzyskać informacji na temat ręcznego dodawania plików zasobów do projektów zarządzanych, uzyskiwania dostępu do zasobów, wyświetlania statycznych zasobów i przypisywania ciągów zasobów do właściwości, zobacz [Creating Resource Files dla aplikacji klasycznych](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Aby uzyskać informacji na temat globalizacja i lokalizacja zasobów w aplikacjach zarządzanych, zobacz [Globalizing i lokalizowanie aplikacji programu .NET Framework](/dotnet/standard/globalization-localization/index).
+
+## <a name="requirements"></a>Wymagania
+
+Win32
+
+## <a name="see-also"></a>Zobacz też
+
+[Stany dla Edytora okien dialogowych (prowadnice i siatki)](../windows/dialog-editor-states-guides-and-grids.md)  
+[Kontrolki w oknach dialogowych](../windows/controls-in-dialog-boxes.md)

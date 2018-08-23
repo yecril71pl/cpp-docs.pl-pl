@@ -18,29 +18,32 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: e9dc6b75cfa408ececeb533fcd75dbad0f124fda
-ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
+ms.openlocfilehash: adaf5f28bd115602c51d20e34d593ce42644c5d4
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/09/2018
-ms.locfileid: "40018832"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42613632"
 ---
 # <a name="selecting-foreground-or-background-colors-image-editor-for-icons"></a>Ustawianie pierwszego planu lub kolorów tła (Edytor obrazów dla ikon)
-Z wyjątkiem **Gumka**, narzędzia na **edytora obrazów** rysowania narzędzi bieżącym kolorem pierwszego planu i tła po naciśnięciu przycisku myszy w lewo lub w prawo, odpowiednio.  
-  
-### <a name="to-select-a-foreground-color"></a>Aby wybrać kolor pierwszego planu  
-  
-1.  Za pomocą lewego przycisku myszy, kliknij żądany kolor na [paleta kolorów](../windows/colors-window-image-editor-for-icons.md).  
-  
-### <a name="to-select-a-background-color"></a>Aby zmienić kolor tła  
-  
-1.  Prawym przyciskiem myszy, kliknij żądany kolor na **kolory** palety.  
-  
- Aby uzyskać informacje na temat dodawania zasobów do projektów zarządzanych, zobacz [zasoby w aplikacjach pulpitu](/dotnet/framework/resources/index) w *przewodniku dewelopera .NET Framework*.  
-  
-## <a name="requirements"></a>Wymagania  
- Brak  
-  
-## <a name="see-also"></a>Zobacz też  
- [Klawisze skrótów](../windows/accelerator-keys-image-editor-for-icons.md)   
- [Praca z kolorem](../windows/working-with-color-image-editor-for-icons.md)
+
+Z wyjątkiem **Gumka**, narzędzia na **edytora obrazów** rysowania narzędzi bieżącym kolorem pierwszego planu i tła po naciśnięciu przycisku myszy w lewo lub w prawo, odpowiednio.
+
+### <a name="to-select-a-foreground-color"></a>Aby wybrać kolor pierwszego planu
+
+1. Za pomocą lewego przycisku myszy, kliknij żądany kolor na [paleta kolorów](../windows/colors-window-image-editor-for-icons.md).
+
+### <a name="to-select-a-background-color"></a>Aby zmienić kolor tła
+
+1. Prawym przyciskiem myszy, kliknij żądany kolor na **kolory** palety.
+
+Aby uzyskać informacje na temat dodawania zasobów do projektów zarządzanych, zobacz [zasoby w aplikacjach pulpitu](/dotnet/framework/resources/index) w *przewodniku dewelopera .NET Framework*.
+
+## <a name="requirements"></a>Wymagania
+
+Brak
+
+## <a name="see-also"></a>Zobacz też
+
+[Klawisze skrótów](../windows/accelerator-keys-image-editor-for-icons.md)  
+[Praca z kolorem](../windows/working-with-color-image-editor-for-icons.md)

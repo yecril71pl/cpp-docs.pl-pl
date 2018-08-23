@@ -1,5 +1,5 @@
 ---
-title: Funkcje wewnętrzne _InterlockedExchange | Dokumentacja firmy Microsoft
+title: Funkcje wewnętrzne _interlockedexchange | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -54,17 +54,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c8637772d81031b9f9b30ef8cbee63b55c5b5b8c
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 6af43074e78ffb66299b9eeda97dd18f073d77fd
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33338243"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42599402"
 ---
-# <a name="interlockedexchange-intrinsic-functions"></a>Funkcje wewnętrzne _InterlockedExchange
+# <a name="interlockedexchange-intrinsic-functions"></a>Funkcje wewnętrzne _interlockedexchange
 **Microsoft Specific**  
   
- Generuje atomic instrukcjami, aby ustawić określoną wartość.  
+ Generuje atomic instrukcji, aby ustawić określoną wartość.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -152,40 +152,40 @@ __int64 _InterlockedExchange64_rel(
 ```  
   
 #### <a name="parameters"></a>Parametry  
- [w, out] `Target`  
- Wskaźnik do wartości, aby wymienić. Funkcja ta zmienna ustawia `Value` i zwraca jego poprzedniej wartości.  
+ [out w] `Target`  
+ Wskaźnik do wartości wymieniane. Funkcja ustawia dla tej zmiennej `Value` i zwraca jego poprzedniej wartości.  
   
  [in] `Value`  
- Wartość wymienianych z wartością wskazywana przez `Target`.  
+ Wartość wymienianych z wartością wskazywany przez `Target`.  
   
 ## <a name="return-value"></a>Wartość zwracana  
- Zwraca wartość początkowa wskazywana przez `Target`.  
+ Zwraca wartość początkową wskazywany przez `Target`.  
   
 ## <a name="requirements"></a>Wymagania  
   
-|— Wewnętrzne|Architektura|nagłówek|  
+|Wewnętrzne|Architektura|nagłówek|  
 |---------------|------------------|------------|  
-|`_InterlockedExchange`, `_InterlockedExchange8`, `_InterlockedExchange16`, `_InterlockedExchange64`|x86, ARM, [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|\<intrin.h>|  
+|`_InterlockedExchange`, `_InterlockedExchange8`, `_InterlockedExchange16`, `_InterlockedExchange64`|x86, ARM, x64|\<intrin.h>|  
 |`_InterlockedExchange_acq`, `_InterlockedExchange_nf`, `_InterlockedExchange_rel`, `_InterlockedExchange8_acq`, `_InterlockedExchange8_nf`, `_InterlockedExchange8_rel`, `_InterlockedExchange16_acq`, `_InterlockedExchange16_nf`, `_InterlockedExchange16_rel`, `_InterlockedExchange64_acq`, `_InterlockedExchange64_nf`, `_InterlockedExchange64_rel`,|ARM|\<intrin.h>|  
-|`_InterlockedExchange_HLEAcquire`, `_InterlockedExchange_HLERelease`, `_InterlockedExchange64_HLEAcquire`, `_InterlockedExchange64_HLERelease`|x86, [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|\<immintrin.h>|  
+|`_InterlockedExchange_HLEAcquire`, `_InterlockedExchange_HLERelease`, `_InterlockedExchange64_HLEAcquire`, `_InterlockedExchange64_HLERelease`|x86, x64|\<immintrin.h>|  
   
 ## <a name="remarks"></a>Uwagi  
- `_InterlockedExchange` zapewnia obsługę wewnętrznych kompilatora dla środowiska Win32 [!INCLUDE[winsdkshort](../atl-mfc-shared/reference/includes/winsdkshort_md.md)] [InterlockedExchange](http://msdn.microsoft.com/library/ms683590.aspx) funkcji.  
+ `_InterlockedExchange` zapewnia wsparcie wewnętrznej kompilatora dla zestawu SDK Windows Win32 [InterlockedExchange](/windows/desktop/api/winbase/nf-winbase-interlockedexchange) funkcji.  
   
- Istnieje kilka zmian na `_InterlockedExchange` który różnić w zależności od typów danych, wymagają one i czy uzyskać specyficznych dla procesora lub Wydaj semantykę jest używany.  
+ Istnieje kilka zmian w `_InterlockedExchange` różnią się zależnie od typów danych, wymagają one oraz tego, czy uzyskać specyficznych dla procesora lub semantyka wydania jest używany.  
   
- Podczas `_InterlockedExchange` funkcja działa na 32-bitowych liczb całkowitych, `_InterlockedExchange8` działa na wartości 8-bitową liczbę całkowitą `_InterlockedExchange16` działa na wartości 16-bitową liczbę całkowitą i `_InterlockedExchange64` działa na 64-bitowych liczb całkowitych.  
+ Podczas `_InterlockedExchange` funkcja działa w 32-bitowych wartości całkowitych, `_InterlockedExchange8` operuje na 8-bitowych wartości całkowitych, `_InterlockedExchange16` operuje na wartości 16-bitową liczbę całkowitą i `_InterlockedExchange64` działa w 64-bitowych wartości całkowitych.  
   
- Na platformach ARM, użyj funkcji wewnętrznych z `_acq` i `_rel` sufiksy dla semantyki pobierania i zlecenia, takie jak na początku i na końcu sekcji krytycznych. Funkcje wewnętrzne z `_nf` sufiks ("nie ogranicznika") nie działają jako bariery pamięci.  
+ Na platformach ARM, użyj funkcji wewnętrznych za pomocą `_acq` i `_rel` sufiksy dla semantyki nabywania i wydania, takie jak na początku i na końcu sekcję krytyczną. Funkcje wewnętrzne z `_nf` sufiks ("nie ogranicznika") nie działają jako czynnik blokujący pamięci.  
   
- Na platformach firmy Intel, które obsługują instrukcje Elision blokady sprzętu (HLE), funkcje wewnętrzne z `_HLEAcquire` i `_HLERelease` sufiksy obejmują wskazówkę procesora, która umożliwia przyspieszanie wydajności przez wyeliminowanie krok blokady zapisu sprzętu. Jeśli te funkcje wewnętrzne są nazywane na platformach, które nie obsługują HLE, wskazówka zostanie zignorowany.  
+ Na platformach firmy Intel, obsługujące instrukcje pominięcia blokady sprzętu (HLE), funkcje wewnętrzne z `_HLEAcquire` i `_HLERelease` sufiksy obejmują wskazówkę procesora, który może przyspieszyć wydajność, eliminując krok blokady zapisu w sprzęcie. Jeśli te funkcje wewnętrzne są wywoływane na platformach, które nie obsługują HLE, wskazówka zostanie zignorowany.  
   
  Te procedury są dostępne tylko jako funkcje wewnętrzne.  
   
 ## <a name="example"></a>Przykład  
- Przykładowe zastosowania `_InterlockedExchange`, zobacz [_InterlockedDecrement](../intrinsics/interlockeddecrement-intrinsic-functions.md).  
+ Przykład sposobu użycia `_InterlockedExchange`, zobacz [_InterlockedDecrement](../intrinsics/interlockeddecrement-intrinsic-functions.md).  
   
-**KOŃCOWY określonych firmy Microsoft**  
+**END specyficzny dla Microsoft**  
   
 ## <a name="see-also"></a>Zobacz też  
  [Funkcje wewnętrzne kompilatora](../intrinsics/compiler-intrinsics.md)   

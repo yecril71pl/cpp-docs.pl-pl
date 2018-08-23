@@ -16,33 +16,33 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 59846b1ca031cc02c85cb6ace23f96e8c5cc9f37
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 6562a1de8baa9a5805f044233b97bf8dd8840638
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33890437"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42613761"
 ---
 # <a name="stand-alone-attributes"></a>Oddzielne atrybuty
-Atrybut autonomiczny nie będzie działać na słowo kluczowe języka C++, ale jest bardziej przypominają wiersz kodu. Instrukcje atrybutu autonomicznego wymagają średnik na końcu linii.  
+Autonomicznego atrybutu nie będzie działać na słowo kluczowe języka C++, ale jest kilka dodatkowych wiersza kodu. Instrukcje autonomicznego atrybutu wymagają średnik na końcu wiersza.
   
-|Atrybut|Opis|  
-|---------------|-----------------|  
-|[cpp_quote](../windows/cpp-quote.md)|Emituje określony ciąg bez znaków cudzysłowu do wygenerowanego pliku nagłówka.|  
-|[custom](../windows/custom-cpp.md)|Umożliwia zdefiniowanie własnego atrybutu.|  
-|[db_command](../windows/db-command.md)|Tworzy polecenia OLE DB.|  
-|[emitidl](../windows/emitidl.md)|Określa, czy wszystkie kolejne atrybuty IDL zostanie przetworzona i umieszczony w pliku .idl wygenerowany.|  
-|[idl_module](../windows/idl-module.md)|Określa punkt wejścia w bibliotece DLL.|  
-|[idl_quote](../windows/idl-quote.md)|Umożliwia użycie konstrukcji języka IDL, które nie są obsługiwane w bieżącej wersji programu Visual C++ i mieć przekazywane do pliku .idl wygenerowany.|  
-|[import](../windows/import.md)|Określa innego pliku .idl, .odl — lub .h definicjami, którego ma dotyczyć odwołanie z pliku .idl głównego.|  
-|[importidl](../windows/importidl.md)|Wstawia pliku .idl określony w pliku .idl wygenerowany|  
-|[importlib](../windows/importlib.md)|Powoduje, że typy, które już zostały skompilowane w innej bibliotece typu dostępne do tworzenia biblioteki typów.|  
-|[include](../windows/include-cpp.md)|Określa co najmniej jeden plik nagłówka do uwzględnienia w pliku .idl wygenerowany.|  
-|[includelib —](../windows/includelib-cpp.md)|Powoduje, że pliku .idl lub .h do uwzględnienia w pliku .idl wygenerowany.|  
-|[library_block](../windows/library-block.md)|Umieszcza konstrukcję wewnątrz bloku biblioteki pliku .idl.|  
-|[Moduł](../windows/module-cpp.md)|Określa blok biblioteki w pliku .idl.|  
-|[no_injected_text](../windows/no-injected-text.md)|Zabezpiecza kompilator przed wstrzyknięcie kodu w wyniku użycia atrybutu.|  
-|[pragma](../windows/pragma.md)|Emituje określony ciąg bez znaków cudzysłowu do pliku .idl wygenerowany.|  
+|Atrybut|Opis|
+|---------------|-----------------|
+|[cpp_quote](../windows/cpp-quote.md)|Generuje określony ciąg bez znaków cudzysłowu do wygenerowanego pliku nagłówka.|
+|[custom](../windows/custom-cpp.md)|Umożliwia zdefiniowanie własnego atrybutu.|
+|[db_command](../windows/db-command.md)|Tworzy polecenie OLE DB.|
+|[emitidl](../windows/emitidl.md)|Określa, czy wszystkie kolejne atrybuty IDL zostanie przetworzone i umieszczony w pliku .idl wygenerowany.|
+|[idl_module](../windows/idl-module.md)|Określa punkt wejścia w bibliotece DLL.|
+|[idl_quote](../windows/idl-quote.md)|Umożliwia użycie konstrukcji języka IDL, które nie są obsługiwane w bieżącej wersji programu Visual C++ i mieć przekazywane do pliku .idl wygenerowany.|
+|[import](../windows/import.md)|Określa innego pliku .idl, .odl — lub .h zawierający definicje, w których ma dotyczyć odwołanie z pliku .idl głównego.|
+|[importidl](../windows/importidl.md)|Wstawia pliku .idl określony w pliku .idl wygenerowany|
+|[importlib](../windows/importlib.md)|Sprawia, że typy, które już zostały skompilowane do do biblioteki typów, trwa tworzenie innej biblioteki typów.|
+|[include](../windows/include-cpp.md)|Określa jeden lub więcej plików nagłówka do uwzględnienia w pliku .idl wygenerowany.|
+|[includelib —](../windows/includelib-cpp.md)|Powoduje, że pliku .idl lub .h, mają zostać uwzględnione w pliku .idl wygenerowany.|
+|[library_block](../windows/library-block.md)|Umieszcza konstrukcję wewnątrz bloku biblioteki pliku .idl.|
+|[Moduł](../windows/module-cpp.md)|Określa blok biblioteki w pliku .idl.|
+|[no_injected_text](../windows/no-injected-text.md)|Zabezpiecza kompilator przed wprowadzanie kodu w wyniku użycia atrybutu.|
+|[pragma](../windows/pragma.md)|Generuje określony ciąg bez znaków cudzysłowu do pliku .idl wygenerowany.|
   
-## <a name="see-also"></a>Zobacz też  
+## <a name="see-also"></a>Zobacz też
  [Atrybuty w zależności od zastosowania](../windows/attributes-by-usage.md)

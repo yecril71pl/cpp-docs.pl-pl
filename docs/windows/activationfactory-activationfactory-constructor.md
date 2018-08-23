@@ -17,26 +17,29 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 54435a5035c101f5d868e9a5e831a7ba31fba1ee
-ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
+ms.openlocfilehash: 9430e23c06bdccb05fe7bcadf6c89c4980564421
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39646471"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42611266"
 ---
 # <a name="activationfactoryactivationfactory-constructor"></a>ActivationFactory::ActivationFactory — Konstruktor
-Inicjuje **activationfactory —** klasy.  
-  
-## <a name="syntax"></a>Składnia  
-  
-```cpp  
-ActivationFactory();  
-```  
-  
-## <a name="requirements"></a>Wymagania  
- **Nagłówek:** module.h  
-  
- **Namespace:** Microsoft::WRL  
-  
-## <a name="see-also"></a>Zobacz też  
- [ActivationFactory, klasa](../windows/activationfactory-class.md)
+
+Inicjuje **activationfactory —** klasy.
+
+## <a name="syntax"></a>Składnia
+
+```cpp
+ActivationFactory();
+```
+
+## <a name="requirements"></a>Wymagania
+
+**Nagłówek:** module.h
+
+**Namespace:** Microsoft::WRL
+
+## <a name="see-also"></a>Zobacz też
+
+[ActivationFactory, klasa](../windows/activationfactory-class.md)

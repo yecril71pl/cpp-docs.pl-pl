@@ -17,55 +17,59 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 2c0f4f04adb9ddc847b1c22485d10512a9d684d0
-ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
+ms.openlocfilehash: cb5a3ebbf3ecf1454745d507fc2f2b6f792768ac
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39651898"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42600424"
 ---
 # <a name="custom-c"></a>custom (C++)
-Definiuje metadanych dla obiektu w bibliotece typów.  
-  
-## <a name="syntax"></a>Składnia  
-  
-```cpp  
-[ custom(  
-   uuid,   
-   value  
-) ];  
-```  
-  
-### <a name="parameters"></a>Parametry  
- *uuid*  
- Unikatowy identyfikator.  
-  
- *value*  
- Wartość, które można umieścić w wariant.  
-  
-## <a name="remarks"></a>Uwagi  
- **Niestandardowe** atrybut C++ spowoduje, że informacje, aby zostać umieszczone w bibliotece typów. Należy to narzędzie, które odczytuje wartość niestandardowej z biblioteki typów.  
-  
- **Niestandardowe** atrybut ma taką samą funkcjonalność jak [niestandardowe](http://msdn.microsoft.com/library/windows/desktop/aa366766) atrybutów w MIDL.  
-  
-## <a name="requirements"></a>Wymagania  
-  
-### <a name="attribute-context"></a>Kontekst atrybutu  
-  
-|||  
-|-|-|  
-|**Dotyczy**|COM bez **interfejsu**, **klasy**, **wyliczenia**s, `idl_module` metod, składowych interfejsu i parametry interfejsu **typedef**s, **Unii**s, **struktury**s|  
-|**Powtarzalne**|Tak|  
-|**Wymaganych atrybutów**|**Klasa coclass** (jeśli jest używany w klasie)|  
-|**Nieprawidłowe atrybuty**|Brak|  
-  
- Aby uzyskać więcej informacji na temat konteksty atrybutu zobacz [konteksty atrybutu](../windows/attribute-contexts.md).  
-  
-## <a name="see-also"></a>Zobacz też  
- [Atrybuty IDL](../windows/idl-attributes.md)   
- [Oddzielne atrybuty](../windows/stand-alone-attributes.md)   
- [Element TypeDef, Enum, Union i struct — atrybuty](../windows/typedef-enum-union-and-struct-attributes.md)   
- [Atrybuty parametru](../windows/parameter-attributes.md)   
- [Atrybuty metody](../windows/method-attributes.md)   
- [Atrybuty klasy](../windows/class-attributes.md)   
- [Atrybuty interfejsu](../windows/interface-attributes.md)   
+
+Definiuje metadanych dla obiektu w bibliotece typów.
+
+## <a name="syntax"></a>Składnia
+
+```cpp
+[ custom(
+   uuid,
+   value
+) ];
+```
+
+### <a name="parameters"></a>Parametry
+
+*uuid*  
+Unikatowy identyfikator.
+
+*value*  
+Wartość, które można umieścić w wariant.
+
+## <a name="remarks"></a>Uwagi
+
+**Niestandardowe** atrybut C++ spowoduje, że informacje, aby zostać umieszczone w bibliotece typów. Należy to narzędzie, które odczytuje wartość niestandardowej z biblioteki typów.
+
+**Niestandardowe** atrybut ma taką samą funkcjonalność jak [niestandardowe](http://msdn.microsoft.com/library/windows/desktop/aa366766) atrybutów w MIDL.
+
+## <a name="requirements"></a>Wymagania
+
+### <a name="attribute-context"></a>Kontekst atrybutu
+
+|||
+|-|-|
+|**Dotyczy**|COM bez **interfejsu**, **klasy**, **wyliczenia**s, `idl_module` metod, składowych interfejsu i parametry interfejsu **typedef**s, **Unii**s, **struktury**s|
+|**Powtarzalne**|Tak|
+|**Wymaganych atrybutów**|**Klasa coclass** (jeśli jest używany w klasie)|
+|**Nieprawidłowe atrybuty**|Brak|
+
+Aby uzyskać więcej informacji na temat konteksty atrybutu zobacz [konteksty atrybutu](../windows/attribute-contexts.md).
+
+## <a name="see-also"></a>Zobacz też
+
+[Atrybuty IDL](../windows/idl-attributes.md)  
+[Oddzielne atrybuty](../windows/stand-alone-attributes.md)  
+[Atrybuty Typedef, Enum, Union oraz Struct](../windows/typedef-enum-union-and-struct-attributes.md)  
+[Atrybuty parametru](../windows/parameter-attributes.md)  
+[Atrybuty metody](../windows/method-attributes.md)  
+[Atrybuty klasy](../windows/class-attributes.md)  
+[Atrybuty interfejsu](../windows/interface-attributes.md)  

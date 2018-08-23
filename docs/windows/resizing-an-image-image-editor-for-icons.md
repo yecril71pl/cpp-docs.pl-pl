@@ -20,42 +20,45 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 9c972f4038da4b4ed1d52fee0b8029b6f48ff3bb
-ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
+ms.openlocfilehash: 0da05d9599767f52fa6e65cabb4614be191699e0
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/09/2018
-ms.locfileid: "40013876"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42610792"
 ---
 # <a name="resizing-an-image-image-editor-for-icons"></a>Zmiana rozmiaru obrazu (Edytor obrazów dla ikon)
-Zachowanie **obraz** edytora podczas zmiany rozmiaru obrazu zależy od tego, czy masz [wybranego](../windows/selecting-an-area-of-an-image-image-editor-for-icons.md) całego obrazu lub jego część.  
-  
- Jeśli zaznaczenie obejmuje tylko część obrazu, **obraz** edytora zmniejsza zaznaczenie przy usuwaniu wierszy lub kolumn pikseli i wypełniania opuszczonych regionów z bieżącym kolorem tła, lub jego rozciąga zaznaczenie o zduplikowane wiersze lub kolumny w pikselach.  
-  
- Jeśli zaznaczenie obejmuje cały obraz **obraz** edytora albo zmniejsza rozciąga obrazu, lub przycina i rozszerza je.  
-  
- Istnieją dwa mechanizmy do zmiany rozmiaru obrazu: uchwytów zmiany rozmiaru i [okno właściwości](/visualstudio/ide/reference/properties-window). Można przeciągnąć uchwyty zmiany rozmiaru, aby zmienić rozmiar wszystkich lub część obrazu. Uchwyty zmiany rozmiaru, które można przeciągać są wypełnione. Nie można przeciągnąć uchwyty, które są puste. Możesz użyć **właściwości** okna, aby zmienić rozmiar całego tylko obraz nie jest częścią wybrane.  
-  
- ![Uchwytów na mapę bitową](../mfc/media/vcimageeditorsizinghandles.gif "vcImageEditorSizingHandles")  
-Uchwyty zmiany rozmiaru  
-  
+
+Zachowanie **obraz** edytora podczas zmiany rozmiaru obrazu zależy od tego, czy masz [wybranego](../windows/selecting-an-area-of-an-image-image-editor-for-icons.md) całego obrazu lub jego część.
+
+Jeśli zaznaczenie obejmuje tylko część obrazu, **obraz** edytora zmniejsza zaznaczenie przy usuwaniu wierszy lub kolumn pikseli i wypełniania opuszczonych regionów z bieżącym kolorem tła, lub jego rozciąga zaznaczenie o zduplikowane wiersze lub kolumny w pikselach.
+
+Jeśli zaznaczenie obejmuje cały obraz **obraz** edytora albo zmniejsza rozciąga obrazu, lub przycina i rozszerza je.
+
+Istnieją dwa mechanizmy do zmiany rozmiaru obrazu: uchwytów zmiany rozmiaru i [okno właściwości](/visualstudio/ide/reference/properties-window). Można przeciągnąć uchwyty zmiany rozmiaru, aby zmienić rozmiar wszystkich lub część obrazu. Uchwyty zmiany rozmiaru, które można przeciągać są wypełnione. Nie można przeciągnąć uchwyty, które są puste. Możesz użyć **właściwości** okna, aby zmienić rozmiar całego tylko obraz nie jest częścią wybrane.
+
+![Uchwytów na mapę bitową](../mfc/media/vcimageeditorsizinghandles.gif "vcImageEditorSizingHandles")  
+Uchwyty zmiany rozmiaru
+
 > [!NOTE]
->  Jeśli masz **Kafelek siatki** opcji wybranej w [okno dialogowe Ustawienia siatki](../windows/grid-settings-dialog-box-image-editor-for-icons.md), następnie zmiany rozmiaru przyciąganie do następnego wiersza siatki kafelka. Jeśli tylko **siatkę pikseli** opcja jest zaznaczone (ustawienie domyślne), zmiana rozmiaru przyciąganie do następnego dostępne pikseli.  
-  
--   [Zmiana rozmiaru całego obrazu](../windows/resizing-an-entire-image-image-editor-for-icons.md)  
-  
--   [Przycinanie i rozszerzanie całego obrazu](cropping-or-extending-an-entire-image-image-editor-for-icons.md)  
-  
--   [Zmniejszanie i rozciąganie całego obrazu](../windows/shrinking-or-stretching-an-entire-image-image-editor-for-icons.md)  
-  
--   [Zmniejszanie i rozciąganie części obrazu](../windows/shrinking-or-stretching-part-of-an-image-image-editor-for-icons.md)  
-  
- Aby uzyskać informacje na temat dodawania zasobów do projektów zarządzanych, zobacz [zasoby w aplikacjach pulpitu](/dotnet/framework/resources/index) w *przewodniku dewelopera .NET Framework*. Aby uzyskać informacji na temat ręcznego dodawania plików zasobów do projektów zarządzanych, uzyskiwania dostępu do zasobów, wyświetlania statycznych zasobów i przypisywania ciągów zasobów do właściwości, zobacz [Creating Resource Files dla aplikacji klasycznych](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Aby uzyskać informacji na temat globalizacja i lokalizacja zasobów w aplikacjach zarządzanych, zobacz [Globalizing i lokalizowanie aplikacji programu .NET Framework](/dotnet/standard/globalization-localization/index).  
-  
-## <a name="requirements"></a>Wymagania  
- Brak  
-  
-## <a name="see-also"></a>Zobacz też  
- [Klawisze skrótów](../windows/accelerator-keys-image-editor-for-icons.md)   
- [Edytowanie zasobów graficznych](../windows/editing-graphical-resources-image-editor-for-icons.md)   
- [Edytor obrazów dla ikon](../windows/image-editor-for-icons.md)
+> Jeśli masz **Kafelek siatki** opcji wybranej w [okno dialogowe Ustawienia siatki](../windows/grid-settings-dialog-box-image-editor-for-icons.md), następnie zmiany rozmiaru przyciąganie do następnego wiersza siatki kafelka. Jeśli tylko **siatkę pikseli** opcja jest zaznaczone (ustawienie domyślne), zmiana rozmiaru przyciąganie do następnego dostępne pikseli.
+
+- [Zmiana rozmiaru całego obrazu](../windows/resizing-an-entire-image-image-editor-for-icons.md)
+
+- [Przycinanie i rozszerzanie całego obrazu](cropping-or-extending-an-entire-image-image-editor-for-icons.md)
+
+- [Zmniejszanie i rozciąganie całego obrazu](../windows/shrinking-or-stretching-an-entire-image-image-editor-for-icons.md)
+
+- [Zmniejszanie i rozciąganie części obrazu](../windows/shrinking-or-stretching-part-of-an-image-image-editor-for-icons.md)
+
+Aby uzyskać informacje na temat dodawania zasobów do projektów zarządzanych, zobacz [zasoby w aplikacjach pulpitu](/dotnet/framework/resources/index) w *przewodniku dewelopera .NET Framework*. Aby uzyskać informacji na temat ręcznego dodawania plików zasobów do projektów zarządzanych, uzyskiwania dostępu do zasobów, wyświetlania statycznych zasobów i przypisywania ciągów zasobów do właściwości, zobacz [Creating Resource Files dla aplikacji klasycznych](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Aby uzyskać informacji na temat globalizacja i lokalizacja zasobów w aplikacjach zarządzanych, zobacz [Globalizing i lokalizowanie aplikacji programu .NET Framework](/dotnet/standard/globalization-localization/index).
+
+## <a name="requirements"></a>Wymagania
+
+Brak
+
+## <a name="see-also"></a>Zobacz też
+
+[Klawisze skrótów](../windows/accelerator-keys-image-editor-for-icons.md)  
+[Edytowanie zasobów graficznych](../windows/editing-graphical-resources-image-editor-for-icons.md)  
+[Edytor obrazów dla ikon](../windows/image-editor-for-icons.md)

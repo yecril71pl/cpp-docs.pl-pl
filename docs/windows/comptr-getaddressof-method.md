@@ -17,30 +17,34 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: c1be1dd844b08be23312848f007e4a57dbd893b5
-ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
+ms.openlocfilehash: 98609ce9cc15940586d626c52d24b5ca506164e7
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39646988"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42598997"
 ---
 # <a name="comptrgetaddressof-method"></a>ComPtr::GetAddressOf — Metoda
-Pobiera adres [ptr_ — element](../windows/comptr-ptr-data-member.md) element członkowski danych, który zawiera wskaźnik do interfejsu, reprezentowane przez to **ComPtr**.  
-  
-## <a name="syntax"></a>Składnia  
-  
-```cpp  
-T* const* GetAddressOf() const;  
-T** GetAddressOf();  
-```  
-  
-## <a name="return-value"></a>Wartość zwracana  
- Adres zmiennej.  
-  
-## <a name="requirements"></a>Wymagania  
- **Nagłówek:** client.h  
-  
- **Namespace:** Microsoft::WRL  
-  
-## <a name="see-also"></a>Zobacz też  
- [ComPtr, klasa](../windows/comptr-class.md)
+
+Pobiera adres [ptr_ — element](../windows/comptr-ptr-data-member.md) element członkowski danych, który zawiera wskaźnik do interfejsu, reprezentowane przez to **ComPtr**.
+
+## <a name="syntax"></a>Składnia
+
+```cpp
+T* const* GetAddressOf() const;
+T** GetAddressOf();
+```
+
+## <a name="return-value"></a>Wartość zwracana
+
+Adres zmiennej.
+
+## <a name="requirements"></a>Wymagania
+
+**Nagłówek:** client.h
+
+**Namespace:** Microsoft::WRL
+
+## <a name="see-also"></a>Zobacz też
+
+[ComPtr, klasa](../windows/comptr-class.md)

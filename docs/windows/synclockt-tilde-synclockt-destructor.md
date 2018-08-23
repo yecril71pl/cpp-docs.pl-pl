@@ -17,31 +17,35 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 85ff68b4a3739c9a258e8664f261c61bb47971db
-ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
+ms.openlocfilehash: d75e3e0592d21672397e8d54c565734d53e72614
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/09/2018
-ms.locfileid: "40018523"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42599783"
 ---
 # <a name="synclocktsynclockt-destructor"></a>SyncLockT::~SyncLockT — Destruktor
-Obsługuje infrastrukturę biblioteki WRL i nie jest przeznaczona do użycia bezpośrednio w kodzie.  
-  
-## <a name="syntax"></a>Składnia  
-  
-```cpp  
-~SyncLockT();  
-```  
-  
-## <a name="remarks"></a>Uwagi  
- Wyłącza wystąpienie **SyncLockT** klasy.  
-  
- Ten destruktor Odblokowano również bieżącą **SyncLockT** wystąpienia.  
-  
-## <a name="requirements"></a>Wymagania  
- **Nagłówek:** corewrappers.h  
-  
- **Namespace:** Microsoft::WRL::Wrappers::Details  
-  
-## <a name="see-also"></a>Zobacz też  
- [SyncLockT, klasa](../windows/synclockt-class.md)
+
+Obsługuje infrastrukturę biblioteki WRL i nie jest przeznaczona do użycia bezpośrednio w kodzie.
+
+## <a name="syntax"></a>Składnia
+
+```cpp
+~SyncLockT();
+```
+
+## <a name="remarks"></a>Uwagi
+
+Wyłącza wystąpienie **SyncLockT** klasy.
+
+Ten destruktor Odblokowano również bieżącą **SyncLockT** wystąpienia.
+
+## <a name="requirements"></a>Wymagania
+
+**Nagłówek:** corewrappers.h
+
+**Namespace:** Microsoft::WRL::Wrappers::Details
+
+## <a name="see-also"></a>Zobacz też
+
+[SyncLockT, klasa](../windows/synclockt-class.md)

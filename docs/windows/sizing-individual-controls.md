@@ -18,44 +18,47 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 20dc5eb7af4195c9861d09761da245cdd5d3217d
-ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
+ms.openlocfilehash: 929cf8eea66b928fe4889a98ca0a78fa7224bf17
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39652217"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42612511"
 ---
 # <a name="sizing-individual-controls"></a>Ustalanie rozmiaru pojedynczych formantów
-Zmień rozmiar kontrolki za pomocą uchwytów zmiany rozmiaru. Po umieszczeniu wskaźnika na uchwyt zmiany rozmiaru, zmienia kształt, aby wskazać kierunki, w których kontrolki można zmienić rozmiar. Uchwyty zmiany rozmiaru Active są wypełnione; Jeśli uchwyt zmiany rozmiaru jest pusty, formant nie można zmienić rozmiaru na tej osi.  
-  
- Możesz również zmienić rozmiar formantu przez przyciągania formant do prowadnic i marginesów lub przenosząc jeden przypięty kontroli i przewodnik od innego.  
-  
-### <a name="to-size-a-control"></a>Rozmiar kontrolki  
-  
-1.  Zaznacz formant.  
-  
-2.  Przeciągnij uchwyty zmiany rozmiaru, aby zmienić rozmiar formantu:  
-  
-    -   Uchwyty zmiany rozmiaru u góry i strony Zmień rozmiar poziomej lub pionowej.  
-  
-    -   Uchwyty zmiany rozmiaru w rogach Zmień rozmiar zarówno w poziomie, jak i w pionie.  
-  
-    > [!TIP]
-    >  Możesz zmienić rozmiar formantu jednostki jednego okna dialogowego (DLU) w danym momencie, przytrzymując **Shift** kluczy i korzystać z funkcji **Strzałka w prawo** i **strzałkę w dół** kluczy.  
-  
-### <a name="to-automatically-size-a-control-to-fit-the-text-within-it"></a>Aby automatycznie rozmiar formantu do tekstu w nim  
-  
-1.  Wybierz **rozmiar do zawartości** z **Format** menu.  
-  
- \- lub —  
-  
--   Kliknij prawym przyciskiem myszy formant, a następnie wybierz **rozmiar do zawartości** z menu skrótów.  
-  
- Aby uzyskać informacje na temat dodawania zasobów do projektów zarządzanych, zobacz [zasoby w aplikacjach pulpitu](/dotnet/framework/resources/index) w *przewodniku dewelopera .NET Framework*. Aby uzyskać informacji na temat ręcznego dodawania plików zasobów do projektów zarządzanych, uzyskiwania dostępu do zasobów, wyświetlania statycznych zasobów i przypisywania ciągów zasobów do właściwości, zobacz [Creating Resource Files dla aplikacji klasycznych](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Aby uzyskać informacji na temat globalizacja i lokalizacja zasobów w aplikacjach zarządzanych, zobacz [Globalizing i lokalizowanie aplikacji programu .NET Framework](/dotnet/standard/globalization-localization/index).  
-  
-## <a name="requirements"></a>Wymagania  
- Win32  
-  
-## <a name="see-also"></a>Zobacz też  
- [Formanty w oknach dialogowych](../windows/controls-in-dialog-boxes.md)   
- [Kontrolki](../mfc/controls-mfc.md)
+
+Zmień rozmiar kontrolki za pomocą uchwytów zmiany rozmiaru. Po umieszczeniu wskaźnika na uchwyt zmiany rozmiaru, zmienia kształt, aby wskazać kierunki, w których kontrolki można zmienić rozmiar. Uchwyty zmiany rozmiaru Active są wypełnione; Jeśli uchwyt zmiany rozmiaru jest pusty, formant nie można zmienić rozmiaru na tej osi.
+
+Możesz również zmienić rozmiar formantu przez przyciągania formant do prowadnic i marginesów lub przenosząc jeden przypięty kontroli i przewodnik od innego.
+
+### <a name="to-size-a-control"></a>Rozmiar kontrolki
+
+1. Zaznacz formant.
+
+2. Przeciągnij uchwyty zmiany rozmiaru, aby zmienić rozmiar formantu:
+
+   - Uchwyty zmiany rozmiaru u góry i strony Zmień rozmiar poziomej lub pionowej.
+
+   - Uchwyty zmiany rozmiaru w rogach Zmień rozmiar zarówno w poziomie, jak i w pionie.
+
+   > [!TIP]
+   > Możesz zmienić rozmiar formantu jednostki jednego okna dialogowego (DLU) w danym momencie, przytrzymując **Shift** kluczy i korzystać z funkcji **Strzałka w prawo** i **strzałkę w dół** kluczy.
+
+### <a name="to-automatically-size-a-control-to-fit-the-text-within-it"></a>Aby automatycznie rozmiar formantu do tekstu w nim
+
+1. Wybierz **rozmiar do zawartości** z **Format** menu.
+
+\- lub —
+
+- Kliknij prawym przyciskiem myszy formant, a następnie wybierz **rozmiar do zawartości** z menu skrótów.
+
+Aby uzyskać informacje na temat dodawania zasobów do projektów zarządzanych, zobacz [zasoby w aplikacjach pulpitu](/dotnet/framework/resources/index) w *przewodniku dewelopera .NET Framework*. Aby uzyskać informacji na temat ręcznego dodawania plików zasobów do projektów zarządzanych, uzyskiwania dostępu do zasobów, wyświetlania statycznych zasobów i przypisywania ciągów zasobów do właściwości, zobacz [Creating Resource Files dla aplikacji klasycznych](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Aby uzyskać informacji na temat globalizacja i lokalizacja zasobów w aplikacjach zarządzanych, zobacz [Globalizing i lokalizowanie aplikacji programu .NET Framework](/dotnet/standard/globalization-localization/index).
+
+## <a name="requirements"></a>Wymagania
+
+Win32
+
+## <a name="see-also"></a>Zobacz też
+
+[Kontrolki w oknach dialogowych](../windows/controls-in-dialog-boxes.md)  
+[Kontrolki](../mfc/controls-mfc.md)

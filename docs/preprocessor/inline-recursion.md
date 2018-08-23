@@ -18,29 +18,30 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f81347c8286dfa1f0651af43bd3134565a22aade
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 222cb7151d975219d0e92bd1270778586e89b4d3
+ms.sourcegitcommit: d4c803bd3a684d7951bf88dcecf1f14af43ae411
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33849499"
+ms.lasthandoff: 08/10/2018
+ms.locfileid: "42466411"
 ---
 # <a name="inlinerecursion"></a>inline_recursion
-Określa rozszerzenie funkcji wbudowanej bezpośrednio lub wzajemnie wywołania funkcji rekursywnych.  
+Kontroluje wbudowane rozwijanie bezpośrednich lub wzajemnie rekursywne wywołania funkcji.  
   
 ## <a name="syntax"></a>Składnia  
   
 ```  
-  
 #pragma inline_recursion( [{on | off}] )  
 ```  
   
 ## <a name="remarks"></a>Uwagi  
- Użyj tej pragmy do funkcji kontroli oznaczona jako [wbudowanego](../cpp/inline-functions-cpp.md) i [__inline](../cpp/inline-functions-cpp.md) lub funkcje, które kompilator automatycznie rozszerza się w obszarze opcji/ob2. Korzystanie z tej pragmy wymaga [/Ob](../build/reference/ob-inline-function-expansion.md) ustawienia opcji kompilatora 1 lub 2. Stan domyślny dla `inline_recursion` jest wyłączona. Tej pragmy obowiązuje przy pierwszym wywołaniu funkcji po pragma jest widoczna i nie ma wpływu na definicji funkcji.  
+ 
+Użyj tej pragmie do funkcji kontroli oznaczone jako [wbudowane](../cpp/inline-functions-cpp.md) i [__inline](../cpp/inline-functions-cpp.md) lub funkcje, które kompilator automatycznie rozszerza się w obszarze `/Ob2` opcji. Korzystanie z tej pragmie wymaga [/Ob](../build/reference/ob-inline-function-expansion.md) ustawienia opcji kompilatora, 1 lub 2. Domyślny stan dla **inline_recursion** jest wyłączona. Ta dyrektywa pragma staje się skuteczny przy pierwszym wywołaniu funkcji po pragmy jest widoczne, a nie ma wpływu na definicji funkcji.  
   
- `inline_recursion` Pragma kontroluje sposób funkcje rekursywne zostaną rozwinięte. Jeśli `inline_recursion` jest wyłączona, a jeśli wbudowanej funkcji wywołuje sam (bezpośrednio lub pośrednio), funkcję rozszerzonej tylko jeden raz. Jeśli `inline_recursion` jest włączone, funkcja jest rozwinięta wielokrotnie, dopóki nie osiągnie wartość z [inline_depth](../preprocessor/inline-depth.md) pragma, wartością domyślną dla funkcji cyklicznej, które jest definiowana za pomocą `inline_depth` pragma lub pojemności ograniczyć .  
+**Inline_recursion** pragma Określa, jak zostaną rozwinięte funkcji rekursywnych. Jeśli **inline_recursion** jest wyłączona, a jeśli funkcja śródwierszowa wywołuje sam siebie (bezpośrednio lub pośrednio), funkcja jest rozwinięty tylko jeden raz. Jeśli **inline_recursion** jest włączona, funkcja jest rozwinięty wielokrotnie, dopóki nie osiągnie wartość ustawioną przy użyciu [inline_depth](../preprocessor/inline-depth.md) pragma, wartością domyślną dla funkcji cyklicznych, który jest definiowany przez `inline_depth` pragma lub pojemność ograniczyć.  
   
 ## <a name="see-also"></a>Zobacz też  
- [Dyrektywy pragma i słowo kluczowe __Pragma](../preprocessor/pragma-directives-and-the-pragma-keyword.md)   
- [inline_depth](../preprocessor/inline-depth.md)   
- [/Ob (Rozszerzenie funkcji wbudowanej)](../build/reference/ob-inline-function-expansion.md)
+ 
+[Dyrektywy pragma i słowo kluczowe __Pragma](../preprocessor/pragma-directives-and-the-pragma-keyword.md)   
+[inline_depth](../preprocessor/inline-depth.md)   
+[/Ob (Rozszerzenie funkcji wbudowanej)](../build/reference/ob-inline-function-expansion.md)

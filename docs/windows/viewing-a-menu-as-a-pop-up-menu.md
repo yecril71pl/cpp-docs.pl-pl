@@ -16,28 +16,31 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: ef77de72a9120a774e3676d649adb267074e1a72
-ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
+ms.openlocfilehash: 79b7dd87ce79cf05a43e1a41fdbd076bac2c9a07
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/09/2018
-ms.locfileid: "40015614"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42613550"
 ---
 # <a name="viewing-a-menu-as-a-pop-up-menu"></a>Wyświetlanie jako menu podręcznego
-Zwykle podczas pracy **Menu** edytora, zasobu menu jest wyświetlana jako pasek menu. Jednak może być zasobów menu, które są dodawane do paska menu aplikacji, podczas gdy program jest uruchomiony.  
-  
-### <a name="to-view-a-menu-resource-as-a-pop-up-menu"></a>Aby wyświetlić zasobów menu jako menu podręcznego  
-  
-1.  Kliknij prawym przyciskiem myszy menu, a następnie wybierz **Pokaż jako menu podręczne** z menu skrótów.  
-  
-     To jest tylko preferencji wyświetlania i nie zostanie zmodyfikowana z poziomu menu.  
-  
-    > [!NOTE]
-    >  Aby zmienić widok paska menu, kliknij przycisk **Pokaż jako menu podręczne** ponownie (który spowoduje usunięcie znacznika wyboru i zwraca widok pasek menu).  
-  
-## <a name="requirements"></a>Wymagania  
- Win32  
-  
-## <a name="see-also"></a>Zobacz też  
- [Tworzenie menu wyskakujących](../windows/creating-pop-up-menus.md)   
- [Edytor menu](../windows/menu-editor.md)   
+
+Zwykle podczas pracy **Menu** edytora, zasobu menu jest wyświetlana jako pasek menu. Jednak może być zasobów menu, które są dodawane do paska menu aplikacji, podczas gdy program jest uruchomiony.
+
+### <a name="to-view-a-menu-resource-as-a-pop-up-menu"></a>Aby wyświetlić zasobów menu jako menu podręcznego
+
+1. Kliknij prawym przyciskiem myszy menu, a następnie wybierz **Pokaż jako menu podręczne** z menu skrótów.
+
+   To jest tylko preferencji wyświetlania i nie zostanie zmodyfikowana z poziomu menu.
+
+   > [!NOTE]
+   > Aby zmienić widok paska menu, kliknij przycisk **Pokaż jako menu podręczne** ponownie (który spowoduje usunięcie znacznika wyboru i zwraca widok pasek menu).
+
+## <a name="requirements"></a>Wymagania
+
+Win32
+
+## <a name="see-also"></a>Zobacz też
+
+[Tworzenie menu wyskakujących](../windows/creating-pop-up-menus.md)  
+[Edytor menu](../windows/menu-editor.md)  

@@ -1,5 +1,5 @@
 ---
-title: Historia 2003 2015 zmian Visual C++ | Dokumentacja firmy Microsoft
+title: Visual C++ — Historia latach 2003 – 2015 zmian | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 08/30/2017
 ms.technology:
@@ -14,258 +14,257 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0d4c4aeeaf79172950aae6d06c5e8a1246064246
-ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
+ms.openlocfilehash: b8de399ef4a9bab0a4e3da503d2f63562ee93198
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34705689"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42605946"
 ---
-# <a name="visual-c-change-history-2003---2015"></a>Historia 2003 2015 zmian Visual C++
+# <a name="visual-c-change-history-2003---2015"></a>Visual C++ — Historia latach 2003 – 2015 zmian
 
-W tym artykule opisano zmiany podziału z programu Visual Studio 2015, wracając do programu Visual Studio 2003 oraz w tym artykule warunki "nowe zachowanie" lub "teraz" odnoszą się do programu Visual Studio 2015 i później. Warunki "stare zachowanie" i "przed" odnoszą się do programu Visual Studio 2013 i wcześniejszych wersjach.
+W tym artykule opisano wszystkie przełomowe zmiany z programu Visual Studio 2015 po powrocie do programu Visual Studio 2003, a w tym artykule terminy "nowe zachowanie" lub "teraz" odnoszą się do programu Visual Studio 2015 i nowszych. Terminy "stare zachowanie" i "before" odnoszą się do programu Visual Studio 2013 i jego starszych wersji.
 
-Informacje dotyczące programu Visual Studio 2017, zobacz [nowości w języku Visual C++ w programie Visual Studio 2017](../what-s-new-for-visual-cpp-in-visual-studio.md) i [ulepszenia zgodność w programie Visual C++ w programie Visual Studio 2017](../cpp-conformance-improvements-2017.md). 
+Aby uzyskać informacje o programie Visual Studio 2017, zobacz [co nowego w języku Visual C++ w programie Visual Studio 2017](../what-s-new-for-visual-cpp-in-visual-studio.md) i [ulepszenia zgodności w programie Visual C++ w programie Visual Studio 2017](../cpp-conformance-improvements-2017.md). 
 
 > [!NOTE]
-> Nie ma żadnych danych binarnych fundamentalne zmiany między Visual Studio 2015 i Visual Studio 2017 r.
+> Nie ma żadnych danych binarnych przełomowych zmian między wersjami programu Visual Studio 2015 i Visual Studio 2017.
 
-Po uaktualnieniu do nowej wersji programu Visual Studio, mogą wystąpić kompilacji i/lub błędy podczas wykonywania kodu, który wcześniej skompilowany i został uruchomiony poprawnie. Zmiany w nowej wersji, które powodują takich problemów są określane jako *fundamentalne zmiany*, i zazwyczaj są wymagane przez modyfikacje w standard języka C++, sygnatury funkcji lub układ obiektów w pamięci.
+Po uaktualnieniu do nowej wersji programu Visual Studio, może wystąpić, kompilacji i/lub błędy czasu wykonywania w kodzie, który wcześniej kompilował się i uruchamiał poprawnie. Zmiany w nowej wersji, które powodują takie problemy, są znane jako *istotne zmiany w*, i zazwyczaj są one wymagane przez zmiany w standardzie języka C++, sygnaturach funkcji lub układzie obiektów w pamięci.
 
- Aby uniknąć błędów czasu wykonywania, które są trudne do wykrycia i zdiagnozowania, zalecamy, aby nigdy nie łączyć statycznie do plików binarnych, które zostały skompilowane przy użyciu innych wersji kompilatora. Ponadto, gdy uaktualniasz projekt EXE lub DLL, upewnij się, że uaktualniasz również biblioteki, z którymi się on łączy. Jeśli używasz CRT (C Runtime) i typy standardowe biblioteki C++ (standardowa biblioteka C++), nie przekazywania między plików binarnych (łącznie z biblioteki dll), które zostały skompilowane przy użyciu różnych wersji kompilatora. Aby uzyskać więcej informacji, zobacz [potencjalne błędy przekazywanie CRT obiektów między granic DLL](../c-runtime-library/potential-errors-passing-crt-objects-across-dll-boundaries.md).  
+Aby uniknąć błędów czasu wykonywania, które są trudne do wykrycia i zdiagnozowania, zalecamy, aby nigdy nie łączyć statycznie do plików binarnych, które zostały skompilowane przy użyciu innych wersji kompilatora. Ponadto, gdy uaktualniasz projekt EXE lub DLL, upewnij się, że uaktualniasz również biblioteki, z którymi się on łączy. Jeśli używasz CRT (środowisko uruchomieniowe C) lub typów biblioteki standardowej języka C++ (standardowa biblioteka C++), nie przekazujesz ich między plikami binarnymi (w tym plikami dll), które zostały skompilowane przy użyciu innych wersji kompilatora. Aby uzyskać więcej informacji, zobacz [potencjalne błędy przekazywania CRT obiektów w pliku DLL granicach](../c-runtime-library/potential-errors-passing-crt-objects-across-dll-boundaries.md).  
   
- Zalecamy też, aby nigdy nie pisać kodu, który zależy od określonego układu dla obiektu niebędącego interfejsem COM lub obiektem POD. Jeśli jednak piszesz taki kod, upewnij się, że działa po uaktualnieniu. Aby uzyskać więcej informacji, zobacz [przenośność na granicach ABI](../cpp/portability-at-abi-boundaries-modern-cpp.md).  
+Zalecamy też, aby nigdy nie pisać kodu, który zależy od określonego układu dla obiektu niebędącego interfejsem COM lub obiektem POD. Jeśli jednak piszesz taki kod, upewnij się, że działa po uaktualnieniu. Aby uzyskać więcej informacji, zobacz [przenośność na granicach ABI](../cpp/portability-at-abi-boundaries-modern-cpp.md).  
   
- Ponadto w bieżących ulepszenia kompilatora zgodność jak kompilator rozumie istniejącego kodu źródłowego czasami można zmienić. W takim przypadku nowe lub inne błędy mogą wystąpić podczas kompilacji lub nawet behawioralnej różnice w kodzie, który uprzednio utworzony i z działała poprawnie. Mimo że nie są one fundamentalne zmiany takich jak te omówionych w tym dokumencie, mogą być wymagane zmiany kodu źródłowego, aby rozwiązać te problemy.  
+Ponadto najnowsze ulepszenia do zgodności kompilatora czasem zmienić jak kompilator rozpoznaje istniejącego kodu źródłowego. W takim przypadku mogą wystąpić błędy innym, podczas kompilacji lub różnice w zachowaniu nawet w kodzie, który wcześniej utworzone i sprawiał by działała poprawnie. Mimo że są one nie przełomowe zmiany, jak w powyższym omówionych w tym dokumencie, zmiany kodu źródłowego mogą być wymagane, aby rozwiązać te problemy:  
   
   
-1.  [Fundamentalne zmiany biblioteka języka C Runtime (CRT)](#BK_CRT)  
+- [Istotne zmiany w Biblioteka środowiska uruchomieniowego (CRT)](#BK_CRT)  
   
-2.  [Standard C++ i standardowa biblioteka C++ fundamentalne zmiany](#BK_STL)  
+- [Standard C++ i standardowej bibliotece C++ fundamentalne zmiany](#BK_STL)  
   
-3.  [MFC i ATL fundamentalne zmiany](#BK_MFC)  
+- [MFC i ATL fundamentalne zmiany](#BK_MFC)  
   
-4.  [Współbieżność środowiska wykonawczego podziału zmiany](#BK_ConcRT)  
+- [Zmiany powodujące niezgodność środowiska uruchomieniowego współbieżności](#BK_ConcRT)  
   
 ## <a name="VC_2015"></a> Visual C++ 2015 zgodność zmiany  
   
-###  <a name="BK_CRT"></a> Biblioteka środowiska wykonawczego języka C (CRT)  
+###  <a name="BK_CRT"></a> Biblioteka środowiska uruchomieniowego języka C (CRT)  
   
 #### <a name="general-changes"></a>Ogólne zmiany  
   
--   **Pliki binarne refaktoryzowane** Biblioteka CRT ma został zrefaktoryzowany do dwóch różnych plików binarnych, uniwersalne środowisko CRT (ucrtbase), który zawiera większość standardowych funkcji, a biblioteka środowiska uruchomieniowego VC (vcruntime), który zawiera powiązane kompilatora Funkcje, takie jak obsługa wyjątków i funkcje wewnętrzne. Jeśli korzystasz z domyślnych ustawień projektu, następnie ta zmiana nie ma wpływu możesz ponieważ konsolidator będzie automatycznie używać nowej biblioteki domyślne. Jeśli ustawisz projekt **konsolidatora** właściwości **Ignoruj wszystkie domyślne biblioteki** do **tak** lub w przypadku używania opcji konsolidatora/nodefaultlib w wierszu polecenia, a następnie należy lista bibliotek (w **dodatkowe zależności** właściwości) do uwzględnienia bibliotek nowy, refaktoryzowane. Zastąp równoważnych bibliotek refactored starego biblioteki CRT (libcmt.lib, libcmtd.lib, msvcrt.lib, msvcrtd.lib). Dla każdego z dwóch bibliotek refactored są statyczna (lib) i wersji dynamicznie (dll) i wersji (nie sufiksem) i wersji debugowania (wraz z sufiksem "d"). Dynamiczne wersje mają biblioteki importu, który należy połączyć z. Dwie biblioteki refactored są uniwersalne środowisko CRT, w szczególności ucrtbase.dll lub lib, plik ucrtbased.dll lub .lib, a biblioteka środowiska uruchomieniowego VC, libvcruntime.lib, vcruntime*wersji*dll, libvcruntimed.lib i vcruntimed*wersji*dll. *Wersji* w Visual Studio 2015 i Visual Studio 2017 jest 140. Zobacz [funkcje bibliotek CRT](../c-runtime-library/crt-library-features.md).  
+- **Zaprojektowane od nowa pliki binarne** do dwóch różnych plików binarnych, Universal CRT (ucrtbase), który zawiera większość standardowych funkcji, a biblioteka środowiska uruchomieniowego VC (vcruntime), który zawiera powiązane kompilatora ma zostały zaprojektowane od Nowa biblioteka CRT Funkcje, takie jak obsługa wyjątków i funkcje wewnętrzne. Jeśli używane są domyślne ustawienia projektu, następnie ta zmiana nie ma wpływu na możesz ponieważ konsolidator będzie automatycznie używać nowej biblioteki domyślne. Jeśli ustawisz projekt **konsolidatora** właściwość **Ignoruj wszystkie domyślne biblioteki** do **tak** lub używasz `/NODEFAULTLIB` w wierszu polecenia, następnie — opcja konsolidatora należy zaktualizować listę bibliotek (w **dodatkowe zależności** właściwość) do uwzględnienia nowej, wycofanej bibliotek. Zastąp stare biblioteki CRT (libcmt.lib libcmtd.lib, msvcrt.lib, biblioteki msvcrtd.lib) równoważne wycofanej bibliotek. Dla każdego z dwóch bibliotek wycofanej istnieją statyczna (.lib) i wersji dynamicznie (dll) i wersji (nie sufiksem) i wersji debugowania (z sufiksem "d"). Dynamiczne wersje mają biblioteki importowanej, która łączy z. Dwie biblioteki wycofanej są Universal CRT specjalnie ucrtbase.dll lub .lib, bibliotekę ucrtbased.dll lub .lib, a biblioteka środowiska uruchomieniowego VC, libvcruntime.lib, vcruntime*wersji*.dll, libvcruntimed.lib i vcruntimed*wersji*.dll. *Wersji* zarówno w programie Visual Studio 2015 i Visual Studio 2017 jest 140. Zobacz [funkcje biblioteki CRT](../c-runtime-library/crt-library-features.md).  
   
 #### <a name="localeh"></a>\<locale.h>  
   
--   **localeconv —** [localeconv —](../c-runtime-library/reference/localeconv.md) funkcja zadeklarowana w locale.h teraz działa prawidłowo po [ustawienia regionalne dla każdego wątku](../parallel/multithreading-and-locales.md) jest włączona. W poprzednich wersjach biblioteki ta funkcja zwróci dane lconv — globalnych ustawień regionalnych nie ustawienia regionalne wątku.  
+- **localeconv** [localeconv](../c-runtime-library/reference/localeconv.md) funkcja zadeklarowana w locale.h działa teraz poprawnie po [ustawień regionalnych na wątek](../parallel/multithreading-and-locales.md) jest włączona. W poprzednich wersjach biblioteki ta funkcja zwróci dane lconv — globalne ustawienia regionalne nie ustawienia regionalne dla wątku.  
   
-     Użycie na ustawienia regionalne wątku, należy sprawdzić użytkowania localeconv — aby zobaczyć, jeśli kod przyjęto założenie, że dane lconv — zwracane jest globalnych ustawień regionalnych dla i odpowiednio zmodyfikuj.  
+     Użycie na ustawienia regionalne wątku, należy sprawdzić użytkowania localeconv, aby zobaczyć, w przypadku kodu zakłada, że zwrócone dane lconv — dotyczy globalnych ustawień regionalnych i zmodyfikuj go odpowiednio.  
   
 #### <a name="mathh"></a>\<math.h>  
   
--   **C++ przeciążeń funkcje biblioteki matematyczne** w poprzednich wersjach \<math.h > określone niektóre, ale nie wszystkie przeciążenia C++ dla funkcje matematyczne biblioteki. \<cmath > zdefiniowane pozostałych przeciążeń, dlatego w celu uzyskania wszystkich przeciążeń, co potrzebne do dołączenia \<cmath > nagłówka. To doprowadziło do problemów z Rozpoznanie przeciążenia funkcji w kodzie, zawierającego tylko \<math.h >. Teraz, zostały usunięte wszystkie przeciążenia C++ z \<math.h > i są teraz dostępne tylko w \<cmath >.  
+- **C++ przeciążenia funkcji bibliotek matematycznych** w poprzednich wersjach \<math.h > zdefiniowane niektóre, ale nie wszystkie z przeciążeń C++ dla funkcji bibliotek matematycznych. \<cmath > zdefiniowane pozostałe przeciążeń, dlatego w celu uzyskania wszystkich przeciążeń, jeden wymagane było uwzględnienie \<cmath > nagłówka. Doprowadziło to do problemów z Rozpoznanie przeciążenia funkcji w kodzie, który tylko \<math.h >. Teraz wszystkich przeciążeń C++ zostały usunięte z \<math.h > a teraz są dostępne tylko w \<cmath >.  
   
-     Aby naprawić błędy, obejmują <cmath> uzyskać deklaracje funkcji, które zostały usunięte z \<math.h >. W poniższej tabeli wymieniono funkcje, które zostały przeniesione.  
+     Aby naprawić błędy, należy dołączyć <cmath> można pobrać deklaracji funkcji, które zostały usunięte z \<math.h >. W poniższej tabeli wymieniono funkcje, które zostały przeniesione.  
   
      Funkcje, które zostały przeniesione:  
   
-    1.  Podwójna abs(float) abs(double) i zmiennoprzecinkowych  
+    - podwójne abs(float) abs(double) i zmiennoprzecinkowych  
   
-    2.  Podwójna pow (dwa razy, int), float pow (float, float), float pow (float, int), liczba typu double pow (podwójnej długości, podwójnej długości), liczba typu double pow (int podwójnej długości)  
+    - Double pow (double, int), float pow (float, float), float pow (float, int), liczba typu double pow (double, double), liczba typu double pow (double, int)  
   
-    3.  float i podwójnej długości wersje zmiennoprzecinkową punkt acos funkcje, acosh, asin, asinh, atan, atanh, atan2, cbrt —, ceil copysign —, cos, cosh erf, erfc, exp, exp2 —, expm1 —, fabs —, fdim —, floor, fma, fmax, fmin, fmod —, frexp —, hypot —, ilogb —, ldexp —, lgamma —, llrint, llround —, dziennika , log10, log1p —, log2, lrint, lround —, modf —, nearbyint —, nextafter —, nexttoward, pozostałą, remquo —, drukowanie, round, scalbln, scalbn —, sin, sinh, sqrt, tan, tanh, tgamma —, trunc  
+    - zmiennoprzecinkowych i typu long double wersje pływających punktu funkcje acos, acosh, asin, asinh, atan, atanh, atan2, cbrt —, ceil —, copysign —, cos, cosh erf, erfc, exp, exp2 —, expm1 —, fabs —, fdim —, floor, fma, fmax, fmin, fmod, frexp —, hypot —, ilogb —, ldexp —, lgamma —, llrint, llround —, dziennika , log10, log1p —, log2, lrint, lround —, modf —, nearbyint —, nextafter —, nexttoward, pozostałą, remquo —, rukuj, round, scalbln, scalbn —, sin, sinh, sqrt, tan, tanh, tgamma —, trunc  
   
-     Jeśli masz kod, czy abs korzysta z liczbą zmiennoprzecinkową punkt typu, który zawiera tylko nagłówek math.h, zmiennoprzecinkowy wersji będzie nie będzie już dostępna, więc argument punktu połączenia, nawet w przypadku liczbą zmiennoprzecinkową, teraz jest rozpoznawana jako abs(int). Daje to kod błędu:  
+     Jeśli masz kod, że abs korzysta ze swobodnym punktu typ, który zawiera tylko w nagłówku math.h, zmiennoprzecinkowy będzie wersje nie będą już dostępne, więc wywołanie, a nawet w przypadku liczb zmiennoprzecinkowych punktu argumentu, teraz jest rozpoznawana jako abs(int). To powoduje błąd:  
   
     ```Output  
     warning C4244: 'argument' : conversion from 'float' to 'int', possible loss of data  
     ```  
   
-     Poprawka dla to ostrzeżenie jest Zastąp wywołanie abs z liczbą zmiennoprzecinkową punktu wersji abs, takich jak fabs — argumentu podwójne lub fabsf — argumentu typu float, lub Dołącz nagłówek cmath i nadal używać abs.  
+     Poprawkę dotyczącą tego ostrzeżenia jest Zastąp wywołanie `abs` ze swobodnym wersję punktu `abs`, takich jak `fabs` argumentu double lub `fabsf` dla argumentu typu float, lub obejmują cmath — nagłówek i nadal używać `abs`.  
   
--   **Przestawne zgodność punktu** wprowadzono wiele zmian do biblioteki matematyczne, aby zwiększyć zgodność ze specyfikacją IEEE-754 i C11 załączniku F względem specjalnych przypadków wejść, takie jak wartości NaN i infinities. Na przykład quiet NaN danych wejściowych, które często są traktowane jako błędy w poprzednich wersjach biblioteki, nie są traktowane jako błędy. Zobacz [IEEE 754 standardowe](http://grouper.ieee.org/groups/754) i załącznika F [C11 Standard](http://www.iso-9899.info/wiki/The_Standard).  
+- **Zmiennoprzecinkowe zgodności punktu** wprowadzono wiele zmian do biblioteki matematyczne, aby zwiększyć zgodność ze specyfikacją IEEE 754 i C11 załączniku F względem specjalnych przypadków dane wejściowe takich jak NaNs i nieskończoności. Na przykład cichy NaN danych wejściowych, które często były traktowane jako błędy w poprzednich wersjach biblioteki, nie są traktowane jako błędy. Zobacz [IEEE 754 standardowa](http://grouper.ieee.org/groups/754) i załącznika F [C11 Standard](http://www.iso-9899.info/wiki/The_Standard).  
   
-     Te zmiany nie będzie powodować błędy kompilacji, ale może spowodować programów zachowywać się inaczej, właściwie zgodnie ze standardowego.  
+     Te zmiany nie będą powodować błędy kompilacji, ale może spowodować programów zachowują się inaczej, właściwie zgodnie ze standardem.  
   
--   **Flt_rounds —** w programie Visual Studio 2013, flt_rounds — makro rozszerzyć, aby wyrażenie stałe jest niepoprawne, ponieważ można skonfigurować w czasie wykonywania, na przykład przez wywołanie fesetround trybu zaokrąglania. Flt_rounds — makro jest teraz dynamiczne i poprawnie odzwierciedla bieżący tryb zaokrąglania.  
+- **FLT_ROUNDS** w programie Visual Studio 2013, makro FLT_ROUNDS rozszerzona o stałym wyrażeniem, które jest niepoprawne, ponieważ można skonfigurować w czasie wykonywania, na przykład przez wywołującego fesetround trybu zaokrąglania. Makro FLT_ROUNDS jest teraz dynamiczny i poprawnie odzwierciedla bieżący tryb zaokrąglania.  
   
 #### <a name="new-and-newh"></a>\<Nowy > i \<new.h >  
   
--   **nowe i usunąć** w poprzednich wersjach biblioteki nowy operator zdefiniowane w implementacji i usuwania funkcji zostały wyeksportowane z biblioteki środowiska uruchomieniowego DLL (na przykład msvcr120.dll). Te funkcje operatorów są teraz zawsze połączone statycznie do Twojej plików binarnych, nawet w przypadku używania biblioteki środowiska uruchomieniowego bibliotek DLL.  
+- **nowe i Usuń** w poprzednich wersjach biblioteki nowy operator zdefiniowanych w implementacji i funkcje delete musiały zostać wyeksportowane z biblioteki wykonawczej DLL (na przykład msvcr120.dll). Te funkcje operatora są teraz zawsze połączone statycznie do plików binarnych, nawet wtedy, gdy za pomocą biblioteki środowiska uruchomieniowego bibliotek DLL.  
   
-     Nie jest to istotne zmiany kodu natywnego lub mieszane (/ clr), jednak kod skompilowany jako [/CLR: pure](../build/reference/clr-common-language-runtime-compilation.md), może to spowodować niepowodzenie skompilować kod. Jeśli Skompiluj kod jako/CLR: pure, należy dodać #include \<nowych > lub #include \<new.h > Aby uniknąć błędów kompilacji z powodu tej zmiany. Należy pamiętać, że/CLR: pure jest przestarzała w programie Visual Studio 2015 i nieobsługiwane w programie Visual Studio 2017 r. Kod, który musi być "czysty" powinny być przenoszone do języka C#.  
+     To nie jest istotną zmianę dla kodu natywnego lub małe i wielkie (`/clr`), ale dla kodu skompilowanego jako [/CLR: pure](../build/reference/clr-common-language-runtime-compilation.md), może to spowodować swój kod, aby kompilacja nie powiedzie się. Jeśli kompilujesz kod jako `/clr:pure`, może być konieczne dodanie `#include <new>` lub `#include <new.h>` w celu obejścia błędy kompilacji z powodu tej zmiany. Należy pamiętać, że `/clr:pure` jest przestarzała w programie Visual Studio 2015 i obsługiwane w programie Visual Studio 2017. Kod, który ma zostać "czysta" powinny być przenoszone do języka C#.  
   
 #### <a name="processh"></a>\<process.h >  
   
--   **_beginthread — i _beginthreadex —** [_beginthread —](../c-runtime-library/reference/beginthread-beginthreadex.md) i [_beginthreadex —](../c-runtime-library/reference/beginthread-beginthreadex.md) funkcji teraz przechowuje odwołania do modułu, w którym określono procedury wątku na czas trwania Wątek. Pomaga to zapewnić, że moduły nie są zwalniane, dopóki wątku ma działać do zakończenia.  
+- **_beginthread i _beginthreadex** [_beginthread](../c-runtime-library/reference/beginthread-beginthreadex.md) i [_beginthreadex](../c-runtime-library/reference/beginthread-beginthreadex.md) funkcje teraz zawierać odwołanie do modułu, w którym zdefiniowano procedury wątku na czas trwania Wątek. Pomaga to zapewnić, że moduły nie są zwalniane, aż wątek ma zostało ukończone.  
   
 #### <a name="stdargh"></a>\<stdarg.h>  
   
--   **Dokumentacja i va_start — typy** podczas kompilowania kodu C++ [va_start —](../c-runtime-library/reference/va-arg-va-copy-va-end-va-start.md) teraz weryfikuje w czasie kompilacji, która argumentu przekazanego do niego nie jest typu referencyjnego. Argumenty typu odwołania są zabronione przez C++ Standard.  
+- **typy va_start i odwołania** podczas kompilowania kodu C++ [va_start](../c-runtime-library/reference/va-arg-va-copy-va-end-va-start.md) teraz sprawdza się w czasie kompilacji, który argumentu przekazanego do niej nie jest typem referencyjnym. Argumenty typu odwołania są zabronione przez C++ Standard.  
   
 #### <a name="stdioh-and-conioh"></a>\<stdio.h > i \<conio.h >  
   
--   **Teraz zdefiniowano printf i scanf rodziny funkcji wbudowanej.** Definicje wszystkie funkcje printf i scanf zostały przeniesione wbudowany w \<stdio.h >, \<conio.h > i inne CRT nagłówków. Jest to istotne zmiany, który prowadzi do konsolidatora błąd (LNK2019, nierozpoznany zewnętrzny symbol) dla wszystkich programów, które lokalnie zadeklarowane tych funkcji bez uwzględniania odpowiednie nagłówki CRT. Jeśli to możliwe, należy zaktualizować kodu do uwzględnienia nagłówki CRT (to znaczy dodawać #include \<stdio.h >) i funkcji śródwierszowych, ale jeśli nie chcesz zmodyfikować swój kod, aby uwzględnić te pliki nagłówkowe, alternatywne rozwiązanie jest dodanie dodatkowych Biblioteka do Twojej legacy_stdio_definitions.lib wejściowych, konsolidatora.  
+- **Teraz zdefiniowano printf i scanf rodzinę funkcji wbudowanych.** Wszystkie funkcje printf i scanf definicje zostały wbudowane przenoszony do \<stdio.h >, \<conio.h > i innych nagłówków CRT. Dla wszystkich programów, które lokalnie zadeklarowane tych funkcji bez uwzględniania odpowiednie nagłówki CRT jest istotną zmianę, który prowadzi do błąd konsolidatora (LNK2019, nierozpoznany symbol zewnętrzny). Jeśli to możliwe, należy zaktualizować kod o uwzględnieniu nagłówków CRT (oznacza to, Dodaj `#include <stdio.h>`) i funkcje śródwierszowe, ale jeśli chcesz zmodyfikować swój kod, aby uwzględnić te pliki nagłówkowe, alternatywnym rozwiązaniem jest dodanie dodatkowe biblioteki do swoje konsolidatora Input, legacy_stdio_definitions.lib.  
   
-     Aby dodać dane wejściowe konsolidatora w IDE tej biblioteki, otwórz menu kontekstowe dla węzła projektu, wybierz pozycję **właściwości**, a następnie w **właściwości projektu** oknie dialogowym wybierz **konsolidatora**i edytować **dane wejściowe konsolidatora** do dodania do listy rozdzielanych colon rozdzielana legacy_stdio_definitions.lib.
-     Jeśli projekt łączy się z bibliotek statycznych, które zostały skompilowane z programu Visual Studio w wersji wcześniejszej niż 2015, konsolidator może raportować nierozpoznany zewnętrzny symbol. Te błędy mogą odwoływać się do wewnętrznej stdio — definicje _iob —, _iob_func lub powiązane Importy dla niektórych funkcji stdio — w formie\_*. Firma Microsoft zaleca skompiluj wszystkie biblioteki statyczne z najnowszą wersją kompilatora C++ i bibliotek podczas uaktualniania projektu. Jeśli biblioteka jest biblioteki innych firm dla źródła, które nie jest dostępna, należy żądanie zaktualizowano binarnego z innej firmy lub hermetyzują użycie tej biblioteki w oddzielnych bibliotekach DLL kompilacji z starszej wersji kompilatora i bibliotek .
+     Aby dodać tę bibliotekę dane wejściowe konsolidatora w środowisku IDE, otwórz menu kontekstowe dla węzła projektu, wybierz polecenie **właściwości**, a następnie w obszarze **właściwości projektu** okna dialogowego wybierz **konsolidatora**i edytować **dane wejściowe konsolidatora** dodać `legacy_stdio_definitions.lib` do listy rozdzielanej średnikami naczepa.
+     Jeśli projekt łączy się z biblioteki statyczne, które zostały skompilowane przy użyciu programu Visual Studio w wersji wcześniejszej niż 2015, konsolidator może raportować nierozpoznany symbol zewnętrzny. Te błędy mogą odwoływać się do wewnętrznej stdio — definicje _iob —, _iob_func lub powiązane Import dla niektórych funkcji stdio — w formie\_*. Firma Microsoft zaleca zrekompilować wszystkie biblioteki statyczne z najnowszą wersją kompilatora języka C++ i bibliotekami po uaktualnieniu projektu. Jeśli biblioteka jest biblioteką innych firm, dla którego źródło jest niedostępne, należy zażądać zaktualizowanego pliku binarnego od innych firm lub hermetyzują użycie tej biblioteki do oddzielnych biblioteki DLL, która skompilować przy użyciu starszej wersji kompilatora i biblioteki .
   
     > [!WARNING]
-    >  Jeśli łączysz się z systemem Windows 8.1 SDK lub wcześniej, mogą wystąpić błędy nierozpoznany zewnętrzny symbol. W takim przypadku należy poprawić błąd, dodając legacy_stdio_definitions.lib do konsolidatora wprowadzania opisanych powyżej.  
+    > W przypadku łączenia z Windows SDK 8.1 lub starszym mogą wystąpić następujące błędy nierozpoznany symbol zewnętrzny. W takim przypadku należy rozwiązać problem, dodając legacy_stdio_definitions.lib do konsolidatora, danych wejściowych, zgodnie z wcześniejszym opisem.  
   
-     Rozwiązywanie problemów nierozwiązanych symbolu, można spróbować użyć [dumpbin.exe](../build/reference/dumpbin-reference.md) do sprawdzenia symbole zdefiniowane w pliku binarnym. Spróbuj następujący wiersz polecenia w celu wyświetlenia symboli zdefiniowanych w bibliotece.  
+     Rozwiązywanie problemów nierozpoznanych symboli, spróbuj użyć [dumpbin.exe](../build/reference/dumpbin-reference.md) zbadanie symbole zdefiniowane w pliku binarnym. Wypróbuj następujący wiersz polecenia w celu wyświetlenia symboli zdefiniowanych w bibliotece.  
   
     ```cpp  
     dumpbin.exe /LINKERMEMBER somelibrary.lib  
     ```  
   
--   **pobiera i _getws —** [pobiera](../c-runtime-library/gets-getws.md) i [_getws —](../c-runtime-library/gets-getws.md) funkcje zostały usunięte. Funkcja pobiera została usunięta z biblioteki standardowe C w C11, ponieważ nie można używać w bezpieczny sposób. _Getws — funkcja została rozszerzenia firmy Microsoft, który był równoważny pobiera, ale dla szerokiego ciągów. Jako alternatywy dla tych funkcji, należy rozważyć użycie [fgets —](../c-runtime-library/reference/fgets-fgetws.md), [fgetws —](../c-runtime-library/reference/fgets-fgetws.md), [gets_s —](../c-runtime-library/reference/gets-s-getws-s.md), i [_getws_s —](../c-runtime-library/reference/gets-s-getws-s.md).  
+- **pobiera i _getws —** [pobiera](../c-runtime-library/gets-getws.md) i [_getws —](../c-runtime-library/gets-getws.md) funkcje zostały usunięte. Funkcja pobiera został usunięty z biblioteki standardowej C w C11, ponieważ nie można używać w bezpieczny sposób. _Getws — funkcja została rozszerzeniem firmy Microsoft, który był równoważny pobiera, ale dla szerokiego ciągów. Jako alternatywy dla tych funkcji, rozważ użycie [fgets](../c-runtime-library/reference/fgets-fgetws.md), [fgetws —](../c-runtime-library/reference/fgets-fgetws.md), [gets_s —](../c-runtime-library/reference/gets-s-getws-s.md), i [_getws_s —](../c-runtime-library/reference/gets-s-getws-s.md).  
   
--   **_cgets — i _cgetws —** [_cgets —](../c-runtime-library/cgets-cgetws.md) i [_cgetws —](../c-runtime-library/cgets-cgetws.md) funkcje zostały usunięte. Jako alternatywy dla tych funkcji, należy rozważyć użycie [_cgets_s —](../c-runtime-library/reference/cgets-s-cgetws-s.md) i [_cgetws_s —](../c-runtime-library/reference/cgets-s-cgetws-s.md).  
+- **_cgets i _cgetws —** [_cgets](../c-runtime-library/cgets-cgetws.md) i [_cgetws —](../c-runtime-library/cgets-cgetws.md) funkcje zostały usunięte. Jako alternatywy dla tych funkcji, rozważ użycie [_cgets_s](../c-runtime-library/reference/cgets-s-cgetws-s.md) i [_cgetws_s —](../c-runtime-library/reference/cgets-s-cgetws-s.md).  
   
--   **Infinity i formatowanie NaN** w poprzednich wersjach infinities i wartości NaN będzie formatowana przy użyciu zestaw określonych MSVC wartownik ciągów.  
+- **Nieskończoności i NaN formatowanie** w poprzednich wersjach nieskończoności i NaNs będą formatowane przy użyciu zestaw określonych MSVC wartownik ciągów.  
   
-    -   Infinity: 1. #INF  
+    - Infinity: 1. #INF  
   
-    -   Quiet NaN: 1.#QNAN  
+    - Quiet NaN: 1.#QNAN  
   
-    -   NaN sygnalizowania: 1. #SNAN  
+    - Sygnalizowanie NaN: 1. #SNAN  
   
-    -   NaN nieograniczonego: 1. #IND  
+    - Nieokreślony NaN: 1. #IND  
   
-     Żadnego z tych adresów może poprzedzona znakiem i mogła zostać sformatowana nieco inaczej w zależności od szerokość pola i dokładność (czasami nietypowe efekty, np. printf ("%.2f\n", NIESKOŃCZONOŚCI) czy drukowanie 1. #J ponieważ #INF czy "zaokrąglony" dokładności 2 cyfr). C99 wprowadzono nowe wymagania na jak infinities i wartości NaN powinny być sformatowane. Implementacja MSVC teraz spełnia te wymagania. Nowe parametry są następujące:  
+     Żadnego z tych może być poprzedzona znakiem i może zostać sformatowana nieco inaczej w zależności od szerokość pola i dokładność (czasami z niezwykłych rzeczy, np. `printf("%.2f\n", INFINITY)` przetwarzającej 1. #J ponieważ #INF będzie "zaokrąglony" dokładności 2 cyfry). C99 wprowadzono nowe wymagania na jak nieskończoności i NaNs powinny być sformatowane. Teraz za pomocą implementacji MSVC jest zgodny z tych wymagań. Nowe parametry są następujące:  
   
-    -   Infinity: inf  
+    - Infinity: plik inf  
   
-    -   Quiet NaN: nan  
+    - Quiet NaN: nan  
   
-    -   Sygnalizowanie NaN: nan(snan)  
+    - Sygnalizowanie NaN: nan(snan)  
   
-    -   Nieokreślony NaN:nan(ind)  
+    - Nieokreślony NaN:nan(ind)  
   
-     Żadnego z tych adresów może być poprzedzona znakiem. Jeśli specyfikator formatu kapitału jest używana (%F zamiast %f), a następnie ciągi są napisane wielkimi literami (INF zamiast inf), jest wymagana.  
+     Dowolny z nich może być poprzedzony znakiem. Jeśli specyfikator formatu kapitałowych jest używana (%F zamiast %f), a następnie ciągi są napisane wielkimi literami (INF zamiast pliku inf), w jakim są wymagane.  
   
-     [Scanf](../c-runtime-library/reference/scanf-scanf-l-wscanf-wscanf-l.md) funkcje zostały zmodyfikowane i przeanalizować tych nowych ciągów, dlatego te ciągi będzie przesyłania danych za pośrednictwem printf i scanf.  
+     [Scanf](../c-runtime-library/reference/scanf-scanf-l-wscanf-wscanf-l.md) funkcje zostały zmodyfikowane w celu analizy tych nowych parametrów, więc zostanie wyrównana za pośrednictwem funkcji printf i scanf, te ciągi.  
   
--   **Zmiennoprzecinkowa formatowania ani do analizowania** wprowadzono nowy format ruchomy punkt i analizowania algorytmów zwiększające poprawności. Ta zmiana wpływa na [printf](../c-runtime-library/reference/printf-printf-l-wprintf-wprintf-l.md) i [scanf](../c-runtime-library/reference/scanf-scanf-l-wscanf-wscanf-l.md) rodziny funkcji, a także funkcji, takich jak [strtod —](../c-runtime-library/reference/strtod-strtod-l-wcstod-wcstod-l.md).  
+- **Zmiennoprzecinkowa, formatowania i analizowania** usprawniających poprawność wprowadzono nowy format zmiennoprzecinkowy punktu i analizowania algorytmów. Ta zmiana wpływa na [printf](../c-runtime-library/reference/printf-printf-l-wprintf-wprintf-l.md) i [scanf](../c-runtime-library/reference/scanf-scanf-l-wscanf-wscanf-l.md) rodziny funkcji, a także funkcje, takie jak [strtod](../c-runtime-library/reference/strtod-strtod-l-wcstod-wcstod-l.md).  
   
-     Stary algorytmów formatowania wygenerowanie ograniczoną liczbę cyfr, a następnie zero spowoduje wypełnienie pozostałych miejsc dziesiętnych. To jest wystarczająco dobre, że do generowania ciągów, które będzie wykonywać Rundy w następujących wstecz do oryginalnego wartość zmiennoprzecinkową o, ale nie jest doskonałym dokładną wartość (lub jego najbliższej reprezentacja decimal). Nowe algorytmy formatowania Generowanie jak dużo cyfr, które są wymagane do reprezentowania wartości (lub do wypełnienia określona precyzja). Na przykład poprawy; Podczas drukowania dużych potęgą liczby dwa, należy wziąć pod uwagę wyniki:  
+     Stary algorytmy formatowania wygeneruje tylko ograniczoną liczbę cyfr, a następnie zero spowoduje wypełnienie pozostałych miejsc dziesiętnych. Jest to zwykle wystarczające do generowania ciągów, które będą obustronne powrót do oryginalnego wartość zmiennoprzecinkową, ale nie jest doskonały chcącym dokładna wartość (lub najbliższy w formie dziesiętnej jej). Nowe algorytmy formatowania Generowanie jako liczbę cyfr, które są wymagane do reprezentowania wartości (lub do wypełnienia określoną dokładność). Na przykład poprawa; Podczas drukowania dużych potęgą liczby dwa, należy wziąć pod uwagę wyniki:  
   
     ```cpp  
     printf("%.0f\n", pow(2.0, 80))  
-  
     ```  
   
     ```Output  
         Old:  1208925819614629200000000    New:  1208925819614629174706176  
     ```  
   
-     Stare algorytmy analizy czy należy wziąć pod uwagę tylko maksymalnie 17 cyfr znaczących w ciągu wejściowym i czy odrzucić pozostałe cyfry. To jest wystarczający, aby wygenerować ścisłe zbliżenia wartość reprezentowany przez ciąg, a wynik jest zwykle bliski poprawnie zaokrąglony wynik. Nowej implementacji uwzględnia wszystkie cyfry obecne i tworzy poprawnie zaokrąglony wynik dla wszystkich danych wejściowych (maksymalnie 768 cyfr długości). Ponadto te funkcje teraz zgodne trybu zaokrąglania (sterowane za pośrednictwem fesetround).  To jest potencjalnie fundamentalne zmienić zachowanie, ponieważ te funkcje mogą output różne wyniki. Nowe wyniki są zawsze poprawne niż starych wyników.  
+     Stary algorytmów analizy zakwalifikowany tylko do 17 cyfr znaczących w ciągu wejściowym i czy odrzucić pozostałe cyfry. Jest to wystarczające do generowania bardzo bliskie zbliżenia wartość reprezentowany przez ciąg, a wynik jest zazwyczaj bardzo blisko poprawnie zaokrąglony wynik. Nowa implementacja uwzględnia wszystkie cyfry obecne i daje wynik poprawnie zaokrąglone wszystkich danych wejściowych (maksymalnie 768 znaków długości). Ponadto te funkcje teraz respektują trybu zaokrąglania (sterowane za pośrednictwem fesetround).  Jest to istotne potencjalnie zmienić zachowanie, ponieważ te funkcje mogą danych wyjściowych różne wyniki. Nowe wyniki są zawsze prawidłowe niż stare wyniki.  
   
--   **Szesnastkowy i przestawne nieskończoności/NaN punktu analizy** zmiennoprzecinkowej podczas analizowania algorytmów teraz będzie analizować ciągów szesnastkowych ruchomy punkt (na przykład wygenerowanych przez %a oraz specyfikatory formatu printf %A) i wszystkie nieskończoności i NaN ciągów, które są generowane przez funkcje printf zgodnie z powyższym opisem.  
+- **Szesnastkowy i zmiennoprzecinkowe nieskończoności/NaN punktu, analizowania** zmiennoprzecinkowej podczas analizowania algorytmy będzie teraz analizować ciągów szesnastkowych, które ruchomy punkt (na przykład wygenerowanych przez %a i %A specyfikatorami formatu) i wszystkich nieskończoności i NaN ciągów, które są generowane przez `printf` działa zgodnie z powyższym opisem.  
   
--   **%A i %a zero dopełnienie** specyfikatory formatu %a i %A sformatować zmiennoprzecinkową numer punktu jako szesnastkowe mantysa i wykładnik binarnego. W poprzednich wersjach funkcje printf czy ciągi niepoprawnie konsoli zero. Na przykład printf ("%07.0a\n", 1.0) przetwarzającej 00x1p + 0, którego należy wydrukować, 0x01p + 0. Problem został rozwiązany.  
+- **%A i %a zero dopełnienie** specyfikatorów formatu %a i %A format zmiennoprzecinkowy numer punktu jako szesnastkowa mantysy i wykładnika binarnego. W poprzednich wersjach `printf` funkcje czy ciągi niepoprawnie Konsola zero. Na przykład `printf("%07.0a\n", 1.0)` przetwarzającej 00x1p + 0, gdzie powinno drukować 0x01p + 0. Ten problem został rozwiązany.  
   
--   **Dokładność %A i %a** domyślna dokładność specyfikatory formatu %A i %a to 6 w poprzednich wersjach biblioteki. Domyślna dokładność jest teraz 13 dla zgodności z C Standard.  
+- **Precyzja %A i %a** domyślna dokładność specyfikatorów formatu %A i %a został 6 w poprzednich wersjach biblioteki. Domyślna dokładność jest teraz 13 dla zapewnienia zgodności z C Standard.  
   
-     Jest to zmiana zachowania środowiska uruchomieniowego w danych wyjściowych z dowolnej funkcji, który używa ciągu formatu %A lub %. Zachowania stare dane wyjściowe na podstawie specyfikator %A może być "1.1A2B3Cp + 111". Teraz taką samą wartość w danych wyjściowych jest "1.1A2B3C4D5E6F7p + 111". Aby pobrać stare zachowanie, można określić dokładność, na przykład %.6A. Zobacz [Specyfikacja dokładności](../c-runtime-library/format-specification-syntax-printf-and-wprintf-functions.md#precision).  
+     Jest to zmiana zachowania środowiska uruchomieniowego w danych wyjściowych którejkolwiek funkcji korzystającej z ciągiem formatu %A lub %. W stare zachowanie danych wyjściowych za pomocą specyfikatora %A może być "1.1A2B3Cp + 111". Teraz dane wyjściowe dla tej samej wartości to "1.1A2B3C4D5E6F7p + 111". Aby pobrać stare zachowanie, można określić precyzyjnie, na przykład %.6A. Zobacz [Specyfikacja dokładności](../c-runtime-library/format-specification-syntax-printf-and-wprintf-functions.md#precision).  
   
--   **Specyfikator %F** specyfikator formatu/konwersji %F obecnie jest obsługiwany. Jest funkcjonalnym odpowiednikiem %f specyfikatora formatu, z wyjątkiem tego, że infinities i wartości NaN są sformatowane przy użyciu wielkimi literami.  
+- **Specyfikator %F** specyfikatora formatu/konwersji %F jest teraz obsługiwane. Jest funkcjonalnie równoważny specyfikatorowi formatu %f, z tą różnicą, że nieskończoności i NaNs są formatowane przy użyciu wielkich liter.  
   
-     W poprzednich wersjach implementacji używany do analizowania F i N jako modyfikatory długości. To zachowanie wydanych wstecz do wieku przestrzeni adresowych segmentu: te Modyfikatory długość zostały służy do wskazania do tej pory i niemal wskaźników, odpowiednio, jak % Fp lub %Ns. Ten problem został usunięty. W przypadku %F teraz jest traktowane jako specyfikator formatu %F; w przypadku %N teraz jest traktowane jako nieprawidłowy parametr.  
+     W poprzednich wersjach, implementacja używany do analizowania F i N jako modyfikatory długości. To zachowanie wydanych powrót do wieku segmentu przestrzeni adresowych: następujące Modyfikatory długość były używane do wskazania daleko i niemal wskaźników, odpowiednio, jak % Fp lub %Ns. To zachowanie zostało usunięte. Jeśli okaże się %F, teraz jest ona traktowana jako specyfikatora formatu %F; Jeśli okaże się %N, teraz jest ona traktowana jako nieprawidłowy parametr.  
   
--   **Wykładnik formatowania** %e i %E format specyfikatorów formatu zmiennoprzecinkową numer punktu jako dziesiętne mantysa i wykładnik. %G i specyfikatory formatu %G również formatu liczb w tym formularzu w niektórych przypadkach. W poprzednich wersjach CRT będzie zawsze Generuj ciągi zawierające wykładniki cyfry. Na przykład printf ("%e\n", 1.0) przetwarzającej 1.000000e + 000. To jest niepoprawne: C wymaga, aby w przypadku reprezentacja przy użyciu tylko jedną lub dwie cyfry wykładnik, następnie dwie cyfry były do drukowania.  
+- **Wykładnik formatowanie** %e i %E format specyfikatory formatu zmiennoprzecinkowy numer punktu jako dziesiętna mantysy i wykładnika. %G i specyfikatorów formatu %G również sformatować liczby, w tym formularzu w niektórych przypadkach. W poprzednich wersjach CRT będzie zawsze Generuj ciągi zawierające trzycyfrowy wykładników. Na przykład `printf("%e\n", 1.0)` przetwarzającej 1.000000e + 000. To jest niepoprawne: język C wymaga, że w przypadku stałego, przy użyciu tylko jednej lub dwóch cyfr wykładnika, następnie dwie cyfry są do wydrukowania.  
   
-     W programie Visual Studio 2005 dodano przełącznika globalnego zgodność: [_set_output_format —](../c-runtime-library/set-output-format.md). Program można wywołać tej funkcji z _two_digit_exponent — argument, aby umożliwić drukowanie wykładnika zgodnych. Domyślne zachowanie został zmieniony do zgodnych standardów wykładnika drukowania trybu.  
+     W programie Visual Studio 2005 został dodany przełącznik globalnego zgodność: [_set_output_format —](../c-runtime-library/set-output-format.md). Program można nazwać tę funkcję z _TWO_DIGIT_EXPONENT argumentu, aby włączyć odpowiadające drukowanie wykładnika. Domyślne zachowanie został zmieniony na zgodne z normami wykładnika trybu drukowania.  
   
--   **Format ciągu weryfikacji** w poprzednich wersjach, funkcje printf i scanf dyskretnie będzie akceptować wielu ciągów nieprawidłowy format, niekiedy z efektami nietypowe. Na przykład % hlhlhld będzie traktowane jako %d. Wszystkie ciągi nieprawidłowy format teraz są traktowane jako nieprawidłowe parametry.  
+- **Sprawdzanie poprawności ciągów formatu** w poprzednich wersjach, funkcje printf i scanf dyskretnie będzie akceptować wiele nieprawidłowe formaty ciągów, czasami z nietypowej efekty. Na przykład % hlhlhld będzie traktowane jako %d. Wszystkie ciągi w nieprawidłowym formacie teraz są traktowane jako nieprawidłowe parametry.  
   
--   **fopen — tryb ciąg weryfikacji**  
+- **fopen — tryb ciągu weryfikacji**  
   
-     W poprzednich wersjach rodziny fopen — funkcji dyskretnie akceptowane niektórych ciągów nieprawidłowy tryb (np. r + b). Nieprawidłowy tryb ciągi teraz wykrytych i traktowane jako nieprawidłowe parametry.  
+     W poprzednich wersjach rodziny fopen — funkcji dyskretnie akceptowane niektóre ciągi nieprawidłowy element mode (np. r + b +). Nieprawidłowy element mode ciągów są teraz wykryte i traktowany jako nieprawidłowe parametry.  
   
--   **Tryb _O_U8TEXT**  
+- **Tryb _O_U8TEXT**  
   
-     [_Setmode —](../c-runtime-library/reference/setmode.md) funkcja teraz prawidłowo raportów trybu z strumieni otworzyć in_O_U8TEXT tryb. W poprzednich wersjach biblioteki go rozpoczną przesyłanie raportów o tych strumieni jako otwierany w _O_WTEXT.  
+     [_Setmode —](../c-runtime-library/reference/setmode.md) funkcja teraz poprawnie zgłasza tryb do strumieni otwieranych w trybie in_O_U8TEXT. W poprzednich wersjach biblioteki go będzie zgłaszać takich strumieni jako właśnie otwierany w _O_WTEXT.  
   
-     Jest to istotne zmiany, jeśli kod interpretuje tryb _O_WTEXT dla strumieni, gdzie jest kodowanie UTF-8. Jeśli aplikacja nie obsługuje UTF_8, należy rozważyć dodanie obsługi coraz częściej kodowania.  
+     Jest to istotnej zmiany, jeśli kod interpretuje tryb _O_WTEXT dla strumieni, gdzie jest kodowanie UTF-8. Jeśli aplikacja nie obsługuje UTF_8, należy rozważyć dodanie obsługi coraz bardziej powszechny kodowania.  
   
--   **snprintf — i vsnprintf —** [snprintf —](../c-runtime-library/reference/snprintf-snprintf-snprintf-l-snwprintf-snwprintf-l.md) i [vsnprintf —](../c-runtime-library/reference/vsnprintf-vsnprintf-vsnprintf-l-vsnwprintf-vsnwprintf-l.md) funkcje są teraz zaimplementowane. Starszego kodu często podać definicji makra wersje tych funkcji, ponieważ nie zostały one wykonywane przez bibliotekę CRT, ale nie są już potrzebne w nowszej wersji. Jeśli [snprintf —](../c-runtime-library/reference/snprintf-snprintf-snprintf-l-snwprintf-snwprintf-l.md) lub [vsnprintf —](../c-runtime-library/reference/vsnprintf-vsnprintf-vsnprintf-l-vsnwprintf-vsnwprintf-l.md) jest zdefiniowany jako makra przed dołączeniem \<stdio.h >, teraz kompilacja zakończy się niepowodzeniem z powodu błędu, który wskazuje, gdzie został zdefiniowany makra.  
+- **snprintf — i vsnprintf —** [snprintf —](../c-runtime-library/reference/snprintf-snprintf-snprintf-l-snwprintf-snwprintf-l.md) i [vsnprintf —](../c-runtime-library/reference/vsnprintf-vsnprintf-vsnprintf-l-vsnwprintf-vsnwprintf-l.md) funkcje są teraz zaimplementowane. Starszego kodu często podane definicje makr wersje tych funkcji, ponieważ nie zostały zaimplementowane przez bibliotekę CRT, ale te nie są już potrzebne w nowszych wersjach. Jeśli [snprintf —](../c-runtime-library/reference/snprintf-snprintf-snprintf-l-snwprintf-snwprintf-l.md) lub [vsnprintf —](../c-runtime-library/reference/vsnprintf-vsnprintf-vsnprintf-l-vsnwprintf-vsnwprintf-l.md) jest zdefiniowany jako makro przed dołączeniem \<stdio.h >, teraz kompilacja zakończy się niepowodzeniem z powodu błędu, który wskazuje, gdzie makro zostało zdefiniowane.  
   
-     Zwykle rozwiązano ten problem należy usunąć wszystkie deklaracje snprintf — lub vsnprintf — w kodzie użytkownika.  
+     Zwykle rozwiązanie tego problemu polega na usunięciu wszystkie deklaracje `snprintf` lub `vsnprintf` w kodzie użytkownika.  
   
--   **tmpnam — generuje można używać nazwy plików** w poprzednich wersjach, funkcje tmpnam — i tmpnam_s — generowane nazwy plików w folderze głównym dysku (na przykład \sd3c.). Te funkcje teraz Generowanie pliku można używać nazwy ścieżki w katalogu tymczasowym.  
+- **tmpnam — generuje można używać nazw plików** w poprzednich wersjach `tmpnam` i `tmpnam_s` funkcje wygenerowane nazwy pliku w folderze głównym dysku (na przykład \sd3c.). Te funkcje tworzą teraz można używać nazw ścieżek w katalogu tymczasowym.  
   
--   **Hermetyzację plików** w poprzednich wersjach, typu pliku została całkowicie zdefiniowana w \<stdio.h >, aby było możliwe kod użytkownika uzyskać dostęp do pliku i zmodyfikować jego wewnętrzne. Biblioteki stdio — został zmieniony tak, aby ukryć szczegóły implementacji. W ramach tego pliku, zgodnie z definicją w \<stdio.h > jest teraz typ nieprzezroczyste i jej elementów członkowskich są niedostępne z poza CRT sam.  
+- **Hermetyzację plików** w poprzednich wersjach, typu pliku został całkowicie zdefiniowany w \<stdio.h >, aby było możliwe, że kod użytkownika dotrzeć do pliku i zmodyfikować jego szczegóły wewnętrzne. Biblioteka stdio — został zmieniony na razie ukryć szczegóły implementacji. W ramach tego pliku, zgodnie z definicją w \<stdio.h > teraz jest typem nieprzezroczystych i jej składowe są niedostępne z poza CRT, sam.  
   
--   **_outp — i _inp —** funkcje [_outp —](../c-runtime-library/outp-outpw-outpd.md), [_outpw —](../c-runtime-library/outp-outpw-outpd.md), [_outpd —](../c-runtime-library/outp-outpw-outpd.md), [_inp —](../c-runtime-library/inp-inpw-inpd.md), [_inpw —](../c-runtime-library/inp-inpw-inpd.md), i [_inpd —](../c-runtime-library/inp-inpw-inpd.md) zostały usunięte.  
+- **_outp — i _inp —** funkcji [_outp —](../c-runtime-library/outp-outpw-outpd.md), [_outpw —](../c-runtime-library/outp-outpw-outpd.md), [_outpd —](../c-runtime-library/outp-outpw-outpd.md), [_inp —](../c-runtime-library/inp-inpw-inpd.md), [_inpw —](../c-runtime-library/inp-inpw-inpd.md), i [_inpd —](../c-runtime-library/inp-inpw-inpd.md) zostały usunięte.  
   
 #### <a name="stdlibh-malloch-and-sysstath"></a>\<stdlib.h >, \<malloc.h >, a \<sys/stat.h >  
   
--   **strtof — i wcstof —** funkcji strtof — i wcstof — nie można ustawić na erange — numer błędu, gdy wartości nie można przedstawić jako wartości zmiennoprzecinkowej. Problem został rozwiązany. (Należy zauważyć, że ten błąd został specyficzne dla tych dwóch funkcji; strtod —, wcstod —, strtold i funkcje wcstold nie miała wpływu). To środowisko uruchomieniowe fundamentalne zmiany.  
+- **strtof — i wcstof —** `strtof` i `wcstof` funkcji nie udało się ustawiają mechanizm errno jako ERANGE, gdy wartość była stałego jako liczba zmiennoprzecinkowa. Ten problem został rozwiązany. (Należy pamiętać, że ten błąd był specyficzne dla tych dwóch funkcji; `strtod`, `wcstod`, `strtold`, i `wcstold` nie miała wpływu funkcji.) Jest to istotne zmiany środowiska uruchomieniowego.  
   
--   **Funkcje alokacji wyrównane** w poprzednich wersjach, funkcje wyrównany alokacji (_aligned_malloc —, _aligned_offset_malloc — itp.) dyskretnie będzie akceptować żądania bloku z wyrównaniem 0. Żądana wyrównanie musi być potęgą liczby dwa, które zero nie jest. Problem został rozwiązany i żądanym wyrównaniem 0 teraz jest traktowane jako nieprawidłowy parametr. To środowisko uruchomieniowe fundamentalne zmiany.  
+- **Wyrównane funkcji alokacji** w poprzednich wersjach, funkcje wyrównana Alokacja (`_aligned_malloc`, `_aligned_offset_malloc`, itp.) dyskretnie będzie akceptować żądania w bloku z wyrównaniem 0. Żądane wyrównanie musi być potęgą liczby dwa, które zero nie jest. Ten problem został rozwiązany i żądane wyrównanie 0 teraz jest traktowany jako nieprawidłowy parametr. Jest to istotne zmiany środowiska uruchomieniowego.  
   
--   **Funkcje stercie** _heapadd — _heapset — i _heapused funkcje zostały usunięte. Te funkcje zostały prawidłowo, ponieważ CRT zostało zaktualizowane do używania sterty systemu Windows.  
+- **Funkcje sterty** `_heapadd`, `_heapset`, i `_heapused` funkcje zostały usunięte. Te funkcje zostały prawidłowo, ponieważ CRT zostało zaktualizowane pod kątem korzystania ze stosu Windows.  
   
--   **smallheap** opcja łącze smalheap została usunięta. Zobacz [opcje łącza](../c-runtime-library/link-options.md).  
+- **smallheap** `smalheap` opcja link została usunięta. Zobacz [opcje łącza](../c-runtime-library/link-options.md).  
   
 #### <a name="stringh"></a>\<string.h>  
   
--   **wcstok —** podpis wcstok — funkcja został zmieniony do dopasowania, co jest wymagane przez C Standard. W poprzednich wersjach biblioteki podpis tej funkcji to:  
+- **wcstok —** podpis `wcstok` funkcji został zmieniony do dopasowania, co jest wymagane przez C Standard. W poprzednich wersjach biblioteki podpis tej funkcji to:  
   
     ```cpp  
     wchar_t* wcstok(wchar_t*, wchar_t const*)  
     ```  
   
-     Do śledzenia stanu połączenia, co jest wykonywane na potrzeby strtok — on używany wewnętrznie w kontekście dla każdego wątku. Funkcja ma teraz podpis wchar_t * wcstok — (wchar_t\*, wchar_t const\*, wchar_t\*\*) i wymaga obiekt wywołujący, aby przekazać kontekst jako trzeci argument funkcji.  
+     On używany do śledzenia stanu przez wywołania, co jest wykonywane na potrzeby wewnętrznych kontekst wątku `strtok`. Funkcja ma teraz podpis `wchar_t* wcstok(wchar_t*, wchar_t const*, wchar_t**)`i wymaga obiekt wywołujący, aby przekazać kontekst jako trzeci argument do funkcji.  
   
-     Nowa funkcja _wcstok został dodany podpisem stare do jej obsługi ułatwiają przenoszenie. Podczas kompilowania kodu C++, dostępna jest również przeciążenia wbudowanego wcstok —, który ma podpis stary. To przeciążenie jest zadeklarowany jako przestarzały. W kodzie C możesz define_CRT_NON_CONFORMING_WCSTOK spowodować _wcstok do użycia zamiast wcstok —.  
+     Nowy `_wcstok` funkcja została dodana do stary podpis, aby ułatwić przenoszenie. Podczas kompilowania kodu C++, jest również przeciążenia wbudowane `wcstok` zawierający stary podpis. To przeciążenie jest zadeklarowany jako przestarzały. W kodzie C może define_CRT_NON_CONFORMING_WCSTOK spowodować `_wcstok` ma być używany zamiast `wcstok`.  
   
 #### <a name="timeh"></a>\<time.h>  
   
--   **zegar** w poprzednich wersjach [zegara](../c-runtime-library/reference/clock.md) funkcja został wdrożony przy użyciu interfejsu API systemu Windows [GetSystemTimeAsFileTime](http://msdn.microsoft.com/library/windows/desktop/ms724397.aspx). Z tą implementacją funkcji zegara było wrażliwe na czas systemowy i nie był w związku z tym niekoniecznie monotoniczna. Funkcja zegara ma zostały reimplemented w postaci liczby [QueryPerformanceCounter](https://msdn.microsoft.com/library/windows/desktop/ms644904.aspx) i jest teraz monotoniczna.  
+- **zegar** w poprzednich wersjach [zegara](../c-runtime-library/reference/clock.md) funkcja została zaimplementowana za pomocą interfejsu API Windows [GetSystemTimeAsFileTime](http://msdn.microsoft.com/library/windows/desktop/ms724397.aspx). Ta implementacja clock — funkcja było wrażliwe na czas systemowy i nie jest zatem niekoniecznie monotoniczny. Clock — funkcja ma zostać reimplemented pod względem [QueryPerformanceCounter](https://msdn.microsoft.com/library/windows/desktop/ms644904.aspx) i teraz jest monotoniczny.  
   
--   **fstat — i _utime —** w poprzednich wersjach [_stat](../c-runtime-library/reference/stat-functions.md), [fstat —](../c-runtime-library/reference/fstat-fstat32-fstat64-fstati64-fstat32i64-fstat64i32.md), i [_utime —](../c-runtime-library/reference/utime-utime32-utime64-wutime-wutime32-wutime64.md) funkcje obsługi czasu letniego niepoprawnie. Przed Visual Studio 2013 wszystkie te funkcje nieprawidłowe ustawienie godziny (czas standardowy), tak jakby były w czas letni.  
+- **fstat — i _utime** w poprzednich wersjach [_stat](../c-runtime-library/reference/stat-functions.md), [fstat —](../c-runtime-library/reference/fstat-fstat32-fstat64-fstati64-fstat32i64-fstat64i32.md), i [_utime](../c-runtime-library/reference/utime-utime32-utime64-wutime-wutime32-wutime64.md) funkcje obsługi niepoprawnie czasu letniego. Przed Visual Studio 2013 wszystkie te funkcje nieprawidłowe ustawienie godzin (czas standardowy), tak, jakby znajdowały się czas letni.  
   
-     W programie Visual Studio 2013 problem został rozwiązany w rodzinie _stat funkcji, ale podobne problemy w rodzin fstat — i _utime — funkcje nie zostały usunięte. Przeprowadzony problemy z powodu niespójności między funkcji. Teraz zostały ustalone rodzin fstat — i _utime — funkcji, aby teraz wszystkie te funkcje obsługi czasu letniego poprawnej i spójnej.  
+     W programie Visual Studio 2013, problem został rozwiązany w **_stat** rodziny funkcji, ale podobne problemy w **fstat —** i **_utime** rodziny funkcji nie zostały naprawione. Doprowadziło to do problemów ze względu na niespójność między funkcjami. **Fstat —** i **_utime** rodziny funkcji teraz została naprawiona, więc wszystkie te funkcje obsługuje teraz czasu letniego w poprawnej i spójnej.  
   
--   **asctime —** w poprzednich wersjach [asctime —](../c-runtime-library/reference/asctime-wasctime.md) funkcja czy konsoli jednocyfrowej dni z zerem, na przykład: PT cze 06 08:00:00 2014 r. Specyfikacja wymaga, że takie dni można dopełniane przy spację, np. PT cze 6 08:00:00 2014 r. Problem został rozwiązany.  
+- **asctime —** w poprzednich wersjach [asctime —](../c-runtime-library/reference/asctime-wasctime.md) funkcja będzie konsoli jednocyfrowych dni z wiodącym zerem, na przykład: 06 cze od poniedziałku do piątku 08:00:00 2014 r. Specyfikacja wymaga, że takie dni można dopełniana spację, np. od poniedziałku do piątku cze 6 08:00:00 2014 r. Ten problem został rozwiązany.  
   
--   **strftime — i wcsftime —** funkcji strftime — i wcsftime — obsługują teraz %C, %D, %e, %F, %g, %G, %h, %n, %r, %R, %t, %T, %u i %V specyfikatorów formatu. Ponadto Modyfikatory E oraz O są przeanalizować, ale ignorowane.  
+- **strftime i wcsftime** `strftime` i `wcsftime` functions obsługuje obecnie %C, %D, %e, %F, %g, %G, %h, %n, %r, %R, %t, %T, %u i %V specyfikatory formatu. Ponadto E oraz O Modyfikatory są analizowane, lecz ignorowane.  
   
-     Specyfikator formatu %c jest określana jako tworzenie folderu "odpowiednie Data i godzina reprezentacji" dla bieżących ustawień regionalnych. W ustawieniach regionalnych C taka reprezentacja musi być taka sama jak %a %b %e %T %Y. Jest to tego samego formularza, ponieważ jest generowany przez asctime —. W poprzednich wersjach %c specyfikator formatu jest nieprawidłowo sformatowana użyciu reprezentację MM/DD/RR GG. Problem został rozwiązany.  
+     Specyfikator formatu %c jest określana jako tworzenie folderu "odpowiednią datę i czas reprezentacji" dla bieżących ustawień regionalnych. W ustawieniach regionalnych języka C to reprezentacja musi być taka sama jak %a %b %e %T %Y. Jak jest generowany przez asctime — jest tego samego formularza. W poprzednich wersjach specyfikator formatu %c niepoprawnie sformatowane razy, używając reprezentację MM/DD/RR: mm: ss. Ten problem został rozwiązany.  
   
--   **timespec i TIME_UTC** \<time.h > nagłówka teraz definiuje typ timespec i funkcja timespec_get C11 Standard. Ponadto w makrze TIME_UTC do użycia z funkcją timespec_get teraz jest zdefiniowany. Jest to istotne zmiany kod, który ma dla każdego z tych definicji powodujące konflikt.  
+- **timespec i TIME_UTC** \<time.h > nagłówka teraz definiuje `timespec` typu i `timespec_get` funkcji ze standardowego C11. Ponadto, makra TIME_UTC, do użytku z programem `timespec_get` funkcji, jest teraz zdefiniowana. Jest to istotnej zmiany do kodu, który ma sprzeczne definicji dla każdego z nich.  
   
--   **CLOCKS_PER_SEC** CLOCKS_PER_SEC makro rozszerza się teraz na liczbę całkowitą clock_t — typ, co jest wymagane przez języka C.  
+- **CLOCKS_PER_SEC** CLOCKS_PER_SEC makro rozszerzy się teraz na liczbę całkowitą typu `clock_t`, co jest wymagane przez język c.  
   
 ####  <a name="BK_STL"></a> Standardowa biblioteka C++  
- Aby włączyć nowe optymalizacje i kontrole debugowania, implementacja standardowej biblioteki C++ w Visual Studio celowo łamie zgodność binarną między wersjami. W związku z tym gdy używana jest standardowa biblioteka C++, pliki obiektowe i biblioteki statyczne, które są kompilowane przy użyciu różnych wersji, nie mogą być mieszane w jednym pliku binarnym (EXE lub DLL), a obiekty standardowej biblioteki C++ nie mogą być przekazywane między plikami binarnymi, które są kompilowane przy użyciu różnych wersji. Takie mieszanie powoduje błędy konsolidatora dotyczące niezgodności _MSC_VER. (Elemencie _MSC_VER jest makrem, zawierający głównej wersji kompilatora — na przykład 1800 dla programu Visual Studio 2013.) Tego wyboru nie może wykryć mieszanie biblioteki DLL i nie może wykryć mieszanie, który wymaga programu Visual Studio 2008 lub starszej.  
+Aby włączyć nowe optymalizacje i kontrole debugowania, implementacja standardowej biblioteki C++ w Visual Studio celowo łamie zgodność binarną między wersjami. W związku z tym gdy używana jest standardowa biblioteka C++, pliki obiektowe i biblioteki statyczne, które są kompilowane przy użyciu różnych wersji, nie mogą być mieszane w jednym pliku binarnym (EXE lub DLL), a obiekty standardowej biblioteki C++ nie mogą być przekazywane między plikami binarnymi, które są kompilowane przy użyciu różnych wersji. Takie mieszanie powoduje błędy konsolidatora dotyczące niezgodności _MSC_VER. (_MSC_VER to makro, które zawiera wersję główną kompilatora — na przykład 1800 dla Visual Studio 2013.) To sprawdzenie nie może wykryć mieszania bibliotek DLL i nie może wykryć mieszania, które obejmuje Visual Studio 2008 lub starszy.  
   
--   **Pliki nagłówkowe standardowej biblioteki C++** niektóre zmiany zostały wprowadzone w strukturze include w nagłówkach standardowa biblioteka C++. Nagłówki standardowa biblioteka C++ mogą zawierać siebie nawzajem w sposób nieokreślony. Ogólnie rzecz biorąc należy zapisać swój kod, aby dokładnie zawiera wszystkie nagłówki, które wymaga zgodnie z C++ standard i nie zależą od tego, która standardowa biblioteka C++ nagłówki obejmują które nagłówki standardowa biblioteka C++. Dzięki temu kod przenośny między wersjami i platform. Co najmniej dwie zmiany nagłówka w programie Visual Studio 2015 mają wpływ na kod użytkownika. Najpierw \<ciąg > nie zawiera już \<iteratora >. Drugi, \<krotki > teraz deklaruje std::array bez wraz ze wszystkimi \<tablicy >, które mogą być dzielone kodu za pomocą następujących kombinacji konstrukcji kodu: kod zawiera zmienną o nazwie "array", a masz dyrektywy using "przy użyciu przestrzeń nazw std; ", i Dołącz nagłówek standardowa biblioteka C++ (takich jak \<funkcjonalności >) zawierającej \<spójnej kolekcji >, które teraz deklaruje std::array.  
+- **Pliki nagłówkowe standardowej biblioteki języka C++** niektóre zmiany zostały wprowadzone do struktury Uwzględnij nagłówki standardowej biblioteki języka C++. Nagłówki standardowej biblioteki języka C++ mogą obejmować siebie nawzajem w sposób nieokreślony. Ogólnie rzecz biorąc należy napisać kod, tak, aby dokładnie obejmuje wszystkie nagłówki, które wymaga zgodnie ze standardem C++ i nie jest zależny od nagłówki standardowej biblioteki języka C++, które obejmują które nagłówki standardowej biblioteki języka C++. To sprawia, że kod przenośny między wersjami i platform. Co najmniej dwie zmiany nagłówka w programie Visual Studio 2015 wpływa na kod użytkownika. Po pierwsze, \<ciągu > nie zawiera już \<iterator >. Drugi \<krotki > teraz deklaruje `std::array` bez wraz ze wszystkimi \<tablicy >, co może przerwać kodu za pomocą następujących kombinacji konstrukcji kodu: kod ma zmienną o nazwie "array", a użytkownik ma dyrektywy using " za pomocą przestrzeni nazw std; ", i dołączyć nagłówek biblioteki standardowej języka C++ (takie jak \<funkcjonalności >) zawierającej \<krotki >, deklaruje, która będzie `std::array`.  
   
--   **steady_clock** \<chrono > wykonanie [steady_clock](../standard-library/steady-clock-struct.md) został zmieniony w celu spełnienia wymagań C++ Standard opanowanie i monotonicity. steady_clock teraz jest oparta na [QueryPerformanceCounter](https://msdn.microsoft.com/library/windows/desktop/ms644904.aspx) i high_resolution_clock jest teraz typedef dla steady_clock. W związku z tym w programie Visual Studio steady_clock::time_point jest teraz typedef dla chrono::time_point < steady_clock >; Jednak to nie jest zawsze w przypadku innych implementacji.  
+- **steady_clock** \<chrono > implementacji [steady_clock](../standard-library/steady-clock-struct.md) został zmieniony, aby spełniać wymagania C++ Standard opanowanie i monotonicity. `steady_clock` teraz jest oparty na [QueryPerformanceCounter](https://msdn.microsoft.com/library/windows/desktop/ms644904.aspx) i `high_resolution_clock` jest teraz element typedef dla `steady_clock`. W rezultacie w programie Visual Studio `steady_clock::time_point` jest teraz element typedef dla `chrono::time_point<steady_clock>`; jednak nie jest w przypadku innych implementacji.  
   
--   **allocators — i const** wymaga porównania równości i nierówności alokatora akceptować argumenty const po obu stronach.  Jeśli Twoje allocators — zdefiniuj tych operatorów w następujący sposób:  
+- **alokatorów i const** wymaga alokatora porównania równości i nierówności, aby przyjmowały argumenty const po obu stronach.  Jeśli Twoje buforów zdefiniuj te operatory w następujący sposób:  
   
     ```cpp  
     bool operator==(const MyAlloc& other)  
     ```  
   
-     Należy zaktualizować je, aby zadeklarować je jako elementy członkowskie const.  
+     Należy zaktualizować je zadeklarować je jako składowe const.  
   
     ```cpp  
     bool operator==(const MyAlloc& other) const  
     ```  
   
--   **elementy Const** standard C++ zawsze jest zabroniona kontenery elementów const (takich jak wektorowa\<const T > lub ustaw\<const T >). Visual Studio 2013 i starsze wersje zaakceptowane takie kontenery. W bieżącej wersji takie nie można skompilować.  
+- **elementy Const** standard C++ zawsze ma zakazany kontenerów elementów stałych (takich jak wektor\<const T > lub ustaw\<const T >). Visual Studio 2013 lub wcześniejszej akceptowane kontenerów tego typu. W bieżącej wersji kontenerów tego typu kompilacja nie powiedzie się.  
   
--   **STD::Allocator:: deallocate** w programie Visual Studio 2013 lub starszym, std::allocator::deallocate(p, n) ignorowane argument przekazany do n.  Zawsze C++ standard wymaga tego n być równa wartości przekazanej jako pierwszy argument dla wywołania funkcji alokacji, który jest zwracany p. Jednak w bieżącej wersji wartość n jest sprawdzana. Kod, który przekazuje n argumentów, które różnią się od jakiego standard wymaga może ulec awarii w czasie wykonywania.  
+- **STD::Allocator:: deallocate** w programie Visual Studio 2013 lub starszej, `std::allocator::deallocate(p, n)` ignorowane przekazanego argumentu *n*.  C++ standard, zawsze wymaga *n* być równa wartości przekazywane jako pierwszy argument do wywołania programu przydzielania, który zwracany *p*. Jednak w bieżącej wersji, a wartość *n* sprawdzana jest. Kod, który przekazuje argumenty dla *n* które różnią się od co wymaga standard, mogą ulec awarii w czasie wykonywania.  
   
--   **hash_map — i hash_set** hash_map pliki niestandardowy nagłówek i hash_set nie są używane w programie Visual Studio 2015 i zostanie usunięta w przyszłej wersji. Zamiast tego użyj unordered_map i unordered_set.  
+- **hash_map — i hash_set** hash_map pliki nagłówków niestandardowych i hash_set są przestarzałe w programie Visual Studio 2015 i zostanie usunięta w przyszłej wersji. Zamiast tego użyj unordered_map i unordered_set.  
   
--   **komparatorów i operator()** asocjacyjnej kontenery ( \<mapy > rodziny) wymaga ich komparatorów mają const można wywołać funkcji wywołania operatorów. Następujący kod w deklaracji klasy komparatora teraz nie powiedzie się do kompilacji:  
+- **komparatorów i operator()** kontenery asocjacyjne ( \<mapy > rodziny) wymaga ich komparatorów mieć wywołania operatory const wywoływanych funkcji. Poniższy kod w deklaracji klasy komparator jest teraz nie zostanie skompilowany:  
   
     ```cpp  
     bool operator()(const X& a, const X& b)  
@@ -277,11 +276,11 @@ Po uaktualnieniu do nowej wersji programu Visual Studio, mogą wystąpić kompil
     bool operator()(const X& a, const X& b) const  
     ```  
   
--   **Wpisz cech** stare nazwy cech typu w kompilatorze ze starszej wersji standard projekt C++ zostały usunięte. Te zostały zmienione w języku C ++ 11 i C ++ 11 wartości w programie Visual Studio 2015 zostały zaktualizowane. W poniższej tabeli przedstawiono starej i nowej nazwy.  
+- **Typ cechy** starych nazw dla cech typu, ze starszej wersji standardzie roboczym C++ zostały usunięte. Te zostały zmienione w C ++ 11 i C ++ 11 wartości w programie Visual Studio 2015 zostały zaktualizowane. W poniższej tabeli przedstawiono starych i nowych nazw.  
   
     |Stara nazwa|Nowa nazwa|  
     |--------------|--------------|  
-    |add_reference|add_lvalue_reference|  
+    |add_reference —|add_lvalue_reference|  
     |has_default_constructor|is_default_constructible|  
     |has_copy_constructor|is_copy_constructible|  
     |has_move_constructor|is_move_constructible|  
@@ -301,50 +300,51 @@ Po uaktualnieniu do nowej wersji programu Visual Studio, mogą wystąpić kompil
     |has_trivial_move_assign|is_trivially_move_assignable|  
     |has_trivial_destructor|is_trivially_destructible|  
   
--   **zasady Launch::any i launch::sync** niestandardowe zasady launch::any i launch::sync zostały usunięte. Dla launch::any, użyj uruchamiania: asynchroniczne &#124; uruchomić: opóźnieniem. W przypadku launch::sync Użyj launch::deferred. Zobacz [launch — wyliczenie](../standard-library/future-enums.md#launch).  
+- **zasady Launch::any i launch::sync** niestandardowe `launch::any` i `launch::sync` zasady zostały usunięte. Katalog wirtualny wskazywał na `launch::any`, użyj `launch:async | launch:deferred`. Aby uzyskać `launch::sync`, użyj `launch::deferred`. Zobacz [launch — wyliczenie](../standard-library/future-enums.md#launch).  
   
 ####  <a name="BK_MFC"></a> MFC i ATL  
   
--   **Microsoft Foundation Classes (MFC)** znajduje się już w "Typowych" Instalacja programu Visual Studio z powodu jego duży rozmiar. Aby zainstalować MFC, wybierz opcję instalacji niestandardowej w Instalatorze programu Visual Studio 2015. Jeśli masz już zainstalowany program Visual Studio 2015, należy zainstalować MFC, uruchom ponownie Instalator programu Visual Studio, wybierając opcję instalacji niestandardowej i wybierając pozycję Microsoft Foundation Classes. Można ponownie uruchomić Instalatora programu Visual Studio z apletu Programy i funkcje, lub z nośnika instalacyjnego.  
+- **Microsoft Foundation Classes (MFC)** znajduje się już w "Typowych" Instalacja programu Visual Studio z powodu jego duży rozmiar. Aby zainstalować MFC, wybierz **niestandardowe** opcję instalacji w Instalatorze programu Visual Studio 2015. Jeśli masz już program Visual Studio 2015, można zainstalować MFC, uruchamiając ponownie **programu Visual Studio** Instalatora, wybierając **niestandardowe** opcję instalacji, a następnie wybierając **Microsoft Foundation Klasy**. Można ponownie uruchomić **programu Visual Studio** Instalatora z **Panelu sterowania**, **programy i funkcje**, lub z nośnika instalacyjnego.  
   
      Pakiet redystrybucyjny Visual C++ wciąż zawiera tę bibliotekę.  
   
 ####  <a name="BK_ConcRT"></a> Współbieżność środowiska wykonawczego  
   
--   **YIELD — makro z Windows.h powoduje konflikt z concurrency::Context::Yield** współbieżność środowiska wykonawczego wcześniej umożliwia #undef Usuń makro Yield zapobiegania konfliktom występującym między makro wydajności zdefiniowanych w Windows.h h i concurrency::Context: : Uzyskanie funkcji. #Undef ten został usunięty, a następnie wywołać nowy niekolidujących równoważne interfejs API [concurrency::Context::YieldExecution](../parallel/concrt/reference/context-class.md#yieldexecution) został dodany. Aby uniknąć konfliktów z wydajnością, można zaktualizować swój kod, aby zamiast tego wywołaj funkcję YieldExecution lub przestrzenny nazwą funkcji Yield nawiasów w lokacjach wywołanie, jak w poniższym przykładzie:  
+- **YIELD — makro z Windows.h powodującą konflikt z concurrency::Context::Yield** współbieżność środowiska wykonawczego wcześniej używano `#undef` usunięcia definicji makra Yield w celu uniknięcia konfliktów między makro Yield zdefiniowane w Windows.h h i `concurrency::Context::Yield`funkcji. To `#undef` został usunięty i nowe bezkonfliktowe równoważne wywołanie interfejsu API [concurrency::Context::YieldExecution](../parallel/concrt/reference/context-class.md#yieldexecution) został dodany. Aby uniknąć konfliktów z wydajnością, albo można zaktualizować swój kod, aby wywołać `YieldExecution` zamiast tego funkcji lub przestrzenny `Yield` nazwy funkcji za pomocą nawiasów w wywołaniu witryny, jak w poniższym przykładzie:  
   
     ```cpp  
     (concurrency::Context::Yield)();  
     ```  
   
-## <a name="compiler-conformance-improvements-in-visual-studio-2015"></a>Ulepszenia kompilatora zgodność programu Visual Studio 2015  
- Podczas uaktualniania kodu z poprzednich wersji, również mogą wystąpić błędy kompilatora, które są ze względu na zgodność usprawnienia wprowadzone w programie Visual Studio 2015. Te ulepszenia nie dzielone zgodności plików binarnych z wcześniejszych wersji programu Visual Studio, ale gdy brak zostały wyemitowane przed może powodować błędy kompilatora. Aby uzyskać więcej informacji, zobacz [Visual C++ co przez nowy 2003 za pośrednictwem 2015](../porting/visual-cpp-what-s-new-2003-through-2015.md).  
+## <a name="compiler-conformance-improvements-in-visual-studio-2015"></a>Ulepszenia zgodności kompilatora w programie Visual Studio 2015  
+
+Podczas uaktualniania kod z poprzednich wersji, może również wystąpić błędy kompilatora, które są ze względu na ulepszenia zgodności w programie Visual Studio 2015. Te ulepszenia nie przerywają działania zgodność binarną ze starszych wersji programu Visual Studio, ale których brak zostały wyemitowane przed może powodować błędy kompilatora. Aby uzyskać więcej informacji, zobacz [Visual C++ co w nowym roku 2003 do 2015](../porting/visual-cpp-what-s-new-2003-through-2015.md).  
   
- W programie Visual Studio 2015 trwającej ulepszenia kompilatora zgodność czasami można zmienić sposób kompilator rozumie istniejącego kodu źródłowego. W takim przypadku nowe lub inne błędy mogą wystąpić podczas kompilacji lub nawet behawioralnej różnice w kodzie, który uprzednio utworzony i z działała poprawnie.  
+W programie Visual Studio 2015 najnowsze ulepszenia do zgodności kompilatora czasami można zmienić sposób kompilator rozpoznaje istniejącego kodu źródłowego. W takim przypadku mogą wystąpić błędy innym, podczas kompilacji lub różnice w zachowaniu nawet w kodzie, który wcześniej utworzone i sprawiał by działała poprawnie.  
   
- Na szczęście tych różnic mają niewielkiego lub żadnego wpływu na większości kodu źródłowego i kiedy kodu źródłowego lub inne zmiany są potrzebne w celu rozwiązania tych różnic, poprawki są zwykle małe i proste. Dodaliśmy wiele przykładów kodu źródłowego wcześniej dopuszczalne, który może zaistnieć konieczność zmiany *(przed)* i poprawki, aby je poprawić *(po)*.  
+Na szczęście tych różnic mają niewielkiego lub żadnego wpływu na większość kodu źródłowego i gdy kodu źródłowego lub inne zmiany są potrzebne, aby rozwiązać te różnice, poprawki są zwykle małe i proste. Uwzględniliśmy wiele przykładów kodu źródłowego wcześniej dopuszczalne, który może być konieczne, można zmienić *(przed)* i poprawki, aby je rozwiązać *(po)*.  
   
- Mimo że te różnice mogą wpływać na kodu źródłowego lub pozostałych artefaktów kompilacji, nie wpływają na binarne zgodność aktualizacji do wersji programu Visual Studio. Inne poważne rodzaju zmiany, *fundamentalne zmiany* może mieć wpływ na zgodność binarną, ale tego rodzaju podziały zgodność binarną występować tylko między główne wersje programu Visual Studio. Na przykład między programu Visual Studio 2013 i Visual Studio 2015. Uzyskać informacje na temat zmian podziału, które wystąpiły między programu Visual Studio 2013 i Visual Studio 2015, zobacz [programu Visual Studio 2015 zgodność zmiany](#VC_2015).  
+Mimo że te różnice mogą mieć wpływ na kod źródłowy lub inne artefakty kompilacji, nie wpływają na zgodność binarną między aktualizacji do wersji programu Visual Studio. Inne poważne rodzaju zmiany, *zmiana powodująca niezgodność* mogą wpływać na zgodność binarną, ale te rodzaje podziały zgodność binarną miejsce tylko między głównej wersji programu Visual Studio. Na przykład między Visual Studio 2013 i Visual Studio 2015. Aby uzyskać informacje na temat przełomowych zmian, między programem Visual Studio 2013 i Visual Studio 2015, zobacz [Visual Studio 2015 zgodność zmiany](#VC_2015).  
   
--   [Ulepszenia zgodność programu Visual Studio 2015](#VS_RTM)  
+- [Ulepszenia zgodności w programie Visual Studio 2015](#VS_RTM)  
   
--   [Ulepszenia zgodność aktualizacji 1](#VS_Update1)  
+- [Ulepszenia zgodności w aktualizacji 1](#VS_Update1)  
   
--   [Ulepszenia zgodność aktualizacji 2](#VS_Update2)  
+- [Ulepszenia zgodności Update 2](#VS_Update2)  
   
--   [Ulepszenia zgodność aktualizacji 3](#VS_Update3)  
+- [Ulepszenia zgodności aktualizacji 3](#VS_Update3)  
   
-###  <a name="VS_RTM"></a> Ulepszenia zgodność programu Visual Studio 2015  
+###  <a name="VS_RTM"></a> Ulepszenia zgodności w programie Visual Studio 2015  
   
--   Opcja /Zc:forScope-  
+- Opcja /Zc:forScope-  
   
-     Opcja kompilatora **/Zc:forScope-** jest przestarzała i zostanie usunięta w przyszłej wersji.  
+     Opcja kompilatora `/Zc:forScope-` jest przestarzały i zostanie usunięta w przyszłej wersji.  
   
     ```cpp  
     Command line warning  D9035: option 'Zc:forScope-' has been deprecated and will be removed in a future release  
     ```  
   
-     Zazwyczaj użyto opcji w celu umożliwienia niestandardowy kod, który używa zmiennych w pętli od momentu, gdy zgodnie ze standardowego, ich powinien przeszły poza zakresem. Konieczne było tylko gdy kompilacja z opcją /Za od bez /Za, za pomocą zmiennej pętli po zakończeniu pętli zawsze jest dozwolone. Jeśli nie interesują o standardach zgodności (na przykład, jeśli kod nie jest przeznaczone do przenośnych do inne kompilatory), użytkownik może wyłączyć opcję /Za (lub ustaw właściwość Wyłącz rozszerzenia języka nie). Jeśli interesują dotyczące pisania kodu przenośnego, zgodnych ze standardami, dzięki czemu jest zgodny ze standardem przenosząc deklaracji tych zmiennych do punktu poza pętli powinien ponownego zapisywania kodu.  
+     Aby umożliwić kod niestandardowy, który używa pętli zmiennych po punkcie, w którym, zgodnie ze standardem, ich powinien zniknie z zakresu zwykle użyto opcji. Konieczne było tylko wtedy, gdy kompilujesz przy użyciu `/Za` opcji, ponieważ bez `/Za`przy użyciu zmiennej pętli po końcu pętli jest zawsze dozwolona. Jeśli nie dba o zgodność ze standardami (na przykład, jeśli kod nie jest przeznaczona do przenośne na inne kompilatory), możesz całkowicie wyłączyć `/Za` opcja (lub ustaw **Wyłącz rozszerzenia języka** właściwość **nr** ). Jeśli interesujące Cię pisania kodu przenośnego, zgodnych ze standardami, należy napisać ponownie kodu tak, aby jest zgodny ze standardem, przenosząc deklaracji takich zmiennych do punktu poza pętlę.  
   
     ```cpp  
     // C2065 expected  
@@ -354,40 +354,38 @@ Po uaktualnieniu do nowej wersji programu Visual Studio, mogą wystąpić kompil
         for (int i = 0; i < 1; i++);  
         i = 20;   // i has already gone out of scope under /Za  
     }  
-  
     ```  
   
--   **/ZG — opcja kompilatora**  
+- `/Zg` — Opcja kompilatora  
   
-     Opcja kompilatora /Zg (Generuj prototypy funkcji) nie jest już dostępny. Ta opcja kompilatora wcześniej została uznana za przestarzałą.  
+     `/Zg` — Opcja kompilatora (Generuj prototypy funkcji) nie jest już dostępna. Tę opcję kompilatora wcześniej została zakończona.  
   
--   Nie można uruchomić testów jednostkowych z C + +/ CLI w wierszu polecenia z mstest.exe. Zamiast tego należy użyć vstest.console.exe. Zobacz [opcje wiersza polecenia VSTest.Console.exe](/devops-test-docs/test/vstest-console-exe-command-line-options).  
+- Nie może uruchomić testy jednostkowe z C + +/ interfejsu wiersza polecenia z wiersza polecenia przy użyciu mstest.exe. Zamiast tego należy użyć vstest.console.exe. Zobacz [opcje wiersza poleceń VSTest.Console.exe](/devops-test-docs/test/vstest-console-exe-command-line-options).  
   
--   **Mutable — słowo kluczowe**  
+- **Mutable — słowo kluczowe**  
   
-     `mutable` Specyfikator klasy magazynu nie jest dozwolony w miejscach, w którym, wcześniej skompilowane go bez błędów. Teraz, kompilator zapewnia błąd C2071 (niedozwolona Klasa magazynu). Zgodnie z standard specyfikator modyfikowalny mogą być stosowane tylko do nazwy klasy elementy członkowskie danych, nie można zastosować do zadeklarować jako const lub statycznej nazwy i nie można zastosować do odwołań do elementów członkowskich.  
+     **Mutable** specyfikatora klasy magazynu nie jest już dozwolona w miejscach, w którym, wcześniej skompilowany go bez błędów. Teraz, kompilator wyświetla błąd C2071 (niedozwolona Klasa magazynu). Zgodnie ze standardem **mutable** specyfikator mogą być stosowane tylko do nazwy elementów członkowskich danych klasy, nie można zastosować do nazwy zadeklarowane const lub statyczne i nie można zastosować do odwoływać się do elementów członkowskich.  
   
-     Rozważmy na przykład następujący kod:  
+     Na przykład rozważmy następujący kod:  
   
     ```cpp  
     struct S   
     {  
         mutable int &r;  
     };  
-  
     ```  
   
-     Poprzednie wersje kompilatora akceptowane to, ale teraz kompilator zapewnia następujący błąd:  
+     Poprzednie wersje kompilatora zaakceptowane to, ale kompilator zapewnia obecnie następujący błąd:  
   
     ```Output  
     error C2071: 'S::r': illegal storage class  
     ```  
   
-     Aby naprawić błąd, po prostu Usuń nadmiarowe mutable — słowo kluczowe.  
+     Aby naprawić błąd, po prostu usuń zbędną **mutable** — słowo kluczowe.  
   
--   **char_16_t i char32_t**  
+- **char_16_t i char32_t**  
   
-     Nie można korzystać `char16_t` lub `char32_t` jako aliasów w instrukcji typedef, ponieważ te typy, teraz są traktowane jako wbudowanych. W przypadku użytkowników i autorów biblioteki do definiowania char16_t i char32_t jako aliasów uint16_t i uint32_t, odpowiednio było.  
+     Nie można korzystać `char16_t` lub `char32_t` jako aliasów w **typedef**, ponieważ te typy są teraz traktowane jako wbudowane. Było typowe dla użytkowników i autorzy biblioteki, aby zdefiniować `char16_t` i `char32_t` jako aliasy `uint16_t` i `uint32_t`, odpowiednio.  
   
     ```cpp  
     #include <cstdint>  
@@ -402,14 +400,13 @@ Po uaktualnieniu do nowej wersji programu Visual Studio, mogą wystąpić kompil
         char32_t b = y;  
         return 0;  
     }  
-  
     ```  
   
-     Zaktualizuj kod, Usuń deklaracje typedef i Zmień nazwę innych identyfikatorów, które powodują kolizję z tych nazw.  
+     Aby zaktualizować swój kod, należy usunąć **typedef** deklaracje i Zmień nazwę innych identyfikatorów, które kolidują z tych nazw.  
   
--   **Parametry szablonu bez typu**  
+- **Parametry szablonu bez typu**  
   
-     Niektóre kodu, który wymaga parametrów szablonu bez typu są teraz prawidłowo sprawdzane pod kątem zgodności typu podając jawne argumenty szablonu. Na przykład następujący kod skompilowany bez błędów w poprzednich wersjach programu Visual Studio.  
+     Pewność, że kod, który obejmuje parametry szablonu bez typu są teraz prawidłowo sprawdzane pod kątem zgodności typów po podaniu jawnych argumentów szablonów. Na przykład poniższy kod kompilowany bez błędów w poprzednich wersjach programu Visual Studio.  
   
     ```cpp  
     struct S1  
@@ -428,30 +425,29 @@ Po uaktualnieniu do nowej wersji programu Visual Studio, mogą wystąpić kompil
         S2 s2;  
         s2.f<S1, &S1::f>();  
     }  
-  
     ```  
   
-     Kompilator bieżącego poprawnie zwraca błąd, ponieważ argument szablonu nie jest zgodny z typem parametru szablonu (parametr jest wskaźnik do stały element członkowski, ale funkcja f jest wartością stałą):  
+     Bieżący kompilatora prawidłowo zwraca błąd, ponieważ argument szablonu nie pasuje do typu parametru szablonu (parametr jest wskaźnik do składowej const, ale funkcja f jest niestały):  
   
     ```Output  
     error C2893: Failed to specialize function template 'void S2::f(void)'note: With the following template arguments:note: 'C=S1'note: 'Function=S1::f'  
     ```  
   
-     Aby rozwiązać ten błąd w kodzie, należy upewnić się, że typ argumentu szablonu jest zgodny z typem zadeklarowanym parametru szablonu.  
+     Aby rozwiązać ten błąd w kodzie, należy upewnić się, że typ argumentu szablonu jest zgodny z typem zadeklarowany parametr szablonu.  
   
--   **__declspec(align)**  
+- **__declspec(align)**  
   
-     Kompilator nie będzie akceptował `__declspec(align)` na funkcje. To zawsze została zignorowana, ale teraz generuje błąd kompilatora.  
+     Kompilator nie będzie akceptował `__declspec(align)` funkcji. To zawsze ignorowane, ale teraz generuje błąd kompilatora.  
   
     ```cpp  
     error C3323: 'alignas' and '__declspec(align)' are not allowed on function declarations  
     ```  
   
-     Aby rozwiązać ten problem, Usuń `__declspec(align)` z deklaracją funkcji. Ponieważ nie miał żadnego skutku, usuwając go nie zmian.  
+     Aby rozwiązać ten problem, Usuń `__declspec(align)` z deklaracją funkcji. Ponieważ miała żadnego efektu, usuwając go nie zmian.  
   
--   **Obsługa wyjątków**  
+- **Obsługa wyjątków**  
   
-     Istnieje kilka zmian do obsługi wyjątków. Po pierwsze obiekty wyjątków muszą być copyable lub przenośne. Poniższy kod skompilowany w [!INCLUDE[cpp_dev12_long](../build/reference/includes/cpp_dev12_long_md.md)], ale nie Kompiluj w [!INCLUDE[cpp_dev14_long](../porting/includes/cpp_dev14_long_md.md)]:  
+     Istnieje kilka zmian do obsługi wyjątków. Po pierwsze obiekty wyjątków muszą być kopiowania lub przenośne. Poniższy kod skompilowany w programie Visual Studio 2013, ale nie można skompilować w programie Visual Studio 2015:  
   
     ```cpp  
     struct S  
@@ -466,10 +462,9 @@ Po uaktualnieniu do nowej wersji programu Visual Studio, mogą wystąpić kompil
     {  
         throw S(); // error  
     }  
-  
     ```  
   
-     Problem jest Konstruktor kopiujący jest prywatny, więc nie można skopiować obiektu, ponieważ odbywa się w trakcie normalnego przebiegu Obsługa wyjątku. Dotyczy to Konstruktor kopiujący jest zadeklarowany jako `explicit`.  
+     Problem polega na tym, że Konstruktor kopiujący jest prywatny, więc nie można skopiować obiektu, ponieważ miało miejsce w trakcie normalnego przebiegu Obsługa wyjątku. To samo dotyczy, gdy Konstruktor kopiujący jest zadeklarowany **jawne**.  
   
     ```cpp  
     struct S  
@@ -482,12 +477,11 @@ Po uaktualnieniu do nowej wersji programu Visual Studio, mogą wystąpić kompil
     {  
         throw S(); // error  
     }  
-  
     ```  
   
-     Aby zaktualizować kodu, upewnij się, że Konstruktor kopiujący dla obiekt wyjątku jest publiczna i nie oznaczone `explicit`.  
+     Aby zaktualizować swój kod, upewnij się, Konstruktor kopiujący obiektu wyjątku **publicznych** , nie jest oznaczona **jawne**.  
   
-     Przechwytywanie wyjątku przez wartość wymaga również być copyable obiekt wyjątku. Poniższy kod skompilowany w [!INCLUDE[cpp_dev12_long](../build/reference/includes/cpp_dev12_long_md.md)], ale nie Kompiluj w [!INCLUDE[cpp_dev14_long](../porting/includes/cpp_dev14_long_md.md)]:  
+     Przechwytywanie wyjątku przez wartość wymaga także obiekt wyjątku do kopiowania. Poniższy kod skompilowany w programie Visual Studio 2013, ale nie można skompilować w programie Visual Studio 2015:  
   
     ```cpp  
     struct B  
@@ -509,21 +503,19 @@ Po uaktualnieniu do nowej wersji programu Visual Studio, mogą wystąpić kompil
         {  
         }  
     }  
-  
     ```  
   
-     Można rozwiązać ten problem, zmieniając typ parametru `catch` do odwołania.  
+     Możesz rozwiązać ten problem, zmieniając typ parametru dla **catch** do odwołania.  
   
     ```cpp  
     catch (D& d)  
     {  
     }  
-  
     ```  
   
--   **Literały ciągu następuje makra**  
+- **Literały ciągu, a następnie makra**  
   
-     Kompilator obsługuje teraz literały zdefiniowanych przez użytkownika. W rezultacie następuje makra bez żadnych spacji pośredniczące literałów ciągów są interpretowane jako literały zdefiniowane przez użytkownika, które spowodują błędy lub nieoczekiwane wyniki. Na przykład w poprzednim kompilatory następujący kod powiodło:  
+     Kompilator obsługuje teraz literały zdefiniowane przez użytkownika. W konsekwencji literałów ciągów następuje makra bez żadnych pośredniczące białe znaki będą interpretowane jako literały definiowane przez użytkownika, które może powodować generowanie błędów lub nieoczekiwane wyniki. Na przykład w poprzednim kompilatory następujący kod został pomyślnie skompilowany:  
   
     ```cpp  
     #define _x "there"  
@@ -535,10 +527,9 @@ Po uaktualnieniu do nowej wersji programu Visual Studio, mogą wystąpić kompil
         char * p = func();  
         return 0;  
     }  
-  
     ```  
   
-     Kompilator interpretowana to jako ciąg literału "hello" następuje makra jest rozwinięta "Brak", a następnie literałów ciągów dwóch zostały połączone w jeden. W [!INCLUDE[cpp_dev14_long](../porting/includes/cpp_dev14_long_md.md)], kompilator interpretuje jako literału zdefiniowanego przez użytkownika, ale ponieważ nie ma żadnych pasujących zdefiniowane przez użytkownika literału _x zdefiniowane, zawiera błąd.  
+     Kompilator interpretowana to jako ciąg literału "hello" makra jest rozwinięta, "Brak", a następnie, a następnie literałów ciągów dwóch zostały połączone w jedną. W programie Visual Studio 2015 kompilator interpretuje to jako literału zdefiniowanego przez użytkownika, ale ponieważ nie ma żadnych pasujących zdefiniowanych przez użytkownika literału _x zdefiniowane, przekazuje błąd.  
   
     ```Output  
     error C3688: invalid literal suffix '_x'; literal operator or literal operator template 'operator ""_x' not found  
@@ -547,50 +538,48 @@ Po uaktualnieniu do nowej wersji programu Visual Studio, mogą wystąpić kompil
   
      Aby rozwiązać ten problem, Dodaj odstęp między literałem ciągu i makra.  
   
--   **Literały ciągu sąsiadujących ze sobą**  
+- **Literały ciągów sąsiadujących**  
   
-     Podobnie do poprzedniego, z powodu zmiany podczas analizy ciągu, literałów ciągów sąsiadujących ze sobą (albo literałów ciągów znaków szerokości lub wąskie) bez żadnych spacji zostały interpretowane jako pojedynczy ciąg połączonych w poprzednich wersjach Visaul C++. W [!INCLUDE[cpp_dev14_long](../porting/includes/cpp_dev14_long_md.md)], teraz należy dodać odstępu między dwa ciągi. Na przykład można zmienić następujący kod:  
+     Podobnie do poprzedniego, z powodu powiązanych zmian podczas analizowania ciągu, sąsiadujących literałów ciągu (albo literały ciągów znaków szeroki lub wąski) bez żadnych odstępów zostały interpretowane jako pojedynczy ciąg połączonych w poprzednich wersjach Visaul C++. W programie Visual Studio 2015 możesz teraz dodać odstęp między dwa ciągi. Na przykład można zmienić następujący kod:  
   
     ```cpp  
     char * str = "abc""def";  
     ```  
   
-     Po prostu Dodaj odstęp między dwa ciągi.  
+     Po prostu dodać spację między dwa ciągi.  
   
     ```cpp  
     char * str = "abc" "def";  
     ```  
   
--   **Umieszczania nowych i delete**  
+- **Położenie nowych i delete**  
   
-     Dokonano zmian dla operatora delete w celu dostosowania do zgodność z języka C ++ 14 standardowa. Szczegółowe informacje o zmianie standardów można znaleźć w folderze [cofania alokacji o rozmiarze w języku C++](http://isocpp.org/files/papers/n3778.html). Zmiany dodać formę operatora delete globalny, który przyjmuje parametr rozmiaru. Istotne zmiany jest, że jeśli zostały wcześniej za pomocą operatora delete o tej samej sygnaturze (odpowiadającą operatora new umieszczania), zostanie wyświetlony błąd kompilatora (C2956, co następuje w momencie, gdzie nowe umieszczania są używane, ponieważ to jest operator delete pozycji w kodzie, w którym kompilator podejmie próbę identyfikacji odpowiadającym odpowiednią).  
+     Zmiana została wprowadzona do **Usuń** operatora, aby zapewnić zgodność z C ++ 14 standardowych. Szczegółowe informacje o zmianie standardów znajduje się w temacie [cofania alokacji o rozmiarze w języku C++](http://isocpp.org/files/papers/n3778.html). Zmiany dodać formularz globalnego **Usuń** operator, który przyjmuje parametr rozmiaru. Istotną zmianę jest to, że jeśli wcześniej używano operator **Usuń** z tym samym podpisie (z **umieszczania nowych** operator), otrzymasz błąd kompilatora (C2956, który ma miejsce w momencie, gdy nowe położenie jest używana, ponieważ jest pozycja w kodzie, gdzie kompilator próbuje zidentyfikować odpowiednie dopasowania **Usuń** operator).  
   
-     Funkcja `void operator delete(void *, size_t)` został umieszczania operatora delete, odpowiadające nowej funkcji umieszczania "void \* nowy operator (size_t, size_t)" w języku C ++ 11. Z języka C ++ 14 dezalokacji rozmiarze, ta funkcja delete jest teraz *funkcja dezalokacji zwykle* (operator delete globalne). Standard wymaga użycia nowego położenia wyszukuje odpowiedniej funkcji usuwania, znajduje się funkcja dezalokacji zwykle program źle sformułowane.  
+     Funkcja `void operator delete(void *, size_t)` został **delete umieszczania** operator odpowiadający **umieszczania nowych** funkcji `void * operator new(size_t, size_t)` w C ++ 11. Za pomocą języka C ++ 14 dezalokacji wielkości, ta funkcja usuwania jest obecnie *funkcji dezalokacji zwykle* (globalne **Usuń** operator). Standardowa wymaga użycia nowego miejsca odwołuje się do odpowiednich funkcji usuwania, funkcja dezalokacji zwykle znajduje program źle sformułowane.  
   
-     Na przykład załóżmy, że kod definiuje zarówno nowego położenia i usuwania umieszczania:  
+     Załóżmy, że Twój kod określa zarówno **umieszczania nowych** i **delete umieszczania**:  
   
     ```cpp  
     void * operator new(std::size_t, std::size_t);  
     void operator delete(void*, std::size_t) noexcept;  
-  
     ```  
   
-     Wystąpił problem z powodu dopasowania w podpisach funkcja między umieszczania operatora delete, które zdefiniowany przez użytkownika, a nowy operator delete o rozmiarze globalnych. Należy rozważyć, czy można użyć innego typu niż size_t do dowolnego umieszczania nowych i delete — operatory.  Należy pamiętać, że typ size_t typedef zależne od kompilatora; jest typedef dla unsigned int w MSVC. Dobrym rozwiązaniem jest używany typ wyliczeniowy takich jak ta:  
+     Występuje problem ze względu na dopasowanie w sygnaturach funkcji między **delete umieszczania** operator zdefiniowany przez użytkownika i nowe globalne, wielkości **Usuń** operatora. Należy wziąć pod uwagę, czy możesz używać innego typu innego niż `size_t` dla każdego **umieszczania nowych** i **Usuń** operatorów.  Należy pamiętać, że typ `size_t` **typedef** jest zależna od kompilatora; jest **typedef** dla **unsigned int** w MSVC. Dobrym rozwiązaniem jest używać typu wyliczeniowego, takie jak to:  
   
     ```cpp  
     enum class my_type : size_t {};  
-  
     ```  
   
-     Zmień definicja umieszczania nowe, a następnie, Usuń, aby użyć tego typu jako drugi argument zamiast size_t. Należy również zaktualizować wywołania do umieszczenia nowego przekazać nowy typ (na przykład za pomocą `static_cast<my_type>` do przekonwertowania z wartością całkowitą) i nowych aktualizacji definicji i Usuń można rzutować typu Liczba całkowita. Nie trzeba używać wyliczenia dla tej; Typ klasy z elementem członkowskim size_t również będzie działać.  
+     Następnie zmień definicja **umieszczania nowych** i **Usuń** można użyć tego typu jako drugi argument zamiast `size_t`. Należy również zaktualizować wywołania umieszczania nowych do przekazania nowego typu (na przykład za pomocą `static_cast<my_type>` Aby przekonwertować wartość całkowitą) i aktualizowanie definicji **nowe** i **Usuń** rzutowanie wstecz Typ liczby całkowitej. Nie trzeba używać **wyliczenia** tego; klasa to typ `size_t` Członkowskich również będzie działać.  
   
-     Alternatywnego rozwiązania jest, że można całkowicie wyeliminować umieszczania nowej. Jeśli kod używa umieszczania nowej implementacji puli pamięci, gdy argument umieszczania rozmiar jest obiekt przydzielony lub usunięty, to funkcja cofania alokacji o rozmiarze może być swoim własnym kodem puli pamięci niestandardowych zastąpienie i można pozbyć się z umieszczanie funkcje i użyć własnych operatora delete dwuargumentowej zamiast funkcji umieszczania.  
+     Alternatywnym rozwiązaniem jest, że można wyeliminować **umieszczania nowych** całkowicie. Jeśli kod używa **umieszczania nowych** do zaimplementowania puli pamięci, której argument umieszczania jest rozmiar jest obiekt przydzielony lub został usunięty, a następnie funkcja dezalokacji wielkości może być zastąpienie własnego kodu puli pamięci niestandardowe i można pozbyć się funkcji umieszczania i po prostu Użyj własnych dwuargumentową **Usuń** operator zamiast funkcji umieszczania.  
   
-     Jeśli nie chcesz natychmiast zaktualizować kodu, możesz przywrócić poprzednie działanie przy użyciu opcji kompilatora /Zc:sizedDealloc-. Jeśli używasz tej opcji, funkcje delete dwuargumentowej nie istnieje i nie powoduje konfliktu z operatorem delete umieszczania.  
+     Jeśli nie chcesz natychmiast zaktualizować kod, możesz przywrócić starsze zachowanie za pomocą opcji kompilatora `/Zc:sizedDealloc-`. Jeśli używasz tej opcji, funkcje dwuargumentową delete nie istnieje i nie będzie powodować konfliktu z usługi **delete umieszczania** operator.  
   
--   **Elementy członkowskie danych Unii**  
+- **Elementy członkowskie danych Unii**  
   
-     Elementy członkowskie danych Unii nie mogą mieć typów referencyjnych. Poniższy kod skompilowany pomyślnie w [!INCLUDE[cpp_dev12_long](../build/reference/includes/cpp_dev12_long_md.md)], ale powoduje błąd w [!INCLUDE[cpp_dev14_long](../porting/includes/cpp_dev14_long_md.md)].  
+     Składowe danych Unii może już typy odwołań. Następujący kod został pomyślnie skompilowany w programie Visual Studio 2013, ale generuje błąd w programie Visual Studio 2015.  
   
     ```cpp  
     union U1   
@@ -605,21 +594,18 @@ Po uaktualnieniu do nowej wersji programu Visual Studio, mogą wystąpić kompil
     {  
         struct { int & i; };  
     };  
-  
     ```  
   
-     Poprzedni kod tworzy następujące błędy:  
+     Powyższy kod generuje następujące błędy:  
   
     ```Output  
-  
     test.cpp(67): error C2625: 'U2::i': illegal union member; type 'int &' is reference type  
     test.cpp(70): error C2625: 'U3::i': illegal union member; type 'int &' is reference type  
-  
     ```  
   
-     Aby rozwiązać ten problem, zmień typy odwołań do wskaźnika lub wartość. Zmiana typu do wskaźnika wymaga wprowadzenia zmian w kodzie, który używa pola union. Zmiana kodu do wartości zmieniłby danych przechowywanych w Unii, który ma wpływ na inne pola, ponieważ pola w Unii mieć tej samej pamięci. W zależności od rozmiaru wartość może on również zmienić rozmiar Unii.  
+     Aby rozwiązać ten problem, zmień typy odwołań do wskaźnika lub wartość. Zmiana typu do wskaźnika wymaga wprowadzenia zmian w kodzie, który używa pola Unii. Zmiana kodu do wartości zmieniłby danych przechowywanych w Unii, który ma wpływ na inne pola, ponieważ pola w typy Unii udostępnianie tej samej pamięci. W zależności od rozmiaru wartość może on również zmienić rozmiar Unii.  
   
--   Związki anonimowe są teraz więcej zgodność ze standardem. Poprzednie wersje kompilatora generowane jawny Konstruktor i destruktor dla elementu związki anonimowe. Są one usuwane z [!INCLUDE[cpp_dev14_long](../porting/includes/cpp_dev14_long_md.md)].  
+- Związki anonimowe są teraz więcej zgodność ze standardem. Poprzednie wersje kompilatora generowane jawny Konstruktor i destruktor związki anonimowe. Zostaną one usunięte w programie Visual Studio 2015.  
   
     ```cpp  
     struct S   
@@ -634,18 +620,16 @@ Po uaktualnieniu do nowej wersji programu Visual Studio, mogą wystąpić kompil
             S s;  
         };  
     } u; // C2280  
-  
     ```  
   
-     Poprzedni kod generuje następujący błąd w [!INCLUDE[cpp_dev14_long](../porting/includes/cpp_dev14_long_md.md)]:  
+     Powyższy kod generuje następujący błąd w programie Visual Studio 2015:  
   
     ```cpp  
     error C2280: '<unnamed-type-u>::<unnamed-type-u>(void)': attempting to reference a deleted function  
     note: compiler has generated '<unnamed-type-u>::<unnamed-type-u>' here  
-  
     ```  
   
-     Aby rozwiązać ten problem, należy podać własne definicje Konstruktor i/lub destruktor.  
+     Aby rozwiązać ten problem, podaj własne definicje Konstruktor i/lub destruktor.  
   
     ```cpp  
     struct S   
@@ -661,12 +645,11 @@ Po uaktualnieniu do nowej wersji programu Visual Studio, mogą wystąpić kompil
             S s;  
         };  
     } u;  
-  
     ```  
   
--   **Unie z struktury anonimowe**  
+- **Unie przy użyciu struktury anonimowe**  
   
-     Aby można było zgodne ze standardem, zachowania w czasie wykonywania została zmieniona dla elementów członkowskich struktury anonimowe w Unii. Konstruktor elementy członkowskie struktury anonimowe w Unii jest nie już wywoływany niejawnie po utworzeniu takiej Unii. Ponadto destruktor dla elementu elementy członkowskie struktury anonimowe w Unii jest nie już wywoływany niejawnie przypadku Unii wykracza poza zakres. Rozważmy następujący kod, w którym Unii U zawiera strukturę anonimowe, zawierający element, który jest strukturą nazwanego S, która ma destruktor.  
+     Aby można było zgodne ze standardem, zachowanie środowiska uruchomieniowego zmienił się dla elementów członkowskich struktury anonimowe w Unii. Konstruktora dla elementów członkowskich struktury anonimowe Unii są nie już wywoływany niejawnie po utworzeniu takiej Unii. Ponadto destruktor dla elementów członkowskich struktury anonimowe Unii nie jest już niejawnie jest wywoływana, gdy Unii wykracza poza zakres. Należy wziąć pod uwagę następujący kod, w której Unii U zawiera anonimowa struktura zawierający element, który jest nazwany struktury S, który ma destruktor.  
   
     ```cpp  
     #include <stdio.h>  
@@ -699,16 +682,15 @@ Po uaktualnieniu do nowej wersji programu Visual Studio, mogą wystąpić kompil
         gets_s(s);  
         return 0;  
     }  
-  
     ```  
   
-     W [!INCLUDE[cpp_dev12_long](../build/reference/includes/cpp_dev12_long_md.md)], Konstruktor S jest wywoływana po utworzeniu Unii, a destruktor dla elementu S jest wywoływane, gdy jest wyczyszczone stosu dla funkcji f. Jednak [!INCLUDE[cpp_dev14_long](../porting/includes/cpp_dev14_long_md.md)], Konstruktor i destruktor nie są wywoływane. Kompilator wyświetla ostrzeżenie o tej zmianie zachowanie.  
+     W programie Visual Studio 2013 Konstruktor S jest wywoływana, gdy jest tworzony Unii i destruktor dla S jest wywoływana, gdy stos funkcji f jest czyszczony. Jednak w programie Visual Studio 2015, Konstruktor i destruktor nie są wywoływane. Kompilator wyświetla ostrzeżenie dotyczące tej zmiany zachowania.  
   
     ```Output  
     warning C4587: 'U::s': behavior change: constructor is no longer implicitly calledwarning C4588: 'U::s': behavior change: destructor is no longer implicitly called  
     ```  
   
-     Aby przywrócić oryginalne zachowanie, nadaj struktury anonimowe nazwę. Zachowanie środowiska uruchomieniowego struktur nieanonimowych jest taki sam, niezależnie od wersji kompilatora.  
+     Aby przywrócić oryginalne zachowanie, nazwij anonimowa Struktura. Zachowanie środowiska uruchomieniowego struktury anonimowe są takie same, niezależnie od wersji kompilatora.  
   
     ```cpp  
     #include <stdio.h>  
@@ -742,10 +724,9 @@ Po uaktualnieniu do nowej wersji programu Visual Studio, mogą wystąpić kompil
         gets_s(s);  
         return 0;  
     }  
-  
     ```  
   
-     Alternatywnie spróbuj przenieść kod Konstruktor i destruktor do nowych funkcji, a następnie dodaj wywołań funkcji z Konstruktor i destruktor dla Unii.  
+     Alternatywnie spróbuj przenieść kod Konstruktor i destruktor do nowych funkcji, a następnie dodaj wywołania tych funkcji z Konstruktor i destruktor dla Unii.  
   
     ```cpp  
     #include <stdio.h>  
@@ -779,14 +760,13 @@ Po uaktualnieniu do nowej wersji programu Visual Studio, mogą wystąpić kompil
         gets_s(s);  
         return 0;  
     }  
-  
     ```  
   
--   **Szablon rozwiązania**  
+- **Rozdzielczość szablon**  
   
-     Zmiany zostały wprowadzone do rozpoznawania nazw dla szablonów. W języku C++, rozważając kandydatów do rozpoznawania nazw można go sprawę, że jedną lub więcej nazw pod uwagę jako potencjalny dopasowań powoduje utworzenie wystąpienia szablonu jest nieprawidłowa. Te nieprawidłowe wystąpień nie powodują zwykle błędy kompilatora, zasady, znany jako techniki SFINAE (podstawienie niepowodzenia nie błąd jest).  
+     Wprowadzono zmiany do rozpoznawania nazw dla szablonów. W języku C++, rozważając kandydatami do rozpoznawania nazw można go tak, że jedną lub więcej nazw pod uwagę jako potencjalny dopasowania tworzy wystąpienia szablonu jest nieprawidłowa. Zazwyczaj te nieprawidłowe wystąpień nie powodują błędy kompilatora, zasady, który jest znany jako SFINAE (podstawienie jest nie błąd).  
   
-     Teraz Jeśli techniki SFINAE wymaga kompilatora, można utworzyć wystąpienia specjalizacji szablonu klasy, wszystkie błędy w trakcie tego procesu są błędy kompilatora. W poprzednich wersjach kompilator będzie ignorować takie błędy. Rozważmy na przykład następujący kod:  
+     Teraz Jeśli SFINAE wymaga kompilatora do utworzenia wystąpienia specjalizacji szablonu klasy, wszelkie błędy, które występują w trakcie tego procesu są błędy kompilatora. W poprzednich wersjach kompilator będzie ignorować takie błędy. Na przykład rozważmy następujący kod:  
   
     ```cpp  
     #include <type_traits>  
@@ -823,13 +803,11 @@ Po uaktualnieniu do nowej wersji programu Visual Studio, mogą wystąpić kompil
         S< D> s1;  
         S< D> s2(s1);  
     }  
-  
     ```  
   
-     Jeśli kompilacja z kompilatorem bieżący, otrzymasz następujący błąd:  
+     Jeśli kompilujesz z opcją kompilatora bieżącej, zostanie wyświetlony następujący błąd:  
   
     ```Output  
-  
     type_traits(1110): error C2139: 'D': an undefined class is not allowed as an argument to compiler intrinsic type trait '__is_base_of'  
     ..\t331.cpp(14): note: see declaration of 'D'  
     ..\t331.cpp(10): note: see reference to class template instantiation 'std::is_base_of<T,U>' being compiled  
@@ -838,34 +816,37 @@ Po uaktualnieniu do nowej wersji programu Visual Studio, mogą wystąpić kompil
         T=D,  
         U=D  
     ]  
-  
     ```  
   
-     Wynika to z faktu w punkcie pierwsze wywołanie is_base_of — klasa będzie "jeszcze nie został zdefiniowany.  
+     Jest to spowodowane punkcie pierwsze wywołanie is_base_of, klasa `D` jeszcze nie został zdefiniowany.  
   
-     W takim przypadku będzie nie należy używać tych cech typu w kompilatorze, dopóki ta klasa została zdefiniowana. Jeśli przeniesiesz definicje B i D na początku pliku kodu błędu, zostaje rozwiązany. Jeśli definicje znajdują się w pliki nagłówkowe, sprawdź, aby pliki nagłówkowe upewnić się, że wszystkie definicje klas są kompilowane przed problematyczne szablony są używane instrukcje include.  
+     W tym przypadku poprawki jest nie należy używać tych cech typu, dopóki nie została zdefiniowana klasa. Jeśli przeniesiesz definicje `B` i `D` na początku pliku kodu błędu nie zostanie rozwiązany. Jeśli definicje znajdują się w plikach nagłówkowych, sprawdź kolejność instrukcje dołączania dla pliki nagłówkowe upewnić się, że wszystkie definicje klas są kompilowane przed szablony problematyczny są używane.  
   
--   **Kopiowanie konstruktorów**  
+- **Kopiowanie konstruktorów**  
   
-     W obu [!INCLUDE[vs_dev12](../atl-mfc-shared/includes/vs_dev12_md.md)] i programu Visual Studio 2015, kompilator generuje Konstruktor kopiujący dla klasy, jeśli tej klasy ma Konstruktor przenoszący zdefiniowane przez użytkownika, ale nie Konstruktor kopiujący zdefiniowane przez użytkownika. W Dev14 ten Konstruktor kopiujący niejawnie wygenerowany jest również oznaczone jako "= delete".  
+     W programie Visual Studio 2013 i Visual Studio 2015 kompilator generuje konstruktora kopiującego dla klasy, jeśli klasa ma Konstruktor przenoszący zdefiniowanych przez użytkownika, ale bez konstruktora kopiującego zdefiniowanego przez użytkownika. W Dev14 to Konstruktor kopiujący niejawnie wygenerowanego jest również oznaczone jako "= delete".  
 
 <!--From here to VS_Update1 added 04/21/2017-->
 
--   **main jest zadeklarowany jako zewnętrzny "C" wymaga teraz zwracanego typu.**  
+- **główny jest zadeklarowany jako extern "C", teraz wymaga typu zwracanego.**  
 
 Poniższy kod tworzy teraz C4430. 
+
 ```cpp
 extern "C" __cdecl main(){} // C4430
 ```
+
 Aby naprawić błąd, Dodaj typ zwracany:
+
 ```cpp
 extern "C" int __cdecl main(){} // OK
 ```
 
- -   **Właściwość TypeName nie jest dozwolona w inicjator elementu członkowskiego**  
+ - **Nazwa typu jest niedozwolone w inicjator składowej**  
 
-Poniższy kod tworzy teraz C2059:
- ```cpp
+Poniższy kod generuje teraz C2059:
+
+```cpp
 template<typename T>
 struct S1 : public T::type
 {
@@ -880,15 +861,18 @@ struct S2 {
 
 S1<S2> s;
 ```
+
 Aby naprawić błąd, należy usunąć `typename` z inicjatora:
+
 ```cpp
 S1() : T::type() // OK
 ...
 ```
 
--   **Klasa magazynu na jawne specjalizacje jest ignorowana.** 
+- **Klasa magazynu na jawne specjalizacje jest ignorowany.** 
 
-W poniższym kodzie Specyfikator klasy magazynu statycznego jest ignorowany 
+W poniższym kodzie specyfikatora klasy magazynu statycznego jest ignorowany 
+
 ```cpp
 template <typename T>
 void myfunc(T h)
@@ -899,12 +883,12 @@ template<>
 static void myfunc(double h) // static is ignored
 {
 }
-
 ```
 
--   **Stała używane w static_assert wewnątrz szablonu klasy zawsze kończy się niepowodzeniem.**  
+- **Stała używane w static_assert wewnątrz szablonu klasy zawsze zakończą się niepowodzeniem.**  
 
-Poniższy kod powoduje static_assert zawsze niepowodzenie:
+Poniższy kod powoduje, że `static_assert` się zawsze niepowodzeniem:
+
 ```cpp
 template <size_t some_value>
 struct S1
@@ -916,7 +900,8 @@ struct S1
 //other partial specializations here
 ```
 
-Aby obejść ten problem, zawijanie wartość w struktury:
+Aby obejść ten problem, opakować wartość **struktury**:
+
 ```cpp
 template <size_t some_value>
 struct constant_false {
@@ -932,20 +917,19 @@ struct S1
 //other partial specializations here
 ```
 
--   **Reguły wymuszane dla deklaracji do przodu. (Dotyczy tylko C.)**  
+- **Reguły wymuszane na deklaracje przechodzenia do przodu. (Dotyczy tylko C.)**  
 
-Poniższy kod tworzy teraz C2065:
+Poniższy kod generuje teraz C2065:
+
 ```cpp
 struct token_s;
 typedef int BOOL;
 typedef int INT;
 
-
-
 typedef int(*PFNTERM)(PTOKEN, BOOL, INT); // C2065: 'PTOKEN' : undeclared identifier
 ```
 
-Aby rozwiązać problem, Dodaj odpowiednie deklaracje do przodu:
+Aby rozwiązać ten problem, Dodaj właściwe deklaracje przechodzenia do przodu:
 
 ```cpp
 struct token_s;
@@ -959,9 +943,9 @@ typedef TOKEN *PTOKEN;
 typedef int(*PFNTERM)(PTOKEN, BOOL, INT);
 ```
 
--   **Bardziej spójny wymuszania typów wskaźnika funkcji**  
+- **Bardziej spójny wymuszanie typów wskaźnika funkcji**  
 
-Poniższy kod tworzy teraz C2197:
+Poniższy kod generuje teraz C2197:
 
 ```cpp
 typedef int(*F1)(int);
@@ -973,9 +957,10 @@ void func(F1 f, int v1, int v2)
 }
 ```
 
--   **Niejednoznaczne wywołania funkcji przeciążenia**  
+- **Niejednoznaczny wywołania funkcji przeciążenia**  
 
-Poniższy kod tworzy teraz C266: "N::bind": niejednoznaczne wywołanie przeciążonej funkcji
+Poniższy kod generuje teraz C266: "N::bind": niejednoznaczne wywołanie przeciążonej funkcji
+
 ```cpp 
 template<typename R, typename T, typename T1, typename A1>
 void bind(R(T::*)(T1), A1&&);
@@ -1000,13 +985,13 @@ public:
 };
 ```
 
-Aby naprawić błąd, można pełnej kwalifikacji wywołania do powiązania: N::bind(...). Jednak jeśli ta zmiana jest manifestu do niezadeklarowanego identyfikatora (C2065), następnie może być ustalenie to z deklaracją "przy użyciu".
+Aby naprawić błąd, możesz pełnej kwalifikacji wywołanie `bind: N::bind(...)`. Jednak jeśli ta zmiana jest manifestu niezadeklarowany identyfikator (C2065), następnie można spróbować rozwiązać za pomocą **przy użyciu** deklaracji zamiast tego.
 
-Ten wzorzec jest często wykonywane z comptr — a innymi typami danych w Microsoft::wrl — przestrzeń nazw.
+Ten wzorzec często wykonywane przy użyciu ComPtr a innymi typami danych w `Microsoft::WRL` przestrzeni nazw.
 
--   **Napraw nieprawidłowy adres**  
+- **Napraw nieprawidłowy adres**  
 
-Poniższy kod tworzy teraz C2440: "=": nie można przekonwertować z "typ *" do "type". Aby naprawić błąd, Zmień & (typ) na (typ) i (& f()) do (f()).
+Następujący kod teraz generuje C2440: "=": nie można konwertować z ' typ * "do"type". Aby naprawić błąd, Zmień & (typ) na (typ) oraz (& f()) do (f()).
  
 ```cpp
 \\ C
@@ -1030,12 +1015,12 @@ void h()
 {
     g(&f());
 }
-
 ```
 
--   **Literał ciągu jest tablicą stałej**  
+- **Literał ciągu jest tablicą stałej**  
 
-Poniższy kod tworzy teraz C2664: "void f (void *)": nie można przekonwertować argumentu 1 z "const char (*) [2]" do "void *"
+Następujący kod teraz generuje C2664: "void f (void *)": nie można przekonwertować argumentu 1 z "const char (*) [2]" na "void *"
+
 ```cpp
 void f(void *);
  
@@ -1046,7 +1031,7 @@ void h(void)
 }
 ```
 
-Aby naprawić błąd, Zmień typ parametru funkcji "const void *", w przeciwnym razie należy zmienić treść h w następujący sposób:
+Aby naprawić błąd, Zmień typ parametru funkcji, aby `const void*`, lub w przeciwnym razie należy zmienić treść funkcji `h` wyglądać następująco:
 
 ```cpp
 void h(void)
@@ -1058,10 +1043,9 @@ void h(void)
 
 ```
 
--   **C ++ 11 UDL ciągów znaków**  
+- **C ++ 11 UDL ciągi znaków**  
 
-Poniższy kod tworzy teraz błąd C3688: nieprawidłowy sufiks literału "L"; operator literału lub szablonu operatora literału "operator" "L" nie znaleziono
-
+Poniższy kod teraz powoduje błąd C3688: nieprawidłowy sufiks literału "L"; operator literału lub szablonu operatora literału "operator" "L" nie znaleziono
 
 ```cpp
 #define MACRO
@@ -1076,7 +1060,8 @@ int main(){
     std::cout << STRCAT(L"hi ", L"there");
 }
 ```
-Aby naprawić błąd, Zmień kod to:
+
+Aby naprawić błąd, Zmień kod do tego:
 
 ```cpp
 #define MACRO
@@ -1092,16 +1077,15 @@ int main(){
 
     std::cout << STRCAT(L"hi ", L"there");
 }
-
 ```
-W powyższym przykładzie `MACRO` jest już być analizowana jako dwa tokeny (ciąg następuje makr).  Teraz jest analizowany jako pojedynczy UDL tokenu.  To samo dotyczy L "" L"", który został wcześniej analizowana jako L"" i L "", a teraz jest analizowana jako L "" L i "".
 
-Reguły łączenia ciągu również zostały przeniesione do zgodności ze standardem, co oznacza, że jest odpowiednikiem L "ab" L "a" "b". Poprzednie wersje programu Visual Studio nie zaakceptowała konkatenacji ciągów szerokość znaków.
+W powyższym przykładzie `MACRO` już jest analizowany jako dwa tokeny (ciąg następuje makro).  Teraz jest analizowany jako pojedynczy UDL tokenu.  To samo dotyczy L "" L"", który był wcześniej analizowany jako L""-L "", a teraz jest analizowany jako L "" L i "".
 
+Reguły konkatenacji ciągów również zostały przeniesione do zgodności ze standardem, co oznacza, że L "a" "b" jest odpowiednikiem L "ab". Poprzednie wersje programu Visual Studio nie zaakceptował łączenia ciągów o szerokości znaków.
 
--   **Znak usunąć pusty c ++ 11**  
+- **C ++ 11 pusty usuniętego znaku**  
 
-Poniższy kod tworzy teraz C2137 błąd: stała znakowa pusty
+Poniższy kod teraz powoduje błąd C2137: pusty znak stałej
 
 ```cpp
 bool check(wchar_t c){
@@ -1109,7 +1093,7 @@ bool check(wchar_t c){
 }
 ```
 
-Aby naprawić błąd, Zmień kod to:
+Aby naprawić błąd, Zmień kod do tego:
 
 ```cpp
 bool check(wchar_t c){
@@ -1117,9 +1101,9 @@ bool check(wchar_t c){
 }
 ```
 
--   **Nie można przechwycić wyjątków MFC według wartości, ponieważ nie są one copyable**  
+- **Wyjątki MFC nie może zostać przechwycony przez wartość, ponieważ nie są one do kopiowania**  
 
-Następujący kod w aplikacji MFC teraz powoduje błąd C2316: miał ": nie można przechwycić elementu, ponieważ destruktor i/lub Konstruktor kopiujący są niedostępne lub zostały usunięte
+Poniższy kod w aplikacji MFC teraz powoduje błąd C2316: gdyby ": nie można przechwycić elementu, ponieważ destruktor i/lub Konstruktor kopiujący są niedostępne lub zostały usunięte
 
 ```cpp
 struct B {
@@ -1141,31 +1125,33 @@ int main()
     {
     }
 }
-
 ```
-Aby naprawić kod, można zmienić blok catch do "catch (const D &)", ale lepszym rozwiązaniem jest zwykle używanie makr MFC TRY/CATCH.
 
--   **alignof jest teraz słowo kluczowe**  
+Aby naprawić kod, można zmienić blok catch do `catch (const D &)` , ale lepszym rozwiązaniem jest zwykle używanie makr MFC TRY/CATCH.
 
-Poniższy kod tworzy teraz błąd C2332: "class": Brak nazwy tagu. Aby naprawić kod musisz zmienić nazwę klasy lub, jeśli klasa jest wykonywane tego samego pracy jako alignof, po prostu zastąpić klasy słowo kluczowe new.
+- **alignof teraz jest słowem kluczowym**  
+
+Poniższy kod teraz powoduje błąd C2332: "class": Brak nazwy tagu. Aby naprawić kod musisz zmienić nazwę klasy lub, jeśli klasa wykonuje ten sam pracę jako alignof, wystarczy zastąpić klasę za pomocą słowa kluczowego new.
+
 ```cpp
 class alignof{}
 ```
 
--   **constexpr jest teraz słowo kluczowe**  
+- **wyrażenia constexpr teraz jest słowem kluczowym**  
 
-Poniższy kod tworzy teraz błąd C2059: błąd składniowy: ")". Aby naprawić kod, należy zmienić nazwę funkcji ani nazwy zmiennych, które są określane jako "constexpr". 
+Poniższy kod teraz powoduje błąd C2059: błąd składniowy: ")". Aby naprawić kod, należy zmienić nazwę funkcji dowolnej nazwy zmiennych, które są nazywane "constexpr". 
+
 ```cpp
 int constexpr() {return 1;}
 ```
 
--   **Typy ruchome nie może być wartością stałą**  
+- **Typy ruchome nie mogą być const**  
 
-Gdy funkcja zwraca typ, który ma zostać przeniesiona, jej typu zwracanego nie powinna być stała.
+Gdy funkcja zwraca typ, który jest przeznaczony do przeniesienia, nie należy jej typ zwracany **const**.
 
--   **Usunięto kopiowanie konstruktorów**  
+- **Konstruktory kopiujące usunięte**  
 
-Poniższy kod tworzy teraz w C2280:: S(S &&) ": próba odwania usunięta funkcja do:
+Poniższy kod generuje teraz firmy C2280:: S(S &&) ": próba odwania do usuniętej funkcji do:
 
 ```cpp
 struct S{
@@ -1176,7 +1162,9 @@ struct S{
 
 S s2 = S(2, 3); //C2280
 ```
-Aby naprawić błąd, należy użyć bezpośredniego inicjowania dla S2:
+
+Aby naprawić błąd, należy użyć inicjalizacji bezpośredniej dla `S2`:
+
 ```cpp
 struct S{
     S(int, int);
@@ -1187,9 +1175,9 @@ struct S{
 S s2 = {2,3}; //OK
 ```
 
--   **Konwersja wskaźnika funkcji generowany tylko, gdy nie przechwytywania lambda**  
+- **Konwersja wskaźnika funkcji tylko generowane, gdy nie przechwytywania lambda**  
 
-Poniższy kod tworzy C2664 w programie Visual Studio 2015. 
+Poniższy kod generuje C2664 w programie Visual Studio 2015. 
 
 ```cpp
 void func(int(*)(int)) {}
@@ -1199,11 +1187,12 @@ int main() {
     func([=](int val) { return val; });
 }
 ```
-Aby naprawić błąd, należy usunąć `=` na liście przechwytywania.
 
--   **Niejednoznaczne wywołania obejmujące operatory konwersji**  
+Aby naprawić błąd, należy usunąć `=` z listy przechwytywania.
 
-Poniższy kod tworzy teraz błąd C2440: "rzutowanie typu": nie można przekonwertować z "S2" na "S1":
+- **Wywołania niejednoznacznego obejmujących operatory konwersji**  
+
+Poniższy kod teraz powoduje błąd C2440: "typ cast": nie można konwertować z "S2" do "S1":
 
 ```cpp 
 struct S1 {
@@ -1217,12 +1206,11 @@ struct S2 {
 
 void f(S2 s2)
 {
-
     (S1)s2;
-
 }
 ```
-Aby naprawić błąd, jawnie wywołać operatora konwersji:
+
+Aby naprawić błąd, należy jawnie wywołać operatora konwersji:
 
 ```cpp
 void f(S2 s2)
@@ -1232,10 +1220,9 @@ void f(S2 s2)
     // Or
     S1((int)s2);
 }
-
 ```
 
-Poniższy kod tworzy teraz błąd C2593: "operator =" jest niejednoznaczny:
+Poniższy kod teraz powoduje błąd C2593: "operator =" jest niejednoznaczny:
 
 ```cpp
 struct S1 {};
@@ -1250,7 +1237,9 @@ void f(S1 *p, S2 s)
     *p = s;
 }
 ```
-Aby naprawić błąd, jawnie wywołać operatora konwersji:
+
+Aby naprawić błąd, należy jawnie wywołać operatora konwersji:
+
 ```cpp
 void f(S1 *p, S2 s)
 {
@@ -1258,9 +1247,10 @@ void f(S1 *p, S2 s)
 }
 ```
 
--   **Usuń nieprawidłowy kopiowania inicjowania na inicjowanie elementu członkowskiego danych niestatycznych (NSDMI)**  
+- **Usuń Inicjalizacja kopiująca nieprawidłowy na inicjowanie składowej danych niestatycznych (NSDMI)**  
 
-Poniższy kod tworzy teraz błąd C2664: "S1::S1(S1 &&)": nie można przekonwertować argumentu 1 z "bool" na "const S1 &":
+Poniższy kod generuje teraz błędu C2664: "S1::S1(S1 &&)": nie można przekonwertować argumentu 1 "bool" na "const S1 &":
+
 ```cpp
 struct S1 {
     explicit S1(bool);
@@ -1270,16 +1260,19 @@ struct S2 {
     S1 s2 = true; // error
 };
 ```
-Aby naprawić błąd, należy użyć bezpośredniego inicjowania:
+
+Aby naprawić błąd, należy użyć inicjalizacji bezpośredniej:
+
 ```cpp
 struct S2 {
 S1 s1{true}; // OK
 };
 ```
 
--   **Uzyskiwanie dostępu do konstruktorów wewnątrz decltype — instrukcje**  
+- **Uzyskiwanie dostępu do konstruktorów wewnątrz instrukcji decltype**  
 
-Poniższy kod tworzy teraz C2248: "S::S": nie można zadeklarować dostępu prywatnego elementu członkowskiego, w klasy ":
+Poniższy kod generuje teraz C2248: "S::S": nie może dostępu prywatnego elementu członkowskiego jest zadeklarowana w klasy ":
+
 ```cpp
 class S {
     S();
@@ -1291,7 +1284,9 @@ class S2 {
     auto f() -> decltype(S().i);
 };
 ```
-Aby naprawić błąd, należy dodać deklaracji elementu zaprzyjaźnionego dla S2 w S:
+
+Aby naprawić błąd, należy dodać deklaracji elementu zaprzyjaźnionego w taki sposób, aby uzyskać `S2` w `S`:
+
 ```cpp
 class S {
     S();
@@ -1301,9 +1296,10 @@ public:
 };
 ```
 
--   **Domyślne ctor lambda niejawnie zostanie usunięta.**  
+- **Domyślne ctor lambda niejawnie zostanie usunięty.**  
 
-Poniższy kod tworzy teraz błąd C3497: nie można skonstruować wystąpienia lambdy:
+Poniższy kod teraz powoduje błąd C3497: nie można skonstruować wystąpienia lambdy:
+
 ```cpp
 void func(){
     auto lambda = [](){};    
@@ -1311,11 +1307,12 @@ void func(){
     decltype(lambda) other;
 }
 ```
-Aby naprawić błąd, należy usunąć potrzebę do wywołania konstruktora domyślnego. Jeśli wyrażenie lambda nie przechwytywania niczego następnie go mogą być rzutowane na wskaźnik funkcji.
 
--   **Wyrażenia lambda za pomocą operatora przypisania usunięte**  
+Aby naprawić błąd, należy usunąć potrzebę konstruktora domyślnego, który ma zostać wywołana. Jeśli wyrażenie lambda nie przechwytuje niczego następnie go mogą być rzutowane na wskaźnik funkcji.
 
-Poniższy kod tworzy teraz błąd C2280:
+- **Wyrażenia lambda z operatorem usunięto przypisanie**  
+
+Poniższy kod teraz generuje błąd C2280:
 
 ```cpp
 #include <memory>
@@ -1331,11 +1328,13 @@ void f(int i)
     encodedMsg = std::move(encodedMsg);
 }
 ```
-Aby naprawić błąd, Zamień lambda klasy obiekt lub usuń konieczność użycia operatora przypisania.
 
--   **Próba przeniesienia z konstruktorami kopiowania usuniętego obiektu**  
+Aby naprawić błąd, należy zamienić wyrażenia lambda z klasą funktor, lub usunąć trzeba użyć operatora przypisania.
 
-Poniższy kod tworzy teraz błąd C2280: "ruchoma:: moveable(const moveable &)": próba odwołania usunięta funkcja
+- **Próba przeniesienia obiektu za pomocą konstruktora kopiującego usunięte**  
+
+Poniższy kod teraz powoduje błąd C2280: "ruchoma:: moveable(const moveable &)": próba odwania do usuniętej funkcji do
+
 ```cpp
 struct moveable {
 
@@ -1350,16 +1349,19 @@ struct S {
     {}
     moveable m_m;
 };
-
 ```
-Aby naprawić błąd, należy użyć std::move:
+
+Aby naprawić błąd, należy użyć `std::move` zamiast tego:
+
 ```cpp
 S(moveable && m) :
     m_m(std::move(m))
 ```
--   **Klasy lokalnej nie może odwoływać się inne klasy lokalnej zdefiniowaną w dalszej części tej samej funkcji**  
 
-Poniższy kod tworzy teraz błąd C2079: w "używa niezdefiniowana main::S2" struct"
+- **Klasy lokalnej nie mogą odwoływać się inne klasy lokalnej, które zostały zdefiniowane w dalszej części tej samej funkcji**  
+
+Poniższy kod teraz powoduje błąd C2079: firmy "używa niezdefiniowane main::S2" struct"
+
 ```cpp
 int main()
 {
@@ -1372,7 +1374,9 @@ int main()
     struct S2 {};
 }
 ```
-Aby naprawić błąd, Przenieś w górę definicji S2:
+
+Aby naprawić błąd, Przenieś w górę definicji `S2`:
+
 ```cpp
 int main()
 {
@@ -1387,9 +1391,10 @@ struct S1 {
 }
 ```
 
--   **Nie można wywołać chronionych ctor podstawowej w treści pochodne ctor.**  
+- **Nie można wywołać chroniony Konstruktor podstawowej w treści pochodnej ctor.**  
 
-Poniższy kod tworzy teraz błąd C2248: "S1::S1": nie można uzyskać dostępu do chronionego członka zadeklarowana w klasie "S1"
+Poniższy kod teraz powoduje błąd C2248: "S1::S1": nie można uzyskać dostępu chroniona składowa zadeklarowana w klasie "S1"
+
 ```cpp
 struct S1 {
 protected:
@@ -1402,18 +1407,22 @@ struct S2 : public S1 {
     }
 };
 ```
-Aby naprawić błąd, w S2 Usuń wywołanie S1() z konstruktora i w razie potrzeby umieść ją w innej funkcji.
 
--   **{} Zapobiega konwersji na wskaźnik**  
+Aby naprawić błąd, w `S2` Usuń wywołanie funkcji `S1()` z konstruktora i jeśli to konieczne umieszczenie go w innej funkcji.
 
-Poniższy kod tworzy teraz C2439 "S::p": nie można zainicjować elementu członkowskiego   
+- **{} Zapobiega konwersji do wskaźnika**  
+
+Poniższy kod generuje teraz C2439 "S::p": nie można zainicjować składowej   
+
 ```cpp
 struct S {
     S() : p({ 0 }) {}
     void *p;
 };
 ```
-Aby naprawić błąd, Usuń nawiasy z wokół 0 w przeciwnym razie użyj `nullptr` zamiast tego, jak pokazano w poniższym przykładzie:
+
+Aby naprawić błąd, Usuń nawiasy klamrowe z całym `0` lub użyj innego **nullptr** zamiast tego, co pokazano w poniższym przykładzie:
+
 ```cpp
 struct S {
     S() : p(nullptr) {}
@@ -1421,9 +1430,10 @@ struct S {
 };
 ```
 
--   **Nieprawidłowe makra definicji i użycia za pomocą nawiasów**  
+- **Definicja makra niepoprawne i użycia za pomocą nawiasów**  
 
-Poniższy przykład tworzy teraz błąd C2008: ';': nieoczekiwany w definicji makra
+Poniższy przykład powoduje teraz błąd C2008: ';': nieoczekiwany w definicji makra
+
 ```cpp
 #define A; //cause of error
 
@@ -1431,11 +1441,12 @@ struct S {
     A(); // error
 };
 ```
-Aby rozwiązać problem, zmień pierwszego wiersza do `#define A();`
 
-Poniższy kod tworzy błąd C2059: błąd składniowy: ")"
+Aby rozwiązać problem, zmień górny wiersz, który ma być `#define A();`
+
+Poniższy kod powoduje błąd C2059: błąd składniowy: ")"
+
 ```cpp
-
 //notice the space after 'A'
 #define A () ;
 
@@ -1443,21 +1454,22 @@ struct S {
     A();
 };
 ```
-Aby naprawić kod Usuń odstęp między A i ().
 
-Poniższy kod tworzy błąd C2091: funkcja zwraca funkcję:
+Aby rozwiązać problem Usuń kod odstęp między A i ().
+
+Poniższy kod powoduje błąd C2091: funkcja zwraca funkcję:
 
 ```cpp
-
 #define DECLARE void f()
 
 struct S {
     DECLARE();
 };
 ```
-Aby naprawić błąd, należy usunąć nawiasy po DECLARE w S: `DECLARE;`.
 
-Poniższy kod tworzy błąd C2062: typ "int" Nieoczekiwany
+Aby naprawić błąd, Usuń nawiasy po DECLARE w S: `DECLARE;`.
+
+Poniższy kod generuje błąd C2062: typ "int" Nieoczekiwany
 
 ```cpp
 #define A (int)
@@ -1466,28 +1478,33 @@ struct S {
     A a;
 };
 ```
-Aby rozwiązać ten problem, należy zdefiniować A następująco:
+
+Aby rozwiązać ten problem, należy zdefiniować `A` następująco:
+
 ```cpp
 #define A int
 ```
 
--   **Bardzo parens w deklaracjach**  
+- **Bardzo parens w deklaracjach**  
 
-Poniższy kod tworzy błąd C2062: typ "int" Nieoczekiwany
+Poniższy kod generuje błąd C2062: typ "int" Nieoczekiwany
+
 ```cpp
-
 struct S {
     int i;
     (int)j;
 };
 ```
-Aby naprawić błąd, należy usunąć parens z `j`. Jeśli parens są wymagane dla uzyskania przejrzystości, a następnie użyj typem typedef.
 
--   **Konstruktory generowane przez kompilator i __declspec(novtable)**  
+Aby naprawić błąd, należy usunąć parens z `j`. Jeśli parens są wymagane w celu uściślenia, a następnie użyj **typedef**.
 
-W programie Visual Studio 2015 jest zwiększone prawdopodobieństwo, że wbudowany generowane przez kompilator konstruktorów klas abstrakcyjnych z wirtualnymi klasami podstawowymi może narazić niepoprawne użycie __declspec(novtable) w połączeniu z __declspec(dllimport).
+- **Konstruktory wygenerowane przez kompilator i __declspec(novtable)**  
 
--   **Auto wymaga jednego wyrażenia w Inicjalizacja listy bezpośrednio** poniższy kod tworzy teraz błąd C3518: "testPositions": w kontekście Inicjalizacja listy bezpośrednio typu "Auto" można określić tylko na podstawie pojedynczego wyrażenia inicjatora
+W programie Visual Studio 2015 jest zwiększone prawdopodobieństwo wystąpienia wbudowane generowanych przez kompilator konstruktory klas abstrakcyjnych z wirtualnymi klasami bazowymi może narazić niepoprawne użycie `__declspec(novtable)` w połączeniu z `__declspec(dllimport)`.
+
+- **Auto wymaga pojedynczego wyrażenia w bezpośrednich Inicjalizacja listy** 
+
+Poniższy kod teraz powoduje błąd C3518: "testPositions": w kontekście bezpośredniego Inicjalizacja listy typu "Auto" można określić tylko na podstawie pojedynczego wyrażenia inicjatora
 
 ```cpp
 auto testPositions{
@@ -1497,7 +1514,8 @@ auto testPositions{
     std::tuple<int, int>{-21, 17}
 };
 ```
-Aby naprawić błąd, jedną z możliwości jest zainicjowanie testPositions w następujący sposób:
+
+Aby naprawić błąd, jedną z możliwości, jest zainicjowanie `testPositions` w następujący sposób:
 
 ```cpp
 std::tuple<int, int> testPositions[]{
@@ -1508,9 +1526,9 @@ std::tuple<int, int> testPositions[]{
 };
 ```
 
--   **Sprawdzanie typów a wskaźniki do typów is_convertible —**  
+- **Sprawdzanie typów, a wskaźniki do typów is_convertible —**  
 
-Poniższy kod powoduje teraz asercja statyczna się niepowodzeniem. 
+Poniższy kod powoduje teraz asercja statyczna nie powiedzie się. 
 
 ```cpp
 struct B1 {
@@ -1522,18 +1540,18 @@ struct D : public B2 {};
 
 static_assert(std::is_convertible<D, B2>::value, "fail");
 ```
-Aby naprawić błąd, należy zmienić static_assert, tak aby porównuje wskaźniki do D i B2:
+
+Aby naprawić błąd, zmień `static_assert` tak, że porównuje wskaźniki do `D` i `B2`:
 
 ```cpp
 static_assert(std::is_convertible<D*, B2*>::value, "fail");
 ```
 
--   **deklaracje declspec(novtable) muszą być zgodne**  
+- **deklaracje declspec(novtable) muszą być zgodne**  
 
-deklaracje declspec musi być spójna we wszystkich bibliotek. Poniższy kod spowodują teraz wygenerowanie naruszenia reguły jednej definicji (ODR):
+**declspec** deklaracji musi być spójny na wszystkich bibliotek. Poniższy kod spowodują teraz wygenerowanie naruszenia reguły jednej definicji (ODR):
 
 ```cpp
-
 //a.cpp
 class __declspec(dllexport)
     A {
@@ -1593,18 +1611,14 @@ void C::f() {}
 C c;
 ```
 
-
+###  <a name="VS_Update1"></a> Ulepszenia zgodności w aktualizacji 1  
   
-###  <a name="VS_Update1"></a> Ulepszenia zgodność aktualizacji 1  
+- **Prywatne wirtualne klasy podstawowe i pośredniego dziedziczenia**  
   
--   **Prywatne wirtualne klasy podstawowe i pośredniego dziedziczenia**  
-  
-     Poprzednie wersje kompilatora dozwolone klasy pochodnej w celu wywołania funkcji Członkowskich jego *pośrednio pochodzi* `private virtual` klasy podstawowej. To zachowanie starego było nieprawidłowe i nie jest zgodny ze standardem C++. Kompilator nie akceptuje kod napisany w ten sposób i w związku z tym problemów błąd kompilatora C2280.  
+     Poprzednie wersje kompilatora mogą wywołać funkcji składowej klasy pochodnej jego *pośrednio pochodzi* `private virtual` klas bazowych. To zachowanie starej była nieprawidłowa i nie jest zgodny ze standardem C++. Kompilator nie akceptuje kodu napisanego w ten sposób i generuje błąd kompilatora C2280 w wyniku.  
   
     ```Output  
-  
     error C2280: 'void *S3::__delDtor(unsigned int)': attempting to reference a deleted function  
-  
     ```  
   
      Przykład (przed)  
@@ -1623,7 +1637,6 @@ C c;
     {  
         delete p;  //  
     }  
-  
     ```  
   
      Przykład (po)  
@@ -1638,7 +1651,6 @@ C c;
     {  
         delete p;  
     }  
-  
     ```  
   
      - lub -  
@@ -1653,43 +1665,36 @@ C c;
     {  
         delete p;  
     }  
-  
     ```  
   
--   **Przeciążony operator new ani operator delete**  
+- **Przeciążony operator nowy i delete — operator**  
   
-     Poprzednie wersje kompilatora dozwolone niebędący elementem członkowskim `operator new` i niebędący elementem członkowskim `operator delete` być zadeklarowany jako statyczny i można zadeklarować w przestrzeni nazw innej niż globalna przestrzeń nazw.  To zachowanie starego utworzone ryzyko, że program nie może wywołać `new` lub `delete` implementacji operator, który przeznaczony programistę, co powoduje zachowanie dyskretnej zły środowiska wykonawczego. Kompilator nie akceptuje kod napisany w ten sposób i generuje błąd kompilatora C2323 zamiast tego.  
+     Poprzednie wersje kompilatora mogą nieczłonkowskie **nowy operator** i nieczłonkowską **operatora delete** zostać zadeklarowany jako statyczny i być deklarowane w przestrzeni nazw, innym niż globalnej przestrzeni nazw.  To zachowanie starej utworzone ryzyko, że program nie może wywołać **nowe** lub **Usuń** implementacja operatora, zamierzony potwierdzeniu programisty, wynikające zachowanie dyskretnej nieprawidłowe środowisko uruchomieniowe. Kompilator nie akceptuje kodu napisanego w ten sposób i generuje błąd kompilatora C2323 zamiast tego.  
   
     ```Output  
-  
-    error C2323: 'operator new': non-member operator new or delete functions may not be declared static or in a namespace other than the global namespace.  
-  
+    error C2323: 'operator new': non-member operator new or delete functions may not be declared static or in a namespace other than the global namespace. 
     ```  
   
      Przykład (przed)  
   
     ```cpp  
     static inline void * __cdecl operator new(size_t cb, const std::nothrow_t&)  // error C2323  
-  
     ```  
   
      Przykład (po)  
   
     ```cpp  
     void * __cdecl operator new(size_t cb, const std::nothrow_t&)  // removed 'static inline'  
-  
     ```  
   
-     Ponadto mimo że kompilator nie zapewnia określonych diagnostyczne, nowy operator wbudowanego jest uważany za źle sformułowane.  
+     Ponadto mimo że kompilator nie zapewnia określonych diagnostyczne, wbudowanego operatora **nowe** uznaje się źle sformułowane.  
   
--   **Wywołanie "operator *typu*()" (konwersja zdefiniowana przez użytkownika) dla typów innych niż klasa**  
+- **Wywołanie "operator *typu*()" (konwersja zdefiniowana przez użytkownika) dla typów klasy korporacyjnej**  
   
-     Poprzednie wersje kompilatora dozwolone "operator *typu*() ' ma być wywoływana dla typów innych niż klasa podczas w trybie dyskretnym zostanie on zignorowany. To zachowanie starego utworzony ryzyko generowania kodu zły dyskretnej spowodować nieprzewidywalne zachowanie. Kompilator nie akceptuje kod napisany w ten sposób i generuje błąd kompilatora C2228 zamiast tego.  
+     Poprzednie wersje kompilatora mogą "operator *typu*()" do wywoływania na typach klasy korporacyjnej podczas dyskretnie zostanie zignorowany. To zachowanie starej utworzony ryzyko wygenerowanie dyskretnej złego kodu, co środowisko uruchomieniowe nieprzewidywalne zachowanie. Kompilator nie akceptuje kodu napisanego w ten sposób i generuje błąd kompilatora C2228 zamiast tego.  
   
     ```Output  
-  
     error C2228: left of '.operator type' must have class/struct/union  
-  
     ```  
   
      Przykład (przed)  
@@ -1701,7 +1706,6 @@ C c;
     {  
         bounds_check(column.operator index_t());  // error C2228  
     }  
-  
     ```  
   
      Przykład (po)  
@@ -1713,12 +1717,11 @@ C c;
     {  
         bounds_check(column);  // removed cast to 'index_t', 'index_t' is an alias of 'int'  
     }  
-  
     ```  
   
--   **Nadmiarowe typename w specyfikatorze specyfikatorze typu**  
+- **Nadmiarowe typename w specyfikatory typów uszczegółowionych**  
   
-     Poprzednie wersje kompilatora dozwolone `typename` w specyfikatorze typu rozwinięciem; kod napisany w ten sposób jest semantycznie nieprawidłowy. Kompilator nie akceptuje kod napisany w ten sposób i generuje błąd kompilatora C3406 zamiast tego.  
+     Poprzednie wersje kompilatora mogą **typename** w specyfikatory typów uszczegółowionych; kodu napisanego w ten sposób jest semantycznie nieprawidłowe. Kompilator nie akceptuje kodu napisanego w ten sposób i generuje błąd kompilatora C3406 zamiast tego.  
   
     ```Output  
     error C3406: 'typename' cannot be used in an elaborated type specifier  
@@ -1729,7 +1732,6 @@ C c;
     ```cpp  
     template <typename class T>  
     class container;  
-  
     ```  
   
      Przykład (po)  
@@ -1737,19 +1739,16 @@ C c;
     ```cpp  
     template <class T>  // alternatively, could be 'template <typename T>'; 'typename' is not elaborating a type specifier in this case  
     class container;  
-  
     ```  
   
--   **Wnioskowanie typów tablic z listy inicjatora**  
+- **Wnioskowanie typu tablic z listy inicjalizatora**  
   
-     Poprzednie wersje kompilatora nie obsługuje wnioskowanie typów tablic z listy inicjatorów. Kompilator obsługuje teraz ten formularz wnioskowanie typu i, w związku z tym wywołań szablonów funkcji przy użyciu listy inicjatorów teraz może być niejednoznaczna lub innego przeciążenia może wybrany niż w poprzednich wersjach kompilatora. Aby rozwiązać te problemy, program teraz należy jawnie określić zamierzony przez programistę przeciążenia.  
+     Poprzednie wersje kompilatora nie obsługuje typ odliczenia magazynowymi pochodzącymi od listy inicjalizatora. Kompilator obsługuje teraz ten formularz wnioskowanie typu i, co w efekcie wywołań szablonów funkcji przy użyciu listy inicjatorów teraz może być niejednoznaczna lub innego przeciążenia mogą zostać wybrane niż w poprzedniej wersji kompilatora. Aby uniknąć tych problemów, program teraz należy jawnie określić przeciążenia, które są przeznaczone na potwierdzeniu programisty.  
   
-     Gdy to nowe zachowanie powoduje Rozpoznanie przeciążenia wziąć pod uwagę dodatkowe kandydujących, który jest równie candidate historycznych, wywołanie staje się niejednoznaczne i kompilator generuje błąd kompilatora C2668 w związku z tym.  
+     To nowe zachowanie powoduje, że funkcja rozpoznawania przeciążeń do rozważenia dodatkowych Release candidate, który jest równie dobrze jako kandydata historycznych, wywołanie staje się niejednoznaczny i dlatego kompilator generuje błąd kompilatora C2668.  
   
     ```Output  
-  
     error C2668: 'function' : ambiguous call to overloaded function.  
-  
     ```  
   
      Przykład 1: Niejednoznaczne wywołanie przeciążonej funkcji (przed)  
@@ -1767,7 +1766,6 @@ C c;
         // The compiler now considers this call ambiguous, and issues a compiler error  
          f({ 3 });   error C2668 : 'f' ambiguous call to overloaded function  
     }  
-  
     ```  
   
      Przykład 1: niejednoznaczne wywołanie przeciążonej funkcji (po)  
@@ -1784,12 +1782,11 @@ C c;
         // To call f(int, Args...) when there is just one expression in the initializer list, remove the braces from it.  
         f(3);   
     }  
-  
     ```  
   
-     Gdy Rozpoznanie przeciążenia wziąć pod uwagę dodatkowe kandydujących, będący lepszym dopasowaniem niż candidate historycznych, wywołanie jest rozpoznawany jako jednoznacznie candidate nowe, powoduje to nowe zachowanie powoduje zmianę zachowania programu prawdopodobnie różni się od programista przeznaczone.  
+     Gdy to nowe zachowanie powoduje, że funkcja rozpoznawania przeciążeń do rozważenia dodatkowych Release candidate, który jest lepsze dopasowane niż historyczne Release candidate, wywołanie jest rozpoznawana jako jednoznacznie nowego kandydata powoduje zmianę zachowania programu jest prawdopodobnie inna niż programista przeznaczone.  
   
-     Przykład 2: zmiana Rozpoznanie przeciążenia (przed)  
+     Przykład 2: zmiany w przeciążeniu rozdzielczości (przed)  
   
     ```cpp  
     // In previous versions of the compiler, code written in this way would unambiguously call f(S, Args...)  
@@ -1810,10 +1807,9 @@ C c;
         // The compiler now resolves this call to f(const int (&)[N], Args...) instead  
          f({ 1, 2 });   
     }  
-  
     ```  
   
-     Przykład 2: zmiana Rozpoznanie przeciążenia (po)  
+     Przykład 2: zmiany w przeciążeniu rozdzielczości (po)  
   
     ```cpp  
     struct S;  // as before  
@@ -1829,39 +1825,30 @@ C c;
         // To call f(S, Args...), perform an explicit cast to S on the initializer list.  
         f(S{ 1, 2 });   
     }  
-  
     ```  
   
--   **Przywracanie ostrzeżenia instrukcji switch**  
+- **Przywracanie ostrzeżenia instrukcji switch**  
   
-     Poprzedni wersji kompilatora usunięte uprzednio istniejące ostrzeżenia dotyczące `switch` instrukcje; te ostrzeżenia zostały przywrócone. Kompilator generuje teraz przywróconej ostrzeżenia, a powiązane z szczególnych przypadkach (w tym przypadku domyślnego) są teraz wyświetlane ostrzeżenia na wiersz zawierający w przypadku ataku, a nie w ostatnim wierszu instrukcji switch. W związku z tym teraz wydawania tych ostrzeżeń w wierszach innego niż w przeszłości, ostrzeżenia poprzednio pominąć przy użyciu `#pragma warning(disable:####)` nie może zostać pominięta, zgodnie z założeniami. Aby pominąć te ostrzeżenia, zgodnie z założeniami, może być konieczne przenieść `#pragma warning(disable:####)` dyrektywy do wiersza powyżej pierwszym przypadku potencjalnie naruszeń. Poniżej przedstawiono przywróconej ostrzeżenia.  
+     Poprzednia wersję kompilatora usunięte uprzednio istniejące ostrzeżenia dotyczące **Przełącz** instrukcji; te ostrzeżenia zostały przywrócone. Kompilator generuje teraz przywróconej ostrzeżenia, a związane z określonych przypadków (w tym przypadku domyślnym) są teraz wyświetlane ostrzeżenia w wierszu zawierającym naruszającym przypadek, a nie w ostatnim wierszu instrukcji switch. W rezultacie teraz wystawiających tych ostrzeżeń w różnych wierszach niż w przeszłości, ostrzeżeń wcześniej pominięty przy użyciu `#pragma warning(disable:####)` nie będzie można pominąć zgodnie z oczekiwaniami. Aby pominąć te ostrzeżenia, zgodnie z oczekiwaniami, może być konieczne przeniesienie `#pragma warning(disable:####)` dyrektywę wiersz powyżej pierwszym przypadku potencjalnie naruszeń. Poniżej przedstawiono przywróconej ostrzeżenia.  
   
     ```Output  
     warning C4060: switch statement contains no 'case' or 'default' labels  
     ```  
   
     ```Output  
-  
     warning C4061: enumerator 'bit1' in switch of enum 'flags' is not explicitly handled by a case label  
-  
     ```  
   
     ```Output  
-  
     warning C4062: enumerator 'bit1' in switch of enum 'flags' is not handled  
-  
     ```  
   
     ```Output  
-  
     warning C4063: case 'bit32' is not a valid value for switch of enum 'flags'  
-  
     ```  
-  
+
     ```Output  
-  
     warning C4064: switch of incomplete enum 'flags'  
-  
     ```  
   
     ```Output  
@@ -1869,9 +1856,7 @@ C c;
     ```  
   
     ```Output  
-  
     warning C4808: case 'value' is not a valid value for switch condition of type 'bool'  
-  
     ```  
   
     ```Output  
@@ -1909,7 +1894,6 @@ C c;
                 break;  
         }  
     };  
-  
     ```  
   
      Przykład C4063 (po)  
@@ -1935,14 +1919,13 @@ C c;
             break;  
         }  
     };  
-  
     ```  
   
-     Przykłady przywróconej ostrzeżenia znajdują się w dokumentacji.  
+     Przykłady przywróconej ostrzeżeń, które znajdują się w dokumentacji.  
   
--   **#include: użycie specyfikatora katalogu nadrzędnego '..' w pathname** (dotyczy tylko/Wall /WX)  
+- **#include: użycie specyfikatora katalog nadrzędny "." w pathname** (dotyczy tylko `/Wall` `/WX`)  
   
-     Poprzednie wersje kompilatora nie wykrył użycie specyfikatora katalogu nadrzędnego '..' w nazwie ścieżki `#include` dyrektywy. Kod napisany w ten sposób ma zwykle obejmują nagłówki, które istnieją poza projektem za pomocą nieprawidłowo ścieżek względnych projektu. To zachowanie starego utworzony ryzyko, że program można kompilować przez dołączenie pliku źródłowego innego niż programisty przeznaczone lub że nie jest przenoszony do innego środowiska kompilacji tych ścieżek względnych. Kompilator teraz wykrywa i powiadamia programistę kod napisany w ten sposób i wystawia opcjonalne kompilatora ostrzeżenie C4464, jeśli włączone.  
+     Poprzednie wersje kompilatora nie wykrył użycie specyfikatora katalog nadrzędny "." w nazwie ścieżki `#include` dyrektywy. Kod napisany w ten sposób jest zwykle przeznaczona do obejmują nagłówki, które istnieją poza projektem za pomocą niepoprawnie ścieżek względnych projektu. To zachowanie starej utworzony ryzyka, że program można kompilować przez dołączenie pliku innego źródła, programista przeznaczone lub że tych ścieżek względnych nie jest przenośny do innych środowisk kompilacji. Kompilator teraz wykrywa i powiadamia programistę kod napisany w ten sposób i wystawia C4464, ostrzeżenia kompilatora, opcjonalnie, jeśli włączona.  
   
     ```Output  
     warning C4464: relative include path contains '..'  
@@ -1952,21 +1935,19 @@ C c;
   
     ```cpp  
     #include "..\headers\C4426.h"  // emits warning C4464  
-  
     ```  
   
      Przykład (po)  
   
     ```cpp  
     #include "C4426.h"  // add absolute path to 'headers\' to your project's include directories  
-  
     ```  
   
-     Ponadto, mimo że kompilator nie daje określonych diagnostyki, również zaleca się specyfikator katalogu nadrzędnego ".." Uwaga należy określić katalogi dołączenia projektu.  
+     Ponadto, mimo że kompilator nie daje określonych diagnostyczne, również zalecamy specyfikator katalog nadrzędny "." Uwaga stosuje się do określenia katalogi dołączane projektu.  
   
--   **#pragma optimize() rozciąga się poza koniec pliku nagłówka** (dotyczy tylko/Wall /WX)  
+- **#pragma optimize() wykracza poza końcem pliku nagłówkowego** (dotyczy tylko `/Wall` `/WX`)  
   
-     Poprzednie wersje kompilatora nie wykrył zmiany ustawień flagi optymalizacji, które escape uwzględnionych w jednostce tłumaczenia pliku nagłówka. Kompilator teraz wykrywa i powiadamia programistę kod napisany w ten sposób i wystawia opcjonalne kompilatora ostrzeżenie C4426 w lokalizacji naruszeń `#include`, jeśli jest włączona. To ostrzeżenie zostanie wyświetlone tylko, jeśli konflikt zmian z flagi optymalizacji przez kompilator argumenty wiersza polecenia.  
+     Poprzednie wersje kompilatora nie wykrył zmiany w ustawieniach flagi optymalizacji, które ucieczki pliku nagłówka, w ramach jednostki translacji. Kompilator teraz wykrywa i powiadamia programistę kod napisany w ten sposób i problemy z kompilatora opcjonalne ostrzeżenie C4426 w lokalizacji naruszeń `#include`, jeśli jest włączona. To ostrzeżenie zostanie wyświetlone tylko, jeśli konflikt zmiany za pomocą flagi optymalizacji ustawione przez argumenty wiersza polecenia kompilatora.  
   
     ```Output  
     warning C4426: optimization flags changed after including header, may be due to #pragma optimize()  
@@ -1982,7 +1963,6 @@ C c;
   
     // C4426.cpp  
     #include "C4426.h"  // warning C4426  
-  
     ```  
   
      Przykład (po)  
@@ -1996,12 +1976,11 @@ C c;
   
     // C4426.cpp  
     #include "C4426.h"  
-  
     ```  
   
--   **Niezgodne #pragma warning(push)** i **#pragma warning(pop)** (dotyczy tylko/Wall /WX)  
+- **Niezgodność #pragma warning(push)** i **#pragma warning(pop)** (dotyczy tylko `/Wall` `/WX`)  
   
-     Poprzednie wersje kompilatora nie wykrył `#pragma warning(push)` stan zmieni się łączyć się z `#pragma warning(pop)` stanu zmian w pliku innego źródła, które rzadko są przeznaczone. To zachowanie starego utworzone zagrożenie program będzie można skompilować z innym zestawem ostrzeżenia włączone niż programisty przeznaczone, prawdopodobnie co powoduje zachowanie dyskretnej zły środowiska wykonawczego. Kompilator teraz wykrywa i powiadamia programistę kod napisany w ten sposób i wystawia opcjonalne kompilatora ostrzeżenie C5031 w lokalizacji dopasowywania `#pragma warning(pop)`, jeśli jest włączona. To ostrzeżenie obejmuje uwagi odwołujące się do lokalizacji odpowiedniego #pragma warning(push).  
+     Poprzednie wersje kompilatora nie wykrył `#pragma warning(push)` stan zmieni się on sparowany z `#pragma warning(pop)` stanu zmiany w pliku innego źródła, które rzadko są przeznaczone. To zachowanie starej utworzone ryzyko program będzie skompilowany z innym zestawem ostrzeżenia włączone niż programisty planowano, przez co dyskretnej nieprawidłowe działanie. Kompilator teraz wykrywa i powiadamia programistę kod napisany w ten sposób i wystawia C5031 w lokalizacji odpowiedniego ostrzeżenia kompilatora, opcjonalnie `#pragma warning(pop)`, jeśli jest włączona. To ostrzeżenie zawiera uwagi odwołujące się do lokalizacji odpowiedniego #pragma warning(push).  
   
     ```Output  
     warning C5031: #pragma warning(pop): likely mismatch, popping warning state pushed in different file  
@@ -2027,7 +2006,6 @@ C c;
     ...  
     #include "C5031_part2.h" // matches 'dangling' #pragma warning(push), resulting in warning C5031  
     ...  
-  
     ```  
   
      Przykład (po)  
@@ -2052,14 +2030,13 @@ C c;
     ...  
     #include "C5031_part2.h"  
     ...  
-  
     ```  
   
-     Chociaż jest to rzadko, kod napisany w ten sposób jest czasami zamierzone. Kod napisany w ten sposób jest czułe na zmiany `#include` kolejność; Jeśli to możliwe, firma Microsoft zaleca, aby pliki kodu źródłowego Zarządzanie stan ostrzegawczy w sposób niezależny.  
+     Chociaż rzadko, kod napisany w ten sposób jest czasami zamierzone. Kod napisany w ten sposób jest wrażliwa na zmiany w `#include` kolejność; Jeśli jest to możliwe, firma Microsoft zaleca, pliki kodu źródłowego, zarządzanie stan ostrzegawczy w sposób niezależny.  
   
--   **Niedopasowane #pragma warning(push)** (dotyczy tylko/Wall /WX)  
+- **Niedopasowane #pragma warning(push)** (dotyczy tylko `/Wall` `/WX`)  
   
-     Poprzednie wersje kompilatora nie wykrył niedopasowane `#pragma warning(push)` zmiany na końcu jednostce tłumaczenia stanów. Kompilator teraz wykrywa i powiadamia programistę kod napisany w ten sposób i wystawia opcjonalne kompilatora ostrzeżenie C5032 w lokalizacji niedopasowane #pragma warning(push), jeśli włączone. To ostrzeżenie zostanie wyświetlone tylko, jeśli nie ma żadnych błędów kompilacji w jednostce tłumaczenia.  
+     Poprzednie wersje kompilatora nie wykryto niedopasowane `#pragma warning(push)` stanu zmiany na końcu jednostki translacji. Kompilator teraz wykrywa i powiadamia programistę kod napisany w ten sposób i problemy z kompilatora opcjonalne ostrzeżenie C5032 w lokalizacji niedopasowane `#pragma warning(push)`, jeśli jest włączona. To ostrzeżenie zostanie wyświetlone tylko, jeśli nie ma żadnych błędów kompilacji w jednostce translacji.  
   
     ```Output  
     warning C5032: detected #pragma warning(push) with no corresponding #pragma warning(pop)  
@@ -2078,7 +2055,6 @@ C c;
     #include "C5032.h"  
     ...  
     // C5032.cpp ends -- the translation unit is completed without #pragma warning(pop), resulting in warning C5032 on line 1 of C5032.h  
-  
     ```  
   
      Przykład (po)  
@@ -2095,24 +2071,23 @@ C c;
     #include "C5032.h"  
     ...  
     // C5032.cpp ends -- the translation unit is completed without unmatched #pragma warning(push)  
-  
     ```  
   
--   **Może zostać wygenerowany dodatkowych ostrzeżeń wyniku śledzenia stanu ostrzeżenia #pragma ulepszone**  
+- **Dodatkowe ostrzeżenia może zostać wygenerowany w wyniku śledzenia stanu ostrzeżenia #pragma ulepszone**  
   
-     Poprzednie wersje kompilatora śledzone ostrzeżenia #pragma zmian stanu niewystarczająco również do wystawienia przeznaczone wszystkie ostrzeżenia. To zachowanie utworzony ryzyka to pewność, że ostrzeżenia będzie efektywnie pomijane w sytuacjach innych niż programisty przeznaczone. Kompilator teraz śledzi stan ostrzeżenia #pragma bardziej niezawodnie — szczególnie odnoszących się do zmian stanu ostrzeżenia #pragma wewnątrz szablonów — i opcjonalnie wystawia nowe ostrzeżenia C5031 i C5032, które mają pomóc programisty zlokalizować niezamierzone zastosowań `#pragma warning(push)` i `#pragma warning(pop)`.  
+     Poprzednie wersje kompilatora śledzone ostrzeżenia #pragma zmian stanu niewystarczająco również do wystawienia przeznaczone wszystkie ostrzeżenia. To zachowanie utworzony o podwyższonym ryzyku to pewność, że ostrzeżenia będzie efektywnie pomijane w sytuacjach różni się od programisty przeznaczone. Kompilator jest teraz śledzi `#pragma warning` stanu bardziej niezawodnie — szczególnie związane z `#pragma warning` stan zmieni się wewnątrz szablonów — i opcjonalnie wystawia nowe ostrzeżenia C5031 i C5032, które mają na celu pomóc programisty, zlokalizuj niezamierzone zastosowań `#pragma warning(push)` i `#pragma warning(pop)`.  
   
-     Wyniku ulepszone #pragma zmian stanu śledzenia, ostrzeżenia wcześniej niepoprawnie pominięte lub ostrzeżenia dotyczące problemów, które wcześniej misdiagnosed mogą teraz być ostrzeżenie.  
+     Na ulepszone `#pragma warning` śledzenia zmian stanu, wcześniej niepoprawnie pominięte ostrzeżenia lub ostrzeżenia dotyczące problemów, które wcześniej misdiagnosed teraz może zostać wygenerowany.  
   
--   **Ulepszenia identyfikacji nieosiągalny kod**  
+- **Ulepszono proces identyfikacji nieosiągalnego kodu**  
   
-     Standardowa biblioteka C++ zmiany i ulepszona możliwość wywołania funkcji wbudowanej w porównaniu z poprzednimi wersjami kompilatora mogą zezwalać kompilator, aby udowodnić, że niektóre kodu jest nieosiągalny. To nowe zachowanie może spowodować nowych i innych często wydane wystąpień ostrzeżenie C4720.  
+     Zmiany standardowej biblioteki języka C++ i ulepszona możliwość wywołania funkcji wbudowanych w porównaniu z poprzednimi wersjami kompilatora może umożliwić kompilatorowi udowodnić, że niektóre kodu jest nieosiągalny. To nowe zachowanie może powodować nowych i innych często wystawione wystąpień ostrzeżenie C4720.  
   
     ```Output  
     warning C4720: unreachable code  
     ```  
   
-     W wielu przypadkach to ostrzeżenie może być wystawiane tylko podczas kompilowania z włączonymi optymalizacjami, od optymalizacji mogą wbudowanego więcej wywołania funkcji, wyeliminować nadmiarowy kod lub w przeciwnym razie była możliwość określenia, że niektóre kod jest nieosiągalny. Zaobserwowano, że nowe wystąpienia ostrzeżenia C4720 często wystąpiły w blokach try/catch, szczególnie w związku z korzystaniem z [std::find](assetId:///std::find?qualifyHint=False&autoUpgrade=True).  
+     W wielu przypadkach to ostrzeżenie mogą być wystawiane tylko podczas kompilowania z włączonymi optymalizacjami, od optymalizacji mogą wbudowane bardziej wywołaniach funkcji, wyeliminować nadmiarowy kod lub w przeciwnym razie należy można określić, że niektóre kodu jest nieosiągalny. Zauważyliśmy, że nowe wystąpienia ostrzeżenie C4720 często miały miejsce w **bloku try/catch** blokuje, szczególnie w odniesieniu do użytkowania [std::find](assetId:///std::find?qualifyHint=False&autoUpgrade=True).  
   
      Przykład (przed)  
   
@@ -2140,16 +2115,15 @@ C c;
     }  
     ```  
   
-###  <a name="VS_Update2"></a> Ulepszenia zgodność aktualizacji 2  
+###  <a name="VS_Update2"></a> Ulepszenia zgodności Update 2  
   
--   **Dodatkowych ostrzeżeń i błędów może zostać utworzony w wyniku częściowej obsługi techniki SFINAE wyrażeń**  
+- **Dodatkowe ostrzeżenia i błędy, które mogły zostać wydane w wyniku częściowa Obsługa wyrażenie SFINAE**  
   
-     Poprzednie wersje kompilatora nie jest przetwarzany niektóre rodzaje wyrażeń wewnątrz `decltype` specyfikatory ze względu na brak obsługi techniki SFINAE wyrażeń. To zachowanie starego było nieprawidłowe i nie jest zgodny ze standardem C++. Kompilator teraz analizuje tych wyrażeń i ma częściowej obsługi techniki SFINAE wyrażeń, z powodu trwającej zgodność ulepszenia. W związku z tym kompilator generuje teraz ostrzeżenia i błędy znalezione w wyrażeniach, że poprzednie wersje kompilatora nie jest przetwarzany.  
+     Poprzednie wersje kompilatora nie jest przetwarzany niektórych rodzajów wyrażenia wewnątrz **decltype** specyfikatory ze względu na brak obsługi wyrażenie SFINAE. To zachowanie starej była nieprawidłowa i nie jest zgodny ze standardem C++. Kompilator teraz analizuje te wyrażenia i ma częściowa Obsługa wyrażenie SFINAE ze względu na ulepszenia trwającą zgodności. W rezultacie kompilator generuje teraz ostrzeżenia i błędy znalezione w wyrażeniach, że poprzednie wersje kompilatora nie jest przetwarzany.  
   
-     Gdy to nowe zachowanie analizuje `decltype` wyrażenie zawiera typ, którego nie ma jeszcze zadeklarowana, kompilator generuje błąd kompilatora C2039 w związku z tym.  
+     Gdy to nowe zachowanie analizuje **decltype** wyrażenia zawierającego typ, który nie został jeszcze zadeklarowany, kompilator generuje błąd kompilatora C2039 w wyniku.  
   
     ```Output  
-  
     error C2039: 'type': is not a member of '`global namespace''  
     ```  
   
@@ -2164,7 +2138,6 @@ C c;
         template< typename>  
         struct s2 {};  
     }  
-  
     ```  
   
      Przykład 1 (po)  
@@ -2180,19 +2153,15 @@ C c;
         template< typename>  
         struct s2 {};  
     }  
-  
     ```  
   
-     Gdy to nowe zachowanie analizuje `decltype` wyrażenie, które nie ma potrzeby stosowania `typename` — słowo kluczowe, aby określić, że typem, kompilator jest zależna nazwa generuje ostrzeżenie C4346 wraz z błąd kompilatora C2923 kompilatora.  
+     Po przeanalizowaniu to nowe zachowanie **decltype** wyrażenie, które nie ma potrzeby stosowania **typename** słowo kluczowe, aby określić, że zależna nazwa jest typem, kompilator generuje ostrzeżenia C4346 kompilatora wraz z błąd kompilatora C2923.  
   
     ```Output  
-  
     warning C4346: 'S2<T>::Type': dependent name is not a type  
-  
     ```  
   
     ```Output  
-  
     error C2923: 's1': 'S2<T>::Type' is not a valid template type argument for parameter 'T'  
     ```  
   
@@ -2219,7 +2188,6 @@ C c;
         template < typename T>  
         auto f(T t) - > decltype(t(declval< S1< S2< T> ::type> ::type> ()));  // warning C4346, error C2923  
     };  
-  
     ```  
   
      Przykład 2 (po)  
@@ -2236,17 +2204,14 @@ C c;
         template < typename T>  
         auto f(T t) - > decltype(t(declval< S1< typename S2< T> ::type> ::type> ()));  
     };  
-  
     ```  
   
--   `volatile` **zmienne Członkowskie zapobiec niejawnie zdefiniowanych konstruktorów i operatory przypisania**  
+- `volatile` **zmienne Członkowskie zapobiec niejawnie zdefiniowanych konstruktorów i operatory przypisania**  
   
-     Poprzednie wersje kompilatora dozwolone klasy, która ma `volatile` skopiowania/przeniesienia konstruktorów zmienne Członkowskie mają domyślne i domyślne operatory przypisania kopiowania/przenoszenia generowane automatycznie. To zachowanie starego było nieprawidłowe i nie jest zgodny ze standardem C++. Kompilator uwzględnia teraz klasę, która ma zmiennych Członkowskich volatile nieuproszczony konstrukcji i operatory przypisania co zapobiega domyślnej implementacji tych operatorów są generowane automatycznie.  Jeśli taka klasa jest elementem członkowskim Unii (lub anonimowego związku wewnątrz klasy), konstruktorach kopiowania/przenoszenia i operatory przypisania skopiowania/przeniesienia Unii (lub klasy zawierającej Unii unonymous) będzie można niejawnie zdefiniowany jako usunięty. Podjęto próbę utworzenia lub skopiuj Unii (lub klasa zawierająca anonimowa Unia) bez jawnie definiując je w związku z tym jest błąd i błąd kompilatora problemów kompilatora C2280.  
+     Poprzednie wersje kompilatora mogą klasy, która ma **volatile** zmienne Członkowskie mają domyślne konstruktory kopiowania/przenoszenia i domyślne operatory przypisania kopiowania/przenoszenia generowane automatycznie. To zachowanie starej była nieprawidłowa i nie jest zgodny ze standardem C++. Kompilator traktuje teraz klasy, która ma **volatile** zmienne Członkowskie nietrywialnymi konstrukcji i operatory przypisania, które uniemożliwia automatyczne generowanie domyślnej implementacji tych operatorów. Jeśli taka klasa jest elementem członkowskim Unii (lub anonimowej Unii wewnątrz klasy), konstruktorach kopiowania/przenoszenia i operatory przypisania kopiowania/przenoszenia Unii (lub klasy zawierającej Unii unonymous) będzie można niejawnie zdefiniowany jako usunięty. Próbuje utworzyć lub skopiować Unii (lub klasa zawierająca anonimowej Unii) bez jawne określenie ich jest błędne błąd kompilatora problemów kompilatora C2280 w wyniku.  
   
     ```Output  
-  
     error C2280: 'B::B(const B &)': attempting to reference a deleted function  
-  
     ```  
   
      Przykład (przed)  
@@ -2297,9 +2262,9 @@ C c;
     B b2(b1);  // error C2280  
     ```  
   
--   **Statyczne funkcje Członkowskie nie obsługują kwalifikatorów cv.**  
+- **Statyczne funkcje Członkowskie nie obsługują kwalifikatory cv.**  
   
-     Poprzednie wersje programu Visual Studio 2015 może statycznych funkcji Członkowskich mają kwalifikatorów cv. To zachowanie jest spowodowane Regresja w Visual Studio 2015 i Visual Studio 2015 Update 1; Visual Studio 2013 i poprzednie wersje kompilatora odrzucić kod napisany w ten sposób. Działanie programu Visual Studio 2015 i Visual Studio 2015 Update 1 jest nieprawidłowa i nie odpowiada C++ standard.  Visual Studio 2015 Update 2 odrzuca kod napisany w ten sposób i generuje błąd kompilatora C2511 zamiast tego.  
+     Poprzednie wersje programu Visual Studio 2015 może statyczne funkcje Członkowskie mają kwalifikatory cv. Takie zachowanie wynika z regresji w programie Visual Studio 2015 i Visual Studio 2015 Update 1; Visual Studio 2013 i poprzednie wersje kompilatora odrzucić kodu napisanego w ten sposób. Zachowanie programu Visual Studio 2015 i Visual Studio 2015 Update 1 jest nieprawidłowy i nie jest zgodny ze standardem C++.  Visual Studio 2015 Update 2 odrzuca kodu napisanego w ten sposób i generuje błąd kompilatora C2511 zamiast tego.  
   
     ```Output  
     error C2511: 'void A::func(void) const': overloaded member function not found in 'A'  
@@ -2314,7 +2279,6 @@ C c;
     };  
   
     void A::func() const {}  // C2511  
-  
     ```  
   
      Example(After)  
@@ -2326,23 +2290,18 @@ C c;
     };  
   
     void A::func() {}  // removed const  
-  
     ```  
   
--   **Deklaracja przekazująca dalej wyliczenie nie jest dozwolona w kodzie WinRT** (dotyczy tylko /ZW)  
+- **Deklaracja wyliczenia jest niedozwolone w kodzie WinRT** (ma wpływ na `/ZW` tylko)  
   
-     Kodu skompilowanego dla środowiska uruchomieniowego systemu Windows (WinRT) nie zezwala na `enum` typów do przodu, podobnie do podczas kompilowania kodu zarządzanego języka C++ dla programu .net Framework za pomocą kompilatora/CLR przełącznika. Jest to zachowanie gwarantuje, że rozmiar wyliczenie zawsze jest znany i może zostać poprawnie przedstawione w systemie typu WinRT. Kompilator odrzuca kod napisany w ten sposób i generuje błąd kompilatora C2599 wraz z błąd kompilatora C3197.  
+     Kod kompilowany dla środowiska uruchomieniowego Windows (WinRT) nie zezwala na **wyliczenia** typów do przodu zgłaszane, podobnie jak podczas kompilowania kodu zarządzanego C++ dla programu .net Framework za pomocą `/clr` przełącznika kompilatora. To zachowanie jest gwarantuje, że rozmiar wyliczenie zawsze jest znany i może być poprawnie przekazywany do systemu typów WinRT. Kompilator odrzuca kodu napisanego w ten sposób i generuje błąd kompilatora C2599 wraz z błąd kompilatora C3197.  
   
     ```Output  
-  
     error C2599: 'CustomEnum': the forward declaration of a WinRT enum is not allowed  
-  
     ```  
   
     ```Output  
-  
     error C3197: 'public': can only be used in definitions  
-  
     ```  
   
      Przykład (przed)  
@@ -2367,14 +2326,12 @@ C c;
             return CustomEnum::Value1;  
         }  
     };  
-  
     ```  
   
      Przykład (po)  
   
     ```cpp  
               // forward declaration of CustomEnum removed  
-  
     namespace A {  
         public enum class CustomEnum : int32  
         {  
@@ -2390,46 +2347,41 @@ C c;
             return CustomEnum::Value1;  
         }  
     };  
-  
     ```  
   
--   **Przeciążony operator niebędący elementem członkowskim nowe ani operator delete nie można zadeklarować wbudowanego** (poziom 1 (/ W1) na domyślnie)  
+- **Przeciążony operator składowej nowych i operatora delete nie mogą być deklarowane wbudowane** (poziom 1 (`/W1`) na domyślnie)  
   
-     Poprzednie wersje kompilatora nie ostrzeżenie podczas niebędący elementem członkowskim operator new ani operator delete funkcje są deklarowane jako śródwierszowe. Kod napisany w ten sposób jest niepoprawnie sformułowanych (Diagnostyka nie jest wymagane) i może spowodować pamięci problemy wynikające z niezgodne new i delete — operatory (zwłaszcza gdy jest używany z cofania alokacji o rozmiarze), które mogą być trudne do diagnozowania.   Kompilator generuje teraz kompilatora ostrzeżenie C4595 zidentyfikować kod napisany w ten sposób.  
+     Poprzednie wersje kompilatora nie generuje ostrzeżenia, gdy nowy operator składowej i funkcje delete operatora jest zadeklarowana śródwierszowo. Kod napisany w ten sposób jest nieprawidłowo sformułowany (Diagnostyka nie jest wymagane) i może spowodować, że pamięć problemy wynikające z nowych niezgodne i delete — operatory (zwłaszcza gdy jest używany z cofania alokacji o rozmiarze), które mogą być trudne do zdiagnozowania. Kompilator generuje teraz C4595 ułatwiają identyfikację kodu napisanego w ten sposób ostrzeżenia kompilatora.  
   
     ```Output  
-  
     warning C4595: 'operator new': non-member operator new or delete functions may not be declared inline  
-  
     ```  
   
      Przykład (przed)  
   
     ```cpp  
-              inline void* operator new(size_t sz)  // warning C4595  
+    inline void* operator new(size_t sz)  // warning C4595  
     {  
         ...  
     }  
-  
     ```  
   
      Przykład (po)  
   
     ```cpp  
-              void* operator new(size_t sz)  // removed inline  
+    void* operator new(size_t sz)  // removed inline  
     {  
         ...  
     }  
-  
     ```  
   
-     Ustalenie kodu, który jest zapisany w ten sposób mogą wymagać czy definicje operatora można przenieść pliku nagłówka i do odpowiadający mu plik źródłowy.  
+     Naprawianie kodu, który jest zapisywany w ten sposób może wymagać, że definicje operator zostać przeniesiona z pliku nagłówka oraz odpowiadający mu plik źródłowy.  
   
-###  <a name="VS_Update3"></a> Ulepszenia zgodność aktualizacji 3  
+###  <a name="VS_Update3"></a> Ulepszenia zgodności aktualizacji 3  
   
--   **STD::is_convertable teraz wykrywane jest przypisanie własne** (standardowa biblioteka)  
+- **STD::is_convertable teraz wykrywa przypisanie własne** (standardowa biblioteka)  
   
-     Poprzednie wersje `std::is_convertable` typu cechy nie poprawnie wykrył przypisanie własne typu klasy, po usunięciu jej Konstruktor kopiujący lub prywatnej. Teraz `std::is_convertable<>::value` jest ustawiana poprawnie `false` po zastosowaniu do typu klasy z konstruktorami kopiowania usunięte lub prywatnej.  
+     Poprzednie wersje `std::is_convertable` cechy typu niepoprawnie wykrywa przypisanie własne typu klasy, gdy jego Konstruktor kopiujący został usunięty lub prywatnej. Teraz `std::is_convertable<>::value` jest ustawiana poprawnie **false** w przypadku zastosowania do typu klasy za pomocą konstruktora kopiującego usunięty lub jest prywatny.  
   
      Nie ma żadnych diagnostyki kompilatora skojarzone z tą zmianą.  
   
@@ -2437,14 +2389,14 @@ C c;
   
     ```cpp  
     #include <type_traits>  
-  
-                class X1  
+
+    class X1  
     {  
                 public:  
                 X1(const X1&) = delete;  
                 };  
   
-                class X2  
+    class X2  
     {  
                 private:  
                 X2(const X2&);  
@@ -2453,14 +2405,13 @@ C c;
     static_assert(std::is_convertible<X1&, X1>::value, "BOOM");static_assert(std::is_convertible<X2&, X2>::value, "BOOM");  
     ```  
   
-     W poprzednich wersjach kompilatora statycznych potwierdzenia w dolnej części w tym przykładzie przekazać, ponieważ `std::is_convertable<>::value` została niepoprawnie ustawiona `true`. Teraz `std::is_convertable<>::value` jest ustawiana poprawnie `false`, powoduje statycznych potwierdzenia się niepowodzeniem.  
+     W poprzednich wersjach kompilatora statyczne potwierdzenia w dolnej części w tym przykładzie przekazać, ponieważ `std::is_convertable<>::value` została niepoprawnie ustawiona na **true**. Teraz `std::is_convertable<>::value` jest ustawiana poprawnie **false**, powodując statyczne potwierdzenia nie powiedzie się.  
   
--   **Domyślnie lub usunięty trivial kopiowania i przenoszenia specyfikatory dostępu względem konstruktorów**  
+- **Przyjmujące wartości domyślne lub usunął kopię prosta i przenieść specyfikatory dostępu względem konstruktorów**  
   
-     Poprzednie wersje kompilatora nie Sprawdź specyfikator dostępu do kopii trivial domyślne lub został usunięty i Przenieś konstruktorów przed umożliwieniem jej do wywołania. To zachowanie starego było nieprawidłowe i nie jest zgodny ze standardem C++. W niektórych przypadkach to stare zachowanie utworzony ryzyko generowania kodu zły dyskretnej spowodować nieprzewidywalne zachowanie. Kompilator teraz sprawdza specyfikator dostępu do kopii trivial domyślne lub został usunięty i Przenieś konstruktorów w celu ustalenia, czy można wywołać, a jeśli nie, kompilator problemów w związku z tym ostrzeżenie C2248.  
+     Poprzednie wersje kompilatora Sprawdź specyfikator dostępu ustawionych domyślnie lub usuniętych trivial kopii i nie konstruktory przenoszenia przed umożliwieniem do wywołania. To zachowanie starej była nieprawidłowa i nie jest zgodny ze standardem C++. W niektórych przypadkach to stare zachowanie utworzony ryzyko wygenerowanie dyskretnej złego kodu, co środowisko uruchomieniowe nieprzewidywalne zachowanie. Kompilator teraz sprawdza specyfikator dostępu ustawionych domyślnie lub usuniętych kopii prosta i przenoszenie konstruktorów w celu ustalenia, czy można wywołać, a jeśli nie, problemy z ostrzeżenia kompilatora, C2248 w wyniku.  
   
     ```Output  
-  
     error C2248: 'S::S' cannot access private member declared in class 'S'  
     ```  
   
@@ -2481,7 +2432,6 @@ C c;
         S s;  
         f(s);  // error C2248, can't invoke private copy constructor  
     }  
-  
     ```  
   
      Przykład (po)  
@@ -2501,35 +2451,32 @@ C c;
         S s;  
         f(s);   
     }  
-  
     ```  
   
--   **Amortyzacja oparte na atrybutach obsługi kodu ATL** (poziom 1 (/ W1) na domyślnie)  
+- **Amortyzacja opartego na atrybutach Obsługa kodu biblioteki ATL** (poziom 1 (`/W1`) na domyślnie)  
   
-     Poprzednie wersje kompilatora obsługiwane przypisane kodu biblioteki ATL. Jako następnej fazy usunięta obsługa ATL z atrybutami kod, który [rozpoczął się w programie Visual Studio 2008](https://msdn.microsoft.com/library/bb384632\(v=vs.90\).aspx), oparte na atrybutach kodu biblioteki ATL jest przestarzałe. Kompilator generuje teraz C4467 do identyfikowania tego rodzaju przestarzały kod ostrzeżenia kompilatora.  
+     Poprzednie wersje kompilatora obsługiwane opartego na atrybutach kodu biblioteki ATL. Jako do następnej fazy Rezygnacja z obsługi ATL z atrybutami kod, który [rozpoczął się w programie Visual Studio 2008](https://msdn.microsoft.com/library/bb384632\(v=vs.90\).aspx), opartego na atrybutach kodu biblioteki ATL jest przestarzałe. Kompilator generuje teraz C4467, aby ułatwić zidentyfikowanie tego rodzaju przestarzały kod ostrzeżenia kompilatora.  
   
     ```Output  
     warning C4467: Usage of ATL attributes is deprecated  
     ```  
   
-     Jeśli chcesz nadal używać oparte na atrybutach kodu biblioteki ATL z kompilatora została usunięta obsługa można wyłączyć to ostrzeżenie, przekazując `/Wv:18` lub `/wd:4467` argumenty wiersza polecenia do kompilatora lub dodając `#pragma warning(disable:4467)` w kodzie źródłowym.  
+     Jeśli chcesz kontynuować korzystanie z atrybutami kodu biblioteki ATL, do momentu usunięcia z kompilatora pomocy technicznej, możesz wyłączyć to ostrzeżenie, przekazując `/Wv:18` lub `/wd:4467` argumenty wiersza polecenia kompilatora lub dodając `#pragma warning(disable:4467)` w kodzie źródłowym.  
   
      Przykład 1 (przed)  
   
     ```cpp  
               [uuid("594382D9-44B0-461A-8DE3-E06A3E73C5EB")]  
     class A {};  
-  
     ```  
   
      Przykład 1 (po)  
   
     ```cpp  
     __declspec(uuid("594382D9-44B0-461A-8DE3-E06A3E73C5EB")) A {};  
-  
     ```  
   
-     Czasami może być konieczne lub chcesz utworzyć IDL plik, aby uniknąć użycia przestarzałe atrybutów ATL, tak jak poniżej przykładowy kod  
+     Czasami może być konieczne lub do utworzenia pliku IDL plik, aby uniknąć użycia przestarzałe atrybutów ATL, tak jak poniższego przykładowego kodu  
   
      Przykład 2 (przed)  
   
@@ -2548,12 +2495,11 @@ C c;
     {  
         // ...  
     };  
-  
     ```  
   
-     Najpierw należy utworzyć plik *.idl; vc140.idl wygenerowany plik może zostać użyty do uzyskania \*zawierający interfejsów i adnotacje pliku .idl.  
+     Najpierw utwórz plik *.idl; Plik vc140.idl generowane może służyć do uzyskiwania \*pliku .idl, zawierający interfejsów i adnotacji.  
   
-     Następnie dodaj krok MIDL do kompilacji, aby upewnić się, że definicje interfejsu C++ są generowane.  
+     Następnie dodaj krok MIDL do kompilacji w taki sposób, aby upewnić się, że definicje interfejsu C++ są generowane.  
   
      Przykład 2 IDL (po)  
   
@@ -2583,12 +2529,11 @@ C c;
         interface ICustom;  
     };  
     }  
-  
     ```  
   
-     Następnie należy użyć ATL bezpośrednio w pliku implementacji, tak jak przykładowy kod poniżej.  
+     Następnie należy użyć biblioteki ATL, bezpośrednio w pliku implementacji, tak jak poniższego przykładowego kodu.  
   
-     Przykład 2 implementacji (po)  
+     Przykład 2 wdrożenia (po)  
   
     ```cpp  
     #include <idl.header.h>  
@@ -2603,17 +2548,14 @@ C c;
             COM_INTERFACE_ENTRY(ICustom)  
         END_COM_MAP()  
     };  
-  
     ```  
   
--   **Prekompilowanych plików nagłówka (PCH) i jest niezgodny # dyrektywy include** (dotyczy tylko/Wall /WX)  
+- **Prekompilowanych plików nagłówka (PCH) i niezgodny # dyrektywy include** (dotyczy tylko `/Wall` `/WX`)  
   
-     Poprzednie wersje kompilatora zaakceptowane niezgodne `#include` dyrektywy w plikach źródłowych między `-Yc` i `-Yu` kompilacje używając prekompilowanych plików nagłówka (PCH). Kod napisany w ten sposób nie jest akceptowane przez kompilator.   Kompilator teraz niezgodne kompilatora problemów ostrzeżenie CC4598 zidentyfikować `#include` dyrektywy podczas korzystania z plików PCH.  
+     Poprzednie wersje kompilatora zaakceptowane niezgodny `#include` dyrektywy w plikach źródłowych między `-Yc` i `-Yu` kompilacje, korzystając z prekompilowanych plików nagłówka (PCH). Kod napisany w ten sposób nie jest akceptowana przez kompilator.   Kompilator teraz niezgodny CC4598, aby ułatwić zidentyfikowanie ostrzeżenia kompilatora, problemy z `#include` dyrektywy podczas korzystania z plików PCH.  
   
     ```Output  
-  
     warning C4598: 'b.h': included header file specified for Ycc.h at position 2 does not match Yuc.h at that position  
-  
     ```  
   
      Przykład (przed):  
@@ -2624,7 +2566,6 @@ C c;
     #include "a.h"  
     #include "b.h"  
     #include "c.h"  
-  
     ```  
   
      Z.cpp (-Yuc.h)  
@@ -2633,7 +2574,6 @@ C c;
     #include "b.h"  
     #include "a.h"  // mismatched order relative to X.cpp  
     #include "c.h"  
-  
     ```  
   
      Przykład (po)  
@@ -2644,7 +2584,6 @@ C c;
     #include "a.h"  
     #include "b.h"   
     #include "c.h"  
-  
     ```  
   
      Z.cpp (-Yuc.h)  
@@ -2653,42 +2592,35 @@ C c;
     #include "a.h"  
     #include "b.h" // matched order relative to X.cpp  
     #include "c.h"  
-  
     ```  
   
--   **Prekompilowanych plików nagłówka (PCH) i jest niezgodny Dołącz katalogi** (dotyczy tylko/Wall /WX)  
+- **Prekompilowanych plików nagłówka (PCH) i niezgodne katalogi dołączania** (dotyczy tylko `/Wall` `/WX`)  
   
-     Poprzednie wersje kompilatora zaakceptowane niezgodne katalog dołączania (`-I`) argumenty wiersza polecenia dla kompilatora między `-Yc` i `-Yu` kompilacje używając prekompilowanych plików nagłówka (PCH). Kod napisany w ten sposób nie jest akceptowane przez kompilator.   Katalog dołączania kompilatora teraz kompilatora problemów ostrzeżenie CC4599 zidentyfikować niezgodne (`-I`) argumenty wiersza polecenia, korzystając z plików PCH.  
+     Poprzednie wersje kompilatora zaakceptowane, niezgodny katalog dołączania (`-I`) argumenty wiersza polecenia dla kompilatora między `-Yc` i `-Yu` kompilacje, korzystając z prekompilowanych plików nagłówka (PCH). Kod napisany w ten sposób nie jest akceptowana przez kompilator.   Katalog dołączania kompilatora teraz CC4599, aby ułatwić zidentyfikowanie ostrzeżenia kompilatora, problemów niezgodność (`-I`) argumenty wiersza polecenia podczas korzystania z plików PCH.  
   
     ```Output  
-  
     warning C4599: '-I..' : specified for Ycc.h at position 1 does not match Yuc.h at that position  
-  
     ```  
   
      Przykład (przed)  
   
     ```ms-dos  
-  
     cl /c /Wall /Ycc.h -I.. X.cpp  
     cl /c /Wall /Yuc.h Z.cpp  
-  
     ```  
   
      Przykład (po)  
   
     ```ms-dos  
-  
     cl /c /Wall /Ycc.h -I.. X.cpp  
     cl /c /Wall /Yuc.h -I.. Z.cpp  
-  
     ```  
   
 ## <a name="visual-studio-2013-conformance-changes"></a>Visual Studio 2013 Conformance Changes  
   
-### <a name="compiler"></a>Kompilatora  
+### <a name="compiler"></a>Kompilator  
   
--   Ostateczne — słowo kluczowe teraz generuje błąd nierozwiązane symbol którym go będzie mieć skompilowane wcześniej:  
+- **Końcowego** — słowo kluczowe generuje nieokreślony symbol błędu, gdy kompilacja przebiegała wcześniej:  
   
     ```cpp  
     struct S1 {  
@@ -2703,12 +2635,11 @@ C c;
     {  
         p->f();  
     }  
-  
     ```  
   
-     We wcześniejszych wersjach, błąd nie był generowany ponieważ wywołanie było wywołaniem wirtualnym; niemniej jednak program ulegał awarii w czasie wykonywania. Teraz zostaje zgłoszony błąd konsolidatora, ponieważ wiadomo, że klasa jest ostateczna. W tym przykładzie Aby naprawić błąd, należy połączyć przed obj, który zawiera definicję S2::f.  
+     We wcześniejszych wersjach, błąd nie był generowany ponieważ wywołanie było **wirtualnego** wywołania; Niemniej jednak program ulegał awarii w czasie wykonywania. Teraz zostaje zgłoszony błąd konsolidatora, ponieważ wiadomo, że klasa jest ostateczna. W tym przykładzie, aby naprawić błąd, należy połączyć przeciwko obj, który zawiera definicję `S2::f`.  
   
--   Podczas korzystania z funkcji friend w przestrzeni nazw, należy ponownie zadeklarować funkcji zaprzyjaźnionej przed odwołuje się lub ponieważ kompilator teraz zgodne z normą ISO C++ spowoduje błąd. Na przykład, ten kod się już nie kompiluje:  
+- Gdy używasz zaprzyjaźnionych funkcji w przestrzeniach nazw, musisz ponownie zdeklarować zaprzyjaźnioną funkcję zanim odwołasz się do niego lub otrzymasz błąd, ponieważ kompilator jest teraz zgodny ze standardem ISO C++. Na przykład, ten kod się już nie kompiluje:  
   
     ```cpp  
     namespace NS {  
@@ -2721,10 +2652,9 @@ C c;
             NS::func(this);  // error  
         }  
     }  
-  
     ```  
   
-     Aby poprawić ten kod, zadeklaruj funkcję zaprzyjaźnioną:  
+     Aby poprawić ten kod, Zadeklaruj **friend** funkcji:  
   
     ```cpp  
     namespace NS {  
@@ -2738,10 +2668,9 @@ C c;
         void C::func(int) {  
             NS::func(this);  
         }  
-  
     ```  
   
--   C++ Standard nie zezwala na jawna Specjalizacja w klasie. Mimo że kompilator Microsoft Visual C++ pozwala w niektórych przypadkach, w przypadkach, takich jak poniższy przykład generowany jest błąd teraz ponieważ kompilator nie należy wziąć pod uwagę funkcji second się specjalizacja pierwsza z nich.  
+- C++ Standard nie zezwala na jawną specjalizacją w klasie. Mimo że kompilator Microsoft Visual C++ dopuszcza to w niektórych przypadkach, w przypadkach, takich jak poniższy przykład błąd jest generowany, ponieważ kompilator nie bierze pod uwagę drugiej funkcji jako specjalizacji pierwszej.  
   
     ```cpp  
     template < int N>  
@@ -2752,17 +2681,15 @@ C c;
     };  
   
     template class S< 1>;  
-  
     ```  
   
      Aby poprawić ten kod, zmodyfikuj drugą funkcję:  
   
     ```cpp  
     template <> void f(char& val);  
-  
     ```  
   
--   Kompilator nie próbuje odróżniania dwóch funkcji w poniższym przykładzie, a teraz emituje błąd:  
+-   Kompilator nie próbuje już odróżnić dwie funkcje w poniższym przykładzie i teraz produkuje błąd:  
   
     ```cpp  
     template< typename T> void Func(T* t = nullptr);  
@@ -2771,7 +2698,6 @@ C c;
     int main() {  
         Func< int>(); // error  
     }  
-  
     ```  
   
      Aby poprawić ten kod, wyjaśnij wywołanie:  
@@ -2783,31 +2709,27 @@ C c;
     int main() {  
         Func< int>(nullptr); // ok  
     }  
-  
     ```  
   
--   Przed dokonaniem kompilator zgodne z normą ISO C ++ 11, skompilowany i spowodował następujący kod x rozpoznane jako typ int:  
+- Przed dokonaniem zmiany zgodne z ISO C ++ 11, poniższy kod będzie się kompilował i powodował `x` do rozpoznawania typu **int**:  
   
     ```cpp  
     auto x = {0};  
     int y = x;  
-  
     ```  
   
-     Ten kod teraz rozpoznaje x z typem obiektu std::initializer_list\<int > i powoduje błąd w następnym wierszu, który próbuje przypisać x na typ int. (Nie ma domyślnej konwersji.) Aby rozwiązać ten kod, należy użyć int zastąpić automatycznie:  
+     Ten kod teraz rozwiązuje `x` dla typu `std::initializer_list<int>` i powoduje błąd w następnym wierszu, który próbuje przypisać `x` na typ **int**. (Nie ma domyślnej konwersji.) Aby poprawić ten kod, należy użyć **int** zastąpić **automatycznie**:  
   
     ```cpp  
     int x = {0};  
     int y = x;  
-  
     ```  
   
--   Inicjalizacja agregująca nie jest dozwolone, gdy typ po prawej stronie wartości niezgodny z typem wartości po lewej stronie, która jest inicjowany, a ponieważ ISO C ++ 11 Standard wymaga jednolite inicjowanie pracę bez, zgłaszany jest błąd Zawężanie konwersji. Wcześniej, jeśli zawężanie konwersji była dostępna, [C4242 ostrzeżenie kompilatora (poziom 4)](../error-messages/compiler-warnings/compiler-warning-level-4-c4242.md) ostrzeżenie będą wyświetlone zamiast błędu.  
+- Inicjowanie agregacji nie jest dozwolony, gdy typ wartości po prawej stronie jest niezgodny z typem wartości po lewej stronie, który jest inicjowany, i zgłaszany jest błąd, ponieważ ISO C ++ 11 Standard wymaga jednolitej inicjalizacji działającej bez Konwersje zawężające. Wcześniej, jeśli powoduje zawężenie konwersji była dostępna, [ostrzeżenie kompilatora (poziom 4) C4242](../error-messages/compiler-warnings/compiler-warning-level-4-c4242.md) ostrzeżenie będzie wystawiony zamiast błędu.  
   
     ```cpp  
     int i = 0;  
     char c = {i}; // error  
-  
     ```  
   
      Aby poprawić ten kod, dodaj jawną konwersję zawężającą:  
@@ -2815,14 +2737,12 @@ C c;
     ```cpp  
     int i = 0;  
     char c = {static_cast<char>(i)};  
-  
     ```  
   
--   Następujące inicjowania nie jest dozwolony:  
+-   Następujące inicjowanie nie jest już dozwolone:  
   
     ```cpp  
     void *p = {{0}};  
-  
     ```  
   
      Aby poprawić ten kod, użyj którejś z tych postaci:  
@@ -2831,10 +2751,9 @@ C c;
     void *p = 0;  
     // or  
     void *p = {0};  
-  
     ```  
   
--   Nazwa wyszukiwania została zmieniona. Następujący kod został rozwiązany inaczej w kompilatorze języka C++ w programie Visual Studio 2012 i Visual Studio 2013:  
+- Wyszukiwanie nazw zostało zmienione. Następujący kod jest rozwiązywany w inny sposób w kompilatorze języka C++ w Visual Studio 2012 i Visual Studio 2013:  
   
     ```cpp  
     enum class E1 { a };  
@@ -2845,12 +2764,11 @@ C c;
         typedef E2 E1;  
         E1::b;  
     }  
-  
     ```  
   
-     W programie Visual Studio 2012, rozpoznać E1 w wyrażeniu E1::b:: E1 w zakresie globalnym. W programie Visual Studio 2013, E1 w wyrażeniu E1::b jest rozpoznawany jako element typedef E2 definicji w main() i ma typ:: E2.  
+     W programie Visual Studio 2012 `E1` w wyrażeniu `E1::b` rozpoznany `::E1` w zakresie globalnym. W programie Visual Studio 2013 `E1` w wyrażeniu `E1::b` jest rozpoznawana jako `typedef E2` definicji w `main()` i ma typ `::E2`.  
   
--   {1&gt;Układ obiektu został zmieniony.&lt;1} W x64, układ obiektu klasy może się zmienić w porównaniu z poprzednimi wydaniami. Jeśli ma on funkcję wirtualną, ale nie ma klasy podstawowej, która ma funkcję wirtualną, model obiektu kompilatora wstawia wskaźnik do tablicy funkcji wirtualnych po układzie składowej danych. Oznacza to, że układ może nie być optymalny we wszystkich przypadkach. W poprzednich wersjach Optymalizacja x64 może spróbować poprawić układu dla Ciebie, ale ponieważ nie działa prawidłowo w sytuacjach złożonego kodu, został usunięty w programie Visual Studio 2013. Na przykład, rozważmy ten kod:  
+- {1&gt;Układ obiektu został zmieniony.&lt;1} W x64, układ obiektu klasy może się zmienić w porównaniu z poprzednimi wydaniami. Jeśli ma on **wirtualnego** funkcji, ale nie ma klasę bazową, która ma **wirtualnego** funkcji, model obiektu kompilatora wstawia wskaźnik do **wirtualnego** tabeli — funkcja Po układzie składowej danych. Oznacza to, że układ może nie być optymalny we wszystkich przypadkach. W poprzednich wersjach Optymalizacja x64 próbowała poprawić układ, ale ponieważ nie mogła działać poprawnie w sytuacjach, w złożonym kodzie, został usunięty w programie Visual Studio 2013. Na przykład, rozważmy ten kod:  
   
     ```cpp  
     __declspec(align(16)) struct S1 {  
@@ -2861,10 +2779,9 @@ C c;
         void *p;  
         S1 s;  
     };  
-  
     ```  
   
--   W programie Visual Studio 2013 wynik sizeof(S2) na x64 jest 48, ale w poprzednich wersjach, ocenia 32 znaków. Aby to ocenić 32 w kompilatorze języka C++ w programie Visual Studio 2013 dla x64, Dodaj klasę podstawową fikcyjny ma funkcję wirtualną:  
+- W programie Visual Studio 2013, wynikiem `sizeof(S2)` na x64 wynosi 48, ale w poprzednich wersjach był oceniany do 32. Aby na 32 w kompilatorze języka C++ w programie Visual Studio 2013 x64, Dodaj fikcyjną klasy bazową, która ma **wirtualnego** funkcji:  
   
     ```cpp  
     __declspec(align(16)) struct S1 {  
@@ -2878,10 +2795,9 @@ C c;
         void *p;  
         S1 s;  
     };  
-  
     ```  
   
-     Znajdowanie miejsc w kodzie wcześniejsza wersja będzie próbować optymalizacji, użyj kompilatora z tą wersją wraz z /W3 — opcja kompilatora i włączyć 4370 ostrzeżenie. Na przykład:  
+     Aby znaleźć miejsca w kodzie, które wcześniejsza wersja próbowałaby zoptymalizować, użyj kompilatora z tamtej wersji wraz z `/W3` — opcja kompilatora i Włącz ostrzeżenie 4370. Na przykład:  
   
     ```cpp  
     #pragma warning(default:4370)  
@@ -2894,12 +2810,11 @@ C c;
         void *p;  
         S1 s;  
     };  
-  
     ```  
   
-     Przed Visual Studio 2013, ten kod wyświetla ten komunikat: "ostrzeżenie C4370:"S2": układ klasy zmienił się od poprzedniej wersji kompilatora, ze względu na lepsze pakowanie".  
+     Przed Visual Studio 2013, ten kod wyświetla następujący komunikat: "ostrzeżenie C4370:"S2": układ klasy zmienił się z poprzedniej wersji kompilatora ze względu na lepsze pakowanie".  
   
-     X86 kompilatora ma ten sam problem nieoptymalnych układ we wszystkich wersjach kompilatora. Na przykład, jeśli ten kod jest kompilowany dla architektury x86:  
+     X86 kompilatora ma ten sam problem z nieoptymalnym układem we wszystkich wersjach kompilatora. Na przykład, jeśli ten kod jest kompilowany dla architektury x86:  
   
     ```cpp  
     struct S {  
@@ -2907,10 +2822,9 @@ C c;
         int i;  
         double d;  
     };  
-  
     ```  
   
-     Wynik sizeof (S) jest 24. Można go jednak zmniejszyć do 16, jeśli użyje się wymienionego wcześniej obejścia dla x64:  
+     Wynik `sizeof(S)` to 24. Można go jednak zmniejszyć do 16, jeśli użyje się wymienionego wcześniej obejścia dla x64:  
   
     ```cpp  
     struct dummy {  
@@ -2922,606 +2836,604 @@ C c;
         int i;  
         double d;  
     };  
-  
     ```  
   
 ### <a name="standard-library"></a>Standardowa biblioteka  
- Kompilator języka C++ w programie Visual Studio 2013 wykrywa niezgodności _ITERATOR_DEBUG_LEVEL, które zostało wdrożone w Visual Studio 2010, a RuntimeLibrary niezgodności. One wystąpić, gdy kompilatora opcje/MT (statyczne release), /MTd (debugowanie statycznych), / / MD (wersja dynamicznych) i/mdd (debugowanie dynamiczne).  
+Kompilator języka C++ w programie Visual Studio 2013 wykrywa niezgodności w _ITERATOR_DEBUG_LEVEL, który został wprowadzony w programie Visual Studio 2010, i niezgodności RuntimeLibrary. Występują one po opcji kompilatora `/MT` (wersja statyczna), `/MTd` (statyczna do debugowania), `/MD` (Oficjalna wersja dynamiczna) i `/MDd` (wersja dynamiczna do debugowania) są mieszane.  
   
--   Kod potwierdza szablonów aliasów symulowane poprzedniej wersji, należy ją zmienić. Na przykład zamiast allocator_traits —\<A >:: rebind_alloc\<U >:: innych, teraz trzeba powiedzieć allocator_traits —\<A >:: rebind_alloc\<U >. Mimo że ratio_add\<R1, R2 >:: typu nie jest już konieczne, i teraz zalecamy, aby powiedzieć ratio_add\<R1, R2 >, pierwsza będą nadal skompilować, ponieważ współczynnik\<N, D > musi być typem typedef "type" dla obniżonej stosunek, którego ma być tego samego typu, jeśli już zostanie zmniejszona.  
+- Twój kod potwierdza szablony aliasów symulowane poprzedniej wersji, należy ją zmienić. Na przykład, zamiast z `allocator_traits<A>::rebind_alloc<U>::other`, teraz należy podać `allocator_traits<A>::rebind_alloc<U>`. Mimo że `ratio_add<R1, R2>::type` nie jest już konieczny i teraz zalecamy powiedzieć `ratio_add<R1, R2>`, pierwsza będzie nadal kompilować ponieważ `ratio<N, D>` musi mieć element typedef "type" dla obniżonego współczynnika, który będzie tego samego typu, jeśli jest on już ograniczony.  
   
--   Należy użyć #include \<algorytm > podczas wywoływania std::min() lub std::max().  
+- Należy użyć `#include <algorithm>` podczas wywoływania `std::min()` lub `std::max()`.  
   
--   Jeśli używany przez istniejący kod poprzedniej wersji elementu symulowane zakres wyliczenia — tradycyjnych niewystępującego w zakresie wyliczenia opakowane w przestrzeniach nazw — trzeba je zmienić. Na przykład jeśli określony typ std::future_status::future_status, teraz należy powiedzieć std::future_status. Jednak większość kodu nie mają wpływu — na przykład std::future_status::ready nadal kompiluje.  
+- Jeśli istniejący kod używa symulowanych poprzedniej wersji typów wyliczeniowych — tradycyjnych typów wyliczeniowych zapakowane w przestrzeni nazw bez zakresu — trzeba go zmienić. Na przykład, jeśli odwołanie do typu `std::future_status::future_status`, teraz należy podać `std::future_status`. Jednak większość kodu pozostanie nienaruszona — na przykład `std::future_status::ready` nadal będzie się kompilować.  
   
--   jawny operator bool() jest bardziej restrykcyjne od unspecified-bool-type() operatora. zezwala na bool() jawny operator jawnej konwersji na typ logiczny — na przykład podane shared_ptr\<X > sp, zarówno static_cast\<bool > (sp) i bool b(sp) są prawidłowe — i wartość logiczną skonfigurowaną "konwersje kontekstowych" na typ logiczny — na przykład Jeśli (sp),! sp, sp & & niezależnie od. Jednak bool() jawny operator zabrania niejawne konwersje na bool, więc nie można podać bool b = sp; a podana zwracanego typu bool, nie można powiedzieć sp zwracany.  
+- `explicit operator bool()` jest bardziej restrykcyjny niż unspecified-bool-type() operatora. `explicit operator bool()` zezwala na jawną konwersję na bool — na przykład, biorąc pod uwagę `shared_ptr<X> sp`, zarówno `static_cast<bool>(sp)` i `bool b(sp)` są prawidłowe — oraz weryfikowalne logicznych "konwersje kontekstowe" na bool — na przykład `if (sp)`, `!sp`, `sp &&` niezależnie od. Jednak `explicit operator bool()` zabrania konwersji niejawnych do bool, więc nie można zadeklarować `bool b = sp;` i biorąc pod uwagę zwracany typ bool, nie można zadeklarować `return sp`.  
   
--   Teraz, gdy zostaną zaimplementowane szablony wariadyczne prawdziwe, _VARIADIC_MAX i powiązanych makr nie obowiązują. Jeżeli nadal definiujesz _VARIADIC_MAX, jest to po prostu ignorowane. Jeśli przyjmiesz nasze rozwiązania makr przeznaczone do wspierania symulowanych szablonów wariadycznych w jakikolwiek inny sposób, musisz zmienić kod.  
+- Teraz, szablony zmiennych rzeczywistych, _VARIADIC_MAX i powiązane makra nie mają wpływu. Jeżeli nadal definiujesz _VARIADIC_MAX, jest to po prostu ignorowane. Jeśli przyjmiesz nasze rozwiązania makr przeznaczone do wspierania symulowanych szablonów wariadycznych w jakikolwiek inny sposób, musisz zmienić kod.  
   
--   Oprócz zwykłych słów kluczowych nagłówki standardowa biblioteka C++ zabraniać makro izing kontekstowe słowa kluczowe "override" i "końcowe".  
+- Oprócz zwykłych słów kluczowych, nagłówki standardowej biblioteki języka C++ teraz zabraniają tworzenia makropoleceń kontekstowych słów kluczowych **zastąpienia** i **końcowego**.  
   
--   reference_wrapper/REF()/cref() teraz zabraniać powiązanie do obiektów tymczasowych.  
+- reference_wrapper/REF()/cref() teraz zabraniają powiązania do obiektów tymczasowych.  
   
--   \<losowe > teraz ściśle wymusza warunki wstępne jego kompilacji.  
+- \<losowy > teraz ściśle wymusza jego warunki wstępne czasu kompilacji.  
   
--   Różnych cech typu standardowa biblioteka C++ mieć warunek wstępny "T być pełny typ to". Mimo że kompilator wymusza to teraz bardziej restrykcyjnie, nie może go wymusić we wszystkich sytuacjach. (Ponieważ naruszeń warunek wstępny standardowa biblioteka C++ wyzwolić niezdefiniowane zachowanie, Standard nie gwarantuje wymuszania.)  
+- Różne cechy typu standardowej biblioteki języka C++ mają warunek wstępny "T musi być typem kompletnym". Mimo że kompilator wymusza to teraz bardziej restrykcyjnie, nie może go wymusić we wszystkich sytuacjach. (Ponieważ naruszenia warunku wstępnego standardowej biblioteki języka C++ wyzwolić niezdefiniowane zachowanie, Standard nie gwarantuje egzekwowania.)  
   
--   Standardowa biblioteka C++ nie obsługuje: oldsyntax.  
+- Standardowa biblioteka C++ nie obsługuje `/clr:oldSyntax`.  
   
--   W języku C ++ 11 specyfikacji <> common_type — ma nieoczekiwany i niepożądane skutki; w szczególności ułatwia common_type —\<int, int >:: typ zwracany int & &. W związku z tym kompilator implementuje proponowane rozwiązanie problemu grupę roboczą bibliotece 2141, dzięki czemu common_type —\<int, int = "" >:: typ zwracany int.  
+- C ++ 11 specyfikacji common_type <> miała niepożądane i nieoczekiwane konsekwencje; w szczególności, to sprawia, że common_type\<int, int >:: typ zwracany int & &. W związku z tym, kompilator implementuje proponowane rozwiązanie dotyczące grupy roboczej Biblioteka, wydanie 2141, co sprawia, że common_type\<int, int = "" >:: typ zwracany int.  
   
-     Jako efekt uboczny tej zmiany, nie będzie działać w przypadku tożsamości (common_type —\<T > nie zawsze powoduje typu T). Jest to zgodne z Proponowanym rozwiązaniem, ale unieważnia jakikolwiek kod, który opierał się na poprzednim zachowaniu.  
+     Jako efekt uboczny tej zmiany, przestaje działać przypadek tożsamości (common_type\<T > nie zawsze skutkuje typem T). Jest to zgodne z Proponowanym rozwiązaniem, ale unieważnia jakikolwiek kod, który opierał się na poprzednim zachowaniu.  
   
-     Jeśli potrzebujesz cechy typu tożsamości, nie używaj std::identity niestandardowej, która jest zdefiniowana w < type_traits >, ponieważ nie będzie działać dla \<void >. Zamiast tego wdróż własną cechę typu tożsamości odpowiednią do własnych potrzeb. Oto przykład:  
+     Jeśli wymagasz cechy typu tożsamości, nie używaj niestandardowego typu `std::identity` zdefiniowanego w \<type_traits >, ponieważ nie będzie działać dla \<void >. Zamiast tego wdróż własną cechę typu tożsamości odpowiednią do własnych potrzeb. Oto przykład:  
   
     ```cpp  
     template < typename T> struct Identity {  
         typedef T type;  
     };  
-  
     ```  
   
 ### <a name="mfc-and-atl"></a>MFC i ATL  
   
--  **Visual Studio 2013 r. z tylko**: Biblioteka MFC MBCS jest niedostępna w programie Visual Studio, ponieważ Unicode jest więc popularnych i znacznie zmniejsza użycie MBCS. Ta zmiana podtrzymuje również ściślejszą relację między MFC a Windows SDK. ponieważ wiele nowych kontrolek i komunikatów wymaga Unicode. Jednak jeśli nadal należy używać biblioteki MFC MBCS, można go pobrać z Centrum pobierania MSDN [wielobajtowe Biblioteka MFC dla programu Visual Studio 2013](https://www.microsoft.com/en-us/download/details.aspx?id=40770). Pakiet redystrybucyjny Visual C++ wciąż zawiera tę bibliotekę.  (Uwaga: MBCS DLL jest uwzględniona w C++ składników instalacji programu Visual Studio 2015 i nowsze).
+- **Programu Visual Studio 2013 tylko**: Biblioteka MFC MBCS jest niedostępna w programie Visual Studio, ponieważ Unicode jest bardzo popularny i zastosowanie MBCS jest dużo mniejsze. Ta zmiana podtrzymuje również ściślejszą relację między MFC a Windows SDK. ponieważ wiele nowych kontrolek i komunikatów wymaga Unicode. Jednak jeśli musisz nadal korzystać z biblioteki MFC MBCS, możesz ją pobrać z Centrum pobierania MSDN, w [wielobajtowych MFC Library for Visual Studio 2013](https://www.microsoft.com/en-us/download/details.aspx?id=40770). Pakiet redystrybucyjny Visual C++ wciąż zawiera tę bibliotekę.  (Uwaga: biblioteki DLL MBCS znajduje się w C++ składników instalacji programu Visual Studio 2015 lub nowszy).
   
--   Ułatwienia dostępu dla wstążki MFC zostanie zmieniona.  Zamiast architektury jeden poziom jest teraz architekturę hierarchiczną. Można nadal używać starego zachowania przez wywołanie CRibbonBar::EnableSingleLevelAccessibilityMode().  
+- Ułatwienia dostępu dla wstążki MFC jest zmieniany.  Zamiast architektury jednego poziomu jest teraz architektura hierarchiczna. Można nadal używać starego zachowania wywołując `CRibbonBar::EnableSingleLevelAccessibilityMode()`.  
   
--   Metoda CDatabase::GetConnect zostaną usunięte. Aby zwiększyć bezpieczeństwo, parametry połączenia są obecnie przechowywane zaszyfrowane i zostaną odszyfrowane tylko w razie potrzeby; Nie można zwrócić jako zwykły tekst.  Ciąg można uzyskać za pomocą metody CDatabase::Dump.  
+- `CDatabase::GetConnect` Metoda jest usuwany. W celu poprawy bezpieczeństwa ciąg połączenia jest teraz przechowywany zaszyfrowany i odszyfrowywany tylko w razie potrzeby; nie może być zwracany jako zwykły tekst.  Ciąg znaków można uzyskać za pomocą `CDatabase::Dump` metody.  
   
--   {1&gt;Zmieniono sygnaturę CWnd::OnPowerBroadcast.&lt;1} Sygnatura tego programu obsługi komunikatu została zmieniona, aby przyjąć LPARAM jako drugi parametr.  
+- Podpis `CWnd::OnPowerBroadcast` zostanie zmieniony. Sygnatura tego programu obsługi komunikatu została zmieniona, aby przyjąć LPARAM jako drugi parametr.  
   
--   Podpisy są zmieniane w celu uwzględnienia obsługi komunikatów. Listy parametrów dla poniższych funkcji zostały zmienione, aby używać nowo dodanych programów obsługi komunikatów ON_WM_*:  
+- Sygnatury zostały zmienione, aby uwzględnić programy obsługi komunikatów. Listy parametrów dla poniższych funkcji zostały zmienione, aby używać nowo dodanych programów obsługi komunikatów ON_WM_*:  
   
-    -   CWnd::OnDisplayChange zmienione (UINT, int, int) zamiast (WPARAM LPARAM) tak, aby nowe makro ON_WM_DISPLAYCHANGE mogą być używane w mapie komunikatów.  
+    - `CWnd::OnDisplayChange` zmienione (UINT, int, int) zamiast (WPARAM, LPARAM) tak, aby nowe makro ON_WM_DISPLAYCHANGE mogą być używane w mapie komunikatów.  
   
-    -   CFrameWnd::OnDDEInitiate zmienione (CWnd *, UINT, jednostka) zamiast (WPARAM LPARAM) tak, aby nowe makro ON_WM_DDE_INITIATE mogą być używane w mapie komunikatów.  
+    - `CFrameWnd::OnDDEInitiate` zmieniony na (CWnd *, UINT, jednostka) zamiast (WPARAM, LPARAM) tak, aby nowe makro ON_WM_DDE_INITIATE mogą być używane w mapie komunikatów.  
   
-    -   CFrameWnd::OnDDEExecute zmienione aby (* dojście CWnd) zamiast (WPARAM LPARAM) tak, aby nowe makro ON_WM_DDE_EXECUTE mogą być używane w mapie komunikatów.  
+    - `CFrameWnd::OnDDEExecute` zmieniony na (* UCHWYT CWnd) zamiast (WPARAM, LPARAM) tak, aby nowe makro ON_WM_DDE_EXECUTE mogą być używane w mapie komunikatów.  
   
-    -   CFrameWnd::OnDDETerminate zmienione aby (CWnd *) jako parametr zamiast (WPARAM LPARAM) tak, aby nowe makro ON_WM_DDE_TERMINATE mogą być używane w mapie komunikatów.  
+    - `CFrameWnd::OnDDETerminate` zmieniony na (CWnd *) jako parametr zamiast (WPARAM, LPARAM) tak, aby nowe makro ON_WM_DDE_TERMINATE mogą być używane w mapie komunikatów.  
   
-    -   CMFCMaskedEdit::OnCut zmieniony na Brak parametrów zamiast (WPARAM LPARAM) tak, aby nowe makro ON_WM_CUT mogą być używane w mapie komunikatów.  
+    - `CMFCMaskedEdit::OnCut` tak, aby nowe makro ON_WM_CUT mogą być używane w mapie komunikatów, należy zmienić na bez parametrów zamiast (WPARAM, LPARAM).  
   
-    -   CMFCMaskedEdit::OnClear zmieniony na Brak parametrów zamiast (WPARAM LPARAM) tak, aby nowe makro ON_WM_CLEAR mogą być używane w mapie komunikatów.  
+    - `CMFCMaskedEdit::OnClear` tak, aby nowe makro ON_WM_CLEAR mogą być używane w mapie komunikatów, należy zmienić na bez parametrów zamiast (WPARAM, LPARAM).  
   
-    -   CMFCMaskedEdit::OnPaste zmieniony na Brak parametrów zamiast (WPARAM LPARAM) tak, aby nowe makro ON_WM_PASTE mogą być używane w mapie komunikatów.  
+    - `CMFCMaskedEdit::OnPaste` tak, aby nowe makro ON_WM_PASTE mogą być używane w mapie komunikatów, należy zmienić na bez parametrów zamiast (WPARAM, LPARAM).  
   
--   \#ifdefs w plikach nagłówek MFC zostaną usunięte. Wiele #ifdefs w nagłówku MFC plików związanych z nieobsługiwanej wersji systemu Windows (WINVER &lt; 0x0501) zostaną usunięte.  
+- \#ifdefs w plikach nagłówkowych MFC są usuwane. Liczne #ifdefs w nagłówku MFC pliki powiązane z nieobsługiwane wersje Windows (WINVER &lt; 0x0501) są usuwane.  
   
--   ATL DLL (atl120.dll) zostaną usunięte. ATL jest obecnie dostarczany jako nagłówki i biblioteka statyczna (atls.lib).  
+- Zostanie usunięty ATL DLL (atl120.dll). ATL jest obecnie dostarczany jako nagłówki i biblioteka statyczna (atls.lib).  
   
--   Atlsd.lib, atlsn.lib i atlsnd.lib zostały usunięte. Atls.lib nie ma już zależności zestawu znaków ani kodu, który jest specyficzny dla wersji do debugowania/oficjalnych. Ponieważ działa tak samo dla Unicode/ANSI i wersji do debugowania/oficjalnych, wymagana jest tylko jedna wersja biblioteki.  
+- Atlsd.lib, atlsn.lib i atlsnd.lib są usuwane. Atls.lib nie ma już zależności zestawu znaków ani kodu, który jest specyficzny dla wersji do debugowania/oficjalnych. Ponieważ działa tak samo dla Unicode/ANSI i wersji do debugowania/oficjalnych, wymagana jest tylko jedna wersja biblioteki.  
   
--   Narzędzie śledzenia ATL/MFC zostanie usunięta wraz z ATL DLL i upraszcza mechanizm śledzenia. Konstruktor CTraceCategory teraz przyjmuje jeden parametr (nazwa kategorii), a makra śledzenia wywołań debugowania CRT funkcje raportowania.  
+- Narzędzie śledzenia ATL/MFC jest usuwane wraz z biblioteką ATL DLL i mechanizm śledzenia jest uproszczony. `CTraceCategory` Konstruktor przyjmuje teraz jeden parametr (nazwę kategorii) a makra śledzenia wywoływać funkcje raportowania debugowania CRT.  
   
-## <a name="visual-c-2012-breaking-changes"></a>Visual C++ 2012 najważniejszych zmian  
+## <a name="visual-c-2012-breaking-changes"></a>Visual C++ 2012 fundamentalne zmiany  
   
-### <a name="compiler"></a>Kompilatora  
+### <a name="compiler"></a>Kompilator  
   
--   /Yl — opcja kompilatora została zmieniona. Domyślnie kompilator używa tej opcji, co może prowadzić do błędów LNK2011 w niektórych warunkach. Aby uzyskać więcej informacji, zobacz [/Yl (Wstaw Odnośnik PCH dla bibliotek debugowania)](../build/reference/yl-inject-pch-reference-for-debug-library.md).  
+- `/Yl` — Opcja kompilatora został zmieniony. Domyślnie kompilator używa tej opcji może prowadzić do błędów LNK2011 pod pewnymi warunkami. Aby uzyskać więcej informacji, zobacz [/Yl (wstrzyknąć Odnośnik PCH dla bibliotek debugowania)](../build/reference/yl-inject-pch-reference-for-debug-library.md).  
   
--   Kod, który ma być kompilowana przy użyciu/CLR enum class, słowo kluczowe definiuje C ++ 11 wyliczenia, nie wspólnego języka środowiska uruchomieniowego (języka wspólnego CLR) wyliczenia. Aby zdefiniować wyliczenia CLR, musi być jawnym o jego dostępność.  
+- W kodzie, który jest kompilowany przy użyciu `/clr`, **wyliczenia** class, słowo kluczowe definiuje C ++ 11 wyliczenia, nie wspólnego języka wspólnego (CLR) wyliczenia. Aby zdefiniować wyliczenia CLR, musi być wyraźnie jej dostępność.  
   
--   Użyj słowa kluczowego szablonu, aby odróżnić jawnie zależna nazwa (zgodność języka C++ — standardowe). W poniższym przykładzie wyróżnione template — słowo kluczowe jest wymagane w celu rozwiązania niejednoznaczności. Aby uzyskać więcej informacji, zobacz [rozpoznawanie nazwy dla typów zależnych](../cpp/name-resolution-for-dependent-types.md).  
+- Użyj słowa kluczowego szablonu, aby jawnie odróżnić nazwy zależne (zgodność w standardzie języka C++). W poniższym przykładzie wyróżnione template — słowo kluczowe jest wymagane, aby rozstrzygnąć niejednoznaczność. Aby uzyskać więcej informacji, zobacz [rozpoznawanie nazwy dla typów zależnych](../cpp/name-resolution-for-dependent-types.md).  
   
     ```cpp  
     template < typename X = "", typename = "" AY = "">  
     struct Container { typedef typename AY::template Rebind< X> ::Other AX; };  
-  
     ```  
   
--   Stałego wyrażenia typu zmiennoprzecinkowego nie jest dozwolona jako argument szablonu, jak pokazano w poniższym przykładzie.  
+- Wyrażenie stałe typu zmiennoprzecinkowego nie jest już dozwolona jako argument szablonu, jak pokazano w poniższym przykładzie.  
   
     ```cpp  
     template<float n=3.14>  
     struct B {};  // error C2993: 'float': illegal type for non-type template parameter 'n'  
-  
     ```  
   
--   Kod, który ma być kompilowana przy użyciu opcji wiersza polecenia/GS i ma luki w zabezpieczeniach poza o jedno może prowadzić do przetworzenia zakończenia w czasie wykonywania, jak pokazano w poniższym przykładzie pseudocode.  
+- Kod, który jest kompilowany przy użyciu `/GS` opcji wiersza polecenia i że ma wyłączyć po drugim luk w zabezpieczeniach może prowadzić do przetwarzania zakończenia w czasie wykonywania, jak pokazano w poniższym przykładzie pseudokodzie.  
   
     ```cpp  
     char buf[MAX]; int cch; ManipulateString(buf, &cch); // ... buf[cch] = '\0'; // if cch >= MAX, process will terminate  
     ```  
   
--   Architektura domyślne x86 kompilacji jest zmieniana na SSE2; Dlatego kompilator może emitować instrukcje SSE i użyje rejestrów XMM do obliczeń zmiennoprzecinkowych. Jeśli chcesz powrócić do poprzedniej zachowanie, Użyj flagi kompilatora /arch:IA32 umożliwia określenie architekturę jako IA32.  
+- Architektura domyślne dla kompilacji zostanie zmieniony na SSE2; x86 w związku z tym kompilator może emitować instrukcji SSE i użyje rejestrów XMM do wykonywania obliczeń zmiennopozycyjnych. Jeśli chcesz przywrócić poprzednie zachowanie, użyj `/arch:IA32` flagi kompilatora, aby określić architekturę jako IA32.  
   
--   Kompilator może wydać ostrzeżenia [C4703 ostrzeżenie kompilatora (poziom 4)](../error-messages/compiler-warnings/compiler-warning-level-4-c4703.md) i C4701, na którym wcześniej go nie. Kompilator stosuje silniejsze kontrole niezainicjowanych zmiennych lokalnych typu wskaźnika do użytku.  
+- Kompilator może wydać ostrzeżenia [ostrzeżenie kompilatora (poziom 4) C4703](../error-messages/compiler-warnings/compiler-warning-level-4-c4703.md) i C4701, na którym wcześniej ją nie zmieniła się. Kompilator stosuje silniejsze kontrole do użytku niezainicjowanych zmiennych lokalnych typu wskaźnika.  
   
--   Gdy nowy konsolidatora flagi/highentropyva jest określony, Windows 8 zwykle powoduje, że przydziału pamięci zwrócić 64-bitowy adres.                 (Przed systemem Windows 8 takich przydziałów częściej zwrócił adresów, które były mniej niż 2 GB.)  Ta operacja może narazić usterki obcięcie wskaźnika w istniejącym kodzie. Domyślnie ten przełącznik jest na.  Aby wyłączyć to zachowanie, należy określić /HIGHENTROPYVA:NO.  
+- Kiedy flagi konsolidatora nowe `/HIGHENTROPYVA` jest określona, system Windows 8 zwykle powoduje alokacji pamięci zwrócić adres 64-bitowych. (Przed systemu Windows 8 takich przydziałów częściej zwrócone adresy, które były mniej niż 2 GB.) Może to wystawić usterki obcięcie wskaźnika w istniejącym kodzie. Domyślnie ten przełącznik jest włączony. Aby wyłączyć to zachowanie, należy określić `/HIGHENTROPYVA:NO`.  
   
--   Kompilator zarządzanych (Visual Basic / C#) obsługuje również/highentropyva dla zarządzanych kompilacji.  Jednak w takim przypadku /HIGHENTROPYVAswitch jest wyłączone domyślnie.  
+- Kompilator zarządzanych (Visual Basic / C#) obsługuje również `/HIGHENTROPYVA` dla zarządzanych kompilacji.  Jednak w tym przypadku `/HIGHENTROPYVAswitch` jest domyślnie wyłączona.  
   
 ### <a name="ide"></a>IDE  
   
--   Mimo że firma Microsoft zaleca, aby nie twórz aplikacji formularzy systemu Windows w języku C + +/ CLI i konserwacja istniejących C + +/ CLI interfejsu użytkownika aplikacji jest obsługiwana. Jeśli masz do tworzenia aplikacji formularzy systemu Windows lub innej aplikacji .NET interfejsu użytkownika, należy użyć C# lub Visual Basic. Użyj C + +/ CLI współdziałania tylko do celów.  
+- Mimo że zaleca się, że należy tworzyć aplikacje Windows Forms w języku C + +/ CLI, konserwacja istniejących C + +/ interfejsu wiersza polecenia w interfejsie użytkownika aplikacji jest obsługiwany. W przypadku tworzenia aplikacji Windows Forms lub innej aplikacji interfejsu użytkownika platformy .NET, należy użyć języka C# lub Visual Basic. Użyj języka C + +/ CLI współdziałania w ramach wyłącznie do celów.  
   
-### <a name="parallel-patterns-library-and-concurrency-runtime-library"></a>Biblioteka równoległych wzorców i biblioteki wykonawczej współbieżności  
- Schedulertype — wyliczenie z UmsThreadDefault jest przestarzały. Specyfikacja UmsThreadDefault generuje ostrzeżenie przestarzałe i wewnętrznie mapy do ThreadScheduler.  
+### <a name="parallel-patterns-library-and-concurrency-runtime-library"></a>Biblioteka równoległych wzorców i Biblioteka środowiska uruchomieniowego współbieżności  
+`SchedulerType` Wyliczenie `UmsThreadDefault` jest przestarzała. Specyfikacja `UmsThreadDefault` generuje ostrzeżenie przestarzałe, a następnie wewnętrznie mapuje do `ThreadScheduler`.  
   
 ### <a name="standard-library"></a>Standardowa biblioteka  
   
--   Następujące istotne zmiany między C ++ 98/03 i C ++ 11 standardy, przy użyciu argumentów jawnego szablonu do wywołania (make_pair —) — jako inmake_pair\<int, int >(x, y) — zwykle nie kompiluje się w programie Visual C++ w programie Visual Studio 2012. Rozwiązanie to zawsze wywołania (make_pair —) bez argumentów jawnego szablonu — tak jak make_pair — (x, y). Udostępnianie stanowi zaprzeczenie argumentów jawnego szablonu w celu funkcji. Jeśli potrzebna jest ścisła kontrola nad wynikowy typ, użyj pary zamiast make_pair — — tak jak pary\<krótkie, krótki >(int1, int2).  
+- Następujące istotnej zmiany między C ++ 11 standardów i języka C ++ 98/03, za pomocą jawnych argumentów szablonów do wywołania `make_pair()` — podobnie jak w `make_pair<int, int>(x, y)` — zwykle nie można skompilować w programie Visual C++ w programie Visual Studio 2012. Rozwiązaniem jest zawsze wywołuj `make_pair() `bez jawnych argumentów szablonów — podobnie jak w `make_pair(x, y)`. Zapewnianie zaprzeczenie argumentów jawnego szablonu celem tej funkcji. Jeśli potrzebujesz precyzyjną kontrolę nad tym wynikowy typ, użyj `pair` zamiast `make_pair` — podobnie jak w `pair<short, short>(int1, int2)`.  
   
--   Inna zmiana podziału między C ++ 98/03 i C ++ 11 standardy: po umożliwiają niejawnej konwersji na A B i B jest niejawnie przekonwertować C, ale A nie umożliwiają niejawnej konwersji na C i C ++ 98/03 Visual C++ 2010 dozwolone pary\<, X > należy przekonwertować () jawnie lub niejawnie) parę\<C, X >. (Type, X, nie jest tutaj odsetek i nie jest specyficzne dla pierwszego typu pary.) Ponieważ C ++ 11 i kompilator języka C++ w programie Visual Studio 2012 wykrył, że A jest nie umożliwiają niejawnej konwersji na C, będą oni mogli usunąć konwersja pary z wiązaniem. Jest to pozytywnych zmian w różnych scenariuszach. Na przykład przeładowanie func (const pary\<int, int > &) i func (const pary\<ciąg, ciąg > &) i wywoływanie func() z pary\<const char *, const char \*> zostanie skompilowany z tą zmianą. Jednak ta zmiana dzieli kod, który będzie zależał od konwersje agresywne pary. Zazwyczaj można naprawić taki kod, wykonując jedną z części konwersji jawnie — na przykład przez przekazanie make_pair — (operatora static_cast\<B > (a), x) do funkcji, która oczekuje pary\<C, X >.  
+- Innego istotnej zmiany między C ++ 11 standardów i języka C ++ 98/03: podczas jest niejawnie konwertowany na B i B jest niejawnie konwertowany na C, A nie jest niejawnie konwertowany na C i C ++ 98/03 Visual C++ 2010 dozwolone, ale `pair<A, X>` ma zostać przekonwertowany (niejawnie jawnie lub) do `pair<C, X>`. (Typ, X, nie jest tutaj interesują, a nie jest specyficzne dla pierwszego typu w parze.) Ponieważ C ++ 11 i kompilator języka C++ w programie Visual Studio 2012 wykryć, A nie jest niejawnie konwertowany na C, usuwają pary konwersja przeciążeniu rozdzielczości. Jest to pozytywnych zmian w wielu scenariuszach. Na przykład przeciążenie `func(const pair<int, int>&)` i `func(const pair<string, string>&)`i wywoływać metodę `func()` z `pair<const char *, const char *>` będzie kompilowany przy użyciu tej zmiany. Jednak ta zmiana podziały wierszy kodu, który opierał się na konwersji agresywne pary. Zazwyczaj można naprawić tego kodu, wykonując jedną z części pakietu konwersji jawnie — na przykład, przekazując `make_pair(static_cast<B>(a), x)` do funkcji, która oczekuje `pair<C, X>`.  
   
--   Visual C++ 2010 symulowane szablony wariadyczne — na przykład make_shared —\<T > (arg1, arg2, argN) — do limitu 10 argumenty, znakowania przeciążenia i specjalizacje preprocesora maszyny. W programie Visual Studio 2012 ten limit, zostanie zmniejszona do 5 argumentów, aby zwiększyć czas kompilacji i zmniejszenie zużycia pamięci kompilatora dla większości użytkowników. Jednak można ustawić poprzedniej limit przez jawne zdefiniowanie _VARIADIC_MAX jako 10, na poziomie projektu.  
+- Visual C++ 2010 symulowane szablony wariadyczne — na przykład `make_shared<T>(arg1, arg2, argN)`— do określonego limitu 10 argumentów, przez wybijaniu przeciążenia i specjalizacje z preprocesora maszyny. W programie Visual Studio 2012 to ograniczenie jest ograniczone do 5 argumenty, aby poprawić czasy kompilacji i zużycie pamięci kompilatora dla większości użytkowników. Jednak można ustawić poprzedniej limit przez jawne określenie _VARIADIC_MAX jako 10, całego projektu.  
   
--   C ++ 11 17.6.4.3.1 [macro.names]/2 zabrania słowa kluczowe izing makra, gdy nagłówki standardowa biblioteka C++ są uwzględnione. Nagłówki teraz Emituj błędy kompilatora, jeśli wykryją ized makro słów kluczowych. (Definiowanie _ALLOW_KEYWORD_MACROS zezwala na taki kod skompilować, ale firma Microsoft zdecydowanie zniechęcić wykorzystanie). Jako wyjątek nowe makro ized domyślnie jest dozwolona, ponieważ nagłówki szerokim zakresie bronić się przy użyciu #pragma push_macro("new") / #undef nowe / #pragma pop_macro("new"). Definiowanie _ENFORCE_BAN_OF_MACRO_NEW ma dokładnie co sugeruje jego nazwa.  
+- C ++ 11 17.6.4.3.1 [macro.names]/2 zabrania makropoleceń słów kluczowych, gdy nagłówki standardowej biblioteki języka C++, są uwzględnione. Nagłówki teraz emitować błędy kompilatora, jeśli wykryją ized — makro słów kluczowych. (Definiowanie _ALLOW_KEYWORD_MACROS umożliwia taki kod skompilować, ale firma Microsoft zdecydowanie odradza to użycie). Jako wyjątek nowe makro ized domyślnie jest dozwolona, ponieważ nagłówki kompleksowo bronić się przy użyciu #pragma push_macro("new") / #undef nowy / #pragma pop_macro("new"). Definiowanie _ENFORCE_BAN_OF_MACRO_NEW ma dokładnie co sama nazwa wskazuje.  
   
--   Aby zaimplementować różnych optymalizacji i debugowania kontroli, implementacja standardowa biblioteka C++ celowo dzieli zgodności plików binarnych między wersjami programu Visual Studio (2005, 2008, 2010, 2012). Gdy jest używana standardowa biblioteka C++, to zabrania mieszania plików obiektu i bibliotek statycznych, które są kompilowane przy użyciu różnych wersji w jedną wartość binarną (plik EXE lub DLL), a zabrania przekazywanie obiektów standardowa biblioteka C++ między plików binarnych, które są kompilowane przez przy użyciu różnych wersji. Mieszanie obiektów pliki oraz bibliotek statycznych (przy użyciu standardowa biblioteka C++, które zostały skompilowane przy użyciu programu Visual C++ 2010 z tymi, które zostały skompilowane przy użyciu języka C++ kompilatora w programie Visual Studio 2012 emituje błędy konsolidatora o elemencie _MSC_VER niezgodność, gdy jest elemencie _MSC_VER makro zawiera głównej wersji kompilatora (1700 w języku Visual C++ w programie Visual Studio 2012). Tego wyboru nie może wykryć mieszanie biblioteki DLL i nie może wykryć mieszanie, która obejmuje Visual C++ 2008 lub starszej.  
+- Aby zaimplementować różne optymalizacje i kontrole debugowania, implementacja standardowej biblioteki języka C++ celowo łamie zgodność binarną między wersjami programu Visual Studio (2005, 2008, 2010, 2012). W przypadku standardowej biblioteki języka C++ to zabrania mieszania plików obiektów i bibliotek statycznych, które są kompilowane przy użyciu różnych wersji w jednym pliku binarnym (EXE lub DLL), a zabrania przekazywania obiektów standardowej biblioteki języka C++ między plikami binarnymi, które są kompilowane przez przy użyciu różnych wersji. Mieszanie plików obiektów i bibliotek statycznych (przy użyciu standardowej biblioteki języka C++, które zostały skompilowane przy użyciu programu Visual C++ 2010 z tymi, które zostały skompilowane przy użyciu języka C++ kompilator programu Visual Studio 2012 powoduje błędy konsolidatora dotyczące niezgodności _MSC_VER, gdzie _MSC_VER to makra, która zawiera wersję główną kompilatora (1700 dla języka Visual C++ w programie Visual Studio 2012). To sprawdzenie nie może wykryć mieszania bibliotek DLL i nie może wykryć mieszania, które obejmuje Visual C++ 2008 lub starszy.  
   
--   Oprócz wykrycia niezgodności _ITERATOR_DEBUG_LEVEL, który został wdrożony w programie Visual C++ 2010, kompilator języka C++ w programie Visual Studio 2012 wykrywa niezgodności biblioteki środowiska uruchomieniowego. Te wystąpić, gdy kompilator opcje/MT (statyczne release), /MTd (debugowanie statycznych), / / MD (wersja dynamicznych) i/mdd (debugowanie dynamiczne).  
+- Oprócz wykrywania niezgodności w _ITERATOR_DEBUG_LEVEL, który został wprowadzony w programie Visual C++ 2010, kompilator języka C++ w programie Visual Studio 2012 wykrywa niezgodności biblioteki środowiska uruchomieniowego. Występują one po opcji kompilatora `/MT` (wersja statyczna), `/MTd` (statyczna do debugowania), `/MD` (Oficjalna wersja dynamiczna) i `/MDd` (wersja dynamiczna do debugowania) są używane razem.  
   
--   operator\<(), operator > (), operator\<= (), a operator > () = wcześniej były dostępne dla rodziny andstdext::hash_map std::unordered_map kontenerów, chociaż nie zostały faktycznie przydatne ich implementacji. Te niestandardowe operatory zostały usunięte w programie Visual C++ w programie Visual Studio 2012. Ponadto, aby pokrywał się z rodziny stdext::hash_map został rozszerzony implementacja operator==() i operator!=() thestd::unordered_map rodziny. (Zaleca się należy unikać użycia thestdext::hash_map family nowy kod.)  
+- `operator<()`, `operator>()`, `operator<=()`, i `operator>=()` wcześniej były dostępne dla `std::unordered_map` i `stdext::hash_map` rodzin kontenerów, mimo że nie były przydatne w rzeczywistości ich implementacji. Te operatory niestandardowe zostały usunięte w programie Visual C++ w programie Visual Studio 2012. Ponadto implementacji `operator==()` i `operator!=()` dla `std::unordered_map` rodziny został rozszerzony na pokrycie `stdext::hash_map` rodziny. (Zaleca się, że należy unikać użycia `stdext::hash_map` rodziny w nowym kodzie.)  
   
--   C ++ 11 22.4.1.4 [locale.codecvt] Określa, czy codecvt::length() i codecvt::do_length() powinno zająć można modyfikować stateT & parametrami, ale Visual C++ 2010 trwało const stateT &. Kompilator języka C++, Visual Studio 2012 ma stateT & jako obowiązkowego przez standard. Ta różnica jest ważna dla każdego, kto próbuje przesłonić funkcji wirtualnej do_length().  
+- C ++ 11 22.4.1.4 [locale.codecvt] Określa, że `codecvt::length()` i `codecvt::do_length()` powinno zająć można modyfikować `stateT&` parametrów, ale Visual C++ 2010 miał `const stateT&`. Kompilator języka C++ w programie Visual Studio 2012 przyjmuje `stateT&` nieużywanie przez standard. Różnica ta jest znacząca dla każdego, kto próbuje przesłonić funkcji wirtualnej `do_length()`.  
   
 ### <a name="crt"></a>CRT  
   
--   Sterty C Runtime (CRT), która jest stosowana do nowych i malloc(), nie jest już prywatnych. CRT używa teraz stercie procesu. Oznacza to, że stos nie jest niszczony, gdy biblioteka DLL jest zwolniony, więc biblioteki DLL połączone statycznie CRT musi zapewnić pamięci przydzielonej przez kod biblioteki DLL jest wyczyszczone przed jego został zwolniony.  
+- Sterty C Runtime (CRT), który służy do nowych i malloc(), jest prywatna. CRT teraz używa sterty procesu. Oznacza to, że stos nie jest niszczony, kiedy biblioteka DLL jest zwalniana, więc biblioteki DLL połączone statycznie CRT musi zapewnić pamięci przydzielonej przez kod biblioteki DLL jest czyszczona przed jego został zwolniony.  
   
--   Funkcja iscsymf() potwierdza z wartości ujemnych.  
+- `iscsymf()` Funkcja potwierdza przy użyciu wartości ujemnych.  
   
--   Struktury threadlocaleinfostruct został zmieniony w celu uwzględnienia zmiany ustawień regionalnych funkcji.  
+- `threadlocaleinfostruct` Struktury został zmieniony, aby uwzględnić zmiany w ustawieniach regionalnych funkcje.  
   
--   Funkcje CRT mają odpowiednie funkcje wewnętrzne, takie jak memxxx(), strxxx() są usuwane z intrin.h. Uwzględnione intrin.h tylko dla tych funkcji, należy zawierają teraz odpowiednie nagłówki CRT.  
+- Funkcje CRT, które mają odpowiednie funkcje wewnętrzne, takie jak `memxxx()`, `strxxx()` są usuwane z intrin.h. W przypadku dołączenia intrin.h tylko dla tych funkcji możesz teraz mogą zawierać odpowiednie nagłówki CRT.  
   
 ### <a name="mfc-and-atl"></a>MFC i ATL  
   
--   Usunięta obsługa Fusion (afxcomctl32.h); w związku z tym wszystkie metody, które są zdefiniowane w afxcomctl32.h zostały usunięte. Afxcomctl32.h pliki nagłówka i afxcomctl32.inl zostały usunięte.  
+- Usunięto obsługę łączenia (afxcomctl32.h); w związku z tym wszystkie metody, które są zdefiniowane w afxcomctl32.h zostały usunięte. Afxcomctl32.h plików nagłówka i afxcomctl32.inl zostały usunięte.  
   
--   Zmienić nazwę CDockablePane::RemoveFromDefaultPaneDividier na CDockablePane::RemoveFromDefaultPaneDivider.  
+- Zmieniono nazwę elementu `CDockablePane::RemoveFromDefaultPaneDividier` do `CDockablePane::RemoveFromDefaultPaneDivider`.  
   
--   Zmieniony podpis CFileDialog::SetDefExt do użycia LPCTSTR; w związku z tym dotyczy kompilacji Unicode.  
+- Zmienione podpis `CFileDialog::SetDefExt` używać LPCTSTR; w związku z tym, wpływają na Unicode kompilacji.  
   
--   Usunięto nieaktualny ATL kategorii śledzenia.  
+- Usunięto przestarzały ATL kategorii śledzenia.  
   
--   Zmieniony podpis CBasePane::MoveWindow podjęcie const CRect.  
+- Zmienione podpis `CBasePane::MoveWindow` podjęcie `const CRect`.  
   
--   Zmieniony podpis CMFCEditBrowseCtrl::EnableBrowseButton.  
+- Zmienione podpis `CMFCEditBrowseCtrl::EnableBrowseButton`.  
   
--   Usunięto m_fntTabs i m_fntTabsBold z CMFCBaseTabCtrl.  
+- Usunięte `m_fntTabs` i `m_fntTabsBold` z `CMFCBaseTabCtrl`.  
   
--   Dodaje parametr CMFCRibbonStatusBarPane konstruktorów. (Jest to parametr domyślny, a nie jest źródła podziału).  
+- Dodano parametr `CMFCRibbonStatusBarPane` konstruktorów. (Jest to domyślny parametr, a nie jest wymuszających).  
   
--   Dodaje parametr do konstruktora cmfcribboncommandslistbox —. (Jest to parametr domyślny, a nie jest źródła podziału).  
+- Dodano parametr `CMFCRibbonCommandsListBox` konstruktora. (Jest to domyślny parametr, a nie jest wymuszających).  
   
--   Usunięte z interfejsu API AFXTrackMouse (i związane z procesem czasomierza). W zamian użyj interfejsu API Win32 zdarzenia TrackMouseEvent.  
+- Usunięte `AFXTrackMouse` interfejsu API (i powiązanych czasomierza proc). Używa Win32 `TrackMouseEvent` API zamiast tego.  
   
--   Dodaje parametr do konstruktora CFolderPickerDialog. (Jest to parametr domyślny, a nie jest źródła podziału).  
+- Dodano parametr `CFolderPickerDialog` konstruktora. (Jest to domyślny parametr, a nie jest wymuszających).  
   
--   Zmieniono rozmiar struktury CFileStatus: element członkowski m_attribute zmieniła się z BAJTÓW do DWORD (do dopasowania wartości, który zwrócił fromGetFileAttributes).  
+- `CFileStatus` zmienić rozmiar struktury: `m_attribute` elementu członkowskiego zmieniła się z BAJTU do typu DWORD (Aby dopasować wartość, która jest zwracana z `GetFileAttributes`).  
   
--   CRichEditCtrl i CRichEditView Użyj MSFTEDIT_CLASS (formantu RichEdit 4.1) zamiast RICHEDIT_CLASS (formantu RichEdit 3.0) w kompilacjach kodu Unicode.  
+- `CRichEditCtrl` i `CRichEditView` Użyj MSFTEDIT_CLASS (kontrolka RichEdit 4.1) zamiast RICHEDIT_CLASS (kontrolka RichEdit 3.0) w kompilacjach Unicode.  
   
--   Usunąć AFX_GLOBAL_DATA::IsWindowsThemingDrawParentBackground, ponieważ jest ona zawsze wartości TRUE w systemie Windows Vista, Windows 7 i Windows 8.  
+- Usunięte `AFX_GLOBAL_DATA::IsWindowsThemingDrawParentBackground` ponieważ zawsze ma wartość TRUE na Windows Vista, Windows 7 i Windows 8.  
   
--   Usunąć AFX_GLOBAL_DATA::IsWindowsLayerSupportAvailable, ponieważ jest ona zawsze wartości TRUE w systemie Windows Vista, Windows 7 i Windows 8.  
+- Usunięte `AFX_GLOBAL_DATA::IsWindowsLayerSupportAvailable` ponieważ zawsze ma wartość TRUE na Windows Vista, Windows 7 i Windows 8.  
   
--   Usunięto AFX_GLOBAL_DATA::DwmExtendFrameIntoClientArea. Wywołanie Windows API bezpośrednio w systemie Windows Vista, Windows 7 i Windows 8.  
+- Usunięte `AFX_GLOBAL_DATA::DwmExtendFrameIntoClientArea`. Wywoływanie Windows API bezpośrednio w systemie Windows Vista, Windows 7 i Windows 8.  
   
--   Usunięto AFX_GLOBAL_DATA::DwmDefWindowProc. Wywołanie Windows API bezpośrednio w systemie Windows Vista, Windows 7 i Windows 8.  
+- Usunięte `AFX_GLOBAL_DATA::DwmDefWindowProc`. Wywoływanie Windows API bezpośrednio w systemie Windows Vista, Windows 7 i Windows 8.  
   
--   Zmieniona AFX_GLOBAL_DATA::DwmIsCompositionEnabled na IsDwmCompositionEnabled, aby wyeliminować kolizję nazw.  
+- Zmieniono nazwę `AFX_GLOBAL_DATA::DwmIsCompositionEnabled` do `IsDwmCompositionEnabled` , aby wyeliminować kolizji nazw.  
   
--   Zmienione identyfikatory liczby wewnętrznych czasomierze MFC i przeniesiona definicje afxres.h (AFX_TIMER_ID_ *).  
+- Zmienić identyfikatory liczbę czasomierzy wewnętrznego MFC i przeniesiona definicje afxres.h (AFX_TIMER_ID_ *).  
   
--   Zmieniony podpis metody OnExitSizeMove Akceptuję makro ON_WM_EXITSIZEMOVE:  
+- Zmienione podpis `OnExitSizeMove` metodę, aby uzgodnić z makr ON_WM_EXITSIZEMOVE:  
   
-    -   CFrameWndEx  
+    - `CFrameWndEx`  
   
-    -   CMDIFrameWndEx  
+    - `CMDIFrameWndEx`  
   
-    -   CPaneFrameWnd  
+    - `CPaneFrameWnd`  
   
--   Zmienić nazwę i podpis OnDWMCompositionChanged aby uzgodnić z makra ON_WM_DWMCOMPOSITIONCHANGED:  
+- Zmieniono nazwę i podpis `OnDWMCompositionChanged` musieli się zgodzić za pomocą makra ON_WM_DWMCOMPOSITIONCHANGED:  
   
-    -   CFrameWndEx  
+    - `CFrameWndEx`  
   
-    -   CMDIFrameWndEx  
+    - `CMDIFrameWndEx`  
   
-    -   CPaneFrameWnd  
+    - `CPaneFrameWnd`  
   
--   Zmieniony podpis metody OnMouseLeave Akceptuję makro ON_WM_MOUSELEAVE:  
+- Zmienione podpis `OnMouseLeave` metodę, aby uzgodnić z makr ON_WM_MOUSELEAVE:  
   
-    -   CMFCCaptionBar  
+    - `CMFCCaptionBar`  
   
-    -   CMFCColorBar  
+    - `CMFCColorBar`  
   
-    -   CMFCHeaderCtrl  
+    - `CMFCHeaderCtrl`  
   
-    -   CMFCProperySheetListBox  
+    - `CMFCProperySheetListBox`  
   
-    -   CMFCRibbonBar  
+    - `CMFCRibbonBar`  
   
-    -   CMFCRibbonPanelMenuBar  
+    - `CMFCRibbonPanelMenuBar`  
   
-    -   CMFCRibbonRichEditCtrl  
+    - `CMFCRibbonRichEditCtrl`  
   
-    -   CMFCSpinButtonCtrl  
+    - `CMFCSpinButtonCtrl`  
   
-    -   CMFCToolBar ReplaceThisText  
+    - `CMFCToolBar` ReplaceThisText  
   
-    -   CMFCToolBarComboBoxEdit  
+    - `CMFCToolBarComboBoxEdit`  
   
-    -   CMFCToolBarEditCtrl  
+    - `CMFCToolBarEditCtrl`  
   
-    -   CMFCAutoHideBar  
+    - `CMFCAutoHideBar`  
   
--   Zmieniony podpis OnPowerBroadcast aby uzgodnić z makra ON_WM_POWERBROADCAST:  
+- Zmienione podpis `OnPowerBroadcast` musieli się zgodzić za pomocą makra ON_WM_POWERBROADCAST:  
   
-    -   CFrameWndEx  
+    - `CFrameWndEx`  
   
-    -   CMDIFrameWndEx  
+    - `CMDIFrameWndEx`  
   
--   Zmieniony podpis OnStyleChanged aby uzgodnić z makra ON_WM_STYLECHANGED:  
+- Zmienione podpis `OnStyleChanged` musieli się zgodzić za pomocą makra ON_WM_STYLECHANGED:  
   
-    -   CMFCListCtrl  
+    - `CMFCListCtrl`  
   
-    -   CMFCStatusBar —  
+    - `CMFCStatusBar`  
   
--   Zmieniona metody wewnętrznej FontFamalyProcFonts na FontFamilyProcFonts.  
+- Zmieniono nazwę metody wewnętrznej `FontFamalyProcFonts` do `FontFamilyProcFonts`.  
   
--   Usunięte wiele globalne statycznych cstring — obiekty wyeliminować przecieki pamięci w niektórych sytuacjach (zastąpione #defines), a następujące klasy zmienne Członkowskie:  
+- Usunąć wiele globalne statyczne `CString` obiektów, aby wyeliminować pamięci przecieki w niektórych sytuacjach (zastąpione #defines), oraz następujące klasy zmienne Członkowskie:  
   
-    -   CKeyBoardManager::m_strDelimiter  
+    - `CKeyBoardManager::m_strDelimiter`  
   
-    -   CMFCPropertyGridProperty::m_strFormatChar  
+    - `CMFCPropertyGridProperty::m_strFormatChar`  
   
-    -   CMFCPropertyGridProperty::m_strFormatShort  
+    - `CMFCPropertyGridProperty::m_strFormatShort`  
   
-    -   CMFCPropertyGridProperty::m_strFormatLong  
+    - `CMFCPropertyGridProperty::m_strFormatLong`  
   
-    -   CMFCPropertyGridProperty::m_strFormatUShort  
+    - `CMFCPropertyGridProperty::m_strFormatUShort`  
   
-    -   CMFCPropertyGridProperty::m_strFormatULong  
+    - `CMFCPropertyGridProperty::m_strFormatULong`  
   
-    -   CMFCPropertyGridProperty::m_strFormatFloat  
+    - `CMFCPropertyGridProperty::m_strFormatFloat`  
   
-    -   CMFCPropertyGridProperty::m_strFormatDouble  
+    - `CMFCPropertyGridProperty::m_strFormatDouble`  
   
-    -   CMFCToolBarImages::m_strPngResType  
+    - `CMFCToolBarImages::m_strPngResType`  
   
-    -   CMFCPropertyGridProperty::m_strFormat  
+    - `CMFCPropertyGridProperty::m_strFormat`  
   
--   Zmieniony podpis CKeyboardManager::ShowAllAccelerators i usunąć parametr ogranicznik akceleratora.  
+- Zmienione podpis `CKeyboardManager::ShowAllAccelerators` i usunąć parametr ogranicznik akceleratora.  
   
--   Dodano CPropertyPage::GetParentSheet oraz w cpropertypage — klasa, należy wywołać ją zamiast GetParent oknie arkusza poprawne nadrzędnego, które mogą być nadrzędne lub okna nadrzędnego cpropertypage —. Trzeba zmienić swój kod, aby w zamian wywołaj GetParentSheet ofGetParent.  
+- Dodano `CPropertyPage::GetParentSheet`, a następnie w `CPropertyPage` klasy, należy wywołać go zamiast `GetParent` okno arkusza poprawne nadrzędne, który może mieć nadrzędnego lub okna nadrzędnych do `CPropertyPage`. Może być konieczne zmian w kodzie, aby wywołać `GetParentSheet` zamiast `GetParent`.  
   
--   Stała niezrównoważonej #pragma warning(push) ATLBASE. H, który spowodował ostrzeżenia, które mają zostać nieprawidłowo wyłączone. Po ATLBASE tych ostrzeżeń są teraz włączone poprawnie. H został przeanalizowany.  
+- Stała niezrównoważone #pragma warning(push) ATLBASE. Godz., który spowodował ostrzeżeń, które mają zostać nieprawidłowo wyłączone. Po ATLBASE tych ostrzeżeń są teraz włączone poprawnie. Przeanalizowaniu H.  
   
--   Przeniesione metody związanych z D2D z afx_global_data — do _AFX_D2D_STATE:  
+- Przeniesione metody dotyczące D2D z afx_global_data — do _AFX_D2D_STATE:  
   
-    -   GetDirectD2dFactory  
+    - `GetDirectD2dFactory`  
   
-    -   GetWriteFactory  
+    - `GetWriteFactory`  
   
-    -   GetWICFactory  
+    - `GetWICFactory`  
   
-    -   InitD2D  
+    - `InitD2D`  
   
-    -   ReleaseD2DRefs  
+    - `ReleaseD2DRefs`  
   
-    -   IsD2DInitialized  
+    - `IsD2DInitialized`  
   
-    -   D2D1MakeRotateMatrix  
+    - `D2D1MakeRotateMatrix`  
   
-    -   Zamiast kontaktować, na przykład afxGlobalData.IsD2DInitialized, wywołanie AfxGetD2DState -> IsD2DInitialized.  
+    - Zamiast wywoływania, na przykład `afxGlobalData.IsD2DInitialized`, wywołaj `AfxGetD2DState->IsD2DInitialized`.  
   
--   Usunięto nieaktualny ATL *. CPP pliki z folderu \atlmfc\include\.  
+- Usunięty ATL przestarzałe *. CPP pliki z folderu \atlmfc\include\.  
   
--   Przenieść inicjowania afxGlobalData do na żądanie zamiast w czasie inicjowania CRT, aby spełniać wymagania dotyczące funkcji DLLMain.  
+- Przenieść `afxGlobalData` inicjalizacji na żądanie a nie w czasie inicjowania CRT, aby spełnić `DLLMain` wymagania.  
   
--   Metoda RemoveButtonByIndex dodawana do klasy CMFCOutlookBarPane.  
+- Dodano `RemoveButtonByIndex` metody `CMFCOutlookBarPane` klasy.  
   
--   Rozwiązany CMFCCmdUsageCount::IsFreqeuntlyUsedCmd do IsFrequentlyUsedCmd.  
+- Poprawione `CMFCCmdUsageCount::IsFreqeuntlyUsedCmd` do `IsFrequentlyUsedCmd`.  
   
--   Poprawiono wiele wystąpień RestoreOriginalstate do RestoreOriginalState (CMFCToolBar, CMFCMenuBar, CMFCOutlookBarPane).  
+- Poprawione kilka wystąpień `RestoreOriginalstate` do `RestoreOriginalState (CMFCToolBar, CMFCMenuBar, CMFCOutlookBarPane)`.  
   
--   Usunąć nieużywane metody z CDockablePane: SetCaptionStyle, IsDrawCaption, IsHideDisabledButtons, GetRecentSiblingPaneInfo, andCanAdjustLayout.  
+- Usunąć nieużywane metody z `CDockablePane`: `SetCaptionStyle`, `IsDrawCaption`, `IsHideDisabledButtons`, `GetRecentSiblingPaneInfo`, i `CanAdjustLayout`.  
   
--   Usunięte CDockablePane statyczny element członkowski zmienne m_bCaptionText i m_bHideDisabledButtons.  
+- Usunięte `CDockablePane` zmiennych statycznych składowych `m_bCaptionText` i `m_bHideDisabledButtons`.  
   
--   Zastąpienie metody DeleteString należy dodać do CMFCFontComboBox.  
+- Dodano zastąpienia `DeleteString` metody `CMFCFontComboBox`.  
   
--   Usunąć nieużywane metody z CPane: GetMinLength i IsLastPaneOnLastRow.  
+- Usunąć nieużywane metody z `CPane`: `GetMinLength` i `IsLastPaneOnLastRow`.  
   
--   Zmieniono nazwę CPane::GetDockSiteRow(CDockingPanesRow *) do CPane::SetDockSiteRow.  
+- Zmieniono nazwę `CPane::GetDockSiteRow(CDockingPanesRow *)` do `CPane::SetDockSiteRow`.  
   
-## <a name="visual-c-2010-breaking-changes"></a>Visual C++ 2010 najważniejszych zmian  
+## <a name="visual-c-2010-breaking-changes"></a>Visual C++ 2010 fundamentalne zmiany  
   
-### <a name="compiler"></a>Kompilatora  
+### <a name="compiler"></a>Kompilator  
   
--   Auto — słowo kluczowe ma nowe znaczenie domyślne. Użyj starego znaczenie jest rzadko, większość aplikacji nie wpłynie tej zmiany.  
+- **Automatycznie** — słowo kluczowe ma nowe znaczenie domyślne. Ponieważ użycia starego znaczenie jest rzadkie, większość aplikacji nie będzie wpływu ta zmiana.  
   
--   Wprowadzono słowo kluczowe new static_assert, która spowoduje konflikt nazw, jeśli istnieje już identyfikator o takiej nazwie w kodzie.  
+- Nowy **static_assert** wprowadzone — słowo kluczowe, co spowoduje konflikt nazw, jeśli istnieje już identyfikator o tej nazwie w kodzie.  
   
--   Obsługa nowej notacji lambda nie obejmuje obsługę kodowania bez cudzysłowów GUID w atrybucie IDL uuid.  
+- Pomoc techniczna dla nowej notacji lambda nie obejmuje obsługę kodowania bez cudzysłowów identyfikator GUID w atrybucie uuid IDL.  
   
--   .NET Framework 4 wprowadza pojęcia uszkodzony wyjątków, które są wyjątki, które opuszczają proces nieodwracalny uszkodzona. Domyślnie nie może przechwycić wyjątek nieprawidłowego stanu, nawet w przypadku opcję kompilatora/eha, która przechwytuje wszystkie pozostałe wyjątki.                 Aby jawnie catch wyjątku uszkodzony, należy użyć __try -\__except instrukcje. Lub, zastosuj atrybut [HandledProcessCorruptedStateExceptions], aby włączyć funkcję przechwytują wyjątki uszkodzony.  Ta zmiana wpływa głównie programistów systemu, którzy może być konieczne catch wyjątku uszkodzony. Osiem wyjątki są STATUS_ACCESS_VIOLATION, STATUS_STACK_OVERFLOW, EXCEPTION_ILLEGAL_INSTRUCTION, EXCEPTION_IN_PAGE_ERROR, EXCEPTION_INVALID_DISPOSITION, EXCEPTION_NONCONTINUABLE_EXCEPTION, EXCEPTION_PRIV_INSTRUCTION, status_ — UNWIND_CONSOLIDATE.                 Aby uzyskać więcej informacji o tych wyjątków, zobacz [getexceptioncode —](https://msdn.microsoft.com/en-us/library/windows/desktop/ms679356.aspx) makra.  
+-   .NET Framework 4 wprowadzono pojęcie uszkodzony wyjątków, które są wyjątki, które opuszczają proces nieodwracalny uszkodzona. Domyślnie nie może przechwycić wyjątek uszkodzony, nawet w przypadku opcję kompilatora/eha, która przechwytuje wszystkie inne wyjątki.                 Aby jawnie przechwytywanie wyjątku typu uszkodzony, należy użyć __try -\__except instrukcji. Lub, zastosuj atrybut [HandledProcessCorruptedStateExceptions], aby włączyć funkcję przechwytywania wyjątków w stanie uszkodzenia.  Ta zmiana dotyczy przede wszystkim programistów systemu, którzy może okazać się przechwycić wyjątek stanie uszkodzenia. Osiem wyjątki są STATUS_ACCESS_VIOLATION STATUS_STACK_OVERFLOW, EXCEPTION_ILLEGAL_INSTRUCTION, EXCEPTION_IN_PAGE_ERROR, EXCEPTION_INVALID_DISPOSITION, EXCEPTION_NONCONTINUABLE_EXCEPTION, EXCEPTION_PRIV_INSTRUCTION, status_ — element UNWIND_CONSOLIDATE.                 Aby uzyskać więcej informacji na temat tych wyjątków, zobacz [GetExceptionCode](/windows/desktop/Debug/getexceptioncode) makra.  
   
--   Poprawione opcję kompilatora/GS chroni przed przepełnienia buforu więcej szerokim zakresie niż w starszych wersjach. Ta wersja może wstawić dodatkowe testy zabezpieczeń ze stosu, który może zmniejszyć wydajność. Użyj słowa kluczowego __declspec(safebuffers) nowe nakazać kompilator, aby nie wstawić kontroli zabezpieczeń dla danej funkcji.  
+- Zweryfikowana `/GS` — opcja kompilatora chroni przed przepełnienia buforu bardziej wszechstronny niż w starszych wersjach. Ta wersja może wstawić dodatkowe kontrole zabezpieczeń na stosie, który może zmniejszyć wydajność. Użyj nowego **__declspec(safebuffers)** słowo kluczowe, aby poinstruować kompilator, aby nie wstawiać zabezpieczeń sprawdza, czy dla danej funkcji.  
   
--   Należy skompilować z opcją /GL (optymalizacja całego programu) i opcje kompilatora/CLR (kompilacja języka wspólnego środowiska uruchomieniowego), /GLoption jest ignorowana. Ta zmiana została wprowadzona, ponieważ kombinacja opcji kompilatora podany małego korzyści. W wyniku tej zmiany zwiększona wydajność kompilacji.  
+- Jeśli kompilujesz z opcją zarówno `/GL` (Optymalizacja Całoprogramowa) i `/clr` opcje kompilatora (kompilacja języka wspólnego środowiska uruchomieniowego), `/GL` opcja jest ignorowana. Ta zmiana została wprowadzona, ponieważ połączenie opcji kompilatora podany niewielkie korzyści. W wyniku tej zmiany lepsza wydajność kompilacji.  
   
--   Domyślnie Obsługa elementów trigraph jest wyłączona w programie Visual C++ 2010. Aby włączyć obsługę trigramów, należy użyć opcji kompilatora/Zc: trigraphs. — Trigram składa się z dwóch następujących po sobie znaki zapytania ("?") następuje znak trzeci unikatowy. Kompilator zastępuje — trigram odpowiedni znak interpunkcyjny. Na przykład kompilator zastępuje "? = "— trigram znakiem '#'. Użyj trigramów w plikach źródłowych C, korzystających z zestawu znaków, która nie zawiera graficzne przedstawienie wygodny dla niektórych znaków interpunkcyjnych.  
+- Domyślnie pomoc techniczna dotycząca trójznaków jest wyłączone w programie Visual C++ 2010. Użyj `/Zc:trigraphs` opcję kompilatora, aby włączyć obsługę trójznaków. Trójznak składa się z dwóch następujących po sobie znaki zapytania ("??") następuje znak trzeci unikatowy. Kompilator zastępuje trójznak odpowiedni znak interpunkcyjny. Na przykład, kompilator zastępuje "? = "trójznaków za pomocą znaku"#". Używać trójznaków w plikach źródłowych języka C, które używają zestawu znaków, który nie zawiera wygodnych reprezentacji graficznych dla niektórych znaków interpunkcyjnych.  
   
--   Konsolidator nie obsługuje już Optymalizacja dla Windows 98. Opcja od (optymalizacje) generuje błąd w czasie kompilacji, jeśli określisz / OPT: WIN98 lub/OPT: nowin98.  
+- Konsolidator nie obsługuje już Optymalizacja dla Windows 98. `/OPT` (Optymalizacje) opcja generuje błąd w czasie kompilacji, jeśli określisz `/OPT:WIN98` lub `/OPT:NOWIN98`.  
   
--   Domyślne opcje kompilatora, które są określone przez RuntimeLibrary i DebugInformationFormat kompilacji systemu, które właściwości zostały zmienione. Domyślnie te właściwości są określone w projektach, które zostały utworzone przy użyciu programu Visual C++ kompilacji zwalnia 7.0 za pośrednictwem 10.0. W przypadku migrowania projektu, który został utworzony przez program Visual C++ 6.0, rozważyć określenie wartości tych właściwości.  
+- Domyślne opcje kompilatora, które są określone przez RuntimeLibrary i DebugInformationFormat tworzenie systemu, które właściwości zostały zmienione. Domyślnie te właściwości są określone w projektach, które są tworzone przez Visual C++ kompilacji zwalnia 7.0 za pośrednictwem 10.0. Jeśli migrujesz projekt, który został utworzony przez Visual C++ 6.0, rozważ, czy określone wartości tych właściwości.  
   
--   W programie Visual C++ 2010, RuntimeLibrary = wielowątkowych (/ MD) i DebugInformationFormat = ProgramDatabase (/Zi). W programie Visual C++ 9.0, RuntimeLibrary = wielowątkowych (/ MT) i DebugInformationFormat = wyłączone.  
+- W programie Visual C++ 2010 RuntimeLibrary = wielowątkowych (`/MD`) i DebugInformationFormat = ProgramDatabase (`/Zi`). W programie Visual C++ 9.0, RuntimeLibrary = wielowątkowych (`/MT`) i DebugInformationFormat = wyłączone.  
   
 ### <a name="clr"></a>CLR  
   
--   Kompilatory języka Microsoft C# i Visual Basic można teraz utworzyć nie podstawowy zestaw międzyoperacyjny (no-PIA). Zestaw nie PIA można używać typów COM bez wdrożenia odpowiednie podstawowy zestaw międzyoperacyjny (PIA). Podczas używania zestawów nie PIA utworzonego przez Visual C# lub Visual Basic, musi odwoływać się do zestawu PIA polecenie kompilacji, przed odwołaniem zestawu nie PIA, który korzysta z biblioteki.  
+- Kompilatory Microsoft C# i Visual Basic można teraz utworzyć nie podstawowy zestaw międzyoperacyjny (nie PIA). Zestaw PIA nie można użyć typów modelu COM bez wdrożenia odpowiednie podstawowego zestawu międzyoperacyjnego (PIA). Podczas używania zestawów nie PIA generowane przez program Visual C# lub Visual Basic, przed odwołaniem zestawu nie PIA, który korzysta z biblioteki musi odwoływać się zestawów PIA na polecenie compile.  
   
-### <a name="visual-c-projects-and-msbuild"></a>Projekty Visual C++ i MSBuild  
+### <a name="visual-c-projects-and-msbuild"></a>Projekty języka Visual C++ i programu MSBuild  
   
--   Projekty Visual C++, teraz są oparte na narzędzia MSBuild. W związku z tym pliki projektu używać sufiksu pliku .vcxproj oraz na nowy format pliku XML. Visual C++ 2010 automatycznie konwertuje pliki projektu z wcześniejszych wersji programu Visual Studio do nowego formatu pliku. Problem ma wpływ istniejącego projektu, jeśli zależy od poprzedniego .vcproj narzędzia, VCBUILD.exe lub sufiks pliku projektu, kompilacji.  
+- Projekty języka Visual C++ są teraz oparte na narzędziu MSBuild. W związku z tym pliki projektu użyj nowy format pliku XML i sufiks pliku .vcxproj. Visual C++ 2010 automatycznie konwertuje pliki projektu z wcześniejszych wersji programu Visual Studio na nowy format pliku. Istniejący projekt ma wpływ, jeśli zależy od poprzedniego .vcproj narzędzia, VCBUILD.exe lub sufiks pliku projektu, kompilacji.  
   
--   We wcześniejszych wersjach programu Visual C++ obsługiwane późne oceny arkuszy właściwości. Na przykład arkusz właściwości nadrzędnej można zaimportować arkusz właściwości podrzędnej, a nadrzędnego można użyć zmiennej zdefiniowanej w podrzędnym, aby zdefiniować inne zmienne. Późne oceny włączony element nadrzędny korzystały nawet zmiennej podrzędnego arkusza właściwości podrzędnej został zaimportowany. W programie Visual C++ 2010 nie można użyć zmiennej arkusza projektu, zanim zostanie on zdefiniowany program MSBuild obsługuje tylko wczesne oceny.  
+- We wcześniejszych wersjach Visual C++ obsługiwane pod koniec oceny arkuszy właściwości. Na przykład arkusz właściwości nadrzędnej można importować arkusz własności podrzędny i nadrzędny można użyć zmiennej zdefiniowane w podrzędnym zdefiniować inne zmienne. Opóźnione oceny włączone nadrzędnej korzystały jeszcze zmiennej podrzędnych arkusza właściwości podrzędnych została zaimportowana. W programie Visual C++ 2010 nie można użyć zmiennej arkusza projektu, zanim zostanie on zdefiniowany, ponieważ MSBuild obsługuje tylko wczesne oceny.  
   
 ### <a name="ide"></a>IDE  
   
--   Okno dialogowe Kończenie działania aplikacji już nie kończy się aplikacja. W poprzednich wersjach funkcji abort() lub terminate() zamknięcie kompilacji handlowej aplikacji, biblioteki wykonawczej języka C wyświetlany komunikat Kończenie działania aplikacji w konsoli okno lub okno dialogowe. Komunikat powiedział, w części "Ta aplikacja zażądała środowiska uruchomieniowego zakończenia działania w nietypowego. Skontaktuj się z zespołem pomocy technicznej aplikacji Aby uzyskać więcej informacji."                 Komunikat zakończenia aplikacji został nadmiarowego, ponieważ Windows następnie wyświetlane bieżącej obsługi zakończenia, który został zazwyczaj raportowanie błędów systemu Windows (odzyskiwania po awarii. Okno dialogowe Watson) lub debuger programu Visual Studio. Począwszy od programu Visual Studio 2010, biblioteki wykonawczej języka C nie jest wyświetlany komunikat. Ponadto środowisko uruchomieniowe uniemożliwia aplikacji kończyć przed rozpoczęciem debugera. Jest to istotne zmiany tylko wtedy, gdy zależy zachowanie poprzedniego komunikatu Kończenie działania aplikacji.  
+- Okno dialogowe zakończenia aplikacji nie jest już kończy aplikację. W poprzednich wersjach gdy `abort()` lub `terminate()` funkcja zamknięte kompilacji detalicznej aplikacji, biblioteki wykonawczej C wyświetlany komunikat zakończenia aplikacji w konsoli okno lub okno dialogowe. Wiadomość mówi, w części "Ta aplikacja zażądała środowiska uruchomieniowego do jej zakończenia w nietypowy sposób. Skontaktuj się z zespołem pomocy technicznej aplikacji Aby uzyskać więcej informacji." Komunikat zakończenia aplikacji została nadmiarowe, ponieważ Windows następnie wyświetlany bieżący programu obsługi zakończenia, który zwykle Windows raportowanie błędów (odzyskiwania po awarii. Okno dialogowe Watson) lub debugera programu Visual Studio. Począwszy od programu Visual Studio 2010 biblioteki wykonawczej języka C nie jest wyświetlany komunikat. Ponadto środowisko wykonawcze zapobiega aplikację zakończenie przed uruchomieniem debugera. Jest to istotną zmianę, tylko wtedy, gdy zależą od poprzedniego zachowania komunikat zakończenia aplikacji.  
   
--   Specjalnie dla programu Visual Studio 2010, IntelliSense nie działa dla języka C + +/ kodu interfejsu wiersza polecenia lub atrybutów, Znajdź wszystkie odwołania nie działa w przypadku zmiennych lokalnych i modelu kodu nie pobrać nazwy typów importowane zestawy lub rozpoznać typy ich qualifi pełni ED nazwy.  
+- Specjalnie dla programu Visual Studio 2010, funkcja IntelliSense nie działa w przypadku języka C + +/ interfejsu wiersza polecenia kodu lub atrybuty, **Znajdź wszystkie odwołania** ma nie działa dla zmiennych lokalnych i Model kodu jest w stanie pobrać nazwy typów z zaimportowanych zestawów lub rozwiązania typy do ich w pełni kwalifikowanych nazw.  
   
 ### <a name="libraries"></a>Biblioteki  
   
--   Safeint — klasa znajduje się w programie Visual C++ i nie jest już pobierana osobno. Jest to istotne zmiany tylko wtedy, gdy utworzono klasę o nazwie "Safeint —".  
+- Safeint — klasa znajduje się w programie Visual C++ i nie jest już w ramach osobnego pobrania. Jest to istotną zmianę, tylko wtedy, gdy projektujesz klasę o nazwie "SafeInt".  
   
--   Model wdrażania przy użyciu bibliotek nie są już używane w manifestach można znaleźć określonej wersji biblioteki dołączanej dynamicznie. Zamiast tego nazwa każdej biblioteki dll zawiera jej numer wersji i użyć tej nazwy do lokalizowania biblioteki.  
+- Modelu wdrażania przy użyciu biblioteki nie jest już używa manifesty znaleźć określoną wersję biblioteki dołączanej dynamicznie. Zamiast tego nazwa każdej biblioteki dołączanej dynamicznie zawiera numer wersji i użyć tej nazwy do lokalizowania biblioteki.  
   
--   W poprzednich wersjach programu Visual Studio można odtworzyć biblioteki czasu wykonywania. Visual C++ 2010 nie obsługuje tworzenia kopii c pliki bibliotek czasu uruchomienia.  
+- W poprzednich wersjach programu Visual Studio można ponownie skompilować biblioteki czasu wykonywania. Visual C++ 2010 już nie obsługuje tworzenia kopii c uruchamiać pliki biblioteki czasu.  
   
 ### <a name="standard-library"></a>Standardowa biblioteka  
   
--   \<Iteratora > nagłówka nie jest już uwzględniona automatycznie przez inne pliki nagłówków. Zamiast tego nagłówka jawnie zawierały, jeśli wymagana jest obsługa Iteratory autonomiczny zdefiniowane w istniejący projekt jest zmienione, jeśli zależy on od poprzedniego narzędzia kompilacji, VCBUILD.exe lub sufiks pliku projektu,. vcproj.interator > on ader.  
+- \<Iterator > nagłówka nie jest automatycznie dołączany przez inne pliki nagłówkowe. Zamiast tego należy dołączyć ten nagłówek jawnie Jeśli potrzebujesz pomocy technicznej dla iteratorów autonomiczny zdefiniowane w projekcie istniejących ma wpływ, jeśli zależy od poprzedniego narzędzia do kompilowania, VCBUILD.exe lub sufiks pliku projektu,. vcproj.interator > nagłówka.  
   
--   W \<algorytm > nagłówka, checked_ * i unchecked_\* funkcje zostały usunięte. I w \<iteratora >> nagłówka, checked_iteratorclass zostanie usunięty, a unchecked_array_iterator — klasa została dodana.  
+- W \<algorytm > nagłówka, checked_ * i unchecked_\* funkcje są usuwane. I w \<iteratora >> nagłówka, `checked_iterator` klasy zostanie usunięty, a `unchecked_array_iterator` klasy został dodany.  
   
--   Konstruktor CComPtr::CComPtr(int) zostaną usunięte. Ten konstruktor dozwolonych obiekt CComPtr, aby zostać utworzone na podstawie makro wartość NULL, ale nie jest konieczne i dozwolone nonsensical konstrukcji od zera liczb całkowitych.  
+- `CComPtr::CComPtr(int)` Konstruktor jest usuwany. Ten konstruktor może `CComPtr` obiekt był skonstruowany z makra o wartości NULL, ale nie jest konieczne i dozwolone pozbawiona sensu konstrukcje z liczbami całkowitymi od zera.  
   
-     CComPtr nadal mogą zostać utworzone na podstawie wartości NULL, która jest zdefiniowana jako 0, ale zakończy się niepowodzeniem, jeśli utworzone na podstawie innych niż 0 literału typu integer. Zamiast tego użyj nullptr.  
+     A `CComPtr` nadal mogą zostać utworzone na podstawie wartość NULL, która jest zdefiniowana jako 0, ale zakończy się niepowodzeniem, jeśli zbudowany z liczbą całkowitą różną literału 0. Użyj **nullptr** zamiast tego.  
   
--   Usunięto następujące funkcje Członkowskie ctype: ctype::_Do_narrow_s, ctype::_Do_widen_s, ctype::_narrow_s, ctype::_widen_s. Jeśli aplikacja korzysta z jednego z tych funkcji elementów członkowskich, należy zastąpić go z odpowiednią wersję niezabezpieczonego: ctype::do_narrow, ctype::do_widen, ctype::narrow, ctype::widen.  
+- Następujące `ctype` usuniętych elementów członkowskich: `ctype::_Do_narrow_s`, `ctype::_Do_widen_s`, `ctype::_narrow_s`, `ctype::_widen_s`. Jeśli aplikacja używa jednej z tych funkcji elementu członkowskiego, należy zastąpić ją z odpowiednią wersją — zabezpieczanie: `ctype::do_narrow`, `ctype::do_widen`, `ctype::narrow`, `ctype::widen`.  
   
 ### <a name="crt-mfc-and-atl-libraries"></a>CRT, MFC i ATL biblioteki  
   
--   Aby umożliwić użytkownikom tworzenie bibliotek CRT, MFC i ATL została usunięta obsługa. Na przykład plik odpowiednie nmake nie jest obsługiwane.                 Jednak użytkownicy nadal mieć dostęp do kodu źródłowego dla tych bibliotek. I dokument, który opisuje opcje MSBuild, używane przez firmę Microsoft do tworzenia biblioteki prawdopodobnie zostaną opublikowane w blogu zespołu Visual C++.  
+- Usunięto obsługę dla użytkowników do tworzenia biblioteki CRT, MFC i ATL. Na przykład pliku odpowiednią nmake nie została podana. Jednak użytkownicy nadal mieć dostęp do kodu źródłowego dla tych bibliotek. I dokumentu, który w tym artykule opisano opcje programu MSBuild, używane przez firmę Microsoft do tworzenia tych bibliotek, prawdopodobnie zostanie ona opublikowana na blogu zespołu Visual C++.  
   
--   Obsługa MFC dla IA64 została usunięta. Jednak nadal podano obsługę CRT i ATL na IA64.  
+- Obsługa MFC dla IA64 zostało usunięte. Jednak nadal podano obsługę CRT i ATL na IA64.  
   
--   Porządkowe nie są już ponownie w plikach definicji modułu (.def) MFC. Ta zmiana oznacza porządkowe nie będzie różna wersje pomocnicze i zgodności plików binarnych dla dodatków service pack i szybkiej poprawki inżynierii wersjach zostanie poprawiona.  
+- Liczby porządkowe są już używane ponownie w plikach definicji modułu (.def) MFC. Ta zmiana oznacza, że liczby porządkowe, nie będzie różna wersje pomocnicze, a zostanie on ulepszony zgodność binarną dodatków service pack i szybkiej poprawki inżynierii wersji.  
   
--   Cdoctemplate — klasa dodano nowych funkcji wirtualnej. Jest to nowa funkcja wirtualnego [cdoctemplate — klasa](../mfc/reference/cdoctemplate-class.md). Poprzednia wersja OpenDocumentFile mają dwa parametry. Nowa wersja ma trzy parametry. Do obsługi Menedżera ponownego uruchomienia, każda klasa pochodzi od cdoctemplate — musi implementować wersji, która ma trzy parametry. Nowy parametr jest bAddToMRU.  
+- Nowa funkcja wirtualnych została dodana do `CDocTemplate` klasy. Jest to nowa funkcja wirtualnego [klasa CDocTemplate](../mfc/reference/cdoctemplate-class.md). Poprzednia wersja `OpenDocumentFile` ma dwa parametry. Nowa wersja ma trzy parametry. Do obsługi Menedżera ponownego uruchamiania, dowolnej klasy pochodnej `CDocTemplate` muszą wdrażać wersję, która ma trzy parametry. Nowy parametr jest `bAddToMRU`.  
   
-### <a name="macros-and-environment-variables"></a>Makra i zmienne środowiskowe  
+### <a name="macros-and-environment-variables"></a>Makra i zmiennych środowiskowych  
   
--   __MSVCRT_HEAP_SELECT zmiennej środowiskowej nie jest już obsługiwana. Tej zmiennej środowiskowej zostanie usunięta i nie ma żadnych zastąpienia.  
+- __MSVCRT_HEAP_SELECT zmiennych środowiskowych nie jest już obsługiwana. Ta zmienna środowiskowa jest usuwany, a istnieje nie można zastąpić.  
   
 ### <a name="microsoft-macro-assembler-reference"></a>Microsoft Macro Assembler — odwołanie  
   
--   Kilka dyrektyw zostały usunięte z kompilatora Microsoft Macro Assembler — odwołanie. Usunięto dyrektywy są.186,.286, .286P.287,.8086,.8087, i. NO87.  
+- Kilka dyrektyw zostały usunięte z kompilatora Microsoft Macro Assembler — odwołanie. Usunięto dyrektywy są.186,.286, .286P.287,.8086,.8087, i. NO87.  
   
-## <a name="visual-c-2008-breaking-changes"></a>Visual C++ 2008 najważniejszych zmian  
+## <a name="visual-c-2008-breaking-changes"></a>Visual C++ 2008 fundamentalne zmiany  
   
-### <a name="compiler"></a>Kompilatora  
+### <a name="compiler"></a>Kompilator  
   
--   System operacyjny Windows 95, Windows 98, Windows ME i platformy systemu Windows NT nie są już obsługiwane. Te systemy operacyjne zostały usunięte z listy platformy docelowej.  
+- Windows 95, Windows 98, Windows ME i Windows NT platform nie są już obsługiwane. Te systemy operacyjne zostały usunięte z listy platformy docelowej.  
   
--   Kompilator nie obsługuje wiele atrybutów, które zostały bezpośrednio skojarzone z biblioteki ATL Server. Następujące atrybuty nie są już obsługiwane:  
+- Kompilator nie obsługuje już wiele atrybutów, które zostały bezpośrednio skojarzone z serwerem biblioteki ATL. Następujące atrybuty nie są już obsługiwane:  
   
-    -   perf_counter  
+    - perf_counter  
   
-    -   perf_object  
+    - perf_object  
   
-    -   Monitora wydajności  
+    - Monitora wydajności  
   
-    -   request_handler  
+    - request_handler  
   
-    -   soap_handler  
+    - soap_handler  
   
-    -   soap_header  
+    - soap_header  
   
-    -   soap_method  
+    - soap_method  
   
-    -   tag_name  
+    - tag_name  
   
 ### <a name="visual-c-projects"></a>Projekty Visual C++  
   
--   Podczas uaktualniania projektów z poprzednich wersji programu Visual Studio, może być konieczne modyfikowanie symboli WINVER i _WIN32_WINNT makra, aby były większe niż lub równa 0x0500.  
+- Podczas uaktualniania projektów z poprzednich wersji programu Visual Studio, trzeba będzie zmodyfikować makra symboli WINVER i _WIN32_WINNT, aby były one większa lub równa 0x0500.  
   
--   Począwszy od programu Visual Studio 2008, Kreator nowego projektu nie ma opcji tworzenia projektu C++ programu SQL Server. Projektów programu SQL Server utworzonych za pomocą wcześniejszej wersji programu Visual Studio będą nadal skompilować i działa poprawnie.  
+- Począwszy od programu Visual Studio 2008 Kreator nowego projektu nie ma opcji, aby utworzyć projekt C++ programu SQL Server. SQL Server — projekty utworzone za pomocą starszej wersji programu Visual Studio skompiluje i działać poprawnie.  
   
--   Plik nagłówka Winable.h interfejsu API systemu Windows została usunięta. Zamiast tego zawierają Winuser.h.  
+- Plik nagłówka interfejsu Windows API Winable.h został usunięty. Zamiast tego zawierają Winuser.h.  
   
--   Biblioteka interfejsu API systemu Windows Rpcndr.lib została usunięta. Połącz z rpcrt4.lib zamiast tego.  
+- Biblioteka interfejsu Windows API Rpcndr.lib zostało usunięte. Zamiast łączyć się z rpcrt4.lib.  
   
 ### <a name="crt"></a>CRT  
   
--   Została usunięta obsługa systemu Windows 95, Windows 98, Windows Millennium Edition i Windows NT 4.0.  
+- Usunięto obsługę Windows 95, Windows 98, Windows Millennium Edition i Windows NT 4.0.  
   
--   Usunięto następujące zmienne globalne:  
+- Usunięto następujące zmienne globalne:  
   
-    -   _osplatform  
+    - _osplatform  
   
-    -   _osver  
+    - _osver  
   
-    -   _winmajor  
+    - _winmajor  
   
-    -   _winminor  
+    - _winminor  
   
-    -   _winver  
+    - _winver  
   
--   Następujące funkcje zostały usunięte. Zamiast tego użyć funkcji Windows API GetVersion lub GetVersionEx:  
+- Następujące funkcje zostały usunięte. Użyj funkcji Windows API `GetVersion` lub `GetVersionEx` zamiast tego:  
   
-    -   _get_osplatform  
+    - _get_osplatform  
   
-    -   _get_osver  
+    - _get_osver  
   
-    -   _get_winmajor  
+    - _get_winmajor  
   
-    -   _get_winminor  
+    - _get_winminor  
   
-    -   _get_winver  
+    - _get_winver  
   
--   Składnia dla adnotacji SAL została zmieniona. Aby uzyskać więcej informacji, zobacz [adnotacji SAL](../c-runtime-library/sal-annotations.md).  
+- Składnia adnotacji SAL został zmieniony. Aby uzyskać więcej informacji, zobacz [adnotacji SAL](../c-runtime-library/sal-annotations.md).  
   
--   Filtr IEEE teraz obsługuje zestaw instrukcji SSE 4.1. Aby uzyskać więcej informacji, zobacz [_fpieee_flt —](../c-runtime-library/reference/fpieee-flt.md)_fpieee_flt —.  
+- Filtr IEEE obsługuje teraz zestaw instrukcji SSE 4.1. Aby uzyskać więcej informacji, zobacz [_fpieee_flt](../c-runtime-library/reference/fpieee-flt.md)_fpieee_flt.  
   
--   Biblioteki wykonawcze języka C, które są dostarczane z programem Visual Studio nie są już zależne od msvcrt.dll biblioteki DLL systemu.  
+- Biblioteki wykonawczej C, które są dostarczane z programem Visual Studio nie są już zależne od msvcrt.dll biblioteki DLL systemu.  
   
 ### <a name="standard-library"></a>Standardowa biblioteka  
   
--   Została usunięta obsługa systemu Windows 95, Windows 98, Windows Millennium Edition i Windows NT 4.0.  
+- Usunięto obsługę Windows 95, Windows 98, Windows Millennium Edition i Windows NT 4.0.  
   
--   W przypadku kompilowania kodu w trybie debugowania z _HAS_ITERATOR_DEBUGGING zdefiniowane (zastąpiona [_ITERATOR_DEBUG_LEVEL](../standard-library/iterator-debug-level.md) po Visual Studio 2010), aplikacji będzie teraz assert, gdy iteratora próbuje następuje zwiększenie lub zmniejszenie po granice podstawowej kontenera.  
+- Podczas kompilowania w trybie debugowania za pomocą _HAS_ITERATOR_DEBUGGING zdefiniowane (zastąpiona [_ITERATOR_DEBUG_LEVEL](../standard-library/iterator-debug-level.md) po Visual Studio 2010), aplikacji będzie teraz assert, gdy iterator próbuje zwiększyć lub zmniejszyć w przeszłości granice kontenera bazowego.  
   
--   C zmiennej elementu członkowskiego klasy stosu teraz jest zadeklarowany jako chroniony. Wcześniej ta zmienna elementu członkowskiego zadeklarowano publicznego.  
+- C zmiennej elementu członkowskiego klasy stosu teraz zadeklarowano chronionych. Wcześniej ta zmienna członka zadeklarowano publicznych.  
   
--   Zachowanie money_get::do_get zostało zmienione. Wcześniej podczas analizowania pieniężnego ilości do ułamek dłuższy niż są nazywane dla przez frac_digits, do_get pozwala korzystać z je wszystkie. Teraz do_get zatrzymuje analizowania po użyciu najwyżej frac_digits znaków.  
+- Zachowanie `money_get::do_get` został zmieniony. Wcześniej, podczas analizowania kwotę pieniężną za pomocą więcej cyfr ułamek niż są wywoływane dla `frac_digits`, `do_get` używane do korzystania z nich wszystkich. Teraz `do_get` zatrzymuje się podczas analizowania po zużyciu co najwyżej `frac_digits` znaków.  
   
 ### <a name="atl"></a>ATL  
   
--   ATL nie może być wbudowane bez zależności w CRT. We wcześniejszych wersjach programu Visual Studio, można użyć #define atl_min_crt — aby Projekt ATL minimalny zestaw zależny od CRT. W programie Visual C++ 2008 wszystkie projekty ATL zależą od co najmniej CRT niezależnie od tego, czy atl_min_crt — jest zdefiniowane.  
+- ATL nie można utworzyć bez zależności CRT. We wcześniejszych wersjach programu Visual Studio, można użyć #define ATL_MIN_CRT się Projekt ATL minimalny zestaw zależne od CRT. W programie Visual C++ 2008 wszystkich projektów ATL zależą od co najmniej CRT niezależnie od tego, czy ATL_MIN_CRT jest zdefiniowana.  
   
--   Codebase serwera ATL zostało zwolnione jako projektu udostępnionego źródła w witrynie CodePlex i nie jest instalowany jako część programu Visual Studio. Dane kodowania i dekodowania klasy z funkcji atlenc.h i narzędzie i klasy z atlutil.h i atlpath.h były trzymane i są częścią biblioteki ATL. Kilka pliki skojarzone z serwerem ATL nie są już częścią programu Visual Studio.  
+- Codebase serwera ATL zostało udostępnione jako projekt źródłowy udostępniony w witrynie CodePlex i nie jest zainstalowany jako część pakietu Visual Studio. Dane, kodowania i dekodowania klas z atlenc.h wraz z narzędziem funkcji i klas z atlutil.h i atlpath.h przebywać i są teraz częścią biblioteki ATL. Kilka plików skojarzonych z aplikacji serwera ATL. nie są już częścią Visual Studio.  
   
--   Niektóre funkcje znajdują się już w bibliotece DLL. Nadal znajdują się w bibliotece importu. Nie wpłynie to na kod, który używa funkcji statycznie. Ma wpływ na tylko kod, który używa tych funkcji dynamicznie.  
+- Niektóre funkcje nie są już znajdują się w bibliotece DLL. Nadal znajdują się w bibliotece importu. Nie ma to wpływu na kod, który używa funkcji statycznie. Wpłynie to tylko kodu, który używa tych funkcji dynamicznie.  
   
--   Makra PROP_ENTRY i PROP_ENTRY_EX zostały przestarzałe i zastępowane andPROP_ENTRY_TYPE_EX PROP_ENTRY_TYPE makra ze względów bezpieczeństwa.  
+- Makra PROP_ENTRY i PROP_ENTRY_EX zostały zaniechane i zastąpione makra PROP_ENTRY_TYPE i PROP_ENTRY_TYPE_EX ze względów bezpieczeństwa.  
   
 ### <a name="atlmfc-shared-classes"></a>Klasy współdzielone ATL/MFC  
   
--   ATL nie może być wbudowane bez zależności w CRT. We wcześniejszych wersjach programu Visual Studio, można użyć #define atl_min_crt — aby Projekt ATL minimalny zestaw zależny od CRT. W programie Visual C++ 2008 wszystkie projekty ATL zależą od co najmniej CRT niezależnie od tego, czy atl_min_crt — jest zdefiniowane.  
+- ATL nie można utworzyć bez zależności CRT. We wcześniejszych wersjach programu Visual Studio, można użyć `#define ATL_MIN_CRT` się Projekt ATL minimalny zestaw zależne od CRT. W programie Visual C++ 2008 wszystkich projektów ATL zależą od co najmniej CRT niezależnie od tego, czy ATL_MIN_CRT jest zdefiniowana.  
   
--   Codebase serwera ATL zostało zwolnione jako projektu udostępnionego źródła w witrynie CodePlex i nie jest instalowany jako część programu Visual Studio. Dane kodowania i dekodowania klasy z funkcji atlenc.h i narzędzie i klasy z atlutil.h i atlpath.h były trzymane i są częścią biblioteki ATL. Kilka pliki skojarzone z serwerem ATL nie są już częścią programu Visual Studio.  
+- Codebase serwera ATL zostało udostępnione jako projekt źródłowy udostępniony w witrynie CodePlex i nie jest zainstalowany jako część pakietu Visual Studio. Dane, kodowania i dekodowania klas z atlenc.h wraz z narzędziem funkcji i klas z atlutil.h i atlpath.h przebywać i są teraz częścią biblioteki ATL. Kilka plików skojarzonych z aplikacji serwera ATL. nie są już częścią Visual Studio.  
   
--   Niektóre funkcje znajdują się już w bibliotece DLL. Nadal znajdują się w bibliotece importu. Nie wpłynie to na kod, który używa funkcji statycznie. Ma wpływ na tylko kod, który używa tych funkcji dynamicznie.  
+- Niektóre funkcje nie są już znajdują się w bibliotece DLL. Nadal znajdują się w bibliotece importu. Nie ma to wpływu na kod, który używa funkcji statycznie. Wpłynie to tylko kodu, który używa tych funkcji dynamicznie.  
   
 ### <a name="mfc"></a>MFC  
   
--   Ctime — klasa: Klasa ctime — teraz akceptuje daty, począwszy od 1/1/1900 r. N.E. zamiast 1/1/1970 r.              
--   Karta zlecenia formantów w oknach dialogowych MFC: kolejności poprawne wielu formantów w oknie dialogowym MFC jest rozproszonych była możliwa, jeśli formant MFC ActiveX jest wstawione w kolejności tabulacji. Ta zmiana rozwiązuje ten problem.  
+- `CTime` Klasa: `CTime` klasy będzie teraz akceptować daty począwszy od 1/1/1900 r. zamiast 1/1/1970 r.              
+
+- Karta zlecenia kontrolki w oknach dialogowych MFC: kolejność tabulacji poprawne wielu formantów w oknie dialogowym MFC jest rozproszonych była możliwa, jeśli formant MFC ActiveX jest wstawiana w kolejności tabulacji. Ta zmiana rozwiązuje ten problem.  
   
-     Na przykład można utworzyć aplikacji okna dialogowego MFC z formantu ActiveX i kilka formantów edycyjnych. Pozycja formantu ActiveX w środku kolejności kart formantów edycyjnych. Uruchom aplikację, kliknij przycisk edycji, których kolejność tabulacji po formantu ActiveX, a następnie kartę. Przed zmianą fokus poszło do kontrolki edycji następującego formantu ActiveX, zamiast następnej kontrolki edycji w kolejności tabulacji.  
+     Na przykład utworzyć formant ActiveX i kilka formantów edycji aplikacji okna dialogowego MFC. Położenie formantu ActiveX w środku kolejność tabulacji kontrolek edycji. Uruchom aplikację, kliknij kontrolkę edycji, w których kolejność tabulacji jest po formantu ActiveX, a następnie kartę. Przed tą zmianą fokus zmieniał się do kontrolki edycji następującego formantu ActiveX, zamiast następny formant edycji, w kolejności tabulacji.  
   
--   Klasa CFileDialog: Szablony niestandardowe dla klasy CFileDialog nie może być automatycznie przenoszone do systemu Windows Vista. Są one nadal używać, ale nie ma dodatkowych funkcji lub wygląda dialogowych styl systemu Windows Vista.  
+- `CFileDialog` Klasa: Szablonów niestandardowych usługi `CFileDialog` klasy nie można automatycznie przenieść do Windows Vista. One nadal można używać, ale nie mają dodatkowe funkcje lub wygląda systemu Windows Vista stylu w oknach dialogowych.  
   
--   Klasa CWnd i cframewnd — klasa: metoda CWnd::GetMenuBarInfo został usunięty.  
+- `CWnd` Klasy i `CFrameWnd` klasy: `CWnd::GetMenuBarInfo` metoda została usunięta.  
   
-     Metoda CFrameWnd::GetMenuBarInfo jest teraz metody niewirtualnej. Aby uzyskać więcej informacji zobacz GetMenuBarInfo Functionin zestaw Windows SDK.  
+     `CFrameWnd::GetMenuBarInfo` Metoda jest obecnie metody niewirtualnej. Aby uzyskać więcej informacji, zobacz **funkcja GetMenuBarInfo** w zestawie Windows SDK.  
   
--   Obsługa MFC ISAPI: MFC nie obsługuje tworzenie aplikacji z Internetu ISAPI Server Application Programming Interface (). Jeśli chcesz utworzyć aplikację ISAPI, rozszerzenia ISAPI należy wywołać bezpośrednio.  
+- Obsługa interfejsu ISAPI MFC: biblioteki MFC nie są już obsługuje tworzenie aplikacji z Internetu ISAPI Server Application Programming Interface (). Aby utworzyć aplikację interfejsu ISAPI, rozszerzenia ISAPI należy wywoływać bezpośrednio.  
   
--   Przestarzałe interfejsy API ANSI: Wersje ANSI kilka metod MFC są przestarzałe. Użyj wersji Unicode tych metod w przyszłych aplikacji. Aby uzyskać więcej informacji zobacz Tworzenie wymagania dla Vista formanty standardowe systemu Windows.  
+- Przestarzałe interfejsy API ANSI: Wersje ANSI kilka metod MFC są przestarzałe. Użyj wersji standardu Unicode tych metod w Twojej aplikacji tworzonych w przyszłości. Aby uzyskać więcej informacji, zobacz **tworzenie wymagania dla Windows Vista wspólnych formantów**.  
   
-## <a name="visual-c-2005-breaking-changes"></a>Visual C++ 2005 najważniejszych zmian  
+## <a name="visual-c-2005-breaking-changes"></a>Visual C++ 2005 fundamentalne zmiany  
   
 ### <a name="crt"></a>CRT  
   
--   Wiele funkcji są przestarzałe. Zobacz funkcje CRT przestarzałe.  
+- Wiele funkcji zostało zdeprecjonowanych. Zobacz **przestarzałe funkcje CRT**.  
   
--   Wiele funkcji teraz sprawdzić poprawność ich parametry zatrzymania wykonywania, jeśli wystąpi dane nieprawidłowe parametry. Może to spowodować uszkodzenie kodu, który przekazuje nieprawidłowe parametry i zależy od funkcji ich zignorowanie lub po prostu zwróciło kod błędu. Zobacz Sprawdzanie poprawności parametru.  
+- Wiele funkcji teraz sprawdzają poprawność swoich parametrów, w zatrzymania wykonywania, jeśli podane nieprawidłowe parametry. Może to spowodować uszkodzenie kod, który przekazuje nieprawidłowe parametry i zależy od funkcji ignorowanie je lub po prostu zwróciło kod błędu. Zobacz **Parameter Validation**.  
   
--   Wartość deskryptora pliku -2 jest teraz służy do wskazania, że stdout i stderr nie są dostępne dla danych wyjściowych, na przykład w aplikacji systemu Windows, która ma żadnego okna konsoli. Poprzedniej wartości, używana jest wartość -1. Aby uzyskać więcej informacji, zobacz [_fileno —](../c-runtime-library/reference/fileno.md).  
+- Wartość deskryptora pliku -2 jest teraz używane do wskazania, że stdout i stderr nie są dostępne dla danych wyjściowych, na przykład w aplikacji Windows, która ma żadnego okna konsoli. Poprzedniej wartości, używana była wartość -1. Aby uzyskać więcej informacji, zobacz [_fileno](../c-runtime-library/reference/fileno.md).  
   
--   Jednowątkowe CRT bibliotek, libc.lib i libcd.lib, zostały usunięte. Użyj wielowątkowych bibliotek CRT. Flagi kompilatora/ml nie jest już obsługiwana. Blokowanie inne niż wersje niektóre funkcje zostały dodane w przypadkach, gdy jest potencjalnie znaczny różnica w wydajności wielowątkowe kod i kod jednowątkowy.  
+- Jednowątkowe CRT biblioteki, libc.lib i libcd.lib, zostały usunięte. Korzystanie z wielowątkowych bibliotek CRT. `/ML` Flagi kompilatora nie jest już obsługiwana. Blokowanie inne niż wersje niektóre funkcje zostały dodane w przypadkach, gdy jest potencjalnie znaczny różnic w wydajności między kod wielowątkowy i kod jednowątkowy.  
   
--   Przeciążenie pow, double pow (int, int), został usunięty lepiej zgodności ze standardem.  
+- Przeciążenie pow, double pow (int, int), został usunięty lepiej są zgodne ze standardem.  
   
--   Specyfikator formatu %n nie jest obsługiwana przez domyślne w żadnym z rodziny printf funkcji, ponieważ jest z założenia niezabezpieczone. Domyślne zachowanie po napotkaniu %n jest program obsługi nieprawidłowych parametrów wywołania. Aby włączyć obsługę %n, użyj _set_printf_count_output — (również see_get_printf_count_output).  
+- Specyfikator formatu %n nie jest już obsługiwana domyślnie w jednym z rodziny funkcji printf funkcji ponieważ ona jest z założenia niezabezpieczone. Zachowanie domyślne, jeśli okaże się %n jest wywołują procedurę obsługi nieprawidłowego parametru. Aby włączyć obsługę %n, należy użyć _set_printf_count_output — (również see_get_printf_count_output).  
   
--   sprintf — teraz drukuje znakiem minus podpisem zero.  
+- `sprintf` teraz drukuje minus zero podpisem.  
   
--   swprintf — został zmieniony na zgodne ze standardem; wymaga to teraz parametr rozmiaru. Formę swprintf — bez rozmiar parametru jest przestarzała.  
+- `swprintf` został zmieniony tak, aby były zgodne ze standardem; wymaga to teraz parametr rozmiaru. Formie `swprintf` bez parametr rozmiaru jest przestarzała.  
   
--   _set_security_error_handler została usunięta. Usuń wszystkie wywołania tej funkcji; domyślny program obsługi jest znacznie bezpieczniejsze sposób postępowania z błędami zabezpieczeń.  
+- `_set_security_error_handler` została usunięta. Usuń wszelkie wywołania tej funkcji; domyślny program obsługi jest znacznie bezpieczniejsze sposób postępowania z błędami zabezpieczeń.  
   
--   time_t — jest teraz wartość 64-bitowa (o ile nie zdefiniowano _USE_32BIT_TIME_T).  
+- `time_t` jest teraz wartość 64-bitowa (Jeśli nie zdefiniowano _use_32bit_time_t).  
   
--   _Spawn, _wspawn — funkcje teraz pozostaw errno bez zmian w przypadku powodzenia, określony przez C Standard.  
+- `_spawn`, `_wspawn` Funkcji teraz należy pozostawić errno bez zmian w przypadku powodzenia, określony przez C Standard.  
   
--   RTC domyślnie używa teraz znaki dwubajtowe.  
+- Domyślnie RTC teraz używa znaków dwubajtowych.  
   
--   Funkcje obsługi słowo formantu zmiennoprzecinkowe są przestarzałe dla aplikacji skompilowanych z/CLR lub/CLR: PURE. Dotyczy funkcji są _clear87 —, _clearfp —, _control87 —, _controlfp —, _fpreset —, _status87 —, _statusfp —. Ostrzeżenie można wyłączyć, definiując _CRT_MANAGED_FP_NO_DEPRECATE, ale korzystanie z tych funkcji w kodzie zarządzanym jest nieprzewidywalne i nieobsługiwane.  
+- Funkcje pomocy technicznej słowo sterujące zmiennoprzecinkowe zostały zaniechane dla aplikacji skompilowanych z opcją/CLR lub/CLR: PURE. Objęte funkcje są `_clear87`, `_clearfp`, `_control87`, `_controlfp`, `_fpreset`, `_status87`, `_statusfp`. Ostrzeżenie o zakończeniu obsługi można wyłączyć, definiując _CRT_MANAGED_FP_NO_DEPRECATE, ale korzystanie z tych funkcji w kodzie zarządzanym charakteryzuje się nieprzewidywalnością i nieobsługiwane.  
   
--   Niektóre funkcje zwracają teraz const wskaźników. Definiując _CONST_RETURN można cofać zachowanie stare, wartością stałą. Dotyczy funkcji  
+- Niektóre funkcje zwracają teraz wskaźniki const. Zachowanie starej, niestały mogą zostać przywrócone, definiując _CONST_RETURN. Objęte funkcje  
   
-    1.  memchr, wmemchr  
+    - memchr, wmemchr  
   
-    2.  strchr, wcschr, _mbschr, _mbschr_l  
+    - strchr, wcschr, _mbschr, _mbschr_l  
   
-    3.  strpbrk, wcspbrk, _mbspbrk, _mbspbrk_l  
+    - strpbrk, wcspbrk, _mbspbrk, _mbspbrk_l  
   
-    4.  strrchr, wcsrchr, _mbsrchr, _mbsrchr_l  
+    - strrchr, wcsrchr, _mbsrchr, _mbsrchr_l  
   
-    5.  strstr, wcsstr, _mbsstr, _mbsstr_l  
+    - strstr, wcsstr, _mbsstr, _mbsstr_l  
   
--   Podczas łączenia z Setargv.obj lub Wsetargv.obj, go nie jest już możliwe do pomijania rozszerzenie symbolu wieloznacznego w wierszu polecenia należy ująć w podwójny cudzysłów. Aby uzyskać więcej informacji, zobacz [rozszerzanie argumentów z symbolami wieloznacznymi](../c-language/expanding-wildcard-arguments.md).  
+- Podczas łączenia z Setargv.obj lub Wsetargv.obj, nie jest już możliwe do pomijania rozszerzenie symbolu wieloznacznego w wierszu polecenia, należy ująć w cudzysłów. Aby uzyskać więcej informacji, zobacz [rozszerzanie argumentów z symbolami wieloznacznymi](../c-language/expanding-wildcard-arguments.md).  
   
 ### <a name="standard-library-2005"></a>Biblioteki standardowej (2005)  
   
--   Klasy wyjątków (znajdujące się w \<wyjątku > Nagłówek) została przeniesiona do przestrzeni nazw std. W poprzednich wersjach ta klasa została w globalnej przestrzeni nazw. Aby rozwiązać wszelkie błędy wskazujące, że nie można znaleźć klasy wyjątków, Dodaj następujący kod przy użyciu instrukcji w kodzie: za pomocą przestrzeni nazw std;  
+- Klasy wyjątków (znajdujący się w \<wyjątku > Nagłówek) została przeniesiona do `std` przestrzeni nazw. W poprzednich wersjach ta klasa została w globalnej przestrzeni nazw. Aby rozwiązać wszelkie błędy, wskazujący, że nie można odnaleźć klasy wyjątku, Dodaj następujący kod przy użyciu instrukcji w kodzie:                 `using namespace std;`  
   
--   Podczas wywoływania metody valarray::resize(), zawartość valarray — zostaną utracone i zostaną zastąpione wartościami domyślnymi. Metoda resize() jest przeznaczona do ponownego inicjowania valarray — zamiast zwiększanie jak wektora.  
+- Podczas wywoływania `valarray::resize()`, zawartość `valarray` zostaną utracone i zostaną zastąpione wartościami domyślnymi. `resize()` Metoda jest przeznaczona do ponownego inicjowania `valarray` zamiast zwiększanie takich jak wektora.  
   
--   Iteratory debugowania: Aplikacje utworzone za pomocą debugowania wersji biblioteki środowiska uruchomieniowego C i które Iteratory użycia niepoprawnie może zacząć Zobacz potwierdzeń w czasie wykonywania. Aby wyłączyć te potwierdzeń, należy zdefiniować _HAS_ITERATOR_DEBUGGING (zastąpiona [_ITERATOR_DEBUG_LEVEL](../standard-library/iterator-debug-level.md) po Visual Studio 2010) na 0. Aby uzyskać więcej informacji, zobacz [Obsługa iteratora debugowania](../standard-library/debug-iterator-support.md)  
+- Iteratory debugowania: Aplikacje tworzone przy użyciu wersji debugowania biblioteki środowiska uruchomieniowego C i które Iteratory użycia niepoprawnie mogą zacząć Zobacz potwierdzenia w czasie wykonywania. Aby wyłączyć te potwierdza, należy zdefiniować _HAS_ITERATOR_DEBUGGING (zastąpione przez [_ITERATOR_DEBUG_LEVEL](../standard-library/iterator-debug-level.md) po Visual Studio 2010) na wartość 0. Aby uzyskać więcej informacji, zobacz [Debug Iterator Support](../standard-library/debug-iterator-support.md)  
   
 ## <a name="visual-c-net-2003-breaking-changes"></a>Visual C++ .NET 2003 Breaking Changes  
   
-### <a name="compiler"></a>Kompilatora  
+### <a name="compiler"></a>Kompilator  
   
--   Zamykanie nawiasów teraz wymagane dla określonych dyrektywy preprocesora (C2004).  
+- Nawias zamykający teraz wymagany dla zdefiniowanych dyrektywy preprocesora (C2004).  
   
--   Jawne specjalizacje nie jest już Znajdź parametry szablonu z szablonu podstawowego ([C2146 błąd kompilatora](../error-messages/compiler-errors-1/compiler-error-c2146.md)).  
+- Jawne specjalizacje nie są już znaleźć parametry szablonu z szablonu podstawowego ([błąd kompilatora C2146](../error-messages/compiler-errors-1/compiler-error-c2146.md)).  
   
--   Chroniony element członkowski (n) można uzyskać tylko za pośrednictwem funkcji członkowskiej klasy, która dziedziczy po klasie (A), w której (n) jest elementem członkowskim (B) ([C2247 błąd kompilatora](../error-messages/compiler-errors-1/compiler-error-c2247.md)).  
+- Chroniony element członkowski (n) może zostać oceniony jedynie za pośrednictwem funkcji składowej klasy (B), która dziedziczy z klasy (A), w której (n) jest członkiem ([błąd kompilatora C2247](../error-messages/compiler-errors-1/compiler-error-c2247.md)).  
   
--   Sprawdzanie dostępności ulepszone w kompilatorze teraz wykrywać niedostępny klas podstawowych ([C2248 błąd kompilatora](../error-messages/compiler-errors-1/compiler-error-c2248.md)).  
+- Kontrole Ulepszone ułatwienia dostępu w kompilatorze teraz wykrywanie niedostępnych klas podstawowych ([błąd kompilatora C2248](../error-messages/compiler-errors-1/compiler-error-c2248.md)).  
   
--   Nie można przechwycić wyjątek, jeśli destruktor i/lub kopiowania Konstruktor jest niedostępny (C2316).  
+- Nie można przechwycić wyjątek, jeśli destruktor i/lub kopiowania Konstruktor jest niedostępny (C2316).  
   
--   Domyślne argumenty dotyczące wskaźników do funkcji już dozwolone ([C2383 błąd kompilatora](../error-messages/compiler-errors-1/compiler-error-c2383.md)).  
+- Domyślne argumenty dotyczące wskaźników do funkcji, które nie są już dozwolone ([błąd kompilatora C2383](../error-messages/compiler-errors-1/compiler-error-c2383.md)).  
   
--   Nie można zainicjować statycznego elementu członkowskiego danych za pośrednictwem pochodnej klasy ([C2477 błąd kompilatora](../error-messages/compiler-errors-1/compiler-error-c2477.md)).  
+- Element członkowski danych statycznych nie można zainicjować za pomocą klasy pochodnej ([błąd kompilatora C2477](../error-messages/compiler-errors-1/compiler-error-c2477.md)).  
   
--   Inicjowanie jako element typedef nie jest dozwolona przez standardowe i generuje błąd kompilatora ([C2513 błąd kompilatora](../error-messages/compiler-errors-2/compiler-error-c2513.md)).  
+- Inicjowanie **typedef** nie jest dozwolona przez standardowe i generuje błąd kompilatora ([błąd kompilatora C2513](../error-messages/compiler-errors-2/compiler-error-c2513.md)).  
   
--   bool jest teraz odpowiedniego typu ([C2632 błąd kompilatora](../error-messages/compiler-errors-2/compiler-error-c2632.md)).  
+- **wartość logiczna** jest teraz odpowiedniego typu ([błąd kompilatora C2632](../error-messages/compiler-errors-2/compiler-error-c2632.md)).  
   
--   UDC można teraz utworzyć niejednoznaczności z przeciążone operatory ([C2666](../error-messages/compiler-errors-2/compiler-error-c2666.md)).  
+- UDC można teraz tworzyć przy użyciu przeciążonych operatorów niejednoznaczności ([C2666](../error-messages/compiler-errors-2/compiler-error-c2666.md)).  
   
--   Wyrażenia więcej teraz są traktowane jako prawidłowego wskaźnika null — stałe ([C2668 błąd kompilatora](../error-messages/compiler-errors-2/compiler-error-c2668.md)).  
+- Więcej wyrażeń teraz są traktowane jako stałe nieprawidłowy wskaźnik o wartości null ([błąd kompilatora C2668](../error-messages/compiler-errors-2/compiler-error-c2668.md)).  
   
--   Szablon <> teraz jest wymagany w miejscach, w którym kompilator wcześniej oznaczałoby go ([C2768 błąd kompilatora](../error-messages/compiler-errors-2/compiler-error-c2768.md)).  
+- <> szablonu jest teraz wymagany w miejscach, w którym kompilator wcześniej oznaczałoby go ([błąd kompilatora C2768](../error-messages/compiler-errors-2/compiler-error-c2768.md)).  
   
--   Specjalizacja expilicit ourside funkcja elementu członkowskiego klasy jest nieprawidłowa, jeśli funkcja już został jawnie specjalizowany za pośrednictwem specjalizacji szablonu klasy ([C2910 błąd kompilatora](../error-messages/compiler-errors-2/compiler-error-c2910.md)).  
+- Specjalizacja expilicit ourside funkcji składowej klasy jest nieprawidłowa, jeśli funkcja już zostać jawnie specjalizowany za pośrednictwem specjalizacja szablonu klasy ([błąd kompilatora C2910](../error-messages/compiler-errors-2/compiler-error-c2910.md)).  
   
--   Przestawne parametrów szablonu bez typu punktów nie są już dozwolone ([C2993 błąd kompilatora](../error-messages/compiler-errors-2/compiler-error-c2993.md)).  
+- Zmiennoprzecinkowe parametry szablonu bez typu punktu nie są już dozwolone ([błąd kompilatora C2993](../error-messages/compiler-errors-2/compiler-error-c2993.md)).  
   
--   Szablony klas nie są dozwolone jako argumentów typu szablonu (C3206).  
+- Szablony klas nie są dozwolone jako argumenty typu szablonu (C3206).  
   
--   Przyjazne nazwy funkcji nie są wprowadzane do zawierającą przestrzeń nazw ([C3767 błąd kompilatora](../error-messages/compiler-errors-2/compiler-error-c3767.md)).  
+- Przyjazne nazwy funkcji nie są wprowadzane do zawierającą przestrzeń nazw ([błąd kompilatora C3767](../error-messages/compiler-errors-2/compiler-error-c3767.md)).  
   
--   Kompilator nie będzie akceptował dodatkowe przecinkami w makrze (C4002).  
+- Kompilator nie będzie akceptował dodatkowe przecinkami w makrze (C4002).  
   
--   Obiekt typu POD skonstruowany przy użyciu inicjatora formy () będzie inicjowany domyślnie (C4345).  
+- Obiekt typu POD skonstruowany przy użyciu inicjatora (formularza) będą inicjowane domyślnie (C4345).  
   
--   Nazwa typu jest teraz wymagany, jeśli zależna nazwa jest traktowane jako typ ([C4346 ostrzeżenie kompilatora (poziom 1)](../error-messages/compiler-warnings/compiler-warning-level-1-c4346.md)).  
+- Nazwa typu jest teraz wymagany, jeśli zależna nazwa jest traktowane jako typ ([ostrzeżenie kompilatora (poziom 1) C4346](../error-messages/compiler-warnings/compiler-warning-level-1-c4346.md)).  
   
--   Funkcje, które zostały nieprawidłowo uznany za specjalizacji szablonu nie są traktowane jako tak (C4347).  
+- Funkcje, które zostały nieprawidłowo uznane za specjalizacje szablonu są przestaje być uważany za tak (C4347).  
   
--   Statyczne elementy członkowskie danych nie można zainicjować za pomocą klasy pochodnej (C4356).  
+- Statyczne elementy członkowskie danych nie można zainicjować za pomocą klasy pochodnej (C4356).  
   
--   Specjalizacja szablonu klasy musi być zdefiniowane przed została użyta w zwracany typ ([C4686 ostrzeżenie kompilatora (poziom 3)](../error-messages/compiler-warnings/compiler-warning-level-3-c4686.md)).  
+- Specjalizacja szablonu klasy musi zdefiniować, zanim został on użyty w zwracanym typem ([ostrzeżenie kompilatora (poziom 3) C4686](../error-messages/compiler-warnings/compiler-warning-level-3-c4686.md)).  
   
--   Kompilator zgłasza teraz nieosiągalny kod (C4702).  
+- Kompilator zgłasza teraz nieosiągalnego kodu (C4702).  
   
-## <a name="see-also"></a>Zobacz też  
-[Nowości w języku Visual C++ w programie Visual Studio](../what-s-new-for-visual-cpp-in-visual-studio.md)
+## <a name="see-also"></a>Zobacz też
+
+[Co nowego w języku Visual C++ w programie Visual Studio](../what-s-new-for-visual-cpp-in-visual-studio.md)

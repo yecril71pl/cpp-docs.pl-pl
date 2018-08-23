@@ -198,17 +198,17 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 69b27a3fd2fdce9836512e19c566b02c40afb78a
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: 73f4f14f01cd9d881c0e9da0db8aa23d7946e719
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37853520"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42466358"
 ---
 # <a name="cmfcribbonbar-class"></a>Klasa CMFCRibbonBar
 `CMFCRibbonBar` Klasa implementuje paska wstążki, podobnie jak w pakiecie Office 2007.  
 
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+ Aby uzyskać więcej informacji, zobacz kod źródłowy znajdujący się w **VC\\atlmfc\\src\\mfc** folder instalacji programu Visual Studio.  
    
 ## <a name="syntax"></a>Składnia  
   

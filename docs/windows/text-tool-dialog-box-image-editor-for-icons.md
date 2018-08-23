@@ -18,31 +18,36 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: d868a79af6e521146f7ba510f8831f6cd1f14f6c
-ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
+ms.openlocfilehash: 86de06ded585c027af6ebf31dec964222d088198
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/09/2018
-ms.locfileid: "40012849"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42613183"
 ---
 # <a name="text-tool-dialog-box-image-editor-for-icons"></a>Okno dialogowe narzędzi tekstowych (Edytor obrazów dla ikon)
-Użyj **narzędzie tekstowe** okno dialogowe, aby dodać tekst do kursora, mapa bitowa lub ikona zasobu.  
-  
- Aby uzyskać dostęp do tego okna dialogowego, otwórz [edytora obrazów](../windows/window-panes-image-editor-for-icons.md). Wybierz **narzędzia** z **obraz** menu, a następnie wybierz pozycję **narzędzie tekstowe** polecenia.  
-  
-### <a name="font-button"></a>Przycisk Czcionka  
- Otwiera [narzędzie czcionki tekstu, okno dialogowe](../windows/text-tool-font-dialog-box-image-editor-for-icons.md), w którym można zmienić czcionki, styl i rozmiar czcionki kursora. Zmiany są stosowane do tekstu wyświetlanego w **tekstu** obszaru.  
-  
-### <a name="text-area"></a>Obszar tekstu  
- Wyświetla tekst, który pojawia się jako część zasobu. Ten obszar jest początkowo pusta.  
-  
+
+Użyj **narzędzie tekstowe** okno dialogowe, aby dodać tekst do kursora, mapa bitowa lub ikona zasobu.
+
+Aby uzyskać dostęp do tego okna dialogowego, otwórz [edytora obrazów](../windows/window-panes-image-editor-for-icons.md). Wybierz **narzędzia** z **obraz** menu, a następnie wybierz pozycję **narzędzie tekstowe** polecenia.
+
+### <a name="font-button"></a>Przycisk Czcionka
+
+Otwiera [narzędzie czcionki tekstu, okno dialogowe](../windows/text-tool-font-dialog-box-image-editor-for-icons.md), w którym można zmienić czcionki, styl i rozmiar czcionki kursora. Zmiany są stosowane do tekstu wyświetlanego w **tekstu** obszaru.
+
+### <a name="text-area"></a>Obszar tekstu
+
+Wyświetla tekst, który pojawia się jako część zasobu. Ten obszar jest początkowo pusta.
+
 > [!NOTE]
->  Jeśli **przezroczyste tło** jest ustawiona tylko tekst, zostaną umieszczone w obrazie. Jeśli **tło nieprzezroczyste** ustawiono prostokąt otaczający wypełnione [kolor tła](../windows/selecting-foreground-or-background-colors-image-editor-for-icons.md), zostaną umieszczone za tekstem. Aby uzyskać więcej informacji, zobacz [wybierając nieprzezroczystych i tło przezroczyste](../windows/choosing-a-transparent-or-opaque-background-image-editor-for-icons.md).  
-  
- Kliknięciu prawym przyciskiem myszy **narzędzie tekstowe** okno dialogowe, aby dostęp do menu skrótów domyślne, które zawiera listę standardowych poleceń Windows.  
-  
-## <a name="requirements"></a>Wymagania  
- Brak  
-  
-## <a name="see-also"></a>Zobacz też  
- [Edytowanie zasobów graficznych](../windows/editing-graphical-resources-image-editor-for-icons.md)
+> Jeśli **przezroczyste tło** jest ustawiona tylko tekst, zostaną umieszczone w obrazie. Jeśli **tło nieprzezroczyste** ustawiono prostokąt otaczający wypełnione [kolor tła](../windows/selecting-foreground-or-background-colors-image-editor-for-icons.md), zostaną umieszczone za tekstem. Aby uzyskać więcej informacji, zobacz [wybierając nieprzezroczystych i tło przezroczyste](../windows/choosing-a-transparent-or-opaque-background-image-editor-for-icons.md).
+
+Kliknięciu prawym przyciskiem myszy **narzędzie tekstowe** okno dialogowe, aby dostęp do menu skrótów domyślne, które zawiera listę standardowych poleceń Windows.
+
+## <a name="requirements"></a>Wymagania
+
+Brak
+
+## <a name="see-also"></a>Zobacz też
+
+[Edytowanie zasobów graficznych](../windows/editing-graphical-resources-image-editor-for-icons.md)

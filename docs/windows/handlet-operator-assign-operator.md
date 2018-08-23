@@ -17,38 +17,44 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: fa253bec9f150d08f699333cd5d5f6d4538fc2d6
-ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
+ms.openlocfilehash: cf539082ef88abb5fb27f09d92b73403dc2d03a5
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39653160"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42611345"
 ---
 # <a name="handletoperator-operator"></a>HandleT::operator= Operator
-Przenosi wartość określonego **HandleT** obiekt do bieżącego **HandleT** obiektu.  
-  
-## <a name="syntax"></a>Składnia  
-  
-```cpp  
-HandleT& operator=(  
-   _Inout_ HandleT&& h  
-);  
-```  
-  
-### <a name="parameters"></a>Parametry  
- *h*  
- Odwołanie rvalue do uchwytu.  
-  
-## <a name="return-value"></a>Wartość zwracana  
- Odwołanie do bieżącego **HandleT** obiektu.  
-  
-## <a name="remarks"></a>Uwagi  
- Ta operacja powoduje unieważnienie **HandleT** obiekt określony przez parametr *h*.  
-  
-## <a name="requirements"></a>Wymagania  
- **Nagłówek:** corewrappers.h  
-  
- **Namespace:** Microsoft::wrl:: wrappers  
-  
-## <a name="see-also"></a>Zobacz też  
- [HandleT, klasa](../windows/handlet-class.md)
+
+Przenosi wartość określonego **HandleT** obiekt do bieżącego **HandleT** obiektu.
+
+## <a name="syntax"></a>Składnia
+
+```cpp
+HandleT& operator=(
+   _Inout_ HandleT&& h
+);
+```
+
+### <a name="parameters"></a>Parametry
+
+*h*  
+Odwołanie rvalue do uchwytu.
+
+## <a name="return-value"></a>Wartość zwracana
+
+Odwołanie do bieżącego **HandleT** obiektu.
+
+## <a name="remarks"></a>Uwagi
+
+Ta operacja powoduje unieważnienie **HandleT** obiekt określony przez parametr *h*.
+
+## <a name="requirements"></a>Wymagania
+
+**Nagłówek:** corewrappers.h
+
+**Namespace:** Microsoft::wrl:: wrappers
+
+## <a name="see-also"></a>Zobacz też
+
+[HandleT, klasa](../windows/handlet-class.md)

@@ -17,38 +17,43 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 2a2ed2393f25dac416cf3b6dfd1b178190d368a6
-ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
+ms.openlocfilehash: 8783d30aa018e0b29705c4c6bdda3b9e2a47af4a
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39647105"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42613235"
 ---
 # <a name="activationfactoryqueryinterface-method"></a>ActivationFactory::QueryInterface — Metoda
-Pobiera wskaźnik do określonego interfejsu.  
-  
-## <a name="syntax"></a>Składnia  
-  
-```cpp  
-STDMETHOD(  
-   QueryInterface  
-)(REFIID riid, _Deref_out_ void **ppvObject);  
-```  
-  
-### <a name="parameters"></a>Parametry  
- *Parametr riid*  
- Identyfikator interfejsu.  
-  
- *ppvObject*  
- Po zakończeniu tej operacji, wskaźnik do interfejsu, określony przez parametr *riid*.  
-  
-## <a name="return-value"></a>Wartość zwracana  
- S_OK w przypadku powodzenia; w przeciwnym razie wartość HRESULT, który opisuje błąd.  
-  
-## <a name="requirements"></a>Wymagania  
- **Nagłówek:** module.h  
-  
- **Namespace:** Microsoft::WRL  
-  
-## <a name="see-also"></a>Zobacz też  
- [ActivationFactory, klasa](../windows/activationfactory-class.md)
+
+Pobiera wskaźnik do określonego interfejsu.
+
+## <a name="syntax"></a>Składnia
+
+```cpp
+STDMETHOD(
+   QueryInterface
+)(REFIID riid, _Deref_out_ void **ppvObject);
+```
+
+### <a name="parameters"></a>Parametry
+
+*Parametr riid*  
+Identyfikator interfejsu.
+
+*ppvObject*  
+Po zakończeniu tej operacji, wskaźnik do interfejsu, określony przez parametr *riid*.
+
+## <a name="return-value"></a>Wartość zwracana
+
+S_OK w przypadku powodzenia; w przeciwnym razie wartość HRESULT, który opisuje błąd.
+
+## <a name="requirements"></a>Wymagania
+
+**Nagłówek:** module.h
+
+**Namespace:** Microsoft::WRL
+
+## <a name="see-also"></a>Zobacz też
+
+[ActivationFactory, klasa](../windows/activationfactory-class.md)

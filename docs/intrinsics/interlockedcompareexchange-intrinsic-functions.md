@@ -1,5 +1,5 @@
 ---
-title: Funkcje wewnętrzne _InterlockedCompareExchange | Dokumentacja firmy Microsoft
+title: Funkcje wewnętrzne _interlockedcompareexchange | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -58,17 +58,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3b0fc52585171df740f70e12d81d849e3726dcd7
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 7eff5cab57c1288af1f6e1109fae458c35e0fa7b
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33339186"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42611386"
 ---
-# <a name="interlockedcompareexchange-intrinsic-functions"></a>Funkcje wewnętrzne _InterlockedCompareExchange
+# <a name="interlockedcompareexchange-intrinsic-functions"></a>Funkcje wewnętrzne _interlockedcompareexchange
 **Microsoft Specific**  
   
- Przeprowadza porównanie blokowanego i exchange.  
+ Wykonuje blokowane porównania i wymiany.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -186,46 +186,46 @@ __int64 _InterlockedCompareExchange64_rel(
 ```  
   
 #### <a name="parameters"></a>Parametry  
- [w, out] `Destination`  
- Wskaźnik do wartości docelowej. Znak jest ignorowana.  
+ [out w] `Destination`  
+ Wskaźnik do wartości docelowej. Znak jest ignorowany.  
   
  [in] `Exchange`  
- Wartość programu Exchange. Znak jest ignorowana.  
+ Wartość programu Exchange. Znak jest ignorowany.  
   
  [in] `Comparand`  
- Wartość do porównania do miejsca docelowego. Znak jest ignorowana.  
+ Wartość do porównania do miejsca docelowego. Znak jest ignorowany.  
   
 ## <a name="return-value"></a>Wartość zwracana  
  Wartość zwracana jest wartość początkowa `Destination` wskaźnika.  
   
 ## <a name="requirements"></a>Wymagania  
   
-|— Wewnętrzne|Architektura|nagłówek|  
+|Wewnętrzne|Architektura|nagłówek|  
 |---------------|------------------|------------|  
-|`_InterlockedCompareExchange`, `_InterlockedCompareExchange8`, `_InterlockedCompareExchange16`, `_InterlockedCompareExchange64`|x86, ARM, [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|\<intrin.h>|  
+|`_InterlockedCompareExchange`, `_InterlockedCompareExchange8`, `_InterlockedCompareExchange16`, `_InterlockedCompareExchange64`|x86, ARM, x64|\<intrin.h>|  
 |`_InterlockedCompareExchange_acq`, `_InterlockedCompareExchange_rel`, `_InterlockedCompareExchange8_acq`, `_InterlockedCompareExchange8_nf`, `_InterlockedCompareExchange8_rel`,`_InterlockedCompareExchange16_acq`, `_InterlockedCompareExchange16_nf`, `_InterlockedCompareExchange16_rel`, `_InterlockedCompareExchange64_acq`, `_InterlockedCompareExchange64_nf`, `_InterlockedCompareExchange64_rel`,|ARM|\<intrin.h>|  
-|`_InterlockedCompareExchange_np`, `_InterlockedCompareExchange16_np`, `_InterlockedCompareExchange64_np`|[!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|\<intrin.h>|  
-|`_InterlockedCompareExchange_HLEAcquire`, `_InterlockedCompareExchange_HLERelease`, `_InterlockedCompareExchange64_HLEAcquire`, `_InterlockedCompareExchange64_HLERelease`|x86, [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|\<immintrin.h>|  
+|`_InterlockedCompareExchange_np`, `_InterlockedCompareExchange16_np`, `_InterlockedCompareExchange64_np`|X64|\<intrin.h>|  
+|`_InterlockedCompareExchange_HLEAcquire`, `_InterlockedCompareExchange_HLERelease`, `_InterlockedCompareExchange64_HLEAcquire`, `_InterlockedCompareExchange64_HLERelease`|x86, x64|\<immintrin.h>|  
   
 ## <a name="remarks"></a>Uwagi  
- `_InterlockedCompareExchange` przeprowadza porównanie atomic `Destination` wartości z `Comparand` wartości. Jeśli `Destination` wartość jest równa `Comparand` wartość `Exchange` wartość jest przechowywana w adresem określonym przez `Destination`. W przeciwnym razie operacja nie jest wykonywana.  
+ `_InterlockedCompareExchange` Wykonuje porównanie atomowe `Destination` wartością `Comparand` wartości. Jeśli `Destination` wartość jest równa `Comparand` wartość `Exchange` wartość jest przechowywana w adresem określonym przez `Destination`. W przeciwnym razie odbywa się żadna operacja.  
   
- `_InterlockedCompareExchange` zapewnia obsługę wewnętrznych kompilatora dla środowiska Win32 [!INCLUDE[winsdkshort](../atl-mfc-shared/reference/includes/winsdkshort_md.md)] [InterlockedCompareExchange](http://msdn.microsoft.com/library/ms683560.aspx) funkcji.  
+ `_InterlockedCompareExchange` zapewnia wsparcie wewnętrznej kompilatora dla zestawu SDK Windows Win32 [InterlockedCompareExchange](/windows/desktop/api/winbase/nf-winbase-interlockedcompareexchange) funkcji.  
   
- Istnieje kilka zmian na `_InterlockedCompareExchange` który różnić w zależności od typów danych, wymagają one i czy uzyskać specyficznych dla procesora lub Wydaj semantykę jest używany.  
+ Istnieje kilka zmian w `_InterlockedCompareExchange` różnią się zależnie od typów danych, wymagają one oraz tego, czy uzyskać specyficznych dla procesora lub semantyka wydania jest używany.  
   
- Podczas `_InterlockedCompareExchange` funkcja działa na wartościach długich liczb całkowitych, `_InterlockedCompareExchange8` działa na wartości 8-bitową liczbę całkowitą `_InterlockedCompareExchange16` działa na wartości całkowite krótki i `_InterlockedCompareExchange64` działa na 64-bitowych liczb całkowitych.  
+ Gdy `_InterlockedCompareExchange` funkcja działa na wartościach liczba całkowita typu long `_InterlockedCompareExchange8` operuje na 8-bitowych wartości całkowitych, `_InterlockedCompareExchange16` działa na wartościach krótka liczba całkowita i `_InterlockedCompareExchange64` działa w 64-bitowych wartości całkowitych.  
   
- Na platformach ARM, użyj funkcji wewnętrznych z `_acq` i `_rel` sufiksy dla semantyki pobierania i zlecenia, takie jak na początku i na końcu sekcji krytycznych. Funkcje wewnętrzne ARM z `_nf` sufiks ("nie ogranicznika") nie działają jako bariery pamięci.  
+ Na platformach ARM, użyj funkcji wewnętrznych za pomocą `_acq` i `_rel` sufiksy dla semantyki nabywania i wydania, takie jak na początku i na końcu sekcję krytyczną. Funkcje wewnętrzne ARM przy użyciu `_nf` sufiks ("nie ogranicznika") nie działają jako czynnik blokujący pamięci.  
   
- Funkcje wewnętrzne z `_np` sufiks ("nie pobierania z wyprzedzeniem") uniemożliwiają operacji pobierania z wyprzedzeniem możliwe wstawiane przez kompilator.  
+ Funkcje wewnętrzne z `_np` sufiks ("nie pobieranie z wyprzedzeniem") uniemożliwić operacji możliwe pobieranie z wyprzedzeniem wstawiane przez kompilator.  
   
- Na platformach firmy Intel, które obsługują instrukcje Elision blokady sprzętu (HLE), funkcje wewnętrzne z `_HLEAcquire` i `_HLERelease` sufiksy obejmują wskazówkę procesora, która umożliwia przyspieszanie wydajności przez wyeliminowanie krok blokady zapisu sprzętu. Jeśli te funkcje wewnętrzne są nazywane na platformach, które nie obsługują HLE, wskazówka zostanie zignorowany.  
+ Na platformach firmy Intel, obsługujące instrukcje pominięcia blokady sprzętu (HLE), funkcje wewnętrzne z `_HLEAcquire` i `_HLERelease` sufiksy obejmują wskazówkę procesora, który może przyspieszyć wydajność, eliminując krok blokady zapisu w sprzęcie. Jeśli te funkcje wewnętrzne są wywoływane na platformach, które nie obsługują HLE, wskazówka zostanie zignorowany.  
   
  Te procedury są dostępne tylko jako funkcje wewnętrzne.  
   
 ## <a name="example"></a>Przykład  
- W poniższym przykładzie `_InterlockedCompareExchange` służy do synchronizacji proste wątku niskiego poziomu. To rozwiązanie ma swoje ograniczenia jako podstawy programowania wielowątkowych. jest on przedstawiony w celu zilustrowania typowy sposób użycia protokołu blokowanego funkcje wewnętrzne. Aby uzyskać najlepsze rezultaty należy użyć interfejsu API systemu Windows. Aby uzyskać dodatkowe informacje o programowanie wielowątkowe, zobacz [zapisywania wielowątkowe programu systemu Win32](../parallel/writing-a-multithreaded-win32-program.md).  
+ W poniższym przykładzie `_InterlockedCompareExchange` służy do synchronizacji prostych wątków niskiego poziomu. To podejście ma swoje ograniczenia, jako podstawy dla programowania wielowątkowe. on dostępny ilustrują typowym zastosowaniem blokowane funkcje wewnętrzne. Aby uzyskać najlepsze wyniki należy użyć interfejsu API Windows. Aby uzyskać dodatkowe informacje na temat programowania wielowątkowe, zobacz [pisanie wielowątkowego programu Win32](../parallel/writing-a-multithreaded-win32-program.md).  
   
 ```  
 // intrinExample.cpp  
@@ -436,11 +436,11 @@ int main(
 <29  
 ```  
   
-**KOŃCOWY określonych firmy Microsoft**  
+**END specyficzny dla Microsoft**  
   
 ## <a name="see-also"></a>Zobacz też  
  [_InterlockedCompareExchange128](../intrinsics/interlockedcompareexchange128.md)   
- [Funkcje wewnętrzne _InterlockedCompareExchangePointer](../intrinsics/interlockedcompareexchangepointer-intrinsic-functions.md)   
+ [Funkcje wewnętrzne _interlockedcompareexchangepointer](../intrinsics/interlockedcompareexchangepointer-intrinsic-functions.md)   
  [Funkcje wewnętrzne kompilatora](../intrinsics/compiler-intrinsics.md)   
  [Keywords](../cpp/keywords-cpp.md)   
  [Konflikty z kompilatorem x86](../build/conflicts-with-the-x86-compiler.md)

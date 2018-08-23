@@ -17,39 +17,45 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 3b766858d0f558b4fdff3a703c612ec07c038abf
-ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
+ms.openlocfilehash: 3a60d12adfade18c9989d1dc8609a38252d32073
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39641923"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42599101"
 ---
 # <a name="cloakediid-structure"></a>CloakedIid — Struktura
-Wskazuje, aby `RuntimeClass`, `Implements` i `ChainInterfaces` określonego interfejsu nie jest dostępny na liście IID szablonów.  
-  
-## <a name="syntax"></a>Składnia  
-  
-```cpp  
-template<typename T>  
-struct CloakedIid : T;  
-```  
-  
-#### <a name="parameters"></a>Parametry  
- *T*  
- Interfejs który jest ukryty (osłonięty).  
-  
-## <a name="remarks"></a>Uwagi  
- Poniżej przedstawiono przykładowy sposób **cloakediid —** służy: `struct MyRuntimeClass : RuntimeClass<CloakedIid<IMyCloakedInterface>> {}`.  
-  
-## <a name="inheritance-hierarchy"></a>Hierarchia dziedziczenia  
- `T`  
-  
- `CloakedIid`  
-  
-## <a name="requirements"></a>Wymagania  
- **Nagłówek:** implements.h  
-  
- **Namespace:** Microsoft::WRL  
-  
-## <a name="see-also"></a>Zobacz też  
- [Microsoft::WRL, przestrzeń nazw](../windows/microsoft-wrl-namespace.md)
+
+Wskazuje, aby `RuntimeClass`, `Implements` i `ChainInterfaces` określonego interfejsu nie jest dostępny na liście IID szablonów.
+
+## <a name="syntax"></a>Składnia
+
+```cpp
+template<typename T>
+struct CloakedIid : T;
+```
+
+#### <a name="parameters"></a>Parametry
+
+*T*  
+Interfejs który jest ukryty (osłonięty).
+
+## <a name="remarks"></a>Uwagi
+
+Poniżej przedstawiono przykładowy sposób **cloakediid —** służy: `struct MyRuntimeClass : RuntimeClass<CloakedIid<IMyCloakedInterface>> {}`.
+
+## <a name="inheritance-hierarchy"></a>Hierarchia dziedziczenia
+
+`T`
+
+`CloakedIid`
+
+## <a name="requirements"></a>Wymagania
+
+**Nagłówek:** implements.h
+
+**Namespace:** Microsoft::WRL
+
+## <a name="see-also"></a>Zobacz też
+
+[Microsoft::WRL, przestrzeń nazw](../windows/microsoft-wrl-namespace.md)

@@ -17,29 +17,33 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 4ef8c54b2336ebae5e6f9b81aa33d977bd6199e7
-ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
+ms.openlocfilehash: 8c1e1a8bc076144d80358191cd8eca209057b869
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39651937"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42599180"
 ---
 # <a name="comptrptr-data-member"></a>ComPtr::ptr_ — Członek danych
-Zawiera wskaźnik do interfejsu, który jest skojarzony z i zarządzanego przez to **ComPtr**.  
-  
-## <a name="syntax"></a>Składnia  
-  
-```cpp  
-InterfaceType *ptr_;  
-```  
-  
-## <a name="remarks"></a>Uwagi  
- **ptr_ — element** jest elementem członkowskim wewnętrznego, chronionych danych.  
-  
-## <a name="requirements"></a>Wymagania  
- **Nagłówek:** client.h  
-  
- **Namespace:** Microsoft::WRL  
-  
-## <a name="see-also"></a>Zobacz też  
- [ComPtr, klasa](../windows/comptr-class.md)
+
+Zawiera wskaźnik do interfejsu, który jest skojarzony z i zarządzanego przez to **ComPtr**.
+
+## <a name="syntax"></a>Składnia
+
+```cpp
+InterfaceType *ptr_;
+```
+
+## <a name="remarks"></a>Uwagi
+
+**ptr_ — element** jest elementem członkowskim wewnętrznego, chronionych danych.
+
+## <a name="requirements"></a>Wymagania
+
+**Nagłówek:** client.h
+
+**Namespace:** Microsoft::WRL
+
+## <a name="see-also"></a>Zobacz też
+
+[ComPtr, klasa](../windows/comptr-class.md)

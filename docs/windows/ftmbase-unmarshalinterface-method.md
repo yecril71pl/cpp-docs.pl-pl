@@ -17,43 +17,48 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: a1991454daa76fcf7878a7487080124b5a34dbeb
-ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
+ms.openlocfilehash: ef462ae884aad4160ffbae1883485ac7e06d3aa5
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39644037"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42610704"
 ---
 # <a name="ftmbaseunmarshalinterface-method"></a>FtmBase::UnmarshalInterface — Metoda
-Inicjuje nowo utworzony serwer proxy i zwraca wskaźnik interfejsu do tego serwera proxy.  
-  
-## <a name="syntax"></a>Składnia  
-  
-```cpp  
-STDMETHODIMP UnmarshalInterface(  
-   __in IStream *pStm,  
-   __in REFIID riid,  
-   __deref_out void **ppv  
-) override;  
-```  
-  
-### <a name="parameters"></a>Parametry  
- *pStm*  
- Wskaźnik do strumienia, z którego ma zostać wycofana wskaźnika interfejsu.  
-  
- *Parametr riid*  
- Odwołanie do identyfikatora interfejsu Aby zostać wycofana.  
-  
- *ppv*  
- Po zakończeniu tej operacji, adres zmiennej wskaźnika, który otrzymuje wskaźnik interfejsu w *riid*. Jeśli operacja zakończy się powodzeniem, **ppv* znajduje się wskaźnik interfejsu żądanego interfejsu Aby zostać wycofana.  
-  
-## <a name="return-value"></a>Wartość zwracana  
- S_OK w przypadku powodzenia; w przeciwnym razie E_NOINTERFACE lub E_FAIL.  
-  
-## <a name="requirements"></a>Wymagania  
- **Nagłówek:** ftm.h  
-  
- **Namespace:** Microsoft::WRL  
-  
-## <a name="see-also"></a>Zobacz też  
- [FtmBase, klasa](../windows/ftmbase-class.md)
+
+Inicjuje nowo utworzony serwer proxy i zwraca wskaźnik interfejsu do tego serwera proxy.
+
+## <a name="syntax"></a>Składnia
+
+```cpp
+STDMETHODIMP UnmarshalInterface(
+   __in IStream *pStm,
+   __in REFIID riid,
+   __deref_out void **ppv
+) override;
+```
+
+### <a name="parameters"></a>Parametry
+
+*pStm*  
+Wskaźnik do strumienia, z którego ma zostać wycofana wskaźnika interfejsu.
+
+*Parametr riid*  
+Odwołanie do identyfikatora interfejsu Aby zostać wycofana.
+
+*ppv*  
+Po zakończeniu tej operacji, adres zmiennej wskaźnika, który otrzymuje wskaźnik interfejsu w *riid*. Jeśli operacja zakończy się powodzeniem, **ppv* znajduje się wskaźnik interfejsu żądanego interfejsu Aby zostać wycofana.
+
+## <a name="return-value"></a>Wartość zwracana
+
+S_OK w przypadku powodzenia; w przeciwnym razie E_NOINTERFACE lub E_FAIL.
+
+## <a name="requirements"></a>Wymagania
+
+**Nagłówek:** ftm.h
+
+**Namespace:** Microsoft::WRL
+
+## <a name="see-also"></a>Zobacz też
+
+[FtmBase, klasa](../windows/ftmbase-class.md)

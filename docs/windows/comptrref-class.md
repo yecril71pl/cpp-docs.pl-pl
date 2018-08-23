@@ -17,67 +17,73 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 9c45aa289b4b41ddfaf141dcaf790734284af7c8
-ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
+ms.openlocfilehash: aaeb641fc7b2276567edfb30fd36c46db6cfc5ae
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39643553"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42613692"
 ---
 # <a name="comptrref-class"></a>ComPtrRef — Klasa
-Obsługuje infrastrukturę biblioteki WRL i nie jest przeznaczona do użycia bezpośrednio w kodzie.  
-  
-## <a name="syntax"></a>Składnia  
-  
-```cpp  
-template <  
-   typename T  
->  
-class ComPtrRef : public ComPtrRefBase<T>;  
-```  
-  
-#### <a name="parameters"></a>Parametry  
- *T*  
- A [ComPtr\<T >](../windows/comptr-class.md) typu lub typu pochodnego w nie tylko interfejs, reprezentowane przez `ComPtr`.  
-  
-## <a name="remarks"></a>Uwagi  
- Reprezentuje odwołanie do obiektu typu `ComPtr<T>`.  
-  
-## <a name="members"></a>Elementy członkowskie  
-  
-### <a name="public-constructors"></a>Konstruktory publiczne  
-  
-|Nazwa|Opis|  
-|----------|-----------------|  
-|[ComPtrRef::ComPtrRef, konstruktor](../windows/comptrref-comptrref-constructor.md)|Inicjuje nowe wystąpienie klasy **comptrref —** klasy z określonym wskaźnika **comptrref —** obiektu.|  
-  
-### <a name="public-methods"></a>Metody publiczne  
-  
-|Nazwa|Opis|  
-|----------|-----------------|  
-|[ComPtrRef::GetAddressOf, metoda](../windows/comptrref-getaddressof-method.md)|Pobiera adres wskaźnika do interfejsu, reprezentowane przez bieżącą **comptrref —** obiektu.|  
-|[ComPtrRef::ReleaseAndGetAddressOf, metoda](../windows/comptrref-releaseandgetaddressof-method.md)|Usuwa bieżący **comptrref —** obiektu i zwraca wskaźnik do a wskaźnik do interfejsu, który został przedstawiony przez **comptrref —** obiektu.|  
-  
-### <a name="public-operators"></a>Operatory publiczne  
-  
-|Nazwa|Opis|  
-|----------|-----------------|  
-|[Operator ComPtrRef::operator InterfaceType**](../windows/comptrref-operator-interfacetype-star-star-operator.md)|Usuwa bieżący **comptrref —** obiektu i zwraca wskaźnik do a wskaźnik do interfejsu, który został przedstawiony przez **comptrref —** obiektu.|  
-|[Operator ComPtrRef::operator T*](../windows/comptrref-operator-t-star-operator.md)|Zwraca wartość [ptr_ — element](../windows/comptrrefbase-ptr-data-member.md) bieżącego obiektu comptrref — element członkowski danych.|  
-|[Operator ComPtrRef::operator void**](../windows/comptrref-operator-void-star-star-operator.md)|Usuwa bieżący **comptrref —** obiektów, wskaźnik do interfejsu, który został przedstawiony przez rzutuje **comptrref —** obiektu jako wskaźnik do wskaźnik do **void**, a następnie Zwraca wskaźnik rzutowania.|  
-|[Operator ComPtrRef::operator*](../windows/comptrref-operator-star-operator.md)|Pobiera wskaźnik do interfejsu, reprezentowane przez bieżącą **comptrref —** obiektu.|  
-|[Operator ComPtrRef::operator==](../windows/comptrref-operator-equality-operator.md)|Wskazuje, czy dwa **comptrref —** obiekty są sobie równe.|  
-|[Operator ComPtrRef::operator!=](../windows/comptrref-operator-inequality-operator.md)|Wskazuje, czy dwa **comptrref —** obiekty nie są równe.|  
-  
-## <a name="inheritance-hierarchy"></a>Hierarchia dziedziczenia  
- `ComPtrRefBase`  
-  
- `ComPtrRef`  
-  
-## <a name="requirements"></a>Wymagania  
- **Nagłówek:** client.h  
-  
- **Namespace:** Microsoft::wrl:: details  
-  
-## <a name="see-also"></a>Zobacz też  
- [Microsoft::WRL::Details, przestrzeń nazw](../windows/microsoft-wrl-details-namespace.md)
+
+Obsługuje infrastrukturę biblioteki WRL i nie jest przeznaczona do użycia bezpośrednio w kodzie.
+
+## <a name="syntax"></a>Składnia
+
+```cpp
+template <
+   typename T
+>
+class ComPtrRef : public ComPtrRefBase<T>;
+```
+
+#### <a name="parameters"></a>Parametry
+
+*T*  
+A [ComPtr\<T >](../windows/comptr-class.md) typu lub typu pochodnego w nie tylko interfejs, reprezentowane przez `ComPtr`.
+
+## <a name="remarks"></a>Uwagi
+
+Reprezentuje odwołanie do obiektu typu `ComPtr<T>`.
+
+## <a name="members"></a>Elementy członkowskie
+
+### <a name="public-constructors"></a>Konstruktory publiczne
+
+|Nazwa|Opis|
+|----------|-----------------|
+|[ComPtrRef::ComPtrRef, konstruktor](../windows/comptrref-comptrref-constructor.md)|Inicjuje nowe wystąpienie klasy **comptrref —** klasy z określonym wskaźnika **comptrref —** obiektu.|
+
+### <a name="public-methods"></a>Metody publiczne
+
+|Nazwa|Opis|
+|----------|-----------------|
+|[ComPtrRef::GetAddressOf, metoda](../windows/comptrref-getaddressof-method.md)|Pobiera adres wskaźnika do interfejsu, reprezentowane przez bieżącą **comptrref —** obiektu.|
+|[ComPtrRef::ReleaseAndGetAddressOf, metoda](../windows/comptrref-releaseandgetaddressof-method.md)|Usuwa bieżący **comptrref —** obiektu i zwraca wskaźnik do a wskaźnik do interfejsu, który został przedstawiony przez **comptrref —** obiektu.|
+
+### <a name="public-operators"></a>Operatory publiczne
+
+|Nazwa|Opis|
+|----------|-----------------|
+|[Operator ComPtrRef::operator InterfaceType**](../windows/comptrref-operator-interfacetype-star-star-operator.md)|Usuwa bieżący **comptrref —** obiektu i zwraca wskaźnik do a wskaźnik do interfejsu, który został przedstawiony przez **comptrref —** obiektu.|
+|[Operator ComPtrRef::operator T*](../windows/comptrref-operator-t-star-operator.md)|Zwraca wartość [ptr_ — element](../windows/comptrrefbase-ptr-data-member.md) bieżącego obiektu comptrref — element członkowski danych.|
+|[Operator ComPtrRef::operator void**](../windows/comptrref-operator-void-star-star-operator.md)|Usuwa bieżący **comptrref —** obiektów, wskaźnik do interfejsu, który został przedstawiony przez rzutuje **comptrref —** obiektu jako wskaźnik do wskaźnik do **void**, a następnie Zwraca wskaźnik rzutowania.|
+|[Operator ComPtrRef::operator*](../windows/comptrref-operator-star-operator.md)|Pobiera wskaźnik do interfejsu, reprezentowane przez bieżącą **comptrref —** obiektu.|
+|[Operator ComPtrRef::operator==](../windows/comptrref-operator-equality-operator.md)|Wskazuje, czy dwa **comptrref —** obiekty są sobie równe.|
+|[Operator ComPtrRef::operator!=](../windows/comptrref-operator-inequality-operator.md)|Wskazuje, czy dwa **comptrref —** obiekty nie są równe.|
+
+## <a name="inheritance-hierarchy"></a>Hierarchia dziedziczenia
+
+`ComPtrRefBase`
+
+`ComPtrRef`
+
+## <a name="requirements"></a>Wymagania
+
+**Nagłówek:** client.h
+
+**Namespace:** Microsoft::wrl:: details
+
+## <a name="see-also"></a>Zobacz też
+
+[Microsoft::WRL::Details, przestrzeń nazw](../windows/microsoft-wrl-details-namespace.md)

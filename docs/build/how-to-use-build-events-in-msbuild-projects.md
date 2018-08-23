@@ -16,38 +16,38 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2367c85dbd4a4ef7b10d927592c0fb10a417f0e6
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 59863911072b491eb19a1296f3cb40d4f4ab4dce
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32369776"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42613059"
 ---
 # <a name="how-to-use-build-events-in-msbuild-projects"></a>Porady: korzystanie ze zdarzeń kompilacji w projektach MSBuild
-To zdarzenie kompilacji jest polecenie który [!INCLUDE[vstecmsbuild](../build/includes/vstecmsbuild_md.md)] wykonuje określonego etapu w procesie kompilacji. *Prekompilacyjnego* zdarzenie przed rozpoczęciem kompilacji; *prekonsolidacyjnego* zdarzenie przed uruchomieniem kroku łącze; i *postkompilacyjnego* zdarzenie po kompilacji kończy się pomyślnie. Zdarzenia kompilacji występuje tylko wtedy, gdy występuje kroku kompilacji. Zdarzenia prekonsolidacyjnego nie występuje na przykład, jeśli krok łącze nie działa.  
+To zdarzenie kompilacji jest polecenia, który program MSBuild wykonuje na określonym etapie w procesie kompilacji. *Prekompilacji* wystąpi zdarzenie, przed rozpoczęciem kompilacji; *prekonsolidacyjnego* wystąpi zdarzenie przed uruchomieniem kroku łącze; i *po kompilacji* wystąpi zdarzenie po kompilacji kończy się pomyślnie. To zdarzenie kompilacji występuje tylko wtedy, gdy występuje w kroku skojarzonej kompilacji. Na przykład zdarzenia prekonsolidacyjnego nie występuje krokiem link nie zostanie uruchomione.  
   
- Każda zdarzeń trzy kompilacji jest reprezentowana w grupie definicji elementu przez command element (`<Command>`) który jest wykonywany i elementu komunikatu (`<Message>`) czyli wyświetlane **MSBuild** wykonuje zdarzeń kompilacji. Każdy element jest opcjonalny, i podanie tego samego elementu wiele razy, pierwszeństwo ma ostatniego wystąpienia.  
+ Wszystkich zdarzeń kompilacji trzy jest reprezentowana w grupie definicji elementów przez command element (`<Command>`) które jest wykonywane i message element (`<Message>`) oznacza to wyświetlane, **MSBuild** wykonuje zdarzeń kompilacji. Każdy element jest opcjonalny, a jeśli określisz tego samego elementu wielokrotnie ostatniego wystąpienia ma pierwszeństwo.  
   
- Opcjonalny *Użyj kompilacji* elementu (`<`* kompilacji — zdarzenie ***UseInBuild**`>`) można określić w grupie właściwości, aby wskazać, czy zdarzenie kompilacji jest uruchomione. Wartość zawartości *Użyj kompilacji* jest element `true` lub `false`. Domyślnie to zdarzenie kompilacji jest wykonywany, chyba że odpowiednie *Użyj kompilacji* element jest ustawiony na wartość `false`.  
+ Opcjonalny *Użyj kompilacji* — element (`<`* kompilacji — zdarzenie ***UseInBuild**`>`) można określić w grupie właściwości, aby wskazać, czy zdarzenie kompilacji jest wykonywany. Wartość zawartości *Użyj kompilacji* jest element `true` lub `false`. Domyślnie to zdarzenie kompilacji jest wykonywane, chyba że odpowiadającymi mu dostawcami *Użyj kompilacji* element jest ustawiony na wartość `false`.  
   
- W poniższej tabeli wymieniono każdego zdarzenia kompilacji — element XML:  
+ Poniższa tabela zawiera listę każdego zdarzenia kompilacji — element XML:  
   
-|XML Element|Opis|  
+|— Element XML|Opis|  
 |-----------------|-----------------|  
 |`PreBuildEvent`|To zdarzenie jest wykonywany przed rozpoczęciem kompilacji.|  
-|`PreLinkEvent`|To zdarzenie jest wykonywany przed rozpoczęciem kroku łącza.|  
-|`PostBuildEvent`|To zdarzenie jest wykonywana po zakończeniu kompilacji.|  
+|`PreLinkEvent`|To zdarzenie jest wykonywany przed rozpoczęciem kroku łączenia.|  
+|`PostBuildEvent`|To zdarzenie jest wykonywany po zakończeniu kompilacji.|  
   
- Poniższa tabela zawiera listę *Użyj kompilacji* elementu:  
+ W poniższej tabeli wymieniono każdy *Użyj kompilacji* elementu:  
   
-|XML Element|Opis|  
+|— Element XML|Opis|  
 |-----------------|-----------------|  
-|`PreBuildEventUseInBuild`|Określa, czy można wykonać *prekompilacyjnego* zdarzeń.|  
+|`PreBuildEventUseInBuild`|Określa, czy można wykonać *prekompilacji* zdarzeń.|  
 |`PreLinkEventUseInBuild`|Określa, czy można wykonać *prekonsolidacyjnego* zdarzeń.|  
 |`PostBuildEventUseInBuild`|Określa, czy można wykonać *postkompilacyjnego* zdarzeń.|  
   
 ## <a name="example"></a>Przykład  
- Poniższy przykład można dodać wewnątrz elementu projektu utworzonych w pliku myproject.vcxproj [wskazówki: przy użyciu programu MSBuild do tworzenia projektu Visual C++](../build/walkthrough-using-msbuild-to-create-a-visual-cpp-project.md). A *prekompilacyjnego* sprawia, że zdarzenie kopię main.cpp; *prekonsolidacyjnego* sprawia, że zdarzenie kopię main.obj; a co *postkompilacyjnego* zdarzeń tworzy kopię myproject.exe. Jeśli projekt został zbudowany przy użyciu konfiguracji wydanie, wykonywane są zdarzeń kompilacji. Jeśli projekt został zbudowany przy użyciu konfiguracji debugowania, zdarzeń kompilacji nie zostaną wykonane.  
+ Poniższy przykład można dodać wewnątrz elementu projektu myProject.vcxproj za elementem pliku utworzonego w [Instruktaż: przy użyciu programu MSBuild do tworzenia projektu Visual C++](../build/walkthrough-using-msbuild-to-create-a-visual-cpp-project.md). A *prekompilacji* zdarzeń sprawia, że kopia main.cpp; *prekonsolidacyjnego* zdarzeń sprawia, że kopia main.obj; a co *po kompilacji* zdarzeń tworzy kopię myproject.exe. Jeśli projekt jest kompilowany przy użyciu konfiguracji wydania, wykonywane są zdarzeń kompilacji. Jeśli projekt jest kompilowany przy użyciu konfiguracji debugowania, zdarzeń kompilacji nie zostaną wykonane.  
   
 ```  
 <ItemDefinitionGroup>  
@@ -79,5 +79,5 @@ To zdarzenie kompilacji jest polecenie który [!INCLUDE[vstecmsbuild](../build/i
 ```  
   
 ## <a name="see-also"></a>Zobacz też  
- [MSBuild (Visual C++)](../build/msbuild-visual-cpp.md)   
+ [Program MSBuild (Visual C++)](../build/msbuild-visual-cpp.md)   
  [Przewodnik: Korzystanie z MSBuild do tworzenia projektu Visual C++](../build/walkthrough-using-msbuild-to-create-a-visual-cpp-project.md)

@@ -17,50 +17,56 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 29a88c34502404de13bd3b93d13c60470e2882ea
-ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
+ms.openlocfilehash: 90367a21d76fe7fe735d1174bc9b9d40900dec78
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39650719"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42600833"
 ---
 # <a name="creatormapfactorycreator-data-member"></a>CreatorMap::factoryCreator — Członek danych
-Obsługuje infrastrukturę biblioteki WRL i nie jest przeznaczona do użycia bezpośrednio w kodzie.  
-  
-## <a name="syntax"></a>Składnia  
-  
-```cpp  
-HRESULT (*factoryCreator)(  
-   unsigned int* currentflags,  
-   const CreatorMap* entry,  
-   REFIID iidClassFactory,  
- IUnknown** factory);  
-```  
-  
-### <a name="parameters"></a>Parametry  
- *currentflags*  
- Jedną z [RuntimeClassType](../windows/runtimeclasstype-enumeration.md) modułów wyliczających.  
-  
- *entry*  
- Creatormap —.  
-  
- *iidClassFactory*  
- Identyfikator interfejsu fabrykę klas.  
-  
- *Fabryka*  
- Po zakończeniu tej operacji adres fabrykę klas.  
-  
-## <a name="return-value"></a>Wartość zwracana  
- S_OK w przypadku powodzenia; w przeciwnym razie wartość HRESULT, która wskazuje błąd.  
-  
-## <a name="remarks"></a>Uwagi  
- Tworzy fabrykę dla określonego creatormap —.  
-  
-## <a name="requirements"></a>Wymagania  
- **Nagłówek:** module.h  
-  
- **Namespace:** Microsoft::wrl:: details  
-  
-## <a name="see-also"></a>Zobacz też  
- [Creatormap — struktura](../windows/creatormap-structure.md)   
- [Microsoft::WRL::Details, przestrzeń nazw](../windows/microsoft-wrl-details-namespace.md)
+
+Obsługuje infrastrukturę biblioteki WRL i nie jest przeznaczona do użycia bezpośrednio w kodzie.
+
+## <a name="syntax"></a>Składnia
+
+```cpp
+HRESULT (*factoryCreator)(
+   unsigned int* currentflags,
+   const CreatorMap* entry,
+   REFIID iidClassFactory,
+ IUnknown** factory);
+```
+
+### <a name="parameters"></a>Parametry
+
+*currentflags*  
+Jedną z [RuntimeClassType](../windows/runtimeclasstype-enumeration.md) modułów wyliczających.
+
+*entry*  
+Creatormap —.
+
+*iidClassFactory*  
+Identyfikator interfejsu fabrykę klas.
+
+*Fabryka*  
+Po zakończeniu tej operacji adres fabrykę klas.
+
+## <a name="return-value"></a>Wartość zwracana
+
+S_OK w przypadku powodzenia; w przeciwnym razie wartość HRESULT, która wskazuje błąd.
+
+## <a name="remarks"></a>Uwagi
+
+Tworzy fabrykę dla określonego creatormap —.
+
+## <a name="requirements"></a>Wymagania
+
+**Nagłówek:** module.h
+
+**Namespace:** Microsoft::wrl:: details
+
+## <a name="see-also"></a>Zobacz też
+
+[CreatorMap, struktura](../windows/creatormap-structure.md)  
+[Microsoft::WRL::Details, przestrzeń nazw](../windows/microsoft-wrl-details-namespace.md)

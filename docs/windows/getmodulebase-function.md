@@ -1,5 +1,5 @@
 ---
-title: Getmodulebase — funkcja | Dokumentacja firmy Microsoft
+title: GetModuleBase, funkcja | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,34 +15,34 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 25e4bb6db6114f7d64522dfe145d51ffaabd476a
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 403330097f1428ee0d7650f5931aef1621f61b11
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33874210"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42612604"
 ---
 # <a name="getmodulebase-function"></a>GetModuleBase — Funkcja
-Pobiera [ModuleBase](../windows/modulebase-class.md) wskaźnika, który umożliwia zwiększanie oraz zmniejszanie liczebności referencyjnej równej [runtimeclass —](../windows/runtimeclass-class.md) obiektu.  
+Pobiera [ModuleBase](../windows/modulebase-class.md) wskaźnika, który umożliwia zwiększanie i zmniejszanie licznik odwołań [RuntimeClass](../windows/runtimeclass-class.md) obiektu.
   
-## <a name="syntax"></a>Składnia  
+## <a name="syntax"></a>Składnia
   
-```cpp  
+```cpp
 inline Details::ModuleBase* GetModuleBase() throw()  
-```  
+```
   
-## <a name="return-value"></a>Wartość zwracana  
- Wskaźnik do `ModuleBase` obiektu.  
+## <a name="return-value"></a>Wartość zwracana
+ Wskaźnik do `ModuleBase` obiektu.
   
-## <a name="remarks"></a>Uwagi  
- Ta funkcja jest używana wewnętrznie w celu zwiększyć i zmniejszyć liczby odwołanie do obiektu.  
+## <a name="remarks"></a>Uwagi
+ Ta funkcja jest używana wewnętrznie w celu AddRef() liczby odwołań obiektu.
   
- Ta funkcja służy do kontrolowania liczby odwołań przez wywołanie metody [ModuleBase::IncrementObjectCount](../windows/modulebase-incrementobjectcount-method.md) i [ModuleBase::DecrementObjectCount](../windows/modulebase-decrementobjectcount-method.md).  
+ Ta funkcja umożliwia kontrolowanie odwołań, wywołując [ModuleBase::IncrementObjectCount](../windows/modulebase-incrementobjectcount-method.md) i [ModuleBase::DecrementObjectCount](../windows/modulebase-decrementobjectcount-method.md).
   
-## <a name="requirements"></a>Wymagania  
- **Nagłówek:** implements.h  
+## <a name="requirements"></a>Wymagania
+ **Nagłówek:** implements.h
   
- **Namespace:** Microsoft::wrl —  
+ **Namespace:** Microsoft::WRL
   
-## <a name="see-also"></a>Zobacz też  
+## <a name="see-also"></a>Zobacz też
  [Microsoft::WRL, przestrzeń nazw](../windows/microsoft-wrl-namespace.md)

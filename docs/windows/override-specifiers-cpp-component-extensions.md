@@ -16,46 +16,53 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: f84379e57dc5730227726d28c6947d0274b615c5
-ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
+ms.openlocfilehash: 71cafe3d73204b6a318e731d0a95f2dfcc73fa5a
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/07/2018
-ms.locfileid: "39603917"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42600126"
 ---
 # <a name="override-specifiers--c-component-extensions"></a>Specyfikatory zastąpienia (C++ Component Extensions)
-*Specyfikatory przesłonięć* zmodyfikować sposób dziedziczone typy i członkowie typów dziedziczonych zachowują się w typach pochodnych.  
-  
-## <a name="all-runtimes"></a>Wszystkie środowiska wykonawcze  
-### <a name="remarks"></a>Uwagi  
-  
- Aby uzyskać więcej informacji na temat nadpisania specyfikatorów zobacz:  
-  
--   [abstract](../windows/abstract-cpp-component-extensions.md)  
-  
--   [New (nowe gniazdo w vtable)](../windows/new-new-slot-in-vtable-cpp-component-extensions.md)  
-  
--   [override](../windows/override-cpp-component-extensions.md)  
-  
--   [sealed](../windows/sealed-cpp-component-extensions.md)  
-  
--   [Zastąpienie specyfikatorów i kompilacji macierzystych](../dotnet/how-to-declare-override-specifiers-in-native-compilations-cpp-cli.md)  
-  
- **abstrakcyjna** i **zapieczętowanego** są również prawidłowe w typach deklaracji, gdzie nie działają jak zastępujące specyfikatory.  
-  
- Aby uzyskać informacje dotyczące jawnego przesyłania funkcji klasy podstawowej, zobacz [jawne zastępowanie](../windows/explicit-overrides-cpp-component-extensions.md).  
-  
-## <a name="windows-runtime"></a>Środowisko wykonawcze systemu Windows  
- (Nie ma żadnych uwag dla tej funkcji języka, które dotyczą tylko środowiska uruchomieniowego Windows).  
-  
-### <a name="requirements"></a>Wymagania  
- — Opcja kompilatora: `/ZW`  
-  
-## <a name="common-language-runtime"></a>środowiska uruchomieniowe w trakcie wykonania  
- (Nie ma żadnych uwag dla tej funkcji języka, które dotyczą tylko środowiska uruchomieniowego języka wspólnego).  
-  
-### <a name="requirements"></a>Wymagania  
- — Opcja kompilatora: `/clr`  
-  
-## <a name="see-also"></a>Zobacz też  
- [Component Extensions dla platform środowiska uruchomieniowego](../windows/component-extensions-for-runtime-platforms.md)
+
+*Specyfikatory przesłonięć* zmodyfikować sposób dziedziczone typy i członkowie typów dziedziczonych zachowują się w typach pochodnych.
+
+## <a name="all-runtimes"></a>Wszystkie środowiska wykonawcze
+
+### <a name="remarks"></a>Uwagi
+
+Aby uzyskać więcej informacji na temat nadpisania specyfikatorów zobacz:
+
+- [abstract](../windows/abstract-cpp-component-extensions.md)
+
+- [New (nowe gniazdo w vtable)](../windows/new-new-slot-in-vtable-cpp-component-extensions.md)
+
+- [override](../windows/override-cpp-component-extensions.md)
+
+- [sealed](../windows/sealed-cpp-component-extensions.md)
+
+- [Zastąpienie specyfikatorów i kompilacji macierzystych](../dotnet/how-to-declare-override-specifiers-in-native-compilations-cpp-cli.md)
+
+**abstrakcyjna** i **zapieczętowanego** są również prawidłowe w typach deklaracji, gdzie nie działają jak zastępujące specyfikatory.
+
+Aby uzyskać informacje dotyczące jawnego przesyłania funkcji klasy podstawowej, zobacz [jawne zastępowanie](../windows/explicit-overrides-cpp-component-extensions.md).
+
+## <a name="windows-runtime"></a>Środowisko wykonawcze systemu Windows
+
+(Nie ma żadnych uwag dla tej funkcji języka, które dotyczą tylko środowiska uruchomieniowego Windows).
+
+### <a name="requirements"></a>Wymagania
+
+— Opcja kompilatora: `/ZW`
+
+## <a name="common-language-runtime"></a>środowiska uruchomieniowe w trakcie wykonania
+
+(Nie ma żadnych uwag dla tej funkcji języka, które dotyczą tylko środowiska uruchomieniowego języka wspólnego).
+
+### <a name="requirements"></a>Wymagania
+
+— Opcja kompilatora: `/clr`
+
+## <a name="see-also"></a>Zobacz też
+
+[Component Extensions dla platform środowiska uruchomieniowego](../windows/component-extensions-for-runtime-platforms.md)
