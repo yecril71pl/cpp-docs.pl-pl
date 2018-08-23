@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: af146c37490d86a839f717d387c4072fbd649a87
-ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
+ms.openlocfilehash: 425d404272ad21ad5c732a4db210379eedc7515f
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/30/2018
-ms.locfileid: "39339440"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42465518"
 ---
 # <a name="ole-db-templates"></a>Szablony OLE DB
 Szablony OLE DB ułatwiają dostęp do danych OLE DB. Visual C++ zapewnia klasy szablonów, które implementują wiele powszechnie używanych interfejsów OLE DB. Można użyć szablonów konsumentów Visual C++ do pisania aplikacji klienckich (użytkownik) OLE DB i szablony dostawcy do pisania aplikacji serwera (dostawcy).  
@@ -38,7 +38,7 @@ Szablony OLE DB ułatwiają dostęp do danych OLE DB. Visual C++ zapewnia klasy 
  [Omówienie programowania OLE DB](../../data/oledb/ole-db-programming-overview.md)  
  W tym artykule opisano, co to jest OLE DB, a w tym artykule omówiono Uniwersalny dostęp do danych w OLE DB.  
   
- [Dokumentacja dotycząca OLE DB](https://msdn.microsoft.com/library/ms713643.aspx)  
+ [Dokumentacja dotycząca OLE DB](/previous-versions/windows/desktop/ms713643\(v=vs.85\))  
  Zawiera łącza do dokumentacji zestawu Windows SDK dla OLE DB.  
   
  [Przykłady szablonów OLE DB](../../visual-cpp-samples.md)  

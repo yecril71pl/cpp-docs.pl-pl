@@ -1,5 +1,5 @@
 ---
-title: 'TN038: Implementacja interfejsu IUnknown MFC OLE | Dokumentacja firmy Microsoft'
+title: 'TN038: Implementacja interfejsu MFC / OLE IUnknown | Dokumentacja firmy Microsoft'
 ms.custom: ''
 ms.date: 06/28/2018
 ms.technology:
@@ -28,23 +28,23 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f1b0ec018ba56f873b5bc5e95f66262d85929fb4
-ms.sourcegitcommit: 208d445fd7ea202de1d372d3f468e784e77bd666
+ms.openlocfilehash: acf33139250e6876dde6d86f7e8ed144dbe23180
+ms.sourcegitcommit: b92ca0b74f0b00372709e81333885750ba91f90e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/29/2018
-ms.locfileid: "37122905"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "42464496"
 ---
 # <a name="tn038-mfcole-iunknown-implementation"></a>TN038: implementacja interfejsu MFC/OLE IUnknown
 
 > [!NOTE]
-> Poniższe uwagi techniczne nie został zaktualizowany, ponieważ została ona uwzględniona w dokumentacji online. W związku z tym niektóre procedury i tematy mogą być nieaktualne lub niepoprawne. Najnowsze informacje zalecane jest, możesz wyszukać temat odsetek w indeksie dokumentacji online.
+> Następująca uwaga techniczna nie został zaktualizowany od pierwszego uwzględnienia jej w dokumentacji online. W rezultacie niektóre procedury i tematy może być nieaktualne lub niepoprawne. Najnowsze informacje zaleca się wyszukać temat w indeksie dokumentacji online.
 
-Istotą OLE 2 jest "OLE Component Object Model" lub modelu COM. Standard definiuje COM dla obiektów, jak współpracujących komunikować się ze sobą. Obejmuje to szczegóły jakie "obiektu" wygląda, w tym jak metody są wysyłane do obiektu. COM również definiuje klasę podstawową, od których pochodzą wszystkie zgodne klasy COM. Ta klasa podstawowa jest [IUnknown](http://msdn.microsoft.com/library/windows/desktop/ms680509). Mimo że [IUnknown](http://msdn.microsoft.com/library/windows/desktop/ms680509) interfejsu jest określana jako klasę C++, COM nie jest specyficzne dla żadnego języka jeden — można ją wdrożyć w C, PASCAL lub dowolnego innego języka może obsługiwać binarne układ obiektu COM.
+Istotą OLE 2 jest "OLE Component Object Model" lub model COM. COM zdefiniowano standard dla obiektów współpracujących, jak mają komunikować się ze sobą. Obejmuje to szczegóły "obiektu" wygląda podobnie, w tym jak metody są wysyłane do obiektu. COM definiuje również klasę bazową, z której pochodzą wszystkie zgodne klasy COM. Ta klasa bazowa jest [IUnknown](http://msdn.microsoft.com/library/windows/desktop/ms680509). Mimo że [IUnknown](http://msdn.microsoft.com/library/windows/desktop/ms680509) interfejsu nosi nazwę klasy języka C++, COM nie jest specyficzny dla żadnego poszczególnego języka — może być implementowana w języku C, PASCAL lub dowolnym innym języku, który może obsługiwać układ binarny obiektu COM.
 
-OLE odwołuje się do wszystkich klas pochodnych [IUnknown](http://msdn.microsoft.com/library/windows/desktop/ms680509) jako "Interfejsy". Jest to ważna różnica od "interfejsu" takie jak [IUnknown](http://msdn.microsoft.com/library/windows/desktop/ms680509) niesie ze sobą żadnej implementacji. Definiuje on po prostu protokołu za pomocą którego komunikację obiektów, nie szczegółowe informacje na temat tych wdrożeń czy. Jest to uzasadnione dla systemu, który pozwala na maksymalne elastyczność. To zadanie MFC do zaimplementowania domyślne zachowanie dla programów MFC/C++.
+Mechanizmie OLE wszystkie klasy pochodne od [IUnknown](http://msdn.microsoft.com/library/windows/desktop/ms680509) nazywane "interfejsami". Jest to istotna różnica, gdyż "interfejs" taki jak [IUnknown](http://msdn.microsoft.com/library/windows/desktop/ms680509) niesie ze sobą implementacji. Po prostu definiuje protokół, przez którą komunikują się obiekty, nie szczegóły tego, co zrobią te implementacje. Ma to uzasadnienie dla systemu, który pozwala, aby zapewnić maksymalną elastyczność. To zadanie biblioteki MFC, aby zaimplementować domyślne zachowanie dla programów MFC/C++.
 
-Aby zrozumieć implementacji MFC [IUnknown](http://msdn.microsoft.com/library/windows/desktop/ms680509) należy najpierw zrozumieć ten interfejs jest. Uproszczone [IUnknown](http://msdn.microsoft.com/library/windows/desktop/ms680509) jest zdefiniowana poniżej:
+Aby zrozumieć implementację MFC [IUnknown](http://msdn.microsoft.com/library/windows/desktop/ms680509) musisz najpierw zrozumieć, jaka jest tego interfejsu. Uproszczoną wersję [IUnknown](http://msdn.microsoft.com/library/windows/desktop/ms680509) określono poniżej:
 
 ```cpp
 class IUnknown
@@ -57,11 +57,11 @@ public:
 ```
 
 > [!NOTE]
-> Niektórych niezbędne Konwencja wywoływania szczegółowe informacje, takie jak `__stdcall` pozostało na tej ilustracji.
+> Niektóre niezbędne szczegóły konwencji wywoływania, takie jak `__stdcall` pozostawiono na tej ilustracji.
 
-[AddRef](http://msdn.microsoft.com/library/windows/desktop/ms691379) i [wersji](http://msdn.microsoft.com/library/windows/desktop/ms682317) funkcje Członkowskie kontroli zarządzania pamięcią obiektu. COM wykorzystuje schemat zliczania odwołania do śledzenia obiektów. Nigdy nie odwołuje się do obiektu bezpośrednio, tak jak w języku C++. Zamiast tego obiekty COM zawsze odwołuje się za pomocą wskaźnika. Do zwolnienia obiektu po zakończeniu właściciela przy użyciu jego, obiekt [wersji](http://msdn.microsoft.com/library/windows/desktop/ms682317) nosi nazwę elementu członkowskiego (a nie za pomocą operatora delete, jak będą wykonywane dla obiekt tradycyjnego języka C++). Zliczanie mechanizm umożliwia wiele odwołań do pojedynczego obiektu mają być zarządzane. Implementacja interfejsu [AddRef](http://msdn.microsoft.com/library/windows/desktop/ms691379) i [wersji](http://msdn.microsoft.com/library/windows/desktop/ms682317) przechowuje licznika odwołań w obiekcie — obiekt nie zostanie usunięty, dopóki nie osiągnie jego liczebności referencyjnej zero.
+[AddRef](http://msdn.microsoft.com/library/windows/desktop/ms691379) i [wersji](http://msdn.microsoft.com/library/windows/desktop/ms682317) funkcji elementów członkowskich kontrolują zarządzanie pamięcią obiektu. COM używa schematu obliczeń odwołania do śledzenia obiektów. Nigdy nie odwołuje się do obiektu bezpośrednio, tak jak w języku C++. Zamiast tego obiekty COM zawsze są wywoływane za pomocą wskaźnika. Aby zwolnić obiekt, gdy właściciel jest wykonywane przy użyciu jego, obiekt [wersji](http://msdn.microsoft.com/library/windows/desktop/ms682317) wywołaniu elementu członkowskiego (w przeciwieństwie do używania operatora Usuń, jak dla tradycyjnego obiektu języka C++). Mechanizm zliczania odwołań zezwala na wiele odwołań do jednego obiektu, mają być zarządzane. Implementacja [AddRef](http://msdn.microsoft.com/library/windows/desktop/ms691379) i [wersji](http://msdn.microsoft.com/library/windows/desktop/ms682317) przechowuje licznik odwołań obiektu — obiekt nie zostanie usunięty, dopóki jego licznik odwołań osiągnie zero.
 
-[AddRef](http://msdn.microsoft.com/library/windows/desktop/ms691379) i [wersji](http://msdn.microsoft.com/library/windows/desktop/ms682317) są bardzo prosta z punktu widzenia implementacji. W tym miejscu jest prosta implementacja:
+[AddRef](http://msdn.microsoft.com/library/windows/desktop/ms691379) i [wersji](http://msdn.microsoft.com/library/windows/desktop/ms682317) działa dość prosto z punktu widzenia wdrażania. Oto prosta implementacja:
 
 ```cpp
 ULONG CMyObj::AddRef()
@@ -80,7 +80,7 @@ ULONG CMyObj::Release()
 }
 ```
 
-[QueryInterface](http://msdn.microsoft.com/library/windows/desktop/ms682521) funkcja członkowska jest nieco bardziej interesującego. Nie jest to bardzo interesujące obiekt których tylko funkcje Członkowskie są [AddRef](http://msdn.microsoft.com/library/windows/desktop/ms691379) i [wersji](http://msdn.microsoft.com/library/windows/desktop/ms682317) — powinna być uwzględniona Poinformuj obiekt, aby wykonać więcej czynności niż [IUnknown](http://msdn.microsoft.com/library/windows/desktop/ms680509) udostępnia. Jest to, gdy [QueryInterface](http://msdn.microsoft.com/library/windows/desktop/ms682521) jest użyteczne. Umożliwia uzyskanie innego "interfejsu" na tym samym obiekcie. Te interfejsy są zazwyczaj uzyskiwane z [IUnknown](http://msdn.microsoft.com/library/windows/desktop/ms680509) i dodać dodatkowe funkcje, dodając nowe funkcje elementów członkowskich. Interfejsy modelu COM nigdy nie ma zmiennych Członkowskich zadeklarowany w interfejsie, a wszystkie funkcje elementów członkowskich są deklarowane jako czysty wirtualnego. Na przykład
+[QueryInterface](http://msdn.microsoft.com/library/windows/desktop/ms682521) funkcja członkowska jest nieco bardziej interesująca. Nie jest to bardzo interesujące mieć obiekt, którego jedynymi funkcjami Członkowskimi są [AddRef](http://msdn.microsoft.com/library/windows/desktop/ms691379) i [wersji](http://msdn.microsoft.com/library/windows/desktop/ms682317) — dobrze byłoby powiedzieć obiektowi, aby zrobił coś więcej niż [IUnknown](http://msdn.microsoft.com/library/windows/desktop/ms680509) udostępnia. Jest to miejsce [QueryInterface](http://msdn.microsoft.com/library/windows/desktop/ms682521) przydaje się. Umożliwia uzyskanie innego "interfejsu" dla tego samego obiektu. Te interfejsy są zazwyczaj uzyskiwane z [IUnknown](http://msdn.microsoft.com/library/windows/desktop/ms680509) i dodają dodatkową funkcję, dodając nowe funkcje Członkowskie. Interfejsy COM nigdy nie mają zmiennych zadeklarowanych w interfejsie, a wszystkie funkcje składowe są deklarowane jako czysto wirtualne. Na przykład
 
 ```cpp
 class IPrintInterface : public IUnknown
@@ -90,7 +90,7 @@ public:
 };
 ```
 
-Aby uzyskać IPrintInterface, jeśli masz tylko [IUnknown](http://msdn.microsoft.com/library/windows/desktop/ms680509), wywołaj [QueryInterface](http://msdn.microsoft.com/library/windows/desktop/ms682521) przy użyciu `IID` z `IPrintInterface`. `IID` Jest liczbą 128-bitowego, który unikatowo identyfikuje interfejsu. Brak `IID` dla danego interfejsu można lub OLE zdefiniować. Jeśli *pUnk* jest wskaźnikiem do [IUnknown](http://msdn.microsoft.com/library/windows/desktop/ms680509) obiekt, może być kod, aby pobrać IPrintInterface:
+Aby uzyskać IPrintInterface, jeśli masz tylko [IUnknown](http://msdn.microsoft.com/library/windows/desktop/ms680509), wywołaj [QueryInterface](http://msdn.microsoft.com/library/windows/desktop/ms682521) przy użyciu `IID` z `IPrintInterface`. `IID` Jest 128-bitową liczbą, która unikatowo identyfikuje interfejs. Brak `IID` dla każdego interfejsu, który definiuje użytkownik lub OLE. Jeśli *pUnk* jest wskaźnikiem do [IUnknown](http://msdn.microsoft.com/library/windows/desktop/ms680509) obiektu może być kod, aby pobrać obiekt IPrintInterface z niego:
 
 ```cpp
 IPrintInterface* pPrint = NULL;
@@ -102,7 +102,7 @@ if (pUnk->QueryInterface(IID_IPrintInterface, (void**)&pPrint) == NOERROR)
 }
 ```
 
-Wydaje się dość proste, ale jak będzie można zaimplementować obiekt, który obsługuje zarówno IPrintInterface i [IUnknown](http://msdn.microsoft.com/library/windows/desktop/ms680509) interfejsu w tym przypadku jest proste, ponieważ IPrintInterface pochodzi bezpośrednio z [IUnknown](http://msdn.microsoft.com/library/windows/desktop/ms680509) — wdrażając IPrintInterface, [IUnknown](http://msdn.microsoft.com/library/windows/desktop/ms680509) jest obsługiwana automatycznie. Na przykład:
+Wydaje się to dość proste, ale jak zaimplementujesz obiekt, który obsługuje zarówno interfejs IPrintInterface i [IUnknown](http://msdn.microsoft.com/library/windows/desktop/ms680509) interfejs w tym przypadku jest proste, ponieważ interfejs IPrintInterface pochodzi bezpośrednio z [IUnknown](http://msdn.microsoft.com/library/windows/desktop/ms680509) — implementując interfejs iprintinterface, interfejs [IUnknown](http://msdn.microsoft.com/library/windows/desktop/ms680509) jest obsługiwana automatycznie. Na przykład:
 
 ```cpp
 class CPrintObj : public CPrintInterface
@@ -114,7 +114,7 @@ class CPrintObj : public CPrintInterface
 };
 ```
 
-Implementacje [AddRef](http://msdn.microsoft.com/library/windows/desktop/ms691379) i [wersji](http://msdn.microsoft.com/library/windows/desktop/ms682317) czy być dokładnie takie same jak te zaimplementowanym powyżej. `CPrintObj::QueryInterface` może to wyglądać mniej więcej tak:
+Implementacje [AddRef](http://msdn.microsoft.com/library/windows/desktop/ms691379) i [wersji](http://msdn.microsoft.com/library/windows/desktop/ms682317) będą dokładnie takie same jak te implementowane powyżej. `CPrintObj::QueryInterface` będzie to wyglądać mniej więcej tak:
 
 ```cpp
 HRESULT CPrintObj::QueryInterface(REFIID iid, void FAR* FAR* ppvObj)
@@ -129,7 +129,7 @@ HRESULT CPrintObj::QueryInterface(REFIID iid, void FAR* FAR* ppvObj)
 }
 ```
 
-Jak widać, jeśli rozpoznano identyfikatora interfejsu (IID), wskaźnika jest zwracany do obiektu; w przeciwnym razie wystąpi błąd. Należy również zauważyć, że pomyślnie [QueryInterface](http://msdn.microsoft.com/library/windows/desktop/ms682521) powoduje domniemanym [AddRef](http://msdn.microsoft.com/library/windows/desktop/ms691379). Oczywiście można również musi implementować CEditObj::Print. Jest proste, ponieważ IPrintInterface bezpośrednio został utworzony na podstawie [IUnknown](http://msdn.microsoft.com/library/windows/desktop/ms680509) interfejsu. Jednak jeśli chcesz obsługiwać dwa interfejsy różnych zarówno pochodną [IUnknown](http://msdn.microsoft.com/library/windows/desktop/ms680509), Uwzględnij następujące kwestie:
+Jak widać, jeśli identyfikator interfejsu (IID) jest rozpoznawany, wskaźnik jest zwracany do obiektu; w przeciwnym razie wystąpi błąd. Należy również zauważyć, że pomyślny [QueryInterface](http://msdn.microsoft.com/library/windows/desktop/ms682521) powoduje skutkują domniemanymi [AddRef](http://msdn.microsoft.com/library/windows/desktop/ms691379). Oczywiście można również musi zostać zaimplementowany obiekt CEditObj::Print. To proste, ponieważ interfejs IPrintInterface pochodzi bezpośrednio od [IUnknown](http://msdn.microsoft.com/library/windows/desktop/ms680509) interfejsu. Jednakże, jeśli chce się obsługiwać dwa różne interfejsy, oba pochodzące z [IUnknown](http://msdn.microsoft.com/library/windows/desktop/ms680509), Uwzględnij następujące kwestie:
 
 ```cpp
 class IEditInterface : public IUnkown
@@ -139,7 +139,7 @@ public:
 };
 ```
 
-Mimo że istnieje wiele różnych sposobów, aby zaimplementować klasę obsługi zarówno IEditInterface i IPrintInterface, w tym języku C++ dziedziczenie wielokrotne ta uwaga będzie skoncentrować się na korzystanie z klasy zagnieżdżone, aby zaimplementować tę funkcję.
+Chociaż istnieje wiele różnych sposobów wdrażania klasy pomocniczej zarówno IEditInterface, jak i IPrintInterface, w tym przy użyciu języka C++ wielokrotnego dziedziczenia, ta notatka koncentruje się na korzystanie z klas zagnieżdżonych w celu zaimplementowania tej funkcji.
 
 ```cpp
 class CEditPrintObj
@@ -172,7 +172,7 @@ public:
 };
 ```
 
-Poniżej znajduje się całego wdrożenia:
+Cała implementacja znajduje się poniżej:
 
 ```cpp
 CEditPrintObj::CEditPrintObj()
@@ -244,53 +244,53 @@ HRESULT CEditPrintObj::CPrintObj::QueryInterface(REFIID iid, void** ppvObj)
 }
 ```
 
-Zwróć uwagę, że większość [IUnknown](http://msdn.microsoft.com/library/windows/desktop/ms680509) implementacji jest umieszczany w klasie CEditPrintObj zamiast duplikowania kod w CEditPrintObj::CEditObj i CEditPrintObj::CPrintObj. Zmniejsza ilość kodu i pozwala uniknąć błędów. W tym miejscu klucza punktu w interfejsie IUnknown jest możliwe do wywołania [QueryInterface](http://msdn.microsoft.com/library/windows/desktop/ms682521) pobrać wszystkie interfejsu może obsługiwać obiektu i z każdego z tych interfejsów jest możliwe, wykonaj te same. Oznacza to, że wszystkie [QueryInterface](http://msdn.microsoft.com/library/windows/desktop/ms682521) funkcji, które są dostępne z każdego interfejsu musi działać dokładnie tak samo. Aby dla tych obiektów do wywołania implementacji w "zewnętrzne do obiektu" wskaźnik wstecz jest używana (m_pParent). Wskaźnik m_pParent został zainicjowany podczas CEditPrintObj konstruktora. Następnie może implementować CEditPrintObj::CPrintObj::PrintObject, a także CEditPrintObj::CEditObj::EditObject. Dość fragmentem kodu został dodany do dodania jedną funkcję — możliwość edytowania obiektu. Na szczęście jest bardzo nietypowe dla interfejsów mieć tylko jeden element członkowski funkcji (chociaż się zdarzyć) i w takim przypadku EditObject i PrintObject będzie zazwyczaj można łączyć w jednym interfejsie.
+Należy zauważyć, że większość [IUnknown](http://msdn.microsoft.com/library/windows/desktop/ms680509) implementacja jest umieszczany w klasie CEditPrintObj a nie powiela kod w obiektach CEditPrintObj::CEditObj i CEditPrintObj::CPrintObj. Zmniejsza ilość kodu i pozwala uniknąć błędów. Kluczowym punktem tutaj jest, że z interfejsu IUnknown jest możliwe do wywołania [QueryInterface](http://msdn.microsoft.com/library/windows/desktop/ms682521) Aby pobrać dowolny interfejs może obsługiwać obiekt, i z każdego z tych interfejsów można robić to samo. Oznacza to, że wszystkie [QueryInterface](http://msdn.microsoft.com/library/windows/desktop/ms682521) funkcje, które są dostępne z każdego interfejsu muszą zachowywać się dokładnie tak samo. Aby te obiekty osadzone wywoływały implementację w "obiekcie zewnętrznym" wskaźnik jest używane zwrotny (m_pParent). Wskaźnik m_pParent jest inicjowany podczas konstruktora CEditPrintObj. Następnie możesz również zaimplementować ceditprintobj::ceditobj:: Editobject i ceditprintobj::cprintobj:: printobject. Znacznej kodu została dodana w celu dodania jednej funkcji — możliwość edycji obiektu. Na szczęście jest dość rzadko interfejsy mają tylko pojedynczą funkcję członkowską (choć zdarza się to), a w tym przypadku funkcje EditObject i PrintObject byłyby zwykle połączone w pojedynczy interfejs.
 
-Jest wiele wyjaśnienie i wiele kod Prosty scenariusz. Klasy MFC/OLE zapewniają prostszą alternatywę. MFC — implementacja używa technika podobny do sposobu komunikaty systemu Windows są opakowywane z mapy komunikatów. Tej funkcji jest nazywany *mapy interfejsu* jest omówiona w następnej sekcji.
+To dużo wyjaśnień i duża ilość kodu dla tak prostego scenariusza. Klasy MFC/OLE zapewniają prostszą alternatywę. Implementacja MFC wykorzystuje technikę podobną to sposobu Windows wiadomości zostaną opakowane z mapami wiadomości. Ten obiekt jest nazywany *mapy interfejsu* i jest omówiona w następnej sekcji.
 
-## <a name="mfc-interface-maps"></a>Mapy interfejsu MFC
+## <a name="mfc-interface-maps"></a>Mapy interfejsów biblioteki MFC
 
-MFC/OLE zawiera implementację "Map interfejsu" podobny "Mapy komunikatów" i "Mapy wysyłania" MFC w koncepcji i wykonywanie. Podstawowe funkcje MFC interfejsu map są następujące:
+MFC/OLE zawiera implementację "Map interfejsów" podobną do "Map komunikatów" i "Map wysyłania" MFC w koncepcji i wykonywania. Podstawowe funkcje map interfejsu MFC są następujące:
 
-- Standardowa implementacja elementu [IUnknown](http://msdn.microsoft.com/library/windows/desktop/ms680509), wbudowanych w `CCmdTarget` klasy.
+- Standardowa implementacja [IUnknown](http://msdn.microsoft.com/library/windows/desktop/ms680509), zbudowana w `CCmdTarget` klasy.
 
-- Konserwacja liczbę odwołań, zmodyfikowany przez [AddRef](http://msdn.microsoft.com/library/windows/desktop/ms691379) i [zlecenia](http://msdn.microsoft.com/library/windows/desktop/ms682317)
+- Konserwacja licznika odwołań zmodyfikowanego przez [AddRef](http://msdn.microsoft.com/library/windows/desktop/ms691379) i [wydania](http://msdn.microsoft.com/library/windows/desktop/ms682317)
 
-- Opartego na implementację danych [QueryInterface](http://msdn.microsoft.com/library/windows/desktop/ms682521)
+- Implementacja danych [QueryInterface](http://msdn.microsoft.com/library/windows/desktop/ms682521)
 
-Ponadto map interfejsów obsługują następujące funkcje:
+Ponadto mapy interfejsu obsługują następujące zaawansowane funkcje:
 
-- Obsługa tworzenia agregowaniu obiekty COM
+- Obsługa tworzenia kumulowane obiektów COM
 
-- Obsługa użycia zagregowane obiekty w implementacji obiektu modelu COM
+- Obsługa korzystania z obiektów agregacji w implementacji obiektu COM
 
-- Implementacja jest hookable i rozszerzalny
+- Implementacja jest możliwość bycia wywoływaną i rozszerzalny
 
-Aby uzyskać więcej informacji dotyczących agregacji, zobacz [agregacji](http://msdn.microsoft.com/library/windows/desktop/ms686558\(v=vs.85\).aspx) tematu.
+Aby uzyskać więcej informacji na temat agregacji, zobacz [agregacji](/windows/desktop/com/aggregation) tematu.
 
-Obsługa mapy interfejsu MFC jest ścieżką do katalogu głównego w `CCmdTarget` klasy. `CCmdTarget` "*ma a*" odwołania liczby, a także wszystkie funkcje Członkowskie skojarzone z [IUnknown](http://msdn.microsoft.com/library/windows/desktop/ms680509) implementacji (liczba odwołań na przykład jest `CCmdTarget`). Aby utworzyć klasę, która obsługuje OLE COM, wyprowadzenia klasy z `CCmdTarget` i korzystanie z różnych makr oraz funkcje Członkowskie `CCmdTarget` do wykonania żądanej interfejsów. Implementacji MFC używa klasy zagnieżdżone w celu zdefiniowania każdej implementacji interfejsu, podobnie jak w powyższym przykładzie. To jest ułatwiono dzięki standardowej implementacji interfejsu IUnknown, a także liczbę makra, które części kodu powtarzających się wyeliminować.
+Obsługa mapy interfejsu biblioteki MFC jest ścieżką w `CCmdTarget` klasy. `CCmdTarget` "*ma a*" odwoływać się do liczby, a także wszystkie funkcje składowe związane z [IUnknown](http://msdn.microsoft.com/library/windows/desktop/ms680509) implementacji (liczba odwołań na przykład znajduje się w `CCmdTarget`). Aby utworzyć klasę, która obsługuje OLE COM, należy wyprowadzić klasę z `CCmdTarget` i korzystać z różnych makr oraz funkcji Członkowskich z `CCmdTarget` Aby zaimplementować pożądane interfejsy. Implementacja biblioteki MFC używa klas zagnieżdżonych do definiowania każdej implementacji interfejsu, podobnie jak w powyższym przykładzie. To jest łatwiejsze dzięki standardowej implementacji IUnknown, a także wielu makr, które eliminują część powtarzającego się kodu.
 
-## <a name="interface-map-basics"></a>Podstawy mapy interfejsu
+## <a name="interface-map-basics"></a>Podstawowe informacje o mapie interfejsu
 
 ### <a name="to-implement-a-class-using-mfcs-interface-maps"></a>Aby zaimplementować klasę przy użyciu interfejsu MFC mapy
 
-1. Dziedziczyć po klasie bezpośrednio lub pośrednio `CCmdTarget`.
+1. Pochodną klasę bezpośrednio lub pośrednio `CCmdTarget`.
 
 2. Użyj `DECLARE_INTERFACE_MAP` funkcji w definicji klasy pochodnej.
 
-3. Dla każdego interfejsu, który chcesz wspierać Użyj begin_interface_part — i end_interface_part — makra w definicji klasy.
+3. Dla każdego interfejsu, którą chcesz obsługiwać użyj makra BEGIN_INTERFACE_PART i END_INTERFACE_PART w definicji klasy.
 
-4. W pliku implementacji umożliwia definiowanie tej klasy mapy interfejsu begin_interface_map — i end_interface_map — makra.
+4. W pliku implementacji Użyj makr BEGIN_INTERFACE_MAP i END_INTERFACE_MAP zdefiniować mapę interfejsu klasy.
 
-5. Dla każdego identyfikatora IID obsługiwane należy użyć interface_part — makro między begin_interface_map — i end_interface_map — makra, aby zamapować ten identyfikator IID do konkretnego "części" klasy.
+5. Dla każdego obsługiwanego identyfikatora IID użyj makra INTERFACE_PART między BEGIN_INTERFACE_MAP i END_INTERFACE_MAP makra do zmapowania tego identyfikatora IID na określoną "część" klasy.
 
-6. Implementuje zagnieżdżonych klas reprezentujących interfejsów, która jest obsługiwana.
+6. Zaimplementuj każdą z klas zagnieżdżonych, które reprezentują interfejsów, które obsługujesz.
 
-7. Method_prologue — makro umożliwia dostępu do nadrzędnej `CCmdTarget`-pochodzi z obiektu.
+7. Umożliwia dostęp do elementu nadrzędnego, METHOD_PROLOGUE — makro `CCmdTarget`-pochodnych obiektu.
 
-8. [AddRef](http://msdn.microsoft.com/library/windows/desktop/ms691379), [wersji](http://msdn.microsoft.com/library/windows/desktop/ms682317), i [QueryInterface](http://msdn.microsoft.com/library/windows/desktop/ms682521) można delegować do `CCmdTarget` stosowania tych funkcji (`ExternalAddRef`, `ExternalRelease`, i `ExternalQueryInterface`).
+8. [AddRef](http://msdn.microsoft.com/library/windows/desktop/ms691379), [wersji](http://msdn.microsoft.com/library/windows/desktop/ms682317), i [QueryInterface](http://msdn.microsoft.com/library/windows/desktop/ms682521) delegować `CCmdTarget` implementacji tych funkcji (`ExternalAddRef`, `ExternalRelease`, i `ExternalQueryInterface`).
 
-W powyższym przykładzie CPrintEditObj może zostać wdrożone w następujący sposób:
+Powyższy przykład CPrintEditObj może być wdrażany w następujący sposób:
 
 ```cpp
 class CPrintEditObj : public CCmdTarget
@@ -312,9 +312,9 @@ protected:
 };
 ```
 
-Powyżej deklaracji tworzy klasę pochodzącą od `CCmdTarget`. Declare_interface_map — makro informuje platformę, że ta klasa mapy niestandardowy interfejs. Ponadto begin_interface_part — i end_interface_part — makra definiować zagnieżdżonych klas, w tym przypadku z nazwami CEditObj i CPrintObj (X jest używany tylko w celu zróżnicowania zagnieżdżonych klas z globalnej klasy, których nazwa rozpoczyna się od "C" i interfejsu klasy, które rozpoczynać się od "I"). Tworzone są dwa elementy zagnieżdżone tych klas: m_CEditObj i m_CPrintObj, odpowiednio. Makra automatycznie zadeklarować [AddRef](http://msdn.microsoft.com/library/windows/desktop/ms691379), [wersji](http://msdn.microsoft.com/library/windows/desktop/ms682317), i [QueryInterface](http://msdn.microsoft.com/library/windows/desktop/ms682521) funkcje; w związku z tym można zadeklarować tylko funkcje specyficzne dla tego interfejsu: EditObject i PrintObject (służy stdmethod — makro OLE, aby **_stdcall** i wirtualnych słowa kluczowe są udostępniane jako odpowiednie dla platformy docelowej).
+Powyższa deklaracja tworzy klasę pochodną `CCmdTarget`. DECLARE_INTERFACE_MAP — makro informuje szablon, że ta klasa posiadać będzie mapę interfejsu niestandardowego. Ponadto makra BEGIN_INTERFACE_PART i END_INTERFACE_PART definiują klasy zagnieżdżone, w tym przypadku o nazwach CEditObj i CPrintObj (X jest używana tylko do odróżnienia klas zagnieżdżonych od klas globalnych, który rozpoczyna się od "C" i klas, które Zacznij od "I"). Są tworzone dwa elementy zagnieżdżone tych klas: m_CEditObj i m_CPrintObj, odpowiednio. Makra automatycznie deklarują [AddRef](http://msdn.microsoft.com/library/windows/desktop/ms691379), [wersji](http://msdn.microsoft.com/library/windows/desktop/ms682317), i [QueryInterface](http://msdn.microsoft.com/library/windows/desktop/ms682521) funkcje; dlatego należy deklarować tylko funkcje specyficzne dla tego interfejsu: Funkcje EditObject i PrintObject (makro OLE STDMETHOD jest używany, aby **_stdcall** i wirtualne słowa kluczowe są dostarczane jako właściwe dla platformy docelowej).
 
-Aby zaimplementować interfejs mapy dla tej klasy:
+Aby zaimplementować mapę interfejsu dla tej klasy:
 
 ```cpp
 BEGIN_INTERFACE_MAP(CPrintEditObj, CCmdTarget)
@@ -323,9 +323,9 @@ BEGIN_INTERFACE_MAP(CPrintEditObj, CCmdTarget)
 END_INTERFACE_MAP()
 ```
 
-Utworzone połączenie IID_IPrintInterface IID m_CPrintObj i IID_IEditInterface z m_CEditObj odpowiednio. `CCmdTarget` Implementacja [QueryInterface](http://msdn.microsoft.com/library/windows/desktop/ms682521) (`CCmdTarget::ExternalQueryInterface`) za pomocą tej mapy wskaźniki m_CPrintObj i m_CEditObj na żądanie. Nie jest konieczne uwzględnienie wpis dotyczący `IID_IUnknown`; ramach użyje pierwszego interfejsu mapy (w tym przypadku m_CPrintObj) po `IID_IUnknown` jest wymagane.
+Zostanie utworzone połączenie IID_IPrintInterface IID z m_CPrintObj a IID_IEditInterface z m_CEditObj odpowiednio. `CCmdTarget` Implementacji [QueryInterface](http://msdn.microsoft.com/library/windows/desktop/ms682521) (`CCmdTarget::ExternalQueryInterface`) używa tej mapy do zwracania wskaźników do m_CPrintObj i m_CEditObj, gdy wymagane. Nie jest konieczne dołączyć wpis dla `IID_IUnknown`; środowisko użyje pierwszego interfejsu w mapie (w tym przypadku m_CPrintObj) po `IID_IUnknown` żądania.
 
-Mimo że begin_interface_part — makro automatycznie zadeklarowany [AddRef](http://msdn.microsoft.com/library/windows/desktop/ms691379), [wersji](http://msdn.microsoft.com/library/windows/desktop/ms682317) i [QueryInterface](http://msdn.microsoft.com/library/windows/desktop/ms682521) funkcje dla Ciebie, nadal należy wdrożyć je:
+Mimo że BEGIN_INTERFACE_PART — makro automatycznie deklaruje [AddRef](http://msdn.microsoft.com/library/windows/desktop/ms691379), [wersji](http://msdn.microsoft.com/library/windows/desktop/ms682317) i [QueryInterface](http://msdn.microsoft.com/library/windows/desktop/ms682521) funkcje, możesz nadal trzeba je zaimplementować:
 
 ```cpp
 ULONG FAR EXPORT CEditPrintObj::XEditObj::AddRef()
@@ -355,41 +355,41 @@ void FAR EXPORT CEditPrintObj::XEditObj::EditObject()
 }
 ```
 
-Implementację CEditPrintObj::CPrintObj, mogą być podobne do powyżej definicje CEditPrintObj::CEditObj. Mimo że będzie można utworzyć makra, który może służyć do automatycznego generowania tych funkcji (ale we wcześniejszej części programowanie MFC/OLE miało to miejsce), staje się trudny można ustawić punktów przerwania, generując makra więcej niż jeden wiersz kodu. Z tego powodu ten kod jest rozwinięta ręcznie.
+Implementacja dla CEditPrintObj::CPrintObj, będzie podobna do powyższych definicji dla CEditPrintObj::CEditObj. Mimo że będzie można utworzyć makro, który może służyć do automatycznego generowania tych funkcji (ale wcześniej w przypadku rozwoju MFC/OLE to miało miejsce), trudno ustawić punkty przerwania, gdy makro generuje więcej niż jeden wiersz kodu. Z tego powodu ten kod jest rozwinięty ręcznie.
 
-Za pomocą implementacji framework mapy komunikatów, istnieje kilka rzeczy, które nie zostały należy zrobić:
+Za pomocą implementacji środowiska mapy komunikatów, istnieje kilka rzeczy, które nie były konieczne w celu:
 
-- Implementuje metody QueryInterface
+- Implementacja funkcji QueryInterface
 
-- AddRef wdrożenie i wersji
+- Implementacja funkcji AddRef i Release
 
-- Deklarowanie żadnej z tych metod wbudowanych w obu interfejsów sieci
+- Zadeklaruj jedną z tych metod wbudowanych w obu interfejsów sieci
 
-Ponadto platformę używa mapy komunikatów wewnętrznie. Dzięki temu można dziedziczyć po klasie framework powiedz `COleServerDoc`, który już obsługuje niektórych interfejsów i zawiera elementy zastępcze lub ma zostać dodany do interfejsami przez platformę. Można to zrobić, ponieważ w ramach w pełni obsługuje dziedziczenia mapy interfejsu z klasy podstawowej. To powód, dlaczego przyjmuje begin_interface_map — w jako drugi parametr nazwę klasy podstawowej.
-
-> [!NOTE]
-> Zazwyczaj nie jest możliwe ponowne użycie implementacji wbudowanych implementacje interfejsów OLE MFC przez dziedziczenie osadzonych specjalizacja interfejsu z wersji biblioteki MFC. Nie jest to możliwe ponieważ użycie method_prologue — makro uzyskać dostęp do programu zawierającego `CCmdTarget`-oznacza obiekt pochodne *stałego przesunięcia* osadzonego obiektu z `CCmdTarget`-pochodzi z obiektu. Oznacza to, na przykład XMyAdviseSink osadzone nie może pochodzić od implementacji MFC w `COleClientItem::XAdviseSink`, ponieważ XAdviseSink korzysta z tego od określonego przesunięcia od góry `COleClientItem` obiektu.
+Ponadto środowisko wykorzystuje mapy komunikatów wewnętrznie. Umożliwia to pochodzi od klasy framework, powiedzmy `COleServerDoc`, która już obsługuje niektóre interfejsy oraz udostępnia zamiany lub dodatki do interfejsów dostarczanych przez szablon. Można to zrobić, ponieważ szablon w pełni obsługuje dziedziczenie mapy interfejsu z klasy bazowej. To jest powód, dlaczego przyjmuje BEGIN_INTERFACE_MAP w jako drugi parametr nazwę klasy bazowej.
 
 > [!NOTE]
-> Można jednak delegować do implementacji MFC dla wszystkich funkcji, które mają MFC domyślne zachowanie. Jest to wykonywane w implementacji MFC `IOleInPlaceFrame` (XOleInPlaceFrame) w `COleFrameHook` klasy (następuje delegacja do m_xOleInPlaceUIWindow dla funkcji). W tym projekcie została wybrana, aby zmniejszyć rozmiar środowiska uruchomieniowego obiektów implementujących interfejsy wielu; eliminuje potrzebę wskaźnik Wstecz (takie jak m_pParent sposób został użyty w poprzedniej sekcji).
+> Ogólnie nie jest możliwe ponowne wykorzystanie implementacji wbudowanych implementacji interfejsów OLE MFC tylko przez dziedziczenie osadzonych specjalizacji tego interfejsu z wersji biblioteki MFC. Nie jest to możliwe ponieważ użycie METHOD_PROLOGUE — makro, aby uzyskać dostęp do zawartego `CCmdTarget`— oznacza obiekt pochodnej *stałego przesunięcia* osadzonego obiektu z `CCmdTarget`-pochodzi z obiektu. Oznacza to, na przykład, nie możesz wywodzić osadzonego XMyAdviseSink z implementacji MFC w `COleClientItem::XAdviseSink`, ponieważ XAdviseSink opiera się na byciu w szczególnym przesunięciu od góry `COleClientItem` obiektu.
 
-### <a name="aggregation-and-interface-maps"></a>Agregacja i map — interfejs
+> [!NOTE]
+> Możesz jednak delegować do implementacji MFC dla wszystkich funkcji ma zachowanie domyślne biblioteki MFC. Jest to realizowane w implementacji MFC `IOleInPlaceFrame` (XOleInPlaceFrame) w `COleFrameHook` klasy (przekazuje do m_xOleInPlaceUIWindow dla wielu funkcji). Ten projekt został wybrany do zmniejszenia środowiska uruchomieniowego obiektów, w których zaimplementowano wiele interfejsów; Eliminuje to potrzebę wskaźnik (takie jak sposób w jaki m_pParent został użyty w poprzedniej sekcji).
 
-Oprócz obsługi autonomicznej obiektów COM, MFC obsługuje agregacji. Agregacja sam jest zbyt złożony temat omówimy Zapoznaj się [agregacji](http://msdn.microsoft.com/library/windows/desktop/ms686558\(v=vs.85\).aspx) tematu, aby uzyskać więcej informacji na temat agregacji. Ta uwaga po prostu opisano obsługę agregacji wbudowane mapy framework i interfejsu.
+### <a name="aggregation-and-interface-maps"></a>Agregacja i mapy interfejsu
 
-Istnieją dwa sposoby używania agregacji: (1) przy użyciu obiektu COM, który obsługuje agregację i (2) implementacja może być agregowany przez inny obiekt. Te możliwości mogą określane jako "za pomocą obiektu agregacji" i "wprowadzenie, obiekt będzie się agregowaniu". MFC obsługuje zarówno.
+Oprócz obsługi autonomicznych obiektów COM, biblioteka MFC obsługuje agregację. Agregacja sama w sobie jest zbyt złożonym tematem do omawiania w tym miejscu; Zapoznaj się [agregacji](/windows/desktop/com/aggregation) tematu, aby uzyskać więcej informacji na temat agregacji. Uwaga ta po prostu opisze obsługę agregacji wbudowanej w ramy i mapy interfejsu.
 
-### <a name="using-an-aggregate-object"></a>Przy użyciu obiektu agregacji
+Istnieją dwa sposoby użycia agregacji: (1) za pomocą obiektu COM, który obsługuje agregację i (2) poprzez implementację obiektu, który może być agregowany przez inny. Te możliwości mogą określane jako "za pomocą obiektu agregacji" i "obiekt skumulowany". Biblioteka MFC obsługuje obie.
 
-Aby użyć obiektu agregacji, musi być określony sposób powiązać agregacji do mechanizmu QueryInterface. Innymi słowy obiektu agregacji musi zachowują się tak, jakby jest natywny część obiektu. W jaki sposób jest wiązania do mechanizmu mapy interfejsu MFC oprócz interface_part — makro, w przypadku, gdy obiekt zagnieżdżony jest zamapowana na IID, można również zadeklarować obiektu agregacji w ramach Twojej `CCmdTarget` klasy. Aby to zrobić, makro INTERFACE_AGGREGATE jest używane. Dzięki temu można określić zmienną członkowską (który musi być wskaźnikiem do [IUnknown](http://msdn.microsoft.com/library/windows/desktop/ms680509) lub klasy), której ma zostać włączone do mechanizmu mapy interfejsu. Jeśli wskaźnik nie ma wartości NULL podczas `CCmdTarget::ExternalQueryInterface` jest wywoływana, platforma automatycznie wywoła obiektu agregacji [QueryInterface](http://msdn.microsoft.com/library/windows/desktop/ms682521) funkcji członkowskiej, jeśli `IID` żądanie nie jest jednym z natywnego `IID`s obsługiwane przez `CCmdTarget` samego obiektu.
+### <a name="using-an-aggregate-object"></a>Używanie obiektu agregacji
 
-#### <a name="to-use-the-interfaceaggregate-macro"></a>Aby użyć makra INTERFACE_AGGREGATE
+Aby użyć obiektu agregacji, musi być jakiś sposób, aby powiązać agregację z mechanizmem QueryInterface. Innymi słowy obiekt agregacji musi zachowywać się tak, jakby to natywną częścią obiektu. W jaki sposób jest to do mechanizmu mapy interfejsu biblioteki MFC, oprócz INTERFACE_PART — makro, w przypadku, gdy zagnieżdżony obiekt jest mapowany do identyfikatora IID, można również zadeklarować obiekt agregacji jako część Twojego `CCmdTarget` klasy pochodnej. Aby to zrobić, makra INTERFACE_AGGREGATE jest używany. Pozwala na określenie zmiennej członkowskiej (która musi być wskaźnikiem do [IUnknown](http://msdn.microsoft.com/library/windows/desktop/ms680509) lub wywodzącej się klasy), który ma zostać włączona do mechanizmu mapy interfejsu. Jeżeli wskaźnik nie ma wartości NULL podczas `CCmdTarget::ExternalQueryInterface` jest wywoływana, środowisko będzie automatycznie wywoływać obiektu agregacji [QueryInterface](http://msdn.microsoft.com/library/windows/desktop/ms682521) funkcję członkowską, jeśli `IID` zażądano nie jest jednym z natywnych `IID`s obsługiwane przez `CCmdTarget` sam obiekt.
 
-1. Deklaruje zmienną członkowską ( `IUnknown*`) zawierający wskaźnik do obiektu agregacji.
+#### <a name="to-use-the-interfaceaggregate-macro"></a>Aby użyć makra interface_aggregate
 
-2. Dołącz makro INTERFACE_AGGREGATE mapy interfejsu, który odwołuje się do zmiennej członkowskiej według nazwy.
+1. Zadeklaruj zmienną członkowską ( `IUnknown*`) zawierający wskaźnik do obiektu agregacji.
 
-3. W pewnym momencie (zazwyczaj podczas `CCmdTarget::OnCreateAggregates`), zainicjować zmiennej członkowskiej inną niż NULL.
+2. Dołącz makra INTERFACE_AGGREGATE mapę interfejsu, który odnosi się do zmiennej elementu członkowskiego według nazwy.
+
+3. W pewnym momencie (zwykle w ciągu `CCmdTarget::OnCreateAggregates`), zainicjować zmienną członkowską na coś innego niż NULL.
 
 Na przykład:
 
@@ -432,25 +432,25 @@ BEGIN_INTERFACE_MAP(CAggrExample, CCmdTarget)
 END_INTERFACE_MAP()
 ```
 
-Zmienna m_lpAggrInner jest ustawiana w Konstruktorze wartości null. Platformę ignoruje zmienną członkowską NULL w implementacji domyślnej [QueryInterface](http://msdn.microsoft.com/library/windows/desktop/ms682521). `OnCreateAggregates` jest dobrym miejscem do faktycznie utworzyć obiekty agregacji. Musisz wywołać ją jawnie w przypadku tworzenia obiektu poza implementacji MFC `COleObjectFactory`. Przyczyna tworzenie wartości zagregowanych w `CCmdTarget::OnCreateAggregates` oraz użycie `CCmdTarget::GetControllingUnknown` staną się widoczne podczas tworzenia obiektów agregowaniu omówione.
+Zmienna m_lpAggrInner jest inicjowana w Konstruktorze w wartości NULL. Szablon ignoruje zmienną członkowską NULL w implementacji domyślnej [QueryInterface](http://msdn.microsoft.com/library/windows/desktop/ms682521). `OnCreateAggregates` jest dobrym miejscem do faktycznie tworzenia obiektów agregacji. Musisz wywołać ją jawnie, jeśli tworzysz obiekt poza implementacją MFC `COleObjectFactory`. Przyczyny tworzenia agregatów w `CCmdTarget::OnCreateAggregates` oraz użycie `CCmdTarget::GetControllingUnknown` staną się jasne po omówieniu tworzenia obiektów kumulowanych omówiono.
 
-Ta technika zapewni obiektu wszystkich interfejsów, które obsługuje obiektu agregacji oraz jego natywnych interfejsów. Jeśli chcesz tylko podzestaw interfejsów, które obsługuje agregacji, można zastąpić `CCmdTarget::GetInterfaceHook`. Dzięki temu można bardzo niskiego poziomu hookability, podobnie jak [QueryInterface](http://msdn.microsoft.com/library/windows/desktop/ms682521). Zwykle ma wszystkich interfejsów, które obsługuje agregacji.
+Ta technika nada Twojemu obiektowi, wszystkie interfejsy, które obiekt agregacji obsługuje plus jego interfejsy macierzyste. Jeśli chcesz tylko podzbioru interfejsów, które obsługuje agregacja, można zastąpić `CCmdTarget::GetInterfaceHook`. Dzięki temu można bardzo niski poziom możliwości wywoływania, podobny do [QueryInterface](http://msdn.microsoft.com/library/windows/desktop/ms682521). Zazwyczaj chcesz, aby wszystkie interfejsy, które obsługuje agregat.
 
 ### <a name="making-an-object-implementation-aggregatable"></a>Co się agregowaniu implementacji obiektu
 
-Dla obiekt się agregowaniu, implementacja [AddRef](http://msdn.microsoft.com/library/windows/desktop/ms691379), [wersji](http://msdn.microsoft.com/library/windows/desktop/ms682317), i [QueryInterface](http://msdn.microsoft.com/library/windows/desktop/ms682521) należy przekazać "kontrolowanie nieznany". Innymi słowy, go jako część obiektu go należy delegować [AddRef](http://msdn.microsoft.com/library/windows/desktop/ms691379), [wersji](http://msdn.microsoft.com/library/windows/desktop/ms682317), i [QueryInterface](http://msdn.microsoft.com/library/windows/desktop/ms682521) na inny obiekt również pochodzi od [ IUnknown](http://msdn.microsoft.com/library/windows/desktop/ms680509). To "Nieznany kontrolowanie" jest dostarczane do obiektu podczas jego tworzenia, oznacza to, że są dostarczane do implementacji `COleObjectFactory`. To wdrożenie zawiera niewielkiej liczby dodatkowych czynności, a w niektórych przypadkach nie jest pożądane, więc MFC sprawia, że jest to opcjonalne. Aby włączyć obiekt się agregowaniu, należy wywołać `CCmdTarget::EnableAggregation` z konstruktora obiektu.
+Aby uzyskać obiekt można było agregować, implementacja [AddRef](http://msdn.microsoft.com/library/windows/desktop/ms691379), [wersji](http://msdn.microsoft.com/library/windows/desktop/ms682317), i [QueryInterface](http://msdn.microsoft.com/library/windows/desktop/ms682521) musi delegować do "kontrolowanie nieznane". Innymi słowy, go jako część obiektu, to musi delegować [AddRef](http://msdn.microsoft.com/library/windows/desktop/ms691379), [wersji](http://msdn.microsoft.com/library/windows/desktop/ms682317), i [QueryInterface](http://msdn.microsoft.com/library/windows/desktop/ms682521) do innego obiektu, również pochodzącego z [ IUnknown](http://msdn.microsoft.com/library/windows/desktop/ms680509). To "kontrolowanie nieznane" jest dostarczana do obiektu podczas jego tworzenia, czyli jest udostępniana wykonania `COleObjectFactory`. Zaimplementowanie tego prowadzi do niewielkiej ilości obciążenia, a w niektórych przypadkach nie jest pożądane, więc MFC sprawia, że jest to opcjonalne. Aby włączyć agregowanie obiektu, należy wywołać `CCmdTarget::EnableAggregation` z konstruktora obiektu.
 
-Jeśli obiekt korzysta również agregacje, również należy koniecznie Podaj prawidłowego "Nieznany kontrolowanie" obiekty agregacji. Zwykle to [IUnknown](http://msdn.microsoft.com/library/windows/desktop/ms680509) wskaźnika jest przekazywany do obiektu po utworzeniu agregacji. Na przykład parametr parametr pUnkOuter ma "kontrolowanie nieznany" dla obiektów utworzonych za pomocą `CoCreateInstance`. Poprawne wskaźnik "kontrolowanie nieznany" mogą być pobierane przez wywołanie `CCmdTarget::GetControllingUnknown`. Wartość zwracana z tej funkcji, jednak nie jest prawidłowy w konstruktorze. Z tego powodu zaleca się tworzenie z wartości zagregowanych tylko w zastępująca `CCmdTarget::OnCreateAggregates`, gdzie wartość zwrotu z `GetControllingUnknown` jest niezawodne, nawet jeśli utworzone na podstawie `COleObjectFactory` implementacji.
+Jeśli obiekt korzysta również z agregatów, również należy przekazywać poprawny się, że "kontrolowanie nieznane" do obiektów agregacji. Zazwyczaj ten [IUnknown](http://msdn.microsoft.com/library/windows/desktop/ms680509) wskaźnik jest przekazywany do obiektu, gdy tworzony jest agregat. Na przykład parametrem pUnkOuter jest "kontrolowanie nieznane" dla obiektów utworzonych za pomocą `CoCreateInstance`. Poprawny wskaźnik "kontrolowanie nieznane" może być pobierany przez wywołanie `CCmdTarget::GetControllingUnknown`. Wartość zwracana z tej funkcji, jednak nie jest prawidłowy podczas konstruktora. Z tego powodu zaleca się tworzyć swoje agregaty tylko w zastąpieniu obiektu `CCmdTarget::OnCreateAggregates`, gdzie wartość zwracana z `GetControllingUnknown` jest wiarygodna, nawet jeśli utworzone na podstawie `COleObjectFactory` implementacji.
 
-Ważne jest również czy obiekt manipulowania liczba niepoprawne odwołanie podczas dodawania lub zwalniania liczby sztuczne odwołań. Aby upewnić się, jest to możliwe, zawsze wywołać `ExternalAddRef` i `ExternalRelease` zamiast `InternalRelease` i `InternalAddRef`. Rzadko wywołać `InternalRelease` lub `InternalAddRef` dla klasy, która obsługuje agregacji.
+Jest również ważne, aby obiekt manipulował licznikiem odwołań poprawnych przy dodawaniu lub zwalnianiu zliczania odwołań sztucznych. Aby upewnić się, jest to możliwe, zawsze wywołuj `ExternalAddRef` i `ExternalRelease` zamiast `InternalRelease` i `InternalAddRef`. To rzadkość, aby wywołać `InternalRelease` lub `InternalAddRef` dla klasy, która obsługuje agregację.
 
-## <a name="reference-material"></a>Materiały informacyjne
+## <a name="reference-material"></a>Materiały referencyjne
 
-Zaawansowanego wykorzystania OLE, takie jak Definiowanie własnych interfejsów lub przesłonięcie framework implementacji interfejsów OLE wymaga użycia podstawowy mechanizm mapy interfejsu.
+Zaawansowane wykorzystanie OLE, takich jak Definiowanie własnych interfejsów lub zastępowanie ramowych implementacji interfejsów OLE wymaga użycia podstawowego mechanizmu mapowania interfejsu.
 
-W tej sekcji omówiono każdego makra i interfejsy API, które jest używane do implementowania te zaawansowane funkcje.
+W tej sekcji omówiono każde makro i interfejs API, które służy do wdrażania tych zaawansowanych funkcji.
 
-### <a name="ccmdtargetenableaggregation--function-description"></a>CCmdTarget::EnableAggregation — Opis elementu funkcja
+### <a name="ccmdtargetenableaggregation--function-description"></a>CCmdTarget::EnableAggregation — Opis funkcji
 
 ```cpp
 void EnableAggregation();
@@ -458,9 +458,9 @@ void EnableAggregation();
 
 #### <a name="remarks"></a>Uwagi
 
-Wywołanie tej funkcji w konstruktorze klasy pochodnej, jeśli chcesz obsługuje OLE agregacji w przypadku obiektów tego typu. Przygotowuje to specjalne implementacji interfejsu IUnknown, który jest wymagane dla obiektów agregowaniu.
+Wywołaj tę funkcję w konstruktorze klasy pochodnej, jeśli chcesz obsługiwać agregację OLE dla obiektów tego typu. Wykonanie tych kroków przygotowuje to specjalną implementację IUnknown, która jest wymagana dla obiektów kumulowanych.
 
-### <a name="ccmdtargetexternalqueryinterface--function-description"></a>CCmdTarget::ExternalQueryInterface — Opis elementu funkcja
+### <a name="ccmdtargetexternalqueryinterface--function-description"></a>CCmdTarget::ExternalQueryInterface — Opis funkcji
 
 ```cpp
 DWORD ExternalQueryInterface(
@@ -472,16 +472,16 @@ DWORD ExternalQueryInterface(
 #### <a name="parameters"></a>Parametry
 
 *lpIID*  
-Wskaźnik daleko IID (pierwszy argument funkcji QueryInterface)
+Daleki wskaźnik IID (pierwszy argument funkcji QueryInterface)
 
 *ppvObj*  
 Wskaźnik IUnknown * (drugi argument funkcji QueryInterface)
 
 #### <a name="remarks"></a>Uwagi
 
-Wywołanie tej funkcji w implementacji interfejsu IUnknown dla każdego interfejsu klasy implementuje. Ta funkcja udostępnia standardowej implementacji opartej na danych QueryInterface oparte na mapie interfejsu użytkownika obiektu. Jest zwracana wartość HRESULT rzutowania. Obiekt jest agregowana, ta funkcja wywoła "Kontrolowanie IUnknown" zamiast mapę interfejsu lokalnego.
+Wywołaj tę funkcję w danej implementacji IUnknown dla każdego interfejsu, klasa implementuje. Ta funkcja udostępnia standardowa opartych na danych implementację QueryInterface bazującą na mapie interfejsu użytkownika obiektu. Jest niezbędne rzutowanie zwracanej wartości HRESULT. Jeśli obiekt jest zagregowany, funkcja ta będzie wywoływać "Kontrolowanie IUnknown" zamiast używać lokalnej mapy interfejsów.
 
-### <a name="ccmdtargetexternaladdref--function-description"></a>CCmdTarget::ExternalAddRef — Opis elementu funkcja
+### <a name="ccmdtargetexternaladdref--function-description"></a>CCmdTarget::ExternalAddRef — Opis funkcji
 
 ```cpp
 DWORD ExternalAddRef();
@@ -489,9 +489,9 @@ DWORD ExternalAddRef();
 
 #### <a name="remarks"></a>Uwagi
 
-Wywołanie tej funkcji w implementacji IUnknown::AddRef dla każdego interfejsu klasy implementuje. Wartość zwracana jest liczba nowych odwołania do obiektu klasy. Obiekt jest agregowana, ta funkcja wywoła "Kontrolowanie IUnknown" zamiast manipulowanie liczba lokalnego odwołania.
+Wywołaj tę funkcję w danej implementacji IUnknown::AddRef dla każdego interfejsu, klasa implementuje. Wartość zwracana jest nowym licznikiem odwołań dla obiektu CCmdTarget. Jeśli obiekt jest zagregowany, funkcja ta będzie wywoływać "Kontrolowanie IUnknown" zamiast operować na liczniku odwołań lokalnych.
 
-### <a name="ccmdtargetexternalrelease--function-description"></a>CCmdTarget::ExternalRelease — Opis elementu funkcja
+### <a name="ccmdtargetexternalrelease--function-description"></a>CCmdTarget::ExternalRelease — Opis funkcji
 
 ```cpp
 DWORD ExternalRelease();
@@ -499,9 +499,9 @@ DWORD ExternalRelease();
 
 #### <a name="remarks"></a>Uwagi
 
-Wywołanie tej funkcji w implementacji IUnknown::Release dla każdego interfejsu klasy implementuje. Wartości zwracanej wskazuje liczba nowych odwołanie do obiektu. Obiekt jest agregowana, ta funkcja wywoła "Kontrolowanie IUnknown" zamiast manipulowanie liczba lokalnego odwołania.
+Wywołaj tę funkcję w danej implementacji IUnknown::Release dla każdego interfejsu, klasa implementuje. Zwracana wartość wskazuje nowy licznik odwołań obiektu. Jeśli obiekt jest zagregowany, funkcja ta będzie wywoływać "Kontrolowanie IUnknown" zamiast operować na liczniku odwołań lokalnych.
 
-### <a name="declareinterfacemap--macro-description"></a>Declare_interface_map — — Opis elementu makro
+### <a name="declareinterfacemap--macro-description"></a>DECLARE_INTERFACE_MAP — Opis makra
 
 ```cpp
 DECLARE_INTERFACE_MAP
@@ -509,9 +509,9 @@ DECLARE_INTERFACE_MAP
 
 #### <a name="remarks"></a>Uwagi
 
-Używanie tego makra w dowolnej klasy pochodzące z `CCmdTarget` będą mieć mapy interfejsu. Używane w taki sam sposób jak declare_message_map —. To wywołanie makra powinna zostać umieszczona w definicji klasy, zazwyczaj w nagłówku (. H) pliku. Klasa o declare_interface_map — w pliku implementacji, należy zdefiniować mapy interfejsu (. CPP) z begin_interface_map — i end_interface_map — makra.
+Użyj tego makra w dowolnej klasie pochodnej `CCmdTarget` będą mieć mapy interfejsu. Używane w taki sam sposób, jak DECLARE_MESSAGE_MAP. To wywołanie makro powinny być umieszczone w definicji klasy, zazwyczaj w nagłówku (. H) pliku. Klasa z DECLARE_INTERFACE_MAP musi zdefiniować mapę interfejsu w pliku implementacji (. CPP) z makrami BEGIN_INTERFACE_MAP i END_INTERFACE_MAP.
 
-### <a name="begininterfacepart-and-endinterfacepart--macro-descriptions"></a>Begin_interface_part — i end_interface_part — — makro opisów
+### <a name="begininterfacepart-and-endinterfacepart--macro-descriptions"></a>BEGIN_INTERFACE_PART i END_INTERFACE_PART — opisy makra
 
 ```cpp
 BEGIN_INTERFACE_PART(localClass, iface);
@@ -528,11 +528,11 @@ Nazwa interfejsu, który implementuje ta klasa
 
 #### <a name="remarks"></a>Uwagi
 
-Dla każdego interfejsu, który będzie implementowany klasy musisz mieć parę begin_interface_part — end_interface_part —. Te makra zdefiniuj lokalnej klasy pochodzącej od definiujących oraz zmiennej członkowskiej osadzonych w tej klasy interfejsu OLE. [AddRef](http://msdn.microsoft.com/library/windows/desktop/ms691379), [wersji](http://msdn.microsoft.com/library/windows/desktop/ms682317), i [QueryInterface](http://msdn.microsoft.com/library/windows/desktop/ms682521) elementy członkowskie są deklarowane jako automatycznie. Musi zawierać deklaracje do innych funkcji elementu członkowskiego, które są częścią interfejsu implementowana (deklaracje te są umieszczane między begin_interface_part — i end_interface_part — makra).
+Dla każdego interfejsu, który będzie implementowany przez klasę musisz mieć parę BEGIN_INTERFACE_PART i END_INTERFACE_PART. Te makra definiują lokalną klasę pochodzącą od interfejsu OLE, który zdefiniujesz, jak również osadzoną zmienną elementu członkowskiego tej klasy. [AddRef](http://msdn.microsoft.com/library/windows/desktop/ms691379), [wersji](http://msdn.microsoft.com/library/windows/desktop/ms682317), i [QueryInterface](http://msdn.microsoft.com/library/windows/desktop/ms682521) elementy członkowskie są zgłaszane automatycznie. Musisz dołączyć deklaracje dla innych funkcji Członkowskich, będących częścią implementowanego interfejsu (deklaracje te są umieszczane między makra BEGIN_INTERFACE_PART i END_INTERFACE_PART).
 
-*Iface* argument jest interfejsem OLE, który chcesz wdrożyć, takich jak `IAdviseSink`, lub `IPersistStorage` (lub własny niestandardowy interfejs).
+*Iface* argument jest interfejsem OLE, który chcesz wdrożyć, takim jak `IAdviseSink`, lub `IPersistStorage` (lub innym niestandardowym interfejsem).
 
-*LocalClass* argument jest nazwą klasy lokalnej, która zostanie zdefiniowana. "X" zostanie automatycznie dołączony do nazwy. Konwencja nazewnictwa jest używany w celu uniknięcia konfliktów z klasami globalne o takiej samej nazwie. Ponadto Nazwa osadzonego elementu członkowskiego, taka sama jak *localClass* nazwy z wyjątkiem jest poprzedzony "m_x".
+*LocalClass* argument jest nazwą klasy lokalnej, która zostanie zdefiniowana. "X" zostanie automatycznie być dołączona do nazwy. Tę konwencję nazewnictwa jest używany w celu uniknięcia kolizji z klasami globalnymi o tej samej nazwie. Ponadto Nazwa osadzonego elementu członkowskiego, taka sama jak *localClass* nazwy z wyjątkiem, że jest poprzedzona przez wyrażenie "m_x".
 
 Na przykład:
 
@@ -546,12 +546,12 @@ BEGIN_INTERFACE_PART(MyAdviseSink, IAdviseSink)
 END_INTERFACE_PART(MyAdviseSink)
 ```
 
-zdefiniowane lokalnej klasy o nazwie XMyAdviseSink pochodną IAdviseSink i elementem członkowskim klasy, w którym jest zadeklarowany jako o nazwie m_xMyAdviseSink.Note:
+zdefiniuje klasę lokalną o nazwie XMyAdviseSink pochodzącą od IAdviseSink, oraz członka klasy, w której jest zadeklarowana o nazwie m_xMyAdviseSink.Note:
 
 > [!NOTE]
-> Wiersze rozpoczynające się od `STDMETHOD`_ zasadniczo są kopiowane z OLE2. H i nieco zmodyfikowany. Kopiowanie ich z OLE2. H można zmniejszyć liczbę błędów, które są trudne do rozwiązania.
+> Wiersze rozpoczynające się od `STDMETHOD`_ są zasadniczo kopiowane z OLE2. Godz. i nieco modyfikowane. Kopiując je z OLE2. H zmniejszyć liczbę błędów, które są trudne do rozwiązania.
 
-### <a name="begininterfacemap-and-endinterfacemap--macro-descriptions"></a>Begin_interface_map — i end_interface_map — — makro opisów
+### <a name="begininterfacemap-and-endinterfacemap--macro-descriptions"></a>BEGIN_INTERFACE_MAP i END_INTERFACE_MAP — opisy makra
 
 ```cpp
 BEGIN_INTERFACE_MAP(theClass, baseClass)
@@ -561,16 +561,16 @@ END_INTERFACE_MAP
 #### <a name="parameters"></a>Parametry
 
 *theClass*  
-Klasy, w którym ma być zdefiniowana mapy interfejsu
+Klasy, w którym ma zostać określona mapy interfejsu
 
-*baseclass —*  
-Klasy, z którego *theClass* pochodną.
+*baseClass*  
+Klasa, z której *theClass* pochodzi od klasy.
 
 #### <a name="remarks"></a>Uwagi
 
-Begin_interface_map — i end_interface_map — makra są używane w pliku implementacji w celu faktycznego zdefiniowania mapy interfejsu. Dla każdego interfejsu, która jest zaimplementowana istnieje co najmniej jednego wywołania makro interface_part —. Dla każdego wartość zagregowaną, która korzysta z klasy istnieje jedno wywołanie makra INTERFACE_AGGREGATE.
+BEGIN_INTERFACE_MAP i END_INTERFACE_MAP makra są używane w pliku implementacji do definiowania mapy interfejsu. Dla każdego interfejsu, który jest implementowany ma jeden lub więcej wywołań makra INTERFACE_PART. Dla każdej agregacji, z której korzysta ta klasa jest jedno wywołanie makra INTERFACE_AGGREGATE.
 
-### <a name="interfacepart--macro-description"></a>Interface_part — — Opis elementu makro
+### <a name="interfacepart--macro-description"></a>INTERFACE_PART — Opis makra
 
 ```cpp
 INTERFACE_PART(theClass, iid, localClass)
@@ -579,17 +579,17 @@ INTERFACE_PART(theClass, iid, localClass)
 #### <a name="parameters"></a>Parametry
 
 *theClass*  
-Nazwa klasy zawierającej mapy interfejsu.
+Nazwa klasy, która zawiera mapę interfejsu.
 
-*identyfikator IID*  
-`IID` Który ma być zmapowana do osadzonego klasy.
+*IID*  
+`IID` Który ma być mapowane na klasie osadzonej.
 
 *localClass*  
 Nazwa klasy lokalnej (mniej "X").
 
 #### <a name="remarks"></a>Uwagi
 
-To makro jest używane między begin_interface_map — makro i end_interface_map — makro dla każdego interfejsu, który będzie obsługiwać obiektu. Umożliwia mapowanie identyfikatora IID do elementu członkowskiego klasy oznaczona *theClass* i *localClass*. "m_x" zostanie dodany do *localClass* automatycznie. Należy pamiętać, że więcej niż jeden `IID` może być skojarzony z jednym elementem członkowskim. Jest to przydatne, gdy wdrażania tylko "najbardziej pochodnej" interfejs i udostępniać również wszystkie interfejsy pośrednich. Dobrym przykładem jest `IOleInPlaceFrameWindow` interfejsu. Swojej hierarchii wygląda następująco:
+To makro jest używane między makro BEGIN_INTERFACE_MAP i END_INTERFACE_MAP — makro dla każdego interfejsu, który jaki obsługiwał będzie obiekt. Umożliwia mapowania identyfikatora IID do elementu członkowskiego klasy wskazanego przez *theClass* i *localClass*. 'm_x' zostanie dodany do *localClass* automatycznie. Należy pamiętać, że więcej niż jeden `IID` może być skojarzony z jednym elementem członkowskim. Jest to bardzo przydatne, gdy wdrażają "tylko najbardziej pochodnego" interfejsu i chcesz zapewnić wszystkie interfejsy pośrednie. Dobrym przykładem jest `IOleInPlaceFrameWindow` interfejsu. Jego hierarchia wygląda następująco:
 
 ```Hierarchy
 IUnknown
@@ -598,7 +598,7 @@ IUnknown
             IOleInPlaceFrameWindow
 ```
 
-Jeśli obiekt implementuje `IOleInPlaceFrameWindow`, klient może `QueryInterface` na żadnym z tych interfejsów: `IOleUIWindow`, `IOleWindow`, lub [IUnknown](http://msdn.microsoft.com/library/windows/desktop/ms680509), poza interfejs "najbardziej pochodnej" `IOleInPlaceFrameWindow` (znajdujący się w rzeczywistości Implementowanie). Do obsługi to umożliwia więcej niż jeden interface_part — makro mapy każdy interfejs podstawowy do `IOleInPlaceFrameWindow` interfejsu:
+Jeśli obiekt implementuje interfejs `IOleInPlaceFrameWindow`, klient może `QueryInterface` na każdym z tych interfejsów: `IOleUIWindow`, `IOleWindow`, lub [IUnknown](http://msdn.microsoft.com/library/windows/desktop/ms680509), poza "najbardziej pochodnym" interfejsem `IOleInPlaceFrameWindow` (znajdujący się w rzeczywistości Implementowanie). Aby to obsłużyć umożliwia więcej niż jeden INTERFACE_PART — makro mapować każdy interfejs podstawowy do `IOleInPlaceFrameWindow` interfejsu:
 
 w pliku definicji klasy:
 
@@ -606,7 +606,7 @@ w pliku definicji klasy:
 BEGIN_INTERFACE_PART(CMyFrameWindow, IOleInPlaceFrameWindow)
 ```
 
-Plik implementacji klasy:
+w pliku implementacji klasy:
 
 ```cpp
 BEGIN_INTERFACE_MAP(CMyWnd, CFrameWnd)
@@ -616,9 +616,9 @@ BEGIN_INTERFACE_MAP(CMyWnd, CFrameWnd)
 END_INTERFACE_MAP
 ```
 
-Platformę zapewnia obsługę interfejsu IUnknown, ponieważ jest zawsze wymagane.
+Szablon dba o IUnknown, ponieważ jest zawsze wymagana.
 
-### <a name="interfacepart--macro-description"></a>Interface_part — — Opis elementu makro
+### <a name="interfacepart--macro-description"></a>INTERFACE_PART — Opis makra
 
 ```cpp
 INTERFACE_AGGREGATE(theClass, theAggr)
@@ -627,14 +627,14 @@ INTERFACE_AGGREGATE(theClass, theAggr)
 #### <a name="parameters"></a>Parametry
 
 *theClass*  
-Nazwa klasy zawierającej mapy interfejsu
+Nazwa klasy, która zawiera mapę interfejsu
 
 *theAggr*  
-Nazwa zmiennej członkowskiej, która ma być agregowany.
+Nazwa zmiennej członkowskiej, która ma zostać zagregowana.
 
 #### <a name="remarks"></a>Uwagi
 
-To makro jest używane mówić platformę wykorzystanie klasy obiektu agregacji. Musi znajdować się między begin_interface_part — i end_interface_part — makra. Obiekt agregacji jest oddzielny obiekt pochodzi od [IUnknown](http://msdn.microsoft.com/library/windows/desktop/ms680509). Przy użyciu agregacji i makra INTERFACE_AGGREGATE, możesz wprowadzić wszystkich interfejsów, które obsługuje agregacji są bezpośrednio obsługiwane przez obiekt. *TheAggr* argument jest po prostu nazwę zmiennej członkowskiej, która jest pochodną klasy [IUnknown](http://msdn.microsoft.com/library/windows/desktop/ms680509) (bezpośrednio lub pośrednio). Interface_part — makra w mapie interfejsów wszystkie makra INTERFACE_AGGREGATE muszą być zgodne.
+To makro jest używane, aby poinformować szablon, że klasa korzysta z obiektu agregacji. Musi się znajdować między BEGIN_INTERFACE_PART i END_INTERFACE_PART makra. Obiekt agregacji jest oddzielnym obiektem, pochodzącym z [IUnknown](http://msdn.microsoft.com/library/windows/desktop/ms680509). Za pomocą agregacji i makra INTERFACE_AGGREGATE, możesz wprowadzać wszystkie interfejsy, które obsługuje agregacja, wyglądały na bezpośrednio obsługiwane przez obiekt. *TheAggr* argument jest po prostu nazwą zmiennej członka klasy wywodzącej się od [IUnknown](http://msdn.microsoft.com/library/windows/desktop/ms680509) (bezpośrednio lub pośrednio). Wszystkie makra INTERFACE_AGGREGATE należy wykonać makra INTERFACE_PART umieszczone na mapie interfejsu.
 
 ## <a name="see-also"></a>Zobacz także
 
