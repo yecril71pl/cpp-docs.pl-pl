@@ -1,5 +1,5 @@
 ---
-title: Zalety znak przenośności zestawu | Dokumentacja firmy Microsoft
+title: Zalety zestawu znaków przenośność | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -11,23 +11,23 @@ helpviewer_keywords:
 - character sets [C++], benefits
 - portability [C++], character sets
 ms.assetid: bd60b925-1498-4e4f-897b-4c8ce66edcf7
-author: ghogen
-ms.author: ghogen
+author: mikeblome
+ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4d1b78048baebfd89aed0ccc898c2bb9e3612525
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: b812b0712e6df24422ebe4a3b73376619051b484
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33853820"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42586808"
 ---
 # <a name="benefits-of-character-set-portability"></a>Zalety przenośności zestawu znaków
-Możesz mogą korzystać z funkcji środowiska wykonawczego przenośność MFC i C nawet wtedy, gdy użytkownik nie jest obecnie planowane internationalize aplikacji:  
+Możesz korzystać z przy użyciu funkcji przenoszenia środowiska wykonawczego MFC i C, nawet wtedy, gdy nie można obecnie podjąć zamierzasz internationalize aplikacji:  
   
--   Kodowanie portably sprawia, że kod podstawowa elastyczne. Można później przenieść go łatwo Unicode lub MBCS.  
+-   Kodowanie portably sprawia, że Twój kod podstawowy elastyczne. Można później przenieść je łatwo do standardu Unicode i MBCS.  
   
--   Przy użyciu Unicode spowoduje, że aplikacje dla systemu Windows większą wydajność. Ponieważ system Windows używa Unicode, ciągów Unicode z systemem innym niż przekazany do i z systemu operacyjnego musi translacji, który wiąże obciążenie.  
+-   Przy użyciu standardu Unicode sprawia, że aplikacje dla Windows bardziej wydajne. Ponieważ Windows używa Unicode, innego niż Unicode ciągi przekazywane do i z systemu operacyjnego musi podlegać translacji, która wiąże się obciążenie.  
 
   
 ## <a name="see-also"></a>Zobacz też  

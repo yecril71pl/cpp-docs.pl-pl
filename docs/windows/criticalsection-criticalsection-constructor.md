@@ -17,35 +17,40 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: f87f95a0683f6b4440d2be8b770902a7e4ecde59
-ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
+ms.openlocfilehash: 892a32c6ff6f8e9a3a30452d05dd6e15c38a4fa8
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39644297"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42605055"
 ---
 # <a name="criticalsectioncriticalsection-constructor"></a>CriticalSection::CriticalSection — Konstruktor
-Inicjuje obiekt synchronizacji, który jest podobny do obiektu mutex, ale mogą być używane przez wątki tylko pojedynczego procesu.  
-  
-## <a name="syntax"></a>Składnia  
-  
-```cpp  
-explicit CriticalSection(  
-   ULONG spincount = 0  
-);  
-```  
-  
-### <a name="parameters"></a>Parametry  
- *spincount*  
- Liczba obiektów sekcję krytyczną pokrętła. Wartość domyślna to 0.  
-  
-## <a name="remarks"></a>Uwagi  
- Aby uzyskać więcej informacji na temat sekcje krytyczne i spincounts zobacz `InitializeCriticalSectionAndSpinCount` działa w programach **synchronizacji** sekcji zawiera interfejs API Windows.  
-  
-## <a name="requirements"></a>Wymagania  
- **Nagłówek:** corewrappers.h  
-  
- **Namespace:** Microsoft::wrl:: wrappers  
-  
-## <a name="see-also"></a>Zobacz też  
- [CriticalSection, klasa](../windows/criticalsection-class.md)
+
+Inicjuje obiekt synchronizacji, który jest podobny do obiektu mutex, ale mogą być używane przez wątki tylko pojedynczego procesu.
+
+## <a name="syntax"></a>Składnia
+
+```cpp
+explicit CriticalSection(
+   ULONG spincount = 0
+);
+```
+
+### <a name="parameters"></a>Parametry
+
+*spincount*  
+Liczba obiektów sekcję krytyczną pokrętła. Wartość domyślna to 0.
+
+## <a name="remarks"></a>Uwagi
+
+Aby uzyskać więcej informacji na temat sekcje krytyczne i spincounts zobacz `InitializeCriticalSectionAndSpinCount` działa w programach **synchronizacji** sekcji zawiera interfejs API Windows.
+
+## <a name="requirements"></a>Wymagania
+
+**Nagłówek:** corewrappers.h
+
+**Namespace:** Microsoft::wrl:: wrappers
+
+## <a name="see-also"></a>Zobacz też
+
+[CriticalSection, klasa](../windows/criticalsection-class.md)

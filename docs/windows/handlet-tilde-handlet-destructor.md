@@ -17,26 +17,29 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 9f0df83ff8848f27839254bd9b1645866d3904bb
-ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
+ms.openlocfilehash: 1d48bef07a6aeb42569faad775867bf415577980
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39643465"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42607731"
 ---
 # <a name="handlethandlet-destructor"></a>HandleT::~HandleT — Destruktor
-Wyłącza wystąpienie **HandleT** klasy.  
-  
-## <a name="syntax"></a>Składnia  
-  
-```cpp  
-~HandleT();  
-```  
-  
-## <a name="requirements"></a>Wymagania  
- **Nagłówek:** corewrappers.h  
-  
- **Namespace:** Microsoft::wrl:: wrappers  
-  
-## <a name="see-also"></a>Zobacz też  
- [HandleT, klasa](../windows/handlet-class.md)
+
+Wyłącza wystąpienie **HandleT** klasy.
+
+## <a name="syntax"></a>Składnia
+
+```cpp
+~HandleT();
+```
+
+## <a name="requirements"></a>Wymagania
+
+**Nagłówek:** corewrappers.h
+
+**Namespace:** Microsoft::wrl:: wrappers
+
+## <a name="see-also"></a>Zobacz też
+
+[HandleT, klasa](../windows/handlet-class.md)

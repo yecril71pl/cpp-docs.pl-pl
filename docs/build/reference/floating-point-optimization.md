@@ -9,23 +9,22 @@ dev_langs:
 - C++
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 35c9263fa6252469124eefb0dfd575ef5bd2ac34
-ms.sourcegitcommit: 5e932a0e110e80bc241e5f69e3a1a7504bfab1f3
+ms.openlocfilehash: 082cd3a7721f1bc72899130159b724b292e5e217
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/21/2018
-ms.locfileid: "34422748"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42595051"
 ---
-# <a name="microsoft-visual-c-floating-point-optimization"></a>Microsoft Visual C++ optymalizacji liczb zmiennoprzecinkowych
+# <a name="microsoft-visual-c-floating-point-optimization"></a>Microsoft Visual C++ optymalizacji zmiennoprzecinkowych
 
-Uzyskać dojścia do dotyczące optymalizacji liczb zmiennoprzecinkowych kodu za pomocą kompilatora Microsoft C++ metodę zarządzania semantykę zmiennoprzecinkową. Tworzenie programów szybkiego przy jednoczesnym zapewnieniu jej wykonanie tylko bezpiecznych optymalizacji kodu liczb zmiennoprzecinkowych.
+Uzyskaj dojście optymalizacji kodu zmiennoprzecinkowego, za pomocą kompilatora Microsoft C++ metodę zarządzania semantykę liczb zmiennopozycyjnych. Utwórz szybko programy przy jednoczesnym zapewnieniu, że tylko bezpiecznych optymalizacje są wykonywane na kod zmiennoprzecinkowy.
 
-## <a name="optimization-of-floating-point-code-in-c"></a>Optymalizacji liczb zmiennoprzecinkowych kodu w języku C++
+## <a name="optimization-of-floating-point-code-in-c"></a>Optymalizacja kodu zmiennoprzecinkowego w języku C++
 
-Optymalizacja kompilatora C++ nie tylko tłumaczy kodu źródłowego na kod maszynowy, tworzy instrukcje maszyny w taki sposób, aby zwiększyć wydajność i/lub zmniejszyć rozmiar. Niestety wielu typowych optymalizacje nie są zawsze bezpieczne, gdy jest stosowany do obliczenia liczb zmiennoprzecinkowych. Dobrym przykładem może być widoczny z następującego algorytmu podsumowania pobranych z Kowalski Dominik, "Co co komputer naukowca powinien wiedzieć o Floating-Point arytmetycznego", *obliczeniowych ankiet*, marca 1991 pg. 203:
+Optymalizacja kompilatora języka C++ nie tylko dokonuje translacji kodu źródłowego do kodu maszynowego, organizuje instrukcje maszynę w taki sposób, aby zwiększyć wydajność i/lub Zmniejsz rozmiar. Niestety wiele typowych optymalizacji nie są zawsze bezpieczne, po zastosowaniu do obliczeń zmiennoprzecinkowych. Dobrym przykładem są widoczne przy użyciu następującego algorytmu sumą pobranych z Davidem Kowalski, "Co co komputer Analityk powinien wiedzieć o zmiennopozycyjna arytmetyczne", *obliczeń ankiet*, marca 1991 pg. 203:
 
 ```cpp
 float KahanSum( const float A[], int n )
@@ -42,17 +41,17 @@ float KahanSum( const float A[], int n )
 }
 ```
 
-Ta funkcja dodaje n **float** wartości w tablicy wektor `A`. W treści pętli algorytm oblicza wartość "naprawa", która jest następnie stosowany do następnego kroku podsumowanie. Ta metoda, znacznie ogranicza zbiorczą błędów zaokrąglania porównaniu proste podsumowanie, zachowując O(n) czasu złożoności.
+Ta funkcja dodaje n **float** wartości w wektorze tablicy `A`. W treści pętli algorytm oblicza wartość "Poprawka", co jest następnie stosowane do następnego kroku podsumowania. Ta metoda znacznie zmniejsza zbiorczą błędy zaokrągleń w porównaniu do prostych sumowania, przy zachowaniu O(n) czasu złożoności.
 
-Kompilator języka C++ prosty może przyjęto założenie, że zmiennoprzecinkowe arytmetyczne postępuje te same zasady algebraicznych jako liczba rzeczywista arytmetyczne. Takie kompilator może następnie błędnego stwierdzą, że
+Kompilator języka C++ naiwni zakładać, że arytmetyki zmiennoprzecinkowej te same reguły algebraicznych jako liczba rzeczywista operacje arytmetyczne. Takie kompilator może następnie błędnie stwierdzą, że
 
-> C = T - sum - Y == > (suma + Y) - sum - Y == > 0;
+> C = T - sum - Y == > (suma + Y) — Suma - Y == > 0.
 
-Oznacza to, że wartość postrzegana c jest zawsze stałą równą zero. Jeśli ta wartość stałej jest następnie propagowany do kolejnych wyrażenia, treści pętli zostanie zmniejszona do prostych podsumowania. Aby była precyzyjna,
+Oznacza to, że wartość postrzegany c jest zawsze stałą wartość zero. Jeśli ta wartość stała jest następnie propagowany do kolejnych wyrażeń, ciało pętli jest skrócony do prostych sumą. Aby była precyzyjna,
 
 > Y = [i] - C == > Y = [i]<br/>T = Suma + Y == > T = suma + [i]<br/>Suma = T == > Suma = suma + [i]
 
-W związku z tym w kompilatorze prostego, logiczną transformacji `KahanSum` byłoby funkcji:
+W efekcie kompilatorowi naiwni, logiczne przekształcania `KahanSum` funkcji:
 
 ```cpp
 float KahanSum( const float A[], int n )
@@ -64,11 +63,11 @@ float KahanSum( const float A[], int n )
 }
 ```
 
-Mimo że przekształcone algorytm jest szybsze, *wcale nie jest dokładne reprezentację zamiar programisty*. Korekcja błędów dokładnie przygotowanego ma całkowicie usunięte, a możemy są pozostawione z algorytmem podsumowania proste i bezpośrednie jego skojarzony błąd.
+Mimo że przekształcone algorytm jest szybsze, *w ogóle nie stanowi dokładne odzwierciedlenia zamiar programisty*. Korekcja błędów dokładnie przygotowane została usunięta całkowicie, a teraz pozostawiliśmy z algorytmem proste, bezpośrednie sumą z jego skojarzony błąd.
 
-Oczywiście zaawansowane kompilatora C++ wiedział, że algebraicznych reguły z rzeczywistym arytmetyczne nie zwykle dotyczą arytmetyczne zmiennoprzecinkowych. Jednak nawet zaawansowane kompilatora C++ może nadal niepoprawnie zinterpretować zamiar programisty.
+Oczywiście zaawansowanych kompilator języka C++ wiedział, że algebraicznych reguły o rzeczywistym arytmetyczne ogólnie dotyczy arytmetyki zmiennoprzecinkowej. Jednak nawet zaawansowane kompilator języka C++ mogą nadal niepoprawnie interpretować zamiar programisty.
 
-Należy wziąć pod uwagę wspólnej optymalizacji, podejmowanych w celu przechowywania dowolną liczbę wartości w rejestrach, jak to możliwe (o nazwie "rejestracja" wartość). W `KahanSum` przykład tego rodzaju optymalizacji może podejmować wielokrotne próby przebiegała zmienne `C`, `Y` i `T` ponieważ są używane tylko w treści pętli. Jeśli dokładność rejestru 52bits (dwa razy) zamiast 23bits (jeden), tego rodzaju optymalizacji skutecznie typu wspiera `C`, `Y` i `T` na typ **podwójne**. Jeśli zmienna sum nie jest również zarejestrowany, pozostanie zakodowanym w pojedynczej precyzji. Przekształca to semantykę `KahanSum` dla następujących
+Rozważmy typowe optymalizacji, które podejmuje próbę przechowywać dowolną liczbę wartości w rejestrach, jak to możliwe (o nazwie "rejestrowanie" wartości). W `KahanSum` przykład tego rodzaju optymalizacji może próbować przebiegała zmienne `C`, `Y` i `T` ponieważ są one używane tylko w treści pętli. Dokładność Zarejestruj się w przypadku 52bits (podwójny) zamiast 23bits (pojedyncze), tego rodzaju optymalizacji skutecznie typu promuje `C`, `Y` i `T` na typ **double**. Jeśli zmienna suma nie jest również przechowywane w rejestrze procesora, pozostanie zakodowany w pojedynczej precyzji. To przekształca semantykę `KahanSum` dla następujących
 
 ```cpp
 float KahanSum( const float A[], int n )
@@ -86,9 +85,9 @@ float KahanSum( const float A[], int n )
 }
 ```
 
-Mimo że `Y`, `T` i `C` teraz są obliczane w wyższej dokładności mniej dokładne wynik, w zależności od wartości w nowe kodowanie może powodować `A[]`. Nawet pozornie w związku z tym nieszkodliwe optymalizacje może mieć konsekwencje ujemna.
+Mimo że `Y`, `T` i `C` teraz są obliczane na większą precyzję nowe kodowanie może powodować mniej dokładne wyniki, w zależności od wartości w `A[]`. Dlatego nawet pozornie nieszkodliwe optymalizacje może wiązać z negatywnymi skutkami.
 
-Tego rodzaju optymalizacji problemów nie są ograniczone do kodu zmiennoprzecinkowe "trudnych". Nawet prostego algorytmy zmiennoprzecinkowej może zakończyć się niepowodzeniem, zoptymalizowane niepoprawnie. Należy wziąć pod uwagę algorytm proste i bezpośrednie podsumowania:
+Tego rodzaju problemów z optymalizacją nie są ograniczone do "skomplikowanych" kodu zmiennoprzecinkowego. Nawet prostych algorytmy zmiennoprzecinkowych może zakończyć się niepowodzeniem, gdy nieprawidłowo zoptymalizowane pod kątem. Należy wziąć pod uwagę algorytm prosty, sumą bezpośrednie:
 
 ```cpp
 float Sum( const float A[], int n )
@@ -100,7 +99,7 @@ float Sum( const float A[], int n )
 }
 ```
 
-Ponieważ niektóre jednostki zmiennoprzecinkowe są w stanie jednocześnie wykonania wielu operacji, wybrać Uwzględnij optymalizacji skalarne zmniejszenie kompilatora. Tego rodzaju optymalizacji skutecznie przekształca prostych funkcji Sum z powyższych w następujących czynności:
+Ponieważ niektóre jednostki zmiennoprzecinkowej może wykonać wiele operacji jednocześnie, dzięki którym można zaangażować optymalizacji redukcja skalaru wybrać kompilatora. Tego rodzaju optymalizacji skutecznie przekształcający prostą funkcję Sum z powyższych następujące czynności:
 
 ```cpp
 float Sum( const float A[], int n )
@@ -122,7 +121,7 @@ float Sum( const float A[], int n )
 }
 ```
 
-Funkcja obsługuje teraz udostępnia cztery oddzielne, które mogą być jednocześnie przetwarzane w każdym kroku. Zoptymalizowane funkcji ma teraz znacznie szybsze, ale zoptymalizowane wyniki mogą być zupełnie różne, niezoptymalizowaną wyników. W wprowadzeniem tej zmiany, kompilator zakłada, że asocjacyjnej dodanie zmiennoprzecinkowe; oznacza to że te dwa wyrażenia są równoważne: `(a + b) + c == a + (b + c)`. Jednak kojarzenie nie zawsze ma wartość true dla liczb zmiennoprzecinkowych. Zamiast obliczania podsumowania jako:
+Funkcja obsługuje teraz udostępnia cztery oddzielne, które mogą być przetwarzane jednocześnie w każdym kroku. Mimo że funkcja zoptymalizowane teraz znacznie szybciej, zoptymalizowane wyniki mogą być bardzo różne wyniki niezoptymalizowany. Wprowadzając tę zmianę, kompilator zakłada, że asocjacyjnych dodanie zmiennoprzecinkowych; oznacza to że te dwa wyrażenia są równoważne: `(a + b) + c == a + (b + c)`. Jednak łączność nie zawsze ma wartość true dla liczb zmiennoprzecinkowych. Zamiast przetwarzania sumą jako:
 
 ```cpp
 sum = A[0]+A[1]+A[2]+...+A[n-1];
@@ -137,17 +136,17 @@ sum = (A[0]+A[4]+A[8]+...)
     + (A[3]+A[7]+A[11]+...);
 ```
 
-Dla niektórych wartości `A[]`, inną kolejność operacji dodawania może dać nieoczekiwane wyniki. Do dalszego skomplikować sprawach, niektóre programistów wybrać przewidzieć takie optymalizacji i odpowiednio skorygować ich. W takim przypadku program można utworzyć tablicy `A` w innej kolejności, tak aby suma zoptymalizowane tworzy oczekiwanych rezultatów. Ponadto w wielu sytuacjach dokładność zoptymalizowane wynik może być "wystarczająco blisko". Jest to szczególnie istotne podczas optymalizacji zalety atrakcyjnych szybkości. Gier, na przykład wymagać znacznie przyspieszyć, jak to możliwe, ale często nie wymagają bardzo dokładne obliczeń zmiennoprzecinkowych. Osoby podejmujące decyzje kompilatora musi w związku z tym mechanizm umożliwiający deweloperom sterowanie często różnych celów szybkość i dokładność.
+W przypadku niektórych wartości z `A[]`, inną kolejność operacji dodawania może powodować nieoczekiwane rezultaty. Do dalszego skomplikować, niektórych programistów mają możliwość przewidywanie takich optymalizacje i odpowiednio kompensacji je. W takim przypadku program można utworzyć tablicy `A` w innej kolejności, tak aby suma zoptymalizowane daje oczekiwanych wyników. Ponadto w wielu sytuacjach dokładność zoptymalizowane wynik może być "wystarczająco bliskie". Jest to szczególnie istotne w przypadku, gdy Optymalizacja zalety atrakcyjnych szybkości. Gry wideo, na przykład wymagać, ponieważ znacznie przyspieszyć, jak to możliwe, ale często nie wymagają wysokiej dokładne obliczeń zmiennoprzecinkowych. Twórcy kompilatora muszą więc zapewniać mechanizm dla programistów kontrolować często rozbieżnymi celów szybkość i dokładność.
 
-Niektóre kompilatory rozpoznać zależności między szybkość i dokładność, podając oddzielne przełącznika każdego rodzaju optymalizacji. Dzięki temu deweloperzy mogą wyłączyć funkcje optymalizacji, które powodują zmiany zmiennoprzecinkowe dokładność dla określonej aplikacji. Gdy to rozwiązanie może oferować wysokiego stopnia kontroli nad kompilatora, wprowadzono kilka dodatkowych problemów:
+Niektóre kompilatory rozpoznać zależności między szybkość i dokładność, zapewniając przełącznika osobne dla każdego typu optymalizacji. Umożliwia to deweloperom Wyłącz optymalizacje, które powodują zmiany zmiennoprzecinkowych dokładność dla określonej aplikacji. Chociaż to rozwiązanie może zaoferować wysokiego stopnia kontroli nad kompilator, wprowadza kilka dodatkowych problemów:
 
-- Nie często jest jasne, który zmienia, aby włączyć lub wyłączyć.
-- Wyłączanie pojedynczego optymalizacją może niekorzystnie wpłynąć na wydajność kodu z systemem innym niż zmiennoprzecinkowych.
-- Każdy dodatkowego przełącznik wiąże się z wielu nowych połączeń przełącznika; liczbę kombinacji szybko staje się niewygodna.
+- Często jest niejasny przełącza się do włączania lub wyłączania.
+- Wyłączenie dowolnego pojedynczego optymalizacji może niekorzystnie wpłynąć na wydajność kodu bez zmiennoprzecinkowego.
+- Każdy przełącznik dodatkowe wiąże się wielu nowych połączeń przełącznika; liczbę kombinacji szybko staje się niewydolna.
 
-Dlatego podczas zapewnienie oddzielnymi przełącznikami dla każdego optymalizacji mogą wydawać się atrakcyjne, za pomocą takich kompilatory może być skomplikowane i zawodnych.
+Dlatego podczas zapewnienie oddzielnymi przełącznikami dla każdego optymalizacji może wydawać się ich orkiestracją, przy użyciu takich kompilatorów może być skomplikowane i zawodnych.
 
-Oferują wiele kompilatorów C++ *spójności* model zmiennoprzecinkowy (za pośrednictwem **/Op** lub **/fltconsistency** przełącznika) który umożliwia deweloperom tworzenie programów zgodne z ścisłą semantykę zmiennoprzecinkową. Wykonujących, ten model zapobiega użyciu większości optymalizacje na obliczenia liczb zmiennoprzecinkowych zezwalając te optymalizacje dla kodu z systemem innym niż punkt zmiennoprzecinkową kompilatora. Jednak model spójności ma ciemny po stronie. Aby zwracają wyniki przewidywalną na różnych architektur FPU niemal wszystkich wdrożeń **/Op** round wyrażenia pośredniego użytkownikowi określona precyzja; na przykład, należy wziąć pod uwagę poniższe wyrażenie:
+Oferuje wiele kompilatorów języka C++ *spójności* model zmiennoprzecinkowy (za pośrednictwem **/Op** lub **/fltconsistency** przełącznika) co pozwala deweloperom tworzyć programy zgodne za pomocą ścisłą semantykę liczb zmiennopozycyjnych. Wykonujących, w tym modelu zabezpiecza kompilator przed przy użyciu większość optymalizacji na obliczeń zmiennoprzecinkowych, zapewniając te optymalizacje kodu bez punktu zmiennoprzecinkowego. Model spójności ma jednak dark-side. Aby zwrócić przewidywalne wyniki w różnych architektur FPU, prawie wszystkich implementacjach **/Op** round wyrażeń pośrednich użytkownikowi określona precyzja; na przykład rozważmy następujące wyrażenie:
 
 ```cpp
 float a, b, c, d, e;
@@ -155,7 +154,7 @@ float a, b, c, d, e;
 a = b * c + d * e;
 ```
 
-Aby można było utworzyć spójne i powtarzalne wyniki, w obszarze **/Op**, to wyrażenie jest obliczane tak, jakby zostały wdrożone w następujący sposób:
+W celu uzyskania spójnego i powtarzalnego wyników w obszarze **/Op**, to wyrażenie oceniane tak, jakby zostały zaimplementowane w następujący sposób:
 
 ```cpp
 float x = b  *c;
@@ -163,7 +162,7 @@ float y = d * e;
 a = x + y;
 ```
 
-Wynik końcowy teraz odczuwa błędów zaokrąglania pojedynczej precyzji *w każdym kroku obliczenie wyrażenia*. Chociaż ten interpretacji ściśle nie Podziel żadnych reguł semantykę języka C++, praktycznie nigdy nie jest najlepszym sposobem obliczać wyrażeń zmiennoprzecinkowych. Jest zazwyczaj bardziej pożądane obliczeniowe pośrednich wyników w możliwie dokładność jak jest to możliwe. Na przykład byłoby lepiej można obliczyć wyrażenia `a = b * c + d * e` w większą dokładność, podobnie jak w
+Wynik końcowy teraz odczuwa błędy zaokrągleń pojedynczej precyzji *w każdym kroku obliczając wartość wyrażenia*. Mimo że ten interpretacji ściśle nie przerywa wszystkie reguły semantyki C++, prawie nigdy nie jest najlepszym sposobem obliczać wyrażeń zmiennoprzecinkowych. Jest zazwyczaj bardziej pożądane obliczeń pośrednich wyników w możliwie dokładności praktycznych. Na przykład byłoby lepiej do obliczenia wyrażenia `a = b * c + d * e` w większą precyzję, na przykład
 
 ```cpp
 double x = b * c;
@@ -181,42 +180,42 @@ long double z = x + y;
 a = (float)z;
 ```
 
-Podczas obliczania wyników pośrednich w większą dokładność, wynik końcowy jest znacznie bardziej dokładne. Ironically przyjmując modelu spójności prawdopodobieństwo wystąpienia błędu zwiększa się mówiąc, gdy użytkownik próbuje zmniejszyć błędu przez wyłączenie optymalizacji niebezpieczne. W związku z tym modelem spójności poważnie może zmniejszyć wydajność przy jednoczesnym zapewnieniu żadnej gwarancji, zwiększenia dokładności. Programistom numeryczny poważny to wygląda podobnie jak bardzo dobre zależnościami i jest główną przyczyną czy modelu nie ogólnie również Odebrano.
+Podczas obliczania wyników pośrednich w większą precyzję, wynik końcowy jest znacznie bardziej dokładne. Ironically przyjmując model spójności, prawdopodobieństwo wystąpienia błędu zwiększa się dokładnie, gdy użytkownik próbuje zmniejszyć błąd, wyłączając optymalizacje niebezpieczne. Tym samym modelu spójności naszych użytkowników bardzo poważnie może zmniejszyć wydajność przy jednoczesnym zapewnieniu żadnej gwarancji, zwiększenia dokładności. Programistom poważne wartości liczbowych to nie wydawać się to z kompromisem bardzo dobre i jest głównym powodem, czy model nie zazwyczaj dobrze Odebrano.
 
-Począwszy od wersji 8.0 (Visual C++ 2005®), Microsoft C++ kompilatora zapewnia znacznie lepszą alternatywę. Umożliwia deweloperom wybierz jedną z trzech trybów zmiennoprzecinkowe ogólne: fp: precise, fp:fast i fp: strict.
+Począwszy od wersji 8.0 (Visual C++ 2005®), Microsoft C++ kompilator zapewnia znacznie lepszą alternatywą. Umożliwia programistom wybierz jedną z trzech trybów zmiennoprzecinkowych ogólne: fp: precise, FP: Fast i fp: strict.
 
-- W obszarze fp: precise, tylko optymalizacje bezpieczne odbywa się na kod zmiennoprzecinkowych i, w odróżnieniu od **/Op**, pośrednie obliczenia spójnie są wykonywane na najwyższym dokładność praktyczne.
-- Tryb FP:Fast zwalnia zmiennoprzecinkowe reguły, co zapewnia bardziej agresywną optymalizacji kosztem dokładności.
-- FP: tryb z ograniczeniami zawiera ogólne poprawność fp: precise podczas włączania semantyki fp wyjątek i uniemożliwia niedozwolony przekształcenia obecności zmian środowiska FPU (np. zmiany dokładność rejestru, zaokrąglania kierunek itp.).
+- W obszarze fp: precise, tylko bezpiecznych optymalizacje wykonywane są kod zmiennoprzecinkowy, a także, w odróżnieniu od **/Op**, obliczeń pośrednich niezmienne spisywała się na najwyższym dokładności praktyczne.
+- Tryb FP: Fast zwalnia zmiennoprzecinkowych reguły, co zapewnia bardziej agresywnego optymalizacji kosztem dokładności.
+- FP: tryb z ograniczeniami zapewnia ogólne poprawność fp: precise podczas włączania semantykę wyjątku fp i zapobieganie niedozwolony przekształcenia obecności zmiany środowiska FPU (np. zmiany precyzji rejestru, zaokrąglaniem kierunku itp.).
 
-Semantyka wyjątek zmiennoprzecinkowy, którego można kontrolować niezależnie przez przełącznik wiersza polecenia lub pragma kompilatora; Domyślnie semantyki zmiennoprzecinkowych wyjątków są wyłączone w obszarze fp: dokładne i włączona w obszarze fp: strict. Kompilator również zapewnia kontrolę nad FPU środowisko czułość i niektórych zmiennoprzecinkowe optymalizacje określonych, takich jak skrótów. Ten model proste zapewnia deweloperom dużą kontrolę nad kompilacji kodu zmiennoprzecinkowe bez ponoszenia odpowiedzialności za dużo przełączniki kompilatora lub Perspektywa niepożądane skutki uboczne.
+Semantyka wyjątek zmiennoprzecinkowy, którego można kontrolować niezależnie, przełącznik wiersza polecenia lub dyrektywy kompilatora; Domyślnie semantykę wyjątku zmiennoprzecinkowego są wyłączone w obszarze fp: dokładne i włączone w obszarze fp: strict. Kompilator zapewnia również kontrolę nad czułości środowiska FPU i niektórych określonych optymalizacji zmiennopozycyjnych, takich jak skrótów. Ten model proste daje deweloperom dużą kontrolę nad kompilacji kodu zmiennoprzecinkowego, bez obciążeń zbyt wiele przełączniki kompilatora lub Perspektywa niepożądane skutki uboczne.
 
-## <a name="the-fpprecise-mode-for-floating-point-semantics"></a>Fp: tryb dokładne semantykę zmiennoprzecinkową
+## <a name="the-fpprecise-mode-for-floating-point-semantics"></a>Fp: precise tryb semantykę zmiennoprzecinkową
 
-Domyślny tryb semantykę zmiennoprzecinkową jest fp: precise. Po wybraniu tego trybu kompilator ściśle działa zgodnie z zestawem zasad bezpieczeństwa podczas optymalizacji operacji zmiennoprzecinkowych. Te zasady pozwalają na kompilator, aby wygenerować kod maszynowy wydajne przy zachowaniu dokładność obliczeń zmiennoprzecinkowych. Aby ułatwić produkcji fast programów, fp: model dokładne wyłącza semantyki wyjątków dotyczących liczb zmiennoprzecinkowych (chociaż są one może być jawnie włączone). Wybrany fp przez firmę Microsoft: dokładne jako domyślny tryb liczb zmiennoprzecinkowych, ponieważ tworzy on zarówno szybkich i dokładnych programów.
+Domyślny tryb semantykę liczb zmiennopozycyjnych to fp: precise. Po wybraniu tego trybu kompilator ściśle zgodna z zestawem zasad bezpieczeństwa podczas optymalizacji operacji zmiennopozycyjnych. Te reguły zezwala kompilatorowi generowanie kodu maszynowego wydajne przy zachowaniu dokładność obliczeń zmiennoprzecinkowych. Ułatwiające produkcji szybkie programy, fp: precise modelu wyłącza semantykę wyjątku zmiennoprzecinkowego (mimo że można ją jawnie włączyć). Wybrany fp przez firmę Microsoft: dokładne jak domyślny tryb zmiennoprzecinkowych, ponieważ powoduje to szybkie i dokładne programów.
 
-Jawnie żądać fp: trybie ścisłym przy użyciu kompilatora wiersza polecenia, użyj [/FP: precise](fp-specify-floating-point-behavior.md) przełącznika:
+Na jawne żądanie fp: trybie ścisłym, za pomocą kompilatora wiersza polecenia, użyj [/FP: precise](fp-specify-floating-point-behavior.md) przełącznika:
 
 > Cl/FP: precise source.cpp
 
-To nakazuje kompilatorowi używanie fp: dokładne semantyki podczas generowania kodu dla pliku source.cpp. Fp: dokładne modelu również może być wywoływana na poszczególnych funkcji funkcji przy użyciu [pragma kompilatora float_control](#the-float-control-pragma).
+To powoduje, że kompilator korzystać fp: precise semantyki podczas generowania kodu dla pliku source.cpp. Fp: precyzyjnego modelu można również wywołać w poszczególnych funkcji przez funkcję przy użyciu [dyrektywy kompilatora float_control](#the-float-control-pragma).
 
-W obszarze fp: trybie ścisłym kompilator nigdy nie wykonuje wszystkie funkcje optymalizacji, które perturb dokładność obliczeń zmiennoprzecinkowych. Kompilator zawsze zaokrągla poprawnie w przypisania, typecasts i wywołania funkcji i pośredniego zaokrąglania spójnie odbędzie się w tej samej precyzji jak rejestruje FPU. Optymalizacje bezpieczne, takich jak skrótów, są domyślnie włączone. Semantyka wyjątku i FPU środowisko czułość są domyślnie wyłączone.
+W obszarze fp: trybie ścisłym, kompilator nigdy nie wykonuje żadnych optymalizacje, które perturb dokładność obliczeń zmiennoprzecinkowych. Kompilator zawsze zostanie niepoprawnie zaokrąglać w przypisania, rzutowaniach typu i wywołaniach funkcji i pośredniego zaokrąglania spójnie odbędzie się w tej samej precyzji jak rejestruje FPU. Optymalizacje bezpieczne, takich jak skrótów, są domyślnie włączone. Semantykę wyjątku i czułość środowiska FPU są domyślnie wyłączone.
 
-|FP: dokładne semantyki|Wyjaśnienie|
+|FP: precise semantyki|Wyjaśnienie|
 |-|-|
-|Zaokrąglanie semantyki|Jawne zaokrąglania w przypisania, typecasts i wywołania funkcji. Zostaną obliczone wyrażenia pośredniego na dokładność rejestru.|
-|Algebraicznych przekształcenia|Ścisłego przestrzegania z systemem innym niż łączny, podziału algebraiczną liczb zmiennoprzecinkowych, chyba że transformację jest zawsze gwarancji działają tak samo.|
+|Zaokrąglanie semantyki|Jawne Zaokrąglenie w przypisania, rzutowaniach typu, a funkcja wywołuje. Wyrażeń pośrednich zostanie oceniona dokładności rejestru.|
+|Przekształcenia algebraiczne|Ścisłego przestrzegania-asocjacyjnych, bez podziału algebry zmiennoprzecinkowych, chyba że przekształcenie gwarantuje zawsze działają tak samo.|
 |Skrótów|Dozwolone domyślnie. Aby uzyskać więcej informacji, zobacz sekcję [fp_contract pragma](#the-fp-contract-pragma).|
-|Kolejność obliczania liczb zmiennoprzecinkowych|Kompilator może zmienić kolejność obliczania wyrażeń zmiennoprzecinkowych, pod warunkiem, że wyniki końcowe nie zostały zmienione.|
-|Dostęp do środowiska FPU|Domyślnie wyłączone. Aby uzyskać więcej informacji, zobacz sekcję [fenv_access pragma](#the-fenv-access-pragma). Przyjęto, że domyślna dokładność i tryb zaokrąglania.|
+|Kolejność obliczania zmiennoprzecinkowych|Kompilator może zmienić kolejność obliczania wyrażeń liczb zmiennopozycyjnych, pod warunkiem, że wyniki końcowe nie zostały zmienione.|
+|Dostęp do środowiska FPU|Domyślnie wyłączone. Aby uzyskać więcej informacji, zobacz sekcję [fenv_access pragma](#the-fenv-access-pragma). Przyjęto, że domyślna dokładność i trybu zaokrąglania.|
 |Semantyka wyjątków dotyczących liczb zmiennoprzecinkowych|Domyślnie wyłączone. Aby uzyskać więcej informacji, zobacz [/FP: except](fp-specify-floating-point-behavior.md).|
 
-### <a name="rounding-semantics-for-floating-point-expressions-under-fpprecise"></a>Zaokrąglanie semantyka wyrażeń liczb zmiennoprzecinkowych w obszarze fp: precise
+### <a name="rounding-semantics-for-floating-point-expressions-under-fpprecise"></a>Zaokrąglanie semantykę zmiennoprzecinkową wyrażeń w obszarze fp: precise
 
-Fp: dokładne modelu zawsze wykonuje obliczenia pośredniego na najwyższym dokładność praktyczne, jawnie zaokrąglania tylko w niektórych punktach Obliczanie wyrażenia. Precyzji określony użytkownik zawsze Zaokrąglenie w czterech miejscach: () w przypadku przydziału, (b) podczas rzutowanie typu, (c) podczas wartość zmiennoprzecinkowa jest przekazywany jako argument do funkcji oraz (d) Jeśli wartość zmiennoprzecinkowa jest zwracana z Funkcja. Ponieważ pośredniego obliczenia są zawsze wykonywane na dokładność rejestru, dokładność pośrednich wyników jest zależne od platformy (chociaż dokładności będzie zawsze równa co najmniej precyzyjne jako użytkownik określony dokładności).
+Fp: precyzyjnego modelu zawsze wykonuje pośrednich obliczeń na najwyższym dokładności praktyczne, jawnie zaokrąglania tylko w określonych punktach Obliczanie wyrażenia. Z dokładnością do określonej przez użytkownika zawsze jest zaokrąglana w czterech miejsc: () w przypadku przydziału, (b) Jeśli rzutowanie typu jest wykonywane, (c) po wartość zmiennoprzecinkowa jest przekazywany jako argument do funkcji oraz (d) kiedy wartość zmiennoprzecinkowa jest zwracana z Funkcja. Ponieważ pośrednich obliczeń są zawsze wykonywane na dokładność rejestru, dokładność wyników pośrednich jest zależna platformy (chociaż dokładności zawsze będzie co najmniej tak dokładny jak użytkownik określony dokładności).
 
-Należy wziąć pod uwagę wyrażenia przypisania w poniższym kodzie. Wyrażenie po prawej stronie przypisania operatora "=" zostanie obliczony na dokładność rejestru i jawnie zaokrąglona na typ po lewej stronie przypisania.
+Należy wziąć pod uwagę wyrażenia przypisania w poniższym kodzie. Wyrażenie po prawej stronie przypisania operatora "=" zostanie obliczona o dokładności rejestru i jawnie zaokrąglone do typu po lewej stronie przypisania.
 
 ```cpp
 float a, b, c, d;
@@ -237,7 +236,7 @@ register tmp3 = tmp1+tmp2;
 x = (double) tmp3;
 ```
 
-Aby jawnie zaokrąglona wynik pośredni, należy wprowadzić typecast. Na przykład, jeśli poprzedni kod jest modyfikowany przez dodanie jawne rzutowanie typu, pośrednie wyrażenia (c * d) zostanie zaokrąglony typ typecast.
+Aby jawnie zaokrąglić wyniki pośrednie, należy wprowadzić typecast. Na przykład, jeśli poprzedni kod jest modyfikowany przez dodanie jawne rzutowanie typu, pośrednie wyrażenia (c * d) zostanie zaokrąglona do rodzaju typecast.
 
 ```cpp
 float a, b, c, d;
@@ -258,7 +257,7 @@ register tmp3 = tmp1+tmp2;
 x = (double) tmp3;
 ```
 
-Jeden wpływ tej metody zaokrąglania jest niektórych transformacji pozornie równoważne nie faktycznie identyczne semantyki. Na przykład następujące przekształcania dzieli wyrażenia jednej do dwóch wyrażeń przypisania.
+Jeden domniemanie tej metody zaokrąglania jest, że niektóre pozornie równoważne przekształcenia faktycznie nie mają identyczne semantyki. Na przykład następujące przekształcania dzieli wyrażenie jednej do dwóch wyrażeń przypisania.
 
 ```cpp
 float a, b, c, d;
@@ -287,9 +286,9 @@ NIE jest odpowiednikiem
 a = b*(a=c+d);
 ```
 
-Te kodowania nie ma semantykę równoważne, ponieważ każdy drugi kodowania wprowadziły operatora przypisania dodatkowe, a tym samym dodatkowe zaokrąglania punktu.
+Tych kodowaniach ma semantykę równoważne, ponieważ każdy drugi kodowania wprowadziły operatora przypisania dodatkowe, a więc dodatkowe zaokrąglania punktu.
 
-Gdy funkcja zwraca wartość zmiennoprzecinkową, wartość zostanie zaokrąglony typu funkcji. Jeśli wartość zmiennoprzecinkowa jest przekazywany jako parametr do funkcji, wartość zostanie zaokrąglony typ parametru. Na przykład:
+Gdy funkcja zwraca wartość zmiennoprzecinkową, wartość zostanie zaokrąglona do typu funkcji. Gdy wartość zmiennoprzecinkowa jest przekazywany jako parametr do funkcji, wartość zostanie zaokrąglona do typu parametru. Na przykład:
 
 ```cpp
 float sumsqr(float a, float b)
@@ -331,27 +330,27 @@ float tmp3 = tmp2;
 c = symsqr( tmp3, z);
 ```
 
-### <a name="architecture-specific-rounding-under-fpprecise"></a>Zaokrąglanie architektury w obszarze fp: precise
+### <a name="architecture-specific-rounding-under-fpprecise"></a>Zaokrąglanie architektury, w obszarze fp: precise
 
-|Procesor|Zaokrąglanie dokładności dla pośredniego wyrażeń|
+|Procesor|Zaokrąglanie dokładności dla wyrażeń pośrednich|
 |-|-|
-|x86|Pośredni wyrażenia są obliczane w domyślnej 53-bitowa precyzja z rozszerzonego zakresu zapewnionego przez wykładnik 16-bitowych. Gdy te wartości 53:16 są "rozrzucone" do pamięci (co może się zdarzyć podczas wywołania funkcji), rozszerzone wykładnika zakres będzie zawężony do 11 bitów. Oznacza to rozlanej wartości są rzutowane na format standardowe podwójnej precyzji z wykładnik 11-bitowych.<br/>Użytkownik może przełączyć się do rozszerzona dokładność 64-bitowych zaokrąglania pośredniego, zmieniając przy użyciu programu word zmiennoprzecinkowe kontroli `_controlfp` i włączając dostęp do środowiska FPU (zobacz [fenv_access pragma](#the-fenv-access-pragma)). Jednak gdy rozszerzona dokładność wartości rejestru są rozrzucone pamięci, wyniki pośrednie zostanie nadal zaokrąglony podwójnej precyzji.<br/>Jest to określonego semantycznego może ulec zmianie.|
-|amd64|FP na amd64 semantyka nieznacznie różnić się od innych platform. Ze względu na wydajność pośrednia operacje są obliczane w najszerszym dokładność którykolwiek argument operacji zamiast na dokładność najszerszych dostępne.  Wymuszenie obliczenia ma zostać obliczony przy użyciu większą dokładność niż argumenty, użytkownicy muszą wprowadzić operacji rzutowania na co najmniej jeden argument wyrażenia podrzędnego.<br/>Jest to określonego semantycznego może ulec zmianie.|
+|x86|Wyrażeń pośrednich są obliczane na 53-bitową precyzję domyślne z zakresem rozszerzonej dostarczone przez wykładnik 16-bitowych. Gdy te wartości 53:16 są "rozlane" do pamięci (co może się zdarzyć podczas wywołania funkcji), rozszerzonych wykładnika zakres będzie zawężony do 11 bitów. Oznacza to rozlanej wartości są rzutowane do formatu standardowego podwójnej precyzji z wykładnik 11-bitowych.<br/>Użytkownik może przełączyć się do rozszerzonego precyzji 64-bitowych zaokrąglania pośredniego, zmieniając przy użyciu słowo sterujące zmiennoprzecinkowe `_controlfp` i włączając dostęp do środowiska FPU (zobacz [fenv_access pragma](#the-fenv-access-pragma)). Jednak gdy register wartości rozszerzone dokładności są rozrzucone pamięci, wyniki pośrednie zostanie nadal zaokrąglony podwójnej precyzji.<br/>Tej konkretnej semantycznego może ulec zmianie.|
+|amd64|Semantyki FP na amd64 różnią się nieco na innych platformach. Ze względu na wydajność operacji pośrednie są obliczane najszerszego dokładność jeden z operandów, a nie na dokładność najszerszego dostępne.  Wymuszenie obliczenia, które ma zostać obliczony, za pomocą dokładności szerszy niż operandów, użytkownicy muszą wprowadzić operacji rzutowania na co najmniej jeden argument w wyrażeniu podrzędnych.<br/>Tej konkretnej semantycznego może ulec zmianie.|
 
-### <a name="algebraic-transformations-under-fpprecise"></a>Algebraicznych przekształcenia w obszarze fp: precise
+### <a name="algebraic-transformations-under-fpprecise"></a>Przekształcenia algebraiczne w obszarze fp: precise
 
-Gdy fp: trybie ścisłym jest włączone, kompilator nigdy nie będzie wykonywać transformacje algebraicznych *o ile wynik końcowy jest zgodność identyczne*. Wiele znanych reguł algebraicznych arytmetyczne liczba rzeczywista nie zawsze mają dla liczb zmiennoprzecinkowych arytmetyczne. Na przykład poniższe wyrażenia są równoważne dla Reals, ale niekoniecznie w przypadku elementów przestawnych.
+Podczas fp: precise tryb jest włączone, kompilator nigdy nie będzie wykonywać przekształcenia algebraiczne *chyba że ostateczny wynik jest identyczne zgodność*. Wiele dobrze znanych algebraicznych reguły arytmetyczne liczba rzeczywista nie zawsze mają dla arytmetyki zmiennoprzecinkowej. Na przykład, poniższe wyrażenia są równoważne Reals, ale niekoniecznie wartości zmiennoprzecinkowe.
 
 |Formularz|Opis|
 |-|-|
-|`(a+b)+c = a+(b+c)`|Reguła asocjacyjnej do dodania|
-|`(a*b)*c = a*(b*c)`|Reguła asocjacyjnej mnożenia|
-|`a*(b+c) = a*b + b*c`|Dystrybucji mnożenia przez dodanie|
-|`(a+b)(a-b) = a*a-b*b`|Algebraicznych Factoring|
+|`(a+b)+c = a+(b+c)`|Reguła asocjacyjnych do dodania|
+|`(a*b)*c = a*(b*c)`|Reguła asocjacyjnych mnożenia|
+|`a*(b+c) = a*b + b*c`|Rozkład mnożenia przez dodanie|
+|`(a+b)(a-b) = a*a-b*b`|Wyprowadzenie algebraicznych|
 |`a/b = a*(1/b)`|Dzielenie przez odwrotność multiplicative|
 |`a*1.0 = a`|Tożsamość mnożenia|
 
-Jak pokazano w przykładzie wprowadzenie przy użyciu funkcji `KahanSum`, kompilator może zechcieć wykonywania różnych przekształceń algebraicznych powodować programy znacznie krócej. Chociaż optymalizacje zależy od takich przekształceń algebraicznych prawie zawsze są niepoprawne, istnieją sytuacji, w których są doskonale bezpieczne. Na przykład czasami jest pożądane, aby zastąpić dzielenie przez *stałej* wartości z mnożenia przez mnożenia odwrotność stałej:
+Jak pokazano w przykładzie wprowadzenie za pomocą funkcji `KahanSum`, kompilator może mieć ochotę wykonać różne przekształcenia algebraiczne w celu wygenerowania programy znacznie szybsze. Mimo że zależy od takich przekształcenia algebraiczne optymalizacje prawie zawsze są niepoprawne, istnieją sytuacje, w których są całkowicie bezpieczne. Na przykład czasami jest pożądane, aby zastąpić dzielenie przez *stałej* mnożenia przez wartość mnożenia odwrotność stała wartość:
 
 ```cpp
 const double four = 4.0;
@@ -361,7 +360,7 @@ double a, b;
 a = b/four;
 ```
 
-Może być konwertowana
+Może być przekształcone na
 
 ```cpp
 const double four = 4.0;
@@ -371,19 +370,19 @@ double a, b;
 a = b*tmp0;
 ```
 
-Jest to transformację bezpieczne, ponieważ Optymalizator można określić w czasie kompilacji x / 4.0 == x*(1/4.0) dla wszystkich zmiennoprzecinkowych wartości x, w tym infinities i NaN. Zastępując operacji dzielenia mnożenia, kompilator może zapisać kilka cykli — szczególnie w przypadku FPUs bezpośrednio nie implementują dzielenia, które wymagają kompilatorowi Generowanie kombinację zbliżenia odwrotność i dodać mnożenia instrukcje. Kompilator może wykonywać optymalizacji, w obszarze fp: dokładne tylko wtedy, gdy mnożenia zastępczy tworzy dokładnie takie same powoduje jako podziału. Kompilator może także przeprowadzić trivial przekształcenia w obszarze fp: precise, zakładając, że wyniki są identyczne. Należą do nich następujące elementy:
+Jest to bezpieczne transformacji, ponieważ Optymalizator można określić w czasie kompilacji x / 4.0 == x*(1/4.0) wszystkich zmiennoprzecinkowe wartości x, łącznie z nieskończoności i NaN. Zastępując operacji dzielenia mnożenia, kompilator może zapisać kilka cykli — zwłaszcza w przypadku FPUs, bezpośrednio nie implementują dzielenia, które wymagają kompilatora do generowania kombinacji zbliżenia odwracanie i mnożenie Dodawanie instrukcje. Kompilator może wykonywać takiej optymalizacji, w obszarze fp: precise tylko wtedy, gdy mnożenia zastąpienie tworzy dokładnie takie same powoduje, jako podziału. Kompilator może również wykonywać proste transformacje w ramach fp: precise, pod warunkiem że wyniki są identyczne. Należą do nich następujące elementy:
 
 |Formularz|Opis
 |-|-|
-|`(a+b) == (b+a)`|Reguła przemienne do dodania|
-|`(a*b) == (b*a)`|Reguła przemienne mnożenia|
+|`(a+b) == (b+a)`|Przemienne reguły do dodania|
+|`(a*b) == (b*a)`|Przemienne reguły dla mnożenia|
 |`1.0*x*y == x*1.0*y == x*y*1.0 == x*y`|Mnożenie przez 1.0|
 |`x/1.0*y == x*y/1.0 == x*y`|Dzielenie przez 1.0|
-|`2.0*x == x+x`|Mnożenie przez 2.0|
+|`2.0*x == x+x`|Mnożenie przez w wersji 2.0|
 
 ### <a name="contractions-under-fpprecise"></a>Skrótów w obszarze fp: precise
 
-Kluczową funkcją architektury wiele nowoczesnych jednostki zmiennoprzecinkowe jest możliwość wykonywania mnożenia, następuje dodanie jako jedna operacja z pośredniego błąd zaokrąglania. Na przykład firmy Intel Itanium architektura zawiera instrukcje dotyczące każdej z tych trójargumentowy operacji łączenia (*b + c), (* b-c) i (c-a * b), w jednej instrukcji zmiennoprzecinkowych (fma, fms i fnma odpowiednio). Te instrukcje o pojedynczej są szybciej niż wykonywania oddzielnych mnożenia i dodać instrukcje i są bardziej dokładne, ponieważ nie istnieje, bez pośredniego zaokrąglania produktu. Tego rodzaju optymalizacji można znacznie przyspieszyć funkcje zawierające kilka przeplatana mnożenie i Dodaj operacji. Rozważmy na przykład następujący algorytm Oblicza iloczyn dwóch wektorów n wymiarowej kropki.
+Kluczową cechą architektury wiele nowoczesnych jednostek zmiennoprzecinkowych jest możliwość wykonywania mnożenia, następuje dodatku jako pojedyncza operacja błędem nie pośredni zaokrąglania. Na przykład firmy Intel Itanium architektura zawiera instrukcje dotyczące łączenia każdego z tych operacji trójargumentowy (*b + c), (* b c) i (c-a * b), w pojedynczej instrukcji zmiennoprzecinkowych (fma, fms i fnma odpowiednio). Te instrukcje o pojedynczej są szybsze niż wykonywania oddzielnych Pomnóż i Dodaj instrukcje i są bardziej precyzyjne, ponieważ nie ma pośrednich zaokrąglenie nie produktu. Tego rodzaju optymalizacji, można znacznie przyspieszyć funkcje zawierające kilka z przeplotem wielokrotnie i dodać operacje. Na przykład należy wziąć pod uwagę następujące algorytmu, który oblicza skalarnego dwa wektory n wymiarowy.
 
 ```cpp
 float dotProduct( float x[], float y[], int n )
@@ -395,9 +394,9 @@ float dotProduct( float x[], float y[], int n )
 }
 ```
 
-Te obliczenia można wykonać szereg mnożenia — Dodawanie instrukcji w postaci p = p + x [i] * y [i].
+To obliczenie, które mogą być wykonywane szereg instrukcji formularza p mnożenie dodawanie = p + x [i] * y [i].
 
-Optymalizacja zmniejszenia można sterować niezależnie przy użyciu `fp_contract` pragma kompilatora. Domyślnie fp: dokładne model pozwala na skrótów, ponieważ ich poprawić dokładność i szybkości. W obszarze fp: precise, kompilator będzie nigdy nie kontraktu wyrażenia z jawnym zaokrąglania.
+Optymalizacja zmniejszenia mogą być kontrolowane niezależnie przy użyciu `fp_contract` dyrektywy kompilatora. Domyślnie fp: precise modelu pozwala na skrótów, ponieważ zwiększają szybkość i dokładność. W obszarze fp: precise, kompilator nigdy nie skontaktuję się z zaokrąglaniem jawne wyrażenie.
 Przykłady
 
 ```cpp
@@ -414,9 +413,9 @@ t = a*b;             // (this assignment rounds a*b to float)
 d = t + c;           // won't be contracted because of rounding of a*b
 ```
 
-### <a name="order-of-floating-point-expression-evaluation-under-fpprecise"></a>Kolejność obliczania wyrażenia liczb zmiennoprzecinkowych w obszarze fp: precise
+### <a name="order-of-floating-point-expression-evaluation-under-fpprecise"></a>Kolejność obliczania wyrażenie typu zmiennoprzecinkowego, w obszarze fp: precise
 
-Funkcje optymalizacji, które zachowują kolejność obliczania wyrażenia zmiennoprzecinkowe zawsze są bezpieczne i w związku z tym są dozwolone w obszarze fp: trybie ścisłym. Należy wziąć pod uwagę następujące funkcję, która oblicza iloczyn dwóch wektorów n wymiarową w pojedynczej precyzji. Pierwszy blok kodu poniżej początkowe funkcje jak mogą być kodowane przez programistę, następuje taką samą funkcję po częściowej optymalizacji rozkręcające pętli.
+Optymalizacje, które zachowują kolejność obliczania wyrażeń zmiennoprzecinkowe są zawsze bezpieczne i w związku z tym są dozwolone w ramach fp: precise trybu. Rozważ następującą funkcję, która oblicza iloczyn dwóch wektorów n wymiarowy w pojedynczej precyzji. Pierwszy blok kodu poniższym funkcja pierwotna jako mogą być kodowane przez programistę następuje taką samą funkcję po częściowej optymalizacji odwijania pętli.
 
 ```cpp
 //original function
@@ -451,9 +450,9 @@ float dotProduct( float x[], float y[], int n )
 }
 ```
 
-Główną zaletą ten rodzaj optymalizacji jest zmniejsza liczbę warunkowego rozgałęzianie pętli, o ile 75%. Ponadto przez odpowiednie zwiększenie liczby operacji w treści pętli, kompilator może już więcej możliwości w celu dalszej optymalizacji. Na przykład niektóre FPUs może istnieć możliwość wykonania Dodaj wielokrotnie w p += x [i] * y [i] podczas pobierania jednocześnie wartości x [i + 1] i y [i + 1] do użycia w następnym kroku. Ten rodzaj optymalizacji jest idealnie bezpieczne dla obliczenia liczb zmiennoprzecinkowych, ponieważ zachowuje on kolejność operacji.
+Główną Korzyścią płynącą z tego rodzaju optymalizacji jest zmniejsza liczbę warunkowego rozgałęzianie pętli, o ile 75%. Ponadto, zwiększając liczbę operacji w treści pętli, kompilator może już więcej możliwości w celu dalszej optymalizacji. Na przykład niektóre FPUs może można wykonać mnożenie dodawanie w p += x [i] * y [i] podczas pobierania równocześnie wartości x [i + 1] i y [i + 1] do użycia w następnym kroku. Tego rodzaju optymalizacji jest idealnie bezpieczne dla obliczeń zmiennoprzecinkowych, ponieważ jego zachowuje kolejność operacji.
 
-Często jest korzystne kompilatora zmienić kolejność wszystkie operacje w celu uzyskania szybszego kodu. Rozważmy następujący kod:
+Często korzystne jest dla kompilatora zmienić kolejność całej operacji, aby można było utworzyć kod szybciej. Rozważmy poniższy kod:
 
 ```cpp
 double a, b, c, d;
@@ -466,7 +465,7 @@ y = a*a + b*b + c*c;
 z = a + b + c;
 ```
 
-Reguły semantycznego C++ wskazują program powinna dawać wyników tak, jakby najpierw obliczana x, a następnie y i finally. Załóżmy, że kompilator ma tylko cztery dostępne rejestrów zmiennoprzecinkowych. Kompilator jest wymuszenie obliczeniowe x, y i w kolejności, można wygenerować kod w następujących semantyki:
+Reguły semantyki C++ wskazują, że program powinno to dawać wyniki tak, jakby najpierw obliczane x, a następnie y i na końcu. Załóżmy, że kompilator zawiera tylko cztery dostępne rejestrów zmiennoprzecinkowych. Jeśli kompilator jest zmuszony do obliczenia x, y i z kolei, warto generowanie kodu za pomocą się następującą semantyką:
 
 ```cpp
 double a, b, c, d;
@@ -507,7 +506,7 @@ r0 = r0 + r3;
 z = r0;         // z = r1+r2+r3
 ```
 
-Istnieje kilka operacji wyraźnie nadmiarowe jest ten typ kodowania. Jeśli kompilator ściśle semantycznego reguł C++, ta kolejność jest konieczne, ponieważ program mogą uzyskiwać dostęp do środowiska FPU między każdym przypisania. Jednak domyślne ustawienia fp: dokładne Zezwalaj kompilator, aby zoptymalizować tak, jakby program nie uzyskiwać dostęp do środowiska, dzięki któremu można zmienić kolejność tych wyrażeń. Następnie jest bezpłatna do usunięcia zwolnienia przez obliczenie trzy wartości w odwrotnej kolejności, w następujący sposób:
+Istnieje kilka operacji nadmiarowych wyraźnie jest to kodowanie. Jeśli kompilator ściśle regułom C++ semantyczne, ta kolejność jest konieczne, ponieważ program mogą uzyskiwać dostęp do środowiska FPU wewnętrzne każdego przypisania. Jednak ustawienia domyślne dla fp: precise umożliwia kompilatorowi optymalizację tak, jakby program nie dostęp do środowiska, dzięki któremu kolejności tych wyrażeń. Następnie jest usunąć zwolnienia przez obliczenie wartości w odwrotnej kolejności, w następujący sposób:
 
 ```cpp
 double a, b, c, d;
@@ -542,9 +541,9 @@ r0 = r0+r3;
 x = r0;
 ```
 
-Kodowanie jest wyraźnie wyższego poziomu, mając zredukowanie liczby fp instrukcje o niemal 40%. Wyniki dla x, y i są takie same jak poprzednio, ale obliczonym przy mniejsze koszty.
+To kodowanie jest wyraźnie przełożonego, posiadające zmniejszona liczbę instrukcji fp prawie 40%. Wyniki dla x, y i z są takie same, tak jak poprzednio, ale obliczone mniejsze obciążenie.
 
-W obszarze fp: precise, kompilator może również *przeplotu* wspólnych wyrażeń podrzędnych aż do uzyskania szybszego kodu. Na przykład kod do obliczenia korzenie równości kwadratowe mogą być zapisane w następujący sposób:
+W obszarze fp: precise, kompilator może również *przeplotu* typowych wyrażeń podrzędnych w taki sposób, aby utworzyć kod szybciej. Na przykład kod, aby obliczyć pierwiastki w równaniu kwadratowym mogą być zapisane w następujący sposób:
 
 ```cpp
 double a, b, c, root0, root1;
@@ -553,7 +552,7 @@ root0 = (-b + sqrt(b*b-4*a*c))/(2*a);
 root1 = (-b - sqrt(b*b-4*a*c))/(2*a);
 ```
 
-Mimo że wyrażenia te różnią się tylko za pomocą jednej operacji, programista może zostały zapisane go ten sposób, aby zagwarantować, że każda wartość głównego będzie obliczana w najwyższym dokładność praktyczne. W obszarze fp: precise, kompilator będzie mógł przeplotu obliczenia root0 i root1, aby usunąć wspólnych wyrażeń podrzędnych bez utraty dokładności. Na przykład następujące zostały usunięte kilka kroków nadmiarowe podczas produkowania dokładnie tego samego odpowiedzi.
+Mimo że te wyrażenia różnią się tylko jednej operacji, programistę może być napisane tak go ten sposób, aby zagwarantować, że każda wartość głównego zostanie obliczona w najwyższym dokładności praktyczne. W obszarze fp: precise, kompilator jest bezpłatna dla przeplotu obliczania root0 i root1, aby usunąć wspólnych podrzędną wyrażeniach bez utraty dokładności. Na przykład następujące usunięto kilka kroków nadmiarowe przy jednoczesnym dokładnie tej samej odpowiedzi.
 
 ```cpp
 double a, b, c, root0, root1;
@@ -565,7 +564,7 @@ root0 = (tmp0+tmp1)/tmp2;
 root1 = (tmp0-tmp1)/tmp2;
 ```
 
-Inne optymalizacje mogą próbować przenieść oceny niektórych niezależnych wyrażeń. Należy wziąć pod uwagę następujące algorytmu, który zawiera gałąź warunkowa w treści pętli.
+Inne optymalizacje mogą próbować przenieść obliczanie niektórych niezależnych wyrażeń. Należy wziąć pod uwagę następującego algorytmu, który zawiera gałąź warunkowa w ciele pętli.
 
 ```cpp
 vector<double> a(n);
@@ -580,7 +579,7 @@ for (int i=0; i<n; i++)
 }
 ```
 
-Kompilator może wykryć, że wartość wyrażenia (abs(d) > 1) jest niezmienne w treści pętli. Dzięki temu kompilator "Wózek nośny" if — instrukcja poza ciałem pętli, przekształcania powyższy kod w następujących czynności:
+Kompilator może wykryć, że wartość wyrażenia (abs(d) > 1) jest niezmienny w treści pętli. Dzięki temu kompilator "przenieść" if instrukcji poza ciałem pętli, przekształcania powyższy kod w następujących czynności:
 
 ```cpp
 vector<double> a(n);
@@ -594,17 +593,17 @@ else
       s = s+a[i]*d;
 ```
 
-Po przekształceniu nie ma gałąź warunkowa w jednym z treści pętli, co znacznie poprawia ogólną wydajność pętli. Ten rodzaj optymalizacji jest idealnie bezpieczne ponieważ obliczania wyrażenia (abs(d) > 1.0) jest niezależna od innych wyrażeń.
+Po przekształceniu nie ma już gałąź warunkowa w jednym z treści pętli, co znacznie poprawia ogólną wydajność pętli. Ten rodzaj optymalizacji jest idealnie bezpieczne ponieważ obliczania wyrażenia (abs(d) > 1.0) jest niezależna od innych wyrażeń.
 
-Obecności dostęp do środowiska FPU lub wyjątki zmiennoprzecinkowe są contraindicated tego rodzaju optymalizacji, ponieważ one semantycznego przepływ zmian. Takie optymalizacje tylko są dostępne w obszarze fp: trybie ścisłym ponieważ dostęp do środowiska FPU i semantyki zmiennoprzecinkowych wyjątków są domyślnie wyłączone. Funkcje, które uzyskują dostęp do środowiska FPU jawnie można wyłączyć za pomocą takich optymalizacje `fenv_access` pragma kompilatora. Podobnie, należy użyć funkcji przy użyciu wyjątki zmiennoprzecinkowe `float_control(except ... )` pragma kompilatora (lub użyj **/FP: except** przełącznik wiersza polecenia).
+Obecności dostęp do środowiska FPU lub wyjątki zmiennoprzecinkowe są contraindicated tego rodzaju optymalizacji, ponieważ umożliwiają one zmianę semantycznego przepływu. Optymalizacje takie są dostępne tylko w obszarze fp: precise tryb ponieważ dostęp do środowiska FPU i semantyka wyjątków zmiennopozycyjnych są domyślnie wyłączone. Funkcje, które dostęp do środowiska FPU jawnie wyłączyć za pomocą takich optymalizacje `fenv_access` dyrektywy kompilatora. Podobnie, należy użyć funkcji przy użyciu wyjątki zmiennoprzecinkowe `float_control(except ... )` dyrektywy kompilatora (lub użyj **/FP: except** przełącznik wiersza polecenia).
 
-Podsumowując, fp: tryb dokładne umożliwia kompilatora, aby zmienić kolejność obliczania wyrażeń zmiennoprzecinkowych, pod warunkiem, że wyniki końcowe nie zostały zmienione oraz że wyniki nie są zależne od środowiska FPU lub na wyjątki zmiennoprzecinkowe.
+Podsumowując, fp: precise tryb umożliwia kompilator, aby zmienić kolejność obliczania wyrażeń liczb zmiennopozycyjnych, pod warunkiem, że wyniki końcowe nie zostały zmienione i czy wyniki nie są zależne od środowiska FPU lub na wyjątki zmiennoprzecinkowe.
 
 ### <a name="fpu-environment-access-under-fpprecise"></a>Dostęp do środowiska FPU w obszarze fp: precise
 
-Gdy fp: włączony jest tryb dokładne, kompilator przyjęto założenie, że program nie dostępu lub wpływu na środowisko FPU. Jak wspomniano wcześniej, to założenie włącza kompilator, aby zmienić kolejność lub przenieść operacji zmiennoprzecinkowych aby poprawić wydajność w obszarze fp: precise.
+Gdy fp: precise tryb jest włączone, kompilator zakłada, program nie dostępu lub zmiany środowiska FPU. Jak wspomniano wcześniej, to założenie umożliwia kompilatorowi zmiana kolejności lub Przenieś operacji zmiennoprzecinkowych w celu poprawy wydajności w ramach fp: precise.
 
-Niektóre programy mogą zmienić zmiennoprzecinkowe zaokrąglania kierunek przy użyciu `_controlfp` funkcji. Na przykład niektóre programy obliczeniowe górnej i niższych granic błąd dla operacji arytmetycznych przez wykonanie tej samej obliczenia dwa razy, najpierw podczas zaokrąglania do nieskończoności ujemnej, następnie podczas zaokrąglania do nieskończoności dodatniej. Ponieważ FPU oferują wygodny sposób do sterowania zaokrąglaniem, programisty może zdecydować się na zmianę trybu zaokrąglania przez zmianę środowiska FPU. Poniższy kod oblicza dokładny błąd granica zmiennoprzecinkowe mnożenia przez zmianę środowiska FPU.
+Niektóre programy mogą zmienić zmiennoprzecinkowych zaokrąglaniem kierunku rozmieszczania zawartości śródwierszowej przy użyciu `_controlfp` funkcji. Na przykład niektóre programy obliczeń w prawym górnym i dolnym błąd górnych granic operacje arytmetyczne, wykonując ten sam obliczeń dwa razy, najpierw podczas zaokrąglaniem kierunku minus nieskończoność, następnie podczas zaokrąglania do nieskończoności dodatniej. Ponieważ FPU zapewnia wygodny sposób kontrolowania zaokrąglania, programista może zdecydować się na zmianę trybu zaokrąglania przez zmianę środowiska FPU. Poniższy kod oblicza dokładny błąd powiązany zmiennoprzecinkowych mnożenia przez zmianę środowiska FPU.
 
 ```cpp
 double a, b, cLower, cUpper;
@@ -616,9 +615,9 @@ cUpper = a*b;
 _controlfp( _RC_NEAR, _MCW_RC );    // restore rounding mode
 ```
 
-W obszarze fp: precise, kompilator zawsze przyjęto założenie, domyślnym środowisku FPU tak Optymalizator jest bezpłatna zignorowanie wywołań `_controlfp` i zmniejszyć powyżej przypisania do cUpper = cLower = * b; wyraźnie mogłoby to spowodować zwrócenie niepoprawnych wyników. Aby zapobiec takiej optymalizacji, należy włączyć FPU dostęp do środowiska za pomocą `fenv_access` pragma kompilatora.
+W obszarze fp: precise, kompilator zawsze zakłada środowiska FPU domyślnego, więc Optymalizator jest bezpłatna dla ignorować wywołania do `_controlfp` i zmniejszyć powyżej przypisania do cUpper = cLower = * b; wyraźnie mogłoby to spowodować zwrócenie niepoprawnych wyników. Aby uniknąć takich optymalizacje, należy włączyć dostęp do środowiska FPU za pomocą `fenv_access` dyrektywy kompilatora.
 
-Inne programy mogą próbować wykrywać niektórych zmiennoprzecinkowe błędów przez sprawdzenie słowa stanu FPU. Na przykład następujący kod sprawdza warunki dzielenie przez zero i niedokładnymi
+Inne programy mogą próbować wykrywania niektórych błędów zmiennoprzecinkowych, sprawdzając FPU wyrazy stanu. Na przykład poniższy kod sprawdza, czy warunki dzielenie przez zero i niedokładny
 
 ```cpp
 double a, b, c, r;
@@ -635,44 +634,44 @@ if (_statusfp() & _SW_INEXACT)
 etc...
 ```
 
-W obszarze fp: precise, funkcje optymalizacji, które zmienić kolejność obliczania wyrażenia może zmienić punktów, w których występują pewne błędy. Programy podczas uzyskiwania dostępu do programu word stanu, należy włączyć dostęp do środowiska FPU przy użyciu `fenv_access` pragma kompilatora.
+W obszarze fp: precise, optymalizacje, zmienić kolejność oceny wyrażenia, które mogą ulec zmianie punkty, w których występują pewne błędy. Uzyskiwanie dostępu do słowa stanu programów, należy włączyć dostęp do środowiska FPU przy użyciu `fenv_access` dyrektywy kompilatora.
 
 Aby uzyskać więcej informacji, zobacz sekcję [fenv_access pragma](#the-fenv-access-pragma).
 
-### <a name="floating-point-exception-semantics-under-fpprecise"></a>Semantyka zmiennoprzecinkowych wyjątków w obszarze fp: precise
+### <a name="floating-point-exception-semantics-under-fpprecise"></a>Semantyka wyjątków dotyczących liczb zmiennoprzecinkowych pod fp: precise
 
-Domyślnie semantyki zmiennoprzecinkowych wyjątków są wyłączone w obszarze fp: precise. Większość programistów C++ wolą obsługę wyjątkowych warunków zmiennoprzecinkowe bez korzystania z systemu i wyjątków języka C++. Ponadto jak podano wcześniej, wyłączenie semantyki zmiennoprzecinkowych wyjątków umożliwia kompilatora większą elastyczność podczas optymalizacji operacji zmiennoprzecinkowych. Użyj jednej **/FP: z wyjątkiem** przełącznika lub `float_control` pragma, aby włączyć semantyki zmiennoprzecinkowych wyjątków za pomocą fp: dokładne modelu.
+Domyślnie semantykę wyjątku zmiennoprzecinkowego są wyłączone w obszarze fp: precise. Większość programistów C++ łatwiej obsługiwać wyjątkowych warunkach zmiennoprzecinkowych bez korzystania z systemu i wyjątki języka C++. Ponadto jak wspomniano wcześniej, wyłączenie semantykę wyjątku zmiennoprzecinkowego umożliwia kompilatora większą elastyczność podczas optymalizacji operacji zmiennopozycyjnych. Użyj jednej **/FP: z wyjątkiem** przełącznika lub `float_control` pragma umożliwienia semantyki wyjątków zmiennoprzecinkowych, korzystając z fp: precise modelu.
 
-Aby uzyskać więcej informacji, zobacz sekcję [włączenie semantyki zmiennoprzecinkowych wyjątków](#enabling-floating-point-exception-semantics).
+Aby uzyskać więcej informacji, zobacz sekcję [Włączanie semantykę wyjątku zmiennoprzecinkowego](#enabling-floating-point-exception-semantics).
 
-## <a name="the-fpfast-mode-for-floating-point-semantics"></a>Tryb fp:fast semantykę zmiennoprzecinkową
+## <a name="the-fpfast-mode-for-floating-point-semantics"></a>Tryb FP: Fast semantykę zmiennoprzecinkową
 
-Jeśli włączony jest tryb fp:fast, kompilator zwalnia reguły tego fp: dokładne używa podczas optymalizacji operacji zmiennoprzecinkowych. Ten tryb jest umożliwia kompilatorowi jeszcze bardziej zoptymalizować zmiennoprzecinkowe kodu dla danej szybkości kosztem zmiennoprzecinkowe dokładność i poprawności. Programy, które nie należy polegać na bardzo dokładne obliczenia zmiennoprzecinkowe mogą wystąpić poprawy szybkości znaczących przez włączenie trybu fp:fast.
+Po włączeniu trybu FP: Fast, kompilator zwalnia reguły tego fp: precise używa podczas optymalizacji operacji zmiennopozycyjnych. Ten tryb jest umożliwia kompilatorowi do dalszej optymalizacji kodu zmiennoprzecinkowego dla danej szybkości, kosztem dokładności zmiennoprzecinkowe i poprawności. Programy, które nie zależą od bardzo dokładnych obliczeń zmiennoprzecinkowych może wystąpić do poprawy szybkości znaczące przez włączenie trybu FP: Fast.
 
-Tryb zmiennoprzecinkowe fp:fast jest włączone, za pomocą [Fast](fp-specify-floating-point-behavior.md) przełącznika kompilatora wiersza polecenia w następujący sposób:
+Tryb zmiennoprzecinkowych FP: Fast jest włączane przy użyciu [Fast](fp-specify-floating-point-behavior.md) przełącznika kompilatora wiersza polecenia w następujący sposób:
 
 > source.cpp Fast cl
 
-W tym przykładzie nakazuje kompilatorowi używanie semantyki fp:fast podczas generowania kodu dla pliku source.cpp. Fp:fast model również może być wywoływana na poszczególnych funkcji funkcji przy użyciu `float_control` pragma kompilatora.
+W tym przykładzie nakazuje kompilatorowi korzystają bezpośrednio z semantyki FP: Fast podczas generowania kodu dla pliku source.cpp. Można również wywołać model FP: Fast na temat korzystania z poszczególnych funkcji przez funkcję `float_control` dyrektywy kompilatora.
 
 Aby uzyskać więcej informacji, zobacz sekcję [float_control pragma](#the-float-control-pragma).
 
-W trybie fp:fast kompilator może wykonywać funkcje optymalizacji, które alter dokładność obliczeń zmiennoprzecinkowych. Kompilator nie może poprawnie zaokrąglona w przypisania, typecasts lub funkcji wywołania i pośredniego zaokrąglania zostanie nie zawsze można wykonać. Zmiennoprzecinkowe optymalizacje określonych, takich jak skrótów, są zawsze włączone. Semantyka zmiennoprzecinkowych wyjątków i FPU środowisko czułość są wyłączone i jest niedostępne.
+W trybie FP: Fast kompilator może dokonać optymalizacji, zmienić dokładność obliczeń zmiennoprzecinkowych. Kompilator może niepoprawnie zaokrąglać w przypisania, rzutowaniach typu lub wywołaniach funkcji i pośredniego zaokrąglania nie zawsze odbędzie się. Określone optymalizacji zmiennopozycyjnych, takich jak skrótów, są zawsze włączone. Semantyka wyjątków dotyczących liczb zmiennoprzecinkowych i ważność środowiska FPU są wyłączone i jest niedostępne.
 
-|Semantyka FP:Fast|Wyjaśnienie
+|Semantyka FP: Fast|Wyjaśnienie
 |-|-|
-|Zaokrąglanie semantyki|Jawne zaokrąglania w przypisania, typecasts i wywołania funkcji można zignorować.<br/>Pośredni wyrażenia może zostać zaokrąglona w mniej niż zarejestrować dokładność, zgodnie z wymaganiami wydajności.|
-|Algebraicznych przekształcenia|Kompilator może przekształcić wyrażenia zgodnie z liczbą rzeczywistą algebraiczną asocjacyjnej, podziału; przekształcenia te nie ma gwarancji być niedokładne lub prawidłowe.|
-|Skrótów|Zawsze włączone; Nie można wyłączyć przez wartość dyrektywy pragma `fp_contract`|
-|Kolejność obliczania liczb zmiennoprzecinkowych|Kompilator może zmienić kolejność obliczania wyrażeń zmiennoprzecinkowych, nawet wtedy, gdy takie zmiany mogą zmienić końcowego wyniku.|
+|Zaokrąglanie semantyki|Jawne Zaokrąglenie w przypisania, rzutowaniach typu i wywołania funkcji można zignorować.<br/>Wyrażeń pośrednich mogą być zaokrąglane w ciągu mniej niż zarejestrować dokładności zgodnie z wymaganiami dotyczącymi wydajności.|
+|Przekształcenia algebraiczne|Kompilator może przekształcić wyrażeń, zgodnie z liczbą rzeczywistą algebry asocjacyjnych, podziału; te przekształcenia nie musi być niedokładne lub prawidłowe.|
+|Skrótów|Zawsze włączone; Nie można wyłączyć przez dyrektywy pragma `fp_contract`|
+|Kolejność obliczania zmiennoprzecinkowych|Kompilator może zmienić kolejność obliczania wyrażeń liczb zmiennopozycyjnych, nawet wtedy, gdy takie zmiany mogą zmienić wyników końcowych.|
 |Dostęp do środowiska FPU|Wyłączone. Niedostępne|
 |Semantyka wyjątków dotyczących liczb zmiennoprzecinkowych|Wyłączone. Niedostępne|
 
-### <a name="rounding-semantics-for-floating-point-expressions-under-fpfast"></a>Semantyka wyrażeń liczb zmiennoprzecinkowych w obszarze fp:fast zaokrąglania
+### <a name="rounding-semantics-for-floating-point-expressions-under-fpfast"></a>Zaokrąglanie semantykę zmiennoprzecinkową wyrażeń w obszarze FP: Fast
 
-W odróżnieniu od fp: model dokładne, fp:fast model wykonuje obliczenia pośredniego najbardziej wygodne dokładności. Zaokrąglanie w przypisania, typecasts i wywołania funkcji może nie zawsze być przeprowadzane. Na przykład pierwszej funkcji poniżej przedstawiono trzy zmienne pojedynczej precyzji (`C`, `Y` i `T`). Kompilator może wybrać przebiegała tych zmiennych, w celu podwyższania poziomu typu `C`, `Y` i `T` do podwójnej precyzji.
+W odróżnieniu od fp: precyzyjnego modelu, model FP: Fast wykonuje obliczeń pośrednich najbardziej wygodne dokładności. Zaokrąglenie w przypisania, rzutowaniach typu i wywołania funkcji nie może być zawsze wykonywane. Na przykład pierwsza funkcja poniżej wprowadza trzy zmienne pojedynczej precyzji (`C`, `Y` i `T`). Kompilator może wybrać przebiegała tych zmiennych, obowiązuje podwyższania poziomu typu `C`, `Y` i `T` do podwójnej precyzji.
 
-Początkowe funkcje:
+Funkcja pierwotna:
 
 ```cpp
 float KahanSum( const float A[], int n )
@@ -689,7 +688,7 @@ float KahanSum( const float A[], int n )
 }
 ```
 
-Zmienne w zarejestrowany:
+Zmienne przechowywane w rejestrze procesora:
 
 ```cpp
 float KahanSum( const float A[], int n )
@@ -707,11 +706,11 @@ float KahanSum( const float A[], int n )
 }
 ```
 
-W tym przykładzie fp:fast ma subverted celem pierwotnej funkcji. Ostatni wynik w zmiennej zoptymalizowanych pod kątem `sum`, może być dość perturbed z prawidłowego wyniku.
+W tym przykładzie FP: Fast ma subverted celem funkcja pierwotna. Ostatni wynik przechowywany w zmiennej zoptymalizowane pod kątem `sum`, może być dość perturbed z odpowiedni wynik.
 
-W obszarze fp:fast kompilator zwykle będzie podejmować próby obsługi co najmniej dokładność określona przez kod źródłowy. Jednak w niektórych przypadkach kompilator może wybrać do wykonania pośredniego wyrażenia w *obniżyć dokładności* niż określona w kodzie źródłowym. Na przykład pierwszy blok kodu poniżej wywołuje wersji podwójnej precyzji funkcji pierwiastek kwadratowy. W obszarze fp:fast w pewnych okolicznościach, takie jak kiedy wynik i argumenty funkcji są jawnie rzutować pojedynczej precyzji, kompilator może nastąpić Zastąp wywołanie podwójnej precyzji `sqrt` wywołaniem o pojedynczej precyzji `sqrtf`funkcji. Ponieważ rzutowania Sprawdź, czy wartość, przechodząc do `sqrt` i wyjście wartości są zaokrąglane do pojedynczej precyzji, spowoduje to zmianę tylko miejsca zaokrąglania. Jeśli wartość do sqrt była wartość podwójnej precyzji i kompilator wykonać tego przekształcenia więcej niż połowy bitów dokładność może być nieprawidłowa.
+W obszarze FP: Fast kompilator zazwyczaj będzie podejmować próby obsługi co najmniej dokładność określona na podstawie kodu źródłowego. Jednak w niektórych przypadkach kompilator może wybrać do wykonania wyrażeń pośrednich w *zmniejszyć dokładność* niż określona w kodzie źródłowym. Na przykład pierwszy blok kodu poniższym wywołuje funkcję pierwiastek kwadratowy w wersji podwójnej precyzji. W obszarze FP: Fast w pewnych okolicznościach, np. Jeśli wynik i argumenty funkcji są jawnie zrzutować pojedynczej precyzji kompilator może wybrać Zastąp wywołanie podwójnej precyzji `sqrt` przy użyciu wywołania do pojedynczej precyzji `sqrtf`funkcji. Ponieważ rzutowania upewnij się, że wartość, przechodząc do `sqrt` i wartość wyjście są zaokrąglane do pojedynczej precyzji, spowoduje to zmianę tylko miejsca zaokrąglania. Jeśli wartość do sqrt była wartość podwójnej precyzji i kompilator wykonać takie przekształcenie dowolną liczbę połowę bitów precyzji może być nieprawidłowa.
 
-Oryginalny — funkcja
+Funkcja pierwotna
 
 ```cpp
 double sqrt(double);
@@ -737,9 +736,9 @@ float length = sqrtf(tmp1); // rounded sqrt result
 float sum = f1 + f2;
 ```
 
-Mimo że mniej dokładne, tego rodzaju optymalizacji mogą być szczególnie przydatne, gdy procesorów, które zapewniają pojedynczej precyzji, wersje wewnętrznej funkcji takich jak `sqrt`. Po prostu dokładnie po kompilator użyje tych optymalizacje jest zależna zarówno kontekst, jak i platformy.
+Mimo że mniej dokładne, tego rodzaju optymalizacji mogą być szczególnie korzystne w przypadku przeznaczone dla procesorów, które zapewniają pojedynczej precyzji na wewnętrzne wersje funkcji, takich jak `sqrt`. Po prostu dokładnie Kiedy kompilator będzie używał takich optymalizacje jest uzależniona platformy i kontekstu.
 
-Ponadto jest nie gwarantuje spójności Precision obliczeniach pośrednich, które mogą być wykonywane na dowolnym poziomie dokładności dostępne do kompilatora. Mimo że kompilator będzie próbował zachować co najmniej poziom dokładności określone przez kod, fp:fast umożliwia Optymalizator przypisanie elementu podrzędnego obliczenia pośredniego aby wygenerować kod maszynowy szybsze lub mniejszy. Na przykład kompilator może jeszcze bardziej zoptymalizować kod z powyższych zostać zaokrąglona niektóre pośredniego mnożenia do pojedynczej precyzji.
+Ponadto nie ma żadnych gwarancji spójności dokładność obliczeń pośrednich, które można wykonać na dowolnym poziomie dokładności, dostępne dla kompilatora. Mimo że kompilator będzie próbował zachować co najmniej poziom dokładności określony przez kod, FP: Fast umożliwia Optymalizator downcast pośrednich obliczeń w celu wygenerowania kodu maszynowego szybszy lub mniejsze. Na przykład kompilator może jeszcze bardziej zoptymalizować kodu z powyższych zaokrąglić część pośredniego mnożenia do pojedynczej precyzji.
 
 ```cpp
 float sqrtf(float)...
@@ -755,41 +754,41 @@ float length = sqrtf(tmp3);
 float sum = f1 + f2;
 ```
 
-Tego rodzaju zaokrąglania dodatkowe mogą wynikać z za pomocą dolnej dokładności liczb zmiennoprzecinkowych jednostki, takich jak SSE2, do wykonania niektórych pośrednich obliczeń. Dokładność zaokrąglania fp:fast w związku z tym jest zależne od platformy; Kod, który kompiluje się do jednego procesora zawsze mogą nie działać dla innego procesora. Zostanie pozostawiony do użytkownika w celu ustalenia, jeśli szybkość korzyści przeważają problemów dokładności.
+Tego rodzaju zaokrąglenie dodatkowe mogą wynikać z przy użyciu niższe dokładności jednostki zmiennoprzecinkowej, takich jak SSE2, do wykonywania niektórych obliczeń pośrednich. Dokładność zaokrąglania FP: Fast jest zatem platformy zależnych; Kod, który kompiluje dobrze sprawdza się w jednym procesorze mogą działać dobrze w przypadku innego procesora. Pozostawia się użytkownika w celu ustalenia, jeśli korzyści szybkość przewyższają wszelkie problemy dokładności.
 
-W przypadku szczególnie powodować problemy dla określonych funkcji optymalizacji fp:fast zmiennoprzecinkowe tryb można lokalnie przełączyć fp: precise przy użyciu `float_control` pragma kompilatora.
+Jeśli optymalizacji FP: Fast jest szczególnie problematyczny dla określonych funkcji, tryb zmiennoprzecinkowych może być lokalnie ich fp: precise przy użyciu `float_control` dyrektywy kompilatora.
 
 
-### <a name="algebraic-transformations-under-fpfast"></a>Algebraicznych przekształcenia w obszarze fp:fast
+### <a name="algebraic-transformations-under-fpfast"></a>Przekształcenia algebraiczne w obszarze FP: Fast
 
-Tryb fp:fast umożliwia kompilatora do wykonania niektórych, niebezpieczne algebraicznych przekształcenia na liczby zmiennoprzecinkowe punktu wyrażenia. Na przykład w obszarze fp:fast można zastosować następujące optymalizacje niebezpieczne.
+Tryb FP: Fast umożliwia kompilatorowi wykonanie pewnych, niebezpieczne przekształcenia algebraiczne do zmiennoprzecinkowych punktu wyrażeń. Na przykład można zastosować następujące optymalizacje niebezpiecznych w obszarze FP: Fast.
 
 ||||
 |-|-|-|
 |Oryginalny kod|Krok #1|Krok #2
 |`double a, b, c;`<br/>`double x, y, z;`<br/><br/>`y = (a + b);`<br/>`z = y – a – b;`<br/><br/>`c = x – z;`<br/><br/>`c = x * z;`<br/><br/>`c = x - z;`<br/><br/>`c = x + z;`<br/><br/>`c = z-x;`|`double a, b, c;`<br/>`double x, y, z;`<br/><br/>`y = (a + b);`<br/>`z = 0;`<br/><br/>`c = x – 0;`<br/><br/>`c = x * 0;`<br/><br/>`c = x - 0;`<br/><br/>`c = x + 0;`<br/><br/>`c = 0 - x;`|`double a, b, c;`<br/>`double x, y, z;`<br/><br/>`y = (a + b);`<br/>`z = 0;`<br/><br/>`c = x;`<br/><br/>`c = 0;`<br/><br/>`c = x;`<br/><br/>`c = x;`<br/><br/>`c = -x;`|
 
-W kroku 1, kompilator przestrzega, który `z = y – a – b` jest zawsze równa zero. Chociaż jest technicznie nieprawidłowy obserwacji, jest dozwolone na mocy fp:fast. Kompilator następnie propaguje stała wartość zero do każdego późniejsze użycie zmiennej z. W kroku 2, kompilator dodatkowo optymalizuje obserwując który `x - 0 == x`, `x * 0 == 0`itp. Ponownie nawet jeśli te uwagi nie są ściśle prawidłowe, zezwala na fp:fast. Kod zoptymalizowany teraz jest znacznie szybsze, ale mogą również być znacznie mniej dokładne lub nawet niepoprawne.
+W kroku 1, kompilator obserwuje, że `z = y – a – b` jest zawsze równa zero. Chociaż jest technicznie nieprawidłowy obserwacji, jest dozwolone na mocy FP: Fast. Kompilator następnie propaguje stałej wartości zero do każdego późniejsze użycie zmiennej z. W kroku 2, kompilator dodatkowo optymalizuje przez obserwację, `x - 0 == x`, `x * 0 == 0`itp. Ponownie nawet jeśli te uwagi nie jest prawidłowym ściśle, zezwala na FP: Fast. Zoptymalizowany kod jest teraz znacznie szybciej, ale może również znacznie mniej dokładne lub nawet niepoprawne.
 
-Żadnego z następujących reguł algebraicznych (unsafe) mogą zostać wykorzystane przez optymalizator, jeśli włączony jest tryb fp:fast:
+Dowolne z następujących reguł algebraicznych (niebezpieczne) mogą zostać wykorzystane przez optymalizator, po włączeniu trybu FP: Fast:
 
 |||
 |-|-|
 |Formularz|Opis|
-|`(a + b) + c = a + (b + c)`|Reguła asocjacyjnej do dodania|
-|`(a * b) * c = a * (b * c)`|Reguła asocjacyjnej mnożenia|
-|`a * (b + c) = a * b + b * c`|Dystrybucji mnożenia przez dodanie|
-|`(a + b)(a - b) = a * a - b * b`|Algebraicznych Factoring|
+|`(a + b) + c = a + (b + c)`|Reguła asocjacyjnych do dodania|
+|`(a * b) * c = a * (b * c)`|Reguła asocjacyjnych mnożenia|
+|`a * (b + c) = a * b + b * c`|Rozkład mnożenia przez dodanie|
+|`(a + b)(a - b) = a * a - b * b`|Wyprowadzenie algebraicznych|
 |`a / b = a * (1 / b)`|Dzielenie przez odwrotność multiplicative|
 |`a * 1.0 = a, a / 1.0 = a`|Tożsamość mnożenia|
 |`a ± 0.0 = a, 0.0 - a = -a`|Tożsamość dodatku|
 |`a / a = 1.0, a - a = 0.0`|Anulowanie|
 
-W przypadku szczególnie powodować problemy dla danej funkcji optymalizacji fp:fast zmiennoprzecinkowe tryb można lokalnie przełączyć fp: precise przy użyciu `float_control` pragma kompilatora.
+Jeśli optymalizacji FP: Fast jest szczególnie problematyczny dla określonej funkcji, tryb zmiennoprzecinkowych może być lokalnie ich fp: precise przy użyciu `float_control` dyrektywy kompilatora.
 
-### <a name="order-of-floating-point-expression-evaluation-under-fpfast"></a>Kolejność obliczania wyrażenia liczb zmiennoprzecinkowych w obszarze fp:fast
+### <a name="order-of-floating-point-expression-evaluation-under-fpfast"></a>Kolejność obliczania wyrażenie typu zmiennoprzecinkowego, w obszarze FP: Fast
 
-W odróżnieniu od fp: precise, fp:fast umożliwia kompilatora zmienić kolejność operacji zmiennoprzecinkowych aż do uzyskania szybszego kodu. W związku z tym niektóre optymalizacji pod fp:fast nie może zachować zamierzonej kolejności wyrażeń. Na przykład należy wziąć pod uwagę następujące funkcji, który oblicza iloczyn dwóch wektorów wymiarów n.
+W odróżnieniu od fp: precise, FP: Fast umożliwia kompilatorowi zmieniać kolejność operacji zmiennoprzecinkowych tak, aby utworzyć kod szybciej. W związku z tym niektóre optymalizacje w obszarze FP: Fast nie może zachować zalecanej kolejności wyrażeń. Na przykład rozważmy następującą funkcję, która oblicza iloczyn dwóch wektorów n wymiarowy.
 
 ```cpp
 float dotProduct( float x[], float y[],
@@ -802,7 +801,7 @@ float dotProduct( float x[], float y[],
 }
 ```
 
-W obszarze fp:fast, optymalizator może wykonywać skalarne zmniejszenie `dotProduct` funkcji skutecznie Przekształcanie funkcji w następujący sposób:
+W obszarze FP: Fast, optymalizator może wykonywać redukcja skalaru z `dotProduct` działać skutecznie Przekształcanie funkcji w następujący sposób:
 
 ```cpp
 float dotProduct( float x[], float y[],int n )
@@ -828,36 +827,36 @@ float dotProduct( float x[], float y[],int n )
 }
 ```
 
-W wersji zoptymalizowane funkcji czterech dostępnych oddzielny produkt jednocześnie zarejestrowane i następnie dodane do siebie. Tego rodzaju optymalizacji można przyspieszyć przy obliczaniu `dotProduct` na podstawie tak, jak współczynnik cztery w zależności od procesora docelowych, ale wynik końcowy mogą być niedokładne sposób utrudniający bezużyteczny. Jeśli takie optymalizacje są szczególnie powodować problemy dla jednej funkcji lub jednostce tłumaczenia, tryb zmiennoprzecinkowe można lokalnie przełączyć fp: precise przy użyciu `float_control` pragma kompilatora.
+Cztery oddzielne dostępnych produktów zoptymalizowane wersję funkcji są wykonywane równocześnie i następnie dodane do siebie. Tego rodzaju optymalizacji można przyspieszyć obliczania `dotProduct` przez tyle, ile współczynnik czterech zależności od tego, czy procesor docelowy, ale wynik końcowy może być tak niedokładne utrudniający bezużyteczny. Jeśli takie optymalizacje są szczególnie problematyczny dla jednej funkcji lub jednostce translacji, tryb zmiennoprzecinkowych może być lokalnie ich fp: precise przy użyciu `float_control` dyrektywy kompilatora.
 
 ## <a name="the-fpstrict-mode-for-floating-point-semantics"></a>Fp: strict tryb semantykę zmiennoprzecinkową
 
-Gdy fp: tryb z ograniczeniami jest włączone, kompilator opiera się na te same zasady tego fp: dokładne używa podczas optymalizacji operacji zmiennoprzecinkowych. Ten tryb również włącza semantyki zmiennoprzecinkowych wyjątków i liter w środowisku FPU i wyłącza niektórych optymalizacji, takich jak skrótów. Jest to najbardziej rygorystyczne tryb.
+Podczas fp: tryb z ograniczeniami jest włączone, kompilator działa zgodnie z tych samych reguł tego fp: precise używa podczas optymalizacji operacji zmiennopozycyjnych. W tym trybie również włącza semantykę wyjątku zmiennoprzecinkowego i czułości do środowiska FPU i wyłącza niektóre optymalizacje, takie jak skrótów. Jest to najbardziej rygorystyczne tryb działania.
 
-Fp: tryb z ograniczeniami zmiennoprzecinkowej jest włączone, za pomocą [/FP: strict](fp-specify-floating-point-behavior.md) przełącznika kompilatora wiersza polecenia w następujący sposób:
+Fp: tryb z ograniczeniami zmiennoprzecinkowej jest włączane przy użyciu [/FP: strict](fp-specify-floating-point-behavior.md) przełącznika kompilatora wiersza polecenia w następujący sposób:
 
 > Cl/FP: strict source.cpp
 
-W tym przykładzie nakazuje kompilatorowi używanie fp: strict semantyki podczas generowania kodu dla pliku source.cpp. Fp: strict modelu również może być wywoływana na poszczególnych funkcji funkcji przy użyciu `float_control` pragma kompilatora.
+W tym przykładzie nakazuje kompilatorowi używanie fp: ścisłą semantykę podczas generowania kodu dla pliku source.cpp. Fp: strict modelu można również wywołać w poszczególnych funkcji przez funkcję przy użyciu `float_control` dyrektywy kompilatora.
 
 Aby uzyskać więcej informacji, zobacz sekcję [float_control pragma](#the-float-control-pragma).
 
-W obszarze fp: tryb z ograniczeniami, kompilator nigdy nie wykonuje wszystkie funkcje optymalizacji, które perturb dokładność obliczeń zmiennoprzecinkowych. Kompilator zawsze zaokrągla poprawnie w przypisania, typecasts i wywołania funkcji i pośredniego zaokrąglania spójnie odbędzie się w tej samej precyzji jak rejestruje FPU. Semantyka zmiennoprzecinkowych wyjątków i FPU środowisko czułość są domyślnie włączone. Pewne optymalizacje, takich jak skrótów, są wyłączone, ponieważ kompilator nie może zagwarantować poprawność w każdym przypadku.
+W obszarze fp: tryb z ograniczeniami, kompilator nigdy nie wykonuje żadnych optymalizacje, które perturb dokładność obliczeń zmiennoprzecinkowych. Kompilator zawsze zostanie niepoprawnie zaokrąglać w przypisania, rzutowaniach typu i wywołaniach funkcji i pośredniego zaokrąglania spójnie odbędzie się w tej samej precyzji jak rejestruje FPU. Semantyka wyjątków dotyczących liczb zmiennoprzecinkowych i ważność środowiska FPU są domyślnie włączone. Niektóre optymalizacje, takie jak skrótów, są wyłączone, ponieważ kompilator nie może zagwarantować poprawność w każdym przypadku.
 
 |FP: strict semantyki|Wyjaśnienie|
 |-|-|
-|Zaokrąglanie semantyki|Jawne zaokrąglania w przypisania, typecasts i wywołania funkcji<br/>Zostaną obliczone wyrażenia pośredniego na dokładność rejestru.<br/>Taki sam jak fp: precise|
-|Algebraicznych przekształcenia|Ścisłego przestrzegania z systemem innym niż łączny, podziału algebraiczną liczb zmiennoprzecinkowych, chyba że transformację jest zawsze gwarancji działają tak samo.<br/>Taki sam jak fp: precise|
+|Zaokrąglanie semantyki|Jawne Zaokrąglenie w przypisania, rzutowaniach typu, a następnie wywołuje funkcję<br/>Wyrażeń pośrednich zostanie oceniona dokładności rejestru.<br/>Taki sam jak fp: precise|
+|Przekształcenia algebraiczne|Ścisłego przestrzegania-asocjacyjnych, bez podziału algebry zmiennoprzecinkowych, chyba że przekształcenie gwarantuje zawsze działają tak samo.<br/>Taki sam jak fp: precise|
 |Skrótów|Zawsze wyłączone|
-|Kolejność obliczania liczb zmiennoprzecinkowych|Kompilator nie spowoduje zmiany kolejności obliczania wyrażeń liczb zmiennoprzecinkowych|
+|Kolejność obliczania zmiennoprzecinkowych|Kompilator nie będą mogli zmienić kolejności obliczania wyrażeń liczb zmiennopozycyjnych|
 |Dostęp do środowiska FPU|Zawsze włączone.|
 |Semantyka wyjątków dotyczących liczb zmiennoprzecinkowych|Domyślnie włączony.|
 
-### <a name="floating-point-exception-semantics-under-fpstrict"></a>Semantyka zmiennoprzecinkowych wyjątków w obszarze fp: strict
+### <a name="floating-point-exception-semantics-under-fpstrict"></a>Semantyka wyjątków dotyczących liczb zmiennoprzecinkowych pod fp: strict
 
-Domyślnie semantyki zmiennoprzecinkowych wyjątków są włączone w obszarze fp: strict modelu. Aby wyłączyć te semantyki, użyj **/FP: oprócz-** przełącznika lub wprowadzenie `float_control(except, off)` pragma.
+Domyślnie semantykę wyjątku zmiennoprzecinkowego są włączone w obszarze fp: strict modelu. Aby wyłączyć te semantykę, należy użyć **/FP: except —** przełącznika lub wprowadzenia `float_control(except, off)` pragma.
 
-Aby uzyskać więcej informacji, zobacz sekcje [włączenie semantyki zmiennoprzecinkowych wyjątków](#enabling-floating-point-exception-semantics) i [float_control Pragma](#the-float-control-pragma).
+Aby uzyskać więcej informacji, zobacz sekcje [Włączanie semantykę wyjątku zmiennopozycyjnego](#enabling-floating-point-exception-semantics) i [float_control Pragma](#the-float-control-pragma).
 
 ## <a name="the-fenvaccess-pragma"></a>Fenv_access pragma
 
@@ -867,9 +866,9 @@ Sposób użycia:
 #pragma fenv_access( [ on  | off ] )
 ```
 
-[Fenv_access](../../preprocessor/fenv-access.md) pragma umożliwia kompilatorowi wprowadzić niektóre funkcje optymalizacji, które może mógł wykorzystać FPU flagę testy i zmiany trybu FPU. Gdy stan `fenv_access` jest wyłączona, można założyć, kompilator obowiązują tryby FPU domyślne i flagi FPU nie są sprawdzane pod. Domyślnie dostęp do środowiska jest wyłączone dla fp: trybie ścisłym, chociaż może być jawnie włączone, za pomocą tej pragmy. W obszarze fp: strict, `fenv_access` jest zawsze włączona i nie można wyłączyć. W obszarze fp:fast `fenv_access` jest zawsze wyłączona i nie można włączyć.
+[Fenv_access](../../preprocessor/fenv-access.md) pragma umożliwia kompilatorowi wprowadzić pewne optymalizacje, które może być złamać FPU flagi testy i FPU zmiany trybu. Gdy stan `fenv_access` jest wyłączona, kompilator może przyjąć tryby FPU domyślne są stosowane, a flagi FPU, nie są sprawdzane. Domyślnie dostęp do środowiska jest wyłączone dla fp: precise tryb chociaż może być jawnie włączone, za pomocą tej pragmie. W obszarze fp: strict, `fenv_access` jest zawsze włączona i nie można wyłączyć. W obszarze FP: Fast `fenv_access` jest zawsze wyłączona i nie można włączyć.
 
-Zgodnie z opisem w fp: dokładne sekcji niektórych programiści mogą zmienić zmiennoprzecinkowe przy użyciu kierunek zaokrąglania `_controlfp` funkcji. Na przykład można obliczyć granic obliczania górnego i dolnego błędu dla operacji arytmetycznych, niektóre programy wykonaj dwa razy, tym samym obliczenia najpierw podczas zaokrąglania do nieskończoności ujemnej, a następnie podczas zaokrąglania do nieskończoności dodatniej. Ponieważ FPU oferują wygodny sposób do sterowania zaokrąglaniem, programisty może zdecydować się na zmianę trybu zaokrąglania przez zmianę środowiska FPU. Poniższy kod oblicza dokładny błąd granica zmiennoprzecinkowe mnożenia przez zmianę środowiska FPU.
+Zgodnie z opisem w fp: precise sekcji niektórych programistów mogą zmienić zmiennoprzecinkowych za pomocą zaokrąglaniem kierunku rozmieszczania zawartości śródwierszowej `_controlfp` funkcji. Na przykład do obliczenia granice obliczania górnego i dolnego błędu na operacje arytmetyczne, niektóre programy wykonać dwa razy, tych samych obliczeń najpierw podczas zaokrąglaniem kierunku minus nieskończoność, a następnie podczas zaokrąglania do nieskończoności dodatniej. Ponieważ FPU zapewnia wygodny sposób kontrolowania zaokrąglania, programista może zdecydować się na zmianę trybu zaokrąglania przez zmianę środowiska FPU. Poniższy kod oblicza dokładny błąd powiązany zmiennoprzecinkowych mnożenia przez zmianę środowiska FPU.
 
 ```cpp
 double a, b, cLower, cUpper;
@@ -881,9 +880,9 @@ cUpper = a*b;
 _controlfp( _RC_NEAR, _MCW_RC );    // restore rounding mode
 ```
 
-Po wyłączeniu `fenv_access` pragma umożliwia kompilatorowi założono domyślnego środowiska FPU; w związku z tym Optymalizator zwolnieniu Ignoruj wywołań `_controlfp` i przypisania powyżej, aby ograniczyć `cUpper = cLower = a*b`. Gdy włączone, jednak `fenv_access` uniemożliwia takie optymalizacji.
+Po wyłączeniu `fenv_access` pragma umożliwia kompilator, aby założył środowiska FPU domyślnego; w związku z tym Optymalizator jest bezpłatna dla ignorować wywołania do `_controlfp` i zmniejszyć powyżej przypisania do `cUpper = cLower = a*b`. Po włączeniu jednak `fenv_access` zapobiega takich optymalizacji.
 
-Programy również sprawdzić, czy słowa stanu FPU do wykrywania określonych błędów zmiennoprzecinkowych. Na przykład następujący kod sprawdza warunki dzielenie przez zero i niedokładnymi
+Programy mogą również sprawdzić wyrazy stanu FPU do wykrywania niektórych błędów zmiennoprzecinkowych. Na przykład poniższy kod sprawdza, czy warunki dzielenie przez zero i niedokładny
 
 ```cpp
 double a, b, c, r;
@@ -900,7 +899,7 @@ if (_statusfp() & _SW_INEXACT)
 etc...
 ```
 
-Gdy `fenv_access` jest wyłączone, kompilator może zmienić kolejność wykonywania wyrażenia liczb zmiennoprzecinkowych, w związku z tym prawdopodobnie subverting sprawdza stan FPU. Włączanie `fenv_access` uniemożliwia takie optymalizacji.
+Gdy `fenv_access` jest wyłączona, kompilator może zmienić kolejność wykonywania wyrażeń liczb zmiennopozycyjnych, więc prawdopodobnie subverting FPU sprawdzania stanu. Włączanie `fenv_access` zapobiega takich optymalizacji.
 
 ## <a name="the-fpcontract-pragma"></a>Fp_contract pragma
 
@@ -910,7 +909,7 @@ Sposób użycia:
 #pragma fp_contract( [ on | off ] )
 ```
 
-Zgodnie z opisem w fp: sekcja dokładne, zmniejszenia jest podstawowych funkcji architektury dla wielu nowoczesnych jednostek zmiennoprzecinkowych. Skrótów zapewniają możliwość wykonywania mnożenia, następuje dodanie jako jedna operacja z pośredniego błąd zaokrąglania. Te instrukcje o pojedynczej są szybciej niż wykonywania oddzielnych mnożenia i dodać instrukcje i są bardziej dokładne, ponieważ nie istnieje, bez pośredniego zaokrąglania produktu. Operacja umowie można oblicza wartość `(a*b+c)` tak, jakby operacjami zostały obliczona nieskończona dokładnością, a następnie jest zaokrąglana do najbliższej liczby zmiennoprzecinkowej. Tego rodzaju optymalizacji można znacznie przyspieszyć funkcje zawierające kilka przeplatana mnożenie i Dodaj operacji. Rozważmy na przykład następujący algorytm Oblicza iloczyn dwóch wektorów n wymiarowej kropki.
+Zgodnie z opisem w fp: sekcja dokładne, zmniejszenia jest podstawową cechą architektury dla wielu nowoczesnych jednostkom zmiennoprzecinkowym. Skrótów zapewniają możliwość wykonywania mnożenia, następuje dodatku jako pojedyncza operacja błędem nie pośredni zaokrąglania. Te instrukcje o pojedynczej są szybsze niż wykonywania oddzielnych Pomnóż i Dodaj instrukcje i są bardziej precyzyjne, ponieważ nie ma pośrednich zaokrąglenie nie produktu. Operacja umowie można oblicza wartość `(a*b+c)` tak, jakby były obliczane z dokładnością do nieskończoności zarówno operacji, a następnie jest zaokrąglana do najbliższej liczba zmiennoprzecinkowa. Tego rodzaju optymalizacji, można znacznie przyspieszyć funkcje zawierające kilka z przeplotem wielokrotnie i dodać operacje. Na przykład należy wziąć pod uwagę następujące algorytmu, który oblicza skalarnego dwa wektory n wymiarowy.
 
 ```cpp
 float dotProduct( float x[], float y[], int n )
@@ -922,9 +921,9 @@ float dotProduct( float x[], float y[], int n )
 }
 ```
 
-Te obliczenia można wykonać szereg instrukcje formularza należy pomnożyć Dodaj `p = p + x[i]*y[i]`.
+To obliczenie, które mogą być wykonywane szereg instrukcji formularza mnożenie Dodawanie `p = p + x[i]*y[i]`.
 
-[Fp_contract](../../preprocessor/fp-contract.md) pragma Określa, czy są zawarte zmiennoprzecinkowe wyrażenia. Domyślnie fp: trybie ścisłym umożliwia skrótów ponieważ poprawiają dokładność i szybkości. Tryb fp:fast zawsze włączoną skrótów. Jednakże, ponieważ skrótów można mógł wykorzystać jawne wykrywania błędów, `fp_contract` pragma jest zawsze wyłączona w obszarze fp: tryb z ograniczeniami. Przykłady wyrażeń, które mogą być nabytej kiedy `fp_contract` pragma jest włączona:
+[Fp_contract](../../preprocessor/fp-contract.md) pragmę, czy są zawarte zmiennoprzecinkowych wyrażeń. Domyślnie fp: pozwala na skrótów w trybie ścisłym, ponieważ zwiększają szybkość i dokładność. Skrótów są zawsze włączone dla trybu FP: Fast. Jednakże, ponieważ skrótów można złamać jawne wykrywania warunków błędów `fp_contract` pragma jest zawsze wyłączona w ramach fp: tryb z ograniczeniami. Przykłady wyrażeń, które mogą być nabytej kiedy `fp_contract` pragmy jest włączona:
 
 ```cpp
 float a, b, c, d, e, t;
@@ -941,7 +940,7 @@ d = t + c;           // won't be contracted because of rounding of a*b
 
 ## <a name="the-floatcontrol-pragma"></a>Float_control pragma
 
-**/FP: dokładne**, **Fast**, **/FP: strict** i **/FP: except** semantykę zmiennoprzecinkową w pliku przez plik sterowania przełączników podstawy. [Float_control](../../preprocessor/float-control.md) pragma zapewnia takie kontrolę na podstawie funkcja przez funkcję.
+**/FP: precise**, **Fast**, **/FP: strict** i **/FP: z wyjątkiem** przełączniki kontrolowania semantykę liczb zmiennopozycyjnych w pliku przez pliku Podstawa. [Float_control](../../preprocessor/float-control.md) pragma zapewnia takie kontrolę na podstawie funkcji przez funkcję.
 
 Sposób użycia:
 
@@ -952,24 +951,24 @@ Sposób użycia:
 #pragma float_control( except, on | off [, push] )
 ```
 
-Pragma `float_control(push)` i `float_control(pop)` odpowiednio wypychania i pop bieżący stan trybu zmiennoprzecinkowych i opcji wyjątku na stosie. Należy pamiętać, że stan `fenv_access` i `fp_contract` nie dotyczy pragma `pragma float_control(push/pop)`.
+Dyrektywy pragma `float_control(push)` i `float_control(pop)` odpowiednio wypychania i pop bieżącego stanu zmiennoprzecinkowego tryb i opcji wyjątku na stosie. Należy pamiętać, że stan `fenv_access` i `fp_contract` nie dotyczy pragma `pragma float_control(push/pop)`.
 
-Wywoływanie pragma `float_control(precise, on)` spowoduje włączenie i `float_control(precise, off)` spowoduje wyłączenie w trybie ścisłym semantyki. Podobnie, pragma `float_control(except, on)` spowoduje włączenie i `float_control(except, off)` spowoduje wyłączenie semantyki wyjątku. Semantyki wyjątek można włączyć tylko w przypadku, gdy dokładne semantyki są również włączone. Gdy opcjonalny `push` argument jest obecny, stanów `float_control` opcje są usuwane przed zmiana semantyki.
+Wywoływanie pragmy `float_control(precise, on)` spowoduje włączenie i `float_control(precise, off)` spowoduje wyłączenie semantyki w trybie ścisłym. Podobnie, pragma `float_control(except, on)` spowoduje włączenie i `float_control(except, off)` spowoduje wyłączenie semantykę wyjątku. Semantykę wyjątku można włączyć tylko w przypadku, gdy dokładne semantyki również są włączone. Gdy opcjonalnego `push` argument jest obecny, Stany `float_control` opcje są wypychane poprzedzający zmianę semantyki.
 
-### <a name="setting-the-floating-point-semantic-mode-on-a-function-by-function-basis"></a>Ustawianie zmiennoprzecinkowe trybu semantycznych na podstawie funkcja funkcji
+### <a name="setting-the-floating-point-semantic-mode-on-a-function-by-function-basis"></a>Ustawianie zmiennoprzecinkowych trybu semantycznych na podstawie funkcji, funkcja
 
-Przełączniki wiersza polecenia są faktycznie skrótowa do ustawiania czterech różnych zmiennoprzecinkowych pragm. Aby wybrać jawnie określonym trybie zmiennoprzecinkowe semantycznych na podstawie funkcja przez funkcję, wybierz każdego z czterech opcji zmiennoprzecinkowych pragm zgodnie z opisem w poniższej tabeli:
+Przełączniki wiersza polecenia są w rzeczywistości skrót do ustawiania czterech różnych zmiennoprzecinkowych pragm. Aby wybrać jawnie określonym trybie zmiennoprzecinkowych semantycznych na podstawie funkcji przez funkcję, wybierz każdego z czterech opcji zmiennoprzecinkowych pragm zgodnie z opisem w poniższej tabeli:
 
 ||||||
 |-|-|-|-|-|
 ||float_control(Precise)|float_control(EXCEPT)|fp_contract|fenv_access|
-|/ FP: strict|on|on|Wyłączanie|on|
-|/ FP: strict/FP: except-|on|Wyłączanie|Wyłączanie|on|
-|/ FP: precise|on|Wyłączanie|on|Wyłączanie|
-|/ FP: precise/FP: except|on|on|on|Wyłączanie|
-|Fast|Wyłączanie|Wyłączanie|on|Wyłączanie|
+|/ FP: strict|on|on|Wyłączone|on|
+|/ FP: strict/FP: except-|on|Wyłączone|Wyłączone|on|
+|/ FP: precise|on|Wyłączone|on|Wyłączone|
+|/ FP: precise/FP: except|on|on|on|Wyłączone|
+|Fast|Wyłączone|Wyłączone|on|Wyłączone|
 
-Na przykład następujące jawnie umożliwia fp:fast semantyki.
+Na przykład następujące jawnie włącza semantykę FP: Fast.
 
 ```cpp
 #pragma float_control( except, off )   // disable exception semantics
@@ -979,11 +978,11 @@ Na przykład następujące jawnie umożliwia fp:fast semantyki.
 ```
 
 > [!Note]
-> Semantyka wyjątków muszą zostać wyłączone przed wyłączeniem semantyki "precise".
+> Semantykę wyjątku muszą zostać wyłączone przed wyłączeniem semantykę "precise".
 
 ## <a name="enabling-floating-point-exception-semantics"></a>Włączanie semantyki wyjątków dotyczących liczb zmiennoprzecinkowych
 
-Niektórych wyjątkowe zmiennoprzecinkowe warunki, takie jak dzielenie przez zero, może spowodować FPU sygnalizują wyjątek sprzętu. Wyjątki zmiennoprzecinkowe są domyślnie wyłączone. Wyjątki zmiennoprzecinkowe są włączone, modyfikując słowa formantu FPU z `_controlfp` funkcji. Na przykład poniższy kod umożliwia dzielenie przez zero zmiennoprzecinkowych wyjątków:
+Niektóre wyjątkowych warunków zmiennoprzecinkowych, takich jak dzielenie przez zero, może spowodować FPU w celu sygnalizowania, że wyjątek sprzętowy. Wyjątki zmiennoprzecinkowe są domyślnie wyłączone. Wyjątki zmiennoprzecinkowe są włączone, modyfikując słowa sterującego FPU z `_controlfp` funkcji. Na przykład poniższy kod umożliwia dzielenie przez zero zmiennoprzecinkowych wyjątków:
 
 ```cpp
 _clearfp(); // always call _clearfp before
@@ -991,13 +990,13 @@ _clearfp(); // always call _clearfp before
 _controlfp( _EM_ZERODIVIDE, _MCW_EM );
 ```
 
-Po włączeniu wyjątek dzielenie przez zero żadnej operacji dzielenia z denominator równej zero spowoduje zostać zgłoszony wyjątek FPU.
+Po włączeniu wyjątek dzielenie przez zero żadnych operacji dzielenia, za pomocą mianownik równej zero spowoduje, że wyjątek FPU ma być zasygnalizowany.
 
-Aby przywrócić domyślny tryb FPU słowa formantu, należy wywołać `_controlfp(_CW_DEFAULT, ~0)`.
+Aby przywrócić domyślny tryb słowa sterującego FPU, należy wywołać `_controlfp(_CW_DEFAULT, ~0)`.
 
-Włączanie semantyki zmiennoprzecinkowych wyjątków z **/FP: except** flaga nie jest to samo co włączenie wyjątki zmiennoprzecinkowe. Po włączeniu semantyki zmiennoprzecinkowych wyjątków kompilator muszą uwzględniać możliwość, że żadnych operacji zmiennoprzecinkowej może zgłosić wyjątek. Ponieważ FPU jest jednostką oddzielne procesora, instrukcje wykonywania na FPU mogą być wykonywane równocześnie z instrukcji dotyczących innych jednostek.
+Włączanie semantyki wyjątków dotyczących liczb zmiennoprzecinkowych za pomocą **/FP: except** flaga nie jest taka sama jak włączenie wyjątki zmiennoprzecinkowe. Po włączeniu semantykę wyjątku zmiennoprzecinkowego, kompilator muszą uwzględniać możliwość, że wszelkie operacji zmiennoprzecinkowej może zgłosić wyjątek. Ponieważ FPU jest jednostką oddzielne procesora, instrukcje wykonywania w FPU mogą być wykonywane równocześnie z instrukcjami w innych jednostkach.
 
-Po włączeniu zmiennoprzecinkowych wyjątków FPU zatrzymuje wykonywanie instrukcji ataku i sygnalizuje warunek wyjątkowych, ustawiając słowa stanu FPU. Gdy Procesor osiągnie następnej instrukcji zmiennoprzecinkowych, najpierw sprawdza wszystkie oczekujące wyjątki FPU. Jeśli istnieje oczekujące wyjątek, procesor traps przez wywołanie metody obsługi wyjątków obsługiwanych przez System operacyjny. Oznacza to, że podczas operacji zmiennoprzecinkowej napotka warunek wyjątkowych, odpowiedni wyjątek nie zostanie wykryty do czasu następnej operacji zmiennoprzecinkowej jest wykonywana. Na przykład następujący kod traps wyjątek dzielenie przez zero:
+Po włączeniu wyjątku zmiennopozycyjnego FPU zatrzymuje wykonywanie problematycznych instrukcji, a następnie sygnał wyjątkowy warunek, ustawiając FPU wyrazy stanu. Gdy procesor CPU osiągnie następnej instrukcji zmiennoprzecinkowej, najpierw sprawdza wszystkie oczekujące wyjątki FPU. W przypadku wyjątku oczekujące procesor pułapki, wywołując program obsługi wyjątku dostarczone przez System operacyjny. Oznacza to, że podczas operacji zmiennoprzecinkowej napotka wyjątkowy warunek, odpowiedni wyjątek nie zostanie wykryty do momentu następnej operacji zmiennoprzecinkowych jest wykonywane. Na przykład poniższy kod pułapek wyjątków dzielenie przez zero:
 
 ```cpp
 double a, b, c;
@@ -1016,14 +1015,14 @@ __except( EXCEPTION_EXECUTE_HANDLER )
 // . . .
 ```
 
-Występuje, jeśli warunek dzielenie przez zero w wyrażeniu = b/c FPU nie pułapki/Zgłoś wyjątek do czasu następnej operacji zmiennoprzecinkowych w wyrażeniu 2.0 * b. Powoduje to następujące dane wyjściowe:
+Występuje, jeśli warunek dzielenie przez zero w wyrażeniu = b/c FPU nie pułapki/Zgłoś wyjątek, aż do następnej operacji zmiennoprzecinkowych w wyrażeniu 2.0 * b. To powoduje zwrócenie następujących danych wyjściowych:
 
 ```Output
 This line shouldn't be reached when c==0.0
 SEH Exception Detected
 ```
 
-Printf odpowiadający pierwszy wiersz dane wyjściowe powinny nie został osiągnięty; został osiągnięty, ponieważ zmiennoprzecinkowych wyjątków spowodowanych wyrażenie b/c nie został zgłoszony aż do osiągnięcia 2.0 wykonywania * b. Aby zgłosić wyjątek zaraz po wykonaniu b/c, kompilator wprowadzić instrukcji "Czekaj":
+Printf — odpowiadający pierwszy wiersz danych wyjściowych powinna nie zostanie osiągnięty; został osiągnięty, ponieważ zmiennoprzecinkowych wyjątków spowodowanych wyrażenie b/c nie został zgłoszony, aż do osiągnięcia 2.0 wykonywania * b. Aby zgłosić wyjątek zaraz po wykonaniu b i c., kompilator należy wprowadzić instrukcji "wait":
 
 ```cpp
 // . . .
@@ -1037,15 +1036,15 @@ Printf odpowiadający pierwszy wiersz dane wyjściowe powinny nie został osiąg
 // . . .
 ```
 
-Ta instrukcja "Czekaj" wymusza procesora do synchronizacji ze stanem FPU i obsługiwać wszystkie wyjątki oczekujące. Kompilator będzie generować tylko te "Czekaj" instrukcje po włączeniu semantykę zmiennoprzecinkową. Gdy te semantyki są wyłączone, są domyślnie, programy mogą wystąpić błędy synchronicity, podobny do przedstawionego powyżej, używając wyjątki zmiennoprzecinkowe.
+Ta instrukcja "Czekaj" wymusza procesora synchronizować ze stanem FPU i obsługiwać wszystkie wyjątki oczekujące. Kompilator wygeneruje tylko te "Czekaj" instrukcje po włączeniu semantykę liczb zmiennopozycyjnych. Gdy te semantyki są wyłączone, są domyślnie programy mogą wystąpić błędy synchronicity, podobny do powyższego, korzystając z wyjątków zmiennoprzecinkowych.
 
-Po włączeniu semantykę zmiennoprzecinkową, kompilator nie wprowadzi tylko instrukcje "Czekaj", również uniemożliwi kompilator nielegalnego optymalizacji liczb zmiennoprzecinkowych kodu obecności możliwych wyjątków. W tym wszelkie transformacje, których alter punktów, w których są zgłaszane wyjątki. Ze względu na te czynniki włączenie semantykę zmiennoprzecinkową znacznie może zmniejszyć wydajność wygenerowanego kodu maszyny, w związku z tym zmniejszenie wydajności aplikacji.
+Po włączeniu semantykę liczb zmiennopozycyjnych, kompilator nie wprowadza tylko instrukcje "oczekiwanie", jego będzie również uniemożliwić kompilatorowi nielegalny optymalizacji kodu zmiennoprzecinkowego obecności możliwych wyjątków. Dotyczy to również wszelkich przekształceń, które zmienia punkty, w których są zgłaszane wyjątki. Ze względu na te czynniki Włączanie semantykę liczb zmiennopozycyjnych może znacznie zmniejszyć wydajność wygenerowanego kodu maszyny, w związku z tym zmniejszenie wydajności aplikacji.
 
-Semantyka zmiennoprzecinkowych wyjątków są domyślnie włączone w obszarze fp: tryb z ograniczeniami. Aby włączyć te semantyki w fp: trybie ścisłym dodać **/FP: oprócz** przełączyć się do kompilatora wiersza polecenia. Semantyka zmiennoprzecinkowych wyjątków również może być włączony i wyłączone na poszczególnych funkcji funkcji przy użyciu `float_control` pragma.
+Semantykę wyjątku zmiennoprzecinkowego są włączone domyślnie w ramach fp: tryb z ograniczeniami. Umożliwienia te semantyki w fp: trybie ścisłym, Dodaj **/FP: except** przejdź do wiersza polecenia kompilatora. Można również semantykę wyjątku zmiennoprzecinkowego włączone i wyłączone podstawę funkcji przez funkcję przy użyciu `float_control` pragmy.
 
 ### <a name="floating-point-exceptions-as-c-exceptions"></a>Wyjątki zmiennoprzecinkowe jako wyjątki języka C++
 
-Wszystkie wyjątki sprzętowe, wyjątki zmiennoprzecinkowe nie powodują bardzo wyjątek języka C++, ale zamiast tego wywołać wyjątków strukturalnych. Aby mapować wyjątki strukturalne liczb zmiennoprzecinkowych wyjątków języka C++, użytkownicy mogą stać się niestandardowych translator wyjątków SEH. Najpierw należy wprowadzić wyjątek języka C++, odpowiadający każdej zmiennoprzecinkowych wyjątków:
+Za pomocą wszystkich wyjątków sprzętowych wyjątki zmiennoprzecinkowe wewnętrznie nie powodują wyjątków C++, ale zamiast tego wyzwalacza wyjątków strukturalnych. Aby mapować zmiennoprzecinkowych wyjątki strukturalne wyjątki C++, użytkownicy wprowadzić niestandardowe translatora złożonego wyjątku SEH. Po pierwsze wprowadzenie wyjątków C++, odpowiadający każdej zmiennoprzecinkowych wyjątków:
 
 ```cpp
 class float_exception : public std::exception {};
@@ -1059,7 +1058,7 @@ class fe_stack_check : public float_exception {};
 class fe_underflow : public float_exception {};
 ```
 
-Następnie wprowadzić funkcji tłumaczenia wykryje zmiennoprzecinkowych wyjątków SEH i throw odpowiednich wyjątków C++. Aby użyć tej funkcji, należy ustawić translator obsługi wyjątków strukturalnych bieżącego wątku procesu z [_set_se_translator —](../../c-runtime-library/reference/set-se-translator.md) funkcji z biblioteki środowiska uruchomieniowego.
+Następnie wprowadzono funkcję tłumaczenia, która wykryje zmiennoprzecinkowych wyjątków SEH i odpowiedni wyjątek języka C++. Aby użyć tej funkcji, Ustaw bieżący wątek procesu przy użyciu w usłudze translator obsługi wyjątków strukturalnych [_set_se_translator](../../c-runtime-library/reference/set-se-translator.md) funkcji z biblioteki środowiska uruchomieniowego.
 
 ```cpp
 void se_fe_trans_func( unsigned int u, EXCEPTION_POINTERS* pExp )
@@ -1075,7 +1074,7 @@ void se_fe_trans_func( unsigned int u, EXCEPTION_POINTERS* pExp )
 _set_se_translator(se_fe_trans_func);
 ```
 
-Po zainicjowaniu to mapowanie wyjątki zmiennoprzecinkowe będą zachowywać się tak, jakby są wyjątków języka C++. Na przykład:
+Po zainicjowaniu to mapowanie wyjątki zmiennoprzecinkowe będą zachowywać się tak, jakby są wyjątki C++. Na przykład:
 
 ```cpp
 try
@@ -1095,7 +1094,7 @@ catch(float_exception)
 
 ## <a name="references"></a>Odwołania
 
-[Co naukowca co komputer powinien wiedzieć o zmiennoprzecinkowe arytmetyczne](http://pages.cs.wisc.edu/~david/courses/cs552/S12/handouts/goldberg-floating-point.pdf) przez Dominika Kowalski.
+[Co każdy analityk komputera wiedzieć o arytmetyki zmiennoprzecinkowej](http://pages.cs.wisc.edu/~david/courses/cs552/S12/handouts/goldberg-floating-point.pdf) przez David Kowalski.
 
 ## <a name="see-also"></a>Zobacz także
 

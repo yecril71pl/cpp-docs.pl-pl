@@ -12,60 +12,66 @@ dev_langs:
 helpviewer_keywords:
 - SafeLessThanEquals function
 ms.assetid: cbd70526-faf2-4fbc-96a0-b61e8cf5f04a
-author: ghogen
-ms.author: ghogen
+author: mikeblome
+ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 4297094a6664e695f79f1e0b02625b0b6964ca95
-ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
+ms.openlocfilehash: a0795f3c1fe176434049516c642a9aa5b198774c
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/09/2018
-ms.locfileid: "40016827"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42606357"
 ---
 # <a name="safelessthanequals"></a>SafeLessThanEquals
-Porównuje dwie liczby.  
-  
-## <a name="syntax"></a>Składnia  
-  
-```cpp  
-template <typename T, typename U>  
-inline bool SafeLessThanEquals (  
-   const T t,  
-   const U u  
-) throw ();  
-```  
-  
-### <a name="parameters"></a>Parametry  
- [in] *t*  
- Pierwsza liczba do porównania. To musi być typu `T`.  
-  
- [in] *u*  
- Druga liczba do porównania. To musi być typu `U`.  
-  
-## <a name="return-value"></a>Wartość zwracana  
- **wartość true,** Jeśli *t* jest mniejsza niż lub równa *u*; w przeciwnym razie **false**.  
-  
-## <a name="remarks"></a>Uwagi  
- **SafeLessThanEquals** rozszerza operator porównania regularnych, dzięki któremu można porównać dwa różne typy liczb.  
-  
- Ta metoda jest częścią [Biblioteka SafeInt](../windows/safeint-library.md) i jest przeznaczony dla operacji jedno porównanie bez tworzenia wystąpienia obiektu [safeint — klasa](../windows/safeint-class.md).  
-  
+
+Porównuje dwie liczby.
+
+## <a name="syntax"></a>Składnia
+
+```cpp
+template <typename T, typename U>
+inline bool SafeLessThanEquals (
+   const T t,
+   const U u
+) throw ();
+```
+
+### <a name="parameters"></a>Parametry
+
+[in] *t*  
+Pierwsza liczba do porównania. To musi być typu `T`.
+
+[in] *u*  
+Druga liczba do porównania. To musi być typu `U`.
+
+## <a name="return-value"></a>Wartość zwracana
+
+**wartość true,** Jeśli *t* jest mniejsza niż lub równa *u*; w przeciwnym razie **false**.
+
+## <a name="remarks"></a>Uwagi
+
+**SafeLessThanEquals** rozszerza operator porównania regularnych, dzięki któremu można porównać dwa różne typy liczb.
+
+Ta metoda jest częścią [Biblioteka SafeInt](../windows/safeint-library.md) i jest przeznaczony dla operacji jedno porównanie bez tworzenia wystąpienia obiektu [safeint — klasa](../windows/safeint-class.md).
+
 > [!NOTE]
->  Ta metoda ją stosować tylko po jednej operacji matematycznych muszą być chronione. Jeśli istnieje wiele operacji, należy użyć `SafeInt` klasy zamiast wywoływania poszczególnych funkcjami autonomicznymi.  
-  
- Aby uzyskać więcej informacji na temat typów szablonu `T` i `U`, zobacz [safeint — funkcje](../windows/safeint-functions.md).  
-  
-## <a name="requirements"></a>Wymagania  
- **Nagłówek:** safeint.h  
-  
- **Namespace:** Microsoft::Utilities  
-  
-## <a name="see-also"></a>Zobacz też  
- [Safeint — funkcje](../windows/safeint-functions.md)   
- [Biblioteka SafeInt](../windows/safeint-library.md)   
- [Safeint — klasa](../windows/safeint-class.md)   
- [SafeGreaterThan](../windows/safegreaterthan.md)   
- [SafeLessThan](../windows/safelessthan.md)   
- [SafeGreaterThanEquals](../windows/safegreaterthanequals.md)
+> Ta metoda ją stosować tylko po jednej operacji matematycznych muszą być chronione. Jeśli istnieje wiele operacji, należy użyć `SafeInt` klasy zamiast wywoływania poszczególnych funkcjami autonomicznymi.
+
+Aby uzyskać więcej informacji na temat typów szablonu `T` i `U`, zobacz [safeint — funkcje](../windows/safeint-functions.md).
+
+## <a name="requirements"></a>Wymagania
+
+**Nagłówek:** safeint.h
+
+**Namespace:** Microsoft::Utilities
+
+## <a name="see-also"></a>Zobacz też
+
+[SafeInt, funkcje](../windows/safeint-functions.md)  
+[Biblioteka SafeInt](../windows/safeint-library.md)  
+[SafeInt, klasa](../windows/safeint-class.md)  
+[SafeGreaterThan](../windows/safegreaterthan.md)  
+[SafeLessThan](../windows/safelessthan.md)  
+[SafeGreaterThanEquals](../windows/safegreaterthanequals.md)

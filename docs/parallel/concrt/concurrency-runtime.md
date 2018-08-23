@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: be177574aa78080f3a950fb674adc0a8fab0b5c4
-ms.sourcegitcommit: 7eadb968405bcb92ffa505e3ad8ac73483e59685
+ms.openlocfilehash: b39fb35b21721cb9b93741a74f62d749b6fb1051
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/23/2018
-ms.locfileid: "39208392"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42608270"
 ---
 # <a name="concurrency-runtime"></a>Współbieżność środowiska wykonawczego
 Współbieżność środowiska wykonawczego języka C++ pomaga zapisu niezawodnych, skalowalnych i szybko reagujących aplikacji równoległych. Tak, aby nie trzeba zarządzać szczegóły infrastruktury, that are related to współbieżności, podnosi poziom abstrakcji. Można również użyć do określenia planowania zasad, które spełniają jakości wymagań usługi aplikacji. Dzięki tym zasobom, które ułatwią rozpoczęcie pracy w środowisku uruchomieniowym współbieżności.  
@@ -111,7 +111,7 @@ Współbieżność środowiska wykonawczego języka C++ pomaga zapisu niezawodny
 |[Przykłady kodu dla środowiska uruchomieniowego współbieżności i Biblioteka równoległych wzorcem w Visual Studio 2010](http://go.microsoft.com/fwlink/p/?linkid=183875)|Zawiera przykładowe aplikacje i narzędzia, które pokazują, w czasie wykonywania współbieżności.|  
 |[Programowanie równoległe w kodzie macierzystym bloga](http://go.microsoft.com/fwlink/p/?linkid=183873)|Udostępnia dodatkowe szczegółowy blog artykuły dotyczące programowania równoległego w środowisku uruchomieniowym współbieżności.|  
 |[Przetwarzania równoległego na forum C++ i kodu natywnego](http://go.microsoft.com/fwlink/p/?linkid=183874)|Można uczestniczyć w dyskusjach społeczności o środowisku uruchomieniowym współbieżności.|  
-|[Programowanie równoległe](/dotnet/standard/parallel-programming/index)|Zawiera informacje na temat równoległych modelu programowania, który jest dostępny w [!INCLUDE[dnprdnshort](../../error-messages/tool-errors/includes/dnprdnshort_md.md)].|  
+|[Programowanie równoległe](/dotnet/standard/parallel-programming/index)|Zawiera informacje na temat równoległych model programowania, który jest dostępny w programie .NET Framework.|  
   
 ## <a name="see-also"></a>Zobacz też  
  [Dokumentacja](../../parallel/concrt/reference/reference-concurrency-runtime.md)

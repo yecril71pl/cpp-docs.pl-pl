@@ -1,5 +1,5 @@
 ---
-title: -Za-, - Ze (Wyłącz rozszerzenia językowe) | Dokumentacja firmy Microsoft
+title: -Za, - Ze (Wyłącz rozszerzenia językowe) | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -28,15 +28,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2949a3d60af6d9058f02d12aac1fd86dead5affa
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 7e30fb37be6738b7100b84a1898c02ab4230c41b
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32378148"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42597576"
 ---
 # <a name="za-ze-disable-language-extensions"></a>/Za, /Ze (Wyłącz rozszerzenia językowe)
-**/Za** — opcja kompilatora emituje błąd dotyczące konstrukcji języka, które nie są zgodne z ANSI C89 lub ISO C ++ 11. **/Ze** opcję kompilatora, która jest domyślnie włączona, umożliwia korzystanie z rozszerzeń firmy Microsoft.  
+**/Za** kompilator generuje błąd dla konstrukcji języka, które nie są zgodne z ANSI C89 lub ISO C ++ 11. **/Ze** opcji kompilatora, która jest domyślnie włączona, umożliwia korzystanie z rozszerzeń firmy Microsoft.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -48,25 +48,25 @@ ms.locfileid: "32378148"
 ## <a name="remarks"></a>Uwagi  
   
 > [!NOTE]
->  **/Ze** opcji jest przestarzały, ponieważ jego zachowanie jest domyślnie włączone. Zalecane jest użycie [/Zc (zgodność)](../../build/reference/zc-conformance.md) — opcje kompilatora do kontrolowania funkcji rozszerzenia języka. Listę opcji kompilatora przestarzałe, zobacz **uznane za przestarzałe i usunąć — opcje kompilatora** sekcji [kompilatora opcje rozbiciu na kategorie](../../build/reference/compiler-options-listed-by-category.md).  
+>  **/Ze** opcja jest przestarzały, ponieważ jego zachowanie jest domyślnie włączone. Zalecane jest użycie [/Zc (zgodność)](../../build/reference/zc-conformance.md) opcje kompilatora do kontrolowania funkcji rozszerzenia języka. Aby uzyskać listę opcji kompilatora przestarzałe zobacz **usunięte opcje kompilatora i uznane za przestarzałe** sekcji [opcje kompilatora wymienione według kategorii](../../build/reference/compiler-options-listed-by-category.md).  
   
- [!INCLUDE[vcprvc](../../build/includes/vcprvc_md.md)] Kompilatora oferuje wiele funkcji poza tymi, które określono w standardach ANSI C89, ISO C99 lub ISO C++. Te funkcje są nazywane zbiorczo rozszerzenia Microsoft do C i C++. Te rozszerzenia są domyślnie dostępne i nie będzie dostępny podczas **/Za** określono opcję. Aby uzyskać więcej informacji na temat określonych rozszerzeń, zobacz [Extensions firmy Microsoft do C i C++](../../build/reference/microsoft-extensions-to-c-and-cpp.md).  
+ Kompilator języka Visual C++ oferuje pewną liczbę funkcji przekracza określoną w normach ANSI C89, ISO C99 lub ISO C++. Te funkcje są określane zbiorczo jako rozszerzenia Microsoft do C i C++. Te rozszerzenia są domyślnie dostępne i nie jest dostępna podczas **/Za** określono opcję. Aby uzyskać więcej informacji na temat określonych rozszerzeń, zobacz [Extensions firmy Microsoft do C i C++](../../build/reference/microsoft-extensions-to-c-and-cpp.md).  
   
- Firma Microsoft zaleca, wyłącz rozszerzenia językowe, określając **/Za** opcję, jeśli planujesz portu programu do innych środowisk. Gdy **/Za** określono kompilator traktuje rozszerzone słowa kluczowe jako proste identyfikatory firmy Microsoft, wyłącza rozszerzenia Microsoft i automatycznie definiuje `__STDC__` wstępnie zdefiniowanego makra dla programów C.  
+ Firma Microsoft zaleca, wyłącz rozszerzenia językowe, określając **/Za** opcję, jeśli planujesz portu program do innych środowisk. Gdy **/Za** jest określony, kompilator traktuje rozszerzone słów kluczowych jako identyfikatorów proste firmy Microsoft, wyłącza rozszerzenia Microsoft i automatycznie definiuje `__STDC__` wstępnie zdefiniowane makro dla programów C.  
   
- Inne opcje kompilatora używane z **/Za** mogą mieć wpływ na sposób kompilator zapewnia zgodność standardów. Na przykład **/Za** i [/fp (określenie zachowania Floating-Point)](../../build/reference/fp-specify-floating-point-behavior.md) może spowodować typ zmiennoprzecinkowy zachowanie podwyższania poziomu, które nie jest zgodna z ISO C99 lub C ++ 11 standardów.  
+ Inne opcje kompilatora, używane z **/Za** mogą mieć wpływ na sposób kompilator zapewnia zgodność ze standardami. Na przykład **/Za** i [/FP (określenie zachowania zmiennopozycyjna)](../../build/reference/fp-specify-floating-point-behavior.md) może skutkować zachowanie promocji typu zmiennoprzecinkowego, który nie jest zgodny ISO C99 lub C ++ 11 standardy.  
   
- Dla metody Określ ustawienia zachowania określonych zgodność standardy, zobacz [/Zc](../../build/reference/zc-conformance.md) — opcja kompilatora.  
+ Sposoby, aby określić ustawienia zachowania określonych zgodność standardy, można zobaczyć [/Zc](../../build/reference/zc-conformance.md) — opcja kompilatora.  
   
- Aby uzyskać więcej informacji dotyczących problemów zgodność z [!INCLUDE[vcprvc](../../build/includes/vcprvc_md.md)], zobacz [niestandardowe zachowanie](../../cpp/nonstandard-behavior.md).  
+ Aby uzyskać więcej informacji na temat problemów ze zgodnością w języku Visual C++, zobacz [niestandardowe zachowanie](../../cpp/nonstandard-behavior.md).  
   
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Aby ustawić tę opcję kompilatora w środowisku programowania Visual Studio  
   
-1.  Otwórz projekt **strony właściwości** okno dialogowe. Aby uzyskać więcej informacji, zobacz [Praca z właściwościami projektu](../../ide/working-with-project-properties.md).  
+1.  Otwórz projekt **stron właściwości** okno dialogowe. Aby uzyskać więcej informacji, zobacz [Praca z właściwościami projektu](../../ide/working-with-project-properties.md).  
   
 2.  W okienku nawigacji wybierz **właściwości konfiguracji**, **C/C++**, **języka**.  
   
-3.  Modyfikowanie **Wyłącz rozszerzenia językowe** właściwości.  
+3.  Modyfikowanie **Wyłącz rozszerzenia języka** właściwości.  
   
 ### <a name="to-set-this-compiler-option-programmatically"></a>Aby programowo ustawić tę opcję kompilatora  
   

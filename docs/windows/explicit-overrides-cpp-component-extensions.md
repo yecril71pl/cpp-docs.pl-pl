@@ -15,166 +15,173 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 1dcf129f551900792638018fa846557120e53e96
-ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
+ms.openlocfilehash: 3ce2f65fd740fd2bf133d65b25cbb52838c53dd2
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39644355"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42601215"
 ---
 # <a name="explicit-overrides--c-component-extensions"></a>Jawne zastąpienia (C++ Component Extensions)
-W tym temacie omówiono sposób jawnie przesłonić składowej klasy bazowej lub interfejsu. Nazwanego przesłaniania (jawne) należy używać tylko aby przesłonić metodę z metodą pochodnej, która ma inną nazwę.  
-  
-## <a name="all-runtimes"></a>Wszystkie środowiska wykonawcze  
-### <a name="syntax"></a>Składnia
-  
-```cpp  
-overriding-function-declarator = type::function [,type::function] { overriding-function-definition }  
-overriding-function-declarator = function { overriding-function-definition }  
-```  
 
-### <a name="parameters"></a>Parametry 
- *zastępowanie--deklaratora funkcji*  
- Zwracany typ, nazwa i argument lista przesłanianie funkcji.  Pamiętaj, że funkcja pomijania muszą mieć taką samą nazwę jak przesłaniana funkcja.  
-  
- *Typ*  
- Typ podstawowy, zawierającego funkcję, aby zastąpić.  
-  
- *— Funkcja*  
- Rozdzielana przecinkami lista co najmniej jedną nazwę funkcji do zastąpienia.  
-  
- *zastępowanie funkcji definicji*  
- Instrukcje treści funkcji, które definiują przesłanianie funkcji.  
-  
+W tym temacie omówiono sposób jawnie przesłonić składowej klasy bazowej lub interfejsu. Nazwanego przesłaniania (jawne) należy używać tylko aby przesłonić metodę z metodą pochodnej, która ma inną nazwę.
+
+## <a name="all-runtimes"></a>Wszystkie środowiska wykonawcze
+
+### <a name="syntax"></a>Składnia
+
+```cpp
+overriding-function-declarator = type::function [,type::function] { overriding-function-definition }
+overriding-function-declarator = function { overriding-function-definition }
+```
+
+### <a name="parameters"></a>Parametry
+
+*zastępowanie--deklaratora funkcji*  
+Zwracany typ, nazwa i argument lista przesłanianie funkcji.  Pamiętaj, że funkcja pomijania muszą mieć taką samą nazwę jak przesłaniana funkcja.
+
+*Typ*  
+Typ podstawowy, zawierającego funkcję, aby zastąpić.
+
+*— Funkcja*  
+Rozdzielana przecinkami lista co najmniej jedną nazwę funkcji do zastąpienia.
+
+*zastępowanie funkcji definicji*  
+Instrukcje treści funkcji, które definiują przesłanianie funkcji.
+
 ### <a name="remarks"></a>Uwagi
-  
- Używać jawnych zastąpień w utworzenie aliasu dla sygnatury metody lub dostarczać różne implementacje dla metod witht taki sam podpis.  
-  
- Aby dowiedzieć się, jak modyfikowanie zachowania typy dziedziczone i członkowie typów dziedziczonych, zobacz [zastąpienie specyfikatorów](../windows/override-specifiers-cpp-component-extensions.md).  
-  
-## <a name="windows-runtime"></a>Środowisko wykonawcze systemu Windows  
-  
-### <a name="requirements"></a>Wymagania  
- — Opcja kompilatora: `/ZW`  
-  
-## <a name="common-language-runtime"></a>środowiska uruchomieniowe w trakcie wykonania 
+
+Używać jawnych zastąpień w utworzenie aliasu dla sygnatury metody lub dostarczać różne implementacje dla metod witht taki sam podpis.
+
+Aby dowiedzieć się, jak modyfikowanie zachowania typy dziedziczone i członkowie typów dziedziczonych, zobacz [zastąpienie specyfikatorów](../windows/override-specifiers-cpp-component-extensions.md).
+
+## <a name="windows-runtime"></a>Środowisko wykonawcze systemu Windows
+
+### <a name="requirements"></a>Wymagania
+
+— Opcja kompilatora: `/ZW`
+
+## <a name="common-language-runtime"></a>środowiska uruchomieniowe w trakcie wykonania
+
 ### <a name="remarks"></a>Uwagi
-  
- W przypadku przesłania informacji na temat jawne, w kodzie natywnym lub kodu skompilowanego z `/clr:oldSyntax`, zobacz [jawne zastępowanie](../cpp/explicit-overrides-cpp.md).  
-  
-### <a name="requirements"></a>Wymagania  
- — Opcja kompilatora: `/clr`  
-  
-### <a name="examples"></a>Przykłady   
-  
- Poniższy przykład kodu pokazuje prosty, niejawne zastąpienia i implementacji elementu członkowskiego w interfejsie zgodnym podstawowego nie przy użyciu jawne przesłonięcia.  
-  
-```cpp  
-// explicit_override_1.cpp  
-// compile with: /clr  
-interface struct I1 {  
-   virtual void f();  
-};  
-  
-ref class X : public I1 {  
-public:  
-   virtual void f() {  
-      System::Console::WriteLine("X::f override of I1::f");  
-   }  
-};  
-  
-int main() {  
-   I1 ^ MyI = gcnew X;  
-   MyI -> f();  
-}  
-```  
-  
-```Output  
-X::f override of I1::f  
-```  
-  
- Poniższy przykład kodu pokazuje sposób implementacji wszystkich członków interfejsu za pomocą wspólnego podpisu przy użyciu składnia jawnego przesłaniania.  
-  
-```cpp  
-// explicit_override_2.cpp  
-// compile with: /clr  
-interface struct I1 {  
-   virtual void f();  
-};  
-  
-interface struct I2 {  
-   virtual void f();  
-};  
-  
-ref struct X : public I1, I2 {  
-   virtual void f() = I1::f, I2::f {  
-      System::Console::WriteLine("X::f override of I1::f and I2::f");  
-   }  
-};  
-  
-int main() {  
-   I1 ^ MyI = gcnew X;  
-   I2 ^ MyI2 = gcnew X;  
-   MyI -> f();  
-   MyI2 -> f();  
-}  
-```  
-  
-```Output  
-X::f override of I1::f and I2::f  
-X::f override of I1::f and I2::f  
-```  
-  
- Poniższy przykład kodu pokazuje, jak zastąpienia funkcji może mieć inną nazwę funkcji, które implementuje.  
-  
-```cpp  
-// explicit_override_3.cpp  
-// compile with: /clr  
-interface struct I1 {  
-   virtual void f();  
-};  
-  
-ref class X : public I1 {  
-public:  
-   virtual void g() = I1::f {  
-      System::Console::WriteLine("X::g");  
-   }  
-};  
-  
-int main() {  
-   I1 ^ a = gcnew X;  
-   a->f();  
-}  
-```  
-  
-```Output  
-X::g  
-```  
-  
- Poniższy przykład kodu pokazuje implementacja interfejsu jawnego, który implementuje zbiór bezpiecznego typu.  
-  
-```cpp  
-// explicit_override_4.cpp  
-// compile with: /clr /LD  
-using namespace System;  
-ref class R : ICloneable {  
-   int X;  
-  
-   virtual Object^ C() sealed = ICloneable::Clone {  
-      return this->Clone();  
-   }  
-  
-public:  
-   R() : X(0) {}  
-   R(int x) : X(x) {}  
-  
-   virtual R^ Clone() {  
-      R^ r = gcnew R;  
-      r->X = this->X;  
-      return r;  
-   }  
-};  
-```  
-  
-## <a name="see-also"></a>Zobacz też  
- [Component Extensions dla platform środowiska uruchomieniowego](../windows/component-extensions-for-runtime-platforms.md)
+
+W przypadku przesłania informacji na temat jawne, w kodzie natywnym lub kodu skompilowanego z `/clr:oldSyntax`, zobacz [jawne zastępowanie](../cpp/explicit-overrides-cpp.md).
+
+### <a name="requirements"></a>Wymagania
+
+— Opcja kompilatora: `/clr`
+
+### <a name="examples"></a>Przykłady
+
+Poniższy przykład kodu pokazuje prosty, niejawne zastąpienia i implementacji elementu członkowskiego w interfejsie zgodnym podstawowego nie przy użyciu jawne przesłonięcia.
+
+```cpp
+// explicit_override_1.cpp
+// compile with: /clr
+interface struct I1 {
+   virtual void f();
+};
+
+ref class X : public I1 {
+public:
+   virtual void f() {
+      System::Console::WriteLine("X::f override of I1::f");
+   }
+};
+
+int main() {
+   I1 ^ MyI = gcnew X;
+   MyI -> f();
+}
+```
+
+```Output
+X::f override of I1::f
+```
+
+Poniższy przykład kodu pokazuje sposób implementacji wszystkich członków interfejsu za pomocą wspólnego podpisu przy użyciu składnia jawnego przesłaniania.
+
+```cpp
+// explicit_override_2.cpp
+// compile with: /clr
+interface struct I1 {
+   virtual void f();
+};
+
+interface struct I2 {
+   virtual void f();
+};
+
+ref struct X : public I1, I2 {
+   virtual void f() = I1::f, I2::f {
+      System::Console::WriteLine("X::f override of I1::f and I2::f");
+   }
+};
+
+int main() {
+   I1 ^ MyI = gcnew X;
+   I2 ^ MyI2 = gcnew X;
+   MyI -> f();
+   MyI2 -> f();
+}
+```
+
+```Output
+X::f override of I1::f and I2::f
+X::f override of I1::f and I2::f
+```
+
+Poniższy przykład kodu pokazuje, jak zastąpienia funkcji może mieć inną nazwę funkcji, które implementuje.
+
+```cpp
+// explicit_override_3.cpp
+// compile with: /clr
+interface struct I1 {
+   virtual void f();
+};
+
+ref class X : public I1 {
+public:
+   virtual void g() = I1::f {
+      System::Console::WriteLine("X::g");
+   }
+};
+
+int main() {
+   I1 ^ a = gcnew X;
+   a->f();
+}
+```
+
+```Output
+X::g
+```
+
+Poniższy przykład kodu pokazuje implementacja interfejsu jawnego, który implementuje zbiór bezpiecznego typu.
+
+```cpp
+// explicit_override_4.cpp
+// compile with: /clr /LD
+using namespace System;
+ref class R : ICloneable {
+   int X;
+
+   virtual Object^ C() sealed = ICloneable::Clone {
+      return this->Clone();
+   }
+
+public:
+   R() : X(0) {}
+   R(int x) : X(x) {}
+
+   virtual R^ Clone() {
+      R^ r = gcnew R;
+      r->X = this->X;
+      return r;
+   }
+};
+```
+
+## <a name="see-also"></a>Zobacz też
+
+[Component Extensions dla platform środowiska uruchomieniowego](../windows/component-extensions-for-runtime-platforms.md)

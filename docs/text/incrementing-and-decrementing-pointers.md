@@ -13,29 +13,29 @@ helpviewer_keywords:
 - pointers [C++], multibyte characters
 - decrementing pointers
 ms.assetid: 0872b4a0-e2bd-4004-8319-070efb76f2fd
-author: ghogen
-ms.author: ghogen
+author: mikeblome
+ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 82a6f792ce622481cbbab821b8a5446186bd692d
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: f4fff5d7ec20ce052e4d831f1556432186ebc7bb
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33857132"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42603363"
 ---
 # <a name="incrementing-and-decrementing-pointers"></a>Inkrementacja i dekrementacja wskaźników
 Użyj następujących wskazówek:  
   
--   Wskaż bajty wiodące, nie na końcu bajtów. Nie jest zwykle bezpieczne wskaźnika na bajt. Jest zwykle bezpieczniejsze Skanuj ciąg do przodu, a nie odwrotnie.  
+-   Wskaż bajty wiodące, nie końcu bajtów. Nie jest zwykle bezpieczne wskaźnika na bajt. Jest to zwykle bezpieczniejsze skanować ciąg do przodu, a nie w odwrotnej kolejności.  
   
--   Istnieją wskaźnika przyrostu/dekrementacja funkcje i makra dostępne przenieść całej znaków:  
+-   Istnieją wskaźnika inkrementacyjnego/dekrementacyjnego funkcje i makra dostępne, które przenieść cały znaków:  
   
     ```  
     sz1++;  
     ```  
   
-     Staje się:  
+     staje się:  
   
     ```  
     sz1 = _mbsinc( sz1 );  
@@ -43,27 +43,27 @@ Użyj następujących wskazówek:
   
      `_mbsinc` i `_mbsdec` funkcje poprawnie zwiększyć i zmniejszyć w `character` jednostki, niezależnie od rozmiaru znaków.  
   
--   Zmniejsza należy wskaźnik do head ciągu, tak jak poniżej:  
+-   Dekrementuje należy wskaźnik porównanie ciągu, tak jak poniżej:  
   
     ```  
     sz2--;  
     ```  
   
-     Staje się:  
+     staje się:  
   
     ```  
     sz2 = _mbsdec( sz2Head, sz2 );  
     ```  
   
-     Alternatywnie head wskaźnik może być nieprawidłowy znak w ciągu tak, aby:  
+     Alternatywnie wskaźnik głównego może być nieprawidłowy znak w ciągu, tak, aby:  
   
     ```  
     sz2Head < sz2  
     ```  
   
-     Musi mieć wskaźnik do znanego bajtu prawidłowe.  
+     Konieczne jest posiadanie wskaźnik do znanego, nieprawidłowy bajt.  
   
--   Należy zachować wskaźnik do poprzedni znak na szybsze wywołań `_mbsdec`.  
+-   Możesz chcieć zachować wskaźnik do poprzedniego znaku na szybsze wywołań `_mbsdec`.  
   
 ## <a name="see-also"></a>Zobacz też  
  [Porady dotyczące programowania MBCS](../text/mbcs-programming-tips.md)   

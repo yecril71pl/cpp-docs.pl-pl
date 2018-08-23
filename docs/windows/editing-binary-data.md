@@ -18,31 +18,34 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 24b2a5eeeaa0d07ebfc1cf1a7fcdb1b2b7274f03
-ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
+ms.openlocfilehash: 96a4370d56e2f5d9758e97010965668bd08306c3
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39651719"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42593008"
 ---
 # <a name="editing-binary-data"></a>Edytowanie danych binarnych
-### <a name="to-edit-a-resource-in-the-binary-editor"></a>Edytowanie zasobów w edytorze binarnym  
-  
-1.  Wybierz bajtów, którą chcesz edytować.  
-  
-     **Kartę** klucz przenosi fokus między szesnastkowym i sekcje ASCII **binarne** edytora. Możesz użyć **Page Up** i **Page Down** klucze przejście przez jeden ekran zasobów w danym momencie.  
-  
-2.  Wpisz nową wartość.  
-  
-     Wartość natychmiast zmienia się w sekcjach ASCII i szesnastkowym i otrzymuje fokus do następnej wartości w wierszu.  
-  
-    > [!NOTE]
-    >  **Binarne** edytora akceptuje automatycznie zmian, po zamknięciu edytora.  
-  
- Aby uzyskać informacje na temat dodawania zasobów do projektów zarządzanych, zobacz [zasoby w aplikacjach pulpitu](/dotnet/framework/resources/index) w *przewodniku dewelopera .NET Framework*. Aby uzyskać informacji na temat ręcznego dodawania plików zasobów do projektów zarządzanych, uzyskiwania dostępu do zasobów, wyświetlania statycznych zasobów i przypisywania ciągów zasobów do właściwości, zobacz [Creating Resource Files dla aplikacji klasycznych](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Aby uzyskać informacji na temat globalizacja i lokalizacja zasobów w aplikacjach zarządzanych, zobacz [Globalizing i lokalizowanie aplikacji programu .NET Framework](/dotnet/standard/globalization-localization/index).  
-  
-## <a name="requirements"></a>Wymagania   
- Brak  
-  
-## <a name="see-also"></a>Zobacz też  
- [Edytor plików binarnych](binary-editor.md)
+
+### <a name="to-edit-a-resource-in-the-binary-editor"></a>Edytowanie zasobów w edytorze binarnym
+
+1. Wybierz bajtów, którą chcesz edytować.
+
+   **Kartę** klucz przenosi fokus między szesnastkowym i sekcje ASCII **binarne** edytora. Możesz użyć **Page Up** i **Page Down** klucze przejście przez jeden ekran zasobów w danym momencie.
+
+2. Wpisz nową wartość.
+
+   Wartość natychmiast zmienia się w sekcjach ASCII i szesnastkowym i otrzymuje fokus do następnej wartości w wierszu.
+
+   > [!NOTE]
+   > **Binarne** edytora akceptuje automatycznie zmian, po zamknięciu edytora.
+
+Aby uzyskać informacje na temat dodawania zasobów do projektów zarządzanych, zobacz [zasoby w aplikacjach pulpitu](/dotnet/framework/resources/index) w *przewodniku dewelopera .NET Framework*. Aby uzyskać informacji na temat ręcznego dodawania plików zasobów do projektów zarządzanych, uzyskiwania dostępu do zasobów, wyświetlania statycznych zasobów i przypisywania ciągów zasobów do właściwości, zobacz [Creating Resource Files dla aplikacji klasycznych](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Aby uzyskać informacji na temat globalizacja i lokalizacja zasobów w aplikacjach zarządzanych, zobacz [Globalizing i lokalizowanie aplikacji programu .NET Framework](/dotnet/standard/globalization-localization/index).
+
+## <a name="requirements"></a>Wymagania
+
+Brak
+
+## <a name="see-also"></a>Zobacz też
+
+[Edytor plików binarnych](binary-editor.md)

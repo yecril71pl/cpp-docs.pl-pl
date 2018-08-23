@@ -1,5 +1,5 @@
 ---
-title: Namespace platform::METADATA | Dokumentacja firmy Microsoft
+title: Platform::METADATA Namespace | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 12/30/2016
 ms.technology: cpp-windows
@@ -11,19 +11,19 @@ dev_langs:
 helpviewer_keywords:
 - Platform::Metadata Namespace
 ms.assetid: e3e114d8-a4b0-47f0-865a-9ce9d7212e86
-author: ghogen
-ms.author: ghogen
+author: mikeblome
+ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 11dc54463207efade9a8ebb7179654d0b1e18909
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: f1a755314adec83e8853c2c29d9c9d9bb363575b
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33088027"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42607809"
 ---
-# <a name="platformmetadata-namespace"></a>Namespace platform::METADATA
-Ta przestrzeń nazw zawiera atrybuty, które modyfikują deklaracje typów.  
+# <a name="platformmetadata-namespace"></a>Platform::METADATA Namespace
+Ta przestrzeń nazw zawiera atrybuty, które modyfikowania deklaracji typów.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -35,14 +35,14 @@ namespace Platform {
 ```  
   
 ### <a name="members"></a>Elementy członkowskie  
- Mimo że ta przestrzeń nazw jest przeznaczony do użytku wewnętrznego, przeglądarki można wyświetlić następujące elementy członkowskie tej przestrzeni nazw.  
+ Chociaż ta przestrzeń nazw jest przeznaczony do użytku wewnętrznego, przeglądarki można wyświetlić następujące elementy członkowskie tej przestrzeni nazw.  
   
 |Nazwa|Uwagi|  
 |----------|------------|  
-|Atrybut|Klasa podstawowa dla atrybutów.|  
-|[Platform::Metadata::DefaultMemberAttribute, atrybut](../cppcx/platform-metadata-defaultmemberattribute-attribute.md)|Wskazuje preferowaną funkcji do wywołania między kilka możliwych przeciążonej funkcji.|  
-|[Atrybut platform::METADATA::FlagsAttribute](../cppcx/platform-metadata-flagsattribute-attribute.md)flagi|Deklaruje wyliczenie jako wyliczenie pól bitowych.<br /><br /> Poniższy przykład przedstawia sposób zastosowania `Flags` atrybutu wyliczenia.<br /><br /> `[Flags] enum class MyEnumeration { enumA = 1, enumB = 2, enumC = 3}`|  
-|[Platform::Metadata::RuntimeClassNameAttribute](../cppcx/platform-metadata-runtimeclassname.md)|Zapewnia, że prywatnej klasy ref ma prawidłowe środowisko uruchomieniowe nazwę klasy.|  
+|Atrybut|Klasę bazową dla atrybutów.|  
+|[Platform::Metadata::DefaultMemberAttribute, atrybut](../cppcx/platform-metadata-defaultmemberattribute-attribute.md)|Wskazuje preferowana funkcja do wywołania między kilka możliwych przeciążonej funkcji.|  
+|[Platform::METADATA:: flagsattribute, atrybut](../cppcx/platform-metadata-flagsattribute-attribute.md)flagi|Deklaruje wyliczenie, jako wyliczenie pól bitowych.<br /><br /> Poniższy przykład pokazuje, jak zastosować `Flags` atrybutu wyliczenia.<br /><br /> `[Flags] enum class MyEnumeration { enumA = 1, enumB = 2, enumC = 3}`|  
+|[Platform::Metadata::RuntimeClassNameAttribute](../cppcx/platform-metadata-runtimeclassname.md)|Zapewnia, że prywatnej klasy ref ma nazwę klasy środowiska uruchomieniowego prawidłowe.|  
   
 ## <a name="inheritance-hierarchy"></a>Hierarchia dziedziczenia  
  `Platform`  

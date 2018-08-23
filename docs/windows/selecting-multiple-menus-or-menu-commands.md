@@ -17,24 +17,27 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 02293fce154fa9c4c98c583de02e8967f4d3957b
-ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
+ms.openlocfilehash: a90aab0fae3edbb54dfdd9176ffe47a18ad1796a
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/09/2018
-ms.locfileid: "40020216"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42596944"
 ---
 # <a name="selecting-multiple-menus-or-menu-commands"></a>Zaznaczanie kilku menu lub poleceń menu
-Możesz wybrać wiele nazw menu lub poleceń menu, aby wykonywały operacje zbiorcze, takie jak usuwanie lub zmiana właściwości.  
-  
-### <a name="to-select-multiple-menu-commands"></a>Aby wybrać wiele poleceń menu  
-  
-1.  Przytrzymując naciśnięty **Ctrl** klucza, kliknij przycisk menu i podmenu polecenia, które mają.  
-  
- Aby uzyskać informacje na temat dodawania zasobów do projektów zarządzanych, zobacz [zasoby w aplikacjach pulpitu](/dotnet/framework/resources/index) w *przewodniku dewelopera .NET Framework*.  
-  
-## <a name="requirements"></a>Wymagania  
- Win32  
-  
-## <a name="see-also"></a>Zobacz też  
- [Edytor menu](../windows/menu-editor.md)
+
+Możesz wybrać wiele nazw menu lub poleceń menu, aby wykonywały operacje zbiorcze, takie jak usuwanie lub zmiana właściwości.
+
+### <a name="to-select-multiple-menu-commands"></a>Aby wybrać wiele poleceń menu
+
+1. Przytrzymując naciśnięty **Ctrl** klucza, kliknij przycisk menu i podmenu polecenia, które mają.
+
+Aby uzyskać informacje na temat dodawania zasobów do projektów zarządzanych, zobacz [zasoby w aplikacjach pulpitu](/dotnet/framework/resources/index) w *przewodniku dewelopera .NET Framework*.
+
+## <a name="requirements"></a>Wymagania
+
+Win32
+
+## <a name="see-also"></a>Zobacz też
+
+[Edytor menu](../windows/menu-editor.md)

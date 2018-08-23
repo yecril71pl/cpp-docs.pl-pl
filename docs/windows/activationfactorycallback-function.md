@@ -17,44 +17,50 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 858232702367aef62d0228f2e8653774896bd87f
-ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
+ms.openlocfilehash: 7979dd21d68c5b1e2606573a5271fc8deafdfb07
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39647186"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42604183"
 ---
 # <a name="activationfactorycallback-function"></a>ActivationFactoryCallback — Funkcja
-Obsługuje infrastrukturę biblioteki WRL i nie jest przeznaczona do użycia bezpośrednio w kodzie.  
-  
-## <a name="syntax"></a>Składnia  
-  
-```cpp  
-inline HRESULT STDAPICALLTYPE ActivationFactoryCallback(  
-   HSTRING activationId,  
-   IActivationFactory **ppFactory  
-);  
-```  
-  
-### <a name="parameters"></a>Parametry  
- *activationid —*  
- Obsługa na ciąg, który określa nazwę klasy środowiska uruchomieniowego.  
-  
- *ppFactory*  
- Po zakończeniu tej operacji, fabryką aktywacji, który odpowiada parametrowi *activationid —*.  
-  
-## <a name="return-value"></a>Wartość zwracana  
- S_OK w przypadku powodzenia; w przeciwnym razie wartość HRESULT, który opisuje błąd. Prawdopodobnie niepowodzenie HRESULTs są CLASS_E_CLASSNOTAVAILABLE i E_INVALIDARG.  
-  
-## <a name="remarks"></a>Uwagi  
- Pobiera fabrykę aktywacji dla identyfikatora określonego aktywacji.  
-  
- Środowisko wykonawcze Windows wywołuje tę funkcję wywołania zwrotnego, aby zażądać obiektu określonego przez nazwę klasy środowiska uruchomieniowego.  
-  
-## <a name="requirements"></a>Wymagania  
- **Nagłówek:** module.h  
-  
- **Namespace:** Microsoft::wrl:: details  
-  
-## <a name="see-also"></a>Zobacz też  
- [Microsoft::WRL::Details, przestrzeń nazw](../windows/microsoft-wrl-details-namespace.md)
+
+Obsługuje infrastrukturę biblioteki WRL i nie jest przeznaczona do użycia bezpośrednio w kodzie.
+
+## <a name="syntax"></a>Składnia
+
+```cpp
+inline HRESULT STDAPICALLTYPE ActivationFactoryCallback(
+   HSTRING activationId,
+   IActivationFactory **ppFactory
+);
+```
+
+### <a name="parameters"></a>Parametry
+
+*activationid —*  
+Obsługa na ciąg, który określa nazwę klasy środowiska uruchomieniowego.
+
+*ppFactory*  
+Po zakończeniu tej operacji, fabryką aktywacji, który odpowiada parametrowi *activationid —*.
+
+## <a name="return-value"></a>Wartość zwracana
+
+S_OK w przypadku powodzenia; w przeciwnym razie wartość HRESULT, który opisuje błąd. Prawdopodobnie niepowodzenie HRESULTs są CLASS_E_CLASSNOTAVAILABLE i E_INVALIDARG.
+
+## <a name="remarks"></a>Uwagi
+
+Pobiera fabrykę aktywacji dla identyfikatora określonego aktywacji.
+
+Środowisko wykonawcze Windows wywołuje tę funkcję wywołania zwrotnego, aby zażądać obiektu określonego przez nazwę klasy środowiska uruchomieniowego.
+
+## <a name="requirements"></a>Wymagania
+
+**Nagłówek:** module.h
+
+**Namespace:** Microsoft::wrl:: details
+
+## <a name="see-also"></a>Zobacz też
+
+[Microsoft::WRL::Details, przestrzeń nazw](../windows/microsoft-wrl-details-namespace.md)

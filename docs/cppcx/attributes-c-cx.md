@@ -5,28 +5,28 @@ ms.date: 12/30/2016
 ms.technology: cpp-windows
 ms.topic: language-reference
 ms.assetid: 4438e03c-4de3-433d-abcc-31aa863bc0e0
-author: ghogen
-ms.author: ghogen
+author: mikeblome
+ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 627e89c844b97637897c9b5eb6c1cc7e32081fd6
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 7db8d6c527842cd3784623002fba001a4174c1fc
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33086847"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42601141"
 ---
 # <a name="attributes-ccx"></a>Atrybuty (C + +/ CX)
-Atrybut jest specjalnym rodzajem klasy ref, która może dołączony w nawiasach kwadratowych do typów środowiska wykonawczego systemu Windows i metody, aby określić niektórych zachowania podczas tworzenia metadanych. Kilka wstępnie zdefiniowanych atrybutów — na przykład [Windows::Foundation::Metadata::WebHostHidden](http://msdn.microsoft.com/library/windows/apps/windows.foundation.metadata.webhosthiddenattribute.aspx)— są często używane w języku C + +/ CX kodu. Ten przykład przedstawia, jak atrybut jest stosowany do klasy:  
+Atrybut jest specjalnym rodzajem klasy referencyjnej, która może zostać dołączony w nawiasach kwadratowych do typów środowiska wykonawczego Windows i metod, aby określić niektóre zachowania podczas tworzenia metadanych. Kilka wstępnie zdefiniowanych atrybutów — na przykład [Windows::Foundation::Metadata::WebHostHidden](http://msdn.microsoft.com/library/windows/apps/windows.foundation.metadata.webhosthiddenattribute.aspx)— są często używane w języku C + +/ CX kodu. Ten przykład pokazuje, jak ten atrybut jest stosowany do klasy:  
   
  [!code-cpp[cx_attributes#01](../cppcx/codesnippet/CPP/cx_attributes/class1.h#01)]  
   
 ## <a name="custom-attributes"></a>Atrybuty niestandardowe  
- Istnieje również możliwość definiowania atrybutów niestandardowych. Atrybuty niestandardowe musi spełniać te reguły środowiska wykonawczego systemu Windows:  
+ Można również zdefiniować atrybutów niestandardowych. Atrybutów niestandardowych, które muszą spełniać te reguły Windows Runtime:  
   
--   Atrybuty niestandardowe może zawierać tylko publiczne pola.  
+-   Atrybutów niestandardowych, które mogą zawierać tylko pola publiczne.  
   
--   Pola atrybutu niestandardowego mogą być inicjowane, gdy jest stosowany atrybut do klasy.  
+-   Pola atrybutu niestandardowego może być inicjowana, gdy jest stosowany do klasy.  
   
 -   Pole może być jednego z następujących typów:  
   
@@ -42,9 +42,9 @@ Atrybut jest specjalnym rodzajem klasy ref, która może dołączony w nawiasach
   
     -   Platform::type ^  
   
-    -   Klasa publicznym typie wyliczeniowym (w tym wyliczenia zdefiniowanych przez użytkownika)  
+    -   Klasa publicznym typie wyliczeniowym (z uwzględnieniem wyliczenia zdefiniowanych przez użytkownika)  
   
- Kolejnym przykładzie pokazano, jak może zdefiniować atrybutu niestandardowego, a następnie zainicjować, gdy jest używany.  
+ Następny przykład pokazuje, jak zdefiniować niestandardowy atrybut i następnie zainicjowanie jej, gdy jest używany.  
   
  [!code-cpp[cx_attributes#02](../cppcx/codesnippet/CPP/cx_attributes/class1.h#02)]  
   

@@ -18,47 +18,50 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: e2d32083194efc81fdfe2be1c38eec4ce9ce175d
-ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
+ms.openlocfilehash: 254734bec6649c7181e67d4d2330493b0f22197b
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39642815"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42609440"
 ---
 # <a name="custom-color-selector-dialog-box-image-editor-for-icons"></a>Okno dialogowe wybierania niestandardowego koloru (Edytor obrazów dla ikon)
-To okno dialogowe umożliwia dostosowanie kolorów używanych w przypadku obrazu. Aby uzyskać więcej informacji, zobacz [Dostosowywanie lub zmiana kolorów](../windows/customizing-or-changing-colors-image-editor-for-icons.md).  
-  
- **Wyświetlanie kolor gradientu**  
- Umożliwia zmianę wartości wybrany kolor. Umieść krzyżyk kolor, który chcesz zmienić. Przesuń suwak w górę lub w dół, Zmień jasność lub wartości RGB koloru.  
-  
- **Jasność paska**  
- Ustawia jasność koloru w **gradientu wyświetlania kolorów** pole. Kliknij i przeciągnij białe Strzałka w górę paska dla jasności większy lub w dół za niższą cenę. Należy pamiętać, że **kolor** polu jest wyświetlana Kolor wybrano i wpływ jasność ustawisz.  
-  
- **Kolor**  
- Wyświetla listę aplikacji hue (wartość koło kolorów) kolor, który jest definiowany. Wartości z zakresu od 0 do 240, gdzie 0 jest czerwony, 60 jest żółty, 120 jest zielony, 180 jest błękitny, 200 jest amarantowy i 240 ma kolor niebieski.  
-  
- **HUE**  
- Wyświetla listę aplikacji hue (wartość koło kolorów) kolor, który jest definiowany. Wartości z zakresu od 0 do 240, gdzie 0 jest czerwony, 60 jest żółty, 120 jest zielony, 180 jest błękitny, 200 jest amarantowy i 240 ma kolor niebieski.  
-  
- **NAS.**  
- Określa wartość nasycenie koloru, który jest definiowany. Nasycenie jest ilość koloru w określonym odcieniu. Wartości z zakresu od 0 do 240.  
-  
- **Jaskr.**  
- Wyświetla listę jasności (jasność) kolor, który jest definiowany. Wartości z zakresu od 0 do 240.  
-  
- **Czerwony**  
- Określa wartość czerwony kolor, który jest definiowany. Wartości z zakresu od 0 do 255.  
-  
- **Zielony**  
- Określa wartość zielony kolor, który jest definiowany. Wartości z zakresu od 0 do 255.  
-  
- **Niebieski**  
- Określa wartość niebieskiego kolor, który jest definiowany. Wartości z zakresu od 0 do 255.  
-  
-## <a name="requirements"></a>Wymagania  
- Brak  
-  
-## <a name="see-also"></a>Zobacz też  
- [Menu obrazu](../windows/image-menu-image-editor-for-icons.md)   
- [Dostosowywanie lub zmiana kolorów](../windows/customizing-or-changing-colors-image-editor-for-icons.md)   
- [Okno kolory](../windows/colors-window-image-editor-for-icons.md)
+
+To okno dialogowe umożliwia dostosowanie kolorów używanych w przypadku obrazu. Aby uzyskać więcej informacji, zobacz [Dostosowywanie lub zmiana kolorów](../windows/customizing-or-changing-colors-image-editor-for-icons.md).
+
+**Wyświetlanie kolor gradientu**  
+Umożliwia zmianę wartości wybrany kolor. Umieść krzyżyk kolor, który chcesz zmienić. Przesuń suwak w górę lub w dół, Zmień jasność lub wartości RGB koloru.
+
+**Jasność paska**  
+Ustawia jasność koloru w **gradientu wyświetlania kolorów** pole. Kliknij i przeciągnij białe Strzałka w górę paska dla jasności większy lub w dół za niższą cenę. Należy pamiętać, że **kolor** polu jest wyświetlana Kolor wybrano i wpływ jasność ustawisz.
+
+**Kolor**  
+Wyświetla listę aplikacji hue (wartość koło kolorów) kolor, który jest definiowany. Wartości z zakresu od 0 do 240, gdzie 0 jest czerwony, 60 jest żółty, 120 jest zielony, 180 jest błękitny, 200 jest amarantowy i 240 ma kolor niebieski.
+
+**HUE**  
+Wyświetla listę aplikacji hue (wartość koło kolorów) kolor, który jest definiowany. Wartości z zakresu od 0 do 240, gdzie 0 jest czerwony, 60 jest żółty, 120 jest zielony, 180 jest błękitny, 200 jest amarantowy i 240 ma kolor niebieski.
+
+**NAS.**  
+Określa wartość nasycenie koloru, który jest definiowany. Nasycenie jest ilość koloru w określonym odcieniu. Wartości z zakresu od 0 do 240.
+
+**Jaskr.**  
+Wyświetla listę jasności (jasność) kolor, który jest definiowany. Wartości z zakresu od 0 do 240.
+
+**Czerwony**  
+Określa wartość czerwony kolor, który jest definiowany. Wartości z zakresu od 0 do 255.
+
+**Zielony**  
+Określa wartość zielony kolor, który jest definiowany. Wartości z zakresu od 0 do 255.
+
+**Niebieski**  
+Określa wartość niebieskiego kolor, który jest definiowany. Wartości z zakresu od 0 do 255.
+
+## <a name="requirements"></a>Wymagania
+
+Brak
+
+## <a name="see-also"></a>Zobacz też
+
+[Menu obrazu](../windows/image-menu-image-editor-for-icons.md)  
+[Dostosowywanie lub zmiana kolorów](../windows/customizing-or-changing-colors-image-editor-for-icons.md)  
+[Okno kolory](../windows/colors-window-image-editor-for-icons.md)

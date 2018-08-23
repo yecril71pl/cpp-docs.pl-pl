@@ -21,35 +21,35 @@ helpviewer_keywords:
 - code pages [C++], locales
 - conventions [C++], international character support
 ms.assetid: bd937361-b6d3-4c98-af95-beb7c903187b
-author: ghogen
-ms.author: ghogen
+author: mikeblome
+ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b1c7dd3c5356df7b80f21605e325158e87cc5a71
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 9952f0bf27202c468e38ff3fb6aa701a0d6f9163
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33858149"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42594842"
 ---
 # <a name="locales-and-code-pages"></a>Ustawienia regionalne i strony kodowe
-Identyfikator ustawień regionalnych odzwierciedla konwencje lokalnych i język dla określonego regionu geograficznego. Danego języka może być używany w więcej niż jeden kraj/region; na przykład portugalski jest używany w Brazylia także jak Portugalii. Z drugiej strony kraj/region może mieć więcej niż jednym języku. Na przykład Kanada ma dwa języki: angielski i francuski. W związku z tym Kanada ma dwa różne ustawienia regionalne: kanadyjskich w języku angielskim i francuskim kanadyjskich. Niektóre kategorie zależne od ustawień regionalnych obejmują formatowanie dat i format wyświetlania wartości pieniężnych.  
+Identyfikator ustawień regionalnych odzwierciedla konwencje lokalnych i język w określonym regionie geograficznym. Danego języka, może być używany w więcej niż jednego kraju/regionu; na przykład portugalski jest używany w Brazylii, jak również jak Portugalii. Z drugiej strony kraj/region może mieć więcej niż jeden oficjalnego języka. Na przykład, Kanada, ma dwa języki: języka angielskiego i francuskiego. W związku z tym, Kanada, ma dwa różne ustawienia regionalne: kanadyjski angielski i francuski (kanadyjski). Niektóre kategorie zależne od ustawień regionalnych obejmują formatowanie dat i format wyświetlania wartości pieniężnych.  
   
- Język określa tekstu i formatowanie konwencje, gdy kraj/region sprawdza lokalne konwencje danych. Każdy języka znajduje się unikatowy mapowanie, reprezentowany przez stron kodowych zawierającej znaki spoza alfabetu (np. znaki interpunkcyjne i cyfry). Strona kodowa jest zestawem znaków i jest związane z językiem. W efekcie [ustawień regionalnych](../c-runtime-library/locale.md) to unikatowe połączenie języka, kraju/regionu i strony kodowej. Można zmienić ustawienia strony ustawień regionalnych i kodu w czasie wykonywania przez wywołanie metody [setlocale](../c-runtime-library/reference/setlocale-wsetlocale.md) funkcji.  
+ Określa język, tekstu i formatowania Konwencji, podczas gdy kraj/region określa konwencje lokalnych danych. Każdy język ma unikatowe mapowania, reprezentowane przez stron kodowych, w tym znaki inne niż te w alfabecie (na przykład znaków interpunkcyjnych i cyfry). Strona kodowa jest zestawem znaków i jest powiązany z językiem. W efekcie [ustawień regionalnych](../c-runtime-library/locale.md) to unikatowa kombinacja język, kraj/region i stronę kodową. Można zmienić ustawienie strony ustawień regionalnych i kodu w czasie wykonywania przez wywołanie metody [setlocale](../c-runtime-library/reference/setlocale-wsetlocale.md) funkcji.  
   
- W różnych językach może używać innej strony kodowe. Na przykład stronę kodową ANSI 1252 jest używana w języku angielskim i większość języków europejskich i stronę kodową ANSI 932 służy do japoński Kanji. Prawie wszystkie strony kodowe udostępnianie zestaw znaków ASCII dla najniższej 128 znaków (0x00 0x7F).  
+ Różne strony kodowe użyć różnych językach. Na przykład strona kodowa ANSI 1252 jest używana w języku angielskim i większość języków europejskich i stronę kodową ANSI 932 służy do japoński Kanji. Praktycznie wszystkich stron kodowych udostępnić zestaw znaków ASCII dla najniższej 128 znaków (0x00 0x7F).  
   
- Wszystkie strony kodowej jednobajtowe może być reprezentowana w tabeli (z wpisów 256) jako mapowanie wartości bajtu znaków (łącznie z cyfr i znaków interpunkcyjnych) lub symboli. Wszystkie strony kodowe wielobajtowe również może być reprezentowany jako tabelę bardzo duże (zapisami 64 KB) wartości znaków dwubajtowych. W praktyce jednak ją są zazwyczaj reprezentowany jako tabelę dla najpierw 256 znaków (jednobajtowe), a zakresy dla wartości znaków dwubajtowych.  
+ Wszystkie strony kodowej pojedynczych bajtów może być reprezentowany w tabeli (z wpisy 256) jako mapowanie wartości bajtu znaków (łącznie z cyfr i znaków interpunkcyjnych) lub symbole. Dowolnej strony kodowe wielobajtowe również może być reprezentowany jako tabelę bardzo duże (z wpisy 64 KB) wartości dwubajtowych znaków. W praktyce jednak ją są zwykle reprezentowany jako tabelę dla pierwszych 256 znaków (pojedynczych bajtów), a zakresy dla wartości dwubajtowych.  
   
- Aby uzyskać więcej informacji na temat stron kodowych, zobacz [stron kodowych](../c-runtime-library/code-pages.md).  
+ Aby uzyskać więcej informacji dotyczących stron kodowych, zobacz [stron kodowych](../c-runtime-library/code-pages.md).  
   
- Biblioteki wykonawcze języka C występują dwa typy stron kodowych wewnętrzny: ustawienia regionalne i wielobajtowe. Bieżąca strona kodowa można zmienić podczas wykonywania programu (zobacz dokumentację [setlocale](../c-runtime-library/reference/setlocale-wsetlocale.md) i [_setmbcp —](../c-runtime-library/reference/setmbcp.md) funkcji). Biblioteki wykonawczej mogą również uzyskać i użyj wartości strony kodowej systemu operacyjnego, który jest stały czas wykonywania programu.  
+ Biblioteki wykonawczej C ma dwa typy stron kodowych wewnętrzny: ustawienia regionalne i znaków wielobajtowych. Można zmienić bieżącej stronie kodowej, podczas wykonywania programu (zajrzyj do dokumentacji [setlocale](../c-runtime-library/reference/setlocale-wsetlocale.md) i [_setmbcp](../c-runtime-library/reference/setmbcp.md) funkcji). Ponadto biblioteki wykonawczej może uzyskać i używana wartość strony kodowej systemu operacyjnego, który jest stały czas trwania wykonywania programu.  
   
- Strona kodowa ustawień lokalnych zmiany, zachowanie zestawu zależnego od ustawień regionalnych zmiany funkcji w tym definiowane za pomocą stron kodowych wybrany. Domyślnie wszystkie funkcje zależne od ustawień regionalnych rozpocząć wykonywanie strona kodowa ustawień lokalnych unikatowe dla ustawień regionalnych "C". Strona kodowa ustawień regionalnych wewnętrzny (a także inne właściwości specyficzne dla ustawień regionalnych) można zmienić wywołując `setlocale` funkcji. Wywołanie `setlocale`(lc_all —, "") ustawia ustawienia regionalne do wskazanej przez użytkownika ustawień regionalnych systemu operacyjnego.  
+ Strona kodowa ustawień lokalnych zmiany, zachowanie zależne od ustawień regionalnych zbiór funkcji zmiany, definiowane przez stronę kodową wybrany. Domyślnie wszystkie funkcje zależne od ustawień regionalnych rozpocząć wykonywania za pomocą strona kodowa ustawień lokalnych unikatowe dla ustawień regionalnych "C". Możesz zmienić stronę kodową wewnętrznego ustawienia regionalne (a także inne właściwości specyficzne dla ustawień regionalnych) przez wywołanie metody `setlocale` funkcji. Wywołanie `setlocale`(LC_ALL, "") ustawia ustawienia regionalne, wskazywanym przez ustawienia regionalne użytkownika systemu operacyjnego.  
   
- Podobnie strony kodowe wielobajtowe zmiany, zachowanie zmiany wielobajtowe funkcji, który definiowane za pomocą stron kodowych wybrany. Domyślnie wszystkie funkcje wielobajtowe rozpocząć wykonywania za pomocą strony kodowe wielobajtowe odpowiadający domyślna strona kodowa systemu operacyjnego. Strony kodowe wielobajtowe wewnętrzny można zmienić, wywołując `_setmbcp` funkcji.  
+ Podobnie, po wielobajtowa strona kodowa zmienia zachowanie wielobajtowych funkcji zmiany, definiowane przez stronę kodową wybrany. Domyślnie wszystkie funkcje wielobajtowych zaczyna się od wykonania stronę kodu wielobajtowego, odpowiadający systemowi operacyjnemu domyślną stroną kodową. Można zmienić wewnętrznych wielobajtowa strona kodowa przez wywołanie metody `_setmbcp` funkcji.  
   
- Funkcja wykonawcze języka C `setlocale` ustawia zmiany i wysyła zapytanie do niektórych lub wszystkich informacji o ustawieniach regionalnych bieżącego programu. [_Wsetlocale —](../c-runtime-library/reference/setlocale-wsetlocale.md) procedura jest wersja znaków dwubajtowych `setlocale`; argumentów i wartości zwracanych z `_wsetlocale` są ciągami znaków dwubajtowych.  
+ Funkcja środowiska wykonawczego języka C `setlocale` Ustawia, zmiany lub zapytania, niektórych lub wszystkich informacji o ustawieniach regionalnych bieżącego programu. [_Wsetlocale](../c-runtime-library/reference/setlocale-wsetlocale.md) procedura jest wersją znaków dwubajtowych `setlocale`; argumenty i wartości zwracane `_wsetlocale` są ciągami znaków dwubajtowych.  
   
 ## <a name="see-also"></a>Zobacz też  
  [Unicode i MBCS](../text/unicode-and-mbcs.md)   

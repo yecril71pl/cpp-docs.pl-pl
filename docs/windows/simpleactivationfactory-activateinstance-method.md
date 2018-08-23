@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 260d7e2993bd92297167c23458d37ba80919306f
-ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
+ms.openlocfilehash: f83c98d35ce64ef51a15bccf0f33695fd266d0af
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/09/2018
-ms.locfileid: "40013388"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42609573"
 ---
 # <a name="simpleactivationfactoryactivateinstance-method"></a>SimpleActivationFactory::ActivateInstance — Metoda
 
@@ -37,6 +37,7 @@ STDMETHOD( ActivateInstance )(
 ```
 
 ### <a name="parameters"></a>Parametry
+
 *ppvObject*  
 Po zakończeniu tej operacji, wskaźnik do wystąpienia obiektu określonego przez `Base` parametru szablonu klasy.
 
@@ -55,4 +56,5 @@ Jeśli `__WRL_STRICT__` jest zdefiniowany, błąd potwierdzenia jest emitowane, 
 **Namespace:** Microsoft::WRL
 
 ## <a name="see-also"></a>Zobacz też
- [SimpleActivationFactory, klasa](../windows/simpleactivationfactory-class.md)
+
+[SimpleActivationFactory, klasa](../windows/simpleactivationfactory-class.md)

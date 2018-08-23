@@ -1,5 +1,5 @@
 ---
-title: Rozpocznij funkcja | Dokumentacja firmy Microsoft
+title: BEGIN, funkcja | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 01/22/2017
 ms.technology: cpp-windows
@@ -11,19 +11,19 @@ dev_langs:
 helpviewer_keywords:
 - begin Function
 ms.assetid: 5a44fb33-e247-49fd-b7a1-4a5b42e9e1e4
-author: ghogen
-ms.author: ghogen
+author: mikeblome
+ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7c1a8c09e43613014b43ef4e3c075a54cdd90e08
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 4954e98c1e6f1da30e321aad0c0e37cc5c1ab994
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33086515"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42606535"
 ---
 # <a name="begin-function"></a>BEGIN — funkcja
-Zwraca wartość wskazującą na początku kolekcji, który jest dostępny za pomocą parametru określonego interfejsu iteratora.  
+Zwraca iterator, który wskazuje na początku kolekcji, która jest dostępna za pomocą parametru określonego interfejsu.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -49,26 +49,26 @@ template <typename T>
   
 #### <a name="parameters"></a>Parametry  
  `T`  
- Parametr typu szablonu.  
+ Parametrowi typu szablonu.  
   
  `v`  
- Kolekcja wektor\<T > lub VectorView\<T > obiekty, które są używane przez IVector\<T > lub IVectorView\<T > interfejsu.  
+ Kolekcja wektora\<T > lub VectorView\<T > obiekty, które są używane przez IVector\<T > lub IVectorView\<T > interfejsu.  
   
  `i`  
- Kolekcja dowolnego obiektów środowiska wykonawczego systemu Windows, które są używane przez IIterable\<T > interfejsu.  
+ Zbiór dowolnego Windows środowiska wykonawczego obiektów, które są używane przez IIterable\<T > interfejsu.  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Iterator, który wskazuje na początku kolekcji.  
   
 ### <a name="remarks"></a>Uwagi  
- Pierwszy funkcje dwóch szablonów Zwróć Iteratory, a trzeci funkcji szablonu zwracającą iterator wejściowego.  
+ Pierwsze dwie funkcje szablonów zwracają Iteratory, a trzecia funkcja szablonu zwraca iterator danych wejściowych.  
   
- VectorIterator rozpocząć obiektu, który jest zwracany przez jest iteratora serwera proxy, który przechowuje elementy typu VectorProxy\<T >. Jednak obiekt serwera proxy prawie nigdy nie jest widoczny dla kodu użytkownika. Aby uzyskać więcej informacji, zobacz [kolekcji (C + +/ CX)](../cppcx/collections-c-cx.md).  
+ VectorIterator, obiekt, który jest zwracany przez rozpoczęcie jest iteratora serwera proxy, który przechowuje elementy typu VectorProxy\<T >. Jednak obiekt serwera proxy prawie nigdy nie jest widoczne dla kodu użytkownika. Aby uzyskać więcej informacji, zobacz [kolekcje (C + +/ CX)](../cppcx/collections-c-cx.md).  
   
 ### <a name="requirements"></a>Wymagania  
  **Nagłówek:** collection.h  
   
- **Namespace:** Windows::Foundation::Collections  
+ **Namespace:** Windows::Foundation:: Collections  
   
 ## <a name="see-also"></a>Zobacz też  
- [Namespace Windows::Foundation::Collections](../cppcx/windows-foundation-collections-namespace-c-cx.md)
+ [Windows::Foundation:: Collections Namespace](../cppcx/windows-foundation-collections-namespace-c-cx.md)

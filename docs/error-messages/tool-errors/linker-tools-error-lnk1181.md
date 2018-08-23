@@ -1,7 +1,7 @@
 ---
 title: Błąd narzędzi konsolidatora LNK1181 | Dokumentacja firmy Microsoft
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 08/22/2018
 ms.technology:
 - cpp-diagnostics
 ms.topic: error-reference
@@ -16,29 +16,33 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 617678e5453acdafaf72875857b0e0f9b84a110a
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 3edd2f39848ea1db054dd4ceee8abf290dde7a74
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33301362"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42597665"
 ---
 # <a name="linker-tools-error-lnk1181"></a>Błąd narzędzi konsolidatora LNK1181
-Nie można otworzyć pliku wejściowego "filename"  
+Nie można otworzyć pliku wejściowego 'NazwaPliku'  
   
- Nie można odnaleźć konsolidator `filename` , ponieważ nie istnieje lub nie odnaleziono ścieżki.  
+ Konsolidator nie może odnaleźć `filename` ponieważ nie istnieje lub nie można odnaleźć ścieżki.  
   
  Niektóre typowe przyczyny błędu LNK1181 obejmują:  
   
--   `filename` jest określany jako dodatkowe zależności w linii konsolidatora, ale plik nie istnieje.  
+-   `filename` jest przywoływany jako dodatkową zależność w linii konsolidatora, ale plik nie istnieje.  
   
--   A **/libpath** instrukcji, która określa katalog zawierający `filename` brakuje.  
+-   A **/libpath —** instrukcję, która określa katalogu zawierającego `filename` są spełnione.  
   
- Aby rozwiązać problemy z powyższych, upewnij się, że wszystkie odwołania do wiersza konsolidatora pliki są obecne w systemie.  Upewnij się również jest **/libpath** instrukcji dla każdego katalogu zawierającego plik zależny od konsolidatora.  
+ Aby rozwiązać problemy powyżej, upewnij się, że wszystkie pliki, do których odwołuje się w linii konsolidatora są obecne w systemie.  Upewnij się również ma **/libpath —** instrukcji dla każdego katalogu zawierającego plik konsolidatora-zależnych od ustawień lokalnych. 
+
+ Aby uzyskać więcej informacji, zobacz [pliki .lib — wejście konsolidatora](../../build/reference/dot-lib-files-as-linker-input.md).
   
- Inną możliwą przyczyną LNK1181 jest, że długiej nazwy pliku ze spacjami nie został ujęty w cudzysłów.  W takim przypadku tylko rozpozna nazwę pliku do pierwszego obszaru konsolidator i Załóż, że rozszerzenie pliku. obiektu  Rozwiązaniem tej sytuacji jest ujmij długa nazwa pliku (nazwa ścieżki plus pliku) w znaki cudzysłowu.  
+ Inną możliwą przyczyną LNK1181 to, że długiej nazwy pliku ze spacjami nie zostało ujęte w znaki cudzysłowu.  W takiej sytuacji konsolidator będzie rozpoznają nazwę pliku do pierwszą przestrzeń, a następnie przyjęto założenie, rozszerzenie pliku. obiektu  Rozwiązaniem tej sytuacji jest ująć długiej nazwy pliku (ścieżka, a także plik name) w znaki cudzysłowu.  
+
+ Kompilowanie przy użyciu [/P (Przetwarzaj wstępnie do pliku)](../../build/reference/p-preprocess-to-a-file.md) opcji może spowodować LNK1181, ponieważ ta opcja pomija tworzenie plików .obj.
   
- Aby uzyskać więcej informacji, zobacz [pliki .lib — wejście konsolidatora](../../build/reference/dot-lib-files-as-linker-input.md).  
+  
   
 ## <a name="see-also"></a>Zobacz też  
  [/LIBPATH (Dodatkowa Libpath)](../../build/reference/libpath-additional-libpath.md)

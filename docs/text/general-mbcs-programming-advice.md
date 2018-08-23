@@ -1,5 +1,5 @@
 ---
-title: Porady dotyczące programowania MBSC ogólne | Dokumentacja firmy Microsoft
+title: Ogólne programowania Mbsc | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,35 +15,35 @@ helpviewer_keywords:
 - MBCS [C++], programming
 - dialog boxes [C++], fonts
 ms.assetid: 7b541235-f3e5-4af0-b2c2-a0112cd5fbfb
-author: ghogen
-ms.author: ghogen
+author: mikeblome
+ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ab2b67c82a04a0c355761ec6572a9718d03c4666
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 0a23ed1283241d3582c0bd548553cb2fed9a47fa
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33855802"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42596798"
 ---
 # <a name="general-mbcs-programming-advice"></a>Ogólne porady dotyczące programowania MBSC
 Użyj następujących wskazówek:  
   
--   Elastyczność, użyj makra czasu wykonywania takich jak `_tcschr` i `_tcscpy` Jeśli to możliwe. Aby uzyskać więcej informacji, zobacz [mapowania zwykłego tekstu w pliku Tchar.h](../text/generic-text-mappings-in-tchar-h.md).  
+-   Elastyczność, użyj makra w czasie wykonywania takich jak `_tcschr` i `_tcscpy` gdy jest to możliwe. Aby uzyskać więcej informacji, zobacz [mapowania typ ogólny-tekst w pliku Tchar.h](../text/generic-text-mappings-in-tchar-h.md).  
   
--   Użyj C-run-time `_getmbcp` funkcji, aby uzyskać informacje o bieżącej stronie kodowej.  
+-   Użyj środowiska wykonawczego języka C `_getmbcp` funkcję, aby uzyskać informacje o bieżącej stronie kodowej.  
   
--   Nie należy używać ponownie zasobów ciągu. W zależności od języka docelowego dany ciąg znaków może mieć inne znaczenie podczas translacji. Na przykład głównego menu "File" dla aplikacji może tłumaczyć inaczej z ciągu "File" w oknie dialogowym. Jeśli musisz użyć więcej niż jeden ciąg o takiej samej nazwie, użyj ciągu różne identyfikatory dla każdego.  
+-   Nie należy używać ponownie zasoby w postaci ciągów. W zależności od języka docelowego ciągu może mieć inne znaczenie podczas translacji. Na przykład menu "File" w aplikacji w usłudze głównego może tłumaczyć inaczej od ciągu "File" w oknie dialogowym. Jeśli potrzebujesz więcej niż jednego ciągu za pomocą tej samej nazwie, użyj ciągu różne identyfikatory dla każdego.  
   
--   Możesz sprawdzić, czy aplikacja jest uruchomiona w systemie operacyjnym włączone MBCS. Aby to zrobić, należy ustawić flagę w momencie uruchamiania programu; nie należy polegać na wywołania interfejsu API.  
+-   Możesz chcieć sprawdzić, czy aplikacja jest uruchomiona w systemie operacyjnym włączone MBCS. Aby to zrobić, należy ustawić flagę w momencie uruchamiania programu; nie należy polegać na wywołania interfejsu API.  
   
--   Podczas projektowania okien dialogowych, Zezwalaj na około 30% dodatkowe miejsce na końcu tekst statyczny kontrolki MBCS tłumaczenia.  
+-   Podczas projektowania okna dialogowe, Zezwalaj na około 30% dodatkowe miejsce na końcu statyczny tekst kontrolki do tłumaczenia MBCS.  
   
--   Należy zachować ostrożność, wybierając czcionki dla danej aplikacji, ponieważ niektóre czcionki nie są dostępne we wszystkich systemach.  
+-   Należy zachować ostrożność, wybierając czcionki dla aplikacji, ponieważ niektóre czcionki nie są dostępne we wszystkich systemach.  
   
--   Podczas wybierania czcionki dla okien dialogowych, użyj [MS Shell Dlg](http://msdn.microsoft.com/library/windows/desktop/dd374112) zamiast MS Sans Serif lub Helvetica. MS Shell Dlg zastępuje poprawną czcionkę systemu przed utworzeniem okna dialogowego. Korzystanie z MS Shell Dlg zapewnia wszystkie zmiany w systemie operacyjnym na wypadek tę czcionkę automatycznie będą dostępne. (MFC zastępuje MS Shell Dlg DEFAULT_GUI_FONT lub czcionki systemowej w systemie Windows 95, Windows 98 i 4 systemu Windows NT, ponieważ te systemy nie obsługują poprawnie MS Shell Dlg.)  
+-   Podczas wybierania czcionek dla okien dialogowych, użyj [MS Shell Dlg](http://msdn.microsoft.com/library/windows/desktop/dd374112) zamiast MS Serif sieci SAN lub Helvetica. MS Shell Dlg zastępuje z poprawną czcionką systemu przed utworzeniem okna dialogowego. Korzystanie z MS Shell Dlg zapewnia, wszelkie zmiany w systemie operacyjnym, aby poradzić sobie w tej czcionce będą automatycznie dostępne. (MFC zastępuje MS Shell Dlg DEFAULT_GUI_FONT lub czcionki systemowej na Windows 95, Windows 98 i Windows NT 4, ponieważ te systemy nie obsługują MS Shell Dlg poprawnie).  
   
--   Podczas projektowania aplikacji, należy podjąć decyzję ciągów, które może być lokalizowany. W razie wątpliwości założono będzie lokalizowany dowolnego ciągu. W efekcie niemieszanie ciągów, które może być lokalizowany z tymi, które nie.  
+-   Podczas projektowania aplikacji, należy zdecydować, ciągi, które może być lokalizowana. W razie wątpliwości założono zostanie zlokalizowany wszelkie dany ciąg znaków. Jako takie nie należy mieszać ciągów, które może być lokalizowana z tymi, które nie.  
   
 ## <a name="see-also"></a>Zobacz też  
  [Porady dotyczące programowania MBCS](../text/mbcs-programming-tips.md)   

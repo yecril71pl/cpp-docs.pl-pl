@@ -1,5 +1,5 @@
 ---
-title: / APPCONTAINER (aplikacja platformy uniwersalnej systemu Windows/Microsoft sklepu) | Dokumentacja firmy Microsoft
+title: / APPCONTAINER (aplikacja platformy uniwersalnej systemu Windows/Microsoft Store) | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -12,15 +12,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8ca1a3ed5adaada689d374eeb3e67bae6c989e0b
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: eab6a9bd8ac37dec250739e3554c370726dce9eb
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32369295"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42589580"
 ---
-# <a name="appcontainer-microsoft-store-app"></a>/ APPCONTAINER (aplikacja ze sklepu firmy Microsoft)
-Określa, czy konsolidator tworzy obraz wykonywalny, które muszą być uruchamiane w kontenerze aplikacji.  
+# <a name="appcontainer-microsoft-store-app"></a>/ APPCONTAINER (aplikacja Microsoft Store)
+Określa, czy program łączący tworzy obraz wykonywalny, który musi być uruchamiany w kontenerze aplikacji.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -29,21 +29,21 @@ Określa, czy konsolidator tworzy obraz wykonywalny, które muszą być uruchami
 ```  
   
 ## <a name="remarks"></a>Uwagi  
- Domyślnie /APPCONTAINER jest wyłączone.  
+ Domyślnie/appcontainer jest wyłączona.  
   
- Ta opcja modyfikuje plik wykonywalny, który wskazuje, czy aplikacja musi zostać uruchomiony w środowisku izolacji procesu kontenera aplikacji. Określ /APPCONTAINER dla aplikacji, które muszą działać w środowisku appcontainer — na przykład Windows platformy Uniwersalnej aplikacji lub Windows Phone 8.x aplikacji. (Opcja jest ustawiany automatycznie w programie Visual Studio podczas tworzenia aplikacji uniwersalnych systemu Windows w ramach szablonu.) W przypadku aplikacji klasycznej Określ /APPCONTAINER:NO lub po prostu pominąć opcję.  
+ Opcja ta modyfikuje plik wykonywalny, wskazując, czy aplikacja musi zostać uruchomiony w środowisku izolacji procesu kontenera aplikacji. Określa przełącznik/appcontainer dla aplikacji, które należy uruchomić w środowisku kontenera aplikacji — na przykład, Universal Windows Uniwersalnej systemu Windows Phone 8.x aplikacją lub. (Opcja jest ustawiana automatycznie w programie Visual Studio podczas tworzenia aplikacji Windows Universal z szablonu.) Aplikacji klasycznej należy określić/appcontainer: no lub po prostu pominąć opcję.  
   
- Opcja /APPCONTAINER została wprowadzona w systemie [!INCLUDE[win8](../../build/reference/includes/win8_md.md)].  
+ Opcja/appcontainer została wprowadzona w systemie Windows 8.  
   
 ### <a name="to-set-this-linker-option-in-visual-studio"></a>Aby ustawić tę opcję konsolidatora w programie Visual Studio  
   
-1.  Otwórz projekt **strony właściwości** okno dialogowe. Aby uzyskać więcej informacji, zobacz [Praca z właściwościami projektu](../../ide/working-with-project-properties.md).  
+1.  Otwórz projekt **stron właściwości** okno dialogowe. Aby uzyskać więcej informacji, zobacz [Praca z właściwościami projektu](../../ide/working-with-project-properties.md).  
   
-2.  Rozwiń węzeł **właściwości konfiguracji** węzła.  
+2.  Rozwiń **właściwości konfiguracji** węzła.  
   
-3.  Rozwiń węzeł **konsolidatora** węzła.  
+3.  Rozwiń **konsolidatora** węzła.  
   
-4.  Wybierz **wiersza polecenia** strony właściwości.  
+4.  Wybierz **wiersza polecenia** stronę właściwości.  
   
 5.  W **dodatkowe opcje**, wprowadź `/APPCONTAINER` lub `/APPCONTAINER:NO`.  
   

@@ -17,30 +17,34 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 16fa7964af8f56ec54f6870b8866e69266bdc414
-ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
+ms.openlocfilehash: 468b38dac2082e47e94e4bd52af50d77327f5ef4
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39648792"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42590692"
 ---
 # <a name="comptrrefoperator-void-operator"></a>ComPtrRef::operator void\* \* — Operator
-Obsługuje infrastrukturę biblioteki WRL i nie jest przeznaczona do użycia bezpośrednio w kodzie.  
-  
-## <a name="syntax"></a>Składnia  
-  
-```cpp  
-operator void**() const;  
-```  
-  
-## <a name="remarks"></a>Uwagi  
- Usuwa bieżący **comptrref —** obiektów, wskaźnik do interfejsu, który został przedstawiony przez rzutuje **comptrref —** obiektu jako wskaźnik do wskaźnik do **void**, a następnie Zwraca wskaźnik rzutowania.  
-  
-## <a name="requirements"></a>Wymagania  
- **Nagłówek:** client.h  
-  
- **Namespace:** Microsoft::wrl:: details  
-  
-## <a name="see-also"></a>Zobacz też  
- [Comptrref — klasa](../windows/comptrref-class.md)   
- [Microsoft::WRL::Details, przestrzeń nazw](../windows/microsoft-wrl-details-namespace.md)
+
+Obsługuje infrastrukturę biblioteki WRL i nie jest przeznaczona do użycia bezpośrednio w kodzie.
+
+## <a name="syntax"></a>Składnia
+
+```cpp
+operator void**() const;
+```
+
+## <a name="remarks"></a>Uwagi
+
+Usuwa bieżący **comptrref —** obiektów, wskaźnik do interfejsu, który został przedstawiony przez rzutuje **comptrref —** obiektu jako wskaźnik do wskaźnik do **void**, a następnie Zwraca wskaźnik rzutowania.
+
+## <a name="requirements"></a>Wymagania
+
+**Nagłówek:** client.h
+
+**Namespace:** Microsoft::wrl:: details
+
+## <a name="see-also"></a>Zobacz też
+
+[ComPtrRef, klasa](../windows/comptrref-class.md)  
+[Microsoft::WRL::Details, przestrzeń nazw](../windows/microsoft-wrl-details-namespace.md)

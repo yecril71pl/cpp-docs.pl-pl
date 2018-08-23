@@ -13,12 +13,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 7a8705f6c1ed1030f1beeb7c2302f0d629c5d17d
-ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
+ms.openlocfilehash: b66d6d3a7da6c9e3084ce2ef6fa18922e015a459
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/09/2018
-ms.locfileid: "40012196"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42604282"
 ---
 # <a name="overview-of-windows-programming-in-c"></a>Omówienie programowania w systemie Windows w języku C++
 
@@ -26,14 +26,14 @@ Visual C++ można użyć do zapisywania wielu rodzajów programów korzystający
 - efektywne w wymagania dotyczące pamięci
 - oszczędne w zużyciu energii 
 - możliwość umożliwiają pełne wykorzystywanie zalet urządzeń wielordzeniowych i wielordzeniowe
-- możliwość wykonywania obliczeń ogólnego na jednostka przetwarzania grafiki (urządzenia GPGPU)   
+- możliwość wykonywania obliczeń ogólnego na jednostka przetwarzania grafiki (urządzenia GPGPU)  
 - można skorzystać z innych najnowsze funkcje w sprzętu.
 
 Istnieje kilka szerokie kategorie aplikacji Windows, które można tworzyć przy użyciu języka Visual C++. Kategorie te mają różne modele programowania i modeli aplikacji, które zostały wprowadzone przez lata. Poszczególne modele używają różnych bibliotek i interfejsów API zapewniają dostęp do platformy i twórz interfejsy użytkownika, takich jak windows i oknach dialogowych. Standardowej biblioteki języka C++, a także bibliotek innych firm może służyć w dowolnym z tych kategorii, z kilkoma ograniczeniami dla platformy uniwersalnej systemu Windows.
 
 - [Windows Universal apps](#BK_WindowsUniversal). Trzecia kategoria aplikacje Windows wprowadzono w systemie Windows 8 i pomocy technicznej dla tej kategorii aplikacji odbywa się w systemie Windows 10. Te aplikacje są często określane jako "Windows aplikacje" i obejmują one aplikacje komputerowe i mobilne, przeznaczonych dla różnych urządzeń. Te aplikacje można napisać w języku C + +/ CX, dialekt języka C++, która obejmuje obsługę dla rozwoju Windows Runtime lub w standardzie języka C++ z modelem COM za pomocą biblioteki środowiska uruchomieniowego Windows (WRL). Te aplikacje zostały pierwotnie zaprojektowany do uruchamiania na pełnym ekranie, mimo że w systemie Windows 10 użytkownicy mają możliwość uruchamiania ich w oknie pulpitu. Aplikacje te są zorientowanych na dotyk, ale można łatwo działać, jeśli użytkownicy preferują lub po ekranie dotykowym nie jest dostępny za pomocą myszy. Te aplikacje są dystrybuowane za pomocą usługi Microsoft Store, co prowadziło do ich wywoływana aplikacji "Store".
 
-Aplikacje platformy uniwersalnej systemu Windows będą mogli uruchamiać na wszystkich urządzeniach z systemem Windows 10, takich jak tablety i telefony komórkowe, a także na pulpicie. Na komputerze stacjonarnym, są one mogą być uruchamiane jako okien pulpitu, zamiast zawsze uruchomiona w trybie pełnoekranowym. Te aplikacje można również uruchomić na konsoli Xbox i na urządzeniach w przyszłości.  Aplikacje platformy uniwersalnej systemu Windows są uruchamiane od środowiska uruchomieniowego Windows, który zawiera elementy interfejsu użytkownika, usługami i interfejs do różnych urządzeń, które są obsługiwane w programie Windows.  
+Aplikacje platformy uniwersalnej systemu Windows będą mogli uruchamiać na wszystkich urządzeniach z systemem Windows 10, takich jak tablety i telefony komórkowe, a także na pulpicie. Na komputerze stacjonarnym, są one mogą być uruchamiane jako okien pulpitu, zamiast zawsze uruchomiona w trybie pełnoekranowym. Te aplikacje można również uruchomić na konsoli Xbox i na urządzeniach w przyszłości.  Aplikacje platformy uniwersalnej systemu Windows są uruchamiane od środowiska uruchomieniowego Windows, który zawiera elementy interfejsu użytkownika, usługami i interfejs do różnych urządzeń, które są obsługiwane w programie Windows.
 
 Można napisać aplikacji platformy UWP w języku C + +/ CX, dialekt języka c++, można użyć [C + +/ biblioteki WinRT](https://moderncpp.com/)w niektórych scenariuszach. Aplikacje platformy uniwersalnej systemu Windows skompiluj do kodu natywnego i ma interfejsu użytkownika XAML lub używają DirectX. Składniki środowiska wykonawczego Windows, które są zapisywane w kodzie natywnym, że można korzystać z aplikacji platformy uniwersalnej systemu Windows napisanych w innych językach. Aby uzyskać więcej informacji, zobacz [tworzenie aplikacji platformy uniwersalnej Windows w języku C++](http://go.microsoft.com/fwlink/?LinkID=534976), [tworzenie pierwszej gry platformy uniwersalnej systemu Windows za pomocą programu DirectX](http://go.microsoft.com/fwlink/p/?LinkId=244656), i [składniki tworzenia środowiska wykonawczego Windows w języku C++](http://go.microsoft.com/fwlink/p/?LinkId=244658).
 
@@ -84,7 +84,7 @@ Gry DirectX można uruchomić na komputerach PC lub konsoli Xbox. Aby uzyskać w
 
 ## <a name="sdks-libraries-and-header-files"></a>Zestawy SDK, biblioteki i pliki nagłówkowe
 
-Visual C++ zawiera biblioteki środowiska uruchomieniowego C (CRT), standardowej biblioteki języka C++ i inne biblioteki charakterystyczne dla Microsoft. Uwzględnianie folderów, które zawierają pliki nagłówkowe dla tych bibliotek znajdują się w katalogu instalacyjnym Visual Studio, w folderze \VC\ lub w przypadku CRT, w folderze instalacji zestawu Windows SDK.   
+Visual C++ zawiera biblioteki środowiska uruchomieniowego C (CRT), standardowej biblioteki języka C++ i inne biblioteki charakterystyczne dla Microsoft. Uwzględnianie folderów, które zawierają pliki nagłówkowe dla tych bibliotek znajdują się w katalogu instalacyjnym Visual Studio, w folderze \VC\ lub w przypadku CRT, w folderze instalacji zestawu Windows SDK.
 
 Możesz użyć [Menedżera pakietów Vcpkg](../vcpkg.md) wygodny sposób instalowania kilkuset bibliotek typu open-source innych firm dla Windows.
 

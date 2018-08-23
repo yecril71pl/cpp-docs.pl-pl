@@ -1,5 +1,5 @@
 ---
-title: Klasa platform::NullReferenceException | Dokumentacja firmy Microsoft
+title: Platform::NullReferenceException, klasa | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 12/30/2016
 ms.technology: cpp-windows
@@ -12,19 +12,19 @@ dev_langs:
 helpviewer_keywords:
 - Platform::NullReferenceException
 ms.assetid: be202577-d898-4716-83cd-e3556fe8a241
-author: ghogen
-ms.author: ghogen
+author: mikeblome
+ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 27e74ea7753ddb66a7daa8403874e803dca91f10
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 78d0cf9ec994d21845e1910b5affc9e3b5d74a8d
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33088079"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42590330"
 ---
-# <a name="platformnullreferenceexception-class"></a>Klasa platform::NullReferenceException
-Element zgłaszany, gdy jest próba wyłuskania odwołanie do obiektu o wartości null.  
+# <a name="platformnullreferenceexception-class"></a>Platform::NullReferenceException, klasa
+Zgłaszany, gdy jest próba wyłuskania odwołanie do obiektu o wartości null.  
   
 ## <a name="syntax"></a>Składnia  
   

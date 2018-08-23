@@ -17,35 +17,40 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 19dcb3e90faef86fd291381a7082e8b5bfa89069
-ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
+ms.openlocfilehash: b3620a4b82aabb0058773f68938f545119f90791
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/09/2018
-ms.locfileid: "40013460"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42605601"
 ---
 # <a name="weakreferencedecrementstrongreference-method"></a>WeakReference::DecrementStrongReference — Metoda
-Obsługuje infrastrukturę biblioteki WRL i nie jest przeznaczona do użycia bezpośrednio w kodzie.  
-  
-## <a name="syntax"></a>Składnia  
-  
-```cpp  
-ULONG DecrementStrongReference();  
-```  
-  
-## <a name="remarks"></a>Uwagi  
- Dekrementuje silne odwołanie zliczane bieżącego **WeakReference** obiektu.  
-  
- Gdy liczba silne odwołanie staje się zerem, silne odwołanie jest ustawiona na **nullptr**.  
-  
-## <a name="return-value"></a>Wartość zwracana  
- Liczba wraz z przydzielaniem silne odwołanie.  
-  
-## <a name="requirements"></a>Wymagania  
- **Nagłówek:** implements.h  
-  
- **Namespace:** Microsoft::wrl:: details  
-  
-## <a name="see-also"></a>Zobacz też  
- [Weakreference — klasa](../windows/weakreference-class1.md)  
- [Microsoft::WRL::Details, przestrzeń nazw](../windows/microsoft-wrl-details-namespace.md)
+
+Obsługuje infrastrukturę biblioteki WRL i nie jest przeznaczona do użycia bezpośrednio w kodzie.
+
+## <a name="syntax"></a>Składnia
+
+```cpp
+ULONG DecrementStrongReference();
+```
+
+## <a name="remarks"></a>Uwagi
+
+Dekrementuje silne odwołanie zliczane bieżącego **WeakReference** obiektu.
+
+Gdy liczba silne odwołanie staje się zerem, silne odwołanie jest ustawiona na **nullptr**.
+
+## <a name="return-value"></a>Wartość zwracana
+
+Liczba wraz z przydzielaniem silne odwołanie.
+
+## <a name="requirements"></a>Wymagania
+
+**Nagłówek:** implements.h
+
+**Namespace:** Microsoft::wrl:: details
+
+## <a name="see-also"></a>Zobacz też
+
+[Weakreference — klasa](../windows/weakreference-class1.md)  
+[Microsoft::WRL::Details, przestrzeń nazw](../windows/microsoft-wrl-details-namespace.md)

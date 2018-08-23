@@ -17,29 +17,33 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: e1acf443cfa1251649a33e55e81e03fb1b62e17a
-ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
+ms.openlocfilehash: ca996b7893fd19076504fd91bbb5e80bbe692883
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39648337"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42608667"
 ---
 # <a name="comptrget-method"></a>ComPtr::Get — Metoda
-Pobiera wskaźnik do interfejsu, który jest skojarzony z tym **ComPtr**.  
-  
-## <a name="syntax"></a>Składnia  
-  
-```cpp  
-T* Get() const;  
-```  
-  
-## <a name="return-value"></a>Wartość zwracana  
- Wskaźnik do interfejsu, który jest skojarzony z tym **ComPtr**.  
-  
-## <a name="requirements"></a>Wymagania  
- **Nagłówek:** client.h  
-  
- **Namespace:** Microsoft::WRL  
-  
-## <a name="see-also"></a>Zobacz też  
- [ComPtr, klasa](../windows/comptr-class.md)
+
+Pobiera wskaźnik do interfejsu, który jest skojarzony z tym **ComPtr**.
+
+## <a name="syntax"></a>Składnia
+
+```cpp
+T* Get() const;
+```
+
+## <a name="return-value"></a>Wartość zwracana
+
+Wskaźnik do interfejsu, który jest skojarzony z tym **ComPtr**.
+
+## <a name="requirements"></a>Wymagania
+
+**Nagłówek:** client.h
+
+**Namespace:** Microsoft::WRL
+
+## <a name="see-also"></a>Zobacz też
+
+[ComPtr, klasa](../windows/comptr-class.md)

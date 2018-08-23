@@ -17,36 +17,40 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: c795a3a80c48e7fa976807ab3e261fc927d7e104
-ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
+ms.openlocfilehash: 09e0dc3b9caf059bb8ecdce0468dfc118ce9ebfa
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39644274"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42594947"
 ---
 # <a name="chaininterfacesfillarraywithiid-method"></a>ChainInterfaces::FillArrayWithIid — Metoda
-Identyfikator interfejsu zdefiniowanych przez magazynów *I0* parametru szablonu w określonej lokalizacji w określonej tablicy interfejsu identyfikatorów.  
-  
-## <a name="syntax"></a>Składnia  
-  
-```cpp  
-__forceinline static void FillArrayWithIid(  
-   _Inout_ unsigned long &index,  
-   _In_ IID* iids  
-);  
-```  
-  
-### <a name="parameters"></a>Parametry  
- *index*  
- Wskaźnik do wartości indeksu do *IID* tablicy.  
-  
- *IID*  
- Tablica identyfikatorów interfejsu.  
-  
-## <a name="requirements"></a>Wymagania  
- **Nagłówek:** implements.h  
-  
- **Namespace:** Microsoft::WRL  
-  
-## <a name="see-also"></a>Zobacz też  
- [ChainInterfaces, struktura](../windows/chaininterfaces-structure.md)
+
+Identyfikator interfejsu zdefiniowanych przez magazynów *I0* parametru szablonu w określonej lokalizacji w określonej tablicy interfejsu identyfikatorów.
+
+## <a name="syntax"></a>Składnia
+
+```cpp
+__forceinline static void FillArrayWithIid(
+   _Inout_ unsigned long &index,
+   _In_ IID* iids
+);
+```
+
+### <a name="parameters"></a>Parametry
+
+*index*  
+Wskaźnik do wartości indeksu do *IID* tablicy.
+
+*IID*  
+Tablica identyfikatorów interfejsu.
+
+## <a name="requirements"></a>Wymagania
+
+**Nagłówek:** implements.h
+
+**Namespace:** Microsoft::WRL
+
+## <a name="see-also"></a>Zobacz też
+
+[ChainInterfaces, struktura](../windows/chaininterfaces-structure.md)

@@ -17,52 +17,57 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 8dbb3bfbf61c4ad7303c6cee272e14fc91bc9656
-ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
+ms.openlocfilehash: 6d282731320ba52299cb0b6f2813f5f42a229b46
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/09/2018
-ms.locfileid: "40011858"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42583751"
 ---
 # <a name="sizeis"></a>size_is
-Określ rozmiar pamięci przydzielonej dla wskaźników o rozmiarze rozmiar wskaźniki do wskaźników o rozmiarze i jedno - lub tablic wielowymiarowych.  
-  
-## <a name="syntax"></a>Składnia  
-  
-```cpp  
-[ size_is(  
-   "expression"  
-) ]  
-```  
-  
-### <a name="parameters"></a>Parametry  
- *Wyrażenie*  
- Rozmiar pamięci przydzielonej dla wskaźników o rozmiarze.  
-  
-## <a name="remarks"></a>Uwagi  
- **Size_is** atrybut C++ ma taką samą funkcjonalność jak [size_is](http://msdn.microsoft.com/library/windows/desktop/aa367164) atrybutów w MIDL.  
-  
-## <a name="example"></a>Przykład  
- Zobacz przykład [first_is —](../windows/first-is.md) przykład sposobu określania część tablicy.  
-  
-## <a name="requirements"></a>Wymagania  
-  
-### <a name="attribute-context"></a>Kontekst atrybutu  
-  
-|||  
-|-|-|  
-|**Dotyczy**|Pole **struktury** lub **Unii**, interfejs parametrów, metody interfejsu|  
-|**Powtarzalne**|Nie|  
-|**Wymaganych atrybutów**|Brak|  
-|**Nieprawidłowe atrybuty**|`max_is`|  
-  
- Aby uzyskać więcej informacji na temat konteksty atrybutu zobacz [konteksty atrybutu](../windows/attribute-contexts.md).  
-  
-## <a name="see-also"></a>Zobacz też  
- [Atrybuty IDL](../windows/idl-attributes.md)   
- [Element TypeDef, Enum, Union i struct — atrybuty](../windows/typedef-enum-union-and-struct-attributes.md)   
- [Atrybuty parametru](../windows/parameter-attributes.md)   
- [first_is —](../windows/first-is.md)   
- [last_is —](../windows/last-is.md)   
- [max_is —](../windows/max-is.md)   
- [length_is](../windows/length-is.md)   
+
+Określ rozmiar pamięci przydzielonej dla wskaźników o rozmiarze rozmiar wskaźniki do wskaźników o rozmiarze i jedno - lub tablic wielowymiarowych.
+
+## <a name="syntax"></a>Składnia
+
+```cpp
+[ size_is(
+   "expression"
+) ]
+```
+
+### <a name="parameters"></a>Parametry
+
+*Wyrażenie*  
+Rozmiar pamięci przydzielonej dla wskaźników o rozmiarze.
+
+## <a name="remarks"></a>Uwagi
+
+**Size_is** atrybut C++ ma taką samą funkcjonalność jak [size_is](http://msdn.microsoft.com/library/windows/desktop/aa367164) atrybutów w MIDL.
+
+## <a name="example"></a>Przykład
+
+Zobacz przykład [first_is —](../windows/first-is.md) przykład sposobu określania część tablicy.
+
+## <a name="requirements"></a>Wymagania
+
+### <a name="attribute-context"></a>Kontekst atrybutu
+
+|||
+|-|-|
+|**Dotyczy**|Pole **struktury** lub **Unii**, interfejs parametrów, metody interfejsu|
+|**Powtarzalne**|Nie|
+|**Wymaganych atrybutów**|Brak|
+|**Nieprawidłowe atrybuty**|`max_is`|
+
+Aby uzyskać więcej informacji na temat konteksty atrybutu zobacz [konteksty atrybutu](../windows/attribute-contexts.md).
+
+## <a name="see-also"></a>Zobacz też
+
+[Atrybuty IDL](../windows/idl-attributes.md)  
+[Atrybuty Typedef, Enum, Union oraz Struct](../windows/typedef-enum-union-and-struct-attributes.md)  
+[Atrybuty parametru](../windows/parameter-attributes.md)  
+[first_is](../windows/first-is.md)  
+[last_is](../windows/last-is.md)  
+[max_is](../windows/max-is.md)  
+[length_is](../windows/length-is.md)  

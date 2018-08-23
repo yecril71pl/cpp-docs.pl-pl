@@ -1,5 +1,5 @@
 ---
-title: Interfejs platform::details::IEquatable | Dokumentacja firmy Microsoft
+title: 'Platform::details:: iequatable, interfejs | Dokumentacja firmy Microsoft'
 ms.custom: ''
 ms.date: 12/30/2016
 ms.technology: cpp-windows
@@ -11,19 +11,19 @@ dev_langs:
 helpviewer_keywords:
 - Platform::Details::IEquatable Interface
 ms.assetid: 72f15f55-f7a4-4cca-aeba-2d5a9996818c
-author: ghogen
-ms.author: ghogen
+author: mikeblome
+ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a69d9d8a54e62e424193a7d7d06f9022f6a81b6a
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 3c3475eeadef19ee74fdafb7da758c79556f42ab
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33086385"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42597702"
 ---
-# <a name="platformdetailsiequatable-interface"></a>Interfejs platform::details::IEquatable
-Ten interfejs jest przeznaczony tylko do użytku wewnętrznego i nie mają być używane do tworzenia aplikacji.  
+# <a name="platformdetailsiequatable-interface"></a>Platform::details:: iequatable, interfejs
+Ten interfejs jest przeznaczona wyłącznie do użytku wewnętrznego i nie jest przeznaczona do użycia na potrzeby programowania.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -33,7 +33,7 @@ interface class IEquatable;
 ```  
   
 ### <a name="remarks"></a>Uwagi  
- Ten interfejs jest dostępna wyłącznie dla kompletności, ponieważ mogą być kontrolowane z przeglądarkami.  
+ Ten interfejs jest przeznaczona wyłącznie dla kompletności, ponieważ mogą być kontrolowane za pomocą przeglądarki.  
   
 ## <a name="inheritance-hierarchy"></a>Hierarchia dziedziczenia  
  `Platform`  

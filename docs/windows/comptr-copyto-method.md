@@ -17,58 +17,64 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 5b387d52c9ab7b1d9033ce70d36e9f0aa5e5b33e
-ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
+ms.openlocfilehash: c295767070da04d0173e3299576338e700a1c6aa
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39642932"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42597016"
 ---
 # <a name="comptrcopyto-method"></a>ComPtr::CopyTo — Metoda
-Kopiuje skojarzony z tym interfejs bieżącej lub określonej **ComPtr** określony wskaźnik.  
-  
-## <a name="syntax"></a>Składnia  
-  
-```cpp  
-HRESULT CopyTo(  
-   _Deref_out_ InterfaceType** ptr  
-);  
-  
-HRESULT CopyTo(  
-   REFIID riid,  
-   _Deref_out_ void** ptr  
-) const;  
 
-template<typename U>  
-HRESULT CopyTo(  
-   _Deref_out_ U** ptr  
-) const;  
-```  
-  
-### <a name="parameters"></a>Parametry  
- *U*  
- Nazwa typu.  
-  
- *ptr*  
- Gdy ta operacja zostanie ukończone, wskaźnik do żądanego interfejsu.  
-  
- *Parametr riid*  
- Identyfikator interfejsu.  
-  
-## <a name="return-value"></a>Wartość zwracana  
- S_OK w przypadku powodzenia; w przeciwnym razie wartość HRESULT, która wskazuje, dlaczego niejawny `QueryInterface` operacja nie powiodła się.  
-  
-## <a name="remarks"></a>Uwagi  
- Pierwsza funkcja zwraca kopię wskaźnika do interfejsu, który został skojarzony z tym **ComPtr**. Ta funkcja zawsze zwraca wartość S_OK.  
-  
- Druga funkcja wykonuje `QueryInterface` operacji w interfejsie skojarzony z tym **ComPtr** dla interfejsu, określonego przez *riid* parametru.  
-  
- Trzecia funkcja wykonuje `QueryInterface` operacji w interfejsie skojarzony z tym **ComPtr** dla podstawowego interfejsu *U* parametru.  
-  
-## <a name="requirements"></a>Wymagania  
- **Nagłówek:** client.h  
-  
- **Namespace:** Microsoft::WRL  
-  
-## <a name="see-also"></a>Zobacz też  
- [ComPtr, klasa](../windows/comptr-class.md)
+Kopiuje skojarzony z tym interfejs bieżącej lub określonej **ComPtr** określony wskaźnik.
+
+## <a name="syntax"></a>Składnia
+
+```cpp
+HRESULT CopyTo(
+   _Deref_out_ InterfaceType** ptr
+);
+
+HRESULT CopyTo(
+   REFIID riid,
+   _Deref_out_ void** ptr
+) const;
+
+template<typename U>
+HRESULT CopyTo(
+   _Deref_out_ U** ptr
+) const;
+```
+
+### <a name="parameters"></a>Parametry
+
+*U*  
+Nazwa typu.
+
+*ptr*  
+Gdy ta operacja zostanie ukończone, wskaźnik do żądanego interfejsu.
+
+*Parametr riid*  
+Identyfikator interfejsu.
+
+## <a name="return-value"></a>Wartość zwracana
+
+S_OK w przypadku powodzenia; w przeciwnym razie wartość HRESULT, która wskazuje, dlaczego niejawny `QueryInterface` operacja nie powiodła się.
+
+## <a name="remarks"></a>Uwagi
+
+Pierwsza funkcja zwraca kopię wskaźnika do interfejsu, który został skojarzony z tym **ComPtr**. Ta funkcja zawsze zwraca wartość S_OK.
+
+Druga funkcja wykonuje `QueryInterface` operacji w interfejsie skojarzony z tym **ComPtr** dla interfejsu, określonego przez *riid* parametru.
+
+Trzecia funkcja wykonuje `QueryInterface` operacji w interfejsie skojarzony z tym **ComPtr** dla podstawowego interfejsu *U* parametru.
+
+## <a name="requirements"></a>Wymagania
+
+**Nagłówek:** client.h
+
+**Namespace:** Microsoft::WRL
+
+## <a name="see-also"></a>Zobacz też
+
+[ComPtr, klasa](../windows/comptr-class.md)

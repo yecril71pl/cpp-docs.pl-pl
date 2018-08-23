@@ -26,34 +26,37 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 23befed8800027553f69032a5f5cc32816396951
-ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
+ms.openlocfilehash: e6cb463f95bc68d6880fb593ba394ec94d585696
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39648213"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42597339"
 ---
 # <a name="colors-window-image-editor-for-icons"></a>Okno Kolory (Edytor obrazów dla ikon)
-**Kolory** okno ma dwie części:  
-  
-1.  **Paleta kolorów**, które jest tablicą przykłady kolorów, które reprezentują kolory, można użyć. Możesz kliknąć próbek, aby wybrać kolory pierwszego planu i tła, korzystając z narzędzi graficznych.  
-  
-2.  **Wskaźnik koloru**, który przedstawia kolory pierwszego planu i tła i selektorów koloru ekranu i odwrotność.  
-  
-     ![Okno kolory](../windows/media/vccolorswindow.gif "vcColorsWindow")  
-Okno Kolory  
-  
+
+**Kolory** okno ma dwie części:
+
+1. **Paleta kolorów**, które jest tablicą przykłady kolorów, które reprezentują kolory, można użyć. Możesz kliknąć próbek, aby wybrać kolory pierwszego planu i tła, korzystając z narzędzi graficznych.
+
+2. **Wskaźnik koloru**, który przedstawia kolory pierwszego planu i tła i selektorów koloru ekranu i odwrotność.
+
+   ![Okno kolory](../windows/media/vccolorswindow.gif "vcColorsWindow")  
+Okno Kolory
+
 > [!NOTE]
->  **Koloru ekranu** i **kolor odwrotność** narzędzia są dostępne tylko dla ikony i kursory.  
-  
- Możesz użyć **kolory** okno z [paska narzędzi edytora obrazów](../windows/toolbar-image-editor-for-icons.md).  
-  
-## <a name="requirements"></a>Wymagania  
- Brak  
-  
-## <a name="see-also"></a>Zobacz też  
- [Wyświetlanie i ukrywanie okna kolory](../windows/displaying-or-hiding-the-colors-window-image-editor-for-icons.md)   
- [Tworzenie obszarów przezroczystych lub odwróconych w obrazach urządzeń](../windows/creating-transparent-or-inverse-regions-in-device-images.md)   
- [Klawisze skrótów](../windows/accelerator-keys-image-editor-for-icons.md)   
- [Okno dialogowe wybierania niestandardowego koloru](../windows/custom-color-selector-dialog-box-image-editor-for-icons.md)   
- [Edytor obrazów dla ikon](../windows/image-editor-for-icons.md)
+> **Koloru ekranu** i **kolor odwrotność** narzędzia są dostępne tylko dla ikony i kursory.
+
+Możesz użyć **kolory** okno z [paska narzędzi edytora obrazów](../windows/toolbar-image-editor-for-icons.md).
+
+## <a name="requirements"></a>Wymagania
+
+Brak
+
+## <a name="see-also"></a>Zobacz też
+
+[Wyświetlanie i ukrywanie okna kolory](../windows/displaying-or-hiding-the-colors-window-image-editor-for-icons.md)  
+[Tworzenie obszarów przezroczystych lub odwróconych w obrazach urządzeń](../windows/creating-transparent-or-inverse-regions-in-device-images.md)  
+[Klawisze skrótów](../windows/accelerator-keys-image-editor-for-icons.md)  
+[Okno dialogowe wybierania niestandardowego koloru](../windows/custom-color-selector-dialog-box-image-editor-for-icons.md)  
+[Edytor obrazów dla ikon](../windows/image-editor-for-icons.md)

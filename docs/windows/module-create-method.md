@@ -17,51 +17,56 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 1b3f865addd83bec64250807285947ea1c92e59f
-ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
+ms.openlocfilehash: 9ae4f50e6d2d614e444766babf8e55f5c9f83932
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/09/2018
-ms.locfileid: "40016616"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42609547"
 ---
 # <a name="modulecreate-method"></a>Module::Create — Metoda
-Tworzy wystąpienie modułu.  
-  
-## <a name="syntax"></a>Składnia  
-  
-```cpp  
-WRL_NOTHROW static Module& Create();  
-template<typename T>  
-WRL_NOTHROW static Module& Create(  
-   T callback  
-);  
-template<typename T>  
-WRL_NOTHROW static Module& Create(  
-   _In_ T* object,  
+
+Tworzy wystąpienie modułu.
+
+## <a name="syntax"></a>Składnia
+
+```cpp
+WRL_NOTHROW static Module& Create();
+template<typename T>
+WRL_NOTHROW static Module& Create(
+   T callback
+);
+template<typename T>
+WRL_NOTHROW static Module& Create(
+   _In_ T* object,
    _In_ void (T::* method)()  
-);  
-```  
-  
-### <a name="parameters"></a>Parametry  
- *T*  
- Typ modułu.  
-  
- *Wywołanie zwrotne*  
- Wywołuje się, gdy ostatni obiekt wystąpienia modułu jest zwalniany.  
-  
- *object*  
- *Obiektu* i *metoda* parametry są używane w połączeniu. Wskazuje ostatni obiekt wystąpienia po udostępnieniu ostatni obiekt wystąpienia w module.  
-  
- *— Metoda*  
- *Obiektu* i *metoda* parametry są używane w połączeniu. Wskazuje metodę ostatniego wystąpienia obiektu po udostępnieniu ostatni obiekt wystąpienia w module.  
-  
-## <a name="return-value"></a>Wartość zwracana  
- Odwołanie do modułu.  
-  
-## <a name="requirements"></a>Wymagania  
- **Nagłówek:** module.h  
-  
- **Namespace:** Microsoft::WRL  
-  
-## <a name="see-also"></a>Zobacz też  
+);
+```
+
+### <a name="parameters"></a>Parametry
+
+*T*  
+Typ modułu.
+
+*Wywołanie zwrotne*  
+Wywołuje się, gdy ostatni obiekt wystąpienia modułu jest zwalniany.
+
+*object*  
+*Obiektu* i *metoda* parametry są używane w połączeniu. Wskazuje ostatni obiekt wystąpienia po udostępnieniu ostatni obiekt wystąpienia w module.
+
+*— Metoda*  
+*Obiektu* i *metoda* parametry są używane w połączeniu. Wskazuje metodę ostatniego wystąpienia obiektu po udostępnieniu ostatni obiekt wystąpienia w module.
+
+## <a name="return-value"></a>Wartość zwracana
+
+Odwołanie do modułu.
+
+## <a name="requirements"></a>Wymagania
+
+**Nagłówek:** module.h
+
+**Namespace:** Microsoft::WRL
+
+## <a name="see-also"></a>Zobacz też
+
 [Klasa modułu](../windows/module-class.md)

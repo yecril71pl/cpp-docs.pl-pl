@@ -18,35 +18,38 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 101c135a5ebf4d188a1e241c9d343580c13b247a
-ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
+ms.openlocfilehash: 8cd214cdf2a3d4677464c98ca1c950a5c1891a42
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39653030"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42584159"
 ---
 # <a name="creating-a-new-dialog-box"></a>Tworzenie nowego okna dialogowego
-### <a name="to-create-a-new-dialog-box"></a>Aby utworzyć nowe okno dialogowe  
-  
-1.  W [widok zasobów](../windows/resource-view-window.md), kliknij prawym przyciskiem myszy plik .rc, a następnie wybierz **Dodaj zasób** z menu skrótów.  
-  
-    > [!NOTE]
-    >  Jeśli projekt nie zawiera jeszcze pliku .rc, zobacz [tworzenia nowego pliku skryptu zasobów](../windows/how-to-create-a-resource-script-file.md).  
-  
-2.  W **Dodaj zasób** okno dialogowe, wybierz opcję **okna dialogowego** w **typ zasobu** , a następnie kliknij przycisk **New**.  
-  
-     Jeśli znak plus (**+**) pojawia się obok **okna dialogowego** typ zasobu, oznacza to dostępnych szablonów okno dialogowe. Kliknij znak plus, aby rozwinąć listę szablonów, wybierz szablon, a następnie kliknij przycisk **New**.  
-  
-     Zostanie otwarte nowe okno dialogowe w **okna dialogowego** edytora.  
-  
-     Możesz również [otwarcie istniejącego okna dialogowe w edytorze okno dialogowe edycji](../windows/viewing-and-editing-resources-in-a-resource-editor.md).  
-  
- Aby uzyskać informacje na temat dodawania zasobów do projektów zarządzanych, zobacz [zasoby w aplikacjach pulpitu](/dotnet/framework/resources/index) w *przewodniku dewelopera .NET Framework*. Aby uzyskać informacji na temat ręcznego dodawania plików zasobów do projektów zarządzanych, uzyskiwania dostępu do zasobów, wyświetlania statycznych zasobów i przypisywania ciągów zasobów do właściwości, zobacz [Creating Resource Files dla aplikacji klasycznych](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Aby uzyskać informacji na temat globalizacja i lokalizacja zasobów w aplikacjach zarządzanych, zobacz [Globalizing i lokalizowanie aplikacji programu .NET Framework](/dotnet/standard/globalization-localization/index).  
-  
-## <a name="requirements"></a>Wymagania  
- Win32  
-  
-## <a name="see-also"></a>Zobacz też  
- [Porady: tworzenie zasobu](../windows/how-to-create-a-resource.md)   
- [Pliki zasobów](../windows/resource-files-visual-studio.md)   
- [Edytor okien dialogowych](../windows/dialog-editor.md)
+
+### <a name="to-create-a-new-dialog-box"></a>Aby utworzyć nowe okno dialogowe
+
+1. W [widok zasobów](../windows/resource-view-window.md), kliknij prawym przyciskiem myszy plik .rc, a następnie wybierz **Dodaj zasób** z menu skrótów.
+
+   > [!NOTE]
+   > Jeśli projekt nie zawiera jeszcze pliku .rc, zobacz [tworzenia nowego pliku skryptu zasobów](../windows/how-to-create-a-resource-script-file.md).
+
+2. W **Dodaj zasób** okno dialogowe, wybierz opcję **okna dialogowego** w **typ zasobu** , a następnie kliknij przycisk **New**.
+
+   Jeśli znak plus (**+**) pojawia się obok **okna dialogowego** typ zasobu, oznacza to dostępnych szablonów okno dialogowe. Kliknij znak plus, aby rozwinąć listę szablonów, wybierz szablon, a następnie kliknij przycisk **New**.
+
+   Zostanie otwarte nowe okno dialogowe w **okna dialogowego** edytora.
+
+   Możesz również [otwarcie istniejącego okna dialogowe w edytorze okno dialogowe edycji](../windows/viewing-and-editing-resources-in-a-resource-editor.md).
+
+Aby uzyskać informacje na temat dodawania zasobów do projektów zarządzanych, zobacz [zasoby w aplikacjach pulpitu](/dotnet/framework/resources/index) w *przewodniku dewelopera .NET Framework*. Aby uzyskać informacji na temat ręcznego dodawania plików zasobów do projektów zarządzanych, uzyskiwania dostępu do zasobów, wyświetlania statycznych zasobów i przypisywania ciągów zasobów do właściwości, zobacz [Creating Resource Files dla aplikacji klasycznych](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Aby uzyskać informacji na temat globalizacja i lokalizacja zasobów w aplikacjach zarządzanych, zobacz [Globalizing i lokalizowanie aplikacji programu .NET Framework](/dotnet/standard/globalization-localization/index).
+
+## <a name="requirements"></a>Wymagania
+
+Win32
+
+## <a name="see-also"></a>Zobacz też
+
+[Instrukcje: tworzenie zasobu](../windows/how-to-create-a-resource.md)  
+[Pliki zasobów](../windows/resource-files-visual-studio.md)  
+[Edytor okien dialogowych](../windows/dialog-editor.md)

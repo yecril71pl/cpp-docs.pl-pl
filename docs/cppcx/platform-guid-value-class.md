@@ -11,19 +11,19 @@ dev_langs:
 helpviewer_keywords:
 - Platform::Guid Struct
 ms.assetid: 25c0bfb2-7f93-44d8-bdf4-ef4fbac3424a
-author: ghogen
-ms.author: ghogen
+author: mikeblome
+ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c295138d6239ce516b4f322fb5fc479e2235a6be
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 102585cf7148923f584591102712278847ee7573
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33089454"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42601257"
 ---
 # <a name="platformguid-value-class"></a>Klasa wartości Platform::Guid
-Reprezentuje [GUID](http://msdn.microsoft.com/library/windows/desktop/aa373931\(v=vs.85\).aspx) typu w systemie typów środowiska wykonawczego systemu Windows.  
+Reprezentuje [GUID](http://msdn.microsoft.com/library/windows/desktop/aa373931\(v=vs.85\).aspx) typu w systemie typów środowiska wykonawczego Windows.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -32,17 +32,17 @@ public value struct Guid
 ```  
   
 ### <a name="members"></a>Elementy członkowskie  
- Identyfikator GUID ma metodę Equals, metoda GetHashCode(), ani metody ToString() pochodzi z [klasy Platform::Object](../cppcx/platform-object-class.md), i metody GetTypeCode() pochodnych [Platform::Type klasy](../cppcx/platform-type-class.md). Identyfikator GUID ma również następujące elementy członkowskie.  
+ Identyfikator GUID ma metodę Equals, element GetHashCode(), i metody ToString() pochodną [Platform::Object, klasa](../cppcx/platform-object-class.md), i metoda GetTypeCode() pochodnych [Platform::Type, klasa](../cppcx/platform-type-class.md). Identyfikator GUID ma również następujące elementy członkowskie.  
   
 |Element członkowski|Opis|  
 |------------|-----------------|  
 |[Identyfikator GUID](#ctor)|Inicjuje nowe wystąpienie struktury identyfikatora Guid.|  
 |[operator==](#operator-equality)|Operator równości.|  
 |[operator!=](#operator-not-equal)|Nie równa się operatora.|  
-|[operator()](#operator-call)|Konwertuje identyfikator Guid na identyfikator GUID.|  
+|[operator()](#operator-call)|Konwertuje identyfikator Guid identyfikatora GUID.|  
   
 ### <a name="remarks"></a>Uwagi  
- Na przykład sposób generowania nowego Platform::Guid, za pomocą funkcji Windows [funkcji CoCreateGuid](http://msdn.microsoft.com/library/windows/desktop/ms688568\(v=vs.85\).aspx), zobacz [składnika WinRT: sposób generowania identyfikatora GUID?](http://blogs.msdn.com/b/eternalcoding/archive/2013/03/25/winrt-component-how-to-generate-a-guid.aspx)  
+ Aby uzyskać przykład sposobu generowania nowych Platform::Guid, przy użyciu funkcji Windows [funkcji CoCreateGuid](/windows/desktop/api/combaseapi/nf-combaseapi-cocreateguid), zobacz [składnika WinRT: sposób generowania identyfikatora GUID?](http://blogs.msdn.com/b/eternalcoding/archive/2013/03/25/winrt-component-how-to-generate-a-guid.aspx)  
   
 ### <a name="requirements"></a>Wymagania  
  **Minimalna obsługiwana klienta:** systemu Windows 8  
@@ -121,7 +121,7 @@ Inicjuje nowe wystąpienie struktury identyfikatora Guid.
  Identyfikator GUID, zgodnie z definicją.  
   
  `n`  
- Pozostała liczba 8 bajtów identyfikatora GUID.  
+ 8 bajtów pozostałych identyfikatora GUID.  
   
 
 ## <a name="operator-equality"></a> GUID::operator == — Operator
@@ -146,12 +146,12 @@ Platform::Guid::operator!=
 ```  
   
 ### <a name="return-value"></a>Wartość zwracana  
- Wartość true, jeśli dwa identyfikatory GUID nie są takie same.
+ Wartość true, jeśli dwa identyfikatory GUID nie są równe.
 
 
 
 ## <a name="operator-call"></a> GUID::operator() Operator
-Konwertuje niejawnie [struktury GUID](http://msdn.microsoft.com/library/windows/desktop/aa373931\(v=vs.85\).aspx)identyfikator GUID na Platform::Guid.  
+Niejawnie konwertuje [identyfikator GUID struktury](http://msdn.microsoft.com/library/windows/desktop/aa373931\(v=vs.85\).aspx)identyfikator GUID służący do Platform::Guid.  
   
 ### <a name="syntax"></a>Składnia  
   

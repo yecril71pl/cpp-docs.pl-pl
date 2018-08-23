@@ -16,18 +16,18 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 397b5274c22acd3a136925495fa350c3aa40dece
-ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
+ms.openlocfilehash: 724772c0057d5defc8bfa3e2207df85d3a207f31
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39653293"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42590297"
 ---
 # <a name="walkthrough-create-a-traditional-windows-desktop-application-c"></a>Przewodnik: Tworzenie tradycyjnych aplikacji Windows Desktop (C++)
 
 W tym instruktażu przedstawiono sposób tworzenia tradycyjnych aplikacji pulpitu Windows w programie Visual Studio. Przykładowa aplikacja, którą utworzysz użyto interfejsu API Windows, aby wyświetlić "Hello, pulpitu Windows!" w oknie. Można użyć kodu, który tworzysz w tym przewodniku jako wzorca do tworzenia innych aplikacji pulpitu Windows.
 
-Interfejs API Windows (znany także jako interfejsu API systemu Win32, Windows Desktop z interfejsu API i klasycznego interfejsu API Windows) jest na podstawie języka C umożliwiająca tworzenie aplikacji Windows. Ona znajdowała się na istnienie od lat 1980 i został użyty do tworzenia aplikacji Windows używana od dziesięcioleci. Bardziej zaawansowane i łatwiejsze w programie struktur utworzone na podstawie tego interfejsu API, takie jak MFC, ATL i platformy .NET. Nawet najbardziej nowoczesnego kodu dla aplikacji platformy uniwersalnej systemu Windows i Store napisanych w języku C + +/ WinRT używa tego interfejsu API poniżej. Aby uzyskać więcej informacji na temat interfejsu API Windows, zobacz [indeks interfejsów API Windows](https://msdn.microsoft.com/library/windows/desktop/ff818516.aspx). Istnieje wiele sposobów, aby tworzyć aplikacje Windows, ale jest to pierwszy.
+Interfejs API Windows (znany także jako interfejsu API systemu Win32, Windows Desktop z interfejsu API i klasycznego interfejsu API Windows) jest na podstawie języka C umożliwiająca tworzenie aplikacji Windows. Ona znajdowała się na istnienie od lat 1980 i został użyty do tworzenia aplikacji Windows używana od dziesięcioleci. Bardziej zaawansowane i łatwiejsze w programie struktur utworzone na podstawie tego interfejsu API, takie jak MFC, ATL i platformy .NET. Nawet najbardziej nowoczesnego kodu dla aplikacji platformy uniwersalnej systemu Windows i Store napisanych w języku C + +/ WinRT używa tego interfejsu API poniżej. Aby uzyskać więcej informacji na temat interfejsu API Windows, zobacz [indeks interfejsów API Windows](/windows/desktop/apiindex/windows-api-list). Istnieje wiele sposobów, aby tworzyć aplikacje Windows, ale jest to pierwszy.
 
 > [!IMPORTANT]
 > W celu skrócenia programu niektóre instrukcje kodu zostały pominięte w tekście. [Skompilować kod](#build-the-code) sekcji na końcu tego dokumentu zawiera kompletny kod.
@@ -570,4 +570,5 @@ Rzeczywiście, Oto kompletny kod dla działającą aplikację.
 Gratulacje! W tym przewodniku zakończeniu i wbudowane tradycyjnych aplikacji pulpitu Windows.
 
 ## <a name="see-also"></a>Zobacz też
- [Aplikacje pulpitu Windows](../windows/windows-desktop-applications-cpp.md)
+
+[Aplikacje pulpitu Windows](../windows/windows-desktop-applications-cpp.md)

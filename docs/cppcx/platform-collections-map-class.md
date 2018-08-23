@@ -1,5 +1,5 @@
 ---
-title: Klasa platform::Collections::map | Dokumentacja firmy Microsoft
+title: 'Platform::Collections:: map, klasa | Dokumentacja firmy Microsoft'
 ms.custom: ''
 ms.date: 01/18/2018
 ms.technology: cpp-windows
@@ -19,20 +19,20 @@ dev_langs:
 helpviewer_keywords:
 - Map Class (C++/Cx)
 ms.assetid: 2b8cf968-1167-4898-a149-1195b32c1785
-author: ghogen
-ms.author: ghogen
+author: mikeblome
+ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6580ccb9ca19a575bac6a9fedbb4e8f16c7060ba
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: b6831369f6327b7cef38b1a4f15013f1e3ff4043
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33093184"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42608991"
 ---
-# <a name="platformcollectionsmap-class"></a>Klasa platform::Collections::map
+# <a name="platformcollectionsmap-class"></a>Platform::Collections:: map, klasa
 
-Reprezentuje *mapy*, która jest kolekcją par klucz wartość.
+Reprezentuje *mapy*, który stanowi kolekcję par klucz wartość.
 
 ## <a name="syntax"></a>Składnia
 
@@ -53,10 +53,10 @@ ref class Map sealed;
 Typ wartości w pary klucz wartość.
 
 *C*  
-Typ, który udostępnia obiekt funkcji, które można porównać dwóch wartości elementu jako klucze sortowania, aby określić ich kolejność względne w planie. Domyślnie [std::less\<K >](../standard-library/less-struct.md).
+Typ, który dostarcza obiekt funkcji, która może porównać dwie wartości elementów jako klucze sortowania, aby określić ich względną kolejność w mapie. Domyślnie [std::less\<K >](../standard-library/less-struct.md).
 
 *__is_valid_winrt_type()*  
-Funkcja wygenerowanego przez kompilator, która weryfikuje typ *K* i *V* i udostępnia przyjazne komunikaty o błędach, jeśli typ nie mogą być przechowywane na mapie.
+Funkcja wygenerowanego przez kompilator, która sprawdza typ *K* i *V* zawiera przyjazny komunikat o błędzie, jeśli typ nie może być przechowywany w mapie.
 
 ### <a name="remarks"></a>Uwagi
 
@@ -66,15 +66,15 @@ Dozwolone typy to:
 
 - Klasa interfejsu ^
 
-- Klasa ref publicznego ^
+- Klasa ref publicznych ^
 
-- wartość — Struktura
+- Struktura wartości
 
-- Wyliczenie publiczne — klasa
+- Klasa wyliczeniowa publiczne
 
-Mapa jest zasadniczo otoki dla [std::map](../standard-library/map-class.md). Jest C++ konkretną implementację [Windows::Foundation::Collections::IMap < Windows::Foundation::Collections::IKeyValuePair\<K, V >>](http://go.microsoft.com/fwlink/p/?LinkId=262408) i [IObservableMap](http://msdn.microsoft.com/library/windows/apps/br226050.aspx) typy, które są przekazywane przez publicznego interfejsów środowiska wykonawczego systemu Windows. Jeśli spróbujesz użyć `Platform::Collections::Map` typu publicznego zwracana wartość lub parametr C3986 jest zgłoszony został błąd kompilatora. Naprawić ten błąd, zmieniając typ wartości parametru lub return na [Windows::Foundation::Collections::IMap\<K, V >](http://go.microsoft.com/fwlink/p/?LinkId=262408).
+Mapa jest zasadniczo otoką [std::map](../standard-library/map-class.md). Jest C++ konkretną implementację [Windows::Foundation::Collections::IMap < Windows::Foundation::Collections::IKeyValuePair\<K, V >>](http://go.microsoft.com/fwlink/p/?LinkId=262408) i [IObservableMap](/uwp/api/Windows.Foundation.Collections.IObservableMap_K_V_) typy, które są przekazywane przez publiczny interfejsów Windows Runtime. Jeśli spróbujesz użyć `Platform::Collections::Map` wpisz publiczny wartość zwracana lub parametr, błąd kompilatora C3986 jest wywoływane. Można naprawić błąd, zmieniając typ parametru lub wartości zwracanej do [Windows::Foundation::Collections::IMap\<K, V >](http://go.microsoft.com/fwlink/p/?LinkId=262408).
 
-Aby uzyskać więcej informacji, zobacz [kolekcji](../cppcx/collections-c-cx.md).
+Aby uzyskać więcej informacji, zobacz [kolekcje](../cppcx/collections-c-cx.md).
 
 ### <a name="members"></a>Elementy członkowskie
 
@@ -89,11 +89,11 @@ Aby uzyskać więcej informacji, zobacz [kolekcji](../cppcx/collections-c-cx.md)
 |Nazwa|Opis|
 |----------|-----------------|
 |[Map::Clear](#clear)|Usuwa wszystkie pary klucz wartość z bieżącego obiektu mapy.|
-|[Map::First](#first)|Zwraca iteratora określająca pierwszy element na mapie.|
-|[Map::GetView](#getview)|Zwraca widok tylko do odczytu w bieżącym mapy; oznacza to [Platform::Collections::MapView klasy](../cppcx/platform-collections-mapview-class.md).|
-|[Map::HasKey](#haskey)|Określa, czy bieżąca mapa zawiera określony klucz.|
-|[Map::INSERT](#insert)|Dodaje określoną parę klucz wartość, jak bieżący obiekt mapy.|
-|[Map::LOOKUP](#lookup)|Pobiera element pod określony klucz w bieżącym obiekcie mapy.|
+|[Map::First](#first)|Zwraca iterator, który określa pierwszy element w mapie.|
+|[Map::GetView](#getview)|Zwraca widok tylko do odczytu w bieżącym mapy; oznacza to, że [platform::Collections:: mapview, klasa](../cppcx/platform-collections-mapview-class.md).|
+|[Map::HasKey](#haskey)|Określa, czy bieżący mapa zawiera określony klucz.|
+|[Map::INSERT](#insert)|Dodaje określoną parę klucz wartość do bieżącego obiektu mapy.|
+|[Map::LOOKUP](#lookup)|Pobiera element w określonym kluczu w bieżącym obiekcie mapy.|
 |[Map::Remove](#remove)|Usuwa określoną parę klucz wartość z bieżącego obiektu mapy.|
 |[Map::size](#size)|Zwraca liczbę elementów w bieżącym obiekcie mapy.|
 
@@ -102,7 +102,7 @@ Aby uzyskać więcej informacji, zobacz [kolekcji](../cppcx/collections-c-cx.md)
 |||
 |-|-|
 |Nazwa|Opis|
-|[Map::mapchanged —](#mapchanged-event.md) `event`|Występuje, gdy mapy.|
+|[Map::mapchanged —](#mapchanged-event.md) `event`|Występuje po zmianie mapy.|
 
 ## <a name="inheritance-hierarchy"></a>Hierarchia dziedziczenia
 
@@ -124,9 +124,9 @@ Usuwa wszystkie pary klucz wartość z bieżącego obiektu mapy.
 virtual void Clear();
 ```
 
-## <a name="first"></a>  Map::First — metoda
+## <a name="first"></a>  Metoda map::First
 
-Zwraca iteratora określająca pierwszy element na mapie lub `nullptr` Jeśli mapy jest pusta.
+Zwraca iterator, który określa pierwszy element w mapie, lub `nullptr` Jeśli mapa jest pusta.
 
 ### <a name="syntax"></a>Składnia
 
@@ -137,15 +137,15 @@ Windows::Foundation::Collections::IKeyValuePair<K, V>^>^ First();
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Iteratora określająca pierwszy element na mapie.
+Iterator, który określa pierwszy element w mapie.
 
 ### <a name="remarks"></a>Uwagi
 
-Jest to wygodny sposób przechowywania iteratora zwrócony przez First() można przypisać do zmiennej, która jest zadeklarowana z wartością zwracaną **automatycznie** wpisz wnioskowanie — słowo kluczowe. Na przykład `auto x = myMap->First();`.
+Wygodnym sposobem przechowywania iteratorów zwróconych przez First() jest przypisanie zwracana wartość do zmiennej, która jest zadeklarowana za pomocą **automatycznie** słowem kluczowym dedukcji typu. Na przykład `auto x = myMap->First();`.
 
-## <a name="getview"></a>  Map::GetView — metoda
+## <a name="getview"></a>  Metoda map::GetView
 
-Zwraca widok tylko do odczytu w bieżącym mapy; oznacza to [klasy Platform::Collections::MapView](../cppcx/platform-collections-mapview-class.md), który implementuje [Windows::Foundation::Collections::IMapView\<K, V >](http://msdn.microsoft.com/library/windows/apps/br226037.aspx) interfejsu.
+Zwraca widok tylko do odczytu w bieżącym mapy; oznacza to, że [platform::Collections:: mapview, klasa](../cppcx/platform-collections-mapview-class.md), która implementuje [Windows::Foundation::Collections::IMapView\<K, V >] / uwp/api/Windows.Foundation.Collections.IMapView_K_V_) interfejsu.
 
 ### <a name="syntax"></a>Składnia
 
@@ -155,11 +155,11 @@ Windows::Foundation::Collections::IMapView<K, V>^ GetView();
 
 ### <a name="return-value"></a>Wartość zwracana
 
-A `MapView` obiektu.
+Element `MapView` obiektu.
 
-## <a name="haskey"></a>  Map::HasKey — metoda
+## <a name="haskey"></a>  Metoda map::HasKey
 
-Określa, czy bieżąca mapa zawiera określony klucz.
+Określa, czy bieżący mapa zawiera określony klucz.
 
 ### <a name="syntax"></a>Składnia
 
@@ -170,15 +170,15 @@ bool HasKey(K key);
 ### <a name="parameters"></a>Parametry
 
 *Klucz*  
-Klucz używana do lokalizowania elementu mapy. Typ *klucza* jest typename *K*.
+Klucz, używana do lokalizowania elementu mapy. Typ *klucz* jest typename *K*.
 
 ### <a name="return-value"></a>Wartość zwracana
 
 `true` Jeśli klucz zostanie znaleziony; w przeciwnym razie `false`.
 
-## <a name="insert"></a>  Map::INSERT — metoda
+## <a name="insert"></a>  Map::INSERT, metoda
 
-Dodaje określoną parę klucz wartość, jak bieżący obiekt mapy.
+Dodaje określoną parę klucz wartość do bieżącego obiektu mapy.
 
 ### <a name="syntax"></a>Składnia
 
@@ -189,18 +189,18 @@ virtual bool Insert(K key, V value);
 ### <a name="parameters"></a>Parametry
 
 *Klucz*  
-Część klucza pary klucz wartość. Typ *klucza* jest typename *K*.
+Część klucza pary klucz wartość. Typ *klucz* jest typename *K*.
 
 *value*  
 Część wartości pary klucz wartość. Typ *wartość* jest typename *V*.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-`true` Jeśli klucz istniejącego elementu na bieżącej mapy odpowiada *klucza* i ma ustawioną wartość część elementu *wartość*. `false` Jeśli nie istniejący element w bieżącej mapy nie jest zgodny *klucza* i *klucza* i *wartość* parametry są wprowadzane na parę klucz wartość, a następnie dodać do bieżącej mapy.
+`true` Jeśli klucz istniejącego elementu w bieżącym planie odpowiada *klucz* a część wartości tego elementu jest ustawiona na *wartość*. `false` Jeśli nie istniejącego elementu w mapie bieżący pasuje *klucz* i *klucz* i *wartość* parametry są wykonywane w pary klucz wartość, a następnie dodane do bieżącej mapy.
 
-## <a name="lookup"></a>  Map::LOOKUP — metoda
+## <a name="lookup"></a>  Metoda map::LOOKUP
 
-Pobiera wartość typu V, który jest skojarzony z określonym kluczem typu K, jeśli ten klucz istnieje.
+Pobiera wartość typu V, który jest skojarzony z określonym kluczem typu K, jeśli klucz istnieje.
 
 ### <a name="syntax"></a>Składnia
 
@@ -211,17 +211,17 @@ V Lookup(K key);
 ### <a name="parameters"></a>Parametry
 
 *Klucz*  
-Klucz używana do lokalizowania elementu w planie. Typ *klucza* jest typename *K*.
+Klucz, używana do lokalizowania elementu w mapie. Typ *klucz* jest typename *K*.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Wartość, która jest łączyć się z *klucza*. Typ zwracanej wartości to typename *V*.
+Wartość, która jest powiązany z *klucz*. Typ wartości zwracanej jest typename *V*.
 
 ### <a name="remarks"></a>Uwagi
 
-Jeśli klucz nie istnieje, a następnie [Platform::OutOfBoundsException](../cppcx/platform-outofboundsexception-class.md) jest generowany.
+Jeśli klucz nie istnieje, a następnie [Platform::OutOfBoundsException](../cppcx/platform-outofboundsexception-class.md) zgłaszany.
 
-## <a name="ctor"></a>  Map::map — Konstruktor
+## <a name="ctor"></a>  Map::map konstruktora
 
 Inicjuje nowe wystąpienie klasy mapy.
 
@@ -241,23 +241,23 @@ Map(
 ### <a name="parameters"></a>Parametry
 
 *InIt*  
-Właściwość typename bieżącego mapy.
+Element typename bieżącej mapy.
 
-*kompozycja*  
-Typ, który udostępnia obiekt funkcji, które można porównać dwóch wartości elementu jako klucze sortowania, aby określić ich kolejność względne w planie.
+*Comp*  
+Typ, który dostarcza obiekt funkcji, która może porównać dwie wartości elementów jako klucze sortowania, aby określić ich względną kolejność w mapie.
 
 *m*  
-Odwołanie lub [Lvalues i Rvalues](../cpp/lvalues-and-rvalues-visual-cpp.md) do `map Class` używany do inicjowania bieżącej mapy.
+Odwołanie lub [Lvalues i Rvalues](../cpp/lvalues-and-rvalues-visual-cpp.md) do `map Class` używany do zainicjowania bieżącej mapy.
 
 *pierwszy*  
-Wejściowy iteratora pierwszego elementu w zakresie elementów używaną do inicjalizacji bieżącej mapy.
+Iterator danych wejściowych pierwszego elementu w zakresie elementów używane do zainicjowania bieżącej mapy.
 
 *ostatni*  
-Wejściowy iteratora pierwszego elementu po zakresu elementów używaną do inicjalizacji bieżącej mapy.
+Iterator danych wejściowych w pierwszym elementem po szereg elementów używane do zainicjowania bieżącej mapy.
 
 ## <a name="mapchanged"></a>  Map::mapchanged — zdarzenie
 
-Wywoływane, gdy element zostanie wstawiony do lub usunięty z mapy.
+Wywoływane, gdy element jest wstawiony lub usuwany z mapy.
 
 ### <a name="syntax"></a>Składnia
 
@@ -267,13 +267,13 @@ event Windows::Foundation::Collections::MapChangedEventHandler<K,V>^ MapChanged;
 
 ### <a name="property-valuereturn-value"></a>Wartość właściwości/Zwracana wartość
 
-A [MapChangedEventHandler\<K, V >](http://msdn.microsoft.com/library/windows/apps/br206644.aspx) zawierający informacje dotyczące obiekt, który wywołał zdarzenie i rodzaju zmiany, który wystąpił. Zobacz też [IMapChangedEventArgs\<K >](http://msdn.microsoft.com/library/windows/apps/br226034.aspx) i [wyliczenie CollectionChange](http://msdn.microsoft.com/library/windows/apps/windows.foundation.collections.collectionchange.aspx).
+A [MapChangedEventHandler\<K, V >](/uwp/api/windows.foundation.collections.mapchangedeventhandler) zawierający informacje dotyczące obiektu, który podniósł zdarzenie i rodzaju zmiany, który wystąpił. Zobacz też [IMapChangedEventArgs\<K >](http://msdn.microsoft.com/library/windows/apps/br226034.aspx) i [wyliczenie CollectionChange](http://msdn.microsoft.com/library/windows/apps/windows.foundation.collections.collectionchange.aspx).
 
 ## <a name="net-framework-equivalent"></a>Odpowiednik w programie .NET Framework
 
-IMap projektu aplikacji środowiska wykonawczego systemu Windows, które używają C# lub Visual Basic\<K, V > jako IDictionary\<K, V >.
+Aplikacje środowiska wykonawczego Windows, które używają języka C# lub Visual Basic projektu IMap\<K, V > jako element IDictionary\<K, V >.
 
-## <a name="remove"></a>  Map::Remove — Metoda
+## <a name="remove"></a>  Metoda map::Remove
 
 Usuwa określoną parę klucz wartość z bieżącego obiektu mapy.
 
@@ -286,11 +286,11 @@ virtual void Remove(K key);
 ### <a name="parameters"></a>Parametry
 
 *Klucz*  
-Część klucza pary klucz wartość. Typ *klucza* jest typename *K*.
+Część klucza pary klucz wartość. Typ *klucz* jest typename *K*.
 
-## <a name="size"></a>  Map::size — metoda
+## <a name="size"></a>  Metoda map::size
 
-Zwraca liczbę [Windows::Foundation::Collections::IKeyValuePair\<K, V >](http://msdn.microsoft.com/library/windows/apps/br226031.aspx) elementy na mapie.
+Zwraca liczbę [Windows::Foundation::Collections::IKeyValuePair\<K, V >](http://msdn.microsoft.com/library/windows/apps/br226031.aspx) elementów w mapie.
 
 ### <a name="syntax"></a>Składnia
 
@@ -300,9 +300,9 @@ virtual property unsigned int Size;
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Liczba elementów w planie.
+Liczba elementów w mapie.
 
 ## <a name="see-also"></a>Zobacz też
 
 [Namespace platformy](platform-namespace-c-cx.md)  
-[Tworzenie składników środowiska wykonawczego systemu Windows w języku C++](/windows/uwp/winrt-components/creating-windows-runtime-components-in-cpp)  
+[Tworzenie składników środowiska wykonawczego Windows w języku C++](/windows/uwp/winrt-components/creating-windows-runtime-components-in-cpp)  

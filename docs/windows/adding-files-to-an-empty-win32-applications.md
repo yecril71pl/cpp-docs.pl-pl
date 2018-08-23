@@ -18,29 +18,31 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 1efde876cadd5a8620bef83c37a61b8b471dba8b
-ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
+ms.openlocfilehash: 6a81caaf62154d8bdcf1c357da2cc156e2da21f3
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/09/2018
-ms.locfileid: "40019241"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42594406"
 ---
 # <a name="adding-files-to-an-empty-win32-applications"></a>Dodawanie plików do pustych aplikacji Win32
-### <a name="to-add-your-files-to-an-empty-windows-desktop-application"></a>Aby dodać pliki do pustą aplikację pulpitu Windows  
-  
-1.  Wybierz katalog, w **Eksploratora rozwiązań**.  
-  
-2.  Kliknij prawym przyciskiem myszy nazwę katalogu, kliknij przycisk **Dodaj** z menu skrótów, a następnie kliknij przycisk **istniejący element**.  
-  
-3.  W **okna dialogowego Dodaj istniejący element**, przejdź do plików, które chcesz dodać do projektu.  
-  
-4.  Kliknij przycisk **OK**.  
-  
- Aby dodać pliki, które są ani źródła, nagłówkiem lub pliki zasobów do swojego projektu, kliknij prawym przyciskiem myszy **rozwiązania** w węźle **Eksploratora rozwiązań** i Dodaj pliki do projektu w taki sam sposób. A **różne** zostanie utworzony folder, aby pomieścić inne pliki w projekcie.  
-  
+
+### <a name="to-add-your-files-to-an-empty-windows-desktop-application"></a>Aby dodać pliki do pustą aplikację pulpitu Windows
+
+1. Wybierz katalog, w **Eksploratora rozwiązań**.
+
+2. Kliknij prawym przyciskiem myszy nazwę katalogu, kliknij przycisk **Dodaj** z menu skrótów, a następnie kliknij przycisk **istniejący element**.
+
+3. W **okna dialogowego Dodaj istniejący element**, przejdź do plików, które chcesz dodać do projektu.
+
+4. Kliknij przycisk **OK**.
+
+Aby dodać pliki, które są ani źródła, nagłówkiem lub pliki zasobów do swojego projektu, kliknij prawym przyciskiem myszy **rozwiązania** w węźle **Eksploratora rozwiązań** i Dodaj pliki do projektu w taki sam sposób. A **różne** zostanie utworzony folder, aby pomieścić inne pliki w projekcie.
+
 > [!NOTE]
->  Przed zbudowaniem projektu, należy Określ opcje kompilacji, dla tych plików, dzięki czemu są one uwzględnione poprawnie w gotowych aplikacji. Aby uzyskać więcej informacji, zobacz [Określanie ustawień projektu za pomocą stron właściwości](../ide/property-pages-visual-cpp.md) i [kompilowanie programu C/C++](../build/building-c-cpp-programs.md).  
-  
-## <a name="see-also"></a>Zobacz też  
- [Tworzenie aplikacji klasycznych Windows pusty](../windows/creating-an-empty-windows-desktop-application.md)   
- [Wdrażanie aplikacji](http://msdn.microsoft.com/4ff8881d-0daf-47e7-bfe7-774c625031b4)
+> Przed zbudowaniem projektu, należy Określ opcje kompilacji, dla tych plików, dzięki czemu są one uwzględnione poprawnie w gotowych aplikacji. Aby uzyskać więcej informacji, zobacz [Określanie ustawień projektu za pomocą stron właściwości](../ide/property-pages-visual-cpp.md) i [kompilowanie programu C/C++](../build/building-c-cpp-programs.md).
+
+## <a name="see-also"></a>Zobacz też
+
+[Tworzenie pustej aplikacji klasycznej systemu Windows](../windows/creating-an-empty-windows-desktop-application.md)  
+[Wdrażanie aplikacji](http://msdn.microsoft.com/4ff8881d-0daf-47e7-bfe7-774c625031b4)

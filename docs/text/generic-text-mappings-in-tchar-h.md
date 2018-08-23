@@ -18,21 +18,21 @@ helpviewer_keywords:
 - TCHAR.H data types, mapping
 - mappings [C++], TCHAR.H
 ms.assetid: 01e1bb74-5a01-4093-8720-68b6c1fdda80
-author: ghogen
-ms.author: ghogen
+author: mikeblome
+ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4fd66a0e2f45def3aa22342ca30eaa64846ebf4c
-ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
+ms.openlocfilehash: 9769e1af4f9a1aa8c2c347d8724712b52e03bc22
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/09/2018
-ms.locfileid: "40012013"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42606492"
 ---
 # <a name="generic-text-mappings-in-tcharh"></a>Mapowania typ ogólny-tekst w pliku Tchar.h
-Aby uprościć transport kodu do użytku międzynarodowego [!INCLUDE[TLA#tla_ms](../text/includes/tlasharptla_ms_md.md)] zawiera bibliotekę uruchomieniową [!INCLUDE[TLA#tla_ms](../text/includes/tlasharptla_ms_md.md)]-określonego mapowania zwykłego tekstu dla wielu typów danych, procedury i innych obiektów. Możesz użyć tych mapowań, które są zdefiniowane w pliku Tchar.h, aby napisać kod ogólny, który może być kompilowane dla pojedynczych bajtów, wielobajtowego, lub [!INCLUDE[TLA#tla_unicode](../atl-mfc-shared/reference/includes/tlasharptla_unicode_md.md)] zestawów, w zależności od stała manifestu, który zdefiniujesz przy użyciu znaków `#define` instrukcji. Mapowania zwykłego tekstu są [!INCLUDE[TLA#tla_ms](../text/includes/tlasharptla_ms_md.md)] rozszerzeń, które nie są [!INCLUDE[vcpransi](../atl-mfc-shared/reference/includes/vcpransi_md.md)] zgodny.  
+Aby uprościć transport kodu do użytku międzynarodowego, biblioteki wykonawczej Microsoft przewiduje mapowania typ ogólny tekst specyficzne dla firmy Microsoft wiele typów danych, procedury i innych obiektów. Możesz użyć tych mapowań, które są zdefiniowane w pliku Tchar.h, aby napisać kod ogólny, który może być kompilowane dla pojedynczych bajtów, wielobajtowego, lub zestawy znaków Unicode, w zależności od stała manifestu, który zdefiniujesz przy użyciu `#define` instrukcji. Mapowania zwykłego tekstu są rozszerzeniami Microsoft, które nie są zgodny ze standardem ANSI.  
   
- Za pomocą Tchar.h, możesz tworzyć jednobajtowych, znaków wielobajtowych Character Set (MBCS), a [!INCLUDE[TLA#tla_unicode](../atl-mfc-shared/reference/includes/tlasharptla_unicode_md.md)] aplikacji z tego samego źródła. Tchar.h definiuje makra (które mają prefiks `_tcs`), za pomocą prawidłowe definicje preprocesora, mapowanie na `str`, `_mbs`, lub `wcs` funkcje, zgodnie z potrzebami. Aby skompilować MBCS, zdefiniuj symbol `_MBCS`. Tworzenie [!INCLUDE[TLA#tla_unicode](../atl-mfc-shared/reference/includes/tlasharptla_unicode_md.md)], zdefiniuj symbol `_UNICODE`. Aby skompilować aplikację jednobajtowych, zdefiniuj ani (ustawienie domyślne). Domyślnie `_MBCS` jest zdefiniowana dla aplikacji MFC.  
+ Za pomocą Tchar.h, można utworzyć zestawu znaków wielobajtowych (MBCS), aplikacji nieobsługujących kodu Unicode z tego samego źródła i jednobajtowych. Tchar.h definiuje makra (które mają prefiks `_tcs`), za pomocą prawidłowe definicje preprocesora, mapowanie na `str`, `_mbs`, lub `wcs` funkcje, zgodnie z potrzebami. Aby skompilować MBCS, zdefiniuj symbol `_MBCS`. Aby skompilować Unicode, zdefiniuj symbol `_UNICODE`. Aby skompilować aplikację jednobajtowych, zdefiniuj ani (ustawienie domyślne). Domyślnie `_MBCS` jest zdefiniowana dla aplikacji MFC.  
   
  `_TCHAR` Typ danych jest zdefiniowany w pliku Tchar.h w warunkowo. Jeśli symbol `_UNICODE` jest zdefiniowany dla kompilacji, `_TCHAR` jest zdefiniowany jako **wchar_t**; w przeciwnym razie jednobajtowe i MBCS kompilacji jest zdefiniowana jako **char**. (**wchar_t**, podstawowy typ danych szerokich znaków Unicode jest odpowiednikiem 16-bitowych do 8-bitowej podpisanej **char**.) Aplikacje międzynarodowe, można użyć `_tcs` rodziny funkcji, które działają w `_TCHAR` jednostek, nie w bajtach. Na przykład `_tcsncpy` kopie `n` `_TCHARs`, a nie `n` bajtów.  
   
@@ -48,9 +48,9 @@ Aby uprościć transport kodu do użytku międzynarodowego [!INCLUDE[TLA#tla_ms]
   
 |Zdefiniuj #|Skompilowanych wersji|Przykład|  
 |---------------|----------------------|-------------|  
-|`_UNICODE`|[!INCLUDE[TLA#tla_unicode](../atl-mfc-shared/reference/includes/tlasharptla_unicode_md.md)] (szerokich znaków)|`_tcsrev` Mapuje `_wcsrev`|  
+|`_UNICODE`|Unicode (szerokich znaków)|`_tcsrev` Mapuje `_wcsrev`|  
 |`_MBCS`|Znak wielobajtowy|`_tcsrev` Mapuje `_mbsrev`|  
-|Brak (domyślnie nie ma `_UNICODE` ani `_MBCS` zdefiniowane)|SBCS ([!INCLUDE[TLA#tla_ascii](../text/includes/tlasharptla_ascii_md.md)])|`_tcsrev` Mapuje `strrev`|  
+|Brak (domyślnie nie ma `_UNICODE` ani `_MBCS` zdefiniowane)|SBCS (ASCII)|`_tcsrev` Mapuje `strrev`|  
   
  Na przykład funkcja generic tekst `_tcsrev`, która została zdefiniowana w Tchar.h, mapy do `_mbsrev` Jeśli zdefiniowano `_MBCS` w programie lub do `_wcsrev` Jeśli zdefiniowano `_UNICODE`. W przeciwnym razie `_tcsrev` mapuje `strrev`. Inne mapowanie typu danych znajdują się w pliku Tchar.h w celu ułatwienia programowania, ale `_TCHAR` jest najbardziej użyteczna.  
   
@@ -63,14 +63,14 @@ Aby uprościć transport kodu do użytku międzynarodowego [!INCLUDE[TLA#tla_ms]
 |`_TSCHAR`|**podpisany char**|**podpisany char**|**wchar_t**|  
 |`_TUCHAR`|**unsigned char**|**unsigned char**|**wchar_t**|  
 |`_TXCHAR`|**char**|**unsigned char**|**wchar_t**|  
-|`_T` lub `_TEXT`|Żadnego skutku (usuwane przez preprocesor)|Żadnego skutku (usuwane przez preprocesor)|`L` (konwertuje znak lub ciąg do następujących jego [!INCLUDE[TLA#tla_unicode](../atl-mfc-shared/reference/includes/tlasharptla_unicode_md.md)] odpowiednik)|  
+|`_T` lub `_TEXT`|Żadnego skutku (usuwane przez preprocesor)|Żadnego skutku (usuwane przez preprocesor)|`L` (konwertuje następujący znak lub ciąg z jego odpowiednikiem Unicode)|  
   
  Aby uzyskać listę mapowania typ ogólny tekst procedury, zmienne i innych obiektów, zobacz [mapowania typ ogólny-tekst](../c-runtime-library/generic-text-mappings.md) w odwołaniu biblioteki wykonawczej.  
   
 > [!NOTE]
 >  Nie używaj `str` rodzinę funkcji z ciągów Unicode, które mogą zawierać osadzonych bajty o wartości null. Podobnie, nie używaj `wcs` rodziny funkcji z ciągami MBCS (lub SBCS).  
   
- Poniższe fragmenty kodu pokazują korzystanie z `_TCHAR` i `_tcsrev` do mapowania do MBCS, [!INCLUDE[TLA#tla_unicode](../atl-mfc-shared/reference/includes/tlasharptla_unicode_md.md)]i SBCS modeli.  
+ Poniższe fragmenty kodu pokazują korzystanie z `_TCHAR` i `_tcsrev` do mapowania do MBCS, Unicode i SBCS modele.  
   
 ```  
 _TCHAR *RetVal, *szString;  
@@ -91,7 +91,7 @@ wchar_t *RetVal, *szString;
 RetVal = _wcsrev(szString);  
 ```  
   
- Jeśli żadna `_MBCS` ani `_UNICODE` zostały zdefiniowane, preprocesor mapuje fragment jednobajtowe [!INCLUDE[TLA#tla_ascii](../text/includes/tlasharptla_ascii_md.md)] kodu w następujący sposób:  
+ Jeśli żadna `_MBCS` ani `_UNICODE` zostały zdefiniowane, preprocesor mapuje fragment kodowi ASCII jednobajtowe w następujący sposób:  
   
 ```  
 char *RetVal, *szString;  

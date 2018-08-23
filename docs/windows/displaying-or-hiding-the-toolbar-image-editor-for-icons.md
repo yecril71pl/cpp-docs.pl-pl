@@ -17,29 +17,32 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 04745cf4344175b37a9e91968861bfbf087fce33
-ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
+ms.openlocfilehash: df6adfb026c9bfeab715e617dae64a25e993e868
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39649767"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42602615"
 ---
 # <a name="displaying-or-hiding-the-toolbar-image-editor-for-icons"></a>Wyświetlanie i ukrywanie paska narzędzi (Edytor obrazów dla ikon)
-Ponieważ wiele narzędzi do rysowania są dostępne z [klawiatury](../windows/accelerator-keys-image-editor-for-icons.md), warto czasami Ukryj **edytora obrazów** paska narzędzi.  
-  
-### <a name="to-display-or-hide-the-image-editor-toolbar"></a>Aby wyświetlić lub ukryć pasek narzędzi edytora obrazów  
-  
-1.  Na **widoku** kliknij menu **pasków narzędzi** wybierz **edytora obrazów**.  
-  
-    > [!NOTE]
-    >  Elementy z tego paska narzędzi pojawi się niedostępne, gdy plik obrazu z bieżącego projektu lub rozwiązania nie jest otwarty w **edytora obrazów**. Zobacz [Tworzenie ikony lub innego obraz](../windows/creating-an-icon-or-other-image-image-editor-for-icons.md), aby uzyskać informacje dotyczące dodawania plików obrazów do swoich projektów.  
-  
- Aby uzyskać informacje na temat dodawania zasobów do projektów zarządzanych, zobacz [zasoby w aplikacjach pulpitu](/dotnet/framework/resources/index) w *przewodniku dewelopera .NET Framework*. Aby uzyskać informacji na temat ręcznego dodawania plików zasobów do projektów zarządzanych, uzyskiwania dostępu do zasobów, wyświetlania statycznych zasobów i przypisywania ciągów zasobów do właściwości, zobacz [Creating Resource Files dla aplikacji klasycznych](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Aby uzyskać informacji na temat globalizacja i lokalizacja zasobów w aplikacjach zarządzanych, zobacz [Globalizing i lokalizowanie aplikacji programu .NET Framework](/dotnet/standard/globalization-localization/index).  
-  
-## <a name="requirements"></a>Wymagania  
- Brak  
-  
-## <a name="see-also"></a>Zobacz też  
- [Okno kolory](../windows/colors-window-image-editor-for-icons.md)   
- [Pasek narzędzi](../windows/toolbar-image-editor-for-icons.md)   
- [Edytor obrazów dla ikon](../windows/image-editor-for-icons.md)
+
+Ponieważ wiele narzędzi do rysowania są dostępne z [klawiatury](../windows/accelerator-keys-image-editor-for-icons.md), warto czasami Ukryj **edytora obrazów** paska narzędzi.
+
+### <a name="to-display-or-hide-the-image-editor-toolbar"></a>Aby wyświetlić lub ukryć pasek narzędzi edytora obrazów
+
+1. Na **widoku** kliknij menu **pasków narzędzi** wybierz **edytora obrazów**.
+
+   > [!NOTE]
+   > Elementy z tego paska narzędzi pojawi się niedostępne, gdy plik obrazu z bieżącego projektu lub rozwiązania nie jest otwarty w **edytora obrazów**. Zobacz [Tworzenie ikony lub innego obraz](../windows/creating-an-icon-or-other-image-image-editor-for-icons.md), aby uzyskać informacje dotyczące dodawania plików obrazów do swoich projektów.
+
+Aby uzyskać informacje na temat dodawania zasobów do projektów zarządzanych, zobacz [zasoby w aplikacjach pulpitu](/dotnet/framework/resources/index) w *przewodniku dewelopera .NET Framework*. Aby uzyskać informacji na temat ręcznego dodawania plików zasobów do projektów zarządzanych, uzyskiwania dostępu do zasobów, wyświetlania statycznych zasobów i przypisywania ciągów zasobów do właściwości, zobacz [Creating Resource Files dla aplikacji klasycznych](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Aby uzyskać informacji na temat globalizacja i lokalizacja zasobów w aplikacjach zarządzanych, zobacz [Globalizing i lokalizowanie aplikacji programu .NET Framework](/dotnet/standard/globalization-localization/index).
+
+## <a name="requirements"></a>Wymagania
+
+Brak
+
+## <a name="see-also"></a>Zobacz też
+
+[Okno kolory](../windows/colors-window-image-editor-for-icons.md)  
+[Pasek narzędzi](../windows/toolbar-image-editor-for-icons.md)  
+[Edytor obrazów dla ikon](../windows/image-editor-for-icons.md)

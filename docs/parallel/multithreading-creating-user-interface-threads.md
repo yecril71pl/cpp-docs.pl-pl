@@ -21,52 +21,53 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 480839316cc8d47b2af4be1cd81c0d02f09fad25
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: 0223e342bf2312919247d42564445a9e116ca59b
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33688872"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42607398"
 ---
 # <a name="multithreading-creating-user-interface-threads"></a>Wielowątkowość: tworzenie wątków interfejsu użytkownika
-Wątek interfejsu użytkownika jest najczęściej używany do obsługi danych wejściowych użytkownika zdarzeń i reagowanie na użytkownika niezależnie od wątków wykonywania innych części aplikacji. Wątku głównego aplikacji (w Twojej `CWinApp`-klasy) jest już utworzony i uruchomiona. W tym temacie opisano kroki niezbędne do tworzenia wątków interfejsu użytkownika.  
+Wątek interfejsu użytkownika jest często używane do obsługi danych wejściowych użytkownika i reagowania na zdarzenia użytkownika, niezależnie od wątków wykonywanie innych części aplikacji. Wątku głównego aplikacji (podany w swojej `CWinApp`-klasy pochodnej) jest już utworzona i uruchomiona za Ciebie. W tym temacie opisano kroki niezbędne do tworzenia wątków interfejsu użytkownika.  
   
- Najpierw należy wykonać podczas tworzenia wątku interfejsu użytkownika jest klasa wyprowadzona z [cwinthread —](../mfc/reference/cwinthread-class.md). Należy zadeklarować i wdrożyć przy użyciu [declare_dyncreate —](../mfc/reference/run-time-object-model-services.md#declare_dyncreate) i [implement_dyncreate —](../mfc/reference/run-time-object-model-services.md#implement_dyncreate) makra. Ta klasa musi zastąpić niektóre funkcje i mogą zastąpić inne osoby. W poniższej tabeli przedstawiono te funkcje i co należy zrobić.  
+Pierwszą rzeczą, którą należy wykonać podczas tworzenia wątku interfejsu użytkownika jest wyprowadzić klasę z [CWinThread](../mfc/reference/cwinthread-class.md). Należy zadeklarować i zaimplementowania tej klasy przy użyciu [DECLARE_DYNCREATE](../mfc/reference/run-time-object-model-services.md#declare_dyncreate) i [IMPLEMENT_DYNCREATE](../mfc/reference/run-time-object-model-services.md#implement_dyncreate) makra. Ta klasa należy zastąpić niektóre funkcje i mogą zastąpić inne osoby. W poniższej tabeli przedstawiono te funkcje i co należy zrobić.  
   
-### <a name="functions-to-override-when-creating-a-user-interface-thread"></a>Funkcje do przesłonięcia podczas tworzenia wątku interfejsu użytkownika  
+### <a name="functions-to-override-when-creating-a-user-interface-thread"></a>Funkcje, aby zastąpić podczas tworzenia wątku interfejsu użytkownika  
   
 |Funkcja|Cel|  
 |--------------|-------------|  
 
-|[ExitInstance](../mfc/reference/cwinthread-class.md#exitinstance)| Wykonaj czyszczenie, gdy zakończenie wątku. Zazwyczaj przesłonięcia. |  
-|[InitInstance](../mfc/reference/cwinthread-class.md#initinstance)| Wykonaj inicjowania wystąpienia wątku. Musi zostać zastąpiona. |  
-|[OnIdle](../mfc/reference/cwinthread-class.md#onidle)| Wykonaj właściwe dla wątków przetwarzania czas bezczynności. Nie zawsze przesłonięcia. |  
-|[PreTranslateMessage](../mfc/reference/cwinthread-class.md#pretranslatemessage)| Filtruj wiadomości, zanim zostaną rozesłane **TranslateMessage** i **DispatchMessage**. Nie zawsze przesłonięcia. |  
-|[ProcessWndProcException](../mfc/reference/cwinthread-class.md#processwndprocexception)| Przechwycić nieobsługiwane wyjątki rzucane przez programy obsługi wiadomości i polecenia wątku. Nie zawsze przesłonięcia. |  
-|[Uruchom](../mfc/reference/cwinthread-class.md#run)| Kontrolowanie funkcji wątku. Zawiera przekazywanie komunikatów. Rzadko przesłonięcia. |  
+|[Exitinstance —](../mfc/reference/cwinthread-class.md#exitinstance)| Oczyszczanie należy wykonać, gdy wątek kończy działanie. Zazwyczaj zastąpione. |  
+|[InitInstance](../mfc/reference/cwinthread-class.md#initinstance)| Wykonywanie inicjowania wystąpienia wątku. Musi zostać zastąpiona. |  
+|[OnIdle](../mfc/reference/cwinthread-class.md#onidle)| Wykonaj przetwarzanie w czasie bezczynności właściwe dla wątków. Nie zawsze zastąpiony. |  
+|[Pretranslatemessage —](../mfc/reference/cwinthread-class.md#pretranslatemessage)| Filtrowanie komunikatów przed ich wysłaniem do `TranslateMessage` i `DispatchMessage`. Nie zawsze zastąpiony. |  
+|[ProcessWndProcException](../mfc/reference/cwinthread-class.md#processwndprocexception)| Przechwycić nieobsługiwane wyjątki rzucane przez wątek wiadomości i procedury obsługi poleceń. Nie zawsze zastąpiony. |  
+|[Uruchom](../mfc/reference/cwinthread-class.md#run)| Funkcje kontroli wątku. Zawiera "pompy komunikatów". Rzadko zastąpione. |  
 
   
- MFC zawiera dwie wersje `AfxBeginThread` za pomocą parametru przeładowanie: klucz, który można tworzyć tylko wątków roboczych, a taki, który można utworzyć wątków interfejsu użytkownika lub wątków roboczych. Uruchamianie z wątku interfejsu użytkownika, wywołaj metodę przeciążenia drugi [afxbeginthread —](../mfc/reference/application-information-and-management.md#afxbeginthread), podając następujące informacje:  
+Biblioteka MFC zawiera dwie wersje `AfxBeginThread` za pomocą parametru przeciążenia: jedną, która tworzy tylko wątki robocze i taki, który można utworzyć wątki interfejsu użytkownika lub wątków roboczych. Aby uruchomić wątek interfejsu użytkownika, należy wywołać drugie przeciążenie [AfxBeginThread](../mfc/reference/application-information-and-management.md#afxbeginthread), podając następujące informacje:  
   
--   [Runtime_class —](../mfc/reference/run-time-object-model-services.md#runtime_class) pochodzi od klasy `CWinThread`.  
+- [RUNTIME_CLASS](../mfc/reference/run-time-object-model-services.md#runtime_class) klasy pochodzące z `CWinThread`.  
   
--   (Opcjonalnie) Żądany priorytet. Wartość domyślna to normalnym priorytecie. Aby uzyskać więcej informacji na temat poziomów priorytet dostępne w temacie [wykonanie funkcji SetThreadPriority](http://msdn.microsoft.com/library/windows/desktop/ms686277) w [!INCLUDE[winsdkshort](../atl-mfc-shared/reference/includes/winsdkshort_md.md)].  
+- (Opcjonalnie) Żądany priorytet. Wartością domyślną jest normalnym priorytecie. Aby uzyskać więcej informacji na temat dostępnych poziomów priorytetu, zobacz [SetThreadPriority](http://msdn.microsoft.com/library/windows/desktop/ms686277) w zestawie Windows SDK.  
   
--   (Opcjonalnie) Rozmiar żądanego stosu wątku. Wartością domyślną jest tym samym stosie rozmiar jako Tworzenie wątku.  
+- (Opcjonalnie) Żądany rozmiar stosu dla wątku. Wartość domyślna to taki sam jak rozmiar stosu wątku tworzącego.  
   
--   (Opcjonalnie) **CREATE_SUSPENDED** Jeśli chcesz wątku, który ma zostać utworzony w stanie wstrzymania. Wartość domyślna to 0 lub normalnie uruchomienie wątku.  
+- (Opcjonalnie) CREATE_SUSPENDED, jeśli chcesz, aby wątek był utworzony w stanie wstrzymania. Wartość domyślna jest równa 0 lub wątek uruchamia się normalnie.  
   
--   (Opcjonalnie) Atrybuty wymaganymi. Wartość domyślna to te same prawa dostępu jako wątku nadrzędnej. Aby uzyskać więcej informacji na temat formatu informacji o zabezpieczeniach, zobacz [SECURITY_ATTRIBUTES](http://msdn.microsoft.com/library/windows/desktop/aa379560) w [!INCLUDE[winsdkshort](../atl-mfc-shared/reference/includes/winsdkshort_md.md)].  
+- (Opcjonalnie) Atrybuty pożądanych zabezpieczeń. Wartość domyślna to taki sam dostęp jak wątku nadrzędnego. Aby uzyskać więcej informacji dotyczących formatu informacji o zabezpieczeniach, zobacz [SECURITY_ATTRIBUTES](http://msdn.microsoft.com/library/windows/desktop/aa379560) w zestawie Windows SDK.  
   
- `AfxBeginThread` wykonuje większość pracy należy. Tworzy nowy obiekt klasy, inicjowane z informacji podanych i wywołania [CWinThread::CreateThread](../mfc/reference/cwinthread-class.md#createthread) można uruchomić na wykonywaniu wątku. Testy zostały wprowadzone w całej procedury upewnij się, że wszystkie obiekty są deallocated prawidłowo w przypadku dowolnej części Tworzenie nie.  
+`AfxBeginThread` wykonuje większość pracy za Ciebie. Tworzy nowy obiekt klasy, inicjuje go przy użyciu informacji podasz i wywołania [CWinThread::CreateThread](../mfc/reference/cwinthread-class.md#createthread) można rozpocząć wykonywanie wątku. Kontrole są wprowadzane w trakcie trwania procedury upewnij się, że wszystkie obiekty są zdelokowane poprawnie w przypadku dowolnej części tworzenia nie.  
   
-## <a name="what-do-you-want-to-know-more-about"></a>Co chcesz dowiedzieć się więcej o?  
+## <a name="what-do-you-want-to-know-more-about"></a>Co chcesz dowiedzieć się więcej na temat?  
   
--   [Wielowątkowość: przerywanie wątków](../parallel/multithreading-terminating-threads.md)  
+- [Wielowątkowość: przerywanie wątków](../parallel/multithreading-terminating-threads.md)  
   
--   [Wielowątkowość: tworzenie wątków roboczych](../parallel/multithreading-creating-worker-threads.md)  
+- [Wielowątkowość: tworzenie wątków roboczych](../parallel/multithreading-creating-worker-threads.md)  
   
--   [Procesów i wątków](http://msdn.microsoft.com/library/windows/desktop/ms684841)  
+- [Procesy i wątki](http://msdn.microsoft.com/library/windows/desktop/ms684841)  
   
 ## <a name="see-also"></a>Zobacz też  
- [Wielowątkowość z C++ i MFC](../parallel/multithreading-with-cpp-and-mfc.md)
+ 
+[Wielowątkowość z C++ i MFC](../parallel/multithreading-with-cpp-and-mfc.md)

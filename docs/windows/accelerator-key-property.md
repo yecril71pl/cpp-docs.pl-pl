@@ -15,42 +15,45 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 36884376e5ff31754e4c53ef6602f6bfd129f4a4
-ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
+ms.openlocfilehash: 162cb774e985d490385c68bebab01f48222b3616
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39650446"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42598320"
 ---
 # <a name="accelerator-key-property"></a>Właściwość klawisza skrótu
-Dostępne są następujące wpisy prawne dla właściwości klucza w tabeli akceleratora:  
-  
--   Liczba całkowita między 0 a 255 w formacie dziesiętnym. Wartość określa, czy wartość jest traktowana jako ASCII i ANSI w następujący sposób:  
-  
-    -   Cyfr są zawsze interpretowane jako odpowiadający mu klucz, a nie jako wartości ASCII lub ANSI.  
-  
-    -   Wartości z zakresu od 1 do 26, gdy poprzedzony zerami, są interpretowane jako ^ od A do ^ Z, która reprezentuje wartość ASCII litery alfabetu, po naciśnięciu z **Ctrl** przytrzymanie klawisza.  
-  
-    -   Wartości z 27 32 zawsze są interpretowane jako wartości dziesiętne trzycyfrowy 027 za pośrednictwem 032.  
-  
-    -   Wartości z 033 do 255, czy poprzedzony przez użytkownika 0 nie będą interpretowane jako wartości ANSI.  
-  
--   Znak pojedynczego klawiatury. Wielkie litery A - Z lub cyfry 0 - 9 mogą być ASCII lub wirtualny wartości klucza. jakikolwiek inny znak jest ASCII tylko.  
-  
--   Klawiatury pojedynczy znak z zakresu A - Z (tylko wielkie litery), poprzedzony daszek (^) (na przykład ^ C). Wprowadza wartość ASCII klucza, po naciśnięciu klawisza z **Ctrl** przytrzymanie klawisza.  
-  
-    > [!NOTE]
-    >  Podczas wprowadzania wartości ASCII, opcje właściwości modyfikator są ograniczone. Jest tylko klawisz control dostępne do użytku **Alt** klucza.  
-  
--   Wszystkie prawidłowe wirtualny identyfikator klawisza. Pole listy rozwijanej klucza w tabeli akceleratora zawiera standardowe wirtualnych identyfikatorów klucza.  
-  
-    > [!TIP]
-    >  Innym sposobem zdefiniowania klawiszem skrótu jest kliknij prawym przyciskiem myszy wpis lub wiele wpisów w tabeli akceleratora, wybierz polecenie **dalej wpisany klucz** z menu skrótów, a następnie naciśnij klawisze lub kombinacji klawiszy na klawiaturze. **Dalej wpisany klucz** polecenia jest także dostępny z **Edytuj** menu.  
-  
-## <a name="requirements"></a>Wymagania  
- Win32  
-  
-## <a name="see-also"></a>Zobacz też  
- [Ustawianie właściwości klawiszy skrótów](../windows/setting-accelerator-properties.md)   
- [Edytowanie w tabeli akceleratora](../windows/editing-in-an-accelerator-table.md)   
- [Edytor klawiszy skrótów](../windows/accelerator-editor.md)
+
+Dostępne są następujące wpisy prawne dla właściwości klucza w tabeli akceleratora:
+
+- Liczba całkowita między 0 a 255 w formacie dziesiętnym. Wartość określa, czy wartość jest traktowana jako ASCII i ANSI w następujący sposób:
+
+   - Cyfr są zawsze interpretowane jako odpowiadający mu klucz, a nie jako wartości ASCII lub ANSI.
+
+   - Wartości z zakresu od 1 do 26, gdy poprzedzony zerami, są interpretowane jako ^ od A do ^ Z, która reprezentuje wartość ASCII litery alfabetu, po naciśnięciu z **Ctrl** przytrzymanie klawisza.
+
+   - Wartości z 27 32 zawsze są interpretowane jako wartości dziesiętne trzycyfrowy 027 za pośrednictwem 032.
+
+   - Wartości z 033 do 255, czy poprzedzony przez użytkownika 0 nie będą interpretowane jako wartości ANSI.
+
+- Znak pojedynczego klawiatury. Wielkie litery A - Z lub cyfry 0 - 9 mogą być ASCII lub wirtualny wartości klucza. jakikolwiek inny znak jest ASCII tylko.
+
+- Klawiatury pojedynczy znak z zakresu A - Z (tylko wielkie litery), poprzedzony daszek (^) (na przykład ^ C). Wprowadza wartość ASCII klucza, po naciśnięciu klawisza z **Ctrl** przytrzymanie klawisza.
+
+   > [!NOTE]
+   > Podczas wprowadzania wartości ASCII, opcje właściwości modyfikator są ograniczone. Jest tylko klawisz control dostępne do użytku **Alt** klucza.
+
+- Wszystkie prawidłowe wirtualny identyfikator klawisza. Pole listy rozwijanej klucza w tabeli akceleratora zawiera standardowe wirtualnych identyfikatorów klucza.
+
+   > [!TIP]
+   > Innym sposobem zdefiniowania klawiszem skrótu jest kliknij prawym przyciskiem myszy wpis lub wiele wpisów w tabeli akceleratora, wybierz polecenie **dalej wpisany klucz** z menu skrótów, a następnie naciśnij klawisze lub kombinacji klawiszy na klawiaturze. **Dalej wpisany klucz** polecenia jest także dostępny z **Edytuj** menu.
+
+## <a name="requirements"></a>Wymagania
+
+Win32
+
+## <a name="see-also"></a>Zobacz też
+
+[Ustawianie właściwości klawiszy skrótów](../windows/setting-accelerator-properties.md)  
+[Edytowanie w tabeli klawiszy skrótu](../windows/editing-in-an-accelerator-table.md)  
+[Edytor klawiszy skrótów](../windows/accelerator-editor.md)

@@ -17,44 +17,50 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 018b5832b187223484013702a1b7d4871d0b1d44
-ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
+ms.openlocfilehash: 9fc1d0c7ed8655037eebfc12097789253b3027e9
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/09/2018
-ms.locfileid: "40015719"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42603898"
 ---
 # <a name="move-function"></a>Move — Funkcja
-Obsługuje infrastrukturę biblioteki WRL i nie jest przeznaczona do użycia bezpośrednio w kodzie.  
-  
-## <a name="syntax"></a>Składnia  
-  
-```cpp  
-template<class T>  
-inline typename RemoveReference<T>::Type&& Move(  
-   _Inout_ T&& arg  
-);  
-```  
-  
-### <a name="parameters"></a>Parametry  
- *T*  
- Typ argumentu.  
-  
- *ARG*  
- Argument do przenoszenia.  
-  
-## <a name="return-value"></a>Wartość zwracana  
- Parametr *arg* po cech odwołanie lub odwołanie rvalue, jeśli zostały usunięte.  
-  
-## <a name="remarks"></a>Uwagi  
- Przenosi określonego argumentu z jednej lokalizacji.  
-  
- Aby uzyskać więcej informacji, zobacz **przenoszenie semantyki** części [Rvalue Reference Declarator: & &](../cpp/rvalue-reference-declarator-amp-amp.md).  
-  
-## <a name="requirements"></a>Wymagania  
- **Nagłówek:** internal.h  
-  
- **Namespace:** Microsoft::wrl:: details  
-  
-## <a name="see-also"></a>Zobacz też  
- [Microsoft::WRL::Details, przestrzeń nazw](../windows/microsoft-wrl-details-namespace.md)
+
+Obsługuje infrastrukturę biblioteki WRL i nie jest przeznaczona do użycia bezpośrednio w kodzie.
+
+## <a name="syntax"></a>Składnia
+
+```cpp
+template<class T>
+inline typename RemoveReference<T>::Type&& Move(
+   _Inout_ T&& arg
+);
+```
+
+### <a name="parameters"></a>Parametry
+
+*T*  
+Typ argumentu.
+
+*ARG*  
+Argument do przenoszenia.
+
+## <a name="return-value"></a>Wartość zwracana
+
+Parametr *arg* po cech odwołanie lub odwołanie rvalue, jeśli zostały usunięte.
+
+## <a name="remarks"></a>Uwagi
+
+Przenosi określonego argumentu z jednej lokalizacji.
+
+Aby uzyskać więcej informacji, zobacz **przenoszenie semantyki** części [Rvalue Reference Declarator: & &](../cpp/rvalue-reference-declarator-amp-amp.md).
+
+## <a name="requirements"></a>Wymagania
+
+**Nagłówek:** internal.h
+
+**Namespace:** Microsoft::wrl:: details
+
+## <a name="see-also"></a>Zobacz też
+
+[Microsoft::WRL::Details, przestrzeń nazw](../windows/microsoft-wrl-details-namespace.md)

@@ -16,49 +16,51 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 6f57cdce20a54b8bc56b804e12f59f92855c7f69
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 8c61aeb0dcf3a9e0e001f89b9872b43b0af092b2
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33880208"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42593326"
 ---
 # <a name="interface-attributes"></a>Atrybuty interfejsu
-Następujące atrybuty dotyczą [interfejsu (lub __interface)](../cpp/interface.md) słowa kluczowego języka C++.  
-  
-|Atrybut|Opis|  
-|---------------|-----------------|  
-|[async_uuid](../windows/async-uuid.md)|Określa identyfikator UUID, który określa, że kompilator MIDL, aby zdefiniować synchroniczne i asynchroniczne wersje interfejsu COM.|  
-|[custom](../windows/custom-cpp.md)|Umożliwia określenie własnych atrybutów.|  
-|[dispinterface](../windows/dispinterface.md)|Umieszcza interfejsu w pliku .idl jako interfejs wysyłania.|  
-|[dual](../windows/dual.md)|Umieszcza interfejsu w pliku .idl jako interfejs podwójny.|  
-|[export](../windows/export.md)|Powoduje, że struktura danych mają być umieszczone w pliku .idl.|  
-|[helpcontext](../windows/helpcontext.md)|Określa identyfikator kontekstu, która pozwala użytkownikowi oglądać informacje o tym elemencie w pliku pomocy.|  
-|[helpfile](../windows/helpfile.md)|Ustawia nazwę pliku pomocy dla biblioteki typów.|  
-|[helpstring](../windows/helpstring.md)|Określa ciąg znaków używany do opisania elementu, którego dotyczy.|  
-|[helpstringcontext](../windows/helpstringcontext.md)|Określa identyfikator tematu pomocy w formacie pliku .hlp lub .chm.|  
-|[helpstringdll](../windows/helpstringdll.md)|Określa nazwę biblioteki DLL, aby wykonać wyszukiwanie ciągu dokumentu (lokalizacja).|  
-|[hidden](../windows/hidden.md)|Wskazuje, czy element istnieje, ale nie powinien być wyświetlany w przeglądarce zorientowanej na użytkownika.|  
-|[library_block](../windows/library-block.md)|Umieszcza konstrukcję wewnątrz bloku biblioteki pliku .idl.|  
-|[lokalne](../windows/local-cpp.md)|Umożliwia przy użyciu kompilatora MIDL jako generator nagłówka w nagłówku interfejsu. W przypadku poszczególnych funkcji wyznacza procedury lokalnym, dla których są generowane nie klas zastępczych.|  
-|[nonextensible](../windows/nonextensible.md)|Określa, że `IDispatch` implementacji zawiera tylko właściwości i metod wymienionych w opisie interfejsu i nie może zostać rozszerzony o dodatkowe elementy członkowskie w czasie wykonywania. Ten atrybut jest prawidłowy tylko w [podwójną](../windows/dual.md) interfejsu.|  
-|[odl](../windows/odl.md)|Identyfikuje interfejsu jako interfejsu język opisu obiektów (ODL).|  
-|[object](../windows/object-cpp.md)|Określa niestandardowy interfejs.|  
-|[oleautomation](../windows/oleautomation.md)|Wskazuje, że interfejs jest zgodna z automatyzacji.|  
-|[pointer_default](../windows/pointer-default.md)|Określa domyślny atrybut wskaźnik dla wszystkich wskaźników z wyjątkiem wskaźniki najwyższego poziomu, które są wyświetlane na listach parametrem.|  
-|[ptr](../windows/ptr.md)|Określa wskaźnik jako pełne wskaźnika.|  
-|[restricted](../windows/restricted.md)|Określa, które elementy członkowskie biblioteki nie może być wywoływana arbitralnie.|  
-|[uuid](../windows/uuid-cpp-attributes.md)|Zawiera unikatowy identyfikator w bibliotece|  
-  
- Należy przestrzegać następujących reguł określających interfejsu:  
-  
--   Jest domyślną konwencję wywoływania [__stdcall](../cpp/stdcall.md).  
-  
--   Identyfikator GUID jest dostarczany automatycznie, jeśli nie podasz.  
-  
--   Żadna metoda przeciążenia są dozwolone.  
-  
- Podczas określania nie [uuid](../windows/uuid-cpp-attributes.md) atrybutu i przy użyciu tej samej nazwy interfejsu w projektach inny atrybut, ten sam identyfikator GUID jest generowany.  
-  
-## <a name="see-also"></a>Zobacz też  
- [Atrybuty w zależności od zastosowania](../windows/attributes-by-usage.md)
+
+Następujące atrybuty dotyczą [interfejsu (lub __interface)](../cpp/interface.md) słowa kluczowego języka C++.
+
+|Atrybut|Opis|
+|---------------|-----------------|
+|[async_uuid](../windows/async-uuid.md)|Określa identyfikator UUID, który określa, że kompilator MIDL, aby zdefiniować synchroniczne i asynchroniczne wersje interfejsu COM.|
+|[custom](../windows/custom-cpp.md)|Pozwala zdefiniować własne atrybuty.|
+|[dispinterface](../windows/dispinterface.md)|Przełącza interfejsu w pliku .idl, jako interfejs ekspedycji.|
+|[dual](../windows/dual.md)|Przełącza interfejsu w pliku .idl, jako podwójnego interfejsu.|
+|[export](../windows/export.md)|Powoduje to struktura danych, należy umieścić w pliku .idl.|
+|[helpcontext](../windows/helpcontext.md)|Określa identyfikator kontekstu, który pozwala użytkownikowi oglądać informacje o tym elemencie w pliku pomocy.|
+|[helpfile](../windows/helpfile.md)|Określa nazwę pliku pomocy dla biblioteki typów.|
+|[helpstring](../windows/helpstring.md)|Określa ciąg znaków, który jest używany do opisania elementu, do której jest stosowany.|
+|[helpstringcontext](../windows/helpstringcontext.md)|Określa identyfikator tematu pomocy w pliku hlp lub chm.|
+|[helpstringdll](../windows/helpstringdll.md)|Określa nazwę biblioteki DLL, aby wykonać wyszukiwanie ciągu dokumentu (lokalizacja).|
+|[hidden](../windows/hidden.md)|Wskazuje, czy element istnieje, ale nie powinien być wyświetlany w przeglądarce zorientowanej na użytkownika.|
+|[library_block](../windows/library-block.md)|Umieszcza konstrukcję wewnątrz bloku biblioteki pliku .idl.|
+|[lokalne](../windows/local-cpp.md)|Umożliwia kompilatorowi MIDL jako generator nagłówka, gdy jest używana w nagłówku interfejsu. W przypadku użycia w poszczególnych funkcji, wyznacza lokalnej procedury, dla którego są generowane nie wycinki.|
+|[nonextensible](../windows/nonextensible.md)|Określa, że `IDispatch` wdrożenia zawiera tylko właściwości i metod wymienionych w opisie interfejsu i nie można rozszerzyć za pomocą dodatkowe elementy członkowskie w czasie wykonywania. Ten atrybut jest prawidłowy tylko w [podwójną](../windows/dual.md) interfejsu.|
+|[odl](../windows/odl.md)|Identyfikuje interfejs jako interfejs język opisu obiektów (ODL).|
+|[object](../windows/object-cpp.md)|Określa niestandardowy interfejs.|
+|[oleautomation](../windows/oleautomation.md)|Wskazuje, że interfejs jest zgodna z usługą Automation.|
+|[pointer_default](../windows/pointer-default.md)|Określa domyślny atrybut wskaźnik dla wszystkich wskaźników, z wyjątkiem wskaźniki najwyższego poziomu, które pojawiają się listami parametrów.|
+|[ptr](../windows/ptr.md)|Określa wskaźnik jako pełna wskaźnika.|
+|[restricted](../windows/restricted.md)|Określa, które elementy członkowskie biblioteki nie może być wywoływana arbitralnie.|
+|[uuid](../windows/uuid-cpp-attributes.md)|Zawiera unikatowy identyfikator biblioteki|
+
+Musisz przestrzegać tych reguł określających interfejs:
+
+- Domyślna konwencja wywołania jest [__stdcall](../cpp/stdcall.md).
+
+- Identyfikator GUID jest dostarczany za Ciebie, jeśli nie podasz.
+
+- Nie przeciążone metody są dozwolone.
+
+Podczas określania nie [uuid](../windows/uuid-cpp-attributes.md) atrybutu i użycie tej samej nazwy interfejsu, w projektach innego atrybutu, ten sam identyfikator GUID jest generowany.
+
+## <a name="see-also"></a>Zobacz też
+
+[Atrybuty w zależności od zastosowania](../windows/attributes-by-usage.md)

@@ -17,51 +17,57 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 96b97bf2afa8897063e8303a04445f9957cc42c3
-ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
+ms.openlocfilehash: b50466fc2c357c1d57fca272ff343cd56f3689c5
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/09/2018
-ms.locfileid: "40016642"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42604269"
 ---
 # <a name="runtimeclassbasetasiid-method"></a>RuntimeClassBaseT::AsIID — Metoda
-Obsługuje infrastrukturę biblioteki WRL i nie jest przeznaczona do użycia bezpośrednio w kodzie.  
-  
-## <a name="syntax"></a>Składnia  
-  
-```cpp  
-template<typename T>  
-__forceinline static HRESULT AsIID(  
-   _In_ T* implements,  
-   REFIID riid,  
-   _Deref_out_ void **ppvObject  
-);  
-```  
-  
-### <a name="parameters"></a>Parametry  
- *T*  
- Typ, który implementuje Identyfikatorem określony przez parametr *riid*.  
-  
- *Implementuje*  
- Zmiennej o typie określonym przez parametr szablonu *T*.  
-  
- *Parametr riid*  
- Identyfikator interfejsu do pobrania.  
-  
- *ppvObject*  
- Jeśli operacja się powiedzie, wskaźnik do a wskaźnik do interfejsu określony przez parametr *riid*.  
-  
-## <a name="return-value"></a>Wartość zwracana  
- S_OK w przypadku powodzenia; w przeciwnym razie wartość HRESULT, który opisuje błąd.  
-  
-## <a name="remarks"></a>Uwagi  
- Pobiera wskaźnik do określonego interfejsu.  
-  
-## <a name="requirements"></a>Wymagania  
- **Nagłówek:** implements.h  
-  
- **Namespace:** Microsoft::wrl:: details  
-  
-## <a name="see-also"></a>Zobacz też  
- [RuntimeClassBaseT, struktura](../windows/runtimeclassbaset-structure.md)   
- [Microsoft::WRL::Details, przestrzeń nazw](../windows/microsoft-wrl-details-namespace.md)
+
+Obsługuje infrastrukturę biblioteki WRL i nie jest przeznaczona do użycia bezpośrednio w kodzie.
+
+## <a name="syntax"></a>Składnia
+
+```cpp
+template<typename T>
+__forceinline static HRESULT AsIID(
+   _In_ T* implements,
+   REFIID riid,
+   _Deref_out_ void **ppvObject
+);
+```
+
+### <a name="parameters"></a>Parametry
+
+*T*  
+Typ, który implementuje Identyfikatorem określony przez parametr *riid*.
+
+*Implementuje*  
+Zmiennej o typie określonym przez parametr szablonu *T*.
+
+*Parametr riid*  
+Identyfikator interfejsu do pobrania.
+
+*ppvObject*  
+Jeśli operacja się powiedzie, wskaźnik do a wskaźnik do interfejsu określony przez parametr *riid*.
+
+## <a name="return-value"></a>Wartość zwracana
+
+S_OK w przypadku powodzenia; w przeciwnym razie wartość HRESULT, który opisuje błąd.
+
+## <a name="remarks"></a>Uwagi
+
+Pobiera wskaźnik do określonego interfejsu.
+
+## <a name="requirements"></a>Wymagania
+
+**Nagłówek:** implements.h
+
+**Namespace:** Microsoft::wrl:: details
+
+## <a name="see-also"></a>Zobacz też
+
+[RuntimeClassBaseT, struktura](../windows/runtimeclassbaset-structure.md)  
+[Microsoft::WRL::Details, przestrzeń nazw](../windows/microsoft-wrl-details-namespace.md)

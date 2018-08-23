@@ -19,35 +19,38 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 9bafa66a382566ed096f70c752c461d8f3e2ca85
-ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
+ms.openlocfilehash: 615138b44ab9fdbbf94d4130428ba708697c2aee
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/09/2018
-ms.locfileid: "40010292"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42601851"
 ---
 # <a name="modifying-the-layout-grid"></a>Modyfikowanie siatki układu
-Podczas wprowadzania i rozmieszczanie formantów w oknie dialogowym, można użyć siatki układu do bardziej precyzyjne pozycjonowania. Po włączeniu siatki "przyciągane do" linii kropkowanej siatki tak, jakby namagnesować pojawiają się formanty. Możesz włączyć tę funkcję "przyciągania do siatki" i wyłączyć i zmienianie rozmiaru komórek siatki układu.  
-  
-### <a name="to-turn-the-layout-grid-on-or-off"></a>Aby włączyć siatki układu lub wyłączyć  
-  
-1.  Z **Format** menu, wybierz **ustawienia prowadnic**.  
-  
-2.  W [okno dialogowe Ustawienia prowadnic](../windows/guide-settings-dialog-box.md), zaznacz lub wyczyść **siatki** przycisku.  
-  
-     Możesz nadal kontrolować siatki w poszczególnych **okna dialogowego** okna edytora za pomocą **Przełącz siatkę** znajdujący się na [paska narzędzi edytora okien dialogowych](../windows/showing-or-hiding-the-dialog-editor-toolbar.md).  
-  
-### <a name="to-change-the-size-of-the-layout-grid"></a>Aby zmienić rozmiar siatki układu  
-  
-1.  Z **Format** menu, wybierz **ustawienia prowadnic**.  
-  
-2.  W [okno dialogowe Ustawienia prowadnic](../windows/guide-settings-dialog-box.md), wpisać wysokość i szerokość Dlu komórek w siatce. Minimalna wysokość lub szerokość jest Dlu 4. Aby uzyskać więcej informacji na temat Dlu, zobacz [rozmieszczenie kontrolek w oknach dialogowych](../windows/arrangement-of-controls-on-dialog-boxes.md).  
-  
- Aby uzyskać informacje na temat dodawania zasobów do projektów zarządzanych, zobacz [zasoby w aplikacjach pulpitu](/dotnet/framework/resources/index) w *przewodniku dewelopera .NET Framework*. Aby uzyskać informacji na temat ręcznego dodawania plików zasobów do projektów zarządzanych, uzyskiwania dostępu do zasobów, wyświetlania statycznych zasobów i przypisywania ciągów zasobów do właściwości, zobacz [Creating Resource Files dla aplikacji klasycznych](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Aby uzyskać informacji na temat globalizacja i lokalizacja zasobów w aplikacjach zarządzanych, zobacz [Globalizing i lokalizowanie aplikacji programu .NET Framework](/dotnet/standard/globalization-localization/index).  
-  
-## <a name="requirements"></a>Wymagania  
- Win32  
-  
-## <a name="see-also"></a>Zobacz też  
- [Stany Edytor okien dialogowych (prowadnice i siatki)](../windows/dialog-editor-states-guides-and-grids.md)   
- [Kontrolki w oknach dialogowych](../windows/controls-in-dialog-boxes.md)
+
+Podczas wprowadzania i rozmieszczanie formantów w oknie dialogowym, można użyć siatki układu do bardziej precyzyjne pozycjonowania. Po włączeniu siatki "przyciągane do" linii kropkowanej siatki tak, jakby namagnesować pojawiają się formanty. Możesz włączyć tę funkcję "przyciągania do siatki" i wyłączyć i zmienianie rozmiaru komórek siatki układu.
+
+### <a name="to-turn-the-layout-grid-on-or-off"></a>Aby włączyć siatki układu lub wyłączyć
+
+1. Z **Format** menu, wybierz **ustawienia prowadnic**.
+
+2. W [okno dialogowe Ustawienia prowadnic](../windows/guide-settings-dialog-box.md), zaznacz lub wyczyść **siatki** przycisku.
+
+   Możesz nadal kontrolować siatki w poszczególnych **okna dialogowego** okna edytora za pomocą **Przełącz siatkę** znajdujący się na [paska narzędzi edytora okien dialogowych](../windows/showing-or-hiding-the-dialog-editor-toolbar.md).
+
+### <a name="to-change-the-size-of-the-layout-grid"></a>Aby zmienić rozmiar siatki układu
+
+1. Z **Format** menu, wybierz **ustawienia prowadnic**.
+
+2. W [okno dialogowe Ustawienia prowadnic](../windows/guide-settings-dialog-box.md), wpisać wysokość i szerokość Dlu komórek w siatce. Minimalna wysokość lub szerokość jest Dlu 4. Aby uzyskać więcej informacji na temat Dlu, zobacz [rozmieszczenie kontrolek w oknach dialogowych](../windows/arrangement-of-controls-on-dialog-boxes.md).
+
+Aby uzyskać informacje na temat dodawania zasobów do projektów zarządzanych, zobacz [zasoby w aplikacjach pulpitu](/dotnet/framework/resources/index) w *przewodniku dewelopera .NET Framework*. Aby uzyskać informacji na temat ręcznego dodawania plików zasobów do projektów zarządzanych, uzyskiwania dostępu do zasobów, wyświetlania statycznych zasobów i przypisywania ciągów zasobów do właściwości, zobacz [Creating Resource Files dla aplikacji klasycznych](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Aby uzyskać informacji na temat globalizacja i lokalizacja zasobów w aplikacjach zarządzanych, zobacz [Globalizing i lokalizowanie aplikacji programu .NET Framework](/dotnet/standard/globalization-localization/index).
+
+## <a name="requirements"></a>Wymagania
+
+Win32
+
+## <a name="see-also"></a>Zobacz też
+
+[Stany dla Edytora okien dialogowych (prowadnice i siatki)](../windows/dialog-editor-states-guides-and-grids.md)  
+[Kontrolki w oknach dialogowych](../windows/controls-in-dialog-boxes.md)

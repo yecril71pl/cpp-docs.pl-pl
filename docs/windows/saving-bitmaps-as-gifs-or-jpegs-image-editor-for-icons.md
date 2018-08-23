@@ -26,40 +26,42 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: debb2b1e8435cc53ec82ab1f957710850d7b5de3
-ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
+ms.openlocfilehash: 4e8ec15272fd9e49173149655c0806f7873f2a1d
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/09/2018
-ms.locfileid: "40010694"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42590957"
 ---
 # <a name="saving-bitmaps-as-gifs-or-jpegs-image-editor-for-icons"></a>Zapisywanie map bitowych jako plików GIF lub JPEG (Edytor obrazów dla ikon)
-Gdy tworzysz mapę bitową, obraz jest tworzony w formacie mapy bitowej (bmp). Można jednak zapiszesz obraz GIF lub JPEG lub w innych formatach grafiki.  
-  
+
+Gdy tworzysz mapę bitową, obraz jest tworzony w formacie mapy bitowej (bmp). Można jednak zapiszesz obraz GIF lub JPEG lub w innych formatach grafiki.
+
 > [!NOTE]
->  Ten proces nie ma zastosowania do ikony i kursory.  
-  
-### <a name="to-create-and-save-a-bitmap-as-a-gif-or-jpeg"></a>Aby utworzyć i zapisać mapy bitowej jako obraz GIF lub JPEG  
-  
-1.  Z **pliku** menu, wybierz **Otwórz**, następnie kliknij przycisk **pliku**.  
-  
-2.  W **okno dialogowe Nowy plik**, kliknij przycisk **Visual C++** folderu, następnie wybierz pozycję **plik mapy bitowej (bmp)** w **szablony** pole, a następnie kliknij przycisk  **Otwórz**.  
-  
-     Mapa bitowa zostanie otwarty w **obraz** edytora.  
-  
-3.  Wprowadź zmiany do nowej mapy bitowej, zgodnie z potrzebami.  
-  
-4.  Z mapą bitową wciąż otwarty w **obraz** edytorze kliknij **Zapisz *filename*.bmp jako** na **pliku** menu.  
-  
-5.  W **Zapisz plik jako** okna dialogowego wpisz nazwę, którą chcesz nadać pliku i rozszerzenie, które określa format pliku, w **nazwy pliku** pole. Na przykład *myfile.gif*.  
-  
-     > [!NOTE]
-     > Należy utworzyć lub otworzyć mapy bitowej spoza projektu, aby można było zapisać go jako pliku w innym formacie. Jeśli tworzysz lub otwórz go w swoim projekcie **Zapisz jako** polecenie jest niedostępne. Aby uzyskać więcej informacji, zobacz [wyświetlania zasobów w zasobu skryptu pliku poza z projektu (autonomicznego)](../windows/how-to-open-a-resource-script-file-outside-of-a-project-standalone.md).  
-  
-6.  Kliknij przycisk **Zapisz**.  
-  
- Aby uzyskać informacje na temat dodawania zasobów do projektów zarządzanych, zobacz [zasoby w aplikacjach pulpitu](/dotnet/framework/resources/index) w *przewodniku dewelopera .NET Framework*. Aby uzyskać informacji na temat ręcznego dodawania plików zasobów do projektów zarządzanych, uzyskiwania dostępu do zasobów, wyświetlania statycznych zasobów i przypisywania ciągów zasobów do właściwości, zobacz [Creating Resource Files dla aplikacji klasycznych](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Aby uzyskać informacji na temat globalizacja i lokalizacja zasobów w aplikacjach zarządzanych, zobacz [Globalizing i lokalizowanie aplikacji programu .NET Framework](/dotnet/standard/globalization-localization/index).  
-  
-## <a name="see-also"></a>Zobacz też  
- [Edytowanie zasobów graficznych](../windows/editing-graphical-resources-image-editor-for-icons.md)   
- [Edytor obrazów dla ikon](../windows/image-editor-for-icons.md)
+> Ten proces nie ma zastosowania do ikony i kursory.
+
+### <a name="to-create-and-save-a-bitmap-as-a-gif-or-jpeg"></a>Aby utworzyć i zapisać mapy bitowej jako obraz GIF lub JPEG
+
+1. Z **pliku** menu, wybierz **Otwórz**, następnie kliknij przycisk **pliku**.
+
+2. W **okno dialogowe Nowy plik**, kliknij przycisk **Visual C++** folderu, następnie wybierz pozycję **plik mapy bitowej (bmp)** w **szablony** pole, a następnie kliknij przycisk  **Otwórz**.
+
+   Mapa bitowa zostanie otwarty w **obraz** edytora.
+
+3. Wprowadź zmiany do nowej mapy bitowej, zgodnie z potrzebami.
+
+4. Z mapą bitową wciąż otwarty w **obraz** edytorze kliknij **Zapisz *filename*.bmp jako** na **pliku** menu.
+
+5. W **Zapisz plik jako** okna dialogowego wpisz nazwę, którą chcesz nadać pliku i rozszerzenie, które określa format pliku, w **nazwy pliku** pole. Na przykład *myfile.gif*.
+
+   > [!NOTE]
+   > Należy utworzyć lub otworzyć mapy bitowej spoza projektu, aby można było zapisać go jako pliku w innym formacie. Jeśli tworzysz lub otwórz go w swoim projekcie **Zapisz jako** polecenie jest niedostępne. Aby uzyskać więcej informacji, zobacz [wyświetlania zasobów w zasobu skryptu pliku poza z projektu (autonomicznego)](../windows/how-to-open-a-resource-script-file-outside-of-a-project-standalone.md).
+
+6. Kliknij przycisk **Zapisz**.
+
+Aby uzyskać informacje na temat dodawania zasobów do projektów zarządzanych, zobacz [zasoby w aplikacjach pulpitu](/dotnet/framework/resources/index) w *przewodniku dewelopera .NET Framework*. Aby uzyskać informacji na temat ręcznego dodawania plików zasobów do projektów zarządzanych, uzyskiwania dostępu do zasobów, wyświetlania statycznych zasobów i przypisywania ciągów zasobów do właściwości, zobacz [Creating Resource Files dla aplikacji klasycznych](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Aby uzyskać informacji na temat globalizacja i lokalizacja zasobów w aplikacjach zarządzanych, zobacz [Globalizing i lokalizowanie aplikacji programu .NET Framework](/dotnet/standard/globalization-localization/index).
+
+## <a name="see-also"></a>Zobacz też
+
+[Edytowanie zasobów graficznych](../windows/editing-graphical-resources-image-editor-for-icons.md)  
+[Edytor obrazów dla ikon](../windows/image-editor-for-icons.md)

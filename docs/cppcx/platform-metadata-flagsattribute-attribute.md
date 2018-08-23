@@ -1,5 +1,5 @@
 ---
-title: Atrybut platform::METADATA::FlagsAttribute | Dokumentacja firmy Microsoft
+title: 'Platform::METADATA:: flagsattribute, atrybut | Dokumentacja firmy Microsoft'
 ms.custom: ''
 ms.date: 12/30/2016
 ms.technology: cpp-windows
@@ -11,18 +11,18 @@ dev_langs:
 helpviewer_keywords:
 - Platform::Metadata::FlagsAttribute Attribute
 ms.assetid: 56f4a191-cc81-4742-aff8-bd2219c0735c
-author: ghogen
-ms.author: ghogen
+author: mikeblome
+ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 72b86c7502ce62f81d84a5ea43ecdd56186cfd5a
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 2a318b9608fdf57291444e7b6331e2c2c36f118b
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33087581"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42609917"
 ---
-# <a name="platformmetadataflagsattribute-attribute"></a>Atrybut platform::METADATA::FlagsAttribute
+# <a name="platformmetadataflagsattribute-attribute"></a>Platform::METADATA:: flagsattribute, atrybut
 Wskazuje, że wyliczenie może być traktowana jako pole bitowe; oznacza to, że zestaw flag.  
   
 ## <a name="syntax"></a>Składnia  
@@ -35,7 +35,7 @@ public ref class Flags abstract : Attribute
 ## <a name="inheritance"></a>Dziedziczenie  
  [Platform::Object](../cppcx/platform-object-class.md)   
   
- [Platform::METADATA::attribute](../cppcx/platform-metadata-attribute-attribute.md)  
+ [Platform::METADATA:: attribute](../cppcx/platform-metadata-attribute-attribute.md)  
   
 ### <a name="remarks"></a>Uwagi  
   

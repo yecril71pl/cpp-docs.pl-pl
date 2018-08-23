@@ -54,17 +54,17 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 7a303e80b58207e555dbd9067982ee1e2c506bb3
-ms.sourcegitcommit: 27be37ae07ee7b657a54d23ed34438220d977fdc
+ms.openlocfilehash: 0f9566fb6e3117b10d0d6f4a2bccbe56fe33a28a
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/18/2018
-ms.locfileid: "39110024"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42609352"
 ---
 # <a name="windows-operations-ccli"></a>Operacje związane z systemem Windows (C++/CLI)
-Demonstruje różne zadania specyficzne dla Windows przy użyciu [!INCLUDE[winsdklong](../dotnet/includes/winsdklong_md.md)].  
+Demonstruje różne zadania specyficzne dla Windows przy użyciu zestawu Windows SDK.  
   
- W poniższych tematach pokazano różne operacje Windows przeprowadzane przy użyciu [!INCLUDE[winsdkshort](../atl-mfc-shared/reference/includes/winsdkshort_md.md)] przy użyciu języka Visual C++.  
+ W poniższych tematach pokazano różne operacje Windows wykonywana przy użyciu zestawu SDK Windows, przy użyciu języka Visual C++.  
 
 ## <a name="determine_shutdown"></a> Określić, czy rozpoczęło
 Poniższy przykład kodu demonstruje sposób określania, czy aplikacji lub .NET Framework jest obecnie przerywa. Jest to przydatne do uzyskiwania dostępu do statycznych elementów w .NET Framework, ponieważ podczas zamykania systemu, te konstrukcje sfinalizowaniu przez system i nie można niezawodnie. Sprawdzając <xref:System.Environment.HasShutdownStarted%2A> właściwość najpierw można uniknąć potencjalnych błędów, nie dostęp do tych elementów.  

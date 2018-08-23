@@ -21,40 +21,43 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 0b197baa61d741452219529e44be0e9ba1a154ce
-ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
+ms.openlocfilehash: 7329873b8f56b44904c38161e737d99d29efa580
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39651054"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42592989"
 ---
 # <a name="custom-controls-in-the-dialog-editor"></a>Formanty niestandardowe w Edytorze okien dialogowych
-Edytor okien dialogowych pozwala Użyj istniejącej "niestandardowe" lub "user" kontrolek w szablonu okna dialogowego.  
-  
+
+Edytor okien dialogowych pozwala Użyj istniejącej "niestandardowe" lub "user" kontrolek w szablonu okna dialogowego.
+
 > [!NOTE]
->  Niestandardowe formanty w tym sensie są nie należy mylić z kontrolkami ActiveX. Kontrolki ActiveX były nazywane niestandardowych formantów OLE. Ponadto nie należy mylić tych kontrolek z kontrolki rysowane przez właściciela z Windows.  
-  
- Ta funkcja jest przeznaczona do umożliwiają używanie kontrolek w inne niż te dostarczone przez Windows. W czasie wykonywania kontrolka jest skojarzony z klasy okna (nie taka sama jak klasa C++). Jest bardziej typowym sposobem wykonania tego samego zadania do zainstalowania dowolnej kontrolki, takie jak formant statyczny w oknie dialogowym. Następnie w czasie wykonywania w [OnInitDialog](../mfc/reference/cdialog-class.md#oninitdialog) funkcji, Usuń tę kontrolkę i zastąp go własny niestandardowy formant.  
-  
- Jest to technika stary. Obecnie zaleca w większości przypadków można zapisać formantu ActiveX lub podklasy formantu wspólnego Windows.  
-  
- W przypadku kontrolek niestandardowych są ograniczone do:  
-  
--   Ustawianie lokalizacji w oknie dialogowym.  
-  
--   Wpisywanie podpisu.  
-  
--   Identyfikowanie nazwę klasy Windows formantu (kod aplikacji należy go zarejestrować przy użyciu tej nazwy).  
-  
--   Wpisując wartość szesnastkową 32-bitowe i ustawia styl formantu.  
-  
--   Ustawianie rozszerzonego stylu.  
-  
- Aby uzyskać informacje na temat dodawania zasobów do projektów zarządzanych, zobacz [zasoby w aplikacjach pulpitu](/dotnet/framework/resources/index) w *przewodniku dewelopera .NET Framework*. Aby uzyskać informacji na temat ręcznego dodawania plików zasobów do projektów zarządzanych, uzyskiwania dostępu do zasobów, wyświetlania statycznych zasobów i przypisywania ciągów zasobów do właściwości, zobacz [Creating Resource Files dla aplikacji klasycznych](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Aby uzyskać informacji na temat globalizacja i lokalizacja zasobów w aplikacjach zarządzanych, zobacz [Globalizing i lokalizowanie aplikacji programu .NET Framework](/dotnet/standard/globalization-localization/index).  
-  
-## <a name="requirements"></a>Wymagania  
- Win32  
-  
-## <a name="see-also"></a>Zobacz też  
- [Formanty w oknach dialogowych](../windows/controls-in-dialog-boxes.md)   
- [Kontrolki](../mfc/controls-mfc.md)
+> Niestandardowe formanty w tym sensie są nie należy mylić z kontrolkami ActiveX. Kontrolki ActiveX były nazywane niestandardowych formantów OLE. Ponadto nie należy mylić tych kontrolek z kontrolki rysowane przez właściciela z Windows.
+
+Ta funkcja jest przeznaczona do umożliwiają używanie kontrolek w inne niż te dostarczone przez Windows. W czasie wykonywania kontrolka jest skojarzony z klasy okna (nie taka sama jak klasa C++). Jest bardziej typowym sposobem wykonania tego samego zadania do zainstalowania dowolnej kontrolki, takie jak formant statyczny w oknie dialogowym. Następnie w czasie wykonywania w [OnInitDialog](../mfc/reference/cdialog-class.md#oninitdialog) funkcji, Usuń tę kontrolkę i zastąp go własny niestandardowy formant.
+
+Jest to technika stary. Obecnie zaleca w większości przypadków można zapisać formantu ActiveX lub podklasy formantu wspólnego Windows.
+
+W przypadku kontrolek niestandardowych są ograniczone do:
+
+- Ustawianie lokalizacji w oknie dialogowym.
+
+- Wpisywanie podpisu.
+
+- Identyfikowanie nazwę klasy Windows formantu (kod aplikacji należy go zarejestrować przy użyciu tej nazwy).
+
+- Wpisując wartość szesnastkową 32-bitowe i ustawia styl formantu.
+
+- Ustawianie rozszerzonego stylu.
+
+Aby uzyskać informacje na temat dodawania zasobów do projektów zarządzanych, zobacz [zasoby w aplikacjach pulpitu](/dotnet/framework/resources/index) w *przewodniku dewelopera .NET Framework*. Aby uzyskać informacji na temat ręcznego dodawania plików zasobów do projektów zarządzanych, uzyskiwania dostępu do zasobów, wyświetlania statycznych zasobów i przypisywania ciągów zasobów do właściwości, zobacz [Creating Resource Files dla aplikacji klasycznych](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Aby uzyskać informacji na temat globalizacja i lokalizacja zasobów w aplikacjach zarządzanych, zobacz [Globalizing i lokalizowanie aplikacji programu .NET Framework](/dotnet/standard/globalization-localization/index).
+
+## <a name="requirements"></a>Wymagania
+
+Win32
+
+## <a name="see-also"></a>Zobacz też
+
+[Kontrolki w oknach dialogowych](../windows/controls-in-dialog-boxes.md)  
+[Kontrolki](../mfc/controls-mfc.md)

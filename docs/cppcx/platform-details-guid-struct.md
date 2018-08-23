@@ -1,5 +1,5 @@
 ---
-title: Struktura platform::details::__GUID | Dokumentacja firmy Microsoft
+title: 'Platform::details:: __guid, struktura | Dokumentacja firmy Microsoft'
 ms.custom: ''
 ms.date: 12/30/2016
 ms.technology: cpp-windows
@@ -11,19 +11,19 @@ dev_langs:
 helpviewer_keywords:
 - Platform::Details::__GUID Struct
 ms.assetid: 507cc577-b34d-4952-b1a9-ff4ae98bb6dd
-author: ghogen
-ms.author: ghogen
+author: mikeblome
+ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 975e5ae8fd59b327e52a838f913257312175bf79
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 0aaaffb4254fc676e95f6c6bb315d5f257d64e48
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33086580"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42592424"
 ---
-# <a name="platformdetailsguid-struct"></a>Platform::details::__GUID — struktura
-Tej struktury jest przeznaczony tylko do użytku wewnętrznego i nie mają być używane do tworzenia aplikacji.  
+# <a name="platformdetailsguid-struct"></a>Platform::details:: __guid, struktura
+Ta struktura jest przeznaczona wyłącznie do użytku wewnętrznego i nie jest przeznaczona do użycia na potrzeby programowania.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -33,7 +33,7 @@ ref struct __GUID;
 ```  
   
 ### <a name="remarks"></a>Uwagi  
- Tej struktury jest dostępne wyłącznie w celu kompletności, ponieważ mogą być kontrolowane z przeglądarkami.  
+ Ta struktura jest przeznaczona wyłącznie dla kompletności, ponieważ mogą być kontrolowane za pomocą przeglądarki.  
   
 ## <a name="inheritance-hierarchy"></a>Hierarchia dziedziczenia  
  `Platform`  

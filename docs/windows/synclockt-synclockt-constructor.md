@@ -17,44 +17,49 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 6d4ff3393e30e72bc3378837ff11c41927249d1f
-ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
+ms.openlocfilehash: 3dfee1d923536f519917a50ed44fd5c115007c27
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/09/2018
-ms.locfileid: "40014198"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42601970"
 ---
 # <a name="synclocktsynclockt-constructor"></a>SyncLockT::SyncLockT — Konstruktor
-Obsługuje infrastrukturę biblioteki WRL i nie jest przeznaczona do użycia bezpośrednio w kodzie.  
-  
-## <a name="syntax"></a>Składnia  
-  
-```cpp  
-SyncLockT(  
-   _Inout_ SyncLockT&& other  
-);  
-  
-explicit SyncLockT(  
+
+Obsługuje infrastrukturę biblioteki WRL i nie jest przeznaczona do użycia bezpośrednio w kodzie.
+
+## <a name="syntax"></a>Składnia
+
+```cpp
+SyncLockT(
+   _Inout_ SyncLockT&& other
+);
+
+explicit SyncLockT(
    typename SyncTraits::Type sync = SyncTraits::GetInvalidValue()  
-);  
-```  
-  
-### <a name="parameters"></a>Parametry  
- *other*  
- Odwołanie rvalue, do innego **SyncLockT** obiektu.  
-  
- *sync*  
- Odwołanie do innego `SyncLockWithStatusT` obiektu.  
-  
-## <a name="remarks"></a>Uwagi  
- Inicjuje nowe wystąpienie klasy **SyncLockT** klasy.  
-  
- Pierwszy Konstruktor inicjuje bieżące **SyncLockT** obiektu z innego **SyncLockT** obiekt określony przez parametr *innych*, a następnie unieważnia innych  **SyncLockT** obiektu. Drugi Konstruktor jest **chronione**i inicjuje bieżące **SyncLockT** obiektu nieprawidłowym stanie.  
-  
-## <a name="requirements"></a>Wymagania  
- **Nagłówek:** corewrappers.h  
-  
- **Namespace:** Microsoft::WRL::Wrappers::Details  
-  
-## <a name="see-also"></a>Zobacz też  
- [SyncLockT, klasa](../windows/synclockt-class.md)
+);
+```
+
+### <a name="parameters"></a>Parametry
+
+*other*  
+Odwołanie rvalue, do innego **SyncLockT** obiektu.
+
+*sync*  
+Odwołanie do innego `SyncLockWithStatusT` obiektu.
+
+## <a name="remarks"></a>Uwagi
+
+Inicjuje nowe wystąpienie klasy **SyncLockT** klasy.
+
+Pierwszy Konstruktor inicjuje bieżące **SyncLockT** obiektu z innego **SyncLockT** obiekt określony przez parametr *innych*, a następnie unieważnia innych  **SyncLockT** obiektu. Drugi Konstruktor jest **chronione**i inicjuje bieżące **SyncLockT** obiektu nieprawidłowym stanie.
+
+## <a name="requirements"></a>Wymagania
+
+**Nagłówek:** corewrappers.h
+
+**Namespace:** Microsoft::WRL::Wrappers::Details
+
+## <a name="see-also"></a>Zobacz też
+
+[SyncLockT, klasa](../windows/synclockt-class.md)

@@ -15,55 +15,60 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 14ad6e511baa4c7b61a2205311bfb9ea4322a5b1
-ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
+ms.openlocfilehash: de3c7fe60432acfc3096ea19fc00cf371a7c4e92
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/07/2018
-ms.locfileid: "39605103"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42610509"
 ---
 # <a name="hstringreference-class"></a>HStringReference — Klasa
-Reprezentuje HSTRING, utworzony na podstawie istniejącego ciągu.  
-  
-## <a name="syntax"></a>Składnia  
-  
-```cpp  
-class HStringReference;  
-```  
-  
-## <a name="remarks"></a>Uwagi  
- Okres istnienia buforu zapasowego w nowym obiekcie HSTRING nie jest zarządzane przez środowisko wykonawcze Windows. Obiekt wywołujący przydziela ciąg źródłowy ramce stosu, aby uniknąć alokacji stosu i wyeliminować ryzyko przecieku pamięci. Ponadto wywołujący musi zapewnić, że ciąg źródłowy pozostaje niezmieniony w czasie użytkowania dołączonego HSTRING. Aby uzyskać więcej informacji, zobacz [funkcja WindowsCreateStringReference](http://msdn.microsoft.com/0361bb7e-da49-4289-a93e-de7aab8712ac).  
-  
-## <a name="members"></a>Elementy członkowskie  
-  
-### <a name="public-constructors"></a>Konstruktory publiczne  
-  
-|Nazwa|Opis|  
-|----------|-----------------|  
-|[HStringReference::HStringReference, konstruktor](../windows/hstringreference-hstringreference-constructor.md)|Inicjuje nowe wystąpienie klasy **HStringReference** klasy.|  
-  
-### <a name="members"></a>Elementy członkowskie  
-  
-|Element członkowski|Opis|  
-|------------|-----------------|  
-|[HStringReference::CopyTo, metoda](../windows/hstringreference-copyto-method.md)|Kopiuje bieżący **HStringReference** obiektu do obiektu HSTRING.|  
-|[HStringReference::Get, metoda](../windows/hstringreference-get-method.md)|Pobiera wartość podstawowego dojścia HSTRING.|  
-  
-### <a name="public-operators"></a>Operatory publiczne  
-  
-|Nazwa|Opis|  
-|----------|-----------------|  
-|[HStringReference::Operator=, operator](../windows/hstringreference-operator-assign-operator.md)|Przenosi wartość innego **HStringReference** obiekt do bieżącego **HStringReference** obiektu.|  
-|[HStringReference::Operator==, operator](../windows/hstringreference-operator-equality-operator.md)|Wskazuje, czy dwa parametry są równe.|  
-|[HStringReference::Operator!=, operator](../windows/hstringreference-operator-inequality-operator.md)|Wskazuje, czy dwa parametry nie są równe.|  
-  
-## <a name="inheritance-hierarchy"></a>Hierarchia dziedziczenia  
- `HStringReference`  
-  
-## <a name="requirements"></a>Wymagania  
- **Nagłówek:** corewrappers.h  
-  
- **Namespace:** Microsoft::wrl:: wrappers  
-  
-## <a name="see-also"></a>Zobacz też  
- [Microsoft::WRL::Wrappers, przestrzeń nazw](../windows/microsoft-wrl-wrappers-namespace.md)
+
+Reprezentuje HSTRING, utworzony na podstawie istniejącego ciągu.
+
+## <a name="syntax"></a>Składnia
+
+```cpp
+class HStringReference;
+```
+
+## <a name="remarks"></a>Uwagi
+
+Okres istnienia buforu zapasowego w nowym obiekcie HSTRING nie jest zarządzane przez środowisko wykonawcze Windows. Obiekt wywołujący przydziela ciąg źródłowy ramce stosu, aby uniknąć alokacji stosu i wyeliminować ryzyko przecieku pamięci. Ponadto wywołujący musi zapewnić, że ciąg źródłowy pozostaje niezmieniony w czasie użytkowania dołączonego HSTRING. Aby uzyskać więcej informacji, zobacz [funkcja WindowsCreateStringReference](http://msdn.microsoft.com/0361bb7e-da49-4289-a93e-de7aab8712ac).
+
+## <a name="members"></a>Elementy członkowskie
+
+### <a name="public-constructors"></a>Konstruktory publiczne
+
+|Nazwa|Opis|
+|----------|-----------------|
+|[HStringReference::HStringReference, konstruktor](../windows/hstringreference-hstringreference-constructor.md)|Inicjuje nowe wystąpienie klasy **HStringReference** klasy.|
+
+### <a name="members"></a>Elementy członkowskie
+
+|Element członkowski|Opis|
+|------------|-----------------|
+|[HStringReference::CopyTo, metoda](../windows/hstringreference-copyto-method.md)|Kopiuje bieżący **HStringReference** obiektu do obiektu HSTRING.|
+|[HStringReference::Get, metoda](../windows/hstringreference-get-method.md)|Pobiera wartość podstawowego dojścia HSTRING.|
+
+### <a name="public-operators"></a>Operatory publiczne
+
+|Nazwa|Opis|
+|----------|-----------------|
+|[HStringReference::Operator=, operator](../windows/hstringreference-operator-assign-operator.md)|Przenosi wartość innego **HStringReference** obiekt do bieżącego **HStringReference** obiektu.|
+|[HStringReference::Operator==, operator](../windows/hstringreference-operator-equality-operator.md)|Wskazuje, czy dwa parametry są równe.|
+|[HStringReference::Operator!=, operator](../windows/hstringreference-operator-inequality-operator.md)|Wskazuje, czy dwa parametry nie są równe.|
+
+## <a name="inheritance-hierarchy"></a>Hierarchia dziedziczenia
+
+`HStringReference`
+
+## <a name="requirements"></a>Wymagania
+
+**Nagłówek:** corewrappers.h
+
+**Namespace:** Microsoft::wrl:: wrappers
+
+## <a name="see-also"></a>Zobacz też
+
+[Microsoft::WRL::Wrappers, przestrzeń nazw](../windows/microsoft-wrl-wrappers-namespace.md)

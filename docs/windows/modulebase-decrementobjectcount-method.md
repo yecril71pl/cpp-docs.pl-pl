@@ -17,33 +17,38 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 65dc4dbca2e152a62bb79ed104f9533d2fa20569
-ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
+ms.openlocfilehash: f45f52f2e979b76128be02dc7c3e931bd3b9d2c5
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/09/2018
-ms.locfileid: "40019985"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42594591"
 ---
 # <a name="modulebasedecrementobjectcount-method"></a>ModuleBase::DecrementObjectCount — Metoda
-Obsługuje infrastrukturę biblioteki WRL i nie jest przeznaczona do użycia bezpośrednio w kodzie.  
-  
-## <a name="syntax"></a>Składnia  
-  
-```cpp  
-virtual long DecrementObjectCount() = 0;  
-```  
-  
-## <a name="return-value"></a>Wartość zwracana  
- Liczba przed wykonaniem operacji dekrementacji.  
-  
-## <a name="remarks"></a>Uwagi  
- Po wdrożeniu, zmniejsza liczbę obiektów śledzone przez moduł.  
-  
-## <a name="requirements"></a>Wymagania  
- **Nagłówek:** implements.h  
-  
- **Namespace:** Microsoft::wrl:: details  
-  
-## <a name="see-also"></a>Zobacz też  
- [Modulebase — klasa](../windows/modulebase-class.md)   
- [Microsoft::WRL::Details, przestrzeń nazw](../windows/microsoft-wrl-details-namespace.md)
+
+Obsługuje infrastrukturę biblioteki WRL i nie jest przeznaczona do użycia bezpośrednio w kodzie.
+
+## <a name="syntax"></a>Składnia
+
+```cpp
+virtual long DecrementObjectCount() = 0;
+```
+
+## <a name="return-value"></a>Wartość zwracana
+
+Liczba przed wykonaniem operacji dekrementacji.
+
+## <a name="remarks"></a>Uwagi
+
+Po wdrożeniu, zmniejsza liczbę obiektów śledzone przez moduł.
+
+## <a name="requirements"></a>Wymagania
+
+**Nagłówek:** implements.h
+
+**Namespace:** Microsoft::wrl:: details
+
+## <a name="see-also"></a>Zobacz też
+
+[ModuleBase, klasa](../windows/modulebase-class.md)  
+[Microsoft::WRL::Details, przestrzeń nazw](../windows/microsoft-wrl-details-namespace.md)

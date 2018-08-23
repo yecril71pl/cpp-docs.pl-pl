@@ -25,27 +25,29 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 9d87f95b456e3f99598f48e6ffa8ad29806aa168
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 7909884a355ccad5e1bf9d18a38dd3e4690296ee
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33862280"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42587510"
 ---
 # <a name="building-an-attributed-program"></a>Kompilowanie programu opartego na atrybutach
-Po wprowadzeniu atrybutów języka Visual C++ w kodzie źródłowym może być kompilatora Visual C++, aby wygenerować plik biblioteki i .idl typu dla Ciebie. Konsolidator następujące opcje tworzenia plików .tlb i .idl pomocy:  
-  
--   [/ IDLOUT](../build/reference/idlout-name-midl-output-files.md)  
-  
--   [/ IGNOREIDL](../build/reference/ignoreidl-don-t-process-attributes-into-midl.md)  
-  
--   [/ MIDL](../build/reference/midl-specify-midl-command-line-options.md)  
-  
--   [/ TLBOUT](../build/reference/tlbout-name-dot-tlb-file.md)  
-  
- Niektóre projekty zawierają wiele plików .idl niezależne. Są one używane do utworzenia dwóch lub więcej plików .tlb i opcjonalnie powiązać je do bloku zasobów. W tym scenariuszu nie jest obecnie obsługiwane w programie Visual C++.  
-  
- Ponadto konsolidatora Visual C++ dane wyjściowe obejmują wszystkie informacje o atrybutach dotyczące IDL w jednym pliku MIDL. Nie będzie można wygenerować dwóch bibliotek typów na podstawie pojedynczego projektu.  
-  
-## <a name="see-also"></a>Zobacz też  
- [Pojęcia](../windows/attributed-programming-concepts.md)
+
+Po atrybuty Visual C++ są umieszczane w kodzie źródłowym, może być kompilator języka Visual C++, aby wygenerować plik biblioteki i .idl typu dla Ciebie. Konsolidator następujące opcje pomagają tworzyć plików .tlb i .idl:
+
+- [/ IDLOUT](../build/reference/idlout-name-midl-output-files.md)
+
+- [/ IGNOREIDL](../build/reference/ignoreidl-don-t-process-attributes-into-midl.md)
+
+- [/ MIDL](../build/reference/midl-specify-midl-command-line-options.md)
+
+- [/ TLBOUT](../build/reference/tlbout-name-dot-tlb-file.md)
+
+Niektóre projekty zawierają wiele plików .idl niezależne. Są one używane do utworzenia dwóch lub więcej plików .tlb i opcjonalnie powiązać je w bloku zasobów. W tym scenariuszu nie jest obecnie obsługiwane w programie Visual C++.
+
+Ponadto konsolidator Visual C++ zwróci wszystkie informacje związane z IDL atrybut do jednego pliku MIDL. Będzie sposób generowania dwie biblioteki typów z pojedynczego projektu.
+
+## <a name="see-also"></a>Zobacz też
+
+[Pojęcia](../windows/attributed-programming-concepts.md)

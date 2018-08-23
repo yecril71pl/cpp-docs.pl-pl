@@ -1,5 +1,5 @@
 ---
-title: Klasa platform::Box | Dokumentacja firmy Microsoft
+title: Platform::Box, klasa | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 12/30/2016
 ms.technology: cpp-windows
@@ -9,19 +9,19 @@ f1_keywords:
 dev_langs:
 - C++
 ms.assetid: b3d7ea37-e98a-4fbc-80b0-ad35e50250c6
-author: ghogen
-ms.author: ghogen
+author: mikeblome
+ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 59fcdf177f942dd598348654b366e0c0f42e916b
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 7def63199666a9dba0a1628031129ce584e0fcec
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33091683"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42605962"
 ---
-# <a name="platformbox-class"></a>Klasa platform::Box
-Włącza typu wartości, takich jak `Windows::Foundation::DateTime` lub typem skalarnym, takich jak `int` mają być przechowywane w `Platform::Object` typu. Zazwyczaj nie jest konieczne użycie `Box` jawnie, ponieważ pakującej sytuacji niejawnie podczas rzutowania typu wartości do `Object^`.  
+# <a name="platformbox-class"></a>Platform::Box, klasa
+Umożliwia to typ wartości takie jak `Windows::Foundation::DateTime` lub typem skalarne, takie jak `int` mają być przechowywane w `Platform::Object` typu. Zazwyczaj nie jest konieczne użycie `Box` jawnie, ponieważ pakowania się stanie, niejawnie przypadku rzutowania typu wartości do `Object^`.  
   
 ### <a name="syntax"></a>Składnia  
   
@@ -36,14 +36,14 @@ ref class Box abstract;
  **Namespace:** platformy
 |Element członkowski|Opis|  
 |------------|-----------------|
-|[Box](#ctor)|Tworzy `Box` które hermetyzują wartość określonego typu.|
-|[Operator pole&lt;const T&gt;^](#box-const-t)|Włącza konwersji pakującej z `const` klasę wartości `T` lub `enum` klasy `T` do `Box<T>`.|
-|[Operator pole&lt;stała nietrwałe T&gt;^](#box-const-volatile-t)|Włącza konwersji pakującej z `const volatile` klasę wartości `T` lub `enum` typu `T` do `Box<T>`. |
-|[Operator pole&lt;T&gt;^](#box-t)|Włącza konwersji pakującej z klasą wartości `T` do `Box<T>`.|
-|[Operator pole&lt;T nietrwałe&gt;^](#box-volatile-t)|Włącza konwersji pakującej z `volatile` klasę wartości `T` lub `enum` typu `T` do `Box<T>`.|
-|[Box::operator T](#t)|Włącza konwersji pakującej z klasą wartości `T` lub `enum` klasy `T` do `Box<T>`.| 
+|[Box](#ctor)|Tworzy `Box` który umożliwiająca Hermetyzowanie wartość określonego typu.|
+|[Operator pole&lt;const T&gt;^](#box-const-t)|Umożliwia konwersje boxing z `const` klasę wartości `T` lub `enum` klasy `T` do `Box<T>`.|
+|[Operator pole&lt;const volatile T&gt;^](#box-const-volatile-t)|Umożliwia konwersje boxing z `const volatile` klasę wartości `T` lub `enum` typu `T` do `Box<T>`. |
+|[Operator pole&lt;T&gt;^](#box-t)|Umożliwia konwersje boxing z klasą wartości `T` do `Box<T>`.|
+|[Operator pole&lt;volatile T&gt;^](#box-volatile-t)|Umożliwia konwersje boxing z `volatile` klasę wartości `T` lub `enum` typu `T` do `Box<T>`.|
+|[Box::operator T](#t)|Umożliwia konwersje boxing z klasą wartości `T` lub `enum` klasy `T` do `Box<T>`.| 
 ## <a name="ctor"></a> Konstruktor Box::Box
-Tworzy `Box` które hermetyzują wartość określonego typu. | |[ Wartość właściwości](#value)| Zwraca wartość, która jest hermetyzowany w `Box` obiektu. |  
+Tworzy `Box` który umożliwiająca Hermetyzowanie wartość określonego typu. | |[ Wartość właściwości](#value)| Zwraca wartość, która jest hermetyzowany w `Box` obiektu. |  
 ### <a name="syntax"></a>Składnia  
   
 ```cpp  
@@ -56,7 +56,7 @@ Box(T valueArg);
   
 
 ## <a name="box-const-t"></a> Pole Box::operator&lt;const T&gt;^ — Operator
-Włącza konwersji pakującej z `const` klasę wartości `T` lub `enum` klasy `T` do `Box<T>`.  
+Umożliwia konwersje boxing z `const` klasę wartości `T` lub `enum` klasy `T` do `Box<T>`.  
   
 ### <a name="syntax"></a>Składnia  
   
@@ -66,13 +66,13 @@ operator Box<const T>^(const T valueType);
   
 ### <a name="parameters"></a>Parametry  
  `T`  
- Wszystkie klasy wartości, wartość struktury lub typu wyliczeniowego. Zawiera wbudowane typy w [domyślny obszar nazw](../cppcx/default-namespace.md).  
+ Wszystkie wartości klasy, struktury wartości lub typu wyliczeniowego. Zawiera typy wbudowane w [domyślny obszar nazw](../cppcx/default-namespace.md).  
   
 ### <a name="return-value"></a>Wartość zwracana  
- A `Platform::Box<T>^` wystąpienia, który reprezentuje oryginalnej wartości opakowany w klasie ref.  
+ A `Platform::Box<T>^` wystąpienia, która reprezentuje wartość oryginalną opakowany w klasie ref.  
   
-## <a name="box-const-volatile-t"></a> Pole Box::operator&lt;stała nietrwałe T&gt;^ — Operator
-Włącza konwersji pakującej z `const volatile` klasę wartości `T` lub `enum` typu `T` do `Box<T>`.  
+## <a name="box-const-volatile-t"></a> Pole Box::operator&lt;const volatile T&gt;^ — Operator
+Umożliwia konwersje boxing z `const volatile` klasę wartości `T` lub `enum` typu `T` do `Box<T>`.  
   
 ### <a name="syntax"></a>Składnia  
   
@@ -82,13 +82,13 @@ operator Box<const volatile T>^(const volatile T valueType);
   
 ### <a name="parameters"></a>Parametry  
  `T`  
- Typ wyliczenia, klasy wartości lub wartość struktury. Zawiera wbudowane typy w [domyślny obszar nazw](../cppcx/default-namespace.md).  
+ Dowolnego typu wyliczeniowego, wartość klasy lub struktury wartości. Zawiera typy wbudowane w [domyślny obszar nazw](../cppcx/default-namespace.md).  
   
 ### <a name="return-value"></a>Wartość zwracana  
- A `Platform::Box<T>^` wystąpienia, który reprezentuje oryginalnej wartości opakowany w klasie ref.  
+ A `Platform::Box<T>^` wystąpienia, która reprezentuje wartość oryginalną opakowany w klasie ref.  
   
 ## <a name="box-t"></a> Pole Box::operator&lt;T&gt;^ — Operator
-Włącza konwersji pakującej z klasą wartości `T` do `Box<T>`.  
+Umożliwia konwersje boxing z klasą wartości `T` do `Box<T>`.  
   
 ### <a name="syntax"></a>Składnia  
   
@@ -98,13 +98,13 @@ operator Box<const T>^(const T valueType);
   
 ### <a name="parameters"></a>Parametry  
  `T`  
- Typ wyliczenia, klasy wartości lub wartość struktury. Zawiera wbudowane typy w [domyślny obszar nazw](../cppcx/default-namespace.md).  
+ Dowolnego typu wyliczeniowego, wartość klasy lub struktury wartości. Zawiera typy wbudowane w [domyślny obszar nazw](../cppcx/default-namespace.md).  
   
 ### <a name="return-value"></a>Wartość zwracana  
- A `Platform::Box<T>^` wystąpienia, który reprezentuje oryginalnej wartości opakowany w klasie ref.  
+ A `Platform::Box<T>^` wystąpienia, która reprezentuje wartość oryginalną opakowany w klasie ref.  
   
 ## <a name="box-volatile-t"></a> Pole Box::operator&lt;volatile T&gt;^ — Operator
-Włącza konwersji pakującej z `volatile` klasę wartości `T` lub `enum` typu `T` do `Box<T>`.  
+Umożliwia konwersje boxing z `volatile` klasę wartości `T` lub `enum` typu `T` do `Box<T>`.  
   
 ### <a name="syntax"></a>Składnia  
   
@@ -114,13 +114,13 @@ operator Box<volatile T>^(volatile T valueType);
   
 ### <a name="parameters"></a>Parametry  
  `T`  
- Typ wyliczenia, klasy wartości lub wartość struktury. Zawiera wbudowane typy w [domyślny obszar nazw](../cppcx/default-namespace.md).  
+ Dowolnego typu wyliczeniowego, wartość klasy lub struktury wartości. Zawiera typy wbudowane w [domyślny obszar nazw](../cppcx/default-namespace.md).  
   
 ### <a name="return-value"></a>Wartość zwracana  
- A `Platform::Box<T>^` wystąpienia, który reprezentuje oryginalnej wartości opakowany w klasie ref.  
+ A `Platform::Box<T>^` wystąpienia, która reprezentuje wartość oryginalną opakowany w klasie ref.  
   
 ## <a name="t"></a>  Operator Box::operator T
-Włącza konwersji pakującej z klasą wartości `T` lub `enum` klasy `T` do `Box<T>`.  
+Umożliwia konwersje boxing z klasą wartości `T` lub `enum` klasy `T` do `Box<T>`.  
   
 ### <a name="syntax"></a>Składnia  
   
@@ -130,10 +130,10 @@ operator Box<T>^(T valueType);
   
 ### <a name="parameters"></a>Parametry  
  `T`  
- Typ wyliczenia, klasy wartości lub wartość struktury. Zawiera wbudowane typy w [domyślny obszar nazw](../cppcx/default-namespace.md).  
+ Dowolnego typu wyliczeniowego, wartość klasy lub struktury wartości. Zawiera typy wbudowane w [domyślny obszar nazw](../cppcx/default-namespace.md).  
   
 ### <a name="return-value"></a>Wartość zwracana  
- A `Platform::Box<T>^` wystąpienia, który reprezentuje oryginalnej wartości opakowany w klasie ref.  
+ A `Platform::Box<T>^` wystąpienia, która reprezentuje wartość oryginalną opakowany w klasie ref.  
   
 
 ## <a name="value"></a> Właściwość Box::Value
@@ -148,9 +148,9 @@ virtual property T Value{
 ```  
   
 ### <a name="return-value"></a>Wartość zwracana  
- Zwraca pierwotnie była przed jego został opakowany wartości spakowanej tego samego typu.  
+ Zwraca wartości spakowanej, za pomocą tego samego typu pierwotnie miała zanim został on ramce.  
   
   
 ## <a name="see-also"></a>Zobacz też  
  [Przestrzeń nazw platformy](../cppcx/platform-namespace-c-cx.md)   
- [OPAKOWYWANIE](../cppcx/boxing-c-cx.md)
+ [Konwersja boxing](../cppcx/boxing-c-cx.md)

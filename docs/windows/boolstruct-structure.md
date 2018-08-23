@@ -17,41 +17,46 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 14e3d81ca273bf96b4812f08a46904c9d521c5cf
-ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
+ms.openlocfilehash: c4981c7f82fe2c544bf907ac59d6e9ca22105cbd
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39650485"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42592540"
 ---
 # <a name="boolstruct-structure"></a>BoolStruct — Struktura
-Obsługuje infrastrukturę biblioteki WRL i nie jest przeznaczona do użycia bezpośrednio w kodzie.  
-  
-## <a name="syntax"></a>Składnia  
-  
-```cpp  
-struct BoolStruct;  
-```  
-  
-## <a name="remarks"></a>Uwagi  
- **Boolstruct —** definiuje strukturę czy `ComPtr` Zarządzanie okresem istnienia interfejsu. **Boolstruct —** jest używana wewnętrznie przez [BoolType()](../windows/comptr-operator-microsoft-wrl-details-booltype-operator.md) operatora.  
-  
-## <a name="members"></a>Elementy członkowskie  
-  
-### <a name="public-data-members"></a>Publiczne elementy członkowskie danych  
-  
-|Nazwa|Opis|  
-|----------|-----------------|  
-|[BoolStruct::Member, składowa danych](../windows/boolstruct-member-data-member.md)|Określa, że [ComPtr](../windows/comptr-class.md) jest lub nie jest dostępna, zarządzanie okresem istnienia obiektu interfejsu.|  
-  
-## <a name="inheritance-hierarchy"></a>Hierarchia dziedziczenia  
- `BoolStruct`  
-  
-## <a name="requirements"></a>Wymagania  
- **Nagłówek:** internal.h  
-  
- **Namespace:** Microsoft::wrl:: details  
-  
-## <a name="see-also"></a>Zobacz też  
- [Microsoft::wrl:: details Namespace](../windows/microsoft-wrl-details-namespace.md)   
- [Operator ComPtr::operator Microsoft::WRL::Details::BoolType](../windows/comptr-operator-microsoft-wrl-details-booltype-operator.md)
+
+Obsługuje infrastrukturę biblioteki WRL i nie jest przeznaczona do użycia bezpośrednio w kodzie.
+
+## <a name="syntax"></a>Składnia
+
+```cpp
+struct BoolStruct;
+```
+
+## <a name="remarks"></a>Uwagi
+
+**Boolstruct —** definiuje strukturę czy `ComPtr` Zarządzanie okresem istnienia interfejsu. **Boolstruct —** jest używana wewnętrznie przez [BoolType()](../windows/comptr-operator-microsoft-wrl-details-booltype-operator.md) operatora.
+
+## <a name="members"></a>Elementy członkowskie
+
+### <a name="public-data-members"></a>Publiczne elementy członkowskie danych
+
+|Nazwa|Opis|
+|----------|-----------------|
+|[BoolStruct::Member, składowa danych](../windows/boolstruct-member-data-member.md)|Określa, że [ComPtr](../windows/comptr-class.md) jest lub nie jest dostępna, zarządzanie okresem istnienia obiektu interfejsu.|
+
+## <a name="inheritance-hierarchy"></a>Hierarchia dziedziczenia
+
+`BoolStruct`
+
+## <a name="requirements"></a>Wymagania
+
+**Nagłówek:** internal.h
+
+**Namespace:** Microsoft::wrl:: details
+
+## <a name="see-also"></a>Zobacz też
+
+[Microsoft::WRL::Details, przestrzeń nazw](../windows/microsoft-wrl-details-namespace.md)  
+[Operator ComPtr::operator Microsoft::WRL::Details::BoolType](../windows/comptr-operator-microsoft-wrl-details-booltype-operator.md)

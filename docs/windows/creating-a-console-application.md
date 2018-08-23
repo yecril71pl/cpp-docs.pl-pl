@@ -17,31 +17,33 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: f1d960c634814df122202199be05149f47b01f28
-ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
+ms.openlocfilehash: 6e4ab4e209b53e33586346495715548cffd4df2e
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39647667"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42587561"
 ---
 # <a name="creating-a-console-application"></a>Tworzenie aplikacji konsoli
-Najprostszym sposobem tworzenia aplikacji konsolowej Win32 jest użycie **Kreatora aplikacji Win32**.  
-  
-### <a name="to-create-a-win32-console-application"></a>Do tworzenia aplikacji konsolowej Win32  
-  
-1.  Postępuj zgodnie z instrukcjami w temacie Pomocy [Tworzenie projektu za pomocą Kreatora aplikacji Visual C++](../ide/creating-desktop-projects-by-using-application-wizards.md).  
-  
-2.  W **nowy projekt** okno dialogowe, wybierz opcję **projekt konsoli Win32** w **szablony** okienko, aby otworzyć kreatora.  
-  
-3.  Zdefiniuj swoje [ustawienia aplikacji](../windows/application-settings-win-32-project-wizard.md) przy użyciu [Kreatora aplikacji Win32](../windows/win32-application-wizard.md).  
-  
-    > [!NOTE]
-    >  Pomiń ten krok, aby kreator ustawienia domyślne.  
-  
-4.  Kliknij przycisk **Zakończ** aby zamknąć kreatora i nowo utworzonego projektu zostanie otwarty w **Eksploratora rozwiązań**.  
-  
-## <a name="see-also"></a>Zobacz też  
- [Projekty startowe](/visualstudio/debugger/debugging-preparation-console-projects)   
- [Dodawanie funkcji za pomocą kreatorów kodu](../ide/adding-functionality-with-code-wizards-cpp.md)   
- [Strony właściwości](../ide/property-pages-visual-cpp.md)   
- [Wdrażanie aplikacji](http://msdn.microsoft.com/4ff8881d-0daf-47e7-bfe7-774c625031b4)
+
+Najprostszym sposobem tworzenia aplikacji konsolowej Win32 jest użycie **Kreatora aplikacji Win32**.
+
+### <a name="to-create-a-win32-console-application"></a>Do tworzenia aplikacji konsolowej Win32
+
+1. Postępuj zgodnie z instrukcjami w temacie Pomocy [Tworzenie projektu za pomocą Kreatora aplikacji Visual C++](../ide/creating-desktop-projects-by-using-application-wizards.md).
+
+2. W **nowy projekt** okno dialogowe, wybierz opcję **projekt konsoli Win32** w **szablony** okienko, aby otworzyć kreatora.
+
+3. Zdefiniuj swoje [ustawienia aplikacji](../windows/application-settings-win-32-project-wizard.md) przy użyciu [Kreatora aplikacji Win32](../windows/win32-application-wizard.md).
+
+   > [!NOTE]
+   > Pomiń ten krok, aby kreator ustawienia domyślne.
+
+4. Kliknij przycisk **Zakończ** aby zamknąć kreatora i nowo utworzonego projektu zostanie otwarty w **Eksploratora rozwiązań**.
+
+## <a name="see-also"></a>Zobacz też
+
+[Projekty startowe](/visualstudio/debugger/debugging-preparation-console-projects)  
+[Dodawanie funkcji za pomocą kreatorów kodu](../ide/adding-functionality-with-code-wizards-cpp.md)  
+[Strony właściwości](../ide/property-pages-visual-cpp.md)  
+[Wdrażanie aplikacji](http://msdn.microsoft.com/4ff8881d-0daf-47e7-bfe7-774c625031b4)

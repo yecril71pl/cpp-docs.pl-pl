@@ -1,5 +1,5 @@
 ---
-title: Klasa platform::DisconnectedException | Dokumentacja firmy Microsoft
+title: Platform::DisconnectedException, klasa | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 12/30/2016
 ms.technology: cpp-windows
@@ -12,19 +12,19 @@ dev_langs:
 helpviewer_keywords:
 - Platform::DisconnectedException
 ms.assetid: c25e0d64-5bff-4c21-88e5-c4ec2776fa7f
-author: ghogen
-ms.author: ghogen
+author: mikeblome
+ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b756ef02082eb80cd8c9bd6b118ee9abca47236e
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: a84d07db2e3fe48d981641d2803352d90268d93a
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33087492"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42606310"
 ---
-# <a name="platformdisconnectedexception-class"></a>Klasa platform::DisconnectedException
-Element zgłaszany, gdy obiekt serwera proxy modelu COM próbuje odwołać serwer COM, który już nie istnieje  
+# <a name="platformdisconnectedexception-class"></a>Platform::DisconnectedException, klasa
+Zgłaszany, gdy próbuje odwoływać się do serwera COM, który nie istnieje już obiekt serwera proxy modelu COM  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -33,7 +33,7 @@ public ref class DisconnectedException : COMException,    IException,    IPrinta
 ```  
   
 ### <a name="remarks"></a>Uwagi  
- Gdy obiekt serwera proxy do komunikacji z serwerem COM poza procesem wymaga innej klasy (klasa B), który znajduje się w osobnych procesach klasy A odwołuje się do klasy A przechowuje klasy B. Czasami serwera można przejść za mało pamięci bez klasy wiedzy. W takim przypadku jest zwracany wyjątek RPC_E_DISCONNECTED i pobiera translacji Platform::DisconnectedException. Jest jeden scenariusz, w którym występuje jest źródłem zdarzeń wywołuje delegata, który został przekazany do niego, ale delegat został zlikwidowany w pewnym momencie po jej subskrybuje zdarzenia. W takim przypadku źródło zdarzenia usuwa tego delegata z listy jej wywołania.  
+ Gdy innej klasy (klasy B), który znajduje się w oddzielnym procesie klasy A wymaga obiektu serwera proxy do komunikacji z serwerem modelu COM spoza procesu A odwołań do klas zawierający klasy B. Czasami serwera wykroczyć poza pamięci bez klasy jego wiedzy. W takim przypadku jest zgłaszany wyjątek RPC_E_DISCONNECTED i pobiera tłumaczone Platform::DisconnectedException. Jeden scenariusz, w którym jest występuje sytuacja, źródła zdarzeń wywołuje delegata, który został przekazany do niego, ale delegata został zniszczony w pewnym momencie po subskrypcję zdarzenia. W takim przypadku źródło zdarzenia usuwa delegata z listy jej wywołania.  
   
  Aby uzyskać więcej informacji, zobacz [COMException](../cppcx/platform-comexception-class.md) klasy.  
   

@@ -18,31 +18,34 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: c3f16f09a42961a2bfd6093f6f2dd72b0fdcc382
-ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
+ms.openlocfilehash: 6ef3a2ce99309781ecbfd0c406fe8e0f6f7e0613
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39645623"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42592121"
 ---
 # <a name="converting-an-image-from-one-format-to-another-image-editor-for-icons"></a>Konwertowanie obrazu z jednego formatu do innego (Edytor obrazów dla ikon)
-Możesz otworzyć obrazów GIF lub JPEG w **obraz** edytora i zapisz je jako map bitowych. Ponadto można otworzyć pliku mapy bitowej i zapisz go jako plik GIF lub JPEG. Pracujesz z obrazów nie muszą być częścią projektu do edycji w środowisku programistycznym (zobacz [edycji obrazów autonomicznej](../windows/editing-an-image-outside-of-a-project-image-editor-for-icons.md)).  
-  
-### <a name="to-convert-an-image-from-one-format-to-another"></a>Aby przekonwertować obrazu z jednego formatu  
-  
-1.  Otwórz obraz w **obraz** edytora.  
-  
-2.  Z **pliku** menu, wybierz **Zapisz *filename* jako**.  
-  
-3.  W **Zapisz plik jako** dialogowym **nazwy pliku** wpisz nazwę pliku i rozszerzenie, które oznacza żądany format.  
-  
-4.  Kliknij przycisk **Zapisz**.  
-  
- Aby uzyskać informacje na temat dodawania zasobów do projektów zarządzanych, zobacz [zasoby w aplikacjach pulpitu](/dotnet/framework/resources/index) w *przewodniku dewelopera .NET Framework*. Aby uzyskać informacji na temat ręcznego dodawania plików zasobów do projektów zarządzanych, uzyskiwania dostępu do zasobów, wyświetlania statycznych zasobów i przypisywania ciągów zasobów do właściwości, zobacz [Creating Resource Files dla aplikacji klasycznych](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Aby uzyskać informacji na temat globalizacja i lokalizacja zasobów w aplikacjach zarządzanych, zobacz [Globalizing i lokalizowanie aplikacji programu .NET Framework](/dotnet/standard/globalization-localization/index).  
-  
-## <a name="requirements"></a>Wymagania  
- Brak  
-  
-## <a name="see-also"></a>Zobacz też  
- [Edytowanie zasobów graficznych](../windows/editing-graphical-resources-image-editor-for-icons.md)   
- [Edytor obrazów dla ikon](../windows/image-editor-for-icons.md)
+
+Możesz otworzyć obrazów GIF lub JPEG w **obraz** edytora i zapisz je jako map bitowych. Ponadto można otworzyć pliku mapy bitowej i zapisz go jako plik GIF lub JPEG. Pracujesz z obrazów nie muszą być częścią projektu do edycji w środowisku programistycznym (zobacz [edycji obrazów autonomicznej](../windows/editing-an-image-outside-of-a-project-image-editor-for-icons.md)).
+
+### <a name="to-convert-an-image-from-one-format-to-another"></a>Aby przekonwertować obrazu z jednego formatu
+
+1. Otwórz obraz w **obraz** edytora.
+
+2. Z **pliku** menu, wybierz **Zapisz *filename* jako**.
+
+3. W **Zapisz plik jako** dialogowym **nazwy pliku** wpisz nazwę pliku i rozszerzenie, które oznacza żądany format.
+
+4. Kliknij przycisk **Zapisz**.
+
+Aby uzyskać informacje na temat dodawania zasobów do projektów zarządzanych, zobacz [zasoby w aplikacjach pulpitu](/dotnet/framework/resources/index) w *przewodniku dewelopera .NET Framework*. Aby uzyskać informacji na temat ręcznego dodawania plików zasobów do projektów zarządzanych, uzyskiwania dostępu do zasobów, wyświetlania statycznych zasobów i przypisywania ciągów zasobów do właściwości, zobacz [Creating Resource Files dla aplikacji klasycznych](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Aby uzyskać informacji na temat globalizacja i lokalizacja zasobów w aplikacjach zarządzanych, zobacz [Globalizing i lokalizowanie aplikacji programu .NET Framework](/dotnet/standard/globalization-localization/index).
+
+## <a name="requirements"></a>Wymagania
+
+Brak
+
+## <a name="see-also"></a>Zobacz też
+
+[Edytowanie zasobów graficznych](../windows/editing-graphical-resources-image-editor-for-icons.md)  
+[Edytor obrazów dla ikon](../windows/image-editor-for-icons.md)

@@ -1,5 +1,5 @@
 ---
-title: _InterlockedExchangeAdd — funkcje | Dokumentacja firmy Microsoft
+title: _Interlockedexchangeadd — funkcje wewnętrzne | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -65,17 +65,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c141caf090eb34482fe53a03138ff71d2740e2fc
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 2d25fccd56522d420a96b589796ef77cc30148d3
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33340557"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42600895"
 ---
 # <a name="interlockedexchangeadd-intrinsic-functions"></a>_InterlockedExchangeAdd — funkcje wewnętrzne
 **Microsoft Specific**  
   
- Zapewniają obsługę wewnętrznych kompilatora dla środowiska Win32 [!INCLUDE[winsdkshort](../atl-mfc-shared/reference/includes/winsdkshort_md.md)] [_InterlockedExchangeAdd — funkcje wewnętrzne](../intrinsics/interlockedexchangeadd-intrinsic-functions.md) funkcji.  
+ Zapewnia wsparcie wewnętrznej kompilatora dla zestawu SDK Windows Win32 [_interlockedexchangeadd — funkcje wewnętrzne](../intrinsics/interlockedexchangeadd-intrinsic-functions.md) funkcji.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -164,38 +164,38 @@ __int64 _InterlockedExchangeAdd64_HLERelease(
 ```  
   
 #### <a name="parameters"></a>Parametry  
- [w, out] `Addend`  
- Wartość do dodania. zastępuje wynik operacji dodawania.  
+ [out w] `Addend`  
+ Wartość do dodania. zastępuje wynik dodawania.  
   
  [in] `Value`  
  Wartość do dodania.  
   
 ## <a name="return-value"></a>Wartość zwracana  
- Wartość zwracana jest wartość początkowa zmiennej wskazywana przez `Addend` parametru.  
+ Zwracana wartość jest wartością początkową zmiennej, do których prowadzą `Addend` parametru.  
   
 ## <a name="requirements"></a>Wymagania  
   
-|— Wewnętrzne|Architektura|nagłówek|  
+|Wewnętrzne|Architektura|nagłówek|  
 |---------------|------------------|------------|  
-|`_InterlockedExchangeAdd`, `_InterlockedExchangeAdd8`, `_InterlockedExchangeAdd16`, `_InterlockedExchangeAdd64`|x86, ARM, [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|\<intrin.h>|  
+|`_InterlockedExchangeAdd`, `_InterlockedExchangeAdd8`, `_InterlockedExchangeAdd16`, `_InterlockedExchangeAdd64`|x86, ARM, x64|\<intrin.h>|  
 |`_InterlockedExchangeAdd_acq`, `_InterlockedExchangeAdd_rel`, `_InterlockedExchangeAdd_nf`, `_InterlockedExchangeAdd8_acq`, `_InterlockedExchangeAdd8_rel`, `_InterlockedExchangeAdd8_nf`,`_InterlockedExchangeAdd16_acq`, `_InterlockedExchangeAdd16_rel`, `_InterlockedExchangeAdd16_nf`, `_InterlockedExchangeAdd64_acq`, `_InterlockedExchangeAdd64_rel`, `_InterlockedExchangeAdd64_nf`|ARM|\<intrin.h>|  
-|`_InterlockedExchangeAdd_HLEAcquire`, `_InterlockedExchangeAdd_HLERelease`, `_InterlockedExchangeAdd64_HLEAcquire`, `_InterlockedExchangeAdd64_HLErelease`|x86, [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|\<immintrin.h>|  
+|`_InterlockedExchangeAdd_HLEAcquire`, `_InterlockedExchangeAdd_HLERelease`, `_InterlockedExchangeAdd64_HLEAcquire`, `_InterlockedExchangeAdd64_HLErelease`|x86, x64|\<immintrin.h>|  
   
 ## <a name="remarks"></a>Uwagi  
- Istnieje kilka zmian na `_InterlockedExchangeAdd` który różnić w zależności od typów danych, wymagają one i czy uzyskać specyficznych dla procesora lub Wydaj semantykę jest używany.  
+ Istnieje kilka zmian w `_InterlockedExchangeAdd` różnią się zależnie od typów danych, wymagają one oraz tego, czy uzyskać specyficznych dla procesora lub semantyka wydania jest używany.  
   
- Podczas `_InterlockedExchangeAdd` funkcja działa na 32-bitowych liczb całkowitych, `_InterlockedExchangeAdd8` działa na wartości 8-bitową liczbę całkowitą `_InterlockedExchangeAdd16` działa na wartości 16-bitową liczbę całkowitą i `_InterlockedExchangeAdd64` działa na 64-bitowych liczb całkowitych.  
+ Podczas `_InterlockedExchangeAdd` funkcja działa w 32-bitowych wartości całkowitych, `_InterlockedExchangeAdd8` operuje na 8-bitowych wartości całkowitych, `_InterlockedExchangeAdd16` operuje na wartości 16-bitową liczbę całkowitą i `_InterlockedExchangeAdd64` działa w 64-bitowych wartości całkowitych.  
   
- Na platformach ARM, użyj funkcji wewnętrznych z `_acq` i `_rel` sufiksy, jeśli należy uzyskać i zwolnij semantyki, takich jak na początku i na końcu sekcji krytycznych. Funkcje wewnętrzne z `_nf` sufiks ("nie ogranicznika") nie działają jako bariery pamięci.  
+ Na platformach ARM, użyj funkcji wewnętrznych za pomocą `_acq` i `_rel` sufiksy, jeśli potrzebujesz uzyskać i zwolnij semantykę, takich jak na początku i na końcu sekcję krytyczną. Funkcje wewnętrzne z `_nf` sufiks ("nie ogranicznika") nie działają jako czynnik blokujący pamięci.  
   
- Na platformach firmy Intel, które obsługują instrukcje Elision blokady sprzętu (HLE), funkcje wewnętrzne z `_HLEAcquire` i `_HLERelease` sufiksy obejmują wskazówkę procesora, która umożliwia przyspieszanie wydajności przez wyeliminowanie krok blokady zapisu sprzętu. Jeśli te funkcje wewnętrzne są nazywane na platformach, które nie obsługują HLE, wskazówka zostanie zignorowany.  
+ Na platformach firmy Intel, obsługujące instrukcje pominięcia blokady sprzętu (HLE), funkcje wewnętrzne z `_HLEAcquire` i `_HLERelease` sufiksy obejmują wskazówkę procesora, który może przyspieszyć wydajność, eliminując krok blokady zapisu w sprzęcie. Jeśli te funkcje wewnętrzne są wywoływane na platformach, które nie obsługują HLE, wskazówka zostanie zignorowany.  
   
- Te procedury są dostępne tylko jako funkcje wewnętrzne. W związku z tym są wewnętrzne czy lub nie [/Oi](../build/reference/oi-generate-intrinsic-functions.md) lub [#pragma wewnętrzne](../preprocessor/intrinsic.md) jest używany. Nie jest możliwe użycie [funkcji #pragma](../preprocessor/function-c-cpp.md) na te funkcje wewnętrzne.  
+ Te procedury są dostępne tylko jako funkcje wewnętrzne. W związku z tym, są one wewnętrzne czy czy nie [/Oi](../build/reference/oi-generate-intrinsic-functions.md) lub [#pragma wewnętrzne](../preprocessor/intrinsic.md) jest używany. Nie jest możliwe użycie [funkcji #pragma](../preprocessor/function-c-cpp.md) na te funkcje wewnętrzne.  
   
 ## <a name="example"></a>Przykład  
- Przykładowe zastosowania `_InterlockedExchangeAdd`, zobacz [_InterlockedDecrement](../intrinsics/interlockeddecrement-intrinsic-functions.md).  
+ Przykład sposobu użycia `_InterlockedExchangeAdd`, zobacz [_InterlockedDecrement](../intrinsics/interlockeddecrement-intrinsic-functions.md).  
   
-**KOŃCOWY określonych firmy Microsoft**  
+**END specyficzny dla Microsoft**  
   
 ## <a name="see-also"></a>Zobacz też  
  [Funkcje wewnętrzne kompilatora](../intrinsics/compiler-intrinsics.md)   

@@ -17,38 +17,42 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: c46fad71a42f9f947f020709cdf7851d079edd81
-ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
+ms.openlocfilehash: 1ee7e6deeda17d2ac374b39edf70ab28fa1457fa
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/09/2018
-ms.locfileid: "40014029"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42603384"
 ---
 # <a name="moduleunregisterobjects-method"></a>Module::UnregisterObjects — Metoda
-Wyrejestrowuje obiektów w określonym module, tak aby inne aplikacje nie mogą nawiązać z nimi.  
-  
-## <a name="syntax"></a>Składnia  
-  
-```cpp  
-HRESULT UnregisterObjects(  
-   ModuleBase* module,  
-   const wchar_t* serverName);  
-```  
-  
-### <a name="parameters"></a>Parametry  
- *Moduł*  
- Wskaźnik do modułu.  
-  
- *serverName*  
- Kwalifikującym się nazwa, która określa podzbiór obiektów wpływ tej operacji.  
-  
-## <a name="return-value"></a>Wartość zwracana  
- S_OK, jeśli operacja się powiedzie; w przeciwnym razie błąd HRESULT, która wskazuje przyczynę tej operacji nie powiodło się.  
-  
-## <a name="requirements"></a>Wymagania  
- **Nagłówek:** module.h  
-  
- **Namespace:** Microsoft::WRL
- 
- ## <a name="see-also"></a>Zobacz też
- [Klasa modułu](../windows/module-class.md)
+
+Wyrejestrowuje obiektów w określonym module, tak aby inne aplikacje nie mogą nawiązać z nimi.
+
+## <a name="syntax"></a>Składnia
+
+```cpp
+HRESULT UnregisterObjects(
+   ModuleBase* module,
+   const wchar_t* serverName);
+```
+
+### <a name="parameters"></a>Parametry
+
+*Moduł*  
+Wskaźnik do modułu.
+
+*serverName*  
+Kwalifikującym się nazwa, która określa podzbiór obiektów wpływ tej operacji.
+
+## <a name="return-value"></a>Wartość zwracana
+
+S_OK, jeśli operacja się powiedzie; w przeciwnym razie błąd HRESULT, która wskazuje przyczynę tej operacji nie powiodło się.
+
+## <a name="requirements"></a>Wymagania
+
+**Nagłówek:** module.h
+
+**Namespace:** Microsoft::WRL
+
+## <a name="see-also"></a>Zobacz też
+[Klasa modułu](../windows/module-class.md)

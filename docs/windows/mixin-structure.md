@@ -17,48 +17,54 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 8fb5fa5288829ef51bf818ad8b7cf3b46edb59bf
-ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
+ms.openlocfilehash: 6ccea9a053f47ae206cbe5c8412c387f07bd5b52
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/09/2018
-ms.locfileid: "40014289"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42603430"
 ---
 # <a name="mixin-structure"></a>MixIn — Struktura
-Zapewnia, że klasy środowiska uruchomieniowego pochodzi od klasy interfejsów Windows Runtime, jeśli istnieje, a następnie klasycznych interfejsów COM.  
-  
-## <a name="syntax"></a>Składnia  
-  
-```cpp  
-template<  
-   typename Derived,  
-   typename MixInType,  
-   bool hasImplements = __is_base_of(Details::ImplementsBase,  
+
+Zapewnia, że klasy środowiska uruchomieniowego pochodzi od klasy interfejsów Windows Runtime, jeśli istnieje, a następnie klasycznych interfejsów COM.
+
+## <a name="syntax"></a>Składnia
+
+```cpp
+template<
+   typename Derived,
+   typename MixInType,
+   bool hasImplements = __is_base_of(Details::ImplementsBase,
    MixInType)  
->  
-struct MixIn;  
-```  
-  
-### <a name="parameters"></a>Parametry  
- *Pochodne*  
- Typ pochodzący od [implementuje](../windows/implements-structure.md) struktury.  
-  
- *MixInType*  
- Typ podstawowy.  
-  
- *hasImplements*  
- **wartość true,** Jeśli *MixInType* jest pochodną bieżąca implementacja parametru typu podstawowego; **false** inaczej.  
-  
-## <a name="remarks"></a>Uwagi  
- Jeśli klasa jest pochodną klasy COM, interfejsów i środowiska wykonawczego Windows, lista deklaracji klasy, najpierw musi zawierać żadnych interfejsów Windows Runtime, a następnie wszelkie Klasyczny model COM, interfejsów. **MixIn** gwarantuje, że interfejsy są określone w poprawnej kolejności.  
-  
-## <a name="inheritance-hierarchy"></a>Hierarchia dziedziczenia  
- `MixIn`  
-  
-## <a name="requirements"></a>Wymagania  
- **Nagłówek:** implements.h  
-  
- **Namespace:** Microsoft::WRL  
-  
-## <a name="see-also"></a>Zobacz też  
- [Microsoft::WRL, przestrzeń nazw](../windows/microsoft-wrl-namespace.md)
+>
+struct MixIn;
+```
+
+### <a name="parameters"></a>Parametry
+
+*Pochodne*  
+Typ pochodzący od [implementuje](../windows/implements-structure.md) struktury.
+
+*MixInType*  
+Typ podstawowy.
+
+*hasImplements*  
+**wartość true,** Jeśli *MixInType* jest pochodną bieżąca implementacja parametru typu podstawowego; **false** inaczej.
+
+## <a name="remarks"></a>Uwagi
+
+Jeśli klasa jest pochodną klasy COM, interfejsów i środowiska wykonawczego Windows, lista deklaracji klasy, najpierw musi zawierać żadnych interfejsów Windows Runtime, a następnie wszelkie Klasyczny model COM, interfejsów. **MixIn** gwarantuje, że interfejsy są określone w poprawnej kolejności.
+
+## <a name="inheritance-hierarchy"></a>Hierarchia dziedziczenia
+
+`MixIn`
+
+## <a name="requirements"></a>Wymagania
+
+**Nagłówek:** implements.h
+
+**Namespace:** Microsoft::WRL
+
+## <a name="see-also"></a>Zobacz też
+
+[Microsoft::WRL, przestrzeń nazw](../windows/microsoft-wrl-namespace.md)

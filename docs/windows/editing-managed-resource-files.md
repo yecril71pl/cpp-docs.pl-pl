@@ -19,17 +19,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 2d56da96a9afdb7fe2e0f773d928e601ba79ac76
-ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
+ms.openlocfilehash: 2d2559c700cc05bb7878f130e6e95e0d58d7110b
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39568793"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42595617"
 ---
 # <a name="editing-managed-resource-files"></a>Edytowanie zarządzanych plików zasobów
-Zarządzanych plików zasobów (.resx) są plikami XML. Po dodaniu plik zasobu zarządzanego projektu z **Dodaj nowy element** okno dialogowe **Edytor zasobów zarządzanych** domyślnie otwierany.  
-  
- Aby uzyskać więcej informacji, zobacz [zasobów. Format pliku ResX](http://msdn.microsoft.com/0c476133-87e4-47e8-b0ef-4b88f4ef3dc5).  
-  
-## <a name="see-also"></a>Zobacz też  
- [Pliki zasobów](../windows/resource-files-visual-studio.md)
+
+Zarządzanych plików zasobów (.resx) są plikami XML. Po dodaniu plik zasobu zarządzanego projektu z **Dodaj nowy element** okno dialogowe **Edytor zasobów zarządzanych** domyślnie otwierany.
+
+Aby uzyskać więcej informacji, zobacz [zasobów. Format pliku ResX](http://msdn.microsoft.com/0c476133-87e4-47e8-b0ef-4b88f4ef3dc5).
+
+## <a name="see-also"></a>Zobacz też
+
+[Pliki zasobów](../windows/resource-files-visual-studio.md)

@@ -13,18 +13,18 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 56b6642bb24107da4c09856dbd8daaf70fb7dfd5
-ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
+ms.openlocfilehash: 7ba556ee3803bb00f07032e0589209af2d32addf
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/09/2018
-ms.locfileid: "40015010"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42591756"
 ---
 # <a name="universal-windows-apps-c"></a>Aplikacje uniwersalne systemu Windows (C++)
 
 Uniwersalnych aplikacji dla platformy Windows (UWP) wcielają zestaw zasad projektowania, które podkreślić proste interfejsy użytkownika skoncentrowane wokół zawartości, który automatycznie dostosowuje się do różnych rozmiarów ekranu na różnych urządzeniach. Należy utworzyć UI w znaczników XAML i kodem w natywnym kodzie C++. Można również utworzyć komponenty (dll), które mogą być używane przez aplikacje platformy uniwersalnej systemu Windows, które są zapisywane w innych językach. Powierzchnią API dla aplikacji platformy uniwersalnej systemu Windows jest środowiska wykonawczego Windows, który jest dobrze uwarunkowaną biblioteką, która zapewnia szerokiej gamy usług systemu operacyjnego.
 
-> [!TIP]  
+> [!TIP]
 > Dla systemu Windows 10 Desktop Bridge konwerter aplikacji służy również do pakietu istniejącej aplikacji klasycznych dla wdrożenia przez Microsoft Store. Aby uzyskać więcej informacji, zobacz [przy użyciu środowiska uruchomieniowego Visual C++ w projekcie Centennial](https://blogs.msdn.microsoft.com/vcblog/2016/07/07/using-visual-c-runtime-in-centennial-project) i [Desktop Bridge](/windows/uwp/porting/desktop-to-uwp-root).
 
 ## <a name="uwp-apps-that-use-cwinrt"></a>Aplikacje platformy uniwersalnej systemu Windows, które używają języka C + +/ WinRT
@@ -46,4 +46,5 @@ C + +/ WinRT jest nowy, tylko nagłówek oparty na bibliotece języka C++ język
 Biblioteka szablonów C++ środowiska wykonawczego Windows zapewnia niskiego poziomu interfejsy COM, dzięki którym kod ISO C++ mogą uzyskiwać dostęp do środowiska wykonawczego Windows w środowisku wolnym od wyjątku. W większości przypadków zaleca się, że używasz języka C + +/ WinRT lub C + +/ CX zamiast Biblioteka szablonów C++ środowiska wykonawczego Windows, do tworzenia aplikacji platformy uniwersalnej systemu Windows. Aby dowiedzieć się, Biblioteka szablonów C++ środowiska wykonawczego Windows, zobacz [Windows środowiska uruchomieniowego C++ szablon biblioteki (WRL)](../windows/windows-runtime-cpp-template-library-wrl.md).
 
 ## <a name="see-also"></a>Zobacz także
- [Visual C++](../visual-cpp-in-visual-studio.md)<br/>
+
+[Visual C++](../visual-cpp-in-visual-studio.md)<br/>

@@ -1,5 +1,5 @@
 ---
-title: Klasa platform::Agile | Dokumentacja firmy Microsoft
+title: Platform::Agile, klasa | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 12/30/2016
 ms.technology: cpp-windows
@@ -16,19 +16,19 @@ dev_langs:
 helpviewer_keywords:
 - Platform::Agile
 ms.assetid: e34459a9-c429-4c79-97fd-030c43ca4155
-author: ghogen
-ms.author: ghogen
+author: mikeblome
+ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4d7d2299dd1395e93f4cd88cbeaec6c0b9467308
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: f552327156d9fc1abe5e921f3b59b1fb4132ff3d
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33092434"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42596605"
 ---
-# <a name="platformagile-class"></a>Klasa platform::Agile
-Reprezentuje obiekt, który ma MashalingBehavior = Standard jako obiekt agile, znacznie ogranicza prawdopodobieństwo wątkowość wyjątków w czasie wykonywania. `Agile<T>` Umożliwia-agile obiektu połączeń telefonicznych, lub można wywołać z tym samym lub innym wątku. Aby uzyskać więcej informacji, zobacz [wątków i przekazywanie](../cppcx/threading-and-marshaling-c-cx.md).  
+# <a name="platformagile-class"></a>Platform::Agile, klasa
+Reprezentuje obiekt, który ma MashalingBehavior = Standard jako obiekt agile, co znacznie zmniejsza prawdopodobieństwo, że wątki wyjątki środowiska uruchomieniowego. `Agile<T>` Umożliwia-agile obiekt, aby wywołać lub być wywoływana z tym samym lub innym wątku. Aby uzyskać więcej informacji, zobacz [wątkowość i Marshaling](../cppcx/threading-and-marshaling-c-cx.md).  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -39,12 +39,12 @@ class Agile;
   
 #### <a name="parameters"></a>Parametry  
  T  
- Właściwość typename klasy elastyczne.  
+ Element typename-agile klasy.  
   
 ### <a name="remarks"></a>Uwagi  
- Większość klas w środowisku wykonawczym systemu Windows to elastyczne. Obiekt agile można wywołać lub wywołana przez obiekt wewnątrzprocesową lub poza procesem, w tym samym lub innym wątku. Jeśli obiekt nie jest agile, zawijać-agile obiektu w `Agile<T>` obiektu, który jest elastyczne. Następnie przy użyciu `Agile<T>` obiektu mogą być przekazywane, i mogą być używane-agile obiektu źródłowego.  
+ Większość klas środowiska wykonawczego Windows to agile. Obiekt agile można wywołać lub być wywoływany przez obiekt wewnątrzprocesową lub poza poza procesem, w tym samym lub innym wątku. Jeśli obiekt nie jest agile, opakowywanie-agile obiektu w `Agile<T>` obiektu, który jest agile. A następnie `Agile<T>` obiekt może być organizowany i podstawowych-agile obiekt może być używany.  
   
- `Agile<T>` Klasa jest klasą macierzystego, standard C++ i wymaga `agile.h`. Reprezentuje obiekt agile i elastyczne obiektu *kontekstu*. Kontekst określa model wątkowości i zachowanie marshalingu agile obiektu. System operacyjny używa kontekstu do określenia sposobu zorganizowania obiektu.  
+ `Agile<T>` Klasa jest klasą natywnych, standard C++ i wymaga `agile.h`. Reprezentuje obiekt agile i obiekt Agile *kontekstu*. Kontekst określa model wątkowości i zachowanie marshalingu obiektu agile. System operacyjny używa kontekstu ustalenie sposobu organizowania obiektu.  
   
 ### <a name="members"></a>Elementy członkowskie  
   
@@ -52,24 +52,24 @@ class Agile;
   
 |Nazwa|Opis|  
 |----------|-----------------|  
-|[Agile::Agile](#ctor)|Inicjuje nowe wystąpienie klasy elastyczne.|  
-|[Elastyczne:: ~ Agile — destruktor](#dtor)|Niszczy bieżące wystąpienie klasy elastyczne.|  
+|[Agile::Agile](#ctor)|Inicjuje nowe wystąpienie klasy Agile.|  
+|[Agile:: ~ Agile — destruktor](#dtor)|Likwiduje bieżące wystąpienia klasy Agile.|  
   
 ### <a name="public-methods"></a>Metody publiczne  
   
 |Nazwa|Opis|  
 |----------|-----------------|  
-|[Agile::Get](#get)|Zwraca uchwyt do obiektu reprezentowanego przez bieżący obiekt elastyczne.|  
-|[Agile::GetAddressOf](#getaddressof)|Ponownie inicjuje bieżącego obiektu Agile, a następnie zwraca adres dojścia do typu obiektu `T`.|  
-|[Agile::GetAddressOfForInOut](#getaddressofforinout)|Zwraca adres uchwyt do obiektu reprezentowanego przez bieżący obiekt elastyczne.|  
-|[Agile::Release](#release)|Usuwa obiekt bieżącego obiektu Agile i kontekstu.|  
+|[Agile::Get](#get)|Zwraca uchwyt do obiektu, który jest reprezentowany przez bieżący obiekt Agile.|  
+|[Agile::GetAddressOf](#getaddressof)|Ponownie inicjuje bieżący obiekt Agile, a następnie zwraca adres dojścia do obiektu typu `T`.|  
+|[Agile::GetAddressOfForInOut](#getaddressofforinout)|Zwraca adres dojścia do obiektu reprezentowanego przez bieżący obiekt Agile.|  
+|[Agile::Release](#release)|Usuwa obiekt źródłowy i kontekstu bieżącego obiektu Agile.|  
   
 ### <a name="public-operators"></a>Operatory publiczne  
   
 |Nazwa|Opis|  
 |----------|-----------------|  
-|[Agile::operator ->](#operator-arrow)|Pobiera dojścia do obiektu reprezentowanego przez bieżący obiekt elastyczne.|  
-|[Agile::operator =](#operator-assign)|Przypisuje określona wartość, jak bieżący obiekt Agile.|  
+|[Agile::operator ->](#operator-arrow)|Pobiera uchwyt do obiektu reprezentowanego przez bieżący obiekt Agile.|  
+|[Agile::operator =](#operator-assign)|Przypisuje określoną wartość, jak bieżący obiekt Agile.|  
   
 ## <a name="inheritance-hierarchy"></a>Hierarchia dziedziczenia  
  `Object`  
@@ -86,7 +86,7 @@ class Agile;
  **Nagłówek:** agile.h  
 
 ## <a name="ctor"></a>  Konstruktor Agile::Agile
-Inicjuje nowe wystąpienie klasy elastyczne.  
+Inicjuje nowe wystąpienie klasy Agile.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -107,13 +107,13 @@ Agile(Agile<T>&& object);
  Typ określony przez parametr typename szablonu.  
   
  `object`  
- W drugiej wersji tego konstruktora obiekt służący do inicjuje nowe wystąpienie Agile. W trzecim wersja obiektu, który jest skopiowany do nowego wystąpienia elastyczne. W czwartym wersja obiektu, który jest przenoszona do nowego wystąpienia elastyczne.  
+ W drugiej wersji tego konstruktora obiekt służący do inicjuje nowe wystąpienie Agile. W trzeciej wersji obiekt, który jest kopiowany do nowego wystąpienia Agile. W czwartym wersja obiektu, który jest przenoszony do nowego wystąpienia Agile.  
   
 ### <a name="remarks"></a>Uwagi  
- Pierwszą wersję tego konstruktora jest konstruktora domyślnego. Druga wersja inicjuje nową klasę wystąpienia Agile z obiekt określony przez `object` parametru. Trzeci wersja jest Konstruktor kopiujący. Wersja czwarty jest konstruktor przenoszenia. Ten konstruktor nie zgłaszają wyjątki.  
+ Pierwsza wersja tego konstruktora jest konstruktor domyślny. Druga wersja inicjuje nową klasę Agile wystąpienia w obiekcie określonym przez `object` parametru. Trzecia wersja jest Konstruktor kopiujący. Czwarta wersja jest konstruktora przenoszącego. Ten konstruktor nie może zgłaszać wyjątki.  
 
-## <a name="dtor"></a>  Elastyczne:: ~ Agile — destruktor
-Niszczy bieżące wystąpienie klasy elastyczne.  
+## <a name="dtor"></a>  Agile:: ~ Agile — destruktor
+Likwiduje bieżące wystąpienia klasy Agile.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -123,10 +123,10 @@ Niszczy bieżące wystąpienie klasy elastyczne.
 ```  
   
 ### <a name="remarks"></a>Uwagi  
- Ten destruktor zwalnia również obiektu reprezentowanego przez bieżący obiekt elastyczne.  
+ Ten destruktor zwalnia również obiekt reprezentowany przez bieżący obiekt Agile.  
   
-## <a name="get"></a>   Agile::Get — metoda
-Zwraca uchwyt do obiektu reprezentowanego przez bieżący obiekt elastyczne.  
+## <a name="get"></a>   Metoda Agile::Get
+Zwraca uchwyt do obiektu, który jest reprezentowany przez bieżący obiekt Agile.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -137,12 +137,12 @@ Zwraca uchwyt do obiektu reprezentowanego przez bieżący obiekt elastyczne.
 ```  
   
 ### <a name="return-value"></a>Wartość zwracana  
- Dojście do obiektu reprezentowanego przez bieżący obiekt elastyczne.  
+ Dojście do obiektu, który jest reprezentowany przez bieżący obiekt Agile.  
   
- Typ wartości zwracanej jest rzeczywiście niejawne typów wewnętrznych. Wygodny sposób do przechowywania wartości zwracanej jest aby przypisać go do zmiennej, która jest zadeklarowana za pomocą **automatycznie** wpisz wnioskowanie — słowo kluczowe. Na przykład `auto x = myAgileTvariable->Get();`.  
+ Typ wartości zwracanej jest faktycznie niejawne typu wewnętrznego. Jest to wygodny sposób przechowywania wartości zwracanej, przypisać ją do zmiennej, która jest zadeklarowana za pomocą **automatycznie** słowem kluczowym dedukcji typu. Na przykład `auto x = myAgileTvariable->Get();`.  
   
-## <a name="getaddressof"></a>  Agile::GetAddressOf — metoda
-Ponownie inicjuje bieżącego obiektu Agile, a następnie zwraca adres dojścia do typu obiektu `T`.  
+## <a name="getaddressof"></a>  Metoda Agile::GetAddressOf
+Ponownie inicjuje bieżący obiekt Agile, a następnie zwraca adres dojścia do obiektu typu `T`.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -157,13 +157,13 @@ throw();
  Typ określony przez parametr typename szablonu.  
   
 ### <a name="return-value"></a>Wartość zwracana  
- Adres dojścia do typu obiektu `T`.  
+ Adres dojścia do obiektu typu `T`.  
   
 ### <a name="remarks"></a>Uwagi  
- Ta operacja zwalnia reprezentacja bieżącego obiektu typu `T`, jeśli występują; ponownie inicjuje obiekt elastyczne elementy członkowskie danych; uzyskuje bieżącego kontekstu wątkowości; a następnie zwraca adresu zmiennej uchwyt do obiektu, mogącej reprezentować agile obiektu. Aby spowodować wystąpienie klasy Agile do reprezentowania obiektu, użyj operatora przypisania ([Agile::operator =](#operator-assign)) można przypisać obiektu wystąpienia klasy Agile.  
+ Ta operacja wydaje reprezentujący bieżący obiekt typu `T`, jeśli występują; ponownie inicjuje elementy członkowskie danych obiektu Agile; uzyskuje bieżącego kontekstu wątkowości; a następnie zwraca adres zmiennej uchwytu do obiektu, który może reprezentować Obiekt agile. Aby spowodować wystąpienie klasy Agile, które reprezentują obiektu, należy użyć operatora przypisania ([Agile::operator =](#operator-assign)) można przypisać obiekt do wystąpienia klasy Agile.  
 
-## <a name="getaddressofforinout"></a>  Agile::GetAddressOfForInOut — metoda
-Zwraca adres uchwyt do obiektu reprezentowanego przez bieżący obiekt elastyczne.  
+## <a name="getaddressofforinout"></a>  Metoda Agile::GetAddressOfForInOut
+Zwraca adres dojścia do obiektu reprezentowanego przez bieżący obiekt Agile.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -178,13 +178,13 @@ T^* GetAddressOfForInOut()  throw();
  Typ określony przez parametr typename szablonu.  
   
 ### <a name="return-value"></a>Wartość zwracana  
- Adres dojścia do obiektu reprezentowanego przez bieżący obiekt elastyczne.  
+ Adres dojścia do obiektu reprezentowanego przez bieżący obiekt Agile.  
   
 ### <a name="remarks"></a>Uwagi  
- Ta operacja uzyskuje bieżącego kontekstu wątków, a następnie zwraca adres uchwyt do obiektu źródłowego.  
+ Ta operacja uzyskuje bieżący kontekst wątku, a następnie zwraca adres dojścia do obiektu źródłowego.  
 
-## <a name="release"></a>  Agile::Release — metoda
-Usuwa obiekt bieżącego obiektu Agile i kontekstu.  
+## <a name="release"></a>  Metoda Agile::Release
+Usuwa obiekt źródłowy i kontekstu bieżącego obiektu Agile.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -195,10 +195,10 @@ void Release() throw();
 ```  
   
 ### <a name="remarks"></a>Uwagi  
- Bieżący obiekt Agile obiektu źródłowego i kontekstu są odrzucane, jeśli istnieją, a następnie Agile obiektu ma wartość null.  
+ Obiekt źródłowy i kontekstu bieżącego obiektu Agile są usuwane, jeśli są obecne, a następnie Agile obiektu ma wartość null.  
 
-## <a name="operator-arrow"></a>  Agile::operator —&gt; — Operator
-Pobiera dojścia do obiektu reprezentowanego przez bieżący obiekt elastyczne.  
+## <a name="operator-arrow"></a>  Agile::operator -&gt; — Operator
+Pobiera uchwyt do obiektu reprezentowanego przez bieżący obiekt Agile.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -209,12 +209,12 @@ const throw();
 ```  
   
 ### <a name="return-value"></a>Wartość zwracana  
- Dojście do obiektu reprezentowanego przez bieżący obiekt elastyczne.  
+ Dojście do obiektu reprezentowanego przez bieżący obiekt Agile.  
   
- Zwraca faktycznie niejawne typów wewnętrznych. Wygodny sposób do przechowywania wartości zwracanej jest aby przypisać go do zmiennej, która jest zadeklarowana za pomocą **automatycznie** wpisz wnioskowanie — słowo kluczowe.  
+ Ten operator zwraca faktycznie niejawne typu wewnętrznego. Jest to wygodny sposób przechowywania wartości zwracanej, przypisać ją do zmiennej, która jest zadeklarowana za pomocą **automatycznie** słowem kluczowym dedukcji typu.  
 
 ## <a name="operator-assign"></a>  Agile::operator = — Operator
-Przypisuje określony obiekt do bieżącego obiektu elastyczne.  
+Przypisuje określony obiekt do bieżącego obiektu Agile.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -238,21 +238,21 @@ Przypisuje określony obiekt do bieżącego obiektu elastyczne.
   
 #### <a name="parameters"></a>Parametry  
  `T`  
- Typ określony przez właściwość typename szablonu.  
+ Typ określony przez nazwę typu szablonu.  
   
  `object`  
- Obiekt lub uchwyt do obiektu, który jest kopiowany lub przenieść do bieżącego obiektu Agile.  
+ Obiekt lub uchwytu do obiektu, który jest kopiowany lub przenoszony do bieżącego obiektu Agile.  
   
  `lp`  
  Wskaźnik interfejsu IUnknown obiektu.  
   
 ### <a name="return-value"></a>Wartość zwracana  
- Dojście do typu obiektu `T`  
+ Dojście do obiektu typu `T`  
   
 ### <a name="remarks"></a>Uwagi  
- Pierwszą wersję operatora przypisania kopiuje dojścia do typu odwołania, jak bieżący obiekt elastyczne. Drugi kopii wersji odwołania do Agile wpisz jak bieżący obiekt elastyczne. Trzeci wersji przenosi wpisz Agile do bieżącego obiektu elastyczne. Wersja czwarty przesuwa kursor do obiektu COM, jak bieżący obiekt elastyczne.  
+ Pierwsza wersja operator przypisania kopiuje dojścia do typu odwołania, jak bieżący obiekt Agile. Drugi kopie wersji typu odwołanie do zwinnego projektowania, jak bieżący obiekt Agile. Trzeci wersji przenosi wpisz Agile do bieżącego obiektu Agile. Czwarta wersja przesuwa wskaźnik do obiektu COM, jak bieżący obiekt Agile.  
   
- Operacja przypisania utrzymuje automatycznie kontekście bieżącego obiektu elastyczne. 
+ Operacja przypisania automatycznie utrzymuje kontekst bieżącego obiektu Agile. 
        
 ## <a name="see-also"></a>Zobacz też  
  [Namespace platformy](platform-namespace-c-cx.md)

@@ -17,73 +17,78 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 529e6f3a8e2b30be38d80ec253d394077c9f7f0f
-ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
+ms.openlocfilehash: 2ba62d3dfc1f71ab61b5041ebbd884be8b5e39f6
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/09/2018
-ms.locfileid: "40017100"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42592667"
 ---
 # <a name="import"></a>import
-Określa innego pliku .idl, .odl — lub nagłówek zawierający definicje, który ma zostać utworzone odwołanie z sieci głównego pliku IDL.  
-  
-## <a name="syntax"></a>Składnia  
-  
-```cpp  
-[ import(  
-   idl_file  
-) ];  
-```  
-  
-### <a name="parameters"></a>Parametry  
- *idl_file*  
- Nazwa pliku .idl, który ma zostać zaimportowany do biblioteki typów w bieżącym projekcie.  
-  
-## <a name="remarks"></a>Uwagi  
- **Zaimportować** atrybut C++ powoduje `#import` instrukcję, aby umieszczona pod `import "docobj.idl"` instrukcja w pliku .idl wygenerowany. **Zaimportować** atrybut ma taką samą funkcjonalność jak [zaimportować](http://msdn.microsoft.com/library/windows/desktop/aa367047) atrybutów w MIDL.  
-  
- **Zaimportować** atrybutu tylko umieszcza określonego pliku w pliku .idl, który zostanie wygenerowany w projekcie; **zaimportować** atrybutu nie zezwala na wywołania konstrukcje w określonym pliku z kodem źródłowym w projekcie.  Aby wywołać konstrukcje w określonym pliku z kodem źródłowym w projekcie, albo użyć [#import](../preprocessor/hash-import-directive-cpp.md) i `embedded_idl` lub atrybut może znajdować się plik .h dla *idl_file*, jeśli istnieje plik .h klasy.  
-  
-## <a name="example"></a>Przykład  
- Poniższy kod:  
-  
-```cpp  
-// cpp_attr_ref_import.cpp  
-// compile with: /LD  
-[module(name="MyLib")];  
-[import(import.idl)];  
-```  
-  
- generuje następujący kod w pliku .idl wygenerowanego:  
-  
-```  
-import "docobj.idl";  
-import "import.idl";  
-  
-[ uuid(EED3644C-8488-3ECD-BA97-147DB3CDB499), version(1.0) ]  
-library MyLib {  
-   importlib("stdole2.tlb");  
-   importlib("olepro32.dll");  
-...  
-```  
-  
-## <a name="requirements"></a>Wymagania  
-  
-### <a name="attribute-context"></a>Kontekst atrybutu  
-  
-|||  
-|-|-|  
-|**Dotyczy**|Dowolne miejsce|  
-|**Powtarzalne**|Nie|  
-|**Wymaganych atrybutów**|Brak|  
-|**Nieprawidłowe atrybuty**|Brak|  
-  
- Aby uzyskać więcej informacji, zobacz [konteksty atrybutu](../windows/attribute-contexts.md).  
-  
-## <a name="see-also"></a>Zobacz też  
- [Atrybuty IDL](../windows/idl-attributes.md)   
- [Oddzielne atrybuty](../windows/stand-alone-attributes.md)   
- [importidl —](../windows/importidl.md)   
- [importlib](../windows/importlib.md)   
- [Obejmują](../windows/include-cpp.md)   
- [includelib —](../windows/includelib-cpp.md)   
+
+Określa innego pliku .idl, .odl — lub nagłówek zawierający definicje, który ma zostać utworzone odwołanie z sieci głównego pliku IDL.
+
+## <a name="syntax"></a>Składnia
+
+```cpp
+[ import(
+   idl_file
+) ];
+```
+
+### <a name="parameters"></a>Parametry
+
+*idl_file*  
+Nazwa pliku .idl, który ma zostać zaimportowany do biblioteki typów w bieżącym projekcie.
+
+## <a name="remarks"></a>Uwagi
+
+**Zaimportować** atrybut C++ powoduje `#import` instrukcję, aby umieszczona pod `import "docobj.idl"` instrukcja w pliku .idl wygenerowany. **Zaimportować** atrybut ma taką samą funkcjonalność jak [zaimportować](http://msdn.microsoft.com/library/windows/desktop/aa367047) atrybutów w MIDL.
+
+**Zaimportować** atrybutu tylko umieszcza określonego pliku w pliku .idl, który zostanie wygenerowany w projekcie; **zaimportować** atrybutu nie zezwala na wywołania konstrukcje w określonym pliku z kodem źródłowym w projekcie.  Aby wywołać konstrukcje w określonym pliku z kodem źródłowym w projekcie, albo użyć [#import](../preprocessor/hash-import-directive-cpp.md) i `embedded_idl` lub atrybut może znajdować się plik .h dla *idl_file*, jeśli istnieje plik .h klasy.
+
+## <a name="example"></a>Przykład
+
+Poniższy kod:
+
+```cpp
+// cpp_attr_ref_import.cpp
+// compile with: /LD
+[module(name="MyLib")];
+[import(import.idl)];
+```
+
+generuje następujący kod w pliku .idl wygenerowanego:
+
+```
+import "docobj.idl";
+import "import.idl";
+
+[ uuid(EED3644C-8488-3ECD-BA97-147DB3CDB499), version(1.0) ]
+library MyLib {
+   importlib("stdole2.tlb");
+   importlib("olepro32.dll");
+...
+```
+
+## <a name="requirements"></a>Wymagania
+
+### <a name="attribute-context"></a>Kontekst atrybutu
+
+|||
+|-|-|
+|**Dotyczy**|Dowolne miejsce|
+|**Powtarzalne**|Nie|
+|**Wymaganych atrybutów**|Brak|
+|**Nieprawidłowe atrybuty**|Brak|
+
+Aby uzyskać więcej informacji, zobacz [konteksty atrybutu](../windows/attribute-contexts.md).
+
+## <a name="see-also"></a>Zobacz też
+
+[Atrybuty IDL](../windows/idl-attributes.md)  
+[Oddzielne atrybuty](../windows/stand-alone-attributes.md)  
+[importidl](../windows/importidl.md)  
+[importlib](../windows/importlib.md)  
+[include](../windows/include-cpp.md)  
+[includelib —](../windows/includelib-cpp.md)  

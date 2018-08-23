@@ -17,32 +17,35 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: c70da177cd3f040a8606c56a4e8eea1b65595b87
-ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
+ms.openlocfilehash: fdd8e54ced5fedc5bbc1e28b8c77357c4210108b
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39643894"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42608904"
 ---
 # <a name="evening-the-spacing-between-controls"></a>Wprowadzanie odstępów między formantami
-**Okna dialogowego** Edytor umożliwia utworzenie formanty równomiernie między peryferyjnych wybrano kontrolki.  
-  
-### <a name="to-even-the-spacing-between-controls"></a>Nawet odstępów między formantami  
-  
-1.  Wybierz kontrolki, które chcesz zmienić.  
-  
-2.  Z **Format** menu, wybierz **Rozmieść równomiernie**, a następnie wybierz jedną z następujących wyrównanie odstępy:  
-  
-    -   `Across`: spacje formantów równomiernie między najdalej z lewej strony i wybraną kontrolkę po prawej stronie.  
-  
-    -   `Down`: spacje formantów równomiernie między najwyższego poziomu i znajdujących się najniżej wybraną kontrolkę.  
-  
- Aby uzyskać informacje na temat dodawania zasobów do projektów zarządzanych, zobacz [zasoby w aplikacjach pulpitu](/dotnet/framework/resources/index) w *przewodniku dewelopera .NET Framework*. Aby uzyskać informacji na temat ręcznego dodawania plików zasobów do projektów zarządzanych, uzyskiwania dostępu do zasobów, wyświetlania statycznych zasobów i przypisywania ciągów zasobów do właściwości, zobacz [Creating Resource Files dla aplikacji klasycznych](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Aby uzyskać informacji na temat globalizacja i lokalizacja zasobów w aplikacjach zarządzanych, zobacz [Globalizing i lokalizowanie aplikacji programu .NET Framework](/dotnet/standard/globalization-localization/index).  
-  
-## <a name="requirements"></a>Wymagania  
- Win32  
-  
-## <a name="see-also"></a>Zobacz też  
- [Rozmieszczenie kontrolek w oknach dialogowych](../windows/arrangement-of-controls-on-dialog-boxes.md)   
- [Formanty w oknach dialogowych](../windows/controls-in-dialog-boxes.md)   
- [Kontrolki](../mfc/controls-mfc.md)
+
+**Okna dialogowego** Edytor umożliwia utworzenie formanty równomiernie między peryferyjnych wybrano kontrolki.
+
+### <a name="to-even-the-spacing-between-controls"></a>Nawet odstępów między formantami
+
+1. Wybierz kontrolki, które chcesz zmienić.
+
+2. Z **Format** menu, wybierz **Rozmieść równomiernie**, a następnie wybierz jedną z następujących wyrównanie odstępy:
+
+   - `Across`: spacje formantów równomiernie między najdalej z lewej strony i wybraną kontrolkę po prawej stronie.
+
+   - `Down`: spacje formantów równomiernie między najwyższego poziomu i znajdujących się najniżej wybraną kontrolkę.
+
+Aby uzyskać informacje na temat dodawania zasobów do projektów zarządzanych, zobacz [zasoby w aplikacjach pulpitu](/dotnet/framework/resources/index) w *przewodniku dewelopera .NET Framework*. Aby uzyskać informacji na temat ręcznego dodawania plików zasobów do projektów zarządzanych, uzyskiwania dostępu do zasobów, wyświetlania statycznych zasobów i przypisywania ciągów zasobów do właściwości, zobacz [Creating Resource Files dla aplikacji klasycznych](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Aby uzyskać informacji na temat globalizacja i lokalizacja zasobów w aplikacjach zarządzanych, zobacz [Globalizing i lokalizowanie aplikacji programu .NET Framework](/dotnet/standard/globalization-localization/index).
+
+## <a name="requirements"></a>Wymagania
+
+Win32
+
+## <a name="see-also"></a>Zobacz też
+
+[Rozmieszczenie kontrolek w oknach dialogowych](../windows/arrangement-of-controls-on-dialog-boxes.md)  
+[Kontrolki w oknach dialogowych](../windows/controls-in-dialog-boxes.md)  
+[Kontrolki](../mfc/controls-mfc.md)

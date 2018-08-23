@@ -17,56 +17,61 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 3ed96762429aa0d4a442fb7a82db310146a3424d
-ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
+ms.openlocfilehash: 8d18b323b255c8549ae275d3e6b88471f134c8b4
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/09/2018
-ms.locfileid: "40019972"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42606783"
 ---
 # <a name="uuid-c-attributes"></a>uuid (Atrybuty C++)
-Określa unikatowy identyfikator dla klasy lub interfejsu.  
-  
-## <a name="syntax"></a>Składnia  
-  
-```cpp  
-[ uuid(  
-   "uuid"  
-) ]  
-```  
-  
-### <a name="parameters"></a>Parametry  
- *uuid*  
- 128-bitowego, unikatowy identyfikator.  
-  
-## <a name="remarks"></a>Uwagi  
- Jeśli nie określono definicji klasy lub interfejsu **uuid** atrybutów języka C++, a następnie kompilator języka Visual C++ zapewni jeden. Po określeniu **uuid**, musi zawierać cudzysłowów.  
-  
- Jeśli nie określisz **uuid**, a następnie kompilator wygeneruje tego samego identyfikatora GUID dla interfejsów lub klas o takiej samej nazwie w projektach innego atrybutu na maszynie.  
-  
- Uuidgen.exe lub Guidgen.exe służy do generowania własnych unikatowych identyfikatorów. (Aby Uruchom dowolne z tych narzędzi, kliknij przycisk **Start** i kliknij przycisk **Uruchom** w menu. Następnie wprowadź nazwę wymagane narzędzia.)  
-  
- W przypadku użycia w projekcie, który nie używa również biblioteki ATL, określając **uuid** atrybutu jest taki sam jak określanie [uuid](../cpp/uuid-cpp.md) **__declspec** modyfikator. Aby pobrać **uuid** klasy, można użyć [__uuidof](../cpp/uuidof-operator.md)  
-  
-## <a name="example"></a>Przykład  
- Zobacz [możliwej do wiązania](../windows/bindable.md) przykład użycie próbki **uuid**.  
-  
-## <a name="requirements"></a>Wymagania  
-  
-### <a name="attribute-context"></a>Kontekst atrybutu  
-  
-|||  
-|-|-|  
-|**Dotyczy**|**Klasa**, **struktury**, **interfejsu**, **Unii**, **wyliczenia**|  
-|**Powtarzalne**|Nie|  
-|**Wymaganych atrybutów**|Brak|  
-|**Nieprawidłowe atrybuty**|Brak|  
-  
- Aby uzyskać więcej informacji na temat konteksty atrybutu zobacz [konteksty atrybutu](../windows/attribute-contexts.md).  
-  
-## <a name="see-also"></a>Zobacz też  
- [Atrybuty IDL](../windows/idl-attributes.md)   
- [Atrybuty interfejsu](../windows/interface-attributes.md)   
- [Atrybuty klasy](../windows/class-attributes.md)   
- [Element TypeDef, Enum, Union i struct — atrybuty](../windows/typedef-enum-union-and-struct-attributes.md)   
- [uuid](http://msdn.microsoft.com/library/windows/desktop/aa367302)   
+
+Określa unikatowy identyfikator dla klasy lub interfejsu.
+
+## <a name="syntax"></a>Składnia
+
+```cpp
+[ uuid(
+   "uuid"
+) ]
+```
+
+### <a name="parameters"></a>Parametry
+
+*uuid*  
+128-bitowego, unikatowy identyfikator.
+
+## <a name="remarks"></a>Uwagi
+
+Jeśli nie określono definicji klasy lub interfejsu **uuid** atrybutów języka C++, a następnie kompilator języka Visual C++ zapewni jeden. Po określeniu **uuid**, musi zawierać cudzysłowów.
+
+Jeśli nie określisz **uuid**, a następnie kompilator wygeneruje tego samego identyfikatora GUID dla interfejsów lub klas o takiej samej nazwie w projektach innego atrybutu na maszynie.
+
+Uuidgen.exe lub Guidgen.exe służy do generowania własnych unikatowych identyfikatorów. (Aby Uruchom dowolne z tych narzędzi, kliknij przycisk **Start** i kliknij przycisk **Uruchom** w menu. Następnie wprowadź nazwę wymagane narzędzia.)
+
+W przypadku użycia w projekcie, który nie używa również biblioteki ATL, określając **uuid** atrybutu jest taki sam jak określanie [uuid](../cpp/uuid-cpp.md) **__declspec** modyfikator. Aby pobrać **uuid** klasy, można użyć [__uuidof](../cpp/uuidof-operator.md)
+
+## <a name="example"></a>Przykład
+
+Zobacz [możliwej do wiązania](../windows/bindable.md) przykład użycie próbki **uuid**.
+
+## <a name="requirements"></a>Wymagania
+
+### <a name="attribute-context"></a>Kontekst atrybutu
+
+|||
+|-|-|
+|**Dotyczy**|**Klasa**, **struktury**, **interfejsu**, **Unii**, **wyliczenia**|
+|**Powtarzalne**|Nie|
+|**Wymaganych atrybutów**|Brak|
+|**Nieprawidłowe atrybuty**|Brak|
+
+Aby uzyskać więcej informacji na temat konteksty atrybutu zobacz [konteksty atrybutu](../windows/attribute-contexts.md).
+
+## <a name="see-also"></a>Zobacz też
+
+[Atrybuty IDL](../windows/idl-attributes.md)  
+[Atrybuty interfejsu](../windows/interface-attributes.md)  
+[Atrybuty klasy](../windows/class-attributes.md)  
+[Atrybuty Typedef, Enum, Union oraz Struct](../windows/typedef-enum-union-and-struct-attributes.md)  
+[uuid](http://msdn.microsoft.com/library/windows/desktop/aa367302)  

@@ -17,36 +17,41 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: d6adf747fd7612c2bcaa0964f91ecb585bbfbef0
-ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
+ms.openlocfilehash: 1f127b8435f934e5cf203de2aaa6f2d0c3a58d13
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/09/2018
-ms.locfileid: "40018055"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42603073"
 ---
 # <a name="weakreferencesetunknown-method"></a>WeakReference::SetUnknown — Metoda
-Obsługuje infrastrukturę biblioteki WRL i nie jest przeznaczona do użycia bezpośrednio w kodzie.  
-  
-## <a name="syntax"></a>Składnia  
-  
-```cpp  
-void SetUnknown(  
-   _In_ IUnknown* unk  
-);  
-```  
-  
-### <a name="parameters"></a>Parametry  
- *UNK*  
- Wskaźnik do `IUnknown` interfejs obiektu.  
-  
-## <a name="remarks"></a>Uwagi  
- Ustawia silne odwołanie bieżącego **WeakReference** obiekt określony wskaźnik interfejsu.  
-  
-## <a name="requirements"></a>Wymagania  
- **Nagłówek:** implements.h  
-  
- **Namespace:** Microsoft::wrl:: details  
-  
+
+Obsługuje infrastrukturę biblioteki WRL i nie jest przeznaczona do użycia bezpośrednio w kodzie.
+
+## <a name="syntax"></a>Składnia
+
+```cpp
+void SetUnknown(
+   _In_ IUnknown* unk
+);
+```
+
+### <a name="parameters"></a>Parametry
+
+*UNK*  
+Wskaźnik do `IUnknown` interfejs obiektu.
+
+## <a name="remarks"></a>Uwagi
+
+Ustawia silne odwołanie bieżącego **WeakReference** obiekt określony wskaźnik interfejsu.
+
+## <a name="requirements"></a>Wymagania
+
+**Nagłówek:** implements.h
+
+**Namespace:** Microsoft::wrl:: details
+
 ## <a name="see-also"></a>Zobacz też
- [Weakreference — klasa](../windows/weakreference-class1.md)  
- [Microsoft::WRL::Details, przestrzeń nazw](../windows/microsoft-wrl-details-namespace.md)
+
+[Weakreference — klasa](../windows/weakreference-class1.md)  
+[Microsoft::WRL::Details, przestrzeń nazw](../windows/microsoft-wrl-details-namespace.md)

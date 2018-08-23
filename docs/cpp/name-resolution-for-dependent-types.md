@@ -12,12 +12,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d6421c634fb6d27bf79ea0ead9f0b6b8f5829f19
-ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
+ms.openlocfilehash: ad833d0fb4309ed4fed0eba4c162c9d6d46bf95d
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/01/2018
-ms.locfileid: "39402689"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42588220"
 ---
 # <a name="name-resolution-for-dependent-types"></a>Rozpoznawanie nazwy dla typów zależnych
 Użyj **typename** dla kwalifikowanych nazw w definicjach szablonów, aby poinformować kompilator, że dany kwalifikowana nazwa identyfikuje typ. Aby uzyskać więcej informacji, zobacz [typename](../cpp/typename.md).  
@@ -98,7 +98,7 @@ Int MyNamespace::myFunction
 ```  
   
 ### <a name="template-disambiguation"></a>Uściślanie szablonu  
- [!INCLUDE[cpp_dev11_long](../build/includes/cpp_dev11_long_md.md)] Wymusza C ++ 98/03/11 standardowych zasad na Uściślanie za pomocą słowa kluczowego "szablon". W poniższym przykładzie Visual C++ 2010 będzie akceptować niezgodnych wierszy i zgodnych wierszy.  [!INCLUDE[cpp_dev11_long](../build/includes/cpp_dev11_long_md.md)] akceptuje tylko zgodnych wierszy.  
+ Program Visual Studio 2012 wymusza C ++ 98/03/11 standardowych zasad na Uściślanie za pomocą słowa kluczowego "szablon". W poniższym przykładzie Visual C++ 2010 będzie akceptować niezgodnych wierszy i zgodnych wierszy.  Program Visual Studio 2012 akceptuje tylko zgodnych wierszy.  
   
 ```cpp  
 #include <iostream>  

@@ -17,26 +17,29 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 93de27e028d0665cccc3ba373b26524d911607a0
-ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
+ms.openlocfilehash: 0ee2e0cdaca30099938422954ed0d29fc446610f
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39648200"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42609228"
 ---
 # <a name="deleting-unassigned-symbols"></a>Usuwanie nieprzypisanych symboli
-### <a name="to-delete-an-unassigned-unused-symbol"></a>Aby usunąć nieprzypisanych symboli (nieużywane)  
-  
-1.  W [okno dialogowe symboli zasobów](../windows/resource-symbols-dialog-box.md), wybierz symbol, który chcesz usunąć, a następnie kliknij przycisk **Usuń**.  
-  
-    > [!NOTE]
-    >  Przed usunięciem nieużywane symboli w pliku zasobów, upewnij się, że nie jest on używany gdzie indziej w programie lub plików zasobów znajdujących się w czasie kompilacji.  
-  
-## <a name="requirements"></a>Wymagania  
- Win32  
-  
-## <a name="see-also"></a>Zobacz też  
- [Zmiana nieprzypisanych symboli](../windows/changing-unassigned-symbols.md)   
- [Ograniczenia dotyczące nazwy symbolu](../windows/symbol-name-restrictions.md)   
- [Ograniczenia dotyczące wartości symbolu](../windows/symbol-value-restrictions.md)   
- [Wstępnie zdefiniowane identyfikatory symboli](../windows/predefined-symbol-ids.md)
+
+### <a name="to-delete-an-unassigned-unused-symbol"></a>Aby usunąć nieprzypisanych symboli (nieużywane)
+
+1. W [okno dialogowe symboli zasobów](../windows/resource-symbols-dialog-box.md), wybierz symbol, który chcesz usunąć, a następnie kliknij przycisk **Usuń**.
+
+   > [!NOTE]
+   > Przed usunięciem nieużywane symboli w pliku zasobów, upewnij się, że nie jest on używany gdzie indziej w programie lub plików zasobów znajdujących się w czasie kompilacji.
+
+## <a name="requirements"></a>Wymagania
+
+Win32
+
+## <a name="see-also"></a>Zobacz też
+
+[Zmiana nieprzypisanych symboli](../windows/changing-unassigned-symbols.md)  
+[Ograniczenia dotyczące nazwy symbolu](../windows/symbol-name-restrictions.md)  
+[Ograniczenia dotyczące wartości symbolu](../windows/symbol-value-restrictions.md)  
+[Wstępnie zdefiniowane identyfikatory symboli](../windows/predefined-symbol-ids.md)

@@ -17,29 +17,32 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 3c1b888b9d3e3f3c80c3aff40f5fd545ece9cca6
-ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
+ms.openlocfilehash: fd6bd03b1e5aa3f690d93a5c51cc6664e0547c2e
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39650641"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42597352"
 ---
 # <a name="asyncbaseonclose-method"></a>AsyncBase::OnClose — Metoda
-W przypadku przesłonięcia w klasie pochodnej, zamyka operację asynchroniczną.  
-  
-## <a name="syntax"></a>Składnia  
-  
-```cpp  
-virtual void OnClose(  
-   void  
-) = 0;  
-```  
-  
-## <a name="requirements"></a>Wymagania  
- **Nagłówek:** async.h  
-  
- **Namespace:** Microsoft::WRL  
-  
-## <a name="see-also"></a>Zobacz też  
- [Asyncbase — klasa](../windows/asyncbase-class.md)   
- [AsyncBase::Close, metoda](../windows/asyncbase-close-method.md)
+
+W przypadku przesłonięcia w klasie pochodnej, zamyka operację asynchroniczną.
+
+## <a name="syntax"></a>Składnia
+
+```cpp
+virtual void OnClose(
+   void
+) = 0;
+```
+
+## <a name="requirements"></a>Wymagania
+
+**Nagłówek:** async.h
+
+**Namespace:** Microsoft::WRL
+
+## <a name="see-also"></a>Zobacz też
+
+[AsyncBase, klasa](../windows/asyncbase-class.md)  
+[AsyncBase::Close, metoda](../windows/asyncbase-close-method.md)

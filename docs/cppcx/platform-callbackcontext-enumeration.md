@@ -1,5 +1,5 @@
 ---
-title: Wyliczenie platform::CallbackContext | Dokumentacja firmy Microsoft
+title: Platform::CallbackContext, wyliczenie | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 12/30/2016
 ms.technology: cpp-windows
@@ -11,19 +11,19 @@ dev_langs:
 helpviewer_keywords:
 - Platform::CallbackContext Enumeration
 ms.assetid: 60e0c7cb-5d8f-482a-bdca-ca9335ae4899
-author: ghogen
-ms.author: ghogen
+author: mikeblome
+ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 757de5f686bb809a5d2fb159a3ee547a20edc982
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 4b80fe7749fdb2f91e300cff007c01001edfa557
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33086955"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42603041"
 ---
-# <a name="platformcallbackcontext-enumeration"></a>Platform::CallbackContext — wyliczenie
-Określa kontekst wątku, w której wykonuje funkcję wywołania zwrotnego (procedura obsługi zdarzeń).  
+# <a name="platformcallbackcontext-enumeration"></a>Platform::CallbackContext, wyliczenie
+Określa kontekst wątku, w którym wykonuje funkcję wywołania zwrotnego (program obsługi zdarzeń).  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -35,8 +35,8 @@ enum class CallbackContext {};
   
 |Kod typu|Opis|  
 |---------------|-----------------|  
-|wszystkie|Funkcja wywołania zwrotnego można wykonywać w dowolnym kontekście wątku.|  
-|tym samym|Funkcja wywołania zwrotnego można wykonać w kontekście wątku, który uruchomił operację asynchroniczną.|  
+|Wszystkie|Funkcja wywołania zwrotnego można wykonywać w dowolnym kontekście wątku.|  
+|Ten sam|Funkcja wywołania zwrotnego można wykonać w kontekście wątku, który uruchomił operację asynchroniczną.|  
   
 ### <a name="requirements"></a>Wymagania  
  **Minimalna obsługiwana klienta:** systemu Windows 8  

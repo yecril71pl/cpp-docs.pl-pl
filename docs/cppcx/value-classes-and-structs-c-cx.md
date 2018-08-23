@@ -1,5 +1,5 @@
 ---
-title: Wartość klas i struktur (C + +/ CX) | Dokumentacja firmy Microsoft
+title: Klasy i struktury wartości (C + +/ CX) | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 12/30/2016
 ms.technology: cpp-windows
@@ -8,21 +8,21 @@ helpviewer_keywords:
 - value struct
 - value class
 ms.assetid: 262a0992-9721-4c02-8297-efc07d90e5a4
-author: ghogen
-ms.author: ghogen
+author: mikeblome
+ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3b623e706fae0dfd8fca6b9aaf217e76b27dbbda
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 226198c35dc0b7e7e1c7fab4ce81fc4782b5ca38
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33090717"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42589059"
 ---
-# <a name="value-classes-and-structs-ccx"></a>Wartość klas i struktur (C + +/ CX)
-A *struktury wartość* lub *klasę wartości* jest systemu Windows POD zgodnego środowiska uruchomieniowego ("zwykły starych danych struktury"). Ma stały rozmiar i składa się z pól. w odróżnieniu od klasy ref go nie ma właściwości.  
+# <a name="value-classes-and-structs-ccx"></a>Klasy i struktury wartości (C + +/ CX)
+A *struktury wartości* lub *klasę wartości* jest Windows ZASOBNIKA zgodnego środowiska uruchomieniowego ("zwykłe stare dane strukturę"). Ma stały rozmiar i składa się z pól. w odróżnieniu od klasy ref go nie ma właściwości.  
   
- Poniższe przykłady przedstawiają sposób zadeklarować i zainicjować struktury wartości.  
+ Poniższe przykłady pokazują, jak zadeklarować i zainicjować strukturach wartości.  
   
 ```  
   
@@ -55,49 +55,49 @@ A *struktury wartość* lub *klasę wartości* jest systemu Windows POD zgodnego
   
 ```  
   
- Gdy zmienna typu wartości jest przypisany do innej zmiennej, wartość jest kopiowana, dzięki czemu każdy z dwie zmienne ma własną kopię danych. A *struktury wartość* jest strukturą stałym rozmiarze, która zawiera tylko pola publiczne danych i jest zadeklarowany za pomocą `value struct` — słowo kluczowe.  
+ Gdy zmienna typu wartości jest przypisany do innej zmiennej, wartość jest kopiowana, tak, aby każdy z dwóch zmiennych ma własną kopię danych. A *struktury wartości* to struktura stałym rozmiarze, który zawiera tylko pola publiczne danych i jest zadeklarowana za pomocą `value struct` — słowo kluczowe.  
   
- A *klasę wartości* jest tak jak `value struct` z tą różnicą, że jego pól muszą jawnie otrzymać powszechnej dostępności. Jest on zadeklarowany za pomocą `value class` — słowo kluczowe.  
+ A *klasę wartości* jest podobnie jak `value struct` z tą różnicą, że jej pola muszą jawnie otrzymać powszechnej dostępności. Jest zadeklarowana za pomocą `value class` — słowo kluczowe.  
   
- Wartość struktury lub klasy wartości mogą zawierać jako pola tylko podstawowe typy liczbowe, Wylicz klasy `Platform::String^`, lub [Platform::IBox \<T > ^](../cppcx/platform-ibox-interface.md) , gdzie T jest liczbowych klasy typu lub wyliczenia lub wartość lub struktury. `IBox<T>^` Pole może mieć wartość `nullptr`— jest to, jak C++ implementuje pojęcie *typy o wartości zerowalnej*.  
+ Wartość struktury lub klasy wartości mogą zawierać jako pola tylko podstawowe typy liczbowe, Wylicz klasy `Platform::String^`, lub [Platform::IBox \<T > ^](../cppcx/platform-ibox-interface.md) , gdzie T jest liczbowe klasy typu lub wyliczenia lub wartość klasy lub struktury. `IBox<T>^` Pole może mieć wartość `nullptr`— jest to, jak C++ implementuje koncepcji *typy o wartości zerowalnej*.  
   
- Wartość klasie lub strukturze wartość, która zawiera `Platform::String^` lub `IBox<T>^` typu, ponieważ nie jest elementem członkowskim `memcpy`-stanie.  
+ Wartość klasy lub struktury wartość, która zawiera `Platform::String^` lub `IBox<T>^` typu, ponieważ nie jest członkiem `memcpy`-stanie.  
   
- Ponieważ wszystkie elementy członkowskie `value class` lub `value struct` są publiczne oraz czy wydane do metadanych, standard C++ typy nie są dozwolone jako elementy członkowskie. Różni się to od klasy ref, które mogą zawierać `private` lub `internal` standardowych typów języka C++.  
+ Ponieważ wszystkie elementy członkowskie `value class` lub `value struct` są publiczne i jest emitowany do metadanych, standard C++ typy nie są dozwolone jako elementy członkowskie. To różni się od klasy ref, które mogą zawierać `private` lub `internal` standardowych typów C++...  
   
- Deklaruje następującego fragmentu kodu `Coordinates` i `City` typy jako wartość struktury. Powiadomienie, że jedna z `City` elementy członkowskie danych jest `GeoCoordinates` typu. A `value struct` może zawierać inne struktury wartość jako elementy członkowskie.  
+ Poniższy fragment kodu deklaruje `Coordinates` i `City` typy jako strukturach wartości. Powiadomienie, że jedna z `City` elementy członkowskie danych jest `GeoCoordinates` typu. Element `value struct` może zawierać innych strukturach wartości jako elementy członkowskie.  
   
  [!code-cpp[cx_classes#07](../cppcx/codesnippet/CPP/classesstructs/class1.h#07)]  
   
 ## <a name="parameter-passing-for-value-types"></a>Przekazywanie dla typów wartości parametru  
- Jeśli masz wartość typu jako parametr metody lub funkcji, zwykle jest przekazywany przez wartość. Dla większych obiektów może to spowodować problemy z wydajnością. W Visual Studio2013 lub starszej wartości typów w języku C + +/ CX zawsze były przekazywane przez wartość. W programie Visual Studio 2015 i nowszych można przekazać typów wartości przez odwołanie lub wartość.  
+ W przypadku wartości typu jako parametru funkcji lub metody normalnie jest przekazywany przez wartość. W przypadku większych obiektów może to spowodować problemy z wydajnością. W Visual Studio2013 i starszych wartość typów w języku C + +/ CX zawsze były przekazywane przez wartość. W programie Visual Studio 2015 i nowszych możesz przekazać typów wartości przez odwołanie, lub według wartości.  
   
- Aby zadeklarować parametr przekazywany przez wartość typu wartości, należy użyć kodu podobne do poniższych:  
+ Aby zadeklarować parametr, który przekazuje typ wartości przez wartość, należy użyć kodu, jak pokazano poniżej:  
   
 ```  
 void Method1(MyValueType obj);  
 ```  
   
- Aby zadeklarować parametr przekazywany przez odwołanie do typu wartości, należy użyć symbolu odwołania (&), co przedstawiono poniżej:  
+ Aby zadeklarować parametr, który przekazuje typ wartości przez odwołanie, należy użyć symbolu odwołanie (&), co przedstawiono poniżej:  
   
 ```  
 void Method2(MyValueType& obj);  
 ```  
   
- Typ wewnątrz metoda2 jest odwołaniem do MyValueType i działa tak samo, jak typ referencyjny w standardu C++.  
+ Typ wewnątrz Method2 jest odwołaniem do MyValueType i działa tak samo jak typ odwołania w standardzie języka C++.  
   
- Podczas wywoływania metoda1 w innym języku, takich jak C#, nie trzeba używać `ref` lub `out` — słowo kluczowe. Podczas wywoływania metoda2, użyj `ref` — słowo kluczowe.  
+ Gdy wywołujesz metoda1 z innego języka, takich jak C#, nie trzeba używać `ref` lub `out` — słowo kluczowe. Po wywołaniu Method2 użyj `ref` — słowo kluczowe.  
   
 ```  
 Method2(ref obj);  
 ```  
   
- Umożliwia także symbol wskaźnika (*) do przekazania typu wartości przez odwołanie. Zachowanie względem wywołań w innych językach jest takie samo (wywołań w języku C# użyj `ref` — słowo kluczowe), ale w metodzie typu jest wskaźnikiem do typu wartość.  
+ Symbol wskaźnika (*) umożliwia również przekazać typ wartości przez odwołanie. Zachowanie w odniesieniu do obiektów wywołujących w innych językach jest taka sama (obiekty wywołujące w języku C# użyj `ref` — słowo kluczowe), ale w metodzie tego typu jest wskaźnikiem do typu wartości.  
   
-## <a name="nullable-value-types"></a>typy dopuszczające wartości zerowe wartości  
- Jak wspomniano wcześniej, wartość klasie lub strukturze wartość może mieć pola typu [Platform::IBox\<T > ^](../cppcx/platform-ibox-interface.md)— na przykład `IBox<int>^`. Takie pole może mieć wartość liczbową, który jest prawidłowy dla `int` typu, albo może mieć wartość `nullptr`. Pole wartości null jako argument można przekazać do metody, których parametr jest zadeklarowany jako opcjonalny lub dowolnego miejsca, która nie jest typem wartości musi mieć wartość.  
+## <a name="nullable-value-types"></a>Typy o wartości zerowalnej  
+ Jak wspomniano wcześniej, klasą wartości lub wartości struktury mogą mieć pola typu [Platform::IBox\<T > ^](../cppcx/platform-ibox-interface.md)— na przykład `IBox<int>^`. Takie pole może mieć wartość liczbowa, która jest prawidłowa dla `int` typu lub go może mieć wartość `nullptr`. Pola typu dopuszczającego wartość NULL można przekazać jako argument do metody, w której parametr jest zadeklarowana jako opcjonalna lub dowolnej innej lokalizacji, która nie jest typem wartości musi mieć wartość.  
   
- Poniższy przykład pokazuje, jak zainicjować struktury zawierającej pole wartości null.  
+ Poniższy przykład pokazuje, jak zainicjować struktury, która zawiera pole dopuszczającego wartość null.  
   
 ```  
 public value struct Student  
@@ -135,7 +135,7 @@ bool MainPage::IsCurrentlyEnrolled(Student s)
   
 ```  
   
- Struktury wartość sam może dopuszczać wartości null w taki sam sposób, jak pokazano poniżej:  
+ Sama struktura wartość może być typem dopuszczającym w taki sam sposób, jak pokazano poniżej:  
   
 ```  
   

@@ -17,69 +17,73 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 583f05e3496ea6308dac8c7fa37c7e350165e74b
-ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
+ms.openlocfilehash: a72d305cfae3ba76a7c61ee7f2a6a604e6832631
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/09/2018
-ms.locfileid: "40020056"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42604699"
 ---
 # <a name="synchronize"></a>synchronize
-Synchronizuje dostęp do metody docelowej.  
-  
-## <a name="syntax"></a>Składnia  
-  
-```cpp  
-[synchronize]  
-```  
-  
-## <a name="remarks"></a>Uwagi  
- **Zsynchronizować** atrybut C++ zapewnia obsługę synchronizacji metodę docelowego obiektu. Synchronizacja umożliwia wielu obiektów, które korzystają z typowych zasobu (np. metody klasy) poprzez kontrolowanie dostępu do metody docelowej.  
-  
- Kod wstawione przez ten atrybut wywołuje odpowiednią `Lock` — metoda (określany przez model wątkowy) na początku metody docelowej. Gdy metoda jest został zakończony, `Unlock` jest wywoływana automatycznie. Aby uzyskać więcej informacji na temat tych funkcji, zobacz [CComAutoThreadModule::Lock](../atl/reference/ccomautothreadmodule-class.md#lock)  
-  
- Ten atrybut wymaga, aby [coclass](../windows/coclass.md), [progid](../windows/progid.md), lub [vi_progid —](../windows/vi-progid.md) atrybutów (lub innego atrybutu, który oznacza jeden z nich) również będą stosowane do tego samego elementu. Jeśli dowolny pojedynczy atrybut jest używany, pozostałe dwa są automatycznie stosowane. Na przykład jeśli `progid` zastosowaniu `vi_progid` i `coclass` są również stosowane.  
-  
-## <a name="example"></a>Przykład  
- Poniższy kod zawiera synchronizację `UpdateBalance` metody `CMyClass` obiektu.  
-  
-```cpp  
-// cpp_attr_ref_synchronize.cpp  
-// compile with: /LD  
-#define _ATL_ATTRIBUTES  
-#include "atlbase.h"  
-#include "atlcom.h"  
-  
-[module(name="SYNC")];  
-  
-[coclass,  
- threading(both),  
- vi_progid("MyProject.MyClass"),  
- progid("MyProject.MyClass.1"),  
+
+Synchronizuje dostęp do metody docelowej.
+
+## <a name="syntax"></a>Składnia
+
+```cpp
+[synchronize]
+```
+
+## <a name="remarks"></a>Uwagi
+
+**Zsynchronizować** atrybut C++ zapewnia obsługę synchronizacji metodę docelowego obiektu. Synchronizacja umożliwia wielu obiektów, które korzystają z typowych zasobu (np. metody klasy) poprzez kontrolowanie dostępu do metody docelowej.
+
+Kod wstawione przez ten atrybut wywołuje odpowiednią `Lock` — metoda (określany przez model wątkowy) na początku metody docelowej. Gdy metoda jest został zakończony, `Unlock` jest wywoływana automatycznie. Aby uzyskać więcej informacji na temat tych funkcji, zobacz [CComAutoThreadModule::Lock](../atl/reference/ccomautothreadmodule-class.md#lock)
+
+Ten atrybut wymaga, aby [coclass](../windows/coclass.md), [progid](../windows/progid.md), lub [vi_progid —](../windows/vi-progid.md) atrybutów (lub innego atrybutu, który oznacza jeden z nich) również będą stosowane do tego samego elementu. Jeśli dowolny pojedynczy atrybut jest używany, pozostałe dwa są automatycznie stosowane. Na przykład jeśli `progid` zastosowaniu `vi_progid` i `coclass` są również stosowane.
+
+## <a name="example"></a>Przykład
+
+Poniższy kod zawiera synchronizację `UpdateBalance` metody `CMyClass` obiektu.
+
+```cpp
+// cpp_attr_ref_synchronize.cpp
+// compile with: /LD
+#define _ATL_ATTRIBUTES
+#include "atlbase.h"
+#include "atlcom.h"
+
+[module(name="SYNC")];
+
+[coclass,
+ threading(both),
+ vi_progid("MyProject.MyClass"),
+ progid("MyProject.MyClass.1"),
  uuid("7a7baa0d-59b8-4576-b754-79d07e1d1cc3")  
-]  
-class CMyClass {  
-   float m_nBalance;  
-  
-   [synchronize]  
-   void UpdateBalance(float nAdjust) {  
-      m_nBalance += nAdjust;  
-   }  
-};  
-```  
-  
-## <a name="requirements"></a>Wymagania  
-  
-### <a name="attribute-context"></a>Kontekst atrybutu  
-  
-|||  
-|-|-|  
-|**Dotyczy**|Metody klasy, metoda|  
-|**Powtarzalne**|Nie|  
-|**Wymaganych atrybutów**|Co najmniej jeden z następujących czynności: `coclass`, `progid`, lub `vi_progid`.|  
-|**Nieprawidłowe atrybuty**|Brak|  
-  
- Aby uzyskać więcej informacji na temat konteksty atrybutu zobacz [konteksty atrybutu](../windows/attribute-contexts.md).  
-  
-## <a name="see-also"></a>Zobacz też  
- [Atrybuty COM](../windows/com-attributes.md)   
+]
+class CMyClass {
+   float m_nBalance;
+
+   [synchronize]
+   void UpdateBalance(float nAdjust) {
+      m_nBalance += nAdjust;
+   }
+};
+```
+
+## <a name="requirements"></a>Wymagania
+
+### <a name="attribute-context"></a>Kontekst atrybutu
+
+|||
+|-|-|
+|**Dotyczy**|Metody klasy, metoda|
+|**Powtarzalne**|Nie|
+|**Wymaganych atrybutów**|Co najmniej jeden z następujących czynności: `coclass`, `progid`, lub `vi_progid`.|
+|**Nieprawidłowe atrybuty**|Brak|
+
+Aby uzyskać więcej informacji na temat konteksty atrybutu zobacz [konteksty atrybutu](../windows/attribute-contexts.md).
+
+## <a name="see-also"></a>Zobacz też
+
+[Atrybuty COM](../windows/com-attributes.md)  

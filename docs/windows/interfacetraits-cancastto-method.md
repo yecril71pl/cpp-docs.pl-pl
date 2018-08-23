@@ -17,50 +17,56 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: a2f8712e06838fb2d2269ba307a551997d7bd57c
-ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
+ms.openlocfilehash: aea326149c9748ff480d523a1078f54ba733cb14
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/09/2018
-ms.locfileid: "40018234"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42610423"
 ---
 # <a name="interfacetraitscancastto-method"></a>InterfaceTraits::CanCastTo — Metoda
-Obsługuje infrastrukturę biblioteki WRL i nie jest przeznaczona do użycia bezpośrednio w kodzie.  
-  
-## <a name="syntax"></a>Składnia  
-  
-```cpp  
-template<typename T>  
-static __forceinline bool CanCastTo(  
-   _In_ T* ptr,  
-   REFIID riid,  
-   _Deref_out_ void **ppv  
-);  
-```  
-  
-### <a name="parameters"></a>Parametry  
- *ptr*  
- Nazwa wskaźnika do typu.  
-  
- *Parametr riid*  
- Identyfikator interfejsu `Base`.  
-  
- *ppv*  
- Jeśli operacja zakończy się pomyślnie, *ppv* wskazuje interfejs określony przez `Base`. W przeciwnym razie *ppv* ustawiono **nullptr**.  
-  
-## <a name="return-value"></a>Wartość zwracana  
- **wartość true,** Jeśli operacja zakończy się pomyślnie i *ptr* jest rzutowany na wskaźnik do `Base`; w przeciwnym razie **false** .  
-  
-## <a name="remarks"></a>Uwagi  
- Wskazuje, czy określony wskaźnik może być rzutowany na wskaźnik do `Base`.  
-  
- Aby uzyskać więcej informacji na temat `Base`, zobacz **publiczne definicje typów** sekcji [interfacetraits — struktura](../windows/interfacetraits-structure.md).  
-  
-## <a name="requirements"></a>Wymagania  
- **Nagłówek:** implements.h  
-  
- **Namespace:** Microsoft::wrl:: details  
-  
-## <a name="see-also"></a>Zobacz też  
- [Interfacetraits — struktura](../windows/interfacetraits-structure.md)   
- [Microsoft::WRL::Details, przestrzeń nazw](../windows/microsoft-wrl-details-namespace.md)
+
+Obsługuje infrastrukturę biblioteki WRL i nie jest przeznaczona do użycia bezpośrednio w kodzie.
+
+## <a name="syntax"></a>Składnia
+
+```cpp
+template<typename T>
+static __forceinline bool CanCastTo(
+   _In_ T* ptr,
+   REFIID riid,
+   _Deref_out_ void **ppv
+);
+```
+
+### <a name="parameters"></a>Parametry
+
+*ptr*  
+Nazwa wskaźnika do typu.
+
+*Parametr riid*  
+Identyfikator interfejsu `Base`.
+
+*ppv*  
+Jeśli operacja zakończy się pomyślnie, *ppv* wskazuje interfejs określony przez `Base`. W przeciwnym razie *ppv* ustawiono **nullptr**.
+
+## <a name="return-value"></a>Wartość zwracana
+
+**wartość true,** Jeśli operacja zakończy się pomyślnie i *ptr* jest rzutowany na wskaźnik do `Base`; w przeciwnym razie **false** .
+
+## <a name="remarks"></a>Uwagi
+
+Wskazuje, czy określony wskaźnik może być rzutowany na wskaźnik do `Base`.
+
+Aby uzyskać więcej informacji na temat `Base`, zobacz **publiczne definicje typów** sekcji [interfacetraits — struktura](../windows/interfacetraits-structure.md).
+
+## <a name="requirements"></a>Wymagania
+
+**Nagłówek:** implements.h
+
+**Namespace:** Microsoft::wrl:: details
+
+## <a name="see-also"></a>Zobacz też
+
+[InterfaceTraits, struktura](../windows/interfacetraits-structure.md)  
+[Microsoft::WRL::Details, przestrzeń nazw](../windows/microsoft-wrl-details-namespace.md)

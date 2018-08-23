@@ -17,40 +17,46 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: ee66017edabf80349bf2960f7cb2ca2654c8c4cc
-ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
+ms.openlocfilehash: 4fedde29441c9c14b68dec5cff998be57d216e29
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39643582"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42607663"
 ---
 # <a name="criticalsectionlock-method"></a>CriticalSection::Lock — Metoda
-Czeka na własność obiektu określona sekcja krytycznego. Funkcja zwróci, jeśli wątek wywołujący udzielono prawa własności.  
-  
-## <a name="syntax"></a>Składnia  
-  
-```cpp  
-SyncLock Lock();  
-  
-   static SyncLock Lock(  
-   _In_ CRITICAL_SECTION* cs  
-);  
-```  
-  
-### <a name="parameters"></a>Parametry  
- *CS*  
- Obiekt sekcję krytyczną określonych przez użytkownika.  
-  
-## <a name="return-value"></a>Wartość zwracana  
- Obiekt blokady, który może służyć do odblokowania bieżąca sekcja krytycznego.  
-  
-## <a name="remarks"></a>Uwagi  
- Pierwszy **blokady** funkcji ma wpływ na bieżący obiekt sekcję krytyczną. Drugi **blokady** funkcji ma wpływ na sekcję krytyczną określonych przez użytkownika.  
-  
-## <a name="requirements"></a>Wymagania  
- **Nagłówek:** corewrappers.h  
-  
- **Namespace:** Microsoft::wrl:: wrappers  
-  
-## <a name="see-also"></a>Zobacz też  
- [CriticalSection, klasa](../windows/criticalsection-class.md)
+
+Czeka na własność obiektu określona sekcja krytycznego. Funkcja zwróci, jeśli wątek wywołujący udzielono prawa własności.
+
+## <a name="syntax"></a>Składnia
+
+```cpp
+SyncLock Lock();
+
+   static SyncLock Lock(
+   _In_ CRITICAL_SECTION* cs
+);
+```
+
+### <a name="parameters"></a>Parametry
+
+*CS*  
+Obiekt sekcję krytyczną określonych przez użytkownika.
+
+## <a name="return-value"></a>Wartość zwracana
+
+Obiekt blokady, który może służyć do odblokowania bieżąca sekcja krytycznego.
+
+## <a name="remarks"></a>Uwagi
+
+Pierwszy **blokady** funkcji ma wpływ na bieżący obiekt sekcję krytyczną. Drugi **blokady** funkcji ma wpływ na sekcję krytyczną określonych przez użytkownika.
+
+## <a name="requirements"></a>Wymagania
+
+**Nagłówek:** corewrappers.h
+
+**Namespace:** Microsoft::wrl:: wrappers
+
+## <a name="see-also"></a>Zobacz też
+
+[CriticalSection, klasa](../windows/criticalsection-class.md)

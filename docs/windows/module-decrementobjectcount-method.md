@@ -17,29 +17,33 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 075c1ae368df59e735d90d8d98d9e8fd23ac8ad9
-ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
+ms.openlocfilehash: 5a672ce0d3397e4f69a44d7a888cdacaa467dd49
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/09/2018
-ms.locfileid: "40017347"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42610489"
 ---
 # <a name="moduledecrementobjectcount-method"></a>Module::DecrementObjectCount — Metoda
-Zmniejsza liczbę obiektów śledzonych przez moduł.  
-  
-## <a name="syntax"></a>Składnia  
-  
-```cpp  
-virtual long DecrementObjectCount();  
-```  
-  
-## <a name="return-value"></a>Wartość zwracana  
- Liczba przed wykonaniem operacji dekrementacji.  
-  
-## <a name="requirements"></a>Wymagania  
- **Nagłówek:** module.h  
-  
- **Namespace:** Microsoft::WRL
- 
+
+Zmniejsza liczbę obiektów śledzonych przez moduł.
+
+## <a name="syntax"></a>Składnia
+
+```cpp
+virtual long DecrementObjectCount();
+```
+
+## <a name="return-value"></a>Wartość zwracana
+
+Liczba przed wykonaniem operacji dekrementacji.
+
+## <a name="requirements"></a>Wymagania
+
+**Nagłówek:** module.h
+
+**Namespace:** Microsoft::WRL
+
 ## <a name="see-also"></a>Zobacz też
+
 [Klasa modułu](../windows/module-class.md)

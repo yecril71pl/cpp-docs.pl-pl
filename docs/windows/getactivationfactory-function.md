@@ -19,43 +19,48 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 3fe0d03ead29362ea2926f6326557df2ba6a2cd9
-ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
+ms.openlocfilehash: 99c5d961f3e25e17506e25148260b6966152af44
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39649250"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42596125"
 ---
 # <a name="getactivationfactory-function"></a>GetActivationFactory — Funkcja
-Pobiera fabrykę aktywacji dla typu określonego przez parametr szablonu.  
-  
-## <a name="syntax"></a>Składnia  
-  
-```cpp  
-template<typename T>  
-inline HRESULT GetActivationFactory(  
-   _In_ HSTRING activatableClassId,  
-   _Out_ Microsoft::WRL::Details::ComPtrRef<T> factory  
-);  
-```  
-  
-### <a name="parameters"></a>Parametry  
- *T*  
- Parametr szablonu, który określa typ fabryką aktywacji.  
-  
- *activatableClassId*  
- Nazwa klasy, która może spowodować fabryką aktywacji.  
-  
- *Fabryka*  
- Po zakończeniu tej operacji, odwołanie do aktywacji fabryki dla typu *T*.  
-  
-## <a name="return-value"></a>Wartość zwracana  
- S_OK w przypadku powodzenia; w przeciwnym razie błąd HRESULT, która wskazuje, dlaczego ta operacja nie powiodła się.  
-  
-## <a name="requirements"></a>Wymagania  
- **Nagłówek:** client.h  
-  
- **Namespace:** Windows::Foundation  
-  
-## <a name="see-also"></a>Zobacz też  
- [Windows::Foundation, przestrzeń nazw](../windows/windows-foundation-namespace.md)
+
+Pobiera fabrykę aktywacji dla typu określonego przez parametr szablonu.
+
+## <a name="syntax"></a>Składnia
+
+```cpp
+template<typename T>
+inline HRESULT GetActivationFactory(
+   _In_ HSTRING activatableClassId,
+   _Out_ Microsoft::WRL::Details::ComPtrRef<T> factory
+);
+```
+
+### <a name="parameters"></a>Parametry
+
+*T*  
+Parametr szablonu, który określa typ fabryką aktywacji.
+
+*activatableClassId*  
+Nazwa klasy, która może spowodować fabryką aktywacji.
+
+*Fabryka*  
+Po zakończeniu tej operacji, odwołanie do aktywacji fabryki dla typu *T*.
+
+## <a name="return-value"></a>Wartość zwracana
+
+S_OK w przypadku powodzenia; w przeciwnym razie błąd HRESULT, która wskazuje, dlaczego ta operacja nie powiodła się.
+
+## <a name="requirements"></a>Wymagania
+
+**Nagłówek:** client.h
+
+**Namespace:** Windows::Foundation
+
+## <a name="see-also"></a>Zobacz też
+
+[Windows::Foundation, przestrzeń nazw](../windows/windows-foundation-namespace.md)

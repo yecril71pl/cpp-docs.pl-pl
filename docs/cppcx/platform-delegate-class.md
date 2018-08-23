@@ -1,5 +1,5 @@
 ---
-title: Klasa platform::Delegate | Dokumentacja firmy Microsoft
+title: Platform::Delegate, klasa | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 12/30/2016
 ms.technology: cpp-windows
@@ -11,19 +11,19 @@ dev_langs:
 helpviewer_keywords:
 - Platform::Delegate Class
 ms.assetid: 82b21271-768f-4193-9ca2-be68ddfd546e
-author: ghogen
-ms.author: ghogen
+author: mikeblome
+ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 679a868cac536aad541d770433fe1407fc5d08d1
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: bdee3e432e3482b7f1a2c6e4be4c50abb1a6bfc8
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33087236"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42609589"
 ---
-# <a name="platformdelegate-class"></a>Klasa platform::Delegate
-Reprezentuje obiekt funkcji.  
+# <a name="platformdelegate-class"></a>Platform::Delegate, klasa
+Reprezentuje obiekt funkcyjny.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -32,10 +32,10 @@ public delegate void delegate_name();
 ```  
   
 ### <a name="members"></a>Elementy członkowskie  
- Klasa delegata ma metodę Equals, metoda GetHashCode(), ani metody ToString() pochodzi z [Platform::Object klasy](../cppcx/platform-object-class.md).  
+ Klasa obiektu delegowanego ma metodę Equals, element GetHashCode(), i metody ToString() pochodną [Platform::Object, klasa](../cppcx/platform-object-class.md).  
   
 ### <a name="remarks"></a>Uwagi  
- Użyj [delegować](../windows/delegate-cpp-component-extensions.md) — słowo kluczowe do tworzenia delegatów; nie używaj Platform::Delegate jawnie. Aby uzyskać więcej informacji, zobacz [delegatów](../cppcx/delegates-c-cx.md). Na przykład sposobu tworzenia i zużywać delegata zobacz [tworzenia składników środowiska wykonawczego systemu Windows w języku C++](/windows/uwp/winrt-components/creating-windows-runtime-components-in-cpp).  
+ Użyj [delegować](../windows/delegate-cpp-component-extensions.md) — słowo kluczowe do tworzenia obiektów delegowanych; nie należy używać Platform::Delegate jawnie. Aby uzyskać więcej informacji, zobacz [delegatów](../cppcx/delegates-c-cx.md). Na przykład sposobu tworzenia i wykorzystywania delegata zobacz [Tworzenie składników środowiska wykonawczego Windows w języku C++](/windows/uwp/winrt-components/creating-windows-runtime-components-in-cpp).  
   
 ### <a name="requirements"></a>Wymagania  
  **Minimalna obsługiwana klienta:** systemu Windows 8  

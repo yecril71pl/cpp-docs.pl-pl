@@ -17,34 +17,39 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 3ce391e95aa9e08ae7d99e3cbdf064721ce21dbe
-ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
+ms.openlocfilehash: 732eb6f8668f7742e23e1ea410dcc659bc3d36c7
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39643540"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42605349"
 ---
 # <a name="asyncbaseclose-method"></a>AsyncBase::Close — Metoda
-Zamyka operację asynchroniczną.  
-  
-## <a name="syntax"></a>Składnia  
-  
-```cpp  
-STDMETHOD(  
-   Close  
-)(void) override;  
-```  
-  
-## <a name="return-value"></a>Wartość zwracana  
- S_OK, jeśli operacja zostanie zamknięty lub już zamknięte; w przeciwnym razie E_ILLEGAL_STATE_CHANGE.  
-  
-## <a name="remarks"></a>Uwagi  
- **Close()** jest domyślna Implementacja klasy `IAsyncInfo::Close`, a nie rzeczywiste działa. Aby rzeczywiście zamknąć operację asynchroniczną, należy zastąpić `OnClose()` czystej wirtualnej metody.  
-  
-## <a name="requirements"></a>Wymagania  
- **Nagłówek:** async.h  
-  
- **Namespace:** Microsoft::WRL  
-  
-## <a name="see-also"></a>Zobacz też  
- [AsyncBase, klasa](../windows/asyncbase-class.md)
+
+Zamyka operację asynchroniczną.
+
+## <a name="syntax"></a>Składnia
+
+```cpp
+STDMETHOD(
+   Close
+)(void) override;
+```
+
+## <a name="return-value"></a>Wartość zwracana
+
+S_OK, jeśli operacja zostanie zamknięty lub już zamknięte; w przeciwnym razie E_ILLEGAL_STATE_CHANGE.
+
+## <a name="remarks"></a>Uwagi
+
+**Close()** jest domyślna Implementacja klasy `IAsyncInfo::Close`, a nie rzeczywiste działa. Aby rzeczywiście zamknąć operację asynchroniczną, należy zastąpić `OnClose()` czystej wirtualnej metody.
+
+## <a name="requirements"></a>Wymagania
+
+**Nagłówek:** async.h
+
+**Namespace:** Microsoft::WRL
+
+## <a name="see-also"></a>Zobacz też
+
+[AsyncBase, klasa](../windows/asyncbase-class.md)

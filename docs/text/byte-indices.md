@@ -11,37 +11,37 @@ helpviewer_keywords:
 - MBCS [C++], byte indices
 - byte indices [C++]
 ms.assetid: f6e7774a-86c6-41c2-89e3-74fd46432e47
-author: ghogen
-ms.author: ghogen
+author: mikeblome
+ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 509e66c7ea458519eaa9dc4f52c8a6b65c789d0f
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 5beb69ef7d9d3356eddef40c6bce6483079d934a
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33863803"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42590803"
 ---
 # <a name="byte-indices"></a>Indeksy bajtowe
 Użyj następujących wskazówek:  
   
--   Praca z bytewise indeksu na ciąg stanowi problem podobne do tych powodowanego przez manipulowania wskaźnika. Należy wziąć pod uwagę przykładzie skanował ciąg znaku ukośnika odwrotnego:  
+-   Praca z indeksem bytewise na ciąg stanowi problem podobne do tych powodowanego przez wskaźnik manipulacji. Rozważmy następujący przykład, które skanuje ciąg znak ukośnika odwrotnego:  
   
     ```  
     while ( rgch[ i ] != '\\' )  
         i++;  
     ```  
   
-     To może indeksować bajt, nie bajtu, i dlatego nie może wskazywać na `character`.  
+     To może indeksować bajt, nie bajtem wiodącym, i dlatego nie może wskazywać na `character`.  
   
--   Użyj [_mbclen —](../c-runtime-library/reference/mbclen-mblen-mblen-l.md) funkcji, aby rozwiązać problem poprzedniego:  
+-   Użyj [_mbclen —](../c-runtime-library/reference/mbclen-mblen-mblen-l.md) funkcję, aby rozwiązać problem poprzedniego:  
   
     ```  
     while ( rgch[ i ] != '\\' )  
         i += _mbclen ( rgch + i );  
     ```  
   
-     To poprawnie indeksuje do bajtu, dlatego aby `character`. `_mbclen` Funkcja określa rozmiar znaku (w bajtach 1 lub 2).  
+     To prawidłowo indeksuje do bajtem wiodącym, dlatego aby `character`. `_mbclen` Funkcja określa rozmiar znaków (1 lub 2 bajtów).  
   
 ## <a name="see-also"></a>Zobacz też  
  [Porady dotyczące programowania MBCS](../text/mbcs-programming-tips.md)   

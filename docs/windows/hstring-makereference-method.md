@@ -15,46 +15,51 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 0c9a77a8a943dcefdf9db9d43121f2b00bde1568
-ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
+ms.openlocfilehash: 061b3be0e642bb8e7406f54a469723c70559d85a
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/09/2018
-ms.locfileid: "40011013"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42610164"
 ---
 # <a name="hstringmakereference-method"></a>HString::MakeReference — Metoda
-Tworzy `HStringReference` obiekt z określonego parametru ciągu.  
-  
-## <a name="syntax"></a>Składnia  
-  
-```cpp  
-template<unsigned int sizeDest>  
-    static HStringReference MakeReference(  
-              wchar_t const (&str)[ sizeDest]);  
-  
-    template<unsigned int sizeDest>  
-    static HStringReference MakeReference(  
-              wchar_t const (&str)[sizeDest],   
-              unsigned int len);  
-```  
-  
-### <a name="parameters"></a>Parametry  
- *sizeDest*  
- Parametr szablonu, który określa rozmiar docelowy `HStringReference` buforu.  
-  
- *str*  
- Odwołanie do ciągu znaków dwubajtowych.  
-  
- *Len*  
- Maksymalna długość *str* bufora parametru w tej operacji. Jeśli *len* parametr nie jest określony, całą *str* parametr jest używany.  
-  
-## <a name="return-value"></a>Wartość zwracana  
- `HStringReference` Obiektu, którego wartość jest taka sama, jak określa *str* parametru.  
-  
-## <a name="requirements"></a>Wymagania  
- **Nagłówek:** corewrappers.h  
-  
- **Namespace:** Microsoft::wrl:: wrappers  
-  
-## <a name="see-also"></a>Zobacz też  
- [HString, klasa](../windows/hstring-class.md)
+
+Tworzy `HStringReference` obiekt z określonego parametru ciągu.
+
+## <a name="syntax"></a>Składnia
+
+```cpp
+template<unsigned int sizeDest>
+    static HStringReference MakeReference(
+              wchar_t const (&str)[ sizeDest]);
+
+    template<unsigned int sizeDest>
+    static HStringReference MakeReference(
+              wchar_t const (&str)[sizeDest],
+              unsigned int len);
+```
+
+### <a name="parameters"></a>Parametry
+
+*sizeDest*  
+Parametr szablonu, który określa rozmiar docelowy `HStringReference` buforu.
+
+*str*  
+Odwołanie do ciągu znaków dwubajtowych.
+
+*Len*  
+Maksymalna długość *str* bufora parametru w tej operacji. Jeśli *len* parametr nie jest określony, całą *str* parametr jest używany.
+
+## <a name="return-value"></a>Wartość zwracana
+
+`HStringReference` Obiektu, którego wartość jest taka sama, jak określa *str* parametru.
+
+## <a name="requirements"></a>Wymagania
+
+**Nagłówek:** corewrappers.h
+
+**Namespace:** Microsoft::wrl:: wrappers
+
+## <a name="see-also"></a>Zobacz też
+
+[HString, klasa](../windows/hstring-class.md)

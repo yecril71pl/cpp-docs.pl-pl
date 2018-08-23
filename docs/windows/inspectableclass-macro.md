@@ -15,38 +15,43 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: a02e20f2b87afc312c24683417f808d636c2757f
-ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
+ms.openlocfilehash: 0a19635b635b80d65e0da99b8f50606154a5b4b2
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/07/2018
-ms.locfileid: "39608959"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42594771"
 ---
 # <a name="inspectableclass-macro"></a>InspectableClass — Makro
-Ustawia poziom nazwy i zaufania klasy środowiska uruchomieniowego.  
-  
-## <a name="syntax"></a>Składnia  
-  
-```cpp  
-InspectableClass(  
-   runtimeClassName,   
+
+Ustawia poziom nazwy i zaufania klasy środowiska uruchomieniowego.
+
+## <a name="syntax"></a>Składnia
+
+```cpp
+InspectableClass(
+   runtimeClassName,
    trustLevel)  
-```  
-  
-### <a name="parameters"></a>Parametry  
- *runtimeClassName*  
- Pełna tekstowa Nazwa klasy runtime.  
-  
- *trustLevel*  
- Jedną z [TrustLevel](http://msdn.microsoft.com/library/br224625.aspx) wyliczonych wartości.  
-  
-## <a name="remarks"></a>Uwagi  
- **InspectableClass** makra mogą służyć tylko z typów środowiska wykonawczego Windows.  
-  
-## <a name="requirements"></a>Wymagania  
- **Nagłówek:** implements.h  
-  
- **Namespace:** Microsoft::WRL  
-  
-## <a name="see-also"></a>Zobacz też  
- [RuntimeClass, klasa](../windows/runtimeclass-class.md)
+```
+
+### <a name="parameters"></a>Parametry
+
+*runtimeClassName*  
+Pełna tekstowa Nazwa klasy runtime.
+
+*trustLevel*  
+Jedną z [TrustLevel](http://msdn.microsoft.com/library/br224625.aspx) wyliczonych wartości.
+
+## <a name="remarks"></a>Uwagi
+
+**InspectableClass** makra mogą służyć tylko z typów środowiska wykonawczego Windows.
+
+## <a name="requirements"></a>Wymagania
+
+**Nagłówek:** implements.h
+
+**Namespace:** Microsoft::WRL
+
+## <a name="see-also"></a>Zobacz też
+
+[RuntimeClass, klasa](../windows/runtimeclass-class.md)

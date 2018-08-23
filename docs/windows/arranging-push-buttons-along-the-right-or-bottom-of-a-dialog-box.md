@@ -18,32 +18,35 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 7df4b20677c8dbccacdbfa21cc798da1ed4bb511
-ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
+ms.openlocfilehash: 71e44b8d4fef02101c7b8d8f5878aeaa22a5c528
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39649224"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42608726"
 ---
 # <a name="arranging-push-buttons-along-the-right-or-bottom-of-a-dialog-box"></a>Rozmieszczanie przycisków poleceń po prawej stronie lub u dołu okna dialogowego
-### <a name="to-arrange-push-buttons-along-the-right-or-bottom-of-a-dialog-box"></a>Aby rozmieścić przyciski poleceń po prawej stronie lub u dołu okna dialogowego  
-  
-1.  Wybierz jeden lub więcej przycisków.  
-  
-2.  Z **Format** menu, wybierz **Rozmieść przyciski**, a następnie wybierz jedną z następujących procedur:  
-  
-    -   `Right`: wyrównuje przycisków wzdłuż prawej krawędzi okna dialogowego.  
-  
-    -   `Bottom`: wyrównuje przycisków wzdłuż dolnej krawędzi okna dialogowego.  
-  
-         Wybranie kontrolki niż przycisku polecenia, nie wpływa na jej położenie.  
-  
- Aby uzyskać informacje na temat dodawania zasobów do projektów zarządzanych, zobacz [zasoby w aplikacjach pulpitu](/dotnet/framework/resources/index) w *przewodniku dewelopera .NET Framework*. Aby uzyskać informacji na temat ręcznego dodawania plików zasobów do projektów zarządzanych, uzyskiwania dostępu do zasobów, wyświetlania statycznych zasobów i przypisywania ciągów zasobów do właściwości, zobacz [Creating Resource Files dla aplikacji klasycznych](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Aby uzyskać informacji na temat globalizacja i lokalizacja zasobów w aplikacjach zarządzanych, zobacz [Globalizing i lokalizowanie aplikacji programu .NET Framework](/dotnet/standard/globalization-localization/index).  
-  
+
+### <a name="to-arrange-push-buttons-along-the-right-or-bottom-of-a-dialog-box"></a>Aby rozmieścić przyciski poleceń po prawej stronie lub u dołu okna dialogowego
+
+1. Wybierz jeden lub więcej przycisków.
+
+2. Z **Format** menu, wybierz **Rozmieść przyciski**, a następnie wybierz jedną z następujących procedur:
+
+   - `Right`: wyrównuje przycisków wzdłuż prawej krawędzi okna dialogowego.
+
+   - `Bottom`: wyrównuje przycisków wzdłuż dolnej krawędzi okna dialogowego.
+
+       Wybranie kontrolki niż przycisku polecenia, nie wpływa na jej położenie.
+
+Aby uzyskać informacje na temat dodawania zasobów do projektów zarządzanych, zobacz [zasoby w aplikacjach pulpitu](/dotnet/framework/resources/index) w *przewodniku dewelopera .NET Framework*. Aby uzyskać informacji na temat ręcznego dodawania plików zasobów do projektów zarządzanych, uzyskiwania dostępu do zasobów, wyświetlania statycznych zasobów i przypisywania ciągów zasobów do właściwości, zobacz [Creating Resource Files dla aplikacji klasycznych](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Aby uzyskać informacji na temat globalizacja i lokalizacja zasobów w aplikacjach zarządzanych, zobacz [Globalizing i lokalizowanie aplikacji programu .NET Framework](/dotnet/standard/globalization-localization/index).
+
 ## <a name="requirements"></a>Wymagania
- Win32  
-  
-## <a name="see-also"></a>Zobacz też  
- [Rozmieszczenie kontrolek w oknach dialogowych](../windows/arrangement-of-controls-on-dialog-boxes.md)   
- [Formanty w oknach dialogowych](../windows/controls-in-dialog-boxes.md)   
- [Kontrolki](../mfc/controls-mfc.md)
+
+Win32
+
+## <a name="see-also"></a>Zobacz też
+
+[Rozmieszczenie kontrolek w oknach dialogowych](../windows/arrangement-of-controls-on-dialog-boxes.md)  
+[Kontrolki w oknach dialogowych](../windows/controls-in-dialog-boxes.md)  
+[Kontrolki](../mfc/controls-mfc.md)

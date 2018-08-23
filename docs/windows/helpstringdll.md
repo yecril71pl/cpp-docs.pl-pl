@@ -17,61 +17,65 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 94e33eea3dc367634b3cae9a025b0189598bbdd1
-ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
+ms.openlocfilehash: 2b1ba0c95a87ce1743d225fd6af4bffee148d6ab
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39648954"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42601896"
 ---
 # <a name="helpstringdll"></a>helpstringdll
-Określa nazwę biblioteki DLL, aby wykonać wyszukiwanie ciągu dokumentu (lokalizacja).  
-  
-## <a name="syntax"></a>Składnia  
-  
-```cpp  
-[ helpstringdll(  
-   "string"  
-) ]  
-```  
-  
-### <a name="parameters"></a>Parametry  
- *string*  
- Biblioteki DLL, użyj, aby wykonać wyszukiwanie ciągu dokumentu.  
-  
-## <a name="remarks"></a>Uwagi  
- **Helpstringdll —** atrybut C++ ma taką samą funkcjonalność jak [helpstringdll —](http://msdn.microsoft.com/library/windows/desktop/aa366860) atrybutów w MIDL.  
-  
-## <a name="example"></a>Przykład  
-  
-```cpp  
-// cpp_attr_ref_helpstringdll.cpp  
-// compile with: /LD  
-#include <unknwn.h>  
-[module(name="MyLib", helpstringdll="xx.dll")];  
-  
-[object, uuid("00000000-0000-0000-0000-000000000001")]  
-__interface IMyI   
-{  
-   HRESULT xxx();  
-};  
-```  
-  
-## <a name="requirements"></a>Wymagania  
-  
-### <a name="attribute-context"></a>Kontekst atrybutu  
-  
-|||  
-|-|-|  
-|**Dotyczy**|**Klasa**, **interfejsu**, interfejs — metoda|  
-|**Powtarzalne**|Nie|  
-|**Wymaganych atrybutów**|Brak|  
-|**Nieprawidłowe atrybuty**|Brak|  
-  
- Aby uzyskać więcej informacji, zobacz [konteksty atrybutu](../windows/attribute-contexts.md).  
-  
-## <a name="see-also"></a>Zobacz też  
- [Atrybuty IDL](../windows/idl-attributes.md)   
- [Atrybuty interfejsu](../windows/interface-attributes.md)   
- [Atrybuty klasy](../windows/class-attributes.md)   
- [Atrybuty metody](../windows/method-attributes.md)   
+
+Określa nazwę biblioteki DLL, aby wykonać wyszukiwanie ciągu dokumentu (lokalizacja).
+
+## <a name="syntax"></a>Składnia
+
+```cpp
+[ helpstringdll(
+   "string"
+) ]
+```
+
+### <a name="parameters"></a>Parametry
+
+*string*  
+Biblioteki DLL, użyj, aby wykonać wyszukiwanie ciągu dokumentu.
+
+## <a name="remarks"></a>Uwagi
+
+**Helpstringdll —** atrybut C++ ma taką samą funkcjonalność jak [helpstringdll —](http://msdn.microsoft.com/library/windows/desktop/aa366860) atrybutów w MIDL.
+
+## <a name="example"></a>Przykład
+
+```cpp
+// cpp_attr_ref_helpstringdll.cpp
+// compile with: /LD
+#include <unknwn.h>
+[module(name="MyLib", helpstringdll="xx.dll")];
+
+[object, uuid("00000000-0000-0000-0000-000000000001")]
+__interface IMyI
+{
+   HRESULT xxx();
+};
+```
+
+## <a name="requirements"></a>Wymagania
+
+### <a name="attribute-context"></a>Kontekst atrybutu
+
+|||
+|-|-|
+|**Dotyczy**|**Klasa**, **interfejsu**, interfejs — metoda|
+|**Powtarzalne**|Nie|
+|**Wymaganych atrybutów**|Brak|
+|**Nieprawidłowe atrybuty**|Brak|
+
+Aby uzyskać więcej informacji, zobacz [konteksty atrybutu](../windows/attribute-contexts.md).
+
+## <a name="see-also"></a>Zobacz też
+
+[Atrybuty IDL](../windows/idl-attributes.md)  
+[Atrybuty interfejsu](../windows/interface-attributes.md)  
+[Atrybuty klasy](../windows/class-attributes.md)  
+[Atrybuty metody](../windows/method-attributes.md)  

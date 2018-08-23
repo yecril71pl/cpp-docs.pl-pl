@@ -9,30 +9,30 @@ dev_langs:
 helpviewer_keywords:
 - C++/CX namespaces
 ms.assetid: 5ebc0b49-1f22-48a7-90c4-a310bab9aba6
-author: ghogen
-ms.author: ghogen
+author: mikeblome
+ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0bd70990fb54952b9982ffdcc4e2848e545f62b1
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: d74eb59fa1c8c8f53591c8452cb6940bc9ae1743
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33086989"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42601273"
 ---
 # <a name="namespaces-reference-ccx"></a>Odwołanie do przestrzeni nazw (C + +/ CX)
-Artykuły w tej sekcji dokumentacji opisano przestrzeni nazw, który obsługuje kompilator C + +/ CX.  
+Artykuły w tej sekcji dokumentacji opisują przestrzenie nazw, który obsługuje kompilator języka C + +/ CX.  
   
 ## <a name="compiler-supplied-namespaces"></a>Dostarczone przez kompilator przestrzenie nazw  
- Aby uprościć kodowania programy, które odnoszą się do środowiska uruchomieniowego systemu Windows, C + +/ CX kompilatora i towarzyszące mu pliki nagłówka zapewniają przestrzeni nazw, który definiuje wiele różnych typów. Przestrzenie nazw zdefiniuj wbudowane typy liczbowe; ciągi, tablic i kolekcji; Visual wyjątków języka C++, które reprezentują błędy środowiska wykonawczego systemu Windows; i rozszerzenia językowe standardowych typów środowiska wykonawczego systemu Windows.  
+ Upraszczania kodowania programów o docelowej wersji Windows środowiska uruchomieniowego, C + +/ CX kompilatora i towarzyszące mu pliki nagłówka zapewniają przestrzenie nazw, który definiuje szeroką gamę typów. Przestrzenie nazw zdefiniuj wbudowane typy liczbowe; ciągi, tablice i kolekcje; Visual wyjątki C++, które reprezentują błędy środowiska wykonawczego Windows; i rozszerzenia językowe standardowych typów środowiska wykonawczego Windows.  
   
 ## <a name="related-topics"></a>Tematy pokrewne  
   
 |Tytuł|Opis|  
 |-----------|-----------------|  
 |[domyślna przestrzeń nazw](../cppcx/default-namespace.md)|Zawiera opisy typów wbudowanych, podstawowe.|  
-|[Przestrzeń nazw platformy](../cppcx/platform-namespace-c-cx.md)|Zawiera opisy typów, które są dostępne, a także wewnętrzne typy, które są używane tylko przez infrastrukturę kompilatora.|  
-|[Namespace Windows::Foundation::Collections](../cppcx/windows-foundation-collections-namespace-c-cx.md)|Zawiera opisy ulepszeń i rozszerzenia do środowiska wykonawczego systemu Windows`Windows::Foundation::Collections` przestrzeni nazw.|  
+|[Przestrzeń nazw platformy](../cppcx/platform-namespace-c-cx.md)|Zawiera opisy typów, których można używać, a także typy wewnętrzne, które są używane tylko przez infrastrukturę kompilatora.|  
+|[Windows::Foundation:: Collections Namespace](../cppcx/windows-foundation-collections-namespace-c-cx.md)|Zawiera opis ulepszeń i rozszerzeń do środowiska wykonawczego Windows`Windows::Foundation::Collections` przestrzeni nazw.|  
   
 ## <a name="see-also"></a>Zobacz też  
  [Dokumentacja języka Visual C++](../cppcx/visual-c-language-reference-c-cx.md)

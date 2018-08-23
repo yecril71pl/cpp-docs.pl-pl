@@ -13,29 +13,33 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 74f26f520be276de863c612718de8520bffc1219
-ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
+ms.openlocfilehash: 86e7716ff4e9a0b4f5132abfd431a2649f22f80f
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39649708"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42593096"
 ---
 # <a name="comptrreset"></a>ComPtr::Reset
-Zwalnia wszystkie odwołania dla wskaźnika do interfejsu, który jest skojarzony z tym **ComPtr**.  
-  
-## <a name="syntax"></a>Składnia  
-  
-```cpp  
-unsigned long Reset();  
-```  
-  
-## <a name="return-value"></a>Wartość zwracana  
- Liczba odwołań do wydania, jeśli istnieje.  
-  
-## <a name="requirements"></a>Wymagania  
- **Nagłówek:** client.h  
-  
- **Namespace:** Microsoft::WRL  
-  
-## <a name="see-also"></a>Zobacz też  
- [ComPtr, klasa](../windows/comptr-class.md)
+
+Zwalnia wszystkie odwołania dla wskaźnika do interfejsu, który jest skojarzony z tym **ComPtr**.
+
+## <a name="syntax"></a>Składnia
+
+```cpp
+unsigned long Reset();
+```
+
+## <a name="return-value"></a>Wartość zwracana
+
+Liczba odwołań do wydania, jeśli istnieje.
+
+## <a name="requirements"></a>Wymagania
+
+**Nagłówek:** client.h
+
+**Namespace:** Microsoft::WRL
+
+## <a name="see-also"></a>Zobacz też
+
+[ComPtr, klasa](../windows/comptr-class.md)

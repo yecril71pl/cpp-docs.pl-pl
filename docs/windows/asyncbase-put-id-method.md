@@ -17,35 +17,40 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: f55896ac0bca162df9f17703225552cdb70c079c
-ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
+ms.openlocfilehash: df6d5209980842e4fe5a2f2919d24ba291815e5e
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39647089"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42595914"
 ---
 # <a name="asyncbaseputid-method"></a>AsyncBase::put_Id — Metoda
-Ustawia uchwyt operację asynchroniczną.  
-  
-## <a name="syntax"></a>Składnia  
-  
-```cpp  
-STDMETHOD(  
-   put_Id  
-)(const unsigned int id);  
-```  
-  
-### <a name="parameters"></a>Parametry  
- *id*  
- Dojście wartość różną od zera.  
-  
-## <a name="return-value"></a>Wartość zwracana  
- S_OK w przypadku powodzenia; w przeciwnym razie E_INVALIDARG lub E_ILLEGAL_METHOD_CALL.  
-  
-## <a name="requirements"></a>Wymagania  
- **Nagłówek:** async.h  
-  
- **Namespace:** Microsoft::WRL  
-  
-## <a name="see-also"></a>Zobacz też  
- [AsyncBase, klasa](../windows/asyncbase-class.md)
+
+Ustawia uchwyt operację asynchroniczną.
+
+## <a name="syntax"></a>Składnia
+
+```cpp
+STDMETHOD(
+   put_Id
+)(const unsigned int id);
+```
+
+### <a name="parameters"></a>Parametry
+
+*id*  
+Dojście wartość różną od zera.
+
+## <a name="return-value"></a>Wartość zwracana
+
+S_OK w przypadku powodzenia; w przeciwnym razie E_INVALIDARG lub E_ILLEGAL_METHOD_CALL.
+
+## <a name="requirements"></a>Wymagania
+
+**Nagłówek:** async.h
+
+**Namespace:** Microsoft::WRL
+
+## <a name="see-also"></a>Zobacz też
+
+[AsyncBase, klasa](../windows/asyncbase-class.md)

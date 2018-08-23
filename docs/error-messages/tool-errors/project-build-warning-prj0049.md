@@ -14,25 +14,25 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8df6fcb8bc5d6517a46279e0bef5036db1e81241
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 726294f420000ab1d1b98be72d310dfcbfcd04c0
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33319813"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42591887"
 ---
 # <a name="project-build-warning-prj0049"></a>Ostrzeżenie PRJ0049 dotyczące kompilacji projektu
-Przywoływany docelowego "\<odwołania >" wymaga programu .NET Framework \<MinFrameworkVersion > i nie będzie można uruchamiać na platformę docelową tego projektu  
+Przywoływany element docelowy "\<odwołanie >" wymaga programu .NET Framework \<MinFrameworkVersion > i nie będzie można uruchamiać na platformę docelową tego projektu  
   
- Aplikacje utworzone przy użyciu programu Visual Studio 2008 można określić, która wersja [!INCLUDE[dnprdnshort](../../error-messages/tool-errors/includes/dnprdnshort_md.md)] powinny ich elementami docelowymi. Jeśli możesz dodać odwołania do zestawu lub projektu, który jest zależny od wersji [!INCLUDE[dnprdnshort](../../error-messages/tool-errors/includes/dnprdnshort_md.md)] jest nowsza niż wersja docelowa, wyświetlone zostanie ostrzeżenie w czasie kompilacji.  
+ Aplikacje utworzone przy użyciu programu Visual Studio 2008 można określić, która wersja programu .NET Framework powinien dotyczyć. Jeśli dodasz odwołanie do zestawu lub projektu, który zależy od wersji programu .NET Framework, która jest nowsza niż wersja docelowa, otrzymasz ostrzeżenie w czasie kompilacji.  
   
-### <a name="to-correct-this-warning"></a>Aby naprawić tego ostrzeżenia  
+### <a name="to-correct-this-warning"></a>Aby poprawić to ostrzeżenie  
   
 1.  Wybierz jedną z następujących opcji:  
   
-    -   Zmień docelową platformę projektu **strony właściwości** okna dialogowego, dzięki czemu jest późniejsza lub taka sama do wersji framework minimalnego wszystkich przywoływanych zestawów i projektów. Aby uzyskać więcej informacji, zobacz [Dodawanie odwołań](../../ide/adding-references-in-visual-cpp-projects.md).  
+    -   Zmiana platformy docelowej w projekcie **stron właściwości** okno dialogowe, tak aby jest późniejsza niż lub równa minimalnej wersję wszystkie zestawy referencyjne i projektów. Aby uzyskać więcej informacji, zobacz [Dodawanie odwołań do](../../ide/adding-references-in-visual-cpp-projects.md).  
   
-    -   Usuń odwołanie do zestawu lub projekt, który ma minimalny framework w wersji, która jest nowsza niż docelową platformę. Te elementy zostaną oznaczone ikoną ostrzeżenia w projekcie **strony właściwości**.  
+    -   Usuń odwołanie do zestawu lub projektu, który ma minimalne framework w wersji, która jest nowsza niż docelową platformę framework. Te elementy zostaną oznaczone ikoną ostrzeżenia w projekcie **stron właściwości**.  
   
 ## <a name="see-also"></a>Zobacz też  
  [Błędy i ostrzeżenia kompilowania projektu (PRJxxxx)](../../error-messages/tool-errors/project-build-errors-and-warnings-prjxxxx.md)

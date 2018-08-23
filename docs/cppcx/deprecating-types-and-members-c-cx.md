@@ -1,29 +1,29 @@
 ---
-title: Wycofano typy i składniki (C + +/ CX) | Dokumentacja firmy Microsoft
+title: Wycofane typy i składowe (C + +/ CX) | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 12/30/2016
 ms.technology: cpp-windows
 ms.topic: language-reference
 ms.assetid: b20b01c1-a439-4ff0-8cf3-d7280c492813
-author: ghogen
-ms.author: ghogen
+author: mikeblome
+ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5b82f22f996b0f52889bd76227647ab367118898
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 8aecb47db6e9d620ff49fac337454242a1bdb72a
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33086798"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42605704"
 ---
-# <a name="deprecating-types-and-members-ccx"></a>Wycofano typy i składniki (C + +/ CX)
-W języku C + +/ CX, amortyzacja typów środowiska wykonawczego systemu Windows i elementów członkowskich, producenci i konsumenci przy użyciu [przestarzały](http://msdn.microsoft.com/en-us/8b02ad36-3b5f-4361-888b-e6a99040e57c) atrybut jest obsługiwany. Możesz korzystać z interfejsu API, do których zastosowano ten atrybut, otrzymasz komunikat ostrzegawczy kompilacji, który wskazuje, że interfejs API jest przestarzały i zaleca także alternatywne API do użycia. Własne typy publiczne i metody można zastosować ten atrybut i podaj własnego niestandardowego komunikatu.  
+# <a name="deprecating-types-and-members-ccx"></a>Wycofane typy i składowe (C + +/ CX)
+W języku C + +/ CX, amortyzacja typów środowiska wykonawczego Windows i elementów członkowskich dla producentów i konsumentów, za pomocą [uznane za przestarzałe](http://msdn.microsoft.com/en-us/8b02ad36-3b5f-4361-888b-e6a99040e57c) atrybut jest obsługiwany. Jeśli wykorzystasz interfejsu API, do którego zastosowano ten atrybut, otrzymasz komunikat ostrzegawczy kompilacji, która wskazuje, że interfejs API jest przestarzały i zaleca również alternatywny interfejsu API do użycia. We własnych typów publicznych i metody można zastosować ten atrybut i Podaj własny niestandardowy komunikat.  
   
 > [!CAUTION]
->  [Przestarzały](http://msdn.microsoft.com/en-us/8b02ad36-3b5f-4361-888b-e6a99040e57c) atrybutu ma być używany tylko z typami środowiska wykonawczego systemu Windows. Standardowa klas C++ i elementów członkowskich, należy użyć [__declspec(deprecated)](http://msdn.microsoft.com/library/044swk7y.aspx).  
+>  [Uznane za przestarzałe](http://msdn.microsoft.com/en-us/8b02ad36-3b5f-4361-888b-e6a99040e57c) atrybut jest tylko do użytku z typami środowiska wykonawczego Windows. W przypadku standardowych klas C++ i elementów członkowskich, użyj [__declspec(deprecated)](http://msdn.microsoft.com/library/044swk7y.aspx).  
   
 ### <a name="example"></a>Przykład  
- Poniższy przykład pokazuje, jak można zastąpić własnych publicznych interfejsach API — na przykład w składnika środowiska wykonawczego systemu Windows. Drugi parametr typu [systemu Windows: Foundation:: Metadata::DeprecationType](http://msdn.microsoft.com/en-us/ee01e63d-37d0-4273-accc-fca174f88bfa) Określa, czy interfejs API jest przestarzały lub usunięty. Obecnie tylko DeprecationType::Deprecated wartość jest obsługiwana. Trzeci parametr w atrybucie Określa [Windows::Foundation::Metadata::Platform](http://msdn.microsoft.com/en-us/1eae292d-1ab7-4d97-a58c-b0beffd51ef5) którego dotyczy ten atrybut.  
+ Poniższy przykład pokazuje, jak wycofana własnych publicznych interfejsów API — na przykład w składnika wykonawczego Windows. Drugi parametr typu [Windows: Foundation:: Metadata::DeprecationType](http://msdn.microsoft.com/en-us/ee01e63d-37d0-4273-accc-fca174f88bfa) Określa, czy interfejs API jest przestarzała lub usunięta. Obecnie tylko DeprecationType::Deprecated wartość jest obsługiwana. Określa trzeci parametr w atrybucie [Windows::Foundation::Metadata::Platform](http://msdn.microsoft.com/en-us/1eae292d-1ab7-4d97-a58c-b0beffd51ef5) którego dotyczy ten atrybut.  
   
 ```  
   
@@ -40,7 +40,7 @@ public:
 };  
 ```  
   
-## <a name="supported-targets"></a>Obsługiwane elementy docelowe  
+## <a name="supported-targets"></a>Obsługiwane obiekty docelowe  
  W poniższej tabeli wymieniono konstrukcje, których można zastosować atrybutu uznane za przestarzałe:  
   
 ||  
@@ -48,15 +48,15 @@ public:
 |Kontrolki XAML|  
 |delegate|  
 |zdarzenie|  
-|pole Enum|  
+|pola wyliczenia|  
 |enum|  
 |struktura |  
 |— metoda|  
 |class|  
 |interface|  
 |property|  
-|Pole struktury|  
-|Konstruktor sparametryzowane|  
+|pole — struktura|  
+|Konstruktor sparametryzowany|  
   
 ## <a name="see-also"></a>Zobacz też  
  [System typów](../cppcx/type-system-c-cx.md)   

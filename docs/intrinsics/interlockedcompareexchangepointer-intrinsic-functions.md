@@ -1,5 +1,5 @@
 ---
-title: Funkcje wewnętrzne _InterlockedCompareExchangePointer | Dokumentacja firmy Microsoft
+title: Funkcje wewnętrzne _interlockedcompareexchangepointer | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -34,17 +34,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6c8e7a31c5377d71eaad96fddc7d93215ed3abb4
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 0f8ab76252c355bb56a1e2157e0e025a4eddb0d8
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33340388"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42596539"
 ---
-# <a name="interlockedcompareexchangepointer-intrinsic-functions"></a>Funkcje wewnętrzne _InterlockedCompareExchangePointer
+# <a name="interlockedcompareexchangepointer-intrinsic-functions"></a>Funkcje wewnętrzne _interlockedcompareexchangepointer
 **Microsoft Specific**  
   
- Wykonuje operację atomic, która przechowuje `Exchange` adresów w `Destination` adres, jeśli `Comparand` i `Destination` adresu są takie same.  
+ Wykonuje operacją niepodzielną, która przechowuje `Exchange` adresem `Destination` adres, jeśli `Comparand` i `Destination` adres są takie same.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -87,42 +87,42 @@ long _InterlockedCompareExchangePointer_rel (
 ```  
   
 #### <a name="parameters"></a>Parametry  
- [w, out] `Destination`  
- Wskaźnik na wskaźnik do wartości docelowej. Znak jest ignorowana.  
+ [out w] `Destination`  
+ Wskaźnik do wskaźnika do wartości docelowej. Znak jest ignorowany.  
   
  [in] `Exchange`  
- Wskaźnik programu Exchange. Znak jest ignorowana.  
+ Wskaźnik do programu Exchange. Znak jest ignorowany.  
   
  [in] `Comparand`  
- Wskaźnik do porównania do miejsca docelowego. Znak jest ignorowana.  
+ Wskaźnik do porównania do miejsca docelowego. Znak jest ignorowany.  
   
 ## <a name="return-value"></a>Wartość zwracana  
  Wartość zwracana jest wartość początkowa miejsca docelowego.  
   
 ## <a name="requirements"></a>Wymagania  
   
-|— Wewnętrzne|Architektura|nagłówek|  
+|Wewnętrzne|Architektura|nagłówek|  
 |---------------|------------------|------------|  
-|`_InterlockedCompareExchangePointer`|x86, ARM, [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|\<intrin.h>|  
+|`_InterlockedCompareExchangePointer`|x86, ARM, x64|\<intrin.h>|  
 |`_InterlockedCompareExchangePointer_acq`, `_InterlockedCompareExchangePointer_nf`, `_InterlockedCompareExchangePointer_rel`|ARM|\<iiintrin.h>|  
-|`_InterlockedCompareExchangePointer_HLEAcquire`, `_InterlockedCompareExchangePointer_HLERelease`|x86, [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|\<immintrin.h>|  
+|`_InterlockedCompareExchangePointer_HLEAcquire`, `_InterlockedCompareExchangePointer_HLERelease`|x86, x64|\<immintrin.h>|  
   
 ## <a name="remarks"></a>Uwagi  
- `_InterlockedCompareExchangePointer` przeprowadza porównanie atomic `Destination` adresów z `Comparand` adres. Jeśli `Destination` adres jest taki sam `Comparand` adres `Exchange` adres jest przechowywany w adresem określonym przez `Destination`. W przeciwnym razie operacja nie jest wykonywana.  
+ `_InterlockedCompareExchangePointer` Wykonuje porównanie atomowe `Destination` spełnić za pomocą `Comparand` adresu. Jeśli `Destination` adresów jest równa `Comparand` adresu `Exchange` adres jest przechowywany w adresem określonym przez `Destination`. W przeciwnym razie odbywa się żadna operacja.  
   
- `_InterlockedCompareExchangePointer` zapewnia obsługę wewnętrznych kompilatora dla środowiska Win32 [!INCLUDE[winsdkshort](../atl-mfc-shared/reference/includes/winsdkshort_md.md)] [_InterlockedCompareExchangePointer](http://msdn.microsoft.com/library/ff547863.aspx) funkcji.  
+ `_InterlockedCompareExchangePointer` zapewnia wsparcie wewnętrznej kompilatora dla zestawu SDK Windows Win32 [_InterlockedCompareExchangePointer](http://msdn.microsoft.com/library/ff547863.aspx) funkcji.  
   
- Na przykład można użyć `_InterlockedCompareExchangePointer`, zobacz [_InterlockedDecrement](../intrinsics/interlockeddecrement-intrinsic-functions.md).  
+ Na przykład sposobu użycia `_InterlockedCompareExchangePointer`, zobacz [_InterlockedDecrement](../intrinsics/interlockeddecrement-intrinsic-functions.md).  
   
- Na platformach ARM, użyj funkcji wewnętrznych z `_acq` i `_rel` sufiksy, jeśli należy uzyskać i zwolnij semantyki, takich jak na początku i na końcu sekcji krytycznych. Funkcje wewnętrzne ARM z `_nf` sufiks ("nie ogranicznika") nie działają jako bariery pamięci.  
+ Na platformach ARM, użyj funkcji wewnętrznych za pomocą `_acq` i `_rel` sufiksy, jeśli potrzebujesz uzyskać i zwolnij semantykę, takich jak na początku i na końcu sekcję krytyczną. Funkcje wewnętrzne ARM, za pomocą `_nf` sufiks ("nie ogranicznika") nie działają jako czynnik blokujący pamięci.  
   
- Funkcje wewnętrzne z `_np` sufiks ("nie pobierania z wyprzedzeniem") uniemożliwiają operacji pobierania z wyprzedzeniem możliwe wstawiane przez kompilator.  
+ Funkcje wewnętrzne z `_np` sufiks ("nie pobieranie z wyprzedzeniem") uniemożliwić operacji możliwe pobieranie z wyprzedzeniem wstawiane przez kompilator.  
   
- Na platformach firmy Intel, które obsługują instrukcje Elision blokady sprzętu (HLE), funkcje wewnętrzne z `_HLEAcquire` i `_HLERelease` sufiksy obejmują wskazówkę procesora, która umożliwia przyspieszanie wydajności przez wyeliminowanie krok blokady zapisu sprzętu. Jeśli te funkcje wewnętrzne są nazywane na platformach, które nie obsługują HLE, wskazówka zostanie zignorowany.  
+ Na platformach firmy Intel, obsługujące instrukcje pominięcia blokady sprzętu (HLE), funkcje wewnętrzne z `_HLEAcquire` i `_HLERelease` sufiksy obejmują wskazówkę procesora, który może przyspieszyć wydajność, eliminując krok blokady zapisu w sprzęcie. Jeśli te funkcje wewnętrzne są wywoływane na platformach, które nie obsługują HLE, wskazówka zostanie zignorowany.  
   
  Te procedury są dostępne tylko jako funkcje wewnętrzne.  
   
-**KOŃCOWY określonych firmy Microsoft**  
+**END specyficzny dla Microsoft**  
   
 ## <a name="see-also"></a>Zobacz też  
  [Funkcje wewnętrzne kompilatora](../intrinsics/compiler-intrinsics.md)   

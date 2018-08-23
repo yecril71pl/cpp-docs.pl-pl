@@ -17,52 +17,57 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: c505d6ebf62e6c01ecd3c2f750cec1c95775f53d
-ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
+ms.openlocfilehash: 8d782246f44148805f9acc8d912b0fbf554227f7
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39642431"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42595731"
 ---
 # <a name="helpcontext"></a>helpcontext
-Określa identyfikator kontekstu, który pozwala użytkownikowi oglądać informacje o tym elemencie w **pomocy** pliku.  
-  
-## <a name="syntax"></a>Składnia  
-  
-```cpp  
-[ helpcontext(  
-   id  
-) ]  
-```  
-  
-### <a name="parameters"></a>Parametry  
- *id*  
- Identyfikator kontekstu tematu Pomocy. Zobacz [HTML Help: Context-Sensitive Help for Your Programs](../mfc/html-help-context-sensitive-help-for-your-programs.md) więcej informacji na temat kontekstu identyfikatorów.  
-  
-## <a name="remarks"></a>Uwagi  
- **Helpcontext —** atrybut C++ ma taką samą funkcjonalność jak [helpcontext —](http://msdn.microsoft.com/library/windows/desktop/aa366851) atrybutów w MIDL.  
-  
-## <a name="example"></a>Przykład  
- Zobacz przykład [defaultvalue](../windows/defaultvalue.md) przykład sposobu użycia **helpcontext —**.  
-  
-## <a name="requirements"></a>Wymagania  
-  
-### <a name="attribute-context"></a>Kontekst atrybutu  
-  
-|||  
-|-|-|  
-|**Dotyczy**|**interfejs**, **typedef**, **klasy**, metody, właściwości|  
-|**Powtarzalne**|Nie|  
-|**Wymaganych atrybutów**|Brak|  
-|**Nieprawidłowe atrybuty**|Brak|  
-  
- Aby uzyskać więcej informacji, zobacz [konteksty atrybutu](../windows/attribute-contexts.md).  
-  
-## <a name="see-also"></a>Zobacz też  
- [Atrybuty IDL](../windows/idl-attributes.md)   
- [Atrybuty interfejsu](../windows/interface-attributes.md)   
- [Atrybuty klasy](../windows/class-attributes.md)   
- [Atrybuty metody](../windows/method-attributes.md)   
- [Element TypeDef, Enum, Union i struct — atrybuty](../windows/typedef-enum-union-and-struct-attributes.md)   
- [HelpFile —](../windows/helpfile.md)   
- [helpstring](../windows/helpstring.md)   
+
+Określa identyfikator kontekstu, który pozwala użytkownikowi oglądać informacje o tym elemencie w **pomocy** pliku.
+
+## <a name="syntax"></a>Składnia
+
+```cpp
+[ helpcontext(
+   id
+) ]
+```
+
+### <a name="parameters"></a>Parametry
+
+*id*  
+Identyfikator kontekstu tematu Pomocy. Zobacz [HTML Help: Context-Sensitive Help for Your Programs](../mfc/html-help-context-sensitive-help-for-your-programs.md) więcej informacji na temat kontekstu identyfikatorów.
+
+## <a name="remarks"></a>Uwagi
+
+**Helpcontext —** atrybut C++ ma taką samą funkcjonalność jak [helpcontext —](http://msdn.microsoft.com/library/windows/desktop/aa366851) atrybutów w MIDL.
+
+## <a name="example"></a>Przykład
+
+Zobacz przykład [defaultvalue](../windows/defaultvalue.md) przykład sposobu użycia **helpcontext —**.
+
+## <a name="requirements"></a>Wymagania
+
+### <a name="attribute-context"></a>Kontekst atrybutu
+
+|||
+|-|-|
+|**Dotyczy**|**interfejs**, **typedef**, **klasy**, metody, właściwości|
+|**Powtarzalne**|Nie|
+|**Wymaganych atrybutów**|Brak|
+|**Nieprawidłowe atrybuty**|Brak|
+
+Aby uzyskać więcej informacji, zobacz [konteksty atrybutu](../windows/attribute-contexts.md).
+
+## <a name="see-also"></a>Zobacz też
+
+[Atrybuty IDL](../windows/idl-attributes.md)  
+[Atrybuty interfejsu](../windows/interface-attributes.md)  
+[Atrybuty klasy](../windows/class-attributes.md)  
+[Atrybuty metody](../windows/method-attributes.md)  
+[Atrybuty Typedef, Enum, Union oraz Struct](../windows/typedef-enum-union-and-struct-attributes.md)  
+[helpfile](../windows/helpfile.md)  
+[helpstring](../windows/helpstring.md)  

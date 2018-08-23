@@ -1,5 +1,5 @@
 ---
-title: Runtimeclassflags::Value — stała | Dokumentacja firmy Microsoft
+title: RuntimeClassFlags::value, stała | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,26 +17,26 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 0a9deb05bcb38acb157eaefcc392e9906bea6253
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: b64cb5c4e09cd72d96ff0ad7924f6ab5f203b015
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33895739"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42605277"
 ---
 # <a name="runtimeclassflagsvalue-constant"></a>RuntimeClassFlags::value — Stała
-Pole, które zawiera [runtimeclasstype — wyliczenie](../windows/runtimeclasstype-enumeration.md) wartość.  
+Pola, które zawiera [runtimeclasstype — wyliczenie](../windows/runtimeclasstype-enumeration.md) wartość.
   
-## <a name="syntax"></a>Składnia  
+## <a name="syntax"></a>Składnia
   
-```cpp  
-static const unsigned int value = flags;  
-```  
+```cpp
+static const unsigned int value = flags;
+```
   
-## <a name="requirements"></a>Wymagania  
- **Nagłówek:** implements.h  
+## <a name="requirements"></a>Wymagania
+ **Nagłówek:** implements.h
   
- **Namespace:** Microsoft::wrl —  
+ **Namespace:** Microsoft::WRL
   
-## <a name="see-also"></a>Zobacz też  
+## <a name="see-also"></a>Zobacz też
  [RuntimeClassFlags, struktura](../windows/runtimeclassflags-structure.md)

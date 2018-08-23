@@ -17,30 +17,34 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 49ee69015837d27f7445db9f765739fc1d28152c
-ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
+ms.openlocfilehash: e4817d0f0082ef4ec0a9a588982405772d733fe0
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39642877"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42598035"
 ---
 # <a name="argtraitshelperargs-constant"></a>ArgTraitsHelper::args — Stała
-Obsługuje infrastrukturę biblioteki WRL i nie jest przeznaczona do użycia bezpośrednio w kodzie.  
-  
-## <a name="syntax"></a>Składnia  
-  
-```cpp  
-static const int args = Traits::args;  
-```  
-  
-## <a name="remarks"></a>Uwagi  
- Pomaga [ArgTraitsHelper::args](../windows/argtraitshelper-args-constant.md) liczbę parametrów bądź na bieżąco z `Invoke` metodę interfejsu delegata.  
-  
-## <a name="requirements"></a>Wymagania  
- **Nagłówek:** event.h  
-  
- **Namespace:** Microsoft::wrl:: details  
-  
-## <a name="see-also"></a>Zobacz też  
- [Argtraitshelper — struktura](../windows/argtraitshelper-structure.md)   
- [Microsoft::WRL::Details, przestrzeń nazw](../windows/microsoft-wrl-details-namespace.md)
+
+Obsługuje infrastrukturę biblioteki WRL i nie jest przeznaczona do użycia bezpośrednio w kodzie.
+
+## <a name="syntax"></a>Składnia
+
+```cpp
+static const int args = Traits::args;
+```
+
+## <a name="remarks"></a>Uwagi
+
+Pomaga [ArgTraitsHelper::args](../windows/argtraitshelper-args-constant.md) liczbę parametrów bądź na bieżąco z `Invoke` metodę interfejsu delegata.
+
+## <a name="requirements"></a>Wymagania
+
+**Nagłówek:** event.h
+
+**Namespace:** Microsoft::wrl:: details
+
+## <a name="see-also"></a>Zobacz też
+
+[ArgTraitsHelper, struktura](../windows/argtraitshelper-structure.md)  
+[Microsoft::WRL::Details, przestrzeń nazw](../windows/microsoft-wrl-details-namespace.md)

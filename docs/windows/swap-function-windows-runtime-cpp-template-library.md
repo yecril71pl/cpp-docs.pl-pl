@@ -15,41 +15,46 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: e2d42a108d461e3f0238612171b3445e28138194
-ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
+ms.openlocfilehash: 6b5273127b4f4329427f50c82f1bb15a4ad2634e
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/09/2018
-ms.locfileid: "40019618"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42590212"
 ---
 # <a name="swap-function-windows-runtime-c-template-library"></a>Swap — Funkcja (Biblioteka szablonów języka C++ środowiska wykonawczego systemu Windows)
-Obsługuje infrastrukturę biblioteki WRL i nie jest przeznaczona do użycia bezpośrednio w kodzie.  
-  
-## <a name="syntax"></a>Składnia  
-  
-```cpp  
-WRL_NOTHROW inline void Swap(  
-   _Inout_ T& left,  
-   _Inout_ T& right  
-);  
-```  
-  
-### <a name="parameters"></a>Parametry  
- *left*  
- Pierwszy argument.  
-  
- *right*  
- Drugi argument.  
-  
-## <a name="return-value"></a>Wartość zwracana  
-  
-## <a name="remarks"></a>Uwagi  
- Zamienia wartości dwóch określonych argumentów.  
-  
-## <a name="requirements"></a>Wymagania  
- **Nagłówek:** internal.h  
-  
- **Namespace:** Microsoft::wrl:: details  
-  
-## <a name="see-also"></a>Zobacz też  
- [Microsoft::WRL::Details, przestrzeń nazw](../windows/microsoft-wrl-details-namespace.md)
+
+Obsługuje infrastrukturę biblioteki WRL i nie jest przeznaczona do użycia bezpośrednio w kodzie.
+
+## <a name="syntax"></a>Składnia
+
+```cpp
+WRL_NOTHROW inline void Swap(
+   _Inout_ T& left,
+   _Inout_ T& right
+);
+```
+
+### <a name="parameters"></a>Parametry
+
+*left*  
+Pierwszy argument.
+
+*right*  
+Drugi argument.
+
+## <a name="return-value"></a>Wartość zwracana
+
+## <a name="remarks"></a>Uwagi
+
+Zamienia wartości dwóch określonych argumentów.
+
+## <a name="requirements"></a>Wymagania
+
+**Nagłówek:** internal.h
+
+**Namespace:** Microsoft::wrl:: details
+
+## <a name="see-also"></a>Zobacz też
+
+[Microsoft::WRL::Details, przestrzeń nazw](../windows/microsoft-wrl-details-namespace.md)

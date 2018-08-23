@@ -1,5 +1,5 @@
 ---
-title: Klasa platform::ArrayReference | Dokumentacja firmy Microsoft
+title: Platform::ArrayReference, klasa | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 12/30/2016
 ms.technology: cpp-windows
@@ -11,19 +11,19 @@ dev_langs:
 helpviewer_keywords:
 - Platform::ArrayReference Class
 ms.assetid: 9ab3b15e-8a60-4600-8fcb-7d6c86284f4b
-author: ghogen
-ms.author: ghogen
+author: mikeblome
+ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c8e4183c400cf45a23f24a98292b68f6df537da1
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: a7b2a0fd8c4903852e88fa80f12bc05894625888
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33089117"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42588314"
 ---
-# <a name="platformarrayreference-class"></a>Klasa platform::ArrayReference
-`ArrayReference` jest typem optymalizacji, który można podstawić [Platform::Array ^](../cppcx/platform-array-class.md) w parametrów wejściowych, gdy chcesz wypełnić tablicy stylu języka C z danych wejściowych.  
+# <a name="platformarrayreference-class"></a>Platform::ArrayReference, klasa
+`ArrayReference` jest typem optymalizacji, który można podstawić [Platform::Array ^](../cppcx/platform-array-class.md) w parametrów wejściowych, gdy chcesz wypełnić tablicy stylu C z danymi wejściowymi.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -44,12 +44,12 @@ class ArrayReference
 |Nazwa|Opis|  
 |----------|-----------------|  
 |[ArrayReference::operator() Operator](#operator-call)|Konwertuje to `ArrayReference` do `Platform::Array<T>^*`.|  
-|[ArrayReference::operator = — Operator](#operator-assign)|Przypisuje zawartość innego `ArrayReference` do tego wystąpienia.|  
+|[ArrayReference::operator = — Operator](#operator-assign)|Przypisuje zawartość innego `ArrayReference` dla tego wystąpienia.|  
   
 ## <a name="exceptions"></a>Wyjątki  
   
 ### <a name="remarks"></a>Uwagi  
- Za pomocą `ArrayReference` do wypełnienia tablicy stylu języka C, można uniknąć operacji kopiowania dodatkowe, który będzie używany w funkcji kopiowania najpierw do `Platform::Array` zmiennej, a następnie w stylu języka C tablicy. Jeśli używasz `ArrayReference`, istnieje tylko jedna kopia operacji. Na przykład kod, zobacz [tablicy i WriteOnlyArray](../cppcx/array-and-writeonlyarray-c-cx.md).  
+ Za pomocą `ArrayReference` do wypełnienia tablicy stylu C, można uniknąć operacja kopiowania dodatkowych może brać udział w kopiowania najpierw `Platform::Array` zmiennej, a następnie do tablicy stylu C. Kiedy używasz `ArrayReference`, istnieje tylko jedna kopia operacja. Dla przykładu kodu zobacz [tablica i WriteOnlyArray](../cppcx/array-and-writeonlyarray-c-cx.md).  
   
 ### <a name="requirements"></a>Wymagania  
  **Minimalna obsługiwana klienta:** systemu Windows 8  
@@ -73,20 +73,20 @@ ArrayReference(ArrayReference&& otherArg)
   
 ### <a name="parameters"></a>Parametry  
  `dataArg`  
- Wskaźnik do tablicy danych.  
+ Wskaźnik do danych.  
   
  `sizeArg`  
  Liczba elementów w tablicy źródłowej.  
   
  `otherArg`  
- `ArrayReference` Obiektu, którego dane zostaną przeniesione do zainicjowania nowego wystąpienia.  
+ `ArrayReference` Obiektu, którego dane zostaną przeniesione do inicjuje nowe wystąpienie.  
   
 ### <a name="remarks"></a>Uwagi  
   
 
 
 ## <a name="operator-assign"></a>  ArrayReference::operator = — Operator
-Przypisuje określony obiekt do bieżącego [Platform::ArrayReference](../cppcx/platform-arrayreference-class.md) obiektu za pomocą semantyki przenoszenia.  
+Przypisuje określony obiekt do bieżącego [Platform::ArrayReference](../cppcx/platform-arrayreference-class.md) , używając semantyki przenoszenia obiektu.  
   
 ### <a name="syntax"></a>Składnia  
   
@@ -104,12 +104,12 @@ ArrayReference& operator=(ArrayReference&& otherArg);
  Odwołanie do obiektu typu `ArrayReference`.  
   
 ### <a name="remarks"></a>Uwagi  
- `Platform::ArrayReference` to standard C++ szablon klasy, nie klasy referencyjnej.  
+ `Platform::ArrayReference` jest standardowego szablonu klasy C++, a nie klasy referencyjnej.  
   
 
 
 ## <a name="operator-call"></a>  ArrayReference::operator() Operator
-Konwertuje bieżący [Platform::ArrayReference](../cppcx/platform-arrayreference-class.md) wstecz do obiektu [Platform::Array](../cppcx/platform-array-class.md) klasy.  
+Konwertuje aktualny [Platform::ArrayReference](../cppcx/platform-arrayreference-class.md) obiektu do [Platform::Array](../cppcx/platform-array-class.md) klasy.  
   
 ### <a name="syntax"></a>Składnia  
   
@@ -123,7 +123,7 @@ Array<TArg>^ operator ();
  Dojście do obiektu typu `Array<TArg>^`  
   
 ### <a name="remarks"></a>Uwagi  
- [Platform::ArrayReference](../cppcx/platform-arrayreference-class.md) i [Platform::Array](../cppcx/platform-array-class.md) są standardowe szablony klas C++, ref nie klasy.  
+ [Platform::ArrayReference](../cppcx/platform-arrayreference-class.md) i [Platform::Array](../cppcx/platform-array-class.md) są standardowe szablony klas języka C++, ref nie klasami.  
   
 
 

@@ -17,62 +17,66 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 4c52b905420dcb576705d63be7d7bdce27c5eea6
-ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
+ms.openlocfilehash: 566e78820dd382a4b4e05742a410057b681d1fdc
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/09/2018
-ms.locfileid: "40015246"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42603153"
 ---
 # <a name="emitidl"></a>emitidl
-Określa, czy wszystkie kolejne atrybuty IDL są przetwarzane i umieszczane w pliku .idl wygenerowany.  
-  
-## <a name="syntax"></a>Składnia  
-  
+
+Określa, czy wszystkie kolejne atrybuty IDL są przetwarzane i umieszczane w pliku .idl wygenerowany.
+
+## <a name="syntax"></a>Składnia
+
 ```cpp
 [ emitidl(state, defaultimports=boolean) ];
-```  
-  
-### <a name="parameters"></a>Parametry  
+```
+
+### <a name="parameters"></a>Parametry
+
 *state*  
-Jedną z następujących wartości: `true`, `false`, `forced`, `restricted`, `push`, lub `pop`.  
-  
--   Jeśli `true`, wszelkie atrybuty kategorii IDL w pliku kodu źródłowego są umieszczane w pliku .idl wygenerowany. Jest to domyślne ustawienie dla **emitidl**.  
-  
--   Jeśli `false`, wszelkie atrybuty kategorii IDL w pliku kodu źródłowego nie będą wprowadzone w pliku .idl wygenerowany.  
-  
--   Jeśli `restricted`, umożliwia atrybuty IDL, znajdować się w pliku bez [modułu](../windows/module-cpp.md) atrybutu. Kompilator nie generuje pliku .idl.  
-  
--   Jeśli `forced`, zastępuje kolejnej `restricted` atrybut, który wymaga pliku, aby zawierała `module` atrybut, jeśli istnieją IDL atrybutów w pliku.  
-  
--   `push` Umożliwia zapisanie bieżącego **emitidl** ustawienia do wewnętrznego **emitidl** stosu, i `pop` pozwala ustawić **emitidl** na dowolną wartość znajduje się na górze wewnętrznego **emitidl** stosu.  
-  
+Jedną z następujących wartości: `true`, `false`, `forced`, `restricted`, `push`, lub `pop`.
+
+- Jeśli `true`, wszelkie atrybuty kategorii IDL w pliku kodu źródłowego są umieszczane w pliku .idl wygenerowany. Jest to domyślne ustawienie dla **emitidl**.
+
+- Jeśli `false`, wszelkie atrybuty kategorii IDL w pliku kodu źródłowego nie będą wprowadzone w pliku .idl wygenerowany.
+
+- Jeśli `restricted`, umożliwia atrybuty IDL, znajdować się w pliku bez [modułu](../windows/module-cpp.md) atrybutu. Kompilator nie generuje pliku .idl.
+
+- Jeśli `forced`, zastępuje kolejnej `restricted` atrybut, który wymaga pliku, aby zawierała `module` atrybut, jeśli istnieją IDL atrybutów w pliku.
+
+- `push` Umożliwia zapisanie bieżącego **emitidl** ustawienia do wewnętrznego **emitidl** stosu, i `pop` pozwala ustawić **emitidl** na dowolną wartość znajduje się na górze wewnętrznego **emitidl** stosu.
+
 `defaultimports=`*wartość logiczna* \(opcjonalne)  
--   Jeśli *logiczna* jest **true**, docobj.idl są importowane do pliku .idl wygenerowany. Ponadto jeśli plik o takiej samej nazwie jak .h pliku .idl, który `#include` do Twojego źródła kod znajduje się w tym samym katalogu co plik .h, a następnie pliku .idl wygenerowanego zawiera instrukcję import dla tego pliku .idl.  
-  
--   Jeśli *logiczna* jest **false**, docobj.idl nie jest zaimportowany do pliku .idl wygenerowany. Należy jawnie zaimportować .IDL — pliki za pomocą [zaimportować](../windows/import.md).  
-  
-## <a name="remarks"></a>Uwagi  
-Po **emitidl** atrybut C++ występuje w pliku kodu źródłowego, IDL atrybuty kategorii są umieszczane w pliku .idl wygenerowany. W przypadku nie **emitidl** atrybutu, atrybuty IDL w pliku kodu źródłowego są dane wyjściowe do pliku .idl wygenerowany.  
-  
-Użytkownik może mieć wielu **emitidl** atrybutów w pliku kodu źródłowego. Jeśli `[emitidl(false)];` występuje w pliku bez dalszej `[emitidl(true)];`, a następnie atrybuty nie są przetwarzane w pliku .idl wygenerowany.  
-  
-Każdorazowo, kompilator napotka nowy plik **emitidl** niejawnie ustawiono **true**.  
-  
-## <a name="requirements"></a>Wymagania  
-  
-### <a name="attribute-context"></a>Kontekst atrybutu  
-  
-|||  
-|-|-|  
-|**Dotyczy**|Dowolne miejsce|  
-|**Powtarzalne**|Nie|  
-|**Wymaganych atrybutów**|Brak|  
-|**Nieprawidłowe atrybuty**|Brak|  
-  
-Aby uzyskać więcej informacji, zobacz [konteksty atrybutu](../windows/attribute-contexts.md).  
-  
-## <a name="see-also"></a>Zobacz też  
-[Atrybuty kompilatora](../windows/compiler-attributes.md)   
-[Oddzielne atrybuty](../windows/stand-alone-attributes.md)   
+- Jeśli *logiczna* jest **true**, docobj.idl są importowane do pliku .idl wygenerowany. Ponadto jeśli plik o takiej samej nazwie jak .h pliku .idl, który `#include` do Twojego źródła kod znajduje się w tym samym katalogu co plik .h, a następnie pliku .idl wygenerowanego zawiera instrukcję import dla tego pliku .idl.
+
+- Jeśli *logiczna* jest **false**, docobj.idl nie jest zaimportowany do pliku .idl wygenerowany. Należy jawnie zaimportować .IDL — pliki za pomocą [zaimportować](../windows/import.md).
+
+## <a name="remarks"></a>Uwagi
+
+Po **emitidl** atrybut C++ występuje w pliku kodu źródłowego, IDL atrybuty kategorii są umieszczane w pliku .idl wygenerowany. W przypadku nie **emitidl** atrybutu, atrybuty IDL w pliku kodu źródłowego są dane wyjściowe do pliku .idl wygenerowany.
+
+Użytkownik może mieć wielu **emitidl** atrybutów w pliku kodu źródłowego. Jeśli `[emitidl(false)];` występuje w pliku bez dalszej `[emitidl(true)];`, a następnie atrybuty nie są przetwarzane w pliku .idl wygenerowany.
+
+Każdorazowo, kompilator napotka nowy plik **emitidl** niejawnie ustawiono **true**.
+
+## <a name="requirements"></a>Wymagania
+
+### <a name="attribute-context"></a>Kontekst atrybutu
+
+|||
+|-|-|
+|**Dotyczy**|Dowolne miejsce|
+|**Powtarzalne**|Nie|
+|**Wymaganych atrybutów**|Brak|
+|**Nieprawidłowe atrybuty**|Brak|
+
+Aby uzyskać więcej informacji, zobacz [konteksty atrybutu](../windows/attribute-contexts.md).
+
+## <a name="see-also"></a>Zobacz też
+
+[Atrybuty kompilatora](../windows/compiler-attributes.md)  
+[Oddzielne atrybuty](../windows/stand-alone-attributes.md)  
 [Przykłady atrybutów](http://msdn.microsoft.com/558ebdb2-082f-44dc-b442-d8d33bf7bdb8)

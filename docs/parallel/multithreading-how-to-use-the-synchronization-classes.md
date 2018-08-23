@@ -23,30 +23,31 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 49b0737a794216c4899b280bc049a1cdc0fe0948
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: cec2f873f1fc46ebac2e0f1714c8f46ebc10eac4
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33689028"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42597892"
 ---
 # <a name="multithreading-how-to-use-the-synchronization-classes"></a>Wielowątkowość: jak używać klas synchronizacji
-Synchronizacja dostęp do zasobów między wątkami jest to powszechny problem, podczas pisania aplikacji wielowątkowych. Dwa lub więcej wątków jednocześnie dostęp do tych samych danych może prowadzić do niepożądanych i nieprzewidywalnych wyników. Na przykład jeden wątek może być aktualizowanie zawartości struktury, podczas gdy inny wątek odczytuje zawartość tej samej struktury. Jest nieznany otrzymają wątku czytania, jakie dane: stare dane nowo napisanych danych i prawdopodobnie ich kombinacjami. MFC zawiera pewną liczbę synchronizacji i klasy dostępu synchronizacji, aby pomóc w rozwiązaniu tego problemu. W tym temacie opisano klasy dostępne oraz sposób ich używać do tworzenia klas wątkowo w typowej aplikacji wielowątkowych.  
+Synchronizowanie dostęp do zasobów między wątkami jest to powszechny problem, podczas pisania aplikacji wielowątkowych. Masz co najmniej dwóch wątków jednocześnie dostępu do tych samych danych może prowadzić do niepożądanych i nieprzewidywalnych wyników. Na przykład jeden wątek może być aktualizowanie zawartości struktury, podczas gdy inny wątek odczytuje zawartość tę samą strukturę. Jest nieznany otrzymają wątku odczytywania danych: stare dane nowo zapisanych danych i prawdopodobnie kombinacji obu. Biblioteka MFC zawiera szereg synchronizacji i klasy dostępu synchronizacji, aby pomóc w rozwiązaniu tego problemu. W tym temacie opisano klasy, które są dostępne i jak ich używać do tworzenia klas metodą o bezpiecznych wątkach w typowej aplikacji wielowątkowych.  
   
- Typowa aplikacja wielowątkowa ma klasę, która reprezentuje zasób współdzielenia wątków. Klasa prawidłowo zaprojektowana, pełni wielowątkowość nie wymaga wywołaniem dowolnej funkcji synchronizacji. To wszystko, co obsługiwany wewnętrznie do klasy, umożliwiając skoncentrować się na temat sposobu użycia najlepsze klasy, a nie na temat sposobu może pobrać uszkodzony. Skuteczne techniki tworzenia klasy pełni wielowątkowość polega na scaleniu klasa synchronizacji do klasy zasobów. Scalanie klas synchronizacji w udostępnionej klasie jest dość proste.  
+Typowa aplikacja wielowątkowa ma klasę, która reprezentuje zasób do współdzielenia pośród wątków. Klasa prawidłowo zaprojektowana, w pełni metodą o bezpiecznych wątkach nie wymaga wywołaniem dowolnej funkcji synchronizacji. Wszystko, czego odbywa się wewnętrznie do klasy, dzięki czemu możesz skoncentrować się na najlepszego wykorzystania tej klasy, nie na temat sposobu może uzyskać uszkodzony. Skuteczną techniką tworzenia klasy pełni wątków jest scalić klasę synchronizacji do klasy zasobów. Scalanie klas synchronizacji w udostępnionej klasie jest dość proste.  
   
- Na przykład mieć aplikację, która przechowuje połączonej listy kont. Ta aplikacja pozwala maksymalnie trzy konta należy zbadać w oddzielnych okien, ale tylko jeden z nich może być aktualizowana w dowolnym momencie konkretnego. Po zaktualizowaniu konta zaktualizowane dane są wysyłane przez sieć do archiwum danych.  
+Na przykład potrwać aplikację, która utrzymuje połączonej listy kont. Ta aplikacja umożliwia maksymalnie trzy konta do badania w oddzielnych okien, ale w danym momencie można zaktualizować tylko jeden. Gdy konto zostanie zaktualizowany, zaktualizowane dane są wysyłane przez sieć do archiwum danych.  
   
- Ta przykładowa aplikacja używa wszystkie trzy typy klas synchronizacji. Ponieważ zezwala ona na maksymalnie trzy konta należy zbadać w tym samym czasie, używa [CSemaphore](../mfc/reference/csemaphore-class.md) zajmującym się trzy obiekty widoku. Podczas próby wyświetlenia czwarty konta występuje, aplikacji, albo czeka, aż jeden z trzech pierwszych windows powoduje zamknięcie lub nie jest on. Po zaktualizowaniu konta, aplikacja używa [CCriticalSection](../mfc/reference/ccriticalsection-class.md) aby upewnić się, że tylko jedno konto jest aktualizowany w czasie. Po aktualizacji zakończy się powodzeniem, sygnały [CEvent](../mfc/reference/cevent-class.md), który zwalnia wątku oczekiwania na zdarzenie zostać zgłoszony. Ten wątek wysyła nowe dane do archiwum danych.  
+Ta przykładowa aplikacja używa wszystkich trzech typów klas synchronizacji. Ponieważ zezwala ona na maksymalnie trzy konta do badania, w tym samym czasie, używa [CSemaphore](../mfc/reference/csemaphore-class.md) Aby ograniczyć dostęp do trzy obiekty widoku. Podczas próby wyświetlenia czwarty konta występuje, aplikacji, albo oczekuje, aż jeden z pierwszych trzech systemu windows zostanie zamknięty lub zakończy się niepowodzeniem. Gdy konto zostanie zaktualizowany, aplikacja używa [CCriticalSection](../mfc/reference/ccriticalsection-class.md) aby upewnić się, że tylko jedno konto jest aktualizowana w danym momencie. Po aktualizacji zakończy się powodzeniem, sygnalizuje [CEvent](../mfc/reference/cevent-class.md), które zwalnia oczekiwania na zdarzenie, które ma być zasygnalizowany wątku. Ten wątek wysyła nowe dane do archiwum danych.  
   
 ##  <a name="_mfc_designing_a_thread.2d.safe_class"></a> Projektowanie klasy obsługujące wielowątkowość  
- Aby klasy pełni wielowątkowość, najpierw dodać klasy odpowiedniej synchronizacji do udostępnionego klas jako element członkowski danych. W poprzednim przykładzie zarządzania kontami **CSemaphore** element członkowski danych zostanie dodany do klasy widoku `CCriticalSection` element członkowski danych zostanie dodany do klasy połączone listy i `CEvent` danych zostanie dodany element członkowski danych Klasa magazynu.  
+ 
+Aby klasę pełni metodą o bezpiecznych wątkach, najpierw dodać klasy synchronizacji odpowiednich do udostępnionego klas jako element członkowski danych. W poprzednim przykładzie zarządzania kontami `CSemaphore` element członkowski danych zostaną dodane do klasy widoku `CCriticalSection` element członkowski danych zostaną dodane do klasy połączonej listy i `CEvent` element członkowski danych zostaną dodane do klasy magazynu danych.  
   
- Następnie dodaj wywołaniach synchronizacji do wszystkich funkcji Członkowskich, które modyfikować danych w klasie lub uzyskania dostępu do kontrolowanego zasobu. W każdej funkcji należy utworzyć albo [CSingleLock](../mfc/reference/csinglelock-class.md) lub [CMultiLock](../mfc/reference/cmultilock-class.md) obiektu i wywołania tego obiektu `Lock` funkcji. Gdy obiekt blokady wykracza poza zakres i zostanie zniszczony, obiektu destruktor wywoła `Unlock` , zwalniając zasobu. Oczywiście można wywołać `Unlock` bezpośrednio Jeśli chcesz.  
+Następnie dodaj wywołaniach synchronizacji do wszystkich składowych, które modyfikują dane w klasie lub uzyskania dostępu do kontrolowanego zasobu. W każdej funkcji, należy utworzyć jedną [CSingleLock](../mfc/reference/csinglelock-class.md) lub [CMultiLock](../mfc/reference/cmultilock-class.md) obiektu, a następnie wywołać ten obiekt `Lock` funkcji. Gdy obiekt blokady wykracza poza zakres i jest niszczony, destruktor obiektu wywołuje `Unlock` , przy zwalnianiu zasobów. Oczywiście można wywołać `Unlock` bezpośrednio chcącym.  
   
- Projektowanie klasy obsługującej wielowątkowość w ten sposób umożliwi można używać w aplikacji wielowątkowych jako łatwo jako klasa z systemem innym niż wątkowo, ale z wyższego poziomu bezpieczeństwa. Zawieranie obiekt synchronizacji i synchronizacji dostępu do obiektów w klasie zasobu zapewnia wszystkie korzyści programowania pełni wielowątkowość bez zwrotu utrzymywanie synchronizacji kodu.  
+Projektowanie swojej klasy obsługujące wielowątkowość w ten sposób umożliwia może być ona używana w aplikacji wielowątkowych jako łatwo jako klasa bez wątkowo, ale na wyższym poziomie bezpieczeństwa. Zawieranie obiekt synchronizacji i synchronizacji dostępu do obiektów w klasie zasobu wszystkie ma zalety programowania pełni metodą o bezpiecznych wątkach bez zwrotu utrzymywanie synchronizacji kodu.  
   
- Poniższy przykład kodu pokazuje tej metody za pomocą elementem członkowskim danych `m_CritSection` (typu `CCriticalSection`), a zadeklarowanych w klasie zasobu udostępnionego i `CSingleLock` obiektu. Synchronizacja zasobu udostępnionego (pochodną `CWinThread`) nastąpiła tworząc `CSingleLock` przy użyciu adresu `m_CritSection` obiektu. Aby zablokować zasobu podejmowana jest próba i po uzyskaniu praca jest wykonywana na obiekcie udostępnionym. Po zakończeniu pracy zasób został odblokowany w wyniku wywołania `Unlock`.  
+Poniższy przykład kodu przedstawia tę metodę, przy użyciu element członkowski danych `m_CritSection` (typu `CCriticalSection`), jest zadeklarowana w klasie zasobów udostępnionych i `CSingleLock` obiektu. Synchronizacja udostępnionego zasobu (pochodną `CWinThread`) zostanie podjęta, tworząc `CSingleLock` obiektu przy użyciu adresu `m_CritSection` obiektu. Próby zablokowania zasobu i po uzyskaniu praca jest wykonywana na obiekcie udostępnionym. Po zakończeniu pracy zasobu jest odblokowana wywołaniem `Unlock`.  
   
 ```  
 CSingleLock singleLock(&m_CritSection);  
@@ -58,11 +59,12 @@ singleLock.Unlock();
 ```  
   
 > [!NOTE]
->  `CCriticalSection`, w przeciwieństwie do innych klas MFC synchronizacji nie ma opcji żądanie czasu blokady. Okres oczekiwania na wątek zwolnić to nieskończoność.  
+> `CCriticalSection`, w przeciwieństwie do innych klas synchronizacji MFC nie ma opcji żądania Przekroczono limit czasu blokady. Okres oczekiwania na wątek zwolnić jest nieskończona.  
   
- Wady tej metody to, że klasa będzie przebiegać wolniej niż tej samej klasy bez synchronizacji obiekty dodane. Ponadto jeśli istnieje ryzyko, że więcej niż jeden wątek może usunąć obiektu, scalonych podejście może nie zawsze działać. W takim przypadku warto zachować synchronizacji oddzielnych obiektów.  
+Wady tego podejścia to, że klasa będzie przebiegać wolniej niż do tej samej klasy bez obiekty synchronizacji dodane. Ponadto w przypadku prawdopodobieństwo, że więcej niż jeden wątek może spowodować usunięcie obiektu scalonych podejście może nie zawsze działać. W takiej sytuacji zaleca się zachować oddzielne synchronizacji obiektów.  
   
- Aby uzyskać informacje dotyczące określania, która klasa synchronizacji używane w różnych sytuacjach, zobacz [Multithreading: kiedy używać klas synchronizacji](../parallel/multithreading-when-to-use-the-synchronization-classes.md). Aby uzyskać więcej informacji o synchronizacji, zobacz [synchronizacji](http://msdn.microsoft.com/library/windows/desktop/ms686353) w [!INCLUDE[winsdkshort](../atl-mfc-shared/reference/includes/winsdkshort_md.md)]. Aby uzyskać więcej informacji na temat obsługi wielowątkowości w MFC, zobacz [Multithreading z C++ i MFC](../parallel/multithreading-with-cpp-and-mfc.md).  
+Aby uzyskać informacje dotyczące ustalania, która klasa synchronizacji do użycia w różnych sytuacjach, zobacz [wielowątkowość: kiedy używać klas synchronizacji](../parallel/multithreading-when-to-use-the-synchronization-classes.md). Aby uzyskać więcej informacji na temat synchronizacji, zobacz [synchronizacji](http://msdn.microsoft.com/library/windows/desktop/ms686353) w zestawie Windows SDK. Aby uzyskać więcej informacji na temat Obsługa wielowątkowości w MFC, zobacz [wielowątkowość z C++ i MFC](../parallel/multithreading-with-cpp-and-mfc.md).  
   
 ## <a name="see-also"></a>Zobacz też  
- [Wielowątkowość z C++ i MFC](../parallel/multithreading-with-cpp-and-mfc.md)
+ 
+[Wielowątkowość z C++ i MFC](../parallel/multithreading-with-cpp-and-mfc.md)

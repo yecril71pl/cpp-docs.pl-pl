@@ -16,22 +16,22 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d6f9709da189403f2594d76751430d30554bffe5
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 3c6ba57b7036aae652b9eb6d885f9105d8bf0826
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33300621"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42607606"
 ---
 # <a name="command-line-error-d8016"></a>Błąd D8016 wiersza polecenia
-Opcja "1" i "option2" Opcje wiersza polecenia są niezgodne  
+Opcje wiersza polecenia "opcja1" i "opcja2" są niezgodne  
   
- Nie można jednocześnie określić opcje wiersza polecenia.  
+ Nie można jednocześnie określić opcji wiersza polecenia.  
   
  Sprawdź zmienne środowiskowe, takie jak CL, dla opcji specyfikacji.  
   
- **/ CLR** oznacza **/eha**, i nie można określić innych **/EH** — opcja kompilatora z **/CLR**. Aby uzyskać więcej informacji, zobacz [/CLR (kompilacja języka wspólnego środowiska uruchomieniowego)](../../build/reference/clr-common-language-runtime-compilation.md).  
+ **/ CLR** oznacza **/eha**, i nie można określić inne **/EH** — opcja kompilatora przy użyciu **/CLR**. Aby uzyskać więcej informacji, zobacz [/CLR (kompilacja języka wspólnego środowiska uruchomieniowego)](../../build/reference/clr-common-language-runtime-compilation.md).  
   
- Mogą wystąpić d8016 polecenia po zaktualizowaniu [!INCLUDE[vcprvc](../../build/includes/vcprvc_md.md)] 6.0 projektu: procesu Kreatora aktualizacji projektu mogą umożliwić **/RTC** dla każdego pliku kodu źródłowego w projekcie, który zastępuje **/RTC** ustawienie Projekt.  Aby rozwiązać, zmień **/RTC** ustawienie dla każdego pliku kodu źródłowego w projekcie do domyślnych ustawień, co oznacza, że ustawienie projektu **/RTC** będzie obowiązywać dla każdego pliku.  
+ D8016 może wystąpić po uaktualnieniu projektu Visual C++ 6.0: proces Kreatora aktualizacji projektu mogą umożliwiać **usunęliśmy** dla każdego pliku kodu źródłowego w projekcie, który zastępuje **usunęliśmy** ustawienie dla projektu.  Aby rozwiązać problem, zmień **usunęliśmy** ustawień dla każdego pliku kodu źródłowego w projekcie ustawienie domyślne, co oznacza, że ustawienia projektu dla **usunęliśmy** będą obowiązywać dla każdego pliku.  
   
- Zobacz [/RTC (błąd czasu wykonywania sprawdza)](../../build/reference/rtc-run-time-error-checks.md) informacji na temat zmiany **/RTC** ustawienie właściwości.
+ Zobacz [usunęliśmy (kontrole błąd czasu wykonywania)](../../build/reference/rtc-run-time-error-checks.md) informacji na temat zmiany **usunęliśmy** ustawienie właściwości.

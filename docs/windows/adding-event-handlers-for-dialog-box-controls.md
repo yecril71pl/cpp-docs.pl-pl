@@ -18,12 +18,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 2dce9b2ce59eb98c59c7a6cf04be52f3d439fdb0
-ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
+ms.openlocfilehash: ad7b007728d3de949fec678249edd56c7032d250
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39642854"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42605740"
 ---
 # <a name="adding-event-handlers-for-dialog-box-controls"></a>Dodawanie obsługi zdarzeń dla formantów okna dialogowego
 
@@ -49,13 +49,13 @@ Dla projektu oknach dialogowych, które są już skojarzone z klasą możesz kor
 
    - BN_SETFOCUS
 
-    > [!NOTE]
-    > Alternatywnie, wybierz okno dialogowe i kliknij przycisk **ControlEvents** przycisk, aby wyświetlić listę typowych zdarzeń Windows dla wszystkich kontrolek w oknie dialogowym.
+   > [!NOTE]
+   > Alternatywnie, wybierz okno dialogowe i kliknij przycisk **ControlEvents** przycisk, aby wyświetlić listę typowych zdarzeń Windows dla wszystkich kontrolek w oknie dialogowym.
 
 3. W **właściwości** okna, kliknij kolumnę prawym obok zdarzenia w celu obsługi, a następnie wybierz nazwę zdarzenia sugerowane powiadomień (na przykład `OnBnClickedOK` obsługuje BN_CLICKED).
 
-    > [!NOTE]
-    > Alternatywnie możesz podać nazwę procedury obsługi zdarzeń wybór, a nie wybrana domyślna nazwa programu obsługi zdarzeń.
+   > [!NOTE]
+   > Alternatywnie możesz podać nazwę procedury obsługi zdarzeń wybór, a nie wybrana domyślna nazwa programu obsługi zdarzeń.
 
    Po wybraniu zdarzenia programu Visual Studio otwiera **edytora tekstów** i wyświetla kod procedury obsługi zdarzeń. Na przykład, poniższy kod zostanie dodany do domyślnej `OnBnClickedOK`:
 
@@ -71,14 +71,16 @@ Jeśli chcesz dodać program obsługi zdarzeń do klasy innej niż jedna impleme
 Aby uzyskać informacje na temat dodawania zasobów do projektów zarządzanych, zobacz [zasoby w aplikacjach pulpitu](/dotnet/framework/resources/index) w *przewodniku dewelopera .NET Framework*. Aby uzyskać informacji na temat ręcznego dodawania plików zasobów do projektów zarządzanych, uzyskiwania dostępu do zasobów, wyświetlania statycznych zasobów i przypisywania ciągów zasobów do właściwości, zobacz [Creating Resource Files dla aplikacji klasycznych](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Aby uzyskać informacji na temat globalizacja i lokalizacja zasobów w aplikacjach zarządzanych, zobacz [Globalizing i lokalizowanie aplikacji programu .NET Framework](/dotnet/standard/globalization-localization/index).
 
 ## <a name="requirements"></a>Wymagania
- Win32
+
+Win32
 
 ## <a name="see-also"></a>Zobacz też
- [Domyślne zdarzenia kontroli](../windows/default-control-events.md)  
- [Definiowanie zmiennych składowych dla kontrolek okna dialogowego](../windows/defining-member-variables-for-dialog-controls.md)  
- [Kontrolki okna dialogowego i typy zmiennych](../ide/dialog-box-controls-and-variable-types.md)  
- [Dodawanie klasy](../ide/adding-a-class-visual-cpp.md)  
- [Dodawanie funkcji członkowskiej](../ide/adding-a-member-function-visual-cpp.md)  
- [Dodawanie zmiennej członkowskiej](../ide/adding-a-member-variable-visual-cpp.md)  
- [Zastępowanie funkcji wirtualnych](../ide/overriding-a-virtual-function-visual-cpp.md)  
- [Handler komunikatów MFC](../mfc/reference/adding-an-mfc-message-handler.md)  
+
+[Domyślne zdarzenia kontroli](../windows/default-control-events.md)  
+[Definiowanie zmiennych składowych dla kontrolek okna dialogowego](../windows/defining-member-variables-for-dialog-controls.md)  
+[Kontrolki okna dialogowego i typy zmiennych](../ide/dialog-box-controls-and-variable-types.md)  
+[Dodawanie klasy](../ide/adding-a-class-visual-cpp.md)  
+[Dodawanie funkcji członkowskiej](../ide/adding-a-member-function-visual-cpp.md)  
+[Dodawanie zmiennej członkowskiej](../ide/adding-a-member-variable-visual-cpp.md)  
+[Zastępowanie funkcji wirtualnych](../ide/overriding-a-virtual-function-visual-cpp.md)  
+[Handler komunikatów MFC](../mfc/reference/adding-an-mfc-message-handler.md)  

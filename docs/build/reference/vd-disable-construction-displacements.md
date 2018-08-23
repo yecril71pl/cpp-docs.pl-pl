@@ -1,5 +1,5 @@
 ---
-title: -DW (Wyłącz przemieszczanie konstrukcji) | Dokumentacja firmy Microsoft
+title: -vd (Wyłącz przemieszczanie konstrukcji) | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -26,12 +26,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c6a7b9bacc95c668c1c0f59a3dba172d58c607d2
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 4e983da4521db077235c2b879e0d1277b9505e94
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32377600"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42605871"
 ---
 # <a name="vd-disable-construction-displacements"></a>/vd (Wyłącz przemieszczanie konstrukcji)
 ## <a name="syntax"></a>Składnia  
@@ -42,36 +42,36 @@ ms.locfileid: "32377600"
   
 ## <a name="arguments"></a>Argumenty  
  `0`  
- Pomija Członkowskie przemieszczanie konstruktora/destruktora vtordisp. Wybierz tę opcję tylko wtedy, gdy masz pewność, wszystkie klasy konstruktory i destruktory wywołać wirtualnego działa praktycznie.  
+ Pomija elementu członkowskiego przemieszczenia konstruktora/destruktora vtordisp. Wybierz tę opcję tylko wtedy, gdy masz pewność, wszystkie konstruktory i destruktory klas wywołanie wirtualnej działa praktycznie.  
   
  `1`  
- Umożliwia tworzenie elementów członkowskich przemieszczanie konstruktora/destruktora vtordisp ukryte. Ten wybór jest ustawieniem domyślnym.  
+ Umożliwia tworzenie elementów członkowskich przemieszczenia konstruktora/destruktora vtordisp ukryte. Ten wybór jest ustawieniem domyślnym.  
   
  `2`  
- Umożliwia użycie [dynamic_cast Operator](../../cpp/dynamic-cast-operator.md) obiektu tworzona. Na przykład dynamic_cast z wirtualnej klasy podstawowej w klasie pochodnej.  
+ Pozwala na używanie [dynamic_cast Operator](../../cpp/dynamic-cast-operator.md) na obiekcie, który jest konstruowany. Na przykład dynamic_cast z wirtualnej klasy bazowej do klasy pochodnej.  
   
- **/ vd2** dodaje pole vtordisp, jeśli masz wirtualnej podstawy z funkcji wirtualnych. **/ vd1** powinno wystarczyć. Najbardziej typowe przypadek where **/vd2** jest niezbędne jest, gdy destruktora jest funkcją wirtualną tylko w podstawowym wirtualnego.  
+ **/ vd2** dodaje pole vtordisp, gdy baza wirtualna z funkcjami wirtualnymi. **/ vd1** powinny być wystarczające. Najczęściej zamierzone, gdzie **/vd2** jest niezbędne jest, gdy funkcja tylko wirtualna w sieci wirtualnej podstawowym destruktora.  
   
 ## <a name="remarks"></a>Uwagi  
- Opcje te dotyczą tylko kod w języku C++, która korzysta z wirtualnymi podstawami.  
+ Te opcje są stosowane tylko dla kodu C++, który korzysta z baz wirtualnych.  
   
- [!INCLUDE[vcprvc](../../build/includes/vcprvc_md.md)] implementuje obsługi przemieszczanie konstrukcji języka C++ w sytuacjach, w których jest używany wirtualnego dziedziczenia. Przemieszczanie konstrukcji rozwiązuje problem utworzenia funkcją wirtualną zadeklarowanej w wirtualnej podstawy i przesłonięcia w klasie pochodnej, jest wywoływana z konstruktora podczas konstruowania dalsze klasy pochodnej.  
+ Visual C++ implementuje obsługi przemieszczenia konstrukcji języka C++ w sytuacjach, gdzie używane jest wirtualne dziedziczenie. Przemieszczanie konstrukcji rozwiązać problem utworzony, jeśli funkcja wirtualna, zadeklarowanej w wirtualnej podstawowej i przesłonięcia w klasie pochodnej, jest wywoływana z konstruktora podczas konstruowania dalsze klasę pochodną.  
   
- Problem jest, że funkcji wirtualnej mogą być przekazywane przez niepoprawny `this` wskaźnika w związku z tym rozbieżności między przemieszczanie do wirtualnej podstaw klasę i przemieszczanie do jej klas pochodnych. Rozwiązanie zawiera dostosowania przemieszczenie pojedynczego konstrukcji, nazywane polem vtordisp dla każdej wirtualnej podstawy klasy.  
+ Problem polega na to, czy funkcja wirtualna może być przekazywane do nieprawidłowych `this` wskaźnika w wyniku rozbieżności między przemieszczanie do wirtualnego podstaw klasę i przemieszczanie się jej klas pochodnych. Rozwiązanie udostępnia dostosowanie przemieszczenia pojedynczego konstrukcji, dla każdego wirtualnego podstawy klasę o nazwie polem vtordisp.  
   
- Domyślnie vtordisp — pola są wprowadzane za każdym razem kod definiuje użytkownika konstruktory i destruktory i zastępuje również funkcji wirtualnych z wirtualnymi typami podstawowymi.  
+ Domyślnie vtordisp — pola zostały wprowadzone, zawsze wtedy, gdy kod definiuje zdefiniowanych przez użytkownika konstruktorów i destruktorów i zastępuje również funkcji wirtualnych z bazami wirtualnymi.  
   
- Te opcje wpływa na całą źródłową plików. Użyj [vtordisp](../../preprocessor/vtordisp.md) do pomijania, a następnie ponownie włącz vtordisp — pola na podstawie klasy klasy.  
+ Te opcje dotyczą całych plików źródłowych. Użyj [vtordisp](../../preprocessor/vtordisp.md) do pominięcia i ponownego włączenia pól vtordisp działające na zasadzie klasa po klasie.  
   
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Aby ustawić tę opcję kompilatora w środowisku programowania Visual Studio  
   
-1.  Otwórz projekt **strony właściwości** okno dialogowe. Aby uzyskać więcej informacji, zobacz [Praca z właściwościami projektu](../../ide/working-with-project-properties.md).  
+1.  Otwórz projekt **stron właściwości** okno dialogowe. Aby uzyskać więcej informacji, zobacz [Praca z właściwościami projektu](../../ide/working-with-project-properties.md).  
   
 2.  Kliknij przycisk **C/C++** folderu.  
   
-3.  Kliknij przycisk **wiersza polecenia** strony właściwości.  
+3.  Kliknij przycisk **wiersza polecenia** stronę właściwości.  
   
-4.  Typ opcji kompilatora w **dodatkowe opcje** pole.  
+4.  Wpisz opcje kompilatora w **dodatkowe opcje** pole.  
   
 ### <a name="to-set-this-compiler-option-programmatically"></a>Aby programowo ustawić tę opcję kompilatora  
   

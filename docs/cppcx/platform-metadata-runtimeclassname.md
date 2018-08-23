@@ -10,19 +10,19 @@ helpviewer_keywords:
 - RuntimeClassName
 - Platform::Metadata::RuntimeClassName
 ms.assetid: fdef8f85-ab94-4edd-ba50-ee0da9358ff6
-author: ghogen
-ms.author: ghogen
+author: mikeblome
+ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 297a5089af7db43d837934e864e0925cd7b34a3d
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 024d9d7dce234b07620a108b1f11c240bd842ac6
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33088235"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42592581"
 ---
 # <a name="platformmetadataruntimeclassname"></a>Platform::Metadata::RuntimeClassName
-Gdy jest stosowany do definicji klasy, zapewnia Klasa prywatna zwracanych prawidłową nazwą funkcji GetRuntimeClassName...  
+Po zastosowaniu do definicji klasy, zapewnia, że klasa prywatna zwraca prawidłową nazwę funkcji getruntimeclassname —...  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -33,13 +33,13 @@ Gdy jest stosowany do definicji klasy, zapewnia Klasa prywatna zwracanych prawid
 #### <a name="parameters"></a>Parametry  
  nazwa  
   
- Nazwa istniejącej typu publicznego, widocznego w środowisku wykonawczym systemu Windows.  
+ Nazwa istniejącego typu publiczne, która jest widoczna w środowisku uruchomieniowym Windows.  
   
 ### <a name="remarks"></a>Uwagi  
- Użyj tego atrybutu na klasy ref prywatne, aby określić nazwę typu niestandardowego środowisko uruchomieniowe i/lub gdy istniejącej nazwy nie spełnia wymagań. Określ jako nazwa interfejsu publicznego, który implementuje klasy.  
+ Użyj tego atrybutu na klasy ref prywatny, aby określić nazwę typu niestandardowego środowiska uruchomieniowego i/lub gdy istniejącej nazwy nie spełnia wymagań. Określ jako nazwę interfejsu publicznego, który implementuje klasa.  
   
 ### <a name="example"></a>Przykład  
- Poniższy przykład przedstawia użycie atrybutu. W tym przykładzie nazwa typu środowiska uruchomieniowego HellowWorldImpl jest Test::Native::MyComponent::IHelloWorld  
+ Poniższy przykład pokazuje, jak używać atrybutu. W tym przykładzie nazwa typu środowiska uruchomieniowego HellowWorldImpl jest Test::Native::MyComponent::IHelloWorld  
   
 ```  
   

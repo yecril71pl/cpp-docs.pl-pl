@@ -22,39 +22,42 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 2d1a59befd405e1412c2815694c40c8d24a99cec
-ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
+ms.openlocfilehash: d05557b6f92fa5bce8506572fd1c651950d6aa23
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/09/2018
-ms.locfileid: "40016999"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42594296"
 ---
 # <a name="resource-editors"></a>Edytory zasobów
-A **zasobów** edytora to specjalne środowisko służące do tworzenia lub modyfikowania zasobów, które są zawarte w projekcie programu Visual Studio. Edytory zasobów programu Visual Studio udostępnianie techniki i interfejsy, które ułatwiają tworzenie i modyfikowanie zasobów aplikacji, szybkie i łatwe. Edytory zasobów umożliwiają [umożliwia wyświetlanie i edytowanie zasobów w edytorze odpowiednie](../windows/viewing-and-editing-resources-in-a-resource-editor.md) i [zasobów w wersji zapoznawczej](../windows/previewing-resources.md).  
-  
- Odpowiedniego edytora jest otwierany automatycznie podczas tworzenia lub otwierania zasobu.  
-  
- **Uwaga** ponieważ projektów zarządzanych plików skryptu zasobu nie jest używany, należy otworzyć swoich zasobów przed **Eksploratora rozwiązań**. Możesz użyć [edytora obrazów](../windows/image-editor-for-icons.md) i [edytorze binarnym](binary-editor.md) do pracy z plikami zasobów w projektach zarządzanych. Wszelkie zarządzane zasoby, które chcesz edytować, muszą być powiązanymi zasobami. Edytory zasobów programu Visual Studio nie obsługują edycji zasobów osadzonych.  
-  
- Aby uzyskać informacje na temat dodawania zasobów do projektów zarządzanych, zobacz [zasoby w aplikacjach pulpitu](/dotnet/framework/resources/index) w *przewodniku dewelopera .NET Framework*. Aby uzyskać informacji na temat ręcznego dodawania plików zasobów do projektów zarządzanych, uzyskiwania dostępu do zasobów, wyświetlania statycznych zasobów i przypisywania ciągów zasobów do właściwości, zobacz [Creating Resource Files dla aplikacji klasycznych](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Aby uzyskać informacji na temat globalizacja i lokalizacja zasobów w aplikacjach zarządzanych, zobacz [Globalizing i lokalizowanie aplikacji programu .NET Framework](/dotnet/standard/globalization-localization/index).  
-  
-|Użyj...|Aby edytować...|  
-|----------------|----------------|  
-|[Edytor klawiszy skrótów](../windows/accelerator-editor.md)|Tabele akceleratora w projektach języka Visual C++.|  
-|[Edytor plików binarnych](binary-editor.md)|Dane binarne informacje i zasoby niestandardowe w projektach języka Visual C++, Visual Basic lub Visual C#.|  
-|[Edytor okien dialogowych](../windows/dialog-editor.md)|Okna dialogowe w projektach języka Visual C++.|  
-|[Edytor obrazów](../windows/image-editor-for-icons.md)|Mapy bitowe, ikony, kursorów i inne pliki obrazów w projektach języka Visual C++, Visual Basic lub Visual C#.|  
-|[Edytor menu](../windows/menu-editor.md)|Menu zasobów w projektach języka Visual C++.|  
-|[Edytor Ribbon](../mfc/ribbon-designer-mfc.md)|Zasoby wstążki w projektach MFC.|  
-|[Edytor ciągów](../windows/string-editor.md)|Ciąg tabel z projektów Visual C++.|  
-|[Edytor paska narzędzi](../windows/toolbar-editor.md)|Zasoby paska narzędzi z projektów Visual C++. Edytor paska narzędzi jest częścią edytora obrazów.|  
-|[Edytor informacji o wersji](../windows/version-information-editor.md)|Informacje o wersji w projektach języka Visual C++.|  
-  
-## <a name="requirements"></a>Wymagania  
- Brak  
-  
-## <a name="see-also"></a>Zobacz też  
- [Praca z plikami zasobów](../windows/working-with-resource-files.md)   
- [Pliki zasobów](../windows/resource-files-visual-studio.md)   
- [Symbole: Identyfikatory zasobów](../windows/symbols-resource-identifiers.md)   
- [Menu i inne zasoby](https://msdn.microsoft.com/library/windows/desktop/ms632583.aspx)
+
+A **zasobów** edytora to specjalne środowisko służące do tworzenia lub modyfikowania zasobów, które są zawarte w projekcie programu Visual Studio. Edytory zasobów programu Visual Studio udostępnianie techniki i interfejsy, które ułatwiają tworzenie i modyfikowanie zasobów aplikacji, szybkie i łatwe. Edytory zasobów umożliwiają [umożliwia wyświetlanie i edytowanie zasobów w edytorze odpowiednie](../windows/viewing-and-editing-resources-in-a-resource-editor.md) i [zasobów w wersji zapoznawczej](../windows/previewing-resources.md).
+
+Odpowiedniego edytora jest otwierany automatycznie podczas tworzenia lub otwierania zasobu.
+
+**Uwaga** ponieważ projektów zarządzanych plików skryptu zasobu nie jest używany, należy otworzyć swoich zasobów przed **Eksploratora rozwiązań**. Możesz użyć [edytora obrazów](../windows/image-editor-for-icons.md) i [edytorze binarnym](binary-editor.md) do pracy z plikami zasobów w projektach zarządzanych. Wszelkie zarządzane zasoby, które chcesz edytować, muszą być powiązanymi zasobami. Edytory zasobów programu Visual Studio nie obsługują edycji zasobów osadzonych.
+
+Aby uzyskać informacje na temat dodawania zasobów do projektów zarządzanych, zobacz [zasoby w aplikacjach pulpitu](/dotnet/framework/resources/index) w *przewodniku dewelopera .NET Framework*. Aby uzyskać informacji na temat ręcznego dodawania plików zasobów do projektów zarządzanych, uzyskiwania dostępu do zasobów, wyświetlania statycznych zasobów i przypisywania ciągów zasobów do właściwości, zobacz [Creating Resource Files dla aplikacji klasycznych](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Aby uzyskać informacji na temat globalizacja i lokalizacja zasobów w aplikacjach zarządzanych, zobacz [Globalizing i lokalizowanie aplikacji programu .NET Framework](/dotnet/standard/globalization-localization/index).
+
+|Użyj...|Aby edytować...|
+|----------------|----------------|
+|[Edytor klawiszy skrótów](../windows/accelerator-editor.md)|Tabele akceleratora w projektach języka Visual C++.|
+|[Edytor plików binarnych](binary-editor.md)|Dane binarne informacje i zasoby niestandardowe w projektach języka Visual C++, Visual Basic lub Visual C#.|
+|[Edytor okien dialogowych](../windows/dialog-editor.md)|Okna dialogowe w projektach języka Visual C++.|
+|[Edytor obrazów](../windows/image-editor-for-icons.md)|Mapy bitowe, ikony, kursorów i inne pliki obrazów w projektach języka Visual C++, Visual Basic lub Visual C#.|
+|[Edytor menu](../windows/menu-editor.md)|Menu zasobów w projektach języka Visual C++.|
+|[Edytor Ribbon](../mfc/ribbon-designer-mfc.md)|Zasoby wstążki w projektach MFC.|
+|[Edytor ciągów](../windows/string-editor.md)|Ciąg tabel z projektów Visual C++.|
+|[Edytor paska narzędzi](../windows/toolbar-editor.md)|Zasoby paska narzędzi z projektów Visual C++. Edytor paska narzędzi jest częścią edytora obrazów.|
+|[Edytor informacji o wersji](../windows/version-information-editor.md)|Informacje o wersji w projektach języka Visual C++.|
+
+## <a name="requirements"></a>Wymagania
+
+Brak
+
+## <a name="see-also"></a>Zobacz też
+
+[Praca z plikami zasobów](../windows/working-with-resource-files.md)  
+[Pliki zasobów](../windows/resource-files-visual-studio.md)  
+[Symbole: identyfikatory zasobów](../windows/symbols-resource-identifiers.md)  
+[Menu i inne zasoby](https://msdn.microsoft.com/library/windows/desktop/ms632583.aspx)

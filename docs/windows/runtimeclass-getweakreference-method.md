@@ -17,35 +17,40 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 5cba36256e6abe176c6f5785b49a105395a30ee7
-ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
+ms.openlocfilehash: cc4d2e542afcd72426cb3b0aba57b7d7cbabad06
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/09/2018
-ms.locfileid: "40014190"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42583647"
 ---
 # <a name="runtimeclassgetweakreference-method"></a>RuntimeClass::GetWeakReference — Metoda
-Pobiera wskaźnik do obiektu słabe odwołanie dla bieżącego **RuntimeClass** obiektu.  
-  
-## <a name="syntax"></a>Składnia  
-  
-```cpp  
-STDMETHOD(  
-   GetWeakReference  
-)(_Deref_out_ IWeakReference **weakReference);  
-```  
-  
-### <a name="parameters"></a>Parametry  
- *weakReference*  
- Gdy ta operacja zostanie ukończone, wskaźnik do obiektu słabe odwołanie.  
-  
-## <a name="return-value"></a>Wartość zwracana  
- Zawsze S_OK.  
-  
-## <a name="requirements"></a>Wymagania  
- **Nagłówek:** implements.h  
-  
- **Namespace:** Microsoft::WRL  
-  
-## <a name="see-also"></a>Zobacz też  
- [RuntimeClass, klasa](../windows/runtimeclass-class.md)
+
+Pobiera wskaźnik do obiektu słabe odwołanie dla bieżącego **RuntimeClass** obiektu.
+
+## <a name="syntax"></a>Składnia
+
+```cpp
+STDMETHOD(
+   GetWeakReference
+)(_Deref_out_ IWeakReference **weakReference);
+```
+
+### <a name="parameters"></a>Parametry
+
+*weakReference*  
+Gdy ta operacja zostanie ukończone, wskaźnik do obiektu słabe odwołanie.
+
+## <a name="return-value"></a>Wartość zwracana
+
+Zawsze S_OK.
+
+## <a name="requirements"></a>Wymagania
+
+**Nagłówek:** implements.h
+
+**Namespace:** Microsoft::WRL
+
+## <a name="see-also"></a>Zobacz też
+
+[RuntimeClass, klasa](../windows/runtimeclass-class.md)

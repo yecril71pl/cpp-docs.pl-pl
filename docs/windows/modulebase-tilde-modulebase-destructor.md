@@ -17,30 +17,34 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 223358d33fb7eab0663237e8eb8deb487b84109a
-ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
+ms.openlocfilehash: 071686e7ea4bf8a88beb340019b33d838e3aa806
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/09/2018
-ms.locfileid: "40010441"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42603516"
 ---
 # <a name="modulebasemodulebase-destructor"></a>ModuleBase::~ModuleBase — Destruktor
-Obsługuje infrastrukturę biblioteki WRL i nie jest przeznaczona do użycia bezpośrednio w kodzie.  
-  
-## <a name="syntax"></a>Składnia  
-  
-```cpp  
-virtual ~ModuleBase();  
-```  
-  
-## <a name="remarks"></a>Uwagi  
- Deinicjuje bieżące wystąpienie **ModuleBase** klasy.  
-  
-## <a name="requirements"></a>Wymagania  
- **Nagłówek:** implements.h  
-  
- **Namespace:** Microsoft::wrl:: details  
-  
-## <a name="see-also"></a>Zobacz też  
- [Modulebase — klasa](../windows/modulebase-class.md)   
- [Microsoft::WRL::Details, przestrzeń nazw](../windows/microsoft-wrl-details-namespace.md)
+
+Obsługuje infrastrukturę biblioteki WRL i nie jest przeznaczona do użycia bezpośrednio w kodzie.
+
+## <a name="syntax"></a>Składnia
+
+```cpp
+virtual ~ModuleBase();
+```
+
+## <a name="remarks"></a>Uwagi
+
+Deinicjuje bieżące wystąpienie **ModuleBase** klasy.
+
+## <a name="requirements"></a>Wymagania
+
+**Nagłówek:** implements.h
+
+**Namespace:** Microsoft::wrl:: details
+
+## <a name="see-also"></a>Zobacz też
+
+[ModuleBase, klasa](../windows/modulebase-class.md)  
+[Microsoft::WRL::Details, przestrzeń nazw](../windows/microsoft-wrl-details-namespace.md)

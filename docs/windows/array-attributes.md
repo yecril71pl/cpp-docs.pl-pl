@@ -15,21 +15,23 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 10f97f1ce98bbc3de81e1888aad7c36f237f6396
-ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
+ms.openlocfilehash: dfa345ba4b9960e10ebbbd0f2392204c0af34241
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39650352"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42590639"
 ---
 # <a name="array-attributes"></a>Atrybuty tablicy
-Następujące atrybuty dotyczą tablic lub `SAFEARRAY`s.  
-  
-|Atrybut|Opis|  
-|---------------|-----------------|  
-|[library_block](../windows/library-block.md)|Umieszcza konstrukcję wewnątrz bloku biblioteki pliku .idl.|  
-|[satype](../windows/satype.md)|Określa typ danych `SAFEARRAY` struktury.|  
-|[string](../windows/string-cpp.md)|Oznacza to, że jednowymiarowy **char**, **wchar_t**, `byte` (lub równoważnego) tablicy lub wskaźnika do tablicy takie, które muszą być traktowane jako ciąg.|  
-  
-## <a name="see-also"></a>Zobacz też  
- [Atrybuty w zależności od zastosowania](../windows/attributes-by-usage.md)
+
+Następujące atrybuty dotyczą tablic lub `SAFEARRAY`s.
+
+|Atrybut|Opis|
+|---------------|-----------------|
+|[library_block](../windows/library-block.md)|Umieszcza konstrukcję wewnątrz bloku biblioteki pliku .idl.|
+|[satype](../windows/satype.md)|Określa typ danych `SAFEARRAY` struktury.|
+|[string](../windows/string-cpp.md)|Oznacza to, że jednowymiarowy **char**, **wchar_t**, `byte` (lub równoważnego) tablicy lub wskaźnika do tablicy takie, które muszą być traktowane jako ciąg.|
+
+## <a name="see-also"></a>Zobacz też
+
+[Atrybuty w zależności od zastosowania](../windows/attributes-by-usage.md)

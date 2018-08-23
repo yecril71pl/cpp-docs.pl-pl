@@ -17,37 +17,42 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: b64f44e2188848a25e607c53171e25aa721e9bc4
-ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
+ms.openlocfilehash: 003bb9c845ef8124ade1262a25368d3d4cb34fa6
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39641369"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42606434"
 ---
 # <a name="criticalsectiontraitsunlock-method"></a>CriticalSectionTraits::Unlock — Metoda
-Specjalizuje się `CriticalSection` szablonu, tak że obsługuje uwalniający własności obiektu określona sekcja krytycznego.  
-  
-## <a name="syntax"></a>Składnia  
-  
-```cpp  
-inline static void Unlock(  
-   _In_ Type cs  
-);  
-```  
-  
-### <a name="parameters"></a>Parametry  
- *CS*  
- Wskaźnik do obiektu sekcję krytyczną.  
-  
-## <a name="remarks"></a>Uwagi  
- `Type` Modyfikator jest zdefiniowany jako `typedef CRITICAL_SECTION* Type;`.  
-  
- Aby uzyskać więcej informacji, zobacz **funkcja LeaveCriticalSection** w **funkcji synchronizacji** części dokumentacji interfejsu API Windows.  
-  
-## <a name="requirements"></a>Wymagania  
- **Nagłówek:** corewrappers.h  
-  
- **Namespace:** Microsoft::WRL::Wrappers::HandleTraits  
-  
-## <a name="see-also"></a>Zobacz też  
- [CriticalSectionTraits, struktura](../windows/criticalsectiontraits-structure.md)
+
+Specjalizuje się `CriticalSection` szablonu, tak że obsługuje uwalniający własności obiektu określona sekcja krytycznego.
+
+## <a name="syntax"></a>Składnia
+
+```cpp
+inline static void Unlock(
+   _In_ Type cs
+);
+```
+
+### <a name="parameters"></a>Parametry
+
+*CS*  
+Wskaźnik do obiektu sekcję krytyczną.
+
+## <a name="remarks"></a>Uwagi
+
+`Type` Modyfikator jest zdefiniowany jako `typedef CRITICAL_SECTION* Type;`.
+
+Aby uzyskać więcej informacji, zobacz **funkcja LeaveCriticalSection** w **funkcji synchronizacji** części dokumentacji interfejsu API Windows.
+
+## <a name="requirements"></a>Wymagania
+
+**Nagłówek:** corewrappers.h
+
+**Namespace:** Microsoft::WRL::Wrappers::HandleTraits
+
+## <a name="see-also"></a>Zobacz też
+
+[CriticalSectionTraits, struktura](../windows/criticalsectiontraits-structure.md)

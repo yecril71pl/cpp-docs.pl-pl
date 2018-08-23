@@ -1,25 +1,25 @@
 ---
-title: Słabe odwołania i cykle podziału (C + +/ CX) | Dokumentacja firmy Microsoft
+title: Słabe odwołania i przerywanie cykli (C + +/ CX) | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 01/22/2017
 ms.technology: cpp-windows
 ms.topic: language-reference
 ms.assetid: 1acb6402-05f0-4951-af94-0e9dab41c53e
-author: ghogen
-ms.author: ghogen
+author: mikeblome
+ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 48b5d73d85383056b17c806e061b131b12d821a9
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 92076ac919664fb8ebf6a01513b9382ade52f2a5
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33089081"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42598300"
 ---
-# <a name="weak-references-and-breaking-cycles-ccx"></a>Słabe odwołania i cykle podziału (C + +/ CX)
-W każdym systemie typu opartego na liczenie odwołań w formularzu można odwołania do typów *cykle*— to znaczy jeden obiekt odwołuje się do innego obiektu, drugi obiekt odwołuje się do innego obiektu, i tak dalej do momentu niektóre końcowego obiektu odwołuje się do pierwszy obiekt. W cyklu nie można usunąć obiektów poprawnie, jeśli jeden obiekt liczba odwołań wynosi zero. Aby rozwiązać ten problem, C + +/ CX zapewnia [klasy Platform::WeakReference](../cppcx/platform-weakreference-class.md) klasy. A `WeakReference` obiekt obsługuje [rozwiązać](../cppcx/platform-weakreference-class.md#resolve) metodę, która zwraca wartość null, jeśli obiekt już istnieje, lub zgłasza [Platform::InvalidCastException](../cppcx/platform-invalidcastexception-class.md) Jeśli obiekt jest aktywna, ale nie jest typu `T`.  
+# <a name="weak-references-and-breaking-cycles-ccx"></a>Słabe odwołania i przerywanie cykli (C + +/ CX)
+W dowolnym system typu, który opiera się na zliczaniu odwołań, można tworzyć odwołania do typów *cykle*— czyli jeden obiekt, który odwołuje się do drugiego obiektu, drugi obiekt, który odwołuje się do innego obiektu, i tak dalej do momentu końcowego obiektu odwołuje się do pierwszy obiekt. W cyklu nie można usunąć obiektów poprawnie, gdy liczba odwołań w jeden obiekt staje się zerem. Aby rozwiązać ten problem, C + +/ CX zapewnia [Platform::WeakReference, klasa](../cppcx/platform-weakreference-class.md) klasy. A `WeakReference` obiekt obsługuje [rozwiązać](../cppcx/platform-weakreference-class.md#resolve) metody, która zwraca wartość null, jeśli obiekt nie jest już istnieje, lub zgłasza [Platform::InvalidCastException](../cppcx/platform-invalidcastexception-class.md) Jeśli obiekt jest aktywny, ale nie jest typu `T`.  
   
- Jeden scenariusz, w którym `WeakReference` musi być używana jest wtedy, gdy `this` wskaźnika jest przechwytywany w wyrażeniu lambda, które służy do definiowania program obsługi zdarzeń. Zalecane jest użycie metody o nazwie podczas definiowania procedury obsługi zdarzeń, ale jeśli chcesz użyć wyrażenia lambda do obsługi zdarzenia — lub jeśli zajdzie potrzeba Podziel zliczanie cyklu w niektórych innych sytuacji — użyj `WeakReference`. Oto przykład:  
+ Jeden scenariusz, w którym `WeakReference` musi być używana jest, gdy `this` wskaźnik jest przechwytywane w wyrażeniu lambda, które jest używane do definiowania obsługi zdarzeń. Zalecane jest użycie metody nazwanej, podczas definiowania programów obsługi zdarzeń, ale jeśli chcesz użyć wyrażenia lambda do obsługi zdarzenia — lub jeśli trzeba przerwać zliczanie cyklu w niektórych innych sytuacji — użyj `WeakReference`. Oto przykład:  
   
 ```  
   
@@ -57,7 +57,7 @@ Class1::Class1()
 }  
 ```  
   
- Jeśli program obsługi zdarzeń zgłasza `DisconnectedException`, spowoduje wygenerowanie zdarzenia do usunięcia z listy subskrybentów programu obsługi.  
+ Gdy program obsługi zdarzeń zgłasza `DisconnectedException`, spowoduje wygenerowanie zdarzenia usunąć program obsługi z listy subskrybentów.  
   
 ## <a name="see-also"></a>Zobacz też  
 

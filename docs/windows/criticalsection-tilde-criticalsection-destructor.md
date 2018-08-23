@@ -17,26 +17,29 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: b432229f9ada4c1a3dbccfc9b71557827773b41c
-ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
+ms.openlocfilehash: 343f638c67acf4af627f9f65899d49c78c02fb13
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39645909"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42608759"
 ---
 # <a name="criticalsectioncriticalsection-destructor"></a>CriticalSection::~CriticalSection — Destruktor
-Wyłącza i niszczy bieżącego **CriticalSection** obiektu.  
-  
-## <a name="syntax"></a>Składnia  
-  
-```cpp  
-WRL_NOTHROW ~CriticalSection();  
-```  
-  
-## <a name="requirements"></a>Wymagania  
- **Nagłówek:** corewrappers.h  
-  
- **Namespace:** Microsoft::wrl:: wrappers  
-  
-## <a name="see-also"></a>Zobacz też  
- [CriticalSection, klasa](../windows/criticalsection-class.md)
+
+Wyłącza i niszczy bieżącego **CriticalSection** obiektu.
+
+## <a name="syntax"></a>Składnia
+
+```cpp
+WRL_NOTHROW ~CriticalSection();
+```
+
+## <a name="requirements"></a>Wymagania
+
+**Nagłówek:** corewrappers.h
+
+**Namespace:** Microsoft::wrl:: wrappers
+
+## <a name="see-also"></a>Zobacz też
+
+[CriticalSection, klasa](../windows/criticalsection-class.md)

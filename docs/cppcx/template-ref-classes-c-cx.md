@@ -1,26 +1,26 @@
 ---
-title: Szablon klasy ref (C + +/ CX) | Dokumentacja firmy Microsoft
+title: Klasy odwołania szablonu (C + +/ CX) | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 01/22/2017
 ms.technology: cpp-windows
 ms.topic: language-reference
 ms.assetid: a24d5f45-8dbb-4540-958f-c76c90d8ed93
-author: ghogen
-ms.author: ghogen
+author: mikeblome
+ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a1d637eeee0ff087a0c8f07d7929f6d4dcf13247
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 7fb322ae641a1821ed8434e0ea197acf752698e6
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33088053"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42592623"
 ---
-# <a name="template-ref-classes-ccx"></a>Szablon klasy ref (C + +/ CX)
-Szablonów języka C++ nie są publikowane w metadanych i dlatego nie może mieć publiczną lub chronioną ułatwień dostępu w programie. W programie, można również używać standardowych szablonów języka C++ wewnętrznie Ponadto można zdefiniować klasy ref prywatnej jako szablon i jawnie specjalne szablonu klasy referencyjnej można zadeklarować jako członek prywatny w klasie ref publicznego.  
+# <a name="template-ref-classes-ccx"></a>Klasy odwołania szablonu (C + +/ CX)
+Szablony C++ nie są publikowane w metadanych i dlatego nie może mieć publiczny lub chroniony ułatwień dostępu w programie. Oczywiście, używając standardowych szablonów języka C++ wewnętrznie w programach. Ponadto prywatnej klasy ref można zdefiniować jako szablonu i szablonu jawnie wyspecjalizowane klasy referencyjnej można zadeklarować jako od prywatnej składowej w klasie ref publicznego.  
   
 ## <a name="authoring-ref-class-templates"></a>Tworzenie szablonów klasy ref  
- Poniższy przykład pokazuje, jak zadeklarować prywatnej klasy ref jako szablon, a także sposób zadeklarować standardowych szablonów języka C++ i jak zadeklarować ich zarówno jako elementów członkowskich w klasie ref publicznego. Należy pamiętać, że standardowych szablonów języka C++ może być specjalizowany przez typ środowiska uruchomieniowego systemu Windows, w tym przypadku Platform::String ^.  
+ Poniższy przykład pokazuje sposób deklarowania prywatnej klasy ref jako szablon, a także jak deklarować standardowych szablonów języka C++ i jak je zadeklarować zarówno jako elementy członkowskie w klasie ref publicznych. Należy pamiętać, że standardowych szablonów języka C++ można wyspecjalizować przez typ środowiska wykonawczego Windows, w tym przypadku Platform::String ^.  
   
  [!code-cpp[cx_templates#01](../cppcx/codesnippet/CPP/templatedemo/class1.h#01)]  
   

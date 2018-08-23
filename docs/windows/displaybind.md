@@ -17,45 +17,49 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 8fdd9efe3b60fa9dc53d1c63191e19657cb70d75
-ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
+ms.openlocfilehash: a4beaeb35f23069c6ef8a5b411e7d83ecbe39f9e
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39641743"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42595775"
 ---
 # <a name="displaybind"></a>displaybind
-Wskazuje właściwość, która powinna być wyświetlana użytkownikowi jak możliwa do powiązania.  
-  
-## <a name="syntax"></a>Składnia  
-  
-```cpp  
-[displaybind]  
-```  
-  
-## <a name="remarks"></a>Uwagi  
- **Displaybind —** atrybut C++ ma taką samą funkcjonalność jak [displaybind —](http://msdn.microsoft.com/library/windows/desktop/aa366804) atrybutów w MIDL.  
-  
-## <a name="example"></a>Przykład  
- Zobacz przykład [możliwej do wiązania](../windows/bindable.md) przykład sposobu użycia **displaybind —**.  
-  
-## <a name="requirements"></a>Wymagania  
-  
-### <a name="attribute-context"></a>Kontekst atrybutu  
-  
-|||  
-|-|-|  
-|**Dotyczy**|Metody interfejsu|  
-|**Powtarzalne**|Nie|  
-|**Wymaganych atrybutów**|Brak|  
-|**Nieprawidłowe atrybuty**|Brak|  
-  
- Aby uzyskać więcej informacji, zobacz [konteksty atrybutu](../windows/attribute-contexts.md).  
-  
-## <a name="see-also"></a>Zobacz też  
- [Atrybuty IDL](../windows/idl-attributes.md)   
- [Atrybuty metody](../windows/method-attributes.md)   
- [Atrybuty elementów członkowskich danych](../windows/data-member-attributes.md)   
- [defaultbind —](../windows/defaultbind.md)   
- [immediatebind —](../windows/immediatebind.md)   
- [requestedit](../windows/requestedit.md)   
+
+Wskazuje właściwość, która powinna być wyświetlana użytkownikowi jak możliwa do powiązania.
+
+## <a name="syntax"></a>Składnia
+
+```cpp
+[displaybind]
+```
+
+## <a name="remarks"></a>Uwagi
+
+**Displaybind —** atrybut C++ ma taką samą funkcjonalność jak [displaybind —](http://msdn.microsoft.com/library/windows/desktop/aa366804) atrybutów w MIDL.
+
+## <a name="example"></a>Przykład
+
+Zobacz przykład [możliwej do wiązania](../windows/bindable.md) przykład sposobu użycia **displaybind —**.
+
+## <a name="requirements"></a>Wymagania
+
+### <a name="attribute-context"></a>Kontekst atrybutu
+
+|||
+|-|-|
+|**Dotyczy**|Metody interfejsu|
+|**Powtarzalne**|Nie|
+|**Wymaganych atrybutów**|Brak|
+|**Nieprawidłowe atrybuty**|Brak|
+
+Aby uzyskać więcej informacji, zobacz [konteksty atrybutu](../windows/attribute-contexts.md).
+
+## <a name="see-also"></a>Zobacz też
+
+[Atrybuty IDL](../windows/idl-attributes.md)  
+[Atrybuty metody](../windows/method-attributes.md)  
+[Atrybuty składowych danych](../windows/data-member-attributes.md)  
+[defaultbind](../windows/defaultbind.md)  
+[immediatebind](../windows/immediatebind.md)  
+[requestedit](../windows/requestedit.md)  

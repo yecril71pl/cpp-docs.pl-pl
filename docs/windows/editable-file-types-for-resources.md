@@ -19,28 +19,31 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: e17bada862cf2d7c5b86815ae140e298060ecb40
-ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
+ms.openlocfilehash: 8319786603470ca7ef8ab58897261b1be0a3503a
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39648434"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42603529"
 ---
 # <a name="editable-file-types-for-resources"></a>Edytowalne typy plików dla zasobów
-Można otworzyć następujących typów plików i edytowanie zasobów, które zawierają.  
-  
-|Nazwa pliku|Opis|  
-|---------------|-----------------|  
-|.RC|Pliki skryptów zasobów.|  
-|.rct|Pliki szablonów zasobów.|  
-|.res|Pliki zasobów.|  
-|.resx|Zarządzanych plików zasobów.|  
-|.exe|Pliki wykonywalne.|  
-|plik .dll|Pliki bibliotek dołączanych dynamicznie.|  
-|.bmp, .ico, .dib i .cur|Pliki map bitowych, ikony, narzędzi i kursora.|  
-  
-## <a name="requirements"></a>Wymagania  
- Win32  
-  
-## <a name="see-also"></a>Zobacz też  
- [Pliki zasobów](../windows/resource-files-visual-studio.md)
+
+Można otworzyć następujących typów plików i edytowanie zasobów, które zawierają.
+
+|Nazwa pliku|Opis|
+|---------------|-----------------|
+|.RC|Pliki skryptów zasobów.|
+|.rct|Pliki szablonów zasobów.|
+|.res|Pliki zasobów.|
+|.resx|Zarządzanych plików zasobów.|
+|.exe|Pliki wykonywalne.|
+|plik .dll|Pliki bibliotek dołączanych dynamicznie.|
+|.bmp, .ico, .dib i .cur|Pliki map bitowych, ikony, narzędzi i kursora.|
+
+## <a name="requirements"></a>Wymagania
+
+Win32
+
+## <a name="see-also"></a>Zobacz też
+
+[Pliki zasobów](../windows/resource-files-visual-studio.md)

@@ -17,37 +17,42 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 3252096216757c34e93933bcdd91f9da2c5bb14f
-ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
+ms.openlocfilehash: 4422dea0b0bfb07904d0c4defad8f33281a51bec
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/09/2018
-ms.locfileid: "40015972"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42609865"
 ---
 # <a name="makeallocatorallocate-method"></a>MakeAllocator::Allocate — Metoda
-Obsługuje infrastrukturę biblioteki WRL i nie jest przeznaczona do użycia bezpośrednio w kodzie.  
-  
-## <a name="syntax"></a>Składnia  
-  
-```cpp  
-__forceinline void* Allocate();  
-```  
-  
-## <a name="return-value"></a>Wartość zwracana  
- Jeśli to się powiedzie, wskaźnik do przydzielonego pamięci. w przeciwnym razie **nullptr**.  
-  
-## <a name="remarks"></a>Uwagi  
- Przydziela pamięć i kojarzy ją z bieżącymi **MakeAllocator** obiektu.  
-  
- Rozmiar alokacji pamięci jest rozmiar o typie określonym przez bieżącą **MakeAllocator** parametru szablonu.  
-  
- Deweloper musi zastąpić tylko **Allocate()** metodę, aby wdrożyć model przydzielania pamięci różnych.  
-  
-## <a name="requirements"></a>Wymagania  
- **Nagłówek:** implements.h  
-  
- **Namespace:** Microsoft::wrl:: details  
-  
-## <a name="see-also"></a>Zobacz też  
- [Makeallocator — klasa](../windows/makeallocator-class.md)   
- [Microsoft::WRL::Details, przestrzeń nazw](../windows/microsoft-wrl-details-namespace.md)
+
+Obsługuje infrastrukturę biblioteki WRL i nie jest przeznaczona do użycia bezpośrednio w kodzie.
+
+## <a name="syntax"></a>Składnia
+
+```cpp
+__forceinline void* Allocate();
+```
+
+## <a name="return-value"></a>Wartość zwracana
+
+Jeśli to się powiedzie, wskaźnik do przydzielonego pamięci. w przeciwnym razie **nullptr**.
+
+## <a name="remarks"></a>Uwagi
+
+Przydziela pamięć i kojarzy ją z bieżącymi **MakeAllocator** obiektu.
+
+Rozmiar alokacji pamięci jest rozmiar o typie określonym przez bieżącą **MakeAllocator** parametru szablonu.
+
+Deweloper musi zastąpić tylko **Allocate()** metodę, aby wdrożyć model przydzielania pamięci różnych.
+
+## <a name="requirements"></a>Wymagania
+
+**Nagłówek:** implements.h
+
+**Namespace:** Microsoft::wrl:: details
+
+## <a name="see-also"></a>Zobacz też
+
+[MakeAllocator, klasa](../windows/makeallocator-class.md)  
+[Microsoft::WRL::Details, przestrzeń nazw](../windows/microsoft-wrl-details-namespace.md)

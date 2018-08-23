@@ -15,33 +15,38 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 193f0d16b03991e24cb16a90b3310512f6e86054
-ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
+ms.openlocfilehash: 528c66da24c4cbf6c22af5b1b5f8dd3afffff64f
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/07/2018
-ms.locfileid: "39604401"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42604649"
 ---
 # <a name="roinitializewrapperroinitializewrapper-constructor"></a>RoInitializeWrapper::RoInitializeWrapper — Konstruktor
-Inicjuje nowe wystąpienie klasy **RoInitializeWrapper** klasy.  
-  
-## <a name="syntax"></a>Składnia  
-  
-```cpp  
+
+Inicjuje nowe wystąpienie klasy **RoInitializeWrapper** klasy.
+
+## <a name="syntax"></a>Składnia
+
+```cpp
 RoInitializeWrapper(   RO_INIT_TYPE flags)  
-```  
-  
-### <a name="parameters"></a>Parametry  
- *flagi*  
- Jedno z wyliczeń RO_INIT_TYPE, które określa pomoc techniczną świadczoną przez środowisko wykonawcze Windows.  
-  
-## <a name="remarks"></a>Uwagi  
- **RoInitializeWrapper** wywołuje klasę `Windows::Foundation::Initialize(flags)`.  
-  
-## <a name="requirements"></a>Wymagania  
- **Nagłówek:** corewrappers.h  
-  
- **Namespace:** Microsoft::wrl:: wrappers  
-  
-## <a name="see-also"></a>Zobacz też  
- [HandleT, klasa](../windows/handlet-class.md)
+```
+
+### <a name="parameters"></a>Parametry
+
+*flagi*  
+Jedno z wyliczeń RO_INIT_TYPE, które określa pomoc techniczną świadczoną przez środowisko wykonawcze Windows.
+
+## <a name="remarks"></a>Uwagi
+
+**RoInitializeWrapper** wywołuje klasę `Windows::Foundation::Initialize(flags)`.
+
+## <a name="requirements"></a>Wymagania
+
+**Nagłówek:** corewrappers.h
+
+**Namespace:** Microsoft::wrl:: wrappers
+
+## <a name="see-also"></a>Zobacz też
+
+[HandleT, klasa](../windows/handlet-class.md)

@@ -19,35 +19,38 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: bd203ee0413b60bc7aa713e7923fd4d69bde665e
-ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
+ms.openlocfilehash: abc49a62e1cc9fb4abdc56b329b8fa057edebde7
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39642961"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42583520"
 ---
 # <a name="canceltransitionpolicy-enumeration"></a>CancelTransitionPolicy — Wyliczenie
-Wskazuje, jak operacja asynchroniczna użytkownika próba przejście w stan końcowy ukończone lub błąd powinien działać względem klient zażądał stanem anulowane.  
-  
-## <a name="syntax"></a>Składnia  
-  
-```cpp  
-enum CancelTransitionPolicy;  
-```  
-  
-## <a name="members"></a>Elementy członkowskie  
-  
-### <a name="values"></a>Wartości  
-  
-|Nazwa|Opis|  
-|----------|-----------------|  
-|`RemainCanceled`|Jeśli operacja asynchroniczna jest aktualnie klient zażądał stanem anulowane, oznacza to, że pozostaną ze stanem anulowane, w przeciwieństwie do terminal ukończone lub stan błędu.|  
-|`TransitionFromCanceled`|Jeśli operacja asynchroniczna jest obecnie klient zażądał stanem anulowane, wskazuje to, że stan powinien przejść przy jego użyciu stanem anulowane na stan końcowy ukończone lub błąd zgodnie z ustaleniami wywołanie, które korzysta z tej flagi.|  
-  
-## <a name="requirements"></a>Wymagania  
- **Nagłówek:** async.h  
-  
- **Namespace:** Microsoft::WRL  
-  
-## <a name="see-also"></a>Zobacz też  
- [Microsoft::WRL, przestrzeń nazw](../windows/microsoft-wrl-namespace.md)
+
+Wskazuje, jak operacja asynchroniczna użytkownika próba przejście w stan końcowy ukończone lub błąd powinien działać względem klient zażądał stanem anulowane.
+
+## <a name="syntax"></a>Składnia
+
+```cpp
+enum CancelTransitionPolicy;
+```
+
+## <a name="members"></a>Elementy członkowskie
+
+### <a name="values"></a>Wartości
+
+|Nazwa|Opis|
+|----------|-----------------|
+|`RemainCanceled`|Jeśli operacja asynchroniczna jest aktualnie klient zażądał stanem anulowane, oznacza to, że pozostaną ze stanem anulowane, w przeciwieństwie do terminal ukończone lub stan błędu.|
+|`TransitionFromCanceled`|Jeśli operacja asynchroniczna jest obecnie klient zażądał stanem anulowane, wskazuje to, że stan powinien przejść przy jego użyciu stanem anulowane na stan końcowy ukończone lub błąd zgodnie z ustaleniami wywołanie, które korzysta z tej flagi.|
+
+## <a name="requirements"></a>Wymagania
+
+**Nagłówek:** async.h
+
+**Namespace:** Microsoft::WRL
+
+## <a name="see-also"></a>Zobacz też
+
+[Microsoft::WRL, przestrzeń nazw](../windows/microsoft-wrl-namespace.md)

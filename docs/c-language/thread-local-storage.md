@@ -18,36 +18,36 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c98cca6afb096cc9b5e88fe31aa949621d326c98
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 35f651e7f6f35ceca02003ef24ccda98ada6f6c1
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32390027"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42596987"
 ---
 # <a name="thread-local-storage"></a>Lokalny magazyn wątków
 **Microsoft Specific**  
   
- Lokalnego magazynu wątków (TLS) to mechanizm, za pomocą której każdy wątek w danym procesie wielowątkowe przydziela magazynu dla danych właściwych dla wątku. W standardowych programach wielowątkowych, dane są współużytkowane przez wszystkie wątki danego procesu, natomiast pamięć lokalna wątku jest mechanizmem przydzielania danych osobno dla danego wątku. Aby uzyskać szczegółowe omówienie wątków, zobacz [procesów i wątków](http://msdn.microsoft.com/library/windows/desktop/ms684841) w [!INCLUDE[winsdkshort](../atl-mfc-shared/reference/includes/winsdkshort_md.md)].  
+ Lokalny magazyn wątku (TLS) to mechanizm, za pomocą którego każdy wątek w danym procesie wielowątkowym przydziela pamięć dla danych specyficznych wątku. W standardowych programach wielowątkowych, dane są współużytkowane przez wszystkie wątki danego procesu, natomiast pamięć lokalna wątku jest mechanizmem przydzielania danych osobno dla danego wątku. Aby uzyskać pełne omówienie wątków, zobacz [procesy i wątki](http://msdn.microsoft.com/library/windows/desktop/ms684841) w zestawie Windows SDK.  
   
- Języka Microsoft C zawiera atrybut klasy magazynu rozszerzonego, wątek, który jest używany z __declspec — słowo kluczowe do zadeklarować zmiennej lokalnej wątku. Na przykład, poniższy kod deklaruje lokalną zmienną całkowitą wątku i inicjuje ją wartością:  
+ Język Microsoft C zawiera atrybuty rozszerzone klasy magazynu, wątek, który jest używany z __declspec — słowo kluczowe, aby zadeklarować zmienną lokalną wątku. Na przykład, poniższy kod deklaruje lokalną zmienną całkowitą wątku i inicjuje ją wartością:  
   
 ```  
 __declspec( thread ) int tls_i = 1;  
 ```  
   
- Kiedy są deklarowanie statycznie powiązanej wątku ich w zmiennych lokalnych należy przestrzegać poniższych wskazówek:  
+ Po użytkownik deklaruje wątku statycznie powiązanych zmiennych lokalnych należy przestrzegać następujących wytycznych:  
   
--   Zmienne lokalne wątków, które mają dynamiczna Inicjalizacja są inicjowane tylko w wątku, który powoduje, że można załadować biblioteki DLL i wątków, które są już uruchomione w procesie. Aby uzyskać więcej informacji, zobacz [wątku](../cpp/thread.md).  
+-   Zmiennymi lokalnymi wątku, które mają dynamiczna Inicjalizacja są inicjowane tylko na wątek, który powoduje, że biblioteki DLL do załadowania i wątki, które zostały już uruchomione w procesie. Aby uzyskać więcej informacji, zobacz [wątku](../cpp/thread.md).  
   
--   Atrybut wątku można stosować tylko do danych deklaracje i definicje. Nie można użyć w deklaracji lub definicji funkcji. Na przykład następujący kod generowany jest błąd kompilatora:  
+-   Atrybut wątku można zastosować tylko do deklaracje i definicje danych. Nie można używać w deklaracji lub definicji funkcji. Na przykład poniższy kod generuje błąd kompilatora:  
   
     ```  
     #define Thread   __declspec( thread )  
     Thread void func();      /* Error */  
     ```  
   
--   Atrybut wątku można określić tylko dla elementów danych ze statycznym okresem magazynu. Obejmuje to dane globalne (statyczne i zewnętrzne) i lokalnych danych statycznych. Nie można zadeklarować automatyczne dane z atrybutem wątku. Na przykład następujący kod generuje błędy kompilatora:  
+-   Atrybut wątku można określić tylko dla elementów danych ze statycznym okresem magazynu. Obejmuje to dane globalne (statyczne i zewnętrzne) i lokalnych danych statycznych. Nie można zadeklarować automatyczne danych za pomocą atrybut wątku. Na przykład poniższy kod generuje błędy kompilatora:  
   
     ```  
     #define Thread   __declspec( thread )  
@@ -62,7 +62,7 @@ __declspec( thread ) int tls_i = 1;
     }  
     ```  
   
--   Należy użyć atrybut wątku dla deklaracji i definicji danych lokalnych wątku, niezależnie od tego, czy wystąpienia deklaracji i definicji w tym samym pliku lub oddzielnych plików. Na przykład następujący kod generuje błąd:  
+-   Musisz podać atrybut wątku dla deklaracji i definicji danych lokalnych wątku, niezależnie od tego, czy deklaracja i definicja występują w tym samym pliku lub osobnych plikach. Na przykład poniższy kod generuje błąd:  
   
     ```  
     #define Thread   __declspec( thread )  
@@ -70,13 +70,13 @@ __declspec( thread ) int tls_i = 1;
     int Thread tls_i;     /* declaration and the definition differ. */  
     ```  
   
--   Atrybut wątku nie można użyć jako modyfikator typu. Na przykład następujący kod generowany jest błąd kompilatora:  
+-   Atrybut wątku nie można użyć jako modyfikatora typu. Na przykład poniższy kod generuje błąd kompilatora:  
   
     ```  
     char *ch __declspec( thread );      /* Error */  
     ```  
   
--   Adres zmiennej lokalnej wątku nie jest uważana za stałej, i dowolne wyrażenie obejmujące takiego adresu nie jest uznawany za wyrażenie stałe. Oznacza to, że nie możesz użyć adresu zmiennej lokalnej wątku jako inicjator dla wskaźnika. Na przykład kompilator flagi następujący kod jako błąd:  
+-   Adres zmiennej lokalnej wątku nie jest uważany za stałą i dowolne wyrażenie obejmujące takiego adresu nie uznaje się za wyrażeniem stałym. Oznacza to, że adres zmiennej lokalnej wątku nie można użyć jako inicjator dla wskaźnika. Na przykład kompilator następujący kod jako błąd:  
   
     ```  
     #define Thread   __declspec( thread )  
@@ -84,7 +84,7 @@ __declspec( thread ) int tls_i = 1;
     int *p = &tls_i;      /* Error */  
     ```  
   
--   C umożliwia inicjowanie zmiennej z wyrażenie obejmujące odwołanie do samej siebie, ale tylko w przypadku obiektów Niestatyczne zakresu. Na przykład:  
+-   Język C umożliwia inicjowanie zmiennej za pomocą wyrażenia zawierającego odwołanie do samego siebie, ale tylko w przypadku obiektów o zakresie niestatycznym. Na przykład:  
   
     ```  
     #define Thread   __declspec( thread )  
@@ -93,13 +93,13 @@ __declspec( thread ) int tls_i = 1;
     Thread int tls_i = sizeof( tls_i )    /* Okay  */  
     ```  
   
-     Należy pamiętać, że wyrażenie sizeof, które obejmuje Zainicjowanie nie stanowi odwołanie do samej siebie, czy jest dozwolone.  
+     Pamiętaj, że wyrażenie sizeof, która zawiera zmienną inicjowany nie stanowi odwołanie do samego siebie jest dozwolone.  
   
--   Korzystanie z **__declspec(thread)** może zakłócać [opóźnienia ładowania](../build/reference/linker-support-for-delay-loaded-dlls.md) biblioteki DLL importuje **.**  
+-   Korzystanie z **__declspec(thread)** może zakłócać [opóźnienie ładowania](../build/reference/linker-support-for-delay-loaded-dlls.md) importowanych bibliotek DLL **.**  
   
- Aby uzyskać więcej informacji o używaniu atrybut wątku, zobacz [wielowątkowość tematy](../parallel/multithreading-support-for-older-code-visual-cpp.md).  
+ Aby uzyskać więcej informacji o używaniu atrybut wątku, zobacz [tematy o wielowątkowości](../parallel/multithreading-support-for-older-code-visual-cpp.md).  
   
- **KOŃCOWY określonych firmy Microsoft**  
+ **END specyficzny dla Microsoft**  
   
 ## <a name="see-also"></a>Zobacz też  
  [Rozszerzone atrybuty klasy magazynu języka C](../c-language/c-extended-storage-class-attributes.md)

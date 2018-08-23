@@ -17,32 +17,36 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 263ef9a62f2e010c059be9e26f15f04ea39eafe9
-ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
+ms.openlocfilehash: 2d21210455a19a45b5dfde3b5bb31920f33cb777
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39651213"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42605297"
 ---
 # <a name="activationfactoryrelease-method"></a>ActivationFactory::Release — Metoda
-Dekrementuje liczbę odwołań bieżącego **activationfactory —** obiektu.  
-  
-## <a name="syntax"></a>Składnia  
-  
-```cpp  
-STDMETHOD_(  
-   ULONG,  
-   Release  
-)();  
-```  
-  
-## <a name="return-value"></a>Wartość zwracana  
- S_OK w przypadku powodzenia; w przeciwnym razie wartość HRESULT, który opisuje błąd.  
-  
-## <a name="requirements"></a>Wymagania  
- **Nagłówek:** module.h  
-  
- **Namespace:** Microsoft::WRL  
-  
-## <a name="see-also"></a>Zobacz też  
- [ActivationFactory, klasa](../windows/activationfactory-class.md)
+
+Dekrementuje liczbę odwołań bieżącego **activationfactory —** obiektu.
+
+## <a name="syntax"></a>Składnia
+
+```cpp
+STDMETHOD_(
+   ULONG,
+   Release
+)();
+```
+
+## <a name="return-value"></a>Wartość zwracana
+
+S_OK w przypadku powodzenia; w przeciwnym razie wartość HRESULT, który opisuje błąd.
+
+## <a name="requirements"></a>Wymagania
+
+**Nagłówek:** module.h
+
+**Namespace:** Microsoft::WRL
+
+## <a name="see-also"></a>Zobacz też
+
+[ActivationFactory, klasa](../windows/activationfactory-class.md)

@@ -17,37 +17,42 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 674a7dced019926e6ea07b41641eb42db70c45a0
-ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
+ms.openlocfilehash: 2ec8275b1db692410677276e762f79ccf23548cc
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/09/2018
-ms.locfileid: "40013483"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42606234"
 ---
 # <a name="srwlocktrylockexclusive-method"></a>SRWLock::TryLockExclusive — Metoda
-Próbuje pobrać **SRWLock** obiektu w trybie wyłączności dla bieżącej lub określonej **SRWLock** obiektu. Jeśli wywołanie zakończy się pomyślnie, wątek wywołujący przejmuje na własność blokadę.  
-  
-## <a name="syntax"></a>Składnia  
-  
-```cpp  
-SyncLockExclusive TryLockExclusive();  
-  
-static SyncLockExclusive TryLockExclusive(  
-   _In_ SRWLOCK* lock  
-);  
-```  
-  
-### <a name="parameters"></a>Parametry  
- *lock*  
- Wskaźnik do **SRWLock** obiektu.  
-  
-## <a name="return-value"></a>Wartość zwracana  
- W przypadku powodzenia **SRWLock** obiektu w trybie wyłączności i Wątek wywołujący przejmuje na własność blokadę. W przeciwnym razie **SRWLock** obiektu, którego stan jest nieprawidłowy.  
-  
-## <a name="requirements"></a>Wymagania  
- **Nagłówek:** corewrappers.h  
-  
- **Namespace:** Microsoft::wrl:: wrappers  
-  
-## <a name="see-also"></a>Zobacz też  
- [SRWLock, klasa](../windows/srwlock-class.md)
+
+Próbuje pobrać **SRWLock** obiektu w trybie wyłączności dla bieżącej lub określonej **SRWLock** obiektu. Jeśli wywołanie zakończy się pomyślnie, wątek wywołujący przejmuje na własność blokadę.
+
+## <a name="syntax"></a>Składnia
+
+```cpp
+SyncLockExclusive TryLockExclusive();
+
+static SyncLockExclusive TryLockExclusive(
+   _In_ SRWLOCK* lock
+);
+```
+
+### <a name="parameters"></a>Parametry
+
+*lock*  
+Wskaźnik do **SRWLock** obiektu.
+
+## <a name="return-value"></a>Wartość zwracana
+
+W przypadku powodzenia **SRWLock** obiektu w trybie wyłączności i Wątek wywołujący przejmuje na własność blokadę. W przeciwnym razie **SRWLock** obiektu, którego stan jest nieprawidłowy.
+
+## <a name="requirements"></a>Wymagania
+
+**Nagłówek:** corewrappers.h
+
+**Namespace:** Microsoft::wrl:: wrappers
+
+## <a name="see-also"></a>Zobacz też
+
+[SRWLock, klasa](../windows/srwlock-class.md)

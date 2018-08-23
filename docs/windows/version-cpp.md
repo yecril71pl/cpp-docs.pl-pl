@@ -18,47 +18,52 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 1ef27e86ae356ddc67555390b7e053daa8d32a09
-ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
+ms.openlocfilehash: a46a2f9b18a45e7ea627488881b0289e733ddd7b
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/09/2018
-ms.locfileid: "40013356"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42608970"
 ---
 # <a name="version-c"></a>version (C++)
-Identyfikuje określoną wersję spośród wielu wersji klasy.  
-  
-## <a name="syntax"></a>Składnia  
-  
-```cpp  
-[ version(  
-   "version"  
-) ]  
-```  
-  
-### <a name="parameters"></a>Parametry  
- *Wersja*  
- Numer wersji `coclass`. Jeśli nie zostanie określony, 1.0 zostanie umieszczona w pliku .idl.  
-  
-## <a name="remarks"></a>Uwagi  
- **Wersji** atrybut C++ ma taką samą funkcjonalność jak [wersji](http://msdn.microsoft.com/library/windows/desktop/aa367306) atrybutów w MIDL i jest przekazywana do pliku .idl wygenerowany.  
-  
-## <a name="example"></a>Przykład  
- Zobacz [możliwej do wiązania](../windows/bindable.md) przykład użycie próbki **wersji**.  
-  
-## <a name="requirements"></a>Wymagania  
-  
-### <a name="attribute-context"></a>Kontekst atrybutu  
-  
-|||  
-|-|-|  
-|**Dotyczy**|**Klasa**, **— struktura**|  
-|**Powtarzalne**|Nie|  
-|**Wymaganych atrybutów**|**coclass**|  
-|**Nieprawidłowe atrybuty**|Brak|  
-  
- Aby uzyskać więcej informacji na temat konteksty atrybutu zobacz [konteksty atrybutu](../windows/attribute-contexts.md).  
-  
-## <a name="see-also"></a>Zobacz też  
- [Atrybuty kompilatora](../windows/compiler-attributes.md)   
- [Atrybuty klasy](../windows/class-attributes.md)   
+
+Identyfikuje określoną wersję spośród wielu wersji klasy.
+
+## <a name="syntax"></a>Składnia
+
+```cpp
+[ version(
+   "version"
+) ]
+```
+
+### <a name="parameters"></a>Parametry
+
+*Wersja*  
+Numer wersji `coclass`. Jeśli nie zostanie określony, 1.0 zostanie umieszczona w pliku .idl.
+
+## <a name="remarks"></a>Uwagi
+
+**Wersji** atrybut C++ ma taką samą funkcjonalność jak [wersji](http://msdn.microsoft.com/library/windows/desktop/aa367306) atrybutów w MIDL i jest przekazywana do pliku .idl wygenerowany.
+
+## <a name="example"></a>Przykład
+
+Zobacz [możliwej do wiązania](../windows/bindable.md) przykład użycie próbki **wersji**.
+
+## <a name="requirements"></a>Wymagania
+
+### <a name="attribute-context"></a>Kontekst atrybutu
+
+|||
+|-|-|
+|**Dotyczy**|**Klasa**, **— struktura**|
+|**Powtarzalne**|Nie|
+|**Wymaganych atrybutów**|**coclass**|
+|**Nieprawidłowe atrybuty**|Brak|
+
+Aby uzyskać więcej informacji na temat konteksty atrybutu zobacz [konteksty atrybutu](../windows/attribute-contexts.md).
+
+## <a name="see-also"></a>Zobacz też
+
+[Atrybuty kompilatora](../windows/compiler-attributes.md)  
+[Atrybuty klasy](../windows/class-attributes.md)  

@@ -1,5 +1,5 @@
 ---
-title: DeferrableEventArgs::InvokeAllFinished — metoda | Dokumentacja firmy Microsoft
+title: DeferrableEventArgs::InvokeAllFinished, metoda | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -13,32 +13,32 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 1aaaf8c6849b30e26463810ff353234319960048
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 23d521b8373969abdd739b6e4f48eb334284664d
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33883371"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42605176"
 ---
 # <a name="deferrableeventargsinvokeallfinished-method"></a>DeferrableEventArgs::InvokeAllFinished — metoda
-Wywołuje się, by wskazać, że przetwarzania obsługi zdarzenia odroczone jest pełny.  
+Wywołuje się, by wskazać zakończeniu całego procesu przetwarzania do obsługi zdarzeń odroczone.
   
-## <a name="syntax"></a>Składnia  
+## <a name="syntax"></a>Składnia
   
-```cpp  
+```cpp
 void InvokeAllFinished()  
-```  
+```
   
-## <a name="remarks"></a>Uwagi  
- Tej metody należy wywołać po wywołań źródła zdarzeń [InvokeAll](../windows/eventsource-invokeall-method.md). Wywołanie tej metody uniemożliwia dalsze odroczenia podjęcie i wymusza programu obsługi zakończenia wykonywania odroczenia nie zostały pobrane.  
+## <a name="remarks"></a>Uwagi
+ Powinna wywołać tę metodę po wywołań źródła zdarzeń [invokeall —](../windows/eventsource-invokeall-method.md). Wywołanie tej metody uniemożliwia dalsze odroczenia podjęcie i wymusza procedury obsługi zakończenia wykonywania odroczenia, nie zostały wykonane.
   
- Na przykład kod, zobacz [deferrableeventargs — klasa](../windows/deferrableeventargs-class.md).  
+ Dla przykładu kodu zobacz [DeferrableEventArgs, klasa](../windows/deferrableeventargs-class.md).
   
-## <a name="requirements"></a>Wymagania  
- **Nagłówek:** event.h  
+## <a name="requirements"></a>Wymagania
+ **Nagłówek:** event.h
   
- **Namespace:** Microsoft::wrl —  
+ **Namespace:** Microsoft::WRL
   
-## <a name="see-also"></a>Zobacz też  
- [Deferrableeventargs — klasa](../windows/deferrableeventargs-class.md)   
+## <a name="see-also"></a>Zobacz też
+ [DeferrableEventArgs, klasa](../windows/deferrableeventargs-class.md)  
  [EventSource::InvokeAll, metoda](../windows/eventsource-invokeall-method.md)

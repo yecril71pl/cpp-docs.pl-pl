@@ -28,16 +28,16 @@ helpviewer_keywords:
 - Input Method Editor [C++]
 - MBCS [C++], enabling
 ms.assetid: 6179f6b7-bc61-4a48-9267-fb7951223e38
-author: ghogen
-ms.author: ghogen
+author: mikeblome
+ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1d00495f95b3c67e4a6fc3613b949b8ae2946bd6
-ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
+ms.openlocfilehash: f595a048d9f2e5795f69b7d1da6c4c6cf4ca0fa2
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/09/2018
-ms.locfileid: "40010389"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42608683"
 ---
 # <a name="mbcs-support-in-visual-c"></a>Obsługa MBCS w programie Visual C++
 Po uruchomieniu na Windows w wersji dla systemów z obsługą MBCS, systemie programistycznym Visual C++ (w tym kodu źródłowego zintegrowane narzędzia edytora, debugera i wiersza polecenia) jest MBCS włączone, z wyjątkiem okna pamięci.  
@@ -53,7 +53,7 @@ Po uruchomieniu na Windows w wersji dla systemów z obsługą MBCS, systemie pro
   
  Edytora IME aktywowany przez ALT +\` kombinacji klawiszy, jest wyświetlana jako zestaw przycisków (wskaźnik) i okno konwersji. Aplikacja umieszcza okno w punkcie wstawiania tekstu. Aplikacja musi obsłużyć `WM_MOVE` i `WM_SIZE` wiadomości według położenia okna konwersji do nowej lokalizacji i rozmiaru okna docelowego.  
   
- Jeśli chcesz, aby użytkownicy twojej aplikacji, aby mieć możliwość wprowadzania znaków Kanji, aplikacja musi obsługiwać komunikaty Windows edytora IME. Aby uzyskać więcej informacji na temat programowania w edytorze IME zobacz [edytora Input Method Editor](https://msdn.microsoft.com/library/ms776145.aspx).  
+ Jeśli chcesz, aby użytkownicy twojej aplikacji, aby mieć możliwość wprowadzania znaków Kanji, aplikacja musi obsługiwać komunikaty Windows edytora IME. Aby uzyskać więcej informacji na temat programowania w edytorze IME zobacz [edytora Input Method Editor](/previous-versions/windows/desktop/ms776145\(v=vs.85\)).  
   
 ## <a name="visual-c-debugger"></a>Debuger programu Visual C++  
  Debuger Visual C++ umożliwia ustawianie punktów przerwania w edytorze IME komunikaty w protokole. Ponadto znaki dwubajtowe można wyświetlić w oknie pamięci.  

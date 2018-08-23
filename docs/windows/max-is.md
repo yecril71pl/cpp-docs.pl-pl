@@ -17,52 +17,57 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 2799039aa2c198bcea3784876d8299fcaec59b20
-ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
+ms.openlocfilehash: fc4d8486fe48841ae37ad0ceb41f0da7cfd62c5e
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/09/2018
-ms.locfileid: "40012452"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42596257"
 ---
 # <a name="maxis"></a>max_is
-Określa maksymalną wartość indeksu prawidłową tablicą.  
-  
-## <a name="syntax"></a>Składnia  
-  
-```cpp  
-[ max_is(  
-   "expression"  
-) ]  
-```  
-  
-### <a name="parameters"></a>Parametry  
- *Wyrażenie*  
- Co najmniej jednego wyrażenia języka C. Pusty argument miejsca są dozwolone.  
-  
-## <a name="remarks"></a>Uwagi  
- **Max_is —** atrybut C++ ma taką samą funkcjonalność jak [max_is —](http://msdn.microsoft.com/library/windows/desktop/aa367074) atrybutów w MIDL.  
-  
-## <a name="requirements"></a>Wymagania  
-  
-### <a name="attribute-context"></a>Kontekst atrybutu  
-  
-|||  
-|-|-|  
-|**Dotyczy**|Pole **struktury** lub **Unii**, interfejs parametrów, metody interfejsu|  
-|**Powtarzalne**|Nie|  
-|**Wymaganych atrybutów**|Brak|  
-|**Nieprawidłowe atrybuty**|**size_is**|  
-  
- Aby uzyskać więcej informacji, zobacz [konteksty atrybutu](../windows/attribute-contexts.md).  
-  
-## <a name="example"></a>Przykład  
- Zobacz [first_is —](../windows/first-is.md) przykład sposobu określania część tablicy.  
-  
-## <a name="see-also"></a>Zobacz też  
- [Atrybuty IDL](../windows/idl-attributes.md)   
- [Element TypeDef, Enum, Union i struct — atrybuty](../windows/typedef-enum-union-and-struct-attributes.md)   
- [Atrybuty parametru](../windows/parameter-attributes.md)   
- [first_is —](../windows/first-is.md)   
- [last_is —](../windows/last-is.md)   
- [length_is —](../windows/length-is.md)   
- [size_is](../windows/size-is.md)   
+
+Określa maksymalną wartość indeksu prawidłową tablicą.
+
+## <a name="syntax"></a>Składnia
+
+```cpp
+[ max_is(
+   "expression"
+) ]
+```
+
+### <a name="parameters"></a>Parametry
+
+*Wyrażenie*  
+Co najmniej jednego wyrażenia języka C. Pusty argument miejsca są dozwolone.
+
+## <a name="remarks"></a>Uwagi
+
+**Max_is —** atrybut C++ ma taką samą funkcjonalność jak [max_is —](http://msdn.microsoft.com/library/windows/desktop/aa367074) atrybutów w MIDL.
+
+## <a name="requirements"></a>Wymagania
+
+### <a name="attribute-context"></a>Kontekst atrybutu
+
+|||
+|-|-|
+|**Dotyczy**|Pole **struktury** lub **Unii**, interfejs parametrów, metody interfejsu|
+|**Powtarzalne**|Nie|
+|**Wymaganych atrybutów**|Brak|
+|**Nieprawidłowe atrybuty**|**size_is**|
+
+Aby uzyskać więcej informacji, zobacz [konteksty atrybutu](../windows/attribute-contexts.md).
+
+## <a name="example"></a>Przykład
+
+Zobacz [first_is —](../windows/first-is.md) przykład sposobu określania część tablicy.
+
+## <a name="see-also"></a>Zobacz też
+
+[Atrybuty IDL](../windows/idl-attributes.md)  
+[Atrybuty Typedef, Enum, Union oraz Struct](../windows/typedef-enum-union-and-struct-attributes.md)  
+[Atrybuty parametru](../windows/parameter-attributes.md)  
+[first_is](../windows/first-is.md)  
+[last_is](../windows/last-is.md)  
+[length_is](../windows/length-is.md)  
+[size_is](../windows/size-is.md)  

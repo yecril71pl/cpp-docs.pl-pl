@@ -21,35 +21,38 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 8d4573dfddd8287bb52f919f5fbceb0485b0911d
-ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
+ms.openlocfilehash: bff0018d4240089897cc3001c3887794295c22d4
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/09/2018
-ms.locfileid: "40015121"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42605199"
 ---
 # <a name="picking-up-a-color-from-an-image-to-use-elsewhere-image-editor-for-icons"></a>Pobieranie koloru z obrazu do użycia w innym miejscu (Edytor obrazów dla ikon)
-**Wybierz kolor**, lub kolor odbiór, narzędzie sprawia, że każdy kolor na obrazku bieżący kolor pierwszego planu lub kolorów tła, w zależności od tego, czy naciśnięciu lewego lub prawego przycisku myszy. Aby anulować **wybierz kolor** narzędzia, wybranie innego narzędzia.  
-  
+
+**Wybierz kolor**, lub kolor odbiór, narzędzie sprawia, że każdy kolor na obrazku bieżący kolor pierwszego planu lub kolorów tła, w zależności od tego, czy naciśnięciu lewego lub prawego przycisku myszy. Aby anulować **wybierz kolor** narzędzia, wybranie innego narzędzia.
+
 > [!TIP]
->  Etykietki narzędzi są wyświetlane po umieszczeniu kursora na przycisku paska narzędzi. Poniższe wskazówki mogą pomóc w identyfikacji funkcji każdego przycisku.  
-  
-### <a name="to-pick-up-a-color"></a>Aby pobrać kolor  
-  
-1.  Na **edytora obrazów** paska narzędzi (lub z **obraz** menu **narzędzia** polecenie), kliknij przycisk **wybierz kolor** narzędzia.  
-  
-2.  Wybierz kolor, który chcesz wczytać z obrazu.  
-  
-    > [!NOTE]
-    >  Po pobraniu kolor, **obraz** narzędzie uaktywnia ponownie ostatnio używane edytora.  
-  
-3.  Rysowanie za pomocą lewego przycisku myszy kolor pierwszego planu lub prawego przycisku myszy kolor tła.  
-  
- Aby uzyskać informacje na temat dodawania zasobów do projektów zarządzanych, zobacz [zasoby w aplikacjach pulpitu](/dotnet/framework/resources/index) w *przewodniku dewelopera .NET Framework*. Aby uzyskać informacji na temat ręcznego dodawania plików zasobów do projektów zarządzanych, uzyskiwania dostępu do zasobów, wyświetlania statycznych zasobów i przypisywania ciągów zasobów do właściwości, zobacz [Creating Resource Files dla aplikacji klasycznych](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Aby uzyskać informacji na temat globalizacja i lokalizacja zasobów w aplikacjach zarządzanych, zobacz [Globalizing i lokalizowanie aplikacji programu .NET Framework](/dotnet/standard/globalization-localization/index).  
-  
-## <a name="requirements"></a>Wymagania  
- Brak  
-  
-## <a name="see-also"></a>Zobacz też  
- [Klawisze skrótów](../windows/accelerator-keys-image-editor-for-icons.md)   
- [Praca z kolorem](../windows/working-with-color-image-editor-for-icons.md)
+> Etykietki narzędzi są wyświetlane po umieszczeniu kursora na przycisku paska narzędzi. Poniższe wskazówki mogą pomóc w identyfikacji funkcji każdego przycisku.
+
+### <a name="to-pick-up-a-color"></a>Aby pobrać kolor
+
+1. Na **edytora obrazów** paska narzędzi (lub z **obraz** menu **narzędzia** polecenie), kliknij przycisk **wybierz kolor** narzędzia.
+
+2. Wybierz kolor, który chcesz wczytać z obrazu.
+
+   > [!NOTE]
+   > Po pobraniu kolor, **obraz** narzędzie uaktywnia ponownie ostatnio używane edytora.
+
+3. Rysowanie za pomocą lewego przycisku myszy kolor pierwszego planu lub prawego przycisku myszy kolor tła.
+
+Aby uzyskać informacje na temat dodawania zasobów do projektów zarządzanych, zobacz [zasoby w aplikacjach pulpitu](/dotnet/framework/resources/index) w *przewodniku dewelopera .NET Framework*. Aby uzyskać informacji na temat ręcznego dodawania plików zasobów do projektów zarządzanych, uzyskiwania dostępu do zasobów, wyświetlania statycznych zasobów i przypisywania ciągów zasobów do właściwości, zobacz [Creating Resource Files dla aplikacji klasycznych](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Aby uzyskać informacji na temat globalizacja i lokalizacja zasobów w aplikacjach zarządzanych, zobacz [Globalizing i lokalizowanie aplikacji programu .NET Framework](/dotnet/standard/globalization-localization/index).
+
+## <a name="requirements"></a>Wymagania
+
+Brak
+
+## <a name="see-also"></a>Zobacz też
+
+[Klawisze skrótów](../windows/accelerator-keys-image-editor-for-icons.md)  
+[Praca z kolorem](../windows/working-with-color-image-editor-for-icons.md)

@@ -1,5 +1,5 @@
 ---
-title: Funkcje globalne identyfikator zabezpieczeń | Dokumentacja firmy Microsoft
+title: Funkcje globalne identyfikatora zabezpieczeń | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -47,18 +47,18 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 153436ab5d05d0355d85ca165b2bfba9ae86d534
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: b567c56c8c4ca5c25fc870e91c8c608e17280557
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32365158"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42610236"
 ---
-# <a name="security-identifier-global-functions"></a>Funkcje globalne identyfikator zabezpieczeń
-Funkcje te zwracają wspólnej dobrze znany identyfikator SID obiektów.  
+# <a name="security-identifier-global-functions"></a>Funkcje globalne identyfikatora zabezpieczeń
+Te funkcje zwracają wspólnej znaną wartością identyfikatora SID obiektów.  
   
 > [!IMPORTANT]
->  Funkcje wymienione w poniższej tabeli nie można używać w aplikacjach, które są wykonywane w środowisku wykonawczym systemu Windows.  
+>  Funkcje wymienione w poniższej tabeli nie można użyć w aplikacjach korzystających ze środowiska wykonawczego Windows.  
   
 |||  
 |-|-|  
@@ -196,9 +196,9 @@ CSid NetworkService() throw(...);
 ```  
   
 ### <a name="remarks"></a>Uwagi  
- Użyj usługi sieciowej, aby włączyć NT\Usługa użytkownikowi odczytywanie CPerfMon obiektu zabezpieczeń. Usługa sieciowa dodaje SecurityAttribute do kodu ATLServer, co pozwoli biblioteki DLL do logowania na koncie Usługa sieciowa na [!INCLUDE[WinXpFamily](../../atl/reference/includes/winxpfamily_md.md)] i większa systemu operacyjnego.  
+ Użyj usługi sieciowej, aby włączyć NT\Usługa użytkownikowi odczyt CPerfMon obiektu zabezpieczeń. Usługa sieciowa dodaje SecurityAttribute kodowi ATLServer, co umożliwi użytkownikom biblioteki DLL do logowania na koncie Usługa sieciowa na Windows XP Home Edition, Windows XP Professional, Windows Server 2003 i większa systemu operacyjnego.  
   
- Dziennik niestandardowy liczniki będą tworzone z klasy ATLServer CPerfMon w przystawce MMC monitora wydajności, liczniki mogą być niewidoczne podczas wyświetlania plików dziennika, mimo że pojawią się poprawnie w czasie rzeczywistym widoku. CPerfMon niestandardowe liczniki wydajności nie ma wystarczających uprawnień do uruchamiania w obszarze "Dzienniki wydajności i alerty" service (smlogsvc.exe) [!INCLUDE[WinXpFamily](../../atl/reference/includes/winxpfamily_md.md)] (lub nowszego) systemów operacyjnych. Ta usługa działa na koncie "NT\Usługa".  
+ Po utworzeniu dzienników niestandardowych liczników za pomocą klasy ATLServer CPerfMon w przystawce MMC monitora wydajności liczniki nie może występować podczas wyświetlania pliku dziennika, mimo że zostaną poprawnie wyświetlone w widoku w czasie rzeczywistym. CPerfMon niestandardowych liczników wydajności nie ma wystarczających uprawnień do uruchamiania w obszarze "Dzienniki wydajności i alerty" service (smlogsvc.exe) w systemie Windows XP Home Edition, Windows XP Professional, Windows Server 2003 (lub nowszego) systemów operacyjnych. Ta usługa działa na koncie "NT\Usługa".  
   
 ##  <a name="null"></a>  Sids::NULL  
  Zwraca identyfikator SID SECURITY_NULL_RID.  

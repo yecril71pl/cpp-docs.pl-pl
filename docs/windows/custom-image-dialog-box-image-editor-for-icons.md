@@ -17,27 +17,27 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 8a0f8f4506d21c530f5131363cea9a9d142d5957
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: eb5e4d2fdc64499616af2492d39bfe3cac4931ae
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33883137"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42595944"
 ---
 # <a name="custom-image-dialog-box-image-editor-for-icons"></a>Niestandardowe okno dialogowe obrazu (Edytor obrazów dla ikon)
-Umożliwia utworzenie nowego obrazu z niestandardowego rozmiaru i liczby kolorów.
+Umożliwia utworzenie nowego obrazu z niestandardowy rozmiar i liczba kolorów.
  **Szerokość**  
- Miejsce na wpisanie szerokość niestandardowego obrazu w pikselach (limit to 1-512 2048).  
+ Miejsce na wprowadź szerokość obrazu niestandardowego w pikselach (1-512 limit 2048).
   
  **Wysokość**  
- Miejsce na wpisanie wysokość niestandardowego obrazu w pikselach (limit to 1-512 2048).  
+ Miejsce na Wprowadź wysokość obrazu niestandardowego w pikselach (1-512 limit 2048).
   
  **Kolory**  
- Miejsce na wybierz liczbę kolorów niestandardowych: 2, 16 lub 256.  
+ Miejsce na wybierz liczbę kolorów dla niestandardowego obrazu: 2, 16 lub 256.
   
-## <a name="requirements"></a>Wymagania  
- Brak  
+## <a name="requirements"></a>Wymagania
+ Brak
   
-## <a name="see-also"></a>Zobacz też  
- [Nowe \<urządzenia > okno dialogowe typu obrazu](../windows/new-device-image-type-dialog-box-image-editor-for-icons.md)   
+## <a name="see-also"></a>Zobacz też
+ [Nowe \<urządzenia > okno dialogowe typu obrazu](../windows/new-device-image-type-dialog-box-image-editor-for-icons.md)  
  [Edytor obrazów dla ikon](../windows/image-editor-for-icons.md)

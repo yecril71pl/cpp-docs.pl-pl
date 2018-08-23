@@ -20,56 +20,59 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 175fc018ddba436f9a331f861a492dcd43e1ec1e
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: 0fb5828947524c9cbeeabb47f9f6b174ac8115a8
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33689275"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42590603"
 ---
 # <a name="multithreading-creating-worker-threads"></a>Wielowątkowość: tworzenie wątków roboczych
-Wątek roboczy jest najczęściej używany do obsługi zadań w tle, które użytkownik nie powinny mieć zaczekać, aby kontynuować korzystanie z aplikacji. Zadania, takie jak ponowne obliczenie i drukowanie w tle są dobrym przykładem wątków roboczych. W tym temacie opisano kroki niezbędne do utworzenia wątku roboczego. Tematy obejmują:  
+Wątek roboczy jest najczęściej używany do obsługi zadania w tle, które użytkownik nie powinien mieć zaczekać, aby kontynuować korzystanie z aplikacji. Zadania, takie jak ponowne obliczenie i drukowanie w tle są dobrym przykładem wątków roboczych. W tym temacie przedstawiono kroki niezbędne do utworzenia wątku roboczego. Tematy obejmują:  
   
--   [Uruchamianie wątku](#_core_starting_the_thread)  
+- [Rozpoczęcie wątku](#_core_starting_the_thread)  
   
--   [Implementowanie funkcji sterowania](#_core_implementing_the_controlling_function)  
+- [Implementacja funkcji kontroli](#_core_implementing_the_controlling_function)  
   
--   [Przykład](#_core_controlling_function_example)  
+- [Przykład](#_core_controlling_function_example)  
   
- Utworzenie wątku roboczego jest zadaniem stosunkowo proste. Tylko dwa kroki są wymagane do pobrania z wątku uruchomiona: implementacja kontrolowanie funkcji i uruchamianie wątku. Nie jest konieczne wyprowadzenia klasy z [cwinthread —](../mfc/reference/cwinthread-class.md). Można wyprowadzenia klasy, jeśli potrzebujesz specjalnej wersji `CWinThread`, ale nie jest wymagane dla większości proste wątków. Można użyć `CWinThread` bez żadnych modyfikacji.  
+Tworzenie wątku roboczego jest stosunkowo prostym zadaniem. Tylko dwie czynności, aby wątek działa: implementacja funkcji kontrolowania oraz Rozpoczęcie wątku. Nie jest konieczne, aby wyprowadzić klasę z [CWinThread](../mfc/reference/cwinthread-class.md). Możesz derywować klasę, jeżeli potrzebujesz specjalnej wersji `CWinThread`, ale nie jest wymagane dla większości prostych wątków roboczych. Możesz użyć `CWinThread` bez żadnych modyfikacji.  
   
-##  <a name="_core_starting_the_thread"></a> Uruchamianie wątku  
- Istnieją dwie wersje przeciążone `AfxBeginThread`:, który można tworzyć tylko wątków roboczych, a taki, który może tworzyć wątków interfejsu użytkownika oraz wątków roboczych. Aby rozpocząć wykonywania z wątku roboczego przy użyciu pierwszego przeciążenia, należy wywołać [afxbeginthread —](../mfc/reference/application-information-and-management.md#afxbeginthread), podając następujące informacje:  
+##  <a name="_core_starting_the_thread"></a> Rozpoczęcie wątku  
+ 
+Istnieją dwie przeciążone wersje `AfxBeginThread`: jedną, która tworzy tylko wątki robocze oraz jedna, która może tworzyć wątki interfejsu użytkownika oraz wątki robocze. Aby rozpocząć wykonywanie wątku roboczego, z użyciem pierwszego przeciążenia, wywołaj [AfxBeginThread](../mfc/reference/application-information-and-management.md#afxbeginthread), podając następujące informacje:  
   
--   Adres funkcji sterowania.  
+- Adres początkowy funkcji kontroli.  
   
--   Parametr do przekazania do kontrolowania funkcji.  
+- Parametr do przekazania do funkcji kontroli.  
   
--   (Opcjonalnie) Żądany priorytet wątku. Wartość domyślna to normalnym priorytecie. Aby uzyskać więcej informacji na temat poziomów priorytet dostępne w temacie [wykonanie funkcji SetThreadPriority](http://msdn.microsoft.com/library/windows/desktop/ms686277) w [!INCLUDE[winsdkshort](../atl-mfc-shared/reference/includes/winsdkshort_md.md)].  
+- (Opcjonalnie) Żądany priorytet wątku. Wartością domyślną jest normalnym priorytecie. Aby uzyskać więcej informacji na temat dostępnych poziomów priorytetu, zobacz [SetThreadPriority](http://msdn.microsoft.com/library/windows/desktop/ms686277) w zestawie Windows SDK.  
   
--   (Opcjonalnie) Rozmiar żądanego stosu wątku. Wartością domyślną jest tym samym stosie rozmiar jako Tworzenie wątku.  
+- (Opcjonalnie) Żądany rozmiar stosu dla wątku. Wartość domyślna to taki sam jak rozmiar stosu wątku tworzącego.  
   
--   (Opcjonalnie) **CREATE_SUSPENDED** Jeśli chcesz wątku, który ma zostać utworzony w stanie wstrzymania. Wartość domyślna to 0 lub normalnie uruchomienie wątku.  
+- (Opcjonalnie) CREATE_SUSPENDED, jeśli chcesz, aby wątek był utworzony w stanie wstrzymania. Wartość domyślna jest równa 0 lub wątek uruchamia się normalnie.  
   
--   (Opcjonalnie) Atrybuty wymaganymi. Wartość domyślna to te same prawa dostępu jako wątku nadrzędnej. Aby uzyskać więcej informacji na temat formatu informacji o zabezpieczeniach, zobacz [SECURITY_ATTRIBUTES](http://msdn.microsoft.com/library/windows/desktop/aa379560) w [!INCLUDE[winsdkshort](../atl-mfc-shared/reference/includes/winsdkshort_md.md)].  
+- (Opcjonalnie) Atrybuty pożądanych zabezpieczeń. Wartość domyślna to taki sam dostęp jak wątku nadrzędnego. Aby uzyskać więcej informacji dotyczących formatu informacji o zabezpieczeniach, zobacz [SECURITY_ATTRIBUTES](http://msdn.microsoft.com/library/windows/desktop/aa379560) w zestawie Windows SDK.  
   
- `AfxBeginThread` Tworzy i inicjuje `CWinThread` obiektu, uruchamia go i zwraca jego adres, więc można odwołać się do niego później. Testy zostały wprowadzone w całej procedury upewnij się, że wszystkie obiekty są deallocated prawidłowo w przypadku dowolnej części Tworzenie nie.  
+`AfxBeginThread` Tworzy i inicjuje `CWinThread` obiekt dla Ciebie, uruchomia go i zwraca jego adres, więc można odwołać się do niego później. Kontrole są wprowadzane w trakcie trwania procedury upewnij się, że wszystkie obiekty są zdelokowane poprawnie w przypadku dowolnej części tworzenia nie.  
   
-##  <a name="_core_implementing_the_controlling_function"></a> Implementowanie funkcji sterowania  
- Kontrolowanie funkcji definiuje wątku. Po wprowadzeniu tej funkcji, uruchamiania wątku, a po wydaniu, Wątek zostaje zakończony. Ta funkcja powinny mieć następujące prototypu:  
+##  <a name="_core_implementing_the_controlling_function"></a> Implementacja funkcji kontroli  
+ 
+Funkcja kontrolowania definiuje wątek. Po wprowadzeniu tej funkcji, rozpoczyna się wątek, a kiedy wychodzi, wątek się kończy. Ta funkcja powinna mieć poniższy prototyp:  
   
 ```  
 UINT MyControllingFunction( LPVOID pParam );  
 ```  
   
- Parametr jest pojedynczą wartość. Wartość, którą otrzymuje funkcji w tym parametrze jest to wartość, który został przekazany do konstruktora, podczas tworzenia obiektu wątku. Kontrolowanie funkcji mogą interpretować tę wartość w żaden sposób, który wybiera. Może być traktowana jako wartość skalarną lub wskaźnik do struktury zawierającej wiele parametrów lub można go zignorować. Jeśli parametr odwołuje się do struktury, struktura można nie tylko do przekazywania danych z obiektu wywołującego w wątku, ale do przekazywania danych z wątku do obiektu wywołującego. Jeśli używasz takiej struktury do przekazywania danych z powrotem do wywołującego wątek musi powiadomić wywołującego, gdy wyniki są gotowe. Informacje o komunikacji z wątku roboczego do elementu wywołującego, zobacz [Multithreading: Programowanie porady](../parallel/multithreading-programming-tips.md).  
+Parametr jest wartość typu single. Wartość otrzymywana przez funkcję w tym parametrze to wartość, która została przekazana do konstruktora, gdy został utworzony obiekt wątku. Funkcja kontroli może interpretować tę wartość w jakikolwiek sposób, który wybiera. Może być traktowana jako wartość skalarna lub wskaźnika do struktury zawierającej wiele parametrów lub można je zignorować. Jeśli parametr odnosi się do struktury, struktura może służyć nie tylko do przekazywania danych od elementu wywołującego do wątku, ale także do przekazywania danych powrotem od wątku do obiektu wywołującego. Jeśli używasz takiej struktury do przekazywania danych z powrotem do obiektu wywołującego, wątek musi powiadomić obiekt wywołujący, gdy wyniki są gotowe. Aby uzyskać informacje dotyczące komunikacji między wątkiem roboczym do obiektu wywołującego, zobacz [wielowątkowość: porady dotyczące programowania](../parallel/multithreading-programming-tips.md).  
   
- Gdy funkcja zakończenie, powinien on zwrócić **UINT** wskazujące przyczynę zakończenia. Zazwyczaj ten kod zakończenia to 0, informując o powodzeniu innych wartości wskazujący różnych typów błędów. Jest to czysto w zależy od implementacji. Niektóre wątki może obsługa liczniki zużycia obiektów i zwraca bieżącą liczbę używa tego obiektu. Aby dowiedzieć się, jak aplikacje mogą pobierać tę wartość, zobacz [Multithreading: przerywanie wątków](../parallel/multithreading-terminating-threads.md).  
+Kiedy funkcja kończy, powinna zwrócić UINT oznaczającą powód zakończenia. Zazwyczaj ten kod wyjścia to 0, informując o powodzeniu inne wartości oznaczają różne typy błędów. Jest to wyłącznie od implementacji zależy. Niektóre wątki mogą utrzymywać liczniki użycia obiektów i zwracać bieżącą liczbę zastosowań tego obiektu. Aby dowiedzieć się, jak aplikacje mogą odzyskiwać tę wartość, zobacz [wielowątkowość: Kończenie wątków](../parallel/multithreading-terminating-threads.md).  
   
- Istnieją pewne ograniczenia dotyczące co można zrobić w programie wielowątkowe napisany za pomocą biblioteki MFC. Aby uzyskać opis tych ograniczeń i inne porady dotyczące korzystania z wątków, zobacz [Multithreading: Programowanie porady](../parallel/multithreading-programming-tips.md).  
+Istnieją pewne ograniczenia, co można zrobić w programie wielowątkowym napisane przy użyciu biblioteki MFC. Aby uzyskać opis tych ograniczeń i inne porady dotyczące korzystania z wątków, zobacz [wielowątkowość: porady dotyczące programowania](../parallel/multithreading-programming-tips.md).  
   
-##  <a name="_core_controlling_function_example"></a> Kontrolowanie przykład — funkcja  
- Poniższy przykład pokazuje, jak zdefiniować funkcję kontrolowanie i użyć go w innej części programu.  
+##  <a name="_core_controlling_function_example"></a> Przykład funkcji sterowania  
+ 
+Poniższy przykład pokazuje jak zdefiniować funkcję kontroli i używać jej z innej części programu.  
   
 ```  
 UINT MyThreadProc( LPVOID pParam )  
@@ -96,9 +99,10 @@ AfxBeginThread(MyThreadProc, pNewObject);
 .  
 ```  
   
-## <a name="what-do-you-want-to-know-more-about"></a>Co chcesz dowiedzieć się więcej o?  
+## <a name="what-do-you-want-to-know-more-about"></a>Co chcesz dowiedzieć się więcej na temat?  
   
--   [Wielowątkowość: tworzenie wątków interfejsu użytkownika](../parallel/multithreading-creating-user-interface-threads.md)  
+- [Wielowątkowość: tworzenie wątków interfejsu użytkownika](../parallel/multithreading-creating-user-interface-threads.md)  
   
 ## <a name="see-also"></a>Zobacz też  
- [Wielowątkowość z C++ i MFC](../parallel/multithreading-with-cpp-and-mfc.md)
+ 
+[Wielowątkowość z C++ i MFC](../parallel/multithreading-with-cpp-and-mfc.md)

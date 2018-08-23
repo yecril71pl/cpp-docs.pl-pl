@@ -1,5 +1,5 @@
 ---
-title: Interfejs platform::IBox | Dokumentacja firmy Microsoft
+title: Platform::IBox, interfejs | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 12/30/2016
 ms.technology: cpp-windows
@@ -10,19 +10,19 @@ f1_keywords:
 dev_langs:
 - C++
 ms.assetid: 774df45d-f8a7-45a3-ae24-eecc3c681040
-author: ghogen
-ms.author: ghogen
+author: mikeblome
+ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7894eceb2f345303400eec9b0490db58b3c3583f
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: d83afb854aaa400a02f9de95e269f85cfeba1a96
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33089526"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42586875"
 ---
-# <a name="platformibox-interface"></a>Interfejs platform::IBox
-[Platform::IBox](../cppcx/platform-ibox-interface.md) interfejsu jest nazwą C++ `Windows::Foundation::IReference` interfejsu.  
+# <a name="platformibox-interface"></a>Platform::IBox, interfejs
+[Platform::IBox](../cppcx/platform-ibox-interface.md) interfejs jest nazwa języka C++ dla `Windows::Foundation::IReference` interfejsu.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -36,12 +36,12 @@ interface class IBox
  Typ wartości spakowanej.  
   
 ### <a name="remarks"></a>Uwagi  
- `IBox<T>` Interfejsu jest głównie używana wewnętrznie w celu reprezentowania typów wartości null, zgodnie z opisem w [wartość klas i struktur (C + +/ CX)](../cppcx/value-classes-and-structs-c-cx.md). Interfejs służy również do typów wartości pola, które są przekazywane do metody C++, które przyjmują parametrów typu `Object^`. Można jawnie deklarować jako parametr wejściowy `IBox<SomeValueType>`. Na przykład zobacz [Boxing](../cppcx/boxing-c-cx.md).  
+ `IBox<T>` Interfejsu jest głównie używana wewnętrznie do reprezentowania typy o wartości zerowalnej zgodnie z opisem w [klasy i struktury wartości (C + +/ CX)](../cppcx/value-classes-and-structs-c-cx.md). Interfejs umożliwia również typy wartości pola, które są przekazywane do metod języka C++, które przyjmują parametry typu `Object^`. Można jawnie deklarować jako parametr wejściowy `IBox<SomeValueType>`. Aby uzyskać przykład, zobacz [pakowania](../cppcx/boxing-c-cx.md).  
   
 ### <a name="requirements"></a>Wymagania  
   
 ### <a name="members"></a>Elementy członkowskie  
- `Platform::IBox` Dziedziczy interfejs [Platform::IValueType](../cppcx/platform-ivaluetype-interface.md) interfejsu. `IBox` ma tych elementów członkowskich:  
+ `Platform::IBox` Interfejs dziedziczy z [Platform::IValueType](../cppcx/platform-ivaluetype-interface.md) interfejsu. `IBox` ma te elementy członkowskie:  
   
  **Właściwości**  
   
@@ -50,7 +50,7 @@ interface class IBox
 |[Wartość](#value)|Zwraca wartość rozpakowany, które wcześniej były przechowywane w tym `IBox` wystąpienia.|  
 
 ## <a name="value"></a> Właściwość IBox::Value
-Zwraca wartość, która pierwotnie była przechowywana w tym obiekcie.  
+Zwraca wartość, która pierwotnie została zapisana w tym obiekcie.  
   
 ### <a name="syntax"></a>Składnia  
   
@@ -63,10 +63,10 @@ property T Value {T get();}
  Typ wartości spakowanej.  
   
 ### <a name="property-valuereturn-value"></a>Wartość właściwości/Zwracana wartość  
- Zwraca wartość, która pierwotnie była przechowywana w tym obiekcie.  
+ Zwraca wartość, która pierwotnie została zapisana w tym obiekcie.  
   
 ### <a name="remarks"></a>Uwagi  
- Na przykład zobacz [Boxing](../cppcx/boxing-c-cx.md).  
+ Aby uzyskać przykład, zobacz [pakowania](../cppcx/boxing-c-cx.md).  
   
   
 ## <a name="see-also"></a>Zobacz też  

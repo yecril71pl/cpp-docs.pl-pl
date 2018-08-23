@@ -17,49 +17,54 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: f068c618cf7f8a8658cd8409a7ec79a561c307a6
-ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
+ms.openlocfilehash: 85d0adfd03b6822b949523643aa97f7a7d8b088b
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/09/2018
-ms.locfileid: "40018390"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42607633"
 ---
 # <a name="synclockwithstatustsynclockwithstatust-constructor"></a>SyncLockWithStatusT::SyncLockWithStatusT — Konstruktor
-Obsługuje infrastrukturę biblioteki WRL i nie jest przeznaczona do użycia bezpośrednio w kodzie.  
-  
-## <a name="syntax"></a>Składnia  
-  
-```cpp  
-SyncLockWithStatusT(  
-   _Inout_ SyncLockWithStatusT&& other  
-);  
-  
-explicit SyncLockWithStatusT(  
-   typename SyncTraits::Type sync,  
-   DWORD status  
-);  
-```  
-  
-### <a name="parameters"></a>Parametry  
- *other*  
- Odwołanie rvalue, do innego **synclockwithstatust —** obiektu.  
-  
- *sync*  
- Odwołanie do innego **synclockwithstatust —** obiektu.  
-  
- *status*  
- Wartość [status_ — element](../windows/synclockwithstatust-status-data-member.md) element członkowski danych *innych* parametru lub *synchronizacji* parametru.  
-  
-## <a name="remarks"></a>Uwagi  
- Inicjuje nowe wystąpienie klasy **synclockwithstatust —** klasy.  
-  
- Pierwszy Konstruktor inicjuje bieżące **synclockwithstatust —** obiektu z innego **synclockwithstatust —** określony przez parametr *innych*, a następnie druga unieważnia **synclockwithstatust —** obiektu. Drugi Konstruktor jest **chronione**i inicjuje bieżące **synclockwithstatust —** obiektu nieprawidłowym stanie.  
-  
-## <a name="requirements"></a>Wymagania  
- **Nagłówek:** corewrappers.h  
-  
- **Namespace:** Microsoft::WRL::Wrappers::Details  
-  
-## <a name="see-also"></a>Zobacz też  
- [Synclockwithstatust — klasa](../windows/synclockwithstatust-class.md)   
- [SyncLockWithStatusT::GetStatus, metoda](../windows/synclockwithstatust-getstatus-method.md)
+
+Obsługuje infrastrukturę biblioteki WRL i nie jest przeznaczona do użycia bezpośrednio w kodzie.
+
+## <a name="syntax"></a>Składnia
+
+```cpp
+SyncLockWithStatusT(
+   _Inout_ SyncLockWithStatusT&& other
+);
+
+explicit SyncLockWithStatusT(
+   typename SyncTraits::Type sync,
+   DWORD status
+);
+```
+
+### <a name="parameters"></a>Parametry
+
+*other*  
+Odwołanie rvalue, do innego **synclockwithstatust —** obiektu.
+
+*sync*  
+Odwołanie do innego **synclockwithstatust —** obiektu.
+
+*status*  
+Wartość [status_ — element](../windows/synclockwithstatust-status-data-member.md) element członkowski danych *innych* parametru lub *synchronizacji* parametru.
+
+## <a name="remarks"></a>Uwagi
+
+Inicjuje nowe wystąpienie klasy **synclockwithstatust —** klasy.
+
+Pierwszy Konstruktor inicjuje bieżące **synclockwithstatust —** obiektu z innego **synclockwithstatust —** określony przez parametr *innych*, a następnie druga unieważnia **synclockwithstatust —** obiektu. Drugi Konstruktor jest **chronione**i inicjuje bieżące **synclockwithstatust —** obiektu nieprawidłowym stanie.
+
+## <a name="requirements"></a>Wymagania
+
+**Nagłówek:** corewrappers.h
+
+**Namespace:** Microsoft::WRL::Wrappers::Details
+
+## <a name="see-also"></a>Zobacz też
+
+[SyncLockWithStatusT, klasa](../windows/synclockwithstatust-class.md)  
+[SyncLockWithStatusT::GetStatus, metoda](../windows/synclockwithstatust-getstatus-method.md)

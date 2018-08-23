@@ -20,27 +20,30 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: dd35697e6a46ae681286fd9601f7d8cdc022948e
-ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
+ms.openlocfilehash: 4af0ca2c0b7b82dbfe6e72f9fd1bd5e6d219d8d4
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39649838"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42591171"
 ---
 # <a name="deleting-a-device-image-image-editor-for-icons"></a>Usuwanie obrazu urządzenia (Edytor obrazów dla ikon)
-### <a name="to-delete-a-device-image"></a>Aby usunąć obrazu urządzenia  
-  
-1.  Gdy obraz ikony są wyświetlane w **obraz** edytora, wybierz opcję **usuwanie obrazu urządzenia** z **obraz** menu. Po usunięciu ostatniego obraz ikony w zasobie zasobu są także usuwane.  
-  
-    > [!NOTE]
-    >  Po naciśnięciu klawisza **Del** klucza, obrazy i kolorów ma być rysowany ikonę są usuwane, ale pozostaje ikonę; możesz teraz ponownie zaprojektować go. Jeśli użytkownik naciśnie klawisz **Del** przez pomyłkę, możesz nacisnąć przycisk **Ctrl**+**Z** cofnięcie akcji.  
-  
- Aby uzyskać informacje na temat dodawania zasobów do projektów zarządzanych, zobacz [zasoby w aplikacjach pulpitu](/dotnet/framework/resources/index) w *przewodniku dewelopera .NET Framework*. Aby uzyskać informacji na temat ręcznego dodawania plików zasobów do projektów zarządzanych, uzyskiwania dostępu do zasobów, wyświetlania statycznych zasobów i przypisywania ciągów zasobów do właściwości, zobacz [Creating Resource Files dla aplikacji klasycznych](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Aby uzyskać informacji na temat globalizacja i lokalizacja zasobów w aplikacjach zarządzanych, zobacz [Globalizing i lokalizowanie aplikacji programu .NET Framework](/dotnet/standard/globalization-localization/index).  
-  
-## <a name="requirements"></a>Wymagania  
- Brak  
-  
-## <a name="see-also"></a>Zobacz też  
- [Ikony i kursory: zasoby obrazów do wyświetlania na urządzeniach](../windows/icons-and-cursors-image-resources-for-display-devices-image-editor-for-icons.md)   
- [Klawisze skrótów](../windows/accelerator-keys-image-editor-for-icons.md)   
- [Ikony i kursory: zasoby obrazów do wyświetlania na urządzeniach](../windows/icons-and-cursors-image-resources-for-display-devices-image-editor-for-icons.md)
+
+### <a name="to-delete-a-device-image"></a>Aby usunąć obrazu urządzenia
+
+1. Gdy obraz ikony są wyświetlane w **obraz** edytora, wybierz opcję **usuwanie obrazu urządzenia** z **obraz** menu. Po usunięciu ostatniego obraz ikony w zasobie zasobu są także usuwane.
+
+   > [!NOTE]
+   > Po naciśnięciu klawisza **Del** klucza, obrazy i kolorów ma być rysowany ikonę są usuwane, ale pozostaje ikonę; możesz teraz ponownie zaprojektować go. Jeśli użytkownik naciśnie klawisz **Del** przez pomyłkę, możesz nacisnąć przycisk **Ctrl**+**Z** cofnięcie akcji.
+
+Aby uzyskać informacje na temat dodawania zasobów do projektów zarządzanych, zobacz [zasoby w aplikacjach pulpitu](/dotnet/framework/resources/index) w *przewodniku dewelopera .NET Framework*. Aby uzyskać informacji na temat ręcznego dodawania plików zasobów do projektów zarządzanych, uzyskiwania dostępu do zasobów, wyświetlania statycznych zasobów i przypisywania ciągów zasobów do właściwości, zobacz [Creating Resource Files dla aplikacji klasycznych](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Aby uzyskać informacji na temat globalizacja i lokalizacja zasobów w aplikacjach zarządzanych, zobacz [Globalizing i lokalizowanie aplikacji programu .NET Framework](/dotnet/standard/globalization-localization/index).
+
+## <a name="requirements"></a>Wymagania
+
+Brak
+
+## <a name="see-also"></a>Zobacz też
+
+[Ikony i kursory: zasoby obrazów do wyświetlania na urządzeniach](../windows/icons-and-cursors-image-resources-for-display-devices-image-editor-for-icons.md)  
+[Klawisze skrótów](../windows/accelerator-keys-image-editor-for-icons.md)  
+[Ikony i kursory: zasoby obrazów do wyświetlania na urządzeniach](../windows/icons-and-cursors-image-resources-for-display-devices-image-editor-for-icons.md)

@@ -1,5 +1,5 @@
 ---
-title: Klasa platform::STAThreadAttribute | Dokumentacja firmy Microsoft
+title: Platform::STAThreadAttribute, klasa | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 12/30/2016
 ms.technology: cpp-windows
@@ -15,19 +15,19 @@ dev_langs:
 helpviewer_keywords:
 - Platform::STAThreadAttribute Class
 ms.assetid: f97960fc-e673-4d9e-910a-54c8415411c4
-author: ghogen
-ms.author: ghogen
+author: mikeblome
+ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ab58409bf86af77c9b1f751b9978b5e7103bd043
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 90194dd72b5192fab71065c2275adb4e066bcb0e
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33089356"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42590786"
 ---
-# <a name="platformstathreadattribute-class"></a>Klasa platform::STAThreadAttribute
-Wskazuje, że model wątkowy dla aplikacji jest jednowątkowego apartamentu (STA).  
+# <a name="platformstathreadattribute-class"></a>Platform::STAThreadAttribute, klasa
+Wskazuje, że model wątkowy dla aplikacji jest jednowątkowym (przedziale STA).  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -41,10 +41,10 @@ public ref class STAThreadAttribute sealed : Attribute
   
 |Nazwa|Opis|  
 |----------|-----------------|  
-|[Konstruktor elementu STAThreadAttribute 1](#ctor)|Inicjuje nowe wystąpienie klasy.|  
+|[Konstruktor STAThreadAttribute 1](#ctor)|Inicjuje nowe wystąpienie klasy.|  
   
 ### <a name="public-methods"></a>Metody publiczne  
- Atrybut STAThreadAttribute dziedziczy [Platform::Object klasy](../cppcx/platform-object-class.md). STAThreadAttribute również overloads lub ma następujące elementy:  
+ Dziedziczy atrybut STAThreadAttribute [Platform::Object, klasa](../cppcx/platform-object-class.md). STAThreadAttribute także przeciążenia lub ma następujące składowe:  
   
 |Nazwa|Opis|  
 |----------|-----------------|  
@@ -62,7 +62,7 @@ public ref class STAThreadAttribute sealed : Attribute
 
 
 
-## <a name="ctor"></a> Konstruktor elementu STAThreadAttribute
+## <a name="ctor"></a> Konstruktor STAThreadAttribute
 Inicjuje nowe wystąpienie klasy STAThreadAttribute.  
   
 ### <a name="syntax"></a>Składnia  

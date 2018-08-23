@@ -19,107 +19,112 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: fbd2ab9481d8658bac75b62a4afa18f3ff77f0d5
-ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
+ms.openlocfilehash: fe924627b0b0f4f5d02fab0040a4037085d94738
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39646260"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42595586"
 ---
 # <a name="default-c"></a>default (C++)
-Wskazuje, że niestandardowe lub zdefiniowane w obrębie klasy coclass dispinterface reprezentuje domyślny interfejs programowania.  
-  
-## <a name="syntax"></a>Składnia  
-  
-```cpp  
-[ default(  
-   interface1,  
-   interface2  
-) ]  
-```  
-  
-### <a name="parameters"></a>Parametry  
- *interface1*  
- Domyślny interfejs, które będą dostępne do wykonywania skryptów środowiska, w których utworzenia obiektu na podstawie klasy zdefiniowane za pomocą **domyślne** atrybutu.  
-  
- Jeśli nie domyślny interfejs jest określony, pierwsze wystąpienie interfejsu nonsource jest używany jako domyślny.  
-  
- *interface2*(opcjonalnie)  
- Domyślnym interfejsie źródła. Należy także określić ten interfejs, za pomocą [źródła](../windows/source-cpp.md) atrybutu.  
-  
- Jeśli nie domyślnym interfejsie źródła jest określony, pierwszy interfejs źródłowy jest używany jako domyślny.  
-  
-## <a name="remarks"></a>Uwagi  
- **Domyślne** atrybut C++ ma taką samą funkcjonalność jak [domyślne](http://msdn.microsoft.com/library/windows/desktop/aa366787) atrybutów w MIDL. **Domyślne** również zostanie użyty atrybut [przypadek](../windows/case-cpp.md) atrybutu.  
-  
-## <a name="example"></a>Przykład  
- Poniższy kod przedstawia sposób **domyślne** służy do określania, w definicji klasy coclass `ICustomDispatch` jako domyślny interfejs programowania:  
-  
-```cpp  
-// cpp_attr_ref_default.cpp  
-// compile with: /LD  
-#include "windows.h"  
-[module(name="MyLibrary")];  
-  
-[object, uuid("9E66A290-4365-11D2-A997-00C04FA37DDB")]  
-__interface ICustom {  
-   HRESULT Custom([in] long l, [out, retval] long *pLong);  
-};  
-  
-[dual, uuid("9E66A291-4365-11D2-A997-00C04FA37DDB")]   
-__interface IDual {  
-   HRESULT Dual([in] long l, [out, retval] long *pLong);  
-};  
-  
-[object, uuid("9E66A293-4365-11D2-A997-00C04FA37DDB")]  
-__interface ICustomDispatch : public IDispatch {  
-   HRESULT Dispatch([in] long l, [out, retval] long *pLong);  
-};  
-  
-[   coclass,  
-   default(ICustomDispatch),   
-   source(IDual),  
+
+Wskazuje, że niestandardowe lub zdefiniowane w obrębie klasy coclass dispinterface reprezentuje domyślny interfejs programowania.
+
+## <a name="syntax"></a>Składnia
+
+```cpp
+[ default(
+   interface1,
+   interface2
+) ]
+```
+
+### <a name="parameters"></a>Parametry
+
+*interface1*  
+Domyślny interfejs, które będą dostępne do wykonywania skryptów środowiska, w których utworzenia obiektu na podstawie klasy zdefiniowane za pomocą **domyślne** atrybutu.
+
+Jeśli nie domyślny interfejs jest określony, pierwsze wystąpienie interfejsu nonsource jest używany jako domyślny.
+
+*interface2*(opcjonalnie)  
+Domyślnym interfejsie źródła. Należy także określić ten interfejs, za pomocą [źródła](../windows/source-cpp.md) atrybutu.
+
+Jeśli nie domyślnym interfejsie źródła jest określony, pierwszy interfejs źródłowy jest używany jako domyślny.
+
+## <a name="remarks"></a>Uwagi
+
+**Domyślne** atrybut C++ ma taką samą funkcjonalność jak [domyślne](http://msdn.microsoft.com/library/windows/desktop/aa366787) atrybutów w MIDL. **Domyślne** również zostanie użyty atrybut [przypadek](../windows/case-cpp.md) atrybutu.
+
+## <a name="example"></a>Przykład
+
+Poniższy kod przedstawia sposób **domyślne** służy do określania, w definicji klasy coclass `ICustomDispatch` jako domyślny interfejs programowania:
+
+```cpp
+// cpp_attr_ref_default.cpp
+// compile with: /LD
+#include "windows.h"
+[module(name="MyLibrary")];
+
+[object, uuid("9E66A290-4365-11D2-A997-00C04FA37DDB")]
+__interface ICustom {
+   HRESULT Custom([in] long l, [out, retval] long *pLong);
+};
+
+[dual, uuid("9E66A291-4365-11D2-A997-00C04FA37DDB")]
+__interface IDual {
+   HRESULT Dual([in] long l, [out, retval] long *pLong);
+};
+
+[object, uuid("9E66A293-4365-11D2-A997-00C04FA37DDB")]
+__interface ICustomDispatch : public IDispatch {
+   HRESULT Dispatch([in] long l, [out, retval] long *pLong);
+};
+
+[   coclass,
+   default(ICustomDispatch),
+   source(IDual),
    uuid("9E66A294-4365-11D2-A997-00C04FA37DDB")  
-]  
-class CClass : public ICustom, public IDual, public ICustomDispatch {  
-   HRESULT Custom(long l, long *pLong) { return(S_OK); }  
-   HRESULT Dual(long l, long *pLong) { return(S_OK); }  
-   HRESULT Dispatch(long l, long *pLong) { return(S_OK); }  
-};  
-  
-int main() {  
-#if 0 // Can't instantiate without implementations of IUnknown/IDispatch  
-   CClass *pClass = new CClass;  
-  
-   long llong;  
-  
-   pClass->custom(1, &llong);  
-   pClass->dual(1, &llong);  
-   pClass->dispinterface(1, &llong);  
-   pClass->dispatch(1, &llong);  
-  
-   delete pClass;  
-#endif  
-   return(0);  
-}  
-```  
-  
- [Źródła](../windows/source-cpp.md) atrybut zawiera również przykład sposobu użycia **domyślne**.  
-  
-## <a name="requirements"></a>Wymagania  
-  
-### <a name="attribute-context"></a>Kontekst atrybutu  
-  
-|||  
-|-|-|  
-|**Dotyczy**|**Klasa**, **struktury**, element członkowski danych|  
-|**Powtarzalne**|Nie|  
-|**Wymaganych atrybutów**|**Klasa coclass** (po zastosowaniu do **klasy** lub **struktury**)|  
-|**Nieprawidłowe atrybuty**|Brak|  
-  
- Aby uzyskać więcej informacji, zobacz [konteksty atrybutu](../windows/attribute-contexts.md).  
-  
-## <a name="see-also"></a>Zobacz też  
- [Atrybuty IDL](../windows/idl-attributes.md)   
- [Atrybuty klasy](../windows/class-attributes.md)   
- [coclass](../windows/coclass.md)   
+]
+class CClass : public ICustom, public IDual, public ICustomDispatch {
+   HRESULT Custom(long l, long *pLong) { return(S_OK); }
+   HRESULT Dual(long l, long *pLong) { return(S_OK); }
+   HRESULT Dispatch(long l, long *pLong) { return(S_OK); }
+};
+
+int main() {
+#if 0 // Can't instantiate without implementations of IUnknown/IDispatch
+   CClass *pClass = new CClass;
+
+   long llong;
+
+   pClass->custom(1, &llong);
+   pClass->dual(1, &llong);
+   pClass->dispinterface(1, &llong);
+   pClass->dispatch(1, &llong);
+
+   delete pClass;
+#endif
+   return(0);
+}
+```
+
+[Źródła](../windows/source-cpp.md) atrybut zawiera również przykład sposobu użycia **domyślne**.
+
+## <a name="requirements"></a>Wymagania
+
+### <a name="attribute-context"></a>Kontekst atrybutu
+
+|||
+|-|-|
+|**Dotyczy**|**Klasa**, **struktury**, element członkowski danych|
+|**Powtarzalne**|Nie|
+|**Wymaganych atrybutów**|**Klasa coclass** (po zastosowaniu do **klasy** lub **struktury**)|
+|**Nieprawidłowe atrybuty**|Brak|
+
+Aby uzyskać więcej informacji, zobacz [konteksty atrybutu](../windows/attribute-contexts.md).
+
+## <a name="see-also"></a>Zobacz też
+
+[Atrybuty IDL](../windows/idl-attributes.md)  
+[Atrybuty klasy](../windows/class-attributes.md)  
+[coclass](../windows/coclass.md)  

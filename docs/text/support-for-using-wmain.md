@@ -14,16 +14,16 @@ helpviewer_keywords:
 - wWinMain function
 - wmain function
 ms.assetid: 41213c41-668c-40a4-8a1e-77d9eded720d
-author: ghogen
-ms.author: ghogen
+author: mikeblome
+ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 390f2a11b98a851b5f33b4e0a941a515421d5836
-ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
+ms.openlocfilehash: b82c233d1f03ae4679a355b6782bb9e7dd9dad15
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/09/2018
-ms.locfileid: "40011620"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42604066"
 ---
 # <a name="support-for-using-wmain"></a>Obsługa używania funkcji wmain
 Visual C++ obsługuje definiowanie **wmain** funkcji i przekazanie argumentów do znaków dwubajtowych do aplikacji Unicode. Możesz deklarować Parametry formalne dla **wmain**, za pomocą format podobny do `main`. Możesz następnie przekazać argumenty znaków dwubajtowych i, opcjonalnie, wskaźnik znaku dwubajtowego środowiska do programu. `argv` i `envp` parametry **wmain** typu `wchar_t*`. Na przykład:  

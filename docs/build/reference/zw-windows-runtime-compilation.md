@@ -1,5 +1,5 @@
 ---
-title: -ZW (kompilacja środowiska uruchomieniowego systemu Windows) | Dokumentacja firmy Microsoft
+title: -ZW (kompilacja środowiska uruchomieniowego Windows) | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -21,17 +21,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fce6c6825ed4ae715a2f4cde6b0e1ffa8b3b6733
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 97a97158dda886a09fb6ccb00898a8c518d8e250
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32380069"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42602265"
 ---
 # <a name="zw-windows-runtime-compilation"></a>/ZW (Kompilacja środowiska wykonawczego systemu Windows)
-Kompiluje źródła kodu do obsługi [!INCLUDE[cppwrt](../../build/reference/includes/cppwrt_md.md)] ([!INCLUDE[cppwrt_short](../../build/reference/includes/cppwrt_short_md.md)]) do tworzenia aplikacji uniwersalnych platformy systemu Windows (UWP).  
+Kompiluje źródła kod obsługujący rozszerzenia składnik Visual C++ C + +/ CX do tworzenia aplikacji uniwersalnych platformy Windows (UWP).  
   
- Jeśli używasz **/ZW** skompilować, należy zawsze podać **/ehsc** również.  
+ Kiedy używasz **/ZW** skompilować, należy zawsze określić **/ehsc** także.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -42,18 +42,18 @@ Kompiluje źródła kodu do obsługi [!INCLUDE[cppwrt](../../build/reference/inc
   
 ## <a name="arguments"></a>Argumenty  
  nostdlib  
- Wskazuje tym Platform.winmd, Windows.Foundation.winmd i inne pliki metadanych (.winmd) dla systemu Windows nie są automatycznie uwzględniona w kompilacji domyślnego. Zamiast tego należy użyć [/FU (nazwij wymuszone #using)](../../build/reference/fu-name-forced-hash-using-file.md) opcję kompilatora, aby jawnie określić pliki metadanych systemu Windows.  
+ Wskazuje, że Platform.winmd Windows.Foundation.winmd i inne domyślne, które pliki metadanych (.winmd) Windows nie są automatycznie uwzględniane w kompilacji. Zamiast tego należy użyć [/FU (nazwij wymuszone #using)](../../build/reference/fu-name-forced-hash-using-file.md) — opcja kompilatora jawnie określić pliki metadanych Windows.  
   
 ## <a name="remarks"></a>Uwagi  
  Po określeniu **/ZW** opcja, kompilator obsługuje te funkcje:  
   
--   Wymagane metadane plików, przestrzenie nazw, typy danych i funkcje wymagane przez aplikację do wykonania w środowisku wykonawczym systemu Windows.  
+-   Pliki wymagane metadane, przestrzenie nazw, typów danych i funkcje wymagane przez aplikację do środowiska wykonawczego Windows.  
   
--   Automatyczne liczenie odwołań obiektów środowiska wykonawczego systemu Windows i automatyczne odrzucanie obiektu po jego liczebności referencyjnej przechodzi od zera.  
+-   Automatyczne zliczanie odwołań obiektów Windows Runtime i automatyczne odrzucanie obiektu podczas jego licznik odwołań zbliża się do zera.  
   
- Ponieważ konsolidatora przyrostowego nie obsługuje metadanych systemu Windows, uwzględniane w plikach .obj przy użyciu **/ZW** opcji [/GM ponowną (Włącz minimalnego odbudować)](../../build/reference/gm-enable-minimal-rebuild.md) opcja jest niezgodna z **/ZW** .  
+ Ponieważ konsolidatora przyrostowego nie obsługuje metadanych Windows dołączona do plików .obj przy użyciu **/ZW** opcji [/Gm (Włącz minimalną ponowną kompilację)](../../build/reference/gm-enable-minimal-rebuild.md) opcja jest niezgodna z **/ZW** .  
   
- Aby uzyskać więcej informacji, zobacz [odwołanie do języka Visual C++](../../cppcx/visual-c-language-reference-c-cx.md).  
+ Aby uzyskać więcej informacji, zobacz [odwołanie językowe Visual C++](../../cppcx/visual-c-language-reference-c-cx.md).  
   
 ## <a name="requirements"></a>Wymagania  
   

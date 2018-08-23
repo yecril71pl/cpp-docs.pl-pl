@@ -16,19 +16,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 650a2190e59b995962672deccdf202902f8a5b07
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 01ac7cfb1c53f0616431a33638bd04fdb586f557
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33875269"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42609640"
 ---
 # <a name="module-attributes"></a>Atrybuty modułów
-Następujący atrybut można stosować do [modułu](../windows/module-cpp.md) atrybutu.  
+Następujący atrybut będzie stosowany tylko do [modułu](../windows/module-cpp.md) atrybutu.
   
-|Atrybut|Opis|  
-|---------------|-----------------|  
-|[helpstringdll](../windows/helpstringdll.md)|Określa nazwę biblioteki DLL, aby wykonać wyszukiwanie ciągu dokumentu (lokalizacja).|  
+|Atrybut|Opis|
+|---------------|-----------------|
+|[helpstringdll](../windows/helpstringdll.md)|Określa nazwę biblioteki DLL, aby wykonać wyszukiwanie ciągu dokumentu (lokalizacja).|
   
-## <a name="see-also"></a>Zobacz też  
+## <a name="see-also"></a>Zobacz też
  [Atrybuty w zależności od zastosowania](../windows/attributes-by-usage.md)

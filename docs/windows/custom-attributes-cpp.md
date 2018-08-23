@@ -1,5 +1,5 @@
 ---
-title: Niestandardowe atrybuty (C++) | Dokumentacja firmy Microsoft
+title: Atrybuty niestandardowe (C++) | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,22 +16,24 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: e5ca62b63cd09f2c5041efbbf36b01cc3b44f77c
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: e2bbcd8fb0e1b04ec35520f154724b095762233b
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33887029"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42608004"
 ---
 # <a name="custom-attributes-c"></a>Atrybuty niestandardowe (C++)
-Atrybut niestandardowy jest jednoznacznie technika, który umożliwia użytkownikowi rozszerzenie metadanych. Ten temat dotyczy przy użyciu atrybutów: Określanie parametrów i elementów docelowych.  
-  
- Aby uzyskać informacje na temat definiowania nowych atrybutów niestandardowych Zobacz,  
-  
--   [Atrybuty zdefiniowane przez użytkownika](../windows/user-defined-attributes-cpp-component-extensions.md)  
-  
--   [atrybut](../windows/attribute.md) (przestarzałe składni).  
-  
-## <a name="see-also"></a>Zobacz też  
- [Atrybut](../windows/attribute.md)   
- [Atrybuty niestandardowe (C++)](../windows/custom-attributes-cpp.md)
+
+Atrybut niestandardowy jest silnie typizowaną technika, która umożliwia użytkownikowi rozszerzanie metadanych. Ten temat dotyczy przy użyciu atrybutów: Określanie parametrów i obiektów docelowych.
+
+Aby uzyskać informacje na temat definiowania nowych atrybutów niestandardowych znajduje się pozycja
+
+- [Atrybuty zdefiniowane przez użytkownika](../windows/user-defined-attributes-cpp-component-extensions.md)
+
+- [atrybut](../windows/attribute.md) (przestarzałe składni).
+
+## <a name="see-also"></a>Zobacz też
+
+[attribute](../windows/attribute.md)  
+[Atrybuty niestandardowe (C++)](../windows/custom-attributes-cpp.md)

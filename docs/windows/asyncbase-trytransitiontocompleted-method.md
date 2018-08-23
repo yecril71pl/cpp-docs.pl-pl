@@ -17,31 +17,35 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: a44434c530bd0685627e2e807140e31068cb5eb8
-ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
+ms.openlocfilehash: 3f1f6e27c7797a8995044bdcf9ebd9425a6f6ea3
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39645763"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42604166"
 ---
 # <a name="asyncbasetrytransitiontocompleted-method"></a>AsyncBase::TryTransitionToCompleted — Metoda
-Wskazuje, czy bieżąca operacja asynchroniczna została ukończona.  
-  
-## <a name="syntax"></a>Składnia  
-  
-```cpp  
-bool TryTransitionToCompleted(  
-   void  
-);  
-```  
-  
-## <a name="return-value"></a>Wartość zwracana  
- **wartość true,** Jeśli operacja asynchroniczna została ukończona; w przeciwnym razie **false**.  
-  
-## <a name="requirements"></a>Wymagania  
- **Nagłówek:** async.h  
-  
- **Namespace:** Microsoft::WRL  
-  
-## <a name="see-also"></a>Zobacz też  
- [AsyncBase, klasa](../windows/asyncbase-class.md)
+
+Wskazuje, czy bieżąca operacja asynchroniczna została ukończona.
+
+## <a name="syntax"></a>Składnia
+
+```cpp
+bool TryTransitionToCompleted(
+   void
+);
+```
+
+## <a name="return-value"></a>Wartość zwracana
+
+**wartość true,** Jeśli operacja asynchroniczna została ukończona; w przeciwnym razie **false**.
+
+## <a name="requirements"></a>Wymagania
+
+**Nagłówek:** async.h
+
+**Namespace:** Microsoft::WRL
+
+## <a name="see-also"></a>Zobacz też
+
+[AsyncBase, klasa](../windows/asyncbase-class.md)

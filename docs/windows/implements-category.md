@@ -17,63 +17,68 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 28df44096f3b61eb4ada17ec824292281edee602
-ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
+ms.openlocfilehash: e566e50cc0fed4b17b085451410a1d0c3f81fb38
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/09/2018
-ms.locfileid: "40013717"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42597550"
 ---
 # <a name="implementscategory"></a>implements_category
-Określa kategorii składników implementowane przez klasy docelowej.  
-  
-## <a name="syntax"></a>Składnia  
-  
-```cpp  
-[ implements_category(  
-   implements_category="uuid"  
-) ]  
-```  
-  
-### <a name="parameters"></a>Parametry  
- *implements_category*  
- Identyfikator kategorii zaimplementowane.  
-  
-## <a name="remarks"></a>Uwagi  
- **Implements_category —** C++ atrybut określa kategorii składników implementowane przez klasy docelowej. Odbywa się przez utworzenie mapy kategorii i dodawanie oddzielne wpisy określone przez **implements_category —** atrybutu. Aby uzyskać więcej informacji, zobacz [co to są kategorii składników i jak są one działają?](http://msdn.microsoft.com/library/windows/desktop/ms694322).  
-  
- Ten atrybut wymaga, aby [coclass](../windows/coclass.md), [progid](../windows/progid.md), lub [vi_progid —](../windows/vi-progid.md) atrybutów (lub innego atrybutu, który oznacza jeden z nich) również będą stosowane do tego samego elementu. Jeśli dowolny pojedynczy atrybut jest używany, pozostałe dwa są automatycznie stosowane. Na przykład jeśli `progid` zastosowaniu `vi_progid` i `coclass` są również stosowane.  
-  
-## <a name="example"></a>Przykład  
- Poniższy kod określa, że następujący obiekt implementuje `Control` kategorii.  
-  
-```cpp  
-// cpp_attr_ref_implements_category.cpp  
-// compile with: /LD  
-#define _ATL_ATTRIBUTES  
-#include "atlbase.h"  
-#include "atlcom.h"  
-  
-[module (name="MyLib")];  
-[ coclass, implements_category("CATID_Control"),  
-  uuid("20a0d0cc-5172-40f5-99ae-5e032f3205ae")]  
-class CMyClass {};  
-```  
-  
-## <a name="requirements"></a>Wymagania  
-  
-### <a name="attribute-context"></a>Kontekst atrybutu  
-  
-|||  
-|-|-|  
-|**Dotyczy**|**Klasa**, **— struktura**|  
-|**Powtarzalne**|Tak|  
-|**Wymaganych atrybutów**|Jedną z następujących: `coclass`, `progid`, lub `vi_progid`|  
-|**Nieprawidłowe atrybuty**|Brak|  
-  
- Aby uzyskać więcej informacji, zobacz [konteksty atrybutu](../windows/attribute-contexts.md).  
-  
-## <a name="see-also"></a>Zobacz też  
- [Atrybuty COM](../windows/com-attributes.md)   
- [Atrybuty klasy](../windows/class-attributes.md)   
- [IMPLEMENTED_CATEGORY](../atl/reference/category-macros.md#implemented_category)   
+
+Określa kategorii składników implementowane przez klasy docelowej.
+
+## <a name="syntax"></a>Składnia
+
+```cpp
+[ implements_category(
+   implements_category="uuid"
+) ]
+```
+
+### <a name="parameters"></a>Parametry
+
+*implements_category*  
+Identyfikator kategorii zaimplementowane.
+
+## <a name="remarks"></a>Uwagi
+
+**Implements_category —** C++ atrybut określa kategorii składników implementowane przez klasy docelowej. Odbywa się przez utworzenie mapy kategorii i dodawanie oddzielne wpisy określone przez **implements_category —** atrybutu. Aby uzyskać więcej informacji, zobacz [co to są kategorii składników i jak są one działają?](http://msdn.microsoft.com/library/windows/desktop/ms694322).
+
+Ten atrybut wymaga, aby [coclass](../windows/coclass.md), [progid](../windows/progid.md), lub [vi_progid —](../windows/vi-progid.md) atrybutów (lub innego atrybutu, który oznacza jeden z nich) również będą stosowane do tego samego elementu. Jeśli dowolny pojedynczy atrybut jest używany, pozostałe dwa są automatycznie stosowane. Na przykład jeśli `progid` zastosowaniu `vi_progid` i `coclass` są również stosowane.
+
+## <a name="example"></a>Przykład
+
+Poniższy kod określa, że następujący obiekt implementuje `Control` kategorii.
+
+```cpp
+// cpp_attr_ref_implements_category.cpp
+// compile with: /LD
+#define _ATL_ATTRIBUTES
+#include "atlbase.h"
+#include "atlcom.h"
+
+[module (name="MyLib")];
+[ coclass, implements_category("CATID_Control"),
+  uuid("20a0d0cc-5172-40f5-99ae-5e032f3205ae")]
+class CMyClass {};
+```
+
+## <a name="requirements"></a>Wymagania
+
+### <a name="attribute-context"></a>Kontekst atrybutu
+
+|||
+|-|-|
+|**Dotyczy**|**Klasa**, **— struktura**|
+|**Powtarzalne**|Tak|
+|**Wymaganych atrybutów**|Jedną z następujących: `coclass`, `progid`, lub `vi_progid`|
+|**Nieprawidłowe atrybuty**|Brak|
+
+Aby uzyskać więcej informacji, zobacz [konteksty atrybutu](../windows/attribute-contexts.md).
+
+## <a name="see-also"></a>Zobacz też
+
+[Atrybuty COM](../windows/com-attributes.md)  
+[Atrybuty klasy](../windows/class-attributes.md)  
+[IMPLEMENTED_CATEGORY](../atl/reference/category-macros.md#implemented_category)  

@@ -17,32 +17,37 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 125ffe998e7c3f225f72e3fb47df4ef3525c37f9
-ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
+ms.openlocfilehash: f8bb81ca1591fc398b1d0814fca918309169e82c
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39649051"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42600987"
 ---
 # <a name="weakrefoperatoramp-operator"></a>WeakRef::operator&amp; — Operator
-Zwraca `ComPtrRef` obiekt, który reprezentuje bieżący **WeakRef** obiektu.  
-  
-## <a name="syntax"></a>Składnia  
-  
-```cpp  
+
+Zwraca `ComPtrRef` obiekt, który reprezentuje bieżący **WeakRef** obiektu.
+
+## <a name="syntax"></a>Składnia
+
+```cpp
 Details::ComPtrRef<WeakRef> operator&() throw()  
-```  
-  
-## <a name="return-value"></a>Wartość zwracana  
- A `ComPtrRef` obiekt, który reprezentuje bieżący **WeakRef** obiektu.  
-  
-## <a name="remarks"></a>Uwagi  
- Jest to wewnętrzny pomocnika operatora, który nie jest przeznaczona do użycia w kodzie.  
-  
-## <a name="requirements"></a>Wymagania  
- **Nagłówek:** client.h  
-  
- **Namespace:** Microsoft::WRL  
-  
-## <a name="see-also"></a>Zobacz też  
- [WeakRef, klasa](../windows/weakref-class.md)
+```
+
+## <a name="return-value"></a>Wartość zwracana
+
+A `ComPtrRef` obiekt, który reprezentuje bieżący **WeakRef** obiektu.
+
+## <a name="remarks"></a>Uwagi
+
+Jest to wewnętrzny pomocnika operatora, który nie jest przeznaczona do użycia w kodzie.
+
+## <a name="requirements"></a>Wymagania
+
+**Nagłówek:** client.h
+
+**Namespace:** Microsoft::WRL
+
+## <a name="see-also"></a>Zobacz też
+
+[WeakRef, klasa](../windows/weakref-class.md)

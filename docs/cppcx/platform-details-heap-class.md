@@ -1,5 +1,5 @@
 ---
-title: Klasa platform::details::Heap | Dokumentacja firmy Microsoft
+title: 'Platform::details:: Heap, klasa | Dokumentacja firmy Microsoft'
 ms.custom: ''
 ms.date: 12/30/2016
 ms.technology: cpp-windows
@@ -11,19 +11,19 @@ dev_langs:
 helpviewer_keywords:
 - Platform::Details::Heap Class
 ms.assetid: d6dcf9c0-8036-433f-9eb8-c53ec49b0993
-author: ghogen
-ms.author: ghogen
+author: mikeblome
+ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c6a980583cb480ccc674e0606fa44c4399539e56
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: d9bd4238f9e89a6d9c11f402aa0af2fa6f2418bd
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33088248"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42591716"
 ---
-# <a name="platformdetailsheap-class"></a>Klasa platform::details::Heap
-Ta klasa jest przeznaczony tylko do użytku wewnętrznego i nie mają być używane do tworzenia aplikacji.  
+# <a name="platformdetailsheap-class"></a>Platform::details:: Heap, klasa
+Ta klasa jest przeznaczona wyłącznie do użytku wewnętrznego i nie jest przeznaczona do użycia na potrzeby programowania.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -33,7 +33,7 @@ ref class Heap sealed;
 ```  
   
 ### <a name="remarks"></a>Uwagi  
- Ta klasa jest dostępna wyłącznie dla kompletności, ponieważ mogą być kontrolowane z przeglądarkami.  
+ Ta klasa jest przeznaczona wyłącznie dla kompletności, ponieważ mogą być kontrolowane za pomocą przeglądarki.  
   
 ## <a name="inheritance-hierarchy"></a>Hierarchia dziedziczenia  
  `Platform`  

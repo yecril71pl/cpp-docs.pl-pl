@@ -1,5 +1,5 @@
 ---
-title: Klasa platform::InvalidArgumentException | Dokumentacja firmy Microsoft
+title: Platform::InvalidArgumentException, klasa | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 12/30/2016
 ms.technology: cpp-windows
@@ -12,19 +12,19 @@ dev_langs:
 helpviewer_keywords:
 - Platform::InvalidArgumentException
 ms.assetid: 1a8d860b-3bcb-41a9-9346-6610616a0b46
-author: ghogen
-ms.author: ghogen
+author: mikeblome
+ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c26f0efb907520ea7e54b0b8bec8d2f4323a51cb
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: ea9a2d1e2e956ae83498a5fc99878c5a4ef7bb3a
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33086678"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42594004"
 ---
-# <a name="platforminvalidargumentexception-class"></a>Klasa platform::InvalidArgumentException
-Element zgłaszany, gdy jedna z podanych argumentów metody jest nieprawidłowa.  
+# <a name="platforminvalidargumentexception-class"></a>Platform::InvalidArgumentException, klasa
+Element zgłaszany, gdy jeden z podanych argumentów metody jest nieprawidłowy.  
   
 ## <a name="syntax"></a>Składnia  
   

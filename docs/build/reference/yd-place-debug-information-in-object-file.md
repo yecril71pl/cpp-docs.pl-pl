@@ -19,15 +19,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 39b03b0faf975caba8c5a287c88afcdf53f7a71f
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 86cb8a42b77cd0a932530455f1125125a9f546d9
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32378236"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42585970"
 ---
 # <a name="yd-place-debug-information-in-object-file"></a>/Yd (Umieść informacje o debugowaniu w pliku obiektu)
-Pełne informacje we wszystkich plikach obiektu debugowania nadać tempo utworzone na podstawie pliku prekompilowanego nagłówka (.pch), gdy jest używany z [/Yc](../../build/reference/yc-create-precompiled-header-file.md) i [/z7](../../build/reference/z7-zi-zi-debug-information-format.md) opcje. Przestarzałe.  
+Pełne informacje we wszystkich plikach obiektu debugowania tępy utworzone na podstawie pliku prekompilowanego pliku nagłówkowego (.pch), gdy jest używane z [/Yc](../../build/reference/yc-create-precompiled-header-file.md) i [/z7](../../build/reference/z7-zi-zi-debug-information-format.md) opcje. Przestarzałe.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -36,15 +36,15 @@ Pełne informacje we wszystkich plikach obiektu debugowania nadać tempo utworzo
 ```  
   
 ## <a name="remarks"></a>Uwagi  
- **/YD** jest przestarzały; [!INCLUDE[vcprvc](../../build/includes/vcprvc_md.md)] teraz obsługuje stosowanie wielu obiektów zapisywania do pliku .pdb pojedynczego **/zi** zamiast tego. Listę opcji kompilatora przestarzałe, zobacz **uznane za przestarzałe i usunąć — opcje kompilatora** w [kompilatora opcje rozbiciu na kategorie](../../build/reference/compiler-options-listed-by-category.md).  
+ **/YD** jest przestarzała; Visual C++ obsługuje teraz wiele obiektów zapis do pliku .pdb w jednym, należy użyć **/zi** zamiast tego. Aby uzyskać listę opcji kompilatora przestarzałe zobacz **usunięte opcje kompilatora i uznane za przestarzałe** w [opcje kompilatora wymienione według kategorii](../../build/reference/compiler-options-listed-by-category.md).  
   
  O ile nie trzeba rozpowszechniać biblioteki zawierające informacje debugowania, użyj [/zi](../../build/reference/z7-zi-zi-debug-information-format.md) opcji zamiast **/z7** i **/Yd**.  
   
- Przechowywanie pełne informacje o debugowaniu w każdym pliku .obj jest konieczne tylko dystrybucji bibliotek, które zawierają informacje o debugowaniu. Spowalnia kompilacji, a wymaga dużo wolnego miejsca. Gdy **/Yc** i **/z7** są używane bez **/Yd**, kompilator przechowuje typowych informacji o debugowaniu w pliku .obj pierwszy utworzone na podstawie pliku .pch. Kompilator nie wstawić tych informacji do plików .obj następnie utworzone na podstawie pliku .pch; wstawia odsyłacze do informacji. Niezależnie od tego, ile plików .obj użyć pliku .pch tylko jeden plik .obj zawiera typowe informacje debugowania.  
+ Przechowywanie kompletne informacje debugowania w każdym pliku obj. konieczne jest tylko Dystrybucja bibliotek, które zawierają informacje o debugowaniu. Go spowalnia kompilacji i wymaga dużo wolnego miejsca. Gdy **/Yc** i **/z7** są używane bez **/Yd**, kompilator zapisuje typowych informacji o debugowaniu w pierwszym pliku .obj, utworzonego na podstawie pliku .pch. Kompilator nie wstawić tych informacji do plików .obj, następnie utworzonego na podstawie pliku .pch; wstawia odsyłacze do informacji. Niezależnie od tego, ile plików .obj, użyj pliku .pch tylko jeden plik .obj zawiera wspólne informacje debugowania.  
   
- Mimo że domyślne zachowanie powoduje to szybsze tworzenie razy i zmniejsza wymagania miejsca na dysku, jest niepożądanych niewielkie zmiany wymaga odbudowanie pliku .obj zawierającego typowych informacji debugowania. W takim przypadku kompilator ponownie wszystkie pliki .obj zawierające odsyłacze do oryginalnego pliku .obj. Ponadto jeżeli wspólnej pliku .pch jest używany przez różnych projektów, zależność od odsyłacze do pliku .obj pojedynczego jest trudne.  
+ Mimo że domyślne zachowanie powoduje to szybsze czasy kompilacji i zmniejsza zapotrzebowanie miejsca na dysku, jest to niepożądane Jeśli niewielką zmianę wymaga ponowne tworzenie pliku .obj, zawierających wspólne informacje debugowania. W tym przypadku kompilator ponownie wszystkie pliki .obj zawierający odsyłacze do oryginalnego pliku .obj. Ponadto jeśli wspólnego pliku .pch jest używany w różnych projektach, poleganie na odsyłacze do pliku obj pojedynczy jest trudne.  
   
- Aby uzyskać więcej informacji o prekompilowanych nagłówków zobacz:  
+ Aby uzyskać więcej informacji na temat wstępnie skompilowanych nagłówków zobacz:  
   
 -   [/Y (Prekompilowane nagłówki)](../../build/reference/y-precompiled-headers.md)  
   
@@ -52,41 +52,41 @@ Pełne informacje we wszystkich plikach obiektu debugowania nadać tempo utworzo
   
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Aby ustawić tę opcję kompilatora w środowisku programowania Visual Studio  
   
-1.  Otwórz projekt **strony właściwości** okno dialogowe. Aby uzyskać więcej informacji, zobacz [Praca z właściwościami projektu](../../ide/working-with-project-properties.md).  
+1.  Otwórz projekt **stron właściwości** okno dialogowe. Aby uzyskać więcej informacji, zobacz [Praca z właściwościami projektu](../../ide/working-with-project-properties.md).  
   
 2.  Kliknij przycisk **C/C++** folderu.  
   
-3.  Kliknij przycisk **wiersza polecenia** strony właściwości.  
+3.  Kliknij przycisk **wiersza polecenia** stronę właściwości.  
   
-4.  Typ opcji kompilatora w **dodatkowe opcje** pole.  
+4.  Wpisz opcje kompilatora w **dodatkowe opcje** pole.  
   
 ### <a name="to-set-this-compiler-option-programmatically"></a>Aby programowo ustawić tę opcję kompilatora  
   
 -   Zobacz <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.AdditionalOptions%2A>.  
   
 ## <a name="examples"></a>Przykłady  
- Załóżmy, że użytkownik ma dwa podstawowe pliki F.cpp i G.cpp każdego zawierające te **#include** instrukcji:  
+ Załóżmy, że masz dwa pliki podstawowego F.cpp i G.cpp, zawierających te **#include** instrukcji:  
   
 ```  
 #include "windows.h"  
 #include "etc.h"  
 ```  
   
- Poniższe polecenie tworzy prekompilowanego nagłówka pliku ETC.pch i pliku obiektu F.obj:  
+ Następujące polecenie tworzy prekompilowany plik nagłówkowy ETC.pch i plik obiektu F.obj plików:  
   
 ```  
 CL /YcETC.H /Z7 F.CPP  
 ```  
   
- Plik obiektu F.obj zawiera typ i informacji o symbolach dla WINDOWS.h i ETC.h (i inne pliki nagłówków, które obejmują one). Teraz można prekompilowany nagłówek ETC.pch skompiluj plik źródłowy G.cpp:  
+ Plik obiektu F.obj zawiera typ i informacje o symbolach dla WINDOWS.h i ETC.h (i inne pliki nagłówkowe, które obejmują one). Teraz można użyć prekompilowany plik nagłówkowy ETC.pch do kompilowania pliku źródłowego G.cpp:  
   
 ```  
 CL /YuETC.H /Z7 G.CPP  
 ```  
   
- Plik obiektu G.obj nie zawiera informacji o debugowaniu dla prekompilowanego nagłówka, ale po prostu odwołuje się do tych informacji w pliku F.obj. Należy pamiętać, że należy powiązać z plikiem F.obj.  
+ Plik obiektu G.obj nie zawiera informacje o debugowaniu dla prekompilowanego nagłówka, ale po prostu odwołuje się do tych informacji w pliku F.obj. Należy pamiętać, że należy połączyć z plikiem F.obj.  
   
- Jeśli Twoje prekompilowany nagłówek nie został skompilowany z **/z7**, możesz nadal używać go w nowszej kompilacji za pomocą **/z7**. Informacje o debugowaniu znajduje się w bieżącym pliku obiektu i symboli lokalnych dla funkcji i typów zdefiniowanych we prekompilowanym nagłówku nie są dostępne do debugera.  
+ Jeśli Twoje wstępnie skompilowanego nagłówka nie został skompilowany przy użyciu **/z7**, można nadal używać go w nowszej kompilacji przy użyciu **/z7**. Informacje o debugowaniu znajduje się w bieżącym pliku obiektu i symboli lokalnych dla funkcji i typów zdefiniowanych w prekompilowanego pliku nagłówkowego nie są dostępne do debugera.  
   
 ## <a name="see-also"></a>Zobacz też  
  [Opcje kompilatora](../../build/reference/compiler-options.md)   

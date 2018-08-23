@@ -18,32 +18,35 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 923ff59044b57d22636c9997e6eb7268ade7860e
-ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
+ms.openlocfilehash: 539f16c1de7569818a1d460730f9c48fbca82ed8
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/09/2018
-ms.locfileid: "40017142"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42590828"
 ---
 # <a name="setting-a-cursor39s-hot-spot-image-editor-for-icons"></a>Ustawienie kursora&#39;s aktywny (edytor obrazów dla ikon)
-Punkt aktywny o [kursora](../windows/icons-and-cursors-image-resources-for-display-devices-image-editor-for-icons.md) to punkt, do której Windows odwołuje się w śledzeniu pozycja kursora. Domyślnie ustawiono punkt aktywny w lewym górnym rogu kursora (współrzędne 0,0). **Informacji o hotspotach** właściwość [okno właściwości](/visualstudio/ide/reference/properties-window) zawiera współrzędne punktu aktywnego.  
-  
-### <a name="to-set-a-cursors-hot-spot"></a>Aby ustawić aktywnego punktu kursora  
-  
-1.  Na [paska narzędzi edytora obrazów](../windows/toolbar-image-editor-for-icons.md), kliknij przycisk **Ustaw punkt aktywny** narzędzia.  
-  
-2.  Kliknij piksel, który chcesz wyznaczyć jako aktywnego punktu kursora.  
-  
-     **Informacji o hotspotach** właściwość **właściwości** okno wyświetla nowy współrzędnych.  
-  
-    > [!TIP]
-    >  Etykietki narzędzi są wyświetlane po umieszczeniu kursora na przycisku paska narzędzi. Poniższe wskazówki mogą pomóc w identyfikacji funkcji każdego przycisku.  
-  
- Aby uzyskać informacje na temat dodawania zasobów do projektów zarządzanych, zobacz [zasoby w aplikacjach pulpitu](/dotnet/framework/resources/index) w *przewodniku dewelopera .NET Framework*. Aby uzyskać informacji na temat ręcznego dodawania plików zasobów do projektów zarządzanych, uzyskiwania dostępu do zasobów, wyświetlania statycznych zasobów i przypisywania ciągów zasobów do właściwości, zobacz [Creating Resource Files dla aplikacji klasycznych](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Aby uzyskać informacji na temat globalizacja i lokalizacja zasobów w aplikacjach zarządzanych, zobacz [Globalizing i lokalizowanie aplikacji programu .NET Framework](/dotnet/standard/globalization-localization/index).  
-  
-## <a name="requirements"></a>Wymagania  
- Brak  
-  
-## <a name="see-also"></a>Zobacz też  
- [Klawisze skrótów](../windows/accelerator-keys-image-editor-for-icons.md)   
- [Ikony i kursory: zasoby obrazów do wyświetlania na urządzeniach](../windows/icons-and-cursors-image-resources-for-display-devices-image-editor-for-icons.md)
+
+Punkt aktywny o [kursora](../windows/icons-and-cursors-image-resources-for-display-devices-image-editor-for-icons.md) to punkt, do której Windows odwołuje się w śledzeniu pozycja kursora. Domyślnie ustawiono punkt aktywny w lewym górnym rogu kursora (współrzędne 0,0). **Informacji o hotspotach** właściwość [okno właściwości](/visualstudio/ide/reference/properties-window) zawiera współrzędne punktu aktywnego.
+
+### <a name="to-set-a-cursors-hot-spot"></a>Aby ustawić aktywnego punktu kursora
+
+1. Na [paska narzędzi edytora obrazów](../windows/toolbar-image-editor-for-icons.md), kliknij przycisk **Ustaw punkt aktywny** narzędzia.
+
+2. Kliknij piksel, który chcesz wyznaczyć jako aktywnego punktu kursora.
+
+   **Informacji o hotspotach** właściwość **właściwości** okno wyświetla nowy współrzędnych.
+
+   > [!TIP]
+   > Etykietki narzędzi są wyświetlane po umieszczeniu kursora na przycisku paska narzędzi. Poniższe wskazówki mogą pomóc w identyfikacji funkcji każdego przycisku.
+
+Aby uzyskać informacje na temat dodawania zasobów do projektów zarządzanych, zobacz [zasoby w aplikacjach pulpitu](/dotnet/framework/resources/index) w *przewodniku dewelopera .NET Framework*. Aby uzyskać informacji na temat ręcznego dodawania plików zasobów do projektów zarządzanych, uzyskiwania dostępu do zasobów, wyświetlania statycznych zasobów i przypisywania ciągów zasobów do właściwości, zobacz [Creating Resource Files dla aplikacji klasycznych](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Aby uzyskać informacji na temat globalizacja i lokalizacja zasobów w aplikacjach zarządzanych, zobacz [Globalizing i lokalizowanie aplikacji programu .NET Framework](/dotnet/standard/globalization-localization/index).
+
+## <a name="requirements"></a>Wymagania
+
+Brak
+
+## <a name="see-also"></a>Zobacz też
+
+[Klawisze skrótów](../windows/accelerator-keys-image-editor-for-icons.md)  
+[Ikony i kursory: zasoby obrazów do wyświetlania na urządzeniach](../windows/icons-and-cursors-image-resources-for-display-devices-image-editor-for-icons.md)

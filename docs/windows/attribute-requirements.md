@@ -13,28 +13,28 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 9fdf97120b5f6396e3b18e274ef3626c9dbf919d
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: ea84b46e31d57ec05bf9641674d045f531b04722
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33863572"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42593755"
 ---
 # <a name="attribute-requirements"></a>Wymagania dotyczące atrybutów
-Wymagania dotyczące atrybutów C++ opisano typy projektów, Ustawienia kompilatora i inne informacje, które są niezbędne dla atrybutu do pracy. Poniżej opisano kategorie informacji.  
+Wymagania dotyczące atrybutów C++ opisują typów projektów, Ustawienia kompilatora i inne informacje, które są niezbędne dla atrybutu do pracy. Kategorie informacji są opisane poniżej.
   
 > [!NOTE]
->  Przy użyciu atrybutów dla klasy, która pochodzi z klasy, który także używa atrybutów jest nieobsługiwane.  
+> Przy użyciu atrybutów dla klasy, która jest pochodną klasę, która używa również atrybutów nie jest obsługiwana.
   
-## <a name="header"></a>nagłówek  
- To pole zawiera pliki nagłówkowe, które muszą być uwzględnione, zanim będzie można używać atrybutu.  
+## <a name="header"></a>nagłówek
+ To pole zawiera pliki nagłówkowe, które musi być uwzględniony, przed użyciem atrybutu.
   
-## <a name="project"></a>Projekt  
- To pole zawiera opis typów projektów, w których można użyć atrybutu.  
+## <a name="project"></a>Projekt
+ To pole zawiera opis typów projektów, w których można użyć atrybutu.
   
-## <a name="compiler"></a>Kompilatora  
- To pole zawiera opcje kompilatora, które muszą być obecne dla tego atrybutu ma być używany.  
+## <a name="compiler"></a>Kompilator
+ To pole zawiera opcje kompilatora, które muszą być obecne dla tego atrybutu do użycia.
   
-## <a name="see-also"></a>Zobacz też  
- [Konteksty atrybutu](../windows/attribute-contexts.md)   
+## <a name="see-also"></a>Zobacz też
+ [Konteksty atrybutu](../windows/attribute-contexts.md)  
  [Atrybuty według grup](../windows/attributes-by-group.md)

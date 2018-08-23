@@ -11,19 +11,19 @@ dev_langs:
 helpviewer_keywords:
 - Platform::SizeT Struct
 ms.assetid: 0803612c-8ba1-430c-9b7b-1bebae88608d
-author: ghogen
-ms.author: ghogen
+author: mikeblome
+ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8c69bf34a7965c098f6a656907071e0899b785b4
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: f60349203ce55a927ffac3d095988e5198bedd87
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33087737"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42601924"
 ---
 # <a name="platformsizet-value-class"></a>Klasa wartości Platform::SizeT
-Reprezentuje rozmiar obiektu. SizeT ma typ danych bez znaku.  
+Reprezentuje rozmiar obiektu. SizeT jest typem danych bez znaku.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -47,7 +47,7 @@ public ref class SizeT sealed : ValueType
  **Metadane:** platform.winmd  
 
  ## <a name="ctor"></a>  Konstruktor SizeT::SizeT
-Inicjuje nowe wystąpienie klasy SizeT o określonej wartości.  
+Inicjuje nowe wystąpienie klasy SizeT z określoną wartością.  
   
 ### <a name="syntax"></a>Składnia  
   
@@ -57,10 +57,10 @@ SizeT( uint32 value1 );   SizeT( void* value2 );
   
 ### <a name="parameters"></a>Parametry  
  Wartość1  
- Wartość 32-bitowe bez znaku.  
+ Wartość nieoznaczona 32-bitowych.  
   
  Wartość2  
- Wskaźnik do niepodpisanego 32-bitową wartość.  
+ Wskaźnik na wartość nieoznaczona 32-bitowych.  
   
   
 ## <a name="see-also"></a>Zobacz też  

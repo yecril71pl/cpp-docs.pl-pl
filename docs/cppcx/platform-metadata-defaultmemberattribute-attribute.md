@@ -1,5 +1,5 @@
 ---
-title: Atrybut platform::METADATA::DefaultMemberAttribute | Dokumentacja firmy Microsoft
+title: 'Platform::METADATA:: DefaultMemberAttribute, atrybut | Dokumentacja firmy Microsoft'
 ms.custom: ''
 ms.date: 12/30/2016
 ms.technology: cpp-windows
@@ -11,19 +11,19 @@ dev_langs:
 helpviewer_keywords:
 - Platform::Metadata::DefaultMemberAttribute Attribute
 ms.assetid: d8abda01-c257-4371-aec4-541d4825e0af
-author: ghogen
-ms.author: ghogen
+author: mikeblome
+ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2233dd96f483df632c7ff8cd5b1a7a051232c94d
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 62d531418e4729c34907cb65d446f89bfa60fb63
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33087939"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42608917"
 ---
-# <a name="platformmetadatadefaultmemberattribute-attribute"></a>Atrybut platform::METADATA::DefaultMemberAttribute
-Wskazuje preferowaną funkcji do wywołania między kilka możliwych przeciążonej funkcji.  
+# <a name="platformmetadatadefaultmemberattribute-attribute"></a>Platform::METADATA:: DefaultMemberAttribute, atrybut
+Wskazuje preferowana funkcja do wywołania między kilka możliwych przeciążonej funkcji.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -35,10 +35,10 @@ public ref class DefaultMember abstract : Attribute
 ## <a name="inheritance"></a>Dziedziczenie  
  [Platform::Object](../cppcx/platform-object-class.md)   
   
- [Platform::METADATA::attribute](../cppcx/platform-metadata-attribute-attribute.md)  
+ [Platform::METADATA:: attribute](../cppcx/platform-metadata-attribute-attribute.md)  
   
 ### <a name="remarks"></a>Uwagi  
- Zastosowanie atrybutu DefaultMember do metody, które będą używane przez aplikację języka JavaScript.  
+ Zastosowanie atrybutu DefaultMember do metody, która zostanie wchłonięta przez aplikację języka JavaScript.  
   
 ### <a name="requirements"></a>Wymagania  
  **Minimalna obsługiwana klienta:** systemu Windows 8  

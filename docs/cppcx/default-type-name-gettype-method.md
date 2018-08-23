@@ -9,18 +9,18 @@ f1_keywords:
 dev_langs:
 - C++
 ms.assetid: 21d0bf92-fac4-48cd-9108-c6f57ba1196a
-author: ghogen
-ms.author: ghogen
+author: mikeblome
+ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 66006281bfc4a29bd1acc2bc360b6f3c08f5ac8b
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 915b2e0c15d3afb3f040b59c22b2de40af2aabb5
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33087151"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42597771"
 ---
-# <a name="defaulttypenamegettype-method"></a>domyślne:: (type_name):: GetType — metoda
+# <a name="defaulttypenamegettype-method"></a>domyślne:: (type_name):: gettype — metoda
 Zwraca Platform::Type ^ reprezentujący bieżącego typu.  
   
 ## <a name="syntax"></a>Składnia  
@@ -31,7 +31,7 @@ Platform::Type^ GetType()
 ```  
   
 ### <a name="return-value"></a>Wartość zwracana  
- A [Platform::Type](../cppcx/platform-type-class.md)^ obiekt reprezentujący bieżący obiekt.  
+ A [Platform::Type](../cppcx/platform-type-class.md)^ obiekt, który reprezentuje bieżący obiekt.  
   
 ### <a name="requirements"></a>Wymagania  
  **Minimalna obsługiwana klienta:** systemu Windows 8  

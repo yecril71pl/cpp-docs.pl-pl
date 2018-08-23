@@ -1,40 +1,40 @@
 ---
-title: Integracja WRL (C + +/ CX) | Dokumentacja firmy Microsoft
+title: Integracja z WRL (C + +/ CX) | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 01/22/2017
 ms.technology: cpp-windows
 ms.topic: language-reference
 ms.assetid: 3ad43894-c574-477c-ad3e-240301f381d4
-author: ghogen
-ms.author: ghogen
+author: mikeblome
+ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2ddefed444c447fbfd300a656c36be45899177b3
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: ff2fc36582e6ffbff8f7608a5a26cc472687132e
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33090263"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42598093"
 ---
-# <a name="wrl-integration-ccx"></a>Integracja WRL (C + +/ CX)
+# <a name="wrl-integration-ccx"></a>Integracja z WRL (C + +/ CX)
 
-Za darmo można mieszać kodu za pomocą biblioteki WRL [!INCLUDE[cppwrl](includes/cppwrl-md.md)] ([!INCLUDE[cppwrl_short](includes/cppwrl-short-md.md)]) kodu. W tej samej jednostce tłumaczenia, można użyć obiektów zadeklarowanych za pomocą biblioteki WRL uchwyt do obiektu (`^`) notacji i [!INCLUDE[cppwrl_short](includes/cppwrl-short-md.md)] wskaźnika inteligentnego (`ComPtr<T>`) notacji. Jednak ręcznie musi obsługiwać zwracanych wartości i [!INCLUDE[cppwrl_short](includes/cppwrl-short-md.md)] HRESULT wyjątki biblioteki WRL i kody błędów.
+Za darmo można łączyć WRL kodu za pomocą kodu systemu Windows środowiska uruchomieniowego C++ szablon biblioteki (WRL). W tej samej jednostce translacji, można użyć obiektów zadeklarowanych za pomocą biblioteki WRL uchwytu do obiektu (`^`) notacją i WRL inteligentnego wskaźnika (`ComPtr<T>`) notacji. Jednak ręcznie musi obsługiwać zwracane wartości i kody błędów WRL HRESULT i wyjątków biblioteki WRL.
   
-## <a name="includecppwrlshortincludescppwrl-short-mdmd-development"></a>[!INCLUDE[cppwrl_short](includes/cppwrl-short-md.md)] Programowanie
+## <a name="wrl-development"></a>Tworzenie biblioteki WRL
 
-Aby uzyskać więcej informacji na temat tworzenia i używania [!INCLUDE[cppwrl_short](includes/cppwrl-short-md.md)] , zobacz [Windows środowiska uruchomieniowego C++ szablonu biblioteki (WRL)](../windows/windows-runtime-cpp-template-library-wrl.md).
+Aby uzyskać więcej informacji na temat tworzenia i używania składników biblioteki WRL, zobacz [Windows środowiska uruchomieniowego C++ szablon biblioteki (WRL)](../windows/windows-runtime-cpp-template-library-wrl.md).
 
 ### <a name="example"></a>Przykład
 
-Poniższy fragment kodu przedstawia za pomocą biblioteki WRL i [!INCLUDE[cppwrl_short](includes/cppwrl-short-md.md)] użycie [!INCLUDE[wrt](includes/wrt-md.md)] klas i sprawdź, czy plik metadanych.
+Poniższy fragment kodu pokazuje i za pomocą biblioteki WRL i platformy WRL używanie klasy środowiska wykonawczego Windows w pliku metadanych.
 
-Przykład pochodzi z wstawek kodu na forum aplikacji magazyn Microsoft budynku. Autor następujący fragment kodu oferuje następujące zastrzeżenia i przekazanie:
+Przykład jest pobierana z forum aplikacji Microsoft Store Tworzenie fragmentu kodu. Autor ten fragment kodu oferuje następujące zastrzeżenia i przekazanie ustalonych:
 
-1. C++ nie zapewnia poszczególnych interfejsów API w celu odzwierciedlenia w systemie [!INCLUDE[wrt](includes/wrt-md.md)] typów, ale pliki metadanych systemu Windows (.winmd) dla typu są w pełni zgodne z plikami metadanych CLR. System Windows udostępnia nowe metadane odnajdywania interfejsów API (RoGetMetaDataFile), aby uzyskać dostęp do pliku winmd dla danego typu. Jednak te interfejsy API są ograniczone użytkowania dla deweloperów języka C++, ponieważ nie można utworzyć wystąpienia klasy.
+1. C++ nie zapewnia określonych interfejsów API na zastanowienie się nad typów środowiska wykonawczego Windows, ale pliki metadanych Windows (.winmd) dla typu są w pełni zgodne z plikami metadanych CLR. Windows oferuje nową wykrywania metadanych interfejsy API (RoGetMetaDataFile), aby przejść do pliku winmd dla danego typu. Jednak te interfejsy API są ograniczone zastosowanie dla deweloperów C++, ponieważ nie można utworzyć wystąpienia klasy.
 
 1. Jest skompilowany kod, należy również przekazać Runtimeobject.lib i Rometadata.lib do konsolidatora.
 
-1. Ta Wstawka kodu jest przedstawiany jako — jest. Podczas gdy oczekiwano działał prawidłowo, prawdopodobnie może zawierać błędy.
+1. Ten fragment kodu jest przedstawiany jako-to. Podczas gdy oczekiwano działała prawidłowo, prawdopodobnie może zawierać błędy.
 
 ```cpp
 #include <hstring.h>

@@ -17,47 +17,52 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 98e3b9e78f46b14dfeca18a8e69538111d3ba219
-ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
+ms.openlocfilehash: 391b30251235fdd15ec1e96304e956740cb58f1f
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/09/2018
-ms.locfileid: "40010318"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42610151"
 ---
 # <a name="pointerdefault"></a>pointer_default
-Określa domyślny atrybut wskaźnik dla wszystkich wskaźników, z wyjątkiem wskaźniki najwyższego poziomu, które pojawiają się listami parametrów.  
-  
-## <a name="syntax"></a>Składnia  
-  
-```cpp  
-[ pointer_default(  
-   value  
-) ]  
-```  
-  
-### <a name="parameters"></a>Parametry  
- *value*  
- Wartość, która opisuje typ wskaźnika: **ptr**, **ref**, lub **unikatowy**.  
-  
-## <a name="remarks"></a>Uwagi  
- **Pointer_default —** atrybut C++ ma taką samą funkcjonalność jak [pointer_default —](http://msdn.microsoft.com/library/windows/desktop/aa367141) atrybutów w MIDL.  
-  
-## <a name="example"></a>Przykład  
- Zobacz przykład [defaultvalue](../windows/defaultvalue.md) do użytku przykładowe **pointer_default —**.  
-  
-## <a name="requirements"></a>Wymagania  
-  
-### <a name="attribute-context"></a>Kontekst atrybutu  
-  
-|||  
-|-|-|  
-|**Dotyczy**|**interface**|  
-|**Powtarzalne**|Nie|  
-|**Wymaganych atrybutów**|Brak|  
-|**Nieprawidłowe atrybuty**|Brak|  
-  
- Aby uzyskać więcej informacji na temat konteksty atrybutu zobacz [konteksty atrybutu](../windows/attribute-contexts.md).  
-  
-## <a name="see-also"></a>Zobacz też  
- [Atrybuty IDL](../windows/idl-attributes.md)   
- [Atrybuty interfejsu](../windows/interface-attributes.md)   
+
+Określa domyślny atrybut wskaźnik dla wszystkich wskaźników, z wyjątkiem wskaźniki najwyższego poziomu, które pojawiają się listami parametrów.
+
+## <a name="syntax"></a>Składnia
+
+```cpp
+[ pointer_default(
+   value
+) ]
+```
+
+### <a name="parameters"></a>Parametry
+
+*value*  
+Wartość, która opisuje typ wskaźnika: **ptr**, **ref**, lub **unikatowy**.
+
+## <a name="remarks"></a>Uwagi
+
+**Pointer_default —** atrybut C++ ma taką samą funkcjonalność jak [pointer_default —](http://msdn.microsoft.com/library/windows/desktop/aa367141) atrybutów w MIDL.
+
+## <a name="example"></a>Przykład
+
+Zobacz przykład [defaultvalue](../windows/defaultvalue.md) do użytku przykładowe **pointer_default —**.
+
+## <a name="requirements"></a>Wymagania
+
+### <a name="attribute-context"></a>Kontekst atrybutu
+
+|||
+|-|-|
+|**Dotyczy**|**interface**|
+|**Powtarzalne**|Nie|
+|**Wymaganych atrybutów**|Brak|
+|**Nieprawidłowe atrybuty**|Brak|
+
+Aby uzyskać więcej informacji na temat konteksty atrybutu zobacz [konteksty atrybutu](../windows/attribute-contexts.md).
+
+## <a name="see-also"></a>Zobacz też
+
+[Atrybuty IDL](../windows/idl-attributes.md)  
+[Atrybuty interfejsu](../windows/interface-attributes.md)  

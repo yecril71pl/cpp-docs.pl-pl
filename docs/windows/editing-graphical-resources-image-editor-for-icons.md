@@ -22,56 +22,59 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: c6b4aea912398413d43810ad08a2b34e9cb78092
-ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
+ms.openlocfilehash: d66345685dbb6780b0ecf11d91d699c8b6866c47
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39642389"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42608864"
 ---
 # <a name="editing-graphical-resources-image-editor-for-icons"></a>Edytowanie zasobów graficznych (Edytor obrazów dla ikon)
-Zasoby graficzne są obrazy, które należy zdefiniować dla aplikacji. Można narysować freehand lub rysowanie przy użyciu kształtów. Możesz wybrać części obrazu dla edycji lub zmiana rozmiaru i odbijanie lub można utworzyć niestandardowy obiekt brush z wybranej części obrazu i rysowanie za pomocą tego pędzla. Można zdefiniować właściwości obrazu, zapisać obrazy w różnych formatach i konwertowania obrazów z jednego formatu na inny.  
-  
- Oprócz tworzenia nowych zasobów graficznych, możliwe jest również [importowanie istniejących obrazów](../windows/how-to-import-and-export-resources.md) do edycji i dodać je do projektu. Możesz również otworzyć i edycji obrazów, które nie są częścią projektu dla [edycji obrazów autonomicznej](../windows/editing-an-image-outside-of-a-project-image-editor-for-icons.md).  
-  
--   [Tworzenie nowej mapy bitowej lub innego obrazu](../windows/creating-an-icon-or-other-image-image-editor-for-icons.md)  
-  
--   [Wybieranie i używanie narzędzia do rysowania](using-a-drawing-tool-image-editor-for-icons.md)  
-  
--   [Linie rysunku lub zamkniętych figur](../windows/drawing-lines-or-closed-figures-image-editor-for-icons.md)  
-  
--   [Zaznaczanie obszaru obrazu](../windows/selecting-an-area-of-an-image-image-editor-for-icons.md)  
-  
--   [Edytowanie wybranego części obrazu](../windows/editing-parts-of-an-image-image-editor-for-icons.md)  
-  
--   [Przerzucanie obrazu](../windows/flipping-an-image-image-editor-for-icons.md)  
-  
--   [Zmiana rozmiaru obrazu](../windows/resizing-an-image-image-editor-for-icons.md)  
-  
--   [Tworzenie pędzla niestandardowego](../windows/creating-a-custom-brush-image-editor-for-icons.md)  
-  
--   [Zmiana właściwości obrazu](changing-image-properties-image-editor-for-icons.md)  
-  
--   [Zapisywanie map bitowych jako .gif lub .jpegs](../windows/saving-bitmaps-as-gifs-or-jpegs-image-editor-for-icons.md)  
-  
--   [Konwertowanie obrazu z jednego formatu na inny](../windows/converting-an-image-from-one-format-to-another-image-editor-for-icons.md)  
-  
--   [Edytowanie obrazu spoza projektu](../windows/editing-an-image-outside-of-a-project-image-editor-for-icons.md)  
-  
--   [Menu obrazu](../windows/image-menu-image-editor-for-icons.md)  
-  
--   [Pasek narzędzi edytora obrazów](../windows/toolbar-image-editor-for-icons.md)  
-  
--   [Okienka edytora obrazów](../windows/window-panes-image-editor-for-icons.md)  
-  
- Aby uzyskać informacje na temat dodawania zasobów do projektów zarządzanych, zobacz [zasoby w aplikacjach pulpitu](/dotnet/framework/resources/index) w *przewodniku dewelopera .NET Framework*. Aby uzyskać informacji na temat ręcznego dodawania plików zasobów do projektów zarządzanych, uzyskiwania dostępu do zasobów, wyświetlania statycznych zasobów i przypisywania ciągów zasobów do właściwości, zobacz [Creating Resource Files dla aplikacji klasycznych](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Aby uzyskać informacji na temat globalizacja i lokalizacja zasobów w aplikacjach zarządzanych, zobacz [Globalizing i lokalizowanie aplikacji programu .NET Framework](/dotnet/standard/globalization-localization/index).  
-  
+
+Zasoby graficzne są obrazy, które należy zdefiniować dla aplikacji. Można narysować freehand lub rysowanie przy użyciu kształtów. Możesz wybrać części obrazu dla edycji lub zmiana rozmiaru i odbijanie lub można utworzyć niestandardowy obiekt brush z wybranej części obrazu i rysowanie za pomocą tego pędzla. Można zdefiniować właściwości obrazu, zapisać obrazy w różnych formatach i konwertowania obrazów z jednego formatu na inny.
+
+Oprócz tworzenia nowych zasobów graficznych, możliwe jest również [importowanie istniejących obrazów](../windows/how-to-import-and-export-resources.md) do edycji i dodać je do projektu. Możesz również otworzyć i edycji obrazów, które nie są częścią projektu dla [edycji obrazów autonomicznej](../windows/editing-an-image-outside-of-a-project-image-editor-for-icons.md).
+
+- [Tworzenie nowej mapy bitowej lub innego obrazu](../windows/creating-an-icon-or-other-image-image-editor-for-icons.md)
+
+- [Wybieranie i używanie narzędzia do rysowania](using-a-drawing-tool-image-editor-for-icons.md)
+
+- [Linie rysunku lub zamkniętych figur](../windows/drawing-lines-or-closed-figures-image-editor-for-icons.md)
+
+- [Zaznaczanie obszaru obrazu](../windows/selecting-an-area-of-an-image-image-editor-for-icons.md)
+
+- [Edytowanie wybranego części obrazu](../windows/editing-parts-of-an-image-image-editor-for-icons.md)
+
+- [Przerzucanie obrazu](../windows/flipping-an-image-image-editor-for-icons.md)
+
+- [Zmiana rozmiaru obrazu](../windows/resizing-an-image-image-editor-for-icons.md)
+
+- [Tworzenie pędzla niestandardowego](../windows/creating-a-custom-brush-image-editor-for-icons.md)
+
+- [Zmiana właściwości obrazu](changing-image-properties-image-editor-for-icons.md)
+
+- [Zapisywanie map bitowych jako .gif lub .jpegs](../windows/saving-bitmaps-as-gifs-or-jpegs-image-editor-for-icons.md)
+
+- [Konwertowanie obrazu z jednego formatu na inny](../windows/converting-an-image-from-one-format-to-another-image-editor-for-icons.md)
+
+- [Edytowanie obrazu spoza projektu](../windows/editing-an-image-outside-of-a-project-image-editor-for-icons.md)
+
+- [Menu obrazu](../windows/image-menu-image-editor-for-icons.md)
+
+- [Pasek narzędzi edytora obrazów](../windows/toolbar-image-editor-for-icons.md)
+
+- [Okienka edytora obrazów](../windows/window-panes-image-editor-for-icons.md)
+
+Aby uzyskać informacje na temat dodawania zasobów do projektów zarządzanych, zobacz [zasoby w aplikacjach pulpitu](/dotnet/framework/resources/index) w *przewodniku dewelopera .NET Framework*. Aby uzyskać informacji na temat ręcznego dodawania plików zasobów do projektów zarządzanych, uzyskiwania dostępu do zasobów, wyświetlania statycznych zasobów i przypisywania ciągów zasobów do właściwości, zobacz [Creating Resource Files dla aplikacji klasycznych](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Aby uzyskać informacji na temat globalizacja i lokalizacja zasobów w aplikacjach zarządzanych, zobacz [Globalizing i lokalizowanie aplikacji programu .NET Framework](/dotnet/standard/globalization-localization/index).
+
 > [!NOTE]
->  Za pomocą **edytora obrazów**, można wyświetlać obrazy 32-bitowe, ale nie można ich edytować.  
-  
-## <a name="requirements"></a>Wymagania  
- Brak  
-  
-## <a name="see-also"></a>Zobacz też  
- [Klawisze skrótów](../windows/accelerator-keys-image-editor-for-icons.md)   
- [Edytor obrazów dla ikon](../windows/image-editor-for-icons.md)   
+> Za pomocą **edytora obrazów**, można wyświetlać obrazy 32-bitowe, ale nie można ich edytować.
+
+## <a name="requirements"></a>Wymagania
+
+Brak
+
+## <a name="see-also"></a>Zobacz też
+
+[Klawisze skrótów](../windows/accelerator-keys-image-editor-for-icons.md)  
+[Edytor obrazów dla ikon](../windows/image-editor-for-icons.md)  

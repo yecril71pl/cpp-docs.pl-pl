@@ -1,5 +1,5 @@
 ---
-title: -clr (kompilacja języka wspólnego środowiska uruchomieniowego) | Dokumentacja firmy Microsoft
+title: / clr (kompilacja języka wspólnego środowiska uruchomieniowego) | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -23,15 +23,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1284d0300fcea3adc5f2884a7d1eff7862ff2b65
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 6b7ec520d27d52bb3e50a58780d822363016ef76
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32379617"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42606866"
 ---
 # <a name="clr-common-language-runtime-compilation"></a>/clr (Kompilacja środowiska uruchomieniowego języka wspólnego)
-Umożliwia aplikacji i składników można używać funkcji z środowisko uruchomieniowe języka wspólnego (CLR).  
+Umożliwia aplikacji i składników korzystać z funkcji z środowisko uruchomieniowe języka wspólnego (CLR).  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -48,62 +48,62 @@ Umożliwia aplikacji i składników można używać funkcji z środowisko urucho
   
  Aby uzyskać więcej informacji, zobacz artykuł  
   
- [Mieszane (natywne i zarządzane) zestawy](../../dotnet/mixed-native-and-managed-assemblies.md) i  
+ [Zestawy mieszane (natywne i zarządzane)](../../dotnet/mixed-native-and-managed-assemblies.md) i  
   
  [Porady: Migracja do/CLR](../../dotnet/how-to-migrate-to-clr.md).  
   
  **/ CLR: pure**  
- / CLR: pure jest przestarzały. Przyszłych wersji kompilatora mogą nie obsługiwać tę opcję. Zaleca się, że portu kod, który musi być czysty MSIL do języka C#.  
+ / CLR: pure jest przestarzały. Przyszłych wersji kompilatora mogą nie obsługiwać tę opcję. Zaleca się, że przeniesiesz kod, który musi być czysty MSIL dla języka C#.  
   
  **/clr:safe**  
- / CLR: Safe jest przestarzały. Przyszłych wersji kompilatora mogą nie obsługiwać tę opcję. Zaleca się, że portu kod, który musi być bezpieczne MSIL do języka C#. 
+ / CLR: Safe jest przestarzały. Przyszłych wersji kompilatora mogą nie obsługiwać tę opcję. Zaleca się, że przeniesiesz kod, który musi być bezpieczne MSIL dla języka C#. 
   
  **/CLR:noAssembly**  
- Określa, że nie można wstawić manifest zestawu do pliku wyjściowego. Domyślnie **noAssembly** opcja nie jest włączone.  
+ Określa, że nie można wstawić w manifeście zestawu do pliku wyjściowego. Domyślnie **noAssembly** opcja nie jest włączone.  
   
- **NoAssembly** opcji jest przestarzały. Użyj [/LN (Utwórz moduł MSIL)](../../build/reference/ln-create-msil-module.md) zamiast tego.  
+ **NoAssembly** opcja jest przestarzały. Użyj [/LN (Utwórz moduł MSIL)](../../build/reference/ln-create-msil-module.md) zamiast tego.  
   
- Zarządzane program, który nie ma metadanych zestawu w manifeście nosi nazwę *modułu*. **NoAssembly** opcji można użyć tylko w celu utworzenia modułu. Jeśli skompilować przy użyciu [/c](../../build/reference/c-compile-without-linking.md) i **/clr:noAssembly**, następnie określ [/noassembly](../../build/reference/noassembly-create-a-msil-module.md) opcję w fazie konsolidator, aby utworzyć moduł.  
+ Zarządzany program, który nie ma metadane zestawu w manifeście jest znany jako *modułu*. **NoAssembly** opcja może służyć wyłącznie w celu utworzenia modułu. Jeśli kompilujesz przy użyciu [/c](../../build/reference/c-compile-without-linking.md) i **/clr:noAssembly**, następnie określ [/noassembly](../../build/reference/noassembly-create-a-msil-module.md) opcję w fazie konsolidator, aby utworzyć moduł.  
   
- Przed Visual C++ 2005 **/clr:noAssembly** wymagane **/LD**. **/LD** jest teraz niejawnego po określeniu **/clr:noAssembly**.  
+ Przed Visual C++ 2005 **/clr:noAssembly** wymagane **/LD**. **/LD** teraz jest implikowane przy określeniu **/clr:noAssembly**.  
   
  **/clr:initialAppDomain**  
- Włącza [!INCLUDE[vcprvc](../../build/includes/vcprvc_md.md)] aplikację do uruchamiania w wersji 1 środowiska CLR. Jeśli używasz **initialAppDomain**, a następnie może zostać wyświetlony niektóre problemy, które zostały omówione w [USTERKI: AppDomainUnloaded wyjątku, gdy używasz rozszerzenia managed extensions dla składników programu Visual C++](http://go.microsoft.com/fwlink/p/?linkid=169465) w programie Microsoft Witryna sieci Web pomocy technicznej.  
+ Umożliwia aplikacji Visual C++ do uruchomienia na 1 wersję środowiska CLR. Jeśli używasz **initialAppDomain**, a następnie może zostać wyświetlony niektóre problemy, które zostały omówione w [USTERKI: AppDomainUnloaded wyjątku, gdy używasz zarządzanych rozszerzeń dla składników Visual C++](http://go.microsoft.com/fwlink/p/?linkid=169465) w programie Microsoft Witryna sieci Web pomocy technicznej.  
   
- Aplikacja, która ma być kompilowana przy użyciu **initialAppDomain** nie powinna być używana przez aplikację, która używa platformy ASP.NET, ponieważ nie jest obsługiwany w wersji 1 środowiska CLR.  
+ Aplikacja, która jest kompilowany przy użyciu **initialAppDomain** nie powinny być używane przez aplikację, która używa programu ASP.NET, ponieważ nie jest obsługiwana w wersji 1 środowiska CLR.  
   
  **/clr:nostdlib**  
- Instruuje kompilator, aby zignorować domyślny katalog \clr. Kompilator generuje błędy w przypadku dołączania wielu wersji biblioteki dll, takich jak System.dll. Ta opcja pozwala określić określonej platformy do użycia podczas kompilacji.  
+ Nakazuje kompilatorowi ignorowanie domyślny katalog \clr. W przypadku dołączania wielu wersji biblioteki DLL, takich jak System.dll, kompilator generuje błędy. Użycie tej opcji pozwala określić określonym środowiskiem do użycia podczas kompilacji.  
   
 ## <a name="remarks"></a>Uwagi  
- Kod zarządzany jest kodu, które mogą być kontrolowane i zarządzane przez środowisko CLR. Kod zarządzany mają dostęp do obiektów zarządzanych. Aby uzyskać więcej informacji, zobacz [/CLR ograniczenia](../../build/reference/clr-restrictions.md).  
+ Kod, który może być kontrolowane i zarządzane przez środowisko CLR jest kod zarządzany. Kod zarządzany dostęp do obiektów zarządzanych. Aby uzyskać więcej informacji, zobacz [/CLR ograniczenia](../../build/reference/clr-restrictions.md).  
   
- Aby uzyskać informacje o sposobie tworzenia aplikacji, które Definiowanie oraz stosowanie typy zarządzane, zobacz [Component Extensions dla platform środowiska uruchomieniowego](../../windows/component-extensions-for-runtime-platforms.md).  
+ Aby uzyskać informacje o sposobie tworzenia aplikacji, które Definiowanie oraz stosowanie typami zarządzanymi, zobacz [Component Extensions dla platform środowiska uruchomieniowego](../../windows/component-extensions-for-runtime-platforms.md).  
   
- Aplikacji skompilowanych za pomocą **/CLR** może lub nie może zawierać danych zarządzanych.  
+ Aplikacja skompilowana przy użyciu **/CLR** może lub nie może zawierać danych zarządzanych.  
   
- Aby włączyć debugowanie w zarządzanej aplikacji, zobacz [/ASSEMBLYDEBUG (Dodaj DebuggableAttribute)](../../build/reference/assemblydebug-add-debuggableattribute.md).  
+ Aby włączyć debugowanie aplikacji zarządzanej, zobacz [/assemblydebug (Dodaj DebuggableAttribute)](../../build/reference/assemblydebug-add-debuggableattribute.md).  
   
- Wyłącznie typy CLR zostanie utworzona na stercie zbierane pamięci. Aby uzyskać więcej informacji, zobacz [klas i struktur](../../windows/classes-and-structs-cpp-component-extensions.md). Aby skompilować funkcję do kodu macierzystego, należy użyć `unmanaged` pragma. Aby uzyskać więcej informacji, zobacz [zarządzane, niezarządzane](../../preprocessor/managed-unmanaged.md).  
+ Wyłącznie typy CLR zostaną utworzone na stercie zebranych elementów bezużytecznych. Aby uzyskać więcej informacji, zobacz [klas i struktur](../../windows/classes-and-structs-cpp-component-extensions.md). Aby skompilować funkcję do kodu macierzystego, użyj `unmanaged` pragmy. Aby uzyskać więcej informacji, zobacz [zarządzane, niezarządzane](../../preprocessor/managed-unmanaged.md).  
   
- Domyślnie **/CLR** nie jest włączone. Gdy **/CLR** , **/ / MD** jest również w obiekcie. Aby uzyskać więcej informacji, zobacz [/ / MD, / MT, /LD (Użyj biblioteki wykonawczej)](../../build/reference/md-mt-ld-use-run-time-library.md). **/ / MD** gwarantuje, że dynamicznie połączony, wielowątkowy wersji procedury obsługi są zaznaczone z plików standardowych nagłówków (.h). Wielowątkowość jest wymagany dla zarządzanych programowania, ponieważ moduł garbage collector środowiska CLR uruchamia finalizatory w wątku pomocniczych.  
+ Domyślnie **/CLR** nie jest włączone. Gdy **/CLR** jest aktywna, **/MD** jest również w obiekcie. Aby uzyskać więcej informacji, zobacz [/ / MD, / MT, /LD (Korzystaj z bibliotek wykonawczych)](../../build/reference/md-mt-ld-use-run-time-library.md). **/ MD** gwarantuje, że wybrane są połączone dynamicznie, wielowątkowe wersje procedury czasu wykonywania, przy użyciu plików standardowych nagłówków (.h). Wielowątkowość jest wymagany dla zarządzanych przy użyciu programowania, ponieważ moduł odśmiecania pamięci CLR uruchamia finalizatory pomocniczego wątku.  
   
- Jeśli skompilować przy użyciu **/c**, można określić typu CLR wynikowego pliku wyjściowego z [clrimagetype](../../build/reference/clrimagetype-specify-type-of-clr-image.md).  
+ Jeśli kompilujesz przy użyciu **/c**, można określić typ CLR wynikowej pliku wyjściowego z [/clrimagetype](../../build/reference/clrimagetype-specify-type-of-clr-image.md).  
   
- **/ CLR** oznacza **/eha**, a nie inne **/EH** opcje są obsługiwane dla **/CLR**. Aby uzyskać więcej informacji, zobacz [/EH (Model obsługi wyjątku)](../../build/reference/eh-exception-handling-model.md).  
+ **/ CLR** oznacza **/eha**ani żadnej innej **/EH** opcje są obsługiwane w przypadku **/CLR**. Aby uzyskać więcej informacji, zobacz [/EH (Model obsługi wyjątku)](../../build/reference/eh-exception-handling-model.md).  
   
- Aby uzyskać informacje o tym, jak można ustalić typu obrazu CLR pliku, zobacz [/CLRHEADER](../../build/reference/clrheader.md).  
+ Aby uzyskać informacji dotyczących sposobu ustalenia typu obrazu CLR pliku, zobacz [/CLRHEADER](../../build/reference/clrheader.md).  
   
- Wszystkie moduły przekazany do danego wywołanie konsolidator muszą być skompilowane przy użyciu tej samej biblioteki wykonawczej opcji kompilatora (**/ / MD** lub **/LD**).  
+ Wszystkie moduły przekazane do danego wywołania konsolidatora muszą być skompilowane przy użyciu tych samych opcji kompilatora biblioteki wykonawczej (**/MD** lub **/LD**).  
   
- Użyj [/assemblyresource](../../build/reference/assemblyresource-embed-a-managed-resource.md) — opcja konsolidatora do osadzenia zasobu w zestawie. [/ DELAYSIGN](../../build/reference/delaysign-partially-sign-an-assembly.md), [/KeyContainer](../../build/reference/keycontainer-specify-a-key-container-to-sign-an-assembly.md), i [/KeyFile](../../build/reference/keyfile-specify-key-or-key-pair-to-sign-an-assembly.md) opcje konsolidatora również umożliwiają dostosowanie sposobu tworzenia zestawu.  
+ Użyj [linkowany](../../build/reference/assemblyresource-embed-a-managed-resource.md) — opcja konsolidatora do osadzenia zasobu w zestawie. [/ DELAYSIGN](../../build/reference/delaysign-partially-sign-an-assembly.md), [/KeyContainer](../../build/reference/keycontainer-specify-a-key-container-to-sign-an-assembly.md), i [/KeyFile](../../build/reference/keyfile-specify-key-or-key-pair-to-sign-an-assembly.md) opcje konsolidatora również pozwala na dostosowywanie sposobu tworzenia zestawu.  
   
- Gdy **/CLR** jest używana, `_MANAGED` symbol zdefiniowany jest równa 1. Aby uzyskać więcej informacji, zobacz [wstępnie zdefiniowane makra](../../preprocessor/predefined-macros.md).  
+ Gdy **/CLR** jest używany, `_MANAGED` symboli jest zdefiniowana jako 1. Aby uzyskać więcej informacji, zobacz [wstępnie zdefiniowane makra](../../preprocessor/predefined-macros.md).  
   
- Zmienne globalne w pliku obiekt natywny są inicjowane pierwszej (w ramach funkcji DllMain, jeśli plik wykonywalny jest biblioteką DLL), a następnie zmienne globalne w sekcji zarządzane są inicjowane (przed uruchomieniem kodu zarządzanego). `#pragma`[init_seg](../../preprocessor/init-seg.md) wpływa tylko na kolejność inicjowania w kategoriach zarządzane i niezarządzane.  
+ Zmienne globalne w pliku obiekt natywny są inicjowane pierwszej (w ramach funkcji DllMain, jeśli plik wykonywalny jest biblioteką DLL), a następnie zmienne globalne w sekcji zarządzane są inicjowane (przed uruchomieniem kodu zarządzanego). `#pragma`[init_seg](../../preprocessor/init-seg.md) ma wpływ tylko na kolejności inicjowania w kategoriach zarządzanych i niezarządzanych.  
   
-## <a name="metadata-and-unnamed-classes"></a>Metadane i nazwy klas  
- Nazwy klas pojawią się w metadanych o nazwie w następujący sposób: `$UnnamedClass$` *crc z bieżącej pliku nazwa-*`$`*indeksu*`$`, gdzie *indeksu*to liczba sekwencyjnych bez nazwy klas w kompilacji. Na przykład następujący przykładowy kod generuje nienazwanej klasy w metadanych.  
+## <a name="metadata-and-unnamed-classes"></a>Bez nazwy klasy i metadanych  
+ Bez nazwy klasy pojawi się w metadanych o nazwie w następujący sposób: `$UnnamedClass$` *crc z bieżącego — nazwa pliku*`$`*indeksu*`$`, gdzie *indeksu*jest sekwencyjne liczba bez nazwy klasy w kompilacji. Na przykład poniższy przykładowy kod generuje nienazwanej klasy w metadanych.  
   
 ```  
 // clr_unnamed_class.cpp  
@@ -114,24 +114,24 @@ class {} x;
  Ildasm.exe umożliwia wyświetlanie metadanych.  
   
 ## <a name="managed-extensions-for-c"></a>rozszerzenia zarządzane dla C++  
- Visual C++ nie obsługuje już **: oldsyntax** opcji. Ta opcja została uznana za przestarzałą w programie Visual Studio 2005. Jest obsługiwana składnia pisaniu kodu zarządzanego w języku C++ C + +/ CLI. Aby uzyskać więcej informacji, zobacz [Component Extensions dla platform środowiska uruchomieniowego](../../windows/component-extensions-for-runtime-platforms.md).  
+ Visual C++ nie obsługuje już **: oldsyntax** opcji. Ta opcja została zakończona w programie Visual Studio 2005. Obsługiwana składnia pisaniu kodu zarządzanego w języku C++ jest C + +/ interfejsu wiersza polecenia. Aby uzyskać więcej informacji, zobacz [Component Extensions dla platform środowiska uruchomieniowego](../../windows/component-extensions-for-runtime-platforms.md).  
   
- Jeśli masz kod, który używa rozszerzeń zarządzanych dla języka C++, firma Microsoft zaleca port do użycia C + +/ CLI składni. Aby uzyskać informacje na temat portu kodu, zobacz [C + +/ CLI migracji Elementarz](../../dotnet/cpp-cli-migration-primer.md).  
+ Jeśli masz kod, który używa zarządzanych rozszerzeń języka C++, firma Microsoft zaleca portu do użycia C + +/ CLI składni. Aby uzyskać informacje na temat sposobu przyłącz kod, zobacz [C + +/ CLI Podręcznik migracji](../../dotnet/cpp-cli-migration-primer.md).  
   
 #### <a name="to-set-this-compiler-option-in-visual-studio"></a>Aby ustawić tę opcję kompilatora w programie Visual Studio  
   
-1.  W **Eksploratora rozwiązań**, kliknij prawym przyciskiem myszy nazwę projektu, a następnie kliknij przycisk **właściwości** otworzyć projektu **strony właściwości** okno dialogowe.  
+1.  W **Eksploratora rozwiązań**, kliknij prawym przyciskiem myszy nazwę projektu, a następnie kliknij przycisk **właściwości** otworzyć projektu **stron właściwości** okno dialogowe.  
   
 2.  Wybierz **właściwości konfiguracji** folderu.  
   
-3.  Na **ogólne** właściwości strony, zmodyfikuj **Obsługa środowisko uruchomieniowe języka wspólnego** właściwości.  
+3.  Na **ogólne** właściwości strony, zmodyfikuj **Obsługa środowiska uruchomieniowego języka wspólnego** właściwości.  
   
     > [!NOTE]
-    >  Gdy **/CLR** jest włączone w **strony właściwości** okno dialogowe, właściwości opcji kompilatora, które nie są zgodne z **/CLR** są również ustawiane, co jest wymagane. Na przykład jeśli **/RTC** jest ustawiona, a następnie **/CLR** jest włączona, **/RTC** zostaną wyłączone.  
+    >  Gdy **/CLR** jest włączone w **strony właściwości** okno dialogowe, właściwości opcji kompilatora, które nie są zgodne z **/CLR** również zostaną dopasowane, stosownie do potrzeb. Na przykład jeśli **usunęliśmy** ustawiono i następnie **/CLR** jest włączona, **usunęliśmy** zostaną wyłączone.  
     >   
-    >  Ponadto podczas debugowania **/CLR** aplikacji, ustaw **typ debugera** właściwości **Mixed** lub **zarządzane tylko**. Aby uzyskać więcej informacji, zobacz [ustawienia projektu dla konfiguracji debugowania C++](/visualstudio/debugger/project-settings-for-a-cpp-debug-configuration).  
+    >  Ponadto podczas debugowania **/CLR** aplikacji, ustawić **typ debugera** właściwości **mieszany** lub **zarządzanych tylko**. Aby uzyskać więcej informacji, zobacz [ustawienia projektu dla konfiguracji debugowania języka C++](/visualstudio/debugger/project-settings-for-a-cpp-debug-configuration).  
   
-     Informacje na temat tworzenia modułu, zobacz [/noassembly (Utwórz moduł MSIL)](../../build/reference/noassembly-create-a-msil-module.md).  
+     Aby uzyskać informacje na temat tworzenia modułu, zobacz [/noassembly (Utwórz moduł MSIL)](../../build/reference/noassembly-create-a-msil-module.md).  
   
 #### <a name="to-set-this-compiler-option-programmatically"></a>Aby programowo ustawić tę opcję kompilatora  
   

@@ -1,5 +1,5 @@
 ---
-title: Klasa platform::Object | Dokumentacja firmy Microsoft
+title: Platform::Object, klasa | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 12/30/2016
 ms.technology: cpp-windows
@@ -16,19 +16,19 @@ dev_langs:
 helpviewer_keywords:
 - Object class
 ms.assetid: 709e84a8-0bff-471b-bc14-63e424080b5a
-author: ghogen
-ms.author: ghogen
+author: mikeblome
+ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a7fc6dc1df1d1e22032dbe7322b9a6ead8334ddc
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 19c302f08485b6db89ea2a6b66106244ed95b48c
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33091884"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42601741"
 ---
-# <a name="platformobject-class"></a>Klasa platform::Object
-Zapewnia zachowanie typowych ref klas i struktur ref w aplikacjach środowiska wykonawczego systemu Windows. Wszystkie klasy referencyjnej i ref struct wystąpienia są umożliwiają niejawnej konwersji na Platform::Object ^, można zmienić jego metody ToString wirtualnej.  
+# <a name="platformobject-class"></a>Platform::Object, klasa
+Zapewnia zachowanie wspólnej klasy i struktury ref w aplikacjach Windows Runtime odwołania. Wszystkie klasy referencyjnej i wystąpienia struktury ref są niejawnie konwertowane na Platform::Object ^, można zmienić jego metody ToString wirtualnej.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -51,7 +51,7 @@ public ref class Object : Object
 |[Object::Equals](#equals)|Określa, czy określony obiekt jest równy bieżącemu obiektowi.|  
 |[Object::GetHashCode](#gethashcode)|Zwraca kod skrótu dla tego wystąpienia.|  
 |[Object::ReferenceEquals](#referenceequals)|Określa, czy określone wystąpienia obiektów są tego samego wystąpienia.|  
-|[ToString](#tostring)|Zwraca ciąg, który reprezentuje bieżący obiekt. Może zostać zastąpiona.|  
+|[ToString](#tostring)|Zwraca ciąg, który reprezentuje bieżący obiekt. Można zastąpić.|  
 |[GetType](#gettype)|Pobiera [Platform::Type](../cppcx/platform-type-class.md) opisujący bieżącego wystąpienia.|  
   
 ## <a name="inheritance-hierarchy"></a>Hierarchia dziedziczenia  
@@ -65,7 +65,7 @@ public ref class Object : Object
  **Namespace:** platformy  
 
   
-## <a name="equals"></a> Object::Equals — metoda
+## <a name="equals"></a> Metoda Object::Equals
 Określa, czy określony obiekt jest równy bieżącemu obiektowi.  
   
 ### <a name="syntax"></a>Składnia  
@@ -82,12 +82,12 @@ bool Equals(
  Obiekt do porównania.  
   
 ### <a name="return-value"></a>Wartość zwracana  
- `true` Jeśli obiekty są takie same, w przeciwnym razie `false`.  
+ `true` Jeśli obiekty są równe, w przeciwnym razie `false`.  
   
 
 
-## <a name="gethashcode"></a>  Object::GetHashCode — metoda
-Zwraca `IUnknown`* wartości tożsamości dla tego wystąpienia, jeśli jest to obiekt COM lub jeśli nie jest obiektem COM. wartość obliczoną wartość mieszania.  
+## <a name="gethashcode"></a>  Metoda Object::GetHashCode
+Zwraca `IUnknown`* wartość tożsamości dla tego wystąpienia, jeśli jest to obiekt COM lub obliczona wartość skrótu, jeśli nie jest obiektem COM.  
   
 ### <a name="syntax"></a>Składnia  
   
@@ -96,15 +96,15 @@ public:int GetHashCode()
 ```  
   
 ### <a name="return-value"></a>Wartość zwracana  
- Wartość liczbowa unikatowo identyfikujący ten obiekt.  
+ Wartość liczbowa, która unikatowo identyfikuje ten obiekt.  
   
 ### <a name="remarks"></a>Uwagi  
- GetHashCode służy do tworzenia kluczy dla obiektów w społeczności maps. Możesz porównać skrótu za pomocą [Object::Equals](#equals). Jeśli ścieżka kodu jest bardzo krytyczne i `GetHashCode` i `Equals` nie są wystarczająco szybkie, możesz listy rozwijanej do odpowiedniej warstwy modelu COM i czy natywnego `IUnknown` porównania wskaźnika.  
+ GetHashCode służy do tworzenia kluczy dla obiektów w społeczności maps. Możesz porównać kodów wartości skrótu, za pomocą [Object::Equals](#equals). Jeśli ścieżka kodu jest bardzo krytyczne i `GetHashCode` i `Equals` nie są wystarczająco szybko, możesz lista rozwijana umożliwiająca odpowiedniej warstwy modelu COM i czy natywnych `IUnknown` porównania wskaźnika.  
   
 
 
 ## <a name="gettype"></a>  Object::gettype — metoda
-Zwraca [Platform::Type](../cppcx/platform-type-class.md) obiektu, który opisuje typ obiektu środowiska wykonawczego.  
+Zwraca [Platform::Type](../cppcx/platform-type-class.md) obiekt, który opisuje typ środowiska uruchomieniowego obiektu.  
   
 ### <a name="syntax"></a>Składnia  
   
@@ -114,23 +114,23 @@ Object::GetType()
 
   
 ### <a name="property-valuereturn-value"></a>Wartość właściwości/Zwracana wartość  
- A [Platform::Type](../cppcx/platform-type-class.md) obiektu, który opisuje typ środowiska uruchomieniowego obiektu.  
+ A [Platform::Type](../cppcx/platform-type-class.md) obiekt, który opisuje typ środowiska uruchomieniowego obiektu.  
   
 ### <a name="remarks"></a>Uwagi  
- Statycznych [Type::GetTypeCode](../cppcx/platform-type-class.md#gettypecode) może służyć do pobrania [wyliczenie Platform::TypeCode](../cppcx/platform-typecode-enumeration.md) wartość, która reprezentuje bieżący typ. Najczęściej jest to przydatne dla wbudowanych typów. Kod typu dla klasy ref oprócz [Platform::String](../cppcx/platform-string-class.md) obiektu (1).  
+ Statyczne [Type::GetTypeCode](../cppcx/platform-type-class.md#gettypecode) pozwala uzyskać [Platform::TypeCode, wyliczenie](../cppcx/platform-typecode-enumeration.md) wartość, która reprezentuje bieżący typ. Najczęściej jest to użyteczne dla wbudowanych typów. Kod typu dla każdej klasy ref, oprócz [Platform::String](../cppcx/platform-string-class.md) jest obiektem (1).  
   
- [Windows::UI::Xaml::Interop::TypeName](http://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.interop.typename.aspx) klasa jest używana w interfejsów API systemu Windows jako niezależny od języka umożliwia przekazywanie informacji o typie między składniki systemu Windows i aplikacjami. T[klasy Platform::Type](../cppcx/platform-type-class.md) ma operatory konwersji między `Type` i `TypeName`.  
+ [Windows::UI::Xaml::Interop::TypeName](http://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.interop.typename.aspx) klasa jest używana w interfejsach API Windows jako niezależny od języka sposób przekazywania informacji o typie między składnikami Windows i aplikacji. T[Platform::Type, klasa](../cppcx/platform-type-class.md) ma operatory konwersji między `Type` i `TypeName`.  
   
- Użyj [typeid](../windows/typeid-cpp-component-extensions.md) operatora, aby zwrócić `Platform::Type` obiektu dla nazwy klasy, na przykład podczas nawigowania między stronami XAML:  
+ Użyj [typeid](../windows/typeid-cpp-component-extensions.md) operator, aby zwrócić `Platform::Type` obiektu dla nazwy klasy, na przykład podczas przechodzenia między stronami XAML:  
   
 ```  
 rootFrame->Navigate(TypeName(MainPage::typeid), e->Arguments);  
 ```  
   
 ## <a name="see-also"></a>Zobacz też  
- [Klasa platform::type](../cppcx/platform-type-class.md)   
+ [Platform::type, klasa](../cppcx/platform-type-class.md)   
  [Przestrzeń nazw platformy](../cppcx/platform-namespace-c-cx.md)   
- [Systemu typów] (.. /cppcx/Type-System-c-CX.MD
+ [System typów] (.. /cppcx/Type-System-c-CX.MD
   
 ## <a name="ctor"></a>  Konstruktor Object::Object
 Inicjuje nowe wystąpienie klasy obiektu.  
@@ -141,7 +141,7 @@ Inicjuje nowe wystąpienie klasy obiektu.
 public:Object()  
 ```  
 
-## <a name="referenceequals"></a>  Object::ReferenceEquals — metoda
+## <a name="referenceequals"></a>  Metoda Object::ReferenceEquals
 Określa, czy określone wystąpienia obiektów są tego samego wystąpienia.  
   
 ### <a name="syntax"></a>Składnia  
@@ -171,7 +171,7 @@ virtual String^ ToString()
 ```  
   
 ### <a name="return-value"></a>Wartość zwracana  
- Ciąg, który reprezentuje bieżący obiekt. Można zastąpić tę metodę, aby podać niestandardowy ciąg wiadomości w swojej klasy referencyjnej lub struktury:  
+ Ciąg, który reprezentuje bieżący obiekt. Możesz zastąpić tę metodę, aby podać niestandardowy ciąg wiadomości w swojej klasy ref lub struktury:  
   
 ```cpp  
 public ref class Tree sealed  

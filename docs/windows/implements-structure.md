@@ -17,125 +17,131 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 31b95901f2c0b7ff210cc8542dce49991a9eef87
-ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
+ms.openlocfilehash: 417f384b54833786c68fe2b13dc9e7e53b1bc975
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/09/2018
-ms.locfileid: "40014821"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42603291"
 ---
 # <a name="implements-structure"></a>Implements — Struktura
-Implementuje `QueryInterface` i `GetIid` dla określonych interfejsów.  
-  
-## <a name="syntax"></a>Składnia  
-  
-```cpp  
-template <  
-   typename I0,  
-   typename I1 = Details::Nil,  
-   typename I2 = Details::Nil,  
-   typename I3 = Details::Nil,  
-   typename I4 = Details::Nil,  
-   typename I5 = Details::Nil,  
-   typename I6 = Details::Nil,  
-   typename I7 = Details::Nil,  
-   typename I8 = Details::Nil,  
-   typename I9 = Details::Nil  
->  
-struct __declspec(novtable) Implements : Details::ImplementsHelper<RuntimeClassFlags<WinRt>, typename Details::InterfaceListHelper<I0, I1, I2, I3, I4, I5, I6, I7, I8, I9>::TypeT>, Details::ImplementsBase;  
-template <  
-   int flags,  
-   typename I0,  
-   typename I1,  
-   typename I2,  
-   typename I3,  
-   typename I4,  
-   typename I5,  
-   typename I6,  
-   typename I7,  
-   typename I8  
->  
-struct __declspec(novtable) Implements<RuntimeClassFlags<flags>, I0, I1, I2, I3, I4, I5, I6, I7, I8> : Details::ImplementsHelper<RuntimeClassFlags<flags>, typename Details::InterfaceListHelper<I0, I1, I2, I3, I4, I5, I6, I7, I8>::TypeT>, Details::ImplementsBase;  
-```  
-  
-### <a name="parameters"></a>Parametry  
- *I0*  
- Identyfikator interfejsu zerowego. (Obowiązkowe)  
-  
- *I1*  
- Identyfikator pierwszego interfejsu. (opcjonalnie)  
-  
- *I2*  
- Identyfikator drugiego interfejsu. (opcjonalnie)  
-  
- *I3*  
- Identyfikator trzeciego interfejsu. (opcjonalnie)  
-  
- *I4*  
- Identyfikator czwartego interfejsu. (opcjonalnie)  
-  
- *I5*  
- Identyfikator piątego interfejsu. (opcjonalnie)  
-  
- *I6*  
- Identyfikator szóstego interfejsu. (opcjonalnie)  
-  
- *I7*  
- Identyfikator siódmego interfejsu. (opcjonalnie)  
-  
- *I8*  
- Identyfikator ósmego interfejsu. (opcjonalnie)  
-  
- *I9*  
- Identyfikator dziewiątego interfejsu. (opcjonalnie)  
-  
- *flagi*  
- Flagi konfiguracji dla klasy. Co najmniej jeden [RuntimeClassType](../windows/runtimeclasstype-enumeration.md) wyliczenia, które są określone w [runtimeclassflags —](../windows/runtimeclassflags-structure.md) struktury.  
-  
-## <a name="remarks"></a>Uwagi  
- Pochodzi z listy określonych interfejsów i implementuje szablony pomocnika na potrzeby `QueryInterface` i `GetIid`.  
-  
- Każdy *I0* za pośrednictwem *I9* parametru interfejs musi pochodzić z klasy `IUnknown`, `IInspectable`, lub [chaininterfaces —](../windows/chaininterfaces-structure.md) szablonu. *Flagi* parametr określa, czy obsługa jest generowany dla `IUnknown` lub `IInspectable`.  
-  
-## <a name="members"></a>Elementy członkowskie  
-  
-### <a name="public-typedefs"></a>Publiczne definicje typów  
-  
-|Nazwa|Opis|  
-|----------|-----------------|  
-|`ClassFlags`|Synonim dla `RuntimeClassFlags<WinRt>`.|  
-  
-### <a name="protected-methods"></a>Metody chronione  
-  
-|Nazwa|Opis|  
-|----------|-----------------|  
-|[Implements::CanCastTo, metoda](../windows/implements-cancastto-method.md)|Pobiera wskaźnik do określonego interfejsu.|  
-|[Implements::CastToUnknown, metoda](../windows/implements-casttounknown-method.md)|Pobiera wskaźnik do bazowego `IUnknown` interfejsu.|  
-|[Implements::FillArrayWithIid, metoda](../windows/implements-fillarraywithiid-method.md)|Wstawia identyfikator interfejsu określonego przez bieżący parametr szablonu zerowego do elementu określonej tablicy.|  
-  
-### <a name="protected-constants"></a>Stałe chronione  
-  
-|Nazwa|Opis|  
-|----------|-----------------|  
-|[Implements::IidCount, stała](../windows/implements-iidcount-constant.md)|Przechowuje liczbę zaimplementowanego interfejsu identyfikatorów.|  
-  
-## <a name="inheritance-hierarchy"></a>Hierarchia dziedziczenia  
- `I0`  
-  
- `ChainInterfaces`  
-  
- `I0`  
-  
- `ImplementsBase`  
-  
- `ImplementsHelper`  
-  
- `Implements`  
-  
-## <a name="requirements"></a>Wymagania  
- **Nagłówek:** implements.h  
-  
- **Namespace:** Microsoft::WRL  
-  
-## <a name="see-also"></a>Zobacz też  
- [Microsoft::WRL, przestrzeń nazw](../windows/microsoft-wrl-namespace.md)
+
+Implementuje `QueryInterface` i `GetIid` dla określonych interfejsów.
+
+## <a name="syntax"></a>Składnia
+
+```cpp
+template <
+   typename I0,
+   typename I1 = Details::Nil,
+   typename I2 = Details::Nil,
+   typename I3 = Details::Nil,
+   typename I4 = Details::Nil,
+   typename I5 = Details::Nil,
+   typename I6 = Details::Nil,
+   typename I7 = Details::Nil,
+   typename I8 = Details::Nil,
+   typename I9 = Details::Nil
+>
+struct __declspec(novtable) Implements : Details::ImplementsHelper<RuntimeClassFlags<WinRt>, typename Details::InterfaceListHelper<I0, I1, I2, I3, I4, I5, I6, I7, I8, I9>::TypeT>, Details::ImplementsBase;
+template <
+   int flags,
+   typename I0,
+   typename I1,
+   typename I2,
+   typename I3,
+   typename I4,
+   typename I5,
+   typename I6,
+   typename I7,
+   typename I8
+>
+struct __declspec(novtable) Implements<RuntimeClassFlags<flags>, I0, I1, I2, I3, I4, I5, I6, I7, I8> : Details::ImplementsHelper<RuntimeClassFlags<flags>, typename Details::InterfaceListHelper<I0, I1, I2, I3, I4, I5, I6, I7, I8>::TypeT>, Details::ImplementsBase;
+```
+
+### <a name="parameters"></a>Parametry
+
+*I0*  
+Identyfikator interfejsu zerowego. (Obowiązkowe)
+
+*I1*  
+Identyfikator pierwszego interfejsu. (opcjonalnie)
+
+*I2*  
+Identyfikator drugiego interfejsu. (opcjonalnie)
+
+*I3*  
+Identyfikator trzeciego interfejsu. (opcjonalnie)
+
+*I4*  
+Identyfikator czwartego interfejsu. (opcjonalnie)
+
+*I5*  
+Identyfikator piątego interfejsu. (opcjonalnie)
+
+*I6*  
+Identyfikator szóstego interfejsu. (opcjonalnie)
+
+*I7*  
+Identyfikator siódmego interfejsu. (opcjonalnie)
+
+*I8*  
+Identyfikator ósmego interfejsu. (opcjonalnie)
+
+*I9*  
+Identyfikator dziewiątego interfejsu. (opcjonalnie)
+
+*flagi*  
+Flagi konfiguracji dla klasy. Co najmniej jeden [RuntimeClassType](../windows/runtimeclasstype-enumeration.md) wyliczenia, które są określone w [runtimeclassflags —](../windows/runtimeclassflags-structure.md) struktury.
+
+## <a name="remarks"></a>Uwagi
+
+Pochodzi z listy określonych interfejsów i implementuje szablony pomocnika na potrzeby `QueryInterface` i `GetIid`.
+
+Każdy *I0* za pośrednictwem *I9* parametru interfejs musi pochodzić z klasy `IUnknown`, `IInspectable`, lub [chaininterfaces —](../windows/chaininterfaces-structure.md) szablonu. *Flagi* parametr określa, czy obsługa jest generowany dla `IUnknown` lub `IInspectable`.
+
+## <a name="members"></a>Elementy członkowskie
+
+### <a name="public-typedefs"></a>Publiczne definicje typów
+
+|Nazwa|Opis|
+|----------|-----------------|
+|`ClassFlags`|Synonim dla `RuntimeClassFlags<WinRt>`.|
+
+### <a name="protected-methods"></a>Metody chronione
+
+|Nazwa|Opis|
+|----------|-----------------|
+|[Implements::CanCastTo, metoda](../windows/implements-cancastto-method.md)|Pobiera wskaźnik do określonego interfejsu.|
+|[Implements::CastToUnknown, metoda](../windows/implements-casttounknown-method.md)|Pobiera wskaźnik do bazowego `IUnknown` interfejsu.|
+|[Implements::FillArrayWithIid, metoda](../windows/implements-fillarraywithiid-method.md)|Wstawia identyfikator interfejsu określonego przez bieżący parametr szablonu zerowego do elementu określonej tablicy.|
+
+### <a name="protected-constants"></a>Stałe chronione
+
+|Nazwa|Opis|
+|----------|-----------------|
+|[Implements::IidCount, stała](../windows/implements-iidcount-constant.md)|Przechowuje liczbę zaimplementowanego interfejsu identyfikatorów.|
+
+## <a name="inheritance-hierarchy"></a>Hierarchia dziedziczenia
+
+`I0`
+
+`ChainInterfaces`
+
+`I0`
+
+`ImplementsBase`
+
+`ImplementsHelper`
+
+`Implements`
+
+## <a name="requirements"></a>Wymagania
+
+**Nagłówek:** implements.h
+
+**Namespace:** Microsoft::WRL
+
+## <a name="see-also"></a>Zobacz też
+
+[Microsoft::WRL, przestrzeń nazw](../windows/microsoft-wrl-namespace.md)

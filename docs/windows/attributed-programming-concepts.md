@@ -17,40 +17,43 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 2d04c877fb018d1ee16a3c4643c634d2fd3961b7
-ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
+ms.openlocfilehash: 2fe6616cd22ee9de9ffbb6b3a26620a7ccdebc63
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39651249"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42598080"
 ---
 # <a name="attributed-programming-concepts"></a>Pojęcia związane z programowaniem opartym na atrybutach
-Visual C++ zawierają wiele materiałów, które ułatwiają korzystanie z atrybutów w swoich programach. Atrybuty, nowa funkcja w programie Visual C++ są zaprojektowane w celu uproszczenia programowanie COM i .NET Framework — programowanie środowiska uruchomieniowego języka wspólnego. Gdy atrybuty zostaną umieszczone w plikach źródłowych, kompilator współpracuje z dostawcy bibliotek dołączanych dynamicznie (DLL), Wstaw kod lub zmodyfikować kod w plikach obiektowych wygenerowany. Istnieją atrybuty, które wspierają do tworzenia plików .idl, interfejsy, bibliotek typów i innych elementów modelu COM. W zintegrowanego środowiska programistycznego (IDE) atrybutów są obsługiwane przez kreatory i okna właściwości.  
-  
- Gdy atrybuty wyeliminować niektóre szczegółowe kodowanie, wymagane do zapisywania obiektów COM, potrzebujesz tła w [podstawy COM](http://msdn.microsoft.com/library/windows/desktop/ms694363) najlepiej je wykorzystać.  
-  
-## <a name="in-this-section"></a>W tej sekcji  
- [Cel atrybutów](../windows/purpose-of-attributes.md)  
- Zawiera omówienie programowania opartego na atrybutach.  
-  
- [Podstawowa mechanika atrybutów](../windows/basic-mechanics-of-attributes.md)  
- W tym artykule opisano, jak atrybuty działają w twoim projekcie.  
-  
- [Kompilowanie programu opartego na atrybutach](../windows/building-an-attributed-program.md)  
- Zawiera informacje o używaniu opcji kompilatora języka C++ w projekcie.  
-  
- [Kategorie atrybutów](../windows/attribute-categories.md)  
- Zawiera łącza do kategorii atrybuty używane w programie Visual C++.  
-  
- [Atrybut Programmming — często zadawane pytania](../windows/attribute-programming-faq.md)  
- Odpowiedzi na często zadawane pytania dotyczące programowania opartego na atrybutach.  
-  
-## <a name="related-sections"></a>Sekcje pokrewne  
- [Dokumentacja atrybutów](../windows/cpp-attributes-reference.md)  
- Zawiera łącza do temat referencyjny opisujący poszczególne atrybuty i ich użycia.  
-  
- [Debugowanie wprowadzonego kodu](/visualstudio/debugger/how-to-debug-injected-code)  
- W tym artykule opisano, debugowanie programów opartego na atrybutach.  
-  
- [__super](../cpp/super.md)i [__interface](../cpp/interface.md)  
- Zawiera łącza do związanych z Programowanie oparte na atrybutach nowych słów kluczowych języka C++.  
+
+Visual C++ zawierają wiele materiałów, które ułatwiają korzystanie z atrybutów w swoich programach. Atrybuty, nowa funkcja w programie Visual C++ są zaprojektowane w celu uproszczenia programowanie COM i .NET Framework — programowanie środowiska uruchomieniowego języka wspólnego. Gdy atrybuty zostaną umieszczone w plikach źródłowych, kompilator współpracuje z dostawcy bibliotek dołączanych dynamicznie (DLL), Wstaw kod lub zmodyfikować kod w plikach obiektowych wygenerowany. Istnieją atrybuty, które wspierają do tworzenia plików .idl, interfejsy, bibliotek typów i innych elementów modelu COM. W zintegrowanego środowiska programistycznego (IDE) atrybutów są obsługiwane przez kreatory i okna właściwości.
+
+Gdy atrybuty wyeliminować niektóre szczegółowe kodowanie, wymagane do zapisywania obiektów COM, potrzebujesz tła w [podstawy COM](http://msdn.microsoft.com/library/windows/desktop/ms694363) najlepiej je wykorzystać.
+
+## <a name="in-this-section"></a>W tej sekcji
+
+[Cel atrybutów](../windows/purpose-of-attributes.md)  
+Zawiera omówienie programowania opartego na atrybutach.
+
+[Podstawowa mechanika atrybutów](../windows/basic-mechanics-of-attributes.md)  
+W tym artykule opisano, jak atrybuty działają w twoim projekcie.
+
+[Kompilowanie programu opartego na atrybutach](../windows/building-an-attributed-program.md)  
+Zawiera informacje o używaniu opcji kompilatora języka C++ w projekcie.
+
+[Kategorie atrybutów](../windows/attribute-categories.md)  
+Zawiera łącza do kategorii atrybuty używane w programie Visual C++.
+
+[Atrybut Programmming — często zadawane pytania](../windows/attribute-programming-faq.md)  
+Odpowiedzi na często zadawane pytania dotyczące programowania opartego na atrybutach.
+
+## <a name="related-sections"></a>Sekcje pokrewne
+
+[Dokumentacja atrybutów](../windows/cpp-attributes-reference.md)  
+Zawiera łącza do temat referencyjny opisujący poszczególne atrybuty i ich użycia.
+
+[Debugowanie wprowadzonego kodu](/visualstudio/debugger/how-to-debug-injected-code)  
+W tym artykule opisano, debugowanie programów opartego na atrybutach.
+
+[__super](../cpp/super.md)i [__interface](../cpp/interface.md)  
+Zawiera łącza do związanych z Programowanie oparte na atrybutach nowych słów kluczowych języka C++.

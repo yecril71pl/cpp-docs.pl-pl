@@ -15,27 +15,27 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: f172eea3108771e129636e9aa95d721d45c99609
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: b35675ba0081ec4ea7a1c9559f9a8fb71347cd54
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33168649"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42583822"
 ---
 # <a name="using-verifiable-assemblies-with-sql-server-ccli"></a>Używanie zestawów weryfikowalnych z programem SQL Server (C++/CLI)
-Rozszerzone procedury składowane dostarczana w bibliotek dołączanych dynamicznie (dll), zapewnia możliwości rozszerzania funkcji programu SQL Server za pośrednictwem funkcji utworzonych w języku Visual C++. Rozszerzone procedury składowane są zaimplementowane jako funkcjami wewnątrz biblioteki dll. Oprócz funkcji, można również zdefiniować rozszerzonych procedur składowanych [typy danych zdefiniowane przez użytkownika](../cpp/classes-and-structs-cpp.md) i [funkcje agregujące](http://msdn.microsoft.com/en-us/de255454-f45e-4281-81f9-bc61893ac5da) (np. Suma lub AVG).  
+Rozszerzone procedury składowane spakowany jako bibliotek dołączanych dynamicznie (dll), umożliwiają do rozszerzania funkcji programu SQL Server za pomocą funkcji przygotowane w programie Visual C++. Rozszerzone procedury składowane są implementowane jako funkcjami wewnątrz biblioteki dll. Oprócz funkcji, rozszerzone procedury składowane można również zdefiniować [typy zdefiniowane przez użytkownika](../cpp/classes-and-structs-cpp.md) i [funkcje](http://msdn.microsoft.com/en-us/de255454-f45e-4281-81f9-bc61893ac5da) (na przykład Suma lub średnia).  
   
- Gdy klient wykonuje rozszerzoną procedurę składowaną, wyszukiwanie programu SQL Server dla biblioteki DLL skojarzone z rozszerzoną procedurę składowaną i ładuje bibliotekę DLL. SQL Server wywołuje żądanego rozszerzoną procedurę składowaną i wykonuje go w kontekście zabezpieczeń określony. Rozszerzonej procedury składowanej, a następnie przekazuje wynik ustawia i zwraca parametry do serwera.  
+ Gdy klient wykonuje procedurę przechowywaną, wyszukiwanie programu SQL Server dla biblioteki DLL skojarzone z rozszerzoną procedurę składowaną i ładuje bibliotekę DLL. Program SQL Server wywołuje żądanego rozszerzoną procedurę składowaną i wykonuje go w kontekście zabezpieczeń określonym. Rozszerzonej procedury składowanej, a następnie wyników przebiegów ustawia i zwraca parametry do serwera.  
   
- [!INCLUDE[sqprsqlong](../dotnet/includes/sqprsqlong_md.md)] udostępnia rozszerzenia do języka Transact-SQL (T-SQL), aby umożliwić zainstalowanie zestawy podlegające weryfikacji do programu SQL Server. Zestaw uprawnień programu SQL Server Określa kontekst zabezpieczeń z następujących poziomów zabezpieczeń:  
+ Program SQL Server udostępnia rozszerzenia do języka Transact-SQL (T-SQL), aby umożliwić zainstalowanie zestawy podlegające weryfikacji do programu SQL Server. Zestaw uprawnień programu SQL Server Określa kontekst zabezpieczeń, z następującymi poziomami zabezpieczeń:  
   
--   Trybie nieograniczonym: uruchamianie kodu na własne ryzyko; kod nie musi być sprawdzalnie bezpieczny.  
+-   Tryb bez ograniczeń: uruchamianie kodu na własne ryzyko; kod nie musi być sprawdzalnie bezpieczny.  
   
--   Tryb awaryjny: uruchamianie sprawdzalnie umożliwić kodu; skompilowane z/CLR: Safe.  
+-   Tryb awaryjny: Uruchom weryfikowalny pod kątem zapewnienia kodu. skompilowane z/CLR: Safe.  
   
- Tryb awaryjny wymaga wykonanego zestawy sprawdzalnie należy umożliwić.  
+ Tryb awaryjny wymaga wykonanych zestawów, które mają być weryfikowalny pod kątem zapewnienia.  
   
- Aby utworzyć i załadować możliwe do zweryfikowania zestawu do programu SQL Server, użyj polecenia języka Transact-SQL, Utwórz zestaw i DROP ASSEMBLY w następujący sposób:  
+ Aby utworzyć i załadować zestawów weryfikowalnych do programu SQL Server, użyj polecenia języka Transact-SQL, instrukcja CREATE ASSEMBLY i wykonanie polecenia DROP ASSEMBLY w następujący sposób:  
   
 ```  
 CREATE ASSEMBLY <assemblyName> FROM <'Assembly UNC Path'> WITH   
@@ -45,7 +45,7 @@ DROP ASSEMBLY <assemblyName>
   
  Polecenie PERMISSION_SET Określa kontekst zabezpieczeń i może mieć wartości bez ograniczeń, bezpieczne lub ROZSZERZONE.  
   
- Ponadto służy polecenie CREATE FUNCTION powiązać nazwy metod w klasie:  
+ Ponadto można użyć polecenia CREATE FUNCTION powiązać nazwy metod w klasie:  
   
 ```  
 CREATE FUNCTION <FunctionName>(<FunctionParams>)  
@@ -54,7 +54,7 @@ RETURNS returnType
 ```  
   
 ## <a name="example"></a>Przykład  
- Poniższy skrypt SQL (na przykład o nazwie "MyScript.sql") ładuje zestaw do programu SQL Server i udostępnia metody klasy:  
+ Poniższy skrypt SQL (na przykład o nazwie "MyScript.sql"), ładuje zestaw do programu SQL Server i udostępnia metodę klasy:  
   
 ```  
 -- Create assembly without external access  
@@ -78,7 +78,7 @@ select dbo.GetQuoteNoEA('MSFT')
 go  
 ```  
   
- Skrypty SQL mogą być wykonywane interakcyjnego w analizatorze kwerend SQL lub w wierszu polecenia przy użyciu narzędzia sqlcmd.exe. Następujące polecenie w wierszu łączy się MójSerwer, używa domyślnej bazy danych używa zaufanego połączenia, danych wejściowych MyScript.sql i wyprowadza MyResult.txt.  
+ Skrypty SQL mogą być wykonywane interaktywnie w analizatorze kwerend SQL lub w wierszu polecenia przy użyciu narzędzia sqlcmd.exe. Następujące polecenie w wierszu nawiązanie połączenia z MójSerwer, używa domyślnej bazy danych, używa zaufane połączenie, danych wejściowych MyScript.sql i generuje MyResult.txt.  
   
 ```  
 sqlcmd -S MyServer -E -i myScript.sql -o myResult.txt  
