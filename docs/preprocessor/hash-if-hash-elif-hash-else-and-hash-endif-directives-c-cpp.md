@@ -1,5 +1,5 @@
 ---
-title: '#Jeśli, #elif, #else i #endif — dyrektywy (C/C++) | Dokumentacja firmy Microsoft'
+title: '#IF, #elif, #else i #endif, dyrektywy (C/C++) | Dokumentacja firmy Microsoft'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -31,87 +31,89 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a9d4f941298159b8a3ea1aa3fe37efd1e6dc68ab
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 222aa7cf4960095461daa26388f2b969985a6069
+ms.sourcegitcommit: d4c803bd3a684d7951bf88dcecf1f14af43ae411
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33846652"
+ms.lasthandoff: 08/10/2018
+ms.locfileid: "42465878"
 ---
 # <a name="if-elif-else-and-endif-directives-cc"></a>#if, #elif, #else i #endif — dyrektywy (C/C++)
-`#if` Dyrektywy z `#elif`, `#else`, i `#endif` dyrektywy, kompilacja formanty części pliku źródłowego. Jeśli wyrażenie (po `#if`) ma wartość różną od zera, grupa wiersza od razu po `#if` dyrektywy są przechowywane w jednostce tłumaczenia.  
+**#If** dyrektywy, za pomocą **#elif**, **#else**, i **#endif** dyrektyw, formanty kompilację części pliku źródłowego. Jeśli wyrażenie (po **#if**) ma wartość różną od zera, grupa linii następująca bezpośrednio **#if** dyrektywa jest zachowywana w jednostce translacji.  
   
 ## <a name="grammar"></a>Gramatyka  
- *warunkowe* :  
- *Jeśli część elif części*opt*część else*opt*endif wiersza*  
+ 
+*warunkowe* :  
+*część IF części elif*zoptymalizowany pod kątem*część else*zoptymalizowany pod kątem*linia endif*  
   
- *Jeśli część* :  
- *Jeśli wiersz tekstu*  
+*część IF* :  
+*tekst z wierszem z operatorem IF*  
   
- *Jeśli wiersz* :  
- **#if***wyrażenie stałej*   
+*wiersz z operatorem IF* :  
+**#if***wyrażenia stałego*  
   
- **#ifdef***identyfikator*  
+**#ifdef***identyfikator*  
   
- **#ifndef***identyfikator*  
+**#ifndef***identyfikator*  
   
- *elif części* :  
- *elif wiersza tekstu*  
+*części elif* :  
+*tekst linii elif*  
   
- *elif części elif wiersza tekstu*  
+*tekst linii elif części elif*  
   
- *elif — wiersz* :  
- **#elif**  *constant-expression*  
+*Linia elif* :  
+**#elif**  *constant-expression*  
   
- *część else* :  
- *else wiersza tekstu*  
+*część else* :  
+*tekst linii else*  
   
- *else wiersza* :  
- `#else`  
+*else linii* :  
+`#else`  
   
- *ENDIF-line* :  
- `#endif`  
+*Linia ENDIF* :  
+`#endif`  
   
- Każdy `#if` dyrektywy w pliku źródłowym muszą być zgodne przez zamknięcia `#endif` dyrektywy. Dowolną liczbę `#elif` dyrektywy może wystąpić między `#if` i `#endif` dyrektywy, ale co najwyżej jeden `#else` dyrektywa jest dozwolone. `#else` Dyrektywy, jeśli jest obecny, musi być ostatnim dyrektywy przed `#endif`.  
+Każdy **#if** dyrektywy w pliku źródłowym musi towarzyszyć zamykający **#endif** dyrektywy. Dowolną liczbę **#elif** dyrektyw może pojawić się między **#if** i **#endif** dyrektyw, ale co najwyżej jeden **#else** dyrektywa jest dozwolone. **#Else** dyrektywy, jeśli jest obecna, musi być ostatnią dyrektywą przed **#endif**.  
   
- `#if`, `#elif`, `#else`, I `#endif` dyrektywy można zagnieżdżać w innych części tekstu `#if` dyrektywy. Każdy zagnieżdżone `#else`, `#elif`, lub `#endif` dyrektywy należy do najbliższego poprzedzających `#if` dyrektywy.  
+**#If**, **#elif**, **#else**, i **#endif** dyrektywy można zagnieździć w części tekstowej innych **#if**dyrektywy. Każda zagnieżdżona **#else**, **#elif**, lub **#endif** dyrektywa należy do najbliższej poprzedzającej **#if** dyrektywy.  
   
- Wszystkie dyrektywy kompilacja warunkowa, takich jak `#if` i **#ifdef**, muszą być zgodne z zamknięcia `#endif` dyrektywy przed końcem pliku; w przeciwnym razie zostanie wygenerowany komunikat o błędzie. Gdy kompilacja warunkowa dyrektywy są zawarte w plików dołączanych, muszą spełniać warunki tego samego: nie może być nie niedopasowane dyrektywy kompilacja warunkowa na końcu pliku dołączanego.  
+Wszystkie dyrektywy kompilacji warunkowej, takie jak **#if** i **#ifdef**, muszą się zgadzać z zamknięciem **#endif** dyrektyw przed końcem pliku; w przeciwnym razie błąd komunikat jest generowany. Gdy dyrektywy kompilacji warunkowej są zawarte w plikach dołączonych, muszą spełniać te same warunki: muszą być nie niedopasowane dyrektywy kompilacji warunkowej na końcu pliku dyrektywy include.  
   
- Zastąpienia makro jest wykonywane w część wiersza polecenia, który następuje `#elif` polecenia dzięki wywołanie makra mogą być używane w *wyrażenia*.  
+Wymiana makra jest wykonywana w części wiersza polecenia, który następuje po **#elif** poleceń, więc wywołanie makra mogą być używane w *wyrażenie_stałe*.  
   
- Preprocesora wybierze jeden z danego wystąpienia *tekst* dla dalszego przetwarzania. Określona w bloku *tekst* może być dowolną sekwencją tekstu. Można go zajmują więcej niż jeden wiersz. Zazwyczaj *tekst* jest tekst program, który ma znaczenie kompilatora lub preprocesora.  
+Preprocesor wybiera jedno z wystąpień danego *tekst* do dalszego przetwarzania. Określona w bloku *tekstu* może być dowolną sekwencją tekstu. Może zajmować więcej niż jeden wiersz. Zazwyczaj *tekstu* to tekst programu, który ma znaczenie dla kompilatora lub preprocesora.  
   
- Preprocesora przetwarza wybranego *tekst* i przekazuje je do kompilatora. Jeśli *tekst* zawiera dyrektywy preprocesora preprocesora wykonuje te dyrektywy. Tylko bloki tekstu wybranych przez preprocesora są kompilowane.  
+Preprocesor przetwarza wybrany *tekst* i przekazuje go do kompilatora. Jeśli *tekstu* zawiera dyrektywy preprocesora, preprocesor wykonuje te dyrektywy. Tylko bloki tekstu wybrane przez preprocesor są kompilowane.  
   
- Preprocesora wybiera jeden *tekst* elementu przez obliczenie wyrażenia stałej po każdym `#if` lub `#elif` dyrektywy aż do znalezienia true wyrażenie stałe (różną od zera). Go zaznacza cały tekst (w tym dyrektyw preprocesora, począwszy od **#**) do jego skojarzony `#elif`, `#else`, lub `#endif`.  
+Preprocesor wybiera pojedynczy *tekstu* element oceniając wyrażenie stałej następujące po każdym **#if** lub **#elif** dyrektywy do momentu znalezienia prawdziwe (niezerowe) — stała wyrażenie. Go powoduje zaznaczenie całego tekstu (włączając inne dyrektywy preprocesora, począwszy od **#**) do związanych z nią **#elif**, **#else**, lub **#endif** .  
   
- Jeśli wszystkie wystąpienia *wyrażenia* są ma wartość FAŁSZ, lub jeśli nie `#elif` dyrektywy wyświetlana, preprocesora wybiera bloku tekstu po `#else` klauzuli. Jeśli `#else` pominięcia klauzuli i wszystkie wystąpienia *wyrażenia* w `#if` bloku są false, nie bloku tekstu jest zaznaczone.  
+Jeśli wszystkie wystąpienia *wyrażenie_stałe* są fałszywe lub jeśli nie **#elif** dyrektywy pojawia się, preprocesor wybiera blok tekstu po **#else** klauzuli. Jeśli **#else** pominięcia klauzuli i wszystkie wystąpienia *wyrażenie_stałe* w **#if** bloku są fałszywe, jest zaznaczony żaden blok tekstu.  
   
- *Wyrażenia* jest liczba całkowita stałego wyrażenia z te dodatkowe ograniczenia:  
+*Wyrażenie_stałe* to wyrażenie stałe liczby całkowitej z następującymi ograniczeniami dodatkowymi:  
   
--   Wyrażenia musi mieć typ całkowitoliczbowy i może zawierać tylko stałe całkowite, stałe znakowe i **zdefiniowane** operatora.  
+- Wyrażenia muszą mieć typ całkowity i mogą obejmować tylko stałe będące liczbami całkowitymi, stałe znaków i **zdefiniowane** operatora.  
   
--   Nie można użyć wyrażenia `sizeof` lub operator rzutowanie typu.  
+- Nie można użyć wyrażenia `sizeof` lub operatora typu rzutowania.  
   
--   Środowisko docelowe nie można reprezentować wszystkie zakresy liczb całkowitych.  
+- Środowisko docelowe może nie być w stanie odtworzyć wszystkich zakresów liczb całkowitych.  
   
--   Tłumaczenie reprezentuje typ `int` taki sam jak typ **długi**, i `unsigned int` taki sam jak `unsigned long`.  
+- Tłumaczenie reprezentuje typ **int** taki sam jak typ **długie**, i **unsigned int** taka sama jak **unsigned long**.  
   
--   Translator może dokonywać translacji stałe znakowe do zestawu wartości kodów innego zestawu dla środowiska docelowego. Aby określić właściwości środowiska docelowego, należy sprawdzić wartości makra z limitów. H w aplikacji utworzonej dla środowiska docelowego.  
+- Tłumacz może przetłumaczyć stałe znaków na zestaw wartości kodu inny od zestawy środowiska docelowego. Aby określić właściwości środowiska docelowego, sprawdź wartości makr z limitów. H w aplikacji utworzonej dla środowiska docelowego.  
   
--   Wyrażenie nie musi wykonywać wszelkie zapytania środowiska i musi być izolowane od szczegóły implementacji na komputerze docelowym.  
+- Wyrażenie nie musi wykonywać żadnych zapytań środowiska i musi być izolowane od szczegółów implementacji na komputerze docelowym.  
 
 ## <a name="defined"></a>zdefiniowane  
- Operator preprocesora **zdefiniowane** mogą być używane w specjalne wyrażenia stałe, jak pokazano przy użyciu następującej składni:  
+ 
+Operator preprocesora **zdefiniowane** mogą być używane w specjalnym wyrażeniu stałym, jak pokazano w następującej składni:  
   
- Definicja ( `identifier` )  
+zdefiniowany ( `identifier` )  
   
- Definicja `identifier`  
+Definicja `identifier`  
   
- To wyrażenie stałej jest traktowane jako wartość true (różną od zera), jeśli *identyfikator* jest obecnie zdefiniowana; w przeciwnym razie wynikiem warunku jest FAŁSZ (0). Identyfikator zdefiniowany jako pusty tekst jest uznawane za zdefiniowane. **Zdefiniowane** dyrektywy mogą być używane w `#if` i `#elif` dyrektywa, ale nigdzie else.  
+To wyrażenie stałej jest uważany za wartość true (niezerową), jeśli *identyfikator* jest obecnie zdefiniowany; w przeciwnym razie warunek jest fałszywy (0). Identyfikator zdefiniowany jako pusty tekst jest uważany za zdefiniowany. **Zdefiniowane** dyrektywa może być używana w **#if** i **#elif** dyrektywy, nigdzie indziej.  
   
- W poniższym przykładzie `#if` i `#endif` dyrektywy sterowania kompilacji jednego z trzech wywołania funkcji:  
+W poniższym przykładzie **#if** i **#endif** dyrektywy kontrolują kompilację jednego z trzech wywołań funkcji:  
   
 ```  
 #if defined(CREDIT)  
@@ -123,9 +125,9 @@ ms.locfileid: "33846652"
 #endif  
 ```  
   
- Wywołanie funkcji `credit` jest kompilowana, jeśli identyfikator `CREDIT` jest zdefiniowany. Jeśli identyfikator `DEBIT` jest zdefiniowany, wywołanie funkcji `debit` ma być kompilowana. Jeśli identyfikator nie jest zdefiniowany, wywołanie `printerror` ma być kompilowana. Należy pamiętać, że `CREDIT` i `credit` są unikatowych identyfikatorów C i C++, ponieważ ich przypadków są różne.  
+Wywołanie funkcji `credit` jest kompilowana, jeśli identyfikator `CREDIT` jest zdefiniowany. Jeśli identyfikator `DEBIT` jest zdefiniowany, wywołanie funkcji `debit` jest kompilowany. Jeśli żaden identyfikator nie jest zdefiniowany, wywołania `printerror` jest kompilowany. Należy pamiętać, że `CREDIT` i `credit` są różnymi identyfikatorami w C i C++, ponieważ ich przypadki są różne.  
   
- Instrukcje kompilacja warunkowa w poniższym przykładzie założono wcześniej zdefiniowaną stałą symboliczne o nazwie `DLEVEL`.  
+Instrukcje kompilacji warunkowej w poniższym przykładzie zakładają wcześniej zdefiniowaną symboliczne stałą o nazwie `DLEVEL`.  
   
 ```  
 #if DLEVEL > 5  
@@ -154,20 +156,20 @@ ms.locfileid: "33846652"
 #endif  
 ```  
   
- Pierwszy `#if` blok zawiera dwa zestawy zagnieżdżonych `#if`, `#else`, i `#endif` dyrektywy. Pierwszy zestaw dyrektyw jest przetwarzany tylko wtedy, gdy `DLEVEL > 5` ma wartość true. W przeciwnym razie instrukcje po #**else** są przetwarzane.  
+Pierwszy **#if** blok zawiera dwa zestawy zagnieżdżonych **#if**, **#else**, i **#endif** dyrektywy. Pierwszy zestaw dyrektyw jest przetwarzany tylko wtedy, gdy `DLEVEL > 5` ma wartość true. W przeciwnym razie instrukcje po **#else** są przetwarzane.  
   
- `#elif` i `#else` dyrektywy w drugim przykładzie służą do jednej z czterech opcji, na podstawie wartości z `DLEVEL`. Stała `STACK` ma ustawioną wartość 0, 100 lub wartość 200, w zależności od definicji `DLEVEL`. Jeśli `DLEVEL` jest większa niż 5, a następnie instrukcji  
+**#Elif** i **#else** dyrektywy w drugim przykładzie są wykorzystywane do wytwarzania jednego z czterech wyborów, w oparciu o wartość `DLEVEL`. Stała `STACK` jest ustawiona na 0, 100 lub 200, w zależności od definicji `DLEVEL`. Jeśli `DLEVEL` jest większa niż 5, instrukcja  
   
 ```  
 #elif DLEVEL > 5  
 display(debugptr);  
 ```  
   
- jest skompilowany i `STACK` nie jest zdefiniowany.  
+jest skompilowany i `STACK` nie został zdefiniowany.  
   
- Użycia kompilacja warunkowa jest zapobiec wielu dołączenia tego samego pliku nagłówka. W języku C++, gdzie klasy często są zdefiniowane w pliki nagłówkowe, można zapobiegające wiele definicji konstrukcji podobne do poniższych:  
+Typowym zastosowaniem dla kompilacji warunkowej jest zapobieganie wielu dołączeniom tego samego pliku nagłówka. W języku C++, w którym klasy często są zdefiniowane w plikach nagłówkowych, następujące konstrukcje może służyć do zapobieżenia wielu definicjom:  
   
-```  
+```cpp  
 /*  EXAMPLE.H - Example header file  */  
 #if !defined( EXAMPLE_H )  
 #define EXAMPLE_H  
@@ -180,10 +182,11 @@ class Example
 #endif // !defined( EXAMPLE_H )  
 ```  
   
- Poprzedni kod sprawdza, czy symboliczne stała `EXAMPLE_H` jest zdefiniowany. Jeśli tak, plik został już dołączony i nie muszą być ponownie przetwarzany. Jeśli nie, stała `EXAMPLE_H` jest zdefiniowana na przykład oznaczyć. H tak już przetworzony.  
+Poprzedzający kod sprawdza, czy symboliczna stała `EXAMPLE_H` jest zdefiniowana. Jeśli tak, plik został już włączony i nie muszą być ponownie przetwarzany. Jeśli nie, stała `EXAMPLE_H` jest definiowana, aby oznaczyć PRZYKŁADU. H jako już przetworzone.  
 
 ## <a name="hasinclude"></a>__has_include
-**Visual Studio 2017 wersji 15.3 i nowszych**: Określa, czy nagłówek biblioteki są dostępne do włączenia:  
+
+**Visual Studio 2017 w wersji 15.3 lub nowszej**: Określa, czy nagłówek biblioteki są dostępne do włączenia:  
 
 ```cpp
 #ifdef __has_include
@@ -201,4 +204,5 @@ class Example
 ```
   
 ## <a name="see-also"></a>Zobacz też  
- [Dyrektywy preprocesora](../preprocessor/preprocessor-directives.md)
+ 
+[Dyrektywy preprocesora](../preprocessor/preprocessor-directives.md)

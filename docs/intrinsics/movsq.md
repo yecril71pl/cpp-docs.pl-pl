@@ -18,17 +18,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 60e0eacba00f9c0fb397b1fe37d2be8b108b6a59
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 0231c2514805479c0ec999698ebd027ab51e3119
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33336976"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42466240"
 ---
 # <a name="movsq"></a>__movsq
 **Microsoft Specific**  
   
- Generuje powtarzania ciągu Przenieś (`rep movsq`) instrukcji.  
+ Generuje ciąg powtarzanych Przenieś (`rep movsq`) instrukcji.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -42,26 +42,26 @@ void __movsq(
   
 #### <a name="parameters"></a>Parametry  
  [out] `Dest`  
- Miejsce docelowe operacji.  
+ Lokalizacja docelowa wykonać operację.  
   
  [in] `Source`  
- Źródło operacji.  
+ Źródło działania.  
   
  [in] `Count`  
- Liczba quadwords do skopiowania.  
+ Liczba wyrazy w liczbie mnogiej do skopiowania.  
   
 ## <a name="requirements"></a>Wymagania  
   
-|— Wewnętrzne|Architektura|  
+|Wewnętrzne|Architektura|  
 |---------------|------------------|  
-|`__movsq`|[!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
+|`__movsq`|X64|  
   
- **Plik nagłówka** \<intrin.h >  
+ **Plik nagłówkowy** \<intrin.h >  
   
 ## <a name="remarks"></a>Uwagi  
- W wyniku pierwszy `Count` quadwords wskazywana przez `Source` są kopiowane do `Dest` ciągu.  
+ W wyniku pierwsze `Count` wyrazy w liczbie mnogiej wskazywany przez `Source` są kopiowane do `Dest` ciągu.  
   
- Ta procedura jest dostępna tylko wewnętrznie.  
+ Ta procedura jest dostępna wyłącznie jako wewnętrzna.  
   
 ## <a name="example"></a>Przykład  
   
@@ -90,7 +90,7 @@ int main()
 950 850 750 650 550 450 350 250 150 50   
 ```  
   
-**KOŃCOWY określonych firmy Microsoft**  
+**END specyficzny dla Microsoft**  
   
 ## <a name="see-also"></a>Zobacz też  
  [Funkcje wewnętrzne kompilatora](../intrinsics/compiler-intrinsics.md)

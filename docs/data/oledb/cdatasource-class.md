@@ -68,12 +68,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 5c3bd275c189e7c99bbc275caf31436b5f5a1d5e
-ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
+ms.openlocfilehash: 69a96cf199e7ce131e91f750cdd83ebc915c38d8
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/30/2018
-ms.locfileid: "39340088"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42466237"
 ---
 # <a name="cdatasource-class"></a>CDataSource — Klasa
 Odnosi się do obiektu źródła danych OLE DB, który reprezentuje połączenie za pośrednictwem dostawcy ze źródłem danych.  
@@ -153,7 +153,7 @@ HRESULT GetProperties(ULONG ulPropIDSets,
 ```  
   
 #### <a name="parameters"></a>Parametry  
- Zobacz [IDBProperties::GetProperties](https://msdn.microsoft.com/library/ms714344.aspx) w *OLE DB Podręcznik programisty* w Windows SDK.  
+ Zobacz [IDBProperties::GetProperties](/previous-versions/windows/desktop/ms714344\(v=vs.85\)) w *OLE DB Podręcznik programisty* w Windows SDK.  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Standardowa HRESULT.  
@@ -238,10 +238,10 @@ HRESULT Open(LPCSTR szProgID,
  [in] `CLSID` Dostawcy danych.  
   
  *pPropSet*  
- [in] Wskaźnik do tablicy [DBPROPSET](https://msdn.microsoft.com/library/ms714367.aspx) struktury zawierający właściwości i wartości do ustawienia. Zobacz [zestawy właściwości i właściwości grupy](https://msdn.microsoft.com/library/ms713696.aspx) w *OLE DB Podręcznik programisty* w Windows SDK.  
+ [in] Wskaźnik do tablicy [DBPROPSET](/previous-versions/windows/desktop/ms714367\(v=vs.85\)) struktury zawierający właściwości i wartości do ustawienia. Zobacz [zestawy właściwości i właściwości grupy](/previous-versions/windows/desktop/ms713696\(v=vs.85\)) w *OLE DB Podręcznik programisty* w Windows SDK.  
   
  *nPropertySets*  
- [in] Liczba [DBPROPSET](https://msdn.microsoft.com/library/ms714367.aspx) struktury przekazany *pPropSet* argumentu.  
+ [in] Liczba [DBPROPSET](/previous-versions/windows/desktop/ms714367\(v=vs.85\)) struktury przekazany *pPropSet* argumentu.  
   
  *pName*  
  [in] Nazwa bazy danych, którym chcesz się połączyć.  
@@ -253,7 +253,7 @@ HRESULT Open(LPCSTR szProgID,
  [in] Hasło użytkownika.  
   
  *nInitMode*  
- [in] Tryb inicjowania bazy danych. Zobacz [właściwości inicjowania](https://msdn.microsoft.com/library/ms723127.aspx)w *OLE DB Podręcznik programisty* w zestawie Windows SDK dla listy metod inicjowania prawidłowe. Jeśli *nInitMode* to inicjowanie, zerowego, tryb znajduje się zestaw właściwości używany do otwierania połączenia.  
+ [in] Tryb inicjowania bazy danych. Zobacz [właściwości inicjowania](/previous-versions/windows/desktop/ms723127\(v=vs.85\))w *OLE DB Podręcznik programisty* w zestawie Windows SDK dla listy metod inicjowania prawidłowe. Jeśli *nInitMode* to inicjowanie, zerowego, tryb znajduje się zestaw właściwości używany do otwierania połączenia.  
   
  *szProgID*  
  [in] Identyfikator programu.  
@@ -293,7 +293,7 @@ HRESULT OpenFromFileName(LPCOLESTR szFileName) throw();
  *szFileName*  
  [in] Nazwa pliku, zwykle połączenie ze źródłem danych (. Plik UDL).  
   
- Aby uzyskać więcej informacji na temat danych łączy pliki (udl), zobacz [omówienie interfejsu API łącza danych](https://msdn.microsoft.com/library/ms718102.aspx) w zestawie Windows SDK.  
+ Aby uzyskać więcej informacji na temat danych łączy pliki (udl), zobacz [omówienie interfejsu API łącza danych](/previous-versions/windows/desktop/ms718102\(v=vs.85\)) w zestawie Windows SDK.  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Standardowa HRESULT.  
@@ -376,10 +376,10 @@ HRESULT OpenWithServiceComponents (LPCSTR szProgID,
  [in] Identyfikator programu dostawcę danych.  
   
  *pPropset*  
- [in] Wskaźnik do tablicy [DBPROPSET](https://msdn.microsoft.com/library/ms714367.aspx) struktury zawierający właściwości i wartości do ustawienia. Zobacz [zestawy właściwości i właściwości grupy](https://msdn.microsoft.com/library/ms713696.aspx) w *OLE DB Podręcznik programisty* w Windows SDK. Jeśli obiekt źródła danych jest inicjowany, właściwości muszą należeć do grupy właściwości źródła danych. Jeśli tę samą właściwość została określona więcej niż jeden raz w *pPropset*, która wartość zostaje użyta jest specyficzny dla dostawcy. Jeśli *ulPropSets* wynosi zero, ten parametr jest ignorowany.  
+ [in] Wskaźnik do tablicy [DBPROPSET](/previous-versions/windows/desktop/ms714367\(v=vs.85\)) struktury zawierający właściwości i wartości do ustawienia. Zobacz [zestawy właściwości i właściwości grupy](/previous-versions/windows/desktop/ms713696\(v=vs.85\)) w *OLE DB Podręcznik programisty* w Windows SDK. Jeśli obiekt źródła danych jest inicjowany, właściwości muszą należeć do grupy właściwości źródła danych. Jeśli tę samą właściwość została określona więcej niż jeden raz w *pPropset*, która wartość zostaje użyta jest specyficzny dla dostawcy. Jeśli *ulPropSets* wynosi zero, ten parametr jest ignorowany.  
   
  *ulPropSets*  
- [in] Liczba [DBPROPSET](https://msdn.microsoft.com/library/ms714367.aspx) struktury przekazany *pPropSet* argumentu. Jeśli jest to zero, dostawca ignoruje *pPropset*.  
+ [in] Liczba [DBPROPSET](/previous-versions/windows/desktop/ms714367\(v=vs.85\)) struktury przekazany *pPropSet* argumentu. Jeśli jest to zero, dostawca ignoruje *pPropset*.  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Standardowa HRESULT.  

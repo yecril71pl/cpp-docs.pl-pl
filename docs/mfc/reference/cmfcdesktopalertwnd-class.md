@@ -54,17 +54,17 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6347c6c3cb5bd9499bbf84a2ef1cb33efeac76e1
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: 09f086673ba015b168211261bed68db479ef77a9
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37852240"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42464485"
 ---
 # <a name="cmfcdesktopalertwnd-class"></a>Klasa CMFCDesktopAlertWnd
 `CMFCDesktopAlertWnd` Klasa implementuje funkcje niemodalnego okna dialogowego który jest wyświetlany na ekranie, aby poinformować użytkownika o zdarzeniu.  
 
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]    
+ Aby uzyskać więcej informacji, zobacz kod źródłowy znajdujący się w **VC\\atlmfc\\src\\mfc** folder instalacji programu Visual Studio.    
 ## <a name="syntax"></a>Składnia  
   
 ```  

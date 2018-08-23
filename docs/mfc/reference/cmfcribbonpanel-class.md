@@ -124,17 +124,17 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d61c5698a0ad9d6eb2c13edc6147b757a86f20e9
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: cc7ae6e3d06f29b5f45c321cc7f11c9260f26ed1
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37850173"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42466439"
 ---
 # <a name="cmfcribbonpanel-class"></a>Klasa CMFCRibbonPanel
 Implementuje panel, który zawiera zbiór elementów wstążki. Podczas rysowania panelu Wyświetla tyle elementów, jak to możliwe, uwzględniając rozmiar panelu.  
 
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+ Aby uzyskać więcej informacji, zobacz kod źródłowy znajdujący się w **VC\\atlmfc\\src\\mfc** folder instalacji programu Visual Studio.  
  
   
 ## <a name="syntax"></a>Składnia  

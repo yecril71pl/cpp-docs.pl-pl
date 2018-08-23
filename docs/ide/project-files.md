@@ -17,18 +17,18 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e66d6e94e4938c72adc5aea1a478ce6c0658e56e
-ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
+ms.openlocfilehash: 9aa8994ebbb9f00afa6858597fce17554f3c3dfc
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "33327232"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42578619"
 ---
 # <a name="project-files"></a>Pliki projektu
-Plik projektu Visual C++ to oparte na języku XML plik ma rozszerzenie nazwy pliku .vcxproj, który zawiera informacje wymagane do tworzenia projektu Visual C++.  
+Plik projektu Visual C++ jest oparty na składni XML pliku ma rozszerzenie nazwy pliku .vcxproj i zawiera informacje, które jest wymagane do skompilowania projektu Visual C++.  
   
 ## <a name="example"></a>Przykład  
- Następujący przykładowy plik .vcxproj został utworzony przez określenie **aplikacji konsoli Win32** w **nowy projekt** okno dialogowe. Aby przetwarzać projektu pliku użyć narzędzia msbuild.exe w wierszu polecenia lub **kompilacji** w [!INCLUDE[TLA2#tla_ide](../build/includes/tla2sharptla_ide_md.md)]. (Nie można przetworzyć tego przykładu, ponieważ nie podano wymaganego źródła i pliki nagłówkowe.) Aby uzyskać więcej informacji na temat elementów XML w pliku projektu, zobacz [odwołanie do schematu pliku projektu](/visualstudio/msbuild/msbuild-project-file-schema-reference).  
+ Poniższy przykładowy plik .vcxproj został wyprodukowany przez określenie **Aplikacja konsoli Win32** w **nowy projekt** okno dialogowe. Aby przetwarzać projektu pliku użyć narzędzia msbuild.exe w wierszu polecenia lub **kompilacji** polecenie w IDE. (Nie można przetworzyć tego przykładu, ponieważ nie podano wymaganych źródło i pliki nagłówkowe.) Aby uzyskać więcej informacji o elementach języka XML w pliku projektu, zobacz [odwołanie do schematu pliku projektu](/visualstudio/msbuild/msbuild-project-file-schema-reference).  
   
 ```  
 <?xml version="1.0" encoding="utf-8"?>  

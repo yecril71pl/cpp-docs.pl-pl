@@ -18,17 +18,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 48a3cfe51f79f0d6068509a5e42693417524417d
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 0c8dc98e679de6255ae5762777fd51cbe3554a32
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33328815"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42466134"
 ---
 # <a name="rotl8-rotl16"></a>_rotl8, _rotl16
 **Microsoft Specific**  
   
- Obróć wartości wejściowe w lewo do najbardziej znaczącego bitu (BITEM) przez określoną liczbę pozycji bitowej.  
+ Obróć wartości wejściowe w lewo do najbardziej znaczący bit (BITEM) przez określoną liczbę pozycji bitów.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -45,25 +45,25 @@ unsigned short _rotl16(
   
 #### <a name="parameters"></a>Parametry  
  [in] `value`  
- Wartość do obracania.  
+ Wartość, aby obrócić.  
   
  [in] `shift`  
- Liczba bitów obrotu.  
+ Liczba bitów, aby obrócić.  
   
 ## <a name="return-value"></a>Wartość zwracana  
  Obrócony wartość.  
   
 ## <a name="requirements"></a>Wymagania  
   
-|— Wewnętrzne|Architektura|  
+|Wewnętrzne|Architektura|  
 |---------------|------------------|  
-|`_rotl8`|x86, ARM, [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
-|`_rotl16`|x86, ARM, [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
+|`_rotl8`|x86, ARM, x64|  
+|`_rotl16`|x86, ARM, x64|  
   
- **Plik nagłówka** \<intrin.h >  
+ **Plik nagłówkowy** \<intrin.h >  
   
 ## <a name="remarks"></a>Uwagi  
- W odróżnieniu od operacji przesunięcia w lewo, podczas wykonywania obrotu po lewej stronie najbardziej znaczących bitów, które wychodzi poza górną granicę są przenoszone do pozycji z bitowego najmniej znaczący.  
+ W odróżnieniu od operacji przesunięcia w lewo, podczas wykonywania po lewej stronie obrotu najbardziej znaczące bity, które wychodził poza wysokiej klasy są przenoszone do najmniej znaczących pozycje bitów.  
   
 ## <a name="example"></a>Przykład  
   
@@ -104,7 +104,7 @@ Rotating 0x41 left by 7 bits gives 0xa0
 Rotating unsigned short 0x12 left by 10 bits gives 0x4800  
 ```  
   
-**KOŃCOWY określonych firmy Microsoft**  
+**END specyficzny dla Microsoft**  
   
 ## <a name="see-also"></a>Zobacz też  
  [_rotr8, _rotr16](../intrinsics/rotr8-rotr16.md)   

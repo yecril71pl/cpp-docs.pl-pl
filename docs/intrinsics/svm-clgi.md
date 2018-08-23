@@ -17,17 +17,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 679c2b4d7abb792dfe6baa5ad5e18752fb7ca8bc
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 54f1a88acef3f3f79a39a8dd68e1beb079f30fec
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33332549"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42465620"
 ---
 # <a name="svmclgi"></a>__svm_clgi
 **Microsoft Specific**  
   
- Usuwa flagę globalne przerwania.  
+ Czyści flagę globalnego przerwania.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -36,19 +36,19 @@ void __svm_clgi( void );
 ```  
   
 ## <a name="remarks"></a>Uwagi  
- `__svm_clgi` Funkcji jest odpowiednikiem `CLGI` maszyny instrukcji. Flagi globalne przerwań określa, czy procesor ignoruje, odłoży czy obsługuje przerwania z powodu zdarzenia, takie jak zakończenia We/Wy, alert temperatury sprzętu lub wyjątek do debugowania.  
+ `__svm_clgi` Funkcji jest odpowiednikiem `CLGI` machine instrukcji. Flagi globalnej przerwania określa, czy procesor ignoruje, odłoży czy obsługi przerwań z powodu zdarzenia, takie jak ukończenia operacji We/Wy, alert temperatury sprzętu lub wyjątek debugowania.  
   
- Ta funkcja obsługuje interakcji z hosta maszyny wirtualnej monitor Gość operacyjnego i jego zastosowań. Aby uzyskać więcej informacji, wyszukaj dokumentu, "wolumin ręczne AMD64 architektura programisty 2: programowania w języku systemu," numer 24593, poprawki 3.11, dokumentu w [AMD corporation](http://go.microsoft.com/fwlink/p/?linkid=23746) lokacji.  
+ Ta funkcja obsługuje interakcji monitor maszyny wirtualnej hosta z gościa operacyjnego i jego aplikacji. Aby uzyskać więcej informacji, wyszukaj dokumentu, "AMD64 architektury programisty ręczne woluminie 2: programowania systemu" numer 24593, wersji 3.11, dokumentu w [AMD corporation](http://go.microsoft.com/fwlink/p/?linkid=23746) lokacji.  
   
 ## <a name="requirements"></a>Wymagania  
   
-|— Wewnętrzne|Architektura|  
+|Wewnętrzne|Architektura|  
 |---------------|------------------|  
-|`__svm_clgi`|x86, [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
+|`__svm_clgi`|x86, x64|  
   
- **Plik nagłówka** \<intrin.h >  
+ **Plik nagłówkowy** \<intrin.h >  
   
-**KOŃCOWY określonych firmy Microsoft**  
+**END specyficzny dla Microsoft**  
   
 ## <a name="see-also"></a>Zobacz też  
  [Funkcje wewnętrzne kompilatora](../intrinsics/compiler-intrinsics.md)   

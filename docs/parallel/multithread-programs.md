@@ -15,19 +15,20 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ece834bd6bf85daacbbaf50110e6e278da1ae099
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: c87d6e6a308b4e5a4cc2b38599e13f59a414361b
+ms.sourcegitcommit: e9ce38decc9f986edab5543de3464b11ebccb123
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33686935"
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "42465423"
 ---
 # <a name="multithread-programs"></a>Programy wielowątkowe
-Wątek jest zasadniczo ścieżka wykonywania za pośrednictwem programu. Istnieje również najmniejsza wykonanie, które planuje Win32. Wątek składa się z stosu, stan rejestrów Procesora i wpis na liście wykonywania Harmonogram systemu. Każdy wątek udostępnia zasoby wszystkich procesów.  
+Wątek jest zasadniczo ścieżką wykonywania programu. Jest również najmniejsza jednostka wykonania, która planuje Win32. Wątek składa się ze stosu, stan rejestry procesora CPU i wpis na liście wykonywania harmonogramu systemu. Każdy wątek współdzielą zasoby wszystkich procesów.  
   
- Proces składa się z co najmniej jeden wątek i kod, danych i innych zasobów programu w pamięci. Zasoby typowego programu są otwarte pliki, semaforów i dynamicznej alokacji pamięci. Program wykonuje się, gdy Harmonogram systemu zapewnia jeden z wątków wykonywania. Harmonogram Określa wątków, które powinno być ono uruchomione i kiedy powinno być ono uruchomione. Wątki niższego priorytetu może być konieczne Zaczekaj, aż wyższy priorytet wątków wykonywania swoich zadań. Na komputerach wieloprocesorowych harmonogram można przenieść poszczególne wątki różnych procesorów, aby równoważyć obciążenie procesora CPU.  
+Proces składa się z jednego lub więcej wątków i kod, danych i inne zasoby programu w pamięci. Zasoby programu typowe są otwarte pliki, semaforów i pamięć przydzielana dynamicznie. Program wykonuje, gdy Harmonogram systemu zawiera jeden z wątków Kontrola wykonywania. Harmonogram Określa, które wątki powinno być ono uruchomione i kiedy powinno być ono uruchomione. Wątki niższego priorytetu może być konieczne Zaczekaj, aż wyższy priorytet wątków wykonania swoich zadań. Na komputerach wieloprocesorowych harmonogram można przenieść określonych wątków do różnych procesorów, aby równoważyć obciążenie procesora CPU.  
   
- Każdy wątek w procesie działa niezależnie. Jeśli nie możesz wyświetlić je ze sobą, wątki wykonaj indywidualnie i znają innych wątków w procesie. Udostępnianie wspólnych zasobów wątków jednak musi koordynować pracę przy użyciu semaforów lub innej metody komunikacji międzyprocesowej. Aby uzyskać więcej informacji na temat synchronizacja wątków, zobacz [zapisywania wielowątkowe programu systemu Win32](../parallel/writing-a-multithreaded-win32-program.md).  
+Każdy wątek w procesie działa niezależnie od siebie. Jeśli nie możesz je uwidocznić ze sobą, wątki wykonaj indywidualnie i znają inne wątki w procesie. Wątki Udostępnianie wspólnych zasobów, jednak należy koordynować wzajemnie swoją pracę za pomocą semaforów lub innej metody komunikacji międzyprocesowej. Aby uzyskać więcej informacji na temat synchronizowania wątków, zobacz [pisanie wielowątkowego programu Win32](../parallel/writing-a-multithreaded-win32-program.md).  
   
 ## <a name="see-also"></a>Zobacz też  
- [Wielowątkowość z językiem C i podsystemem Win32](../parallel/multithreading-with-c-and-win32.md)
+
+[Wielowątkowość z językiem C i podsystemem Win32](../parallel/multithreading-with-c-and-win32.md)

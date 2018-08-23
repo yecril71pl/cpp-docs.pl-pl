@@ -27,27 +27,27 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0b72f13fe25330b81a48d1447b707bdc4626ab3f
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: ac2cdf74d8d534fae46deab67831b13d0d3d1277
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32381138"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42464844"
 ---
 # <a name="set-the-path-and-environment-variables-for-command-line-builds"></a>Ustawianie ścieżki i zmiennych środowiskowych dla kompilacji z wiersza polecenia
 
-Narzędzia wiersza polecenia kompilacji Visual C++ wymaga kilku zmiennych środowiskowych, które są dostosowane do instalacji i kompilacji konfiguracji. Po zainstalowaniu przez obciążenie C++ [!INCLUDE[vsprvs](../assembler/masm/includes/vsprvs_md.md)] Instalatora, tworzy polecenia niestandardowych plików lub pliki wsadowe, które Ustaw zmienne środowiskowe wymagane. Instalator używa następnie te pliki poleceń do tworzenia skrótów do menu Start systemu Windows otworzyć okno wiersza polecenia dewelopera. Te skróty Ustawianie zmiennych środowiskowych dla określonego Konfiguracja kompilacji. Jeśli chcesz użyć narzędzia wiersza polecenia, można wykonać jedną z tych skrótów lub można Otwórz okno wiersza polecenia zwykły, a następnie uruchom jeden z plików polecenia niestandardowych samodzielnie ustawić środowisko konfiguracyjne kompilacji. Aby uzyskać więcej informacji, zobacz [kompilacji kodu C/C++ w wierszu polecenia](building-on-the-command-line.md).  
+Narzędzia wiersza polecenia kompilacji Visual C++ wymaga kilku zmiennych środowiskowych, które są dostosowane dla danej konfiguracji instalacji i kompilacji. Obciążenie języka C++ jest instalowany przez Instalatora programu Visual Studio, tworzy się pliki niestandardowe polecenie lub pliki wsadowe, które ustawić zmienne środowiskowe wymagane. Instalator używa następnie te pliki poleceń do tworzenia skrótów menu Windows Start, aby otworzyć okno wiersza polecenia dla deweloperów. Skróty, skonfiguruj zmienne środowiskowe dla określonej kompilacji konfiguracji. W przypadku korzystania z narzędzi wiersza polecenia można uruchomić jeden z tych skrótów lub można otworzyć okno wiersza polecenia zwykły, a następnie uruchom jeden z plików polecenie niestandardowe można samodzielnie ustawić środowisko konfiguracji kompilacji. Aby uzyskać więcej informacji, zobacz [kompilacji kodu C/C++ w wierszu polecenia](building-on-the-command-line.md).  
   
-Narzędzia wiersza polecenia programu Visual C++ używać zmiennych środowiskowych PATH, TMP INCLUDE, LIB i LIBPATH, a także używać inne specyficzne dla programu zainstalowanych narzędzi, platform i zestawy SDK zmiennych środowiskowych. Nawet prosty [!INCLUDE[vsprvs](../assembler/masm/includes/vsprvs_md.md)] instalacji mogą ustawiać 20 lub więcej zmiennych środowiskowych. Ponieważ wartości te zmienne środowiskowe są specyficzne dla instalacji i wybraną konfigurację kompilacji i może zostać zmieniona przez uaktualnienia i aktualizacje produktu, zaleca się użycie skrótów wiersza polecenia dewelopera lub jednego z pliki poleceń dostosowane ustawienia, zamiast ich ustawienie w środowisku Windows samodzielnie. 
+Narzędzia wiersza polecenia języka Visual C++ Użyj zmiennych środowiskowych PATH, TMP, INCLUDE, LIB i LIBPATH i również używać innych zmiennych środowiskowych specyficzne dla Twojego zainstalowanych narzędzi, platform i zestawów SDK. Nawet prostą instalację programu Visual Studio mogą ustawiać 20 lub więcej zmiennych środowiskowych. Ponieważ wartości tych zmiennych środowiskowych specyficznych dla instalacji programu i wybraną konfigurację kompilacji i może zostać zmieniona przez uaktualnienia i aktualizacje produktu, zdecydowanie zalecamy użycie skrót do wiersza polecenia dla deweloperów lub jedna z pliki poleceń dostosowane ustawienia, zamiast ustawiać ich w środowisku Windows samodzielnie. 
 
-Aby zobaczyć, które zmienne środowiskowe są ustawiane przez skrót do wiersza polecenia dewelopera, można użyć polecenia SET. Otwórz okno wiersza polecenia zwykłe i Przechwyć dane wyjściowe polecenia SET dla linii bazowej. Otwórz okno wiersza polecenia dewelopera i Przechwyć dane wyjściowe polecenia SET do porównania. Narzędzia obsługującego różnice, takie jak wbudowana w środowisku IDE programu Visual Studio może być przydatne do porównywania zmienne środowiskowe i zobacz, co jest ustawiana przez deweloperów. Informacje o zmiennych w danym środowisku używany przez kompilator i konsolidatora, zobacz [zmienne środowiskowe](../build/reference/cl-environment-variables.md) i [zmienne środowiskowe LINK](../build/reference/link-environment-variables.md).  
+Aby zobaczyć, które zmienne środowiskowe są ustawiane przez skrót do wiersza polecenia dla deweloperów, można użyć polecenia SET. Otwórz okno wiersza polecenia zwykły i przechwycenie danych wyjściowych polecenia SET dla linii bazowej. Otwórz okno wiersza polecenia dla deweloperów i przechwycenie danych wyjściowych polecenia SET dla porównania. Narzędzia porównującego, takiego jak wbudowana w środowisku IDE programu Visual Studio może być przydatne do porównywania zmiennych środowiskowych i zobacz, co jest ustawiana przez wiersz polecenia dla deweloperów. Aby uzyskać informacji na temat określonych zmiennych środowiskowych używane przez kompilatora i konsolidatora, zobacz [zmienne środowiskowe CL](../build/reference/cl-environment-variables.md) i [zmienne środowiskowe LINK](../build/reference/link-environment-variables.md).  
   
 > [!NOTE]
->  Kilku narzędzi wiersza polecenia lub opcje narzędzia mogą wymagać uprawnienia administratora. Jeśli masz problemy z uprawnieniami, korzystając z nich, zaleca się Otwórz okno wiersza polecenia dewelopera przy użyciu **Uruchom jako Administrator** opcji. W systemie Windows 10, kliknij prawym przyciskiem myszy, aby otworzyć menu skrótów okna wiersza polecenia, a następnie wybierz **więcej**, **Uruchom jako administrator**.  
+>  Kilka narzędzi wiersza polecenia i opcje narzędzia może wymagać uprawnień administratora. Jeśli masz problemy z uprawnieniami, podczas korzystania z nich, firma Microsoft zaleca Otwórz okno wiersza polecenia dla deweloperów przy użyciu **Uruchom jako Administrator** opcji. W systemie Windows 10, kliknij prawym przyciskiem myszy, aby otworzyć menu skrótów dla okna wiersza polecenia, a następnie wybierz **więcej**, **Uruchom jako administrator**.  
   
 ## <a name="see-also"></a>Zobacz też  
 
-[Kompilowania kodu C/C++ w wierszu polecenia](../build/building-on-the-command-line.md)   
+[Kompilowanie kodu C/C++ w wierszu polecenia](../build/building-on-the-command-line.md)   
 [Łączenie](../build/reference/linking.md)   
 [Opcje konsolidatora](../build/reference/linker-options.md)   
 [Kompilowanie programu C/C++](../build/reference/compiling-a-c-cpp-program.md)   

@@ -18,15 +18,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a7ac671c938b80fc69b8214456efecf798e1e5f6
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: b9b94e5b8eccdc63735c7cb25faa7eacb1e23670
+ms.sourcegitcommit: d4c803bd3a684d7951bf88dcecf1f14af43ae411
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33840358"
+ms.lasthandoff: 08/10/2018
+ms.locfileid: "42466127"
 ---
 # <a name="floatcontrol"></a>float_control
-Określa zachowania zmiennoprzecinkowego dla funkcji.  
+Określa zachowanie liczb zmiennopozycyjnych dla funkcji.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -35,21 +35,23 @@ float_control( value,setting [push] | push | pop )
 ```  
   
 ## <a name="flags"></a>Flagi  
- `value`, `setting` **[wypychania]**  
- Określa zachowanie zmiennoprzecinkowych. `value` może być **dokładne** lub **z wyjątkiem**. Aby uzyskać więcej informacji, zobacz [/fp (określenie zachowania Floating-Point)](../build/reference/fp-specify-floating-point-behavior.md). `setting` można albo być **na** lub **poza**.  
+ 
+*wartość*, *ustawienie* *[wypychanych]*  
+Określa zachowanie liczb zmiennopozycyjnych. *wartość* może być `precise` lub `except`. Aby uzyskać więcej informacji, zobacz [/FP (określenie zachowania zmiennopozycyjna)](../build/reference/fp-specify-floating-point-behavior.md). *ustawienie* albo można `on` lub `off`.  
   
- Jeśli `value` jest **dokładne**, ustawienia **dokładne** i **z wyjątkiem** określania. **z wyjątkiem** można ustawić tylko na **na** podczas **dokładne** również ustawiono **na**.  
+Jeśli *wartość* jest `precise`, ustawienia `precise` i `except` określania. `except` można ustawić tylko `on` podczas `precise` jest również ustawiona na `on`.  
   
- Jeśli opcjonalny **wypychania** token zostanie dodany, bieżące ustawienia dla `value` spoczywa stos wewnętrznych kompilatora.  
+Jeśli opcjonalny *wypychania* token zostanie dodany, bieżące ustawienie *wartość* zostanie przypisany wewnętrznym stosie kompilatora.  
   
- **push**  
- Wypychanie bieżącej `float_control` ustawienie na stosie wewnętrznych kompilatora  
+*push*  
+Wypychanie bieżącej **float_control** ustawienie na wewnętrznym stosie kompilatora  
   
- **POP**  
- Usuwa `float_control` z góry stosu wewnętrznego kompilatora i sprawia, że nowe `float_control` ustawienie.  
+*POP*  
+Usuwa **float_control** ustawienie z góry wewnętrznego stosu kompilatora i sprawia, że nowe **float_control** ustawienie.  
   
 ## <a name="remarks"></a>Uwagi  
- Nie można włączyć `float_control precise` wyłączone podczas **z wyjątkiem** znajduje się na. Podobnie **dokładne** nie może być wyłączone podczas `fenv_access` znajduje się na. Aby przejść z ograniczeniami modelu do szybkiego modelu z `float_control` pragma, użyj następującego kodu:  
+ 
+Nie można włączyć `float_control precise` wyłączone, gdy `except` znajduje się na. Podobnie `precise` nie może być wyłączone podczas `fenv_access` znajduje się na. Można przejść od modelu strict do szybkiego model przy użyciu **float_control** pragma, użyj następującego kodu:  
   
 ```  
 #pragma float_control(except, off)  
@@ -57,7 +59,7 @@ float_control( value,setting [push] | push | pop )
 #pragma float_control(precise, off)  
 ```  
   
- Przechodzenie od szybkiego modelu do modelu ograniczeniami z `float_control` pragma, użyj następującego kodu:  
+Można przejść od szybkie modelu do modelu ściśle z **float_control** pragma, użyj następującego kodu:  
   
 ```  
 #pragma float_control(precise, on)  
@@ -65,16 +67,17 @@ float_control( value,setting [push] | push | pop )
 #pragma float_control(except, on)  
 ```  
   
- Inne zmiennoprzecinkowych pragm obejmują:  
+Inne zmiennoprzecinkowych pragm, obejmują:  
   
--   [fenv_access](../preprocessor/fenv-access.md)  
+- [fenv_access](../preprocessor/fenv-access.md)  
   
--   [fp_contract](../preprocessor/fp-contract.md)  
+- [fp_contract](../preprocessor/fp-contract.md)  
   
 ## <a name="example"></a>Przykład  
- Poniższy przykład przedstawia sposób catch przepełnienie zmiennoprzecinkowej wyjątek przy użyciu pragma `float_control`.  
+ 
+Poniższy przykład pokazuje, jak catch przepełnienie zmiennoprzecinkowej wyjątek za pomocą pragmy **float_control**.  
   
-```  
+```cpp  
 // pragma_directive_float_control.cpp  
 // compile with: /EHa  
 #include <stdio.h>  
@@ -113,4 +116,5 @@ Pass
 ```  
   
 ## <a name="see-also"></a>Zobacz też  
- [Dyrektywy pragma i słowo kluczowe __Pragma](../preprocessor/pragma-directives-and-the-pragma-keyword.md)
+ 
+[Dyrektywy pragma i słowo kluczowe __Pragma](../preprocessor/pragma-directives-and-the-pragma-keyword.md)  

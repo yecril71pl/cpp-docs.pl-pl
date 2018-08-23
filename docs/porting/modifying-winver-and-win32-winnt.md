@@ -15,27 +15,27 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4007f8b07b78618f4fdd8031d0f6dab5f1c12916
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: c3b41404c3f003d8f4d87ca98888f004c08c9721
+ms.sourcegitcommit: e9ce38decc9f986edab5543de3464b11ebccb123
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33912644"
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "42465881"
 ---
 # <a name="modifying-winver-and-win32winnt"></a>Modyfikowanie symboli WINVER i _WIN32_WINNT
 
-Visual C++ nie obsługuje już docelowy system operacyjny Windows 95, Windows 98, Windows ME, Windows NT lub Windows 2000. Jeśli Twoje **WINVER** lub **_WIN32_WINNT** makra są przypisane do jednej z tych wersji systemu Windows, należy zmodyfikować makra. Podczas uaktualniania projektu, który został utworzony przy użyciu starszej wersji programu Visual C++, mogą zostać wyświetlone błędy kompilacji powiązane z **WINVER** lub **_WIN32_WINNT** makra, jeśli są przypisane do wersji W przypadku systemu Windows, który nie jest już obsługiwana.  
+Visual C++ nie obsługuje już określania wartości docelowej Windows 95, Windows 98, Windows ME, Windows NT lub Windows 2000. Jeśli Twoje **WINVER** lub **_WIN32_WINNT** makra są przypisane do jednej z tych wersji systemu Windows, należy zmodyfikować makra. Kiedy uaktualniasz projekt, który został utworzony przy użyciu wcześniejszej wersji programu Visual C++, mogą pojawić się błędy kompilacji związane z **WINVER** lub **_WIN32_WINNT** makra, jeśli przypisano do wersji Windows, który nie jest już obsługiwana.  
   
 ## <a name="remarks"></a>Uwagi  
 
-Aby zmodyfikować makra, w pliku nagłówka (na przykład targetver.h znajdującą się podczas tworzenia projektu, którego celem jest system Windows), Dodaj następujące wiersze.  
+Aby zmodyfikować makra, w pliku nagłówkowym (na przykład targetver.h znajdującą się po utworzeniu projektu, który jest przeznaczony dla Windows), Dodaj następujące wiersze.  
   
 ```C  
 #define WINVER 0x0A00  
 #define _WIN32_WINNT 0x0A00  
 ```  
   
-To jest przeznaczony dla systemu operacyjnego Windows 10. Te wartości są wymienione w pliku nagłówka Windows nagłówka SDKDDKVer.h, definiującą makra dla każdej wersji systemu Windows. Należy dodać #define przed dołączeniem nagłówka SDKDDKVer.h. Poniżej przedstawiono wiersze z wersji Windows 10 nagłówka SDKDDKVer.h kodowania wartości dla każdej wersji systemu Windows:  
+Jest przeznaczony dla systemu operacyjnego Windows 10. Te wartości są wymienione w pliku nagłówkowym Windows nagłówka SDKDDKVer.h, który definiuje również makra dla każdej wersji Windows. Należy dodać #define wyrażenie przed dołączeniem nagłówka SDKDDKVer.h. Poniżej przedstawiono wiersze z wersji systemu Windows 10 nagłówka SDKDDKVer.h zakodować wartości dla każdej wersji systemu Windows:  
   
 ```C  
 //  
@@ -56,15 +56,15 @@ To jest przeznaczony dla systemu operacyjnego Windows 10. Te wartości są wymie
 #define _WIN32_WINNT_WIN10                  0x0A00 // Windows 10  
 ```  
   
-Jeśli nie widzisz wszystkich wersji systemu Windows wymienionych w kopię nagłówka SDKDDKVer.h, które są prawdopodobnie używasz starszej wersji zestawu Windows SDK. Domyślnie Win32 projekty w programie Visual Studio 2017 używają zestawu Windows 10 SDK.   
+Jeśli nie widzisz wszystkich tych wersjach systemu Windows wymienionych w kopię nagłówka SDKDDKVer.h, który widzisz, prawdopodobnie używasz starszej wersji zestawu Windows SDK. Domyślnie projekty Win32 w programie Visual Studio 2017, użyj zestawu SDK systemu Windows 10.   
   
 > [!NOTE]
->  Wartości nie ma gwarancji działać, jeśli zawiera wewnętrzny nagłówków MFC w aplikacji.  
+> Wartości nie musi działać, jeśli obejmują wewnętrzny nagłówki MFC w aplikacji.  
   
-Można również definiować to makro za pomocą **/D** — opcja kompilatora. Aby uzyskać więcej informacji, zobacz [/D (definicje preprocesora)](../build/reference/d-preprocessor-definitions.md).  
+Można również zdefiniować to makro za pomocą `/D` — opcja kompilatora. Aby uzyskać więcej informacji, zobacz [/D (definicje preprocesora)](../build/reference/d-preprocessor-definitions.md).  
   
-Aby uzyskać więcej informacji na temat znaczenia tych makr, zobacz [korzystanie z nagłówków systemu Windows](https://msdn.microsoft.com/library/windows/desktop/aa383745).  
+Aby uzyskać więcej informacji na temat znaczenia tych makr, zobacz [przy użyciu nagłówków Windows](https://msdn.microsoft.com/library/windows/desktop/aa383745).  
   
 ## <a name="see-also"></a>Zobacz też  
 
-[Historia zmian w usłudze Visual C++](..\porting\visual-cpp-change-history-2003-2015.md)
+[Historia zmian Visual C++](..\porting\visual-cpp-change-history-2003-2015.md)

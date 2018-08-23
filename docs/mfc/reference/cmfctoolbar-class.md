@@ -321,17 +321,17 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ec349041ff51441d49b5de39968417bdd071cad6
-ms.sourcegitcommit: 76fd30ff3e0352e2206460503b61f45897e60e4f
+ms.openlocfilehash: 0f2d01de9d2ee8fe585a55d89808bb76250c242b
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/13/2018
-ms.locfileid: "39027982"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42465900"
 ---
 # <a name="cmfctoolbar-class"></a>Klasa CMFCToolBar
 `CMFCToolBar` Klasa przypomina [klasa CToolBar](../../mfc/reference/ctoolbar-class.md), ale zapewnia dodatkową obsługę funkcji interfejsu użytkownika. Te obejmują płaskie paski narzędzi, paski narzędzi z wymiennymi obrazami, duże ikony, przyciski pagera, zablokowane paski narzędzi, formanty paska pomocniczego, tekst pod obrazami, obrazy w tle i paski narzędzi w kartach. `CMFCToolBar` Klasa zawiera także wbudowaną obsługę użytkownika dostosowywania pasków narzędzi i menu, przeciągania i upuszczania pomiędzy paskami narzędzi i menu, przyciskami pola kombi, Edytuj pola, próbnikami kolorów i przyciski zbiorczy.
 
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]    
+ Aby uzyskać więcej informacji, zobacz kod źródłowy znajdujący się w **VC\\atlmfc\\src\\mfc** folder instalacji programu Visual Studio.    
   
 ## <a name="syntax"></a>Składnia  
   

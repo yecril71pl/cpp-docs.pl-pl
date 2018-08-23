@@ -16,17 +16,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cfc63cdd252e2acb23d8a6e842138d91e6c9b9c4
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: e3ca2c389b00126ff477b8e184d690afce07c484
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33339998"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42466242"
 ---
 # <a name="shiftleft128"></a>__shiftleft128
 **Microsoft Specific**  
   
- Przenosi ilość 128-bitowego, reprezentowane jako dwie liczb 64-bitowych `LowPart` i `HighPart`, po lewej stronie według liczby bitów określonej `Shift` i zwraca 64 bitów wyniku.  
+ Przenosi ilość 128-bitowego, reprezentowane jako dwie ilości 64-bitowych `LowPart` i `HighPart`, w lewo o liczbę bitów określoną przez `Shift` i zwraca wysokiej 64 bity wyniku.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -40,27 +40,27 @@ unsigned __int64 __shiftleft128(
   
 #### <a name="parameters"></a>Parametry  
  [in] `LowPart`  
- Niski 64 bity ilość 128-bitowe, które mają zostać przesunięte.  
+ Niski 64 bity ilość 128-bitowe przesunięcie.  
   
  [in] `HighPart`  
- Wysoka 64 bity ilość 128-bitowe, które mają zostać przesunięte.  
+ Wysoka 64 bity ilość 128-bitowe przesunięcie.  
   
  [in] `Shift`  
- Liczba bitów, które mają zostać przesunięte.  
+ Liczba bitów, aby przesunąć.  
   
 ## <a name="return-value"></a>Wartość zwracana  
  Wysoka 64 bity wyniku.  
   
 ## <a name="requirements"></a>Wymagania  
   
-|— Wewnętrzne|Architektura|  
+|Wewnętrzne|Architektura|  
 |---------------|------------------|  
-|`__shiftleft128`|[!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
+|`__shiftleft128`|X64|  
   
- **Plik nagłówka** \<intrin.h >  
+ **Plik nagłówkowy** \<intrin.h >  
   
 ## <a name="remarks"></a>Uwagi  
- `Shift` Wartość jest zawsze modulo 64 tak, na przykład, jeśli wywołujesz `__shiftleft128(1, 0, 64)`, funkcja zostanie przesunięte niski części `0` bitów w lewo i zwracać wysokiej część `0` i nie `1` , ponieważ w przeciwnym razie można się spodziewać.  
+ `Shift` Wartość jest zawsze modulo 64 więc, na przykład, jeśli wywołasz `__shiftleft128(1, 0, 64)`, funkcja zostanie wprowadzony niskiej część `0` bitów lewej i zwracać wysokiej część `0` i nie `1` w przeciwnym razie może być oczekiwany.  
   
 ## <a name="example"></a>Przykład  
   
@@ -100,7 +100,7 @@ int main()
 0x100000000000000001 >> 1 = 0x080000000000000000  
 ```  
   
-**KOŃCOWY określonych firmy Microsoft**  
+**END specyficzny dla Microsoft**  
   
 ## <a name="see-also"></a>Zobacz też  
  [__shiftright128](../intrinsics/shiftright128.md)   

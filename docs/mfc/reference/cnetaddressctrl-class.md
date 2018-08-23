@@ -30,12 +30,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c58090351829f6a12ae90d56e8985bf615966f65
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: 731229f8aca9d564e418382a54e097ff61316586
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37852280"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42465614"
 ---
 # <a name="cnetaddressctrl-class"></a>Klasa CNetAddressCtrl
 `CNetAddressCtrl` Klasa reprezentuje formant adresu sieciowego, który służy do wprowadzania i sprawdzania poprawności formatu IPv4, IPv6 i nazwanych adresów DNS.  
@@ -72,7 +72,7 @@ class CNetAddressCtrl : public CEdit
   
  Poniższa ilustracja przedstawia okno dialogowe, który zawiera formant adresu sieciowego. Tekst pola (1) dla formant adresu sieciowego zawiera nieprawidłowy adres sieciowy. Zostanie wyświetlony komunikat Porada (2), jeśli adres sieciowy jest nieprawidłowy.  
   
- ![Okno dialogowe z formant adresu sieciowego i porady. ] (../../mfc/reference/media/cnetaddctrl.png "cnetaddctrl")  
+ ![Okno dialogowe z formant adresu sieciowego i porady. ](../../mfc/reference/media/cnetaddctrl.png "cnetaddctrl")  
   
 ## <a name="example"></a>Przykład  
  Poniższy przykład kodu jest częścią okno dialogowe, które sprawdza poprawność adresu sieciowego. Programy obsługi zdarzeń dla trzech przycisków radiowych Określ adres sieciowy może być jednym z trzech typów adresu. Użytkownik wprowadzi adres w polu tekstowym kontroli sieci, a następnie naciska przycisk, aby zweryfikować adresu. Jeśli adres jest prawidłowy, jest wyświetlany komunikat o powodzeniu; w przeciwnym razie jest wyświetlany komunikat o błędzie Porada wstępnie zdefiniowane.  
@@ -98,7 +98,7 @@ class CNetAddressCtrl : public CEdit
 ## <a name="requirements"></a>Wymagania  
  **Nagłówek:** afxcmn.h  
   
- Ta klasa jest obsługiwana w [!INCLUDE[windowsver](../../build/reference/includes/windowsver_md.md)] i nowszych.  
+ Ta klasa jest obsługiwana w Windows Vista i nowszych wersjach.  
   
  Dodatkowe wymagania dla tej klasy są opisane w [tworzenie wymagania dla Windows Vista wspólnych formantów](../../mfc/build-requirements-for-windows-vista-common-controls.md).  
   

@@ -116,16 +116,16 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5fb3c0295b56f394fae97be7d14e3dccb5cd46b3
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: a4d8961cc929196c21838fd21132146deddabcc1
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37853780"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42465052"
 ---
 # <a name="cmfcmenubar-class"></a>Klasa CMFCMenuBar
 Pasek menu, który implementuje dokowania.  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+ Aby uzyskać więcej informacji, zobacz kod źródłowy znajdujący się w **VC\\atlmfc\\src\\mfc** folder instalacji programu Visual Studio.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -439,7 +439,7 @@ void EnableHelpCombobox(
  Szerokość przycisku pola kombi w pikselach.  
   
 ### <a name="remarks"></a>Uwagi  
- **Pomocy** przypomina pola kombi **pomocy** pola kombi na pasku menu [!INCLUDE[ofprword](../../mfc/reference/includes/ofprword_md.md)].  
+ **Pomocy** przypomina pola kombi **pomocy** pola kombi na pasku menu programu Microsoft Word.  
   
  Wywołanie tej metody za pomocą *uiID* wartość 0, ta metoda powoduje ukrycie pola kombi. W przeciwnym razie ta metoda Wy wyświetla pola kombi automatycznie po prawej stronie na pasku menu. Po wywołaniu tej metody należy wywołać [CMFCMenuBar::GetHelpCombobox](#gethelpcombobox) uzyskać wskaźnik do wstawionego [CMFCToolBarComboBoxButton](../../mfc/reference/cmfctoolbarcomboboxbutton-class.md) obiektu.  
   

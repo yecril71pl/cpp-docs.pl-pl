@@ -18,34 +18,37 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 5bfe5c4dba3dc8e86eb9a47a6e163af94872b933
-ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
+ms.openlocfilehash: ce7a8d53c56e6a17d5ef57222bab725a4addf8fd
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39641265"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42581160"
 ---
 # <a name="connecting-a-pop-up-menu-to-your-application"></a>Łączenie menu wyskakującego z Twoją aplikacją
-### <a name="to-connect-a-pop-up-menu-to-your-application"></a>Aby nawiązać połączenie aplikacji menu podręcznego  
-  
-1.  Dodaj program obsługi komunikatów dla WM_CONTEXTMENU (na przykład). Aby uzyskać więcej informacji, zobacz [mapowanie komunikatów do funkcji](../mfc/reference/mapping-messages-to-functions.md).  
-  
-2.  Dodaj następujący kod do obsługi komunikatów:  
-  
-    ```cpp  
-    CMenu menu;  
-    VERIFY(menu.LoadMenu(IDR_MENU1));  
-    CMenu* pPopup = menu.GetSubMenu(0);  
-    ASSERT(pPopup != NULL);  
-    pPopup->TrackPopupMenu(TPM_LEFTALIGN | TPM_RIGHTBUTTON, point.x, point.y, AfxGetMainWnd());  
-    ```  
-  
-    > [!NOTE]
-    >  [CPoint](../atl-mfc-shared/reference/cpoint-class.md) przekazywane przez komunikat program obsługi jest we współrzędnych ekranu.  
-  
-## <a name="requirements"></a>Wymagania  
- MFC  
-  
-## <a name="see-also"></a>Zobacz też  
- [Tworzenie menu wyskakujących](../windows/creating-pop-up-menus.md)   
- [Edytor menu](../windows/menu-editor.md)   
+
+### <a name="to-connect-a-pop-up-menu-to-your-application"></a>Aby nawiązać połączenie aplikacji menu podręcznego
+
+1. Dodaj program obsługi komunikatów dla WM_CONTEXTMENU (na przykład). Aby uzyskać więcej informacji, zobacz [mapowanie komunikatów do funkcji](../mfc/reference/mapping-messages-to-functions.md).
+
+2. Dodaj następujący kod do obsługi komunikatów:
+
+    ```cpp
+    CMenu menu;
+    VERIFY(menu.LoadMenu(IDR_MENU1));
+    CMenu* pPopup = menu.GetSubMenu(0);
+    ASSERT(pPopup != NULL);
+    pPopup->TrackPopupMenu(TPM_LEFTALIGN | TPM_RIGHTBUTTON, point.x, point.y, AfxGetMainWnd());
+    ```
+
+   > [!NOTE]
+   > [CPoint](../atl-mfc-shared/reference/cpoint-class.md) przekazywane przez komunikat program obsługi jest we współrzędnych ekranu.
+
+## <a name="requirements"></a>Wymagania
+
+MFC
+
+## <a name="see-also"></a>Zobacz też
+
+[Tworzenie menu wyskakujących](../windows/creating-pop-up-menus.md)  
+[Edytor menu](../windows/menu-editor.md)  

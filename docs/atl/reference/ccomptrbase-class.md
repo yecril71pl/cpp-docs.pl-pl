@@ -27,12 +27,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 26e2984a3b52152b54d5f35ae72b8f3fdeaff474
-ms.sourcegitcommit: 7eadb968405bcb92ffa505e3ad8ac73483e59685
+ms.openlocfilehash: 686dbe540301508bd95563b7eafc466a5821a9f6
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/23/2018
-ms.locfileid: "39209225"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42465140"
 ---
 # <a name="ccomptrbase-class"></a>Klasa CComPtrBase
 Ta klasa stanowi podstawę dla klas inteligentnego wskaźnika za pomocą procedury opartym na modelu COM pamięci.  
@@ -173,10 +173,10 @@ HRESULT CoCreateInstance(
  Identyfikator CLSID skojarzonego z danymi i kod, który będzie używany do utworzenia obiektu.  
   
 ### <a name="return-value"></a>Wartość zwracana  
- Zwraca wartość S_OK w sukces, lub REGDB_E_CLASSNOTREG, CLASS_E_NOAGGREGATION, CO_E_CLASSSTRING lub E_NOINTERFACE w przypadku niepowodzenia. Zobacz [CoCreateClassInstance](http://msdn.microsoft.com/library/windows/desktop/ms686615) i [CLSIDFromProgID](http://msdn.microsoft.com/library/windows/desktop/ms688386) opis tych błędów.  
+ Zwraca wartość S_OK w sukces, lub REGDB_E_CLASSNOTREG, CLASS_E_NOAGGREGATION, CO_E_CLASSSTRING lub E_NOINTERFACE w przypadku niepowodzenia. Zobacz [CoCreateClassInstance](/windows/desktop/api/combaseapi/nf-combaseapi-cocreateinstance) i [CLSIDFromProgID](http://msdn.microsoft.com/library/windows/desktop/ms688386) opis tych błędów.  
   
 ### <a name="remarks"></a>Uwagi  
- Jeśli pierwszy formularz metoda jest wywoływana, [CLSIDFromProgID](http://msdn.microsoft.com/library/windows/desktop/ms688386) służy do odzyskania identyfikator CLSID. Następnie wywołaj obie formy [CoCreateClassInstance](http://msdn.microsoft.com/library/windows/desktop/ms686615).  
+ Jeśli pierwszy formularz metoda jest wywoływana, [CLSIDFromProgID](http://msdn.microsoft.com/library/windows/desktop/ms688386) służy do odzyskania identyfikator CLSID. Następnie wywołaj obie formy [CoCreateClassInstance](/windows/desktop/api/combaseapi/nf-combaseapi-cocreateinstance).  
   
  W kompilacjach debugowania, wystąpi błąd asercji Jeśli [CComPtrBase::p](#p) nie jest równa NULL.  
   

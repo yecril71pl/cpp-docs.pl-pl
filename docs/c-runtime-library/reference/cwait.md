@@ -1,5 +1,5 @@
 ---
-title: _cwait — | Dokumentacja firmy Microsoft
+title: _cwait | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -32,19 +32,19 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 878c1c08dabe52a31a2bdf377c3e0bb167a9ae5d
-ms.sourcegitcommit: 6e3cf8df676d59119ce88bf5321d063cf479108c
+ms.openlocfilehash: 64d312c75dcbebd968760c5f7d09d8458e68e4b0
+ms.sourcegitcommit: b92ca0b74f0b00372709e81333885750ba91f90e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/22/2018
-ms.locfileid: "34450951"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "42464569"
 ---
 # <a name="cwait"></a>_cwait
 
-Oczekuje, aż inny proces zakończy się.
+Czeka, aż do zakończenia inny proces.
 
 > [!IMPORTANT]
-> Nie można używać tego interfejsu API w aplikacjach, które są wykonywane w środowisku wykonawczym systemu Windows. Aby uzyskać więcej informacji, zobacz [funkcje CRT, nie są obsługiwane w aplikacjach platformy uniwersalnej systemu Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
+> Tego API nie można używać w aplikacjach korzystających ze środowiska wykonawczego Windows. Aby uzyskać więcej informacji, zobacz [funkcje CRT nieobsługiwane w aplikacjach platformy uniwersalnej Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
 
 ## <a name="syntax"></a>Składnia
 
@@ -59,34 +59,34 @@ intptr_t _cwait(
 ### <a name="parameters"></a>Parametry
 
 *termstat*<br/>
-Wskaźnik do buforu, na którym będzie przechowywany kod wyniku określonego procesu, lub **NULL**.
+Wskaźnik do buforu, w którym będą przechowywane kod wyniku określonego procesu, lub **NULL**.
 
 *procHandle*<br/>
-Dojście oczekiwania proces (oznacza to, że proces, który ma zostać przerwany przed **_cwait —** może zwrócić).
+Dojście do procesu oczekiwania (oznacza to, że proces, który ma zostać przerwany przed **_cwait** może zwrócić).
 
 *Akcja*<br/>
-Wartość NULL: Ignorowane w aplikacjach systemu operacyjnego Windows; w przypadku innych aplikacji: kod akcji do wykonania na *procHandle*.
+Wartość NULL: Ignorowane przez aplikacje systemu operacyjnego Windows; w przypadku innych aplikacji: kod akcji do wykonania na *procHandle*.
 
 ## <a name="return-value"></a>Wartość zwracana
 
-Po pomyślnym ukończeniu określony proces Zwraca dojście określony proces i ustawia *termstat* kod wynik zwracany przez określony proces. W przeciwnym razie zwraca wartość -1 i ustawia **errno** w następujący sposób.
+Po pomyślnym ukończeniu określonego procesu zwraca uchwyt określony proces i ustawia *termstat* na kod rezultatu, który jest zwracany przez określonego procesu. W przeciwnym razie zwraca wartość -1 i ustawia **errno** w następujący sposób.
 
 |Wartość|Opis|
 |-----------|-----------------|
-|**ECHILD —**|Nie istnieje żaden określony proces, *procHandle* jest nieprawidłowy lub wywołanie [GetExitCodeProcess](http://msdn.microsoft.com/library/windows/desktop/ms683189.aspx) lub [WaitForSingleObject](http://msdn.microsoft.com/library/windows/desktop/ms687032.aspx) interfejsu API nie powiodło się.|
-|**EINVAL —**|*Akcja* jest nieprawidłowy.|
+|**ECHILD**|Nie istnieje żaden określony proces, *procHandle* jest nieprawidłowy lub wywołanie [GetExitCodeProcess](/windows/desktop/api/processthreadsapi/nf-processthreadsapi-getexitcodeprocess) lub [WaitForSingleObject](/windows/desktop/api/synchapi/nf-synchapi-waitforsingleobject) interfejsu API nie powiodło się.|
+|**EINVAL**|*Akcja* jest nieprawidłowy.|
 
-Aby uzyskać więcej informacji na temat tych i innych kody powrotu, zobacz [errno _doserrno —, _sys_errlist — i _sys_nerr —](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
+Aby uzyskać więcej informacji na temat tych i innych kodach powrotnych, zobacz [errno, _doserrno, _sys_errlist i _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
 ## <a name="remarks"></a>Uwagi
 
-**_Cwait —** funkcja czeka na zakończenie procesu identyfikator określony proces zapewnianej przez *procHandle*. Wartość *procHandle* przekazywany do **_cwait —** powinna być wartością zwracaną przez wywołanie [_spawn](../../c-runtime-library/spawn-wspawn-functions.md) funkcja, która utworzyła określony proces. Jeśli identyfikator procesu kończy się przed **_cwait —** jest nazywany **_cwait —** natychmiast kończy pracę. **_cwait —** pozwala przez żaden proces, poczekaj, aż inny proces znany dla którego prawidłowego dojścia (*procHandle*) istnieje.
+**_Cwait** funkcja czeka na zakończenie procesu o identyfikatorze określonego procesu dostarczonego przez *procHandle*. Wartość *procHandle* przekazana do **_cwait** powinien mieć wartość, który jest zwracany przez wywołanie metody [_spawn](../../c-runtime-library/spawn-wspawn-functions.md) funkcja, która utworzyła określonego procesu. Jeśli identyfikator procesu zakończy się przed **_cwait** jest wywoływana, **_cwait** zwraca natychmiast. **_cwait** może służyć przez żaden proces zaczekać jakiś inny proces znany, dla którego prawidłowego uchwytu (*procHandle*) istnieje.
 
-*termstat* wskazuje buforu, na którym będzie przechowywany kod powrotny określony proces. Wartość *termstat* wskazuje, czy określony proces został przerwany zwykle przez wywołanie systemu Windows [ExitProcess](http://msdn.microsoft.com/library/windows/desktop/ms682658.aspx) interfejsu API. **ExitProcess** jest wywoływana wewnętrznie, gdy określony proces wywołuje **zakończyć** lub **_exit —**, zwraca z **głównego**, lub dociera do końca **głównego** . Aby uzyskać więcej informacji o wartość, która jest przekazywany z powrotem przy użyciu *termstat*, zobacz [GetExitCodeProcess](http://msdn.microsoft.com/library/windows/desktop/ms683189.aspx). Jeśli **_cwait —** jest wywoływana przy użyciu **NULL** wartość *termstat*, nie znajduje się kod powrotny określonego procesu.
+*termstat* wskazuje buforu, w którym będą przechowywane kod powrotny określonego procesu. Wartość *termstat* wskazuje, czy określony proces zakończył się normalnie, wywołując Windows [exitprocess —](/windows/desktop/api/processthreadsapi/nf-processthreadsapi-exitprocess) interfejsu API. **Exitprocess —** jest wywoływana wewnętrznie, jeśli określony proces wywołuje **wyjść** lub **_exit**, zwraca z **głównego**, lub dociera do końca **głównego** . Aby uzyskać więcej informacji o wartości, który jest przekazywany za pośrednictwem *termstat*, zobacz [GetExitCodeProcess](/windows/desktop/api/processthreadsapi/nf-processthreadsapi-getexitcodeprocess). Jeśli **_cwait** jest wywoływana za pomocą **NULL** wartość *termstat*, nie znajduje się kod powrotny określonego procesu.
 
-*Akcji* parametru jest ignorowana przez system operacyjny Windows, ponieważ relacji nadrzędny podrzędny nie są zaimplementowane w tych środowiskach.
+*Akcji* parametru jest ignorowana przez system operacyjny Windows, ponieważ relacji nadrzędny podrzędny nie są implementowane w tych środowiskach.
 
-O ile *procHandle* jest wartość -1 lub -2 (obsługiwane bieżący proces lub wątek), dojście zostanie zamknięte. W związku z tym w takiej sytuacji nie należy używać zwrócony dojścia.
+Chyba że *procHandle* jest wartość -1 lub -2 (obsługiwane bieżący proces lub wątek), uchwyt zostanie zamknięte. W związku z tym w takiej sytuacji nie należy używać zwracany uchwyt.
 
 ## <a name="requirements"></a>Wymagania
 
@@ -94,7 +94,7 @@ O ile *procHandle* jest wartość -1 lub -2 (obsługiwane bieżący proces lub w
 |-------------|---------------------|---------------------|
 |**_cwait**|\<process.h >|\<errno.h>|
 
-Aby uzyskać więcej informacji o zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md).
+Aby uzyskać więcej informacji na temat zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Przykład
 

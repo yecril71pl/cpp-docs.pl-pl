@@ -18,17 +18,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ad2e02d4e1bc1ee5d1694769b2ec217cd7acbaba
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: a7a659c9ac452d9ff42bb37d049e5cf44ff2c261
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33329832"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42464980"
 ---
 # <a name="inbyte"></a>__inbyte
 **Microsoft Specific**  
   
- Generuje `in` instrukcji, zwracając jednego bajtu odczytywać określony przez port `Port`.  
+ Generuje `in` instrukcji, zwracając jednobajtowego odczytywać port określony przez `Port`.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -47,16 +47,16 @@ unsigned char __inbyte(
   
 ## <a name="requirements"></a>Wymagania  
   
-|— Wewnętrzne|Architektura|  
+|Wewnętrzne|Architektura|  
 |---------------|------------------|  
-|`__inbyte`|x86, [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
+|`__inbyte`|x86, x64|  
   
- **Plik nagłówka** \<intrin.h >  
+ **Plik nagłówkowy** \<intrin.h >  
   
-**KOŃCOWY określonych firmy Microsoft**  
+**END specyficzny dla Microsoft**  
   
 ## <a name="remarks"></a>Uwagi  
- Ta procedura jest dostępna tylko wewnętrznie.  
+ Ta procedura jest dostępna wyłącznie jako wewnętrzna.  
   
 ## <a name="see-also"></a>Zobacz też  
  [Funkcje wewnętrzne kompilatora](../intrinsics/compiler-intrinsics.md)

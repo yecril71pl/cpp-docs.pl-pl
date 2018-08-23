@@ -22,15 +22,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d78ca2a195ac60e31e01bbe271b7f92536cc1a05
-ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
+ms.openlocfilehash: 824bb7059e13c76af0c2f739676d32afc04aa0c7
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/01/2018
-ms.locfileid: "39401485"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42466062"
 ---
 # <a name="main-program-startup"></a>main: uruchamianie programu
-Specjalną funkcję o nazwie **głównego** jest punktem początkowym wykonanie wszystkich programów C i C++. Jeśli jesteś pisanie kodu, która jest zgodna [!INCLUDE[TLA#tla_unicode](../atl-mfc-shared/reference/includes/tlasharptla_unicode_md.md)] modelu programowania, można użyć `wmain`, która jest wersją znaków dwubajtowych, dla **głównego**.  
+Specjalną funkcję o nazwie **głównego** jest punktem początkowym wykonanie wszystkich programów C i C++. Jeśli jesteś pisanie kodu, która jest zgodna z modelu programowania Unicode, możesz użyć `wmain`, która jest wersją znaków dwubajtowych z **głównego**.  
   
  **Głównego** funkcja nie jest wstępnie zdefiniowana przez kompilator. Wymagane jest podanie tekstu programu.  
   

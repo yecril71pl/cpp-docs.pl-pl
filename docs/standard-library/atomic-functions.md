@@ -68,12 +68,12 @@ helpviewer_keywords:
 - std::kill_dependency [C++]
 ms.workload:
 - cplusplus
-ms.openlocfilehash: df0c7ea332cda65aa3621de581eb39419ee9b9d4
-ms.sourcegitcommit: 76fd30ff3e0352e2206460503b61f45897e60e4f
+ms.openlocfilehash: b70f4df63b5a885403b91c1470c3066c33f5f123
+ms.sourcegitcommit: e9ce38decc9f986edab5543de3464b11ebccb123
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/13/2018
-ms.locfileid: "39028320"
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "42465785"
 ---
 # <a name="ltatomicgt-functions"></a>&lt;Atomic&gt; funkcji
 
@@ -164,7 +164,7 @@ inline bool atomic_compare_exchange_strong_explicit(
 
 ### <a name="remarks"></a>Uwagi
 
-*Niepodzielna operacja porównania i wymiany* porównuje wartość, która jest przechowywana w obiekcie, który jest wskazywany przez *Atom* z wartością, która jest wskazywany przez *Exp*. Jeśli wartości są równe, wartość, która jest przechowywana w obiekcie, który jest wskazywany przez *atom* zostaje zastąpiona opcją `Val` przy użyciu `read-modify-write` operacji i stosowanie pamięci ograniczenia zlecenia, które są określone przez *Order1*. Jeśli wartości nie są równe, operacja zastępuje wartość, która jest wskazywany przez *Exp* z wartością, która jest przechowywana w obiekcie, który jest wskazywany przez *Atom* i stosuje ograniczenia zlecenia pamięci, które są określony przez *Order2*.
+*Niepodzielna operacja porównania i wymiany* porównuje wartość, która jest przechowywana w obiekcie, który jest wskazywany przez *Atom* z wartością, która jest wskazywany przez *Exp*. Jeśli wartości są równe, wartość, która jest przechowywana w obiekcie, który jest wskazywany przez *atom* zostaje zastąpiona opcją *wartość* przy użyciu `read-modify-write` operacji i stosując ograniczenia zlecenia pamięci, które są określony przez *Order1*. Jeśli wartości nie są równe, operacja zastępuje wartość, która jest wskazywany przez *Exp* z wartością, która jest przechowywana w obiekcie, który jest wskazywany przez *Atom* i stosuje ograniczenia zlecenia pamięci, które są określony przez *Order2*.
 
 ## <a name="atomic_compare_exchange_weak"></a>  atomic_compare_exchange_weak —
 

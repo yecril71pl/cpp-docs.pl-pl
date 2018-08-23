@@ -24,15 +24,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fbced65aa76206d040ff1c13267fe9b7d3c69eca
-ms.sourcegitcommit: 208d445fd7ea202de1d372d3f468e784e77bd666
+ms.openlocfilehash: d7fd35c351639d4b7b5f3b9dbbbce1c5e7cbcb79
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/29/2018
-ms.locfileid: "37122790"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42465525"
 ---
 # <a name="csplitbutton-class"></a>Klasa CSplitButton
-`CSplitButton` Klasa reprezentuje kontrolkę przycisku podziału. Kontrolka przycisku podziału wykonuje domyślne zachowanie, gdy użytkownik kliknie przycisk głównej części i wyświetla menu rozwijanego, gdy użytkownik kliknie strzałkę listy rozwijanej przycisku.  
+`CSplitButton` Klasa reprezentuje formant przycisku podziału. Kontrolka przycisku podziału wykonuje domyślne zachowanie kiedy użytkownik klika na główną część przycisku oraz wyświetla menu rozwijane, gdy użytkownik kliknie strzałkę listy rozwijanej przycisku.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -52,21 +52,21 @@ class CSplitButton : public CButton
   
 |Nazwa|Opis|  
 |----------|-----------------|  
-|[CSplitButton::Create](#create)|Tworzy kontrolkę przycisku podziału przy użyciu określonego stylów i dołącza go do bieżącej `CSplitButton` obiektu.|  
-|[CSplitButton::SetDropDownMenu](#setdropdownmenu)|Ustawia menu rozwijanego, która jest wyświetlana, gdy użytkownik kliknie strzałkę listy rozwijanej bieżącego formantu przycisku podziału.|  
+|[CSplitButton::Create](#create)|Tworzy formant przycisku podziału z określonych stylów i dołącza go do bieżącego `CSplitButton` obiektu.|  
+|[CSplitButton::SetDropDownMenu](#setdropdownmenu)|Ustawia menu rozwijane, które jest wyświetlane, gdy użytkownik kliknie strzałkę listy rozwijanej bieżącego formantu przycisku podziału.|  
   
 ### <a name="protected-methods"></a>Metody chronione  
   
 |Nazwa|Opis|  
 |----------|-----------------|  
-|[CSplitButton::OnDropDown](#ondropdown)|Obsługuje powiadomienia BCN_DROPDOWN, który wysyła systemu, gdy użytkownik kliknie strzałkę listy rozwijanej bieżącego formantu przycisku podziału.|  
+|[CSplitButton::OnDropDown](#ondropdown)|Obsługuje powiadomienie BCN_DROPDOWN, które wysyła system, gdy użytkownik kliknie strzałkę listy rozwijanej bieżącego formantu przycisku podziału.|  
   
 ## <a name="remarks"></a>Uwagi  
- `CSplitButton` Jest pochodną klasy [CButton](../../mfc/reference/cbutton-class.md) klasy. Kontrolka przycisku podziału jest formant przycisk, którego styl jest BS_SPLITBUTTON. Gdy użytkownik kliknie strzałkę listy rozwijanej on Wyświetla menu niestandardowe. Aby uzyskać więcej informacji, zobacz style BS_SPLITBUTTON i BS_DEFSPLITBUTTON w [style przycisku](http://msdn.microsoft.com/library/windows/desktop/bb775951).  
+ `CSplitButton` Klasa pochodzi od [CButton](../../mfc/reference/cbutton-class.md) klasy. Kontrolka przycisku podziału jest formant przycisku, którego styl jest BS_SPLITBUTTON. Wyświetla menu niestandardowe, gdy użytkownik kliknie strzałkę listy rozwijanej. Aby uzyskać więcej informacji, zobacz BS_SPLITBUTTON i BS_DEFSPLITBUTTON style w [style przycisku](http://msdn.microsoft.com/library/windows/desktop/bb775951).  
   
- Na poniższym rysunku przedstawiono okno dialogowe, który zawiera kontrolkę stronicowania i kontrolkę przycisku podziału (1). Kliknął już strzałkę listy rozwijanej (2) i (3) podmenu jest wyświetlany.  
+ Poniższa ilustracja przedstawia okno dialogowe, który zawiera kontrolkę pagera i formant przycisku podziału (1). (2) strzałkę listy rozwijanej już został kliknięty i pojawi się podmenu (3).  
   
- ![Okno dialogowe z formantu splitbutton i modułu stronicowania. ] (../../mfc/reference/media/splitbutton_pager.png "splitbutton_pager")  
+ ![Okno dialogowe z kontrolki splitbutton i pager. ](../../mfc/reference/media/splitbutton_pager.png "splitbutton_pager")  
   
 ## <a name="inheritance-hierarchy"></a>Hierarchia dziedziczenia  
  [CObject](../../mfc/reference/cobject-class.md)  
@@ -82,12 +82,12 @@ class CSplitButton : public CButton
 ## <a name="requirements"></a>Wymagania  
  **Nagłówek:** afxcmn.h  
   
- Ta klasa jest obsługiwana w [!INCLUDE[windowsver](../../build/reference/includes/windowsver_md.md)] i nowszych.  
+ Ta klasa jest obsługiwana w Windows Vista i nowszych wersjach.  
   
- Dodatkowe wymagania dotyczące tej klasy są opisane w [kompilacji wymagania dla formantów systemu Windows Vista wspólnej](../../mfc/build-requirements-for-windows-vista-common-controls.md).  
+ Dodatkowe wymagania dla tej klasy są opisane w [tworzenie wymagania dla Windows Vista wspólnych formantów](../../mfc/build-requirements-for-windows-vista-common-controls.md).  
   
 ##  <a name="create"></a>  CSplitButton::Create  
- Tworzy kontrolkę przycisku podziału przy użyciu określonego stylów i dołącza go do bieżącej `CSplitButton` obiektu.  
+ Tworzy formant przycisku podziału z określonych stylów i dołącza go do bieżącego `CSplitButton` obiektu.  
   
 ```  
 virtual BOOL Create(
@@ -101,16 +101,16 @@ virtual BOOL Create(
   
 |Parametr|Opis|  
 |---------------|-----------------|  
-|[in] *dwStyle*|Bitowe połączenie (lub) style, które mają być stosowane do formantu. Aby uzyskać więcej informacji, zobacz [style przycisku](../../mfc/reference/styles-used-by-mfc.md#button-styles).|  
-|[in] *rect*|Odwołanie do [RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897) struktury, która zawiera położenie i rozmiar formantu.|  
-|[in] *pParentWnd*|Wskaźnik inną niż null do [CWnd](../../mfc/reference/cwnd-class.md) obiekt, który jest okno nadrzędne kontrolki.|  
-|[in] *nID*|Identyfikator formantu.|  
+|[in] *dwStyle*|Bitowa kombinacja (lub) style, które mają być stosowane do formantu. Aby uzyskać więcej informacji, zobacz [style przycisku](../../mfc/reference/styles-used-by-mfc.md#button-styles).|  
+|[in] *rect*|Odwołanie do [Prostokąt](http://msdn.microsoft.com/library/windows/desktop/dd162897) strukturę, która zawiera położenie i rozmiar kontrolki.|  
+|[in] *pParentWnd*|Wskaźnik zerowy [CWnd](../../mfc/reference/cwnd-class.md) obiekt, który jest okno nadrzędne kontrolki.|  
+|[in] *nID*|Identyfikator kontrolki.|  
   
 ### <a name="return-value"></a>Wartość zwracana  
- Wartość TRUE, jeśli ta metoda zakończy się pomyślnie; w przeciwnym razie wartość FALSE.  
+ Wartość TRUE, jeśli ta metoda jest kończy się pomyślnie; w przeciwnym razie wartość FALSE.  
   
 ##  <a name="csplitbutton"></a>  CSplitButton::CSplitButton  
- Konstruuje `CSplitButton` obiektu. Konstruktor parametry określają podmenu, które jest wyświetlane, gdy użytkownik kliknie strzałkę listy rozwijanej kontrolki przycisku podziału.  
+ Konstruuje `CSplitButton` obiektu. Parametry Konstruktor określają podmenu, który jest wyświetlany, gdy użytkownik kliknie strzałkę listy rozwijanej kontrolki przycisku podziału.  
   
 ```  
 CSplitButton();
@@ -128,13 +128,13 @@ CSplitButton(CMenu* pMenu)
 |---------------|-----------------|  
 |[in] *nMenuId*|Identyfikator zasobu paska menu.|  
 |[in] *nSubMenuId*|Identyfikator zasobu podmenu.|  
-|[in] *pMenu*|Wskaźnik do [cmenu —](../../mfc/reference/cmenu-class.md) obiekt, który określa podmenu. `CSplitButton` Obiekt usuwa `CMenu` obiekt i jego skojarzone HMENU podczas `CSplitButton` obiektu wykracza poza zakres.|  
+|[in] *pMenu*|Wskaźnik do [CMenu](../../mfc/reference/cmenu-class.md) obiektu, który określa podmenu. `CSplitButton` Obiektu usuwa `CMenu` obiekt i jego skojarzone HMENU podczas `CSplitButton` obiekt wykracza poza zakres.|  
   
 ### <a name="remarks"></a>Uwagi  
- Użyj [CSplitButton::Create](#create) metody Utwórz kontrolkę przycisku podziału i dołączenie go do `CSplitButton` obiektu.  
+ Użyj [CSplitButton::Create](#create) metodę, aby utworzyć formant przycisku podziału i dołączyć go do `CSplitButton` obiektu.  
   
 ##  <a name="ondropdown"></a>  CSplitButton::OnDropDown  
- Obsługuje powiadomienia BCN_DROPDOWN, który wysyła systemu, gdy użytkownik kliknie strzałkę listy rozwijanej bieżącego formantu przycisku podziału.  
+ Obsługuje powiadomienie BCN_DROPDOWN, które wysyła system, gdy użytkownik kliknie strzałkę listy rozwijanej bieżącego formantu przycisku podziału.  
   
 ```  
 afx_msg void OnDropDown(
@@ -147,14 +147,14 @@ afx_msg void OnDropDown(
 |Parametr|Opis|  
 |---------------|-----------------|  
 |[in] *pNMHDR*|Wskaźnik do [NMHDR](http://msdn.microsoft.com/library/windows/desktop/bb775514) struktury, który zawiera informacje o [BCN_DROPDOWN](http://msdn.microsoft.com/library/windows/desktop/bb775983) powiadomień.|  
-|[out] *pResult*|(Nie jest używany; zostanie zwrócona wartość nie). Wartość zwracana [BCN_DROPDOWN](http://msdn.microsoft.com/library/windows/desktop/bb775983) powiadomień.|  
+|[out] *pResult*|(Nie jest używany; jest zwracana żadna wartość). Zwraca wartość [BCN_DROPDOWN](http://msdn.microsoft.com/library/windows/desktop/bb775983) powiadomień.|  
   
 ### <a name="remarks"></a>Uwagi  
- Gdy użytkownik kliknie strzałkę listy rozwijanej w formancie przycisku podziału, system wysyła powiadomienie BCN_DROPDOWN komunikatu, który `OnDropDown` dojścia metody. Jednak `CSplitButton` obiektu nie przekazuje powiadomienia BCN_DROPDOWN do formantu, który zawiera kontrolki przycisku podziału. W związku z tym zawierający formant nie obsługuje akcji niestandardowej w odpowiedzi na powiadomienia.  
+ Gdy użytkownik kliknie strzałkę listy rozwijanej na formant przycisku podziału, system wysyła powiadomienie BCN_DROPDOWN komunikat, który `OnDropDown` metodę uchwytów. Jednak `CSplitButton` obiektu nie przekazuje powiadomień BCN_DROPDOWN do formantu, który zawiera formant przycisku podziału. W związku z tym zawierającą formant nie może obsługiwać niestandardową akcję w odpowiedzi na powiadomienia.  
   
- Do wykonania akcji niestandardowej, która obsługuje formantu zawierającego, należy użyć [CButton](../../mfc/reference/cbutton-class.md) obiektu przy użyciu stylu BS_SPLITBUTTON zamiast `CSplitButton` obiektu. Następnie implementuje obsługę powiadomień BCN_DROPDOWN w `CButton` obiektu. Aby uzyskać więcej informacji, zobacz [style przycisku](../../mfc/reference/styles-used-by-mfc.md#button-styles).  
+ Aby zaimplementować niestandardową akcję, która obsługuje zawierający kontrolki, należy użyć [CButton](../../mfc/reference/cbutton-class.md) obiektu przy użyciu stylu BS_SPLITBUTTON zamiast `CSplitButton` obiektu. Następnie implementacji programu obsługi dla powiadomień BCN_DROPDOWN w `CButton` obiektu. Aby uzyskać więcej informacji, zobacz [style przycisku](../../mfc/reference/styles-used-by-mfc.md#button-styles).  
   
- Aby zaimplementować czy przycisku podziału samą kontrolką obsługuje akcji niestandardowej, należy użyć [komunikatu odbicia](../../mfc/tn062-message-reflection-for-windows-controls.md). Pochodzi z klasy z `CSplitButton` klasy i nazwę, na przykład CMySplitButton. Następnie dodaj poniższe mapy komunikatów do aplikacji do obsługi powiadamiania BCN_DROPDOWN:  
+ Aby zaimplementować, przycisk podziału samej kontrolki obsługuje akcję niestandardową, należy użyć [komunikatu odbicia](../../mfc/tn062-message-reflection-for-windows-controls.md). Pochodną klasy z `CSplitButton` klasy i nadaj mu, na przykład CMySplitButton. Następnie dodaj poniższe mapy wiadomości do aplikacji do obsługi powiadomień BCN_DROPDOWN:  
   
 ```  
 BEGIN_MESSAGE_MAP(CMySplitButton,
@@ -164,7 +164,7 @@ END_MESSAGE_MAP()
 ```  
   
 ##  <a name="setdropdownmenu"></a>  CSplitButton::SetDropDownMenu  
- Ustawia menu rozwijanego, która jest wyświetlana, gdy użytkownik kliknie strzałkę listy rozwijanej bieżącego formantu przycisku podziału.  
+ Ustawia menu rozwijane, które jest wyświetlane, gdy użytkownik kliknie strzałkę listy rozwijanej bieżącego formantu przycisku podziału.  
   
 ```  
 void SetDropDownMenu(
@@ -180,17 +180,17 @@ void SetDropDownMenu(CMenu* pMenu);
 |---------------|-----------------|  
 |[in] *nMenuId*|Identyfikator zasobu paska menu.|  
 |[in] *nSubMenuId*|Identyfikator zasobu podmenu.|  
-|[in] *pMenu*|Wskaźnik do [cmenu —](../../mfc/reference/cmenu-class.md) obiekt, który określa podmenu. `CSplitButton` Obiekt usuwa `CMenu` obiekt i jego skojarzone HMENU podczas `CSplitButton` obiektu wykracza poza zakres.|  
+|[in] *pMenu*|Wskaźnik do [CMenu](../../mfc/reference/cmenu-class.md) obiektu, który określa podmenu. `CSplitButton` Obiektu usuwa `CMenu` obiekt i jego skojarzone HMENU podczas `CSplitButton` obiekt wykracza poza zakres.|  
   
 ### <a name="remarks"></a>Uwagi  
- *NMenuId* parametr identyfikuje paska menu, czyli listę poziome paska menu. *NSubMenuId* parametr jest liczony od zera numer indeksu, który identyfikuje podmenu, czyli z listy rozwijanej skojarzone z każdym elementem paska menu elementów menu. Na przykład typowa aplikacja ma menu, która zawiera element paska menu "File", "Edytuj" i "Help". Element paska menu "File" ma podmenu, który zawiera elementy menu "Otwieranie", "Zamknij" i "Exit". Po kliknięciu formantu przycisku podziału strzałkę listy rozwijanej kontrolka ma wyświetlać określony podmenu, a nie na pasku menu.  
+ *NMenuId* parametr identyfikuje paska menu, czyli Pozioma lista paska menu. *NSubMenuId* parametr jest liczony od zera numer indeksu, który identyfikuje podmenu, czyli z listy rozwijanej elementów menu związane z każdym elementem paska menu. Na przykład typowa aplikacja ma menu, które zawiera element paska menu "File", "Edit" i "Help". Element paska menu "File" ma podmenu, który zawiera elementy menu "Otwórz", "Zamknij" i "Zamknij". Po kliknięciu strzałki listy rozwijanej kontrolki przycisku podziału kontrolka ma wyświetlać określonego podmenu, a nie na pasku menu.  
   
- Na poniższym rysunku przedstawiono okno dialogowe, który zawiera kontrolkę stronicowania i kontrolkę przycisku podziału (1). Kliknął już strzałkę listy rozwijanej (2) i (3) podmenu jest wyświetlany.  
+ Poniższa ilustracja przedstawia okno dialogowe, który zawiera kontrolkę pagera i formant przycisku podziału (1). (2) strzałkę listy rozwijanej już został kliknięty i pojawi się podmenu (3).  
   
- ![Okno dialogowe z formantu splitbutton i modułu stronicowania. ] (../../mfc/reference/media/splitbutton_pager.png "splitbutton_pager")  
+ ![Okno dialogowe z kontrolki splitbutton i pager. ](../../mfc/reference/media/splitbutton_pager.png "splitbutton_pager")  
   
 ### <a name="example"></a>Przykład  
- Pierwsza instrukcja w poniższym przykładzie kodu pokazano [CSplitButton::SetDropDownMenu](#setdropdownmenu) metody. Utworzyliśmy menu z zasobów programu Visual Studio edytora, który automatycznie o nazwie identyfikator paska menu, IDR_MENU1. *NSubMenuId* parametr, który wynosi zero, dotyczą tylko podmenu paska menu.  
+ Pierwsza instrukcja w poniższym przykładzie kodu pokazano [CSplitButton::SetDropDownMenu](#setdropdownmenu) metody. Utworzyliśmy menu przy użyciu zasobów programu Visual Studio edytor, który automatycznie nadawaną nazwę Identyfikatora paska menu, IDR_MENU1. *NSubMenuId* parametr, który wynosi zero, dotyczy tylko podmenu paska menu.  
   
  [!code-cpp[NVC_MFC_CSplitButton_s2#1](../../mfc/reference/codesnippet/cpp/csplitbutton-class_1.cpp)]  
   

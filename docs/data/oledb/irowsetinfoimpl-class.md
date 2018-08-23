@@ -37,15 +37,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: f1f726459e72d57aa8e855df4f4f3ec5d566f687
-ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
+ms.openlocfilehash: d07c0e64e969e599393a657d4c41a8dd544901c9
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/30/2018
-ms.locfileid: "39337076"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42466067"
 ---
 # <a name="irowsetinfoimpl-class"></a>IRowsetInfoImpl — Klasa
-Udostępnia implementację na potrzeby [IRowsetInfo](https://msdn.microsoft.com/library/ms724541.aspx) interfejsu.  
+Udostępnia implementację na potrzeby [IRowsetInfo](/previous-versions/windows/desktop/ms724541\(v=vs.85\)) interfejsu.  
   
 ## <a name="syntax"></a>Składnia
 
@@ -92,7 +92,7 @@ STDMETHOD (GetProperties )(const ULONG cPropertyIDSets,
 ```  
   
 #### <a name="parameters"></a>Parametry  
- Zobacz [IRowsetInfo::GetProperties](https://msdn.microsoft.com/library/ms719611.aspx) w *OLE DB Podręcznik programisty*. 
+ Zobacz [IRowsetInfo::GetProperties](/previous-versions/windows/desktop/ms719611\(v=vs.85\)) w *OLE DB Podręcznik programisty*. 
 
 ## <a name="getreferencedrowset"></a> IRowsetInfoImpl::GetReferencedRowset
 Zwraca wskaźnik interfejsu do zestawu wierszy, do której stosują się zakładki.  
@@ -106,7 +106,7 @@ STDMETHOD (GetReferencedRowset )(DBORDINAL iOrdinal,
 ```  
   
 #### <a name="parameters"></a>Parametry  
- Zobacz [IRowsetInfo::GetReferencedRowset](https://msdn.microsoft.com/library/ms721145.aspx) w *OLE DB Podręcznik programisty*. *IOrdinal* parametr musi być kolumną zakładki. 
+ Zobacz [IRowsetInfo::GetReferencedRowset](/previous-versions/windows/desktop/ms721145\(v=vs.85\)) w *OLE DB Podręcznik programisty*. *IOrdinal* parametr musi być kolumną zakładki. 
 
 ## <a name="getspecification"></a> IRowsetInfoImpl::GetSpecification
 Zwraca wskaźnik interfejsu na obiekcie (polecenie lub sesji), który utworzył ten zestaw wierszy.  
@@ -119,7 +119,7 @@ STDMETHOD (GetSpecification )(REFIID riid,
 ```  
   
 #### <a name="parameters"></a>Parametry  
- Zobacz [IRowsetInfo::GetSpecification](https://msdn.microsoft.com/library/ms716746.aspx) w *OLE DB Podręcznik programisty*.  
+ Zobacz [IRowsetInfo::GetSpecification](/previous-versions/windows/desktop/ms716746\(v=vs.85\)) w *OLE DB Podręcznik programisty*.  
   
 ### <a name="remarks"></a>Uwagi  
  Użyj tej metody za pomocą [igetdatasourceimpl —](../../data/oledb/igetdatasourceimpl-class.md) można pobrać właściwości z obiektu źródła danych.  

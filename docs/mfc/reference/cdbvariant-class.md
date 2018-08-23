@@ -44,12 +44,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d8c79981b41bf7b74cb1aa44b98b44e0b5acbc90
-ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
+ms.openlocfilehash: e1c3ccdba1de9191079630989facf154ccf62d7f
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37337924"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42465616"
 ---
 # <a name="cdbvariant-class"></a>Cdbvariant — klasa
 Reprezentuje typ danych Wariant dla klas MFC ODBC.  
@@ -200,7 +200,7 @@ void Clear();
 ### <a name="remarks"></a>Uwagi  
  `m_pdate` Element członkowski danych należy do Unii. Przed uzyskaniem dostępu do `m_pdate`, najpierw należy sprawdzić wartość [CDBVariant::m_dwType](#m_dwtype). Jeśli `m_dwType` ustawiono DBVT_DATE, następnie `m_pdate` zawiera nieprawidłowy wskaźnik; w przeciwnym razie uzyskiwania dostępu do `m_pdate` da niewiarygodne wyniki.  
   
- Aby uzyskać więcej informacji o typie danych TIMESTAMP_STRUCT, zobacz temat [typów danych języka C](https://msdn.microsoft.com/library/ms714556.aspx) w dodatku D *odwołania programisty ODBC* w zestawie Windows SDK.  
+ Aby uzyskać więcej informacji o typie danych TIMESTAMP_STRUCT, zobacz temat [typów danych języka C](/previous-versions/windows/desktop/ms714556\(v=vs.85\)) w dodatku D *odwołania programisty ODBC* w zestawie Windows SDK.  
   
 ##  <a name="m_pstring"></a>  CDBVariant::m_pstring  
  Przechowuje wskaźnik do obiektu typu [CString](../../atl-mfc-shared/reference/cstringt-class.md).  

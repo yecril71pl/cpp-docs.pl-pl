@@ -16,28 +16,28 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a7266a2158c3e6ccd02ea82de22c6f90a8b6363d
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: df584fd95921594562cf4c1fb912986343b30c4c
+ms.sourcegitcommit: b92ca0b74f0b00372709e81333885750ba91f90e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33229392"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "42464662"
 ---
 # <a name="fatal-error-c1084"></a>Błąd krytyczny C1084
-Nie można odczytać pliku filetype: 'Plik': wiadomości  
+Nie można odczytać pliku typu: 'Plik': komunikat  
   
- Ten błąd jest zazwyczaj wynikiem wywołania interfejsu API systemu wewnętrznego nie powiodło się, przez kompilator. Komunikat wyświetlany po wystąpieniu tego błędu jest często generowane przez [_wcserror_s —](../../c-runtime-library/reference/strerror-s-strerror-s-wcserror-s-wcserror-s.md) lub [FormatMessage](http://msdn.microsoft.com/library/windows/desktop/ms679351.aspx).  
+ Ten błąd jest zazwyczaj wynikiem wywołania interfejsu API systemu wewnętrznego nie powiodło się, wprowadzone przez kompilator. Komunikat wyświetlany, kiedy występuje ten błąd często jest generowany przez [_wcserror_s —](../../c-runtime-library/reference/strerror-s-strerror-s-wcserror-s-wcserror-s.md) lub [FormatMessage](/windows/desktop/api/winbase/nf-winbase-formatmessage).  
   
- Wykonaj następujące czynności mogą pomóc w rozwiązaniu C1084:  
+ Wykonanie poniższych czynności może pomóc w rozwiązaniu C1084:  
   
 -   Upewnij się, że podany plik istnieje.  
   
--   Upewnij się, że są ustawione odpowiednie uprawnienia, aby uzyskać dostęp do określonego pliku.  
+-   Upewnij się, że odpowiednie uprawnienia zostały ustawione w celu uzyskania dostępu do określonego pliku.  
   
--   Upewnij się, składni wiersza polecenia jest zgodna z regułami zgodnie z [składnia wiersza polecenia kompilatora](../../build/reference/compiler-command-line-syntax.md).  
+-   Upewnij się, składnia wiersza polecenia stosuje reguły, zgodnie z [składnia wiersza polecenia kompilatora](../../build/reference/compiler-command-line-syntax.md).  
   
--   Upewnij się, że zmienne środowiskowe **TMP** i **TEMP** są poprawnie zestawu, a także odpowiednie uprawnienia w celu uzyskania dostępu do katalogów dotyczą te zmienne środowiskowe. Ponadto upewnij się, że dyski odwołuje się **TMP** i **TEMP** zmiennych środowiskowych zawiera odpowiednią ilość wolnego miejsca.  
+-   Upewnij się, że zmienne środowiskowe **TMP** i **TEMP** są poprawnie zestawu, odpowiednie uprawnienia w celu uzyskania dostępu do katalogów tych zmiennych środowiskowych odnoszą się do. Ponadto upewnij się, że dyski odwołuje się **TMP** i **TEMP** zmienne środowiskowe zawierają odpowiednią ilość wolnego miejsca na dysku.  
   
--   Jeśli komunikat jest wyświetlany komunikat "zły numer pliku" określony plik może mieć zostały zamykania na pierwszym planie podczas kompilowania w tle.  
+-   Jeśli komunikat jest wyświetlany komunikat "zły numer pliku", określony plik może mieć zostały zamknięcia na pierwszym planie podczas kompilowania w tle.  
   
- Po wykonaniu powyższych diagnostyki, wykonać czystą kompilację.
+ Po wykonaniu powyższych diagnostyki, należy wykonać czystą kompilację.

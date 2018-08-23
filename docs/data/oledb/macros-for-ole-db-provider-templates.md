@@ -62,12 +62,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: a5c9132325af7c05980aac0d7b6b7d53958e4a2b
-ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
+ms.openlocfilehash: 747f54e4ae37fe31eeea7540c1531b988d692427
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/30/2018
-ms.locfileid: "39338047"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42466075"
 ---
 # <a name="macros-for-ole-db-provider-templates"></a>Makra dla szablonów dostawców OLE DB
 Makra dostawcy OLE DB szablonów oferty funkcji w następujące kategorie:  
@@ -159,11 +159,11 @@ BEGIN_PROPSET_MAP(Class)
  *Class*  
  [in] Określono klasy, w którym ta właściwość jest ustawiona. Zestaw właściwości można określić w następujących obiektów OLE DB:  
   
--   [Obiekty źródła danych](https://msdn.microsoft.com/library/ms721278.aspx)  
+-   [Obiekty źródła danych](/previous-versions/windows/desktop/ms721278\(v=vs.85\))  
   
--   [Obiektów sesji](https://msdn.microsoft.com/library/ms711572.aspx)  
+-   [Obiektów sesji](/previous-versions/windows/desktop/ms711572\(v=vs.85\))  
   
--   [Polecenia](https://msdn.microsoft.com/library/ms724608.aspx)  
+-   [Polecenia](/previous-versions/windows/desktop/ms724608\(v=vs.85\))  
   
 #### <a name="example"></a>Przykład  
  W tym miejscu jest mapa zestawu właściwości próbki:  
@@ -228,10 +228,10 @@ PROPERTY_INFO_ENTRY(dwPropID)
   
 #### <a name="parameters"></a>Parametry  
  *dwPropID*  
- [in] A [DBPROPID](https://msdn.microsoft.com/library/ms723882.aspx) wartości, które mogą być używane w połączeniu z właściwością ustawić identyfikator GUID służący do identyfikowania właściwości.  
+ [in] A [DBPROPID](/previous-versions/windows/desktop/ms723882\(v=vs.85\)) wartości, które mogą być używane w połączeniu z właściwością ustawić identyfikator GUID służący do identyfikowania właściwości.  
   
 #### <a name="remarks"></a>Uwagi  
- To makro, ustawia wartość właściwości typu `DWORD` wartość domyślną, zdefiniowane w ATLDB. H. Aby ustawić wartość wybranej właściwości, należy użyć [PROPERTY_INFO_ENTRY_VALUE](../../data/oledb/property-info-entry-value.md). Aby ustawić [VARTYPE](http://msdn.microsoft.com/317b911b-1805-402d-a9cb-159546bc88b4) i [DBPROPFLAGS](https://msdn.microsoft.com/library/ms724342.aspx) dla właściwości, w tym samym czasie, należy użyć [PROPERTY_INFO_ENTRY_EX](../../data/oledb/property-info-entry-ex.md).  
+ To makro, ustawia wartość właściwości typu `DWORD` wartość domyślną, zdefiniowane w ATLDB. H. Aby ustawić wartość wybranej właściwości, należy użyć [PROPERTY_INFO_ENTRY_VALUE](../../data/oledb/property-info-entry-value.md). Aby ustawić [VARTYPE](http://msdn.microsoft.com/317b911b-1805-402d-a9cb-159546bc88b4) i [DBPROPFLAGS](/previous-versions/windows/desktop/ms724342\(v=vs.85\)) dla właściwości, w tym samym czasie, należy użyć [PROPERTY_INFO_ENTRY_EX](../../data/oledb/property-info-entry-ex.md).  
   
 #### <a name="example"></a>Przykład  
  Zobacz [BEGIN_PROPSET_MAP](../../data/oledb/begin-propset-map.md).  
@@ -247,13 +247,13 @@ PROPERTY_INFO_ENTRY_EX(dwPropID, vt, dwFlags, value, options)
   
 #### <a name="parameters"></a>Parametry  
  *dwPropID*  
- [in] A [DBPROPID](https://msdn.microsoft.com/library/ms723882.aspx) wartości, które mogą być używane w połączeniu z właściwością ustawić identyfikator GUID służący do identyfikowania właściwości.  
+ [in] A [DBPROPID](/previous-versions/windows/desktop/ms723882\(v=vs.85\)) wartości, które mogą być używane w połączeniu z właściwością ustawić identyfikator GUID służący do identyfikowania właściwości.  
   
  *vt*  
  [in] [VARTYPE](http://msdn.microsoft.com/317b911b-1805-402d-a9cb-159546bc88b4) tego wpisu właściwości.  
   
  *Flagidw*  
- [in] A [DBPROPFLAGS](https://msdn.microsoft.com/library/ms724342.aspx) wartości opisujące ten wpis właściwości.  
+ [in] A [DBPROPFLAGS](/previous-versions/windows/desktop/ms724342\(v=vs.85\)) wartości opisujące ten wpis właściwości.  
   
  *value*  
  [in] Wartość właściwości typu `DWORD`.  
@@ -278,7 +278,7 @@ PROPERTY_INFO_ENTRY_VALUE(dwPropID, value)
   
 #### <a name="parameters"></a>Parametry  
  *dwPropID*  
- [in] A [DBPROPID](https://msdn.microsoft.com/library/ms723882.aspx) wartości, które mogą być używane w połączeniu z właściwością ustawić identyfikator GUID służący do identyfikowania właściwości.  
+ [in] A [DBPROPID](/previous-versions/windows/desktop/ms723882\(v=vs.85\)) wartości, które mogą być używane w połączeniu z właściwością ustawić identyfikator GUID służący do identyfikowania właściwości.  
   
  *value*  
  [in] Wartość właściwości typu `DWORD`.  
@@ -355,7 +355,7 @@ PROVIDER_COLUMN_ENTRY_FIXED(name, ordinal, dbtype, member)
  [in] Numer kolumny. Chyba że kolumna jest kolumną zakładki, numer kolumny nie może być 0.  
   
  *Atrybut DbType*  
- [in] Typ danych w [DBTYPE](https://msdn.microsoft.com/library/ms711251.aspx).  
+ [in] Typ danych w [DBTYPE](/previous-versions/windows/desktop/ms711251\(v=vs.85\)).  
   
  *Element członkowski*  
  [in] Zmiennej składowej w `dataClass` która przechowuje dane.  
@@ -383,22 +383,22 @@ PROVIDER_COLUMN_ENTRY_GN (name, ordinal, flags, colSize, dbtype, precision, scal
  [in] Numer kolumny. Chyba że kolumna jest kolumną zakładki, numer kolumny nie może być 0.  
   
  *flagi*  
- [in] Określa, jak dane są zwracane. Zobacz `dwFlags` opis [struktury DBBINDING](https://msdn.microsoft.com/library/ms716845.aspx).  
+ [in] Określa, jak dane są zwracane. Zobacz `dwFlags` opis [struktury DBBINDING](/previous-versions/windows/desktop/ms716845\(v=vs.85\)).  
   
  *colSize*  
  [in] Rozmiar kolumny.  
   
  *Atrybut DbType*  
- [in] Wskazuje typ danych wartości. Zobacz `wType` opis [struktury DBBINDING](https://msdn.microsoft.com/library/ms716845.aspx).  
+ [in] Wskazuje typ danych wartości. Zobacz `wType` opis [struktury DBBINDING](/previous-versions/windows/desktop/ms716845\(v=vs.85\)).  
   
  *Precyzja*  
- [in] Wskazuje dokładności do użycia podczas pobierania danych, jeśli *dbType* DBTYPE_NUMERIC lub DBTYPE_DECIMAL. Zobacz `bPrecision` opis [struktury DBBINDING](https://msdn.microsoft.com/library/ms716845.aspx).  
+ [in] Wskazuje dokładności do użycia podczas pobierania danych, jeśli *dbType* DBTYPE_NUMERIC lub DBTYPE_DECIMAL. Zobacz `bPrecision` opis [struktury DBBINDING](/previous-versions/windows/desktop/ms716845\(v=vs.85\)).  
   
  *Skala*  
- [in] Wskazuje skalowania do użycia podczas pobierania danych, jeśli atrybut dbType jest DBTYPE_NUMERIC lub DBTYPE_DECIMAL. Zobacz `bScale` opis [struktury DBBINDING](https://msdn.microsoft.com/library/ms716845.aspx).  
+ [in] Wskazuje skalowania do użycia podczas pobierania danych, jeśli atrybut dbType jest DBTYPE_NUMERIC lub DBTYPE_DECIMAL. Zobacz `bScale` opis [struktury DBBINDING](/previous-versions/windows/desktop/ms716845\(v=vs.85\)).  
   
  *Identyfikator GUID*  
- Zestaw wierszy schematu identyfikatora GUID. Zobacz [IDBSchemaRowset](https://msdn.microsoft.com/library/ms713686.aspx) w *OLE DB Podręcznik programisty* Aby uzyskać listę zestawów wierszy schematu i ich identyfikatorów GUID.  
+ Zestaw wierszy schematu identyfikatora GUID. Zobacz [IDBSchemaRowset](/previous-versions/windows/desktop/ms713686\(v=vs.85\)) w *OLE DB Podręcznik programisty* Aby uzyskać listę zestawów wierszy schematu i ich identyfikatorów GUID.  
   
 #### <a name="remarks"></a>Uwagi  
  Pozwala określić rozmiar, typ danych kolumny, dokładności, skalowania i identyfikatorem GUID zestawu wierszy schematu.  
@@ -451,7 +451,7 @@ PROVIDER_COLUMN_ENTRY_STR(name, ordinal, member)
  [in] Zmiennej elementu członkowskiego w klasie danych, która przechowuje dane.  
   
 #### <a name="remarks"></a>Uwagi  
- Użyj tego makra, gdy danych kolumny zakłada się, że [typem DBTYPE_STR](https://msdn.microsoft.com/library/ms711251.aspx).  
+ Użyj tego makra, gdy danych kolumny zakłada się, że [typem DBTYPE_STR](/previous-versions/windows/desktop/ms711251\(v=vs.85\)).  
   
 #### <a name="example"></a>Przykład  
  Zobacz [BEGIN_PROVIDER_COLUMN_MAP](../../data/oledb/begin-provider-column-map.md).   
@@ -473,7 +473,7 @@ PROVIDER_COLUMN_ENTRY_TYPE_LENGTH(name, ordinal, dbtype, size, member)
  [in] Numer kolumny. Chyba że kolumna jest kolumną zakładki, numer kolumny nie może być 0.  
   
  *Atrybut DbType*  
- [in] Typ danych w [DBTYPE](https://msdn.microsoft.com/library/ms711251.aspx).  
+ [in] Typ danych w [DBTYPE](/previous-versions/windows/desktop/ms711251\(v=vs.85\)).  
   
  *Rozmiar*  
  [in] Rozmiar kolumny w bajtach.  
@@ -504,7 +504,7 @@ PROVIDER_COLUMN_ENTRY_WSTR(name, ordinal, member)
  [in] Zmiennej elementu członkowskiego w klasie danych, która przechowuje dane.  
   
 #### <a name="remarks"></a>Uwagi  
- Użyj tego makra, gdy danych kolumny jest zakończony ciąg znaków Unicode, [DBTYPE_WSTR](https://msdn.microsoft.com/library/ms711251.aspx).  
+ Użyj tego makra, gdy danych kolumny jest zakończony ciąg znaków Unicode, [DBTYPE_WSTR](/previous-versions/windows/desktop/ms711251\(v=vs.85\)).  
 
 ### <a name="begin_schema_map"></a> BEGIN_SCHEMA_MAP
 Oznacza początek Mapa schematu.  
@@ -520,7 +520,7 @@ BEGIN_SCHEMA_MAP(SchemaClass);
  Klasa, która zawiera MAPĘ. Zazwyczaj są to klasy sesji.  
   
 #### <a name="remarks"></a>Uwagi  
- Zobacz [IDBSchemaRowset](https://msdn.microsoft.com/library/ms713686.aspx) w zestawie Windows SDK, aby uzyskać więcej informacji na temat zestawów wierszy schematu.  
+ Zobacz [IDBSchemaRowset](/previous-versions/windows/desktop/ms713686\(v=vs.85\)) w zestawie Windows SDK, aby uzyskać więcej informacji na temat zestawów wierszy schematu.  
 
 ### <a name="end_schema_map"></a> END_SCHEMA_MAP
 Oznacza koniec Mapa schematu.  
@@ -546,7 +546,7 @@ SCHEMA_ENTRY(guid,
   
 #### <a name="parameters"></a>Parametry  
  *Identyfikator GUID*  
- Zestaw wierszy schematu identyfikatora GUID. Zobacz [IDBSchemaRowset](https://msdn.microsoft.com/library/ms713686.aspx) w *OLE DB Podręcznik programisty* Aby uzyskać listę zestawów wierszy schematu i ich identyfikatorów GUID.  
+ Zestaw wierszy schematu identyfikatora GUID. Zobacz [IDBSchemaRowset](/previous-versions/windows/desktop/ms713686\(v=vs.85\)) w *OLE DB Podręcznik programisty* Aby uzyskać listę zestawów wierszy schematu i ich identyfikatorów GUID.  
   
  *RowsetClass*  
  Klasa, która zostanie utworzona do reprezentowania zestawu wierszy schematu.  
@@ -560,7 +560,7 @@ HRESULT Execute (LONG* pcRowsAffected,
     const VARIANT* rgRestrictions);  
 ```  
   
- To `Execute` funkcja wypełnia zestawu wierszy danych. Tworzy kreator projektów ATL, zgodnie z opisem w [IDBSchemaRowset](https://msdn.microsoft.com/library/ms713686.aspx) w *OLE DB Podręcznik programisty*, trzy początkowej zestawów wierszy schematu w projekcie dla każdego z trzech obowiązkowe schematów OLE DB:  
+ To `Execute` funkcja wypełnia zestawu wierszy danych. Tworzy kreator projektów ATL, zgodnie z opisem w [IDBSchemaRowset](/previous-versions/windows/desktop/ms713686\(v=vs.85\)) w *OLE DB Podręcznik programisty*, trzy początkowej zestawów wierszy schematu w projekcie dla każdego z trzech obowiązkowe schematów OLE DB:  
   
 -   DBSCHEMA_TABLES  
   

@@ -16,17 +16,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8e4503ab027589f54c5b5bce60dc405a570dcc59
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 345da5de492c33107effffb9c97b2fe60906e899
+ms.sourcegitcommit: d4c803bd3a684d7951bf88dcecf1f14af43ae411
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33849694"
+ms.lasthandoff: 08/10/2018
+ms.locfileid: "42466226"
 ---
 # <a name="nosmartpointers"></a>no_smart_pointers
-**Określonego języka C++**  
+**Określonego język C++**  
   
- Pomija tworzenie wskaźników inteligentne dla wszystkich interfejsów w bibliotece typów.  
+Pomija Tworzenie inteligentnych wskaźników dla wszystkich interfejsów w bibliotece typów.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -35,10 +35,12 @@ no_smart_pointers
 ```  
   
 ## <a name="remarks"></a>Uwagi  
- Domyślnie, gdy używasz `#import`, możesz uzyskać deklaracji wskaźnika inteligentnego dla wszystkich interfejsów w bibliotece typów. Te wskaźniki inteligentne są typu [_com_ptr_t — klasa](../cpp/com-ptr-t-class.md).  
+ 
+Domyślnie, gdy używasz `#import`, Pobierz deklarację inteligentny wskaźnik dla wszystkich interfejsów w bibliotece typów. Te inteligentne wskaźniki są typu [_com_ptr_t — klasa](../cpp/com-ptr-t-class.md).  
   
- **KOŃCOWY określonego języka C++**  
+**KONIEC określonego języka C++**  
   
 ## <a name="see-also"></a>Zobacz też  
- [atrybuty #import](../preprocessor/hash-import-attributes-cpp.md)   
- [#import — dyrektywa](../preprocessor/hash-import-directive-cpp.md)
+ 
+[atrybuty #import](../preprocessor/hash-import-attributes-cpp.md)   
+[#import — dyrektywa](../preprocessor/hash-import-directive-cpp.md)

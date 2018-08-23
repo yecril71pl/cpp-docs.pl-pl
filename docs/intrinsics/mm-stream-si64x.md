@@ -17,18 +17,18 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2ea6b9bdc57765b15128ebcc6f9a17bba2612e29
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 0385f2812c58b65102780780a1b7a548b2b08429
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33328792"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42465342"
 ---
 # <a name="mmstreamsi64x"></a>_mm_stream_si64x  
   
 **Microsoft Specific**  
   
- Generuje instrukcje MOVNTI. Zapisuje dane `Source` w lokalizacji pamięci, określony przez `Dest`, bez zanieczyszczenie pamięci podręcznych.  
+ Generuje instrukcję MOVNTI. Zapisuje dane `Source` lokalizacji w pamięci określonej przez `Dest`, bez zanieczyszczenie pamięci podręcznych.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -42,22 +42,22 @@ void _mm_stream_si64x(
 #### <a name="parameters"></a>Parametry  
   
  [out] `Dest`  
- Wskaźnik do lokalizację do zapisania danych źródłowych w celu.  
+ Wskaźnik do lokalizację do zapisania danych źródłowych do.  
   
  [in] `Source`  
  Dane do zapisania.  
   
 ## <a name="requirements"></a>Wymagania  
   
-|— Wewnętrzne|Architektura|  
+|Wewnętrzne|Architektura|  
 |---------------|------------------|  
-|`_mm_stream_si64x`|[!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
+|`_mm_stream_si64x`|X64|  
   
- **Plik nagłówka** \<intrin.h >  
+ **Plik nagłówkowy** \<intrin.h >  
   
 ## <a name="remarks"></a>Uwagi  
   
- Ta procedura jest dostępna tylko wewnętrznie.  
+ Ta procedura jest dostępna wyłącznie jako wewnętrzna.  
   
 ## <a name="example"></a>Przykład  
   
@@ -85,7 +85,7 @@ int main()
 0 ffffffffffff 0 0  
 ```  
   
-**KOŃCOWY określonych firmy Microsoft**  
+**END specyficzny dla Microsoft**  
   
 ## <a name="see-also"></a>Zobacz też  
  [Funkcje wewnętrzne kompilatora](../intrinsics/compiler-intrinsics.md)

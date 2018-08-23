@@ -17,17 +17,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e5248792d04efca518fc425a144c692cd88cf8d1
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: c834b3b2284a7a5ae660870b840d3275c985dc9e
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33333121"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42466138"
 ---
 # <a name="ullrshift"></a>__ull_rshift
 **Microsoft Specific**  
   
- na x64 przesuwa określoną wartość 64-bitowego za pomocą pierwszego parametru po prawej stronie według liczby bitów określonej za pomocą drugiego parametru.  
+ na x64 przesuwa wartość 64-bitową, określonym przez pierwszy parametr w prawo o liczbę bitów określoną w drugim parametrze.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -40,24 +40,24 @@ unsigned __int64 __ull_rshift(
   
 #### <a name="parameters"></a>Parametry  
  [in] `mask`  
- 64-bitową liczbę całkowitą wartość przesunięcia w prawo.  
+ Wartość 64-bitową liczbę całkowitą na przesunięcie w prawo.  
   
  [in] `nBit`  
- Liczba bitów, które mają zostać przesunięte modulo 32 na x86 i modulo 64 na x64.  
+ Liczba bitów, aby przenieść modulo 32 na x86 i modulo 64 na x64.  
   
 ## <a name="return-value"></a>Wartość zwracana  
  Maska przesunięte `nBit` usługi bits.  
   
 ## <a name="requirements"></a>Wymagania  
   
-|— Wewnętrzne|Architektura|  
+|Wewnętrzne|Architektura|  
 |---------------|------------------|  
-|`__ull_rshift`|x86, [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
+|`__ull_rshift`|x86, x64|  
   
- **Plik nagłówka** \<intrin.h >  
+ **Plik nagłówkowy** \<intrin.h >  
   
 ## <a name="remarks"></a>Uwagi  
- Jeśli drugi parametr jest większa niż 31 na x86 (63 na x64), który numer jest pobierany modulo 32 (64 na x64) w celu ustalenia liczby bitów, które mają zostać przesunięte. `ull` w nazwie wskazuje `unsigned long long (unsigned __int64)`.  
+ Jeśli drugi parametr jest większa niż 31 na numer jest pobierany modulo 32 (64 na x64), aby określić liczbę bitów, aby przenieść x86 (63 na x64). `ull` w nazwie wskazuje `unsigned long long (unsigned __int64)`.  
   
 ## <a name="example"></a>Przykład  
   
@@ -86,7 +86,7 @@ int main()
 1  
 ```  
   
-**KOŃCOWY określonych firmy Microsoft**  
+**END specyficzny dla Microsoft**  
   
 ## <a name="see-also"></a>Zobacz też  
  [__ll_lshift](../intrinsics/ll-lshift.md)   

@@ -18,15 +18,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9f30afed5acdb9da433f7ce5f992df9bcb6dc8f5
-ms.sourcegitcommit: 96cdc2da0d8c3783cc2ce03bd280a5430e1ac01d
+ms.openlocfilehash: f165d24dc1a3044fb89474aef58a2992fa6feed9
+ms.sourcegitcommit: d4c803bd3a684d7951bf88dcecf1f14af43ae411
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "33953962"
+ms.lasthandoff: 08/10/2018
+ms.locfileid: "42465580"
 ---
 # <a name="detectmismatch"></a>detect_mismatch
-Umieszcza rekord w obiekcie. Te rekordy w przypadku niezgodności potencjalnych sprawdza, czy konsolidator.  
+Umieszcza rekord w obiekcie. Konsolidator sprawdza, czy te rekordy w potencjalnych niezgodności.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -35,14 +35,16 @@ Umieszcza rekord w obiekcie. Te rekordy w przypadku niezgodności potencjalnych 
 ```  
   
 ## <a name="remarks"></a>Uwagi  
- Po połączeniu projektu konsolidator wygeneruje `LNK2038` błąd Jeśli projekt zawiera dwa obiekty, które mają taki sam `name` , ale różne `value`. Użyj tej pragmy, aby zapobiec konsolidacji plików obiektu niespójne.  
+ 
+Gdy łączysz projektu, konsolidator generuje `LNK2038` błąd, jeśli projekt zawiera dwa obiekty, które mają taki sam `name` , ale każde z nich ma inną `value`. Użyj tej pragmie, aby uniemożliwić konsolidacji plików obiektu niespójne.  
   
- Nazwy i wartości są literały ciągów i przestrzegać zasad literałów ciągów znaków ucieczki i łączenia. Jest rozróżniana wielkość liter i nie może zawierać przecinka, znaku równości, znaki cudzysłowu lub `null` znaków.  
+Nazwy i wartości są literały ciągów i przestrzegają zasad dla literałów ciągów znaków ucieczki i łączenia. Jest rozróżniana wielkość liter, a nie może zawierać przecinka, znaku równości, znaki cudzysłowu lub **null** znaków.  
   
 ## <a name="example"></a>Przykład  
- W tym przykładzie powoduje utworzenie dwóch plików, które mają numery inną wersję dla etykiety tej samej wersji.  
+ 
+Ten przykład tworzy dwa pliki, które mają numery wersji różne etykiety w tej samej wersji.  
   
-```  
+```cpp  
 // pragma_directive_detect_mismatch_a.cpp  
 #pragma detect_mismatch("myLib_version", "9")  
 int main ()  
@@ -54,7 +56,8 @@ int main ()
 #pragma detect_mismatch("myLib_version", "1")  
 ```  
   
- Jeśli oba te pliki skompilować przy użyciu wiersza polecenia `cl pragma_directive_detect_mismatch_a.cpp pragma_directive_detect_mismatch_b.cpp`, zostanie wyświetlony błąd `LNK2038`.  
+Jeśli kompilujesz oba te pliki przy użyciu wiersza polecenia `cl pragma_directive_detect_mismatch_a.cpp pragma_directive_detect_mismatch_b.cpp`, zostanie wyświetlony błąd `LNK2038`.  
   
 ## <a name="see-also"></a>Zobacz też  
- [Dyrektywy pragma i słowo kluczowe __Pragma](../preprocessor/pragma-directives-and-the-pragma-keyword.md)
+ 
+[Dyrektywy pragma i słowo kluczowe __Pragma](../preprocessor/pragma-directives-and-the-pragma-keyword.md)

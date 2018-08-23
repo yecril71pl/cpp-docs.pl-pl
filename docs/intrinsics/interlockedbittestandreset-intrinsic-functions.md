@@ -1,5 +1,5 @@
 ---
-title: Funkcje wewnętrzne _interlockedbittestandreset | Dokumentacja firmy Microsoft
+title: funkcje wewnętrzne _interlockedbittestandreset | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -28,17 +28,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c292d344727f2cc473dc444853a2c46d94150dd0
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 433d4ba23cbf4ed7e2819a3752cd2155b7c20371
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33340453"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42464552"
 ---
-# <a name="interlockedbittestandreset-intrinsic-functions"></a>Funkcje wewnętrzne _interlockedbittestandreset
+# <a name="interlockedbittestandreset-intrinsic-functions"></a>funkcje wewnętrzne _interlockedbittestandreset
 **Microsoft Specific**  
   
- Generuje instrukcja, która ustawia bit `b` adresu `a` od zera i zwraca oryginalną wartość.  
+ Generuje instrukcję, która ustawia bitu `b` adresu `a` zero i zwraca oryginalną wartość.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -86,31 +86,31 @@ unsigned char _interlockedbittestandreset64_HLERelease(
  Wskaźnik do pamięci do sprawdzenia.  
   
  [in] `b`  
- Pozycja bit do testowania.  
+ Pozycja bitu do testowania.  
   
 ## <a name="return-value"></a>Wartość zwracana  
- Oryginalnej wartości bitowe w miejscu określonym przez `b`.  
+ Oryginalna wartość bitowa pozycji określonej przez `b`.  
   
 ## <a name="requirements"></a>Wymagania  
   
-|— Wewnętrzne|Architektura|nagłówek|  
+|Wewnętrzne|Architektura|nagłówek|  
 |---------------|------------------|------------|  
-|`_interlockedbittestandreset`|x86, ARM, [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|\<intrin.h>|  
+|`_interlockedbittestandreset`|x86, ARM, x64|\<intrin.h>|  
 |`_interlockedbittestandreset_acq`, `_interlockedbittestandreset_nf`, `_interlockedbittestandreset_rel`|ARM|\<intrin.h>|  
-|`_interlockedbittestandreset_HLEAcquire`, `_interlockedbittestandreset_HLERelease`|x86, [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|\<immintrin.h>|  
-|`_interlockedbittestandreset64`|[!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|\<intrin.h>|  
-|`_interlockedbittestandreset64_HLEAcquire`, `_interlockedbittestandreset64_HLERelease`|[!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|\<immintrin.h>|  
+|`_interlockedbittestandreset_HLEAcquire`, `_interlockedbittestandreset_HLERelease`|x86, x64|\<immintrin.h>|  
+|`_interlockedbittestandreset64`|X64|\<intrin.h>|  
+|`_interlockedbittestandreset64_HLEAcquire`, `_interlockedbittestandreset64_HLERelease`|X64|\<immintrin.h>|  
   
 ## <a name="remarks"></a>Uwagi  
- Na x86 i [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)] procesorów, te funkcje wewnętrzne użyj `lock btr` instrukcji, która odczytuje i ustawia określony bit zero w niepodzielną operację.  
+ Na procesorach x86 i x64, użyj funkcji wewnętrznych `lock btr` instrukcji, która odczytuje i ustawia bitu określonego na zero w operacją niepodzielną.  
   
- Na procesorów ARM, użyj funkcji wewnętrznych z `_acq` i `_rel` sufiksy dla semantyki pobierania i zlecenia, takie jak na początku i na końcu sekcji krytycznych. Funkcje wewnętrzne ARM z `_nf` sufiks ("nie ogranicznika") nie działają jako bariery pamięci.  
+ Na procesorach ARM, użyj funkcji wewnętrznych za pomocą `_acq` i `_rel` sufiksy dla semantyki nabywania i wydania, takie jak na początku i na końcu sekcję krytyczną. Funkcje wewnętrzne ARM przy użyciu `_nf` sufiks ("nie ogranicznika") nie działają jako czynnik blokujący pamięci.  
   
- Na procesorów Intel, które obsługują instrukcje Elision blokady sprzętu (HLE), funkcje wewnętrzne z `_HLEAcquire` i `_HLERelease` sufiksy obejmują wskazówkę procesora, która umożliwia przyspieszanie wydajności przez wyeliminowanie krok blokady zapisu sprzętu. Jeśli te funkcje wewnętrzne są nazywane na procesorów, które nie obsługują HLE, wskazówka zostanie zignorowany.  
+ Na procesorach Intel, obsługujące instrukcje pominięcia blokady sprzętu (HLE), funkcje wewnętrzne z `_HLEAcquire` i `_HLERelease` sufiksy obejmują wskazówkę procesora, który może przyspieszyć wydajność, eliminując krok blokady zapisu w sprzęcie. Jeśli te funkcje wewnętrzne są wywoływane na procesorach, które nie obsługują HLE, wskazówka zostanie zignorowany.  
   
  Te procedury są dostępne tylko jako funkcje wewnętrzne.  
   
-**KOŃCOWY określonych firmy Microsoft**  
+**END specyficzny dla Microsoft**  
   
 ## <a name="see-also"></a>Zobacz też  
  [Funkcje wewnętrzne kompilatora](../intrinsics/compiler-intrinsics.md)   

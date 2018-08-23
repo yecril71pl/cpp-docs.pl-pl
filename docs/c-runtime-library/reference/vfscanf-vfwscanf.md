@@ -31,16 +31,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f7b7194aa5b7c60b03e3701567ffdb236f32f0b3
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 4e4a9c2d36ef8b60eed7b8277c39a8ca7ab998d9
+ms.sourcegitcommit: e9ce38decc9f986edab5543de3464b11ebccb123
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32413274"
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "42466421"
 ---
 # <a name="vfscanf-vfwscanf"></a>vfscanf, vfwscanf
 
-Odczyty sformatowanych danych ze strumienia. Bezpieczniejsza wersje te funkcje są dostępne; zobacz [vfscanf_s, vfwscanf_s](vfscanf-s-vfwscanf-s.md).
+Odczyty sformatowanych danych ze strumienia. Bardziej bezpieczne wersje tych funkcji są dostępne; zobacz [vfscanf_s, vfwscanf_s](vfscanf-s-vfwscanf-s.md).
 
 ## <a name="syntax"></a>Składnia
 
@@ -59,30 +59,30 @@ int vfwscanf(
 
 ### <a name="parameters"></a>Parametry
 
-*Strumień*<br/>
+*Stream*<br/>
 Wskaźnik do **pliku** struktury.
 
 *Format*<br/>
 Ciąg kontroli formatu.
 
 *arglist*<br/>
-Listy zmiennych argumentów.
+Lista zmiennych argumentów.
 
 ## <a name="return-value"></a>Wartość zwracana
 
-Każda z tych funkcji zwraca liczbę pól, które pomyślnie przekonwertowany i przypisane; wartość zwrotna nie zawiera pola, które są do odczytu, ale nie są przypisane. Wartość zwracana 0 wskazuje, że nie ma pól zostały przypisane. Jeśli wystąpi błąd, lub czy osiągnięto koniec strumienia pliku przed pierwszym konwersji, jest zwracana wartość **EOF** dla **vfscanf** i **vfwscanf**.
+Każda z tych funkcji zwraca liczbę pól pomyślnie przekonwertowanych i przypisanych; zwracana wartość nie uwzględnia pól, które są odczytane, ale nie przypisane. Zwracana wartość wynosząca 0 wskazuje, że nie przydzielono żadnych pól. Jeśli wystąpi błąd lub jeśli osiągnięto koniec strumienia pliku przed dokonaniem pierwszej konwersji, zwracana jest wartość **EOF** dla **vfscanf** i **vfwscanf**.
 
-Te funkcje walidację ich parametrów. Jeśli *strumienia* lub *format* wskaźnika o wartości null, jest program obsługi nieprawidłowych parametrów zostanie wywołany, zgodnie z opisem w [sprawdzanie poprawności parametru](../../c-runtime-library/parameter-validation.md). Jeśli jest dozwolone wykonywanie, aby kontynuować, te funkcje zwracają **EOF** i ustaw **errno** do **einval —**.
+Te funkcje sprawdzają poprawność swoich parametrów. Jeśli *strumienia* lub *format* jest pustym wskaźnikiem, procedura obsługi nieprawidłowego parametru zostanie wywołana, zgodnie z opisem w [Parameter Validation](../../c-runtime-library/parameter-validation.md). Jeśli wykonanie może być kontynuowane, te funkcje zwracają **EOF** i ustaw **errno** do **EINVAL**.
 
 ## <a name="remarks"></a>Uwagi
 
-**Vfscanf** funkcja odczytuje dane z bieżącej pozycji *strumienia* w lokalizacjach, które są podane przez *lista_argumentów* listy argumentów. Każdy argument na liście musi być wskaźnikiem do zmiennej typu, który odpowiada specyfikatorowi typu w *format*. *Format* formanty interpretacji dane wejściowe pola i ma tę samą tworzą i funkcję, która *format* argument **scanf**; zobacz [scanf](scanf-scanf-l-wscanf-wscanf-l.md) dla Opis *format*.
+**Vfscanf** funkcja odczytuje dane z bieżącego położenia obiektu *strumienia* do lokalizacji, które są określone przez *lista_argumentów* listy argumentów. Każdy argument na liście musi być wskaźnikiem do zmiennej typu odpowiadającego specyfikatorowi typu w parametrze *format*. *Format* kontroluje interpretację danych wejściowych pola, a ma taką samą formę i funkcjonuje jako *format* argument **scanf**; zobacz [scanf](scanf-scanf-l-wscanf-wscanf-l.md) dla Opis *format*.
 
-**vfwscanf** jest wersja znaków dwubajtowych **vfscanf**; argument formatu **vfwscanf** jest ciągiem znaków dwubajtowych. Te funkcje zachowują się tak samo tak samo, jakby strumień jest otwarty w trybie ANSI. **vfscanf** nie obsługuje dane wejściowe ze strumienia UNICODE.
+**vfwscanf** to wersja znaku dwubajtowego **vfscanf**; format argumentu **vfwscanf** jest ciągiem znaku dwubajtowego. Funkcje te zachowują się identycznie, jeżeli strumień jest otwarty w trybie ANSI. **vfscanf** nie obsługuje danych wejściowych ze strumienia UNICODE.
 
 ### <a name="generic-text-routine-mappings"></a>Mapowania procedur zwykłego tekstu
 
-|Procedura TCHAR.H|_Unicode — & _MBCS nie zdefiniowany|_MBCS zdefiniowano|_UNICODE zdefiniowano|
+|Procedura TCHAR.H|_UNICODE & _MBCS nie zdefiniowano|_MBCS zdefiniowano|_UNICODE zdefiniowano|
 |---------------------|------------------------------------|--------------------|-----------------------|
 |**_vftscanf**|**vfscanf**|**vfscanf**|**vfwscanf**|
 
@@ -167,7 +167,7 @@ x
 
 ## <a name="see-also"></a>Zobacz także
 
-[We/Wy strumienia](../../c-runtime-library/stream-i-o.md)<br/>
+[Stream operacji We/Wy](../../c-runtime-library/stream-i-o.md)<br/>
 [_cscanf, _cscanf_l, _cwscanf, _cwscanf_l](cscanf-cscanf-l-cwscanf-cwscanf-l.md)<br/>
 [fprintf, _fprintf_l, fwprintf, _fwprintf_l](fprintf-fprintf-l-fwprintf-fwprintf-l.md)<br/>
 [scanf, _scanf_l, wscanf, _wscanf_l](scanf-scanf-l-wscanf-wscanf-l.md)<br/>

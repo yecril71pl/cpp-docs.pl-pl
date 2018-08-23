@@ -16,17 +16,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5baa3204b14da53f6a6a3232874e0ac7de0fd91b
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: b09e36e793608167a4ce64a9124d7dafbaf9ec62
+ms.sourcegitcommit: d4c803bd3a684d7951bf88dcecf1f14af43ae411
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33849798"
+ms.lasthandoff: 08/10/2018
+ms.locfileid: "42466331"
 ---
 # <a name="rawnativetypes"></a>raw_native_types
-**Określonego języka C++**  
+**Określonego język C++**  
   
- Wyłącza używanie klas obsługi COM w funkcjach otoki wysokiego poziomu, a zamiast tego wymusza stosowanie typów danych niskiego poziomu.  
+Wyłącza używanie klas obsługi COM w funkcjach otoki wysokiego poziomu, a zamiast tego wymusza stosowanie typów danych niskiego poziomu.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -35,10 +35,12 @@ raw_native_types
 ```  
   
 ## <a name="remarks"></a>Uwagi  
- Domyślnie wysokiego poziomu metody obsługi błędów używać klas obsługi COM [_bstr_t](../cpp/bstr-t-class.md) i [_variant_t](../cpp/variant-t-class.md) zamiast `BSTR` i **VARIANT** typy danych i wskaźniki interfejsu COM RAW. Te klasy Hermetyzowanie szczegóły alokowanie i dealokowanie pamięci magazynu dla tych typów danych i znacznie upraszcza operacji rzutowania i konwersji typu.  
+ 
+Domyślnie wysokiego poziomu metody obsługi błędów za pomocą klas obsługi COM [_bstr_t](../cpp/bstr-t-class.md) i [_variant_t](../cpp/variant-t-class.md) zamiast `BSTR` i `VARIANT` i typy danych COM surowego interfejsu wskaźników. W ramach tych zajęć hermetyzacji szczegółów alokowanie i dealokowanie pamięci magazynu dla tych typów danych i znacznie upraszczają operacji rzutowania i konwersji typu.  
   
- **KOŃCOWY określonego języka C++**  
+**KONIEC określonego języka C++**  
   
 ## <a name="see-also"></a>Zobacz też  
- [atrybuty #import](../preprocessor/hash-import-attributes-cpp.md)   
- [#import — dyrektywa](../preprocessor/hash-import-directive-cpp.md)
+ 
+[atrybuty #import](../preprocessor/hash-import-attributes-cpp.md)   
+[#import — dyrektywa](../preprocessor/hash-import-directive-cpp.md)

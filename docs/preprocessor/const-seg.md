@@ -18,12 +18,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 984dc392b6ffa51d662d3ab56b1c0dc0dbc92233
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: a3081837cc4516750f8c2c0d75cfc37eef208f9d
+ms.sourcegitcommit: d4c803bd3a684d7951bf88dcecf1f14af43ae411
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33839158"
+ms.lasthandoff: 08/10/2018
+ms.locfileid: "42465584"
 ---
 # <a name="constseg"></a>const_seg
 Określa segment gdzie [const](../cpp/const-cpp.md) zmienne są przechowywane w pliku .obj.  
@@ -35,34 +35,35 @@ Określa segment gdzie [const](../cpp/const-cpp.md) zmienne są przechowywane w 
 ```  
   
 ## <a name="remarks"></a>Uwagi  
- Znaczenie terminów *segmentu* i *sekcji* są wymienne, w tym temacie.  
+ 
+Znaczenie terminów *segmentu* i *sekcji* są wymienne, w tym temacie.  
   
- Pliki OBJ mogą być wyświetlane z [dumpbin](../build/reference/dumpbin-command-line.md) aplikacji. Segment domyślnej w pliku .obj `const` zmiennych jest .rdata. Niektóre `const` zmienne, takie jak wartości skalarne, są automatycznie wbudowane do strumienia kodu. Kodu wbudowanego nie będą widoczne w .rdata.  
+Pliki OBJ mogą być wyświetlane z [dumpbin](../build/reference/dumpbin-command-line.md) aplikacji. Segment domyślnej w pliku .obj `const` zmiennych jest .rdata. Niektóre `const` zmienne, takie jak wartości skalarnych, są automatycznie śródwierszowe w strumieniu kodu. Śródwierszowe kodu nie będą widoczne w .rdata.  
   
- Definiowanie obiektów wymagających inicjacja dynamiczna w `const_seg` powoduje niezdefiniowane zachowanie.  
+Definiowanie obiektu wymagające dynamiczna Inicjalizacja w `const_seg` powoduje zachowanie niezdefiniowane.  
   
- `#pragma const_seg` Resetuje segmentu .rdata bez parametrów.  
+`#pragma const_seg` bez parametrów resetuje segmentu .rdata.  
   
- `push` (opcjonalnie)  
- Umieszcza rekord na wewnętrznym stosie kompilatora. A `push` może mieć `identifier` i `segment-name`.  
+*wypychane* (opcjonalnie)  
+Umieszcza rekord na wewnętrznym stosie kompilatora. A *wypychania* może mieć *identyfikator* i *nazwą segmentu*.  
   
- `pop` (opcjonalnie)  
- Usuwa rekord z góry wewnętrznego stosu kompilatora.  
+*POP* (opcjonalnie)  
+Usuwa rekord z góry wewnętrznego stosu kompilatora.  
   
- `identifier` (opcjonalnie)  
- W przypadku użycia z `push`, przypisuje nazwę w rekordzie na stosie wewnętrznych kompilatora. W przypadku użycia z `pop`, POP rejestruje wewnętrzny stosu do `identifier` zostanie usunięta; Jeśli `identifier` nie znaleziono na stosie wewnętrznego, nic nie jest zdjęte ze stosu.  
+*Identyfikator* (opcjonalnie)  
+Gdy jest używane z *wypychania*, przypisuje nazwę rekordowi na wewnętrznym stosie kompilatora. Gdy jest używane z *pop*, zdejmuje rekordy z wewnętrznego stosu aż do usunięcia *identyfikator* zostanie usunięta; Jeśli *identyfikator* nie zostanie znaleziony na wewnętrznym stosie, nic nie zostanie zdjęte.  
   
- Przy użyciu `identifier` umożliwia wielu rekordów zostać zdjęte ze stosu za pomocą jednej `pop` polecenia.  
+Za pomocą *identyfikator* umożliwia wielu rekordów zostać zdjęte ze stosu za pomocą jednego *pop* polecenia.  
   
- "`segment-name`" (opcjonalnie)  
- Nazwa segmentu. W przypadku użycia z `pop`, zdjęte ze stosu stosu i `segment-name` staje się nazwa active segmentu.  
+"*nazwą segmentu*" (opcjonalne)  
+Nazwa segmentu. Gdy jest używane z *pop*, stos jest zdejmowany i *nazwą segmentu* staje się nazwą aktywny segment.  
   
- "`segment-class`" (opcjonalnie)  
- Uwzględnione w celu zapewnienia zgodności z C++ przed w wersji 2.0. Jest on ignorowany.  
+"*klasy segmentu*" (opcjonalne)  
+Uwzględnione na potrzeby utrzymywania zgodności z C++ wcześniejszych niż 2.0. Jest on ignorowany.  
   
 ## <a name="example"></a>Przykład  
   
-```  
+```cpp  
 // pragma_directive_const_seg.cpp  
 // compile with: /EHsc  
 #include <iostream>  
@@ -97,9 +98,11 @@ test4
 ```  
   
 ## <a name="comments"></a>Komentarze  
- Zobacz [/SECTION](../build/reference/section-specify-section-attributes.md) lista nazw nie należy używać podczas tworzenia sekcji.  
+ 
+Zobacz [/SECTION](../build/reference/section-specify-section-attributes.md) listę nazw, nie należy używać podczas tworzenia sekcji.  
   
- Można również określić sekcjach danymi zainicjowanymi ([data_seg](../preprocessor/data-seg.md)), odinicjowany danych ([bss_seg](../preprocessor/bss-seg.md)), funkcje i ([code_seg](../preprocessor/code-seg.md)).  
+Można również określić sekcje dla danych zainicjowanych ([data_seg](../preprocessor/data-seg.md)), niezainicjowanych danych ([bss_seg](../preprocessor/bss-seg.md)) i funkcje ([code_seg](../preprocessor/code-seg.md)).  
   
 ## <a name="see-also"></a>Zobacz też  
- [Dyrektywy pragma i słowo kluczowe __Pragma](../preprocessor/pragma-directives-and-the-pragma-keyword.md)
+ 
+[Dyrektywy pragma i słowo kluczowe __Pragma](../preprocessor/pragma-directives-and-the-pragma-keyword.md)

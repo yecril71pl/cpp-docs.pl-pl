@@ -18,33 +18,33 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 54d13e6922650f0193d4bbc3469d4acf25904234
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 9156fd0d4d0433cfb975c242bc87008471bc4723
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32377912"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42465053"
 ---
 # <a name="safeseh-image-has-safe-exception-handlers"></a>/SAFESEH (Obraz ma bezpieczną obsługę wyjątków)
 ```  
 /SAFESEH[:NO]  
 ```  
   
- Gdy **opcja/SAFESEH** jest określona, konsolidator tylko utworzenia obrazu, jeśli może utworzyć również tabelę obrazu bezpieczną obsługę wyjątków. Ta tabela określa dla systemu operacyjnego, które programy obsługi wyjątków są prawidłowe dla obrazu.  
+ Gdy **opcja/SAFESEH** jest określona, konsolidator generuje tylko obraz jeśli może utworzyć również tabelę obsługi bezpiecznych wyjątków obrazu. Ta tabela określa dla systemu operacyjnego, które programy obsługi wyjątków są prawidłowe dla obrazu.  
   
- **/ SAFESEH** jest prawidłowy tylko w trakcie łączenia dla x86 elementów docelowych. **/ SAFESEH** nie jest obsługiwana dla platformy, które mają już programy obsługi wyjątków zauważyć. Na przykład na [!INCLUDE[vcprx64](../../assembler/inline/includes/vcprx64_md.md)] i ARM wszystkie obsługi wyjątków są zapisane w PDATA. ML64.exe obsługuje dodawanie adnotacji, które emitują informację strukturalnej obsługi wyjątków (XDATA i PDATA) do obrazu, pozwalając na odpoczynek, dzięki funkcji ml64. Zobacz [MASM dla x64 (ml64.exe)](../../assembler/masm/masm-for-x64-ml64-exe.md) Aby uzyskać więcej informacji.  
+ **/ SAFESEH** jest prawidłowy tylko podczas łączenia do x86 elementów docelowych. **/ SAFESEH** nie jest obsługiwana dla platform, które mają już zapisaną procedurę obsługi wyjątków. Na przykład na x64 i ARM wszystkie obsługi wyjątków są zapisane w PDATA. ML64.exe obsługuje dodawanie adnotacji, które emitują informację strukturalnej obsługi wyjątków (XDATA i PDATA) do obrazu, pozwalając na odpoczynek, dzięki funkcji ml64. Zobacz [MASM x64 (ml64.exe)](../../assembler/masm/masm-for-x64-ml64-exe.md) Aby uzyskać więcej informacji.  
   
- Jeśli **opcja/SAFESEH** nie zostanie określona, konsolidator utworzy obraz z tabelą programów obsługi wyjątków bezpieczne, jeśli wszystkie moduły są zgodne z funkcją bezpiecznego wyjątków. Jeśli wszystkie moduły nie były zgodne z funkcją obsługi bezpiecznych wyjątków, obraz wynikowy nie będzie zawierać tabeli obsługi bezpiecznych wyjątków. Jeśli [/Subsystem](../../build/reference/subsystem-specify-subsystem.md) określa WINDOWSCE lub jedną z opcji EFI_ * konsolidator nie będzie próbował obrazów z tabelą programów obsługi wyjątków bezpieczne, ponieważ żadna z tych podsystemów można korzystać z informacji.  
+ Jeśli **opcja/SAFESEH** nie jest określona, konsolidator generuje obraz z tabeli obsługi bezpiecznych wyjątków, jeśli wszystkie moduły są zgodne z funkcją obsługi wyjątków bezpiecznych. Jeśli wszystkie moduły nie były zgodne z funkcją obsługi bezpiecznych wyjątków, obraz wynikowy nie będzie zawierać tabeli obsługi bezpiecznych wyjątków. Jeśli [/Subsystem](../../build/reference/subsystem-specify-subsystem.md) określa WINDOWSCE lub jedną z opcji EFI_ * konsolidator nie będzie próbował utworzyć obrazu z tabeli obsługi bezpiecznych wyjątków, ponieważ żaden z tych podsystemów ułatwia korzystanie z informacji.  
   
- Jeśli **/SAFESEH:NO** jest określona, konsolidator nie spowoduje utworzenia obrazu z tabelą programów obsługi wyjątków bezpieczne, nawet jeśli wszystkie moduły są zgodne z bezpiecznej obsługi funkcji wyjątków.  
+ Jeśli **/SAFESEH:NO** jest określony, program łączący wyprodukuje obraz z tabeli obsługi bezpiecznych wyjątków nawet, jeśli wszystkie moduły są zgodne z funkcją obsługi bezpiecznych wyjątków.  
   
  Najczęstszą przyczyną, dla której konsolidator nie może wyprodukować obrazu, jest brak zgodności z funkcją obsługi bezpiecznych wyjątków z konsolidatorem, przez jeden lub więcej plików wejściowych (modułów). Częstą przyczyną niezgodności modułu z obsługą bezpiecznych wyjątków jest utworzenie modułu przy użyciu kompilatora poprzednich wersji programu Visual C++.  
   
- Funkcja można zarejestrować obsługi wyjątków strukturalnych, za pomocą [. SAFESEH](../../assembler/masm/dot-safeseh.md).  
+ Funkcję można zarejestrować jako obsługę wyjątków strukturalnych, za pomocą [. SAFESEH](../../assembler/masm/dot-safeseh.md).  
   
  Nie istnieje możliwość oznaczenia istniejących danych binarnych jako posiadające obsługę wyjątków bezpiecznych (lub brak obsługi wyjątków); informację na temat obsługi wyjątków bezpiecznych muszą zostać dodane w czasie kompilacji.  
   
- Konsolidator posiada możliwość utworzenia tabeli obsługi bezpiecznych wyjątków zależnych od aplikacji przy użyciu biblioteki środowiska uruchomieniowego C. Jeśli łączysz się z [/nodefaultlib](../../build/reference/nodefaultlib-ignore-libraries.md) i chcesz uzyskać tabelę bezpieczną obsługę wyjątków, należy podać struktura konfiguracji ładowania, (na przykład można znaleźć w pliku źródłowym loadcfg.c CRT) zawierający wszystkie wpisy zdefiniowany w języku Visual C++. Na przykład:  
+ Konsolidator posiada możliwość utworzenia tabeli obsługi bezpiecznych wyjątków zależnych od aplikacji przy użyciu biblioteki środowiska uruchomieniowego C. Jeśli łączysz się z [/nodefaultlib](../../build/reference/nodefaultlib-ignore-libraries.md) i chcesz uzyskać tabelę obsługi wyjątków bezpiecznych, konieczne podanie ustawień obciążeń struct (na przykład można znaleźć w pliku źródłowym loadcfg.c CRT) zawierający wszystkie wpisy, które są zdefiniowane dla Visual C++. Na przykład:  
   
 ```  
 #include <windows.h>  
@@ -107,13 +107,13 @@ const IMAGE_LOAD_CONFIG_DIRECTORY32_2 _load_config_used = {
   
 ### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>Aby ustawić tę opcję konsolidatora w środowisku programowania Visual Studio  
   
-1.  Otwórz projekt **strony właściwości** okno dialogowe. Aby uzyskać więcej informacji, zobacz [Ustawianie właściwości projektu Visual C++](../../ide/working-with-project-properties.md).  
+1.  Otwórz projekt **stron właściwości** okno dialogowe. Aby uzyskać więcej informacji, zobacz [ustawienie właściwości projektu Visual C++](../../ide/working-with-project-properties.md).  
   
 2.  Wybierz **konsolidatora** folderu.  
   
-3.  Wybierz **wiersza polecenia** strony właściwości.  
+3.  Wybierz **wiersza polecenia** stronę właściwości.  
   
-4.  Wybierz opcję do **dodatkowe opcje** pole.  
+4.  Wprowadź opcje do **dodatkowe opcje** pole.  
   
 ### <a name="to-set-this-linker-option-programmatically"></a>Aby programowo ustawić tę opcję konsolidatora  
   

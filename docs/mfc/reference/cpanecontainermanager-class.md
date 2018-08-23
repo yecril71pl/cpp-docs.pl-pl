@@ -116,16 +116,16 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e7c988f062fc870359a8f1ae1265fb91d02dbb3d
-ms.sourcegitcommit: be0e3457f2884551f18e183ef0ea65c3ded7f689
+ms.openlocfilehash: a3a0372d5892ec4b563275d0a5bb8f309cf6fc47
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/28/2018
-ms.locfileid: "37079380"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42466244"
 ---
 # <a name="cpanecontainermanager-class"></a>Klasa CPaneContainerManager
-`CPaneContainerManager` Klasa zarządza przechowywania i wyświetlania bieżący układ dokowania.  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+`CPaneContainerManager` Klasa zarządza przechowywaniem i wyświetlaniem bieżącego układu dokowania.  
+ Aby uzyskać więcej informacji, zobacz kod źródłowy znajdujący się w **VC\\atlmfc\\src\\mfc** folder instalacji programu Visual Studio.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -184,19 +184,19 @@ class CPaneContainerManager : public CObject
 |[CPaneContainerManager::RemovePaneFromPaneContainer](#removepanefrompanecontainer)||  
 |[CPaneContainerManager::ReplacePane](#replacepane)||  
 |[CPaneContainerManager::ResizePaneContainers](#resizepanecontainers)||  
-|[CPaneContainerManager::Serialize](#serialize)|Odczytuje i zapisuje ten obiekt z lub do archiwum. (Przesłania [CObject::Serialize](../../mfc/reference/cobject-class.md#serialize).)|  
+|[CPaneContainerManager::Serialize](#serialize)|Odczytuje lub zapisuje ten obiekt z lub do archiwum. (Przesłania [CObject::Serialize](../../mfc/reference/cobject-class.md#serialize).)|  
 |[CPaneContainerManager::SetDefaultPaneDividerForPanes](#setdefaultpanedividerforpanes)||  
 |[CPaneContainerManager::SetPaneContainerRTC](#setpanecontainerrtc)||  
 |[CPaneContainerManager::SetResizeMode](#setresizemode)||  
 |[CPaneContainerManager::StoreRecentDockSiteInfo](#storerecentdocksiteinfo)||  
   
 ### <a name="remarks"></a>Uwagi  
- Platformę automatycznie tworzy wystąpienia `CPaneContainerManager` obiekty i umieszcza je albo do [klasy CPaneDivider](../../mfc/reference/cpanedivider-class.md) obiektów lub [CMultiPaneFrameWnd klasy](../../mfc/reference/cmultipaneframewnd-class.md) obiektów.  
+ Szablon automatycznie tworzy wystąpienia elementu `CPaneContainerManager` obiektów i umieszcza je w jedną do [klasa CPaneDivider](../../mfc/reference/cpanedivider-class.md) obiektów lub [klasa CMultiPaneFrameWnd](../../mfc/reference/cmultipaneframewnd-class.md) obiektów.  
   
- `CPaneContainerManager` Klasy przechowuje wskaźnik do katalogu głównego drzewa binarnego, który składa się z [CPaneContainer](../../mfc/reference/cpanecontainer-class.md) obiektów.  
+ `CPaneContainerManager` Klasa przechowuje wskaźnik do katalogu głównego drzewa binarnego, który jest zbudowany z [CPaneContainer](../../mfc/reference/cpanecontainer-class.md) obiektów.  
   
 ## <a name="example"></a>Przykład  
- W poniższym przykładzie pokazano, jak pobrać odwołania do `CPaneContainerManager` obiektu. Następujący fragment kodu jest częścią [próbki Ustaw rozmiar okienka](../../visual-cpp-samples.md).  
+ Poniższy przykład pokazuje, jak odwołać się do `CPaneContainerManager` obiektu. Ten fragment kodu jest częścią [przykładowe ustawić rozmiar okienka](../../visual-cpp-samples.md).  
   
  [!code-cpp[NVC_MFC_SetPaneSize#5](../../mfc/reference/codesnippet/cpp/cpanecontainermanager-class_1.cpp)]  
   
@@ -906,6 +906,6 @@ virtual void StoreRecentDockSiteInfo(CDockablePane* pBar);
 ## <a name="see-also"></a>Zobacz też  
  [Diagram hierarchii](../../mfc/hierarchy-chart.md)   
  [Klasy](../../mfc/reference/mfc-classes.md)   
- [CObject — klasa](../../mfc/reference/cobject-class.md)   
+ [Klasa CObject](../../mfc/reference/cobject-class.md)   
  [Klasa CPaneContainer](../../mfc/reference/cpanecontainer-class.md)   
  [Klasa CPaneDivider](../../mfc/reference/cpanedivider-class.md)

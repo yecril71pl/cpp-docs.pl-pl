@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3d9898dc6b918643aa8ca4ace34ce2e716344c57
-ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
+ms.openlocfilehash: 8c1fb739d5e6206297e52fd9103cbba98c5eef01
+ms.sourcegitcommit: 7f3df9ff0310a4716b8136ca20deba699ca86c6c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39463492"
+ms.lasthandoff: 08/21/2018
+ms.locfileid: "42464667"
 ---
 # <a name="specifiers"></a>Specyfikatory
 W tym temacie opisano *specyfikatorów decl* składnik (specyfikatory deklaracji) [deklaracji](declarations-and-definitions-cpp.md).  
@@ -34,9 +34,11 @@ W tym temacie opisano *specyfikatorów decl* składnik (specyfikatory deklaracji
   
  *Specyfikator funkcji*  
   
- [friend](../cpp/friend-cpp.md)  
-  
- [typedef] ( [typedef](http://msdn.microsod) `(` *extended-decl modyfikator seq* `)`  
+ [friend](friend-cpp.md)  
+ 
+ [Element TypeDef](aliases-and-typedefs-cpp.md) `(` *extended-decl modyfikator seq* `)`  
+
+ [__declspec](declspec.md) `(` *extended-decl modyfikator seq* `)`  
   
 ## <a name="remarks"></a>Uwagi  
  *Specyfikatorów decl* część deklaracji jest najdłuższym sekwencji *specyfikatorów decl* mogą być podejmowane oznacza nazwę typu, nie wliczając wskaźnika lub odwołania modyfikatorów. Pozostała część deklaracji jest *deklaratora*, które zawiea nazwę wprowadzone.  

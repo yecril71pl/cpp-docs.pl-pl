@@ -1,5 +1,5 @@
 ---
-title: Funkcje wewnętrzne _InterlockedXor | Dokumentacja firmy Microsoft
+title: Funkcje wewnętrzne _interlockedxor | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -44,17 +44,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7dea8e222660825824c8dc02405832da4395b69f
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 522a2fc1f2092c90a9938efee8cf594e2813c5ad
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33334126"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42465618"
 ---
-# <a name="interlockedxor-intrinsic-functions"></a>Funkcje wewnętrzne _InterlockedXor
+# <a name="interlockedxor-intrinsic-functions"></a>Funkcje wewnętrzne _interlockedxor
 **Microsoft Specific**  
   
- Wykonaj atomic operator wyłączny sumy bitowej (XOR) operacji lub w zmiennej współużytkowane przez wiele wątków.  
+ Wykonaj atomic wyłączny sumy bitowej or (XOR) operacja zmienną współużytkowane przez wiele wątków.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -158,32 +158,32 @@ __int64 _InterlockedXor64_rel(
 ```  
   
 #### <a name="parameters"></a>Parametry  
- [w, out] `Value`  
- Wskaźnik do pierwszego argumentu operacji mają zostać zastąpione przez wynik.  
+ [out w] `Value`  
+ Wskaźnik do pierwszego operandu, mają zostać zastąpione przez wynik.  
   
  [in] `Mask`  
  Drugi argument operacji.  
   
 ## <a name="return-value"></a>Wartość zwracana  
- Oryginalna wartość pierwszy argument operacji.  
+ Oryginalna wartość pierwszego operandu.  
   
 ## <a name="requirements"></a>Wymagania  
   
-|— Wewnętrzne|Architektura|nagłówek|  
+|Wewnętrzne|Architektura|nagłówek|  
 |---------------|------------------|------------|  
-|`_InterlockedXor`, `_InterlockedXor8`, `_InterlockedXor16`, `_InterlockedXor64`|x86, ARM, [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|\<intrin.h>|  
+|`_InterlockedXor`, `_InterlockedXor8`, `_InterlockedXor16`, `_InterlockedXor64`|x86, ARM, x64|\<intrin.h>|  
 |`_InterlockedXor_acq`, `_InterlockedXor_nf`, `_InterlockedXor_rel`, `_InterlockedXor8_acq`, `_InterlockedXor8_nf`, `_InterlockedXor8_rel`, `_InterlockedXor16_acq`, `_InterlockedXor16_nf`, `_InterlockedXor16_rel`, `_InterlockedXor64_acq`, `_InterlockedXor64_nf`, `_InterlockedXor64_rel`,|ARM|\<intrin.h>|  
-|`_InterlockedXor_np`, `_InterlockedXor8_np`, `_InterlockedXor16_np`, `_InterlockedXor64_np`|[!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|\<intrin.h>|  
-|`_InterlockedXor_HLEAcquire`, `_InterlockedXor_HLERelease`, `_InterlockedXor64_HLEAcquire`, `_InterlockedXor64_HLERelease`|x86, [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|\<immintrin.h>|  
+|`_InterlockedXor_np`, `_InterlockedXor8_np`, `_InterlockedXor16_np`, `_InterlockedXor64_np`|X64|\<intrin.h>|  
+|`_InterlockedXor_HLEAcquire`, `_InterlockedXor_HLERelease`, `_InterlockedXor64_HLEAcquire`, `_InterlockedXor64_HLERelease`|x86, x64|\<immintrin.h>|  
   
 ## <a name="remarks"></a>Uwagi  
- Numer nazwy poszczególnych funkcji określa rozmiar bit argumentów.  
+ Liczba nazwę każdej funkcji określa rozmiar bitowych argumentów.  
   
- Na platformach ARM, użyj funkcji wewnętrznych z `_acq` i `_rel` sufiksy, jeśli należy uzyskać i zwolnij semantyki, takich jak na początku i na końcu sekcji krytycznych. Funkcje wewnętrzne ARM z `_nf` sufiks ("nie ogranicznika") nie działają jako bariery pamięci.  
+ Na platformach ARM, użyj funkcji wewnętrznych za pomocą `_acq` i `_rel` sufiksy, jeśli potrzebujesz uzyskać i zwolnij semantykę, takich jak na początku i na końcu sekcję krytyczną. Funkcje wewnętrzne ARM przy użyciu `_nf` sufiks ("nie ogranicznika") nie działają jako czynnik blokujący pamięci.  
   
- Funkcje wewnętrzne z `_np` sufiks ("nie pobierania z wyprzedzeniem") uniemożliwiają operacji pobierania z wyprzedzeniem możliwe wstawiane przez kompilator.  
+ Funkcje wewnętrzne z `_np` sufiks ("nie pobieranie z wyprzedzeniem") uniemożliwić operacji możliwe pobieranie z wyprzedzeniem wstawiane przez kompilator.  
   
- Na platformach firmy Intel, które obsługują instrukcje Elision blokady sprzętu (HLE), funkcje wewnętrzne z `_HLEAcquire` i `_HLERelease` sufiksy obejmują wskazówkę procesora, która umożliwia przyspieszanie wydajności przez wyeliminowanie krok blokady zapisu sprzętu. Jeśli te funkcje wewnętrzne są nazywane na platformach, które nie obsługują HLE, wskazówka zostanie zignorowany.  
+ Na platformach firmy Intel, obsługujące instrukcje pominięcia blokady sprzętu (HLE), funkcje wewnętrzne z `_HLEAcquire` i `_HLERelease` sufiksy obejmują wskazówkę procesora, który może przyspieszyć wydajność, eliminując krok blokady zapisu w sprzęcie. Jeśli te funkcje wewnętrzne są wywoływane na platformach, które nie obsługują HLE, wskazówka zostanie zignorowany.  
   
 ## <a name="example"></a>Przykład  
   
@@ -208,7 +208,7 @@ int main()
 0xffff0000 0xffff00 0xff00ff00  
 ```  
   
-**KOŃCOWY określonych firmy Microsoft**  
+**END specyficzny dla Microsoft**  
   
 ## <a name="see-also"></a>Zobacz też  
  [Funkcje wewnętrzne kompilatora](../intrinsics/compiler-intrinsics.md)   

@@ -17,17 +17,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c4fd8aebb3f9a4f0078c8174aa25b9abb9378f1b
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 3f70588ca17a2bde34de6a16b62b18fa6125b08c
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33333632"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42465711"
 ---
 # <a name="mmcvttsssi64x"></a>_mm_cvttss_si64x
 **Microsoft Specific**  
   
- Emituje x64 rozszerzony wersji Konwertuj numerem Floating-Point pojedynczej precyzji obcięcie do 64-bitową liczbę całkowitą (`cvttss2si`) instrukcji.  
+ Emituje x64 rozszerzona wersja Convert numerem zmiennopozycyjna pojedynczej precyzji obcinanie do 64-bitowa liczba całkowita (`cvttss2si`) instrukcji.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -42,20 +42,20 @@ __int64 _mm_cvttss_si64x(
  `__m128` Struktury zawierającej wartości zmiennoprzecinkowych pojedynczej precyzji.  
   
 ## <a name="return-value"></a>Wartość zwracana  
- Wynik konwersji pierwszej wartości zmiennoprzecinkowej na 64-bitową liczbę całkowitą.  
+ Wynik konwersji pierwsza wartość zmiennoprzecinkowa na 64-bitową liczbę całkowitą.  
   
 ## <a name="requirements"></a>Wymagania  
   
-|— Wewnętrzne|Architektura|  
+|Wewnętrzne|Architektura|  
 |---------------|------------------|  
-|`_mm_cvttss_si64x`|[!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
+|`_mm_cvttss_si64x`|X64|  
   
- **Plik nagłówka** \<intrin.h >  
+ **Plik nagłówkowy** \<intrin.h >  
   
 ## <a name="remarks"></a>Uwagi  
- Wewnętrzne różni się od `_mm_cvtss_si64x` tylko w tym niedokładnymi konwersje są obcinane kierunku zera. Ponieważ `__m128` rejestru XMM reprezentuje strukturę, instrukcji wygenerowany przenosi dane z rejestru XMM do pamięci systemowej.  
+ Wewnętrzne różni się od `_mm_cvtss_si64x` tylko dlatego, że niedokładny konwersje są obcinane w kierunku zera. Ponieważ `__m128` struktury reprezentuje rejestru XMM, instrukcji generowane przenosi dane z rejestru XMM do pamięci systemowej.  
   
- Ta procedura jest dostępna tylko wewnętrznie.  
+ Ta procedura jest dostępna wyłącznie jako wewnętrzna.  
   
 ## <a name="example"></a>Przykład  
   
@@ -91,7 +91,7 @@ int main()
 101  
 ```  
   
-**KOŃCOWY określonych firmy Microsoft**  
+**END specyficzny dla Microsoft**  
   
 ## <a name="see-also"></a>Zobacz też  
  [__m128](../cpp/m128.md)   

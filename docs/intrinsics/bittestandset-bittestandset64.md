@@ -21,17 +21,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 928391912d325faaf2e70a27519fdf969539fbca
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 02051010741ff1f70f1be8d94dff0179b4d2aee2
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33337642"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42465895"
 ---
 # <a name="bittestandset-bittestandset64"></a>_bittestandset, _bittestandset64
 **Microsoft Specific**  
   
- Generowanie instrukcji, która sprawdza, czy bit `b` adresu `a`, zwraca bieżącą wartość i ustawia bit do 1.  
+ Generowanie instrukcji, która sprawdza, czy bit `b` adresu `a`, zwraca bieżącą wartość i ustawia bit na 1.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -47,26 +47,26 @@ unsigned char _bittestandset64(
 ```  
   
 #### <a name="parameters"></a>Parametry  
- [w, out] `a`  
+ [out w] `a`  
  Wskaźnik do pamięci do sprawdzenia.  
   
  [in] `b`  
- Pozycja bit do testowania.  
+ Pozycja bitu do testowania.  
   
 ## <a name="return-value"></a>Wartość zwracana  
  Bit na określonej pozycji.  
   
 ## <a name="requirements"></a>Wymagania  
   
-|— Wewnętrzne|Architektura|  
+|Wewnętrzne|Architektura|  
 |---------------|------------------|  
-|`_bittestandset`|x86, ARM, [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
-|`_bittestandset64`|[!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
+|`_bittestandset`|x86, ARM, x64|  
+|`_bittestandset64`|X64|  
   
- **Plik nagłówka** \<intrin.h >  
+ **Plik nagłówkowy** \<intrin.h >  
   
 ## <a name="remarks"></a>Uwagi  
- Ta procedura jest dostępna tylko wewnętrznie.  
+ Ta procedura jest dostępna wyłącznie jako wewnętrzna.  
   
 ## <a name="example"></a>Przykład  
   
@@ -153,7 +153,7 @@ Flags: 0x4
 Flags: 0x0  
 ```  
   
-**KOŃCOWY określonych firmy Microsoft**  
+**END specyficzny dla Microsoft**  
   
 ## <a name="see-also"></a>Zobacz też  
  [Funkcje wewnętrzne kompilatora](../intrinsics/compiler-intrinsics.md)

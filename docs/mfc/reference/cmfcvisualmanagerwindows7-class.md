@@ -20,15 +20,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 17ec3560e7faf8c49f410437c79609bfb871a9c9
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: 58772f3690a68dc3a0d22c2db863fc7ad4904a1c
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37849952"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42465520"
 ---
 # <a name="cmfcvisualmanagerwindows7-class"></a>Klasa CMFCVisualManagerWindows7
-`CMFCVisualManagerWindows7` Nadaje aplikacji wygląd [!INCLUDE[win7](../../build/includes/win7_md.md)] aplikacji.  
+`CMFCVisualManagerWindows7` Nadaje aplikacji wygląd aplikacji Windows 7.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -103,7 +103,7 @@ class CMFCVisualManagerWindows7 : public CMFCVisualManagerWindows;
 |`CMFCVisualManagerWindows7::SetStyle`|Ustawia schemat kolorów `CMFCVisualManagerWindows7` graficznego interfejsu użytkownika.|  
   
 ## <a name="remarks"></a>Uwagi  
- Użyj `CMFCVisualManagerWindows7` klasy, aby zmienić wygląd aplikacji do naśladowania domyślny [!INCLUDE[win7](../../build/includes/win7_md.md)] aplikacji. Ta klasa może być nieprawidłowy, jeśli aplikacja jest uruchomiona w wersji systemu Windows starszych niż [!INCLUDE[win7](../../build/includes/win7_md.md)]. W tym scenariuszu aplikacja używa domyślnego menedżera visual zdefiniowane w [CMFCVisualManager](../../mfc/reference/cmfcvisualmanager-class.md).  
+ Użyj `CMFCVisualManagerWindows7` klasy, aby zmienić wygląd aplikacji do naśladowania domyślną aplikację Windows 7. Ta klasa nie może być ważne, gdy aplikacja jest uruchomiona w wersji systemu Windows starszych niż Windows 7. W tym scenariuszu aplikacja używa domyślnego menedżera visual zdefiniowane w [CMFCVisualManager](../../mfc/reference/cmfcvisualmanager-class.md).  
   
  CMFCVisualManagerWindows7 dziedziczy na wiele sposobów zarówno [klasa CMFCVisualManagerWindows](../../mfc/reference/cmfcvisualmanagerwindows-class.md) i `CMFCVisualManager` klasy. Metody wymienione w poprzedniej sekcji są metodami jesteś nowym użytkownikiem `CMFCVisualManagerWindows7` klasy.  
   

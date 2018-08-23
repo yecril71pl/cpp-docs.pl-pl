@@ -18,17 +18,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 502425728fcd97d2ae8d2efe406dc73370de1272
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 5d0b28c855ab8a6f6da814ee17521a5ad7799993
+ms.sourcegitcommit: d4c803bd3a684d7951bf88dcecf1f14af43ae411
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33841775"
+ms.lasthandoff: 08/10/2018
+ms.locfileid: "42466124"
 ---
 # <a name="vtordisp"></a>vtordisp
-**Określonego języka C++**  
+**Określonego język C++**  
   
- Kontroluje dodanie ukrytego elementu członkowskiego przemieszczenia konstruktora/destruktora vtordisp.  
+Kontroluje dodanie ukrytego elementu członkowskiego przemieszczenia konstruktora/destruktora vtordisp.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -39,32 +39,33 @@ ms.locfileid: "33841775"
 #pragma vtordisp([push,] {on | off})  
 ```  
   
-#### <a name="parameters"></a>Parametry  
- `push`  
- Umieszcza bieżące ustawienie vtordisp w wewnętrznym stosie kompilatora i ustawia nowe ustawienie vtordisp na `n`.  Jeśli nie określono `n`, bieżące ustawienie vtordisp nie zostanie zmienione.  
+### <a name="parameters"></a>Parametry  
+*push*  
+Umieszcza bieżące ustawienie vtordisp na wewnętrznym stosie kompilatora i ustawia nowe ustawienie vtordisp na *n*.  Jeśli *n* nie zostanie określony, bieżące ustawienie vtordisp nie ulega zmianie.  
   
- `pop`  
- Usuwa górny rekord z wewnętrznego stosu kompilatora i przywraca ustawienie vtordisp na usuniętą wartość.  
+*POP*  
+Usuwa górny rekord z wewnętrznego stosu kompilatora i przywraca ustawienie vtordisp na usuniętą wartość.  
   
- `n`  
- Określa nową wartość dla ustawienia vtordisp. Możliwe wartości to 0, 1 lub 2, odpowiadające opcjom kompilatora /vd0, /vd1 i /vd2. Aby uzyskać więcej informacji, zobacz [/vd (Wyłącz przemieszczanie konstrukcji)](../build/reference/vd-disable-construction-displacements.md).  
+*N*  
+Określa nową wartość dla ustawienia vtordisp. Możliwe wartości to 0, 1 lub 2, odpowiadające `/vd0`, `/vd1`, i `/vd2` opcje kompilatora. Aby uzyskać więcej informacji, zobacz [/vd (Wyłącz przemieszczanie konstrukcji)](../build/reference/vd-disable-construction-displacements.md).  
   
- `on`  
- Odpowiednikiem `#pragma vtordisp(1)`.  
+*on*  
+Odpowiednikiem `#pragma vtordisp(1)`.  
   
- `off`  
- Odpowiednikiem `#pragma vtordisp(0)`.  
+*Wyłączone*  
+Odpowiednikiem `#pragma vtordisp(0)`.  
   
 ## <a name="remarks"></a>Uwagi  
- Pragma `vtordisp` ma zastosowanie tylko do kodu, który korzysta z baz wirtualnych. Jeśli w klasie pochodnej przeciążono funkcję wirtualną, która jest dziedziczona z wirtualnej klasy bazowej, oraz jeśli konstruktor lub destruktor klasy pochodnej wywoła tę funkcję za pomocą wskaźnika do wirtualnej klasy bazowej, kompilator może wprowadzić dodatkowe ukryte pola `vtordisp` do klas z bazami wirtualnymi.  
+ 
+**Vtordisp** pragma ma zastosowanie tylko do kodu, który korzysta z baz wirtualnych. Jeśli klasie pochodnej przeciążono funkcję wirtualną, która jest dziedziczona z wirtualnej klasy bazowej, a jeśli Konstruktor lub destruktor klasy pochodnej wywoła tę funkcję za pomocą wskaźnika do wirtualnej klasy bazowej, kompilator może powodować dodatkowych ukrytych **vtordisp** pola do klas z bazami wirtualnymi.  
   
- Pragma `vtordisp` wpływa na układ klas, które po niej występują. Opcje /vd0, /vd1 i /vd2 określają jednakowe zachowanie dla kompletnych modułów. Określenie `0` lub `off` powoduje pominięcie ukrytych elementów członkowskich `vtordisp`. Wyłącz `vtordisp` tylko jeśli nie istnieje żadna możliwość, aby konstruktory i destruktory klasy wywoływały funkcje wirtualne obiektu wskazywanego przez wskaźnik `this`.  
+**Vtordisp** pragma wpływa na układ klas, które występują po nim. `/vd0`, `/vd1`, I `/vd2` opcje określają jednakowe zachowanie dla kompletnych modułów. Określanie 0 lub *poza* powoduje pominięcie ukrytych **vtordisp** elementów członkowskich. Wyłącz **vtordisp** tylko w przypadku nie możliwość, że konstruktory i destruktory klasy wywołanie wirtualne funkcje obiektu wskazywanego przez **to** wskaźnika.  
   
- Określenie `1` lub `on`, domyślnie, włącza ukryte elementy członkowskie `vtordisp`, gdy jest to niezbędne.  
+Określanie 1 lub *na*, domyślnie, włącza ukryte **vtordisp** elementów członkowskich, gdy jest to konieczne.  
   
- Określanie `2` umożliwia ukrytego `vtordisp` członków dla wszystkich wirtualnych typów podstawowych z funkcji wirtualnych.  `vtordisp(2)` może być konieczne zapewnić prawidłowe działanie `dynamic_cast` na częściowo skonstruowanym obiektem. Aby uzyskać więcej informacji, zobacz [C4436 ostrzeżenie kompilatora (poziom 1)](../error-messages/compiler-warnings/compiler-warning-level-1-c4436.md).  
+Określanie 2 Włącza ukryte **vtordisp** elementów członkowskich dla wszystkich baz wirtualnych z funkcjami wirtualnymi.  `vtordisp(2)` może być konieczne do zapewnienia prawidłowej wydajności **dynamic_cast** na częściowo skonstruowanym obiektem. Aby uzyskać więcej informacji, zobacz [ostrzeżenie kompilatora (poziom 1) C4436](../error-messages/compiler-warnings/compiler-warning-level-1-c4436.md).  
   
- `#pragma vtordisp()` bez argumentów przywraca ustawienie vtordisp do ustawienia początkowego.  
+`#pragma vtordisp()` bez argumentów przywraca ustawienie vtordisp do ustawienia początkowego.  
   
 ```  
 #pragma vtordisp(push, 2)  
@@ -72,7 +73,8 @@ class GetReal : virtual public VBase { ... };
 #pragma vtordisp(pop)  
 ```  
   
- **KOŃCOWY określonego języka C++**  
+**KONIEC określonego języka C++**  
   
 ## <a name="see-also"></a>Zobacz też  
- [Dyrektywy pragma i słowo kluczowe __Pragma](../preprocessor/pragma-directives-and-the-pragma-keyword.md)
+ 
+[Dyrektywy pragma i słowo kluczowe __Pragma](../preprocessor/pragma-directives-and-the-pragma-keyword.md)

@@ -44,12 +44,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 111b5ea4f6c25aab2abc4897c9e4bda2a14362a9
-ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
+ms.openlocfilehash: 73be0ee1987aa60d91976c1a4bbb73ebf66e5c1c
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/30/2018
-ms.locfileid: "39336943"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42465705"
 ---
 # <a name="cdbpropidset-class"></a>CDBPropIDSet — Klasa
 Dziedziczy `DBPROPIDSET` struktury i dodaje konstruktora, który inicjuje pola klucza, jak również [addpropertyid —](../../data/oledb/cdbpropidset-addpropertyid.md) dostęp do metody.  
@@ -80,7 +80,7 @@ class CDBPropIDSet : public tagDBPROPIDSET
 |[operator =](#op_equal)|Przypisuje zawartość jednym Identyfikatorem właściwości zestawu do drugiego.|  
   
 ## <a name="remarks"></a>Uwagi  
- Użyj konsumentów OLE DB `DBPROPIDSET` struktur, aby przekazać tablicę identyfikatorów właściwości, dla których użytkownik chce uzyskać informacje o właściwościach. Właściwości określone w pojedynczej [DBPROPIDSET](https://msdn.microsoft.com/library/ms717981.aspx) struktury należą do zestawu jednej właściwości.  
+ Użyj konsumentów OLE DB `DBPROPIDSET` struktur, aby przekazać tablicę identyfikatorów właściwości, dla których użytkownik chce uzyskać informacje o właściwościach. Właściwości określone w pojedynczej [DBPROPIDSET](/previous-versions/windows/desktop/ms717981\(v=vs.85\)) struktury należą do zestawu jednej właściwości.  
 
 ## <a name="addpropertyid"></a> CDBPropIDSet::AddPropertyID
 Dodaje identyfikator właściwości zestawu identyfikator właściwości.  
@@ -96,7 +96,7 @@ bool AddPropertyID(DBPROPID propid) throw();
  [in] Ustaw identyfikator właściwości, które mają zostać dodane do Identyfikatora właściwości.  
 
 ## <a name="cdbpropidset"></a> CDBPropIDSet::CDBPropIDSet
-Konstruktor. Inicjuje `rgProperties`, `cProperties`oraz (opcjonalnie) `guidPropertySet` pola [DBPROPIDSET](https://msdn.microsoft.com/library/ms717981.aspx) struktury.  
+Konstruktor. Inicjuje `rgProperties`, `cProperties`oraz (opcjonalnie) `guidPropertySet` pola [DBPROPIDSET](/previous-versions/windows/desktop/ms717981\(v=vs.85\)) struktury.  
   
 ### <a name="syntax"></a>Składnia  
   
@@ -126,7 +126,7 @@ void SetGUID(const GUID& guid) throw();
   
 #### <a name="parameters"></a>Parametry  
  *Identyfikator GUID*  
- [in] Identyfikator GUID służący do ustawiania `guidPropertySet` pole [DBPROPIDSET](https://msdn.microsoft.com/library/ms717981.aspx) struktury.  
+ [in] Identyfikator GUID służący do ustawiania `guidPropertySet` pole [DBPROPIDSET](/previous-versions/windows/desktop/ms717981\(v=vs.85\)) struktury.  
   
 ### <a name="remarks"></a>Uwagi  
  To pole można ustawić za [Konstruktor](../../data/oledb/cdbpropidset-cdbpropidset.md) także. Wywołaj tę funkcję, jeśli używasz domyślnego konstruktora dla tej klasy.  

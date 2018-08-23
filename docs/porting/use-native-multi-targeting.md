@@ -1,5 +1,5 @@
 ---
-title: Użyj natywnego wielowersyjności kodu w programie Visual Studio do kompilacji projektów starego | Dokumentacja firmy Microsoft
+title: Użyj natywnej wielowersyjności kodu w programie Visual Studio do kompilacji starych projektów | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,72 +15,72 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2df0bee37a0bcf0e8162fa692be79bd57b16b3cf
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: bb9d7b950e4c38ea53db6e459edfa1a179eb971d
+ms.sourcegitcommit: e9ce38decc9f986edab5543de3464b11ebccb123
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33846428"
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "42465039"
 ---
-# <a name="use-native-multi-targeting-in-visual-studio-to-build-old-projects"></a>Użyj natywnego wielowersyjności kodu w programie Visual Studio do kompilacji projektów starego
+# <a name="use-native-multi-targeting-in-visual-studio-to-build-old-projects"></a>Użyj natywnej wielowersyjności kodu w programie Visual Studio do kompilacji starych projektów
 
-Zaleca się normalnie, aktualizowanie projektów podczas instalowania najnowszej wersji programu Visual Studio. Aktualizowanie projektów i kod koszt jest zazwyczaj więcej niż przesunięcie przez zalet nowego środowiska IDE, kompilator, biblioteki i narzędzia. Wiemy, że nie można zaktualizować niektórych projektów. Masz pliki binarne, które są powiązane z starsza bibliotek i platform, że przyczyn konserwacji nie można uaktualnić. Kod może używać konstrukcji języka niestandardowych, które spowoduje przerwanie, jeśli został on przeniesiony do nowszej kompilatora. Kod może polegać na 3 bibliotek strona skompilowanego dla określonej wersji programu Visual C++. Lub może powodować biblioteki dla innych osób, które muszą wskazywać określonej starszej wersji programu Visual C++.
+Normalnie firma Microsoft zaleca, zaktualizuj swoje projekty, po zainstalowaniu najnowszej wersji programu Visual Studio. Koszt aktualizacji projektów i kodu jest zazwyczaj bardziej niż przesunięcie przez zalet nowego środowiska IDE, kompilatora, bibliotek i narzędzi. Jednak wiemy, że nie można zaktualizować niektórych projektów. Masz plików binarnych, które są powiązane z starsze bibliotek i platform, ze względów konserwacji nie można uaktualnić. Twój kod może używać konstrukcji językowych niestandardowych, które zaburzyłaby, jeśli został przeniesiony do kompilatora nowszą. Twój kod może polegać na 3 bibliotek innych firm dla określonej wersji programu Visual C++. Lub może generować biblioteki dla innych osób, które musi być przeznaczony dla określonego starszej wersji programu Visual C++.
 
-Na szczęście można użyć programu Visual Studio 2017 i programu Visual Studio 2015 do kompilacji projektów tego docelowego starsze procesami kompilatora i bibliotek. Uaktualnienie programu Visual Studio 2010, Visual Studio 2012, Visual Studio 2013 lub projektu programu Visual Studio 2015 mógł korzystać z nowych funkcji w środowisku IDE nie jest konieczne:
+Na szczęście można użyć programu Visual Studio 2017 i Visual Studio 2015 do tworzenia projektów, że zestawy narzędzi kompilatora starszych docelowych i bibliotek. Uaktualnienie programu Visual Studio 2010, Visual Studio 2012, Visual Studio 2013 lub projektu programu Visual Studio 2015 z zalet nowych funkcji w środowisku IDE nie jest konieczne:
 
- - Nowe funkcje refaktoryzacji C++ i eksperymentalną edytora
- - Nowe narzędzia diagnostyczne debugera okno i w oknie Lista błędów
- - Revamped punktów przerwania, wyjątki okna i nowych wskazówek
- - Nowe narzędzia nawigacji i wyszukiwanie kodu
- - Nowe poprawki szybkie C++ i rozszerzenia narzędzi wydajności.
+  - Nowe możliwości refaktoryzacji C++ i funkcji eksperymentalnych edytora
+  - Nowe narzędzia diagnostyczne jest debugera okno i okno Lista błędów
+  - Całkiem nowe punkty przerwania, okno wyjątków i nowych funkcji PerfTips
+  - Nowe narzędzia nawigacji i wyszukiwanie kodu
+  - Nowe C++ szybkich poprawek i rozszerzenia Productivity Power Tools.
 
-Możesz też określić projektów programu Visual Studio 2008, ale nie można używać bez zmian. Aby uzyskać więcej informacji zapoznaj się z instrukcjami w sekcji Visual Studio 2008.
+Można również przeznaczać projektów programu Visual Studio 2008, ale nie można ich używać bez zmian. Aby uzyskać więcej informacji, zobacz **instrukcje dotyczące programu Visual Studio 2008** sekcji.
 
-Najnowsze wersje programu Visual Studio obsługują macierzysty multi-targeting i dwustronną komunikację projektów. Natywny multi-targeting jest możliwość kompilować przy użyciu procesami zainstalowanych przez poprzednie wersje programu Visual Studio IDE najnowsze. Dwustronną komunikację jest możliwość ładowania projektów utworzonych za pomocą poprzedniej wersji IDE bez wprowadzania żadnych zmian w projekcie najnowsze IDE. Po zainstalowaniu najnowszej wersji programu Visual Studio side-by-side z istniejącej wersji, do tworzenia projektów za pomocą nowej wersji środowiska IDE z kompilatora i narzędzi z istniejącej wersji programu. Innych członków zespołu można nadal używać projektów w starszej wersji programu Visual Studio.
+Najnowsze wersje programu Visual Studio obsługuje natywna wielowersyjność i obustronne konwertowanie projektów. Natywna wielowersyjność jest możliwość tworzenia, za pomocą zestawów narzędzi zainstalowanych przez poprzednie wersje programu Visual Studio IDE najnowszych. Pełna zgodnooć wersji jest możliwość ładowania projektów utworzonych za pomocą poprzedniej wersji środowiska IDE bez wprowadzania żadnych zmian w projekcie najnowsze środowisko IDE. Po zainstalowaniu najnowszej wersji programu Visual Studio side-by-side przy użyciu istniejącej wersji umożliwia nową wersję środowiska IDE przy użyciu kompilatora i narzędzi z istniejącej wersji kompilowanie projektów. Inni członkowie zespołu mogą w dalszym ciągu używać projektów w starszej wersji programu Visual Studio.
 
-Użyj starszych zestawu narzędzi, można wykonać korzystać wielu z najnowszych funkcji IDE, ale nie najnowszych rozwiązań narzędzia kompilatora i bibliotek kompilacji C++. Na przykład nie będzie można używać nowych ulepszeń zgodność języka nowych debugowania i funkcji analizy kodu lub pobrania zwiększyć przepustowość kompilacji najnowszego zestawu narzędzi. Dostępne są także niektóre funkcje IDE, które są niezgodne z procesami starszej. Na przykład typ może brakować informacji w pamięci profilera, a operacja refaktoryzacji **Konwertuj na nieprzetworzony ciąg literały** generuje C ++ 11 zgodne kod, który nie będzie skompilować, korzystając z programu Visual Studio 2012 lub starszy procesami.
+Gdy używasz starszej zestawu narzędzi, możesz korzystać z zalet wiele z najnowszych funkcji środowiska IDE, ale nie najnowszych rozwiązań w menu Narzędzia kompilatora, biblioteki i kompilacji języka C++. Na przykład nie będzie mógł użyć nowe ulepszenia zgodności języka nowe debugowania i funkcji analizy kodu lub pobrać szybciej przepływność kompilacji najnowszy zestaw narzędzi. Dostępne są także niektóre funkcje środowiska IDE, które są niezgodne z starsze zestawy narzędzi. Na przykład typ może brakować informacji w Profiler pamięci i operacji refaktoryzacji **przekonwertować surowe Literały ciągu** generuje C ++ 11 zgodne kod, który nie będzie kompilacji podczas korzystania z programu Visual Studio 2012 lub starszy zestawy narzędzi.
 
-## <a name="how-to-use-native-multi-targeting-in-visual-studio"></a>Jak używać natywnego wielowersyjności kodu w programie Visual Studio
+## <a name="how-to-use-native-multi-targeting-in-visual-studio"></a>Jak używać natywnej wielowersyjności kodu w programie Visual Studio
 
-Po zainstalowaniu programu Visual Studio side-by-side z wersją starszą, otwórz istniejący projekt w nowej wersji programu Visual Studio. Po załadowaniu projektu programu Visual Studio zapyta, czy chcesz uaktualnić go do korzystania z najnowszych kompilatora C++ i bibliotek. Ponieważ projektu, aby zachować starsze kompilator i biblioteki należy wybrać **anulować** przycisku.
+Po zainstalowaniu programu Visual Studio side-by-side przy użyciu starszej wersji, otwórz istniejący projekt w nowej wersji programu Visual Studio. Po załadowaniu projektu programu Visual Studio pyta, czy chcesz uaktualnić go do korzystania z najnowszą wersję kompilatora C++ i bibliotek. Ponieważ projektu, aby zachować starszy kompilator i biblioteki należy wybrać **anulować** przycisku.
 
-Program Visual Studio jest trwały dotyczących uaktualniania projektu. Aby uniknąć wyświetlania okno dialogowe uaktualniania za każdym razem, gdy załadowanie projektu, można zdefiniować następującą właściwość w projektach, lub w plikach .props lub .targets ich importowania:
+Program Visual Studio jest trwały o uaktualnianiu projektu. Aby uniknąć wyświetlania okno dialogowe uaktualniania za każdym razem, gdy ładowanie projektu, można zdefiniować następującą właściwość w projekcie lub w plikach .props i .targets zaimportowali:
 
 `<VCProjectUpgraderObjectName>NoUpgrade</VCProjectUpgraderObjectName>`
 
 Należy usunąć tę właściwość, jeśli chcesz uaktualnić swoje projekty.
 
-Jeśli wybierzesz nie uaktualnić program Visual Studio nie zmienia plików rozwiązania lub projektu. Podczas kompilowania projektu wygenerowanych plików binarnych są w pełni zgodne z tymi, które zostały utworzone w starszej wersji programu Visual Studio. Jest to spowodowane Visual Studio korzysta z tej samej kompilatora C++ i łączy tej samej biblioteki środowiskiem IDE starsze dostarczonych z programem. Jest to Dlaczego okno dialogowe uaktualniania wyświetli ostrzeżenie, aby zachować starszej wersji programu Visual Studio zainstalowany, wybranie opcji **anulować**.
+Jeśli wybierzesz nie uaktualnić program Visual Studio nie wprowadza żadnych zmian w plikach rozwiązania lub projektu. Podczas tworzenia projektu, wygenerowane pliki binarne są w pełni zgodne z tymi, które są wbudowane ze starszą wersją programu Visual Studio. Jest to spowodowane programu Visual Studio używa tego samego kompilatora C++ i łączy ten sam bibliotek, które starsze zintegrowanego środowiska Projektowego dostarczane z programem. Jest to Dlaczego okno dialogowe uaktualniania wyświetli ostrzeżenie, aby zachować starszą wersję programu Visual Studio zainstalowany, wybranie opcji **anulować**.
 
 ## <a name="instructions-for-visual-studio-2008"></a>Instrukcje dotyczące programu Visual Studio 2008  
   
-Program Visual Studio 2008 oferowały własny system kompilacji dedykowanych wywołuje program VCBuild w języku C++. Począwszy od programu Visual Studio 2010, projektów Visual C++ zostały zmienione na Użyj programu MSBuild. Oznacza to, że musi przejść do kroku aktualizacji do tworzenia projektów programu Visual Studio 2008 w najnowszej wersji programu Visual Studio. Zaktualizowano projekt nadal generuje pliki binarne, które są w pełni zgodne z dane binarne utworzone za pomocą programu Visual Studio 2008 IDE.
+Program Visual Studio 2008 ma swój własny system kompilacji dedykowane dla języka C++ o nazwie **program VCBuild**. Począwszy od programu Visual Studio 2010 projektów Visual C++ zostały zmienione, aby użyć **MSBuild**. Oznacza to, należy przejść do kroku aktualizacji do tworzenia projektów programu Visual Studio 2008 w najnowszej wersji programu Visual Studio. Zaktualizowano projekt nadal generuje pliki binarne, które są w pełni zgodne z plikami binarnymi utworzone za pomocą programu Visual Studio 2008 IDE.
 
-Najpierw oprócz bieżącej wersji programu Visual Studio oraz programu Visual Studio 2010 należy zainstalować na tym samym komputerze co program Visual Studio 2008. Tylko program Visual Studio 2010 instaluje skrypty programu MSBuild, które są wymagane do projektów programu Visual Studio 2008. 
+Najpierw oprócz bieżącej wersji programu Visual Studio, Visual Studio 2010 należy zainstalować na tym samym komputerze co program Visual Studio 2008. Instaluje tylko program Visual Studio 2010 **MSBuild** skrypty, które są wymagane do projektów docelowych programu Visual Studio 2008. 
 
-Następnie należy zaktualizować program Visual Studio 2008 rozwiązanie i projekty do bieżącej wersji programu Visual Studio. Zaleca się utworzenie kopii zapasowej projektów i rozwiązań plików przed uaktualnieniem. Aby rozpocząć proces uaktualniania, otwórz rozwiązanie w bieżącej wersji programu Visual Studio. Gdy pojawi się monit uaktualniania, zapoznaj się z informacjami, a następnie wybierz **OK** uruchomiony w celu uaktualnienia. Jeśli masz więcej niż jednego projektu w rozwiązaniu, należy zaktualizować Kreator utworzy nowy .vcxproj projektu plików side-by-side z istniejącymi plikami .vcproj. Tak długo, jak również istnieje kopia oryginalnego pliku SLN, uaktualnienie nie ma innych wpływu na istniejących projektów programu Visual Studio 2008.
+Następnie należy zaktualizować program Visual Studio 2008 rozwiązanie i projekty do bieżącej wersji programu Visual Studio. Zaleca się, że utworzono kopię zapasową swoich projektach i plikach rozwiązania przed uaktualnieniem. Aby rozpocząć proces uaktualniania, otwórz rozwiązanie w bieżącej wersji programu Visual Studio. Po otrzymaniu monitu uaktualnienia, zapoznaj się z informacjami, a następnie wybierz **OK** uruchomiony w celu uaktualnienia. Jeśli masz więcej niż jednego projektu w rozwiązaniu, należy zaktualizować Kreator utworzy nowy .vcxproj projektu pliki side-by-side z istniejącymi plikami .vcproj. Tak długo, jak również zainstalowany kopię oryginalnego pliku .sln, uaktualnienie nie ma innych wpływu na istniejących projektów programu Visual Studio 2008.
 
-Po zakończeniu uaktualniania, jeśli raport dziennika zawiera błędy lub ostrzeżenia dla żadnego z projektów, ich należy dokładnie przejrzeć. Konwersja z program VCBuild MSBuild mogą powodować problemy. Upewnij się, poznanie i wdrożenie wszystkie elementy akcji wymienionych w raporcie. Aby uzyskać więcej informacji na raport dziennika uaktualniania i problemów, które mogą występować podczas konwertowania program VCBuild dla programu MSBuild, zobacz [C++ natywnego Wielowersyjności](https://blogs.msdn.microsoft.com/vcblog/2009/12/08/c-native-multi-targeting/) wpis w blogu.
+Po zakończeniu uaktualniania, jeśli raport dziennika zawiera błędy lub ostrzeżenia dla żadnego z projektów, dokładne zapoznanie się z nimi. Konwersja z **program VCBuild** do **MSBuild** mogą powodować problemy. Upewnij się, zrozumieć i zaimplementować żadnych czynności do wykonania wymienione w raporcie. Aby uzyskać więcej informacji na temat raportu dziennika uaktualniania i problemów, które mogą występować podczas konwertowania **program VCBuild** do **MSBuild**, zobacz ten [C++ natywna Wielowersyjność](https://blogs.msdn.microsoft.com/vcblog/2009/12/08/c-native-multi-targeting/) wpis w blogu.
 
-Po zakończeniu uaktualniania projektu i rozwiązaniu problemów w pliku dziennika, rozwiązania faktycznie dotyczy najnowszego zestawu narzędzi. Ostatni krok Zmień właściwości dla każdego projektu w rozwiązaniu do używania narzędzi Visual Studio 2008. Z rozwiązaniem załadowany w bieżącej wersji programu Visual Studio dla każdego projektu w rozwiązaniu, otwórz projekt **strony właściwości** okno dialogowe: kliknij prawym przyciskiem myszy projekt w **Eksploratora rozwiązań** , a następnie Wybierz **właściwości**. W **strony właściwości** okno dialogowe, zmień **konfiguracji** wartość z listy rozwijanej do **wszystkie konfiguracje**. W **właściwości konfiguracji**, wybierz pozycję **ogólne**, a następnie zmień **zestaw narzędzi platformy** do **programu Visual Studio 2008 (v90)**.
+Po zakończeniu procesu uaktualniania projektu, i zostały skorygowane problemy w pliku dziennika, rozwiązania faktycznie jest przeznaczony dla najnowszych narzędzi. Ostatni krok Zmień właściwości dla każdego projektu w rozwiązaniu, aby użyć zestawu narzędzi programu Visual Studio 2008. Dzięki rozwiązaniu załadowane w bieżącej wersji programu Visual Studio dla każdego projektu w rozwiązaniu, otwórz projekt **stron właściwości** okno dialogowe: kliknij prawym przyciskiem myszy nad projektem w **Eksploratora rozwiązań** a Wybierz **właściwości**. W **stron właściwości** okno dialogowe, zmiana **konfiguracji** wartość listy rozwijanej **wszystkie konfiguracje**. W **właściwości konfiguracji**, wybierz opcję **ogólne**, a następnie zmień **zestawu narzędzi platformy** do **programu Visual Studio 2008 (v90)**.
 
-Po tej zmianie program Visual Studio 2008 kompilator i biblioteki są używane do generowania dane binarne projektu podczas kompilowania rozwiązania w bieżącej wersji programu Visual Studio.
+Po tej zmianie kompilator programu Visual Studio 2008 i biblioteki są używane do generowania dane binarne projektu podczas kompilowania rozwiązania w bieżącej wersji programu Visual Studio.
 
-## <a name="install-an-older-visual-studio-toolset"></a>Zainstaluj starszą narzędzi Visual Studio
+## <a name="install-an-older-visual-studio-toolset"></a>Instalowanie starszej zestawu narzędzi Visual Studio
 
-Masz stary projekt Visual C++, która nie może lub nie chcesz uaktualnić, ale nie wersji narzędzi platformy odpowiadającego projektu. W takim przypadku można pobrać zestawu narzędzi, można zainstalować wolnego Visual Studio Community lub wersji Express edition w wersji, które są potrzebne. Każda wersja programu Visual Studio z programu Visual Studio 2008 na można zainstalować kompilator, narzędzia i biblioteki należy określić tej wersji z bieżącego programu Visual Studio. Wyszukiwanie Microsoft Download Center, aby znaleźć i pobrać określonej wersji programu Visual Studio. Upewnij się, że wybrane opcje instalacji C++ podczas instalacji. Po zakończeniu instalacji uruchom danej wersji programu Visual Studio, aby zainstalować wszystkie aktualizacje. Wyszukaj także wszelkie zmiany aktualizacji systemu Windows, które mogą być wymagane. Ten proces sprawdzania aktualizacji może być konieczne powtórzyć więcej niż raz, aby pobrać każdej aktualizacji.
+Może być starego projektu Visual C++, który nie może lub nie chcesz uaktualnić, ale nie wersję zestawu narzędzi platformy zgodną z projektu. W takim przypadku można pobrać zestawu narzędzi, można zainstalować bezpłatnego programu Visual Studio Community i Express edition w wersji, których potrzebujesz. Każda wersja programu Visual Studio z programu Visual Studio 2008 na można zainstalować kompilator, narzędzia i biblioteki należy pod kątem tej wersji z bieżącego programu Visual Studio. Wyszukaj Microsoft Download Center, aby znaleźć i pobrać określonej wersji programu Visual Studio. Upewnij się, że wybrane opcje instalacji C++ podczas instalacji. Po zakończeniu instalacji uruchom tej wersji programu Visual Studio i zainstaluj wszystkie aktualizacje. Sprawdź także wszelkie zmiany w aktualizacji Windows, które mogą być wymagane. Ten proces sprawdzania aktualizacji może być konieczne powtórzenie więcej niż jeden raz do każdej zaktualizowania.
 
-Oto niektóre pliki programu Visual Studio, które może być konieczne:
+Oto niektóre pliki do pobrania programu Visual Studio, który może być konieczne:
 
-  - [Microsoft Visual Studio Community 2015](https://www.microsoft.com/en-us/download/details.aspx?id=48146)  
-  - [Microsoft Visual Studio Express 2013 for Windows Desktop z aktualizacją 5](https://www.microsoft.com/en-us/download/details.aspx?id=48131)  
-  - [Microsoft Visual Studio Express 2012 for Windows Desktop](https://www.microsoft.com/en-us/download/details.aspx?id=34673)  
-  - [Visual Studio 2012 Update 5](https://www.microsoft.com/en-us/download/details.aspx?id=34673)  
-  - [Microsoft Visual C++ 2010 Express (Instalator sieci Web)](https://download.microsoft.com/download/1/D/9/1D9A6C0E-FC89-43EE-9658-B9F0E3A76983/vc_web.exe)  
-  - [Dodatek Service Pack 1 dla programu Microsoft Visual Studio 2010](https://www.microsoft.com/en-us/download/details.aspx?id=23691)  
+  - [Microsoft Visual Studio Community 2015](https://www.microsoft.com/download/details.aspx?id=48146)  
+  - [Microsoft Visual Studio Express 2013 for Windows Desktop z aktualizacją Update 5](https://www.microsoft.com/download/details.aspx?id=48131)  
+  - [Microsoft Visual Studio Express 2012 for Windows Desktop](https://www.microsoft.com/download/details.aspx?id=34673)  
+  - [Visual Studio 2012 Update 5](https://www.microsoft.com/download/details.aspx?id=34673)  
+  - [Microsoft Visual C++ 2010 Express (Instalator internetowy)](https://download.microsoft.com/download/1/D/9/1D9A6C0E-FC89-43EE-9658-B9F0E3A76983/vc_web.exe)  
+  - [Dodatek Service Pack 1 dla programu Microsoft Visual Studio 2010](https://www.microsoft.com/download/details.aspx?id=23691)  
   - [Microsoft Visual C++ 2008 Express z dodatkiem SP1 (Instalator sieci Web)](https://go.microsoft.com/?linkid=7729279)  
 
-Po zainstalowaniu tych produktów **zestaw narzędzi platformy** właściwości listy rozwijanej w **strony właściwości** okno dialogowe jest automatycznie aktualizowany, aby wyświetlić dostępne procesami. Można teraz używać najnowszej wersji programu Visual Studio do tworzenia projektów dla tych starsze wersje zestawu narzędzi bez konwersji lub jej uaktualnienie.
+Po zainstalowaniu tych produktów **zestawu narzędzi platformy** właściwości listy rozwijanej w **stron właściwości** okno dialogowe jest automatycznie aktualizowana, aby wyświetlić dostępne zestawy narzędzi. Najnowszą wersję programu Visual Studio umożliwia teraz tworzenie projektów w przypadku starszych wersji zestawu narzędzi bez konieczności konwertowania lub jej uaktualnienie.
 
 ## <a name="see-also"></a>Zobacz też
 

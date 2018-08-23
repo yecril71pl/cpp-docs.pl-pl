@@ -33,15 +33,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 37d53932a283ea047d748985a1da348d9346ce1e
-ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
+ms.openlocfilehash: 604b28147c6881c7b2d62c388c5402f12bb71c78
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/30/2018
-ms.locfileid: "39336969"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42464748"
 ---
 # <a name="cenumerator-class"></a>Klasa CEnumerator
-Używa obiekt modułu wyliczającego OLE DB, który uwidacznia [ISourcesRowset](https://msdn.microsoft.com/library/ms715969.aspx) interfejsu, aby zwrócić zestaw wierszy opisujące wszystkich źródeł danych i modułów wyliczających.  
+Używa obiekt modułu wyliczającego OLE DB, który uwidacznia [ISourcesRowset](/previous-versions/windows/desktop/ms715969\(v=vs.85\)) interfejsu, aby zwrócić zestaw wierszy opisujące wszystkich źródeł danych i modułów wyliczających.  
   
 ## <a name="syntax"></a>Składnia
 
@@ -83,7 +83,7 @@ bool Find(TCHAR* szSearchName) throw();
  **wartość true,** Jeśli nazwa została znaleziona. W przeciwnym razie **false**.  
   
 ### <a name="remarks"></a>Uwagi  
- Ta nazwa jest mapowana do `SOURCES_NAME` członkiem [ISourcesRowset](https://msdn.microsoft.com/library/ms715969.aspx) interfejsu.  
+ Ta nazwa jest mapowana do `SOURCES_NAME` członkiem [ISourcesRowset](/previous-versions/windows/desktop/ms715969\(v=vs.85\)) interfejsu.  
   
 ## <a name="getmoniker"></a> CEnumerator::GetMoniker
 Analizuje nazwę wyświetlaną, aby wyodrębnić składnika ciąg, który można przekonwertować na krótka.  
@@ -108,7 +108,7 @@ HRESULT GetMoniker(LPMONIKER* ppMoniker,
  Standardowa HRESULT.  
 
 ## <a name="open"></a> CEnumerator::Open
-Wiąże monikera programu dla typu wyliczeniowego, jeśli jeden jest określony, a następnie pobiera zestaw wierszy dla modułu wyliczającego, wywołując [ISourcesRowset::GetSourcesRowset](https://msdn.microsoft.com/library/ms711200.aspx).  
+Wiąże monikera programu dla typu wyliczeniowego, jeśli jeden jest określony, a następnie pobiera zestaw wierszy dla modułu wyliczającego, wywołując [ISourcesRowset::GetSourcesRowset](/previous-versions/windows/desktop/ms711200\(v=vs.85\)).  
   
 ### <a name="syntax"></a>Składnia  
   

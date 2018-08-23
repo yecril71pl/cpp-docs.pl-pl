@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 32d9356c5c223df723626cf6ac07a7b5fda368de
-ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
+ms.openlocfilehash: 16f7be95c36970ce96d04ff357831294f3a3faf1
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/30/2018
-ms.locfileid: "39340654"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42464557"
 ---
 # <a name="ole-db-templates-attributes-and-other-implementations"></a>Szablony i atrybuty OLE DB oraz inne implementacje
 ## <a name="atl-ole-db-templates"></a>Szablony ATL OLE DB  
@@ -34,7 +34,7 @@ ms.locfileid: "39340654"
   
 -   **Szablony OLE DB Provider** używany do implementowania aplikacji serwera (dostawca) OLE DB.  
   
- Aby użyć szablonów OLE DB, należy zapoznać się z szablonów języka C++, COM i interfejsy OLE DB. Jeśli nie jesteś zaznajomiony z OLE DB, zobacz [OLE DB Podręcznik programisty](https://msdn.microsoft.com/library/ms713643.aspx).  
+ Aby użyć szablonów OLE DB, należy zapoznać się z szablonów języka C++, COM i interfejsy OLE DB. Jeśli nie jesteś zaznajomiony z OLE DB, zobacz [OLE DB Podręcznik programisty](/previous-versions/windows/desktop/ms713643\(v=vs.85\)).  
   
  Aby uzyskać więcej informacji możesz wykonywać następujące czynności:  
   
@@ -46,7 +46,7 @@ ms.locfileid: "39340654"
   
 -   Przejrzyj listę rzeczy, [przykłady szablonów OLE DB](http://msdn.microsoft.com/08958863-0b5f-41ad-ae99-fca7440c553c).  
   
--   Zobacz [OLE DB Podręcznik programisty](https://msdn.microsoft.com/library/ms713643.aspx) (w Windows SDK).  
+-   Zobacz [OLE DB Podręcznik programisty](/previous-versions/windows/desktop/ms713643\(v=vs.85\)) (w Windows SDK).  
   
 ## <a name="ole-db-attributes"></a>Atrybuty bazy danych OLE  
  [Atrybuty konsumentów OLE DB](../../windows/ole-db-consumer-attributes.md) zapewniają wygodny sposób, aby utworzyć konsumentów OLE DB. Atrybuty OLE DB wstrzyknięcie kodu, w oparciu o [szablony konsumentów OLE DB](../../data/oledb/ole-db-consumer-templates-reference.md) do utworzenia konsumentów OLE DB pracy i dostawców. Należy określić funkcji nieobsługiwanych przez atrybuty, można użyć szablonów OLE DB w połączeniu z atrybutów, w kodzie.  
@@ -55,7 +55,7 @@ ms.locfileid: "39340654"
  Biblioteka MFC zawiera jedną klasę [COleDBRecordView](../../mfc/reference/coledbrecordview-class.md), który wyświetla rekordy bazy danych w kontrolkach. Widok jest podłączone bezpośrednio do widoku formularza `CRowset` obiektu i wyświetla pola `CRowset` obiektu w kontrolkach szablonu okna dialogowego. Dostarcza również domyślna implementacja przechodzenia do pierwszego, dalej, poprzednie lub ostatni rekord a interfejsem aktualizowania rekordu aktualnie w widoku. Aby uzyskać więcej informacji, zobacz `COleDBRecordView`.  
   
 ## <a name="ole-db-sdk-interfaces"></a>OLE DB interfejsów zestawu SDK  
- W przypadkach, gdzie szablony OLE DB nie obsługują funkcji OLE DB należy użyć interfejsy OLE DB, samodzielnie. Aby uzyskać więcej informacji, zobacz [OLE DB Podręcznik programisty](https://msdn.microsoft.com/library/ms713643.aspx) w zestawie Windows SDK.  
+ W przypadkach, gdzie szablony OLE DB nie obsługują funkcji OLE DB należy użyć interfejsy OLE DB, samodzielnie. Aby uzyskać więcej informacji, zobacz [OLE DB Podręcznik programisty](/previous-versions/windows/desktop/ms713643\(v=vs.85\)) w zestawie Windows SDK.  
   
 ## <a name="see-also"></a>Zobacz też  
  [Programowanie OLE DB](../../data/oledb/ole-db-programming.md)   

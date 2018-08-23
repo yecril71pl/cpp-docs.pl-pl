@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: d211297d587fffcfc58ac57db6687dc8edde4344
-ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
+ms.openlocfilehash: ed63e89c2470691b677a234ba6b30e4f3ddd558d
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/30/2018
-ms.locfileid: "39336550"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42464566"
 ---
 # <a name="ole-db-programming"></a>Programowanie OLE DB
 Microsoft OLE DB jest technologią starszą; w przypadku nowych aplikacji jest wymaganego dostępu do danych interfejsu API dla połączonych serwerów SQL. Wszystkie inne nowe aplikacje powinny używać ODBC. Bieżący dostawca OLE DB dla programu SQL Server jest SQLNCLI11. BIBLIOTEKI DLL. Dostawcy jest nadal wysyłania w programie SQL Server 2016. Ta dokumentacja jest przeznaczona dla deweloperów, którzy są utrzymywanie istniejących aplikacji, które już używają OLE DB.
@@ -39,7 +39,7 @@ Microsoft OLE DB jest technologią starszą; w przypadku nowych aplikacji jest w
 |Za pomocą szablonów dostawców OLE DB (tematów pojęciowych)|[Szablony dostawców OLE DB](../../data/oledb/ole-db-provider-templates-cpp.md)|  
 |Klasy szablonów OLE DB i makra|[Szablony OLE DB — Kompendium](../../data/oledb/ole-db-templates.md) (Visual C++)|  
 |Atrybuty konsumentów OLE DB|[Atrybuty konsumentów OLE DB](../../windows/ole-db-consumer-attributes.md)|  
-|Interfejsy OLE DB|[Dokumentacja dotycząca OLE DB](https://msdn.microsoft.com/library/ms713643.aspx) (w zestawie Windows SDK)|  
+|Interfejsy OLE DB|[Dokumentacja dotycząca OLE DB](/previous-versions/windows/desktop/ms713643\(v=vs.85\)) (w zestawie Windows SDK)|  
 |Przykłady szablonów OLE DB|[Przykłady szablonów OLE DB](http://msdn.microsoft.com/08958863-0b5f-41ad-ae99-fca7440c553c)| 
 |Dostęp do danych programowania — Przegląd (Visual C++)|[Programowanie dostępu do danych](../../data/data-access-programming-mfc-atl.md)|  
 |Tematy dotyczące pojęć ODBC|[Open Database Connectivity (ODBC)](../../data/odbc/open-database-connectivity-odbc.md)|  

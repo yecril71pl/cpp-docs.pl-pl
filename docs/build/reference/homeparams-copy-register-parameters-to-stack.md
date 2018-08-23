@@ -17,15 +17,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3ffc9b37ebdcbb380186c7840f5ebd956708a2dc
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: bfd6b8c77d972eb4606e7095bc5f733e7db16ea6
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32374401"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42464979"
 ---
 # <a name="homeparams-copy-register-parameters-to-stack"></a>/homeparams (Kopiuj parametry rejestru do stosu)
-Wymusza parametry przekazywane w rejestrach były zapisywane miejsca na stosie wejścia funkcji.  
+Wymusza zapisanie parametrów przekazanych w rejestrach były zapisywane do ich lokalizacji na stosie wejściu do funkcji.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -34,23 +34,23 @@ Wymusza parametry przekazywane w rejestrach były zapisywane miejsca na stosie w
 ```  
   
 ## <a name="remarks"></a>Uwagi  
- Ta opcja kompilatora jest tylko w przypadku [!INCLUDE[vcprx64](../../assembler/inline/includes/vcprx64_md.md)] kompilatory (natywne i Międzyplatformowe kompilacji).  
+ Ta opcja kompilatora jest tylko w przypadku x64 kompilatory (kompilacja natywna i krzyżowa).  
   
- Jeśli parametry są przekazywane w [!INCLUDE[vcprx64](../../assembler/inline/includes/vcprx64_md.md)] kompilacji, konwencji wywoływania wymagają stackspace dla parametrów, nawet w przypadku parametry przekazywane w rejestrach. Aby uzyskać więcej informacji, zobacz [przekazywanie parametru](../../build/parameter-passing.md). Jednak domyślnie w kompilacji wydania Parametry rejestru nie zostaną zapisane na stos do obszaru jest już podany dla parametrów. Utrudnia debugowanie zoptymalizowanego (wersja) kompilacji programu.  
+ Gdy parametry są przekazywane w x64 kompilacji, Konwencje wywoływania wymagają stackspace dla parametrów, nawet w przypadku parametrów przekazanych w rejestrach. Aby uzyskać więcej informacji, zobacz [przekazywania parametru](../../build/parameter-passing.md). Jednak domyślnie kompilację wydania Parametry rejestru nie zostaną zapisane na stosie, do obszaru, który znajduje się już dla parametrów. Utrudnia to debugowanie zoptymalizowanego (wersja) kompilacji programu.  
   
- Dla kompilacji wydania, należy użyć **/homeparams** aby upewnić się, że można debugować aplikacji. **/ homeparams** oznacza uprzywilejowanych wydajności, ponieważ wymagają cyklu załadować Parametry rejestru do stosu.  
+ W przypadku kompilacji wydania, użyj **/homeparams** aby upewnić się, że można debugować aplikację. **/ homeparams** pociąga uprzywilejowanych wydajność, ponieważ jest wymagane cyklu załadować Parametry rejestru do stosu.  
   
- W kompilację debugowania stosu zawsze jest wypełniana parametry przekazywane w rejestrach.  
+ Do kompilacji debugowanej stos zawsze jest wypełniana parametry przekazywane w rejestrach.  
   
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Aby ustawić tę opcję kompilatora w środowisku programowania Visual Studio  
   
-1.  Otwórz projekt **strony właściwości** okno dialogowe. Aby uzyskać więcej informacji, zobacz [Praca z właściwościami projektu](../../ide/working-with-project-properties.md).  
+1.  Otwórz projekt **stron właściwości** okno dialogowe. Aby uzyskać więcej informacji, zobacz [Praca z właściwościami projektu](../../ide/working-with-project-properties.md).  
   
 2.  Kliknij przycisk **C/C++** folderu.  
   
-3.  Kliknij przycisk **wiersza polecenia** strony właściwości.  
+3.  Kliknij przycisk **wiersza polecenia** stronę właściwości.  
   
-4.  Typ opcji kompilatora w **dodatkowe opcje** pole.  
+4.  Wpisz opcje kompilatora w **dodatkowe opcje** pole.  
   
 ### <a name="to-set-this-compiler-option-programmatically"></a>Aby programowo ustawić tę opcję kompilatora  
   

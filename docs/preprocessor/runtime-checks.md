@@ -18,49 +18,49 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 817afaff738b2528bd165e814517c8399cd8a151
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: b20ea9dd12bfe4daff8e2e440c96a41c220aa742
+ms.sourcegitcommit: d4c803bd3a684d7951bf88dcecf1f14af43ae411
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33840667"
+ms.lasthandoff: 08/10/2018
+ms.locfileid: "42466330"
 ---
 # <a name="runtimechecks"></a>runtime_checks
-Wyłącza lub przywraca [/RTC](../build/reference/rtc-run-time-error-checks.md) ustawienia.  
+Wyłącza lub przywraca [usunęliśmy](../build/reference/rtc-run-time-error-checks.md) ustawienia.  
   
 ## <a name="syntax"></a>Składnia  
   
 ```  
-  
 #pragma runtime_checks( "[runtime_checks]", {restore | off} )  
 ```  
   
 ## <a name="remarks"></a>Uwagi  
- Nie można włączyć sprawdzanie za pomocą środowiska wykonawczego nie włączono opcję kompilatora. Na przykład, jeśli nie określisz rtcs, określając `#pragma runtime_checks( "s", restore)` nie dają weryfikacji ramki stosu.  
+ 
+Nie można włączyć sprawdzanie w czasie wykonania, która nie została włączona przy użyciu opcji kompilatora. Na przykład, jeśli nie określisz `/RTCs`, określanie `#pragma runtime_checks( "s", restore)` nie umożliwi Weryfikacja ramki stosu.  
   
- **Runtime_checks** pragma musi występować poza funkcją i obowiązuje w pierwszej funkcji zdefiniowane po pragma jest widoczna. **Przywrócić** i **poza** argumenty włączyć opcje określone w *runtime_checks* lub wyłączyć.  
+**Runtime_checks** pragma musi znajdować się poza funkcją i zaczyna obowiązywać przy pierwszej funkcji zdefiniowanych po pragmy jest widoczny. *Przywrócić* i *poza* argumenty Włącz opcje określone w **runtime_checks** lub wyłączyć.  
   
- *Runtime_checks* może być zero lub więcej parametrów pokazano w poniższej tabeli.  
+**Runtime_checks** może być zero lub jeden z parametrów pokazano w poniższej tabeli.  
   
 ### <a name="parameters-of-the-runtimechecks-pragma"></a>Parametry runtime_checks Pragma  
   
-|Parametrów|Typ sprawdzenia dostępności środowiska wykonawczego|  
+|Parametry|Typ kontroli czasu wykonywania|  
 |--------------------|-----------------------------|  
-|**s**|Umożliwia stosu weryfikacji (ramki).|  
-|**c**|Raporty, gdy wartość jest przypisany do typu danych mniejszych powoduje utratę danych.|  
-|**u**|Informuje, kiedy zmienna jest używana, zanim zostanie on zdefiniowany.|  
+|*s*|Włącza stosu (ramek) weryfikacji.|  
+|*c*|Raporty, gdy wartość jest przypisany do mniejszego typu danych, które powoduje utratę danych.|  
+|*u*|Raporty, gdy zmienna jest używana, zanim zostanie on zdefiniowany.|  
   
- Są to te same litery użyte z/RTC — opcja kompilatora. Na przykład:  
+Są to tych samych liter, w ramach `/RTC` — opcja kompilatora. Na przykład:  
   
 ```  
 #pragma runtime_checks( "sc", restore )  
 ```  
   
- Przy użyciu **runtime_checks** pragma z pustym ciągiem (**""**) to specjalny rodzaj dyrektywy:  
+Za pomocą **runtime_checks** dyrektywę pusty ciąg (**""**) jest specjalną forma dyrektywy:  
   
--   Jeśli używasz **poza** parametru włącza sprawdzanie błędów czasu wykonywania, off wymienione w powyższej tabeli.  
+- Kiedy używasz *poza* parametru włącza sprawdzanie błędów czasu wykonywania, wymienione w powyższej tabeli, wyłącz.  
   
--   Jeśli używasz **przywrócić** parametru, następuje zresetowanie sprawdzanie błędów czasu wykonywania do tych, które określono/RTC — opcja kompilatora.  
+- Kiedy używasz *przywrócić* parametru resetuje sprawdzanie błędów czasu wykonywania do tych, które określone z `/RTC` — opcja kompilatora.  
   
 ```  
 #pragma runtime_checks( "", off )  
@@ -71,4 +71,5 @@ Wyłącza lub przywraca [/RTC](../build/reference/rtc-run-time-error-checks.md) 
 ```  
   
 ## <a name="see-also"></a>Zobacz też  
- [Dyrektywy pragma i słowo kluczowe __Pragma](../preprocessor/pragma-directives-and-the-pragma-keyword.md)   
+ 
+[Dyrektywy pragma i słowo kluczowe __Pragma](../preprocessor/pragma-directives-and-the-pragma-keyword.md)   

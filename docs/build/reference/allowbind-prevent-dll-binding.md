@@ -1,5 +1,5 @@
 ---
-title: -ALLOWBIND (Zapobiegaj wiązaniu biblioteki DLL) | Dokumentacja firmy Microsoft
+title: -ALLOWBIND (Zapobiegaj powiązaniu biblioteki DLL) | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -22,12 +22,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 31968e27c46cb5ea220a4cfe19c36820c4cf8444
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: a0bff9ec6502aab5787c492a15e008bc29926163
+ms.sourcegitcommit: b92ca0b74f0b00372709e81333885750ba91f90e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32369643"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "42465261"
 ---
 # <a name="allowbind-prevent-dll-binding"></a>/ALLOWBIND (Zapobiegaj powiązaniu biblioteki DLL)
 ```  
@@ -35,15 +35,15 @@ ms.locfileid: "32369643"
 ```  
   
 ## <a name="remarks"></a>Uwagi  
- /ALLOWBIND:no nieco ustawia w nagłówku biblioteki DLL, który wskazuje plikowi Bind.exe, że obraz nie może być powiązana. Nie ma Biblioteka DLL była związana, jeśli jego została podpisana cyfrowo (powiązanie unieważnia podpis).  
+ /ALLOWBIND:no Ustawia bit w nagłówku biblioteki DLL, która wskazuje Bind.exe, że obraz nie może być powiązana. Nie ma Biblioteka DLL była związana, jeśli jego została podpisana cyfrowo (powiązanie unieważnia podpis).  
   
- Można edytować istniejące biblioteki DLL dla funkcji /ALLOWBIND z [/ALLOWBIND](../../build/reference/allowbind.md) — opcja polecenia EDITBIN narzędzia.  
+ Można edytować istniejącej biblioteki DLL dla funkcjonalność /ALLOWBIND [/ALLOWBIND](../../build/reference/allowbind.md) — opcja polecenia EDITBIN narzędzia.  
   
 ### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>Aby ustawić tę opcję konsolidatora w środowisku programowania Visual Studio  
   
-1.  Otwórz projekt **strony właściwości** okno dialogowe. Aby uzyskać więcej informacji, zobacz [Praca z właściwościami projektu](../../ide/working-with-project-properties.md).  
+1.  Otwórz projekt **stron właściwości** okno dialogowe. Aby uzyskać więcej informacji, zobacz [Praca z właściwościami projektu](../../ide/working-with-project-properties.md).  
   
-2.  Rozwiń węzeł **właściwości konfiguracji**, **konsolidatora**i wybierz **wiersza polecenia**.  
+2.  Rozwiń **właściwości konfiguracji**, **konsolidatora**i wybierz **wiersza polecenia**.  
   
 3.  Wprowadź `/ALLOWBIND:NO` do **dodatkowe opcje**.  
   
@@ -54,5 +54,5 @@ ms.locfileid: "32369643"
 ## <a name="see-also"></a>Zobacz też  
  [Ustawianie opcji konsolidatora](../../build/reference/setting-linker-options.md)   
  [Opcje konsolidatora](../../build/reference/linker-options.md)   
- [Funkcja BindImage](http://msdn.microsoft.com/library/windows/desktop/ms679278.aspx)   
- [Funkcja BindImageEx](http://msdn.microsoft.com/library/windows/desktop/ms679279.aspx)
+ [BindImage — funkcja](/windows/desktop/api/imagehlp/nf-imagehlp-bindimage)   
+ [BindImageEx — funkcja](/windows/desktop/api/imagehlp/nf-imagehlp-bindimageex)

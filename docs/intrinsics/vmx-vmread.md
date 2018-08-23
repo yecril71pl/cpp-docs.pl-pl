@@ -17,17 +17,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 81feddd403c96d0b3f9402aaa744d0c79dbec21e
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: eee9c82487159b9233999d17ff36c4aad3ef6445
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33340674"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42465797"
 ---
 # <a name="vmxvmread"></a>__vmx_vmread
 **Microsoft Specific**  
   
- Odczytuje określone pole z bieżącej struktury sterowania maszyny wirtualnej (VMCS) i umieszcza je w określonej lokalizacji.  
+ Odczytuje określone pole od bieżącej struktury sterowania maszyny wirtualnej (VMCS) i umieszcza je w określonej lokalizacji.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -43,28 +43,28 @@ unsigned char __vmx_vmread(
 |Parametr|Opis|  
 |---------------|-----------------|  
 |[in] `Field`|Pole VMCS do odczytu.|  
-|[in] `FieldValue`|Wskaźnik do lokalizację do przechowywania wartości odczytywać określone przez pole VMCS `Field` parametru.|  
+|[in] `FieldValue`|Wskaźnik do lokalizacji, do przechowywania wartości odczytywać określone przez pole VMCS `Field` parametru.|  
   
 ## <a name="return-value"></a>Wartość zwracana  
   
 |Wartość|Znaczenie|  
 |-----------|-------------|  
 |0|Operacja zakończyła się pomyślnie.|  
-|1|Operacja nie powiodła się ze stanem rozszerzonej dostępne w `VM-instruction error field` z bieżącym VMCS.|  
+|1|Operacja nie powiodła się z rozszerzonych informacji o stanie w `VM-instruction error field` z bieżącym VMCS.|  
 |2|Operacja nie powiodła się bez informacji o stanie.|  
   
 ## <a name="remarks"></a>Uwagi  
- `__vmx_vmread` Funkcji jest odpowiednikiem `VMREAD` maszyny instrukcji. Wartość `Field` parametr jest zakodowany indeksu jest opisany w dokumentacji firmy Intel. Aby uzyskać więcej informacji, wyszukaj dokumentu "Intel Virtualization Technical specyfikacji dla IA-32 Intel architektury," dokumentu numer C97063-002 na [Intel Corporation](http://go.microsoft.com/fwlink/p/?linkid=127) lokacji, a następnie zapoznaj się dodatku C tego dokumentu .  
+ `__vmx_vmread` Funkcji jest odpowiednikiem `VMREAD` machine instrukcji. Wartość `Field` parametr jest zakodowany indeksu jest opisane w dokumentacji firmy Intel. Aby uzyskać więcej informacji, wyszukaj dokumentu, "Intel Virtualization Technical Preview specyfikacji dla IA-32 architekturze firmy Intel," dokumentu numer C97063-002 w [Intel Corporation](http://go.microsoft.com/fwlink/p/?linkid=127) lokacji, a następnie zapoznaj się z dodatku C tego dokumentu .  
   
 ## <a name="requirements"></a>Wymagania  
   
-|— Wewnętrzne|Architektura|  
+|Wewnętrzne|Architektura|  
 |---------------|------------------|  
-|`__vmx_vmread`|[!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
+|`__vmx_vmread`|X64|  
   
- **Plik nagłówka** \<intrin.h >  
+ **Plik nagłówkowy** \<intrin.h >  
   
-**KOŃCOWY określonych firmy Microsoft**  
+**END specyficzny dla Microsoft**  
   
 ## <a name="see-also"></a>Zobacz też  
  [Funkcje wewnętrzne kompilatora](../intrinsics/compiler-intrinsics.md)   

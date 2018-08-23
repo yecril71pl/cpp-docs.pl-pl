@@ -1,6 +1,6 @@
 ---
-title: / DEPENDENTLOADFLAG (flagi zależnych obciążenia domyślny zestaw)
-description: Opcja /DEPENDENTLOADFLAG ustawia domyślną flagi dla biblioteki DLL ładowane przy użyciu metody LoadLibrary
+title: / DEPENDENTLOADFLAG (zestaw domyślne zależne obciążenia flagi)
+description: Opcja /DEPENDENTLOADFLAG ustawia domyślne flagi dla bibliotek DLL załadowane przy użyciu LoadLibrary
 ms.custom: ''
 ms.date: 05/18/2018
 ms.technology:
@@ -20,16 +20,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5a171f3c2edbbbf614a986ff78dd2405e734a1d1
-ms.sourcegitcommit: d1f576a0f59678edc3d93508cf46485138332178
+ms.openlocfilehash: 94f7667d7da8d8e9cd7ef38cb01d0f03b0da82e3
+ms.sourcegitcommit: b92ca0b74f0b00372709e81333885750ba91f90e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34753724"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "42465747"
 ---
-# <a name="dependentloadflag-set-default-dependent-load-flags"></a>/ DEPENDENTLOADFLAG (flagi zależnych obciążenia domyślny zestaw)
+# <a name="dependentloadflag-set-default-dependent-load-flags"></a>/ DEPENDENTLOADFLAG (zestaw domyślne zależne obciążenia flagi)
 
-Ustawia flagi obciążenia domyślne używane podczas `LoadLibrary` jest używana do załadowania biblioteki dll.
+Ustawia flagi obciążenia domyślne używane podczas `LoadLibrary` jest używana do ładowania bibliotek DLL.
 
 ## <a name="syntax"></a>Składnia
 
@@ -39,25 +39,25 @@ Ustawia flagi obciążenia domyślne używane podczas `LoadLibrary` jest używan
 
 |||
 |-|-|
-*loadflags*|Opcjonalna wartość 16-bitową liczbę całkowitą stylu "C" decimal, ósemkową zerem lub szesnastkowe z wiodącym `0x`, określa flagi zależnych obciążenia do zastosowania do wszystkich [LoadLibrary](https://go.microsoft.com/fwlink/p/?LinkID=259187) wywołania. Wartość domyślna to 0.
+*loadflags*|Opcjonalna wartość 16-bitową liczbę całkowitą "C" stylu w dziesiętnej, ósemkowej z zerem wiodącym lub szesnastkowe z wiodącym `0x`, określa flagi zależne obciążenia, aby mają zastosowanie do wszystkich [LoadLibrary](https://go.microsoft.com/fwlink/p/?LinkID=259187) wywołania. Wartość domyślna to 0.
 
 ## <a name="remarks"></a>Uwagi
 
-Ta opcja jest nowa w programie Visual Studio 2017 i ma zastosowanie tylko do aplikacji działających w systemie Windows 10 RS1 i nowszych wersjach. Ta opcja jest ignorowana przez inne systemy operacyjne, które Uruchom aplikację.
+Ta opcja jest nowa w programie Visual Studio 2017 i ma zastosowanie tylko do aplikacji działających w systemie Windows 10 RS1 lub nowszym. Ta opcja jest ignorowana przez inne systemy operacyjne, które uruchomią aplikację.
 
-W obsługiwanych systemach operacyjnych, ta opcja ma wpływ zmiany wywołania `LoadLibrary("dependent.dll")` do odpowiednikiem `LoadLibraryEx("dependent.dll", 0, loadflags)`. Wywołuje się [LoadLibraryEx](https://go.microsoft.com/fwlink/p/?LinkID=236091) nie dotyczy to. Ta opcja nie dotyczą rekursywnie bibliotek DLL załadowanych przez aplikację.
+W obsługiwanych systemach operacyjnych, ta opcja ma efekt zmiany wywołania `LoadLibrary("dependent.dll")` do równowartości `LoadLibraryEx("dependent.dll", 0, loadflags)`. Wywołania [LoadLibraryEx](https://go.microsoft.com/fwlink/p/?LinkID=236091) nie ma wpływu. Ta opcja nie dotyczy rekursywnie biblioteki DLL ładowane przez aplikację.
 
-Ta flaga można zapobiec DLL sadzenia ataków. Na przykład, jeśli aplikacja używa `LoadLibrary` załadować zależnej biblioteki DLL, osoba atakująca może DLL o takiej samej nazwie w roślin ścieżka wyszukiwania używana przez `LoadLibrary`, takich jak bieżącego katalogu, które mogą być sprawdzane przed katalogów systemu, jeśli jest w trybie awaryjnym wyszukiwania biblioteki DLL wyłączone. Tryb awaryjny wyszukiwania biblioteki DLL umieszcza użytkownika bieżącego katalogu później w kolejności wyszukiwania i jest domyślnie włączone w systemie Windows XP z dodatkiem SP2 lub nowszym. Aby uzyskać więcej informacji, zobacz [kolejność wyszukiwania biblioteki dll](https://msdn.microsoft.com/library/windows/desktop/ms682586.aspx).
+Ta flaga może służyć do uniemożliwić DLL sadzenia ataków. Na przykład, jeśli aplikacja używa `LoadLibrary` załadować zależnej biblioteki DLL, osoba atakująca może DLL o takiej samej nazwie w roślin ścieżka wyszukiwania używana przez `LoadLibrary`, takich jak bieżącego katalogu, które można kontrolować przed katalogów systemu, jeśli jest w trybie awaryjnym wyszukiwania biblioteki DLL wyłączone. Tryb awaryjny wyszukiwania biblioteki DLL umieszcza katalogu bieżącego użytkownika w dalszej kolejności wyszukiwania i jest włączona domyślnie w systemie Windows XP z dodatkiem SP2 i nowszych wersjach. Aby uzyskać więcej informacji, zobacz [kolejności przeszukiwania bibliotek dołączanych dynamicznie](/windows/desktop/Dlls/dynamic-link-library-search-order).
 
-Jeśli określono opcję łącze `/DEPENDENTLOADFLAG:0xA00` (wartości z połączonych flag `LOAD_LIBRARY_SEARCH_APPLICATION_DIR | LOAD_LIBRARY_SEARCH_SYSTEM32`), nawet po wyłączeniu trybu awaryjnego wyszukiwania biblioteki DLL na komputerze użytkownika, ścieżka wyszukiwania biblioteki DLL jest ograniczona do katalogów chronionych, które utrudnia osobie atakującej Zmiana. Dla informacji o flagach dostępne, a ich wartości numerycznych i symbolicznych, zobacz *wartość elementu dwFlags* opis parametru w [LoadLibraryEx](https://go.microsoft.com/fwlink/p/?LinkID=236091).
+W przypadku określenia opcji link `/DEPENDENTLOADFLAG:0xA00` (wartość flagi połączone `LOAD_LIBRARY_SEARCH_APPLICATION_DIR | LOAD_LIBRARY_SEARCH_SYSTEM32`), wówczas nawet jeśli tryb awaryjny wyszukiwania biblioteki DLL jest wyłączone na komputerze użytkownika, ścieżka wyszukiwania biblioteki DLL jest ograniczona do chronionego katalogi, które są utrudnia osobie atakującej Zmiana. Aby uzyskać informacji na temat flagi, które są dostępne, a ich symboliczne i liczbowe wartości, zobacz *Flagidw* opis parametru w [LoadLibraryEx](https://go.microsoft.com/fwlink/p/?LinkID=236091).
 
-### <a name="to-set-the-dependentloadflag-linker-option-in-the-visual-studio-development-environment"></a>Ustawianie opcji konsolidatora DEPENDENTLOADFLAG w środowisku projektowym Visual Studio
+### <a name="to-set-the-dependentloadflag-linker-option-in-the-visual-studio-development-environment"></a>Aby ustawić opcję konsolidatora DEPENDENTLOADFLAG w środowisku programowania Visual Studio
 
-1. Otwórz projekt **strony właściwości** okno dialogowe. Aby uzyskać więcej informacji, zobacz [Ustawianie właściwości projektu Visual C++](../../ide/working-with-project-properties.md).
+1. Otwórz projekt **stron właściwości** okno dialogowe. Aby uzyskać więcej informacji, zobacz [ustawienie właściwości projektu Visual C++](../../ide/working-with-project-properties.md).
 
-1. Wybierz **właściwości konfiguracji** > **konsolidatora** > **wiersza polecenia** strony właściwości.
+1. Wybierz **właściwości konfiguracji** > **konsolidatora** > **wiersza polecenia** stronę właściwości.
 
-1. Wybierz opcję w **dodatkowe opcje**.
+1. Wpisz opcje w **dodatkowe opcje**.
 
 ### <a name="to-set-this-linker-option-programmatically"></a>Aby programowo ustawić tę opcję konsolidatora
 
@@ -67,8 +67,8 @@ Jeśli określono opcję łącze `/DEPENDENTLOADFLAG:0xA00` (wartości z połąc
 
 - [Ustawianie opcji konsolidatora](setting-linker-options.md)
 - [Opcje konsolidatora](linker-options.md)
-- [Jak połączyć niejawnie z biblioteki DLL](../linking-an-executable-to-a-dll.md#linking-implicitly)
-- [Określić jakiej metody łączenia użyć](../linking-an-executable-to-a-dll.md#determining-which-linking-method-to-use)
+- [Jak połączyć niejawnie biblioteki DLL](../linking-an-executable-to-a-dll.md#linking-implicitly)
+- [Określić, której metody łączenia użyjesz](../linking-an-executable-to-a-dll.md#determining-which-linking-method-to-use)
 - [LoadLibrary](https://go.microsoft.com/fwlink/p/?LinkID=259187)
 - [LoadLibraryEx](https://go.microsoft.com/fwlink/p/?LinkID=236091)
-- [Kolejność wyszukiwania biblioteki dll](https://msdn.microsoft.com/library/windows/desktop/ms682586.aspx)
+- [Kolejności przeszukiwania bibliotek dołączanych dynamicznie](/windows/desktop/Dlls/dynamic-link-library-search-order)

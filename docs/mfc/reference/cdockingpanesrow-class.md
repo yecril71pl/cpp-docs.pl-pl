@@ -100,17 +100,17 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 42680d4cd79c5079703a94361403efd858ef80f2
-ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
+ms.openlocfilehash: 128334398b268c91ec7e6b938bcbd0d2e6e37dd0
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/26/2018
-ms.locfileid: "36955270"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42465988"
 ---
 # <a name="cdockingpanesrow-class"></a>Klasa CDockingPanesRow
-Zarządza listą okienka, które znajdują się w tym samym poziomie lub pionie wierszu (kolumna) lokacji dokowania.  
+Zarządza listą okienek, które znajdują się w tej samej poziomym lub pionowym wierszu (kolumnie) witryny dokowania.  
 
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+ Aby uzyskać więcej informacji, zobacz kod źródłowy znajdujący się w **VC\\atlmfc\\src\\mfc** folder instalacji programu Visual Studio.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -132,7 +132,7 @@ class CDockingPanesRow : public CObject
 |----------|-----------------|  
 |[CDockingPanesRow::AddPane](#addpane)||  
 |[CDockingPanesRow::AddPaneFromRow](#addpanefromrow)||  
-|[CDockingPanesRow::ArrangePanes](#arrangepanes)|Rozmieszcza okienka w wierszu zgodnie z określonym margines i parametry odstępów.|  
+|[CDockingPanesRow::ArrangePanes](#arrangepanes)|Rozmieszcza okienka, w wierszu zgodnie z określonym margines i parametry odstępy.|  
 |[CDockingPanesRow::CalcFixedLayout](#calcfixedlayout)||  
 |[CDockingPanesRow::Create](#create)||  
 |[CDockingPanesRow::ExpandStretchedPanes](#expandstretchedpanes)||  
@@ -174,10 +174,10 @@ class CDockingPanesRow : public CObject
 |[CDockingPanesRow::UpdateVisibleState](#updatevisiblestate)||  
   
 ## <a name="remarks"></a>Uwagi  
- `CDockingPanesRow` obiekty są tworzone wewnętrznie przez obiekty lokacji dokowania.  
+ `CDockingPanesRow` obiekty są tworzone wewnętrznie przez obiekty witryny dokowania.  
   
 ## <a name="example"></a>Przykład  
- W poniższym przykładzie pokazano, jak uzyskać `CDockingPanesRow` obiekt z `CMFCAutoHideBar` obiektu.  
+ Poniższy przykład pokazuje, jak uzyskać `CDockingPanesRow` obiektu z `CMFCAutoHideBar` obiektu.  
   
  [!code-cpp[NVC_MFC_RibbonApp#26](../../mfc/reference/codesnippet/cpp/cdockingpanesrow-class_1.cpp)]  
   
@@ -224,7 +224,7 @@ virtual void AddPaneFromRow(
 ### <a name="remarks"></a>Uwagi  
   
 ##  <a name="arrangepanes"></a>  CDockingPanesRow::ArrangePanes  
- Rozmieszcza Dokowanie okienka w wierszu zgodnie z określonym margines i odstępy parametrów.  
+ Rozmieszcza dokujące okienka, w wierszu zgodnie z określonym margines i odstępy parametrów.  
   
 ```  
 virtual void ArrangePanes(
@@ -234,13 +234,13 @@ virtual void ArrangePanes(
   
 ### <a name="parameters"></a>Parametry  
  [in] *nMargin*  
- Określa przesunięcie w pikselach pierwszego okienka z lewym górnym rogu wiersza.  
+ Określa przesunięcie w pikselach pierwszego okienka od lewego górnego rogu wiersza.  
   
  [in] *nSpacing*  
- Określa odstęp w pikselach między okienka.  
+ Określa odstępy, w pikselach, między okienka.  
   
 ### <a name="remarks"></a>Uwagi  
- Wywołać tę metodę ułożyć okienka w wierszu, gdzie będzie dokowania. Po wywołaniu tej metody należy wywołać `CDockingPanesRow::FixupVirtualRects(FALSE, NULL)`.  
+ Wywołaj tę metodę, aby rozmieścić okienka, w wierszu, w którym zostanie zadokowany. Po wywołaniu tej metody, należy wywołać `CDockingPanesRow::FixupVirtualRects(FALSE, NULL)`.  
   
 ##  <a name="calcfixedlayout"></a>  CDockingPanesRow::CalcFixedLayout  
 
@@ -391,7 +391,7 @@ void GetGroupFromPane(
   
 ### <a name="parameters"></a>Parametry  
  [in] *pBar*  
- [in] *lst*  
+ [in] *dzieł*  
   
 ### <a name="remarks"></a>Uwagi  
   
@@ -783,6 +783,6 @@ virtual void UpdateVisibleState(BOOL bDelay);
 ## <a name="see-also"></a>Zobacz też  
  [Diagram hierarchii](../../mfc/hierarchy-chart.md)   
  [Klasy](../../mfc/reference/mfc-classes.md)   
- [CObject — klasa](../../mfc/reference/cobject-class.md)   
+ [Klasa CObject](../../mfc/reference/cobject-class.md)   
  [Klasa CDockSite](../../mfc/reference/cdocksite-class.md)   
  [Klasa CPane](../../mfc/reference/cpane-class.md)

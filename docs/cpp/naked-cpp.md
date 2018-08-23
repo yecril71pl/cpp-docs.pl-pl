@@ -17,17 +17,17 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3366995105f6295fd1d4d89ad85896fbb625519d
-ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
+ms.openlocfilehash: 0b74c08ee2130e9742884eacfa93d6fc55110291
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/01/2018
-ms.locfileid: "39402499"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42465143"
 ---
 # <a name="naked-c"></a>naked (C++)
 **Microsoft Specific**  
   
- Aby funkcje zadeklarowane za pomocą **"naked"** atrybutu, kompilator generuje kod bez konieczności pisania kodu prologu i epilogu. Ta funkcja służy do pisania własnych sekwencji kodu prologu/epilogu przy użyciu kodu asemblera wbudowanego. Funkcji "naked" są szczególnie przydatne w pisaniu sterowniki urządzeń wirtualnych.  Należy pamiętać, że **"naked"** atrybut jest prawidłowy tylko w x86 i ARM i nie jest dostępny na [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)].  
+ Aby funkcje zadeklarowane za pomocą **"naked"** atrybutu, kompilator generuje kod bez konieczności pisania kodu prologu i epilogu. Ta funkcja służy do pisania własnych sekwencji kodu prologu/epilogu przy użyciu kodu asemblera wbudowanego. Funkcji "naked" są szczególnie przydatne w pisaniu sterowniki urządzeń wirtualnych.  Należy pamiętać, że **"naked"** atrybut jest prawidłowy tylko w x86 i ARM i nie jest dostępny na x64.  
   
 ## <a name="syntax"></a>Składnia  
   

@@ -18,12 +18,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5236bebdeef2db519556d3dace4c20d9529d0e23
-ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
+ms.openlocfilehash: 4b45c55fbba37d27aa005480789cb490b891b103
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/28/2018
-ms.locfileid: "32055043"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42465043"
 ---
 # <a name="inline-assembler"></a>Asembler wbudowany
 **Microsoft Specific**  
@@ -33,7 +33,7 @@ ms.locfileid: "32055043"
 > [!NOTE]
 >  Programy z kodem wbudowanego asemblera nie są całkowicie przenośne na inne platformy sprzętowe. Jeśli projektujesz do celów przenośności, unikaj stosowania asemblera wbudowanego.  
   
- Wbudowany zestaw nie jest obsługiwana na RAMIĘ i [!INCLUDE[vcprx64](../../assembler/inline/includes/vcprx64_md.md)] procesorów.  W następujących tematach opisano, jak używać asemblera wbudowanego Visual C/C++ z procesorami x86:  
+ Wbudowany zestaw nie jest obsługiwany na ARM i x64 procesorów.  W następujących tematach opisano, jak używać asemblera wbudowanego Visual C/C++ z procesorami x86:  
   
 -   [Omówienie wbudowanego asemblera](../../assembler/inline/inline-assembler-overview.md)  
   
@@ -57,8 +57,8 @@ ms.locfileid: "32055043"
   
 -   [Optymalizacja wbudowanego asemblera](../../assembler/inline/optimizing-inline-assembly.md)  
   
- **KOŃCOWY określonych firmy Microsoft**  
+ **END specyficzny dla Microsoft**  
   
 ## <a name="see-also"></a>Zobacz też  
- [Funkcje wewnętrzne i język asemblera](../../intrinsics/compiler-intrinsics-and-assembly-language.md)   
+ [Funkcje wewnętrzne kompilatora i język asemblera](../../intrinsics/compiler-intrinsics-and-assembly-language.md)   
  [Dokumentacja języka C++](../../cpp/cpp-language-reference.md)

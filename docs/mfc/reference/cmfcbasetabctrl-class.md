@@ -248,16 +248,16 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 825c761f920e48f31bab667790981e5c422f3612
-ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
+ms.openlocfilehash: 6a629f372058e3e6688a57043d73e29717f3601d
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37337492"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42466150"
 ---
 # <a name="cmfcbasetabctrl-class"></a>Klasa CMFCBaseTabCtrl
 Implementuje podstawowe funkcje dla okien z zakładkami.  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+ Aby uzyskać więcej informacji, zobacz kod źródłowy znajdujący się w **VC\\atlmfc\\src\\mfc** folder instalacji programu Visual Studio.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -401,7 +401,7 @@ class CMFCBaseTabCtrl : public CWnd
 ## <a name="remarks"></a>Uwagi  
  `CMFCBaseTabCtrl` Klasa jest klasą abstrakcyjną. W związku z tym nie może występować. Aby utworzyć okno z kartami, należy wyprowadzić klasę z `CMFCBaseTabCtrl`. Biblioteka MFC zawiera kilka przykładów klasy pochodnej, dwa z nich są [klasa CMFCTabCtrl](../../mfc/reference/cmfctabctrl-class.md) i [klasa CMFCOutlookBarTabCtrl](../../mfc/reference/cmfcoutlookbartabctrl-class.md).  
   
- Począwszy od [!INCLUDE[vs_dev14](../../ide/includes/vs_dev14_md.md)], ta klasa obsługuje Microsoft Active Accessibility.  
+ Począwszy od programu Visual Studio 2015, ta klasa obsługuje Microsoft Active Accessibility.  
   
 ## <a name="customization-tips"></a>Porady dotyczące dostosowywania  
  Poniższe porady dotyczą `CMFCBaseTabCtrl Class` i wszystkie klasy, które dziedziczą po niej:  

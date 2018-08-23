@@ -24,12 +24,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 723d4f1e8f44c3ce376b4f39f34a191265ca4eab
-ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
+ms.openlocfilehash: 34eb8cb8a6b839f8a4dcd8d699c7fcb4851d57f6
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/30/2018
-ms.locfileid: "39336729"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42464490"
 ---
 # <a name="ctable-class"></a>Klasa CTable
 Zapewnia to uzyskać bezpośredni dostęp do prostego zestawu wierszy (bez parametrów).  
@@ -100,16 +100,16 @@ HRESULT Open(const CSession& session,
  [in] `DBID` Tabeli, aby otworzyć.  
   
  *pPropSet*  
- [in] Wskaźnik do tablicy [DBPROPSET](https://msdn.microsoft.com/library/ms714367.aspx) struktury zawierający właściwości i wartości do ustawienia. Zobacz [zestawy właściwości i właściwości grupy](https://msdn.microsoft.com/library/ms713696.aspx) w *OLE DB Podręcznik programisty* w Windows SDK. Domyślna wartość NULL określa Brak właściwości.  
+ [in] Wskaźnik do tablicy [DBPROPSET](/previous-versions/windows/desktop/ms714367\(v=vs.85\)) struktury zawierający właściwości i wartości do ustawienia. Zobacz [zestawy właściwości i właściwości grupy](/previous-versions/windows/desktop/ms713696\(v=vs.85\)) w *OLE DB Podręcznik programisty* w Windows SDK. Domyślna wartość NULL określa Brak właściwości.  
   
  *ulPropSets*  
- [in] Liczba [DBPROPSET](https://msdn.microsoft.com/library/ms714367.aspx) struktury przekazany *pPropSet* argumentu.  
+ [in] Liczba [DBPROPSET](/previous-versions/windows/desktop/ms714367\(v=vs.85\)) struktury przekazany *pPropSet* argumentu.  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Standardowa HRESULT.  
   
 ### <a name="remarks"></a>Uwagi  
- Aby uzyskać więcej informacji, zobacz [IOpenRowset::OpenRowset](https://msdn.microsoft.com/library/ms716724.aspx) w *OLE DB Podręcznik programisty*.  
+ Aby uzyskać więcej informacji, zobacz [IOpenRowset::OpenRowset](/previous-versions/windows/desktop/ms716724\(v=vs.85\)) w *OLE DB Podręcznik programisty*.  
   
 ## <a name="see-also"></a>Zobacz też  
  [Szablony konsumentów OLE DB](../../data/oledb/ole-db-consumer-templates-cpp.md)   

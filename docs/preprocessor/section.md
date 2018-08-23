@@ -18,12 +18,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a8d113c10ea8370a46560ba8668546c74b19c6f8
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: d7601913b3940de8e6ade2c76100f4d773281db7
+ms.sourcegitcommit: d4c803bd3a684d7951bf88dcecf1f14af43ae411
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33849945"
+ms.lasthandoff: 08/10/2018
+ms.locfileid: "42464931"
 ---
 # <a name="section"></a>sekcja
 Tworzy sekcję w pliku .obj.  
@@ -31,49 +31,50 @@ Tworzy sekcję w pliku .obj.
 ## <a name="syntax"></a>Składnia  
   
 ```  
-  
 #pragma section( "section-name" [, attributes] )  
 ```  
   
 ## <a name="remarks"></a>Uwagi  
- Znaczenie terminów *segmentu* i *sekcji* są wymienne, w tym temacie.  
+ 
+Znaczenie terminów *segmentu* i *sekcji* są wymienne, w tym temacie.  
   
- Po zdefiniowaniu sekcji pozostaje ważny w pozostałej części kompilacji. Jednak należy użyć [__declspec(allocate)](../cpp/allocate.md) lub nic nie zostanie umieszczona w sekcji.  
+Po zdefiniowaniu sekcji pozostaje prawidłowe na pozostałą część kompilacji. Jednakże, należy użyć [__declspec(allocate)](../cpp/allocate.md) lub nic nie zostanie umieszczona w sekcji.  
   
- *Nazwa sekcji* jest wymaganym parametrem, który ma być nazwę sekcji. Nazwa nie może powodować konfliktu z żadną nazwą standardowej sekcji. Zobacz [/SECTION](../build/reference/section-specify-section-attributes.md) lista nazw nie należy używać podczas tworzenia sekcji.  
+*Nazwa sekcji* jest wymaganym parametrem, który ma być nazwa sekcji. Nazwa nie może powodować konfliktu z nazwami standardowej sekcji. Zobacz [/SECTION](../build/reference/section-specify-section-attributes.md) listę nazw, nie należy używać podczas tworzenia sekcji.  
   
- `attributes` opcjonalny parametr składający się z co najmniej jeden przecinkami atrybutów, które chcesz przypisać do sekcji. Możliwe `attributes` są:  
+*atrybuty* jest parametrem opcjonalnym składający się z co najmniej jeden rozdzielonych przecinkami atrybutów, które chcesz przypisać do sekcji. Możliwe *atrybuty* są:  
   
- **read**  
- Zezwala na operacje odczytu danych.  
+**read**  
+Umożliwia wykonywanie operacji odczytu na danych.  
   
- **write**  
- Zezwala na wykonywanie operacji zapisu na danych.  
+**write**  
+Umożliwia wykonywanie operacji zapisu na danych.  
   
- **execute**  
- Umożliwia wykonanie kodu.  
+**execute**  
+Umożliwia wykonanie kodu.  
   
- **udostępnione**  
- Udostępnia sekcji między wszystkie procesy, które załadowania obrazu.  
+**Udostępnione**  
+Udostępnia sekcji między wszystkie procesy, które ładują obrazu.  
   
- **nopage**  
- Oznacza sekcji jako nie stronicowalnej; przydatne dla sterowników urządzeń Win32.  
+**nopage**  
+Oznacza sekcji nie stronicowanej; przydatne dla sterowników urządzeń systemu Win32.  
   
- **nocache**  
- Oznacza sekcji jako nie buforowalnej; przydatne dla sterowników urządzeń Win32.  
+**nocache**  
+Oznacza sekcji nie podlega buforowaniu; przydatne dla sterowników urządzeń systemu Win32.  
   
- **Odrzuć**  
- Oznacza sekcji jako discardable; przydatne dla sterowników urządzeń Win32.  
+**Odrzuć**  
+Oznacza sekcji discardable; przydatne dla sterowników urządzeń systemu Win32.  
   
- **remove**  
- Oznacza sekcji jako nie rezydentny; sterowniki urządzeń wirtualnych (V*x*D) tylko.  
+**remove**  
+Oznacza sekcji, co nie rezydentnego; sterowniki urządzeń wirtualnych (V*x*D) tylko.  
   
- Jeśli nie określisz atrybuty, sekcji będzie mieć odczytu i zapisu atrybutów.  
+Jeśli nie określisz atrybutów, sekcji będzie po ich przeczytaniu i Zapis atrybutów.  
   
 ## <a name="example"></a>Przykład  
- W poniższym przykładzie pierwszej instrukcji, która identyfikuje sekcji i jego atrybuty. Liczba całkowita `j` nie są umieszczane w `mysec` , ponieważ nie został zadeklarowany z `__declspec(allocate)`; `j` przechodzi w sekcji danych. Liczba całkowita `i` przejdź do `mysec` w jego `__declspec(allocate)` atrybuty klasy magazynu.  
+ 
+W poniższym przykładzie pierwsza instrukcja identyfikuje sekcji i jego atrybuty. Liczba całkowita `j` nie są umieszczane w `mysec` , ponieważ nie został zadeklarowany za pomocą `__declspec(allocate)`; `j` przechodzi w sekcji danych. Liczba całkowita `i` konstrukcyjnym `mysec` na jego `__declspec(allocate)` atrybuty klasy magazynu.  
   
-```  
+```cpp  
 // pragma_section.cpp  
 #pragma section("mysec",read,write)  
 int j = 0;  
@@ -85,4 +86,5 @@ int main(){}
 ```  
   
 ## <a name="see-also"></a>Zobacz też  
- [Dyrektywy pragma i słowo kluczowe __Pragma](../preprocessor/pragma-directives-and-the-pragma-keyword.md)
+ 
+[Dyrektywy pragma i słowo kluczowe __Pragma](../preprocessor/pragma-directives-and-the-pragma-keyword.md)

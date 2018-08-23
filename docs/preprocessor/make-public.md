@@ -18,15 +18,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 27db5ac934973178e2485327090ed70f994becec
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 1bdec8afa2088cad5faf700b3946926bb9d85748
+ms.sourcegitcommit: d4c803bd3a684d7951bf88dcecf1f14af43ae411
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33849590"
+ms.lasthandoff: 08/10/2018
+ms.locfileid: "42465127"
 ---
 # <a name="makepublic"></a>make_public
-Informuje, że typ macierzysty powinien publicznego zestawu dostępności.  
+Wskazuje, że typ macierzysty powinien mieć publicznego zestawu dostępności.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -35,26 +35,26 @@ Informuje, że typ macierzysty powinien publicznego zestawu dostępności.
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `type` jest nazwa typu mają publicznego zestawu dostępności.  
+*Typ* jest nazwa typu, o których chcesz mieć publicznego zestawu dostępności.  
   
 ## <a name="remarks"></a>Uwagi  
-`make_public` jest przydatne w przypadku gdy jest typem natywnym, który chcesz odwołać z pliku .h, którego nie można zmienić. Jeśli chcesz użyć typu macierzystego w sygnaturze funkcji publicznych w typie z widocznością publicznego zestawu, typu macierzystego musi mieć również dostępność publicznego zestawu lub kompilator zgłosi ostrzeżenie.  
+
+**make_public** jest przydatne w przypadku, gdy typ macierzysty, którego chcesz się odwołać pochodzą z pliku .h, którego nie można zmienić. Za pomocą typu natywnego w sygnaturze funkcji publicznych w typie widoczność publiczny zestaw, typ natywny musi również mieć publicznego zestawu dostępności lub kompilator zgłosi ostrzeżenie.  
   
-`make_public` musi być określony w zakresie globalnym i działa tylko w od punktu, w którym jest zadeklarowany za pomocą na końcu pliku kodu źródłowego.  
+**make_public** musi być określona w zakresie globalnym i działa tylko wtedy, od punktu, w których jest zadeklarowany za pomocą na końcu pliku kodu źródłowego.  
   
-Typ macierzysty może być jawnie lub niejawnie prywatne; zobacz [widoczność typów](../dotnet/how-to-define-and-consume-classes-and-structs-cpp-cli.md#BKMK_Type_visibility) Aby uzyskać więcej informacji.  
+Typ natywny może być jawnie lub niejawnie prywatny; zobacz [widoczność typów](../dotnet/how-to-define-and-consume-classes-and-structs-cpp-cli.md#BKMK_Type_visibility) Aby uzyskać więcej informacji.  
   
-## <a name="example"></a>Przykład  
-Poniższy przykład jest zawartość pliku .h, który zawiera definicje dla dwóch struktury macierzystego.  
+## <a name="examples"></a>Przykłady  
+Poniższy przykład jest zawartość pliku .h, która zawiera definicje dla dwóch struktur natywnych.  
   
 ```cpp  
 // make_public_pragma.h  
 struct Native_Struct_1 { int i; };  
 struct Native_Struct_2 { int i; };  
 ```  
-  
-## <a name="example"></a>Przykład  
-Poniższy przykład kodu wykorzystuje plik nagłówka i wskazuje, że chyba że jawnie oznaczone natywnego struktury jako public, przy użyciu `make_public`, kompilator wygeneruje ostrzeżenie podczas próby użycia natywnego struktury w sygnaturze funkcji publicznej w publiczny typ zarządzany.  
+
+Poniższy przykład kodu wykorzystuje plik nagłówkowy i pokazuje, że o ile użytkownik wyraźnie oznaczyć natywnej struktury jako publiczne, za pomocą **make_public**, kompilator wygeneruje ostrzeżenie, gdy próba użycia natywnej struktury w Podpis funkcji publicznych w publicznego typu zarządzanego.  
   
 ```cpp  
 // make_public_pragma.cpp  
@@ -69,5 +69,6 @@ public ref struct A {
 };  
 ```  
   
-## <a name="see-also"></a>Zobacz też  
+## <a name="see-also"></a>Zobacz też
+
 [Dyrektywy pragma i słowo kluczowe __Pragma](../preprocessor/pragma-directives-and-the-pragma-keyword.md)

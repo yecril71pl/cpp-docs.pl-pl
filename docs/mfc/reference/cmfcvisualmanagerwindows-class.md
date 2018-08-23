@@ -1,5 +1,5 @@
 ---
-title: Klasa program CMFCVisualManagerWindows | Dokumentacja firmy Microsoft
+title: Klasa CMFCVisualManagerWindows | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -150,17 +150,17 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5582c634428290086393791ae23d551726bff7ab
-ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
+ms.openlocfilehash: fd7ebc32fa76165e35aa3ea23cf3acda61b80189
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/27/2018
-ms.locfileid: "37040665"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42465987"
 ---
-# <a name="cmfcvisualmanagerwindows-class"></a>Program CMFCVisualManagerWindows — klasa
-`CMFCVisualManagerWindows` udaje systemu Microsoft Windows XP lub Microsoft Vista po wybraniu przez użytkownika w systemie Windows XP lub Vista motywu.  
+# <a name="cmfcvisualmanagerwindows-class"></a>Klasa CMFCVisualManagerWindows
+`CMFCVisualManagerWindows` Naśladuje wygląd systemu Microsoft Windows XP lub Microsoft Vista po wybraniu przez użytkownika, Windows XP lub Vista motywu.  
 
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+ Aby uzyskać więcej informacji, zobacz kod źródłowy znajdujący się w **VC\\atlmfc\\src\\mfc** folder instalacji programu Visual Studio.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -180,11 +180,11 @@ class CMFCVisualManagerWindows : public CMFCVisualManagerOfficeXP
   
 |Nazwa|Opis|  
 |----------|-----------------|  
-|[CMFCVisualManagerWindows::AlwaysHighlight3DTabs](#alwayshighlight3dtabs)|Struktura wywołuje tę metodę w celu określenia, czy 3W kart zawsze powinien być zaznaczony w aplikacji. (Przesłania [CMFCVisualManager::AlwaysHighlight3DTabs](../../mfc/reference/cmfcvisualmanager-class.md#alwayshighlight3dtabs).)|  
+|[CMFCVisualManagerWindows::AlwaysHighlight3DTabs](#alwayshighlight3dtabs)|Struktura wywołuje tę metodę w celu określenia, czy karty 3D zawsze powinien być wyróżniony w aplikacji. (Przesłania [CMFCVisualManager::AlwaysHighlight3DTabs](../../mfc/reference/cmfcvisualmanager-class.md#alwayshighlight3dtabs).)|  
 |[CMFCVisualManagerWindows::DrawComboBorderWinXP](#drawcomboborderwinxp)|(Przesłania `CMFCVisualManager::DrawComboBorderWinXP`.)|  
 |[CMFCVisualManagerWindows::DrawComboDropButtonWinXP](#drawcombodropbuttonwinxp)|(Przesłania [CMFCVisualManager::DrawComboDropButtonWinXP](../../mfc/reference/cmfcvisualmanager-class.md#drawcombodropbuttonwinxp).)|  
 |[CMFCVisualManagerWindows::DrawPushButtonWinXP](#drawpushbuttonwinxp)|(Przesłania [CMFCVisualManager::DrawPushButtonWinXP](../../mfc/reference/cmfcvisualmanager-class.md#drawpushbuttonwinxp).)|  
-|[CMFCVisualManagerWindows::GetButtonExtraBorder](#getbuttonextraborder)|Struktura wywołuje tę metodę po go rysuje przycisku paska narzędzi. (Przesłania [CMFCVisualManager::GetButtonExtraBorder](../../mfc/reference/cmfcvisualmanager-class.md#getbuttonextraborder).)|  
+|[CMFCVisualManagerWindows::GetButtonExtraBorder](#getbuttonextraborder)|Struktura wywołuje tę metodę, gdy jej rysuje przycisku paska narzędzi. (Przesłania [CMFCVisualManager::GetButtonExtraBorder](../../mfc/reference/cmfcvisualmanager-class.md#getbuttonextraborder).)|  
 |[CMFCVisualManagerWindows::GetCaptionButtonExtraBorder](#getcaptionbuttonextraborder)|(Przesłania [CMFCVisualManager::GetCaptionButtonExtraBorder](../../mfc/reference/cmfcvisualmanager-class.md#getcaptionbuttonextraborder).)|  
 |[CMFCVisualManagerWindows::GetDockingPaneCaptionExtraHeight](#getdockingpanecaptionextraheight)|(Przesłania `CMFCVisualManager::GetDockingPaneCaptionExtraHeight`.)|  
 |[CMFCVisualManagerWindows::GetHighlightedMenuItemTextColor](#gethighlightedmenuitemtextcolor)|(Przesłania `CMFCVisualManagerOfficeXP::GetHighlightedMenuItemTextColor`.)|  
@@ -193,9 +193,9 @@ class CMFCVisualManagerWindows : public CMFCVisualManagerOfficeXP
 |[CMFCVisualManagerWindows::IsDefaultWinXPPopupButton](#isdefaultwinxppopupbutton)|(Przesłania [CMFCVisualManager::IsDefaultWinXPPopupButton](../../mfc/reference/cmfcvisualmanager-class.md#isdefaultwinxppopupbutton).)|  
 |[CMFCVisualManagerWindows::IsHighlightWholeMenuItem](#ishighlightwholemenuitem)|(Przesłania `CMFCVisualManagerOfficeXP::IsHighlightWholeMenuItem`.)|  
 |[CMFCVisualManagerWindows::IsOfficeStyleMenus](#isofficestylemenus)||  
-|[CMFCVisualManagerWindows::IsOfficeXPStyleMenus](#isofficexpstylemenus)|Wskazuje, czy Menedżer visual implementuje Office XP menu. (Przesłania [CMFCVisualManager::IsOfficeXPStyleMenus](../../mfc/reference/cmfcvisualmanager-class.md#isofficexpstylemenus).)|  
+|[CMFCVisualManagerWindows::IsOfficeXPStyleMenus](#isofficexpstylemenus)|Wskazuje, czy Menedżer wizualny implementuje menu stylu XP pakietu Office. (Przesłania [CMFCVisualManager::IsOfficeXPStyleMenus](../../mfc/reference/cmfcvisualmanager-class.md#isofficexpstylemenus).)|  
 |[CMFCVisualManagerWindows::IsWindowsThemingSupported](#iswindowsthemingsupported)|(Przesłania `CMFCVisualManager::IsWindowsThemingSupported`.)|  
-|[CMFCVisualManagerWindows::IsWinXPThemeAvailable](#iswinxpthemeavailable)|Wskazuje, czy kompozycji systemu Windows jest dostępna.|  
+|[CMFCVisualManagerWindows::IsWinXPThemeAvailable](#iswinxpthemeavailable)|Wskazuje, czy motyw Windows są dostępne.|  
 |[CMFCVisualManagerWindows::OnDrawBarGripper](#ondrawbargripper)|(Przesłania `CMFCVisualManagerOfficeXP::OnDrawBarGripper`.)|  
 |[CMFCVisualManagerWindows::OnDrawBrowseButton](#ondrawbrowsebutton)|(Przesłania `CMFCVisualManagerOfficeXP::OnDrawBrowseButton`.)|  
 |[CMFCVisualManagerWindows::OnDrawButtonBorder](#ondrawbuttonborder)|(Przesłania `CMFCVisualManagerOfficeXP::OnDrawButtonBorder`.)|  
@@ -209,8 +209,8 @@ class CMFCVisualManagerWindows : public CMFCVisualManagerOfficeXP
 |[CMFCVisualManagerWindows::OnDrawEditBorder](#ondraweditborder)|(Przesłania `CMFCVisualManagerOfficeXP::OnDrawEditBorder`.)|  
 |[CMFCVisualManagerWindows::OnDrawExpandingBox](#ondrawexpandingbox)|(Przesłania [CMFCVisualManager::OnDrawExpandingBox](../../mfc/reference/cmfcvisualmanager-class.md#ondrawexpandingbox).)|  
 |[CMFCVisualManagerWindows::OnDrawFloatingToolbarBorder](#ondrawfloatingtoolbarborder)|(Przesłania `CMFCVisualManagerOfficeXP::OnDrawFloatingToolbarBorder`.)|  
-|[CMFCVisualManagerWindows::OnDrawHeaderCtrlBorder](#ondrawheaderctrlborder)|Struktura wywołuje tę metodę po go rysuje obramowanie wystąpienia [CMFCHeaderCtrl klasy](../../mfc/reference/cmfcheaderctrl-class.md). (Przesłania [CMFCVisualManager::OnDrawHeaderCtrlBorder](../../mfc/reference/cmfcvisualmanager-class.md#ondrawheaderctrlborder).)|  
-|[CMFCVisualManagerWindows::OnDrawHeaderCtrlSortArrow](#ondrawheaderctrlsortarrow)|Struktura wywołuje tej funkcji, gdy go Rysuje strzałkę sortowania formantu nagłówka. (Przesłania [CMFCVisualManager::OnDrawHeaderCtrlSortArrow](../../mfc/reference/cmfcvisualmanager-class.md#ondrawheaderctrlsortarrow).)|  
+|[CMFCVisualManagerWindows::OnDrawHeaderCtrlBorder](#ondrawheaderctrlborder)|Platforma wywołuje tę metodę, gdy jej rysuje obramowanie wokół wystąpienie [klasa CMFCHeaderCtrl](../../mfc/reference/cmfcheaderctrl-class.md). (Przesłania [CMFCVisualManager::OnDrawHeaderCtrlBorder](../../mfc/reference/cmfcvisualmanager-class.md#ondrawheaderctrlborder).)|  
+|[CMFCVisualManagerWindows::OnDrawHeaderCtrlSortArrow](#ondrawheaderctrlsortarrow)|Struktura wywołuje tę funkcję, gdy go Rysuje strzałkę sortowania w formancie nagłówka. (Przesłania [CMFCVisualManager::OnDrawHeaderCtrlSortArrow](../../mfc/reference/cmfcvisualmanager-class.md#ondrawheaderctrlsortarrow).)|  
 |[CMFCVisualManagerWindows::OnDrawMenuBorder](#ondrawmenuborder)|(Przesłania `CMFCVisualManagerOfficeXP::OnDrawMenuBorder`.)|  
 |[CMFCVisualManagerWindows::OnDrawMenuSystemButton](#ondrawmenusystembutton)|(Przesłania `CMFCVisualManagerOfficeXP::OnDrawMenuSystemButton`.)|  
 |[CMFCVisualManagerWindows::OnDrawMiniFrameBorder](#ondrawminiframeborder)|(Przesłania `CMFCVisualManagerOfficeXP::OnDrawMiniFrameBorder`.)|  
@@ -222,8 +222,8 @@ class CMFCVisualManagerWindows : public CMFCVisualManagerOfficeXP
 |[CMFCVisualManagerWindows::OnDrawSeparator](#ondrawseparator)|(Przesłania `CMFCVisualManagerOfficeXP::OnDrawSeparator`.)|  
 |[CMFCVisualManagerWindows::OnDrawSpinButtons](#ondrawspinbuttons)|(Przesłania `CMFCVisualManagerOfficeXP::OnDrawSpinButtons`.)|  
 |[CMFCVisualManagerWindows::OnDrawStatusBarPaneBorder](#ondrawstatusbarpaneborder)|(Przesłania `CMFCVisualManagerOfficeXP::OnDrawStatusBarPaneBorder`.)|  
-|[CMFCVisualManagerWindows::OnDrawStatusBarProgress](#ondrawstatusbarprogress)|Struktura wywołuje tę metodę po go rysuje wskaźnika postępu [CMFCStatusBar —](../../mfc/reference/cmfcstatusbar-class.md) obiektu. (Przesłania [CMFCVisualManager::OnDrawStatusBarProgress](../../mfc/reference/cmfcvisualmanager-class.md#ondrawstatusbarprogress).)|  
-|[CMFCVisualManagerWindows::OnDrawStatusBarSizeBox](#ondrawstatusbarsizebox)|Struktura wywołuje tę metodę po go rysuje rozmiar pola [CMFCStatusBar —](../../mfc/reference/cmfcstatusbar-class.md). (Przesłania [CMFCVisualManager::OnDrawStatusBarSizeBox](../../mfc/reference/cmfcvisualmanager-class.md#ondrawstatusbarsizebox).)|  
+|[CMFCVisualManagerWindows::OnDrawStatusBarProgress](#ondrawstatusbarprogress)|Platforma wywołuje tę metodę, gdy jej rysuje wskaźnika postępu w [CMFCStatusBar](../../mfc/reference/cmfcstatusbar-class.md) obiektu. (Przesłania [CMFCVisualManager::OnDrawStatusBarProgress](../../mfc/reference/cmfcvisualmanager-class.md#ondrawstatusbarprogress).)|  
+|[CMFCVisualManagerWindows::OnDrawStatusBarSizeBox](#ondrawstatusbarsizebox)|Platforma wywołuje tę metodę, gdy go rysuje rozmiar pola [CMFCStatusBar](../../mfc/reference/cmfcstatusbar-class.md). (Przesłania [CMFCVisualManager::OnDrawStatusBarSizeBox](../../mfc/reference/cmfcvisualmanager-class.md#ondrawstatusbarsizebox).)|  
 |[CMFCVisualManagerWindows::OnDrawTab](#ondrawtab)|(Przesłania `CMFCVisualManagerOfficeXP::OnDrawTab`.)|  
 |[CMFCVisualManagerWindows::OnDrawTabCloseButton](#ondrawtabclosebutton)|(Przesłania `CMFCVisualManagerOfficeXP::OnDrawTabCloseButton`.)|  
 |[CMFCVisualManagerWindows::OnDrawTabsButtonBorder](#ondrawtabsbuttonborder)|(Przesłania `CMFCVisualManagerOfficeXP::OnDrawTabsButtonBorder`.)|  
@@ -234,14 +234,14 @@ class CMFCVisualManagerWindows : public CMFCVisualManagerOfficeXP
 |[CMFCVisualManagerWindows::OnErasePopupWindowButton](#onerasepopupwindowbutton)|(Przesłania `CMFCVisualManagerOfficeXP::OnErasePopupWindowButton`.)|  
 |[CMFCVisualManagerWindows::OnEraseTabsArea](#onerasetabsarea)|(Przesłania `CMFCVisualManagerOfficeXP::OnEraseTabsArea`.)|  
 |[CMFCVisualManagerWindows::OnEraseTabsButton](#onerasetabsbutton)|(Przesłania `CMFCVisualManagerOfficeXP::OnEraseTabsButton`.)|  
-|[CMFCVisualManagerWindows::OnEraseTabsFrame](#onerasetabsframe)|Struktura wywołuje tę metodę po go na partycje powoduje usunięcie ramki na [CMFCBaseTabCtrl klasy](../../mfc/reference/cmfcbasetabctrl-class.md). (Przesłania [CMFCVisualManager::OnEraseTabsFrame](../../mfc/reference/cmfcvisualmanager-class.md#onerasetabsframe).)|  
+|[CMFCVisualManagerWindows::OnEraseTabsFrame](#onerasetabsframe)|Platforma wywołuje tę metodę, gdy go na partycje powoduje usunięcie ramkę na [klasa CMFCBaseTabCtrl](../../mfc/reference/cmfcbasetabctrl-class.md). (Przesłania [CMFCVisualManager::OnEraseTabsFrame](../../mfc/reference/cmfcvisualmanager-class.md#onerasetabsframe).)|  
 |[CMFCVisualManagerWindows::OnFillBarBackground](#onfillbarbackground)|(Przesłania `CMFCVisualManagerOfficeXP::OnFillBarBackground`.)|  
 |[CMFCVisualManagerWindows::OnFillButtonInterior](#onfillbuttoninterior)|(Przesłania `CMFCVisualManagerOfficeXP::OnFillButtonInterior`.)|  
 |[CMFCVisualManagerWindows::OnFillCommandsListBackground](#onfillcommandslistbackground)|(Przesłania `CMFCVisualManagerOfficeXP::OnFillCommandsListBackground`.)|  
 |[CMFCVisualManagerWindows::OnFillMiniFrameCaption](#onfillminiframecaption)|(Przesłania `CMFCVisualManagerOfficeXP::OnFillMiniFrameCaption`.)|  
-|[CMFCVisualManagerWindows::OnFillOutlookPageButton](#onfilloutlookpagebutton)|Struktura wywołuje tę metodę po zapełnieniu wewnętrznych programu Outlook przycisk Strona. (Przesłania [CMFCVisualManager::OnFillOutlookPageButton](../../mfc/reference/cmfcvisualmanager-class.md#onfilloutlookpagebutton).)|  
+|[CMFCVisualManagerWindows::OnFillOutlookPageButton](#onfilloutlookpagebutton)|Struktura wywołuje tę metodę po zapełnieniu wewnętrznych przycisk Strona programu Outlook. (Przesłania [CMFCVisualManager::OnFillOutlookPageButton](../../mfc/reference/cmfcvisualmanager-class.md#onfilloutlookpagebutton).)|  
 |[CMFCVisualManagerWindows::OnFillTasksGroupInterior](#onfilltasksgroupinterior)|(Przesłania `CMFCVisualManagerOfficeXP::OnFillTasksGroupInterior`.)|  
-|[CMFCVisualManagerWindows::OnFillTasksPaneBackground](#onfilltaskspanebackground)|Struktura wywołuje tę metodę po zapełnieniu tła [CMFCTasksPane](../../mfc/reference/cmfctaskspane-class.md) formantu. (Przesłania [CMFCVisualManager::OnFillTasksPaneBackground](../../mfc/reference/cmfcvisualmanager-class.md#onfilltaskspanebackground).)|  
+|[CMFCVisualManagerWindows::OnFillTasksPaneBackground](#onfilltaskspanebackground)|Struktura wywołuje tę metodę podczas jego wypełniania tła [CMFCTasksPane](../../mfc/reference/cmfctaskspane-class.md) kontroli. (Przesłania [CMFCVisualManager::OnFillTasksPaneBackground](../../mfc/reference/cmfcvisualmanager-class.md#onfilltaskspanebackground).)|  
 |[CMFCVisualManagerWindows::OnHighlightMenuItem](#onhighlightmenuitem)|(Przesłania `CMFCVisualManagerOfficeXP::OnHighlightMenuItem`.)|  
 |[CMFCVisualManagerWindows::OnHighlightRarelyUsedMenuItems](#onhighlightrarelyusedmenuitems)|(Przesłania `CMFCVisualManagerOfficeXP::OnHighlightRarelyUsedMenuItems`.)|  
 |[CMFCVisualManagerWindows::OnUpdateSystemColors](#onupdatesystemcolors)|(Przesłania `CMFCVisualManagerOfficeXP::OnUpdateSystemColors`.)|  
@@ -251,15 +251,15 @@ class CMFCVisualManagerWindows : public CMFCVisualManagerOfficeXP
   
 |Nazwa|Opis|  
 |----------|-----------------|  
-|[CMFCVisualManagerWindows::m_b3DTabsXPTheme](#m_b3dtabsxptheme)|Określa, czy kompozycji systemu Windows XP wyświetla karty 3D.|  
+|[CMFCVisualManagerWindows::m_b3DTabsXPTheme](#m_b3dtabsxptheme)|Określa, czy motyw Windows XP wyświetla karty 3D.|  
   
 ## <a name="remarks"></a>Uwagi  
- Użyj `CMFCVisualManagerWindows` klasy, aby zmienić wygląd aplikacji w taki sposób, aby naśladował bieżącego motywu na komputerze, na którym działa aplikacja.  
+ Użyj `CMFCVisualManagerWindows` klasy, aby zmienić wygląd aplikacji w taki sposób, aby mógł naśladować bieżący motyw na komputerze, na którym działa aplikacja.  
   
- Jednak kompozycji systemu Windows może być niedostępna, jeśli aplikacja działa w wersji systemu Windows starszych niż Windows XP lub jeśli kompozycji są wyłączone, ponieważ użytkownik korzysta z **klasycznego** widoku. Jeśli motyw nie nie jest dostępny, aplikacja używa domyślnego menedżera visual zdefiniowane w [CMFCVisualManager](../../mfc/reference/cmfcvisualmanager-class.md).  
+ Jednak motyw Windows może być niedostępna, jeśli aplikacja jest uruchomiona w wersji systemu Windows starszych niż Windows XP lub jeśli motywy są wyłączone, ponieważ użytkownik korzysta z **klasycznego** widoku. Jeśli motyw nie jest dostępny, aplikacja używa domyślnego menedżera visual zdefiniowane w [CMFCVisualManager](../../mfc/reference/cmfcvisualmanager-class.md).  
   
 ## <a name="example"></a>Przykład  
- W poniższym przykładzie pokazano sposób użycia `CMFCVisualManagerWindows`. Następujący fragment kodu jest częścią [próbka Demo alertu pulpitu](../../visual-cpp-samples.md).  
+ Poniższy przykład pokazuje sposób użycia `CMFCVisualManagerWindows`. Ten fragment kodu jest częścią [próbka Demo alertu pulpitu](../../visual-cpp-samples.md).  
   
  [!code-cpp[NVC_MFC_DesktopAlertDemo#10](../../mfc/reference/codesnippet/cpp/cmfcvisualmanagerwindows-class_1.cpp)]  
   
@@ -270,9 +270,9 @@ class CMFCVisualManagerWindows : public CMFCVisualManagerOfficeXP
   
  [CMFCVisualManager](../../mfc/reference/cmfcvisualmanager-class.md)  
   
- [Program CMFCVisualManagerOfficeXP](../../mfc/reference/cmfcvisualmanagerofficexp-class.md)  
+ [CMFCVisualManagerOfficeXP](../../mfc/reference/cmfcvisualmanagerofficexp-class.md)  
   
- [Program CMFCVisualManagerWindows](../../mfc/reference/cmfcvisualmanagerwindows-class.md)  
+ [CMFCVisualManagerWindows](../../mfc/reference/cmfcvisualmanagerwindows-class.md)  
   
 ## <a name="requirements"></a>Wymagania  
  **Nagłówek:** afxvisualmanagerwindows.h  
@@ -501,24 +501,24 @@ virtual BOOL IsWindowsThemingSupported() const;
 ### <a name="remarks"></a>Uwagi  
   
 ##  <a name="iswinxpthemeavailable"></a>  CMFCVisualManagerWindows::IsWinXPThemeAvailable  
- Określa, czy kompozycji systemu Windows jest dostępna.  
+ Określa, czy motyw Windows są dostępne.  
   
 ```  
 static BOOL IsWinXPThemeAvailible();
 ```  
   
 ### <a name="return-value"></a>Wartość zwracana  
- Różna od zera, jeśli jest dostępna; motyw w przeciwnym razie 0.  
+ Wartość różną od zera, jeśli motyw jest dostępna; w przeciwnym razie 0.  
   
 ### <a name="remarks"></a>Uwagi  
- Ta metoda jest prawidłowa dla wszystkich systemu Windows XP i nowsze kompozycji.  
+ Ta metoda jest prawidłowa dla wszystkich Windows XP i nowszych motywów.  
   
- `IsWinXPThemeAvailable` jest taka sama jak `CMFCVisualManagerWindows::IsWindowsThemingAvailable` z tą różnicą, że `IsWinXPThemeAvailable` jest metodą statyczną. Tymczasowe Menedżera visual zostanie utworzony w związku z tym jeśli jeszcze nie istnieje.  
+ `IsWinXPThemeAvailable` jest taka sama jak `CMFCVisualManagerWindows::IsWindowsThemingAvailable` z tą różnicą, że `IsWinXPThemeAvailable` jest metoda statyczna. W związku z tym jeśli nie istnieje zostanie utworzony tymczasowy Menedżer wizualnego.  
   
- `IsWinXPThemeAvailable` zawsze zwraca 0s dla systemu Windows w wersjach starszych niż Windows XP.  
+ `IsWinXPThemeAvailable` zawsze zwracają 0s dla wersji systemu Windows starszych niż Windows XP.  
   
 ##  <a name="m_b3dtabsxptheme"></a>  CMFCVisualManagerWindows::m_b3DTabsXPTheme  
- Parametrów typu Boolean określającą, czy Menedżer visual Wyświetla karty 3D.  
+ Parametr logiczny, który określa, czy Menedżer wizualny Wyświetla karty 3D.  
   
 ```  
 AFX_IMPORT_DATA static BOOL m_b3DTabsXPTheme;  
@@ -647,7 +647,7 @@ virtual void OnDrawCaptionButtonIcon(
 ### <a name="parameters"></a>Parametry  
  [in] *podstawowego kontrolera domeny*  
  [in] *pButton*  
- [in] *id*  
+ [in] *identyfikator*  
  [in] *bWykonywanie aktywnych*  
  [in] *bWyłączone*  
  [in] *ptImage*  
@@ -1494,7 +1494,7 @@ void SetOfficeStyleMenus(BOOL bOn = TRUE);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *bW*  
+ [in] *bOn*  
   
 ### <a name="remarks"></a>Uwagi  
   

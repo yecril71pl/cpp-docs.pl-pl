@@ -1,5 +1,5 @@
 ---
-title: Funkcje wewnętrzne _InterlockedExchangePointer | Dokumentacja firmy Microsoft
+title: Funkcje wewnętrzne _interlockedexchangepointer | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -30,17 +30,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f8482b7d5b21c113001b702e00f406b9a3fcfd9c
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: dfeb1453cffac6cfe338f42da8b8efe60e18c9f8
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33334941"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42464656"
 ---
-# <a name="interlockedexchangepointer-intrinsic-functions"></a>Funkcje wewnętrzne _InterlockedExchangePointer
+# <a name="interlockedexchangepointer-intrinsic-functions"></a>Funkcje wewnętrzne _interlockedexchangepointer
 **Microsoft Specific**  
   
- W trakcie operacji atomic programu exchange, która kopiuje adres przekazany jako drugi argument jako pierwszy i zwraca oryginalnego adresu pierwszy.  
+ W trakcie operacji niepodzielnych programu exchange, skopiowanie adresu przekazanego jako drugi argument do pierwszego, która zwraca oryginalny adres pierwszego.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -72,35 +72,35 @@ void * _InterlockedExchangePointer_HLERelease(
 ```  
   
 #### <a name="parameters"></a>Parametry  
- [w, out] `Target`  
- Wskaźnik na wskaźnik do wartości do programu exchange. Funkcja ustawia wartość `Value` i zwraca jego poprzednią wartość.  
+ [out w] `Target`  
+ Wskaźnik do wskaźnika do wartości do programu exchange. Funkcja ustawia wartość `Value` i zwraca jego poprzednią wartość.  
   
  [in] `Value`  
- Wartość wymienianych z wartością wskazywana przez `Target`.  
+ Wartość wymienianych z wartością wskazywany przez `Target`.  
   
 ## <a name="return-value"></a>Wartość zwracana  
- Funkcja zwraca wartość początkowa wskazywana przez `Target`.  
+ Funkcja zwraca wartość początkową wskazywany przez `Target`.  
   
 ## <a name="requirements"></a>Wymagania  
   
-|— Wewnętrzne|Architektura|nagłówek|  
+|Wewnętrzne|Architektura|nagłówek|  
 |---------------|------------------|------------|  
-|`_InterlockedExchangePointer`|x86, ARM, [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|\<intrin.h>|  
+|`_InterlockedExchangePointer`|x86, ARM, x64|\<intrin.h>|  
 |`_InterlockedExchangePointer_acq`, `_InterlockedExchangePointer_rel`, `_InterlockedExchangePointer_nf`|ARM|\<intrin.h>|  
-|`_InterlockedExchangePointer_HLEAcquire`, `_InterlockedExchangePointer_HLERelease`|[!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)] z obsługą HLE|\<immintrin.h>|  
+|`_InterlockedExchangePointer_HLEAcquire`, `_InterlockedExchangePointer_HLERelease`|x64 z obsługą HLE|\<immintrin.h>|  
   
- Na x86 architektury, `_InterlockedExchangePointer` jest makrem, który wywołuje `_InterlockedExchange`.  
+ Na x86 architektury, `_InterlockedExchangePointer` to makro, które wywołuje `_InterlockedExchange`.  
   
 ## <a name="remarks"></a>Uwagi  
- W systemie 64-bitowym parametry są 64-bitowej i muszą być wyrównane na granicach 64-bitowy; w przeciwnym razie operacja zakończy się niepowodzeniem. W systemie 32-bitowy parametry są 32-bitowy i muszą być wyrównane na granicach 32-bitowych. Aby uzyskać więcej informacji, zobacz [Dopasuj](../cpp/align-cpp.md).  
+ W systemie 64-bitowych parametry są 64-bitowy i muszą być wyrównane na granicach 64-bitowy; w przeciwnym razie operacja zakończy się niepowodzeniem. W systemie 32-bitowych parametry są 32-bitowy i muszą być wyrównane na granicach 32-bitowych. Aby uzyskać więcej informacji, zobacz [wyrównać](../cpp/align-cpp.md).  
   
- Na platformach ARM, użyj funkcji wewnętrznych z `_acq` i `_rel` sufiksy, jeśli należy uzyskać i zwolnij semantyki, takich jak na początku i na końcu sekcji krytycznych. Wewnętrzne z `_nf` sufiks ("nie ogranicznika") nie działa jako bariery pamięci.  
+ Na platformach ARM, użyj funkcji wewnętrznych za pomocą `_acq` i `_rel` sufiksy, jeśli potrzebujesz uzyskać i zwolnij semantykę, takich jak na początku i na końcu sekcję krytyczną. Wewnętrzne z `_nf` sufiks ("nie ogranicznika") nie działają jako czynnik blokujący pamięci.  
   
- Na platformach firmy Intel, które obsługują instrukcje Elision blokady sprzętu (HLE), funkcje wewnętrzne z `_HLEAcquire` i `_HLERelease` sufiksy obejmują wskazówkę procesora, która umożliwia przyspieszanie wydajności przez wyeliminowanie krok blokady zapisu sprzętu. Jeśli te funkcje wewnętrzne są nazywane na platformach, które nie obsługują HLE, wskazówka zostanie zignorowany.  
+ Na platformach firmy Intel, obsługujące instrukcje pominięcia blokady sprzętu (HLE), funkcje wewnętrzne z `_HLEAcquire` i `_HLERelease` sufiksy obejmują wskazówkę procesora, który może przyspieszyć wydajność, eliminując krok blokady zapisu w sprzęcie. Jeśli te funkcje wewnętrzne są wywoływane na platformach, które nie obsługują HLE, wskazówka zostanie zignorowany.  
   
  Te procedury są dostępne tylko jako funkcje wewnętrzne.  
   
-**KOŃCOWY określonych firmy Microsoft**  
+**END specyficzny dla Microsoft**  
   
 ## <a name="see-also"></a>Zobacz też  
  [Funkcje wewnętrzne kompilatora](../intrinsics/compiler-intrinsics.md)   

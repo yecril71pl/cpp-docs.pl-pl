@@ -17,17 +17,17 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: a729497fe24fb0c08734e45d360965f5d22880c4
-ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
+ms.openlocfilehash: 9385882ec2cb24aefd1a319615250b5797bc0d1c
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/30/2018
-ms.locfileid: "39339451"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42464559"
 ---
 # <a name="open-database-connectivity-odbc"></a>Open Database Connectivity (ODBC)
 Biblioteka Microsoft Foundation Classes (MFC) dostarcza klas do programowania z Open Database Connectivity (ODBC). Począwszy od programu Visual Studio 2015 i ODBC programu SQL Server 2012 jest preferowanym sposobem łączenia ze źródłami danych SQL.
   
- Aby uzyskać więcej informacji o korzystaniu z interfejsu API ODBC bez MFC, zobacz [Open Database Connectivity (ODBC)](https://msdn.microsoft.com/library/ms710252.aspx) zestawu SDK w bibliotece MSDN.  
+ Aby uzyskać więcej informacji o korzystaniu z interfejsu API ODBC bez MFC, zobacz [Open Database Connectivity (ODBC)](/previous-versions/windows/desktop/ms710252\(v=vs.85\)) zestawu SDK w bibliotece MSDN.  
   
   
 ## <a name="in-this-section"></a>W tej sekcji  
@@ -67,7 +67,7 @@ Biblioteka Microsoft Foundation Classes (MFC) dostarcza klas do programowania z 
 -   [Lista sterowników ODBC](odbc-driver-list.md)  
   
 ## <a name="odbc-database-tasks"></a>Zadania bazy danych ODBC  
- Te zadania są oparte na bibliotece MFC [ODBC](odbc-basics.md) klasy. Aby uzyskać więcej informacji o korzystaniu z interfejsu API ODBC bez MFC, zobacz [Open Database Connectivity (ODBC)](https://msdn.microsoft.com/library/ms710252.aspx) zestawu SDK.  
+ Te zadania są oparte na bibliotece MFC [ODBC](odbc-basics.md) klasy. Aby uzyskać więcej informacji o korzystaniu z interfejsu API ODBC bez MFC, zobacz [Open Database Connectivity (ODBC)](/previous-versions/windows/desktop/ms710252\(v=vs.85\)) zestawu SDK.  
   
 -   [Zainstaluj i Rozpocznij pracę z ODBC](installing-and-getting-started-with-odbc.md)  
   

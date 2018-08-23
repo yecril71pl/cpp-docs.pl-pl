@@ -1,5 +1,5 @@
 ---
-title: Rozwiązywanie problemów z C/C++ izolowany aplikacji i zestawy Side-by-side | Dokumentacja firmy Microsoft
+title: Rozwiązywanie problemów z języka C/C++ izolowanymi oraz aplikacjami wykonywanymi Side-by-side | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,47 +16,47 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6f5645270cbc8fbb71dd841cb4f1affa6bef1295
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 56fc61fa7dd7973a6ee1cc4c5a20311bf43b056f
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32390694"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42465060"
 ---
 # <a name="troubleshooting-cc-isolated-applications-and-side-by-side-assemblies"></a>Rozwiązywanie problemów związanych z aplikacjami izolowanymi C/C++ oraz aplikacjami wykonywanymi równocześnie
-Podczas ładowania aplikacji C/C++ może zakończyć się niepowodzeniem, jeśli nie można odnaleźć zależnych bibliotek. W tym artykule opisano niektóre typowe przyczyny niepowodzenia aplikacji C/C++ załadować, a także sugeruje czynności umożliwiające rozwiązywanie problemów.  
+Trwa ładowanie aplikacji C/C++ może zakończyć się niepowodzeniem, jeśli nie można odnaleźć zależne biblioteki. W tym artykule opisano niektóre typowe przyczyny niepowodzenia aplikacji C/C++, aby załadować, a także sugeruje czynności, aby rozwiązać problemy.  
   
- Jeśli aplikacja nie może załadować, ponieważ ma ona manifestu, który określa zależność zestawu side-by-side i zestaw nie jest zainstalowany jako zestaw prywatny, w tym samym folderze co plik wykonywalny, ani w pamięć podręczna zestawów natywnych w folderze %WINDIR%\WinSxS\ , jeden z następujących komunikatów o błędach mogą być wyświetlane, w zależności od wersji systemu Windows, na którym zostanie podjęta próba uruchomienia aplikacji.  
+ Jeśli aplikacja nie może załadować, ponieważ ma ona manifestu, który określa zależność od zestawu side-by-side i zestaw nie jest zainstalowany jako zestaw prywatny, w tym samym folderze co plik wykonywalny, ani w pamięci podręcznej macierzystego zestawu w folderze %WINDIR%\WinSxS\ , jeden z następujących komunikatów o błędach mogą być wyświetlane, w zależności od wersji systemu Windows, na którym zostanie podjęta próba uruchomienia aplikacji.  
   
 -   Aplikacja nie została poprawnie zainicjowana (0xc0000135).  
   
--   Tej aplikacji nie powiodło się, ponieważ konfiguracja aplikacji jest niepoprawna. Ponowna instalacja aplikacji może naprawić ten problem.  
+-   Tej aplikacji nie powiodło się, ponieważ konfiguracja aplikacji jest nieprawidłowa. Ponowna instalacja aplikacji może naprawić ten problem.  
   
 -   System nie może wykonać określonego programu.  
   
- Jeśli aplikacja ma nie manifestu i zależy od systemu Windows nie można znaleźć w lokalizacjach, typowe wyszukiwania pliku DLL, komunikat o błędzie podobny do tego mogą być wyświetlane:  
+ Jeśli aplikacja ma nie manifestu i jest zależna od biblioteki DLL, która Windows nie można znaleźć w typowym wyszukiwaniu lokalizacje, może być wyświetlany komunikat o błędzie podobny do następującego:  
   
 -   Tej aplikacji nie powiodło się, ponieważ *wymaganej biblioteki DLL* nie został znaleziony. Ponowne zainstalowanie aplikacji może naprawić ten problem.  
   
- Jeśli wdrażania aplikacji na komputerze, który nie ma programu Visual Studio, a jego ulega awarii i komunikaty o błędach podobne poprzednie, sprawdź następujące elementy:  
+ Jeśli aplikacja jest wdrażana na komputerze, na którym nie zainstalowano oprogramowania Visual Studio uległa awarii z komunikatami o błędach, które przypominają poprzednie, należy sprawdzić te rzeczy:  
   
-1.  Wykonaj kroki opisane w [poznanie zależności aplikacji Visual C++](../ide/understanding-the-dependencies-of-a-visual-cpp-application.md). Walkera zależności można wyświetlić większości zależności dla aplikacji lub DLL. Jeśli zauważysz, że brakuje niektórych bibliotek DLL, zainstaluj je na komputerze, na którym chcesz uruchomić aplikację.  
+1.  Postępuj zgodnie z instrukcjami opisanymi w [poznanie zależności aplikacji Visual C++](../ide/understanding-the-dependencies-of-a-visual-cpp-application.md). Modułu przeszukiwania zależności można wyświetlić większość zależności dla aplikacji lub biblioteki DLL. Jeśli zauważysz, że brakuje niektórych bibliotek DLL, należy je zainstalować na komputerze, na którym chcesz uruchomić aplikację.  
   
-2.  Modułu ładującego systemu operacyjnego używa manifest aplikacji do ładowania zestawów, które zależy od aplikacji. Manifest można być osadzone w danych binarnych jako zasób lub zainstalowany jako osobny plik w folderze aplikacji. Aby sprawdzić, czy plik manifestu jest osadzony w danych binarnych, otwórz plik binarny w [!INCLUDE[vsprvs](../assembler/masm/includes/vsprvs_md.md)] i poszukaj RT_MANIFEST na liście zasobów. Jeśli nie można odnaleźć osadzonych manifestu, poszukaj w folderze aplikacji dla pliku, który ma o nazwie przypominać < binary_name >. \<rozszerzenia > manifest.  
+2.  Program ładujący systemu operacyjnego używa manifest aplikacji, aby ładować zestawy, od których zależy aplikacja. Manifest mogą być osadzone w pliku binarnym jako zasób lub zainstalowane jako osobny plik w folderze aplikacji. Aby sprawdzić, czy manifest jest osadzony w pliku binarnym, otwórz plik binarny w programie Visual Studio i poszukaj RT_MANIFEST na liście zasobów. Jeśli nie możesz znaleźć manifestu osadzonego, poszukaj w folderze aplikacji dla pliku, która ma nazwę podobną < binary_name >. \<rozszerzenia > manifest.  
   
-3.  Jeśli aplikacja jest zależna od zestawy side-by-side, ale nie ma manifestu, masz upewnij się, że konsolidator generuje manifest w projekcie. Zaznacz opcję konsolidatora **Generuj manifest** w **właściwości projektu** okno dialogowe dla projektu.  
+3.  Jeśli Twoja aplikacja jest zależna od zestawów side-by-side i nie ma manifestu, należy upewnić się, że konsolidator generuje manifest dla projektu. Zaznacz opcję konsolidatora **Generuj manifest** w **właściwości projektu** okno dialogowe dla projektu.  
   
-4.  Manifest jest osadzony w danych binarnych, upewnij się, że identyfikator RT_MANIFEST jest prawidłowa dla tego typu danych binarnych. Aby uzyskać więcej informacji na temat identyfikator zasobu, w którym do użycia, zobacz [używanie zestawów Side-by-Side jako zasób (system Windows)](http://msdn.microsoft.com/library/windows/desktop/aa376617.aspx). Jeśli manifest w osobnym pliku, otwórz go w edytorze XML lub edytorze tekstów. Aby uzyskać więcej informacji na temat manifestów i reguł dotyczących wdrażania, zobacz [manifesty](http://msdn.microsoft.com/library/aa375365).  
+4.  Jeśli manifest jest osadzony w pliku binarnym, upewnij się, że identyfikator RT_MANIFEST jest prawidłowy dla tego typu pliku binarnego. Aby uzyskać więcej informacji na temat którego Identyfikatora zasobu, aby użyć zobacz [używanie zestawów Side-by-Side jako zasób (Windows)](http://msdn.microsoft.com/library/windows/desktop/aa376617.aspx). Jeśli manifest znajduje się w oddzielnym pliku, otwórz go w edytorze XML lub edytorze tekstów. Aby uzyskać więcej informacji na temat manifestów i reguł dotyczących wdrażania, zobacz [manifesty](http://msdn.microsoft.com/library/aa375365).  
   
     > [!NOTE]
-    >  Jeśli istnieją zarówno manifest osadzone, jak i oddzielny plik manifestu modułu ładującego systemu operacyjnego używa osadzonych manifestu i ignoruje oddzielny plik. Jednak w systemie Windows XP przeciwieństwem ma wartość true — oddzielny plik manifestu jest używany i osadzone manifestu jest ignorowana.  
+    >  Jeśli obecne są oba wbudowanym manifeście i oddzielny plik manifestu, moduł ładujący systemu operacyjnego korzysta z manifestu osadzonego i ignoruje oddzielnym pliku. Jednak w systemie Windows XP, przeciwieństwo ma wartość true, jest używany oddzielny plik manifestu i manifestu osadzonego jest ignorowany.  
   
-5.  Firma Microsoft zaleca osadzanie manifestu w każdej biblioteki DLL, ponieważ manifestów zewnętrzne są ignorowane, podczas ładowania biblioteki DLL jednak `LoadLibrary` wywołania. Aby uzyskać więcej informacji, zobacz [manifesty zestawu](http://msdn.microsoft.com/library/aa374219).  
+5.  Firma Microsoft zaleca, aby osadzić manifest w każdej biblioteki DLL, ponieważ zewnętrzne manifestów są ignorowane, gdy biblioteka DLL jest ładowany do `LoadLibrary` wywołania. Aby uzyskać więcej informacji, zobacz [zestawu manifestów](http://msdn.microsoft.com/library/aa374219).  
   
-6.  Sprawdź, czy wszystkie zestawy, które są wymienione w manifeście są poprawnie zainstalowane na komputerze. Każdy zestaw jest określona w manifeście, jego nazwa, numer wersji i architektury procesora. Jeśli aplikacja jest zależna od zestawy side-by-side, sprawdź, czy te zestawy są poprawnie zainstalowane na komputerze, aby modułu ładującego systemu operacyjnego można znaleźć, zgodnie z opisem w [sekwencji wyszukiwania zestawu](http://msdn.microsoft.com/library/aa374224). Należy pamiętać, że zestawy 64-bitowe nie może zostać załadowany w procesach 32-bitowych i nie można wykonać na 32-bitowych systemach operacyjnych.  
+6.  Sprawdź, czy wszystkie zestawy, które są wyliczane w manifeście są poprawnie zainstalowane na komputerze. Każdy zestaw jest określony w manifeście jej nazwa, numer wersji i architektury procesora. Jeśli Twoja aplikacja jest zależna od zestawów side-by-side, sprawdź, czy te zestawy są poprawnie zainstalowane na komputerze, aby program ładujący systemu operacyjnego można znaleźć, zgodnie z opisem w [kolejność wyszukiwania zestawu](http://msdn.microsoft.com/library/aa374224). Należy pamiętać, że zestawów 64-bitowych nie można załadować w procesach 32-bitowe i nie można wykonać na 32-bitowych systemach operacyjnych.  
   
 ## <a name="example"></a>Przykład  
- Załóżmy, że mamy aplikacji appl.exe, która została skompilowana przy użyciu programu Visual C++. Manifest aplikacji albo jest osadzony w appl.exe jako zasobu binarnego RT_MANIFEST, co ma identyfikator równy 1 lub jest przechowywana jako appl.exe.manifest oddzielny plik. Zawartość tego manifestu podobny to:  
+ Załóżmy, że mamy aplikację appl.exe, która powstała przy użyciu języka Visual C++. Manifest aplikacji jest albo osadzony w appl.exe jako zasób binarny RT_MANIFEST, który ma identyfikator równy 1 lub jest przechowywany jako appl.exe.manifest oddzielny plik. Zawartość tego manifestu jest podobny do tego:  
   
 ```  
 <assembly xmlns="urn:schemas-microsoft-com:asm.v1" manifestVersion="1.0">  
@@ -68,9 +68,9 @@ Podczas ładowania aplikacji C/C++ może zakończyć się niepowodzeniem, jeśli
 </assembly>  
 ```  
   
- Do modułu ładującego systemu operacyjnego tego manifestu mówi tego appl.exe zależy od zestawu o nazwie Fabrikam.SxS.Library, wersja 2.0.20121.0, który jest przeznaczony dla x86 32-bitowy procesor. Można zainstalować zestawu zależnego side-by-side jako zestaw udostępnionego lub zestaw prywatny.  
+ Do modułu ładującego systemu operacyjnego tego manifestu wynika z tego appl.exe zależy zestaw o nazwie Fabrikam.SxS.Library, wersja 2.0.20121.0, który zaprojektowano pod kątem x86 32-bitowa architektura procesora. Można zainstalować jako zestaw współużytkowany lub prywatny zestawu zależnego zestawu side-by-side.  
   
- Manifest zestawu dla udostępnionego zestawu jest zainstalowany w folderze %WINDIR%\WinSxS\Manifests\. Określa zestaw i wyświetla jego zawartość — to znaczy bibliotek DLL, które są częścią zestawu:  
+ Manifest zestawu współużytkowanego jest zainstalowany w folderze %WINDIR%\WinSxS\Manifests\. Określa zestaw i wyświetla jego zawartość — czyli bibliotek DLL, które są częścią zestawu:  
   
 ```  
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>  
@@ -82,7 +82,7 @@ Podczas ładowania aplikacji C/C++ może zakończyć się niepowodzeniem, jeśli
 </assembly>  
 ```  
   
- Zestawy Side-by-side można również użyć [pliki konfiguracji wydawcy](http://msdn.microsoft.com/library/aa375682)— znanej także jako pliki zasad — Aby globalnie przekierować aplikacje i zestawy, do używania jednej wersji zestawu side-by-side zamiast inna wersja tego samego zestaw. Zestaw udostępnionego w folderze %WINDIR%\WinSxS\Policies\ można sprawdzić zasad. Oto przykładowy plik zasad:  
+ Umożliwia również zestawów Side-by-side [pliki konfiguracyjne wydawcy](http://msdn.microsoft.com/library/aa375682)— nazywane również plikami zasad — globalnie przekierować aplikacje i zestawy, do korzystania z jednej wersji zestawu side-by-side zamiast inna wersja tego samego zestaw. Zestaw współużytkowany w folderze %WINDIR%\WinSxS\Policies\ może wyszukać zasady. Poniżej przedstawiono przykładowy plik zasad:  
   
 ```  
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>  
@@ -98,16 +98,16 @@ Podczas ładowania aplikacji C/C++ może zakończyć się niepowodzeniem, jeśli
 </assembly>  
 ```  
   
- Ten plik zasad określa, czy każda aplikacja lub zestawu z pytaniem, czy wersja 2.0.10000.0 tego zestawu zamiast tego użyj wersji 2.0.20121.0, która jest bieżącą wersję, która jest zainstalowana w systemie. Jeśli wersja zestawu, który jest wymieniony w manifeście aplikacji określono w pliku zasad, moduł ładujący szuka wersja tego zestawu, który określono w manifeście w folderze %WINDIR%\WinSxS\ i jeśli ta wersja nie jest zainstalowany, obciążenia nie powiedzie się. A jeśli nie jest zainstalowana wersja zestawu 2.0.20121.0, obciążenia nie powiedzie się dla aplikacji z prośbą o podanie wersji zestawu 2.0.10000.0.  
+ Ten plik zasad określa, że dowolnej aplikacji lub zestawu, która poprosi o podanie wersji 2.0.10000.0 tego zestawu zamiast tego użyj wersji 2.0.20121.0, która jest bieżącą wersję, która jest zainstalowana w systemie. Jeśli wersja zestawu, który jest wymieniony w manifeście aplikacji jest określona w pliku zasad, moduł ładujący szuka wersji tego zestawu, który jest określony w manifeście w folderze %WINDIR%\WinSxS\, a jeśli ta wersja nie jest zainstalowany, obciążenia nie powiedzie się. A jeśli nie zainstalowano wersję zestawu 2.0.20121.0, obciążenia nie powiedzie się dla aplikacji, które poproś o wersję zestawu 2.0.10000.0.  
   
- Jednak zestaw można również zainstalować jako prywatnych zestawu side-by-side, w folderze zainstalowanych aplikacji. Jeśli system operacyjny nie można znaleźć zestawu jako zestaw udostępnionego, szuka go jako zestaw prywatny, w następującej kolejności:  
+ Jednak zestaw można również zainstalować jako zestaw prywatny side-by-side, w folderze zainstalowanych aplikacji. Jeśli system operacyjny nie można znaleźć zestawu jako zestaw współużytkowany, szuka go jako zestaw prywatny, w następującej kolejności:  
   
-1.  Sprawdź folder aplikacji o tej nazwie pliku manifestu \<assemblyName > manifest. W tym przykładzie moduł ładujący podejmie próbę odnalezienia Fabrikam.SxS.Library.manifest w folderze, który zawiera appl.exe. Jeśli znajdzie plik manifestu, moduł ładujący ładuje zestaw w folderze aplikacji. Nie odnaleziono zestawu, obciążenia nie powiedzie się.  
+1.  Sprawdź folder aplikacji dla pliku manifestu, który ma taką nazwę \<Nazwa_zestawu > manifest. W tym przykładzie moduł ładujący próbuje znaleźć Fabrikam.SxS.Library.manifest w folderze, który zawiera appl.exe. Jeśli znajdzie manifestu, moduł ładujący ładuje zestaw z folderu aplikacji. Jeśli zestaw nie zostanie znaleziony, obciążenia nie powiedzie się.  
   
-2.  Spróbuj otworzyć \\< assemblyName\>\ folderu w folderze, który zawiera appl.exe, a jeśli \\< assemblyName\>\ istnieje, spróbuj załadować pliku manifestu, który ma nazwę \<assemblyName >. Manifest z tego folderu. Jeśli zostanie znaleziony plik manifestu, moduł ładujący ładuje zestaw z \\< assemblyName\>\ folderu. Nie odnaleziono zestawu, obciążenia nie powiedzie się.  
+2.  Spróbuj otworzyć \\< Nazwa_zestawu\>\ folderu w folderze, który zawiera appl.exe, i, jeśli \\< assemblyName\>\ istnieje, spróbuj załadować pliku manifestu, który ma taką nazwę \<assemblyName >. Manifest z tego folderu. Jeśli zostanie znaleziony manifestu, moduł ładujący ładuje zestaw z \\< Nazwa_zestawu\>\ folderu. Jeśli zestaw nie zostanie znaleziony, obciążenia nie powiedzie się.  
   
- Aby uzyskać więcej informacji na temat jak moduł ładujący wyszukuje zestawów zależnych, zobacz [sekwencji wyszukiwania zestawu](http://msdn.microsoft.com/library/aa374224). Jeśli moduł ładujący nie można znaleźć zestawu zależnego jako zestaw prywatny, obciążenia nie powiedzie się i zostanie wyświetlony komunikat "system nie może wykonać określonego programu". Aby rozwiązać ten problem, upewnij się, że zestawów zależnych — i bibliotek DLL, które są częścią ich — są zainstalowane na komputerze jako prywatne lub współużytkowane zestawy.  
+ Aby uzyskać więcej informacji na temat jak moduł ładujący wyszukuje zależne zestawy zobacz [kolejność wyszukiwania zestawu](http://msdn.microsoft.com/library/aa374224). Jeśli moduł ładujący nie można odnaleźć zależnego zestawu jako zestaw prywatny, obciążenia nie powiedzie się i zostanie wyświetlony komunikat "system nie może wykonać określonego programu". Aby rozwiązać ten problem, upewnij się, że zestawów zależnych — i bibliotek DLL, które należą do nich — są zainstalowane na komputerze jako prywatne lub współużytkowane zestawy.  
   
 ## <a name="see-also"></a>Zobacz też  
- [Aplikacje izolowane i zestawy Side-by-side](../build/concepts-of-isolated-applications-and-side-by-side-assemblies.md)   
+ [Pojęcia związane z aplikacjami izolowanymi oraz aplikacjami zestawów Side-by-side](../build/concepts-of-isolated-applications-and-side-by-side-assemblies.md)   
  [Kompilowanie aplikacji izolowanych C/C++ oraz aplikacji wykonywanych równocześnie](../build/building-c-cpp-isolated-applications-and-side-by-side-assemblies.md)

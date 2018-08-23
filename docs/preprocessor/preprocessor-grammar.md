@@ -16,97 +16,98 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d14a3e00e18a2d3ac69dd472ac4056a379ada224
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 1871d1b8281f4dd74733133ede70ed80430246b3
+ms.sourcegitcommit: d4c803bd3a684d7951bf88dcecf1f14af43ae411
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33843369"
+ms.lasthandoff: 08/10/2018
+ms.locfileid: "42464528"
 ---
 # <a name="preprocessor-grammar"></a>Gramatyka preprocesora
-**#define***identyfikator* *ciąg tokenu*opcjonalnych  
+**#define***identyfikator* *ciąg tokenu*zoptymalizowany pod kątem    
   
- *#* **Zdefiniuj***identyfikator*[**(** *identyfikator*opt **,** *...*  **,** *identyfikator*opt **)**] *ciąg tokenu*opcjonalnych  
+*#* **Zdefiniuj***identyfikator*[**(** *identyfikator*zoptymalizowany pod kątem **,** *...*  **,** *identyfikator*zoptymalizowany pod kątem **)**] *ciąg tokenu*zoptymalizowany pod kątem    
   
- **Definicja (***identyfikator* **)**  
+**zdefiniowany (***identyfikator* **)**   
   
- **definicja***identyfikator*  
+**definicja***identyfikator*   
   
- `#include` **"***ścieżka spec***"**  
+`#include` **"***path-spec***"**  
   
- `#include` **\<***path-spec***>**  
+`#include` **\<***path-spec***>**  
   
- **#line***sekwencji cyfr***"** *filename* **"** opcjonalnych  
+**#line***sekwencję cyfr***"** *filename* **"** zoptymalizowany pod kątem      
   
- *#* **undef***identyfikator*  
+*#* **undef***identyfikator*   
   
- **#error***ciąg tokenu*  
+**#error***ciąg tokenu*   
   
- **#pragma***ciąg tokenu*  
+**#pragma***ciąg tokenu*   
   
- *warunkowe* :  
- *Jeśli część elif części*opt*część else*opt*endif wiersza*  
+*warunkowe* :  
+*część IF części elif*zoptymalizowany pod kątem*część else*zoptymalizowany pod kątem*linia endif*  
   
- *Jeśli część* :  
- *if-linetext*  
+*część IF* :  
+*if-linetext*  
   
- *Jeśli wiersz* :  
- **#if***wyrażenie stałej*   
+*wiersz z operatorem IF* :  
+**#if***wyrażenia stałego*   
   
- **#ifdef***identyfikator*  
+**#ifdef***identyfikator*   
   
- **#ifndef***identyfikator*  
+**#ifndef***identyfikator*   
   
- *elif części* :  
- *elif wiersza tekstu*  
+*części elif* :  
+*tekst linii elif*  
   
- *elif części elif wiersza tekstu*  
+*tekst linii elif części elif*  
   
- *elif — wiersz* :  
- **#elif**  *constant-expression*  
+*Linia elif* :  
+**#elif**  *constant-expression*  
   
- *część else* :  
- *else-linetext*  
+*część else* :  
+*else-linetext*  
   
- *else wiersza* :  
- `#else`  
+*else linii* :  
+`#else`  
   
- *ENDIF-line* :  
- `#endif`  
+*Linia ENDIF* :  
+`#endif`  
   
- *cyfra sekwencji* :  
- *digit*  
+*sekwencja cyfr* :  
+*digit*  
   
- *cyfra sekwencji cyfr*  
+*sekwencja cyfr cyfra*  
   
- *cyfra* : jeden z  
- **0 1 2 3 4 5 6 7 8 9**  
+*cyfra* : jeden z  
+**0 1 2 3 4 5 6 7 8 9**  
   
- *ciąg tokenu* :  
- Ciąg tokenów  
+*token ciągu* :  
+Ciąg tokenów  
   
- *Token* :  
- *keyword*  
+*Token* :  
+*keyword*  
   
- *Identyfikator*  
+*Identyfikator*  
   
- *Stała*  
+*Stałe*  
   
- *operator*  
+*operator*  
   
- `punctuator`  
+`punctuator`  
   
- *Nazwa pliku* :  
- Nazwa pliku prawne systemu operacyjnego  
+*Nazwa pliku* :  
+System operacyjny prawne, nazwa_pliku  
   
- *Ścieżka spec* :  
- Ścieżka pliku prawnych  
+*PATH-spec* :  
+Ścieżka pliku prawne  
   
- *tekst* :  
- Wszelkie sekwencji tekstu  
+*tekst* :  
+Dowolną sekwencją tekstu  
   
 > [!NOTE]
->  Następujące symboli nieterminalnych są rozwijane w [konwencje leksykalne](../cpp/lexical-conventions.md) sekcji *dokumentacja języka C++*: `constant`, `constant` - *wyrażenia* , *identyfikator*, *— słowo kluczowe*, `operator`, i `punctuator`.  
+> Następujące symboli nieterminalnych są rozwijane w [konwencje leksykalne](../cpp/lexical-conventions.md) części *C++ Language Reference*: `constant`, `constant` - *wyrażenia* , *identyfikator*, *— słowo kluczowe*, `operator`, i `punctuator`.  
   
 ## <a name="see-also"></a>Zobacz też  
- [Podsumowanie gramatyki (C/C++)](../preprocessor/grammar-summary-c-cpp.md)
+ 
+[Podsumowanie gramatyki (C/C++)](../preprocessor/grammar-summary-c-cpp.md)

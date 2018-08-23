@@ -27,12 +27,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c5bd2a384af6e73ae0c113bf8c27ae9d0c7529a8
-ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
+ms.openlocfilehash: 2b5cff88aab5a4b069d96808755ce92d61f32fff
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37881103"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42465985"
 ---
 # <a name="ccompolyobject-class"></a>Klasa CComPolyObject
 Ta klasa implementuje `IUnknown` zagregowane lub nieagregowane w obiekcie.  
@@ -63,7 +63,7 @@ class CComPolyObject : public IUnknown,
 |Nazwa|Opis|  
 |----------|-----------------|  
 |[CComPolyObject::AddRef](#addref)|Zwiększa licznik odwołań obiektu.|  
-|[CComPolyObject::CreateInstance](#createinstance)|(Statyczny) Służy do tworzenia nowego **CComPolyObject <** `contained` **>** obiektu bez konieczności [CoCreateInstance](http://msdn.microsoft.com/library/windows/desktop/ms686615).|  
+|[CComPolyObject::CreateInstance](#createinstance)|(Statyczny) Służy do tworzenia nowego **CComPolyObject <** `contained` **>** obiektu bez konieczności [CoCreateInstance](/windows/desktop/api/combaseapi/nf-combaseapi-cocreateinstance).|  
 |[CComPolyObject::FinalConstruct](#finalconstruct)|Wykonuje końcowe inicjowanie `m_contained`.|  
 |[CComPolyObject::FinalRelease](#finalrelease)|Wykonuje końcowe zniszczenie `m_contained`.|  
 |[CComPolyObject::QueryInterface](#queryinterface)|Pobiera wskaźnik do żądanego interfejsu.|  
@@ -137,7 +137,7 @@ CComPolyObject(void* pv);
  Zwalnia wszystkie przydzielone zasoby, wywołania [FinalRelease](#finalrelease), oraz liczbę blokad modułu zmniejsza.  
   
 ##  <a name="createinstance"></a>  CComPolyObject::CreateInstance  
- Służy do tworzenia nowego **CComPolyObject <** `contained` **>** obiektu bez konieczności [CoCreateInstance](http://msdn.microsoft.com/library/windows/desktop/ms686615).  
+ Służy do tworzenia nowego **CComPolyObject <** `contained` **>** obiektu bez konieczności [CoCreateInstance](/windows/desktop/api/combaseapi/nf-combaseapi-cocreateinstance).  
   
 ```
 static HRESULT WINAPI CreateInstance(  

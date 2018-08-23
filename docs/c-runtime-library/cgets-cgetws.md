@@ -1,5 +1,5 @@
 ---
-title: _cgets —, _cgetws — | Dokumentacja firmy Microsoft
+title: _cgets, _cgetws — | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,6 +16,8 @@ apilocation:
 - msvcr90.dll
 - msvcrt.dll
 - msvcr110_clr0400.dll
+- ucrtbase.dll
+- api-ms-win-crt-conio-l1-1-0.dll
 apitype: DLLExport
 f1_keywords:
 - cgetws
@@ -35,21 +37,21 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 144e08278fb37e08d741ac8cb5a441c8df788b5b
-ms.sourcegitcommit: 6e3cf8df676d59119ce88bf5321d063cf479108c
+ms.openlocfilehash: 91ae4f6bcd3b32f2d97362d340fad3ef6995802c
+ms.sourcegitcommit: e9ce38decc9f986edab5543de3464b11ebccb123
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/22/2018
-ms.locfileid: "34451201"
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "42466231"
 ---
 # <a name="cgets-cgetws"></a>_cgets, _cgetws
-Pobiera ciąg znaków z konsoli. Bezpieczniejsza wersje te funkcje są dostępne; zobacz [_cgets_s —, _cgetws_s —](../c-runtime-library/reference/cgets-s-cgetws-s.md).  
+Pobiera ciąg znaków z konsoli. Bardziej bezpieczne wersje tych funkcji są dostępne; zobacz [_cgets_s, _cgetws_s —](../c-runtime-library/reference/cgets-s-cgetws-s.md).  
   
 > [!IMPORTANT]
->  Te funkcje są przestarzałe. Począwszy od programu Visual Studio 2015, ich nie są dostępne w CRT. Bezpieczne wersje tych funkcji, _cgets_s — i _cgetws_s —, są nadal dostępne. Informacje na temat tych funkcji alternatywnych, zobacz [_cgets_s —, _cgetws_s —](../c-runtime-library/reference/cgets-s-cgetws-s.md).  
+>  Te funkcje są przestarzałe. Począwszy od programu Visual Studio 2015, nie są one dostępne w CRT. Bezpieczne wersje tych funkcji, _cgets_s i _cgetws_s —, są nadal dostępne. Informacje na temat tych funkcji alternatywnych, zobacz [_cgets_s, _cgetws_s —](../c-runtime-library/reference/cgets-s-cgetws-s.md).  
   
 > [!IMPORTANT]
->  Nie można używać tego interfejsu API w aplikacjach, które są wykonywane w środowisku wykonawczym systemu Windows. Aby uzyskać więcej informacji, zobacz [funkcje CRT, nie są obsługiwane w aplikacjach platformy uniwersalnej systemu Windows](../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).  
+>  Tego API nie można używać w aplikacjach korzystających ze środowiska wykonawczego Windows. Aby uzyskać więcej informacji, zobacz [funkcje CRT nieobsługiwane w aplikacjach platformy uniwersalnej Windows](../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -72,17 +74,17 @@ wchar_t *_cgetws(
   
 #### <a name="parameters"></a>Parametry  
  `buffer`  
- Lokalizacja magazynu danych.  
+ Lokalizacja magazynowa danych.  
   
 ## <a name="return-value"></a>Wartość zwracana  
- `_cgets` i `_cgetws` zwraca wskaźnik do początku ciągu znaków na `buffer[2]`. Jeśli `buffer` jest **NULL**, te funkcje Wywołaj program obsługi nieprawidłowych parametrów, zgodnie z opisem w [sprawdzanie poprawności parametru](../c-runtime-library/parameter-validation.md). Jeśli jest dozwolone wykonywanie, aby kontynuować, zwracają **NULL** i ustaw `errno` do `EINVAL`.  
+ `_cgets` i `_cgetws` zwracają wskaźnik do początku ciągu, w `buffer[2]`. Jeśli `buffer` jest **NULL**, funkcje te wywołują procedurę obsługi nieprawidłowego parametru, zgodnie z opisem w [Parameter Validation](../c-runtime-library/parameter-validation.md). Jeśli wykonanie może być kontynuowane, zwracają one **NULL** i ustaw `errno` do `EINVAL`.  
   
 ## <a name="remarks"></a>Uwagi  
- Tych funkcji odczytu ciąg znaków z konsoli i przechowywane w lokalizacji wskazywanej przez ciąg, a jej długość `buffer`. `buffer` Parametr musi być wskaźnik do tablicy znaków. Pierwszy element tablicy, `buffer[0]`, musi zawierać maksymalną długość (w znakach) ciągu do odczytu. Tablica musi zawierać za mało elementów, aby pomieścić ciąg, znak końcowy null ('\0') i 2 bajty dodatkowe. Funkcja odczytuje znaków, aż do powrotu karetki-wiersza źródła kombinacja (CR LF) lub określoną liczbę znaków jest do odczytu. Ciąg jest przechowywana, zaczynając od `buffer[2]`. Jeśli funkcja CR LF, są przechowywane znak null ('\0'). Funkcja następnie przechowuje rzeczywista długość ciągu drugiego elementu tablicy `buffer[1]`.  
+ Te funkcje odczytują ciąg znaków z konsoli i przechowują ciąg i jego długość w lokalizacji wskazywanej przez `buffer`. `buffer` Parametru musi być wskaźnikiem do tablicy znaków. Pierwszy element tablicy, `buffer[0]`, musi zawierać maksymalną długość (w znakach) ciągu do odczytu. Tablica musi zawierać tyle elementów, aby pomieścić ciąg, kończący znak null (\0) i 2 bajty dodatkowe. Funkcja odczytuje znaki do momentu powrotu karetki — wiersza kanału informacyjnego kombinacji (CR-LF) lub określoną liczbę znaków jest do odczytu. Ciąg jest przechowywany, zaczynając od `buffer[2]`. Jeśli funkcja odczytuje CR-LF, przechowuje znak null ('\0'). Funkcja następnie przechowuje rzeczywista długość ciągu drugiego elementu tablicy, `buffer[1]`.  
   
- Ponieważ wszystkie klucze edycji są aktywne, kiedy `_cgets` lub `_cgetws` jest wywoływana, gdy w konsoli okna, naciskając klawisz F3 powtarza ostatni wpis wprowadzony.  
+ Ponieważ wszystkie klawisze edycji są aktywne, kiedy `_cgets` lub `_cgetws` jest wywoływana, gdy w konsoli okna, naciskanie klawisza F3 powtarza ostatni wprowadzony wpis.  
   
- W języku C++ te funkcje mają przeciążenia szablonu, które wywołują odpowiedników nowsza, bezpieczne tych funkcji. Aby uzyskać więcej informacji, zobacz [Secure szablonu Overloads](../c-runtime-library/secure-template-overloads.md).  
+ W języku C++ funkcje te mają przeciążenia szablonu, które wywołują nowsze, bezpieczne odpowiedniki tych funkcji. Aby uzyskać więcej informacji, zobacz [Secure przeciążenia szablonu](../c-runtime-library/secure-template-overloads.md).  
   
 ### <a name="generic-text-routine-mappings"></a>Mapowania procedur zwykłego tekstu  
   
@@ -97,7 +99,7 @@ wchar_t *_cgetws(
 |`_cgets`|\<conio.h>|  
 |`_cgetws`|\<conio.h > lub \<wchar.h >|  
   
- Aby uzyskać więcej informacji o zgodności, zobacz [zgodności](../c-runtime-library/compatibility.md).  
+ Aby uzyskać więcej informacji na temat zgodności, zobacz [zgodności](../c-runtime-library/compatibility.md).  
   
 ## <a name="example"></a>Przykład  
   

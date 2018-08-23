@@ -18,17 +18,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2bdfe58f5b42b4c06b3eda3f641bb9f2a4c628cd
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 8b0b259c730a7db343cc08ff077cf57043f292a6
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33326914"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42464551"
 ---
 # <a name="addressofreturnaddress"></a>_AddressOfReturnAddress
 **Microsoft Specific**  
   
- Zawiera adres lokalizacji pamięci, który zawiera adres zwrotny bieżącej funkcji. Ten adres nie można uzyskać dostępu do innych lokalizacji pamięci (na przykład argumentów funkcji).  
+ Udostępnia adres lokalizacji w pamięci, który zawiera adres zwrotny bieżącą funkcję. Ten adres nie może być umożliwia dostęp do innych lokalizacji pamięci (na przykład argumenty funkcji).  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -38,16 +38,16 @@ void * _AddressOfReturnAddress();
   
 ## <a name="requirements"></a>Wymagania  
   
-|— Wewnętrzne|Architektura|  
+|Wewnętrzne|Architektura|  
 |---------------|------------------|  
-|`_AddressOfReturnAddress`|x86, [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
+|`_AddressOfReturnAddress`|x86, x64|  
   
- **Plik nagłówka** \<intrin.h >  
+ **Plik nagłówkowy** \<intrin.h >  
   
 ## <a name="remarks"></a>Uwagi  
- Podczas `_AddressOfReturnAddress` jest używany w programie skompilowane z [/CLR](../build/reference/clr-common-language-runtime-compilation.md), zawierający funkcja `_AddressOfReturnAddress` wywołanie jest skompilowany, ponieważ funkcja macierzystego. Gdy funkcja skompilowana jako zarządzane wywołuje zawierający funkcja `_AddressOfReturnAddress`, `_AddressOfReturnAddress` może nie działać zgodnie z oczekiwaniami.  
+ Gdy `_AddressOfReturnAddress` jest używany w programie skompilowany przy użyciu [/CLR](../build/reference/clr-common-language-runtime-compilation.md), zawierający funkcję `_AddressOfReturnAddress` wywołanie jest skompilowany w macierzystym funkcji. Gdy funkcja skompilowana jako zarządzana wywołania do funkcji zawierający `_AddressOfReturnAddress`, `_AddressOfReturnAddress` może nie działać zgodnie z oczekiwaniami.  
   
- Ta procedura jest dostępna tylko wewnętrznie.  
+ Ta procedura jest dostępna wyłącznie jako wewnętrzna.  
   
 ## <a name="example"></a>Przykład  
   
@@ -81,7 +81,7 @@ int main() {
 00401058  
 ```  
   
-**KOŃCOWY określonych firmy Microsoft**  
+**END specyficzny dla Microsoft**  
   
 ## <a name="see-also"></a>Zobacz też  
  [Funkcje wewnętrzne kompilatora](../intrinsics/compiler-intrinsics.md)   

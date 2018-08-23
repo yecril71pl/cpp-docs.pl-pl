@@ -16,17 +16,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ae312de1311bfe068ac48838f2720bd8a2a83e53
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 6bf4cc0ce245b6b80165ced5a9649586f9214639
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33339543"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42466355"
 ---
 # <a name="mulh"></a>__mulh
 **Microsoft Specific**  
   
- Zwraca wysokiej 64-bitowy iloczyn dwóch 64-bitowych liczb całkowitych ze znakiem.  
+ Zwraca wysokiej 64-bitowy iloczyn dwóch liczb całkowitych ze znakiem 64-bitowych.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -39,24 +39,24 @@ __int64 __mulh(
   
 #### <a name="parameters"></a>Parametry  
  [in] `a`  
- Pierwszy liczbę Aby pomnożyć.  
+ Pierwszy numer do pomnożenia.  
   
  [in] `b`  
- Druga liczba do wielokrotnie.  
+ Druga liczba do pomnożenia.  
   
 ## <a name="return-value"></a>Wartość zwracana  
- Wysoka 64 bity wyniku iloczyn 128-bitowego.  
+ Wysoka 64 bity 128-bitowego wynik mnożenia.  
   
 ## <a name="requirements"></a>Wymagania  
   
-|— Wewnętrzne|Architektura|  
+|Wewnętrzne|Architektura|  
 |---------------|------------------|  
-|`__mulh`|[!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
+|`__mulh`|X64|  
   
- **Plik nagłówka** \<intrin.h >  
+ **Plik nagłówkowy** \<intrin.h >  
   
 ## <a name="remarks"></a>Uwagi  
- Ta procedura jest dostępna tylko wewnętrznie.  
+ Ta procedura jest dostępna wyłącznie jako wewnętrzna.  
   
 ## <a name="example"></a>Przykład  
   
@@ -85,7 +85,7 @@ int main()
 0xfffffffffffffff * 0xf0000000 = 0xeffffffffffffff10000000  
 ```  
   
-**KOŃCOWY określonych firmy Microsoft**  
+**END specyficzny dla Microsoft**  
   
 ## <a name="see-also"></a>Zobacz też  
  [Funkcje wewnętrzne kompilatora](../intrinsics/compiler-intrinsics.md)

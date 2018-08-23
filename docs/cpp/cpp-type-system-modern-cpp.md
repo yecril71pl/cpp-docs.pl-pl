@@ -12,12 +12,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5b5a91caab06f4d03beeea8ba542e1ebc12a8ecb
-ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
+ms.openlocfilehash: 394136ccd11b4efd9f312c82acad7e9258309551
+ms.sourcegitcommit: b92ca0b74f0b00372709e81333885750ba91f90e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/01/2018
-ms.locfileid: "39407864"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "42464855"
 ---
 # <a name="c-type-system-modern-c"></a>System typów języka C++ (Modern C++)
 Pojęcie *typu* jest bardzo ważna w języku C++. Zwracana wartość każdej zmiennej, argumentu funkcji oraz funkcji musi mieć typ, aby mogła zostać skompilowana. Ponadto, kompilator niejawnie nadaje typ każdemu wyrażeniu (w tym wartości literału), zanim zostanie on oceniony. Niektóre przykłady typów uwzględniają **int** do przechowywania wartości całkowitych **double** do przechowywania wartości zmiennoprzecinkowych (znany także jako *skalarne* typy danych), lub klasa biblioteki standardowej [std::basic_string](../standard-library/basic-string-class.md) do przechowywania tekstu. Możesz utworzyć swój własny typ definiując **klasy** lub **struktury**. Typ określa wielkość pamięci, która zostanie zaalokowana dla zmiennej (lub wyniku wyrażenia), rodzaje wartości, które mogą być przechowywane w tej zmiennej, sposób interpretacji tych wartości (jako wzorców bajtów) oraz operacje, jakie mogą zostać na nich wykonane. Ten artykuł zawiera nieformalny przegląd głównych funkcji systemu typów C++.  
@@ -157,7 +157,7 @@ void someFunction() {
  Aby uzyskać więcej informacji o wskaźnikach, zobacz [wskaźniki](../cpp/pointers-cpp.md).  
   
 ## <a name="windows-data-types"></a>Typy danych Windows  
- W klasycznym programowaniu Win32 w językach C i C++, większość funkcji korzysta definicje typów języka specyficznego dla Windows i #define makr (zdefiniowane w `windef.h`) aby określić typy parametrów i wartości zwracane. Te typy danych Windows są w przeważającej części jedynie specjalnymi nazwami (aliasami) do typy wbudowane C/C++. Aby uzyskać pełną listę definicji typów i definicji preprocesora, zobacz [typy danych Windows](http://msdn.microsoft.com/4553cafc-450e-4493-a4d4-cb6e2f274d46). Niektóre z tych definicji typów, takie jak HRESULT i LCID, są użyteczne i opisowe. Inne, takie jak INT, nie mają specjalnego znaczenia i są po prostu aliasami dla podstawowych typów C++. Inne typy danych systemu Windows mają nazwy pochodzące z czasów programowania w C i procesorów 16-bitowych. Nie mają one żadnego celu ani znaczenia w przypadku nowoczesnego sprzętu lub systemu operacyjnego. Istnieją również specjalne typy danych powiązane z biblioteką środowiska wykonawczego Windows, na liście jako [Windows Runtime podstawowych typów danych](http://msdn.microsoft.com/b5735851-ec07-48c1-92b4-ca9f768096f6). W nowoczesnym C++, ogólną wytyczną jest preferowanie typów podstawowych języka C++, chyba że typ Windows komunikuje jakieś dodatkowe znaczenie o sposobie interpretowania wartości.  
+ W klasycznym programowaniu Win32 w językach C i C++, większość funkcji korzysta definicje typów języka specyficznego dla Windows i #define makr (zdefiniowane w `windef.h`) aby określić typy parametrów i wartości zwracane. Te typy danych Windows są w przeważającej części jedynie specjalnymi nazwami (aliasami) do typy wbudowane C/C++. Aby uzyskać pełną listę definicji typów i definicji preprocesora, zobacz [typy danych Windows](/windows/desktop/WinProg/windows-data-types). Niektóre z tych definicji typów, takie jak HRESULT i LCID, są użyteczne i opisowe. Inne, takie jak INT, nie mają specjalnego znaczenia i są po prostu aliasami dla podstawowych typów C++. Inne typy danych systemu Windows mają nazwy pochodzące z czasów programowania w C i procesorów 16-bitowych. Nie mają one żadnego celu ani znaczenia w przypadku nowoczesnego sprzętu lub systemu operacyjnego. Istnieją również specjalne typy danych powiązane z biblioteką środowiska wykonawczego Windows, na liście jako [Windows Runtime podstawowych typów danych](/windows/desktop/WinRT/base-data-types). W nowoczesnym C++, ogólną wytyczną jest preferowanie typów podstawowych języka C++, chyba że typ Windows komunikuje jakieś dodatkowe znaczenie o sposobie interpretowania wartości.  
   
 ## <a name="more-information"></a>Więcej informacji  
  Aby uzyskać więcej informacji dotyczących typu systemu C++, zobacz następujące tematy.  

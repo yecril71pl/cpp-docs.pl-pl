@@ -36,33 +36,33 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c6fcb14a91aadb01d3962758b19ce636fddfbe13
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 3d04265e27cd569b8b390bb19377a3111fbb9c8c
+ms.sourcegitcommit: b92ca0b74f0b00372709e81333885750ba91f90e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32391538"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "42464663"
 ---
 # <a name="obsolete-functions"></a>Przestarzałe funkcje
-Niektóre funkcje są przestarzałe i mieć nowszą odpowiedniki. Firma Microsoft zaleca się, że możesz zmienić zaktualizowanych wersji. Inne przestarzałe funkcje zostały usunięte z CRT. W tym temacie wymieniono funkcje przestarzałe jako przestarzałe i funkcje usunięte w przypadku konkretnej wersji programu Visual Studio.  
+Niektóre funkcje są przestarzałe i ma nowszą odpowiedniki. Zaleca się zmienić je do zaktualizowanych wersji. Inne przestarzałe funkcje zostały usunięte z CRT. W tym temacie wymieniono funkcje przestarzałe jako przestarzałe, a także funkcje usunięte w określonej wersji programu Visual Studio.  
   
-## <a name="deprecated-as-obsolete-in-visual-studio-2015"></a>Przestarzałe jako przestarzały w programie Visual Studio 2015  
+## <a name="deprecated-as-obsolete-in-visual-studio-2015"></a>Przestarzałe jako przestarzałe w programie Visual Studio 2015  
   
-|Funkcja przestarzała|Alternatywne|  
+|Przestarzałe — funkcja|Alternatywna|  
 |-----------------------|-----------------|  
-|`is_wctype`|[iswctype —](../c-runtime-library/reference/isctype-iswctype-isctype-l-iswctype-l.md)|  
-|`_loaddll`|[LoadLibrary](http://go.microsoft.com/fwlink/p/?LinkID=259187), [LoadLibraryEx](http://go.microsoft.com/fwlink/p/?LinkID=236091), lub [LoadPackagedLibrary](https://msdn.microsoft.com/library/windows/desktop/hh447159\(v=vs.85\).aspx)|  
+|`is_wctype`|[iswctype](../c-runtime-library/reference/isctype-iswctype-isctype-l-iswctype-l.md)|  
+|`_loaddll`|[LoadLibrary](http://go.microsoft.com/fwlink/p/?LinkID=259187), [LoadLibraryEx](http://go.microsoft.com/fwlink/p/?LinkID=236091), lub [LoadPackagedLibrary](/windows/desktop/api/winbase/nf-winbase-loadpackagedlibrary)|  
 |`_unloaddll`|[FreeLibrary](http://go.microsoft.com/fwlink/p/?LinkID=259188)|  
 |`_getdllprocaddr`|[GetProcAddress](../build/getprocaddress.md)|  
 |`_seterrormode`|[SetErrorMode](http://go.microsoft.com/fwlink/p/?LinkID=255242)|  
 |`_beep`|[Sygnał dźwiękowy](https://msdn.microsoft.com/library/windows/desktop/ms679277\(v=vs.85\).aspx)|  
-|`_sleep`|[uśpienia](https://msdn.microsoft.com/library/windows/desktop/ms686298\(v=vs.85\).aspx)|  
+|`_sleep`|[Stan uśpienia](/windows/desktop/api/synchapi/nf-synchapi-sleep)|  
 |`_getsystime`|[GetLocalTime](https://msdn.microsoft.com/library/windows/desktop/ms724338\(v=vs.85\).aspx)|  
 |`_setsystime`|[SetLocalTime](https://msdn.microsoft.com/library/windows/desktop/ms724936\(v=vs.85\).aspx)|  
   
 ## <a name="removed-from-the-crt-in-visual-studio-2015"></a>Usunięte z CRT w programie Visual Studio 2015  
   
-|Funkcja przestarzała|Alternatywne|  
+|Przestarzałe — funkcja|Alternatywna|  
 |-----------------------|-----------------|  
 |[_cgets, _cgetws](../c-runtime-library/cgets-cgetws.md)|[_cgets_s, _cgetws_s](../c-runtime-library/reference/cgets-s-cgetws-s.md)|  
 |[gets, _getws](../c-runtime-library/gets-getws.md)|[gets_s, _getws_s](../c-runtime-library/reference/gets-s-getws-s.md)|  

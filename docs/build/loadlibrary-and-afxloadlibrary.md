@@ -20,37 +20,37 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bc3be5d374995c657021952184794f146c37f4dc
-ms.sourcegitcommit: d1f576a0f59678edc3d93508cf46485138332178
+ms.openlocfilehash: 03815ac535033d9b0fdf0146c0200be16e5ae91a
+ms.sourcegitcommit: b92ca0b74f0b00372709e81333885750ba91f90e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34753591"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "42465989"
 ---
 # <a name="loadlibrary-and-afxloadlibrary"></a>LoadLibrary i AfxLoadLibrary
 
-Przetwarza wywołanie [LoadLibrary](https://go.microsoft.com/fwlink/p/?LinkID=259187) (lub [AfxLoadLibrary](../mfc/reference/application-information-and-management.md#afxloadlibrary)) jawnie powiązać biblioteki DLL. Jeśli funkcja zakończy się powodzeniem, mapy określonej biblioteki DLL do przestrzeni adresowej procesu wywołującego i zwraca dojście do pliku DLL, które mogą być używane z innych funkcji w Konsolidacja jawna — na przykład `GetProcAddress` i `FreeLibrary`.
+Przetwarza wywołanie [LoadLibrary](https://go.microsoft.com/fwlink/p/?LinkID=259187) (lub [AfxLoadLibrary](../mfc/reference/application-information-and-management.md#afxloadlibrary)) Aby jawnie utworzyć łącze do biblioteki DLL. Jeśli funkcja się powiedzie, mapuje daną bibliotekę DLL do przestrzeni adresowej procesu wywołującego i zwraca uchwyt do biblioteki DLL, która może być używany z innymi funkcjami jawnego łączenia — na przykład `GetProcAddress` i `FreeLibrary`.
 
-`LoadLibrary` próbuje zlokalizować biblioteki DLL przy użyciu takiej samej kolejności wyszukiwania, używaną niejawne łączenia. Jeśli system nie może odnaleźć biblioteki DLL lub punkt wejścia funkcja zwraca wartość FALSE, `LoadLibrary` zwraca wartość NULL. Jeśli wywołanie `LoadLibrary` Określa moduł biblioteki DLL, który jest już zamapowany do przestrzeni adresowej procesu wywołującego, funkcja zwraca uchwyt DLL i zwiększa liczbę odwołanie do modułu.
+`LoadLibrary` próbuje zlokalizować bibliotekę DLL przy użyciu tej samej kolejności wyszukiwania, która jest używana w przypadku łączenia niejawnego. Jeśli system nie może odnaleźć biblioteki DLL lub jeśli funkcja punktu wejścia zwraca wartość FALSE, `LoadLibrary` zwraca wartość NULL. Jeśli wywołanie `LoadLibrary` Określa moduł DLL, który jest już zmapowany do przestrzeni adresowej procesu wywołującego, funkcja zwraca uchwyt DLL i zwiększa odczyt licznika odwołań modułu.
 
-Jeśli funkcja punktu wejścia biblioteki DLL, system operacyjny wywołuje funkcję w kontekście wątku, który wywołuje `LoadLibrary`. Funkcja punktu wejścia nie jest wywoływana, gdy biblioteka DLL jest już dołączony do procesu z powodu poprzedniego wywołania `LoadLibrary` mający nie odpowiedniego wywołania `FreeLibrary` funkcji.
+Jeśli biblioteka DLL pełni funkcję punktu wejścia, system operacyjny wywołuje funkcję w kontekście wątku, który wywołał `LoadLibrary`. Funkcja punktu wejścia nie jest wywoływana, jeśli biblioteka DLL jest już dołączony do procesu ze względu na poprzednie wywołanie `LoadLibrary` , nie ma odpowiedniego wywołania do `FreeLibrary` funkcji.
 
-Aplikacje MFC, których załadować biblioteki DLL rozszerzeń MFC, zaleca się używanie `AfxLoadLibrary` zamiast `LoadLibrary`. `AfxLoadLibrary` Synchronizacja wątku uchwytów przed wywołaniem `LoadLibrary`. Interfejs (prototypu funkcji) do `AfxLoadLibrary` jest taka sama jak `LoadLibrary`.
+Dla aplikacji MFC, które ładują biblioteki DLL rozszerzeń MFC, firma Microsoft zaleca użycie `AfxLoadLibrary` zamiast `LoadLibrary`. `AfxLoadLibrary` obsługuje synchronizację wątków, zanim wywołasz `LoadLibrary`. Interfejs (prototyp funkcji) do `AfxLoadLibrary` jest taka sama jak `LoadLibrary`.
 
-Jeśli system Windows nie może załadować biblioteki DLL, proces może próbować odzyskać sprawność po błędzie. Na przykład proces może powiadamia użytkownika o błędzie i poprosić użytkownika, aby określić inną ścieżkę do pliku DLL.
+Jeśli Windows nie może załadować biblioteki DLL, proces może próbować odzyskać sprawność po błędzie. Na przykład ten proces może powiadomić użytkownika o błędzie i poprosić użytkownika, aby określić inną ścieżkę do pliku DLL.
 
 > [!IMPORTANT]  
-> Upewnij się określić pełną ścieżkę żadnych bibliotek DLL. Bieżący katalog jest najpierw przeszukiwane, gdy pliki są ładowane. Jeśli nie kwalifikujesz ścieżkę pliku, może załadować pliku, który nie jest to zamierzone. Inny sposób, aby zapobiec takiej sytuacji polega na użyciu [/DEPENDENTLOADFLAG](../build/reference/dependentloadflag.md) — opcja konsolidatora.
+> Upewnij się określić pełną ścieżkę do każdej biblioteki dll. Bieżący katalog jest przeszukiwany w pierwszej kolejności gdy pliki są ładowane. Jeśli nie kwalifikuje się ścieżkę pliku, może załadować pliku, który nie jest to zamierzone. Innym sposobem, aby zapobiec takiej sytuacji jest za pomocą [/DEPENDENTLOADFLAG](../build/reference/dependentloadflag.md) — opcja konsolidatora.
 
 ## <a name="what-do-you-want-to-do"></a>Co chcesz zrobić?
 
-- [Jak połączyć niejawnie z biblioteki DLL](../build/linking-an-executable-to-a-dll.md#linking-implicitly)
+- [Jak połączyć niejawnie biblioteki DLL](../build/linking-an-executable-to-a-dll.md#linking-implicitly)
 
-- [Określić jakiej metody łączenia użyć](../build/linking-an-executable-to-a-dll.md#determining-which-linking-method-to-use)
+- [Określić, której metody łączenia użyjesz](../build/linking-an-executable-to-a-dll.md#determining-which-linking-method-to-use)
 
-## <a name="what-do-you-want-to-know-more-about"></a>Co chcesz dowiedzieć się więcej o?
+## <a name="what-do-you-want-to-know-more-about"></a>Co chcesz dowiedzieć się więcej na temat?
 
-- [Kolejność wyszukiwania biblioteki dll](https://msdn.microsoft.com/library/windows/desktop/ms682586.aspx)
+- [Kolejności przeszukiwania bibliotek dołączanych dynamicznie](/windows/desktop/Dlls/dynamic-link-library-search-order)
 
 - [FreeLibrary i AfxFreeLibrary](../build/freelibrary-and-afxfreelibrary.md)
 

@@ -18,15 +18,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 77ec65e330cebb1de718330ba129e960383b31c6
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: b693f78b6fbd9a11dbe98ec2eacc3d781ffd7ebf
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32378408"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42466425"
 ---
 # <a name="qifist-suppress-ftol"></a>/QIfist (Pomijanie _ftol)
-Przestarzałe. Pomija wywołanie funkcji Pomocnik `_ftol` podczas konwersji z typu zmiennoprzecinkowego na typ całkowity jest wymagana.  
+Przestarzałe. Pomija wywołanie funkcji pomocnika `_ftol` podczas konwersji z typu zmiennoprzecinkowego na typ całkowity jest wymagany.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -37,36 +37,36 @@ Przestarzałe. Pomija wywołanie funkcji Pomocnik `_ftol` podczas konwersji z ty
 ## <a name="remarks"></a>Uwagi  
   
 > [!NOTE]
->  **/ QIfist** jest dostępna tylko w kompilatora przeznaczonych dla x86; tej opcji kompilatora nie jest dostępna w kompilatory przeznaczonych dla [!INCLUDE[vcprx64](../../assembler/inline/includes/vcprx64_md.md)] orARM.  
+>  **/ QIfist** jest dostępna tylko w kompilatorze dla x86; ta opcja kompilatora nie jest dostępna w kompilatorach przeznaczonych dla x64 orARM.  
   
- Oprócz konwertowania na typ całkowity, typ zmiennoprzecinkowy `_ftol` funkcja zapewnia trybu zaokrąglania jednostki liczb zmiennoprzecinkowych (FPU) kierunku zera (truncate), ustawiając bity 10 i 11 słowa formantu. Gwarantuje to, że typ zmiennoprzecinkowy konwertowania na typ całkowity występuje zgodnie z opisem standardu ANSI C (odrzucone ułamkową część liczby). Korzystając z **/QIfist**, nie ma zastosowania gwarancji. Tryb zaokrąglania będzie jedną z czterech zgodnie z opisem w instrukcji obsługi Intel:  
+ Oprócz konwersji z typu zmiennoprzecinkowego na typ całkowity `_ftol` funkcja zapewnia trybu zaokrąglania jednostki zmiennoprzecinkowej (FPU) kierunku zera (obcięciu), ustawiając bity 10 i 11 słowa sterującego. Gwarantuje to, że konwersja z typu zmiennoprzecinkowego na typ całkowitoliczbowy odbywa się zgodnie z opisem w standardu ANSI C (odrzucone ułamkową część liczby). Korzystając z **/QIfist**, gwarancja nie ma już zastosowania. Trybu zaokrąglania będzie jedną z czterech, zgodnie z opisem w instrukcje Intel:  
   
 -   Zaokrąglona do najbliższej (parzystą liczbą Jeśli jednakowo odległych)  
   
--   Zaokrąglij w kierunku nieskończoności ujemnej  
+-   Zaokrąglij w kierunku minus nieskończoność  
   
--   Zaokrąglij do nieskończoności dodatniej  
+-   Zaokrąglij w kierunku Plus nieskończoność  
   
--   Zaokrąglij w kierunku zera.  
+-   Zaokrąglij w kierunku zera  
   
- Można użyć [_control87 —, _controlfp —, \__control87_2](../../c-runtime-library/reference/control87-controlfp-control87-2.md) funkcji C-Run-Time, aby zmodyfikować zachowanie zaokrąglania FPU. Domyślny tryb FPU zaokrąglania jest "Zaokrąglona do najbliższej." Przy użyciu **/QIfist** może poprawić wydajność aplikacji, ale nie bez ryzyka. Należy dokładnie przetestować części kodu, które są wrażliwe na zaokrąglania tryby przed zależne od kodu skompilowanej za pomocą **/QIfist** w środowiskach produkcyjnych.  
+ Możesz użyć [_control87 —, _controlfp, \__control87_2](../../c-runtime-library/reference/control87-controlfp-control87-2.md) funkcji C Run-Time, aby zmodyfikować zachowanie zaokrąglania FPU. Domyślny tryb FPU zaokrąglania jest "Round do najbliższego." Za pomocą **/QIfist** może poprawić wydajność aplikacji, ale nie bez ryzyka. Należy dokładnie przetestować fragmenty kodu, które są wrażliwe na trybów zaokrąglania, zanim opierająca się na kod skompilowany przy użyciu **/QIfist** w środowiskach produkcyjnych.  
   
- [/ arch (x86)](../../build/reference/arch-x86.md) i **/QIfist** nie można użyć w tym samym compiland.  
+ [/ arch (x86)](../../build/reference/arch-x86.md) i **/QIfist** nie można używać w tym samym compiland —.  
   
 > [!NOTE]
->  **/ QIfist** jest obowiązująca domyślnie ponieważ zaokrąglania bits również wpływ liczba zmiennoprzecinkowa na liczby zmiennoprzecinkowe wskazuje zaokrąglania (co ma miejsce po każdym obliczeniu), więc po ustawieniu flagi zaokrąglania stylu języka C (w stronę zera) z liczby zmiennoprzecinkowej obliczenia mogą się różnić. **/ QIfist** nie powinny być używane, jeśli kod zależy od oczekiwanego zachowania obcinanie ułamkową część liczby zmiennoprzecinkowej. Jeśli nie wiesz, nie używaj **/QIfist**.  
+>  **/ QIfist** jest obowiązuje domyślnie ponieważ zaokrąglanie bits także wpływ zmiennoprzecinkowa do zmiennoprzecinkowych wskazuje zaokrąglania (która pojawia się po obliczeniu co), dzięki czemu podczas ustawiania flagi zaokrąglania stylu języka C (w kierunku zera) z liczby zmiennoprzecinkowej obliczenia może się różnić. **/ QIfist** nie powinny być używane, jeśli kod jest zależna od oczekiwanego zachowania obcinanie część ułamkową liczby zmiennoprzecinkowej. Jeśli wiesz, nie używaj **/QIfist**.  
   
- **/QIfist** opcji jest przestarzały, począwszy od programu Visual Studio 2005. Kompilator wprowadził lepsza float int szybkości konwersji. Listę opcji kompilatora przestarzałe, zobacz **uznane za przestarzałe i usunąć — opcje kompilatora** w [kompilatora opcje rozbiciu na kategorie](../../build/reference/compiler-options-listed-by-category.md).  
+ **/QIfist** opcja jest przestarzały, począwszy od programu Visual Studio 2005. Kompilator wprowadził istotne ulepszenia float szybkości konwersji int. Aby uzyskać listę opcji kompilatora przestarzałe zobacz **usunięte opcje kompilatora i uznane za przestarzałe** w [opcje kompilatora wymienione według kategorii](../../build/reference/compiler-options-listed-by-category.md).  
   
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Aby ustawić tę opcję kompilatora w środowisku programowania Visual Studio  
   
-1.  Otwórz projekt **strony właściwości** okno dialogowe. Aby uzyskać więcej informacji, zobacz [Praca z właściwościami projektu](../../ide/working-with-project-properties.md).  
+1.  Otwórz projekt **stron właściwości** okno dialogowe. Aby uzyskać więcej informacji, zobacz [Praca z właściwościami projektu](../../ide/working-with-project-properties.md).  
   
 2.  Kliknij przycisk **C/C++** folderu.  
   
-3.  Kliknij przycisk **wiersza polecenia** strony właściwości.  
+3.  Kliknij przycisk **wiersza polecenia** stronę właściwości.  
   
-4.  Typ opcji kompilatora w **dodatkowe opcje** pole.  
+4.  Wpisz opcje kompilatora w **dodatkowe opcje** pole.  
   
 ### <a name="to-set-this-compiler-option-programmatically"></a>Aby programowo ustawić tę opcję kompilatora  
   

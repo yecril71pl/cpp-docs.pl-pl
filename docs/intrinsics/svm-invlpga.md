@@ -17,17 +17,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2e48fc39fd972387ee9fbbe587dc53bf61f2ae59
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 656d0edf1a4f2e740599490e6ce77cbc97426850
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33330398"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42465793"
 ---
 # <a name="svminvlpga"></a>__svm_invlpga
 **Microsoft Specific**  
   
- Unieważnia wpisu mapowania adresów w buforze Zarezerwuj wygląd tłumaczenia komputera. Parametry określają adresów wirtualnych i adresu miejsca identyfikator strony w celu unieważnienia.  
+ Unieważnienie wpisu mapowania adresu w buforze aside wygląd tłumaczenia tego komputera. Parametry określają wirtualny adres i adresu miejsca identyfikator strony do unieważnienia.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -41,21 +41,21 @@ void __svm_invlpga(
   
 |Parametr|Opis|  
 |---------------|-----------------|  
-|[in] `Va`|Wirtualny adres strony w celu unieważnienia.|  
-|[in] `ASID`|Adres miejsca identyfikator (ASID) strony unieważnić.|  
+|[in] `Va`|Wirtualny adres strony do unieważnienia.|  
+|[in] `ASID`|Adres miejsca identyfikator (ASID) strony do unieważnienia.|  
   
 ## <a name="remarks"></a>Uwagi  
- `__svm_invlpga` Funkcji jest odpowiednikiem `INVLPGA` maszyny instrukcji. Ta funkcja obsługuje interakcji z hosta maszyny wirtualnej monitor Gość operacyjnego i jego zastosowań. Aby uzyskać więcej informacji, wyszukaj dokumentu, "wolumin ręczne AMD64 architektura programisty 2: programowania w języku systemu," numer 24593, poprawki 3.11, dokumentu w [AMD corporation](http://go.microsoft.com/fwlink/p/?linkid=23746) lokacji.  
+ `__svm_invlpga` Funkcji jest odpowiednikiem `INVLPGA` machine instrukcji. Ta funkcja obsługuje interakcji monitor maszyny wirtualnej hosta z gościa operacyjnego i jego aplikacji. Aby uzyskać więcej informacji, wyszukaj dokumentu, "AMD64 architektury programisty ręczne woluminie 2: programowania systemu" numer 24593, wersji 3.11, dokumentu w [AMD corporation](http://go.microsoft.com/fwlink/p/?linkid=23746) lokacji.  
   
 ## <a name="requirements"></a>Wymagania  
   
-|— Wewnętrzne|Architektura|  
+|Wewnętrzne|Architektura|  
 |---------------|------------------|  
-|`__svm_invlpga`|x86, [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
+|`__svm_invlpga`|x86, x64|  
   
- **Plik nagłówka** \<intrin.h >  
+ **Plik nagłówkowy** \<intrin.h >  
   
-**KOŃCOWY określonych firmy Microsoft**  
+**END specyficzny dla Microsoft**  
   
 ## <a name="see-also"></a>Zobacz też  
  [Funkcje wewnętrzne kompilatora](../intrinsics/compiler-intrinsics.md)

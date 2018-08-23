@@ -1,7 +1,7 @@
 ---
 title: EKSPORTY | Dokumentacja firmy Microsoft
 ms.custom: ''
-ms.date: 07/11/2018
+ms.date: 08/20/2018
 ms.technology:
 - cpp-tools
 ms.topic: reference
@@ -16,12 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c642a623e76a9e1344a90efd4f0a47ad195c553e
-ms.sourcegitcommit: e5792fcb89b9ba64c401f90f4f26a8e45d4a2359
+ms.openlocfilehash: f6645ee4c890dab65cde8eab5dc18df1c31082c1
+ms.sourcegitcommit: 7f3df9ff0310a4716b8136ca20deba699ca86c6c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/27/2018
-ms.locfileid: "39322192"
+ms.lasthandoff: 08/21/2018
+ms.locfileid: "42465841"
 ---
 # <a name="exports"></a>EKSPORTY
 
@@ -49,11 +49,18 @@ EXPORTS
    func2=func1
 ```
 
-W przypadku nazwy, który eksportujesz z innego modułu, określ nazwę eksportu w bibliotece DLL, używając *other_module.exported_name*. Na przykład, jeśli biblioteka DLL eksportuje funkcję `other_module.func1` i wywołań, aby użyć go jako `func2`, należy określić:
+W przypadku nazwy, który eksportujesz z niektórych innych modułu, określ nazwę eksportu w bibliotece DLL, używając *other_module.exported_name*. Na przykład, jeśli biblioteka DLL eksportuje funkcję `other_module.func1` i wywołań, aby użyć go jako `func2`, należy określić:
 
 ```DEF
 EXPORTS
    func2=other_module.func1
+```
+
+W przypadku nazwy, który eksportujesz z innego modułu, który eksportuje według liczby porządkowej, określ eksportu przez numer porządkowy w bibliotece DLL za pomocą *other_module. #ordinal_number*. Na przykład, jeśli biblioteka DLL eksportuje funkcję w module, gdzie jest numerem porządkowym 42, a ma obiektów wywołujących, aby użyć go jako `func2`, należy określić:
+
+```DEF
+EXPORTS
+   func2=other_module.#42
 ```
 
 Ponieważ kompilator języka Visual C++ używa dekorowania nazwy dla funkcji języka C++, możesz użyć internal_name również nazwę uzupełnioną lub zdefiniować eksportowane funkcji za pomocą funkcji extern "C" w kodzie źródłowym. Kompilator również rozszerza funkcje języka C, które używają [__stdcall](../../cpp/stdcall.md) Konwencji prefiks podkreślenia (_) i sufiks, który składa się z wywołania znakiem (@) następuje liczba bajtów (w zapisie dziesiętnym na liście argumentów).  

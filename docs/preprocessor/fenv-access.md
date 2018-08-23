@@ -18,16 +18,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c2f6f379e61ea84c1142bd94be49b55a50b28753
-ms.sourcegitcommit: 1ac8f983eeaacd09135a249dea00f10e1c94e0e3
+ms.openlocfilehash: eeb138a8b2598c209005031a3ccd3104fead48dc
+ms.sourcegitcommit: d4c803bd3a684d7951bf88dcecf1f14af43ae411
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/26/2018
-ms.locfileid: "36963326"
+ms.lasthandoff: 08/10/2018
+ms.locfileid: "42466335"
 ---
 # <a name="fenvaccess"></a>fenv_access
-
-Wyłącza (**na**) lub włącza (**poza**) funkcje optymalizacji, które można zmienić zmiennoprzecinkowe środowiska flagę testy i zmiany trybu.
+Wyłącza (**na**) lub włącza (**poza**) optymalizacje, które można zmienić środowisko zmiennoprzecinkowych Flaga testy i zmiany trybu.
 
 ## <a name="syntax"></a>Składnia
 
@@ -35,11 +34,11 @@ Wyłącza (**na**) lub włącza (**poza**) funkcje optymalizacji, które można 
 
 ## <a name="remarks"></a>Uwagi
 
-Domyślnie **fenv_access** jest **poza**. Jeśli kompilator można założyć, że kod dostępu lub nie manipulowania zmiennoprzecinkowe środowiska, a następnie mogą wykonywać wiele optymalizacji liczb zmiennoprzecinkowych kodu. Ustaw **fenv_access** do **na** do informuje kompilator, że kod uzyskuje dostęp do środowiska liczb zmiennoprzecinkowych Aby sprawdzić stan flagi, wyjątki, lub można ustawić flagi trybu kontroli. Kompilator wyłącza te optymalizacje, dzięki czemu kod dostęp spójnie zmiennoprzecinkowe środowiska. 
+Domyślnie **fenv_access** jest **poza**. Jeśli kompilator można założyć, że Twój kod dostępu lub nie manipulowania zmiennoprzecinkowych środowiska, a następnie można wykonywać wiele optymalizacje kodu zmiennoprzecinkowego. Ustaw **fenv_access** do **na** poinformować kompilator, że Twój kod uzyskuje dostęp do środowiska zmiennoprzecinkowych, aby przetestować flagi stanu, wyjątki, lub można ustawić flagi trybu kontroli. Kompilator wyłącza Optymalizacje te tak, aby kodu mogą uzyskiwać dostęp do środowiska zmiennoprzecinkowych spójne. 
 
-Aby uzyskać więcej informacji dotyczących zachowania zmiennoprzecinkowego, zobacz [/fp (określenie zachowania Floating-Point)](../build/reference/fp-specify-floating-point-behavior.md).
+Aby uzyskać więcej informacji na temat zachowanie liczb zmiennopozycyjnych, zobacz [/FP (określenie zachowania zmiennopozycyjna)](../build/reference/fp-specify-floating-point-behavior.md).
 
-Rodzaje funkcje optymalizacji, które podlegają **fenv_access** są:
+Rodzaje optymalizacje, które podlegają **fenv_access** są:
 
 - Globalne eliminacja wspólnych podwyrażeń
 
@@ -47,7 +46,7 @@ Rodzaje funkcje optymalizacji, które podlegają **fenv_access** są:
 
 - Składania stałej
 
-Inne zmiennoprzecinkowych pragm obejmują:
+Inne zmiennoprzecinkowych pragm, obejmują:
 
 - [float_control](../preprocessor/float-control.md)
 
@@ -55,7 +54,7 @@ Inne zmiennoprzecinkowych pragm obejmują:
 
 ## <a name="examples"></a>Przykłady
 
-W tym przykładzie **fenv_access** do **na** można ustawić Zarejestruj kontrolki liczb zmiennoprzecinkowych w 24-bitowa precyzja:
+W tym przykładzie **fenv_access** do **na** do ustawienia rejestru sterowania zmiennoprzecinkowego dla 24-bitowa precyzja:
 
 ```cpp
 // pragma_directive_fenv_access_x86.cpp
@@ -85,7 +84,7 @@ int main() {
 out=9.999999776482582e-003
 ```
 
-Jeśli możesz przekształcić w komentarz `#pragma fenv_access (on)` od poprzedniej próbki, należy pamiętać, że dane wyjściowe różnych ponieważ kompilator jest oceny kompilacji, która nie używa trybu formantu.
+Jeśli komentarz wystąpi poza `#pragma fenv_access (on)` z poprzedniego przykładu, należy pamiętać, że dane wyjściowe inny, ponieważ kompilator wykonuje oceny kompilacji, która nie używa trybu kontroli.
 
 ```cpp
 // pragma_directive_fenv_access_2.cpp

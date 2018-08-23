@@ -22,12 +22,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 33caa14a0a406b380ba53eb8ed92cf939581f862
-ms.sourcegitcommit: 76fd30ff3e0352e2206460503b61f45897e60e4f
+ms.openlocfilehash: 6043277eff17340cd57d0a6ee1bb8e84625f45b9
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/13/2018
-ms.locfileid: "39026961"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42464554"
 ---
 # <a name="ccomcoclass-class"></a>Klasa CComCoClass
 Ta klasa dostarcza metody do tworzenia wystąpienia klasy i uzyskania jej właściwości.  
@@ -95,7 +95,7 @@ static HRESULT CreateInstance(IUnknown* punkOuter, Q** pp);
  [out] Adres zmiennej wskaźnika, który otrzymuje wskaźnik żądanego interfejsu, jeśli tworzenie zakończy się powodzeniem.  
   
 ### <a name="return-value"></a>Wartość zwracana  
- Standardowe wartości HRESULT. Zobacz [CoCreateInstance](http://msdn.microsoft.com/library/windows/desktop/ms686615) w zestawie Windows SDK opis możliwych wartości zwracanych.  
+ Standardowe wartości HRESULT. Zobacz [CoCreateInstance](/windows/desktop/api/combaseapi/nf-combaseapi-cocreateinstance) w zestawie Windows SDK opis możliwych wartości zwracanych.  
   
 ### <a name="remarks"></a>Uwagi  
  Do utworzenia obiektu typowe; Użyj pierwsze przeciążenie tej funkcji drugie przeciążenie należy użyć, gdy należy zagregować tworzonego obiektu.  
@@ -107,7 +107,7 @@ static HRESULT CreateInstance(IUnknown* punkOuter, Q** pp);
  Należy pamiętać, że interfejs *Q* musi mieć skojarzone z nim IID, można pobrać przy użyciu [__uuidof](../../cpp/uuidof-operator.md) operatora.  
   
 ### <a name="example"></a>Przykład  
- W poniższym przykładzie `CDocument` jest generowane przez kreatora ATL klasa jest pochodną `CComCoClass` implementującej `IDocument` interfejsu. Klasa jest rejestrowana na mapie obiektów za pomocą makra OBJECT_ENTRY_NON_CREATEABLE_EX_AUTO, dzięki czemu klienci nie można utworzyć wystąpienia dokumentu przy użyciu [CoCreateInstance](http://msdn.microsoft.com/library/windows/desktop/ms686615). `CApplication` jest klasą CoClass zapewniającą metodę na jedną z własną interfejsów COM, aby utworzyć wystąpienia klasy dokumentu. Poniższy kod przedstawia, jak łatwo go, aby utworzyć wystąpienia klasy dokumentu przy użyciu `CreateInstance` element członkowski jest dziedziczony z `CComCoClass` klasy bazowej.  
+ W poniższym przykładzie `CDocument` jest generowane przez kreatora ATL klasa jest pochodną `CComCoClass` implementującej `IDocument` interfejsu. Klasa jest rejestrowana na mapie obiektów za pomocą makra OBJECT_ENTRY_NON_CREATEABLE_EX_AUTO, dzięki czemu klienci nie można utworzyć wystąpienia dokumentu przy użyciu [CoCreateInstance](/windows/desktop/api/combaseapi/nf-combaseapi-cocreateinstance). `CApplication` jest klasą CoClass zapewniającą metodę na jedną z własną interfejsów COM, aby utworzyć wystąpienia klasy dokumentu. Poniższy kod przedstawia, jak łatwo go, aby utworzyć wystąpienia klasy dokumentu przy użyciu `CreateInstance` element członkowski jest dziedziczony z `CComCoClass` klasy bazowej.  
   
  [!code-cpp[NVC_ATL_COM#11](../../atl/codesnippet/cpp/ccomcoclass-class_2.cpp)]  
   

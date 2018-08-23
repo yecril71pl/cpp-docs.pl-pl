@@ -18,90 +18,91 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 64cd6098f7a539fd883a9c8e0e0c116590a2f38f
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: b2ab8696adf30363d63321200fa87f31d18be369
+ms.sourcegitcommit: d4c803bd3a684d7951bf88dcecf1f14af43ae411
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33843551"
+ms.lasthandoff: 08/10/2018
+ms.locfileid: "42465035"
 ---
 # <a name="include-directive-cc"></a>#include — dyrektywa (C/C++)
-Określa, że na traktowanie zawartość określonego pliku, tak jakby pojawią się one w programie źródłowym w momencie, w którym pojawi się dyrektywy preprocesora.  
+Nakazuje preprocesorowi traktować zawartość określonego pliku, tak, jakby pojawiają się w programie źródłowym w punkcie, w którym pojawia się dyrektywa.  
   
 ## <a name="syntax"></a>Składnia  
   
 ```  
-  
-      #include  "path-spec"  
+#include  "path-spec"  
 #include  <path-spec>  
 ```  
   
-## <a name="remarks"></a>Uwagi  
- Można zorganizować definicje stała i makra do plików dołączanych, a następnie użyć `#include` dyrektywy, aby dodać je do dowolnego pliku źródłowego. Obejmują pliki są także przydatne w przypadku włączania deklaracje zmiennych zewnętrznych i złożone typy danych. Typy mogą być zdefiniowane i o nazwie tylko raz w pliku dołączenia utworzone w tym celu.  
+## <a name="remarks"></a>Uwagi 
+
+Możesz zorganizować definicje stałych i makr w plikach dołączonych, a następnie użyć **#include** dyrektywy, aby dodać je do pliku źródłowego. Obejmują pliki są także przydatne przy dołączaniu deklaracje zmiennych zewnętrznych i złożonych typów danych. Typy może być zdefiniowane i nazwane tylko raz pomocą stworzonego w tym celu pliku.  
   
- `path-spec` Jest nazwą pliku, który opcjonalnie może być poprzedzony specyfikacji katalogu. Nazwa pliku nazwę istniejącego pliku. Składnia `path-spec` zależy od systemu operacyjnego, na którym program ma być kompilowana.  
+`path-spec` Jest nazwą pliku, który opcjonalnie może być poprzedzona przez specyfikację katalogu. Nazwa pliku musi odnosić istniejącego pliku. Składnia `path-spec` zależy od systemu operacyjnego, w którym program jest skompilowany.  
   
- Aby uzyskać informacje o sposobie odwołuje się do zestawów w aplikacji C++, która ma być kompilowana przy użyciu [/CLR](../build/reference/clr-common-language-runtime-compilation.md), zobacz [#using](../preprocessor/hash-using-directive-cpp.md).  
+Aby uzyskać informacje dotyczące zestawów odwołań w języku C++ aplikacji, który jest kompilowany przy użyciu [/CLR](../build/reference/clr-common-language-runtime-compilation.md), zobacz [#using](../preprocessor/hash-using-directive-cpp.md).  
   
- Oba formularze składni spowodować tej dyrektywy, które mają zostać zastąpione przez całą zawartość pliku dołączanego określony. Różnica między dwoma formularzami jest kolejność wyszukiwania preprocesora dla pliki nagłówkowe, gdy nie w pełni określono ścieżkę. W poniższej tabeli przedstawiono różnicę między dwoma formularzami składni.  
+Obie formy składni powodują tej dyrektywy, które mają zostać zastąpione przez całą zawartość określonegop dołączanego pliku. Różnica między dwoma formami polega na kolejności, w której preprocesor szuka plików nagłówkowych, jeśli ścieżka nie jest całkowicie określona. W poniższej tabeli przedstawiono różnice między dwoma formami składni.  
   
-|Składnia formularza|Akcja|  
+|Forma składni|Akcja|  
 |-----------------|------------|  
-|Formularz cudzysłowie|Preprocesora wyszukiwania plików dołączanych w następującej kolejności:<br /><br /> 1) w tym samym katalogu co plik, który zawiera `#include` instrukcji.<br /><br /> 2) w katalogach aktualnie otwartą obejmują pliki w odwrotnej kolejności, w jakiej były otwierane. Wyszukiwanie rozpoczyna się w katalogu nadrzędnego plik dołączany i kontynuuje w górę za pośrednictwem katalogi ponadnadrzędny wszelkie pliki dołączane.<br /><br /> 3) na ścieżce określonej przez każdego /I — opcja kompilatora.<br /><br /> 4)<br /><br /> Wzdłuż ścieżki, które są określone przez zmienną środowiskową INCLUDE.|  
-|Formularz nawiasu ostrego|Preprocesora wyszukiwania plików dołączanych w następującej kolejności:<br /><br /> 1) na ścieżce określonej przez każdego /I — opcja kompilatora.<br /><br /> 2) podczas kompilowania występuje w wierszu polecenia wzdłuż ścieżki, które są określone przez zmienną środowiskową INCLUDE.|  
+|Cytowany formularz|Preprocesor wyszukuje pliki dołączane w następującej kolejności:<br /><br /> (1) w tym samym katalogu co plik, który zawiera **#include** instrukcji.<br /><br /> 2) w wszelkich aktualnie otwartych katalogów Dołącz pliki w odwrotnej kolejności, w jakiej zostały otwarte. Wyszukiwanie rozpoczyna się w katalogu nadrzędnego dołączyć plik i jest kontynuowane w górę przez katalogi stojących dołączyć pliki.<br /><br /> (3) na ścieżce określonej przez każdą `/I` — opcja kompilatora.<br /><br /> 4)<br /><br /> Wzdłuż ścieżek, które są określone przez zmienną środowiskową INCLUDE.|  
+|Formularz nawias kątowy|Preprocesor wyszukuje pliki dołączane w następującej kolejności:<br /><br /> (1) na ścieżce określonej przez każdą `/I` — opcja kompilatora.<br /><br /> (2) podczas kompilacji wykonywanej w wierszu polecenia, wzdłuż ścieżek które są określone przez zmienną środowiskową INCLUDE.|  
   
- Zatrzymuje preprocesora, wyszukiwanie jak znajdzie pliku o podanej nazwie. Jeśli ujmij określenia ścieżki pełne, jednoznaczne dla dołączanego pliku w podwójnym cudzysłowie (""), preprocesora wyszukuje tej specyfikacji ścieżki i ignoruje standardowe katalogi.  
+Preprocesor przestaje wyszukiwać, natychmiast po odnalezieniu pliku o podanej nazwie. Jeśli uwzględnisz pełną, jednoznaczną specyfikację ścieżki do dołączanego pliku między znakami podwójnego cudzysłowu (""), preprocesor przeszukuje tylko tę specyfikację ścieżki i ignoruje katalogi standardowe.  
   
- Jeśli nazwa pliku, który został ujęty w podwójny cudzysłów specyfikacji ścieżki niekompletne, pierwszego preprocesora wyszukuje katalog pliku "elementu nadrzędnego". Nadrzędnego pliku to plik, który zawiera `#include` dyrektywy. Na przykład, jeśli zawiera plik o nazwie `file2` w pliku o nazwie `file1`, `file1` jest pliku nadrzędnym.  
+Jeśli nazwa pliku ujęta w znaki podwójnego cudzysłowu jest niekompletnym opisem ścieżki, preprocesor najpierw przeszukuje katalog "rodzicielski". Plik, który zawiera plik jest plikiem nadrzędnym **#include** dyrektywy. Na przykład uwzględnisz plik o nazwie `file2` w pliku o nazwie `file1`, `file1` jest plikiem nadrzędnym.  
   
- Dołącz pliki mogą być "nested"; oznacza to `#include` dyrektywa może występować w pliku o nazwie przez inną `#include` dyrektywy. Na przykład `file2` mogą obejmować `file3`. W takim przypadku `file1` nadal będzie nadrzędny `file2`, ale byłoby "ponadnadrzędny" z `file3`.  
+Dołącz pliki, które mogą być "zagnieżdżone"; oznacza to, że **#include** dyrektywy może znajdować się w pliku nazwanym przez inną **#include** dyrektywy. Na przykład `file2` może obejmować `file3`. W tym przypadku `file1` nadal będzie nadrzędny `file2`, ale będzie "dziadkiem" wobec `file3`.  
   
- Gdy obejmują pliki są zagnieżdżone i podczas kompilowania kodu w wierszu polecenia, wyszukiwanie w katalogu rozpoczyna się od katalogi pliku nadrzędnego i następnie obejmującego katalogi plików nadrzędny. Oznacza to, że wyszukiwanie rozpoczyna się względem katalogu, który zawiera źródła, które jest obecnie przetwarzane. Jeśli plik nie zostanie znaleziony, wyszukiwanie przenosi do katalogów, które są określone przez /I — opcja kompilatora. Na koniec katalogi, które są określone przez zmienną środowiskową INCLUDE są przeszukiwane.  
+Gdy obejmują pliki są gnieżdżone i podczas kompilacji wykonywanej w wierszu polecenia, wyszukiwanie katalogów rozpoczyna się od katalogów pliku nadrzędnego i następnie przechodzi przez katalogi plików nadrzędnych wobec niego. Oznacza to wyszukiwanie rozpoczyna się względem katalogu zawierającego źródło obecnie przetwarzane. Jeśli plik nie zostanie znaleziony, wyszukiwanie przenosi się do katalogów określonych przez `/I` — opcja kompilatora. Na koniec przeszukiwane są katalogi, które są określone przez zmienną środowiskową INCLUDE.  
   
- Środowiska programowania zmiennej środowiskowej INCLUDE jest ignorowana. Informacje dotyczące sposobu konfigurowania katalogi, które są wyszukiwane pliki nagłówkowe — dotyczy to również lib — zmienna środowiskowa — zobacz [strona właściwości katalogów VC ++](../ide/vcpp-directories-property-page.md).  
+W środowisku programistycznym zmienna środowiskowa INCLUDE jest ignorowana. Aby uzyskać informacje o ustawianiu katalogów przeszukiwanych w poszukiwaniu plików dołączanych — dotyczy to również zmiennej środowiska LIB — zobacz [VC ++ Directories Property Page](../ide/vcpp-directories-property-page.md).  
   
- Ten przykład przedstawia dołączania plików przy użyciu nawiasy:  
+Ten przykład pokazuje włączenie pliku przy użyciu nawiasów:  
   
 ```  
 #include <stdio.h>  
 ```  
   
- W tym przykładzie dodaje zawartość pliku o nazwie stdio —. H, aby program źródłowy. Nawiasu ostrego spowodować preprocesora do wyszukiwania katalogi, które są określone przez zmienną środowiskową INCLUDE dla stdio —. H, po przeszukuje katalogi, które są określone przez /I — opcja kompilatora.  
+Ten przykład dodaje zawartość pliku o nazwie stdio —. H do programu źródłowego. Nawiasy kątowe sprawiają, że preprocesor przeszukuje katalogi, które są określone przez zmienną środowiskową INCLUDE dla stdio —. Godz., po przeszukuje katalogi, które są określone przez `/I` — opcja kompilatora.  
   
- W kolejnym przykładzie pokazano dołączania plików za pomocą formularza ujętego w cudzysłów:  
+Następny przykład pokazuje włączenie pliku przy użyciu formy z cytatami:  
   
 ```  
 #include "defs.h"  
 ```  
   
- W tym przykładzie dodaje zawartość pliku, określonej przez DEFS. H, aby program źródłowy. Cudzysłów oznacza, że preprocesora przeszukuje najpierw katalog, który zawiera plik źródłowy nadrzędnej.  
+Ten przykład dodaje zawartość pliku, który jest określony przez DEFS. H do programu źródłowego. Podwójny cudzysłów oznacza, że preprocesor najpierw przeszukuje katalog zawierający nadrzędny plik źródłowy.  
   
- Zagnieżdżanie plików dołączanych, można nadal maksymalnie 10 poziomów. Gdy zagnieżdżony `#include` jest przetwarzane, preprocesora w dalszym ciągu wstawić otaczającego pliku dołączanego do oryginalnego pliku źródłowego.  
+Zagnieżdżanie plików dołączanych można kontynuować do 10 poziomów. Gdy zagnieżdżony **#include** jest przetwarzany, preprocesor w dalszym ciągu Wstawia plik załączany do oryginalnego pliku źródłowego.  
   
- **Microsoft Specific**  
+**Microsoft Specific**  
   
- Aby zlokalizować pliki źródłowe includable, preprocesora najpierw przeszukuje katalogi, które są określone przez /I — opcja kompilatora. Jeśli opcja nie istnieje lub nie powiedzie się, preprocesora użycie zmiennej środowiskowej INCLUDE można znaleźć żadnych plików dołączanych w nawiasy. Dołącz środowiska zmienną i /I — opcja kompilatora może zawierać wiele ścieżek rozdzielonych średnikami (;). Jeśli więcej niż jeden katalog jest wyświetlany jako część opcji /I lub w zmiennej środowiskowej INCLUDE, preprocesora przeszukuje je w kolejności ich występowania.  
+Aby zlokalizować pliki źródłowe do zawarcia, preprocesor najpierw przeszukuje katalogi, które są określone przez `/I` — opcja kompilatora. Jeśli `/I` opcji nie istnieje lub nie powiedzie się, preprocesor wykorzysta zmienną środowiskową INCLUDE, aby znaleźć wszystkie pliki dołączane w nawiasach kątowych. Zmienna środowiskowa INCLUDE i `/I` — opcja kompilatora może zawierać wiele ścieżek oddzielonych średnikami (;). Jeśli więcej niż jeden katalog pojawia się jako część `/I` opcję lub w ramach zmienną środowiskową INCLUDE, preprocesor przeszukuje je w kolejności, w jakiej są wyświetlane.  
   
- Na przykład, polecenie  
+Na przykład polecenie  
   
 ```  
 CL /ID:\MSVC\INCLUDE MYPROG.C  
 ```  
   
- powoduje, że preprocesora wyszukać w katalogu D:\MSVC\INCLUDE\ plików dołączanych, takich jak stdio —. H. Polecenia  
+powoduje, że preprocesor wyszukuje w katalogu D:\MSVC\INCLUDE\ pliki dołączane, takie jak stdio —. H. Polecenia  
   
 ```  
 SET INCLUDE=D:\MSVC\INCLUDE  
 CL MYPROG.C  
 ```  
   
- mają ten sam efekt. Jeśli oba zestawy wyszukiwanie nie powiedzie się, zostanie wygenerowany błąd krytyczny kompilatora.  
+mają ten sam efekt. Jeśli oba zestawy wyszukiwań nie powiodą się, generowany jest błąd krytyczny kompilatora.  
   
- Jeśli nazwa pliku jest całkowicie określone dla dołączanego pliku, który ma ścieżkę zawierającą dwukropkiem (na przykład F:\MSVC\SPECIAL\INCL\TEST. H) wynika preprocesora, ścieżki.  
+Jeśli nazwa pliku jest w pełni określona dla pliku dołączanego, który zawiera ścieżkę, która zawiera dwukropek (na przykład F:\MSVC\SPECIAL\INCL\TEST. Godz.), preprocesor postępuje zgodnie ze ścieżką.  
   
- Dla plików dołączanych, które są określone jako `#include` "`path-spec`", wyszukiwanie w katalogu rozpoczyna się od katalogu pliku nadrzędnego i następnie obejmującego katalogi plików nadrzędny. Oznacza to, że wyszukiwanie rozpoczyna się względem katalogu, który zawiera plik źródłowy, który zawiera `#include` dyrektywy przetwarzany. Jeśli plik nadrzędny nie istnieje i nie znaleziono pliku, wyszukiwanie jest kontynuowane tak, jakby nazwa pliku są ujęte w nawiasy.  
+Dla plików dołączanych, które są określone jako `#include` "`path-spec`", wyszukiwanie katalogów rozpoczyna się od katalogu nadrzędnego pliku, a następnie przechodzi przez katalogi plików nadrzędnych wobec niego. Oznacza to, wyszukiwanie rozpoczyna się względem katalogu zawierającego plik źródłowy, który zawiera **#include** dyrektywę, który jest przetwarzany. Jeśli plik pokolenia nie istnieje, a plik nie został znaleziony, wyszukiwanie jest kontynuowane tak, jakby nazwa pliku została ujęta w nawiasy ostre.  
   
- **KOŃCOWY określonych firmy Microsoft**  
+**END specyficzny dla Microsoft**  
   
 ## <a name="see-also"></a>Zobacz też  
- [Dyrektywy preprocesora](../preprocessor/preprocessor-directives.md)
+ 
+[Dyrektywy preprocesora](../preprocessor/preprocessor-directives.md)

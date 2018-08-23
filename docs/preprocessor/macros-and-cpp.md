@@ -15,28 +15,29 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 746b04113e4cb49716e0c1fa6dee69a250bded42
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: d81fb8f8f41a57fc2bd1a87c6726b92756bf26b5
+ms.sourcegitcommit: d4c803bd3a684d7951bf88dcecf1f14af43ae411
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33849616"
+ms.lasthandoff: 08/10/2018
+ms.locfileid: "42465876"
 ---
 # <a name="macros-and-c"></a>Makra i język C++
-C++ oferuje nowe możliwości, niektóre z nich ograniczyć te udostępniane przez preprocesora C ANSI. Te nowe funkcje zwiększyć bezpieczeństwo typów i przewidywalności języka:  
+C++ zawiera nowe funkcje, niektóre z nich ograniczyć te udostępniane przez ANSI C preprocesora. Te nowe możliwości zwiększenia bezpieczeństwa i stabilności języka:  
   
--   W języku C++ obiektów zadeklarowany jako **const** można używać w wyrażeniach stałej. Dzięki temu programy, aby zadeklarować stałe, które mają typ i wartość informacji i wyliczenia, które mogą być wyświetlane symbolicznie z debugera. Przy użyciu preprocesora `#define` dyrektywy do definiowania stałe nie jest dokładnych. Brak magazynu przypisany do **const** obiektów, chyba że wyrażenie, które ma adres znajduje się w programie.  
+- W języku C++, obiekty zadeklarowane jako **const** mogą być używane w wyrażeniach stałych. Dzięki temu programy do deklarowania stałych, które mają typ i informacje o wartości i wyliczenia, które mogą być wyświetlane symbolicznie za pomocą debugera. Za pomocą preprocesora `#define` dyrektywy do definiowania stałych nie jest tak dokładny. Magazyn nie jest przydzielany dla **const** obiektu, chyba że wyrażenie, które przyjmuje adres znajduje się w programie.  
   
--   Możliwości funkcji wbudowanej C++ otrzymuje makra typu funkcji. Zalety korzystania z funkcji śródwierszowych za pośrednictwem makra są:  
+- Możliwości funkcji wbudowanych C++ otrzymuje makra typu funkcji. Zalety korzystania z funkcji śródwierszowych za pośrednictwem makra są:  
   
-    -   Bezpieczeństwo typu. Funkcje śródwierszowe podlegają ten sam typ sprawdzenia jako normalnej pracy. Makra nie są bezpieczne dla typu.  
+    - Bezpieczeństwo typów. Funkcje śródwierszowe jest zależna od tego samego typu, sprawdzanie jako normalnych funkcji. Makra nie są bezpieczne dla typów.  
   
-    -   Usuń obsługę argumenty, które ma efekty uboczne. Funkcje śródwierszowe obliczać wyrażeń, podana jako argumenty przed wprowadzeniem treści funkcji. Dlatego nie jest bez możliwości, że wyrażenie z efektami ubocznymi będzie niebezpieczne.  
+    - Obsługa poprawne argumenty, które mają skutki uboczne. Funkcje śródwierszowe oceny wyrażenia dostarczone jako argumenty przed rozpoczęciem treści funkcji. Dlatego jest bez możliwości wyrażenie z efektami ubocznymi będzie niebezpieczne.  
   
- Aby uzyskać więcej informacji o funkcji śródwierszowych, zobacz [w tekście, __inline, \__forceinline](../cpp/inline-functions-cpp.md).  
+Aby uzyskać więcej informacji na temat wbudowanych funkcjach, zobacz [w tekście, __inline, \__forceinline](../cpp/inline-functions-cpp.md).  
   
- W celu zapewnienia zgodności z poprzednimi wersjami wszystkich preprocesora urządzeń istniejących w ANSI C i C++ specyfikacjach wcześniejszych zostaną zachowane dla Microsoft C++.  
+W celu zapewnienia zgodności z poprzednimi wersjami wszystkich preprocesora obiektach, które istniały w ANSI C i C++ specyfikacjach wcześniejszych zostaną zachowane dla Microsoft C++.  
   
 ## <a name="see-also"></a>Zobacz też  
- [Wstępnie zdefiniowane makra](../preprocessor/predefined-macros.md)   
- [Makra (C/C++)](../preprocessor/macros-c-cpp.md)
+ 
+[Wstępnie zdefiniowane makra](../preprocessor/predefined-macros.md)   
+[Makra (C/C++)](../preprocessor/macros-c-cpp.md)

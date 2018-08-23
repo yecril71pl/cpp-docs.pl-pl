@@ -138,12 +138,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: a4a1b08d82e915780817a47abddcf417fe5ab715
-ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
+ms.openlocfilehash: c1934c7857e8c7813f653b6f12be0ba523ec63fb
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/30/2018
-ms.locfileid: "39338249"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42465051"
 ---
 # <a name="cdynamicaccessor-class"></a>CDynamicAccessor — Klasa
 Umożliwia dostęp do źródła danych, gdy masz nie znajomości schematu bazy danych (wewnętrzna struktura bazy danych).  
@@ -165,7 +165,7 @@ class CDynamicAccessor : public CAccessorBase
 |-|-|  
 |[AddBindEntry](#addbindentry)|Dodaje wpis powiązanie kolumn danych wyjściowych, podczas zastępowania domyślną metodę dostępu.|  
 |[CDynamicAccessor](#cdynamicaccessor)|Tworzy i inicjuje `CDynamicAccessor` obiektu.|  
-|[Zamknij](#close)|Rozpina wszystkie kolumny, zwalnia ilość przydzielonej pamięci i zwalnia [IAccessor](https://msdn.microsoft.com/library/ms719672.aspx) wskaźnik interfejsu w klasie.|  
+|[Zamknij](#close)|Rozpina wszystkie kolumny, zwalnia ilość przydzielonej pamięci i zwalnia [IAccessor](/previous-versions/windows/desktop/ms719672\(v=vs.85\)) wskaźnik interfejsu w klasie.|  
 |[GetBlobHandling](#getblobhandling)|Pobiera obiekt BLOB, Obsługa wartości bieżącego wiersza.|  
 |[GetBlobSizeLimit](#getblobsizelimit)|Pobiera maksymalny rozmiar obiektu BLOB w bajtach.|  
 |[GetBookmark](#getbookmark)|Pobiera zakładki dla bieżącego wiersza.|  
@@ -202,7 +202,7 @@ HRESULT AddBindEntry(const DBCOLUMNINFO& info) throw();
   
 #### <a name="parameters"></a>Parametry  
  *Informacje o*  
- [in] A `DBCOLUMNINFO` struktury zawierającej informacje o kolumnach. Zobacz sekcję "DBCOLUMNINFO struktury" w [IColumnsInfo::GetColumnInfo](https://msdn.microsoft.com/library/ms722704.aspx) w *OLE DB Podręcznik programisty*.  
+ [in] A `DBCOLUMNINFO` struktury zawierającej informacje o kolumnach. Zobacz sekcję "DBCOLUMNINFO struktury" w [IColumnsInfo::GetColumnInfo](/previous-versions/windows/desktop/ms722704\(v=vs.85\)) w *OLE DB Podręcznik programisty*.  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Jedna z wartości HRESULT standardowych.  
@@ -233,7 +233,7 @@ CDynamicAccessor(DBBLOBHANDLINGENUM eBlobHandling = DBBLOBHANDLING_DEFAULT,
  Można również określić, jak `CDynamicAccessor` służy do obsługi danych kolumny, która zaliczamy do danych obiektów BLOB: danych obiektów BLOB w sposób domyślne może obsługiwać; można pominąć (nie jest powiązana) danych obiektów BLOB; lub jest on można powiązać danych obiektów BLOB w pamięci przydzielonej przez dostawcę.  
 
 ## <a name="close"></a> CDynamicAccessor::Close
-Rozpina wszystkie kolumny, zwalnia ilość przydzielonej pamięci i zwalnia [IAccessor](https://msdn.microsoft.com/library/ms719672.aspx) wskaźnik interfejsu w klasie.  
+Rozpina wszystkie kolumny, zwalnia ilość przydzielonej pamięci i zwalnia [IAccessor](/previous-versions/windows/desktop/ms719672\(v=vs.85\)) wskaźnik interfejsu w klasie.  
   
 ### <a name="syntax"></a>Składnia  
   
@@ -311,7 +311,7 @@ bool GetColumnFlags(DBORDINAL nColumn,
  [in] Numer kolumny. Numery kolumn zaczynać od 1. Wartość 0 odwołuje się do kolumny zakładki, jeśli istnieje.  
   
  *pFlags*  
- [out] Wskaźnik do maski bitów, który opisuje charakterystykę kolumny. Zobacz sekcję "Typ wyliczany DBCOLUMNFLAGS" w [IColumnsInfo::GetColumnInfo](https://msdn.microsoft.com/library/ms722704.aspx) w *OLE DB Podręcznik programisty*.  
+ [out] Wskaźnik do maski bitów, który opisuje charakterystykę kolumny. Zobacz sekcję "Typ wyliczany DBCOLUMNFLAGS" w [IColumnsInfo::GetColumnInfo](/previous-versions/windows/desktop/ms722704\(v=vs.85\)) w *OLE DB Podręcznik programisty*.  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Zwraca **true** Jeśli charakterystyki kolumny są pomyślnie pobrane. W przeciwnym razie zwraca **false**.  
@@ -333,13 +333,13 @@ HRESULT GetColumnInfo(IRowset* pRowset,
   
 #### <a name="parameters"></a>Parametry  
  *pRowset*  
- [in] Wskaźnik do [IRowset](https://msdn.microsoft.com/library/ms720986.aspx) interfejsu.  
+ [in] Wskaźnik do [IRowset](/previous-versions/windows/desktop/ms720986\(v=vs.85\)) interfejsu.  
   
  *pColumns*  
  [out] Wskaźnik do pamięci, w której ma zostać zwrócone z liczbą kolumn w zestawie wierszy; Liczba ta obejmuje kolumny zakładki, jeśli taka istnieje.  
   
  *ppColumnInfo*  
- [out] Wskaźnik do pamięci, w której ma zostać zwrócone tablicę `DBCOLUMNINFO` struktury. Zobacz sekcję "DBCOLUMNINFO struktury" w [IColumnsInfo::GetColumnInfo](https://msdn.microsoft.com/library/ms722704.aspx) w *OLE DB Podręcznik programisty*.  
+ [out] Wskaźnik do pamięci, w której ma zostać zwrócone tablicę `DBCOLUMNINFO` struktury. Zobacz sekcję "DBCOLUMNINFO struktury" w [IColumnsInfo::GetColumnInfo](/previous-versions/windows/desktop/ms722704\(v=vs.85\)) w *OLE DB Podręcznik programisty*.  
   
  *ppStringsBuffer*  
  [out] Wskaźnik do pamięci, w której ma zostać zwracają wskaźnik do magazynu dla wszystkich wartości parametrów (nazwy używane znajdującego się w obrębie *columnid* lub *pwszName*) w ramach bloku pojedynczą alokację.  
@@ -348,7 +348,7 @@ HRESULT GetColumnInfo(IRowset* pRowset,
  Jedna z wartości HRESULT standardowych.  
   
 ### <a name="remarks"></a>Uwagi  
- Zobacz [IColumnsInfo::GetColumnInfo](https://msdn.microsoft.com/library/ms722704.aspx) w *OLE DB Podręcznik programisty* informacji na temat typów danych `DBORDINAL`, `DBCOLUMNINFO`, i `OLECHAR`.  
+ Zobacz [IColumnsInfo::GetColumnInfo](/previous-versions/windows/desktop/ms722704\(v=vs.85\)) w *OLE DB Podręcznik programisty* informacji na temat typów danych `DBORDINAL`, `DBCOLUMNINFO`, i `OLECHAR`.  
 
 ## <a name="getcolumnname"></a> CDynamicAccessor::GetColumnName
 Pobiera nazwę określonej kolumny.  
@@ -465,7 +465,7 @@ bool GetStatus(const WCHAR* pColumnName,
  [in] Wskaźnik na ciąg znaków zawierający nazwę kolumny.  
   
  *pStatus*  
- [out] Wskaźnik do zmiennej, zawierający stan kolumny. Zobacz [DBSTATUS](https://msdn.microsoft.com/library/ms722617.aspx) w *OLE DB Podręcznik programisty* Aby uzyskać więcej informacji.  
+ [out] Wskaźnik do zmiennej, zawierający stan kolumny. Zobacz [DBSTATUS](/previous-versions/windows/desktop/ms722617\(v=vs.85\)) w *OLE DB Podręcznik programisty* Aby uzyskać więcej informacji.  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Zwraca **true** Jeśli zostanie znaleziony w określonej kolumnie. W przeciwnym razie funkcja zwraca **false**.  
@@ -607,7 +607,7 @@ bool SetStatus(const WCHAR* pColumnName,
  [in] Numer kolumny. Numery kolumn zaczynać od 1. Wartość 0 odwołuje się do kolumny zakładki, jeśli istnieje.  
   
  *status*  
- [in] Stan kolumny. Zobacz [DBSTATUS](https://msdn.microsoft.com/library/ms722617.aspx) w *OLE DB Podręcznik programisty* Aby uzyskać więcej informacji.  
+ [in] Stan kolumny. Zobacz [DBSTATUS](/previous-versions/windows/desktop/ms722617\(v=vs.85\)) w *OLE DB Podręcznik programisty* Aby uzyskać więcej informacji.  
   
  *pColumnName*  
  [in] Wskaźnik na ciąg znaków zawierający nazwę kolumny.  

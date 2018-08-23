@@ -24,30 +24,30 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2d88add7830316ae192a728f9c9ff10320657eaf
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: 266bb7aa664489ee23c39554ebc91d1f99336f7e
+ms.sourcegitcommit: e9ce38decc9f986edab5543de3464b11ebccb123
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33689977"
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "42465333"
 ---
 # <a name="writing-a-multithreaded-win32-program"></a>Pisanie wielowątkowego programu Win32
-Podczas pisania programu przy użyciu wielu wątków musi być dostosowana ich zachowania i [wykorzystania zasobów programu](#_core_sharing_common_resources_between_threads). Należy również upewnić się, że każdy wątek otrzyma [własną stosu](#_core_thread_stacks).  
+Podczas pisania programu przy użyciu wielu wątków, musisz skoordynować ich zachowania i [wykorzystania zasobów programu](#_core_sharing_common_resources_between_threads). Należy również upewnić się, że każdy wątek otrzyma [własnego stosu](#_core_thread_stacks).  
   
 ##  <a name="_core_sharing_common_resources_between_threads"></a> Udostępnianie wspólnych zasobów między wątkami  
   
 > [!NOTE]
->  Omówienie podobne z punktu widzenia MFC, zobacz [Multithreading: Programowanie porady](../parallel/multithreading-programming-tips.md) i [Multithreading: kiedy używać klas synchronizacji](../parallel/multithreading-when-to-use-the-synchronization-classes.md).  
+>  Omówienie podobne z punktu widzenia MFC, zobacz [wielowątkowość: porady dotyczące programowania](../parallel/multithreading-programming-tips.md) i [wielowątkowość: kiedy używać klas synchronizacji](../parallel/multithreading-when-to-use-the-synchronization-classes.md).  
   
- Każdy wątek ma własną stosu i rejestruje własną kopię Procesora. Inne zasoby, takie jak pliki, dane statyczne i pamięci sterty są współużytkowane przez wszystkie wątki w procesie. Wątki używające tych wspólnych zasobów musi być synchronizowany. Win32 udostępnia kilka sposobów, aby zsynchronizować zasobów, w tym semaforów, sekcje krytyczne i zdarzenia oraz muteksy.  
+Każdy wątek ma swój własny stosu i rejestruje własną kopię procesora CPU. Inne zasoby, takie jak pliki, dane statyczne i pamięć sterty są współużytkowane przez wszystkie wątki w procesie. Wątki używające tych wspólnych zasobów musi być synchronizowane. Win32 oferuje kilka sposobów, aby zsynchronizować zasoby, w tym semaforów, sekcje krytyczne, zdarzeń i muteksy.  
   
- Wiele wątków uzyskują dostęp do danych statycznych, program muszą przewidywać konflikty zasobów. Należy wziąć pod uwagę program, gdy jeden wątek aktualizacji zawierający struktury danych statycznych *x*,*y* współrzędnych dla elementów do wyświetlenia przez inny wątek. Jeśli wątek aktualizacji zmienia *x* koordynacji i jest wywłaszczone, zanim można go zmienić *y* współrzędnych, wątku wyświetlania może zostać zaplanowane przed *y* Współrzędna jest zaktualizowane. Element będzie wyświetlany w niewłaściwej lokalizacji. Aby uniknąć tego problemu, należy za pomocą semaforów do kontrolowania dostępu do struktury.  
+Gdy wiele wątków uzyskują dostęp do danych statycznych, program musisz podać zasób możliwych konfliktów. Należy wziąć pod uwagę program, gdy jeden wątek aktualizacji zawierającą strukturę danych statycznych *x*,*y* współrzędnych dla elementów, które mają być wyświetlane przez inny wątek. Jeśli wątek aktualizacji zmienia *x* koordynacji i jest przerywane, zanim będzie można zmienić *y* współrzędnych, Wyświetl wątek może być zaplanowane przed *y* Współrzędna jest zaktualizowane. Element będzie wyświetlany w niewłaściwej lokalizacji. Aby uniknąć tego problemu, należy za pomocą semaforów do kontrolowania dostępu do struktury.  
   
- Obiektu mutex (skrót od *mut*rejestrowania dostępu użytkowników *ex*clusion) to sposób komunikacji między wątki lub procesy, które są wykonywane asynchronicznie od siebie. Ta komunikacja jest zwykle używany do koordynowania innych działań wiele wątków i procesów, zwykle kontrolowanie dostępu do zasobów udostępnionych przez blokowanie i odblokowywanie zasobu. Aby rozwiązać ten problem *x*,*y* współrzędnych aktualizacji problem, wątek aktualizacji ustawia mutex, co oznacza, że struktura danych przed wykonaniem aktualizacji. Czy go wyczyścić obiektu mutex, po obu współrzędne zostało przetworzone. Wątek wyświetlania należy poczekać mutex być wyczyść przed aktualizacją wyświetlania. Ten proces trwa oczekiwanie na obiektu mutex jest często nazywane blokowania na obiektu mutex, ponieważ proces jest zablokowany i nie może kontynuować dopóki czyści obiektu mutex.  
+Mutex (skrót od *mut*usługi rejestrowania dostępu użytkowników *ex*clusion) jest metodą komunikacji między wątkach lub procesach, które są wykonywane asynchronicznie od siebie. Ta komunikacja jest zazwyczaj używana do koordynowania działania wielu wątkach lub procesach zazwyczaj kontrolowanie dostępu do zasobu udostępnionego przez blokowanie i odblokowywanie zasobu. Aby rozwiązać ten problem *x*,*y* współrzędnych aktualizacji problem, wątek aktualizacji ustawia mutex, co oznacza, że struktury danych w użyciu przed przystąpieniem do wykonywania aktualizacji. Czyścił je element mutex po przetworzył zarówno współrzędnych. Wątek wyświetlania musi czekać na element mutex za wyczyść przed aktualizacją wyświetlania. Ten proces trwa oczekiwanie na mutex jest często nazywane blokowania na mutex, ponieważ proces jest zablokowana i nie może kontynuować pracy, dopóki nie usuwa element mutex.  
   
- Program Bounce.c wyświetlany w [przykładowy Program C wielowątkowej](../parallel/sample-multithread-c-program.md) używa obiektu mutex o nazwie `ScreenMutex` aby koordynować aktualizacje ekranu. Zawsze jeden z wątków wyświetlana jest gotowy do zapisu na ekranie wywołuje **WaitForSingleObject** z dojściem do `ScreenMutex` i stałej **NIESKOŃCZONE** z informacją, że  **WaitForSingleObject** zablokować wywołania obiektu mutex i nie upłynął limit czasu. Jeśli `ScreenMutex` jest pusta, funkcja oczekiwania ustawia obiektu mutex, więc innych wątków nie może zakłócać wyświetlania i kontynuuje wykonywanie wątku. W przeciwnym razie wątek blokuje dopóki czyści obiektu mutex. Po zakończeniu aktualizacji ekranu, zwalnia obiektu mutex przez wywołanie metody **ReleaseMutex**.  
+Program Bounce.c wyświetlany w [przykładowy Program C wielowątkowości](../parallel/sample-multithread-c-program.md) używa elementu mutex o nazwie `ScreenMutex` do koordynowania aktualizacji ekranu. Każdorazowo, jeden z wątków wyświetlana jest gotowy do zapisu do ekranu, wywoływanych przez nią `WaitForSingleObject` z dojściem do `ScreenMutex` i stałe NIESKOŃCZONE, aby wskazać, że `WaitForSingleObject` wywołania powinna blokować mutex i nie przekraczają limit czasu. Jeśli `ScreenMutex` jest pusta, funkcja oczekiwania ustawia element mutex, dzięki czemu inne wątki nie może kolidować z wyświetlaniem i kontynuuje wykonywanie wątku. W przeciwnym razie wątek blokuje, dopóki czyści element mutex. Po zakończeniu aktualizacji ekranu, zwalnia element mutex, wywołując `ReleaseMutex`.  
   
- Na ekranie i dane statyczne są tylko dwa zasoby wymagające staranne zarządzanie. Na przykład program może mieć wiele wątków podczas uzyskiwania dostępu do tego samego pliku. Ponieważ inny wątek może przeniesiono wskaźnika pliku, każdy wątek należy zresetować wskaźnika pliku przed odczytu lub zapisu. Ponadto każdy wątek należy się upewnić, że nie jest wywłaszczone między czas jego umieszcza kursor i uzyskuje dostęp do pliku. Wątki te semafora powinna być używana do koordynowania dostępu do pliku przez zestawianie każdego dostęp do plików przy użyciu **WaitForSingleObject** i **ReleaseMutex** wywołania. Poniższy przykładowy kod przedstawia tej techniki:  
+Na ekranie, a dane statyczne są tylko dwa zasoby wymagające staranne zarządzanie. Na przykład program może mieć wiele wątków, uzyskiwanie dostępu do tego samego pliku. Ponieważ inny wątek może być przeniesione wskaźnikiem pliku, każdy wątek należy zresetować wskaźnika pliku przed odczytem lub zapisem. Ponadto każdy wątek, musisz upewnić się, że nie jest przerywane między czas jego umieszcza wskaźnik i uzyskuje dostęp do pliku. Te wątki należy używać semafor do koordynacji dostępu do pliku zestawianie każdy dostęp do plików za pomocą `WaitForSingleObject` i `ReleaseMutex` wywołania. W poniższym przykładzie kodu pokazano tej techniki:  
   
 ```  
 HANDLE    hIOMutex= CreateMutex (NULL, FALSE, NULL);  
@@ -59,15 +59,17 @@ ReleaseMutex( hIOMutex);
 ```  
   
 ##  <a name="_core_thread_stacks"></a> Stosy wątków  
- Wszystkie miejsca na stosie domyślnej aplikacji jest przydzielony do pierwszego wątku do wykonania, znany jako wątku 1. W związku z tym należy określić ilość pamięci do przydzielenia oddzielne stosu dla każdego wątku dodatkowe program wymaga. System operacyjny przydziela miejsce dodatkowe stosu wątku, jeśli to konieczne, ale należy określić wartość domyślną.  
+ 
+Cały obszar stosu domyślnego aplikacji jest przydzielany do pierwszym wątkiem wykonywania, który jest znany jako wątek 1. W rezultacie należy określić, ilość pamięci do przydzielenia dla oddzielnych stosu dla każdego wątku dodatkowe program wymaga. System operacyjny przydziela dodatkowe stosu dla wątku, w razie potrzeby, ale musi określać wartość domyślną.  
   
- Pierwszy argument `_beginthread` wywołanie jest wskaźnik do **BounceProc** funkcji, która wykonuje wątki. Drugi argument określa domyślny rozmiar stosu wątku. Ostatni argument jest identyfikator, który jest przekazywany do **BounceProc**. **BounceProc** używa numeru Identyfikacyjnego jako zalążek generatora liczb losowych oraz wybierz atrybut kolor wątku i wyświetlić znak.  
+Pierwszy argument `_beginthread` wywołanie jest wskaźnikiem do `BounceProc` funkcji, która wykonuje wątków. Drugi argument określa domyślny rozmiar stosu dla wątku. Ostatni argument jest liczbą identyfikator, który jest przekazywany do `BounceProc`. `BounceProc` używa numer identyfikacyjny umieszczenia generator liczb losowych, a także wybrać atrybut kolorów dla wątku i wyświetlić znak.  
   
- Wątki wykonywać wywołania do biblioteki wykonawczej języka C lub interfejs API Win32 muszą zezwalać na wystarczającą ilość miejsca na biblioteki i funkcje interfejsu API, które wywołują stosu. C `printf` funkcja wymaga więcej niż 500 bajtów miejsca na stosie, a powinien mieć 2 K ilości wolnego miejsca na stosie podczas wywoływania procedury interfejsu API systemu Win32.  
+Wątki, które wykonywać wywołania do biblioteki wykonawczej języka C lub Win32 API muszą zezwalać na wystarczająco dużo miejsca na stosie dla biblioteki i funkcje interfejsu API, które wywołują. C `printf` funkcja wymaga więcej niż 500 bajtów miejsca na stosie i powinien mieć 2 K dostępnego miejsca na stosie, podczas wywoływania procedury interfejsu API systemu Win32.  
   
- Ponieważ każdy wątek ma własną stosu, można uniknąć potencjalnych konfliktów nad elementami danych przy użyciu małego dane statyczne, jak to możliwe. Projekt programu używania zmiennych stosu automatyczne dla wszystkich danych, które mogą być prywatne do wątku. Zmienne globalne tylko w programie Bounce.c są muteksy lub zmiennych, które nigdy nie ulegną zmianie po ich inicjowaniu.  
+Ponieważ każdy wątek ma swój własny stosu, możesz uniknąć potencjalnych konfliktów za pośrednictwem elementów danych, używając jako małą ilością danych statycznych, jak to możliwe. Zaprojektuj program korzystanie ze zmiennych stosu automatyczne dla wszystkich danych, które mogą być prywatne do wątku. Zmienne tylko globalne w programie Bounce.c są muteksy lub zmienne, które nigdy nie ulegną zmianie po ich są inicjowane.  
   
- Win32 są także magazynu Thread-Local (TLS) do przechowywania danych dla każdego wątku. Aby uzyskać więcej informacji, zobacz [wątku lokalnego magazynu (TLS)](../parallel/thread-local-storage-tls.md).  
+Win32 udostępnia również magazynu Thread-Local (TLS) do przechowywania danych na wątek. Aby uzyskać więcej informacji, zobacz [wątku lokalnego magazynu (TLS)](../parallel/thread-local-storage-tls.md).  
   
 ## <a name="see-also"></a>Zobacz też  
- [Wielowątkowość z językiem C i podsystemem Win32](../parallel/multithreading-with-c-and-win32.md)
+ 
+[Wielowątkowość z językiem C i podsystemem Win32](../parallel/multithreading-with-c-and-win32.md)

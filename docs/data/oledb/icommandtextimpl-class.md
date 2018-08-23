@@ -33,15 +33,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 2b54d0db22181089a8470c540ccd72f85c717fbe
-ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
+ms.openlocfilehash: e190f81c0097e707830f7ac09c801929ea3e85e9
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/30/2018
-ms.locfileid: "39340296"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42464562"
 ---
 # <a name="icommandtextimpl-class"></a>ICommandTextImpl — Klasa
-Udostępnia implementację na potrzeby [ICommandText](https://msdn.microsoft.com/library/ms714914.aspx) interfejsu.  
+Udostępnia implementację na potrzeby [ICommandText](/previous-versions/windows/desktop/ms714914\(v=vs.85\)) interfejsu.  
   
 ## <a name="syntax"></a>Składnia
 
@@ -87,7 +87,7 @@ STDMETHOD(GetCommandText)(GUID * pguidDialect,
 ```  
   
 #### <a name="parameters"></a>Parametry  
- Zobacz [ICommandText::GetCommandText](https://msdn.microsoft.com/library/ms709825.aspx) w *OLE DB Podręcznik programisty*. *PguidDialect* parametr jest ignorowany, domyślnie.  
+ Zobacz [ICommandText::GetCommandText](/previous-versions/windows/desktop/ms709825\(v=vs.85\)) w *OLE DB Podręcznik programisty*. *PguidDialect* parametr jest ignorowany, domyślnie.  
 
 ## <a name="setcommandtext"></a> ICommandTextImpl::SetCommandText
 Ustawia tekst polecenia, zastępując istniejący tekst polecenia.  
@@ -100,7 +100,7 @@ STDMETHOD(SetCommandText)(REFGUID rguidDialect,
 ```  
   
 #### <a name="parameters"></a>Parametry  
- Zobacz [ICommandText::SetCommandText](https://msdn.microsoft.com/library/ms709757.aspx) w *OLE DB Podręcznik programisty*. 
+ Zobacz [ICommandText::SetCommandText](/previous-versions/windows/desktop/ms709757\(v=vs.85\)) w *OLE DB Podręcznik programisty*. 
 
 ## <a name="strcommandtext"></a> ICommandTextImpl::m_strCommandText
 Zapisuje ciąg tekstu polecenia.  

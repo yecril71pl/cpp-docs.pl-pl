@@ -18,17 +18,17 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: d2936a65023b32f994ed7260260476bc7b0457c2
-ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
+ms.openlocfilehash: ff8bacd14a6e8e99fb98d5e9c4ac3136fe1a1f0d
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/30/2018
-ms.locfileid: "39336420"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42464567"
 ---
 # <a name="updating-rowsets"></a>Aktualizowanie zestawów wierszy
 Operacja wykraczającego poza podstawowe bazy danych jest aktualizacji lub zapisywać dane w magazynie danych. W OLE DB, jest prosty mechanizm aktualizacji: aplikacja odbiorcy ustawia wartości składników powiązane dane, a następnie zapisuje te wartości, do zestawu wierszy; następnie konsumenta żądań, czy dostawca zaktualizuj magazyn danych.  
   
- Konsumenci mogą wykonywać następujące rodzaje aktualizacje na zestaw wierszy danych: Ustawianie wartości kolumn w wierszu, wstawienie wiersza i usuwanie wiersza. Wykonywać te operacje klasy szablonów OLE DB [CRowset](../../data/oledb/crowset-class.md) implementuje [IRowsetChange](https://msdn.microsoft.com/library/ms715790.aspx) interfejs i zastępuje następujące metody interfejsu:  
+ Konsumenci mogą wykonywać następujące rodzaje aktualizacje na zestaw wierszy danych: Ustawianie wartości kolumn w wierszu, wstawienie wiersza i usuwanie wiersza. Wykonywać te operacje klasy szablonów OLE DB [CRowset](../../data/oledb/crowset-class.md) implementuje [IRowsetChange](/previous-versions/windows/desktop/ms715790\(v=vs.85\)) interfejs i zastępuje następujące metody interfejsu:  
   
 -   [SetData](../../data/oledb/crowset-setdata.md) zmiany kolumny wartości w wierszu zestawu wierszy; jest to równoważne polecenia aktualizacji programu SQL.  
   
@@ -216,4 +216,4 @@ product.Update();                 // Update row 101 now
 ## <a name="see-also"></a>Zobacz też  
  [Praca z szablonami konsumentów OLE DB](../../data/oledb/working-with-ole-db-consumer-templates.md)   
  [Klasa CRowset](../../data/oledb/crowset-class.md)   
- [IRowsetChange](https://msdn.microsoft.com/library/ms715790.aspx)
+ [IRowsetChange](/previous-versions/windows/desktop/ms715790\(v=vs.85\))

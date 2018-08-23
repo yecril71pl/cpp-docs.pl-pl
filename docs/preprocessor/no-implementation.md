@@ -16,17 +16,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bf756a411404d2ebb821d5b226818844acfca75b
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: bbf715e2cbd19d139904438e722e4d0b72e29f29
+ms.sourcegitcommit: d4c803bd3a684d7951bf88dcecf1f14af43ae411
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33849551"
+ms.lasthandoff: 08/10/2018
+ms.locfileid: "42464454"
 ---
 # <a name="noimplementation"></a>no_implementation
-**Określonego języka C++**  
+**Określonego język C++**  
   
- Pomija generację nagłówka .tli, który zawiera implementacje funkcji Członkowskich otoki.  
+Powoduje pominięcie generowania nagłówka .tli, który zawiera implementacje funkcji elementów członkowskich otoki.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -35,12 +35,14 @@ no_implementation
 ```  
   
 ## <a name="remarks"></a>Uwagi  
- Jeśli ten atrybut jest określony, zostanie wygenerowany nagłówek .tlh — z deklaracjami do udostępnienia elementów biblioteki typów bez `#include` instrukcji, aby uwzględnić plik nagłówka .tli.  
+ 
+Jeśli ten atrybut jest określony, nagłówku .tlh, za pomocą deklaracji do udostępnienia biblioteki typów elementów, zostanie wygenerowany bez `#include` instrukcję, aby uwzględnić plik nagłówka .tli.  
   
- Ten atrybut jest używany w połączeniu z [implementation_only —](../preprocessor/implementation-only.md).  
+Ten atrybut jest używany w połączeniu z [implementation_only —](../preprocessor/implementation-only.md).  
   
- **KOŃCOWY określonego języka C++**  
+**KONIEC określonego języka C++**  
   
 ## <a name="see-also"></a>Zobacz też  
- [atrybuty #import](../preprocessor/hash-import-attributes-cpp.md)   
- [#import — dyrektywa](../preprocessor/hash-import-directive-cpp.md)
+ 
+[atrybuty #import](../preprocessor/hash-import-attributes-cpp.md)   
+[#import — dyrektywa](../preprocessor/hash-import-directive-cpp.md)

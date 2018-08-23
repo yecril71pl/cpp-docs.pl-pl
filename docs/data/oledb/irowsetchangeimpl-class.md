@@ -43,15 +43,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 0f77f9a33b0cf51ea54d16f89e86ea914640f627
-ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
+ms.openlocfilehash: c64d6cc460d068a5d0acf90795cb405a920b867f
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/30/2018
-ms.locfileid: "39339601"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42464946"
 ---
 # <a name="irowsetchangeimpl-class"></a>IRowsetChangeImpl — Klasa
-Szablony OLE DB implementacji [IRowsetChange](https://msdn.microsoft.com/library/ms715790.aspx) interfejsu w specyfikacji OLE DB.  
+Szablony OLE DB implementacji [IRowsetChange](/previous-versions/windows/desktop/ms715790\(v=vs.85\)) interfejsu w specyfikacji OLE DB.  
   
 ## <a name="syntax"></a>Składnia
 
@@ -114,7 +114,7 @@ class ATL_NO_VTABLE IRowsetChangeImpl : public BaseInterface
   
 -   Rozdział 6 *OLE DB Podręcznik programisty*  
   
--   Zobacz też sposób, w jaki `RUpdateRowset` klasa jest używana w przykładzie UpdatePV  
+-   Zobacz też sposób, w jaki `RUpdateRowset` klasa jest używana w [UpdatePV](https://github.com/Microsoft/VCSamples/tree/master/VC2010Samples/ATL/OLEDB/Provider/UPDATEPV) próbki.  
   
 ## <a name="deleterows"></a> IRowsetChangeImpl::DeleteRows
 Usuwa wiersze z zestawu wierszy.  
@@ -129,7 +129,7 @@ STDMETHOD (DeleteRows )(HCHAPTER /* hReserved */,
 ```  
   
 #### <a name="parameters"></a>Parametry  
- Zobacz [IRowsetChange::DeleteRows](https://msdn.microsoft.com/library/ms724362.aspx) w *OLE DB Podręcznik programisty*. 
+ Zobacz [IRowsetChange::DeleteRows](/previous-versions/windows/desktop/ms724362(v%3dvs.85)) w *OLE DB Podręcznik programisty*. 
 
 ## <a name="insertrow"></a> IRowsetChangeImpl::InsertRow
 Tworzy i inicjuje nowy wiersz w zestawie wierszy.  
@@ -144,7 +144,7 @@ STDMETHOD (InsertRow )(HCHAPTER /* hReserved */,
 ```  
   
 #### <a name="parameters"></a>Parametry  
- Zobacz [IRowsetChange::InsertRow](https://msdn.microsoft.com/library/ms716921.aspx) w *OLE DB Podręcznik programisty*. 
+ Zobacz [IRowsetChange::InsertRow](/previous-versions/windows/desktop/ms716921\(v=vs.85\)) w *OLE DB Podręcznik programisty*. 
 
 ## <a name="setdata"></a> IRowsetChangeImpl::SetData
 Ustawia wartości danych w co najmniej jedną kolumnę.  
@@ -158,7 +158,7 @@ STDMETHOD (SetData )(HROW hRow,
 ```  
   
 #### <a name="parameters"></a>Parametry  
- Zobacz [IRowsetChange::SetData](https://msdn.microsoft.com/library/ms721232.aspx) w *OLE DB Podręcznik programisty*. 
+ Zobacz [IRowsetChange::SetData](/previous-versions/windows/desktop/ms721232\(v=vs.85\)) w *OLE DB Podręcznik programisty*. 
 
 ## <a name="flushdata"></a> IRowsetChangeImpl::FlushData
 Overidden przez dostawcę, aby zatwierdzić jego magazynu danych.  

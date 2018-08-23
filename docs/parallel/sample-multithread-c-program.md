@@ -1,5 +1,5 @@
 ---
-title: Przykładowy Program więlowątkowy w języku C | Dokumentacja firmy Microsoft
+title: Przykładowy Program wielowątkowy w języku C | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -12,21 +12,21 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1584d52f9ea543c95363a0f7f03cdad80442ee1c
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: 1899187bd1ff8315300a1d60b24dbfb04f77a15a
+ms.sourcegitcommit: e9ce38decc9f986edab5543de3464b11ebccb123
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33687995"
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "42465886"
 ---
 # <a name="sample-multithread-c-program"></a>Przykładowy program więlowątkowy w języku C
-Bounce.c jest przykładowy program wielowątkowe, która tworzy nowy wątków zawsze literę **a** lub **A** został wpisany. Każdy wątek odrzuceń wszystkiego krój innego koloru po ekranie. Można utworzyć maksymalnie 32 wątków. Zakończenie normalne programu występuje podczas `q` lub **Q** został wpisany. Aby uzyskać informacje o kompilowanie i łączenie Bounce.c, zobacz [kompilowanie i łączenie programów wielowątkowej](../parallel/compiling-and-linking-multithread-programs.md).  
+Bounce.c jest wielowątkowym przykładowy programem, który tworzy nowy wątek każdorazowo literę `a` lub `A` został wpisany. Każdy wątek odbija radosną twarz o innym kolorze na ekranie. Można utworzyć do 32 wątków. Normalne zakończenie programu występuje, gdy `q` lub `Q` został wpisany. Aby uzyskać informacje na temat kompilowania i łączenia Bounce.c, zobacz [kompilowanie i łączenie programów wielowątkowych](../parallel/compiling-and-linking-multithread-programs.md).  
   
 ## <a name="example"></a>Przykład  
   
 ### <a name="code"></a>Kod  
   
-```  
+```c  
 // sample_multithread_c_program.c  
 // compile with: /c  
 //  
@@ -219,4 +219,5 @@ q
 ```  
   
 ## <a name="see-also"></a>Zobacz też  
- [Wielowątkowość z językiem C i podsystemem Win32](../parallel/multithreading-with-c-and-win32.md)
+
+[Wielowątkowość z językiem C i podsystemem Win32](../parallel/multithreading-with-c-and-win32.md)

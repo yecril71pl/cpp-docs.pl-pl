@@ -17,30 +17,34 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: a4626e6cfa17b4cc050d10bb74fad0d791a8ceef
-ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
+ms.openlocfilehash: be23f0f053c6f78225a323abf4c52f15d2ebbe21
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/09/2018
-ms.locfileid: "40013655"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42580941"
 ---
 # <a name="verifyinterfacehelperverify-method"></a>VerifyInterfaceHelper::Verify — Metoda
-Obsługuje infrastrukturę biblioteki WRL i nie jest przeznaczona do użycia bezpośrednio w kodzie.  
-  
-## <a name="syntax"></a>Składnia  
-  
-```cpp  
-static void Verify();  
-```  
-  
-## <a name="remarks"></a>Uwagi  
- Sprawdza, czy interfejs określony przez bieżący parametr szablonu spełnia określone wymagania.  
-  
-## <a name="requirements"></a>Wymagania  
- **Nagłówek:** implements.h  
-  
- **Namespace:** Microsoft::wrl:: details  
-  
-## <a name="see-also"></a>Zobacz też  
- [Verifyinterfacehelper — struktura](../windows/verifyinterfacehelper-structure.md)   
- [Microsoft::WRL::Details, przestrzeń nazw](../windows/microsoft-wrl-details-namespace.md)
+
+Obsługuje infrastrukturę biblioteki WRL i nie jest przeznaczona do użycia bezpośrednio w kodzie.
+
+## <a name="syntax"></a>Składnia
+
+```cpp
+static void Verify();
+```
+
+## <a name="remarks"></a>Uwagi
+
+Sprawdza, czy interfejs określony przez bieżący parametr szablonu spełnia określone wymagania.
+
+## <a name="requirements"></a>Wymagania
+
+**Nagłówek:** implements.h
+
+**Namespace:** Microsoft::wrl:: details
+
+## <a name="see-also"></a>Zobacz też
+
+[VerifyInterfaceHelper, struktura](../windows/verifyinterfacehelper-structure.md)  
+[Microsoft::WRL::Details, przestrzeń nazw](../windows/microsoft-wrl-details-namespace.md)

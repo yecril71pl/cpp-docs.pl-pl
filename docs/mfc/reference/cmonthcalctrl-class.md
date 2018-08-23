@@ -100,12 +100,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cd7160f2998eee18439baa67a93a73fcd73b5c0f
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: 61fc3d0ddf07887af2f565fd338b337eacd130ef
+ms.sourcegitcommit: b92ca0b74f0b00372709e81333885750ba91f90e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37853553"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "42465442"
 ---
 # <a name="cmonthcalctrl-class"></a>Klasa CMonthCalCtrl
 Hermetyzuje funkcjonalność formantu kalendarza miesięcznego.  
@@ -736,7 +736,7 @@ void SetCalendarBorder(int cxyBorder);
 |[in] *cxyBorder*|Szerokość obramowania, w pikselach.|  
   
 ### <a name="remarks"></a>Uwagi  
- Jeśli ta metoda zakończy się powodzeniem, szerokość obramowania jest ustawiony na *cxyBorder* parametru. W przeciwnym razie szerokość obramowania zostanie zresetowana do wartości domyślnej, który jest określony przez bieżącą [motyw](https://msdn.microsoft.com/library/windows/desktop/hh270423.aspx), lub zero, jeśli nie są używane motywów.  
+ Jeśli ta metoda zakończy się powodzeniem, szerokość obramowania jest ustawiony na *cxyBorder* parametru. W przeciwnym razie szerokość obramowania zostanie zresetowana do wartości domyślnej, który jest określony przez bieżącą [motyw](/windows/desktop/Controls/visual-styles-overview), lub zero, jeśli nie są używane motywów.  
   
  Ta metoda wysyła [MCM_SETCALENDARBORDER](http://msdn.microsoft.com/library/windows/desktop/bb760993) komunikat, który jest opisany w zestawie Windows SDK.  
   
@@ -758,7 +758,7 @@ void SetCalendarBorderDefault();
 ```  
   
 ### <a name="remarks"></a>Uwagi  
- Szerokość obramowania ma ustawioną wartość domyślną, określony przez bieżącą [motyw](https://msdn.microsoft.com/library/windows/desktop/hh270423.aspx), lub zero, jeśli nie są używane motywów.  
+ Szerokość obramowania ma ustawioną wartość domyślną, określony przez bieżącą [motyw](/windows/desktop/Controls/visual-styles-overview), lub zero, jeśli nie są używane motywów.  
   
  Ta metoda wysyła [MCM_SETCALENDARBORDER](http://msdn.microsoft.com/library/windows/desktop/bb760993) komunikat, który jest opisany w zestawie Windows SDK.  
   

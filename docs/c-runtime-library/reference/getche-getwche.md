@@ -1,5 +1,5 @@
 ---
-title: _getche —, _getwche — | Dokumentacja firmy Microsoft
+title: _getche, _getwche — | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -19,6 +19,7 @@ apilocation:
 - msvcr120.dll
 - msvcr120_clr0400.dll
 - ucrtbase.dll
+- api-ms-win-crt-conio-l1-1-0.dll
 apitype: DLLExport
 f1_keywords:
 - getwche
@@ -38,19 +39,19 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3afca6d897f1cc8b1cd724b03ca57e3096829b9d
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 8bfd791eb0ac022cfd13de74ca902ef45565ac16
+ms.sourcegitcommit: e9ce38decc9f986edab5543de3464b11ebccb123
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32400723"
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "42465681"
 ---
 # <a name="getche-getwche"></a>_getche, _getwche
 
-Pobiera konsoli z echa znak.
+Pobiera znak z konsoli z echem.
 
 > [!IMPORTANT]
-> Nie można używać tego interfejsu API w aplikacjach, które są wykonywane w środowisku wykonawczym systemu Windows. Aby uzyskać więcej informacji, zobacz [funkcje CRT, nie są obsługiwane w aplikacjach platformy uniwersalnej systemu Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
+> Tego API nie można używać w aplikacjach korzystających ze środowiska wykonawczego Windows. Aby uzyskać więcej informacji, zobacz [funkcje CRT nieobsługiwane w aplikacjach platformy uniwersalnej Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
 
 ## <a name="syntax"></a>Składnia
 
@@ -61,13 +62,13 @@ wint_t _getwche( void );
 
 ## <a name="return-value"></a>Wartość zwracana
 
-Zwraca znak do odczytu. Nie ma żadnych zwracany błąd.
+Zwraca znak odczytywany. Nie będzie zwrotu błędu.
 
 ## <a name="remarks"></a>Uwagi
 
-**_Getche —** i **_getwche —** funkcji odczytu pojedynczy znak z poziomu konsoli z echa, co oznacza, że znak jest wyświetlany w konsoli. Żadna z tych funkcji można odczytać klawiszy CTRL + C. Podczas odczytywania klucza funkcji lub klawisz strzałki, każda funkcja musi być wywołana dwukrotnie; Zwraca pierwsze wywołanie 0 lub wartość 0xE0, natomiast drugie wywołanie rzeczywisty kod klucza.
+**_Getche** i **_getwche —** funkcje odczytują pojedynczy znak z konsoli z echem, co oznacza, że znak jest wyświetlany na konsoli. Żadna z tych funkcji może służyć do odczytu klawiszy CTRL + C. Podczas czytania klawisza funkcyjnego lub klawisza strzałki, każda funkcja musi być wywołana dwukrotnie; Pierwsza zwraca wywołanie 0 lub wartość 0xE0, a druga zwraca wywołanie rzeczywistego klucza kodu.
 
-Te funkcje Zablokuj wątek wywołujący i w związku z tym są wątkowo. Blokowania wersje można znaleźć [_getche_nolock —, _getwche_nolock —](getche-nolock-getwche-nolock.md).
+Te funkcje blokują wywołania wątku i dlatego jest metodą o bezpiecznych wątkach. Dla wersji bez blokady, zobacz [_getche_nolock —, _getwche_nolock —](getche-nolock-getwche-nolock.md).
 
 ### <a name="generic-text-routine-mappings"></a>Mapowania procedur zwykłego tekstu
 
@@ -82,7 +83,7 @@ Te funkcje Zablokuj wątek wywołujący i w związku z tym są wątkowo. Blokowa
 |**_getche**|\<conio.h>|
 |**_getwche**|\<conio.h > lub \<wchar.h >|
 
-Aby uzyskać więcej informacji o zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md).
+Aby uzyskać więcej informacji na temat zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Przykład
 

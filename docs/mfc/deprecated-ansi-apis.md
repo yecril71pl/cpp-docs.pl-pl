@@ -14,17 +14,17 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7d612cca5d0c95b411f5278fe92404166d26b53b
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 95eed7834e46f6a42a363e8a8f8134945beb54fc
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33342062"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42465896"
 ---
 # <a name="deprecated-ansi-apis"></a>Przestarzałe interfejsy API ANSI
-Biblioteka Microsoft Foundation Class (MFC) jest migrowana do klasy i metody, które są oparte na zestawie znaków Unicode. W rezultacie wersje ANSI kilka metod MFC są przestarzałe. Użyj wersji Unicode tych metod w przyszłych aplikacji.  
+Biblioteka Microsoft Foundation Class (MFC) przeprowadza migrację do klas i metod, które są oparte na zestawie znaków Unicode. W związku z tym wersje ANSI kilka metod MFC są przestarzałe. Użyj wersji standardu Unicode tych metod w Twojej aplikacji tworzonych w przyszłości.  
   
- Począwszy od formanty standardowe systemu Windows w wersji 6.1, który jest dostarczany w [!INCLUDE[windowsver](../build/reference/includes/windowsver_md.md)], następujących metod ANSI są przestarzałe.  
+ Począwszy od wersji wspólnych formantów Windows 6.1, który jest dostarczany w Windows Vista, następujące metody ANSI są przestarzałe.  
   
 ## <a name="cbutton-class"></a>Klasa CButton  
   
@@ -61,7 +61,7 @@ AFX_ANSI_DEPRECATED BOOL SetCueBanner(LPCWSTR lpszText,
 ```  
   
 ## <a name="clinkctrl-class"></a>Klasa CLinkCtrl  
- Całej klasy jest przestarzały.  
+ Cała klasa jest przestarzały.  
   
 ## <a name="clistctrl-class"></a>CListCtrl — klasa  
   

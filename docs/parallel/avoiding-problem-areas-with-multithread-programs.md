@@ -17,20 +17,21 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5af4c1ca6a86b2cff457aee12e8337103ce7f42d
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: 49c5e624b437f39270fb880fe526d55e7ed83e5d
+ms.sourcegitcommit: e9ce38decc9f986edab5543de3464b11ebccb123
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33686617"
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "42466038"
 ---
 # <a name="avoiding-problem-areas-with-multithread-programs"></a>Unikanie obszarów problemów z programami wielowątkowymi
-Istnieje kilka problemów, które mogą wystąpić w tworzeniu, łączenie i wykonywania program więlowątkowy w języku C. W poniższej tabeli opisano niektóre z najczęściej problemów. (Omówienie podobne z punktu widzenia MFC, zobacz [Multithreading: Programowanie porady](../parallel/multithreading-programming-tips.md).)  
+Jest kilka problemów, które mogą wystąpić w tworzeniu, połączeń i wykonywanie program więlowątkowy w języku C. W poniższej tabeli opisano niektóre typowe problemy. (Omówienie podobne z punktu widzenia MFC, zobacz [wielowątkowość: porady dotyczące programowania](../parallel/multithreading-programming-tips.md).)  
   
 |Problem|Prawdopodobna przyczyna|  
 |-------------|--------------------|  
-|Otrzymasz komunikat, pokazujący, że program spowodował naruszenie ochrony.|Wiele błędów programowania Win32 spowodować naruszeń ochrony. Typową przyczyną naruszeń ochrony jest przypisanie pośrednich danych do wskaźników o wartości null. Ponieważ powoduje to program próby uzyskania dostępu do pamięci, który nie należy do niego, zgłaszany jest naruszenie ochrony.<br /><br /> Łatwo wykryć przyczynę naruszenie ochrony jest kompilacji programu z informacji o debugowaniu, a następnie uruchom go za pomocą debugera w środowisku Visual C++. W przypadku wystąpienia błędu ochrony systemu Windows przeniesie formantu do debugera i kursor znajduje się w wierszu, który spowodował problem.|  
-|Program generuje wiele błędów kompilacji i łącza.|Wiele potencjalnych problemów można wyeliminować, ustawiając poziom ostrzeżeń kompilatora do jednego z jego największe wartości i heeding komunikaty ostrzegawcze. Przy użyciu poziomu 3 lub poziom 4 ostrzeżenia poziomu opcje, można wykryć konwersji danych przypadkowe, brak prototypy funkcji i korzystanie z funkcji standardem ANSI.|  
+|Otrzymasz komunikat, pokazujący, że program spowodował naruszenie zasad ochrony.|Wiele błędów programowania Win32 spowodować naruszenie ochrony. Częstą przyczyną naruszeń ochrony jest pośrednich przypisywania danych do wskaźników o wartości null. Ponieważ skutkiem próby uzyskania dostępu do pamięci, który nie należy do niego program zgłaszany jest naruszenie ochrony.<br /><br /> Łatwe wykrywanie przyczynę naruszenie zasad ochrony jest kompilujesz program za pomocą informacji o debugowaniu, a następnie uruchom go za pomocą debugera w środowisku Visual C++. W przypadku wystąpienia błędów ochrony Windows przekazuje sterowanie do debugera i kursor znajduje się w wierszu, który spowodował problem.|  
+|Program generuje wiele błędy kompilacji i link.|Przez ustawienie poziomie ostrzeżenia kompilatora do jednej z jej największe wartości i heeding komunikaty ostrzegawcze, można wyeliminować wiele potencjalnych problemów. Przy użyciu poziomu 3 lub opcje poziomu ostrzeżenia poziomu 4, można wykryć konwersje danych niezamierzone, brak prototypy funkcji i korzystania z funkcji ze standardem ANSI.|  
   
 ## <a name="see-also"></a>Zobacz też  
- [Wielowątkowość z językiem C i podsystemem Win32](../parallel/multithreading-with-c-and-win32.md)
+
+[Wielowątkowość z językiem C i podsystemem Win32](../parallel/multithreading-with-c-and-win32.md)

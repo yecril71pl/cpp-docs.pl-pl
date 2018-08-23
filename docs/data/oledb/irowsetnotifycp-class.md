@@ -35,15 +35,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: cf7cde624eeaa8a65ba5d5a2b4729ee94847d0e9
-ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
+ms.openlocfilehash: e78caa689158f1820a5e146235bb1f2d506a925b
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/30/2018
-ms.locfileid: "39338184"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42465137"
 ---
 # <a name="irowsetnotifycp-class"></a>IRowsetNotifyCP — Klasa
-Implementuje witryny dostawcy interfejsu punktu połączenia [IRowsetNotify](https://msdn.microsoft.com/library/ms712959.aspx).  
+Implementuje witryny dostawcy interfejsu punktu połączenia [IRowsetNotify](/previous-versions/windows/desktop/ms712959\(v=vs.85\)).  
   
 ## <a name="syntax"></a>Składnia
 
@@ -91,7 +91,7 @@ class IRowsetNotifyCP :
  Szczegółowe informacje na temat implementowania powiadomień, zobacz "Obsługi powiadomienia" w [tworzenie aktualizowalnego dostawcy](../../data/oledb/creating-an-updatable-provider.md).  
 
 ## <a name="onfieldchange"></a> IRowsetNotifyCP::Fire_OnFieldChange
-Emituje [onfieldchange —](https://msdn.microsoft.com/library/ms715961.aspx) zdarzenia w celu powiadamiania odbiorców o zmianie wartości kolumny.  
+Emituje [onfieldchange —](/previous-versions/windows/desktop/ms715961\(v=vs.85\)) zdarzenia w celu powiadamiania odbiorców o zmianie wartości kolumny.  
   
 ### <a name="syntax"></a>Składnia  
   
@@ -106,10 +106,10 @@ HRESULT Fire_OnFieldChange(IRowset* pRowset,
 ```  
   
 #### <a name="parameters"></a>Parametry  
- Zobacz [IRowsetNotify::OnFieldChange](https://msdn.microsoft.com/library/ms715961.aspx) w *OLE DB Podręcznik programisty*. 
+ Zobacz [IRowsetNotify::OnFieldChange](/previous-versions/windows/desktop/ms715961\(v=vs.85\)) w *OLE DB Podręcznik programisty*. 
 
 ## <a name="onrowchange"></a> IRowsetNotifyCP::Fire_OnRowChange
-Emituje [onrowchange —](https://msdn.microsoft.com/library/ms722694.aspx) zdarzenie do wszystkich obiektów nasłuchujących dla punktu połączenia `IID_IRowsetNotify` do powiadamiania klientów zmiany wpływające na wiersze.  
+Emituje [onrowchange —](/previous-versions/windows/desktop/ms722694\(v=vs.85\)) zdarzenie do wszystkich obiektów nasłuchujących dla punktu połączenia `IID_IRowsetNotify` do powiadamiania klientów zmiany wpływające na wiersze.  
   
 ### <a name="syntax"></a>Składnia  
   
@@ -123,10 +123,10 @@ HRESULT Fire_OnRowChange(IRowset* pRowset,
 ```  
   
 #### <a name="parameters"></a>Parametry  
- Zobacz [IRowsetNotify::OnRowChange](https://msdn.microsoft.com/library/ms722694.aspx) w *OLE DB Podręcznik programisty*.  
+ Zobacz [IRowsetNotify::OnRowChange](/previous-versions/windows/desktop/ms722694\(v=vs.85\)) w *OLE DB Podręcznik programisty*.  
 
 ## <a name="onrowsetchange"></a> IRowsetNotifyCP::Fire_OnRowsetChange
-Emituje [onrowsetchange —](https://msdn.microsoft.com/library/ms722669.aspx) zdarzenie do wszystkich obiektów nasłuchujących dla punktu połączenia `IID_IRowsetNotify` do powiadamiania klientów zmiany wpływające na cały zestaw wierszy.  
+Emituje [onrowsetchange —](/previous-versions/windows/desktop/ms722669\(v=vs.85\)) zdarzenie do wszystkich obiektów nasłuchujących dla punktu połączenia `IID_IRowsetNotify` do powiadamiania klientów zmiany wpływające na cały zestaw wierszy.  
   
 ### <a name="syntax"></a>Składnia  
   
@@ -138,7 +138,7 @@ HRESULT Fire_OnRowsetChange(IRowset* pRowset,
 ```  
   
 #### <a name="parameters"></a>Parametry  
- Zobacz [IRowsetNotify::OnRowsetChange](https://msdn.microsoft.com/library/ms722669.aspx) w *OLE DB Podręcznik programisty*.
+ Zobacz [IRowsetNotify::OnRowsetChange](/previous-versions/windows/desktop/ms722669\(v=vs.85\)) w *OLE DB Podręcznik programisty*.
   
 ## <a name="see-also"></a>Zobacz też  
  [Szablony dostawców OLE DB](../../data/oledb/ole-db-provider-templates-cpp.md)   

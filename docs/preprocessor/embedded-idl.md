@@ -16,17 +16,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1e0b594952e8e5be0a9be9c843877c8c4bb95eca
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: b41af8375249a48ac3a866af224370b19f071d28
+ms.sourcegitcommit: d4c803bd3a684d7951bf88dcecf1f14af43ae411
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33842719"
+ms.lasthandoff: 08/10/2018
+ms.locfileid: "42464638"
 ---
 # <a name="embeddedidl"></a>embedded_idl
-**Określonego języka C++**  
+**Określonego język C++**  
   
- Określa, czy biblioteki typów są zapisywane do pliku danych .tlh — kod wygenerowany przez atrybut zachowane.  
+Określa, czy biblioteki typów są zapisywane do pliku .tlh, z zachowanym kodem generowanych atrybutów.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -34,17 +34,17 @@ ms.locfileid: "33842719"
 embedded_idl[("param")]  
 ```  
   
-#### <a name="parameters"></a>Parametry  
- `param`  
- Może być jedną z dwóch wartości:  
+### <a name="parameters"></a>Parametry  
+*param*  
+Może być jedną z dwóch wartości:  
   
--   emitidl: informacje o typie zaimportowany z biblioteki typów będą znajdować się we IDL wygenerowany dla projektu oparte na atrybutach.  To jest domyślna i będzie obowiązywać jeśli nie określisz parametr `embedded_idl`.  
+- emitidl: informacje o typie zaimportowany z biblioteki typów będą znajdować się we IDL wygenerowany w projekcie z atrybutami.  To jest ustawieniem domyślnym i będą obowiązywać w przypadku nieokreślenia parametru, aby `embedded_idl`.  
   
--   no_emitidl: informacje o typie zaimportowany z biblioteki typów nie są obecne w IDL wygenerowany dla projektu oparte na atrybutach.  
+- no_emitidl: informacje o typie zaimportowany z biblioteki typów nie będą obecne w pliku IDL wygenerowany w projekcie z atrybutami.  
   
 ## <a name="example"></a>Przykład  
   
-```  
+```cpp  
 // import_embedded_idl.cpp  
 // compile with: /LD  
 #include <windows.h>  
@@ -53,8 +53,10 @@ embedded_idl[("param")]
 ```  
   
 ## <a name="remarks"></a>Uwagi  
- **KOŃCOWY określonego języka C++**  
+ 
+**KONIEC określonego języka C++**  
   
 ## <a name="see-also"></a>Zobacz też  
- [atrybuty #import](../preprocessor/hash-import-attributes-cpp.md)   
- [#import — dyrektywa](../preprocessor/hash-import-directive-cpp.md)
+ 
+[atrybuty #import](../preprocessor/hash-import-attributes-cpp.md)   
+[#import — dyrektywa](../preprocessor/hash-import-directive-cpp.md)

@@ -40,12 +40,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 307b7f769035a9ddb84a3d0e51e0ff6d8a016472
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: 0816a490a4375504168b11d8055ddbe41dae2109
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37850855"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42464479"
 ---
 # <a name="cmfcribbonslider-class"></a>Klasa CMFCRibbonSlider
 `CMFCRibbonSlider` Klasa implementuje kontrolkę suwaka, możesz dodać do paska Wstążki lub paska stanu wstążki. Kontrolka suwaka wstążki przypomina suwaki zoomu, które pojawiają się w aplikacjach pakietu Office 2007.  
@@ -152,7 +152,7 @@ int GetRangeMin() const;
  Przyrost minimalne suwak mogą być przesyłane w kontrolce suwaka.  
   
 ##  <a name="getregularsize"></a>  CMFCRibbonSlider::GetRegularSize  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+ Aby uzyskać więcej informacji, zobacz kod źródłowy znajdujący się w **VC\\atlmfc\\src\\mfc** folder instalacji programu Visual Studio.  
   
 ```  
 virtual CSize GetRegularSize(CDC* pDC);
@@ -186,7 +186,7 @@ BOOL HasZoomButtons() const;
  Wartość TRUE, jeśli suwak przycisków powiększenia; Wartość FALSE w przeciwnym razie.  
   
 ##  <a name="ondraw"></a>  CMFCRibbonSlider::OnDraw  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+ Aby uzyskać więcej informacji, zobacz kod źródłowy znajdujący się w **VC\\atlmfc\\src\\mfc** folder instalacji programu Visual Studio.  
   
 ```  
 virtual void OnDraw(CDC* pDC);

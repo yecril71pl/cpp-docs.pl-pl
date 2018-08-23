@@ -20,12 +20,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4b739a3f72416b6ab58cbdba45a496e10fef4424
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 581194fdeab233e3ad07b2af6a7087bb1877e1f2
+ms.sourcegitcommit: d4c803bd3a684d7951bf88dcecf1f14af43ae411
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33842966"
+ms.lasthandoff: 08/10/2018
+ms.locfileid: "42465128"
 ---
 # <a name="warning-pragma"></a>Ostrzeżenie Pragma
 Umożliwia selektywne modyfikacji zachowania wiadomości ostrzeżeń kompilatora.  
@@ -40,24 +40,25 @@ Umożliwia selektywne modyfikacji zachowania wiadomości ostrzeżeń kompilatora
 ```  
   
 ## <a name="remarks"></a>Uwagi  
+
 Dostępne są następujące parametry specyfikator ostrzeżenie.  
   
 |Ostrzeżenie — Specyfikator|Znaczenie|  
 |------------------------|-------------|  
-|`1, 2, 3, 4`|Zastosuj danego poziomy do określonego ostrzeżeniami. Włącza to również określonego ostrzeżenie, że jest domyślnie wyłączone.|  
-|`default`|Ostrzeżenie zachowanie zresetowana do wartości domyślnej. Włącza to również określonego ostrzeżenie, że jest domyślnie wyłączone. To ostrzeżenie będzie generowane w lokalizacji domyślnej, udokumentowane, poziom.<br /><br /> Aby uzyskać więcej informacji, zobacz [kompilatora ostrzeżeń czy są wyłączone domyślnie](../preprocessor/compiler-warnings-that-are-off-by-default.md).|  
-|`disable`|Nie wydaje określony komunikaty ostrzegawcze.|  
-|`error`|Raport określonych ostrzeżeń jako błędy.|  
-|`once`|Wyświetl komunikaty określony tylko jeden raz.|  
-|`suppress`|Wypchnięcia bieżący stan pragma na stosie, wyłącza określony ostrzeżenia dla następnego wiersza i tak, aby stan pragma jest resetowany będzie wyświetlana na stosie ostrzeżenie.|  
+|*1, 2, 3, 4*|Zastosowanie danego poziomu do określonego ostrzeżenia. Włącza to również określone ostrzeżenie, która jest domyślnie wyłączona.|  
+|*default*|Resetuj zachowanie ostrzeżenie do wartości domyślnej. Włącza to również określone ostrzeżenie, która jest domyślnie wyłączona. Ostrzeżenie będzie generowane w lokalizacji domyślnej, udokumentowane, poziom.<br /><br /> Aby uzyskać więcej informacji, zobacz [kompilatora ostrzeżenia, są wyłączone domyślnie](../preprocessor/compiler-warnings-that-are-off-by-default.md).|  
+|*Wyłącz*|Generuje określony komunikaty ostrzegawcze.|  
+|*Błąd*|Należy sporządzić raport określone ostrzeżenia jako błędy.|  
+|*once*|Wyświetl komunikaty określony tylko jeden raz.|  
+|*Pomiń*|Wypycha bieżący stan pragmy w stosie, wyłącza określone ostrzeżenie następnego wiersza, a tak, aby stan pragmy jest resetowany punktów POP stosu ostrzeżenie.|  
   
- Przedstawia następującą instrukcję kodu, który `warning-number-list` parametr może zawierać wiele numerów ostrzeżeń, a wiele `warning-specifier` parametry można określić w tym samym dyrektywa pragma.  
+Poniższa instrukcja kodu pokazuje, że `warning-number-list` parametru może zawierać wiele numerów ostrzeżeń, a wiele `warning-specifier` parametry można określić w tym samym dyrektywa pragmy.  
   
 ```cpp  
 #pragma warning( disable : 4507 34; once : 4385; error : 164 )  
 ```  
   
- To jest funkcjonalnym odpowiednikiem następującego kodu.  
+ To jest funkcjonalnie równoważny z następującym kodem.  
   
 ```cpp  
 // Disable warning messages 4507 and 4034.  
@@ -70,9 +71,9 @@ Dostępne są następujące parametry specyfikator ostrzeżenie.
 #pragma warning( error : 164 )  
 ```  
   
- Kompilator dodaje 4000 dowolną liczbę ostrzeżenie należącą do zakresu od 0 do 999.  
+Kompilator sam doda 4000 na dowolną liczbę ostrzeżenia, który jest od 0 do 999.  
   
- Ostrzeżenie liczb w zakresie 4700-4999, które są skojarzone z generowania kodu, stan ostrzeżenia obowiązywać, gdy kompilator napotka otwarty nawias klamrowy funkcji będzie obowiązywać w pozostałej części funkcji. Przy użyciu `warning` pragma w funkcji zmiany stanu ostrzeżenia, która jest większa niż 4699 liczba zostaną wprowadzone dopiero po zakończeniu funkcji. W poniższym przykładzie przedstawiono poprawne położenie `warning` pragm, aby wyłączyć komunikat ostrzegawczy generowania kodu, a następnie przywróć ją.  
+Dla numerów ostrzeżeń w zakresie 4700-4999, które są skojarzone z generowania kodu, stan ostrzeżenia obowiązuje w przypadku, gdy kompilator napotka otwartych nawiasów klamrowych funkcji będzie obowiązywać przez pozostałą część tej funkcji. Za pomocą **ostrzeżenie** pragmy w funkcji, które można zmienić stanu ostrzeżenie, że ma wiele większa niż 4699 zostanie aktywowane dopiero po zakończeniu wykonywania funkcji. Poniższy przykład pokazuje poprawne położenie **ostrzeżenie** pragm, aby wyłączyć ostrzeżenia generowania kodu, a następnie przywrócić go.  
   
 ```cpp  
 // pragma_warning.cpp  
@@ -90,18 +91,19 @@ int main() {
 }  
 ```  
   
- Należy zauważyć, że w całej funkcji body ostatniego ustawienie `warning` pragma będzie obowiązywać dla całej funkcji.  
+Należy zauważyć, że w całej funkcji treści ostatnie ustawienie **ostrzeżenie** pragma będą obowiązywać dla całej funkcji.  
   
-## <a name="push-and-pop"></a>Wypychania i Pop  
- `warning` Pragma obsługuje również następującej składni, gdzie `n` reprezentuje poziom ostrzeżeń (od 1 do 4).  
+## <a name="push-and-pop"></a>Wypychanie i Pop  
+ 
+**Ostrzeżenie** pragma obsługuje również następującej składni, gdzie *n* reprezentuje poziom ostrzeżenia (od 1 do 4).  
   
- `#pragma warning( push [ , n ] )`  
+`#pragma warning( push [ , n ] )`  
   
- `#pragma warning( pop )`  
+`#pragma warning( pop )`  
    
- Pragma `warning( push )` zapisuje bieżący stan ostrzeżenia dla każdego ostrzeżenia. Pragma `warning( push, n )` zapisuje bieżący stan każdego ostrzeżenia i Ustawia globalną ostrzeżenie `n`.  
+Pragmy `warning( push )` zapisuje bieżący stan ostrzegawczy każde ostrzeżenie. Pragmy `warning( push, n )` zapisuje bieżący stan każde ostrzeżenie i ustawia poziom ostrzeżeń globalnego *n*.  
   
- Pragma `warning( pop )` POP ostatni stan ostrzeżenia wypychana na stosie. Wszelkie zmiany wprowadzone w stan ostrzegawczy między `push` i `pop` zostaną cofnięte. Rozważmy następujący przykład:  
+Pragmy `warning( pop )` POP ostatni stan ostrzeżenia są wypychane na stosie. Wszelkie zmiany wprowadzone w stan ostrzegawczy między *wypychania* i *pop* zostaną cofnięte. Rozważmy następujący przykład:  
   
 ```cpp  
 #pragma warning( push )  
@@ -112,9 +114,9 @@ int main() {
 #pragma warning( pop )   
 ```  
   
- Na koniec tego kodu `pop` przywraca stan każdego ostrzeżenia (w tym 4705, 4706 i 4707) jakie były na początku kodu.  
+Na końcu niniejszego Kodeksu *pop* przywraca stan każde ostrzeżenie (w tym 4705 4706 i 4707) jakie były na początku kodu.  
   
- Podczas pisania pliki nagłówkowe, można użyć `push` i `pop` aby zagwarantować, że stan ostrzegawczy zmiany wprowadzone przez użytkownika uniemożliwia nagłówki kompilowanie poprawnie. Użyj `push` na początku nagłówka i `pop` na końcu. Na przykład jeśli masz nagłówek, który nie kompiluje się prawidłowo na poziomie ostrzeżenia 4 następujący kod będzie zmienić poziom ostrzeżeń do 3 i przywrócić oryginalny poziom ostrzeżeń na końcu nagłówka.  
+Podczas zapisywania plików nagłówkowych, możesz użyć *wypychania* i *pop* celu zagwarantowania, czy zmiany stanu ostrzeżenia wprowadzone przez użytkownika uniemożliwia nagłówki kompilowanie poprawnie. Użyj *wypychania* na początku tego nagłówka i *pop* na końcu. Na przykład w przypadku nagłówka, który nie kompiluje się prawidłowo na poziom ostrzeżeń 4 poniższy kod może zmienić poziom ostrzeżeń 3 i następnie przywrócić oryginalny poziom ostrzeżeń na końcu nagłówka.  
   
 ```cpp  
 #pragma warning( push, 3 )  
@@ -122,7 +124,8 @@ int main() {
 #pragma warning( pop )   
 ```  
   
- Aby uzyskać więcej informacji o kompilatora pominąć opcje, które ułatwiają ostrzeżenia, zobacz [/FI](../build/reference/fi-name-forced-include-file.md) i [/w](../build/reference/compiler-option-warning-level.md).  
+Aby uzyskać więcej informacji na temat kompilatora pominąć opcje, które ułatwiają ostrzeżenia, zobacz [/FI](../build/reference/fi-name-forced-include-file.md) i [Wn](../build/reference/compiler-option-warning-level.md).  
   
 ## <a name="see-also"></a>Zobacz też  
- [Dyrektywy pragma i słowo kluczowe __Pragma](../preprocessor/pragma-directives-and-the-pragma-keyword.md)
+ 
+[Dyrektywy pragma i słowo kluczowe __Pragma](../preprocessor/pragma-directives-and-the-pragma-keyword.md)

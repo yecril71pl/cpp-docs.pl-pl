@@ -18,17 +18,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 373e9c1f8cc24ca4de4f0a78dd75011681c78056
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: f5a25e16439673f367cfe0bfe208dbc21a621b81
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33327528"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42466426"
 ---
 # <a name="invlpg"></a>__invlpg
 **Microsoft Specific**  
   
- Generuje x86 `invlpg` instrukcji, co spowoduje unieważnienie translacji równoległej buforu (TLB) dla strony skojarzone z pamięci wskazywanej przez `Address`.  
+ Generuje x86 `invlpg` instrukcji, co unieważnia buforu referencyjnych tłumaczenia (TLB) dla strony skojarzone z pamięci wskazywany przez `Address`.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -44,18 +44,18 @@ void __invlpg(
   
 ## <a name="requirements"></a>Wymagania  
   
-|— Wewnętrzne|Architektura|  
+|Wewnętrzne|Architektura|  
 |---------------|------------------|  
-|`__invlpg`|x86, [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
+|`__invlpg`|x86, x64|  
   
- **Plik nagłówka** \<intrin.h >  
+ **Plik nagłówkowy** \<intrin.h >  
   
 ## <a name="remarks"></a>Uwagi  
- Wewnętrzna `__invlpg` emituje uprzywilejowanej instrukcji i jest dostępna tylko w trybie jądra z poziomem uprawnień (Panel sterowania) 0.  
+ Wewnętrzne `__invlpg` emituje instrukcja uprzywilejowana i jest dostępna tylko w trybie jądra z poziomem uprawnień (Panel sterowania) 0.  
   
- Ta procedura jest dostępna tylko wewnętrznie.  
+ Ta procedura jest dostępna wyłącznie jako wewnętrzna.  
   
-**KOŃCOWY określonych firmy Microsoft**  
+**END specyficzny dla Microsoft**  
   
 ## <a name="see-also"></a>Zobacz też  
  [Funkcje wewnętrzne kompilatora](../intrinsics/compiler-intrinsics.md)

@@ -21,17 +21,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ad785bb7789156a2f5105e89a493877fb30c2f3e
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 4720ca4a65a543ca09412ac0c1eb1e65bf6cdd23
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33331900"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42464460"
 ---
 # <a name="bitscanforward-bitscanforward64"></a>_BitScanForward, _BitScanForward64
 **Microsoft Specific**  
   
- Wyszukiwanie danych maski z bitem (najmniej znaczący BAJT) do najbardziej znaczącego bitu (BITEM) Ustaw bit (1).  
+ Wyszukaj maskowanie danych z co najmniej znaczący bit (najmniej znaczący BAJT) do najbardziej znaczący bit (BITEM) ustawionego bitu (1).  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -48,25 +48,25 @@ unsigned char _BitScanForward64(
   
 #### <a name="parameters"></a>Parametry  
  [out] `Index`  
- Pozycja bitu pierwszego ustawiony bit [1], znaleziono załadowana.  
+ Pozycja bitu pierwszego ustawionego bitu [1], znaleziono załadowana.  
   
  [in] `Mask`  
- 32-bitowa czy 64-bitowa wartość do wyszukiwania.  
+ 32-bitowy lub 64-bitową wartość do wyszukania.  
   
 ## <a name="return-value"></a>Wartość zwracana  
- 0, jeśli maski ma wartość 0. różna od zera, w przeciwnym razie wartość.  
+ 0, jeśli maska jest równa zeru; wartość różną od zera w przeciwnym razie.  
   
 ## <a name="remarks"></a>Uwagi  
- Jeśli bit zestaw zostanie znaleziony, pozycja bitu pierwszy bitów zestawu znaleziono jest zwracany w pierwszym parametrem. Jeśli nie z bitowego zestawu zostanie znaleziony, jest zwracana 0; w przeciwnym razie zwracany jest 1.  
+ Jeśli zostanie znaleziony zestaw bitów, pozycja bitu pierwszego ustawionego bitu znaleziono jest zwracany w pierwszym parametrem. Jeśli zostanie znaleziony nie ustawionego bitu, zwracany jest 0; w przeciwnym razie zwracana jest 1.  
   
 ## <a name="requirements"></a>Wymagania  
   
-|— Wewnętrzne|Architektura|  
+|Wewnętrzne|Architektura|  
 |---------------|------------------|  
-|`_BitScanForward`|x86, ARM, [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
-|`_BitScanForward64`|ARM, [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
+|`_BitScanForward`|x86, ARM, x64|  
+|`_BitScanForward64`|ARM, x64|  
   
- **Plik nagłówka** \<intrin.h >  
+ **Plik nagłówkowy** \<intrin.h >  
   
 ## <a name="example"></a>Przykład  
   
@@ -112,7 +112,7 @@ Enter a positive integer as the mask:
 Mask: 12 Index: 2  
 ```  
   
-**KOŃCOWY określonych firmy Microsoft**  
+**END specyficzny dla Microsoft**  
   
 ## <a name="see-also"></a>Zobacz też  
  [Funkcje wewnętrzne kompilatora](../intrinsics/compiler-intrinsics.md)

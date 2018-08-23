@@ -21,17 +21,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 71b2259e7eecd820d35527a6ab8908f274e3e287
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 623077695731b88285769c5b887b1f64f5263855
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33334256"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42465433"
 ---
 # <a name="bittest-bittest64"></a>_bittest, _bittest64
 **Microsoft Specific**  
   
-Generuje `bt` instrukcji, która sprawdza, czy bit w pozycji `b` adresu `a`i zwraca wartość tego bit.  
+Generuje `bt` instrukcji, która sprawdza, czy bit w pozycji `b` adresu `a`i zwraca wartość tego bitu.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -51,20 +51,20 @@ unsigned char _bittest64(
 Wskaźnik do pamięci do sprawdzenia.  
   
 [in] `b`  
-Pozycja bit do testowania.  
+Pozycja bitu do testowania.  
   
 ### <a name="return-value"></a>Wartość zwracana  
 Bit na określonej pozycji.  
   
 ## <a name="requirements"></a>Wymagania  
   
-|— Wewnętrzne|Architektura|nagłówek|  
+|Wewnętrzne|Architektura|nagłówek|  
 |---------------|------------------|------------|  
-|`_bittest`|x86, ARM, [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|\<intrin.h>|  
-|`_bittest64`|ARM, [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|\<intrin.h>|  
+|`_bittest`|x86, ARM, x64|\<intrin.h>|  
+|`_bittest64`|ARM, x64|\<intrin.h>|  
   
 ## <a name="remarks"></a>Uwagi  
-Ta procedura jest dostępna tylko wewnętrznie.  
+Ta procedura jest dostępna wyłącznie jako wewnętrzna.  
   
 ## <a name="example"></a>Przykład  
   
@@ -106,7 +106,7 @@ Binary representation:
 0000000000000010011000010110010  
 ```  
   
-**KOŃCOWY określonych firmy Microsoft**  
+**END specyficzny dla Microsoft**  
   
 ## <a name="see-also"></a>Zobacz też  
 [Funkcje wewnętrzne kompilatora](../intrinsics/compiler-intrinsics.md)

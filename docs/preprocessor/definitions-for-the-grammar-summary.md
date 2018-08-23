@@ -15,23 +15,24 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6d6c84354332b4d01ca07f672024fe9b488cd0a2
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 0ac3b742406f1e8be955921a9ee238f3b35d3bdf
+ms.sourcegitcommit: d4c803bd3a684d7951bf88dcecf1f14af43ae411
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33840070"
+ms.lasthandoff: 08/10/2018
+ms.locfileid: "42464453"
 ---
 # <a name="definitions-for-the-grammar-summary"></a>Definicje dla podsumowania dotyczącego gramatyki
-Terminale są punkty końcowe w definicji składni. Możliwe jest inne rozwiązanie. Terminale obejmują zestaw zawiera wyrazy zastrzeżone i identyfikatory zdefiniowane przez użytkownika.  
+Terminale to punkty końcowe w definicji składni. Możliwe jest inne rozwiązanie. Terminale obejmują zbiór słów zastrzeżonych oraz identyfikatorów zdefiniowanych przez użytkownika.  
   
-Symboli nieterminalnych symboli zastępczych w składni. Większość są zdefiniowane w innym miejscu w tej składni podsumowania. Definicje może mieć wartość recursive. Następujące symboli nieterminalnych są zdefiniowane w [konwencje leksykalne](../cpp/lexical-conventions.md) sekcji *dokumentacja języka C++*:  
+Symboli nieterminalnych symboli zastępczych w składni. Większość są definiowane w innych miejscach w tej składni podsumowania. Definicje mogą być cykliczne. Następujące symboli nieterminalnych są zdefiniowane w [konwencje leksykalne](../cpp/lexical-conventions.md) części *C++ Language Reference*:  
   
-`constant`, *wyrażenia*, *identyfikator*, *— słowo kluczowe*, `operator`, `punctuator`  
+`constant`, *wyrażenie_stałe*, *identyfikator*, *— słowo kluczowe*, `operator`, `punctuator`  
   
-Opcjonalny składnik jest oznaczany jako opcjonalnych. Na przykład poniżej oznacza wyrażenie opcjonalne ujętą w nawiasy klamrowe:  
+Opcjonalny składnik jest wskazywany przez indeksem zgłoszenie zgody na uczestnictwo. Na przykład następujące określa opcjonalne wyrażenie ujęte w nawiasy klamrowe:  
   
-**{** *wyrażenie*opt **}**  
+**{** *wyrażenie*zoptymalizowany pod kątem **}**  
   
-## <a name="see-also"></a>Zobacz też  
+## <a name="see-also"></a>Zobacz też 
+ 
 [Podsumowanie gramatyki (C/C++)](../preprocessor/grammar-summary-c-cpp.md)

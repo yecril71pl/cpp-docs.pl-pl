@@ -113,12 +113,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 2fa455bbe4a5aa902232b502e129f6c8e21463a9
-ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
+ms.openlocfilehash: e741055950449ea07c719cf6cd4c33a34d6f43b3
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/30/2018
-ms.locfileid: "39337725"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42466346"
 ---
 # <a name="cbulkrowset-class"></a>CBulkRowset — Klasa
 Pobiera i obsługuje wiersze, aby pracować nad dane zbiorcze Pobieranie wielu dojść do wierszy za pomocą jednego wywołania.  
@@ -160,7 +160,7 @@ class CBulkRowset : public CRowset<TAccessor>
  [!code-cpp[NVC_OLEDB_Consumer#1](../../data/oledb/codesnippet/cpp/cbulkrowset-class_1.cpp)]  
 
 ## <a name="addrefrows"></a> CBulkRowset::AddRefRows
-Wywołania [IRowset::AddRefRows](https://msdn.microsoft.com/library/ms719619.aspx) Aby zwiększyć licznik odwołań dla wszystkich wierszy, które obecnie są pobierane z zestawu wierszy bulk.  
+Wywołania [IRowset::AddRefRows](/previous-versions/windows/desktop/ms719619\(v=vs.85\)) Aby zwiększyć licznik odwołań dla wszystkich wierszy, które obecnie są pobierane z zestawu wierszy bulk.  
   
 ### <a name="syntax"></a>Składnia  
   
@@ -246,7 +246,7 @@ HRESULT MoveToBookmark(const CBookmarkBase& bookmark,
  [in] Liczbę wierszy z zakładki, aby wiersz docelowy. Jeśli *lSkip* wynosi zero, pierwszy wiersz pobrania jest zakładką wiersza. Jeśli *lSkip* wynosi 1, pierwszy wiersz pobrania jest wiersz po wierszu zakładką. Jeśli *lSkip* wynosi -1, pierwszy wiersz pobrania jest wierszy przed wierszem zakładką.  
   
 ### <a name="return-value"></a>Wartość zwracana  
- Zobacz [IRowset::GetData](https://msdn.microsoft.com/library/ms716988.aspx) w *OLE DB Podręcznik programisty*. 
+ Zobacz [IRowset::GetData](/previous-versions/windows/desktop/ms716988\(v=vs.85\)) w *OLE DB Podręcznik programisty*. 
 
 ## <a name="movetoratio"></a> CBulkRowset::MoveToRatio
 Pobiera wiersze, rozpoczynając od ułamków pozycji w zestawie wierszy.  
@@ -273,10 +273,10 @@ HRESULT MoveToRatio(DBCOUNTITEM nNumerator,
   
  `(nNumerator *  RowsetSize ) / nDenominator`  
   
- Gdzie `RowsetSize` jest rozmiar wierszy, mierzone w wierszach. Dokładność tę formułę, zależy od określonego dostawcy. Aby uzyskać więcej informacji, zobacz [IRowsetScroll::GetRowsAtRatio](https://msdn.microsoft.com/library/ms709602.aspx) w *OLE DB Podręcznik programisty*.   
+ Gdzie `RowsetSize` jest rozmiar wierszy, mierzone w wierszach. Dokładność tę formułę, zależy od określonego dostawcy. Aby uzyskać więcej informacji, zobacz [IRowsetScroll::GetRowsAtRatio](/previous-versions/windows/desktop/ms709602\(v=vs.85\)) w *OLE DB Podręcznik programisty*.   
 
 ## <a name="releaserows"></a> CBulkRowset::ReleaseRows
-Wywołania [IRowset::ReleaseRows](https://msdn.microsoft.com/library/ms719771.aspx) na liczbę odwołań we wszystkich wierszach, które obecnie są pobierane z zestawu wierszy bulk.  
+Wywołania [IRowset::ReleaseRows](/previous-versions/windows/desktop/ms719771\(v=vs.85\)) na liczbę odwołań we wszystkich wierszach, które obecnie są pobierane z zestawu wierszy bulk.  
   
 ### <a name="syntax"></a>Składnia  
   

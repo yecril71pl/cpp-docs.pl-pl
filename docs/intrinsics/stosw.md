@@ -18,17 +18,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7a9f73b401d953c026c60d504fbb016838720b7c
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: bf41c1c91d8c0b5d2d7626d1fc0eee67aa96ff32
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33329348"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42464753"
 ---
 # <a name="stosw"></a>__stosw
 **Microsoft Specific**  
   
- Generuje instrukcji ciągu magazynu (`rep stosw`).  
+ Generuje instrukcję ciągu magazynu (`rep stosw`).  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -42,7 +42,7 @@ void __stosw(
   
 #### <a name="parameters"></a>Parametry  
  [out] `Dest`  
- Miejsce docelowe operacji.  
+ Lokalizacja docelowa wykonać operację.  
   
  [in] `Data`  
  Dane, które mają być przechowywane.  
@@ -52,16 +52,16 @@ void __stosw(
   
 ## <a name="requirements"></a>Wymagania  
   
-|— Wewnętrzne|Architektura|  
+|Wewnętrzne|Architektura|  
 |---------------|------------------|  
-|`__stosw`|x86, [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
+|`__stosw`|x86, x64|  
   
- **Plik nagłówka** \<intrin.h >  
+ **Plik nagłówkowy** \<intrin.h >  
   
 ## <a name="remarks"></a>Uwagi  
  Wynik jest to, że wyraz `Data` są zapisywane w bloku `Count` wyrazów w `Dest` ciągu.  
   
- Ta procedura jest dostępna tylko wewnętrznie.  
+ Ta procedura jest dostępna wyłącznie jako wewnętrzna.  
   
 ## <a name="example"></a>Przykład  
   
@@ -87,7 +87,7 @@ int main()
 0 128 128 0  
 ```  
   
-**KOŃCOWY określonych firmy Microsoft**  
+**END specyficzny dla Microsoft**  
   
 ## <a name="see-also"></a>Zobacz też  
  [Funkcje wewnętrzne kompilatora](../intrinsics/compiler-intrinsics.md)

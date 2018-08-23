@@ -16,16 +16,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d15bf00432cab6900c252d85cd642c414bdbbb22
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 608702deb1ebaed9bab56fe8d08ca3102d5c5d89
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33199434"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42465254"
 ---
 # <a name="fatal-error-c1905"></a>Błąd krytyczny C1905
 Frontonu i zaplecza nie jest zgodne (muszą wskazywać tego samego procesora)  
   
- Ten błąd występuje, gdy plik .obj jest generowany przez kompilator fronton (C1.dll) przeznaczonego dla jednego procesora, takich jak x86, ARM, lub [!INCLUDE[vcprx64](../../assembler/inline/includes/vcprx64_md.md)], ale jest odczytywany przez zaplecze (C2.dll) przeznaczonego dla innego procesora.  
+ Ten błąd występuje, gdy w pliku .obj, który jest generowany przez kompilator fronton (C1.dll) ten jeden procesor celów, takich jak x86, ARM lub x64, ale jest odczytywany przez zaplecze (C2.dll) który jest przeznaczony dla inny procesor.  
   
- Aby rozwiązać ten problem, upewnij się, używasz zgodnego frontonu i zaplecza. Jest to wartość domyślna dla projektów utworzonych w programie Visual Studio. Ten błąd może wystąpić, jeśli mają edytować pliku projektu i stosować różne ścieżki do narzędzi kompilatora. Jeśli nie ustawiono specjalnie ścieżka do narzędzia kompilatora, ten błąd może wystąpić, jeśli instalację programu Visual Studio jest uszkodzona. Na przykład może skopiowano plików dll kompilatora z jednej lokalizacji do innej. Użyj **programy i funkcje** w Panelu sterowania systemu Windows do naprawy lub ponownej instalacji programu Visual Studio.
+ Aby rozwiązać ten problem, upewnij się, że używasz pasującego frontonu i zaplecza. Jest to wartość domyślna dla projektów w programie Visual Studio. Ten błąd może wystąpić, jeśli edytować plik projektu i używać różnych ścieżek do narzędzia kompilatora. Jeśli nie ustawiono wyraźnie ścieżkę dla narzędzia kompilatora, ten błąd może wystąpić, jeśli instalacja programu Visual Studio jest uszkodzony. Na przykład może zostały skopiowane pliki dll kompilatora z jednej lokalizacji do innej. Użyj **programy i funkcje** w Panelu sterowania Windows, aby naprawić lub zainstalować ponownie program Visual Studio.

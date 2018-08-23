@@ -17,34 +17,36 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 19cc3817faab71c209586ad952162229f846e0a7
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: 0506c7f4efd288417c8fbdcd4784446651c362ac
+ms.sourcegitcommit: e9ce38decc9f986edab5543de3464b11ebccb123
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33692857"
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "42466132"
 ---
 # <a name="multithreading-and-locales"></a>Wielowątkowość i ustawienia regionalne
-Zarówno biblioteki wykonawczej C i standardowa biblioteka C++ zapewniają obsługę zmiany ustawień regionalnych programu. W tym temacie opisano problemy, które wystąpić podczas korzystania z funkcji ustawień regionalnych zarówno bibliotek w aplikacji wielowątkowych.  
+Biblioteka uruchomieniowa C i standardowej biblioteki języka C++ zapewnia obsługę zmiany ustawień regionalnych programu. W tym temacie omówiono problemy, które powstają, gdy za pomocą funkcji ustawień regionalnych, zarówno biblioteki aplikacji wielowątkowych.  
   
 ## <a name="remarks"></a>Uwagi  
- Biblioteka C Runtime Library umożliwia tworzenie aplikacji wielowątkowych przy użyciu `_beginthread` i `_beginthreadex` funkcji. W tym temacie omówiono tylko wielowątkowe aplikacje utworzone przy użyciu tych funkcji. Aby uzyskać więcej informacji, zobacz [_beginthread —, _beginthreadex —](../c-runtime-library/reference/beginthread-beginthreadex.md).  
+
+Biblioteka uruchomieniowa C umożliwia tworzenie aplikacji wielowątkowych, za pomocą `_beginthread` i `_beginthreadex` funkcji. W tym temacie omówiono tylko aplikacje wielowątkowe utworzone za pomocą tych funkcji. Aby uzyskać więcej informacji, zobacz [_beginthread, _beginthreadex](../c-runtime-library/reference/beginthread-beginthreadex.md).  
   
- Aby zmienić ustawienia regionalne, przy użyciu biblioteki wykonawczej C, użyj [setlocale](../preprocessor/setlocale.md) funkcji. W poprzednich wersjach programu Visual C++ ta funkcja będzie zawsze zmodyfikować ustawień regionalnych w całej aplikacji. Brak obsługi teraz ustawienia regionalne na podstawie dla każdego wątku. Jest to realizowane przy użyciu [_configthreadlocale —](../c-runtime-library/reference/configthreadlocale.md) funkcji. Aby określić, że [setlocale](../preprocessor/setlocale.md) tylko należy zmieniać ustawień regionalnych w bieżącym wątku wywołania `_configthreadlocale(_ENABLE_PER_THREAD_LOCALE)` w tym wątku. Z drugiej strony, wywoływania `_configthreadlocale(_DISABLE_PER_THREAD_LOCALE)` spowoduje, że wątek użyć globalnych ustawień regionalnych, a każde wywołanie [setlocale](../preprocessor/setlocale.md) w tym wątku spowoduje zmianę ustawień regionalnych w wszystkie wątki, które nie zostały jawnie włączone ustawienia regionalne dla każdego wątku.  
+Aby zmienić ustawienia regionalne, przy użyciu biblioteki środowiska uruchomieniowego języka C, należy użyć [setlocale](../preprocessor/setlocale.md) funkcji. W poprzednich wersjach programu Visual C++ ta funkcja zawsze będzie modyfikować ustawienia regionalne w całej aplikacji. Jest teraz obsługiwane ustawienia regionalne na zasadzie na wątek. Odbywa się przy użyciu [_configthreadlocale](../c-runtime-library/reference/configthreadlocale.md) funkcji. Aby określić, że [setlocale](../preprocessor/setlocale.md) tylko należy zmienić ustawienia regionalne w bieżącym wątku wywołania `_configthreadlocale(_ENABLE_PER_THREAD_LOCALE)` w tym wątku. Z drugiej strony, wywołanie `_configthreadlocale(_DISABLE_PER_THREAD_LOCALE)` spowoduje, że wątek do użycia globalnych ustawień regionalnych, a każde wywołanie [setlocale](../preprocessor/setlocale.md) w tym wątku spowoduje zmianę ustawienia regionalne wszystkich wątków, które nie zostały jawnie włączone ustawienia regionalne dla wątku.  
   
- Aby zmienić ustawienia regionalne, przy użyciu biblioteki wykonawczej języka C++, użyj [locale — klasa](../standard-library/locale-class.md). Wywołując [locale::global](../standard-library/locale-class.md#global) metody, zmiany ustawień regionalnych w każdym wątku, który nie ma jawnie włączone ustawienia regionalne dla każdego wątku. Aby zmienić ustawienia regionalne w jednym wątku lub część aplikacji, po prostu Utwórz wystąpienie `locale` obiektu w tym wątku lub części kodu.  
+Aby zmienić ustawienia regionalne, przy użyciu biblioteki środowiska uruchomieniowego języka C++, użyj [locale — klasa](../standard-library/locale-class.md). Przez wywołanie metody [locale::global](../standard-library/locale-class.md#global) metody, możesz zmienić ustawienia regionalne w każdym wątku, który nie ma jawnie włączone ustawienia regionalne dla wątku. Aby zmienić ustawienia regionalne w jednym wątku lub jego części aplikacji, po prostu Utwórz wystąpienie obiektu `locale` obiektu w tym wątku lub jego części kodu.  
   
 > [!NOTE]
->  Wywoływanie [locale::global](../standard-library/locale-class.md#global) zmienia ustawienia regionalne dla standardowa biblioteka C++ i C Biblioteka środowiska uruchomieniowego. Jednak podczas wywoływania [setlocale](../preprocessor/setlocale.md) tylko zmiany ustawień regionalnych nie dotyczy biblioteki C Runtime; standardowa biblioteka C++.  
+> Wywoływanie [locale::global](../standard-library/locale-class.md#global) zmieniają ustawienia regionalne dla standardowej biblioteki języka C++ i Biblioteka uruchomieniowa C. Jednak podczas wywoływania [setlocale](../preprocessor/setlocale.md) tylko zmieniają ustawienia regionalne dla biblioteki wykonawczej C; standardowej biblioteki języka C++ nie ma wpływu.  
   
- W poniższych przykładach pokazano, jak używać [setlocale](../preprocessor/setlocale.md) funkcji [locale — klasa](../standard-library/locale-class.md)i [_configthreadlocale —](../c-runtime-library/reference/configthreadlocale.md) funkcji, aby zmienić ustawienia regionalne aplikacji w różnych scenariuszy.  
+W poniższych przykładach pokazano sposób użycia [setlocale](../preprocessor/setlocale.md) funkcji [locale — klasa](../standard-library/locale-class.md)i [_configthreadlocale](../c-runtime-library/reference/configthreadlocale.md) funkcję, aby zmienić ustawienia regionalne aplikacji w kilku różnych scenariuszy.  
   
 ## <a name="example"></a>Przykład  
- W tym przykładzie wątku głównego spowoduje utworzenie dwóch wątków podrzędnych. Pierwszym wątkiem wątku A, umożliwia ustawienia regionalne dla każdego wątku przez wywołanie metody `_configthreadlocale(_ENABLE_PER_THREAD_LOCALE)`. Drugi wątku wątku B, jak również wątku głównego, nie należy włączać ustawienia regionalne dla każdego wątku. Wątek, następnie będzie kontynuowana, aby zmienić ustawienia regionalne, przy użyciu [setlocale](../preprocessor/setlocale.md) funkcja biblioteki wykonawczej C.  
+ 
+W tym przykładzie w wątku głównym, spowoduje utworzenie dwóch wątków podrzędnych. Pierwszy wątek, wątek A, umożliwia ustawień regionalnych na wątek wywołując `_configthreadlocale(_ENABLE_PER_THREAD_LOCALE)`. Drugi wątek, wątek B, a także wątku głównym, nie należy włączać ustawienia regionalne dla wątku. Wątek, następnie przechodzi do zmiany, przy użyciu ustawień regionalnych [setlocale](../preprocessor/setlocale.md) funkcji biblioteki wykonawczej C.  
   
- Ponieważ wątku A ma na ustawienia regionalne wątku włączone, tylko funkcje Biblioteka środowiska wykonawczego języka C w wątku A start przy użyciu ustawień regionalnych "francuskim". Funkcje Biblioteka środowiska wykonawczego języka C w wątku B i w głównym wątku w dalszym ciągu korzystać z ustawieniami regionalnymi "C". Ponadto ponieważ [setlocale](../preprocessor/setlocale.md) nie ma wpływu na ustawienia regionalne standardowa biblioteka C++ wszystkich standardowa biblioteka C++ obiektów w dalszym ciągu korzystać z ustawieniami regionalnymi "C".  
+Ponieważ wątek A ma na ustawienia regionalne wątku włączone, tylko funkcje biblioteki wykonawczej języka C w menu start wątku, A za pomocą ustawień regionalnych "Francuska". Funkcje biblioteki wykonawczej języka C w B wątku i wątku głównego w dalszym ciągu używają ustawień regionalnych "C". Ponadto ponieważ [setlocale](../preprocessor/setlocale.md) nie ma wpływu na ustawienia regionalne standardowej biblioteki języka C++, wszystkie biblioteki standardowej języka C++, które obiekty w dalszym ciągu używają ustawień regionalnych "C".  
   
-```  
+```cpp  
 // multithread_locale_1.cpp  
 // compile with: /EHsc /MD  
 #include <clocale>  
@@ -138,11 +140,12 @@ unsigned __stdcall RunThreadB(void *params)
 ```  
   
 ## <a name="example"></a>Przykład  
- W tym przykładzie wątku głównego spowoduje utworzenie dwóch wątków podrzędnych. Pierwszym wątkiem wątku A, umożliwia ustawienia regionalne dla każdego wątku przez wywołanie metody `_configthreadlocale(_ENABLE_PER_THREAD_LOCALE)`. Drugi wątku wątku B, jak również wątku głównego, nie należy włączać ustawienia regionalne dla każdego wątku. Wątek, następnie będzie kontynuowana, aby zmienić ustawienia regionalne, przy użyciu [locale::global](../standard-library/locale-class.md#global) metoda standardowa biblioteka C++.  
+ 
+W tym przykładzie w wątku głównym, spowoduje utworzenie dwóch wątków podrzędnych. Pierwszy wątek, wątek A, umożliwia ustawień regionalnych na wątek wywołując `_configthreadlocale(_ENABLE_PER_THREAD_LOCALE)`. Drugi wątek, wątek B, a także wątku głównym, nie należy włączać ustawienia regionalne dla wątku. Wątek, następnie przechodzi do zmiany, przy użyciu ustawień regionalnych [locale::global](../standard-library/locale-class.md#global) metody standardowej biblioteki języka C++.  
   
- Ponieważ wątku A ma na ustawienia regionalne wątku włączone, tylko funkcje Biblioteka środowiska wykonawczego języka C w wątku A start przy użyciu ustawień regionalnych "francuskim". Funkcje Biblioteka środowiska wykonawczego języka C w wątku B i w głównym wątku w dalszym ciągu korzystać z ustawieniami regionalnymi "C". Ponieważ jednak [locale::global](../standard-library/locale-class.md#global) metody zmiany ustawień regionalnych "globalny", wszystkie obiekty standardowa biblioteka C++ wszystkie wątki rozpocząć korzystanie z ustawień regionalnych "francuskim".  
+Ponieważ wątek A ma na ustawienia regionalne wątku włączone, tylko funkcje biblioteki wykonawczej języka C w menu start wątku, A za pomocą ustawień regionalnych "Francuska". Funkcje biblioteki wykonawczej języka C w B wątku i wątku głównego w dalszym ciągu używają ustawień regionalnych "C". Jednak ponieważ [locale::global](../standard-library/locale-class.md#global) metody zmieniają ustawienia regionalne "globalny", wszystkie obiekty standardowej biblioteki języka C++ w wszystkie wątki uruchomienie, przy użyciu ustawień regionalnych "Francuska".  
   
-```  
+```cpp  
 // multithread_locale_2.cpp  
 // compile with: /EHsc /MD  
 #include <clocale>  
@@ -236,11 +239,12 @@ unsigned __stdcall RunThreadB(void *params)
 ```  
   
 ## <a name="example"></a>Przykład  
- W tym przykładzie wątku głównego spowoduje utworzenie dwóch wątków podrzędnych. Pierwszym wątkiem wątku A, umożliwia ustawienia regionalne dla każdego wątku przez wywołanie metody `_configthreadlocale(_ENABLE_PER_THREAD_LOCALE)`. Drugi wątku wątku B, jak również wątku głównego, nie należy włączać ustawienia regionalne dla każdego wątku. Wątek B, a następnie będzie kontynuowana, aby zmienić ustawienia regionalne, przy użyciu [setlocale](../preprocessor/setlocale.md) funkcja biblioteki wykonawczej C.  
+ 
+W tym przykładzie w wątku głównym, spowoduje utworzenie dwóch wątków podrzędnych. Pierwszy wątek, wątek A, umożliwia ustawień regionalnych na wątek wywołując `_configthreadlocale(_ENABLE_PER_THREAD_LOCALE)`. Drugi wątek, wątek B, a także wątku głównym, nie należy włączać ustawienia regionalne dla wątku. Wątek B, a następnie przechodzi do zmiany, przy użyciu ustawień regionalnych [setlocale](../preprocessor/setlocale.md) funkcji biblioteki wykonawczej C.  
   
- Ponieważ B wątku nie ma ustawienia regionalne dla każdego wątku włączone, funkcje Biblioteka środowiska wykonawczego języka C w wątku B i w głównym wątku uruchomiony przy użyciu ustawień regionalnych "francuskim". Funkcje Biblioteka środowiska wykonawczego języka C w wątku A Kontynuuj do użycia z ustawieniami regionalnymi "C", ponieważ wątek A ma ustawienia regionalne dla każdego wątku włączone. Ponadto ponieważ [setlocale](../preprocessor/setlocale.md) nie ma wpływu na ustawienia regionalne standardowa biblioteka C++ wszystkich standardowa biblioteka C++ obiektów w dalszym ciągu korzystać z ustawieniami regionalnymi "C".  
+Ponieważ B wątku nie ma ustawień regionalnych na wątek, włączone, funkcji biblioteki wykonawczej języka C w B wątku i wątku głównego zacząć korzystać z ustawień regionalnych "Francuska". Funkcje biblioteki wykonawczej języka C w wątku, A Kontynuuj, aby użyć ustawień regionalnych "C", ponieważ wątek A ma ustawień regionalnych na wątek włączone. Ponadto ponieważ [setlocale](../preprocessor/setlocale.md) nie ma wpływu na ustawienia regionalne standardowej biblioteki języka C++, wszystkie biblioteki standardowej języka C++, które obiekty w dalszym ciągu używają ustawień regionalnych "C".  
   
-```  
+```cpp  
 // multithread_locale_3.cpp  
 // compile with: /EHsc /MD  
 #include <clocale>  
@@ -338,11 +342,12 @@ unsigned __stdcall RunThreadB(void *params)
 ```  
   
 ## <a name="example"></a>Przykład  
- W tym przykładzie wątku głównego spowoduje utworzenie dwóch wątków podrzędnych. Pierwszym wątkiem wątku A, umożliwia ustawienia regionalne dla każdego wątku przez wywołanie metody `_configthreadlocale(_ENABLE_PER_THREAD_LOCALE)`. Drugi wątku wątku B, jak również wątku głównego, nie należy włączać ustawienia regionalne dla każdego wątku. Wątek B, a następnie będzie kontynuowana, aby zmienić ustawienia regionalne, przy użyciu [locale::global](../standard-library/locale-class.md#global) metoda standardowa biblioteka C++.  
+ 
+W tym przykładzie w wątku głównym, spowoduje utworzenie dwóch wątków podrzędnych. Pierwszy wątek, wątek A, umożliwia ustawień regionalnych na wątek wywołując `_configthreadlocale(_ENABLE_PER_THREAD_LOCALE)`. Drugi wątek, wątek B, a także wątku głównym, nie należy włączać ustawienia regionalne dla wątku. Wątek B, a następnie przechodzi do zmiany, przy użyciu ustawień regionalnych [locale::global](../standard-library/locale-class.md#global) metody standardowej biblioteki języka C++.  
   
- Ponieważ B wątku nie ma ustawienia regionalne dla każdego wątku włączone, funkcje Biblioteka środowiska wykonawczego języka C w wątku B i w głównym wątku uruchomiony przy użyciu ustawień regionalnych "francuskim". Funkcje Biblioteka środowiska wykonawczego języka C w wątku A Kontynuuj do użycia z ustawieniami regionalnymi "C", ponieważ wątek A ma ustawienia regionalne dla każdego wątku włączone. Ponieważ jednak [locale::global](../standard-library/locale-class.md#global) metody zmiany ustawień regionalnych "globalny", wszystkie obiekty standardowa biblioteka C++ wszystkie wątki rozpocząć korzystanie z ustawień regionalnych "francuskim".  
+Ponieważ B wątku nie ma ustawień regionalnych na wątek, włączone, funkcji biblioteki wykonawczej języka C w B wątku i wątku głównego zacząć korzystać z ustawień regionalnych "Francuska". Funkcje biblioteki wykonawczej języka C w wątku, A Kontynuuj, aby użyć ustawień regionalnych "C", ponieważ wątek A ma ustawień regionalnych na wątek włączone. Jednak ponieważ [locale::global](../standard-library/locale-class.md#global) metody zmieniają ustawienia regionalne "globalny", wszystkie obiekty standardowej biblioteki języka C++ w wszystkie wątki uruchomienie, przy użyciu ustawień regionalnych "Francuska".  
   
-```  
+```cpp  
 // multithread_locale_4.cpp  
 // compile with: /EHsc /MD  
 #include <clocale>  
@@ -440,12 +445,13 @@ unsigned __stdcall RunThreadB(void *params)
 ```  
   
 ## <a name="see-also"></a>Zobacz też  
- [Obsługa wielowątkowości w przypadku starszego kodu (Visual C++)](../parallel/multithreading-support-for-older-code-visual-cpp.md)   
- [_beginthread, _beginthreadex](../c-runtime-library/reference/beginthread-beginthreadex.md)   
- [_configthreadlocale](../c-runtime-library/reference/configthreadlocale.md)   
- [setLocale](../preprocessor/setlocale.md)   
- [Przystosowywanie do warunków międzynarodowych](../c-runtime-library/internationalization.md)   
- [Ustawienia regionalne](../c-runtime-library/locale.md)   
- [\<clocale — >](../standard-library/clocale.md)   
- [\<locale>](../standard-library/locale.md)   
- [locale, klasa](../standard-library/locale-class.md)
+
+[Obsługa wielowątkowości w przypadku starszego kodu (Visual C++)](../parallel/multithreading-support-for-older-code-visual-cpp.md)   
+[_beginthread, _beginthreadex](../c-runtime-library/reference/beginthread-beginthreadex.md)   
+[_configthreadlocale](../c-runtime-library/reference/configthreadlocale.md)   
+[setLocale](../preprocessor/setlocale.md)   
+[Internacjonalizacji](../c-runtime-library/internationalization.md)   
+[Ustawienia regionalne](../c-runtime-library/locale.md)   
+[\<clocale — >](../standard-library/clocale.md)   
+[\<locale>](../standard-library/locale.md)   
+[locale, klasa](../standard-library/locale-class.md)

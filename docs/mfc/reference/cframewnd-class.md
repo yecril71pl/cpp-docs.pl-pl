@@ -116,12 +116,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3d2dee6c5157858fef2bd26101ac128ff3d53d23
-ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
+ms.openlocfilehash: 991b8c55c02272613ce329be9a053ff0110f1926
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37337385"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42464655"
 ---
 # <a name="cframewnd-class"></a>Klasa CFrameWnd
 Oferuje funkcje Windows interfejsu pojedynczego dokumentu (SDI) nachodzącego lub wyskakującego ramki okna, wraz z elementami członkowskimi do zarządzania oknem.  
@@ -1010,7 +1010,7 @@ virtual void SetMenuBarVisibility(DWORD nStyle);
 ### <a name="remarks"></a>Uwagi  
  Jeśli wartość *nStyle* parametr jest nieprawidłowy, ta metoda potwierdzenia w trybie debugowania i zgłasza [CInvalidArgException](../../mfc/reference/cinvalidargexception-class.md) w trybie wydania. W przypadku innych błędów środowiska uruchomieniowego, ta metoda potwierdzenia w trybie debugowania i zgłasza wyjątek pochodzi od [CException](../../mfc/reference/cexception-class.md) klasy.  
   
- Ta metoda ma wpływ na stan menu w aplikacji napisanych dla [!INCLUDE[windowsver](../../build/reference/includes/windowsver_md.md)] i nowszych.  
+ Ta metoda ma wpływ na stan menu w aplikacji napisanych dla Windows Vista i nowszych.  
   
 ##  <a name="setmessagetext"></a>  CFrameWnd::SetMessageText  
  Wywołaj tę funkcję, aby umieścić ciąg w okienku paska stanu, który ma identyfikator równy 0.  

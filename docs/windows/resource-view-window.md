@@ -18,35 +18,38 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 8b936b1014c2dd6640f64ca929628f6f0a74dc79
-ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
+ms.openlocfilehash: b941013e2acfcee7a0f6fec16410ae7e200e56e0
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/09/2018
-ms.locfileid: "40012332"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42578657"
 ---
 # <a name="resource-view-window"></a>Okno Widok zasobów
+
 > [!NOTE]
->  Nie są obsługiwane w wersjach Express.  
-  
- Widok zasobów wyświetla pliki zasobów zawarte w swoich projektach. Rozwijanie folderu najwyższego poziomu (na przykład Project1.rc) zawiera typy zasobów, w tym pliku .rc. Rozwijanie każdego typu zasobu zawiera poszczególne zasoby tego typu.  
-  
+> Nie są obsługiwane w wersjach Express.
+
+Widok zasobów wyświetla pliki zasobów zawarte w swoich projektach. Rozwijanie folderu najwyższego poziomu (na przykład Project1.rc) zawiera typy zasobów, w tym pliku .rc. Rozwijanie każdego typu zasobu zawiera poszczególne zasoby tego typu.
+
 > [!NOTE]
->  Jeśli projekt nie zawiera jeszcze pliku .rc, zobacz [tworzenia nowego pliku skryptu zasobów](../windows/how-to-create-a-resource-script-file.md).  
-  
+> Jeśli projekt nie zawiera jeszcze pliku .rc, zobacz [tworzenia nowego pliku skryptu zasobów](../windows/how-to-create-a-resource-script-file.md).
+
 > [!TIP]
->  Kliknięciu prawym przyciskiem myszy **widok zasobów** okna do uruchomienia poleceń menu skrótów. Możesz także dwukrotnie kliknąć na pasku tytułu, aby zadokować lub oddokować okno. Kliknij prawym przyciskiem myszy na pasku tytułu zapewni dodatkowe polecenia, które pozwalają na kontrolę zachowania okna. Aby uzyskać więcej informacji, zobacz [zarządzania Windows](/visualstudio/ide/customizing-window-layouts-in-visual-studio).  
-  
-### <a name="to-open-the-resource-view-window"></a>Aby otworzyć okno Widok zasobów  
-  
-1.  Kliknij przycisk **widok zasobów** na **widoku** menu.  
-  
-     \- lub —  
-  
-2.  Naciśnij klawisz **Ctrl**+**Shift**+**E**.  
-  
-## <a name="requirements"></a>Wymagania  
- Win32  
-  
-## <a name="see-also"></a>Zobacz też  
- [Praca z plikami zasobów](../windows/working-with-resource-files.md)
+> Kliknięciu prawym przyciskiem myszy **widok zasobów** okna do uruchomienia poleceń menu skrótów. Możesz także dwukrotnie kliknąć na pasku tytułu, aby zadokować lub oddokować okno. Kliknij prawym przyciskiem myszy na pasku tytułu zapewni dodatkowe polecenia, które pozwalają na kontrolę zachowania okna. Aby uzyskać więcej informacji, zobacz [zarządzania Windows](/visualstudio/ide/customizing-window-layouts-in-visual-studio).
+
+### <a name="to-open-the-resource-view-window"></a>Aby otworzyć okno Widok zasobów
+
+1. Kliknij przycisk **widok zasobów** na **widoku** menu.
+
+   \- lub —
+
+2. Naciśnij klawisz **Ctrl**+**Shift**+**E**.
+
+## <a name="requirements"></a>Wymagania
+
+Win32
+
+## <a name="see-also"></a>Zobacz też
+
+[Praca z plikami zasobów](../windows/working-with-resource-files.md)

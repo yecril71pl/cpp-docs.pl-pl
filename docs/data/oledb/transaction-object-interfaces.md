@@ -20,12 +20,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: ba98cfa4a88b695995902bdaca5e4ae3f33e5198
-ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
+ms.openlocfilehash: b2d84d9a072d3eeaa84246a6692487be5c71679c
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/30/2018
-ms.locfileid: "39339757"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42465522"
 ---
 # <a name="transaction-object-interfaces"></a>Interfejsy obiektu transakcji
 Obiekt transakcji definiuje pojedynczej Atomowej jednostki pracy w źródle danych i określa, jak te jednostki pracy odnoszą się do siebie nawzajem. Ten obiekt nie jest bezpośrednio obsługiwany przez Szablony dostawców OLE DB (oznacza to, należy utworzyć własny obiektu).  
@@ -35,8 +35,8 @@ Obiekt transakcji definiuje pojedynczej Atomowej jednostki pracy w źródle dany
 |Interface|Wymagany?|Implementowany przez Szablony OLE DB?|  
 |---------------|---------------|--------------------------------------|  
 |[IConnectionPointContainer](http://msdn.microsoft.com/library/windows/desktop/ms683857)|Obowiązkowy|Nie|  
-|[Metody ITransaction](https://msdn.microsoft.com/library/ms723053.aspx)|Obowiązkowy|Nie|  
-|[Interfejs ISupportErrorInfo](https://msdn.microsoft.com/library/ms715816.aspx)|Optional|Nie|  
+|[Metody ITransaction](/previous-versions/windows/desktop/ms723053\(v=vs.85\))|Obowiązkowy|Nie|  
+|[Interfejs ISupportErrorInfo](/previous-versions/windows/desktop/ms715816\(v=vs.85\))|Optional|Nie|  
   
 ## <a name="see-also"></a>Zobacz też  
  [Architektura szablonu dostawcy OLE DB](../../data/oledb/ole-db-provider-template-architecture.md)

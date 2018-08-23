@@ -23,34 +23,34 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b20a476e1701f58782b97f986ee6c3d4b310b566
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 76a29a7ae4734e5d1f1930d5309163d1e1519aa4
+ms.sourcegitcommit: d4c803bd3a684d7951bf88dcecf1f14af43ae411
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33846236"
+ms.lasthandoff: 08/10/2018
+ms.locfileid: "42464729"
 ---
 # <a name="pragma-directives-and-the-pragma-keyword"></a>Dyrektywy pragma i słowo kluczowe __Pragma
-Pragma — dyrektywy Określ maszyny lub operacyjnego-funkcji specyficznych dla kompilatora. `__pragma` — Słowo kluczowe, która jest specyficzna dla kompilatora firmy Microsoft, umożliwia kod dyrektywy pragma w definicjach makr.  
+Dyrektywy pragma określają funkcje kompilatora lub operacyjny specyficzny dla komputera. **__Pragma** słowo kluczowe, które są specyficzne dla kompilatora Microsoft, umożliwia kodowanie dyrektyw pragma kodu w ramach definicji makra.  
   
 ## <a name="syntax"></a>Składnia  
   
 ```  
-  
-      #pragma token-string  
+#pragma token-string  
 __pragma(token-string)  
 ```  
   
 ## <a name="remarks"></a>Uwagi  
- Każda implementacja C i C++ obsługuje niektóre funkcje, które są unikatowe dla systemu operacyjnego lub komputer hosta. Na przykład niektóre programy muszą wykonywać precyzyjną kontrolę nad obszary pamięci, którym jest umieszczany danych lub aby kontrolować sposób pewność, że parametry odbierania funkcji. `#pragma` Dyrektywy umożliwiają dla każdego kompilatora oferowanie funkcji specyficznych dla komputera i systemu operacyjnego przy zachowaniu ogólnej zgodności z języków C i C++.  
+ 
+Każda implementacja C i C++ obsługuje niektóre funkcje unikatowe dla jego komputera hosta lub systemu operacyjnego. Na przykład niektóre programy muszą wykonywać precyzyjną kontrolę nad obszarami pamięci, w których umieszczono dane lub kontrolować sposób pewność, że funkcje uzyskiwania parametrów. **#Pragma** dyrektywy oferują sposób, by każdy kompilator oferował funkcje dotyczące komputera i systemu operacyjnego przy zachowaniu ogólnej kompatybilności z językami C i C++ dla.  
   
- Dyrektywy pragma są dotyczące komputera lub systemu operacyjnego, które zgodnie z definicją i są zwykle różne dla każdego kompilatora. W instrukcji warunkowej, można Pragm nowych funkcji preprocesora lub podaj informacje zdefiniowane w implementacji, aby kompilatora.  
+Dyrektywy pragma są określonej maszyny lub systemu operacyjnego, które zgodnie z definicją i są zazwyczaj inne dla każdego kompilatora. Dyrektywy pragma może służyć w instrukcjach warunkowych, aby dostarczyć nowe funkcje preprocesora lub informacje zdefiniowane w implementacji do kompilatora.  
   
- `token-string` Jest ciąg znaków zawierający instrukcję określonych kompilatora i argumentów, jeśli istnieje. Znak liczby (**#**) musi być pierwszym znakiem z systemem innym niż biały na wiersz zawierający pragma; -białe znaki można oddzielić znak liczby i słowem "pragma". Po `#pragma`, zapisać dowolny tekst, który translator można przeanalizować jako wstępnego przetwarzania tokenów. Argument `#pragma` podlega rozwinięciu makra.  
+`token-string` Jest ciąg znaków, który zapewnia konkretną instrukcję kompilatora i argumenty, jeśli istnieje. Znak numeru (**#**) musi być pierwszym znakiem bez odstępu w wierszu, która zawiera dyrektywę; białe znaki można rozdzielić znakiem liczby i słowo "dyrektywa". Następujące **#pragma**, wpisz dowolny tekst, który translator można analizować jako przetworzone wstępnie tokeny. Argument **#pragma** podlega rozwinięciu makra.  
   
- Jeśli kompilator znajdzie pragma, która nie rozpoznaje, ostrzeżenie i kontynuuje kompilacji.  
+Jeśli kompilator znajdzie pragmę, której nie rozpoznaje, generuje ostrzeżenie i kontynuuje kompilację.  
   
- Kompilatory języka Microsoft C i C++ rozpoznaje następujących pragm:  
+Kompilatory Microsoft C i C++ rozpoznają następujące pragmy:  
   
 ||||  
 |-|-|-|  
@@ -59,7 +59,7 @@ __pragma(token-string)
 |[składnik](../preprocessor/component.md)|[jest zgodna z](../preprocessor/conform.md) <sup>1</sup>|[const_seg](../preprocessor/const-seg.md)|  
 |[data_seg](../preprocessor/data-seg.md)|[deprecated](../preprocessor/deprecated-c-cpp.md)|[detect_mismatch](../preprocessor/detect-mismatch.md)|  
 |[fenv_access](../preprocessor/fenv-access.md)|[float_control](../preprocessor/float-control.md)|[fp_contract](../preprocessor/fp-contract.md)|  
-|[Funkcja](../preprocessor/function-c-cpp.md)|[hdrstop](../preprocessor/hdrstop.md)|[include_alias](../preprocessor/include-alias.md)|  
+|[— Funkcja](../preprocessor/function-c-cpp.md)|[hdrstop](../preprocessor/hdrstop.md)|[include_alias](../preprocessor/include-alias.md)|  
 |[init_seg](../preprocessor/init-seg.md) <sup>1</sup>|[inline_depth](../preprocessor/inline-depth.md)|[inline_recursion](../preprocessor/inline-recursion.md)|  
 |[intrinsic](../preprocessor/intrinsic.md)|[pętla](../preprocessor/loop.md) <sup>1</sup>|[make_public](../preprocessor/make-public.md)|  
 |[Zarządzane](../preprocessor/managed-unmanaged.md)|[komunikat](../preprocessor/message.md)||  
@@ -72,8 +72,9 @@ __pragma(token-string)
   
  1. Obsługiwane tylko przez kompilator języka C++.  
   
-## <a name="pragmas-and-compiler-options"></a>Dyrektywy pragma i opcje kompilatora  
- Niektóre dyrektywy pragma zawierają te same funkcje co opcje kompilatora. W przypadku pragma w kodzie źródłowym przesłania zachowanie określonego przez opcję kompilatora. Na przykład, jeśli określono [/Zp8](../build/reference/zp-struct-member-alignment.md), można zastąpić to ustawienie kompilatora określonych sekcji kodu z [pakietu](../preprocessor/pack.md):  
+## <a name="pragmas-and-compiler-options"></a>Opcje kompilatora i dyrektyw pragma  
+ 
+Niektóre informacje pragmatyczne zapewniają taką samą funkcjonalność jak opcje kompilatora. Gdy pragmę w kodzie źródłowym, zastępuje ona zachowanie określone przez opcję kompilatora. Na przykład, jeśli określono [/zp8](../build/reference/zp-struct-member-alignment.md), można zastąpić to ustawienie kompilatora dla poszczególnych sekcji kodu za pomocą [pakiet](../preprocessor/pack.md):  
   
 ```  
 cl /Zp8 ...  
@@ -86,12 +87,13 @@ cl /Zp8 ...
 </file>  
 ```  
   
-## <a name="the-pragma-keyword"></a>__Pragma() — słowo kluczowe  
- **Microsoft specific**  
+## <a name="the-pragma-keyword"></a>Słowo kluczowe __pragma()  
+ 
+**Microsoft specific**  
   
- Kompilator obsługuje również `__pragma` — słowo kluczowe, który ma te same funkcje jako `#pragma` dyrektywy, ale mogą być używane wbudowane w definicji makra. `#pragma` Nie można użyć dyrektywy w definicji makra, ponieważ kompilator interpretuje numer znak (#) w dyrektywie jako [operator tworzenia ciągów (#)](../preprocessor/stringizing-operator-hash.md).  
+Kompilator obsługuje również **__pragma** słowo kluczowe, które ma taką samą funkcjonalność jako **#pragma** dyrektywy, ale mogą być używane jako wbudowane w definicję makra. **#Pragma** dyrektywy nie można używać w definicji makra, ponieważ kompilator zinterpretuje znak numeru (#) w dyrektywie jako [operator tworzenia ciągu (#)](../preprocessor/stringizing-operator-hash.md).  
   
- Poniższy przykład kodu pokazuje sposób `__pragma` — słowo kluczowe może być używana w makrze. Ten kod jest fragmentem książki nagłówek mfcdual.h acdual — przykład w "Przykłady obsługi modelu COM kompilatora":  
+Poniższy przykład kodu demonstruje sposób, w jaki **__pragma** — słowo kluczowe może być używana w makrze. Ten kod jest wyszczególniony z nagłówka mfcdual.h w przykładzie acdual w "Przykładach obsługi kompilatora COM":  
   
 ```  
 #define CATCH_ALL_DUAL \  
@@ -111,9 +113,10 @@ END_CATCH_ALL \
 return _hr; \  
 ```  
   
- **Microsoft zakończenia określonych**  
+**Koniec specyficzne dla firmy Microsoft**  
   
 ## <a name="see-also"></a>Zobacz też  
- [Odwołania preprocesora C/C++](../preprocessor/c-cpp-preprocessor-reference.md)   
- [Pragma C](../c-language/c-pragmas.md)   
- [Słowa kluczowe](../cpp/keywords-cpp.md)
+ 
+[Dokumentacja preprocesora języka C/C++](../preprocessor/c-cpp-preprocessor-reference.md)   
+[Dyrektywy pragma C](../c-language/c-pragmas.md)   
+[Słowa kluczowe](../cpp/keywords-cpp.md)

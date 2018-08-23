@@ -16,17 +16,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9d651546733f42b1a714ac7a39992fa2d392c8fa
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 1ec0150e63209728cf2f02c854fe03702b8a45b4
+ms.sourcegitcommit: d4c803bd3a684d7951bf88dcecf1f14af43ae411
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33839871"
+ms.lasthandoff: 08/10/2018
+ms.locfileid: "42464828"
 ---
 # <a name="tlbid"></a>tlbid
-**Określonego języka C++**  
+**Określonego język C++**  
   
- Umożliwia ładowanie biblioteki innego niż biblioteki typu podstawowego.  
+Umożliwia ładowanie bibliotek innych niż biblioteki typu podstawowego.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -34,27 +34,29 @@ ms.locfileid: "33839871"
 tlbid(number)  
 ```  
   
-#### <a name="parameters"></a>Parametry  
- `number`  
- Liczba bibliotekę typów w `filename`.  
+### <a name="parameters"></a>Parametry  
+*Numer*  
+Liczba bibliotekę typów w `filename`.  
   
 ## <a name="remarks"></a>Uwagi  
- Jeśli wiele biblioteki typów są wbudowane w jednej biblioteki DLL, jej możliwość ładowania bibliotek innych niż biblioteki typu podstawowego przy użyciu `tlbid`.  
+ 
+Jeśli wiele bibliotek typów są wbudowane w pojedynczego pliku DLL, możliwe do załadowania biblioteki inne niż biblioteki typu podstawowego, za pomocą **tlbid**.  
   
- Na przykład:  
+Na przykład:  
   
 ```  
 #import <MyResource.dll> tlbid(2)  
 ```  
   
- odpowiada to:  
+jest równoważne:  
   
 ```  
 LoadTypeLib("MyResource.dll\\2");  
 ```  
   
- **KOŃCOWY określonego języka C++**  
+**KONIEC określonego języka C++**  
   
 ## <a name="see-also"></a>Zobacz też  
- [atrybuty #import](../preprocessor/hash-import-attributes-cpp.md)   
- [#import — dyrektywa](../preprocessor/hash-import-directive-cpp.md)
+ 
+[atrybuty #import](../preprocessor/hash-import-attributes-cpp.md)   
+[#import — dyrektywa](../preprocessor/hash-import-directive-cpp.md)

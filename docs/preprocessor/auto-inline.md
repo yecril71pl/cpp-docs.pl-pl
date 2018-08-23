@@ -18,12 +18,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: de012a31fe68c68d4e64df2d3fa10b44d9112735
-ms.sourcegitcommit: 96cdc2da0d8c3783cc2ce03bd280a5430e1ac01d
+ms.openlocfilehash: dc1b8a3b8539fb4871e4a28f4635c8012b9f80a2
+ms.sourcegitcommit: d4c803bd3a684d7951bf88dcecf1f14af43ae411
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "33954024"
+ms.lasthandoff: 08/10/2018
+ms.locfileid: "42464732"
 ---
 # <a name="autoinline"></a>auto_inline
 Nie obejmuje wszystkie funkcje zdefiniowane w zakresie gdzie **poza** jest określony jako jako kandydatów do automatycznego rozwinięcia funkcji wbudowanej.  
@@ -31,12 +31,13 @@ Nie obejmuje wszystkie funkcje zdefiniowane w zakresie gdzie **poza** jest okre�
 ## <a name="syntax"></a>Składnia  
   
 ```  
-  
 #pragma auto_inline( [{on | off}] )  
 ```  
   
 ## <a name="remarks"></a>Uwagi  
- Aby użyć **auto_inline** pragma, umieść go przed i natychmiast po (nie w) definicji funkcji. Pragma działa na pierwszym definicji funkcji po pragma jest widoczna.  
+
+Aby użyć **auto_inline** pragma, umieść go przed i natychmiast po (nie w) definicji funkcji. Pragmy staje się skuteczny w pierwszej definicji funkcji po pragmy jest widoczny.  
   
-## <a name="see-also"></a>Zobacz też  
- [Dyrektywy pragma i słowo kluczowe __Pragma](../preprocessor/pragma-directives-and-the-pragma-keyword.md)
+## <a name="see-also"></a>Zobacz też
+
+[Dyrektywy pragma i słowo kluczowe __Pragma](../preprocessor/pragma-directives-and-the-pragma-keyword.md)

@@ -18,17 +18,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0d890afe9e19782f19442e8d95709b91a8680278
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: a98f1e84f3ef09d3cef5d45028374b93887fc6d4
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33329806"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42465144"
 ---
 # <a name="rdtscp"></a>__rdtscp
 **Microsoft Specific**  
   
- Generuje `rdtscp` instrukcji, zapisuje `TSC_AUX[31:0`] pamięci i zwraca licznika sygnatury czasu 64-bitowych (`TSC)` wynik.  
+ Generuje `rdtscp` instrukcji, zapisuje `TSC_AUX[31:0`] do pamięci i zwraca licznika sygnatury czasu 64-bitowych (`TSC)` wynik.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -40,28 +40,28 @@ unsigned __int64 __rdtscp(
   
 #### <a name="parameters"></a>Parametry  
  [out] `Aux`  
- Wskaźnik do lokalizacji, która będzie zawierać zawartość rejestru dotyczące komputera `TSC_AUX[31:0]`.  
+ Wskaźnik do lokalizacji, która będzie zawierać zawartość rejestru specyficzny dla komputera `TSC_AUX[31:0]`.  
   
 ## <a name="return-value"></a>Wartość zwracana  
- Liczba cykli 64-bitowej liczby całkowitej bez znaku.  
+ Liczba cykli 64-bitowej nieoznaczonej liczby całkowitej.  
   
 ## <a name="requirements"></a>Wymagania  
   
-|— Wewnętrzne|Architektura|  
+|Wewnętrzne|Architektura|  
 |---------------|------------------|  
 |`__rdtscp`|0Fh rodziny NPT AMD lub nowszy|  
   
- **Plik nagłówka** \<intrin.h >  
+ **Plik nagłówkowy** \<intrin.h >  
   
 ## <a name="remarks"></a>Uwagi  
- Generuje tym wewnętrzna `rdtscp` instrukcji. Aby określić obsługi sprzętowej w tej instrukcji, należy wywołać `__cpuid` wewnętrzne z `InfoType=0x80000001` i sprawdź bit 27 `CPUInfo[3] (EDX)`. Ten bit jest 1, jeśli instrukcja jest obsługiwana i 0, w przeciwnym razie wartość.  Jeśli możesz uruchomić kodu korzystającego z tym wewnętrzna na sprzęcie, który nie obsługuje `rdtscp` instrukcji są nieprzewidywalne wyniki.  
+ Generuje tym wewnętrzne `rdtscp` instrukcji. Aby ustalić, pomoc techniczna dotycząca sprzętu dla tej instrukcji, należy wywołać `__cpuid` wewnętrzne z `InfoType=0x80000001` i sprawdź bit 27 `CPUInfo[3] (EDX)`. Ten bit jest 1, jeśli instrukcja jest obsługiwana lub 0.  Jeśli możesz uruchomić kod, który korzysta z tym wewnętrzne na sprzęcie, który nie obsługuje `rdtscp` instrukcji, wyniki są nieprzewidywalne.  
   
 > [!CAUTION]
->  W przeciwieństwie do `rdtsc`, `rdtscp` to instrukcja serializacji; Niemniej jednak kompilator można przenieść kod obejścia tego problemu wewnętrznej.  
+>  W odróżnieniu od `rdtsc`, `rdtscp` to instrukcja serializacji; Niemniej jednak kompilator można przenieść kod obejścia tego problemu wewnętrzne.  
   
- Interpretacja wartość TSC w tym pokoleniu sprzętu jest inna niż w starszych wersjach [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)].  Zobacz instrukcje sprzętu, aby uzyskać więcej informacji.  
+ Interpretacja wartości TSC w tej generacji sprzętowy różni się od we wcześniejszych wersjach programu x64.  Zobacz instrukcje sprzętu, aby uzyskać więcej informacji.  
   
- Znaczenie tej wartości w `TSC_AUX[31:0]` zależy od systemu operacyjnego.  
+ Znaczenie wartość `TSC_AUX[31:0]` zależy od systemu operacyjnego.  
   
 ## <a name="example"></a>Przykład  
   
@@ -83,8 +83,8 @@ int main()
 TSC_AUX was 0  
 ```  
   
-**KOŃCOWY określonych firmy Microsoft**  
- Copyright 2007 zaawansowane Micro urządzeń, Inc. Wszelkie prawa zastrzeżone. Odtworzyć z uprawnieniem z zaawansowanymi Micro urządzeń, Inc.  
+**END specyficzny dla Microsoft**  
+ Copyright 2007 zaawansowane Micro urządzeń, Inc. Wszelkie prawa zastrzeżone. Odtworzyć zgoda zaawansowane Micro urządzeń, Inc.  
   
 ## <a name="see-also"></a>Zobacz też  
  [__rdtsc](../intrinsics/rdtsc.md)   

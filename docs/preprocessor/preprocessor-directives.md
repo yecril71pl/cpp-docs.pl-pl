@@ -15,20 +15,20 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a5621c1a338ea6870d15dca65c303d4ac2bf8c7a
-ms.sourcegitcommit: 208d445fd7ea202de1d372d3f468e784e77bd666
+ms.openlocfilehash: dc392454a6c5b152411fe8f6a7d0c12457389794
+ms.sourcegitcommit: d4c803bd3a684d7951bf88dcecf1f14af43ae411
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/29/2018
-ms.locfileid: "37122598"
+ms.lasthandoff: 08/10/2018
+ms.locfileid: "42466126"
 ---
 # <a name="preprocessor-directives"></a>Dyrektywy preprocesora
 
-Dyrektywy preprocesora, takich jak `#define` i **#ifdef**, zwykle służą do programy źródłowe łatwo zmienić i łatwa do kompilacji w środowiskach różnych wykonywania. Dyrektywy w pliku źródłowym Poinformuj preprocesora do wykonywania określonych akcji. Na przykład preprocesora można zastąpić tokenów w tekście, Wstaw zawartość innych plików do pliku źródłowego lub pominąć kompilacji części pliku przez usunięcie fragmentów tekstu. Rozpoznany i przeprowadzić przed rozwinięciu makra preprocesora wierszy. W związku z tym jeśli makra rozwija na rzecz, która wygląda jak polecenie preprocesora, to polecenie nie jest rozpoznawany przez preprocesora.
+Dyrektywy preprocesora, takich jak `#define` i `#ifdef`, są zazwyczaj używane do ułatwienia wprowadzania programach źródłowych zmian oraz prowadzenia łatwej kompilacji w różnych środowiskach wykonawczych. Dyrektywy w pliku źródłowym każą preprocesorowi wykonać określone czynności. Na przykład preprocesor można zamienić tokeny w tekście, wstawić zawartość innych plików do pliku źródłowego lub pomijanie kompilacji części pliku poprzez usunięcie fragmentów tekstu. Linie preprocesora są rozpoznawane i przeprowadzane przed rozwinięciem makra. W związku z tym Jeżeli makro rozszerzy się na coś, co przypomina polecenie preprocesora, to polecenie nie jest rozpoznawane przez preprocesor.
 
-Instrukcje preprocesora używać tego samego znaku Ustaw jako instrukcje pliku źródłowego, z wyjątkiem sekwencji ucieczki nie są obsługiwane. Zestaw znaków używany w instrukcjach preprocesora jest taka sama jak [zestaw znaków wykonania](http://msdn.microsoft.com/en-us/a7901c61-524d-47c6-beb6-d9dacc2e72ed). Preprocesora również rozpoznaje wartości ujemnej znaków.
+Instrukcje preprocesora używają ten sam zestaw znaków jak instrukcje pliku źródłowego, z wyjątkiem, że sekwencje ucieczki nie są obsługiwane. Zestaw znaków używanych w instrukcjach preprocesora jest taki sam jak [zestaw znaków wykonania](http://msdn.microsoft.com/a7901c61-524d-47c6-beb6-d9dacc2e72ed). Preprocesor rozpoznaje również ujemne wartości.
 
-Preprocesora rozpoznaje następujące dyrektywy:
+Preprocesor rozpoznaje poniższe dyrektywy:
 
 |||||
 |-|-|-|-|
@@ -37,9 +37,9 @@ Preprocesora rozpoznaje następujące dyrektywy:
 |[#else](../preprocessor/hash-if-hash-elif-hash-else-and-hash-endif-directives-c-cpp.md)|[#ifdef](../preprocessor/hash-ifdef-and-hash-ifndef-directives-c-cpp.md)|[#line](../preprocessor/hash-line-directive-c-cpp.md)|[#endif](../preprocessor/hash-if-hash-elif-hash-else-and-hash-endif-directives-c-cpp.md)|
 |[#ifndef](../preprocessor/hash-ifdef-and-hash-ifndef-directives-c-cpp.md)|[#pragma](../preprocessor/pragma-directives-and-the-pragma-keyword.md)|||
 
-Znak liczby (**#**) musi być pierwszym znakiem niebiałym znakiem w wierszu zawierających dyrektywy; między znak liczby i pierwszą literę dyrektywy może występować białe znaki. Niektóre dyrektywy obejmują argumentów lub wartości. Tekst, który wykonuje dyrektywy (z wyjątkiem argument lub wartość, która jest częścią dyrektywy) musi być poprzedzona ogranicznik jednowierszowego komentarza (**//**) lub w ograniczników do komentarzy ( __/ \*\*/__).   Wierszy zawierających dyrektywy preprocesora może być kontynuowane przez bezpośrednio przed znakiem kreski ułamkowej odwróconej znacznika końca wiersza (**\\**).
+Znak numeru (**#**) musi być pierwszym niebiałym znakiem w wierszu zawierającym dyrektywę; białe znaki mogą występować między znakiem liczby i pierwszą literą dyrektywy. Niektóre dyrektywy zawierają argumenty lub wartości. Dowolny tekst, który następuje po dyrektywie (chyba że argument lub wartość, która jest częścią dyrektywy) musi być poprzedzona ogranicznikiem komentaraz jednowierszowego (**//**) lub ujęta w ograniczniki komentarza ( __/ \*\*/__).   Wiersze zawierające dyrektywy preprocesora mogą być kontynuowane, bezpośrednio poprzedzających znacznika końca wiersza znakiem kreski ułamkowej odwróconej (**\\**).
 
-Dyrektywy preprocesora może występować w dowolnym miejscu w pliku źródłowym, ale mają one zastosowanie tylko do pozostałej części pliku źródłowego.
+Dyrektywy preprocesora mogą występować w dowolnym miejscu w pliku źródłowym, ale mają zastosowanie tylko do pozostałej części pliku źródłowego.
 
 ## <a name="see-also"></a>Zobacz także
 

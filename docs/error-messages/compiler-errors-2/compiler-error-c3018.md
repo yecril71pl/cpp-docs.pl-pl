@@ -1,5 +1,5 @@
 ---
-title: C3018 błąd kompilatora | Dokumentacja firmy Microsoft
+title: Błąd kompilatora C3018 | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,19 +16,19 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 71695816672fa0f806accc32ac4f5a373557bdd9
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 54436aab9ebb7821e33037bc7ec14a43aa20dda8
+ms.sourcegitcommit: e9ce38decc9f986edab5543de3464b11ebccb123
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33254336"
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "42464532"
 ---
-# <a name="compiler-error-c3018"></a>C3018 błąd kompilatora
-"var1": OpenMP — zmienna var2 indeksu "for" testu lub inkrementacja musi używać  
+# <a name="compiler-error-c3018"></a>Błąd kompilatora C3018
+"var1": OpenMP "for" testu lub inkrementacja musi użyć zmiennej var2 indeksu  
   
- A `for` pętli w instrukcji OpenMP muszą używać tej samej zmiennej testu i przyrostu, jak używa jej indeks.  
+ A `for` pętli w instrukcji OpenMP — należy użyć tę samą zmienną na potrzeby jego przyrost i testowania, ponieważ używa ona jego indeksu.  
   
- Poniższy przykład generuje C3018:  
+ Poniższy przykład spowoduje wygenerowanie C3018:  
   
 ```  
 // C3018.cpp  
@@ -41,13 +41,13 @@ int main()
    {  
       #pragma omp for  
       for (i = 0; j < 10; ++i)   // C3018  
-      // try the the following line instead  
+      // try the following line instead  
       // for (i = 0; i < 10; ++i)  
          j *= 2;  
   
       #pragma omp for  
       for (i = 0; i < 10; j = j + i)   // C3018  
-      // try the the following line instead  
+      // try the following line instead  
       // for (i = 0; i < 10; i = j + i)  
          j *= 2;  
    }  

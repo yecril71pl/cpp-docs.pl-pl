@@ -20,17 +20,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ddc98119f6174f299b8de72383610aac72032d42
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: b6e9e7ee594f2587334d93173daa147d81dcebb2
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33331038"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42464491"
 ---
 # <a name="emul-emulu"></a>__emul, __emulu
 **Microsoft Specific**  
   
- Wykonuje mnożenia, które przepełnienia, co może przechowywać 32-bitową liczbę całkowitą.  
+ Wykonuje mnożenia, które przepełnienia, co może zawierać 32-bitową liczbę całkowitą.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -47,27 +47,27 @@ unsigned __int64 __emulu(
   
 #### <a name="parameters"></a>Parametry  
  [in] `a`  
- Pierwszym argumentem liczby całkowitej mnożenia.  
+ Pierwszy operand całkowitą mnożenia.  
   
  [in] `b`  
- Drugi operand całkowitą mnożenia.  
+ Drugi argument liczby całkowitej mnożenia.  
   
 ## <a name="return-value"></a>Wartość zwracana  
  Wynik mnożenia.  
   
 ## <a name="requirements"></a>Wymagania  
   
-|— Wewnętrzne|Architektura|  
+|Wewnętrzne|Architektura|  
 |---------------|------------------|  
-|`__emul`|x86, [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
-|`__emulu`|x86, [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
+|`__emul`|x86, x64|  
+|`__emulu`|x86, x64|  
   
- **Plik nagłówka** \<intrin.h >  
+ **Plik nagłówkowy** \<intrin.h >  
   
 ## <a name="remarks"></a>Uwagi  
- `__emul` przyjmuje dwie wartości podpisem 32-bitowe i zwraca wynik mnożenia jako wartość 64-bitowej liczby całkowitej ze znakiem.  
+ `__emul` przyjmuje dwie wartości podpisem 32-bitowe i zwraca wynik mnożenia jako wartość 64-bitową.  
   
- `__emulu` przyjmuje dwie wartości 32-bitowej liczby całkowitej bez znaku i zwraca wynik mnożenia jako wartość 64-bitowej liczby całkowitej bez znaku.  
+ `__emulu` przyjmuje dwie wartości 32-bitowej nieoznaczonej liczby całkowitej i zwraca wynik mnożenia jako wartość 64-bitowej nieoznaczonej liczby całkowitej.  
   
 ## <a name="example"></a>Przykład  
   
@@ -108,7 +108,7 @@ int main()
 4294967295 * 251658240 = 1080863910317260800  
 ```  
   
-**KOŃCOWY określonych firmy Microsoft**  
+**END specyficzny dla Microsoft**  
   
 ## <a name="see-also"></a>Zobacz też  
  [Funkcje wewnętrzne kompilatora](../intrinsics/compiler-intrinsics.md)

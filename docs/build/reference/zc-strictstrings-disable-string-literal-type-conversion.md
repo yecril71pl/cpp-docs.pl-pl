@@ -21,16 +21,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7025a4bae2d4a7474cb366b041a3c62f3d7db819
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 5055d7d1e7804512fa8f1a72bbdb27c483d6fdd3
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32379942"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42581142"
 ---
 # <a name="zcstrictstrings-disable-string-literal-type-conversion"></a>/Zc:strictStrings (Wyłączanie konwersji typów literału ciągu)
 
-W przypadku kompilator wymaga strict `const`— zgodność kwalifikacji dla wskaźników zainicjowany przy użyciu literałów ciągów.
+Jeśli zostanie określony, kompilator wymaga ścisłej `const`-zgodności dla wskaźników, zainicjowanej za pomocą literałów ciągów znaków.
 
 ## <a name="syntax"></a>Składnia
 
@@ -38,11 +38,11 @@ W przypadku kompilator wymaga strict `const`— zgodność kwalifikacji dla wska
 
 ## <a name="remarks"></a>Uwagi
 
-Jeśli **/Zc: strictstrings** określono kompilator wymusza standardu C++ `const` kwalifikacji literałów ciągów jako typ "tablicę `const char`" lub "tablicę `const wchar_t`", w zależności od deklaracji. Literały ciągu są niezmienne i zmodyfikować zawartość jednej powoduje błąd naruszenia zasad dostępu w czasie wykonywania. Należy zadeklarować wskaźnika ciągu jako `const` Zainicjuj go za pomocą literału ciągu lub użyj jawnej `const_cast` zainicjować niż`const` wskaźnika. Domyślnie lub jeśli **/Zc:strictStrings-** określono kompilator nie Wymuszaj standard C++ `const` kwalifikacje dla wskaźników ciąg zainicjowany przy użyciu literałów ciągów.
+Jeśli **/Zc: strictstrings** jest określony, kompilator wymusza standardowe C++ `const` wymagania kwalifikacyjne literałów ciągów jako typ "tablica `const char`" lub "tablica `const wchar_t`", w zależności od deklaracji. Literały ciągów są niezmienne i próba zmodyfikowania zawartości jednego powoduje błąd naruszenia zasad dostępu w czasie wykonywania. Musisz zadeklarować wskaźnik ciągu jako `const` go zainicjować za pomocą literału ciągu lub użyć jawnego `const_cast` zainicjować innej niż`const` wskaźnika. Domyślnie lub jeśli **/Zc:strictStrings-** jest określony, kompilator nie Wymuszaj standard C++ `const` kwalifikacje dla wskaźników ciągu zainicjowanych za pomocą literałów ciągów znaków.
 
-**/Zc: strictstrings** opcja jest domyślnie wyłączona. [/ Ograniczająca-](permissive-standards-conformance.md) — opcja kompilatora niejawnie ustawia tę opcję, ale może być zastąpiona przy użyciu **/Zc:strictStrings-**.
+**/Zc: strictstrings** opcja jest domyślnie wyłączona. [/ Permissive-](permissive-standards-conformance.md) — opcja kompilatora niejawnie ustawia tę opcję, ale może być zastąpiona przy użyciu **/Zc:strictStrings-**.
 
-Użyj **/Zc: strictstrings** opcję, aby uniemożliwić kompilacji niepoprawny kod. Ten przykład przedstawia, jak błąd proste deklaracji prowadzi do awarii w czasie wykonywania:
+Użyj **/Zc: strictstrings** opcję, aby uniemożliwić kompilacji niepoprawnego kodu. Ten przykład pokazuje, jak prosty błąd w deklaracji prowadzi do awarii w czasie wykonywania:
 
 ```cpp
 // strictStrings_off.cpp
@@ -65,20 +65,20 @@ int main() {
 }
 ```
 
-Jeśli używasz `auto` zadeklarować wskaźnika ciągu, kompilator tworzy poprawny `const` deklaracji typu wskaźnik dla Ciebie. Podjęto próbę zmodyfikowania zawartości `const` wskaźnik został zgłoszony przez kompilatora jako błąd.
+Jeśli używasz `auto` Aby zadeklarować wskaźnik ciągu, kompilator tworzy poprawną `const` deklarację typu wskaźnika dla Ciebie. Podjęto próbę zmodyfikowania zawartości `const` wskaźnik jest zgłaszana przez kompilator jako błąd.
 
 > [!NOTE]
-> Standardowa biblioteka C++ w [!INCLUDE[cpp_dev12_long](../../build/reference/includes/cpp_dev12_long_md.md)] nie obsługuje **/Zc: strictstrings** kompilacje — opcja kompilatora podczas debugowania. Jeśli widzisz kilka [C2665](../../error-messages/compiler-errors-2/compiler-error-c2665.md) output błędy w kompilacji, może to być przyczyną.
+> Standardowa biblioteka C++ w programie Visual Studio 2013 nie obsługuje **/Zc: strictstrings** kompilacji — opcja kompilatora podczas debugowania. Jeśli widzisz kilka [C2665](../../error-messages/compiler-errors-2/compiler-error-c2665.md) dane wyjściowe błędów w kompilacji, może to być przyczyną.
 
-Aby uzyskać więcej informacji na temat problemów zgodności w programie Visual C++, zobacz [niestandardowe zachowanie](../../cpp/nonstandard-behavior.md).
+Aby uzyskać więcej informacji na temat problemów ze zgodnością w języku Visual C++, zobacz [niestandardowe zachowanie](../../cpp/nonstandard-behavior.md).
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Aby ustawić tę opcję kompilatora w środowisku programowania Visual Studio
 
-1. Otwórz projekt **strony właściwości** okno dialogowe. Aby uzyskać więcej informacji, zobacz [Praca z właściwościami projektu](../../ide/working-with-project-properties.md).
+1. Otwórz projekt **stron właściwości** okno dialogowe. Aby uzyskać więcej informacji, zobacz [Praca z właściwościami projektu](../../ide/working-with-project-properties.md).
 
-1. Wybierz **właściwości konfiguracji** > **C/C++** > **wiersza polecenia** strony właściwości.
+1. Wybierz **właściwości konfiguracji** > **C/C++** > **wiersza polecenia** stronę właściwości.
 
-1. Modyfikowanie **dodatkowe opcje** właściwości, aby uwzględnić **/Zc: strictstrings** , a następnie wybierz **OK**.
+1. Modyfikowanie **dodatkowe opcje** właściwości do uwzględnienia **/Zc: strictstrings** , a następnie wybierz **OK**.
 
 ## <a name="see-also"></a>Zobacz także
 

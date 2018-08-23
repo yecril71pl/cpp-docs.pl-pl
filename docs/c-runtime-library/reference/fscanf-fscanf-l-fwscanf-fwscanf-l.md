@@ -50,16 +50,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 72ed322c78723826615e1264642eb53f6f9eb14d
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 825a63b38f443ce770739fe614ab6a4a44b8de39
+ms.sourcegitcommit: e9ce38decc9f986edab5543de3464b11ebccb123
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32404077"
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "42466340"
 ---
 # <a name="fscanf-fscanfl-fwscanf-fwscanfl"></a>fscanf, _fscanf_l, fwscanf, _fwscanf_l
 
-Odczyt sformatowanych danych ze strumienia. Bezpieczniejsza wersje te funkcje są dostępne; zobacz [fscanf_s —, _fscanf_s_l —, fwscanf_s —, _fwscanf_s_l —](fscanf-s-fscanf-s-l-fwscanf-s-fwscanf-s-l.md).
+Odczyt sformatowanych danych ze strumienia. Bardziej bezpieczne wersje tych funkcji są dostępne; zobacz [fscanf_s —, _fscanf_s_l —, fwscanf_s —, _fwscanf_s_l —](fscanf-s-fscanf-s-l-fwscanf-s-fwscanf-s-l.md).
 
 ## <a name="syntax"></a>Składnia
 
@@ -90,7 +90,7 @@ int _fwscanf_l(
 
 ### <a name="parameters"></a>Parametry
 
-*Strumień*<br/>
+*Stream*<br/>
 Wskaźnik do **pliku** struktury.
 
 *Format*<br/>
@@ -104,26 +104,26 @@ Ustawienia regionalne do użycia.
 
 ## <a name="return-value"></a>Wartość zwracana
 
-Każda z tych funkcji zwraca liczbę pól pomyślnie przekonwertowany i przypisane; wartość zwrotna nie zawiera pola, które zostały do odczytu, ale nie są przypisane. Wartość zwracana 0 wskazuje, że nie ma pól zostały przypisane. Jeśli wystąpi błąd, lub czy osiągnięto koniec strumienia pliku przed pierwszym konwersji, jest zwracana wartość **EOF** dla **fscanf —** i **fwscanf —**.
+Każda z tych funkcji zwraca liczbę pól pomyślnie przekonwertowanych i przypisanych; zwracana wartość nie uwzględnia pól, które zostały odczytane, ale nie przypisane. Zwracana wartość wynosząca 0 wskazuje, że nie przydzielono żadnych pól. Jeśli wystąpi błąd lub jeśli osiągnięto koniec strumienia pliku przed dokonaniem pierwszej konwersji, zwracana jest wartość **EOF** dla **fscanf —** i **fwscanf —**.
 
-Te funkcje walidację ich parametrów. Jeśli *strumienia* lub *format* wskaźnika o wartości null, jest program obsługi nieprawidłowych parametrów zostanie wywołany, zgodnie z opisem w [sprawdzanie poprawności parametru](../../c-runtime-library/parameter-validation.md). Jeśli jest dozwolone wykonywanie, aby kontynuować, te funkcje zwracają **EOF** i ustaw **errno** do **einval —**.
+Te funkcje sprawdzają poprawność swoich parametrów. Jeśli *strumienia* lub *format* jest pustym wskaźnikiem, procedura obsługi nieprawidłowego parametru zostanie wywołana, zgodnie z opisem w [Parameter Validation](../../c-runtime-library/parameter-validation.md). Jeśli wykonanie może być kontynuowane, te funkcje zwracają **EOF** i ustaw **errno** do **EINVAL**.
 
 ## <a name="remarks"></a>Uwagi
 
-**Fscanf —** funkcja odczytuje dane z bieżącej pozycji *strumienia* do lokalizacji podanej przez *argument* (jeśli istnieje). Każdy *argument* musi być wskaźnikiem do zmiennej typu, który odpowiada specyfikatorowi typu w *format*. *Format* formanty interpretacji dane wejściowe pola i ma tę samą tworzą i funkcję, która *format* argument **scanf**; zobacz [scanf](scanf-scanf-l-wscanf-wscanf-l.md) dla Opis *format*.
+**Fscanf —** funkcja odczytuje dane z bieżącego położenia obiektu *strumienia* w miejscach podanych przez *argument* (jeśli istnieje). Każdy *argument* musi być wskaźnikiem do zmiennej typu odpowiadającego specyfikatorowi typu w parametrze *format*. *Format* kontroluje interpretację danych wejściowych pola, a ma taką samą formę i funkcjonuje jako *format* argument **scanf**; zobacz [scanf](scanf-scanf-l-wscanf-wscanf-l.md) dla Opis *format*.
 
-**fwscanf —** jest wersja znaków dwubajtowych **fscanf —**; argument formatu **fwscanf —** jest ciągiem znaków dwubajtowych. Te funkcje zachowują się tak samo tak samo, jakby strumień jest otwarty w trybie ANSI. **fscanf —** nie obsługuje obecnie danych wejściowych z strumienia UNICODE.
+**fwscanf —** to wersja znaku dwubajtowego **fscanf —**; format argumentu **fwscanf —** jest ciągiem znaku dwubajtowego. Funkcje te zachowują się identycznie, jeżeli strumień jest otwarty w trybie ANSI. **fscanf —** aktualnie nie obsługuje danych wejściowych ze strumienia UNICODE.
 
-Wersje tych funkcji z **_l** sufiks są identyczne, z wyjątkiem tego, aby używały parametr ustawień regionalnych przekazano zamiast bieżącego ustawienia regionalne wątku.
+Wersje tych funkcji **_l** sufiksem są identyczne, z tą różnicą, że używają parametru ustawień regionalnych przekazanych zamiast bieżących ustawień regionalnych wątku.
 
 ### <a name="generic-text-routine-mappings"></a>Mapowania procedur zwykłego tekstu
 
-|Procedura TCHAR.H|_Unicode — & _MBCS nie zdefiniowany|_MBCS zdefiniowano|_UNICODE zdefiniowano|
+|Procedura TCHAR.H|_UNICODE & _MBCS nie zdefiniowano|_MBCS zdefiniowano|_UNICODE zdefiniowano|
 |---------------------|------------------------------------|--------------------|-----------------------|
 |**_ftscanf —**|**fscanf —**|**fscanf —**|**fwscanf**|
 |**_ftscanf_l —**|**_fscanf_l**|**_fscanf_l**|**_fwscanf_l**|
 
-Aby uzyskać więcej informacji, zobacz [pola specyfikacji formatu - scanf funkcji i funkcji wscanf —](../../c-runtime-library/format-specification-fields-scanf-and-wscanf-functions.md).
+Aby uzyskać więcej informacji, zobacz [pola specyfikacji formatu - scanf funkcji i funkcji wscanf](../../c-runtime-library/format-specification-fields-scanf-and-wscanf-functions.md).
 
 ## <a name="requirements"></a>Wymagania
 
@@ -195,7 +195,7 @@ x
 
 ## <a name="see-also"></a>Zobacz także
 
-[We/Wy strumienia](../../c-runtime-library/stream-i-o.md)<br/>
+[Stream operacji We/Wy](../../c-runtime-library/stream-i-o.md)<br/>
 [_cscanf, _cscanf_l, _cwscanf, _cwscanf_l](cscanf-cscanf-l-cwscanf-cwscanf-l.md)<br/>
 [fprintf, _fprintf_l, fwprintf, _fwprintf_l](fprintf-fprintf-l-fwprintf-fwprintf-l.md)<br/>
 [scanf, _scanf_l, wscanf, _wscanf_l](scanf-scanf-l-wscanf-wscanf-l.md)<br/>

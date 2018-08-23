@@ -17,38 +17,43 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 9ce42a1e14e3de77b8ac10c67a8f15b6ee3f080f
-ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
+ms.openlocfilehash: 1b7cc38d595c6f6ad1aa92e584068ccb852dbbd4
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/09/2018
-ms.locfileid: "40019959"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42578691"
 ---
 # <a name="mutexoperator-operator"></a>Mutex::operator= Operator
-Przypisuje (ruch) określonego **Mutex** obiekt do bieżącego **Mutex** obiektu.  
-  
-## <a name="syntax"></a>Składnia  
-  
-```cpp  
-Mutex& operator=(  
-   _Inout_ Mutex&& h  
-);  
-```  
-  
-### <a name="parameters"></a>Parametry  
- *h*  
- Odwołania rvalue do **Mutex** obiektu.  
-  
-## <a name="return-value"></a>Wartość zwracana  
- Odwołanie do bieżącego **Mutex** obiektu.  
-  
-## <a name="remarks"></a>Uwagi  
- Aby uzyskać więcej informacji, zobacz **przenoszenie semantyki** części [Rvalue Reference Declarator: & &](../cpp/rvalue-reference-declarator-amp-amp.md).  
-  
-## <a name="requirements"></a>Wymagania  
- **Nagłówek:** corewrappers.h  
-  
- **Namespace:** Microsoft::wrl:: wrappers
- 
- ## <a name="see-also"></a>Zobacz też
- [Mutex — klasa](../windows/mutex-class1.md)
+
+Przypisuje (ruch) określonego **Mutex** obiekt do bieżącego **Mutex** obiektu.
+
+## <a name="syntax"></a>Składnia
+
+```cpp
+Mutex& operator=(
+   _Inout_ Mutex&& h
+);
+```
+
+### <a name="parameters"></a>Parametry
+
+*h*  
+Odwołania rvalue do **Mutex** obiektu.
+
+## <a name="return-value"></a>Wartość zwracana
+
+Odwołanie do bieżącego **Mutex** obiektu.
+
+## <a name="remarks"></a>Uwagi
+
+Aby uzyskać więcej informacji, zobacz **przenoszenie semantyki** części [Rvalue Reference Declarator: & &](../cpp/rvalue-reference-declarator-amp-amp.md).
+
+## <a name="requirements"></a>Wymagania
+
+**Nagłówek:** corewrappers.h
+
+**Namespace:** Microsoft::wrl:: wrappers
+
+## <a name="see-also"></a>Zobacz też
+[Mutex — klasa](../windows/mutex-class1.md)

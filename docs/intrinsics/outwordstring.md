@@ -18,17 +18,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fc25fdc4d43b7454761787264583b5e4f8fa47e0
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 7abc221b81b6ace3afb165585b7e24655d348c2b
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33333697"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42465055"
 ---
 # <a name="outwordstring"></a>__outwordstring
 **Microsoft Specific**  
   
- Generuje `rep outsw` instrukcji, która wysyła `Count` wyrazy, zaczynając od `Buffer` z portu We/Wy, określony przez `Port`.  
+ Generuje `rep outsw` instrukcji, która wysyła `Count` słów, zaczynając od `Buffer` z portu We/Wy, określony przez `Port`.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -45,23 +45,23 @@ void __outwordstring(
  Port do wysyłania danych do.  
   
  [in] `Buffer`  
- Wskaźnik do dane, które mają być wysyłane z określonego portu.  
+ Wskaźnik do danych, które zostaną wysłane do określonego portu.  
   
  [in] `Count`  
- Liczba wyrazów do wysłania.  
+ Liczbę wyrazów do wysłania.  
   
 ## <a name="requirements"></a>Wymagania  
   
-|— Wewnętrzne|Architektura|  
+|Wewnętrzne|Architektura|  
 |---------------|------------------|  
-|`__outwordstring`|x86, [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
+|`__outwordstring`|x86, x64|  
   
- **Plik nagłówka** \<intrin.h >  
+ **Plik nagłówkowy** \<intrin.h >  
   
 ## <a name="remarks"></a>Uwagi  
- Ta procedura jest dostępna tylko wewnętrznie.  
+ Ta procedura jest dostępna wyłącznie jako wewnętrzna.  
   
-**KOŃCOWY określonych firmy Microsoft**  
+**END specyficzny dla Microsoft**  
   
 ## <a name="see-also"></a>Zobacz też  
  [Funkcje wewnętrzne kompilatora](../intrinsics/compiler-intrinsics.md)

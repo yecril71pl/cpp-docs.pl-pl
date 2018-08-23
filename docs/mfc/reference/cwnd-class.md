@@ -828,12 +828,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 97d8e923d89085161feb7dcec38d3b0e3972b96e
-ms.sourcegitcommit: 76fd30ff3e0352e2206460503b61f45897e60e4f
+ms.openlocfilehash: 317eae9ee404e603eaf37b2d512724c6b3d0c9f9
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/13/2018
-ms.locfileid: "39028424"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42465530"
 ---
 # <a name="cwnd-class"></a>Klasa CWnd
 Oferuje podstawowe funkcje wszystkich klas okna w bibliotece klas Microsoft Foundation.  
@@ -2258,7 +2258,7 @@ virtual BOOL DestroyWindow();
   
  `DestroyWindow` Funkcja elementu członkowskiego również niszczy Niemodalne okna dialogowe utworzone przez [CDialog::Create](../../mfc/reference/cdialog-class.md#create).  
   
- Jeśli `CWnd` niszczona jest oknem podrzędnym, a nie ma [WS_EX_NOPARENTNOTIFY](../../mfc/reference/styles-used-by-mfc.md#extended-window-styles) stylu zestawu, a następnie [WM_PARENTNOTIFY ](https://msdn.microsoft.com/library/ms632638.aspx) wiadomość jest wysyłana do elementu nadrzędnego.  
+ Jeśli `CWnd` niszczona jest oknem podrzędnym, a nie ma [WS_EX_NOPARENTNOTIFY](../../mfc/reference/styles-used-by-mfc.md#extended-window-styles) stylu zestawu, a następnie [WM_PARENTNOTIFY ](/previous-versions/windows/desktop/inputmsg/wm-parentnotify) wiadomość jest wysyłana do elementu nadrzędnego.  
   
 ### <a name="example"></a>Przykład  
  [!code-cpp[NVC_MFCWindowing#87](../../mfc/reference/codesnippet/cpp/cwnd-class_26.cpp)]  
@@ -7780,7 +7780,7 @@ afx_msg void OnNcXButtonUp(
 >  Ta funkcja członkowska jest wywoływana przez platformę, by umożliwić aplikacji w taki sposób, by obsłużyć komunikat Windows. Parametry przekazane do funkcji odzwierciedlają parametry odebrane przez platformę, gdy wiadomość została odebrana. Jeśli chcesz wywołać implementacji klasy podstawowej w tej funkcji, tę implementację użyje parametry pierwotnie przekazana z komunikatem i nie parametry, których dostarczenie funkcji.  
   
 ##  <a name="onnextmenu"></a>  CWnd::OnNextMenu  
- Struktura wywołuje tę funkcję elementu członkowskiego, podczas gdy klawisz Strzałka w lewo lub w służy do przełączania się między paskiem menu i menu systemowym.  
+ Struktura wywołuje tej funkcji elementu członkowskiego, jeśli klawisz Strzałka w lewo lub jest używana do przełączania się między paskiem menu i menu systemowym.  
   
 ```  
 afx_msg void OnNextMenu(
@@ -8561,7 +8561,7 @@ afx_msg void OnSysChar(
 |31|Określa stan przejścia. Jeśli klucz został wydany lub wynosi 0, jeśli klucz jest naciskana, wartość wynosi 1.|  
   
 ### <a name="remarks"></a>Uwagi  
- Określa wirtualny kod klawisza klawisz menu kontroli. (Aby uzyskać listę standardowa wirtualnej kody klawiszy Zobacz Winuser.h)  
+ Określa wirtualny kod klawisza klawisz menu kontroli. (Aby uzyskać listę standardowa wirtualnej kody klawiszy, zobacz Winuser.h)  
   
  Gdy kod kontekstu jest 0, można przekazać WM_SYSCHAR [WM_SYSCHAR](http://msdn.microsoft.com/library/windows/desktop/ms646357) komunikatu do [TranslateAccelerator](http://msdn.microsoft.com/library/windows/desktop/ms646373) funkcji Windows, która będzie obsługiwać go tak, jakby była normalnym komunikat klucza zamiast systemu klucz znaków. Dzięki temu klawiszy skrótów do użycia z aktywnym oknem, nawet jeśli aktywne okno nie ma fokusa wejścia.  
   
@@ -8983,7 +8983,7 @@ afx_msg void OnUnInitMenuPopup(
 >  Ta funkcja członkowska jest wywoływana przez platformę, by umożliwić aplikacji w taki sposób, by obsłużyć komunikat Windows. Parametry przekazane do funkcji odzwierciedlają parametry odebrane przez platformę, gdy wiadomość została odebrana. Jeśli chcesz wywołać implementacji klasy podstawowej w tej funkcji, tę implementację użyje parametry pierwotnie przekazana z komunikatem i nie parametry, których dostarczenie funkcji.  
   
 ##  <a name="onupdateuistate"></a>  CWnd::OnUpdateUIState  
- Wywoływana, aby zmienić stan interfejsu użytkownika dla określonego okna i jego okien podrzędnych.  
+ Wywołuje się, aby zmienić stan interfejsu użytkownika dla określonego okna i jego okien podrzędnych.  
   
 ```  
 afx_msg void OnUpdateUIState(

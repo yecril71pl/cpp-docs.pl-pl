@@ -22,17 +22,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e09a0732f5a93c152588f0a7fdc99c7a10787bb2
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 00f71faa5a7b81931c8ee3fbce00ea4b7e66249b
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33325282"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42465698"
 ---
 # <a name="readgsbyte-readgsdword-readgsqword-readgsword"></a>__readgsbyte, __readgsdword, __readgsqword, __readgsword
 **Microsoft Specific**  
   
- Odczytać pamięci z lokalizacji określonej przez przesunięcie względem początku GS segmentu.  
+ Odczyt pamięci z lokalizacji określonej przez przesunięcie względem początku segmentu GS.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -56,23 +56,23 @@ unsigned __int64 __readgsqword(
  Przesunięcie od początku `GS` do odczytu.  
   
 ## <a name="return-value"></a>Wartość zwracana  
- Zawartość pamięci bajt, word, wyraz o podwójnej precyzji lub quadword (wskazywanego przez nazwę funkcji o nazwie) w lokalizacji `GS:[Offset]`.  
+ Zawartość pamięci bajt, wyraz, podwójne słowo lub quadword (co zostało wskazane przez nazwę funkcji o nazwie) w lokalizacji `GS:[Offset]`.  
   
 ## <a name="requirements"></a>Wymagania  
   
-|— Wewnętrzne|Architektura|  
+|Wewnętrzne|Architektura|  
 |---------------|------------------|  
-|`__readgsbyte`|[!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
-|`__readgsdword`|[!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
-|`__readgsqword`|[!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
-|`__readgsword`|[!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
+|`__readgsbyte`|X64|  
+|`__readgsdword`|X64|  
+|`__readgsqword`|X64|  
+|`__readgsword`|X64|  
   
- **Plik nagłówka** \<intrin.h >  
+ **Plik nagłówkowy** \<intrin.h >  
   
 ## <a name="remarks"></a>Uwagi  
- Te funkcje wewnętrzne są dostępne tylko w trybie jądra, i procedury są dostępne tylko jako funkcje wewnętrzne.  
+ Te funkcje wewnętrzne są dostępne tylko w trybie jądra i procedury są dostępne tylko jako funkcje wewnętrzne.  
   
-**KOŃCOWY określonych firmy Microsoft**  
+**END specyficzny dla Microsoft**  
   
 ## <a name="see-also"></a>Zobacz też  
  [__writegsbyte, \__writegsdword, \__writegsqword, \__writegsword](../intrinsics/writegsbyte-writegsdword-writegsqword-writegsword.md)   

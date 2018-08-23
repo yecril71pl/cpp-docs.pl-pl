@@ -14,60 +14,60 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f05d7d3d3d3fd6b40a5477b7765b89409747d3ce
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: d5789e353a6e15d4da3f5754d9d4d91821359d14
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33845869"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42466144"
 ---
 # <a name="introduction-to-visual-c-for-unix-users"></a>Wprowadzenie do programu Visual C++ dla użytkowników systemu UNIX
 
-Ten temat zawiera informacje dla użytkowników systemu UNIX, które są nowe w programie Visual Studio i chcesz stać się wykorzystują C++ i Visual Studio programowanie środowiska IDE (Integrated).
+Ten temat zawiera informacje dla użytkowników systemu UNIX, które są nowe w programie Visual Studio i chcesz stać się za pomocą języka C++ i Visual Studio rozwoju środowiska IDE (Integrated).
   
-## <a name="getting-started-on-the-command-line"></a>Wprowadzenie do korzystania z wiersza polecenia  
+## <a name="getting-started-on-the-command-line"></a>Rozpoczynanie pracy z wiersza polecenia  
 
-Kompilator języka C++ w wierszu polecenia można użyć w podobny sposób, że używasz środowiska wiersza polecenia systemu UNIX. Kompiluj z wiersza polecenia przy użyciu wiersza polecenia kompilatora C i C++ (CL. Wywołanie pliku EXE), konsolidatora (łącze. EXE) i innych narzędzi, takich jak NMAKE. EXE, wersja Microsoft UNIX należy narzędzie.  
+Kompilator języka C++ z poziomu wiersza polecenia można użyć w podobny sposób, w których możesz użyć środowisko wiersza polecenia systemu UNIX. Kompilujesz z wiersza polecenia przy użyciu wiersza polecenia kompilatora C i C++ (CL. Z rozszerzeniem EXE), program łączący (LINK. Z rozszerzeniem EXE) i innych narzędzi, takich jak NMAKE. Plik EXE, Microsoft wersję UNIX należy narzędzia.  
   
-W systemie UNIX polecenia są instalowane w folderze wspólne, takie jak katalogu/usr. W programie Visual Studio narzędzia wiersza polecenia są zainstalowane w katalogu instalacji programu Visual Studio w podkatalogu VC\bin i jego podkatalogach. W przeciwieństwie do systemu UNIX te narzędzia nie są dostępne w oknie wiersza polecenia zwykły. Aby użyć narzędzia wiersza polecenia, użyj skrótu wiersza polecenia dewelopera lub uruchom plik takich jak vcvarsall.bat poleceń dewelopera. To ustawienie ścieżkę i inne zmienne środowiskowe, które są niezbędne do kompilacji C++ programów z poziomu wiersza polecenia. Aby uzyskać więcej informacji, zobacz [kodu kompilacji C/C++ w wierszu polecenia](../build/building-on-the-command-line.md) i [wskazówki: kompilowanie natywnego programu C++ w wierszu polecenia](../build/walkthrough-compiling-a-native-cpp-program-on-the-command-line.md).  
+W systemie UNIX poleceń są instalowane w folderze wspólne, takie jak sfw. W programie Visual Studio narzędzia wiersza polecenia są instalowane w katalogu instalacji programu Visual Studio w podkatalogu VC\bin i jego podkatalogach. W przeciwieństwie do systemu UNIX narzędzia te nie są dostępne w oknie zwykłych wiersza polecenia. Aby użyć narzędzia wiersza polecenia, użyj skrót do wiersza polecenia dla deweloperów lub uruchom Deweloper polecenia plików, takich jak vcvarsall.bat. Spowoduje to utworzenie ścieżkę i inne zmienne środowiskowe, które są niezbędne do kompilowania programów C++ z poziomu wiersza polecenia. Aby uzyskać więcej informacji, zobacz [kodu kompilacji C/C++ w wierszu polecenia](../build/building-on-the-command-line.md) i [wskazówki: kompilowanie natywnego programu C++ w wierszu polecenia](../build/walkthrough-compiling-a-native-cpp-program-on-the-command-line.md).  
   
-Aby otworzyć skrót do wiersza polecenia dewelopera, wprowadź *wiersza polecenia dewelopera* na pulpicie wyszukiwania sterowania i wybierz polecenie **wiersz polecenia dla deweloperów** wynik dla używanej wersji programu Visual Studio. Aby wybrać developer wiersza polecenia, który jest wstępnie skonfigurowany do określonego hosta i Architektura docelowa, otwórz **Start** menu (ikona Windows rogu pulpitu), a następnie przewiń do folderu dla używanej wersji programu Visual Studio , takich jak **programu Visual Studio 2017**. Otwórz folder, a następnie wybierz skrót do wiersza polecenia dla architektury preferowanych źródłowa i docelowa.
+Otwórz skrót do wiersza polecenia dla deweloperów, wprowadź *wiersz polecenia dla deweloperów* w programie desktop wyszukiwania kontrolki, a następnie wybierz **wiersz polecenia dla deweloperów** wynik dla używanej wersji programu Visual Studio. Aby wybrać wiersz polecenia dla deweloperów, który został wstępnie skonfigurowany dla określonego hosta i Architektura docelowa, otwórz **Start** menu (ikona Windows rogu pulpitu), a następnie przewiń do folderu dla używanej wersji programu Visual Studio , takich jak **programu Visual Studio 2017**. Otwórz folder, a następnie wybierz skrót do wiersza polecenia dla Twojego preferowanego Architektura źródłowa i docelowa.
   
-Aby móc korzystać z bardziej zaawansowane funkcje, takie jak debuger programu Visual Studio, uzupełniania kodu IntelliSense wyszukiwania i instrukcji, wizualnych projektantów projektu zarządzania i itd., należy użyć środowiska IDE programu Visual Studio.  
+Aby skorzystać z bardziej zaawansowane funkcje, takie jak debugera programu Visual Studio, uzupełniania kodu IntelliSense wyszukiwania i instrukcji, projektantów wizualnych, zarządzanie projektem, a itd., należy użyć programu Visual Studio IDE.  
   
 ## <a name="debugging-your-code"></a>Debugowanie kodu  
 
-Jeśli używasz wiersza polecenia i uruchomienia aplikacji na deweloperskiej stacji roboczej, zostanie wyświetlone okno dialogowe, aby uruchomić [!INCLUDE[vsprvs](../assembler/masm/includes/vsprvs_md.md)] debugera jest wyświetlane, gdy kod napotka naruszenie dostępu do pamięci, nieobsługiwany wyjątek lub innych nieodwracalny błędy. Jeśli klikniesz przycisk **OK**, następnie środowisko projektowe Visual Studio została uruchomiona i debuger zostanie otwarty do punktu awarii. Istnieje możliwość debugowania aplikacji w ten sposób i w takim przypadku kod źródłowy czy jest dostępna, jeśli skompilowane z [/z7, / zi, /ZI (Format informacji debugowania)](../build/reference/z7-zi-zi-debug-information-format.md) przełącznika. Aby uzyskać więcej informacji, zobacz [debugowanie kodu natywnego](/visualstudio/debugger/debugging-native-code) i [za pomocą środowiska IDE programu Visual Studio dla programowania w języku C++ pulpitu](../ide/using-the-visual-studio-ide-for-cpp-desktop-development.md).  
+Jeśli za pomocą wiersza polecenia i uruchamiać aplikacje na deweloperskiej stacji roboczej, zostanie wyświetlony, wyświetlane jest okno dialogowe, aby uruchomić debuger programu Visual Studio, gdy kod napotka naruszenie zasad dostępu do pamięci, nieobsługiwany wyjątek lub innych nieodwracalny błędy. Jeśli klikniesz **OK**, następnie środowiska programistycznego Visual Studio jest uruchomiony i otworzy debuger do punktu awarii. Istnieje możliwość debugowania aplikacji w ten sposób, a w tym przypadku kodu źródłowego tylko będą dostępne, jeśli skompilowany przy użyciu [/z7, / zi, /ZI (Format informacji debugowania)](../build/reference/z7-zi-zi-debug-information-format.md) przełącznika. Aby uzyskać więcej informacji, zobacz [debugowanie kodu natywnego](/visualstudio/debugger/debugging-native-code) i [przy użyciu programu Visual Studio IDE dla programowanie aplikacji klasycznych w języku C++](../ide/using-the-visual-studio-ide-for-cpp-desktop-development.md).  
   
-## <a name="using-the-development-environment"></a>Używanie środowiska projektowania  
+## <a name="using-the-development-environment"></a>Używanie środowiska programistycznego  
 
-Jest łatwiejsze w środowisku programistycznym do edycji i kompilacji kodu źródłowego *projektu*. Projekt jest kolekcją źródła i powiązane pliki, które zostanie skompilowany w pojedynczą jednostkę, takich jak biblioteką lub plikiem wykonywalnym. Projekt zawiera także informacji na temat sposobu plików ma zostać utworzony. Informacje o projekty są przechowywane w pliku projektu z .prj rozszerzenia.  
+Jest łatwiejszy w użyciu środowisko programistyczne do edytowania i kompilowania kodu źródłowego *projektu*. Projekt jest kolekcją źródła i powiązane pliki, które zostaną skompilowane w pojedynczą jednostkę, np. biblioteki lub pliku wykonywalnego. Projekt zawiera także informacji na temat sposobu pliki mają być tworzone. Informacje o projektach są przechowywane w pliku projektu za pomocą .prj rozszerzenia.  
   
-Aplikacja, która składa się z wielu bibliotek i plików wykonywalnych, każdy potencjalnie skompilowanej za pomocą innego zbioru opcji kompilatora lub nawet w innym języku, są przechowywane w wielu projektach, które są częścią pojedynczej *rozwiązania*. Rozwiązanie to Abstrakcja dla kontenera zgrupować wielu projektów. Informacje o rozwiązaniach są przechowywane w pliku rozwiązania z .sln rozszerzenia. Aby uzyskać więcej informacji, zobacz [rozwiązania i projekty w programie Visual Studio](/visualstudio/ide/solutions-and-projects-in-visual-studio) i [za pomocą środowiska IDE programu Visual Studio dla programowania w języku C++ pulpitu](../ide/using-the-visual-studio-ide-for-cpp-desktop-development.md).  
+Aplikacja, która składa się z wielu biblioteki i pliki wykonywalne, każdy potencjalnie utworzonych za pomocą innego zestawu opcji kompilatora lub nawet w innym języku, są przechowywane w wielu projektach, które są częścią pojedynczej *rozwiązania*. To rozwiązanie jest klasą abstrakcyjną dla kontenera, grupy wraz z wielu projektów. Informacje o rozwiązaniach są przechowywane w pliku rozwiązania przy użyciu rozszerzenia .sln. Aby uzyskać więcej informacji, zobacz [rozwiązań i projektów w programie Visual Studio](/visualstudio/ide/solutions-and-projects-in-visual-studio) i [przy użyciu programu Visual Studio IDE dla programowanie aplikacji klasycznych w języku C++](../ide/using-the-visual-studio-ide-for-cpp-desktop-development.md).  
   
 ## <a name="importing-your-existing-code"></a>Importowanie istniejącego kodu 
  
-Kompilator języka C++ można użyć do tworzenia istniejący kod, który jest skonfigurowany do kompilacji z lub bez pliku reguł programu make i umieszcza je w [!INCLUDE[vsprvs](../assembler/masm/includes/vsprvs_md.md)] projektu. Aby uzyskać więcej informacji, zobacz [porady: Tworzenie projektu C++ z istniejącego kodu](../ide/how-to-create-a-cpp-project-from-existing-code.md).  
+Kompilator języka C++ umożliwia tworzenie istniejący kod, który jest skonfigurowany do kompilowania z użyciem lub bez pliku reguł programu make i umieścić go w projekcie programu Visual Studio. Aby uzyskać więcej informacji, zobacz [porady: Tworzenie projektu C++ z istniejącego kodu](../ide/how-to-create-a-cpp-project-from-existing-code.md).  
   
 ## <a name="creating-a-new-project"></a>Tworzenie nowego projektu  
 
-Można tworzyć nowe projekty w środowisku programistycznym. Program Visual Studio udostępnia wiele szablonów, które zapewniają standardowego kodu dla różnych popularnych projektów. Kreatorzy aplikacji służy do generowania projektów z opisanych kodu dla różnych typów aplikacji.  
+Można utworzyć nowych projektów w środowisku programistycznym. Visual Studio zawiera wiele szablonów, które zapewniają standardowy kod dla różnych popularnych projektów. Kreator aplikacji może zostać użyty do generowania projektów z opisanych kodu dla różnych typów aplikacji.  
   
-Pusty projekt można rozpoczynać przy użyciu **Kreatora aplikacji konsoli (Win32)**. Wybierz **pusty projekt** pole wyboru. Nowe i istniejące pliki można następnie dodać do projektu później.  
+Można uruchomić z pusty projekt za pomocą **Kreatora aplikacji konsoli (Win32)**. Wybierz **pusty projekt** pole wyboru. Nowe i istniejące pliki można następnie dodać do projektu później.  
   
 Podczas tworzenia projektu, nazwę projektu. Domyślnie nazwa projektu jest równe nazwę biblioteki dołączanej (dynamicznie DLL) lub pliku wykonywalnego, który jest kompilacji z projektu. Aby uzyskać więcej informacji, zobacz [tworzenie rozwiązań i projektów](/visualstudio/ide/creating-solutions-and-projects).  
   
 ## <a name="microsoft-specific-modifiers"></a>Modyfikatory specyficzne dla firmy Microsoft  
 
-Kompilator Microsoft Visual C++ implementuje wiele rozszerzeń standardu C++ język programowania obsługę programowania w języku systemu operacyjnego. Te rozszerzenia są używane, aby określić atrybuty klasy magazynu, funkcja Konwencje wywoływania i adresowanie, między innymi na podstawie. Aby uzyskać pełną listę wszystkich obsługiwanych rozszerzeń języka C++, zobacz [Modyfikatory specyficzne dla firmy Microsoft](../cpp/microsoft-specific-modifiers.md).  
+Kompilator Microsoft Visual C++ implementuje kilka rozszerzeń do standardowego języka programowania C++ do obsługi programowania dla systemów operacyjnych Windows. Te rozszerzenia są używane, aby określić atrybuty klasy magazynu, funkcji, Konwencje wywoływania i adresowanie, między innymi na podstawie. Aby uzyskać pełną listę wszystkich obsługiwanych rozszerzeń języka C++, zobacz [Modyfikatory specyficzne dla Microsoft](../cpp/microsoft-specific-modifiers.md).  
   
-Wszystkie rozszerzenia języka C++ specyficzne dla firmy Microsoft można wyłączyć za pomocą **/Za** — opcja kompilatora. Ta opcja jest zalecana, jeśli chcesz napisać kod do uruchamiania na wielu platformach. Aby uzyskać więcej informacji na temat **/Za** — opcja kompilatora, zobacz [/Za, /Ze (Wyłącz rozszerzenia językowe)](../build/reference/za-ze-disable-language-extensions.md). Aby uzyskać więcej informacji na temat zgodności kompilatora C++, zobacz [Visual zgodność języka C++](../visual-cpp-language-conformance.md) i [niestandardowe zachowanie](../cpp/nonstandard-behavior.md).  
+Wszystkie rozszerzenia charakterystyczne dla Microsoft c++ można wyłączyć za pomocą `/Za` — opcja kompilatora. Ta opcja jest zalecana, jeśli chcesz napisać kod do uruchamiania na wielu platformach. Aby uzyskać więcej informacji na temat `/Za` — opcja kompilatora, zobacz [/za, /Ze (Wyłącz rozszerzenia językowe)](../build/reference/za-ze-disable-language-extensions.md). Aby uzyskać więcej informacji na temat zgodności kompilatora języka C++, zobacz [Visual zgodność języka C++](../visual-cpp-language-conformance.md) i [niestandardowe zachowanie](../cpp/nonstandard-behavior.md).  
   
 ## <a name="precompiled-headers"></a>Prekompilowane nagłówki  
 
-Kompilatory języka Microsoft C i C++ opcje dla wstępnej kompilacji dowolnego kodu języka C lub C++, w tym kodu wbudowanego. Tej funkcji wydajności można skompilować stabilna treści kodu, przechowywać skompilowanej kodu w pliku i, podczas kolejnych kompilacjach połączyć prekompilowany kod z kodem, który jest nadal w fazie projektowania. Każda kolejne Kompilacja trwa krócej, ponieważ stabilna kodu nie muszą być ponownie kompilowane.  
+Kompilatory Microsoft C i C++ zapewnia opcje dla wstępnej kompilacji kodu C lub C++, łącznie z kodem wbudowanego. Dzięki tej funkcji wydajności można skompilować stabilne treść kodu, zapisanie skompilowanej kodu w pliku i, podczas kolejnych kompilacjach łączyć wstępnie skompilowany kod z kodem, który jest nadal w fazie projektowania. Każda kolejne kompilacja jest szybsza, ponieważ stabilnym kodem nie musi być ponownie kompilowane.  
   
-Domyślnie wszystkie wstępnie skompilowanym kodu jest określona w plikach **stdafx.h** i **stdafx.cpp**. **Nowy projekt** Kreator automatycznie utworzy te pliki dla Ciebie, jeśli nie wyłączysz **Prekompilowanego nagłówka** opcji. Aby uzyskać więcej informacji na prekompilowanych nagłówków, zobacz [tworzenie prekompilowanych plików nagłówka](../build/reference/creating-precompiled-header-files.md).  
+Domyślnie wszystkie wstępnie skompilowany kod jest określona w pliku plików stdafx.h i stdafx.cpp. **Nowy projekt** Kreator automatycznie utworzy pliki te można o ile nie wyłączysz **prekompilowany nagłówek** opcji. Aby uzyskać więcej informacji na temat wstępnie skompilowanych nagłówków, zobacz [tworzenie prekompilowanych plików nagłówka](../build/reference/creating-precompiled-header-files.md).  
   
 ## <a name="related-sections"></a>Sekcje pokrewne  
 

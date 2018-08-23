@@ -27,12 +27,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5699f4c8c49bd35e85479572e1b49f8080415e65
-ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
+ms.openlocfilehash: 9ea5da8b98c528eb6832c850e41b0a42c386f901
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37884996"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42466061"
 ---
 # <a name="ccomaggobject-class"></a>Klasa CComAggObject
 Ta klasa implementuje [IUnknown](http://msdn.microsoft.com/library/windows/desktop/ms680509) interfejs dla obiektu zagregowanego. Zgodnie z definicją obiektu zagregowanego jest zawarty w obiekcie zewnętrznym. `CComAggObject` Klasa jest podobna do [klasa CComObject](../../atl/reference/ccomobject-class.md), z tą różnicą, że udostępnia interfejs, który jest bezpośrednio dostępny dla klientów zewnętrznych.  
@@ -63,7 +63,7 @@ class CComAggObject : public IUnknown,
 |Nazwa|Opis|  
 |----------|-----------------|  
 |[CComAggObject::AddRef](#addref)|Zwiększa licznik odwołań obiektu zagregowanego.|  
-|[CComAggObject::CreateInstance](#createinstance)|Ta funkcja statyczna służy do tworzenia nowego **CComAggObject <** `contained` **>** obiektu bez konieczności [CoCreateInstance](http://msdn.microsoft.com/library/windows/desktop/ms686615).|  
+|[CComAggObject::CreateInstance](#createinstance)|Ta funkcja statyczna służy do tworzenia nowego **CComAggObject <** `contained` **>** obiektu bez konieczności [CoCreateInstance](/windows/desktop/api/combaseapi/nf-combaseapi-cocreateinstance).|  
 |[CComAggObject::FinalConstruct](#finalconstruct)|Wykonuje końcowe inicjowanie `m_contained`.|  
 |[CComAggObject::FinalRelease](#finalrelease)|Wykonuje końcowe zniszczenie `m_contained`.|  
 |[CComAggObject::QueryInterface](#queryinterface)|Pobiera wskaźnik do żądanego interfejsu.|  
@@ -129,7 +129,7 @@ CComAggObject(void* pv);
  Zwalnia wszystkie przydzielone zasoby, wywołania [FinalRelease](#finalrelease), oraz liczbę blokad modułu zmniejsza.  
   
 ##  <a name="createinstance"></a>  CComAggObject::CreateInstance  
- Ta funkcja statyczna służy do tworzenia nowego **CComAggObject <** `contained` **>** obiektu bez konieczności [CoCreateInstance](http://msdn.microsoft.com/library/windows/desktop/ms686615).  
+ Ta funkcja statyczna służy do tworzenia nowego **CComAggObject <** `contained` **>** obiektu bez konieczności [CoCreateInstance](/windows/desktop/api/combaseapi/nf-combaseapi-cocreateinstance).  
   
 ```
 static HRESULT WINAPI CreateInstance(

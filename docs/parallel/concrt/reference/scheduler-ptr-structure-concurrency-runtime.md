@@ -18,15 +18,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 672e4a0dd5f66ab613dde8877915c799d6c4b2f4
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: 99c2ed2f8446b94d606c907f4d030c417e21fc01
+ms.sourcegitcommit: e9ce38decc9f986edab5543de3464b11ebccb123
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33686987"
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "42464832"
 ---
-# <a name="schedulerptr-structure"></a>Struktura scheduler_ptr
-Reprezentuje wskaźnik do harmonogramu. Ta klasa istnieje umożliwia specyfikację udostępnionego okres istnienia przy użyciu shared_ptr lub zwykłe odwołanie przy użyciu wskaźnika raw.  
+# <a name="schedulerptr-structure"></a>scheduler_ptr, struktura
+Reprezentuje wskaźnik do harmonogramu. Ta klasa istnieje, aby zezwolić na specyfikację wspólnego okresu istnienia przy użyciu wskaźnika shared_ptr lub zwykłe odwołanie za pomocą wskaźnika raw.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -46,14 +46,14 @@ struct scheduler_ptr;
   
 |Nazwa|Opis|  
 |----------|-----------------|  
-|[scheduler_ptr::get](#get)|Zwraca nieprzetworzoną wskaźnika do harmonogramu|  
+|[scheduler_ptr::get](#get)|Zwraca surowy wskaźnik do harmonogramu|  
   
 ### <a name="public-operators"></a>Operatory publiczne  
   
 |Nazwa|Opis|  
 |----------|-----------------|  
-|[Operator bool scheduler_ptr::operator](#operator_bool)|Sprawdź, czy wskaźnik harmonogramu jest różna od null|  
-|[scheduler_ptr::operator-&gt;](#operator_ptr)|Przypominają wskaźnik|  
+|[scheduler_ptr::operator bool](#operator_bool)|Sprawdź, czy wskaźnik harmonogramu jest różna od null|  
+|[scheduler_ptr::operator-&gt;](#operator_ptr)|Zachowują się jak wskaźnik|  
   
 ## <a name="inheritance-hierarchy"></a>Hierarchia dziedziczenia  
  `scheduler_ptr`  
@@ -64,7 +64,7 @@ struct scheduler_ptr;
  **Namespace:** współbieżności  
   
 ##  <a name="get"></a>  scheduler_ptr::Get — metoda  
- Zwraca nieprzetworzoną wskaźnika do harmonogramu  
+ Zwraca surowy wskaźnik do harmonogramu  
   
 ```
 scheduler_interface* get() const;
@@ -72,17 +72,17 @@ scheduler_interface* get() const;
   
 ### <a name="return-value"></a>Wartość zwracana  
   
-##  <a name="operator_bool"></a>  Operator bool scheduler_ptr::operator   
+##  <a name="operator_bool"></a>  scheduler_ptr::operator bool   
  Sprawdź, czy wskaźnik harmonogramu jest różna od null  
   
-"" const; bool() — operator
+"" operator bool() const;
 ```  
   
 ##  <a name="operator_ptr"></a>  scheduler_ptr::operator-&gt;   
  Behave like a pointer  
   
 ```
-scheduler_interface — * — operator -> () const;
+scheduler_interface * — operator -> const;)
 ```  
   
 ### Return Value  
@@ -91,9 +91,9 @@ scheduler_interface — * — operator -> () const;
  Creates a scheduler pointer from shared_ptr to scheduler  
   
 ```
-jawne scheduler_ptr (std::shared_ptr < scheduler_interface — > Harmonogram);
+jawne scheduler_ptr (std::shared_ptr < scheduler_interface > harmonogramu);
 
-jawne scheduler_ptr (_In_opt_ pScheduler scheduler_interface — *);
+jawne scheduler_ptr (_In_opt_ pScheduler scheduler_interface *);
 ```  
   
 ### Parameters  

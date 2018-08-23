@@ -18,17 +18,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f491f59289a2e3b951e1bad60f260a801ea68bea
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 3e5433e2d1ddf94f23a3f483a8857e3032c27be3
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33337938"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42465336"
 ---
 # <a name="interlockedcompareexchange128"></a>_InterlockedCompareExchange128
 **Microsoft Specific**  
   
- Przeprowadza porównanie blokowanego 128-bitowe i exchange.  
+ Wykonuje porównanie blokowane 128-bitowego i exchange.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -42,45 +42,45 @@ unsigned char _InterlockedCompareExchange128(
 ```  
   
 #### <a name="parameters"></a>Parametry  
- [w, out] `Destination`  
- Wskaźnik do miejsca docelowego, który jest tablicą dwóch 64-bitowych liczb całkowitych traktowane jako pole 128-bitowego. Miejsce docelowe danych musi być 16-bajtowych wyrównane, aby uniknąć ogólny błąd ochrony.  
+ [out w] `Destination`  
+ Wskaźnik do miejsca docelowego, który jest tablicą dwóch 64-bitowych liczb całkowitych są traktowane jako pola 128-bitowego. Dane docelowego musi być 16-bajtowy wyrównane, aby uniknąć błędów ogólnej ochrony.  
   
  [in] `ExchangeHigh`  
- 64-bitowa liczba całkowita, która mogą być wymieniane z wysoką część miejsca docelowego.  
+ 64-bitowa liczba całkowita, która może być wymieniane z wysokiej część miejsca docelowego.  
   
  [in] `ExchangeLow`  
- 64-bitowa liczba całkowita, która mogą być wymieniane z niskim część miejsca docelowego.  
+ 64-bitowa liczba całkowita, która może być wymieniane o niskiej część miejsca docelowego.  
   
- [w, out] `ComparandResult`  
- Wskaźnik do macierzy dwa 64-bitowych liczb całkowitych (traktowane jako pole 128-bitowego) do porównania z serwerem docelowym.  W danych wyjściowych to zostanie zastąpiony oryginalnej wartości elementu docelowego.  
+ [out w] `ComparandResult`  
+ Wskaźnik do tablicy dwóch 64-bitowych liczb całkowitych (traktowane jako pola 128-bitowy) do porównania z miejsca docelowego.  W danych wyjściowych to jest zastępowany oryginalnej wartości elementu docelowego.  
   
 ## <a name="return-value"></a>Wartość zwracana  
- 1, jeśli wzorzec 128-bitowego to oryginalnej wartości elementu docelowego. `ExchangeHigh` i `ExchangeLow` zastąpić docelowy 128-bitowego.  
+ 1, jeśli wzorzec 128-bitowy jest równe oryginalnej wartości elementu docelowego. `ExchangeHigh` i `ExchangeLow` zastąpić docelowy 128-bitowego.  
   
- 0, jeśli argument porównania nie jest równa oryginalnej wartości elementu docelowego. Wartość elementu docelowego jest bez zmian i wartość atrybutu porównania jest zastępowany wartość miejsca docelowego.  
+ 0, jeśli wzorzec nie jest równa oryginalnej wartości elementu docelowego. Niezmieniona wartość miejsca docelowego, a wartość wzorzec zostanie zastąpiony wartością miejsca docelowego.  
   
 ## <a name="requirements"></a>Wymagania  
   
-|— Wewnętrzne|Architektura|  
+|Wewnętrzne|Architektura|  
 |---------------|------------------|  
-|`_InterlockedCompareExchange128`|[!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
+|`_InterlockedCompareExchange128`|X64|  
   
- **Plik nagłówka** \<intrin.h >  
+ **Plik nagłówkowy** \<intrin.h >  
   
 ## <a name="remarks"></a>Uwagi  
- Generuje tym wewnętrzna `cmpxchg16b` instrukcji (z `lock` prefiks) do wykonania porównania zablokowanym 128-bitowe i exchange. Wczesne wersje AMD 64-bitowym sprzęcie nie obsługują tej instrukcji. Aby sprawdzić sprzęt obsługę `cmpxchg16b` instrukcji, wywołanie `__cpuid` wewnętrzne z `InfoType=0x00000001 (standard function 1)`. Bit 13 `CPUInfo[2]` (ECX) wynosi 1, jeśli instrukcja jest obsługiwana.  
+ Generuje tym wewnętrzne `cmpxchg16b` instrukcji (przy użyciu `lock` prefiks) do wykonania porównania zablokowane 128-bitowego i exchange. Wczesne wersje AMD 64-bitowym sprzęcie nie obsługują tej instrukcji. Aby sprawdzić, czy pomoc techniczna dotycząca sprzętu dla `cmpxchg16b` instrukcji, wywołanie `__cpuid` wewnętrzne z `InfoType=0x00000001 (standard function 1)`. Bit 13 `CPUInfo[2]` (ECX) wynosi 1, jeśli instrukcja jest obsługiwana.  
   
 > [!NOTE]
->  Wartość `ComparandResult` zawsze jest zastępowany. Po `lock` instrukcji tym wewnętrzna natychmiast kopiuje początkowej wartości `Destination` do `ComparandResult`. Z tego powodu `ComparandResult` i `Destination` powinny wskazywać na lokalizacje osobną pamięć, aby uniknąć nieoczekiwanego zachowania.  
+>  Wartość `ComparandResult` jest zawsze zastąpiony. Po `lock` instrukcji, w tym wewnętrzne natychmiast kopiuje wartość początkową `Destination` do `ComparandResult`. Z tego powodu `ComparandResult` i `Destination` powinien wskazywać lokalizacji pamięci, aby uniknąć nieoczekiwanego zachowania.  
   
- Chociaż można używać `_InterlockedCompareExchange128` do synchronizacji niskiego poziomu wątku nie należy synchronizować ponad 128 bitów, jeśli można używać mniejszych funkcji synchronizacji (takich jak innych `_InterlockedCompareExchange` funkcje wewnętrzne) zamiast tego. Użyj `_InterlockedCompareExchange128` Jeśli chcesz atomic dostęp do 128-bitową wartość w pamięci.  
+ Chociaż można używać `_InterlockedCompareExchange128` do synchronizacji niskiego poziomu wątku nie trzeba synchronizować ponad 128 bitów, jeśli można używać mniejszych funkcji synchronizacji (takich jak drugi `_InterlockedCompareExchange` funkcje wewnętrzne) zamiast tego. Użyj `_InterlockedCompareExchange128` chcącym atomic dostęp do 128-bitową wartością w pamięci.  
   
- Jeśli możesz uruchomić kodu korzystającego z tym wewnętrzna na sprzęcie, który nie obsługuje `cmpxchg16b` instrukcji są nieprzewidywalne wyniki.  
+ Jeśli możesz uruchomić kod, który korzysta z tym wewnętrzne na sprzęcie, który nie obsługuje `cmpxchg16b` instrukcji, wyniki są nieprzewidywalne.  
   
- Ta procedura jest dostępna tylko wewnętrznie.  
+ Ta procedura jest dostępna tylko jako wewnętrzna.  
   
 ## <a name="example"></a>Przykład  
- W tym przykładzie użyto `_InterlockedCompareExchange128` Zamień wyższe słowo macierzy dwa 64-bitowych liczb całkowitych sumę jego słowa wysoki i niski i zwiększyć niski programu word. Dostęp do tablicy BigInt.Int atomic, ale w tym przykładzie używa pojedynczego wątku i ignoruje blokowania dla uproszczenia.  
+ W tym przykładzie użyto `_InterlockedCompareExchange128` zamienić słowo wysokiej tablicy dwóch 64-bitowych liczb całkowitych z sumą jego słów wysoki i niski i zwiększ niższe słowo. Dostęp do tablicy BigInt.Int są niepodzielne, ale w tym przykładzie używa jednego wątku i ignoruje blokowania dla uproszczenia.  
   
 ```  
 // cmpxchg16b.c  
@@ -128,10 +128,10 @@ int main(void)
 BigInt.Int[1] = 34, BigInt.Int[0] = 12  
 ```  
   
-**KOŃCOWY określonych firmy Microsoft**  
- Copyright 2007 zaawansowane Micro urządzeń, Inc. Wszelkie prawa zastrzeżone. Odtworzyć z uprawnieniem z zaawansowanymi Micro urządzeń, Inc.  
+**END specyficzny dla Microsoft**  
+ Copyright 2007 zaawansowane Micro urządzeń, Inc. Wszelkie prawa zastrzeżone. Odtworzyć zgoda zaawansowane Micro urządzeń, Inc.  
   
 ## <a name="see-also"></a>Zobacz też  
  [Funkcje wewnętrzne kompilatora](../intrinsics/compiler-intrinsics.md)   
- [Funkcje wewnętrzne _InterlockedCompareExchange](../intrinsics/interlockedcompareexchange-intrinsic-functions.md)   
+ [Funkcje wewnętrzne _interlockedcompareexchange](../intrinsics/interlockedcompareexchange-intrinsic-functions.md)   
  [Konflikty z kompilatorem x86](../build/conflicts-with-the-x86-compiler.md)

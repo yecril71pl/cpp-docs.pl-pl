@@ -17,17 +17,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c282456f74fa86940e3d1ffc77d0226a28ed0b80
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: eeb63aa411278c2ca6b2217d9243331b57cd7624
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33326166"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42464653"
 ---
 # <a name="ud2"></a>__ud2
 **Microsoft Specific**  
   
- Generuje Niezdefiniowany instrukcję.  
+ Generuje instrukcję niezdefiniowane.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -36,22 +36,22 @@ void __ud2();
 ```  
   
 ## <a name="remarks"></a>Uwagi  
- Procesor zgłasza wyjątek nieprawidłowy kod operacji, jeśli zostanie wykonana instrukcja niezdefiniowany.  
+ Procesor zgłasza wyjątek nieprawidłowy kod operacji, jeśli zostanie wykonana instrukcja niezdefiniowane.  
   
- `__ud2` Funkcji jest odpowiednikiem `UD2` maszyny instrukcji i jest dostępna tylko w trybie jądra. Aby uzyskać więcej informacji, Wyszukaj w dokumencie "ręcznego deweloper oprogramowania architekturze firmy Intel, wolumin 2: Odwołanie zestaw instrukcji," w [Intel Corporation](http://go.microsoft.com/fwlink/p/?linkid=127) lokacji.  
+ `__ud2` Funkcji jest odpowiednikiem `UD2` komputera instrukcji i jest dostępna tylko w trybie jądra. Aby uzyskać więcej informacji, Wyszukaj w dokumencie "ręcznego deweloper oprogramowania architekturze firmy Intel, wolumin 2: odwołania do zestawu instrukcji," w [Intel Corporation](http://go.microsoft.com/fwlink/p/?linkid=127) lokacji.  
   
 ## <a name="requirements"></a>Wymagania  
   
-|— Wewnętrzne|Architektura|  
+|Wewnętrzne|Architektura|  
 |---------------|------------------|  
-|`__ud2`|x86, [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
+|`__ud2`|x86, x64|  
   
- **Plik nagłówka** \<intrin.h >  
+ **Plik nagłówkowy** \<intrin.h >  
   
-**KOŃCOWY określonych firmy Microsoft**  
+**END specyficzny dla Microsoft**  
   
 ## <a name="example"></a>Przykład  
- Poniższy przykład wykonuje niezdefiniowane instrukcji, które spowodują zgłoszenie wyjątku. Obsługa wyjątków następnie zmienia kod powrotny zero do jeden.  
+ Poniższy przykład wykonuje instrukcja niezdefiniowane zgłasza wyjątek. Obsługa wyjątków następnie zmienia kod powrotny od zera do jednego.  
   
 ```  
 // __ud2_intrinsic.cpp  

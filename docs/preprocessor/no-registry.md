@@ -16,36 +16,37 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 416663592f4362c110637fb4d4b4b418d9776cde
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 105c2b0ee4d2648a1cc43d0baca9f30146184e78
+ms.sourcegitcommit: d4c803bd3a684d7951bf88dcecf1f14af43ae411
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33849668"
+ms.lasthandoff: 08/10/2018
+ms.locfileid: "42465402"
 ---
 # <a name="noregistry"></a>no_registry
-`no_registry` informuje kompilator, aby nie Szukaj rejestrze zaimportowany z biblioteki typów `#import`.  
+**no_registry** informuje kompilator, który nie należy przeszukiwać rejestru dla biblioteki typów, zaimportowane wraz z `#import`.  
   
 ## <a name="syntax"></a>Składnia  
   
 ```  
-  
 #import filename no_registry  
 ```  
   
-#### <a name="parameters"></a>Parametry  
- *Nazwa pliku*  
- Biblioteki typów.  
+### <a name="parameters"></a>Parametry  
+*Nazwa pliku*  
+Biblioteki typów.  
   
 ## <a name="remarks"></a>Uwagi  
- Biblioteki typu występującego w odwołaniu nie zostanie znaleziony w katalogach include, kompilacja zakończy się niepowodzeniem nawet w przypadku biblioteki typów w rejestrze.  `no_registry` propaguje na inne niejawnie zaimportowany z biblioteki typu `auto_search`.  
+ 
+Przywoływanej biblioteki typów nie zostanie znaleziony w katalogach include, kompilacja zakończy się niepowodzeniem, nawet jeśli biblioteki typów znajduje się w rejestrze.  **no_registry** propaguje do innych bibliotek typów niejawnie zaimportowane wraz z `auto_search`.  
   
- Kompilator nigdy nie będzie przeszukiwać rejestru dla biblioteki typów, które są określone przez nazwę pliku i przekazywane bezpośrednio do `#import`.  
+Kompilator wyszuka nigdy nie rejestru dla biblioteki typów, które są określone przez nazwę pliku i przekazywana bezpośrednio do `#import`.  
   
- Podczas `auto_search` jest określony, dodatkowy `#import`s zostanie wygenerowane z `no_registry` ustawienia wstępnego `#import` (jeśli początkowej `#import` dyrektywy `no_registry`, `auto_search`-generowane `#import`jest również `no_registry`.)  
+Podczas `auto_search` jest określony, dodatkowy `#import`s zostanie wygenerowany za pomocą **no_registry** ustawienia wstępnego `#import` (jeśli początkowej `#import` dyrektywy **no_registry** , `auto_search`-generowane `#import` jest również **no_registry**.)  
   
- `no_registry` jest to przydatne, jeśli chcesz zaimportować krzyżowego typu występującego w odwołaniu biblioteki bez ryzyka kompilatora znajdowanie starszej wersji pliku w rejestrze.  `no_registry` jest również przydatne, jeśli biblioteka typów nie jest zarejestrowana.  
+**no_registry** jest przydatne, jeśli chcesz zaimportować krzyżowe bibliotek typu odwołania, bez ryzyka stałego skanowania kompilatora znajdowanie starszej wersji pliku w rejestrze. **no_registry** jest również przydatne, jeśli biblioteka typów nie jest zarejestrowany.  
   
 ## <a name="see-also"></a>Zobacz też  
- [atrybuty #import](../preprocessor/hash-import-attributes-cpp.md)   
- [#import — dyrektywa](../preprocessor/hash-import-directive-cpp.md)
+ 
+[atrybuty #import](../preprocessor/hash-import-attributes-cpp.md)   
+[#import — dyrektywa](../preprocessor/hash-import-directive-cpp.md)

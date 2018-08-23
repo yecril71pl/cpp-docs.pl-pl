@@ -17,31 +17,34 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 41a54713c562e522c3161b2f3def3afdc210e927
-ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
+ms.openlocfilehash: bbb5bfb19d56ae41d743de795788961690f327b0
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39645675"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42583419"
 ---
 # <a name="cropping-or-extending-an-entire-image-image-editor-for-icons"></a>Przycinanie i rozszerzanie całego obrazu (Edytor obrazów dla ikon)
-Poniższe procedury dowiesz się, jak przycinanie lub rozszerzanie całego obrazu.  
-  
-### <a name="to-crop-or-extend-an-entire-image"></a>Przycinanie lub rozszerzanie całego obrazu  
-  
-1.  Wybierz obraz.  
-  
-     Jeśli część obrazu jest aktualnie zaznaczona, a chcesz zaznaczyć obraz, kliknij w dowolnym miejscu na obrazie poza bieżącym krawędź zaznaczenia.  
-  
-2.  Przeciągnij uchwyt zmiany rozmiaru, do momentu zilustrowano żądanego rozmiaru.  
-  
- Zwykle edytora obrazów Przycina lub powiększenie obrazu przy zmianie rozmiaru przez przeniesienie uchwyt zmiany rozmiaru. Przytrzymanie **Shift** kluczy po przeniesieniu uchwyt zmiany rozmiaru, edytora obrazów [zmniejsza lub rozciąga](../windows/shrinking-or-stretching-an-entire-image-image-editor-for-icons.md) obrazu.  
-  
- Aby uzyskać informacje na temat dodawania zasobów do projektów zarządzanych, zobacz [zasoby w aplikacjach pulpitu](/dotnet/framework/resources/index) w *przewodniku dewelopera .NET Framework*. Aby uzyskać informacji na temat ręcznego dodawania plików zasobów do projektów zarządzanych, uzyskiwania dostępu do zasobów, wyświetlania statycznych zasobów i przypisywania ciągów zasobów do właściwości, zobacz [Creating Resource Files dla aplikacji klasycznych](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Aby uzyskać informacji na temat globalizacja i lokalizacja zasobów w aplikacjach zarządzanych, zobacz [Globalizing i lokalizowanie aplikacji programu .NET Framework](/dotnet/standard/globalization-localization/index).  
-  
-## <a name="requirements"></a>Wymagania  
- Brak  
-  
-## <a name="see-also"></a>Zobacz też  
- [Klawisze skrótów](../windows/accelerator-keys-image-editor-for-icons.md)   
- [Zmiana rozmiaru obrazu](../windows/resizing-an-image-image-editor-for-icons.md)
+
+Poniższe procedury dowiesz się, jak przycinanie lub rozszerzanie całego obrazu.
+
+### <a name="to-crop-or-extend-an-entire-image"></a>Przycinanie lub rozszerzanie całego obrazu
+
+1. Wybierz obraz.
+
+   Jeśli część obrazu jest aktualnie zaznaczona, a chcesz zaznaczyć obraz, kliknij w dowolnym miejscu na obrazie poza bieżącym krawędź zaznaczenia.
+
+2. Przeciągnij uchwyt zmiany rozmiaru, do momentu zilustrowano żądanego rozmiaru.
+
+Zwykle edytora obrazów Przycina lub powiększenie obrazu przy zmianie rozmiaru przez przeniesienie uchwyt zmiany rozmiaru. Przytrzymanie **Shift** kluczy po przeniesieniu uchwyt zmiany rozmiaru, edytora obrazów [zmniejsza lub rozciąga](../windows/shrinking-or-stretching-an-entire-image-image-editor-for-icons.md) obrazu.
+
+Aby uzyskać informacje na temat dodawania zasobów do projektów zarządzanych, zobacz [zasoby w aplikacjach pulpitu](/dotnet/framework/resources/index) w *przewodniku dewelopera .NET Framework*. Aby uzyskać informacji na temat ręcznego dodawania plików zasobów do projektów zarządzanych, uzyskiwania dostępu do zasobów, wyświetlania statycznych zasobów i przypisywania ciągów zasobów do właściwości, zobacz [Creating Resource Files dla aplikacji klasycznych](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Aby uzyskać informacji na temat globalizacja i lokalizacja zasobów w aplikacjach zarządzanych, zobacz [Globalizing i lokalizowanie aplikacji programu .NET Framework](/dotnet/standard/globalization-localization/index).
+
+## <a name="requirements"></a>Wymagania
+
+Brak
+
+## <a name="see-also"></a>Zobacz też
+
+[Klawisze skrótów](../windows/accelerator-keys-image-editor-for-icons.md)  
+[Zmiana rozmiaru obrazu](../windows/resizing-an-image-image-editor-for-icons.md)

@@ -34,17 +34,17 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 105c933ee36c9bbeb634d85963d9254f3b68ebe4
-ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
+ms.openlocfilehash: b05c93bbdfd09bc28288b27a55520c5ac664b723
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/27/2018
-ms.locfileid: "37041016"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42465800"
 ---
 # <a name="cmenutearoffmanager-class"></a>Klasa CMenuTearOffManager
-Zarządza oderwania menu. Menu oderwania jest menu na pasku menu. Użytkownik może usunąć menu oderwania z menu paska menu oderwania float powoduje.  
+Zarządza menu odrywania. Menu odrywania jest menu na pasku menu. Użytkownik może usunąć zrywalne menu z paska menu, powodując unoszenie się menu zrywalnego.  
   
-   [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+   Aby uzyskać więcej informacji, zobacz kod źródłowy znajdujący się w **VC\\atlmfc\\src\\mfc** folder instalacji programu Visual Studio.  
    
 ## <a name="syntax"></a>Składnia  
   
@@ -74,10 +74,10 @@ class CMenuTearOffManager : public CObject
 |[CMenuTearOffManager::SetupTearOffMenus](#setuptearoffmenus)||  
   
 ## <a name="remarks"></a>Uwagi  
- Aby można było używać oderwania menu w aplikacji, musi mieć `CMenuTearOffManager` obiektu. W większości przypadków, nie będzie utworzyć lub zainicjować `CMenuTearOffManager` obiekt bezpośrednio. To jest już obsługiwane podczas wywoływania [CWinAppEx::EnableTearOffMenus](../../mfc/reference/cwinappex-class.md#enabletearoffmenus) funkcji.  
+ Aby można było używać zrywanie menu w aplikacji, konieczne jest posiadanie `CMenuTearOffManager` obiektu. W większości przypadków nie będzie Tworzenie lub zainicjować `CMenuTearOffManager` obiektu bezpośrednio. Jest to obsługiwane za Ciebie, po wywołaniu [CWinAppEx::EnableTearOffMenus](../../mfc/reference/cwinappex-class.md#enabletearoffmenus) funkcji.  
   
 ## <a name="example"></a>Przykład  
- W poniższym przykładzie pokazano, jak utworzyć i zainicjuj `CMenuTearOffManager` obiektu przez wywołanie metody `CWinAppEX::EnableTearOffMenus` metody. Następujący fragment kodu jest częścią [przykład konsola programu Word](../../visual-cpp-samples.md).  
+ Poniższy przykład pokazuje, jak utworzyć i zainicjować `CMenuTearOffManager` obiektu przez wywołanie metody `CWinAppEX::EnableTearOffMenus` metody. Ten fragment kodu jest częścią [przykład konsola programu Word](../../visual-cpp-samples.md).  
   
  [!code-cpp[NVC_MFC_WordPad#12](../../mfc/reference/codesnippet/cpp/cmenutearoffmanager-class_1.cpp)]  
   
@@ -112,7 +112,7 @@ CMenuTearOffManager();
 ```  
   
 ### <a name="remarks"></a>Uwagi  
- W większości przypadków, nie należy tworzyć `CMenuTearOffManager` ręcznie. Struktura aplikacji tworzy `CMenuTearOffManager` obiektu po wywołaniu [CWinAppEx::EnableTearOffMenus](../../mfc/reference/cwinappex-class.md#enabletearoffmenus).  
+ W większości przypadków nie należy tworzyć `CMenuTearOffManager` ręcznie. Szablon aplikacja tworzy `CMenuTearOffManager` obiektu po wywołaniu [CWinAppEx::EnableTearOffMenus](../../mfc/reference/cwinappex-class.md#enabletearoffmenus).  
   
 ##  <a name="getregpath"></a>  CMenuTearOffManager::GetRegPath  
 
@@ -137,19 +137,19 @@ BOOL Initialize(
   
 ### <a name="parameters"></a>Parametry  
  [in] *lpszRegEntry*  
- Ciąg, który zawiera ścieżkę wpisu rejestru. Aplikacje przechowuje ustawienia oderwania paski w ten wpis rejestru.  
+ Ciąg, który zawiera ścieżkę wpisu rejestru. Aplikacje są przechowywane ustawienia odrywania słupków tego wpisu rejestru.  
   
  [in] *uiTearOffMenuFirst*  
- Pierwszy identyfikator menu dla menu oderwania.  
+ Pierwszy identyfikator menu menu odrywania.  
   
  [in] *uiTearOffMenuLast*  
- Identyfikator ostatniego menu dla menu oderwania.  
+ Identyfikator ostatniego menu do menu odrywania.  
   
 ### <a name="return-value"></a>Wartość zwracana  
- Różna od zera, w przypadku powodzenia; w przeciwnym razie 0.  
+ Wartość różną od zera, jeśli to się powiedzie; w przeciwnym razie 0.  
   
 ### <a name="remarks"></a>Uwagi  
- Zakres identyfikatorów menu z *uiTearOffMenuFirst* do *uiTearOffMenuLast* musi być ciągłe interwału. Interwał definiuje kilka kolejnych menu oderwania, które mogą być wyświetlane w tym samym czasie w aplikacji.  
+ Zakres identyfikatorów menu z *uiTearOffMenuFirst* do *uiTearOffMenuLast* musi być ciągłe interwału. Interwał definiuje liczbę menu odrywania, które mogą być wyświetlane w tym samym czasie w aplikacji.  
   
 ##  <a name="isdynamicid"></a>  CMenuTearOffManager::IsDynamicID  
 

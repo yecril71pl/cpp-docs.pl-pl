@@ -1,5 +1,5 @@
 ---
-title: Odwołanie do biblioteki LIB | Dokumentacja firmy Microsoft
+title: Lib — dokumentacja | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -20,18 +20,18 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2a77056c6a3d0427c865658cd945e74e29d672b0
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 4b6eb6e9a1b7be12d125a68d3873401ccdeb7be3
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32371944"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42465803"
 ---
 # <a name="lib-reference"></a>Odwołanie do biblioteki LIB
-Microsoft Library Manager (LIB.exe) tworzy i którymi zarządza biblioteki plików obiektów wspólnej obiektu pliku formatu (COFF). LIB może również służyć do tworzenia plików eksportu i Importuj biblioteki do definicji odwołania wyeksportowane.  
+Menedżer biblioteki Microsoft (LIB.exe) tworzy i zarządza Biblioteka plików obiektów Common Object File Format (COFF). Lib — można również tworzyć pliki eksportu i Importuj biblioteki do definicji odwołanie, eksportowane.  
   
 > [!NOTE]
->  Można uruchomić to narzędzie tylko z [!INCLUDE[vsprvs](../../assembler/masm/includes/vsprvs_md.md)] wiersza polecenia. Nie można uruchomić go z wiersza polecenia systemu lub z Eksploratora plików.  
+>  To narzędzie można uruchomić tylko z poziomu wiersza polecenia programu Visual Studio. Nie można uruchomić go z wiersza poleceń systemu lub Eksploratora plików.  
   
 -   [Informacje o LIB](../../build/reference/overview-of-lib.md)  
   

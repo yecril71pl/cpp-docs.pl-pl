@@ -70,12 +70,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ff18423aa981fc453850084bb2f315a5600cf6fd
-ms.sourcegitcommit: 76fd30ff3e0352e2206460503b61f45897e60e4f
+ms.openlocfilehash: 68f2e8e199fb22295ebd1fd25bbd3332c63e03b6
+ms.sourcegitcommit: b92ca0b74f0b00372709e81333885750ba91f90e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/13/2018
-ms.locfileid: "39027641"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "42465377"
 ---
 # <a name="colesafearray-class"></a>Klasa COleSafeArray
 Klasa pracy z tablicami dowolnego typu i wymiar.  
@@ -379,7 +379,7 @@ VARIANT Detach();
  Podstawowe `VARIANT` wartość w `COleSafeArray` obiektu.  
   
 ### <a name="remarks"></a>Uwagi  
- Funkcja odłącza danych w bezpiecznej tablicy, ustawiając [VARTYPE](http://msdn.microsoft.com/317b911b-1805-402d-a9cb-159546bc88b4) obiektu VT_EMPTY. Odpowiada za wywołującego bezpłatne tablicy przez wywołanie funkcji Windows [VariantClear](http://msdn.microsoft.com/28741d81-8404-4f85-95d3-5c209ec13835).  
+ Funkcja odłącza danych w bezpiecznej tablicy, ustawiając [VARTYPE](http://msdn.microsoft.com/317b911b-1805-402d-a9cb-159546bc88b4) obiektu VT_EMPTY. Odpowiada za wywołującego bezpłatne tablicy przez wywołanie funkcji Windows [VariantClear](/previous-versions/windows/desktop/api/oleauto/nf-oleauto-variantclear).  
   
  W przypadku błędu, funkcja zgłasza [COleException](../../mfc/reference/coleexception-class.md).  
   
@@ -607,7 +607,7 @@ void PutElement(
  Wskaźnik do danych, które można przypisać do tablicy. VT_DISPATCH VT_UNKNOWN i VT_BSTR typów variant wskaźników i nie wymagają innego poziomu pośredniego.  
   
 ### <a name="remarks"></a>Uwagi  
- Ta funkcja automatycznie wywołuje funkcje Windows [SafeArrayLock](https://msdn.microsoft.com/library/windows/desktop/ms221492.aspx) i [SafeArrayUnlock](https://msdn.microsoft.com/library/windows/desktop/ms221246.aspx) przed i po przypisaniu elementu. Jeśli element danych jest ciąg, obiekt lub wariant, funkcja go został poprawnie skopiowany, a w przypadku ciąg, obiekt lub wariant istniejącego elementu jest poprawnie wyczyszczone.  
+ Ta funkcja automatycznie wywołuje funkcje Windows [SafeArrayLock](/previous-versions/windows/desktop/api/oleauto/nf-oleauto-safearraylock) i [SafeArrayUnlock](/previous-versions/windows/desktop/api/oleauto/nf-oleauto-safearrayunlock) przed i po przypisaniu elementu. Jeśli element danych jest ciąg, obiekt lub wariant, funkcja go został poprawnie skopiowany, a w przypadku ciąg, obiekt lub wariant istniejącego elementu jest poprawnie wyczyszczone.  
   
  Należy pamiętać, że masz kilka blokad w tablicy, dzięki czemu można umieścić elementy w tablicy, podczas gdy tablica jest zablokowany przez inne operacje.  
   

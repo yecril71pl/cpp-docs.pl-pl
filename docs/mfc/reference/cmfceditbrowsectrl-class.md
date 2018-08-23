@@ -36,12 +36,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2d00488a7e9a87116317aec35c82b73b40077d8c
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: ec3bfc550843675673782ea92ff7fad6eae2967b
+ms.sourcegitcommit: b92ca0b74f0b00372709e81333885750ba91f90e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37854011"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "42466153"
 ---
 # <a name="cmfceditbrowsectrl-class"></a>Klasa CMFCEditBrowseCtrl
 `CMFCEditBrowseCtrl` Klasa obsługuje formant przeglądania edycji, który jest edytowalnym polem tekstowym opcjonalnie zawierający przycisk przeglądania. Gdy użytkownik kliknie przycisk przeglądania, formant wykonuje niestandardowe lub wyświetla standardowe okno dialogowe zawierający przeglądarkę plików lub przeglądarkę katalogów.  
@@ -174,7 +174,7 @@ void EnableFileBrowseButton(
 ### <a name="remarks"></a>Uwagi  
  Gdy formant przeglądania edycji jest w trybie przeglądania plików, a użytkownik kliknie przycisk przeglądania, formant Wyświetla okno dialogowe Wybieranie standardowych plików.  
   
- Aby uzyskać pełną listę dostępnych flag, zobacz [LPSTRFILE struktury openfilename](https://msdn.microsoft.com/library/ms646839.aspx).  
+ Aby uzyskać pełną listę dostępnych flag, zobacz [LPSTRFILE struktury openfilename](/windows/desktop/api/commdlg/ns-commdlg-tagofna).  
   
 ##  <a name="enablefolderbrowsebutton"></a>  CMFCEditBrowseCtrl::EnableFolderBrowseButton  
  Wyświetla przycisk przeglądania na bieżącym formant przeglądania edycji i umieszcza formantu *przeglądanie folderów* trybu.  

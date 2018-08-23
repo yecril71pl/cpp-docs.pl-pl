@@ -17,17 +17,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8bb529e8aab204df85de2da0a2fdf4c820964239
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: ae300569c4aa04a313f44a23fe988f1de7b826a1
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33340609"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42466352"
 ---
 # <a name="mmcvtsi64xss"></a>_mm_cvtsi64x_ss
 **Microsoft Specific**  
   
- Generuje [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)] rozszerzona wersja przekonwertować 64-bitową liczbę całkowitą wartość skalarną pojedynczej precyzji Floating-Point (`cvtsi2ss`) instrukcji.  
+ Generuje x64 rozszerzona wersja liczby całkowitej przekonwertować 64-bitowych wartości zmiennopozycyjna pojedynczej precyzji skalarnych (`cvtsi2ss`) instrukcji.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -40,26 +40,26 @@ __m128 _mm_cvtsi64x_ss(
   
 #### <a name="parameters"></a>Parametry  
  [in] `a`  
- `__m128` Struktury zawierającej cztery wartości zmiennoprzecinkowych pojedynczej precyzji.  
+ `__m128` Struktury zawierającej czterech wartości zmiennoprzecinkowych pojedynczej precyzji.  
   
  [in] `b`  
- 64-bitową liczbę całkowitą można przekonwertować na wartość zmiennoprzecinkową.  
+ 64-bitową liczbę całkowitą do przekonwertowania na wartość zmiennoprzecinkową.  
   
 ## <a name="return-value"></a>Wartość zwracana  
- `__m128` Struktury, którego pierwsza wartość zmiennoprzecinkowa jest wynikiem konwersji. Trzy wartości są kopiowane z niezmienionym `a`.  
+ `__m128` Strukturę, której pierwsza wartość zmiennoprzecinkowa jest wynik konwersji. Trzy wartości są kopiowane bez zmian od `a`.  
   
 ## <a name="requirements"></a>Wymagania  
   
-|— Wewnętrzne|Architektura|  
+|Wewnętrzne|Architektura|  
 |---------------|------------------|  
 |`_mm_cvtsi64x_ss`|X64|  
   
- **Plik nagłówka** \<intrin.h >  
+ **Plik nagłówkowy** \<intrin.h >  
   
 ## <a name="remarks"></a>Uwagi  
- `__m128` Rejestru XMM reprezentuje strukturę, więc tym wewnętrzna pozwala wartość `b` w pamięci systemowej do przeniesienia do XMM zarejestrować.  
+ `__m128` Struktury reprezentuje rejestru XMM, więc w tym wewnętrzne zezwala na wartość `b` z pamięci systemowej do przeniesienia do XMM zarejestrować.  
   
- Ta procedura jest dostępna tylko wewnętrznie.  
+ Ta procedura jest dostępna wyłącznie jako wewnętrzna.  
   
 ## <a name="example"></a>Przykład  
   
@@ -93,7 +93,7 @@ int main()
 54.000000 0.000000 0.000000 0.000000  
 ```  
   
-**KOŃCOWY określonych firmy Microsoft**  
+**END specyficzny dla Microsoft**  
   
 ## <a name="see-also"></a>Zobacz też  
  [__m128](../cpp/m128.md)   

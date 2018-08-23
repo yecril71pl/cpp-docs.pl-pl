@@ -1,5 +1,5 @@
 ---
-title: Za pomocą akceleratora i obiektów accelerator_view | Dokumentacja firmy Microsoft
+title: Używanie akceleratora i obiektów accelerator_view | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -12,32 +12,33 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9e0f86467de8256eaecbfbf42765de551a1e2f6e
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: d2c53ceb50057e789856aa8e7f67c9f788aa5a0a
+ms.sourcegitcommit: e9ce38decc9f986edab5543de3464b11ebccb123
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33690614"
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "42465786"
 ---
 # <a name="using-accelerator-and-acceleratorview-objects"></a>Używanie akceleratora i obiektów accelerator_view
-Można użyć [akceleratora](../../parallel/amp/reference/accelerator-class.md) i [accelerator_view](../../parallel/amp/reference/accelerator-view-class.md) klas, aby określić urządzenia lub emulatora do uruchomienia kodu C++ AMP na. System może mieć kilka urządzeń lub emulatory, które różnią się według ilości pamięci, obsługi pamięci udostępnionej, obsługę debugowania lub obsługę podwójnej precyzji. C++ Accelerated Massive Parallelism (C++ AMP) udostępnia interfejsy API, który służy do badania dostępne akceleratorów, Ustaw jako domyślny, określ accelerator_views wiele do wielu wywołań parallel_for_each i wykonać specjalne zadania debugowania.  
+Możesz użyć [akceleratora](../../parallel/amp/reference/accelerator-class.md) i [accelerator_view](../../parallel/amp/reference/accelerator-view-class.md) klasy do określenia urządzenia lub emulatora do uruchamiania kodu C++ AMP. System może mieć kilka urządzeń lub emulatorów różniących się ilość pamięci, obsługę pamięci współdzielonej, obsługę debugowania lub wsparcia podwójnej precyzji. C++ Accelerated Massive Parallelism (C++ AMP) udostępnia interfejsy API, który służy do dostępnych akceleratorów, ustawienie jednego z nich jako domyślny, określenia wielu accelerator_views dla wielu wywołań parallel_for_each i wykonywania specjalnych zadań debugowania.  
   
-## <a name="using-the-default-accelerator"></a>Przy użyciu domyślnego akceleratora  
- Środowiska uruchomieniowego C++ AMP wybiera akceleratora domyślną, chyba że napisać kod, aby wybrać określoną. Środowisko uruchomieniowe wybierze akceleratora domyślne w następujący sposób:  
+## <a name="using-the-default-accelerator"></a>Używanie akceleratora domyślnego  
+ 
+Środowisko wykonawcze C++ AMP wybiera akcelerator domyślny, chyba że zostanie napisany kod wybierający konkretny akcelerator. Środowisko wykonawcze wybiera akcelerator domyślny w następujący sposób:  
   
-1.  Jeśli aplikacja działa w trybie debugowania, akceleratora obsługujący debugowania.  
+1. Jeśli aplikacja jest uruchomiona w trybie debugowania, akcelerator obsługuje debugowanie.  
   
-2.  W przeciwnym razie akcelerator, który jest określony przez zmienną środowiskową CPPAMP_DEFAULT_ACCELERATOR, jeśli jest ustawiona.  
+2. W przeciwnym razie akcelerator, który jest określony przez zmienną środowiskową CPPAMP_DEFAULT_ACCELERATOR, jeśli jest ustawiona.  
   
-3.  W przeciwnym razie urządzenia z systemem innym niż emulowane.  
+3. W przeciwnym razie urządzenie emulowane.  
   
-4.  W przeciwnym razie urządzenia, które ma największą ilość dostępnej pamięci.  
+4. W przeciwnym razie urządzenie, które ma największą ilość dostępnej pamięci.  
   
-5.  W przeciwnym razie urządzenia, który nie jest dołączony do wyświetlenia.  
+5. W przeciwnym razie urządzenie, które nie jest dołączony do wyświetlenia.  
   
- Ponadto określa środowisko uruchomieniowe `access_type` z `access_type_auto` dla domyślnego akceleratora. Oznacza to, domyślnego akceleratora używa pamięci współużytkowanej, jeśli jest obsługiwana i jeśli wiadomo, że jej charakterystyki wydajności (przepustowości i opóźnień) być taki sam jak dedykowanej pamięci (z systemem innym niż udostępniana).  
+Ponadto środowisko wykonawcze określa `access_type` z `access_type_auto` dla akceleratora domyślnego. Oznacza to, że akcelerator domyślny używa pamięci współużytkowanej, jeśli jest on obsługiwany i jeśli jego Charakterystyka wydajności (przepustowość i czas oczekiwania) są znane jako takie same jak Dedykowana pamięć (nieudostępniana).  
   
- Właściwości klawiszy skrótów domyślne można określić, tworząc akceleratora domyślne i sprawdzenie jego właściwości. Poniższy przykład kodu wyświetla ścieżkę, ilość pamięci akceleratora, obsługi pamięci udostępnionej, obsługę podwójnej precyzji i ograniczoną obsługę podwójnej precyzji domyślnego akceleratora.  
+Można określić właściwości domyślnego akceleratora przez skonstruowanie domyślnego akceleratora i zbadanie jego właściwości. Poniższy przykład kodu drukuje ścieżkę, ilość pamięci akceleratora, obsługę pamięci współdzielonej, obsługę podwójnej precyzji i ograniczoną obsługę podwójnej precyzji akceleratora domyślnego.  
   
 ```cpp  
 void default_properties() {  
@@ -51,11 +52,10 @@ void default_properties() {
     std::wcout << (accs[i].supports_limited_double_precision ?   
         "limited double precision: true" : "limited double precision: false") << "\n";  
 }  
- 
 ```  
   
-### <a name="cppampdefaultaccelerator-environment-variable"></a>Zmienna środowiskowa CPPAMP_DEFAULT_ACCELERATOR  
- Można ustawić zmiennej środowiskowej CPPAMP_DEFAULT_ACCELERATOR, aby określić `accelerator::device_path` domyślnego akceleratora. Ścieżka jest zależne od sprzętu. Poniższy kod używa `accelerator::get_all` funkcji, aby pobrać listę dostępnych akceleratorów, a następnie wyświetla ścieżkę i właściwości każdego akceleratora.  
+### <a name="cppampdefaultaccelerator-environment-variable"></a>Zmienna środowiskowa Cppamp_default_accelerator  
+Można ustawić zmienną środowiskową CPPAMP_DEFAULT_ACCELERATOR, aby określić `accelerator::device_path` akceleratora domyślnego. Ścieżka jest zależna od sprzętu. Poniższy kod używa `accelerator::get_all` funkcji, aby pobrać listę dostępnych akceleratorów, a następnie wyświetla ścieżkę i charakterystykę każdego akceleratora.  
   
 ```cpp  
 void list_all_accelerators()  
@@ -76,7 +76,8 @@ void list_all_accelerators()
 ```  
   
 ## <a name="selecting-an-accelerator"></a>Wybieranie akceleratora  
- Aby wybrać akceleratora, użyj `accelerator::get_all` metodę, aby pobrać listę dostępnych akceleratorów, a następnie wybierz jedno na podstawie jego właściwości. W tym przykładzie pokazano, jak i wybierz akcelerator, który ma najwięcej pamięci:  
+ 
+Aby wybrać akcelerator, użyj `accelerator::get_all` metodę, aby pobrać listę dostępnych akceleratorów, a następnie wybierz jeden na podstawie jego właściwości. Ten przykład pokazuje, jak wybrać akcelerator, który ma najwięcej pamięci:  
   
 ```cpp  
 void pick_with_most_memory()  
@@ -97,14 +98,15 @@ void pick_with_most_memory()
 ```  
   
 > [!NOTE]
->  Jeden z akceleratorów, które są zwracane przez `accelerator::get_all` to akcelerator procesora CPU. Nie można wykonać kod na akceleratora procesora CPU. Aby filtrować akceleratora procesora CPU, porównanie wartości [device_path —](reference/accelerator-class.md#device_path) właściwości klawiszy skrótów, który jest zwracany przez `accelerator::get_all` z wartością [Accelerator::cpu_accelerator —](reference/accelerator-class.md#cpu_accelerator). Aby uzyskać więcej informacji zobacz sekcję "Specjalne akceleratorów" w tym artykule.  
+> Jeden z akceleratorów, które są zwracane przez `accelerator::get_all` to akcelerator procesora CPU. Nie można wykonać kodu na akceleratorze Procesora. Aby odfiltrować accelerator procesora CPU, porównaj wartość [device_path](reference/accelerator-class.md#device_path) właściwość akceleratora, który jest zwracany przez `accelerator::get_all` z wartością [accelerator::cpu_accelerator](reference/accelerator-class.md#cpu_accelerator). Aby uzyskać więcej informacji zobacz sekcję "Specjalne akceleratory" w tym artykule.  
   
-## <a name="shared-memory"></a>Pamięci współużytkowanej  
- Pamięci współużytkowanej jest pamięci dostępnej dla procesora CPU i akceleratora. Użycie pamięci współużytkowanej eliminuje lub znacznie zmniejsza obciążenie związane z kopiowanie danych między procesora CPU i akceleratora. Choć jest udostępniana pamięć, jest niedostępny jednocześnie przez procesor CPU i akceleratora i powoduje to niezdefiniowane zachowanie. Właściwości klawiszy skrótów [supports_cpu_shared_memory](reference/accelerator-class.md#supports_cpu_shared_memory) zwraca `true` Jeśli akceleratora obsługuje pamięci współużytkowanej i [default_cpu_access_type](reference/accelerator-class.md#default_cpu_access_type) właściwości pobiera domyślne [access_type](reference/concurrency-namespace-enums-amp.md#access_type) pamięci przydzielona w `accelerator`— na przykład `array`s skojarzone z `accelerator`, lub `array_view` obiektów dostępny na `accelerator`. 
+## <a name="shared-memory"></a>Pamięć współużytkowana  
+ 
+Pamięć współużytkowana jest pamięcią, która może zostać oceniony przez Procesor ani akcelerator. Wykorzystanie pamięci współdzielonej eliminuje lub znacznie zmniejsza obciążenie kopiowania danych między procesorem a akceleratorem. Mimo że pamięć jest udostępniona, nie są dostępne w współbieżnie przez Procesor ani akcelerator, a czynność ta powoduje niezdefiniowane zachowanie. Właściwość akceleratora [supports_cpu_shared_memory](reference/accelerator-class.md#supports_cpu_shared_memory) zwraca **true** Jeśli akcelerator obsługuje pamięć współużytkowaną, a [default_cpu_access_type](reference/accelerator-class.md#default_cpu_access_type) pobiera właściwość Wartość domyślna [access_type](reference/concurrency-namespace-enums-amp.md#access_type) dla pamięci przydzielonej na `accelerator`— na przykład **tablicy**związane z `accelerator`, lub `array_view` obiektami `accelerator`. 
   
- Środowiska uruchomieniowego C++ AMP automatycznie wybiera najlepsze domyślne `access_type` dla każdego `accelerator`, ale charakterystyki wydajności (przepustowości i opóźnień) pamięci współużytkowanej może być gorsza niż w przypadku dedykowanego akceleratora (z systemem innym niż udostępniana) pamięci podczas odczytu z Procesora, zapisywanie z Procesora, lub obie. Jeśli pamięci współużytkowanej wykonuje oraz dedykowanej pamięci do odczytu i zapisu z Procesora, środowisko uruchomieniowe domyślnie `access_type_read_write`; w przeciwnym razie środowiska uruchomieniowego wybiera domyślny więcej zachowawcze `access_type`i umożliwia jej zastąpienie, jeśli pamięć dostępu do aplikacji wzorce jego jądra obliczeń korzystać z innego `access_type`.  
+Środowisko wykonawcze C++ AMP automatycznie wybiera najlepsze domyślne `access_type` dla każdego `accelerator`, ale cechy wydajności (przepustowość i czas oczekiwania) pamięci współużytkowanej, może być gorsza niż w przypadku dedykowanego (nieudostępnianego) akceleratora pamięci podczas odczytywania z procesora CPU, zapisu z CPU lub dla obu. Jeśli Pamięć współużytkowana działa jak Dedykowana pamięć dla odczytu i zapisu z Procesora, środowisko uruchomieniowe, wartość domyślna to `access_type_read_write`; w przeciwnym razie środowisko wykonawcze wybiera bardziej konserwatywnego domyślne `access_type`i umożliwia jej zastąpienie, jeśli pamięć już dostępu do aplikacji wzorce jej jąder obliczeniowych odniosą korzyści z innego `access_type`.  
   
- Poniższy przykład kodu pokazuje sposób określania, czy domyślnego akceleratora obsługuje pamięci współużytkowanej, a następnie zastępuje jego domyślny typ dostępu i tworzy `accelerator_view` z niego.  
+Poniższy przykład kodu pokazuje, jak ustalić, czy akcelerator domyślny obsługuje pamięć współużytkowaną, a następnie zastępuje domyślny typ dostępu i tworzy `accelerator_view` z niego.  
   
 ```cpp  
 #include <amp.h>  
@@ -133,10 +135,11 @@ int main()
 }  
 ```  
   
- `accelerator_view` Zawsze odzwierciedla `default_cpu_access_type` z `accelerator` skojarzonej z nim i zapewnia interfejs nie można zastąpić lub zmienić jego `access_type`.  
+`accelerator_view` Zawsze odzwierciedla `default_cpu_access_type` z `accelerator` jest skojarzony i zapewnia interfejs do nadpisania lub zmienić jego `access_type`.  
   
-## <a name="changing-the-default-accelerator"></a>Zmiana domyślnego akceleratora  
- Można zmienić domyślnego akceleratora przez wywołanie metody `accelerator::set_default` metody. Akceleratora domyślne można zmienić tylko po każdej aplikacji i wykonywanie muszą go zmienić przed wykonaniem żadnego kodu na procesorze GPU. Zwróć wszystkie wywołania funkcji kolejne zmiany akceleratora `false`. Jeśli chcesz użyć innego akceleratora w wywołaniu `parallel_for_each`, przeczytaj informacje w sekcji "Używanie wielu akceleratorów" w tym artykule. Poniższy przykład kodu, który nie jest emulowana, nie jest podłączony do wyświetlania i obsługuje podwójnej precyzji ustawia domyślnego akceleratora.  
+## <a name="changing-the-default-accelerator"></a>Zmienianie akceleratora domyślnego  
+ 
+Akcelerator domyślny można zmienić, wywołując `accelerator::set_default` metody. Akcelerator domyślny można zmienić tylko wtedy, gdy na aplikację wykonywania i można go zmienić przed wykonaniem jakiegokolwiek kodu na procesorze GPU. Wszystkie kolejne wywołania funkcji zmiany akceleratora zwracają **false**. Jeśli chcesz użyć innego akceleratora w wywołaniu `parallel_for_each`, zapoznaj się z sekcją "Używanie wielu akceleratorów" w tym artykule. Poniższy przykład kodu ustawia akcelerator domyślny, który nie jest emulowana, nie jest podłączony do wyświetlania i obsługuje podwójną precyzję.  
   
 ```cpp  
 bool pick_accelerator()  
@@ -162,25 +165,29 @@ bool pick_accelerator()
 ```  
   
 ## <a name="using-multiple-accelerators"></a>Używanie wielu akceleratorów  
- Istnieją dwa sposoby używania wielu akceleratory w aplikacji:  
+ 
+Istnieją dwa sposoby użycia wielu akceleratorów w aplikacji:  
 
--   Można przekazać `accelerator_view` obiektów do wywołania metody [parallel_for_each](reference/concurrency-namespace-functions-amp.md#parallel_for_each) metody.  
+- Możesz przekazać `accelerator_view` obiekty do wywołania [parallel_for_each](reference/concurrency-namespace-functions-amp.md#parallel_for_each) metody.  
   
--   Można utworzyć `array` przy użyciu określonego `accelerator_view` obiektu. Środowisko uruchomieniowe C + AMP pobierze `accelerator_view` przechwyconego obiektu `array` obiektu w wyrażeniu lambda.  
+- Można skonstruować **tablicy** obiekt, za pomocą określonego `accelerator_view` obiektu. Środowisko wykonawcze C + AMP wybierze `accelerator_view` obiektu z przechwyconych **tablicy** obiektu w wyrażeniu lambda.  
   
-## <a name="special-accelerators"></a>Specjalne akceleratorów  
- Ścieżki urządzeń trzech specjalnych akceleratorów są dostępne jako właściwości `accelerator` klasy:  
+## <a name="special-accelerators"></a>Akceleratory specjalne  
+ 
+Ścieżki urządzenia dla trzech akceleratorów specjalnych są dostępne jako właściwości `accelerator` klasy:  
   
-- [Accelerator::direct3d_ref — członek danych](reference/accelerator-class.md#direct3d_ref): tego akceleratora jednowątkowe przy użyciu oprogramowania na Procesorze emulować to karta Ogólne. Jest on używany domyślnie do debugowania, ale nie jest przydatne w środowisku produkcyjnym, ponieważ jest mniejsza niż akceleratorów sprzętowych. Ponadto jest dostępna tylko w zestawie SDK programu DirectX i zestaw Windows SDK i jest mało prawdopodobne, można zainstalować na komputerach klientów. Aby uzyskać więcej informacji, zobacz [debugowanie kodu GPU](/visualstudio/debugger/debugging-gpu-code).  
+- [Accelerator::direct3d_ref — element członkowski danych](reference/accelerator-class.md#direct3d_ref): ten akcelerator jednowątkowy używa oprogramowania CPU do emulowania rodzajowej karty graficznej. Jest on używany domyślnie do debugowania, ale nie jest przydatne w środowisku produkcyjnym, ponieważ jest wolniejszy niż akceleratory sprzętowe. Ponadto jest dostępna tylko w zestawie DirectX SDK i zestaw Windows SDK i jest mało prawdopodobne, należy zainstalować na komputerach klientów. Aby uzyskać więcej informacji, zobacz [debugowania kodu GPU](/visualstudio/debugger/debugging-gpu-code).  
   
-- [Accelerator::direct3d_warp — członek danych](reference/accelerator-class.md#direct3d_warp): tego akceleratora zapewnia rozwiązanie powrotu do wykonywania kodu C++ AMP w wielordzeniowych procesorów CPU, które używają Streaming SIMD Extensions (SSE).  
+- [Accelerator::direct3d_warp — element członkowski danych](reference/accelerator-class.md#direct3d_warp): Akcelerator ten dostarcza rozwiązanie alternatywne do wykonywania kodu C++ AMP na wielordzeniowych procesorach, które używają rozszerzenia SSE (Streaming SIMD).  
   
-- [Accelerator::cpu_accelerator — członek danych](reference/accelerator-class.md#cpu_accelerator): tego akceleratora służy do konfigurowania przemieszczania tablic. Nie można go wykonać kod C++ AMP. Aby uzyskać więcej informacji, zobacz [przemieszczania tablic w języku C++ AMP](http://go.microsoft.com/fwlink/p/?linkId=248485) post na Programowanie równoległe w blogu kodu natywnego.  
+- [Accelerator::cpu_accelerator — członek danych](reference/accelerator-class.md#cpu_accelerator): Akcelerator ten można użyć do tworzenia tablic tymczasowych. Nie może wykonywać kodu C++ AMP. Aby uzyskać więcej informacji, zobacz [tablice tymczasowe w bibliotece C++ AMP](http://go.microsoft.com/fwlink/p/?linkId=248485) opublikuj wpis na blogu programowania równoległego w kodzie natywnym.  
   
 ## <a name="interoperability"></a>Współdziałanie  
- Współdziałanie między obsługuje środowiska uruchomieniowego C++ AMP `accelerator_view` klasy i Direct3D [ID3D11Device interfejsu](http://go.microsoft.com/fwlink/p/?linkId=248488). [Create_accelerator_view —](reference/concurrency-direct3d-namespace-functions-amp.md#create_accelerator_view) ma metodę `IUnknown` interfejsu i zwraca `accelerator_view` obiektu. [Get_device](http://msdn.microsoft.com/en-us/8194125e-8396-4d62-aa8a-65831dea8439) ma metodę `accelerator_view` obiektu i zwraca `IUknown` interfejsu.  
+ 
+Środowisko wykonawcze C++ AMP wspiera współdziałanie między `accelerator_view` klasy a występującym w Direct3D [interfejsu ID3D11Device](http://go.microsoft.com/fwlink/p/?linkId=248488). [Create_accelerator_view —](reference/concurrency-direct3d-namespace-functions-amp.md#create_accelerator_view) metoda przyjmuje `IUnknown` interfejsu i zwraca `accelerator_view` obiektu. [Get_device](http://msdn.microsoft.com/8194125e-8396-4d62-aa8a-65831dea8439) metoda przyjmuje `accelerator_view` obiektu i zwraca `IUknown` interfejsu.  
   
 ## <a name="see-also"></a>Zobacz też  
- [C++ AMP (C++ Accelerated Massive Parallelism)](../../parallel/amp/cpp-amp-cpp-accelerated-massive-parallelism.md)   
- [Debugowanie kodu GPU](/visualstudio/debugger/debugging-gpu-code)   
- [accelerator_view, klasa](../../parallel/amp/reference/accelerator-view-class.md)
+ 
+[C++ AMP (C++ Accelerated Massive Parallelism)](../../parallel/amp/cpp-amp-cpp-accelerated-massive-parallelism.md)   
+[Debugowanie kodu GPU](/visualstudio/debugger/debugging-gpu-code)   
+[accelerator_view, klasa](../../parallel/amp/reference/accelerator-view-class.md)

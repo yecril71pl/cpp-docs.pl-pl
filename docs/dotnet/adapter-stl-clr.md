@@ -59,12 +59,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: f87ea6791144b7ce40f4e2d71a2ca7f031adbedf
-ms.sourcegitcommit: bad2441d1930275ff506d44759d283d94cccd1c0
+ms.openlocfilehash: 7023ef21258a5b93d889d02c1b586b524c8b98be
+ms.sourcegitcommit: e9ce38decc9f986edab5543de3464b11ebccb123
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/31/2018
-ms.locfileid: "39376111"
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "42465585"
 ---
 # <a name="adapter-stlclr"></a>adapter (STL/CLR)
 Nagłówek STL/CLR `<cliext/adapter>` określa dwie klasy szablonu (`collection_adapter` i `range_adapter`), a funkcja szablonu `make_collection`.  
@@ -307,7 +307,7 @@ collection_adapter(Coll^ collection);
   
  `collection_adapter(Coll^ collection);`  
   
- Inicjuje przechowywanych uchwytu z z `collection`.  
+ Inicjuje przechowywanych uchwytu z `collection`.  
   
 ### <a name="example"></a>Przykład  
   

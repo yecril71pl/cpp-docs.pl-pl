@@ -1,5 +1,5 @@
 ---
-title: Preprocesora | Dokumentacja firmy Microsoft
+title: Preprocesor | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -14,37 +14,39 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3bb5a9740bab3f69ff66a51cd58e6e1378e178f0
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 980058c588e02751113b889d44cf0bb5f69066f1
+ms.sourcegitcommit: d4c803bd3a684d7951bf88dcecf1f14af43ae411
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33848453"
+ms.lasthandoff: 08/10/2018
+ms.locfileid: "42465858"
 ---
 # <a name="preprocessor"></a>Preprocesor
-Preprocesora jest procesora tekstu, który operuje tekst pliku źródłowego w ramach pierwszej fazy tłumaczenia. Preprocesora nie analizuje tekst źródłowy, ale go Podziel je na tokeny na potrzeby lokalizowanie makro wywołania. Mimo że kompilator wywołuje zwykle preprocesora w jego pierwszym przebiegu, preprocesora również można wywołać oddzielnie przetwarzania tekstu bez kompilowania.  
+Preprocesor jest procesora tekstu, która manipuluje tekst pliku źródłowego w ramach pierwszej fazy tłumaczenia. Preprocesor nie analizuje tekst źródłowy, ale jej Podziel je na tokeny na potrzeby znajdowania wywołania makra. Mimo że kompilator wywołuje zazwyczaj preprocesor w jego pierwszym przebiegu, preprocesor można również wywołać oddzielnie do przetwarzania tekstu bez kompilacji.  
   
- Materiałów referencyjnych na preprocesora zawiera następujące sekcje:  
+Materiał odniesienia na preprocesora zawiera następujące sekcje:  
   
--   [Dyrektywy preprocesora](../preprocessor/preprocessor-directives.md)  
+- [Dyrektywy preprocesora](../preprocessor/preprocessor-directives.md)  
   
--   [Operatory preprocesora](../preprocessor/preprocessor-operators.md)  
+- [Operatory preprocesora](../preprocessor/preprocessor-operators.md)  
   
--   [Wstępnie zdefiniowane makra](../preprocessor/predefined-macros.md)  
+- [Wstępnie zdefiniowane makra](../preprocessor/predefined-macros.md)  
   
--   [Pragmy](../preprocessor/pragma-directives-and-the-pragma-keyword.md)  
+- [Pragmy](../preprocessor/pragma-directives-and-the-pragma-keyword.md)  
   
- **Microsoft Specific**  
+**Microsoft Specific**  
   
- Możesz uzyskać dostęp do listy kodu źródłowego po przetwarzania wstępnego za pomocą [/E](../build/reference/e-preprocess-to-stdout.md) lub [/EP](../build/reference/ep-preprocess-to-stdout-without-hash-line-directives.md) — opcja kompilatora. Obie te opcje preprocesora wywołania i wyjściowych tekst wynikowy na urządzeniu standardowe dane wyjściowe, które w większości przypadków jest konsola. Jest to różnica między dwie opcje /E uwzględnia `#line` dyrektywy i /EP usuwa te dyrektywy wychodzących.  
+Możesz uzyskać go w kodzie źródłowym po przetwarzanie wstępne za pomocą [/E](../build/reference/e-preprocess-to-stdout.md) lub [/EP](../build/reference/ep-preprocess-to-stdout-without-hash-line-directives.md) — opcja kompilatora. Obie opcje preprocesora wywołania i wynikowy tekst na urządzeniu standardowe dane wyjściowe, które w większości przypadków to konsola danych wyjściowych polecenia. Różnica między dwie opcje jest, że zawiera /E `#line` dyrektywy i /EP usuwa te dyrektywy się.  
   
- **KOŃCOWY określonych firmy Microsoft**  
+**END specyficzny dla Microsoft**  
   
 ##  <a name="_predir_special_terminology"></a> Terminologię  
- W dokumentacji preprocesora termin "argument" odnosi się do jednostki, która została przekazana do funkcji. W niektórych przypadkach jest modyfikowany przez "rzeczywiste" lub "formalnych" opisującą wyrażenie argumentu określonych w wywołaniu funkcji i deklaracji argument odpowiednio określone w definicji funkcji.  
+
+W dokumentacji preprocesora termin "argument" odnosi się do jednostki, który jest przekazywany do funkcji. W niektórych przypadkach jest on zmodyfikowany przez "rzeczywiste" lub "formalnych", której opisano wyrażenie argumentu, określone w wywołaniu funkcji i deklaracji argumentów odpowiednio określone w definicji funkcji.  
   
- Termin "zmiennej" oznacza prosty obiekt danych typu C. Termin "obiektu" odnosi się do obiektów C++ i zmiennych; to pojęcie włącznie.  
+Termin "Zmienna" odnosi się do obiektu proste danych typu C. Termin "object" odnosi się do obiektu języka C++ i zmiennych; to termin (włącznie).  
   
 ## <a name="see-also"></a>Zobacz też  
- [Odwołania preprocesora C/C++](../preprocessor/c-cpp-preprocessor-reference.md)   
- [Fazy tłumaczenia](../preprocessor/phases-of-translation.md)
+ 
+[Dokumentacja preprocesora języka C/C++](../preprocessor/c-cpp-preprocessor-reference.md)   
+[Fazy tłumaczenia](../preprocessor/phases-of-translation.md)

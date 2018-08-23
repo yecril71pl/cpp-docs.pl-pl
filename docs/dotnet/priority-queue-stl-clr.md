@@ -61,12 +61,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: cb2ee3fa52612ee3c6abae7a57046564c10c8afb
-ms.sourcegitcommit: bad2441d1930275ff506d44759d283d94cccd1c0
+ms.openlocfilehash: 573b365e0ca0d1c5b607144b1d143796e1ce927c
+ms.sourcegitcommit: e9ce38decc9f986edab5543de3464b11ebccb123
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/31/2018
-ms.locfileid: "39376040"
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "42465247"
 ---
 # <a name="priorityqueue-stlclr"></a>priority_queue (STL/CLR)
 Klasa szablonu opisuje obiekt, który kontroluje różnej długości uporządkowane sekwencję elementów, które ma ograniczony dostęp. Użyj karty kontenera `priority_queue` do zarządzania kontenerem podstawowej jako kolejki priorytetowej.  

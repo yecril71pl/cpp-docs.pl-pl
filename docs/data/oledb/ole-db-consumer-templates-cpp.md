@@ -18,12 +18,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 636f98337cacdeddbdd42dd74e498c0fbd12e4f8
-ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
+ms.openlocfilehash: 853277959a29103a5dcd1e01f709d739f7ce4289
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/30/2018
-ms.locfileid: "39339402"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42466245"
 ---
 # <a name="ole-db-consumer-templates-c"></a>Szablony konsumentów OLE DB (C++)
 Szablony OLE DB konsumenta obsługuje specyfikację wersji 2.6 OLE DB. (Szablony OLE DB odbiorcy są sprawdzane pod względem OLE DB 2.6, ale nie obsługują każdego interfejsu w specyfikacji.) Szablony konsumentów zminimalizować ilość kodu, który trzeba napisać, aby zaimplementować konsumenta OLE DB. Szablony umożliwiają:  
@@ -34,7 +34,7 @@ Szablony OLE DB konsumenta obsługuje specyfikację wersji 2.6 OLE DB. (Szablony
   
 -   Natywne typy danych języka C/C++ do programowania OLE DB.  
   
- Aby użyć szablonów OLE DB, należy zapoznać się z szablonów języka C++, COM i interfejsy OLE DB. Jeśli nie jesteś zaznajomiony z OLE DB, zobacz [OLE DB Podręcznik programisty](https://msdn.microsoft.com/library/ms718124.aspx).  
+ Aby użyć szablonów OLE DB, należy zapoznać się z szablonów języka C++, COM i interfejsy OLE DB. Jeśli nie jesteś zaznajomiony z OLE DB, zobacz [OLE DB Podręcznik programisty](/previous-versions/windows/desktop/ms718124\(v=vs.85\)).  
   
  Szablony OLE DB obsługuje istniejący model obiektów OLE DB, a nie dodaje nowy model obiektu. Klasy górnej warstwy w OLE DB szablonami konsumentów równoległe składniki zdefiniowane w specyfikacji OLE DB. Projekt szablony OLE DB konsumenta obejmuje zaawansowane funkcje, takie jak wielu metod dostępu w zestawie wierszy. Korzystanie z szablonów i wielokrotne dziedziczenie sprawia, że biblioteka małe i elastyczne.  
   
@@ -68,5 +68,5 @@ Szablony OLE DB konsumenta obsługuje specyfikację wersji 2.6 OLE DB. (Szablony
 ## <a name="see-also"></a>Zobacz też  
  [Programowanie OLE DB](../../data/oledb/ole-db-programming.md)   
  [Dostęp do danych](../data-access-in-cpp.md)   
- [Dokumentacja zestawu SDK usługi OLE DB](https://msdn.microsoft.com/library/ms722784.aspx)   
- [Dokumentacja dotycząca OLE DB](https://msdn.microsoft.com/library/ms713643.aspx)
+ [Dokumentacja zestawu SDK usługi OLE DB](/previous-versions/windows/desktop/ms722784\(v=vs.85\))   
+ [Dokumentacja dotycząca OLE DB](/previous-versions/windows/desktop/ms713643\(v=vs.85\))

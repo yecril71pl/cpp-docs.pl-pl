@@ -18,15 +18,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ba4f0e06798bc6419f8db0471f19588039eb679a
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: d2da939fe52e41e122ecd4926e34fb9c4be735ae
+ms.sourcegitcommit: d4c803bd3a684d7951bf88dcecf1f14af43ae411
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33905575"
+ms.lasthandoff: 08/10/2018
+ms.locfileid: "42465328"
 ---
 # <a name="error-directive-cc"></a>#error — dyrektywa (C/C++)
-`#error` Dyrektywy emituje komunikat określone przez użytkownika w czasie kompilacji, a następnie kończy kompilacji.  
+**#Error** dyrektywy emituje komunikat określony przez użytkownika w czasie kompilacji, a następnie kończy kompilacji.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -35,7 +35,8 @@ ms.locfileid: "33905575"
 ```  
   
 ## <a name="remarks"></a>Uwagi  
- Zawiera komunikat o błędzie, który emituje tej dyrektywy *ciąg tokenu* parametru. `token-string` Parametru nie podlega rozwinięciu makra. Ta dyrektywa jest najbardziej przydatna podczas przetwarzania wstępnego powiadamiania dewelopera niespójność program lub naruszenie ograniczenia. W poniższym przykładzie pokazano wystąpił błąd podczas przetwarzania podczas przetwarzania wstępnego:  
+ 
+Zawiera komunikat o błędzie, który emituje ta dyrektywa *ciąg tokenu* parametru. *Ciąg tokenu* parametru nie podlega rozwinięciu makra. Ta dyrektywa jest najbardziej przydatna podczas przetwarzania wstępnego powiadamiania Deweloper niespójność program lub naruszenie ograniczenia. W poniższym przykładzie pokazano wystąpił błąd podczas przetwarzania podczas przetwarzania wstępnego:  
   
 ```  
 #if !defined(__cplusplus)  
@@ -44,4 +45,5 @@ ms.locfileid: "33905575"
 ```  
   
 ## <a name="see-also"></a>Zobacz też  
- [Dyrektywy preprocesora](../preprocessor/preprocessor-directives.md)
+ 
+[Dyrektywy preprocesora](../preprocessor/preprocessor-directives.md)

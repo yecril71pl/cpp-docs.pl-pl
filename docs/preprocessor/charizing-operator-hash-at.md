@@ -18,37 +18,38 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e9e0c0d140d937b7359ff3abf9c0eae145a89210
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: c6aa18936497f0415da331697aceb26f26345500
+ms.sourcegitcommit: d4c803bd3a684d7951bf88dcecf1f14af43ae411
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33912735"
+ms.lasthandoff: 08/10/2018
+ms.locfileid: "42464530"
 ---
 # <a name="charizing-operator-"></a>Operator konwersji na znaki (#@)
 **Microsoft Specific**  
   
- Operatora charizing można używać tylko z argumentami makr. Jeśli **#@** poprzedza parametrów formalnych w definicji makra, rzeczywisty argument jest ujęta w znaki apostrofu i traktowany jako znak po rozwinięciu makra. Na przykład:  
+Charizing operatora można używać tylko w przypadku argumentów makra. Jeśli `#@` poprzedza parametrów formalnych w definicji makra, rzeczywisty argument jest ujęty w znaki pojedynczego cudzysłowu i traktowany jako znak, po rozwinięciu makra. Na przykład:  
   
 ```  
 #define makechar(x)  #@x  
 ```  
   
- powoduje, że instrukcja  
+powoduje, że instrukcja  
   
 ```  
 a = makechar(b);  
 ```  
   
- Aby rozszerzyć, aby  
+Aby rozszerzyć, aby  
   
 ```  
 a = 'b';  
 ```  
   
- Znak pojedynczego cudzysłowu nie można używać z operatorem charizing.  
+Znak pojedynczego cudzysłowu nie można użyć z operatorem charizing.  
   
- **KOŃCOWY określonych firmy Microsoft**  
+**END specyficzny dla Microsoft**  
   
 ## <a name="see-also"></a>Zobacz też  
- [Operatory preprocesora](../preprocessor/preprocessor-operators.md)
+ 
+[Operatory preprocesora](../preprocessor/preprocessor-operators.md)

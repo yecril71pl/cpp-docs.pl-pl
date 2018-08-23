@@ -15,24 +15,25 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ae91b383159a6de7e28507f9e272e5ea60093e0e
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 1227136dfc42269348fa8ac2d996ca80d063c610
+ms.sourcegitcommit: d4c803bd3a684d7951bf88dcecf1f14af43ae411
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33912670"
+ms.lasthandoff: 08/10/2018
+ms.locfileid: "42466225"
 ---
 # <a name="conventions"></a>Konwencje
-Konwencje używane są atrybuty czcionkę dla różnych składników składni. Symbole i czcionek są następujące:  
+Konwencje używane są atrybuty czcionkę dla różnych składników składni. Symbole i czcionki są następujące:  
   
 |Atrybut|Opis|  
 |---------------|-----------------|  
-|*nonterminal*|Kursywą wskazuje symboli nieterminalnych.|  
-|#include|Terminale czcionką pogrubioną są literału wyrazy zastrzeżone i symboli, które należy wprowadzić, jak pokazano. Znaki w tym kontekście zawsze jest uwzględniana wielkość liter.|  
-|OPT|Opt symboli nieterminalnych następuje zawsze są opcjonalne.|  
-|domyślne krój czcionki|Znaki w zestawie opisane lub wymienione w tej czcionce mogą być używane jako terminali w instrukcji.|  
+|*nieterminalnych*|Kursywa wskazuje symboli nieterminalnych.|  
+|#include|Terminale czcionką pogrubioną są literału wyrazy zastrzeżone i symboli, które należy wprowadzić, jak pokazano. Znaki w tym kontekście są zawsze z uwzględnieniem wielkości liter.|  
+|zoptymalizowany pod kątem|Zoptymalizowany pod kątem symboli nieterminalnych następuje zawsze są opcjonalne.|  
+|krój czcionki domyślnej|Znaków w zestawie opisane lub wymienionych w tej czcionce może służyć jako terminali w instrukcji.|  
   
- Dwukropka (:) po nonterminal wprowadza jego definicji. Alternatywne definicje są wyświetlane w osobnych wierszach.  
+Dwukropek (:) po nieterminalnych wprowadza jego definicji. Alternatywne definicje są wymienione w osobnych wierszach.  
   
 ## <a name="see-also"></a>Zobacz też  
- [Podsumowanie gramatyki (C/C++)](../preprocessor/grammar-summary-c-cpp.md)
+
+[Podsumowanie gramatyki (C/C++)](../preprocessor/grammar-summary-c-cpp.md)

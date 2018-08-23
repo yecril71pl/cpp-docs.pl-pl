@@ -42,16 +42,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3b606f168448f833a8e244ad35e52faf4f0afd75
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 1633f846d1e3b6300463ef1cd3b9a6dd8c1446a7
+ms.sourcegitcommit: b92ca0b74f0b00372709e81333885750ba91f90e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32405409"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "42465904"
 ---
 # <a name="fopen-wfopen"></a>fopen, _wfopen
 
-Otwiera plik. Bardziej bezpiecznych wersje tych funkcji, wykonujących kody błędów weryfikacji i przywracać dodatkowy parametr są dostępne; zobacz [fopen_s —, _wfopen_s —](fopen-s-wfopen-s.md).
+Otwiera plik. Bardziej bezpieczne wersje tych funkcji, które wykonują kody błędów sprawdzania poprawności i zwrócenie dodatkowy parametr są dostępne; zobacz [fopen_s —, _wfopen_s —](fopen-s-wfopen-s.md).
 
 ## <a name="syntax"></a>Składnia
 
@@ -76,110 +76,110 @@ Rodzaj dostępu, który jest włączony.
 
 ## <a name="return-value"></a>Wartość zwracana
 
-Każda z tych funkcji zwraca wskaźnik do otwartego pliku. Wartość wskaźnika o wartości null wskazuje błąd. Jeśli *filename* lub *tryb* jest **NULL** pusty ciąg, te funkcje wyzwalacza obsługi nieprawidłowy parametr, który jest opisany w lub [parametru Sprawdzanie poprawności](../../c-runtime-library/parameter-validation.md). Jeśli jest dozwolone wykonywanie, aby kontynuować, te funkcje zwracają **NULL** i ustaw **errno** do **einval —**.
+Każda z tych funkcji zwraca wskaźnik do otwartego pliku. Wartość null wskaźnika wskazuje na błąd. Jeśli *filename* lub *tryb* jest **NULL** lub pustym ciągiem, funkcje te wywołują nieprawidłowy parametr uchwytu, który jest opisany w [parametru Sprawdzanie poprawności](../../c-runtime-library/parameter-validation.md). Jeśli wykonanie może być kontynuowane, te funkcje zwracają **NULL** i ustaw **errno** do **EINVAL**.
 
-Aby uzyskać więcej informacji, zobacz [errno _doserrno —, _sys_errlist — i _sys_nerr —](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
+Aby uzyskać więcej informacji, zobacz [errno, _doserrno, _sys_errlist i _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
 ## <a name="remarks"></a>Uwagi
 
-**Fopen —** funkcja otwiera plik, który jest określony przez *filename*. Domyślnie wąskimi *filename* ciąg jest interpretowany za pomocą strony kodowej ANSI (CP_ACP). W aplikacjach pulpitu systemu Windows można to zmienić na stronę kodową OEM (CP_OEMCP) przy użyciu [SetFileApisToOEM](https://msdn.microsoft.com/library/windows/desktop/aa365534\(v=vs.85\).aspx) funkcji. Można użyć [AreFileApisANSI](https://msdn.microsoft.com/library/windows/desktop/aa363781\(v=vs.85\).aspx) funkcji, aby określić, czy *filename* jest interpretowany za pomocą ANSI lub OEM domyślna systemowa strona kodowa. **_wfopen —** jest wersja znaków dwubajtowych **fopen —**; argumenty **_wfopen —** są ciągami znaków dwubajtowych. W przeciwnym razie **_wfopen —** i **fopen —** zachowują się tak samo. Tylko przy użyciu **_wfopen —** nie ma wpływu na zestaw znaków kodowane, który jest używany w strumieniu plików.
+**Fopen —** funkcja otwiera plik, który jest określony przez *filename*. Domyślnie zawęzić *filename* ciąg jest interpretowany przy użyciu strony kodowej ANSI (CP_ACP). W aplikacjach Windows Desktop można to zmienić stronę kodową OEM (CP_OEMCP) przy użyciu [SetFileApisToOEM](/windows/desktop/api/fileapi/nf-fileapi-setfileapistooem) funkcji. Możesz użyć [AreFileApisANSI](/windows/desktop/api/fileapi/nf-fileapi-arefileapisansi) funkcję, aby określić, czy *filename* jest interpretowany przy użyciu ANSI lub systemowa strona kodowa OEM domyślne. **_wfopen —** to wersja znaku dwubajtowego **fopen —**; argumenty **_wfopen —** są ciągami znaków dwubajtowych. W przeciwnym razie **_wfopen —** i **fopen —** zachowują się identycznie. Za pomocą adresu **_wfopen —** nie ma wpływu na kodowany zestaw znaków używany w strumieniu plików.
 
-**fopen —** akceptuje ścieżek, które są prawidłowe w systemie plików w punkcie wykonywania; **fopen —** akceptuje ścieżki UNC ani ścieżki, obejmujących zamapowane dyski sieciowe, tak długo, jak system, który wykonuje kod ma dostęp do udziału lub mapowany dysk w czasie wykonywania. Podczas konstruowania ścieżki **fopen —**, upewnij się, że dyski, ścieżki lub udziały sieciowe będą dostępne w środowisku wykonywania. Możesz użyć ukośnikami (/) lub ukośników odwrotnych (\\) jako separatorów katalog w ścieżce.
+**fopen —** akceptuje ścieżki, które są prawidłowe w systemie plików w momencie wykonywania. **fopen —** akceptuje ścieżki UNC i ścieżki, które obejmują zamapowane dyski sieciowe, tak długo, jak system, w którym wykonywany jest kod ma dostęp do udziału lub mapowanego dysku sieciowego w czasie wykonywania. Podczas konstruowania ścieżek dla **fopen —**, upewnij się, że dyski, ścieżki lub udziały sieciowe będą dostępne w środowisku wykonawczym. Możesz użyć ukośnikami (/) lub ukośników odwrotnych (\\) jako separatora katalogów w ścieżce.
 
-Zawsze sprawdzić wartość zwrotną, aby zobaczyć, czy wskaźnik ma wartość NULL, zanim będzie wykonywać żadnych dodatkowych operacji na pliku. Jeśli wystąpi błąd, zmiennej globalnej **errno** ustawiono i może zostać użyty do uzyskania informacji o określonych błędach. Aby uzyskać więcej informacji, zobacz [errno _doserrno —, _sys_errlist — i _sys_nerr —](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
+Zawsze sprawdzać zwracaną wartość, aby zobaczyć, czy wskaźnik ma wartość NULL, przed wykonaniem wszelkich dodatkowych operacji na pliku. Jeśli wystąpi błąd, zmienna globalna **errno** ustawiono i może służyć do uzyskiwania informacji o określonych błędach. Aby uzyskać więcej informacji, zobacz [errno, _doserrno, _sys_errlist i _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
 ## <a name="unicode-support"></a>Obsługa formatu Unicode
 
-**fopen —** obsługuje strumienie pliku Unicode. Aby otworzyć plik Unicode, należy przekazać **ccs** Flaga, która określa żądaną kodowanie **fopen —**, wykonując następujące czynności.
+**fopen —** obsługuje strumienie pliku Unicode. Aby otworzyć plik w formacie Unicode, należy przekazać **ccs** flagę, która określa wymagane kodowanie do **fopen —**, wykonując następujące czynności.
 
 > **PLIK *fp = fopen — ("NowyPlik.txt", "rt + ccs =**_kodowanie_**");**
 
-Dozwolone wartości *kodowanie* są **UNICODE**, **UTF-8**, i **UTF-16LE**.
+Dozwolone wartości parametru *kodowanie* są **UNICODE**, **UTF-8**, i **UTF-16LE**.
 
-Gdy plik jest otwarty w trybie Unicode, funkcji wejściowych tłumaczenie dane, które jest do odczytu z pliku do przechowywane jako typ danych UTF-16 **wchar_t**. Funkcje zapisu w pliku otwartym w trybie Unicode oczekiwać buforów, które zawierają dane UTF-16, przechowywane jako typ **wchar_t**. Jeśli plik jest zakodowany jako UTF-8, UTF-16 dane są tłumaczone na UTF-8 gdy jest ona zapisywana i pliku algorytmem UTF-8 zawartości jest przekształcana na UTF-16, została przeczytana. Próba odczytu lub zapisu nieparzystą liczbę bajtów w przyczyny tryb Unicode [sprawdzanie poprawności parametru](../../c-runtime-library/parameter-validation.md) błędu. Do odczytu lub zapisu danych przechowywanych w programie jako UTF-8, tryb tekstowe lub binarne pliku zamiast trybu Unicode. Ponosisz odpowiedzialność za wszelkie wymagane tłumaczenia kodowania.
+Gdy plik zostanie otwarty w trybie Unicode, wprowadzania funkcji tłumaczenia danych, które są odczytywane z pliku w formacie UTF-16 — dane przechowywane jako typ **wchar_t**. Funkcje, które zapisu do pliku, który został otwarty w trybie Unicode oczekiwać buforów, które zawierają dane UTF-16 przechowywane jako typ **wchar_t**. Jeśli plik jest zakodowany w formacie UTF-8, UTF-16 dane są tłumaczone na UTF-8 są zapisywane, gdy algorytmem UTF-8 zawartości jest tłumaczony na UTF-16, została przeczytana. Podjęto próbę odczytu lub zapisu nieparzystą liczbę bajtów w trybie Unicode powoduje, że [Walidacja parametru](../../c-runtime-library/parameter-validation.md) błędu. Do odczytu lub zapisu danych przechowywanych w programach w formacie UTF-8, należy użyć trybu plików tekstowych lub binarnych zamiast trybie Unicode. Odpowiedzialność za wszelkie wymagane tłumaczenia kodowania.
 
-Jeśli plik już istnieje i jest otwarty do odczytu lub dołączania, Byte kolejności znaku (BOM), jeśli znajdujących się w pliku Określa kodowanie. Kodowanie BOM pierwszeństwo nad kodowanie określonym przez **ccs** flagi. **Ccs** kodowanie jest używana tylko podczas BOM nie jest obecny lub plik jest nowy plik.
+Jeśli plik już istnieje i jest otwarty w celu odczytu lub dołączania, bajt kolejności znaku (BOM), jeśli jest obecny w pliku Określa kodowanie. Kodowanie znaku BOM ma pierwszeństwo nad kodowaniem, który jest określony przez **ccs** flagi. **Ccs** używane jest kodowanie tylko wtedy, gdy znak BOM nie jest obecny lub plik jest nowy plik.
 
 > [!NOTE]
-> Wykrywanie BOM ma zastosowanie tylko do plików, które będą otwierane w trybie Unicode (to znaczy przez przekazanie **ccs** flagi).
+> Wykrywanie znaku BOM ma zastosowanie tylko do plików otwieranych w trybie Unicode (czyli przez przekazanie **ccs** flagi).
 
-Poniższa tabela zawiera podsumowanie tryby, które są używane dla różnych **ccs** flagi nadawane **fopen —** i znaczniki kolejności bajtów w pliku.
+W poniższej tabeli podsumowano tryby, które są używane dla różnych **ccs** nadawanym **fopen —** i znaczniki kolejności bajtów w pliku.
 
-### <a name="encodings-used-based-on-ccs-flag-and-bom"></a>Na podstawie używane kodowanie ccs flagę i BOM
+### <a name="encodings-used-based-on-ccs-flag-and-bom"></a>Kodowania używane na podstawie ccs flagę i znaku BOM
 
-|Flaga ccs|Nie BOM (lub nowy plik)|BOM: UTF-8|BOM: UTF-16|
+|flagi ccs|Nie znaku BOM (lub nowy plik)|BOM: UTF-8|ZNAK BOM: UTF-16|
 |----------------|----------------------------|-----------------|------------------|
 |**UNICODE**|**UTF-16LE**|**UTF-8**|**UTF-16LE**|
 |**UTF-8**|**UTF-8**|**UTF-8**|**UTF-16LE**|
 |**UTF-16LE**|**UTF-16LE**|**UTF-8**|**UTF-16LE**|
 
-Pliki otwarty do zapisu w trybie Unicode mają BOM automatycznie zapisywane do nich.
+Pliki otwarte do pisania w trybie Unicode mają automatycznie zapisywany ich znak BOM.
 
-Jeśli *tryb* jest **", ccs =**_kodowanie_**"**, **fopen —** najpierw spróbuje otworzyć plik przy użyciu odczytu i zapisu. Jeśli to się powiedzie, funkcja odczytuje BOM, aby określić kodowanie pliku; Jeśli to się nie powiedzie, funkcja używa domyślne kodowanie używane do pliku. W obu przypadkach **fopen —** zostanie następnie otwórz ponownie plik przy użyciu dostęp tylko do zapisu. (Dotyczy to **""** tryb tylko nie **"+"** trybu.)
+Jeśli *tryb* jest **", ccs =**_kodowanie_**"**, **fopen —** po raz pierwszy próbuje otworzyć plik za pomocą odczytu oraz dostęp do zapisu. W przypadku powodzenia funkcja odczytuje znak BOM, aby określić kodowanie pliku. w przypadku niepowodzenia funkcja używa domyślnego kodowania pliku. W obu przypadkach **fopen —** zostanie następnie ponownie otwórz plik przy użyciu dostępu tylko do zapisu. (Dotyczy to **""** tryb tylko, aby nie **"+"** tryb.)
 
 ### <a name="generic-text-routine-mappings"></a>Mapowania procedur zwykłego tekstu
 
-|Procedura TCHAR.H|_Unicode — & _MBCS nie zdefiniowany|_MBCS zdefiniowano|_UNICODE zdefiniowano|
+|Procedura TCHAR.H|_UNICODE & _MBCS nie zdefiniowano|_MBCS zdefiniowano|_UNICODE zdefiniowano|
 |---------------------|------------------------------------|--------------------|-----------------------|
 |**_tfopen —**|**fopen —**|**fopen —**|**_wfopen**|
 
-Ciąg znaków *tryb* określa rodzaj dostępu do żądanego pliku, w następujący sposób.
+Ciąg znaków *tryb* określa rodzaj dostępu, który jest wnioskowany dla pliku, w następujący sposób.
 
 |*Tryb*|Access|
 |-|-|
-**"r"**|Zostanie otwarty do odczytu. Jeśli plik nie istnieje lub nie można znaleźć, **fopen —** wywołać kończy się niepowodzeniem.
-**"w"**|Otwiera pusty plik do zapisu. Jeśli dany plik istnieje, jego zawartość zostaną zniszczone.
-**""**|Zostanie otwarty do zapisu na końcu pliku (dołączanie) bez usuwania znacznika końca pliku (EOF), zanim nowe dane zostają zapisane do pliku. Tworzy plik, jeśli nie istnieje.
-**"r +"**|Otwiera odczytywanie i zapisywanie. Plik musi istnieć.
-**"w +"**|Otwiera pusty plik na odczytywanie i zapisywanie. Jeśli plik istnieje, jego zawartość zostaną zniszczone.
-**"+"**|Zostanie otwarty do odczytu i dołączenie kodu. Dołączanie operacja obejmuje usunięcie znacznik EOF przed nowe dane zostają zapisane do pliku. Znacznik EOF nie jest przywracany po zakończeniu zapisu. Tworzy plik, jeśli nie istnieje.
+**"r"**|Otwiera do odczytu. Jeśli plik nie istnieje lub nie można odnaleźć **fopen —** wywołanie zakończy się niepowodzeniem.
+**"w"**|Otwiera pusty plik do zapisu. Jeśli dany plik istnieje, jego zawartość zostaje zniszczona.
+**""**|Zostanie otwarty do zapisu na końcu pliku (dołączanie) bez usuwania znacznika końca pliku (EOF), zanim nowe dane są zapisywane do pliku. Tworzy plik, jeśli nie istnieje.
+**"r +"**|Otwiera Odczyt i zapis. Plik musi istnieć.
+**"w +"**|Otwiera pusty plik Odczyt i zapis. Jeśli plik istnieje, jego zawartość zostaje zniszczona.
+**"+"**|Otwiera do odczytu i dołączania. Operacja dołączania obejmuje usunięcie znacznika EOF, zanim nowe dane są zapisywane do pliku. Znacznik EOF nie jest przywracany po zakończeniu zapisu. Tworzy plik, jeśli nie istnieje.
 
-Gdy plik jest otwarty przy użyciu **""** dostęp typu lub **"+"** dostęp typu, zapisać wszystkie operacje wykonywane na końcu pliku. Można można zmieniać ich położenia wskaźnika pliku przy użyciu [fseek](fseek-fseeki64.md) lub [rewind](rewind.md), ale jest zawsze przeniesiony z powrotem na koniec pliku przed żadnego zapisu operacja została wykonana. W związku z tym nie można zastąpić istniejące dane.
+Po otwarciu pliku przy użyciu **""** dostęp typu lub **"+"** uzyskiwać dostępu do typu, wszystkie operacje zapisu występują na końcu pliku. Wskaźnik pliku może być przeniesiony za pomocą [fseek](fseek-fseeki64.md) lub [rewind](rewind.md), ale jest zawsze przenoszony z powrotem na koniec pliku przed wszelkie zapisu operacja została wykonana. W związku z tym nie można zastąpić istniejące dane.
 
-**""** Trybu nie powoduje usunięcia znacznik EOF przed dołącza go do pliku. Po wystąpił dołączanie polecenia typu MS-DOS przedstawia tylko dane do oryginalnego znacznik EOF i nie dołączane do pliku. Przed dołącza go do pliku, **"+"** tryb, usuń znacznik EOF. Po dołączeniu, polecenie typu MS-DOS Wyświetla wszystkie dane w pliku. **"+"** Tryb jest wymagany do dołączenia do pliku strumienia, który kończy się znakiem znacznik EOF CTRL + Z.
+**""** Trybu nie usuwa znacznika EOF przed wykonaniem do pliku. Po wystąpieniu operacji dołączania, polecenie MS-DOS TYPE pokazuje tylko dane przed oryginalnym znacznikiem EOF i nie żadnych danych dołączonych do pliku. Przed wykonaniem do pliku, **"+"** tryb usuwa znacznik EOF. Po operacji dołączania polecenie MS-DOS TYPE pokazuje wszystkie dane w pliku. **"+"** Tryb jest wymagany do wykonania operacji dołączania do pliku strumienia, który jest kończony przy użyciu CTRL + Z określającego znacznik EOF.
 
-Gdy **"r +"**, **"w +"**, lub **"+"** określono typ dostępu, odczytywanie i zapisywanie są włączone (plik jest określany jako otwarte dla "update"). Jednak po przełączeniu odczytu do zapisu operacji wejściowy musi wystąpić znacznik EOF. Jeśli nie ma żadnych EOF, należy użyć pośredniczące wywołania do pliku pozycjonowanie funkcji. Funkcje pozycjonowania w pliku są **fsetpos —**, [fseek](fseek-fseeki64.md), i [rewind](rewind.md). Po przełączeniu zapisywania do odczytu, musisz użyć wywołania pośredniczące **fflush —** lub do pliku pozycjonowanie funkcji.
+Gdy **"r +"**, **"w +"**, lub **"+"** jest określony typ dostępu, Odczyt i zapis są włączone (plik jest określany jako otwarty do "aktualizacji"). Jednak po przełączeniu z odczytu do zapisu operacja wprowadzania musi napotkać znacznik EOF. W przypadku znacznik EOF nie, należy użyć interwencyjnego wywołania funkcji położenia pliku. Funkcje położenia pliku to **fsetpos**, [fseek](fseek-fseeki64.md), i [rewind](rewind.md). Po przełączeniu się z zapisu do odczytu, należy użyć interwencyjnego wywołania **fflush —** lub funkcji położenia pliku.
 
-Oprócz wcześniej wartości następujących znaków można dołączać do *tryb* Aby określić tryb tłumaczenia na znaki nowego wiersza.
+Oprócz wcześniejszych wartości następujące znaki mogą być dołączane do *tryb* określić tryb translacji znaków nowego wiersza.
 
-|*tryb* modyfikator|Tryb tłumaczenia|
+|*tryb* modyfikator|Tryb translacji|
 |-|-|
-**t**|Otwórz w tekście (translacji) trybu.
-**b**|Otwórz w trybie binarnym (niezrozumiały); Tłumaczenie obejmujące znaki powrotu karetki i wysuwu wiersza są pomijane.
+**t**|Otwórz w tekście (tłumaczonym) trybu.
+**b**|Otwórz w trybie binarnym (nieprzetłumaczonym); tłumaczenia znaków powrotu karetki i wysuwu wiersza są pomijane.
 
-W trybie tekstowym CTRL + Z jest interpretowany jako znak EOF danych wejściowych. W plikach, które są otwarte do odczytu/zapisu przy użyciu **"+"**, **fopen —** wyszukuje klawisze CTRL + Z końcem pliku i usuwa go, jeśli jest to możliwe. Odbywa się, ponieważ używa [fseek](fseek-fseeki64.md) i **ftell —** można przenieść w pliku, który może spowodować kończy się CTRL + Z [fseek](fseek-fseeki64.md) będzie działać nieprawidłowo zbliża się koniec pliku.
+W trybie tekstowym CTRL + Z jest interpretowany jako znak końca pliku na dane wejściowe. W plikach otwartych do odczytu/zapisu, przy użyciu **"+"**, **fopen —** wyszukuje klawisze CTRL + Z na końcu pliku i usuwa go, jeśli jest to możliwe. Odbywa się, ponieważ używa [fseek](fseek-fseeki64.md) i **ftell —** można przenieść w pliku, który może spowodować, że kończy się znakiem CRTL + Z [fseek](fseek-fseeki64.md) będzie działać nieprawidłowo w pobliżu końca pliku.
 
-W trybie tekstowym kombinacji wysuwu wiersza powrotu karetki są przekształcane na pojedynczy znaki wysuwu wiersza na wejściu i wysuwu wiersza znaki są tłumaczone na kombinacje wysuwu wiersza powrotu karetki w danych wyjściowych. Jeśli funkcja strumienia I/O Unicode działa w trybie tekstowym (ustawienie domyślne), źródła lub strumień docelowy zakłada, że sekwencja znaków wielobajtowych. W związku z tym funkcji wejścia strumienia Unicode konwertuje znaki wielobajtowe na znaki dwubajtowe (tak jak w przypadku przez wywołanie do **mbtowc —** funkcji). Z tego samego powodu funkcje strumieni wyjściowych Unicode przekonwertować znaki dwubajtowe znaków wielobajtowych (tak jak w przypadku przez wywołanie do **wctomb —** funkcji).
+W trybie tekstowym kombinacje wysuwu wiersza powrotu karetki są tłumaczone na jednym znaki wysuwu wiersza na dane wejściowe, a znaki wysuwu wiersza są tłumaczone na kombinacje wysuwu wiersza powrotu karetki na wyjściu. Kiedy funkcja strumienia we/wy Unicode działa w trybie tekstowym (ustawienie domyślne), źródło lub strumienia docelowego będzie traktowana jako sekwencja znaków wielobajtowych. W związku z tym, funkcje strumienia wejściowego Unicode konwertują znaki wielobajtowe do znaków dwubajtowych (tak jak w przypadku przez wywołanie **mbtowc** funkcji). Z tego samego powodu funkcje strumienia wyjściowego Unicode konwertują ciągi dwubajtowe na znaki wielobajtowe (tak jak w przypadku przez wywołanie **wctomb —** funkcji).
 
-Jeśli **t** lub **b** nie została podana w *tryb*, domyślny tryb tłumaczenia jest definiowana za pomocą zmiennej globalnej [_fmode —](../../c-runtime-library/fmode.md). Jeśli **t** lub **b** jest prefiksem argument, funkcja kończy się niepowodzeniem i zwraca **NULL**.
+Jeśli **t** lub **b** nie jest podana w *tryb*, domyślny tryb translacji jest zdefiniowany przez zmienną globalną [_fmode](../../c-runtime-library/fmode.md). Jeśli **t** lub **b** jest umieszczany przez argument, funkcja kończy się niepowodzeniem i zwraca **NULL**.
 
-Aby uzyskać więcej informacji na temat używania trybach tekstowym i binarnym Unicode i wielobajtowe strumienia I/O zobacz [tekstu i we/wy binarne trybu pliku](../../c-runtime-library/text-and-binary-mode-file-i-o.md) i [we/wy strumienia w Unicode w trybach tekstowym i binarnym](../../c-runtime-library/unicode-stream-i-o-in-text-and-binary-modes.md).
+Aby uzyskać więcej informacji o sposobie używania w trybach tekstowym i binarnym w Unicode i wielobajtowych strumienia we/wy, zobacz [tekstowych i binarnych We/Wy trybu](../../c-runtime-library/text-and-binary-mode-file-i-o.md) i [we/wy Stream w Unicode w trybach tekstowym i binarnym](../../c-runtime-library/unicode-stream-i-o-in-text-and-binary-modes.md).
 
 Poniższe opcje, które można dołączać do *tryb* Aby określić dodatkowe zachowania.
 
 |*tryb* modyfikator|Zachowanie|
 |-|-|
-**c**|Włącz flagę zatwierdzeń skojarzonych z nim *filename* tak, aby zawartość buforów plików są zapisywane bezpośrednio na dysku, jeśli dowolny **fflush —** lub **_flushall —** jest wywoływana.
-**N**|Resetuj flagi zatwierdzeń skojarzonych z nim *filename* na "nie zatwierdzanie." Domyślnie włączone. Zastępuje ona również flagi globalne zatwierdzenia, gdy łącze programu z COMMODE.OBJ. Domyślnie flagi globalne zatwierdzania jest "nie-commit", chyba że zostaną jawnie połączone z programem z COMMODE. OBJ (zobacz [opcje łącza](../../c-runtime-library/link-options.md)).
-**N**|Określa, że plik nie jest dziedziczona przez procesy podrzędne.
-**S**|Określa, że buforowanie jest zoptymalizowana pod kątem, ale nie ograniczona do dostęp sekwencyjny z dysku.
-**R**|Określa, że buforowanie jest zoptymalizowana pod kątem, ale nie ograniczona do dostępie swobodnym z dysku.
-**T**|Określa plik jako tymczasowy. Jeśli to możliwe, nie jest opróżniany na dysku.
-**D**|Określa plik jako tymczasowy. Jest ono usuwane po zamknięciu ostatniego wskaźnika pliku.
-**ccs =**_kodowania_|Określa używany zestaw znaków zakodowanego (jeden z **UTF-8**, **UTF-16LE**, lub **UNICODE**) dla tego pliku. Pozostaw nieokreślony, jeśli chcesz kodowania ANSI.
+**c**|Włącz flagę zatwierdzania dla skojarzonego *filename* tak, aby zawartość buforu pliku są zapisywane bezpośrednio na dysku, jeśli **fflush —** lub **_flushall —** jest wywoływana.
+**N**|Resetowanie flagi zatwierdzenia dla skojarzonego *filename* do "no-commit". Domyślnie włączone. Zastępuje również globalną flagę zatwierdzania, jeśli łączysz się program jest połączony z plikiem COMMODE.OBJ. Domyślna globalnej flagi zatwierdzania to "no-commit", chyba że jawnie połączyć program jest połączony z COMMODE. OBJ (zobacz [opcje łącza](../../c-runtime-library/link-options.md)).
+**N**|Określa, że plik nie jest dziedziczony przez procesy podrzędne.
+**S**|Określa, że buforowanie jest zoptymalizowane pod kątem, ale nie ogranicza się do dostępu sekwencyjnego do dysku.
+**R**|Określa, że buforowanie jest zoptymalizowane pod kątem, ale nie ogranicza się do dostępu losowego do dysku.
+**T**|Określa plik jako tymczasowy. Jeśli to możliwe, nie jest on opróżniany do dysku.
+**D**|Określa plik jako tymczasowy. Jest usuwany po zamknięciu ostatniego wskaźnika do pliku.
+**ccs =**_kodowania_|Określa zakodowany zestaw znaków używany (jeden z **UTF-8**, **UTF-16LE**, lub **UNICODE**) dla tego pliku. Pozostaw nieokreślony, jeśli chcesz, aby kodowania ANSI.
 
-Prawidłowe znaki *tryb* ciąg, który jest używany w **fopen —** i **_fdopen —** odpowiadają *oflag* argumenty, które są używane w [_otwórz](open-wopen.md) i [_sopen —](sopen-wsopen.md), wykonując następujące czynności.
+Prawidłowe znaki *tryb* ciąg, który jest używany w **fopen —** i **_fdopen —** odpowiadają *oflag* argumenty, które są używane w [_otwórz](open-wopen.md) i [_sopen](sopen-wsopen.md), wykonując następujące czynności.
 
-|Znaki w *tryb* ciągu|Odpowiednik *oflag* wartość _otwórz/_sopen —|
+|Znaki w *tryb* ciągu|Równoważne *oflag* wartość _otwórz/_sopen|
 |-------------------------------|----------------------------------------------------|
-|**a**|**_O_wronly —** &#124; **_o_append —** (zazwyczaj **_o_wronly —** &#124; **_o_creat —** &#124;** _o_append — **)|
-|**+**|**_O_rdwr —** &#124; **_o_append —** (zazwyczaj **_o_rdwr —** &#124; **_o_append —** &#124; **_o_creat —** )|
-|**r**|**_O_RDONLY —**|
-|**r +**|**_O_RDWR —**|
-|**w**|**_O_wronly —** (zazwyczaj **_o_wronly —** &#124; **_o_creat —** &#124;** _o_trunc — **)|
-|**w +**|**_O_rdwr —** (zazwyczaj **_o_rdwr —** &#124; **_o_creat —** &#124; **_o_trunc —**)|
-|**b**|**_O_BINARY —**|
-|**t**|**_O_TEXT —**|
+|**a**|**_O_WRONLY** &#124; **_O_APPEND** (zazwyczaj **_O_WRONLY** &#124; **_O_CREAT** &#124;** _O_APPEND **)|
+|**+**|**_O_RDWR** &#124; **_O_APPEND** (zazwyczaj **_O_RDWR** &#124; **_O_APPEND** &#124; **_O_CREAT** )|
+|**r**|**_O_RDONLY**|
+|**r +**|**_O_RDWR**|
+|**w**|**_O_WRONLY** (zazwyczaj **_O_WRONLY** &#124; **_O_CREAT** &#124;** _O_TRUNC **)|
+|**w +**|**_O_RDWR** (zazwyczaj **_O_RDWR** &#124; **_O_CREAT** &#124; **_O_TRUNC**)|
+|**b**|**_O_BINARY**|
+|**t**|**_O_TEXT**|
 |**c**|Brak|
 |**N**|Brak|
 |**S**|**_O_SEQUENTIAL**|
@@ -190,7 +190,7 @@ Prawidłowe znaki *tryb* ciąg, który jest używany w **fopen —** i **_fdopen
 |**ccs = UTF-8**|**_O_UTF8**|
 |**ccs = UTF-16LE**|**_O_UTF16**|
 
-Jeśli używasz **rb** tryb, nie trzeba portu kodu, a Jeśli oczekiwany odczyt większość dużego pliku lub nie są dane dotyczące wydajności sieci, można także rozważyć czy do używania pamięci mapowane Win32 plików jako opcję.
+Jeśli używasz **rb** tryb, nie trzeba przyłącz kod, a jeśli chcą odczytywana większość dużego pliku lub nie jest istotna wydajność sieci, możesz też rozważyć, czy do użycia pamięci plików Win32 mapowanych jako opcję.
 
 ## <a name="requirements"></a>Wymagania
 
@@ -199,13 +199,13 @@ Jeśli używasz **rb** tryb, nie trzeba portu kodu, a Jeśli oczekiwany odczyt w
 |**fopen —**|\<stdio.h>|
 |**_wfopen**|\<stdio.h > lub \<wchar.h >|
 
-**_wfopen —** to rozszerzenie firmy Microsoft. Aby uzyskać więcej informacji na temat zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md).
+**_wfopen —** jest rozszerzeniem firmy Microsoft. Aby uzyskać więcej informacji na temat zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md).
 
-**c**, **n**, **t**, **S**, **R**, **T**, i **D**  *tryb* opcje są rozszerzenia Microsoft do **fopen —** i **_fdopen —** i nie powinna być używana których przenośność ANSI jest potrzebne.
+**c**, **n**, **t**, **S**, **R**, **T**, i **D**  *tryb* opcje są rozszerzeniami firmy Microsoft dla **fopen —** i **_fdopen —** i nie powinna być używana gdzie pożądana jest przenośność kodowania ANSI.
 
 ## <a name="example-1"></a>Przykład 1
 
-Następujący program otwiera dwa pliki.  Używa **fclose —** zamknąć pierwszy plik i **_fcloseall —** zamknięcie wszystkich pozostałych plików.
+Następujący program otwiera dwa pliki.  Używa ona **fclose —** zamknąć pierwszy plik i **_fcloseall** zamknąć wszystkie pozostałe pliki.
 
 ```C
 // crt_fopen.c
@@ -258,7 +258,7 @@ Number of files closed by _fcloseall: 1
 
 ## <a name="example-2"></a>Przykład 2
 
-Następujący program tworzy plik (lub jeden zastępuje, jeśli istnieje), w trybie tekstowym mający kodowanie Unicode.  Następnie zapisuje dwa ciągi do pliku i zamyka plik. Dane wyjściowe są plik o nazwie _wfopen_test.xml, zawierający dane z sekcji danych wyjściowych.
+Następujący program tworzy plik (lub zastępuje jeden, jeśli istnieje), w trybie tekstowym, który ma kodowanie Unicode.  Następnie zapisuje dwa ciągi w pliku i zamyka plik. Dane wyjściowe są w pliku o nazwie _wfopen_test.xml, który zawiera dane z sekcji wyjściowej.
 
 ```C
 // crt__wfopen.c
@@ -316,7 +316,7 @@ int main(int argc, char** argv)
 
 ## <a name="see-also"></a>Zobacz także
 
-[We/Wy strumienia](../../c-runtime-library/stream-i-o.md)<br/>
+[Stream operacji We/Wy](../../c-runtime-library/stream-i-o.md)<br/>
 [Interpretacja wielobajtowych sekwencji znaków](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)<br/>
 [fclose, _fcloseall](fclose-fcloseall.md)<br/>
 [_fdopen, _wfdopen](fdopen-wfdopen.md)<br/>

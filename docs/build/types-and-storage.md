@@ -12,15 +12,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 93d53749ace6b9021bd04e681fc74eb0e5ae4a5e
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: c76ea1bac491a7e9484ac88834c8e4b070c57ae5
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32380618"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42466241"
 ---
 # <a name="types-and-storage"></a>Typy i magazyn
-W tej sekcji opisano wyliczenie i magazynu danych typów [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)] architektury.  
+W tej sekcji opisano wyliczenie i magazyn danych typów x64 architektury.  
   
 -   [Typy skalarne](../build/scalar-types.md)  
   

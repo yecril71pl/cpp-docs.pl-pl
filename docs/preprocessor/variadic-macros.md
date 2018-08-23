@@ -15,20 +15,21 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5918c7d91a3568799f361fcb42edb2e9c7b1445e
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 16549d6b7a80a8aa0f3f98cf9c7cd89c74058959
+ms.sourcegitcommit: d4c803bd3a684d7951bf88dcecf1f14af43ae411
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33850538"
+ms.lasthandoff: 08/10/2018
+ms.locfileid: "42466415"
 ---
 # <a name="variadic-macros"></a>Makra wariadyczne
-Makra Wariadyczne są makra przypominającej funkcji, które zawiera zmienną liczbę argumentów.  
+Makra Wariadyczne są funkcyjne makra, które zawierają zmienną liczbę argumentów.  
   
 ## <a name="remarks"></a>Uwagi  
- Aby korzystać ze zmienną liczbą argumentów makra, wielokropka mogą być określone jako ostatni argument formalny w definicji makra i identyfikator zastępczy `__VA_ARGS__` może służyć do definicji Aby wstawić dodatkowe argumenty.  `__VA_ARGS__` zastępuje wszystkie argumenty, które odpowiada wielokropka umieszczaniu między nimi.  
+ 
+Aby użyć makra wariadyczne, wielokropka może zostać określony jako ostatni argument formalny w definicji makra, a identyfikator zastąpienie `__VA_ARGS__` może służyć w definicji można wstawić dodatkowych argumentów.  `__VA_ARGS__` zastępuje wszystkie argumenty, które odpowiadają wielokropka, w tym oddzielając je przecinkami.  
   
- C Standard określa, że co najmniej jednego argumentu muszą być przekazywane do wielokropka, aby upewnić się, że makro nie odpowiada wyrażeniu zawierającym przecinek końcowy.  Implementacja Visual C++ spowoduje wyłączenie przecinek końcowy, jeżeli nie przekazano argumentów do wielokropka.  
+Standard języka C Określa, że co najmniej jednego argumentu, muszą być przekazywane do wielokropka, aby upewnić się, że makra nie rozpoznać wyrażenia z przecinkiem.  Implementacja języka Visual C++ blokuje wyświetlanie przecinkiem, jeśli żadne argumenty są przekazywane do wielokropka.  
   
 ## <a name="example"></a>Przykład  
   
@@ -58,10 +59,8 @@ int main() {
                              // suppresses the trailing comma  
 }  
 ```  
-  
-## <a name="output"></a>Dane wyjściowe  
-  
-```  
+    
+```Output  
 here are some varargs1(1)  
 here are some varargs2(4)  
 here are some varargs3(5)  
@@ -70,4 +69,5 @@ error
 ```  
   
 ## <a name="see-also"></a>Zobacz też  
- [Makra (C/C++)](../preprocessor/macros-c-cpp.md)
+ 
+[Makra (C/C++)](../preprocessor/macros-c-cpp.md)

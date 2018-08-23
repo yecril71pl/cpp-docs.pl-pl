@@ -12,15 +12,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9031bea449968e22212c241b8418b505710cca8d
-ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
+ms.openlocfilehash: 5248d7c692e3443ea0e0798cf723f38099c3f863
+ms.sourcegitcommit: e9ce38decc9f986edab5543de3464b11ebccb123
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/01/2018
-ms.locfileid: "39408630"
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "42465243"
 ---
 # <a name="alignment-c-declarations"></a>Wyrównanie (deklaracje języka C++)
-Jedną z niższego poziomu funkcji języka C++ jest możliwość określenia dokładne dostosowanie obiektów w pamięci, aby w maksymalnym wykorzystaniu architektury określonego sprzętu. Domyślnie kompilator wyrównywany klasy i struktury elementów członkowskich w ich wartość rozmiaru: bool i char są wyrównane co granice jednobajtowego krótki na dwóch bajtów, int na czterech bajtów, long, double i long double na 8 bajtów. W większości przypadków nie trzeba być zaniepokojona wyrównanie, ponieważ domyślne wyrównanie już jest optymalna. W niektórych przypadkach jednak może osiągnąć znaczne ulepszenia wydajności i oszczędności pamięci, określając niestandardowy Wyrównanie struktury danych użytkownika. Przed Visual Studio 2015 można Użyj __alignof słowa kluczowe specyficzne dla firmy Microsoft i declspec(alignas), aby określić wyrównanie, które są większe niż domyślna. Uruchamianie programu Visual Studio 2015 należy używać języka C ++ 11 standardowe słowa kluczowe [alignof i alignas](../cpp/alignof-and-alignas-cpp.md) przenośności maksymalna kodu. Nowych słów kluczowych zachowują się w taki sam sposób kulisy jako rozszerzenia specyficzne dla firmy Microsoft i dokumentacji dotyczącej tych rozszerzeń ma również zastosowanie do nowych słów kluczowych. Zobacz [__alignof Operator](../cpp/alignof-operator.md) i [wyrównać](../cpp/align-cpp.md) Aby uzyskać więcej informacji. C++ standard nie określa zachowanie pakowania wyrównywanie w granicach mniejszy niż domyślna wartość kompilatora dla platformy docelowej, dlatego musisz nadal korzystać z usługi Microsoft #pragma [pakiet](../preprocessor/pack.md) w takiej sytuacji.  
+Jedną z niższego poziomu funkcji języka C++ jest możliwość określenia dokładne dostosowanie obiektów w pamięci, aby w maksymalnym wykorzystaniu architektury określonego sprzętu. Domyślnie kompilator wyrównywany klasy i struktury elementów członkowskich w ich wartość rozmiaru: wartość logiczna i char są wyrównane na granicach jednobajtowego krótki na dwóch bajtów int na cztery bajty long long, double a double na 8 bajtów. W większości przypadków nie trzeba być zaniepokojona wyrównanie, ponieważ domyślne wyrównanie już jest optymalna. W niektórych przypadkach jednak może osiągnąć znaczne ulepszenia wydajności i oszczędności pamięci, określając niestandardowy Wyrównanie struktury danych użytkownika. Przed Visual Studio 2015 można Użyj __alignof słowa kluczowe specyficzne dla firmy Microsoft i declspec(alignas), aby określić wyrównanie, które są większe niż domyślna. Uruchamianie programu Visual Studio 2015 należy używać języka C ++ 11 standardowe słowa kluczowe [alignof i alignas](../cpp/alignof-and-alignas-cpp.md) przenośności maksymalna kodu. Nowych słów kluczowych zachowują się w taki sam sposób kulisy jako rozszerzenia specyficzne dla firmy Microsoft i dokumentacji dotyczącej tych rozszerzeń ma również zastosowanie do nowych słów kluczowych. Zobacz [__alignof Operator](../cpp/alignof-operator.md) i [wyrównać](../cpp/align-cpp.md) Aby uzyskać więcej informacji. C++ standard nie określa zachowanie pakowania wyrównywanie w granicach mniejszy niż domyślna wartość kompilatora dla platformy docelowej, dlatego musisz nadal korzystać z usługi Microsoft #pragma [pakiet](../preprocessor/pack.md) w takiej sytuacji.  
   
  Standardowej biblioteki języka C++ udostępnia [aligned_storage, klasa](../standard-library/aligned-storage-class.md) do przydzielania pamięci dla struktur danych przy użyciu niestandardowych wyrównanie i [aligned_union, klasa](../standard-library/aligned-union-class.md) do określenia wyrównania Unii z nietrywialnymi konstruktorów i destruktorów.  
   

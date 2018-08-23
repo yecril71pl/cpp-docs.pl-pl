@@ -1,5 +1,5 @@
 ---
-title: Wklejania tokenu (##) — Operator | Dokumentacja firmy Microsoft
+title: Token wklejanie operatora (##) | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,40 +17,40 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c6e224c0327a7ba50c3e13ca78d749f41ad4641f
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: dee802a09fd3ade03ac18cac8556d8073b19eb94
+ms.sourcegitcommit: d4c803bd3a684d7951bf88dcecf1f14af43ae411
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33842234"
+ms.lasthandoff: 08/10/2018
+ms.locfileid: "42465237"
 ---
 # <a name="token-pasting-operator-"></a>Operator wklejania tokenu (##)
-Operator o podwójnej precyzji numer znaku lub "wklejania tokenu" (**##**), jest czasami nazywany "scalania" operator jest używany w makrach zarówno przypominającej obiekt i podobnych funkcji. Zezwala na oddzielnych tokeny mają zostać połączone w jeden token, a w związku z tym nie może być pierwszym lub ostatnim token w definicji makra.  
+Znak numeru double lub "wklejanie tokenów" — operator (**##**), jest czasami nazywane "scalania" operator jest używany w makrach obiektopodobne i funkcyjne. On pozwala oddzielne tokeny mają zostać połączone w pojedynczy token i dlatego nie może być pierwszy lub ostatni token w definicji makra.  
   
- Jeśli formalnego parametru w definicji makra jest przed lub po operator wklejania tokenu, formalny parametr zastępuje rzeczywisty argument nierozwiniętego natychmiast. Argument przed zamiany nie jest przeprowadzane rozwinięciu makra.  
+Jeśli parametr formalny w definicji makra jest przed lub po operator wklejania tokenu, parametr formalny zastępuje rzeczywisty argument nierozwiniętego natychmiast. Argument przed zastępczy nie jest przeprowadzane rozwinięciu makra.  
   
- Następnie, każde wystąpienie operator wklejania tokenu w *ciąg tokenu* zostanie usunięty, i tokenów przed i po jego są połączone. Wynikowy token musi być prawidłowym tokenem. Jeśli tak jest, token jest skanowany w poszukiwaniu możliwe zastąpienie Jeśli termin reprezentuje nazwę makra. Identyfikator reprezentuje nazwę za pomocą którego będzie znany połączonych tokenów w programie przed zastąpienia. Każdy token reprezentuje token, który został zdefiniowany w innym miejscu, w programie lub z wiersza polecenia kompilatora. Biały znak poprzedzające lub następujące operator jest opcjonalna.  
+Następnie w każdym wystąpieniu operator wklejania tokenu w *ciąg tokenu* zostanie usunięty, i są łączone tokenów poprzedzające i następujące go. Wynikowy token musi być prawidłowym tokenem. Jeśli tak jest, token jest skanowany w poszukiwaniu możliwych zastąpienie Jeśli termin reprezentuje nazwę makra. Identyfikator reprezentuje nazwę, za pomocą którego będzie znana połączonych tokenów w programie przed zastępczy. Każdy token reprezentuje token, który został zdefiniowany w innym miejscu, w ramach programu lub w wierszu polecenia kompilatora. Biały znak poprzedzające lub następujące operator jest opcjonalne.  
   
- W tym przykładzie przedstawiono użycie oba operatory tworzenia ciągów i wklejania tokenu określania danych wyjściowych programu:  
+Ten przykład ilustruje użycie oba operatory tworzenia ciągu i wklejania tokenu podczas określania danych wyjściowych programu:  
   
 ```  
 #define paster( n ) printf_s( "token" #n " = %d", token##n )  
 int token9 = 9;  
 ```  
   
- Jeśli makro jest wywoływana z argumentem liczbowym, takich jak  
+Jeśli makro jest wywoływana z argumentem liczbowym, takich jak  
   
 ```  
 paster( 9 );  
 ```  
   
- wydajność — makro  
+makro daje  
   
 ```  
 printf_s( "token" "9" " = %d", token9 );  
 ```  
   
- które stają się  
+które stają się  
   
 ```  
 printf_s( "token9 = %d", token9 );  
@@ -58,7 +58,7 @@ printf_s( "token9 = %d", token9 );
   
 ## <a name="example"></a>Przykład  
   
-```  
+```cpp  
 // preprocessor_token_pasting.cpp  
 #include <stdio.h>  
 #define paster( n ) printf_s( "token" #n " = %d", token##n )  
@@ -75,4 +75,5 @@ token9 = 9
 ```  
   
 ## <a name="see-also"></a>Zobacz też  
- [Operatory preprocesora](../preprocessor/preprocessor-operators.md)
+ 
+[Operatory preprocesora](../preprocessor/preprocessor-operators.md)

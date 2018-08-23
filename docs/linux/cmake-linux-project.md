@@ -15,12 +15,12 @@ ms.author: corob
 ms.workload:
 - cplusplus
 - linux
-ms.openlocfilehash: 743f15cdb9fe8b0233f5b59ca399c0f47704d441
-ms.sourcegitcommit: b0d6777cf4b580d093eaf6104d80a888706e7578
+ms.openlocfilehash: 8e9f5527917dcab663670d59f7a4ce0f51948bfb
+ms.sourcegitcommit: e9ce38decc9f986edab5543de3464b11ebccb123
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/26/2018
-ms.locfileid: "39269543"
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "42464736"
 ---
 # <a name="configure-a-linux-cmake-project"></a>Konfigurowanie projektu CMake systemu Linux
 
@@ -30,7 +30,7 @@ Po zainstalowaniu obciążenia języka Linux C++ dla Visual Studio Obsługa CMak
 W tym temacie założono, że masz podstawowe znajomość Obsługa CMake w programie Visual Studio. Aby uzyskać więcej informacji, zobacz [narzędzia CMake w języku Visual C++](../ide/cmake-tools-for-visual-cpp.md). Aby uzyskać więcej informacji na temat narzędzia CMake, sama zobacz [kompilacji, testów i pakietów usługi oprogramowania za pomocą narzędzia CMake](https://cmake.org/).
 
 > [!NOTE]  
-> Obsługa CMake w programie Visual Studio wymaga obsługi trybu serwera, która została wprowadzona w CMake 3.8. Jeśli Menedżer pakietów zapewnia starszą wersję CMake, można obejść, jego [tworzenia CMake ze źródła](#build-a-supported-cmake release-from-source) lub pobierania go z oficjalną [strony pobierania narzędzia CMake](https://cmake.org/download/). Dla wariantu CMake dostarczonych przez firmę Microsoft, który obsługuje [widok elementów docelowych narzędzia CMake](https://blogs.msdn.microsoft.com/vcblog/2018/04/09/cmake-support-in-visual-studio-targets-view-single-file-compilation-and-cache-generation-settings/) okienko w programie Visual Studio, pobrać najnowsze wstępnie utworzone pliki binarne w [ https://github.com/Microsoft/CMake/releases ](https://github.com/Microsoft/CMake/releases).
+> Obsługa CMake w programie Visual Studio wymaga obsługi trybu serwera, która została wprowadzona w CMake 3.8. Dla wariantu CMake dostarczonych przez firmę Microsoft, który obsługuje [widok elementów docelowych narzędzia CMake](https://blogs.msdn.microsoft.com/vcblog/2018/04/09/cmake-support-in-visual-studio-targets-view-single-file-compilation-and-cache-generation-settings/) okienko w programie Visual Studio, pobrać najnowsze wstępnie utworzone pliki binarne w [ https://github.com/Microsoft/CMake/releases ](https://github.com/Microsoft/CMake/releases). Jeśli Menedżer pakietów zapewnia wersji starszej niż CMake 3.8, możesz go obejść przez [tworzenia CMake ze źródła](#build-a-supported-cmake-release-from-source), lub wolisz używać standardowych CMake, możesz ją pobrać, korzystając z oficjalnego [strony pobierania narzędzia CMake](https://cmake.org/download/). 
 
 ## <a name="open-a-folder"></a>Otwieranie folderu
 

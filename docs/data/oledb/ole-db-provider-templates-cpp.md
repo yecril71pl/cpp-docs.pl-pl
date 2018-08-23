@@ -18,12 +18,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 204abfb28ed58051f27f62b522ed0b02a0a78585
-ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
+ms.openlocfilehash: 4983234cdbc64f4ca8364c5afcc2d8e735ba2d01
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/30/2018
-ms.locfileid: "39339578"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42464943"
 ---
 # <a name="ole-db-provider-templates-c"></a>Szablony dostawców OLE DB (C++)
 OLE DB stanowi ważną część strategii Microsoft Universal Data Access. Konstrukcja OLE DB umożliwia dostęp do danych o wysokiej wydajności z dowolnego źródła danych. Wszelkie dane tabelaryczne są widoczne w OLE DB, niezależnie od tego, czy pochodzi z bazy danych. Elastyczność daje ogromne ilości mocy.  
@@ -63,7 +63,7 @@ OLE DB stanowi ważną część strategii Microsoft Universal Data Access. Konst
  Dostawców może się znacznie różnić złożoności i funkcji. Warto kategoryzowanie dostawcy do dostawcy tylko do odczytu i aktualizowalni dostawcy:  
   
 -   Visual C++ 6.0 obsługiwane są tylko dostawcy tylko do odczytu. [Tworzenie dostawcy OLE DB](../../data/oledb/creating-an-ole-db-provider.md) w tym artykule omówiono sposób tworzenia dostawcy tylko do odczytu.  
--   Visual C++ obsługuje aktualizowalni dostawcy, które można zaktualizować (zapisu) do magazynu danych. Aby uzyskać informacji o dostawcach nadaje się do aktualizacji, zobacz [tworzenie aktualizowalnego dostawcy](../../data/oledb/creating-an-updatable-provider.md); [UpdatePV](http://msdn.microsoft.com/c8bed873-223c-4a7d-af55-f90138c6f38f) przykładowe dane stanowią przykład aktualizowalnego dostawcy.  
+-   Visual C++ obsługuje aktualizowalni dostawcy, które można zaktualizować (zapisu) do magazynu danych. Aby uzyskać informacji o dostawcach nadaje się do aktualizacji, zobacz [tworzenie aktualizowalnego dostawcy](../../data/oledb/creating-an-updatable-provider.md); [UpdatePV](https://github.com/Microsoft/VCSamples/tree/master/VC2010Samples/ATL/OLEDB/Provider/UPDATEPV) przykładowe dane stanowią przykład aktualizowalnego dostawcy.  
   
  Aby uzyskać więcej informacji, zobacz:  
   
@@ -75,5 +75,5 @@ OLE DB stanowi ważną część strategii Microsoft Universal Data Access. Konst
   
 ## <a name="see-also"></a>Zobacz też  
  [Dostęp do danych](../data-access-in-cpp.md)   
- [Dokumentacja zestawu SDK usługi OLE DB](https://msdn.microsoft.com/library/ms722784.aspx)   
- [Dokumentacja dotycząca OLE DB](https://msdn.microsoft.com/library/ms713643.aspx)
+ [Dokumentacja zestawu SDK usługi OLE DB](/previous-versions/windows/desktop/ms722784\(v=vs.85\))   
+ [Dokumentacja dotycząca OLE DB](/previous-versions/windows/desktop/ms713643\(v=vs.85\))

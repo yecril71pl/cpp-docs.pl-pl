@@ -19,18 +19,18 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 218ade95dc3e1084e42ebceda8fbfcb83c16810b
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 047f74a48b2c3f378b81868721b16ecdd22a6379
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33336072"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42466434"
 ---
 # <a name="cpuid-cpuidex"></a>__cpuid, __cpuidex
 
 **Microsoft Specific**
 
-Generuje `cpuid` instrukcji, które są dostępne w x86 i [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]. Ta instrukcja odpytuje procesora informacji o obsługiwanych funkcjach i typ Procesora.
+Generuje `cpuid` instrukcji, która jest dostępna w x86 i x64. Ta instrukcja kwerendy procesora, aby uzyskać informacje dotyczące obsługiwanych funkcji i typu procesora CPU.
 
 ## <a name="syntax"></a>Składnia
 
@@ -50,42 +50,42 @@ void __cpuidex(
 ### <a name="parameters"></a>Parametry
 
 [out] *cpuInfo*<br/>
-Tablica czterech liczb całkowitych zawiera informacje dotyczące obsługiwane funkcje procesora zwrócone w EAX, element EBX ECX i EDX.
+Tablica czterech liczb całkowitych zawierający informacje zwrócone w EAX, EBX, ECX i EDX dotyczące obsługiwanych funkcji procesora CPU.
 
 [in] *function_id*<br/>
-Kod, który określa informacje, aby pobrać, przekazano EAX.
+Kod, który określa informacje należy pobrać, przekazana w EAX.
 
 [in] *subfunction_id*<br/>
-Dodatkowy kod, który określa informacje do pobrania, przekazano ECX.
+Dodatkowy kod, który określa informacje należy pobrać, w ECX.
 
 ## <a name="requirements"></a>Wymagania
 
-|— Wewnętrzne|Architektura|
+|Wewnętrzne|Architektura|
 |---------------|------------------|
-|`__cpuid`|x86, [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|
-|`__cpuidex`|x86, [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|
+|`__cpuid`|x86, x64|
+|`__cpuidex`|x86, x64|
 
-**Plik nagłówka** \<intrin.h >
+**Plik nagłówkowy** \<intrin.h >
 
 ## <a name="remarks"></a>Uwagi
 
-Przechowuje tym wewnętrzna obsługiwane funkcje i informacje o Procesorze zwrócony przez `cpuid` instrukcji w *cpuInfo*, tablica cztery 32-bitowych liczb całkowitych jest wypełnione wartościami EAX, element EBX, ECX i EDX rejestruje (w tym kolejność). Zwrócone informacje ma inne znaczenie w zależności od wartości przekazywane jako *function_id* parametru. Zwracane informacje o różnych wartościach *function_id* jest zależny od procesora.
+Tym wewnętrzne przechowuje obsługiwane funkcje i informacje o Procesorze zwrócony przez `cpuid` instrukcji w *cpuInfo*, tablicę czterech 32-bitowych liczb całkowitych jest wypełniony przy użyciu wartości w EAX, EBX, ECX i EDX rejestruje (w tym kolejność). Zwracane informacje dotyczą ma inne znaczenie w zależności od wartości przekazanej jako *function_id* parametru. Informacje zwracane z różnymi wartościami *function_id* jest zależne od procesora.
 
-`__cpuid` Wewnętrzne czyści rejestru ECX przed wywołaniem `cpuid` instrukcji. `__cpuidex` Wewnętrzne ustawia wartość do rejestru ECX *subfunction_id* przed generuje `cpuid` instrukcji. Dzięki temu można zebrać dodatkowe informacje dotyczące procesora.
+`__cpuid` Wewnętrzne czyści rejestru ECX przed wywołaniem `cpuid` instrukcji. `__cpuidex` Wewnętrzne ustawia wartość do rejestru ECX *subfunction_id* przed generuje `cpuid` instrukcji. Dzięki temu można zbierać dodatkowe informacje na temat procesora.
 
-Aby uzyskać więcej informacji na temat określonych parametrów i wartości zwracane przez te funkcje wewnętrzne na procesory Intel, zobacz dokumentację `cpuid` instrukcji w [Intel 64 i ręczne deweloperów oprogramowania architektury IA-32 Wolumin 2: Odwołanie rozkazów](http://go.microsoft.com/fwlink/p/?LinkID=510021) i [Intel architektura rozkazów rozszerzenia dokumentacja programowania](http://go.microsoft.com/fwlink/p/?LinkID=506627). Dokumentacja firmy Intel używa liścia"warunki" i "subleaf" *function_id* i *subfunction_id* EAX i ECX przekazano parametrów.
+Aby uzyskać więcej informacji na temat określonych parametrów i wartości zwracanych przez te funkcje wewnętrzne na procesorach Intel, zobacz dokumentację dla `cpuid` instrukcji w [Intel 64 i IA-32 architektury oprogramowania deweloperom ręczne Wolumin 2: Dokumentacja rozkazów](http://go.microsoft.com/fwlink/p/?LinkID=510021) i [Intel architektury rozkazów rozszerzenia dokumentacja programowania](http://go.microsoft.com/fwlink/p/?LinkID=506627). Dokumentacja Intel używa warunki "liścia" i "subleaf" dla *function_id* i *subfunction_id* parametry przekazywane w EAX i ECX.
 
-Aby uzyskać więcej informacji na temat określonych parametrów i wartości zwracane przez te funkcje wewnętrzne na procesory AMD, zobacz dokumentację `cpuid` instrukcji w 3 woluminu Podręcznik programisty architektura AMD64: ogólnego przeznaczenia i systemu Instrukcje w przewodnikach poprawki dla rodziny konkretny procesor. Łącza do tych dokumentów i innych informacji, zobacz AMD [przewodniki Developer, instrukcje i dokumenty ISA](http://go.microsoft.com/fwlink/p/?LinkId=510023) strony. Dokumentacja AMD używa warunki "numer funkcji" i "podfunkcji numer" *function_id* i *subfunction_id* EAX i ECX przekazano parametrów.
+Aby uzyskać więcej informacji na temat określonych parametrów i wartości zwracanych przez te funkcje wewnętrzne na procesorach AMD, zobacz dokumentację dla `cpuid` instrukcji w AMD64 architektury programisty ręczne Volume 3: ogólnego przeznaczenia i systemu Instrukcje i przewodników poprawki dla rodziny określony procesor. Aby uzyskać łącza do tych dokumentów i innych informacji, zobacz AMD [przewodników dla deweloperów, podręczników & dokumentów ISA](http://go.microsoft.com/fwlink/p/?LinkId=510023) strony. Dokumentacja AMD używa warunki "Funkcja" i "podfunkcji numer" dla *function_id* i *subfunction_id* parametry przekazywane w EAX i ECX.
 
-Podczas *function_id* argument ma wartość 0, *cpuInfo*[0] Zwraca najwyższy dostępny — rozszerzone *function_id* wartość obsługiwaną przez procesor. Producent procesora jest zakodowany w *cpuInfo*[1], *cpuInfo*[2], a *cpuInfo*[3].
+Gdy *function_id* argument ma wartość 0, *cpuInfo*[0] Zwraca najwyższy dostępny — rozszerzone *function_id* wartość obsługiwaną przez procesor. Producent procesora jest zakodowany w *cpuInfo*[1], *cpuInfo*[2], a *cpuInfo*[3].
 
-Obsługa dla instrukcji określonego zestawu rozszerzeń i funkcje Procesora jest zakodowany w *cpuInfo* wyniki zwrócone wyższej dla *function_id* wartości. Aby uzyskać więcej informacji zobacz instrukcje linki umieszczono powyżej i Poniższy przykładowy kod.
+Pomocy technicznej dla określonych instrukcji zestawu rozszerzeń i funkcji procesora CPU jest zakodowany w *cpuInfo* wyniki zwrócone do nowszego *function_id* wartości. Aby uzyskać więcej informacji zobacz instrukcje linki umieszczono powyżej i poniższy przykład kodu.
 
-Niektóre procesory rozszerzonych instrukcji CPUID funkcja informacje o pomocy technicznej. Jeśli jest to obsługiwane *function_id* wartości z 0x80000000 może służyć do zwracania informacji. Aby określić maksymalną dozwoloną wartość istotne, ustaw *function_id* do 0x80000000. Maksymalna wartość *function_id* obsługiwane w przypadku będą zapisywane funkcje rozszerzonego *cpuInfo*[0].
+Niektóre procesory rozszerzonych funkcji CPUID informacje o pomocy technicznej. Jeśli ta funkcja jest obsługiwana, *function_id* wartości z 0x80000000 mogą być używane do zwracania informacji. Aby określić maksymalną dozwoloną wartość istotne, ustaw *function_id* do 0x80000000. Maksymalna wartość *function_id* obsługiwane w przypadku rozszerzonych funkcji będą zapisywane w *cpuInfo*[0].
 
 ## <a name="example"></a>Przykład
 
-Ten przykład przedstawia niektóre z informacji dostępnych za pośrednictwem `__cpuid` i `__cpuidex` funkcje wewnętrzne. Aplikacja wyświetla listę rozszerzeń zestaw instrukcji obsługiwane przez bieżący procesor. Dane wyjściowe zawierają możliwe wynik dla określonego procesora.
+W tym przykładzie pokazano niektóre informacje, które są dostępne za pośrednictwem `__cpuid` i `__cpuidex` funkcje wewnętrzne. Aplikacja wyświetla listę rozszerzenia zestaw instrukcji, które są obsługiwane przez bieżący procesor. Dane wyjściowe pokazują możliwe wyniki dla określonego procesora.
 
 ```cpp
 // InstructionSet.cpp
@@ -407,7 +407,7 @@ XSAVE supported
 
 ```
 
-**KOŃCOWY określonych firmy Microsoft**
+**END specyficzny dla Microsoft**
 
 ## <a name="see-also"></a>Zobacz także
 

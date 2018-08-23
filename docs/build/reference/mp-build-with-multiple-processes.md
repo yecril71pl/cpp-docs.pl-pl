@@ -18,16 +18,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 29f7fd00a9d24b1941830690633befc75c39eb32
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 3e61f1ac30c2a50cbbefe6c0cbd9e28011a0d0bd
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32379123"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42465432"
 ---
 # <a name="mp-build-with-multiple-processes"></a>/MP (Kompilacja z wieloma procesami)
 
-**/MP** opcji zmniejsza całkowity czas do kompilowania plików źródłowych w wierszu polecenia. **/MP** opcja powoduje, że kompilator, aby utworzyć jeden lub więcej kopie sama każdej z nich w oddzielnych procesach. Następnie te kopie jednocześnie Kompiluj pliki źródłowe. W związku z tym łączny czas wymagany do kompilacji pliki źródłowe, można znacznie zmniejszyć.
+**/MP** opcji może zmniejszyć całkowity czas do kompilowania plików źródłowych w wierszu polecenia. **/MP** opcja powoduje, że kompilator, aby utworzyć co najmniej jeden kopie sama każdego w oddzielnym procesie. Następnie te kopie jednocześnie kompilacji plików źródłowych. W związku z tym łączny czas wymagany do tworzenia plików źródłowych można znacznie zmniejszyć.
 
 ## <a name="syntax"></a>Składnia
 
@@ -36,108 +36,108 @@ ms.locfileid: "32379123"
 ## <a name="arguments"></a>Argumenty
 
 *processMax*<br/>
-(Opcjonalnie) Maksymalna liczba procesów, które można utworzyć przez kompilator.
+(Opcjonalnie) Maksymalna liczba procesów, które kompilator może utworzyć.
 
-*ProcessMax* argumentu musi należeć do zakresu od 1 do 65536. W przeciwnym razie kompilator generuje komunikat ostrzegawczy **D9014**, ignoruje *processMax* argumentu, przyjęto założenie, maksymalna liczba procesów jest 1.
+*ProcessMax* argumentu musi należeć do zakresu od 1 do 65536. W przeciwnym razie kompilator generuje komunikat ostrzegawczy **D9014**, ignoruje *processMax* argument, a przyjęto założenie, maksymalna liczba procesów jest 1.
 
-W przypadku pominięcia *processMax* argumentu, kompilator pobiera numer [procesorów skuteczne](#effective_processors) na komputerze z systemu operacyjnego i utworzenie procesu dla każdego procesora.
+Jeżeli pominięto *processMax* argument, kompilator pobiera numer [skuteczne procesorów](#effective_processors) na komputerze z systemu operacyjnego i tworzy proces dla każdego procesora.
 
 ## <a name="remarks"></a>Uwagi
 
-**/MP** — opcja kompilatora mogą znacznie ograniczyć czas kompilacji podczas kompilowania wielu plików. Aby skrócić czas kompilacji, kompilator tworzy do *processMax* kopii, a następnie używa tych kopii do kompilowania plików źródłowych w tym samym czasie. **/MP** opcja ma zastosowanie do kompilacji, ale nie do łączenia lub w czasie konsolidacji generowania kodu. Domyślnie **/MP** opcja jest wyłączona.
+**/MP** — opcja kompilatora może znacznie skrócić czas kompilacji podczas kompilacji z wielu plików. Aby poprawić czas kompilacji, kompilator tworzy maksymalnie *processMax* kopii, a następnie używa tych kopii widoczne do kompilowania plików źródłowych w tym samym czasie. **/MP** opcja ma zastosowanie do kompilacji, ale nie do łączenia lub linku w czasie generowania kodu. Domyślnie **/MP** opcja jest wyłączona.
 
-Ulepszenia w czasie kompilacji zależy od tego, liczba procesorów na komputerze, to liczba plików do kompilowania i dostępności zasobów systemowych, takich jak wydajność We/Wy. Eksperymentować **/MP** opcję, aby określić ustawienie Najlepsze do kompilacji określonego projektu. Aby uzyskać wskazówki ułatwiające podjęcie decyzji, zobacz [wytyczne](#guidelines).
+Ulepszanie w czasie kompilacji zależy od liczby procesorów w komputerze, liczba plików do kompilacji i dostępność zasobów systemowych, takich jak wydajność We/Wy. Poeksperymentuj z **/MP** opcję, aby określić najlepsze ustawienie do utworzenia danego projektu. Aby uzyskać porady ułatwiające podjęcie decyzji, zobacz [wytycznych](#guidelines).
 
-## <a name="incompatible-options-and-language-features"></a>Niezgodne opcje i funkcje językowe
+## <a name="incompatible-options-and-language-features"></a>Opcje niezgodne i funkcje językowe
 
-**/MP** opcja jest niezgodna z niektórych opcji kompilatora i funkcje językowe. Korzystając z opcji kompilatora niezgodne z **/MP** opcja, kompilator generuje ostrzeżenie **D9030** ignoruje **/MP** opcji. Jeśli używasz funkcji języka niezgodne kompilator generuje błąd [C2813](../../error-messages/compiler-errors-2/compiler-error-c2813.md) , a następnie kończy się lub będzie kontynuowane w zależności od bieżącej kompilator ostrzeżenie opcję poziomu.
+**/MP** opcja jest niezgodna z niektóre opcje kompilatora i funkcje języka. Jeśli używasz opcji kompilatora niezgodne z **/MP** opcja, kompilator generuje ostrzeżenie **D9030** i ignoruje **/MP** opcji. Jeśli używasz funkcji języka niezgodne, kompilator generuje błąd [C2813](../../error-messages/compiler-errors-2/compiler-error-c2813.md) , a następnie kończy się lub jest kontynuowane w zależności od bieżącej ostrzeżenia poziomu opcję kompilatora.
 
 > [!NOTE]
-> Większość opcji są niezgodne, ponieważ jeśli zostały one dopuszczone, współbieżnie wykonywanego kompilatory zapisać ich dane wyjściowe w tym samym czasie w konsoli lub do określonego pliku. W związku z tym dane wyjściowe będą intermix i jest zniekształcony. W niektórych przypadkach kombinację opcji spowodowałoby co gorsza wydajności.
+> Większość opcji są niezgodne, ponieważ jeśli one były dozwolone, kompilatory współbieżnie wykonywanego napisać swoje dane wyjściowe w tym samym czasie konsoli lub do określonego pliku. W rezultacie dane wyjściowe będzie intermix i być uszkodzony. W niektórych przypadkach kombinację opcji czyniłyby gorsza wydajności.
 
 W poniższej tabeli wymieniono opcje kompilatora i funkcje językowe, które są niezgodne z **/MP** opcji:
 
-|Opcja lub funkcji języka|Opis|
+|Opcja lub funkcja językowa|Opis|
 |--------------------------------|-----------------|
-|[#import](../../preprocessor/hash-import-directive-cpp.md) dyrektywy preprocesora|Konwertuje typy w bibliotece typów w klasach C++, a następnie zapisuje te klasy w pliku nagłówka.|
+|[#import](../../preprocessor/hash-import-directive-cpp.md) dyrektywy preprocesora|Konwertuje typy w bibliotece typów na klasy C++, a następnie zapisuje te klasy w pliku nagłówka.|
 |[/E](../../build/reference/e-preprocess-to-stdout.md), [/EP](../../build/reference/ep-preprocess-to-stdout-without-hash-line-directives.md)|Kopiuje dane wyjściowe preprocesora do wyjścia standardowego (**stdout**).|
 |[/Gm](../../build/reference/gm-enable-minimal-rebuild.md)|Umożliwia przyrostowe ponownej kompilacji.|
-|[/ showincludes](../../build/reference/showincludes-list-include-files.md)|Zapisuje listy plików dołączanych do standardowego błędu (**stderr**).|
+|[/ showincludes](../../build/reference/showincludes-list-include-files.md)|Zapisuje listę wszystkich plików dołączanych do błędu standardowego (**stderr**).|
 |[/Yc](../../build/reference/yc-create-precompiled-header-file.md)|Zapisuje prekompilowanego pliku nagłówkowego.|
 
 ## <a name="diagnostic-messages"></a>Komunikaty diagnostyczne
 
-Jeśli określisz funkcji opcji lub języka, który jest niezgodny z **/MP** opcji, zostanie wyświetlony komunikat diagnostycznych. W poniższej tabeli wymieniono komunikaty i zachowania kompilatora:
+W przypadku określenia opcji lub język funkcji, która jest niezgodna z **/MP** opcję, otrzymają komunikat diagnostyczny. W poniższej tabeli wymieniono komunikaty i zachowanie kompilatora:
 
-|Komunikat diagnostycznych|Opis|Zachowanie kompilatora|
+|Komunikat diagnostyczny|Opis|Zachowanie kompilatora|
 |------------------------|-----------------|-----------------------|
-|**C2813**|**#Import** dyrektywy nie jest zgodny z **/MP** opcji.|Kompilacja kończy się, chyba że [poziom ostrzeżeń kompilatora](../../build/reference/compiler-option-warning-level.md) opcja określa, w przeciwnym razie wartość.|
+|**C2813**|**#Import** dyrektywy nie jest zgodny z **/MP** opcji.|Kompilacja kończy się, chyba że [poziom ostrzeżeń kompilatora](../../build/reference/compiler-option-warning-level.md) opcja określa, w przeciwnym razie.|
 |**D9014**|Określono nieprawidłową wartość dla *processMax* argumentu.|Kompilator ignoruje nieprawidłową wartość i przyjmuje wartość 1.|
 |**D9030**|Określona opcja jest niezgodna z **/MP**.|Kompilator ignoruje **/MP** opcji.|
 
-## <a name="guidelines"></a> Wskazówki
+## <a name="guidelines"></a> Wytyczne dotyczące
 
 ### <a name="measure-performance"></a>Miara wydajności
 
-Użyj kompilacji łączny czas pomiaru wydajności. Czas kompilacji można zmierzyć fizycznych zegara, lub skorzystać z oprogramowania, który oblicza różnicę między podczas kompilacji uruchamiania i zatrzymywania. Jeśli komputer ma wiele procesorów, fizycznych zegara może dać dokładniejsze wyniki niż pomiar czasu oprogramowania.
+Użyj kompilacji łączny czas do pomiaru wydajności. Można zmierzyć czas kompilacji, z fizycznego zegar, lub można korzystać z oprogramowania, który oblicza różnicę między podczas uruchamiania i zatrzymywania w kompilacji. Jeśli komputer ma wiele procesorów, fizycznego zegar może przynieść bardziej precyzyjne wyniki niż pomiaru czasu oprogramowania.
 
 ### <a name="effective_processors"></a> Skuteczne procesorów
 
-Na komputerze może być jeden lub więcej procesorów wirtualnych, które są również znane jako *procesorów skuteczne*, dla każdego z jego procesorów fizycznych. Poszczególnych zasobów fizycznych — procesora może mieć co najmniej jeden rdzeni, a jeśli system operacyjny umożliwia wielowątkowość podstawowych, każdy core wydaje się być dwa procesory wirtualne.
+Komputer może mieć jeden lub więcej procesorów wirtualnych, które są również nazywane *skuteczne procesorów*, dla każdego z jego procesorów fizycznych. Każdy fizyczny procesor może mieć jeden lub więcej rdzeni, a jeśli system operacyjny umożliwia wielowątkowość za rdzeń, każdego rdzenia wydaje się być dwa procesory wirtualne.
 
-Na przykład komputer ma jeden procesor skuteczne, jeśli ma ona jednego procesora fizycznego, który ma jeden rdzeń i wielowątkowość jest wyłączona. Z kolei komputera ma osiem procesorów skuteczne, jeśli składa się z dwóch procesorów fizycznych, z których każdy ma dwa rdzenie, a wszystkie rdzenie ma treading. Oznacza to, że (8 procesorów skuteczne) = (2 procesorów fizycznych) x (2 rdzenie dla każdego procesora fizycznego) x (2 procesory skuteczne na podstawowe z powodu wielowątkowość).
+Na przykład komputer ma jeden procesor skuteczne, jeśli ma on jeden procesora fizycznego, który ma jednego rdzenia, a wielowątkowość jest wyłączona. Z kolei komputera ma ośmiu procesorów skuteczne, jeśli ma dwa procesory fizyczne, z których każdy ma dwa rdzenie, a wszystkie rdzenie mają włączoną wielowątkowość. Oznacza to, że (8 procesorów skuteczne) = (2 procesory fizyczne) x (2 rdzenie na procesora fizycznego) x (2 procesory skuteczne na rdzeń procesora ze względu na wielowątkowość).
 
-W przypadku pominięcia *processMax* argument **/MP** opcja, kompilator uzyskuje liczbę procesorów skuteczne z systemu operacyjnego, a następnie tworzy jeden proces dla każdego procesora, skuteczne. Jednak kompilator nie może zagwarantować procesu, który wykonuje na określonym procesorze; system operacyjny sprawia, że tej decyzji.
+Jeżeli pominięto *processMax* argument **/MP** opcji kompilatora uzyskuje liczbę procesorów obowiązujące od systemu operacyjnego, a następnie tworzy jeden proces na procesor skuteczne. Jednak kompilator nie może zagwarantować, który proces jest wykonywany na określonym procesorze; system operacyjny sprawia, że tej decyzji.
 
 ### <a name="number-of-processes"></a>Liczba procesów
 
-Kompilator oblicza liczbę procesów, który będzie używany do kompilowania plików źródłowych. Czy wartość jest mniejsza liczba plików źródłowych, które określają w wierszu polecenia i liczby procesów, które jawnie lub niejawnie określono z **/MP** opcji. Maksymalna liczba procesów można ustawić jawnie, jeśli podasz *processMax* argument **/MP** opcji. Możesz użyć domyślnej, która jest równa liczbie skuteczne procesorów w komputerze, jeśli pominięto *processMax* argumentu.
+Kompilator oblicza liczbę procesów, który będzie używany do kompilowania plików źródłowych. Czy wartość jest mniejsza liczba plików źródłowych, które należy określić w wierszu polecenia i liczbę procesów, należy jawnie lub niejawnie określić za pomocą **/MP** opcji. Można jawnie ustawić maksymalną liczbę procesów, jeśli podasz *processMax* argument **/MP** opcji. Możesz też domyślna, która jest równa liczbie skuteczne procesorów w komputerze, jeśli pominięto *processMax* argumentu.
 
 Załóżmy na przykład wprowadzić następujący wiersz polecenia:
 
 `cl /MP7 a.cpp b.cpp c.cpp d.cpp e.cpp`
 
-W takim przypadku kompilator wykorzystuje pięć procesów, ponieważ jest mniejszy z pięć plików źródłowych i nie więcej niż siedmiu procesów. Alternatywnie Załóżmy, że ten komputer ma dwa procesory skuteczne i wprowadzić następujący wiersz polecenia:
+W tym przypadku kompilator używa pięć procesów, ponieważ jest mniejsza od pięciu pliki źródłowe i maksymalnie siedem procesów. Alternatywnie Załóżmy, że komputer ma dwa procesory skuteczne i wprowadzić następujący wiersz polecenia:
 
 `cl /MP a.cpp b.cpp c.cpp`
 
-W takim przypadku system operacyjny raporty dwa procesory; w związku z tym kompilator używa dwóch procesów w obliczeniu. W związku z tym kompilator będzie wykonywał kompilacji z dwoma procesami, ponieważ jest to mniejszy z dwóch procesów i trzy pliki źródłowe.
+W takim przypadku system operacyjny raporty dwa procesory; w związku z tym kompilator używa dwóch procesów podczas jej obliczania. Co w efekcie kompilator wykona kompilacji przy użyciu dwóch procesów, ponieważ jest mniejszy z dwóch procesów i trzy pliki źródłowe.
 
 ### <a name="source-files-and-build-order"></a>Pliki źródłowe i kolejność kompilacji
 
-Pliki źródłowe nie może zostać skompilowany w takiej samej kolejności, w jakiej występują w wierszu polecenia. Mimo że kompilator tworzy zestaw procesów, które zawierają kopie kompilatora, system operacyjny planuje podczas każdego procesu. W rezultacie nie może zagwarantować, że pliki źródłowe zostanie skompilowany w określonej kolejności.
+Pliki źródłowe może nie zostać skompilowany w tej samej kolejności, w jakiej są wyświetlane w wierszu polecenia. Mimo że kompilator tworzy zbiór procesów, które zawierają kopie kompilatora, system operacyjny planuje podczas wykonywania poszczególnych procesów. W związku z tym nie może zagwarantować, że pliki źródłowe zostanie skompilowany w określonej kolejności.
 
-Plik źródłowy jest kompilowana, gdy proces jest dostępne go skompilować. W przypadku większej liczby plików niż procesy pierwszego zestawu plików jest kompilowana przez procesy dostępne. Pozostałe pliki są przetwarzane, gdy proces zakończy obsługi poprzedniego pliku i jest dostępny do pracy na jednym z pozostałych plików.
+Plik źródłowy jest kompilowana, gdy proces jest dostępny do kompilowania go. W przypadku więcej plików niż procesy pierwszego zestawu plików jest kompilowany przy dostępne procesy. Pozostałe pliki są przetwarzane, gdy proces zakończy się obsługa poprzedni plik jest dostępny do pracy na jednym z pozostałych plików.
 
-Nie określaj tego samego pliku źródłowego wiele razy w wierszu polecenia. Taka sytuacja może wystąpić, na przykład, jeśli narzędzie automatycznie tworzy [pliku reguł programu make](../../build/contents-of-a-makefile.md) opartego na informacje o zależności w projekcie. Jeśli nie określisz **/MP** opcja, kompilator sekwencyjnie przetwarza listę plików i rekompiluje każde wystąpienie pliku. Jednak jeśli określisz **/MP** opcji różnych kompilatory może skompilować tego samego pliku w tym samym czasie. W rezultacie różnych kompilatory podejmie próbę zapisu do tego samego pliku danych wyjściowych w tym samym czasie. Jeden kompilatora będzie uzyskać wyłącznego dostępu zapisu do pliku wyjściowego i powiedzie się i inne kompilatory zakończy się niepowodzeniem z powodu błędu dostępu do pliku.
+Nie określaj tym samym pliku źródłowym wiele razy w wierszu polecenia. Taka sytuacja może wystąpić, na przykład, jeśli narzędzie automatycznie tworzy [pliku reguł programu make](../../build/contents-of-a-makefile.md) opartego na informacje o zależnościach w projekcie. Jeśli nie określisz **/MP** opcja, kompilator przetwarza sekwencyjnie listę plików i następuje rekompilacja każde wystąpienie pliku. Jednak w przypadku określenia **/MP** opcji różne kompilatory może skompilować ten sam plik w tym samym czasie. W konsekwencji różne kompilatory podejmie próbę zapisu do tego samego pliku wyjściowego, w tym samym czasie. Jeden kompilatora będzie uzyskać wyłącznego dostępu zapisu do pliku wyjściowego i powiedzie się i innych kompilatorów zakończy się niepowodzeniem z powodu błędu dostępu do pliku.
 
 ### <a name="using-type-libraries-import"></a>Korzystanie z bibliotek typów (#import)
 
-Kompilator nie obsługuje korzystania z [#import](../../preprocessor/hash-import-directive-cpp.md) dyrektywy z **/MP** przełącznika. Jeśli to możliwe wykonaj następujące kroki w celu obejścia tego problemu:
+Kompilator nie obsługuje użycia [#import](../../preprocessor/hash-import-directive-cpp.md) dyrektywy z **/MP** przełącznika. Jeśli to możliwe wykonaj następujące kroki, aby obejść ten problem:
 
-- Przenieś wszystkie `#import` dyrektywy w sieci z różnych plików do jednego lub więcej plików źródłowych, a następnie skompilować pliki bez **/MP** opcji. Wynik to zestaw plików wygenerowany nagłówek.
+- Przenieś wszystkie `#import` dyrektywy w swojej różnych plików do jednego lub więcej plików źródłowych, a następnie skompilować te pliki bez **/MP** opcji. Wynik jest zestaw plików wygenerowany nagłówek.
 
-- W pozostałe pliki źródłowe, Wstaw [#include](../../preprocessor/hash-include-directive-c-cpp.md) dyrektywy, które Określ wygenerowanego nagłówków, a następnie skompilować pozostałe pliki źródłowe przy użyciu **/MP** opcji.
+- W pozostałe pliki źródłowe, wstawić [#include](../../preprocessor/hash-include-directive-c-cpp.md) dyrektyw, które Określ wygenerowanego nagłówki, a następnie skompilować pozostałe pliki źródłowe przy użyciu **/MP** opcji.
 
 ### <a name="visual-studio-project-settings"></a>Ustawienia projektu programu Visual Studio
 
-#### <a name="the-msbuildexe-tool"></a>Narzędzia MSBUILD.exe
+#### <a name="the-msbuildexe-tool"></a>Narzędzie MSBUILD.exe
 
-[!INCLUDE[vsprvs](../../assembler/masm/includes/vsprvs_md.md)] używa [MSBuild.exe](/visualstudio/msbuild/msbuild-reference) narzędziem do tworzenia rozwiązań i projektów. **/Maxcpucount:**_numer_ (lub **/m:**_numer_) opcji wiersza polecenia narzędzia MSBuild.exe można tworzyć wiele projektów w tym samym czasie. I **/MP** — opcja kompilatora można tworzyć wielu jednostkach kompilacji, w tym samym czasie. Jeśli jest to odpowiednie dla aplikacji, skrócić czas kompilacji rozwiązania przy użyciu jednego lub obu **/MP** i **/maxcpucount**.
+Program Visual Studio używa [MSBuild.exe](/visualstudio/msbuild/msbuild-reference) narzędziem do tworzenia rozwiązań i projektów. **/Maxcpucount:**_numer_ (lub **/m:**_numer_) opcji wiersza polecenia narzędzia MSBuild.exe, można tworzyć wiele projektów w tym samym czasie. I **/MP** — opcja kompilatora mogą tworzyć wiele jednostek kompilacji w tym samym czasie. Jeśli jest ona odpowiednia dla aplikacji, zwiększyć czas kompilacji swoje rozwiązanie przy użyciu jednego lub obu **/MP** i **/maxcpucount**.
 
-Czas kompilacji rozwiązania częściowo zależy od liczby procesów, które wykonują kompilacji. *Numer* argument [/maxcpucount](/visualstudio/msbuild/msbuild-command-line-reference) opcja MSBuild określa maksymalną liczbę projektów do kompilacji w tym samym czasie. Podobnie *processMax* argument **/MP** — opcja kompilatora określa maksymalną liczbę jednostek kompilacji do kompilacji w tym samym czasie. Jeśli **/maxcpucount** opcja określa *P* projektów i **/MP** opcja określa *C* przetwarza maksymalnie *P*  x *C* wykonania procesów w tym samym czasie.
+Czas kompilacji rozwiązania częściowo zależy od liczby procesów, które wykonują kompilacji. *Numer* argument [/maxcpucount](/visualstudio/msbuild/msbuild-command-line-reference) MSBuild opcja określa maksymalną liczbę projektów do kompilacji w tym samym czasie. Podobnie *processMax* argument **/MP** — opcja kompilatora określa maksymalną liczbę jednostek kompilacji do kompilacji w tym samym czasie. Jeśli **/maxcpucount** opcja określa *P* projektów i **/MP** opcja określa *C* przetwarza maksymalnie *P*  x *C* procesy zrealizowane w tym samym czasie.
 
- Wytyczna podjęcie decyzji o użyciu MSBuild lub **/MP** technologii wygląda następująco:
+ Wytycznych dotyczących decydowania, czy należy użyć programu MSBuild lub **/MP** technologia jest w następujący sposób:
 
-- Jeśli istnieje wiele projektów z kilku plików w każdym projekcie, należy użyć narzędzia MSBuild.
+- W przypadku wielu projektów za pomocą kilku plików w każdym projekcie, należy użyć narzędzia MSBuild.
 
-- Jeśli istnieje kilka projektów z wielu plików w każdym projekcie, użyj **/MP** opcji.
+- W przypadku kilku projektów zawierających wiele plików w każdym projekcie użyj **/MP** opcji.
 
-- Jeśli liczba projektów i pliki w projekcie jest rozmieszczana, użyj obu MSBuild i **/MP**. Ustawiany **/maxcpucount** możliwość liczbę projektów do kompilacji i **/MP** opcję, aby liczba procesorów na tym komputerze. Mierzenie wydajności, a następnie Dostosuj ustawienia w celu uzyskania najlepszych wyników. Powtórz cyklu aż do uzyskania z czasem całkowita kompilacji.
+- Jeśli liczba projektów i plików na projekt jest równoważone, należy użyć zarówno programu MSBuild i **/MP**. Początkowo ustawić **/maxcpucount** możliwość liczby projektów do kompilacji i **/MP** opcję, aby liczba procesorów na tym komputerze. Mierzenie wydajności, a następnie Dostosuj ustawienia umożliwiające uzyskanie najlepsze rezultaty. Powtórz ten cykl, dopóki jesteś zadowolony z czasem kompilacji łączna liczba.
 
 #### <a name="the-gm-compiler-option"></a>/Gm — opcja kompilatora
 
-Domyślnie projektu kompilacji umożliwia **/GM ponowną** — opcja kompilatora (kompilacji przyrostowej) dla kompilacji do debugowania i wyłącza dla wersji kompilacji. W związku z tym **/MP** — opcja kompilatora jest automatycznie wyłączana w kompilacjach debugowania, ponieważ powoduje on konflikt z domyślnym **/GM ponowną** — opcja kompilatora.
+Domyślnie, projekt kompilacji umożliwia **/Gm** — opcja kompilatora (kompilacje przyrostowe) dla kompilacji do debugowania i wyłącza opiera się on do wydania. W związku z tym **/MP** — opcja kompilatora jest automatycznie wyłączone w kompilacjach debugowania, ponieważ powoduje on konflikt z domyślnym **/Gm** — opcja kompilatora.
 
 ## <a name="see-also"></a>Zobacz także
 

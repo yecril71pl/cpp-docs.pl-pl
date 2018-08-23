@@ -25,15 +25,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 0c6e304547af06d5de6d81bae2ceace119e4681d
-ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
+ms.openlocfilehash: aee6122e8dbcf85f882e5b78475a2c332b855721
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/30/2018
-ms.locfileid: "39339799"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42465615"
 ---
 # <a name="igetdatasourceimpl-class"></a>IGetDataSourceImpl — Klasa
-Udostępnia implementację [IGetDataSource](https://msdn.microsoft.com/library/ms709721.aspx) obiektu.  
+Udostępnia implementację [IGetDataSource](/previous-versions/windows/desktop/ms709721\(v=vs.85\)) obiektu.  
   
 ## <a name="syntax"></a>Składnia
 
@@ -71,7 +71,7 @@ STDMETHOD(GetDataSource)(REFIID riid,
 ```  
   
 #### <a name="parameters"></a>Parametry  
- Zobacz [IGetDataSource::GetDataSource](https://msdn.microsoft.com/library/ms725443.aspx) w *OLE DB Podręcznik programisty*.  
+ Zobacz [IGetDataSource::GetDataSource](/previous-versions/windows/desktop/ms725443\(v=vs.85\)) w *OLE DB Podręcznik programisty*.  
   
 ### <a name="remarks"></a>Uwagi  
  Parametr jest przydatne, jeśli potrzebujesz uzyskać dostęp do właściwości w obiekcie źródła danych.  

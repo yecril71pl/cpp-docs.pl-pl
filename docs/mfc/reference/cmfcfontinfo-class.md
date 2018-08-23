@@ -28,12 +28,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 23ff2d857938881f1c3d9f02a1d8465a5a4e97c7
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: ff2f4a6962ee70882ba85a15ea213f7fe6ffe11f
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37852422"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42466247"
 ---
 # <a name="cmfcfontinfo-class"></a>Klasa CMFCFontInfo
 `CMFCFontInfo` Klasa opisuje nazwę i inne atrybuty czcionki.  
@@ -115,7 +115,7 @@ CMFCFontInfo(const CMFCFontInfo& src);
 ### <a name="return-value"></a>Wartość zwracana  
   
 ### <a name="remarks"></a>Uwagi  
- Ta dokumentacja używa warunki *zestaw znaków* i *skryptu* zamiennie. A *skryptu*, który jest również nazywany systemem zapisu to zbiór znaków i zasady dotyczące pisania te znaki w co najmniej jeden język. Zbiór znaków obejmują alfabetu i znaków interpunkcyjnych, używany w tym skrypcie. Na przykład łacińskim jest używany w języku angielskim, jak jest używany w Stanach Zjednoczonych, a jego alfabetu zawiera znaki od A do Z. `lfCharSet` Członkiem [LOGFONT](http://msdn.microsoft.com/library/windows/desktop/dd145037) struktury określa zestaw znaków. Na przykład, wartość ANSI_CHARSET Określa [!INCLUDE[vcpransi](../../atl-mfc-shared/reference/includes/vcpransi_md.md)] zestaw znaków, który zawiera alfabecie łacińskim.  
+ Ta dokumentacja używa warunki *zestaw znaków* i *skryptu* zamiennie. A *skryptu*, który jest również nazywany systemem zapisu to zbiór znaków i zasady dotyczące pisania te znaki w co najmniej jeden język. Zbiór znaków obejmują alfabetu i znaków interpunkcyjnych, używany w tym skrypcie. Na przykład łacińskim jest używany w języku angielskim, jak jest używany w Stanach Zjednoczonych, a jego alfabetu zawiera znaki od A do Z. `lfCharSet` Członkiem [LOGFONT](http://msdn.microsoft.com/library/windows/desktop/dd145037) struktury określa zestaw znaków. Na przykład wartość ANSI_CHARSET określa zestawu znaków ANSI, który zawiera alfabecie łacińskim.  
   
 ##  <a name="getfullname"></a>  CMFCFontInfo::GetFullName  
  Pobiera nazwy połączonych czcionkę i jej znak zestawu (skrypt).  

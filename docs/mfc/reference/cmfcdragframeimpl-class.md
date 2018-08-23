@@ -16,16 +16,16 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 458288ecff0b457205ba1735494ad8106c3feae7
-ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
+ms.openlocfilehash: aee2c58d8763581987fec40b0cb486c67363697b
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/27/2018
-ms.locfileid: "37040951"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42465250"
 ---
 # <a name="cmfcdragframeimpl-class"></a>Klasa CMFCDragFrameImpl
-`CMFCDragFrameImpl` Klasy rysuje prostokąt przeciągania, który jest wyświetlany, gdy użytkownik przeciąga okienko w trybie standardowe dokowania.  
-   [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+`CMFCDragFrameImpl` Klasy rysuje przeciągnij prostokąt, który jest wyświetlany, gdy użytkownik przeciągnie okienko w trybie standardowego dokowania.  
+   Aby uzyskać więcej informacji, zobacz kod źródłowy znajdujący się w **VC\\atlmfc\\src\\mfc** folder instalacji programu Visual Studio.  
    
 ## <a name="syntax"></a>Składnia  
   
@@ -34,9 +34,9 @@ class CMFCDragFrameImpl
 ```  
   
 ## <a name="remarks"></a>Uwagi  
- Obiekt tej klasy jest osadzony w każdym [klasy CPane](../../mfc/reference/cpane-class.md) obiektu. W związku z tym poszczególnych okienkach, która używa `CanFloat` metoda Wyświetla przeciągnij prostokąt podczas przeciągania go przez użytkownika.  
+ Obiekt tej klasy jest osadzony w każdym [klasa CPane](../../mfc/reference/cpane-class.md) obiektu. W związku z tym, każde okienko, który używa `CanFloat` metoda Wyświetla przeciągnij prostokąt, gdy użytkownik przeciągnie go.  
   
- Grubość przeciągnij prostokąt można kontrolować przy użyciu [AFX_GLOBAL_DATA::m_nDragFrameThicknessFloat](afx-global-data-structure.md#m_ndragframethicknessfloat) i [AFX_GLOBAL_DATA::m_nDragFrameThicknessDock](afx-global-data-structure.md#m_ndragframethicknessdock).  
+ Grubość przeciągnij prostokąt można kontrolować za pomocą [AFX_GLOBAL_DATA::m_nDragFrameThicknessFloat](afx-global-data-structure.md#m_ndragframethicknessfloat) i [AFX_GLOBAL_DATA::m_nDragFrameThicknessDock](afx-global-data-structure.md#m_ndragframethicknessdock).  
   
 ## <a name="inheritance-hierarchy"></a>Hierarchia dziedziczenia  
  [CMFCDragFrameImpl](../../mfc/reference/cmfcdragframeimpl-class.md)  

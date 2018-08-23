@@ -18,33 +18,32 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 16b8c937ad62ddc6738c626543dab2d4e5453bc5
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: c98c6559e04f0e89fa4c3501f30cd88d449de306
+ms.sourcegitcommit: d4c803bd3a684d7951bf88dcecf1f14af43ae411
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33839783"
+ms.lasthandoff: 08/10/2018
+ms.locfileid: "42465666"
 ---
 # <a name="undef-directive-cc"></a>#undef — dyrektywa (C/C++)
-Usuwa (anulowanie definicji) nazwa wcześniej utworzona z `#define`.  
+Usuwa (jedno anulowanie definicji) nazwę wcześniej utworzone za pomocą `#define`.  
   
 ## <a name="syntax"></a>Składnia  
   
 ```  
-  
 #undef   
 identifier  
-  
 ```  
   
-## <a name="remarks"></a>Uwagi  
- `#undef` Dyrektywy spowoduje usunięcie bieżącej definicji *identyfikator*. W rezultacie kolejne wystąpienia *identyfikator* są ignorowane przez preprocesora. Aby usunąć definicji makra za pomocą `#undef`, określ tylko makra *identyfikator* ; nie ma listy parametrów.  
+## <a name="remarks"></a>Uwagi 
+
+**#Undef** dyrektywa spowoduje usunięcie bieżącej definicji *identyfikator*. W związku z tym kolejne wystąpienia *identyfikator* są ignorowane przez preprocesor. Można usunąć definicji makra przy użyciu **#undef**, określ tylko makra *identyfikator* ; nie ma listy parametrów.  
   
- Można także zastosować `#undef` dyrektywy do identyfikatora, który nie ma poprzedniej definicji. Dzięki temu, że identyfikator jest niezdefiniowany. Makro zamiany nie jest wykonywane w ramach `#undef` instrukcje.  
+Można również zastosować **#undef** dyrektywę identyfikator, który nie ma poprzedniego definicji. Zapewnia to, że identyfikator jest niezdefiniowany. Wymiana makra nie jest wykonywana w ramach **#undef** instrukcji.  
   
- `#undef` Dyrektywy zwykle łączyć się z `#define` dyrektywy, aby utworzyć region w programie źródła, w którym identyfikator ma specjalnego znaczenia. Na przykład określoną funkcję programu źródłowego umożliwia stałe manifestu: definiowanie wartości określonego środowiska, które nie mają wpływu na pozostałe program. `#undef` Dyrektywy współdziała również z `#if` dyrektywy do kontrolowania kompilacja warunkowa programu źródłowego. Zobacz [#if, #elif, #else i #endif — dyrektywy](../preprocessor/hash-if-hash-elif-hash-else-and-hash-endif-directives-c-cpp.md) Aby uzyskać więcej informacji.  
+**#Undef** dyrektywy zwykle jest powiązany z `#define` dyrektywy do tworzenia regionu w programie źródłowym, w którym identyfikator ma specjalne znaczenie. Na przykład określoną funkcję program źródłowy można użyć stałych manifestu do definiowania wartości specyficzne dla środowiska, które nie dotyczą całego programu. **#Undef** dyrektywa działa także w przypadku `#if` dyrektywy do kontrolowania kompilacji warunkowej programu źródłowego. Zobacz [#if, #elif #else i #endif, dyrektywy](../preprocessor/hash-if-hash-elif-hash-else-and-hash-endif-directives-c-cpp.md) Aby uzyskać więcej informacji.  
   
- W poniższym przykładzie `#undef` dyrektywy Usuwa definicje stałą symboliczne i makr. Należy pamiętać, że podano tylko identyfikator makra.  
+W poniższym przykładzie **#undef** dyrektywy Usuwa definicje symboliczna stała i makra. Pamiętaj, że biorąc pod uwagę tylko identyfikator makra.  
   
 ```  
 #define WIDTH 80  
@@ -56,11 +55,12 @@ identifier
 #undef ADD  
 ```  
   
- **Microsoft Specific**  
+**Microsoft Specific**  
   
- Makra może być niezdefiniowana w wierszu polecenia z opcją /U, następuje niezdefiniowanej nazwy makra. To polecenie powoduje odpowiednikiem sekwencji `#undef` *nazwy makra* instrukcje na początku pliku.  
+Makra mogą być niezdefiniowana z wiersza polecenia przy użyciu `/U` opcji, a po niej niezdefiniowanej nazwy makra. Efekt wydaniu tego polecenia jest równoważna z sekwencji `#undef` *Nazwa makra* instrukcji na początku pliku.  
   
- **KOŃCOWY określonych firmy Microsoft**  
+**END specyficzny dla Microsoft**  
   
 ## <a name="see-also"></a>Zobacz też  
- [Dyrektywy preprocesora](../preprocessor/preprocessor-directives.md)
+ 
+[Dyrektywy preprocesora](../preprocessor/preprocessor-directives.md)

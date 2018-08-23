@@ -102,12 +102,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 6cd6ec4bcee26c1e2fb558670c69d0130808c933
-ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
+ms.openlocfilehash: faf782f4386cf2b2640ed65f3a2b24bbf4c5d693
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/30/2018
-ms.locfileid: "39338343"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42464845"
 ---
 # <a name="irowsetimpl-class"></a>IRowsetImpl — Klasa
 Udostępnia implementację `IRowset` interfejsu.  
@@ -169,7 +169,7 @@ class ATL_NO_VTABLE IRowsetImpl : public RowsetInterface
 |[m_rgRowHandles](#rgrowhandles)|Lista dojść do wierszy.|  
   
 ## <a name="remarks"></a>Uwagi  
- [IRowset](https://msdn.microsoft.com/library/ms720986.aspx) jest interfejsem podstawowy zestaw wierszy.  
+ [IRowset](/previous-versions/windows/desktop/ms720986\(v=vs.85\)) jest interfejsem podstawowy zestaw wierszy.  
 
 ## <a name="addrefrows"></a> IRowsetImpl::AddRefRows
 Dodaje licznik odwołań do istniejących uchwyt wiersza.  
@@ -184,7 +184,7 @@ STDMETHOD(AddRefRows )(DBCOUNTITEM cRows,
 ```  
   
 #### <a name="parameters"></a>Parametry  
- Zobacz [IRowset::AddRefRows](https://msdn.microsoft.com/library/ms719619.aspx) w *OLE DB Podręcznik programisty*.  
+ Zobacz [IRowset::AddRefRows](/previous-versions/windows/desktop/ms719619\(v=vs.85\)) w *OLE DB Podręcznik programisty*.  
 
 ## <a name="createrow"></a> IRowsetImpl::CreateRow
 Wywoływane przez metody pomocnika [getnextrows —](../../data/oledb/irowsetimpl-getnextrows.md) można przydzielić nowego `HROW`.  
@@ -222,7 +222,7 @@ STDMETHOD(GetData )(HROW hRow,
 ```  
   
 #### <a name="parameters"></a>Parametry  
- Zobacz [IRowset::GetData](https://msdn.microsoft.com/library/ms716988.aspx) w *OLE DB Podręcznik programisty*.  
+ Zobacz [IRowset::GetData](/previous-versions/windows/desktop/ms716988\(v=vs.85\)) w *OLE DB Podręcznik programisty*.  
   
  Niektóre parametry odpowiadają *OLE DB Podręcznik programisty* parametry różnych nazw, które są opisane w `IRowset::GetData`:  
   
@@ -251,7 +251,7 @@ virtual DBSTATUS GetDBStatus(RowClass* currentRow,
  Kolumna, dla którego wnioskuje się stan.  
   
 ### <a name="return-value"></a>Wartość zwracana  
- [DBSTATUS](https://msdn.microsoft.com/library/ms722617.aspx) flagi dla kolumny. 
+ [DBSTATUS](/previous-versions/windows/desktop/ms722617\(v=vs.85\)) flagi dla kolumny. 
 
 ## <a name="getnextrows"></a> IRowsetImpl::GetNextRows
 Pobiera wiersze po kolei, uzupełnij poprzedniej pozycji.  
@@ -267,7 +267,7 @@ STDMETHOD(GetNextRows )(HCHAPTER hReserved,
 ```  
   
 #### <a name="parameters"></a>Parametry  
- Zobacz [IRowset::GetNextRows](https://msdn.microsoft.com/library/ms709827.aspx) w *OLE DB Podręcznik programisty*. 
+ Zobacz [IRowset::GetNextRows](/previous-versions/windows/desktop/ms709827\(v=vs.85\)) w *OLE DB Podręcznik programisty*. 
 
 ## <a name="irowsetimpl"></a> IRowsetImpl::IRowsetImpl
 Konstruktor.  
@@ -295,7 +295,7 @@ HRESULT RefRows(DBCOUNTITEM cRows,
 ```  
   
 #### <a name="parameters"></a>Parametry  
- Zobacz [IRowset::AddRefRows](https://msdn.microsoft.com/library/ms719619.aspx) w *OLE DB Podręcznik programisty*.  
+ Zobacz [IRowset::AddRefRows](/previous-versions/windows/desktop/ms719619\(v=vs.85\)) w *OLE DB Podręcznik programisty*.  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Standardowe wartości HRESULT.  
@@ -314,7 +314,7 @@ STDMETHOD(ReleaseRows )(DBCOUNTITEM cRows,
 ```  
   
 #### <a name="parameters"></a>Parametry  
- Zobacz [IRowset::ReleaseRows](https://msdn.microsoft.com/library/ms719771.aspx) w *OLE DB Podręcznik programisty*.  
+ Zobacz [IRowset::ReleaseRows](/previous-versions/windows/desktop/ms719771\(v=vs.85\)) w *OLE DB Podręcznik programisty*.  
 
 ## <a name="restartposition"></a> IRowsetImpl::RestartPosition
 Powoduje przeniesienie pozycji następnego pobierania na jego początkowe położenie; oznacza to utworzyć jego położenie podczas pierwszego zestawu wierszy.  
@@ -326,7 +326,7 @@ STDMETHOD(RestartPosition )(HCHAPTER /* hReserved */);
 ```  
   
 #### <a name="parameters"></a>Parametry  
- Zobacz [IRowset::RestartPosition](https://msdn.microsoft.com/library/ms712877.aspx) w *OLE DB Podręcznik programisty*.  
+ Zobacz [IRowset::RestartPosition](/previous-versions/windows/desktop/ms712877\(v=vs.85\)) w *OLE DB Podręcznik programisty*.  
   
 ### <a name="remarks"></a>Uwagi  
  Pozycja zestawu wierszy jest niezdefiniowane, aż do `GetNextRow` jest wywoływana. Możesz przenosić Wstecz w rowet przez wywołanie metody `RestartPosition` i pobieranie lub przewijanie do tyłu.  
@@ -344,7 +344,7 @@ virtual HRESULT SetDBStatus(DBSTATUS* statusFlags,
   
 #### <a name="parameters"></a>Parametry  
  *statusFlags*  
- [DBSTATUS](https://msdn.microsoft.com/library/ms722617.aspx) flagi, aby określić dla kolumny.  
+ [DBSTATUS](/previous-versions/windows/desktop/ms722617\(v=vs.85\)) flagi, aby określić dla kolumny.  
   
  *TableRow*  
  Bieżący wiersz.  

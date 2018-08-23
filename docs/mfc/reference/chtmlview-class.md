@@ -204,12 +204,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 58a336ef74a3fdcb787dee5feeef2b76e45706bf
-ms.sourcegitcommit: 76fd30ff3e0352e2206460503b61f45897e60e4f
+ms.openlocfilehash: c3c291c7eb9b6a9cd87330f4af5135037a1f31de
+ms.sourcegitcommit: b92ca0b74f0b00372709e81333885750ba91f90e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/13/2018
-ms.locfileid: "39027862"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "42465745"
 ---
 # <a name="chtmlview-class"></a>Klasa CHtmlView
 Oferuje funkcje formantu WebBrowser w kontekście architektury dokumentu/widoku MFC.  
@@ -243,7 +243,7 @@ class CHtmlView : public CFormView
 |[CHtmlView::GetLocationURL](#getlocationurl)|Pobiera adres URL zasobu, który WebBrowser w oknie są obecnie wyświetlane.|  
 |[CHtmlView::GetMenuBar](#getmenubar)|Pobiera wartość określającą, czy pasek menu jest widoczny.|  
 |[CHtmlView::GetOffline](#getoffline)|Pobiera wartość określającą, czy kontrolka jest w trybie offline.|  
-|[CHtmlView::GetParentBrowser](#getparentbrowser)|Pobiera wskaźnik do `IDispatch` interfejsu. Aby uzyskać więcej informacji, zobacz [implementowania interfejsu IDispatch](http://msdn.microsoft.com/0e171f7f-0022-4e9b-ac8e-98192828e945).|  
+|[CHtmlView::GetParentBrowser](#getparentbrowser)|Pobiera wskaźnik do `IDispatch` interfejsu. Aby uzyskać więcej informacji, zobacz [implementowania interfejsu IDispatch](/previous-versions/windows/desktop/automat/implementing-the-idispatch-interface).|  
 |[CHtmlView::GetProperty](#getproperty)|Pobiera bieżącą wartość właściwości skojarzone z danego obiektu.|  
 |[CHtmlView::GetReadyState](#getreadystate)|Pobiera stan gotowości obiektu przeglądarki sieci web.|  
 |[CHtmlView::GetRegisterAsBrowser](#getregisterasbrowser)|Wskazuje, czy formant WebBrowser jest zarejestrowany jako przeglądarka najwyższego poziomu do rozpoznawania nazw docelowego.|  
@@ -508,7 +508,7 @@ LPDISPATCH GetApplication() const;
 ```  
   
 ### <a name="return-value"></a>Wartość zwracana  
- Wskaźnik do `IDispatch` interfejs obiektu aktywnego dokumentu. Aby uzyskać więcej informacji, zobacz [implementowania interfejsu IDispatch](http://msdn.microsoft.com/0e171f7f-0022-4e9b-ac8e-98192828e945).  
+ Wskaźnik do `IDispatch` interfejs obiektu aktywnego dokumentu. Aby uzyskać więcej informacji, zobacz [implementowania interfejsu IDispatch](/previous-versions/windows/desktop/automat/implementing-the-idispatch-interface).  
   
 ### <a name="remarks"></a>Uwagi  
  Ma zastosowanie do programu Internet Explorer i WebBrowser.  

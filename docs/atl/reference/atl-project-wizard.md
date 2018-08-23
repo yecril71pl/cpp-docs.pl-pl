@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 80556b31650cc04e66b2ad6681d60eff2fa72d5f
-ms.sourcegitcommit: 76fd30ff3e0352e2206460503b61f45897e60e4f
+ms.openlocfilehash: d138f65e447594059dba5b536378ee004be77036
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/13/2018
-ms.locfileid: "39025821"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42465792"
 ---
 # <a name="atl-project-wizard"></a>Kreator projektu ATL
 Active Template Library (ATL) to zbiór opartych na szablonach klas języka C++, które upraszczają zapisywania obiektów COM małe i szybkie. Kreator projektu ATL tworzy projekt ze strukturami, które zawierają obiekty COM.  
@@ -52,7 +52,7 @@ Active Template Library (ATL) to zbiór opartych na szablonach klas języka C++,
   
 -   [Optymalizacja kompilatora dla projektu ATL](../../atl/reference/specifying-compiler-optimization-for-an-atl-project.md)  
   
- Można określić właściwości projektu (na przykład [czy statycznie połączyć CRT](../../atl/programming-with-atl-and-c-run-time-code.md)) w [właściwości projektu](../../ide/general-property-page-project.md) strony, na które można ustawić [konfiguracje kompilacji](/visualstudio/ide/understanding-build-configurations) dla Projekt ATL. Zobacz [przy użyciu projektów do kompilacji aplikacji](http://msdn.microsoft.com/3339fa90-bac2-4b95-8361-662a2e0e7dfe) Aby uzyskać więcej informacji.  
+ Można określić właściwości projektu (na przykład [czy statycznie połączyć CRT](../../atl/programming-with-atl-and-c-run-time-code.md)) w [właściwości projektu](../../ide/general-property-page-project.md) strony, na które można ustawić [konfiguracje kompilacji](/visualstudio/ide/understanding-build-configurations) dla Projekt ATL.  
   
 ## <a name="see-also"></a>Zobacz też  
  [Tworzenie i zarządzanie projektami Visual C++](../../ide/creating-and-managing-visual-cpp-projects.md)   

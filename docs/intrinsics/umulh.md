@@ -16,12 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 820f18e0f7db1b70982558c75f879902dca14d2c
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: afddee0ec2afc43bef22250d37daef201a0fe8dd
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33327258"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42465350"
 ---
 # <a name="umulh"></a>__umulh
 **Microsoft Specific**  
@@ -39,21 +39,21 @@ unsigned __int64 __umulh(
   
 #### <a name="parameters"></a>Parametry  
  [in] `a`  
- Pierwszy liczbę Aby pomnożyć.  
+ Pierwszy numer do pomnożenia.  
   
  [in] `b`  
- Druga liczba do wielokrotnie.  
+ Druga liczba do pomnożenia.  
   
 ## <a name="return-value"></a>Wartość zwracana  
- Wysoka 64 bity wyniku iloczyn 128-bitowego.  
+ Wysoka 64 bity 128-bitowego wynik mnożenia.  
   
 ## <a name="requirements"></a>Wymagania  
   
-|— Wewnętrzne|Architektura|  
+|Wewnętrzne|Architektura|  
 |---------------|------------------|  
-|`__umulh`|[!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
+|`__umulh`|X64|  
   
- **Plik nagłówka** \<intrin.h >  
+ **Plik nagłówkowy** \<intrin.h >  
   
 ## <a name="remarks"></a>Uwagi  
  Te procedury są dostępne tylko jako funkcje wewnętrzne.  
@@ -84,7 +84,7 @@ int main()
 0x10 * 0xfedcba9876543210 = 0xfedcba98765432100   
 ```  
   
-**KOŃCOWY określonych firmy Microsoft**  
+**END specyficzny dla Microsoft**  
   
 ## <a name="see-also"></a>Zobacz też  
  [Funkcje wewnętrzne kompilatora](../intrinsics/compiler-intrinsics.md)

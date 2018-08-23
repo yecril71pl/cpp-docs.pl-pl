@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 42909a9ddc24131c759886c4d169c4fd7484ca98
-ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
+ms.openlocfilehash: 7832985c6095aecae5098461d36947ff4268d262
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/30/2018
-ms.locfileid: "39340420"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42465339"
 ---
 # <a name="ole-db-provider-templates-reference"></a>Szablony dostawców OLE DB — kompendium
 Klasy i interfejsy dla szablony OLE DB Provider można podzielić na następujące kategorie. Materiały referencyjne zawiera również informacje o [makra szablony OLE DB Provider](../../data/oledb/macros-for-ole-db-provider-templates.md).  
@@ -60,7 +60,7 @@ Klasy i interfejsy dla szablony OLE DB Provider można podzielić na następują
  Zostanie otwarty i zwraca zestawu wierszy, który zawiera wszystkie wiersze z jednej tabeli bazowej lub indeksu. Obowiązkowego interfejsu dla obiektu sesji.  
   
  [IRowsetChangeImpl](../../data/oledb/irowsetchangeimpl-class.md)  
- Implementuje OLE DB [IRowsetChange](https://msdn.microsoft.com/library/ms715790.aspx) interfejs, który umożliwia aktualizowanie wartości kolumn w istniejących wierszy: usuwanie wierszy, a następnie wstawianie nowych wierszy.  
+ Implementuje OLE DB [IRowsetChange](/previous-versions/windows/desktop/ms715790\(v=vs.85\)) interfejs, który umożliwia aktualizowanie wartości kolumn w istniejących wierszy: usuwanie wierszy, a następnie wstawianie nowych wierszy.  
   
  [Irowsetcreatorimpl —](../../data/oledb/irowsetcreatorimpl-class.md)  
  Ta klasa dziedziczy [IObjectWithSite](http://msdn.microsoft.com/library/windows/desktop/ms693765) i zastępuje [IObjectWithSite::SetSite](http://msdn.microsoft.com/library/windows/desktop/ms683869). `IRowsetCreatorImpl` wykonuje te same funkcje co `IObjectWithSite` , lecz także właściwości OLE DB `DBPROPCANSCROLLBACKWARDS` i `DBPROPCANFETCHBACKWARDS`.  
@@ -75,13 +75,13 @@ Klasy i interfejsy dla szablony OLE DB Provider można podzielić na następują
  Implementuje właściwości zestawu wierszy za pomocą właściwości ustaw mapy zdefiniowany w klasie polecenia. Obowiązkowego interfejsu na zestawów wierszy.  
   
  [Irowsetlocateimpl —](../../data/oledb/irowsetlocateimpl-class.md)  
- Implementuje OLE DB [irowsetlocate —](https://msdn.microsoft.com/library/ms721190.aspx) interfejs, który pobiera wiersze z dowolnego z zestawu wierszy. Aby zapewnić obsługę OLE DB zakładki w zestawie wierszy, należy pochodne względem tej klasy zestawu wierszy.  
+ Implementuje OLE DB [irowsetlocate —](/previous-versions/windows/desktop/ms721190\(v=vs.85\)) interfejs, który pobiera wiersze z dowolnego z zestawu wierszy. Aby zapewnić obsługę OLE DB zakładki w zestawie wierszy, należy pochodne względem tej klasy zestawu wierszy.  
   
  [IRowsetNotifyCP](../../data/oledb/irowsetnotifycp-class.md)  
- Implementuje funkcje, które można wykonać funkcji advise odbiorników dla punktu połączenia można rozgłaszać `IID_IRowsetNotify` zmian zawartości zestawu wierszy. Implementowanie odbiorców, którzy obsługi powiadomień [IRowsetNotify](https://msdn.microsoft.com/library/ms712959.aspx) i zarejestrować ją w tym punkcie połączenia.  
+ Implementuje funkcje, które można wykonać funkcji advise odbiorników dla punktu połączenia można rozgłaszać `IID_IRowsetNotify` zmian zawartości zestawu wierszy. Implementowanie odbiorców, którzy obsługi powiadomień [IRowsetNotify](/previous-versions/windows/desktop/ms712959\(v=vs.85\)) i zarejestrować ją w tym punkcie połączenia.  
   
  [IRowsetUpdateImpl](../../data/oledb/irowsetupdateimpl-class.md)  
- Implementuje OLE DB [IRowsetUpdate](https://msdn.microsoft.com/library/ms714401.aspx) interfejs, który umożliwia opóźnienie transmisji w trybie zmiany wprowadzone za pomocą [IRowsetChange](https://msdn.microsoft.com/library/ms715790.aspx) do źródła danych i Cofnij zmiany przed rozpoczęciem transmisji.  
+ Implementuje OLE DB [IRowsetUpdate](/previous-versions/windows/desktop/ms714401\(v=vs.85\)) interfejs, który umożliwia opóźnienie transmisji w trybie zmiany wprowadzone za pomocą [IRowsetChange](/previous-versions/windows/desktop/ms715790\(v=vs.85\)) do źródła danych i Cofnij zmiany przed rozpoczęciem transmisji.  
   
 ## <a name="command-classes"></a>Klasy poleceń  
  [Icommandimpl —](../../data/oledb/icommandimpl-class.md)  
@@ -114,7 +114,7 @@ Klasy i interfejsy dla szablony OLE DB Provider można podzielić na następują
   
  [Ierrorrecordsimpl —](../../data/oledb/ierrorrecordsimpl-class.md)  
   
- Implementuje OLE DB [IErrorRecords](https://msdn.microsoft.com/library/ms718112.aspx) interfejsu, dodawanie rekordów do i pobierania rekordów z element członkowski danych.  
+ Implementuje OLE DB [IErrorRecords](/previous-versions/windows/desktop/ms718112\(v=vs.85\)) interfejsu, dodawanie rekordów do i pobierania rekordów z element członkowski danych.  
   
 ## <a name="see-also"></a>Zobacz też  
  [OLE DB — Kompendium szablonów konsumentów](../../data/oledb/ole-db-consumer-templates-reference.md)   

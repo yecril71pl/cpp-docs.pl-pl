@@ -19,6 +19,8 @@ apilocation:
 - msvcr120.dll
 - msvcr120_clr0400.dll
 - ucrtbase.dll
+- api-ms-win-crt-stdio-l1-1-0.dll
+- api-ms-win-crt-math-l1-1-0.dll
 apitype: DLLExport
 f1_keywords:
 - _tfdopen
@@ -41,16 +43,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 21bd849d5ce9560fae356869291d6764d613f0a7
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: d48222be892ebe0b05b8500bb1a4f2117e440b0c
+ms.sourcegitcommit: e9ce38decc9f986edab5543de3464b11ebccb123
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32405422"
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "42465244"
 ---
 # <a name="fdopen-wfdopen"></a>_fdopen, _wfdopen
 
-Kojarzy strumienia z pliku, który został uprzednio otwarty dla we/wy niskiego poziomu.
+Kojarzy strumienia z pliku, który był wcześniej otwarty dla niskiego poziomu we/wy.
 
 ## <a name="syntax"></a>Składnia
 
@@ -67,64 +69,64 @@ FILE *_wfdopen(
 
 ### <a name="parameters"></a>Parametry
 
-*FD* deskryptorów plików otwartego pliku.
+*FD* deskryptor pliku otwartego pliku.
 
-*tryb* typ dostępu do pliku.
+*tryb* typ dostępu do plików.
 
 ## <a name="return-value"></a>Wartość zwracana
 
-Każda z tych funkcji zwraca wskaźnik można otworzyć strumienia. Wartość wskaźnika o wartości null wskazuje błąd. Gdy wystąpi błąd, program obsługi nieprawidłowych parametrów zostanie wywołany, zgodnie z opisem w [sprawdzanie poprawności parametru](../../c-runtime-library/parameter-validation.md). Jeśli jest dozwolone wykonywanie, aby kontynuować, **numer błędu** ma ustawioną opcję **ebadf —**, co oznacza deskryptor nieprawidłowego pliku lub **einval —**, co oznacza, że *tryb*  został wskaźnika o wartości null.
+Każda z tych funkcji zwraca wskaźnik do otwartego strumienia. Wartość null wskaźnika wskazuje na błąd. Po wystąpieniu błędu, procedura obsługi nieprawidłowego parametru zostanie wywołana, zgodnie z opisem w [Parameter Validation](../../c-runtime-library/parameter-validation.md). Jeśli wykonanie może być kontynuowane, **errno** ustawiono opcję **EBADF**, co oznacza deskryptor pliku uszkodzonych lub **EINVAL**, który wskazuje, że *tryb*  był wskaźnikiem typu null.
 
-Aby uzyskać więcej informacji na temat tych i innych kodów błędów, zobacz [_doserrno —, errno, _sys_errlist — i _sys_nerr —](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
+Aby uzyskać więcej informacji na temat tych i innych kodów błędu, zobacz [_doserrno, errno, _sys_errlist i _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
 ## <a name="remarks"></a>Uwagi
 
-**_Fdopen —** funkcja kojarzy strumień we/wy z pliku, który jest identyfikowany przez *fd*i w związku z tym umożliwia pliku, który jest otwarty dla niskiego poziomu we/wy mają być buforowane i sformatowany. **_wfdopen —** jest wersja znaków dwubajtowych **_fdopen —**; *tryb* argument **_wfdopen —** jest ciągiem znaków dwubajtowych. **_wfdopen —** i **_fdopen —** inaczej zachowują się tak samo.
+**_Fdopen —** funkcja kojarzy strumień we/wy z pliku który jest identyfikowany przez *fd*i dlatego umożliwia pliku, który jest otwierany dla niskiego poziomu we/wy do buforowanego i sformatowany. **_wfdopen —** to wersja znaku dwubajtowego **_fdopen —**; *tryb* argument **_wfdopen —** jest ciągiem znaku dwubajtowego. **_wfdopen —** i **_fdopen —** w przeciwnym razie zachowują się identycznie.
 
-Przekazany deskryptorów plików **_fdopen —** należą do firmy przez zwróconego **pliku &#42;**  strumienia. Jeśli **_fdopen —** zakończy się pomyślnie, nie należy wywoływać [ \_zamknąć](close.md) na deskryptorów plików. Wywoływanie [fclose —](fclose-fcloseall.md) w zwróconym **pliku &#42;**  również zamyka deskryptorów plików.
+Deskryptory przekazywane do pliku **_fdopen —** należą przez zwrócony **pliku &#42;**  strumienia. Jeśli **_fdopen —** zakończy się pomyślnie, nie należy wywoływać metody [ \_Zamknij](close.md) na deskryptor pliku. Wywoływanie [fclose —](fclose-fcloseall.md) na zwracanego **pliku &#42;**  również zamyka deskryptor pliku.
 
 ### <a name="generic-text-routine-mappings"></a>Mapowania procedur zwykłego tekstu
 
-|Procedura tchar.h|\_UNICODE i \_nie zdefiniowano MBCS|\_Definicja MBCS|\_Definicja formatu UNICODE|
+|Procedura tchar.h|\_UNICODE i \_MBCS niezdefiniowana|\_MBCS zdefiniowany|\_Definicja UNICODE|
 |---------------------|--------------------------------------|--------------------|-----------------------|
 |**_tfdopen —**|**_fdopen**|**_fdopen**|**_wfdopen**|
 
-*Tryb* ciąg znaków określa typ dostępu do pliku żądanie dla pliku:
+*Tryb* ciąg znaków określa rodzaj dostępu do plików wnioskowany dla pliku:
 
 |*Tryb*|Access|
 |-|-|
-**"r"**|Zostanie otwarty do odczytu. Jeśli plik nie istnieje lub nie można znaleźć, **fopen —** wywołać kończy się niepowodzeniem.
-**"w"**|Otwiera pusty plik do zapisu. Jeśli dany plik istnieje, jego zawartość zostaną zniszczone.
+**"r"**|Otwiera do odczytu. Jeśli plik nie istnieje lub nie można odnaleźć **fopen —** wywołanie zakończy się niepowodzeniem.
+**"w"**|Otwiera pusty plik do zapisu. Jeśli dany plik istnieje, jego zawartość zostaje zniszczona.
 **""**|Zostanie otwarty do zapisu na końcu pliku (dołączanie). Tworzy plik, jeśli nie istnieje.
-**"r +"**|Otwiera odczytywanie i zapisywanie. Plik musi istnieć.
-**"w +"**|Otwiera pusty plik na odczytywanie i zapisywanie. Jeśli plik istnieje, jego zawartość zostaną zniszczone.
-**"+"**|Zostanie otwarty do odczytu i dołączenie kodu. Tworzy plik, jeśli nie istnieje.
+**"r +"**|Otwiera Odczyt i zapis. Plik musi istnieć.
+**"w +"**|Otwiera pusty plik Odczyt i zapis. Jeśli plik istnieje, jego zawartość zostaje zniszczona.
+**"+"**|Otwiera do odczytu i dołączania. Tworzy plik, jeśli nie istnieje.
 
-Po otwarciu pliku z **""** lub **"+"** dostęp typu zapis wszystkie operacje wykonywane na końcu pliku. Wskaźnika pliku można położenia przy użyciu [fseek](fseek-fseeki64.md) lub [rewind](rewind.md), ale on jest zawsze przeniesiony z powrotem do koniec pliku przed żadnego zapisu, wykonywane są wymienione. W związku z tym nie można zastąpić istniejące dane. Gdy **"r +"**, **"w +"**, lub **"+"** określono typ dostępu, odczytywanie i zapisywanie są dozwolone (plik jest określany jako otwarte dla "update"). Jednak podczas przełączania się między odczytu i zapisu, musi być aktywne [fflush —](fflush.md), [fsetpos —](fsetpos.md), [fseek](fseek-fseeki64.md), lub [rewind](rewind.md) Operacja. Można określić bieżącego położenia dla [fsetpos —](fsetpos.md) lub [fseek](fseek-fseeki64.md) operacji, jeśli chcesz.
+Po otwarciu pliku za pomocą **""** lub **"+"** uzyskiwać dostępu do typu, wszystkie operacje zapisu występują na końcu pliku. Wskaźnik pliku może być przeniesiony za pomocą [fseek](fseek-fseeki64.md) lub [rewind](rewind.md), ale on jest zawsze przenoszony z powrotem na koniec pliku przed wszelkie zapisu operacji jest przeprowadzane. W związku z tym nie można zastąpić istniejące dane. Gdy **"r +"**, **"w +"**, lub **"+"** jest określony typ dostępu, Odczyt i zapis są dozwolone (plik jest określany jako otwarty do "aktualizacji"). Jednak podczas przełączania się między Odczyt i zapis, musi istnieć interwencyjne [fflush —](fflush.md), [fsetpos](fsetpos.md), [fseek](fseek-fseeki64.md), lub [rewind](rewind.md) Operacja. Można określić bieżące położenie [fsetpos](fsetpos.md) lub [fseek](fseek-fseeki64.md) operacji, jeśli chcesz.
 
-Oprócz powyższych wartości następujących znaków można również uwzględnić w *tryb* Aby określić tryb tłumaczenia na znaki nowego wiersza:
+Oprócz powyższych wartości następujące znaki mogą być zawarte w *tryb* określić tryb translacji znaków nowego wiersza:
 
 |*tryb* modyfikator|Zachowanie|
 |-|-|
-**t**|Otwórz w tekście (translacji) trybu. W tym trybie karetki kombinacji powrotu wiersza kanału informacyjnego (CR LF) są przekształcane na jeden wiersz źródła (LF) na dane wejściowe, a LF znaki są tłumaczone na kombinacje CR LF w danych wyjściowych. Ponadto Ctrl + Z jest interpretowany jako plik końcowy znak wejściowy.
-**b**|Otwórz w trybie binarnym (niezrozumiały). Żadnych tłumaczeń z **t** tryb są pomijane.
-**c**|Włącz flagę zatwierdzeń skojarzonych z nim *filename* tak, aby zawartość buforów plików są zapisywane bezpośrednio na dysku, jeśli dowolny **fflush —** lub **_flushall —** jest wywoływana.
-**N**|Resetuj flagi zatwierdzeń skojarzonych z nim *filename* na "nie zatwierdzanie." Domyślnie włączone. Zastępuje ona również flagi globalne zatwierdzenia, gdy łącze programu z Commode.obj. Domyślnie flagi globalne zatwierdzania jest "nie-commit", chyba że zostaną jawnie połączone z programem z Commode.obj.
+**t**|Otwórz w tekście (tłumaczonym) trybu. W tym trybie karetki kanał wiersza powrotu (CR-LF) kombinacji są tłumaczone na jeden wiersz źródła (LF) na dane wejściowe, a znaki wysuwu wiersza są tłumaczone na kombinacje CR-LF w danych wyjściowych. Ponadto Ctrl + Z jest interpretowany jako znak końca pliku na wejściu.
+**b**|Otwórz w trybie binarnym (nieprzetłumaczonym). Wszelkie tłumaczeń z **t** tryb są pomijane.
+**c**|Włącz flagę zatwierdzania dla skojarzonego *filename* tak, aby zawartość buforu pliku są zapisywane bezpośrednio na dysku, jeśli **fflush —** lub **_flushall —** jest wywoływana.
+**N**|Resetowanie flagi zatwierdzenia dla skojarzonego *filename* do "no-commit". Domyślnie włączone. Zastępuje również globalną flagę zatwierdzania, jeśli łączysz się program jest połączony z plikiem Commode.obj. Domyślna globalnej flagi zatwierdzania to "no-commit", chyba że jawnie połączyć program jest połączony z plikiem Commode.obj.
 
-**t**, **c**, i **n** *tryb* opcje są rozszerzenia Microsoft do **fopen —** i **_fdopen —**. Nie należy ich używać, jeśli chcesz zachować przenośność ANSI.
+**t**, **c**, i **n** *tryb* opcje są rozszerzeniami firmy Microsoft dla **fopen —** i **_fdopen —**. Nie należy ich używać, jeśli chcesz zachować przenośność kodowania ANSI.
 
-Jeśli **t** lub **b** nie została podana w *tryb*, domyślny tryb tłumaczenia jest definiowana za pomocą zmiennej globalnej [ \_fmode —](../../c-runtime-library/fmode.md). Jeśli **t** lub **b** jest prefiksem do argumentu funkcji kończy się niepowodzeniem i zwraca wartość NULL. Omówienie trybach tekstowym i binarnym, zobacz [tekstu i we/wy binarne trybu pliku](../../c-runtime-library/text-and-binary-mode-file-i-o.md).
+Jeśli **t** lub **b** nie jest podana w *tryb*, domyślny tryb translacji jest zdefiniowany przez zmienną globalną [ \_fmode —](../../c-runtime-library/fmode.md). Jeśli **t** lub **b** jest poprzedzana argumentowi funkcja kończy się niepowodzeniem i zwraca wartość NULL. Aby uzyskać informacje o trybach tekstowym i binarnym, zobacz [tekstowych i binarnych We/Wy trybu](../../c-runtime-library/text-and-binary-mode-file-i-o.md).
 
-Prawidłowe znaki *tryb* parametry używane w **fopen —** i **_fdopen —** odpowiadają *oflag* argumenty użyte w [ \_Otwórz](open-wopen.md) i [ \_sopen —](sopen-wsopen.md), jak pokazano w poniższej tabeli:
+Prawidłowe znaki *tryb* ciąg użyty w **fopen —** i **_fdopen —** odpowiadają *oflag* argumenty używane w [ \_Otwórz](open-wopen.md) i [ \_sopen —](sopen-wsopen.md), jak pokazano w poniższej tabeli:
 
-|Znaki w *tryb* ciągu|Odpowiednik *oflag* wartość **_otwórz** i **_sopen —**|
+|Znaki w *tryb* ciągu|Równoważne *oflag* wartość **_otwórz** i **_sopen**|
 |---------------------------------|---------------------------------------------------|
-|**a**|**\_O\_WRONLY &#124; \_O\_APPEND** (zazwyczaj  **\_O\_WRONLY &#124; \_O\_tworzenie &#124; \_O \_APPEND**)|
+|**a**|**\_O\_WRONLY &#124; \_O\_APPEND** (zazwyczaj  **\_O\_WRONLY &#124; \_O\_CREAT &#124; \_O \_APPEND**)|
 |**+**|**\_O\_RDWR &#124; \_O\_APPEND** (zazwyczaj  **\_O\_RDWR &#124; \_O\_APPEND &#124; \_O\_ Utwórz** )|
 |**r**|**\_O\_RDONLY**|
 |**r +**|**\_O\_RDWR**|
-|**w**|**\_O\_WRONLY** (zazwyczaj  **\_O\_WRONLY &#124; \_O\_tworzenie &#124; \_O\_TRUNC**)|
-|**w +**|**\_O\_RDWR** (zazwyczaj  **\_O\_RDWR &#124; \_O\_tworzenie &#124; \_O\_TRUNC**)|
+|**w**|**\_O\_WRONLY** (zazwyczaj  **\_O\_WRONLY &#124; \_O\_CREAT &#124; \_O\_TRUNC**)|
+|**w +**|**\_O\_RDWR** (zazwyczaj  **\_O\_RDWR &#124; \_O\_CREAT &#124; \_O\_TRUNC**)|
 |**b**|**\_O\_BINARY**|
 |**t**|**\_O\_TEXT**|
 |**c**|Brak|
@@ -137,7 +139,7 @@ Prawidłowe znaki *tryb* parametry używane w **fopen —** i **_fdopen —** od
 |**_fdopen**|\<stdio.h>|
 |**_wfdopen**|\<stdio.h > lub \<wchar.h >|
 
-Aby uzyskać więcej informacji o zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md).
+Aby uzyskać więcej informacji na temat zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Przykład
 
@@ -191,7 +193,7 @@ Lines in file: 2
 
 ## <a name="see-also"></a>Zobacz także
 
-[We/Wy strumienia](../../c-runtime-library/stream-i-o.md)<br/>
+[Stream operacji We/Wy](../../c-runtime-library/stream-i-o.md)<br/>
 [\_Dup, \_dup2 —](dup-dup2.md)<br/>
 [fclose —, \_fcloseall —](fclose-fcloseall.md)<br/>
 [fopen —, \_wfopen —](fopen-wfopen.md)<br/>

@@ -16,15 +16,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 106d1991f5312065aa78330888e55383d1f9506a
-ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
+ms.openlocfilehash: 5e54a44be0ad5b7b07311d102871e584770fc441
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/30/2018
-ms.locfileid: "39337021"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42464561"
 ---
 # <a name="overriding-provider-service-defaults"></a>Zastępowanie ustawień domyślnych usługi dostawcy
-Wartość rejestru dostawcy dla OLEDB_SERVICES jest zwracana jako wartość domyślna dla [DBPROP_INIT_OLEDBSERVICES](https://msdn.microsoft.com/library/ms716898.aspx) inicjowania właściwości obiektu źródła danych.  
+Wartość rejestru dostawcy dla OLEDB_SERVICES jest zwracana jako wartość domyślna dla [DBPROP_INIT_OLEDBSERVICES](/previous-versions/windows/desktop/ms716898\(v=vs.85\)) inicjowania właściwości obiektu źródła danych.  
   
  Tak długo, jak istnieje wpis rejestru, obiektów dostawcy są agregowane i użytkownik może przesłonić ustawienia usługi włączone przez ustawienie domyślnego dostawcy `DBPROP_INIT_OLEDBSERVICES` właściwości przed zainicjowaniem. Aby włączyć lub wyłączyć określonej usługi, użytkownik jest ogólnie pobiera bieżącą wartość `DBPROP_INIT_OLEDBSERVICES` właściwość, ustawia lub czyści dla danej właściwości, które można włączać lub wyłączać i resetuje właściwości. `DBPROP_INIT_OLEDBSERVICES` można ustawić bezpośrednio w OLE DB lub w parametrach połączenia przekazano do ADO lub `IDataInitialize::GetDatasource`. Odpowiednie wartości, aby włączyć/wyłączyć poszczególne usługi są wymienione w poniższej tabeli.  
   
@@ -39,7 +39,7 @@ Wartość rejestru dostawcy dla OLEDB_SERVICES jest zwracana jako wartość domy
  Jeśli wpis rejestru nie istnieje dla dostawcy, menedżerów składników nie spowoduje zagregowanie obiektów dostawcy i żadnych usług, zostanie wywołany, nawet wtedy, gdy wyraźnie żąda przez użytkownika.  
   
 ## <a name="see-also"></a>Zobacz też  
- [Korzystanie z puli zasobów](https://msdn.microsoft.com/library/ms713655.aspx)   
- [Jaki sposób użytkownicy korzystają w puli zasobów](https://msdn.microsoft.com/library/ms715907.aspx)   
- [Jak dostawców wydajnie pracować z puli zasobów](https://msdn.microsoft.com/library/ms714906.aspx)   
+ [Korzystanie z puli zasobów](/previous-versions/windows/desktop/ms713655\(v=vs.85\))   
+ [Jaki sposób użytkownicy korzystają w puli zasobów](/previous-versions/windows/desktop/ms715907\(v=vs.85\))   
+ [Jak dostawców wydajnie pracować z puli zasobów](/previous-versions/windows/desktop/ms714906\(v=vs.85\))   
  [Włączanie i wyłączanie usług OLE DB](../../data/oledb/enabling-and-disabling-ole-db-services.md)

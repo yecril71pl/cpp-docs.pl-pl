@@ -114,12 +114,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 219f0bc1f5b9959a424a8c3a63ec0c4e3505eb55
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: d843b3b491973c32d8fb5ff3160327a9e82223c8
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37852591"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42465693"
 ---
 # <a name="cmfctabctrl-class"></a>Klasa CMFCTabCtrl
 `CMFCTabCtrl` Klasa oferuje funkcję dla formantu zakładki. Kontrolka karty wyświetla dokujące okno z płaskimi lub trójwymiarowymi kartami na górze i dole. Karty mogą wyświetlać tekst i obraz oraz zmieniać kolor, gdy jest ona aktywna.  
@@ -221,7 +221,7 @@ class CMFCTabCtrl : public CMFCBaseTabCtrl
   
 -   Odłączanymi zakładkami.  
   
- `CMFCTabCtrl` Klasy mogą być używane z okno dialogowe, ale jest przeznaczona dla aplikacji, które używają dokowanie kontrolować słupki, takich jak [!INCLUDE[ofprexcel](../../mfc/reference/includes/ofprexcel_md.md)] i [!INCLUDE[vsprvs](../../assembler/masm/includes/vsprvs_md.md)]. Aby uzyskać więcej informacji, zobacz [klasa CDockablePane](../../mfc/reference/cdockablepane-class.md).  
+ `CMFCTabCtrl` Klasy mogą być używane z okno dialogowe, ale jest przeznaczona dla aplikacji, które używają dokowanie kontrolować słupki, takich jak program Microsoft Excel i programu Visual Studio. Aby uzyskać więcej informacji, zobacz [klasa CDockablePane](../../mfc/reference/cdockablepane-class.md).  
   
  Wykonaj następujące kroki, aby dodać o zmiennym rozmiarze, dokowanie kontrolka karty w aplikacji:  
   
@@ -269,7 +269,7 @@ void ActivateMDITab(int nTab = -1);
  Liczony od zera indeks karty do wyświetlania lub wartość -1, aby określić aktualnie aktywnej karty.  
   
 ##  <a name="allowdestroyemptytabbedpane"></a>  CMFCTabCtrl::AllowDestroyEmptyTabbedPane  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+ Aby uzyskać więcej informacji, zobacz kod źródłowy znajdujący się w **VC\\atlmfc\\src\\mfc** folder instalacji programu Visual Studio.  
   
 ```  
 virtual BOOL AllowDestroyEmptyTabbedPane() const;  

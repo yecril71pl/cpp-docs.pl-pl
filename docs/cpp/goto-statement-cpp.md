@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9aae9429754dab8c539d7b94e70db72d33e4f13b
-ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
+ms.openlocfilehash: 38d022cb3b7f2672ffe7dba6a6d9d4952fa21616
+ms.sourcegitcommit: 7f3df9ff0310a4716b8136ca20deba699ca86c6c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/01/2018
-ms.locfileid: "39402575"
+ms.lasthandoff: 08/21/2018
+ms.locfileid: "42465996"
 ---
 # <a name="goto-statement-c"></a>goto — instrukcja (C++)
 **Goto** instrukcji bezwarunkowo przekazuje sterowanie do instrukcji, którego etykietą jest określony identyfikator.  
@@ -36,6 +36,25 @@ goto identifier;
  Instrukcja labeled wyznaczonym przez `identifier` musi znajdować się w bieżącej funkcji. Wszystkie `identifier` nazwy są elementami członkowskimi wewnętrznej przestrzeni nazw i w związku z tym kolidują z innymi identyfikatorami.  
   
  Etykieta instrukcji jest istotny tylko **goto** instrukcji; w przeciwnym razie etykiety instrukcji są ignorowane. Nie można ponownie zadeklarować etykiety.  
+
+A **goto** instrukcja nie jest dozwolona na kontrola jest przekazywana do lokalizacji, która nakłada się na inicjowanie dowolną zmienną znajdującą się w zakresie w tej lokalizacji. Poniższy przykład wywołuje C2362:
+
+```cpp
+int goto_fn(bool b)
+{
+    if (!b)
+    {
+        goto exit;  // C2362
+    }
+    else
+    { /*...*/ }
+
+    int error_code = 42;
+
+exit:
+    return error_code;
+}
+```
   
  Jest dobrą programowania stylu **podziału**, **nadal**, i **zwracają** instrukcji zamiast **przejdź do** instrukcji zawsze wtedy, gdy możliwe. Jednak ponieważ **podziału** instrukcji zamyka tylko jeden poziom w pętli, może być konieczne użycie **goto** instrukcję, aby zakończyć głęboko zagnieżdżonych pętli.  
   

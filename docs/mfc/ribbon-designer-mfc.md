@@ -17,24 +17,24 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 07131c64097457bd6a8035b5fe100ba376d49fbd
-ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
+ms.openlocfilehash: 0886f020be80ae417cd44a5b5cb5116198ce6a1e
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/25/2018
-ms.locfileid: "36931160"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42464480"
 ---
 # <a name="ribbon-designer-mfc"></a>Projektant wstążki (MFC)
-Projektant wstążki umożliwia tworzenie i Dostosowywanie Wstążki w aplikacjach MFC. Wstążki jest elementem interfejsu użytkownika, który organizuje poleceń w grupy logiczne. Grupy te są wyświetlane na osobnych kartach pasek w górnej części okna. Wstążka zastępuje paska menu i pasków narzędzi. Wstążki może znacznie poprawić użyteczność aplikacji. Aby uzyskać więcej informacji, zobacz [wstążek](http://go.microsoft.com/fwlink/p/?linkid=129233). Na poniższej ilustracji przedstawiono wstążki.  
+Projektant wstążki pozwala tworzyć i dostosowywać wstążki w aplikacjach MFC. Wstążka jest element interfejsu użytkownika, który organizuje polecenia w logiczne grupy. Te grupy są wyświetlane na osobnych kartach w górnej części okna. Wstążka zastępuje pasek menu i paski narzędzi. Wstążka może znacznie zwiększyć użyteczność aplikacji. Aby uzyskać więcej informacji, zobacz [wstążek](http://go.microsoft.com/fwlink/p/?linkid=129233). Na poniższej ilustracji pokazano Wstążkę.  
   
- ![Formant zasobu wstążki MFC](../mfc/media/ribbon_no_callouts.png "ribbon_no_callouts")  
+ ![Kontrola zasobów wstążki MFC](../mfc/media/ribbon_no_callouts.png "ribbon_no_callouts")  
   
- We wcześniejszych wersjach programu Visual Studio wstążek ma zostać utworzona przez pisania kodu, który korzysta z klas wstążki MFC, takich jak [CMFCRibbonBar klasy](../mfc/reference/cmfcribbonbar-class.md). W [!INCLUDE[vs_dev10_long](../build/includes/vs_dev10_long_md.md)], projektanta wstążki zapewnia alternatywny sposób tworzenia wstążki. Po pierwsze tworzenia i dostosowywania wstążki jako zasób. Następnie ładowanie zasobu wstążki z kodu w aplikacji MFC. Nawet wstążki zasobów i służy klasy wstążki MFC razem. Można na przykład utwórz zasób wstążki, a następnie programowo dodać więcej elementów do niego w czasie wykonywania za pomocą kodu.  
+ We wcześniejszych wersjach programu Visual Studio, wstążki musiały być utworzone przez pisanie kodu, który używa klasy wstążek MFC, takich jak [klasa CMFCRibbonBar](../mfc/reference/cmfcribbonbar-class.md). W programie Visual Studio 2010 i nowszych Projektant wstążki oferuje alternatywną metodę tworzenia wstążki. Najpierw utwórz i Dostosuj Wstążkę jako zasób. Następnie załaduj zasób wstążki z kodu w aplikacji MFC. Możesz nawet użyć zasobów Wstążki i klas wstążki MFC. Na przykład można utworzyć zasób wstążki, a następnie programowo dodać więcej elementów do niej w czasie wykonywania za pomocą kodu.  
   
-## <a name="understanding-the-ribbon-designer"></a>Opis projektanta wstążki  
- Projektant wstążki tworzy i przechowuje wstążki jako zasób. Podczas tworzenia zasobu wstążki projektanta wstążki wykonuje te trzy czynności:  
+## <a name="understanding-the-ribbon-designer"></a>Informacje o projektancie wstążki  
+ Projektant wstążki tworzy i przechowuje Wstążkę jako zasób. Kiedy tworzysz zasób wstążki, Projektant wstążki wykona te trzy rzeczy:  
   
--   Dodaje wpis w definicji skrypt zasobów projektu (* .rc). W poniższym przykładzie IDR_RIBBON jest unikatową nazwę, która identyfikuje zasób wstążki, RT_RIBBON_XML jest typ zasobu i ribbon.mfcribbon ms to nazwa pliku zasobu.  
+-   Dodaje wpis w skrypcie definicji zasobów projektu (* .rc). W poniższym przykładzie IDR_RIBBON jest unikatową nazwą, która identyfikuje zasób wstążki, RT_RIBBON_XML jest typem zasobu i ribbon.mfcribbon ms jest nazwą pliku zasobów.  
   
  ```  
     IDR_RIBBON RT_RIBBON_XML      "res\\ribbon.mfcribbon-ms"  
@@ -46,7 +46,7 @@ Projektant wstążki umożliwia tworzenie i Dostosowywanie Wstążki w aplikacja
  #define IDR_RIBBON            307  
  ```  
   
--   Tworzy plik zasobu wstążki (*.mfcribbon ms), który zawiera kod XML, który definiuje przycisków wstążki, kontrolek i atrybuty. Zmiany do wstążki w Projektancie wstążki są przechowywane w pliku zasobu jako XML. Poniższy przykład kodu pokazuje części zawartości \*pliku .mfcribbon ms:  
+-   Tworzy plik zasobów wstążki (*.mfcribbon-ms), który zawiera kod XML definiujący przyciski wstążki, formanty i atrybuty. Zmiany na Wstążce w Projektancie wstążki są przechowywane w pliku zasobów w formacie XML. Poniższy przykład kodu pokazuje części zawartości \*pliku .mfcribbon ms:  
   
  ```  
  <RIBBON_BAR>  
@@ -58,36 +58,36 @@ Projektant wstążki umożliwia tworzenie i Dostosowywanie Wstążki w aplikacja
  </ID>   
  ```  
   
- Aby użyć zasobu wstążki w aplikacji MFC, załadować zasobu przez wywołanie metody [CMFCRibbonBar::LoadFromResource](../mfc/reference/cmfcribbonbar-class.md#loadfromresource).  
+ Aby użyć zasobu wstążki w Twojej aplikacji MFC, załaduj zasób wywołując [CMFCRibbonBar::LoadFromResource](../mfc/reference/cmfcribbonbar-class.md#loadfromresource).  
   
-## <a name="creating-a-ribbon-by-using-the-ribbon-designer"></a>Tworzenie wstążki za pomocą projektanta wstążki  
- Są dwa sposoby dodawania zasób wstążki do projektu MFC:  
+## <a name="creating-a-ribbon-by-using-the-ribbon-designer"></a>Tworzenie wstążki przy użyciu projektanta wstążki  
+ Poniżej przedstawiono dwa sposoby dodawania zasobów wstążki do projektu MFC:  
   
--   Tworzenie aplikacji MFC i skonfiguruj kreatora projektu MFC, aby utworzyć na Wstążce. Aby uzyskać więcej informacji, zobacz [wskazówki: tworzenie Wstążki aplikacji za pomocą MFC](../mfc/walkthrough-creating-a-ribbon-application-by-using-mfc.md).  
+-   Tworzenie aplikacji MFC i skonfiguruj Kreator projektu MFC w celu utworzenia na Wstążce. Aby uzyskać więcej informacji, zobacz [wskazówki: tworzenie Wstążki aplikacji przy użyciu MFC](../mfc/walkthrough-creating-a-ribbon-application-by-using-mfc.md).  
   
--   W istniejących projektach MFC Utwórz zasób wstążki, a następnie załaduj. Aby uzyskać więcej informacji, zobacz [wskazówki: aktualizowanie aplikacji Bazgroły MFC (część 1)](../mfc/walkthrough-updating-the-mfc-scribble-application-part-1.md).  
+-   W istniejącym projekcie MFC należy utworzyć zasób Wstążki i załaduj go. Aby uzyskać więcej informacji, zobacz [wskazówki: aktualizowanie aplikacji klasa Scribble MFC (część 1)](../mfc/walkthrough-updating-the-mfc-scribble-application-part-1.md).  
   
- Jeśli projekt zawiera już ręcznie kodowane wstążki, MFC ma funkcje, których można użyć do konwersji istniejącej wstążki na zasób wstążki. Aby uzyskać więcej informacji, zobacz [porady: Konwertowanie istniejącej wstążki MFC na zasób wstążki](../mfc/how-to-convert-an-existing-mfc-ribbon-to-a-ribbon-resource.md).  
+ Jeśli projekt zawiera już ręcznie zakodowane wstążki, MFC posiada funkcje, których można przekonwertować istniejącą Wstążkę na zasób wstążki. Aby uzyskać więcej informacji, zobacz [porady: Konwertowanie istniejącej wstążki MFC na zasób wstążki](../mfc/how-to-convert-an-existing-mfc-ribbon-to-a-ribbon-resource.md).  
   
 > [!NOTE]
->  Nie można utworzyć taśmy w aplikacjach opartych na oknach dialogowych. Aby uzyskać więcej informacji, zobacz [typ aplikacji, Kreator aplikacji MFC](../mfc/reference/application-type-mfc-application-wizard.md).  
+>  Wstążek nie można utworzyć w aplikacjach opartych na okno dialogowe. Aby uzyskać więcej informacji, zobacz [typ aplikacji, Kreator aplikacji MFC](../mfc/reference/application-type-mfc-application-wizard.md).  
   
-## <a name="customizing-ribbons"></a>Dostosowywanie Wstążki  
- Aby otworzyć projektanta wstążki wstążki, kliknij dwukrotnie zasobu wstążki w widoku zasobów. W Projektancie możesz dodać, usunąć i dostosować elementów na Wstążce, przycisk aplikacji lub pasek narzędzi Szybki dostęp. Możesz również połączyć zdarzenia, na przykład, kliknij przycisk zdarzenia i menu, do metody w aplikacji.  
+## <a name="customizing-ribbons"></a>Dostosowywanie wstążek  
+ Aby otworzyć Wstążkę w Projektancie wstążki, kliknij dwukrotnie zasób wstążki w widoku zasobów. W Projektancie można dodać, usunąć i dostosować elementy na Wstążce, przycisku aplikacji lub paska narzędzi Szybki dostęp. Możesz również połączyć zdarzenia, na przykład zdarzenia kliknięcia przycisku i zdarzenia menu, do metody w aplikacji.  
   
  Na poniższej ilustracji przedstawiono różne składniki w Projektancie wstążki.  
   
  ![Projektant wstążki MFC](../mfc/media/ribbon_designer.png "ribbon_designer")  
   
-- **Przybornika:** zawiera formanty, które mogą być przeciągnięte powierzchnię projektanta.  
+- **Przybornik:** zawiera formanty, które mogą być przeciągnięte na powierzchnię projektanta.  
   
-- **Powierzchnię projektanta:** zawiera wizualną reprezentację zasobu wstążki.  
+- **Projektanta powierzchni:** zawiera wizualną reprezentacją zasobu wstążki.  
   
-- **Okno właściwości:** zawiera listę atrybutów elementu wybranego na powierzchnię projektanta.  
+- **Okno właściwości:** Wyświetla listę atrybutów elementu zaznaczonego na powierzchni projektowej.  
   
-- **Okno Widok zasobów:** Wyświetla zasoby, które zawierają zasoby wstążki w projekcie.  
+- **Okno Widok zasobów:** Wyświetla zasoby, które obejmują zasoby wstążki w projekcie.  
   
-- **Pasek narzędzi edytora wstążki:** zawiera polecenia, które pozwalają Podgląd Wstążki i zmień jego visual motyw.  
+- **Pasek narzędzi edytora wstążki:** zawiera polecenia, które umożliwiają przeglądanie Wstążki i zmieniają jej motyw wizualny.  
   
  W następujących tematach opisano sposób korzystania z funkcji w Projektancie wstążki:  
   
@@ -100,19 +100,19 @@ Projektant wstążki umożliwia tworzenie i Dostosowywanie Wstążki w aplikacja
 - [Instrukcje: ładowanie zasobu wstążki z aplikacji MFC](../mfc/how-to-load-a-ribbon-resource-from-an-mfc-application.md)  
   
 ## <a name="definitions-of-ribbon-elements"></a>Definicje elementów wstążki  
- ![Wstążka MFC](../mfc/media/ribbon.png "wstążki")  
+ ![Wstążki MFC](../mfc/media/ribbon.png "wstążki")  
   
-- **Przycisk aplikacji:** przycisku, który znajduje się w lewym górnym rogu wstążki. Przycisk aplikacji zastępuje menu Plik i jest widoczny, nawet wtedy, gdy jest zminimalizowany wstążki. Po kliknięciu przycisku menu, która zawiera listę poleceń jest wyświetlany.  
+- **Przycisk aplikacji:** przycisk, który pojawia się w lewym górnym rogu wstążki. Przycisk aplikacji zastępuje menu Plik i jest widoczny nawet wtedy, gdy Wstążka jest zminimalizowana. Po kliknięciu przycisku menu, który zawiera listę poleceń jest wyświetlany.  
   
-- **Pasek narzędzi Szybki dostęp:** pasek narzędzi małych, które można dostosowywać, który wyświetla często używanych poleceń.  
+- **Pasek narzędzi Szybki dostęp:** mały, konfigurowalny pasek narzędzi, który wyświetla często używane polecenia.  
   
-- **Kategoria**: logiczne grupowanie, który reprezentuje zawartość karty wstążki.  
+- **Kategoria**: logiczne grupowanie, które reprezentuje zawartość zakładki wstążki.  
   
-- **Przycisk domyślny kategorii:** przycisku, który jest wyświetlany na Wstążce, gdy jest zminimalizowany wstążki. Po kliknięciu przycisku kategorii pojawi się ponownie jako menu.  
+- **Przycisk Kategoria domyślna:** przycisk, który jest wyświetlany na Wstążce, gdy Wstążka jest zminimalizowana. Po kliknięciu przycisku, kategoria ponownie wyświetla się menu.  
   
-- **Panel:** obszar na pasku wstążki, która wyświetla grupy formantów powiązanych. Każda kategoria wstążki zawiera co najmniej jeden panele wstążki.  
+- **Panel:** obszar paska wstążki, który wyświetla grupy pokrewnych formantów. Każda kategoria wstążki zawiera jeden lub więcej paneli wstążki.  
   
-- **Wstążka elementów:** formanty w panele, na przykład, przycisków i pola kombi. Aby wyświetlić różne formantów, które mogą być hostowane na Wstążce, zobacz [RibbonGadgets próbki: aplikacji gadżetów wstążki](../visual-cpp-samples.md).  
+- **Elementy wstążki:** kontrolki w panelach, na przykład, przyciski i pola kombi. Aby zobaczyć różne kontrolki, które mogą być hostowane na Wstążce, zobacz [przykład RibbonGadgets: aplikacja gadżetów wstążki](../visual-cpp-samples.md).  
   
 ## <a name="see-also"></a>Zobacz też  
  [Elementy interfejsu użytkownika](../mfc/user-interface-elements-mfc.md)   

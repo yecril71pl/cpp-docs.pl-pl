@@ -111,12 +111,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: a915a581a574193918f86f80083d3202c9949674
-ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
+ms.openlocfilehash: 533891a3bc7517df7570e0c976d05ed8b3b20579
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/30/2018
-ms.locfileid: "39338151"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42465340"
 ---
 # <a name="macros-and-global-functions-for-ole-db-consumer-templates"></a>Makra i funkcje globalne dla szablonów konsumentów OLE DB
 Szablony OLE DB konsumenta obejmują następujące makra i funkcje globalne:  
@@ -354,7 +354,7 @@ BEGIN_COLUMN_MAP(x)
  <!--[!CODE [NVC_OLEDB_Consumer#16](../codesnippet/vs_snippets_cpp/nvc_oledb_consumer#16)]  -->
 
 ### <a name="blob_entry"></a> BLOB_ENTRY
-Używane z BEGIN_COLUMN_MAP i END_COLUMN_MAP powiązać duży obiekt binarny ([BLOB](https://msdn.microsoft.com/library/ms711511.aspx)).  
+Używane z BEGIN_COLUMN_MAP i END_COLUMN_MAP powiązać duży obiekt binarny ([BLOB](/previous-versions/windows/desktop/ms711511\(v=vs.85\))).  
   
 #### <a name="syntax"></a>Składnia  
   
@@ -379,7 +379,7 @@ BLOB_ENTRY(nOrdinal, IID, flags, data)
  Zobacz [sposób pobierania obiektu BLOB?](../../data/oledb/retrieving-a-blob.md).  
 
 ### <a name="blob_entry_length"></a> BLOB_ENTRY_LENGTH
-Używane z BEGIN_COLUMN_MAP i END_COLUMN_MAP powiązać duży obiekt binarny ([BLOB](https://msdn.microsoft.com/library/ms711511.aspx)). Podobnie jak [BLOB_ENTRY](../../data/oledb/blob-entry.md), z tą różnicą, że to makro również pobiera długość w bajtach dla kolumny obiektu BLOB.  
+Używane z BEGIN_COLUMN_MAP i END_COLUMN_MAP powiązać duży obiekt binarny ([BLOB](/previous-versions/windows/desktop/ms711511\(v=vs.85\))). Podobnie jak [BLOB_ENTRY](../../data/oledb/blob-entry.md), z tą różnicą, że to makro również pobiera długość w bajtach dla kolumny obiektu BLOB.  
   
 #### <a name="syntax"></a>Składnia  
   
@@ -407,7 +407,7 @@ BLOB_ENTRY_LENGTH(nOrdinal, IID, flags, data, length)
  Zobacz [sposób pobierania obiektu BLOB?](../../data/oledb/retrieving-a-blob.md).  
 
 ### <a name="blob_entry_length_status"></a> BLOB_ENTRY_LENGTH_STATUS
-Używane z BEGIN_COLUMN_MAP i END_COLUMN_MAP powiązać duży obiekt binarny ([BLOB](https://msdn.microsoft.com/library/ms711511.aspx)). Podobnie jak [BLOB_ENTRY](../../data/oledb/blob-entry.md), z tą różnicą, że to makro również pobiera długość i stan dla kolumny obiektu BLOB.  
+Używane z BEGIN_COLUMN_MAP i END_COLUMN_MAP powiązać duży obiekt binarny ([BLOB](/previous-versions/windows/desktop/ms711511\(v=vs.85\))). Podobnie jak [BLOB_ENTRY](../../data/oledb/blob-entry.md), z tą różnicą, że to makro również pobiera długość i stan dla kolumny obiektu BLOB.  
   
 #### <a name="syntax"></a>Składnia  
   
@@ -444,7 +444,7 @@ BLOB_ENTRY_LENGTH_STATUS(
  Zobacz [sposób pobierania obiektu BLOB?](../../data/oledb/retrieving-a-blob.md).  
 
 ### <a name="blob_entry_status"></a> BLOB_ENTRY_STATUS
-Używane z BEGIN_COLUMN_MAP lub BEGIN_ACCESSOR_MAP powiązać duży obiekt binarny ([BLOB](https://msdn.microsoft.com/library/ms711511.aspx)). Podobnie jak [BLOB_ENTRY](../../data/oledb/blob-entry.md), z tą różnicą, że to makro, staje się również stan dla kolumny obiektu BLOB.  
+Używane z BEGIN_COLUMN_MAP lub BEGIN_ACCESSOR_MAP powiązać duży obiekt binarny ([BLOB](/previous-versions/windows/desktop/ms711511\(v=vs.85\))). Podobnie jak [BLOB_ENTRY](../../data/oledb/blob-entry.md), z tą różnicą, że to makro, staje się również stan dla kolumny obiektu BLOB.  
   
 #### <a name="syntax"></a>Składnia  
   
@@ -472,7 +472,7 @@ BLOB_ENTRY_STATUS(nOrdinal, IID, flags, data, status)
  Zobacz [sposób pobierania obiektu BLOB?](../../data/oledb/retrieving-a-blob.md).  
 
 ### <a name="blob_name"></a> BLOB_NAME
-Używane z BEGIN_COLUMN_MAP i END_COLUMN_MAP powiązać duży obiekt binarny ([BLOB](https://msdn.microsoft.com/library/ms711511.aspx)). Podobnie jak [BLOB_ENTRY](../../data/oledb/blob-entry.md), z tą różnicą, że to makro przyjmuje nazwę kolumny zamiast numeru kolumny.  
+Używane z BEGIN_COLUMN_MAP i END_COLUMN_MAP powiązać duży obiekt binarny ([BLOB](/previous-versions/windows/desktop/ms711511\(v=vs.85\))). Podobnie jak [BLOB_ENTRY](../../data/oledb/blob-entry.md), z tą różnicą, że to makro przyjmuje nazwę kolumny zamiast numeru kolumny.  
   
 #### <a name="syntax"></a>Składnia  
   
@@ -497,7 +497,7 @@ BLOB_NAME(pszName, IID, flags, data )
  Zobacz [sposób pobierania obiektu BLOB?](../../data/oledb/retrieving-a-blob.md).  
 
 ### <a name="blob_name_length"></a> BLOB_NAME_LENGTH
-Używane z BEGIN_COLUMN_MAP i END_COLUMN_MAP powiązać duży obiekt binarny ([BLOB](https://msdn.microsoft.com/library/ms711511.aspx)). Podobnie jak [BLOB_NAME](../../data/oledb/blob-name.md), z tą różnicą, że to makro również pobiera długość w bajtach kolumny danych obiektów BLOB.  
+Używane z BEGIN_COLUMN_MAP i END_COLUMN_MAP powiązać duży obiekt binarny ([BLOB](/previous-versions/windows/desktop/ms711511\(v=vs.85\))). Podobnie jak [BLOB_NAME](../../data/oledb/blob-name.md), z tą różnicą, że to makro również pobiera długość w bajtach kolumny danych obiektów BLOB.  
   
 #### <a name="syntax"></a>Składnia  
   
@@ -522,7 +522,7 @@ BLOB_NAME_LENGTH(pszName, IID, flags, data, length )
  [out] (Rzeczywiste) długość w bajtach kolumny obiektów BLOB.  
 
 ### <a name="blob_name_length_status"></a> BLOB_NAME_LENGTH_STATUS
-Używane z BEGIN_COLUMN_MAP i END_COLUMN_MAP powiązać duży obiekt binarny ([BLOB](https://msdn.microsoft.com/library/ms711511.aspx)). Podobnie jak [BLOB_NAME](../../data/oledb/blob-name.md), z tą różnicą, że to makro również pobiera długość i stan kolumny danych obiektów BLOB.  
+Używane z BEGIN_COLUMN_MAP i END_COLUMN_MAP powiązać duży obiekt binarny ([BLOB](/previous-versions/windows/desktop/ms711511\(v=vs.85\))). Podobnie jak [BLOB_NAME](../../data/oledb/blob-name.md), z tą różnicą, że to makro również pobiera długość i stan kolumny danych obiektów BLOB.  
   
 #### <a name="syntax"></a>Składnia  
   
@@ -550,7 +550,7 @@ BLOB_NAME_LENGTH_STATUS(pszName, IID, flags, data, length, status )
  [out] Stan pola obiektu BLOB.  
 
 ### <a name="blob_name_status"></a> BLOB_NAME_STATUS
-Używane z BEGIN_COLUMN_MAP i END_COLUMN_MAP powiązać duży obiekt binarny ([BLOB](https://msdn.microsoft.com/library/ms711511.aspx)). Podobnie jak [BLOB_NAME](../../data/oledb/blob-name.md), z tą różnicą, że to makro jest również pobiera stan kolumny danych obiektów BLOB.  
+Używane z BEGIN_COLUMN_MAP i END_COLUMN_MAP powiązać duży obiekt binarny ([BLOB](/previous-versions/windows/desktop/ms711511\(v=vs.85\))). Podobnie jak [BLOB_NAME](../../data/oledb/blob-name.md), z tą różnicą, że to makro jest również pobiera stan kolumny danych obiektów BLOB.  
   
 #### <a name="syntax"></a>Składnia  
   
@@ -637,7 +637,7 @@ END_COLUMN_MAP()
   
 #### <a name="see-also"></a>Zobacz też  
  [Klasa CBookmark](../../data/oledb/cbookmark-class.md)   
- [DBPROP_BOOKMARKS](https://msdn.microsoft.com/library/ms709728.aspx)
+ [DBPROP_BOOKMARKS](/previous-versions/windows/desktop/ms709728\(v=vs.85\))
 
 ### <a name="column_entry"></a> COLUMN_ENTRY
 Reprezentuje powiązanie w zestawie wierszy do określonej kolumny w zestawie wierszy.  
@@ -649,7 +649,7 @@ COLUMN_ENTRY(nOrdinal, data)
 ```  
   
 #### <a name="parameters"></a>Parametry  
- Zobacz [DBBINDING](https://msdn.microsoft.com/library/ms716845.aspx) w *OLE DB Podręcznik programisty*.  
+ Zobacz [DBBINDING](/previous-versions/windows/desktop/ms716845\(v=vs.85\)) w *OLE DB Podręcznik programisty*.  
   
  *nOrdinal*  
  [in] Numer kolumny.  
@@ -679,7 +679,7 @@ COLUMN_ENTRY_EX(nOrdinal, wType, nLength, nPrecision, nScale, data, length, stat
 ```  
   
 #### <a name="parameters"></a>Parametry  
- Zobacz [DBBINDING](https://msdn.microsoft.com/library/ms716845.aspx) w *OLE DB Podręcznik programisty*.  
+ Zobacz [DBBINDING](/previous-versions/windows/desktop/ms716845\(v=vs.85\)) w *OLE DB Podręcznik programisty*.  
   
  *nOrdinal*  
  [in] Numer kolumny.  
@@ -727,7 +727,7 @@ COLUMN_ENTRY_LENGTH(nOrdinal, data, length)
 ```  
   
 #### <a name="parameters"></a>Parametry  
- Zobacz [DBBINDING](https://msdn.microsoft.com/library/ms716845.aspx) w *OLE DB Podręcznik programisty*.  
+ Zobacz [DBBINDING](/previous-versions/windows/desktop/ms716845\(v=vs.85\)) w *OLE DB Podręcznik programisty*.  
   
  *nOrdinal*  
  [in] Numer kolumny, zaczynając od jednej. Zakładka odnosi się do kolumny zero.  
@@ -757,7 +757,7 @@ COLUMN_ENTRY_LENGTH_STATUS(nOrdinal, data, length, status)
 ```  
   
 #### <a name="parameters"></a>Parametry  
- Zobacz [DBBINDING](https://msdn.microsoft.com/library/ms716845.aspx) w *OLE DB Podręcznik programisty*.  
+ Zobacz [DBBINDING](/previous-versions/windows/desktop/ms716845\(v=vs.85\)) w *OLE DB Podręcznik programisty*.  
   
  *nOrdinal*  
  [in] Numer kolumny.  
@@ -790,7 +790,7 @@ COLUMN_ENTRY_PS(nOrdinal, nPrecision, nScale, data)
 ```  
   
 #### <a name="parameters"></a>Parametry  
- Zobacz [DBBINDING](https://msdn.microsoft.com/library/ms716845.aspx) w *OLE DB Podręcznik programisty*.  
+ Zobacz [DBBINDING](/previous-versions/windows/desktop/ms716845\(v=vs.85\)) w *OLE DB Podręcznik programisty*.  
   
  *nOrdinal*  
  [in] Numer kolumny.  
@@ -823,7 +823,7 @@ COLUMN_ENTRY_PS_LENGTH(nOrdinal, nPrecision, nScale, data, length)
 ```  
   
 #### <a name="parameters"></a>Parametry  
- Zobacz [DBBINDING](https://msdn.microsoft.com/library/ms716845.aspx) w *OLE DB Podręcznik programisty*.  
+ Zobacz [DBBINDING](/previous-versions/windows/desktop/ms716845\(v=vs.85\)) w *OLE DB Podręcznik programisty*.  
   
  *nOrdinal*  
  [in] Numer kolumny, zaczynając od jednej. Zakładka odnosi się do kolumny zero.  
@@ -859,7 +859,7 @@ COLUMN_ENTRY_PS_LENGTH_STATUS(nOrdinal, nPrecision, nScale, data, length, status
 ```  
   
 #### <a name="parameters"></a>Parametry  
- Zobacz [DBBINDING](https://msdn.microsoft.com/library/ms716845.aspx) w *OLE DB Podręcznik programisty*.  
+ Zobacz [DBBINDING](/previous-versions/windows/desktop/ms716845\(v=vs.85\)) w *OLE DB Podręcznik programisty*.  
   
  *nOrdinal*  
  [in] Numer kolumny.  
@@ -898,7 +898,7 @@ COLUMN_ENTRY_PS_STATUS(nOrdinal, nPrecision, nScale, data, status)
 ```  
   
 #### <a name="parameters"></a>Parametry  
- Zobacz [DBBINDING](https://msdn.microsoft.com/library/ms716845.aspx) w *OLE DB Podręcznik programisty*.  
+ Zobacz [DBBINDING](/previous-versions/windows/desktop/ms716845\(v=vs.85\)) w *OLE DB Podręcznik programisty*.  
   
  *nOrdinal*  
  [in] Numer kolumny.  
@@ -934,7 +934,7 @@ COLUMN_ENTRY_STATUS(nOrdinal, data, status)
 ```  
   
 #### <a name="parameters"></a>Parametry  
- Zobacz [DBBINDING](https://msdn.microsoft.com/library/ms716845.aspx) w *OLE DB Podręcznik programisty*.  
+ Zobacz [DBBINDING](/previous-versions/windows/desktop/ms716845\(v=vs.85\)) w *OLE DB Podręcznik programisty*.  
   
  *nOrdinal*  
  [in] Numer kolumny.  
@@ -1424,7 +1424,7 @@ BEGIN_PARAM_MAP(x)
  [in] Nazwa klasy rekordu użytkownika.  
   
 #### <a name="remarks"></a>Uwagi  
- Parametry są używane przez [polecenia](https://msdn.microsoft.com/library/ms724608.aspx).  
+ Parametry są używane przez [polecenia](/previous-versions/windows/desktop/ms724608\(v=vs.85\)).  
   
 #### <a name="example"></a>Przykład  
  Zobacz przykład [BEGIN_COLUMN_MAP](../../data/oledb/begin-column-map.md) makra.  
@@ -1455,7 +1455,7 @@ SET_PARAM_TYPE(type)
  [in] Typ, który można ustawić dla parametru.  
   
 #### <a name="remarks"></a>Uwagi  
- Dostawcy obsługują tylko typy wejścia/wyjścia parametrów, które są obsługiwane przez bazowe źródło danych. Typ składa się z co najmniej jeden `DBPARAMIO` wartości (zobacz [struktury DBBINDING](https://msdn.microsoft.com/library/ms716845.aspx) w *OLE DB Podręcznik programisty*):  
+ Dostawcy obsługują tylko typy wejścia/wyjścia parametrów, które są obsługiwane przez bazowe źródło danych. Typ składa się z co najmniej jeden `DBPARAMIO` wartości (zobacz [struktury DBBINDING](/previous-versions/windows/desktop/ms716845\(v=vs.85\)) w *OLE DB Podręcznik programisty*):  
   
 -   `DBPARAMIO_NOTPARAM` Metoda dostępu nie ma parametrów. Zwykle ustawiasz `eParamIO` tej wartości w metodach dostępu wiersz w celu przypominania użytkownikowi, że parametry są ignorowane.  
   

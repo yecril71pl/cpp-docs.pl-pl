@@ -12,17 +12,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5b8651bea0b1ee9f54ec0af704d92feef0722368
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: ff2b99eedcdd81a96dc3091046a4f62ffe002509
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32367982"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42465136"
 ---
 # <a name="intrinsics-and-inline-assembly"></a>Funkcje wewnętrzne i zestaw wbudowany
-Jeden z warunków ograniczających dla [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)] kompilatora ma nie obsługują asemblera wbudowanego. Oznacza to, że funkcje, które nie można zapisać w języka C lub C++ albo musi być zapisywane jako podprocedury lub funkcje wewnętrzne obsługiwane przez kompilator. Niektóre funkcje są wydajności poufnych, a inni nie. Funkcje zależne od wydajności powinny zostać wdrożone jako funkcje wewnętrzne.  
+Jednym z ograniczeń x64 kompilatora ma nie obsługują asemblera wbudowanego. Oznacza to, że funkcji nie można zapisać w C lub C++, albo musi być zapisywane jako procedury lub funkcji wewnętrznych obsługiwanych przez kompilator. Niektóre funkcje są wrażliwe na wydajność, a inne nie. Funkcje wrażliwego na wydajność, powinny zostać wdrożone jako funkcje wewnętrzne.  
   
- Funkcje wewnętrzne, obsługiwane przez kompilator opisanym w [funkcje wewnętrzne kompilatora](../intrinsics/compiler-intrinsics.md).  
+ Funkcje wewnętrzne, obsługiwane przez kompilator są opisane w [funkcje wewnętrzne kompilatora](../intrinsics/compiler-intrinsics.md).  
   
 ## <a name="see-also"></a>Zobacz też  
  [Konwencje kodowania x64](../build/x64-software-conventions.md)

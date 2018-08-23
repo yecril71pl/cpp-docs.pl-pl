@@ -18,15 +18,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5cb92a7f31d48dad4a7fb608703c71ccc661e176
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: b9511ce2d94a426756581b87d863051da25a627b
+ms.sourcegitcommit: b92ca0b74f0b00372709e81333885750ba91f90e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32368977"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "42465624"
 ---
 # <a name="allowisolation"></a>/ALLOWISOLATION
-Określa zachowanie wyszukiwania manifestu.  
+Określa zachowanie wyszukiwania plików manifestu.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -36,15 +36,15 @@ Określa zachowanie wyszukiwania manifestu.
 ```  
   
 ## <a name="remarks"></a>Uwagi  
- **/ ALLOWISOLATION** powoduje, że system operacyjny do manifestu wyszukiwań i obciążeń.  
+ **/ ALLOWISOLATION** powoduje, że system operacyjny do manifestu, wyszukiwania i obciążeniami.  
   
  **/ ALLOWISOLATION** jest ustawieniem domyślnym.  
   
- **/ALLOWISOLATION:No** wskazuje, że pliki wykonywalne zostały załadowane, tak jakby nie było żadnych manifestu i przyczyny [odwołanie EDITBIN](../../build/reference/editbin-reference.md) można ustawić `IMAGE_DLLCHARACTERISTICS_NO_ISOLATION` bitu w nagłówku opcjonalne `DllCharacteristics` pola.  
+ **/ALLOWISOLATION:No** wskazuje, że pliki wykonywalne są ładowane tak, jakby nie było żadnych manifest i powoduje, że [odwołanie EDITBIN](../../build/reference/editbin-reference.md) można ustawić `IMAGE_DLLCHARACTERISTICS_NO_ISOLATION` bit w opcjonalnym nagłówku `DllCharacteristics` pola.  
   
- Wyłączenie izolacji pliku wykonywalnego modułu ładującego systemu Windows nie próbuje znaleźć manifest aplikacji dla nowo utworzonego procesu. Nowy proces nie ma domyślny kontekst aktywacji, nawet jeśli brak manifestu w pliku wykonywalnym się lub jeśli brak manifestu, która ma nazwę *nazwę pliku wykonywalnego*. exe.manifest.  
+ Po wyłączeniu izolacji dla pliku wykonywalnego modułu ładującego Windows nie spróbuj znaleźć manifest aplikacji dla nowo utworzonego procesu. Nowy proces nie ma domyślny kontekst aktywacji, nawet jeśli istnieje manifest w pliku wykonywalnym, samego lub w przypadku manifestu, która ma nazwę *nazwę pliku wykonywalnego*. exe.manifest.  
   
 ## <a name="see-also"></a>Zobacz też  
  [Opcje polecenia EDITBIN](../../build/reference/editbin-options.md)   
  [/ ALLOWISOLATION (przeszukiwanie manifestu)](../../build/reference/allowisolation-manifest-lookup.md)   
- [Odwołanie do plików manifestu](http://msdn.microsoft.com/library/aa375632.aspx)
+ [Manifest plików — dokumentacja](/windows/desktop/SbsCs/manifest-files-reference)

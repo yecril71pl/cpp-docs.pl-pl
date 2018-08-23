@@ -18,16 +18,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e908a07253e924fa3cfc0a11cdef57a9253eee00
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 9c222a939ccb00dc3b7466a1cb1a83abe7ea4036
+ms.sourcegitcommit: d4c803bd3a684d7951bf88dcecf1f14af43ae411
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33844793"
+ms.lasthandoff: 08/10/2018
+ms.locfileid: "42464451"
 ---
 # <a name="intrinsic"></a>— funkcja
 
-Określa, że wywołania funkcji znajduje się na liście argumentów pragma wewnętrznej.
+Określa, czy wewnętrznych wywołań funkcji określona w pragmie listy argumentów.
 
 ## <a name="syntax"></a>Składnia
 
@@ -37,30 +37,30 @@ Określa, że wywołania funkcji znajduje się na liście argumentów pragma wew
 
 ## <a name="remarks"></a>Uwagi
 
-**Wewnętrzne** pragma informuje kompilator, że funkcja znane zachowanie.  Kompilator może wywołać funkcję i zastępuje wywołanie funkcji z instrukcjami w tekście, jeśli będzie zapewnia lepszą wydajność.
+**Wewnętrzne** pragma informuje kompilator, że funkcja znane zachowanie.  Kompilator może wywołać funkcję i zastępuje wywołania funkcji z instrukcjami w tekście, jeśli spowoduje lepszą wydajność.
 
-Funkcje bibliotek z formularzami wewnętrzne są wymienione poniżej. Raz **wewnętrzne** pragma jest widoczne, będzie wprowadzona w pierwszym definicji funkcji zawierających określony funkcji wewnętrznej. Efekt nadal na końcu pliku źródłowego lub wygląd **funkcja** pragma określenie tej samej funkcji wewnętrznej. **Wewnętrzne** pragmy można użyć tylko poza definicją funkcji — na poziomie globalnym.
+Funkcje bibliotek z formularzami wewnętrzne są wymienione poniżej. Gdy **wewnętrzne** pragmy jest widoczny, wprowadzone w pierwszej definicji funkcji zawierający określoną funkcję wewnętrzne. Efekt kontynuuje do końca pliku źródłowego lub wyglądu `function` pragma, określając tę samą funkcję wewnętrzne. **Wewnętrzne** dyrektywa może zostać użyta tylko poza definicją funkcji — na poziomie globalnym.
 
-Następujące funkcje zostały wewnętrzne formularzy i wewnętrzne formularze są używane podczas określania [/Oi](../build/reference/oi-generate-intrinsic-functions.md):
+Następujące funkcje mają wewnętrzne forms i formularzy wewnętrzne są używane podczas określania [/Oi](../build/reference/oi-generate-intrinsic-functions.md):
 
 |||||
 |-|-|-|-|
 |[_disable](../intrinsics/disable.md)|[_outp —](../c-runtime-library/outp-outpw-outpd.md)|[fabs —](../c-runtime-library/reference/fabs-fabsf-fabsl.md)|[strcmp](../c-runtime-library/reference/strcmp-wcscmp-mbscmp.md)|
-|[_enable](../intrinsics/enable.md)|[_outpw](../c-runtime-library/outp-outpw-outpd.md)|[Labs](../c-runtime-library/reference/abs-labs-llabs-abs64.md)|[strcpy](../c-runtime-library/reference/strcpy-wcscpy-mbscpy.md)|
+|[_enable](../intrinsics/enable.md)|[_outpw](../c-runtime-library/outp-outpw-outpd.md)|[Warsztaty](../c-runtime-library/reference/abs-labs-llabs-abs64.md)|[strcpy](../c-runtime-library/reference/strcpy-wcscpy-mbscpy.md)|
 |[_inp —](../c-runtime-library/inp-inpw-inpd.md)|[_rotl](../c-runtime-library/reference/rotl-rotl64-rotr-rotr64.md)|[memcmp](../c-runtime-library/reference/memcmp-wmemcmp.md)|[strlen](../c-runtime-library/reference/strlen-wcslen-mbslen-mbslen-l-mbstrlen-mbstrlen-l.md)|
 |[_inpw](../c-runtime-library/inp-inpw-inpd.md)|[_rotr —](../c-runtime-library/reference/rotl-rotl64-rotr-rotr64.md)|[memcpy](../c-runtime-library/reference/memcpy-wmemcpy.md)||
 |[_lrotl](../c-runtime-library/reference/lrotl-lrotr.md)|[_strset](../c-runtime-library/reference/strset-strset-l-wcsset-wcsset-l-mbsset-mbsset-l.md)|[memset](../c-runtime-library/reference/memset-wmemset.md)||
 |[_lrotr —](../c-runtime-library/reference/lrotl-lrotr.md)|[ABS](../c-runtime-library/reference/abs-labs-llabs-abs64.md)|[strcat](../c-runtime-library/reference/strcat-wcscat-mbscat.md)||
 
-Programy używające funkcji wewnętrznej są szybsze, ponieważ bez nakładów związanych z wywołania funkcji, ale może być większy z powodu dodatkowy kod wygenerowany.
+Programy, które używają funkcje wewnętrzne są szybsze, ponieważ nie masz obciążenie związane z wywołania funkcji, ale może być większy ze względu na dodatkowe wygenerowany kod.
 
 **x86 Specific**
 
-**_Disable** i **_włącz** funkcje wewnętrzne Generowanie instrukcji trybu jądra, aby włączyć/wyłączyć przerwań i może okazać się przydatne przy sterowniki trybu jądra.
+`_disable` i `_enable` funkcje wewnętrzne Generowanie trybu jądra instrukcje Włącz/Wyłącz przerwań i może być przydatna w sterowników trybu jądra.
 
 ### <a name="example"></a>Przykład
 
-Skompiluj następujący kod w wierszu polecenia z "cl - c-FAs sample.c" i przyjrzyj się sample.asm, aby zobaczyć, czy sprawią x86 instrukcje interfejsu wiersza polecenia i STI:
+Skompiluj następujący kod z wiersza polecenia za pomocą `cl -c -FAs sample.c` i przyjrzyj się sample.asm, aby zobaczyć, że zmieniania pomysłów w x86 instrukcje interfejsu wiersza polecenia i STI:
 
 ```cpp
 // pragma_directive_intrinsic.cpp
@@ -77,16 +77,16 @@ int main() {
 }
 ```
 
-**Konkretnego celu x86**
+**Koniec x86 określonych**
 
-Funkcje liczb zmiennoprzecinkowych wymienionych poniżej nie ma wartość true, formularze wewnętrzne. Zamiast tego mają wersje, które przekazywać argumenty bezpośrednio do liczb zmiennoprzecinkowych mikroukładu niż wypychanie ich na stosie program:
+Funkcje zmiennoprzecinkowe wymienione poniżej nie ma wartość true, formularze wewnętrzne. Zamiast tego mają wersje, które argumenty przekazywane bezpośrednio do zmiennoprzecinkowych mikroukładu niż wypychanie ich na stosie program:
 
 |||||
 |-|-|-|-|
 |[ACOS](../c-runtime-library/reference/acos-acosf-acosl.md)|[COSH](../c-runtime-library/reference/cosh-coshf-coshl.md)|[Pow](../c-runtime-library/reference/pow-powf-powl.md)|[TANH](../c-runtime-library/reference/tanh-tanhf-tanhl.md)|
-|[ASIN](../c-runtime-library/reference/asin-asinf-asinl.md)|[fmod —](../c-runtime-library/reference/fmod-fmodf.md)|[SINH](../c-runtime-library/reference/sinh-sinhf-sinhl.md)||
+|[ASIN](../c-runtime-library/reference/asin-asinf-asinl.md)|[Fmod —](../c-runtime-library/reference/fmod-fmodf.md)|[SINH](../c-runtime-library/reference/sinh-sinhf-sinhl.md)||
 
- Funkcje liczb zmiennoprzecinkowych wymienionych poniżej ma wartość true, formularze wewnętrzne po określeniu [/Oi](../build/reference/oi-generate-intrinsic-functions.md), [/Og](../build/reference/og-global-optimizations.md), i [Fast](../build/reference/fp-specify-floating-point-behavior.md) (lub każda opcja, która obejmuje /Og: [/ Ox](../build/reference/ox-full-optimization.md), [/O1](../build/reference/o1-o2-minimize-size-maximize-speed.md)i/O2):
+ Funkcje liczb zmiennoprzecinkowych, wymienionych poniżej ma wartość true, formularze wewnętrzne po określeniu [/Oi](../build/reference/oi-generate-intrinsic-functions.md), [/Og](../build/reference/og-global-optimizations.md), i [Fast](../build/reference/fp-specify-floating-point-behavior.md) (lub dowolną opcję, która obejmuje /Og: [/ Ox](../build/reference/ox-full-optimization.md), [/O1](../build/reference/o1-o2-minimize-size-maximize-speed.md)and/O2):
 
 |||||
 |-|-|-|-|
@@ -94,11 +94,11 @@ Funkcje liczb zmiennoprzecinkowych wymienionych poniżej nie ma wartość true, 
 |[atan2](../c-runtime-library/reference/atan-atanf-atanl-atan2-atan2f-atan2l.md)|[log](../c-runtime-library/reference/log-logf-log10-log10f.md)|[SIN](../c-runtime-library/reference/sin-sinf-sinl.md)|[tan](../c-runtime-library/reference/tan-tanf-tanl.md)|
 |[COS](../c-runtime-library/reference/cos-cosf-cosl.md)||||
 
-Można użyć [/FP: strict](../build/reference/fp-specify-floating-point-behavior.md) lub [/Za](../build/reference/za-ze-disable-language-extensions.md) do przesłonięcia generowania true wewnętrzne opcje zmiennoprzecinkowych. W takim przypadku funkcje są generowane jako procedury biblioteki, które przekazywać argumenty bezpośrednio do liczb zmiennoprzecinkowych mikroukładu zamiast wypychanie ich na stosie programu.
+Możesz użyć [/FP: strict](../build/reference/fp-specify-floating-point-behavior.md) lub [/Za](../build/reference/za-ze-disable-language-extensions.md) do zastąpienia generowania true wewnętrzne opcje zmiennoprzecinkowych. W takich przypadkach funkcje są generowane jako biblioteki procedur, które argumenty przekazywane bezpośrednio do zmiennoprzecinkowych mikroukładu zamiast wypychanie ich na stosie program.
 
-Zobacz [funkcji #pragma](../preprocessor/function-c-cpp.md) informacji oraz przykład włączyć lub wyłączyć funkcje wewnętrzne w bloku tekstu źródłowego.
+Zobacz [funkcji #pragma](../preprocessor/function-c-cpp.md) informacji i obejrzeć przykład włączenia/wyłączenia funkcji wewnętrznych w bloku tekstu źródłowego.
 
 ## <a name="see-also"></a>Zobacz także
 
-[Dyrektywy pragma i słowo kluczowe __Pragma](../preprocessor/pragma-directives-and-the-pragma-keyword.md)<br/>
-[Funkcje wewnętrzne kompilatora](../intrinsics/compiler-intrinsics.md)<br/>
+[Dyrektywy pragma i słowo kluczowe __Pragma](../preprocessor/pragma-directives-and-the-pragma-keyword.md)  
+[Funkcje wewnętrzne kompilatora](../intrinsics/compiler-intrinsics.md)  

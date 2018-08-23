@@ -20,47 +20,49 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b4ecd5f210aa01c41b3806ce15e19e77b8c93324
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: c911ff2f0dcd43a6f07144f893b91f3a97c6708b
+ms.sourcegitcommit: e9ce38decc9f986edab5543de3464b11ebccb123
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33687728"
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "42464648"
 ---
 # <a name="multithreading-support-for-older-code-visual-c"></a>Obsługa wielowątkowości w przypadku starszego kodu (Visual C++)
-Visual C++ pozwala mieć wiele współbieżnych wątków wykonywania jednocześnie uruchomione. Z wielowątkowości, można pokrętła wyłączyć zadania w tle, zarządzać równoczesnych strumieni danych wejściowych, zarządzanie interfejsu użytkownika i o wiele więcej.  
+Visual C++ pozwala na posiadanie wielu równoczesnych wątków wykonawczych uruchomionych jednocześnie. Za pomocą wielowątkowości, można uruchamianie zadań w tle, zarządzać równoczesnymi strumieniami danych wejściowych, zarządzać interfejsem użytkownika i o wiele więcej.  
   
 ## <a name="in-this-section"></a>W tej sekcji  
- [Wielowątkowość z językiem C i podsystemem Win32](../parallel/multithreading-with-c-and-win32.md)  
- Zapewnia obsługę tworzenia wielowątkowe aplikacje w systemie Microsoft Windows  
+ 
+[Wielowątkowość z językiem C i podsystemem Win32](../parallel/multithreading-with-c-and-win32.md)  
+Dodano obsługę tworzenia aplikacji wielowątkowym z Microsoft Windows  
   
- [Wielowątkowość z C++ i MFC](../parallel/multithreading-with-cpp-and-mfc.md)  
- Opisuje, jakie są procesów i wątków i MFC podejścia do wielowątkowość jest.  
+[Wielowątkowość z C++ i MFC](../parallel/multithreading-with-cpp-and-mfc.md)  
+Opisuje co to są procesy i wątki oraz co to jest podejście MFC do wielowątkowości jest.  
   
- [Wielowątkowość i ustawienia regionalne](../parallel/multithreading-and-locales.md)  
- W tym artykule omówiono problemy, które wystąpić podczas korzystania z funkcji ustawień regionalnych biblioteki wykonawczej C i standardowa biblioteka C++ w aplikacji wielowątkowych.  
+[Wielowątkowość i ustawienia regionalne](../parallel/multithreading-and-locales.md)  
+W tym artykule omówiono zagadnienia, które powstają, gdy za pomocą funkcji ustawień regionalnych, biblioteka uruchomieniowa C i standardowej biblioteki C++ w aplikacji wielowątkowych.  
   
 ## <a name="related-sections"></a>Sekcje pokrewne  
- [CWinThread](../mfc/reference/cwinthread-class.md)  
- Reprezentuje wątku do wykonania w aplikacji.  
+ 
+[CWinThread](../mfc/reference/cwinthread-class.md)  
+Przedstawia wątek wykonania wewnątrz aplikacji.  
   
- [CSyncObject](../mfc/reference/csyncobject-class.md)  
- Opisuje czystej wirtualnej klasę, która udostępnia funkcje wspólne dla obiektów synchronizacji Win32.  
+[CSyncObject](../mfc/reference/csyncobject-class.md)  
+Opisuje czystą klasę wirtualną, która zapewnia funkcje wspólne dla obiektów synchronizacji w systemie Win32.  
   
- [CSemaphore](../mfc/reference/csemaphore-class.md)  
- Reprezentuje semafora, który jest obiektem synchronizacji, który zapewnia ograniczoną liczbę wątków w jeden lub więcej procesów do uzyskania dostępu do zasobu.  
+[CSemaphore](../mfc/reference/csemaphore-class.md)  
+Przedstawia semafor, który jest obiektem synchronizacji umożliwiającym ograniczonej liczbę wątków w jeden lub więcej procesów, aby uzyskać dostęp do zasobu.  
   
- [CMutex](../mfc/reference/cmutex-class.md)  
- Reprezentuje obiektu mutex, który jest obiektem synchronizacji, umożliwiająca jeden wątek wykluczają się wzajemnie dostęp do zasobu.  
+[CMutex](../mfc/reference/cmutex-class.md)  
+Przedstawia muteks, który jest obiektem synchronizacji, która umożliwia jeden wątek wzajemnie wykluczających się uzyskanie dostępu do zasobu.  
   
- [CCriticalSection](../mfc/reference/ccriticalsection-class.md)  
- Reprezentuje sekcję krytyczny, który jest obiektem synchronizacji, który umożliwia jeden wątek jednocześnie dostęp do zasobów lub sekcji kodu.  
+[CCriticalSection](../mfc/reference/ccriticalsection-class.md)  
+Reprezentuje sekcję krytyczną, która jest obiektem synchronizacji umożliwiającym jednemu wątkowi w czasie uzyskać dostęp do zasobów lub sekcji kodu.  
   
- [CEvent](../mfc/reference/cevent-class.md)  
- Reprezentuje zdarzenia, który jest obiektem synchronizacji, umożliwiająca jeden wątek, aby powiadomić innego wystąpienia zdarzenia.  
+[CEvent](../mfc/reference/cevent-class.md)  
+Przedstawia zdarzenie, które jest obiektem synchronizacji umożliwiającym jednemu wątkowi na powiadomienie drugiego o zdarzeniu.  
   
- [CMultiLock](../mfc/reference/cmultilock-class.md)  
- Reprezentuje mechanizm kontroli dostępu, używany w kontrolowania dostępu do zasobów w programie wielowątkowych.  
+[CMultiLock](../mfc/reference/cmultilock-class.md)  
+Przedstawia mechanizm kontroli dostępu wykorzystywany w kontrolowaniu dostępu do zasobów w programie wielowątkowym.  
   
- [CSingleLock](../mfc/reference/csinglelock-class.md)  
- Reprezentuje mechanizm kontroli dostępu, używany w kontroli dostępu do zasobów w programie wielowątkowych.  
+[CSingleLock](../mfc/reference/csinglelock-class.md)  
+Przedstawia mechanizm kontroli dostępu wykorzystywany w kontrolowaniu dostępu do zasobu w programie wielowątkowym.  

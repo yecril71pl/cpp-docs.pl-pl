@@ -19,6 +19,7 @@ apilocation:
 - msvcr120.dll
 - msvcr120_clr0400.dll
 - ucrtbase.dll
+- api-ms-win-crt-stdio-l1-1-0.dll
 apitype: DLLExport
 f1_keywords:
 - _fseek_nolock
@@ -39,16 +40,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 40eca7e4944d74e8b86d5318702c954d86a3f54f
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 3b1ce866f7438ebc677156e6cfc9113f9725b65d
+ms.sourcegitcommit: e9ce38decc9f986edab5543de3464b11ebccb123
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32397356"
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "42464831"
 ---
 # <a name="fseeknolock-fseeki64nolock"></a>_fseek_nolock, _fseeki64_nolock
 
-Przenosi wskaźnika pliku do określonej lokalizacji.
+Przenosi wskaźnik pliku do określonej lokalizacji.
 
 ## <a name="syntax"></a>Składnia
 
@@ -67,7 +68,7 @@ int _fseeki64_nolock(
 
 ### <a name="parameters"></a>Parametry
 
-*Strumień*<br/>
+*Stream*<br/>
 Wskaźnik do **pliku** struktury.
 
 *offset*<br/>
@@ -78,11 +79,11 @@ Pozycja początkowa.
 
 ## <a name="return-value"></a>Wartość zwracana
 
-Taki sam jak [fseek](fseek-fseeki64.md) i [_fseeki64 —](fseek-fseeki64.md)odpowiednio.
+Taki sam jak [fseek](fseek-fseeki64.md) i [_fseeki64 —](fseek-fseeki64.md), odpowiednio.
 
 ## <a name="remarks"></a>Uwagi
 
-Te funkcje są wersje — blokowanie [fseek](fseek-fseeki64.md) i [_fseeki64 —](fseek-fseeki64.md)odpowiednio. Są one takie same jak [fseek](fseek-fseeki64.md) i [_fseeki64 —](fseek-fseeki64.md) z tą różnicą, że nie są chronione przez inne wątki od zakłóceń. Funkcje te mogą być szybciej, ponieważ one nie nakładu zablokowania inne wątki. Ich używać tylko w kontekstach wątkowo, np. aplikacje jednowątkowe lub gdzie wywoływania zakres już obsługuje izolacji wątku.
+Te funkcje są wersji bez blokady [fseek](fseek-fseeki64.md) i [_fseeki64 —](fseek-fseeki64.md), odpowiednio. Są one takie same jak [fseek](fseek-fseeki64.md) i [_fseeki64 —](fseek-fseeki64.md) z tą różnicą, że nie są chronione przed ingerencją przez inne wątki. Funkcje te mogą być szybsze, ponieważ nie wiążą się z obciążeniem związanym z blokowaniem innych wątków. Za pomocą tych funkcji tylko w kontekstach wątków, takich jak aplikacje jednowątkowe lub gdzie zakres wywołujący już obsługuje izolację wątków.
 
 ## <a name="requirements"></a>Wymagania
 
@@ -94,7 +95,7 @@ Aby uzyskać dodatkowe informacje o zgodności, zobacz [zgodności](../../c-runt
 
 ## <a name="see-also"></a>Zobacz także
 
-[We/Wy strumienia](../../c-runtime-library/stream-i-o.md)<br/>
+[Stream operacji We/Wy](../../c-runtime-library/stream-i-o.md)<br/>
 [ftell, _ftelli64](ftell-ftelli64.md)<br/>
 [_lseek, _lseeki64](lseek-lseeki64.md)<br/>
 [rewind](rewind.md)<br/>

@@ -142,12 +142,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 05d7897bf7b18d804d787f865b80b615b7564919
-ms.sourcegitcommit: 76fd30ff3e0352e2206460503b61f45897e60e4f
+ms.openlocfilehash: a2ce93a17dd2666469b8e6d56e1a106d508855f7
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/13/2018
-ms.locfileid: "39028294"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42465351"
 ---
 # <a name="cdockablepane-class"></a>Klasa CDockablePane
 Implementuje okienko, w którym może być zadokowane w witrynie stacji dokującej lub włączone do okienka z zakładkami.  
@@ -927,7 +927,7 @@ virtual AFX_CS_STATUS GetDockingStatus(
 ### <a name="remarks"></a>Uwagi  
  Struktura wywołuje tę metodę w celu obsługi dokujące okienka zmiennoprzecinkowy.  
   
- Przestawne paski narzędzi lub dokowanie okienek, które używają trybu dokowania DT_IMMEDIATE, struktura opóźnia polecenie dokowania, aby umożliwić użytkownikowi wychodzenia z okna obszaru klienta ramki nadrzędnej przed wystąpieniem dokowania. Długość opóźnienia jest mierzony w milisekundach i jest kontrolowana przez [CDockingManager::m_nTimeOutBeforeToolBarDock](../../mfc/reference/cdockingmanager-class.md#m_ntimeoutbeforetoolbardock) element członkowski danych... Wartość domyślna [CDockingManager::m_nTimeOutBeforeToolBarDock](../../mfc/reference/cdockingmanager-class.md#m_ntimeoutbeforetoolbardock) to 200. To zachowanie emuluje zachowanie dokowania [!INCLUDE[ofprword](../../mfc/reference/includes/ofprword_md.md)] 2007.  
+ Przestawne paski narzędzi lub dokowanie okienek, które używają trybu dokowania DT_IMMEDIATE, struktura opóźnia polecenie dokowania, aby umożliwić użytkownikowi wychodzenia z okna obszaru klienta ramki nadrzędnej przed wystąpieniem dokowania. Długość opóźnienia jest mierzony w milisekundach i jest kontrolowana przez [CDockingManager::m_nTimeOutBeforeToolBarDock](../../mfc/reference/cdockingmanager-class.md#m_ntimeoutbeforetoolbardock) element członkowski danych... Wartość domyślna [CDockingManager::m_nTimeOutBeforeToolBarDock](../../mfc/reference/cdockingmanager-class.md#m_ntimeoutbeforetoolbardock) to 200. To zachowanie emuluje zachowanie dokowania Microsoft Word 2007.  
   
  Opóźnione stanów dokowania (CS_DELAY_DOCK i CS_DELAY_DOCK_TO_TAB) struktura wykonuje dokowania, dopóki użytkownik zwolni przycisk myszy. Jeśli okienko korzysta z trybu dokowania DT_STANDARD, struktura Wyświetla prostokąt przewidywany lokalizację dokowania. Jeśli okienko korzysta z trybu dokowania DT_SMART, struktura Wyświetla znaczników inteligentnego dokowania i prostokąty półprzezroczyste przewidywany lokalizacji dokowania. Aby określić tryb dokowania okienku, należy wywołać [CBasePane::SetDockingMode](../../mfc/reference/cbasepane-class.md#setdockingmode) metody. Aby uzyskać więcej informacji na temat inteligentnego dokowania, zobacz [CDockingManager::GetSmartDockingParams](../../mfc/reference/cdockingmanager-class.md#getsmartdockingparams).  
   
@@ -1186,7 +1186,7 @@ AFX_IMPORT_DATA static int m_nSlideSteps;
  Aby szybciej efekt animacji Zmniejsz tę wartość. Aby wolniejsze efekt animacji należy zwiększyć tę wartość.  
   
 ##  <a name="onafterchangeparent"></a>  CDockablePane::OnAfterChangeParent  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+ Aby uzyskać więcej informacji, zobacz kod źródłowy znajdujący się w **VC\\atlmfc\\src\\mfc** folder instalacji programu Visual Studio.  
   
 ```  
 virtual void OnAfterChangeParent(CWnd* pWndOldParent);

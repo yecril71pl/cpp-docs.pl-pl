@@ -21,17 +21,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 14d97ddf2d9267f647644fbcc9d10f6072dffc75
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: f55be256ec7b400be6c46f928a2f2309d047ca2c
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33331639"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42464555"
 ---
 # <a name="bittestandreset-bittestandreset64"></a>_bittestandreset, _bittestandreset64
 **Microsoft Specific**  
   
- Generowanie instrukcji, która sprawdza, czy bit `b` adresu `a`, zwraca bieżącą wartość i resetuje bit do 0.  
+ Generowanie instrukcji, która sprawdza, czy bit `b` adresu `a`, zwraca bieżącą wartość i resetuje bitu na 0.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -47,26 +47,26 @@ unsigned char _bittestandreset64(
 ```  
   
 #### <a name="parameters"></a>Parametry  
- [w, out] `a`  
+ [out w] `a`  
  Wskaźnik do pamięci do sprawdzenia.  
   
  [in] `b`  
- Pozycja bit do testowania.  
+ Pozycja bitu do testowania.  
   
 ## <a name="return-value"></a>Wartość zwracana  
  Bit na określonej pozycji.  
   
 ## <a name="requirements"></a>Wymagania  
   
-|— Wewnętrzne|Architektura|  
+|Wewnętrzne|Architektura|  
 |---------------|------------------|  
-|`_bittestandreset`|x86, ARM, [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
-|`_bittestandreset64`|[!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
+|`_bittestandreset`|x86, ARM, x64|  
+|`_bittestandreset64`|X64|  
   
- **Plik nagłówka** \<intrin.h >  
+ **Plik nagłówkowy** \<intrin.h >  
   
 ## <a name="remarks"></a>Uwagi  
- Ta procedura jest dostępna tylko wewnętrznie.  
+ Ta procedura jest dostępna wyłącznie jako wewnętrzna.  
   
 ## <a name="example"></a>Przykład  
   
@@ -105,7 +105,7 @@ int main()
 The number was negative.  
 ```  
   
-**KOŃCOWY określonych firmy Microsoft**  
+**END specyficzny dla Microsoft**  
   
 ## <a name="see-also"></a>Zobacz też  
  [Funkcje wewnętrzne kompilatora](../intrinsics/compiler-intrinsics.md)

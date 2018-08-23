@@ -1,5 +1,5 @@
 ---
-title: Funkcje biblioteki wykonawczej języka C do sterowania wątkami | Dokumentacja firmy Microsoft
+title: Biblioteki wykonawczej C funkcje do sterowania wątkami | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -19,36 +19,39 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4a505bae156edba6798812b807d7ab5c6ea9e396
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: 7a08ba6c5343fda19bab823b9a415db18b745e2a
+ms.sourcegitcommit: e9ce38decc9f986edab5543de3464b11ebccb123
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33685765"
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "42464547"
 ---
 # <a name="c-run-time-library-functions-for-thread-control"></a>Funkcje biblioteki czasu wykonywania języka C do sterowania wątkami
-Wszystkie programy Win32 ma co najmniej jeden wątek. Którymkolwiek wątku można utworzyć dodatkowe wątki. Wątek można szybko wykonać pracę i następnie zakończyć lub mogą pozostać aktywne przez cały okres istnienia program.  
+Wszystkie programy Win32 ma co najmniej jeden wątek. Jednym z wątków można utworzyć dodatkowe wątki. Wątek można szybko wykonać pracę, a następnie Zakończ działanie lub mogą pozostać aktywne przez cały okres istnienia programu.  
   
- Biblioteki wykonawczej LIBCMT i MSVCRT C zapewniają następujące funkcje tworzenia wątku i zakończenie: [_beginthread —, _beginthreadex —](../c-runtime-library/reference/beginthread-beginthreadex.md) i [_endthread —, _endthreadex —](../c-runtime-library/reference/endthread-endthreadex.md).  
+Biblioteki wykonawczej LIBCMT i MSVCRT C zapewniają następujące funkcje do tworzenia wątku i kończenie działania: [_beginthread, _beginthreadex](../c-runtime-library/reference/beginthread-beginthreadex.md) i [_endthread, _endthreadex](../c-runtime-library/reference/endthread-endthreadex.md).  
   
- `_beginthread` i `_beginthreadex` funkcji tworzenia nowego wątku i zwraca identyfikator wątku, jeśli operacja się powiodła. Wątek kończy automatycznie wykonuje wykonywania, czy go jego zakończenia w wyniku wywołania `_endthread` lub `_endthreadex`.  
+`_beginthread` i `_beginthreadex` funkcji, Utwórz nowy wątek i zwraca identyfikator wątku, jeśli operacja się powiedzie. Wątek się kończy automatycznie zakończenia wykonywania, czy, może zostać przerwany się wywołaniem `_endthread` lub `_endthreadex`.  
   
 > [!NOTE]
->  Jeśli zamierzasz wywołać procedury czasu wykonywania języka C z poziomu programu skompilowane z Libcmt.lib, należy uruchomić z wątków z `_beginthread` lub `_beginthreadex` funkcji. Nie należy używać funkcji Win32 `ExitThread` i `CreateThread`. Przy użyciu `SuspendThread` może doprowadzić do zakleszczenia, gdy więcej niż jeden wątek jest zablokowany oczekiwania na ukończenie jego dostępu do struktury danych wykonawcze języka C wstrzymania wątku.  
+> Jeśli zamierzasz wywołanie procedury czasu wykonywania języka C z poziomu programu skompilowanych przy użyciu biblioteki Libcmt.lib, należy uruchomić wątki z `_beginthread` lub `_beginthreadex` funkcji. Nie należy używać funkcji Win32 `ExitThread` i `CreateThread`. Za pomocą `SuspendThread` może prowadzić do zakleszczenia, gdy więcej niż jeden wątek jest zablokowany, trwa oczekiwanie na wstrzymania wątku zakończyć jego dostęp do struktury danych środowiska wykonawczego języka C.  
   
-##  <a name="_core_the__beginthread_function"></a> _Beginthread — i _beginthreadex — funkcje  
- `_beginthread` i `_beginthreadex` funkcji tworzenia nowego wątku. Wątek współużytkuje procesu segmenty kodu i danych z innych wątków w procesie, ale ma swoją własną wartości rejestru unikatowy, miejsca na stosie i adres bieżącej instrukcji. System umożliwia czas procesora CPU do każdy wątek, aby wszystkie wątki w procesie można wykonywać jednocześnie.  
+##  <a name="_core_the__beginthread_function"></a> Funkcje _beginthread i _beginthreadex  
+ 
+`_beginthread` i `_beginthreadex` functions w celu utworzenia nowego wątku. Wątek udostępni segmenty kodu i danych procesu inne wątki w procesie, ale ma swoje własne wartości rejestru unikatowych obszar stosu i bieżący adres instrukcji. System daje czas procesora CPU do każdego wątku, tak, aby wszystkie wątki w procesie można wykonywać jednocześnie.  
   
- `_beginthread` i `_beginthreadex` są podobne do [CreateThread](http://msdn.microsoft.com/library/windows/desktop/ms682453) te różnice, lecz jest funkcja w interfejsie API Win32:  
+`_beginthread` i `_beginthreadex` są podobne do [CreateThread](http://msdn.microsoft.com/library/windows/desktop/ms682453) funkcji API Win32, ale ma te różnice:  
   
--   Inicjowania pewnych zmiennych biblioteki wykonawczej języka C. Jest to ważne, tylko w przypadku używania biblioteki wykonawczej języka C z wątków.  
+- Inicjowania pewne zmienne biblioteki wykonawczej C. Jest to ważne, tylko wtedy, gdy używasz biblioteki wykonawczej języka C w wątki.  
   
--   `CreateThread` pomaga zapewnić kontrolę nad atrybutów zabezpieczeń. Ta funkcja służy do uruchamiania wątku w stanie zawieszone.  
+- `CreateThread` pomaga w zapewnieniu kontroli nad atrybutów zabezpieczeń. Można użyć tej funkcji, można uruchomić wątku w stanie wstrzymania.  
   
- `_beginthread` i `_beginthreadex` zwraca uchwyt do nowego wątku w przypadku powodzenia lub kod błędu, jeśli wystąpił błąd.  
+ `_beginthread` i `_beginthreadex` zwraca uchwyt do nowego wątku, jeśli kończy się pomyślnie lub kod błędu, jeśli wystąpił błąd.  
   
-##  <a name="_core_the__endthread_function"></a> _Endthread — i _endthreadex — funkcje  
- [_Endthread —](../c-runtime-library/reference/endthread-endthreadex.md) funkcja kończy utworzone przez wątek `_beginthread` (i podobnie `_endthreadex` kończy utworzone przez wątek `_beginthreadex`). Wątki przerwanie automatycznie po zakończeniu. `_endthread` i `_endthreadex` są przydatne w przypadku warunkowego zakończenia od w wątku. Na przykład wątku dedykowane do obsługi komunikacji przetwarzania, można Zamknij, jeśli nie może uzyskać kontrolę nad port komunikacyjny.  
+##  <a name="_core_the__endthread_function"></a> _Endthread i _endthreadex — funkcje  
+ 
+[_Endthread](../c-runtime-library/reference/endthread-endthreadex.md) funkcja kończy się wątek, który został utworzony przez `_beginthread` (USA i podobnie `_endthreadex` kończy się wątek, który został utworzony przez `_beginthreadex`). Wątki obowiązywać automatycznie po ich zakończeniu. `_endthread` i `_endthreadex` są przydatne w przypadku warunkowego zakończenia z w ramach wątku. Na przykład wątku dedykowanego dla usługi komunikacji przetwarzania może Zamknij, jeśli nie może uzyskać kontrolę portu komunikacyjnego.  
   
 ## <a name="see-also"></a>Zobacz też  
- [Wielowątkowość z językiem C i podsystemem Win32](../parallel/multithreading-with-c-and-win32.md)
+ 
+[Wielowątkowość z językiem C i podsystemem Win32](../parallel/multithreading-with-c-and-win32.md)

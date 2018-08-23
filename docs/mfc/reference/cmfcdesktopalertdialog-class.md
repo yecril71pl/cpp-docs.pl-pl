@@ -24,17 +24,17 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f162a8da230177509ebe67741580ef224b20ba19
-ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
+ms.openlocfilehash: 1ea72c42f1c10e8d5cd27537db13c7b7baafef5d
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/27/2018
-ms.locfileid: "37040798"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42466074"
 ---
 # <a name="cmfcdesktopalertdialog-class"></a>Klasa CMFCDesktopAlertDialog
-`CMFCDesktopAlertDialog` Klasa jest używana razem z [klasy CMFCDesktopAlertWnd](../../mfc/reference/cmfcdesktopalertwnd-class.md) do wyświetlenia w oknie podręcznym niestandardowe okno dialogowe.  
+`CMFCDesktopAlertDialog` Klasa jest używana razem z [klasa CMFCDesktopAlertWnd](../../mfc/reference/cmfcdesktopalertwnd-class.md) można wyświetlić niestandardowy dialog w oknie podręcznym.  
 
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+ Aby uzyskać więcej informacji, zobacz kod źródłowy znajdujący się w **VC\\atlmfc\\src\\mfc** folder instalacji programu Visual Studio.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -54,15 +54,15 @@ class CMFCDesktopAlertDialog : public CDialogEx
 |[CMFCDesktopAlertDialog::PreTranslateMessage](#pretranslatemessage)|(Przesłania `CDialogEx::PreTranslateMessage`.)|  
   
 ### <a name="remarks"></a>Uwagi  
- Wykonaj poniższe kroki, aby wyświetlić okno dialogowe niestandardowe w oknie podręcznym:  
+ Wykonaj poniższe kroki, aby wyświetlić niestandardowy dialog w oknie podręcznym:  
   
-1.  Klasa wyprowadzona z `CMFCDesktopAlertDialog`.  
+1.  Wyprowadzić klasę z `CMFCDesktopAlertDialog`.  
   
-2.  Tworzenie szablonu okna dialogowego podrzędnych zasobów projektu.  
+2.  Tworzenie szablonu okna dialogowego podrzędnych w zasobów projektu.  
   
-3.  Wywołanie [CMFCDesktopAlertWnd::Create](../../mfc/reference/cmfcdesktopalertwnd-class.md#create) o identyfikatorze zasobu szablonu okna dialogowego i wskaźnika do informacji o klasie czasu wykonywania klasy pochodnej jako parametry.  
+3.  Wywołaj [CMFCDesktopAlertWnd::Create](../../mfc/reference/cmfcdesktopalertwnd-class.md#create) o identyfikatorze zasobu szablonu okna dialogowego i wskaźnik do informacji o klasie czasu wykonywania klasy pochodnej jako parametry.  
   
-4.  Niestandardowe okno dialogowe do obsługi wszystkich powiadomień, które pochodzą z hostowanej formanty programu lub program hostowanej służy do obsługi te powiadomienia bezpośrednio.  
+4.  Program niestandardowy dialog do obsługi wszystkich powiadomień, które pochodzą z formantów hostowanej lub program hostowanej służy do obsługi tych powiadomień bezpośrednio.  
   
 ## <a name="inheritance-hierarchy"></a>Hierarchia dziedziczenia  
  [CObject](../../mfc/reference/cobject-class.md)  

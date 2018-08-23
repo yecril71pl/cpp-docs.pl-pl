@@ -62,12 +62,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3d265b2547f35e0c8c25ee5e3aad1135945e346b
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: 994e9f8c48bb6d6db2a9af06613abca895b09f51
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37853207"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42465259"
 ---
 # <a name="cpropertysheet-class"></a>Cpropertysheet — klasa
 Przedstawia arkusze właściwości, znane również jako zakładki okna dialogowego.  
@@ -121,7 +121,7 @@ class CPropertySheet : public CWnd
 ## <a name="remarks"></a>Uwagi  
  Arkusz właściwości składa się z `CPropertySheet` obiektu i co najmniej jeden [CPropertyPage](../../mfc/reference/cpropertypage-class.md) obiektów. Struktura wyświetlany arkusz właściwości w oknie z zestawem karty indeksów i obszar, który zawiera aktualnie wybranej strony. Użytkownik przechodzi do określonej strony za pomocą odpowiedniej karty.  
   
- `CPropertySheet` zapewnia obsługę rozwiniętym okienku [PROPSHEETHEADER](http://msdn.microsoft.com/library/windows/desktop/bb774546) struktury wprowadzona w [!INCLUDE[Win98](../../mfc/reference/includes/win98_md.md)] i 2000 systemu Windows NT. Struktura zawiera dodatkowe flagi i elementów członkowskich, które obsługuje tła mapy bitowej "limit".  
+ `CPropertySheet` zapewnia obsługę rozwiniętym okienku [PROPSHEETHEADER](http://msdn.microsoft.com/library/windows/desktop/bb774546) struktury wprowadzone w programie Windows 98 i Windows NT Windows 2000. Struktura zawiera dodatkowe flagi i elementów członkowskich, które obsługuje tła mapy bitowej "limit".  
   
  Aby wyświetlić te nowe obrazy automatycznie obiekt arkusza właściwości, należy przekazać prawidłowe wartości dla obrazy mapy bitowej i palety w wywołaniu [CPropertySheet::Construct](#construct) lub [CPropertySheet::CPropertySheet](#cpropertysheet).  
   

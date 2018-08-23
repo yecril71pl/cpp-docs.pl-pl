@@ -1,7 +1,7 @@
 ---
 title: Nazwy lokalne, języki i ciągi Kraj / Region | Dokumentacja firmy Microsoft
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 08/13/2018
 ms.technology:
 - cpp-standard-libraries
 ms.topic: conceptual
@@ -20,12 +20,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8f28262a1402d81bd5dcd0933f943b420a37f044
-ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
+ms.openlocfilehash: c072074c24466458ebd19e1335f49169c5c22bd5
+ms.sourcegitcommit: 3b78ddea5fd3e22b7c5cd2d787ec71a518a52223
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/07/2018
-ms.locfileid: "39606738"
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "42465240"
 ---
 # <a name="locale-names-languages-and-countryregion-strings"></a>Nazwy lokalne, języki i ciągi kraj/region
 
@@ -44,9 +44,9 @@ Forma nazwy ustawień regionalnych jest preferowana; na przykład użyć `en-US`
 
 Strona kodowa to strona kodowa ANSI/OEM skojarzona z ustawieniami regionalnymi. Strona kodowa jest określana automatycznie po określeniu ustawień regionalnych za pomocą wyłącznie języka lub języka i kraju/regionu. Specjalna wartość `.ACP` Określa stronę kodową ANSI dla kraju/regionu. Specjalna wartość `.OCP` Określa stronę kodową OEM dla kraju/regionu. Na przykład, jeśli określisz `"Greek_Greece.ACP"` jako ustawienie regionalne, ustawienie regionalne jest przechowywane jako `Greek_Greece.1253` (na stronę kodową ANSI dla języka greckiego), a jeśli określisz `"Greek_Greece.OCP"` jako ustawienie regionalne, jest przechowywany jako `Greek_Greece.737` (stronę kodową OEM dla języka greckiego). Aby uzyskać więcej informacji dotyczących stron kodowych, zobacz [stron kodowych](../c-runtime-library/code-pages.md). Aby uzyskać listę stron kodowych obsługiwanych w Windows, zobacz [kodu strony identyfikatory](/windows/desktop/Intl/code-page-identifiers).
 
-Jeśli do określenia ustawień regionalnych używasz tylko strony kodowej, używany jest domyślny język i kraj/region. Na przykład, jeśli określisz `".1254"` (turecki ANSI) jako ustawienie regionalne w systemie, który jest skonfigurowany dla języka angielskiego (Stany Zjednoczone), ustawienia regionalne, który jest przechowywany jest `English_United States.1254`. Nie zaleca się tej formy, ponieważ może to prowadzić do niespójnego zachowania.
+Jeśli używasz tylko strony kodowej Aby określić ustawienia regionalne, domyślny język i kraj/region użytkownika zgłoszonej przez [GetUserDefaultLocaleName](/windows/desktop/api/winnls/nf-winnls-getuserdefaultlocalename) są używane. Na przykład, jeśli określisz `".1254"` (turecki ANSI) jako ustawienie regionalne dla użytkownika, który jest skonfigurowany dla języka angielskiego (Stany Zjednoczone), ustawienia regionalne, który jest przechowywany jest `English_United States.1254`. Nie zaleca się tej formy, ponieważ może to prowadzić do niespójnego zachowania.
 
-A *ustawień regionalnych* wartość argumentu `C` określa minimalne środowisko odpowiadające ANSI dla translacji C. `C` Ustawień regionalnych zakłada, że każdy `char` — typ danych jest 1 bajt i jego wartość jest zawsze mniejsza niż 256. Jeśli *ustawień regionalnych* wskazuje na pusty ciąg, ustawienia regionalne są natywnym środowiskiem zdefiniowanych w implementacji.
+A *ustawień regionalnych* wartość argumentu `C` określa minimalne środowisko odpowiadające ANSI dla translacji C. `C` Ustawień regionalnych zakłada, że każdy **char** — typ danych jest 1 bajt i jego wartość jest zawsze mniejsza niż 256. Jeśli *ustawień regionalnych* wskazuje na pusty ciąg, ustawienia regionalne są natywnym środowiskiem zdefiniowanych w implementacji.
 
 Można określić wszystkie kategorie ustawień regionalnych, w tym samym czasie dla `setlocale` i `_wsetlocale` funkcji przy użyciu `LC_ALL` kategorii. Kategorie można ustawić na te same ustawienia regionalne lub każdą kategorię można ustawić indywidualnie przy użyciu argumentu ustawień regionalnych, który ma tę formę:
 

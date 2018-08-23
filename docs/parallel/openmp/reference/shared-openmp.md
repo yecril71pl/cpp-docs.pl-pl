@@ -16,15 +16,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8287f96f80748272e29b22ed5c43c364f4353b86
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: b2bc1a0bbf56623feccd4d3bd96f1e719e192d48
+ms.sourcegitcommit: e9ce38decc9f986edab5543de3464b11ebccb123
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33691680"
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "42465511"
 ---
 # <a name="shared-openmp"></a>udostępnione (OpenMP)
-Określa, że co najmniej jedną zmienną powinna być współużytkowane przez wszystkie wątki.  
+Określa, czy co najmniej jednej zmiennej powinien być współużytkowane przez wszystkie wątki.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -36,12 +36,12 @@ shared(var)
  w przypadku gdy  
   
  `var`  
- Co więcej zmiennych do udziału. Jeśli określono więcej niż jednej zmiennej, oddziel przecinkami nazwy zmiennych.  
+ Co najmniej jednej zmiennej do udostępniania. Jeżeli określono więcej niż jedną zmienną, oddziel przecinkami nazw zmiennych.  
   
 ## <a name="remarks"></a>Uwagi  
- Innym sposobem udostępniają zmienne między wątków jest z [copyprivate](../../../parallel/openmp/reference/copyprivate.md) klauzuli.  
+ Innym sposobem udostępnienia zmienne wśród wątków jest [copyprivate](../../../parallel/openmp/reference/copyprivate.md) klauzuli.  
   
- `shared` ma zastosowanie do następujących dyrektyw:  
+ `shared` mają zastosowanie do następujących dyrektywach:  
   
 -   [for](../../../parallel/openmp/reference/for-openmp.md)  
   
@@ -49,10 +49,10 @@ shared(var)
   
 -   [Sekcje](../../../parallel/openmp/reference/sections-openmp.md)  
   
- Aby uzyskać więcej informacji, zobacz [2.7.2.4 udostępnionych](../../../parallel/openmp/2-7-2-4-shared.md).  
+ Aby uzyskać więcej informacji, zobacz [2.7.2.4 udostępnione](../../../parallel/openmp/2-7-2-4-shared.md).  
   
 ## <a name="example"></a>Przykład  
- Zobacz [prywatnej](../../../parallel/openmp/reference/private-openmp.md) przykład przy użyciu `shared`.  
+ Zobacz [prywatnej](../../../parallel/openmp/reference/private-openmp.md) na przykład za pomocą `shared`.  
   
 ## <a name="see-also"></a>Zobacz też  
  [Klauzule](../../../parallel/openmp/reference/openmp-clauses.md)

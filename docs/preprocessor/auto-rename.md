@@ -16,17 +16,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a7561e9d9b49f9af885299a6b94d3edbcf8f2a74
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 70049daf514659a9ae525e1fca40152df4ab382a
+ms.sourcegitcommit: d4c803bd3a684d7951bf88dcecf1f14af43ae411
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33912813"
+ms.lasthandoff: 08/10/2018
+ms.locfileid: "42466414"
 ---
 # <a name="autorename"></a>auto_rename
-**Określonego języka C++**  
+**Określonego język C++**  
   
- Zmienia nazwę słowa zastrzeżone w języku C++ przez dołączenie do nazwy zmiennej, aby rozwiązać potencjalne konflikty nazw dwa znaki podkreślenia (_).  
+Zmienia nazwę słowa zastrzeżone w języku C++, dodając dwa znaki podkreślenia (_) do nazwy zmiennej, aby rozwiązać potencjalne konflikty nazw.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -34,11 +34,13 @@ ms.locfileid: "33912813"
 auto_rename  
 ```  
   
-## <a name="remarks"></a>Uwagi  
- Ten atrybut jest używany podczas importowania biblioteki typu, która korzysta z jednego lub więcej C++ słowa (słowa kluczowe lub makra) zarezerwowane jako nazwy zmiennych.  
+## <a name="remarks"></a>Uwagi 
+
+Ten atrybut jest używany podczas importowania biblioteki typów, korzystającą z co najmniej jeden C++ zastrzeżone słowa (słowa kluczowe lub makra) jako nazwy zmiennych.  
   
- **KOŃCOWY określonego języka C++**  
+ **KONIEC określonego języka C++**  
   
-## <a name="see-also"></a>Zobacz też  
- [atrybuty #import](../preprocessor/hash-import-attributes-cpp.md)   
- [#import — dyrektywa](../preprocessor/hash-import-directive-cpp.md)
+## <a name="see-also"></a>Zobacz też 
+
+[atrybuty #import](../preprocessor/hash-import-attributes-cpp.md)   
+[#import — dyrektywa](../preprocessor/hash-import-directive-cpp.md)

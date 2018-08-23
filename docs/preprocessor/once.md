@@ -1,5 +1,5 @@
 ---
-title: Po | Dokumentacja firmy Microsoft
+title: gdy | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,39 +18,37 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9b0e0b2b3667d4a33709caa643e4d26ed70b2990
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: b3ce387b4b9748c7fb46a419cbc8738e2598c5ab
+ms.sourcegitcommit: d4c803bd3a684d7951bf88dcecf1f14af43ae411
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33912930"
+ms.lasthandoff: 08/10/2018
+ms.locfileid: "42466125"
 ---
 # <a name="once"></a>once
-Określa, że plik zostanie dołączony (otwarte) tylko raz przez kompilator podczas kompilowania pliku kodu źródłowego.  
+Określa, że plik zostanie uwzględniony (otwarte) tylko raz przez kompilator podczas kompilowania pliku kodu źródłowego.  
   
 ## <a name="syntax"></a>Składnia  
   
 ```  
-  
 #pragma once  
-  
 ```  
   
 ## <a name="remarks"></a>Uwagi  
- Korzystanie z `#pragma once` można zmniejszyć czasy kompilacji, ponieważ kompilator nie będą otwierane i odczytać pliku po pierwszym #include w jednostce tłumaczenia pliku. Jest to określane jako *optymalizacji obejmują wiele*. Jest efekt jest podobny do *#include guard* idiom, używanym w definicji makro preprocesora zapobiegające wielu włączenia zawartość pliku. Ponadto pozwala to zapobiec naruszeń *reguły jednej definicji*— to wymaganie, że wszystkie szablony: typy, funkcje i obiekty ma nie więcej niż jedną definicję w kodzie.  
+ 
+Korzystanie z `#pragma once` może zmniejszyć czasy kompilacji, ponieważ kompilator nie będą otwierane i odczytania pliku po pierwszym `#include` pliku w jednostce translacji. Jest to określane jako *optymalizacji obejmują wiele*. Jest efekt jest podobny do `#include guard` idiom, który używa definicji makro preprocesora aby uniemożliwić dołączanie wielu zawartość pliku. Pomaga to również zapobieganie naruszeń *reguły jednej definicji*— wymagania, że wszystkie szablony, typy, funkcje i obiekty mają nie więcej niż jedną definicję w kodzie.  
   
- Na przykład:  
+Na przykład:  
   
 ```  
 // header.h  
 #pragma once  
-// Code placed here is included only once per translation unit  
-  
+// Code placed here is included only once per translation unit    
 ```  
   
- Firma Microsoft zaleca `#pragma once` dyrektywy dla nowego kodu, ponieważ nie charakteryzują się globalnej przestrzeni nazw z symbol preprocesora. Wymaga mniej wpisanie, jest mniej rozpraszać i nie może spowodować konflikty symbol — błędy spowodowane pliki nagłówkowe różnych używania tego samego symbol preprocesora jako wartość guard. Nie jest częścią standardowej C++, ale jest zaimplementowana portably przez kilka typowych kompilatory.  
+Firma Microsoft zaleca `#pragma once` dyrektywy dla nowego kodu, ponieważ nie charakteryzują się globalnej przestrzeni nazw za pomocą symbol preprocesora. Wymaga mniej wpisując, jest mniej rozprasza uwagę i nie może powodować konflikty symbol — błędy spowodowane pliki nagłówkowe różnych korzystania z tego samego symbol preprocesora jako wartość guard. Nie jest częścią standardu języka C++, ale jest zaimplementowana portably przez kilka typowych kompilatory.  
   
- Nie ma żadnych dodatkowych zalet Użyj obu #include guard idiom i `#pragma once` w tym samym pliku. Kompilator rozpoznaje #include guard idiom i implementuje wielokrotność obejmują optymalizacji taki sam sposób jak `#pragma once` dyrektywy, jeśli nie komentarza-kod lub dyrektywy preprocesora pochodzi przed lub po standardowy formularz idiom:  
+Nie posiada zalet korzystania z obu #include guard idiom i `#pragma once` w tym samym pliku. Kompilator rozpoznaje #include guard idiom i implementuje wielokrotność obejmują optymalizacji w taki sam sposób jak `#pragma once` dyrektywy, jeśli nie kodu bez komentarza lub dyrektywy preprocesora obejmuje przed lub po standardowy formularz idiom:  
   
 ```  
 // header.h  
@@ -59,13 +57,13 @@ Określa, że plik zostanie dołączony (otwarte) tylko raz przez kompilator pod
 #ifndef HEADER_H_     // equivalently, #if !defined HEADER_H_  
 #define HEADER_H_  
 // Code placed here is included only once per translation unit  
-#endif // HEADER_H_  
-  
+#endif // HEADER_H_    
 ```  
   
- Firma Microsoft zaleca #include guard idiom, gdy kod musi być przenośne do kompilatorów, które nie implementują `#pragma once` dyrektywy, aby zachować spójność z istniejącym kodem, lub gdy obejmują wiele Optymalizacja jest niemożliwe. Taka sytuacja może wystąpić w złożonych projektów aliasu systemu plików lub aliasem zawierają ścieżki zapobiec kompilatora z identyfikowanie identyczne pliki dołączane przez kanonicznej ścieżki.  
+Firma Microsoft zaleca `#include guard` idiom, gdy kod musi być przenośny do kompilatory, które nie implementują `#pragma once` dyrektywy, aby zachować spójność z istniejącego kodu, lub gdy obejmują wiele optymalizacji jest niemożliwe. Taka sytuacja może wystąpić w złożonych projektów podczas gdy aliasów systemu plików lub aliasem użytkownika zawiera ścieżki zapobiec kompilator identyfikuje identyczne pliki dołączane przez ścieżkę kanonicznej.  
   
- Nie można więc użyć `#pragma once` lub #include guard idiom pliki nagłówkowe, opracowane w celu uwzględnienia wiele razy przy użyciu symboli preprocesora do kontrolowania ich skutki. Na przykład w tym projekcie zobacz \<assert.h > pliku nagłówka. Również należy uważać, aby zarządzać dodać ścieżki do Unikaj tworzenia wielu ścieżek do załączone pliki, które może pokonać optymalizacji dla obu obejmują wiele #include osłony i `#pragma once`.  
+Należy zachować ostrożność nie należy używać `#pragma once` lub `#include guard` idiom w plikach nagłówkowych, opracowane w celu uwzględnienia wiele razy przy użyciu symboli preprocesora Aby kontrolować ich skutki. Na przykład w tym projekcie zobacz \<assert.h > pliku nagłówka. Również należy uważać, aby zarządzać ścieżki, aby uniknąć tworzenia wielu ścieżek do załączone pliki, które może zniweczyć cały dołączanych optymalizacji dla obu obejmują wiele `#include guard`s i `#pragma once`.  
   
 ## <a name="see-also"></a>Zobacz też  
- [Dyrektywy pragma i słowo kluczowe __Pragma](../preprocessor/pragma-directives-and-the-pragma-keyword.md)
+ 
+[Dyrektywy pragma i słowo kluczowe __Pragma](../preprocessor/pragma-directives-and-the-pragma-keyword.md)

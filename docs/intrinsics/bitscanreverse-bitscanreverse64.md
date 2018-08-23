@@ -21,17 +21,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 35d51f3e7eaf0daeca006ff669398c9a3727a098
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 9fe9fc90556c15cdab13f68647f07b877aa15abf
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33323654"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42465622"
 ---
 # <a name="bitscanreverse-bitscanreverse64"></a>_BitScanReverse, _BitScanReverse64
 **Microsoft Specific**  
   
- Wyszukiwanie danych maski z najbardziej znaczącego bitu (BITEM) do najmniej znaczącego bitu (najmniej znaczący BAJT) dla zestawu bit (1).  
+ Wyszukiwanie danych maski z najbardziej znaczący bit (BITEM) do najmniej znaczący bit (najmniej znaczący BAJT) ustawionego bitu (1).  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -48,20 +48,20 @@ unsigned char _BitScanReverse64(
   
 #### <a name="parameters"></a>Parametry  
  [out] `Index`  
- Pozycja bitu pierwszego ustawiony bit [1], znaleziono załadowana.  
+ Pozycja bitu pierwszego ustawionego bitu [1], znaleziono załadowana.  
   
  [in] `Mask`  
- 32-bitowa czy 64-bitowa wartość do wyszukiwania.  
+ 32-bitowy lub 64-bitową wartość do wyszukania.  
   
 ## <a name="return-value"></a>Wartość zwracana  
- Jeśli podano niezerowe `Index` było zestawu lub 0, jeśli nie znaleziono żadnych zestawu usługi bits.  
+ Jeśli wartość różną od zera `Index` było zestawu lub 0, jeśli nie znaleziono żadnych bitów zestawu.  
   
 ## <a name="requirements"></a>Wymagania  
   
-|— Wewnętrzne|Architektura|nagłówek|  
+|Wewnętrzne|Architektura|nagłówek|  
 |---------------|------------------|------------|  
-|`_BitScanReverse`|x86, ARM, [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|\<intrin.h>|  
-|`_BitScanReverse64`|ARM, [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]||  
+|`_BitScanReverse`|x86, ARM, x64|\<intrin.h>|  
+|`_BitScanReverse64`|ARM, x64||  
   
 ## <a name="example"></a>Przykład  
   
@@ -107,7 +107,7 @@ Enter a positive integer as the mask:
 Mask: 12 Index: 3  
 ```  
   
-**KOŃCOWY określonych firmy Microsoft**  
+**END specyficzny dla Microsoft**  
   
 ## <a name="see-also"></a>Zobacz też  
  [Funkcje wewnętrzne kompilatora](../intrinsics/compiler-intrinsics.md)

@@ -17,17 +17,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 95e47608b7ec58e433d9be5e2f2178a825b6be2e
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: d0912b7a1ff41bf7a21da198268dbd4b8dc920a9
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33338107"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42465056"
 ---
 # <a name="svmskinit"></a>__svm_skinit
 **Microsoft Specific**  
   
- Inicjuje ładowanie sprawdzalnie bezpieczny oprogramowania, np. monitor maszyny wirtualnej.  
+ Inicjuje ładowanie i bezpiecznego oprogramowania, np. monitor maszyny wirtualnej.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -41,24 +41,24 @@ void __svm_skinit(
   
 |Parametr|Opis|  
 |---------------|-----------------|  
-|`SLB`|32-bitowy adres fizyczny bajtów 64K Secure modułu ładującego bloku Programowego.|  
+|`SLB`|32-bitowy adres fizyczny bajt 64K zabezpieczanie modułu ładującego bloku (SLB).|  
   
 ## <a name="remarks"></a>Uwagi  
- `__svm_skinit` Funkcji jest odpowiednikiem `SKINIT` maszyny instrukcji. Ta funkcja jest częścią systemu zabezpieczeń, które korzysta z procesora i zaufanych Platform Module (TPM) aby zweryfikować i załadować zaufanego oprogramowania o nazwie jądra zabezpieczeń (SK). Monitor maszyny wirtualnej jest przykładem jądra zabezpieczeń. System zabezpieczeń sprawdza, składniki programu załadowany podczas procesu inicjowania i chroni przed naruszeniami poprzez przerwań, dostęp do urządzeń lub innego programu, jeśli komputer jest wieloprocesorowych składników.  
+ `__svm_skinit` Funkcji jest odpowiednikiem `SKINIT` machine instrukcji. Ta funkcja jest częścią system zabezpieczeń, który korzysta z procesora i zaufanych Platform Module (TPM) w celu sprawdzenia i załadować zaufane oprogramowanie o nazwie jądra zabezpieczeń (SK). Monitorowanie maszyny wirtualnej znajduje się przykład jądra zabezpieczeń. System zabezpieczeń sprawdza, składniki programu załadowany w procesie inicjowania i chroni składników przed naruszeniami poprzez przerwań, uzyskiwania dostępu do urządzenia lub innego programu, jeśli komputer jest wieloprocesorowych.  
   
- `SLB` Parametr określa adres fizyczny bloku 64 KB pamięci o nazwie *Secure bloku modułu ładującego* (Programowego). Programowego zawiera program o nazwie bezpiecznego modułu ładującego, ustanawia środowisku operacyjnym dla komputera, a następnie ładuje jądra zabezpieczeń.  
+ `SLB` Parametr określa adres fizyczny bloku 64 KB pamięci o nazwie *zabezpieczanie modułu ładującego bloku* (SLB). SLB zawiera program o nazwie bezpiecznego modułu ładującego, która ustanawia środowisko operacyjne dla komputera, a następnie ładuje jądra zabezpieczeń.  
   
- Ta funkcja obsługuje interakcji z hosta maszyny wirtualnej monitor Gość operacyjnego i jego zastosowań. Aby uzyskać więcej informacji, wyszukaj dokumentu, "wolumin ręczne AMD64 architektura programisty 2: programowania w języku systemu," numer 24593, poprawki 3.11, dokumentu w [AMD corporation](http://go.microsoft.com/fwlink/p/?linkid=23746) lokacji.  
+ Ta funkcja obsługuje interakcji monitor maszyny wirtualnej hosta z gościa operacyjnego i jego aplikacji. Aby uzyskać więcej informacji, wyszukaj dokumentu, "AMD64 architektury programisty ręczne woluminie 2: programowania systemu" numer 24593, wersji 3.11, dokumentu w [AMD corporation](http://go.microsoft.com/fwlink/p/?linkid=23746) lokacji.  
   
 ## <a name="requirements"></a>Wymagania  
   
-|— Wewnętrzne|Architektura|  
+|Wewnętrzne|Architektura|  
 |---------------|------------------|  
-|`__svm_skinit`|x86, [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
+|`__svm_skinit`|x86, x64|  
   
- **Plik nagłówka** \<intrin.h >  
+ **Plik nagłówkowy** \<intrin.h >  
   
-**KOŃCOWY określonych firmy Microsoft**  
+**END specyficzny dla Microsoft**  
   
 ## <a name="see-also"></a>Zobacz też  
  [Funkcje wewnętrzne kompilatora](../intrinsics/compiler-intrinsics.md)

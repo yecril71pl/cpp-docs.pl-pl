@@ -32,12 +32,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 20e24c5286afbe20b1f5b71a67b0d10385f80874
-ms.sourcegitcommit: 7eadb968405bcb92ffa505e3ad8ac73483e59685
+ms.openlocfilehash: 1077a9567509d98b68a864d7478ab84b94d11054
+ms.sourcegitcommit: b92ca0b74f0b00372709e81333885750ba91f90e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/23/2018
-ms.locfileid: "39208799"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "42465190"
 ---
 # <a name="colecurrency-class"></a>Klasa COleCurrency
 Hermetyzuje `CURRENCY` typ danych w automatyzacji OLE.  
@@ -137,11 +137,11 @@ COleCurrency(
   
 - COleCurrency (`curSrc`) tworzy `COleCurrency` obiektu z istniejącego `COleCurrency` obiektu. Nowy obiekt ma ten sam stan, co obiekt źródłowy.  
   
-- COleCurrency (`varSrc`) tworzy `COleCurrency` obiektu. Stara się przekonwertować [VARIANT](http://msdn.microsoft.com/e305240e-9e11-4006-98cc-26f4932d2118) struktury lub `COleVariant` obiektu jako wartość waluty (VT_CY). Jeśli ta konwersja zakończy się pomyślnie, przekonwertowana wartości jest kopiowana do nowej `COleCurrency` obiektu. Jeśli nie, to wartość `COleCurrency` obiekt jest ustawiony na wartość zero (0) i jej stanie się nieprawidłowy.  
+- COleCurrency (`varSrc`) tworzy `COleCurrency` obiektu. Stara się przekonwertować [VARIANT](/previous-versions/windows/desktop/api/oaidl/ns-oaidl-tagvariant) struktury lub `COleVariant` obiektu jako wartość waluty (VT_CY). Jeśli ta konwersja zakończy się pomyślnie, przekonwertowana wartości jest kopiowana do nowej `COleCurrency` obiektu. Jeśli nie, to wartość `COleCurrency` obiekt jest ustawiony na wartość zero (0) i jej stanie się nieprawidłowy.  
   
 - `COleCurrency(`nUnits`, `nFractionalUnits`) Constructs a `COleCurrency "obiektu z określonym składników liczbowych. Jeśli wartość bezwzględna część ułamkową jest większa niż 10 000, odpowiednie dostosowania do jednostek. Należy zauważyć, że jednostki i część ułamkową są określone przez podpisany długich wartości.  
   
- Aby uzyskać więcej informacji, zobacz [waluty](http://msdn.microsoft.com/5e81273c-7289-45c7-93c0-32c1553f708e) i [VARIANT](http://msdn.microsoft.com/e305240e-9e11-4006-98cc-26f4932d2118) wpisów w zestawie Windows SDK.  
+ Aby uzyskać więcej informacji, zobacz [waluty](http://msdn.microsoft.com/5e81273c-7289-45c7-93c0-32c1553f708e) i [VARIANT](/previous-versions/windows/desktop/api/oaidl/ns-oaidl-tagvariant) wpisów w zestawie Windows SDK.  
   
 ### <a name="example"></a>Przykład  
  W poniższych przykładach pokazano skutki konstruktory parametr zero i dwóch parametrów:  
@@ -304,7 +304,7 @@ const COleCurrency& operator=(const COleCurrency& curSrc);
   
 - **Operator = (** *varSrc* **)** Jeśli konwersja `VARIANT` wartość (lub [COleVariant](../../mfc/reference/colevariant-class.md) obiektu) walutę ( `VT_CY`) jest Operacja się powiedzie, wartość przekonwertowanego jest kopiowana do to `COleCurrency` obiekt i jego stan jest ustawiony na prawidłowy. Jeśli konwersja nie powiedzie, wartość `COleCurrency` obiekt jest ustawiony na 0 i jej stanie się nieprawidłowy.  
   
- Aby uzyskać więcej informacji, zobacz [waluty](http://msdn.microsoft.com/5e81273c-7289-45c7-93c0-32c1553f708e) i [VARIANT](http://msdn.microsoft.com/e305240e-9e11-4006-98cc-26f4932d2118) wpisów w zestawie Windows SDK.  
+ Aby uzyskać więcej informacji, zobacz [waluty](http://msdn.microsoft.com/5e81273c-7289-45c7-93c0-32c1553f708e) i [VARIANT](/previous-versions/windows/desktop/api/oaidl/ns-oaidl-tagvariant) wpisów w zestawie Windows SDK.  
   
 ### <a name="example"></a>Przykład  
  [!code-cpp[NVC_MFCOleContainer#15](../../mfc/codesnippet/cpp/colecurrency-class_4.cpp)]  
@@ -450,7 +450,7 @@ throw(COleException*);
 ### <a name="remarks"></a>Uwagi  
  Znaczenie znaków nienumerycznych w ciągu źródłowym używa specyfikacji język lokalny (identyfikatory ustawień regionalnych).  
   
- Omówienie wartości Identyfikatora ustawień regionalnych, zobacz [obsługi wielu języków](http://msdn.microsoft.com/47dc5add-232c-4268-b977-43e12da81ede).  
+ Omówienie wartości Identyfikatora ustawień regionalnych, zobacz [obsługi wielu języków](/previous-versions/windows/desktop/automat/supporting-multiple-national-languages).  
   
  Jeśli ten ciąg został pomyślnie przekonwertowany walutę wartość, wartość to `COleCurrency` obiekt jest ustawiony na tę wartość i jego stan prawidłowy.  
   

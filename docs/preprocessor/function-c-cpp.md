@@ -18,31 +18,31 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1e24dac191e05cc3b47192cb6ec7fb0fc48dd447
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 76ab5b2911d349c62ff18967e7a660cdc3589ddd
+ms.sourcegitcommit: d4c803bd3a684d7951bf88dcecf1f14af43ae411
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33849486"
+ms.lasthandoff: 08/10/2018
+ms.locfileid: "42464929"
 ---
 # <a name="function-cc"></a>funkcja (C/C++)
-Określa, że wywołania funkcji znajduje się na liście argumentów pragma jest generowany.  
+Określa, że wywołania funkcji określonych na liście argumentów pragma być generowane.  
   
 ## <a name="syntax"></a>Składnia  
   
 ```  
-  
 #pragma function( function1 [, function2, ...] )  
 ```  
   
 ## <a name="remarks"></a>Uwagi  
- Jeśli używasz **wewnętrzne** pragma (lub /Oi) aby nakazuje kompilatorowi Generuj funkcje wewnętrzne (funkcje wewnętrzne są generowane jako kodu wbudowanego nie jako wywołania funkcji), można użyć **funkcja** pragma Aby jawnie wymusić wywołania funkcji. Po pragma funkcji jest widoczne, będzie wprowadzona w pierwszym definicji funkcji zawierających określony funkcji wewnętrznej. Efekt nadal na końcu pliku źródłowego lub wygląd **wewnętrzne** pragma określenie tej samej funkcji wewnętrznej. **Funkcja** pragmy można użyć tylko poza funkcją — na poziomie globalnym.  
+
+Jeśli używasz `intrinsic` pragma (lub /Oi) aby poinformować kompilator, aby wygenerować funkcje wewnętrzne (funkcje wewnętrzne są generowane jako kodu wbudowanego, nie jako wywołania funkcji), można użyć **funkcja** pragmy do jawnego wymuszenia wywołania funkcji. Po pragmie funkcji jest widoczny, zaczyna obowiązywać przy pierwszej definicji funkcji zawierający określoną funkcję wewnętrzne. Efekt kontynuuje do końca pliku źródłowego lub wyglądu `intrinsic` pragma, określając tę samą funkcję wewnętrzne. **Funkcja** dyrektywa może zostać użyta tylko poza funkcją — na poziomie globalnym.  
   
- List funkcje, które mają wewnętrzne formularzy, zobacz [#pragma wewnętrzne](../preprocessor/intrinsic.md).  
+Aby uzyskać listę funkcji, które mają wewnętrzne formularzy, zobacz [#pragma wewnętrzne](../preprocessor/intrinsic.md).  
   
 ## <a name="example"></a>Przykład  
   
-```  
+```cpp  
 // pragma_directive_function.cpp  
 #include <ctype.h>  
 #include <stdio.h>  
@@ -92,5 +92,6 @@ str is 'Now************'
 str is '!!!!!!!!!!!!!!!'  
 ```  
   
-## <a name="see-also"></a>Zobacz też  
- [Dyrektywy pragma i słowo kluczowe __Pragma](../preprocessor/pragma-directives-and-the-pragma-keyword.md)
+## <a name="see-also"></a>Zobacz też
+
+[Dyrektywy pragma i słowo kluczowe __Pragma](../preprocessor/pragma-directives-and-the-pragma-keyword.md)

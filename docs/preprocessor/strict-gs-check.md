@@ -17,15 +17,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6b58b02781f266b24fa321b3849f42b2e090b860
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 9a5e9ce2480612cdc84982cd1474e003d9151557
+ms.sourcegitcommit: d4c803bd3a684d7951bf88dcecf1f14af43ae411
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33842979"
+ms.lasthandoff: 08/10/2018
+ms.locfileid: "42465583"
 ---
 # <a name="strictgscheck"></a>strict_gs_check
-Tej pragmy udostępnia zwiększone zabezpieczenia sprawdzania.  
+Ta dyrektywa pragma zapewnia sprawdzanie zwiększone zabezpieczenia.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -36,16 +36,18 @@ Tej pragmy udostępnia zwiększone zabezpieczenia sprawdzania.
 ```  
   
 ## <a name="remarks"></a>Uwagi  
- Instruuje kompilator, aby wstawić osiągnięciem losowego pliku cookie w stosie funkcja pomaga wykrywać niektórych kategorii przepełnienie buforu opartego na stosie. Domyślnie /GS (Sprawdzanie zabezpieczeń bufora) — opcja kompilatora nie wstawia plik cookie dla wszystkich funkcji. Aby uzyskać więcej informacji, zobacz [/GS (Sprawdzanie zabezpieczeń bufora)](../build/reference/gs-buffer-security-check.md).  
+ 
+Instruuje kompilator, aby wstawić osiągnięciem losowego pliku cookie stosu funkcji w celu wykrycia niektóre kategorie przepełnienie buforu opartego na stosie. Domyślnie `/GS` (Sprawdzanie zabezpieczeń bufora) — opcja kompilatora nie wstawia plik cookie dla wszystkich funkcji. Aby uzyskać więcej informacji, zobacz [/GS (Sprawdzanie zabezpieczeń bufora)](../build/reference/gs-buffer-security-check.md).  
   
- Należy skompilować z/GS (buforu sprawdzanie zabezpieczeń) umożliwiające strict_gs_check.  
+Należy skompilować z `/GS` (Sprawdzanie zabezpieczeń buforu) umożliwiające **strict_gs_check**.  
   
- Użyj tej pragmy w modułów kodu, które są widoczne dla potencjalnie niebezpiecznych danych. Tej pragmy bardzo agresywnie i zastosowano je do funkcji, które nie może być konieczne tej ochrony, ale jest zoptymalizowana, aby zminimalizować jego wpływ na wydajność aplikacji wynikowy.  
+Użyj tej pragmie w moduły kodu, które są widoczne dla danych potencjalnie szkodliwe. Ta dyrektywa pragma jest bardzo atrakcyjnych i jest stosowane do funkcji, które nie wymagają tego obrony, ale jest zoptymalizowany, aby zminimalizować jej wpływ na wydajność aplikacji wynikowe.  
   
- Nawet jeśli używasz tej pragmy powinien starań, aby zapisać bezpieczny kod. Oznacza to upewnij się, że kod ma nie przepełnienia buforu. strict_gs_check może chronić aplikacji z przepełnienia buforu, które pozostają w kodzie.  
+Nawet w przypadku używania tej pragmie powinien wszelkich starań, aby pisać bezpieczny kod. Oznacza to upewnij się, że Twój kod nie przepełnienia buforu. **strict_gs_check** może chronić aplikację przed przepełnienia buforu, które pozostają w kodzie.  
   
 ## <a name="example"></a>Przykład  
- W poniższym kodzie przepełnienie buforu występuje, gdy firma Microsoft kopiowania tablicy do lokalnej tablicy. Podczas kompilowania tego kodu z/GS pliki cookie nie jest wstawiany stosu, ponieważ typem danych tablicy jest wskaźnik. Dodawanie strict_gs_check pragma wymusza cookie stosu w stosie funkcji.  
+ 
+W poniższym kodzie przepełnienie buforu występuje, gdy firma Microsoft kopiowania tablicy do lokalnej tablicy. Gdy kompilujesz ten kod, za pomocą `/GS`, pliki cookie nie dodaje się na stosie, ponieważ typ danych tablicy jest wskaźnikiem. Dodawanie **strict_gs_check** pragma wymusza pliku cookie stosu w stos funkcji.  
   
 ```cpp  
 // pragma_strict_gs_check.cpp  
@@ -70,9 +72,9 @@ void ** ReverseArray(void **pData,
   
     return pData;  
 }  
-  
 ```  
   
 ## <a name="see-also"></a>Zobacz też  
- [Dyrektywy pragma i słowo kluczowe __Pragma](../preprocessor/pragma-directives-and-the-pragma-keyword.md)   
- [/GS (Sprawdzanie zabezpieczeń bufora)](../build/reference/gs-buffer-security-check.md)
+ 
+[Dyrektywy pragma i słowo kluczowe __Pragma](../preprocessor/pragma-directives-and-the-pragma-keyword.md)   
+[/GS (Sprawdzanie zabezpieczeń bufora)](../build/reference/gs-buffer-security-check.md)

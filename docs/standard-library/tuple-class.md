@@ -17,12 +17,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3735b6cd8b0397ae1e1092fdb37ba094248ab507
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: dc5f5c987f8e448490a0d337517d7a0699619849
+ms.sourcegitcommit: e9ce38decc9f986edab5543de3464b11ebccb123
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38963929"
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "42465680"
 ---
 # <a name="tuple-class"></a>tuple — Klasa
 
@@ -57,7 +57,7 @@ public:
 
 ## <a name="remarks"></a>Uwagi
 
-Klasa szablonu opisuje obiekt przechowujący N obiektów typów `T1`, `T2`,..., `TN`, odpowiednio, w którym gdzie `0 <= N <= Nmax`. Zakres wystąpień krotki `tuple<T1, T2, ..., TN>` jest to liczba `N` z jej argumentów szablonu. Indeks argument szablonu `Ti` i odpowiednie przechowywaną wartość tego typu jest `i - 1`. W związku z tym gdy firma Microsoft numer typy z zakresu od 1 do N w tej dokumentacji, odpowiedni indeks wartości z zakresu od 0 do N - 1.
+Klasa szablonu opisuje obiekt przechowujący N obiektów typów `T1`, `T2`,..., `TN`, odpowiednio, gdzie `0 <= N <= Nmax`. Zakres wystąpień krotki `tuple<T1, T2, ..., TN>` jest to liczba `N` z jej argumentów szablonu. Indeks argument szablonu `Ti` i odpowiednie przechowywaną wartość tego typu jest `i - 1`. W związku z tym gdy firma Microsoft numer typy z zakresu od 1 do N w tej dokumentacji, odpowiedni indeks wartości z zakresu od 0 do N - 1.
 
 ## <a name="example"></a>Przykład
 

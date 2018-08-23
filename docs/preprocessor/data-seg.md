@@ -18,50 +18,50 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7a463d966c681557525bb9512762731c01a7ce30
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: b1be97919f0f5b55d6e63eca8e59eb15e8ef9dff
+ms.sourcegitcommit: d4c803bd3a684d7951bf88dcecf1f14af43ae411
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33841235"
+ms.lasthandoff: 08/10/2018
+ms.locfileid: "42466416"
 ---
 # <a name="dataseg"></a>data_seg
-Określa, gdzie zainicjowane zmienne są przechowywane w pliku .obj segmentu danych.  
+Określa segment danych, gdzie zainicjowane zmienne są przechowywane w pliku .obj.  
   
 ## <a name="syntax"></a>Składnia  
   
 ```  
-  
 #pragma data_seg( [ [ { push | pop }, ] [ identifier, ] ] [ "segment-name" [, "segment-class" ] )  
 ```  
   
-## <a name="remarks"></a>Uwagi  
- Znaczenie terminów *segmentu* i *sekcji* są wymienne, w tym temacie.  
+## <a name="remarks"></a>Uwagi 
+
+Znaczenie terminów *segmentu* i *sekcji* są wymienne, w tym temacie.  
   
- Pliki OBJ mogą być wyświetlane z [dumpbin](../build/reference/dumpbin-command-line.md) aplikacji. Segment domyślnej w pliku .obj zainicjowane zmiennych jest .data. Zmienne, które są niezainicjowanej są traktowane jako, aby można było zainicjować od zera i są przechowywane w .bss.  
+Pliki OBJ mogą być wyświetlane z [dumpbin](../build/reference/dumpbin-command-line.md) aplikacji. Segment domyślnej w pliku .obj zainicjowane zmiennych jest .data. Niezainicjowane zmienne są traktowane jako być inicjowane od zera i są przechowywane w .bss.  
   
- **data_seg** bez parametrów resetuje segmentu .data.  
+**data_seg** bez parametrów resetuje segmentu .data.  
   
- **wypychania**(opcjonalnie)  
- Umieszcza rekord na wewnętrznym stosie kompilatora. A **wypychania** może mieć *identyfikator* i *nazwą segmentu*.  
+*wypychane* (opcjonalnie)  
+Umieszcza rekord na wewnętrznym stosie kompilatora. A *wypychania* może mieć *identyfikator* i *nazwą segmentu*.  
   
- **POP** (opcjonalnie)  
- Usuwa rekord z góry wewnętrznego stosu kompilatora.  
+*POP* (opcjonalnie)  
+Usuwa rekord z góry wewnętrznego stosu kompilatora.  
   
- *Identyfikator* (opcjonalnie)  
- W przypadku użycia z **wypychania**, przypisuje nazwę w rekordzie na stosie wewnętrznych kompilatora. W przypadku użycia z **pop**, POP rejestruje wewnętrzny stosu do *identyfikator* zostanie usunięta; Jeśli *identyfikator* nie znaleziono na stosie wewnętrznego, nic nie jest zdjęte ze stosu.  
+*Identyfikator* (opcjonalnie)  
+Gdy jest używane z *wypychania*, przypisuje nazwę rekordowi na wewnętrznym stosie kompilatora. Gdy jest używane z *pop*, zdejmuje rekordy z wewnętrznego stosu aż do usunięcia *identyfikator* zostanie usunięta; Jeśli *identyfikator* nie zostanie znaleziony na wewnętrznym stosie, nic nie zostanie zdjęte.  
   
- *Identyfikator* umożliwia wielu rekordów zostać zdjęte ze stosu za pomocą jednej **pop** polecenia.  
+*Identyfikator* umożliwia wielu rekordów zostać zdjęte ze stosu za pomocą jednego *pop* polecenia.  
   
- *"Nazwa segmentu"*(opcjonalnie)  
- Nazwa segmentu. W przypadku użycia z **pop**, zdjęte ze stosu stosu i *nazwą segmentu* staje się nazwa active segmentu.  
+*"segment-name"*(opcjonalnie)  
+Nazwa segmentu. Gdy jest używane z *pop*, stos jest zdejmowany i *nazwą segmentu* staje się nazwą aktywny segment.  
   
- *"segmentu klasy"* (opcjonalnie)  
- Uwzględnione w celu zapewnienia zgodności z C++ przed w wersji 2.0. Jest on ignorowany.  
+*"klasy segmentu"* (opcjonalnie)  
+Uwzględnione na potrzeby utrzymywania zgodności z C++ wcześniejszych niż 2.0. Jest on ignorowany.  
   
 ## <a name="example"></a>Przykład  
   
-```  
+```cpp  
 // pragma_directive_data_seg.cpp  
 int h = 1;                     // stored in .data  
 int i = 0;                     // stored in .bss  
@@ -78,11 +78,12 @@ int main() {
 }  
 ```  
   
- Przydzielony przy użyciu danych **data_seg** nie zachowuje żadnych informacji o lokalizacji.  
+Danych przydzielonych przy użyciu **data_seg** nie zachowuje żadnych informacji o lokalizacji.  
   
- Zobacz [/SECTION](../build/reference/section-specify-section-attributes.md) lista nazw nie należy używać podczas tworzenia sekcji.  
+Zobacz [/SECTION](../build/reference/section-specify-section-attributes.md) listę nazw, nie należy używać podczas tworzenia sekcji.  
   
- Można również określić sekcji zmiennych const ([const_seg](../preprocessor/const-seg.md)), odinicjowany danych ([bss_seg](../preprocessor/bss-seg.md)), funkcje i ([code_seg](../preprocessor/code-seg.md)).  
+Można również określić sekcje dla zmiennych const ([const_seg](../preprocessor/const-seg.md)), niezainicjowanych danych ([bss_seg](../preprocessor/bss-seg.md)) i funkcje ([code_seg](../preprocessor/code-seg.md)).  
   
 ## <a name="see-also"></a>Zobacz też  
- [Dyrektywy pragma i słowo kluczowe __Pragma](../preprocessor/pragma-directives-and-the-pragma-keyword.md)
+ 
+[Dyrektywy pragma i słowo kluczowe __Pragma](../preprocessor/pragma-directives-and-the-pragma-keyword.md)

@@ -25,12 +25,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cea7c17b61f3576ed2a8f1a4daa894f5a30c8b4e
-ms.sourcegitcommit: 76fd30ff3e0352e2206460503b61f45897e60e4f
+ms.openlocfilehash: 7793262b60adbbacb2cf7b10245340790b26e805
+ms.sourcegitcommit: b92ca0b74f0b00372709e81333885750ba91f90e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/13/2018
-ms.locfileid: "39027290"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "42466253"
 ---
 # <a name="idispeventsimpleimpl-class"></a>Klasa IDispEventSimpleImpl
 Ta klasa zawiera implementacje `IDispatch` metody bez pobierania informacji o typie z biblioteki typów.  
@@ -189,7 +189,7 @@ STDMETHOD(GetIDsOfNames)(
 ```  
   
 ### <a name="remarks"></a>Uwagi  
- Zobacz [IDispatch::GetIDsOfNames](http://msdn.microsoft.com/6f6cf233-3481-436e-8d6a-51f93bf91619) w Windows SDK.  
+ Zobacz [IDispatch::GetIDsOfNames](/previous-versions/windows/desktop/api/oaidl/nf-oaidl-idispatch-getidsofnames) w Windows SDK.  
   
 ##  <a name="gettypeinfo"></a>  IDispEventSimpleImpl::GetTypeInfo  
  Ta implementacja `IDispatch::GetTypeInfo` zwraca E_NOTIMPL.  
@@ -202,7 +202,7 @@ STDMETHOD(GetTypeInfo)(
 ```  
   
 ### <a name="remarks"></a>Uwagi  
- Zobacz [IDispatch::GetTypeInfo](http://msdn.microsoft.com/cc1ec9aa-6c40-4e70-819c-a7c6dd6b8c99) w Windows SDK.  
+ Zobacz [IDispatch::GetTypeInfo](/previous-versions/windows/desktop/api/oaidl/nf-oaidl-idispatch-gettypeinfo) w Windows SDK.  
   
 ##  <a name="gettypeinfocount"></a>  IDispEventSimpleImpl::GetTypeInfoCount  
  Ta implementacja `IDispatch::GetTypeInfoCount` zwraca E_NOTIMPL.  
@@ -212,7 +212,7 @@ STDMETHOD(GetTypeInfoCount)(UINT* /* pctinfo */);
 ```  
   
 ### <a name="remarks"></a>Uwagi  
- Zobacz [IDispatch::GetTypeInfoCount](http://msdn.microsoft.com/da876d53-cb8a-465c-a43e-c0eb272e2a12) w Windows SDK.  
+ Zobacz [IDispatch::GetTypeInfoCount](/previous-versions/windows/desktop/api/oaidl/nf-oaidl-idispatch-gettypeinfocount) w Windows SDK.  
   
 ##  <a name="invoke"></a>  IDispEventSimpleImpl::Invoke  
  Ta implementacja `IDispatch::Invoke` wywołania procedur obsługi zdarzeń wymienionych w zdarzeniu mapy ujścia.  
@@ -230,7 +230,7 @@ STDMETHOD(Invoke)(
 ```  
   
 ### <a name="remarks"></a>Uwagi  
- Zobacz [uwzględniając](http://msdn.microsoft.com/964ade8e-9d8a-4d32-bd47-aa678912a54d).  
+ Zobacz [uwzględniając](/previous-versions/windows/desktop/api/oaidl/nf-oaidl-idispatch-invoke).  
   
 ##  <a name="unadvise"></a>  IDispEventSimpleImpl::Unadvise  
  Przerywa połączenie ze źródłem zdarzeń, reprezentowane przez *pUnk*.  

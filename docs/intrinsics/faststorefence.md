@@ -18,17 +18,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6f8c4a343126a14e1aea931b1e154714af280904
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: bc3086a59fe3995fcb5b4fff34891faa6a630f63
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33327801"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42464740"
 ---
 # <a name="faststorefence"></a>__faststorefence
 **Microsoft Specific**  
   
- Gwarancji, że wszystkie poprzednie odwołania pamięci, zarówno w tym obciążenia i przechowywania odwołań do pamięci, jest widoczne globalnie, zanim wszystkie odwołania kolejnych pamięci.  
+ Gwarancje, co poprzednie odwołanie do pamięci, tym ładowania i przechowywania w przypadku odwołania do pamięci jest widoczne globalnie przed dowolnego odwołania do kolejnych pamięci.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -38,20 +38,20 @@ void __faststorefence();
   
 ## <a name="requirements"></a>Wymagania  
   
-|— Wewnętrzne|Architektura|  
+|Wewnętrzne|Architektura|  
 |---------------|------------------|  
-|`__faststorefence`|[!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
+|`__faststorefence`|X64|  
   
- **Plik nagłówka** \<intrin.h >  
+ **Plik nagłówkowy** \<intrin.h >  
   
 ## <a name="remarks"></a>Uwagi  
- Generuje całej pamięci bariery instrukcji sekwencję czy gwarancje obciążenia i przechowywać operacji wydanych przed wewnętrzne są globalnie nadal widoczny przed realizacją. Efekt jest porównywalna, ale szybciej niż `_mm_mfence` wewnętrznej na x64 wszystkich platform.  
+ Generuje sekwencję instrukcji barierę całej pamięci czy gwarancje ładowania i przechowywania operacje wydane przed tym wewnętrzne są globalnie nadal widoczne przed wykonaniem. Efekt jest porównywalna do, ale szybciej niż `_mm_mfence` wewnętrzne na x64 wszystkich platform.  
   
- Na platformie AMD64 tej procedury generuje instrukcja jest szybsze ogranicznika magazynu niż `sfence` instrukcji. Kod krytyczny czasowo Użyj tym wewnętrznego, zamiast `_mm_sfence` tylko na platformach AMD64. Na platformach firmy Intel x64 `_mm_sfence` instrukcji jest szybsze.  
+ Na platformie AMD64, ta procedura generuje instrukcji, która jest ogrodzeniem magazynu szybciej niż `sfence` instrukcji. Dla kodu wrażliwego na czas, użyj tym wewnętrzne zamiast `_mm_sfence` tylko na platformach AMD64. Na platformach firmy Intel x64 `_mm_sfence` instrukcji jest szybsze.  
   
- Ta procedura jest dostępna tylko wewnętrznie.  
+ Ta procedura jest dostępna wyłącznie jako wewnętrzna.  
   
-**KOŃCOWY określonych firmy Microsoft**  
+**END specyficzny dla Microsoft**  
   
 ## <a name="see-also"></a>Zobacz też  
  [Funkcje wewnętrzne kompilatora](../intrinsics/compiler-intrinsics.md)

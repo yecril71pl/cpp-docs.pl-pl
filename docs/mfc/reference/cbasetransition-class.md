@@ -54,15 +54,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c7cdd8f527b8df8ae80896bbb17fab1b15684180
-ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
+ms.openlocfilehash: 56af7861daab87106904ca04422938f87c34c941
+ms.sourcegitcommit: e9ce38decc9f986edab5543de3464b11ebccb123
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/26/2018
-ms.locfileid: "36953573"
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "42466228"
 ---
 # <a name="cbasetransition-class"></a>Klasa CBaseTransition
-Reprezentuje przejście podstawowe.  
+Przedstawia przejście podstawowe.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -72,49 +72,49 @@ class CBaseTransition : public CObject;
   
 ## <a name="members"></a>Elementy członkowskie  
   
-### <a name="public-enumerations"></a>Wyliczenia publiczny  
+### <a name="public-enumerations"></a>Wyliczenia publiczne  
   
 |Nazwa|Opis|  
 |----------|-----------------|  
-|[CBaseTransition::TRANSITION_TYPE — wyliczenie](#transition_type_enumeration)|Określa typy przejścia są obecnie obsługiwane przez MFC implementacji interfejsu API systemu Windows animacji.|  
+|[Wyliczenie CBaseTransition::TRANSITION_TYPE](#transition_type_enumeration)|Definiuje typy przejścia są obecnie obsługiwane przez interfejs API animacji Windows implementacji MFC.|  
   
 ### <a name="public-constructors"></a>Konstruktory publiczne  
   
 |Nazwa|Opis|  
 |----------|-----------------|  
 |[CBaseTransition::CBaseTransition](#cbasetransition)|Tworzy obiekt transtion podstawowej.|  
-|[CBaseTransition:: ~ CBaseTransition](#cbasetransition__~cbasetransition)|Destruktor. Wywoływane, gdy trwa niszczenie obiektów przejścia.|  
+|[CBaseTransition:: ~ CBaseTransition](#cbasetransition__~cbasetransition)|Destruktor. Wywołuje się, kiedy niszczony jest obiekt przejścia.|  
   
 ### <a name="public-methods"></a>Metody publiczne  
   
 |Nazwa|Opis|  
 |----------|-----------------|  
-|[CBaseTransition::AddToStoryboard](#addtostoryboard)|Dodaje przejście do scenorysu.|  
-|[CBaseTransition::AddToStoryboardAtKeyframes](#addtostoryboardatkeyframes)|Dodaje przejście do scenorysu.|  
+|[CBaseTransition::AddToStoryboard](#addtostoryboard)|Dodaje przejścia do scenorysu.|  
+|[CBaseTransition::AddToStoryboardAtKeyframes](#addtostoryboardatkeyframes)|Dodaje przejścia do scenorysu.|  
 |[CBaseTransition::Clear](#clear)|Wersje hermetyzowany obiektu IUIAnimationTransition COM.|  
 |[CBaseTransition::Create](#create)|Tworzy przejście COM.|  
-|[CBaseTransition::GetEndKeyframe](#getendkeyframe)|Zwraca uruchomić kluczową.|  
-|[CBaseTransition::GetRelatedVariable](#getrelatedvariable)|Zwraca wskaźnik do zmiennej pokrewne.|  
-|[CBaseTransition::GetStartKeyframe](#getstartkeyframe)|Zwraca uruchomić kluczową.|  
-|[CBaseTransition::GetTransition](#gettransition)|Przeciążone. Zwraca wskaźnik do obiektu źródłowego przejścia COM.|  
+|[CBaseTransition::GetEndKeyframe](#getendkeyframe)|Zwraca start klatki kluczowej.|  
+|[CBaseTransition::GetRelatedVariable](#getrelatedvariable)|Zwraca wskaźnik do zmiennej powiązanej.|  
+|[CBaseTransition::GetStartKeyframe](#getstartkeyframe)|Zwraca start klatki kluczowej.|  
+|[CBaseTransition::GetTransition](#gettransition)|Przeciążone. Zwraca wskaźnik do podstawowego obiektu przejścia COM.|  
 |[CBaseTransition::GetType](#gettype)|Zwraca wartość typu przejścia.|  
-|[CBaseTransition::IsAdded](#isadded)|Informuje, czy przejście został dodany do scenorysu.|  
-|[CBaseTransition::SetKeyframes](#setkeyframes)|Ustawia kluczowych przejścia.|  
+|[CBaseTransition::IsAdded](#isadded)|Informuje, czy przejście zostały dodane do scenorysu.|  
+|[CBaseTransition::SetKeyframes](#setkeyframes)|Ustawia klatki kluczowe przejścia.|  
 |[CBaseTransition::SetRelatedVariable](#setrelatedvariable)|Ustanawia relację między zmiennej animacji i przejść.|  
   
-### <a name="protected-data-members"></a>Dane chronione elementy członkowskie  
+### <a name="protected-data-members"></a>Chronione elementy członkowskie danych  
   
 |Nazwa|Opis|  
 |----------|-----------------|  
-|[CBaseTransition::m_bAdded](#m_badded)|Określa, czy przejście został dodany do scenorysu.|  
-|[CBaseTransition::m_pEndKeyframe](#m_pendkeyframe)|Przechowuje wskaźnik do klatki kluczowej, który określa koniec przejścia.|  
+|[CBaseTransition::m_bAdded](#m_badded)|Określa, czy przejście zostały dodane do scenorysu.|  
+|[CBaseTransition::m_pEndKeyframe](#m_pendkeyframe)|Przechowuje wskaźnik do ramki kluczowej, który określa koniec przejścia.|  
 |[CBaseTransition::m_pRelatedVariable](#m_prelatedvariable)|Wskaźnik do zmiennej animacji, która jest animowany z przejściem przechowywane w m_transition.|  
-|[CBaseTransition::m_pStartKeyframe](#m_pstartkeyframe)|Przechowuje wskaźnik do klatki kluczowej, który określa początek przejścia.|  
+|[CBaseTransition::m_pStartKeyframe](#m_pstartkeyframe)|Przechowuje wskaźnik do ramki kluczowej, która określa początek przejścia.|  
 |[CBaseTransition::m_transition](#m_transition)|Przechowuje wskaźnik do IUIAnimationTransition. Wartość NULL, jeśli nie został utworzony obiekt COM przejścia.|  
 |[CBaseTransition::m_type](#m_type)|Przechowuje typ przejścia.|  
   
 ## <a name="remarks"></a>Uwagi  
- Ta klasa hermetyzuje IUIAnimationTransition interfejs i służy jako klasa podstawowa dla wszystkich przejść.  
+ Ta klasa hermetyzuje interfejs IUIAnimationTransition i służy jako klasa bazowa dla wszystkich przejść.  
   
 ## <a name="inheritance-hierarchy"></a>Hierarchia dziedziczenia  
  [CObject](../../mfc/reference/cobject-class.md)  
@@ -125,14 +125,14 @@ class CBaseTransition : public CObject;
  **Nagłówek:** afxanimationcontroller.h  
   
 ##  <a name="_dtorcbasetransition"></a>  CBaseTransition:: ~ CBaseTransition  
- Destruktor. Wywoływane, gdy trwa niszczenie obiektów przejścia.  
+ Destruktor. Wywołuje się, kiedy niszczony jest obiekt przejścia.  
   
 ```  
 virtual ~CBaseTransition();
 ```  
   
 ##  <a name="addtostoryboard"></a>  CBaseTransition::AddToStoryboard  
- Dodaje przejście do scenorysu.  
+ Dodaje przejścia do scenorysu.  
   
 ```  
 BOOL AddToStoryboard(IUIAnimationStoryboard* pStoryboard);
@@ -140,16 +140,16 @@ BOOL AddToStoryboard(IUIAnimationStoryboard* pStoryboard);
   
 ### <a name="parameters"></a>Parametry  
  *pStoryboard*  
- Wskaźnik do scenorysu, którego będzie animować pokrewne zmiennej.  
+ Wskaźnik do scenorysu, który będzie animować powiązane zmiennej.  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Wartość TRUE, jeśli przejście zostało pomyślnie dodane do scenorysu.  
   
 ### <a name="remarks"></a>Uwagi  
- Stosuje przejścia do powiązanych zmiennej w scenorysu. Jeśli jest to pierwszy przejścia zastosowane do tej zmiennej w tym scenorysu, przejście rozpoczyna się od początku scenorysu. W przeciwnym wypadku przejścia jest dołączany do przejścia ostatnio dodany do zmiennej.  
+ Ma zastosowanie przejścia do zmiennych powiązanych z scenorysu. Jeśli jest to pierwsze przejście zastosowany do zmiennej w tym scenorysem, przejście rozpoczyna się na początku tego scenorysu. W przeciwnym razie przejścia jest dołączany do którego nastąpi przejście, ostatnio dodana do zmiennej.  
   
 ##  <a name="addtostoryboardatkeyframes"></a>  CBaseTransition::AddToStoryboardAtKeyframes  
- Dodaje przejście do scenorysu.  
+ Dodaje przejścia do scenorysu.  
   
 ```  
 BOOL AddToStoryboardAtKeyframes(IUIAnimationStoryboard* pStoryboard);
@@ -157,13 +157,13 @@ BOOL AddToStoryboardAtKeyframes(IUIAnimationStoryboard* pStoryboard);
   
 ### <a name="parameters"></a>Parametry  
  *pStoryboard*  
- Wskaźnik do scenorysu, którego będzie animować pokrewne zmiennej.  
+ Wskaźnik do scenorysu, który będzie animować powiązane zmiennej.  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Wartość TRUE, jeśli przejście zostało pomyślnie dodane do scenorysu.  
   
 ### <a name="remarks"></a>Uwagi  
- Stosuje przejścia do powiązanych zmiennej w scenorysu. Jeśli określono klatki kluczowej start, przejście rozpoczyna się od tego klatki kluczowej. Jeśli określono klatki kluczowej zakończenia, przejście zaczyna się od klatki kluczowej start i i zatrzymuje się na klatkę zakończenia. Jeśli przejście został utworzony z określonym parametrem czas trwania, ten czas trwania jest zastępowany czas między początkową i końcową klatek. Jeśli nie określono żadnych klatki kluczowej, przejście jest dołączany do przejścia ostatnio dodany do zmiennej.  
+ Ma zastosowanie przejścia do zmiennych powiązanych z scenorysu. Jeśli określono klatki kluczowej rozpoczęcia przejścia rozpoczyna się od tej ramki kluczowej. Jeśli określono klatki kluczowej zakończenia, przejście rozpoczyna się od ramki kluczowej start i zatrzymuje się na ramki kluczowej zakończenia. Jeśli przejście został utworzony za pomocą parametru czasu trwania określony, ten czas jest zastępowany czas pomiędzy klatkami kluczowymi rozpoczęcia i zakończenia. Jeśli nie określono żadnych klatki kluczowej, przejście jest dołączany do przejścia ostatnio dodana do zmiennej.  
   
 ##  <a name="cbasetransition"></a>  CBaseTransition::CBaseTransition  
  Tworzy obiekt transtion podstawowej.  
@@ -180,7 +180,7 @@ void Clear();
 ```  
   
 ### <a name="remarks"></a>Uwagi  
- Tę metodę należy wywoływać z metody tworzenia klasy pochodnej, aby zapobiec przeciek interfejsu IUITransition.  
+ Ta metoda powinna być wywoływana z metody tworzenia klasy pochodnej, aby uniknąć przecieku interfejsu IUITransition.  
   
 ##  <a name="create"></a>  CBaseTransition::Create  
  Tworzy przejście COM.  
@@ -193,58 +193,58 @@ virtual BOOL Create(
   
 ### <a name="parameters"></a>Parametry  
  *pLibrary*  
- Wskaźnik do przejścia biblioteki, która tworzy standardowe przejścia. Może to być wartość NULL dla niestandardowych przejść.  
+ Wskaźnik do przejścia biblioteki, która tworzy przejścia standardowe. Może być NULL dla niestandardowych przejść.  
   
  *pFactory*  
- Wskaźnik do przejścia factory, które tworzy niestandardowe przejścia. Może to być wartość NULL dla przejścia standardowe.  
+ Wskaźnik do przejścia factory, która tworzy niestandardowe przejścia. Może być NULL dla przejścia standardowe.  
   
 ### <a name="return-value"></a>Wartość zwracana  
- Wartość TRUE, jeśli przejście obiektu modelu COM został pomyślnie utworzony; w przeciwnym razie wartość FALSE.  
+ Wartość TRUE, jeśli przejście obiektu COM został pomyślnie utworzony; w przeciwnym razie wartość FALSE.  
   
 ### <a name="remarks"></a>Uwagi  
- Jest to czystej funkcji wirtualnej musi zostać zastąpiony w klasie pochodnej. Jest ona wywoływana przez platformę, by utworzyć wystąpienia obiektu źródłowego przejścia COM.  
+ To jest czysta funkcja wirtualna, która musi zostać zastąpiona w klasie pochodnej. Jest ona wywoływana przez platformę, by wystąpienia podstawowego obiektu modelu COM w przejścia.  
   
 ##  <a name="getendkeyframe"></a>  CBaseTransition::GetEndKeyframe  
- Zwraca uruchomić kluczową.  
+ Zwraca start klatki kluczowej.  
   
 ```  
 CBaseKeyFrame* GetEndKeyframe();
 ```  
   
 ### <a name="return-value"></a>Wartość zwracana  
- Nieprawidłowy wskaźnik do klatki kluczowej, lub wartość NULL, jeśli przejście nie powinny zostać wstawione między klatek.  
+ Nieprawidłowy wskaźnik do ramki kluczowej lub wartość NULL, jeśli nie można wstawić przejścia pomiędzy klatkami kluczowymi.  
   
 ### <a name="remarks"></a>Uwagi  
- Tej metody można uzyskać dostępu do obiektu klatki kluczowej, która wcześniej została ustawiona przez SetKeyframes. Jest ona wywoływana przez kod najwyższego poziomu podczas przejścia są dodawane do scenorysu.  
+ Ta metoda może służyć do dostępu do obiektu klatki kluczowej, która wcześniej została ustawiona przez SetKeyframes. Jest wywoływana przez kodu najwyższego poziomu podczas przejścia są dodawane do scenorysu.  
   
 ##  <a name="getrelatedvariable"></a>  CBaseTransition::GetRelatedVariable  
- Zwraca wskaźnik do zmiennej pokrewne.  
+ Zwraca wskaźnik do zmiennej powiązanej.  
   
 ```  
 CAnimationVariable* GetRelatedVariable();
 ```  
   
 ### <a name="return-value"></a>Wartość zwracana  
- Nieprawidłowy wskaźnik do zmiennej animacji lub wartość NULL, jeśli nie została ustawiona zmienna animacji przez SetRelatedVariable.  
+ Nieprawidłowy wskaźnik do zmiennej animacji lub wartość NULL, jeśli nie ustawiono zmienną animacji przez SetRelatedVariable.  
   
 ### <a name="remarks"></a>Uwagi  
- Jest to metoda dostępu do zmiennej pokrewne animacji.  
+ Jest to metoda dostępu do zmiennej animacji powiązane.  
   
 ##  <a name="getstartkeyframe"></a>  CBaseTransition::GetStartKeyframe  
- Zwraca uruchomić kluczową.  
+ Zwraca start klatki kluczowej.  
   
 ```  
 CBaseKeyFrame* GetStartKeyframe();
 ```  
   
 ### <a name="return-value"></a>Wartość zwracana  
- Nieprawidłowy wskaźnik do kluczową lub wartość NULL, jeśli przejście nie mogą rozpoczynać się od kluczową.  
+ Nieprawidłowy wskaźnik do ramki kluczowej lub wartość NULL, jeśli przejście nie powinna być uruchamiana po klatki kluczowej.  
   
 ### <a name="remarks"></a>Uwagi  
- Tej metody można uzyskać dostępu do obiektu klatki kluczowej, która wcześniej została ustawiona przez SetKeyframes. Jest ona wywoływana przez kod najwyższego poziomu podczas przejścia są dodawane do scenorysu.  
+ Ta metoda może służyć do dostępu do obiektu klatki kluczowej, która wcześniej została ustawiona przez SetKeyframes. Jest wywoływana przez kodu najwyższego poziomu podczas przejścia są dodawane do scenorysu.  
   
 ##  <a name="gettransition"></a>  CBaseTransition::GetTransition  
- Zwraca wskaźnik do obiektu źródłowego przejścia COM.  
+ Zwraca wskaźnik do podstawowego obiektu przejścia COM.  
   
 ```  
 IUIAnimationTransition* GetTransition(
@@ -256,16 +256,16 @@ IUIAnimationTransition* GetTransition();
   
 ### <a name="parameters"></a>Parametry  
  *pLibrary*  
- Wskaźnik do przejścia biblioteki, która tworzy standardowe przejścia. Może to być wartość NULL dla niestandardowych przejść.  
+ Wskaźnik do przejścia biblioteki, która tworzy przejścia standardowe. Może być NULL dla niestandardowych przejść.  
   
  *pFactory*  
- Wskaźnik do przejścia factory, które tworzy niestandardowe przejścia. Może to być wartość NULL dla przejścia standardowe.  
+ Wskaźnik do przejścia factory, która tworzy niestandardowe przejścia. Może być NULL dla przejścia standardowe.  
   
 ### <a name="return-value"></a>Wartość zwracana  
- Nie można utworzyć prawidłowego wskaźnika IUIAnimationTransition lub wartość NULL, jeśli podstawowy przejścia.  
+ Nie można utworzyć prawidłowego wskaźnika do IUIAnimationTransition lub wartość NULL, jeśli podstawowy przejścia.  
   
 ### <a name="remarks"></a>Uwagi  
- Ta metoda zwraca wskaźnik do obiektu źródłowego przejścia COM i tworzy go, jeśli to konieczne.  
+ Ta metoda zwraca wskaźnik do podstawowego obiektu przejścia COM i utworzy go, jeśli to konieczne.  
   
 ##  <a name="gettype"></a>  CBaseTransition::GetType  
  Zwraca wartość typu przejścia.  
@@ -275,33 +275,33 @@ TRANSITION_TYPE GetType() const;
 ```  
   
 ### <a name="return-value"></a>Wartość zwracana  
- Jeden z TRANSITION_TYPE wyliczyć wartości.  
+ Jedną z TRANSITION_TYPE wyliczonych wartości.  
   
 ### <a name="remarks"></a>Uwagi  
- Tej metody można zidentyfikować obiekt przejście przez jego typu. Typ jest ustawiany w Konstruktorze w klasie pochodnej.  
+ Ta metoda może służyć do identyfikowania obiektów przejście od jego typu. Typ jest ustawiany w konstruktorze klasy pochodnej.  
   
 ##  <a name="isadded"></a>  CBaseTransition::IsAdded  
- Informuje, czy przejście został dodany do scenorysu.  
+ Informuje, czy przejście zostały dodane do scenorysu.  
   
 ```  
 BOOL IsAdded();
 ```  
   
 ### <a name="return-value"></a>Wartość zwracana  
- Zwraca wartość PRAWDA, jeśli przejście został dodany do scenorysu, w przeciwnym razie wartość FALSE.  
+ Zwraca wartość TRUE, jeśli dodano przejścia do scenorysu, w przeciwnym razie wartość FALSE.  
   
 ### <a name="remarks"></a>Uwagi  
- Ta flaga jest ustawiona wewnętrznie, gdy kod najwyższego poziomu dodaje przejścia do scenorysu.  
+ Ta flaga jest ustawiona wewnętrznie, gdy kod najwyższego poziomu powoduje dodanie przejścia do scenorysu.  
   
 ##  <a name="m_badded"></a>  CBaseTransition::m_bAdded  
- Określa, czy przejście został dodany do scenorysu.  
+ Określa, czy przejście zostały dodane do scenorysu.  
   
 ```  
 BOOL m_bAdded;  
 ```  
   
 ##  <a name="m_pendkeyframe"></a>  CBaseTransition::m_pEndKeyframe  
- Przechowuje wskaźnik do klatki kluczowej, który określa koniec przejścia.  
+ Przechowuje wskaźnik do ramki kluczowej, który określa koniec przejścia.  
   
 ```  
 CBaseKeyFrame* m_pEndKeyframe;  
@@ -315,7 +315,7 @@ CAnimationVariable* m_pRelatedVariable;
 ```  
   
 ##  <a name="m_pstartkeyframe"></a>  CBaseTransition::m_pStartKeyframe  
- Przechowuje wskaźnik do klatki kluczowej, który określa początek przejścia.  
+ Przechowuje wskaźnik do ramki kluczowej, która określa początek przejścia.  
   
 ```  
 CBaseKeyFrame* m_pStartKeyframe;  
@@ -336,7 +336,7 @@ TRANSITION_TYPE m_type;
 ```  
   
 ##  <a name="setkeyframes"></a>  CBaseTransition::SetKeyframes  
- Ustawia kluczowych przejścia.  
+ Ustawia klatki kluczowe przejścia.  
   
 ```  
 void SetKeyframes(
@@ -346,13 +346,13 @@ void SetKeyframes(
   
 ### <a name="parameters"></a>Parametry  
  *pStart*  
- Kluczową Określa początek przejścia.  
+ Klatki kluczowej, która określa początek przejścia.  
   
- *Oczekiwania*  
+ *Oczekujący*  
  Kluczową Określa koniec przejścia.  
   
 ### <a name="remarks"></a>Uwagi  
- Ta metoda określa, że przejście do uruchamiania po określonej klatki kluczowej i, opcjonalnie, jeśli ustawienia nie ma wartości NULL, Zakończ przed określonym klatki kluczowej. Jeśli przejście został utworzony z określonym parametrem czas trwania, ten czas trwania jest zastępowany czas między początkową i końcową klatek.  
+ Ta metoda informuje o przejście do uruchamia się po określonym ramki kluczowej i, opcjonalnie, jeśli oczekują nie ma wartość NULL, zakończyć przed określonym klatki kluczowej. Jeśli przejście został utworzony za pomocą parametru czasu trwania określony, ten czas jest zastępowany czas pomiędzy klatkami kluczowymi rozpoczęcia i zakończenia.  
   
 ##  <a name="setrelatedvariable"></a>  CBaseTransition::SetRelatedVariable  
  Ustanawia relację między zmiennej animacji i przejść.  
@@ -363,20 +363,20 @@ void SetRelatedVariable(CAnimationVariable* pVariable);
   
 ### <a name="parameters"></a>Parametry  
  *pVariable*  
- Wskaźnik do zmiennej pokrewne animacji.  
+ Wskaźnik do zmiennej animacji powiązane.  
   
 ### <a name="remarks"></a>Uwagi  
- Ustanawia relację między zmiennej animacji i przejść. Przejście może odnosić się tylko do jednej zmiennej.  
+ Ustanawia relację między zmiennej animacji i przejść. Przejścia może być stosowane tylko do jednej zmiennej.  
   
-##  <a name="transition_type_enumeration"></a>  CBaseTransition::TRANSITION_TYPE — wyliczenie  
- Określa typy przejścia są obecnie obsługiwane przez MFC implementacji interfejsu API systemu Windows animacji.  
+##  <a name="transition_type_enumeration"></a>  Wyliczenie CBaseTransition::TRANSITION_TYPE  
+ Definiuje typy przejścia są obecnie obsługiwane przez interfejs API animacji Windows implementacji MFC.  
   
 ```  
 enum TRANSITION_TYPE;  
 ```  
   
 ### <a name="remarks"></a>Uwagi  
- Typ przejścia jest ustawiona w Konstruktorze określonych przejścia. Na przykład CSinusoidalTransitionFromRange ustawia jego typ SINUSOIDAL_FROM_RANGE.  
+ Typ przejścia znajduje się w Konstruktorze określonego przejścia. Na przykład CSinusoidalTransitionFromRange ustawia SINUSOIDAL_FROM_RANGE jego typu.  
   
 ## <a name="see-also"></a>Zobacz też  
  [Klasy](../../mfc/reference/mfc-classes.md)

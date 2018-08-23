@@ -16,17 +16,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 115f5b3d7012ae3e9073d81e0c1005dcb513e045
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: eb4142b742ae6c2a758c2a2fb5e09c604959433f
+ms.sourcegitcommit: d4c803bd3a684d7951bf88dcecf1f14af43ae411
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33849343"
+ms.lasthandoff: 08/10/2018
+ms.locfileid: "42465874"
 ---
 # <a name="injectstatement"></a>inject_statement
-**Określonego języka C++**  
+**Określonego język C++**  
   
- Wstawia jej argument jako tekst źródłowy do nagłówka biblioteki typów.  
+Wstawia jej argument jako tekst źródłowy do nagłówka biblioteki typów.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -34,15 +34,17 @@ ms.locfileid: "33849343"
 inject_statement("source_text")  
 ```  
   
-#### <a name="parameters"></a>Parametry  
- `source_text`  
- Tekst źródłowy, który ma zostać wstawiony do plik nagłówka biblioteki typów.  
+### <a name="parameters"></a>Parametry  
+*source_text*  
+Tekst źródłowy, który ma zostać wstawiony do pliku nagłówka biblioteki typów.  
   
 ## <a name="remarks"></a>Uwagi  
- Tekst jest umieszczona na początku deklaracji przestrzeni nazw, która opakowuje zawartość biblioteki typów w pliku nagłówka.  
+ 
+Tekst zostanie umieszczony na początku deklaracji przestrzeni nazw, który otacza zawartość biblioteki typów w pliku nagłówkowym.  
   
- **KOŃCOWY określonego języka C++**  
+**KONIEC określonego języka C++**  
   
 ## <a name="see-also"></a>Zobacz też  
- [atrybuty #import](../preprocessor/hash-import-attributes-cpp.md)   
- [#import — dyrektywa](../preprocessor/hash-import-directive-cpp.md)
+ 
+[atrybuty #import](../preprocessor/hash-import-attributes-cpp.md)   
+[#import — dyrektywa](../preprocessor/hash-import-directive-cpp.md)

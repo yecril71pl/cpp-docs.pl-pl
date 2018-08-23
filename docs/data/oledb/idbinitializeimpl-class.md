@@ -50,15 +50,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 756ced3e2e1eef48023831329751477d07d7cfec
-ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
+ms.openlocfilehash: f59619db743d8f8d08b2a202e992cdfcd532e1e8
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/30/2018
-ms.locfileid: "39336491"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42464565"
 ---
 # <a name="idbinitializeimpl-class"></a>IDBInitializeImpl — Klasa
-Udostępnia implementację na potrzeby [IDBInitialize](https://msdn.microsoft.com/library/ms713706.aspx) interfejsu.  
+Udostępnia implementację na potrzeby [IDBInitialize](/previous-versions/windows/desktop/ms713706\(v=vs.85\)) interfejsu.  
   
 ## <a name="syntax"></a>Składnia
 
@@ -121,7 +121,7 @@ STDMETHOD(Initialize)(void);
 ```  
   
 ### <a name="remarks"></a>Uwagi  
- Zobacz [IDBInitialize::Initialize](https://msdn.microsoft.com/library/ms718026.aspx) w *OLE DB Podręcznik programisty*. 
+ Zobacz [IDBInitialize::Initialize](/previous-versions/windows/desktop/ms718026\(v=vs.85\)) w *OLE DB Podręcznik programisty*. 
 
 ## <a name="uninitialize"></a> IDBInitializeImpl::Uninitialize
 Umieszcza dane źródła obiektu w stanie niezainicjowanym przy zwalnianiu zasobów wewnętrznych, takich jak obsługa właściwości.  
@@ -133,7 +133,7 @@ STDMETHOD(Uninitialize)(void);
 ```  
   
 ### <a name="remarks"></a>Uwagi  
- Zobacz [IDBInitialize::Uninitialize](https://msdn.microsoft.com/library/ms719648.aspx) w *OLE DB Podręcznik programisty*.
+ Zobacz [IDBInitialize::Uninitialize](/previous-versions/windows/desktop/ms719648\(v=vs.85\)) w *OLE DB Podręcznik programisty*.
 
 ## <a name="dwstatus"></a> IDBInitializeImpl::m_dwStatus
 Flagi źródła danych.  

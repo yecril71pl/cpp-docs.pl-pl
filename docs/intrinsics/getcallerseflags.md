@@ -17,17 +17,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0f9cf2a0991b17cb980e60550f445b45c992fcbb
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 6a22777479dc3653b2c4170f7621dc466b4eabef
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33330287"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42466146"
 ---
 # <a name="getcallerseflags"></a>__getcallerseflags
 **Microsoft Specific**  
   
- Zwraca wartość EFLAGS z kontekstu obiektu wywołującego.  
+ Zwraca wartość EFLAGS kontekst obiektu wywołującego.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -40,14 +40,14 @@ unsigned int __getcallerseflags(void);
   
 ## <a name="requirements"></a>Wymagania  
   
-|— Wewnętrzne|Architektura|  
+|Wewnętrzne|Architektura|  
 |---------------|------------------|  
-|`__getcallerseflags`|x86, [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
+|`__getcallerseflags`|x86, x64|  
   
- **Plik nagłówka** \<intrin.h >  
+ **Plik nagłówkowy** \<intrin.h >  
   
 ## <a name="remarks"></a>Uwagi  
- Ta procedura jest dostępna tylko wewnętrznie.  
+ Ta procedura jest dostępna wyłącznie jako wewnętrzna.  
   
 ## <a name="example"></a>Przykład  
   
@@ -85,7 +85,7 @@ EFLAGS 0x202
 EFLAGS 0x206  
 ```  
   
-**KOŃCOWY określonych firmy Microsoft**  
+**END specyficzny dla Microsoft**  
   
 ## <a name="see-also"></a>Zobacz też  
  [Funkcje wewnętrzne kompilatora](../intrinsics/compiler-intrinsics.md)

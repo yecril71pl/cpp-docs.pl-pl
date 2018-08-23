@@ -412,12 +412,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 317e953d4c1a4e2637c71891fabde542ca751c8e
-ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
+ms.openlocfilehash: 791b27e9ff5648a2616c92852a1d4f824d43127b
+ms.sourcegitcommit: b92ca0b74f0b00372709e81333885750ba91f90e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37339712"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "42466188"
 ---
 # <a name="cdc-class"></a>Klasa CDC
 Definiuje klasę obiektów kontekstu urządzenia.  
@@ -2537,16 +2537,16 @@ DWORD GetCharacterPlacement(
  Wskaźnik do ciągu znakowego do przetwarzania.  
   
  *nCount*  
- Określa długość ciągu. Dla wersji ANSI jest to liczba BAJTÓW, a dla funkcja Unicode jest to liczba WYRAZÓW. Aby uzyskać więcej informacji, zobacz [GetCharacterPlacement](http://msdn.microsoft.com/library/windows/desktop/dd144860\(v=vs.85\).aspx).  
+ Określa długość ciągu. Dla wersji ANSI jest to liczba BAJTÓW, a dla funkcja Unicode jest to liczba WYRAZÓW. Aby uzyskać więcej informacji, zobacz [GetCharacterPlacement](/windows/desktop/api/wingdi/nf-wingdi-getcharacterplacementa).  
   
  *nMaxExtent*  
  Określa maksymalny zakres (w jednostkach logicznych), do której są przetwarzane w ciągu. Znaki, których przetwarzanie, przekracza ten zakres, są ignorowane. Obliczeń dla wszelkich wymaganych tablic zamawiania lub glifów dotyczą tylko znaki uwzględniane. Ten parametr jest używany tylko wtedy, gdy wartość GCP_MAXEXTENT określono w *Flagidw* parametru. Funkcja przetwarza ciąg wejściowy, każdy znak i jego rozszerzenie są dodawane do danych wyjściowych, zakresu i innych tablic tylko wtedy, gdy całkowita wielkość jeszcze nie przekracza maksymalnej. Po osiągnięciu limitu przetwarzanie zostanie zatrzymane.  
   
  lpResults  
- Wskaźnik do [GCP_Results](http://msdn.microsoft.com/library/windows/desktop/dd144842\(v=vs.85\).aspx) strukturę, która otrzymuje wyniki funkcji.  
+ Wskaźnik do [GCP_Results](/windows/desktop/api/wingdi/ns-wingdi-taggcp_resultsa) strukturę, która otrzymuje wyniki funkcji.  
   
  *Flagidw*  
- Określa sposób przetwarzania ciągu do wymaganych tablic. Ten parametr może mieć jedną lub więcej wartości na liście *Flagidw* części [GetCharacterPlacement](http://msdn.microsoft.com/library/windows/desktop/dd144860\(v=vs.85\).aspx) tematu.  
+ Określa sposób przetwarzania ciągu do wymaganych tablic. Ten parametr może mieć jedną lub więcej wartości na liście *Flagidw* części [GetCharacterPlacement](/windows/desktop/api/wingdi/nf-wingdi-getcharacterplacementa) tematu.  
   
  *str*  
  Wskaźnik do [CString](../../atl-mfc-shared/reference/cstringt-class.md) obiektu do procesu.  
@@ -2557,7 +2557,7 @@ DWORD GetCharacterPlacement(
  Jeśli funkcja zawiedzie, wartość zwracana wynosi zero.  
   
 ### <a name="remarks"></a>Uwagi  
- Ta funkcja członkowska emuluje funkcjonalność funkcji [GetCharacterPlacement](http://msdn.microsoft.com/library/windows/desktop/dd144860\(v=vs.85\).aspx), zgodnie z opisem w zestawie Windows SDK.  
+ Ta funkcja członkowska emuluje funkcjonalność funkcji [GetCharacterPlacement](/windows/desktop/api/wingdi/nf-wingdi-getcharacterplacementa), zgodnie z opisem w zestawie Windows SDK.  
   
 ##  <a name="getcharabcwidths"></a>  CDC::GetCharABCWidths  
  Pobiera szerokość kolejnych znaków w określonym zakresie z bieżącej czcionki TrueType.  

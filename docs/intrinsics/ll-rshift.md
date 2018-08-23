@@ -18,17 +18,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4e086339c41f789323cb4aab386a96dae27a0eeb
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: dd8189f15f38d5d3008c1f20959573ca9d2337c9
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33324931"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42464846"
 ---
 # <a name="llrshift"></a>__ll_rshift
 **Microsoft Specific**  
   
- Przenosi określoną wartość 64-bitowego za pomocą pierwszego parametru po prawej stronie według liczby bitów określonej przez parametr drugiego.  
+ Przenosi wartość 64-bitową, określonym przez pierwszy parametr w prawo o liczbę bitów określoną w drugim parametrze.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -41,24 +41,24 @@ __int64 __ll_rshift(
   
 #### <a name="parameters"></a>Parametry  
  [in] `Mask`  
- 64-bitową liczbę całkowitą wartość przesunięcia w prawo.  
+ Wartość 64-bitową liczbę całkowitą na przesunięcie w prawo.  
   
  [in] `nBit`  
- Liczba bitów, które mają zostać przesunięte modulo 64 na x64 i modulo 32 na x86.  
+ Liczba bitów, aby przenieść modulo 64 na x64 i modulo 32 na x86.  
   
 ## <a name="return-value"></a>Wartość zwracana  
  Maska przesunięte `nBit` usługi bits.  
   
 ## <a name="requirements"></a>Wymagania  
   
-|— Wewnętrzne|Architektura|  
+|Wewnętrzne|Architektura|  
 |---------------|------------------|  
-|`__ll_rshift`|x86, [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
+|`__ll_rshift`|x86, x64|  
   
- **Plik nagłówka** \<intrin.h >  
+ **Plik nagłówkowy** \<intrin.h >  
   
 ## <a name="remarks"></a>Uwagi  
- Jeśli drugi parametr jest większa niż 64 na x64 (32 na x86), który numer jest pobierany modulo 64 (32 na x86) w celu ustalenia liczby bitów, które mają zostać przesunięte. `ll` Prefiksu wskazuje, że operacja jest w `long long`, inną nazwę `__int64`, podpisany typ całkowity 64-bitowych.  
+ Jeśli drugi parametr jest większa niż 64 na numer jest pobierany modulo 64 (32 na x86), aby określić liczbę bitów, aby przenieść x64 (32 na x86). `ll` Prefiks wskazuje, że jest operacją na `long long`, inną nazwę `__int64`, typ całkowity ze znakiem 64-bitowych.  
   
 ## <a name="example"></a>Przykład  
   
@@ -93,9 +93,9 @@ fffffffffffffff0
  - 10  
 ```  
   
- **Uwaga** Jeśli `_ull_rshift` był używany, BITEM wartość przesunięte prawo byłby zero, więc pożądany wynik może być uzyskany w przypadku wartości ujemnej.  
+ **Uwaga** Jeśli `_ull_rshift` było używane, BITEM wartość przesunięte w prawo byłby zero, dzięki czemu oczekiwany wynik może nie zostały uzyskane w przypadku wartości ujemnej.  
   
-**KOŃCOWY określonych firmy Microsoft**  
+**END specyficzny dla Microsoft**  
   
 ## <a name="see-also"></a>Zobacz też  
  [Funkcje wewnętrzne kompilatora](../intrinsics/compiler-intrinsics.md)   

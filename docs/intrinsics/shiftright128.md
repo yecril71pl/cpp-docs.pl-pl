@@ -16,17 +16,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 393138916bf29fd9adb5dceb0b8612b576b84e76
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 0aa5b4028863ff31084e8d01892a86b990de51fb
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33339725"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42465979"
 ---
 # <a name="shiftright128"></a>__shiftright128
 **Microsoft Specific**  
   
- Przenosi ilość 128-bitowego, reprezentowane jako dwie liczb 64-bitowych `LowPart` i `HighPart`, z prawej strony według liczby bitów określonej `Shift` i zwraca niski 64-bitowy wyniku.  
+ Przenosi ilość 128-bitowego, reprezentowane jako dwie ilości 64-bitowych `LowPart` i `HighPart`, w prawo o liczbę bitów określoną przez `Shift` i zwraca niski 64 bity wyniku.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -40,32 +40,32 @@ unsigned __int64 __shiftright128(
   
 #### <a name="parameters"></a>Parametry  
  [in] `LowPart`  
- Niski 64 bity ilość 128-bitowe, które mają zostać przesunięte.  
+ Niski 64 bity ilość 128-bitowe przesunięcie.  
   
  [in] `HighPart`  
- Wysoka 64 bity ilość 128-bitowe, które mają zostać przesunięte.  
+ Wysoka 64 bity ilość 128-bitowe przesunięcie.  
   
  [in] `Shift`  
- Liczba bitów, które mają zostać przesunięte.  
+ Liczba bitów, aby przesunąć.  
   
 ## <a name="return-value"></a>Wartość zwracana  
  Niski 64 bity wyniku.  
   
 ## <a name="requirements"></a>Wymagania  
   
-|— Wewnętrzne|Architektura|  
+|Wewnętrzne|Architektura|  
 |---------------|------------------|  
-|`__shiftright128`|[!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
+|`__shiftright128`|X64|  
   
- **Plik nagłówka** \<intrin.h >  
+ **Plik nagłówkowy** \<intrin.h >  
   
 ## <a name="remarks"></a>Uwagi  
- `Shift` Wartość jest zawsze modulo 64 tak, na przykład, jeśli wywołujesz `__shiftright128(0, 1, 64)`, funkcja zostanie przesunięte wysokiej części `0` bitów prawym przyciskiem myszy i zwraca część niski `0` i nie `1` , ponieważ w przeciwnym razie można się spodziewać.  
+ `Shift` Wartość jest zawsze modulo 64 więc, na przykład, jeśli wywołasz `__shiftright128(0, 1, 64)`, funkcja zostanie wprowadzony wysokiej część `0` bitów, kliknij prawym przyciskiem myszy i powrócić niskiej część `0` i nie `1` w przeciwnym razie może być oczekiwany.  
   
 ## <a name="example"></a>Przykład  
- Na przykład zobacz [__shiftleft128](../intrinsics/shiftleft128.md).  
+ Aby uzyskać przykład, zobacz [__shiftleft128](../intrinsics/shiftleft128.md).  
   
-**KOŃCOWY określonych firmy Microsoft**  
+**END specyficzny dla Microsoft**  
   
 ## <a name="see-also"></a>Zobacz też  
  [__shiftleft128](../intrinsics/shiftleft128.md)   

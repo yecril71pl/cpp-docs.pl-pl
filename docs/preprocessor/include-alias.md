@@ -18,12 +18,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 84e09b51d6f234bdc17353c358e378f18e153567
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 26e59888a26b5f71b697e398e81b16012dd35e3a
+ms.sourcegitcommit: d4c803bd3a684d7951bf88dcecf1f14af43ae411
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33838933"
+ms.lasthandoff: 08/10/2018
+ms.locfileid: "42464642"
 ---
 # <a name="includealias"></a>include_alias
 
@@ -36,7 +36,7 @@ Określa, że *short_filename* ma być używany jako alias *long_filename*.
 
 ## <a name="remarks"></a>Uwagi
 
-Niektóre systemy plików umożliwiają dłuższe nazwy plików nagłówkowych niż limit 8.3 systemu plików FAT. Kompilator nie może po prostu obciąć dłuższej nazwy do 8.3, ponieważ pierwsze osiem znaków dłuższej nazwy plików nagłówkowych nie musi być unikatowe. Zawsze, gdy wystąpi kompilator *long_filename* ciągu zastępuje *short_filename*oraz szuka pliku nagłówka *short_filename* zamiast tego. Ta pragma musi pojawić się przed odpowiednimi dyrektywami `#include`. Na przykład:
+Niektóre systemy plików umożliwiają dłuższe nazwy plików nagłówkowych niż limit 8.3 systemu plików FAT. Kompilator nie może po prostu obciąć dłuższej nazwy do 8.3, ponieważ pierwsze osiem znaków dłuższej nazwy plików nagłówkowych nie musi być unikatowe. Gdy kompilator napotka *long_filename* ciągu, zastępuje *short_filename*, a szuka pliku nagłówka *short_filename* zamiast tego. Ta pragma musi pojawić się przed odpowiednimi dyrektywami `#include`. Na przykład:
 
 ```cpp
 // First eight characters of these two files not unique.
@@ -50,7 +50,7 @@ Niektóre systemy plików umożliwiają dłuższe nazwy plików nagłówkowych n
 #include "GraphicsMenu.h"
 ```
 
-Poszukiwany alias musi odpowiadać specyfikacji, zarówno w wielkości liter jak i pisowni oraz użyciu znaków podwójnego cudzysłowu lub nawiasów ostrokątnych. **Include_alias** pragma wykonuje prostego ciągu na nazwy plików; Weryfikacja nie innych filename jest przeprowadzana. Na przykład, biorąc pod uwagę następujące dyrektywy,
+Poszukiwany alias musi odpowiadać specyfikacji, zarówno w wielkości liter jak i pisowni oraz użyciu znaków podwójnego cudzysłowu lub nawiasów ostrokątnych. **Include_alias** wykonuje proste dopasowanie na nazwy plików ciągów; odbywa się nie weryfikacji nazwy pliku. Na przykład, biorąc pod uwagę następujące dyrektywy,
 
 ```cpp
 #pragma include_alias("mymath.h", "math.h")
@@ -58,7 +58,7 @@ Poszukiwany alias musi odpowiadać specyfikacji, zarówno w wielkości liter jak
 #include "sys/mymath.h"
 ```
 
-aliasing (podstawienie) nie jest wykonywany, ponieważ ciągi pliku nagłówkowego nie są dokładnie zgodne. Ponadto nagłówka nazw plików używane jako argumenty opcji kompilatora /Yu i /Yc lub **hdrstop** pragma, nie są zastępowane. Na przykład, jeśli plik z kodem źródłowym zawiera następujące dyrektywy,
+aliasing (podstawienie) nie jest wykonywany, ponieważ ciągi pliku nagłówkowego nie są dokładnie zgodne. Ponadto nazwy plików nagłówkowych używane jako argumenty `/Yu` i `/Yc` opcje kompilatora lub `hdrstop` pragma, nie są zastępowane. Na przykład, jeśli plik z kodem źródłowym zawiera następujące dyrektywy,
   
 ```cpp
 #include <AppleSystemHeaderStop.h>
@@ -68,7 +68,7 @@ odpowiadające opcje kompilatora to
 
 > /YcAppleSystemHeaderStop.h
 
-Można użyć **include_alias** pragma do mapowania nazwy pliku nagłówka. Na przykład:
+Możesz użyć **include_alias** pragmy do mapowania dowolnej nazwy pliku nagłówkowego. Na przykład:
 
 ```cpp
 #pragma include_alias( "api.h", "c:\version1.0\api.h" )
@@ -77,7 +77,7 @@ Można użyć **include_alias** pragma do mapowania nazwy pliku nagłówka. Na p
 #include <stdio.h>
 ```
 
-Nie należy mieszać nazw plików ujętych w znaki cudzysłowu z nazwami plików ujętymi w nawiasy ostre. Na przykład podane powyżej dwa **#pragma include_alias** dyrektywy, kompilator wykonuje podstawienie nie na następujących `#include` dyrektywy:
+Nie należy mieszać nazw plików ujętych w znaki cudzysłowu z nazwami plików ujętymi w nawiasy ostre. Na przykład dla dwóch podanych wyżej `#pragma include_alias` dyrektyw, kompilator nie wykona podstawienia dla następujących `#include` dyrektywy:
 
 ```cpp
 #include <api.h>
@@ -90,14 +90,14 @@ Ponadto, następująca dyrektywa generuje błąd:
 #pragma include_alias(<header.h>, "header.h")  // Error
 ```
 
-Pamiętaj, że nazwa pliku jest zgłaszany w komunikatach o błędach lub jako wartość wstępnie zdefiniowane **&#95; &#95;pliku&#95; &#95;** makra jest nazwa pliku po podstawienie została wykonana. Na przykład wyświetlić dane wyjściowe po następujące dyrektywy:
+Należy pamiętać, że nazwa pliku zgłaszana w komunikatach o błędach lub jako wartość wstępnie zdefiniowanego `__FILE__` makro, to nazwa pliku, po wykonaniu podstawienia. Na przykład wyświetlić dane wyjściowe po następujących dyrektywach:
 
 ```cpp
 #pragma include_alias( "VeryLongFileName.H", "myfile.h" )
 #include "VeryLongFileName.H"
 ```
 
-Wystąpił błąd w VERYLONGFILENAME. H tworzy komunikat o błędzie:
+Błąd w VERYLONGFILENAME. H generuje następujący komunikat o błędzie:
 
 ```Output
 myfile.h(15) : error C2059 : syntax error

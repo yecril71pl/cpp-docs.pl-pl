@@ -12,15 +12,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 161c98ad3d47c6f988efb60ba2aae9f0e025967e
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 39c5aa2bd844a70848583ef8304cdb2fd57befc6
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32367475"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42465428"
 ---
 # <a name="dynamic-parameter-stack-area-construction"></a>Konstrukcja obszaru stosu parametru dynamicznego
-Jeśli używana jest wskaźnika ramki, istnieje możliwość dynamicznie utworzyć obszaru stosu parametru. To nie jest obecnie zrobione [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)] kompilatora.  
+Jeśli jest używany wskaźnik ramki, istnieje możliwość umożliwia dynamiczne tworzenie obszaru stosu parametru. Nie jest to aktualnie wykonywane w x64 kompilatora.  
   
 ## <a name="see-also"></a>Zobacz też  
  [Wykorzystanie stosu](../build/stack-usage.md)

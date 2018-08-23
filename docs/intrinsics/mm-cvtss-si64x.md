@@ -17,17 +17,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 665c52fc0dd0645e25d3014cc28f9fdfba344e2d
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 947c9bf0892da52b44a99486b3ff0f1d59bc6fee
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33332107"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42466238"
 ---
 # <a name="mmcvtsssi64x"></a>_mm_cvtss_si64x
 **Microsoft Specific**  
   
- Generuje [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)] rozszerzona wersja przekonwertować skalarną pojedynczego dokładności liczba zmiennoprzecinkowa na 64-bitową liczbę całkowitą (`cvtss2si`) instrukcji.  
+ Generuje x64 rozszerzonej wersji przekonwertować skalarną pojedynczej dokładności liczba zmiennoprzecinkowa na 64-bitowa liczba całkowita (`cvtss2si`) instrukcji.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -39,23 +39,23 @@ __int64 _mm_cvtss_si64x(
   
 #### <a name="parameters"></a>Parametry  
  [in] `value`  
- `__m128` Struktury zawierającej wartości zmiennoprzecinkowych.  
+ `__m128` Struktury zawierającej — wartości zmiennoprzecinkowe.  
   
 ## <a name="return-value"></a>Wartość zwracana  
- 64-bitową liczbę całkowitą, wynik konwersji pierwszej wartości zmiennoprzecinkowej na liczbę całkowitą.  
+ 64-bitową liczbę całkowitą, wynik konwersji pierwsza wartość zmiennoprzecinkowa do liczby całkowitej.  
   
 ## <a name="requirements"></a>Wymagania  
   
-|— Wewnętrzne|Architektura|  
+|Wewnętrzne|Architektura|  
 |---------------|------------------|  
-|`_mm_cvtss_si64x`|[!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
+|`_mm_cvtss_si64x`|X64|  
   
- **Plik nagłówka** \<intrin.h >  
+ **Plik nagłówkowy** \<intrin.h >  
   
 ## <a name="remarks"></a>Uwagi  
- Pierwszy element wartość struktury jest konwertowana na liczbę całkowitą i zwrócony. Zaokrąglania bity kontroli w MXCSR są używane do określania zachowania zaokrąglania. Zaokrąglij do najbliższej zaokrąglania parzystą liczbą w przypadku liczby dziesiętnej 0,5 to domyślny tryb zaokrąglania. Ponieważ `__m128` struktury reprezentuje rejestru XMM, to wewnętrzne przyjmuje wartość z rejestru XMM i zapisuje go w pamięci systemu.  
+ Pierwszy element wartość struktury jest konwertowana na liczbę całkowitą i zwrócony. Zaokrąglenia bity kontrolne w mxcsr rejestru są używane do określenia zachowania zaokrąglania. Domyślny tryb zaokrąglania to zaokrąglony do najbliższej zaokrąglania parzystą liczbą, jeśli część dziesiętną wynosi 0,5. Ponieważ `__m128` struktury reprezentuje rejestrów XMM to wewnętrzne przyjmuje wartość z rejestru XMM i zapisuje je do pamięci systemowej.  
   
- Ta procedura jest dostępna tylko wewnętrznie.  
+ Ta procedura jest dostępna wyłącznie jako wewnętrzna.  
   
 ## <a name="example"></a>Przykład  
   
@@ -91,7 +91,7 @@ int main()
 101  
 ```  
   
-**KOŃCOWY określonych firmy Microsoft**  
+**END specyficzny dla Microsoft**  
   
 ## <a name="see-also"></a>Zobacz też  
  [__m128d](../cpp/m128d.md)   

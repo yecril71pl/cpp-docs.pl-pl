@@ -17,30 +17,34 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 3ea871f2c3b75ac8f4e316b3dc680e8821ac789f
-ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
+ms.openlocfilehash: 6b96165b045c44f4b15b09d6a5c48da14b7e96be
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/09/2018
-ms.locfileid: "40010675"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42575857"
 ---
 # <a name="implementshelperiidcount-constant"></a>ImplementsHelper::IidCount — Stała
-Obsługuje infrastrukturę biblioteki WRL i nie jest przeznaczona do użycia bezpośrednio w kodzie.  
-  
-## <a name="syntax"></a>Składnia  
-  
-```cpp  
-static const unsigned long IidCount;  
-```  
-  
-## <a name="remarks"></a>Uwagi  
- Przechowuje liczbę zaimplementowanego interfejsu identyfikatorów w bieżącym `Implements` obiektu.  
-  
-## <a name="requirements"></a>Wymagania  
- **Nagłówek:** implements.h  
-  
- **Namespace:** Microsoft::wrl:: details  
-  
-## <a name="see-also"></a>Zobacz też  
- [Implementshelper — struktura](../windows/implementshelper-structure.md)   
- [Microsoft::WRL::Details, przestrzeń nazw](../windows/microsoft-wrl-details-namespace.md)
+
+Obsługuje infrastrukturę biblioteki WRL i nie jest przeznaczona do użycia bezpośrednio w kodzie.
+
+## <a name="syntax"></a>Składnia
+
+```cpp
+static const unsigned long IidCount;
+```
+
+## <a name="remarks"></a>Uwagi
+
+Przechowuje liczbę zaimplementowanego interfejsu identyfikatorów w bieżącym `Implements` obiektu.
+
+## <a name="requirements"></a>Wymagania
+
+**Nagłówek:** implements.h
+
+**Namespace:** Microsoft::wrl:: details
+
+## <a name="see-also"></a>Zobacz też
+
+[ImplementsHelper, struktura](../windows/implementshelper-structure.md)  
+[Microsoft::WRL::Details, przestrzeń nazw](../windows/microsoft-wrl-details-namespace.md)

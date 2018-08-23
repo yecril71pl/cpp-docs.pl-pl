@@ -20,12 +20,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 663ee462bf03e76ab15cbac05790c89dcaf07dca
-ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
+ms.openlocfilehash: ae6f41c2e8e8d142ee143d7ba0829751e1c230a3
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37884857"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42465981"
 ---
 # <a name="cmessagemap-class"></a>Klasa CMessageMap
 Ta klasa umożliwia mapy wiadomości obiektu, aby mieć dostęp przez inny obiekt.  
@@ -50,7 +50,7 @@ class ATL_NO_VTABLE CMessageMap
 ## <a name="remarks"></a>Uwagi  
  `CMessageMap` jest abstrakcyjna klasa bazowa, umożliwiająca komunikat obiektu mapuje uzyskiwał dostęp do innego obiektu. Aby obiekt do udostępnienia jej mapy komunikatów, swojej klasie musi pochodzić od klasy `CMessageMap`.  
   
- Używa ATL `CMessageMap` znajdujących się w pomocy technicznej systemu windows i łańcuch mapy wiadomości dynamiczne. Na przykład wszystkie klasy zawierające [CContainedWindow](../../atl/reference/ccontainedwindowt-class.md) obiekt musi pochodzić od klasy `CMessageMap`. Poniższy kod jest pobierana z [SUBEDIT](../../visual-cpp-samples.md) próbki. Za pomocą [CComControl](../../atl/reference/ccomcontrol-class.md), `CAtlEdit` automatycznie pochodną klasy `CMessageMap`.  
+ Używa ATL `CMessageMap` znajdujących się w pomocy technicznej systemu windows i łańcuch mapy wiadomości dynamiczne. Na przykład wszystkie klasy zawierające [CContainedWindow](../../atl/reference/ccontainedwindowt-class.md) obiekt musi pochodzić od klasy `CMessageMap`. Poniższy kod jest pobierana z [SUBEDIT](https://github.com/Microsoft/VCSamples/tree/master/VC2008Samples/ATL/Controls/SubEdit) próbki. Za pomocą [CComControl](../../atl/reference/ccomcontrol-class.md), `CAtlEdit` automatycznie pochodną klasy `CMessageMap`.  
   
  [!code-cpp[NVC_ATL_Windowing#90](../../atl/codesnippet/cpp/cmessagemap-class_1.h)]  
   

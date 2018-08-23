@@ -18,39 +18,40 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e40b9382abc8ee0fa0c003964eebe75bc075e473
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 8a6c8d05d326e11ecfef4df8d22cbf2b8d92bd77
+ms.sourcegitcommit: d4c803bd3a684d7951bf88dcecf1f14af43ae411
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33849876"
+ms.lasthandoff: 08/10/2018
+ms.locfileid: "42465034"
 ---
 # <a name="inlinedepth"></a>inline_depth
-Określa heurystyki wbudowanego wyszukiwania głębokość, taki sposób, że funkcja nie będzie wbudowanego, jeśli jest przy głębokości (w wykresu wywołań) przekracza `n`.  
+Określa algorytm heurystyczny wbudowane wyszukiwanie głębi, taki sposób, że żadna funkcja nie będzie śródwierszowych, jeśli jest na głębokości (w wykresu wywołań) większy niż *n*.  
   
 ## <a name="syntax"></a>Składnia  
   
 ```  
-  
 #pragma inline_depth( [n] )  
 ```  
   
 ## <a name="remarks"></a>Uwagi  
- Tej pragmy formanty ze śródwierszowaniem funkcji oznaczone [wbudowanego](../cpp/inline-functions-cpp.md) i [__inline](../cpp/inline-functions-cpp.md) lub wbudowanego automatycznie w obszarze opcji/ob2.  
+ 
+Kontroluje tej pragmie ze śródwierszowaniem funkcji oznaczone [wbudowane](../cpp/inline-functions-cpp.md) i [__inline](../cpp/inline-functions-cpp.md) lub śródwierszowa automatycznie w ramach `/Ob2` opcji.  
   
- `n` może to być wartość z zakresu od 0 do 255, gdzie 255 oznacza nieograniczoną głębokość wykresu wywołań, a rozszerzenie funkcji wbudowanej powstrzymuje zero.  Gdy `n` nie zostanie określony, używana jest wartość domyślna (254).  
+*n* może być wartością z zakresu od 0 do 255, gdzie 255 oznacza nieograniczoną głębokość w wykresu wywołań oraz zero powstrzymuje wbudowane rozwijanie.  Gdy *n* nie jest określona, używana jest domyślna (254).  
   
- **Inline_depth** pragma Określa, ile razy można rozszerzać szereg wywołania funkcji. Na przykład jeśli głębokość wbudowanego wynosi cztery, a wywołania B, a B C wywołuje, wszystkie trzy wywołania będzie wbudowanego rozwinięte. Jednak najbliższego rozszerzenie funkcji wbudowanej jest dwa, zostaną rozwinięte tylko A i B i C pozostaje jako wywołanie funkcji.  
+**Inline_depth** pragma Określa, ile razy można rozszerzyć serii wywołań funkcji. Na przykład jeśli głębokość wbudowane to cztery i wywołania B i B, następnie wywołuje C, wszystkich trzech wywołaniach będzie wbudowany rozwinięty. Jednak najbliższego wbudowane rozwijanie jest dwa, są rozszerzane jedynie A i B i C pozostaje jako wywołania funkcji.  
   
- Aby użyć tej pragmy, musisz ustawić opcję kompilatora /Ob 1 lub 2. Głębokość ustawić za pomocą tej pragmy obowiązuje przy pierwszym wywołaniu funkcji po pragma.  
+Aby użyć tej pragmie, należy ustawić `/Ob` — opcja kompilatora 1 lub 2. Głębi, można ustawić przy użyciu tej pragmie staje się skuteczny przy pierwszym wywołaniu funkcji po pragmy.  
   
- Głębokość wbudowanego można zmniejszyć podczas rozszerzania, ale nie zwiększa. Jeśli głębokością wbudowany jest sześć i podczas rozszerzania napotka preprocesora **inline_depth** pragma z wartością osiem głębokość pozostaje sześć.  
+Głębokość wbudowanych można zmniejszyć podczas rozszerzania, ale nie zwiększa. Jeśli głębokość wbudowane sześć a podczas rozszerzania napotka preprocesora **inline_depth** pragma z wartością osiem głębokość pozostaje sześć.  
   
- **Inline_depth** pragma nie ma wpływu na funkcje oznaczone `__forceinline`.  
+**Inline_depth** pragma nie ma wpływu na funkcje oznaczone atrybutem `__forceinline`.  
   
 > [!NOTE]
->  Funkcje rekursywne może być wbudowany podstawione maksymalną głębokość wywołań 16.  
+> Funkcje rekursywne może być podstawione wbudowaną, aby maksymalną głębokość wywołań 16.  
   
 ## <a name="see-also"></a>Zobacz też  
- [Dyrektywy pragma i słowo kluczowe __Pragma](../preprocessor/pragma-directives-and-the-pragma-keyword.md)   
- [inline_recursion](../preprocessor/inline-recursion.md)
+ 
+[Dyrektywy pragma i słowo kluczowe __Pragma](../preprocessor/pragma-directives-and-the-pragma-keyword.md)   
+[inline_recursion](../preprocessor/inline-recursion.md)

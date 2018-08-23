@@ -17,32 +17,36 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: b5b160a941343fce656313f588065573d7b00c90
-ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
+ms.openlocfilehash: 8c6491968541a0015110c55edf2bede40c084947
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/09/2018
-ms.locfileid: "40017951"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42583447"
 ---
 # <a name="interfacetraitsverify-method"></a>InterfaceTraits::Verify — Metoda
-Obsługuje infrastrukturę biblioteki WRL i nie jest przeznaczona do użycia bezpośrednio w kodzie.  
-  
-## <a name="syntax"></a>Składnia  
-  
-```cpp  
-__forceinline static void Verify();  
-```  
-  
-## <a name="remarks"></a>Uwagi  
- Sprawdza, czy `Base` wywodzi się poprawnie.  
-  
- Aby uzyskać więcej informacji na temat `Base`, zobacz **publiczne definicje typów** sekcji [interfacetraits — struktura](../windows/interfacetraits-structure.md).  
-  
-## <a name="requirements"></a>Wymagania  
- **Nagłówek:** implements.h  
-  
- **Namespace:** Microsoft::wrl:: details  
-  
-## <a name="see-also"></a>Zobacz też  
- [Interfacetraits — struktura](../windows/interfacetraits-structure.md)   
- [Microsoft::WRL::Details, przestrzeń nazw](../windows/microsoft-wrl-details-namespace.md)
+
+Obsługuje infrastrukturę biblioteki WRL i nie jest przeznaczona do użycia bezpośrednio w kodzie.
+
+## <a name="syntax"></a>Składnia
+
+```cpp
+__forceinline static void Verify();
+```
+
+## <a name="remarks"></a>Uwagi
+
+Sprawdza, czy `Base` wywodzi się poprawnie.
+
+Aby uzyskać więcej informacji na temat `Base`, zobacz **publiczne definicje typów** sekcji [interfacetraits — struktura](../windows/interfacetraits-structure.md).
+
+## <a name="requirements"></a>Wymagania
+
+**Nagłówek:** implements.h
+
+**Namespace:** Microsoft::wrl:: details
+
+## <a name="see-also"></a>Zobacz też
+
+[InterfaceTraits, struktura](../windows/interfacetraits-structure.md)  
+[Microsoft::WRL::Details, przestrzeń nazw](../windows/microsoft-wrl-details-namespace.md)

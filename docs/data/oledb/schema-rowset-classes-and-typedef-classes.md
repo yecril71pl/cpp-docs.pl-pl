@@ -1083,54 +1083,54 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 02d0787ebb40379ac438880ab7a23aa36a0b0f56
-ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
+ms.openlocfilehash: 25a68bb459122ea83d9be2491cb5fadaaf8a00c0
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/30/2018
-ms.locfileid: "39338301"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42465899"
 ---
 # <a name="schema-rowset-classes-and-typedef-classes"></a>Klasy zestawów wierszy schematu i klasy Typedef
 Schemat jest kolekcją obiektów bazy danych, które należą do firmy lub zostały utworzone przez określonego użytkownika. Katalog może zawierać co najmniej jednego schematu, ale musi zawsze zawierać schematu o nazwie INFORMATION_SCHEMA, zawierającą widoków i domen schematu informacji. Informacje o schemacie w OLE DB są pobierane za pomocą zestawów wierszy schematu wstępnie zdefiniowanych i zawiera typy, tabele, kolumny, indeksów, widoków, potwierdzenia i ograniczeń, statystyki, zestawów znaków, sortowania i domen.  
   
  Zestawy wierszy schematu są wstępnie zdefiniowane zestawy wierszy reprezentujących metadane. Zestawy wierszy schematu są zazwyczaj używane w programowanie dynamiczne, gdzie struktury bazy danych nie jest znany w czasie kompilacji. Aby uzyskać informacje dotyczące bazy danych w czasie wykonywania, można użyć tych zestawów wierszy schematu.  
   
- Użyj klasy typedef do utworzenia wystąpienia zestawów wierszy schematu. Poniżej przedstawiono odpowiadający mu element typedef i klasy zestawów wierszy schematu. Należy wywołać [CRestrictions::Open](../../data/oledb/crestrictions-open.md) po utworzeniu wystąpienia zestaw wierszy schematu. Ta metoda zwraca zestaw wyników, oparte na ograniczenia, które określisz. Zobacz [IDBSchemaRowset](https://msdn.microsoft.com/library/ms713686.aspx) informacji na temat ograniczeń kolumn skojarzonych z każdym zestaw wierszy schematu.  
+ Użyj klasy typedef do utworzenia wystąpienia zestawów wierszy schematu. Poniżej przedstawiono odpowiadający mu element typedef i klasy zestawów wierszy schematu. Należy wywołać [CRestrictions::Open](../../data/oledb/crestrictions-open.md) po utworzeniu wystąpienia zestaw wierszy schematu. Ta metoda zwraca zestaw wyników, oparte na ograniczenia, które określisz. Zobacz [IDBSchemaRowset](/previous-versions/windows/desktop/ms713686\(v=vs.85\)) informacji na temat ograniczeń kolumn skojarzonych z każdym zestaw wierszy schematu.  
   
  W poniższej tabeli przedstawiono każdy OLE DB zestaw wierszy schematu i odpowiednie szablony OLE DB — klasa definicji typu i informacje o klasie.  
   
 |Zestaw wierszy schematu OLE DB|— Klasa TypeDef|Klasa informacji|  
 |--------------------------|-------------------|----------------|  
-|[POTWIERDZENIA](https://msdn.microsoft.com/library/ms719776.aspx)|[CAssertions](#assertion)|[CAssertionInfo](#assertion)|  
-|[CATALOGS](https://msdn.microsoft.com/library/ms721241.aspx)|[CCatalogs](#catalog)|[CCatalogInfo](#catalog)|  
-|[CHARACTER_SETS](https://msdn.microsoft.com/library/ms722638.aspx)|[CCharacterSets](#characterset)|[CCharacterSetInfo](#characterset)|  
-|[USTAWIENIA SORTOWANIA](https://msdn.microsoft.com/library/ms715783.aspx)|[CCollations](#collation)|[CCollationInfo](#collation)|  
-|[COLUMN_PRIVILEGES](https://msdn.microsoft.com/library/ms715800.aspx)|[CColumnPrivileges](#columnprivilege)|[CColumnPrivilegeInfo](#columnprivilege)|  
-|[COLUMNS](https://msdn.microsoft.com/library/ms723052.aspx)|[CColumns](#columns)|[CColumnsInfo](#columns)|  
-|[CONSTRAINT_COLUMN_USAGE](https://msdn.microsoft.com/library/ms724522.aspx)|[CConstraintColumnUsage](#constraintcolumnusage)|[CConstraintColumnUsageInfo](#constraintcolumnusage)|  
-|[CONSTRAINT_TABLE_USAGE](https://msdn.microsoft.com/library/ms713710.aspx)|[CConstraintTableUsage](#constrainttableusage)|[CConstraintTableUsageInfo](#constrainttableusage)|  
-|[CHECK_CONSTRAINTS](https://msdn.microsoft.com/library/ms712845.aspx)|[CCheckConstraints](#checkconstraint)|[CCheckConstraintInfo](#checkconstraint)|  
-|[COLUMN_DOMAIN_USAGE](https://msdn.microsoft.com/library/ms711240.aspx)|[CColumnDomainUsage](#columndomainusage)|[CColumnDomainUsageInfo](#columndomainusage)|  
-|[FOREIGN_KEYS](https://msdn.microsoft.com/library/ms711276.aspx)|[CForeignKeys](#foreignkeys)|[CForeignKeysInfo](#foreignkeys)|  
-|[INDEKSY](https://msdn.microsoft.com/library/ms709712.aspx)|[CIndexes](#index)|[CIndexInfo](#index)|  
-|[KEY_COLUMN_USAGE](https://msdn.microsoft.com/library/ms712990.aspx)|[CKeyColumn](#keycolumn)|[CKeyColumnInfo](#keycolumn)|  
-|[PRIMARY_KEYS](https://msdn.microsoft.com/library/ms714362.aspx)|[CPrimaryKeys](#primarykey)|[CPrimaryKeyInfo](#primarykey)|  
-|[PROCEDURY](https://msdn.microsoft.com/library/ms724021.aspx)|[CProcedures](#procedure)|[CProcedureInfo](#procedure)|  
-|[PROCEDURE_COLUMNS](https://msdn.microsoft.com/library/ms723092.aspx)|[CProcedureColumns](#procedurecolumn)|[CProcedureColumnInfo](#procedurecolumn)|  
-|[PROCEDURE_PARAMETERS](https://msdn.microsoft.com/library/ms713623.aspx)|[CProcedureParameters](#procedureparam)|[CProcedureParameterInfo](#procedureparam)|  
-|[PROVIDER_TYPES](https://msdn.microsoft.com/library/ms709785.aspx)|[CProviderTypes](#provider)|[CProviderInfo](#provider)|  
-|[REFERENTIAL_CONSTRAINTS](https://msdn.microsoft.com/library/ms719737.aspx)|[CReferentialConstraints](#referentialconstraint)|[CReferentialConstraintInfo](#referentialconstraint)|  
-|[SCHEMATA](https://msdn.microsoft.com/library/ms716887.aspx)|[CSchemata](#schemata)|[CSchemataInfo](#schemata)|  
-|[SQL_LANGUAGES](https://msdn.microsoft.com/library/ms714374.aspx)|[CSQLLanguages](#sqllanguage)|[CSQLLanguageInfo](#sqllanguage)|  
-|[STATYSTYKI](https://msdn.microsoft.com/library/ms715957.aspx)|[CStatistics](#statistic)|[CStatisticInfo](#statistic)|  
-|[TABLE_CONSTRAINTS](https://msdn.microsoft.com/library/ms715921.aspx)|[CTableConstraints](#tableconstraint)|[CTableConstraintInfo](#tableconstraint)|  
-|[TABLES](https://msdn.microsoft.com/library/ms716980.aspx)|[CTables](#table)|[CTableInfo](#table)|  
-|[TABLE_PRIVILEGES](https://msdn.microsoft.com/library/ms725428.aspx)|[CTablePrivileges](#tableprivilege)|[CTablePrivilegeInfo](#tableprivilege)|  
-|[TŁUMACZENIA](https://msdn.microsoft.com/library/ms725365.aspx)|[CTranslations](#translation)|[CTranslationInfo](#translation)|  
-|[USAGE_PRIVILEGES](https://msdn.microsoft.com/library/ms722743.aspx)|[CUsagePrivileges](#usageprivilege)|[CUsagePrivilegeInfo](#usageprivilege)|  
-|[VIEW_COLUMN_USAGE](https://msdn.microsoft.com/library/ms714896.aspx)|[CViewColumnUsage](#viewcolumn)|[CViewColumnInfo](#viewcolumn)|  
-|[VIEWS](https://msdn.microsoft.com/library/ms723122.aspx)|[CViews](#view)|[CViewInfo](#view)|  
-|[VIEW_TABLE_USAGE](https://msdn.microsoft.com/library/ms719727.aspx)|[CViewTableUsage](#viewtable)|[CViewTableInfo](#viewtable)|  
+|[POTWIERDZENIA](/previous-versions/windows/desktop/ms719776\(v=vs.85\))|[CAssertions](#assertion)|[CAssertionInfo](#assertion)|  
+|[CATALOGS](/previous-versions/windows/desktop/ms721241\(v=vs.85\))|[CCatalogs](#catalog)|[CCatalogInfo](#catalog)|  
+|[CHARACTER_SETS](/previous-versions/windows/desktop/ms722638\(v=vs.85\))|[CCharacterSets](#characterset)|[CCharacterSetInfo](#characterset)|  
+|[USTAWIENIA SORTOWANIA](/previous-versions/windows/desktop/ms715783\(v=vs.85\))|[CCollations](#collation)|[CCollationInfo](#collation)|  
+|[COLUMN_PRIVILEGES](/previous-versions/windows/desktop/ms715800\(v=vs.85\))|[CColumnPrivileges](#columnprivilege)|[CColumnPrivilegeInfo](#columnprivilege)|  
+|[COLUMNS](/previous-versions/windows/desktop/ms723052\(v=vs.85\))|[CColumns](#columns)|[CColumnsInfo](#columns)|  
+|[CONSTRAINT_COLUMN_USAGE](/previous-versions/windows/desktop/ms724522\(v=vs.85\))|[CConstraintColumnUsage](#constraintcolumnusage)|[CConstraintColumnUsageInfo](#constraintcolumnusage)|  
+|[CONSTRAINT_TABLE_USAGE](/previous-versions/windows/desktop/ms713710\(v=vs.85\))|[CConstraintTableUsage](#constrainttableusage)|[CConstraintTableUsageInfo](#constrainttableusage)|  
+|[CHECK_CONSTRAINTS](/previous-versions/windows/desktop/ms712845\(v=vs.85\))|[CCheckConstraints](#checkconstraint)|[CCheckConstraintInfo](#checkconstraint)|  
+|[COLUMN_DOMAIN_USAGE](/previous-versions/windows/desktop/ms711240\(v=vs.85\))|[CColumnDomainUsage](#columndomainusage)|[CColumnDomainUsageInfo](#columndomainusage)|  
+|[FOREIGN_KEYS](/previous-versions/windows/desktop/ms711276\(v=vs.85\))|[CForeignKeys](#foreignkeys)|[CForeignKeysInfo](#foreignkeys)|  
+|[INDEKSY](/previous-versions/windows/desktop/ms709712\(v=vs.85\))|[CIndexes](#index)|[CIndexInfo](#index)|  
+|[KEY_COLUMN_USAGE](/previous-versions/windows/desktop/ms712990\(v=vs.85\))|[CKeyColumn](#keycolumn)|[CKeyColumnInfo](#keycolumn)|  
+|[PRIMARY_KEYS](/previous-versions/windows/desktop/ms714362\(v=vs.85\))|[CPrimaryKeys](#primarykey)|[CPrimaryKeyInfo](#primarykey)|  
+|[PROCEDURY](/previous-versions/windows/desktop/ms724021\(v=vs.85\))|[CProcedures](#procedure)|[CProcedureInfo](#procedure)|  
+|[PROCEDURE_COLUMNS](/previous-versions/windows/desktop/ms723092\(v=vs.85\))|[CProcedureColumns](#procedurecolumn)|[CProcedureColumnInfo](#procedurecolumn)|  
+|[PROCEDURE_PARAMETERS](/previous-versions/windows/desktop/ms713623\(v=vs.85\))|[CProcedureParameters](#procedureparam)|[CProcedureParameterInfo](#procedureparam)|  
+|[PROVIDER_TYPES](/previous-versions/windows/desktop/ms709785\(v=vs.85\))|[CProviderTypes](#provider)|[CProviderInfo](#provider)|  
+|[REFERENTIAL_CONSTRAINTS](/previous-versions/windows/desktop/ms719737\(v=vs.85\))|[CReferentialConstraints](#referentialconstraint)|[CReferentialConstraintInfo](#referentialconstraint)|  
+|[SCHEMATA](/previous-versions/windows/desktop/ms716887\(v=vs.85\))|[CSchemata](#schemata)|[CSchemataInfo](#schemata)|  
+|[SQL_LANGUAGES](/previous-versions/windows/desktop/ms714374\(v=vs.85\))|[CSQLLanguages](#sqllanguage)|[CSQLLanguageInfo](#sqllanguage)|  
+|[STATYSTYKI](/previous-versions/windows/desktop/ms715957\(v=vs.85\))|[CStatistics](#statistic)|[CStatisticInfo](#statistic)|  
+|[TABLE_CONSTRAINTS](/previous-versions/windows/desktop/ms715921\(v=vs.85\))|[CTableConstraints](#tableconstraint)|[CTableConstraintInfo](#tableconstraint)|  
+|[TABLES](/previous-versions/windows/desktop/ms716980\(v=vs.85\))|[CTables](#table)|[CTableInfo](#table)|  
+|[TABLE_PRIVILEGES](/previous-versions/windows/desktop/ms725428\(v=vs.85\))|[CTablePrivileges](#tableprivilege)|[CTablePrivilegeInfo](#tableprivilege)|  
+|[TŁUMACZENIA](/previous-versions/windows/desktop/ms725365\(v=vs.85\))|[CTranslations](#translation)|[CTranslationInfo](#translation)|  
+|[USAGE_PRIVILEGES](/previous-versions/windows/desktop/ms722743\(v=vs.85\))|[CUsagePrivileges](#usageprivilege)|[CUsagePrivilegeInfo](#usageprivilege)|  
+|[VIEW_COLUMN_USAGE](/previous-versions/windows/desktop/ms714896\(v=vs.85\))|[CViewColumnUsage](#viewcolumn)|[CViewColumnInfo](#viewcolumn)|  
+|[VIEWS](/previous-versions/windows/desktop/ms723122\(v=vs.85\))|[CViews](#view)|[CViewInfo](#view)|  
+|[VIEW_TABLE_USAGE](/previous-versions/windows/desktop/ms719727\(v=vs.85\))|[CViewTableUsage](#viewtable)|[CViewTableInfo](#viewtable)|  
   
 ## <a name="assertion"></a> CAssertions, CAssertionInfo
 Wywołanie klasy typedef `CAssertions` do zaimplementowania klasy jego parametr `CAssertionInfo`.  
@@ -1140,7 +1140,7 @@ Wywołanie klasy typedef `CAssertions` do zaimplementowania klasy jego parametr 
   
  Ta klasa identyfikuje potwierdzenia zdefiniowanych w katalogu, które należą do danego użytkownika.  
   
- Poniższa tabela zawiera listę elementów członkowskich danych klasy dla `CAssertionInfo` i OLE DB kolumny. Zobacz [wierszy potwierdzenia](https://msdn.microsoft.com/library/ms719776.aspx) w *OLE DB Podręcznik programisty* Aby uzyskać więcej informacji o schemacie i kolumn.  
+ Poniższa tabela zawiera listę elementów członkowskich danych klasy dla `CAssertionInfo` i OLE DB kolumny. Zobacz [wierszy potwierdzenia](/previous-versions/windows/desktop/ms719776\(v=vs.85\)) w *OLE DB Podręcznik programisty* Aby uzyskać więcej informacji o schemacie i kolumn.  
   
 |Elementy członkowskie danych|Kolumny OLE DB|  
 |------------------|--------------------|  
@@ -1159,7 +1159,7 @@ Wywołanie klasy typedef `CCatalogs` do zaimplementowania klasy jego parametr `C
   
  Ta klasa identyfikuje fizyczne atrybuty skojarzone z katalogami, dostępna z systemu DBMS.  
   
- W poniższej tabeli wymieniono elementy członkowskie danych klasy i OLE DB kolumny. Zobacz [wierszy KATALOGI](https://msdn.microsoft.com/library/ms721241.aspx) w *OLE DB Podręcznik programisty* Aby uzyskać więcej informacji o schemacie i kolumn.  
+ W poniższej tabeli wymieniono elementy członkowskie danych klasy i OLE DB kolumny. Zobacz [wierszy KATALOGI](/previous-versions/windows/desktop/ms721241\(v=vs.85\)) w *OLE DB Podręcznik programisty* Aby uzyskać więcej informacji o schemacie i kolumn.  
   
 |Elementy członkowskie danych|Kolumny OLE DB|  
 |------------------|--------------------|  
@@ -1174,7 +1174,7 @@ Wywołanie klasy typedef `CCharacterSets` do zaimplementowania klasy jego parame
   
  Ta klasa umożliwia określenie zestawów znaków zdefiniowanych w katalogu, które są dostępne dla danego użytkownika.  
   
- W poniższej tabeli wymieniono elementy członkowskie danych klasy i OLE DB kolumny. Zobacz [wierszy CHARACTER_SETS](https://msdn.microsoft.com/library/ms722638.aspx) w *OLE DB Podręcznik programisty* Aby uzyskać więcej informacji o schemacie i kolumn.  
+ W poniższej tabeli wymieniono elementy członkowskie danych klasy i OLE DB kolumny. Zobacz [wierszy CHARACTER_SETS](/previous-versions/windows/desktop/ms722638\(v=vs.85\)) w *OLE DB Podręcznik programisty* Aby uzyskać więcej informacji o schemacie i kolumn.  
   
 |Elementy członkowskie danych|Kolumny OLE DB|  
 |------------------|--------------------|  
@@ -1195,7 +1195,7 @@ Wywołanie klasy typedef `CCheckConstraints` do zaimplementowania klasy jego par
   
  Ta klasa identyfikuje ograniczenia check, zdefiniowanych w katalogu, które są własnością danego użytkownika. Ograniczenia check określa wartości danych lub podzielony na fragmenty, które są akceptowane w co najmniej jedną kolumnę w tabeli.  
   
- W poniższej tabeli wymieniono elementy członkowskie danych klasy i OLE DB kolumny. Zobacz [wierszy CHECK_CONSTRAINTS](https://msdn.microsoft.com/library/ms712845.aspx) w *OLE DB Podręcznik programisty* Aby uzyskać więcej informacji o schemacie i kolumn.  
+ W poniższej tabeli wymieniono elementy członkowskie danych klasy i OLE DB kolumny. Zobacz [wierszy CHECK_CONSTRAINTS](/previous-versions/windows/desktop/ms712845\(v=vs.85\)) w *OLE DB Podręcznik programisty* Aby uzyskać więcej informacji o schemacie i kolumn.  
   
 |Elementy członkowskie danych|Kolumny OLE DB|  
 |------------------|--------------------|  
@@ -1213,7 +1213,7 @@ Wywołanie klasy typedef `CCollations` do zaimplementowania klasy jego parametr 
   
  Ta klasa identyfikuje sortowań znak, zdefiniowanych w katalogu, które są dostępne dla danego użytkownika.  
   
- W poniższej tabeli wymieniono elementy członkowskie danych klasy i OLE DB kolumny. Zobacz [sortowania wierszy](https://msdn.microsoft.com/library/ms715783.aspx) w *OLE DB Podręcznik programisty* Aby uzyskać więcej informacji o schemacie i kolumn.  
+ W poniższej tabeli wymieniono elementy członkowskie danych klasy i OLE DB kolumny. Zobacz [sortowania wierszy](/previous-versions/windows/desktop/ms715783\(v=vs.85\)) w *OLE DB Podręcznik programisty* Aby uzyskać więcej informacji o schemacie i kolumn.  
   
 |Elementy członkowskie danych|Kolumny OLE DB|  
 |------------------|--------------------|  
@@ -1233,7 +1233,7 @@ Wywołanie klasy typedef `CColumnDomainUsage` do zaimplementowania klasy jego pa
   
  Ta klasa identyfikuje kolumny zdefiniowane w wykazie, które są zależne od domeny zdefiniowane w wykazie i należących do danego użytkownika.  
   
- W poniższej tabeli wymieniono elementy członkowskie danych klasy i OLE DB kolumny. Zobacz [wierszy COLUMN_DOMAIN_USAGE](https://msdn.microsoft.com/library/ms711240.aspx) w *OLE DB Podręcznik programisty* Aby uzyskać więcej informacji o schemacie i kolumn.  
+ W poniższej tabeli wymieniono elementy członkowskie danych klasy i OLE DB kolumny. Zobacz [wierszy COLUMN_DOMAIN_USAGE](/previous-versions/windows/desktop/ms711240\(v=vs.85\)) w *OLE DB Podręcznik programisty* Aby uzyskać więcej informacji o schemacie i kolumn.  
   
 |Elementy członkowskie danych|Kolumny OLE DB|  
 |------------------|--------------------|  
@@ -1255,7 +1255,7 @@ Wywołanie klasy typedef `CColumnPrivileges` do zaimplementowania klasy jego par
   
  Ta klasa umożliwia określenie uprawnień dla kolumn tabel zdefiniowanych w katalogu, które są dostępne lub udzielone przez danego użytkownika.  
   
- W poniższej tabeli wymieniono elementy członkowskie danych klasy i OLE DB kolumny. Zobacz [wierszy COLUMN_PRIVILEGES](https://msdn.microsoft.com/library/ms715800.aspx) w *OLE DB Podręcznik programisty* Aby uzyskać więcej informacji o schemacie i kolumn.  
+ W poniższej tabeli wymieniono elementy członkowskie danych klasy i OLE DB kolumny. Zobacz [wierszy COLUMN_PRIVILEGES](/previous-versions/windows/desktop/ms715800\(v=vs.85\)) w *OLE DB Podręcznik programisty* Aby uzyskać więcej informacji o schemacie i kolumn.  
   
 |Elementy członkowskie danych|Kolumny OLE DB|  
 |------------------|--------------------|  
@@ -1278,7 +1278,7 @@ Wywołanie klasy typedef `CColumns` do zaimplementowania klasy jego parametr `CC
   
  Ta klasa identyfikuje kolumny tabel zdefiniowanych w katalogu, które są dostępne dla danego użytkownika.  
   
- W poniższej tabeli wymieniono elementy członkowskie danych klasy i OLE DB kolumny. Zobacz [zestawu wierszy kolumn](https://msdn.microsoft.com/library/ms723052.aspx) w *OLE DB Podręcznik programisty* Aby uzyskać więcej informacji o schemacie i kolumn.  
+ W poniższej tabeli wymieniono elementy członkowskie danych klasy i OLE DB kolumny. Zobacz [zestawu wierszy kolumn](/previous-versions/windows/desktop/ms723052\(v=vs.85\)) w *OLE DB Podręcznik programisty* Aby uzyskać więcej informacji o schemacie i kolumn.  
   
 |Elementy członkowskie danych|Kolumny OLE DB|  
 |------------------|--------------------|  
@@ -1319,7 +1319,7 @@ Wywołanie klasy typedef `CConstraintColumnUsage` do zaimplementowania klasy jeg
   
  Ta klasa identyfikuje kolumny używane przez ograniczenia referencyjne, ograniczeń unique, ograniczenia sprawdzania i potwierdzenia zdefiniowanych w katalogu i należących do danego użytkownika.  
   
- W poniższej tabeli wymieniono elementy członkowskie danych klasy i OLE DB kolumny. Zobacz [wierszy CONSTRAINT_COLUMN_USAGE](https://msdn.microsoft.com/library/ms724522.aspx) w *OLE DB Podręcznik programisty* Aby uzyskać więcej informacji o schemacie i kolumn.  
+ W poniższej tabeli wymieniono elementy członkowskie danych klasy i OLE DB kolumny. Zobacz [wierszy CONSTRAINT_COLUMN_USAGE](/previous-versions/windows/desktop/ms724522\(v=vs.85\)) w *OLE DB Podręcznik programisty* Aby uzyskać więcej informacji o schemacie i kolumn.  
   
 |Elementy członkowskie danych|Kolumny OLE DB|  
 |------------------|--------------------|  
@@ -1341,7 +1341,7 @@ Wywołanie klasy typedef `CConstraintTableUsage` do zaimplementowania klasy jego
   
  Ta klasa identyfikuje tabele używane przez ograniczenia referencyjne, ograniczeń unique, ograniczenia sprawdzania i potwierdzenia zdefiniowanych w katalogu i należących do danego użytkownika.  
   
- W poniższej tabeli wymieniono elementy członkowskie danych klasy i OLE DB kolumny. Zobacz [wierszy CONSTRAINT_TABLE_USAGE](https://msdn.microsoft.com/library/ms724522.aspx) w *OLE DB Podręcznik programisty* Aby uzyskać więcej informacji o schemacie i kolumn.  
+ W poniższej tabeli wymieniono elementy członkowskie danych klasy i OLE DB kolumny. Zobacz [wierszy CONSTRAINT_TABLE_USAGE](/previous-versions/windows/desktop/ms724522\(v=vs.85\)) w *OLE DB Podręcznik programisty* Aby uzyskać więcej informacji o schemacie i kolumn.  
   
 |Elementy członkowskie danych|Kolumny OLE DB|  
 |------------------|--------------------|  
@@ -1360,7 +1360,7 @@ Wywołanie klasy typedef `CForeignKeys` do zaimplementowania klasy jego parametr
   
  Ta klasa identyfikuje kolumny klucza obcego, zdefiniowane w wykazie przez danego użytkownika.  
   
- W poniższej tabeli wymieniono elementy członkowskie danych klasy i OLE DB kolumny. Zobacz [wierszy FOREIGN_KEYS](https://msdn.microsoft.com/library/ms711276.aspx) w *OLE DB Podręcznik programisty* Aby uzyskać więcej informacji o schemacie i kolumn.  
+ W poniższej tabeli wymieniono elementy członkowskie danych klasy i OLE DB kolumny. Zobacz [wierszy FOREIGN_KEYS](/previous-versions/windows/desktop/ms711276\(v=vs.85\)) w *OLE DB Podręcznik programisty* Aby uzyskać więcej informacji o schemacie i kolumn.  
   
 |Elementy członkowskie danych|Kolumny OLE DB|  
 |------------------|--------------------|  
@@ -1388,7 +1388,7 @@ Wywołanie klasy typedef `CIndexes` do zaimplementowania klasy jego parametr `CI
   
  Ta klasa identyfikuje indeksy zdefiniowanych w katalogu, które są własnością danego użytkownika.  
   
- W poniższej tabeli wymieniono elementy członkowskie danych klasy i OLE DB kolumny. Zobacz [wierszy INDEKSY](https://msdn.microsoft.com/library/ms709712.aspx) w *OLE DB Podręcznik programisty* Aby uzyskać więcej informacji o schemacie i kolumn.  
+ W poniższej tabeli wymieniono elementy członkowskie danych klasy i OLE DB kolumny. Zobacz [wierszy INDEKSY](/previous-versions/windows/desktop/ms709712\(v=vs.85\)) w *OLE DB Podręcznik programisty* Aby uzyskać więcej informacji o schemacie i kolumn.  
   
 |Elementy członkowskie danych|Kolumny OLE DB|  
 |------------------|--------------------|  
@@ -1425,7 +1425,7 @@ Wywołanie klasy typedef `CKeyColumns` do zaimplementowania klasy jego parametr 
   
  Ta klasa identyfikuje kolumny zdefiniowane w katalogu, które są ograniczone jako klucze przez danego użytkownika.  
   
- W poniższej tabeli wymieniono elementy członkowskie danych klasy i OLE DB kolumny. Zobacz [wierszy KEY_COLUMN_USAGE](https://msdn.microsoft.com/library/ms712990.aspx) w *OLE DB Podręcznik programisty* Aby uzyskać więcej informacji o schemacie i kolumn.  
+ W poniższej tabeli wymieniono elementy członkowskie danych klasy i OLE DB kolumny. Zobacz [wierszy KEY_COLUMN_USAGE](/previous-versions/windows/desktop/ms712990\(v=vs.85\)) w *OLE DB Podręcznik programisty* Aby uzyskać więcej informacji o schemacie i kolumn.  
   
 |Elementy członkowskie danych|Kolumny OLE DB|  
 |------------------|--------------------|  
@@ -1448,7 +1448,7 @@ Wywołanie klasy typedef `CPrimaryKeys` do zaimplementowania klasy jego parametr
   
  Ta klasa identyfikuje kolumny klucza podstawowego, zdefiniowane w wykazie przez danego użytkownika.  
   
- W poniższej tabeli wymieniono elementy członkowskie danych klasy i OLE DB kolumny. Zobacz [wierszy PRIMARY_KEYS](https://msdn.microsoft.com/library/ms714362.aspx) w *OLE DB Podręcznik programisty* Aby uzyskać więcej informacji o schemacie i kolumn.  
+ W poniższej tabeli wymieniono elementy członkowskie danych klasy i OLE DB kolumny. Zobacz [wierszy PRIMARY_KEYS](/previous-versions/windows/desktop/ms714362\(v=vs.85\)) w *OLE DB Podręcznik programisty* Aby uzyskać więcej informacji o schemacie i kolumn.  
   
 |Elementy członkowskie danych|Kolumny OLE DB|  
 |------------------|--------------------|  
@@ -1468,7 +1468,7 @@ Wywołanie klasy typedef `CProcedureColumns` do zaimplementowania klasy jego par
   
  Ta klasa zwraca informacje o kolumnach zestawów wierszy zwróconych przez procedury.  
   
- W poniższej tabeli wymieniono elementy członkowskie danych klasy i OLE DB kolumny. Zobacz [wierszy PROCEDURE_COLUMNS](https://msdn.microsoft.com/library/ms723092.aspx) w *OLE DB Podręcznik programisty* Aby uzyskać więcej informacji o schemacie i kolumn.  
+ W poniższej tabeli wymieniono elementy członkowskie danych klasy i OLE DB kolumny. Zobacz [wierszy PROCEDURE_COLUMNS](/previous-versions/windows/desktop/ms723092\(v=vs.85\)) w *OLE DB Podręcznik programisty* Aby uzyskać więcej informacji o schemacie i kolumn.  
   
 |Elementy członkowskie danych|Kolumny OLE DB|  
 |------------------|--------------------|  
@@ -1497,7 +1497,7 @@ Wywołanie klasy typedef `CProcedureParameters` do zaimplementowania klasy jego 
   
  Ta klasa zwraca informacje dotyczące parametrów i kody powrotne procedur.  
   
- W poniższej tabeli wymieniono elementy członkowskie danych klasy i OLE DB kolumny. Zobacz [wierszy PROCEDURE_PARAMETERS](https://msdn.microsoft.com/library/ms713623.aspx) w *OLE DB Podręcznik programisty* Aby uzyskać więcej informacji o schemacie i kolumn.  
+ W poniższej tabeli wymieniono elementy członkowskie danych klasy i OLE DB kolumny. Zobacz [wierszy PROCEDURE_PARAMETERS](/previous-versions/windows/desktop/ms713623\(v=vs.85\)) w *OLE DB Podręcznik programisty* Aby uzyskać więcej informacji o schemacie i kolumn.  
   
 |Elementy członkowskie danych|Kolumny OLE DB|  
 |------------------|--------------------|  
@@ -1525,7 +1525,7 @@ Wywołanie klasy typedef `CProcedures` do zaimplementowania klasy jego parametr 
   
  Ta klasa umożliwia określenie procedury zdefiniowanych w katalogu, które należą do danego użytkownika.  
   
- W poniższej tabeli wymieniono elementy członkowskie danych klasy i OLE DB kolumny. Zobacz [wierszy procedury](https://msdn.microsoft.com/library/ms724021.aspx) w *OLE DB Podręcznik programisty* Aby uzyskać więcej informacji o schemacie i kolumn.  
+ W poniższej tabeli wymieniono elementy członkowskie danych klasy i OLE DB kolumny. Zobacz [wierszy procedury](/previous-versions/windows/desktop/ms724021\(v=vs.85\)) w *OLE DB Podręcznik programisty* Aby uzyskać więcej informacji o schemacie i kolumn.  
   
 |Elementy członkowskie danych|Kolumny OLE DB|  
 |------------------|--------------------|  
@@ -1544,7 +1544,7 @@ Wywołanie klasy typedef `CProviderTypes` do zaimplementowania klasy jego parame
   
  Ta klasa identyfikuje (podstawowe) typy danych obsługiwane przez dostawcę danych.  
   
- W poniższej tabeli wymieniono elementy członkowskie danych klasy i OLE DB kolumny. Zobacz [wierszy PROVIDER_TYPES](https://msdn.microsoft.com/library/ms709785.aspx) w *OLE DB Podręcznik programisty* Aby uzyskać więcej informacji o schemacie i kolumn.  
+ W poniższej tabeli wymieniono elementy członkowskie danych klasy i OLE DB kolumny. Zobacz [wierszy PROVIDER_TYPES](/previous-versions/windows/desktop/ms709785\(v=vs.85\)) w *OLE DB Podręcznik programisty* Aby uzyskać więcej informacji o schemacie i kolumn.  
   
 |Elementy członkowskie danych|Kolumny OLE DB|  
 |------------------|--------------------|  
@@ -1577,7 +1577,7 @@ Wywołanie klasy typedef `CReferentialConstraints` do zaimplementowania klasy je
   
  Ta klasa identyfikuje ograniczenia referencyjne, zdefiniowanych w katalogu, które są własnością danego użytkownika.  
   
- W poniższej tabeli wymieniono elementy członkowskie danych klasy i OLE DB kolumny. Zobacz [wierszy REFERENTIAL_CONSTRAINTS](https://msdn.microsoft.com/library/ms719737.aspx) w *OLE DB Podręcznik programisty* Aby uzyskać więcej informacji o schemacie i kolumn.  
+ W poniższej tabeli wymieniono elementy członkowskie danych klasy i OLE DB kolumny. Zobacz [wierszy REFERENTIAL_CONSTRAINTS](/previous-versions/windows/desktop/ms719737\(v=vs.85\)) w *OLE DB Podręcznik programisty* Aby uzyskać więcej informacji o schemacie i kolumn.  
   
 |Elementy członkowskie danych|Kolumny OLE DB|  
 |------------------|--------------------|  
@@ -1600,7 +1600,7 @@ Wywołanie klasy typedef `CSchemata` do zaimplementowania klasy jego parametr `C
   
  Ta klasa umożliwia określenie schematów, które należą do danego użytkownika.  
   
- W poniższej tabeli wymieniono elementy członkowskie danych klasy i OLE DB kolumny. Zobacz [zestaw wierszy SCHEMATU](https://msdn.microsoft.com/library/ms716887.aspx) w *OLE DB Podręcznik programisty* Aby uzyskać więcej informacji o schemacie i kolumn.  
+ W poniższej tabeli wymieniono elementy członkowskie danych klasy i OLE DB kolumny. Zobacz [zestaw wierszy SCHEMATU](/previous-versions/windows/desktop/ms716887\(v=vs.85\)) w *OLE DB Podręcznik programisty* Aby uzyskać więcej informacji o schemacie i kolumn.  
   
 |Elementy członkowskie danych|Kolumny OLE DB|  
 |------------------|--------------------|  
@@ -1619,7 +1619,7 @@ Wywołanie klasy typedef `CSQLLanguages` do zaimplementowania klasy jego paramet
   
  Ta klasa identyfikuje poziomy zgodności, opcji i dialekty obsługiwane przez implementację SQL przetwarzania danych, zdefiniowanych w katalogu.  
   
- W poniższej tabeli wymieniono elementy członkowskie danych klasy i OLE DB kolumny. Zobacz [wierszy SQL_LANGUAGES](https://msdn.microsoft.com/library/ms714374.aspx) w *OLE DB Podręcznik programisty* Aby uzyskać więcej informacji o schemacie i kolumn.  
+ W poniższej tabeli wymieniono elementy członkowskie danych klasy i OLE DB kolumny. Zobacz [wierszy SQL_LANGUAGES](/previous-versions/windows/desktop/ms714374\(v=vs.85\)) w *OLE DB Podręcznik programisty* Aby uzyskać więcej informacji o schemacie i kolumn.  
   
 |Elementy członkowskie danych|Kolumny OLE DB|  
 |------------------|--------------------|  
@@ -1639,7 +1639,7 @@ Wywołanie klasy typedef `CStatistics` do zaimplementowania klasy jego parametr 
   
  Ta klasa identyfikuje statystyki zdefiniowanych w katalogu, które należą do danego użytkownika.  
   
- W poniższej tabeli wymieniono elementy członkowskie danych klasy i OLE DB kolumny. Zobacz [wierszy statystyki](https://msdn.microsoft.com/library/ms715957.aspx) w *OLE DB Podręcznik programisty* Aby uzyskać więcej informacji o schemacie i kolumn.  
+ W poniższej tabeli wymieniono elementy członkowskie danych klasy i OLE DB kolumny. Zobacz [wierszy statystyki](/previous-versions/windows/desktop/ms715957\(v=vs.85\)) w *OLE DB Podręcznik programisty* Aby uzyskać więcej informacji o schemacie i kolumn.  
   
 |Elementy członkowskie danych|Kolumny OLE DB|  
 |------------------|--------------------|  
@@ -1656,7 +1656,7 @@ Wywołanie klasy typedef `CTableConstraints` do zaimplementowania klasy jego par
   
  Ta klasa umożliwia określenie ograniczeń tabeli, zdefiniowanych w katalogu, które należą do danego użytkownika.  
   
- W poniższej tabeli wymieniono elementy członkowskie danych klasy i OLE DB kolumny. Zobacz [wierszy TABLE_CONSTRAINTS](https://msdn.microsoft.com/library/ms715921.aspx) w *OLE DB Podręcznik programisty* Aby uzyskać więcej informacji o schemacie i kolumn.  
+ W poniższej tabeli wymieniono elementy członkowskie danych klasy i OLE DB kolumny. Zobacz [wierszy TABLE_CONSTRAINTS](/previous-versions/windows/desktop/ms715921\(v=vs.85\)) w *OLE DB Podręcznik programisty* Aby uzyskać więcej informacji o schemacie i kolumn.  
   
 |Elementy członkowskie danych|Kolumny OLE DB|  
 |------------------|--------------------|  
@@ -1679,7 +1679,7 @@ Wywołanie klasy typedef `CTablePrivileges` do zaimplementowania klasy jego para
   
  Ta klasa identyfikuje tabele zdefiniowanych w katalogu, które są dostępne dla danego użytkownika.  
   
- W poniższej tabeli wymieniono elementy członkowskie danych klasy i OLE DB kolumny. Zobacz [wierszy TABLE_PRIVILEGES](https://msdn.microsoft.com/library/ms725428.aspx) w *OLE DB Podręcznik programisty* Aby uzyskać więcej informacji o schemacie i kolumn.  
+ W poniższej tabeli wymieniono elementy członkowskie danych klasy i OLE DB kolumny. Zobacz [wierszy TABLE_PRIVILEGES](/previous-versions/windows/desktop/ms725428\(v=vs.85\)) w *OLE DB Podręcznik programisty* Aby uzyskać więcej informacji o schemacie i kolumn.  
   
 |Elementy członkowskie danych|Kolumny OLE DB|  
 |------------------|--------------------|  
@@ -1699,7 +1699,7 @@ Wywołanie klasy typedef `CTables` do zaimplementowania klasy jego parametr `CTa
   
  Ta klasa umożliwia określenie uprawnień w tabelach zdefiniowanych w katalogu, które są dostępne dla lub przyznanych przez danego użytkownika.  
   
- W poniższej tabeli wymieniono elementy członkowskie danych klasy i OLE DB kolumny. Zobacz [zestawu wierszy w TABELACH](https://msdn.microsoft.com/library/ms716980.aspx) w *OLE DB Podręcznik programisty* Aby uzyskać więcej informacji o schemacie i kolumn.  
+ W poniższej tabeli wymieniono elementy członkowskie danych klasy i OLE DB kolumny. Zobacz [zestawu wierszy w TABELACH](/previous-versions/windows/desktop/ms716980\(v=vs.85\)) w *OLE DB Podręcznik programisty* Aby uzyskać więcej informacji o schemacie i kolumn.  
   
 |Elementy członkowskie danych|Kolumny OLE DB|  
 |------------------|--------------------|  
@@ -1718,7 +1718,7 @@ Wywołanie klasy typedef `CTranslations` do zaimplementowania klasy jego paramet
   
  Ta klasa identyfikuje tłumaczenia znaków zdefiniowanych w katalogu, które są dostępne dla danego użytkownika.  
   
- W poniższej tabeli wymieniono elementy członkowskie danych klasy i OLE DB kolumny. Zobacz [wierszy tłumaczenia](https://msdn.microsoft.com/library/ms725365.aspx) w *OLE DB Podręcznik programisty* Aby uzyskać więcej informacji o schemacie i kolumn.  
+ W poniższej tabeli wymieniono elementy członkowskie danych klasy i OLE DB kolumny. Zobacz [wierszy tłumaczenia](/previous-versions/windows/desktop/ms725365\(v=vs.85\)) w *OLE DB Podręcznik programisty* Aby uzyskać więcej informacji o schemacie i kolumn.  
   
 |Elementy członkowskie danych|Kolumny OLE DB|  
 |------------------|--------------------|  
@@ -1740,7 +1740,7 @@ Wywołanie klasy typedef `CUsagePrivileges` do zaimplementowania klasy jego para
   
  Ta klasa umożliwia określenie uprawnień użycia obiektów zdefiniowanych w katalogu, które są dostępne lub przyznanych przez danego użytkownika.  
   
- W poniższej tabeli wymieniono elementy członkowskie danych klasy i OLE DB kolumny. Zobacz [wierszy USAGE_PRIVILEGES](https://msdn.microsoft.com/library/ms722743.aspx) w *OLE DB Podręcznik programisty* Aby uzyskać więcej informacji o schemacie i kolumn.  
+ W poniższej tabeli wymieniono elementy członkowskie danych klasy i OLE DB kolumny. Zobacz [wierszy USAGE_PRIVILEGES](/previous-versions/windows/desktop/ms722743\(v=vs.85\)) w *OLE DB Podręcznik programisty* Aby uzyskać więcej informacji o schemacie i kolumn.  
   
 |Elementy członkowskie danych|Kolumny OLE DB|  
 |------------------|--------------------|  
@@ -1761,7 +1761,7 @@ Wywołanie klasy typedef `CViewColumnUsage` do zaimplementowania klasy jego para
   
  Ta klasa identyfikuje kolumny na wyświetlać tabele, zdefiniowane w katalogu, która należących do danego użytkownika, zależą od niego.  
   
- W poniższej tabeli wymieniono elementy członkowskie danych klasy i OLE DB kolumny. Zobacz [wierszy VIEW_COLUMN_USAGE](https://msdn.microsoft.com/library/ms714896.aspx) w *OLE DB Podręcznik programisty* Aby uzyskać więcej informacji o schemacie i kolumn.  
+ W poniższej tabeli wymieniono elementy członkowskie danych klasy i OLE DB kolumny. Zobacz [wierszy VIEW_COLUMN_USAGE](/previous-versions/windows/desktop/ms714896\(v=vs.85\)) w *OLE DB Podręcznik programisty* Aby uzyskać więcej informacji o schemacie i kolumn.  
   
 |Elementy członkowskie danych|Kolumny OLE DB|  
 |------------------|--------------------|  
@@ -1783,7 +1783,7 @@ Wywołanie klasy typedef `CViews` do zaimplementowania klasy jego parametr `CVie
   
  Ta klasa identyfikuje tabele w wyświetlać tabele, zdefiniowane w katalogu, która należących do danego użytkownika, zależą od niego.  
   
- W poniższej tabeli wymieniono elementy członkowskie danych klasy i OLE DB kolumny. Zobacz [wierszy WIDOKÓW](https://msdn.microsoft.com/library/ms723122.aspx) w *OLE DB Podręcznik programisty* Aby uzyskać więcej informacji o schemacie i kolumn.  
+ W poniższej tabeli wymieniono elementy członkowskie danych klasy i OLE DB kolumny. Zobacz [wierszy WIDOKÓW](/previous-versions/windows/desktop/ms723122\(v=vs.85\)) w *OLE DB Podręcznik programisty* Aby uzyskać więcej informacji o schemacie i kolumn.  
   
 |Elementy członkowskie danych|Kolumny OLE DB|  
 |------------------|--------------------|  
@@ -1803,7 +1803,7 @@ Wywołanie klasy typedef `CViewTableUsage` do zaimplementowania klasy jego param
   
  Ta klasa identyfikuje wyświetlane tabele, zdefiniowanych w katalogu, które są dostępne dla danego użytkownika.  
   
- W poniższej tabeli wymieniono elementy członkowskie danych klasy i OLE DB kolumny. Zobacz [wierszy VIEW_TABLE_USAGE](https://msdn.microsoft.com/library/ms719727.aspx) w *OLE DB Podręcznik programisty* Aby uzyskać więcej informacji o schemacie i kolumn.  
+ W poniższej tabeli wymieniono elementy członkowskie danych klasy i OLE DB kolumny. Zobacz [wierszy VIEW_TABLE_USAGE](/previous-versions/windows/desktop/ms719727\(v=vs.85\)) w *OLE DB Podręcznik programisty* Aby uzyskać więcej informacji o schemacie i kolumn.  
   
 |Elementy członkowskie danych|Kolumny OLE DB|  
 |------------------|--------------------|  

@@ -16,17 +16,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1f2a0d91d0f0dd3d23886ade75072526e6c895f7
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 093c994de24b947c53bfc19d33213e77f3ec2593
+ms.sourcegitcommit: d4c803bd3a684d7951bf88dcecf1f14af43ae411
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33849457"
+ms.lasthandoff: 08/10/2018
+ms.locfileid: "42465238"
 ---
 # <a name="rawdispinterfaces"></a>raw_dispinterfaces
-**Określonego języka C++**  
+**Określonego język C++**  
   
- Informuje kompilator, aby wygenerować otoki niskiego poziomu funkcji dispinterface metody i właściwości, które wywołują **IDispatch::Invoke** i zwracać `HRESULT` kod błędu.  
+Informuje kompilator, aby wygenerować otoki niskiego poziomu funkcji dispinterface metody i właściwości, które wywołują `IDispatch::Invoke` i zwracają kod błędu HRESULT.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -35,10 +35,12 @@ raw_dispinterfaces
 ```  
   
 ## <a name="remarks"></a>Uwagi  
- Jeśli ten atrybut nie jest określona, tylko wysokiego poziomu otoki są generowane, które zgłaszają wyjątki C++ w razie awarii.  
+ 
+Jeśli ten atrybut nie jest określony, tylko ogólne są generowane otoki, która generuje wyjątków C++ w przypadku awarii.  
   
- **KOŃCOWY określonego języka C++**  
+**KONIEC określonego języka C++**  
   
 ## <a name="see-also"></a>Zobacz też  
- [atrybuty #import](../preprocessor/hash-import-attributes-cpp.md)   
- [#import — dyrektywa](../preprocessor/hash-import-directive-cpp.md)
+ 
+[atrybuty #import](../preprocessor/hash-import-attributes-cpp.md)   
+[#import — dyrektywa](../preprocessor/hash-import-directive-cpp.md)

@@ -48,12 +48,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 0836a09adac92300a8438a0433fda874e78bcb25
-ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
+ms.openlocfilehash: 8eea759f7f2af32fe688bbc8583eafc1244b20d7
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/30/2018
-ms.locfileid: "39339220"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42465891"
 ---
 # <a name="cenumeratoraccessor-class"></a>CEnumeratorAccessor — Klasa
 Używane przez [CEnumerator](../../data/oledb/cenumerator-class.md) dostępu do danych z zestawu wierszy modułu wyliczającego.  
@@ -92,7 +92,7 @@ VARIANT_BOOL m_bIsParent;
 ```  
   
 ### <a name="remarks"></a>Uwagi  
- Zobacz [ISourcesRowset::GetSourcesRowset](https://msdn.microsoft.com/library/ms711200.aspx) w *OLE DB Podręcznik programisty* Aby uzyskać więcej informacji. 
+ Zobacz [ISourcesRowset::GetSourcesRowset](/previous-versions/windows/desktop/ms711200\(v=vs.85\)) w *OLE DB Podręcznik programisty* Aby uzyskać więcej informacji. 
 
 ## <a name="ntype"></a> CEnumeratorAccessor::m_nType
 Zmienną określającą, czy wiersz zawiera opis źródła danych lub moduł wyliczający.  
@@ -104,7 +104,7 @@ USHORT m_nType;
 ```  
   
 ### <a name="remarks"></a>Uwagi  
- Zobacz [ISourcesRowset::GetSourcesRowset](https://msdn.microsoft.com/library/ms711200.aspx) w *OLE DB Podręcznik programisty* Aby uzyskać więcej informacji.
+ Zobacz [ISourcesRowset::GetSourcesRowset](/previous-versions/windows/desktop/ms711200\(v=vs.85\)) w *OLE DB Podręcznik programisty* Aby uzyskać więcej informacji.
 
 ## <a name="szdescription"></a> CEnumeratorAccessor::m_szDescription
 Opis źródła danych lub modułu wyliczającego.  
@@ -116,7 +116,7 @@ WCHAR m_szDescription[129];
 ```  
   
 ### <a name="remarks"></a>Uwagi  
- Zobacz [ISourcesRowset::GetSourcesRowset](https://msdn.microsoft.com/library/ms711200.aspx) w *OLE DB Podręcznik programisty* Aby uzyskać więcej informacji.
+ Zobacz [ISourcesRowset::GetSourcesRowset](/previous-versions/windows/desktop/ms711200\(v=vs.85\)) w *OLE DB Podręcznik programisty* Aby uzyskać więcej informacji.
 
 ## <a name="szname"></a> CEnumeratorAccessor::m_szName
 Nazwa źródła danych lub modułu wyliczającego.  
@@ -128,7 +128,7 @@ WCHAR m_szName[129];
 ```  
   
 ### <a name="remarks"></a>Uwagi  
- Zobacz [ISourcesRowset::GetSourcesRowset](https://msdn.microsoft.com/library/ms711200.aspx) w *OLE DB Podręcznik programisty* Aby uzyskać więcej informacji.  
+ Zobacz [ISourcesRowset::GetSourcesRowset](/previous-versions/windows/desktop/ms711200\(v=vs.85\)) w *OLE DB Podręcznik programisty* Aby uzyskać więcej informacji.  
 
 ## <a name="szparsename"></a> CEnumeratorAccessor::m_szParseName
 Parametry do przekazania do [IParseDisplayName](http://msdn.microsoft.com/library/windows/desktop/ms680604) uzyskać krótka nazwa dla źródła danych lub modułu wyliczającego.  
@@ -140,7 +140,7 @@ WCHAR m_szParseName[129];
 ```  
   
 ### <a name="remarks"></a>Uwagi  
- Zobacz [ISourcesRowset::GetSourcesRowset](https://msdn.microsoft.com/library/ms711200.aspx) w *OLE DB Podręcznik programisty* Aby uzyskać więcej informacji.  
+ Zobacz [ISourcesRowset::GetSourcesRowset](/previous-versions/windows/desktop/ms711200\(v=vs.85\)) w *OLE DB Podręcznik programisty* Aby uzyskać więcej informacji.  
   
 ## <a name="see-also"></a>Zobacz też  
  [Szablony konsumentów OLE DB](../../data/oledb/ole-db-consumer-templates-cpp.md)   

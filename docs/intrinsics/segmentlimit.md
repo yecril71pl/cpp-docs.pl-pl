@@ -17,12 +17,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 64fffacbaebc99d3298b5463a014db1e9117cd7b
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: eacffcd5e66d73cd7594207f58356a4a8a0ecb47
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33330755"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42465184"
 ---
 # <a name="segmentlimit"></a>__segmentlimit
 **Microsoft Specific**  
@@ -39,23 +39,23 @@ unsigned long __segmentlimit(
   
 #### <a name="parameters"></a>Parametry  
  [in] `a`  
- Stała określająca selektora segmentu.  
+ Stała określająca selektor segmentu.  
   
 ## <a name="return-value"></a>Wartość zwracana  
- Limit segmentów selektora segmentu, określony przez `a`, pod warunkiem, że selektor jest prawidłowa i widoczne na bieżącym poziomie uprawnień.  
+ Limit segmentów selektora segmentu, określony przez `a`pod warunkiem, że selektor jest prawidłowy i widoczne na bieżącym poziomie uprawnień.  
   
 ## <a name="requirements"></a>Wymagania  
   
-|— Wewnętrzne|Architektura|  
+|Wewnętrzne|Architektura|  
 |---------------|------------------|  
-|`__segmentlimit`|x86, [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
+|`__segmentlimit`|x86, x64|  
   
- **Plik nagłówka** \<intrin.h >  
+ **Plik nagłówkowy** \<intrin.h >  
   
 ## <a name="remarks"></a>Uwagi  
- Nie można pobrać limit segmentów, ta instrukcja nie powiedzie się. W przypadku awarii ta instrukcja usuwa flagę ZF i zwracanych wartości są niezdefiniowane.  
+ Nie można pobrać limit segmentów, ta instrukcja nie powiedzie się. W przypadku awarii ta instrukcja czyści flagę ZF i wartość zwracana jest niezdefiniowany.  
   
- Ta procedura jest dostępna tylko wewnętrznie.  
+ Ta procedura jest dostępna wyłącznie jako wewnętrzna.  
   
 ## <a name="example"></a>Przykład  
   
@@ -111,7 +111,7 @@ Success!
 sl was changed  
 ```  
   
-**KOŃCOWY określonych firmy Microsoft**  
+**END specyficzny dla Microsoft**  
   
 ## <a name="see-also"></a>Zobacz też  
  [Funkcje wewnętrzne kompilatora](../intrinsics/compiler-intrinsics.md)

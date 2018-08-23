@@ -1,5 +1,5 @@
 ---
-title: Funkcje wewnętrzne _InterlockedDecrement | Dokumentacja firmy Microsoft
+title: Funkcje wewnętrzne _interlockeddecrement | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -54,17 +54,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: eacca8241bc32965d3f22fcb3e4d5ed8b72a1651
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: a30a09b9feae0d5c7e0d24967c133f076286f2fc
+ms.sourcegitcommit: b92ca0b74f0b00372709e81333885750ba91f90e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33338991"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "42466255"
 ---
-# <a name="interlockeddecrement-intrinsic-functions"></a>Funkcje wewnętrzne _InterlockedDecrement
+# <a name="interlockeddecrement-intrinsic-functions"></a>Funkcje wewnętrzne _interlockeddecrement
 **Microsoft Specific**  
   
- Zapewnia obsługę wewnętrznych kompilatora dla środowiska Win32 [!INCLUDE[winSDK](../atl/includes/winsdk_md.md)] [InterlockedDecrement](http://msdn.microsoft.com/library/ms683580.aspx) funkcji.  
+Zapewnia wsparcie wewnętrznej kompilatora dla zestawu SDK Windows Win32 [InterlockedDecrement](/windows/desktop/api/winbase/nf-winbase-interlockeddecrement) funkcji.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -108,29 +108,29 @@ __int64 _InterlockedDecrement64_nf(
 ```  
   
 #### <a name="parameters"></a>Parametry  
- [w, out] `lpAddend`  
- Wskaźnik do zmiennej się wraz z przydzielaniem.  
+ [out w] `lpAddend`  
+ Wskaźnik do zmiennej do zmniejszenia.  
   
 ## <a name="return-value"></a>Wartość zwracana  
- Wartość zwracana jest wartość wynikową zmniejszany.  
+ Wartość zwracana jest wartość wynikową odejmowane.  
   
 ## <a name="requirements"></a>Wymagania  
   
-|— Wewnętrzne|Architektura|  
+|Wewnętrzne|Architektura|  
 |---------------|------------------|  
-|`_InterlockedDecrement`, `_InterlockedDecrement16`, `_InterlockedDecrement64`|x86, ARM, [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
+|`_InterlockedDecrement`, `_InterlockedDecrement16`, `_InterlockedDecrement64`|x86, ARM, x64|  
 |`_InterlockedDecrement_acq`, `_InterlockedDecrement_rel`, `_InterlockedDecrement_nf`, `_InterlockedDecrement16_acq`, `_InterlockedDecrement16_rel`, `_InterlockedDecrement16_nf`, `_InterlockedDecrement64_acq`, `_InterlockedDecrement64_rel`, `_InterlockedDecrement64_nf`,|ARM|  
   
- **Plik nagłówka** \<intrin.h >  
+ **Plik nagłówkowy** \<intrin.h >  
   
 ## <a name="remarks"></a>Uwagi  
- Istnieje kilka zmian na `_InterlockedDecrement` który różnić w zależności od typów danych, wymagają one i czy uzyskać specyficznych dla procesora lub Wydaj semantykę jest używany.  
+ Istnieje kilka zmian w `_InterlockedDecrement` różnią się zależnie od typów danych, wymagają one oraz tego, czy uzyskać specyficznych dla procesora lub semantyka wydania jest używany.  
   
- Gdy `_InterlockedDecrement` funkcja działa na 32-bitowych liczb całkowitych, `_InterlockedDecrement16` działa na 16-bitowe wartości całkowite i `_InterlockedDecrement64` działa na 64-bitowych liczb całkowitych.  
+ Gdy `_InterlockedDecrement` funkcja działa w 32-bitowych wartości całkowitych, `_InterlockedDecrement16` operuje na wartości 16-bitową liczbę całkowitą i `_InterlockedDecrement64` działa w 64-bitowych wartości całkowitych.  
   
- Na platformach ARM, użyj funkcji wewnętrznych z `_acq` i `_rel` sufiksy, jeśli należy uzyskać i zwolnij semantyki, takich jak na początku i na końcu sekcji krytycznych. Funkcje wewnętrzne z `_nf` sufiks ("nie ogranicznika") nie działają jako bariery pamięci.  
+ Na platformach ARM, użyj funkcji wewnętrznych za pomocą `_acq` i `_rel` sufiksy, jeśli potrzebujesz uzyskać i zwolnij semantykę, takich jak na początku i na końcu sekcję krytyczną. Funkcje wewnętrzne z `_nf` sufiks ("nie ogranicznika") nie działają jako czynnik blokujący pamięci.  
   
- Zmienna wskazywana przez `lpAddend` parametru musi być wyrównany na granicy 32-bitowy; w przeciwnym razie ta funkcja nie powiedzie się na wieloprocesorowych x86 systemów i systemy innych niż x86. Aby uzyskać więcej informacji, zobacz [Dopasuj](../cpp/align-cpp.md).  
+ Zmienna wskazywany przez `lpAddend` parametru musi być wyrównany na granicy 32-bitowy; w przeciwnym razie ta funkcja nie powiedzie się na wieloprocesorowych x86 systemów i systemy innych x86. Aby uzyskać więcej informacji, zobacz [wyrównać](../cpp/align-cpp.md).  
   
  Te procedury są dostępne tylko jako funkcje wewnętrzne.  
   

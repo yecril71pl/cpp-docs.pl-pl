@@ -130,17 +130,17 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6de7cf11b6f328819a677d248647934619153fb7
-ms.sourcegitcommit: be0e3457f2884551f18e183ef0ea65c3ded7f689
+ms.openlocfilehash: d69a5cefa1cb43ad4f6c585b3cb7f7e021ae9183
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/28/2018
-ms.locfileid: "37079478"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42466142"
 ---
 # <a name="cpanecontainer-class"></a>Klasa CPaneContainer
-`CPaneContainer` Klasa jest podstawowym składnikiem modelu dokowania zaimplementowana przez MFC. Wskaźniki do dwóch okienek dokowania lub dwa wystąpienia przechowuje obiekt tej klasy `CPaneContainer.` przechowuje także wskaźnik do podziału, która oddziela okienka (lub kontenery). Przez zagnieżdżenia kontenery wewnątrz kontenerów platformę można utworzyć drzewa binarnego reprezentujący złożonych układów dokowania. Korzeń drzewa binarnego są przechowywane w [CPaneContainerManager](../../mfc/reference/cpanecontainermanager-class.md) obiektu.  
+`CPaneContainer` Klasa jest podstawowym składnikiem modelu dokowania zaimplementowanego przez MFC. Obiekt tej klasy przechowuje wskaźniki do dwóch tafli dokowania lub dwa wystąpienia `CPaneContainer.` przechowuje także wskaźnik do podziału, oddzielające tafle (lub kontenery). Przez zagnieżdżanie kontenerów wewnątrz kontenerów szablon może zbudować drzewo binarne, reprezentujące skomplikowanych układ dokowania. Katalog główny drzewa binarnego jest przechowywane w [CPaneContainerManager](../../mfc/reference/cpanecontainermanager-class.md) obiektu.  
 
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+ Aby uzyskać więcej informacji, zobacz kod źródłowy znajdujący się w **VC\\atlmfc\\src\\mfc** folder instalacji programu Visual Studio.  
  
 ## <a name="syntax"></a>Składnia  
   
@@ -207,7 +207,7 @@ class CPaneContainer : public CObject
 |[CPaneContainer::Resize](#resize)||  
 |[CPaneContainer::ResizePane](#resizepane)||  
 |[CPaneContainer::ResizePartOfPaneContainer](#resizepartofpanecontainer)||  
-|[CPaneContainer::Serialize](#serialize)|Odczytuje i zapisuje ten obiekt z lub do archiwum. (Przesłania [CObject::Serialize](../../mfc/reference/cobject-class.md#serialize).)|  
+|[CPaneContainer::Serialize](#serialize)|Odczytuje lub zapisuje ten obiekt z lub do archiwum. (Przesłania [CObject::Serialize](../../mfc/reference/cobject-class.md#serialize).)|  
 |[CPaneContainer::SetPane](#setpane)||  
 |[CPaneContainer::SetPaneContainer](#setpanecontainer)||  
 |[CPaneContainer::SetPaneDivider](#setpanedivider)||  
@@ -221,7 +221,7 @@ class CPaneContainer : public CObject
  `CPaneContainer` obiekty są tworzone automatycznie przez platformę.  
   
 ## <a name="example"></a>Przykład  
- W poniższym przykładzie pokazano sposób tworzenia wystąpienia `CPaneContainer` klasy. Następujący fragment kodu jest częścią [próbki Ustaw rozmiar okienka](../../visual-cpp-samples.md).  
+ Poniższy przykład pokazuje, jak skonstruować wystąpienia `CPaneContainer` klasy. Ten fragment kodu jest częścią [przykładowe ustawić rozmiar okienka](../../visual-cpp-samples.md).  
   
  [!code-cpp[NVC_MFC_SetPaneSize#2](../../mfc/reference/codesnippet/cpp/cpanecontainer-class_1.h)]  
 [!code-cpp[NVC_MFC_SetPaneSize#1](../../mfc/reference/codesnippet/cpp/cpanecontainer-class_2.cpp)]  
@@ -267,7 +267,7 @@ BOOL AddSubPaneContainer(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *pContainer*  
+ [in] *element pContainer*  
  [in] *bRightNodeNew*  
   
 ### <a name="return-value"></a>Wartość zwracana  
@@ -288,7 +288,7 @@ virtual int CalcAvailablePaneSpace(
 ### <a name="parameters"></a>Parametry  
  [in] *nRequiredOffset*  
  [in] *pBar*  
- [in] *pContainer*  
+ [in] *element pContainer*  
  [in] *bLeftBar*  
   
 ### <a name="return-value"></a>Wartość zwracana  
@@ -388,7 +388,7 @@ CPaneContainer* FindSubPaneContainer(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *pObject*  
+ [in] *obiekt*  
  [in] *kryteria znajdowania*  
   
 ### <a name="return-value"></a>Wartość zwracana  
@@ -836,7 +836,7 @@ virtual void ResizePane(
 ### <a name="parameters"></a>Parametry  
  [in] *nOffset*  
  [in] *pBar*  
- [in] *pContainer*  
+ [in] *element pContainer*  
  [in] *bHorz*  
  [in] *bLeftBar*  
  [in] *hdwp*  
@@ -897,7 +897,7 @@ void SetPaneContainer(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *pContainer*  
+ [in] *element pContainer*  
  [in] *bLeft*  
   
 ### <a name="remarks"></a>Uwagi  
@@ -993,5 +993,5 @@ virtual int StretchPaneContainer(
 ## <a name="see-also"></a>Zobacz też  
  [Diagram hierarchii](../../mfc/hierarchy-chart.md)   
  [Klasy](../../mfc/reference/mfc-classes.md)   
- [CObject — klasa](../../mfc/reference/cobject-class.md)   
+ [Klasa CObject](../../mfc/reference/cobject-class.md)   
  [Klasa CPaneContainerManager](../../mfc/reference/cpanecontainermanager-class.md)

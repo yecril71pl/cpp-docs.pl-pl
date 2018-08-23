@@ -1,20 +1,22 @@
 ---
 layout: LandingPage
-author: jasongroce
-ms.author: apexprodleads
 ms.topic: landing-page
-title: Programowanie Linux z dokumentacji C++
-description: Tworzenie i debugowanie aplikacji uruchomionych w systemie Linux.
-ms.openlocfilehash: c4794dbeb7e5a1d356e251686653c6c0aa0a023a
-ms.sourcegitcommit: c770a343def04ae77522708387c3f7c470e49969
+title: Programowanie dla systemu Linux z dokumentacji języka C++
+description: Twórz i Debuguj aplikacje działające w systemie Linux.
+author: mikeblome
+ms.author: mblome
+ms.workload:
+- cplusplus
+ms.openlocfilehash: d93ad1fd32003444c9ddd991e1810fbc5bec79d5
+ms.sourcegitcommit: 7f3df9ff0310a4716b8136ca20deba699ca86c6c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/08/2018
-ms.locfileid: "29794183"
+ms.lasthandoff: 08/21/2018
+ms.locfileid: "42464574"
 ---
-# <a name="linux-development-with-c-documentation"></a>Programowanie Linux z dokumentacji C++
+# <a name="linux-development-with-c-documentation"></a>Programowanie dla systemu Linux z dokumentacji języka C++
 
-Tworzenie i debugowanie aplikacji uruchomionych w systemie Linux.
+Twórz i Debuguj aplikacje działające w systemie Linux.
 
 <ul class="panelContent cardsF">
     <li>
@@ -28,8 +30,8 @@ Tworzenie i debugowanie aplikacji uruchomionych w systemie Linux.
                         </div>
                     </div>
                     <div class="cardText">
-                        <h3>Instalowanie i konfigurowanie obciążenie systemu Linux</h3>
-                        <p>Informacje o sposobie instalacji programu Visual Studio umożliwiające tworzenie aplikacji systemu Linux w języku C++.</p>
+                        <h3>Instalowanie i konfigurowanie obciążeń systemu Linux</h3>
+                        <p>Dowiedz się, jak skonfigurować Visual Studio, aby tworzyć aplikacje dla systemu Linux w języku C++.</p>
                     </div>
                 </div>
             </div>
@@ -47,8 +49,8 @@ Tworzenie i debugowanie aplikacji uruchomionych w systemie Linux.
                         </div>
                     </div>
                     <div class="cardText">
-                        <h3>Visual C++ dla systemu Linux blogu</h3>
-                        <p>Zapewnianie aktualności o nowe funkcje dodane do programu Visual C++ dla obciążenia systemu Linux.</p>
+                        <h3>Blog systemu Linux w języku Visual C++</h3>
+                        <p>Na bieżąco z nowych funkcji dodanych do programu Visual C++ dla obciążeń systemu Linux.</p>
                     </div>
                 </div>
             </div>

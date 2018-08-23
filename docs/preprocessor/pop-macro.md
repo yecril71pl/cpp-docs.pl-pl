@@ -18,32 +18,31 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7790cadf9b5bc0b9a1fa37b5131f4fb704142ad2
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 3106bc3c74be0f6d5a9a386b0f4c8c9c64bdfedf
+ms.sourcegitcommit: d4c803bd3a684d7951bf88dcecf1f14af43ae411
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33849642"
+ms.lasthandoff: 08/10/2018
+ms.locfileid: "42465877"
 ---
 # <a name="popmacro"></a>pop_macro
-Ustawia wartość *macro_name* makro wartość górnej części stosu dla tego makra.  
+Ustawia wartość *macro_name* do wartości w górnej części stosu dla tego makra.  
   
 ## <a name="syntax"></a>Składnia  
   
 ```  
-  
 #pragma pop_macro("  
 macro_name  
 ")  
-  
 ```  
   
 ## <a name="remarks"></a>Uwagi  
- Najpierw należy wygenerować [dyrektywy push_macro](../preprocessor/push-macro.md) dla *macro_name* wcześniej **pop_macro**.  
+ 
+Najpierw należy wygenerować [push_macro](../preprocessor/push-macro.md) dla *macro_name* przed rozpoczęciem **pop_macro**.  
   
 ## <a name="example"></a>Przykład  
   
-```  
+```cpp  
 // pragma_directives_pop_macro.cpp  
 // compile with: /W1  
 #include <stdio.h>  
@@ -76,4 +75,5 @@ int main() {
 ```  
   
 ## <a name="see-also"></a>Zobacz też  
- [Dyrektywy pragma i słowo kluczowe __Pragma](../preprocessor/pragma-directives-and-the-pragma-keyword.md)
+ 
+[Dyrektywy pragma i słowo kluczowe __Pragma](../preprocessor/pragma-directives-and-the-pragma-keyword.md)

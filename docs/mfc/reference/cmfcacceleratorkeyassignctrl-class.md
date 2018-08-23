@@ -28,15 +28,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7728df79bf2ab842910b580b1404f109034e55b7
-ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
+ms.openlocfilehash: f3dfe9f728b01b175e897f1182c95e954969aaec
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/27/2018
-ms.locfileid: "37037249"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42466063"
 ---
 # <a name="cmfcacceleratorkeyassignctrl-class"></a>Klasa CMFCAcceleratorKeyAssignCtrl
-`CMFCAcceleratorKeyAssignCtrl` Rozszerza klasy [klasy CEdit](../../mfc/reference/cedit-class.md) do obsługi dodatkowych systemu przycisków ALT, sterowania i SHIFT.  
+`CMFCAcceleratorKeyAssignCtrl` Klasa rozszerza [klasa CEdit](../../mfc/reference/cedit-class.md) do obsługi dodatkowych przycisków systemowych, takich jak ALT, CONTROL i SHIFT.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -58,17 +58,17 @@ class CMFCAcceleratorKeyAssignCtrl : public CEdit
 |----------|-----------------|  
 |[CMFCAcceleratorKeyAssignCtrl::GetAccel](#getaccel)|Pobiera `ACCEL` struktury dla wciśnięty klawisz skrótu `CMFCAcceleratorKeyAssignCtrl` obiektu.|  
 |[CMFCAcceleratorKeyAssignCtrl::IsFocused](#isfocused)||  
-|[CMFCAcceleratorKeyAssignCtrl::IsKeyDefined](#iskeydefined)|Określa, czy została zdefiniowana klawisza skrótu.|  
-|[CMFCAcceleratorKeyAssignCtrl::PreTranslateMessage](#pretranslatemessage)|Używane przez klasę [CWinApp](../../mfc/reference/cwinapp-class.md) tłumaczenie komunikaty okna przed wysłaniem do [TranslateMessage](http://msdn.microsoft.com/library/windows/desktop/ms644955) i [DispatchMessage](http://msdn.microsoft.com/library/windows/desktop/ms644934) funkcje systemu Windows. (Przesłania [CWnd::PreTranslateMessage](../../mfc/reference/cwnd-class.md#pretranslatemessage).)|  
-|[CMFCAcceleratorKeyAssignCtrl::ResetKey](#resetkey)|Resetuje klawisz skrótu.|  
+|[CMFCAcceleratorKeyAssignCtrl::IsKeyDefined](#iskeydefined)|Określa, czy klawisz skrótu został zdefiniowany.|  
+|[CMFCAcceleratorKeyAssignCtrl::PreTranslateMessage](#pretranslatemessage)|Używane przez klasę [CWinApp](../../mfc/reference/cwinapp-class.md) do translacji komunikatów okien, zanim zostaną rozesłane do [TranslateMessage](http://msdn.microsoft.com/library/windows/desktop/ms644955) i [DispatchMessage](http://msdn.microsoft.com/library/windows/desktop/ms644934) funkcje Windows. (Przesłania [CWnd::PreTranslateMessage](../../mfc/reference/cwnd-class.md#pretranslatemessage).)|  
+|[CMFCAcceleratorKeyAssignCtrl::ResetKey](#resetkey)|Resetuje klawisza skrótu.|  
   
 ## <a name="remarks"></a>Uwagi  
- Ta klasa rozszerza funkcjonalność `CEdit` klasy dzięki obsłudze skróty, nazywane również klawiszy skrótów. `CMFCAcceleratorKeyAssignCtrl` Klasy działa jako [CEdit klasy](../../mfc/reference/cedit-class.md) , a także rozpoznają przyciski systemu.  
+ Ta klasa rozszerza funkcjonalność `CEdit` klasy dzięki obsłudze klawiszy skrótów, znany także jako klawiszy skrótów. `CMFCAcceleratorKeyAssignCtrl` Klasy funkcji jako [klasa CEdit](../../mfc/reference/cedit-class.md) i można go także rozpoznaje przycisków systemowych.  
   
- Ta klasa mapuje kombinacje klawiszy skrótu fizycznych wartości typu string. Załóżmy na przykład, kombinację klawiszy ALT + B jest mapowany na ciąg "Alt + B". Gdy użytkownik naciśnie tej kombinacji klawiszy w `CMFCAcceleratorKeyAssignCtrl` obiekt "Alt + B" jest wyświetlana użytkownikowi. Aby uzyskać więcej informacji na temat mapowanie między klawiszy skrótów i formatu ciągu, zobacz [CMFCAcceleratorKey klasy](../../mfc/reference/cmfcacceleratorkey-class.md).  
+ Ta klasa mapuje kombinacji klawiszy skrótów fizycznej do wartości typu ciąg. Załóżmy na przykład, kombinacja klawiszy ALT + B jest mapowany na ciąg "Alt + B". Gdy użytkownik naciśnie tej kombinacji klawiszy w `CMFCAcceleratorKeyAssignCtrl` obiektu "Alt + B" jest wyświetlany użytkownikowi. Aby uzyskać więcej informacji na temat mapowania między klawiszy skrótów i format ciągu, zobacz [klasa CMFCAcceleratorKey](../../mfc/reference/cmfcacceleratorkey-class.md).  
   
 ## <a name="example"></a>Przykład  
- W poniższym przykładzie pokazano sposób tworzenia `CMFCAcceleratorKeyAssignCtrl` obiektu i używać jej `ResetKey` metoda klawisz skrótu.  
+ W poniższym przykładzie pokazano sposób tworzenia `CMFCAcceleratorKeyAssignCtrl` obiektu i używać jej `ResetKey` metodę, aby zresetować klawisza skrótu.  
   
  [!code-cpp[NVC_MFC_RibbonApp#31](../../mfc/reference/codesnippet/cpp/cmfcacceleratorkeyassignctrl-class_1.cpp)]  
   
@@ -101,13 +101,13 @@ ACCEL const* GetAccel() const;
 ```  
   
 ### <a name="return-value"></a>Wartość zwracana  
- `ACCEL` Struktury, która opisuje klawisz skrótu.  
+ `ACCEL` Strukturę, która opisuje klawisza skrótu.  
   
 ### <a name="remarks"></a>Uwagi  
- Ta funkcja służy do pobierania `ACCEL` struktury klawisz skrótu, który użytkownik wprowadził do Twojej `CMFCAcceleratorKeyAssignCtrl` obiektu.  
+ Ta funkcja służy do pobierania `ACCEL` struktury klawisz skrótu, który użytkownik wprowadzi w swojej `CMFCAcceleratorKeyAssignCtrl` obiektu.  
   
 ##  <a name="isfocused"></a>  CMFCAcceleratorKeyAssignCtrl::IsFocused  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+ Aby uzyskać więcej informacji, zobacz kod źródłowy znajdujący się w **VC\\atlmfc\\src\\mfc** folder instalacji programu Visual Studio.  
   
 ```  
 BOOL IsFocused() const;  
@@ -125,13 +125,13 @@ BOOL IsKeyDefined() const;
 ```  
   
 ### <a name="return-value"></a>Wartość zwracana  
- Różna od zera, jeśli użytkownik nacisnął już prawidłową kombinację klucze, które definiują klawisza skrótu. w przeciwnym razie 0.  
+ Wartość różną od zera, jeśli użytkownik nacisnął już prawidłową kombinację klawiszy, które definiują klawisza skrótu. w przeciwnym razie 0.  
   
 ### <a name="remarks"></a>Uwagi  
- Ta funkcja służy do określenia, czy użytkownik wprowadził nieprawidłowy skrót klucza w Twojej `CMFCAcceleratorKeyAssignCtrl` obiektu. Jeśli istnieje klawisz skrótu, możesz użyć [CMFCAcceleratorKeyAssignCtrl::GetAccel](#getaccel) metodę, aby uzyskać `ACCEL` struktury skojarzone z tym klawisz skrótu.  
+ Ta funkcja służy do określenia, czy użytkownik wprowadzi prawidłowy skrót klucza w swojej `CMFCAcceleratorKeyAssignCtrl` obiektu. Jeśli klawisz skrótu istnieje, możesz użyć [CMFCAcceleratorKeyAssignCtrl::GetAccel](#getaccel) metodę, aby uzyskać `ACCEL` struktury skojarzona z tym kluczem skrótu.  
   
 ##  <a name="pretranslatemessage"></a>  CMFCAcceleratorKeyAssignCtrl::PreTranslateMessage  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+ Aby uzyskać więcej informacji, zobacz kod źródłowy znajdujący się w **VC\\atlmfc\\src\\mfc** folder instalacji programu Visual Studio.  
   
 ```  
 virtual BOOL PreTranslateMessage(MSG* pMsg);
@@ -145,14 +145,14 @@ virtual BOOL PreTranslateMessage(MSG* pMsg);
 ### <a name="remarks"></a>Uwagi  
   
 ##  <a name="resetkey"></a>  CMFCAcceleratorKeyAssignCtrl::ResetKey  
- Resetuje klawisz skrótu.  
+ Resetuje klawisza skrótu.  
   
 ```  
 void ResetKey();
 ```  
   
 ### <a name="remarks"></a>Uwagi  
- Funkcja Usuwa tekst kontrolki edycji. W tym wszelkie klawiszy skrótów, które użytkownik kliknął przycisk.  
+ Funkcja Usuwa tekst kontrolki edycji. Dotyczy to również wszelkich klawiszy skrótów, które użytkownik nacisnął klawisz.  
   
 ## <a name="see-also"></a>Zobacz też  
  [Diagram hierarchii](../../mfc/hierarchy-chart.md)   

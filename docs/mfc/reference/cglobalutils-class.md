@@ -48,15 +48,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9ffd681a589f9e8cc1c9cc56139f7b155773038f
-ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
+ms.openlocfilehash: 6c92ccfe9dbf25fa1355885a5f6dd3570df4884b
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/26/2018
-ms.locfileid: "36952088"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42466250"
 ---
 # <a name="cglobalutils-class"></a>Klasa CGlobalUtils
-[!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+Aby uzyskać więcej informacji, zobacz kod źródłowy znajdujący się w **VC\\atlmfc\\src\\mfc** folder instalacji programu Visual Studio.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -104,7 +104,7 @@ void AdjustRectToworkArea(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [w, out] *rect*  
+ [out w] *rect*  
  [in] *pRectDelta*  
   
 ### <a name="remarks"></a>Uwagi  
@@ -216,7 +216,7 @@ BOOL DecimalFromString(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [out] *dziesiętną*  
+ [out] *dziesiętna*  
  [in] *psz*  
   
 ### <a name="return-value"></a>Wartość zwracana  
@@ -233,7 +233,7 @@ void FlipRect(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [w, out] *rect*  
+ [out w] *rect*  
  [in] *nDegrees*  
   
 ### <a name="remarks"></a>Uwagi  
@@ -249,7 +249,7 @@ void ForceAdjustLayout(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [w, out] *pDockManager*  
+ [out w] *pDockManager*  
  [in] *bForce*  
  [in] *bForceInvisible*  
   
@@ -298,7 +298,7 @@ BOOL GetPaneAndAlignFromPoint(
   
 ### <a name="parameters"></a>Parametry  
  [in] *barContainerManager*  
- [in] *pt*  
+ [in] *(czas pacyficzny)*  
  [out] *ppTargetControlBar*  
  [out] *dwAlignment*  
  [out] *bTabArea*  
@@ -367,7 +367,7 @@ BOOL StringFromDecimal(
   
 ### <a name="parameters"></a>Parametry  
  [out] *str*  
- [in] *dziesiętną*  
+ [in] *dziesiętna*  
   
 ### <a name="return-value"></a>Wartość zwracana  
   

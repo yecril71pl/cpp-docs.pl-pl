@@ -1,7 +1,7 @@
 ---
 title: setjmp | Dokumentacja firmy Microsoft
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 08/14/2018
 ms.technology:
 - cpp-standard-libraries
 ms.topic: reference
@@ -32,12 +32,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2cc4673485577f5a12024d31e94063c82a8c7b8c
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 06073527aae8112d231dbd971b3daae35276efef
+ms.sourcegitcommit: b92ca0b74f0b00372709e81333885750ba91f90e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32407255"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "42466078"
 ---
 # <a name="setjmp"></a>setjmp
 
@@ -53,24 +53,31 @@ int setjmp(
 
 ### <a name="parameters"></a>Parametry
 
-*ENV*<br/>
-Zmienna, w której jest przechowywany środowiska.
+*środowisko*  
+Zmienna, w którym znajduje się środowisko.
 
 ## <a name="return-value"></a>Wartość zwracana
 
-Zwraca wartość 0 po zapisaniu środowiska stosu. Jeśli **setjmp** zwraca na **longjmp** wywołać, zwraca **wartość** argument **longjmp**, lub jeśli **wartość**  argument **longjmp** ma wartość 0, **setjmp** zwraca wartość 1. Nie ma żadnych zwracany błąd.
+Zwraca wartość 0 po zapisaniu środowiska stosu. Jeśli **setjmp** zwraca na `longjmp` wywołanie, zwraca *wartość* argument `longjmp`, lub jeśli *wartość* argument `longjmp` ma wartość 0, **setjmp** zwraca wartość 1. Nie będzie zwrotu błędu.
 
 ## <a name="remarks"></a>Uwagi
 
-**Setjmp** funkcja zapisuje środowisku stosu, którego będzie można później przywrócić, za pomocą **longjmp**. Podczas łączenia **setjmp** i **longjmp** umożliwiają wykonanie innego niż lokalne **goto**. One są zwykle używane do przekazania Kontrola wykonywania kodu służącego do obsługi błędów lub odzyskiwania w wcześniej wywołana procedura bez użycia normalne wywołanie lub return Konwencji.
+**Setjmp** funkcji zapisuje w środowisku stosu, który można później przywrócić, przy użyciu `longjmp`. Gdy jest używana razem **setjmp** i `longjmp` zapewniają sposób wykonania nielokalnych **goto**. One są zwykle używane do przekazywania formantów wykonywania do kodu obsługi błędów lub odzyskiwania w poprzednio wywołanej procedurze bez użycia normalne wywołania lub Konwencji zwracania.
 
-Wywołanie **setjmp** jest zapisywany w bieżącym środowisku stosu w *env*. Kolejne wywołania **longjmp** przywraca zapisanego środowiska i zwraca sterowania do punktu zaraz po odpowiadającego **setjmp** wywołania. Wszystkie zmienne (z wyjątkiem zmiennych rejestru) dostępny do procedury odbieranie kontroli zawierają wartości podczas obliczania miało **longjmp** została wywołana.
+Wywołanie **setjmp** zapisuje bieżące środowisko stosu w *env*. Kolejne wywołanie `longjmp` przywraca zapisane środowisko i zwraca kontrolę do punktu, zaraz po odpowiednich **setjmp** wywołania. Wszystkie zmienne (z wyjątkiem zmienne rejestru) dostępne dla procedury odbieranie kontroli zawierają wartości, kiedy miało `longjmp` została wywołana.
 
-Nie jest możliwe użycie **setjmp** na przejście z kodu natywnego do zarządzanego kodu.
+Nie jest możliwe użycie **setjmp** przejść z natywnego do zarządzanego kodu.
 
-**Uwaga** **setjmp** i **longjmp** nie obsługują semantyki obiektu języka C++. W programach języka C++ użyj mechanizmu obsługi wyjątków C++.
+**Microsoft Specific**
 
-Aby uzyskać więcej informacji, zobacz [przy użyciu setjmp i longjmp](../../cpp/using-setjmp-longjmp.md).
+W przypadku kodu C++ firmy Microsoft w Windows **longjmp** używa tej samej semantyki odwracania stosu jako kod obsługi wyjątków. Jest bezpieczne do użycia w tych samych miejsc wygenerowany wyjątki C++. Jednak to użycie nie jest przenośny i dołączono niektóre ważne zastrzeżenia. Aby uzyskać więcej informacji, zobacz [longjmp](longjmp.md).
+
+**END specyficzny dla Microsoft**
+
+> [!NOTE]  
+> W przypadku przenośnego kodu C++, nie można zakładać, `setjmp` i `longjmp` obsługują semantyki obiektów języka C++. W szczególności `setjmp` / `longjmp` wywołanie pary ma niezdefiniowane zachowanie, jeśli zastąpienie `setjmp` i `longjmp` przez **catch** i **throw** powodowałoby wywołanie pliku wykonywalnego wszelkie nietrywialnymi destruktory dla obiektów automatycznych. W programach języka C++ zalecane jest używanie mechanizmu obsługi wyjątków C++.
+
+Aby uzyskać więcej informacji, zobacz [przy użyciu funkcji setjmp i longjmp](../../cpp/using-setjmp-longjmp.md).
 
 ## <a name="requirements"></a>Wymagania
 
@@ -86,6 +93,5 @@ Zobacz przykład [_fpreset —](fpreset.md).
 
 ## <a name="see-also"></a>Zobacz także
 
-[Procedury kontroli środowiska](../../c-runtime-library/process-and-environment-control.md)<br/>
-[longjmp](longjmp.md)<br/>
-[_setjmp3](../../c-runtime-library/setjmp3.md)<br/>
+[Procedury kontroli środowiska](../../c-runtime-library/process-and-environment-control.md)  
+[longjmp](longjmp.md)  

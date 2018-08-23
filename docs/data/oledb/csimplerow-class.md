@@ -46,12 +46,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 94f90e4c60e5669789caadaaa827b4c12f1f157f
-ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
+ms.openlocfilehash: d5d824529e80319d95e00b6a3831af90a9506a03
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/30/2018
-ms.locfileid: "39339786"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42464985"
 ---
 # <a name="csimplerow-class"></a>CSimpleRow — Klasa
 Udostępnia domyślną implementację dla dojście do wiersza, który jest używany w [irowsetimpl —](../../data/oledb/irowsetimpl-class.md) klasy.  
@@ -109,7 +109,7 @@ HRESULT Compare(CSimpleRow* pRow);
  Wskaźnik do `CSimpleRow` obiektu.  
   
 ### <a name="return-value"></a>Wartość zwracana  
- Wartość HRESULT, zwykle S_OK, wskazującą dwa wiersze są tego samego wystąpienia wiersz lub wartość S_FALSE, wskazując dwa wiersze są różne. Zobacz [IRowsetIdentity::IsSameRow](https://msdn.microsoft.com/library/ms719629.aspx) w *OLE DB Podręcznik programisty* dla innych możliwych wartości zwracanych. 
+ Wartość HRESULT, zwykle S_OK, wskazującą dwa wiersze są tego samego wystąpienia wiersz lub wartość S_FALSE, wskazując dwa wiersze są różne. Zobacz [IRowsetIdentity::IsSameRow](/previous-versions/windows/desktop/ms719629\(v=vs.85\)) w *OLE DB Podręcznik programisty* dla innych możliwych wartości zwracanych. 
 
 ## <a name="csimplerow"></a> CSimpleRow::CSimpleRow
 Konstruktor.  

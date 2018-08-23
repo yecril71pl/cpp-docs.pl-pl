@@ -52,12 +52,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ca1c4d1d2a7c37838a57a55189330465cd0700e8
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: 93a637c1374e77127a5bf71c6fa736d2857928f1
+ms.sourcegitcommit: b92ca0b74f0b00372709e81333885750ba91f90e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37850160"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "42465625"
 ---
 # <a name="cprogressctrl-class"></a>Klasa CProgressCtrl
 Oferuje funkcje formantu Windows typowego paska postępu.  
@@ -350,10 +350,12 @@ COLORREF SetBarColor(COLORREF clrBar);
 |[in] *clrBar*|A [COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449) wartość, która określa nowy kolor paska wskaźnika postępu. Określ CLR_DEFAULT do powodują pasek postępu używać jej domyślny kolor.|  
   
 ### <a name="return-value"></a>Wartość zwracana  
- Poprzedni kolor paska wskaźnika postępu, reprezentowane jako [COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449) wartość lub CLR_DEFAULT Jeśli kolor paska wskaźnika postępu jest domyślny kolor.  
+
+Poprzedni kolor paska wskaźnika postępu, reprezentowane jako [COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449) wartość lub CLR_DEFAULT Jeśli kolor paska wskaźnika postępu jest domyślny kolor.  
   
 ### <a name="remarks"></a>Uwagi  
- `SetBarColor` Metoda ustawia pasek koloru tylko wtedy, gdy postępu [!INCLUDE[windowsver](../../build/reference/includes/windowsver_md.md)] [motyw](https://msdn.microsoft.com/library/windows/desktop/hh270423.aspx) nie jest włączone.  
+
+`SetBarColor` Metoda ustawia pasek koloru tylko wtedy, gdy postępu Windows Vista [motyw](/windows/desktop/Controls/visual-styles-overview) nie jest włączone.  
   
  Ta metoda wysyła [PBM_SETBARCOLOR](http://msdn.microsoft.com/library/windows/desktop/bb760838) komunikat, który jest opisany w zestawie Windows SDK.  
   

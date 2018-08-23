@@ -150,16 +150,16 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e8e8225163f8370e5664465ead7e0b01e5213afb
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: 682f4ecbbc4d048f6353be6844bfef042efbc45f
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37850291"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42465807"
 ---
 # <a name="cmfctoolbarimages-class"></a>Klasa CMFCToolBarImages
 Obrazy na pasku narzędzi. `CMFCToolBarImages` Klasa zarządza obrazami paska narzędzi załadowanymi z zasobów aplikacji lub plików.  
-   [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+   Aby uzyskać więcej informacji, zobacz kod źródłowy znajdujący się w **VC\\atlmfc\\src\\mfc** folder instalacji programu Visual Studio.  
 ## <a name="syntax"></a>Składnia  
   
 ```  

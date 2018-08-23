@@ -22,26 +22,27 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7891b03fe80b5ad91ad52cf4577d237350d4584c
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 2bbb1aa7db586a4b45084883491c8869b434eb8b
+ms.sourcegitcommit: d4c803bd3a684d7951bf88dcecf1f14af43ae411
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33841702"
+ms.lasthandoff: 08/10/2018
+ms.locfileid: "42465880"
 ---
 # <a name="stringizing-operator-"></a>Operator tworzenia ciągów (#)
-Numer znaku lub operator "tworzenia ciągów" (**#**) konwertuje parametrów makra na literały ciągu bez rozwinięcie definicji parametru. Jest on używany tylko z makrami, które przyjmują argumenty. Jeżeli poprzedza on parametr formalny w definicji makra, rzeczywisty argument przekazywany przez wywołanie makra jest ujęty w znaki cudzysłowu i traktowany jako literał ciągu. Literał ciągu następnie zamienia każde wystąpienie kombinacji operatora tworzenia ciągu i parametru formalnego w ramach definicji makra.  
+Znak numeru lub operator "tworzenia ciągu" (**#**) konwertuje parametry makr do literałów ciągu bez rozszerzania definicji parametru. Jest on używany tylko z makrami, które przyjmują argumenty. Jeżeli poprzedza on parametr formalny w definicji makra, rzeczywisty argument przekazywany przez wywołanie makra jest ujęty w znaki cudzysłowu i traktowany jako literał ciągu. Literał ciągu następnie zamienia każde wystąpienie kombinacji operatora tworzenia ciągu i parametru formalnego w ramach definicji makra.  
   
 > [!NOTE]
->  Rozszerzenie Microsoft C (wersje 6.0 i starsze) dla standardu ANSI C, które wcześniej rozszerzało argumenty formalne makra pojawiające się wewnątrz literałów ciągu i stałych ciągu, nie jest już obsługiwane. Kod, który będzie zależał od tego rozszerzenia powinien ponownego napisania za pomocą tworzenia ciągów (**#**) operatora.  
+> Rozszerzenie Microsoft C (wersje 6.0 i starsze) dla standardu ANSI C, które wcześniej rozszerzało argumenty formalne makra pojawiające się wewnątrz literałów ciągu i stałych ciągu, nie jest już obsługiwane. Kod, który opierał się na tym rozszerzeniu powinien zostać przepisany z użyciem tworzenia ciągu (**#**) — operator.  
   
 Odstęp poprzedzający pierwszy token rzeczywistego argumentu i występujący po ostatnim tokenie rzeczywistego argumentu jest ignorowany. Wszelkie odstępy między tokenami w rzeczywistym argumencie są skracane do pojedynczego odstępu w wynikowym literale ciągu. Zatem jeśli komentarz występuje między dwoma tokenami w rzeczywistym argumencie, jest on skracany do jednego odstępu. Wynikowy literał ciągu jest automatycznie łączony z dowolnymi przylegającymi literałami ciągu, od których jest on oddzielony odstępem.  
   
-Dalsze, jeśli znak zawartych w argumencie zwykle wymaga sekwencji unikowej, gdy jest używany w literale ciągu (na przykład znak cudzysłowu (**"**) ani ukośnika odwrotnego (**\\**) znaków), odwrotny niezbędne ucieczki automatycznie zostanie wstawiony przed znakiem.  
+Dalej, jeśli znak zawarty w argumencie zwykle wymaga sekwencji ucieczki w literale ciągu (na przykład znak cudzysłowu (**"**) lub ukośnika odwrotnego (**\\**) znak), niezbędny ukośnik odwrotny ucieczki jest automatycznie wstawiany przed znakiem.  
   
-Operator stringizing Visual C++ nie zadziała poprawnie, gdy jest używany z ciągami, które obejmują sekwencji unikowych. W takim przypadku kompilator generuje [C2017 błąd kompilatora](../error-messages/compiler-errors-1/compiler-error-c2017.md).  
+Operator tworzenia ciągu Visual C++ nie działają prawidłowo, gdy jest używany z ciągów, które zawierają sekwencje ucieczki. W takiej sytuacji, kompilator generuje [błąd kompilatora C2017](../error-messages/compiler-errors-1/compiler-error-c2017.md).  
   
-## <a name="example"></a>Przykład  
+## <a name="examples"></a>Przykłady  
+
 W poniższym przykładzie pokazano definicję makra, która zawiera operator tworzenia ciągu i główną funkcję, która wywołuje makro:  
   
 Takie wywołania będą rozwijane podczas wstępnego przetwarzania, generując poniższy kod:  
@@ -70,8 +71,7 @@ In quotes in the printf function call
 "In quotes when printed to the screen"  
 "This: \"  prints an escaped double quote"  
 ```  
-  
-## <a name="example"></a>Przykład  
+ 
 W poniższym przykładzie pokazano sposób rozwijania parametru makra:  
   
 ```cpp  
@@ -86,4 +86,5 @@ FB1(F B)
 ```  
   
 ## <a name="see-also"></a>Zobacz też  
- [Operatory preprocesora](../preprocessor/preprocessor-operators.md)
+ 
+[Operatory preprocesora](../preprocessor/preprocessor-operators.md)

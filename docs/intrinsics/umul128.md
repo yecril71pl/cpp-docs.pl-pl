@@ -16,17 +16,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a6998b51be8fd11092c4266fa7eee7434be8e5b1
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: e996a83cfc2a79d4bf5cc458ccc5bdd586355b64
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33331535"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42464833"
 ---
 # <a name="umul128"></a>_umul128
 **Microsoft Specific**  
   
- Mnoży dwie 64-bitowych liczb całkowitych bez znaku przekazany jako pierwsze dwa argumenty i umieszcza wysokiej 64-bitowy produktu w 64-bitowa liczba całkowita bez znaku wskazywana przez `HighProduct` i zwraca niski 64-bitowy produktu.  
+ Mnoży dwie 64-bitowych liczb całkowitych bez znaku przekazany jako pierwsze dwa argumenty i umieszcza wysokiej 64-bitowy produktu w 64-bitowej nieoznaczonej liczby całkowitej wskazywany przez `HighProduct` i zwraca niski 64-bitowy produkt.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -40,10 +40,10 @@ unsigned __int64 _umul128(
   
 #### <a name="parameters"></a>Parametry  
  [in] `Multiplier`  
- Pierwszy 64-bitowa liczba całkowita należy pomnożyć.  
+ Pierwsza liczba całkowita 64-bitowego do pomnożenia.  
   
  [in] `Multiplicand`  
- Drugi 64-bitowa liczba całkowita wielokrotnie.  
+ Drugi 64-bitową liczbę całkowitą do pomnożenia.  
   
  [out] `HighProduct`  
  Wysoka 64 bity produktu.  
@@ -53,9 +53,9 @@ unsigned __int64 _umul128(
   
 ## <a name="requirements"></a>Wymagania  
   
-|— Wewnętrzne|Architektura|nagłówek|  
+|Wewnętrzne|Architektura|nagłówek|  
 |---------------|------------------|------------|  
-|`_umul128`|ARM, [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|\<intrin.h>|  
+|`_umul128`|ARM, x64|\<intrin.h>|  
   
 ## <a name="example"></a>Przykład  
   
@@ -84,7 +84,7 @@ int main()
 0xfffffffffffffff * 0xf0000000 = 0xeffffffffffffff10000000  
 ```  
   
-**KOŃCOWY określonych firmy Microsoft**  
+**END specyficzny dla Microsoft**  
   
 ## <a name="see-also"></a>Zobacz też  
  [Funkcje wewnętrzne kompilatora](../intrinsics/compiler-intrinsics.md)

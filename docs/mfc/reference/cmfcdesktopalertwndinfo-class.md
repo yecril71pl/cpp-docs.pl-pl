@@ -24,15 +24,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bb682236f41294b7d14f5950ed7906832dd7d8a2
-ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
+ms.openlocfilehash: 4d5cf3c8804595aa3d0f3a83bc2628ea830e786a
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/27/2018
-ms.locfileid: "37038093"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42465528"
 ---
 # <a name="cmfcdesktopalertwndinfo-class"></a>Klasa CMFCDesktopAlertWndInfo
-`CMFCDesktopAlertWndInfo` Klasa jest używana z [CMFCDesktopAlertWnd klasy](../../mfc/reference/cmfcdesktopalertwnd-class.md). Określa formantów, które są wyświetlane, gdy pulpitu alertu wyświetlone okno podręczne.  
+`CMFCDesktopAlertWndInfo` Klasa jest używana z [klasa CMFCDesktopAlertWnd](../../mfc/reference/cmfcdesktopalertwnd-class.md). Określa formanty, które są wyświetlane, gdy pojawi się okno alertu pulpitu.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -58,24 +58,24 @@ class CMFCDesktopAlertWndInfo
   
 |Nazwa|Opis|  
 |----------|-----------------|  
-|[CMFCDesktopAlertWndInfo::m_hIcon](#m_hicon)|Dojście do ikonę, która jest wyświetlana.|  
-|[CMFCDesktopAlertWndInfo::m_nURLCmdID](#m_nurlcmdid)|Identyfikator polecenia skojarzony z łączem w oknie alert pulpitu.|  
-|[CMFCDesktopAlertWndInfo::m_strText](#m_strtext)|Tekst wyświetlany w oknie alert pulpitu.|  
-|[CMFCDesktopAlertWndInfo::m_strURL](#m_strurl)|Łącze, które jest wyświetlane w oknie alert pulpitu.|  
+|[CMFCDesktopAlertWndInfo::m_hIcon](#m_hicon)|Dojście do ikony, która jest wyświetlana.|  
+|[CMFCDesktopAlertWndInfo::m_nURLCmdID](#m_nurlcmdid)|Identyfikator polecenia skojarzony z linkiem na okno alertu pulpitu.|  
+|[CMFCDesktopAlertWndInfo::m_strText](#m_strtext)|Tekst, który jest wyświetlany na okno alertu pulpitu.|  
+|[CMFCDesktopAlertWndInfo::m_strURL](#m_strurl)|Link, który jest wyświetlany na okno alertu pulpitu.|  
   
 ## <a name="remarks"></a>Uwagi  
- `CMFCDesktopAlertWndInfo` Klasy jest przekazywana do [CMFCDesktopAlertWnd::Create](../../mfc/reference/cmfcdesktopalertwnd-class.md#create) metodę, aby określić elementy, które są wyświetlane w oknie dialogowym domyślne pulpitu okna alertu. Domyślne okno dialogowe może zawierać trzy elementy:  
+ `CMFCDesktopAlertWndInfo` Klasy jest przekazywany do [CMFCDesktopAlertWnd::Create](../../mfc/reference/cmfcdesktopalertwnd-class.md#create) metodę, aby określić elementy, które są wyświetlane w oknie dialogowym domyślne programu okno alertu pulpitu. Okno dialogowe domyślne może zawierać trzy elementy:  
   
--   Ikona, który jest ustawiony przez wywołanie metody [CMFCDesktopAlertWndInfo::m_hIcon](#m_hicon).  
+-   Ikona, która została ustawiona przez wywołanie metody [CMFCDesktopAlertWndInfo::m_hIcon](#m_hicon).  
   
--   Etykieta lub wiadomości tekstowej, który jest ustawiony przez wywołanie metody [CMFCDesktopAlertWndInfo::m_strText](#m_strtext).  
+-   Etykiety lub wiadomości SMS, która została ustawiona przez wywołanie metody [CMFCDesktopAlertWndInfo::m_strText](#m_strtext).  
   
--   Link, który jest ustawiony przez wywołanie metody [CMFCDesktopAlertWndInfo::m_strURL](#m_strurl). Aby ustawić polecenia, który zostanie wykonany po kliknięciu łącza, należy wywołać [CMFCDesktopAlertWndInfo::m_nURLCmdID](#m_nurlcmdid).  
+-   Łącze, która została ustawiona przez wywołanie metody [CMFCDesktopAlertWndInfo::m_strURL](#m_strurl). Aby ustawić polecenia, który jest wykonywany po kliknięciu łącza, należy wywołać [CMFCDesktopAlertWndInfo::m_nURLCmdID](#m_nurlcmdid).  
   
- Jeśli domyślne okno dialogowe nie jest wystarczająca, możesz tworzyć niestandardowe okno dialogowe i przekaż go do [CMFCDesktopAlertWnd::Create](../../mfc/reference/cmfcdesktopalertwnd-class.md#create) metody zamiast za pomocą tej klasy. Aby uzyskać więcej informacji, zobacz [CMFCDesktopAlertDialog klasy](../../mfc/reference/cmfcdesktopalertdialog-class.md).  
+ Gdy okno dialogowe domyślne nie są wystarczające, można utworzyć niestandardowe okno dialogowe i przekazać go do [CMFCDesktopAlertWnd::Create](../../mfc/reference/cmfcdesktopalertwnd-class.md#create) metody zamiast korzystać z tej klasy. Aby uzyskać więcej informacji, zobacz [klasa CMFCDesktopAlertDialog](../../mfc/reference/cmfcdesktopalertdialog-class.md).  
   
 ## <a name="example"></a>Przykład  
- W poniższym przykładzie pokazano sposób użycia różnych elementów członkowskich w `CMFCDesktopAlertWndInfo` klasy. W przykładzie pokazano, jak ustawić dojście do ikonę, która jest wyświetlany tekst, który jest wyświetlany na oknie alertu pulpitu, link jest wyświetlany w oknie alert pulpitu i identyfikator polecenia skojarzony z łączem w oknie alert pulpitu. Ten przykład jest częścią [próbka Demo alertu pulpitu](../../visual-cpp-samples.md).  
+ Poniższy przykład pokazuje, jak używać różnych członków w `CMFCDesktopAlertWndInfo` klasy. W przykładzie pokazano, jak ustawić dojście do ikonę, która jest wyświetlana, tekst, który jest wyświetlany na okno alertu pulpitu, łącza, który jest wyświetlany na okno alertu pulpitu i identyfikator polecenia, który jest skojarzony z linkiem na okno alertu pulpitu. W tym przykładzie jest częścią [próbka Demo alertu pulpitu](../../visual-cpp-samples.md).  
   
  [!code-cpp[NVC_MFC_DesktopAlertDemo#3](../../mfc/reference/codesnippet/cpp/cmfcdesktopalertwndinfo-class_1.cpp)]  
   
@@ -86,7 +86,7 @@ class CMFCDesktopAlertWndInfo
  **Nagłówek:** afxDesktopAlertDialog.h  
   
 ##  <a name="operator_eq"></a>  CMFCDesktopAlertWndInfo::operator =  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+ Aby uzyskać więcej informacji, zobacz kod źródłowy znajdujący się w **VC\\atlmfc\\src\\mfc** folder instalacji programu Visual Studio.  
   
 ```  
 CMFCDesktopAlertWndInfo& operator=(CMFCDesktopAlertWndInfo& src);
@@ -100,7 +100,7 @@ CMFCDesktopAlertWndInfo& operator=(CMFCDesktopAlertWndInfo& src);
 ### <a name="remarks"></a>Uwagi  
   
 ##  <a name="m_hicon"></a>  CMFCDesktopAlertWndInfo::m_hIcon  
- Dojście do ikonę, która jest wyświetlana.  
+ Dojście do ikony, która jest wyświetlana.  
   
 ```  
 HICON m_hIcon;  
@@ -109,17 +109,17 @@ HICON m_hIcon;
 ### <a name="remarks"></a>Uwagi  
   
 ##  <a name="m_nurlcmdid"></a>  CMFCDesktopAlertWndInfo::m_nURLCmdID  
- Identyfikator polecenia skojarzony z łączem w oknie alert pulpitu.  
+ Identyfikator polecenia skojarzony z linkiem na okno alertu pulpitu.  
   
 ```  
 UINT m_nURLCmdID;  
 ```  
   
 ### <a name="remarks"></a>Uwagi  
- Identyfikator polecenia jest wysyłany do właściciela okna podręcznego, gdy użytkownik kliknie łącze, określony przez [CMFCDesktopAlertWndInfo::m_strURL](#m_strurl).  
+ Identyfikator polecenia jest wysyłany do właściciela okna podręcznego, gdy użytkownik kliknie link, określony przez [CMFCDesktopAlertWndInfo::m_strURL](#m_strurl).  
   
 ##  <a name="m_strtext"></a>  CMFCDesktopAlertWndInfo::m_strText  
- Tekst wyświetlany w oknie alert pulpitu.  
+ Tekst, który jest wyświetlany na okno alertu pulpitu.  
   
 ```  
 CString m_strText;  
@@ -128,14 +128,14 @@ CString m_strText;
 ### <a name="remarks"></a>Uwagi  
   
 ##  <a name="m_strurl"></a>  CMFCDesktopAlertWndInfo::m_strURL  
- Łącze, które jest wyświetlane w oknie alert pulpitu.  
+ Link, który jest wyświetlany na okno alertu pulpitu.  
   
 ```  
 CString m_strURL;  
 ```  
   
 ### <a name="remarks"></a>Uwagi  
- Gdy użytkownik kliknie łącze, polecenie mający [CMFCDesktopAlertWndInfo::m_nURLCmdID](#m_nurlcmdid) identyfikator polecenia zostaną wysłane do właściciela tego okna.  
+ Gdy użytkownik kliknie link, polecenie zawierający [CMFCDesktopAlertWndInfo::m_nURLCmdID](#m_nurlcmdid) identyfikator polecenia zostaną wysłane do właściciela tego okna.  
   
 ## <a name="see-also"></a>Zobacz też  
  [Diagram hierarchii](../../mfc/hierarchy-chart.md)   

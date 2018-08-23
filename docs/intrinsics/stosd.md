@@ -18,17 +18,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 99d00b5e3b39f17203ba915d6b4344438803db88
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: e63ee47c98e898fe5cba1a24078029f6afe10b15
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33327135"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42464560"
 ---
 # <a name="stosd"></a>__stosd
 **Microsoft Specific**  
   
- Generuje instrukcji ciągu magazynu (`rep stosd`).  
+ Generuje instrukcję ciągu magazynu (`rep stosd`).  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -42,26 +42,26 @@ void __stosd(
   
 #### <a name="parameters"></a>Parametry  
  [out] `Dest`  
- Miejsce docelowe operacji.  
+ Lokalizacja docelowa wykonać operację.  
   
  [in] `Data`  
  Dane, które mają być przechowywane.  
   
  [in] `Count`  
- Długość bloku doublewords do zapisu.  
+ Długość bloku wyrazy w liczbie mnogiej do zapisania.  
   
 ## <a name="requirements"></a>Wymagania  
   
-|— Wewnętrzne|Architektura|  
+|Wewnętrzne|Architektura|  
 |---------------|------------------|  
-|`__stosd`|x86, [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
+|`__stosd`|x86, x64|  
   
- **Plik nagłówka** \<intrin.h >  
+ **Plik nagłówkowy** \<intrin.h >  
   
 ## <a name="remarks"></a>Uwagi  
- Wynik jest to, że z bitowego `Data` są zapisywane w bloku `Count` doublewords w lokalizacji pamięci wskazywanej przez `Dest`.  
+ Wynik jest fakt, że bitowego `Data` są zapisywane w bloku `Count` wyrazy w liczbie mnogiej w lokalizacji pamięci wskazywany przez `Dest`.  
   
- Ta procedura jest dostępna tylko wewnętrznie.  
+ Ta procedura jest dostępna wyłącznie jako wewnętrzna.  
   
 ## <a name="example"></a>Przykład  
   
@@ -92,7 +92,7 @@ printf_s( "%u %u %u %u",
 0 99999 99999 0  
 ```  
   
-**KOŃCOWY określonych firmy Microsoft**  
+**END specyficzny dla Microsoft**  
   
 ## <a name="see-also"></a>Zobacz też  
  [Funkcje wewnętrzne kompilatora](../intrinsics/compiler-intrinsics.md)

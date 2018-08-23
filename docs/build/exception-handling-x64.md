@@ -15,15 +15,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a7ae44d84ed8a0e04f93513db3a5431ebfd80abf
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: acfcf5f37e0b679faf0e35549cc705ccee216c02
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32367189"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42464743"
 ---
 # <a name="exception-handling-x64"></a>Obsługa wyjątków (x64)
-W tej sekcji omówiono, obsługa wyjątków strukturalnych i wyjątków C++, obsługa zachowanie podczas [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)].  
+W tej sekcji omówiono strukturalna Obsługa wyjątków i zachowanie w x64 obsługi wyjątków C++.  
   
 -   [Dane operacji Unwind dla obsługi wyjątków, obsługa debugera](../build/unwind-data-for-exception-handling-debugger-support.md)  
   
@@ -35,7 +35,7 @@ W tej sekcji omówiono, obsługa wyjątków strukturalnych i wyjątków C++, obs
   
 -   [Definicje danych Unwind w języku C](../build/unwind-data-definitions-in-c.md)  
   
- Aby uzyskać więcej informacji, zobacz [obsługi wyjątków](../cpp/exception-handling-in-visual-cpp.md).  
+ Aby uzyskać więcej informacji, zobacz [wyjątków](../cpp/exception-handling-in-visual-cpp.md).  
   
 ## <a name="see-also"></a>Zobacz też  
  [Konwencje kodowania x64](../build/x64-software-conventions.md)

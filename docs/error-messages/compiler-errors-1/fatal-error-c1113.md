@@ -16,14 +16,14 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 343dbc41743c825b7fb3624019817ec7c5f163fa
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: db188764694c0c0c0b7a85c3653564d563f9cbd2
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33199057"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42464835"
 ---
 # <a name="fatal-error-c1113"></a>Błąd krytyczny C1113
-\#przy użyciu nie powiodło się na 'Plik'.  
+\#nie powiodło się na "file"  
   
- Tylko plik w formacie Microsoft języka pośredniego (MSIL) mogą zostać przekazane do [#using](../../preprocessor/hash-using-directive-cpp.md) dyrektywy. [/CLR](../../build/reference/clr-common-language-runtime-compilation.md) — opcja kompilatora pozwala utworzyć plik wyjściowy MSIL. Inne [!INCLUDE[vsprvs](../../assembler/masm/includes/vsprvs_md.md)] języków również utworzyć różne pliki MSIL.
+ Tylko plik w formacie Microsoft Intermediate Language (MSIL) mogą być przekazywane do [#using](../../preprocessor/hash-using-directive-cpp.md) dyrektywy. [/CLR](../../build/reference/clr-common-language-runtime-compilation.md) — opcja kompilatora pozwala utworzyć plik wyjściowy MSIL. Inne języki Visual Studio generuje również pliki MSIL.

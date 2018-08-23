@@ -1,5 +1,5 @@
 ---
-title: Kompilatora (poziom 1) ostrzeżenie C4114 | Dokumentacja firmy Microsoft
+title: Kompilator ostrzeżenie (poziom 1) C4114 | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,19 +16,19 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 78402d4487eecde00c55ea5e0aad913d97226325
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 9969f58b24defdb3dfa8a96437769d0b19e4569e
+ms.sourcegitcommit: b92ca0b74f0b00372709e81333885750ba91f90e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33283926"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "42466251"
 ---
-# <a name="compiler-warning-level-1-c4114"></a>Kompilator C4114 ostrzegawcze (poziom 1)
-Kwalifikator użyty więcej niż raz tego samego typu  
+# <a name="compiler-warning-level-1-c4114"></a>Kompilator ostrzeżenie (poziom 1) C4114
+tym samym kwalifikator typu użyty więcej niż raz  
   
- Typ deklaracji lub definicji używa kwalifikator typu (**const**, `volatile`, **podpisany**, lub `unsigned`) więcej niż raz. Powoduje to ostrzeżenie z rozszerzeniami firmy Microsoft (/Ze) i błąd w obszarze Zgodność ANSI (/Za).  
+ Typ deklaracji lub definicji używa kwalifikator typu (**const**, **volatile**, **podpisany**, lub **niepodpisane**) więcej niż jeden raz. Powoduje to ostrzeżenie z rozszerzeniami firmy Microsoft (/Ze) i błąd w ramach zgodności z ANSI (/Za).  
   
- Poniższy przykład generuje C4114:  
+ Poniższy przykład spowoduje wygenerowanie C4114:  
   
 ```  
 // C4114.cpp  
@@ -36,7 +36,7 @@ Kwalifikator użyty więcej niż raz tego samego typu
 volatile volatile int i;   // C4114  
 ```  
   
- Poniższy przykład generuje C4114:  
+ Poniższy przykład spowoduje wygenerowanie C4114:  
   
 ```  
 // C4114_b.cpp  

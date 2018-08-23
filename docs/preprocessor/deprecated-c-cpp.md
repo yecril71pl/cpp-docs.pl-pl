@@ -18,17 +18,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2280d5245292625bfc29815475eaca63d4d500bd
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: d51ee23ab4e4be9cf24b913cb0c4ffa325a9bbf5
+ms.sourcegitcommit: d4c803bd3a684d7951bf88dcecf1f14af43ae411
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33839822"
+ms.lasthandoff: 08/10/2018
+ms.locfileid: "42465122"
 ---
 # <a name="deprecated-cc"></a>przestarzałe (C/C++)
-**Przestarzałe** pragma pozwala wskazać, że funkcja, typu lub inny identyfikator może przestanie być obsługiwany w przyszłości wersji lub nie powinny być używane.  
+**Przestarzałe** pragma pozwala wskazać, że funkcja, typ lub innego identyfikatora może nie będą obsługiwane w przyszłości wydania, lub już nie powinny być używane.  
 > [!NOTE]
-> Informacje o C ++ 14 `[[deprecated]]` atrybutu, wskazówki i o tym, kiedy można użyć tego atrybutu vs declspec firmy Microsoft lub pragma, zobacz [atrybuty Standard C++](../cpp/attributes.md) atrybutu.
+> Aby uzyskać informacje o C ++ 14 `[[deprecated]]` atrybut i wskazówki dotyczące kiedy należy używać atrybutu vs declspec firmy Microsoft lub pragma, zobacz [atrybuty Standard C++](../cpp/attributes.md) atrybutu.
   
 ## <a name="syntax"></a>Składnia  
   
@@ -37,17 +37,17 @@ ms.locfileid: "33839822"
 ```  
   
 ## <a name="remarks"></a>Uwagi  
- Gdy kompilator napotka identyfikator określony przez **przestarzałe** pragma, generuje ostrzeżenie kompilatora [C4995](../error-messages/compiler-warnings/compiler-warning-level-3-c4995.md).   
+Gdy kompilator napotka identyfikator określony przez **przestarzałe** pragma, generuje ostrzeżenie kompilatora [C4995](../error-messages/compiler-warnings/compiler-warning-level-3-c4995.md).   
   
- Można zastąpić makr nazwy. Umieść nazwę makra w cudzysłowy, możesz też w rozwinięciu makra zostanie przeprowadzona.  
+Można zastąpić nazw makr. Umieść nazwę makra w cudzysłowy lub — w przeciwnym razie rozwinięciu makra zostanie przeprowadzona.  
   
- Ponieważ **przestarzałe** pragma działa na wszystkie identyfikatory zgodne i nie uwzględnia podpisów, nie jest najlepszą opcją w przypadku wycofano określonych wersji przeciążonej funkcji. Wszystkie zgodne nazwę funkcji, która jest umieszczany w zakresie wyzwala ostrzeżenia.
+Ponieważ **przestarzałe** pragma działa na wszystkich zgodnych identyfikatorów i nie uwzględnia podpisów, nie jest najlepszym rozwiązaniem dla wycofano określonych wersji dla funkcji przeciążenia. Wszystkie pasujące nazwy funkcji, która jest umieszczany w zakresie wyzwala ostrzeżenia.
 
-  Zalecane jest użycie C ++ 14 `[[deprecated]]` atrybut, jeśli to możliwe, zamiast **przestarzałe** pragma. Specyficzne dla firmy Microsoft [__declspec(deprecated)](../cpp/deprecated-cpp.md) modyfikator deklaracji również jest lepszym rozwiązaniem w wielu przypadkach niż **przestarzałe** pragma. `[[deprecated]]` Atrybutu i `__declspec(deprecated)` modyfikator umożliwiają określenie przestarzałe stanu dla określonego formularzy przeciążonej funkcji. Diagnostycznych ostrzeżenie pojawia się tylko z odwołań do określonych przeciążonej funkcji atrybutu lub modyfikator dotyczy.  
+Zalecane jest użycie C ++ 14 `[[deprecated]]` atrybutu, jeśli to możliwe, zamiast **przestarzałe** pragmy. Specyficzne dla firmy Microsoft [__declspec(deprecated)](../cpp/deprecated-cpp.md) modyfikator deklaracji jest także lepszym rozwiązaniem w wielu przypadkach niż **przestarzałe** pragmy. `[[deprecated]]` Atrybutu i `__declspec(deprecated)` modyfikator pozwalają na określenie przestarzałe stanu dla określonej formy przeciążonych funkcji. Diagnostyczne ostrzeżenie pojawia się tylko na odwołania do określonego przeciążonej funkcji atrybut lub modyfikator dotyczy.  
   
 ## <a name="example"></a>Przykład  
   
-```  
+```cpp  
 // pragma_directive_deprecated.cpp  
 // compile with: /W3  
 #include <stdio.h>  
@@ -66,9 +66,9 @@ int main() {
 }  
 ```  
   
- Poniższy przykład pokazuje, jak można zastąpić klasy:  
+Poniższy przykład pokazuje, jak zastąpić klasę:  
   
-```  
+```cpp  
 // pragma_directive_deprecated2.cpp  
 // compile with: /W3  
 #pragma deprecated(X)  
@@ -83,4 +83,5 @@ int main() {
 ```  
   
 ## <a name="see-also"></a>Zobacz też  
- [Dyrektywy pragma i słowo kluczowe __Pragma](../preprocessor/pragma-directives-and-the-pragma-keyword.md)
+ 
+[Dyrektywy pragma i słowo kluczowe __Pragma](../preprocessor/pragma-directives-and-the-pragma-keyword.md)

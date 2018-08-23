@@ -42,17 +42,17 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 094aa35d985d51019254bd4478ffbc8c534854a9
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: c4d0f45498015006141591f7132ef38af52751f9
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37849542"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42465898"
 ---
 # <a name="cmfctooltipctrl-class"></a>Klasa CMFCToolTipCtrl
 Implementacja Rozszerzone etykietki narzędzia oparta na [klasa CToolTipCtrl](../../mfc/reference/ctooltipctrl-class.md). Etykietka narzędzia oparta na `CMFCToolTipCtrl` klasy może wyświetlać ikony, etykietę i opis. Jego wygląd można dostosować, używając wypełniacza gradientu, niestandardowego tekstu i kolorów obramowania, pogrubioną czcionką, zaokrąglonych rogów lub stylu balonowego.  
 
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+ Aby uzyskać więcej informacji, zobacz kod źródłowy znajdujący się w **VC\\atlmfc\\src\\mfc** folder instalacji programu Visual Studio.  
   
 ## <a name="syntax"></a>Składnia  
   

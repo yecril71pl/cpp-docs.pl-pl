@@ -24,15 +24,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 62a775457d6da763a5c8426146d421a4cc958454
-ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
+ms.openlocfilehash: bfc64617002db0536dc3d62e70082c27b260802f
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/26/2018
-ms.locfileid: "36955651"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42465061"
 ---
 # <a name="canimationmanagereventhandler-class"></a>Klasa CAnimationManagerEventHandler
-Implementuje wywołanie zwrotne, które jest wywoływana przez interfejs API animacji przy zmianie stanu Menedżera animacji.  
+Implementuje wywołanie zwrotne, które jest wywoływane przez interfejs API animacji przy zmianie stanu Menedżera animacji.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -54,10 +54,10 @@ class CAnimationManagerEventHandler : public CUIAnimationManagerEventHandlerBase
 |----------|-----------------|  
 |[CAnimationManagerEventHandler::CreateInstance](#createinstance)|Tworzy wystąpienie `CAnimationManagerEventHandler` obiektu.|  
 |[CAnimationManagerEventHandler::OnManagerStatusChanged](#onmanagerstatuschanged)|Wywoływane po zmianie stanu Menedżera animacji. (Przesłania `CUIAnimationManagerEventHandlerBase::OnManagerStatusChanged`.)|  
-|[CAnimationManagerEventHandler::SetAnimationController](#setanimationcontroller)|Przechowuje wskaźnik do kontrolera animacji na zdarzenia trasy.|  
+|[CAnimationManagerEventHandler::SetAnimationController](#setanimationcontroller)|Przechowuje wskaźnik do kontrolera animacji kierowanie zdarzeń.|  
   
 ## <a name="remarks"></a>Uwagi  
- Ten program obsługi zdarzeń jest tworzony i przekazane do metody IUIAnimationManager::SetManagerEventHandler podczas wywoływania CAnimationController::EnableAnimationManagerEvent.  
+ Ta procedura obsługi zdarzeń jest tworzony i przekazywany do metody IUIAnimationManager::SetManagerEventHandler podczas wywoływania CAnimationController::EnableAnimationManagerEvent.  
   
 ## <a name="inheritance-hierarchy"></a>Hierarchia dziedziczenia  
  `CUIAnimationCallbackBase`  
@@ -70,7 +70,7 @@ class CAnimationManagerEventHandler : public CUIAnimationManagerEventHandlerBase
  **Nagłówek:** afxanimationcontroller.h  
   
 ##  <a name="canimationmanagereventhandler"></a>  CAnimationManagerEventHandler::CAnimationManagerEventHandler  
- [!INCLUDE[dev10_sp1required](../../mfc/reference/includes/dev10_sp1required_md.md)]  
+ Wymagany jest dodatek SP1 dla programu Visual Studio 2010.  
   
  Tworzy obiekt CAnimationManagerEventHandler.  
   
@@ -79,7 +79,7 @@ CAnimationManagerEventHandler();
 ```  
   
 ##  <a name="createinstance"></a>  CAnimationManagerEventHandler::CreateInstance  
- [!INCLUDE[dev10_sp1required](../../mfc/reference/includes/dev10_sp1required_md.md)]  
+ Wymagany jest dodatek SP1 dla programu Visual Studio 2010.  
   
  Tworzy wystąpienie obiektu CAnimationManagerEventHandler.  
   
@@ -91,16 +91,16 @@ static COM_DECLSPEC_NOTHROW HRESULT CreateInstance(
   
 ### <a name="parameters"></a>Parametry  
  *pAnimationController*  
- Wskaźnik do kontrolera animacji, które będzie odbierało zdarzenia.  
+ Wskaźnik do Kontroler animacji, które zostaną odebrane zdarzenia.  
   
  *ppManagerEventHandler*  
- Dane wyjściowe. Jeśli metoda go zawiera wskaźnik do obiektu COM, który będzie obsługiwać aktualizacje stanu Menedżera animacji.  
+ Dane wyjściowe. Jeśli metoda się powiedzie, zawiera wskaźnik do obiektu COM, który będzie obsługiwać aktualizacje stanu Menedżera animacji.  
   
 ### <a name="return-value"></a>Wartość zwracana  
- Jeśli metoda zakończy się powodzeniem, zwraca wartość S_OK. W przeciwnym wypadku zwraca kod błędu HRESULT.  
+ Jeśli metoda się powiedzie, zwraca wartość S_OK. W przeciwnym razie zwraca kod błędu HRESULT.  
   
 ##  <a name="onmanagerstatuschanged"></a>  CAnimationManagerEventHandler::OnManagerStatusChanged  
- [!INCLUDE[dev10_sp1required](../../mfc/reference/includes/dev10_sp1required_md.md)]  
+ Wymagany jest dodatek SP1 dla programu Visual Studio 2010.  
   
  Wywoływane po zmianie stanu Menedżera animacji.  
   
@@ -115,15 +115,15 @@ IFACEMETHOD(OnManagerStatusChanged)(
  Nowy stan.  
   
  *previousStatus*  
- Poprzedniego stanu.  
+ Poprzedni stan.  
   
 ### <a name="return-value"></a>Wartość zwracana  
- Bieżąca implementacja zawsze zwraca wartość S_OK;  
+ Bieżąca implementacja parametru zawsze zwraca wartość S_OK;  
   
 ##  <a name="setanimationcontroller"></a>  CAnimationManagerEventHandler::SetAnimationController  
- [!INCLUDE[dev10_sp1required](../../mfc/reference/includes/dev10_sp1required_md.md)]  
+ Wymagany jest dodatek SP1 dla programu Visual Studio 2010.  
   
- Przechowuje wskaźnik do kontrolera animacji na zdarzenia trasy.  
+ Przechowuje wskaźnik do kontrolera animacji kierowanie zdarzeń.  
   
 ```  
 void SetAnimationController(CAnimationController* pAnimationController);
@@ -131,7 +131,7 @@ void SetAnimationController(CAnimationController* pAnimationController);
   
 ### <a name="parameters"></a>Parametry  
  *pAnimationController*  
- Wskaźnik do kontrolera animacji, które będzie odbierało zdarzenia.  
+ Wskaźnik do Kontroler animacji, które zostaną odebrane zdarzenia.  
   
 ## <a name="see-also"></a>Zobacz też  
  [Klasy](../../mfc/reference/mfc-classes.md)

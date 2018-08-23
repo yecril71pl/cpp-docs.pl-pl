@@ -104,12 +104,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8e1521c73f92bbb941b1060cb5cf2051ead88ffb
-ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
+ms.openlocfilehash: 45632fb870f1586453c2c591ef8edce23e625002
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37339595"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42465794"
 ---
 # <a name="cedit-class"></a>Klasa CEdit
 Oferuje funkcje formantu edycji Windows.  
@@ -798,7 +798,7 @@ int LineLength(int nLine = -1) const;
 ### <a name="return-value"></a>Wartość zwracana  
  Dla formantów edycji jednowierszowego wartość zwracana jest długość tekstu w formancie edycji TCHARs.  
   
- W przypadku kontrolek edycji wielowierszowy wartość zwracana jest długość wiersza określonego przez parametr TCHARs, *nLine* parametru. Aby uzyskać [!INCLUDE[vcpransi](../../atl-mfc-shared/reference/includes/vcpransi_md.md)] tekstu, długość jest liczbą bajtów w wierszu; w przypadku tekst Unicode, długość jest liczba znaków w wierszu. Długość nie zawiera znaku powrotu karetki na końcu wiersza.  
+ W przypadku kontrolek edycji wielowierszowy wartość zwracana jest długość wiersza określonego przez parametr TCHARs, *nLine* parametru. Tekst ANSI długość jest liczbą bajtów w linii; tekst Unicode długość jest liczba znaków w wierszu. Długość nie zawiera znaku powrotu karetki na końcu wiersza.  
   
  Jeśli *nLine* parametru jest większa niż liczba znaków w kontrolce, wartość zwracana wynosi zero.  
   

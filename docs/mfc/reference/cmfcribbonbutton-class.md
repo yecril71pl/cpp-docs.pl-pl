@@ -124,17 +124,17 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d1da517ef952dd3fcdb0772feedb8e576be9502b
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: ff14a4d8e013adc401b13daa68ffcb9a739706d8
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37850023"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42464750"
 ---
 # <a name="cmfcribbonbutton-class"></a>Klasa CMFCRibbonButton
 `CMFCRibbonButton` Klasa implementuje przycisków, które można umieścić na elementach paska wstążki np paneli, paskach narzędzi szybkiego dostępu i wyskakujących menu.  
 
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+ Aby uzyskać więcej informacji, zobacz kod źródłowy znajdujący się w **VC\\atlmfc\\src\\mfc** folder instalacji programu Visual Studio.  
   
 ## <a name="syntax"></a>Składnia  
   

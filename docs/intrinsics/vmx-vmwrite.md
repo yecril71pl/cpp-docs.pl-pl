@@ -17,17 +17,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b87aeafd1b9c0c1a35e3f5d99ab5b9d76410b4d0
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: ec022fe2d317ec38bc1d9b06f459b9efc7818c92
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33337720"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42465799"
 ---
 # <a name="vmxvmwrite"></a>__vmx_vmwrite
 **Microsoft Specific**  
   
- Zapisuje określoną wartość określonego pola w bieżącym Struktura kontroli maszyny wirtualnej (VMCS).  
+ Zapisuje określoną wartość określonego pola w strukturze kontroli bieżącej maszyny wirtualnej (VMCS).  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -42,31 +42,31 @@ unsigned char __vmx_vmwrite(
   
 |Parametr|Opis|  
 |---------------|-----------------|  
-|[in] `Field`|Pole VMCS do zapisu.|  
-|[in] `FieldValue`|Wartość do zapisania do pola VMCS.|  
+|[in] `Field`|Pole VMCS do zapisania.|  
+|[in] `FieldValue`|Wartość do zapisania się do pola VMCS.|  
   
 ## <a name="return-value"></a>Wartość zwracana  
  0  
  Operacja zakończyła się pomyślnie.  
   
  1  
- Operacja nie powiodła się ze stanem rozszerzonej dostępne w `VM-instruction error field` z bieżącym VMCS.  
+ Operacja nie powiodła się z rozszerzonych informacji o stanie w `VM-instruction error field` z bieżącym VMCS.  
   
  2  
  Operacja nie powiodła się bez informacji o stanie.  
   
 ## <a name="remarks"></a>Uwagi  
- `__vmx_vmwrite` Funkcji jest odpowiednikiem `VMWRITE` maszyny instrukcji. Wartość `Field` parametr jest zakodowany indeksu jest opisany w dokumentacji firmy Intel. Aby uzyskać więcej informacji, wyszukaj dokumentu "Intel Virtualization Technical specyfikacji dla IA-32 Intel architektury," dokumentu numer C97063-002 na [Intel Corporation](http://go.microsoft.com/fwlink/p/?linkid=127) lokacji i zapoznaj się dodatku C dokument.  
+ `__vmx_vmwrite` Funkcji jest odpowiednikiem `VMWRITE` machine instrukcji. Wartość `Field` parametr jest zakodowany indeksu jest opisane w dokumentacji firmy Intel. Aby uzyskać więcej informacji, wyszukaj dokumentu, "Intel Virtualization Technical Preview specyfikacji dla IA-32 architekturze firmy Intel," dokumentu numer C97063-002 w [Intel Corporation](http://go.microsoft.com/fwlink/p/?linkid=127) lokacji, a następnie zapoznaj się z dodatku C dokument.  
   
 ## <a name="requirements"></a>Wymagania  
   
-|— Wewnętrzne|Architektura|  
+|Wewnętrzne|Architektura|  
 |---------------|------------------|  
-|`__vmx_vmwrite`|[!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
+|`__vmx_vmwrite`|X64|  
   
- **Plik nagłówka** \<intrin.h >  
+ **Plik nagłówkowy** \<intrin.h >  
   
-**KOŃCOWY określonych firmy Microsoft**  
+**END specyficzny dla Microsoft**  
   
 ## <a name="see-also"></a>Zobacz też  
  [Funkcje wewnętrzne kompilatora](../intrinsics/compiler-intrinsics.md)   

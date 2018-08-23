@@ -19,39 +19,39 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c4cd0897a04ec2e07f1f8f3b660d092e0075ac0b
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: a71ed98e550d9db43a42289cfb26e3daaaf68027
+ms.sourcegitcommit: b92ca0b74f0b00372709e81333885750ba91f90e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33694553"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "42465901"
 ---
 # <a name="thread-local-storage-tls"></a>Lokalny magazyn wątków (TLS)
-Lokalnego magazynu wątków (TLS) to metoda, za pomocą której każdy wątek w danym procesie wielowątkowe można przydzielić lokalizacje, w którym będą przechowywane dane specyficzne dla danego wątku. Dynamicznie dane właściwe dla wątków granica (run-time) są obsługiwane i interfejsu API protokołu TLS ([TlsAlloc](https://msdn.microsoft.com/en-us/library/windows/desktop/ms686801), [TlsGetValue](https://msdn.microsoft.com/en-us/library/windows/desktop/ms686812), [TlsSetValue](https://msdn.microsoft.com/en-us/library/windows/desktop/ms686818), i [TlsFree](https://msdn.microsoft.com/en-us/library/windows/desktop/ms686804)). Aby uzyskać więcej informacji na temat implementowania lokalny magazyn wątków w systemie Windows, zobacz [lokalny magazyn wątków (system Windows)](https://msdn.microsoft.com/en-us/library/windows/desktop/ms686749\(v=vs.85\).aspx).  Win32 i kompilatora języka Visual C++ obsługuje teraz statycznie powiązanej (czas ładowania) dla każdego wątku danych oprócz istniejącej implementacji interfejsu API.  
+Lokalnego magazynu wątków (TLS) to metoda, za pomocą którego każdy wątek w danym procesie wielowątkowym można przydzielić lokalizacji do przechowywania danych specyficznych wątku. Dynamicznie danych specyficznych wątku granica (run-time) jest obsługiwana za pomocą interfejsu API protokołu TLS ([TlsAlloc](/windows/desktop/api/processthreadsapi/nf-processthreadsapi-tlsalloc).  Win32 i kompilator języka Visual C++ obsługuje obecnie danych statycznie powiązanej (czas ładowania) na wątek, oprócz istniejącej implementacji interfejsu API.  
   
-##  <a name="_core_compiler_implementation_for_tls"></a> Implementacja kompilatora dla protokołu TLS  
- **C ++ 11:** `thread_local` Specyfikator klasy magazynu jest zalecany sposób, aby określić lokalny magazyn wątków dla obiektów i klasy elementów członkowskich. Aby uzyskać więcej informacji, zobacz [klasy magazynu (C++)](../cpp/storage-classes-cpp.md).  
+##  <a name="_core_compiler_implementation_for_tls"></a> Implementacja kompilatora protokołu TLS  
+ 
+**C ++ 11:** `thread_local` specyfikatora klasy magazynu jest to zalecany sposób, aby określić lokalny magazyn wątków dla obiektów i składowych klasy. Aby uzyskać więcej informacji, zobacz [klasy magazynu (C++)](../cpp/storage-classes-cpp.md).  
   
- Udostępnia atrybut specyficzne dla firmy Microsoft, Visual C++ [wątku](../cpp/thread.md), jako modyfikator klasy magazynu rozszerzonego. Użyj `__declspec` — słowo kluczowe, aby zadeklarować **wątku** zmiennej. Na przykład, poniższy kod deklaruje lokalną zmienną całkowitą wątku i inicjuje ją wartością:  
+Visual C++ zapewnia również atrybut specyficzne dla firmy Microsoft, [wątku](../cpp/thread.md), jako modyfikator klasy magazynu rozszerzonego. Użyj **__declspec** — słowo kluczowe do deklarowania **wątku** zmiennej. Na przykład, poniższy kod deklaruje lokalną zmienną całkowitą wątku i inicjuje ją wartością:  
   
 ```  
 __declspec( thread ) int tls_i = 1;  
 ```  
   
 ## <a name="rules-and-limitations"></a>Reguły i ograniczenia  
- Deklarowanie statycznie powiązany lokalnych obiektów wątków i zmienne należy przestrzegać następujących wytycznych. Te wytyczne mają zastosowanie zarówno do [wątku](../cpp/thread.md)i w większości przypadków [element thread_local](../cpp/storage-classes-cpp.md):  
+ 
+Należy przestrzegać następujących wytycznych podczas deklarowania statycznie wiązania zmiennych i obiektów lokalnych wątku. Niniejsze wytyczne mają zastosowanie zarówno do [wątku](../cpp/thread.md)i w większości przypadków [thread_local](../cpp/storage-classes-cpp.md):  
   
--   `thread` Atrybut można stosować tylko do klasy i dane deklaracje i definicje. Nie można użyć w deklaracji lub definicji funkcji. Na przykład następujący kod generowany jest błąd kompilatora:  
+- **Wątku** atrybut można stosować tylko do definicje i deklaracje klas i danych. Nie można używać w deklaracji lub definicji funkcji. Na przykład poniższy kod generuje błąd kompilatora:  
   
     ```  
-  
     __declspec( thread )void func();     // This will generate an error.  
     ```  
   
--   `thread` Modyfikator może być określony tylko dla elementów danych z `static` zakres. Obejmuje to obiekty danych globalnych (zarówno `static` i `extern`), lokalnego obiektu statycznego i danymi statycznymi członkami klas C++. Obiekty danych nie można zadeklarować ze `thread` atrybutu. Poniższy kod generuje błędy kompilatora:  
+- **Wątku** modyfikator może być określony tylko dla elementów danych ze **statyczne** zakresu. Obejmuje to globalnych obiektów danych (zarówno **statyczne** i **extern**), lokalnych obiektów statycznych i statycznych składowych danych klas języka C++. Nie można zadeklarować automatycznych obiektów danych z **wątku** atrybutu. Poniższy kod generuje błędy kompilatora:  
   
     ```  
-  
     void func1()  
     {  
         __declspec( thread )int tls_i;            // This will generate an error.  
@@ -63,7 +63,7 @@ __declspec( thread ) int tls_i = 1;
     }  
     ```  
   
--   Deklaracji i definicji wątku lokalny obiekt wszystkie określić `thread` atrybutu. Na przykład następujący kod generuje błąd:  
+- Deklaracji i definicji lokalnego obiektu wszystkie określić wątku **wątku** atrybutu. Na przykład poniższy kod generuje błąd:  
   
     ```  
     #define Thread  __declspec( thread )  
@@ -71,16 +71,15 @@ __declspec( thread ) int tls_i = 1;
     int __declspec( thread )tls_i;        // declaration and definition differ.  
     ```  
   
--   `thread` Atrybutu nie można użyć jako modyfikator typu. Na przykład następujący kod generowany jest błąd kompilatora:  
+- **Wątku** atrybutu nie można użyć jako modyfikatora typu. Na przykład poniższy kod generuje błąd kompilatora:  
   
     ```  
     char __declspec( thread ) *ch;        // Error  
     ```  
   
--   Ponieważ deklaracja C++ obiekty używające `thread` atrybut jest dozwolony, semantycznie równoważne są dwa poniższe przykłady:  
+- Ponieważ deklaracja C++ obiektów używających **wątku** atrybut jest dozwolony, dwa poniższe przykłady są semantycznie równoważne:  
   
     ```  
-  
     __declspec( thread ) class B  
     {  
     // Code  
@@ -93,17 +92,16 @@ __declspec( thread ) int tls_i = 1;
     __declspec( thread ) B BObject;  // OK--BObject is declared thread local.  
     ```  
   
--   Adres lokalnego obiektu wątek nie jest uważana za stałej, i dowolne wyrażenie obejmujące takiego adresu nie jest uznawany za wyrażenie stałe. W języku C standard efekt działania tej jest zabraniać użyciem adresu zmiennej lokalnej wątku inicjatora dla obiekt lub wskaźnik. Na przykład następujący kod jest traktowane jako błąd przez kompilator C:  
+- Adres lokalnego obiektu wątku nie jest traktowany jako stała i dowolne wyrażenie obejmujące takiego adresu nie uznaje się za wyrażeniem stałym. W standardowej C efekt działania tej jest zabraniają użycie adresu zmiennej lokalnej wątku jako inicjatora dla obiektu lub wskaźnika. Na przykład poniższy kod jest oznaczany jako błąd przez kompilator C:  
   
     ```  
-  
     __declspec( thread )int tls_i;  
     int *p = &tls_i;       //This will generate an error in C.  
     ```  
   
-     To ograniczenie nie ma zastosowania w języku C++. Ponieważ C++ pozwala uzyskać dynamiczna Inicjalizacja wszystkich obiektów, można zainicjować obiektu za pomocą wyrażenia, który korzysta z adresu zmiennej lokalnej wątku. Można to osiągnąć, podobnie jak konstrukcji obiektów lokalnych wątku. Na przykład kodu pokazano wcześniej nie generuje błąd, gdy jest on skompilowany jako plik źródłowy języka C++. Należy pamiętać, że adres zmiennej lokalnej wątku prawidłowe tylko tak długo, jak długo wątku, w którym została wykonana adres nadal istnieje.  
+     To ograniczenie nie ma zastosowania w języku C++. Ponieważ C++ pozwala na dynamiczne zainicjowanie wszystkich obiektów, należy zainicjować obiekt, za pomocą wyrażenia, który używa adresu zmiennej lokalnej wątku. Można to osiągnąć, podobnie jak konstrukcji obiektów lokalnych wątku. Na przykład kodu pokazanego wcześniej nie generuje błąd, gdy jest ona kompilowana jako pliku źródłowego języka C++. Należy pamiętać, że adres zmiennej lokalnej wątku prawidłowe tylko tak długo, jak wątek, w którym została wykonana adres nadal istnieje.  
   
--   Standardowe C pozwala na zainicjowanie obiektu lub zmienna o wyrażenie obejmujące odwołanie do samej siebie, ale tylko w przypadku obiektów Niestatyczne zakresu. Mimo że C++ zwykle pozwala takie dynamiczna Inicjalizacja obiektów z wyrażenie obejmujące odwołanie do samej siebie, ten rodzaj inicjacji nie jest dozwolony z obiektów lokalnej wątku. Na przykład:  
+- Standard języka C umożliwia inicjowania obiektu lub zmiennej za pomocą wyrażenia zawierającego odwołanie do samego siebie, ale tylko w przypadku obiektów o zakresie niestatycznym. Mimo iż język C++ ogólnie dopuszcza dynamiczną inicjalizację obiektu za pomocą wyrażenia zawierającego odwołanie do samego siebie, tento typ inicializace nie jest dozwolony z obiektów lokalnych wątku. Na przykład:  
   
     ```  
     __declspec( thread )int tls_i = tls_i;                // Error in C and C++   
@@ -111,11 +109,12 @@ __declspec( thread ) int tls_i = 1;
     __declspec( thread )int tls_i = sizeof( tls_i )       // Legal in C and C++  
     ```  
   
-     Należy pamiętać, że `sizeof` wyrażenia, która zawiera obiekt inicjowany nie reprezentuje odwołanie do samego siebie i jest włączony w C i C++.  
+     Należy pamiętać, że `sizeof` wyrażenie, które zawiera inicjowany obiekt nie reprezentuje odwołanie do samego siebie i jest włączone w C i C++.  
   
-     C++ z powodu możliwych przyszłe ulepszenia funkcji magazynu lokalnego wątku nie zezwala na takie dynamiczna inicjalizacja danych wątku.  
+     C++ nie dopuszcza dynamiczną inicjalizację danych wątku ze względu na możliwe przyszłe rozszerzenia będą miały do infrastruktury magazynu lokalnego wątku.  
   
--   W systemach operacyjnych Windows przed w systemie Windows Vista `__declspec`(wątek) ma pewne ograniczenia. Jeśli biblioteki DLL deklaruje żadnych danych lub obiekt jako `__declspec`(wątek) może spowodować błąd ochrony po załadowaniu dynamicznie. Po załadowaniu biblioteki DLL z [LoadLibrary](http://msdn.microsoft.com/library/windows/desktop/ms684175), powoduje awarii systemu zawsze, gdy kod odwołuje się do `__declspec`danych (wątek). Ponieważ zmiennej globalnej przestrzeni dla wątku jest przydzielane w czasie wykonywania, rozmiar tego miejsca jest oparta na obliczanie wymagań aplikacji oraz wymagania wszystkie biblioteki DLL połączone statycznie. Jeśli używasz `LoadLibrary`, nie można rozszerzyć to miejsce, aby umożliwić zmienne lokalne wątków zadeklarowana z `__declspec`(wątek). Użyj TLS interfejsów API, takiego jak [TlsAlloc](http://msdn.microsoft.com/library/windows/desktop/ms686801), w bibliotece DLL przydzielić TLS, jeśli biblioteka DLL może być załadowany z `LoadLibrary`.  
+- W systemach operacyjnych Windows przed Windows Vista `__declspec`(wątek) ma pewne ograniczenia. Jeśli biblioteka DLL deklaruje żadnych danych ani obiektu jako `__declspec`(wątek), może to spowodować błąd ochrony Jeśli dynamicznie załadowane. Po załadowaniu pliku DLL za pomocą [LoadLibrary](http://msdn.microsoft.com/library/windows/desktop/ms684175), sprawia, że wystąpił błąd systemu zawsze wtedy, gdy kod odwołuje się do `__declspec`danych (wątek). Ponieważ zmiennej globalnej przestrzeni na wątek jest przydzielany w czasie wykonywania, rozmiar to miejsce opiera się na obliczanie wymagań aplikacji, a także wymagania wszystkie biblioteki dll, które są statycznie łączone. Kiedy używasz `LoadLibrary`, nie można rozszerzyć tego miejsca, aby umożliwić zadeklarowane za pomocą zmiennych lokalnych wątku `__declspec`(wątek). Używanie interfejsów API protokołu TLS, takiej jak [TlsAlloc](http://msdn.microsoft.com/library/windows/desktop/ms686801), w bibliotece DLL, można przydzielić TLS, jeśli biblioteka DLL jest obciążany `LoadLibrary`.  
   
 ## <a name="see-also"></a>Zobacz też  
- [Wielowątkowość z językiem C i podsystemem Win32](../parallel/multithreading-with-c-and-win32.md)   
+ 
+[Wielowątkowość z językiem C i podsystemem Win32](../parallel/multithreading-with-c-and-win32.md)   

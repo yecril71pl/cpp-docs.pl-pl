@@ -48,15 +48,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 9ec9e30112a9f0f5b54b84ccbbb61268e56d70d2
-ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
+ms.openlocfilehash: 73e0b7646da57af679e7b3cbec3b0bb72d4ea8b8
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/30/2018
-ms.locfileid: "39338782"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42464752"
 ---
 # <a name="iaccessorimpl-class"></a>IAccessorImpl — Klasa
-Udostępnia implementację [IAccessor](https://msdn.microsoft.com/library/ms719672.aspx) interfejsu.  
+Udostępnia implementację [IAccessor](/previous-versions/windows/desktop/ms719672\(v=vs.85\)) interfejsu.  
   
 ## <a name="syntax"></a>Składnia
 
@@ -98,7 +98,7 @@ class ATL_NO_VTABLE IAccessorImpl : public IAccessorImplBase<BindType>
 |[ReleaseAccessor](#releaseaccessor)|Udostępnia metody dostępu.|  
   
 ## <a name="remarks"></a>Uwagi  
- Jest to parametr obowiązkowy dla polecenia i zestawy wierszy. OLE DB wymaga dostawców w celu zaimplementowania HACCESSOR, czyli tag do tablicy [DBBINDING](https://msdn.microsoft.com/library/ms716845.aspx) struktury. Dostarczone przez HACCESSORs `IAccessorImpl` są adresy `BindType` struktury. Domyślnie `BindType` jest zdefiniowany jako `ATLBINDINGS` w `IAccessorImpl`w definicji szablonu. `BindType` udostępnia mechanizm używany przez `IAccessorImpl` śledzić liczbę elementów w jego `DBBINDING` tablicy, a także flagi metody dostępu i liczba odwołań.  
+ Jest to parametr obowiązkowy dla polecenia i zestawy wierszy. OLE DB wymaga dostawców w celu zaimplementowania HACCESSOR, czyli tag do tablicy [DBBINDING](/previous-versions/windows/desktop/ms716845\(v=vs.85\)) struktury. Dostarczone przez HACCESSORs `IAccessorImpl` są adresy `BindType` struktury. Domyślnie `BindType` jest zdefiniowany jako `ATLBINDINGS` w `IAccessorImpl`w definicji szablonu. `BindType` udostępnia mechanizm używany przez `IAccessorImpl` śledzić liczbę elementów w jego `DBBINDING` tablicy, a także flagi metody dostępu i liczba odwołań.  
 
 ## <a name="iaccessorimpl"></a> IAccessorImpl::IAccessorImpl
 Konstruktor.  
@@ -120,7 +120,7 @@ STDMETHOD(AddRefAccessor)(HACCESSOR hAccessor,
 ```  
   
 #### <a name="parameters"></a>Parametry  
- Zobacz [IAccessor::AddRefAccessor](https://msdn.microsoft.com/library/ms714978.aspx) w *OLE DB Podręcznik programisty*.
+ Zobacz [IAccessor::AddRefAccessor](/previous-versions/windows/desktop/ms714978\(v=vs.85\)) w *OLE DB Podręcznik programisty*.
 
 ## <a name="createaccessor"></a> IAccessorImpl::CreateAccessor
 Tworzy metodę dostępu na podstawie zestawu powiązania.  
@@ -137,7 +137,7 @@ STDMETHOD(CreateAccessor)(DBACCESSORFLAGS dwAccessorFlags,
 ```  
   
 #### <a name="parameters"></a>Parametry  
- Zobacz [IAccessor::CreateAccessor](https://msdn.microsoft.com/library/ms720969.aspx) w *OLE DB Podręcznik programisty*.  
+ Zobacz [IAccessor::CreateAccessor](/previous-versions/windows/desktop/ms720969\(v=vs.85\)) w *OLE DB Podręcznik programisty*.  
 
 ## <a name="getbindings"></a> IAccessorImpl::GetBindings
 Zwraca powiązania kolumny podstawowe od konsumenta w metodzie dostępu.  
@@ -152,7 +152,7 @@ STDMETHOD(GetBindings)(HACCESSOR hAccessor,
 ```  
   
 #### <a name="parameters"></a>Parametry  
- Zobacz [IAccessor::GetBindings](https://msdn.microsoft.com/library/ms721253.aspx) w *OLE DB Podręcznik programisty*. 
+ Zobacz [IAccessor::GetBindings](/previous-versions/windows/desktop/ms721253\(v=vs.85\)) w *OLE DB Podręcznik programisty*. 
 
 ## <a name="releaseaccessor"></a> IAccessorImpl::ReleaseAccessor
 Udostępnia metody dostępu.  
@@ -165,7 +165,7 @@ STDMETHOD(ReleaseAccessor)(HACCESSOR hAccessor,
 ```  
   
 #### <a name="parameters"></a>Parametry  
- Zobacz [IAccessor::ReleaseAccessor](https://msdn.microsoft.com/library/ms719717.aspx) w *OLE DB Podręcznik programisty*.
+ Zobacz [IAccessor::ReleaseAccessor](/previous-versions/windows/desktop/ms719717\(v=vs.85\)) w *OLE DB Podręcznik programisty*.
   
 ## <a name="see-also"></a>Zobacz też  
  [Szablony dostawców OLE DB](../../data/oledb/ole-db-provider-templates-cpp.md)   

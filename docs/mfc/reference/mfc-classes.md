@@ -15,12 +15,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 840ca90b2f704fc3340c67a830856e006123867a
-ms.sourcegitcommit: 76fd30ff3e0352e2206460503b61f45897e60e4f
+ms.openlocfilehash: bc862ee708239878229825c9aa050c2835222b95
+ms.sourcegitcommit: b92ca0b74f0b00372709e81333885750ba91f90e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/13/2018
-ms.locfileid: "39027816"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "42464996"
 ---
 # <a name="mfc-classes"></a>Klasy MFC
 Klas na poniższej liście znajdują się w bibliotece Microsoft Foundation Class (MFC).  
@@ -852,7 +852,7 @@ Klas na poniższej liście znajdują się w bibliotece Microsoft Foundation Clas
  Naśladuje wygląd systemu Microsoft Windows XP lub Microsoft Vista po wybraniu przez użytkownika, Windows XP lub Vista motywu.  
   
  [Klasa CMFCVisualManagerWindows7](../../mfc/reference/cmfcvisualmanagerwindows7-class.md)  
- Nadaje aplikacji wygląd [!INCLUDE[win7](../../build/includes/win7_md.md)] aplikacji.  
+ Nadaje aplikacji wygląd aplikacji Windows 7.  
   
  [Klasa CMFCWindowsManagerDialog](../../mfc/reference/cmfcwindowsmanagerdialog-class.md)  
  Umożliwia użytkownikowi zarządzanie oknami podrzędnymi MDI w aplikacji MDI.  
@@ -1020,7 +1020,7 @@ Klas na poniższej liście znajdują się w bibliotece Microsoft Foundation Clas
  Stosowane w wyjątkowym przypadku okna dialogowego OLE Edytuj łącza, który powinien być używany gdy musisz zaktualizować jedynie istniejące połączone lub obiekty osadzone w dokumencie.  
   
  [Klasa COleVariant](../../mfc/reference/colevariant-class.md)  
- Hermetyzuje [VARIANT](http://msdn.microsoft.com/e305240e-9e11-4006-98cc-26f4932d2118) typu danych.  
+ Hermetyzuje [VARIANT](/previous-versions/windows/desktop/api/oaidl/ns-oaidl-tagvariant) typu danych.  
   
  [Klasa CPagerCtrl](../../mfc/reference/cpagerctrl-class.md)  
  `CPagerCtrl` Klasy opakowuje formant pagera Windows, który można przewijać w widoku okna, które nie pasuje do okna nadrzędnego.  

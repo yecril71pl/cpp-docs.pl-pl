@@ -16,12 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8233b949fc0ab06663e9f20fad8f47f633fadf6f
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: a6488cc42519bbbee8c8fefb242996144f6bb8a8
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33340102"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42465436"
 ---
 # <a name="readeflags"></a>__readeflags
 Odczytuje stan programu i kontroli (EFLAGS) do rejestru.  
@@ -34,20 +34,20 @@ unsigned __int64 __readeflags(void);
 ```  
   
 ## <a name="return-value"></a>Wartość zwracana  
- Wartość rejestru EFLAGS. Wartość zwracana jest 32-bitowy długo na platformie 32-bitowe i 64-bitowy długo na 64-bitowej platformy.  
+ Wartość rejestru EFLAGS. Wartość zwracana wynosi 32-bitowy, czas na platformie 32-bitowych i 64-bitowy długo na platformie 64-bitowych.  
   
 ## <a name="remarks"></a>Uwagi  
  Te procedury są dostępne tylko jako funkcje wewnętrzne.  
   
 ## <a name="requirements"></a>Wymagania  
   
-|— Wewnętrzne|Architektura|  
+|Wewnętrzne|Architektura|  
 |---------------|------------------|  
-|`__readeflags`|x86, [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
+|`__readeflags`|x86, x64|  
   
- **Plik nagłówka** \<intrin.h >  
+ **Plik nagłówkowy** \<intrin.h >  
   
-**KOŃCOWY określonych firmy Microsoft**  
+**END specyficzny dla Microsoft**  
   
 ## <a name="see-also"></a>Zobacz też  
  [Funkcje wewnętrzne kompilatora](../intrinsics/compiler-intrinsics.md)   

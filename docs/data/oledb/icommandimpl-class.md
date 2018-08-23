@@ -63,15 +63,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 07453e3040594332857ba75455b1847a3914fdd2
-ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
+ms.openlocfilehash: d6adec1a87463515f3fa87dfd4ca31fda650e902
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/30/2018
-ms.locfileid: "39337797"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42464749"
 ---
 # <a name="icommandimpl-class"></a>ICommandImpl — Klasa
-Udostępnia implementację dla [ICommand](https://msdn.microsoft.com/library/ms709737.aspx) interfejsu.  
+Udostępnia implementację dla [ICommand](/previous-versions/windows/desktop/ms709737\(v=vs.85\)) interfejsu.  
   
 ## <a name="syntax"></a>Składnia
 
@@ -124,7 +124,7 @@ STDMETHOD(Cancel)();
 ```  
   
 ### <a name="remarks"></a>Uwagi  
- Zobacz [ICommand::Cancel](https://msdn.microsoft.com/library/ms714402.aspx) w *OLE DB Podręcznik programisty*.  
+ Zobacz [ICommand::Cancel](/previous-versions/windows/desktop/ms714402\(v=vs.85\)) w *OLE DB Podręcznik programisty*.  
 
 ## <a name="cancelexecution"></a> ICommandImpl::CancelExecution
 Anuluje bieżące wykonywanie polecenia.  
@@ -178,7 +178,7 @@ HRESULT CreateRowset(IUnknown* pUnkOuter,
 ### <a name="remarks"></a>Uwagi  
  Aby utworzyć więcej niż jeden zestaw wierszy lub podać warunki do tworzenia różnych zestawów wierszy, wywołania różnych `CreateRowset` z poziomu `Execute`.  
   
- Zobacz [ICommand::Execute](https://msdn.microsoft.com/library/ms718095.aspx) w *OLE DB Podręcznik programisty.*  
+ Zobacz [ICommand::Execute](/previous-versions/windows/desktop/ms718095\(v=vs.85\)) w *OLE DB Podręcznik programisty.*  
 
 ## <a name="execute"></a> ICommandImpl::Execute
 Wykonuje polecenie.  
@@ -194,7 +194,7 @@ HRESULT Execute(IUnknown* pUnkOuter,
 ```  
   
 #### <a name="parameters"></a>Parametry  
- Zobacz [ICommand::Execute](https://msdn.microsoft.com/library/ms718095.aspx) w *OLE DB Podręcznik programisty*.  
+ Zobacz [ICommand::Execute](/previous-versions/windows/desktop/ms718095\(v=vs.85\)) w *OLE DB Podręcznik programisty*.  
   
 ### <a name="remarks"></a>Uwagi  
  Żądany interfejs wychodzących będą interfejs uzyskanych z obiektu zestawu wierszy, który tworzy tę funkcję.  
@@ -212,7 +212,7 @@ STDMETHOD (GetDBSession) (REFIID riid,
 ```  
   
 #### <a name="parameters"></a>Parametry  
- Zobacz [ICommand::GetDBSession](https://msdn.microsoft.com/library/ms719622.aspx) w *OLE DB Podręcznik programisty*.  
+ Zobacz [ICommand::GetDBSession](/previous-versions/windows/desktop/ms719622\(v=vs.85\)) w *OLE DB Podręcznik programisty*.  
   
 ### <a name="remarks"></a>Uwagi  
  Przydatne do pobierania właściwości z sesji.  

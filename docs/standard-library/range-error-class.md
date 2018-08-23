@@ -1,7 +1,7 @@
 ---
 title: range_error — klasa | Dokumentacja firmy Microsoft
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 08/14/2018
 ms.technology:
 - cpp-standard-libraries
 ms.topic: reference
@@ -16,16 +16,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 63d6497dda220723587623cb42551366ddcbef80
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: cf6c2f46d3dedc80cb89e6776a82eee6ebe57026
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33853089"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42465424"
 ---
 # <a name="rangeerror-class"></a>range_error — Klasa
 
-Klasa służy jako klasa podstawowa dla wszystkich wyjątków zgłaszanych zgłosić błąd zakresu.
+Klasa służy jako klasa bazowa dla wszystkich wyjątków generowanych, aby zgłosić błąd zakresu.
 
 ## <a name="syntax"></a>Składnia
 
@@ -33,15 +33,13 @@ Klasa służy jako klasa podstawowa dla wszystkich wyjątków zgłaszanych zgło
 class range_error : public runtime_error {
 public:
     explicit range_error(const string& message);
-
     explicit range_error(const char *message);
-
 };
 ```
 
 ## <a name="remarks"></a>Uwagi
 
-Wartość zwrócona przez [co](../standard-library/exception-class.md) kopię **komunikat**`.`[danych](../standard-library/basic-string-class.md#data).
+Wartość zwrócona przez obiekt [co](../standard-library/exception-class.md) jest kopią `message.data`. Aby uzyskać więcej informacji, zobacz [basic_string::data](../standard-library/basic-string-class.md#data).
 
 ## <a name="example"></a>Przykład
 
@@ -56,7 +54,7 @@ int main()
    {
       throw range_error( "The range is in error!" );
    }
-   catch (exception &e)
+   catch (range_error &e)
    {
       cerr << "Caught: " << e.what( ) << endl;
       cerr << "Type: " << typeid( e ).name( ) << endl;
@@ -70,9 +68,9 @@ Type: class std::range_error
 
 ## <a name="requirements"></a>Wymagania
 
-**Nagłówek:** \<stdexcept — >
+**Nagłówek:** \<stdexcept >
 
-**Namespace:** Standard
+**Namespace:** standardowe
 
 ## <a name="see-also"></a>Zobacz także
 

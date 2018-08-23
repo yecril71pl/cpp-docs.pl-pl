@@ -18,25 +18,26 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 87dd737b1bbe9263af5ef6416e7d6b8d287feb53
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 15491517ad95973d7eabf2998741dbcc89ca602b
+ms.sourcegitcommit: d4c803bd3a684d7951bf88dcecf1f14af43ae411
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33849473"
+ms.lasthandoff: 08/10/2018
+ms.locfileid: "42465399"
 ---
 # <a name="omp"></a>omp
-Trwa co najmniej jeden dyrektywy OpenMP, wraz z dowolnym opcjonalna klauzula w dyrektywie.  
+Trwa co najmniej jeden OpenMP, dyrektywy, oraz wszelkie opcjonalne klauzulach dyrektywy.  
   
 ## <a name="syntax"></a>Składnia  
   
 ```  
-  
 #pragma omp directive  
 ```  
   
 ## <a name="remarks"></a>Uwagi  
- Zobacz [dyrektywy OpenMP](../parallel/openmp/reference/openmp-directives.md) Aby uzyskać więcej informacji.  
+ 
+Zobacz [OpenMP, dyrektywy](../parallel/openmp/reference/openmp-directives.md) Aby uzyskać więcej informacji.  
   
 ## <a name="see-also"></a>Zobacz też  
- [Dyrektywy pragma i słowo kluczowe __Pragma](../preprocessor/pragma-directives-and-the-pragma-keyword.md)
+
+[Dyrektywy pragma i słowo kluczowe __Pragma](../preprocessor/pragma-directives-and-the-pragma-keyword.md)

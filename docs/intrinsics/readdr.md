@@ -16,12 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ee18591ea3729551f00267fef6e4594a45f673ed
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: bd45e8919e7b1f0347511e2c3ad782975ecbe71a
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33332978"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42466145"
 ---
 # <a name="readdr"></a>__readdr
 Odczytuje wartość rejestru określonego debugowania.  
@@ -35,7 +35,7 @@ unsigned __int64 __readdr(unsigned int DebugRegister);
   
 #### <a name="parameters"></a>Parametry  
  [in] `DebugRegister`  
- Zarejestruj stała z zakresu od 0 do 7, który identyfikuje debugowania.  
+ Zarejestruj stałą z zakresu od 0 do 7, który identyfikuje debugowania.  
   
 ## <a name="return-value"></a>Wartość zwracana  
  Wartość rejestru określonego debugowania.  
@@ -45,13 +45,13 @@ unsigned __int64 __readdr(unsigned int DebugRegister);
   
 ## <a name="requirements"></a>Wymagania  
   
-|— Wewnętrzne|Architektura|  
+|Wewnętrzne|Architektura|  
 |---------------|------------------|  
-|`__readdr`|x86, [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
+|`__readdr`|x86, x64|  
   
- **Plik nagłówka** \<intrin.h >  
+ **Plik nagłówkowy** \<intrin.h >  
   
-**KOŃCOWY określonych firmy Microsoft**  
+**END specyficzny dla Microsoft**  
   
 ## <a name="see-also"></a>Zobacz też  
  [Funkcje wewnętrzne kompilatora](../intrinsics/compiler-intrinsics.md)   

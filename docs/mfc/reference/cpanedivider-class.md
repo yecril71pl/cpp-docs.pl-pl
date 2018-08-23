@@ -94,17 +94,17 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7315adc855b0bfbe1cc4ffae87c416fbaa584d57
-ms.sourcegitcommit: be0e3457f2884551f18e183ef0ea65c3ded7f689
+ms.openlocfilehash: d19ede21d90353f9741a5a1250eddf049de71aa6
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/28/2018
-ms.locfileid: "37079367"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42466135"
 ---
 # <a name="cpanedivider-class"></a>Klasa CPaneDivider
-[!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+Aby uzyskać więcej informacji, zobacz kod źródłowy znajdujący się w **VC\\atlmfc\\src\\mfc** folder instalacji programu Visual Studio.  
   
- `CPaneDivider` Klasy dzieli dwa okienka, dzieli dwie grupy okienka lub oddziela grupę okienka z obszaru klienckiego głównego okna ramowego.  
+ `CPaneDivider` Klasy dzieli dwa okienka, dzieli się dwie grupy okienka lub oddziela grupę okienek z obszaru klienckiego okna ramki głównej.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -163,27 +163,27 @@ class CPaneDivider : public CBasePane
   
 |Nazwa|Opis|  
 |----------|-----------------|  
-|[CPaneDivider::GetPanes](#getpanes)|Zwraca listę okienka, które znajdują się w [CPaneContainer klasy](../../mfc/reference/cpanecontainer-class.md). Tę metodę należy wywoływać tylko w przypadku domyślnego okienka separatorów.|  
-|[CPaneDivider::GetPaneDividers](#getpanedividers)|Zwraca listę separatorów okienko, które znajdują się w [CPaneContainer klasy](../../mfc/reference/cpanecontainer-class.md). Tę metodę należy wywoływać tylko w przypadku domyślnego okienka separatorów.|  
+|[CPaneDivider::GetPanes](#getpanes)|Zwraca listę wszystkich okienek, które znajdują się w [klasa CPaneContainer](../../mfc/reference/cpanecontainer-class.md). Tę metodę należy wywoływać tylko w przypadku domyślnego okienka separatorów.|  
+|[CPaneDivider::GetPaneDividers](#getpanedividers)|Zwraca listę separatorów okienko, które znajdują się w [klasa CPaneContainer](../../mfc/reference/cpanecontainer-class.md). Tę metodę należy wywoływać tylko w przypadku domyślnego okienka separatorów.|  
   
 ### <a name="data-members"></a>Elementy członkowskie danych  
   
 |Nazwa|Opis|  
 |----------|-----------------|  
-|[CPaneDivider::m_nDefaultWidth](#m_ndefaultwidth)|Określa domyślną szerokość w pikselach wszystkich separatorów okienko w aplikacji.|  
-|[CPaneDivider::m_pSliderRTC](#m_psliderrtc)|Zawiera wskaźnik do informacji o klasie czasu wykonywania o `CPaneDivider`-pochodzi z obiektu.|  
+|[CPaneDivider::m_nDefaultWidth](#m_ndefaultwidth)|Określa domyślną szerokość w pikselach wszystkich separator okienka w aplikacji.|  
+|[CPaneDivider::m_pSliderRTC](#m_psliderrtc)|Przechowuje wskaźnik do informacji o klasie czasu wykonywania o `CPaneDivider`-pochodnych obiektu.|  
   
 ## <a name="remarks"></a>Uwagi  
- Tworzy w ramach `CPaneDivider` obiekty automatycznie, jeśli panel jest zadokowany.  
+ Szablon tworzy `CPaneDivider` obiekty automatycznie, gdy jest zadokowany w okienku.  
   
- Istnieją dwa typy separatorów okienka:  
+ Istnieją dwa rodzaje separator okienka:  
   
--   domyślne dzielnik jest tworzony podczas grupę okienek jest zadokowany stronę główną ramkę okna. Dzielnik domyślny zawiera wskaźnik do [klasy CPaneContainerManager](../../mfc/reference/cpanecontainermanager-class.md) i przekierowuje większości operacji na grupę okienka (np. zmiana rozmiaru okienka lub dokowanie innego okienka lub kontenera) do kontenera menedżera. Okienko dokujące w każdym zachowuje wskaźnik do jego domyślny dzielnik.  
+-   Separator okienka domyślne jest tworzone, gdy grupę okienek jest zadokowany do strony ramki głównego okna. Separator okienka domyślne przechowuje wskaźnik do [klasa CPaneContainerManager](../../mfc/reference/cpanecontainermanager-class.md) i przekierowuje większości operacji na grupę okienek (np. Zmienianie rozmiaru okienka lub dokowanie innego okienka lub kontener) do kontenera menedżera. Każde okienko dokowania przechowuje wskaźnik do jego domyślne dzielnik.  
   
--   Regularne dzielnik dzieli tylko dwa okienka w kontenerze. Aby uzyskać więcej informacji, zobacz [CPaneContainer klasy](../../mfc/reference/cpanecontainer-class.md).  
+-   Separator okienka regularnych tylko dzieli dwa okienka w kontenerze. Aby uzyskać więcej informacji, zobacz [klasa CPaneContainer](../../mfc/reference/cpanecontainer-class.md).  
   
 ## <a name="example"></a>Przykład  
- W poniższym przykładzie pokazano, jak uzyskać `CPaneDivider` obiekt z `CWorkspaceBar` obiektu. Następujący fragment kodu jest częścią [próbka Demo kart MDI](../../visual-cpp-samples.md).  
+ Poniższy przykład pokazuje, jak uzyskać `CPaneDivider` obiektu z `CWorkspaceBar` obiektu. Ten fragment kodu jest częścią [próbka Demo kart MDI](../../visual-cpp-samples.md).  
   
  [!code-cpp[NVC_MFC_MDITabsDemo#5](../../mfc/reference/codesnippet/cpp/cpanedivider-class_1.cpp)]  
   
@@ -440,7 +440,7 @@ const CBasePane* GetFirstPane() const;
 ### <a name="remarks"></a>Uwagi  
   
 ##  <a name="getpanedividers"></a>  CPaneDivider::GetPaneDividers  
- Zwraca listę separatorów okienko, które znajdują się w [CPaneContainer klasy](../../mfc/reference/cpanecontainer-class.md). Tę metodę należy wywoływać tylko w przypadku domyślnego okienka separatorów.  
+ Zwraca listę separatorów okienko, które znajdują się w [klasa CPaneContainer](../../mfc/reference/cpanecontainer-class.md). Tę metodę należy wywoływać tylko w przypadku domyślnego okienka separatorów.  
   
 ```  
 void GetPaneDividers(CObList& lstSliders);
@@ -451,7 +451,7 @@ void GetPaneDividers(CObList& lstSliders);
  Zawiera listę separatorów okienko, które znajdują się w kontenerze okienka.  
   
 ### <a name="remarks"></a>Uwagi  
- Tę metodę należy wywoływać dla domyślnego okienka tylko separatorów. Domyślne dzielnik jest separator, który zmienia rozmiar okienka całego kontenera.  
+ Ta metoda powinna być wywoływana dla domyślnego okienka tylko separatorów. Separator okienka domyślny jest separator, który zmienia rozmiar okienka całego kontenera.  
   
 ##  <a name="getpanedividerstyle"></a>  CPaneDivider::GetPaneDividerStyle  
 
@@ -465,7 +465,7 @@ DWORD GetPaneDividerStyle() const;
 ### <a name="remarks"></a>Uwagi  
   
 ##  <a name="getpanes"></a>  CPaneDivider::GetPanes  
- Zwraca listę okienka, które znajdują się w [CPaneContainer klasy](../../mfc/reference/cpanecontainer-class.md). Tę metodę należy wywoływać tylko do pobierania domyślnego okienka separatorów.  
+ Zwraca listę wszystkich okienek, które znajdują się w [klasa CPaneContainer](../../mfc/reference/cpanecontainer-class.md). Tę metodę należy wywoływać tylko w celu pobrania separator okienka domyślne.  
   
 ```  
 void GetPanes(CObList& lstBars);
@@ -473,10 +473,10 @@ void GetPanes(CObList& lstBars);
   
 ### <a name="parameters"></a>Parametry  
  [out] *lstBars*  
- Zawiera listę okienka, które znajdują się w kontenerze okienka.  
+ Zawiera listę okienek, które znajdują się w kontenerze okienka.  
   
 ### <a name="remarks"></a>Uwagi  
- Tę metodę należy wywoływać dla domyślnego okienka tylko separatorów. Domyślne dzielnik jest separator, który zmienia rozmiar okienka całego kontenera.  
+ Ta metoda powinna być wywoływana dla domyślnego okienka tylko separatorów. Separator okienka domyślny jest separator, który zmienia rozmiar okienka całego kontenera.  
   
 ##  <a name="getrootcontainerrect"></a>  CPaneDivider::GetRootContainerRect  
 
@@ -570,7 +570,7 @@ BOOL IsHorizontal() const;
 ### <a name="remarks"></a>Uwagi  
   
 ##  <a name="m_ndefaultwidth"></a>  CPaneDivider::m_nDefaultWidth  
- Określa domyślną szerokość w pikselach, wszystkie separatorów okienko w aplikacji.  
+ Określa domyślną szerokość w pikselach, wszystkie separator okienka w aplikacji.  
   
 ```  
 AFX_IMPORT_DATA static int m_nDefaultWidth;  
@@ -592,17 +592,17 @@ virtual void Move(
 ### <a name="remarks"></a>Uwagi  
   
 ##  <a name="m_psliderrtc"></a>  CPaneDivider::m_pSliderRTC  
- Zawiera wskaźnik do informacji o klasie czasu wykonywania o `CPaneDivider`-pochodzi z obiektu.  
+ Przechowuje wskaźnik do informacji o klasie czasu wykonywania o `CPaneDivider`-pochodnych obiektu.  
   
 ```  
 AFX_IMPORT_DATA static CRuntimeClass* m_pSliderRTC;  
 ```  
   
 ### <a name="remarks"></a>Uwagi  
- Ustaw wartość tej zmiennej elementu członkowskiego w przypadku utworzenia niestandardowego dzielnik. Dzięki temu platformę, by utworzyć Twoje dzielnik narysować okienka.  
+ Jeśli tworzysz rozdzielacz okienka niestandardowe, należy ustawić tę zmienną elementu członkowskiego. Dzięki temu strukturę w celu utworzenia usługi dzielnik podczas rysowania okienka.  
   
 ### <a name="example"></a>Przykład  
- Poniższy przykład przedstawia sposób ustawiania `m_pSliderRTC` zmiennej członkowskiej:  
+ Poniższy przykład pokazuje, jak ustawić `m_pSliderRTC` zmiennej elementu członkowskiego:  
   
 ```  
 class CMySplitter : public CPaneDivider  

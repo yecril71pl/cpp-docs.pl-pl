@@ -18,15 +18,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2b6cb84ae6ffebda3dd335bc001463e2d8579f99
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 3f6851813172c39cd3c8c5dfe19b4d12ba81d090
+ms.sourcegitcommit: d4c803bd3a684d7951bf88dcecf1f14af43ae411
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33850297"
+ms.lasthandoff: 08/10/2018
+ms.locfileid: "42464452"
 ---
 # <a name="executioncharacterset"></a>execution_character_set
-Określa zestaw znaków wykonania używane dla literałów ciągów i znakowe. Ta dyrektywa nie jest wymagany dla literałów oznaczone prefiksem u8.  
+Określa zestaw znaków wykonania, które są używane w literałach ciągów i znakowe. Ta dyrektywa nie jest wymagana dla literałów oznaczone z prefiksem u8.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -34,20 +34,22 @@ Określa zestaw znaków wykonania używane dla literałów ciągów i znakowe. T
 #pragma execution_character_set("target")  
 ```  
   
-#### <a name="parameters"></a>Parametry  
- `target`  
- Określa zestaw znaków wykonania docelowej. Obecnie tylko wykonanie docelowego ustawić obsługiwane jest "utf-8".  
+### <a name="parameters"></a>Parametry  
+*Docelowy*  
+Określa zestaw znaków wykonania docelowego. Obecnie tylko wykonanie docelowego zestawu obsługiwane jest "utf-8".  
   
 ## <a name="remarks"></a>Uwagi  
- Ta dyrektywa kompilatora jest przestarzałe, począwszy od programu Visual Studio 2015 Update 2. Firma Microsoft zaleca użycie **/execution-charset:utf-8** lub **/UTF-8** — opcje kompilatora wraz z przy użyciu `u8` prefiks wąskie znaków i ciągu literałów zawierające rozszerzone znaki. Aby uzyskać więcej informacji na temat `u8` prefiksu, zobacz [literały ciągów i znakowe](../cpp/string-and-character-literals-cpp.md). Aby uzyskać więcej informacji na temat opcji kompilatora, zobacz [/Execution-Charset (Ustaw wykonywania zestaw znaków)](../build/reference/execution-charset-set-execution-character-set.md) i [/UTF-8 (Ustaw źródło i plik wykonywalny znak zestawów do UTF-8)](../build/reference/utf-8-set-source-and-executable-character-sets-to-utf-8.md).  
+ 
+Ta dyrektywa kompilatora jest przestarzały, począwszy od programu Visual Studio 2015 Update 2. Firma Microsoft zaleca użycie `/execution-charset:utf-8` lub `/utf-8` opcje kompilatora wraz z przy użyciu `u8` prefiks wąskie literały znakowe i zawierających znaki specjalne. Aby uzyskać więcej informacji na temat `u8` prefiksu, zobacz [literały ciągów i znakowe](../cpp/string-and-character-literals-cpp.md). Aby uzyskać więcej informacji na temat opcji kompilatora, zobacz [/Execution-Charset (Ustaw zestaw znaków wykonywania)](../build/reference/execution-charset-set-execution-character-set.md) i [/UTF-8 (Ustaw źródłowy i wykonywalny zestawów na UTF-8 znaków)](../build/reference/utf-8-set-source-and-executable-character-sets-to-utf-8.md).  
   
- `#pragma execution_character_set("utf-8")` Dyrektywy informuje kompilator, aby zakodować literały wąski ciąg w kodzie źródłowym i znaki wąskie jako UTF-8 w pliku wykonywalnym. Ten typ kodowania danych wyjściowych jest niezależna od pliku źródłowego kodowanie używane.  
+`#pragma execution_character_set("utf-8")` Dyrektywy informuje kompilator, aby zakodować wąskie znakowe i literały ciągu wąskiego w kodzie źródłowym jako UTF-8 w pliku wykonywalnym. Kodowanie wyjścia jest niezależna od plików źródłowych kodowanie używane.  
   
- Domyślnie kompilator koduje znaki wąskie i ciągi wąskie przy użyciu bieżącej strony kodowej jako zestaw znaków wykonania. Oznacza to, że znaki Unicode lub znaków Dwubajtowych w literału, które są poza zakresem bieżącej stronie kodowej są konwertowane na domyślnym znakiem zastępującym w danych wyjściowych. Znaki Unicode i znaków Dwubajtowych są zaokrąglane do ich mniej znaczącego bajtu. To jest prawie na pewno nie co ma. Można określić dla literałów w pliku źródłowym kodowania UTF-8 za pomocą `u8` prefiks. Kompilator przekazuje te ciągi kodowany w formacie UTF-8 bez zmian danych wyjściowych. Literały znaków wąskie prefiksem przy użyciu u8 musi mieścić się w jednego bajtu lub są one obcięte w danych wyjściowych.  
+Domyślnie kompilator koduje wąskie znaków i ciągów wąskie przy użyciu bieżącej stronie kodowej jako zestaw znaków wykonania. Oznacza to, że Unicode lub znaków Dwubajtowych znaków literału, które wykraczają poza zakres bieżącej stronie kodowej są konwertowane na domyślnym znakiem zastępującym w danych wyjściowych. Unicode i znaków Dwubajtowych znaków są zaokrąglane do ich mniej znaczący bajt. To prawie na pewno nie co planowane. Można określić kodowania UTF-8 dla literałów w pliku źródłowym, za pomocą `u8` prefiks. Kompilator przekazuje te ciągi zakodowane w formacie UTF-8 danych wyjściowych bez zmian. Literały wąskiego znaku, poprzedzony przy użyciu u8 muszą mieścić się w jednym bajtem lub są one obcięte w danych wyjściowych.  
   
- Domyślnie program Visual Studio używa bieżącej stronie kodowej jako zestaw znaków źródła sposób interpretowania kodu źródłowego dla danych wyjściowych. Podczas odczytywania pliku w Visual Studio będą interpretowane przez go zgodnie z bieżącą stronę, chyba że określono strony kodowej plików lub znacznik kolejności bajtów (BOM) lub UTF-16 znaków, które zostaną wykryte na początku pliku. Ponieważ UTF-8 nie można ustawić jako bieżącej stronie kodowej, gdy automatyczne wykrywanie napotka zakodowane jako UTF-8 bez BOM pliki źródłowe, Visual Studio zakłada, że są zakodowane przy użyciu bieżącej strony kodowej. Znaki w pliku źródłowym, które są poza zakresem określonym lub automatycznie wykrył, że strona kodowa może spowodować kompilatora ostrzeżeń i błędów.  
+Domyślnie program Visual Studio używa bieżącej stronie kodowej jako źródłowy zestaw znaków używany do interpretacji parametrów kodu źródłowego dla danych wyjściowych. Podczas odczytywania pliku w Visual Studio interpretuje słowa kluczowe go zgodnie z bieżącej stronie kodowej, chyba, że została ustawiona na stronę kodową pliku lub znacznik kolejności bajtów (BOM) lub UTF-16 znaków, które są wykrywane na początku pliku. UTF-8 nie może być ustawione jako bieżącej stronie kodowej, gdy automatyczne wykrywanie napotka pliki źródłowe zakodowanymi w formacie UTF-8 bez BOM, dlatego Visual Studio zakłada, że zostaną one zakodowane przy użyciu bieżącej stronie kodowej. Znaki w pliku źródłowym, które są spoza zakresu określonego lub automatycznie wykrył, że strona kodowa może spowodować ostrzeżenia kompilatora i błędów.  
   
 ## <a name="see-also"></a>Zobacz też  
- [Dyrektywy pragma i słowo kluczowe __Pragma](../preprocessor/pragma-directives-and-the-pragma-keyword.md)   
- [/ Execution-Charset (Ustaw wykonywania zestaw znaków)](../build/reference/execution-charset-set-execution-character-set.md)   
- [/utf-8 (Ustaw źródłowy i wykonywalny zestaw znaków na UTF-8)](../build/reference/utf-8-set-source-and-executable-character-sets-to-utf-8.md)
+ 
+[Dyrektywy pragma i słowo kluczowe __Pragma](../preprocessor/pragma-directives-and-the-pragma-keyword.md)   
+[/ Execution-Charset (Ustaw zestaw znaków wykonywania)](../build/reference/execution-charset-set-execution-character-set.md)   
+[/utf-8 (Ustaw źródłowy i wykonywalny zestaw znaków na UTF-8)](../build/reference/utf-8-set-source-and-executable-character-sets-to-utf-8.md)

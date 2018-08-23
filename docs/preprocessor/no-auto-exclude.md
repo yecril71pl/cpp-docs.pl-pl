@@ -16,17 +16,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4b0c8d28e1e9c7306c1a74db90177caf76ca95b0
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 5cae3a52c3434317ee26292de13d3e0471d78998
+ms.sourcegitcommit: d4c803bd3a684d7951bf88dcecf1f14af43ae411
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33839525"
+ms.lasthandoff: 08/10/2018
+ms.locfileid: "42464927"
 ---
 # <a name="noautoexclude"></a>no_auto_exclude
-**Określonego języka C++**  
+**Określonego język C++**  
   
- Wyłącza automatyczne wyłączenie.  
+Wyłącza automatyczne wykluczenia.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -35,10 +35,12 @@ no_auto_exclude
 ```  
   
 ## <a name="remarks"></a>Uwagi  
- Biblioteki typów może obejmować definicje elementów zdefiniowanych w nagłówkach systemu lub innych bibliotek typów. `#import` podejmuje próbę uniknięcia wiele błędów definicji automatycznie wyłączając takie elementy. Po zakończeniu [C4192 ostrzeżenie kompilatora (poziom 3)](../error-messages/compiler-warnings/compiler-warning-level-3-c4192.md) będą wystawiane dla każdego elementu mają być wykluczone. To wykluczenie automatycznego można wyłączyć za pomocą tego atrybutu.  
+ 
+Biblioteki typów mogą obejmować definicje elementy zdefiniowane w nagłówkach systemu lub inne biblioteki typów. `#import` próbuje uniknąć wiele błędów definicji wykluczając automatycznie takie elementy. Po zakończeniu tej operacji [ostrzeżenie kompilatora (poziom 3) C4192](../error-messages/compiler-warnings/compiler-warning-level-3-c4192.md) będą wystawiane dla każdego elementu, które mają być wykluczone. To wykluczenie automatycznego można wyłączyć za pomocą tego atrybutu.  
   
- **KOŃCOWY określonego języka C++**  
+**KONIEC określonego języka C++**  
   
 ## <a name="see-also"></a>Zobacz też  
- [atrybuty #import](../preprocessor/hash-import-attributes-cpp.md)   
- [#import — dyrektywa](../preprocessor/hash-import-directive-cpp.md)
+ 
+[atrybuty #import](../preprocessor/hash-import-attributes-cpp.md)   
+[#import — dyrektywa](../preprocessor/hash-import-directive-cpp.md)

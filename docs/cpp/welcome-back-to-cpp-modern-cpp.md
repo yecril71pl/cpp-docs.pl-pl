@@ -12,12 +12,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c4426f3d25681e3ee46bf4d5da615d185babb0f0
-ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
+ms.openlocfilehash: d626385523cb957b44589784c2e69539b5ed8fca
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39462365"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42465058"
 ---
 # <a name="welcome-back-to-c-modern-c"></a>Zapraszamy ponownie do języka C++ (Modern C++)
 Język C++ jest jednym z najczęściej używanych języków programowania na świecie. Dobrze napisane programy ++ są szybkie i wydajne. Język jest bardziej elastyczny niż inne języki, ponieważ służy do tworzenia szerokiej gamy aplikacji — od zabawnych i emocjonujących gier do wysokiej wydajności naukowego oprogramowania, sterowników urządzeń, programów osadzonych i aplikacji klienckich Windows. Ponad 20 lat firma C++ został użyty do rozwiązywania problemów, takich jak te i wiele innych. Co możesz nie znać jest, że rosnąca liczba programistów C++ ma składanych zapasową wyświechtanego stylu programowania C już przeszłość i przyjęła nowoczesny C++, zamiast tego.  
@@ -107,7 +107,7 @@ void f()
   
  C++ przeżywa odrodzenia, ponieważ moc jest ponownie królem. W językach Java i C# są dobre, gdy wydajność pracy programisty jest ważna, ale wykazują swoje ograniczenia, gdy moc i wydajność mają ogromne znaczenie. Wysokiej wydajności i mocy, zwłaszcza na urządzeniach, które mają ograniczenia sprzętowe nic nie uderzeń nowoczesnym języku C++.  
   
- Nie tylko język jest nowoczesny, narzędzia programistyczne są zbyt. [!INCLUDE[vsprvs](../assembler/masm/includes/vsprvs_md.md)] sprawia, że wszystkie części cyklu rozwoju odporne i wydajne. Obejmuje narzędzia do zarządzania cyklem życia aplikacji (ALM), ulepszenia IDE, takie jak IntelliSense, mechanizmy z przyjaznymi narzędzie narzędziami jak XAML i kompilowanie, debugowanie i wiele innych narzędzi.  
+ Nie tylko język jest nowoczesny, narzędzia programistyczne są zbyt. Program Visual Studio sprawia, że wszystkie części cyklu rozwoju odporne i wydajne. Obejmuje narzędzia do zarządzania cyklem życia aplikacji (ALM), ulepszenia IDE, takie jak IntelliSense, mechanizmy z przyjaznymi narzędzie narzędziami jak XAML i kompilowanie, debugowanie i wiele innych narzędzi.  
   
  Artykuły w tej części dokumentacji zapewniają wytyczne wysokiego poziomu i najlepsze praktyki dotyczące najważniejszych funkcji i technik pisania nowoczesnych programów w C++.  
   

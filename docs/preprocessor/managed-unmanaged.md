@@ -22,44 +22,44 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 316866ac047b607ec4c92d7c6d4f8ff233ed9a3f
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 908ed745e82b17dd688f062ac7021c6adf3f4851
+ms.sourcegitcommit: d4c803bd3a684d7951bf88dcecf1f14af43ae411
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33846379"
+ms.lasthandoff: 08/10/2018
+ms.locfileid: "42465329"
 ---
 # <a name="managed-unmanaged"></a>zarządzane, niezarządzane
-Kontrola funkcji na poziomie obliczania funkcji jako zarządzane lub niezarządzane.  
+Włącz kontrolę poziomie funkcji do kompilowania funkcji jako zarządzane lub niezarządzane.  
   
 ## <a name="syntax"></a>Składnia  
   
 ```  
-  
-      #pragma managed  
+#pragma managed  
 #pragma unmanaged  
 #pragma managed([push,] on | off)  
 #pragma managed(pop)  
 ```  
   
 ## <a name="remarks"></a>Uwagi  
- [/CLR](../build/reference/clr-common-language-runtime-compilation.md) — opcja kompilatora można kontrolować poziom modułu dla kompilowania funkcji jako zarządzane lub niezarządzane.  
+
+[/CLR](../build/reference/clr-common-language-runtime-compilation.md) — opcja kompilatora można kontrolować poziom modułu do kompilowania funkcji, jako zarządzane lub niezarządzane.  
   
- Funkcji niezarządzanej zostanie skompilowany dla platformy natywnego, a wykonanie tej części, program zostanie przekazany do natywnego platformy przez środowisko uruchomieniowe języka wspólnego.  
+Niezarządzanej funkcji zostanie skompilowany dla platformy natywnej, a wykonanie tej części, program zostanie przekazany do platformy natywnej przez środowisko uruchomieniowe języka wspólnego.  
   
- Funkcje są kompilowane jako zarządzany domyślnie podczas **/CLR** jest używany.  
+Funkcje są kompilowane jako zarządzany domyślnie podczas `/clr` jest używany.  
   
- Podczas stosowania tych pragm:  
+Podczas stosowania tych pragmy:  
   
--   Dodaj pragma poprzedzających funkcji, ale nie w treści funkcji.  
+- Dodaj pragma poprzedzających funkcji, ale nie w treści funkcji.  
   
--   Dodaj pragma po `#include` instrukcje. Nie należy używać tych pragm przed `#include` instrukcje.  
+- Dodaj dyrektywę po `#include` instrukcji. Nie należy używać tych pragm przed `#include` instrukcji.  
   
- Kompilator ignoruje `managed` i `unmanaged` pragm Jeśli **/CLR** nie jest używany w kompilacji.  
+Kompilator ignoruje **zarządzane** i **niezarządzanych** pragm Jeśli `/clr` nie jest używany w kompilacji.  
   
- Podczas tworzenia wystąpienia klasy funkcji szablonu stan pragma w czasie definicji szablonu określa, czy ma zarządzane lub niezarządzane.  
+Podczas tworzenia wystąpienia szablonu funkcji stan pragmy w czasie definicji szablonu określa, czy ma zarządzane lub niezarządzane.  
   
- Aby uzyskać więcej informacji, zobacz [inicjowanie zestawów mieszanych](../dotnet/initialization-of-mixed-assemblies.md).  
+Aby uzyskać więcej informacji, zobacz [inicjowanie zestawów mieszanych](../dotnet/initialization-of-mixed-assemblies.md).  
   
 ## <a name="example"></a>Przykład  
   
@@ -98,4 +98,5 @@ In unmanaged function.
 ```  
   
 ## <a name="see-also"></a>Zobacz też  
- [Dyrektywy pragma i słowo kluczowe __Pragma](../preprocessor/pragma-directives-and-the-pragma-keyword.md)
+
+[Dyrektywy pragma i słowo kluczowe __Pragma](../preprocessor/pragma-directives-and-the-pragma-keyword.md)

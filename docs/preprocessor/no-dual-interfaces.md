@@ -16,17 +16,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a8923adb4cf2e92d72bf656064c6de8fc66e2a91
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: f1e919e48b79c9fe98a7a33257ebd0f70061d788
+ms.sourcegitcommit: d4c803bd3a684d7951bf88dcecf1f14af43ae411
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33850785"
+ms.lasthandoff: 08/10/2018
+ms.locfileid: "42465502"
 ---
 # <a name="nodualinterfaces"></a>no_dual_interfaces
-**Określonego języka C++**  
+**Określonego język C++**  
   
- Zmienia sposób kompilator generuje funkcje otoki dla metody interfejsu podwójny.  
+Zmienia sposób, kompilator generuje funkcje otoki dla metod podwójnego interfejsu.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -35,10 +35,12 @@ no_dual_interfaces
 ```  
   
 ## <a name="remarks"></a>Uwagi  
- Normalnie otoka wywoła metodę za pośrednictwem tabeli funkcji wirtualnych dla interfejsu. Z `no_dual_interfaces`, zamiast tego wywołuje otoka **IDispatch::Invoke** można wywołać metody.  
+ 
+Zwykle otoki wywoła metodę przez tabelę funkcji wirtualnych dla interfejsu. Za pomocą **no_dual_interfaces —**, zamiast tego wywołania otoki `IDispatch::Invoke` było wywołanie metody.  
   
- **KOŃCOWY określonego języka C++**  
+**KONIEC określonego języka C++**  
   
 ## <a name="see-also"></a>Zobacz też  
- [atrybuty #import](../preprocessor/hash-import-attributes-cpp.md)   
- [#import — dyrektywa](../preprocessor/hash-import-directive-cpp.md)
+ 
+[atrybuty #import](../preprocessor/hash-import-attributes-cpp.md)   
+[#import — dyrektywa](../preprocessor/hash-import-directive-cpp.md)

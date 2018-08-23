@@ -142,12 +142,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c681cc5f79d0c9d876da522666565e5a43c8e145
-ms.sourcegitcommit: 76fd30ff3e0352e2206460503b61f45897e60e4f
+ms.openlocfilehash: d758bcc700180781c899f2263fe04c29ee0e6409
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/13/2018
-ms.locfileid: "39028008"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42466148"
 ---
 # <a name="cfiledialog-class"></a>Klasa CFileDialog
 Hermetyzuje wspólne okno dialogowe, które służy do otwarcia pliku lub pliku operacji zapisywania.  
@@ -561,7 +561,7 @@ explicit CFileDialog(
   
  *LpszFilter* parametr jest używany do określenia typu nazwy pliku, plik musi mieć będzie wyświetlana na liście plików. Pierwszy ciąg w parze ciągu w tym artykule opisano filter; drugi ciąg wskazuje rozszerzenie nazwy pliku do użycia. Wiele rozszerzeń mogą być określone przy użyciu średnika (znak ";") jako ogranicznika. Ciąg kończy się przy użyciu dwóch "&#124;" znaków, w którym następuje znak NULL. Można również użyć [CString](../../atl-mfc-shared/using-cstring.md) obiektu dla tego parametru.  
   
- Na przykład [!INCLUDE[ofprexcel](../../mfc/reference/includes/ofprexcel_md.md)] umożliwia użytkownikom otwieranie plików, które mają rozszerzenia xlc (wykres) lub xls (arkusz), między innymi. Filtr dla programu Excel może być zapisana jako:  
+ Na przykład program Microsoft Excel umożliwia użytkownikom otwieranie plików, które mają rozszerzenia xlc (wykres) lub xls (arkusz), między innymi. Filtr dla programu Excel może być zapisana jako:  
   
  [!code-cpp[NVC_MFCFiles#24](../../atl-mfc-shared/reference/codesnippet/cpp/cfiledialog-class_2.cpp)]  
   
@@ -1353,7 +1353,7 @@ void SetControlText(
  Wskaźnik do ciągu, który zawiera tekst, który ma wartość dla formantu.  
   
 ### <a name="remarks"></a>Uwagi  
- Obie wersje tej funkcji są prawidłowe dla aplikacji, które używają Unicode. Jednak tylko wersję z typem LPCSTR nadaje się do aplikacji, które używają [!INCLUDE[vcpransi](../../atl-mfc-shared/reference/includes/vcpransi_md.md)].  
+ Obie wersje tej funkcji są prawidłowe dla aplikacji, które używają Unicode. Jednak tylko wersję z typem LPCSTR jest prawidłowy dla aplikacji, które używają ANSI.  
   
  Aby użyć tej metody, należy utworzyć okno dialogowe ze stylem OFN_EXPLORER. W przeciwnym wypadku funkcja zakończy się niepowodzeniem o potwierdzenie.  
   
@@ -1439,16 +1439,16 @@ void SetTemplate(
  Zawiera identyfikator zasobu szablonu dla innego niż Eksploratora `CFileDialog` obiektu. Ten szablon jest używana tylko na Windows NT 3.51 lub styl OFN_EXPLORER nie jest obecny.  
   
  [in] *nWin4ID*  
- Zawiera identyfikator zasobu szablon dla Eksploratora `CFileDialog` obiektu. Ten szablon jest używany tylko w systemach [!INCLUDE[WinNt4Family](../../mfc/reference/includes/winnt4family_md.md)] i nowszy, Windows 95 i nowsze wersje, lub gdy styl OFN_EXPLORER jest obecny.  
+ Zawiera identyfikator zasobu szablon dla Eksploratora `CFileDialog` obiektu. Ten szablon jest używany tylko na Windows NT 4.0 i nowszy, Windows 95 i nowszymi wersjami lub gdy styl OFN_EXPLORER jest obecny.  
   
  [in] *lpWin3ID*  
  Zawiera nazwę zasobu szablon dla innych Eksploratora `CFileDialog` obiektu. Ten szablon jest używana tylko na Windows NT 3.51 lub styl OFN_EXPLORER nie jest obecny.  
   
  [in] *lpWin4ID*  
- Zawiera nazwę zasobu szablon z poziomu Eksploratora `CFileDialog` obiektu. Ten szablon jest używany tylko w systemach [!INCLUDE[WinNt4Family](../../mfc/reference/includes/winnt4family_md.md)] i nowszy, Windows 95 i nowsze wersje, lub gdy styl OFN_EXPLORER jest obecny.  
+ Zawiera nazwę zasobu szablon z poziomu Eksploratora `CFileDialog` obiektu. Ten szablon jest używany tylko na Windows NT 4.0 i nowszy, Windows 95 i nowszymi wersjami lub gdy styl OFN_EXPLORER jest obecny.  
   
 ### <a name="remarks"></a>Uwagi  
- System użyje tylko jednego z szablonów określony. System określi, jaki szablon do użycia na podstawie obecności styl OFN_EXPLORER i systemu operacyjnego, która aplikacja jest uruchomiona na. Określając-Explorer i szablon stylu Eksploratora, jest łatwy do działu pomocy technicznej Windows NT 3.51, [!INCLUDE[WinNt4Family](../../mfc/reference/includes/winnt4family_md.md)] i nowsze wersje, a Windows 95 i nowszych wersjach.  
+ System użyje tylko jednego z szablonów określony. System określi, jaki szablon do użycia na podstawie obecności styl OFN_EXPLORER i systemu operacyjnego, która aplikacja jest uruchomiona na. Określając-Explorer i szablon stylu Eksploratora, jest łatwy do obsługi systemu Windows NT 3.51, Windows NT 4.0 i nowsze wersje i Windows 95 i nowszych wersjach.  
   
 > [!NOTE]
 > Windows Vista lub nowszym stylu pliku oknach dialogowych nie obsługują tej funkcji. Podjęto próbę użycia tej funkcji w Windows Vista lub nowszym okno dialogowe pliku stylu zgłosi [CNotSupportedException](../../mfc/reference/cnotsupportedexception-class.md). Alternatywą jest używać niestandardowe okno dialogowe. Aby uzyskać więcej informacji o korzystaniu z niestandardową `CFileDialog`, zobacz [IFileDialogCustomize](http://msdn.microsoft.com/library/windows/desktop/bb775912).  

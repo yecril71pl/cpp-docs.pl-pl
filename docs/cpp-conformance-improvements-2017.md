@@ -1,7 +1,7 @@
 ---
 title: Ulepszenia zgodności języka C++ | Dokumentacja firmy Microsoft
 ms.custom: ''
-ms.date: 03/11/2018
+ms.date: 08/15/2018
 ms.technology:
 - cpp-language
 ms.topic: conceptual
@@ -10,14 +10,14 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2eb0ea67156671ac682b61cd0e105d1781bda915
-ms.sourcegitcommit: 7eadb968405bcb92ffa505e3ad8ac73483e59685
+ms.openlocfilehash: 43bb06a4ef2229b2b9e98bf7acabbe757744fc73
+ms.sourcegitcommit: b92ca0b74f0b00372709e81333885750ba91f90e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/23/2018
-ms.locfileid: "39209095"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "42464888"
 ---
-# <a name="c-conformance-improvements-in-visual-studio-2017-versions-150-153improvements153-155improvements155-156improvements156-157improvements157"></a>Ulepszenia zgodności języka C++ w Visual Studio 2017 w wersji 15.0, [15.3](#improvements_153), [15.5](#improvements_155), [15.6](#improvements_156), [wersji 15.7](#improvements_157)
+# <a name="c-conformance-improvements-in-visual-studio-2017-versions-150-153improvements153-155improvements155-156improvements156-157improvements157-158update158"></a>Ulepszenia zgodności języka C++ w Visual Studio 2017 w wersji 15.0, [15.3](#improvements_153), [15.5](#improvements_155), [15.6](#improvements_156), [15.7](#improvements_157), [15.8](#update_158)
 
 Dzięki obsłudze uogólnionego wyrażenia constexpr i NSDMI dla wartości zagregowanych kompilator Microsoft Visual C++ jest teraz ukończona funkcje dodane w Standard C ++ 14. Należy zauważyć, że w kompilatorze nadal brakuje kilku funkcji ze standardowych języków C++11 i C++98. Zobacz [Visual zgodność języka C++](visual-cpp-language-conformance.md) dla tabeli, która pokazuje bieżący stan kompilatora.
 
@@ -337,7 +337,7 @@ void bar(A<0> *p)
 
 ### <a name="c17-constexpr-for-chartraits-partial"></a>C ++ 17 constexpr dla char_traits (częściowa Obsługa)
 
-[P0426R1](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0426r1.html) zmieni się na `std::traits_type` elementów członkowskich `length`, `compare`, i `find` przed upewnij `std::string_view` można używać w wyrażeniach stałych. (W programie Visual Studio 2017 w wersji 15.6 obsługę Clang/LLVM tylko. W wersji 15.7 w wersji zapoznawczej 2, pomocy technicznej jest niemal należy wykonać ClXX także.)
+[P0426R1](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0426r1.html) zmieni się na `std::traits_type` elementów członkowskich `length`, `compare`, i `find` przed `std::string_view` można używać w wyrażeniach stałych. (W programie Visual Studio 2017 w wersji 15.6 obsługę Clang/LLVM tylko. W wersji 15.7 w wersji zapoznawczej 2, pomocy technicznej jest niemal należy wykonać ClXX także.)
 
 ## <a name="bug-fixes-in-visual-studio-versions-150-153update153-155update155-157update157-and-158update158"></a>Poprawki błędów w wersjach programu Visual Studio 15.0, [15.3](#update_153), [15.5](#update_155), [15.7](#update_157), i [15.8](#update_158)
 
@@ -1624,6 +1624,8 @@ int main() {
 ```
 
 ## <a name="update_158"></a> Poprawki i zmiany zachowania w programie Visual Studio 2017 wersja 15.8
+
+Zmiany w kompilatorze w programie Visual Studio 2017 wersja 15.8 wszystkie należą do kategorii poprawki i zmiany sposobu działania i są wymienione poniżej:
 
 ### <a name="typename-on-unqualified-identifiers"></a>Element TypeName na niekwalifikowanej identyfikatorów
 

@@ -1,5 +1,5 @@
 ---
-title: Odwołanie DUMPBIN | Dokumentacja firmy Microsoft
+title: Dumpbin — dokumentacja | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -20,20 +20,20 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 46d116ad1efde9ae144e17eb9a4ac2ad996add13
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 4858fe41db5e9a5ac6208881a045e7915b9bdfee
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32372659"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42465435"
 ---
 # <a name="dumpbin-reference"></a>Odwołanie DUMPBIN
-Microsoft COFF plik binarny zrzutu (DUMPBIN. (EXE) Wyświetla informacje o typowych obiektu pliku formatu (COFF) plików binarnych. DUMPBIN służy do sprawdzenia obiektu COFF, pliki, standardowych bibliotek obiektów COFF, plików wykonywalnych i bibliotek dołączanych dynamicznie (dll).  
+Microsoft COFF plik binarny zrzutu (DUMPBIN. Z rozszerzeniem EXE) Wyświetla informacje o plikach binarnych Common Object File Format (COFF). DUMPBIN służy do sprawdzenia plików obiektu COFF, bibliotek standardowych obiektów COFF, plików wykonywalnych i bibliotek dołączanych dynamicznie (dll).  
   
 > [!NOTE]
->  Można uruchomić to narzędzie tylko z [!INCLUDE[vsprvs](../../assembler/masm/includes/vsprvs_md.md)] wiersza polecenia. Nie można uruchomić go z wiersza polecenia systemu lub z Eksploratora plików.  
+>  To narzędzie można uruchomić tylko z poziomu wiersza polecenia programu Visual Studio. Nie można uruchomić go z wiersza poleceń systemu lub Eksploratora plików.  
   
- Tylko [/HEADERS](../../build/reference/headers.md) — opcja polecenia DUMPBIN jest dostępny do użytku na pliki tworzone z [/GL](../../build/reference/gl-whole-program-optimization.md) — opcja kompilatora.  
+ Tylko [/HEADERS](../../build/reference/headers.md) — opcja polecenia DUMPBIN jest dostępna do użycia w plikach z [/GL](../../build/reference/gl-whole-program-optimization.md) — opcja kompilatora.  
   
 -   [Wiersz polecenia DUMPBIN](../../build/reference/dumpbin-command-line.md)  
   

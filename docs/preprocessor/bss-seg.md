@@ -18,48 +18,48 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1b82027066e66cc51be8982a19ab6209ff236ef2
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 08304a42b961f93b7d9e4e6e644e1514e34eb335
+ms.sourcegitcommit: d4c803bd3a684d7951bf88dcecf1f14af43ae411
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33849811"
+ms.lasthandoff: 08/10/2018
+ms.locfileid: "42466332"
 ---
 # <a name="bssseg"></a>bss_seg
-Określa segment, w którym niezainicjowanych zmiennych są przechowywane w pliku .obj.  
+Określa segment, w którym niezainicjowane zmienne są przechowywane w pliku .obj.  
   
 ## <a name="syntax"></a>Składnia  
   
 ```  
-  
 #pragma bss_seg( [ [ { push | pop }, ] [ identifier, ] ] [ "segment-name" [, "segment-class" ] )  
 ```  
   
 ## <a name="remarks"></a>Uwagi  
- Pliki obj mogą być wyświetlane z [dumpbin](../build/reference/dumpbin-command-line.md) aplikacji. Segment domyślnej w pliku .obj niezainicjowanych danych jest .bss. W niektórych przypadkach wykorzystania **bss_seg** może załadować razy grupując niezainicjowanych danych w jednej sekcji.  
+ 
+Pliki obj mogą być wyświetlane z [dumpbin](../build/reference/dumpbin-command-line.md) aplikacji. Segment domyślnej w pliku .obj, niezainicjowanych danych jest .bss. W niektórych przypadkach użycie **bss_seg** można przyspieszyć czasów ładowania przez grupowanie niezainicjowanych danych w jednej sekcji.  
   
- **bss_seg** bez parametrów resetuje segmentu .bss.  
+**bss_seg** bez parametrów resetuje segmentu .bss.  
   
- **wypychania**(opcjonalnie)  
- Umieszcza rekord na wewnętrznym stosie kompilatora. A **wypychania** może mieć *identyfikator* i *nazwą segmentu*.  
+*wypychane* (opcjonalnie)  
+Umieszcza rekord na wewnętrznym stosie kompilatora. A *wypychania* może mieć *identyfikator* i *nazwą segmentu*.  
   
- **POP** (opcjonalnie)  
- Usuwa rekord z góry wewnętrznego stosu kompilatora.  
+*POP* (opcjonalnie)  
+Usuwa rekord z góry wewnętrznego stosu kompilatora.  
   
- *Identyfikator* (opcjonalnie)  
- W przypadku użycia z **wypychania**, przypisuje nazwę w rekordzie na stosie wewnętrznych kompilatora. W przypadku użycia z **pop**, POP rejestruje wewnętrzny stosu do *identyfikator* zostanie usunięta; Jeśli *identyfikator* nie znaleziono na stosie wewnętrznego, nic nie jest zdjęte ze stosu.  
+*Identyfikator* (opcjonalnie)  
+Gdy jest używane z *wypychania*, przypisuje nazwę rekordowi na wewnętrznym stosie kompilatora. Gdy jest używane z *pop*, zdejmuje rekordy z wewnętrznego stosu aż do usunięcia *identyfikator* zostanie usunięta; Jeśli *identyfikator* nie zostanie znaleziony na wewnętrznym stosie, nic nie zostanie zdjęte.  
   
- *Identyfikator* umożliwia wielu rekordów zostać zdjęte ze stosu za pomocą jednej **pop** polecenia.  
+*Identyfikator* umożliwia wielu rekordów zostać zdjęte ze stosu za pomocą jednego *pop* polecenia.  
   
- *"Nazwa segmentu"*(opcjonalnie)  
- Nazwa segmentu. W przypadku użycia z **pop**, zdjęte ze stosu stosu i *nazwą segmentu* staje się nazwa active segmentu.  
+*"segment-name"*(opcjonalnie)  
+Nazwa segmentu. Gdy jest używane z *pop*, stos jest zdejmowany i *nazwą segmentu* staje się nazwą aktywny segment.  
   
- *"segmentu klasy"* (opcjonalnie)  
- Uwzględnione w celu zapewnienia zgodności z C++ przed w wersji 2.0. Jest on ignorowany.  
+*"klasy segmentu"* (opcjonalnie)  
+Uwzględnione na potrzeby utrzymywania zgodności z C++ wcześniejszych niż 2.0. Jest on ignorowany.  
   
 ## <a name="example"></a>Przykład  
   
-```  
+```cpp  
 // pragma_directive_bss_seg.cpp  
 int i;                     // stored in .bss  
 #pragma bss_seg(".my_data1")  
@@ -75,11 +75,12 @@ int main() {
 }  
 ```  
   
- Można również określić sekcjach danymi zainicjowanymi ([data_seg](../preprocessor/data-seg.md)), funkcje ([code_seg](../preprocessor/code-seg.md)) i zmienne const ([const_seg](../preprocessor/const-seg.md)).  
+Można również określić sekcje dla danych zainicjowanych ([data_seg](../preprocessor/data-seg.md)), funkcje ([code_seg](../preprocessor/code-seg.md)) i zmiennych const ([const_seg](../preprocessor/const-seg.md)).  
   
- Przydzielony przy użyciu danych **bss_seg** pragma nie zachowuje żadnych informacji o lokalizacji.  
+Danych przydzielonych przy użyciu **bss_seg** pragma nie zachowuje żadnych informacji o lokalizacji.  
   
- Zobacz [/SECTION](../build/reference/section-specify-section-attributes.md) lista nazw nie należy używać podczas tworzenia sekcji.  
+Zobacz [/SECTION](../build/reference/section-specify-section-attributes.md) listę nazw, nie należy używać podczas tworzenia sekcji.  
   
 ## <a name="see-also"></a>Zobacz też  
- [Dyrektywy pragma i słowo kluczowe __Pragma](../preprocessor/pragma-directives-and-the-pragma-keyword.md)
+ 
+[Dyrektywy pragma i słowo kluczowe __Pragma](../preprocessor/pragma-directives-and-the-pragma-keyword.md)

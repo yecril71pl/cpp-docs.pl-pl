@@ -90,17 +90,17 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 544b6ef8887ab9d6f5e5063fcee435c64e355645
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: 05f80ef1a7fd4e21bda2fd9705c4ed1be391e9a9
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37852351"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42465142"
 ---
 # <a name="cmultipaneframewnd-class"></a>Klasa CMultiPaneFrameWnd
 `CMultiPaneFrameWnd` Klasa rozszerza [klasa CPaneFrameWnd](../../mfc/reference/cpaneframewnd-class.md). Może obsługiwać wiele okienek. Zamiast pojedynczego uchwytu osadzonego na pasku sterowania `CMultiPaneFrameWnd` zawiera [klasa CPaneContainerManager](../../mfc/reference/cpanecontainermanager-class.md) obiektu, który umożliwia użytkownikowi zadokować jeden `CMultiPaneFrameWnd` do drugiego i dynamicznie utworzyć kilka liczb zmiennoprzecinkowych, z zakładkami dla systemu Windows.  
 
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+ Aby uzyskać więcej informacji, zobacz kod źródłowy znajdujący się w **VC\\atlmfc\\src\\mfc** folder instalacji programu Visual Studio.  
   
 ## <a name="syntax"></a>Składnia  
   

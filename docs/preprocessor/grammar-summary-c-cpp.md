@@ -15,23 +15,24 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a742b882f0195d82b0cbbfea2ab6210342449a40
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 7a1f5cb9e23d5b818779062a5039a2d16c04aefe
+ms.sourcegitcommit: d4c803bd3a684d7951bf88dcecf1f14af43ae411
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33849148"
+ms.lasthandoff: 08/10/2018
+ms.locfileid: "42465782"
 ---
 # <a name="grammar-summary-cc"></a>Podsumowanie gramatyki (C/C++)
-W tej sekcji opisano formalne gramatyki preprocesora. Obejmuje on składnia dyrektyw preprocesora i operatory omówione w [preprocesora](../preprocessor/preprocessor.md) i [dyrektywy Pragma](../preprocessor/pragma-directives-and-the-pragma-keyword.md).  
+W tej sekcji opisano formalne gramatyka preprocesora. Poruszono w nim składnię dyrektywy przetwarzania wstępnego i operatory omówione w [preprocesora](../preprocessor/preprocessor.md) i [dyrektyw Pragma](../preprocessor/pragma-directives-and-the-pragma-keyword.md).  
   
- Omówiono następujące zagadnienia:  
+Uwzględnione są następujące tematy:  
   
--   [Definicje](../preprocessor/definitions-for-the-grammar-summary.md)  
+- [Definicje](../preprocessor/definitions-for-the-grammar-summary.md)  
   
--   [Konwencje](../preprocessor/conventions.md)  
+- [Konwencje](../preprocessor/conventions.md)  
   
--   [Gramatyka preprocesora](../preprocessor/preprocessor-grammar.md)  
+- [Gramatyka preprocesora](../preprocessor/preprocessor-grammar.md)  
   
 ## <a name="see-also"></a>Zobacz też  
- [Dokumentacja preprocesora języka C/C++](../preprocessor/c-cpp-preprocessor-reference.md)
+ 
+[Dokumentacja preprocesora języka C/C++](../preprocessor/c-cpp-preprocessor-reference.md)

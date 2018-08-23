@@ -16,15 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2a2885f2ea103ad43535b11c526b96ed42de45fd
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 9a6f3d8f8a3527e193ed1bec0f7dc4b563593b84
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33340531"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42465621"
 ---
 # <a name="writeeflags"></a>__writeeflags
-Zapisuje określoną wartość do programu zarejestrować stanu i kontroli (EFLAGS).  
+Zapisuje określoną wartość do programu, stan i kontroli (EFLAGS) rejestru.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -37,20 +37,20 @@ void __writeeflags(unsigned __int64 Value);
   
 |Parametr|Opis|  
 |---------------|-----------------|  
-|[in] `Value`|Wartość do zapisu do rejestru EFLAGS. `Value` Parametr jest 32-bitowy na platformę 32-bitowe i 64-bitowy dla platformy 64-bitowej.|  
+|[in] `Value`|Wartość do zapisu do rejestru EFLAGS. `Value` Parametr jest 32-bitowy długa dla platform 32-bitowych i 64-bitowy na platformie 64-bitowej.|  
   
 ## <a name="remarks"></a>Uwagi  
  Te procedury są dostępne tylko jako funkcje wewnętrzne.  
   
 ## <a name="requirements"></a>Wymagania  
   
-|— Wewnętrzne|Architektura|  
+|Wewnętrzne|Architektura|  
 |---------------|------------------|  
-|`__writeeflags`|x86, [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
+|`__writeeflags`|x86, x64|  
   
- **Plik nagłówka** \<intrin.h >  
+ **Plik nagłówkowy** \<intrin.h >  
   
-**KOŃCOWY określonych firmy Microsoft**  
+**END specyficzny dla Microsoft**  
   
 ## <a name="see-also"></a>Zobacz też  
  [Funkcje wewnętrzne kompilatora](../intrinsics/compiler-intrinsics.md)   

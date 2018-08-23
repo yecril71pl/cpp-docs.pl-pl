@@ -32,12 +32,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2eb5fa8f56f242ce40f6be9c27bc1cbd9c5d61ff
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: 5b9183f3ae58a7ba6b7746ae27f64ca17eede991
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37852526"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42465353"
 ---
 # <a name="cmfcribbonfontcombobox-class"></a>Klasa CMFCRibbonFontComboBox
 Implementuje pole kombi, która zawiera listę czcionek. Pole kombi jest umieścić na panelu wstążki.  
@@ -149,7 +149,7 @@ CMFCRibbonFontComboBox(
  Aby uzyskać więcej informacji na temat zestawów prawidłowych znaków, które mogą być przypisane do *nCharSet*i prawidłowe wartości, które mogą być przypisane do *nPitchAndFamily*, zobacz [LOGFONT](http://msdn.microsoft.com/library/windows/desktop/dd145037) w Dokumentacja zestawu Windows SDK.  
   
 ##  <a name="getfontdesc"></a>  CMFCRibbonFontComboBox::GetFontDesc  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+ Aby uzyskać więcej informacji, zobacz kod źródłowy znajdujący się w **VC\\atlmfc\\src\\mfc** folder instalacji programu Visual Studio.  
   
 ```  
 const CMFCFontInfo* GetFontDesc(int iIndex = -1) const;  

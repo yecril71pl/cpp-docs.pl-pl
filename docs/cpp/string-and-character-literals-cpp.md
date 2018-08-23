@@ -26,12 +26,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 79ec82ec00e912d597cfeda608e1b77cf08ab4e8
-ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
+ms.openlocfilehash: 0a3a3fa5d6e9836f7de949d4c13ec19f90dbcb02
+ms.sourcegitcommit: b92ca0b74f0b00372709e81333885750ba91f90e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39466946"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "42465531"
 ---
 # <a name="string-and-character-literals--c"></a>Literały ciągów i znakowe (C++)
 C++ obsługuje różne typy ciągów i znakowe i zapewnia metody do wyrażenia wartości literału w każdej z tych typów. W kodzie źródłowym można wyrazić zawartość literały znakowe i przy użyciu zestawu znaków. Uniwersalne nazwy znaków i znaków ucieczki umożliwiają express dowolny ciąg przy użyciu tylko zestaw znaków podstawowego źródła. Nieprzetworzony literał ciągu pozwala uniknąć przy użyciu znaków ucieczki i może służyć do express wszystkie rodzaje literałów ciągów. Można również utworzyć literały std::string, bez konieczności wykonywania dodatkowych konstrukcji lub konwersji kroki.  
@@ -206,7 +206,7 @@ char u5 = '\U00000041'; // \U UCN 'A'
   
  Uniwersalne nazwy znaków nie może zakodować wartości w zakresie punkt kodu D800 DFFF zastępczy. Dla pary zastępcze Unicode, należy określić nazwę znaki uniwersalne za pomocą `\UNNNNNNNN`, gdzie NNNNNNNN jest punkt 8 cyfrowym kodem znaku. Kompilator generuje parę zastępczą, jeśli jest to wymagane.  
   
- W języku C ++ 03 język tylko podzestaw znaków, które mają być reprezentowane przez ich uniwersalne nazwy znaków mogą oraz dozwolone niektóre uniwersalne nazwy znaków, które faktycznie nie reprezentują żadnych prawidłowych znaków Unicode. Ten problem został rozwiązany w standardem C ++ 11. W języku C ++ 11 zarówno literały znakowe i i identyfikatory mogą używać uniwersalne nazwy znaków.  Aby uzyskać więcej informacji na temat uniwersalne nazwy znaków, zobacz [zestawów znaków](../cpp/character-sets.md). Aby uzyskać więcej informacji na temat systemu Unicode, zobacz [Unicode](http://msdn.microsoft.com/library/dd374081\(v=vs.85\).aspx). Aby uzyskać więcej informacji dotyczących par zastępczych, zobacz [pary zastępcze i znaki dodatkowe](http://msdn.microsoft.com/library/dd374069\(v=vs.85\).aspx).  
+ W języku C ++ 03 język tylko podzestaw znaków, które mają być reprezentowane przez ich uniwersalne nazwy znaków mogą oraz dozwolone niektóre uniwersalne nazwy znaków, które faktycznie nie reprezentują żadnych prawidłowych znaków Unicode. Ten problem został rozwiązany w standardem C ++ 11. W języku C ++ 11 zarówno literały znakowe i i identyfikatory mogą używać uniwersalne nazwy znaków.  Aby uzyskać więcej informacji na temat uniwersalne nazwy znaków, zobacz [zestawów znaków](../cpp/character-sets.md). Aby uzyskać więcej informacji na temat systemu Unicode, zobacz [Unicode](http://msdn.microsoft.com/library/dd374081\(v=vs.85\).aspx). Aby uzyskać więcej informacji dotyczących par zastępczych, zobacz [pary zastępcze i znaki dodatkowe](/windows/desktop/Intl/surrogates-and-supplementary-characters).  
   
 ## <a name="string-literals"></a>Literały ciągu  
  Literał ciągu znaków reprezentuje sekwencję znaków, które razem tworzą ciąg zakończony znakiem null. Znaki muszą być ujęte w znaki podwójnego cudzysłowu. Istnieją następujące rodzaje literałów ciągów:  

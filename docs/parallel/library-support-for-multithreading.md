@@ -1,5 +1,5 @@
 ---
-title: Obsługa bibliotek na potrzeby wielowątkowości | Dokumentacja firmy Microsoft
+title: Obsługa bibliotek dla wielowątkowości | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,17 +15,18 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5b25d506b5364dcbc26d3e32f5b0eb34188b30bd
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: 4f775cbb78ff81ba6f1c2761d7969feabd932bd7
+ms.sourcegitcommit: e9ce38decc9f986edab5543de3464b11ebccb123
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33685677"
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "42465242"
 ---
 # <a name="library-support-for-multithreading"></a>Obsługa bibliotek na potrzeby wielowątkowości
-Wszystkie wersje CRT teraz obsługuje wiele wątków, z wyjątkiem wersji zablokowanie niektórych funkcji. Zobacz [wydajność bibliotek wielowątkowych](../c-runtime-library/multithreaded-libraries-performance.md) Aby uzyskać więcej informacji.  
+Wszystkie wersje CRT teraz obsługuje wiele wątków, z wyjątkiem wersji bez blokady niektórych funkcji. Zobacz [wydajność bibliotek wielowątkowych](../c-runtime-library/multithreaded-libraries-performance.md) Aby uzyskać więcej informacji.  
   
- Zobacz [Biblioteka CRT — funkcje](../c-runtime-library/crt-library-features.md) uzyskać więcej informacji o wersji CRT.  
+Zobacz [funkcje biblioteki CRT](../c-runtime-library/crt-library-features.md) Aby uzyskać więcej informacji na temat wersji CRT.  
   
 ## <a name="see-also"></a>Zobacz też  
- [Wielowątkowość z językiem C i podsystemem Win32](../parallel/multithreading-with-c-and-win32.md)
+
+[Wielowątkowość z językiem C i podsystemem Win32](../parallel/multithreading-with-c-and-win32.md)

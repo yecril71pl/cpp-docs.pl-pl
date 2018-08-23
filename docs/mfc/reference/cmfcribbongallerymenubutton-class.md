@@ -28,16 +28,16 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b2dd3d47b2175a64be605ac8db9fdb1502ce2755
-ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
+ms.openlocfilehash: a63d72d9744928ca0871ed251cfaea254d0acb14
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/27/2018
-ms.locfileid: "37041263"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42465696"
 ---
 # <a name="cmfcribbongallerymenubutton-class"></a>Klasa CMFCRibbonGalleryMenuButton
-Implementuje zawierający galerii na Wstążce przycisk menu na Wstążce.  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+Implementuje przycisk menu wstążki, który zawiera galerię wstążki.  
+ Aby uzyskać więcej informacji, zobacz kod źródłowy znajdujący się w **VC\\atlmfc\\src\\mfc** folder instalacji programu Visual Studio.  
    
 ## <a name="syntax"></a>Składnia  
   
@@ -67,7 +67,7 @@ class CMFCRibbonGalleryMenuButton : public CMFCToolBarMenuButton
  Przycisk menu galerii jest wyświetlany jako menu podręcznego ze strzałką. Po kliknięciu tego przycisku zostanie wyświetlona galerii obrazów. Podczas konstruowania przycisk menu galerii, należy określić listy obrazów, który zawiera te obrazy.  
   
 ## <a name="example"></a>Przykład  
- W poniższym przykładzie pokazano sposób wyświetlania galerii punktorów w przycisk menu:  
+ Poniższy przykład pokazuje sposób wyświetlania galerii punktorów w menu przycisku:  
   
 ```  
 BOOL CMainFrame::OnShowPopupMenu (CMFCPopupMenu* pMenuPopup)  
@@ -133,28 +133,28 @@ CMFCRibbonGalleryMenuButton(
   
 ### <a name="parameters"></a>Parametry  
  *uiID*  
- Identyfikator polecenia przycisku. Jest to wartość wysyłane w komunikacie WM_COMMAND po kliknięciu tego przycisku.  
+ Identyfikator polecenia przycisku. Jest to wartość wysyłana w komunikatów WM_COMMAND, gdy użytkownik kliknie ten przycisk.  
   
  *iImage*  
- Indeks obrazu do wyświetlenia w galerii przycisk menu. Obrazy są przechowywane w *imagesPalette* parametru.  
+ Indeks obrazu do wyświetlenia za pomocą przycisku menu galerii. Obrazy są przechowywane w *imagesPalette* parametru.  
   
  *lpszText*  
- Tekst wyświetlany na przycisku menu.  
+ Tekst do wyświetlenia przycisku menu.  
   
  *imagesPalette*  
- Zawiera listę obrazów do wyświetlenia w galerii.  
+ Zawiera listę obrazów do wyświetlania w galerii.  
   
  *uiImagesPaletteResID*  
- Identyfikator zasobu obrazu na liście obrazów do wyświetlenia w galerii.  
+ Identyfikator zasobu listy obrazu dla obrazów do wyświetlania w galerii.  
   
  *cxPaletteImage*  
- Określa szerokość obrazu do wyświetlenia w galerii w pikselach.  
+ Określa szerokość w pikselach obraz do wyświetlania w galerii.  
   
 ### <a name="remarks"></a>Uwagi  
- Przycisk menu galerii jest wyświetlana jako menu podręczne, które ma strzałką. Po kliknięciu tego przycisku zostanie wyświetlona galerii obrazów.  
+ Przycisk menu galerii jest wyświetlany jako menu podręcznego, która ma strzałki. Po kliknięciu tego przycisku zostanie wyświetlona galerii obrazów.  
   
 ### <a name="example"></a>Przykład  
- W poniższym przykładzie pokazano sposób użycia konstruktora `CMFCRibbonGalleryMenuButton` klasy. Następujący fragment kodu jest częścią [próbka MS Office 2007 Demo](../../visual-cpp-samples.md).  
+ Poniższy przykład pokazuje, jak używać konstruktora `CMFCRibbonGalleryMenuButton` klasy. Ten fragment kodu jest częścią [próbka MS Office 2007 Demo](../../visual-cpp-samples.md).  
   
  [!code-cpp[NVC_MFC_MSOffice2007Demo#8](../../mfc/reference/codesnippet/cpp/cmfcribbongallerymenubutton-class_1.cpp)]  
   

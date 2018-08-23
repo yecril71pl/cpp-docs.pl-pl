@@ -18,35 +18,36 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0cfabfa3c83fe2ff90a6f7dbe07d5205f7a6f9a9
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: fa6ba2bec5c862bb336d4b9bea0f47aad91fe0c1
+ms.sourcegitcommit: d4c803bd3a684d7951bf88dcecf1f14af43ae411
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33847419"
+ms.lasthandoff: 08/10/2018
+ms.locfileid: "42465875"
 ---
 # <a name="setlocale"></a>setlocale
-Definiuje ustawienia regionalne (Kraj/Region i język) do użycia podczas tłumaczenia — stałe znaków dwubajtowych i literały ciągu.  
+Określa ustawienia regionalne (Kraj/Region i język), który będzie używany podczas tłumaczenia Literały ciągu i stałych znaków dwubajtowych.  
   
 ## <a name="syntax"></a>Składnia  
   
 ```  
-  
 #pragma setlocale( "[locale-string]" )  
 ```  
   
 ## <a name="remarks"></a>Uwagi  
- Ponieważ algorytm Konwersja znaków wielobajtowych na znaki dwubajtowe mogą zależy od ustawień regionalnych lub kompilacja może odbywać się w różnych ustawień regionalnych, z którym zostanie uruchomiony plik wykonywalny, ta pragma zapewnia możliwość określenia ustawień regionalnych docelowej podczas kompilacji. Gwarantuje to, że ciągi znaków dwubajtowych będą przechowywane w poprawnym formacie.  
+ 
+Ponieważ algorytm konwersji na znaki wielobajtowe do znaków dwubajtowych mogą się znacząco różnić ustawień regionalnych lub kompilacja może mieć miejsce w innych ustawień regionalnych, z którym będzie uruchamiany plik wykonywalny, ta pragma zapewnia sposób określania docelowych ustawień regionalnych w czasie kompilacji. Gwarantuje to, że ciągi znaków dwubajtowych będą przechowywane w poprawnym formacie.  
   
- Wartość domyślna *ciąg ustawień regionalnych* jest "".  
+Wartość domyślna *ciągu ustawień regionalnych* jest "".  
   
- Ustawienia regionalne "C" mapuje każdego znaku w ciągu na wartość jako `wchar_t` (bez znaku krótki). Inne wartości, które są prawidłowe dla `setlocale` tych wpisów, które zostały znalezione w [ciągi języka](../c-runtime-library/language-strings.md) listy. Na przykład można wystawić:  
+Ustawień regionalnych "C" mapuje każdy znak w ciągu na wartość jako **wchar_t** (typ unsigned short). Inne wartości, które są prawidłowe dla `setlocale` tych wpisów, które znajdują się w [Language Strings](../c-runtime-library/language-strings.md) listy. Na przykład, możesz wydać:  
   
 ```  
 #pragma setlocale("dutch")  
 ```  
   
- Mógł wystawiać ciąg języka zależy od strony kodowej i języka obsługi identyfikatorów na tym komputerze.  
+Zdolność do wystawiania ciąg języka zależy od strony kodowej i język obsługi identyfikatorów na tym komputerze.  
   
 ## <a name="see-also"></a>Zobacz też  
- [Dyrektywy pragma i słowo kluczowe __Pragma](../preprocessor/pragma-directives-and-the-pragma-keyword.md)
+ 
+[Dyrektywy pragma i słowo kluczowe __Pragma](../preprocessor/pragma-directives-and-the-pragma-keyword.md)

@@ -12,18 +12,19 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0b1ec19065647f78b4d9b2665003c0aa3a2795ba
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: 240cd4588cb36125b571462b26fcee3853412218
+ms.sourcegitcommit: e9ce38decc9f986edab5543de3464b11ebccb123
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33688469"
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "42464531"
 ---
 # <a name="auto-parallelization-and-auto-vectorization"></a>Automatyczna paralelizacja i wektoryzacja
-Automatyczny Paralelizator i Wektoryzowania automatycznego są przeznaczone do zapewnienia wzrost wydajności automatyczne pętle w kodzie.  
+Auto-Parallelizer and Auto-Vectorizer są przeznaczone do zapewnienia wzrost wydajności automatyczne pętli w kodzie.  
   
-## <a name="auto-parallelizer"></a>Automatyczny Paralelizator  
- [/Qpar](../build/reference/qpar-auto-parallelizer.md) przełącznik kompilator umożliwia *automatyczna paralelizacja* pętli w kodzie. Po określeniu tej flagi bez zmiany istniejącego kodu kompilator oblicza kod, aby znaleźć pętli, które mogą korzystać z paralelizacja. Ponieważ może odnaleźć pętli, które nie wykonują większość pracy i w związku z tym nie będzie korzystać z paralelizacja i ponieważ każdy niepotrzebnych paralelizacja może stanowić zagrożenie duplikowanie puli wątków, dodatkowe synchronizacji lub inne przetwarzania, które mogą one spowolnić wydajność zamiast ulepszeń, kompilator jest zachowawcze w pętli, które go parallelizes zaznaczenie. Rozważmy na przykład poniższy przykład, w którym górna granica pętli nie jest znany w czasie kompilacji:  
+## <a name="auto-parallelizer"></a>Diagnostyka zrównoleglenia automatycznego  
+
+[/Qpar](../build/reference/qpar-auto-parallelizer.md) umożliwia przełącznika kompilatora *automatyczne przetwarzanie równoległe* pętli w kodzie. Po określeniu tej flagi bez zmieniania istniejącego kodu, kompilator oblicza kod, aby znaleźć pętli, które mogą skorzystać z przetwarzaniem równoległym. Ponieważ może odnaleźć pętli, które nie wykonują większość pracy i w związku z tym nie przynoszą korzyści, od przetwarzania równoległego, a ponieważ każdy niepotrzebne przetwarzania równoległego może stanowić zagrożenie podczas duplikowania puli wątków, dodatkowe synchronizacji lub innego przetwarzania, które mogą one spowolnić wydajność zamiast ulepszeń, kompilator jest Konserwatywny wyborze pętli, które go parallelizes. Na przykład rozważmy poniższy przykład, w którym górną granicę pętli nie jest znany w czasie kompilacji:  
   
 ```cpp  
 void loop_test(int u) {  
@@ -32,7 +33,7 @@ void loop_test(int u) {
 }  
 ```  
   
- Ponieważ `u` może być mała wartość, kompilator nie będzie automatycznie parallelize pętlę. Jednak nadal może być ona zarządzana przetwarzaniem, ponieważ wiadomo, że `u` będzie zawsze duże. Aby włączyć automatyczna paralelizacja, określ [#pragma loop(hint_parallel(n))](../preprocessor/loop.md), gdzie `n` jest to liczba wątków, aby parallelize między. W poniższym przykładzie kompilator będzie podejmować próby parallelize pętli między 8 wątków.  
+Ponieważ `u` może być małej wartości, kompilator nie będzie automatycznie zrównoleglić pętlę. Jednak nadal może być ona zrównoleglona, ponieważ wiesz, że `u` będzie zawsze duże. Aby włączyć automatyczne przetwarzanie równoległe, określ [#pragma loop(hint_parallel(n))](../preprocessor/loop.md), gdzie `n` jest to liczba wątków do zrównoleglenia między. W poniższym przykładzie kompilator będzie próbował zrównoleglić pętlę w 8 wątków.  
   
 ```cpp  
 void loop_test(int u) {  
@@ -42,9 +43,9 @@ void loop_test(int u) {
 }  
 ```  
   
- Jak w przypadku wszystkich [dyrektywy pragma](../preprocessor/pragma-directives-and-the-pragma-keyword.md), składni alternatywnej pragma `__pragma(loop(hint_parallel(n)))` jest również obsługiwany.  
+Podobnie jak w przypadku wszystkich [dyrektyw pragma](../preprocessor/pragma-directives-and-the-pragma-keyword.md), składni alternatywne pragma `__pragma(loop(hint_parallel(n)))` jest również obsługiwany.  
   
- Brak niektórych pętli, które kompilator nie parallelize, nawet jeśli ma być. Oto przykład:  
+Istnieją pewne pętli, które kompilator nie zrównoleglić nawet, jeśli chcesz, aby. Oto przykład:  
   
 ```cpp  
 #pragma loop(hint_parallel(8))  
@@ -52,7 +53,7 @@ for (int i=0; i<upper_bound(); ++i)
     A[i] = B[i] * C[i];  
 ```  
   
- Funkcja `upper_bound()` może zmieniać się za każdym razem, gdy jest ona wywoływana. Ponieważ górna granica nie może być znane, kompilator może emitować diagnostycznych komunikat, który wyjaśnia, dlaczego nie mogę parallelize pętlę. W poniższym przykładzie pokazano pętli, które mogą być zarządzana z przetwarzaniem, pętli, które nie może być zarządzana z przetwarzaniem kompilatora składni stosowanej w wierszu polecenia, a dane wyjściowe kompilatora, dla każdej opcji wiersza polecenia:  
+Funkcja `upper_bound()` mogą ulec zmianie, za każdym razem, gdy jest wywoływana. Ponieważ nie może być znane, górna granica, kompilator może emitować komunikat diagnostyczny, który wyjaśnia, dlaczego nie można zrównoleglić pętlę. Poniższy przykład pokazuje pętlę, która może być przetwarzane równolegle, pętlę, która nie może być przeprowadzana równolegle, składnia kompilatora, aby użyć w wierszu polecenia, a dane wyjściowe kompilatora dla każdej opcji wiersza polecenia:  
   
 ```cpp  
 int A[1000];  
@@ -66,59 +67,58 @@ void test() {
         A[i] = A[i] + 1;  
     }  
 }  
-  
 ```  
   
- Kompilacja za pomocą tego polecenia:  
+Kompilowanie za pomocą tego polecenia:  
   
- **Cl d:\myproject\mylooptest.cpp/O2 /Qpar /Qpar-report: 1**  
+`cl d:\myproject\mylooptest.cpp /O2 /Qpar /Qpar-report:1`  
   
- daje w wyniku tego dane wyjściowe:  
+ daje następujące dane wyjściowe:  
   
- **---Analizowanie funkcji: void __cdecl test(void)**   
- **d:\myproject\mytest.cpp(4): zarządzana z przetwarzaniem pętli**  
+**---Analiza funkcji: void __cdecl test(void)**   
+**d:\myproject\mytest.cpp(4): pętla zrównoleglona**  
   
- Kompilacja za pomocą tego polecenia:  
+Kompilowanie za pomocą tego polecenia:  
   
- **Cl d:\myproject\mylooptest.cpp/O2 /Qpar /Qpar-report: 2**  
+`cl d:\myproject\mylooptest.cpp /O2 /Qpar /Qpar-report:2`  
   
- daje w wyniku tego dane wyjściowe:  
+daje następujące dane wyjściowe:  
   
- **---Analizowanie funkcji: void __cdecl test(void)**   
- **d:\myproject\mytest.cpp(4): zarządzana z przetwarzaniem pętli**   
- **d:\myproject\mytest.cpp(4): pętli nie została zrównoleglona z powodu "1008"**  
+**---Analiza funkcji: void __cdecl test(void)**   
+**d:\myproject\mytest.cpp(4): pętla zrównoleglona**   
+**d:\myproject\mytest.cpp(4): pętla niezrównoleglona z powodu "1008"**  
   
- Zwróć uwagę, w danych wyjściowych różnicę dwóch różnych [/Qpar-report (poziom raportowania automatycznej Paralelizacji)](../build/reference/qpar-report-auto-parallelizer-reporting-level.md) opcje. **/ Qpar-report: 1** generuje paralelizatora tylko dla pętli, które są pomyślnie zarządzana z przetwarzaniem. **/ Qpar-report: 2** generuje paralelizatora dla obu parallelizations pętli zakończone powodzeniem i niepowodzeniem.  
+Należy zauważyć różnicę w danych wyjściowych między dwiema różnymi [/Qpar-report (poziom raportowania automatycznej Paralelizacji)](../build/reference/qpar-report-auto-parallelizer-reporting-level.md) opcje. `/Qpar-report:1` generuje komunikaty paralelizatora tylko dla pętli, które są pomyślnie zrównoleglona. `/Qpar-report:2` generuje komunikaty paralelizatora dla obu parallelizations pętli zakończone powodzeniem i niepowodzeniem.  
   
- Aby uzyskać więcej informacji na temat Kody przyczyn i komunikaty, zobacz [komunikaty Wektoryzatora i Paralelizatora](../error-messages/tool-errors/vectorizer-and-parallelizer-messages.md).  
+Aby uzyskać więcej informacji na temat kodów przyczyn i komunikaty, zobacz [komunikaty Wektoryzatora i Paralelizatora](../error-messages/tool-errors/vectorizer-and-parallelizer-messages.md).  
   
-## <a name="auto-vectorizer"></a>Wektoryzowania automatycznego  
- Wektoryzowania automatycznego analizuje pętli w kodzie i korzysta z rejestrów wektora i instrukcje na komputerze docelowym można wykonać, jeśli można go. Może to poprawić wydajność kodu. Kompilator jest przeznaczony dla instrukcji SSE2, AVX i AVX2 w procesorów Intel lub AMD lub instrukcji NEON procesorów ARM, zgodnie z [/arch](../build/reference/arch-minimum-cpu-architecture.md) przełącznika.  
+## <a name="auto-vectorizer"></a>Auto-Vectorizer  
+ 
+Auto-Vectorizer analizuje pętli w kodzie i używa rejestrów wektorowych i instrukcje na komputerze docelowym można je wykonać, jeśli jest to możliwe. Może to poprawić wydajność kodu. Kompilator jest przeznaczony dla instrukcji SSE2, AVX i AVX2 w procesorach Intel lub AMD lub instrukcje NEON na procesorach ARM, zgodnie z opisem w [/arch](../build/reference/arch-minimum-cpu-architecture.md) przełącznika.  
   
- Wektoryzowania automatycznego może generować instrukcje inny niż określony w **/arch** przełącznika. Te instrukcje są chroniony przez sprawdzanie czasu wykonywania, aby upewnić się, że kod nadal działa poprawnie. Na przykład podczas kompilowania **SSE2**, mogą być wydane SSE4.2 instrukcje. Sprawdzanie czasu wykonywania sprawdza, czy SSE4.2 jest dostępna w docelowej procesora i przechodzi do wersji z systemem innym niż SSE4.2 pętli, jeśli procesor nie obsługują tych instrukcji.  
+Auto-Vectorizer może wygenerować różne instrukcje, niż określa `/arch` przełącznika. Te instrukcje będą chronione przez sprawdzanie czasu wykonywania, aby upewnić się, że kod nadal działa poprawnie. Na przykład, gdy kompilujesz `/arch:SSE2`, może być emitowana instrukcji SSE4.2. Kontroli w czasie wykonywania sprawdza, czy SSE4.2 jest dostępny w procesor docelowy, a następnie przechodzi do wersji bez SSE4.2 pętli, jeśli procesora nie obsługuje tych instrukcji.  
   
- Wektoryzowania automatycznego jest domyślnie włączone. Jeśli chcesz porównać wydajności kodu w obszarze vectorization, możesz użyć [#pragma loop(no_vector)](../preprocessor/loop.md) wyłączyć vectorization żadnych danego pętli.  
+Domyślnie Auto-Vectorizer jest włączona. Jeśli chcesz porównać wydajność Twój kod w ramach wektoryzacji, możesz użyć [#pragma loop(no_vector)](../preprocessor/loop.md) wyłączyć wektoryzacji dowolnego danego pętli.  
   
-```  
-  
-      #pragma loop(no_vector)  
+```cpp
+#pragma loop(no_vector)  
 for (int i = 0; i < 1000; ++i)  
    A[i] = B[i] + C[i];  
-  
 ```  
   
- Jak w przypadku wszystkich [dyrektywy pragma](../preprocessor/pragma-directives-and-the-pragma-keyword.md), składni alternatywnej pragma `__pragma(loop(no_vector))` jest również obsługiwany.  
+Podobnie jak w przypadku wszystkich [dyrektyw pragma](../preprocessor/pragma-directives-and-the-pragma-keyword.md), składni alternatywne pragma `__pragma(loop(no_vector))` jest również obsługiwany.  
   
- Zgodnie z automatycznej Paralelizacji, można określić [/Qvec-report (poziom raportowania automatycznej Wektoryzacji)](../build/reference/qvec-report-auto-vectorizer-reporting-level.md) opcji wiersza polecenia, aby zgłosić albo pomyślnie Przekształcono pętli tylko —**/Qvec-report: 1**— lub pomyślnie i niepomyślnie Przekształcono pętli —**/Qvec-report: 2**).  
+Podobnie jak przy użyciu automatycznego Zrównoleglacza, można określić [/Qvec-report (poziom raportowania automatycznej Wektoryzacji)](../build/reference/qvec-report-auto-vectorizer-reporting-level.md) opcji wiersza polecenia, aby zgłosić albo pomyślnie wektoryzowana tylko pętli —`/Qvec-report:1`— lub oba pomyślnie i przekroczona wektoryzowana pętli —`/Qvec-report:2`).  
   
- Aby uzyskać więcej informacji na temat Kody przyczyn i komunikaty, zobacz [komunikaty Wektoryzatora i Paralelizatora](../error-messages/tool-errors/vectorizer-and-parallelizer-messages.md).  
+Aby uzyskać więcej informacji na temat kodów przyczyn i komunikaty, zobacz [komunikaty Wektoryzatora i Paralelizatora](../error-messages/tool-errors/vectorizer-and-parallelizer-messages.md).  
   
- Na przykład przedstawiający sposób działania wektoryzowania w praktyce, zobacz [projektu Austin część 2, 6: strony Curling](http://blogs.msdn.com/b/vcblog/archive/2012/09/27/10348494.aspx)  
+Aby uzyskać przykład pokazujący, jak działa Diagnostyka wektoryzowania automatycznego w praktyce, zobacz [projektu Austin część 2 z 6: strony Curling](http://blogs.msdn.com/b/vcblog/archive/2012/09/27/10348494.aspx)  
   
 ## <a name="see-also"></a>Zobacz też  
- [Pętli](../preprocessor/loop.md)   
- [Programowanie równoległe w kodzie natywnym](http://go.microsoft.com/fwlink/p/?linkid=263662)   
- [/ Qpar (automatyczny Paralelizator)](../build/reference/qpar-auto-parallelizer.md)   
- [/ Qpar raport (automatyczny Paralelizator poziom raportowania)](../build/reference/qpar-report-auto-parallelizer-reporting-level.md)   
- [/ Qvec raport (raportowania automatycznej Wektoryzacji poziomu)](../build/reference/qvec-report-auto-vectorizer-reporting-level.md)   
- [Komunikaty wektoryzatora i paralelizatora](../error-messages/tool-errors/vectorizer-and-parallelizer-messages.md)
+ 
+[pętli](../preprocessor/loop.md)   
+[Programowanie równoległe w kodzie natywnym](http://go.microsoft.com/fwlink/p/?linkid=263662)   
+[/ Qpar (automatyczny Paralelizator)](../build/reference/qpar-auto-parallelizer.md)   
+[/ Qpar raport (raportowania automatycznej Paralelizacji poziomu)](../build/reference/qpar-report-auto-parallelizer-reporting-level.md)   
+[/ Qvec raport (Auto-poziom raportowania automatycznej Wektoryzacji)](../build/reference/qvec-report-auto-vectorizer-reporting-level.md)   
+[Komunikaty wektoryzatora i paralelizatora](../error-messages/tool-errors/vectorizer-and-parallelizer-messages.md)

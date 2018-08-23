@@ -33,12 +33,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 51593d14967e2814d69cb0a912d937b689dc3632
-ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
+ms.openlocfilehash: d0dfc28a510ab9fcc18149f1cd96037e6754d3d7
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/30/2018
-ms.locfileid: "39337118"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42465888"
 ---
 # <a name="idbpropertiesimpl-class"></a>IDBPropertiesImpl — Klasa
 Udostępnia implementację na potrzeby `IDBProperties` interfejsu.  
@@ -69,7 +69,7 @@ class ATL_NO_VTABLE IDBPropertiesImpl
 |[Setproperties —](#setproperties)|Ustawia właściwości grupy właściwości źródła danych i inicjowanie, obiekty źródła danych lub grupie właściwości inicjowania dla modułów wyliczających.|  
   
 ## <a name="remarks"></a>Uwagi  
- [IDBProperties](https://msdn.microsoft.com/library/ms719607.aspx) obowiązkowego interfejsu dla obiekty źródła danych i opcjonalny interfejs dla modułów wyliczających. Jednakże jeśli moduł wyliczający udostępnia [IDBInitialize](https://msdn.microsoft.com/library/ms713706.aspx), musi uwidaczniać `IDBProperties`. `IDBPropertiesImpl` implementuje `IDBProperties` przy użyciu statycznych funkcji zdefiniowanych przez [BEGIN_PROPSET_MAP](../../data/oledb/begin-propset-map.md).  
+ [IDBProperties](/previous-versions/windows/desktop/ms719607\(v=vs.85\)) obowiązkowego interfejsu dla obiekty źródła danych i opcjonalny interfejs dla modułów wyliczających. Jednakże jeśli moduł wyliczający udostępnia [IDBInitialize](/previous-versions/windows/desktop/ms713706\(v=vs.85\)), musi uwidaczniać `IDBProperties`. `IDBPropertiesImpl` implementuje `IDBProperties` przy użyciu statycznych funkcji zdefiniowanych przez [BEGIN_PROPSET_MAP](../../data/oledb/begin-propset-map.md).  
 
 ## <a name="getproperties"></a> IDBPropertiesImpl::GetProperties
 Zwraca wartości właściwości w grupach właściwości źródła danych, informacje o źródle danych i inicjowania, które są aktualnie ustawiony na obiekt źródła danych lub wartości właściwości w grupie właściwości inicjowania, które obecnie są ustawione na Moduł wyliczający.  
@@ -84,7 +84,7 @@ STDMETHOD(GetProperties)(ULONG cPropertySets,
 ```  
   
 #### <a name="parameters"></a>Parametry  
- Zobacz [IDBProperties::GetProperties](https://msdn.microsoft.com/library/ms714344.aspx) w *OLE DB Podręcznik programisty*.  
+ Zobacz [IDBProperties::GetProperties](/previous-versions/windows/desktop/ms714344\(v=vs.85\)) w *OLE DB Podręcznik programisty*.  
   
  Niektóre parametry odpowiadają *OLE DB Podręcznik programisty* parametry różnych nazw, które są opisane w `IDBProperties::GetProperties`:  
   
@@ -112,7 +112,7 @@ STDMETHOD(GetPropertyInfo)(ULONG cPropertySets,
 ```  
   
 #### <a name="parameters"></a>Parametry  
- Zobacz [IDBProperties::GetPropertyInfo](https://msdn.microsoft.com/library/ms718175.aspx) w *OLE DB Podręcznik programisty*.  
+ Zobacz [IDBProperties::GetPropertyInfo](/previous-versions/windows/desktop/ms718175\(v=vs.85\)) w *OLE DB Podręcznik programisty*.  
   
  Niektóre parametry odpowiadają *OLE DB Podręcznik programisty* parametry różnych nazw, które są opisane w `IDBProperties::GetPropertyInfo`:  
   
@@ -135,7 +135,7 @@ STDMETHOD(SetProperties)(ULONG cPropertySets,
 ```  
   
 #### <a name="parameters"></a>Parametry  
- Zobacz [IDBProperties::SetProperties](https://msdn.microsoft.com/library/ms723049.aspx) w *OLE DB Podręcznik programisty*.  
+ Zobacz [IDBProperties::SetProperties](/previous-versions/windows/desktop/ms723049\(v=vs.85\)) w *OLE DB Podręcznik programisty*.  
   
 ### <a name="remarks"></a>Uwagi  
  Jeśli dostawca jest inicjowany, ta metoda ustawia wartości właściwości w DBPROPSET_DATASOURCE, DBPROPSET_DATASOURCEINFO, DBPROPSET_DBINIT grupy właściwości dla obiektu źródła danych. Jeśli dostawca nie został zainicjowany, ustawia DBPROPSET_DBINIT tylko właściwości grupy.  

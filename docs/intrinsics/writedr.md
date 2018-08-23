@@ -16,12 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6fab96a22dec9b4cf2914fa2c02dd973bcd7ace8
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 598b95df8fd2f4dd2826fcfa1f59a7e2daa8d523
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33329186"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42465352"
 ---
 # <a name="writedr"></a>__writedr
 Zapisuje określoną wartość do rejestru określonego debugowania.  
@@ -35,7 +35,7 @@ void __writedr(unsigned DebugRegister, unsigned __int64 DebugValue);
   
 #### <a name="parameters"></a>Parametry  
  [in] `DebugRegister`  
- Liczba z przedziału od 0 do 7, który identyfikuje debugowania zarejestrować.  
+ Liczba z przedziału od 0 do 7, który identyfikuje debugowania rejestru.  
   
  [in] `DebugValue`  
  Zarejestruj wartość do zapisania do debugowania.  
@@ -45,13 +45,13 @@ void __writedr(unsigned DebugRegister, unsigned __int64 DebugValue);
   
 ## <a name="requirements"></a>Wymagania  
   
-|— Wewnętrzne|Architektura|  
+|Wewnętrzne|Architektura|  
 |---------------|------------------|  
-|`__writedr`|x86, [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
+|`__writedr`|x86, x64|  
   
- **Plik nagłówka** \<intrin.h >  
+ **Plik nagłówkowy** \<intrin.h >  
   
-**KOŃCOWY określonych firmy Microsoft**  
+**END specyficzny dla Microsoft**  
   
 ## <a name="see-also"></a>Zobacz też  
  [Funkcje wewnętrzne kompilatora](../intrinsics/compiler-intrinsics.md)   

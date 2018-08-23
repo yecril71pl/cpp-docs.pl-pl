@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7dc15e9eaf7068756aa4d945cf494156498af6f9
-ms.sourcegitcommit: 76fd30ff3e0352e2206460503b61f45897e60e4f
+ms.openlocfilehash: 2a03e29ed5197d27b421135b1561f3edc88af596
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/13/2018
-ms.locfileid: "39025987"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42464553"
 ---
 # <a name="atl-ole-db-consumer-wizard"></a>Kreator konsumenta OLE DB ATL
 Ten kreator konfiguruje klasę konsumenta OLE DB przy użyciu powiązania danych niezbędnych do uzyskania dostępu z określonym źródłem danych przy użyciu określonego dostawcy OLE DB.  
@@ -33,7 +33,7 @@ Ten kreator konfiguruje klasę konsumenta OLE DB przy użyciu powiązania danych
   
 ## <a name="uielement-list"></a>Lista elementów UI  
 **Źródło danych**  
-**Źródła danych** przycisk umożliwia konfigurowanie określonym źródłem danych przy użyciu określonego dostawcy OLE DB. Po kliknięciu tego przycisku **właściwości Linku danych** pojawi się okno dialogowe. Aby uzyskać więcej informacji na temat tworzenia parametrów połączenia i **właściwości Linku danych** okno dialogowe, zobacz [omówienie interfejsu API łącza danych](https://msdn.microsoft.com/library/ms718102.aspx) w dokumentacji zestawu Windows SDK.  
+**Źródła danych** przycisk umożliwia konfigurowanie określonym źródłem danych przy użyciu określonego dostawcy OLE DB. Po kliknięciu tego przycisku **właściwości Linku danych** pojawi się okno dialogowe. Aby uzyskać więcej informacji na temat tworzenia parametrów połączenia i **właściwości Linku danych** okno dialogowe, zobacz [omówienie interfejsu API łącza danych](/previous-versions/windows/desktop/ms718102\(v=vs.85\)) w dokumentacji zestawu Windows SDK.  
   
 > [!NOTE]
 >  W poprzednich wersjach klawiszem Shift **źródła danych** przycisk otwarte okno dialogowe Otwieranie pliku pozwalają na wybór pliku połączenia danych (udl). Ta funkcja nie jest już obsługiwana.  
@@ -176,7 +176,7 @@ Kliknij przycisk **OK** na zakończenie. **Obiektu bazy danych wybierz** pojawi 
  Wybierz tę opcję, jeśli chcesz używać `CCommand` lub `db_command` do tworzenia poleceń i polecenia akcesor deklaracji klasy. To ustawienie domyślne.  
   
  **Obsługa**  
- Zaznacz pole wyboru, aby określić rodzaje aktualizacje, które są obsługiwane w konsumencie (domyślna wartość to brak). Następujące czynniki ustawi [DBPROP_IRowsetChange](https://msdn.microsoft.com/library/ms715892.aspx) i odpowiednie wpisy [DBPROP_UPDATABILITY](https://msdn.microsoft.com/library/ms722676.aspx) we właściwości ustaw mapy.  
+ Zaznacz pole wyboru, aby określić rodzaje aktualizacje, które są obsługiwane w konsumencie (domyślna wartość to brak). Następujące czynniki ustawi [DBPROP_IRowsetChange](/previous-versions/windows/desktop/ms715892\(v=vs.85\)) i odpowiednie wpisy [DBPROP_UPDATABILITY](/previous-versions/windows/desktop/ms722676\(v=vs.85\)) we właściwości ustaw mapy.  
   
  **Zmiany**  
  Określa, że odbiorcy obsługuje aktualizacje danych wierszy w zestawie wierszy.  
@@ -190,4 +190,4 @@ Kliknij przycisk **OK** na zakończenie. **Obiektu bazy danych wybierz** pojawi 
 ## <a name="see-also"></a>Zobacz też  
  [Konsumenta ATL OLE DB](../../atl/reference/adding-an-atl-ole-db-consumer.md)   
  [Dodawanie funkcji za pomocą kreatorów kodu](../../ide/adding-functionality-with-code-wizards-cpp.md)   
- [Parametry połączenia i połączeń między danymi (OLE DB)](https://msdn.microsoft.com/library/ms718376.aspx)
+ [Parametry połączenia i połączeń między danymi (OLE DB)](/previous-versions/windows/desktop/ms718376\(v=vs.85\))

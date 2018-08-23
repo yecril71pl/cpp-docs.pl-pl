@@ -1,5 +1,5 @@
 ---
-title: Odwołanie NMAKE | Dokumentacja firmy Microsoft
+title: NMAKE — dokumentacja | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,19 +17,19 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 07ffd955400b1b27efc192a7fe0df4ef31164cda
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 00113372d86e488882c687afb56bd5e52bb74c21
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32372682"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42465258"
 ---
 # <a name="nmake-reference"></a>Odwołanie NMAKE
-Narzędzie do konserwacji programów firmy Microsoft (NMAKE. EXE) jest narzędziem wiersza polecenia dołączone [!INCLUDE[vsprvs](../assembler/masm/includes/vsprvs_md.md)] który kompilacji projektów opartych na poleceń, które są zawarte w pliku opisu.  
+Narzędzie do konserwacji programów firmy Microsoft (NMAKE. Z rozszerzeniem EXE) jest narzędziem wiersza polecenia, w programie Visual Studio, który tworzy projektów opartych na polecenia, które są zawarte w pliku opisu.  
   
- Aby użyć NMAKE, należy uruchomić go w oknie wiersza polecenia dewelopera. Okno wiersza polecenia dewelopera ma zmiennych środowiskowych dla narzędzi, bibliotek oraz wymagane do utworzenia w wierszu polecenia ścieżki plików dołączanych. Aby uzyskać więcej informacji na temat otworzyć okno wiersza polecenia dewelopera, zobacz [kodu kompilacji C/C++ w wierszu polecenia](../build/building-on-the-command-line.md).  
+ Aby użyć NMAKE, możesz ją uruchomić w oknie wiersza polecenia dla deweloperów. Okno wiersza polecenia dla deweloperów zawiera zmienne środowiskowe zestawu narzędzi, bibliotek i zawierać ścieżek plików, które są wymagane do tworzenia w wierszu polecenia. Aby uzyskać więcej informacji na temat otworzyć okno wiersza polecenia dla deweloperów, zobacz [kodu kompilacji C/C++ w wierszu polecenia](../build/building-on-the-command-line.md).  
   
-## <a name="what-do-you-want-to-know-more-about"></a>Co chcesz dowiedzieć się więcej o?  
+## <a name="what-do-you-want-to-know-more-about"></a>Co chcesz dowiedzieć się więcej na temat?  
  [Uruchomienie NMAKE](../build/running-nmake.md)  
   
  [Zawartość pliku reguł programu Make](../build/contents-of-a-makefile.md)  
@@ -47,7 +47,7 @@ Narzędzie do konserwacji programów firmy Microsoft (NMAKE. EXE) jest narzędzi
  [Przetwarzanie wstępne pliku reguł programu make](../build/makefile-preprocessing.md)  
   
 ## <a name="see-also"></a>Zobacz też  
- [Kompilowania kodu C/C++ w wierszu polecenia](../build/building-on-the-command-line.md)   
+ [Kompilowanie kodu C/C++ w wierszu polecenia](../build/building-on-the-command-line.md)   
  [Narzędzia kompilacji C/C++](../build/reference/c-cpp-build-tools.md)   
  [Tworzenie i zarządzanie projektami Visual C++](../ide/creating-and-managing-visual-cpp-projects.md)   
  [Debugowanie w programie Visual Studio](/visualstudio/debugger/debugging-in-visual-studio)   

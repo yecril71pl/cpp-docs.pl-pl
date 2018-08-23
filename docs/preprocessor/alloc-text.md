@@ -18,39 +18,40 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a1e07b630254d7691321443a74973e06ed50ae2d
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: c90545bb2806b97ccdd47ae90f8ab41bf1b3422c
+ms.sourcegitcommit: d4c803bd3a684d7951bf88dcecf1f14af43ae411
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33912774"
+ms.lasthandoff: 08/10/2018
+ms.locfileid: "42465036"
 ---
 # <a name="alloctext"></a>alloc_text
-Nazwy sekcji kodu, gdzie się znajdują się definicje określona funkcja. Pragma musi występować między deklarator funkcji i definicji funkcji dla funkcji o nazwie.  
+Nazwy sekcji kodu, w którym mają znajdować się definicje określonej funkcji. Pragma musi przypadać między deklaratora funkcji i definicji funkcji o nazwie funkcji.  
   
 ## <a name="syntax"></a>Składnia  
   
 ```  
-  
 #pragma alloc_text( "  
 textsection  
 ", function1, ... )  
 ```  
   
-## <a name="remarks"></a>Uwagi  
- **Alloc_text** pragma nie obsługuje funkcji Członkowskich C++ i funkcji przeciążenia. Ma zastosowanie tylko do funkcji zadeklarowany z powiązaniem C — to znaczy funkcje deklarowane z **zewnętrzne "C"** Specyfikacja powiązania. Jeśli spróbujesz użyć tej pragmy w funkcji z powiązaniem C++, generowany jest błąd kompilatora.  
+## <a name="remarks"></a>Uwagi 
+
+**Alloc_text** pragma nie obsługuje funkcji składowych języka C++ lub przeciążonej funkcji. Ma ona zastosowanie tylko do funkcji zadeklarowanych z powiązaniem C — oznacza to, że funkcje zadeklarowane za pomocą **extern "C"** Specyfikacja powiązania. Jeśli spróbujesz użyć tej pragmie dla funkcji z powiązaniem C++, jest generowany błąd kompilatora.  
   
- Ponieważ funkcja adresowania użycie `__based` nie jest obsługiwana, określając lokalizacje sekcji wymaga użycia **alloc_text** pragma. Nazwa określona przez *textsection* powinna zostać ujęta w znaki cudzysłowu.  
+Ze względu na używanie adresowania funkcja `__based` nie jest obsługiwana, określając lokalizacje sekcji wymaga użycia **alloc_text** pragmy. Nazwa określona przez *textsection* powinna zostać ujęta w znaki cudzysłowu.  
   
- **Alloc_text** pragma musi występować po deklaracji dowolnego z określonych funkcji i przed definicjami tych funkcji.  
+**Alloc_text** pragma musi pojawić się po deklaracjach dowolnego z określonych funkcji i przed definicjami tych funkcji.  
   
- Funkcje, do którego odwołuje się **alloc_text** pragma powinien być zdefiniowany w tym samym module jako pragma. Jeśli to nie zostanie zrobione, niezdefiniowanej funkcji później jest kompilowany do sekcji inny tekst błędu mogą lub nie może zostać przechwycony. Mimo że program zazwyczaj będzie działać poprawnie, nie można przydzielić funkcji w sekcjach zamierzone.  
+Funkcje, do którego odwołuje się **alloc_text** pragma powinien być zdefiniowany w tym samym modułem pragmy. Jeśli nie jest to wykonywane, funkcja undefined później jest skompilowany w sekcji inny tekst błędu może lub nie może zostać przechwycony. Mimo że program zwykle będzie działać poprawnie, funkcja nie zostaną przydzielone w sekcjach zamierzone.  
   
- Inne ograniczenia dotyczące **alloc_text** są następujące:  
+Inne ograniczenia dotyczące **alloc_text** są następujące:  
   
--   Nie można używać wewnątrz funkcji.  
+- Nie można używać wewnątrz funkcji.  
   
--   Należy użyć, po funkcja została zadeklarowana, ale przed funkcja została zdefiniowana.  
+- Należy użyć, po funkcja została zadeklarowana, ale przed funkcja została zdefiniowana.  
   
-## <a name="see-also"></a>Zobacz też  
- [Dyrektywy pragma i słowo kluczowe __Pragma](../preprocessor/pragma-directives-and-the-pragma-keyword.md)
+## <a name="see-also"></a>Zobacz też 
+
+[Dyrektywy pragma i słowo kluczowe __Pragma](../preprocessor/pragma-directives-and-the-pragma-keyword.md)

@@ -50,15 +50,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 81087eb5f611edd5ad41725177226c2c2b7a9c2d
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: 394cd0da74171e517086886a5c0c915fc77ba49c
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37851351"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42464659"
 ---
 # <a name="cmfcoutlookbarpane-class"></a>Klasa CMFCOutlookBarPane
-[!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+Aby uzyskać więcej informacji, zobacz kod źródłowy znajdujący się w **VC\\atlmfc\\src\\mfc** folder instalacji programu Visual Studio.  
   
  Formant pochodzące z [klasa CMFCToolBar](../../mfc/reference/cmfctoolbar-class.md) który może być wstawiany do paska Outlook ( [klasa CMFCOutlookBar](../../mfc/reference/cmfcoutlookbar-class.md)). Okienko paska Outlook zawiera kolumnę dużych przycisków. Użytkownik może przewijać listę przycisków w górę i w dół, jeśli jest większa niż okienko. Kiedy użytkownik odłącza okienko paska Outlook od paska Outlook, możesz float lub Zadokuj w oknie głównym ramki.  
   
@@ -222,7 +222,7 @@ BOOL AddButton(
  Jeśli indeks określony przez *iInsertAt* wynosi -1, zostanie on dodany na końcu strony.  
   
 ##  <a name="canbeattached"></a>  CMFCOutlookBarPane::CanBeAttached  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+ Aby uzyskać więcej informacji, zobacz kod źródłowy znajdujący się w **VC\\atlmfc\\src\\mfc** folder instalacji programu Visual Studio.  
   
 ```  
 virtual BOOL CanBeAttached() const;  

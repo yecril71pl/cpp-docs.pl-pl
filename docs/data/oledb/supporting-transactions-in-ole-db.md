@@ -20,23 +20,23 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 932185002032ab86ca80b2b3384bfe6cbb69f8b1
-ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
+ms.openlocfilehash: 59e890e9d38ff0a37114f2f15217a748c21fff44
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/30/2018
-ms.locfileid: "39338713"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42466351"
 ---
 # <a name="supporting-transactions-in-ole-db"></a>Obsługa transakcji w OLE DB
 A [transakcji](../../data/transactions-mfc-data-access.md) to sposób grupowania lub usługi batch, serię aktualizacji ze źródłem danych, aby wszystkie powiedzie się i dokłada wszelkich starań, jednocześnie lub (jeśli jeden z nich ulegnie awarii) żaden nie jest zatwierdzona i cała transakcja zostanie wycofana. Ten proces zapewnia integralność wynik w źródle danych.  
   
  OLE DB obsługuje transakcji z trzech poniższych metod:  
   
--   [ITransactionLocal::StartTransaction](https://msdn.microsoft.com/library/ms709786.aspx)  
+-   [ITransactionLocal::StartTransaction](/previous-versions/windows/desktop/ms709786\(v=vs.85\))  
   
--   [Metody ITransaction::Commit](https://msdn.microsoft.com/library/ms713008.aspx)  
+-   [Metody ITransaction::Commit](/previous-versions/windows/desktop/ms713008\(v=vs.85\))  
   
--   [ITransaction::Abort](https://msdn.microsoft.com/library/ms709833.aspx)  
+-   [ITransaction::Abort](/previous-versions/windows/desktop/ms709833\(v=vs.85\))  
   
 ## <a name="relationship-of-sessions-and-transactions"></a>Relacja między sesjami i transakcji  
  Obiekt źródłowy danych jednego można tworzyć obiektów sesji, z których każdy może być wewnątrz lub na zewnątrz zakresu transakcji w danym momencie.  
@@ -55,7 +55,7 @@ A [transakcji](../../data/transactions-mfc-data-access.md) to sposób grupowania
  Wywoływanie `ITransaction::Commit` lub `ITransaction::Abort` kończy się transakcji. `Commit` powoduje, że wszystkie zmiany w zakresie transakcji, które mają być stosowane do magazynu danych. `Abort` powoduje, że wszystkie zmiany w zakresie transakcji zostaną anulowane i magazynem danych pozostanie w stanie go miał przed rozpoczęciem transakcji.  
   
 ## <a name="nested-transactions"></a>Transakcje zagnieżdżone  
- A [zagnieżdżonych transakcji](https://msdn.microsoft.com/library/ms716985.aspx) po uruchomieniu nowej transakcji lokalnej, gdy w sesji istnieje już aktywna transakcja. Nowa transakcja jest uruchomiony jako transakcji zagnieżdżonej poniżej bieżącej transakcji. Jeśli dostawca nie obsługuje transakcji zagnieżdżonych, wywołanie `StartTransaction` gdy istnieje już aktywna transakcja sesji zwraca XACT_E_XTIONEXISTS.  
+ A [zagnieżdżonych transakcji](/previous-versions/windows/desktop/ms716985\(v=vs.85\)) po uruchomieniu nowej transakcji lokalnej, gdy w sesji istnieje już aktywna transakcja. Nowa transakcja jest uruchomiony jako transakcji zagnieżdżonej poniżej bieżącej transakcji. Jeśli dostawca nie obsługuje transakcji zagnieżdżonych, wywołanie `StartTransaction` gdy istnieje już aktywna transakcja sesji zwraca XACT_E_XTIONEXISTS.  
   
 ## <a name="distributed-transactions"></a>Transakcje rozproszone  
  Transakcja rozproszona jest transakcji, która aktualizuje rozproszonych danych; oznacza to, że dane na więcej niż jednym komputerze sieciowym. Jeśli chcesz obsługiwać transakcji za pośrednictwem systemu rozproszonego, należy użyć programu .NET Framework, a nie Obsługa transakcji w OLE DB.  

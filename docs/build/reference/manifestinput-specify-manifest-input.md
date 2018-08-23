@@ -12,15 +12,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: eecf1740855c2feef0d7cac4bbcc85ad95eade6f
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: d1b5ed266f1b8929deee3ffb60a10b18b7604afc
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32372854"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42466056"
 ---
 # <a name="manifestinput-specify-manifest-input"></a>/MANIFESTINPUT (Określ dane wejściowe manifestu)
-Określa plik wejściowy manifestu do uwzględnienia w manifeście, dla których jest osadzony w obrazie.  
+Określa wejściowy plik manifestu do uwzględnienia w manifeście który jest osadzony w obrazie.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -30,12 +30,12 @@ Określa plik wejściowy manifestu do uwzględnienia w manifeście, dla których
   
 #### <a name="parameters"></a>Parametry  
  `filename`  
- Plik manifestu do uwzględnienia w manifeście osadzonych.  
+ Plik manifestu do uwzględnienia we wbudowanym manifeście.  
   
 ## <a name="remarks"></a>Uwagi  
- **/MANIFESTINPUT** opcji określa ścieżkę pliku wejściowego używać do tworzenia manifestu osadzonego obrazu wykonywalnego. Jeśli masz wiele manifest pliki wejściowe, użyj przełącznika wiele razy — raz dla każdego pliku wejściowego. Pliki wejściowe manifestu zostaną scalone tworzenie manifestu osadzonych. Ta opcja wymaga **/MANIFEST: OSADZANIE** opcji.  
+ **/MANIFESTINPUT** opcja określa ścieżkę pliku wejściowego używanego do tworzenia manifestu osadzonego w obrazie wykonywalnym. Jeśli masz wiele plików wejściowych manifestu, należy użyć przełącznika wiele razy — raz dla każdego pliku wejściowego. Pliki wejściowe manifestu są scalane, tworząc manifest wbudowany. Ta opcja wymaga **/MANIFEST: OSADZANIE** opcji.  
   
- Ta opcja nie można ustawić bezpośrednio w [!INCLUDE[vsprvs](../../assembler/masm/includes/vsprvs_md.md)]. Zamiast tego należy użyć **dodatkowe pliki manifestu** właściwości projektu, aby określić dodatkowe pliki manifestu do uwzględnienia. Aby uzyskać więcej informacji, zobacz [danych wejściowych i wyjściowych, narzędziu manifestu, właściwości konfiguracji \<Projectname > strony właściwości — okno dialogowe](../../ide/input-and-output-manifest-tool.md).  
+ Tej opcji nie można ustawić bezpośrednio w programie Visual Studio. Zamiast tego należy użyć **dodatkowe pliki manifestu** właściwości projektu, aby określić dodatkowe pliki manifestu do uwzględnienia. Aby uzyskać więcej informacji, zobacz [dane wejściowe i dane wyjściowe, narzędzie manifestu, właściwości konfiguracji \<nazwa_projektu > okno dialogowe strony właściwości](../../ide/input-and-output-manifest-tool.md).  
   
 ## <a name="see-also"></a>Zobacz też  
  [Ustawianie opcji konsolidatora](../../build/reference/setting-linker-options.md)   

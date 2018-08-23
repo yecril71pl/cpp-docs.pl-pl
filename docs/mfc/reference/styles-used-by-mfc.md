@@ -206,12 +206,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e8c8868f83cb2e05a364b8977b014db5c02689c5
-ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
+ms.openlocfilehash: 318951b5216513c20cdb21ac4a4fcfff9c3e0ac7
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37886066"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42466136"
 ---
 # <a name="styles-used-by-mfc"></a>Style używane przez MFC  
   
@@ -232,15 +232,15 @@ Poniższa tabela zawiera listę typów przycisków. Opcjonalnie można wybrać j
 |BS_AUTOCHECKBOX|Tworzy przycisk pola wyboru z dwóch stanów: BST_CHECKED i BST_UNCHECKED. Kliknięcie na przycisk wysyła powiadomienie BN_CLICKED do okna właściciela i zmienia stan przycisku. Domyślnie skojarzony tekst jest wyświetlany po prawej stronie pola wyboru. Aby wyświetlić tekst po lewej stronie pola wyboru, należy użyć stylu BS_LEFTTEXT lub BS_RIGHTBUTTON.|  
 |BS_AUTORADIOBUTTON|Tworzy przycisk radiowy z dwóch stanów: BST_CHECKED i BST_UNCHECKED. Przyciski radiowe są zwykle używane w grupach, z każdą grupą mającą co najwyżej jedną zaznaczoną opcję w danym momencie. Kliknięcie na przycisk wysyła powiadomienie BN_CLICKED do okna właściciela, ustawia stan klikniętego przycisku radiowego BST_CHECKED i ustawia stan wszystkich przycisków opcji w grupie przycisk, aby BST_UNCHECKED. Domyślnie skojarzony tekst jest wyświetlany po prawej stronie przycisku radiowego. Aby wyświetlić tekst po lewej stronie przycisku radiowego, użyj stylu BS_LEFTTEXT lub BS_RIGHTBUTTON.|  
 |BS_CHECKBOX|Tworzy przycisk pola wyboru z dwóch stanów: BST_CHECKED i BST_UNCHECKED. Kliknięcie na przycisk wysyła powiadomienie BN_CLICKED do okna właściciela ale nie zmienia stanu przycisku. Domyślnie skojarzony tekst jest wyświetlany po prawej stronie pola wyboru. Aby wyświetlić tekst po lewej stronie pola wyboru, należy użyć stylu BS_LEFTTEXT lub BS_RIGHTBUTTON.|  
-|BS_COMMANDLINK|Tworzy łącze przycisku polecenia. Przycisk polecenia łącze jest przycisk polecenia specyficznym dla [!INCLUDE[windowsver](../../build/reference/includes/windowsver_md.md)] który wyświetla zieloną strzałkę na lewo od tekstu głównego i uwagę poniżej tekstu głównego. Możesz ustawić tekst notatki używając [CButton::SetNote](../../mfc/reference/cbutton-class.md#setnote).|  
-|BS_DEFCOMMANDLINK|Tworzy łącze przycisku polecenia. Przycisk polecenia łącze jest przycisk polecenia specyficznym dla [!INCLUDE[windowsver](../../build/reference/includes/windowsver_md.md)] który wyświetla zieloną strzałkę na lewo od tekstu głównego i uwagę poniżej tekstu głównego. Możesz ustawić tekst notatki używając [CButton::SetNote](../../mfc/reference/cbutton-class.md#setnote). Jeśli przycisk znajduje się w oknie dialogowym, naciskając klawisz ENTER wysyła powiadomienie BN_CLICKED do okna dialogowego nawet wtedy, gdy przycisk nie ma fokusa wejścia.|  
+|BS_COMMANDLINK|Tworzy łącze przycisku polecenia. Przycisk polecenia łącze jest przycisk polecenia specyficznym Windows Vista, który wyświetla zieloną strzałkę na lewo od tekstu głównego i uwagę poniżej tekstu głównego. Możesz ustawić tekst notatki używając [CButton::SetNote](../../mfc/reference/cbutton-class.md#setnote).|  
+|BS_DEFCOMMANDLINK|Tworzy łącze przycisku polecenia. Przycisk polecenia łącze jest przycisk polecenia specyficznym Windows Vista, który wyświetla zieloną strzałkę na lewo od tekstu głównego i uwagę poniżej tekstu głównego. Możesz ustawić tekst notatki używając [CButton::SetNote](../../mfc/reference/cbutton-class.md#setnote). Jeśli przycisk znajduje się w oknie dialogowym, naciskając klawisz ENTER wysyła powiadomienie BN_CLICKED do okna dialogowego nawet wtedy, gdy przycisk nie ma fokusa wejścia.|  
 |BS_DEFPUSHBUTTON|Tworzy przycisk polecenia, który ma grube czarne obramowanie. Jeśli przycisk znajduje się w oknie dialogowym, naciskając klawisz ENTER wysyła powiadomienie BN_CLICKED do okna dialogowego nawet wtedy, gdy przycisk nie ma fokusa wejścia.|  
-|BS_DEFSPLITBUTTON|Tworzy przycisk podziału. Przycisk podziału jest przyciskiem polecenia specyficznym dla [!INCLUDE[windowsver](../../build/reference/includes/windowsver_md.md)] zawierający strzałkę listy rozwijanej obok przycisku. Po kliknięciu przycisku, jest wykonywane to polecenie domyślne. Po kliknięciu strzałki listy rozwijanej, pojawi się menu dodatkowych poleceń. Jeśli przycisk podziału znajduje się w oknie dialogowym, naciskając klawisz ENTER wysyła powiadomienie BN_CLICKED do okna dialogowego nawet wtedy, gdy przycisk ma fokus wprowadzania|  
+|BS_DEFSPLITBUTTON|Tworzy przycisk podziału. Przycisk podziału jest przyciskiem polecenia specyficznym Windows Vista, który zawiera strzałkę listy rozwijanej obok przycisku. Po kliknięciu przycisku, jest wykonywane to polecenie domyślne. Po kliknięciu strzałki listy rozwijanej, pojawi się menu dodatkowych poleceń. Jeśli przycisk podziału znajduje się w oknie dialogowym, naciskając klawisz ENTER wysyła powiadomienie BN_CLICKED do okna dialogowego nawet wtedy, gdy przycisk ma fokus wprowadzania|  
 |BS_GROUPBOX|Tworzy prostokąt, w którym inne przyciski mogą być grupowane. Tekst skojarzony z tym stylem jest wyświetlany w prawym górnym rogu prostokąta.|  
 |BS_OWNERDRAW|Tworzy przycisk rysowania przez właściciela. Struktura wywołuje `DrawItem` metody, gdy zmieni się wizualny aspekt przycisku został zmieniony. Ten styl musi być ustawiony, gdy używasz `CBitmapButton` klasy.|  
 |BS_PUSHBUTTON|Tworzy przycisk polecenia, który wysyła powiadomienie BN_CLICKED do okna właściciela, gdy użytkownik kliknie przycisk.|  
 |BS_RADIOBUTTON|Tworzy przycisk radiowy z dwóch stanów: BST_CHECKED i BST_UNCHECKED. Przyciski radiowe są zwykle używane w grupach, z każdą grupą mającą co najwyżej jedną zaznaczoną opcję w danym momencie. Kliknięcie na przycisk wysyła powiadomienie BN_CLICKED do okna właściciela ale automatycznie nie zmienia stanu przycisku w grupie. Domyślnie skojarzony tekst jest wyświetlany po prawej stronie przycisku radiowego. Aby wyświetlić tekst po lewej stronie przycisku radiowego, użyj stylu BS_LEFTTEXT lub BS_RIGHTBUTTON.|  
-|BS_SPLITBUTTON|Tworzy przycisk podziału. Przycisk podziału jest przyciskiem polecenia specyficznym dla [!INCLUDE[windowsver](../../build/reference/includes/windowsver_md.md)] zawierający strzałkę listy rozwijanej obok przycisku. Po kliknięciu przycisku, jest wykonywane to polecenie domyślne. Po kliknięciu strzałki listy rozwijanej, pojawi się menu dodatkowych poleceń.|  
+|BS_SPLITBUTTON|Tworzy przycisk podziału. Przycisk podziału jest przyciskiem polecenia specyficznym Windows Vista, który zawiera strzałkę listy rozwijanej obok przycisku. Po kliknięciu przycisku, jest wykonywane to polecenie domyślne. Po kliknięciu strzałki listy rozwijanej, pojawi się menu dodatkowych poleceń.|  
 |BS_USERBUTTON|Nieaktualne, ale dostarczone do celów zgodności z 16-bitowych wersjach systemu Windows. Aplikacje oparte na Win32, należy zamiast tego użyj BS_OWNERDRAW.|  
   
 ### <a name="radio-button-and-check-box-styles"></a>Style przycisk i pole wyboru opcji  
@@ -498,7 +498,7 @@ Rozszerzone Style okna dotyczą [klasa CWnd](../../mfc/reference/cwnd-class.md) 
 |WS_EX_CONTEXTHELP|Zawiera znak zapytania na pasku tytułu okna. Kiedy użytkownik kliknie na znak zapytania, kursor zmieni się znak zapytania ze wskaźnikiem. Jeśli następnie użytkownik klika pozycję okna podrzędnego, podrzędne otrzymuje komunikat WM_HELP.|  
 |WS_EX_CONTROLPARENT|Umożliwia użytkownikom przechodzenie między oknami podrzędne okna przy użyciu klawisza TAB.|  
 |WS_EX_DLGMODALFRAME|Wyznacza okno z podwójne obramowanie, który może zostać utworzony (opcjonalnie) z tytułu paska po określeniu Flaga styl WS_CAPTION w *dwStyle* parametru.|  
-|WS_EX_LAYERED|Okno jest [warstwie okna](http://msdn.microsoft.com/library/ms632599.aspx#layered). Ten styl nie można użyć, jeśli okno ma [klasy styl](http://msdn.microsoft.com/library/ms633574.aspx#class_styles) CS_OWNDC lub CS_CLASSDC. Jednak [!INCLUDE[win8_first](../../mfc/reference/includes/win8_first_md.md)] Obsługa stylów WS_EX_LAYERED okien podrzędnych, gdy poprzednie wersje Windows go obsługują tylko dla okien najwyższego poziomu.|  
+|WS_EX_LAYERED|Okno jest [warstwie okna](http://msdn.microsoft.com/library/ms632599.aspx#layered). Ten styl nie można użyć, jeśli okno ma [klasy styl](http://msdn.microsoft.com/library/ms633574.aspx#class_styles) CS_OWNDC lub CS_CLASSDC. Jednak program Microsoft Windows 8 obsługę stylów WS_EX_LAYERED okien podrzędnych, gdy poprzednie wersje Windows go obsługują tylko dla okien najwyższego poziomu.|  
 |WS_EX_LEFT|Udostępnia ogólne właściwości wyrównany do lewej strony okna. Domyślnie włączone.|  
 |WS_EX_LEFTSCROLLBAR|Umieszcza pionowy pasek przewijania z lewej strony obszaru klienta.|  
 |WS_EX_LTRREADING|Wyświetla tekst okna przy użyciu od lewej do prawej właściwości kolejność odczytu. Domyślnie włączone.|  
