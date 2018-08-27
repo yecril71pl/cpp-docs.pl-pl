@@ -15,12 +15,12 @@ ms.author: corob
 ms.workload:
 - cplusplus
 - linux
-ms.openlocfilehash: 8e9f5527917dcab663670d59f7a4ce0f51948bfb
-ms.sourcegitcommit: e9ce38decc9f986edab5543de3464b11ebccb123
+ms.openlocfilehash: bbc19b4c8e698c520be2283376ac5297cdae33df
+ms.sourcegitcommit: f923f667065cd6c4203d10ca9520600ee40e5f84
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/13/2018
-ms.locfileid: "42464736"
+ms.lasthandoff: 08/24/2018
+ms.locfileid: "42900515"
 ---
 # <a name="configure-a-linux-cmake-project"></a>Konfigurowanie projektu CMake systemu Linux
 
@@ -87,10 +87,16 @@ Aby zmienić domyślne ustawienia narzędzia CMake, wybierz **CMake | Zmień ust
       "remoteCMakeListsRoot": "/var/tmp/src/${workspaceHash}/${name}",
       "cmakeExecutable": "/usr/local/bin/cmake",
       "buildRoot": "${env.LOCALAPPDATA}\\CMakeBuilds\\${workspaceHash}\\build\\${name}",
+      "installRoot": "${env.LOCALAPPDATA}\\CMakeBuilds\\${workspaceHash}\\install\\${name}",
       "remoteBuildRoot": "/var/tmp/build/${workspaceHash}/build/${name}",
+      "remoteInstallRoot": "/var/tmp/build/${workspaceHash}/install/${name}",
       "remoteCopySources": true,
       "remoteCopySourcesOutputVerbosity": "Normal",
       "remoteCopySourcesConcurrentCopies": "10",
+      "remoteCopySourcesMethod": "rsync",
+      "remoteCopySourcesExclusionList": [".vs", ".git"],
+      "rsyncCommandArgs" : "-t --delete --delete-excluded",
+      "remoteCopyBuildOutput" : "false",
       "cmakeCommandArgs": "",
       "buildCommandArgs": "",
       "ctestCommandArgs": "",
@@ -98,7 +104,19 @@ Aby zmienić domyślne ustawienia narzędzia CMake, wybierz **CMake | Zmień ust
 }
 ```
 
-`name` Wartość może być wedle uznania. `remoteMachineName` Wartość określa którego zdalnego systemu docelowego, w przypadku, gdy masz więcej niż jeden. Technologia IntelliSense jest włączona dla tego pola, które ułatwią Ci wybrać odpowiednie system. Pole `remoteCMakeListsRoot` Określa, gdzie źródła projektu zostaną skopiowane do systemu zdalnego. Pole `remoteBuildRoot` jest, gdzie zostaną wygenerowane dane wyjściowe kompilacji w systemie zdalnym. Dane wyjściowe również lokalnie kopiowany do lokalizacji określonej przez `buildRoot`.
+`name` Wartość może być wedle uznania. `remoteMachineName` Wartość określa którego zdalnego systemu docelowego, w przypadku, gdy masz więcej niż jeden. Technologia IntelliSense jest włączona dla tego pola, które ułatwią Ci wybrać odpowiednie system. Pole `remoteCMakeListsRoot` Określa, gdzie źródła projektu zostaną skopiowane do systemu zdalnego. Pole `remoteBuildRoot` jest, gdzie zostaną wygenerowane dane wyjściowe kompilacji w systemie zdalnym. Dane wyjściowe również lokalnie kopiowany do lokalizacji określonej przez `buildRoot`. `remoteInstallRoot` i `installRoot` pola są podobne do `remoteBuildRoot` i `buildRoot`, z wyjątkiem odnoszą się w trakcie instalacji narzędzia cmake. `remoteCopySources` Wpis kontroluje, czy źródłach lokalnych są kopiowane do maszyny zdalnej. Możesz ustawić to wartość false, jeśli masz wiele plików, a już synchronizowania źródeł samodzielnie. `remoteCopyOutputVerbosity` Wartość określa poziom szczegółowości krok kopiowania, w przypadku, gdy musisz zdiagnozować błędy. `remoteCopySourcesConcurrentCopies` Wpis steruje, jak wiele procesów jest zduplikowany kopiowanie. `remoteCopySourcesMethod` Wartość może być jednym z rsync lub sftp. `remoteCopySourcesExclusionList` Pola pozwala na kontrolowanie, co kopiowane do maszyny zdalnej. `rsyncCommandArgs` Wartość umożliwia sterowanie rsync metoda kopiowania. `remoteCopyBuildOutput` Pola określa, czy dane wyjściowe kompilacji zdalnej jest kopiowany do folderu kompilacji lokalnej.
+
+Dostępne są także niektóre ustawienia opcjonalne, których można użyć, aby uzyskać większą kontrolę:
+
+```json
+{
+      "remotePreBuildCommand": "",
+      "remotePreGenerateCommand": "",
+      "remotePostBuildCommand": "",
+}
+```
+
+Te opcje umożliwiają uruchamianie poleceń w oknie zdalnego, przed i po kompilacji, a przed generowania narzędzia CMake. Mogą to być wszystkie prawidłowe polecenia w oknie zdalnego. Dane wyjściowe w potoku do programu Visual Studio.
 
 ## <a name="build-a-supported-cmake-release-from-source"></a>Tworzenie obsługiwanych wersji CMake ze źródła
 

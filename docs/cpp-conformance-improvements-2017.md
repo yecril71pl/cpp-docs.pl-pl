@@ -10,12 +10,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 43bb06a4ef2229b2b9e98bf7acabbe757744fc73
-ms.sourcegitcommit: b92ca0b74f0b00372709e81333885750ba91f90e
+ms.openlocfilehash: 3708bce00b01ee796067bf91d99645cb61f19a53
+ms.sourcegitcommit: f923f667065cd6c4203d10ca9520600ee40e5f84
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/16/2018
-ms.locfileid: "42464888"
+ms.lasthandoff: 08/24/2018
+ms.locfileid: "42900703"
 ---
 # <a name="c-conformance-improvements-in-visual-studio-2017-versions-150-153improvements153-155improvements155-156improvements156-157improvements157-158update158"></a>Ulepszenia zgodności języka C++ w Visual Studio 2017 w wersji 15.0, [15.3](#improvements_153), [15.5](#improvements_155), [15.6](#improvements_156), [15.7](#improvements_157), [15.8](#update_158)
 
@@ -1680,6 +1680,8 @@ struct S : Base<T> {
 ```
 
 Aby naprawić błąd, zmień `return` instrukcję, aby `return this->base_value;`.
+
+**Uwaga:** w Boost biblioteka języka python, nastąpiło przez długi czas rozwiązania specyficzne dla MSVC szablon deklaracji do przodu w [unwind_type.hpp](https://github.com/boostorg/python/blame/develop/include/boost/python/detail/unwind_type.hpp). W obszarze [/ permissive-](build/reference/permissive-standards-conformance.md) trybu, począwszy od programu Visual Studio 2017 w wersji 15.8 (_MSC_VER = 1915), za pomocą kompilatora MSVC jest poprawnie wyszukiwania do nazwy zależnej od argumentu (ADL) i jest spójne za pomocą innych kompilatorów, dzięki czemu ochrona tego rozwiązania niepotrzebne. Aby uniknąć tego błędu *C3861: "unwind_type": nie odnaleziono identyfikatora*, zobacz [229 żądania Ściągnięcia](https://github.com/boostorg/python/pull/229) w repozytorium Boostorg można zaktualizować pliku nagłówka. Firma Microsoft ma już zastosować poprawki względem jakiegokolwiek [vcpkg](vcpkg.md) Boost pakietu, więc jeśli pobieranie lub uaktualnienie źródła Boost z vcpkg nie należy zastosować poprawkę oddzielnie.
 
 ### <a name="forward-declarations-and-definitions-in-namespace-std"></a>do przodu, deklaracje i definicje w przestrzeni nazw std
 
