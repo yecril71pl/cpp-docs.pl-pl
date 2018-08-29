@@ -1,7 +1,7 @@
 ---
 title: Wielowątkowość z C++ i MFC | Dokumentacja firmy Microsoft
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 08/27/2018
 ms.technology:
 - cpp-parallel
 ms.topic: conceptual
@@ -23,12 +23,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5fd5a60908d52bf0ccdf0c0e76e076cb244e3e31
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: a1f5f1ea1d8d6578b631da772522a0a852d11c89
+ms.sourcegitcommit: f7703076b850c717c33d72fb0755fbb2215c5ddc
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42596100"
+ms.lasthandoff: 08/28/2018
+ms.locfileid: "43132197"
 ---
 # <a name="multithreading-with-c-and-mfc"></a>Wielowątkowość z C++ i MFC
 Biblioteka Microsoft Foundation Class (MFC) zapewnia obsługę aplikacji wielowątkowych. W tym temacie opisano procesy i ciągi oraz podejście MFC do wielowątkowości.  
@@ -41,26 +41,26 @@ Jeśli chcesz, możesz utworzyć dodatkowe wątki nie w aplikacji. Można to zro
   
 MFC wyróżnia dwa rodzaje wątków: wątki interfejsu użytkownika oraz wątki robocze. Wątki interfejsu użytkownika są często używane do obsługi danych wejściowych użytkownika i reagowanie na zdarzenia i komunikaty generowane przez użytkownika. Wątki robocze są często używane do ukończenia zadania, takie jak ponowne obliczenie, które nie wymagają wprowadzenia danych przez użytkownika. Win32 API nie rozróżnia typów wątków; musi jedynie znać adres początkowy wątku, aby zacząć realizować wątek. MFC obsługuje wątki interfejsu użytkownika specjalnie poprzez dostarczanie funkcji "pompy komunikatów" zdarzeń w interfejsie użytkownika. `CWinApp` jest przykładem obiektu wątku interfejsu użytkownika, ponieważ pochodzi od `CWinThread` i obsługuje zdarzenia i komunikaty generowane przez użytkownika.  
   
-Szczególną uwagę należy do sytuacji, gdy więcej niż jeden wątek może wymagać dostępu do tego samego obiektu. [Wielowątkowość: Porady dotyczące programowania](../parallel/multithreading-programming-tips.md) opisuje metody, których można użyć, aby uniknąć problemów, które mogą powstać w takich sytuacjach. [Wielowątkowość: Jak używać klas synchronizacji](../parallel/multithreading-how-to-use-the-synchronization-classes.md) opisano, jak używać klas, które są dostępne do synchronizowania dostępu przez wiele wątków do pojedynczego obiektu.  
+Szczególną uwagę należy do sytuacji, gdy więcej niż jeden wątek może wymagać dostępu do tego samego obiektu. [Wielowątkowość: Porady dotyczące programowania](multithreading-programming-tips.md) opisuje metody, których można użyć, aby uniknąć problemów, które mogą powstać w takich sytuacjach. [Wielowątkowość: Jak używać klas synchronizacji](multithreading-how-to-use-the-synchronization-classes.md) opisano, jak używać klas, które są dostępne do synchronizowania dostępu przez wiele wątków do pojedynczego obiektu.  
   
 Pisanie i debugowanie wielowątkowego programowania jest natury skomplikowanym i trudnym przedsięwzięciem, ponieważ należy upewnić się, że obiekty nie są dostępne przez więcej niż jeden wątek jednocześnie. Tematy o wielowątkowości nie uczą podstaw programowania wielowątkowe, lecz jak używać MFC w programach wielowątkowych. Wielowątkowe próbki MFC zawarte w programie Visual C++ ilustrują kilka wielowątkowych funkcji API Win32 i nie wchodzą w skład MFC; jednak tylko mają one punkt wyjścia.  
   
-Aby uzyskać więcej informacji na temat sposobu system operacyjny obsługuje procesy i wątki, zobacz [procesy i wątki](http://msdn.microsoft.com/library/windows/desktop/ms684841) w zestawie Windows SDK.  
+Aby uzyskać więcej informacji na temat sposobu system operacyjny obsługuje procesy i wątki, zobacz [procesy i wątki](/windows/desktop/ProcThread/processes-and-threads) w zestawie Windows SDK.  
   
 Aby uzyskać więcej informacji dotyczących wielowątkowej obsługi MFC zobacz następujące tematy:  
   
-- [Wielowątkowość: tworzenie wątków interfejsu użytkownika](../parallel/multithreading-creating-user-interface-threads.md)  
+- [Wielowątkowość: tworzenie wątków interfejsu użytkownika](multithreading-creating-user-interface-threads.md)  
   
-- [Wielowątkowość: tworzenie wątków roboczych](../parallel/multithreading-creating-worker-threads.md)  
+- [Wielowątkowość: tworzenie wątków roboczych](multithreading-creating-worker-threads.md)  
   
-- [Wielowątkowość: jak używać klas synchronizacji](../parallel/multithreading-how-to-use-the-synchronization-classes.md)  
+- [Wielowątkowość: jak używać klas synchronizacji](multithreading-how-to-use-the-synchronization-classes.md)  
   
-- [Wielowątkowość: przerywanie wątków](../parallel/multithreading-terminating-threads.md)  
+- [Wielowątkowość: przerywanie wątków](multithreading-terminating-threads.md)  
   
-- [Wielowątkowość: porady dotyczące programowania](../parallel/multithreading-programming-tips.md)  
+- [Wielowątkowość: porady dotyczące programowania](multithreading-programming-tips.md)  
   
-- [Wielowątkowość: kiedy używać klas synchronizacji](../parallel/multithreading-when-to-use-the-synchronization-classes.md)  
+- [Wielowątkowość: kiedy używać klas synchronizacji](multithreading-when-to-use-the-synchronization-classes.md)  
   
 ## <a name="see-also"></a>Zobacz też  
  
-[Obsługa wielowątkowości w przypadku starszego kodu (Visual C++)](../parallel/multithreading-support-for-older-code-visual-cpp.md)
+[Obsługa wielowątkowości w przypadku starszego kodu (Visual C++)](multithreading-support-for-older-code-visual-cpp.md)

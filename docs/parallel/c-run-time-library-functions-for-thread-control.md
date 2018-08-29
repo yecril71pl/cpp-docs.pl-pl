@@ -19,12 +19,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7a08ba6c5343fda19bab823b9a415db18b745e2a
-ms.sourcegitcommit: e9ce38decc9f986edab5543de3464b11ebccb123
+ms.openlocfilehash: 2eaa1a0589cb001658b18144e06956eebd302287
+ms.sourcegitcommit: f7703076b850c717c33d72fb0755fbb2215c5ddc
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/13/2018
-ms.locfileid: "42464547"
+ms.lasthandoff: 08/28/2018
+ms.locfileid: "43131857"
 ---
 # <a name="c-run-time-library-functions-for-thread-control"></a>Funkcje biblioteki czasu wykonywania języka C do sterowania wątkami
 Wszystkie programy Win32 ma co najmniej jeden wątek. Jednym z wątków można utworzyć dodatkowe wątki. Wątek można szybko wykonać pracę, a następnie Zakończ działanie lub mogą pozostać aktywne przez cały okres istnienia programu.  
@@ -54,4 +54,4 @@ Biblioteki wykonawczej LIBCMT i MSVCRT C zapewniają następujące funkcje do tw
   
 ## <a name="see-also"></a>Zobacz też  
  
-[Wielowątkowość z językiem C i podsystemem Win32](../parallel/multithreading-with-c-and-win32.md)
+[Wielowątkowość z językiem C i podsystemem Win32](multithreading-with-c-and-win32.md)

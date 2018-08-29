@@ -12,23 +12,23 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5b93a28c8e3a1b7ca765f671e58ee54abbcfde9e
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: 5402f2eda294003d58f40e52e800a4cfaefb1b23
+ms.sourcegitcommit: f7703076b850c717c33d72fb0755fbb2215c5ddc
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33692240"
+ms.lasthandoff: 08/28/2018
+ms.locfileid: "43131576"
 ---
 # <a name="parallel-programming-in-visual-c"></a>Programowanie równoległe w programie Visual C++
-Visual C++ zawiera następujące technologie ułatwiające tworzenie wielowątkowej i równoległych programów, które skorzystać z wieloma rdzeniami i użycia procesora GPU w przypadku ogólnych celu programowania.  
+Visual C++ zapewnia następujące technologie wspomagające tworzenie wielowątkowych i równoległych programów, które korzystać z wielu rdzenia i GPU ogólnie programowania ogólnego.  
   
 ## <a name="related-articles"></a>Powiązane artykuły  
   
 |Tytuł|Opis|  
 |-----------|-----------------|  
-|[Automatyczna paralelizacja i wektoryzacja](../parallel/auto-parallelization-and-auto-vectorization.md)|Optymalizacje kompilatora, które przyspieszają kodu.|  
-|[Środowisko uruchomieniowe współbieżności](../parallel/concrt/concurrency-runtime.md)|Klasy, które upraszczają pisania programów, które używają równoległość danych lub równoległość zadań.|  
-|[C++ AMP (C++ Accelerated Massive Parallelism)](../parallel/amp/cpp-amp-cpp-accelerated-massive-parallelism.md)|Klasy, które umożliwiają użycie procesorów graficznych nowoczesnych programowania ogólnego przeznaczenia.|  
-|[Obsługa wielowątkowości w przypadku starszego kodu (Visual C++)](../parallel/multithreading-support-for-older-code-visual-cpp.md)|Starsze technologie, które mogą być przydatne w starszych aplikacjach. W przypadku nowych aplikacji użyj współbieżność środowiska wykonawczego lub C++ AMP.|  
-|[OpenMP](../parallel/openmp/openmp-in-visual-cpp.md)|Przez firmę Microsoft implementacją interfejsu API OpenMP.|  
-|[Visual C++](../visual-cpp-in-visual-studio.md)|Ta sekcja dokumentacji zawiera informacje na temat większość funkcji Visual C++.|
+|[Automatyczna paralelizacja i wektoryzacja](auto-parallelization-and-auto-vectorization.md)|Optymalizacje kompilatora, które przyspieszają kod.|  
+|[Środowisko uruchomieniowe współbieżności](concrt/concurrency-runtime.md)|Klasy upraszczające pisanie programów, które używają równoległości danych lub proste zadania.|  
+|[C++ AMP (C++ Accelerated Massive Parallelism)](amp/cpp-amp-cpp-accelerated-massive-parallelism.md)|Klasy, które umożliwiają korzystanie z nowoczesnych procesorów graficznych programowania ogólnego przeznaczenia.|  
+|[Obsługa wielowątkowości w przypadku starszego kodu (Visual C++)](multithreading-support-for-older-code-visual-cpp.md)|Starsze technologie, które mogą być użyteczne w starszych aplikacjach. W przypadku nowych aplikacji należy użyć współbieżnego środowiska uruchomieniowego lub C++ AMP.|  
+|[OpenMP](openmp/openmp-in-visual-cpp.md)|Implementacja OpenMP API firmy Microsoft.|  
+|[Visual C++](../visual-cpp-in-visual-studio.md)|Ten rozdział dokumentacji zawiera informacje o większości funkcji programu Visual C++.|

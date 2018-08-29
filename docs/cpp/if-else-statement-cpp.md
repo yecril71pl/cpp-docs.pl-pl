@@ -19,12 +19,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 15748249a39813edc4446fa25511d20361b0706c
-ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
+ms.openlocfilehash: e4aea3a0125e2712203eb668197d42bd850aef5e
+ms.sourcegitcommit: f7703076b850c717c33d72fb0755fbb2215c5ddc
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/01/2018
-ms.locfileid: "39405113"
+ms.lasthandoff: 08/28/2018
+ms.locfileid: "43131894"
 ---
 # <a name="if-else-statement-c"></a>if-else — instrukcja (C++)
 Formanty warunkowych gałęzi. Instrukcje w *bloku if* są wykonywane tylko wtedy, gdy *wyrażenie if* daje w wyniku wartość różna od zera (lub wartość PRAWDA). Jeśli wartość *wyrażenie* jest różna od zera, *instrukcja1* i wszelkie inne instrukcje w bloku są wykonywane, oraz innego bloku, jeśli jest obecny, jest pomijana. Jeśli wartość *wyrażenie* wynosi zero, a następnie bloku if zostanie pominięta i innego bloku, jeśli jest obecny, jest wykonywany. Wyrażenia, które dają różna od zera są
@@ -119,7 +119,8 @@ int main()
     }
 }
 ```  
-## <a name="if-statement-with-an-initializer"></a>Jeśli instrukcja za pomocą inicjatora
+## <a name="if_with_init"></a> Jeśli instrukcja za pomocą inicjatora
+
 **Visual Studio 2017 w wersji 15.3 lub nowszej** (udostępniono [/STD: c ++ 17](../build/reference/std-specify-language-standard-version.md)): **Jeśli** instrukcji może również zawierać wyrażenie, które deklaruje i inicjuje zmienną o nazwie. Użyj tego formularza, instrukcji if, gdy zmienna jest wymagana tylko w zakresie bloku if. 
 
 ```cpp
@@ -169,8 +170,8 @@ int main()
   
  **Else** klauzuli `if...else` instrukcja jest skojarzone z najbliższą poprzedniej **Jeśli** instrukcji w tym samym zakresie, który nie ma odpowiadającego **else** Instrukcja.   
 
-## <a name="constexpr-if-statements"></a>wyrażenia constexpr Jeśli instrukcji
-**Visual Studio 2017 w wersji 15.3 lub nowszej** (udostępniono [/STD: c ++ 17](../build/reference/std-specify-language-standard-version.md)): W funkcji szablonów, można użyć `constexpr if` instrukcję, aby podejmować decyzje rozgałęziania kompilacji bez konieczności uciekania się do wielu przeciążenia funkcji. Na przykład można napisać pojedynczą funkcję tego dojścia parametru podczas rozpakowywania (wymagane żadne przeciążenie parametr zero): 
+## <a name="a-nameifconstexpr-if-constexpr-statements"></a><a name="if_constexpr"> Jeśli instrukcji constexpr
+**Visual Studio 2017 w wersji 15.3 lub nowszej** (udostępniono [/STD: c ++ 17](../build/reference/std-specify-language-standard-version.md)): W funkcji szablonów, można użyć **Jeśli constexpr** instrukcję, aby podejmować decyzje rozgałęziania kompilacji bez konieczności uciekania się do kilku przeciążeń funkcji. Na przykład można napisać pojedynczą funkcję tego dojścia parametru podczas rozpakowywania (wymagane żadne przeciążenie parametr zero): 
 
 ```cpp
 template <class T, class... Rest>
@@ -180,9 +181,8 @@ void f(T&& t, Rest&&... r)
    do_something(t);
 
    // handle r conditionally
-   constexpr if (sizeof...(r)) 
+   if constexpr (sizeof...(r)) 
    {
-      
       f(r...); 
    }
    else

@@ -18,17 +18,17 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 35f651e7f6f35ceca02003ef24ccda98ada6f6c1
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 6d6422162d0497ec97c3803e0aace298536cb87a
+ms.sourcegitcommit: f7703076b850c717c33d72fb0755fbb2215c5ddc
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42596987"
+ms.lasthandoff: 08/28/2018
+ms.locfileid: "43131742"
 ---
 # <a name="thread-local-storage"></a>Lokalny magazyn wątków
 **Microsoft Specific**  
   
- Lokalny magazyn wątku (TLS) to mechanizm, za pomocą którego każdy wątek w danym procesie wielowątkowym przydziela pamięć dla danych specyficznych wątku. W standardowych programach wielowątkowych, dane są współużytkowane przez wszystkie wątki danego procesu, natomiast pamięć lokalna wątku jest mechanizmem przydzielania danych osobno dla danego wątku. Aby uzyskać pełne omówienie wątków, zobacz [procesy i wątki](http://msdn.microsoft.com/library/windows/desktop/ms684841) w zestawie Windows SDK.  
+ Lokalny magazyn wątku (TLS) to mechanizm, za pomocą którego każdy wątek w danym procesie wielowątkowym przydziela pamięć dla danych specyficznych wątku. W standardowych programach wielowątkowych, dane są współużytkowane przez wszystkie wątki danego procesu, natomiast pamięć lokalna wątku jest mechanizmem przydzielania danych osobno dla danego wątku. Aby uzyskać pełne omówienie wątków, zobacz [procesy i wątki](/windows/desktop/ProcThread/processes-and-threads) w zestawie Windows SDK.  
   
  Język Microsoft C zawiera atrybuty rozszerzone klasy magazynu, wątek, który jest używany z __declspec — słowo kluczowe, aby zadeklarować zmienną lokalną wątku. Na przykład, poniższy kod deklaruje lokalną zmienną całkowitą wątku i inicjuje ją wartością:  
   

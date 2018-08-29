@@ -1,7 +1,7 @@
 ---
 title: Obsługa wielowątkowości w przypadku starszego kodu (Visual C++) | Dokumentacja firmy Microsoft
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 08/27/2018
 ms.technology:
 - cpp-parallel
 ms.topic: conceptual
@@ -20,25 +20,25 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c911ff2f0dcd43a6f07144f893b91f3a97c6708b
-ms.sourcegitcommit: e9ce38decc9f986edab5543de3464b11ebccb123
+ms.openlocfilehash: 7b1b301186036460acc07a526267503da8b97678
+ms.sourcegitcommit: f7703076b850c717c33d72fb0755fbb2215c5ddc
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/13/2018
-ms.locfileid: "42464648"
+ms.lasthandoff: 08/28/2018
+ms.locfileid: "43132105"
 ---
 # <a name="multithreading-support-for-older-code-visual-c"></a>Obsługa wielowątkowości w przypadku starszego kodu (Visual C++)
 Visual C++ pozwala na posiadanie wielu równoczesnych wątków wykonawczych uruchomionych jednocześnie. Za pomocą wielowątkowości, można uruchamianie zadań w tle, zarządzać równoczesnymi strumieniami danych wejściowych, zarządzać interfejsem użytkownika i o wiele więcej.  
   
 ## <a name="in-this-section"></a>W tej sekcji  
  
-[Wielowątkowość z językiem C i podsystemem Win32](../parallel/multithreading-with-c-and-win32.md)  
+[Wielowątkowość z językiem C i podsystemem Win32](multithreading-with-c-and-win32.md)  
 Dodano obsługę tworzenia aplikacji wielowątkowym z Microsoft Windows  
   
-[Wielowątkowość z C++ i MFC](../parallel/multithreading-with-cpp-and-mfc.md)  
+[Wielowątkowość z C++ i MFC](multithreading-with-cpp-and-mfc.md)  
 Opisuje co to są procesy i wątki oraz co to jest podejście MFC do wielowątkowości jest.  
   
-[Wielowątkowość i ustawienia regionalne](../parallel/multithreading-and-locales.md)  
+[Wielowątkowość i ustawienia regionalne](multithreading-and-locales.md)  
 W tym artykule omówiono zagadnienia, które powstają, gdy za pomocą funkcji ustawień regionalnych, biblioteka uruchomieniowa C i standardowej biblioteki C++ w aplikacji wielowątkowych.  
   
 ## <a name="related-sections"></a>Sekcje pokrewne  

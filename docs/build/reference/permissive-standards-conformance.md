@@ -1,5 +1,5 @@
 ---
-title: -ograniczająca - (standardów zgodność) | Dokumentacja firmy Microsoft
+title: -permissive - (zgodność ze standardami) | Dokumentacja firmy Microsoft
 ms.date: 06/21/2018
 ms.technology:
 - cpp-tools
@@ -19,42 +19,44 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3e1a9c407779b6bf441ea1375026af6ac04bb8c8
-ms.sourcegitcommit: e013acba70aa29fed60ae7945162adee23e19c3b
+ms.openlocfilehash: 1f2f0b1ca5351fbf2cfa2ab4b3233f8e709fae44
+ms.sourcegitcommit: f7703076b850c717c33d72fb0755fbb2215c5ddc
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/22/2018
-ms.locfileid: "36322267"
+ms.lasthandoff: 08/28/2018
+ms.locfileid: "43131219"
 ---
-# <a name="permissive--standards-conformance"></a>/ ograniczająca-(standardów zgodność)
+# <a name="permissive--standards-conformance"></a>/ permissive-(zgodność ze standardami)
 
-Określ tryb zgodności standardów do kompilatora. Użyj tej opcji, aby zidentyfikować i rozwiązać problemy z zgodność w kodzie, aby umożliwić zarówno więcej poprawne i przenośną.
+Określ tryb zgodności standardów do kompilatora. Użyj tej opcji, aby ułatwić identyfikowanie i rozwiązywanie problemów ze zgodnością w kodzie, aby stał się bardziej poprawny i bardziej przenośny.
 
 ## <a name="syntax"></a>Składnia
 
-> **/ ograniczająca-**
+> **/ permissive-**
 
 ## <a name="remarks"></a>Uwagi
 
-Można użyć **/ ograniczająca-** opcję kompilatora, aby określić zachowanie kompilatora zgodnych standardów. Ta opcja powoduje wyłączenie ograniczająca zachowania i ustawia [/Zc](../../build/reference/zc-conformance.md) opcje kompilatora, aby uzyskać pełną zgodność. W środowisku IDE ta opcja powoduje aparat podkreślenie niezgodnych kodu IntelliSense.
+Ta opcja jest obsługiwana w programie Visual Studio 2017 i nowszych wersjach.
 
-Domyślnie **/ ograniczająca-** opcja jest ustawiona w nowych projektach utworzone przez wersji programu Visual Studio 2017 15,5 cala i nowszych wersji. Nie jest ustawiona domyślnie we wcześniejszych wersjach. Gdy ustawiono opcję, kompilator generuje diagnostycznych błędy lub ostrzeżenia, gdy język niestandardowej konstrukcje zostaną wykryte w kodzie, w tym niektórych typowych błędów w wersji pre-C ++ 11 kodu.
+Możesz użyć **/ permissive-** opcję kompilatora, aby określić zachowanie zgodne z normami kompilatora. Ta opcja powoduje wyłączenie warunki dotyczące zachowania i ustawia [/Zc](../../build/reference/zc-conformance.md) opcje kompilatora, aby uzyskać pełną zgodność. W środowisku IDE ta opcja sprawia, że aparat podkreślenie niezgodnych kodu IntelliSense.
 
-**/ Ograniczająca-** opcji jest zgodny z prawie wszystkie pliki nagłówka z najnowszą Kit systemu Windows, takich jak Software Development Kit (SDK) lub Windows Driver Kit (WDK), począwszy od systemu Windows spadek twórców SDK (10.0.16299.0). Starsze wersje zestawu SDK może zakończyć się niepowodzeniem do skompilowania w obszarze **/ ograniczająca-** różne źródła kodu zgodność powodów. Kompilator i zestawy SDK wysyłki na osiach czasu inną wersję, w związku z tym istnieją problemy, pozostałe. Dla określonego nagłówka pliku problemów, zobacz [problemy nagłówka Windows](#windows-header-issues) poniżej.
+Domyślnie **/ permissive-** opcja jest ustawiana w nowe projekty utworzone przez program Visual Studio 2017 w wersji 15.5 i nowszych wersjach. Nie ustawiono domyślne we wcześniejszych wersjach. Gdy opcja jest ustawiona, kompilator generuje błędy diagnostycznych lub ostrzeżenia podczas konstrukcji językowych niestandardowych są wykrywane w kodzie, w tym niektóre typowe błędy w pre-C ++ 11 kodu.
 
-**/ Ograniczająca-** opcję zestawy [/Zc: strictstrings](../../build/reference/zc-conformance.md) i [/Zc: rvaluecast](../../build/reference/zc-conformance.md) opcje do zachowania zgodności. One domyślne zachowanie niezgodnych. Można przekazać określonego **/Zc** opcje po **/ ograniczająca-** w wierszu polecenia, aby zmienić to zachowanie.
+**/ Permissive-** opcja jest zgodna z prawie wszystkie pliki nagłówkowe z najnowszych zestawów Windows, takich jak Software Development Kit (SDK) lub Windows Driver Kit (WDK), począwszy od Windows SDK Fall Creators Update (10.0.16299.0). Starsze wersje zestawu SDK może kompilacja nie powiedzie się w obszarze **/ permissive-** różne źródła przyczyny zgodność kodu. Kompilator i dostarczaj zestawów SDK na osiach czasu z różnych wersji, w związku z tym występują pewne problemy pozostałych. W przypadku określonego nagłówka pliku problemów, zobacz [problemów nagłówka Windows](#windows-header-issues) poniżej.
 
-W wersji kompilatora, począwszy od programu Visual Studio 2017 wersji 15 ustęp 3 **/ ograniczająca-** opcję zestawy [/Zc:ternary](../../build/reference/zc-ternary.md) opcji. Kompilator implementuje więcej wymagania dotyczące dwufazowego nazwę wyszukiwania. Gdy **/ ograniczająca-** jest ustawiona opcja, kompilator analizuje funkcji i klasa definicje szablonów identyfikacji nazwy zależne i zależne od innych niż używane w szablonach. W tej wersji odbywa się tylko nazwa analizy zależności.
+**/ Permissive-** zestawy opcji [/Zc: strictstrings](../../build/reference/zc-conformance.md) i [/Zc: rvaluecast](../../build/reference/zc-conformance.md) opcje do zachowania zgodności. Wartością domyślną niezgodnych zachowanie. Można przekazać określonego **/Zc** opcje po **/ permissive-** w wierszu polecenia, aby zastąpić to zachowanie.
 
-Rozszerzenia określonego środowiska i obszary języka standardowego pozostawia do wykonania nie dotyczy **/ ograniczająca-**. Na przykład specyficzne dla firmy Microsoft `__declspec`, konwencja wywołania i wyjątków strukturalnych obsługi słów kluczowych i dyrektywy pragma specyficznych dla kompilatora lub atrybutów nie są oznaczone za pomocą kompilatora w **/ ograniczająca-** tryb.
+W wersjach kompilatora, począwszy od programu Visual Studio 2017 w wersji 15.3 **/ permissive-** zestawy opcji [/Zc: ternary](../../build/reference/zc-ternary.md) opcji. Kompilator wykonuje kilka wymagań dotyczących nazwy dwufazowe wyszukiwanie. Gdy **/ permissive-** wyboru jest zaznaczone, w którym kompilator analizuje funkcji i klas definicjach szablonów, identyfikowanie nazwy zależne i zależne od innych niż używane w szablonach. W tej wersji odbywa się tylko nazwa analizy zależności.
 
-**/ Ograniczająca-** opcja używa Obsługa zgodności ze standardem w bieżącej wersji kompilatora w celu określenia, które konstrukcji języka są niezgodne. Opcja nie określa, jeśli kod jest zgodny z określoną wersją C++ standard. Aby włączyć wszystkie zaimplementowane kompilatora obsługę standardu najnowszą wersję roboczą, należy użyć [/std:latest](../../build/reference/std-specify-language-standard-version.md) opcji. Aby ograniczyć obsługa kompilatora do aktualnie zaimplementowana standardzie C ++ 17, użyj [/std:c ++ 17](../../build/reference/std-specify-language-standard-version.md) opcji. Aby ograniczyć obsługa kompilatora, aby lepiej dopasować 14 standardu C ++, użyj [/std:c ++ 14](../../build/reference/std-specify-language-standard-version.md) opcja, która jest ustawiona domyślnie.
+Rozszerzenia specyficznymi dla środowiska i obszary języka standard pozostawia do wykonania nie dotyczy **/ permissive-**. Na przykład specyficzne dla firmy Microsoft `__declspec`, Konwencja wywoływania i obsługi słów kluczowych i dyrektyw pragma specyficznych dla kompilatora lub atrybutów wyjątków strukturalnych nie są oznaczone przez kompilator w **/ permissive-** trybu.
 
-Nie wszystkie C ++ 11, języka C ++ 14 lub C ++ 17 zgodnych standardów kodu jest obsługiwana przez kompilator języka Visual C++ w programie Visual Studio 2017 r. W zależności od wersji programu Visual Studio **/ ograniczająca-** opcji mogą nie zostać wykryte problemy dotyczące niektórych aspektów wyszukiwanie nazw dwufazowego, powiązanie z systemem innym niż stała odwołanie do tymczasowej, traktowanie init kopiowania jako bezpośrednie init w celu umożliwienia wiele zdefiniowanych przez użytkownika konwersje inicjowania lub alternatywne tokeny dla operatorów logicznych, a w innych obszarach zgodność z systemem innym niż obsługiwany. Aby uzyskać więcej informacji na temat problemów zgodności w programie Visual C++, zobacz [niestandardowe zachowanie](../../cpp/nonstandard-behavior.md). Aby uzyskać najbardziej z **/ ograniczająca-**, zaktualizuj do najnowszej wersji programu Visual Studio.
+**/ Permissive-** opcja używa obsługi zgodności w bieżącej wersji kompilatora ustalenie konstrukcji języka, które są niezgodne. Opcja nie określa, czy kod jest zgodny z określoną wersją C++ standard. Aby włączyć wszystkie obsługa kompilatora zaimplementowane do najnowszego standardu projekt, należy użyć [/std:latest](../../build/reference/std-specify-language-standard-version.md) opcji. Aby ograniczyć obsługa kompilatora do aktualnie wdrożonych standardzie C ++ 17, należy użyć [/STD: c ++ 17](../../build/reference/std-specify-language-standard-version.md) opcji. Aby ograniczyć obsługę kompilatora, aby lepiej dopasować standard C ++ 14, należy użyć [/STD: c ++ 14](../../build/reference/std-specify-language-standard-version.md) opcji, co jest ustawieniem domyślnym.
 
-### <a name="how-to-fix-your-code"></a>Jak rozwiązać kodu
+Nie wszystkie C ++ 11, C ++ 14 lub C ++ 17 zgodne z normami kodu jest obsługiwana przez kompilator języka Visual C++ w programie Visual Studio 2017. W zależności od wersji programu Visual Studio **/ permissive-** opcji może nie wykryć problemy dotyczące niektóre aspekty dwufazowe wyszukiwanie nazw, powiązanie odwołanie niestałe do tymczasowej, traktowanie init kopię jako bezpośrednie init, umożliwiając wiele zdefiniowanych przez użytkownika konwersje inicjowania lub alternatywne tokenów dla operatorów logicznych i innych zagadnień-obsługiwany zgodność. Aby uzyskać więcej informacji na temat problemów ze zgodnością w języku Visual C++, zobacz [niestandardowe zachowanie](../../cpp/nonstandard-behavior.md). Aby uzyskać najbardziej z **/ permissive-**, zaktualizować program Visual Studio do najnowszej wersji.
 
-Oto kilka przykładów kodu, który zostanie wykryte niezgodnych korzystając z **/ ograniczająca-**, wraz z sugerowanych sposobów, aby rozwiązać problemy.
+### <a name="how-to-fix-your-code"></a>Jak naprawić kod
+
+Poniżej przedstawiono kilka przykładów kodu, który zostanie wykryte jako niezgodne, gdy używasz **/ permissive-**, wraz z sugerują sposoby rozwiązywania problemów.
 
 #### <a name="use-default-as-an-identifier-in-native-code"></a>Użyj domyślnej jako identyfikatora w kodzie natywnym
 
@@ -63,7 +65,7 @@ void func(int default); // Error C2321: 'default' is a keyword, and
                         // cannot be used in this context
 ```
 
-#### <a name="lookup-members-in-dependent-base"></a>Elementy członkowskie wyszukiwania w podstawowym zależne
+#### <a name="lookup-members-in-dependent-base"></a>Wyszukiwanie członków w podstawowym zależne
 
 ```cpp
 template <typename T>
@@ -91,7 +93,7 @@ void h() {
 }
 ```
 
-#### <a name="use-of-qualified-names-in-member-declarations"></a>Użyj nazwy kwalifikowane w deklaracji elementu członkowskiego
+#### <a name="use-of-qualified-names-in-member-declarations"></a>Użyj kwalifikowanej nazwy w deklaracjach składowych
 
 ```cpp
 struct A {
@@ -101,7 +103,7 @@ struct A {
 };
 ```
 
-#### <a name="initialize-multiple-union-members-in-a-member-initializer"></a>Inicjowanie wielu elementów członkowskich Unii w inicjatorze elementu członkowskiego
+#### <a name="initialize-multiple-union-members-in-a-member-initializer"></a>Inicjowanie wielu składowych Unii w inicjatorze składowej
 
 ```cpp
 union U
@@ -116,7 +118,7 @@ union U
 };
 ```
 
-#### <a name="hidden-friend-name-lookup-rules"></a>Ukryte przyjazne nazwy wyszukiwania reguł
+#### <a name="hidden-friend-name-lookup-rules"></a>Reguły wyszukiwania nazwy przyjazne ukryte
 
 ```cpp
 // Example 1
@@ -144,7 +146,7 @@ void g() {
 }
 ```
 
-#### <a name="use-scoped-enums-in-array-bounds"></a>Użyj wyliczenia w zakresie w granice tablicy
+#### <a name="use-scoped-enums-in-array-bounds"></a>Użyj Typy wyliczeniowe w granice tablicy
 
 ```cpp
 enum class Color {
@@ -156,7 +158,7 @@ int data[Color::Blue]; // error C3411: 'Color' is not valid as the size
                        // Cast to type size_t or int to fix.
 ```
 
-#### <a name="use-for-each-in-native-code"></a>Użyj dla każdej z nich w kodzie natywnym
+#### <a name="use-for-each-in-native-code"></a>Użycie dla każdego w kodzie natywnym
 
 ```cpp
 void func() {
@@ -242,19 +244,19 @@ class ATL_NO_VTABLE CFooImpl : public ICustom,
 
 #### <a name="ambiguous-conditional-operator-arguments"></a>Niejednoznaczny operator warunkowy argumentów
 
-W wersjach kompilatora przed Visual Studio 2017 wersji 15 ustęp 3, kompilator zaakceptowane argumenty operator warunkowy (lub trójargumentowy) `?:` uznane niejednoznaczne przez Standard. W **/ ograniczająca-** trybie kompilator generuje teraz co najmniej jeden diagnostyki w przypadkach, w których skompilowany bez diagnostyki we wcześniejszych wersjach.
+W wersjach kompilatora przed Visual Studio 2017 w wersji 15.3, kompilator zaakceptowane argumenty operator warunkowy (lub operator trójargumentowy) `?:` uwzględnianych niejednoznaczne przez Standard. W **/ permissive-** tryb, kompilator generuje teraz jeden lub więcej diagnostyki w przypadkach, w których skompilowany bez diagnostyki we wcześniejszych wersjach.
 
-Typowych błędów, które mogą być wynikiem tej zmiany obejmują:
+Błędy typowych, które mogą wynikać z tej zmiany obejmują:
 
-- Błąd C2593: "operator"? jest niejednoznaczny
+- Błąd C2593: 'operator'? jest niejednoznaczny
 
-- Błąd C2679: binarny '?': nie znaleziono żadnych operatora, który przyjmuje prawostronny operand typu "B" (lub nie jest dopuszczalne konwersja)
+- Błąd C2679: binarny '?': znaleziono żadnego operatora, który przyjmuje prawostronny operand typu "B" (lub nie jest dopuszczalne konwersja)
 
-- Błąd C2678: binarny '?': nie znaleziono żadnych operatora, który przyjmuje lewostronny operand typu "A" (lub nie jest dopuszczalne konwersja)
+- Błąd C2678: binarny '?': znaleziono żadnego operatora, który przyjmuje lewostronny operand typu "A" (lub nie jest dopuszczalne konwersja)
 
-- Błąd C2446: ":": Brak konwersji z "B" na "A"
+- Błąd C2446: ":": Brak konwersji z 'B', 'A'
 
-Wzorzec typowy kod, który może być przyczyną tego problemu jest niektóre klasy C zapewniał i niejawnego konstruktora z innego typu T i operator niejawnej konwersji do typu T. W takim przypadku zarówno konwersja 2 argumentu typu 3rd i konwersji argumentu 3 na typ 2 są prawidłowe konwersje niejednoznacznego zgodnie ze standardowego.
+Wzorzec typowy kod, który może być przyczyną tego problemu jest, gdy niektóre klasy C zawiera zarówno niejawnego konstruktora z innego typu T, jak i operator-jawnej konwersji typu T. W takim przypadku zarówno konwersja 2nd argumentów na typ 3 i konwersji argumentu 3, typ 2. są prawidłowe konwersje niejednoznacznego zgodnie ze standardem.
 
 ```cpp
 // Example 1: class that provides conversion to and initialization from some type T
@@ -274,7 +276,7 @@ auto y = cond ? 7 : int(a);
 auto z = cond ? A(7) : a;
 ```
 
-Jeśli T reprezentuje jeden z typów zerem ciągu jest wyjątek ważne tego wspólnego wzorca (na przykład `const char *`, `const char16_t *`i tak dalej) i rzeczywisty argument `?:` jest ciągiem literału odpowiedniego typu. C ++ 17 zmieniła semantykę języka C ++ 14. W związku z tym kod w przykładzie 2 jest akceptowany w obszarze **/std:c ++ 14** i odrzucone w obszarze **/std:c ++ 17** podczas **/Zc:ternary** lub **/permissive-** jest używany.
+Ma ważny wyjątek, aby ten typowy wzorzec, gdy T reprezentuje jeden z typów ciąg zakończony znakiem null (na przykład `const char *`, `const char16_t *`i tak dalej) i rzeczywisty argument `?:` jest ciągiem literału odpowiedniego typu. C ++ 17 zmianie uległa semantyki C ++ 14. W rezultacie kod w przykładzie 2 jest akceptowany w obszarze **/STD: c ++ 14** i odrzucone w obszarze **/STD: c ++ 17** podczas **/Zc: ternary** lub **/permissive-** jest używany.
 
 ```cpp
 // Example 2: exception from the above
@@ -295,7 +297,7 @@ auto x = cond ? "A" : s;
 auto y = cond ? "A" : static_cast<const char*>(s);
 ```
 
-Inny przypadek, w której mogą zostać wyświetlone błędy trwa operatorów warunkowych z jednym argumentem typu `void`. Ten przypadek może być typowe w przypadku makra przypominającej potwierdzenia.
+Inny przypadek, w którym zostaną wyświetlone błędy znajduje się w operatorów warunkowych, z jednym argumentem typu `void`. Ten przypadek może być często używany w makra ASSERT podobne.
 
 ```cpp
 // Example 3: void arguments
@@ -306,7 +308,7 @@ void myassert(const char* text, const char* file, int line);
 #define ASSERT_B(ex) (void)((ex) ? void() : myassert(#ex, __FILE__, __LINE__))
 ```
 
-Mogą również zostać wyświetlone błędy w szablonie metaprogramowania, których typy wyników operator warunkowy mogą ulec zmianie w obszarze **/Zc:ternary** i **/ ograniczająca-**. Jednym ze sposobów rozwiązania tego problemu jest użycie [std::remove_reference](../../standard-library/remove-reference-class.md) na wynikowy typ.
+Ponadto mogą pojawić się błędy w szablonie metaprogramowanie, gdzie typy wyników operatora warunkowego mogą ulec zmianie w obszarze **/Zc: ternary** i **/ permissive-**. Jednym ze sposobów, aby rozwiązać ten problem, jest użycie [std::remove_reference](../../standard-library/remove-reference-class.md) wynikowy typu.
 
 ```cpp
 // Example 4: different result types
@@ -318,9 +320,9 @@ decltype(auto) x = cond ? a : b; // char without, const char& with /Zc:ternary
 const char (&z)[2] = count > 3 ? "A" : "B"; // const char* without /Zc:ternary
 ```
 
-#### <a name="two-phase-name-look-up"></a>Sprawdź nazwę dwufazowego
+#### <a name="two-phase-name-look-up"></a>Nazwa dwufazowe wyszukiwanie
 
-Gdy **/ ograniczająca-** jest ustawiona opcja, kompilator analizuje funkcji i klasa definicje szablonów identyfikacji nazwy zależne i zależne od innych niż używane w szablonach zgodnie z wymaganiami dla nazwy dwufazowego wyszukiwania. W programie Visual Studio 2017 wersji 15 ustęp 3 Nazwa analizy zależności jest wykonywane. W szczególności z systemem innym niż zależne od nazw, które nie są zadeklarowane w kontekście definicji szablonu spowodować diagnostycznych komunikatu jako wymaganego normy ISO C++. W programie Visual Studio 2017 wersji 15.7 również odbywa się powiązania z systemem innym niż zależne od nazw, które wymagają argument zależnych wyszukiwanie w kontekście definicji.
+Gdy **/ permissive-** wyboru jest zaznaczone, w którym kompilator analizuje funkcji i klas definicjach szablonów, identyfikowanie nazwy zależne i zależne od innych niż używane w szablonach, zgodnie z wymaganiami dla nazwy dwufazowe wyszukiwanie. W programie Visual Studio 2017 w wersji 15.3 Nazwa zależności analiza jest wykonywana. W szczególności nazwy zależne od innych, które nie zostały zadeklarowane w kontekście definicji szablonu spowodować, że komunikat diagnostyczny zgodnie z wymogami normy ISO C++. W programie Visual Studio 2017 wersji 15.7 również odbywa się powiązania nazwy zależne od innych, które wymagają argumentów zależne odnośnika w kontekście definicji.
 
 ```cpp
 // dependent base
@@ -346,15 +348,15 @@ int main()
 }
 ```
 
-Jeśli mają starsze zachowanie dla dwufazowego wyszukiwania, ale w przeciwnym razie ma **/ ograniczająca-** zachowanie, Dodaj **/Zc:twoPhase-** opcji.
+Jeśli chcesz starsze zachowanie dwufazowe wyszukiwanie, ale w przeciwnym razie ma **/ permissive-** zachowanie, Dodaj **/Zc:twoPhase-** opcji.
 
-### <a name="windows-header-issues"></a>Problemy z nagłówka systemu Windows
+### <a name="windows-header-issues"></a>Problemy z nagłówka Windows
 
-**/ Ograniczająca-** opcji jest zbyt restrykcyjny wersji zestawów Windows przed Windows spadek twórców aktualizacji SDK (10.0.16299.0) lub wersji systemu Windows Driver Kit (WDK) 1709. Firma Microsoft zaleca, zaktualizuj do najnowszej wersji zestawów Windows, aby można było używać **/ ograniczająca-** w kodzie sterowników systemu Windows lub urządzenia.
+**/ Permissive-** opcja jest zbyt restrykcyjny dla wersji zestawów Windows przed SDK Windows Fall Creators Update (10.0.16299.0) lub Windows Driver Kit (WDK) w wersji 1709. Firma Microsoft zaleca, zaktualizuj do najnowszej wersji zestawów Windows, aby można było używać **/ permissive-** w kodzie sterownika Windows lub urządzenia.
 
-Niektóre pliki nagłówkowe kwietnia Windows SDK aktualizacji 2018 (10.0.17134.0), Windows spadek twórców aktualizacji SDK (10.0.16299.0) lub Windows Driver Kit (WDK) 1709, nadal mieć problemy, które były niezgodne z użyciem **/permissive-**. Aby obejść ten problem, zaleca się ograniczyć stosowanie tych nagłówków można tylko te pliki kodu źródłowego, które wymagają i Usuń **/ ograniczająca-** podczas kompilowania dla tych plików źródłowych określonego kodu.
+Niektóre pliki nagłówkowe w kwietniu Windows SDK z aktualizacją 2018 r. (10.0.17134.0), SDK Windows Fall Creators Update (10.0.16299.0) lub Windows Driver Kit (WDK) 1709, nadal masz problemy, które są zgodne z użyciem **/permissive-**. W celu obejścia tych problemów, firma Microsoft zaleca korzystanie z tych nagłówków można ograniczyć do tylko tych plików kodu źródłowego, które wymagają i Usuń **/ permissive-** opcję podczas kompilowania dla tych plików źródłowych określonego kodu.
 
-Te nagłówki biblioteki WRL WinRT wydane w oknach 2018 kwietnia SDK aktualizacji (10.0.17134.0) nie są z czystą **/ ograniczająca-**. Aby obejść ten problem, nie należy używać **/ ograniczająca-**, lub użyj **/ ograniczająca-** z **/Zc:twoPhase-** podczas pracy z tych nagłówków:
+Tych nagłówków biblioteki WRL WinRT, wydana w Windows kwietnia 2018 r. pakietu SDK aktualizacji (10.0.17134.0) nie są czyste z **/ permissive-**. Aby uniknąć tych problemów, nie należy używać **/ permissive-**, lub użyj **/ permissive-** z **/Zc:twoPhase-** podczas pracy z tych nagłówków:
 
 - Problemy z winrt/wrl/async.h
 
@@ -365,13 +367,13 @@ Te nagłówki biblioteki WRL WinRT wydane w oknach 2018 kwietnia SDK aktualizacj
    C:\Program Files (x86)\Windows Kits\10\Include\10.0.17134.0\winrt\wrl\async.h(513): error C3861: 'TraceProgressNotificationComplete': identifier not found
    ```
 
-- Problem z programu winrt/wrl/implements.h
+- Wysłać winrt/wrl/implements.h
 
    ```Output
    C:\Program Files (x86)\Windows Kits\10\include\10.0.17134.0\winrt\wrl\implements.h(2086): error C2039: 'SetStrongReference': is not a member of 'Microsoft::WRL::Details::WeakReferenceImpl'
    ```
 
-Te nagłówki tryb użytkownika wydane w oknach 2018 kwietnia SDK aktualizacji (10.0.17134.0) nie są z czystą **/ ograniczająca-**. Aby obejść ten problem, nie należy używać **/ ograniczająca-** podczas pracy z tych nagłówków:
+Tych nagłówków trybu użytkownika, wydana w Windows kwietnia 2018 r. pakietu SDK aktualizacji (10.0.17134.0) nie są czyste z **/ permissive-**. Aby obejść ten problem, nie należy używać **/ permissive-** podczas pracy z tych nagłówków:
 
 - Problemy z um/Tune.h
 
@@ -382,7 +384,7 @@ Te nagłówki tryb użytkownika wydane w oknach 2018 kwietnia SDK aktualizacji (
    C:\Program Files (x86)\Windows Kits\10\include\10.0.17134.0\um\tune.h(1240): note: 'Release': function declaration must be available as none of the arguments depend on a template parameter
    ```
 
-- Problem z programu um/spddkhlp.h
+- Wysłać um/spddkhlp.h
 
    ```Output
    C:\Program Files (x86)\Windows Kits\10\include\10.0.17134.0\um\spddkhlp.h(759): error C3861: 'pNode': identifier not found
@@ -396,11 +398,11 @@ Te nagłówki tryb użytkownika wydane w oknach 2018 kwietnia SDK aktualizacji (
    C:\Program Files (x86)\Windows Kits\10\include\10.0.17134.0\um\refptrco.h(395): error C2760: syntax error: unexpected token 'identifier', expected 'type specifier'
    ```
 
-Te problemy są specyficzne dla nagłówków tryb użytkownika w systemie Windows spadek twórców aktualizacji SDK (10.0.16299.0):
+Te problemy są specyficzne dla nagłówków trybu użytkownika w Windows SDK Fall Creators Update (10.0.16299.0):
 
-- Problem z programu um/Query.h
+- Wysłać um/Query.h
 
-   Korzystając z **/ ograniczająca-** przełącznika kompilatora `tagRESTRICTION` struktury nie kompiluje się ze względu na element członkowski case(RTOr) "lub".
+   Korzystając z **/ permissive-** przełącznika kompilatora `tagRESTRICTION` struktury nie kompiluje się z powodu case(RTOr) elementu członkowskiego "lub".
 
    ```cpp
    struct tagRESTRICTION
@@ -422,21 +424,21 @@ Te problemy są specyficzne dla nagłówków tryb użytkownika w systemie Window
    };
    ```
 
-   Aby rozwiązać ten problem, skompiluj plików zawierających Query.h bez **/ ograniczająca-** opcji.
+   Aby rozwiązać ten problem, skompiluj pliki, które zawierają Query.h bez **/ permissive-** opcji.
 
-- Problem z programu um/cellularapi_oem.h
+- Wysłać um/cellularapi_oem.h
 
-   Korzystając z **/ ograniczająca-** przełącznika kompilatora, deklaracja przekazująca dalej `enum UICCDATASTOREACCESSMODE` powoduje, że ostrzeżenia:
+   Korzystając z **/ permissive-** przełącznika kompilatora, deklaracja `enum UICCDATASTOREACCESSMODE` powoduje, że ostrzeżenia:
 
    ```cpp
    typedef enum UICCDATASTOREACCESSMODE UICCDATASTOREACCESSMODE; // C4471
    ```
 
-   Deklaracja przekazana wyliczenia niewystępującego w zakresie to rozszerzenie firmy Microsoft. Aby rozwiązać ten problem, skompiluj plików zawierających cellularapi_oem.h bez **/ ograniczająca-** opcji lub użyj [/wd](../../build/reference/compiler-option-warning-level.md) opcja o wyłączeniu ostrzeżenie C4471.
+   Deklaracja wyliczenia niewystępującego w zakresie jest rozszerzeniem firmy Microsoft. Aby rozwiązać ten problem, skompiluj pliki, które zawierają cellularapi_oem.h bez **/ permissive-** , lub użyć [/wd](../../build/reference/compiler-option-warning-level.md) możliwość wyciszyć ostrzeżenie C4471.
 
-- Problem z programu um/omscript.h
+- Wysłać um/omscript.h
 
-   W języku C ++ 03, konwersja z literału ciągu znaków na BSTR (który jest typem typedef do "wchar_t *") jest przestarzały, ale dozwolone. W języku C ++ 11 konwersja nie jest dozwolony.
+   W języku C ++ 03, konwersja z literału ciągu znaków na BSTR (czyli element typedef do "wchar_t *") jest przestarzałe, ale dozwolone. W języku C++ 11 konwersja nie jest już dozwolone.
 
    ```cpp
    virtual /* [id] */ HRESULT STDMETHODCALLTYPE setExpression(
@@ -445,25 +447,25 @@ Te problemy są specyficzne dla nagłówków tryb użytkownika w systemie Window
        /* [in][defaultvalue] */ __RPC__in BSTR language = L"") = 0; // C2440
    ```
 
-   Aby rozwiązać ten problem, skompiluj plików zawierających omscript.h bez **/ ograniczająca-** opcji lub użyj **/Zc:strictStrings-** zamiast tego.
+   Aby rozwiązać ten problem, skompiluj pliki, które zawierają omscript.h bez **/ permissive-** , lub użyć **/Zc:strictStrings-** zamiast tego.
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Aby ustawić tę opcję kompilatora w środowisku programowania Visual Studio
 
-W wersji Visual Studio 2017 15,5 cala i nowszych wersji wykonaj następującą procedurę:
+W programie Visual Studio 2017 w wersji 15.5 i nowszych wersjach wykonaj następującą procedurę:
 
-1. Otwórz projekt w **strony właściwości** okno dialogowe.
+1. Otwórz swój projekt **stron właściwości** okno dialogowe.
 
-1. Wybierz **właściwości konfiguracji** > **C/C++** > **języka** strony właściwości.
+1. Wybierz **właściwości konfiguracji** > **C/C++** > **języka** stronę właściwości.
 
-1. Zmień **tryb zgodności** wartości właściwości do **tak (/ ograniczająca —)**. Wybierz **OK** lub **Zastosuj** Aby zapisać zmiany.
+1. Zmiana **tryb zgodności** wartość właściwości **tak (/ permissive-)**. Wybierz **OK** lub **Zastosuj** Aby zapisać zmiany.
 
-W wersjach przed Visual Studio 2017 wersji 15,5 cala wykonaj następującą procedurę:
+W wersjach starszych niż program Visual Studio 2017 w wersji 15.5 wykonaj następującą procedurę:
 
-1. Otwórz projekt w **strony właściwości** okno dialogowe.
+1. Otwórz swój projekt **stron właściwości** okno dialogowe.
 
-1. Wybierz **właściwości konfiguracji** > **C/C++** > **wiersza polecenia** strony właściwości.
+1. Wybierz **właściwości konfiguracji** > **C/C++** > **wiersza polecenia** stronę właściwości.
 
-1. Wprowadź **/ ograniczająca-** w — opcja kompilatora **dodatkowe opcje** pole. Wybierz **OK** lub **Zastosuj** Aby zapisać zmiany.
+1. Wprowadź **/ permissive-** w — opcja kompilatora **dodatkowe opcje** pole. Wybierz **OK** lub **Zastosuj** Aby zapisać zmiany.
 
 ### <a name="to-set-this-compiler-option-programmatically"></a>Aby programowo ustawić tę opcję kompilatora
 

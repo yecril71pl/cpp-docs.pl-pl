@@ -17,15 +17,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 49c5e624b437f39270fb880fe526d55e7ed83e5d
-ms.sourcegitcommit: e9ce38decc9f986edab5543de3464b11ebccb123
+ms.openlocfilehash: 97a69c52adb5094c7c7841a93b73b1a83cd786d9
+ms.sourcegitcommit: f7703076b850c717c33d72fb0755fbb2215c5ddc
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/13/2018
-ms.locfileid: "42466038"
+ms.lasthandoff: 08/28/2018
+ms.locfileid: "43131065"
 ---
 # <a name="avoiding-problem-areas-with-multithread-programs"></a>Unikanie obszarów problemów z programami wielowątkowymi
-Jest kilka problemów, które mogą wystąpić w tworzeniu, połączeń i wykonywanie program więlowątkowy w języku C. W poniższej tabeli opisano niektóre typowe problemy. (Omówienie podobne z punktu widzenia MFC, zobacz [wielowątkowość: porady dotyczące programowania](../parallel/multithreading-programming-tips.md).)  
+Jest kilka problemów, które mogą wystąpić w tworzeniu, połączeń i wykonywanie program więlowątkowy w języku C. W poniższej tabeli opisano niektóre typowe problemy. (Omówienie podobne z punktu widzenia MFC, zobacz [wielowątkowość: porady dotyczące programowania](multithreading-programming-tips.md).)  
   
 |Problem|Prawdopodobna przyczyna|  
 |-------------|--------------------|  
@@ -34,4 +34,4 @@ Jest kilka problemów, które mogą wystąpić w tworzeniu, połączeń i wykony
   
 ## <a name="see-also"></a>Zobacz też  
 
-[Wielowątkowość z językiem C i podsystemem Win32](../parallel/multithreading-with-c-and-win32.md)
+[Wielowątkowość z językiem C i podsystemem Win32](multithreading-with-c-and-win32.md)

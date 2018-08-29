@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 643347915e97f1c803047f91b72311c5642e6eef
-ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
+ms.openlocfilehash: 5eadb13e71e65e07c807812ad00fc1989c3a19f9
+ms.sourcegitcommit: f7703076b850c717c33d72fb0755fbb2215c5ddc
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37879562"
+ms.lasthandoff: 08/28/2018
+ms.locfileid: "43132210"
 ---
 # <a name="date-and-time"></a>Data i godzina
 Biblioteka MFC obsługuje kilka różnych sposobów pracy z datami i godzinami. Należą do nich następujące elementy:  
@@ -34,8 +34,6 @@ Biblioteka MFC obsługuje kilka różnych sposobów pracy z datami i godzinami. 
 -   Obsługa automatyzacji [DATE — typ danych](../atl-mfc-shared/date-type.md). Data obsługuje daty, godziny i wartości daty/godziny. [COleDateTime](../atl-mfc-shared/reference/coledatetime-class.md) i [COleDateTimeSpan](../atl-mfc-shared/reference/coledatetimespan-class.md) klasy hermetyzacji tej funkcji. Działają one z [COleVariant](../mfc/reference/colevariant-class.md) klasy przy użyciu obsługi automatyzacji.  
   
 ## <a name="what-do-you-want-to-know-more-about"></a>Co chcesz dowiedzieć się więcej na temat  
-  
--   [Data i godzina: klasy ogólnego przeznaczenia](../atl-mfc-shared/date-and-time-general-purpose-classes.md)  
   
 -   [Data i godzina: obsługa SYSTEMTIME](../atl-mfc-shared/date-and-time-systemtime-support.md)  
   

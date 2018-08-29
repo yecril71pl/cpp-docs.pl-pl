@@ -1,7 +1,7 @@
 ---
 title: Wyliczenia (C++) | Dokumentacja firmy Microsoft
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 06/01/2018
 ms.technology:
 - cpp-language
 ms.topic: language-reference
@@ -20,12 +20,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 48f9328ef6a862ffc8888b99b16764978b0005c2
-ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
+ms.openlocfilehash: 00a1b940ad6c792abbb13ec91b7376b73b2be16b
+ms.sourcegitcommit: f7703076b850c717c33d72fb0755fbb2215c5ddc
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/01/2018
-ms.locfileid: "39406256"
+ms.lasthandoff: 08/28/2018
+ms.locfileid: "43130953"
 ---
 # <a name="enumerations-c"></a>Wyliczenia (C++)
 Wyliczenie to typ zdefiniowany przez użytkownika, który składa się z szeregu nazwanych stałych liczbach całkowitych, które są znane jako moduły wyliczające.  
@@ -149,7 +149,8 @@ namespace ScopedEnumConversions
   
  Należy zauważyć, że wiersz `hand = account_num;` nadal powoduje błąd występujący z wyliczeniami nieobjętymi zakresem, jak pokazano wcześniej. Jest ona dozwolona z jawnym rzutowaniem. Jednakże przy typach wyliczeniowych w zakresie próba konwersji w następnej instrukcji `account_num = Suit::Hearts;`, nie jest już dozwolona bez jawnego rzutowania. 
 
-## <a name="enums-with-no-enumerators"></a>Typy wyliczeniowe atrybutem nie modułów wyliczających
+## <a name="no_enumerators"></a> Typy wyliczeniowe atrybutem nie modułów wyliczających
+
 **Visual Studio 2017 w wersji 15.3 lub nowszej** (udostępniono [/STD: c ++ 17](../build/reference/std-specify-language-standard-version.md)): definiując wyliczenia (regularnych lub zakresie) za pomocą jawnego typu podstawowego i nie wyliczenia, możesz obowiązuje wprowadzić nową typu całkowitego nie ma niejawnej konwersji do żadnego innego typu. Przy użyciu tego typu, a nie jej wbudowany typ podstawowy, można wyeliminować ryzyko drobne błędy spowodowane przypadkowego niejawne konwersje.  
 
 
