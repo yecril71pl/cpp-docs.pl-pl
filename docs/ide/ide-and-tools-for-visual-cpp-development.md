@@ -1,7 +1,7 @@
 ---
-title: IDE i narzędzia do programowania w języku Visual C++ | Dokumentacja firmy Microsoft
+title: Narzędzia projektowe Visual C++ i środowisko IDE | Dokumentacja firmy Microsoft
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 06/02/2018
 ms.technology:
 - cpp-ide
 ms.topic: conceptual
@@ -14,117 +14,125 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3668fb438c2a0aa7fa14cff97f498a9becc67b36
-ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
+ms.openlocfilehash: df30bdea71a890eed25f546a53e7f329fa330762
+ms.sourcegitcommit: f7703076b850c717c33d72fb0755fbb2215c5ddc
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34705403"
+ms.lasthandoff: 08/28/2018
+ms.locfileid: "43132023"
 ---
-# <a name="ide-and-tools-for-visual-c-development"></a>IDE i narzędzia do programowania w języku Visual C++
+# <a name="ide-and-tools-for-visual-c-development"></a>Narzędzia projektowe Visual C++ i środowisko IDE
 
-Jako część programu Visual Studio programowanie środowiska IDE (Integrated) programu Microsoft Visual C++ (MSVC) udostępnia wiele systemu windows i narzędzia wspólne z innych języków. Wiele osób, w tym **Eksploratora rozwiązań**, opisano w edytorze kodu i debugera, [programu Visual Studio IDE](/visualstudio/ide/visual-studio-ide). Często udostępnionego narzędzia lub okno ma nieco inny zestaw funkcji dla języka C++ niż dla języków .NET lub Javascript. Niektóre systemu windows lub narzędzia są dostępne tylko w Pro programu Visual Studio lub Visual Studio Enterprise.
+W ramach programu zintegrowanego rozwoju środowiska (IDE) Visual Studio programu Microsoft Visual C++ (MSVC) udostępnia wiele systemu windows i narzędzia wspólnych innych języków. Wiele z nich w tym **Eksploratora rozwiązań**, Edytor kodu i debugera, opisano w [środowiska IDE programu Visual Studio](/visualstudio/ide/visual-studio-ide). Często udostępnione narzędzia lub okno ma nieco inny zestaw funkcji dla języka C++ niż dla języków .NET lub Javascript. Niektóre okna lub narzędzia są dostępne tylko w Visual Studio Pro lub Visual Studio Enterprise.
 
-Oprócz narzędzi udostępnionych w programie Visual Studio IDE MSVC ma kilka narzędzi specjalnie z myślą o programowanie kodu natywnego. Te narzędzia znajdują się w tym artykule. Aby uzyskać listę narzędzi są dostępne w każdej wersji programu Visual Studio, zobacz [narzędzia Visual C++ i funkcji w programie Visual Studio wersje](../ide/visual-cpp-tools-and-features-in-visual-studio-editions.md).
+Oprócz narzędzi udostępnionych w programie Visual Studio IDE MSVC ma kilka narzędzi specjalnie do tworzenie kodu natywnego. Te narzędzia są również wyszczególnione w tym artykule. Aby uzyskać listę narzędzi są dostępne w każdej wersji programu Visual Studio, zobacz [Visual C++ Tools i funkcje w wersji programu Visual Studio](../ide/visual-cpp-tools-and-features-in-visual-studio-editions.md).
 
-## <a name="creating-a-solution-and-projects"></a>Tworzenie rozwiązania i projekty
+## <a name="creating-a-solution-and-projects"></a>Tworzenie rozwiązań i projektów
 
-A *projektu* jest zasadniczo zestaw plików kodu źródłowego i zasobów, takich jak obrazy lub pliki danych, które są wbudowane w pliku wykonywalnego. Visual Studio 2017 może obsługiwać żadnych system kompilacji lub narzędzia niestandardowej kompilacji, które mają być używane z pełną obsługę funkcji IntelliSense, przeglądanie i debugowania:
+A *projektu* zasadniczo jest to zbiór plików kodu źródłowego i zasoby, takie jak obrazy lub dane plików, które są wbudowane w plik wykonywalny. 
 
-- MSBuild system natywnej kompilacji dla programu Visual Studio oraz jest często najlepszym rozwiązaniem dla aplikacji uniwersalnych platformy systemu Windows (UWP) lub starszej wersji aplikacji klasycznych systemu Windows, które za pomocą MFC lub ATL. Aby uzyskać więcej informacji na temat projektów C++ na podstawie MSBuild zobacz [tworzenie projektów i zarządzanie nimi na podstawie MSBuild](creating-and-managing-visual-cpp-projects.md).
-- CMake to system, który jest zintegrowany środowiska IDE programu Visual Studio, po zainstalowaniu tworzenia klasycznych aplikacji z C++ obciążenia kompilacji i platform. Aby uzyskać więcej informacji, zobacz [CMake projekty w programie Visual C++](cmake-tools-for-visual-cpp.md).
-- Wszystkie inne C++ kompilacji systemu, w tym luźne Kolekcja plików, jest obsługiwana za pomocą funkcji Otwórz Folder. Można tworzyć proste pliki JSON do wywołania programu kompilacji i konfigurowania sesji debugowania. Aby uzyskać więcej informacji, zobacz [Przełącz kod w języku C++ dla programu Visual Studio](https://blogs.msdn.microsoft.com/vcblog/2017/04/14/bring-your-cpp-code-to-visual-studio/).
+Program Visual Studio 2015 udostępnia obsługę projektów programu MSBuild. Możesz pobrać rozszerzenia programu Visual Studio dla innych systemów kompilacji, takie jak Qt lub narzędzia CMake.
+
+Program Visual Studio 2017 zapewnia obsługę dla dowolnego systemu kompilacji lub niestandardowych narzędzi kompilacji, które mają być używane z pełnym wsparciem dla funkcji IntelliSense, przeglądanie i debugowania:
+
+- Program MSBuild jest systemem kompilacji natywnej dla programu Visual Studio i jest często najlepszym wyborem dla aplikacji uniwersalnych platformy Windows (UWP) lub starsze aplikacje pulpitu Windows, które używają kontenera MFC ani ATL. Aby uzyskać więcej informacji na temat projektów C++ opartych na platformie MSBuild, zobacz [tworzenie i zarządzanie projektami opartych na platformie MSBuild](creating-and-managing-visual-cpp-projects.md).
+- Narzędzie CMake jest dla wielu platform, tworzenie system, który jest zintegrowana w środowisku IDE programu Visual Studio, po zainstalowaniu programowanie aplikacji klasycznych w języku C++. Aby uzyskać więcej informacji, zobacz [projektów CMake w programie Visual C++](cmake-tools-for-visual-cpp.md).
+- Wszystkie inne C++ kompilacji systemu, w tym luźne zbiór plików, jest obsługiwane za pośrednictwem funkcji Otwórz Folder. Możesz utworzyć proste pliki w formacie JSON do wywołania programu kompilacji i konfigurowania sesji debugowania. Aby uzyskać więcej informacji, zobacz [przenieść kod C++ do Visual Studio](https://blogs.msdn.microsoft.com/vcblog/2017/04/14/bring-your-cpp-code-to-visual-studio/).
 
 ### <a name="project-templates-msbuild"></a>Szablony projektu (MSBuild)
 
-Visual Studio oferuje kilka szablony projektów opartych na MSBuild; te szablony zawierają kod startowy i ustawień wymaganych dla różnych typów podstawowych programu. Zazwyczaj rozpoczyna, wybierając **pliku** > **nowy projekt** Aby utworzyć projekt z szablonu projektu, następnie dodać nowych plików kodu źródłowego do tego projektu lub programować w plikach podane. Aby uzyskać informacje specyficzne dla projektów C++ i kreatorów projektu, zobacz [tworzenie i zarządzanie projekty Visual C++](../ide/creating-and-managing-visual-cpp-projects.md).
+Program Visual Studio zawiera kilka szablonów dla projektów opartych na platformie MSBuild; te szablony zawierają kod startowy i ustawienia wymagane dla różnych typów podstawowych programów. Zazwyczaj należy rozpocząć od wybrania **pliku** > **nowy projekt** Aby utworzyć projekt z szablonu projektu, następnie dodaj nowe pliki kodu źródłowego do tego projektu lub Rozpocznij kodowanie w plikach, pod warunkiem. Aby uzyskać informacje specyficzne dla projektów w języku C++ i kreatorów projektu, zobacz [tworzenie i zarządzanie projekty języka Visual C++](../ide/creating-and-managing-visual-cpp-projects.md).
 
 ### <a name="application-wizards-msbuild"></a>Kreatorzy aplikacji (MSBuild)
 
-Program Visual Studio udostępnia kreatorów dla niektórych typów projektów MSBuild po wybraniu **pliku** > **nowy projekt**. Kreator poprowadzi Cię przez kolejne etapy tworzenia nowego projektu. Jest to przydatne w przypadku typów projektów, które mają wiele opcji i ustawień. Aby uzyskać więcej informacji, zobacz [Tworzenie pulpitu projektów przez za pomocą kreatorów aplikacji](../ide/creating-desktop-projects-by-using-application-wizards.md).
+Program Visual Studio zapewnia kreatory niektórych typach projektów programu MSBuild, po wybraniu **pliku** > **nowy projekt**. Kreator prowadzi użytkownika krok po kroku przez proces tworzenia nowego projektu. Jest to przydatne dla typów projektów, które mają wiele opcji i ustawień. Aby uzyskać więcej informacji, zobacz [tworzenia pulpitu projektów, za pomocą kreatorów aplikacji](../ide/creating-desktop-projects-by-using-application-wizards.md).
 
-## <a name="creating-user-interfaces-with-designers-msbuild"></a>Tworzenie interfejsów użytkownika z projektantami (MSBuild)
+## <a name="creating-user-interfaces-with-designers-msbuild"></a>Tworzenie interfejsów użytkownika za pomocą projektantów (MSBuild)
 
-Program ma interfejs użytkownika, jeden z pierwszego zadania jest umieścić w nim formanty, takie jak przyciski, pola listy i tak dalej. Visual Studio zawiera visual powierzchnię i przybornika dla każdej wersji aplikacji C++. Niezależnie od tego, jakiego typu aplikacji, które tworzysz podstawową koncepcją jest taka sama: przeciągnij formant z przybornika okno i upuść ją na powierzchnię projektu w wybranej lokalizacji. W tle Visual Studio generuje zasobów i kod wymagane dokonanie jego pracy. Następnie należy napisać kod, aby wypełnić kontrolki z danymi lub dostosować wygląd i zachowanie.
+Jeśli program nie ma interfejsu użytkownika, jest jedno z zadań pierwszego wypełniania kontrolki, takie jak przyciski, pola listy i tak dalej. Program Visual Studio obejmuje powierzchni projektowej i przybornika dla każdej wersji aplikacji C++. Niezależnie od tego, jakiego typu aplikacji, które tworzysz wygląda to w taki sam: przeciągnij formant z okno przybornika i upuść je na powierzchni projektowej w żądanej lokalizacji. W tle programu Visual Studio generuje zasoby i kod jest wymagany, aby umożliwić jej pracę. Następnie należy napisać kod do wypełnienia kontrolki z danymi lub dostosowywanie ich wyglądu i działania.
 
-Aby uzyskać więcej informacji na temat opracowywania interfejsu użytkownika dla aplikacji platformy uniwersalnej systemu Windows, zobacz [projektu i interfejsu użytkownika](https://developer.microsoft.com/en-us/windows/design).
+Aby uzyskać więcej informacji na temat projektowania interfejsu użytkownika dla aplikacji Universal Windows Platform, zobacz [interfejsu użytkownika i projektowania](https://developer.microsoft.com/en-us/windows/design).
 
-Aby uzyskać więcej informacji o tworzeniu interfejsu użytkownika dla aplikacji MFC, zobacz [aplikacji pulpitu MFC](../mfc/mfc-desktop-applications.md). Informacji o programów Win32 systemu Windows, temacie [aplikacje dla komputerów z systemem Windows](../windows/windows-desktop-applications-cpp.md).
+Aby uzyskać więcej informacji na temat tworzenia interfejsu użytkownika dla aplikacji MFC, zobacz [aplikacji pulpitu MFC](../mfc/mfc-desktop-applications.md). Aby uzyskać informacje na temat programów Win32, Windows, zobacz [aplikacji komputerowych Windows](../windows/windows-desktop-applications-cpp.md).
 
 ## <a name="writing-and-editing-code"></a>Zapisywanie i Edycja kodu
 
 ### <a name="semantic-colorization"></a>Kolorowanie semantyczne
 
-Po utworzeniu projektu, wszystkie pliki projektu są wyświetlane w **Eksploratora rozwiązań** okna. Po kliknięciu pliku .h lub CPP w **Eksploratora rozwiązań**, otwiera plik w edytorze kodu. Edytor kodu jest specjalne Edytor tekstów kodu źródłowego języka C++. Color-codes go słów kluczowych języka, metody i nazw zmiennych i inne elementy swój kod, aby kod bardziej czytelny i łatwiejsze do zrozumienia.
+Po utworzeniu projektu, wszystkie pliki projektu są wyświetlane w **Eksploratora rozwiązań** okna. Po kliknięciu pliku .h i .cpp w **Eksploratora rozwiązań**, plik zostanie otwarty w edytorze kodu. Edytor kodu jest wyspecjalizowane edytora tekstu do kodu źródłowego języka C++. Jego color-codes słowa kluczowe języka, metody i nazw zmiennych i innych elementów kodu, aby kod bardziej czytelne i łatwiejsze do zrozumienia.
 
 ### <a name="intellisense"></a>IntelliSense
 
-Edytor kodu obsługuje również kilka funkcji, które są ze sobą znane jako IntelliSense. Możesz umieść kursor nad metody i niektóre podstawowe dokumentacji dla niego. Po wpisaniu nazwy zmiennej klasy i a. lub ->, zostanie wyświetlona lista elementów członkowskich wystąpienia tej klasy. Jeśli wpiszesz nazwę klasy, a następnie::, zostanie wyświetlona lista statycznych elementów członkowskich. Po ponownym uruchomieniu, wpisując nazwę klasy lub metody, edytora kodu oferuje sugestie do wykonania instrukcji. Aby uzyskać więcej informacji, zobacz [za pomocą funkcji IntelliSense](/visualstudio/ide/using-intellisense).
+Edytor kodu obsługuje również kilka funkcji, które ze sobą, są znane jako funkcja IntelliSense. Można umieść kursor nad metodą i niektóre podstawowe dokumentacji dla niego. Po wpisaniu nazwy zmiennej klasy, a co. lub ->, zostanie wyświetlona lista składowych wystąpienia tej klasy. Jeśli zostanie wpisana nazwa klasy a następnie::, zostanie wyświetlona lista statyczne elementy członkowskie. Po uruchomieniu, wpisując nazwę klasy lub metody, Edytor kodu oferuje sugestie do wykonania instrukcji. Aby uzyskać więcej informacji, zobacz [za pomocą funkcji IntelliSense](/visualstudio/ide/using-intellisense).
 
 ### <a name="code-snippets"></a>Fragmenty kodu
 
-Wstawki kodu IntelliSense służy do generowania najczęściej używanych lub konstrukcje kodu złożonej z klawiszy skrótów. Aby uzyskać więcej informacji, zobacz [wstawki kodu](/visualstudio/ide/code-snippets).
+Fragmenty kodu IntelliSense można użyć do wygenerowania często używane lub skomplikowanego kodu tworzy się za pomocą klawiszy skrótów. Aby uzyskać więcej informacji, zobacz [fragmenty kodu](/visualstudio/ide/code-snippets).
 
 ## <a name="navigating-code"></a>Nawigowanie po kodzie
 
-**Widoku** menu zapewnia dostęp do wielu systemu windows i narzędzia do nawigowania wokół plików kodu. Aby uzyskać szczegółowe informacje dotyczące tych z systemem windows, zobacz [wyświetlanie struktury kodu](/visualstudio/ide/viewing-the-structure-of-code).
+**Widoku** menu zapewnia dostęp do wielu systemów windows i narzędzia do nawigowania między wokół w plikach kodu. Aby uzyskać szczegółowe informacje dotyczące tych okien, zobacz [wyświetlanie struktury kodu](/visualstudio/ide/viewing-the-structure-of-code).
 
 ### <a name="solution-explorer"></a>Eksplorator rozwiązań
 
-We wszystkich wersjach programu Visual Studio, użyj **Eksploratora rozwiązań** okienko, aby przechodzić między pliki w projekcie. Rozwiń .h lub CPP ikonę pliku, aby wyświetlić klasy w pliku. Rozwiń klasę, aby zobaczyć jego elementy członkowskie. Kliknij dwukrotnie w elemencie członkowskim, można przejść do jego definicji lub wykonania w pliku.
+We wszystkich wersjach programu Visual Studio, należy użyć **Eksploratora rozwiązań** okienko, aby przechodzić między pliki w projekcie. Rozwiń .h i .cpp ikonę pliku, aby wyświetlić klasy w pliku. Rozwiń klasę, aby wyświetlić jego członków. Kliknij dwukrotnie członka, aby przejść do swojej definicji lub implementacji w pliku.
 
-### <a name="class-view-and-code-definition-window"></a>Widok klas i okno definicji kodu
+### <a name="class-view-and-code-definition-window"></a>Widok klasy i okno definicji kodu
 
-Użyj **widoku klasy** okienko, aby zobaczyć obszary nazw i klas we wszystkich plikach, w tym klas częściowych. Można rozwinąć każdej przestrzeni nazw lub klasę, aby zobaczyć jego elementy członkowskie, a następnie kliknij dwukrotnie w elemencie członkowskim, można przejść do tej lokalizacji w pliku źródłowym. Po otwarciu **okno definicji kodu**, można wyświetlić definicji lub implementacja typu został wybrany **widoku klasy**.
+Użyj **Widok klas** okienku, aby zobaczyć obszary nazw i klas we wszystkich plikach, w tym klasy częściowe. Można rozwinąć każdej przestrzeni nazw lub klasy, aby zobaczyć jej elementów członkowskich i kliknij dwukrotnie element członkowski, aby przejść do tej lokalizacji w pliku źródłowym. Jeśli otworzysz **okno definicji kodu**, można zobaczyć, definicja lub implementacji typu możesz wybrać **Widok klas**.
 
 ### <a name="object-browser"></a>Przeglądarka obiektów
 
-Użyj **przeglądarki obiektów** do eksplorowania informacji o typie składników środowiska wykonawczego systemu Windows (plików winmd), zestawów platformy .NET i COM biblioteki typów. Nie jest używany z biblioteki DLL systemu Win32.
+Użyj **przeglądarki obiektów** do eksplorowania o typie w składników środowiska wykonawczego Windows (winmd), zestawy .NET i COM biblioteki typów. Nie jest używana z bibliotek Win32 dll.
 
-### <a name="go-to-definitiondeclaration"></a>Przejdź do definicji/deklaracji
+### <a name="go-to-definitiondeclaration"></a>Przejdź do deklaracji/definicji
 
-Naciśnij klawisz F12 w dowolnej zmiennej nazwy lub elementu członkowskiego interfejsu API, aby przejść do jego definicji. Jeśli definicja znajduje się w pliku winmd (dla platformy uniwersalnej systemu Windows lub Windows 8.x aplikacji do sklepu) zostaną wyświetlone informacje o typach w przeglądarce obiektów. Można również wybrać **przejdź do definicji** lub **przejdź do deklaracji** przez kliknięcie prawym przyciskiem myszy nazwę zmiennej lub typ i wybranie opcji z menu kontekstowego.
+Naciśnij klawisz F12 w dowolnej zmiennej nazwy lub elementu członkowskiego interfejsu API, aby przejść do jego definicji. Jeśli definicja znajduje się w pliku winmd (dla platformy uniwersalnej systemu Windows lub Windows 8.x Store aplikacji), a następnie zostaną wyświetlone informacje dotyczące typu w przeglądarce obiektów. Można również wybrać **przejdź do definicji** lub **przejdź do deklaracji** , kliknij prawym przyciskiem myszy nazwę zmiennej lub typu i wybierając opcję z menu kontekstowego.
 
 ### <a name="find-all-references"></a>Znajdź wszystkie odwołania
 
-W pliku kodu źródłowego, kliknij prawym przyciskiem myszy umieść kursor myszy nad nazwą typu lub metody lub zmiennej, a następnie wybierz pozycję **Znajdź wszystkie odwołania** aby powrócić do listy każdej lokalizacji w pliku, projektu lub rozwiązania, w którym typ jest używany. **Znajdź wszystkie odwołania** jest inteligentnego i zwraca tylko wystąpienia tej samej zmiennej identyczne, nawet jeśli inne zmienne w zakresie różnych mają taką samą nazwę.
+W pliku kodu źródłowego, kliknij prawym przyciskiem myszy umieść kursor myszy nad nazwą typu lub metody lub zmiennej, a następnie wybierz **Znajdź wszystkie odwołania** aby powrócić do listy każdej lokalizacji w pliku, projekt lub rozwiązanie, w którym typ jest używany. **Znajdź wszystkie odwołania** jest inteligentne i zwraca tylko wystąpienia tej samej zmiennej identyczny, nawet jeśli inne zmienne w zakresie różnych mają taką samą nazwę.
 
 ## <a name="add-and-edit-resources--msbuild"></a>Dodawanie i edytowanie zasobów (MSBuild)
 
-Termin *zasobów* w kontekście programu Visual Studio pulpitu projekt zawiera elementy, takie jak okien dialogowych, ikony, Lokalizowalny ciągów, ekrany powitalny, parametry połączenia bazy danych lub dowolne dane, które chcesz uwzględnić w plik wykonywalny.
+Termin *zasobów* w kontekście programu Visual Studio projekt aplikacji klasycznej kwestie, takie jak okna dialogowe, ikony, możliwych do zlokalizowania ciągi, ekrany powitalne, parametry połączenia bazy danych lub dowolne dane, które mają zostać uwzględnione w plik wykonywalny.
 
-Aby uzyskać więcej informacji dotyczących dodawania i edytowania zasobów w macierzystym pulpitu projektów C++, zobacz [Praca z plikami zasobów](../windows/working-with-resource-files.md).
+Aby uzyskać więcej informacji na temat dodawania i edytowania zasobów w natywnych klasycznych projektów C++, zobacz [Praca z plikami zasobów](../windows/working-with-resource-files.md).
 
-## <a name="build-compile-and-link"></a>Kompilacja (kompilacji i łącze)
+## <a name="build-compile-and-link"></a>Kompilacja (kompilacji i link)
 
-Wybierz **kompilacji** > **Kompiluj rozwiązanie** menu paska lub wprowadź kombinację klawiszy Ctrl + Shift + B, aby skompilować i połączyć projekt. Aby utworzyć kodu wykonywalnego, korzysta z programu Visual Studio [MSBuild](/visualstudio/msbuild/msbuild1) lub CMake lub niezależnie od środowisko kompilacji można skonfigurować za pomocą **Otwórz Folder**. Dla projektów MSBuild Ustaw opcje ogólne kompilacji w obszarze **narzędzia** > **opcje** > **projekty i rozwiązania** i można ustawić właściwości dla określonych projektów w obszarze **projektu** > **właściwości**. Błędy kompilacji i ostrzeżenia są zgłaszane na liście błędów (Ctrl +\\, E). Projekty programu MSBuild nie są skonfigurowane z plikami JSON, które możesz utworzyć w Eksploratorze rozwiązań. Niezależnie od systemu, należy użyć kompilacji **dane wyjściowe** okno (Alt + 2) zawiera informacje na temat procesu kompilacji. Aby uzyskać więcej informacji o konfiguracjach MSBuild, zobacz [Praca z właściwościami projektu](../ide/working-with-project-properties.md) i [kompilowania projektów C++ w programie Visual Studio](../ide/building-cpp-projects-in-visual-studio.md).
+Wybierz **kompilacji** > **Kompiluj rozwiązanie** menu paska lub wprowadź kombinacji klawiszy Ctrl + Shift + B, skompilować i utworzyć połączenie projektu. Aby utworzyć kod wykonywalny, program Visual Studio używa [MSBuild](/visualstudio/msbuild/msbuild1) lub narzędzia CMake lub dowolne środowisko kompilacji można skonfigurować za pomocą **Otwórz Folder**. Dla projektów programu MSBuild, ustaw opcje ogólne kompilacji w ramach **narzędzia** > **opcje** > **projekty i rozwiązania** i można ustawić właściwości dla konkretnych projektów, w obszarze **projektu** > **właściwości**. Błędy i ostrzeżenia kompilowania są zgłaszane na liście błędów (Ctrl +\\, E). Projekty inne niż MSBuild są skonfigurowane przy użyciu pliki w formacie JSON, które tworzysz w Eksploratorze rozwiązań. Niezależnie od systemu, możesz użyć do kompilacji **dane wyjściowe** okno (Alt + 2) zawiera informacje na temat procesu kompilacji. Aby uzyskać więcej informacji o konfiguracjach MSBuild, zobacz [Praca z właściwościami projektu](../ide/working-with-project-properties.md) i [kompilowanie projektów C++ w programie Visual Studio](../ide/building-cpp-projects-in-visual-studio.md).
 
-Można również użyć kompilatora (cl.exe) i wiele innych związanych z kompilacją autonomicznych narzędzi takich jak NMAKE i LIB bezpośrednio z poziomu wiersza polecenia. Aby uzyskać więcej informacji, zobacz [kodu kompilacji C/C++ w wierszu polecenia](../build/building-on-the-command-line.md) i [odwołanie kompilacji C/C++](../build/reference/c-cpp-building-reference.md).
+Można również użyć kompilatora (cl.exe) i wiele innych autonomiczny dotyczące kompilacji narzędzi takich jak NMAKE i LIB bezpośrednio z poziomu wiersza polecenia. Aby uzyskać więcej informacji, zobacz [kodu kompilacji C/C++ w wierszu polecenia](../build/building-on-the-command-line.md) i [odwołanie kompilacji C/C++](../build/reference/c-cpp-building-reference.md).
 
 ## <a name="test"></a>Test
 
-Visual Studio zawiera frameworka testów jednostkowych natywnego języka C++ i C + +/ CLI. Aby uzyskać więcej informacji, zobacz [weryfikowanie kodu za pomocą testów jednostkowych](/visualstudio/test/unit-test-your-code) i [testów jednostkowych zapisu dla C/C++ Framework testów jednostkowych Microsoft dla języka C++](/visualstudio/test/writing-unit-tests-for-c-cpp-with-the-microsoft-unit-testing-framework-for-cpp)
+Program Visual Studio zawiera strukturę testów jednostek zarówno dla natywnych języka C++ i C + +/ interfejsu wiersza polecenia. Aby uzyskać więcej informacji, zobacz [weryfikowanie kodu przy użyciu testów jednostkowych](/visualstudio/test/unit-test-your-code) i [testów jednostkowych zapisu dla języka C/C++ za pomocą Frameworka testów jednostkowych firmy Microsoft dla języka C++](/visualstudio/test/writing-unit-tests-for-c-cpp-with-the-microsoft-unit-testing-framework-for-cpp)
+
+## <a name="analyze"></a>Analiza
+
+Program Visual Studio zawiera narzędzia do analizy kodu statycznego dla języka C++, włącznie z implementacją [podstawowych wytycznych dotyczących języka C++](https://github.com/isocpp/CppCoreGuidelines/blob/master/CppCoreGuidelines.md) reguł narzędzia do sprawdzania. Aby uzyskać więcej informacji, zobacz [Code analysis for C/C++ — Przegląd](/visualstudio/code-quality/code-analysis-for-c-cpp-overview).
 
 ## <a name="debug"></a>Debugowanie
 
-Program można debugować przez naciśnięcie przycisku **F5** podczas konfiguracji projektu została ustawiona na debugowanie. Podczas debugowania możesz można ustawić punktów przerwania, naciskając klawisz **F9**, kroki do kodu, naciskając klawisz **F10**, wyświetlanie wartości zmiennych określony lub rejestrów, a nawet w niektórych przypadkach należy wprowadzić zmiany w kodzie i Kontynuuj debugowanie bez ponownego kompilowania. Aby uzyskać więcej informacji, zobacz [debugowania w programie Visual Studio](/visualstudio/debugger/debugging-in-visual-studio).
+Program można debugować, naciskając klawisz **F5** kiedy konfigurację projektu jest ustawiona na debugowanie. Podczas debugowania, możesz ustawić punkty przerwania, naciskając klawisz **F9**, Przechodź przez kod, naciskając klawisz **F10**, wyświetlanie wartości zmiennych określonego lub rejestrach, a nawet w niektórych przypadkach należy wprowadzić zmiany w kodzie i Kontynuuj debugowanie bez ponownego kompilowania. Aby uzyskać więcej informacji, zobacz [debugowania w programie Visual Studio](/visualstudio/debugger/debugging-in-visual-studio).
 
-## <a name="deploy-completed-applications"></a>Wdrażanie aplikacji ukończone
+## <a name="deploy-completed-applications"></a>Wdrażanie ukończone aplikacje
 
-Wdrażanie aplikacji platformy uniwersalnej systemu Windows dla klientów za pośrednictwem Microsoft Store za pomocą **projektu** > **magazynu** opcji menu. Wdrożenie CRT odbywa się automatycznie w tle. Aby uzyskać więcej informacji, zobacz [sprzedaży aplikacji](http://go.microsoft.com/fwlink/p/?LinkId=262280).
+Wdrażanie aplikacji platformy uniwersalnej systemu Windows do klientów za pośrednictwem witryny Microsoft Store przy użyciu **projektu** > **Store** opcji menu. Wdrożenie CRT odbywa się automatycznie w tle. Aby uzyskać więcej informacji, zobacz [Windows publikować aplikacje i gry](/windows/uwp/publish/). 
 
-Podczas wdrażania aplikacji natywnej C++ pulpitu na inny komputer, należy zainstalować aplikacji oraz wszelkie pliki biblioteki, które zależy od aplikacji. Istnieją trzy sposoby wdrażania uniwersalnego środowiska uruchomieniowego C++ (Biblioteka UCRT) przy użyciu aplikacji: centralnej wdrożenia, wdrożenia lokalnego lub statycznego łączenia. Aby uzyskać więcej informacji, zobacz [wdrażanie aplikacji pulpitu](../ide/deploying-native-desktop-applications-visual-cpp.md).
+Podczas wdrażania natywnych aplikacji pulpitu języka C++ na innym komputerze, należy zainstalować samej aplikacji i plików biblioteki, od których zależy aplikacja. Istnieją trzy sposoby wdrożenia uniwersalne środowisko uruchomieniowe C++ (UCRT) z aplikacją: wdrożenie centralne, wdrożenie lokalne lub łączenia statycznego. Aby uzyskać więcej informacji, zobacz [wdrażanie aplikacji komputerowych](../ide/deploying-native-desktop-applications-visual-cpp.md).
 
-Aby uzyskać więcej informacji o wdrażaniu C + +/ CLI program, zobacz [przewodnik wdrażania dla deweloperów](/dotnet/framework/deployment/deployment-guide-for-developers),
+Aby uzyskać więcej informacji o wdrażaniu w języku C + +/ interfejsu wiersza polecenia programu, zobacz [przewodnik wdrażania dla deweloperów](/dotnet/framework/deployment/deployment-guide-for-developers),
 
 ## <a name="related-articles"></a>Powiązane artykuły
 
 |||
 |-|-|
 |[Narzędzia i funkcje programu Visual C++ w wydaniach programu Visual Studio](../ide/visual-cpp-tools-and-features-in-visual-studio-editions.md)|Pokazuje, które funkcje są dostępne w różnych wersjach programu Visual Studio.|
-|[Tworzenie projektów i zarządzanie nimi na podstawie MSBuild](../ide/creating-and-managing-visual-cpp-projects.md)|Zawiera omówienie projekty oparte na C++ MSBuild w Visual Studio i łącza do innych artykułów, które wyjaśniono, jak utworzyć i zarządzać nimi.|
-|[CMake projekty w programie Visual C++](cmake-tools-for-visual-cpp.md).|Zawiera opis sposobu tworzenia CMake lub innych projektów z systemem innym niż MSBuild w programie Visual C++.|
-|[Kompilowanie programów C/C++](../build/building-c-cpp-programs.md)|Zawiera opis sposobu tworzenia projektów C++.|
-|[Wdrażanie natywnych aplikacji komputerowych](../ide/deploying-native-desktop-applications-visual-cpp.md)|Zawiera omówienie wdrożenia dla aplikacji C++ i łącza do innych artykułów opisujących wdrożenia szczegółowo.|
-|[Przewodnik po przenoszeniu i uaktualnianiu pakietu Visual C++](../porting/visual-cpp-porting-and-upgrading-guide.md)|Szczegółowe informacje o sposobie uaktualniania aplikacji C++, które zostały utworzone we wcześniejszych wersjach programu Visual Studio i przeprowadzanie migracji aplikacji, które zostały utworzone przy użyciu narzędzia innego niż Visual Studio.|
-|[Visual C++](../visual-cpp-in-visual-studio.md)|W tym artykule opisano najważniejsze funkcje programu Visual C++ w Visual Studio i łącza do pozostałej części dokumentacji Visual C++.|
+|[Tworzenie i zarządzanie projektami opartych na platformie MSBuild](../ide/creating-and-managing-visual-cpp-projects.md)|Zawiera omówienie projektach C++ MSBuild w Visual Studio i łącza do innych artykułów, które wyjaśniają, jak tworzyć i zarządzać nimi.|
+|[Projekty CMake w programie Visual C++](cmake-tools-for-visual-cpp.md).|W tym artykule opisano sposób tworzenia, narzędzia CMake lub w innych projektach niekorzystających z programu MSBuild w programie Visual C++.|
+|[Kompilowanie programów C/C++](../build/building-c-cpp-programs.md)|W tym artykule opisano sposób tworzenia projektów w języku C++.|
+|[Wdrażanie aplikacji komputerowych](../ide/deploying-native-desktop-applications-visual-cpp.md)|Zawiera omówienie wdrożenia dla aplikacji C++ i łącza do innych artykułów, które opisują wdrożenia szczegółowo.|
+|[Przewodnik po przenoszeniu i uaktualnianiu pakietu Visual C++](../porting/visual-cpp-porting-and-upgrading-guide.md)|Szczegółowe informacje o sposobie uaktualniania aplikacji w języku C++, które zostały utworzone we wcześniejszych wersjach programu Visual Studio, a także jak przeprowadzić migrację aplikacji, które zostały utworzone przy użyciu narzędzi innych niż program Visual Studio.|
+|[Visual C++](../visual-cpp-in-visual-studio.md)|W tym artykule opisano kluczowe funkcje programu Visual C++ w Visual Studio i łącza do pozostałej części dokumentacji języka Visual C++.|

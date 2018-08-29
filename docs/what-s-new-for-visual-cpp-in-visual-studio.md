@@ -9,12 +9,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f9e432cb098c17a3ac03e5b394f304578bbe06f1
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 6d3a3ec1fec213cc6fa1bb5dc0ebfdadbe7d22b2
+ms.sourcegitcommit: f7703076b850c717c33d72fb0755fbb2215c5ddc
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42590409"
+ms.lasthandoff: 08/28/2018
+ms.locfileid: "43131723"
 ---
 # <a name="whats-new-for-visual-c-in-visual-studio-2017"></a>Co nowego w języku Visual C++ w programie Visual Studio 2017
 
@@ -27,13 +27,10 @@ Program Visual Studio 2017 obejmuje wiele aktualizacji i poprawek dotyczących �
 ### <a name="c-conformance-improvements"></a>Ulepszenia zgodności języka C++
 
 W tej wersji zaktualizowaliśmy standardową bibliotekę i kompilator języka C++ o rozszerzoną obsługę funkcji języka C ++ 11 i C ++ 14, a także wstępną obsługę niektórych funkcji, które mają zostać uwzględnione w standardowym języku C ++ 17. Aby uzyskać szczegółowe informacje, zobacz [ulepszenia zgodności języka C++ w programie Visual Studio 2017](cpp-conformance-improvements-2017.md).
-**Visual Studio 2017 w wersji 15.5**:  
 
-   Kompilator obsługuje około 75% funkcji, które są nowością w programie C ++ 17, w tym wiązania strukturyzowane, `constexpr` lambdy, `if constexpr`, zmienne wbudowane, złożyć wyrażenia i dodawanie `noexcept` do systemu typów. Są one dostępne w obszarze **/STD: c ++ 17** opcji. Aby uzyskać więcej informacji, zobacz [ulepszenia zgodności języka C++ w programie Visual Studio 2017](cpp-conformance-improvements-2017.md)
+**Visual Studio 2017 w wersji 15.5**: kompilator obsługuje około 75% funkcji, które są nowością w programie C ++ 17, w tym wiązania strukturyzowane, `constexpr` lambdy, `if constexpr`, zmienne wbudowane, złożyć wyrażenia i dodawanie `noexcept` do system typów. Są one dostępne w obszarze **/STD: c ++ 17** opcji. Aby uzyskać więcej informacji, zobacz [ulepszenia zgodności języka C++ w programie Visual Studio 2017](cpp-conformance-improvements-2017.md)
 
-**Visual Studio 2017 w wersji 15.7**:  
-
-Zestaw narzędzi kompilatora MSVC w wersji 15.7 programu Visual Studio jest teraz zgodny ze standardem C++. Aby uzyskać więcej informacji, zobacz [Announcing: MSVC jest zgodny ze standardem C++](https://blogs.msdn.microsoft.com/vcblog/2018/05/07/announcing-msvc-conforms-to-the-c-standard/) i [Visual zgodność języka C++](visual-cpp-language-conformance.md).
+**Visual Studio 2017 w wersji 15.7**: w wersji 15.7 programu Visual Studio, zestaw narzędzi kompilatora MSVC jest teraz zgodny ze standardem C++. Aby uzyskać więcej informacji, zobacz [Announcing: MSVC jest zgodny ze standardem C++](https://blogs.msdn.microsoft.com/vcblog/2018/05/07/announcing-msvc-conforms-to-the-c-standard/) i [Visual zgodność języka C++](visual-cpp-language-conformance.md).
 
 ### <a name="new-compiler-options"></a>Nowe opcje kompilatora
 

@@ -1,7 +1,7 @@
 ---
-title: 'Wielowątkowość: Przerywanie wątków | Dokumentacja firmy Microsoft'
+title: 'Wielowątkowość: Przerywanie wątków w MFC | Dokumentacja firmy Microsoft'
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 08/27/2018
 ms.technology:
 - cpp-parallel
 ms.topic: conceptual
@@ -23,14 +23,14 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2411d11c154bef09b95d33e5b8598ba3c64dfb94
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 3b192c0ee4bc7658fc39791545c4aa9334edd183
+ms.sourcegitcommit: f7703076b850c717c33d72fb0755fbb2215c5ddc
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42608847"
+ms.lasthandoff: 08/28/2018
+ms.locfileid: "43131948"
 ---
-# <a name="multithreading-terminating-threads"></a>Wielowątkowość: przerywanie wątków
+# <a name="multithreading-terminating-threads-in-mfc"></a>Wielowątkowość: Przerywanie wątków w MFC
 Dwie normalne sytuacje powodują zakończenie wątku: funkcja kontrolowania istnieje lub wątek nie jest dozwolony do zakończenia. Jeśli Edytor tekstu używa wątku do drukowania w tle, funkcja kontrolowania zakończy się normalnie Jeśli drukowanie zostanie ukończone pomyślnie. Jeśli użytkownik chce anulować drukowanie, natomiast wątek drukowanie w tle musi być zakończony przedwcześnie. W tym temacie wyjaśniono, jak implementować każdą sytuację i jak uzyskać kod wyjścia wątku, po jego działania.  
   
 - [Zakończenie normalne wątku](#_core_normal_thread_termination)  
@@ -67,7 +67,7 @@ Każda z tych metod pozwala określić dlaczego `CWinThread` obiekt został zako
   
 ## <a name="see-also"></a>Zobacz też  
  
-[Wielowątkowość z C++ i MFC](../parallel/multithreading-with-cpp-and-mfc.md)   
+[Wielowątkowość z C++ i MFC](multithreading-with-cpp-and-mfc.md)   
 [_endthread, _endthreadex](../c-runtime-library/reference/endthread-endthreadex.md)   
 [_beginthread, _beginthreadex](../c-runtime-library/reference/beginthread-beginthreadex.md)   
 [ExitThread](http://msdn.microsoft.com/library/windows/desktop/ms682659)

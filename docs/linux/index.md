@@ -7,16 +7,16 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d93ad1fd32003444c9ddd991e1810fbc5bec79d5
-ms.sourcegitcommit: 7f3df9ff0310a4716b8136ca20deba699ca86c6c
+ms.openlocfilehash: adedfd2a6589d7d7d0fad453428d409932007e15
+ms.sourcegitcommit: f7703076b850c717c33d72fb0755fbb2215c5ddc
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/21/2018
-ms.locfileid: "42464574"
+ms.lasthandoff: 08/28/2018
+ms.locfileid: "43131908"
 ---
 # <a name="linux-development-with-c-documentation"></a>Programowanie dla systemu Linux z dokumentacji języka C++
 
-Twórz i Debuguj aplikacje działające w systemie Linux.
+Użyj programu Visual Studio 2017 do tworzenia i debugowania aplikacji działających w systemie Linux.
 
 <ul class="panelContent cardsF">
     <li>
@@ -31,7 +31,7 @@ Twórz i Debuguj aplikacje działające w systemie Linux.
                     </div>
                     <div class="cardText">
                         <h3>Instalowanie i konfigurowanie obciążeń systemu Linux</h3>
-                        <p>Dowiedz się, jak skonfigurować Visual Studio, aby tworzyć aplikacje dla systemu Linux w języku C++.</p>
+                        <p>Dowiedz się, jak skonfigurować program Visual Studio 2017 i nowszych do tworzenia aplikacji systemu Linux w języku C++.</p>
                     </div>
                 </div>
             </div>

@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: aa5192ebcbc6b0b9b82bcce0bd0f2041ff536016
-ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
+ms.openlocfilehash: f83037258ebd279f7c9ed80086a34ebf497efeed
+ms.sourcegitcommit: f7703076b850c717c33d72fb0755fbb2215c5ddc
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37879371"
+ms.lasthandoff: 08/28/2018
+ms.locfileid: "43131686"
 ---
 # <a name="formatting-time-values-general-purpose-classes"></a>Formatowanie wartości czasu: Klasy ogólnego przeznaczenia
 Poniższa procedura pokazuje sposób formatowania wartości typu time.  
@@ -41,6 +41,5 @@ Użyj `Format` funkcja elementu członkowskiego albo [CTime](../atl-mfc-shared/r
   
 -   [Obsługa automatyzacji daty i godziny programowania](../atl-mfc-shared/date-and-time-automation-support.md)  
   
-## <a name="see-also"></a>Zobacz też  
- [Data i godzina: klasy ogólnego przeznaczenia](../atl-mfc-shared/date-and-time-general-purpose-classes.md)
+
 

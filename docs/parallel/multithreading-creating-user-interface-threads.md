@@ -1,7 +1,7 @@
 ---
-title: 'Wielowątkowość: Tworzenie wątków interfejsu użytkownika | Dokumentacja firmy Microsoft'
+title: 'Wielowątkowość: Tworzenie wątków interfejsu użytkownika MFC | Dokumentacja firmy Microsoft'
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 08/27/2018
 ms.technology:
 - cpp-parallel
 ms.topic: conceptual
@@ -21,14 +21,14 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0223e342bf2312919247d42564445a9e116ca59b
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 625518a76bb22c60a41175e649af7ae650161494
+ms.sourcegitcommit: f7703076b850c717c33d72fb0755fbb2215c5ddc
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42607398"
+ms.lasthandoff: 08/28/2018
+ms.locfileid: "43131563"
 ---
-# <a name="multithreading-creating-user-interface-threads"></a>Wielowątkowość: tworzenie wątków interfejsu użytkownika
+# <a name="multithreading-creating-mfc-user-interface-threads"></a>Wielowątkowość: Tworzenie wątków interfejsu użytkownika MFC
 Wątek interfejsu użytkownika jest często używane do obsługi danych wejściowych użytkownika i reagowania na zdarzenia użytkownika, niezależnie od wątków wykonywanie innych części aplikacji. Wątku głównego aplikacji (podany w swojej `CWinApp`-klasy pochodnej) jest już utworzona i uruchomiona za Ciebie. W tym temacie opisano kroki niezbędne do tworzenia wątków interfejsu użytkownika.  
   
 Pierwszą rzeczą, którą należy wykonać podczas tworzenia wątku interfejsu użytkownika jest wyprowadzić klasę z [CWinThread](../mfc/reference/cwinthread-class.md). Należy zadeklarować i zaimplementowania tej klasy przy użyciu [DECLARE_DYNCREATE](../mfc/reference/run-time-object-model-services.md#declare_dyncreate) i [IMPLEMENT_DYNCREATE](../mfc/reference/run-time-object-model-services.md#implement_dyncreate) makra. Ta klasa należy zastąpić niektóre funkcje i mogą zastąpić inne osoby. W poniższej tabeli przedstawiono te funkcje i co należy zrobić.  
@@ -37,13 +37,12 @@ Pierwszą rzeczą, którą należy wykonać podczas tworzenia wątku interfejsu 
   
 |Funkcja|Cel|  
 |--------------|-------------|  
-
-|[Exitinstance —](../mfc/reference/cwinthread-class.md#exitinstance)| Oczyszczanie należy wykonać, gdy wątek kończy działanie. Zazwyczaj zastąpione. |  
-|[InitInstance](../mfc/reference/cwinthread-class.md#initinstance)| Wykonywanie inicjowania wystąpienia wątku. Musi zostać zastąpiona. |  
-|[OnIdle](../mfc/reference/cwinthread-class.md#onidle)| Wykonaj przetwarzanie w czasie bezczynności właściwe dla wątków. Nie zawsze zastąpiony. |  
-|[Pretranslatemessage —](../mfc/reference/cwinthread-class.md#pretranslatemessage)| Filtrowanie komunikatów przed ich wysłaniem do `TranslateMessage` i `DispatchMessage`. Nie zawsze zastąpiony. |  
-|[ProcessWndProcException](../mfc/reference/cwinthread-class.md#processwndprocexception)| Przechwycić nieobsługiwane wyjątki rzucane przez wątek wiadomości i procedury obsługi poleceń. Nie zawsze zastąpiony. |  
-|[Uruchom](../mfc/reference/cwinthread-class.md#run)| Funkcje kontroli wątku. Zawiera "pompy komunikatów". Rzadko zastąpione. |  
+|[Exitinstance —](../mfc/reference/cwinthread-class.md#exitinstance)|Oczyszczanie należy wykonać, gdy wątek kończy działanie. Zazwyczaj jest to przesłonić.|  
+|[InitInstance](../mfc/reference/cwinthread-class.md#initinstance)|Wykonywanie inicjowania wystąpienia wątku. Musi zostać zastąpiona.|  
+|[OnIdle](../mfc/reference/cwinthread-class.md#onidle)|Wykonaj przetwarzanie w czasie bezczynności właściwe dla wątków. Nie zawsze zastąpiony.|  
+|[Pretranslatemessage —](../mfc/reference/cwinthread-class.md#pretranslatemessage)|Filtrowanie komunikatów przed ich wysłaniem do `TranslateMessage` i `DispatchMessage`. Nie zawsze zastąpiony.|  
+|[ProcessWndProcException](../mfc/reference/cwinthread-class.md#processwndprocexception)|Przechwycić nieobsługiwane wyjątki rzucane przez wątek wiadomości i procedury obsługi poleceń. Nie zawsze zastąpiony.|  
+|[Run](../mfc/reference/cwinthread-class.md#run)|Funkcje kontroli wątku. Zawiera "pompy komunikatów". Rzadko zastąpiona.|  
 
   
 Biblioteka MFC zawiera dwie wersje `AfxBeginThread` za pomocą parametru przeciążenia: jedną, która tworzy tylko wątki robocze i taki, który można utworzyć wątki interfejsu użytkownika lub wątków roboczych. Aby uruchomić wątek interfejsu użytkownika, należy wywołać drugie przeciążenie [AfxBeginThread](../mfc/reference/application-information-and-management.md#afxbeginthread), podając następujące informacje:  
@@ -62,12 +61,12 @@ Biblioteka MFC zawiera dwie wersje `AfxBeginThread` za pomocą parametru przeci�
   
 ## <a name="what-do-you-want-to-know-more-about"></a>Co chcesz dowiedzieć się więcej na temat?  
   
-- [Wielowątkowość: przerywanie wątków](../parallel/multithreading-terminating-threads.md)  
+- [Wielowątkowość: przerywanie wątków](multithreading-terminating-threads.md)  
   
-- [Wielowątkowość: tworzenie wątków roboczych](../parallel/multithreading-creating-worker-threads.md)  
+- [Wielowątkowość: tworzenie wątków roboczych](multithreading-creating-worker-threads.md)  
   
-- [Procesy i wątki](http://msdn.microsoft.com/library/windows/desktop/ms684841)  
+- [Procesy i wątki](/windows/desktop/ProcThread/processes-and-threads)  
   
 ## <a name="see-also"></a>Zobacz też  
  
-[Wielowątkowość z C++ i MFC](../parallel/multithreading-with-cpp-and-mfc.md)
+[Wielowątkowość z C++ i MFC](multithreading-with-cpp-and-mfc.md)

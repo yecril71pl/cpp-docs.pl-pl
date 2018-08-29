@@ -1,5 +1,5 @@
 ---
-title: -guard (Włącz ochrona przepływu sterowania) | Dokumentacja firmy Microsoft
+title: -guard (Włącz ochronę przepływu sterowania) | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,15 +15,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b5c60ff444189e9e6b7919b43649b75722ee7249
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 6c65bafc14f5ef29db89ddc0a4647193231f7e19
+ms.sourcegitcommit: f7703076b850c717c33d72fb0755fbb2215c5ddc
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32377407"
+ms.lasthandoff: 08/28/2018
+ms.locfileid: "43131673"
 ---
 # <a name="guard-enable-control-flow-guard"></a>/guard (włącz ochronę przepływu sterowania)
-Włącz generowanie kompilatora kontroli zabezpieczeń Guard przepływu sterowania.  
+Włączanie generowania kompilatora kontroli zabezpieczeń ochrony przepływu sterowania.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -32,27 +32,29 @@ Włącz generowanie kompilatora kontroli zabezpieczeń Guard przepływu sterowan
 ```  
   
 ## <a name="remarks"></a>Uwagi  
- **/GUARD: CF** opcja powoduje, że kompilator, aby przeanalizować przepływ kontroli dla pośredniego rozmów w czasie kompilacji, a następnie Wstaw kod, aby zweryfikować elementy docelowe w czasie wykonywania. Domyślnie **/GUARD: CF** jest wyłączony, a musi być jawnie włączone. Aby jawnie wyłączyć tę opcję, należy użyć **/guard:cf-**.  
+ **/GUARD: CF** opcja powoduje, że kompilator, aby analizować przepływ kontroli dla pośredniego rozmów w czasie kompilacji, a następnie Wstaw kod, aby sprawdzić elementy docelowe w czasie wykonywania. Domyślnie **/GUARD: CF** jest wyłączona i musi być jawnie włączone. Aby jawnie wyłączyć tę opcję, należy użyć **/guard:cf-**. 
+
+**Visual Studio 2017 i nowszym**: Ta opcja dodaje osłony dla **Przełącz** instrukcji, które generują przejść tabel.
   
- Gdy **/GUARD: CF** zostanie określona opcja sterowania przepływem zabezpieczenia (CFG), kompilatorze i konsolidatorze wstawiania runtime dodatkowe kontrole zabezpieczeń wykrywanie prób złamania kodu. Podczas kompilowania kodu i łącząc, wszystkie pośrednie wywołania w kodzie są analizowane można znaleźć każdej lokalizacji poprawnie działający kod może nawiązać połączenie. Te informacje są przechowywane w strukturach dodatkowe w nagłówkach Twoje pliki binarne. Kompilator injects również wyboru przed co pośrednie wywołanie w kodzie, które zapewnia, że element docelowy stanowi jedną z lokalizacji zweryfikowane. Jeśli sprawdzenie zakończy się niepowodzeniem w czasie wykonywania na system operacyjny obsługujący CFG, system operacyjny zamyka program.  
+ Gdy **/GUARD: CF** kontroli przepływu je przed nieprzewidzianymi (CFG) opcja jest określona, kompilatora i konsolidatora wstawiania dodatkowych testów środowiska uruchomieniowego zabezpieczeń wykryć próby naruszenia bezpieczeństwa kodu. Podczas kompilowania i łączenia, wszystkie pośrednie wywołania w kodzie są analizowane można znaleźć w każdej lokalizacji, która poprawnie działający kod może nawiązać połączenie. Te informacje są przechowywane w strukturach dodatkowe w nagłówkach plików binarnych. Kompilator wprowadza również wyboru przed każde wywołanie pośrednie w kodzie, który gwarantuje, że obiekt docelowy jest zweryfikowanym lokalizacji. Jeśli sprawdzenie zakończy się niepowodzeniem w czasie wykonywania w systemie operacyjnym CFG-aware, system operacyjny zamyka program.  
   
- Typowe ataków na oprogramowanie korzysta z usterki w programie obsługi danych wejściowych extreme lub nieoczekiwany. Starannie przygotowanego danych wejściowych do aplikacji może spowodować zastąpienie lokalizacji, która zawiera wskaźnik do kodu wykonywalnego. Może to służyć do przekierowania przepływu sterowania do kodu kontrolowane przez osobę atakującą. Sprawdzanie czasu wykonania CFG nie rozwiązują usterki uszkodzenie danych w pliku wykonywalnego. One zamiast utrudnić atakujący może użyć ich do wykonania dowolnego kodu. CFG to narzędzie środki zaradcze, które zapobiega wywołania do lokalizacji innych niż punkty wejścia funkcji w kodzie. Podobnie jak jest funkcja Zapobieganie wykonywaniu danych (DEP) [/GS](../../build/reference/gs-buffer-security-check.md) stosu kontroli, i [/DYNAMICBASE](../../build/reference/dynamicbase-use-address-space-layout-randomization.md) i [/highentropyva](../../build/reference/highentropyva-support-64-bit-aslr.md) adresów randomizacji układu przestrzeni (ASLR) niższy szanse, że kod staje się wykorzystać wektora.  
+ Typowych ataków na oprogramowanie korzysta z błędów podczas obsługi extreme lub nieoczekiwany danych wejściowych. Dokładnie przygotowane dane wejściowe do aplikacji może spowodować zastąpienie lokalizacji, która zawiera wskaźnik do kodu wykonywalnego. To może służyć do przekierowania przepływ sterowania kodu kontrolowane przez osobę atakującą. Testy środowiska uruchomieniowego CFG nie rozwiązują błędy uszkodzenia danych w plik wykonywalny. Zamiast tego ułatwiają one utrudnia osobie atakującej umożliwia wykonanie dowolnego kodu. CFG jest narzędziem środki zaradcze, które uniemożliwia wywołania lokalizacjach innych niż punkty wejścia funkcji w kodzie. Jest on podobny do jak zapobieganie wykonywaniu danych (DEP) [/GS](../../build/reference/gs-buffer-security-check.md) stosu kontroli, i [opcja/DynamicBase](../../build/reference/dynamicbase-use-address-space-layout-randomization.md) i [/highentropyva](../../build/reference/highentropyva-support-64-bit-aslr.md) adresów randomizacji układu przestrzeni (ASLR) niższy potencjalnych zwycięzców, kod staje się wykorzystać wektora.  
   
- **/GUARD: CF** opcji muszą być przekazywane do obu kompilatora i konsolidatora do kompilacji kodu, który używa CFG wykorzystać technika środki zaradcze. Jeśli Twoje dane binarne jest zbudowany przy użyciu pojedynczej `cl` polecenia kompilatora przekazuje opcji do konsolidatora. Jeśli kompilowanie i łączenie oddzielnie, można ustawić opcji, w kompilatorze i konsolidatorze poleceń. Wymagany jest również /DYNAMICBASE — opcja konsolidatora. Aby sprawdzić, czy z danych binarnych zawiera dane CFG, użyj `dumpbin /headers /loadconfig` polecenia. Mają włączoną CFG plików binarnych `Guard` na liście właściwości plik EXE lub DLL i flagi Guard obejmują `CF Instrumented` i `FID table present`.  
+ **/GUARD: CF** opcji muszą zostać przekazane do obu kompilator i konsolidator, aby tworzyć kod, który używa CFG wykorzystać środki zaradcze techniki. Jeśli plik binarny został utworzony przy użyciu pojedynczej `cl` polecenia kompilatora przekazuje opcję do konsolidatora. Jeśli kompilujesz i łączysz oddzielnie, można ustawić opcji, w kompilatorze i konsolidatorze poleceń. Wymagany jest również opcja/DynamicBase — opcja konsolidatora. Aby sprawdzić, czy plik binarny zawiera dane CFG, użyj `dumpbin /headers /loadconfig` polecenia. Ma włączoną CFG pliki binarne `Guard` na liście właściwości pliku EXE lub DLL i flagi Guard obejmują `CF Instrumented` i `FID table present`.  
   
  **/GUARD: CF** opcja jest niezgodna z [/zi](../../build/reference/z7-zi-zi-debug-information-format.md) (informacje debugowania Edytuj i Kontynuuj) lub [/CLR](../../build/reference/clr-common-language-runtime-compilation.md) (kompilacja języka wspólnego środowiska uruchomieniowego).  
   
- Kodu skompilowanego za pomocą **/GUARD: CF** może odnosić się do bibliotek i obiektu pliki, które nie są kompilowane przy użyciu opcji. Tylko tego kodu, gdy są również połączone za pomocą **/GUARD: CF** opcji i obsługujący CFG system operacyjny, ma CFG ochrony. Ponieważ skompilowany bez opcji Kod lokacji nie zatrzyma ataku, zaleca się użycie opcji kod, który można skompilować. Brak małych środowisko uruchomieniowe koszt CFG kontroli, ale analizy kompilatora próbuje zoptymalizować optymalizacji kontrole przechodzi pośrednich, które mogą być sprawdzone bezpieczne.  
+ Kod skompilowany przy użyciu **/GUARD: CF** mogą być połączone z biblioteki i pliki, które nie są kompilowane przy użyciu opcji obiektu. Tylko ten kod, gdy również łączone za pomocą **/GUARD: CF** opcji i uruchamiania w systemach operacyjnych obsługujących CFG, CFG ochroną. Ponieważ kod skompilowany bez opcji nie powoduje wstrzymania ataku, firma Microsoft zaleca użycie opcji na cały kod, który można skompilować. Istnieje mały środowiska uruchomieniowego, koszt CFG kontroli, ale analiza kompilator próbuje optymalizują kontrole przechodzi pośrednie, które mogą być sprawdzone bezpieczne.  
   
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Aby ustawić tę opcję kompilatora w środowisku programowania Visual Studio  
   
-1.  Otwórz projekt **strony właściwości** okno dialogowe. Aby uzyskać więcej informacji, zobacz [Praca z właściwościami projektu](../../ide/working-with-project-properties.md).  
+1.  Otwórz projekt **stron właściwości** okno dialogowe. Aby uzyskać więcej informacji, zobacz [Praca z właściwościami projektu](../../ide/working-with-project-properties.md).  
   
 2.  Wybierz **właściwości konfiguracji**, **C/C++**, **generowanie kodu**.  
   
-3.  Wybierz **ochrona przepływu sterowania** właściwości.  
+3.  Wybierz **ochrony przepływu sterowania** właściwości.  
   
-4.  Za pomocą kontrolki rozwijanej wybierz **tak** umożliwiające ochrona przepływu sterowania lub **nr** je wyłączyć.  
+4.  W kontrolce listy rozwijanej wybierz **tak** można włączyć ochrony przepływu sterowania lub **nie** go wyłączyć.  
   
 ## <a name="see-also"></a>Zobacz też  
  [Opcje kompilatora](../../build/reference/compiler-options.md)   

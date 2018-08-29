@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3f60ba71a82bf09361e55f8c6b7cab82f49d47bd
-ms.sourcegitcommit: e9ce38decc9f986edab5543de3464b11ebccb123
+ms.openlocfilehash: d90a3f4b2cbacb3071dcd552fd88f6cb11bb5d43
+ms.sourcegitcommit: f7703076b850c717c33d72fb0755fbb2215c5ddc
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/13/2018
-ms.locfileid: "42465514"
+ms.lasthandoff: 08/28/2018
+ms.locfileid: "43131845"
 ---
 # <a name="constructors-c"></a>Konstruktory (C++)
 
@@ -598,7 +598,7 @@ Obiekt utworzony przez konstruktory jest w pełni zainicjowany natychmiast po za
 
 ## <a name="inheriting_constructors"></a> Dziedziczenie konstruktorów (C ++ 11)
 
-Klasa pochodna może dziedziczyć konstruktory bezpośrednią klasą bazową za pomocą deklaracji, jak pokazano w poniższym przykładzie:
+Klasa pochodna może dziedziczyć konstruktory bezpośrednią klasą bazową przy użyciu **przy użyciu** deklaracji, jak pokazano w poniższym przykładzie:
 
 ```cpp
 #include <iostream>
@@ -647,7 +647,7 @@ Derived d3 = d2 calls: Base(Base&)
 Derived d4 calls: Base()*/
 ```
 
-Za pomocą instrukcji wnosi do zakresu wszystkie konstruktory z klasy bazowej, z wyjątkiem tych, które mają identyczne podpisu konstruktorów w klasie pochodnej. Ogólnie rzecz biorąc najlepiej jest używać dziedziczącej konstruktorów, gdy klasa pochodna nie deklaruje żadnych nowych elementów członkowskich danych lub konstruktory.
+**Visual Studio 2017 w wersji 15.7 lub nowszej**: **przy użyciu** instrukcji w **/STD: c ++ 17** tryb sprowadza się do zakresu wszystkie konstruktory z klasy bazowej, z wyjątkiem tych, które mają identyczne do konstruktorów w klasie pochodnej. Ogólnie rzecz biorąc najlepiej jest używać dziedziczącej konstruktorów, gdy klasa pochodna nie deklaruje żadnych nowych elementów członkowskich danych lub konstruktory. Zobacz też [ulepszeń w programie Visual Studio 2017 wersji 15.7](../cpp-conformance-improvements-2017.md#improvements_157).
 
 Szablon klasy mogą dziedziczyć wszystkie konstruktory argument typu Jeśli ten typ Określa klasę bazową:
 

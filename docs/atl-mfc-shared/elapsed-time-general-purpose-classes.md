@@ -1,5 +1,5 @@
 ---
-title: 'Czas, który upłynął: Ogólnego przeznaczenia klas | Dokumentacja firmy Microsoft'
+title: 'Upłynęło czasu: Klasy ogólnego przeznaczenia | Dokumentacja firmy Microsoft'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -21,24 +21,17 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ff7ef11bb20124a05e2e85c408ce27de8f982546
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 98e3c07522ead22467455ce2d601270e7b624be0
+ms.sourcegitcommit: f7703076b850c717c33d72fb0755fbb2215c5ddc
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32354269"
+ms.lasthandoff: 08/28/2018
+ms.locfileid: "43131617"
 ---
-# <a name="elapsed-time-general-purpose-classes"></a>Czas, który upłynął: Klasy ogólnego przeznaczenia
-Poniższa procedura przedstawia sposób obliczania różnicy między dwiema `CTime` obiektów i get `CTimeSpan` wynik.  
-  
-#### <a name="to-calculate-elapsed-time"></a>Aby obliczyć czas, który upłynął  
-  
-1.  Użyj `CTime` i `CTimeSpan` obiekty do obliczenia czas, który upłynął, w następujący sposób:  
+# <a name="elapsed-time-general-purpose-classes"></a>Upłynęło czasu: Klasy ogólnego przeznaczenia
+Poniższa procedura pokazuje, jak obliczyć różnicę między dwoma `CTime` obiektów i get `CTimeSpan` wynik. Użyj `CTime` i `CTimeSpan` obiekty do obliczania upływu czasu, w następujący sposób:  
   
      [!code-cpp[NVC_ATLMFC_Utilities#174](../atl-mfc-shared/codesnippet/cpp/elapsed-time-general-purpose-classes_1.cpp)]  
   
-     Po obliczonych `elapsedTime`, można użyć funkcji Członkowskich `CTimeSpan` wyodrębnić składniki wartość czasu, który upłynął.  
-  
-## <a name="see-also"></a>Zobacz też  
- [Data i godzina: klasy ogólnego przeznaczenia](../atl-mfc-shared/date-and-time-general-purpose-classes.md)
+Gdy obliczonych `elapsedTime`, można użyć funkcji składowych `CTimeSpan` można wyodrębnić składniki wartość czasu, który upłynął.  
 

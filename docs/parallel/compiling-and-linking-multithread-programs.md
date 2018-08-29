@@ -20,15 +20,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5df81fa3d47005fc80bdb3b1c78cba050775cda6
-ms.sourcegitcommit: e9ce38decc9f986edab5543de3464b11ebccb123
+ms.openlocfilehash: 4ab667e372c8118a83b7a93444abbfbc5c19b6e0
+ms.sourcegitcommit: f7703076b850c717c33d72fb0755fbb2215c5ddc
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/13/2018
-ms.locfileid: "42465512"
+ms.lasthandoff: 08/28/2018
+ms.locfileid: "43131521"
 ---
 # <a name="compiling-and-linking-multithread-programs"></a>Kompilowanie i łączenie programów wielowątkowych
-Bounce.c program została wprowadzona w systemie [przykładowy Program C wielowątkowości](../parallel/sample-multithread-c-program.md).  
+Bounce.c program została wprowadzona w systemie [przykładowy Program C wielowątkowości](sample-multithread-c-program.md).  
   
 Programy są kompilowane wielowątkowe domyślnie.  
   
@@ -54,4 +54,4 @@ Programy są kompilowane wielowątkowe domyślnie.
   
 ## <a name="see-also"></a>Zobacz też
 
-[Wielowątkowość z językiem C i podsystemem Win32](../parallel/multithreading-with-c-and-win32.md)
+[Wielowątkowość z językiem C i podsystemem Win32](multithreading-with-c-and-win32.md)

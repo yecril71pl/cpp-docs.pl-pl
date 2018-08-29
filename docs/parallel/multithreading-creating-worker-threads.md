@@ -1,5 +1,5 @@
 ---
-title: 'Wielowątkowość: Tworzenie wątków roboczych | Dokumentacja firmy Microsoft'
+title: 'Wielowątkowość: Tworzenie wątków roboczych w MFC | Dokumentacja firmy Microsoft'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -20,14 +20,14 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0fb5828947524c9cbeeabb47f9f6b174ac8115a8
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 90e0af6a1b11b114e56e6c1d87cb293ab83dd768
+ms.sourcegitcommit: f7703076b850c717c33d72fb0755fbb2215c5ddc
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42590603"
+ms.lasthandoff: 08/28/2018
+ms.locfileid: "43131192"
 ---
-# <a name="multithreading-creating-worker-threads"></a>Wielowątkowość: tworzenie wątków roboczych
+# <a name="multithreading-creating-worker-threads-in-mfc"></a>Wielowątkowość: Tworzenie wątków roboczych w MFC
 Wątek roboczy jest najczęściej używany do obsługi zadania w tle, które użytkownik nie powinien mieć zaczekać, aby kontynuować korzystanie z aplikacji. Zadania, takie jak ponowne obliczenie i drukowanie w tle są dobrym przykładem wątków roboczych. W tym temacie przedstawiono kroki niezbędne do utworzenia wątku roboczego. Tematy obejmują:  
   
 - [Rozpoczęcie wątku](#_core_starting_the_thread)  
@@ -64,11 +64,11 @@ Funkcja kontrolowania definiuje wątek. Po wprowadzeniu tej funkcji, rozpoczyna 
 UINT MyControllingFunction( LPVOID pParam );  
 ```  
   
-Parametr jest wartość typu single. Wartość otrzymywana przez funkcję w tym parametrze to wartość, która została przekazana do konstruktora, gdy został utworzony obiekt wątku. Funkcja kontroli może interpretować tę wartość w jakikolwiek sposób, który wybiera. Może być traktowana jako wartość skalarna lub wskaźnika do struktury zawierającej wiele parametrów lub można je zignorować. Jeśli parametr odnosi się do struktury, struktura może służyć nie tylko do przekazywania danych od elementu wywołującego do wątku, ale także do przekazywania danych powrotem od wątku do obiektu wywołującego. Jeśli używasz takiej struktury do przekazywania danych z powrotem do obiektu wywołującego, wątek musi powiadomić obiekt wywołujący, gdy wyniki są gotowe. Aby uzyskać informacje dotyczące komunikacji między wątkiem roboczym do obiektu wywołującego, zobacz [wielowątkowość: porady dotyczące programowania](../parallel/multithreading-programming-tips.md).  
+Parametr jest wartość typu single. Wartość otrzymywana przez funkcję w tym parametrze to wartość, która została przekazana do konstruktora, gdy został utworzony obiekt wątku. Funkcja kontroli może interpretować tę wartość w jakikolwiek sposób, który wybiera. Może być traktowana jako wartość skalarna lub wskaźnika do struktury zawierającej wiele parametrów lub można je zignorować. Jeśli parametr odnosi się do struktury, struktura może służyć nie tylko do przekazywania danych od elementu wywołującego do wątku, ale także do przekazywania danych powrotem od wątku do obiektu wywołującego. Jeśli używasz takiej struktury do przekazywania danych z powrotem do obiektu wywołującego, wątek musi powiadomić obiekt wywołujący, gdy wyniki są gotowe. Aby uzyskać informacje dotyczące komunikacji między wątkiem roboczym do obiektu wywołującego, zobacz [wielowątkowość: porady dotyczące programowania](multithreading-programming-tips.md).  
   
-Kiedy funkcja kończy, powinna zwrócić UINT oznaczającą powód zakończenia. Zazwyczaj ten kod wyjścia to 0, informując o powodzeniu inne wartości oznaczają różne typy błędów. Jest to wyłącznie od implementacji zależy. Niektóre wątki mogą utrzymywać liczniki użycia obiektów i zwracać bieżącą liczbę zastosowań tego obiektu. Aby dowiedzieć się, jak aplikacje mogą odzyskiwać tę wartość, zobacz [wielowątkowość: Kończenie wątków](../parallel/multithreading-terminating-threads.md).  
+Kiedy funkcja kończy, powinna zwrócić UINT oznaczającą powód zakończenia. Zazwyczaj ten kod wyjścia to 0, informując o powodzeniu inne wartości oznaczają różne typy błędów. Jest to wyłącznie od implementacji zależy. Niektóre wątki mogą utrzymywać liczniki użycia obiektów i zwracać bieżącą liczbę zastosowań tego obiektu. Aby dowiedzieć się, jak aplikacje mogą odzyskiwać tę wartość, zobacz [wielowątkowość: Kończenie wątków](multithreading-terminating-threads.md).  
   
-Istnieją pewne ograniczenia, co można zrobić w programie wielowątkowym napisane przy użyciu biblioteki MFC. Aby uzyskać opis tych ograniczeń i inne porady dotyczące korzystania z wątków, zobacz [wielowątkowość: porady dotyczące programowania](../parallel/multithreading-programming-tips.md).  
+Istnieją pewne ograniczenia, co można zrobić w programie wielowątkowym napisane przy użyciu biblioteki MFC. Aby uzyskać opis tych ograniczeń i inne porady dotyczące korzystania z wątków, zobacz [wielowątkowość: porady dotyczące programowania](multithreading-programming-tips.md).  
   
 ##  <a name="_core_controlling_function_example"></a> Przykład funkcji sterowania  
  
@@ -101,8 +101,8 @@ AfxBeginThread(MyThreadProc, pNewObject);
   
 ## <a name="what-do-you-want-to-know-more-about"></a>Co chcesz dowiedzieć się więcej na temat?  
   
-- [Wielowątkowość: tworzenie wątków interfejsu użytkownika](../parallel/multithreading-creating-user-interface-threads.md)  
+- [Wielowątkowość: tworzenie wątków interfejsu użytkownika](multithreading-creating-user-interface-threads.md)  
   
 ## <a name="see-also"></a>Zobacz też  
  
-[Wielowątkowość z C++ i MFC](../parallel/multithreading-with-cpp-and-mfc.md)
+[Wielowątkowość z C++ i MFC](multithreading-with-cpp-and-mfc.md)

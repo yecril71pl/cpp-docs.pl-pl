@@ -15,12 +15,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6a74c6c7c2ee7aab175d7e136e5cf02a8d9f8bfc
-ms.sourcegitcommit: bad2441d1930275ff506d44759d283d94cccd1c0
+ms.openlocfilehash: ec3509b71d78221c3e15607d34f674fc38d9f635
+ms.sourcegitcommit: f7703076b850c717c33d72fb0755fbb2215c5ddc
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/31/2018
-ms.locfileid: "39375880"
+ms.lasthandoff: 08/28/2018
+ms.locfileid: "43130992"
 ---
 # <a name="qspectre"></a>/ Qspectre
 
@@ -32,7 +32,7 @@ Określa Generowanie kompilatora instrukcje eliminowanie luk w zabezpieczeniach 
 
 ## <a name="remarks"></a>Uwagi
 
-**/Qspectre** opcja powoduje, że kompilator, aby wstawić instrukcje, aby uniknąć pewnych [luk w zabezpieczeniach Spectre](https://spectreattack.com/spectre.pdf). Te luki w zabezpieczeniach, o nazwie *ataków kanału po stronie wykonywania spekulacyjnego*, mają wpływ na wiele systemów operacyjnych i nowoczesnych procesorów, takich jak procesory Intel, AMD i ARM.
+**/Qspectre** opcja jest dostępna w programie Visual Studio 2017 w wersji 15.7 lub nowszej. Sprawia, że kompilator, aby wstawić instrukcje, aby uniknąć pewnych [luk w zabezpieczeniach Spectre](https://spectreattack.com/spectre.pdf). Te luki w zabezpieczeniach, o nazwie *ataków kanału po stronie wykonywania spekulacyjnego*, mają wpływ na wiele systemów operacyjnych i nowoczesnych procesorów, takich jak procesory Intel, AMD i ARM.
 
 **/Qspectre** opcja jest domyślnie wyłączona.
 

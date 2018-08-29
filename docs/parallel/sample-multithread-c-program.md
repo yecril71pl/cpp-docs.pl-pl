@@ -12,15 +12,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1899187bd1ff8315300a1d60b24dbfb04f77a15a
-ms.sourcegitcommit: e9ce38decc9f986edab5543de3464b11ebccb123
+ms.openlocfilehash: 08a5e75092aaa467c6e1f937cc00a541aaf24bfa
+ms.sourcegitcommit: f7703076b850c717c33d72fb0755fbb2215c5ddc
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/13/2018
-ms.locfileid: "42465886"
+ms.lasthandoff: 08/28/2018
+ms.locfileid: "43131339"
 ---
 # <a name="sample-multithread-c-program"></a>Przykładowy program więlowątkowy w języku C
-Bounce.c jest wielowątkowym przykładowy programem, który tworzy nowy wątek każdorazowo literę `a` lub `A` został wpisany. Każdy wątek odbija radosną twarz o innym kolorze na ekranie. Można utworzyć do 32 wątków. Normalne zakończenie programu występuje, gdy `q` lub `Q` został wpisany. Aby uzyskać informacje na temat kompilowania i łączenia Bounce.c, zobacz [kompilowanie i łączenie programów wielowątkowych](../parallel/compiling-and-linking-multithread-programs.md).  
+Bounce.c jest wielowątkowym przykładowy programem, który tworzy nowy wątek każdorazowo literę `a` lub `A` został wpisany. Każdy wątek odbija radosną twarz o innym kolorze na ekranie. Można utworzyć do 32 wątków. Normalne zakończenie programu występuje, gdy `q` lub `Q` został wpisany. Aby uzyskać informacje na temat kompilowania i łączenia Bounce.c, zobacz [kompilowanie i łączenie programów wielowątkowych](compiling-and-linking-multithread-programs.md).  
   
 ## <a name="example"></a>Przykład  
   
@@ -220,4 +220,4 @@ q
   
 ## <a name="see-also"></a>Zobacz też  
 
-[Wielowątkowość z językiem C i podsystemem Win32](../parallel/multithreading-with-c-and-win32.md)
+[Wielowątkowość z językiem C i podsystemem Win32](multithreading-with-c-and-win32.md)

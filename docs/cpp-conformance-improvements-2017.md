@@ -10,12 +10,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3708bce00b01ee796067bf91d99645cb61f19a53
-ms.sourcegitcommit: f923f667065cd6c4203d10ca9520600ee40e5f84
+ms.openlocfilehash: 9bce71c444426d5d1a2d5340c603118a09e8275f
+ms.sourcegitcommit: f7703076b850c717c33d72fb0755fbb2215c5ddc
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/24/2018
-ms.locfileid: "42900703"
+ms.lasthandoff: 08/28/2018
+ms.locfileid: "43132246"
 ---
 # <a name="c-conformance-improvements-in-visual-studio-2017-versions-150-153improvements153-155improvements155-156improvements156-157improvements157-158update158"></a>Ulepszenia zgodności języka C++ w Visual Studio 2017 w wersji 15.0, [15.3](#improvements_153), [15.5](#improvements_155), [15.6](#improvements_156), [15.7](#improvements_157), [15.8](#update_158)
 
@@ -55,19 +55,19 @@ Oparta na zakresie dla pętli nie jest już wymagany, czy begin() i metodę end(
 
 ### <a name="constexpr-lambdas"></a>lambdy wyrażeń constexpr
 
-Wyrażenia lambda mogą teraz używać w wyrażeniach stałych. Aby uzyskać więcej informacji, zobacz [Lambda wyrażenia Constexpr](http://open-std.org/JTC1/SC22/WG21/docs/papers/2015/n4487.pdf).
+Wyrażenia lambda mogą teraz używać w wyrażeniach stałych. Aby uzyskać więcej informacji, zobacz [constexpr wyrażeń lambda w języku C++](cpp/lambda-expressions-constexpr.md).
 
 ### <a name="if-constexpr-in-function-templates"></a>Jeśli constexpr w szablonach — funkcja
 
-Szablon funkcji może zawierać `if constexpr` instrukcji, aby włączyć rozgałęzianie w czasie kompilacji. Aby uzyskać więcej informacji, zobacz [Jeśli constexpr](http://open-std.org/JTC1/SC22/WG21/docs/papers/2016/p0128r1.html).
+Szablon funkcji może zawierać `if constexpr` instrukcji, aby włączyć rozgałęzianie w czasie kompilacji. Aby uzyskać więcej informacji, zobacz [Jeśli instrukcji constexpr](cpp/if-else-statement-cpp.md#if_constexpr).
 
 ### <a name="selection-statements-with-initializers"></a>Instrukcje wyboru z inicjatorami
 
-`if` Instrukcji może zawierać inicjatora i wprowadza zmiennej w zakresie bloku w instrukcji, sam. Aby uzyskać więcej informacji, zobacz [instrukcje wyboru za pomocą inicjatora](http://www.open-std.org/JTC1/SC22/WG21/docs/papers/2016/p0305r1.html).
+`if` Instrukcji może zawierać inicjatora i wprowadza zmiennej w zakresie bloku w instrukcji, sam. Aby uzyskać więcej informacji, zobacz [Jeśli instrukcji za pomocą inicjatora](cpp/if-else-statement-cpp.md#if_with_init).
 
 ### <a name="maybeunused-and-nodiscard-attributes"></a>[[maybe_unused]] i atrybuty [[nodiscard]]
 
-Nowe atrybuty o wyłączeniu ostrzeżenia, gdy nie jest używane jednostki lub w celu utworzenia ostrzeżenie, jeśli wartość zwracaną przez wywołanie funkcji jest odrzucany. Aby uzyskać więcej informacji, zobacz [słownictwo dla atrybutu maybe_unused](http://open-std.org/JTC1/SC22/WG21/docs/papers/2016/p0212r0.pdf) i [propozycji nieużywane atrybuty nodiscard i fallthrough](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2015/p0068r0.pdf).
+Nowe atrybuty o wyłączeniu ostrzeżenia, gdy nie jest używane jednostki lub w celu utworzenia ostrzeżenie, jeśli wartość zwracaną przez wywołanie funkcji jest odrzucany. Aby uzyskać więcej informacji, zobacz [atrybutów w języku C++](cpp/attributes.md).
 
 ### <a name="using-attribute-namespaces-without-repetition"></a>Używanie atrybutu przestrzeni nazw, bez powtarzania
 
@@ -75,11 +75,11 @@ Nową składnię, aby włączyć tylko identyfikator jednej przestrzeni nazw na 
 
 ### <a name="structured-bindings"></a>Powiązania strukturalne
 
-Teraz jest to możliwe w jednej deklaracji do przechowywania wartości z poszczególne nazwy dla jego składników, gdy wartość jest tablicą, std::tuple lub std::pair lub ma wszystkich publicznych niestatycznych elementów członkowskich danych. Aby uzyskać więcej informacji, zobacz [powiązań strukturalnych](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2015/p0144r0.pdf).
+Teraz jest to możliwe w jednej deklaracji do przechowywania wartości z poszczególne nazwy dla jego składników, gdy wartość jest tablicą, std::tuple lub std::pair lub ma wszystkich publicznych niestatycznych elementów członkowskich danych. Aby uzyskać więcej informacji, zobacz [powiązań strukturalnych](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2015/p0144r0.pdf) i [zwracanie wielu wartości z funkcją](cpp/functions-cpp.md#multi_val).
 
 ### <a name="construction-rules-for-enum-class-values"></a>Konstrukcja reguły dla wyliczenia klasy wartości
 
-Jest teraz niejawne/inne niż zawężanie konwersji z podstawowym typem wyliczenia w zakresie firmy do wyliczenia, gdy jego definicja wprowadza nie modułu wyliczającego źródła jest używana składnia inicjalizacji listy. Aby uzyskać więcej informacji, zobacz [konstruowania reguły dla wyliczenia klasy wartości](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0138r2.pdf).
+Jest teraz niejawne/inne niż zawężanie konwersji z podstawowym typem wyliczenia w zakresie firmy do wyliczenia, gdy jego definicja wprowadza nie modułu wyliczającego źródła jest używana składnia inicjalizacji listy. Aby uzyskać więcej informacji, zobacz [konstruowania reguły dla wyliczenia klasy wartości](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0138r2.pdf) i [wyliczenia](cpp/enumerations-cpp.md#no_enumerators).
 
 ### <a name="capturing-this-by-value"></a>Przechwytywanie \*to według wartości
 
@@ -212,6 +212,8 @@ struct B : A {
 
 B b(42L); // now calls B(int)
 ```
+
+Aby uzyskać więcej informacji, zobacz [konstruktory](cpp/constructors-cpp.md#inheriting_constructors).
 
 ### <a name="c17-extended-aggregate-initialization"></a>C ++ 17 Extended inicjowania agregacji
 

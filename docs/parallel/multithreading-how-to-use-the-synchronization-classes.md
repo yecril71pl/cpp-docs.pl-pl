@@ -1,7 +1,7 @@
 ---
-title: 'Wielowątkowość: Jak używać klas synchronizacji | Dokumentacja firmy Microsoft'
+title: 'Wielowątkowość: Jak używać klas synchronizacji MFC | Dokumentacja firmy Microsoft'
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 08/27/2018
 ms.technology:
 - cpp-parallel
 ms.topic: conceptual
@@ -23,14 +23,14 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cec2f873f1fc46ebac2e0f1714c8f46ebc10eac4
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: e36f63f74a0edc1f6cbcf28b85adceed954cce3d
+ms.sourcegitcommit: f7703076b850c717c33d72fb0755fbb2215c5ddc
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42597892"
+ms.lasthandoff: 08/28/2018
+ms.locfileid: "43131265"
 ---
-# <a name="multithreading-how-to-use-the-synchronization-classes"></a>Wielowątkowość: jak używać klas synchronizacji
+# <a name="multithreading-how-to-use-the-mfc-synchronization-classes"></a>Wielowątkowość: Jak używać klas synchronizacji MFC
 Synchronizowanie dostęp do zasobów między wątkami jest to powszechny problem, podczas pisania aplikacji wielowątkowych. Masz co najmniej dwóch wątków jednocześnie dostępu do tych samych danych może prowadzić do niepożądanych i nieprzewidywalnych wyników. Na przykład jeden wątek może być aktualizowanie zawartości struktury, podczas gdy inny wątek odczytuje zawartość tę samą strukturę. Jest nieznany otrzymają wątku odczytywania danych: stare dane nowo zapisanych danych i prawdopodobnie kombinacji obu. Biblioteka MFC zawiera szereg synchronizacji i klasy dostępu synchronizacji, aby pomóc w rozwiązaniu tego problemu. W tym temacie opisano klasy, które są dostępne i jak ich używać do tworzenia klas metodą o bezpiecznych wątkach w typowej aplikacji wielowątkowych.  
   
 Typowa aplikacja wielowątkowa ma klasę, która reprezentuje zasób do współdzielenia pośród wątków. Klasa prawidłowo zaprojektowana, w pełni metodą o bezpiecznych wątkach nie wymaga wywołaniem dowolnej funkcji synchronizacji. Wszystko, czego odbywa się wewnętrznie do klasy, dzięki czemu możesz skoncentrować się na najlepszego wykorzystania tej klasy, nie na temat sposobu może uzyskać uszkodzony. Skuteczną techniką tworzenia klasy pełni wątków jest scalić klasę synchronizacji do klasy zasobów. Scalanie klas synchronizacji w udostępnionej klasie jest dość proste.  
@@ -63,8 +63,8 @@ singleLock.Unlock();
   
 Wady tego podejścia to, że klasa będzie przebiegać wolniej niż do tej samej klasy bez obiekty synchronizacji dodane. Ponadto w przypadku prawdopodobieństwo, że więcej niż jeden wątek może spowodować usunięcie obiektu scalonych podejście może nie zawsze działać. W takiej sytuacji zaleca się zachować oddzielne synchronizacji obiektów.  
   
-Aby uzyskać informacje dotyczące ustalania, która klasa synchronizacji do użycia w różnych sytuacjach, zobacz [wielowątkowość: kiedy używać klas synchronizacji](../parallel/multithreading-when-to-use-the-synchronization-classes.md). Aby uzyskać więcej informacji na temat synchronizacji, zobacz [synchronizacji](http://msdn.microsoft.com/library/windows/desktop/ms686353) w zestawie Windows SDK. Aby uzyskać więcej informacji na temat Obsługa wielowątkowości w MFC, zobacz [wielowątkowość z C++ i MFC](../parallel/multithreading-with-cpp-and-mfc.md).  
+Aby uzyskać informacje dotyczące ustalania, która klasa synchronizacji do użycia w różnych sytuacjach, zobacz [wielowątkowość: kiedy używać klas synchronizacji](multithreading-when-to-use-the-synchronization-classes.md). Aby uzyskać więcej informacji na temat synchronizacji, zobacz [synchronizacji](/windows/desktop/Sync/synchronization) w zestawie Windows SDK. Aby uzyskać więcej informacji na temat Obsługa wielowątkowości w MFC, zobacz [wielowątkowość z C++ i MFC](multithreading-with-cpp-and-mfc.md).  
   
 ## <a name="see-also"></a>Zobacz też  
  
-[Wielowątkowość z C++ i MFC](../parallel/multithreading-with-cpp-and-mfc.md)
+[Wielowątkowość z C++ i MFC](multithreading-with-cpp-and-mfc.md)
