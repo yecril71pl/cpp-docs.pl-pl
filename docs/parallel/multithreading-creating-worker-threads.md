@@ -20,12 +20,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 90e0af6a1b11b114e56e6c1d87cb293ab83dd768
-ms.sourcegitcommit: f7703076b850c717c33d72fb0755fbb2215c5ddc
+ms.openlocfilehash: 1057d8992f6554d4d5fbbfd93b383e2ddd9dab53
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/28/2018
-ms.locfileid: "43131192"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43211640"
 ---
 # <a name="multithreading-creating-worker-threads-in-mfc"></a>Wielowątkowość: Tworzenie wątków roboczych w MFC
 Wątek roboczy jest najczęściej używany do obsługi zadania w tle, które użytkownik nie powinien mieć zaczekać, aby kontynuować korzystanie z aplikacji. Zadania, takie jak ponowne obliczenie i drukowanie w tle są dobrym przykładem wątków roboczych. W tym temacie przedstawiono kroki niezbędne do utworzenia wątku roboczego. Tematy obejmują:  
@@ -46,13 +46,13 @@ Istnieją dwie przeciążone wersje `AfxBeginThread`: jedną, która tworzy tylk
   
 - Parametr do przekazania do funkcji kontroli.  
   
-- (Opcjonalnie) Żądany priorytet wątku. Wartością domyślną jest normalnym priorytecie. Aby uzyskać więcej informacji na temat dostępnych poziomów priorytetu, zobacz [SetThreadPriority](http://msdn.microsoft.com/library/windows/desktop/ms686277) w zestawie Windows SDK.  
+- (Opcjonalnie) Żądany priorytet wątku. Wartością domyślną jest normalnym priorytecie. Aby uzyskać więcej informacji na temat dostępnych poziomów priorytetu, zobacz [SetThreadPriority](/windows/desktop/api/processthreadsapi/nf-processthreadsapi-setthreadpriority) w zestawie Windows SDK.  
   
 - (Opcjonalnie) Żądany rozmiar stosu dla wątku. Wartość domyślna to taki sam jak rozmiar stosu wątku tworzącego.  
   
 - (Opcjonalnie) CREATE_SUSPENDED, jeśli chcesz, aby wątek był utworzony w stanie wstrzymania. Wartość domyślna jest równa 0 lub wątek uruchamia się normalnie.  
   
-- (Opcjonalnie) Atrybuty pożądanych zabezpieczeń. Wartość domyślna to taki sam dostęp jak wątku nadrzędnego. Aby uzyskać więcej informacji dotyczących formatu informacji o zabezpieczeniach, zobacz [SECURITY_ATTRIBUTES](http://msdn.microsoft.com/library/windows/desktop/aa379560) w zestawie Windows SDK.  
+- (Opcjonalnie) Atrybuty pożądanych zabezpieczeń. Wartość domyślna to taki sam dostęp jak wątku nadrzędnego. Aby uzyskać więcej informacji dotyczących formatu informacji o zabezpieczeniach, zobacz [SECURITY_ATTRIBUTES](https://msdn.microsoft.com/library/windows/desktop/aa379560) w zestawie Windows SDK.  
   
 `AfxBeginThread` Tworzy i inicjuje `CWinThread` obiekt dla Ciebie, uruchomia go i zwraca jego adres, więc można odwołać się do niego później. Kontrole są wprowadzane w trakcie trwania procedury upewnij się, że wszystkie obiekty są zdelokowane poprawnie w przypadku dowolnej części tworzenia nie.  
   

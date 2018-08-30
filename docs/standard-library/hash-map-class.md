@@ -98,12 +98,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 713bf95a53a22b098803d08b4a2a4fd9c8a6cf2d
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 08c16cd80828e973e4fff2d1a2c36e211e61f361
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38954938"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43211595"
 ---
 # <a name="hashmap-class"></a>hash_map — Klasa
 
@@ -124,13 +124,17 @@ class hash_map
 
 ### <a name="parameters"></a>Parametry
 
-*Klucz* typ danych klucza ma być przechowywany w hash_map.
+*Key*<br/>
+ Typ danych klucza, który ma być przechowywany w hash_map.
 
-*Typ* typ danych elementu, który ma być przechowywany w hash_map.
+*Typ*<br/>
+ Typ danych elementu, który ma być przechowywany w hash_map.
 
-*Cechy* typu, który obejmuje dwa obiekty funkcyjne, jeden z porównania klasy, które można porównać dwie wartości elementów jako klucze sortowania, aby określić ich względną kolejność i funkcję mieszania, która jest Predykat jednoelementowy mapowania wartości klucza elementów na typy bez znaku liczby całkowite typu `size_t`. Ten argument jest opcjonalny, a hash_compare — <`Key`, mniej <`Key`>> jest wartością domyślną.
+*Cechy*<br/>
+ Typu, który obejmuje dwa obiekty funkcji, jednym z porównania klasy można porównać dwie wartości elementów jako klucze sortowania, aby określić ich względną kolejność i skrótu funkcji, która jest Predykat jednoelementowy, mapowanie wartości klucza elementów do liczb całkowitych bez znaku typu `size_t`. Ten argument jest opcjonalny, a hash_compare — <`Key`, mniej <`Key`>> jest wartością domyślną.
 
-*Allocator* typ reprezentujący przechowywany obiekt alokatora, który hermetyzuje szczegóły dotyczące alokacji i dezalokacji pamięci hash_map. Ten argument jest opcjonalny, a wartość domyślna to alokatora < pary < const `Key`, `Type`>>.
+*Allocator*<br/>
+ Typ reprezentujący przechowywany obiekt alokatora, który hermetyzuje szczegóły dotyczące alokacji i dezalokacji pamięci hash_map. Ten argument jest opcjonalny, a wartość domyślna to alokatora < pary < const `Key`, `Type`>>.
 
 ## <a name="remarks"></a>Uwagi
 
@@ -523,11 +527,11 @@ typedef list<typename Traits::value_type, typename Traits::allocator_type>::cons
 
 Typ `const_iterator` nie może służyć do modyfikowania wartości elementu.
 
-`const_iterator` Zdefiniowane przez punkty hash_map do elementów, które są obiektami [value_type](#value_type), to znaczy typu `pair` *\< ***const Key, typ*** >*, którego pierwszy element członkowski jest kluczem do elementu, jak i drugi, którego element członkowski jest zamapowany podstawy wymiarowej utrzymywane przez element.
+`const_iterator` Zdefiniowane przez punkty hash_map do elementów, które są obiektami [value_type](#value_type), to znaczy typu `pair< const Key, Type >`, którego pierwszy element członkowski jest kluczem do elementu, jak i drugi, którego element członkowski jest zamapowany podstawy wymiarowej utrzymywane przez element.
 
 Próbę `const_iterator` `cIter` wskazuje element hash_map, użyj `->` operatora.
 
-Aby uzyskać dostęp do wartości klucza dla elementu, należy użyć `cIter` **-> najpierw**, która jest równoważna (\* `cIter`) **.first**. Aby uzyskać dostęp do wartości zamapowanego datum dla elementu, należy użyć `cIter` **-> sekundę**, który jest odpowiednikiem (\* `cIter`) **.second**.
+Aby uzyskać dostęp do wartości klucza dla elementu, należy użyć `cIter->first`, który jest odpowiednikiem `(*cIter).first`. Aby uzyskać dostęp do wartości zamapowanego datum dla elementu, należy użyć `cIter->second`, który jest odpowiednikiem `(*cIter).second`.
 
 ### <a name="example"></a>Przykład
 
@@ -644,7 +648,8 @@ size_type count(const Key& key) const;
 
 ### <a name="parameters"></a>Parametry
 
-*klucz* elementy, które mają być dopasowywane z hash_map wartości klucza.
+*Klucz*<br/>
+ Wartość klucza elementy, które mają być dopasowywane z hash_map.
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -1135,7 +1140,8 @@ pair <iterator, iterator> equal_range (const Key& key);
 
 ### <a name="parameters"></a>Parametry
 
-*klucz* wartość klucza argumentu ma być porównywana za pomocą klucza sortowania z hash_map wyszukiwany element.
+*Klucz*<br/>
+ Wartość klucza argumentu ma być porównywana za pomocą klucza sortowania z hash_map wyszukiwany element.
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -1223,13 +1229,17 @@ size_type erase(const key_type& key);
 
 ### <a name="parameters"></a>Parametry
 
-*_Where* pozycję elementu do usunięcia z hash_map.
+*_Where*<br/>
+ Pozycja elementu do usunięcia z hash_map.
 
-*pierwszy* pozycja pierwszego elementu usunięte z hash_map.
+*pierwszy*<br/>
+ Pozycja pierwszego elementu są usuwane z hash_map.
 
-*ostatni* pozycji tuż za ostatnim elementem usunięte z hash_map.
+*ostatni*<br/>
+ Pozycja tuż za ostatnim elementem usunięte z hash_map.
 
-*klucz* elementów do usunięcia z hash_map wartości klucza.
+*Klucz*<br/>
+ Wartość klucza elementów do usunięcia z hash_map.
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -1341,7 +1351,8 @@ const_iterator find(const Key& key) const;
 
 ### <a name="parameters"></a>Parametry
 
-*klucz* wartości klucza, które mają być dopasowywane o klucz sortowania elementu z hash_map wyszukiwany.
+*Klucz*<br/>
+ Wartość klucza, które mają być dopasowywane o klucz sortowania elementu z hash_map wyszukiwany.
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -1537,7 +1548,7 @@ hash_map(
 |-|-|
 |*Al*|Klasa alokatora magazynu ma być używany dla tego obiektu hash_map, wartość domyślna to `Allocator`.|
 |*Comp*|Funkcja porównywania typu const `Traits` porządkowania elementów w hash_map, która domyślnie `hash_compare`.|
-|*Po prawej stronie*|Hash_map, w której jest zbudowany mapy kopią.|
+|*po prawej stronie*|Hash_map, w której jest zbudowany mapy kopią.|
 |*pierwszy*|Pozycja pierwszego elementu w zakresie elementów, które mają zostać skopiowane.|
 |*ostatni*|Pozycja pierwszego elementu poza zakresem elementów, które mają zostać skopiowane.|
 |*IList*|Lista initializer_list|
@@ -1881,7 +1892,8 @@ const_iterator lower_bound(const Key& key) const;
 
 ### <a name="parameters"></a>Parametry
 
-*klucz* wartość klucza argumentu ma być porównywana za pomocą klucza sortowania z hash_map wyszukiwany element.
+*Klucz*<br/>
+ Wartość klucza argumentu ma być porównywana za pomocą klucza sortowania z hash_map wyszukiwany element.
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -2519,7 +2531,8 @@ void swap(hash_map& right);
 
 ### <a name="parameters"></a>Parametry
 
-*prawy* hash_map argument zawierająca elementy, które mają być zamienione z hash_map docelowej.
+*right*<br/>
+ Hash_map — argument, zawierająca elementy, które mają być zamienione z hash_map docelowej.
 
 ### <a name="remarks"></a>Uwagi
 
@@ -2594,7 +2607,8 @@ const_iterator upper_bound(const Key& key) const;
 
 ### <a name="parameters"></a>Parametry
 
-*klucz* wartość klucza argumentu ma być porównywana z wartością klucza sortowania elementu z hash_map wyszukiwany.
+*Klucz*<br/>
+ Wartość klucza argumentu ma być porównywana z wartością klucza sortowania elementu z hash_map wyszukiwany.
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -2737,7 +2751,7 @@ typedef pair<const Key, Type> value_type;
 
 ### <a name="remarks"></a>Uwagi
 
-`value_type` został zadeklarowany jako `pair`  *\< * **const**[key_type](#key_type), [mapped_type](#mapped_type)*> * i nie `pair`  **\<typ_klucza, mapped_type >** , ponieważ nie można zmienić klucze kontenerem za pomocą iteratora stałymi lub odwołania.
+`value_type` został zadeklarowany jako `pair<const key_type, mapped_type>` i nie `pair<key_type, mapped_type>` , ponieważ nie można zmienić klucze kontenerem za pomocą iteratora stałymi lub odwołania.
 
 ### <a name="example"></a>Przykład
 

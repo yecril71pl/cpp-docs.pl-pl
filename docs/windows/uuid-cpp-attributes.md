@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 8d18b323b255c8549ae275d3e6b88471f134c8b4
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 36b438662fb42cdeeb894906753a38168208f5ae
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42606783"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43218822"
 ---
 # <a name="uuid-c-attributes"></a>uuid (Atrybuty C++)
 
@@ -74,4 +74,4 @@ Aby uzyskać więcej informacji na temat konteksty atrybutu zobacz [konteksty at
 [Atrybuty interfejsu](../windows/interface-attributes.md)  
 [Atrybuty klasy](../windows/class-attributes.md)  
 [Atrybuty Typedef, Enum, Union oraz Struct](../windows/typedef-enum-union-and-struct-attributes.md)  
-[uuid](http://msdn.microsoft.com/library/windows/desktop/aa367302)  
+[uuid](/windows/desktop/Midl/uuid)  

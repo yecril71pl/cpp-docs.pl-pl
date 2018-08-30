@@ -24,12 +24,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0519373a46e1c25feda7a3130b420c565a96eece
-ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
+ms.openlocfilehash: c52518bc2588188ea2990ddb3be1f7d79dd461d8
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37339546"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43211900"
 ---
 # <a name="chtmleditview-class"></a>Klasa CHtmlEditView
 Oferuje funkcje platformy edycji WebBrowser w kontekście architektury dokumentu/widoku MFC.  
@@ -110,7 +110,7 @@ virtual BOOL Create(
  Określa atrybuty stylu okna. WS_VISIBLE oraz Windows WS_CHILD style są domyślnie.  
   
  *Rect*  
- Odwołanie do [Prostokąt](http://msdn.microsoft.com/library/windows/desktop/dd162897) struktury, określając rozmiar i położenie okna. *RectDefault* zezwala na wartość Windows określić rozmiar i położenie w nowym oknie.  
+ Odwołanie do [Prostokąt](https://msdn.microsoft.com/library/windows/desktop/dd162897) struktury, określając rozmiar i położenie okna. *RectDefault* zezwala na wartość Windows określić rozmiar i położenie w nowym oknie.  
   
  *pParentWnd*  
  Wskaźnik do okno nadrzędne kontrolki.  

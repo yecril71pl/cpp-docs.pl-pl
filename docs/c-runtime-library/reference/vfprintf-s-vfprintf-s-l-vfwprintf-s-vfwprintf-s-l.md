@@ -44,16 +44,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5bda1dce264597bfe7372b1cb0293dffccad4cdc
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 8f1c9d6bde39fcd763416e4c8dd50f0b756cb6b4
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32415757"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43220298"
 ---
 # <a name="vfprintfs-vfprintfsl-vfwprintfs-vfwprintfsl"></a>vfprintf_s, _vfprintf_s_l, vfwprintf_s, _vfwprintf_s_l
 
-Zapisywanie sformatowanego danych wyjściowych przy użyciu wskaźnika do listy argumentów. Są to wersje [vfprintf —, _vfprintf_l —, vfwprintf —, _vfwprintf_l —](vfprintf-vfprintf-l-vfwprintf-vfwprintf-l.md) ulepszeń zabezpieczeń zgodnie z opisem w [funkcje zabezpieczeń w CRT](../../c-runtime-library/security-features-in-the-crt.md).
+Napisz sformatowane wyniki za pomocą wskaźnika do listy argumentów. Są to wersje [vfprintf —, _vfprintf_l —, vfwprintf —, _vfwprintf_l —](vfprintf-vfprintf-l-vfwprintf-vfwprintf-l.md) ze wzmocnieniem zabezpieczeń, zgodnie z opisem w [funkcje zabezpieczeń w CRT](../../c-runtime-library/security-features-in-the-crt.md).
 
 ## <a name="syntax"></a>Składnia
 
@@ -84,11 +84,11 @@ int _vfwprintf_s_l(
 
 ### <a name="parameters"></a>Parametry
 
-*Strumień*<br/>
+*Stream*<br/>
 Wskaźnik do **pliku** struktury.
 
 *Format*<br/>
-Definicja formatu.
+Specyfikacja formatu.
 
 *argptr*<br/>
 Wskaźnik do listy argumentów.
@@ -96,30 +96,30 @@ Wskaźnik do listy argumentów.
 *Ustawienia regionalne*<br/>
 Ustawienia regionalne do użycia.
 
-Aby uzyskać więcej informacji, zobacz [specyfikacje formatu](../../c-runtime-library/format-specification-syntax-printf-and-wprintf-functions.md).
+Aby uzyskać więcej informacji, zobacz [specyfikacji formatu](../../c-runtime-library/format-specification-syntax-printf-and-wprintf-functions.md).
 
 ## <a name="return-value"></a>Wartość zwracana
 
-**vfprintf_s —** i **vfwprintf_s —** zwraca liczbę znaków zapisane, nie włączając znak końcowy null lub wartość ujemną, jeśli wystąpi błąd wyjścia. Jeśli dowolny *strumienia* lub *format* jest wskaźnika o wartości null, lub jeśli ciąg formatu zawiera nieprawidłowe znaki formatowania, program obsługi nieprawidłowych parametrów zostanie wywołany, zgodnie z opisem w [parametru Sprawdzanie poprawności](../../c-runtime-library/parameter-validation.md). Zwróć -1, jeśli może kontynuować wykonywania, funkcje i ustaw **errno** do **einval —**.
+**vfprintf_s —** i **vfwprintf_s —** zwracają liczbę znaków napisanych, nie wliczając kończącego znaku null lub wartość ujemną, jeśli wystąpi błąd danych wyjściowych. Jeśli *strumienia* lub *format* jest wskaźnikiem typu null lub jeżeli ciąg formatu zawiera nieprawidłowe znaki formatowania, procedura obsługi nieprawidłowego parametru zostanie wywołana, zgodnie z opisem w [parametru Sprawdzanie poprawności](../../c-runtime-library/parameter-validation.md). Jeśli wykonanie może być kontynuowane, te funkcje zwracają wartość -1 i ustaw **errno** do **EINVAL**.
 
-Aby uzyskać informacje na temat tych i innych kodów błędów, zobacz [_doserrno —, errno, _sys_errlist — i _sys_nerr —](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
+Aby uzyskać informacje na temat tych i innych kodów błędu, zobacz [_doserrno, errno, _sys_errlist i _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
 ## <a name="remarks"></a>Uwagi
 
-Każda z tych funkcji przyjmuje wskaźnik do listy argumentów, a następnie formatuje i zapisuje określone dane do *strumienia*.
+Każda z tych funkcji pobiera wskaźnik do listy argumentów, a następnie formatuje i zapisuje dostarczone dane do *strumienia*.
 
-Funkcje te różnią się od wersji niezabezpieczonego tylko w tej wersji bezpiecznego upewnij się, że *format* ciąg zawiera nieprawidłowy formatowanie znaków.
+Funkcje te różnią się od wersji niezabezpieczonej, tylko dlatego, że bezpieczne wersje sprawdzają, że *format* ciąg zawiera prawidłowe znaki formatowania.
 
-**vfwprintf_s —** jest wersja znaków dwubajtowych **vfprintf_s —**; dwie funkcje zachowują się tak samo, jakby strumień jest otwarty w trybie ANSI. **vfprintf_s —** aktualnie nie obsługuje dane wyjściowe do strumienia UNICODE.
+**vfwprintf_s —** jest wersją znaków dwubajtowych **vfprintf_s —**; dwie funkcje zachowują się identycznie, jeżeli strumień jest otwarty w trybie ANSI. **vfprintf_s —** aktualnie nie obsługuje danych wyjściowych w strumieniu UNICODE.
 
-Wersje tych funkcji z **_l** sufiks są identyczne, z wyjątkiem tego, aby używały parametr ustawień regionalnych przekazano zamiast bieżącego ustawienia regionalne wątku.
+Wersje tych funkcji **_l** sufiksem są identyczne, z tą różnicą, że używają parametru ustawień regionalnych przekazanych zamiast bieżących ustawień regionalnych wątku.
 
 > [!IMPORTANT]
-> Upewnij się, że *format* nie jest ciągiem zdefiniowane przez użytkownika. Aby uzyskać więcej informacji, zobacz [unikanie Overruns buforu](http://msdn.microsoft.com/library/windows/desktop/ms717795).
+> Upewnij się, że *format* nie jest ciągiem zdefiniowanym przez użytkownika. Aby uzyskać więcej informacji, zobacz [unikanie przepełnień bufora](/windows/desktop/SecBP/avoiding-buffer-overruns).
 
 ### <a name="generic-text-routine-mappings"></a>Mapowania procedur zwykłego tekstu
 
-|Procedura TCHAR.H|_Unicode — & _MBCS nie zdefiniowany|_MBCS zdefiniowano|_UNICODE zdefiniowano|
+|Procedura TCHAR.H|_UNICODE & _MBCS nie zdefiniowano|_MBCS zdefiniowano|_UNICODE zdefiniowano|
 |---------------------|------------------------------------|--------------------|-----------------------|
 |**_vftprintf_s —**|**vfprintf_s**|**vfprintf_s**|**vfwprintf_s**|
 |**_vftprintf_s_l —**|**_vfprintf_s_l**|**_vfprintf_s_l**|**_vfwprintf_s_l**|
@@ -131,13 +131,13 @@ Wersje tych funkcji z **_l** sufiks są identyczne, z wyjątkiem tego, aby używ
 |**vfprintf_s —**, **_vfprintf_s_l —**|\<stdio.h > i \<stdarg.h >|\<varargs.h>*|
 |**vfwprintf_s —**, **_vfwprintf_s_l —**|\<stdio.h > lub \<wchar.h >, a \<stdarg.h >|\<varargs.h>*|
 
-\* Wymagany w przypadku zgodności UNIX V.
+\* Wymagane dla zgodności systemu UNIX V.
 
 Aby uzyskać dodatkowe informacje o zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md).
 
 ## <a name="see-also"></a>Zobacz także
 
-[We/Wy strumienia](../../c-runtime-library/stream-i-o.md)<br/>
+[Stream operacji We/Wy](../../c-runtime-library/stream-i-o.md)<br/>
 [vprintf, funkcje](../../c-runtime-library/vprintf-functions.md)<br/>
 [fprintf, _fprintf_l, fwprintf, _fwprintf_l](fprintf-fprintf-l-fwprintf-fwprintf-l.md)<br/>
 [printf, _printf_l, wprintf, _wprintf_l](printf-printf-l-wprintf-wprintf-l.md)<br/>

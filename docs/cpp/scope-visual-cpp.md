@@ -20,12 +20,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4c6194addc8ae950cf5cdcb8b7946ab4f5f6c042
-ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
+ms.openlocfilehash: 1f99f79e0e5f4f53356ed96528e310465b3ed2f0
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39460713"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43220093"
 ---
 # <a name="scope-c"></a>Zakres (C++)
 
@@ -41,7 +41,7 @@ Istnieje sześć rodzaje zakresów:
 
 - **Zakres lokalny** nazwy zadeklarowane wewnątrz funkcji lub lambda, łącznie z nazwami parametr mają zakres lokalny. Są one często nazywane "lokalne". Tylko są one widoczne z ich punktu deklarację na końcu treści funkcji lub lambda. Zakres lokalny jest rodzajem zakresu bloku, co zostało omówione w dalszej części tego artykułu.
 
-- **Zakres klasy** nazwy składowych klasy mają zakres klasy, która rozszerza w definicji klasy, niezależnie od tego, punkt deklaracji. Ułatwienia dostępu członków klasy jest kontrolowane przez kolejne **publicznych**, **prywatnej**, i **chronione** słów kluczowych. Publiczne lub chronione elementy członkowskie jest możliwy tylko za pomocą operatory wyboru elementu członkowskiego (**.** lub **->**) lub operatory wskaźników do elementów członkowskich (**.\***  lub **-> \***).
+- **Zakres klasy** nazwy składowych klasy mają zakres klasy, która rozszerza w definicji klasy, niezależnie od tego, punkt deklaracji. Ułatwienia dostępu członków klasy jest kontrolowane przez kolejne **publicznych**, **prywatnej**, i **chronione** słów kluczowych. Publiczne lub chronione elementy członkowskie jest możliwy tylko za pomocą operatory wyboru elementu członkowskiego (**.** lub **->**) lub operatory wskaźników do elementów członkowskich (**.** <strong>\*</strong> lub **->** <strong>\*</strong>).
 
 - **Oświadczenie zakresu** nazwy zadeklarowane w **dla**, **Jeśli**, **podczas**, lub **Przełącz** poufności informacji są widoczne do czasu zakończenia blok instrukcji.
 
@@ -114,7 +114,7 @@ class Account *Checking = new class Account( Account );
 > [!NOTE]
 > Ponowne użycie nazwy identyfikatora, jak pokazano w poniższym przykładzie jest uważany za słabe stylu programowania.
 
- Aby uzyskać więcej informacji o wskaźnikach, zobacz [typów pochodnych](http://msdn.microsoft.com/aa14183c-02fe-4d81-95fe-beddb0c01c7c). Aby uzyskać informacje na temat deklaracji i inicjowania obiektów klas, zobacz [klas, struktur i Unii](../cpp/classes-and-structs-cpp.md). Informacji o używaniu **nowe** i **Usuń** wolne i sklep z operatorów, zobacz [nowych i delete — operatory](new-and-delete-operators.md).
+ Aby uzyskać więcej informacji o wskaźnikach, zobacz [typów pochodnych](https://msdn.microsoft.com/aa14183c-02fe-4d81-95fe-beddb0c01c7c). Aby uzyskać informacje na temat deklaracji i inicjowania obiektów klas, zobacz [klas, struktur i Unii](../cpp/classes-and-structs-cpp.md). Informacji o używaniu **nowe** i **Usuń** wolne i sklep z operatorów, zobacz [nowych i delete — operatory](new-and-delete-operators.md).
 
 ## <a name="hiding-names-with-global-scope"></a>Ukrywanie nazw o zakresie globalnym
 

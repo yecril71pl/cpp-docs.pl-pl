@@ -29,12 +29,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1e97ce9daf097e85dfc9b7b1b74bfcbf6a149fdd
-ms.sourcegitcommit: 76fd30ff3e0352e2206460503b61f45897e60e4f
+ms.openlocfilehash: 38ceffd8a5f01cdc97ee162cc92fce319f771dbe
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/13/2018
-ms.locfileid: "39027235"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43221575"
 ---
 # <a name="errorcode-class"></a>error_code — Klasa
 
@@ -172,7 +172,7 @@ error_code(_Enum _Errcode,
 
 Pierwszy Konstruktor przechowuje błąd kodu wartość zero i wskaźnik [generic_category](../standard-library/system-error-functions.md#generic_category).
 
-Drugi Konstruktor magazynów *val* jako wartość kodu błędu i wskaźnik [error_category](http://msdn.microsoft.com/6fe57a15-63a1-4e79-8af4-6738e43e19c8).
+Drugi Konstruktor magazynów *val* jako wartość kodu błędu i wskaźnik [error_category](https://msdn.microsoft.com/6fe57a15-63a1-4e79-8af4-6738e43e19c8).
 
 Trzeci Konstruktor magazynów `(value_type)_Errcode` jako wartość kodu błędu i wskaźnik [generic_category](../standard-library/system-error-functions.md#generic_category).
 
@@ -238,7 +238,7 @@ Operator elementu członkowskiego zwraca `!(*this == right)`.
 
 ## <a name="op_lt"></a>  error_code::operator&lt;
 
-Sprawdza, czy [error_code](http://msdn.microsoft.com/09c6ef90-b6f8-430a-b584-e168716c7e31) obiekt jest mniejszy od `error_code` obiekt przekazany do porównania.
+Sprawdza, czy [error_code](https://msdn.microsoft.com/09c6ef90-b6f8-430a-b584-e168716c7e31) obiekt jest mniejszy od `error_code` obiekt przekazany do porównania.
 
 ```cpp
 bool operator<(const error_code& right) const;
@@ -260,7 +260,7 @@ Operator elementu członkowskiego zwraca `category() < right.category() || categ
 
 ## <a name="op_eq"></a>  error_code::operator =
 
-Przypisuje nową wartość wyliczenia do [error_code](http://msdn.microsoft.com/09c6ef90-b6f8-430a-b584-e168716c7e31) obiektu.
+Przypisuje nową wartość wyliczenia do [error_code](https://msdn.microsoft.com/09c6ef90-b6f8-430a-b584-e168716c7e31) obiektu.
 
 ```cpp
 template <class _Enum>

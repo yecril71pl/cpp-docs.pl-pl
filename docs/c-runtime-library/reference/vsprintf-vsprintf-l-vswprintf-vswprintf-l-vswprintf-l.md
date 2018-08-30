@@ -55,15 +55,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3c1c4c22bb309516c751af66845acdb69b090797
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: baa34ae887e12a59785bafd0551fe383fac5f7b1
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32417317"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43220453"
 ---
 # <a name="vsprintf-vsprintfl-vswprintf-vswprintfl-vswprintfl"></a>vsprintf, _vsprintf_l, vswprintf, _vswprintf_l, __vswprintf_l
-Zapisywanie sformatowanego danych wyjściowych przy użyciu wskaźnika do listy argumentów. Bezpieczniejsza wersje te funkcje są dostępne; zobacz [vsprintf_s —, _vsprintf_s_l —, vswprintf_s —, _vswprintf_s_l —](vsprintf-s-vsprintf-s-l-vswprintf-s-vswprintf-s-l.md).
+Napisz sformatowane wyniki za pomocą wskaźnika do listy argumentów. Bardziej bezpieczne wersje tych funkcji są dostępne; zobacz [vsprintf_s —, _vsprintf_s_l —, vswprintf_s —, _vswprintf_s_l —](vsprintf-s-vsprintf-s-l-vswprintf-s-vswprintf-s-l.md).
 
 ## <a name="syntax"></a>Składnia
 
@@ -129,13 +129,13 @@ int _vswprintf_l(
 ### <a name="parameters"></a>Parametry
 
 *buffer*<br/>
-Lokalizacja magazynu dla danych wyjściowych.
+Lokalizacja magazynowa danych wyjściowych.
 
 *Liczba*<br/>
-Maksymalna liczba znaków do przechowywania w wersjach ciągu typu wide tej funkcji.
+Maksymalna liczba znaków do zapisania w wersjach szerokich tej funkcji.
 
 *Format*<br/>
-Definicja formatu.
+Specyfikacja formatu.
 
 *argptr*<br/>
 Wskaźnik do listy argumentów.
@@ -145,26 +145,26 @@ Ustawienia regionalne do użycia.
 
 ## <a name="return-value"></a>Wartość zwracana
 
-**vsprintf —** i **vswprintf —** zwraca liczbę znaków zapisane, nie włączając znak końcowy null lub wartość ujemną, jeśli wystąpi błąd wyjścia. Jeśli *buforu* lub *format* jest wskaźnika o wartości null, te funkcje Wywołaj program obsługi nieprawidłowych parametrów, zgodnie z opisem w [sprawdzanie poprawności parametru](../../c-runtime-library/parameter-validation.md). Zwróć -1, jeśli wykonanie może kontynuować, następujące funkcje i ustaw **errno** do **einval —**.
+**vsprintf —** i **vswprintf —** zwracają liczbę znaków napisanych, nie wliczając kończącego znaku null lub wartość ujemną, jeśli wystąpi błąd danych wyjściowych. Jeśli *buforu* lub *format* jest pustym wskaźnikiem, funkcje te wywołują procedurę obsługi nieprawidłowego parametru, zgodnie z opisem w [Parameter Validation](../../c-runtime-library/parameter-validation.md). Jeśli wykonanie może być kontynuowane, te funkcje zwracają wartość -1 i ustaw **errno** do **EINVAL**.
 
-Aby uzyskać informacje na temat tych i innych kodów błędów, zobacz [_doserrno —, errno, _sys_errlist — i _sys_nerr —](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
+Aby uzyskać informacje na temat tych i innych kodów błędu, zobacz [_doserrno, errno, _sys_errlist i _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
 ## <a name="remarks"></a>Uwagi
 
-Każda z tych funkcji przyjmuje wskaźnik do listy argumentów i sformatowanie i zapisuje podane dane pamięci wskazywanej przez *buforu*.
+Każda z tych funkcji pobiera wskaźnik do listy argumentów, a następnie formatuje i zapisuje dostarczone dane do pamięci wskazywany przez *buforu*.
 
-Wersje tych funkcji z **_l** sufiks są identyczne, z wyjątkiem tego, aby używały parametr ustawień regionalnych przekazano zamiast bieżącego ustawienia regionalne wątku.
+Wersje tych funkcji **_l** sufiksem są identyczne, z tą różnicą, że używają parametru ustawień regionalnych przekazanych zamiast bieżących ustawień regionalnych wątku.
 
 > [!IMPORTANT]
-> Przy użyciu **vsprintf —**, można ograniczyć liczbę znaków napisano, co oznacza, że kodu za pomocą tej funkcji jest podatny na przepełnienia buforu. Użyj [_vsnprintf —](vsnprintf-vsnprintf-vsnprintf-l-vsnwprintf-vsnwprintf-l.md) , lub zadzwoń [_vscprintf —](vscprintf-vscprintf-l-vscwprintf-vscwprintf-l.md) Aby określić rozmiar, jaki jest potrzebny buforu. Ponadto upewnij się, że *format* nie jest ciągiem zdefiniowane przez użytkownika. Aby uzyskać więcej informacji, zobacz [unikanie Overruns buforu](http://msdn.microsoft.com/library/windows/desktop/ms717795).
+> Za pomocą **vsprintf —**, istnieje żaden sposób, aby ograniczyć liczbę znaków, które napisano, co oznacza, że kod przy użyciu tej funkcji jest podatny na przepełnienia buforu. Użyj [_vsnprintf —](vsnprintf-vsnprintf-vsnprintf-l-vsnwprintf-vsnwprintf-l.md) zamiast tego, lub zadzwoń [_vscprintf —](vscprintf-vscprintf-l-vscwprintf-vscwprintf-l.md) Aby określić wielkość bufora jest wymagana. Ponadto upewnij się, że *format* nie jest ciągiem zdefiniowanym przez użytkownika. Aby uzyskać więcej informacji, zobacz [unikanie przepełnień bufora](/windows/desktop/SecBP/avoiding-buffer-overruns).
 
-**vswprintf —** zgodne ze standardem C ISO, co wymaga drugiego parametru, *liczba*, typu **size_t**. Aby wymusić starego niestandardowe zachowanie, należy zdefiniować **_CRT_NON_CONFORMING_SWPRINTFS**. Poprzednie działanie nie może być w przyszłych wersjach, więc należy zmienić kod do użycia nowego zachowania zgodność.
+**vswprintf —** jest zgodny ze standardem C ISO, co wymaga drugiego parametru, *liczba*, typu **size_t**. Aby wymusić stare niestandardowe zachowanie, zdefiniuj **_CRT_NON_CONFORMING_SWPRINTFS**. Stare zachowanie może nie być w przyszłej wersji, więc kod powinien zostać zmieniony tak, aby użyć nowe zachowanie zgodne z normą.
 
-W języku C++ te funkcje mają przeciążenia szablonu, które wywołują odpowiedników nowsza, bezpieczne tych funkcji. Aby uzyskać więcej informacji, zobacz [Secure szablonu Overloads](../../c-runtime-library/secure-template-overloads.md).
+W języku C++ funkcje te mają przeciążenia szablonu, które wywołują nowsze, bezpieczne odpowiedniki tych funkcji. Aby uzyskać więcej informacji, zobacz [Secure przeciążenia szablonu](../../c-runtime-library/secure-template-overloads.md).
 
 ### <a name="generic-text-routine-mappings"></a>Mapowania procedur zwykłego tekstu
 
-|Procedura TCHAR.H|_Unicode — & _MBCS nie zdefiniowany|_MBCS zdefiniowano|_UNICODE zdefiniowano|
+|Procedura TCHAR.H|_UNICODE & _MBCS nie zdefiniowano|_MBCS zdefiniowano|_UNICODE zdefiniowano|
 |---------------------|------------------------------------|--------------------|-----------------------|
 |**_vstprintf —**|**vsprintf**|**vsprintf**|**vswprintf**|
 |**_vstprintf_l —**|**_vsprintf_l**|**_vsprintf_l**|**_vswprintf_l**|
@@ -176,7 +176,7 @@ W języku C++ te funkcje mają przeciążenia szablonu, które wywołują odpowi
 |**vsprintf —**, **_vsprintf_l —**|\<stdio.h > i \<stdarg.h >|\<varargs.h>*|
 |**vswprintf —**, **_vswprintf_l —**|\<stdio.h > lub \<wchar.h >, a \<stdarg.h >|\<varargs.h>*|
 
-\* Wymagany w przypadku zgodności UNIX V.
+\* Wymagane dla zgodności systemu UNIX V.
 
 Aby uzyskać dodatkowe informacje o zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md).
 
@@ -228,7 +228,7 @@ This is a string
 
 ## <a name="see-also"></a>Zobacz także
 
-[We/Wy strumienia](../../c-runtime-library/stream-i-o.md)<br/>
+[Stream operacji We/Wy](../../c-runtime-library/stream-i-o.md)<br/>
 [vprintf, funkcje](../../c-runtime-library/vprintf-functions.md)<br/>
 [Składnia specyfikacji formatu: funkcje printf i wprintf](../../c-runtime-library/format-specification-syntax-printf-and-wprintf-functions.md)<br/>
 [fprintf, _fprintf_l, fwprintf, _fwprintf_l](fprintf-fprintf-l-fwprintf-fwprintf-l.md)<br/>

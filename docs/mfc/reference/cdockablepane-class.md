@@ -142,12 +142,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a2ce93a17dd2666469b8e6d56e1a106d508855f7
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: 4b30aa51f284d216332225664d07d7692bd042a1
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42465351"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43223068"
 ---
 # <a name="cdockablepane-class"></a>Klasa CDockablePane
 Implementuje okienko, w którym może być zadokowane w witrynie stacji dokującej lub włączone do okienka z zakładkami.  
@@ -213,7 +213,7 @@ class CDockablePane : public CPane
 |[CDockablePane::IsTabLocationBottom](#istablocationbottom)|Określa, czy karty znajdują się u góry lub u dołu okienka.|  
 |[CDockablePane::IsTracked](#istracked)|Określa, czy okienko przeciągania przez użytkownika.|  
 |[CDockablePane::IsVisible](#isvisible)|Określa, czy bieżące okienko jest widoczne.|  
-|[CDockablePane::LoadState](http://msdn.microsoft.com/96110136-4f46-4764-8a76-3b4abaf77917)|Używane wewnętrznie.|  
+|[CDockablePane::LoadState](https://msdn.microsoft.com/96110136-4f46-4764-8a76-3b4abaf77917)|Używane wewnętrznie.|  
 |[CDockablePane::OnAfterChangeParent](#onafterchangeparent)|Wywoływane przez platformę, gdy zmieniono element nadrzędny w okienku. (Przesłania [CPane::OnAfterChangeParent](../../mfc/reference/cpane-class.md#onafterchangeparent).)|  
 |[CDockablePane::OnAfterDockFromMiniFrame](#onafterdockfromminiframe)|Wywoływane przez platformę, gdy zmiennoprzecinkowy pasek dokowania dokowane w oknie ramowym.|  
 |[CDockablePane::OnBeforeChangeParent](#onbeforechangeparent)|Wywoływane przez platformę, gdy element nadrzędny w okienku zostanie zmienione. (Przesłania [CPane::OnBeforeChangeParent](../../mfc/reference/cpane-class.md#onbeforechangeparent).)|  

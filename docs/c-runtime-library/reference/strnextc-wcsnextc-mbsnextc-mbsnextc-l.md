@@ -54,19 +54,19 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f759ce9a4617ab0ca8e97ef308508d836b53b742
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 4ede89a5290bca14c39aa16c68071edefd0ebd08
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32414249"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43222432"
 ---
 # <a name="strnextc-wcsnextc-mbsnextc-mbsnextcl"></a>_strnextc, _wcsnextc, _mbsnextc, _mbsnextc_l
 
 Znajduje następny znak w ciągu.
 
 > [!IMPORTANT]
-> **_mbsnextc** i **_mbsnextc_l** nie można używać w aplikacjach, które są wykonywane w środowisku wykonawczym systemu Windows. Aby uzyskać więcej informacji, zobacz [funkcje CRT, nie są obsługiwane w aplikacjach platformy uniwersalnej systemu Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
+> **_mbsnextc** i **_mbsnextc_l** nie można używać w aplikacjach korzystających ze środowiska wykonawczego Windows. Aby uzyskać więcej informacji, zobacz [funkcje CRT nieobsługiwane w aplikacjach platformy uniwersalnej Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
 
 ## <a name="syntax"></a>Składnia
 
@@ -90,22 +90,22 @@ unsigned int _mbsnextc_l(
 ### <a name="parameters"></a>Parametry
 
 *str*<br/>
-Ciąg źródła.
+Ciąg źródłowy.
 
 *Ustawienia regionalne*<br/>
 Ustawienia regionalne do użycia.
 
 ## <a name="return-value"></a>Wartość zwracana
 
-Każda z tych funkcji zwraca wartość liczby całkowitej następny znak w *str*.
+Każda z tych funkcji zwraca wartość całkowitą następnego znaku w *str*.
 
 ## <a name="remarks"></a>Uwagi
 
-**_Mbsnextc** funkcja zwraca wartość liczby całkowitej dla następnego znaków wielobajtowych w *str*, bez przesuwania wskaźnika ciągu. **_mbsnextc** rozpoznaje wielobajtowych sekwencji znaków zgodnie z [strony kodowe wielobajtowe](../../c-runtime-library/code-pages.md) obecnie w użyciu.
+**_Mbsnextc** funkcja zwraca wartość całkowitą następnego znaku wielobajtowego w *str*, bez przesuwania wskaźnika ciągu. **_mbsnextc** rozpoznaje sekwencje znaków wielobajtowych według [wielobajtowa strona kodowa](../../c-runtime-library/code-pages.md) aktualnie w użyciu.
 
-Jeśli *str* jest **NULL**, program obsługi nieprawidłowych parametrów zostanie wywołany, zgodnie z opisem w [sprawdzanie poprawności parametru](../../c-runtime-library/parameter-validation.md). Jeśli jest dozwolone wykonywanie, aby kontynuować, **errno** ustawiono **einval —** i funkcja zwraca wartość 0.
+Jeśli *str* jest **NULL**, procedura obsługi nieprawidłowego parametru zostanie wywołana, zgodnie z opisem w [Parameter Validation](../../c-runtime-library/parameter-validation.md). Jeśli wykonanie może być kontynuowane, **errno** ustawiono **EINVAL** a funkcja zwraca 0.
 
-**Uwaga dotycząca zabezpieczeń** ten interfejs API ponosi potencjalne zagrożenie wynikające z problem przepełnienie buforu. Przepełnienie buforu problemy używanej metody ataku systemu, co powoduje nieuzasadnione podniesienie uprawnień. Aby uzyskać więcej informacji, zobacz [unikanie Overruns buforu](http://msdn.microsoft.com/library/windows/desktop/ms717795).
+**Uwaga dotycząca zabezpieczeń** ten interfejs API wiąże potencjalnym zagrożeniem spowodowanym ulepszonym problem przepełnienia buforu. Problemy z przepełnieniem buforu są częstą metodą ataku systemu, co nieuzasadnione podniesienie poziomu uprawnień. Aby uzyskać więcej informacji, zobacz [unikanie przepełnień bufora](/windows/desktop/SecBP/avoiding-buffer-overruns).
 
 ### <a name="generic-text-routine-mappings"></a>Mapowania procedur zwykłego tekstu
 
@@ -113,9 +113,9 @@ Jeśli *str* jest **NULL**, program obsługi nieprawidłowych parametrów zostan
 |---------------------|--------------------------------------|--------------------|-----------------------|
 |**_tcsnextc**|**_strnextc**|**_mbsnextc**|**_wcsnextc**|
 
-**_strnextc** i **_wcsnextc** ciąg pojedynczych bajtów znaków i wersje ciąg znaków dwubajtowych **_mbsnextc**. **_wcsnextc** zwraca wartość liczby całkowitej dalej znaków dwubajtowych w *str*; **_strnextc** zwraca wartość liczby całkowitej następny znak jednobajtowe w *str*. **_strnextc** i **_wcsnextc** są dostępne tylko dla tego mapowania i nie powinna być używana w inny sposób. Aby uzyskać więcej informacji, zobacz [przy użyciu mapowania zwykłego tekstu](../../c-runtime-library/using-generic-text-mappings.md) i [mapowania zwykłego tekstu](../../c-runtime-library/generic-text-mappings.md).
+**_strnextc** i **_wcsnextc** są wersjami ciągów znaków dwubajtowych i pojedynczych bajtów znaków ciągu **_mbsnextc**. **_wcsnextc** zwraca wartość całkowitą następnego znaku dwubajtowego w *str*; **_strnextc** zwraca wartość całkowitą następnego znaku jednobajtowego w *str*. **_strnextc** i **_wcsnextc** są dostarczane tylko dla tego mapowania i nie powinny być używane w inny sposób. Aby uzyskać więcej informacji, zobacz [przy użyciu mapowania typ ogólny-tekst](../../c-runtime-library/using-generic-text-mappings.md) i [mapowania typ ogólny-tekst](../../c-runtime-library/generic-text-mappings.md).
 
-**_mbsnextc_l** jest identyczny z tą różnicą, że zamiast przekazany parametr ustawień regionalnych. Aby uzyskać więcej informacji, zobacz [ustawień regionalnych](../../c-runtime-library/locale.md).
+**_mbsnextc_l** jest identyczna, z tą różnicą, że używa parametru ustawień regionalnych przekazanych w zamian. Aby uzyskać więcej informacji, zobacz [ustawień regionalnych](../../c-runtime-library/locale.md).
 
 ## <a name="requirements"></a>Wymagania
 
@@ -126,7 +126,7 @@ Jeśli *str* jest **NULL**, program obsługi nieprawidłowych parametrów zostan
 |**_strnextc**|\<tchar.h >|
 |**_wcsnextc**|\<tchar.h >|
 
-Aby uzyskać więcej informacji o zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md).
+Aby uzyskać więcej informacji na temat zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md).
 
 ## <a name="see-also"></a>Zobacz także
 

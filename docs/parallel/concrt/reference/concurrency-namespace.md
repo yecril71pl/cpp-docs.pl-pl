@@ -30,12 +30,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2bf60ecf57a23de52575e3e2563c07e4f574194a
-ms.sourcegitcommit: e9ce38decc9f986edab5543de3464b11ebccb123
+ms.openlocfilehash: 324acb33998246933b0c426357368247c6689c47
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/13/2018
-ms.locfileid: "42466232"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43211320"
 ---
 # <a name="concurrency-namespace"></a>concurrency — Przestrzeń nazwy
 `Concurrency` Przestrzeń nazw zawiera klasy i funkcje, które zapewniają dostęp do środowiska wykonawczego Concurrency, platformy programowania współbieżnego dla C++. Aby uzyskać więcej informacji, zobacz [współbieżność środowiska wykonawczego](../../../parallel/concrt/concurrency-runtime.md).  
@@ -52,7 +52,7 @@ namespace concurrency;
   
 |Nazwa|Opis|  
 |----------|-----------------|  
-|[CONCURRENCY::Extensibility Namespace](http://msdn.microsoft.com/en-us/16a86ff2-128e-4edf-89e4-38aac79c81f9)||  
+|[CONCURRENCY::Extensibility Namespace](https://msdn.microsoft.com/16a86ff2-128e-4edf-89e4-38aac79c81f9)||  
   
 ### <a name="typedefs"></a>Typedefs  
   
@@ -135,7 +135,7 @@ namespace concurrency;
 |[structured_task_group, klasa](structured-task-group-class.md)|`structured_task_group` Klasa reprezentuje uporządkowany zbiór równoległą pracę. Można kolejkować pojedynczych zadań równoległych `structured_task_group` przy użyciu `task_handle` obiekty i zaczekaj na ich zakończenie lub anulować grupę zadań zanim została zakończona, wykonywania, co spowoduje przerwanie wszystkich zadań, które nie zostały rozpoczęte wykonywanie.|  
 |[target_block, klasa](target-block-class.md)|`target_block` Klasa jest abstrakcyjna klasa bazowa, zapewniająca łącze podstawowe funkcje zarządzania i tylko sprawdzanie błędów dla elementu docelowego blokuje.|  
 |[task, klasa (środowisko uruchomieniowe współbieżności)](task-class.md)|Biblioteka równoległych wzorców (PPL) `task` klasy. A `task` obiekt reprezentuje prac, które mogą być wykonywane asynchronicznie, a równocześnie z innymi zadaniami i w środowisku uruchomieniowym współbieżności: pracy równoległej produkowane przez algorytmy równoległe. Daje wynik o typie `_ResultType` po pomyślnym ukończeniu. Zadania typu `task<void>` nie generują żadnego wyniku. Zadanie można wstrzymywać i anulować niezależnie od innych zadań. Może również składać z innymi zadaniami za pomocą kontynuacji (`then`) i sprzężenia (`when_all`) i wyboru (`when_any`) wzorców.|  
-|[task_canceled, klasa](task-canceled-class.md)|Ta klasa opisuje wyjątek generowany przez warstwę zadań PPL, aby wymusić anulowanie bieżącego zadania. Jest to również generowane przez `get()` metody [zadań](http://msdn.microsoft.com/en-us/5389e8a5-5038-40b6-844a-55e9b58ad35f), dla anulowanych zadań.|  
+|[task_canceled, klasa](task-canceled-class.md)|Ta klasa opisuje wyjątek generowany przez warstwę zadań PPL, aby wymusić anulowanie bieżącego zadania. Jest to również generowane przez `get()` metody [zadań](https://msdn.microsoft.com/5389e8a5-5038-40b6-844a-55e9b58ad35f), dla anulowanych zadań.|  
 |[task_completion_event, klasa](task-completion-event-class.md)|`task_completion_event` Klasa umożliwia opóźnienie wykonania zadania, dopóki nie zostanie spełniony jakiś warunek, lub uruchomić zadanie w odpowiedzi na zdarzenie zewnętrzne.|  
 |[task_continuation_context, klasa](task-continuation-context-class.md)|`task_continuation_context` Klasy pozwala określić, gdzie chcesz kontynuacji do wykonania. Ta jest przydatna tylko używanie tej klasy z aplikacji platformy uniwersalnej systemu Windows. W przypadku aplikacji innych niż Windows Runtime Kontekst wykonywania kontynuacji zadania jest ustalony w czasie wykonywania i nie można konfigurować.|  
 |[task_group — klasa](task-group-class.md)|`task_group` Klasa reprezentuje kolekcję równoległą pracę, która może być oczekiwany lub anulowane.|  
@@ -194,7 +194,7 @@ namespace concurrency;
 |[asend — funkcja](concurrency-namespace-functions.md#asend)|Przeciążone. Operacja asynchronicznego wysyłania, która planuje zadania propagowanie danych do bloku docelowego.|  
 |[cancel_current_task — funkcja](concurrency-namespace-functions.md#cancel_current_task)|Anuluje aktualnie przeprowadzane zadanie. Ta funkcja może zostać wywołana z treści zadania, aby przerwać jego wykonywanie i spowodować wprowadzenie `canceled` stanu.<br /><br /> Nie jest to obsługiwany scenariusz, aby wywołać tę funkcję, jeśli nie jesteś w treści `task`. To spowoduje nieokreślone zachowanie przykład awarię lub zawieszenie aplikacji.|  
 |[create_async — funkcja](concurrency-namespace-functions.md#create_async)|Tworzy konstrukcję asynchroniczną środowiska wykonawczego Windows na podstawie podanych przez użytkownika obiektu lambda lub funkcji. Zwracany typ `create_async` jest `IAsyncAction^`, `IAsyncActionWithProgress<TProgress>^`, `IAsyncOperation<TResult>^`, lub `IAsyncOperationWithProgress<TResult, TProgress>^` zależnie od podpisu wyrażenia lambda przekazanego do metody.|  
-|[create_task — funkcja](concurrency-namespace-functions.md#create_task)|Przeciążone. Tworzy PPL [zadań](http://msdn.microsoft.com/en-us/5389e8a5-5038-40b6-844a-55e9b58ad35f) obiektu. `create_task` może służyć wszędzie użyto konstruktora zadania. Jest ona udostępniana przede wszystkim dla wygody, ponieważ zezwala ona na korzystanie z `auto` — słowo kluczowe podczas tworzenia zadań.|  
+|[create_task — funkcja](concurrency-namespace-functions.md#create_task)|Przeciążone. Tworzy PPL [zadań](https://msdn.microsoft.com/5389e8a5-5038-40b6-844a-55e9b58ad35f) obiektu. `create_task` może służyć wszędzie użyto konstruktora zadania. Jest ona udostępniana przede wszystkim dla wygody, ponieważ zezwala ona na korzystanie z `auto` — słowo kluczowe podczas tworzenia zadań.|  
 |[Createresourcemanager — funkcja](concurrency-namespace-functions.md#createresourcemanager)|Zwraca interfejs, który reprezentuje wystąpienie singleton Menedżera zasobów Runtime współbieżności. Menedżer zasobów jest odpowiedzialny za przydzielanie zasobów, do których chcesz współpracować ze sobą.|  
 |[Disabletracing — funkcja](concurrency-namespace-functions.md#disabletracing)|Wyłącza śledzenie w środowisku uruchomieniowym współbieżności. Ta funkcja jest przestarzały, ponieważ śledzenie zdarzeń systemu Windows jest niezarejestrowana domyślnie.|  
 |[Enabletracing — funkcja](concurrency-namespace-functions.md#enabletracing)|Umożliwia śledzenie w środowisku uruchomieniowym współbieżności. Ta funkcja jest przestarzały, ponieważ śledzenie zdarzeń systemu Windows jest teraz domyślnie włączona.|  

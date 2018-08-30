@@ -24,12 +24,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 41e79ac918c1a549c7972d5feccf4f470473f98c
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: f0994eb1b0293bb31fdb1cd4659256b978ebd69d
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37852922"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43219368"
 ---
 # <a name="coledropsource-class"></a>Klasa COleDropSource
 Umożliwia danych można przeciągnąć do miejsca docelowego.  
@@ -63,7 +63,7 @@ class COleDropSource : public CCmdTarget
   
  Aby uzyskać więcej informacji na temat operacji przeciągania i upuszczania za pomocą mechanizmu OLE, zobacz artykuł [przeciąganie i upuszczanie (OLE)](../../mfc/drag-and-drop-ole.md).  
   
- Aby uzyskać więcej informacji, zobacz [IDropSource](http://msdn.microsoft.com/library/windows/desktop/ms690071) w zestawie Windows SDK.  
+ Aby uzyskać więcej informacji, zobacz [IDropSource](/windows/desktop/api/oleidl/nn-oleidl-idropsource) w zestawie Windows SDK.  
   
 ## <a name="inheritance-hierarchy"></a>Hierarchia dziedziczenia  
  [CObject](../../mfc/reference/cobject-class.md)  
@@ -109,7 +109,7 @@ virtual SCODE GiveFeedback(DROPEFFECT dropEffect);
 ### <a name="remarks"></a>Uwagi  
  Należy przesłonić tę funkcję, aby przekazać opinię do użytkownika o co się stanie, jeśli w tym momencie zrzutu. Domyślna implementacja używa kursory domyślne OLE. Aby uzyskać więcej informacji na temat operacji przeciągania i upuszczania za pomocą mechanizmu OLE, zobacz artykuł [przeciąganie i upuszczanie (OLE)](../../mfc/drag-and-drop-ole.md).  
   
- Aby uzyskać więcej informacji, zobacz [IDropSource::GiveFeedback](http://msdn.microsoft.com/library/windows/desktop/ms693723), [IDropTarget::DragOver](http://msdn.microsoft.com/library/windows/desktop/ms680129), i [IDropTarget::DragEnter](http://msdn.microsoft.com/library/windows/desktop/ms680106) w zestawie Windows SDK.  
+ Aby uzyskać więcej informacji, zobacz [IDropSource::GiveFeedback](/windows/desktop/api/oleidl/nf-oleidl-idropsource-givefeedback), [IDropTarget::DragOver](/windows/desktop/api/oleidl/nf-oleidl-idroptarget-dragover), i [IDropTarget::DragEnter](/windows/desktop/api/oleidl/nf-oleidl-idroptarget-dragenter) w zestawie Windows SDK.  
   
 ##  <a name="onbegindrag"></a>  COleDropSource::OnBeginDrag  
  Wywoływane przez platformę, gdy wystąpi zdarzenie, które można rozpocząć operacji przeciągania, takich jak naciśnięcie klawisza lewego przycisku myszy.  

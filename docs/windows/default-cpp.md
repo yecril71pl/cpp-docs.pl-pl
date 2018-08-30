@@ -19,12 +19,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: fe924627b0b0f4f5d02fab0040a4037085d94738
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: d1055c0865988edf9b54539c0d214cebcda13735
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42595586"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43220423"
 ---
 # <a name="default-c"></a>default (C++)
 
@@ -53,7 +53,7 @@ Jeśli nie domyślnym interfejsie źródła jest określony, pierwszy interfejs 
 
 ## <a name="remarks"></a>Uwagi
 
-**Domyślne** atrybut C++ ma taką samą funkcjonalność jak [domyślne](http://msdn.microsoft.com/library/windows/desktop/aa366787) atrybutów w MIDL. **Domyślne** również zostanie użyty atrybut [przypadek](../windows/case-cpp.md) atrybutu.
+**Domyślne** atrybut C++ ma taką samą funkcjonalność jak [domyślne](/windows/desktop/Midl/default) atrybutów w MIDL. **Domyślne** również zostanie użyty atrybut [przypadek](../windows/case-cpp.md) atrybutu.
 
 ## <a name="example"></a>Przykład
 

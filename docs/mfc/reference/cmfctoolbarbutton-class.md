@@ -170,12 +170,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c79c2260b03d0530595100ba8f4c42a392900aa7
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: bb6cc740577dfcb5921332c24e3cec2d2d6cb100
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37851382"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43210853"
 ---
 # <a name="cmfctoolbarbutton-class"></a>Klasa CMFCToolBarButton
 Oferuje funkcję przycisku na paski narzędzi.  
@@ -230,19 +230,19 @@ class CMFCToolBarButton : public CObject
 |[CMFCToolBarButton::IsOwnerOf](#isownerof)|Określa, czy przycisk jest właścicielem uchwyt okna podana.|  
 |[CMFCToolBarButton::IsVisible](#isvisible)|Określa, czy przycisk na pasku narzędzi jest widoczny.|  
 |[CMFCToolBarButton::IsWindowVisible](#iswindowvisible)|Określa, czy podstawowy uchwyt okna przycisku jest widoczny.|  
-|[CMFCToolBarButton::NotifyCommand](#notifycommand)|Określa, czy przycisk przetwarza [WM_COMMAND](http://msdn.microsoft.com/library/windows/desktop/ms647591) wiadomości.|  
+|[CMFCToolBarButton::NotifyCommand](#notifycommand)|Określa, czy przycisk przetwarza [WM_COMMAND](/windows/desktop/menurc/wm-command) wiadomości.|  
 |[CMFCToolBarButton::OnAddToCustomizePage](#onaddtocustomizepage)|Wywoływane przez platformę, gdy przycisk zostanie dodany do **Dostosuj** okno dialogowe.|  
 |[CMFCToolBarButton::OnBeforeDrag](#onbeforedrag)|Określa, czy mogą być przeciągnięte przycisku.|  
 |[CMFCToolBarButton::OnBeforeDrop](#onbeforedrop)|Określa, czy użytkownik może porzucić przycisk na pasku docelowego.|  
 |[CMFCToolBarButton::OnCalculateSize](#oncalculatesize)|Metoda wywoływana przez platformę, by Oblicz rozmiar przycisku dla kontekstu określonego urządzenia i stan dokowania.|  
-|[CMFCToolBarButton::OnCancelMode](#oncancelmode)|Wywoływane przez platformę, by obsłużyć [WM_CANCELMODE](http://msdn.microsoft.com/library/windows/desktop/ms632615) wiadomości.|  
+|[CMFCToolBarButton::OnCancelMode](#oncancelmode)|Wywoływane przez platformę, by obsłużyć [WM_CANCELMODE](/windows/desktop/winmsg/wm-cancelmode) wiadomości.|  
 |[CMFCToolBarButton::OnChangeParentWnd](#onchangeparentwnd)|Wywoływane przez platformę, gdy przycisk znajduje się nowy pasek narzędzi.|  
 |[CMFCToolBarButton::OnClick](#onclick)|Wywoływane przez platformę, gdy użytkownik kliknie przycisk myszy.|  
 |[CMFCToolBarButton::OnClickUp](#onclickup)|Wywoływane przez platformę, gdy użytkownik zwolni przycisk myszy.|  
 |[CMFCToolBarButton::OnContextHelp](#oncontexthelp)|Wywoływane przez platformę, obsługując komunikat WM_HELPHITTEST narzędzi nadrzędnej.|  
 |[CMFCToolBarButton::OnCtlColor](#onctlcolor)|Wywoływane przez platformę, obsługując narzędzi nadrzędnego wm_ctlcolor — komunikat.|  
 |[CMFCToolBarButton::OnCustomizeMenu](#oncustomizemenu)|Umożliwia przycisk aby zmodyfikować podana menu, gdy aplikacja wyświetli menu skrótów na pasku narzędzi nadrzędnej.|  
-|[CMFCToolBarButton::OnDblClk](#ondblclk)|Wywoływane przez platformę, obsługując narzędzi nadrzędnego [WM_LBUTTONDBLCLK](http://msdn.microsoft.com/library/windows/desktop/ms645606) wiadomości.|  
+|[CMFCToolBarButton::OnDblClk](#ondblclk)|Wywoływane przez platformę, obsługując narzędzi nadrzędnego [WM_LBUTTONDBLCLK](/windows/desktop/inputdev/wm-lbuttondblclk) wiadomości.|  
 |[CMFCToolBarButton::OnDraw](#ondraw)|Metoda wywoływana przez platformę, by narysować przycisku przy użyciu określonych stylów i opcje.|  
 |[CMFCToolBarButton::OnDrawOnCustomizeList](#ondrawoncustomizelist)|Wywoływane przez platformę, by narysować przycisku **polecenia** okienku **Dostosuj** okno dialogowe.|  
 |[CMFCToolBarButton::OnGetCustomToolTipText](#ongetcustomtooltiptext)|Metoda wywoływana przez platformę, by pobrać tekst niestandardowa etykietka narzędzia dla przycisku.|  
@@ -446,7 +446,7 @@ virtual void EnableWindow(BOOL bEnable = TRUE);
  Ustaw ten parametr na wartość true, Włącz wprowadzanie lub wartość FAŁSZ, aby wyłączyć dane wejściowe.  
   
 ### <a name="remarks"></a>Uwagi  
- Ta metoda wywołuje `EnableWindow` funkcję, aby włączyć lub wyłączyć dane wejściowe. Aby uzyskać więcej informacji, zobacz [EnableWindow](http://msdn.microsoft.com/library/windows/desktop/ms646291) w zestawie Windows SDK.  
+ Ta metoda wywołuje `EnableWindow` funkcję, aby włączyć lub wyłączyć dane wejściowe. Aby uzyskać więcej informacji, zobacz [EnableWindow](https://msdn.microsoft.com/library/windows/desktop/ms646291) w zestawie Windows SDK.  
   
 ##  <a name="exporttomenubutton"></a>  CMFCToolBarButton::ExportToMenuButton  
  Kopiuje tekst na przycisku paska narzędzi do menu.  
@@ -884,7 +884,7 @@ CString m_strText;
  Ten element członkowski danych zawiera tekst etykiety przycisku. Tekst etykiety może być pusta.  
   
 ##  <a name="notifycommand"></a>  CMFCToolBarButton::NotifyCommand  
- Określa, czy przycisk przetwarza [WM_COMMAND](http://msdn.microsoft.com/library/windows/desktop/ms647591) wiadomości.  
+ Określa, czy przycisk przetwarza [WM_COMMAND](/windows/desktop/menurc/wm-command) wiadomości.  
   
 ```  
 virtual BOOL NotifyCommand(int iNotifyCode);
@@ -898,7 +898,7 @@ virtual BOOL NotifyCommand(int iNotifyCode);
  Ta metoda zwraca wartość FALSE.  
   
 ### <a name="remarks"></a>Uwagi  
- Struktura wywołuje tę metodę po około do wysyłania [WM_COMMAND](http://msdn.microsoft.com/library/windows/desktop/ms647591) wiadomości do okna nadrzędnego.  
+ Struktura wywołuje tę metodę po około do wysyłania [WM_COMMAND](/windows/desktop/menurc/wm-command) wiadomości do okna nadrzędnego.  
   
  Domyślnie ta metoda zwraca wartość FALSE. Zastąpienie tej metody zwrócić wartość TRUE, jeśli chcesz użyć do przetwarzania komunikatów WM_COMMAND lub wartość FALSE, aby wskazać, że narzędzi nadrzędne należy obsłużyć komunikat.  
   
@@ -977,14 +977,14 @@ virtual SIZE OnCalculateSize(
  Przesłania tę metodę, jeśli chcesz udostępnić rozmiar przycisku niestandardowej (na przykład pole przycisk Edytuj).  
   
 ##  <a name="oncancelmode"></a>  CMFCToolBarButton::OnCancelMode  
- Wywoływane przez platformę, by obsłużyć [WM_CANCELMODE](http://msdn.microsoft.com/library/windows/desktop/ms632615) wiadomości.  
+ Wywoływane przez platformę, by obsłużyć [WM_CANCELMODE](/windows/desktop/winmsg/wm-cancelmode) wiadomości.  
   
 ```  
 virtual void OnCancelMode();
 ```  
   
 ### <a name="remarks"></a>Uwagi  
- Domyślna implementacja tej metody nie działa. Przesłonić tę metodę, jeśli chcesz obsługiwać [WM_CANCELMODE](http://msdn.microsoft.com/library/windows/desktop/ms632615) wiadomości.  
+ Domyślna implementacja tej metody nie działa. Przesłonić tę metodę, jeśli chcesz obsługiwać [WM_CANCELMODE](/windows/desktop/winmsg/wm-cancelmode) wiadomości.  
   
 ##  <a name="onchangeparentwnd"></a>  CMFCToolBarButton::OnChangeParentWnd  
  Wywoływane przez platformę, gdy przycisk znajduje się nowy pasek narzędzi.  
@@ -1104,7 +1104,7 @@ virtual BOOL OnCustomizeMenu(CMenu* pMenu);
  Domyślna implementacja nic nie robi i zwraca wartość FALSE. Należy przesłonić tę metodę i zwraca wartość różną od zera, jeśli chcesz zmodyfikować zawartość podanego menu.  
   
 ##  <a name="ondblclk"></a>  CMFCToolBarButton::OnDblClk  
- Wywoływane przez platformę, obsługując narzędzi nadrzędnego [WM_LBUTTONDBLCLK](http://msdn.microsoft.com/library/windows/desktop/ms645606) wiadomości.  
+ Wywoływane przez platformę, obsługując narzędzi nadrzędnego [WM_LBUTTONDBLCLK](/windows/desktop/inputdev/wm-lbuttondblclk) wiadomości.  
   
 ```  
 virtual void OnDblClk(CWnd* pWnd);
@@ -1115,7 +1115,7 @@ virtual void OnDblClk(CWnd* pWnd);
  -   Okno nadrzędne przycisku.  
   
 ### <a name="remarks"></a>Uwagi  
- Ta metoda jest wywoływana `CMFCToolBar::OnLButtonDblClk` metoda obsługując narzędzi nadrzędnego [WM_LBUTTONDBLCLK](http://msdn.microsoft.com/library/windows/desktop/ms645606) wiadomości.  
+ Ta metoda jest wywoływana `CMFCToolBar::OnLButtonDblClk` metoda obsługując narzędzi nadrzędnego [WM_LBUTTONDBLCLK](/windows/desktop/inputdev/wm-lbuttondblclk) wiadomości.  
   
  Domyślna implementacja tej metody nie działa.  
   

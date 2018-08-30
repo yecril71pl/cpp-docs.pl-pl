@@ -26,12 +26,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3e6dcaeed793a81580b9ca5ed93ad7e267b534fe
-ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
+ms.openlocfilehash: 053e7adb5a0f5d6c65f599ae694525853bd221a7
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37881178"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43211794"
 ---
 # <a name="security-global-functions"></a>Funkcje globalne zabezpieczeń
 Te funkcje zapewniają obsługę modyfikowanie obiektów SID i listy ACL.  
@@ -72,7 +72,7 @@ inline bool AtlGetDacl(
  Uchwytu do obiektu, dla którego mają zostać pobrane informacje o zabezpieczeniach.  
   
  *Typ obiektu*  
- Określa wartość z zakresu od [SE_OBJECT_TYPE](http://msdn.microsoft.com/library/windows/desktop/aa379593) wyliczenie, które wskazuje typ obiektu identyfikowane przez *hObject* parametru.  
+ Określa wartość z zakresu od [SE_OBJECT_TYPE](/windows/desktop/api/accctrl/ne-accctrl-_se_object_type) wyliczenie, które wskazuje typ obiektu identyfikowane przez *hObject* parametru.  
   
  *pDacl*  
  Wskaźnik do obiektu DACL, który będzie zawierać informacji o zabezpieczeniach pobrane.  
@@ -102,7 +102,7 @@ inline bool AtlSetDacl(
  Uchwytu do obiektu, dla której chcesz ustawić informacje o zabezpieczeniach.  
   
  *Typ obiektu*  
- Określa wartość z zakresu od [SE_OBJECT_TYPE](http://msdn.microsoft.com/library/windows/desktop/aa379593) wyliczenie, które wskazuje typ obiektu identyfikowane przez *hObject* parametru.  
+ Określa wartość z zakresu od [SE_OBJECT_TYPE](/windows/desktop/api/accctrl/ne-accctrl-_se_object_type) wyliczenie, które wskazuje typ obiektu identyfikowane przez *hObject* parametru.  
   
  *rDacl*  
  Lista DACL zawierającego nowe informacje o zabezpieczeniach.  
@@ -136,7 +136,7 @@ inline bool AtlGetGroupSid(
  Uchwytu do obiektu, z którego można pobrać informacji o zabezpieczeniach.  
   
  *Typ obiektu*  
- Określa wartość z zakresu od [SE_OBJECT_TYPE](http://msdn.microsoft.com/library/windows/desktop/aa379593) wyliczenie, które wskazuje typ obiektu identyfikowane przez *hObject* parametru.  
+ Określa wartość z zakresu od [SE_OBJECT_TYPE](/windows/desktop/api/accctrl/ne-accctrl-_se_object_type) wyliczenie, które wskazuje typ obiektu identyfikowane przez *hObject* parametru.  
   
  *pSid*  
  Wskaźnik do `CSid` obiektu, który będzie zawierać nowe informacje o zabezpieczeniach.  
@@ -165,7 +165,7 @@ inline bool AtlSetGroupSid(
  Uchwytu do obiektu, dla której chcesz ustawić informacje o zabezpieczeniach.  
   
  *Typ obiektu*  
- Określa wartość z zakresu od [SE_OBJECT_TYPE](http://msdn.microsoft.com/library/windows/desktop/aa379593) wyliczenie, które wskazuje typ obiektu identyfikowane przez *hObject* parametru.  
+ Określa wartość z zakresu od [SE_OBJECT_TYPE](/windows/desktop/api/accctrl/ne-accctrl-_se_object_type) wyliczenie, które wskazuje typ obiektu identyfikowane przez *hObject* parametru.  
   
  *rSid*  
  `CSid` Obiektu zawierającego nowe informacje o zabezpieczeniach.  
@@ -194,7 +194,7 @@ inline bool AtlGetOwnerSid(
  Uchwytu do obiektu, z którego można pobrać informacji o zabezpieczeniach.  
   
  *Typ obiektu*  
- Określa wartość z zakresu od [SE_OBJECT_TYPE](http://msdn.microsoft.com/library/windows/desktop/aa379593) wyliczenie, które wskazuje typ obiektu identyfikowane przez *hObject* parametru.  
+ Określa wartość z zakresu od [SE_OBJECT_TYPE](/windows/desktop/api/accctrl/ne-accctrl-_se_object_type) wyliczenie, które wskazuje typ obiektu identyfikowane przez *hObject* parametru.  
   
  *pSid*  
  Wskaźnik do `CSid` obiektu, który będzie zawierać nowe informacje o zabezpieczeniach.  
@@ -223,7 +223,7 @@ inline bool AtlSetOwnerSid(
  Uchwytu do obiektu, dla której chcesz ustawić informacje o zabezpieczeniach.  
   
  *Typ obiektu*  
- Określa wartość z zakresu od [SE_OBJECT_TYPE](http://msdn.microsoft.com/library/windows/desktop/aa379593) wyliczenie, które wskazuje typ obiektu identyfikowane przez *hObject* parametru.  
+ Określa wartość z zakresu od [SE_OBJECT_TYPE](/windows/desktop/api/accctrl/ne-accctrl-_se_object_type) wyliczenie, które wskazuje typ obiektu identyfikowane przez *hObject* parametru.  
   
  *rSid*  
  `CSid` Obiektu zawierającego nowe informacje o zabezpieczeniach.  
@@ -253,7 +253,7 @@ inline bool AtlGetSacl(
  Uchwytu do obiektu, z którego można pobrać informacji o zabezpieczeniach.  
   
  *Typ obiektu*  
- Określa wartość z zakresu od [SE_OBJECT_TYPE](http://msdn.microsoft.com/library/windows/desktop/aa379593) wyliczenie, które wskazuje typ obiektu identyfikowane przez *hObject* parametru.  
+ Określa wartość z zakresu od [SE_OBJECT_TYPE](/windows/desktop/api/accctrl/ne-accctrl-_se_object_type) wyliczenie, które wskazuje typ obiektu identyfikowane przez *hObject* parametru.  
   
  *pSacl*  
  Wskaźnik do obiektu SACL, który będzie zawierać informacji o zabezpieczeniach pobrane.  
@@ -290,7 +290,7 @@ inline bool AtlSetSacl(
  Uchwytu do obiektu, dla której chcesz ustawić informacje o zabezpieczeniach.  
   
  *Typ obiektu*  
- Określa wartość z zakresu od [SE_OBJECT_TYPE](http://msdn.microsoft.com/library/windows/desktop/aa379593) wyliczenie, które wskazuje typ obiektu identyfikowane przez *hObject* parametru.  
+ Określa wartość z zakresu od [SE_OBJECT_TYPE](/windows/desktop/api/accctrl/ne-accctrl-_se_object_type) wyliczenie, które wskazuje typ obiektu identyfikowane przez *hObject* parametru.  
   
  *rSacl*  
  SACL, zawierającego nowe informacje o zabezpieczeniach.  
@@ -334,13 +334,13 @@ inline bool AtlGetSecurityDescriptor(
  Wskaźnik na ciąg zakończony znakiem null, który określa nazwę obiektu, z którego można pobrać informacji o zabezpieczeniach.  
   
  *Typ obiektu*  
- Określa wartość z zakresu od [SE_OBJECT_TYPE](http://msdn.microsoft.com/library/windows/desktop/aa379593) wyliczenie, które wskazuje typ obiektu identyfikowane przez *pszObjectName* parametru.  
+ Określa wartość z zakresu od [SE_OBJECT_TYPE](/windows/desktop/api/accctrl/ne-accctrl-_se_object_type) wyliczenie, które wskazuje typ obiektu identyfikowane przez *pszObjectName* parametru.  
   
  *pSecurityDescriptor*  
  Obiekt, który odbiera deskryptora zabezpieczeń żądanej.  
   
  *requestedInfo*  
- Zbiór [SECURITY_INFORMATION](http://msdn.microsoft.com/library/windows/desktop/aa379573) bit flagi wskazujące rodzaj informacji o zabezpieczeniach do pobrania. Ten parametr może być kombinacją następujących wartości.  
+ Zbiór [SECURITY_INFORMATION](/windows/desktop/SecAuthZ/security-information) bit flagi wskazujące rodzaj informacji o zabezpieczeniach do pobrania. Ten parametr może być kombinacją następujących wartości.  
   
  *bRequestNeededPrivileges*  
  W przypadku opcji true funkcja będzie podejmować próby włączenia uprawnień SE_SECURITY_NAME i przywrócić ją po zakończeniu.  

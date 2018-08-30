@@ -84,12 +84,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fd58faa0cda2162f1abe906da8e38d4d62402db8
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: acf85412f6fde233d592f545b6611053a2f80e01
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37850212"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43215360"
 ---
 # <a name="csliderctrl-class"></a>Klasa CSliderCtrl
 Oferuje funkcje formantu typowego suwaka Windows.  
@@ -206,10 +206,10 @@ virtual BOOL Create(
   
 ### <a name="parameters"></a>Parametry  
  *dwStyle*  
- Określa styl kontrolki slider. Zastosuj dowolną kombinację [style formantu suwaka](http://msdn.microsoft.com/library/windows/desktop/bb760147), które zostały opisane w zestawie Windows SDK, do formantu.  
+ Określa styl kontrolki slider. Zastosuj dowolną kombinację [style formantu suwaka](/windows/desktop/Controls/trackbar-control-styles), które zostały opisane w zestawie Windows SDK, do formantu.  
   
  *Rect*  
- Określa rozmiar i położenie kontrolki slider. Może być albo [CRect](../../atl-mfc-shared/reference/crect-class.md) obiektu lub [Prostokąt](http://msdn.microsoft.com/library/windows/desktop/dd162897) struktury.  
+ Określa rozmiar i położenie kontrolki slider. Może być albo [CRect](../../atl-mfc-shared/reference/crect-class.md) obiektu lub [Prostokąt](https://msdn.microsoft.com/library/windows/desktop/dd162897) struktury.  
   
  *pParentWnd*  
  Określa okno nadrzędne kontrolki suwaka, zwykle `CDialog`. Nie może być równa NULL.  
@@ -241,13 +241,13 @@ virtual BOOL CreateEx(
   
 ### <a name="parameters"></a>Parametry  
  *dwExStyle*  
- Określa styl rozszerzony kontrolki tworzona. Aby uzyskać listę rozszerzone style Windows, zobacz *dwExStyle* parametr [elementu CreateWindowEx](http://msdn.microsoft.com/library/windows/desktop/ms632680) w zestawie Windows SDK.  
+ Określa styl rozszerzony kontrolki tworzona. Aby uzyskać listę rozszerzone style Windows, zobacz *dwExStyle* parametr [elementu CreateWindowEx](https://msdn.microsoft.com/library/windows/desktop/ms632680) w zestawie Windows SDK.  
   
  *dwStyle*  
- Określa styl kontrolki slider. Zastosuj dowolną kombinację [style formantu suwaka](http://msdn.microsoft.com/library/windows/desktop/bb760147), które zostały opisane w zestawie Windows SDK, do formantu.  
+ Określa styl kontrolki slider. Zastosuj dowolną kombinację [style formantu suwaka](/windows/desktop/Controls/trackbar-control-styles), które zostały opisane w zestawie Windows SDK, do formantu.  
   
  *Rect*  
- Odwołanie do [Prostokąt](http://msdn.microsoft.com/library/windows/desktop/dd162897) struktury opisujących rozmiar i położenie okna, można utworzyć klienta współrzędne *pParentWnd*.  
+ Odwołanie do [Prostokąt](https://msdn.microsoft.com/library/windows/desktop/dd162897) struktury opisujących rozmiar i położenie okna, można utworzyć klienta współrzędne *pParentWnd*.  
   
  *pParentWnd*  
  Wskaźnik do okna, które jest elementem nadrzędnym formantu.  
@@ -287,7 +287,7 @@ CWnd* GetBuddy(BOOL fLocation = TRUE) const;
  Wskaźnik do [CWnd](../../mfc/reference/cwnd-class.md) obiekt, który jest oknem buddy w lokalizacji określonej przez *fLocation*, lub wartość NULL, jeśli nie buddy istnieje przedział czasu w tej lokalizacji.  
   
 ### <a name="remarks"></a>Uwagi  
- Ta funkcja elementu członkowskiego implementuje zachowanie komunikatu Win32 [TBM_GETBUDDY](http://msdn.microsoft.com/library/windows/desktop/bb760178), zgodnie z opisem w zestawie Windows SDK. Aby uzyskać opis style formantu suwaka, zobacz [style kontrolki Trackbar](http://msdn.microsoft.com/library/windows/desktop/bb760147) w zestawie Windows SDK.  
+ Ta funkcja elementu członkowskiego implementuje zachowanie komunikatu Win32 [TBM_GETBUDDY](/windows/desktop/Controls/tbm-getbuddy), zgodnie z opisem w zestawie Windows SDK. Aby uzyskać opis style formantu suwaka, zobacz [style kontrolki Trackbar](/windows/desktop/Controls/trackbar-control-styles) w zestawie Windows SDK.  
   
 ##  <a name="getchannelrect"></a>  CSliderCtrl::GetChannelRect  
  Pobiera rozmiar i położenie prostokąt otaczający dla kanału kontrolki suwaka.  
@@ -415,7 +415,7 @@ int GetThumbLength() const;
  Długość suwaka, w pikselach.  
   
 ### <a name="remarks"></a>Uwagi  
- Ta metoda wysyła [TBM_GETTHUMBLENGTH](http://msdn.microsoft.com/library/windows/desktop/bb760201) komunikat, który jest opisany w zestawie Windows SDK.  
+ Ta metoda wysyła [TBM_GETTHUMBLENGTH](/windows/desktop/Controls/tbm-getthumblength) komunikat, który jest opisany w zestawie Windows SDK.  
   
 ##  <a name="getthumbrect"></a>  CSliderCtrl::GetThumbRect  
  Pobiera rozmiar i położenie prostokąt otaczający dla suwak w kontrolce suwaka.  
@@ -477,9 +477,9 @@ CToolTipCtrl* GetToolTips() const;
  Wskaźnik do [CToolTipCtrl](../../mfc/reference/ctooltipctrl-class.md) obiekt lub wartość NULL, jeśli etykietki narzędzi nie są używane. Użycie kontrolki suwaka nie styl TBS_TOOLTIPS, wartość zwracana jest wartość NULL.  
   
 ### <a name="remarks"></a>Uwagi  
- Ta funkcja elementu członkowskiego implementuje zachowanie komunikatu Win32 [TBM_GETTOOLTIPS](http://msdn.microsoft.com/library/windows/desktop/bb760209), zgodnie z opisem w zestawie Windows SDK. Należy zauważyć, że ta funkcja elementu członkowskiego zwraca `CToolTipCtrl` obiektu zamiast dojścia do formantu.  
+ Ta funkcja elementu członkowskiego implementuje zachowanie komunikatu Win32 [TBM_GETTOOLTIPS](/windows/desktop/Controls/tbm-gettooltips), zgodnie z opisem w zestawie Windows SDK. Należy zauważyć, że ta funkcja elementu członkowskiego zwraca `CToolTipCtrl` obiektu zamiast dojścia do formantu.  
   
- Aby uzyskać opis style formantu suwaka, zobacz [style kontrolki Trackbar](http://msdn.microsoft.com/library/windows/desktop/bb760147) w zestawie Windows SDK.  
+ Aby uzyskać opis style formantu suwaka, zobacz [style kontrolki Trackbar](/windows/desktop/Controls/trackbar-control-styles) w zestawie Windows SDK.  
   
 ##  <a name="setbuddy"></a>  CSliderCtrl::SetBuddy  
  Przypisuje okna jako okno cyklu kontrolki suwaka.  
@@ -505,9 +505,9 @@ CWnd* SetBuddy(
  Wskaźnik do [CWnd](../../mfc/reference/cwnd-class.md) obiektu, który wcześniej został przypisany do kontrolki suwaka w tej lokalizacji.  
   
 ### <a name="remarks"></a>Uwagi  
- Ta funkcja elementu członkowskiego implementuje zachowanie komunikatu Win32 [TBM_SETBUDDY](http://msdn.microsoft.com/library/windows/desktop/bb760213), zgodnie z opisem w zestawie Windows SDK. Należy pamiętać, że ta funkcja członkowska używa wskaźników do `CWnd` obiektów, a nie obsługuje okno zarówno jego zwracanej wartości, jak i parametr.  
+ Ta funkcja elementu członkowskiego implementuje zachowanie komunikatu Win32 [TBM_SETBUDDY](/windows/desktop/Controls/tbm-setbuddy), zgodnie z opisem w zestawie Windows SDK. Należy pamiętać, że ta funkcja członkowska używa wskaźników do `CWnd` obiektów, a nie obsługuje okno zarówno jego zwracanej wartości, jak i parametr.  
   
- Aby uzyskać opis style formantu suwaka, zobacz [style kontrolki Trackbar](http://msdn.microsoft.com/library/windows/desktop/bb760147) w zestawie Windows SDK.  
+ Aby uzyskać opis style formantu suwaka, zobacz [style kontrolki Trackbar](/windows/desktop/Controls/trackbar-control-styles) w zestawie Windows SDK.  
   
 ##  <a name="setlinesize"></a>  CSliderCtrl::SetLineSize  
  Ustawia rozmiar linii dla kontrolki suwaka.  
@@ -636,9 +636,9 @@ void SetThumbLength(int nLength);
 |[in] *nLength*|Długość suwaka, w pikselach.|  
   
 ### <a name="remarks"></a>Uwagi  
- Ta metoda wymaga, że trackbar, kontrolka być równa [TBS_FIXEDLENGTH](http://msdn.microsoft.com/library/windows/desktop/bb760147) stylu.  
+ Ta metoda wymaga, że trackbar, kontrolka być równa [TBS_FIXEDLENGTH](/windows/desktop/Controls/trackbar-control-styles) stylu.  
   
- Ta metoda wysyła [TBM_SETTHUMBLENGTH](http://msdn.microsoft.com/library/windows/desktop/bb760234) komunikat, który jest opisany w zestawie Windows SDK.  
+ Ta metoda wysyła [TBM_SETTHUMBLENGTH](/windows/desktop/Controls/tbm-setthumblength) komunikat, który jest opisany w zestawie Windows SDK.  
   
 ### <a name="example"></a>Przykład  
  Poniższy kod definiuje zmienną, `m_sliderCtrl`, to znaczy umożliwiają dostęp do bieżącego TrackBar — formant. W przykładzie zdefiniowano też zmiennej, która `thumbLength`, która jest używana do przechowywania domyślna długość TrackBar — formant przycisku przewijania składnika. Te zmienne są używane w następnym przykładzie.  
@@ -689,13 +689,13 @@ int SetTipSide(int nLocation);
   
 ### <a name="parameters"></a>Parametry  
  *Nlokalizacja*  
- Wartość reprezentująca lokalizację, w której do wyświetlania kontrolki tooltip. Aby uzyskać listę możliwych wartości, zobacz komunikat Win32 [TBM_SETTIPSIDE](http://msdn.microsoft.com/library/windows/desktop/bb760240), zgodnie z opisem w zestawie Windows SDK.  
+ Wartość reprezentująca lokalizację, w której do wyświetlania kontrolki tooltip. Aby uzyskać listę możliwych wartości, zobacz komunikat Win32 [TBM_SETTIPSIDE](/windows/desktop/Controls/tbm-settipside), zgodnie z opisem w zestawie Windows SDK.  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Wartość, która reprezentuje poprzedniej lokalizacji kontrolki tooltip. Wartość zwracana równa się jedną z możliwych wartości dla *Nlokalizacja*.  
   
 ### <a name="remarks"></a>Uwagi  
- Ta funkcja elementu członkowskiego implementuje zachowanie komunikatu Win32 TBM_SETTIPSIDE, zgodnie z opisem w zestawie Windows SDK. Formanty suwaka, które używają stylu TBS_TOOLTIPS wyświetlanie etykietek narzędzi. Aby uzyskać opis style formantu suwaka, zobacz [style kontrolki Trackbar](http://msdn.microsoft.com/library/windows/desktop/bb760147) w zestawie Windows SDK.  
+ Ta funkcja elementu członkowskiego implementuje zachowanie komunikatu Win32 TBM_SETTIPSIDE, zgodnie z opisem w zestawie Windows SDK. Formanty suwaka, które używają stylu TBS_TOOLTIPS wyświetlanie etykietek narzędzi. Aby uzyskać opis style formantu suwaka, zobacz [style kontrolki Trackbar](/windows/desktop/Controls/trackbar-control-styles) w zestawie Windows SDK.  
   
 ##  <a name="settooltips"></a>  CSliderCtrl::SetToolTips  
  Przypisuje kontrolkę etykiety narzędzia do kontrolki suwaka.  
@@ -709,7 +709,7 @@ void SetToolTips(CToolTipCtrl* pWndTip);
  Wskaźnik do [CToolTipCtrl](../../mfc/reference/ctooltipctrl-class.md) obiekt zawierający etykietek narzędzi za pomocą suwaka.  
   
 ### <a name="remarks"></a>Uwagi  
- Ta funkcja elementu członkowskiego implementuje zachowanie komunikatu Win32 [TBM_SETTOOLTIPS](http://msdn.microsoft.com/library/windows/desktop/bb760242), zgodnie z opisem w zestawie Windows SDK. Po utworzeniu kontrolki suwaka ze stylem TBS_TOOLTIPS tworzy domyślny formant etykietki narzędzia, która pojawia się obok suwaka, wyświetlanie bieżące położenie suwaka. Aby uzyskać opis style formantu suwaka, zobacz [style kontrolki Trackbar](http://msdn.microsoft.com/library/windows/desktop/bb760147) w zestawie Windows SDK.  
+ Ta funkcja elementu członkowskiego implementuje zachowanie komunikatu Win32 [TBM_SETTOOLTIPS](/windows/desktop/Controls/tbm-settooltips), zgodnie z opisem w zestawie Windows SDK. Po utworzeniu kontrolki suwaka ze stylem TBS_TOOLTIPS tworzy domyślny formant etykietki narzędzia, która pojawia się obok suwaka, wyświetlanie bieżące położenie suwaka. Aby uzyskać opis style formantu suwaka, zobacz [style kontrolki Trackbar](/windows/desktop/Controls/trackbar-control-styles) w zestawie Windows SDK.  
   
 ## <a name="see-also"></a>Zobacz też  
  [CMNCTRL2 próbki MFC](../../visual-cpp-samples.md)   

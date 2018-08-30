@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0322d6b304366e598fc3db206d4c2e4b9b9d6315
-ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
+ms.openlocfilehash: 114ccb875c1551528eb77edb9c2fae0ecb27edd6
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37336608"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43212046"
 ---
 # <a name="event-sink-maps"></a>Mapy wychwytywania zdarzeń
 Gdy osadzonego formantu OLE uruchamia zdarzenie, kontener formantu odbiera zdarzenia przy użyciu mechanizmu o nazwie "sink mapę zdarzeń," dostarczonych przez MFC. Ta mapa obiekt sink zdarzenia wyznacza funkcji obsługi dla każdego określonego zdarzenia, jak również parametry tych zdarzeń. Aby uzyskać więcej informacji na temat mapy wychwytywania zdarzeń, zobacz artykuł [kontenery kontrolek ActiveX](../../mfc/activex-control-containers.md).  
@@ -222,7 +222,7 @@ ON_PROPNOTIFY(theClass, id, dispid, pfnRequest, pfnChanged)
  Identyfikator wysyłania właściwości, które są zaangażowane w powiadomieniu.  
   
  *pfnRequest*  
- Wskaźnik do funkcji składowej, która obsługuje `OnRequestEdit` powiadomienia dla tej właściwości. Ta funkcja powinna mieć BOOL, zwracany typ i **BOOL\***  parametru. Ta funkcja powinna Ustaw parametr Zezwalaj na zmianę właściwości ma wartość TRUE i FALSE, aby nie zezwalać. Funkcja powinna zwrócić wartość TRUE, aby wskazać, że powiadomienia został obsłużony; w przeciwnym razie wartość FALSE.  
+ Wskaźnik do funkcji składowej, która obsługuje `OnRequestEdit` powiadomienia dla tej właściwości. Ta funkcja powinna mieć BOOL, zwracany typ i **BOOL** <strong>\*</strong> parametru. Ta funkcja powinna Ustaw parametr Zezwalaj na zmianę właściwości ma wartość TRUE i FALSE, aby nie zezwalać. Funkcja powinna zwrócić wartość TRUE, aby wskazać, że powiadomienia został obsłużony; w przeciwnym razie wartość FALSE.  
   
  *pfnChanged*  
  Wskaźnik do funkcji składowej, która obsługuje `OnChanged` powiadomienia dla tej właściwości. Funkcja powinna mieć BOOL, zwracać typ i parametrem UINT. Funkcja powinna zwrócić wartość TRUE, aby wskazać, że powiadomienia został obsłużony; w przeciwnym razie wartość FALSE.  
@@ -259,10 +259,10 @@ ON_PROPNOTIFY_RANGE(theClass, idFirst, idLast, dispid, pfnRequest, pfnChanged)
  Identyfikator wysyłania właściwości, które są zaangażowane w powiadomieniu.  
   
  *pfnRequest*  
- Wskaźnik do funkcji składowej, która obsługuje `OnRequestEdit` powiadomienia dla tej właściwości. Ta funkcja powinna mieć BOOL, zwracany typ i UINT i **BOOL\***  parametrów. Funkcja powinna Ustaw parametr Zezwalaj na zmianę właściwości ma wartość TRUE i FALSE, aby nie zezwalać. Funkcja powinna zwrócić wartość TRUE, aby wskazać, że powiadomienia został obsłużony; w przeciwnym razie wartość FALSE.  
+ Wskaźnik do funkcji składowej, która obsługuje `OnRequestEdit` powiadomienia dla tej właściwości. Ta funkcja powinna mieć `BOOL` zwracany typ i `UINT` i `BOOL*` parametrów. Funkcja powinna Ustaw parametr Zezwalaj na zmianę właściwości ma wartość TRUE i FALSE, aby nie zezwalać. Funkcja powinna zwrócić wartość TRUE, aby wskazać, że powiadomienia został obsłużony; w przeciwnym razie wartość FALSE.  
   
  *pfnChanged*  
- Wskaźnik do funkcji składowej, która obsługuje `OnChanged` powiadomienia dla tej właściwości. Funkcja powinna mieć BOOL, zwracać typ i parametrem UINT. Funkcja powinna zwrócić wartość TRUE, aby wskazać, że powiadomienia został obsłużony; w przeciwnym razie wartość FALSE.  
+ Wskaźnik do funkcji składowej, która obsługuje `OnChanged` powiadomienia dla tej właściwości. Funkcja powinna mieć `BOOL` zwracany typ i `UINT` parametru. Funkcja powinna zwrócić wartość TRUE, aby wskazać, że powiadomienia został obsłużony; w przeciwnym razie wartość FALSE.  
   
 ### <a name="requirements"></a>Wymagania  
   **Nagłówek** afxdisp.h  
@@ -284,7 +284,7 @@ ON_PROPNOTIFY_REFLECT(theClass, dispid, pfnRequest, pfnChanged)
  Identyfikator wysyłania właściwości, które są zaangażowane w powiadomieniu.  
   
  *pfnRequest*  
- Wskaźnik do funkcji składowej, która obsługuje `OnRequestEdit` powiadomienia dla tej właściwości. Ta funkcja powinna mieć BOOL, zwracany typ i **BOOL\***  parametru. Ta funkcja powinna Ustaw parametr Zezwalaj na zmianę właściwości ma wartość TRUE i FALSE, aby nie zezwalać. Funkcja powinna zwrócić wartość TRUE, aby wskazać, że powiadomienia został obsłużony; w przeciwnym razie wartość FALSE.  
+ Wskaźnik do funkcji składowej, która obsługuje `OnRequestEdit` powiadomienia dla tej właściwości. Ta funkcja powinna mieć BOOL, zwracany typ i **BOOL** <strong>\*</strong> parametru. Ta funkcja powinna Ustaw parametr Zezwalaj na zmianę właściwości ma wartość TRUE i FALSE, aby nie zezwalać. Funkcja powinna zwrócić wartość TRUE, aby wskazać, że powiadomienia został obsłużony; w przeciwnym razie wartość FALSE.  
   
  *pfnChanged*  
  Wskaźnik do funkcji składowej, która obsługuje `OnChanged` powiadomienia dla tej właściwości. Funkcja powinna mieć BOOL, zwracać typ i bez parametrów. Funkcja powinna zwrócić wartość TRUE, aby wskazać, że powiadomienia został obsłużony; w przeciwnym razie wartość FALSE.  

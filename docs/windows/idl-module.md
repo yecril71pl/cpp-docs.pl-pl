@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 7424581c277e7b20132fd5e667acb77a4a95789e
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 9fc3be9fb25b6593f4b69f846394544b7b7d756a
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42598653"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43220468"
 ---
 # <a name="idlmodule"></a>idl_module
 
@@ -65,10 +65,10 @@ Identyfikator tematu pomocy w pliku hlp lub chm.
 Identyfikator pomocy dla tego typu biblioteki.
 
 *ukryte* (opcjonalnie)  
-Parametr, który zapobiega wyświetlaniu w bibliotece. Zobacz [ukryte](http://msdn.microsoft.com/library/windows/desktop/aa366861) atrybutu MIDL, aby uzyskać więcej informacji.
+Parametr, który zapobiega wyświetlaniu w bibliotece. Zobacz [ukryte](/windows/desktop/Midl/hidden) atrybutu MIDL, aby uzyskać więcej informacji.
 
 *ograniczone* (opcjonalnie)  
-Elementy członkowskie biblioteki nie można wywołać arbitralnie. Zobacz [ograniczeniami](http://msdn.microsoft.com/library/windows/desktop/aa367157) atrybutu MIDL, aby uzyskać więcej informacji.
+Elementy członkowskie biblioteki nie można wywołać arbitralnie. Zobacz [ograniczeniami](/windows/desktop/Midl/restricted) atrybutu MIDL, aby uzyskać więcej informacji.
 
 *Deklaracja funkcji*  
 Funkcja, która będą definiować.
@@ -77,7 +77,7 @@ Funkcja, która będą definiować.
 
 **Idl_module** atrybut C++ umożliwia określenie punktu wejścia w pliku .dll, dzięki czemu można zaimportować z pliku dll.
 
-**Idl_module** atrybut ma funkcje podobne do [modułu](http://msdn.microsoft.com/library/windows/desktop/aa367099) atrybutów w MIDL.
+**Idl_module** atrybut ma funkcje podobne do [modułu](/windows/desktop/Midl/module) atrybutów w MIDL.
 
 Możesz wyeksportować nic z obiektu COM, który można eksportować z pliku .dll, umieszczając punkt wejścia biblioteki DLL w bloku biblioteki pliku .idl.
 

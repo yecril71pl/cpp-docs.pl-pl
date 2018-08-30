@@ -16,16 +16,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 72f7b6e352240498f921c9aa5c3d1a990da34813
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 6008d97b0fab437a9ba2e6b8e0af8d3bc111532a
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38955432"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43218960"
 ---
 # <a name="complexltdoublegt"></a>complex&lt;double&gt;
 
-Opisuje obiekt, który przechowuje uporządkowana para obiektów zarówno typu **double **** najpierw reprezentujących część liczby zespolonej, a druga rzeczywista reprezentujący urojone części.
+Opisuje obiekt, który przechowuje uporządkowana para obiektów zarówno typu **double**, najpierw reprezentujących część liczby zespolonej, a druga rzeczywista reprezentujący urojone części.
 
 ## <a name="syntax"></a>Składnia
 
@@ -46,11 +46,14 @@ constexpr explicit complex(const complex<long double>& complexNum);
 
 ### <a name="parameters"></a>Parametry
 
-*RealVal* wartości typu **double** rzeczywistych część liczby zespolonej budowany.
+*RealVal*<br/>
+Wartość typu **double** rzeczywistych część liczby zespolonej budowany.
 
-*ImagVal* wartości typu **double** dla urojone części liczb zespolonych budowany.
+*ImagVal*<br/>
+Wartość typu **double** dla urojone części liczb zespolonych budowany.
 
-*complexNum* liczby zespolonej typu **float** lub typu **typu long double** którego rzeczywiste i urojone części są stosowane do inicjalizacji liczby zespolonej typu **double**budowany.
+*complexNum*<br/>
+Liczby zespolonej typu **float** lub typu **typu long double** którego rzeczywiste i urojone części są stosowane do inicjalizacji liczby zespolonej typu **double** budowany.
 
 ## <a name="return-value"></a>Wartość zwracana
 
@@ -104,7 +107,7 @@ int main( )
         << argc3 << " radians, which is " << argc3 * 180 / pi
         << " degrees." << endl;
 }
-\* Output:
+/* Output:
 Specifying initial real & imaginary parts,
  as type double gives c1 = (4,5)
 Implicit conversion from type float to type double,
@@ -114,7 +117,7 @@ Explicit conversion from type float to type double,
 The modulus of c3 is recovered from c3 using: abs ( c3 ) = 6.40312
 Argument of c3 is recovered from c3 using:
  arg ( c3 ) = 0.896055 radians, which is 51.3402 degrees.
-*\
+*/
 ```
 
 ## <a name="requirements"></a>Wymagania

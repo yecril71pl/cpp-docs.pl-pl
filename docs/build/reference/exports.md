@@ -16,12 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f6645ee4c890dab65cde8eab5dc18df1c31082c1
-ms.sourcegitcommit: 7f3df9ff0310a4716b8136ca20deba699ca86c6c
+ms.openlocfilehash: e6607016e2661817de04fce505bc921a3a25320a
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/21/2018
-ms.locfileid: "42465841"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43219496"
 ---
 # <a name="exports"></a>EKSPORTY
 
@@ -69,7 +69,7 @@ Aby znaleźć nazwy dekoracyjne wytworzone przez kompilator, użyj [DUMPBIN](../
   
 Możesz użyć*porządkowe* do określenia, czy numer, a nie nazwę funkcji, zostaną umieszczone w tabeli eksportu biblioteki DLL. Wiele bibliotek DLL Windows wyeksportować liczb porządkowych do obsługi starszego kodu. Było często używa się w kodzie Windows 16-bitowych liczb porządkowych, ponieważ może to pomóc zminimalizować rozmiar biblioteki DLL. Nie zaleca się eksportowanie funkcji według liczby porządkowej, chyba że klientów biblioteki DLL potrzebny do obsługi starszych wersji. Ponieważ. Plik biblioteki będzie zawierać mapowania między numeru porządkowego a funkcją, można użyć nazwy funkcji, tak jak zwykle w projektach korzystających z biblioteki DLL.  
   
-Przy użyciu opcjonalnego `NONAME` — słowo kluczowe, możesz wyeksportować według liczby porządkowej tylko i Zmniejsz rozmiar tabeli eksportu w wynikowy DLL. Jednakże jeśli chcesz używać [GetProcAddress](http://msdn.microsoft.com/library/windows/desktop/ms683212.aspx) w pliku DLL, należy znać numer porządkowy, ponieważ nazwa straci ważność.  
+Przy użyciu opcjonalnego `NONAME` — słowo kluczowe, możesz wyeksportować według liczby porządkowej tylko i Zmniejsz rozmiar tabeli eksportu w wynikowy DLL. Jednakże jeśli chcesz używać [GetProcAddress](https://msdn.microsoft.com/library/windows/desktop/ms683212.aspx) w pliku DLL, należy znać numer porządkowy, ponieważ nazwa straci ważność.  
   
 Optional-słowo kluczowe `PRIVATE` zapobiega *Nazwa_wpisu* zostaną uwzględnione w Biblioteka importowana, generowana przez łącze. Nie ma ona wpływu na eksport na ilustracji, również jest generowany przez łącze.  
   

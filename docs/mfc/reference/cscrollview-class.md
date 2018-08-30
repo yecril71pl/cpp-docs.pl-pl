@@ -38,12 +38,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 43ad1d1d047b9e44da27d1c9eb24dde39fd429ef
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: b1a4d3d44f7ce18486feab4096673970857a0907
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37849919"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43214980"
 ---
 # <a name="cscrollview-class"></a>Klasa CScrollView
 A [CView](../../mfc/reference/cview-class.md) z możliwościami przewijania.  
@@ -86,9 +86,9 @@ class CScrollView : public CView
   
 -   Automatycznie przewija w odpowiedzi na wiadomości z klawiatury, myszy bez przewijania lub kółka myszy IntelliMouse.  
   
- Automatyczne przewijanie w odpowiedzi na wiadomości przy użyciu klawiatury, Dodaj przetłumaczyła komunikat i przetestować VK_DOWN, VK_PREV i wywołania [SetScrollPos](http://msdn.microsoft.com/library/windows/desktop/bb787597).  
+ Automatyczne przewijanie w odpowiedzi na wiadomości przy użyciu klawiatury, Dodaj przetłumaczyła komunikat i przetestować VK_DOWN, VK_PREV i wywołania [SetScrollPos](/windows/desktop/api/winuser/nf-winuser-setscrollpos).  
   
- Może obsługiwać obrót kółkiem myszy do przewijania samodzielnie przez zastąpienie mapowanych komunikat [OnMouseWheel](../../mfc/reference/cwnd-class.md#onmousewheel) i [OnRegisteredMouseWheel](../../mfc/reference/cwnd-class.md#onregisteredmousewheel) funkcji elementów członkowskich. Są one dla `CScrollView`, te funkcje elementów członkowskich obsługuje zalecane zachowania [WM_MOUSEWHEEL](http://msdn.microsoft.com/library/windows/desktop/ms645617), komunikat obrót kółkiem.  
+ Może obsługiwać obrót kółkiem myszy do przewijania samodzielnie przez zastąpienie mapowanych komunikat [OnMouseWheel](../../mfc/reference/cwnd-class.md#onmousewheel) i [OnRegisteredMouseWheel](../../mfc/reference/cwnd-class.md#onregisteredmousewheel) funkcji elementów członkowskich. Są one dla `CScrollView`, te funkcje elementów członkowskich obsługuje zalecane zachowania [WM_MOUSEWHEEL](/windows/desktop/inputdev/wm-mousewheel), komunikat obrót kółkiem.  
   
  Można skorzystać z automatycznego przewijania, pochodzi z klasy widoku `CScrollView` zamiast z `CView`. Widok najpierw utworzenia, aby obliczyć rozmiar przewijany widok, w zależności od rozmiaru dokumentu, wywołanie `SetScrollSizes` funkcji składowej z przesłonięcia albo [CView::OnInitialUpdate](../../mfc/reference/cview-class.md#oninitialupdate) lub [ CView::OnUpdate](../../mfc/reference/cview-class.md#onupdate). (Należy napisać własny kod do wykonywania zapytań rozmiar dokumentu. Aby uzyskać przykład, zobacz [próbki Bazgroły](../../visual-cpp-samples.md).)  
   
@@ -190,7 +190,7 @@ CPoint GetDeviceScrollPosition() const;
  `GetDeviceScrollPosition` Zwraca wartości w jednostkach urządzenia. Jeśli chcesz, aby jednostki logiczne, użyj `GetScrollPosition` zamiast tego.  
   
 ##  <a name="getdevicescrollsizes"></a>  CScrollView::GetDeviceScrollSizes  
- `GetDeviceScrollSizes` pobiera bieżący tryb mapowania, całkowity rozmiar i rozmiary wiersza i strony przewijany widoku.  
+ `GetDeviceScrollSizes` Pobiera bieżący tryb mapowania, całkowity rozmiar i rozmiary wiersza i strony przewijany widoku.  
   
 ```  
 void GetDeviceScrollSizes(

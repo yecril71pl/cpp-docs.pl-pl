@@ -14,55 +14,55 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5b1afd3be89e1d18da9889d88dbbbef3fb104e02
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: a22fae86c48a0dcbfb43c0de79a44195945aa25a
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32363262"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43223114"
 ---
 # <a name="aggregates-and-unions"></a>Agregacje i unie
-Innych typów, takich jak tablice, struktur i Unii, mieć bardziej rygorystyczne wymagania dotyczące wyrównywania, zapewniając spójne Unii i agregacji magazynu i danych pobierania. Poniżej przedstawiono definicje dla tablic, struktury i Unii:  
+Inne typy, takie jak tablice, struktur i Unii, ma bardziej rygorystyczne wymagania wyrównania, zapewniający spójny Unii i agregacji magazynem i danymi pobierania. Definicje dla tablic, struktury i Unii są następujące:  
   
  Tablica  
- Zawiera grupę uporządkowanych danych sąsiadujących ze sobą obiektów. Każdy obiekt nosi nazwę elementu. Wszystkie elementy w tablicy ma ten sam typ danych i rozmiar.  
+ Zawiera grupę uporządkowane obiekty sąsiadujące danych. Każdy obiekt jest nazywany elementu. Wszystkie elementy w tablicy mają ten sam rozmiar i typ danych.  
   
  Struktura  
- Zawiera grupę uporządkowanej obiektów danych. W odróżnieniu od elementów tablicy obiektów danych w ramach struktury może mieć różne typy danych i rozmiary. Każdy obiekt danych w strukturze nosi nazwę członka.  
+ Zawiera grupę uporządkowane obiektów danych. W odróżnieniu od elementów tablicy obiektów danych w ramach struktury może mieć różne typy danych i rozmiary. Każdy obiekt danych w strukturze nosi nazwę członka.  
   
  Union  
- Obiekt przechowujący dowolny zbiór nazwanych elementów członkowskich. Nazwany zestaw elementów członkowskich mogą być dowolnego typu. Magazyn przydzielony do Unii jest równa magazynu wymaganego przez największy członkiem tej Unii, a także wszelkie uzupełnienia wymagane w celu wyrównywania.  
+ Obiekt, który zawiera jeden zestaw nazwanych elementów członkowskich. Nazwany zestaw elementów członkowskich mogą być dowolnego typu. Magazyn przydzielony dla Unii jest równy magazynu wymaganego dla największego elementu członkowskiego tej Unii, a także wszelkie dopełnienie wymaganych do wyrównania.  
   
  W poniższej tabeli przedstawiono silnie sugerowane wyrównanie skalarne elementów członkowskich Unii i struktur.  
   
 ||||  
 |-|-|-|  
-|Typ skalarne|C — typ danych|Wyrównanie wymagane|  
-|**INT8**|`char`|Byte|  
-|**UINT8**|`unsigned char`|Byte|  
+|Typ skalarny|Typ danych C|Wymagane wyrównania|  
+|**INT8**|**char**|Byte|  
+|**UINT8**|**unsigned char**|Byte|  
 |**INT16**|**short**|Word|  
 |**UINT16**|**short bez znaku**|Word|  
-|**INT32**|**int, długi**|Bitowego|  
-|**UINT32**|**unsigned int, long bez znaku**|Bitowego|  
-|**INT64**|`__int64`|Quadword|  
+|**INT32**|**int**, **długi**|Bitowego|  
+|**UINT32**|**unsigned int, niepodpisane długa**|Bitowego|  
+|**INT64**|**__int64**|Quadword|  
 |**UINT64 —**|**__int64 bez znaku**|Quadword|  
-|**FP32 (pojedynczy dokładności)**|**float**|Bitowego|  
+|**FP32 (Pojedyncza precyzja)**|**float**|Bitowego|  
 |**FP64 (Podwójna precyzja)**|**double**|Quadword|  
-|**WSKAŹNIK**|**\***|Quadword|  
-|`__m64`|**__m64 — struktura**|Quadword|  
-|`__m128`|**__m128 — struktura**|Octaword|  
+|**WSKAŹNIK**|<strong>\*</strong>|Quadword|  
+|**__m64**|**__m64 — struktura**|Quadword|  
+|**__m128**|**__m128 — struktura**|Octaword|  
   
- Mają zastosowanie następujące reguły wyrównanie agregacji:  
+ Obowiązują następujące reguły wyrównanie agregacji:  
   
--   Wyrównanie tablicy jest taka sama jak wyrównania elementów tablicy.  
+-   Wyrównanie w tablicy jest taka sama jak wyrównanie elementów tablicy.  
   
--   Wyrównanie początku struktury lub Unii jest maksymalną wyrównanie poszczególnych członków. Każdy element członkowski w ramach struktury lub Unii muszą być umieszczone na jego prawidłowego wyrównania, zgodnie z definicją w poprzedniej tabeli, które mogą wymagać niejawna wypełnienia wewnętrznej, w zależności od poprzedni element członkowski.  
+-   Wyrównanie początku struktury lub Unii jest maksymalna wyrównanie dowolnego członka. Każdy element członkowski w obrębie struktury lub Unii muszą być umieszczone na jego odpowiednie wyrównanie, zgodnie z definicją w poprzedniej tabeli, które mogą wymagać niejawne dopełnienie wewnętrzne, w zależności od poprzedniego elemenut Członkowskiego.  
   
--   Struktura rozmiar musi być wielokrotnością jego dostosowania, które mogą wymagać uzupełniania po ostatnim elemencie członkowskim. Ponieważ struktur i Unii można grupować w tablicach, każdy element tablicy struktura lub związek musi rozpocząć i końcu prawidłowego wyrównania wcześniej określona.  
+-   Rozmiar struktury musi być wielokrotnością jego wyrównania, która może wymagać dopełnienie po ostatni element członkowski. Ponieważ struktur i Unii mogą być grupowane w tablicach, każdego elementu tablicy, struktury lub Unii należy rozpocząć i końcu prawidłowego wyrównania wcześniej określona.  
   
--   Istnieje możliwość wyrównanie w taki sposób, aby mieć większe wymagania dotyczące wyrównywania tak długo, jak wcześniejsze reguły są obsługiwane.  
+-   Istnieje możliwość wyrównanie danych w taki sposób, aby być większa niż wymagania wyrównania, tak długo, jak poprzednich zasad są obsługiwane.  
   
--   Poszczególne kompilatora mogą dostosować pakowania struktury przyczyn rozmiar. Na przykład [/Zp (wyrównanie członka struktury)](../build/reference/zp-struct-member-alignment.md) umożliwia dostosowanie pakowania struktur.  
+-   Poszczególne kompilator może dostosować pakowanie struktury powodów rozmiar. Na przykład [/ZP (wyrównanie członka struktury)](../build/reference/zp-struct-member-alignment.md) umożliwia dostosowanie pakowanie struktur.  
   
 ## <a name="see-also"></a>Zobacz też  
  [Typy i magazyn](../build/types-and-storage.md)

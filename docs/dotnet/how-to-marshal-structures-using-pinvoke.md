@@ -1,5 +1,5 @@
 ---
-title: 'Porady: kierowanie struktur za pomocą funkcji PInvoke | Dokumentacja firmy Microsoft'
+title: 'Porady: przeprowadzanie Marshalingu struktur za pomocą funkcji PInvoke | Dokumentacja firmy Microsoft'
 ms.custom: get-started-article
 ms.date: 11/04/2016
 ms.technology:
@@ -18,36 +18,36 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 4ff1801c9bb2de06ae2717e8f69bcd39fdf3bc98
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: a26394a906f40d6dc194118bb312cfe1a0ce834e
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33136616"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43219887"
 ---
 # <a name="how-to-marshal-structures-using-pinvoke"></a>Porady: przeprowadzanie marshalingu struktur za pomocą funkcji PInvoke
-W tym dokumencie opisano sposób natywny funkcje, których struktury w stylu języka C może zostać wywołana z funkcji zarządzanych przez przy użyciu metody P/Invoke. Mimo że zalecane jest użycie funkcji międzyoperacyjności języka C++, zamiast P/Invoke ponieważ P/Invoke zapewnia małego błąd kompilacji raportowania, nie jest bezpieczne i może być niewygodne wdrożenia, jeśli niezarządzanego API jest dostarczana jako biblioteki DLL i kod źródłowy jest dostępne, P/Invoke jest jedyną opcją. W przeciwnym razie można znaleźć w następujących dokumentach:  
+W tym dokumencie wyjaśniono, jak natywne funkcje, których struktury stylu C może być wywoływana z funkcji zarządzanej przez przy użyciu metody P/Invoke. Mimo że zaleca się, że korzystasz z funkcji międzyoperacyjności języka C++, a nie P/Invoke ponieważ P/Invoke zapewnia nieco błąd kompilacji, raportowanie, nie jest bezpieczny i może być uciążliwe zaimplementować, jeśli niezarządzanego interfejsu API jest spakowany jako biblioteki DLL i kod źródłowy jest dostępne metody P/Invoke jest jedyną opcją. W przeciwnym razie można znaleźć w następujących dokumentach:  
   
 -   [Korzystanie z międzyoperacyjności języka C++ (niejawna funkcja PInvoke)](../dotnet/using-cpp-interop-implicit-pinvoke.md)
   
 -   [Instrukcje: przeprowadzanie marshalingu ciągów za pomocą funkcji PInvoke](../dotnet/how-to-marshal-strings-using-pinvoke.md)
   
- Domyślnie struktury natywnych i zarządzanych są wyświetlane inaczej w pamięci, dlatego pomyślnie przekazywanie struktur granicy zarządzanych/niezarządzanych wymaga dodatkowych czynności w celu zachowania integralności danych.  
+ Domyślnie struktur natywnych i zarządzanych są wyświetlane inaczej w pamięci, dlatego pomyślnie przekazywanie struktury przez granicę zarządzanych/niezarządzanych wymaga wykonania dodatkowych czynności w celu zachowania integralności danych.  
   
- W tym dokumencie opisano kroki wymagane do zdefiniowania zarządzanych odpowiedników natywnego struktur i jak wynikowy struktury mogą zostać przekazane z funkcjami niezarządzanymi. Ten dokument przy założeniu, że proste struktury — te, które nie zawierają ciągi lub wskaźniki — są używane. Aby uzyskać informacje o współdziałaniu niekopiowalne, zobacz [za pomocą międzyoperacyjności języka C++ (niejawna funkcja PInvoke)](../dotnet/using-cpp-interop-implicit-pinvoke.md). P/Invoke nie może mieć niekopiowalne jako do wartości zwracanej. Typy Kopiowalne ma taką samą reprezentację w kodzie zarządzane i niezarządzane. Aby uzyskać więcej informacji, zobacz [Kopiowalne i typy Kopiowalne inne niż](http://msdn.microsoft.com/Library/d03b050e-2916-49a0-99ba-f19316e5c1b3).  
+ W tym dokumencie opisano kroki wymagane do zdefiniowania zarządzanych odpowiedników funkcji natywnej struktury i jak wynikowy struktury mogą być przekazywane do funkcji niezarządzanych. W tym dokumencie założono, że prosty struktur — te, które nie zawierają ciągi lub wskaźniki — są używane. Aby uzyskać informacje o współdziałaniu niekopiowalnych, zobacz [za pomocą międzyoperacyjności języka C++ (niejawna funkcja PInvoke)](../dotnet/using-cpp-interop-implicit-pinvoke.md). Zwracana wartość metody P/Invoke nie może być typów niekopiowalnych. Typy Kopiowalne mają tę samą reprezentację w kodzie zarządzanym i niezarządzanym. Aby uzyskać więcej informacji, zobacz [Kopiowalne i typy danych Kopiowalnych inne niż](https://msdn.microsoft.com/Library/d03b050e-2916-49a0-99ba-f19316e5c1b3).  
   
- Organizowanie proste, struktur danych kopiowalnych granicy zarządzanych/niezarządzanych najpierw wymaga zdefiniowania zarządzanych wersje każdego natywnego struktury. Te struktury może mieć dowolną nazwę prawne; nie ma żadnej zależności między wersjami natywnych i zarządzanych dwie struktury niż ich układ danych. W związku z tym jest niezbędne, aby zarządzanej wersji zawiera pola, które są takie same, rozmiar i w tej samej kolejności jak natywną wersję. (Nie istnieje mechanizm dla zapewniające zarządzanego i natywnego wersji struktury, więc niezgodności nie staną się widoczne do czasu wykonywania. Jest odpowiedzialny za programisty, aby upewnić się, że dwie struktury mają ten sam układ danych).  
+ Marshaling prosty, struktur danych kopiowalnych granicę zarządzanych/niezarządzanych najpierw wymaga zdefiniowania zarządzanej wersji natywnej struktury. Te struktury mogą mieć dowolną nazwę prawne; nie ma relacji między wersjami natywnych i zarządzanych dwie struktury inne niż ich układ danych. Dlatego jest istotne, że zarządzanej wersji zawiera pola, które są takie same, rozmiar i w tej samej kolejności, jak natywnej wersji. (Nie ma mechanizmu za zapewnienie, że zarządzanego i natywnego wersje struktury są równoważne, więc niezgodności nie staną się widoczne do czasu wykonywania. Jest odpowiedzialny za programisty, aby upewnić się, że dwie struktury mają taki sam układ danych).  
   
- Ponieważ członków struktur zarządzane są czasami przestawiać względów wydajności, jest konieczne użycie <xref:System.Runtime.InteropServices.StructLayoutAttribute> atrybutu, aby wskazać, że struktura układ sekwencyjnie. Jest również dobrym pomysłem jest jawnie ustawiona struktura pakowania ustawienie, aby być taka sama jak używany przez natywnego struktury. (Mimo że domyślnie Visual C++ używa struktury 8-bajtowych pakowania zarówno kod zarządzany).  
+ Ponieważ członkowie struktury zarządzane są czasami zostaną przestawione do celów wydajności, należy go używać <xref:System.Runtime.InteropServices.StructLayoutAttribute> atrybutu, aby wskazać, że struktura są ułożone w sekwencyjnie. Jest również dobrym pomysłem jest jawnie ustawione strukturze, pakowania ustawienie, aby być taka sama, jak te stosowane w natywnej struktury. (Mimo że domyślnie Visual C++ używa struktury 8-bajtowych pakowania dla obu kodu zarządzanego).  
   
-1.  Następnie użyj <xref:System.Runtime.InteropServices.DllImportAttribute> zadeklarować punktów wejścia, które odpowiadają niezarządzane funkcje, które akceptują strukturę, ale zarządzanej wersji struktury w sygnatury funkcji, który jest punktem moot, korzystając z tej samej nazwy dla obie wersje Struktura.  
+1.  Następnie użyj <xref:System.Runtime.InteropServices.DllImportAttribute> zadeklarować punktów wejścia, które odnoszą się do funkcji niezarządzanych, które akceptują strukturę, ale korzystać z zarządzanej wersji struktury w sygnatur funkcji, która jest punktem moot, jeśli użyjesz tej samej nazwy dla obu wersji systemu Struktura.  
   
-2.  Teraz kod zarządzany można przekazać zarządzanej wersji struktury z funkcjami niezarządzanymi tak, jakby są faktycznie zarządzanego funkcji. Te struktury mogą być przekazywane przez wartość lub przez odwołanie, jak pokazano w poniższym przykładzie.  
+2.  Teraz kod zarządzany można przekazać zarządzanej wersji struktury z funkcjami niezarządzanymi tak, jakby są faktycznie zarządzanej funkcji. Te struktury mogą być przekazywane przez wartość lub przez odwołanie, jak pokazano w poniższym przykładzie.  
   
 ## <a name="example"></a>Przykład  
- Poniższy kod składa się z modułu zarządzanych i niezarządzanych. Moduł niezarządzanym jest bibliotekę DLL, która definiuje strukturę o nazwie lokalizacji i funkcji o nazwie GetDistance, który akceptuje dwa wystąpienia struktury lokalizacji. Drugi moduł jest aplikacją wiersza polecenia zarządzanych, importuje funkcja GetDistance, ale definiuje ją pod względem odpowiednika zarządzanych konstrukcji lokalizacji MLocation. W praktyce tej samej nazwie będzie prawdopodobnie używany na potrzeby obie wersje konstrukcji; jednak różnych nazwa jest używana w tym miejscu wykazać, że prototypu DllImport jest zdefiniowany w zarządzanej wersji.  
+ Poniższy kod składa się z modułu zarządzanego i niezarządzanego. Moduł niezarządzane to biblioteki DLL, który definiuje strukturę o nazwie lokalizacji i funkcji o nazwie GetDistance, który akceptuje dwa wystąpienia struktury lokalizacji. Drugi moduł jest zarządzanej aplikacji wiersza polecenia, która importuje funkcja GetDistance, ale definiuje go pod kątem zarządzanych wielokrotność struktury lokalizacji MLocation. W praktyce takiej samej nazwie prawdopodobnie będzie używana dla obu wersji struktury; jednak innej nazwy służy tutaj do pokazują, że prototyp DllImport jest zdefiniowany w zarządzanej wersji.  
   
- Należy pamiętać, że żadna jego część biblioteki DLL jest narażony na kod zarządzany przy użyciu tradycyjnych # dyrektywy include. W rzeczywistości plik DLL, który jest dostępny tylko w czasie wykonywania, problemy z funkcjami zaimportowane z DllImport nie zostanie wykryty w czasie kompilacji.  
+ Należy pamiętać, że części biblioteki DLL jest uwidaczniany związane z kodem zarządzanym przy użyciu tradycyjnych # dyrektywy include. W rzeczywistości biblioteki DLL jest dostępny tylko w czasie wykonywania, dzięki czemu problemy z funkcjami zaimportowane wraz z DllImport nie zostanie wykryty w czasie kompilacji.  
   
 ```  
 // TraditionalDll3.cpp  

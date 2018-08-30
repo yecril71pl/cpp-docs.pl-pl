@@ -33,12 +33,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7f4e8a20ef31f4379e7ddf6b7425fd7ecc70294a
-ms.sourcegitcommit: e9ce38decc9f986edab5543de3464b11ebccb123
+ms.openlocfilehash: 7c5f66975d8d9904d1a4a8f2d26d4fe98ecfdd40
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/13/2018
-ms.locfileid: "42464936"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43223028"
 ---
 # <a name="localeconv"></a>localeconv
 
@@ -79,7 +79,7 @@ n_sep_by_space|Wartość 1, jeśli symbol waluty jest oddzielona od wartości sf
 p_sign_posn|Pozycja znaku dodatniego nieujemna sformatowane ilości pieniężnych.
 n_sign_posn|Pozycja znaku dodatniego w ilości ujemne pieniężnych sformatowany.
 
-Z wyjątkiem jako członkowie określonej, **lconv —** strukturę, która ma `char *` i `wchar_t *` wersje są wskaźnikami do ciągów. Żadnego z tych, które jest równa **""** (lub **L ""** dla **wchar_t \*** ) jest o zerowej długości lub nie jest obsługiwana przy bieżących ustawieniach regionalnych. Należy pamiętać, że **decimal_point —** i **_W_decimal_point** są zawsze obsługiwane i długości wartość różną od zera.
+Z wyjątkiem jako członkowie określonej, **lconv —** strukturę, która ma `char *` i `wchar_t *` wersje są wskaźnikami do ciągów. Żadnego z tych, które jest równa **""** (lub **L ""** dla **wchar_t** <strong>\*</strong>) ma wartość zerową długość, lub nie jest obsługiwane w bieżącym Ustawienia regionalne. Należy pamiętać, że **decimal_point —** i **_W_decimal_point** są zawsze obsługiwane i długości wartość różną od zera.
 
 **Char** elementy członkowskie struktury są małymi liczbami nieujemna nie znaków. Żadnego z tych, które jest równa **CHAR_MAX** nie jest obsługiwana przy bieżących ustawieniach regionalnych.
 

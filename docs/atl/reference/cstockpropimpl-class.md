@@ -74,12 +74,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b00d66c8d3842c03cc58e389bc308bc9515369b3
-ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
+ms.openlocfilehash: a3625667ccdbff85291d82ea519815bfc30c600f
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37882266"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43219813"
 ---
 # <a name="cstockpropimpl-class"></a>Klasa CStockPropImpl
 Ta klasa dostarcza metody do obsługi wartości właściwości podstawowych.  
@@ -502,7 +502,7 @@ HRESULT STDMETHODCALLTYPE get_Picture(IPictureDisp** ppPicture);
   
 ### <a name="parameters"></a>Parametry  
  *ppPicture*  
- Zmienna, która otrzymuje wskaźnik do właściwości obrazu. Zobacz [elementu IPictureDisp](http://msdn.microsoft.com/library/windows/desktop/ms680762) Aby uzyskać więcej informacji.  
+ Zmienna, która otrzymuje wskaźnik do właściwości obrazu. Zobacz [elementu IPictureDisp](https://msdn.microsoft.com/library/windows/desktop/ms680762) Aby uzyskać więcej informacji.  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Zwraca wartość S_OK w przypadku powodzenia lub błędu HRESULT w przypadku niepowodzenia.  
@@ -869,7 +869,7 @@ HRESULT STDMETHODCALLTYPE put_Picture(IPictureDisp* pPicture);
   
 ### <a name="parameters"></a>Parametry  
  *pPicture*  
- Wskaźnik do właściwości obrazu. Zobacz [elementu IPictureDisp](http://msdn.microsoft.com/library/windows/desktop/ms680762) Aby uzyskać więcej informacji.  
+ Wskaźnik do właściwości obrazu. Zobacz [elementu IPictureDisp](https://msdn.microsoft.com/library/windows/desktop/ms680762) Aby uzyskać więcej informacji.  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Zwraca wartość S_OK w przypadku powodzenia lub błędu HRESULT w przypadku niepowodzenia.  
@@ -990,7 +990,7 @@ HRESULT STDMETHODCALLTYPE putref_Picture(IPictureDisp* pPicture);
   
 ### <a name="parameters"></a>Parametry  
  *pPicture*  
- Wskaźnik do właściwości obrazu. Zobacz [elementu IPictureDisp](http://msdn.microsoft.com/library/windows/desktop/ms680762) Aby uzyskać więcej informacji.  
+ Wskaźnik do właściwości obrazu. Zobacz [elementu IPictureDisp](https://msdn.microsoft.com/library/windows/desktop/ms680762) Aby uzyskać więcej informacji.  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Zwraca wartość S_OK w przypadku powodzenia lub błędu HRESULT w przypadku niepowodzenia.  

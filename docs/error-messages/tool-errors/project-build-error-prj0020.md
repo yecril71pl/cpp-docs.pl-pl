@@ -1,7 +1,7 @@
 ---
 title: Błąd PRJ0020 kompilacji projektu | Dokumentacja firmy Microsoft
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 08/27/2018
 ms.technology:
 - cpp-diagnostics
 ms.topic: error-reference
@@ -16,18 +16,19 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: dd7ad1b3952da6282c0b9179b9fcc3dbab89cc54
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 5d5f87dd50f52acb482a471708d1d20cc9853e02
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33317677"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43214060"
 ---
 # <a name="project-build-error-prj0020"></a>Błąd PRJ0020 kompilacji projektu
-Narzędzie "narzędzia" właściwości "property" zawiera nieprawidłowy "pliku".  
-  
- Nazwa pliku ***pliku***, określonego we właściwości ***właściwości***, narzędzia, ***narzędzia***, jest nieprawidłowy.  
-  
- Użyto nieznanego lub nieprawidłowego makra.  
-  
- Zobacz [Ustawianie właściwości projektu Visual C++](../../ide/working-with-project-properties.md) informacji na temat sposobu dostępu do właściwości projektu.
+
+> Narzędzie '*narzędzie*", właściwość"*właściwość*"zawiera niepoprawną nazwę pliku"*pliku*".
+
+Nazwa pliku *pliku*określone we właściwości *właściwość* narzędzia *narzędzie*, był nieprawidłowy.
+
+Być może użyto nieznanego lub nieprawidłowego — makro.
+
+Zobacz [ustawienie właściwości projektu Visual C++](../../ide/working-with-project-properties.md) informacji na temat uzyskiwania dostępu do właściwości projektu.

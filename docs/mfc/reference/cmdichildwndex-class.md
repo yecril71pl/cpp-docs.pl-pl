@@ -122,12 +122,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 091c201b3b0b67879178d32f495410a1bbe22a53
-ms.sourcegitcommit: b92ca0b74f0b00372709e81333885750ba91f90e
+ms.openlocfilehash: 4779b832eaff7a322184adf1734f69d266c05331
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/16/2018
-ms.locfileid: "42465626"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43219112"
 ---
 # <a name="cmdichildwndex-class"></a>Klasa CMDIChildWndEx
 `CMDIChildWndEx` Klasa oferuje funkcje Windows okna podrzędnego interfejsu (MDI) w usłudze wielu dokumentów. Rozszerza funkcjonalność [klasa CMDIChildWnd](../../mfc/reference/cmdichildwnd-class.md). Struktura wymaga tej klasy, gdy aplikacja MDI używa niektórych klas MFC.  
@@ -192,7 +192,7 @@ class CMDIChildWndEx : public CMDIChildWnd
 |[CMDIChildWndEx::OnTaskbarTabThumbnailStretch](#ontaskbartabthumbnailstretch)|Wywoływane przez platformę, kiedy zachodzi potrzeba stretch mapę bitową Windows 7 zadań kartę miniatury podgląd elementu podrzędnego MDI.|  
 |[CMDIChildWndEx::OnUpdateFrameTitle](#onupdateframetitle)|Metoda wywoływana przez platformę, aby zaktualizować tytuł ramki. (Przesłania `CMDIChildWnd::OnUpdateFrameTitle`.)|  
 |[CMDIChildWndEx::PaneFromPoint](#panefrompoint)|Zwraca okienko, który zawiera danego punktu.|  
-|`CMDIChildWndEx::PreTranslateMessage`|Używane przez klasę [CWinApp](../../mfc/reference/cwinapp-class.md) do translacji komunikatów okien, zanim zostaną rozesłane do [TranslateMessage](http://msdn.microsoft.com/library/windows/desktop/ms644955) i [DispatchMessage](http://msdn.microsoft.com/library/windows/desktop/ms644934) funkcje Windows. (Przesłania [CWnd::PreTranslateMessage](../../mfc/reference/cwnd-class.md#pretranslatemessage).)|  
+|`CMDIChildWndEx::PreTranslateMessage`|Używane przez klasę [CWinApp](../../mfc/reference/cwinapp-class.md) do translacji komunikatów okien, zanim zostaną rozesłane do [TranslateMessage](https://msdn.microsoft.com/library/windows/desktop/ms644955) i [DispatchMessage](https://msdn.microsoft.com/library/windows/desktop/ms644934) funkcje Windows. (Przesłania [CWnd::PreTranslateMessage](../../mfc/reference/cwnd-class.md#pretranslatemessage).)|  
 |[CMDIChildWndEx::RecalcLayout](#recalclayout)|Ponownie oblicza układ okna.|  
 |[CMDIChildWndEx::RegisterTaskbarTab](#registertaskbartab)|Rejestruje elementu podrzędnego MDI za pomocą karty zadań Windows 7.|  
 |[CMDIChildWndEx::RemovePaneFromDockManager](#removepanefromdockmanager)|Usuwa okienko dokowania menedżera.|  

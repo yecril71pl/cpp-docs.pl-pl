@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 928f4fe5200d9ea03541976664d472d9e99e1147
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: ae2d5121e17a9325ec45143e7e90e7d2a211f380
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42575693"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43223101"
 ---
 # <a name="helpstring"></a>helpstring
 
@@ -43,7 +43,7 @@ Tekst Ciąg pomocy.
 
 ## <a name="remarks"></a>Uwagi
 
-**HelpString —** atrybut C++ ma taką samą funkcjonalność jak [HelpString —](http://msdn.microsoft.com/library/windows/desktop/aa366856) atrybutów w MIDL.
+**HelpString —** atrybut C++ ma taką samą funkcjonalność jak [HelpString —](/windows/desktop/Midl/helpstring) atrybutów w MIDL.
 
 ## <a name="example"></a>Przykład
 

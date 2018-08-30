@@ -24,12 +24,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: dc6d39b3f636407e3ae72289b5afe12ed1084a4f
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: 23aacdfca1dbc958c16223d7d57cec39ef65267b
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37852513"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43221804"
 ---
 # <a name="cricheditdoc-class"></a>Klasa CRichEditDoc
 Za pomocą [CRichEditView](../../mfc/reference/cricheditview-class.md) i [CRichEditCntrItem](../../mfc/reference/cricheditcntritem-class.md), zapewnia funkcję rozwiniętej kontroli edycji w kontekście architektury widoku dokumentu MFC.  
@@ -92,7 +92,7 @@ virtual CRichEditCntrItem* CreateClientItem(REOBJECT* preo = NULL) const = 0;
   
 ### <a name="parameters"></a>Parametry  
  *preo*  
- Wskaźnik do [REOBJECT](http://msdn.microsoft.com/library/windows/desktop/bb787946) struktury, które opisują elementu OLE. Nowy `CRichEditCntrItem` obiekt jest konstruowany wokół tego elementu OLE. Jeśli *preo* ma wartość NULL, nowy element klienta jest pusta.  
+ Wskaźnik do [REOBJECT](/windows/desktop/api/richole/ns-richole-_reobject) struktury, które opisują elementu OLE. Nowy `CRichEditCntrItem` obiekt jest konstruowany wokół tego elementu OLE. Jeśli *preo* ma wartość NULL, nowy element klienta jest pusta.  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Wskaźnik do nowego [CRichEditCntrItem](../../mfc/reference/cricheditcntritem-class.md) obiektu, która została dodana do tego dokumentu.  
@@ -100,7 +100,7 @@ virtual CRichEditCntrItem* CreateClientItem(REOBJECT* preo = NULL) const = 0;
 ### <a name="remarks"></a>Uwagi  
  Ta funkcja nie wykonuje żadnych Inicjalizacja OLE.  
   
- Aby uzyskać więcej informacji, zobacz [REOBJECT](http://msdn.microsoft.com/library/windows/desktop/bb787946) struktury w zestawie Windows SDK.  
+ Aby uzyskać więcej informacji, zobacz [REOBJECT](/windows/desktop/api/richole/ns-richole-_reobject) struktury w zestawie Windows SDK.  
   
 ##  <a name="getstreamformat"></a>  CRichEditDoc::GetStreamFormat  
  Wywołaj tę funkcję, aby określić format tekstu dla przesyłania strumieniowego zawartości bogatej edycji.  

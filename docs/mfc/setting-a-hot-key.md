@@ -16,19 +16,19 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3987ddee98ae35e02a181e38cd71f181801aeb61
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 254d7532b83a4f30c0029b2488bb0b2111cce31d
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33379648"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43219400"
 ---
 # <a name="setting-a-hot-key"></a>Ustawianie klawisza dostępu
-Aplikacja może używać informacji dostarczonych przez klawisza dostępu ([CHotKeyCtrl](../mfc/reference/chotkeyctrl-class.md)) formantu w jeden z dwóch sposobów:  
+Aplikacja może użyć informacji dostarczonych przez klawisza dostępu ([CHotKeyCtrl](../mfc/reference/chotkeyctrl-class.md)) kontrolki w jeden z dwóch sposobów:  
   
--   Ustawianie globalnych klawisza dostępu do aktywacji okna nonchild wysyłając [WM_SETHOTKEY](http://msdn.microsoft.com/library/windows/desktop/ms646284) wiadomości do okna do aktywacji.  
+-   Konfigurowanie globalny klawisz dostępu do aktywacji okna nonchild, wysyłając [WM_SETHOTKEY](/windows/desktop/inputdev/wm-sethotkey) komunikat w oknie zostanie uaktywniony.  
   
--   Konfigurowanie klawisza dostępu właściwe dla wątków przez wywołanie funkcji systemu Windows [RegisterHotKey](http://msdn.microsoft.com/library/windows/desktop/ms646309).  
+-   Ustawianie klawisza dostępu właściwe dla wątków, wywołując funkcję Windows [RegisterHotKey](https://msdn.microsoft.com/library/windows/desktop/ms646309).  
   
 ## <a name="see-also"></a>Zobacz też  
  [Korzystanie z CHotKeyCtrl](../mfc/using-chotkeyctrl.md)   

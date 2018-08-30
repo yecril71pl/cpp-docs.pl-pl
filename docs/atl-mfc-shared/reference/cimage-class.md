@@ -64,15 +64,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8217ee5bdcad15a2c0b89f95000360b979e094ea
-ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
+ms.openlocfilehash: 3443c85ce7f3f12e334e074e1ce37c9cab2ce9d8
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37883622"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43213617"
 ---
 # <a name="cimage-class"></a>CImage, klasa
-`CImage` zapewnia obsługę rozszerzonych mapy bitowej, łącznie z możliwością ładowania i zapisać obrazy w formacie JPEG, GIF, BMP i przenośnych Network Graphics (PNG).  
+`CImage` Zapewnia obsługę rozszerzonych mapy bitowej, łącznie z możliwością ładowania i zapisać obrazy w formacie JPEG, GIF, BMP i przenośnych Network Graphics (PNG).  
   
 > [!IMPORTANT]
 >  Ta klasa i jej elementów członkowskich nie można użyć w aplikacjach korzystających ze środowiska wykonawczego Windows.  
@@ -263,7 +263,7 @@ BOOL AlphaBlend(
  Funkcja przenikaniem alfa dla źródłowego i docelowego, mapy bitowe, wartości alfa globalnej mają być stosowane do całego źródłową mapę bitową i informacji o formacie dla źródłową mapę bitową. Funkcje programu blend źródłowe i docelowe są obecnie ograniczone do AC_SRC_OVER.  
   
  *pointDest*  
- Odwołanie do [punktu](http://msdn.microsoft.com/library/windows/desktop/dd162805) struktura, która identyfikuje lewym górnym rogu prostokąta docelowego, w jednostkach logicznych.  
+ Odwołanie do [punktu](https://msdn.microsoft.com/library/windows/desktop/dd162805) struktura, która identyfikuje lewym górnym rogu prostokąta docelowego, w jednostkach logicznych.  
   
  *nDestWidth*  
  Szerokość w jednostkach logicznych, prostokąta docelowego.  
@@ -284,7 +284,7 @@ BOOL AlphaBlend(
  Wysokość w jednostkach logicznych, prostokąta źródłowego.  
   
  *rectDest*  
- Odwołanie do [Prostokąt](http://msdn.microsoft.com/library/windows/desktop/dd162897) struktury, identyfikacji miejsca docelowego.  
+ Odwołanie do [Prostokąt](https://msdn.microsoft.com/library/windows/desktop/dd162897) struktury, identyfikacji miejsca docelowego.  
   
  *rectSrc*  
  Odwołanie do `RECT` struktury, identyfikacji źródła.  
@@ -363,10 +363,10 @@ BOOL BitBlt(
  Logiczną współrzędną y lewego górnego rogu prostokąta docelowego.  
   
  *dwROP*  
- Operację rastrową, która ma być wykonana. Kody operacji rastrowych definiują dokładnie, jak połączyć usługi bits źródła, miejsca docelowego i wzorca (zgodnie z definicją aktualnie wybrany pędzel) w celu utworzenia miejsca docelowego. Zobacz [BitBlt](http://msdn.microsoft.com/library/windows/desktop/dd183370) w zestawie Windows SDK dla listy inne kody operacji rastrowych oraz ich opisy.  
+ Operację rastrową, która ma być wykonana. Kody operacji rastrowych definiują dokładnie, jak połączyć usługi bits źródła, miejsca docelowego i wzorca (zgodnie z definicją aktualnie wybrany pędzel) w celu utworzenia miejsca docelowego. Zobacz [BitBlt](/windows/desktop/api/wingdi/nf-wingdi-bitblt) w zestawie Windows SDK dla listy inne kody operacji rastrowych oraz ich opisy.  
   
  *pointDest*  
- A [punktu](http://msdn.microsoft.com/library/windows/desktop/dd162805) struktury wskazujący lewym górnym rogu prostokąta docelowego.  
+ A [punktu](https://msdn.microsoft.com/library/windows/desktop/dd162805) struktury wskazujący lewym górnym rogu prostokąta docelowego.  
   
  *nDestWidth*  
  Szerokość w jednostkach logicznych, prostokąta docelowego.  
@@ -381,7 +381,7 @@ BOOL BitBlt(
  Logiczną współrzędną y lewego górnego rogu prostokąta źródłowego.  
   
  *rectDest*  
- A [Prostokąt](http://msdn.microsoft.com/library/windows/desktop/dd162897) struktury wskazujący prostokąta docelowego.  
+ A [Prostokąt](https://msdn.microsoft.com/library/windows/desktop/dd162897) struktury wskazujący prostokąta docelowego.  
   
  *pointSrc*  
  A `POINT` struktury wskazujący lewym górnym rogu prostokąta źródłowego.  
@@ -390,7 +390,7 @@ BOOL BitBlt(
  Wartość różną od zera, jeśli to się powiedzie; w przeciwnym razie wartość zero.  
   
 ### <a name="remarks"></a>Uwagi  
- Aby uzyskać więcej informacji, zobacz [BitBlt](http://msdn.microsoft.com/library/windows/desktop/dd183370) w zestawie Windows SDK.  
+ Aby uzyskać więcej informacji, zobacz [BitBlt](/windows/desktop/api/wingdi/nf-wingdi-bitblt) w zestawie Windows SDK.  
   
 ##  <a name="cimage"></a>  CImage::CImage  
  Konstruuje `CImage` obiektu.  
@@ -469,7 +469,7 @@ BOOL CreateEx(
 - Nieskompresowane BI_BITFIELDS format i tabeli kolorów składa się z trzech maski kolor DWORD, które określają składników czerwonego, zielonego i niebieskiego, odpowiednio, każdego piksela. To jest prawidłowa, gdy jest używane z bpp 16 i 32-bitowe.  
   
  *pdwBitfields*  
- Używany tylko, jeśli *eCompression* jest ustawiona na BI_BITFIELDS, w przeciwnym razie musi być wartością NULL. Wskaźnik do tablicy trzy DWORD masek bitowych, określając bity każdego piksela, które są używane dla składników czerwonego, zielonego i niebieskiego koloru, odpowiednio. Aby uzyskać informacji na temat ograniczeń dla pola bitów, zobacz [BITMAPINFOHEADER](http://msdn.microsoft.com/library/windows/desktop/dd183376) w zestawie Windows SDK.  
+ Używany tylko, jeśli *eCompression* jest ustawiona na BI_BITFIELDS, w przeciwnym razie musi być wartością NULL. Wskaźnik do tablicy trzy DWORD masek bitowych, określając bity każdego piksela, które są używane dla składników czerwonego, zielonego i niebieskiego koloru, odpowiednio. Aby uzyskać informacji na temat ograniczeń dla pola bitów, zobacz [BITMAPINFOHEADER](https://msdn.microsoft.com/library/windows/desktop/dd183376) w zestawie Windows SDK.  
   
  *Flagidw*  
  Określa, czy obiekt mapy bitowej ma kanału alfa. Może być kombinacją zero lub więcej z następujących wartości:  
@@ -578,13 +578,13 @@ BOOL Draw(
  Wysokość w jednostkach logicznych, prostokąta źródłowego.  
   
  *rectDest*  
- Odwołanie do [Prostokąt](http://msdn.microsoft.com/library/windows/desktop/dd162897) struktury, identyfikacji miejsca docelowego.  
+ Odwołanie do [Prostokąt](https://msdn.microsoft.com/library/windows/desktop/dd162897) struktury, identyfikacji miejsca docelowego.  
   
  *rectSrc*  
  Odwołanie do `RECT` struktury, identyfikacji źródła.  
   
  *pointDest*  
- Odwołanie do [punktu](http://msdn.microsoft.com/library/windows/desktop/dd162805) struktura, która identyfikuje lewym górnym rogu prostokąta docelowego, w jednostkach logicznych.  
+ Odwołanie do [punktu](https://msdn.microsoft.com/library/windows/desktop/dd162805) struktura, która identyfikuje lewym górnym rogu prostokąta docelowego, w jednostkach logicznych.  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Wartość różną od zera, jeśli to się powiedzie; w przeciwnym razie 0.  
@@ -623,7 +623,7 @@ int GetBPP() const throw();
 ### <a name="remarks"></a>Uwagi  
  Ta wartość określa liczbę bitów, które definiują każdego piksela i maksymalna liczba kolorów w mapie bitowej.  
   
- Liczba bitów na piksel jest zazwyczaj 1, 4, 8, 16, 24 lub 32. Zobacz `biBitCount` członkiem [BITMAPINFOHEADER](http://msdn.microsoft.com/library/windows/desktop/dd183376) w zestawie SDK Windows, aby uzyskać więcej informacji na temat tej wartości.  
+ Liczba bitów na piksel jest zazwyczaj 1, 4, 8, 16, 24 lub 32. Zobacz `biBitCount` członkiem [BITMAPINFOHEADER](https://msdn.microsoft.com/library/windows/desktop/dd183376) w zestawie SDK Windows, aby uzyskać więcej informacji na temat tej wartości.  
   
 ##  <a name="getcolortable"></a>  CImage::GetColorTable  
  Pobiera wartości kolorów (RGB) czerwony, zielony, niebieski z zakresu zapisów w palecie sekcji DIB.  
@@ -642,7 +642,7 @@ void GetColorTable(UINT iFirstColor,
  Liczba wpisów tabeli kolorów do pobrania.  
   
  *prgbColors*  
- Wskaźnik do tablicy [RGBQUAD](http://msdn.microsoft.com/library/windows/desktop/dd162938) struktur, aby pobrać kolor tabeli wpisów.  
+ Wskaźnik do tablicy [RGBQUAD](/windows/desktop/api/wingdi/ns-wingdi-tagrgbquad) struktur, aby pobrać kolor tabeli wpisów.  
   
 ##  <a name="getdc"></a>  CImage::GetDC  
  Pobiera kontekst urządzenia, który aktualnie ma do niego obraz.  
@@ -1179,10 +1179,10 @@ BOOL PlgBlt(
  Współrzędna y lewy górny róg monochromatyczną mapę bitową.  
   
  *rectSrc*  
- Odwołanie do [Prostokąt](http://msdn.microsoft.com/library/windows/desktop/dd162897) struktury określenia współrzędnych prostokąta źródłowego.  
+ Odwołanie do [Prostokąt](https://msdn.microsoft.com/library/windows/desktop/dd162897) struktury określenia współrzędnych prostokąta źródłowego.  
   
  *pointMask*  
- A [punktu](http://msdn.microsoft.com/library/windows/desktop/dd162805) struktury wskazujący lewym górnym rogu mapy bitowej maski.  
+ A [punktu](https://msdn.microsoft.com/library/windows/desktop/dd162805) struktury wskazujący lewym górnym rogu mapy bitowej maski.  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Wartość różną od zera, jeśli to się powiedzie, w przeciwnym razie 0.  
@@ -1190,7 +1190,7 @@ BOOL PlgBlt(
 ### <a name="remarks"></a>Uwagi  
  Jeśli *hbmMask* identyfikuje Nieprawidłowa mapa bitowa monochromatyczna, `PlgBit` używa tej mapy bitowej do maski bitów dane koloru z prostokąta źródłowego.  
   
- Ta metoda ma zastosowanie do systemu Windows NT, w wersji 4.0 lub nowsza. Zobacz [PlgBlt](http://msdn.microsoft.com/library/windows/desktop/dd162804) w zestawie Windows SDK dla bardziej szczegółowych informacji.  
+ Ta metoda ma zastosowanie do systemu Windows NT, w wersji 4.0 lub nowsza. Zobacz [PlgBlt](/windows/desktop/api/wingdi/nf-wingdi-plgblt) w zestawie Windows SDK dla bardziej szczegółowych informacji.  
   
 ##  <a name="releasedc"></a>  CImage::ReleaseDC  
  Udostępnia kontekst urządzenia.  
@@ -1268,7 +1268,7 @@ void SetColorTable(
  Liczba wpisy tabeli kolorów do ustawienia.  
   
  *prgbColors*  
- Wskaźnik do tablicy [RGBQUAD](http://msdn.microsoft.com/library/windows/desktop/dd162938) struktury, aby ustawić kolor tabeli wpisów.  
+ Wskaźnik do tablicy [RGBQUAD](/windows/desktop/api/wingdi/ns-wingdi-tagrgbquad) struktury, aby ustawić kolor tabeli wpisów.  
   
 ### <a name="remarks"></a>Uwagi  
  Ta metoda obsługuje tylko DIB sekcji bitmapy.  
@@ -1408,10 +1408,10 @@ BOOL StretchBlt(
  Wysokość w jednostkach logicznych, prostokąta docelowego.  
   
  *dwROP*  
- Operację rastrową, która ma być wykonana. Kody operacji rastrowych definiują dokładnie, jak połączyć usługi bits źródła, miejsca docelowego i wzorca (zgodnie z definicją aktualnie wybrany pędzel) w celu utworzenia miejsca docelowego. Zobacz [BitBlt](http://msdn.microsoft.com/library/windows/desktop/dd183370) w zestawie Windows SDK dla listy inne kody operacji rastrowych oraz ich opisy.  
+ Operację rastrową, która ma być wykonana. Kody operacji rastrowych definiują dokładnie, jak połączyć usługi bits źródła, miejsca docelowego i wzorca (zgodnie z definicją aktualnie wybrany pędzel) w celu utworzenia miejsca docelowego. Zobacz [BitBlt](/windows/desktop/api/wingdi/nf-wingdi-bitblt) w zestawie Windows SDK dla listy inne kody operacji rastrowych oraz ich opisy.  
   
  *rectDest*  
- Odwołanie do [Prostokąt](http://msdn.microsoft.com/library/windows/desktop/dd162897) struktury, identyfikacji miejsca docelowego.  
+ Odwołanie do [Prostokąt](https://msdn.microsoft.com/library/windows/desktop/dd162897) struktury, identyfikacji miejsca docelowego.  
   
  *xSrc*  
  Współrzędną x, w jednostkach logicznych, lewego górnego rogu prostokąta źródłowego.  
@@ -1432,7 +1432,7 @@ BOOL StretchBlt(
  Wartość różną od zera, jeśli to się powiedzie, w przeciwnym razie 0.  
   
 ### <a name="remarks"></a>Uwagi  
- Aby uzyskać więcej informacji, zobacz [StretchBlt](http://msdn.microsoft.com/library/windows/desktop/dd145120) w zestawie Windows SDK.  
+ Aby uzyskać więcej informacji, zobacz [StretchBlt](/windows/desktop/api/wingdi/nf-wingdi-stretchblt) w zestawie Windows SDK.  
   
 ##  <a name="transparentblt"></a>  CImage::TransparentBlt  
  Kopiuje mapę bitową z kontekstem urządzenia źródłowego dla tego bieżącego kontekstu urządzenia.  
@@ -1490,7 +1490,7 @@ BOOL TransparentBlt(
  Kolor źródłową mapę bitową do traktowania jako przezroczysty. Domyślnie CLR_INVALID, wskazujący, że kolor jest obecnie ustawiony jako przezroczysty kolor obrazu należy używać.  
   
  *rectDest*  
- Odwołanie do [Prostokąt](http://msdn.microsoft.com/library/windows/desktop/dd162897) struktury, identyfikacji miejsca docelowego.  
+ Odwołanie do [Prostokąt](https://msdn.microsoft.com/library/windows/desktop/dd162897) struktury, identyfikacji miejsca docelowego.  
   
  *xSrc*  
  Współrzędną x, w jednostkach logicznych, lewego górnego rogu prostokąta źródłowego.  
@@ -1548,10 +1548,10 @@ BOOL TransparentBlt(CImage* pSrcImage, CImage* pDstImage,
 ## <a name="see-also"></a>Zobacz też  
  [Przykładowe MMXSwarm](../../visual-cpp-samples.md)   
  [Przykładowe SimpleImage](../../visual-cpp-samples.md)   
- [Map bitowych niezależnych od urządzenia](http://msdn.microsoft.com/library/windows/desktop/dd183562)   
- [CreateDIBSection](http://msdn.microsoft.com/library/windows/desktop/dd183494)   
- [Składniki ATL COM pulpitu](../../atl/atl-com-desktop-components.md) [map bitowych niezależnych od urządzenia](http://msdn.microsoft.com/library/windows/desktop/dd183562)   
- [CreateDIBSection](http://msdn.microsoft.com/library/windows/desktop/dd183494)   
+ [Map bitowych niezależnych od urządzenia](/windows/desktop/gdi/device-independent-bitmaps)   
+ [CreateDIBSection](/windows/desktop/api/wingdi/nf-wingdi-createdibsection)   
+ [Składniki ATL COM pulpitu](../../atl/atl-com-desktop-components.md) [map bitowych niezależnych od urządzenia](/windows/desktop/gdi/device-independent-bitmaps)   
+ [CreateDIBSection](/windows/desktop/api/wingdi/nf-wingdi-createdibsection)   
 
 
 

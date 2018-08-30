@@ -38,12 +38,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3bd0aba0637101f7895be89b9d5531f77ee45b76
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: 7fc8ef005eea61597eb316090e26af7e83718dd8
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42465425"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43222779"
 ---
 # <a name="cmfcshelltreectrl-class"></a>Klasa CMFCShellTreeCtrl
 `CMFCShellTreeCtrl` Klasa rozszerza [klasa CTreeCtrl](../../mfc/reference/ctreectrl-class.md) funkcji, wyświetlając hierarchię elementów powłoki.  
@@ -62,7 +62,7 @@ class CMFCShellTreeCtrl : public CTreeCtrl
 |Nazwa|Opis|  
 |----------|-----------------|  
 |[CMFCShellTreeCtrl::EnableShellContextMenu](#enableshellcontextmenu)|Włącza lub wyłącza menu skrótów.|  
-|[CMFCShellTreeCtrl::GetFlags](#getflags)|Zwraca kombinacja flag, które są przekazywane do [IShellFolder::EnumObjects](http://msdn.microsoft.com/library/windows/desktop/bb775066).|  
+|[CMFCShellTreeCtrl::GetFlags](#getflags)|Zwraca kombinacja flag, które są przekazywane do [IShellFolder::EnumObjects](https://msdn.microsoft.com/library/windows/desktop/bb775066).|  
 |[CMFCShellTreeCtrl::GetItemPath](#getitempath)|Pobiera ścieżkę do elementu.|  
 |[CMFCShellTreeCtrl::GetRelatedList](#getrelatedlist)|Zwraca wskaźnik do [klasa CMFCShellListCtrl](../../mfc/reference/cmfcshelllistctrl-class.md) obiekt, który jest używany razem z tym `CMFCShellTreeCtrl` obiekt do utworzenia okna Eksploratora podobne.|  
 |[CMFCShellTreeCtrl::OnChildNotify](#onchildnotify)|Ta funkcja członkowska jest wywoływana przez okno nadrzędne tego okna, po odebraniu komunikatu powiadomienia, która ma zastosowanie do tego okna. (Przesłania [CWnd::OnChildNotify](../../mfc/reference/cwnd-class.md#onchildnotify).)|  
@@ -118,7 +118,7 @@ DWORD GetFlags() const;
  Ustaw wartość DWORD, który obecnie określa kombinacja flag.  
   
 ### <a name="remarks"></a>Uwagi  
- Flagi ustawić w `CMFCShellTreeCtrl` są wysyłane do metody [IShellFolder::EnumObjects](http://msdn.microsoft.com/library/windows/desktop/bb775066) zawsze, gdy obiekt jest odświeżany. Można zmienić flagi z [CMFCShellTreeCtrl::SetFlags](#setflags) metody.  
+ Flagi ustawić w `CMFCShellTreeCtrl` są wysyłane do metody [IShellFolder::EnumObjects](https://msdn.microsoft.com/library/windows/desktop/bb775066) zawsze, gdy obiekt jest odświeżany. Można zmienić flagi z [CMFCShellTreeCtrl::SetFlags](#setflags) metody.  
   
 ##  <a name="getitempath"></a>  CMFCShellTreeCtrl::GetItemPath  
  Pobiera ścieżkę elementu [klasa CMFCShellTreeCtrl](../../mfc/reference/cmfcshelltreectrl-class.md) obiektu.  
@@ -254,7 +254,7 @@ void SetFlags(
  Wartość logiczna określająca czy `CMFCShellTreeCtrl` powinny być natychmiast odświeżane.  
   
 ### <a name="remarks"></a>Uwagi  
- `CMFCShellTreeCtrl` Przekazuje wszystkie ustawione flagi na [IShellFolder::EnumObjects](http://msdn.microsoft.com/library/windows/desktop/bb775066). Aby uzyskać więcej informacji na temat wartości różnych flag zobacz [IShellFolder::EnumObjects](http://msdn.microsoft.com/library/windows/desktop/bb775066).  
+ `CMFCShellTreeCtrl` Przekazuje wszystkie ustawione flagi na [IShellFolder::EnumObjects](https://msdn.microsoft.com/library/windows/desktop/bb775066). Aby uzyskać więcej informacji na temat wartości różnych flag zobacz [IShellFolder::EnumObjects](https://msdn.microsoft.com/library/windows/desktop/bb775066).  
   
 ##  <a name="setrelatedlist"></a>  CMFCShellTreeCtrl::SetRelatedList  
  Kojarzy [CMFCShellListCtrl](../../mfc/reference/cmfcshelllistctrl-class.md) obiekt z [CMFCShellTreeCtrl](../../mfc/reference/cmfcshelltreectrl-class.md) obiektu.  

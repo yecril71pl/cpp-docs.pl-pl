@@ -98,12 +98,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d0ed609de9d36b602bf525a9643534cf5d1d55a8
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 3c77b232fe87a722194a21d60457a01051827a7e
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38963037"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43214169"
 ---
 # <a name="deque-class"></a>deque — Klasa
 
@@ -118,9 +118,11 @@ class deque
 
 ### <a name="parameters"></a>Parametry
 
-*Typ* typ danych elementu, który ma być przechowywany w deque.
+*Typ*<br/>
+ Typ danych elementu, który ma być przechowywany w deque.
 
-*Allocator* typ reprezentujący przechowywany obiekt alokatora, który hermetyzuje szczegóły dotyczące alokacji i dezalokacji pamięci deque. Ten argument jest opcjonalny, a wartość domyślna to **alokatora\<typ > ***.*
+*Allocator*<br/>
+ Typ reprezentujący przechowywany obiekt alokatora, który hermetyzuje szczegóły dotyczące alokacji i dezalokacji pamięci deque. Ten argument jest opcjonalny, a wartość domyślna to **alokatora\<typ >**.
 
 ## <a name="remarks"></a>Uwagi
 
@@ -243,15 +245,20 @@ void assign(initializer_list<Type> IList);
 
 ### <a name="parameters"></a>Parametry
 
-*Pierwszy* pozycji pierwszego elementu w zakresie elementów do skopiowania z deque argumentu.
+*pierwszy*<br/>
+ Pozycja pierwszego elementu w zakresie elementów, które mają być kopiowane z deque argumentu.
 
-*Ostatni* pozycji pierwszego elementu poza zakresem elementów, aby być kopiowane z deque argumentu.
+*ostatni*<br/>
+ Pozycja pierwszego elementu poza zakresem elementów, które mają być kopiowane z deque argumentu.
 
-*Liczba* liczbę kopii element jest wstawiany do deque.
+*Liczba*<br/>
+ Liczba kopii element jest wstawiany do deque.
 
-*Val* wartość elementu jest wstawiany do deque.
+*Val*<br/>
+ Wartość elementu jest wstawiany do deque.
 
-*IList* initializer_list, jest wstawiany do deque.
+*IList*<br/>
+ Lista initializer_list, jest wstawiany do deque.
 
 ### <a name="remarks"></a>Uwagi
 
@@ -325,7 +332,8 @@ const_reference at(size_type pos) const;
 
 ### <a name="parameters"></a>Parametry
 
-*POS* indeksu dolnego (lub numer pozycji) elementu odwoływać się w deque.
+*punktu sprzedaży*<br/>
+ Indeks dolny lub numer pozycji elementu odwoływać się w deque.
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -777,7 +785,7 @@ deque(initializer_list<value_type> IList, const Allocator& Al);
 |*Al*|Klasa alokatora do wykorzystania z tym obiektem.|
 |*Liczba*|Liczba elementów w stworzonego elementu deque.|
 |*Val*|Wartość elementów w stworzonego elementu deque.|
-|*Po prawej stronie*|Deque, w której stworzonego elementu deque jest kopią.|
+|*po prawej stronie*|Deque, w której stworzonego elementu deque jest kopią.|
 |*pierwszy*|Pozycja pierwszego elementu w zakresie elementów, które mają zostać skopiowane.|
 |*ostatni*|Pozycja pierwszego elementu poza zakresem elementów, które mają zostać skopiowane.|
 |* IList "|Initializer_list, który ma być skopiowany.|
@@ -1337,11 +1345,14 @@ iterator erase(iterator first, iterator last);
 
 ### <a name="parameters"></a>Parametry
 
-*_Where* pozycję elementu do usunięcia z deque.
+*_Where*<br/>
+ Pozycja elementu do usunięcia z deque.
 
-*pierwszy* pozycja pierwszego elementu usunięte z deque.
+*pierwszy*<br/>
+ Pozycja pierwszego elementu są usuwane z deque.
 
-*ostatni* pozycji tuż za ostatnim elementem usunięte z deque.
+*ostatni*<br/>
+ Pozycja tuż za ostatnim elementem usunięte z deque.
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -1591,7 +1602,8 @@ const_reference operator[](size_type pos) const;
 
 ### <a name="parameters"></a>Parametry
 
-*POS* położenie elementu deque można odwoływać się.
+*punktu sprzedaży*<br/>
+ Położenie elementu deque można odwoływać się.
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -2086,9 +2098,11 @@ void resize(size_type _Newsize, Type val);
 
 ### <a name="parameters"></a>Parametry
 
-*_Newsize* nowy rozmiar deque.
+*_Newsize*<br/>
+ Nowy rozmiar deque.
 
-*Val* wartość nowych elementów, które mają zostać dodane do deque, jeśli nowy rozmiar jest większy, oryginalnym rozmiarze. W przypadku pominięcia wartości, nowym elementom zostanie przypisana wartość domyślna dla klasy.
+*Val*<br/>
+ Wartość nowych elementów, które mają zostać dodane do deque, jeśli nowy rozmiar jest większy, oryginalnym rozmiarze. W przypadku pominięcia wartości, nowym elementom zostanie przypisana wartość domyślna dla klasy.
 
 ### <a name="remarks"></a>Uwagi
 
@@ -2263,9 +2277,11 @@ void swap(deque<Type, Allocator>& left, deque<Type, Allocator>& right);
 
 ### <a name="parameters"></a>Parametry
 
-*prawy* deque, zawierająca elementy, które mają być zamienione lub deque, której elementy są wymieniane z tymi deque `left`.
+*right*<br/>
+ Deque — zawierająca elementy, które mają być zamienione lub deque, której elementy są wymieniane z tymi deque `left`.
 
-*po lewej stronie* deque, której elementy są wymieniane z tymi deque *prawo*.
+*left*<br/>
+ Deque, której elementy są wymieniane z tymi deque *prawo*.
 
 ### <a name="example"></a>Przykład
 

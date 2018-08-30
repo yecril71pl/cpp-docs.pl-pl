@@ -34,12 +34,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b6c7d45c36534ab2c67765dc6e4e9ea61b79b3ea
-ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
+ms.openlocfilehash: 49362fa02005ce44100b0248d25ffc364a68da16
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37338035"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43222341"
 ---
 # <a name="cipaddressctrl-class"></a>Klasa CIPAddressCtrl
 Oferuje funkcje formantu typowego adresu IP Windows.  
@@ -76,7 +76,7 @@ class CIPAddressCtrl : public CWnd
   
  Ta kontrolka (i w związku z tym `CIPAddressCtrl` klasy) jest dostępna tylko dla programów uruchomionych w ramach programu Microsoft Internet Explorer 4.0 lub nowszy. Będą one również dostępne w przyszłych wersjach systemu Windows i Windows NT.  
   
- Aby uzyskać więcej ogólnych informacji na temat formant adresu IP, zobacz [formanty adresów IP](http://msdn.microsoft.com/library/windows/desktop/bb761372) w zestawie Windows SDK.  
+ Aby uzyskać więcej ogólnych informacji na temat formant adresu IP, zobacz [formanty adresów IP](/windows/desktop/Controls/ip-address-controls) w zestawie Windows SDK.  
   
 ## <a name="inheritance-hierarchy"></a>Hierarchia dziedziczenia  
  [CObject](../../mfc/reference/cobject-class.md)  
@@ -105,7 +105,7 @@ void ClearAddress();
 ```  
   
 ### <a name="remarks"></a>Uwagi  
- Ta funkcja elementu członkowskiego implementuje zachowanie komunikatu Win32 [IPM_CLEARADDRESS](http://msdn.microsoft.com/library/windows/desktop/bb761377), zgodnie z opisem w zestawie Windows SDK.  
+ Ta funkcja elementu członkowskiego implementuje zachowanie komunikatu Win32 [IPM_CLEARADDRESS](/windows/desktop/Controls/ipm-clearaddress), zgodnie z opisem w zestawie Windows SDK.  
   
 ##  <a name="create"></a>  CIPAddressCtrl::Create  
  Tworzy formant adresu IP i dołącza je do `CIPAddressCtrl` obiektu.  
@@ -120,10 +120,10 @@ virtual BOOL Create(
   
 ### <a name="parameters"></a>Parametry  
  *dwStyle*  
- Styl kontrolki adresu IP. Stosowanie kombinacji Style okna ramowego. Styl WS_CHILD musi zawierać, ponieważ kontrolka musi być okna podrzędnego. Zobacz [CreateWindow](http://msdn.microsoft.com/library/windows/desktop/ms632679) w zestawie Windows SDK dla listy stylów systemu windows.  
+ Styl kontrolki adresu IP. Stosowanie kombinacji Style okna ramowego. Styl WS_CHILD musi zawierać, ponieważ kontrolka musi być okna podrzędnego. Zobacz [CreateWindow](https://msdn.microsoft.com/library/windows/desktop/ms632679) w zestawie Windows SDK dla listy stylów systemu windows.  
   
  *Rect*  
- Odwołanie do rozmiaru i położenia formant adresu IP. Może być albo [CRect](../../atl-mfc-shared/reference/crect-class.md) obiektu lub [Prostokąt](http://msdn.microsoft.com/library/windows/desktop/dd162897) struktury.  
+ Odwołanie do rozmiaru i położenia formant adresu IP. Może być albo [CRect](../../atl-mfc-shared/reference/crect-class.md) obiektu lub [Prostokąt](https://msdn.microsoft.com/library/windows/desktop/dd162897) struktury.  
   
  *pParentWnd*  
  Wskaźnik do okna nadrzędnego formant adresu IP. Nie może być równa NULL.  
@@ -157,13 +157,13 @@ virtual BOOL CreateEx(
   
 ### <a name="parameters"></a>Parametry  
  *dwExStyle*  
- Określa styl rozszerzony kontrolki tworzona. Aby uzyskać listę rozszerzone style Windows, zobacz *dwExStyle* parametr [elementu CreateWindowEx](http://msdn.microsoft.com/library/windows/desktop/ms632680) w zestawie Windows SDK.  
+ Określa styl rozszerzony kontrolki tworzona. Aby uzyskać listę rozszerzone style Windows, zobacz *dwExStyle* parametr [elementu CreateWindowEx](https://msdn.microsoft.com/library/windows/desktop/ms632680) w zestawie Windows SDK.  
   
  *dwStyle*  
- Styl kontrolki adresu IP. Stosowanie kombinacji Style okna ramowego. Styl WS_CHILD musi zawierać, ponieważ kontrolka musi być okna podrzędnego. Zobacz [CreateWindow](http://msdn.microsoft.com/library/windows/desktop/ms632679) w zestawie Windows SDK dla listy stylów systemu windows.  
+ Styl kontrolki adresu IP. Stosowanie kombinacji Style okna ramowego. Styl WS_CHILD musi zawierać, ponieważ kontrolka musi być okna podrzędnego. Zobacz [CreateWindow](https://msdn.microsoft.com/library/windows/desktop/ms632679) w zestawie Windows SDK dla listy stylów systemu windows.  
   
  *Rect*  
- Odwołanie do [Prostokąt](http://msdn.microsoft.com/library/windows/desktop/dd162897) struktury opisujących rozmiar i położenie okna, można utworzyć klienta współrzędne *pParentWnd*.  
+ Odwołanie do [Prostokąt](https://msdn.microsoft.com/library/windows/desktop/dd162897) struktury opisujących rozmiar i położenie okna, można utworzyć klienta współrzędne *pParentWnd*.  
   
  *pParentWnd*  
  Wskaźnik do okna, które jest elementem nadrzędnym formantu.  
@@ -210,7 +210,7 @@ int GetAddress(DWORD& dwAddress);
  Liczba pól nie jest pusty w formant adresu IP.  
   
 ### <a name="remarks"></a>Uwagi  
- Ta funkcja elementu członkowskiego implementuje zachowanie komunikatu Win32 [IPM_GETADDRESS](http://msdn.microsoft.com/library/windows/desktop/bb761378), zgodnie z opisem w zestawie Windows SDK. W pierwszym prototypie powyżej liczb w polach od 0 do 3 kontrolki, przeczytaj od lewej do prawej odpowiednio, wypełnij cztery parametry. W drugim prototypie powyżej *dwAddress* jest wypełniana w następujący sposób.  
+ Ta funkcja elementu członkowskiego implementuje zachowanie komunikatu Win32 [IPM_GETADDRESS](/windows/desktop/Controls/ipm-getaddress), zgodnie z opisem w zestawie Windows SDK. W pierwszym prototypie powyżej liczb w polach od 0 do 3 kontrolki, przeczytaj od lewej do prawej odpowiednio, wypełnij cztery parametry. W drugim prototypie powyżej *dwAddress* jest wypełniana w następujący sposób.  
   
 |Pole|Usługa BITS zawierający wartość pola|  
 |-----------|-------------------------------------|  
@@ -230,7 +230,7 @@ BOOL IsBlank() const;
  Wartość różną od zera, jeśli wszystkie pola formant adresu IP są puste; w przeciwnym razie 0.  
   
 ### <a name="remarks"></a>Uwagi  
- Ta funkcja elementu członkowskiego implementuje zachowanie komunikatu Win32 [IPM_ISBLANK](http://msdn.microsoft.com/library/windows/desktop/bb761379), zgodnie z opisem w zestawie Windows SDK.  
+ Ta funkcja elementu członkowskiego implementuje zachowanie komunikatu Win32 [IPM_ISBLANK](/windows/desktop/Controls/ipm-isblank), zgodnie z opisem w zestawie Windows SDK.  
   
 ##  <a name="setaddress"></a>  CIPAddressCtrl::SetAddress  
  Ustawia wartości adresów dla wszystkich, cztery pola w kontrolce adresu IP.  
@@ -262,7 +262,7 @@ void SetAddress(DWORD dwAddress);
  Wartość DWORD, który zawiera nowy adres IP. Zobacz **uwagi** dla tabeli, który pokazuje, jak wprowadzono wartość DWORD.  
   
 ### <a name="remarks"></a>Uwagi  
- Ta funkcja elementu członkowskiego implementuje zachowanie komunikatu Win32 [IPM_SETADDRESS](http://msdn.microsoft.com/library/windows/desktop/bb761380), zgodnie z opisem w zestawie Windows SDK. W pierwszym prototypie powyżej liczb w polach od 0 do 3 kontrolki, przeczytaj od lewej do prawej odpowiednio, wypełnij cztery parametry. W drugim prototypie powyżej *dwAddress* jest wypełniana w następujący sposób.  
+ Ta funkcja elementu członkowskiego implementuje zachowanie komunikatu Win32 [IPM_SETADDRESS](/windows/desktop/Controls/ipm-setaddress), zgodnie z opisem w zestawie Windows SDK. W pierwszym prototypie powyżej liczb w polach od 0 do 3 kontrolki, przeczytaj od lewej do prawej odpowiednio, wypełnij cztery parametry. W drugim prototypie powyżej *dwAddress* jest wypełniana w następujący sposób.  
   
 |Pole|Usługa BITS zawierający wartość pola|  
 |-----------|-------------------------------------|  
@@ -283,7 +283,7 @@ void SetFieldFocus(WORD nField);
  Pole liczony od zera indeks, do której należy ustawić fokus. Jeśli ta wartość jest większa niż liczba pól, fokus jest ustawiony do pierwszego pola puste. Jeśli wszystkie pola nie jest pusty, fokus jest ustawiony do pierwszego pola.  
   
 ### <a name="remarks"></a>Uwagi  
- Ta funkcja elementu członkowskiego implementuje zachowanie komunikatu Win32 [IPM_SETFOCUS](http://msdn.microsoft.com/library/windows/desktop/bb761381), zgodnie z opisem w zestawie Windows SDK.  
+ Ta funkcja elementu członkowskiego implementuje zachowanie komunikatu Win32 [IPM_SETFOCUS](/windows/desktop/Controls/ipm-setfocus), zgodnie z opisem w zestawie Windows SDK.  
   
 ##  <a name="setfieldrange"></a>  CIPAddressCtrl::SetFieldRange  
  Ustawia zakres w określonym polu w formant adresu IP.  
@@ -306,7 +306,7 @@ void SetFieldRange(
  Odwołanie do wartości całkowitej odbieranie górnego limitu określonego pola w tym formant adresu IP.  
   
 ### <a name="remarks"></a>Uwagi  
- Ta funkcja elementu członkowskiego implementuje zachowanie komunikatu Win32 [IPM_SETRANGE](http://msdn.microsoft.com/library/windows/desktop/bb761382), zgodnie z opisem w zestawie Windows SDK. Użyj dwóch parametrów *nLower* i *nUpper*, aby wskazać dolny i górny limit pola, zamiast *wRange* parametrem komunikat Win32.  
+ Ta funkcja elementu członkowskiego implementuje zachowanie komunikatu Win32 [IPM_SETRANGE](/windows/desktop/Controls/ipm-setrange), zgodnie z opisem w zestawie Windows SDK. Użyj dwóch parametrów *nLower* i *nUpper*, aby wskazać dolny i górny limit pola, zamiast *wRange* parametrem komunikat Win32.  
   
 ## <a name="see-also"></a>Zobacz też  
  [Klasa CWnd](../../mfc/reference/cwnd-class.md)   

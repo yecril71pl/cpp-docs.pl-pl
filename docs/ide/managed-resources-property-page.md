@@ -1,5 +1,5 @@
 ---
-title: Zarządzane zasoby — strona właściwości | Dokumentacja firmy Microsoft
+title: Strona właściwości zasobów zarządzanych | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,30 +18,30 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2922a0a92a121d6838478daaf2c32f1c7a630d21
-ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
+ms.openlocfilehash: a2fe0896a8fbd8b8c0a8f68847ee138017eaa36b
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "33340362"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43215504"
 ---
 # <a name="managed-resources-property-page"></a>Strona właściwości Zarządzane zasoby
-Włącza ustawienia kompilatora zasobów.  
+Umożliwia ustawień dla kompilatora zasobów.  
   
- **Zarządzane zasoby** strona zawiera następujące właściwości:  
+ **Zarządzanych zasobów** strona właściwości zawiera następujące właściwości:  
   
  **Nazwa logiczna zasobu**  
- Określa *nazwy logicznej* pliku pośredniego .resources wygenerowany. Nazwa logiczna to nazwa używana do załadowania zasobu. Jeśli nazwa logiczna nie jest określona, nazwy pliku zasobu (resx) jest używany jako nazwę logiczną.  
+ Określa *Nazwa logiczna* pliku wygenerowanego pośredniego .resources. Nazwa logiczna jest nazwa służąca do załadowania zasobu. Jeśli nazwa logiczne, nie zostanie określona, nazwy pliku zasobów (.resx) jest używana jako nazwa logiczna.  
   
  **Nazwa pliku wyjściowego**  
- Określa nazwę pliku zasobów (resx) przyczynia się do pliku wyjściowego.  
+ Określa nazwę pliku wyjściowego, który plik zasobów (.resx), którzy przyczyniają się do.  
   
- **Domyślne zasoby zlokalizowane**  
+ **Domyślnie lokalizowane zasoby**  
  Określa, czy plik danego .resx jest częścią domyślnych zasobów lub satelitarnej biblioteki dll.  
   
- Aby uzyskać informacje dotyczące dostępu do **zarządzane zasoby** strony właściwości, zobacz [Praca z właściwościami projektu](../ide/working-with-project-properties.md).  
+ Aby uzyskać informacje dotyczące uzyskiwania dostępu do **zarządzanych zasobów** strony właściwości, zobacz [Praca z właściwościami projektu](../ide/working-with-project-properties.md).  
   
 ## <a name="see-also"></a>Zobacz też  
- [Za pomocą RC (RC wiersza polecenia)](http://msdn.microsoft.com/library/windows/desktop/aa381055)   
+ [Za pomocą RC (RC wiersza polecenia)](https://msdn.microsoft.com/library/windows/desktop/aa381055)   
  [Strony właściwości](../ide/property-pages-visual-cpp.md)   
  [/ASSEMBLYRESOURCE (Osadź zarządzany zasób)](../build/reference/assemblyresource-embed-a-managed-resource.md)

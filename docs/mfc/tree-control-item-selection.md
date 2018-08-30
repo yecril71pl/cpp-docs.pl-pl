@@ -1,5 +1,5 @@
 ---
-title: Wybór elementu formantu drzewa | Dokumentacja firmy Microsoft
+title: Wybór elementu kontrolki drzewa | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,17 +17,17 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fc533046695db409067ff603e30cedbe11ad5ca4
-ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
+ms.openlocfilehash: fd6632a44dd4806b8f13683b50cad76b5eebe27a
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/26/2018
-ms.locfileid: "36953560"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43212584"
 ---
 # <a name="tree-control-item-selection"></a>Wybór elementu kontrolki drzewa
-Gdy zmieni się zaznaczenie z jednego elementu na inny formant drzewa ([CTreeCtrl](../mfc/reference/ctreectrl-class.md)) wysyła [TVN_SELCHANGING](http://msdn.microsoft.com/library/windows/desktop/bb773547) i [TVN_SELCHANGED](http://msdn.microsoft.com/library/windows/desktop/bb773544) komunikaty powiadomień. Zarówno powiadomienia obejmują wartość, która określa, czy zmiana jest wynikiem kliknięcie myszą lub naciśnięcie klawisza. Powiadomienia obejmują również informacji na temat elementu, który jest uzyskanie zaznaczenie i elementu, który jest utraty zaznaczenia. Można ustawić atrybutów elementów, które są zależne od stan zaznaczenia elementu, można użyć tych informacji. Zwracanie **TRUE** w odpowiedzi na `TVN_SELCHANGING` uniemożliwia wybór z zmiana; zwracanie **FALSE** umożliwia zmianę.  
+Gdy zmieni się zaznaczenie z jednego elementu do innej kontrolki drzewa ([CTreeCtrl](../mfc/reference/ctreectrl-class.md)) wysyła [TVN_SELCHANGING](/windows/desktop/Controls/tvn-selchanging) i [TVN_SELCHANGED](/windows/desktop/Controls/tvn-selchanged) wiadomości z powiadomieniami. Zarówno powiadomienia obejmują wartość, która określa, czy zmiana jest wynikiem kliknięcia lub naciśnięcia klawisza. Powiadomienia obejmują także informacji na temat elementu, który zyskuje zaznaczenie i element, który jest utraty zaznaczenia. Można ustawić atrybuty elementów, które są zależne od stan zaznaczenia elementu, można użyć tych informacji. Zwracanie **TRUE** w odpowiedzi na `TVN_SELCHANGING` zapobiega wybór Zmienianie; zwracanie **FALSE** umożliwia zmianę.  
   
- Aplikację można zmienić wybór, wywołując [SelectItem](../mfc/reference/ctreectrl-class.md#selectitem) funkcję elementu członkowskiego.  
+ Aplikację można zmienić wybór, wywołując [selectitem —](../mfc/reference/ctreectrl-class.md#selectitem) funkcja elementu członkowskiego.  
   
 ## <a name="see-also"></a>Zobacz też  
  [Korzystanie z CTreeCtrl](../mfc/using-ctreectrl.md)   

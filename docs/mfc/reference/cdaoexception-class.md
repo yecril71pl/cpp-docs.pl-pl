@@ -28,12 +28,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fbcabd0659e98d25cbe28ce233b89dccc3585d61
-ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
+ms.openlocfilehash: 15719f93fbcfde8e6684373f99c924132af9d288
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37336189"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43215443"
 ---
 # <a name="cdaoexception-class"></a>Klasa CDaoException
 Przedstawia warunek wyjątku wynikający z klas baz danych MFC na podstawie obiektów dostępu do danych (DAO).  
@@ -201,7 +201,7 @@ void GetErrorInfo(int nIndex);
 ### <a name="remarks"></a>Uwagi  
  Jest to kod OLE. Rzadko będą musieli używać tej wartości, ponieważ prawie we wszystkich przypadkach, bardziej szczegółowe informacje o błędach i DAO MFC jest dostępna w innych `CDaoException` składowych danych.  
   
- Aby uzyskać informacje na temat SCODE, zobacz temat [struktury z OLE kody błędów](http://msdn.microsoft.com/library/windows/desktop/ms690088) w zestawie Windows SDK. Typ danych SCODE mapuje na typ HRESULT.  
+ Aby uzyskać informacje na temat SCODE, zobacz temat [struktury z OLE kody błędów](/windows/desktop/com/structure-of-com-error-codes) w zestawie Windows SDK. Typ danych SCODE mapuje na typ HRESULT.  
   
 ## <a name="see-also"></a>Zobacz też  
  [Klasa CException](../../mfc/reference/cexception-class.md)   

@@ -24,12 +24,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 980edf3b7e7f699b1fc870fda2e58f6422e3a1cb
-ms.sourcegitcommit: b92ca0b74f0b00372709e81333885750ba91f90e
+ms.openlocfilehash: 424d98236b37dabe1c671a9890f049063a8e50a1
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/16/2018
-ms.locfileid: "42465744"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43212279"
 ---
 # <a name="coletemplateserver-class"></a>Klasa COleTemplateServer
 Używany do edytowania serwerów, serwerów automatyzacji i kontenerów łączy (aplikacje, które obsługują linki do wbudowanych elementów) obrazu OLE.  
@@ -106,7 +106,7 @@ void ConnectTemplate(
  Wskazuje, czy pojedyncze wystąpienie aplikacji może obsługiwać wiele wystąpień. W przypadku wartości TRUE dla każdego żądania utworzyć obiekt uruchomienia wielu wystąpień aplikacji.  
   
 ### <a name="remarks"></a>Uwagi  
- Aby uzyskać więcej informacji, zobacz [klucz identyfikator CLSID](http://msdn.microsoft.com/library/windows/desktop/ms691424) w zestawie Windows SDK.  
+ Aby uzyskać więcej informacji, zobacz [klucz identyfikator CLSID](/windows/desktop/com/clsid-key-hklm) w zestawie Windows SDK.  
   
 ##  <a name="unregister"></a>  COleTemplateServer::Unregister  
  Wyrejestrowuje szablonu powiązanego dokumentu.  

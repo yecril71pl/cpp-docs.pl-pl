@@ -1,7 +1,7 @@
 ---
 title: -DYNAMICBASE (randomizacji układu przestrzeni adresowej Użyj) | Dokumentacja firmy Microsoft
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 06/12/2018
 ms.technology:
 - cpp-tools
 ms.topic: reference
@@ -18,44 +18,42 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 85af66c4ce05057eff63292061b66202aeebe160
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 896e2eca86b7694c8b3b951a8eb080a4cf9e7684
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43223403"
 ---
 # <a name="dynamicbase-use-address-space-layout-randomization"></a>/DYNAMICBASE (Korzystaj z randomizacji układu przestrzeni adresowej)
-Określa, czy Generuj obraz wykonywalny, który może być losowo przebazowanych w czasie obciążenia za pomocą funkcji adres miejsca układu losowe (ASLR) z [!INCLUDE[windowsver](../../build/reference/includes/windowsver_md.md)].  
-  
-## <a name="syntax"></a>Składnia  
-  
-```  
-/DYNAMICBASE[:NO]  
-```  
-  
-## <a name="remarks"></a>Uwagi  
- Domyślnie /DYNAMICBASE znajduje się na.  
-  
- Ta opcja modyfikuje nagłówka pliku wykonywalnego, aby wskazać, czy aplikacja powinna być losowo przebazowanych w czas ładowania.  
-  
- Randomizacji układu przestrzeni adresowej jest obsługiwana w [!INCLUDE[windowsver](../../build/reference/includes/windowsver_md.md)].  
-  
-### <a name="to-set-this-linker-option-in-visual-studio"></a>Aby ustawić tę opcję konsolidatora w programie Visual Studio  
-  
-1.  Otwórz projekt **strony właściwości** okno dialogowe. Aby uzyskać więcej informacji, zobacz [Praca z właściwościami projektu](../../ide/working-with-project-properties.md).  
-  
-2.  Rozwiń węzeł **właściwości konfiguracji** węzła.  
-  
-3.  Rozwiń węzeł **konsolidatora** węzła.  
-  
-4.  Wybierz **zaawansowane** strony właściwości.  
-  
-5.  Modyfikowanie **wybierane adresu podstawowego** właściwości.  
-  
-### <a name="to-set-this-linker-option-programmatically"></a>Aby programowo ustawić tę opcję konsolidatora  
-  
-1.  Zobacz <xref:Microsoft.VisualStudio.VCProjectEngine.VCLinkerTool.RandomizedBaseAddress%2A>.  
-  
-## <a name="see-also"></a>Zobacz też  
- [Ustawianie opcji konsolidatora](../../build/reference/setting-linker-options.md)   
- [Opcje konsolidatora](../../build/reference/linker-options.md)
+
+Określa, czy ma być generowany obraz wykonywalny, który może być losowo przebazowanych w czasie ładowania przy użyciu funkcji randomizacji (ASLR) adres miejsca układu systemu Windows, która została po raz pierwszy dostępny w Windows Vista.
+
+## <a name="syntax"></a>Składnia
+
+> **/ DYNAMICBASE**[**: NO**]
+
+## <a name="remarks"></a>Uwagi
+
+**Opcja/DynamicBase** opcja modyfikuje nagłówek *obrazu pliku wykonywalnego*, pliku .dll lub .exe, aby wskazać, czy aplikacja powinna być losowo przebazowanych w czasie ładowania i umożliwia wirtualnego adresu losowe alokacji, który ma wpływ na lokalizację w pamięci wirtualnej sterty, stosy i alokacjami systemu operacyjnego. **Opcja/DynamicBase** opcja dotyczy zarówno 32-bitowych i 64-bitowych obrazów. Obsługiwany jest ASLR w systemach Windows Vista i nowszych systemach operacyjnych. Opcja jest ignorowana przez starszych systemów operacyjnych.
+
+Domyślnie **opcja/DynamicBase** jest włączona. Aby wyłączyć tę opcję, należy użyć **: No**. **Opcja/DynamicBase** opcja jest wymagana dla [/highentropyva](highentropyva-support-64-bit-aslr.md) opcję, aby mieć wpływ.
+
+### <a name="to-set-this-linker-option-in-visual-studio"></a>Aby ustawić tę opcję konsolidatora w programie Visual Studio
+
+1. Otwórz projekt **stron właściwości** okno dialogowe. Aby uzyskać więcej informacji, zobacz [Praca z właściwościami projektu](../../ide/working-with-project-properties.md).
+
+1. Wybierz **właściwości konfiguracji** > **konsolidatora** > **zaawansowane** stronę właściwości.
+
+1. Modyfikowanie **wybierane adresu podstawowego** właściwości.
+
+### <a name="to-set-this-linker-option-programmatically"></a>Aby programowo ustawić tę opcję konsolidatora
+
+- Zobacz <xref:Microsoft.VisualStudio.VCProjectEngine.VCLinkerTool.RandomizedBaseAddress%2A>.
+
+## <a name="see-also"></a>Zobacz także
+
+- [Ustawianie opcji konsolidatora](../../build/reference/setting-linker-options.md)
+- [Opcje konsolidatora](../../build/reference/linker-options.md)
+- [/HIGHENTROPYVA](highentropyva-support-64-bit-aslr.md)
+- [Poziom ochrony oprogramowania niezależnego dostawcy oprogramowania Windows](https://msdn.microsoft.com/library/bb430720.aspx)

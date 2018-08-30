@@ -40,12 +40,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 105a6310968844336ead5c787586d547f3952e57
-ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
+ms.openlocfilehash: 82447c14209f2f47fb6224df7e1daeb18ed6048e
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37338993"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43212894"
 ---
 # <a name="ckeyboardmanager-class"></a>Klasa CKeyboardManager
 Zarządza tabelami klawiszy skrótów dla głównej ramki okna i okien ramek podrzędnych.  
@@ -169,7 +169,7 @@ static BOOL __stdcall IsKeyHandled(
 |-|-|  
 |Parametr|Opis|  
 |[in] *nKey*|Klucz do sprawdzenia.|  
-|[in] *fVirt*|Określa zachowanie klawisza skrótu. Aby uzyskać listę możliwych wartości, zobacz [struktury AKCELERACJA](http://msdn.microsoft.com/library/windows/desktop/ms646340).|  
+|[in] *fVirt*|Określa zachowanie klawisza skrótu. Aby uzyskać listę możliwych wartości, zobacz [struktury AKCELERACJA](/windows/desktop/api/winuser/ns-winuser-tagaccel).|  
 |[in] *element pWndFrame*|Okno ramki. Ta metoda określa, czy klawisz skrótu jest obsługiwana w tej ramce.|  
 |[in] *bIsDefaultFrame*|Parametr logiczny, który wskazuje, czy *element pWndFrame* domyślny okna ramki.|  
   
@@ -197,7 +197,7 @@ static BOOL __stdcall IsKeyPrintable(const UINT nChar);
  Wartość różną od zera, jeśli znak jest druku, zero, jeśli nie jest.  
   
 ### <a name="remarks"></a>Uwagi  
- Ta metoda kończy się niepowodzeniem, jeśli wywołanie [GetKeyboardState](http://msdn.microsoft.com/library/windows/desktop/ms646299) zakończy się niepowodzeniem.  
+ Ta metoda kończy się niepowodzeniem, jeśli wywołanie [GetKeyboardState](https://msdn.microsoft.com/library/windows/desktop/ms646299) zakończy się niepowodzeniem.  
   
 ##  <a name="isshowallaccelerators"></a>  CKeyboardManager::IsShowAllAccelerators  
  Wskazuje, czy menu Pokazywanie wszystkich klawiszy skrótów, skojarzone z poleceń menu lub klawiszy skrótów domyślne.  

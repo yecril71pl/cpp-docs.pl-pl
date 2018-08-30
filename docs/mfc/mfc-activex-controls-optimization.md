@@ -24,12 +24,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4459865bc2ba374048622167fadb7bcf8fb97c99
-ms.sourcegitcommit: 76fd30ff3e0352e2206460503b61f45897e60e4f
+ms.openlocfilehash: 424bb8e7082432cea3f730bb0783c2c1912c293f
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/13/2018
-ms.locfileid: "39028177"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43220509"
 ---
 # <a name="mfc-activex-controls-optimization"></a>Kontrolki ActiveX MFC: optymalizacja
 W tym artykule opisano techniki, które można użyć, aby zoptymalizować swoje kontrolek ActiveX w celu zapewnienia lepszej wydajności.  
@@ -53,7 +53,7 @@ W tym artykule opisano techniki, które można użyć, aby zoptymalizować swoje
 |**Powiadomienia wskaźnika, gdy nieaktywna myszy** pola wyboru|Wybierz|[Zapewnianie interakcji z myszą przy braku aktywności](../mfc/providing-mouse-interaction-while-inactive.md)|  
 |**Zoptymalizowane pod kątem kodu rysowania** pola wyboru|Wybierz|[Optymalizacja rysowania kontrolek](../mfc/optimizing-control-drawing.md)|  
   
- Aby uzyskać szczegółowe informacje dotyczące funkcji elementów członkowskich, które implementują te optymalizacje, zobacz [COleControl](../mfc/reference/colecontrol-class.md). Funkcje elementów członkowskich są wyświetlane według użycia, takie jak [niepowiązanej z oknami operacje](http://msdn.microsoft.com/e9e28f79-9a70-4ae4-a5aa-b3e92f1904df) i [nieaktywne wskaźnika funkcji obsługi](http://msdn.microsoft.com/e9e28f79-9a70-4ae4-a5aa-b3e92f1904df).  
+ Aby uzyskać szczegółowe informacje dotyczące funkcji elementów członkowskich, które implementują te optymalizacje, zobacz [COleControl](../mfc/reference/colecontrol-class.md).  
   
  Aby uzyskać więcej informacji, zobacz:  
   

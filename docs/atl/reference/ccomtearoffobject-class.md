@@ -25,12 +25,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: abc3721159dfa7470106e6935664f3119ae4d264
-ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
+ms.openlocfilehash: eb505ac53c6a8b3b05edfc99bad813ebe2c341d0
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37885042"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43218568"
 ---
 # <a name="ccomtearoffobject-class"></a>Klasa CComTearOffObject
 Ta klasa implementuje interfejs odrywania.  
@@ -46,7 +46,7 @@ class CComTearOffObject : public Base
  *podstawowy*  
  Twoje odrywania klasą pochodną `CComTearOffObjectBase` i interfejsy odrywania obiektu do obsługi.  
   
- ATL implementuje interfejsy odrywania w dwóch fazach — `CComTearOffObjectBase` metody obsługują licznik odwołań i `QueryInterface`, podczas gdy `CComTearOffObject` implementuje [IUnknown](http://msdn.microsoft.com/library/windows/desktop/ms680509).  
+ ATL implementuje interfejsy odrywania w dwóch fazach — `CComTearOffObjectBase` metody obsługują licznik odwołań i `QueryInterface`, podczas gdy `CComTearOffObject` implementuje [IUnknown](/windows/desktop/api/unknwn/nn-unknwn-iunknown).  
   
 ## <a name="members"></a>Elementy członkowskie  
   

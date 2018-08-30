@@ -23,35 +23,35 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 74b5a6a8d072a0cea9c92b9766fbe3ffa7c84c4f
-ms.sourcegitcommit: 208d445fd7ea202de1d372d3f468e784e77bd666
+ms.openlocfilehash: 5d2f1259227fa8d27778dbf0e40b13f5460b7041
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/29/2018
-ms.locfileid: "37122513"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43218788"
 ---
 # <a name="tn061-onnotify-and-wmnotify-messages"></a>TN061: komunikaty ON_NOTIFY i WM_NOTIFY
 
 > [!NOTE]
-> Poniższe uwagi techniczne nie został zaktualizowany, ponieważ została ona uwzględniona w dokumentacji online. W związku z tym niektóre procedury i tematy mogą być nieaktualne lub niepoprawne. Najnowsze informacje zalecane jest, możesz wyszukać temat odsetek w indeksie dokumentacji online.
+> Następująca uwaga techniczna nie został zaktualizowany od pierwszego uwzględnienia jej w dokumentacji online. W rezultacie niektóre procedury i tematy może być nieaktualne lub niepoprawne. Najnowsze informacje zaleca się wyszukać temat w indeksie dokumentacji online.
 
-Ta uwaga techniczna przedstawia ogólne informacje na nowy komunikat WM_NOTIFY oraz zalecane (i najbardziej typowych) sposób Obsługa komunikatów WM_NOTIFY w aplikacji MFC.
+Ta uwaga techniczna podano informacje dotyczące nowy komunikat WM_NOTIFY i opisano zalecane (i najbardziej powszechnym) sposób Obsługa komunikatów WM_NOTIFY w Twojej aplikacji MFC.
 
-**Komunikaty powiadomień w systemie Windows 3.x**
+**Komunikatów powiadomień w Windows 3.x**
 
-W systemie Windows 3.x, formanty powiadomić ich nadrzędnych zdarzenia, takie jak kliknięcie myszą zmiany w zawartości i wyboru i rysowania tła formantu, wysyłając wiadomość do elementu nadrzędnego. Proste powiadomienia są wysyłane jako specjalne WM_COMMAND — komunikaty, kodem powiadomienia (na przykład BN_CLICKED) i identyfikator spakowane do formantu *wParam* i uchwyt formantu w *lParam*. Należy pamiętać, że od momentu *wParam* i *lParam* są pełne, nie istnieje sposób do przekazania dodatkowych danych — komunikaty te mogą być tylko proste powiadomienia. Na przykład w powiadomień BN_CLICKED nie ma sposób wysyłania informacji o lokalizacji kursora myszy, gdy kliknięto przycisk.
+W Windows 3.x, formanty Powiadom nadrzędnych zdarzenia, takie jak kliknięcie myszą, zmian w zawartości i wyboru i rysowania tła kontrolki, wysyłając wiadomość do elementu nadrzędnego. Proste powiadomienia są wysyłane jako specjalne wm_command — komunikaty, podając mu kod powiadomienia (na przykład BN_CLICKED) i identyfikator spakowane do formantu *wParam* i uchwyt formantu w *lParam*. Należy pamiętać, że od momentu *wParam* i *lParam* są pełne, nie istnieje sposób do przekazania dodatkowych danych — te komunikaty mogą być tylko proste powiadomienia. Na przykład w powiadomieniu BN_CLICKED nie ma możliwości do wysyłania informacji o lokalizacji kursora myszy, gdy został kliknięty przycisk.
 
-Formanty w systemie Windows 3.x, konieczne jest wysyłany komunikat, który zawiera dodatkowe dane, używają różnych komunikatów specjalnych, takich jak wm_ctlcolor —, WM_VSCROLL, WM_HSCROLL, WM_DRAWITEM, WM_MEASUREITEM, WM_COMPAREITEM, WM_DELETEITEM, WM_ CHARTOITEM, WM_VKEYTOITEM i tak dalej. Te komunikaty można uwzględnione do formantu, który je wysłać. Aby uzyskać więcej informacji, zobacz [TN062: odbicie komunikatu dla formantów systemu Windows](../mfc/tn062-message-reflection-for-windows-controls.md).
+Gdy kontrolek Windows 3.x, o których trzeba wysłać komunikatu powiadomienia, który zawiera dodatkowe dane, używają różnych komunikaty specjalnego przeznaczenia, w tym wm_ctlcolor — WM_VSCROLL, WM_HSCROLL, WM_DRAWITEM, WM_MEASUREITEM, WM_COMPAREITEM, WM_DELETEITEM, WM_ CHARTOITEM WM_VKEYTOITEM i tak dalej. Te komunikaty można odzwierciedlenie do kontrolki, która wysłała je. Aby uzyskać więcej informacji, zobacz [TN062: odbicie komunikatu dla formantów Windows](../mfc/tn062-message-reflection-for-windows-controls.md).
 
 **Komunikaty powiadomień w systemie Win32**
 
-Dla formantów, które były dostępne w systemie Windows 3.1, interfejs API Win32 używa większość komunikatów powiadomień, które były używane w systemie Windows 3.x. Jednak Win32 również dodaje szeregu kontroli, zaawansowane, złożone do obsługiwanych w systemie Windows 3.x. Często tych kontrolek musi wysłać dodatkowe dane z ich komunikaty powiadomień. Zamiast dodawać nowe **WM_\***  komunikat dla każdego nowego powiadomienie, które wymaga dodatkowych danych, projektantów Win32 API wybrał opcję Dodaj tylko jeden komunikat WM_NOTIFY, przechodzące dowolnej liczby dodatkowych danych w standardowy sposób.
+W przypadku kontrolek, które istniały w Windows 3.1 Win32 API wykorzystuje większość komunikaty powiadomień, które były używane w Windows 3.x. Jednak Win32 również zwiększa liczbę kontrolki zaawansowane, złożone obsługiwanymi w Windows 3.x. Często trzeba wysłać dodatkowe dane za pomocą ich komunikatów powiadomień tych kontrolek. Zamiast dodawać nowe **WM_** <strong>\*</strong> komunikatu dla każdego nowe powiadomienie, że będzie potrzebowała dodatkowych danych, projektantów interfejsu API Win32 wybrał opcję Dodaj tylko jeden komunikat WM_NOTIFY, które można przekazać dowolny ilość dodatkowych danych w sposób standardowy.
 
-WM_NOTIFY wiadomości zawierają identyfikator formantu, wysyłanie komunikatu *wParam* i wskaźnika do struktury w *lParam*. Ta struktura jest **NMHDR** struktury lub niektóre większej struktury, która ma **NMHDR** struktury jako swojego pierwszego elementu członkowskiego. Należy pamiętać, że od momentu **NMHDR** element członkowski jest pierwszy, wskaźnik do struktury może być używany jako wskaźnik do **NMHDR** lub jako wskaźnik do większej struktury w zależności od tego, jak rzutowania.
+WM_NOTIFY wiadomości zawierają identyfikator formantu wiadomość jest wysyłana w *wParam* i wskaźnik do struktury w *lParam*. Ta struktura jest albo **NMHDR** struktury lub niektóre większej struktury, która ma **NMHDR** struktury jako swojego pierwszego elementu członkowskiego. Należy pamiętać, że od momentu **NMHDR** następuje składowej, wskaźnik do struktury ten może służyć jako wskaźnik do **NMHDR** lub jako wskaźnik do większej struktury, w zależności od tego, jak rzutowanie.
 
-W większości przypadków wskaźnik będzie wskazywać większej struktury i należy rzutować go, gdy jest używany. Tylko kilka powiadomień, takie jak wspólnej powiadomienia (o nazwach zaczynających **NM_**) i narzędzie Porada formantu TTN_SHOW i TTN_POP powiadomienia, to **NMHDR** struktury rzeczywiście używane.
+W większości przypadków kursor wskaże większej struktury, i należy go rzutować, gdy jest używany. Tylko kilka powiadomień, takie jak wspólne powiadomienia (o nazwach zaczynających **NM_**) i narzędzie Porada kontrolki TTN_SHOW i TTN_POP powiadomienia, jest **NMHDR** struktury rzeczywiście używane.
 
-**NMHDR** struktury lub elementu członkowskiego początkowej zawiera dojście i identyfikator formantu wysyłania wiadomości i kod powiadomienia (na przykład TTN_SHOW). Format **NMHDR** struktury przedstawiono poniżej:
+**NMHDR** struktury lub pierwotnym członku zawiera dojście i identyfikator kontrolki, wysyłając wiadomość i kod powiadomienia (na przykład TTN_SHOW). Format **NMHDR** struktury jest pokazany poniżej:
 
 ```cpp
 typedef struct tagNMHDR {
@@ -61,9 +61,9 @@ typedef struct tagNMHDR {
 } NMHDR;
 ```
 
-W przypadku komunikatu TTN_SHOW **kod** TTN_SHOW będzie miał ustawienie elementu członkowskiego.
+W przypadku komunikatu TTN_SHOW **kodu** TTN_SHOW będzie miał ustawienie elementu członkowskiego.
 
-Większość powiadomienia przekazać wskaźnik do większej struktury, która zawiera **NMHDR** struktury jako swojego pierwszego elementu członkowskiego. Na przykład należy wziąć pod uwagę struktury używane przez komunikatu powiadomienia LVN_KEYDOWN formantu widoku listy, który jest wysyłany, gdy zostanie naciśnięty klawisz w kontrolce widoku listy. Wskaźnik wskazuje **LV_KEYDOWN** struktury, która jest zdefiniowana w sposób przedstawiony poniżej:
+Większość powiadomienia przekazać wskaźnik do większych strukturę, która zawiera **NMHDR** struktury jako swojego pierwszego elementu członkowskiego. Na przykład należy wziąć pod uwagę struktury używane przez komunikat powiadomienia LVN_KEYDOWN kontrolka widoku listy, który jest wysyłany po naciśnięciu klawisza w kontrolka widoku listy. Wskaźnik wskazuje **LV_KEYDOWN** struktury, która jest zdefiniowana, jak pokazano poniżej:
 
 ```cpp
 typedef struct tagLV_KEYDOWN {
@@ -73,30 +73,30 @@ typedef struct tagLV_KEYDOWN {
 } LV_KEYDOWN;
 ```
 
-Należy pamiętać, że od momentu **NMHDR** element członkowski jest pierwszy w tej strukturze, wskaźnika jest przekazano komunikat powiadomienia mogą być rzutowane na wskaźnik do **NMHDR** lub wskaźnika do **LV_KEYDOWN** .
+Należy pamiętać, że od momentu **NMHDR** element członkowski jest pierwszy w tej struktury, wskaźnik przekazałeś komunikatu powiadomienia mogą być rzutowane na wskaźnik do **NMHDR** lub wskaźnika do **LV_KEYDOWN** .
 
-**Typowe powiadomienia do wszystkich nowych formantów systemu Windows**
+**Typowe powiadomienia do wszystkich nowych kontrolek Windows**
 
-Niektóre powiadomienia są wspólne dla wszystkich nowych formantów systemu Windows. Te powiadomienia wskaźnikiem do **NMHDR** struktury.
+Niektóre powiadomienia są wspólne dla wszystkich nowych formantów Windows. Te powiadomienia przekazać wskaźnik do **NMHDR** struktury.
 
-|Kod powiadomienia|Wysłać, ponieważ|
+|Kod powiadomienia|Wysłana, ponieważ|
 |-----------------------|------------------|
-|NM_CLICK|Użytkownik kliknął lewym przyciskiem myszy w formancie|
-|NM_DBLCLK —|Użytkownik dwukrotnym kliknięciu lewym przyciskiem myszy w formancie|
-|NM_RCLICK —|Użytkownik kliknął prawym przyciskiem myszy w formancie|
-|NM_RDBLCLK —|Użytkownik dwukrotnym kliknięciu prawym przyciskiem myszy w formancie|
-|NM_RETURN —|Użytkownik naciśnięciu klawisza ENTER, gdy formant ma wejściowych fokus|
-|NM_SETFOCUS —|Formant ma fokus wprowadzania|
+|NM_CLICK|Użytkownik kliknął lewym przyciskiem myszy formant|
+|NM_DBLCLK —|Użytkownik dwukrotnym kliknięciu lewym przyciskiem myszy formant|
+|NM_RCLICK —|Użytkownik kliknął prawym przyciskiem myszy w kontrolce|
+|NM_RDBLCLK —|Użytkownik dwukrotnym kliknięciu prawym przyciskiem myszy w kontrolce|
+|NM_RETURN —|Użytkownik nacisnął klawisz ENTER, gdy kontrolka ma fokus wejścia|
+|NM_SETFOCUS —|Kontrolka ma fokus wprowadzania|
 |NM_KILLFOCUS —|Kontrolka utraciła fokus wprowadzania|
-|NM_OUTOFMEMORY —|Formant nie można ukończyć operacji, ponieważ nie był dostępny za mało pamięci|
+|NM_OUTOFMEMORY —|Kontrolka nie mogła ukończyć operacji, ponieważ nie była dostępna wystarczająca ilość pamięci|
 
-##  <a name="_mfcnotes_on_notify.3a_.handling_wm_notify_messages_in_mfc_applications"></a> On_notify —: Obsługa WM_NOTIFY komunikatów w aplikacjach MFC
+##  <a name="_mfcnotes_on_notify.3a_.handling_wm_notify_messages_in_mfc_applications"></a> ON_NOTIFY: Obsługa WM_NOTIFY komunikatów w aplikacjach MFC
 
-Funkcja `CWnd::OnNotify` obsługi komunikatów powiadomień. Jego domyślna implementacja sprawdza mapy komunikatów dla programów obsługi powiadomień do wywołania. Ogólnie rzecz biorąc, możesz nie zastępują `OnNotify`. Należy podać funkcji obsługi i dodanie wpisu mapy komunikatów dla tego programu obsługi do mapy komunikatów z oknem właściciela klasy.
+Funkcja `CWnd::OnNotify` obsługuje komunikaty powiadomień. Jego domyślna implementacja sprawdza, czy mapę komunikatów w poszukiwaniu programy obsługi powiadomień do wywołania. Ogólnie rzecz biorąc, nie zastąpisz `OnNotify`. Zamiast tego zapewnia funkcję obsługi i Dodaj wpis mapy komunikatów dla tej obsługi na mapie komunikatów klasy okna właściciela.
 
-ClassWizard za pośrednictwem ClassWizard arkusza właściwości, można utworzyć wpisu mapy komunikatów on_notify — i dostarczać funkcji obsługi szkielet. Aby uzyskać więcej informacji na temat używania ClassWizard ułatwić, zobacz [mapowanie komunikatów do funkcji](../mfc/reference/mapping-messages-to-functions.md).
+ClassWizard za pośrednictwem ClassWizard arkusza właściwości, można utworzyć wpisu mapy komunikatów ON_NOTIFY i udostępniać funkcję obsługi szkielet. Aby uzyskać więcej informacji na temat używania ClassWizard, aby to ułatwić, zobacz [mapowanie komunikatów do funkcji](../mfc/reference/mapping-messages-to-functions.md).
 
-On_notify — makro map wiadomości ma następującą składnię:
+Makra mapy komunikatów ON_NOTIFY ma następującą składnię:
 
 ```cpp
 ON_NOTIFY(wNotifyCode, id, memberFxn)
@@ -105,15 +105,15 @@ ON_NOTIFY(wNotifyCode, id, memberFxn)
 gdzie parametrami są:
 
 *wNotifyCode*  
- Kod komunikatu powiadomienia, które mają być obsługiwane, takich jak LVN_KEYDOWN.
+ Kod komunikatu powiadomienia mają być obsługiwane, takich jak LVN_KEYDOWN.
 
 *id*  
- Identyfikator podrzędnych formantu, dla którego jest wysyłane powiadomienie.
+ Identyfikator podrzędnego kontrolki wysyłania powiadomień.
 
 *memberFxn*  
- Funkcja członkowska wywoływana, gdy to powiadomienie jest wysyłane.
+ Funkcja elementu członkowskiego, wywoływana, gdy to powiadomienie jest wysyłane.
 
-Funkcja elementu członkowskiego musi być zadeklarowany z następującym prototypie:
+Funkcja elementu członkowskiego musi być zadeklarowany z poniższy prototyp:
 
 ```cpp
 afx_msg void memberFxn(NMHDR* pNotifyStruct, LRESULT* result);
@@ -124,18 +124,18 @@ gdzie parametrami są:
 *pNotifyStruct*  
  Wskaźnik do struktury powiadomień, zgodnie z opisem w poprzedniej sekcji.
 
-*Wynik*  
- Wskaźnik do kod wyniku zostanie ustawiona przed zwróceniem.
+*wynik*  
+ Wskaźnik do kodu wyniku zostanie ustawiona przed zwróceniem.
 
 ## <a name="example"></a>Przykład
 
-Aby określić, że funkcja członkowska `OnKeydownList1` do obsługi komunikatów LVN_KEYDOWN z `CListCtrl` których identyfikator jest `IDC_LIST1`, należy użyć ClassWizard, aby dodać następujące mapy komunikatów:
+Aby określić, że funkcja elementu członkowskiego `OnKeydownList1` może obsługiwać komunikaty LVN_KEYDOWN z `CListCtrl` których identyfikator jest `IDC_LIST1`, ClassWizard umożliwiają Dodaj następujący element do mapy wiadomości:
 
 ```cpp
 ON_NOTIFY(LVN_KEYDOWN, IDC_LIST1, OnKeydownList1)
 ```
 
-W powyższym przykładzie funkcja podał ClassWizard jest:
+W powyższym przykładzie funkcja dostarczone przez ClassWizard jest następująca:
 
 ```cpp
 void CMessageReflectionDlg::OnKeydownList1(NMHDR* pNMHDR, LRESULT* pResult)
@@ -149,17 +149,17 @@ void CMessageReflectionDlg::OnKeydownList1(NMHDR* pNMHDR, LRESULT* pResult)
 }
 ```
 
-Uwaga ClassWizard automatycznie zapewnia wskaźnika prawidłowego typu. Dostęp do struktury powiadomień przy użyciu jednej *pNMHDR* lub *pLVKeyDow*.
+Należy pamiętać, ClassWizard automatycznie dostarcza wskaźnik właściwego typu. Dostęp do struktury powiadomień przy użyciu jednej *pNMHDR* lub *pLVKeyDow*.
 
 ##  <a name="_mfcnotes_on_notify_range"></a> ON_NOTIFY_RANGE —
 
-Jeśli potrzebujesz przetworzyć ten sam komunikat WM_NOTIFY zbiór kontrolek, można użyć on_notify_range — zamiast on_notify —. Na przykład może być zestaw przycisków, dla której chcesz wykonać tę samą akcję dla komunikatu powiadomienia.
+Jeśli musisz przetworzyć ten sam komunikat WM_NOTIFY zbiór kontrolek, można użyć ON_NOTIFY_RANGE zamiast ON_NOTIFY. Na przykład masz zestaw przycisków, dla której chcesz wykonać tę samą akcję dla komunikatu powiadomienia.
 
-Gdy używasz on_notify_range — określisz ciągły zakres identyfikatorów podrzędnych dla którego, by obsłużyć komunikat powiadomienia przez określenie początku i zakończenia podrzędne identyfikatory zakresu.
+Gdy używasz ON_NOTIFY_RANGE, określasz ciągły zakres identyfikatorów podrzędnych dla którego, by obsłużyć komunikat powiadomienia, określając początkowy i końcowy identyfikatorów podrzędnych zakresu.
 
-ClassWizard nie obsługuje on_notify_range —; Aby go użyć, należy edytować swoich mapy wiadomości.
+ClassWizard nie obsługuje ON_NOTIFY_RANGE; Aby go użyć, należy edytować mapy wiadomości, samodzielnie.
 
-Wpis w mapie komunikatów i prototyp funkcji on_notify_range — są następujące:
+Wpis mapy komunikatów i prototypu funkcji ON_NOTIFY_RANGE są następujące:
 
 ```cpp
 ON_NOTIFY_RANGE(wNotifyCode, id, idLast, memberFxn)
@@ -168,18 +168,18 @@ ON_NOTIFY_RANGE(wNotifyCode, id, idLast, memberFxn)
 gdzie parametrami są:
 
 *wNotifyCode*  
- Kod komunikatu powiadomienia, które mają być obsługiwane, takich jak LVN_KEYDOWN.
+ Kod komunikatu powiadomienia mają być obsługiwane, takich jak LVN_KEYDOWN.
 
 *id*  
- Pierwszy identyfikator w ciągły zakres identyfikatorów.
+ Pierwszy identyfikator ciągły zakres identyfikatorów.
 
 *idLast*  
- Identyfikator ostatniego w ciągły zakres identyfikatorów.
+ Ostatni identyfikator w ciągły zakres identyfikatorów.
 
 *memberFxn*  
- Funkcja członkowska wywoływana, gdy to powiadomienie jest wysyłane.
+ Funkcja elementu członkowskiego, wywoływana, gdy to powiadomienie jest wysyłane.
 
-Funkcja elementu członkowskiego musi być zadeklarowany z następującym prototypie:
+Funkcja elementu członkowskiego musi być zadeklarowany z poniższy prototyp:
 
 ```cpp
 afx_msg void memberFxn(UINT id, NMHDR* pNotifyStruct, LRESULT* result);
@@ -188,36 +188,36 @@ afx_msg void memberFxn(UINT id, NMHDR* pNotifyStruct, LRESULT* result);
 gdzie parametrami są:
 
 *id*  
- Identyfikator podrzędnych formantu, który wysyłane powiadomienia.
+ Identyfikator podrzędny formantu wysyłającego powiadomienia.
 
 *pNotifyStruct*  
- Wskaźnik do struktury powiadomień, jak opisano powyżej.
+ Wskaźnik do struktury powiadomień, zgodnie z powyższym opisem.
 
-*Wynik*  
- Wskaźnik do kod wyniku zostanie ustawiona przed zwróceniem.
+*wynik*  
+ Wskaźnik do kodu wyniku zostanie ustawiona przed zwróceniem.
 
 ##  <a name="_mfcnotes_tn061_on_notify_ex.2c_.on_notify_ex_range"></a> ON_NOTIFY_EX —, ON_NOTIFY_EX_RANGE —
 
-Jeśli chcesz, aby więcej niż jeden obiekt w powiadomieniu routingu do obsługi wiadomości, można użyć on_notify_ex — (lub on_notify_ex_range —) zamiast on_notify — (lub on_notify_range —). Jedyną różnicą między **EX** i regularnego wersja jest, że funkcja członkowska wywołana dla **EX** zwraca wersji **BOOL** wskazujące, czy Przetwarzanie komunikatów powinno być kontynuowane. Zwracanie **FALSE** z tej funkcji umożliwia przetworzenie tego samego komunikatu w więcej niż jeden obiekt.
+Jeśli chcesz więcej niż jeden obiekt w powiadomieniu o routingu w celu obsługi wiadomości, można użyć on_notify_ex — (lub on_notify_ex_range —) zamiast ON_NOTIFY (lub ON_NOTIFY_RANGE). Jedyną różnicą między **EX** i regularnego wersja jest, że funkcja elementu członkowskiego, wywoływana dla **EX** wersja zwraca **BOOL** oznacza to, czy Przetwarzanie komunikatu powinno być kontynuowane. Zwracanie **FALSE** z tej funkcji służy do przetwarzania ten sam komunikat w więcej niż jeden obiekt.
 
-ClassWizard nie obsługuje on_notify_ex — lub on_notify_ex_range —; Jeśli chcesz użyć jednej z nich, należy edytować swoich mapy wiadomości.
+ClassWizard nie obsługuje on_notify_ex — lub on_notify_ex_range —; Jeśli chcesz użyć którąś z tych funkcji, należy edytować mapy wiadomości, samodzielnie.
 
-Wpis w mapie komunikatów i prototypu funkcji on_notify_ex — i on_notify_ex_range — są następujące. Parametry są takie same jak dla innych niż -**EX** wersji.
+Wpis mapy komunikatów i prototypu funkcji on_notify_ex — i on_notify_ex_range — są w następujący sposób. Znaczenie parametry są takie same jak dla innych niż**EX** wersji.
 
 ```cpp
 ON_NOTIFY_EX(nCode, id, memberFxn)
 ON_NOTIFY_EX_RANGE(wNotifyCode, id, idLast, memberFxn)
 ```
 
-Prototyp dla obu powyższych jest taka sama:
+Prototyp dla obu powyższych jest taki sam:
 
 ```cpp
 afx_msg BOOL memberFxn(UINT id, NMHDR* pNotifyStruct, LRESULT* result);
 ```
 
-W obu przypadkach *identyfikator* zawiera identyfikator podrzędnych formantu, który wysyłane powiadomienia.
+W obu przypadkach *identyfikator* przechowuje identyfikator podrzędny formantu wysyłającego powiadomienia.
 
-Funkcja musi zwracać **TRUE** jeśli całkowicie obsługiwane komunikatu powiadomienia lub **FALSE** Jeśli inne obiekty w routing poleceń powinien mieć możliwość obsługi wiadomości.
+Funkcja musi zwracać **TRUE** Jeśli komunikatu powiadomienia całkowicie obsłużeniu lub **FALSE** Jeśli inne obiekty w routingu poleceń powinny mieć możliwość obsługi wiadomości.
 
 ## <a name="see-also"></a>Zobacz także
 

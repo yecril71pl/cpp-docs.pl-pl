@@ -14,25 +14,25 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2221430522329616dd19f32484b66dc957593c3a
-ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
+ms.openlocfilehash: 16a5033a2656cea3f1cecea1e5b97f4ad9c117ad
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "33321990"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43222210"
 ---
 # <a name="manifest-tool-property-pages"></a>Strony właściwości narzędzia manifestu
-Użyj **narzędziu manifestu** strony właściwości można ustawić opcje dla mt.exe kompilacji.  
+Użyj **narzędziu manifestu** strony właściwości można ustawić kompilacji opcje dla mt.exe.  
   
- Aby uzyskać więcej informacji na temat narzędzia manifestu, zobacz [Mt.exe](http://msdn.microsoft.com/library/aa375649).  
+ Aby uzyskać więcej informacji dotyczących narzędzia manifestu, zobacz [Mt.exe](https://msdn.microsoft.com/library/aa375649).  
   
- [Narzędzie ogólne, manifestu właściwości konfiguracji \<Projectname > stron właściwości — okno dialogowe](../ide/general-manifest-tool-configuration-properties.md)  
+ [Ogólne, narzędzie manifestu, właściwości konfiguracji \<nazwa_projektu > okno dialogowe strony właściwości](../ide/general-manifest-tool-configuration-properties.md)  
   
- [Dane wejściowe i wyjściowe narzędzie, właściwości konfiguracji manifestu \<Projectname > stron właściwości — okno dialogowe](../ide/input-and-output-manifest-tool.md)  
+ [Wejście i wyjście, narzędzie manifestu, właściwości konfiguracji \<nazwa_projektu > okno dialogowe strony właściwości](../ide/input-and-output-manifest-tool.md)  
   
- [Izolowane, narzędzia manifestu, właściwości, \<Projectname > stron właściwości — okno dialogowe](../ide/isolated-com-manifest-tool.md)  
+ [COM izolowany, narzędzie manifestu, właściwości konfiguracji, \<nazwa_projektu > okno dialogowe strony właściwości](../ide/isolated-com-manifest-tool.md)  
   
- [Zaawansowane narzędzia manifestu właściwości konfiguracji \<Projectname > stron właściwości — okno dialogowe](../ide/advanced-manifest-tool.md)  
+ [Zaawansowane, narzędzie manifestu, właściwości konfiguracji \<nazwa_projektu > okno dialogowe strony właściwości](../ide/advanced-manifest-tool.md)  
   
 ## <a name="see-also"></a>Zobacz też  
  [Strony właściwości](../ide/property-pages-visual-cpp.md)

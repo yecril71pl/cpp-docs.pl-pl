@@ -21,19 +21,19 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ccce0633ca9dad6b4754db2fb6b10aa32dcbdaaa
-ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
+ms.openlocfilehash: 4bc63eede971bed0b726c633f0ef7d52793f39ba
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "33322877"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43219471"
 ---
 # <a name="resources-property-pages"></a>Strony właściwości zasobów
-Aby uzyskać więcej informacji na temat używania kompilatora zasobów, zobacz [przy użyciu RC (wiersza polecenia RC)](http://msdn.microsoft.com/library/windows/desktop/aa381055).  
+Aby uzyskać więcej informacji na temat korzystania z kompilator zasobów, zobacz [przy użyciu RC (wiersz polecenia RC)](https://msdn.microsoft.com/library/windows/desktop/aa381055).  
   
- Aby uzyskać informacje dotyczące dostępu do **zasobów** strony właściwości, zobacz [Praca z właściwościami projektu](../ide/working-with-project-properties.md).  
+ Aby uzyskać informacje dotyczące uzyskiwania dostępu do **zasobów** strony właściwości, zobacz [Praca z właściwościami projektu](../ide/working-with-project-properties.md).  
   
- Do uzyskania programowego dostępu do tych właściwości, zobacz <xref:Microsoft.VisualStudio.VCProjectEngine.VCResourceCompilerTool>.  
+ Aby programowo uzyskać dostęp do tych właściwości, zobacz <xref:Microsoft.VisualStudio.VCProjectEngine.VCResourceCompilerTool>.  
   
 ## <a name="see-also"></a>Zobacz też  
  [Strony właściwości](../ide/property-pages-visual-cpp.md)

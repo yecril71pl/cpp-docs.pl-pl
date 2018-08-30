@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 7832985c6095aecae5098461d36947ff4268d262
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: 04ee2d36d269d3bc9324b10dffd8840f9f68a8ab
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42465339"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43220890"
 ---
 # <a name="ole-db-provider-templates-reference"></a>Szablony dostawców OLE DB — kompendium
 Klasy i interfejsy dla szablony OLE DB Provider można podzielić na następujące kategorie. Materiały referencyjne zawiera również informacje o [makra szablony OLE DB Provider](../../data/oledb/macros-for-ole-db-provider-templates.md).  
@@ -63,7 +63,7 @@ Klasy i interfejsy dla szablony OLE DB Provider można podzielić na następują
  Implementuje OLE DB [IRowsetChange](/previous-versions/windows/desktop/ms715790\(v=vs.85\)) interfejs, który umożliwia aktualizowanie wartości kolumn w istniejących wierszy: usuwanie wierszy, a następnie wstawianie nowych wierszy.  
   
  [Irowsetcreatorimpl —](../../data/oledb/irowsetcreatorimpl-class.md)  
- Ta klasa dziedziczy [IObjectWithSite](http://msdn.microsoft.com/library/windows/desktop/ms693765) i zastępuje [IObjectWithSite::SetSite](http://msdn.microsoft.com/library/windows/desktop/ms683869). `IRowsetCreatorImpl` wykonuje te same funkcje co `IObjectWithSite` , lecz także właściwości OLE DB `DBPROPCANSCROLLBACKWARDS` i `DBPROPCANFETCHBACKWARDS`.  
+ Ta klasa dziedziczy [IObjectWithSite](/windows/desktop/api/ocidl/nn-ocidl-iobjectwithsite) i zastępuje [IObjectWithSite::SetSite](/windows/desktop/api/ocidl/nf-ocidl-iobjectwithsite-setsite). `IRowsetCreatorImpl` wykonuje te same funkcje co `IObjectWithSite` , lecz także właściwości OLE DB `DBPROPCANSCROLLBACKWARDS` i `DBPROPCANFETCHBACKWARDS`.  
   
  [Irowsetidentityimpl —](../../data/oledb/irowsetidentityimpl-class.md)  
  Implementuje `IRowsetIdentity` interfejs, który umożliwia porównanie, czy dwa wiersze danych są identyczne, czy nie.  

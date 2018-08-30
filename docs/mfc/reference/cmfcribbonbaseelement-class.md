@@ -242,12 +242,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8ac1ae7ba40ead2217fd2404a243f0e02664177a
-ms.sourcegitcommit: 76fd30ff3e0352e2206460503b61f45897e60e4f
+ms.openlocfilehash: 41b5a9f936dc47852c766370d330576dc16ca58a
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/13/2018
-ms.locfileid: "39028398"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43213665"
 ---
 # <a name="cmfcribbonbaseelement-class"></a>Klasa CMFCRibbonBaseElement
 `CMFCRibbonBaseElement` Klasy jest klasą bazową dla wszystkich elementów, które można dodać do [paska wstążki](../../mfc/reference/cmfcribbonbar-class.md). Przykładowe elementy wstążki są wstążki przyciski, pola wyboru Wstążki i pola kombi wstążki.  
@@ -921,7 +921,7 @@ virtual CWnd* GetParentWnd() const;
  Wskaźnik do okna nadrzędnego elementu wstążki, jeśli metoda zakończyła się pomyślnie; w przeciwnym razie wartość NULL.  
   
 ### <a name="remarks"></a>Uwagi  
- Okno nadrzędne dla elementu wstążki jest [klasa CMFCRibbonBar](../../mfc/reference/cmfcribbonbar-class.md) lub [cmfcribbonpanelmenubar —](http://msdn.microsoft.com/7bd4b986-8b7b-493e-9746-bd3161b78581).  
+ Okno nadrzędne dla elementu wstążki jest [klasa CMFCRibbonBar](../../mfc/reference/cmfcribbonbar-class.md) lub [cmfcribbonpanelmenubar —](https://msdn.microsoft.com/7bd4b986-8b7b-493e-9746-bd3161b78581).  
   
 ##  <a name="getpressed"></a>  CMFCRibbonBaseElement::GetPressed  
  Pobiera wskaźnik do elementu wstążki, gdy użytkownik naciśnie obecnie go.  
@@ -1686,7 +1686,7 @@ virtual void Redraw();
 ```  
   
 ### <a name="remarks"></a>Uwagi  
- Ta metoda ponownie rysuje prostokąt wyświetlaną dla elementu wstążki, wywołując [CWnd::RedrawWindow](http://msdn.microsoft.com/library/windows/desktop/dd162911) przy użyciu flag RDW_INVALIDATE RDW_ERASE i RDW_UPDATENOW zestawu.  
+ Ta metoda ponownie rysuje prostokąt wyświetlaną dla elementu wstążki, wywołując [CWnd::RedrawWindow](/windows/desktop/api/winuser/nf-winuser-redrawwindow) przy użyciu flag RDW_INVALIDATE RDW_ERASE i RDW_UPDATENOW zestawu.  
   
 ##  <a name="setaccdata"></a>  CMFCRibbonBaseElement::SetACCData  
  Ustawia dane ułatwień dostępu dla elementu wstążki.  

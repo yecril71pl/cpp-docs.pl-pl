@@ -15,18 +15,18 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: dc392454a6c5b152411fe8f6a7d0c12457389794
-ms.sourcegitcommit: d4c803bd3a684d7951bf88dcecf1f14af43ae411
+ms.openlocfilehash: a401cb74c07815f511ad37e53ac5be267029319c
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/10/2018
-ms.locfileid: "42466126"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43212224"
 ---
 # <a name="preprocessor-directives"></a>Dyrektywy preprocesora
 
 Dyrektywy preprocesora, takich jak `#define` i `#ifdef`, są zazwyczaj używane do ułatwienia wprowadzania programach źródłowych zmian oraz prowadzenia łatwej kompilacji w różnych środowiskach wykonawczych. Dyrektywy w pliku źródłowym każą preprocesorowi wykonać określone czynności. Na przykład preprocesor można zamienić tokeny w tekście, wstawić zawartość innych plików do pliku źródłowego lub pomijanie kompilacji części pliku poprzez usunięcie fragmentów tekstu. Linie preprocesora są rozpoznawane i przeprowadzane przed rozwinięciem makra. W związku z tym Jeżeli makro rozszerzy się na coś, co przypomina polecenie preprocesora, to polecenie nie jest rozpoznawane przez preprocesor.
 
-Instrukcje preprocesora używają ten sam zestaw znaków jak instrukcje pliku źródłowego, z wyjątkiem, że sekwencje ucieczki nie są obsługiwane. Zestaw znaków używanych w instrukcjach preprocesora jest taki sam jak [zestaw znaków wykonania](http://msdn.microsoft.com/a7901c61-524d-47c6-beb6-d9dacc2e72ed). Preprocesor rozpoznaje również ujemne wartości.
+Instrukcje preprocesora używają ten sam zestaw znaków jak instrukcje pliku źródłowego, z wyjątkiem, że sekwencje ucieczki nie są obsługiwane. Zestaw znaków używanych w instrukcjach preprocesora jest taki sam jak [zestaw znaków wykonania](https://msdn.microsoft.com/a7901c61-524d-47c6-beb6-d9dacc2e72ed). Preprocesor rozpoznaje również ujemne wartości.
 
 Preprocesor rozpoznaje poniższe dyrektywy:
 
@@ -37,7 +37,7 @@ Preprocesor rozpoznaje poniższe dyrektywy:
 |[#else](../preprocessor/hash-if-hash-elif-hash-else-and-hash-endif-directives-c-cpp.md)|[#ifdef](../preprocessor/hash-ifdef-and-hash-ifndef-directives-c-cpp.md)|[#line](../preprocessor/hash-line-directive-c-cpp.md)|[#endif](../preprocessor/hash-if-hash-elif-hash-else-and-hash-endif-directives-c-cpp.md)|
 |[#ifndef](../preprocessor/hash-ifdef-and-hash-ifndef-directives-c-cpp.md)|[#pragma](../preprocessor/pragma-directives-and-the-pragma-keyword.md)|||
 
-Znak numeru (**#**) musi być pierwszym niebiałym znakiem w wierszu zawierającym dyrektywę; białe znaki mogą występować między znakiem liczby i pierwszą literą dyrektywy. Niektóre dyrektywy zawierają argumenty lub wartości. Dowolny tekst, który następuje po dyrektywie (chyba że argument lub wartość, która jest częścią dyrektywy) musi być poprzedzona ogranicznikiem komentaraz jednowierszowego (**//**) lub ujęta w ograniczniki komentarza ( __/ \*\*/__).   Wiersze zawierające dyrektywy preprocesora mogą być kontynuowane, bezpośrednio poprzedzających znacznika końca wiersza znakiem kreski ułamkowej odwróconej (**\\**).
+Znak numeru (**#**) musi być pierwszym niebiałym znakiem w wierszu zawierającym dyrektywę; białe znaki mogą występować między znakiem liczby i pierwszą literą dyrektywy. Niektóre dyrektywy zawierają argumenty lub wartości. Dowolny tekst, który następuje po dyrektywie (chyba że argument lub wartość, która jest częścią dyrektywy) musi być poprzedzona ogranicznikiem komentaraz jednowierszowego (**//**) lub ujęta w ograniczniki komentarza ( __/ \*\*/__). Wiersze zawierające dyrektywy preprocesora mogą być kontynuowane, bezpośrednio poprzedzających znacznika końca wiersza znakiem kreski ułamkowej odwróconej (**\\**).
 
 Dyrektywy preprocesora mogą występować w dowolnym miejscu w pliku źródłowym, ale mają zastosowanie tylko do pozostałej części pliku źródłowego.
 

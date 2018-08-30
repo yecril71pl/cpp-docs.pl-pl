@@ -54,12 +54,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5ea5ed6c4441ebd98462562ac9405d6f8c115c61
-ms.sourcegitcommit: 04d327940787df1297b72d534f388a035d472af0
+ms.openlocfilehash: cf7e7e009d1f56d71e8f1b26a2e0eeefb8855492
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/20/2018
-ms.locfileid: "39181097"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43214090"
 ---
 # <a name="strstr-wcsstr-mbsstr-mbsstrl"></a>strstr, wcsstr, _mbsstr, _mbsstr_l
 Zwraca wskaźnik do pierwszego wystąpienia wyszukiwanego ciągu w ciągu.
@@ -143,7 +143,7 @@ Zwraca wskaźnik do pierwszego wystąpienia *strSearch* w *str*, lub wartość N
 `strstr` Funkcja zwraca wskaźnik do pierwszego wystąpienia *strSearch* w *str*. Wyszukiwanie nie obejmuje kończących się pustych znaków. `wcsstr` jest wersją znaków dwubajtowych `strstr` i `_mbsstr` jest wersją znaków wielobajtowych. Argumenty i wartość zwracana przez `wcsstr` są znakami dwubajtowymi ciągów; te z `_mbsstr` są ciągami znaków wielobajtowych. `_mbsstr` sprawdza poprawność parametrów. Jeśli *str* lub *strSearch* ma wartość NULL, procedura obsługi nieprawidłowego parametru zostanie wywołana, zgodnie z opisem w [Parameter Validation](../../c-runtime-library/parameter-validation.md) . Jeśli wykonanie może być kontynuowane, `_mbsstr` ustawia `errno` EINVAL i zwraca wartość 0. `strstr` i `wcsstr` nie sprawdzają poprawność swoich parametrów. Te trzy funkcje zachowują się identycznie.
 
 > [!IMPORTANT]
-> Te funkcje mogą zostać naliczone zagrożenie z problemem przepełnienia buforu. Problemy z przepełnieniem buforu może służyć do ataków systemu, ponieważ umożliwiają one wykonywanie dowolnego kodu, co może spowodować nieuzasadnione podniesienie poziomu uprawnień. Aby uzyskać więcej informacji, zobacz [unikanie przepełnień bufora](http://msdn.microsoft.com/library/windows/desktop/ms717795).
+> Te funkcje mogą zostać naliczone zagrożenie z problemem przepełnienia buforu. Problemy z przepełnieniem buforu może służyć do ataków systemu, ponieważ umożliwiają one wykonywanie dowolnego kodu, co może spowodować nieuzasadnione podniesienie poziomu uprawnień. Aby uzyskać więcej informacji, zobacz [unikanie przepełnień bufora](/windows/desktop/SecBP/avoiding-buffer-overruns).
 
 W języku C, te funkcje biorą **const** wskaźnik dla pierwszego argumentu. W języku C++ dostępne są dwa przeciążenia. Przeciążenia, które przyjmuje wskaźnik do **const** zwraca wskaźnik do **const**; wersja, która przyjmuje wskaźnik do non -**const** zwraca wskaźnik do non - **Const**. _CRT_CONST_CORRECT_OVERLOADS — makro jest zdefiniowany, jeśli oba **const** i innych niż-**const** wersje tych funkcji są dostępne. Jeśli potrzebujesz non -**const** zachowanie dla obu przeciążeń C++, określ symbol _CONST_RETURN.
 

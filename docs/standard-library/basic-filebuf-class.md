@@ -50,12 +50,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b9ea6f4a5770163ddaa34478f6630ed2a24ffbd6
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 4594e24ddf88292d311679b64371ac981642bc5d
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38954971"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43222724"
 ---
 # <a name="basicfilebuf-class"></a>basic_filebuf — Klasa
 
@@ -70,9 +70,11 @@ class basic_filebuf : public basic_streambuf<Elem, Tr>
 
 ### <a name="parameters"></a>Parametry
 
-*Elem* podstawowy element buforu plików.
+*Elem*<br/>
+ Podstawowy element buforu plików.
 
-*TR* cech elementu podstawowego buforu pliku (zazwyczaj `char_traits` <  `Elem`>).
+*TR*<br/>
+ Cechy elementu podstawowego buforu pliku (zazwyczaj `char_traits` <  `Elem`>).
 
 ## <a name="remarks"></a>Uwagi
 
@@ -410,11 +412,14 @@ basic_filebuf<Elem, Tr> *open(
 
 ### <a name="parameters"></a>Parametry
 
-*Nazwa p_liku* nazwę pliku, aby otworzyć.
+*Nazwa p_liku*<br/>
+ Nazwa pliku, aby otworzyć.
 
-*_Tryb* jedno z wyliczeń w [ios_base::openmode](../standard-library/ios-base-class.md#openmode).
+*_Tryb*<br/>
+ Jedno z wyliczeń w [ios_base::openmode](../standard-library/ios-base-class.md#openmode).
 
-*_Prot* domyślnego pliku otwarcie ochrony odpowiednikiem *shflag* parametru w [_fsopen —, _wfsopen —](../c-runtime-library/reference/fsopen-wfsopen.md).
+*_Prot*<br/>
+ Domyślny plik otwarcie ochrony odpowiednikiem *shflag* parametru w [_fsopen —, _wfsopen —](../c-runtime-library/reference/fsopen-wfsopen.md).
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -456,7 +461,8 @@ basic_filebuf& operator=(basic_filebuf&& right);
 
 ### <a name="parameters"></a>Parametry
 
-*prawy* odwołania rvalue do [basic_filebuf —](../standard-library/basic-filebuf-class.md) obiektu.
+*right*<br/>
+ Odwołania rvalue do [basic_filebuf —](../standard-library/basic-filebuf-class.md) obiektu.
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -476,7 +482,8 @@ virtual int_type overflow(int_type _Meta = traits_type::eof);
 
 ### <a name="parameters"></a>Parametry
 
-*_Meta* znaku do wstawienia w buforze lub `traits_type::eof`.
+*_Meta*<br/>
+ Znak do wstawienia w buforze lub `traits_type::eof`.
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -484,7 +491,7 @@ Jeśli funkcja nie powiedzie się, zwraca `traits_type::eof`. W przeciwnym razie
 
 ### <a name="remarks"></a>Uwagi
 
-Jeśli _ * Meta ***! = traits_type::**[eof](../standard-library/char-traits-struct.md#eof), chronionych wirtualna funkcja składowa usiłują Wstaw element **ch = traits_type::**[to_char_type](../standard-library/char-traits-struct.md#to_char_type) (\_ *Meta*) do buforu danych wyjściowych. Jego można to zrobić na różne sposoby:
+Jeśli *_Meta* **! = traits_type::**[eof](../standard-library/char-traits-struct.md#eof), chronionych wirtualna funkcja składowa usiłują Wstaw element **ch = traits_type::** [ to_char_type —](../standard-library/char-traits-struct.md#to_char_type)(*_Meta*) do buforu danych wyjściowych. Jego można to zrobić na różne sposoby:
 
 - W przypadku pozycji zapisu jest dostępny, można przechowywać element w określonej pozycji zapisu i zwiększyć wskaźnik następnej dla buforu danych wyjściowych.
 
@@ -502,7 +509,8 @@ virtual int_type pbackfail(int_type _Meta = traits_type::eof);
 
 ### <a name="parameters"></a>Parametry
 
-*_Meta* znak wstawiania do bufora, lub `traits_type::eof`.
+*_Meta*<br/>
+ Znak do wstawienia do określonego bufora lub `traits_type::eof`.
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -538,11 +546,14 @@ virtual pos_type seekoff(off_type _Off,
 
 ### <a name="parameters"></a>Parametry
 
-*_Off* położenie do wyszukania dla względem *_Way*.
+*_Off*<br/>
+ Położenie do wyszukania dla względem *_Way*.
 
-*_Way* punkt początkowy dla operacji przesunięcia. Zobacz [seekdir](../standard-library/ios-base-class.md#seekdir) uzyskać odpowiednie wartości.
+*_Way*<br/>
+ Punkt początkowy dla operacji przesunięcia. Zobacz [seekdir](../standard-library/ios-base-class.md#seekdir) uzyskać odpowiednie wartości.
 
-*_Which* Określa tryb pozycję wskaźnika. Wartość domyślna to umożliwia modyfikowanie, Odczyt i zapis pozycji.
+*_Which*<br/>
+ Określa tryb pozycję wskaźnika. Wartość domyślna to umożliwia modyfikowanie, Odczyt i zapis pozycji.
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -566,9 +577,11 @@ virtual pos_type seekpos(pos_type _Sp, ios_base::openmode _Which = ios_base::in 
 
 ### <a name="parameters"></a>Parametry
 
-*_Sp* położenie do wyszukania dla.
+*_Sp*<br/>
+ Położenie do wyszukania dla.
 
-*_Which* Określa tryb pozycję wskaźnika. Wartość domyślna to umożliwia modyfikowanie, Odczyt i zapis pozycji.
+*_Which*<br/>
+ Określa tryb pozycję wskaźnika. Wartość domyślna to umożliwia modyfikowanie, Odczyt i zapis pozycji.
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -594,9 +607,11 @@ virtual basic_streambuf<Elem, Tr> *setbuf(
 
 ### <a name="parameters"></a>Parametry
 
-*Właściwość _Buffer* wskaźnik do buforu.
+*Właściwość _Buffer*<br/>
+ Wskaźnik do buforu.
 
-*Liczba* rozmiar buforu.
+*Liczba*<br/>
+ Rozmiar buforu.
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -616,7 +631,8 @@ void swap(basic_filebuf& right);
 
 ### <a name="parameters"></a>Parametry
 
-*prawy* `lvalue` odwołanie do innego `basic_filebuf`.
+*right*<br/>
+ `lvalue` Odwołanie do innego `basic_filebuf`.
 
 ## <a name="sync"></a>  basic_filebuf::Sync
 

@@ -28,15 +28,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 296e288f017373563b867b02ad26f25ec6bc6227
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: b3aab8fe3dac8cb58884861a83e41d09b493a375
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37853650"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43212120"
 ---
 # <a name="cmonikerfile-class"></a>Klasa CMonikerFile
-Przedstawia strumień danych ( [IStream](http://msdn.microsoft.com/library/windows/desktop/aa380034)) o nazwie określonej przez [imoniker —](http://msdn.microsoft.com/library/windows/desktop/ms679705).  
+Przedstawia strumień danych ( [IStream](/windows/desktop/api/objidl/nn-objidl-istream)) o nazwie określonej przez [imoniker —](/windows/desktop/api/objidl/nn-objidl-imoniker).  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -74,7 +74,7 @@ class CMonikerFile : public COleStreamFile
   
  `CMonikerFile` Nie można powiązać z coś innego niż strumienia. Jeśli chcesz powiązać z magazynu lub obiektu, należy użyć `IMoniker` interfejs bezpośrednio.  
   
- Aby uzyskać więcej informacji na temat strumieni i monikerów, zobacz [COleStreamFile](../../mfc/reference/colestreamfile-class.md) w *odwołanie MFC* i [IStream](http://msdn.microsoft.com/library/windows/desktop/aa380034) i [imoniker —](http://msdn.microsoft.com/library/windows/desktop/ms679705) w Windows SDK.  
+ Aby uzyskać więcej informacji na temat strumieni i monikerów, zobacz [COleStreamFile](../../mfc/reference/colestreamfile-class.md) w *odwołanie MFC* i [IStream](/windows/desktop/api/objidl/nn-objidl-istream) i [imoniker —](/windows/desktop/api/objidl/nn-objidl-imoniker) w Windows SDK.  
   
 ## <a name="inheritance-hierarchy"></a>Hierarchia dziedziczenia  
  [CObject](../../mfc/reference/cobject-class.md)  
@@ -117,7 +117,7 @@ IBindCtx* CreateBindContext(CFileException* pError);
  Wskaźnik do wyjątku plików. W przypadku wystąpienia błędu zostanie ustawiona przyczynie.  
   
 ### <a name="return-value"></a>Wartość zwracana  
- Wskaźnik do kontekstu powiązania [IBindCtx](http://msdn.microsoft.com/library/windows/desktop/ms693755) do powiązania z, jeśli operacja się powiedzie; w przeciwnym razie wartość NULL. Jeśli wystąpienie zostało otwarte z `IBindHost` interfejsu, kontekst powiązania jest pobierana z `IBindHost`. Jeśli ma nie `IBindHost` interfejsu lub interfejs nie zwraca kontekst powiązania, tworzenia kontekstu powiązania. Aby uzyskać opis [IBindHost](http://msdn.microsoft.com/library/ie/ms775076) interfejsu, zobacz zestaw Windows SDK.  
+ Wskaźnik do kontekstu powiązania [IBindCtx](/windows/desktop/api/objidl/nn-objidl-ibindctx) do powiązania z, jeśli operacja się powiedzie; w przeciwnym razie wartość NULL. Jeśli wystąpienie zostało otwarte z `IBindHost` interfejsu, kontekst powiązania jest pobierana z `IBindHost`. Jeśli ma nie `IBindHost` interfejsu lub interfejs nie zwraca kontekst powiązania, tworzenia kontekstu powiązania. Aby uzyskać opis [IBindHost](https://msdn.microsoft.com/library/ie/ms775076) interfejsu, zobacz zestaw Windows SDK.  
   
 ### <a name="remarks"></a>Uwagi  
  Kontekst powiązania jest obiektem, który przechowuje informacje o operacji wiązania określonej krótkiej nazwy. Można zastąpić tę funkcję, aby zapewnić kontekst niestandardowego powiązania.  
@@ -144,10 +144,10 @@ IMoniker* GetMoniker() const;
 ```  
   
 ### <a name="return-value"></a>Wartość zwracana  
- Wskaźnik do bieżącego interfejsu krótkiej nazwy ( [imoniker —](http://msdn.microsoft.com/library/windows/desktop/ms679705)).  
+ Wskaźnik do bieżącego interfejsu krótkiej nazwy ( [imoniker —](/windows/desktop/api/objidl/nn-objidl-imoniker)).  
   
 ### <a name="remarks"></a>Uwagi  
- Ponieważ `CMonikerFile` nie jest interfejsem, zwrócony wskaźnik nie zwiększa liczbę odwołań (za pośrednictwem [AddRef](http://msdn.microsoft.com/library/windows/desktop/ms691379)), i moniker jest zwalniany podczas `CMonikerFile` obiektu jest zwalniany. Jeśli chcesz przechowywać na monikera lub wersji samodzielnie, musisz najpierw `AddRef` go.  
+ Ponieważ `CMonikerFile` nie jest interfejsem, zwrócony wskaźnik nie zwiększa liczbę odwołań (za pośrednictwem [AddRef](/windows/desktop/api/unknwn/nf-unknwn-iunknown-addref)), i moniker jest zwalniany podczas `CMonikerFile` obiektu jest zwalniany. Jeśli chcesz przechowywać na monikera lub wersji samodzielnie, musisz najpierw `AddRef` go.  
   
 ##  <a name="open"></a>  CMonikerFile::Open  
  Wywołaj tę funkcję elementu członkowskiego, aby otworzyć plik lub krótkiej nazwy obiektu.  

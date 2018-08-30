@@ -1,7 +1,7 @@
 ---
-title: Kompilatora (poziom 3) ostrzeżenie C4306 | Dokumentacja firmy Microsoft
+title: Kompilator ostrzeżenie (poziom 3) C4306 | Dokumentacja firmy Microsoft
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 08/27/2018
 ms.technology:
 - cpp-diagnostics
 ms.topic: error-reference
@@ -16,19 +16,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 99a490fc90ee9a977442548406ea2aec4baac3fd
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: ab5372213819375a6c1fec3cfc43970415b6486a
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33299006"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43219997"
 ---
-# <a name="compiler-warning-level-3-c4306"></a>Kompilator C4306 ostrzegawcze (poziom 3)
-**'**   
- ***Identyfikator* ": konwersja z"**   
- ***type1* "do"**   
- ***type2* "większego rozmiaru**  
-  
- Identyfikator jest typu rzutowania na większych wskaźnik. Niewypełniony starsze bity nowy typ zostaną wypełnione zero.  
-  
- To ostrzeżenie może wskazywać niechciane konwersji. Wynikowa wskaźnika jest nieprawidłowy.
+# <a name="compiler-warning-level-3-c4306"></a>Kompilator ostrzeżenie (poziom 3) C4306
+
+> "*identyfikator*': konwersja z"*type1*"to"*type2*' o większym rozmiarze
+
+Identyfikator jest typ rzutowany na wskaźnik większe. Starsze niewypełnionym bity nowy typ zostaną wypełnione przez zera.
+
+Ostrzeżenie to może wskazywać konwersję niepożądane. Wskaźnik wynikowy jest nieprawidłowy.

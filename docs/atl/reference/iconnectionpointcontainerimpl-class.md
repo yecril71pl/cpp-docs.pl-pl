@@ -21,12 +21,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d70989be8e8535336c831cb59fb9422c6e2c63e0
-ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
+ms.openlocfilehash: 43f4405ad66ff2d6048056780ba7c1581f7b7497
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37886235"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43212537"
 ---
 # <a name="iconnectionpointcontainerimpl-class"></a>Klasa IConnectionPointContainerImpl
 Ta klasa implementuje kontener punktu połączenia, aby zarządzać kolekcją [IConnectionPointImpl](../../atl/reference/iconnectionpointimpl-class.md) obiektów.  
@@ -77,7 +77,7 @@ STDMETHOD(EnumConnectionPoints)(IEnumConnectionPoints** ppEnum);
 ```  
   
 ### <a name="remarks"></a>Uwagi  
- Zobacz [IConnectionPointContainer::EnumConnectionPoints](http://msdn.microsoft.com/library/windows/desktop/ms682460) w Windows SDK.  
+ Zobacz [IConnectionPointContainer::EnumConnectionPoints](/windows/desktop/api/ocidl/nf-ocidl-iconnectionpointcontainer-enumconnectionpoints) w Windows SDK.  
   
 ##  <a name="findconnectionpoint"></a>  IConnectionPointContainerImpl::FindConnectionPoint  
  Pobiera wskaźnik do punktu połączenia, który obsługuje określonego identyfikatora IID interfejsu.  
@@ -87,8 +87,8 @@ STDMETHOD(FindConnectionPoint)(REFIID riid, IConnectionPoint** ppCP);
 ```  
   
 ### <a name="remarks"></a>Uwagi  
- Zobacz [IConnectionPointContainer::FindConnectionPoint](http://msdn.microsoft.com/library/windows/desktop/ms692476) w Windows SDK.  
+ Zobacz [IConnectionPointContainer::FindConnectionPoint](/windows/desktop/api/ocidl/nf-ocidl-iconnectionpointcontainer-findconnectionpoint) w Windows SDK.  
   
 ## <a name="see-also"></a>Zobacz też  
- [Interfejsy IConnectionPointContainer](http://msdn.microsoft.com/library/windows/desktop/ms683857)   
+ [Interfejsy IConnectionPointContainer](/windows/desktop/api/ocidl/nn-ocidl-iconnectionpointcontainer)   
  [Klasa — Przegląd](../../atl/atl-class-overview.md)

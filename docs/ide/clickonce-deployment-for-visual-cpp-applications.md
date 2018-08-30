@@ -1,5 +1,5 @@
 ---
-title: Wdrożenie ClickOnce dla aplikacji Visual C++ | Dokumentacja firmy Microsoft
+title: Wdrożenie rozwiązania ClickOnce dla aplikacji Visual C++ | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,45 +16,45 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e85ec0dfc011aab4d2b3ac835bbe71782b055000
-ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
+ms.openlocfilehash: 59649aeee3b0f63b496b967722205001a3de1619
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "33332328"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43213536"
 ---
 # <a name="clickonce-deployment-for-visual-c-applications"></a>Wdrożenie rozwiązania ClickOnce dla aplikacji Visual C++
-Program Visual Studio oferuje dwa różne technologie wdrażania aplikacji systemu Windows: wdrażania ClickOnce lub [Instalatora Windows](http://msdn.microsoft.com/library/cc185688) wdrożenia.  
+Program Visual Studio oferuje dwie różne technologie wdrażania aplikacji Windows: Wdrażanie ClickOnce lub [Instalatora Windows](/windows/desktop/Msi/windows-installer-portal) wdrożenia.  
   
 ## <a name="clickonce-deployment-in-c"></a>Wdrożenie ClickOnce w języku C++  
  Środowisko projektowe Visual C++ nie obsługuje bezpośrednio wdrażania projektów Visual C++ za pomocą technologii ClickOnce, ale narzędzia są dostępne z niego korzystać.  
   
 > [!NOTE]
->  W środowisku programowania Visual C# i Visual Basic, Visual Studio obsługuje technologii ClickOnce. Projekt Visual C++ w przypadku zależności projektu Visual C#, można opublikować aplikacji (wraz z zależnościami) przy użyciu wdrażania ClickOnce środowiska programowania Visual C#.  
+>  Program Visual Studio obsługuje ClickOnce w środowiskach programistycznych języka Visual C# i Visual Basic. Jeśli projekt Visual C++ jest zależność projekt Visual C#, możesz opublikować aplikację (łącznie z jej zależnościami) za pomocą wdrażania ClickOnce ze środowiska projektowego Visual C#.  
   
- Aby wdrażanie aplikacji Visual C++ za pomocą aplikacji ClickOnce, najpierw należy utworzyć [Manifest aplikacji ClickOnce](/visualstudio/deployment/clickonce-application-manifest) i [Manifest wdrażania ClickOnce](/visualstudio/deployment/clickonce-deployment-manifest) przy użyciu [Mage.exe (Manifest Generowanie i narzędzia do edycji)](/dotnet/framework/tools/mage-exe-manifest-generation-and-editing-tool) lub jego graficznego interfejsu użytkownika programu (Aby uzyskać informacje, zobacz [MageUI.exe (Generowanie manifestu i edytowania narzędzia graficzne klienta)](/dotnet/framework/tools/mageui-exe-manifest-generation-and-editing-tool-graphical-client)).  
+ Do wdrażania aplikacji Visual C++ przy użyciu aplikacji ClickOnce, najpierw trzeba utworzyć [Manifest aplikacji ClickOnce](/visualstudio/deployment/clickonce-application-manifest) i [Manifest wdrażania ClickOnce](/visualstudio/deployment/clickonce-deployment-manifest) przy użyciu [Mage.exe (Manifest Generowanie i narzędzia do edytowania)](/dotnet/framework/tools/mage-exe-manifest-generation-and-editing-tool) lub jego graficznego interfejsu użytkownika programu (Aby uzyskać informacje, zobacz [MageUI.exe (Manifest Generation i graficzny klient Editing Tool)](/dotnet/framework/tools/mageui-exe-manifest-generation-and-editing-tool-graphical-client)).  
 
   
- Użyj Mage.exe do tworzenia manifest aplikacji; Wynikowy plik ma rozszerzenie ".manifest". Następnie użyj Mage.exe do tworzenia manifest wdrażania; Wynikowy plik ma rozszerzenie .application. Następnie zaloguj manifestach.  
+ Użyj Mage.exe, aby utworzyć manifest aplikacji; Wynikowy plik będzie miał rozszerzenie .manifest. Następnie użyj Mage.exe, aby utworzyć manifest wdrożenia; Wynikowy plik będzie miał rozszerzenie .application. Następnie Podpisz manifesty.  
   
- Manifest aplikacji musi określać procesor docelowy (**x86**, **x64**, lub **ARM**). Zobacz [wdrażanie wymagania wstępne dotyczące aplikacji 64-bitowych](/visualstudio/deployment/deploying-prerequisites-for-64-bit-applications) informacji na temat tych opcji.  
+ Manifest aplikacji musi określić procesor docelowy (**x86**, **x64**, lub **ARM**). Zobacz [wdrażanie wymagania wstępne dla aplikacji 64-bitowych](/visualstudio/deployment/deploying-prerequisites-for-64-bit-applications) informacji na temat tych opcji.  
   
- Ponadto nazwa manifestów aplikacji i wdrożenia musi być inna niż nazwa aplikacji C++. Dzięki temu można uniknąć konfliktu między utworzone przez Mage.exe manifest aplikacji i manifest zewnętrznych, będącej częścią aplikacji C++.  
+ Ponadto nazwy manifestów aplikacji i wdrożenia musi być inna niż nazwa aplikacji w języku C++. Pozwala to uniknąć konfliktu między manifestem aplikacji utworzonym przez Mage.exe i manifestem zewnętrznym, który jest częścią aplikacji C++.  
   
- Wdrożenie należy zainstalować żadnych bibliotek języka Visual C++, od których zależy aplikacja. Aby określić zależności dla wybranej aplikacji, można używać depends.exe lub dumpbin — narzędzie z opcją /DEPENDENTS. Aby uzyskać więcej informacji o zależnościach, zobacz [poznanie zależności aplikacji Visual C++](../ide/understanding-the-dependencies-of-a-visual-cpp-application.md). Może być konieczne uruchomienie VCRedist.exe; to narzędzie instaluje bibliotek języka Visual C++ na komputerze docelowym.  
+ Wdrożenia, musisz zainstalować wszelkie biblioteki Visual C++, od których zależy aplikacja. W celu określenia zależności dla konkretnej aplikacji, można użyć depends.exe lub narzędzia DUMPBIN z dependents. Aby uzyskać więcej informacji o zależnościach, zobacz [poznanie zależności aplikacji Visual C++](../ide/understanding-the-dependencies-of-a-visual-cpp-application.md). Konieczne może być uruchomienie VCRedist.exe; to narzędzie instaluje biblioteki Visual C++ na komputerze docelowym.  
   
- Może być również konieczne kompilacji programu inicjującego (wymagań wstępnych Instalatora) dla aplikacji do wdrożenia składników wymaganych wstępnie; Aby uzyskać informacje na inicjujący, zobacz [tworzenie pakietów programu inicjującego](/visualstudio/deployment/creating-bootstrapper-packages).  
+ Może być również konieczne zbudowanie programu inicjującego (wymagania wstępne Instalatora) dla aplikacji, aby wdrożyć wstępnie wymagane składniki; Aby uzyskać informacji na temat program inicjujący, zobacz [tworzenie pakietów programu inicjującego](/visualstudio/deployment/creating-bootstrapper-packages).  
   
- Aby uzyskać bardziej szczegółowy opis technologii, zobacz [zabezpieczenia ClickOnce i wdrażania](/visualstudio/deployment/clickonce-security-and-deployment). Aby uzyskać szczegółowy przykład wdrażania ClickOnce, zobacz [wskazówki: ręczne wdrażanie aplikacji ClickOnce](/visualstudio/deployment/walkthrough-manually-deploying-a-clickonce-application).  
+ Aby uzyskać bardziej szczegółowy opis technologii, zobacz [wdrażania i zabezpieczeń ClickOnce](/visualstudio/deployment/clickonce-security-and-deployment). Aby uzyskać szczegółowy przykład wdrażania ClickOnce, zobacz [wskazówki: ręczne wdrażanie aplikacji ClickOnce](/visualstudio/deployment/walkthrough-manually-deploying-a-clickonce-application).  
   
 ## <a name="see-also"></a>Zobacz też  
- [Mage.exe (Generowanie manifestu i edytowania narzędzie)](/dotnet/framework/tools/mage-exe-manifest-generation-and-editing-tool)   
- [MageUI.exe (Generowanie manifestu i edytowania narzędzia, klient grafiki)](/dotnet/framework/tools/mageui-exe-manifest-generation-and-editing-tool-graphical-client)   
+ [Mage.exe (manifestu narzędzie generowania i edytowania)](/dotnet/framework/tools/mage-exe-manifest-generation-and-editing-tool)   
+ [MageUI.exe (Manifest narzędzie generowania i edytowania, graficzny klient)](/dotnet/framework/tools/mageui-exe-manifest-generation-and-editing-tool-graphical-client)   
  [MakeCert.exe (narzędzie tworzenia certyfikatów)](https://msdn.microsoft.com/library/windows/desktop/aa386968)   
- [Wdrażanie natywnych aplikacji komputerowych](../ide/deploying-native-desktop-applications-visual-cpp.md)   
+ [Wdrażanie aplikacji komputerowych](../ide/deploying-native-desktop-applications-visual-cpp.md)   
  [Wdrażanie aplikacji, usług i składników](/visualstudio/deployment/deploying-applications-services-and-components)   
- [Wdrożenia Instalatora Windows](http://msdn.microsoft.com/en-us/121be21b-b916-43e2-8f10-8b080516d2a0)   
- [Zabezpieczenia ClickOnce i wdrażania](/visualstudio/deployment/clickonce-security-and-deployment)   
+ [Wdrażanie za pomocą Instalatora Windows](https://msdn.microsoft.com/121be21b-b916-43e2-8f10-8b080516d2a0)   
+ [Wdrażania i zabezpieczeń ClickOnce](/visualstudio/deployment/clickonce-security-and-deployment)   
  [Tworzenie pakietów programu inicjującego](/visualstudio/deployment/creating-bootstrapper-packages)   
- [.NET programowania w języku C + +/ CLI (Visual C++)](../dotnet/dotnet-programming-with-cpp-cli-visual-cpp.md)   
+ [Programowanie .NET w języku C + +/ interfejsu wiersza polecenia (Visual C++)](../dotnet/dotnet-programming-with-cpp-cli-visual-cpp.md)   
  [Współdziałanie natywne i .NET](../dotnet/native-and-dotnet-interoperability.md)

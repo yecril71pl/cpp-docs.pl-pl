@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 18a53f75f783f5843e3bdf603d21dbacf6746e2b
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 06261ba87806bd5eada0d7daaa955b8ec395f3ea
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42591784"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43222849"
 ---
 # <a name="control"></a>— formant
 
@@ -36,7 +36,7 @@ Określa, że typ zdefiniowany przez użytkownika kontrolki.
 
 ## <a name="remarks"></a>Uwagi
 
-**Kontroli** atrybut oznacza [coclass](../windows/coclass.md) atrybutu. **Kontroli** atrybut C++ ma taką samą funkcjonalność jak [kontroli](http://msdn.microsoft.com/library/windows/desktop/aa366764) atrybutów w MIDL.
+**Kontroli** atrybut oznacza [coclass](../windows/coclass.md) atrybutu. **Kontroli** atrybut C++ ma taką samą funkcjonalność jak [kontroli](/windows/desktop/Midl/control) atrybutów w MIDL.
 
 ## <a name="example"></a>Przykład
 

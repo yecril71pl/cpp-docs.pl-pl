@@ -23,17 +23,17 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5b4469d7d53a7374f62e0ec232a7836e80ab75d8
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 587ce3800be5c58e4882b6ac3239de614739bcb8
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42606418"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43219664"
 ---
 # <a name="raising-software-exceptions"></a>Występowanie wyjątków programowych
 Niektóre z najczęstszych źródeł błędów programu nie są oflagowane jako wyjątki przez system. Na przykład, jeśli użytkownik spróbuje przydzielić blok pamięci, ale ilość pamięci jest niewystarczająca, czas wykonywania lub funkcja interfejsu API nie zgłosi wyjątku, ale zwróci kod błędu.  
   
- Jednak można traktować dowolny warunek jako wyjątek przez wykrycie tego warunku w kodzie i zgłoszenie go przez wywołanie [RaiseException](http://msdn.microsoft.com/library/windows/desktop/ms680552) funkcji. Flagowanie błędów w ten sposób może przynieść korzyści obsługi wyjątków strukturalnych do wszelkiego rodzaju błędów w czasie wykonywania.  
+ Jednak można traktować dowolny warunek jako wyjątek przez wykrycie tego warunku w kodzie i zgłoszenie go przez wywołanie [RaiseException](https://msdn.microsoft.com/library/windows/desktop/ms680552) funkcji. Flagowanie błędów w ten sposób może przynieść korzyści obsługi wyjątków strukturalnych do wszelkiego rodzaju błędów w czasie wykonywania.  
   
  Aby użyć obsługi wyjątków strukturalnych z błędami:  
   
@@ -68,7 +68,7 @@ if (lpstr == NULL)
     RaiseException( STATUS_INSUFFICIENT_MEM, 0, 0, 0);  
 ```  
   
- Jeżeli wystarczy tylko zgłosić wyjątek, ostatnie trzy parametry można ustawić na 0. Trzy ostatnie parametry są przydatne do przekazywania informacji dodatkowych i ustawiania flagi, która uniemożliwia kontynuowanie wykonywania programów obsługi. Zobacz [RaiseException](http://msdn.microsoft.com/library/windows/desktop/ms680552) funkcji w zestawie Windows SDK, aby uzyskać więcej informacji.  
+ Jeżeli wystarczy tylko zgłosić wyjątek, ostatnie trzy parametry można ustawić na 0. Trzy ostatnie parametry są przydatne do przekazywania informacji dodatkowych i ustawiania flagi, która uniemożliwia kontynuowanie wykonywania programów obsługi. Zobacz [RaiseException](https://msdn.microsoft.com/library/windows/desktop/ms680552) funkcji w zestawie Windows SDK, aby uzyskać więcej informacji.  
   
  W filtrach obsługi wyjątków można przetestować zdefiniowane kody. Na przykład:  
   

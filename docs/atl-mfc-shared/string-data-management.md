@@ -14,12 +14,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b42f637c487e27b8658bcd09389eec940bb1df05
-ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
+ms.openlocfilehash: b4e82671973f2d841c6c0797fb73ad582ce203f1
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37880219"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43214350"
 ---
 # <a name="string-data-management"></a>Zarządzanie danymi ciągów
 Visual C++ oferuje kilka sposobów, aby zarządzać danymi ciąg:  
@@ -67,7 +67,7 @@ Visual C++ oferuje kilka sposobów, aby zarządzać danymi ciąg:
  Element `CString` obiektu można przechowywać w znaków INT_MAX (2 147 483 647). Tchar — typ danych służy do pobierania lub ustawiania pojedynczych znaków wewnątrz `CString` obiektu. W odróżnieniu od tablic znaków `CString` klasy zawiera funkcję alokacji pamięci wbudowane. Dzięki temu `CString` obiektów, aby automatycznie zwiększać stosownie do potrzeb (oznacza to, że nie masz już martwić się o rosnący `CString` obiektu do ciągów dłuższe).  
   
 ##  <a name="_core_cstrings_and_const_char_pointers"></a> CStrings i const char wskaźników  
- A `CString` obiektu również może zachowywać się jak ciąg literału stylu języka C ( `PCXSTR`, która jest taka sama jak **const char\***  if nieobjętego Unicode). [CSimpleStringT::operator PCXSTR](../atl-mfc-shared/reference/csimplestringt-class.md#operator_pcxstr) umożliwia operatora konwersji `CString` obiektów można swobodnie zamieniony na znak wskaźników w wywołaniach funkcji. **CString (LPCWSTR** `pszSrc` **)** Konstruktor pozwala znak wskaźników do podstawienia pod `CString` obiektów.  
+ A `CString` obiektu również może zachowywać się jak ciąg literału stylu języka C ( `PCXSTR`, która jest taka sama jak **const char** <strong>\*</strong> if nieobjętego Unicode). [CSimpleStringT::operator PCXSTR](../atl-mfc-shared/reference/csimplestringt-class.md#operator_pcxstr) umożliwia operatora konwersji `CString` obiektów można swobodnie zamieniony na znak wskaźników w wywołaniach funkcji. **CString (LPCWSTR** `pszSrc` **)** Konstruktor pozwala znak wskaźników do podstawienia pod `CString` obiektów.  
   
  Aby złożyć jest podejmowana próba `CString` obiektów. Jeśli wprowadzisz dwa `CString` obiektów zawierających `Chicago`, na przykład znaki w `Chicago` są przechowywane w dwóch miejscach. (To nie będzie true dla przyszłych wersji MFC, więc należy nie zależą od niej.)  
   

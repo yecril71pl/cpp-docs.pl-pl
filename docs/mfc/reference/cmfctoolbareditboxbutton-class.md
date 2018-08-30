@@ -62,12 +62,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c15dc3dc2b4c1fdf549ec90ae6d782b5f8a72509
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: 928e2845321ad12a92e4ba3f42838b3f468dce70
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37853815"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43215518"
 ---
 # <a name="cmfctoolbareditboxbutton-class"></a>Klasa CMFCToolBarEditBoxButton
 Przycisk paska narzędzi, który zawiera kontrolkę edycji ( [klasa CEdit](../../mfc/reference/cedit-class.md)).  
@@ -105,7 +105,7 @@ class CMFCToolBarEditBoxButton : public CMFCToolBarButton
 |`CMFCToolBarEditBoxButton::GetThisClass`|Używane przez architekturę, aby uzyskać wskaźnik do [CRuntimeClass](../../mfc/reference/cruntimeclass-structure.md) obiektu, który jest skojarzony z tym typem klasy.|  
 |[CMFCToolBarEditBoxButton::HaveHotBorder](#havehotborder)|Określa, czy obramowanie przycisku jest wyświetlany, gdy użytkownik kliknie przycisk. (Przesłania [CMFCToolBarButton::HaveHotBorder](../../mfc/reference/cmfctoolbarbutton-class.md#havehotborder).)|  
 |[CMFCToolBarEditBoxButton::IsFlatMode](#isflatmode)|Określa, czy przyciski okno edycji mają płaskie stylu.|  
-|[CMFCToolBarEditBoxButton::NotifyCommand](#notifycommand)|Określa, czy przycisk przetwarza [WM_COMMAND](http://msdn.microsoft.com/library/windows/desktop/ms647591) wiadomości. (Przesłania [CMFCToolBarButton::NotifyCommand](../../mfc/reference/cmfctoolbarbutton-class.md#notifycommand).)|  
+|[CMFCToolBarEditBoxButton::NotifyCommand](#notifycommand)|Określa, czy przycisk przetwarza [WM_COMMAND](/windows/desktop/menurc/wm-command) wiadomości. (Przesłania [CMFCToolBarButton::NotifyCommand](../../mfc/reference/cmfctoolbarbutton-class.md#notifycommand).)|  
 |[CMFCToolBarEditBoxButton::OnAddToCustomizePage](#onaddtocustomizepage)|Wywoływane przez platformę, gdy przycisk zostanie dodany do **Dostosuj** okno dialogowe. (Przesłania [CMFCToolBarButton::OnAddToCustomizePage](../../mfc/reference/cmfctoolbarbutton-class.md#onaddtocustomizepage).)|  
 |`CMFCToolBarEditBoxButton::OnCalculateSize`|Metoda wywoływana przez platformę, by Oblicz rozmiar przycisku dla kontekstu określonego urządzenia i stan dokowania. (Przesłania [CMFCToolBarButton::OnCalculateSize](../../mfc/reference/cmfctoolbarbutton-class.md#oncalculatesize).)|  
 |[CMFCToolBarEditBoxButton::OnChangeParentWnd](#onchangeparentwnd)|Wywoływane przez platformę, gdy przycisk znajduje się nowy pasek narzędzi. (Przesłania [CMFCToolBarButton::OnChangeParentWnd](../../mfc/reference/cmfctoolbarbutton-class.md#onchangeparentwnd).)|  
@@ -361,7 +361,7 @@ static BOOL __stdcall IsFlatMode();
  Domyślnie przyciski okno edycji mają płaskie stylu. Użyj [CMFCToolBarEditBoxButton::SetFlatMode](#setflatmode) metodą zmiany warstwy płaski wygląd aplikacji.  
   
 ##  <a name="notifycommand"></a>  CMFCToolBarEditBoxButton::NotifyCommand  
- Określa, czy przycisk przetwarza [WM_COMMAND](http://msdn.microsoft.com/library/windows/desktop/ms647591) wiadomości.  
+ Określa, czy przycisk przetwarza [WM_COMMAND](/windows/desktop/menurc/wm-command) wiadomości.  
   
 ```  
 virtual BOOL NotifyCommand(int iNotifyCode);
@@ -375,9 +375,9 @@ virtual BOOL NotifyCommand(int iNotifyCode);
  Wartość TRUE, jeśli przycisk przetwarza komunikatów WM_COMMAND lub wartość FALSE wskazuje, że wiadomości muszą być obsługiwane przez narzędzi nadrzędnej.  
   
 ### <a name="remarks"></a>Uwagi  
- Struktura wywołuje tę metodę po około do wysyłania [WM_COMMAND](http://msdn.microsoft.com/library/windows/desktop/ms647591) wiadomości do okna nadrzędnego.  
+ Struktura wywołuje tę metodę po około do wysyłania [WM_COMMAND](/windows/desktop/menurc/wm-command) wiadomości do okna nadrzędnego.  
   
- Ta metoda jest rozszerzeniem implementacji klasy podstawowej ( [CMFCToolBarButton::NotifyCommand](../../mfc/reference/cmfctoolbarbutton-class.md#notifycommand)) przez przetwarzanie [EN_UPDATE](http://msdn.microsoft.com/library/windows/desktop/bb761687) powiadomień. Dla każdego pola edycji z tym samym Identyfikatorem polecenia, jak ten obiekt ustawia jego etykieta tekstowa etykietę tekstową tego obiektu.  
+ Ta metoda jest rozszerzeniem implementacji klasy podstawowej ( [CMFCToolBarButton::NotifyCommand](../../mfc/reference/cmfctoolbarbutton-class.md#notifycommand)) przez przetwarzanie [EN_UPDATE](/windows/desktop/Controls/en-update) powiadomień. Dla każdego pola edycji z tym samym Identyfikatorem polecenia, jak ten obiekt ustawia jego etykieta tekstowa etykietę tekstową tego obiektu.  
   
 ##  <a name="onaddtocustomizepage"></a>  CMFCToolBarEditBoxButton::OnAddToCustomizePage  
  Wywoływane przez platformę, gdy przycisk zostanie dodany do **Dostosuj** okno dialogowe.  

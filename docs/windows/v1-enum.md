@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: ff446c22706fbcac8b14c8cb69df9a4163663c02
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: bbacec7644a05f0077c8d6ffbe3e7856c66dcc4f
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42599936"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43222978"
 ---
 # <a name="v1enum"></a>v1_enum
 
@@ -36,7 +36,7 @@ Określa, że przekazywane określonego typu wyliczenia jako jednostki 32-bitowy
 
 ## <a name="remarks"></a>Uwagi
 
-**V1_enum —** atrybut C++ ma taką samą funkcjonalność jak [v1_enum —](http://msdn.microsoft.com/library/windows/desktop/aa367303) atrybutów w MIDL.
+**V1_enum —** atrybut C++ ma taką samą funkcjonalność jak [v1_enum —](/windows/desktop/Midl/v1-enum) atrybutów w MIDL.
 
 ## <a name="example"></a>Przykład
 

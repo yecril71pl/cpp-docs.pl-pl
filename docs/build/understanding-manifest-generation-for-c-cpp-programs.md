@@ -14,15 +14,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 40dbc61009cdfaa5621335cfb78dd10eae2138ca
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: 691a2adf5269be0047ee6eee474406b036cad200
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42465048"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43222598"
 ---
 # <a name="understanding-manifest-generation-for-cc-programs"></a>Ogólne informacje o tworzeniu manifestu dla programów C/C++
-A [manifestu](http://msdn.microsoft.com/library/aa375365) jest dokument XML, który może być plik XML lub zasób osadzony w aplikacji lub zestawu. Manifest [izolowany aplikacji](http://msdn.microsoft.com/library/aa375190) służy do zarządzania nazwami i wersjami współużytkowanych zestawów side-by-side, w których aplikacja powinna być związana w czasie wykonywania. Manifest zestawu side-by-side określa jego zależności na nazwy, wersji, zasoby i innych zestawów.  
+A [manifestu](https://msdn.microsoft.com/library/aa375365) jest dokument XML, który może być plik XML lub zasób osadzony w aplikacji lub zestawu. Manifest [izolowany aplikacji](/windows/desktop/SbsCs/isolated-applications) służy do zarządzania nazwami i wersjami współużytkowanych zestawów side-by-side, w których aplikacja powinna być związana w czasie wykonywania. Manifest zestawu side-by-side określa jego zależności na nazwy, wersji, zasoby i innych zestawów.  
   
  Istnieją dwa sposoby tworzenia manifestu aplikacji izolowanej lub zestawów side-by-side. Po pierwsze autor zestawu można ręcznie utworzyć plik manifestu, zgodnie z zasadami i wymaganiami w zakresie nazewnictwa. Alternatywnie Jeśli program zależy tylko zestawy języka Visual C++, takie jak CRT, MFC, ATL i inne, następnie manifestu może zostać wygenerowany automatycznie przez konsolidator.  
   

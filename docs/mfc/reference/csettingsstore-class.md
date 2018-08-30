@@ -32,12 +32,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 48bc0f76ce5b8b3c1bafe3fcd0d6d793a217ae63
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: 1731c32506ec0e9c4c392ff9429e28e5b71b3c7c
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37849698"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43221135"
 ---
 # <a name="csettingsstore-class"></a>Klasa CSettingsStore
 Opakowuje funkcje Windows API, zapewniając interfejs zorientowany obiektowo, który umożliwia dostępu do rejestru.  
@@ -130,7 +130,7 @@ CSettingsStore(
 ### <a name="remarks"></a>Uwagi  
  Jeśli *bŚcieżka* jest ustawiona na wartość TRUE, `m_hKey` element członkowski, zmienna jest ustawiona na **HKEY_LOCAL_MACHINE**. Jeśli ustawisz *bŚcieżka* na wartość FALSE, `m_hKey` ustawiono **HKEY_CURRENT_USER**.  
   
- Zabezpieczenia dostępu jest zależna od *bReadOnly* parametru. Jeśli *bReadonly* ma wartość FALSE, zostaną ustawione zabezpieczenia dostępu **KEY_ALL_ACCESS**. Jeśli *bReadyOnly* ma wartość PRAWDA, zabezpieczenia dostępu zostaną ustawione kombinacji **KEY_QUERY_VALUE, KEY_NOTIFY** i **KEY_ENUMERATE_SUB_KEYS**. Aby uzyskać więcej informacji na temat dostępu zabezpieczeń wraz z rejestru, zobacz [zabezpieczeń klucza rejestru i prawa dostępu](http://msdn.microsoft.com/library/windows/desktop/ms724878).  
+ Zabezpieczenia dostępu jest zależna od *bReadOnly* parametru. Jeśli *bReadonly* ma wartość FALSE, zostaną ustawione zabezpieczenia dostępu **KEY_ALL_ACCESS**. Jeśli *bReadyOnly* ma wartość PRAWDA, zabezpieczenia dostępu zostaną ustawione kombinacji **KEY_QUERY_VALUE, KEY_NOTIFY** i **KEY_ENUMERATE_SUB_KEYS**. Aby uzyskać więcej informacji na temat dostępu zabezpieczeń wraz z rejestru, zobacz [zabezpieczeń klucza rejestru i prawa dostępu](/windows/desktop/SysInfo/registry-key-security-and-access-rights).  
   
  Destruktor dla `CSettingsStore` zwalnia `m_hKey` automatycznie.  
   

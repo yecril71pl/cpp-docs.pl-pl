@@ -30,12 +30,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5ecf0dc1907d2f78a844756d0efc8add04de6046
-ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
+ms.openlocfilehash: afbb4600098591900491e7c1ec6f256bc58c26a4
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37885276"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43220652"
 ---
 # <a name="catlfile-class"></a>Klasa CAtlFile
 Ta klasa dostarcza alokowania elastycznego otokę Windows plików obsługi interfejsu API.  
@@ -132,7 +132,7 @@ HRESULT Create(
  Nazwa pliku.  
   
  *dwDesiredAccess*  
- Żądany dostęp. Zobacz *dwDesiredAccess* w [CreateFile](http://msdn.microsoft.com/library/windows/desktop/aa363858) w zestawie Windows SDK.  
+ Żądany dostęp. Zobacz *dwDesiredAccess* w [CreateFile](/windows/desktop/api/fileapi/nf-fileapi-createfilea) w zestawie Windows SDK.  
   
  *dwShareMode*  
  Tryb udostępniania. Zobacz *dwShareMode* w `CreateFile`.  
@@ -153,7 +153,7 @@ HRESULT Create(
  Zwraca wartość S_OK w przypadku powodzenia lub błędu HRESULT w przypadku niepowodzenia.  
   
 ### <a name="remarks"></a>Uwagi  
- Wywołania [CreateFile](http://msdn.microsoft.com/library/windows/desktop/aa363858) do utworzenia lub otwarcia pliku.  
+ Wywołania [CreateFile](/windows/desktop/api/fileapi/nf-fileapi-createfilea) do utworzenia lub otwarcia pliku.  
   
 ##  <a name="flush"></a>  CAtlFile::Flush  
  Wywołaj tę metodę, aby wyczyścić buforów dla pliku i spowodować, że wszystkie buforowane dane są zapisywane w pliku.  
@@ -166,7 +166,7 @@ HRESULT Flush() throw();
  Zwraca wartość S_OK w przypadku powodzenia lub błędu HRESULT w przypadku niepowodzenia.  
   
 ### <a name="remarks"></a>Uwagi  
- Wywołania [FlushFileBuffers](http://msdn.microsoft.com/library/windows/desktop/aa364439) opróżnić buforowane dane do pliku.  
+ Wywołania [FlushFileBuffers](/windows/desktop/api/fileapi/nf-fileapi-flushfilebuffers) opróżnić buforowane dane do pliku.  
   
 ##  <a name="getoverlappedresult"></a>  CAtlFile::GetOverlappedResult  
  Wywołaj tę metodę, aby uzyskać wyniki nachodzące operacji na pliku.  
@@ -180,7 +180,7 @@ HRESULT GetOverlappedResult(
   
 ### <a name="parameters"></a>Parametry  
  *pOverlapped*  
- Nachodzące struktury. Zobacz *lpOverlapped* w [GetOverlappedResult](http://msdn.microsoft.com/library/windows/desktop/ms683209) w zestawie Windows SDK.  
+ Nachodzące struktury. Zobacz *lpOverlapped* w [GetOverlappedResult](/windows/desktop/api/ioapiset/nf-ioapiset-getoverlappedresult) w zestawie Windows SDK.  
   
  *dwBytesTransferred*  
  Bajty przesłane. Zobacz *lpNumberOfBytesTransferred* w `GetOverlappedResult`.  
@@ -192,7 +192,7 @@ HRESULT GetOverlappedResult(
  Zwraca wartość S_OK w przypadku powodzenia lub błędu HRESULT w przypadku niepowodzenia.  
   
 ### <a name="remarks"></a>Uwagi  
- Wywołania [GetOverlappedResult](http://msdn.microsoft.com/library/windows/desktop/ms683209) można pobrać wyniki nachodzące operacji na pliku.  
+ Wywołania [GetOverlappedResult](/windows/desktop/api/ioapiset/nf-ioapiset-getoverlappedresult) można pobrać wyniki nachodzące operacji na pliku.  
   
 ##  <a name="getposition"></a>  CAtlFile::GetPosition  
  Wywołaj tę metodę, aby uzyskać bieżącą pozycję wskaźnika w pliku.  
@@ -209,7 +209,7 @@ HRESULT GetPosition(ULONGLONG& nPos) const throw();
  Zwraca wartość S_OK w przypadku powodzenia lub błędu HRESULT w przypadku niepowodzenia.  
   
 ### <a name="remarks"></a>Uwagi  
- Wywołania [funkcja SetFilePointer](http://msdn.microsoft.com/library/windows/desktop/aa365541) można pobrać bieżącą pozycję wskaźnika w pliku.  
+ Wywołania [funkcja SetFilePointer](/windows/desktop/api/fileapi/nf-fileapi-setfilepointer) można pobrać bieżącą pozycję wskaźnika w pliku.  
   
 ##  <a name="getsize"></a>  CAtlFile::GetSize  
  Wywołaj tę metodę, aby uzyskać rozmiar w bajtach pliku.  
@@ -226,7 +226,7 @@ HRESULT GetSize(ULONGLONG& nLen) const throw();
  Zwraca wartość S_OK w przypadku powodzenia lub błędu HRESULT w przypadku niepowodzenia.  
   
 ### <a name="remarks"></a>Uwagi  
- Wywołania [funkcji GetFileSize](http://msdn.microsoft.com/library/windows/desktop/aa364955) Aby uzyskać rozmiar w bajtach pliku.  
+ Wywołania [funkcji GetFileSize](/windows/desktop/api/fileapi/nf-fileapi-getfilesize) Aby uzyskać rozmiar w bajtach pliku.  
   
 ##  <a name="lockrange"></a>  CAtlFile::LockRange  
  Wywołaj tę metodę, aby zablokować region, w pliku, aby uniemożliwić innym procesom uzyskiwanie do niej dostępu.  
@@ -246,7 +246,7 @@ HRESULT LockRange(ULONGLONG nPos, ULONGLONG nCount) throw();
  Zwraca wartość S_OK w przypadku powodzenia lub błędu HRESULT w przypadku niepowodzenia.  
   
 ### <a name="remarks"></a>Uwagi  
- Wywołania [LockFile](http://msdn.microsoft.com/library/windows/desktop/aa365202) zablokować regionu w pliku. Blokowanie bajtów w pliku uniemożliwia dostęp do tych bajtów przez inne procesy. Możesz zablokować więcej niż jeden region pliku, ale nie nakładających się regiony są dozwolone. Po odblokowaniu region, za pomocą [CAtlFile::UnlockRange](#unlockrange), zakres bajtów musi dokładnie odpowiadać elementowi region, który wcześniej został zablokowany. `LockRange` Scala sąsiadujących regiony; Jeśli dwa regiony zablokowane sąsiadujących ze sobą, musisz odblokować każdego oddzielnie.  
+ Wywołania [LockFile](/windows/desktop/api/fileapi/nf-fileapi-lockfile) zablokować regionu w pliku. Blokowanie bajtów w pliku uniemożliwia dostęp do tych bajtów przez inne procesy. Możesz zablokować więcej niż jeden region pliku, ale nie nakładających się regiony są dozwolone. Po odblokowaniu region, za pomocą [CAtlFile::UnlockRange](#unlockrange), zakres bajtów musi dokładnie odpowiadać elementowi region, który wcześniej został zablokowany. `LockRange` Scala sąsiadujących regiony; Jeśli dwa regiony zablokowane sąsiadujących ze sobą, musisz odblokować każdego oddzielnie.  
   
 ##  <a name="m_ptm"></a>  CAtlFile::m_pTM  
  Wskaźnik do `CAtlTransactionManager` obiektu.  
@@ -293,16 +293,16 @@ HRESULT Read(
  Liczba odczytanych bajtów.  
   
  *pOverlapped*  
- Nachodzące struktury. Zobacz *lpOverlapped* w [ReadFile](http://msdn.microsoft.com/library/windows/desktop/aa365467) w zestawie Windows SDK.  
+ Nachodzące struktury. Zobacz *lpOverlapped* w [ReadFile](/windows/desktop/api/fileapi/nf-fileapi-readfile) w zestawie Windows SDK.  
   
  *pfnCompletionRoutine*  
- Procedura ukończenia. Zobacz *lpCompletionRoutine* w [ReadFileEx](http://msdn.microsoft.com/library/windows/desktop/aa365468) w zestawie Windows SDK.  
+ Procedura ukończenia. Zobacz *lpCompletionRoutine* w [ReadFileEx](/windows/desktop/api/fileapi/nf-fileapi-readfileex) w zestawie Windows SDK.  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Zwraca wartość S_OK w przypadku powodzenia lub błędu HRESULT w przypadku niepowodzenia.  
   
 ### <a name="remarks"></a>Uwagi  
- Pierwsze trzy formularze wywołać [ReadFile](http://msdn.microsoft.com/library/windows/desktop/aa365467), ostatni [ReadFileEx](http://msdn.microsoft.com/library/windows/desktop/aa365468) można odczytać danych z pliku. Użyj [CAtlFile::Seek](#seek) przesuwanie wskaźnika pliku.  
+ Pierwsze trzy formularze wywołać [ReadFile](/windows/desktop/api/fileapi/nf-fileapi-readfile), ostatni [ReadFileEx](/windows/desktop/api/fileapi/nf-fileapi-readfileex) można odczytać danych z pliku. Użyj [CAtlFile::Seek](#seek) przesuwanie wskaźnika pliku.  
   
 ##  <a name="seek"></a>  CAtlFile::Seek  
  Wywołaj tę metodę, aby przesunąć wskaźnik pliku pliku.  
@@ -324,7 +324,7 @@ HRESULT Seek(
  Zwraca wartość S_OK w przypadku powodzenia lub błędu HRESULT w przypadku niepowodzenia.  
   
 ### <a name="remarks"></a>Uwagi  
- Wywołania [funkcja SetFilePointer](http://msdn.microsoft.com/library/windows/desktop/aa365541) przesuwanie wskaźnika pliku.  
+ Wywołania [funkcja SetFilePointer](/windows/desktop/api/fileapi/nf-fileapi-setfilepointer) przesuwanie wskaźnika pliku.  
   
 ##  <a name="setsize"></a>  CAtlFile::SetSize  
  Wywołaj tę metodę, aby ustawić rozmiar pliku.  
@@ -341,7 +341,7 @@ HRESULT SetSize(ULONGLONG nNewLen) throw();
  Zwraca wartość S_OK w przypadku powodzenia lub błędu HRESULT w przypadku niepowodzenia.  
   
 ### <a name="remarks"></a>Uwagi  
- Wywołania [funkcja SetFilePointer](http://msdn.microsoft.com/library/windows/desktop/aa365541) i [funkcji SetEndOfFile](http://msdn.microsoft.com/library/windows/desktop/aa365531) można ustawić rozmiar pliku. Przy powrocie wskaźnik pliku jest umieszczony na końcu pliku.  
+ Wywołania [funkcja SetFilePointer](/windows/desktop/api/fileapi/nf-fileapi-setfilepointer) i [funkcji SetEndOfFile](/windows/desktop/api/fileapi/nf-fileapi-setendoffile) można ustawić rozmiar pliku. Przy powrocie wskaźnik pliku jest umieszczony na końcu pliku.  
   
 ##  <a name="unlockrange"></a>  CAtlFile::UnlockRange  
  Wywołaj tę metodę w celu odblokowania region pliku.  
@@ -361,7 +361,7 @@ HRESULT UnlockRange(ULONGLONG nPos, ULONGLONG nCount) throw();
  Zwraca wartość S_OK w przypadku powodzenia lub błędu HRESULT w przypadku niepowodzenia.  
   
 ### <a name="remarks"></a>Uwagi  
- Wywołania [UnlockFile](http://msdn.microsoft.com/library/windows/desktop/aa365715) do odblokowania region pliku.  
+ Wywołania [UnlockFile](/windows/desktop/api/fileapi/nf-fileapi-unlockfile) do odblokowania region pliku.  
   
 ##  <a name="write"></a>  CAtlFile::Write  
  Wywołaj tę metodę można zapisać danych do pliku, zaczynając od pozycji wskazywanym przez wskaźnik pliku.  
@@ -392,10 +392,10 @@ HRESULT Write(
  Liczba bajtów, które mają zostać przeniesione z buforu.  
   
  *pOverlapped*  
- Nachodzące struktury. Zobacz *lpOverlapped* w [WriteFile](http://msdn.microsoft.com/library/windows/desktop/aa365747) w zestawie Windows SDK.  
+ Nachodzące struktury. Zobacz *lpOverlapped* w [WriteFile](/windows/desktop/api/fileapi/nf-fileapi-writefile) w zestawie Windows SDK.  
   
  *pfnCompletionRoutine*  
- Procedura ukończenia. Zobacz *lpCompletionRoutine* w [WriteFileEx](http://msdn.microsoft.com/library/windows/desktop/aa365748) w zestawie Windows SDK.  
+ Procedura ukończenia. Zobacz *lpCompletionRoutine* w [WriteFileEx](/windows/desktop/api/fileapi/nf-fileapi-writefileex) w zestawie Windows SDK.  
   
  *pnBytesWritten*  
  Bajty zapisane.  
@@ -404,7 +404,7 @@ HRESULT Write(
  Zwraca wartość S_OK w przypadku powodzenia lub błędu HRESULT w przypadku niepowodzenia.  
   
 ### <a name="remarks"></a>Uwagi  
- Pierwsze trzy formularze wywołać [WriteFile](http://msdn.microsoft.com/library/windows/desktop/aa365747), ostatniego wywołania [WriteFileEx](http://msdn.microsoft.com/library/windows/desktop/aa365748) można zapisać danych do pliku. Użyj [CAtlFile::Seek](#seek) przesuwanie wskaźnika pliku.  
+ Pierwsze trzy formularze wywołać [WriteFile](/windows/desktop/api/fileapi/nf-fileapi-writefile), ostatniego wywołania [WriteFileEx](/windows/desktop/api/fileapi/nf-fileapi-writefileex) można zapisać danych do pliku. Użyj [CAtlFile::Seek](#seek) przesuwanie wskaźnika pliku.  
   
 ## <a name="see-also"></a>Zobacz też  
  [Przykładowe Neon](../../visual-cpp-samples.md)   

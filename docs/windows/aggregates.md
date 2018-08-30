@@ -20,12 +20,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: e3a45aebf309f7b63da29732e7bc5043d2e51a3d
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: bf6ca06ffbd3912ac3545bc3c014224412c01bc1
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42593724"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43221173"
 ---
 # <a name="aggregates"></a>aggregates
 
@@ -109,6 +109,6 @@ Aby uzyskać więcej informacji na temat konteksty atrybutu zobacz [konteksty at
 [Atrybuty COM](../windows/com-attributes.md)  
 [Atrybuty klasy](../windows/class-attributes.md)  
 [Atrybuty Typedef, Enum, Union oraz Struct](../windows/typedef-enum-union-and-struct-attributes.md)  
-[Agregacja](http://msdn.microsoft.com/library/windows/desktop/ms686558)  
-[Aggregatable](http://msdn.microsoft.com/library/windows/desktop/aa366721)  
+[Agregacja](/windows/desktop/com/aggregation)  
+[Aggregatable](/windows/desktop/Midl/aggregatable)  
 [COM_INTERFACE_ENTRY_AUTOAGGREGATE_BLIND](../atl/reference/com-interface-entry-macros.md#com_interface_entry_autoaggregate_blind)  

@@ -1,5 +1,5 @@
 ---
-title: CAccelerateDecelerateTransition Class1 | Dokumentacja firmy Microsoft
+title: Klasa 1 cacceleratedeceleratetransition | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4342ed03991317bd030d308dbac9945734dcbd9e
-ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
+ms.openlocfilehash: a9dad6f6e5353c1adef19d5040984520df7f6239
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/26/2018
-ms.locfileid: "36954711"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43220137"
 ---
 # <a name="cacceleratedeceleratetransition-class"></a>Klasa CAccelerateDecelerateTransition
-Implementuje accelerate-zwalnia przejścia.  
+Implementuje przyspieszenia-spowalniania przejścia.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -45,19 +45,19 @@ class CAccelerateDecelerateTransition : public CBaseTransition;
   
 |Nazwa|Opis|  
 |----------|-----------------|  
-|[CAccelerateDecelerateTransition::Create](#create)|Wywołuje biblioteki przejścia do utworzenia obiektu hermetyzowany przejścia COM. (Przesłania [CBaseTransition::Create](../../mfc/reference/cbasetransition-class.md#create).)|  
+|[CAccelerateDecelerateTransition::Create](#create)|Wywołania biblioteki przejścia do utworzenia obiektu zhermetyzowany przejścia COM. (Przesłania [CBaseTransition::Create](../../mfc/reference/cbasetransition-class.md#create).)|  
   
 ### <a name="public-data-members"></a>Publiczne elementy członkowskie danych  
   
 |Nazwa|Opis|  
 |----------|-----------------|  
-|[CAccelerateDecelerateTransition::m_accelerationRatio](#m_accelerationratio)|Stosunek czas skraca czas trwania.|  
-|[CAccelerateDecelerateTransition::m_decelerationRatio](#m_decelerationratio)|Stosunek czas decelerating czasu trwania.|  
+|[CAccelerateDecelerateTransition::m_accelerationRatio](#m_accelerationratio)|Stosunek czasu spędzanego w skróceniu czasu trwania.|  
+|[CAccelerateDecelerateTransition::m_decelerationRatio](#m_decelerationratio)|Stosunek czasu spowolnienie do czasu trwania.|  
 |[CAccelerateDecelerateTransition::m_duration](#m_duration)|Czas trwania przejścia.|  
-|[CAccelerateDecelerateTransition::m_finalValue](#m_finalvalue)|Wartość zmiennej animacji na końcu przejścia.|  
+|[CAccelerateDecelerateTransition::m_finalValue](#m_finalvalue)|Wartość zmiennej animacji z końcem przejścia.|  
   
 ## <a name="remarks"></a>Uwagi  
- Podczas accelerate-zwalnia przejścia, zmienna animacji przyspiesza i spowalnia w czasie trwania przejścia koniec określoną wartość. Można kontrolować, jak szybko zmiennej przyspieszają i zwalnia niezależnie, określając różne przyspieszenie i stosunek opóźnienia. Po początkowej prędkość wynosi zero, stosunek przyspieszenie jest część zmiennej automatycznemu przyspieszenia; czas trwania Podobnie o stosunku opóźnienia. Jeśli prędkość początkowa jest różna od zera, jest ułamku czasu między prędkość osiągnięcia zero i na końcu przejścia. Stosunek przyspieszenie i stosunek prędkości powinien Suma, umożliwiającej maksymalnie 1.0. Ponieważ wszystkie przejścia są automatycznie usuwane, zaleca się ich przydzielony przy użyciu nowego operatora. Hermetyzowany obiektu IUIAnimationTransition COM utworzeniu przez CAnimationController::AnimateGroup, aż do, a następnie jest NULL. Po utworzenia tego obiektu modelu COM nie ma wpływu, zmiana zmiennych Członkowskich.  
+ Podczas przyspieszenia-spowalniania przejścia, zmienną animacji przyspiesza i spowalnia w czasie trwania przejścia, kończąc na określoną wartość. Można kontrolować, jak szybko zmienną przyspiesza i zwalnia niezależnie, określając różne przyspieszenie transmisji i współczynniki opóźnienia. Gdy prędkości początkowej wynosi zero, stosunek przyspieszenia jest część okresu, przez który spędzają zmiennej, przyspieszając; Podobnie za pomocą stosunek opóźnienia. Jeśli prędkości początkowej jest różna od zera, jest ułamku czasu między prędkości docieranie do zera i na końcu przejścia. Współczynnik przyspieszenie i współczynnik prędkości powinien Suma, umożliwiającej maksymalnie 1.0. Ponieważ wszystkie przejścia są automatycznie czyszczone, zaleca się ich przydzielone za pomocą nowego operatora. Zhermetyzowanego obiektu IUIAnimationTransition COM przy utworzono CAnimationController::AnimateGroup, aż do, a następnie ma wartość NULL. Zmienianie zmiennych składowych, po tworzenie ten obiekt COM nie ma wpływu.  
   
 ## <a name="inheritance-hierarchy"></a>Hierarchia dziedziczenia  
  [CObject](../../mfc/reference/cobject-class.md)  
@@ -85,16 +85,16 @@ CAccelerateDecelerateTransition(
  Czas trwania przejścia.  
   
  *finalValue*  
- Wartość zmiennej animacji na końcu przejścia.  
+ Wartość zmiennej animacji z końcem przejścia.  
   
  *accelerationRatio*  
- Stosunek czas skraca czas trwania.  
+ Stosunek czasu spędzanego w skróceniu czasu trwania.  
   
  *decelerationRatio*  
- Stosunek czas decelerating czasu trwania.  
+ Stosunek czasu spowolnienie do czasu trwania.  
   
 ##  <a name="create"></a>  CAccelerateDecelerateTransition::Create  
- Wywołuje biblioteki przejścia do utworzenia obiektu hermetyzowany przejścia COM.  
+ Wywołania biblioteki przejścia do utworzenia obiektu zhermetyzowany przejścia COM.  
   
 ```  
 virtual BOOL Create(
@@ -104,20 +104,20 @@ virtual BOOL Create(
   
 ### <a name="parameters"></a>Parametry  
 *pLibrary*  
- Wskaźnik do [interfejsu IUIAnimationTransitionLibrary](https://msdn.microsoft.com/library/windows/desktop/dd371897), który definiuje biblioteki standardowe przejścia.  
+ Wskaźnik do [interfejsu IUIAnimationTransitionLibrary](/windows/desktop/api/uianimation/nn-uianimation-iuianimationtransitionlibrary), który definiuje bibliotekę przejścia standardowe.  
   
 ### <a name="return-value"></a>Wartość zwracana  
- Wartość TRUE, jeśli przejście jest tworzony pomyślnie; w przeciwnym razie wartość FALSE.  
+ Wartość TRUE, jeśli przejście został utworzony pomyślnie; w przeciwnym razie wartość FALSE.  
   
 ##  <a name="m_accelerationratio"></a>  CAccelerateDecelerateTransition::m_accelerationRatio  
- Stosunek czas skraca czas trwania.  
+ Stosunek czasu spędzanego w skróceniu czasu trwania.  
   
 ```  
 DOUBLE m_accelerationRatio;  
 ```  
   
 ##  <a name="m_decelerationratio"></a>  CAccelerateDecelerateTransition::m_decelerationRatio  
- Stosunek czas decelerating czasu trwania.  
+ Stosunek czasu spowolnienie do czasu trwania.  
   
 ```  
 DOUBLE m_decelerationRatio;  
@@ -131,7 +131,7 @@ UI_ANIMATION_SECONDS m_duration;
 ```  
   
 ##  <a name="m_finalvalue"></a>  CAccelerateDecelerateTransition::m_finalValue  
- Wartość zmiennej animacji na końcu przejścia.  
+ Wartość zmiennej animacji z końcem przejścia.  
   
 ```  
 DOUBLE m_finalValue;  

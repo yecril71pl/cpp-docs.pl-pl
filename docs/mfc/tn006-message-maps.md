@@ -1,5 +1,5 @@
 ---
-title: 'TN006: Mapy wiadomości | Dokumentacja firmy Microsoft'
+title: 'TN006: Komunikat mapy | Dokumentacja firmy Microsoft'
 ms.custom: ''
 ms.date: 06/25/2018
 ms.technology:
@@ -29,38 +29,38 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2c4bc820c6b54e055235c1bd29bd55ccfc032c92
-ms.sourcegitcommit: 208d445fd7ea202de1d372d3f468e784e77bd666
+ms.openlocfilehash: 6faa29858e94c7d80d6039e35278b6a7ae263a85
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/29/2018
-ms.locfileid: "37121679"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43213980"
 ---
 # <a name="tn006-message-maps"></a>TN006: mapy komunikatów
 
 Ta uwaga opisuje funkcja mapy komunikatów MFC.
 
-## <a name="the-problem"></a>Problem
+## <a name="the-problem"></a>Ten Problem
 
-Microsoft Windows implementuje funkcje wirtualne w klasach okna, które skorzystać z jego funkcji obsługi komunikatów. Z powodu dużej liczby komunikatów związane zapewnienie osobnych funkcji wirtualnej dla każdej wiadomości Windows spowodowałoby vtable zbyt duża.
+Program Microsoft Windows implementuje funkcje wirtualne w klasach okien, korzystających z jego możliwości obsługi komunikatów. Z powodu dużej liczby komunikatów związane dostarczanie oddzielne funkcję wirtualną dla każdego komunikatu Windows utworzyć niezwykle dużych vtable.
 
-Ponieważ liczbę komunikatów zdefiniowanych w systemie Windows zmienia się wraz z upływem czasu, ponieważ aplikacje można zdefiniować własne komunikaty systemu Windows, mapy wiadomości zapewnienia poziomu pośredni uniemożliwiający istniejący kod fundamentalne zmiany interfejsu.
+Ponieważ liczba komunikatów zdefiniowaną przez system Windows zmienia się wraz z upływem czasu, ponieważ aplikacje można zdefiniować własne komunikatów Windows, mapy wiadomości zapewniają poziom pośrednictwa, który uniemożliwia zmian w istniejącym kodzie zmiany w interfejsie.
 
 ## <a name="overview"></a>Omówienie
 
-MFC stanowi alternatywę dla instrukcji switch, który był używany w tradycyjnych programów systemu Windows do obsługi wiadomości wysyłane do okna. Mapowanie komunikatów do metod można zdefiniować tak, aby po odebraniu komunikatu przez okno odpowiednie metoda jest wywoływana automatycznie. Tej funkcji mapy komunikatów zaprojektowano tak, aby przypominały funkcje wirtualne, ale ma dodatkowe korzyści z funkcji wirtualnych C++ nie jest możliwe.
+MFC stanowi alternatywę dla instrukcji switch, który był używany w tradycyjnych programów Windows do obsługi wiadomości wysyłane do okna. Mapowanie komunikatów do metod można zdefiniować tak, aby po otrzymaniu komunikatu przez okno odpowiedniej metody jest wywoływana automatycznie. Tej funkcji w mapie komunikatów zaprojektowano tak, aby przypominały funkcje wirtualne, ale ma dodatkowych korzyści, nie jest możliwe dzięki funkcji wirtualnych języka C++.
 
 ## <a name="defining-a-message-map"></a>Definiowanie mapy komunikatów
 
-[Declare_message_map —](reference/message-map-macros-mfc.md#declare_message_map) Makro deklaruje trzy elementy członkowskie klasy.
+[DECLARE_MESSAGE_MAP](reference/message-map-macros-mfc.md#declare_message_map) Makro deklaruje trzy elementy członkowskie klasy.
 
-- Wywołuje tablicy prywatnej wpisów AFX_MSGMAP_ENTRY *_messageEntries*.
+- Wywołuje prywatne tablicę wpisy AFX_MSGMAP_ENTRY *_messageEntries*.
 
-- Wywołuje chronionych struktury AFX_MSGMAP *messageMap* wskazującego *_messageEntries* tablicy.
+- Wywołuje chroniony struktury AFX_MSGMAP *messageMap* wskazującej *_messageEntries* tablicy.
 
-- A chronione funkcji wirtualnej o nazwie `GetMessageMap` zwracającą adres *messageMap*.
+- Chroniona funkcja wirtualna wywoływana w `GetMessageMap` zwracającego adres *messageMap*.
 
-To makro należy umieścić w deklaracji klasy przy użyciu mapy komunikatów. Według Konwencji jest na końcu deklaracji klasy. Na przykład:
+To makro, należy umieścić w deklaracji klasy za pomocą mapy komunikatów. Według Konwencji jest na końcu deklaracji klasy. Na przykład:
 
 ```cpp
 class CMyWnd : public CMyParentWndClass
@@ -76,18 +76,18 @@ protected:
 };
 ```
 
-Jest to format wygenerowanych przez kreatorami AppWizard i ClassWizard podczas tworzenia nowych klas. / / {{I / /}} nawiasy kwadratowe są potrzebne dla ClassWizard.
+Ten format jest używany generowane przez kreatora AppWizard i ClassWizard podczas tworzenia nowych klas. / / {{I / /}} nawiasy są wymagane przez ClassWizard.
 
-Mapy wiadomości tabela będzie zdefiniowana przy użyciu zestawu makr, które rozszerzają na wpisy mapy wiadomości. Tabela rozpoczyna się od [begin_message_map —](reference/message-map-macros-mfc.md#begin_message_map) wywołanie makra, który definiuje klasę, która jest obsługiwany przez ten mapy komunikatów i klasy nadrzędnej, do którego są przekazywane nieobsługiwany wiadomości. Kończy tabeli [end_message_map —](reference/message-map-macros-mfc.md#end_message_map) wywołanie makra.
+Tabela mapy wiadomości jest zdefiniowana za pomocą zestawu makr, które na wpisy mapy komunikatów. Tabela zaczyna się od [BEGIN_MESSAGE_MAP](reference/message-map-macros-mfc.md#begin_message_map) wywołanie makra, który definiuje klasę, która jest obsługiwana przez tę mapę komunikatów i klasy nadrzędnej, do której są przekazywane nieobsługiwany wiadomości. Tabela kończy się [END_MESSAGE_MAP](reference/message-map-macros-mfc.md#end_message_map) wywołania makra.
 
-Między wywołaniami tych dwóch makro jest wpis dla każdego komunikatu mają być obsługiwane przez ten mapy komunikatów. Każdy standardowych komunikatów systemu Windows ma makra w postaci ON_WM_*MESSAGE_NAME* generujący wpis dla tej wiadomości.
+Między wywołaniami następujące dwa makra jest wpis dla każdego komunikatu, które mają być obsługiwane przez tę mapę komunikatów. Każda standardowa wiadomość Windows ma makra w postaci ON_WM_*MESSAGE_NAME* generujący wpis dla tego komunikatu.
 
-Podpis standardowa funkcja został zdefiniowany dla rozpakowanie parametrach każdy komunikat systemu Windows i zapewnienia bezpieczeństwa typu. Te podpisy można znaleźć w pliku Afxwin.h w deklaracji z [CWnd](../mfc/reference/cwnd-class.md). Każdy z nich jest oznaczona jako ze słowem kluczowym **afx_msg** ułatwiający identyfikację.
+Podpis funkcji standardowej został zdefiniowany dla rozpakowywania parametrów każdego komunikatu Windows i zapewnienia bezpieczeństwa typu. Te podpisy można znaleźć w pliku Afxwin.h w deklaracji elementu [CWnd](../mfc/reference/cwnd-class.md). Każdy z nich jest oznaczona za pomocą słowa kluczowego **afx_msg** ułatwiający identyfikację.
 
 > [!NOTE]
-> ClassWizard wymaga użycia **afx_msg** — słowo kluczowe w Twojej deklaracje obsługi mapy wiadomości.
+> ClassWizard wymaga użycia **afx_msg** — słowo kluczowe w swojej deklaracji obsługi mapy wiadomości.
 
- Te podpisy funkcja uzyskano przy użyciu prostego Konwencji. Nazwa funkcji zawsze rozpoczyna się od `"On`". To jest następuje nazwa komunikatów systemu Windows z "WM_" usunięte i pierwszą literę każdego wyrazu kapitalizacji. Kolejność parametrów jest *wParam* następuje `LOWORD`(*lParam*) następnie `HIWORD`(*lParam*). Nieużywane parametry nie są przekazywane. Wszystkie dojścia, które są kodowane przez klasy MFC są konwertowane na wskaźniki do odpowiednich obiektów MFC. Poniższy przykład przedstawia sposób obsłużyć komunikat WM_PAINT i spowodować `CMyWnd::OnPaint` funkcja wywoływana:
+ Te sygnatur funkcji uzyskano przy użyciu prostego Konwencji. Nazwa funkcji zawsze zaczyna się od `"On`". To następuje nazwa komunikatu Windows za pomocą "WM_" usunięte i pierwszą literę każdego wyrazu wielką literą. Kolejność parametrów jest *wParam* następuje `LOWORD`(*lParam*) następnie `HIWORD`(*lParam*). Nieużywane parametry nie są przekazywane. Wszystkie dojścia, które zostaną opakowane przy klas MFC są konwertowane do wskaźników do odpowiednich obiektów MFC. Poniższy przykład pokazuje, jak obsłużyć komunikat WM_PAINT i spowodować, że `CMyWnd::OnPaint` funkcja do wywołania:
 
 ```cpp
 BEGIN_MESSAGE_MAP(CMyWnd, CMyParentWndClass)
@@ -97,14 +97,14 @@ BEGIN_MESSAGE_MAP(CMyWnd, CMyParentWndClass)
 END_MESSAGE_MAP()
 ```
 
- Tabela mapy komunikatów musi być zdefiniowana poza zakresem żadnych definicji funkcji lub klasy. Nie należy go umieścić w bloku "C" extern.
+ Tabela mapy wiadomości muszą być zdefiniowane poza zakresem dowolna definicja funkcji lub klasy. Nie należy go umieścić w bloku extern "C".
 
 > [!NOTE]
-> ClassWizard zmodyfikuje wpisy mapy wiadomości, które mają miejsce między / / {{i / /}} komentarz nawiasu.
+> ClassWizard modyfikuje wpisy mapy komunikatów, które mają miejsce między / / {{i / /}} komentarz w nawiasie kwadratowym.
 
-## <a name="user-defined-windows-messages"></a>Komunikaty systemu Windows zdefiniowane przez użytkownika
+## <a name="user-defined-windows-messages"></a>Komunikaty Windows zdefiniowane przez użytkownika
 
-Wiadomości zdefiniowane przez użytkownika może być zawarta w mapie komunikatów przy użyciu [on_message —](reference/message-map-macros-mfc.md#on_message) makra. To makro akceptuje liczba wiadomości, a także metodę formularza:
+Wiadomości zdefiniowanych przez użytkownika może być zawarta w mapie komunikatów za pomocą [ON_MESSAGE](reference/message-map-macros-mfc.md#on_message) makra. To makro akceptuje numer komunikatu i metody formularza:
 
 ```cpp
     // inside the class declaration
@@ -117,21 +117,21 @@ BEGIN_MESSAGE_MAP(CMyWnd, CMyParentWndClass)
 END_MESSAGE_MAP()
 ```
 
-W tym przykładzie nawiązanie obsługi niestandardowego komunikatu, który ma identyfikator wiadomości Windows pochodzi od standardowego WM_USER podstawa wiadomości zdefiniowane przez użytkownika. Poniższy przykład przedstawia sposób wywołania tej obsługi:
+W tym przykładzie możemy nawiązać Obsługa wiadomość niestandardowa, która ma identyfikator komunikatu Windows pochodną WM_USER Standardowa podstawa wiadomości zdefiniowanych przez użytkownika. Poniższy przykład pokazuje sposób wywołania tej procedury obsługi:
 
 ```cpp
 CWnd* pWnd = ...;
 pWnd->SendMessage(WM_MYMESSAGE);
 ```
 
-Zakres wiadomości zdefiniowane przez użytkownika, które posłuż się tą metodą musi być z zakresu WM_USER 0x7fff.
+Zakres komunikatów zdefiniowanych przez użytkownika, korzystających z tej metody musi być z zakresu WM_USER 0x7fff.
 
 > [!NOTE]
-> ClassWizard nie obsługuje wprowadzanie procedury obsługi on_message — ClassWizard interfejsu użytkownika. Należy ręcznie wprowadzić je w edytorze programu Visual C++. ClassWizard będzie analizować te wpisy i pozwalają na przeglądanie ich podobnie jak inne wpisy mapy wiadomości.
+> ClassWizard nie obsługuje wprowadzanie procedury obsługi ON_MESSAGE z ClassWizard interfejsu użytkownika. Należy ręcznie wprowadzić je w Edytorze Visual C++. ClassWizard będzie analizować te wpisy i pozwalają na przeglądanie ich tak samo jak wszystkie inne wpisy mapy komunikatów.
 
-## <a name="registered-windows-messages"></a>Komunikaty systemu Windows w zarejestrowany
+## <a name="registered-windows-messages"></a>Windows zarejestrowanych komunikatów
 
-[RegisterWindowMessage](http://msdn.microsoft.com/library/windows/desktop/ms644947) funkcja służy do definiowania nowych komunikatów okien, który jest musi być unikatowy w całym systemie. On_registered_message — makro jest używane do obsługi tych wiadomości. To makro akceptuje nazwę *UINT NIEMAL* zmienna, która zawiera identyfikator komunikatu zarejestrowanych systemu windows. Na przykład
+[RegisterWindowMessage](https://msdn.microsoft.com/library/windows/desktop/ms644947) funkcja służy do definiowania nowego komunikatu w oknie, która może być unikatowy w całym systemie. Makro ON_REGISTERED_MESSAGE jest używane do obsługi komunikatów. To makro akceptuje nazwę *UINT NIEMAL* zmiennej, która zawiera identyfikator komunikatu zarejestrowanych systemu windows. Na przykład
 
 ```cpp
 class CMyWnd : public CMyParentWndClass
@@ -155,32 +155,32 @@ BEGIN_MESSAGE_MAP(CMyWnd, CMyParentWndClass)
 END_MESSAGE_MAP()
 ```
 
-Musi być zarejestrowany zmienna Identyfikatora komunikatów systemu Windows (WM_FIND w tym przykładzie) *NEAR* zmiennej ze względu na sposób on_registered_message — jest zaimplementowana.
+Musi być zarejestrowany Windows zmienna Identyfikatora komunikatu (WM_FIND w tym przykładzie) *NEAR* ON_REGISTERED_MESSAGE zmiennej ze względu na sposób jest implementowany.
 
-Zakres wiadomości zdefiniowane przez użytkownika, które posłuż się tą metodą będzie należeć do zakresu 0xC000 do 0xFFFF.
+Zakres komunikatów zdefiniowanych przez użytkownika, korzystających z tego podejścia będzie należeć do zakresu 0xC000 do 0xFFFF.
 
 > [!NOTE]
-> ClassWizard nie obsługuje wprowadzanie procedury obsługi on_registered_message — ClassWizard interfejsu użytkownika. Należy ręcznie wprowadzić je w edytorze tekstowym. ClassWizard będzie analizować te wpisy i pozwalają na przeglądanie ich podobnie jak inne wpisy mapy wiadomości.
+> ClassWizard nie obsługuje wprowadzanie procedury obsługi ON_REGISTERED_MESSAGE z ClassWizard interfejsu użytkownika. Należy ręcznie wprowadzić je w edytorze tekstowym. ClassWizard będzie analizować te wpisy i pozwalają na przeglądanie ich tak samo jak wszystkie inne wpisy mapy komunikatów.
 
 ## <a name="command-messages"></a>Komunikaty poleceń
 
-Komunikaty poleceń z menu i akceleratorami są obsługiwane w mapy komunikatów z on_command — makro. To makro akceptuje identyfikator polecenia, a także metodę. Tylko WM_COMMAND komunikat zawierający *wParam* równa określone polecenie identyfikator jest obsługiwane przez metody określonej we wpisie mapy komunikatów. Funkcje Członkowskie programu obsługi poleceń nie mają żadnych parametrów i zwraca **void**. Makro ma następujący format:
+Komunikaty poleceń z menu i akceleratorami są obsługiwane w mapy komunikatów za pomocą ON_COMMAND — makro. To makro akceptuje identyfikator polecenia i metody. Tylko określone wiadomości WM_COMMAND, który ma *wParam* równa określone polecenie identyfikator odbywa się w sposób określony w ramach wpisu mapy komunikatów. Funkcje Członkowskie programu obsługi poleceń nie mają żadnych parametrów i zwracają **void**. Makro ma następującą postać:
 
 ```cpp
 ON_COMMAND(id, memberFxn)
 ```
 
-Polecenie aktualizacji wiadomości są kierowane przez ten sam mechanizm, ale zamiast tego użyj on_update_command_ui — makro. Funkcje Członkowskie programu obsługi aktualizacji poleceń przyjmować jeden parametr, wskaźnik do [CCmdUI](../mfc/reference/ccmdui-class.md) obiektu i zwraca **void**. Makro ma postać
+Polecenie update wiadomości są przesyłane za pośrednictwem ten sam mechanizm, ale zamiast tego użyj ON_UPDATE_COMMAND_UI — makro. Funkcje Członkowskie programu obsługi aktualizacji poleceń przyjmować jeden parametr, wskaźnik do [CCmdUI](../mfc/reference/ccmdui-class.md) obiektu i zwraca **void**. Makro ma postać
 
 ```cpp
 ON_UPDATE_COMMAND_UI(id, memberFxn)
 ```
 
-Zaawansowani użytkownicy mogą używać on_command_ex — makro, czyli rozszerzonej formy polecenie Programy obsługi komunikatów. Makro stanowi nadzbiór funkcji on_command —. Funkcje Członkowskie program obsługi poleceń rozszerzonej przyjmować jeden parametr, **UINT** zawiera identyfikator polecenia i zwracać **BOOL**. Wartość zwracana powinna być **TRUE** aby wskazać, że polecenie zostało obsłużone. W przeciwnym razie routingu będzie innych obiektów docelowych polecenia.
+Zaawansowani użytkownicy mogą używać ON_COMMAND_EX — makro, czyli rozszerzonej postaci polecenia programy obsługi komunikatów. Makro stanowi nadzbiór funkcji ON_COMMAND. Rozszerzona procedura obsługi polecenia elementów członkowskich przyjmować jeden parametr, **UINT** zawiera identyfikator polecenia i powrócić **BOOL**. Zwracana wartość powinna być **TRUE** do wskazania, że polecenie zostało obsłużone. W przeciwnym razie routingu będzie innych obiektów docelowych polecenia.
 
-Przykłady formach:
+Przykłady z poniższych metod:
 
-- Wewnątrz Resource.h (zwykle generowane przez Visual C++)
+- Wewnątrz Resource.h (zwykle jest generowane przez Visual C++)
 
     ```cpp
     #define    ID_MYCMD      100
@@ -195,7 +195,7 @@ Przykłady formach:
     afx_msg BOOL OnComplexCommand(UINT nID);
     ```
 
-- W definicji mapy wiadomości
+- W definicji mapy komunikatów
 
     ```cpp
     ON_COMMAND(ID_MYCMD, OnMyCommand)
@@ -223,31 +223,31 @@ Przykłady formach:
     }
     ```
 
- Użytkownicy wersji Advanced może obsłużyć szeroką gamę poleceń za pomocą jednego polecenia program obsługi: [on_command_range —](reference/message-map-macros-mfc.md#on_command_range) lub on_command_range_ex —. Zobacz dokumentację produktu, aby uzyskać więcej informacji na temat makr.
+ Zaawansowani użytkownicy mogą obsługiwać szeroką gamę poleceń za pomocą jednego polecenia program obsługi: [ON_COMMAND_RANGE](reference/message-map-macros-mfc.md#on_command_range) lub ON_COMMAND_RANGE_EX. Zobacz dokumentację produktu, aby uzyskać więcej informacji na temat tych makr.
 
 > [!NOTE]
-> ClassWizard obsługuje tworzenie on_command — i on_update_command_ui — programy obsługi, ale nie obsługuje tworzenia on_command_ex — lub on_command_range — programy obsługi. Jednak Kreator klas analizowanie i pozwalają na przeglądanie wszystkich wariantów obsługi cztery polecenia.
+> ClassWizard obsługuje tworzenie obsługi ON_COMMAND i ON_UPDATE_COMMAND_UI, ale nie obsługuje tworzenia ON_COMMAND_EX lub ON_COMMAND_RANGE programów obsługi. Jednak Kreator klas przeanalizować i pozwalają na przeglądanie wszystkich wariantów obsługi cztery polecenia.
 
-## <a name="control-notification-messages"></a>Komunikaty powiadomień dotyczących formantu
+## <a name="control-notification-messages"></a>Komunikaty powiadomień dotyczących kontrolki
 
-Wpis mapy komunikatów wysyłanych z formantów podrzędnych z oknem określono dodatkowy bitu informacji w swojej wiadomości: identyfikator formantu. Program obsługi komunikatów określony we wpisie mapy wiadomości jest wywoływana tylko wtedy, gdy są spełnione następujące warunki:
+Wiadomości, które są wysyłane z formantów podrzędnych do okna ma dodatkowy trochę informacji w ich wiadomości mapy wejścia: Identyfikator kontrolki. Program obsługi komunikatów, określone w wpis mapy wiadomości jest wywoływana tylko wtedy, gdy są spełnione następujące warunki:
 
-- Kod powiadamiania kontrolki (wyższe słowo *lParam*), takich jak BN_CLICKED, zgodny z kodem powiadomień, określony we wpisie mapy komunikatów.
+- Kod powiadamiania kontrolki (wyższe słowo *lParam*), takie jak BN_CLICKED, dopasowuje kod powiadomienia określony we wpisie mapy komunikatów.
 
-- Identyfikator formantu (*wParam*) jest zgodny z Identyfikatorem formantu określony we wpisie mapy komunikatów.
+- Identyfikator formantu (*wParam*) zgodny z Identyfikatorem formantu określony we wpisie w mapie komunikatów.
 
-Komunikaty powiadomień dotyczących Kontrolki niestandardowe mogą używać [on_control —](reference/message-map-macros-mfc.md#on_control) makro do definiowania wpisu mapy wiadomości, przy użyciu kodu niestandardowego powiadomień. To makro ma postać
+Komunikaty powiadomień dotyczących Kontrolki niestandardowe mogą używać [ON_CONTROL](reference/message-map-macros-mfc.md#on_control) makra, aby zdefiniować wpis mapy wiadomości z kodem niestandardowe powiadomienie. To makro ma postać
 
 ```cpp
 ON_CONTROL(wNotificationCode, id, memberFxn)
 ```
 
-Zaawansowane wykorzystanie [on_control_range —](reference/message-map-macros-mfc.md#on_control_range) może służyć do obsługi określonego formantu powiadomienie z zakresu od formantów za pomocą tej procedury obsługi.
+Zaawansowane wykorzystanie [ON_CONTROL_RANGE](reference/message-map-macros-mfc.md#on_control_range) może służyć do obsługi powiadomień sterowania z szeroką gamę elementów sterujących, za pomocą tej procedury obsługi.
 
 > [!NOTE]
-> ClassWizard nie obsługuje tworzenia on_control — lub on_control_range — program obsługi w interfejsie użytkownika. Należy ręcznie wprowadzić je w edytorze tekstu. ClassWizard będzie analizować te wpisy i pozwalają na przeglądanie ich podobnie jak inne wpisy mapy wiadomości.
+> ClassWizard nie obsługuje tworzenia nieprawidłowego ON_CONTROL lub ON_CONTROL_RANGE w interfejsie użytkownika. Należy ręcznie wprowadzić je za pomocą edytora tekstów. ClassWizard będzie analizować te wpisy i pozwalają na przeglądanie ich tak samo jak inne wpisy mapy komunikatów.
 
-Formanty standardowe systemu Windows użyj bardziej zaawansowanych [WM_NOTIFY](http://msdn.microsoft.com/library/windows/desktop/bb775583) dla powiadomień dotyczących formantów złożonych. Ta wersja MFC ma bezpośrednią obsługę tej nowej wiadomości przy użyciu makra ON_NOTIFY i on_notify_range —. Zobacz dokumentację produktu, aby uzyskać więcej informacji na temat makr.
+Wspólnych formantów Windows użyj bardziej wydajne [WM_NOTIFY](https://msdn.microsoft.com/library/windows/desktop/bb775583) dla powiadomień dotyczących formantów złożonych. Ta wersja programu MFC ma bezpośrednią obsługę tę nową wiadomość przy użyciu makr komunikaty ON_NOTIFY i ON_NOTIFY_RANGE. Zobacz dokumentację produktu, aby uzyskać więcej informacji na temat tych makr.
 
 ## <a name="see-also"></a>Zobacz także
 

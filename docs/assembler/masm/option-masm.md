@@ -16,15 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 80291c805cad3ef041fffc58983ff399da07c9d9
-ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
+ms.openlocfilehash: 4a2dcbc55d6a2d033cde3b6189618afd67bdc3fb
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/28/2018
-ms.locfileid: "32057724"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43221512"
 ---
 # <a name="option-masm"></a>OPTION (MASM)
-Włącza i wyłącza funkcje asemblera.  
+Włącza i wyłącza funkcje asembler.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -46,9 +46,9 @@ optionlist
 |**NOM510**|**NOKEYWORD**|**NOSIGNEXTEND**|**PRZESUNIĘCIE**|  
 |**OLDMACROS**|**NOOLDMACROS**|**OLDSTRUCTS**|**NOOLDSTRUCTS**|  
 |**PROC**|**PROLOGU**|**TYLKO DO ODCZYTU**|**NOREADONLY**|  
-|**ZAKRES**|**NOSCOPED**|**SEGMENT**|**SETIF2**.|  
+|**O OKREŚLONYM ZAKRESIE**|**NOSCOPED**|**SEGMENT**|**SETIF2**.|  
   
- Składnia języka jest **opcji języka: *** x*, gdzie *x* jest jednym z C, SYSCALL, STDCALL, PASCAL, FORTRAN lub BASIC.  SYSCALL, PASCAL FORTRAN i BASIC nie są obsługiwane z używane z [. MODEL](../../assembler/masm/dot-model.md) PŁASKIM.  
+ Składnia języka jest **opcji języka:**<em>x</em>, gdzie *x* jest jednym z C, SYSCALL, STDCALL, PASCAL, PASCAL lub BASIC.  SYSCALL, PASCAL, PASCAL i BASIC są nieobsługiwane w przypadku używany z [. MODEL](../../assembler/masm/dot-model.md) PROSTEGO.  
   
 ## <a name="see-also"></a>Zobacz też  
  [Dokumentacja dyrektyw](../../assembler/masm/directives-reference.md)

@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9df970022ccc4f358864c3e3462ffea2b373cd00
-ms.sourcegitcommit: b92ca0b74f0b00372709e81333885750ba91f90e
+ms.openlocfilehash: fd4aadf875e16586286c97aa5bffe82d6faed31e
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/16/2018
-ms.locfileid: "42466080"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43222306"
 ---
 # <a name="afxglobaldata-structure"></a>AFX_GLOBAL_DATA — Struktura
 `AFX_GLOBAL_DATA` Struktura zawiera pola i metody, które są używane do zarządzania w ramach lub dostosować wygląd i działanie aplikacji.  
@@ -64,13 +64,13 @@ struct AFX_GLOBAL_DATA
 |[AFX_GLOBAL_DATA::IsD2DInitialized](#isd2dinitialized)|Inicjuje `D2D`, `DirectWrite`, i `WIC` fabryk. Wywołaj tę metodę, zanim okno główne jest zainicjowany.|  
 |[AFX_GLOBAL_DATA::Is32BitIcons](#is32biticons)|Wskazuje, czy wstępnie zdefiniowane ikony 32-bitowe są obsługiwane.|  
 |[AFX_GLOBAL_DATA::IsD2DInitialized](#isd2dinitialized)|Określa, czy `D2D` został zainicjowany.|  
-|[AFX_GLOBAL_DATA::IsDwmCompositionEnabled](#isdwmcompositionenabled)|Zapewnia prostą metodę do wywołania Windows [DwmIsCompositionEnabled](http://msdn.microsoft.com/library/windows/desktop/aa969518) metody.|  
+|[AFX_GLOBAL_DATA::IsDwmCompositionEnabled](#isdwmcompositionenabled)|Zapewnia prostą metodę do wywołania Windows [DwmIsCompositionEnabled](/windows/desktop/api/dwmapi/nf-dwmapi-dwmiscompositionenabled) metody.|  
 |[AFX_GLOBAL_DATA::IsHighContrastMode](#ishighcontrastmode)|Wskazuje, czy obrazy są obecnie wyświetlane o wysokim kontraście.|  
 |[AFX_GLOBAL_DATA::OnSettingChange](#onsettingchange)|Wykrywa bieżący stan animacji menu i funkcji automatycznie ukrywaj paska zadań pulpitu.|  
 |[AFX_GLOBAL_DATA::RegisterWindowClass](#registerwindowclass)|Rejestruje określoną klasę MFC w oknie.|  
 |[AFX_GLOBAL_DATA::ReleaseTaskBarRefs](#releasetaskbarrefs)|Zwalnia interfejsy uzyskane za pośrednictwem metody GetITaskbarList i GetITaskbarList3.|  
 |[AFX_GLOBAL_DATA::Resume](#resume)|Ponownie inicjuje wskaźniki funkcji wewnętrznej, uzyskujących dostęp do metody, które obsługują Windows [kompozycje i style wizualne](/windows/desktop/Controls/visual-styles-overview).|  
-|[AFX_GLOBAL_DATA::SetLayeredAttrib](#setlayeredattrib)|Zapewnia prostą metodę do wywołania Windows [SetLayeredWindowAttributes](http://msdn.microsoft.com/library/windows/desktop/ms633540) metody.|  
+|[AFX_GLOBAL_DATA::SetLayeredAttrib](#setlayeredattrib)|Zapewnia prostą metodę do wywołania Windows [SetLayeredWindowAttributes](https://msdn.microsoft.com/library/windows/desktop/ms633540) metody.|  
 |[AFX_GLOBAL_DATA::SetMenuFont](#setmenufont)|Tworzy logiczną czcionki.|  
 |[AFX_GLOBAL_DATA::ShellCreateItemFromParsingName](#shellcreateitemfromparsingname)|Tworzy i inicjuje obiekt elementu powłoki, na podstawie nazwy podczas analizowania.|  
 |[AFX_GLOBAL_DATA::UpdateFonts](#updatefonts)|Reintializes logiczne czcionek, które są używane przez platformę.|  
@@ -205,16 +205,16 @@ BOOL DrawTextOnGlass(
  [in] *hTheme*  
  Dojście do danych motyw okna, lub wartość NULL. Środowisko wykorzystuje określony motyw ma zostać narysowany tekst, jeśli ten parametr nie ma wartości NULL i motywów są obsługiwane. W przeciwnym razie ramach nie używa motyw ma zostać narysowany tekst.  
   
- Użyj [OpenThemeData](http://msdn.microsoft.com/library/windows/desktop/bb759821) metodę w celu utworzenia HTHEME.  
+ Użyj [OpenThemeData](/windows/desktop/api/uxtheme/nf-uxtheme-openthemedata) metodę w celu utworzenia HTHEME.  
   
  [in] *podstawowego kontrolera domeny*  
  Wskaźnik do kontekstu urządzenia.  
   
  [in] *iPartId*  
- Część kontroli, która ma wygląd odpowiedni tekst. Aby uzyskać więcej informacji, zobacz części kolumny tabeli w [części i Stany](http://msdn.microsoft.com/library/windows/desktop/bb773210). Jeśli ta wartość wynosi 0, tekstu jest rysowana w domyślnej czcionki lub czcionki, zaznaczone w kontekście urządzenia.  
+ Część kontroli, która ma wygląd odpowiedni tekst. Aby uzyskać więcej informacji, zobacz części kolumny tabeli w [części i Stany](https://msdn.microsoft.com/library/windows/desktop/bb773210). Jeśli ta wartość wynosi 0, tekstu jest rysowana w domyślnej czcionki lub czcionki, zaznaczone w kontekście urządzenia.  
   
  [in] *iStateId*  
- Stan kontrolki, która ma wygląd odpowiedni tekst. Aby uzyskać więcej informacji, zobacz kolumnę stany w tabeli w [części i Stany](http://msdn.microsoft.com/library/windows/desktop/bb773210).  
+ Stan kontrolki, która ma wygląd odpowiedni tekst. Aby uzyskać więcej informacji, zobacz kolumnę stany w tabeli w [części i Stany](https://msdn.microsoft.com/library/windows/desktop/bb773210).  
   
  [in] *strText*  
  Tekst do rysowania.  
@@ -225,7 +225,7 @@ BOOL DrawTextOnGlass(
  [in] *Flagidw*  
  Bitowa kombinacja (lub) flagi określające, jak jest rysowana określony tekst.  
   
- Jeśli *hTheme* parametr jest `NULL` czy motywy nie są obsługiwane i włączony, *nFormat* parametru [CDC::DrawText](../../mfc/reference/cdc-class.md#drawtext) metoda opisuje prawidłowe flagi. Jeśli są obsługiwane motywy, *Flagidw* parametru [DrawThemeTextEx](http://msdn.microsoft.com/library/windows/desktop/bb773317) metoda opisuje prawidłowe flagi.  
+ Jeśli *hTheme* parametr jest `NULL` czy motywy nie są obsługiwane i włączony, *nFormat* parametru [CDC::DrawText](../../mfc/reference/cdc-class.md#drawtext) metoda opisuje prawidłowe flagi. Jeśli są obsługiwane motywy, *Flagidw* parametru [DrawThemeTextEx](/windows/desktop/api/uxtheme/nf-uxtheme-drawthemetextex) metoda opisuje prawidłowe flagi.  
   
  [in] *nGlowSize*  
  Rozmiar wpływ poświata, jaki jest rysowana na tle przed narysowaniem określony tekst. Wartość domyślna to 0.  
@@ -237,16 +237,16 @@ BOOL DrawTextOnGlass(
  Wartość TRUE, jeśli motywu jest używany do rysowania określonego tekstu. w przeciwnym razie wartość FALSE.  
   
 ### <a name="remarks"></a>Uwagi  
- Motyw definiuje stylu wizualnego w aplikacji. Motyw nie jest używany do rysowania tekstu, jeśli *hTheme* parametr ma wartość NULL, lub jeśli [DrawThemeTextEx](http://msdn.microsoft.com/library/windows/desktop/bb773317) metoda nie jest obsługiwana, lub jeśli [Menedżera okien pulpitu](http://msdn.microsoft.com/library/windows/desktop/aa969540) składu (DWM) jest wyłączona.  
+ Motyw definiuje stylu wizualnego w aplikacji. Motyw nie jest używany do rysowania tekstu, jeśli *hTheme* parametr ma wartość NULL, lub jeśli [DrawThemeTextEx](/windows/desktop/api/uxtheme/nf-uxtheme-drawthemetextex) metoda nie jest obsługiwana, lub jeśli [Menedżera okien pulpitu](/windows/desktop/dwm/dwm-overview) składu (DWM) jest wyłączona.  
   
 ### <a name="see-also"></a>Zobacz też  
  [Diagram hierarchii](../../mfc/hierarchy-chart.md)   
- [COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449)   
- [Części i Stany](http://msdn.microsoft.com/library/windows/desktop/bb773210)   
+ [COLORREF](/windows/desktop/gdi/colorref)   
+ [Części i Stany](https://msdn.microsoft.com/library/windows/desktop/bb773210)   
  [CDC::DrawText](../../mfc/reference/cdc-class.md#drawtext)   
- [DrawThemeTextEx](http://msdn.microsoft.com/library/windows/desktop/bb773317)   
- [Menedżer okien pulpitu](http://msdn.microsoft.com/library/windows/desktop/aa969540)   
- [Włącz i kontroluj skład Menedżera okien pulpitu](http://msdn.microsoft.com/library/windows/desktop/aa969538)
+ [DrawThemeTextEx](/windows/desktop/api/uxtheme/nf-uxtheme-drawthemetextex)   
+ [Menedżer okien pulpitu](/windows/desktop/dwm/dwm-overview)   
+ [Włącz i kontroluj skład Menedżera okien pulpitu](/windows/desktop/dwm/composition-ovw)
 
 ## <a name="enableaccessibilitysupport"></a> AFX_GLOBAL_DATA::EnableAccessibilitySupport
 Włącza lub wyłącza obsługę Microsoft Active Accessibility.  
@@ -323,19 +323,19 @@ COLORREF GetColor(int nColor);
   
 ### <a name="parameters"></a>Parametry   
  [in] *nColor*  
- Wartość, która określa element interfejsu użytkownika, którego kolor są pobierane. Aby uzyskać listę prawidłowych wartości, zobacz *nIndex* parametru [GetSysColor](http://msdn.microsoft.com/library/windows/desktop/ms724371) metody.  
+ Wartość, która określa element interfejsu użytkownika, którego kolor są pobierane. Aby uzyskać listę prawidłowych wartości, zobacz *nIndex* parametru [GetSysColor](https://msdn.microsoft.com/library/windows/desktop/ms724371) metody.  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Wartość koloru RGB element interfejsu użytkownika. Aby uzyskać więcej informacji zobacz uwagi.  
   
 ### <a name="remarks"></a>Uwagi  
- Jeśli *nColor* parametr znajduje się poza zakresem, wartość zwracana wynosi zero. Ponieważ zero jest również prawidłowej wartości RGB, nie można użyć tej metody, aby ustalić, czy kolor, który system jest obsługiwana przez bieżący system operacyjny. Zamiast tego należy użyć [GetSysColorBrush](http://msdn.microsoft.com/library/windows/desktop/dd144927) metody, która zwraca wartość NULL, jeśli kolor nie jest obsługiwana.  
+ Jeśli *nColor* parametr znajduje się poza zakresem, wartość zwracana wynosi zero. Ponieważ zero jest również prawidłowej wartości RGB, nie można użyć tej metody, aby ustalić, czy kolor, który system jest obsługiwana przez bieżący system operacyjny. Zamiast tego należy użyć [GetSysColorBrush](/windows/desktop/api/winuser/nf-winuser-getsyscolorbrush) metody, która zwraca wartość NULL, jeśli kolor nie jest obsługiwana.  
   
 ### <a name="see-also"></a>Zobacz też  
 
- [GetSysColor — funkcja](http://msdn.microsoft.com/library/windows/desktop/ms724371)   
- [COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449)   
- [GetSysColorBrush](http://msdn.microsoft.com/library/windows/desktop/dd144927)
+ [GetSysColor — funkcja](https://msdn.microsoft.com/library/windows/desktop/ms724371)   
+ [COLORREF](/windows/desktop/gdi/colorref)   
+ [GetSysColorBrush](/windows/desktop/api/winuser/nf-winuser-getsyscolorbrush)
 
 ## <a name="getdirect2dfactory"></a> AFX_GLOBAL_DATA::GetDirect2dFactory
  Zwraca wskaźnik do interfejsu ID2D1Factory, która jest przechowywana w danych globalnych. Jeśli interfejs nie został zainicjowany, zostanie utworzony i ma następujące parametry domyślne.  
@@ -369,14 +369,14 @@ BOOL GetNonClientMetrics(NONCLIENTMETRICS& info);
   
 ### <a name="parameters"></a>Parametry   
  [out w] *informacji*  
- A [NONCLIENTMETRICS](http://msdn.microsoft.com/library/windows/desktop/ff729175) strukturę, która zawiera metryki skalowalne, skojarzone z nieklienckim obszarze okna nonminimized.  
+ A [NONCLIENTMETRICS](https://msdn.microsoft.com/library/windows/desktop/ff729175) strukturę, która zawiera metryki skalowalne, skojarzone z nieklienckim obszarze okna nonminimized.  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Wartość TRUE, jeśli ta metoda zakończy się pomyślnie; w przeciwnym razie wartość FALSE.  
  
   
 ### <a name="see-also"></a>Zobacz też   
- [Struktura NONCLIENTMETRICS](http://msdn.microsoft.com/library/windows/desktop/ff729175)
+ [Struktura NONCLIENTMETRICS](https://msdn.microsoft.com/library/windows/desktop/ff729175)
 
 ## <a name="gettextheight"></a> AFX_GLOBAL_DATA::GetTextHeight
  Pobiera wysokość znaki tekstowe w bieżącej czcionki.  
@@ -483,7 +483,7 @@ BOOL IsD2DInitialized() const;
  Wartość TRUE, jeśli został zainicjowany D2D; w przeciwnym razie wartość FALSE.  
   
 ## <a name="isdwmcompositionenabled"></a> AFX_GLOBAL_DATA::IsDwmCompositionEnabled
-Zapewnia prostą metodę do wywołania Windows [DwmIsCompositionEnabled](http://msdn.microsoft.com/library/windows/desktop/aa969518) metody.  
+Zapewnia prostą metodę do wywołania Windows [DwmIsCompositionEnabled](/windows/desktop/api/dwmapi/nf-dwmapi-dwmiscompositionenabled) metody.  
   
   
 ```  
@@ -491,11 +491,11 @@ BOOL IsDwmCompositionEnabled();
 ```  
   
 ### <a name="return-value"></a>Wartość zwracana  
- Wartość TRUE, jeśli [Menedżera okien pulpitu](http://msdn.microsoft.com/library/windows/desktop/aa969540) składu (DWM) jest włączone; w przeciwnym razie wartość FALSE.  
+ Wartość TRUE, jeśli [Menedżera okien pulpitu](/windows/desktop/dwm/dwm-overview) składu (DWM) jest włączone; w przeciwnym razie wartość FALSE.  
   
 ### <a name="see-also"></a>Zobacz też    
- [Menedżer okien pulpitu](http://msdn.microsoft.com/library/windows/desktop/aa969540)   
- [Włącz i kontroluj skład Menedżera okien pulpitu](http://msdn.microsoft.com/library/windows/desktop/aa969538)
+ [Menedżer okien pulpitu](/windows/desktop/dwm/dwm-overview)   
+ [Włącz i kontroluj skład Menedżera okien pulpitu](/windows/desktop/dwm/composition-ovw)
 
 ## <a name="ishighcontrastmode"></a> AFX_GLOBAL_DATA::IsHighContrastMode
  Wskazuje, czy obrazy są obecnie wyświetlane o wysokim kontraście.    
@@ -649,7 +649,7 @@ CString RegisterWindowClass(LPCTSTR lpszClassNamePrefix);
  Nazwa klasy okna do zarejestrowania.  
   
 ### <a name="return-value"></a>Wartość zwracana  
- Kwalifikowana nazwa klasy zarejestrowane, jeśli ta metoda zakończy się powodzeniem; w przeciwnym razie [wyjątek zasobu](http://msdn.microsoft.com/library/ddd99292-819b-4fa4-8371-b1954ed5856d).  
+ Kwalifikowana nazwa klasy zarejestrowane, jeśli ta metoda zakończy się powodzeniem; w przeciwnym razie [wyjątek zasobu](https://msdn.microsoft.com/library/ddd99292-819b-4fa4-8371-b1954ed5856d).  
   
 ### <a name="remarks"></a>Uwagi  
  Wartość zwracana jest listę rozdzielonych średnikami *lpszClassNamePrefix* ciąg parametru i reprezentacje szesnastkowym uchwytów bieżącego wystąpienia aplikacji; kursora aplikacji, czyli strzałkę kursor, którego identyfikator jest IDC_ARROW; i Pędzel tła. Aby uzyskać więcej informacji na temat rejestrowanie klas okien MFC, zobacz [afxregisterclass —](../../mfc/reference/application-information-and-management.md#afxregisterclass).  
@@ -670,10 +670,10 @@ BOOL Resume();
  Wartość TRUE, jeśli ta metoda zakończy się pomyślnie; w przeciwnym razie wartość FALSE. W trybie debugowania ta metoda potwierdza, jeśli ta metoda zakończy się niepowodzeniem.  
   
 ### <a name="remarks"></a>Uwagi  
- Ta metoda jest wywoływana, gdy otrzyma w ramach [WM_POWERBROADCAST](http://msdn.microsoft.com/library/windows/desktop/aa373247) wiadomości.  
+ Ta metoda jest wywoływana, gdy otrzyma w ramach [WM_POWERBROADCAST](/windows/desktop/Power/wm-powerbroadcast) wiadomości.  
   
 ## <a name="setlayeredattrib"></a> AFX_GLOBAL_DATA::SetLayeredAttrib
-Zapewnia prostą metodę do wywołania Windows [SetLayeredWindowAttributes](http://msdn.microsoft.com/library/windows/desktop/ms633540) metody.  
+Zapewnia prostą metodę do wywołania Windows [SetLayeredWindowAttributes](https://msdn.microsoft.com/library/windows/desktop/ms633540) metody.  
   
   
 ```  
@@ -689,7 +689,7 @@ BOOL SetLayeredAttrib(
  Dojście do okna warstwowej.  
   
  [in] *crKey*  
- Przezroczysty kolor klucza [Menedżera okien pulpitu](http://msdn.microsoft.com/library/windows/desktop/aa969540) używa do tworzenia warstwowych okna.  
+ Przezroczysty kolor klucza [Menedżera okien pulpitu](/windows/desktop/dwm/dwm-overview) używa do tworzenia warstwowych okna.  
   
  [in] *bAlpha*  
  Wartość alfa używany do opisania nieprzezroczystość warstwowej okna.  
@@ -701,8 +701,8 @@ BOOL SetLayeredAttrib(
  Wartość TRUE, jeśli ta metoda zakończy się pomyślnie; w przeciwnym razie wartość FALSE.   
  
 ### <a name="see-also"></a>Zobacz też   
- [COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449)   
- [SetLayeredWindowAttributes](http://msdn.microsoft.com/library/windows/desktop/ms633540)
+ [COLORREF](/windows/desktop/gdi/colorref)   
+ [SetLayeredWindowAttributes](https://msdn.microsoft.com/library/windows/desktop/ms633540)
 
 ## <a name="setmenufont"></a> AFX_GLOBAL_DATA::SetMenuFont
 Tworzy logiczną czcionki.  

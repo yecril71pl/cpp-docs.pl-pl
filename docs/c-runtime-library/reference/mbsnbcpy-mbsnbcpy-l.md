@@ -43,19 +43,19 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2fc3c849506401e44dfebcd4d0722953b557ae01
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 8e0972b1584f4df92455bb17e0db8e577f988ae8
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32404750"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43213114"
 ---
 # <a name="mbsnbcpy-mbsnbcpyl"></a>_mbsnbcpy, _mbsnbcpy_l
 
-Kopie **n** bajtów ciągu do ciągu docelowego. Dostępne są bardziej bezpieczne wersje tych funkcji, zobacz [_mbsnbcpy_s —, _mbsnbcpy_s_l —](mbsnbcpy-s-mbsnbcpy-s-l.md).
+Kopiuje **n** bajty ciągu do ciągu docelowego. Dostępne są bardziej bezpieczne wersje tych funkcji, zobacz [_mbsnbcpy_s —, _mbsnbcpy_s_l —](mbsnbcpy-s-mbsnbcpy-s-l.md).
 
 > [!IMPORTANT]
-> Nie można używać tego interfejsu API w aplikacjach, które są wykonywane w środowisku wykonawczym systemu Windows. Aby uzyskać więcej informacji, zobacz [funkcje CRT, nie są obsługiwane w aplikacjach platformy uniwersalnej systemu Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
+> Tego API nie można używać w aplikacjach korzystających ze środowiska wykonawczego Windows. Aby uzyskać więcej informacji, zobacz [funkcje CRT nieobsługiwane w aplikacjach platformy uniwersalnej Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
 
 ## <a name="syntax"></a>Składnia
 
@@ -89,10 +89,10 @@ unsigned char * _mbsnbcpy_l(
 ### <a name="parameters"></a>Parametry
 
 *strDest*<br/>
-Miejsce docelowe dla ciągu znaków do skopiowania.
+Miejsce docelowe dla ciągu znaków, który ma być skopiowany.
 
 *strSource*<br/>
-Ciąg znaków ma zostać skopiowany.
+Ciąg znaków do skopiowania.
 
 *Liczba*<br/>
 Liczba bajtów do skopiowania.
@@ -102,20 +102,20 @@ Ustawienia regionalne do użycia.
 
 ## <a name="return-value"></a>Wartość zwracana
 
-**_mbsnbcpy —** zwraca wskaźnik do ciągu znaków docelowego. Brak wartości zwracanej jest zarezerwowana wystąpił błąd.
+**_mbsnbcpy —** zwraca wskaźnik do ciągu docelowego. Zwraca żadnej wartości zarezerwowanej, aby wskazać błąd.
 
 ## <a name="remarks"></a>Uwagi
 
-**_Mbsnbcpy —** funkcji kopie *liczba* bajtów z *strSource* do *strDest*. Jeśli *liczba* przekracza rozmiar *strDest* lub ciągów źródłowych i docelowych, nakładają się zachowanie **_mbsnbcpy —** jest niezdefiniowana.
+**_Mbsnbcpy —** funkcja kopiuje *liczba* bajtów z *strSource* do *strDest*. Jeśli *liczba* przekracza rozmiar okna *strDest* lub ciągi źródłowe i docelowe nakładają się na siebie, zachowanie **_mbsnbcpy —** jest niezdefiniowana.
 
-Jeśli *strSource* lub *strDest* jest wskaźnika o wartości null, funkcja wywołuje program obsługi nieprawidłowych parametrów, zgodnie z opisem w [sprawdzanie poprawności parametru](../../c-runtime-library/parameter-validation.md). Jeśli jest dozwolone wykonywanie, aby kontynuować, funkcja zwraca **NULL** i ustawia **errno** do **einval —**.
+Jeśli *strSource* lub *strDest* jest pustym wskaźnikiem, funkcja wywoła procedurę obsługi nieprawidłowego parametru, zgodnie z opisem w [Parameter Validation](../../c-runtime-library/parameter-validation.md). Jeśli wykonanie może być kontynuowane, funkcja zwraca **NULL** i ustawia **errno** do **EINVAL**.
 
-Wartość wyjściowa jest zagrożony ustawienie **lc_ctype —** ustawienie kategorii ustawień regionalnych; zobacz [setlocale, _wsetlocale —](setlocale-wsetlocale.md) Aby uzyskać więcej informacji. Wersje te funkcje są identyczne, z wyjątkiem tego tych, które nie mają **_l** używać sufiksu bieżące ustawienia regionalne i wersje, które mają **_l** sufiks zamiast tego użyj parametru ustawienia regionalne to jest Przekazano. Aby uzyskać więcej informacji, zobacz [ustawień regionalnych](../../c-runtime-library/locale.md).
+Wartość wyjściowa jest zależna od ustawienia **LC_CTYPE** ustawienia kategorii ustawień regionalnych; zobacz [setlocale, _wsetlocale](setlocale-wsetlocale.md) Aby uzyskać więcej informacji. Wersje tych funkcji są identyczne, z wyjątkiem tego, które nie mają **_l** sufiksa używa bieżących ustawień regionalnych i wersji, które mają **_l** sufiks używają parametru ustawień regionalnych to przekazana. Aby uzyskać więcej informacji, zobacz [ustawień regionalnych](../../c-runtime-library/locale.md).
 
 > [!IMPORTANT]
-> Funkcje te mogą być podatne na zagrożenia przepełnienie buforu. Przepełnienia buforów może służyć do wykonywania kodu dowolnego osoba atakująca, która może spowodować nieuzasadnione podniesienie uprawnień i naruszyć bezpieczeństwo systemu. Aby uzyskać więcej informacji, zobacz [unikanie Overruns buforu](http://msdn.microsoft.com/library/windows/desktop/ms717795).
+> Funkcje te mogą być podatne na zagrożenia przepełnienia buforu. Przepełnienia buforu może służyć do wykonywania kodu dowolne osoby atakującej, co może spowodować nieuzasadnione podniesienie uprawnień i naruszyć bezpieczeństwo systemu. Aby uzyskać więcej informacji, zobacz [unikanie przepełnień bufora](/windows/desktop/SecBP/avoiding-buffer-overruns).
 
-W języku C++ tych funkcji mają przeciążenia szablonu, które wywołują odpowiedników nowsze, bezpieczniejsze tych funkcji. Aby uzyskać więcej informacji, zobacz [Secure szablonu Overloads](../../c-runtime-library/secure-template-overloads.md).
+W języku C++ funkcje te mają przeciążenia szablonu, które wywołują nowsze, bezpieczniejsze odpowiedniki tych funkcji. Aby uzyskać więcej informacji, zobacz [Secure przeciążenia szablonu](../../c-runtime-library/secure-template-overloads.md).
 
 ### <a name="generic-text-routine-mappings"></a>Mapowania procedur zwykłego tekstu
 
@@ -131,7 +131,7 @@ W języku C++ tych funkcji mają przeciążenia szablonu, które wywołują odpo
 |**_mbsnbcpy**|\<mbstring.h>|
 |**_mbsnbcpy_l**|\<mbstring.h>|
 
-Aby uzyskać więcej informacji o zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md).
+Aby uzyskać więcej informacji na temat zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md).
 
 ## <a name="see-also"></a>Zobacz także
 

@@ -23,12 +23,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b6831369f6327b7cef38b1a4f15013f1e3ff4043
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: a2192786a9ebb14061e31655fd63e0f7c67b5100
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42608991"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43218426"
 ---
 # <a name="platformcollectionsmap-class"></a>Platform::Collections:: map, klasa
 
@@ -267,7 +267,7 @@ event Windows::Foundation::Collections::MapChangedEventHandler<K,V>^ MapChanged;
 
 ### <a name="property-valuereturn-value"></a>Wartość właściwości/Zwracana wartość
 
-A [MapChangedEventHandler\<K, V >](/uwp/api/windows.foundation.collections.mapchangedeventhandler) zawierający informacje dotyczące obiektu, który podniósł zdarzenie i rodzaju zmiany, który wystąpił. Zobacz też [IMapChangedEventArgs\<K >](http://msdn.microsoft.com/library/windows/apps/br226034.aspx) i [wyliczenie CollectionChange](http://msdn.microsoft.com/library/windows/apps/windows.foundation.collections.collectionchange.aspx).
+A [MapChangedEventHandler\<K, V >](/uwp/api/windows.foundation.collections.mapchangedeventhandler) zawierający informacje dotyczące obiektu, który podniósł zdarzenie i rodzaju zmiany, który wystąpił. Zobacz też [IMapChangedEventArgs\<K >](https://msdn.microsoft.com/library/windows/apps/br226034.aspx) i [wyliczenie CollectionChange](https://msdn.microsoft.com/library/windows/apps/windows.foundation.collections.collectionchange.aspx).
 
 ## <a name="net-framework-equivalent"></a>Odpowiednik w programie .NET Framework
 
@@ -290,7 +290,7 @@ Część klucza pary klucz wartość. Typ *klucz* jest typename *K*.
 
 ## <a name="size"></a>  Metoda map::size
 
-Zwraca liczbę [Windows::Foundation::Collections::IKeyValuePair\<K, V >](http://msdn.microsoft.com/library/windows/apps/br226031.aspx) elementów w mapie.
+Zwraca liczbę [Windows::Foundation::Collections::IKeyValuePair\<K, V >](https://msdn.microsoft.com/library/windows/apps/br226031.aspx) elementów w mapie.
 
 ### <a name="syntax"></a>Składnia
 

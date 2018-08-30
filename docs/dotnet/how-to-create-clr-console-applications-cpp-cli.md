@@ -16,39 +16,39 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 3257d690ac949edff7958615656db052c3468c01
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 60804b3863a4b44bc963f289b1d6a8c2f2d5cbf7
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33132573"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43211160"
 ---
 # <a name="how-to-create-clr-console-applications-ccli"></a>Porady: tworzenie aplikacji do konsoli środowiska CLR (C++/CLI)
-Szablon aplikacji konsoli można utworzyć projekt aplikacji konsoli, która ma już odwołań projektu podstawowych oraz pliki.  
+Szablon aplikacji Konsolowej do tworzenia projektu aplikacji konsoli, który ma już odwołania do projektu podstawowych i plików.  
   
- Zazwyczaj aplikacji konsoli jest kompilowany do autonomicznego pliku wykonywalnego, ale nie ma graficznego interfejsu użytkownika. Użytkownik uruchamia aplikację konsoli w wierszu polecenia i używa instrukcji problem do uruchomionej aplikacji w wierszu polecenia. W wierszu polecenia aplikacji zawiera także informacje w danych wyjściowych. Natychmiastowości aplikacji konsoli ułatwia doskonałym sposobem poznawania technik programowania bez obawy dotyczące implementowania interfejsu użytkownika.  
+ Zazwyczaj Aplikacja konsoli jest skompilowany w autonomicznego pliku wykonywalnego, ale nie ma graficznego interfejsu użytkownika. Użytkownik uruchamia aplikację konsoli w wierszu polecenia i korzysta z wiersza polecenia, aby problem instrukcje uruchomionej aplikacji. W wierszu polecenia aplikacji zawiera również informacje w danych wyjściowych. Natychmiastowości aplikacji konsoli sprawia, że doskonały sposób, aby dowiedzieć się więcej technik programowania, bez obawy dotyczące implementowania interfejsu użytkownika.  
   
- Gdy używasz szablonu aplikacji konsoli, aby utworzyć projekt, automatycznie dodaje to, te odwołania i pliki:  
+ Gdy używasz szablonu aplikacji konsoli, aby utworzyć projekt, jego automatycznie dodaje tych plików i odwołań do:  
   
 -   Odwołania do tych przestrzeni nazw .NET Framework:  
   
-    -   [System](https://msdn.microsoft.com/en-us/library/system.appdomainmanager.appdomainmanager.aspx)— zawiera podstawowe klasy i klasy podstawowej, które definiują powszechnie używane wartości i odwołania do typów danych, zdarzeń i procedury obsługi zdarzeń, interfejsów, atrybuty i przetwarzanie wyjątków.  
+    -   [System](https://msdn.microsoft.com/library/system.appdomainmanager.appdomainmanager.aspx)— zawiera podstawowe klasy i klas bazowych, które definiują często używane wartości i odwołania do typów danych, zdarzenia i procedury obsługi zdarzeń, interfejsy, atrybuty i przetwarzanie wyjątków.  
   
-    -   mscorlib — zestawu DLL, która obsługuje programowanie .NET Framework.  
+    -   mscorlib — zestawu biblioteki DLL, która obsługuje programowanie .NET Framework.  
   
 -   Pliki źródłowe:  
   
-    -   W konsoli (plik .cpp) — główne źródło pliku i punktu wejścia do aplikacji, który został właśnie utworzony. Identyfikuje plik dll projektu i przestrzeń nazw projektu. Podaj kod w tym pliku.  
+    -   W konsoli (plik .cpp) — główne źródło pliku i punktu wejścia do aplikacji, który został utworzony. Identyfikuje plik .dll projektu i przestrzeni nazw projektu. Podaj własny kod w tym pliku.  
   
-    -   Atrybuty AssemblyInfo.cpp—Contains, plików, zasobów, typów, informacje na temat wersji, podpisywania informacji i tak dalej, używanej do zmodyfikowania metadanych zestawu projektu. Aby uzyskać więcej informacji, zobacz [zawartość zestawu](/dotnet/framework/app-domains/assembly-contents).  
+    -   Atrybuty AssemblyInfo.cpp—Contains, pliki, zasoby, typów, informacji o wersji, informacje o podpisywaniu i tak dalej, używanej do zmodyfikowania metadanych zestawu projektu. Aby uzyskać więcej informacji, zobacz [zawartość zestawu](/dotnet/framework/app-domains/assembly-contents).  
   
-    -   Stdafx.cpp—Used tworzenie prekompilowanego pliku nagłówkowego o nazwie Win32.pch i plik wstępnie skompilowane typy o nazwie StdAfx.obj.  
+    -   Stdafx.cpp—Used tworzenie prekompilowany plik nagłówka o nazwie Win32.pch i plik wstępnie skompilowane typy, o nazwie StdAfx.obj.  
   
 -   Pliki nagłówkowe:  
   
-    -   Stdafx.h—Used tworzenie prekompilowanego pliku nagłówkowego o nazwie Win32.pch i plik wstępnie skompilowane typy o nazwie StdAfx.obj.  
+    -   Stdafx.h—Used tworzenie prekompilowany plik nagłówka o nazwie Win32.pch i plik wstępnie skompilowane typy, o nazwie StdAfx.obj.  
   
-    -   wygenerowany Resource.h—A Uwzględnij plik dla app.rc.  
+    -   wygenerowany Resource.h—A obejmują app.rc w pliku.  
   
 -   Pliki zasobów:  
   
@@ -58,15 +58,15 @@ Szablon aplikacji konsoli można utworzyć projekt aplikacji konsoli, która ma 
   
 -   ReadMe.txt—Describes pliki w projekcie.  
   
-## <a name="to-create-a-common-language-runtime-clr-console-app-project"></a>Aby utworzyć projekt aplikacji konsoli środowiska uruchomieniowego (języka wspólnego CLR) języka wspólnego  
+## <a name="to-create-a-common-language-runtime-clr-console-app-project"></a>Do utworzenia projektu aplikacji konsoli środowiska uruchomieniowego (języka wspólnego CLR) w usłudze common language  
   
-1.  Na pasku menu wybierz **pliku**, **nowy**, **projektu**.  
+1.  Na pasku menu wybierz **pliku**, **New**, **projektu**.  
   
-2.  W **nowy projekt** okna dialogowego, w obszarze **zainstalowane szablony**, wybierz pozycję **Visual C++** węzła, wybierz opcję **CLR** węzeł, a następnie wybierz szablon aplikacji konsoli.  
+2.  W **nowy projekt** okno dialogowe, w obszarze **zainstalowane szablony**, wybierz opcję **Visual C++** węzeł **CLR** węzłem, a następnie wybierz pozycję Szablon Aplikacja konsoli.  
   
 3.  W **nazwa** wprowadź unikatową nazwę aplikacji.  
   
-     Można określić innych ustawień projektu i rozwiązania, ale nie są wymagane.  
+     Można określić inne ustawienia projektu i rozwiązania, ale nie są wymagane.  
   
 4.  Wybierz **OK** przycisku.  
   

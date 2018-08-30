@@ -14,18 +14,18 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fb9307b68b5d664e477f0139824ff02d00b7c134
-ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
+ms.openlocfilehash: 447f843bcc8f07d76084d1db68890237474ce200
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39462121"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43222155"
 ---
 # <a name="writing-an-exception-filter"></a>Pisanie filtra wyjątku
 Możesz obsłużyć wyjątek wykonując skok na poziom programu obsługi wyjątków lub kontynuując wykonywanie. Zamiast używania kodu programu obsługi wyjątków, aby obsłużyć wyjątek i przejść przez, można użyć *filtru* Aby oczyścić problem, a następnie, zwracając wartość -1, wznowić Normalny przepływ bez czyszczenia stosu.  
   
 > [!NOTE]
->  Niektóre wyjątki nie mogą być kontynuowane. Jeśli *filtru* ocenia na -1 dla takiego wyjątku, to system zgłosi nowy wyjątek. Gdy wywołujesz [RaiseException](http://msdn.microsoft.com/library/windows/desktop/ms680552), należy określić, czy kontynuować wyjątek.  
+>  Niektóre wyjątki nie mogą być kontynuowane. Jeśli *filtru* ocenia na -1 dla takiego wyjątku, to system zgłosi nowy wyjątek. Gdy wywołujesz [RaiseException](https://msdn.microsoft.com/library/windows/desktop/ms680552), należy określić, czy kontynuować wyjątek.  
   
  Na przykład, poniższy kod używa wywołania funkcji w *filtru* wyrażenia: funkcja ta obsługuje problem, a następnie zwraca wartość -1, aby wznowić Normalny przepływ sterowania:  
   
@@ -56,7 +56,7 @@ int Eval_Exception ( int n_except ) {
   
  To dobry pomysł, aby używać wywołania funkcji w *filtru* wyrażenie zawsze wtedy, gdy *filtru* musi wykonać jakiekolwiek złożone. Obliczanie wyrażenia powoduje wykonanie funkcji, w tym przypadku jest to `Eval_Exception`.  
   
- Zwróć uwagę na użycie [GetExceptionCode](http://msdn.microsoft.com/library/windows/desktop/ms679356) do określenia wyjątku. Musisz wywołać tę funkcję wewnątrz samego filtru. `Eval_Exception` Nie można wywołać `GetExceptionCode`, ale musi mieć przekazany kod wyjątku.  
+ Zwróć uwagę na użycie [GetExceptionCode](/windows/desktop/Debug/getexceptioncode) do określenia wyjątku. Musisz wywołać tę funkcję wewnątrz samego filtru. `Eval_Exception` Nie można wywołać `GetExceptionCode`, ale musi mieć przekazany kod wyjątku.  
   
  Ten program obsługi wyjątków przekazuje sterowanie do innego programu obsługi wyjątków, o ile wyjątek nie dotyczy przepełnienia liczby całkowitej lub zmiennoprzecinkowej. Jeśli tak się stanie, program obsługi wyjątku wywołuje funkcję (`ResetVars` jest tylko przykładem, a nie funkcją API), aby zresetować niektóre zmienne globalne. *Instrukcja block-2*, który w tym przykładzie jest pusta, może nigdy nie można wykonać, ponieważ `Eval_Exception` nigdy nie zwraca EXCEPTION_EXECUTE_HANDLER (1).  
   

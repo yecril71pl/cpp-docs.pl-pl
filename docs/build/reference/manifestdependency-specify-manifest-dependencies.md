@@ -18,12 +18,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8f9b2de39f5b5340eff22c7e22244aca3d05af67
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: d486047b708e0c3412aa63e0a0b026a2a4204f71
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32376575"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43213902"
 ---
 # <a name="manifestdependency-specify-manifest-dependencies"></a>/MANIFESTDEPENDENCY (Określ zależności manifestu)
 ```  
@@ -31,19 +31,19 @@ ms.locfileid: "32376575"
 ```  
   
 ## <a name="remarks"></a>Uwagi  
- / Opcja MANIFESTDEPENDENCY pozwala określić atrybuty, które zostaną umieszczone w \<zależności > sekcji pliku manifestu.  
+ / MANIFESTDEPENDENCY pozwala określić atrybuty, które zostaną umieszczone w \<zależności > sekcji w pliku manifestu.  
   
- Zobacz [/MANIFEST (Manifest zestawu Utwórz Side-by-Side)](../../build/reference/manifest-create-side-by-side-assembly-manifest.md) informacji na temat sposobu tworzenia pliku manifestu.  
+ Zobacz [/MANIFEST (Side-by-Side tworzenie manifestu dla aplikacji)](../../build/reference/manifest-create-side-by-side-assembly-manifest.md) informacji na temat tworzenia pliku manifestu.  
   
- Aby uzyskać więcej informacji na temat \<zależności > sekcji pliku manifestu, zobacz [pliki konfiguracji wydawcy](http://msdn.microsoft.com/library/aa375682).  
+ Aby uzyskać więcej informacji na temat \<zależności > sekcji pliku manifestu, zobacz [pliki konfiguracyjne wydawcy](/windows/desktop/SbsCs/publisher-configuration-files).  
   
  / MANIFESTDEPENDENCY informacje mogą być przekazywane do konsolidatora w jeden z dwóch sposobów:  
   
--   Bezpośrednio w wierszu polecenia (lub w pliku odpowiedzi) z /MANIFESTDEPENDENCY.  
+-   Bezpośrednio w wierszu polecenia (lub w pliku odpowiedzi) przy użyciu /MANIFESTDEPENDENCY.  
   
--   Za pomocą [komentarz](../../preprocessor/comment-c-cpp.md) pragma.  
+-   Za pomocą [komentarz](../../preprocessor/comment-c-cpp.md) pragmy.  
   
- W poniższym przykładzie przedstawiono komentarz /MANIFESTDEPENDENCY przekazywane przez pragma,  
+ W poniższym przykładzie przedstawiono komentarz /MANIFESTDEPENDENCY przekazywane przez dyrektywę,  
   
 ```  
 #pragma comment(linker, "\"/manifestdependency:type='Win32' name='Test.Research.SampleAssembly' version='6.0.0.0' processorArchitecture='X86' publicKeyToken='0000000000000000' language='*'\"")  
@@ -65,17 +65,17 @@ ms.locfileid: "32376575"
 "/manifestdependency:type='Win32' name='Test.Research.SampleAssembly' version='6.0.0.0' processorArchitecture='X86' publicKeyToken='0000000000000000' language='*'\"  
 ```  
   
- Konsolidator będzie zbierać /MANIFESTDEPENDENCY komentarze, usunąć zduplikowane wpisy, a następnie dodaj wynikowy ciąg XML do pliku manifestu.  Jeśli konsolidator znajdzie konfliktów wpisów, plik manifestu będzie uszkodzony i aplikacja nie będzie można uruchomić (wpis można dodać do dziennika zdarzeń, wskazujący źródło problemu).  
+ Konsolidator zbierania /MANIFESTDEPENDENCY komentarzy, wyeliminować zduplikowane wpisy i następnie dodać wynikowy ciąg XML do pliku manifestu.  Jeśli konsolidator wykryje wpisy powodujące konflikt, plik manifestu zostanie uszkodzona, a aplikacja zakończy się niepowodzeniem (wpis mogą być dodawane do dziennika zdarzeń, wskazujący źródła błędów).  
   
 ### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>Aby ustawić tę opcję konsolidatora w środowisku programowania Visual Studio  
   
-1.  Otwórz projekt **strony właściwości** okno dialogowe. Aby uzyskać więcej informacji, zobacz [Praca z właściwościami projektu](../../ide/working-with-project-properties.md).  
+1.  Otwórz projekt **stron właściwości** okno dialogowe. Aby uzyskać więcej informacji, zobacz [Praca z właściwościami projektu](../../ide/working-with-project-properties.md).  
   
-2.  Rozwiń węzeł **właściwości konfiguracji** węzła.  
+2.  Rozwiń **właściwości konfiguracji** węzła.  
   
-3.  Rozwiń węzeł **konsolidatora** węzła.  
+3.  Rozwiń **konsolidatora** węzła.  
   
-4.  Wybierz **plik manifestu** strony właściwości.  
+4.  Wybierz **pliku manifestu** stronę właściwości.  
   
 5.  Modyfikowanie **dodatkowe zależności manifestu** właściwości.  
   

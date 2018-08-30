@@ -15,19 +15,19 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a265d26e8733a7eb2982fb84e8d69ed621922d36
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 3a35b1e40718c26eb094eddb420f885a37907071
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32355184"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43212597"
 ---
 # <a name="atl-connection-point-example"></a>Przykład punktu połączenia ATL
-W tym przykładzie pokazano obiekt, który obsługuje [IPropertyNotifySink](http://msdn.microsoft.com/library/windows/desktop/ms692638) jako interfejs wychodzących:  
+W tym przykładzie zawiera obiekt, który obsługuje [ipropertynotifysink —](/windows/desktop/api/ocidl/nn-ocidl-ipropertynotifysink) jako interfejsu wychodzącego:  
   
  [!code-cpp[NVC_ATL_Windowing#84](../atl/codesnippet/cpp/atl-connection-point-example_1.h)]  
   
- Podczas określania `IPropertyNotifySink` jako interfejs wychodzących, można użyć klasy [IPropertyNotifySinkCP](../atl/reference/ipropertynotifysinkcp-class.md) zamiast `IConnectionPointImpl`. Na przykład:  
+ Podczas określania `IPropertyNotifySink` interfejsu wychodzącego, można użyć klasy [IPropertyNotifySinkCP](../atl/reference/ipropertynotifysinkcp-class.md) zamiast `IConnectionPointImpl`. Na przykład:  
   
  [!code-cpp[NVC_ATL_Windowing#85](../atl/codesnippet/cpp/atl-connection-point-example_2.h)]  
   

@@ -20,12 +20,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9dbaa4631e50b14131418b902dd008e74060dbf6
-ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
+ms.openlocfilehash: 94532b40bb44094290eab29a2b8a1f6095a225c5
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37881934"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43221104"
 ---
 # <a name="ccomallocator-class"></a>Klasa CComAllocator
 Ta klasa dostarcza metody do zarządzania ilości pamięci za pomocą procedury pamięci COM.  
@@ -67,7 +67,7 @@ static void* Allocate(size_t nBytes) throw();
  Zwraca pusty wskaźnik do przydzielonego miejsca lub wartość NULL, jeśli ma za mało pamięci.  
   
 ### <a name="remarks"></a>Uwagi  
- Przydziela pamięć. Zobacz [CoTaskMemAlloc](http://msdn.microsoft.com/library/windows/desktop/ms692727) Aby uzyskać więcej informacji.  
+ Przydziela pamięć. Zobacz [CoTaskMemAlloc](/windows/desktop/api/combaseapi/nf-combaseapi-cotaskmemalloc) Aby uzyskać więcej informacji.  
   
 ##  <a name="free"></a>  CComAllocator::Free  
  Wywołaj tę funkcję statycznej, aby zwolnić alokacji pamięci.  
@@ -81,7 +81,7 @@ static void Free(void* p) throw();
  Wskaźnik do alokacji pamięci.  
   
 ### <a name="remarks"></a>Uwagi  
- Zwalnia ilość przydzielonej pamięci. Zobacz [CoTaskMemFree](http://msdn.microsoft.com/library/windows/desktop/ms680722) Aby uzyskać więcej informacji.  
+ Zwalnia ilość przydzielonej pamięci. Zobacz [CoTaskMemFree](/windows/desktop/api/combaseapi/nf-combaseapi-cotaskmemfree) Aby uzyskać więcej informacji.  
   
 ##  <a name="reallocate"></a>  CComAllocator::Reallocate  
  Wywołaj tę funkcję statycznych w celu ponownego przydzielenia pamięci.  
@@ -101,7 +101,7 @@ static void* Reallocate(void* p, size_t nBytes) throw();
  Zwraca pusty wskaźnik do przydzielonego miejsca lub wartość NULL, jeśli jest za mało pamięci  
   
 ### <a name="remarks"></a>Uwagi  
- Zmienia rozmiar ilość ilość przydzielonej pamięci. Zobacz [CoTaskMemRealloc](http://msdn.microsoft.com/library/windows/desktop/ms687280) Aby uzyskać więcej informacji.  
+ Zmienia rozmiar ilość ilość przydzielonej pamięci. Zobacz [CoTaskMemRealloc](/windows/desktop/api/combaseapi/nf-combaseapi-cotaskmemrealloc) Aby uzyskać więcej informacji.  
   
 ## <a name="see-also"></a>Zobacz też  
  [Klasa CComHeapPtr](../../atl/reference/ccomheapptr-class.md)   

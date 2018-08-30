@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e32312e8c6f3dc149f6e5e1f8dc37b1395732d02
-ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
+ms.openlocfilehash: 52550df1ca89ec1252fc2910bf27598d51302495
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/01/2018
-ms.locfileid: "39408193"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43212264"
 ---
 # <a name="const-and-volatile-pointers"></a>Wskaźniki stałe i nietrwałe
 [Const](../cpp/const-cpp.md) i [volatile](../cpp/volatile-cpp.md) słowa kluczowe zmienić sposób traktowania wskaźników. **Const** — słowo kluczowe Określa, że wskaźnik nie może być modyfikowany po inicjalizacji; wskaźnik jest odtąd chroniony przed.  
@@ -96,7 +96,7 @@ errno_t strcpy_s( char *strDestination, size_t numberOfElements, const char *str
  Poprzednia instrukcja deklaruje funkcję, [strcpy_s](../c-runtime-library/reference/strcpy-s-wcscpy-s-mbscpy-s.md), gdzie dwa z trzech argumentów są wskaźnikami typu do **char**. Ponieważ argumenty są przekazywane przez odwołanie, a nie przez wartość, funkcja będzie mogła swobodnie modyfikować zarówno `strDestination` i `strSource` Jeśli `strSource` nie zostało zadeklarowane jako **const**. Deklaracja `strSource` jako **const** zapewnia obiekt wywołujący `strSource` nie można zmienić przez wywoływaną funkcję.  
   
 > [!NOTE]
->  Ponieważ nie istnieje konwersja standardowa ze *typename* **\*** do **const** *typename* **\***, dozwolone jest przekazanie argumentu typu `char *` do [strcpy_s](../c-runtime-library/reference/strcpy-s-wcscpy-s-mbscpy-s.md). Jednakże odwrotna sytuacja nie jest PRAWDA. nie istnieje niejawna konwersja do usunięcia **const** atrybut z obiektu lub wskaźnika.  
+> Ponieważ nie istnieje konwersja standardowa ze *typename* <strong>\*</strong> do **const** *typename* <strong>\*</strong>, dozwolone jest przekazanie argumentu typu `char *` do [strcpy_s](../c-runtime-library/reference/strcpy-s-wcscpy-s-mbscpy-s.md). Jednakże odwrotna sytuacja nie jest PRAWDA. nie istnieje niejawna konwersja do usunięcia **const** atrybut z obiektu lub wskaźnika.  
   
  A **const** wskaźnik danego typu mogą być przypisane do wskaźnika tego samego typu. Jednak wskaźnik nie jest **const** nie można przypisać do **const** wskaźnika. Poniższy kod pokazuje poprawne i niepoprawne przypisania:  
   

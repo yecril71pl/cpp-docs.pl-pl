@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: cb5a3ebbf3ecf1454745d507fc2f2b6f792768ac
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 848ea415d0638b6135c69cd14e442f45dab40237
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42600424"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43220364"
 ---
 # <a name="custom-c"></a>custom (C++)
 
@@ -49,7 +49,7 @@ Wartość, które można umieścić w wariant.
 
 **Niestandardowe** atrybut C++ spowoduje, że informacje, aby zostać umieszczone w bibliotece typów. Należy to narzędzie, które odczytuje wartość niestandardowej z biblioteki typów.
 
-**Niestandardowe** atrybut ma taką samą funkcjonalność jak [niestandardowe](http://msdn.microsoft.com/library/windows/desktop/aa366766) atrybutów w MIDL.
+**Niestandardowe** atrybut ma taką samą funkcjonalność jak [niestandardowe](/windows/desktop/Midl/custom) atrybutów w MIDL.
 
 ## <a name="requirements"></a>Wymagania
 

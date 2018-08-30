@@ -28,12 +28,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 27cde859c20f4c9cddc1ceb3e2cae568afb6e960
-ms.sourcegitcommit: 76fd30ff3e0352e2206460503b61f45897e60e4f
+ms.openlocfilehash: 5e3f3adabdd1d5345fa9f5d3c24e6cde86ddb3fb
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/13/2018
-ms.locfileid: "39027222"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43219707"
 ---
 # <a name="memory-management-frame-allocation"></a>Zarządzanie pamięcią: alokacja ramek
 Alokacji na ramce przyjmuje jego nazwę z "ramki stosu", o które ustawiono zawsze, gdy funkcja jest wywoływana. Ramka stosu jest to obszar pamięci, który tymczasowo przechowuje argumenty do funkcji, jak również wszelkie zmienne, które są zdefiniowane lokalne do funkcji. Zmienne ramek są często nazywane zmiennymi "Automatyczny", ponieważ kompilator automatycznie przydziela miejsce dla nich.  
@@ -46,7 +46,7 @@ Alokacji na ramce przyjmuje jego nazwę z "ramki stosu", o które ustawiono zaws
   
  Gdy obiekt jest zdefiniowany jako zmienna ramki, jego konstruktor jest wywoływana automatycznie w momencie, w którym występuje definicja. Gdy obiekt wykracza poza zakres, jego destruktor jest wywoływana automatycznie, zanim pamięci dla obiektu są odzyskiwane. To automatyczne konstrukcje i zniszczenie ruchu może być bardzo przydatne, ale należy pamiętać, automatyczne wywołań, szczególnie w celu destruktor.  
   
- Zaletą alokowania obiektów w ramce jest, że są automatycznie usuwane. Podczas alokowania obiektów na ramce, nie trzeba martwić się o obiektach zapomniane, powodując przecieków pamięci. (Aby uzyskać szczegółowe informacje dotyczące przecieki pamięci, zobacz artykuł [wykrywania przecieków pamięci w MFC](http://msdn.microsoft.com/29ee8909-96e9-4246-9332-d3a8aa8d4658).) Alokacja ramek niedogodność polega na tym, że zmienne ramek nie można używać poza ich zakresem. Innym czynnikiem w wyborze ramkę alokacji i Alokacja sterty dla dużych struktur i obiektów, jest często lepiej używać sterty zamiast stosu magazynu, ponieważ obszar stosu często jest ograniczona.  
+ Zaletą alokowania obiektów w ramce jest, że są automatycznie usuwane. Podczas alokowania obiektów na ramce, nie trzeba martwić się o obiektach zapomniane, powodując przecieków pamięci. (Aby uzyskać szczegółowe informacje dotyczące przecieki pamięci, zobacz artykuł [wykrywania przecieków pamięci w MFC](https://msdn.microsoft.com/29ee8909-96e9-4246-9332-d3a8aa8d4658).) Alokacja ramek niedogodność polega na tym, że zmienne ramek nie można używać poza ich zakresem. Innym czynnikiem w wyborze ramkę alokacji i Alokacja sterty dla dużych struktur i obiektów, jest często lepiej używać sterty zamiast stosu magazynu, ponieważ obszar stosu często jest ograniczona.  
   
 ## <a name="see-also"></a>Zobacz też  
  [Zarządzanie pamięcią](../mfc/memory-management.md)

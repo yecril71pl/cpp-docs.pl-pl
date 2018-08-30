@@ -16,16 +16,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: da7cdd5601785f43748ec87d3219f43728536855
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: b2211b4243ddf44194959a263fd90ec1a615ea0a
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33228990"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43220284"
 ---
 # <a name="fatal-error-c1900"></a>Błąd krytyczny C1900
-Niezgodność IL "tool1" "Liczba1" i "tool2" wersja "liczba2"  
-  
- Narzędzia uruchamiane w różnych przebiegów kompilator nie są zgodne. ***Liczba1*** i ***liczba2*** odwoływać się do daty na podstawie plików. Na przykład w przebiegu 1, uruchamia zakończenia front kompilatora (c1.dll) i w przebiegu 2, kompilator ponownie uruchamia zakończenia (c2.dll). Dat na podstawie plików muszą być zgodne.  
-  
- Aby rozwiązać ten problem, upewnij się, że wszystkie aktualizacje zostały zastosowane do programu Visual Studio. Jeśli problem będzie nadal występować, użyj **programy i funkcje** w Panelu sterowania systemu Windows do naprawy lub ponownej instalacji programu Visual Studio.
+
+> Niezgodność IL między "*tool1*"version"*Liczba1*"i"*tool2*"version"*liczba2*"
+
+Narzędzia uruchamiane w różnych przebiegów kompilator nie są zgodne. *Liczba1* i *liczba2* dotyczą daty na plikach. Na przykład w 1. przejścia, kompilator frontonu przebiegów zakończenia (c1.dll) i 2. przejścia, kompilator kopię końcowy uruchomień (c2.dll). Daty w pliki muszą być zgodne.
+
+Aby rozwiązać ten problem, upewnij się, że wszystkie aktualizacje zostały zastosowane do programu Visual Studio. Jeśli problem będzie nadal występować, użyj **programy i funkcje** w Panelu sterowania Windows, aby naprawić lub zainstalować ponownie program Visual Studio.

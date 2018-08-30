@@ -55,19 +55,19 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 45e2155f830a302f316aa96ce41b65a71709bc0d
-ms.sourcegitcommit: 6e3cf8df676d59119ce88bf5321d063cf479108c
+ms.openlocfilehash: 5b714d8b78ecfc28db9f6e69308777ed53be7987
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/22/2018
-ms.locfileid: "34451800"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43210876"
 ---
 # <a name="strtok-strtokl-wcstok-wcstokl-mbstok-mbstokl"></a>strtok, _strtok_l, wcstok, _wcstok_l, _mbstok, _mbstok_l
 
-Znajduje następny token w ciągu, używając bieżących ustawień regionalnych lub określone ustawienia regionalne, który jest przekazywany w. Bezpieczniejsza wersje te funkcje są dostępne; zobacz [strtok_s —, _strtok_s_l —, wcstok_s —, _wcstok_s_l —, _mbstok_s —, _mbstok_s_l —](strtok-s-strtok-s-l-wcstok-s-wcstok-s-l-mbstok-s-mbstok-s-l.md).
+Znajduje następny token w ciągu, przy użyciu bieżących ustawień regionalnych lub określonych ustawień regionalnych, które zostały przekazane. Bardziej bezpieczne wersje tych funkcji są dostępne; zobacz [strtok_s —, _strtok_s_l —, wcstok_s —, _wcstok_s_l —, _mbstok_s —, _mbstok_s_l —](strtok-s-strtok-s-l-wcstok-s-wcstok-s-l-mbstok-s-mbstok-s-l.md).
 
 > [!IMPORTANT]
-> **_mbstok —** i **_mbstok_l —** nie można używać w aplikacjach, które są wykonywane w środowisku wykonawczym systemu Windows. Aby uzyskać więcej informacji, zobacz [funkcje CRT, nie są obsługiwane w aplikacjach platformy uniwersalnej systemu Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
+> **_mbstok —** i **_mbstok_l —** nie można używać w aplikacjach korzystających ze środowiska wykonawczego Windows. Aby uzyskać więcej informacji, zobacz [funkcje CRT nieobsługiwane w aplikacjach platformy uniwersalnej Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
 
 ## <a name="syntax"></a>Składnia
 
@@ -104,25 +104,25 @@ Ustawienia regionalne do użycia.
 
 ## <a name="return-value"></a>Wartość zwracana
 
-Zwraca wskaźnik do następnego tokenu w *strToken*. Zwracają **NULL** gdy znajdują się żadnych kolejnych tokenów. Każde wywołanie modyfikuje *strToken* podstawiając znak null dla pierwszego ogranicznika występujący po zwrócony tokenu.
+Zwraca wskaźnik do następnego tokenu w *strToken*. Zwracają **NULL** gdy znajdują się żadnych kolejnych tokenów. Każde wywołanie modyfikuje *strToken* , zastępując znak null w poszukiwaniu ogranicznika pierwszy, która występuje po zwrócony token.
 
 ## <a name="remarks"></a>Uwagi
 
-**Strtok —** funkcja znajduje następny token w *strToken*. Zestaw znaków *strDelimit* określa możliwe ograniczniki tokenu, który ma zostać odnaleziona w *strToken* w bieżącym wywołaniu. **wcstok —** i **_mbstok —** znaków dwubajtowych i znaków wielobajtowych wersji **strtok —**. Argumenty i zwracana wartość **wcstok —** są znaków dwubajtowych ciągi; tych **_mbstok —** są ciągami znaków wielobajtowych. Te trzy funkcje działają tak samo w przeciwnym razie wartość.
+**Strtok —** funkcja znajduje następny token w *strToken*. Zestaw znaków *strDelimit* określa ograniczniki możliwe tokenu, który ma zostać odnaleziona w *strToken* w bieżącym wywołaniu. **wcstok —** i **_mbstok —** są wersjami znaków dwubajtowych i znaków wielobajtowych **strtok —**. Argumenty i wartość zwracana przez **wcstok —** są znakami dwubajtowymi ciągów; te z **_mbstok —** są ciągami znaków wielobajtowych. Te trzy funkcje zachowują się identycznie.
 
 > [!IMPORTANT]
-> Te funkcje pociągnąć za sobą potencjalne zagrożenie wynikające z problem przepełnienie buforu. Przepełnienie buforu problemy używanej metody ataku systemu, co powoduje nieuzasadnione podniesienie uprawnień. Aby uzyskać więcej informacji, zobacz [unikanie Overruns buforu](http://msdn.microsoft.com/library/windows/desktop/ms717795).
+> Te funkcje pociągnąć za sobą potencjalnym zagrożeniem spowodowanym ulepszonym problem przepełnienia buforu. Problemy z przepełnieniem buforu są częstą metodą ataku systemu, co nieuzasadnione podniesienie poziomu uprawnień. Aby uzyskać więcej informacji, zobacz [unikanie przepełnień bufora](/windows/desktop/SecBP/avoiding-buffer-overruns).
 
-W pierwszym wywołaniu **strtok —**, funkcja pomija ograniczniki początkowych i zwraca wskaźnik do pierwszym tokenie w *strToken*, przerywanie token znakiem null. Więcej tokenów mogą być podzielone poza pozostałej części *strToken* serii wywołań **strtok —**. Każde wywołanie **strtok —** modyfikuje *strToken* wstawiając znak null po **tokenu** zwracanych przez tego wywołania. Można odczytać następnego tokenu z *strToken*, wywołaj **strtok —** z **NULL** wartość *strToken* argumentu. **NULL** *strToken* powoduje, że argument **strtok —** aby wyszukać następny token w modyfikacji *strToken*. *StrDelimit* argument może zająć dowolną wartość z jednego wywołania do następnego tak, aby zestaw ograniczników może się różnić.
+W pierwszym wywołaniu **strtok —**, funkcja pomija wiodących ograniczniki i zwraca wskaźnik do pierwszego token w *strToken*, przerywa token znakiem null. Kolejnych tokenów można zaburzyć poza pozostałą część *strToken* przez szereg wywołań do **strtok —**. Każde wywołanie **strtok —** modyfikuje *strToken* przez wstawienie znaku null po **tokenu** zwrócony przez to wywołanie. Można odczytać następnego tokenu z *strToken*, wywołaj **strtok —** z **o wartości NULL** wartość *strToken* argumentu. **NULL** *strToken* powoduje, że argument **strtok —** aby wyszukać następny token w zmodyfikowanego *strToken*. *StrDelimit* argument może przyjąć dowolną wartość z jednego wywołania do następnego tak, aby zestaw ograniczników mogą się różnić.
 
-Wartość wyjściowa jest zagrożony ustawienie **lc_ctype —** ustawienie kategorii ustawień regionalnych; zobacz [setlocale](setlocale-wsetlocale.md) Aby uzyskać więcej informacji. Wersje tych funkcji bez **_l** Użyj sufiksu bieżące ustawienia regionalne tego zachowania zależnych od ustawień regionalnych; wersje z **_l** sufiks są identyczne, z wyjątkiem tego, aby używały parametr ustawień regionalnych Przekazano zamiast tego. Aby uzyskać więcej informacji, zobacz [ustawień regionalnych](../../c-runtime-library/locale.md).
+Wartość wyjściowa jest zależna od ustawienia **LC_CTYPE** ustawienia kategorii ustawień regionalnych; zobacz [setlocale](setlocale-wsetlocale.md) Aby uzyskać więcej informacji. Wersje tych funkcji, bez **_l** sufiks używają bieżących ustawień regionalnych dla zachowania zależnego od ustawień regionalnych; wersje **_l** sufiksem są identyczne, z tą różnicą, że używają parametru ustawień regionalnych w zamian przekazanych. Aby uzyskać więcej informacji, zobacz [ustawień regionalnych](../../c-runtime-library/locale.md).
 
 > [!NOTE]
-> Każdej funkcji używa statycznego zmiennej lokalnej wątku do analizowania ciągu na tokeny. W związku z tym wiele wątków jednocześnie można wywoływać te funkcje bez niepożądane skutki. Jednak w jednym wątku naprzemiennego wykonywania wywołań do jednej z tych funkcji jest wysoce może powodować uszkodzenie danych i wyniki niedokładne. Podczas analizowania różne ciągi, Zakończ analizowania ciągu przed rozpoczęciem następnego przeanalizować. Ponadto należy pamiętać o potencjalnych zagrożeń podczas wywoływania jednej z tych funkcji w pętli, gdzie jest wywoływany inną funkcję. Innych funkcji kończy się przy użyciu jednej z tych funkcji, przeplotem sekwencję wywołań spowoduje, wyzwalania uszkodzenie danych.
+> Każda funkcja używa statycznej zmiennej lokalnej wątku do analizowania parametrów na tokeny. W związku z tym wiele wątków jednocześnie może wywołać te funkcje, bez niepożądane skutki. Jednak w ramach pojedynczego wątku z przeplotem wywołania do jednej z tych funkcji jest wysoce może powodować uszkodzenie danych i nieprecyzyjne wyniki. Podczas analizy różnych ciągów, Zakończ analizowania jednego ciągu przed przystąpieniem do następnego przeanalizować. Ponadto należy pamiętać o możliwym zagrożenia podczas wywoływania jednej z tych funkcji z w ramach pętli, gdzie jest wywoływana innej funkcji. Inne funkcje kończy się przy użyciu jednej z tych funkcji, przeplotem sekwencję wywołań spowoduje, wyzwalając uszkodzenie danych.
 
 ### <a name="generic-text-routine-mappings"></a>Mapowania procedur zwykłego tekstu
 
-|Procedura TCHAR.H|_Unicode — & _MBCS nie zdefiniowany|_MBCS zdefiniowano|_UNICODE zdefiniowano|
+|Procedura TCHAR.H|_UNICODE & _MBCS nie zdefiniowano|_MBCS zdefiniowano|_UNICODE zdefiniowano|
 |---------------------|------------------------------------|--------------------|-----------------------|
 |**_tcstok —**|**strtok**|**_mbstok**|**wcstok**|
 |**_tcstok —**|**_strtok_l**|**_mbstok_l**|**_wcstok_l**|
@@ -132,7 +132,7 @@ Wartość wyjściowa jest zagrożony ustawienie **lc_ctype —** ustawienie kate
 |Procedura|Wymagany nagłówek|
 |-------------|---------------------|
 |**strtok**|\<string.h>|
-|**wcstok**|\<String.h > lub \<wchar.h >|
+|**wcstok**|\<Włącz String.h > lub \<wchar.h >|
 |**_mbstok —**, **_mbstok_l —**|\<mbstring.h>|
 
 Aby uzyskać dodatkowe informacje o zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md).

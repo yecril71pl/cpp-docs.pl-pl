@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: c0903c4d6165ec511d35f7aac13deca06a704c31
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: b0b36342b7760eea074fe15506386bb3d7ce6764
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42571279"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43221245"
 ---
 # <a name="propputref"></a>propputref
 
@@ -36,7 +36,7 @@ Określa funkcję ustawienie właściwości, która używa odwołania, a nie war
 
 ## <a name="remarks"></a>Uwagi
 
-**Propputref** atrybut C++ ma taką samą funkcjonalność jak [propputref](http://msdn.microsoft.com/library/windows/desktop/aa367147) atrybutów w MIDL.
+**Propputref** atrybut C++ ma taką samą funkcjonalność jak [propputref](/windows/desktop/Midl/propputref) atrybutów w MIDL.
 
 ## <a name="example"></a>Przykład
 

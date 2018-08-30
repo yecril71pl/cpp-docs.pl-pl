@@ -32,12 +32,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3492f71ab119bb272576fe8c67bc6d05163785fb
-ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
+ms.openlocfilehash: 6eee23ebbfc25d76ca255505322f609973f79f57
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37883147"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43222875"
 ---
 # <a name="catltemporaryfile-class"></a>Klasa CAtlTemporaryFile
 Ta klasa zawiera metody służące do tworzenia i używania pliku tymczasowego.  
@@ -143,10 +143,10 @@ HRESULT Create(LPCTSTR pszDir = NULL, DWORD dwDesiredAccess = GENERIC_WRITE) thr
   
 ### <a name="parameters"></a>Parametry  
  *pszDir*  
- Ścieżka do pliku tymczasowego. Jeśli jest to wartość NULL, [GetTempPath](http://msdn.microsoft.com/library/windows/desktop/aa364992) zostanie wywołana w celu Przypisz ścieżkę.  
+ Ścieżka do pliku tymczasowego. Jeśli jest to wartość NULL, [GetTempPath](/windows/desktop/api/fileapi/nf-fileapi-gettemppatha) zostanie wywołana w celu Przypisz ścieżkę.  
   
  *dwDesiredAccess*  
- Żądany dostęp. Zobacz *dwDesiredAccess* w [CreateFile](http://msdn.microsoft.com/library/windows/desktop/aa363858) w zestawie Windows SDK.  
+ Żądany dostęp. Zobacz *dwDesiredAccess* w [CreateFile](/windows/desktop/api/fileapi/nf-fileapi-createfilea) w zestawie Windows SDK.  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Zwraca wartość S_OK w przypadku powodzenia lub błędu HRESULT w przypadku niepowodzenia.  
@@ -334,7 +334,7 @@ LPCTSTR TempFileName() throw();
  Zwraca LPCTSTR wskazuje nazwę pliku.  
   
 ### <a name="remarks"></a>Uwagi  
- Nazwa pliku jest generowana w [CAtlTemporaryFile::CAtlTemporaryFile](#catltemporaryfile) wywołaniem [GetTempFile](http://msdn.microsoft.com/library/windows/desktop/aa364991)funkcja zestawu Windows SDK. Rozszerzenie pliku jest zawsze "TFR" dla pliku tymczasowego.  
+ Nazwa pliku jest generowana w [CAtlTemporaryFile::CAtlTemporaryFile](#catltemporaryfile) wywołaniem [GetTempFile](/windows/desktop/api/fileapi/nf-fileapi-gettempfilenamea)funkcja zestawu Windows SDK. Rozszerzenie pliku jest zawsze "TFR" dla pliku tymczasowego.  
   
 ##  <a name="unlockrange"></a>  CAtlTemporaryFile::UnlockRange  
  Wywołaj tę metodę w celu odblokowania region pliku tymczasowego.  

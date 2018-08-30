@@ -27,17 +27,17 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: e07849c151cf2e361324a83b86bf98c24525f4ce
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 99cf5f3c1eb0a81a636407a722149d6cee1bee64
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42601579"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43220689"
 ---
 # <a name="resource-files-visual-studio"></a>Pliki zasobów (Visual Studio)
 
 > [!NOTE]
-> W tym materiale dotyczy aplikacje pulpitu Windows. Aby uzyskać informacje dotyczące zasobów w aplikacji platformy uniwersalnej Windows, zobacz [Definiowanie zasobów aplikacji](http://msdn.microsoft.com/476ea844-632c-4467-9ce3-966be1350dd4).
+> W tym materiale dotyczy aplikacje pulpitu Windows. Aby uzyskać informacje dotyczące zasobów w aplikacji platformy uniwersalnej Windows, zobacz [Definiowanie zasobów aplikacji](https://msdn.microsoft.com/476ea844-632c-4467-9ce3-966be1350dd4).
 >
 > Aby uzyskać informacje na temat dodawania zasobów do projektów zarządzanych, zobacz [zasoby w aplikacjach pulpitu](/dotnet/framework/resources/index) w *przewodniku dewelopera .NET Framework*. Aby uzyskać informacji na temat ręcznego dodawania plików zasobów do projektów zarządzanych, uzyskiwania dostępu do zasobów, wyświetlania statycznych zasobów i przypisywania ciągów zasobów do właściwości, zobacz [Creating Resource Files dla aplikacji klasycznych](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Aby uzyskać informacji na temat globalizacja i lokalizacja zasobów w aplikacjach zarządzanych, zobacz [Globalizing i lokalizowanie aplikacji programu .NET Framework](/dotnet/standard/globalization-localization/index).
 >
@@ -97,4 +97,4 @@ Win32
 
 [Edytory zasobów](../windows/resource-editors.md)  
 [Praca z plikami zasobów](../windows/working-with-resource-files.md)  
-[Menu i inne zasoby](http://msdn.microsoft.com/library/windows/desktop/ms632583.aspx)
+[Menu i inne zasoby](https://msdn.microsoft.com/library/windows/desktop/ms632583.aspx)

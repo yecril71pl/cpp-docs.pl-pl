@@ -34,12 +34,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3e786dc176558900223b2b482a7161abe5e0d84d
-ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
+ms.openlocfilehash: 98b8f9f99b38d2878025546379a185aef53bb663
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37336276"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43213772"
 ---
 # <a name="canimatectrl-class"></a>Klasa CAnimateCtrl
 Oferuje funkcje kontrolki typowej animacji Windows.  
@@ -147,7 +147,7 @@ virtual BOOL Create(
   
 ### <a name="parameters"></a>Parametry  
  *dwStyle*  
- Określa styl kontrolki animacji. Zastosuj dowolnej kombinacji systemu windows, opisane w poniższej sekcji uwag i style kontrolki animacji style opisanego w [style kontrolki animacji](http://msdn.microsoft.com/library/windows/desktop/bb761886) w zestawie Windows SDK.  
+ Określa styl kontrolki animacji. Zastosuj dowolnej kombinacji systemu windows, opisane w poniższej sekcji uwag i style kontrolki animacji style opisanego w [style kontrolki animacji](/windows/desktop/Controls/animation-control-styles) w zestawie Windows SDK.  
   
  *Rect*  
  Określa położenie i rozmiar kontrolki animacji. Może być albo [CRect](../../atl-mfc-shared/reference/crect-class.md) obiektu lub [Prostokąt](../../mfc/reference/rect-structure1.md) struktury.  
@@ -174,7 +174,7 @@ virtual BOOL Create(
   
  Style rozszerzone systemu windows za pomocą kontrolki animacji należy wywołać [CreateEx](#createex) zamiast `Create`.  
   
- Oprócz Style okna wymienionych powyżej można zastosować co najmniej jeden style kontrolki animacji do kontrolki animacji. Zobacz zestaw SDK Windows, aby uzyskać więcej informacji na [style kontrolki animacji](http://msdn.microsoft.com/library/windows/desktop/bb761886).  
+ Oprócz Style okna wymienionych powyżej można zastosować co najmniej jeden style kontrolki animacji do kontrolki animacji. Zobacz zestaw SDK Windows, aby uzyskać więcej informacji na [style kontrolki animacji](/windows/desktop/Controls/animation-control-styles).  
   
 ### <a name="example"></a>Przykład  
   Zobacz przykład [CAnimateCtrl::CAnimateCtrl](#canimatectrl).  
@@ -193,13 +193,13 @@ virtual BOOL CreateEx(
   
 ### <a name="parameters"></a>Parametry  
  *dwExStyle*  
- Określa styl rozszerzony kontrolki tworzona. Aby uzyskać listę rozszerzone style Windows, zobacz *dwExStyle* parametr [elementu CreateWindowEx](http://msdn.microsoft.com/library/windows/desktop/ms632680) w zestawie Windows SDK.  
+ Określa styl rozszerzony kontrolki tworzona. Aby uzyskać listę rozszerzone style Windows, zobacz *dwExStyle* parametr [elementu CreateWindowEx](https://msdn.microsoft.com/library/windows/desktop/ms632680) w zestawie Windows SDK.  
   
  *dwStyle*  
- Określa styl kontrolki animacji. Zastosuj dowolną kombinację okna i style kontrolki animacji opisane w [style kontrolki animacji](http://msdn.microsoft.com/library/windows/desktop/bb761886) w zestawie Windows SDK.  
+ Określa styl kontrolki animacji. Zastosuj dowolną kombinację okna i style kontrolki animacji opisane w [style kontrolki animacji](/windows/desktop/Controls/animation-control-styles) w zestawie Windows SDK.  
   
  *Rect*  
- Odwołanie do [Prostokąt](http://msdn.microsoft.com/library/windows/desktop/dd162897) struktury opisujących rozmiar i położenie okna, można utworzyć klienta współrzędne *pParentWnd*.  
+ Odwołanie do [Prostokąt](https://msdn.microsoft.com/library/windows/desktop/dd162897) struktury opisujących rozmiar i położenie okna, można utworzyć klienta współrzędne *pParentWnd*.  
   
  *pParentWnd*  
  Wskaźnik do okna, które jest elementem nadrzędnym formantu.  
@@ -224,7 +224,7 @@ BOOL IsPlaying() const;
  Wartość TRUE, jeśli jest odtwarzany klip AVI; w przeciwnym razie wartość FALSE.  
   
 ### <a name="remarks"></a>Uwagi  
- Ta metoda wysyła [ACM_ISPLAYING](http://msdn.microsoft.com/library/windows/desktop/bb761895) komunikat, który jest opisany w zestawie Windows SDK.  
+ Ta metoda wysyła [ACM_ISPLAYING](/windows/desktop/Controls/acm-isplaying) komunikat, który jest opisany w zestawie Windows SDK.  
   
 ##  <a name="open"></a>  CAnimateCtrl::Open  
  Wywołaj tę funkcję, aby otworzyć klip AVI i wyświetlić jego pierwszej ramki.  

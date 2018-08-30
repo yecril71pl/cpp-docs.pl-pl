@@ -26,12 +26,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1339f41a0764e44f46bed7ad24181ce406998c22
-ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
+ms.openlocfilehash: 2f92408c8d8ee4ac1dd1309810ae6282f04ca315
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37885604"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43213326"
 ---
 # <a name="ioleinplaceactiveobjectimpl-class"></a>Klasa IOleInPlaceActiveObjectImpl
 Ta klasa dostarcza metody obsługi komunikacji między formantem w miejscu, a jego kontenera.  
@@ -66,7 +66,7 @@ class IOleInPlaceActiveObjectImpl
   
   
 ## <a name="remarks"></a>Uwagi  
- [IOleInPlaceActiveObject](http://msdn.microsoft.com/library/windows/desktop/ms691299) interfejsu pomaga komunikacji między formantem w miejscu, a jego kontenera; na przykład komunikacji stanu aktywnego sterowania i kontenerów oraz informowanie kontrolki potrzeba zmiany rozmiaru samego siebie. Klasa `IOleInPlaceActiveObjectImpl` udostępnia domyślną implementację elementu `IOleInPlaceActiveObject` i obsługuje `IUnknown` , wysyłając informacje o do zrzutu kompilacji urządzenia podczas debugowania.  
+ [IOleInPlaceActiveObject](/windows/desktop/api/oleidl/nn-oleidl-ioleinplaceactiveobject) interfejsu pomaga komunikacji między formantem w miejscu, a jego kontenera; na przykład komunikacji stanu aktywnego sterowania i kontenerów oraz informowanie kontrolki potrzeba zmiany rozmiaru samego siebie. Klasa `IOleInPlaceActiveObjectImpl` udostępnia domyślną implementację elementu `IOleInPlaceActiveObject` i obsługuje `IUnknown` , wysyłając informacje o do zrzutu kompilacji urządzenia podczas debugowania.  
   
  **Powiązane artykuły** [ALT — samouczek](../../atl/active-template-library-atl-tutorial.md), [Tworzenie projektu ATL](../../atl/reference/creating-an-atl-project.md)  
   
@@ -89,7 +89,7 @@ HRESULT ContextSensitiveHelp(BOOL fEnterMode);
  Zwraca E_NOTIMPL.  
   
 ### <a name="remarks"></a>Uwagi  
- Zobacz [IOleWindow::ContextSensitiveHelp](http://msdn.microsoft.com/library/windows/desktop/ms680059) w Windows SDK.  
+ Zobacz [IOleWindow::ContextSensitiveHelp](/windows/desktop/api/oleidl/nf-oleidl-iolewindow-contextsensitivehelp) w Windows SDK.  
   
 ##  <a name="enablemodeless"></a>  IOleInPlaceActiveObjectImpl::EnableModeless  
  Umożliwia Niemodalne okna dialogowe.  
@@ -102,7 +102,7 @@ HRESULT EnableModeless(BOOL fEnable);
  Zwraca wartość S_OK.  
   
 ### <a name="remarks"></a>Uwagi  
- Zobacz [IOleInPlaceActiveObject::EnableModeless](http://msdn.microsoft.com/library/windows/desktop/ms680115) w Windows SDK.  
+ Zobacz [IOleInPlaceActiveObject::EnableModeless](/windows/desktop/api/oleidl/nf-oleidl-ioleinplaceactiveobject-enablemodeless) w Windows SDK.  
   
 ##  <a name="getwindow"></a>  IOleInPlaceActiveObjectImpl::GetWindow  
  Kontener wywoła tę funkcję, aby pobrać uchwytu okna kontrolki.  
@@ -114,7 +114,7 @@ HRESULT GetWindow(HWND* phwnd);
 ### <a name="remarks"></a>Uwagi  
  Niektóre kontenery nie będzie działać z formant, który został niepowiązanej z oknami, nawet jeśli jest on obecnie okna. W implementacji ATL Jeśli `CComControl::m_bWasOnceWindowless` element członkowski danych ma wartość PRAWDA, funkcja zwraca E_FAIL. W przeciwnym razie, jeśli \* *phwnd* nie ma wartości NULL, `GetWindow` przypisuje *phwnd* do klasy formantu element członkowski danych `m_hWnd` i zwraca wartość S_OK.  
   
- Zobacz [IOleWindow::GetWindow](http://msdn.microsoft.com/library/windows/desktop/ms687282) w Windows SDK.  
+ Zobacz [IOleWindow::GetWindow](/windows/desktop/api/oleidl/nf-oleidl-iolewindow-getwindow) w Windows SDK.  
   
 ##  <a name="ondocwindowactivate"></a>  IOleInPlaceActiveObjectImpl::OnDocWindowActivate  
  Powiadamia kontrolkę gdy okno dokumentu kontenera jest aktywowane lub dezaktywowane.  
@@ -127,7 +127,7 @@ HRESULT OnDocWindowActivate(BOOL fActivate);
  Zwraca wartość S_OK.  
   
 ### <a name="remarks"></a>Uwagi  
- Zobacz [IOleInPlaceActiveObject::OnDocWindowActivate](http://msdn.microsoft.com/library/windows/desktop/ms687281) w Windows SDK.  
+ Zobacz [IOleInPlaceActiveObject::OnDocWindowActivate](/windows/desktop/api/oleidl/nf-oleidl-ioleinplaceactiveobject-ondocwindowactivate) w Windows SDK.  
   
 ##  <a name="onframewindowactivate"></a>  IOleInPlaceActiveObjectImpl::OnFrameWindowActivate  
  Powiadamia kontrolkę gdy okno ramek najwyższego poziomu kontenera jest aktywowane lub dezaktywowane.  
@@ -140,7 +140,7 @@ HRESULT OnFrameWindowActivate(BOOL fActivate);
  Zwraca wartość S_OK.  
   
 ### <a name="remarks"></a>Uwagi  
- Zobacz [IOleInPlaceActiveObject::OnFrameWindowActivate](http://msdn.microsoft.com/library/windows/desktop/ms683969) w Windows SDK.  
+ Zobacz [IOleInPlaceActiveObject::OnFrameWindowActivate](/windows/desktop/api/oleidl/nf-oleidl-ioleinplaceactiveobject-onframewindowactivate) w Windows SDK.  
   
 ##  <a name="resizeborder"></a>  IOleInPlaceActiveObjectImpl::ResizeBorder  
  Informuje o kontrolki, potrzebne do zmiany rozmiaru jego obramowania.  
@@ -156,7 +156,7 @@ HRESULT ResizeBorder(
  Zwraca wartość S_OK.  
   
 ### <a name="remarks"></a>Uwagi  
- Zobacz [IOleInPlaceActiveObject::ResizeBorder](http://msdn.microsoft.com/library/windows/desktop/ms680053) w Windows SDK.  
+ Zobacz [IOleInPlaceActiveObject::ResizeBorder](/windows/desktop/api/oleidl/nf-oleidl-ioleinplaceactiveobject-resizeborder) w Windows SDK.  
   
 ##  <a name="translateaccelerator"></a>  IOleInPlaceActiveObjectImpl::TranslateAccelerator  
  Przetwarza wiadomości klawisza skrótu menu z kontenera.  
@@ -173,9 +173,9 @@ HRESULT TranslateAccelerator(LPMSG lpmsg);
  S_FALSE, jeśli wiadomość nie została przekonwertowana.  
   
 ### <a name="remarks"></a>Uwagi  
- Zobacz [IOleInPlaceActiveObject::TranslateAccelerator](http://msdn.microsoft.com/library/windows/desktop/ms693360) w Windows SDK.  
+ Zobacz [IOleInPlaceActiveObject::TranslateAccelerator](/windows/desktop/api/oleidl/nf-oleidl-ioleinplaceactiveobject-translateaccelerator) w Windows SDK.  
   
 ## <a name="see-also"></a>Zobacz też  
  [Klasa CComControl](../../atl/reference/ccomcontrol-class.md)  
- [Interfejsy kontrolki ActiveX](http://msdn.microsoft.com/library/windows/desktop/ms692724)  
+ [Interfejsy kontrolki ActiveX](/windows/desktop/com/activex-controls-interfaces)  
  [Klasa — Przegląd](../../atl/atl-class-overview.md)

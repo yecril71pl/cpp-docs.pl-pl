@@ -1,7 +1,7 @@
 ---
-title: Kompilatora (poziom 3) ostrzeżenie C4161 | Dokumentacja firmy Microsoft
+title: Kompilator ostrzeżenie (poziom 3) C4161 | Dokumentacja firmy Microsoft
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 08/27/2018
 ms.technology:
 - cpp-diagnostics
 ms.topic: error-reference
@@ -16,36 +16,40 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1c81072c5121bea4a323c3eb16cc58c6f28c06f7
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 7d279822d823ffb8efcaf08ff3f64cd9d82d0a44
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33290832"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43220561"
 ---
-# <a name="compiler-warning-level-3-c4161"></a>Kompilator C4161 ostrzegawcze (poziom 3)
-\#pragma pragma(pop...): więcej zdejmowań niż włożeń  
-  
- Ponieważ kod źródłowy zawiera jeden pop więcej niż włożeń dla pragma ***pragma***, stosu mogą nie działać zgodnie z oczekiwaniami. Aby uniknąć tego ostrzeżenia, upewnij się, że liczba POP nie przekracza liczbę wypchnięć.  
-  
-## <a name="example"></a>Przykład  
- Poniższy przykład generuje C4161:  
-  
-```  
-// C4161.cpp  
-// compile with: /W3 /LD  
-#pragma pack(push, id)  
-#pragma pack(pop, id)  
-#pragma pack(pop, id)   // C4161, an extra pop  
-  
-#pragma bss_seg(".my_data1")  
-int j;  
-  
-#pragma bss_seg(push, stack1, ".my_data2")     
-int l;  
-  
-#pragma bss_seg(pop, stack1)  
-int m;  
-  
-#pragma bss_seg(pop, stack1)   // C4161  
+# <a name="compiler-warning-level-3-c4161"></a>Kompilator ostrzeżenie (poziom 3) C4161
+
+> #<a name="pragma-pragmapop--more-pops-than-pushes"></a>pragma *pragma*(pop...): więcej zdejmowań niż włożeń
+
+## <a name="remarks"></a>Uwagi
+
+Ponieważ kod źródłowy zawiera jeden bardziej pop niż włożeń dla pragmy *pragma*, stosu mogą nie zachowywać się zgodnie z oczekiwaniami. Aby uniknąć ostrzeżenia, upewnij się, że liczba lokalizacji POP nie przekracza liczby wypchnięć.
+
+## <a name="example"></a>Przykład
+
+Poniższy przykład generuje C4161:
+
+```cpp
+// C4161.cpp
+// compile with: /W3 /LD
+#pragma pack(push, id)
+#pragma pack(pop, id)
+#pragma pack(pop, id)   // C4161, an extra pop
+
+#pragma bss_seg(".my_data1")
+int j;
+
+#pragma bss_seg(push, stack1, ".my_data2")
+int l;
+
+#pragma bss_seg(pop, stack1)
+int m;
+
+#pragma bss_seg(pop, stack1)   // C4161
 ```

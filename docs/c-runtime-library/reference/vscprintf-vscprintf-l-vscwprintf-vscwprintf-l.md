@@ -52,16 +52,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4c7b1771b065d7a0acc4db73eb188884086ff3b1
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 959f39df33c2cdcd40a71a801ca715ab7c0eccf0
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32414171"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43213649"
 ---
 # <a name="vscprintf-vscprintfl-vscwprintf-vscwprintfl"></a>_vscprintf, _vscprintf_l, _vscwprintf, _vscwprintf_l
 
-Zwraca liczbę znaków w ciągu sformatowany przy użyciu wskaźnika do listy argumentów.
+Zwraca liczbę znaków w sformatowanym ciągu za pomocą wskaźnika do listy argumentów.
 
 ## <a name="syntax"></a>Składnia
 
@@ -97,26 +97,26 @@ Wskaźnik do listy argumentów.
 *Ustawienia regionalne*<br/>
 Ustawienia regionalne do użycia.
 
-Aby uzyskać więcej informacji, zobacz [specyfikacje formatu](../../c-runtime-library/format-specification-syntax-printf-and-wprintf-functions.md).
+Aby uzyskać więcej informacji, zobacz [specyfikacji formatu](../../c-runtime-library/format-specification-syntax-printf-and-wprintf-functions.md).
 
 ## <a name="return-value"></a>Wartość zwracana
 
-**_vscprintf —** zwraca liczbę znaków, które może być generowane, jeśli ciąg wskazywał przez listę argumentów została drukowaniu i wysyłane do pliku lub buforu przy użyciu określonego formatowania kodów. Wartość zwracana nie zawiera znak końcowy null. **_vscwprintf —** taką samą funkcję wykonuje dla znaki dwubajtowe.
+**_vscprintf —** zwraca liczbę znaków, które mogłyby być generowane, jeśli ciąg wskazywany przez listę argumentów został wydrukowany lub wysyłane do pliku lub buforu przy użyciu określonego formatowania kodów. Wartość zwracana nie obejmuje kończącego znaku null. **_vscwprintf —** działa tak samo dla znaków dwubajtowych.
 
-Wersje tych funkcji z **_l** sufiks są identyczne, z wyjątkiem tego, aby używały parametr ustawień regionalnych przekazano zamiast bieżącego ustawienia regionalne wątku.
+Wersje tych funkcji **_l** sufiksem są identyczne, z tą różnicą, że używają parametru ustawień regionalnych przekazanych zamiast bieżących ustawień regionalnych wątku.
 
-Jeśli *format* wskaźnika o wartości null, jest program obsługi nieprawidłowych parametrów zostanie wywołany, zgodnie z opisem w [sprawdzanie poprawności parametru](../../c-runtime-library/parameter-validation.md). Zwróć -1, jeśli może kontynuować wykonywania, funkcje i ustaw **errno** do **einval —**.
+Jeśli *format* jest pustym wskaźnikiem, wywoływany nieprawidłowy parametr uchwytu, zgodnie z opisem w [Parameter Validation](../../c-runtime-library/parameter-validation.md). Jeśli wykonanie może być kontynuowane, te funkcje zwracają wartość -1 i ustaw **errno** do **EINVAL**.
 
 ## <a name="remarks"></a>Uwagi
 
-Każdy *argument* (jeśli istnieje) jest konwertowana według specyfikacji formatu w *format*. Format składa się ze znaków zwykłych i ma tę samą tworzą i działać jako *format* argument [printf](printf-printf-l-wprintf-wprintf-l.md).
+Każdy *argument* (jeśli istnieje) jest konwertowana według specyfikacji formatu w *format*. Format składa się ze znaków zwykłych i ma taką samą formę i funkcjonuje jako *format* argument [printf](printf-printf-l-wprintf-wprintf-l.md).
 
 > [!IMPORTANT]
-> Upewnij się, że jeśli *format* to ciąg zdefiniowany przez użytkownika jest zakończenie wartością null i ma poprawną liczbę i typ parametrów. Aby uzyskać więcej informacji, zobacz [unikanie Overruns buforu](http://msdn.microsoft.com/library/windows/desktop/ms717795).
+> Upewnij się, że jeśli *format* jest ciągiem zdefiniowanej przez użytkownika jest zakończony wartością null i ma poprawny numer i typ parametrów. Aby uzyskać więcej informacji, zobacz [unikanie przepełnień bufora](/windows/desktop/SecBP/avoiding-buffer-overruns).
 
 ### <a name="generic-text-routine-mappings"></a>Mapowania procedur zwykłego tekstu
 
-|Procedura TCHAR.H|_Unicode — & _MBCS nie zdefiniowany|_MBCS zdefiniowano|_UNICODE zdefiniowano|
+|Procedura TCHAR.H|_UNICODE & _MBCS nie zdefiniowano|_MBCS zdefiniowano|_UNICODE zdefiniowano|
 |---------------------|------------------------------------|--------------------|-----------------------|
 |**_vsctprintf —**|**_vscprintf**|**_vscprintf**|**_vscwprintf**|
 |**_vsctprintf_l —**|**_vscprintf_l**|**_vscprintf_l**|**_vscwprintf_l**|
@@ -136,7 +136,7 @@ Zobacz przykład [vsprintf —](vsprintf-vsprintf-l-vswprintf-vswprintf-l-vswpri
 
 ## <a name="see-also"></a>Zobacz także
 
-[We/Wy strumienia](../../c-runtime-library/stream-i-o.md)<br/>
+[Stream operacji We/Wy](../../c-runtime-library/stream-i-o.md)<br/>
 [fprintf, _fprintf_l, fwprintf, _fwprintf_l](fprintf-fprintf-l-fwprintf-fwprintf-l.md)<br/>
 [printf, _printf_l, wprintf, _wprintf_l](printf-printf-l-wprintf-wprintf-l.md)<br/>
 [scanf, _scanf_l, wscanf, _wscanf_l](scanf-scanf-l-wscanf-wscanf-l.md)<br/>

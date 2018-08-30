@@ -32,12 +32,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ed6b5f46e20338bdb06c5c04599402dbbefa935e
-ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
+ms.openlocfilehash: 561a82e2bea320e6230af84055716606d180e2c5
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37880053"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43214278"
 ---
 # <a name="catlexemodulet-class"></a>Klasa CAtlExeModuleT
 Ta klasa reprezentuje modułu dla aplikacji.  
@@ -259,7 +259,7 @@ HRESULT Run(int nShowCmd = SW_HIDE) throw();
   
 ### <a name="parameters"></a>Parametry  
  *nShowCmd*  
- Określa, jak ma być wyświetlana okna. Ten parametr może być jedną z wartości omówione w [WinMain](http://msdn.microsoft.com/library/windows/desktop/ms633559) sekcji. Wartość domyślna to SW_HIDE.  
+ Określa, jak ma być wyświetlana okna. Ten parametr może być jedną z wartości omówione w [WinMain](https://msdn.microsoft.com/library/windows/desktop/ms633559) sekcji. Wartość domyślna to SW_HIDE.  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Zwraca wartość S_OK w przypadku powodzenia lub błędu HRESULT w przypadku niepowodzenia.  
@@ -285,7 +285,7 @@ static void UninitializeCom() throw();
 ```  
   
 ### <a name="remarks"></a>Uwagi  
- Domyślnie ta metoda wywołuje po prostu [CoUninitialize](http://msdn.microsoft.com/library/windows/desktop/ms688715) i jest wywoływana z destruktora. Należy przesłonić tę metodę w razie przesłonięcia [CAtlExeModuleT::InitializeCom](#initializecom).  
+ Domyślnie ta metoda wywołuje po prostu [CoUninitialize](/windows/desktop/api/combaseapi/nf-combaseapi-couninitialize) i jest wywoływana z destruktora. Należy przesłonić tę metodę w razie przesłonięcia [CAtlExeModuleT::InitializeCom](#initializecom).  
   
 ##  <a name="unlock"></a>  CAtlExeModuleT::Unlock  
  Zmniejsza liczbę blokad modułu.  
@@ -306,7 +306,7 @@ int WinMain(int nShowCmd) throw();
   
 ### <a name="parameters"></a>Parametry  
  *nShowCmd*  
- Określa, jak ma być wyświetlana okna. Ten parametr może być jedną z wartości omówione w [WinMain](http://msdn.microsoft.com/library/windows/desktop/ms633559) sekcji.  
+ Określa, jak ma być wyświetlana okna. Ten parametr może być jedną z wartości omówione w [WinMain](https://msdn.microsoft.com/library/windows/desktop/ms633559) sekcji.  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Zwraca wartość zwracaną przez plik wykonywalny.  

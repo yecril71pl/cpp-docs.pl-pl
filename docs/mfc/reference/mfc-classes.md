@@ -15,12 +15,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bc862ee708239878229825c9aa050c2835222b95
-ms.sourcegitcommit: b92ca0b74f0b00372709e81333885750ba91f90e
+ms.openlocfilehash: 5bfff86dd688ea5029a0c0971c3f8ad6c6aef3b5
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/16/2018
-ms.locfileid: "42464996"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43213195"
 ---
 # <a name="mfc-classes"></a>Klasy MFC
 Klas na poniższej liście znajdują się w bibliotece Microsoft Foundation Class (MFC).  
@@ -135,7 +135,7 @@ Klas na poniższej liście znajdują się w bibliotece Microsoft Foundation Clas
  Oferuje funkcje pola listy kontrolnej Windows.  
   
  [Klasa CClientDC](../../mfc/reference/cclientdc-class.md)  
- Obsługuje wywołania funkcji Windows [getdc —](http://msdn.microsoft.com/library/windows/desktop/dd144871) podczas konstruowania i [ReleaseDC](http://msdn.microsoft.com/library/windows/desktop/dd162920) w trakcie niszczenia.  
+ Obsługuje wywołania funkcji Windows [getdc —](/windows/desktop/api/winuser/nf-winuser-getdc) podczas konstruowania i [ReleaseDC](/windows/desktop/api/winuser/nf-winuser-releasedc) w trakcie niszczenia.  
   
  [Klasa CCmdTarget](../../mfc/reference/ccmdtarget-class.md)  
  Klasa bazowa dla architektury mapy wiadomości w bibliotece klas Microsoft Foundation.  
@@ -861,7 +861,7 @@ Klas na poniższej liście znajdują się w bibliotece Microsoft Foundation Clas
  Przedstawia okna ramki w połowie wysokości zwykle widoczne wokół przestawnych pasków narzędzi.  
   
  [Klasa CMonikerFile](../../mfc/reference/cmonikerfile-class.md)  
- Przedstawia strumień danych ([IStream](http://msdn.microsoft.com/library/windows/desktop/aa380034)) o nazwie określonej przez [imoniker —](http://msdn.microsoft.com/library/windows/desktop/ms679705).  
+ Przedstawia strumień danych ([IStream](/windows/desktop/api/objidl/nn-objidl-istream)) o nazwie określonej przez [imoniker —](/windows/desktop/api/objidl/nn-objidl-imoniker).  
   
  [Klasa CMonthCalCtrl](../../mfc/reference/cmonthcalctrl-class.md)  
  Hermetyzuje funkcjonalność formantu kalendarza miesięcznego.  
@@ -930,7 +930,7 @@ Klas na poniższej liście znajdują się w bibliotece Microsoft Foundation Clas
  Zapewnia obsługę interfejsów kontrolki niestandardowej po stronie klienta.  
   
  [Klasa COleConvertDialog](../../mfc/reference/coleconvertdialog-class.md)  
- Aby uzyskać więcej informacji, zobacz [OLEUICONVERT](http://msdn.microsoft.com/library/windows/desktop/ms686657) struktury w zestawie Windows SDK.  
+ Aby uzyskać więcej informacji, zobacz [OLEUICONVERT](/windows/desktop/api/oledlg/ns-oledlg-tagoleuiconverta) struktury w zestawie Windows SDK.  
   
  [Klasa COleCurrency](../../mfc/reference/colecurrency-class.md)  
  Hermetyzuje `CURRENCY` typ danych w automatyzacji OLE.  
@@ -1173,7 +1173,7 @@ Klas na poniższej liście znajdują się w bibliotece Microsoft Foundation Clas
  Hermetyzuje sinusoidalną prędkość przejścia, które ma amplitudę, która zależy od prędkości początkowej zmiennej animacji.  
   
  [CSize, klasa](../../atl-mfc-shared/reference/csize-class.md)  
- Podobnie jak Windows [rozmiar](http://msdn.microsoft.com/library/windows/desktop/dd145106) struktury, która implementuje współrzędne względne lub pozycję.  
+ Podobnie jak Windows [rozmiar](https://msdn.microsoft.com/library/windows/desktop/dd145106) struktury, która implementuje współrzędne względne lub pozycję.  
   
  [Klasa CSliderCtrl](../../mfc/reference/csliderctrl-class.md)  
  Oferuje funkcje formantu typowego suwaka Windows.  

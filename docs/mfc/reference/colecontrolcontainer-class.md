@@ -82,12 +82,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7f33335e193997c0988cab0580c3eab612d0cc84
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: f278ffd3d3210f899e86787d0872180df2d91d98
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37852306"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43222862"
 ---
 # <a name="colecontrolcontainer-class"></a>Klasa COleControlContainer
 Działa jako kontener formantu dla formantów ActiveX.  
@@ -149,7 +149,7 @@ class COleControlContainer : public CCmdTarget
 |[COleControlContainer::m_siteMap](#m_sitemap)|Mapa witryny.|  
   
 ## <a name="remarks"></a>Uwagi  
- Jest to realizowane przez zapewnienie obsługi dla co najmniej jedną lokację kontrolki ActiveX (implementowany przez `COleControlSite`). `COleControlContainer` w pełni zaimplementowano [IOleInPlaceFrame](http://msdn.microsoft.com/library/windows/desktop/ms692770) i [IOleContainer](http://msdn.microsoft.com/library/windows/desktop/ms690103) interfejsów, dzięki czemu zawartych w nim formantów ActiveX do zrealizowania ich kwalifikacji jako elementy w miejscu.  
+ Jest to realizowane przez zapewnienie obsługi dla co najmniej jedną lokację kontrolki ActiveX (implementowany przez `COleControlSite`). `COleControlContainer` w pełni zaimplementowano [IOleInPlaceFrame](/windows/desktop/api/oleidl/nn-oleidl-ioleinplaceframe) i [IOleContainer](/windows/desktop/api/oleidl/nn-oleidl-iolecontainer) interfejsów, dzięki czemu zawartych w nim formantów ActiveX do zrealizowania ich kwalifikacji jako elementy w miejscu.  
   
  Zazwyczaj ta klasa jest używana w połączeniu z `COccManager` i `COleControlSite` do zaimplementowania niestandardowego kontenera kontrolki ActiveX, za pomocą niestandardowych witryn dla co najmniej jedną kontrolkę ActiveX.  
   
@@ -449,7 +449,7 @@ virtual UINT GetDlgItemInt(
  Wskaźnik do zmiennej typu Boolean, który otrzymuje wartość Powodzenie/niepowodzenie — funkcja (wartość TRUE oznacza sukces, wartość FALSE wskazuje niepowodzenie).  
   
  *bSigned*  
- Określa, czy funkcja należy zbadać tekst znak minus na początku i zwraca wartość liczby całkowitej ze znakiem, jeśli zostanie znaleziony. Jeśli *bSigned* parametr ma wartość PRAWDA, określając, że wartości do pobrania jest wartością liczby całkowitej ze znakiem, wykonaj rzutowanie zwracanej wartości **int** typu. Aby uzyskać rozszerzone informacje o błędzie, należy wywołać [GetLastError](http://msdn.microsoft.com/library/windows/desktop/ms679360).  
+ Określa, czy funkcja należy zbadać tekst znak minus na początku i zwraca wartość liczby całkowitej ze znakiem, jeśli zostanie znaleziony. Jeśli *bSigned* parametr ma wartość PRAWDA, określając, że wartości do pobrania jest wartością liczby całkowitej ze znakiem, wykonaj rzutowanie zwracanej wartości **int** typu. Aby uzyskać rozszerzone informacje o błędzie, należy wywołać [GetLastError](https://msdn.microsoft.com/library/windows/desktop/ms679360).  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Jeśli operacja się powiedzie, zmienna wskazywany przez *lpTrans* jest ustawiona na wartość TRUE, i wartość zwracana jest wartość przetłumaczonego tekstu kontrolki.  
@@ -486,7 +486,7 @@ virtual int GetDlgItemText(
 ### <a name="return-value"></a>Wartość zwracana  
  Jeśli funkcja się powiedzie, wartość zwracana określa liczbę znaków skopiowane do buforu, nie wliczając kończącego znaku null.  
   
- Jeśli funkcja zawiedzie, wartość zwracana wynosi zero. Aby uzyskać rozszerzone informacje o błędzie, należy wywołać [GetLastError](http://msdn.microsoft.com/library/windows/desktop/ms679360).  
+ Jeśli funkcja zawiedzie, wartość zwracana wynosi zero. Aby uzyskać rozszerzone informacje o błędzie, należy wywołać [GetLastError](https://msdn.microsoft.com/library/windows/desktop/ms679360).  
   
 ##  <a name="handlesetfocus"></a>  COleControlContainer::HandleSetFocus  
  Określa, jeśli kontener obsługuje WM_SETFOCUS wiadomości.  

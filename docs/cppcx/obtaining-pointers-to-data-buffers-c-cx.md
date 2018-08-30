@@ -9,22 +9,22 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 87b95044c3a0b874d155b227db736c5e4b81f1b1
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: b8a36573e72b173180e89b48403829a9387d4ee8
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42613033"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43212508"
 ---
 # <a name="obtaining-pointers-to-data-buffers-ccx"></a>Uzyskiwanie wskaźników do buforów danych (C + +/ CX)
-W środowisku uruchomieniowym Windows [Windows::Storage::Streams::IBuffer](http://msdn.microsoft.com/library/windows/apps/windows.storage.streams.ibuffer.aspx) interfejs zapewnia dostęp do buforów danych oznacza niezależny od języka, na podstawie strumienia. W języku C++ można uzyskać surowy wskaźnik do podstawowego tablicy typu byte, za pomocą interfejsu IBufferByteAccess biblioteki środowiska uruchomieniowego Windows, która jest zdefiniowana w robuffer.h. Za pomocą tej metody można zmodyfikować bajt tablicy w miejscu bez wprowadzania żadnych niepotrzebne kopie danych.  
+W środowisku uruchomieniowym Windows [Windows::Storage::Streams::IBuffer](https://msdn.microsoft.com/library/windows/apps/windows.storage.streams.ibuffer.aspx) interfejs zapewnia dostęp do buforów danych oznacza niezależny od języka, na podstawie strumienia. W języku C++ można uzyskać surowy wskaźnik do podstawowego tablicy typu byte, za pomocą interfejsu IBufferByteAccess biblioteki środowiska uruchomieniowego Windows, która jest zdefiniowana w robuffer.h. Za pomocą tej metody można zmodyfikować bajt tablicy w miejscu bez wprowadzania żadnych niepotrzebne kopie danych.  
   
- Na poniższym diagramie przedstawiono XAML elementu obrazu, którego źródłem jest [Windows::UI::Xaml::Media::Imaging WriteableBitmap](http://msdn.microsoft.com/%20library/windows/apps/windows.ui.xaml.media.imaging.writeablebitmap.aspx). Aplikacja kliencka, która jest napisana w dowolnym języku można przekazać odwołanie do `WriteableBitmap` języka c++ kodu, a następnie C++ można użyć odwołania można pobrać w podstawowej buforu. W aplikacji Universal Windows Platform, która jest napisana w języku C++ można użyć funkcji w poniższym przykładzie bezpośrednio w kodzie źródłowym, bez pakowanie w składniku Windows w czasie wykonywania.  
+ Na poniższym diagramie przedstawiono XAML elementu obrazu, którego źródłem jest [Windows::UI::Xaml::Media::Imaging WriteableBitmap](https://msdn.microsoft.com/%20library/windows/apps/windows.ui.xaml.media.imaging.writeablebitmap.aspx). Aplikacja kliencka, która jest napisana w dowolnym języku można przekazać odwołanie do `WriteableBitmap` języka c++ kodu, a następnie C++ można użyć odwołania można pobrać w podstawowej buforu. W aplikacji Universal Windows Platform, która jest napisana w języku C++ można użyć funkcji w poniższym przykładzie bezpośrednio w kodzie źródłowym, bez pakowanie w składniku Windows w czasie wykonywania.  
   
  ![C&#43; &#43; kodu bezpośrednio dostęp do danych pikseli](../cppcx/media/ibufferbyteaccessdiagram.png "IBufferByteAccessDiagram")  
   
 ## <a name="getpointertopixeldata"></a>GetPointerToPixelData  
- Akceptuje następującą metodę [Windows::Storage::Streams::IBuffer](http://msdn.microsoft.com/library/windows/apps/windows.storage.streams.ibuffer.aspx) i zwraca surowy wskaźnik do podstawowego tablicy typu byte. Aby wywołać funkcję, należy przekazać w [WriteableBitmap::PixelBuffer](http://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.media.imaging.writeablebitmap.pixelbuffer.aspx) właściwości.  
+ Akceptuje następującą metodę [Windows::Storage::Streams::IBuffer](https://msdn.microsoft.com/library/windows/apps/windows.storage.streams.ibuffer.aspx) i zwraca surowy wskaźnik do podstawowego tablicy typu byte. Aby wywołać funkcję, należy przekazać w [WriteableBitmap::PixelBuffer](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.media.imaging.writeablebitmap.pixelbuffer.aspx) właściwości.  
   
 ```  
   

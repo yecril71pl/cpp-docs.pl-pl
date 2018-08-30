@@ -1,5 +1,5 @@
 ---
-title: C3099 błąd kompilatora | Dokumentacja firmy Microsoft
+title: Błąd kompilatora C3099 | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,19 +16,19 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 27059beb1cb587b9060da8c5cc5702ea966422f0
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: ea57a79fab92152824b7c9aaf0c5d50c14fee32e
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33249758"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43211998"
 ---
-# <a name="compiler-error-c3099"></a>C3099 błąd kompilatora
+# <a name="compiler-error-c3099"></a>Błąd kompilatora C3099
 "— słowo kluczowe": Użyj [System::AttributeUsageAttribute] dla atrybutów zarządzanych; na użytek [Windows::Foundation::Metadata::AttributeUsageAttribute] atrybuty WinRT  
   
- Użyj <xref:System.AttributeUsageAttribute> Aby zadeklarować **/CLR** atrybutów. Użyj `Windows::Foundation::Metadata::AttributeUsageAttribute` Aby zadeklarować atrybutów środowiska wykonawczego systemu Windows.  
+ Użyj <xref:System.AttributeUsageAttribute> do deklarowania **/CLR** atrybutów. Użyj `Windows::Foundation::Metadata::AttributeUsageAttribute` można zadeklarować atrybutów środowiska wykonawczego Windows.  
   
- Aby uzyskać więcej informacji o atrybutach/CLR, zobacz [zdefiniowane przez użytkownika atrybuty](../../windows/user-defined-attributes-cpp-component-extensions.md). Dla atrybutów obsługiwane w środowisku wykonawczym systemu Windows, temacie [Windows.Foundation.Metadata przestrzeni nazw](http://msdn.microsoft.com/library/windows/apps/windows.foundation.metadata.aspx)  
+ Aby uzyskać więcej informacji na temat atrybutów/CLR, zobacz [atrybuty zdefiniowane przez użytkownika](../../windows/user-defined-attributes-cpp-component-extensions.md). W przypadku obsługiwanych atrybutów środowiska wykonawczego Windows, zobacz [Windows.Foundation.Metadata przestrzeni nazw](https://msdn.microsoft.com/library/windows/apps/windows.foundation.metadata.aspx)  
   
 ## <a name="example"></a>Przykład  
  Poniższy przykład generuje C3099 i pokazuje, jak go naprawić.  

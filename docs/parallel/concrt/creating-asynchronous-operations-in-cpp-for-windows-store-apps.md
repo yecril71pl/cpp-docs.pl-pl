@@ -15,17 +15,17 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3afe558ad5d17c7c9741a1c211bb838c615c8542
-ms.sourcegitcommit: e9ce38decc9f986edab5543de3464b11ebccb123
+ms.openlocfilehash: b83531c1452174403f3ead3c5bd3d1b59b0c7d4d
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/13/2018
-ms.locfileid: "42465683"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43213452"
 ---
 # <a name="creating-asynchronous-operations-in-c-for-uwp-apps"></a>Tworzenie operacji asynchronicznych w języku C++ dla aplikacji platformy uniwersalnej systemu Windows
 W tym dokumencie opisano niektóre kluczowe punkty, których należy pamiętać, gdy używasz klasy zadania do wygenerowania na podstawie puli wątków Windows operacje asynchroniczne w aplikacji Windows Runtime Uniwersalnej.  
   
- Korzystanie z programowania asynchronicznego jest kluczowym elementem w modelu aplikacji środowiska wykonawczego Windows, ponieważ umożliwia aplikacjom ciągle reagować na dane wejściowe użytkownika. Długotrwałe zadania mogą być uruchamiane bez blokowania wątku interfejsu użytkownika, a otrzymasz wyników zadania w dalszej części. Możesz również anulować zadania i otrzymywać powiadomienia o postępie jako zadania uruchomione w tle. Dokument [asynchronicznego programowania w języku C++](/windows/uwp/threading-async/asynchronous-programming-in-cpp-universal-windows-platform-apps) zawiera omówienie wzorca asynchronicznego, które są dostępne w programie Visual C++ do tworzenia aplikacji platformy uniwersalnej systemu Windows. Ten dokument omawia jak używanie i tworzenie łańcuchów operacji asynchronicznych środowiska wykonawczego Windows. W tej sekcji opisano sposób użycia typy w ppltasks.h w celu wygenerowania operacji asynchronicznych, które mogą być wykorzystane przez inny składnik środowiska wykonawczego Windows i sposobie kontrolowania sposobu asynchroniczne jest wykonywany. Należy również rozważyć odczytu [programowanie Async wzorców i porady w Hilo (aplikacje Windows Store przy użyciu języków C++ i XAML)](http://msdn.microsoft.com/library/windows/apps/jj160321.aspx) Aby dowiedzieć się, jak użyliśmy klasy zadania do implementowania asynchronicznych operacji w Hilo, aplikacji środowiska wykonawczego Windows, korzystając z C++ i XAML.  
+ Korzystanie z programowania asynchronicznego jest kluczowym elementem w modelu aplikacji środowiska wykonawczego Windows, ponieważ umożliwia aplikacjom ciągle reagować na dane wejściowe użytkownika. Długotrwałe zadania mogą być uruchamiane bez blokowania wątku interfejsu użytkownika, a otrzymasz wyników zadania w dalszej części. Możesz również anulować zadania i otrzymywać powiadomienia o postępie jako zadania uruchomione w tle. Dokument [asynchronicznego programowania w języku C++](/windows/uwp/threading-async/asynchronous-programming-in-cpp-universal-windows-platform-apps) zawiera omówienie wzorca asynchronicznego, które są dostępne w programie Visual C++ do tworzenia aplikacji platformy uniwersalnej systemu Windows. Ten dokument omawia jak używanie i tworzenie łańcuchów operacji asynchronicznych środowiska wykonawczego Windows. W tej sekcji opisano sposób użycia typy w ppltasks.h w celu wygenerowania operacji asynchronicznych, które mogą być wykorzystane przez inny składnik środowiska wykonawczego Windows i sposobie kontrolowania sposobu asynchroniczne jest wykonywany. Należy również rozważyć odczytu [programowanie Async wzorców i porady w Hilo (aplikacje Windows Store przy użyciu języków C++ i XAML)](https://msdn.microsoft.com/library/windows/apps/jj160321.aspx) Aby dowiedzieć się, jak użyliśmy klasy zadania do implementowania asynchronicznych operacji w Hilo, aplikacji środowiska wykonawczego Windows, korzystając z C++ i XAML.  
   
 > [!NOTE]
 >  Możesz użyć [biblioteki wzorców równoległych](../../parallel/concrt/parallel-patterns-library-ppl.md) (PPL) i [bibliotekę asynchronicznych agentów](../../parallel/concrt/asynchronous-agents-library.md) w aplikacji platformy uniwersalnej systemu Windows. Jednak nie możesz użyć harmonogramu zadań ani Menedżera zasobów. W tym dokumencie opisano dodatkowe funkcje, które zapewnia PPL, które są dostępne tylko dla aplikacji platformy uniwersalnej systemu Windows, a nie do aplikacji klasycznej.  
@@ -61,16 +61,16 @@ W tym dokumencie opisano niektóre kluczowe punkty, których należy pamiętać,
   
  Za pomocą środowiska wykonawczego Windows, możesz korzystać z najlepszych funkcji różnych języków programowania i połączyć je w jednej aplikacji. Na przykład możesz utworzyć interfejs użytkownika w języku JavaScript i wykonania logiki praktyce intensywnie korzystających z aplikacji w składniku C++. Możliwość wykonywania tych praktyce intensywnie korzystających z operacji w tle jest kluczowym czynnikiem w ochronie elastyczny interfejs użytkownika. Ponieważ `task` klasy jest specyficzny dla języka C++, należy użyć interfejsu środowiska wykonawczego Windows do komunikowania się operacji asynchronicznych do innych składników, (które mogą być napisane w językach innych niż C++). Środowisko wykonawcze Windows zawiera cztery interfejsy, które służy do reprezentowania operacji asynchronicznych:  
   
- [Windows::Foundation::IAsyncAction](http://msdn.microsoft.com/library/windows/apps/windows.foundation.iasyncaction.aspx)  
+ [Windows::Foundation::IAsyncAction](https://msdn.microsoft.com/library/windows/apps/windows.foundation.iasyncaction.aspx)  
  Reprezentuje akcję asynchroniczną.  
   
- [Windows::Foundation:: iasyncactionwithprogress\<TProgress >](http://msdn.microsoft.com/library/windows/apps/br206581.aspx)  
+ [Windows::Foundation:: iasyncactionwithprogress\<TProgress >](https://msdn.microsoft.com/library/windows/apps/br206581.aspx)  
  Reprezentuje akcję asynchroniczną, która zgłasza postępy pracy.  
   
- [Windows::Foundation:: iasyncoperation\<TResult >](http://msdn.microsoft.com/library/windows/apps/br206598.aspx)  
+ [Windows::Foundation:: iasyncoperation\<TResult >](https://msdn.microsoft.com/library/windows/apps/br206598.aspx)  
  Reprezentuje operację asynchroniczną, która zwraca wynik.  
   
- [Windows::Foundation:: iasyncoperationwithprogress\<TResult, TProgress >](http://msdn.microsoft.com/library/windows/apps/br206594.aspx)  
+ [Windows::Foundation:: iasyncoperationwithprogress\<TResult, TProgress >](https://msdn.microsoft.com/library/windows/apps/br206594.aspx)  
  Reprezentuje operację asynchroniczną, która zwraca wynik i raporty postęp.  
   
  Pojęcie *akcji* oznacza, że zadanie asynchroniczne nie tworzy wartości (reakcji funkcji, która zwraca `void`). Pojęcie *operacji* oznacza, że zadanie asynchroniczne uzyskiwania wartości. Pojęcie *postępu* oznacza, że zadanie może zgłaszać komunikaty o postępie do obiektu wywołującego. JavaScript, .NET Framework i Visual C++ każdy zawiera swój własny sposób tworzenia wystąpień tych interfejsów do użytku przez granicę interfejsu ABI. W przypadku języka Visual C++ zapewnia PPL [concurrency::create_async](reference/concurrency-namespace-functions.md#create_async) funkcji. Ta funkcja tworzy akcję asynchroniczną środowiska wykonawczego Windows lub operacji, które reprezentuje ukończenie zadania. `create_async` Funkcja przyjmuje funkcja pracy (zwykle Wyrażenie lambda), tworzy wewnętrznie `task` obiektu i zawija, które zadanie w jednej z czterech asynchronicznych interfejsów Windows Runtime.  
@@ -102,7 +102,7 @@ W tym dokumencie opisano niektóre kluczowe punkty, których należy pamiętać,
  [!code-cpp[concrt-windowsstore-primes#100](../../parallel/concrt/codesnippet/cpp/creating-asynchronous-operations-in-cpp-for-windows-store-apps_1.cpp)]  
   
 ##  <a name="example-component"></a> Przykład: Tworzenie składnika wykonawczego Windows C++ i jego wykorzystanie z C#  
- Należy wziąć pod uwagę aplikację, która używa XAML i C#, aby zdefiniować interfejs użytkownika i składnika środowiska uruchomieniowego C++ Windows do wykonywania operacji obliczeniowych. W tym przykładzie składnika C++ oblicza, które numery w danym zakresie są Północnej. Aby zilustrować różnice między cztery interfejsów zadania asynchronicznego środowiska wykonawczego Windows, uruchamianie, w programie Visual Studio, tworząc **puste rozwiązanie** i nadawania mu nazwy `Primes`. Następnie dodaj do rozwiązania **składnika środowiska wykonawczego Windows** projektu i nadawania mu nazwy `PrimesLibrary`. Dodaj następujący kod do wygenerowanego pliku nagłówka C++ (w tym przykładzie zmienia nazwę Class1.h na Primes.h). Każdy `public` Metoda określa jeden z czterech asynchronicznych interfejsów. Metody, które zwracają wartość zwracają [Windows::Foundation::Collections::IVector\<int >](http://msdn.microsoft.com/library/windows/apps/br206631.aspx) obiektu. Metody, które raportowania postępu tworzenia `double` wartości, które definiują procent ogólnej pracy, która została zakończona.  
+ Należy wziąć pod uwagę aplikację, która używa XAML i C#, aby zdefiniować interfejs użytkownika i składnika środowiska uruchomieniowego C++ Windows do wykonywania operacji obliczeniowych. W tym przykładzie składnika C++ oblicza, które numery w danym zakresie są Północnej. Aby zilustrować różnice między cztery interfejsów zadania asynchronicznego środowiska wykonawczego Windows, uruchamianie, w programie Visual Studio, tworząc **puste rozwiązanie** i nadawania mu nazwy `Primes`. Następnie dodaj do rozwiązania **składnika środowiska wykonawczego Windows** projektu i nadawania mu nazwy `PrimesLibrary`. Dodaj następujący kod do wygenerowanego pliku nagłówka C++ (w tym przykładzie zmienia nazwę Class1.h na Primes.h). Każdy `public` Metoda określa jeden z czterech asynchronicznych interfejsów. Metody, które zwracają wartość zwracają [Windows::Foundation::Collections::IVector\<int >](https://msdn.microsoft.com/library/windows/apps/br206631.aspx) obiektu. Metody, które raportowania postępu tworzenia `double` wartości, które definiują procent ogólnej pracy, która została zakończona.  
   
  [!code-cpp[concrt-windowsstore-primes#1](../../parallel/concrt/codesnippet/cpp/creating-asynchronous-operations-in-cpp-for-windows-store-apps_2.h)]  
   
@@ -113,7 +113,7 @@ W tym dokumencie opisano niektóre kluczowe punkty, których należy pamiętać,
   
  [!code-cpp[concrt-windowsstore-primes#2](../../parallel/concrt/codesnippet/cpp/creating-asynchronous-operations-in-cpp-for-windows-store-apps_3.cpp)]  
   
- Każda metoda najpierw jest przeprowadzane sprawdzanie poprawności, aby upewnić się, że parametry wejściowe nieujemnej wartości. Jeśli wartość wejściowa jest ujemna, metoda zgłasza [Platform::InvalidArgumentException](http://msdn.microsoft.com/library/windows/apps/hh755794\(v=vs.110\).aspx). Obsługa błędów została wyjaśniona później w tej sekcji.  
+ Każda metoda najpierw jest przeprowadzane sprawdzanie poprawności, aby upewnić się, że parametry wejściowe nieujemnej wartości. Jeśli wartość wejściowa jest ujemna, metoda zgłasza [Platform::InvalidArgumentException](https://msdn.microsoft.com/library/windows/apps/hh755794\(v=vs.110\).aspx). Obsługa błędów została wyjaśniona później w tej sekcji.  
   
  Korzystanie z tych metod z aplikacji platformy uniwersalnej systemu Windows, należy użyć programu Visual C# **pusta aplikacja (XAML)** szablon, aby dodać drugi projekt do rozwiązania Visual Studio. W tym przykładzie nazwy projektu `Primes`. Następnie w `Primes` projektu, Dodaj odwołanie do `PrimesLibrary` projektu.  
   
@@ -127,7 +127,7 @@ W tym dokumencie opisano niektóre kluczowe punkty, których należy pamiętać,
   
  Metody te za pomocą `async` i `await` słów kluczowych, aby zaktualizować interfejs użytkownika, po ukończeniu operacji asynchronicznych. Aby uzyskać informacji na temat programowania asynchronicznego w aplikacjach platformy uniwersalnej systemu Windows, zobacz [wątki i programowanie async](/windows/uwp/threading-async).  
   
- `getPrimesCancellation` i `cancelGetPrimes` metody działają razem, aby umożliwić użytkownikowi anulować operację. Kiedy użytkownik naciśnie **anulować** przycisku `cancelGetPrimes` wywołania metody [IAsyncOperationWithProgress\<TResult, TProgress >:: Anuluj](http://msdn.microsoft.com/library/windows/apps/windows.foundation.iasyncinfo.cancel.aspx) anulować operację. Współbieżność środowiska wykonawczego, która zarządza podstawowych operacji asynchronicznej, zgłasza typu wyjątek wewnętrzny, który zostanie przechwycony przez środowisko wykonawcze Windows do komunikowania się, że Zakończono operację anulowania. Aby uzyskać więcej informacji dotyczących anulowania, zobacz [anulowania](../../parallel/concrt/cancellation-in-the-ppl.md).  
+ `getPrimesCancellation` i `cancelGetPrimes` metody działają razem, aby umożliwić użytkownikowi anulować operację. Kiedy użytkownik naciśnie **anulować** przycisku `cancelGetPrimes` wywołania metody [IAsyncOperationWithProgress\<TResult, TProgress >:: Anuluj](https://msdn.microsoft.com/library/windows/apps/windows.foundation.iasyncinfo.cancel.aspx) anulować operację. Współbieżność środowiska wykonawczego, która zarządza podstawowych operacji asynchronicznej, zgłasza typu wyjątek wewnętrzny, który zostanie przechwycony przez środowisko wykonawcze Windows do komunikowania się, że Zakończono operację anulowania. Aby uzyskać więcej informacji dotyczących anulowania, zobacz [anulowania](../../parallel/concrt/cancellation-in-the-ppl.md).  
   
 > [!IMPORTANT]
 >  Aby włączyć PPL poprawnie zgłosić do środowiska wykonawczego Windows czy anulował operację, nie Przechwytuj ten typ wyjątku wewnętrznego. Oznacza to, czy też nie należy przechwytywać wszystkie wyjątki (`catch (...)`). Jeśli należy przechwytywać wszystkie wyjątki, zgłoś ponownie wyjątek, aby upewnić się, że środowisko wykonawcze Windows może ukończyć operację anulowania.  
@@ -136,7 +136,7 @@ W tym dokumencie opisano niektóre kluczowe punkty, których należy pamiętać,
   
  ![Aplikacja Windows Runtime blokad](../../parallel/concrt/media/concrt_windows_primes.png "concrt_windows_primes")  
   
- Przykłady, które używają `create_async` do tworzenia zadań asynchronicznych, które mogą być wykorzystane przez innych języków, zobacz [przy użyciu języka C++ w przykładzie optymalizatora podróży w mapach Bing](http://msdn.microsoft.com/library/windows/apps/hh699891\(v=vs.110\).aspx) i [systemu Windows 8 operacji asynchronicznych w języku C++ z PPL](http://code.msdn.microsoft.com/windowsapps/windows-8-asynchronous-08009a0d).  
+ Przykłady, które używają `create_async` do tworzenia zadań asynchronicznych, które mogą być wykorzystane przez innych języków, zobacz [przy użyciu języka C++ w przykładzie optymalizatora podróży w mapach Bing](https://msdn.microsoft.com/library/windows/apps/hh699891\(v=vs.110\).aspx) i [systemu Windows 8 operacji asynchronicznych w języku C++ z PPL](http://code.msdn.microsoft.com/windowsapps/windows-8-asynchronous-08009a0d).  
   
 ##  <a name="exethread"></a> Kontrolowanie wątku wykonania  
  Środowisko wykonawcze Windows używa model wątkowości COM. W tym modelu obiektów znajdują się w różnych apartamentach, w zależności od sposobu obsługi ich synchronizacji. Obiekty wątków znajdują się w trybie komórek wielowątkowych (MTA). Obiekty, które muszą być dostępne przez pojedynczy wątek znajdują się w jednowątkowym (przedziale STA).  
@@ -165,7 +165,7 @@ W tym dokumencie opisano niektóre kluczowe punkty, których należy pamiętać,
 >  Nie wywołuj [CONCURRENCY::Task:: wait](reference/task-class.md#wait) w treści kontynuacja, która działa w komórce jednowątkowej W przeciwnym wypadku środowisko wykonawcze zgłasza [concurrency::invalid_operation](../../parallel/concrt/reference/invalid-operation-class.md) , ponieważ ta metoda blokują bieżący wątek i może spowodować, że aplikacja przestanie odpowiadać. Jednak można wywoływać [CONCURRENCY::Task:: GET](reference/task-class.md#get) metodę do uzyskania wyniku zadania poprzedzającego w kontynuacji opartej na zadaniach.  
   
 ##  <a name="example-app"></a> Przykład: Sterowanie wykonywaniem w aplikacji Windows Runtime z C++ i XAML  
- Należy wziąć pod uwagę aplikacji w języku C++ XAML, który odczytuje plik z dysku, znajduje najbardziej popularne wyrazy w tym pliku, a następnie przedstawia wyniki w interfejsie użytkownika. Aby stworzyć tę aplikację, uruchom, w programie Visual Studio, tworząc **pusta aplikacja (Windows Universal)** projektu i nadawania mu nazwy `CommonWords`. W manifeście aplikacji, należy określić **biblioteki dokumentów** możliwości, aby umożliwić aplikacji dostęp do folderu dokumenty. Typ pliku tekstowego (.txt) można również dodać do sekcji deklaracji w manifeście aplikacji. Aby uzyskać więcej informacji na temat możliwości aplikacji i deklaracji, zobacz [pakiety aplikacji i wdrażania](http://msdn.microsoft.com/library/windows/apps/hh464929.aspx).  
+ Należy wziąć pod uwagę aplikacji w języku C++ XAML, który odczytuje plik z dysku, znajduje najbardziej popularne wyrazy w tym pliku, a następnie przedstawia wyniki w interfejsie użytkownika. Aby stworzyć tę aplikację, uruchom, w programie Visual Studio, tworząc **pusta aplikacja (Windows Universal)** projektu i nadawania mu nazwy `CommonWords`. W manifeście aplikacji, należy określić **biblioteki dokumentów** możliwości, aby umożliwić aplikacji dostęp do folderu dokumenty. Typ pliku tekstowego (.txt) można również dodać do sekcji deklaracji w manifeście aplikacji. Aby uzyskać więcej informacji na temat możliwości aplikacji i deklaracji, zobacz [pakiety aplikacji i wdrażania](https://msdn.microsoft.com/library/windows/apps/hh464929.aspx).  
   
  Aktualizacja `Grid` elementu w pliku MainPage.xaml, aby uwzględnić `ProgressRing` elementu i `TextBlock` elementu. `ProgressRing` Wskazuje, że operacja jest w toku i `TextBlock` przedstawiono wyniki obliczeń.  
   

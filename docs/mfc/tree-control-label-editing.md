@@ -1,5 +1,5 @@
 ---
-title: Etykiety formantu drzewa edycji | Dokumentacja firmy Microsoft
+title: Etykiety kontrolki drzewa edycji | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,21 +17,21 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d665ae37bfc843fc2ab0f24fe4489b76935e62d2
-ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
+ms.openlocfilehash: 7f9ba5360ddce81061bf73839e1700fed57c9fa7
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/26/2018
-ms.locfileid: "36956268"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43210406"
 ---
 # <a name="tree-control-label-editing"></a>Edytowanie etykiety kontrolki drzewa
-Użytkownik może edytować bezpośrednio etykiety elementów formantu drzewa ([CTreeCtrl](../mfc/reference/ctreectrl-class.md)) mający **TVS_EDITLABELS** stylu. Użytkownik rozpoczyna edycję, klikając etykietę elementu, który ma fokus. Aplikacja rozpoczyna edycję przy użyciu [EditLabel](../mfc/reference/ctreectrl-class.md#editlabel) funkcję elementu członkowskiego. Formant drzewa wysyła powiadomienia podczas edytowania rozpoczyna się i gdy jest anulowane lub zakończone. Po zakończeniu edycji jest odpowiedzialny za aktualizowanie etykiety elementu w razie potrzeby.  
+Użytkownika można edytować bezpośrednio etykiety elementów kontrolki drzewa ([CTreeCtrl](../mfc/reference/ctreectrl-class.md)) zawierający **TVS_EDITLABELS** stylu. Użytkownik rozpoczyna edycję, klikając etykietę elementu, który ma fokus. Aplikacja rozpoczyna edytowanie przy użyciu [EditLabel](../mfc/reference/ctreectrl-class.md#editlabel) funkcja elementu członkowskiego. Kontrolka drzewa wysyła rozpoczyna się powiadomienie, gdy do edycji, a kiedy jest anulowane lub zakończone. Po zakończeniu edycji odpowiedzialność za aktualizowanie etykiety elementu, jeśli to stosowne.  
   
- Edytowanie etykiet rozpoczęcia, wysyła formant drzewa [TVN_BEGINLABELEDIT](http://msdn.microsoft.com/library/windows/desktop/bb773506) wiadomość z powiadomieniem. Przez przetwarzanie tego powiadomienia, można zezwolić na edycję niektóre etykiety i uniemożliwiają edycję innych. Zwracanie wartości 0 pozwala na edycję i powoduje zwracanie różną od zera.  
+ Edytowanie etykiet rozpoczęcia, formant drzewa wysyła [TVN_BEGINLABELEDIT](/windows/desktop/Controls/tvn-beginlabeledit) wiadomość z powiadomieniem. Przez przetwarzanie tego powiadomienia, można zezwolić na edycję niektóre etykiety i uniemożliwiają edycję innych. Zwracanie wartości 0 zezwala na edytowanie i zwraca wartość różną od zera temu zapobiega.  
   
- Edytowanie etykiet jest anulowane lub zakończone, wysyła formantu drzewa [TVN_ENDLABELEDIT](http://msdn.microsoft.com/library/windows/desktop/bb773515) wiadomość z powiadomieniem. *LParam* parametru jest adresem [NMTVDISPINFO](http://msdn.microsoft.com/library/windows/desktop/bb773418) struktury. **Elementu** element członkowski jest [TVITEM](http://msdn.microsoft.com/library/windows/desktop/bb773456) struktury, która identyfikuje element i edytowany tekst. Jest odpowiedzialny za aktualizowania etykiety elementu w razie potrzeby, możliwe, że po sprawdzanie poprawności edytowanej ciągu. *PszText* członkiem `TV_ITEM` wynosi 0, jeśli edycji zostało anulowane.  
+ Gdy edytowanie etykiet jest anulowane lub zakończone, formant drzewa wysyła [TVN_ENDLABELEDIT](/windows/desktop/Controls/tvn-endlabeledit) wiadomość z powiadomieniem. *LParam* parametru jest adresem [NMTVDISPINFO](/windows/desktop/api/commctrl/ns-commctrl-tagtvdispinfoa) struktury. **Elementu** element członkowski jest [TVITEM](/windows/desktop/api/commctrl/ns-commctrl-tagtvitema) struktury, która identyfikuje element i obejmuje edytowanego tekstu. Jesteś odpowiedzialny za aktualizowanie etykiety elementu, jeśli to stosowne, prawdopodobnie po upewnieniu się, edytowany ciągu. *PszText* członkiem `TV_ITEM` wynosi 0, jeśli edycji zostało anulowane.  
   
- Podczas Edytowanie etykiet, zazwyczaj w odpowiedzi na [TVN_BEGINLABELEDIT](http://msdn.microsoft.com/library/windows/desktop/bb773506) komunikatu powiadomienia mogą otrzymywać wskaźnik do kontrolki edycji używanych do edycji etykiety przy użyciu [GetEditControl](../mfc/reference/ctreectrl-class.md#geteditcontrol) elementu członkowskiego Funkcja. Kontrolki edycji można wywołać [SetLimitText](../mfc/reference/cedit-class.md#setlimittext) funkcji członkowskiej, aby ograniczyć ilość tekstu, użytkownik może wprowadzić lub podklasy kontrolki edycji, aby przechwycić i odrzucić nieprawidłowe znaki. Należy jednak pamiętać, że kontrolka edycji jest wyświetlany tylko *po* **TVN_BEGINLABELEDIT** są wysyłane.  
+ Podczas Edytowanie etykiet, zwykle w odpowiedzi na [TVN_BEGINLABELEDIT](/windows/desktop/Controls/tvn-beginlabeledit) komunikat powiadomienia, można uzyskać wskaźnik do kontrolki edycji umożliwiający edytowanie etykiet przy użyciu [GetEditControl](../mfc/reference/ctreectrl-class.md#geteditcontrol) elementu członkowskiego Funkcja. Możesz wywołać kontrolki edycji [SetLimitText](../mfc/reference/cedit-class.md#setlimittext) funkcja elementu członkowskiego, aby ograniczyć ilość tekstu, użytkownik może wprowadzić lub podklasą kontrolki edycji, aby przechwycić i odrzucić nieprawidłowe znaki. Należy jednak pamiętać, że kontrolka edycji jest wyświetlany tylko *po* **TVN_BEGINLABELEDIT** są wysyłane.  
   
 ## <a name="see-also"></a>Zobacz też  
  [Korzystanie z CTreeCtrl](../mfc/using-ctreectrl.md)   

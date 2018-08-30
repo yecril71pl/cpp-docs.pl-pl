@@ -26,12 +26,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c6414856aa893a9dba67dce5ffd9650fd03289ae
-ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
+ms.openlocfilehash: 892cccea65b9e1b6f0c1eec21d3973e84a0fba03
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37885250"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43223262"
 ---
 # <a name="ccomcompositecontrol-class"></a>Klasa CComCompositeControl
 Ta klasa dostarcza metody, o których trzeba do zaimplementowania kontrolek złożonych.  
@@ -174,7 +174,7 @@ HWND Create(
  Zastrzeżone.  
   
  *dwInitParam*  
- Dane mają być przekazane do formantu podczas tworzenia kontrolki. Dane przekazywane jako *dwInitParam* będzie wyświetlany jako wartość parametru LPARAM [/ / Złap](http://msdn.microsoft.com/library/windows/desktop/ms645428) wiadomości, które zostanie wysłane do kontrolek złożonych, gdy powstaje.  
+ Dane mają być przekazane do formantu podczas tworzenia kontrolki. Dane przekazywane jako *dwInitParam* będzie wyświetlany jako wartość parametru LPARAM [/ / Złap](/windows/desktop/dlgbox/wm-initdialog) wiadomości, które zostanie wysłane do kontrolek złożonych, gdy powstaje.  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Uchwyt do nowo utworzonego złożonej kontrolki okna dialogowego.  

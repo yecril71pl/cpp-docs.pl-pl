@@ -20,12 +20,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 731ec7b359995fc8ecbfdeae89595442d8186eeb
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: 7a472de31695ab6038cab9ba0158580f3d305194
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37851395"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43212491"
 ---
 # <a name="coleexception-class"></a>Klasa COleException
 Przedstawia warunek wyjątku związany z operacją OLE.  
@@ -77,7 +77,7 @@ SCODE m_sc;
 ### <a name="remarks"></a>Uwagi  
  Wartość tej zmiennej jest ustawiana przez [afxthrowoleexception —](exception-processing.md#afxthrowoleexception).  
   
- Aby uzyskać więcej informacji na temat SCODE, zobacz [struktury COM kody błędów](http://msdn.microsoft.com/library/windows/desktop/ms690088) w zestawie Windows SDK.  
+ Aby uzyskać więcej informacji na temat SCODE, zobacz [struktury COM kody błędów](/windows/desktop/com/structure-of-com-error-codes) w zestawie Windows SDK.  
   
 ### <a name="example"></a>Przykład  
  [!code-cpp[NVC_MFCOleContainer#22](../../mfc/codesnippet/cpp/coleexception-class_1.cpp)]  
@@ -101,7 +101,7 @@ static SCODE PASCAL Process(const CException* pAnyException);
 > [!NOTE]
 >  Ta funkcja jest **statyczne**.  
   
- Aby uzyskać więcej informacji na temat SCODE, zobacz [struktury COM kody błędów](http://msdn.microsoft.com/library/windows/desktop/ms690088) w zestawie Windows SDK.  
+ Aby uzyskać więcej informacji na temat SCODE, zobacz [struktury COM kody błędów](/windows/desktop/com/structure-of-com-error-codes) w zestawie Windows SDK.  
   
 ### <a name="example"></a>Przykład  
   Zobacz przykład [COleDispatchDriver::CreateDispatch](../../mfc/reference/coledispatchdriver-class.md#createdispatch).  

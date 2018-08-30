@@ -43,19 +43,19 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8a7764e15b18249a9ee3ddd452ae792c8ad172f3
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: cc7d2b959bd8ad3ed89ae270e1f7d93406526695
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32404483"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43218389"
 ---
 # <a name="popen-wpopen"></a>_popen, _wpopen
 
-Tworzy potoku i wykonuje polecenie.
+Tworzy potok i wykonuje polecenie.
 
 > [!IMPORTANT]
-> Nie można używać tego interfejsu API w aplikacjach, które są wykonywane w środowisku wykonawczym systemu Windows. Aby uzyskać więcej informacji, zobacz [funkcje CRT, nie są obsługiwane w aplikacjach platformy uniwersalnej systemu Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
+> Tego API nie można używać w aplikacjach korzystających ze środowiska wykonawczego Windows. Aby uzyskać więcej informacji, zobacz [funkcje CRT nieobsługiwane w aplikacjach platformy uniwersalnej Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
 
 ## <a name="syntax"></a>Składnia
 
@@ -72,34 +72,34 @@ const wchar_t *mode
 
 ### <a name="parameters"></a>Parametry
 
-*polecenie*<br/>
+*Polecenie*<br/>
 Polecenie do wykonania.
 
 *Tryb*<br/>
-Tryb zwrócony strumień.
+Tryb zwróconym strumieniu.
 
 ## <a name="return-value"></a>Wartość zwracana
 
-Zwraca strumień skojarzona jeden element end utworzony potoku. Po drugiej stronie potoku jest skojarzony z polecenia uruchomionego standardowego wejścia lub wyjścia standardowego. Funkcje zwracają **NULL** w przypadku wystąpienia błędu. Jeśli błąd jest nieprawidłowy parametr, np. Jeśli *polecenia* lub *tryb* jest wskaźnika o wartości null, lub *tryb* nie jest prawidłowym trybem **errno** ma ustawioną wartość **Einval —**. W sekcji uwag prawidłowe tryby.
+Zwraca strumień, który został skojarzony z jednym końcu utworzonego potoku. Drugim końcu potoku jest skojarzony z polecenia zduplikowanych standardowego wejścia lub wyjścia standardowego. Te funkcje zwracają **NULL** w przypadku błędu. Jeśli błąd jest nieprawidłowy parametr, na przykład w przypadku *polecenia* lub *tryb* jest wskaźnikiem wartości null lub *tryb* nie jest prawidłowym trybem **errno** jest równa **EINVAL**. Zobacz sekcję Spostrzeżenia, aby prawidłowe tryby.
 
-Aby uzyskać informacje na temat tych i innych kodów błędów, zobacz [_doserrno —, errno, _sys_errlist — i _sys_nerr —](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
+Aby uzyskać informacje na temat tych i innych kodów błędu, zobacz [_doserrno, errno, _sys_errlist i _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
 ## <a name="remarks"></a>Uwagi
 
-**_Popen —** funkcja tworzy potoku i asynchronicznie wykonuje kopię zduplikowanego procesora poleceń z określonego ciągu *polecenia*. Ciąg znaków *tryb* Określa typ dostępu, w następujący sposób.
+**_Popen —** funkcja tworzy potok i asynchronicznie wykonuje kopię zduplikowanych procesora poleceń przy użyciu określonego ciągu *polecenia*. Ciąg znaków *tryb* określa rodzaj dostępu, w następujący sposób.
 
-**"r"** proces wywołujący może odczytywać wyjścia standardowego polecenia uruchomionego za pomocą strumienia zwrócone.
+**"r"** proces wywołujący może odczytywać standardowe dane wyjściowe polecenia zduplikowanych przy użyciu zwróconym strumieniu.
 
-**"w"** proces wywołujący może zapisać standardowe dane wejściowe polecenia uruchomionego za pomocą strumienia zwrócone.
+**"w"** proces wywołujący może zapisywać standardowe dane wejściowe polecenia zduplikowanych przy użyciu zwróconym strumieniu.
 
-**"b"** otwarty w trybie binarnym.
+**"b"** otwarte w trybie binarnym.
 
 **"t"** otwarte w trybie tekstowym.
 
 > [!NOTE]
-> Jeśli używane w programie Windows **_popen —** funkcja zwraca wskaźnik nieprawidłowy plik, który powoduje, że program przestanie odpowiadać nieskończoność. **_popen —** działa prawidłowo w aplikacji konsoli. Do tworzenia aplikacji systemu Windows, który przekierowuje dane wejściowe i wyjściowe, zobacz [tworzenie procesu podrzędnego z Przekierowanie wejściowe i wyjściowe](http://msdn.microsoft.com/library/windows/desktop/ms682499) w zestawie Windows SDK.
+> Jeśli używane w programie Windows **_popen —** funkcja zwraca wskaźnik nieprawidłowy plik, który powoduje, że program przestanie odpowiadać na czas nieokreślony. **_popen —** działa poprawnie, w aplikacji konsoli. Aby utworzyć aplikację Windows, który przekierowuje dane wejściowe i wyjściowe, zobacz [tworzenia procesu podrzędnego z przekierowanie danych wejściowych i wyjściowych](/windows/desktop/ProcThread/creating-a-child-process-with-redirected-input-and-output) w zestawie Windows SDK.
 
-**_wpopen —** jest wersja znaków dwubajtowych **_popen —**; *ścieżki* argument **_wpopen —** jest ciągiem znaków dwubajtowych. **_wpopen —** i **_popen —** zachowują się tak samo w przeciwnym razie wartość.
+**_wpopen —** to wersja znaku dwubajtowego **_popen —**; *ścieżki* argument **_wpopen —** jest ciągiem znaku dwubajtowego. **_wpopen —** i **_popen —** zachowują się identycznie.
 
 ### <a name="generic-text-routine-mappings"></a>Mapowania procedur zwykłego tekstu
 
@@ -114,11 +114,11 @@ Aby uzyskać informacje na temat tych i innych kodów błędów, zobacz [_doserr
 |**_popen —**|\<stdio.h>|
 |**_wpopen —**|\<stdio.h > lub \<wchar.h >|
 
-Aby uzyskać więcej informacji o zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md).
+Aby uzyskać więcej informacji na temat zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md).
 
 ## <a name="libraries"></a>Biblioteki
 
-Wszystkie wersje [biblioteki wykonawcze języka C](../../c-runtime-library/crt-library-features.md).
+Wszystkie wersje [biblioteki wykonawczej C](../../c-runtime-library/crt-library-features.md).
 
 ## <a name="example"></a>Przykład
 

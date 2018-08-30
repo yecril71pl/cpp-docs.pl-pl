@@ -49,16 +49,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 66fd7c468e516c25e2c2b408b8c1112061eeb5e0
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 17bc6d95aae70c6297836d7353deafb6a4480407
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32417945"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43212972"
 ---
 # <a name="vsnprintfs-vsnprintfs-vsnprintfsl-vsnwprintfs-vsnwprintfsl"></a>vsnprintf_s, _vsnprintf_s, _vsnprintf_s_l, _vsnwprintf_s, _vsnwprintf_s_l
 
-Zapisywanie sformatowanego danych wyjściowych przy użyciu wskaźnika do listy argumentów. Są to wersje [vsnprintf —, _vsnprintf —, _vsnprintf_l —, _vsnwprintf —, _vsnwprintf_l —](vsnprintf-vsnprintf-vsnprintf-l-vsnwprintf-vsnwprintf-l.md) ulepszeń zabezpieczeń zgodnie z opisem w [funkcje zabezpieczeń w CRT](../../c-runtime-library/security-features-in-the-crt.md).
+Napisz sformatowane wyniki za pomocą wskaźnika do listy argumentów. Są to wersje [vsnprintf —, _vsnprintf —, _vsnprintf_l —, _vsnwprintf —, _vsnwprintf_l —](vsnprintf-vsnprintf-vsnprintf-l-vsnwprintf-vsnwprintf-l.md) ze wzmocnieniem zabezpieczeń, zgodnie z opisem w [funkcje zabezpieczeń w CRT](../../c-runtime-library/security-features-in-the-crt.md).
 
 ## <a name="syntax"></a>Składnia
 
@@ -119,16 +119,16 @@ int _vsnwprintf_s(
 ### <a name="parameters"></a>Parametry
 
 *buffer*<br/>
-Lokalizacja magazynu dla danych wyjściowych.
+Lokalizacja magazynowa danych wyjściowych.
 
 *sizeOfBuffer*<br/>
-Rozmiar *buforu* dla danych wyjściowych jako liczba znaków.
+Rozmiar *buforu* dla danych wyjściowych w formacie liczby znaków.
 
 *Liczba*<br/>
-Maksymalna liczba znaków do zapisu (nie w tym zakończenia null), lub [_truncate —](../../c-runtime-library/truncate.md).
+Maksymalna liczba znaków do zapisu (nie wliczając zakończenia o wartości null), lub [_TRUNCATE](../../c-runtime-library/truncate.md).
 
 *Format*<br/>
-Definicja formatu.
+Specyfikacja formatu.
 
 *argptr*<br/>
 Wskaźnik do listy argumentów.
@@ -136,44 +136,44 @@ Wskaźnik do listy argumentów.
 *Ustawienia regionalne*<br/>
 Ustawienia regionalne do użycia.
 
-Aby uzyskać więcej informacji, zobacz [specyfikacje formatu](../../c-runtime-library/format-specification-syntax-printf-and-wprintf-functions.md).
+Aby uzyskać więcej informacji, zobacz [specyfikacji formatu](../../c-runtime-library/format-specification-syntax-printf-and-wprintf-functions.md).
 
 ## <a name="return-value"></a>Wartość zwracana
 
-**vsnprintf_s —**, **_vsnprintf_s —** i **_vsnwprintf_s —** zwraca liczbę znaków zapisane, nie tym zakończenia wartość null lub wartość ujemną, jeśli wystąpi błąd wyjścia. **vsnprintf_s —** jest taka sama jak **_vsnprintf_s —**. **vsnprintf_s —** jest uwzględniony w zgodności ze standardem ANSI. **_vnsprintf** został zachowany na potrzeby zgodności z poprzednimi wersjami.
+**vsnprintf_s —**, **_vsnprintf_s —** i **_vsnwprintf_s —** zwracają liczbę znaków napisanych, nie wliczając zakończenia o wartości null lub wartość ujemną, jeśli wystąpi błąd danych wyjściowych. **vsnprintf_s —** jest taka sama jak **_vsnprintf_s —**. **vsnprintf_s —** jest uwzględniany w przypadku zgodności ze standardem ANSI. **_vnsprintf** został zachowany na potrzeby zgodności z poprzednimi wersjami.
 
-Jeśli przekracza magazynu wymaganego do przechowywania danych i zakończenia null *sizeOfBuffer*, program obsługi nieprawidłowych parametrów zostanie wywołany, zgodnie z opisem w [sprawdzanie poprawności parametru](../../c-runtime-library/parameter-validation.md), chyba że *liczby*  jest [_truncate —](../../c-runtime-library/truncate.md), w którym to przypadku tyle ciągu jako zmieści się *buforu* są zapisywane i zwrócił wartość -1. Jeśli program obsługi nieprawidłowych parametrów wykonywania odtwarzanie jest kontynuowane, te funkcje ustawić *buforu* na pusty ciąg, ustaw **errno** do **erange —** i zwróć -1.
+Jeśli magazynu wymaganego do przechowywania danych i kończącą wartość null, przekracza *sizeOfBuffer*, procedura obsługi nieprawidłowego parametru zostanie wywołana, zgodnie z opisem w [Parameter Validation](../../c-runtime-library/parameter-validation.md), chyba że *liczba*  jest [_TRUNCATE](../../c-runtime-library/truncate.md), w którym to przypadku tyle ciągu jako zmieści się w *buforu* jest zapisywana i zwracana wartość -1. Jeśli wykonywanie jest kontynuowane po nieprawidłowy parametr uchwytu, te funkcje ustawiają *buforu* na pusty ciąg, ustaw **errno** do **ERANGE**i zwracają wartość -1.
 
-Jeśli *buforu* lub *format* jest **NULL** wskaźnika, lub, jeśli *liczba* jest mniejsza lub równa zero, program obsługi nieprawidłowych parametrów jest wywoływany. Jeśli dozwolone jest wykonywanie aby kontynuować, ustawianie tych funkcji **errno** do **einval —** i zwróć -1.
+Jeśli *buforu* lub *format* jest **o wartości NULL** wskaźnika, lub jeśli *liczba* jest mniejszy niż lub równy zero, procedura obsługi nieprawidłowego parametru zostanie wywołana. Jeśli wykonanie może być kontynuowane, te funkcje ustawiają **errno** do **EINVAL** i zwracają wartość -1.
 
 ### <a name="error-conditions"></a>Warunki błędów
 
-|**Warunek**|Zwraca|**errno**|
+|**Warunek**|Wróć|**numer błędu**|
 |-----------------|------------|-------------|
-|*Bufor* jest **wartości NULL**|-1|**EINVAL —**|
-|*Format* jest **wartości NULL**|-1|**EINVAL —**|
-|*Liczba* < = 0|-1|**EINVAL —**|
-|*sizeOfBuffer* za mały (i *liczba* ! = **_truncate —**)|-1 (i *buforu* ustawiony na pusty ciąg)|**ERANGE —**|
+|*Bufor* jest **o wartości NULL**|-1|**EINVAL**|
+|*Format* jest **o wartości NULL**|-1|**EINVAL**|
+|*Liczba* < = 0|-1|**EINVAL**|
+|*sizeOfBuffer* za mały (i *liczba* ! = **_TRUNCATE**)|-1 (i *buforu* ustawiony na pusty ciąg)|**ERANGE**|
 
 ## <a name="remarks"></a>Uwagi
 
-Każda z tych funkcji przyjmuje wskaźnik do listy argumentów, a następnie formatuje i zapisuje do *liczba* znaki określone dane do pamięci wskazywanej przez *buforu* i dołącza zakończenia wartości null.
+Każda z tych funkcji pobiera wskaźnik do listy argumentów, a następnie formatuje i zapisuje do *liczba* znaków dostarczone dane do pamięci wskazywany przez *buforu* i dołącza zakończenia o wartości null.
 
-Jeśli *liczba* jest [_truncate —](../../c-runtime-library/truncate.md), a następnie zapisać te funkcje, jaka ciągu, ile zmieści się *buforu* pozostawiając miejsca do zakończenia wartości null. Jeśli cały ciąg (przy użyciu zakończenia wartości null) mieści się w *buforu*, następnie funkcje zwracają liczbę znaków, zapisane (bez przerywania null); w przeciwnym razie funkcje zwracają wartość -1, aby wskazać, że obcięcie Wystąpił.
+Jeśli *liczba* jest [_TRUNCATE](../../c-runtime-library/truncate.md), wówczas te funkcje wpisuje tyle parametrów pasujące *buforu* przy równoczesnym zachowaniu miejsca do zakończenia o wartości null. Jeśli cały ciąg (z zakończenia o wartości null) są dopasowane do *buforu*, następnie te funkcje zwracają liczbę znaków napisanych (nie wliczając zakończenia o wartości null); w przeciwnym wypadku te funkcje zwracają wartość -1, aby wskazać, że obcięcie Wystąpił.
 
-Wersje tych funkcji z **_l** sufiks są identyczne, z wyjątkiem tego, aby używały parametr ustawień regionalnych przekazano zamiast bieżącego ustawienia regionalne wątku.
+Wersje tych funkcji **_l** sufiksem są identyczne, z tą różnicą, że używają parametru ustawień regionalnych przekazanych zamiast bieżących ustawień regionalnych wątku.
 
 > [!IMPORTANT]
-> Upewnij się, że *format* nie jest ciągiem zdefiniowane przez użytkownika. Aby uzyskać więcej informacji, zobacz [unikanie Overruns buforu](http://msdn.microsoft.com/library/windows/desktop/ms717795).
+> Upewnij się, że *format* nie jest ciągiem zdefiniowanym przez użytkownika. Aby uzyskać więcej informacji, zobacz [unikanie przepełnień bufora](/windows/desktop/SecBP/avoiding-buffer-overruns).
 
 > [!NOTE]
-> Aby upewnić się, czy jest miejsce na null Trwa przerywanie działania, upewnij się, że *liczba* jest ściśle mniejsza niż długość buforu, lub użyj **_truncate —**.
+> Aby upewnić się, że ma miejsce dla zakończenia o wartości null, upewnij się, że *liczba* jest mniejsza niż długość buforu lub użyj **_TRUNCATE**.
 
-W języku C++ za pomocą tych funkcji zostało uproszczone dzięki przeciążenia szablonu; przeciążeń można automatycznie rozpoznać długość buforu (wyeliminowanie konieczności określania argumentem rozmiaru) i automatycznie można zastąpić starszą, które nie są bezpieczne funkcje z ich odpowiedniki nowsza, bezpieczne. Aby uzyskać więcej informacji, zobacz [Secure szablonu Overloads](../../c-runtime-library/secure-template-overloads.md).
+W języku C++ korzystanie z tych funkcji jest uproszczone przez przeciążania szablonu; przeciążenia mogą automatycznie wywnioskować długość buforu (eliminując potrzebę określenia argumentu rozmiaru) oraz ich mogą automatycznie zastąpić starsze, niezabezpieczone funkcje ich nowsze, bezpieczne odpowiedniki. Aby uzyskać więcej informacji, zobacz [Secure przeciążenia szablonu](../../c-runtime-library/secure-template-overloads.md).
 
 ### <a name="generic-text-routine-mappings"></a>Mapowania procedur zwykłego tekstu
 
-|Procedura TCHAR.H|_Unicode — & _MBCS nie zdefiniowany|_MBCS zdefiniowano|_UNICODE zdefiniowano|
+|Procedura TCHAR.H|_UNICODE & _MBCS nie zdefiniowano|_MBCS zdefiniowano|_UNICODE zdefiniowano|
 |---------------------|------------------------------------|--------------------|-----------------------|
 |**_vsntprintf_s —**|**_vsnprintf_s**|**_vsnprintf_s**|**_vsnwprintf_s**|
 |**_vsntprintf_s_l —**|**_vsnprintf_s_l**|**_vsnprintf_s_l**|**_vsnwprintf_s_l**|
@@ -186,7 +186,7 @@ W języku C++ za pomocą tych funkcji zostało uproszczone dzięki przeciążeni
 |**_vsnprintf_s —**, **_vsnprintf_s_l —**|\<stdio.h > i \<stdarg.h >|\<varargs.h>*|
 |**_vsnwprintf_s —**, **_vsnwprintf_s_l —**|\<stdio.h > lub \<wchar.h >, a \<stdarg.h >|\<varargs.h>*|
 
-\* Wymagany w przypadku zgodności UNIX V.
+\* Wymagane dla zgodności systemu UNIX V.
 
 Aby uzyskać dodatkowe informacje o zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md).
 
@@ -224,7 +224,7 @@ nSize: -1, buff: Hi there!
 
 ## <a name="see-also"></a>Zobacz także
 
-[We/Wy strumienia](../../c-runtime-library/stream-i-o.md)<br/>
+[Stream operacji We/Wy](../../c-runtime-library/stream-i-o.md)<br/>
 [vprintf, funkcje](../../c-runtime-library/vprintf-functions.md)<br/>
 [fprintf, _fprintf_l, fwprintf, _fwprintf_l](fprintf-fprintf-l-fwprintf-fwprintf-l.md)<br/>
 [printf, _printf_l, wprintf, _wprintf_l](printf-printf-l-wprintf-wprintf-l.md)<br/>

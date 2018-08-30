@@ -26,15 +26,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a8697e52368fd407d1c325990552ee9851d48a76
-ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
+ms.openlocfilehash: d82d61476e4af024eff53c0943a8a9e293c8d285
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/26/2018
-ms.locfileid: "36953223"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43210747"
 ---
 # <a name="ccubictransition-class"></a>Klasa CCubicTransition
-Hermetyzuje przejścia trzeciego stopnia.  
+Hermetyzuje sześcienne przejścia.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -54,18 +54,18 @@ class CCubicTransition : public CBaseTransition;
   
 |Nazwa|Opis|  
 |----------|-----------------|  
-|[CCubicTransition::Create](#create)|Wywołuje biblioteki przejścia do utworzenia obiektu hermetyzowany przejścia COM. (Przesłania [CBaseTransition::Create](../../mfc/reference/cbasetransition-class.md#create).)|  
+|[CCubicTransition::Create](#create)|Wywołania biblioteki przejścia do utworzenia obiektu zhermetyzowany przejścia COM. (Przesłania [CBaseTransition::Create](../../mfc/reference/cbasetransition-class.md#create).)|  
   
 ### <a name="public-data-members"></a>Publiczne elementy członkowskie danych  
   
 |Nazwa|Opis|  
 |----------|-----------------|  
-|[CCubicTransition::m_dblFinalValue](#m_dblfinalvalue)|Wartość zmiennej animacji na końcu przejścia.|  
-|[CCubicTransition::m_dblFinalVelocity](#m_dblfinalvelocity)|Szybkość pracy zmiennej na końcu przejścia.|  
+|[CCubicTransition::m_dblFinalValue](#m_dblfinalvalue)|Wartość zmiennej animacji z końcem przejścia.|  
+|[CCubicTransition::m_dblFinalVelocity](#m_dblfinalvelocity)|Prędkość zmiennej z końcem przejścia.|  
 |[CCubicTransition::m_duration](#m_duration)|Czas trwania przejścia.|  
   
 ## <a name="remarks"></a>Uwagi  
- Podczas przejścia trzeciego stopnia wartość zmiennej animacji zmienia ze swojej wartości początkowej do określonej wartości końcowej w czasie trwania przejścia koniec określonej szybkości. Ponieważ wszystkie przejścia są automatycznie usuwane, zaleca się ich przydzielony przy użyciu nowego operatora. Hermetyzowany obiektu IUIAnimationTransition COM utworzeniu przez CAnimationController::AnimateGroup, aż do, a następnie jest NULL. Po utworzenia tego obiektu modelu COM nie ma wpływu, zmiana zmiennych Członkowskich.  
+ Podczas sześcienne przejścia wartość zmiennej animacji zmienia się ze swojej wartości początkowej określonej wartości końcowej w czasie trwania przejścia, kończąc na określonym szybkość pracy. Ponieważ wszystkie przejścia są automatycznie czyszczone, zaleca się ich przydzielone za pomocą nowego operatora. Zhermetyzowanego obiektu IUIAnimationTransition COM przy utworzono CAnimationController::AnimateGroup, aż do, a następnie ma wartość NULL. Zmienianie zmiennych składowych, po tworzenie ten obiekt COM nie ma wpływu.  
   
 ## <a name="inheritance-hierarchy"></a>Hierarchia dziedziczenia  
  [CObject](../../mfc/reference/cobject-class.md)  
@@ -92,13 +92,13 @@ CCubicTransition(
  Czas trwania przejścia.  
   
  *finalValue*  
- Wartość zmiennej animacji na końcu przejścia.  
+ Wartość zmiennej animacji z końcem przejścia.  
   
  *finalVelocity*  
- Szybkość pracy zmiennej na końcu przejścia.  
+ Prędkość zmiennej z końcem przejścia.  
   
 ##  <a name="create"></a>  CCubicTransition::Create  
- Wywołuje biblioteki przejścia do utworzenia obiektu hermetyzowany przejścia COM.  
+ Wywołania biblioteki przejścia do utworzenia obiektu zhermetyzowany przejścia COM.  
   
 ```  
 virtual BOOL Create(
@@ -108,20 +108,20 @@ virtual BOOL Create(
   
 ### <a name="parameters"></a>Parametry  
 *pLibrary*  
- Wskaźnik do [interfejsu IUIAnimationTransitionLibrary](https://msdn.microsoft.com/library/windows/desktop/dd371897), który definiuje biblioteki standardowe przejścia.  
+ Wskaźnik do [interfejsu IUIAnimationTransitionLibrary](/windows/desktop/api/uianimation/nn-uianimation-iuianimationtransitionlibrary), który definiuje bibliotekę przejścia standardowe.  
 
 ### <a name="return-value"></a>Wartość zwracana  
- Wartość TRUE, jeśli przejście jest tworzony pomyślnie; w przeciwnym razie wartość FALSE.  
+ Wartość TRUE, jeśli przejście został utworzony pomyślnie; w przeciwnym razie wartość FALSE.  
   
 ##  <a name="m_dblfinalvalue"></a>  CCubicTransition::m_dblFinalValue  
- Wartość zmiennej animacji na końcu przejścia.  
+ Wartość zmiennej animacji z końcem przejścia.  
   
 ```  
 DOUBLE m_dblFinalValue;  
 ```  
   
 ##  <a name="m_dblfinalvelocity"></a>  CCubicTransition::m_dblFinalVelocity  
- Szybkość pracy zmiennej na końcu przejścia.  
+ Prędkość zmiennej z końcem przejścia.  
   
 ```  
 DOUBLE m_dblFinalVelocity;  

@@ -1,5 +1,5 @@
 ---
-title: Karty i kartę kontroli atrybutów | Dokumentacja firmy Microsoft
+title: Karty i kartę kontrolowania atrybuty | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,23 +18,23 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cd2129ad4b2dc075893a730c0ba75de96dbebea0
-ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
+ms.openlocfilehash: c02f939c9f9314f3e24921879836c2743ae7d5ea
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/26/2018
-ms.locfileid: "36952862"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43223285"
 ---
 # <a name="tabs-and-tab-control-attributes"></a>Karty i atrybuty formantu karty
-Masz znaczną kontrolę nad wyglądu i zachowania kart, które tworzą formantu karty ([CTabCtrl](../mfc/reference/ctabctrl-class.md)). Każda karta może mieć etykietę, ikonę stanu elementu i zdefiniowanym przez aplikację 32-bitową wartość skojarzonych z nim. Dla każdej karty można wyświetlić ikony i etykiety.  
+Masz znaczną kontrolę nad wyglądu i zachowania kart, które tworzą formantu karty ([CTabCtrl](../mfc/reference/ctabctrl-class.md)). Każda karta może mieć etykietę, ikony, stan elementu i zdefiniowanych przez aplikację 32-bitową wartość skojarzonych z nim. Dla każdej karty można wyświetlić, ikona i/lub etykiety.  
   
- Ponadto każdy element karta może mieć trzy stany: naciśnięty, nieklikniętego lub wyróżnione. Ten stan można ustawić tylko przez zmodyfikowanie istniejącego elementu kartę. Aby zmodyfikować istniejący element kartę, należy pobrać go z wywołaniem do [GetItem](../mfc/reference/ctabctrl-class.md#getitem), zmodyfikuj `TCITEM` — Struktura (w szczególności *dwState* i *dwStateMask* elementy członkowskie danych ), a następnie wróć do modyfikacji `TCITEM` struktury wywołaniem [SetItem](../mfc/reference/ctabctrl-class.md#setitem). Jeśli musisz wyczyścić stanów elementu wszystkich elementów w karcie `CTabCtrl` obiektów, wywoływania [DeselectAll](../mfc/reference/ctabctrl-class.md#deselectall). Ta funkcja resetuje stan wszystkich elementów kartę lub wszystkie elementy oprócz jednego wybranego.  
+ Ponadto każdy element karta może mieć trzy stany: naciśnięty, nieklikniętego lub wyróżnione. Ten stan można ustawić tylko przez zmodyfikowanie istniejącego elementu karty. Aby zmodyfikować istniejący element kartę, należy pobrać go przy użyciu wywołania do [GetItem](../mfc/reference/ctabctrl-class.md#getitem), zmodyfikować `TCITEM` struktury (w szczególności *dwState* i *dwStateMask* elementy członkowskie danych ), a następnie zwracają zmodyfikowanego `TCITEM` struktury z wywołaniem [SetItem](../mfc/reference/ctabctrl-class.md#setitem). Jeśli musisz wyczyścić stanów elementu wszystkich elementów w karcie `CTabCtrl` obiektu, wywołanie [DeselectAll](../mfc/reference/ctabctrl-class.md#deselectall). Ta funkcja resetuje stan wszystkich elementów kartę lub wszystkie elementy z wyjątkiem aktualnie wybrany.  
   
- Poniższy kod usuwa stan wszystkich elementów kartę i następnie modyfikuje stan trzeciego elementu:  
+ Poniższy kod usuwa stan wszystkich elementów w karcie i następnie modyfikuje stan trzeci element:  
   
  [!code-cpp[NVC_MFCControlLadenDialog#32](../mfc/codesnippet/cpp/tabs-and-tab-control-attributes_1.cpp)]  
   
- Aby uzyskać więcej informacji o karcie atrybutów, zobacz [karty i atrybuty karty](http://msdn.microsoft.com/library/windows/desktop/bb760550) w zestawie Windows SDK. Aby uzyskać więcej informacji na temat Dodawanie kart do formantu karty, zobacz [Dodawanie kart do formantu karty](../mfc/adding-tabs-to-a-tab-control.md) dalszej części tego tematu.  
+ Aby uzyskać więcej informacji na temat atrybutów karty zobacz [karty i atrybuty w karcie](/windows/desktop/Controls/tab-controls) w zestawie Windows SDK. Aby uzyskać więcej informacji na temat Dodawanie kart do formantu karty zobacz [Dodawanie kart do formantu karty](../mfc/adding-tabs-to-a-tab-control.md) w dalszej części tego tematu.  
   
 ## <a name="see-also"></a>Zobacz też  
  [Korzystanie z CTabCtrl](../mfc/using-ctabctrl.md)   

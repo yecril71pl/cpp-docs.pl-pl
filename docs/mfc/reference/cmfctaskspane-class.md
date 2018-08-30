@@ -204,12 +204,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 51beef03fe4e92f4eacd733b2d92b04675ed4242
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: 1b7f83175e2bf3fe1e69ef02192749916e566edd
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42465810"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43215256"
 ---
 # <a name="cmfctaskspane-class"></a>Klasa CMFCTasksPane
 Aby uzyskać więcej informacji, zobacz kod źródłowy znajdujący się w **VC\\atlmfc\\src\\mfc** folder instalacji programu Visual Studio.  
@@ -284,7 +284,7 @@ class CMFCTasksPane : public CDockablePane
 |[CMFCTasksPane::IsToolBox](#istoolbox)||  
 |[CMFCTasksPane::IsWrapLabelsEnabled](#iswraplabelsenabled)|Wskazuje, czy w okienku zadań zawija tekst w etykiecie.|  
 |[CMFCTasksPane::IsWrapTasksEnabled](#iswraptasksenabled)|Wskazuje, czy w okienku zadań zawija tekst w zadaniach.|  
-|[CMFCTasksPane::LoadState](#loadstate)|(Przesłania [CDockablePane::LoadState](http://msdn.microsoft.com/96110136-4f46-4764-8a76-3b4abaf77917).)|  
+|[CMFCTasksPane::LoadState](#loadstate)|(Przesłania [CDockablePane::LoadState](https://msdn.microsoft.com/96110136-4f46-4764-8a76-3b4abaf77917).)|  
 |[CMFCTasksPane::OnCancel](#oncancel)||  
 |[CMFCTasksPane::OnClickTask](#onclicktask)|Wywoływane przez platformę, gdy użytkownik kliknie element w okienku zadań.|  
 |[CMFCTasksPane::OnOK](#onok)||  
@@ -293,8 +293,8 @@ class CMFCTasksPane : public CDockablePane
 |[CMFCTasksPane::OnPressHomeButton](#onpresshomebutton)|Wywoływane przez platformę, gdy użytkownik kliknie przycisk nawigacji macierzystego|  
 |[CMFCTasksPane::OnPressOtherButton](#onpressotherbutton)||  
 |[CMFCTasksPane::OnSetAccData](#onsetaccdata)|(Przesłania [CBasePane::OnSetAccData](../../mfc/reference/cbasepane-class.md#onsetaccdata).)|  
-|[CMFCTasksPane::OnUpdateCmdUI](#onupdatecmdui)|(Przesłania [CDockablePane::OnUpdateCmdUI](http://msdn.microsoft.com/5dd61606-1c12-40d4-b024-f3839aa5e2e0).)|  
-|[CMFCTasksPane::PreTranslateMessage](#pretranslatemessage)|(Przesłania [CDockablePane::PreTranslateMessage](http://msdn.microsoft.com/49a242cc-b158-400e-9e01-0345ec9c3ffd).)|  
+|[CMFCTasksPane::OnUpdateCmdUI](#onupdatecmdui)|(Przesłania [CDockablePane::OnUpdateCmdUI](https://msdn.microsoft.com/5dd61606-1c12-40d4-b024-f3839aa5e2e0).)|  
+|[CMFCTasksPane::PreTranslateMessage](#pretranslatemessage)|(Przesłania [CDockablePane::PreTranslateMessage](https://msdn.microsoft.com/49a242cc-b158-400e-9e01-0345ec9c3ffd).)|  
 |[CMFCTasksPane::RecalcLayout](#recalclayout)|(Przesłania [CPane::RecalcLayout](../../mfc/reference/cpane-class.md#recalclayout).)|  
 |[CMFCTasksPane::RemoveAllGroups](#removeallgroups)|Usuwa wszystkie grupy w określonej strony.|  
 |[CMFCTasksPane::RemoveAllPages](#removeallpages)|Usuwa wszystkie strony z poziomu okienka zadań, z wyjątkiem domyślnej strony (pierwszym).|  
@@ -302,8 +302,8 @@ class CMFCTasksPane : public CDockablePane
 |[CMFCTasksPane::RemoveGroup](#removegroup)|Usuwa grupę.|  
 |[CMFCTasksPane::RemovePage](#removepage)|Usuwa określoną stronę z okienka zadań.|  
 |[CMFCTasksPane::RemoveTask](#removetask)|Usuwa zadania z grupy zadań.|  
-|[CMFCTasksPane::SaveState](#savestate)|(Przesłania [CDockablePane::SaveState](http://msdn.microsoft.com/c5c24249-8d0d-46cb-96d9-9f5c6dc191db).)|  
-|[CMFCTasksPane::Serialize](#serialize)|(Przesłania [CDockablePane::Serialize](http://msdn.microsoft.com/09787e59-e446-4e76-894b-206d303dcfd6).)|  
+|[CMFCTasksPane::SaveState](#savestate)|(Przesłania [CDockablePane::SaveState](https://msdn.microsoft.com/c5c24249-8d0d-46cb-96d9-9f5c6dc191db).)|  
+|[CMFCTasksPane::Serialize](#serialize)|(Przesłania [CDockablePane::Serialize](https://msdn.microsoft.com/09787e59-e446-4e76-894b-206d303dcfd6).)|  
 |[CMFCTasksPane::SetActivePage](#setactivepage)|Aktywuje określonej stronie w okienku zadań.|  
 |[CMFCTasksPane::SetCaption](#setcaption)|Określa nazwę podpisu okienka zadań.|  
 |[CMFCTasksPane::SetGroupCaptionHeight](#setgroupcaptionheight)|Określa wysokość podpis grupy.|  

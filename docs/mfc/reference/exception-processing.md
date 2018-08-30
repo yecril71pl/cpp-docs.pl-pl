@@ -23,12 +23,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e77284d36a7290f5d9070bb355a8affae9ba864f
-ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
+ms.openlocfilehash: 186a6705649cee7095d3d2e4c4bb237498fdcea0
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37336864"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43221274"
 ---
 # <a name="exception-processing"></a>Przetwarzanie wyjątków
 Liczba nietypowych warunków błędów oraz nazywany "liczba wyjątków" może wystąpić, gdy program działa. Mogą one zawierać, ilość pamięci, błędy alokacji zasobów i nie można odnaleźć plików.  
@@ -350,7 +350,7 @@ void AfxThrowMemoryException();
 ```  
   
 ### <a name="remarks"></a>Uwagi  
- Wywołaj tę funkcję, jeśli wywołania do bazowego buforów pamięci systemu (takich jak **— funkcja malloc** i [działanie funkcji GlobalAlloc](http://msdn.microsoft.com/library/windows/desktop/aa366574) funkcji Windows) się nie powieść. Nie musisz wywołać ją dla **nowe** ponieważ **nowe** spowoduje zgłoszenie wyjątku pamięci automatycznie Jeśli alokacja pamięci nie powiedzie się.  
+ Wywołaj tę funkcję, jeśli wywołania do bazowego buforów pamięci systemu (takich jak **— funkcja malloc** i [działanie funkcji GlobalAlloc](/windows/desktop/api/winbase/nf-winbase-globalalloc) funkcji Windows) się nie powieść. Nie musisz wywołać ją dla **nowe** ponieważ **nowe** spowoduje zgłoszenie wyjątku pamięci automatycznie Jeśli alokacja pamięci nie powiedzie się.  
   
 ### <a name="requirements"></a>Wymagania  
   **Nagłówek** afx.h  
@@ -444,7 +444,7 @@ void AFXAPI AfxThrowOleException(HRESULT hr);
  Dojście do kod wyniku, który wskazuje przyczyny, dla wyjątku.  
   
 ### <a name="remarks"></a>Uwagi  
- Wersja, która przyjmuje wartość HRESULT jako argument konwertuje kod wyniku odpowiedniego SCODE. Aby uzyskać więcej informacji na temat HRESULT i SCODE, zobacz [struktury COM kody błędów](http://msdn.microsoft.com/library/windows/desktop/ms690088) w zestawie Windows SDK.  
+ Wersja, która przyjmuje wartość HRESULT jako argument konwertuje kod wyniku odpowiedniego SCODE. Aby uzyskać więcej informacji na temat HRESULT i SCODE, zobacz [struktury COM kody błędów](/windows/desktop/com/structure-of-com-error-codes) w zestawie Windows SDK.  
   
 ### <a name="requirements"></a>Wymagania  
   **Nagłówek** afxdao.h  

@@ -96,12 +96,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 07e38d11ef25ebc2f1da888594ab84fe2261c53a
-ms.sourcegitcommit: 76fd30ff3e0352e2206460503b61f45897e60e4f
+ms.openlocfilehash: d32b6e61ab0dbac6010c6ed233f2cd822e73c2d5
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/13/2018
-ms.locfileid: "39028336"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43220978"
 ---
 # <a name="multiset-class"></a>multiset — Klasa
 
@@ -116,13 +116,16 @@ class multiset
 
 ### <a name="parameters"></a>Parametry
 
-*Klucz* typ danych elementu, który ma być przechowywany w zestawie wielokrotnym.
+*Key*<br/>
+ Typ danych elementu do przechowywania w zestawie wielokrotnym.
 
-*Porównaj* typ, który dostarcza obiekt funkcji, która może porównać dwie wartości elementów jako klucze sortowania, aby określić ich względną kolejność w zestawie wielokrotnym. Predykat dwuelementowy **mniej**\<Key > jest wartością domyślną.
+*Compare*<br/>
+ Typ, który dostarcza obiekt funkcji, która może porównać dwie wartości elementów jako klucze sortowania, aby określić ich względną kolejność w zestawie wielokrotnym. Predykat dwuelementowy **mniej**\<Key > jest wartością domyślną.
 
 W języku C ++ 14 można włączyć heterogeniczne wyszukiwanie, określając `std::less<>` lub `std::greater<>` predykat, który nie ma parametrów typu. Aby uzyskać więcej informacji, zobacz [heterogeniczne wyszukiwanie w kontenerach asocjacyjnych](../standard-library/stl-containers.md#sequence_containers)
 
-*Allocator* typ reprezentujący przechowywany obiekt alokatora, który hermetyzuje szczegóły dotyczące alokacji zestawu wielokrotnego i dezalokacji pamięci. Wartość domyślna to **alokatora ***\<Key >.*
+*Allocator*<br/>
+ Typ reprezentujący przechowywany obiekt alokatora, który hermetyzuje szczegóły dotyczące alokacji zestawu wielokrotnego i dezalokacji pamięci. Wartość domyślna to `allocator<Key>`.
 
 ## <a name="remarks"></a>Uwagi
 
@@ -478,7 +481,8 @@ size_type count(const Key& key) const;
 
 ### <a name="parameters"></a>Parametry
 
-*klucz* klucz elementy, które mają być dopasowywane w zestawie wielokrotnym.
+*Klucz*<br/>
+ Klucz elementy, które mają być dopasowywane w zestawie wielokrotnym.
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -873,7 +877,8 @@ pair <iterator, iterator> equal_range (const Key& key);
 
 ### <a name="parameters"></a>Parametry
 
-*klucz* klucza argumentu ma być porównywana za pomocą klucza sortowania z multiset wyszukiwany element.
+*Klucz*<br/>
+ Argument klucza, który ma zostać porównane z klucza sortowania elementu w zestawie wielokrotnym wyszukiwany.
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -957,13 +962,17 @@ size_type erase(
 
 ### <a name="parameters"></a>Parametry
 
-*Gdzie* pozycję elementu do usunięcia.
+*Where*<br/>
+ Pozycja elementu, który ma zostać usunięty.
 
-*Pierwszy* pozycja pierwszego elementu do usunięcia.
+*pierwszy*<br/>
+ Pozycja pierwszego elementu do usunięcia.
 
-*Ostatni* pozycji tuż za ostatni element do usunięcia.
+*ostatni*<br/>
+ Pozycja tuż za ostatni element do usunięcia.
 
-*Klucz* wartość klucza elementów do usunięcia.
+*Key*<br/>
+ Wartość klucza elementów do usunięcia.
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -988,7 +997,8 @@ const_iterator find(const Key& key) const;
 
 ### <a name="parameters"></a>Parametry
 
-*klucz* wartości klucza, które mają być dopasowywane o klucz sortowania elementu w zestawie wielokrotnym wyszukiwany.
+*Klucz*<br/>
+ Wartość klucza, które mają być dopasowywane o klucz sortowania elementu w zestawie wielokrotnym wyszukiwany.
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -1430,7 +1440,8 @@ iterator lower_bound(const Key& key);
 
 ### <a name="parameters"></a>Parametry
 
-*klucz* klucza argumentu ma być porównywana za pomocą klucza sortowania z multiset wyszukiwany element.
+*Klucz*<br/>
+ Argument klucza, który ma zostać porównane z klucza sortowania elementu w zestawie wielokrotnym wyszukiwany.
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -1575,7 +1586,7 @@ multiset (
 |-|-|
 |*Al*|Klasa alokatora magazynu, który ma być używany dla tego obiektu multiset, która domyślnie `Allocator`.|
 |*Comp*|Funkcja porównywania typu `const Compare` porządkowania elementów w zestawie wielokrotnym, wartość domyślna to `Compare`.|
-|*Po prawej stronie*|Multiset, w której skonstruowany multiset jest kopią.|
+|*po prawej stronie*|Multiset, w której skonstruowany multiset jest kopią.|
 |*pierwszy*|Pozycja pierwszego elementu w zakresie elementów, które mają zostać skopiowane.|
 |*ostatni*|Pozycja pierwszego elementu poza zakresem elementów, które mają zostać skopiowane.|
 |*IList*|Lista initializer_list, z której mają być skopiowane elementy.|
@@ -2036,7 +2047,8 @@ void swap(
 
 ### <a name="parameters"></a>Parametry
 
-*prawy* multiset argument zawierająca elementy, które zamianę z docelowym zestawie wielokrotnym.
+*right*<br/>
+ Zestaw wielokrotny argumentu, zawierająca elementy, które zamianę z docelowym zestawie wielokrotnym.
 
 ### <a name="remarks"></a>Uwagi
 
@@ -2104,7 +2116,8 @@ iterator upper_bound(const Key& key);
 
 ### <a name="parameters"></a>Parametry
 
-*klucz* klucza argumentu ma być porównywana za pomocą klucza sortowania z multiset wyszukiwany element.
+*Klucz*<br/>
+ Argument klucza, który ma zostać porównane z klucza sortowania elementu w zestawie wielokrotnym wyszukiwany.
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -2307,7 +2320,7 @@ The multiset has elements: 10 20.
 
 ## <a name="see-also"></a>Zobacz także
 
-[\<Ustaw > elementy członkowskie](http://msdn.microsoft.com/0c2d57c0-173f-4204-b579-c5f06aad8b95)<br/>
+[\<Ustaw > elementy członkowskie](https://msdn.microsoft.com/0c2d57c0-173f-4204-b579-c5f06aad8b95)<br/>
 [Kontenery](../cpp/containers-modern-cpp.md)<br/>
 [Bezpieczeństwo wątku w standardowej bibliotece C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>
 [Dokumentacja standardowej biblioteki C++](../standard-library/cpp-standard-library-reference.md)<br/>

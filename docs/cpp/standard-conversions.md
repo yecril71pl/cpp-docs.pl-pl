@@ -16,15 +16,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1365e950077a65150d8f71fd640f69d1750068c9
-ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
+ms.openlocfilehash: 87c8cb1bbd007022a5c01b2aaacdb0233a59068f
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39462313"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43220791"
 ---
 # <a name="standard-conversions"></a>Konwersje standardowe
-Język C++ definiuje konwersje między typami podstawowymi. Definiuje również konwersji do wskaźnik, odniesieni i typy pochodne wskaźników do elementów członkowskich. Konwersje te są nazywane "konwersje standardowe". (Aby uzyskać więcej informacji na temat typów, standardowych typów i typów pochodnych, zobacz [typy](http://msdn.microsoft.com/6882ee83-ea32-4373-8d57-c3efbbc15af0).)  
+Język C++ definiuje konwersje między typami podstawowymi. Definiuje również konwersji do wskaźnik, odniesieni i typy pochodne wskaźników do elementów członkowskich. Konwersje te są nazywane "konwersje standardowe". (Aby uzyskać więcej informacji na temat typów, standardowych typów i typów pochodnych, zobacz [typy](https://msdn.microsoft.com/6882ee83-ea32-4373-8d57-c3efbbc15af0).)  
   
  W tej sekcji omówiono następujące konwersje standardowe:  
   
@@ -210,7 +210,7 @@ Wykres dziedziczenia opisano klasy podstawowej w ułatwienia dostępu
 ||Protected|Tak|  
 ||Public|Tak|  
   
- Drugi przypadek, w którym wskaźnik do klasy można przekonwertować na wskaźnik do klasy bazowej jest w przypadku używania jawną konwersję typu. (Zobacz [wyrażenia z jawne konwersje typów](http://msdn.microsoft.com/060ad6b4-9592-4f3e-8509-a20ac84a85ae) Aby uzyskać więcej informacji dotyczących konwersji typu jawnego.)  
+ Drugi przypadek, w którym wskaźnik do klasy można przekonwertować na wskaźnik do klasy bazowej jest w przypadku używania jawną konwersję typu. (Zobacz [wyrażenia z jawne konwersje typów](https://msdn.microsoft.com/060ad6b4-9592-4f3e-8509-a20ac84a85ae) Aby uzyskać więcej informacji dotyczących konwersji typu jawnego.)  
   
  Wynik konwersji elementu jest wskaźnikiem do "podobiektu," część obiektu, który jest całkowicie opisane przez klasę bazową.  
   
@@ -249,7 +249,7 @@ int main()
  Wskaźnik do funkcji może być konwertowany na typ `void *`, jeśli typ `void *` jest wystarczająco duży, aby pomieścić ten wskaźnik.  
   
 ### <a name="pointer-to-void"></a>Wskaźnik do typu void  
- Wskaźniki do typu **void** mogą być konwertowane do wskaźników do jakichkolwiek innych typów, ale tylko w przypadku typu jawnego rzutowania (w przeciwieństwie do w języku C). (Zobacz [wyrażenia z jawne konwersje typów](http://msdn.microsoft.com/060ad6b4-9592-4f3e-8509-a20ac84a85ae) Aby uzyskać więcej informacji na temat typu rzutowania.) Wskaźnik do dowolnego typu można niejawnie przekonwertować na wskaźnik do typu **void**. Wskaźnik do obiektu niekompletnego typu można przekonwertować na wskaźnik do **void** (niejawnie) i wykonać ich kopię (jawne). Wynik konwersji elementu jest równa wartości oryginalny wskaźnik. Obiekt jest traktowany jako niekompletne, jeśli jest on zadeklarowany, ale ma za mało informacji do określenia jego rozmiar lub klasa bazowa.  
+ Wskaźniki do typu **void** mogą być konwertowane do wskaźników do jakichkolwiek innych typów, ale tylko w przypadku typu jawnego rzutowania (w przeciwieństwie do w języku C). (Zobacz [wyrażenia z jawne konwersje typów](https://msdn.microsoft.com/060ad6b4-9592-4f3e-8509-a20ac84a85ae) Aby uzyskać więcej informacji na temat typu rzutowania.) Wskaźnik do dowolnego typu można niejawnie przekonwertować na wskaźnik do typu **void**. Wskaźnik do obiektu niekompletnego typu można przekonwertować na wskaźnik do **void** (niejawnie) i wykonać ich kopię (jawne). Wynik konwersji elementu jest równa wartości oryginalny wskaźnik. Obiekt jest traktowany jako niekompletne, jeśli jest on zadeklarowany, ale ma za mało informacji do określenia jego rozmiar lub klasa bazowa.  
   
  Wskaźnik do dowolnego obiektu, który nie jest **const** lub **volatile** można niejawnie przekonwertować na wskaźnik typu `void *`.  
   

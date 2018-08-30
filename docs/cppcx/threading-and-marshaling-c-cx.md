@@ -15,12 +15,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 09b9e008b586b1a312770d7cdfc43dc500932158
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: da198a6a807413846fdc5b45552bb74252f8acc2
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42611448"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43221372"
 ---
 # <a name="threading-and-marshaling-ccx"></a>Wątkowość i Marshaling (C + +/ CX)
 W zdecydowanej większości przypadków wystąpienia klas środowiska wykonawczego Windows, takich jak standardowymi obiektami C++ jest możliwy z żadnym z wątków. Takich klas są określane jako "agile". Jednak niewielkiej liczby klasy środowiska wykonawczego Windows, które są dostarczane z Windows są inne niż agile i należy wykorzystać w bardziej podobnie jak obiekty COM niż standardowymi obiektami C++. Nie musisz być ekspertem COM, używać klas agile, ale należy wziąć pod uwagę klasy modelu wątkowości i jego zachowanie organizowania. Ten artykuł zawiera wskazówki dotyczące tych rzadkich scenariuszach, w których należy używać wystąpienia klasy — agile i tła.  
@@ -100,7 +100,7 @@ ref class MyOptions
  W programie Visual C++, po utworzeniu odwołania do klasy środowiska wykonawczego Windows w proc, która ma zachowanie marshalingu "None", kompilator generuje ostrzeżenie C4451, ale nie sugerują, rozważ użycie `Platform::Agile<T>`.  Kompilator nie oferuje pomocy poza tym ostrzeżeniu, dlatego jest odpowiedzialny za korzystanie z klasy poprawnie i upewnij się, że Twój kod wywołuje składniki STA, tylko z wątku interfejsu użytkownika i składniki MTA tylko z wątku w tle.  
   
 ## <a name="authoring-agile-windows-runtime-components"></a>Tworzenie agile składników środowiska wykonawczego Windows  
- Podczas definiowania klasy referencyjnej w języku C + +/ CX jest agile domyślnie — oznacza to, że ma ona `ThreadingModel`= zarówno i `MarshallingType`= Agile.  Jeśli używasz Biblioteka szablonów C++ środowiska wykonawczego Windows, możesz wprowadzić klasy agile, wynikające z `FtmBase`, który używa `FreeThreadedMarshaller`.  Jeśli tworzysz klasę, która ma `ThreadingModel`= zarówno lub `ThreadingModel`= MTA, upewnij się, że klasa jest metodą o bezpiecznych wątkach. Aby uzyskać więcej informacji, zobacz [tworzenie i używanie obiektów (WRL)](http://msdn.microsoft.com/en-us/d5e42216-e888-4f1f-865a-b5ccd0def73e).  
+ Podczas definiowania klasy referencyjnej w języku C + +/ CX jest agile domyślnie — oznacza to, że ma ona `ThreadingModel`= zarówno i `MarshallingType`= Agile.  Jeśli używasz Biblioteka szablonów C++ środowiska wykonawczego Windows, możesz wprowadzić klasy agile, wynikające z `FtmBase`, który używa `FreeThreadedMarshaller`.  Jeśli tworzysz klasę, która ma `ThreadingModel`= zarówno lub `ThreadingModel`= MTA, upewnij się, że klasa jest metodą o bezpiecznych wątkach. Aby uzyskać więcej informacji, zobacz [tworzenie i używanie obiektów (WRL)](https://msdn.microsoft.com/d5e42216-e888-4f1f-865a-b5ccd0def73e).  
   
  Można zmodyfikować model wątkowości i zachowanie marshalingu klasy referencyjnej. Jednak jeśli wprowadzisz zmiany, które renderują klasy bez agile, musisz rozumieć konsekwencje, które są skojarzone z tymi zmianami.  
   
@@ -127,5 +127,5 @@ public ref class MySTAClass
  Wątkowość i marshaling informacje wymagane przez składnik środowiska uruchomieniowego Windows innej firmy jest określona w aplikacji informacje rejestracyjne manifestu składnika. Firma Microsoft zaleca wykonanie wszystkie składniki środowiska wykonawczego Windows agile. Dzięki temu kod klienta może wywołać składnika z żadnym z wątków w aplikacji i poprawia wydajność te wywołania, ponieważ są one bezpośrednie wywołania, które mają nie marshaling. Jeśli Tworzenie klasy w ten sposób, a następnie kod klienta, nie trzeba używać `Platform::Agile<T>` korzystanie z klasy.  
   
 ## <a name="see-also"></a>Zobacz też  
- [ThreadingModel](http://msdn.microsoft.com/library/windows/apps/xaml/windows.foundation.metadata.threadingmodel.aspx)   
- [MarshallingBehavior](http://msdn.microsoft.com/library/windows/apps/xaml/windows.foundation.metadata.marshalingbehaviorattribute.aspx)
+ [ThreadingModel](https://msdn.microsoft.com/library/windows/apps/xaml/windows.foundation.metadata.threadingmodel.aspx)   
+ [MarshallingBehavior](https://msdn.microsoft.com/library/windows/apps/xaml/windows.foundation.metadata.marshalingbehaviorattribute.aspx)

@@ -96,12 +96,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5c5bf13a675280b12872c5a5e7bbf19367ff0143
-ms.sourcegitcommit: 76fd30ff3e0352e2206460503b61f45897e60e4f
+ms.openlocfilehash: 29e94acf4b8fad401077a5530d4b6296c30c2740
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/13/2018
-ms.locfileid: "39027735"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43220111"
 ---
 # <a name="multimap-class"></a>multimap — Klasa
 
@@ -119,15 +119,19 @@ class multimap;
 
 ### <a name="parameters"></a>Parametry
 
-*Klucz* danych klucza, który typ ma być przechowywany w mapie wielokrotnej.
+*Key*<br/>
+ Typ danych klucza, który ma być przechowywany w mapie wielokrotnej.
 
-*Typ* typ danych elementu, który ma być przechowywany w mapie wielokrotnej.
+*Typ*<br/>
+ Typ danych elementu, który ma być przechowywany w mapie wielokrotnej.
 
-*Cechy* typ, który dostarcza obiekt funkcji, która może porównać dwie wartości elementów jako klucze sortowania, aby określić ich względną kolejność w mapie wielokrotnej. Predykat dwuelementowy `less<Key>` jest wartością domyślną.
+*Cechy*<br/>
+ Typ, który dostarcza obiekt funkcji, która może porównać dwie wartości elementów jako klucze sortowania, aby określić ich względną kolejność w mapie wielokrotnej. Predykat dwuelementowy `less<Key>` jest wartością domyślną.
 
 W języku C ++ 14 można włączyć heterogeniczne wyszukiwanie, określając `std::less<>` lub `std::greater<>` predykat, który nie ma parametrów typu. Aby uzyskać więcej informacji, zobacz [heterogeniczne wyszukiwanie w kontenerach asocjacyjnych](../standard-library/stl-containers.md#heterogeneous-lookup-in-associative-containers-c14)
 
-*Allocator* typ reprezentujący przechowywany obiekt alokatora, który hermetyzuje szczegóły dotyczące alokacji mapy i dezalokacji pamięci. Ten argument jest opcjonalny, a wartość domyślna to `allocator<pair <const Key, Type> >`.
+*Allocator*<br/>
+ Typ reprezentujący przechowywany obiekt alokatora, który hermetyzuje szczegóły dotyczące alokacji mapy i dezalokacji pamięci. Ten argument jest opcjonalny, a wartość domyślna to `allocator<pair <const Key, Type> >`.
 
 ## <a name="remarks"></a>Uwagi
 
@@ -404,11 +408,11 @@ typedef implementation-defined const_iterator;
 
 Typ `const_iterator` nie może służyć do modyfikowania wartości elementu.
 
-`const_iterator` Zdefiniowane przez multimap — punkty do obiektów [value_type](#value_type), które są typu `pair` * \< * **const Key**, **Typu *** >*. Wartość klucza jest dostępna za pośrednictwem pary pierwszego elementu członkowskiego, a wartość elementu zmapowanego jest dostępna za pośrednictwem drugiego elementu członkowskiego pary.
+`const_iterator` Zdefiniowane przez multimap — punkty do obiektów [value_type](#value_type), które są typu `pair<const Key, Type>`. Wartość klucza jest dostępna za pośrednictwem pary pierwszego elementu członkowskiego, a wartość elementu zmapowanego jest dostępna za pośrednictwem drugiego elementu członkowskiego pary.
 
-Próbę `const_iterator` `cIter` wskazuje element w mapie wielokrotnej, użyj **->** operatora.
+Próbę `const_iterator` *cIter* wskazuje element w mapie wielokrotnej, użyj **->** operatora.
 
-Aby uzyskać dostęp do wartości klucza dla elementu, należy użyć `cIter`  ->  **pierwszy**, która jest równoważna (\* `cIter`). **pierwszy**. Aby uzyskać dostęp do wartości zamapowanego datum dla elementu, należy użyć `cIter`  ->  **drugi**, która jest równoważna (\* `cIter`). **drugi**.
+Aby uzyskać dostęp do wartości klucza dla elementu, należy użyć `cIter->first`, który jest odpowiednikiem `(*cIter).first`. Aby uzyskać dostęp do wartości zamapowanego datum dla elementu, należy użyć `cIter->second`, który jest odpowiednikiem `(*cIter).second`.
 
 ### <a name="example"></a>Przykład
 
@@ -490,11 +494,11 @@ typedef std::reverse_iterator<const_iterator> const_reverse_iterator;
 
 Typ `const_reverse_iterator` nie można zmodyfikować wartości elementu i jest używany do iterowania po multimap w odwrotnej kolejności.
 
-`const_reverse_iterator` Zdefiniowane przez multimap — punkty do obiektów [value_type](#value_type), które są typu `pair` * \< * **const Key**, **Typu *** >*. Wartość klucza jest dostępna za pośrednictwem pary pierwszego elementu członkowskiego, a wartość elementu zmapowanego jest dostępna za pośrednictwem drugiego elementu członkowskiego pary.
+`const_reverse_iterator` Zdefiniowane przez multimap — punkty do obiektów [value_type](#value_type), które są typu `pair<const Key, Type>`. Wartość klucza jest dostępna za pośrednictwem pary pierwszego elementu członkowskiego, a wartość elementu zmapowanego jest dostępna za pośrednictwem drugiego elementu członkowskiego pary.
 
-Próbę `const_reverse_iterator` `crIter` wskazuje element w mapie wielokrotnej, użyj **->** operatora.
+Próbę `const_reverse_iterator` *crIter* wskazuje element w mapie wielokrotnej, użyj **->** operatora.
 
-Aby uzyskać dostęp do wartości klucza dla elementu, należy użyć `crIter`  ->  **pierwszy**, która jest równoważna (\* `crIter`). **pierwszy**. Aby uzyskać dostęp do wartości zamapowanego datum dla elementu, należy użyć `crIter`  ->  **drugi**, która jest równoważna (\* `crIter`). **pierwszy**.
+Aby uzyskać dostęp do wartości klucza dla elementu, należy użyć `crIter->first`, który jest odpowiednikiem `(*crIter).first`. Aby uzyskać dostęp do wartości zamapowanego datum dla elementu, należy użyć `crIter->second`, który jest odpowiednikiem `(*crIter).first`.
 
 ### <a name="example"></a>Przykład
 
@@ -510,7 +514,8 @@ size_type count(const Key& key) const;
 
 ### <a name="parameters"></a>Parametry
 
-*klucz* klucz elementy, które mają być dopasowywane w mapie wielokrotnej.
+*Klucz*<br/>
+ Klucz elementy, które mają być dopasowywane w mapie wielokrotnej.
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -910,7 +915,8 @@ pair <iterator, iterator> equal_range (const Key& key);
 
 ### <a name="parameters"></a>Parametry
 
-*klucz* klucz argument ma zostać porównane z klucza sortowania elementu w mapie wielokrotnej wyszukiwany.
+*Klucz*<br/>
+ Argument klucza, który ma zostać porównane z klucza sortowania elementu w mapie wielokrotnej wyszukiwany.
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -996,13 +1002,17 @@ size_type erase(
 
 ### <a name="parameters"></a>Parametry
 
-*Gdzie* pozycję elementu do usunięcia.
+*Where*<br/>
+ Pozycja elementu, który ma zostać usunięty.
 
-*Pierwszy* pozycja pierwszego elementu do usunięcia.
+*pierwszy*<br/>
+ Pozycja pierwszego elementu do usunięcia.
 
-*Ostatni* pozycji tuż za ostatni element do usunięcia.
+*ostatni*<br/>
+ Pozycja tuż za ostatni element do usunięcia.
 
-*Klucz* klucz elementów do usunięcia.
+*Key*<br/>
+ Klucz elementów do usunięcia.
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -1027,7 +1037,8 @@ const_iterator find(const Key& key) const;
 
 ### <a name="parameters"></a>Parametry
 
-*klucz* wartości klucza, które mają być dopasowywane o klucz sortowania elementu w mapie wielokrotnej wyszukiwany.
+*Klucz*<br/>
+ Wartość klucza, które mają być dopasowywane o klucz sortowania elementu w mapie wielokrotnej wyszukiwany.
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -1350,11 +1361,11 @@ typedef implementation-defined iterator;
 
 ### <a name="remarks"></a>Uwagi
 
-`iterator` Zdefiniowane przez multimap — punkty do obiektów [value_type](#value_type), które są typu `pair` * \< * **const Key**, **Typu *** >*. Wartość klucza jest dostępna za pośrednictwem pary pierwszego elementu członkowskiego, a wartość elementu zmapowanego jest dostępna za pośrednictwem drugiego elementu członkowskiego pary.
+`iterator` Zdefiniowane przez multimap — punkty do obiektów [value_type](#value_type), które są typu `pair<const Key, Type>`. Wartość klucza jest dostępna za pośrednictwem pary pierwszego elementu członkowskiego, a wartość elementu zmapowanego jest dostępna za pośrednictwem drugiego elementu członkowskiego pary.
 
-Próbę **iteratora** `Iter` wskazuje element w mapie wielokrotnej, użyj `->` operatora.
+Próbę `iterator` *Iter* wskazuje element w mapie wielokrotnej, użyj **->** operatora.
 
-Aby uzyskać dostęp do wartości klucza dla elementu, należy użyć `Iter`  ->  **pierwszy**, która jest równoważna (\* `Iter`). **pierwszy**. Aby uzyskać dostęp do wartości zamapowanego datum dla elementu, należy użyć `Iter`  ->  **drugi**, która jest równoważna (\* `Iter`). **drugi**.
+Aby uzyskać dostęp do wartości klucza dla elementu, należy użyć `Iter->first`, który jest odpowiednikiem `(*Iter).first`. Aby uzyskać dostęp do wartości zamapowanego datum dla elementu, należy użyć `Iter->second`, który jest odpowiednikiem `(*Iter).second`.
 
 Typ `iterator` może służyć do modyfikowania wartości elementu.
 
@@ -1378,7 +1389,7 @@ Zwraca obiekt funkcji, mapa wielokrotna używa do porządkowania jego elementów
 
 Przechowywany obiekt definiuje funkcję członka
 
-**bool — operator**( **const Key &** *x*, **const Key &** *y*);
+`bool operator( const Key& x, const Key& y);`
 
 które zwraca wartość true, jeśli *x* ściśle poprzedza *y* w porządku sortowania.
 
@@ -1481,7 +1492,8 @@ const_iterator lower_bound(const Key& key) const;
 
 ### <a name="parameters"></a>Parametry
 
-*klucz* klucz argument ma zostać porównane z klucza sortowania elementu w mapie wielokrotnej wyszukiwany.
+*Klucz*<br/>
+ Argument klucza, który ma zostać porównane z klucza sortowania elementu w mapie wielokrotnej wyszukiwany.
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -1663,7 +1675,7 @@ multimap(
 |-|-|
 |*Al*|Klasa alokatora magazynu, która ma być używany dla tego obiektu multimap, która domyślnie alokatora.|
 |*Comp*|Funkcja porównywania typu `constTraits` porządkowania elementów w mapie, którego wartość domyślna to `Traits`.|
-|*Po prawej stronie*|Mapa, w której zestaw zbudowany jest kopią.|
+|*po prawej stronie*|Mapa, w której zestaw zbudowany jest kopią.|
 |*pierwszy*|Pozycja pierwszego elementu w zakresie elementów, które mają zostać skopiowane.|
 |*ostatni*|Pozycja pierwszego elementu poza zakresem elementów, które mają zostać skopiowane.|
 |*IList*|Lista initializer_list, z której mają być skopiowane elementy.|
@@ -2099,11 +2111,11 @@ typedef std::reverse_iterator<iterator> reverse_iterator;
 
 Typ `reverse_iterator` jest używany do iterowania po multimap w odwrotnej kolejności.
 
-`reverse_iterator` Zdefiniowane przez multimap — punkty do obiektów [value_type](#value_type), które są typu `pair` * \< * **const Key**, **Typu *** >*. Wartość klucza jest dostępna za pośrednictwem pary pierwszego elementu członkowskiego, a wartość elementu zmapowanego jest dostępna za pośrednictwem drugiego elementu członkowskiego pary.
+`reverse_iterator` Zdefiniowane przez multimap — punkty do obiektów [value_type](#value_type), które są typu `pair<const Key, Type>`. Wartość klucza jest dostępna za pośrednictwem pary pierwszego elementu członkowskiego, a wartość elementu zmapowanego jest dostępna za pośrednictwem drugiego elementu członkowskiego pary.
 
-Próbę `reverse_iterator` `rIter` wskazuje element w mapie wielokrotnej, użyj operator ->.
+Próbę `reverse_iterator` *rIter* wskazuje element w mapie wielokrotnej, użyj **->** operatora.
 
-Aby uzyskać dostęp do wartości klucza dla elementu, należy użyć `rIter`  ->  **pierwszy**, która jest równoważna (\* `rIter`). **pierwszy**. Aby uzyskać dostęp do wartości zamapowanego datum dla elementu, należy użyć `rIter`  ->  **drugi**, która jest równoważna (\* `rIter`). **pierwszy**.
+Aby uzyskać dostęp do wartości klucza dla elementu, należy użyć `rIter->first`, który jest odpowiednikiem `(*rIter).first`. Aby uzyskać dostęp do wartości zamapowanego datum dla elementu, należy użyć `rIter->second`, który jest odpowiednikiem `(*rIter).second`.
 
 ### <a name="example"></a>Przykład
 
@@ -2176,7 +2188,8 @@ void swap(
 
 ### <a name="parameters"></a>Parametry
 
-*prawy* multimap zawierająca elementy, które mają być zamienione lub multimap, której elementy są wymieniane z tymi Mapa wielokrotna `left`.
+*right*<br/>
+ Multimap, zawierająca elementy, które mają być zamienione lub multimap, której elementy są wymieniane z tymi Mapa wielokrotna `left`.
 
 ### <a name="remarks"></a>Uwagi
 
@@ -2245,7 +2258,8 @@ const_iterator upper_bound(const Key& key) const;
 
 ### <a name="parameters"></a>Parametry
 
-*klucz* klucz argument ma zostać porównane z klucza sortowania elementu w mapie wielokrotnej wyszukiwany.
+*Klucz*<br/>
+ Argument klucza, który ma zostać porównane z klucza sortowania elementu w mapie wielokrotnej wyszukiwany.
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -2445,7 +2459,7 @@ The values of the mapped elements are: 10 20.
 
 ## <a name="see-also"></a>Zobacz także
 
-[\<Mapa > elementy członkowskie](http://msdn.microsoft.com/7e8f0bc2-6034-40f6-9d14-76d4cef86308)<br/>
+[\<Mapa > elementy członkowskie](https://msdn.microsoft.com/7e8f0bc2-6034-40f6-9d14-76d4cef86308)<br/>
 [Kontenery](../cpp/containers-modern-cpp.md)<br/>
 [Bezpieczeństwo wątku w standardowej bibliotece C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>
 [Dokumentacja standardowej biblioteki C++](../standard-library/cpp-standard-library-reference.md)<br/>

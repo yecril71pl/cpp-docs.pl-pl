@@ -94,12 +94,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 90c2e6f457af9dfa34b63536a79b7764d91bdbec
-ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
+ms.openlocfilehash: 0c94542fdac3734644771f2659d894d1c8c6f907
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37339478"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43220805"
 ---
 # <a name="cmenu-class"></a>Cmenu — klasa
 Hermetyzacja Windows `HMENU`.  
@@ -608,7 +608,7 @@ UINT GetDefaultItem(
  Jeśli funkcja się powiedzie, wartość zwracana jest identyfikatora lub położenie elementu menu. Jeśli funkcja zawiedzie, wartość zwracana jest - 1.  
   
 ### <a name="remarks"></a>Uwagi  
- Ta funkcja elementu członkowskiego implementuje zachowanie funkcji Win32 [GetMenuDefaultItem](http://msdn.microsoft.com/library/windows/desktop/ms647976), zgodnie z opisem w zestawie Windows SDK.  
+ Ta funkcja elementu członkowskiego implementuje zachowanie funkcji Win32 [GetMenuDefaultItem](/windows/desktop/api/winuser/nf-winuser-getmenudefaultitem), zgodnie z opisem w zestawie Windows SDK.  
   
 ### <a name="example"></a>Przykład  
   Zobacz przykład [CMenu::InsertMenu](#insertmenu).  
@@ -635,7 +635,7 @@ BOOL GetMenuInfo(LPMENUINFO lpcmi) const;
   
 ### <a name="parameters"></a>Parametry  
  *lpcmi*  
- Wskaźnik do [MENUINFO](http://msdn.microsoft.com/library/windows/desktop/ms647575) struktury zawierający informacje do menu.  
+ Wskaźnik do [MENUINFO](/windows/desktop/api/winuser/ns-winuser-tagmenuinfo) struktury zawierający informacje do menu.  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Jeśli funkcja się powiedzie, wartość zwracana jest wartość różną od zera; w przeciwnym razie wartość zwracana wynosi zero.  
@@ -688,16 +688,16 @@ BOOL GetMenuItemInfo(
  Identyfikator lub położenie elementu menu, aby uzyskać informacje na. Znaczenie tego parametru jest zależny od wartości `ByPos`.  
   
  *lpMenuItemInfo*  
- Wskaźnik do [KOJARZĄCA](http://msdn.microsoft.com/library/windows/desktop/ms647578), zgodnie z opisem w zestawie SDK Windows, który zawiera informacje o menu.  
+ Wskaźnik do [KOJARZĄCA](/windows/desktop/api/winuser/ns-winuser-tagmenuiteminfoa), zgodnie z opisem w zestawie SDK Windows, który zawiera informacje o menu.  
   
  *fByPos*  
  Wartość określająca znaczenie `nIDItem`. Domyślnie `ByPos` ma wartość FAŁSZ, co oznacza, że uItem jest identyfikatorem elementu menu. Jeśli `ByPos` nie jest ustawiona na wartość FALSE, oznacza to, położenie elementu menu.  
   
 ### <a name="return-value"></a>Wartość zwracana  
- Jeśli funkcja się powiedzie, wartość zwracana jest wartość różną od zera. Jeśli funkcja zawiedzie, wartość zwracana wynosi zero. Aby uzyskać rozszerzone informacje o błędzie, należy użyć funkcji Win32 [GetLastError](http://msdn.microsoft.com/library/windows/desktop/ms679360), zgodnie z opisem w zestawie Windows SDK.  
+ Jeśli funkcja się powiedzie, wartość zwracana jest wartość różną od zera. Jeśli funkcja zawiedzie, wartość zwracana wynosi zero. Aby uzyskać rozszerzone informacje o błędzie, należy użyć funkcji Win32 [GetLastError](https://msdn.microsoft.com/library/windows/desktop/ms679360), zgodnie z opisem w zestawie Windows SDK.  
   
 ### <a name="remarks"></a>Uwagi  
- Ta funkcja elementu członkowskiego implementuje zachowanie funkcji Win32 [GetMenuItemInfo](http://msdn.microsoft.com/library/windows/desktop/ms647980), zgodnie z opisem w zestawie Windows SDK. Należy pamiętać, że w implementacji MFC `GetMenuItemInfo`, nie należy używać dojścia do menu.  
+ Ta funkcja elementu członkowskiego implementuje zachowanie funkcji Win32 [GetMenuItemInfo](/windows/desktop/api/winuser/nf-winuser-getmenuiteminfoa), zgodnie z opisem w zestawie Windows SDK. Należy pamiętać, że w implementacji MFC `GetMenuItemInfo`, nie należy używać dojścia do menu.  
   
 ### <a name="example"></a>Przykład  
  [!code-cpp[NVC_MFCWindowing#26](../../mfc/reference/codesnippet/cpp/cmenu-class_6.cpp)]  
@@ -855,7 +855,7 @@ BOOL InsertMenu(
   
 |nFlags|Interpretacja lpszNewItem|  
 |------------|-----------------------------------|  
-|MF_OWNERDRAW|Zawiera wartość 32-bitowa aplikacja dostarczona używanego przez aplikację do obsługi dodatkowych danych skojarzone z elementem menu. Ta wartość 32-bitowych jest dostępny do aplikacji w `itemData` elementu członkowskiego struktury dostarczonych przez [WM_MEASUREITEM](http://msdn.microsoft.com/library/windows/desktop/bb775925) i [WM_DRAWITEM](http://msdn.microsoft.com/library/windows/desktop/bb775923) wiadomości. Te komunikaty są wysyłane, gdy element menu są początkowo wyświetlane lub zostanie zmieniony.|  
+|MF_OWNERDRAW|Zawiera wartość 32-bitowa aplikacja dostarczona używanego przez aplikację do obsługi dodatkowych danych skojarzone z elementem menu. Ta wartość 32-bitowych jest dostępny do aplikacji w `itemData` elementu członkowskiego struktury dostarczonych przez [WM_MEASUREITEM](/windows/desktop/Controls/wm-measureitem) i [WM_DRAWITEM](/windows/desktop/Controls/wm-drawitem) wiadomości. Te komunikaty są wysyłane, gdy element menu są początkowo wyświetlane lub zostanie zmieniony.|  
 |MF_STRING|Zawiera wskaźnik długi ciąg znaków zakończony znakiem null. Jest to domyślna interpretacja.|  
 |MF_SEPARATOR|*LpszNewItem* parametr jest ignorowany (nie jest wymagane).|  
   
@@ -889,7 +889,7 @@ BOOL InsertMenuItem(
   
 ### <a name="parameters"></a>Parametry  
  *uItem*  
- Zobacz opis *uItem* w [InsertMenuItem](http://msdn.microsoft.com/library/windows/desktop/ms647988) w zestawie Windows SDK.  
+ Zobacz opis *uItem* w [InsertMenuItem](/windows/desktop/api/winuser/nf-winuser-insertmenuitema) w zestawie Windows SDK.  
   
  *lpMenuItemInfo*  
  Zobacz opis *lpmii* w `InsertMenuItem` w zestawie Windows SDK.  
@@ -898,7 +898,7 @@ BOOL InsertMenuItem(
  Zobacz opis *fByPosition* w `InsertMenuItem` w zestawie Windows SDK.  
   
 ### <a name="remarks"></a>Uwagi  
- Ta funkcja jest zawijany [InsertMenuItem](http://msdn.microsoft.com/library/windows/desktop/ms647988), które zostały opisane w zestawie Windows SDK.  
+ Ta funkcja jest zawijany [InsertMenuItem](/windows/desktop/api/winuser/nf-winuser-insertmenuitema), które zostały opisane w zestawie Windows SDK.  
   
 ##  <a name="loadmenu"></a>  CMenu::LoadMenu  
  Ładuje zasobów menu z pliku wykonywalnego aplikacji i dołącza go do `CMenu` obiektu.  
@@ -933,13 +933,13 @@ BOOL LoadMenuIndirect(const void* lpMenuTemplate);
   
 ### <a name="parameters"></a>Parametry  
  *lpMenuTemplate*  
- Wskazuje na szablon menu (czyli jeden [MENUITEMTEMPLATEHEADER](http://msdn.microsoft.com/library/windows/desktop/ms647583) struktury i kolekcji, co najmniej jednego [MENUITEMTEMPLATE](http://msdn.microsoft.com/library/windows/desktop/ms647581) struktury). Aby uzyskać więcej informacji na temat tych dwóch struktur zobacz zestaw Windows SDK.  
+ Wskazuje na szablon menu (czyli jeden [MENUITEMTEMPLATEHEADER](/windows/desktop/api/winuser/ns-winuser-menuitemtemplateheader) struktury i kolekcji, co najmniej jednego [MENUITEMTEMPLATE](/windows/desktop/api/winuser/ns-winuser-menuitemtemplate) struktury). Aby uzyskać więcej informacji na temat tych dwóch struktur zobacz zestaw Windows SDK.  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Wartość różną od zera, jeśli zasób menu został załadowany pomyślnie; w przeciwnym razie 0.  
   
 ### <a name="remarks"></a>Uwagi  
- Szablon menu jest nagłówkiem, następuje kolekcji jednego lub więcej [MENUITEMTEMPLATE](http://msdn.microsoft.com/library/windows/desktop/ms647581) struktur, z których każdy może zawierać jeden lub więcej elementów menu, jak i wyskakujących menu.  
+ Szablon menu jest nagłówkiem, następuje kolekcji jednego lub więcej [MENUITEMTEMPLATE](/windows/desktop/api/winuser/ns-winuser-menuitemtemplate) struktur, z których każdy może zawierać jeden lub więcej elementów menu, jak i wyskakujących menu.  
   
  Numer wersji powinna być równa 0.  
   
@@ -1131,10 +1131,10 @@ BOOL SetDefaultItem(
  Wartość określająca znaczenie *uItem*. Jeśli ten parametr ma wartość FALSE, *uItem* jest identyfikatorem elementu menu. W przeciwnym razie jest położenie elementu menu.  
   
 ### <a name="return-value"></a>Wartość zwracana  
- Jeśli funkcja się powiedzie, wartość zwracana jest wartość różną od zera. Jeśli funkcja zawiedzie, wartość zwracana wynosi zero. Aby uzyskać rozszerzone informacje o błędzie, należy użyć funkcji Win32 [GetLastError](http://msdn.microsoft.com/library/windows/desktop/ms679360), zgodnie z opisem w zestawie Windows SDK.  
+ Jeśli funkcja się powiedzie, wartość zwracana jest wartość różną od zera. Jeśli funkcja zawiedzie, wartość zwracana wynosi zero. Aby uzyskać rozszerzone informacje o błędzie, należy użyć funkcji Win32 [GetLastError](https://msdn.microsoft.com/library/windows/desktop/ms679360), zgodnie z opisem w zestawie Windows SDK.  
   
 ### <a name="remarks"></a>Uwagi  
- Ta funkcja elementu członkowskiego implementuje zachowanie funkcji Win32 [SetMenuDefaultItem](http://msdn.microsoft.com/library/windows/desktop/ms647996), zgodnie z opisem w zestawie Windows SDK.  
+ Ta funkcja elementu członkowskiego implementuje zachowanie funkcji Win32 [SetMenuDefaultItem](/windows/desktop/api/winuser/nf-winuser-setmenudefaultitem), zgodnie z opisem w zestawie Windows SDK.  
   
 ### <a name="example"></a>Przykład  
   Zobacz przykład [CMenu::InsertMenu](#insertmenu).  
@@ -1168,7 +1168,7 @@ BOOL SetMenuInfo(LPCMENUINFO lpcmi);
   
 ### <a name="parameters"></a>Parametry  
  *lpcmi*  
- Wskaźnik do [MENUINFO](http://msdn.microsoft.com/library/windows/desktop/ms647575) struktury zawierający informacje do menu.  
+ Wskaźnik do [MENUINFO](/windows/desktop/api/winuser/ns-winuser-tagmenuinfo) struktury zawierający informacje do menu.  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Jeśli funkcja się powiedzie, wartość zwracana jest wartość różną od zera; w przeciwnym razie wartość zwracana wynosi zero.  
@@ -1234,7 +1234,7 @@ BOOL SetMenuItemInfo(
   
 ### <a name="parameters"></a>Parametry  
  *uItem*  
- Zobacz opis *uItem* w [SetMenuItemInfo](http://msdn.microsoft.com/library/windows/desktop/ms648001) w zestawie Windows SDK.  
+ Zobacz opis *uItem* w [SetMenuItemInfo](/windows/desktop/api/winuser/nf-winuser-setmenuiteminfoa) w zestawie Windows SDK.  
   
  *lpMenuItemInfo*  
  Zobacz opis *lpmii* w `SetMenuItemInfo` w zestawie Windows SDK.  
@@ -1243,7 +1243,7 @@ BOOL SetMenuItemInfo(
  Zobacz opis *fByPosition* w `SetMenuItemInfo` w zestawie Windows SDK.  
   
 ### <a name="remarks"></a>Uwagi  
- Ta funkcja jest zawijany [SetMenuItemInfo](http://msdn.microsoft.com/library/windows/desktop/ms648001), które zostały opisane w zestawie Windows SDK.  
+ Ta funkcja jest zawijany [SetMenuItemInfo](/windows/desktop/api/winuser/nf-winuser-setmenuiteminfoa), które zostały opisane w zestawie Windows SDK.  
   
 ##  <a name="trackpopupmenu"></a>  CMenu::TrackPopupMenu  
  Wyświetla menu podręczne przestawne w określonej lokalizacji i śledzi zaznaczenia elementów w menu podręcznym.  
@@ -1259,7 +1259,7 @@ BOOL TrackPopupMenu(
   
 ### <a name="parameters"></a>Parametry  
  *nFlags*  
- Określa flagi pozycja ekranu i położenie kursora. Zobacz [TrackPopupMenu](http://msdn.microsoft.com/library/windows/desktop/ms648002) lista flagi dostępna.  
+ Określa flagi pozycja ekranu i położenie kursora. Zobacz [TrackPopupMenu](/windows/desktop/api/winuser/nf-winuser-trackpopupmenu) lista flagi dostępna.  
   
  *x*  
  Określa położenie menu podręczne w poziomie w współrzędne ekranu. W zależności od wartości *nFlags* parametr, menu może być wyrównany do lewej, do prawej lub do środka względem tej pozycji.  
@@ -1274,7 +1274,7 @@ BOOL TrackPopupMenu(
  Ignorowane.  
   
 ### <a name="return-value"></a>Wartość zwracana  
- Ta metoda zwraca wynik wywołania metody [TrackPopupMenu](http://msdn.microsoft.com/library/windows/desktop/ms648002) w zestawie Windows SDK.  
+ Ta metoda zwraca wynik wywołania metody [TrackPopupMenu](/windows/desktop/api/winuser/nf-winuser-trackpopupmenu) w zestawie Windows SDK.  
   
 ### <a name="remarks"></a>Uwagi  
  Zmiennoprzecinkowe menu podręcznego może występować w dowolnym miejscu na ekranie.  
@@ -1296,7 +1296,7 @@ BOOL TrackPopupMenuEx(
   
 ### <a name="parameters"></a>Parametry  
  *fuFlags*  
- Określa różne funkcje dla rozszerzonych menu. Aby uzyskać listę wszystkich wartości i ich znaczenie, zobacz [TrackPopupMenuEx](http://msdn.microsoft.com/library/windows/desktop/ms648003).  
+ Określa różne funkcje dla rozszerzonych menu. Aby uzyskać listę wszystkich wartości i ich znaczenie, zobacz [TrackPopupMenuEx](/windows/desktop/api/winuser/nf-winuser-trackpopupmenuex).  
   
  *x*  
  Określa położenie menu podręczne w poziomie w współrzędne ekranu.  
@@ -1308,15 +1308,15 @@ BOOL TrackPopupMenuEx(
  Wskaźnik do okna będącej właścicielem menu podręczne i odbieranie komunikatów z menu utworzony. To okno może być dowolnym oknie z bieżącej aplikacji, ale nie może mieć wartości NULL. Jeśli określisz TPM_NONOTIFY w *fuFlags* parametru funkcji nie wysyła żadnych komunikatów do *pWnd*. Funkcja musi zwracać okna wskazywany przez *pWnd* do odbierania komunikatów WM_COMMAND.  
   
  *lptpm*  
- Wskaźnik do [TPMPARAMS](http://msdn.microsoft.com/library/windows/desktop/ms647586) struktury, który określa obszar ekranu menu nie powinny się nakładać. Ten parametr może mieć wartości NULL.  
+ Wskaźnik do [TPMPARAMS](/windows/desktop/api/winuser/ns-winuser-tagtpmparams) struktury, który określa obszar ekranu menu nie powinny się nakładać. Ten parametr może mieć wartości NULL.  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Jeśli określisz TPM_RETURNCMD w *fuFlags* parametr, wartość zwracana jest identyfikator elementu menu elementu, który użytkownik zaznaczył. Jeśli użytkownik anuluje menu bez dokonywania wyboru lub jeśli wystąpi błąd, wartość zwracana to 0.  
   
- Jeśli nie określisz TPM_RETURNCMD w *fuFlags* parametr, wartość zwracana jest wartość różną od zera, jeśli funkcja się powiedzie, a 0 Jeśli zakończy się niepowodzeniem. Aby uzyskać rozszerzone informacje o błędzie, należy wywołać [GetLastError](http://msdn.microsoft.com/library/windows/desktop/ms679360).  
+ Jeśli nie określisz TPM_RETURNCMD w *fuFlags* parametr, wartość zwracana jest wartość różną od zera, jeśli funkcja się powiedzie, a 0 Jeśli zakończy się niepowodzeniem. Aby uzyskać rozszerzone informacje o błędzie, należy wywołać [GetLastError](https://msdn.microsoft.com/library/windows/desktop/ms679360).  
   
 ### <a name="remarks"></a>Uwagi  
- Zmiennoprzecinkowe menu podręcznego może występować w dowolnym miejscu na ekranie. Aby uzyskać więcej informacji na temat obsługi błędów podczas tworzenia menu podręcznego, zobacz [TrackPopupMenuEx](http://msdn.microsoft.com/library/windows/desktop/ms648003).  
+ Zmiennoprzecinkowe menu podręcznego może występować w dowolnym miejscu na ekranie. Aby uzyskać więcej informacji na temat obsługi błędów podczas tworzenia menu podręcznego, zobacz [TrackPopupMenuEx](/windows/desktop/api/winuser/nf-winuser-trackpopupmenuex).  
   
 ## <a name="see-also"></a>Zobacz też  
  [Próbki MFC CTRLTEST](../../visual-cpp-samples.md)   

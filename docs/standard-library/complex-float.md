@@ -16,16 +16,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: af6d3ce3beca7d9bb3b14ee9c9373a8505623376
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: bf266e11f975e3ce01e5359c1dac65b46a42435a
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38954008"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43221346"
 ---
 # <a name="complexltfloatgt"></a>złożone&lt;float&gt;
 
-Opisuje obiekt, który przechowuje uporządkowana para obiektów zarówno typu **float **** najpierw reprezentujących część liczby zespolonej, a druga rzeczywista reprezentujący urojone części.
+Opisuje obiekt, który przechowuje uporządkowana para obiektów zarówno typu **float**, najpierw reprezentujących część liczby zespolonej, a druga rzeczywista reprezentujący urojone części.
 
 ## <a name="syntax"></a>Składnia
 
@@ -51,11 +51,14 @@ constexpr complex(
 
 ### <a name="parameters"></a>Parametry
 
-*_RealVal* wartości typu **float** rzeczywistych część liczby zespolonej budowany.
+*_RealVal*<br/>
+Wartość typu **float** rzeczywistych część liczby zespolonej budowany.
 
-*_ImagVal* wartości typu **float** dla urojone części liczb zespolonych budowany.
+*_ImagVal*<br/>
+Wartość typu **float** dla urojone części liczb zespolonych budowany.
 
-*complexNum* liczby zespolonej typu **double** lub typu **typu long double** którego rzeczywiste i urojone części są stosowane do inicjalizacji liczby zespolonej typu **float**budowany.
+*complexNum*<br/>
+Liczby zespolonej typu **double** lub typu **typu long double** którego rzeczywiste i urojone części są stosowane do inicjalizacji liczby zespolonej typu **float** budowany.
 
 ## <a name="return-value"></a>Wartość zwracana
 

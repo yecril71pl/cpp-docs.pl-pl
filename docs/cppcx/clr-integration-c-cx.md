@@ -9,12 +9,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 527ce8beaf5fb08d0642026336be193e3b39d73b
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: c0c2acf17831e5cb3a2e0118ffe3606bc7beef25
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42581127"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43212991"
 ---
 # <a name="clr-integration-ccx"></a>Integracja środowiska CLR (C + +/ CX)
 Niektórych typów środowiska wykonawczego Windows otrzymywać specjalnej obsługi w języku C + +/ CX i języki, które opierają się na środowisko uruchomieniowe języka wspólnego (CLR). W tym artykule omówiono sposób kilka typów w jednym języku mapowania na inny język. Na przykład środowisko CLR mapuje Windows.Foundation.IVector System.Collections.IList, Windows.Foundation.IMap System.Collections.IDictionary i tak dalej. Podobnie, C + +/ CX specjalnie mapowania typów, takich jak Platform::Delegate i Platform::String.  
@@ -22,7 +22,7 @@ Niektórych typów środowiska wykonawczego Windows otrzymywać specjalnej obsł
 ## <a name="mapping-the-windows-runtime-to-ccx"></a>Mapowania środowiska wykonawczego Windows w języku C + +/ CX  
  Gdy C + +/ CX odczytuje plik metadanych (.winmd) Windows, kompilator automatycznie mapuje wspólnego środowiska uruchomieniowego Windows obszary nazw i typy dla C + +/ CX przestrzenie nazw i typów. Na przykład Windows Runtime typu liczbowego `UInt32` jest automatycznie mapowany `default::uint32`.  
   
- C + +/ CX mapuje kilka innych typów środowiska wykonawczego Windows, aby **platformy** przestrzeni nazw. Na przykład **Windows::Foundation** dojścia HSTRING, który reprezentuje tylko do odczytu ciąg tekstowy Unicode, jest mapowany na C + +/ CX `Platform::String` klasy. Podczas operacji Windows Runtime zwraca błąd HRESULT, jest zamapowana w języku C + +/ CX `Platform::Exception`. Aby uzyskać więcej informacji, zobacz [wbudowanych typów](http://msdn.microsoft.com/en-us/acc196fd-09da-4882-b554-6c94685ec75f).  
+ C + +/ CX mapuje kilka innych typów środowiska wykonawczego Windows, aby **platformy** przestrzeni nazw. Na przykład **Windows::Foundation** dojścia HSTRING, który reprezentuje tylko do odczytu ciąg tekstowy Unicode, jest mapowany na C + +/ CX `Platform::String` klasy. Podczas operacji Windows Runtime zwraca błąd HRESULT, jest zamapowana w języku C + +/ CX `Platform::Exception`. Aby uzyskać więcej informacji, zobacz [wbudowanych typów](https://msdn.microsoft.com/acc196fd-09da-4882-b554-6c94685ec75f).  
   
  C + +/ CX mapuje również niektóre typy w przestrzeniach nazw środowiska wykonawczego Windows, aby zwiększyć funkcji typu. W przypadku tych typów C + +/ CX zapewnia pomocnika konstruktorów i metod, które są specyficzne dla języka C++ i nie są dostępne w pliku winmd standardowego typu.  
   

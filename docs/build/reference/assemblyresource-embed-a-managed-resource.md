@@ -21,12 +21,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 88afe292905ee46c1e939d29f787055f98058dc9
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: acb7b173ffd22e65e20dcc9cceef61b2e2131c83
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32372181"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43213404"
 ---
 # <a name="assemblyresource-embed-a-managed-resource"></a>/ASSEMBLYRESOURCE (Osadź zarządzany zasób)
 ```  
@@ -35,21 +35,21 @@ ms.locfileid: "32372181"
   
 ## <a name="parameters"></a>Parametry  
  *Nazwa pliku*  
- Zarządzany zasób, do którego ma zostać osadzony w tym zestawie.  
+ Zarządzanego zasobu, który ma zostać osadzony w tym zestawie.  
   
  *Nazwa*  
- Opcjonalna. Nazwa logiczna zasobu; Nazwa używana do załadowania zasobu. Wartość domyślna to nazwa pliku.  
+ Opcjonalna. Nazwa logiczna zasobu; Nazwa używana do ładowania zasobów. Wartość domyślna to nazwa pliku.  
   
- Opcjonalnie można określić, czy ten plik powinien być prywatna w manifeście zestawu. Domyślnie *nazwa* jest publiczny w zestawie.  
+ Opcjonalnie można określić, jeśli plik powinien znajdować się prywatne w manifeście zestawu. Domyślnie *nazwa* jest publiczna w zestawie.  
   
 ## <a name="remarks"></a>Uwagi  
- Opcja/assemblyresource do osadzenia zasobu w zestawie.  
+ Opcja linkowany do osadzenia zasobu w zestawie.  
   
- Zasoby są publicznie udostępniane w zestawie, gdy utworzone za pomocą konsolidator. Konsolidator nie pozwalają na zmiany nazwy zasobu w zestawie.  
+ Zasoby są publiczne w zestawie, gdy utworzone za pomocą konsolidatora. Konsolidator nie pozwalają na Zmień nazwę zasobu w zestawie.  
   
- Jeśli *filename* jest utworzony, na przykład w pliku zasobu (.resources) .NET Framework [Generator pliku zasobów (Resgen.exe)](/dotnet/framework/tools/resgen-exe-resource-file-generator) lub w środowisku programistycznym, jest dostępny z elementami członkowskimi w **System.Resources** przestrzeni nazw (zobacz [System.Resources.ResourceManager](https://msdn.microsoft.com/en-us/library/system.resources.resourcemanager.aspx) Aby uzyskać więcej informacji). Inne zasoby, można użyć **GetManifestResource** \* metod w **System.Reflection.Assembly** klasę, aby uzyskać dostęp do zasobu w czasie wykonywania.  
+ Jeśli *filename* jest plikiem zasobów (Resources) środowiska .NET Framework, utworzonym na przykład przez [Resource File Generator (Resgen.exe)](/dotnet/framework/tools/resgen-exe-resource-file-generator) lub w środowisku deweloperskim, jest dostępny za pomocą elementów członkowskich w **System.Resources** przestrzeni nazw (zobacz [System.Resources.ResourceManager](https://msdn.microsoft.com/library/system.resources.resourcemanager.aspx) Aby uzyskać więcej informacji). W przypadku wszystkich innych zasobów, użyj **GetManifestResource** \* metody **System.Reflection.Assembly** klasy, aby uzyskać dostęp do zasobu w czasie wykonywania.  
   
- Inne opcje konsolidatora, które mają wpływ na generowanie zestawów są:  
+ Są także inne opcje konsolidatora, które mają wpływ na Generowanie zestawu:  
   
 -   [/ASSEMBLYDEBUG](../../build/reference/assemblydebug-add-debuggableattribute.md)  
   
@@ -61,17 +61,17 @@ ms.locfileid: "32372181"
   
 -   [/ KEYFILE](../../build/reference/keyfile-specify-key-or-key-pair-to-sign-an-assembly.md)  
   
--   [/ KEYCONTAINER.](../../build/reference/keycontainer-specify-a-key-container-to-sign-an-assembly.md)  
+-   [/ KEYCONTAINER](../../build/reference/keycontainer-specify-a-key-container-to-sign-an-assembly.md)  
   
 -   [/ NOASSEMBLY](../../build/reference/noassembly-create-a-msil-module.md)  
   
 ### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>Aby ustawić tę opcję konsolidatora w środowisku programowania Visual Studio  
   
-1.  Otwórz projekt **strony właściwości** okno dialogowe. Aby uzyskać więcej informacji, zobacz [Ustawianie właściwości projektu Visual C++](../../ide/working-with-project-properties.md).  
+1.  Otwórz projekt **stron właściwości** okno dialogowe. Aby uzyskać więcej informacji, zobacz [ustawienie właściwości projektu Visual C++](../../ide/working-with-project-properties.md).  
   
 2.  Kliknij przycisk **konsolidatora** folderu.  
   
-3.  Kliknij przycisk **dane wejściowe** strony właściwości.  
+3.  Kliknij przycisk **dane wejściowe** stronę właściwości.  
   
 4.  Modyfikowanie **Osadź plik zasobu zarządzanego** właściwości.  
   

@@ -34,12 +34,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ed4232c73122e797a3b0e7aa17c43cde5ab47cf5
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: cf9133965a9009421c28f64c1f4157b4a6a6d6b3
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42610717"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43223298"
 ---
 # <a name="text-and-strings-in-visual-c"></a>Tekst i ciągi w programie Visual C++
 Ważnym aspektem projektowania aplikacji na rynki międzynarodowe jest odpowiednią reprezentację zestawy znaków lokalnych. Zestaw znaków ASCII definiuje znaki z zakresu od 0x00, 0x7F. Istnieją inne zestawy znaków Europejskiego przede wszystkim, zdefiniuj znaki w zakresie 0x00, 0x7F identycznie do zestawu znaków ASCII, który również zdefiniować znak rozszerzony ustawić od 0x80 do 0xFF. W związku z tym 8-bitową i pojedynczych bajtów znaków zestaw (SBCS) jest wystarczająca do reprezentowania zestawu znaków ASCII, a także zestawów znaków dla wielu języków Europejskiego. Jednak niektóre zestawy znaków Nieeuropejskie, takich jak japoński Kanji zawierają wiele więcej znaków niż schemat kodowania pojedynczych bajtów może reprezentować i dlatego wymaga zestawu znaków wielobajtowych (MBCS) kodowania.  
@@ -64,7 +64,7 @@ Ważnym aspektem projektowania aplikacji na rynki międzynarodowe jest odpowiedn
  [Internacjonalizacja](../c-runtime-library/internationalization.md)  
  W tym artykule omówiono Obsługa wymagań międzynarodowych w biblioteki wykonawczej C.  
   
- [Przykłady międzynarodowe](http://msdn.microsoft.com/aa8d390c-cf4c-4dd8-9dea-74d81f93f2f8)  
+ [Przykłady międzynarodowe](https://msdn.microsoft.com/aa8d390c-cf4c-4dd8-9dea-74d81f93f2f8)  
  Zawiera łącza do przykładów, demonstrując internacjonalizacji w programie Visual C++.  
   
  [Język i ciągi Kraj/Region](../c-runtime-library/locale-names-languages-and-country-region-strings.md)  

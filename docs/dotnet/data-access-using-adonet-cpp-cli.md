@@ -33,12 +33,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 025c6bc072f85a1075abdbd03f3567622c3fa40d
-ms.sourcegitcommit: 27be37ae07ee7b657a54d23ed34438220d977fdc
+ms.openlocfilehash: 3d87d41b97f587f2546df246044eaf8df3bba373
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/18/2018
-ms.locfileid: "39110289"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43221981"
 ---
 # <a name="data-access-using-adonet-ccli"></a>Dostęp do danych za pomocą ADO.NET (C++/CLI)
 ADO.NET jest interfejsem API programu .NET Framework, aby uzyskać dostęp do danych i udostępnia możliwości i łatwość użycia niedopasowane przez poprzednie rozwiązania dostępu do danych. W tej sekcji opisano niektóre problemy obejmujące ADO.NET, które są unikatowe dla użytkowników programu Visual C++, takie jak organizowanie natywnych typów.  
@@ -731,4 +731,4 @@ int main()
 
  <xref:System.Runtime.InteropServices>   
 
- [Współdziałanie](http://msdn.microsoft.com/afcc2e7d-3f32-48d2-8141-1c42acf29084)   
+ [Współdziałanie](https://msdn.microsoft.com/afcc2e7d-3f32-48d2-8141-1c42acf29084)   

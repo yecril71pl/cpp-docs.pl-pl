@@ -22,12 +22,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ee4a9d3156a4d5efecd74406b92a1a7bcec48d1f
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: 4ceba9da99585cb9a88b5fa7fa43d10c9fe02836
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37849149"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43218802"
 ---
 # <a name="coleipframewnd-class"></a>Klasa COleIPFrameWnd
 Baza dla okna edycji w miejscu aplikacji.  
@@ -80,7 +80,7 @@ COleIPFrameWnd();
 ```  
   
 ### <a name="remarks"></a>Uwagi  
- Aby uzyskać więcej informacji, zobacz [OLEINPLACEFRAMEINFO](http://msdn.microsoft.com/library/windows/desktop/ms693737) w zestawie Windows SDK.  
+ Aby uzyskać więcej informacji, zobacz [OLEINPLACEFRAMEINFO](/windows/desktop/api/oleidl/ns-oleidl-tagoifi) w zestawie Windows SDK.  
   
 ##  <a name="oncreatecontrolbars"></a>  COleIPFrameWnd::OnCreateControlBars  
  Struktura wywołuje `OnCreateControlBars` działa, gdy element jest aktywowany do edycji w miejscu.  

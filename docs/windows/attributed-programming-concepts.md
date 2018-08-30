@@ -17,18 +17,18 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 2fe6616cd22ee9de9ffbb6b3a26620a7ccdebc63
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 223359e10ef0e64860a611079abf9e7e83a26fe1
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42598080"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43222811"
 ---
 # <a name="attributed-programming-concepts"></a>Pojęcia związane z programowaniem opartym na atrybutach
 
 Visual C++ zawierają wiele materiałów, które ułatwiają korzystanie z atrybutów w swoich programach. Atrybuty, nowa funkcja w programie Visual C++ są zaprojektowane w celu uproszczenia programowanie COM i .NET Framework — programowanie środowiska uruchomieniowego języka wspólnego. Gdy atrybuty zostaną umieszczone w plikach źródłowych, kompilator współpracuje z dostawcy bibliotek dołączanych dynamicznie (DLL), Wstaw kod lub zmodyfikować kod w plikach obiektowych wygenerowany. Istnieją atrybuty, które wspierają do tworzenia plików .idl, interfejsy, bibliotek typów i innych elementów modelu COM. W zintegrowanego środowiska programistycznego (IDE) atrybutów są obsługiwane przez kreatory i okna właściwości.
 
-Gdy atrybuty wyeliminować niektóre szczegółowe kodowanie, wymagane do zapisywania obiektów COM, potrzebujesz tła w [podstawy COM](http://msdn.microsoft.com/library/windows/desktop/ms694363) najlepiej je wykorzystać.
+Gdy atrybuty wyeliminować niektóre szczegółowe kodowanie, wymagane do zapisywania obiektów COM, potrzebujesz tła w [podstawy COM](/windows/desktop/com/the-component-object-model) najlepiej je wykorzystać.
 
 ## <a name="in-this-section"></a>W tej sekcji
 

@@ -24,15 +24,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1412a65ce7afaab5421d49c22a9cd8ece5b283b1
-ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
+ms.openlocfilehash: 64b53cafc60e556ac142cdaf1f56608e5ab3de70
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/27/2018
-ms.locfileid: "37040889"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43211744"
 ---
 # <a name="clineartransition-class"></a>Klasa CLinearTransition
-Hermetyzuje liniowe.  
+Hermetyzuje liniowe przejścia.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -46,23 +46,23 @@ class CLinearTransition : public CBaseTransition;
   
 |Nazwa|Opis|  
 |----------|-----------------|  
-|[CLinearTransition::CLinearTransition](#clineartransition)|Tworzy obiekt liniowe i inicjuje jego czas trwania i końcowa wartość.|  
+|[CLinearTransition::CLinearTransition](#clineartransition)|Tworzy obiekt liniowe przejścia i inicjuje ją z czas trwania i końcowa wartość.|  
   
 ### <a name="public-methods"></a>Metody publiczne  
   
 |Nazwa|Opis|  
 |----------|-----------------|  
-|[CLinearTransition::Create](#create)|Wywołuje biblioteki przejścia do utworzenia obiektu hermetyzowany przejścia COM. (Przesłania [CBaseTransition::Create](../../mfc/reference/cbasetransition-class.md#create).)|  
+|[CLinearTransition::Create](#create)|Wywołania biblioteki przejścia do utworzenia obiektu zhermetyzowany przejścia COM. (Przesłania [CBaseTransition::Create](../../mfc/reference/cbasetransition-class.md#create).)|  
   
 ### <a name="public-data-members"></a>Publiczne elementy członkowskie danych  
   
 |Nazwa|Opis|  
 |----------|-----------------|  
-|[CLinearTransition::m_dblFinalValue](#m_dblfinalvalue)|Wartość zmiennej animacji na końcu przejścia.|  
+|[CLinearTransition::m_dblFinalValue](#m_dblfinalvalue)|Wartość zmiennej animacji z końcem przejścia.|  
 |[CLinearTransition::m_duration](#m_duration)|Czas trwania przejścia.|  
   
 ## <a name="remarks"></a>Uwagi  
- Podczas przejścia liniowego wartość zmiennej animacji przejścia liniowo ze swojej wartości początkowej do określonej wartości końcowej. Ponieważ wszystkie przejścia są automatycznie usuwane, zaleca się ich przydzielony przy użyciu nowego operatora. Hermetyzowany obiektu IUIAnimationTransition COM utworzeniu przez CAnimationController::AnimateGroup, aż do, a następnie jest NULL. Po utworzenia tego obiektu modelu COM nie ma wpływu, zmiana zmiennych Członkowskich.  
+ Podczas liniowe przejścia wartość zmiennej animacji przechodzi liniowo ze swojej wartości początkowej określonej wartości końcowej. Ponieważ wszystkie przejścia są automatycznie czyszczone, zaleca się ich przydzielone za pomocą nowego operatora. Zhermetyzowanego obiektu IUIAnimationTransition COM przy utworzono CAnimationController::AnimateGroup, aż do, a następnie ma wartość NULL. Zmienianie zmiennych składowych, po tworzenie ten obiekt COM nie ma wpływu.  
   
 ## <a name="inheritance-hierarchy"></a>Hierarchia dziedziczenia  
  [CObject](../../mfc/reference/cobject-class.md)  
@@ -75,7 +75,7 @@ class CLinearTransition : public CBaseTransition;
  **Nagłówek:** afxanimationcontroller.h  
   
 ##  <a name="clineartransition"></a>  CLinearTransition::CLinearTransition  
- Tworzy obiekt liniowe i inicjuje jego czas trwania i końcowa wartość.  
+ Tworzy obiekt liniowe przejścia i inicjuje ją z czas trwania i końcowa wartość.  
   
 ```  
 CLinearTransition(
@@ -88,10 +88,10 @@ CLinearTransition(
  Czas trwania przejścia.  
   
  *dblFinalValue*  
- Wartość zmiennej animacji na końcu przejścia.  
+ Wartość zmiennej animacji z końcem przejścia.  
   
 ##  <a name="create"></a>  CLinearTransition::Create  
- Wywołuje biblioteki przejścia do utworzenia obiektu hermetyzowany przejścia COM.  
+ Wywołania biblioteki przejścia do utworzenia obiektu zhermetyzowany przejścia COM.  
   
 ```  
 virtual BOOL Create(
@@ -101,13 +101,13 @@ virtual BOOL Create(
   
 ### <a name="parameters"></a>Parametry  
 *pLibrary*  
- Wskaźnik do [interfejsu IUIAnimationTransitionLibrary](https://msdn.microsoft.com/library/windows/desktop/dd371897), który definiuje biblioteki standardowe przejścia.  
+ Wskaźnik do [interfejsu IUIAnimationTransitionLibrary](/windows/desktop/api/uianimation/nn-uianimation-iuianimationtransitionlibrary), który definiuje bibliotekę przejścia standardowe.  
   
 ### <a name="return-value"></a>Wartość zwracana  
- Wartość TRUE, jeśli przejście jest tworzony pomyślnie; w przeciwnym razie wartość FALSE.  
+ Wartość TRUE, jeśli przejście został utworzony pomyślnie; w przeciwnym razie wartość FALSE.  
   
 ##  <a name="m_dblfinalvalue"></a>  CLinearTransition::m_dblFinalValue  
- Wartość zmiennej animacji na końcu przejścia.  
+ Wartość zmiennej animacji z końcem przejścia.  
   
 ```  
 DOUBLE m_dblFinalValue;  

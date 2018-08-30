@@ -20,18 +20,18 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 878f7b31d98a26a76b8466e7a93cd3d165ed145f
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 6b06fa02420b70538faa70b24137df634420dd8d
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42583460"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43222647"
 ---
 # <a name="creating-pop-up-menus"></a>Tworzenie menu wyskakujących
 
 [Menu wyskakujące](../mfc/menus-mfc.md) wyświetlania często używanych poleceń. Mogą to być kontekstowo lokalizacji wskaźnika. Używanie wyskakujących menu w aplikacji wymaga tworzenia samo menu, a następnie nawiąż połączenie z kodu aplikacji.
 
-Po utworzeniu zasobu menu, kod aplikacji musi załadować zasobu menu i używać [TrackPopupMenu](http://msdn.microsoft.com/library/windows/desktop/ms648002) aby spowodować, że są wyświetlane w menu. Po użytkownik został odrzucony menu podręcznego, klikając poza nim lub kliknie polecenie, że funkcja zwróci. Jeśli użytkownik wybierze polecenie, komunikat tego polecenia będą wysyłane do okna, w których uchwyt został przekazany.
+Po utworzeniu zasobu menu, kod aplikacji musi załadować zasobu menu i używać [TrackPopupMenu](/windows/desktop/api/winuser/nf-winuser-trackpopupmenu) aby spowodować, że są wyświetlane w menu. Po użytkownik został odrzucony menu podręcznego, klikając poza nim lub kliknie polecenie, że funkcja zwróci. Jeśli użytkownik wybierze polecenie, komunikat tego polecenia będą wysyłane do okna, w których uchwyt został przekazany.
 
 ### <a name="to-create-a-pop-up-menu"></a>Aby utworzyć menu podręcznego
 

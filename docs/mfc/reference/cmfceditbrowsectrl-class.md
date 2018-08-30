@@ -36,12 +36,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ec3bfc550843675673782ea92ff7fad6eae2967b
-ms.sourcegitcommit: b92ca0b74f0b00372709e81333885750ba91f90e
+ms.openlocfilehash: 9799021942cbb8a505cc993ff97f5f42e6d0f20f
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/16/2018
-ms.locfileid: "42466153"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43222371"
 ---
 # <a name="cmfceditbrowsectrl-class"></a>Klasa CMFCEditBrowseCtrl
 `CMFCEditBrowseCtrl` Klasa obsługuje formant przeglądania edycji, który jest edytowalnym polem tekstowym opcjonalnie zawierający przycisk przeglądania. Gdy użytkownik kliknie przycisk przeglądania, formant wykonuje niestandardowe lub wyświetla standardowe okno dialogowe zawierający przeglądarkę plików lub przeglądarkę katalogów.  
@@ -74,7 +74,7 @@ class CMFCEditBrowseCtrl : public CEdit
 |[CMFCEditBrowseCtrl::OnChangeLayout](#onchangelayout)|Odrysowuje bieżącego formant przeglądania edycji.|  
 |[CMFCEditBrowseCtrl::OnDrawBrowseButton](#ondrawbrowsebutton)|Metoda wywoływana przez platformę, by narysować przycisk przeglądania.|  
 |[CMFCEditBrowseCtrl::OnIllegalFileName](#onillegalfilename)|Wywoływane przez platformę, gdy wprowadzono niedozwoloną nazwę pliku w formancie edycji.|  
-|`CMFCEditBrowseCtrl::PreTranslateMessage`|Wykonuje translację komunikatów okien, zanim zostaną rozesłane do [TranslateMessage](http://msdn.microsoft.com/library/windows/desktop/ms644955) i [DispatchMessage](http://msdn.microsoft.com/library/windows/desktop/ms644934) funkcje Windows. Informacje o składni i więcej informacji, zobacz [CWnd::PreTranslateMessage](../../mfc/reference/cwnd-class.md#pretranslatemessage).|  
+|`CMFCEditBrowseCtrl::PreTranslateMessage`|Wykonuje translację komunikatów okien, zanim zostaną rozesłane do [TranslateMessage](https://msdn.microsoft.com/library/windows/desktop/ms644955) i [DispatchMessage](https://msdn.microsoft.com/library/windows/desktop/ms644934) funkcje Windows. Informacje o składni i więcej informacji, zobacz [CWnd::PreTranslateMessage](../../mfc/reference/cwnd-class.md#pretranslatemessage).|  
 |[CMFCEditBrowseCtrl::SetBrowseButtonImage](#setbrowsebuttonimage)|Ustawia niestandardowy obraz dla przycisku Przeglądaj.|  
   
 ## <a name="remarks"></a>Uwagi  

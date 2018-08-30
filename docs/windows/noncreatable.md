@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: a55daa9f8c742d847944ddb0459db208c7edf9cf
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: b31ede898e2b1976bc16be7cf89c0223c3709193
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42608127"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43221546"
 ---
 # <a name="noncreatable"></a>noncreatable
 
@@ -36,7 +36,7 @@ Definiuje obiekt, który nie może być utworzone samodzielnie.
 
 ## <a name="remarks"></a>Uwagi
 
-**Noncreatable —** atrybut C++ ma taką samą funkcjonalność jak [noncreatable —](http://msdn.microsoft.com/library/windows/desktop/aa367118) atrybutów w MIDL i jest automatycznie przekazywana do wygenerowany. Plik IDL przez kompilator.
+**Noncreatable —** atrybut C++ ma taką samą funkcjonalność jak [noncreatable —](/windows/desktop/Midl/noncreatable) atrybutów w MIDL i jest automatycznie przekazywana do wygenerowany. Plik IDL przez kompilator.
 
 Jeśli ten atrybut jest używany w projekcie, który korzysta z biblioteki ATL, zachowanie zmiany atrybutów. Oprócz powyższych zachowanie wprowadza również atrybut [OBJECT_ENTRY_NON_CREATEABLE_EX_AUTO](../atl/reference/object-map-macros.md#object_entry_non_createable_ex_auto) makra. To makro wskazuje ATL, że obiekt nie może zostać utworzona zewnętrznie.
 

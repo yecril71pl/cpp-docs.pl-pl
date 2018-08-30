@@ -28,12 +28,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ff2f4a6962ee70882ba85a15ea213f7fe6ffe11f
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: 3984ebc1568c831420e11bd7b3c9004dabcc316b
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42466247"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43222097"
 ---
 # <a name="cmfcfontinfo-class"></a>Klasa CMFCFontInfo
 `CMFCFontInfo` Klasa opisuje nazwę i inne atrybuty czcionki.  
@@ -95,16 +95,16 @@ CMFCFontInfo(const CMFCFontInfo& src);
   
 ### <a name="parameters"></a>Parametry  
  [in] *lpszName*  
- Nazwa czcionki. Aby uzyskać więcej informacji, zobacz `lfFaceName` członkiem [LOGFONT](http://msdn.microsoft.com/library/windows/desktop/dd145037) struktury.  
+ Nazwa czcionki. Aby uzyskać więcej informacji, zobacz `lfFaceName` członkiem [LOGFONT](/windows/desktop/api/wingdi/ns-wingdi-taglogfonta) struktury.  
   
  [in] *lpszScript*  
  Nazwa skryptu (zestaw znaków) czcionki.  
   
  [in] *nCharSet*  
- Wartość, która określa zestaw znaków (skrypt) czcionki. Aby uzyskać więcej informacji, zobacz `lfCharSet` członkiem [LOGFONT](http://msdn.microsoft.com/library/windows/desktop/dd145037) struktury.  
+ Wartość, która określa zestaw znaków (skrypt) czcionki. Aby uzyskać więcej informacji, zobacz `lfCharSet` członkiem [LOGFONT](/windows/desktop/api/wingdi/ns-wingdi-taglogfonta) struktury.  
   
  [in] *nPitchAndFamily*  
- Wartość, która określa gęstość i rodzinę czcionek. Aby uzyskać więcej informacji, zobacz `lfPitchAndFamily` członkiem [LOGFONT](http://msdn.microsoft.com/library/windows/desktop/dd145037) struktury.  
+ Wartość, która określa gęstość i rodzinę czcionek. Aby uzyskać więcej informacji, zobacz `lfPitchAndFamily` członkiem [LOGFONT](/windows/desktop/api/wingdi/ns-wingdi-taglogfonta) struktury.  
   
  [in] *nNie*  
  Wartość, która określa typ czcionki. Ten parametr może być bitowa kombinacja (lub) DEVICE_FONTTYPE RASTER_FONTTYPE i TRUETYPE_FONTTYPE.  
@@ -115,7 +115,7 @@ CMFCFontInfo(const CMFCFontInfo& src);
 ### <a name="return-value"></a>Wartość zwracana  
   
 ### <a name="remarks"></a>Uwagi  
- Ta dokumentacja używa warunki *zestaw znaków* i *skryptu* zamiennie. A *skryptu*, który jest również nazywany systemem zapisu to zbiór znaków i zasady dotyczące pisania te znaki w co najmniej jeden język. Zbiór znaków obejmują alfabetu i znaków interpunkcyjnych, używany w tym skrypcie. Na przykład łacińskim jest używany w języku angielskim, jak jest używany w Stanach Zjednoczonych, a jego alfabetu zawiera znaki od A do Z. `lfCharSet` Członkiem [LOGFONT](http://msdn.microsoft.com/library/windows/desktop/dd145037) struktury określa zestaw znaków. Na przykład wartość ANSI_CHARSET określa zestawu znaków ANSI, który zawiera alfabecie łacińskim.  
+ Ta dokumentacja używa warunki *zestaw znaków* i *skryptu* zamiennie. A *skryptu*, który jest również nazywany systemem zapisu to zbiór znaków i zasady dotyczące pisania te znaki w co najmniej jeden język. Zbiór znaków obejmują alfabetu i znaków interpunkcyjnych, używany w tym skrypcie. Na przykład łacińskim jest używany w języku angielskim, jak jest używany w Stanach Zjednoczonych, a jego alfabetu zawiera znaki od A do Z. `lfCharSet` Członkiem [LOGFONT](/windows/desktop/api/wingdi/ns-wingdi-taglogfonta) struktury określa zestaw znaków. Na przykład wartość ANSI_CHARSET określa zestawu znaków ANSI, który zawiera alfabecie łacińskim.  
   
 ##  <a name="getfullname"></a>  CMFCFontInfo::GetFullName  
  Pobiera nazwy połączonych czcionkę i jej znak zestawu (skrypt).  

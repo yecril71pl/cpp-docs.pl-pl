@@ -21,55 +21,55 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b3afbd2019965d859895462cfdad57292bc2e0b3
-ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
+ms.openlocfilehash: 41b3565893d65990955f0fd28c6cccce7fcb1f32
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "33332426"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43222246"
 ---
-# <a name="creating-and-managing-msbuild-based-visual-c-projects"></a>Tworzenie projektów i zarządzanie nimi na podstawie MSBuild Visual C++
-MSBuild system natywnej kompilacji dla programu Visual C++ oraz jest zazwyczaj najlepiej systemu na potrzeby aplikacji platformy uniwersalnej systemu Windows, a także aplikacji klasycznych, które używają biblioteki MFC lub ATL kompilacji. MSBuild jest ściśle zintegrowany z programu Visual Studio IDE i system projektu, ale można również użyć go w wierszu polecenia. Począwszy od programu Visual Studio 2017 Visual C++ obsługuje [CMake i innych systemów innych niż MSBuild za pomocą funkcji Otwórz Folder](non-msbuild-projects.md).
+# <a name="creating-and-managing-msbuild-based-visual-c-projects"></a>Tworzenie i zarządzanie projektami opartych na platformie MSBuild Visual C++
+Program MSBuild jest system kompilacji natywne w języku Visual C++ i zazwyczaj najlepsze kompilacji systemowi operacyjnemu używanie dla aplikacji platformy uniwersalnej systemu Windows, a także aplikacji pulpitu, które używają biblioteki ATL i MFC. Program MSBuild jest ściśle zintegrowana za pomocą środowiska IDE programu Visual Studio i system projektu, ale można go także użyć w wierszu polecenia. Począwszy od programu Visual Studio 2017, Visual C++ obsługuje [CMake i innych systemów innych niż MSBuild, za pomocą funkcji Otwórz Folder](non-msbuild-projects.md).
 
-Plik projektu w formacie XML (.vcxproj), który określa wszystkich plików i zasobów potrzebnych do skompilowania programu, a także innych ustawień konfiguracyjnych, na przykład platformy docelowej (x 86, x64 lub ARM) i określa, czy tworzysz ma projektu MSBuild Wersja wydana lub wersja do debugowania programu. Projekt (lub wiele projektów), które są zawarte w *rozwiązania*, na przykład rozwiązanie może zawierać kilka projektów Win32 DLL i jednej aplikacji konsoli Win32, która używa tych bibliotek DLL. Podczas kompilowania projektu aparat MSBuild zużywa pliku projektu i tworzy plik wykonywalny i/lub innych niestandardowych wyjściowego określona.
+Z opartych na platformie MSBuild projekt zawiera plik projektu w formacie XML (.vcxproj), która określa wszystkie pliki i zasoby niezbędne do kompilowania program, a także inne ustawienia konfiguracji, na przykład platforma docelowa (x 86, x64 lub ARM) i tego, czy tworzysz Wersja wydana lub z wersji do debugowania programów. Projekt (lub wiele projektów), które są zawarte w *rozwiązania*; na przykład, rozwiązanie może zawierać kilka projektów bibliotek Win32 DLL i jednym Aplikacja konsoli Win32, który używa tych bibliotek DLL. Podczas kompilowania projektu aparat MSBuild zużywa pliku projektu i tworzy plik wykonywalny i/lub wszelkie inne niestandardowe dane wyjściowe wprowadzoną.
 
-Projekty Visual C++ można utworzyć, wybierając **pliku &#124; nowy &#124; projektu**, zapewnienie, że wybrano Visual C++, w okienku po lewej stronie, a następnie wybierając z listy szablonów projektu w środkowym okienku. Po kliknięciu szablonu w wielu przypadkach pojawi się Kreator umożliwiający ustawić różne właściwości projektu, przed utworzeniem projektu. Możesz wyświetlić i później zmodyfikować te właściwości, za pomocą stron właściwości projektu (**projektu &#124; właściwości**).  
+Możesz tworzyć projekty Visual C++, wybierając **pliku &#124; New &#124; projektu**, zapewnienie, że zaznaczono Visual C++, w okienku po lewej stronie, a następnie wybierając z listy szablonów projektu w środkowym okienku. Po kliknięciu szablonu w wielu przypadkach pojawi się Kreator, który pozwala ustawić różne właściwości projektu, przed utworzeniem projektu. Można wyświetlić i zmodyfikować te właściwości później za pomocą strony właściwości projektu (**projektu &#124; właściwości**).  
   
- Można również tworzyć nowe projekty przez:  
+ Można również utworzyć nowe projekty przez:  
   
--   Wybieranie **pliku &#124; nowy &#124; projekt z istniejących źródeł** i zgodnie z monitami, aby dodać istniejących plików kodu źródłowego. Ta opcja działa najlepiej dla projektów stosunkowo małe i proste, prawdopodobnie 25 plików kodów źródłowych lub z kilku lub złożonych zależności.  
+-   Wybieranie **pliku &#124; New &#124; projekt z istniejących źródeł** i postępując zgodnie z instrukcjami w celu dodawania istniejących plików kodu źródłowego. Ta opcja jest najlepsza dla stosunkowo małe i prostych projektach, być może 25 pliki kodów źródłowych lub mniej, za pomocą kilku lub złożonych zależności.  
   
--   rozpoczyna się od pliku reguł programu make i wybierz szablon projektu pliku reguł programu make na karcie Ogólne.  
+-   począwszy od pliku reguł programu make, a następnie wybierz szablon projektu pliku reguł programu make na karcie Ogólne.  
   
--   pusty projekt do tworzenia (w obszarze **ogólne** kartę) i ręczne dodanie plików kodu źródłowego prawym przyciskiem myszy węzeł projektu w Eksploratorze rozwiązań i wybierając pozycję **Dodaj &#124; istniejący element**.  
+-   Tworzenie pustego projektu (w obszarze **ogólne** kartę) i ręcznego dodawania plików kodu źródłowego, kliknięcie prawym przyciskiem myszy węzeł projektu w Eksploratorze rozwiązań i wybierając pozycję **Dodaj &#124; istniejący element**.  
   
--   przy użyciu [Kreator aplikacji Win32](../windows/win32-application-wizard.md).  
+-   za pomocą [Kreatora aplikacji Win32](../windows/win32-application-wizard.md).  
   
 ## <a name="in-this-section"></a>W tej sekcji  
  [Typy projektów Visual C++](../ide/visual-cpp-project-types.md)  
- W tym artykule opisano typy projektu MSBuild, które są dostępne w programie Visual C++.  
+ Zawiera opis typów projektów opartych na platformie MSBuild, które są dostępne w programie Visual C++.  
   
  [Typy plików utworzonych dla projektów Visual C++](../ide/file-types-created-for-visual-cpp-projects.md)  
- W tym artykule opisano typy plików, które są używane z różnymi typami projektu MSBuild.  
+ W tym artykule opisano rodzaje plików, które są używane z różnymi typami projektów programu MSBuild.  
   
  [Tworzenie projektów wykorzystujących interfejs Pulpitu za pomocą kreatorów aplikacji](../ide/creating-desktop-projects-by-using-application-wizards.md)  
- Sposób tworzenia projektów w języku Visual C++ za pomocą kreatorów.  
+ Jak tworzyć projekty z Visual C++ za pomocą kreatorów.  
   
  [Praca z właściwościami projektu](../ide/working-with-project-properties.md)  
- Opisuje sposób użycia właściwości strony i arkusze właściwości do określenia ustawień projektu.  
+ Opisuje sposób używania arkusze właściwości i strony właściwości, aby określić własne ustawienia projektu.  
   
- [Dodawanie funkcji z kreatorami kodów](../ide/adding-functionality-with-code-wizards-cpp.md)  
- Opisuje sposób dodawania klas, metod, zmienne i inne elementy do projektu, aby dodać funkcje.  
+ [Dodawanie funkcji za pomocą kreatorów kodu](../ide/adding-functionality-with-code-wizards-cpp.md)  
+ W tym artykule opisano sposób dodawania do projektu, aby dodać funkcje klas, metod, zmienne i inne elementy.  
   
  [Instrukcje: porządkowanie plików wyjściowych projektu na potrzeby kompilacji](../ide/how-to-organize-project-output-files-for-builds.md)  
- Opisuje sposób porządkowanie plików wyjściowych projektu.  
+ Opisuje sposób organizowania plików wyjściowych projektu.  
   
 ## <a name="related-sections"></a>Sekcje pokrewne  
  [Kompilowanie programów C/C++](../build/building-c-cpp-programs.md)  
- Zawiera łącza do tematów opisujących kompilowania programu z wiersza polecenia lub zintegrowane środowisko programistyczne Visual Studio.  
+ Zawiera łącza do tematów opisujących, tworzenie programu z wiersza polecenia lub zintegrowanego środowiska projektowego programu Visual Studio.  
   
- [Dokumentacja języka Visual C++](http://msdn.microsoft.com/en-us/1ba03b5c-8229-4f63-b08c-6c12141d6ab1)  
- Zawiera łącza do tematów opisujących C i C++ języka odwołań, bibliotek języka Visual C++, Visual C++ modelu obiektów rozszerzających i asemblera makr firmy Microsoft (MASM).  
+ [Odwołanie w Visual C++](https://msdn.microsoft.com/1ba03b5c-8229-4f63-b08c-6c12141d6ab1)  
+ Zawiera łącza do tematów opisujących C i C++ language odwołania, biblioteki dostarczane z Visual C++, Model obiektowy rozszerzalności Visual C++ i Microsoft Macro Assembler (MASM).  
   
 ## <a name="see-also"></a>Zobacz też  
- [Visual Studio SDK](http://msdn.microsoft.com/vstudio/extend)
+ [Visual Studio SDK](https://msdn.microsoft.com/vstudio/extend)

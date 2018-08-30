@@ -17,27 +17,27 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c66c434503bbd2c6d7ee1b0557fa73d843e0caaa
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: bf73633c22191d54f2b03f11cb2b84cbbd24d807
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33385355"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43220851"
 ---
 # <a name="tn070-mfc-window-class-names"></a>TN070: nazwy klas okien MFC
 > [!NOTE]
->  Poniższe uwagi techniczne nie został zaktualizowany, ponieważ została ona uwzględniona w dokumentacji online. W związku z tym niektóre procedury i tematy mogą być nieaktualne lub niepoprawne. Najnowsze informacje zalecane jest, możesz wyszukać temat odsetek w indeksie dokumentacji online.  
+>  Następująca uwaga techniczna nie został zaktualizowany od pierwszego uwzględnienia jej w dokumentacji online. W rezultacie niektóre procedury i tematy może być nieaktualne lub niepoprawne. Najnowsze informacje zaleca się wyszukać temat w indeksie dokumentacji online.  
   
- MFC windows Użyj nazwy klasy utworzony dynamicznie, która odzwierciedla funkcji okna. MFC generuje nazwy klas dynamicznie dla okien ramowych, widoków i okna podręczne produkowane przez aplikację. Okien dialogowych i formantów utworzonego przez MFC aplikacji ma nazwę klasy okna w dostarczonych z systemem Windows.  
+ MFC windows, użyj nazwy klasy utworzony dynamicznie, która odzwierciedla funkcje okna. MFC generuje nazw klas dynamicznie okien ramowych, widoków i okna wyskakujące generowany przez aplikację. Okien dialogowych i formantów, generowane przez aplikację MFC mają nazwę klasy okna w danym dostarczonych przez Windows.  
   
- Można zastąpić nazwę klasy dynamicznie podana przez rejestrowanie klasy okna i używanie go na nadpisanie [PreCreateWindow](../mfc/reference/cwnd-class.md#precreatewindow). Nazwy klas MFC dostarczone mieści się jeden z dwóch następujących postaci:  
+ Możesz zastąpić nazwę klasy dynamicznie podana przez rejestrowanie klasy okna i korzystania z niego w zastąpieniu obiektu [PreCreateWindow](../mfc/reference/cwnd-class.md#precreatewindow). Nazwy klas dostarczonych przez MFC Dopasuj jeden z dwóch następujących form:  
   
 ```  
 Afx:%x:%x  
 Afx:%x:%x:%x:%x:%x  
 ```  
   
- Cyfr szesnastkowych, które zastępują `%x` znaki są wypełnione z danych z [WNDCLASS](http://msdn.microsoft.com/library/windows/desktop/ms633576) struktury. Ta metoda używa MFC, aby wiele klas C++ wymagające identyczne **WNDCLASS** struktury można korzystać z tej samej klasy zarejestrowanych okna. W przeciwieństwie do większości prostych aplikacji Win32, aplikacji MFC mieć tylko jeden **WNDPROC**, więc można łatwo udostępniać **WNDCLASS** struktury tak, aby zaoszczędzić czas i pamięci. Wymienne wartości `%x` znaków pokazanym powyżej są następujące:  
+ Cyfr szesnastkowych, które zastępują `%x` znaki są wypełniane dane z [WNDCLASS](https://msdn.microsoft.com/library/windows/desktop/ms633576) struktury. MFC używa tej techniki, aby wiele klas C++ wymagające identyczne **WNDCLASS** struktury można udostępnić tej samej klasy okna zarejestrowane. W przeciwieństwie do większości prostych aplikacji Win32, aplikacji MFC mieć tylko jedną **WNDPROC**, dzięki czemu można łatwo udostępniać **WNDCLASS** struktur, aby oszczędzić czas i pamięci. Wymienne wartości `%x` znaków przedstawione powyżej są następujące:  
   
 - **WNDCLASS.hInstance**  
   
@@ -49,7 +49,7 @@ Afx:%x:%x:%x:%x:%x
   
 - **WNDCLASS.hIcon**  
   
- Pierwszy formularz (`Afx:%x:%x`) jest używany podczas **hCursor**, **hbrBackground**, i **hIcon** są wszystkie **NULL**.  
+ Pierwszy formularz (`Afx:%x:%x`) jest używany podczas **hCursor**, **hbrBackground**, i **hIcon** wyświetlane są wszystkie **NULL**.  
   
 ## <a name="see-also"></a>Zobacz też  
  [Uwagi techniczne według numerów](../mfc/technical-notes-by-number.md)   

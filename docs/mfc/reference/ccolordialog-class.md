@@ -30,12 +30,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f0445939c7437e4978ee698005cc2f7541e6684b
-ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
+ms.openlocfilehash: c528e2a80894db1da82d7b07ba34a7c62b6237da
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37339309"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43219022"
 ---
 # <a name="ccolordialog-class"></a>Klasa CColorDialog
 Umożliwia uwzględnienie okna dialogowego wyboru koloru w aplikacji.  
@@ -80,13 +80,13 @@ class CColorDialog : public CCommonDialog
   
  Do konstruowania `CColorDialog` obiektu, użyć dostarczonego konstruktora lub nową klasę pochodną i używania niestandardowego konstruktora.  
   
- Gdy okno dialogowe został skonstruowany, można ustawić lub zmodyfikować dowolne wartości na [m_cc](#m_cc) strukturę, aby zainicjować wartości formantów w oknie dialogowym. *M_cc* struktury jest typu [CHOOSECOLOR](http://msdn.microsoft.com/library/windows/desktop/ms646830).  
+ Gdy okno dialogowe został skonstruowany, można ustawić lub zmodyfikować dowolne wartości na [m_cc](#m_cc) strukturę, aby zainicjować wartości formantów w oknie dialogowym. *M_cc* struktury jest typu [CHOOSECOLOR](/windows/desktop/api/commdlg/ns-commdlg-tagchoosecolora).  
   
  Po inicjalizacji formantów w oknie dialogowym, należy wywołać `DoModal` funkcja elementu członkowskiego, aby wyświetlić okno dialogowe i Zezwalaj użytkownikowi na wybranie koloru. `DoModal` Zwraca wybranych przez użytkownika przycisku OK (IDOK) lub anulować (IDCANCEL) albo okno dialogowe.  
   
  Jeśli `DoModal` zwraca IDOK, możesz użyć jednej z `CColorDialog`przez funkcje Członkowskie można pobrać informacji o danych wejściowych przez użytkownika.  
   
- Możesz użyć Windows [CommDlgExtendedError](http://msdn.microsoft.com/library/windows/desktop/ms646916) funkcji, aby ustalić, czy wystąpił błąd podczas inicjowania okna dialogowego i Dowiedz się więcej o błędzie.  
+ Możesz użyć Windows [CommDlgExtendedError](/windows/desktop/api/commdlg/nf-commdlg-commdlgextendederror) funkcji, aby ustalić, czy wystąpił błąd podczas inicjowania okna dialogowego i Dowiedz się więcej o błędzie.  
   
  `CColorDialog` opiera się na pliku COMMDLG. Plik DLL, który jest dostarczany z programem Windows w wersji 3.1 lub nowszej.  
   
@@ -130,7 +130,7 @@ CColorDialog(
  Domyślny wybór kolorów. Jeśli nie określono wartości, wartość domyślna to RGB(0,0,0) (czarny).  
   
  *Flagidw*  
- Zestaw flag, umożliwiające dostosowanie funkcji i wygląd okna dialogowego. Aby uzyskać więcej informacji, zobacz [CHOOSECOLOR](http://msdn.microsoft.com/library/windows/desktop/ms646830) struktury w zestawie Windows SDK.  
+ Zestaw flag, umożliwiające dostosowanie funkcji i wygląd okna dialogowego. Aby uzyskać więcej informacji, zobacz [CHOOSECOLOR](/windows/desktop/api/commdlg/ns-commdlg-tagchoosecolora) struktury w zestawie Windows SDK.  
   
  *pParentWnd*  
  Wskaźnik do okna nadrzędnego lub właściciela okno dialogowe.  
@@ -146,7 +146,7 @@ virtual INT_PTR DoModal();
 ```  
   
 ### <a name="return-value"></a>Wartość zwracana  
- IDOK lub IDCANCEL. Jeśli zwracana jest IDCANCEL, wywołaj Windows [CommDlgExtendedError](http://msdn.microsoft.com/library/windows/desktop/ms646916) funkcję, aby ustalić, czy wystąpił błąd.  
+ IDOK lub IDCANCEL. Jeśli zwracana jest IDCANCEL, wywołaj Windows [CommDlgExtendedError](/windows/desktop/api/commdlg/nf-commdlg-commdlgextendederror) funkcję, aby ustalić, czy wystąpił błąd.  
   
  IDOK i IDCANCEL są stałe, które wskazują, czy użytkownik wybrał przycisk OK, lub przycisk Anuluj.  
   
@@ -166,7 +166,7 @@ COLORREF GetColor() const;
 ```  
   
 ### <a name="return-value"></a>Wartość zwracana  
- A [COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449) wartość, która zawiera informacje o RGB na kolor wybrany w oknie dialogowym koloru.  
+ A [COLORREF](/windows/desktop/gdi/colorref) wartość, która zawiera informacje o RGB na kolor wybrany w oknie dialogowym koloru.  
   
 ### <a name="example"></a>Przykład  
  [!code-cpp[NVC_MFCDocView#50](../../mfc/codesnippet/cpp/ccolordialog-class_2.cpp)]  
@@ -190,7 +190,7 @@ static COLORREF* PASCAL GetSavedCustomColors();
  [!code-cpp[NVC_MFCDocView#51](../../mfc/codesnippet/cpp/ccolordialog-class_3.cpp)]  
   
 ##  <a name="m_cc"></a>  CColorDialog::m_cc  
- Struktury typu [CHOOSECOLOR](http://msdn.microsoft.com/library/windows/desktop/ms646830), której członkowie przechowywania właściwości i wartości w oknie dialogowym.  
+ Struktury typu [CHOOSECOLOR](/windows/desktop/api/commdlg/ns-commdlg-tagchoosecolora), której członkowie przechowywania właściwości i wartości w oknie dialogowym.  
   
 ```  
 CHOOSECOLOR m_cc;  

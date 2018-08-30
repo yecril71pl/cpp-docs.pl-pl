@@ -98,12 +98,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 40b84e3daac5a1e5574c09e656d39dc774b57031
-ms.sourcegitcommit: 76fd30ff3e0352e2206460503b61f45897e60e4f
+ms.openlocfilehash: bb157fb5c39dff7f4e06926ddd17ed38d7a5174a
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/13/2018
-ms.locfileid: "39027748"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43218636"
 ---
 # <a name="map-class"></a>map — Klasa
 
@@ -123,15 +123,19 @@ class map;
 
 ### <a name="parameters"></a>Parametry
 
-*Klucz* typ danych klucza, który ma być przechowywany w mapie.
+*Key*<br/>
+ Typ danych klucza, który ma być przechowywany w mapie.
 
-*Typ* typ danych elementu, który ma być przechowywany w mapie.
+*Typ*<br/>
+ Typ danych elementu, który ma być przechowywany w mapie.
 
-*Cechy* typ, który dostarcza obiekt funkcji, która może porównać dwie wartości elementów jako klucze sortowania, aby określić ich względną kolejność w mapie. Ten argument jest opcjonalny i predykat dwuelementowy `less<Key>` jest wartością domyślną.
+*Cechy*<br/>
+ Typ, który dostarcza obiekt funkcji, która może porównać dwie wartości elementów jako klucze sortowania, aby określić ich względną kolejność w mapie. Ten argument jest opcjonalny i predykat dwuelementowy `less<Key>` jest wartością domyślną.
 
 W języku C ++ 14 można włączyć heterogeniczne wyszukiwanie, określając predykatu <> std::less, który nie ma parametrów typu. Aby uzyskać więcej informacji, zobacz [heterogeniczne wyszukiwanie w kontenerach asocjacyjnych](../standard-library/stl-containers.md#sequence_containers)
 
-*Allocator* typ reprezentujący przechowywany obiekt alokatora, który hermetyzuje szczegóły dotyczące alokacji mapy i dezalokacji pamięci. Ten argument jest opcjonalny, a wartość domyślna to `allocator<pair<const Key, Type> >`.
+*Allocator*<br/>
+ Typ reprezentujący przechowywany obiekt alokatora, który hermetyzuje szczegóły dotyczące alokacji mapy i dezalokacji pamięci. Ten argument jest opcjonalny, a wartość domyślna to `allocator<pair<const Key, Type> >`.
 
 ## <a name="remarks"></a>Uwagi
 
@@ -572,7 +576,8 @@ size_type count(const Key& key) const;
 
 ### <a name="parameters"></a>Parametry
 
-*klucz* wartość klucza elementów, które mają być dopasowywane z mapy.
+*Klucz*<br/>
+ Wartość klucza elementy, które mają być dopasowywane z mapy.
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -1035,7 +1040,8 @@ pair <iterator, iterator> equal_range (const Key& key);
 
 ### <a name="parameters"></a>Parametry
 
-*klucz* wartość klucza argumentu ma być porównywana za pomocą klucza sortowania z mapy wyszukiwany element.
+*Klucz*<br/>
+ Wartość klucza argumentu ma być porównywana za pomocą klucza sortowania z mapy wyszukiwany element.
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -1121,13 +1127,17 @@ size_type erase(
 
 ### <a name="parameters"></a>Parametry
 
-*Gdzie* pozycję elementu do usunięcia.
+*Where*<br/>
+ Pozycja elementu, który ma zostać usunięty.
 
-*Pierwszy* pozycja pierwszego elementu do usunięcia.
+*pierwszy*<br/>
+ Pozycja pierwszego elementu do usunięcia.
 
-*Ostatni* pozycji tuż za ostatni element do usunięcia.
+*ostatni*<br/>
+ Pozycja tuż za ostatni element do usunięcia.
 
-*Klucz* wartość klucza elementów do usunięcia.
+*Key*<br/>
+ Wartość klucza elementów do usunięcia.
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -1229,7 +1239,8 @@ const_iterator find(const Key& key) const;
 
 ### <a name="parameters"></a>Parametry
 
-*klucz* wartości klucza, które mają być dopasowywane o klucz sortowania element z mapy wyszukiwany.
+*Klucz*<br/>
+ Wartość klucza, które mają być dopasowywane o klucz sortowania element z mapy wyszukiwany.
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -1561,11 +1572,11 @@ typedef implementation-defined iterator;
 
 ### <a name="remarks"></a>Uwagi
 
-`iterator` Definicją punktów mapy do elementów, które są obiektami [value_type](#value_type), to znaczy typu `pair` * \< * **constKey**, * *Typ *** >*, którego pierwszy element członkowski jest kluczem do elementu, jak i drugi, którego element członkowski jest zamapowany podstawy wymiarowej utrzymywane przez element.
+Iterator definicją punktów mapy do elementów, które są obiektami [value_type](#value_type), to znaczy typu `pair<const Key, Type>`, którego pierwszy element członkowski jest kluczem do elementu, jak i drugi, którego element członkowski jest zamapowany podstawy wymiarowej utrzymywane przez element.
 
-Próbę **iteratora** `Iter` wskazuje element w mapie, użyj `->` operatora.
+Można wyłuskać iteratora *Iter* wskazuje element w mapie, użyj `->` operatora.
 
-Aby uzyskać dostęp do wartości klucza dla elementu, należy użyć `Iter`  ->  **pierwszy**, która jest równoważna (\* `Iter`). **pierwszy**. Aby uzyskać dostęp do wartości zamapowanego datum dla elementu, należy użyć `Iter`  ->  **drugi**, która jest równoważna (\* `Iter`). **drugi**.
+Aby uzyskać dostęp do wartości klucza dla elementu, należy użyć `Iter->first`, który jest odpowiednikiem `(*Iter).first`. Aby uzyskać dostęp do wartości zamapowanego datum dla elementu, należy użyć `Iter->second`, który jest odpowiednikiem `(*Iter).second`.
 
 ### <a name="example"></a>Przykład
 
@@ -1587,7 +1598,7 @@ Zwraca obiekt funkcji, korzystającą z mapy w celu porządkowania jego element�
 
 Przechowywany obiekt definiuje funkcję członka
 
-**bool — operator**( **constKey &**`left`, **const Key &**`right`);
+`bool operator(const Key& left, const Key& right);`
 
 Zwraca ona **true** Jeśli `left` poprzedza i nie jest równa `right` w porządku sortowania.
 
@@ -1690,7 +1701,8 @@ const_iterator lower_bound(const Key& key) const;
 
 ### <a name="parameters"></a>Parametry
 
-*klucz* wartość klucza argumentu ma być porównywana za pomocą klucza sortowania z mapy wyszukiwany element.
+*Klucz*<br/>
+ Wartość klucza argumentu ma być porównywana za pomocą klucza sortowania z mapy wyszukiwany element.
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -1806,7 +1818,7 @@ map(
 |Parametr|Opis|
 |*Al*|Klasa alokatora magazynu ma być używany dla tego obiektu mapy, która domyślnie `Allocator`.|
 |*Comp*|Funkcja porównywania typu `const Traits` porządkowania elementów w mapie, którego wartość domyślna to `hash_compare`.|
-|*Po prawej stronie*|Mapa, w której zestaw zbudowany jest kopią.|
+|*po prawej stronie*|Mapa, w której zestaw zbudowany jest kopią.|
 |*pierwszy*|Pozycja pierwszego elementu w zakresie elementów, które mają zostać skopiowane.|
 |*ostatni*|Pozycja pierwszego elementu poza zakresem elementów, które mają zostać skopiowane.|
 |*IList*|Lista initializer_list, z którego mają zostać skopiowane elementy.|
@@ -2402,9 +2414,9 @@ typedef std::reverse_iterator<iterator> reverse_iterator;
 
 Typ `reverse_iterator` nie można zmodyfikować wartości elementu i jest używany do iterowania po mapy w odwrotnej kolejności.
 
-`reverse_iterator` Definicją punktów mapy do elementów, które są obiektami [value_type](#value_type), to znaczy typu `pair` * \< * **constKey**, * *Typ *** >*, którego pierwszy element członkowski jest kluczem do elementu, jak i drugi, którego element członkowski jest zamapowany podstawy wymiarowej utrzymywane przez element.
+`reverse_iterator` Definicją punktów mapy do elementów, które są obiektami [value_type](#value_type), to znaczy typu `pair<const Key, Type>`, którego pierwszy element członkowski jest kluczem do elementu, jak i drugi, którego element członkowski jest zamapowany podstawy wymiarowej utrzymywane przez element.
 
-Próbę `reverse_iterator` `rIter` wskazuje element w mapie, użyj `->` operatora.
+Próbę `reverse_iterator` *rIter* wskazuje element w mapie, użyj `->` operatora.
 
 Aby uzyskać dostęp do wartości klucza dla elementu, należy użyć `rIter`  ->  **pierwszy**, która jest równoważna (\* `rIter`). **pierwszy**. Aby uzyskać dostęp do wartości zamapowanego datum dla elementu, należy użyć `rIter`  ->  **drugi**, która jest równoważna (\* `rIter`). **pierwszy**.
 
@@ -2479,7 +2491,8 @@ void swap(
 
 ### <a name="parameters"></a>Parametry
 
-*prawy* mapy argument zawierająca elementy, które mają być zamienione map docelowego.
+*right*<br/>
+ Mapa argumentu, zawierająca elementy, które mają być zamienione map docelowego.
 
 ### <a name="remarks"></a>Uwagi
 
@@ -2549,7 +2562,8 @@ const_iterator upper_bound(const Key& key) const;
 
 ### <a name="parameters"></a>Parametry
 
-*klucz* wartość klucza argumentu ma być porównywana z wartością klucza sortowania elementu z tablicy wyszukiwany.
+*Klucz*<br/>
+ Wartość klucza argumentu ma być porównywana z wartością klucza sortowania elementu z tablicy wyszukiwany.
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -2738,7 +2752,7 @@ int main( )
 
 ## <a name="see-also"></a>Zobacz także
 
-[\<Mapa > elementy członkowskie](http://msdn.microsoft.com/7e8f0bc2-6034-40f6-9d14-76d4cef86308)<br/>
+[\<Mapa > elementy członkowskie](https://msdn.microsoft.com/7e8f0bc2-6034-40f6-9d14-76d4cef86308)<br/>
 [Kontenery](../cpp/containers-modern-cpp.md)<br/>
 [Bezpieczeństwo wątku w standardowej bibliotece C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>
 [Dokumentacja standardowej biblioteki C++](../standard-library/cpp-standard-library-reference.md)<br/>

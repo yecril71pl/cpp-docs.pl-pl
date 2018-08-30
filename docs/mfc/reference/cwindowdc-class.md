@@ -20,12 +20,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b692d974b5397d73f7e328330f71d8f9688be3e2
-ms.sourcegitcommit: b92ca0b74f0b00372709e81333885750ba91f90e
+ms.openlocfilehash: 40566ab94c9708d7b31f88de0f96b4fc33675534
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/16/2018
-ms.locfileid: "42466151"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43212524"
 ---
 # <a name="cwindowdc-class"></a>Klasa CWindowDC
 Pochodną `CDC`.  
@@ -77,7 +77,7 @@ explicit CWindowDC(CWnd* pWnd);
  Okno obszaru klienta, którego obiekt kontekstu urządzenia będą miały dostęp.  
   
 ### <a name="remarks"></a>Uwagi  
- Konstruktor wywołuje funkcję Windows [GetWindowDC](http://msdn.microsoft.com/library/windows/desktop/dd144947).  
+ Konstruktor wywołuje funkcję Windows [GetWindowDC](/windows/desktop/api/winuser/nf-winuser-getwindowdc).  
   
  Wyjątek (typu `CResourceException`) jest generowany, jeśli Windows `GetWindowDC` wywołanie zakończy się niepowodzeniem. Kontekst urządzenia może nie być dostępne w przypadku Windows został już przydzielony wszystkie jego kontekstów dostępnego urządzenia. Aplikacja konkuruje dla pięciu typowych kontekstach wyświetlania dostępnych w danym momencie w obszarze Windows.  
   

@@ -54,12 +54,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 45b0f46724dd552639c215093f74d8eb14d8afdd
-ms.sourcegitcommit: b92ca0b74f0b00372709e81333885750ba91f90e
+ms.openlocfilehash: 17ca93348ab5535908ea8b2d035669f7e61cef55
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/16/2018
-ms.locfileid: "42465380"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43221359"
 ---
 # <a name="cstatusbarctrl-class"></a>Klasa CStatusBarCtrl
 Oferuje funkcje formantu Windows typowego paska stanu.  
@@ -133,10 +133,10 @@ virtual BOOL Create(
   
 ### <a name="parameters"></a>Parametry  
  *dwStyle*  
- Określa styl formantu paska stanu. Zastosuj dowolną kombinację stanu paska style kontrolki, na liście [najczęściej używane style kontrolki](http://msdn.microsoft.com/library/windows/desktop/bb775498) w zestawie Windows SDK. Ten parametr musi zawierać styl WS_CHILD. Powinny również obejmować styl WS_VISIBLE.  
+ Określa styl formantu paska stanu. Zastosuj dowolną kombinację stanu paska style kontrolki, na liście [najczęściej używane style kontrolki](/windows/desktop/Controls/common-control-styles) w zestawie Windows SDK. Ten parametr musi zawierać styl WS_CHILD. Powinny również obejmować styl WS_VISIBLE.  
   
  *Rect*  
- Określa rozmiar i położenie formantu paska stanu. Może być albo [CRect](../../atl-mfc-shared/reference/crect-class.md) obiektu lub [Prostokąt](http://msdn.microsoft.com/library/windows/desktop/dd162897) struktury.  
+ Określa rozmiar i położenie formantu paska stanu. Może być albo [CRect](../../atl-mfc-shared/reference/crect-class.md) obiektu lub [Prostokąt](https://msdn.microsoft.com/library/windows/desktop/dd162897) struktury.  
   
  *pParentWnd*  
  Określa stan paska okno nadrzędne kontrolki, zwykle `CDialog`. Nie może być równa NULL.  
@@ -171,13 +171,13 @@ virtual BOOL CreateEx(
   
 ### <a name="parameters"></a>Parametry  
  *dwExStyle*  
- Określa styl rozszerzony kontrolki tworzona. Aby uzyskać listę rozszerzone style Windows, zobacz *dwExStyle* parametr [elementu CreateWindowEx](http://msdn.microsoft.com/library/windows/desktop/ms632680) w zestawie Windows SDK.  
+ Określa styl rozszerzony kontrolki tworzona. Aby uzyskać listę rozszerzone style Windows, zobacz *dwExStyle* parametr [elementu CreateWindowEx](https://msdn.microsoft.com/library/windows/desktop/ms632680) w zestawie Windows SDK.  
   
  *dwStyle*  
- Określa styl formantu paska stanu. Zastosuj dowolną kombinację stanu paska style kontrolki, na liście [najczęściej używane style kontrolki](http://msdn.microsoft.com/library/windows/desktop/bb775498) w zestawie Windows SDK. Ten parametr musi zawierać styl WS_CHILD. Powinny również obejmować styl WS_VISIBLE.  
+ Określa styl formantu paska stanu. Zastosuj dowolną kombinację stanu paska style kontrolki, na liście [najczęściej używane style kontrolki](/windows/desktop/Controls/common-control-styles) w zestawie Windows SDK. Ten parametr musi zawierać styl WS_CHILD. Powinny również obejmować styl WS_VISIBLE.  
   
  *Rect*  
- Odwołanie do [Prostokąt](http://msdn.microsoft.com/library/windows/desktop/dd162897) struktury opisujących rozmiar i położenie okna, można utworzyć klienta współrzędne *pParentWnd*.  
+ Odwołanie do [Prostokąt](https://msdn.microsoft.com/library/windows/desktop/dd162897) struktury opisujących rozmiar i położenie okna, można utworzyć klienta współrzędne *pParentWnd*.  
   
  *pParentWnd*  
  Wskaźnik do okna, które jest elementem nadrzędnym formantu.  
@@ -207,7 +207,7 @@ virtual void DrawItem(LPDRAWITEMSTRUCT lpDrawItemStruct);
   
 ### <a name="parameters"></a>Parametry  
  *lpDrawItemStruct*  
- Długie wskaźnik do [DRAWITEMSTRUCT](http://msdn.microsoft.com/library/windows/desktop/bb775802) strukturę, która zawiera informacje o typie rysowania wymagane.  
+ Długie wskaźnik do [DRAWITEMSTRUCT](/windows/desktop/api/winuser/ns-winuser-tagdrawitemstruct) strukturę, która zawiera informacje o typie rysowania wymagane.  
   
 ### <a name="remarks"></a>Uwagi  
  `itemAction` Członkiem `DRAWITEMSTRUCT` struktury definiuje rysowania akcję, która ma zostać wykonane.  
@@ -267,7 +267,7 @@ HICON GetIcon(int iPart) const;
  Uchwyt ikony Jeśli metoda kończy się pomyślnie; w przeciwnym razie wartość NULL.  
   
 ### <a name="remarks"></a>Uwagi  
- Ta metoda wysyła [SB_GETICON](http://msdn.microsoft.com/library/windows/desktop/bb760744) komunikat, który jest opisany w zestawie Windows SDK.  
+ Ta metoda wysyła [SB_GETICON](/windows/desktop/Controls/sb-geticon) komunikat, który jest opisany w zestawie Windows SDK.  
   
  Formant paska stanu składa się z wiersza tekstu okienka danych wyjściowych, które są również znane jako części. Aby uzyskać więcej informacji na temat paska stanu, zobacz [implementacja paska stanu w MFC](../../mfc/status-bar-implementation-in-mfc.md) i [Ustawianie trybu obiektu CStatusBarCtrl](../../mfc/setting-the-mode-of-a-cstatusbarctrl-object.md).  
   
@@ -320,7 +320,7 @@ BOOL GetRect(
  Liczony od zera indeks części, w których prostokąt otaczający ma zostać pobrane.  
   
  *lprect —*  
- Adres [Prostokąt](http://msdn.microsoft.com/library/windows/desktop/dd162897) strukturę, która odbiera prostokąt otaczający.  
+ Adres [Prostokąt](https://msdn.microsoft.com/library/windows/desktop/dd162897) strukturę, która odbiera prostokąt otaczający.  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Wartość różną od zera, jeśli to się powiedzie; w przeciwnym razie wartość zero.  
@@ -411,7 +411,7 @@ CString GetTipText(int nPane) const;
  A [CString](../../atl-mfc-shared/reference/cstringt-class.md) obiekt zawierający tekst, który ma być używane w etykietce narzędzia.  
   
 ### <a name="remarks"></a>Uwagi  
- Ta funkcja elementu członkowskiego implementuje zachowanie komunikatu Win32 [SB_GETTIPTEXT](http://msdn.microsoft.com/library/windows/desktop/bb760751), zgodnie z opisem w zestawie Windows SDK.  
+ Ta funkcja elementu członkowskiego implementuje zachowanie komunikatu Win32 [SB_GETTIPTEXT](/windows/desktop/Controls/sb-gettiptext), zgodnie z opisem w zestawie Windows SDK.  
   
 ### <a name="example"></a>Przykład  
  [!code-cpp[NVC_MFC_CStatusBarCtrl#7](../../mfc/reference/codesnippet/cpp/cstatusbarctrl-class_9.cpp)]  
@@ -427,7 +427,7 @@ BOOL IsSimple() const;
  Wartość różną od zera, jeśli formant okna stanu znajduje się w trybie uproszczonym; w przeciwnym razie wartość zero.  
   
 ### <a name="remarks"></a>Uwagi  
- Ta funkcja elementu członkowskiego implementuje zachowanie komunikatu Win32 [SB_ISSIMPLE](http://msdn.microsoft.com/library/windows/desktop/bb760753), zgodnie z opisem w zestawie Windows SDK.  
+ Ta funkcja elementu członkowskiego implementuje zachowanie komunikatu Win32 [SB_ISSIMPLE](/windows/desktop/Controls/sb-issimple), zgodnie z opisem w zestawie Windows SDK.  
   
 ##  <a name="setbkcolor"></a>  CStatusBarCtrl::SetBkColor  
  Ustawia kolor tła na pasku stanu.  
@@ -441,10 +441,10 @@ COLORREF SetBkColor(COLORREF cr);
  Wartość COLORREF, która określa nowy kolor tła. Określ wartość CLR_DEFAULT, powodują pasek stanu, aby używać jej domyślny kolor tła.  
   
 ### <a name="return-value"></a>Wartość zwracana  
- A [COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449) wartość, która reprezentuje poprzedniego domyślny kolor tła.  
+ A [COLORREF](/windows/desktop/gdi/colorref) wartość, która reprezentuje poprzedniego domyślny kolor tła.  
   
 ### <a name="remarks"></a>Uwagi  
- Ta funkcja elementu członkowskiego implementuje zachowanie komunikatu Win32 [SB_SETBKCOLOR](http://msdn.microsoft.com/library/windows/desktop/bb760754), zgodnie z opisem w zestawie Windows SDK.  
+ Ta funkcja elementu członkowskiego implementuje zachowanie komunikatu Win32 [SB_SETBKCOLOR](/windows/desktop/Controls/sb-setbkcolor), zgodnie z opisem w zestawie Windows SDK.  
   
 ### <a name="example"></a>Przykład  
  [!code-cpp[NVC_MFC_CStatusBarCtrl#8](../../mfc/reference/codesnippet/cpp/cstatusbarctrl-class_10.cpp)]  
@@ -469,7 +469,7 @@ BOOL SetIcon(
  Wartość różną od zera, jeśli to się powiedzie; w przeciwnym razie wartość zero.  
   
 ### <a name="remarks"></a>Uwagi  
- Ta funkcja elementu członkowskiego implementuje zachowanie komunikatu Win32 [SB_SETICON](http://msdn.microsoft.com/library/windows/desktop/bb760755), zgodnie z opisem w zestawie Windows SDK.  
+ Ta funkcja elementu członkowskiego implementuje zachowanie komunikatu Win32 [SB_SETICON](/windows/desktop/Controls/sb-seticon), zgodnie z opisem w zestawie Windows SDK.  
   
 ### <a name="example"></a>Przykład  
   Zobacz przykład [CStatusBarCtrl::SetBkColor](#setbkcolor).  
@@ -576,7 +576,7 @@ void SetTipText(
  Wskaźnik do ciągu zawierającego tekst etykietki narzędzia.  
   
 ### <a name="remarks"></a>Uwagi  
- Ta funkcja elementu członkowskiego implementuje zachowanie komunikatu Win32 [SB_SETTIPTEXT](http://msdn.microsoft.com/library/windows/desktop/bb760759), zgodnie z opisem w zestawie Windows SDK.  
+ Ta funkcja elementu członkowskiego implementuje zachowanie komunikatu Win32 [SB_SETTIPTEXT](/windows/desktop/Controls/sb-settiptext), zgodnie z opisem w zestawie Windows SDK.  
   
 ### <a name="example"></a>Przykład  
  [!code-cpp[NVC_MFC_CStatusBarCtrl#12](../../mfc/reference/codesnippet/cpp/cstatusbarctrl-class_14.cpp)]  

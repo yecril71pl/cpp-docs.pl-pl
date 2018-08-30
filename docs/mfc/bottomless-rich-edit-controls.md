@@ -16,21 +16,21 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6f2b08f6c04d345b4ae3ab32c6d0f17a1d8a4647
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: c9e3115000b7b45d9b48a1ac0d274eb32c11f4d0
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33343314"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43218882"
 ---
 # <a name="bottomless-rich-edit-controls"></a>Formanty edycji wzbogaconej nieograniczone od dołu
-Aplikację można zmienić rozmiar kontrolki edycji wzbogaconej ([CRichEditCtrl](../mfc/reference/cricheditctrl-class.md)), który jest zawsze taki sam rozmiar jak jego zawartość. Kontrolki zaawansowanej edycji obsługuje to tak zwane "nieograniczone od dołu" funkcje wysyłając jej okna nadrzędnego [EN_REQUESTRESIZE](http://msdn.microsoft.com/library/windows/desktop/bb787983) komunikatu powiadomienia przy każdej zmianie rozmiaru jego zawartość.  
+Aplikację można zmienić rozmiar kontrolki edycji wzbogaconej ([CRichEditCtrl](../mfc/reference/cricheditctrl-class.md)), tak aby zawsze jest taki sam rozmiar jak jego zawartość. Kontrolki edycji wzbogaconej obsługuje to tak zwane "nieograniczone" funkcje, wysyłając okna nadrzędnego [EN_REQUESTRESIZE](/windows/desktop/Controls/en-requestresize) wiadomość z powiadomieniem zawsze wtedy, gdy zmienia się rozmiar jego zawartość.  
   
- Podczas przetwarzania **EN_REQUESTRESIZE** komunikatu powiadomienia aplikacja powinna rozmiar formantu w celu wymiary w określonym [REQRESIZE](http://msdn.microsoft.com/library/windows/desktop/bb787950) struktury. Aplikacja może również przenieść wszystkie informacje w pobliżu kontroli umożliwiających zmianę wysokość formantu. Aby zmienić rozmiar formantu, można użyć `CWnd` funkcja [SetWindowPos](../mfc/reference/cwnd-class.md#setwindowpos).  
+ Podczas przetwarzania **EN_REQUESTRESIZE** komunikatu powiadomienia aplikacja powinna rozmiar formantu do wymiarów w określonym [REQRESIZE](/windows/desktop/api/richedit/ns-richedit-_reqresize) struktury. Aplikacja może również przenieść żadnych informacji obok kontrolki, aby uwzględnić zmiany formantu w wysokości. Aby zmienić rozmiar kontrolki, można użyć `CWnd` funkcja [SetWindowPos](../mfc/reference/cwnd-class.md#setwindowpos).  
   
- Możesz wymusić kontrolki edycji wzbogaconej nieograniczone od dołu do wysyłania **EN_REQUESTRESIZE** komunikatu powiadomienia za pomocą [RequestResize](../mfc/reference/cricheditctrl-class.md#requestresize) funkcję elementu członkowskiego. Ten komunikat może być przydatne w [OnSize](../mfc/reference/cwnd-class.md#onsize) programu obsługi.  
+ Można wymusić kontrolki edycji wzbogaconej nieograniczone wysyłać **EN_REQUESTRESIZE** komunikatu powiadomienia za pomocą [RequestResize](../mfc/reference/cricheditctrl-class.md#requestresize) funkcja elementu członkowskiego. Ten komunikat może być przydatne w [OnSize](../mfc/reference/cwnd-class.md#onsize) programu obsługi.  
   
- Aby otrzymywać **EN_REQUESTRESIZE** komunikatów powiadomień, należy włączyć powiadomienia za pomocą `SetEventMask` funkcji członkowskiej.  
+ Aby otrzymać **EN_REQUESTRESIZE** komunikaty powiadomień, musi włączyć powiadomienia, za pomocą `SetEventMask` funkcja elementu członkowskiego.  
   
 ## <a name="see-also"></a>Zobacz też  
  [Korzystanie z CRichEditCtrl](../mfc/using-cricheditctrl.md)   

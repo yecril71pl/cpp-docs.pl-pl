@@ -9,12 +9,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 801a88573133a68beec4855dc499fcba27bb64e8
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: bad7a0a5263d001d9dc77dd8d9e8cf0cf70100b4
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42593872"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43219642"
 ---
 # <a name="visual-c-language-reference-ccx"></a>Dokumentacja języka Visual C++ (C + +/ CX)
 
@@ -45,5 +45,5 @@ Za pomocą C + +/ CX, można utworzyć:
 |[Wątkowość i Marshaling](../cppcx/threading-and-marshaling-c-cx.md)|W tym artykule omówiono sposób określania zachowania wątkowości i organizowania składników, które tworzysz.|
 |[Odwołanie do przestrzeni nazw](../cppcx/namespaces-reference-c-cx.md)|Dokumentacja dotycząca domyślny obszar nazw, przestrzeń nazw platformy, Platform::Collections i pokrewne obszary nazw.|
 |[Funkcje CRT nie są obsługiwane w aplikacjach platformy uniwersalnej systemu Windows](../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md)|Wyświetla listę funkcji CRT, które nie są dostępne do użycia w aplikacjach Windows Runtime.|
-|[Przewodniki z instrukcjami dla aplikacji systemu Windows 10](http://msdn.microsoft.com/library/windows/apps/xaml/mt244352.aspx)|Zawiera ogólne wskazówki na temat aplikacji systemu Windows 10 i linki do szczegółowych informacji.|
+|[Przewodniki z instrukcjami dla aplikacji systemu Windows 10](https://msdn.microsoft.com/library/windows/apps/xaml/mt244352.aspx)|Zawiera ogólne wskazówki na temat aplikacji systemu Windows 10 i linki do szczegółowych informacji.|
 |[C + +/ CX część 0 \[n\]: wprowadzenie](https://blogs.msdn.microsoft.com/vcblog/2012/08/29/ccx-part-0-of-n-an-introduction/)<br /><br />[C + +/ CX, część 1 z \[n\]: prostą klasę](https://blogs.msdn.microsoft.com/vcblog/2012/09/05/ccx-part-1-of-n-a-simple-class/)<br /><br />[C + +/ CX część 2 \[n\]: typy, które systemy Wear](https://blogs.msdn.microsoft.com/vcblog/2012/09/17/ccx-part-2-of-n-types-that-wear-hats/)<br /><br />[C + +/ CX część 3 \[n\]: W trakcie tworzenia](https://blogs.msdn.microsoft.com/vcblog/2012/10/05/ccx-part-3-of-n-under-construction/)<br /><br />[C + +/ CX część 4 \[n\]: statyczne funkcje Członkowskie](https://blogs.msdn.microsoft.com/vcblog/2012/10/19/ccx-part-4-of-n-static-member-functions/)|Wprowadzające cyklu blogów Visual C++ w języku C + +/ CX.|

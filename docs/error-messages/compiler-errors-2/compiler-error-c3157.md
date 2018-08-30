@@ -1,5 +1,5 @@
 ---
-title: C3157 błąd kompilatora | Dokumentacja firmy Microsoft
+title: Błąd kompilatora C3157 | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,14 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 21f6141bd921ce82feb9218baede59edfc58243f
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 156315e0e1892d9ef92020e56992d6dec51356aa
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33244309"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43220157"
 ---
-# <a name="compiler-error-c3157"></a>C3157 błąd kompilatora
+# <a name="compiler-error-c3157"></a>Błąd kompilatora C3157
 Atrybut ParamArray można stosować tylko do ostatniego parametru  
   
- [ParamArray](https://msdn.microsoft.com/en-us/library/system.paramarrayattribute.aspx) atrybutu została zastosowana do nieprawidłowy parametr.
+ [ParamArray](https://msdn.microsoft.com/library/system.paramarrayattribute.aspx) atrybut został zastosowany do parametru problem.

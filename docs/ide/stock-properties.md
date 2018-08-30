@@ -15,28 +15,28 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a3586fb33c30148c870b096d0d49a41d7ad8c6c8
-ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
+ms.openlocfilehash: 4a9b2aa4389d693cfc6734a29f3a744e955ca3ea
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "33335445"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43213796"
 ---
 # <a name="stock-properties"></a>Właściwości podstawowe
-Jeśli dodajesz właściwość dispinterface MFC przy użyciu [Dodaj Kreatora właściwości](../ide/idl-attributes-add-property-wizard.md), można wybrać właściwości standardowych z **nazwa właściwości** na liście [nazwy](../ide/names-add-property-wizard.md) strony Kreator. Właściwości są następujące:  
+Jeśli chcesz dodać właściwość do dispinterface MFC przy użyciu [Kreator dodawania właściwości](../ide/idl-attributes-add-property-wizard.md), można wybrać właściwości podstawowych z **nazwa właściwości** listy w [nazwy](../ide/names-add-property-wizard.md) strony Kreator. Właściwości są następujące:  
   
 |Nazwa właściwości|Opis|  
 |-------------------|-----------------|  
-|**Wygląd**|Zwraca lub ustawia wartość, która określa wygląd formantu. Kontrolki **wygląd** właściwości można uwzględnić lub pominąć efekty trójwymiarowych. To jest właściwością otoczenia odczytu/zapisu.|  
-|`BackColor`|Zwraca lub konfiguruje formantu otoczenia `BackColor` właściwości kolorów palety (RGB) lub kolor wstępnie zdefiniowanego systemu. Domyślnie wartość odpowiada kolor pierwszego planu formantu kontenera. To jest właściwością otoczenia odczytu/zapisu.|  
-|`BorderStyle`|Zwraca lub ustawia styl obramowania formantu. Jest to właściwość odczytu/zapisu.|  
-|**Podpis**|Zwraca lub konfiguruje formantu **podpis** właściwości. Podpis jest tytuł okna. **Podpis** nie ma **zmiennej członkowskiej** typ implementacji.|  
-|**włączone**|Zwraca lub konfiguruje formantu **włączone** właściwości. Formant włączone może odpowiadać na zdarzenia generowane przez użytkownika.|  
-|**Czcionki**|Zwraca lub ustawia czcionkę otoczenia formantu. Wartość null, jeśli formant nie ma żadnych czcionki.|  
-|`ForeColor`|Zwraca lub konfiguruje formantu otoczenia `ForeColor` właściwości.|  
-|**Właściwość hWnd**|Zwraca lub konfiguruje formantu **hWnd** właściwości. **Właściwość hWnd** nie ma **zmiennej członkowskiej** typ implementacji.|  
-|**ReadyState**|Zwraca lub konfiguruje formantu **ReadyState** właściwości. Formant może być niezainicjowanej, zainicjowane, ładowania, interakcyjnego lub pełną. Zobacz [READYSTATE](https://msdn.microsoft.com/en-us/library/aa768362.aspx) w *Internet SDK* Aby uzyskać więcej informacji.|  
-|**Tekst**|Zwraca lub ustawia tekst wyświetlany w formancie. **Tekst** nie ma **zmiennej członkowskiej** typ implementacji.|  
+|**Wygląd**|Zwraca lub ustawia wartość określającą, wygląd formantu. Kontrolki **wygląd** właściwości można uwzględnić lub pominąć efekty trójwymiarowych. Jest to właściwość otoczenia odczytu/zapisu.|  
+|`BackColor`|Zwraca lub ustawia formantu otoczenia `BackColor` właściwość kolor z palety (RGB) lub kolor wstępnie zdefiniowanego. Domyślnie jej wartość odpowiada kolor pierwszego planu kontener formantu. Jest to właściwość otoczenia odczytu/zapisu.|  
+|`BorderStyle`|Zwraca lub ustawia styl obramowania kontrolki. Jest to właściwość odczytu/zapisu.|  
+|**Podpis**|Zwraca lub ustawia formantu **podpis** właściwości. Podpis jest tytuł okna. **Podpis** nie ma przypisanego **zmiennej składowej** typ implementacji.|  
+|**Włączone**|Zwraca lub ustawia formantu **włączone** właściwości. Kontrolka w postaci włączone może odpowiadać na zdarzenia generowane przez użytkownika.|  
+|**Czcionka**|Zwraca lub ustawia czcionkę otoczenia formantu. Wartość null, jeśli kontrolka ma nie czcionki.|  
+|`ForeColor`|Zwraca lub ustawia formantu otoczenia `ForeColor` właściwości.|  
+|**hWnd**|Zwraca lub ustawia formantu **hWnd** właściwości. **hWnd** nie ma przypisanego **zmiennej składowej** typ implementacji.|  
+|**ReadyState**|Zwraca lub ustawia formantu **ReadyState** właściwości. Formant może być niezainicjowanej, zainicjowane, ładowanie, interakcyjnego lub pełne. Zobacz [READYSTATE](https://msdn.microsoft.com/library/aa768362.aspx) w *Internet SDK* Aby uzyskać więcej informacji.|  
+|**Tekst**|Zwraca lub ustawia tekst zawarty w kontrolce. **Tekst** nie ma przypisanego **zmiennej składowej** typ implementacji.|  
   
 ## <a name="see-also"></a>Zobacz też  
  [Dodawanie właściwości](../ide/adding-a-property-visual-cpp.md)   

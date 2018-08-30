@@ -1,5 +1,5 @@
 ---
-title: Organizowanie | Dokumentacja firmy Microsoft
+title: Marshaling | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,20 +16,20 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d2b8b82d5369aa536dab638efa379089325d10b1
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: ac4bb35d29d74f0e66337dc6c3999df66a63d254
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32360103"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43212694"
 ---
-# <a name="marshaling"></a>Organizowanie
-Organizowanie techniki COM umożliwia interfejsach udostępnionych za pomocą obiektu w jednym procesie do użycia w innym procesie. W przekazywanie, COM udostępnia kod (lub korzysta z kodu udostępniane przez osoby wdrażającej interfejs) do pakietu parametrów metod do formatu, który można przenosić między procesami (i wielu sieci dla procesów uruchomionych na innych komputerach) i Rozpakuj tych parametrów na drugim końcu. Podobnie COM, należy wykonać te same czynności na powrót z wywołania.  
+# <a name="marshaling"></a>marshaling
+Technika COM marshalingu umożliwia interfejsów udostępnianych przez obiekt w jednym procesie ma być używany w innym procesie. Organizowanie, COM zawiera kod (lub korzysta z kodu dostarczane przez obiekt implementujący interfejs) zarówno pakiet parametrów metody do formatu, który można przenosić między procesami (a także, faktycznie dla procesów uruchomionych na innych komputerach), jak i rozpakowania tych parametrów na końcu. Podobnie COM, należy wykonać te same kroki na powrót z wywołania.  
   
 > [!NOTE]
->  Organizowanie zwykle nie jest konieczne po interfejs dostarczony przez obiekt jest używany ten sam proces jako obiekt. Jednak organizowanie mogą być wymagane między wątkami.  
+>  Marshaling zwykle nie jest konieczne po interfejsie udostępnianym przez obiekt jest używany w tym samym procesie co obiekt. Jednak przekazywanie może być potrzebny między wątkami.  
   
 ## <a name="see-also"></a>Zobacz też  
- [Wprowadzenie do COM](../atl/introduction-to-com.md)   
- [Przekazywanie informacji](http://msdn.microsoft.com/library/windows/desktop/ms692621)
+ [Wprowadzenie do modelu COM](../atl/introduction-to-com.md)   
+ [Organizowanie informacji](/windows/desktop/com/marshaling-details)
 

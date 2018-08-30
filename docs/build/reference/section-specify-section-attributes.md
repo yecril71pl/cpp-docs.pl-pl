@@ -18,12 +18,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6d9b0a724f0e9156c81db20bf283e4418dd2f22d
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 1f052d8acaceee88b6b9a727e176666180b1bb9d
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32379526"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43214183"
 ---
 # <a name="section-specify-section-attributes"></a>/SECTION (Określ atrybuty sekcji)
 
@@ -31,13 +31,13 @@ ms.locfileid: "32379526"
 
 ## <a name="remarks"></a>Uwagi
 
-**/SECTION** opcja zmienia atrybuty sekcji, zastępując zestaw atrybutów, gdy plik .obj sekcji został skompilowany.
+**/SECTION** opcji zmienia atrybuty sekcji, zastępując atrybuty ustawione, gdy plik .obj sekcji został skompilowany.
 
-A *sekcji* w przenośnym pliku wykonywalnym (PE) pliku jest nazwane ciągły blok pamięci, który zawiera kod lub dane. Niektóre sekcje zawierają kod lub dane, które program zadeklarowany i używa bezpośrednio, natomiast pozostałe sekcje zasad zachowania danych są tworzone przez konsolidatora i biblioteki menedżera (lib.exe) i zawierają informacje niezbędne do tego systemu operacyjnego. Aby uzyskać więcej informacji, zobacz [formatu PE](https://msdn.microsoft.com/library/windows/desktop/ms680547).
+A *sekcji* w przenośnym pliku wykonywalnym (PE) pliku jest o nazwie, ciągłym bloku pamięci, która zawiera kod lub danych. Niektóre sekcje zawierają kod lub dane, które program zadeklarowane ale korzysta z bezpośrednio, natomiast pozostałe sekcje danych utworzone za pomocą konsolidatora i biblioteki menedżera (lib.exe) zawierają informacje niezbędne do systemu operacyjnego. Aby uzyskać więcej informacji, zobacz [formatu PE](/windows/desktop/Debug/pe-format).
 
-Określ dwukropkiem (:) i sekcję *nazwa*. *Nazwa* uwzględniana jest wielkość liter.
+Określ dwukropek (:) i sekcję *nazwa*. *Nazwa* jest uwzględniana wielkość liter.
 
-Nie należy używać następujących nazw, jak powodują konfliktów z już standardowe nazwy. Na przykład .sdata jest używana na platformach RISC:
+Nie należy używać następujących nazw, ponieważ powodują konfliktów z nazwami standardowych. Na przykład .sdata jest używany na platformach RISC:
 
 - .arch
 
@@ -67,33 +67,33 @@ Nie należy używać następujących nazw, jak powodują konfliktów z już stan
 
 - .xdata
 
-Określ jeden lub więcej atrybutów dla sekcji. Znaki atrybutu, wymienione poniżej, nie jest uwzględniana. Należy określić wszystkie atrybuty, które mają sekcji, aby mieć; znak pominięty atrybut powoduje, że tego atrybutu bit do wyłączenia. Jeśli nie określisz R, P lub E, istniejące odczytu, zapisu lub pliku wykonywalnego stan jest zmieniany.
+Określ jeden lub więcej atrybutów w sekcji. Znaków atrybutu, wymienione poniżej pod warunkiem jest uwzględniana wielkość liter. Należy określić wszystkie atrybuty, które chcesz sekcji, aby mieć; znak pominięty atrybutu powoduje, że ten bit atrybutu do wyłączenia. Jeśli nie określisz R, W lub E, istniejące odczytu, zapisu lub wykonywalny nadal będzie w stanie niezmieniony.
 
-Aby odwrócić atrybutu, należy poprzedzić jej znak symbolem wykrzyknika (!). W tej tabeli przedstawiono znaczenie znaków atrybutu:
+Aby odwrócić atrybutu, należy poprzedzić jej znakiem wykrzyknika (!). W tej tabeli przedstawiono znaczenie znaków atrybutu:
 
 |Znak|Atrybut|Znaczenie|
 |---------------|---------------|-------------|
-|E|Wykonanie|Sekcja jest pliku wykonywalnego|
+|E|Wykonywanie|Sekcja jest wykonywalny|
 |R|Odczyt|Zezwala na operacje odczytu danych|
-|W|Write|Zezwala na wykonywanie operacji zapisu na danych|
+|W|Write|Umożliwia wykonywanie operacji zapisu na danych|
 |S|Shared|Udostępnia sekcji między wszystkie procesy, które ładują obrazu|
-|D|Discardable|Oznacza sekcji jako discardable|
-|K|Buforowalnej|Oznacza sekcji jako nie buforowalnej|
-|P|Stronicowalnej|Oznacza sekcji jako nie stronicowalnej|
+|D|Discardable|Oznacza sekcji discardable|
+|K|Podlega buforowaniu|Oznacza sekcji nie podlega buforowaniu|
+|P|Stronicowanej|Oznacza sekcji nie stronicowanej|
 
-K i P są w tej flagi sekcji, które odnoszą się do nich są używane w tym sensie, ujemne. Jeśli określisz jeden z nich w sekcji .text za pomocą **/SECTION:.text, K** opcji, nie ma żadnej różnicy w sekcji flagi, po uruchomieniu [DUMPBIN](../../build/reference/dumpbin-options.md) z [/HEADERS](../../build/reference/headers.md)opcję; sekcja już niejawnie był buforowany. Nie można usunąć domyślnego, określ **/SECTION:.text,! K** zamiast tego. DUMPBIN ujawnia właściwości sekcji, w tym "Niebuforowane."
+K i P są w tej flagi sekcji, które odnoszą się do nich są używane w tym sensie, ujemna. Jeśli należy określić jeden z nich w sekcji .text za pomocą **/SECTION:.text, K** opcji, nie ma żadnej różnicy w sekcji flagi, po uruchomieniu [DUMPBIN](../../build/reference/dumpbin-options.md) z [/HEADERS](../../build/reference/headers.md)opcji; sekcja już niejawnie był buforowany. Nie można usunąć domyślnego, określ **/SECTION:.text,! K** zamiast tego. DUMPBIN, co spowoduje wyświetlenie właściwości sekcji, w tym "Nie pamięci podręcznej."
 
-Sekcja w pliku PE, które nie ma E, R lub ustawiona W jest prawdopodobnie nieprawidłowy.
+Do sekcji w pliku PE, który nie ma E, R lub ustaw W jest prawdopodobnie nieprawidłowy.
 
 **ALIGN =**_numer_ argument pozwala określić wartość wyrównania dla określonej sekcji. _Numer_ argument w bajtach i musi być potęgą liczby dwa. Zobacz [/ALIGN](../../build/reference/align-section-alignment.md) Aby uzyskać więcej informacji.
 
 ### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>Aby ustawić tę opcję konsolidatora w środowisku programowania Visual Studio
 
-1.  Otwórz projekt **strony właściwości** okno dialogowe. Aby uzyskać więcej informacji, zobacz [Ustawianie właściwości projektu Visual C++](../../ide/working-with-project-properties.md).
+1.  Otwórz projekt **stron właściwości** okno dialogowe. Aby uzyskać więcej informacji, zobacz [ustawienie właściwości projektu Visual C++](../../ide/working-with-project-properties.md).
 
-1. Wybierz **właściwości konfiguracji** > **konsolidatora** > **wiersza polecenia** strony właściwości.
+1. Wybierz **właściwości konfiguracji** > **konsolidatora** > **wiersza polecenia** stronę właściwości.
 
-1. Wybierz opcję w **dodatkowe opcje** pole. Wybierz **OK** lub **Zastosuj** do zastosowania zmiany.
+1. Wpisz opcje w **dodatkowe opcje** pole. Wybierz **OK** lub **Zastosuj** do zastosowania zmiany.
 
 ### <a name="to-set-this-linker-option-programmatically"></a>Aby programowo ustawić tę opcję konsolidatora
 

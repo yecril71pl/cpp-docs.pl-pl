@@ -27,12 +27,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4995779a7f5595eca9dc47a29ea11d875995e959
-ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
+ms.openlocfilehash: d964e844e8be4b741628397bf8a63bbd109820d0
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37881230"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43210945"
 ---
 # <a name="aggregation-and-class-factory-macros"></a>Agregacji i makra fabryki klas
 Te makra umożliwiają kontrolowanie agregacji i fabryki klas deklarowanie.  
@@ -86,7 +86,7 @@ DECLARE_CLASSFACTORY()
  [!code-cpp[NVC_ATL_COM#55](../../atl/codesnippet/cpp/aggregation-and-class-factory-macros_2.h)]  
   
 ##  <a name="ccomclassfactory_class"></a>  Klasa CComClassFactory  
- Ta klasa implementuje [IClassFactory](http://msdn.microsoft.com/library/windows/desktop/ms694364) interfejsu.  
+ Ta klasa implementuje [IClassFactory](/windows/desktop/api/unknwnbase/nn-unknwnbase-iclassfactory) interfejsu.  
   
 ```
 class CComClassFactory : public IClassFactory,
@@ -94,7 +94,7 @@ public CComObjectRootEx<CComGlobalsThreadModel>
 ```  
   
 ### <a name="remarks"></a>Uwagi  
- `CComClassFactory` implementuje [IClassFactory](http://msdn.microsoft.com/library/windows/desktop/ms694364) interfejs, który zawiera metody do tworzenia obiektu z określonym identyfikatorem CLSID, jak również blokowanie fabryki klas w pamięci umożliwiające szybsze tworzenie nowych obiektów. `IClassFactory` należy zaimplementować dla każdej klasy, która zarejestrowania w rejestrze systemowym i który przypisania CLSID.  
+ `CComClassFactory` implementuje [IClassFactory](/windows/desktop/api/unknwnbase/nn-unknwnbase-iclassfactory) interfejs, który zawiera metody do tworzenia obiektu z określonym identyfikatorem CLSID, jak również blokowanie fabryki klas w pamięci umożliwiające szybsze tworzenie nowych obiektów. `IClassFactory` należy zaimplementować dla każdej klasy, która zarejestrowania w rejestrze systemowym i który przypisania CLSID.  
   
  Obiekty ATL zwykle uzyskać fabryki klas, wynikające z [CComCoClass](../../atl/reference/ccomcoclass-class.md). Ta klasa zawiera makra [DECLARE_CLASSFACTORY](#declare_classfactory), która deklaruje `CComClassFactory` jako domyślnej fabryki klas. Aby zastąpić to ustawienie domyślne, należy określić jedną z DECLARE_CLASSFACTORY*XXX* makra w definicji klasy. Na przykład [DECLARE_CLASSFACTORY_EX](#declare_classfactory_ex) makro używa określonej klasie dla fabryki klas:  
   
@@ -147,7 +147,7 @@ DECLARE_CLASSFACTORY2( lic )
  [!code-cpp[NVC_ATL_COM#2](../../atl/codesnippet/cpp/aggregation-and-class-factory-macros_4.h)]  
   
 ##  <a name="ccomclassfactory2_class"></a>  Klasa CComClassFactory2  
- Ta klasa implementuje [IClassFactory2](http://msdn.microsoft.com/library/windows/desktop/ms692720) interfejsu.  
+ Ta klasa implementuje [IClassFactory2](/windows/desktop/api/ocidl/nn-ocidl-iclassfactory2) interfejsu.  
   
 ```
 template <class license>
@@ -160,14 +160,14 @@ class  CComClassFactory2 : public IClassFactory2,
  *Licencja*  
  Klasa, która implementuje następujące funkcje statyczne:  
   
-- **statyczne verifylicensekey — wartość logiczna (BSTR** `bstr` **);**  
+- `static BOOL VerifyLicenseKey( BSTR bstr );`  
   
-- **statyczne getlicensekey — wartość logiczna (DWORD** `dwReserved` **, BSTR\***  `pBstr` **);**  
+- `static BOOL GetLicenseKey( DWORD dwReserved, BSTR * pBstr );`  
   
-- **statyczne BOOL IsLicenseValid ();**  
+- `static BOOL IsLicenseValid( );`  
   
 ### <a name="remarks"></a>Uwagi  
- `CComClassFactory2` implementuje [IClassFactory2](http://msdn.microsoft.com/library/windows/desktop/ms692720) interfejs, który jest rozszerzeniem programu [IClassFactory](http://msdn.microsoft.com/library/windows/desktop/ms694364). `IClassFactory2` Tworzenie obiektów kontrolki za pomocą licencji. Fabryki klas na maszynie licencjonowane wykonywania może zapewnić klucz licencji czasu wykonywania. Ten klucz licencji umożliwia aplikacji do tworzenia wystąpień obiektów, gdy licencja pełną maszyny nie istnieje.  
+ `CComClassFactory2` implementuje [IClassFactory2](/windows/desktop/api/ocidl/nn-ocidl-iclassfactory2) interfejs, który jest rozszerzeniem programu [IClassFactory](/windows/desktop/api/unknwnbase/nn-unknwnbase-iclassfactory). `IClassFactory2` Tworzenie obiektów kontrolki za pomocą licencji. Fabryki klas na maszynie licencjonowane wykonywania może zapewnić klucz licencji czasu wykonywania. Ten klucz licencji umożliwia aplikacji do tworzenia wystąpień obiektów, gdy licencja pełną maszyny nie istnieje.  
   
  Obiekty ATL zwykle uzyskać fabryki klas, wynikające z [CComCoClass](../../atl/reference/ccomcoclass-class.md). Ta klasa zawiera makra [DECLARE_CLASSFACTORY](#declare_classfactory), która deklaruje [CComClassFactory](../../atl/reference/ccomclassfactory-class.md) jako domyślnej fabryki klas. Aby użyć `CComClassFactory2`, określ [DECLARE_CLASSFACTORY2](#declare_classfactory2) makra w definicji klasy do obiektu. Na przykład:  
   
@@ -195,7 +195,7 @@ DECLARE_CLASSFACTORY_AUTO_THREAD()
  [!code-cpp[NVC_ATL_COM#9](../../atl/codesnippet/cpp/aggregation-and-class-factory-macros_6.h)]  
   
 ##  <a name="ccomclassfactoryautothread_class"></a>  Klasa CComClassFactoryAutoThread  
- Ta klasa implementuje [IClassFactory](http://msdn.microsoft.com/library/windows/desktop/ms694364) interfejs i umożliwia tworzenie w apartamentach wielu obiektów.  
+ Ta klasa implementuje [IClassFactory](/windows/desktop/api/unknwnbase/nn-unknwnbase-iclassfactory) interfejs i umożliwia tworzenie w apartamentach wielu obiektów.  
   
 > [!IMPORTANT]
 >  Ta klasa i jej elementów członkowskich nie można użyć w aplikacjach korzystających ze środowiska wykonawczego Windows.  
@@ -334,7 +334,7 @@ DECLARE_VIEW_STATUS( statusFlags )
   
 ### <a name="parameters"></a>Parametry  
  *statusFlags*  
- [in] Stan flagi. Zobacz [stan](http://msdn.microsoft.com/library/windows/desktop/ms687201) listę flag.  
+ [in] Stan flagi. Zobacz [stan](/windows/desktop/api/ocidl/ne-ocidl-tagviewstatus) listę flag.  
   
 ### <a name="example"></a>Przykład  
  [!code-cpp[NVC_ATL_Windowing#126](../../atl/codesnippet/cpp/aggregation-and-class-factory-macros_9.h)]  

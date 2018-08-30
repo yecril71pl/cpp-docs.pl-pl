@@ -22,12 +22,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b0edc3a255d3778711b2b8e74bde448dc34c814c
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: 677518f45fdfb721027cc67b0210e9b437bed859
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37849095"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43213153"
 ---
 # <a name="cpanedialog-class"></a>Klasa CPaneDialog
 `CPaneDialog` Klasa obsługuje niemodalne, dokowane okno dialogowe.  
@@ -54,12 +54,12 @@ class CPaneDialog : public CDockablePane
 |[CPaneDialog::Create](#create)|Tworzy dokowane okno dialogowe i dołącza je do `CPaneDialog` obiektu.|  
 |`CPaneDialog::CreateObject`|Używane przez platformę do tworzenia dynamicznych wystąpienia tego typu klasy.|  
 |`CPaneDialog::GetThisClass`|Używane przez architekturę, aby uzyskać wskaźnik do [CRuntimeClass](../../mfc/reference/cruntimeclass-structure.md) obiektu, który jest skojarzony z tym typem klasy.|  
-|[CPaneDialog::HandleInitDialog](#handleinitdialog)|Obsługuje [/ / Złap](http://msdn.microsoft.com/library/windows/desktop/ms645428) wiadomości. (Redefiniuje `CBasePane::HandleInitDialog`.)|  
-|`CPaneDialog::OnEraseBkgnd`|Obsługuje [WM_ERASEBKGND](http://msdn.microsoft.com/library/windows/desktop/ms648055) wiadomości. (Redefiniuje [CWnd::OnEraseBkgnd](../../mfc/reference/cwnd-class.md#onerasebkgnd).)|  
-|`CPaneDialog::OnLButtonDblClk`|Obsługuje [WM_LBUTTONDBLCLK](http://msdn.microsoft.com/library/windows/desktop/ms645606) wiadomości. (Redefiniuje [CWnd::OnLButtonDblClk](../../mfc/reference/cwnd-class.md#onlbuttondblclk).)|  
-|`CPaneDialog::OnLButtonDown`|Obsługuje [WM_LBUTTONDOWN](http://msdn.microsoft.com/library/windows/desktop/ms645607) wiadomości. (Redefiniuje [CWnd::OnLButtonDown](../../mfc/reference/cwnd-class.md#onlbuttondown).)|  
-|`CPaneDialog::OnUpdateCmdUI`|Metoda wywoływana przez platformę, by zaktualizować okno dialogowe. (Przesłania [CDockablePane::OnUpdateCmdUI](http://msdn.microsoft.com/5dd61606-1c12-40d4-b024-f3839aa5e2e0).)|  
-|`CPaneDialog::OnWindowPosChanging`|Obsługuje [WM_WINDOWPOSCHANGING](http://msdn.microsoft.com/library/windows/desktop/ms632653) wiadomości. (Redefiniuje [CWnd::OnWindowPosChanging](../../mfc/reference/cwnd-class.md#onwindowposchanging).)|  
+|[CPaneDialog::HandleInitDialog](#handleinitdialog)|Obsługuje [/ / Złap](/windows/desktop/dlgbox/wm-initdialog) wiadomości. (Redefiniuje `CBasePane::HandleInitDialog`.)|  
+|`CPaneDialog::OnEraseBkgnd`|Obsługuje [WM_ERASEBKGND](/windows/desktop/winmsg/wm-erasebkgnd) wiadomości. (Redefiniuje [CWnd::OnEraseBkgnd](../../mfc/reference/cwnd-class.md#onerasebkgnd).)|  
+|`CPaneDialog::OnLButtonDblClk`|Obsługuje [WM_LBUTTONDBLCLK](/windows/desktop/inputdev/wm-lbuttondblclk) wiadomości. (Redefiniuje [CWnd::OnLButtonDblClk](../../mfc/reference/cwnd-class.md#onlbuttondblclk).)|  
+|`CPaneDialog::OnLButtonDown`|Obsługuje [WM_LBUTTONDOWN](/windows/desktop/inputdev/wm-lbuttondown) wiadomości. (Redefiniuje [CWnd::OnLButtonDown](../../mfc/reference/cwnd-class.md#onlbuttondown).)|  
+|`CPaneDialog::OnUpdateCmdUI`|Metoda wywoływana przez platformę, by zaktualizować okno dialogowe. (Przesłania [CDockablePane::OnUpdateCmdUI](https://msdn.microsoft.com/5dd61606-1c12-40d4-b024-f3839aa5e2e0).)|  
+|`CPaneDialog::OnWindowPosChanging`|Obsługuje [WM_WINDOWPOSCHANGING](/windows/desktop/winmsg/wm-windowposchanging) wiadomości. (Redefiniuje [CWnd::OnWindowPosChanging](../../mfc/reference/cwnd-class.md#onwindowposchanging).)|  
 |[CPaneDialog::SetOccDialogInfo](#setoccdialoginfo)|Określa szablon dla okna dialogowego, który jest kontenerem sterowania OLE.|  
   
 ## <a name="remarks"></a>Uwagi  
@@ -161,7 +161,7 @@ BOOL Create(
 [!code-cpp[NVC_MFC_SetPaneSize#3](../../mfc/reference/codesnippet/cpp/cpanedialog-class_2.cpp)]  
   
 ##  <a name="handleinitdialog"></a>  CPaneDialog::HandleInitDialog  
- Obsługuje [/ / Złap](http://msdn.microsoft.com/library/windows/desktop/ms645428) wiadomości.  
+ Obsługuje [/ / Złap](/windows/desktop/dlgbox/wm-initdialog) wiadomości.  
   
 ```  
 afx_msg LRESULT HandleInitDialog(

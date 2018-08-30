@@ -412,12 +412,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 791b27e9ff5648a2616c92852a1d4f824d43127b
-ms.sourcegitcommit: b92ca0b74f0b00372709e81333885750ba91f90e
+ms.openlocfilehash: 9ba5dce4aec85a408b715e2df7bd5756dd534af2
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/16/2018
-ms.locfileid: "42466188"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43211627"
 ---
 # <a name="cdc-class"></a>Klasa CDC
 Definiuje klasę obiektów kontekstu urządzenia.  
@@ -803,13 +803,13 @@ BOOL AlphaBlend(
  Określa wysokość w jednostkach logicznych, prostokąta źródłowego.  
   
  *program Blend*  
- Określa [BLENDFUNCTION](http://msdn.microsoft.com/library/windows/desktop/dd183393) struktury.  
+ Określa [BLENDFUNCTION](/windows/desktop/api/wingdi/ns-wingdi-_blendfunction) struktury.  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Wartość TRUE, jeśli to się powiedzie; w przeciwnym razie wartość FALSE.  
   
 ### <a name="remarks"></a>Uwagi  
- Zobacz [AlphaBlend](http://msdn.microsoft.com/library/windows/desktop/dd183351) w zestawie Windows SDK, aby uzyskać więcej informacji.  
+ Zobacz [AlphaBlend](/windows/desktop/api/wingdi/nf-wingdi-alphablend) w zestawie Windows SDK, aby uzyskać więcej informacji.  
   
 ##  <a name="anglearc"></a>  CDC::AngleArc  
  Rysuje segment linii i łuku.  
@@ -1008,7 +1008,7 @@ BOOL BeginPath();
 ### <a name="remarks"></a>Uwagi  
  Po otwarciu nawiasu ścieżki aplikacji można rozpocząć podczas wywoływania funkcji rysowania GDI do definiowania punkty, które znajdują się w ścieżce. Aplikację można zamknąć nawias Otwórz ścieżkę przez wywołanie metody `EndPath` funkcja elementu członkowskiego. Kiedy aplikacja wywołuje `BeginPath`, wszystkie poprzednie ścieżki są odrzucane.  
   
- Zobacz [BeginPath](http://msdn.microsoft.com/library/windows/desktop/dd183363) w zestawie Windows SDK dla listy rysowania funkcji, które definiują punkty w ścieżce.  
+ Zobacz [BeginPath](/windows/desktop/api/wingdi/nf-wingdi-beginpath) w zestawie Windows SDK dla listy rysowania funkcji, które definiują punkty w ścieżce.  
   
 ### <a name="example"></a>Przykład  
  [!code-cpp[NVC_MFCDocView#30](../../mfc/codesnippet/cpp/cdc-class_2.cpp)]  
@@ -1051,9 +1051,9 @@ BOOL BitBlt(
  Określa logiczną współrzędną y lewego górnego rogu źródłową mapę bitową.  
   
  *dwRop*  
- Określa operację rastrową, która ma być wykonana. Kody operacji rastrowych definiują, jak interfejs GDI łączy kolory w operacjach wyjściowych, które obejmują aktualny Pędzel, możliwą źródłową mapę bitową i docelową mapę bitową. Zobacz [BitBlt](http://msdn.microsoft.com/library/windows/desktop/dd183370) w zestawie Windows SDK dla listy kody operacji rastrowych *dwRop* wraz z opisami  
+ Określa operację rastrową, która ma być wykonana. Kody operacji rastrowych definiują, jak interfejs GDI łączy kolory w operacjach wyjściowych, które obejmują aktualny Pędzel, możliwą źródłową mapę bitową i docelową mapę bitową. Zobacz [BitBlt](/windows/desktop/api/wingdi/nf-wingdi-bitblt) w zestawie Windows SDK dla listy kody operacji rastrowych *dwRop* wraz z opisami  
   
- Aby uzyskać pełną listę kody operacji rastrowych, zobacz [o kody operacji rastrowych](http://msdn.microsoft.com/library/windows/desktop/dd162892) w zestawie Windows SDK.  
+ Aby uzyskać pełną listę kody operacji rastrowych, zobacz [o kody operacji rastrowych](/windows/desktop/gdi/raster-operation-codes) w zestawie Windows SDK.  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Różne od zera, jeśli funkcja zakończyła się pomyślnie; w przeciwnym razie 0.  
@@ -1214,7 +1214,7 @@ BOOL CreateDC(
  Różne od zera, jeśli funkcja zakończyła się pomyślnie; w przeciwnym razie 0.  
   
 ### <a name="remarks"></a>Uwagi  
- Drukuj. Plik nagłówkowy H jest wymagany, jeśli [DEVMODE](http://msdn.microsoft.com/library/windows/desktop/dd183565) struktura jest używana.  
+ Drukuj. Plik nagłówkowy H jest wymagany, jeśli [DEVMODE](/windows/desktop/api/wingdi/ns-wingdi-_devicemodea) struktura jest używana.  
   
  Nazwy urządzeń z tymi konwencjami: końcowy dwukropek (:) jest zalecane, ale opcjonalne. Windows usuwa kończący dwukropek, tak, aby nazwa urządzenia, kończąc dwukropek jest mapowany na tym samym porcie taką samą nazwę bez dwukropka. Nazwy sterowników i port nie może zawierać spacji wiodących i końcowych. Nie można używać funkcji danych wyjściowych interfejsu GDI z kontekstami informacji.  
   
@@ -1298,7 +1298,7 @@ void DPtoHIMETRIC(LPSIZE lpSize) const;
   
 ### <a name="parameters"></a>Parametry  
  *lpSize*  
- Wskazuje [rozmiar](http://msdn.microsoft.com/library/windows/desktop/dd145106) struktury lub [CSize](../../atl-mfc-shared/reference/csize-class.md) obiektu.  
+ Wskazuje [rozmiar](https://msdn.microsoft.com/library/windows/desktop/dd145106) struktury lub [CSize](../../atl-mfc-shared/reference/csize-class.md) obiektu.  
   
 ### <a name="remarks"></a>Uwagi  
  W przypadku MM_LOENGLISH, MM_HIENGLISH, MM_LOMETRIC lub MM_HIMETRIC tryb mapowania obiektu kontekstu urządzenia konwersji jest oparty na liczbę pikseli w fizycznych CAL. Jeśli tryb mapowania jest jednym z innych niż ograniczonego trybów (np. MM_TEXT), następnie konwersji opiera się na liczbę pikseli cal logiczny.  
@@ -1326,7 +1326,7 @@ void DPtoLP(LPSIZE lpSize) const;
  Wskazuje [Prostokąt](../../mfc/reference/rect-structure1.md) struktury lub [CRect](../../atl-mfc-shared/reference/crect-class.md) obiektu. Ten parametr jest używany w przypadku prostych konwersji prostokąt jednego z punktów na urządzenie logiczne punktów.  
   
  *lpSize*  
- Wskazuje [rozmiar](http://msdn.microsoft.com/library/windows/desktop/dd145106) struktury lub [CSize](../../atl-mfc-shared/reference/csize-class.md) obiektu.  
+ Wskazuje [rozmiar](https://msdn.microsoft.com/library/windows/desktop/dd145106) struktury lub [CSize](../../atl-mfc-shared/reference/csize-class.md) obiektu.  
   
 ### <a name="remarks"></a>Uwagi  
  Funkcja map, współrzędne każdego punktu lub wymiaru o rozmiarze, z system współrzędnych urządzenia do firmy GDI logiczne współrzędnych. Konwersja zależy od tego, bieżący tryb mapowania i ustawienia źródła i zakresów dla okna i okienka ekranu urządzenia.  
@@ -1430,7 +1430,7 @@ BOOL DrawEdge(
  Wskaźnik do `RECT` strukturę, która zawiera logiczne współrzędnych prostokąta.  
   
  *nEdge*  
- Określa typ wewnętrznych i zewnętrznych urządzeniami brzegowymi w celu rysowania. Ten parametr musi być kombinacją jedną flagę wewnętrznego obramowania i jedną flagę zewnętrznego obramowania. Zobacz [DrawEdge](http://msdn.microsoft.com/library/windows/desktop/dd162477) w zestawie Windows SDK dla tabeli typów parametrów.  
+ Określa typ wewnętrznych i zewnętrznych urządzeniami brzegowymi w celu rysowania. Ten parametr musi być kombinacją jedną flagę wewnętrznego obramowania i jedną flagę zewnętrznego obramowania. Zobacz [DrawEdge](/windows/desktop/api/winuser/nf-winuser-drawedge) w zestawie Windows SDK dla tabeli typów parametrów.  
   
  *nFlags*  
  Flagi określające typ ma być rysowane obramowanie. Zobacz `DrawEdge` w zestawie Windows SDK dla tabeli wartości parametru. Dla linii ukośnych flagi BF_RECT Określ punkt końcowy wektora ograniczany przez parametr prostokąta.  
@@ -1496,7 +1496,7 @@ BOOL DrawFrameControl(
  Wskaźnik do `RECT` strukturę, która zawiera logiczne współrzędnych prostokąta.  
   
  *nNie*  
- Określa typ formant ramki do rysowania. Zobacz *uType* parametru w [DrawFrameControl](http://msdn.microsoft.com/library/windows/desktop/dd162480) w zestawie SDK Windows, aby uzyskać listę możliwych wartości tego parametru.  
+ Określa typ formant ramki do rysowania. Zobacz *uType* parametru w [DrawFrameControl](/windows/desktop/api/winuser/nf-winuser-drawframecontrol) w zestawie SDK Windows, aby uzyskać listę możliwych wartości tego parametru.  
   
  *nInformacje*  
  Określa początkowy stan formant ramki. Może być przynajmniej jedna z wartości opisanych dla *uState* parametr `DrawFrameControl` w zestawie Windows SDK. Użyj *nInformacje* wartość DFCS_ADJUSTRECT, aby dopasować prostokąt otaczający, aby wykluczyć otaczającego krawędzi przycisku polecenia.  
@@ -1687,7 +1687,7 @@ BOOL DrawState(
  Dojście do mapy bitowej.  
   
  *nFlags*  
- Flagi, które określają typ obrazu i stanu. Zobacz [DrawState](http://msdn.microsoft.com/library/windows/desktop/dd162496) w zestawie Windows SDK dla możliwe *nFlags* typów i stanów.  
+ Flagi, które określają typ obrazu i stanu. Zobacz [DrawState](/windows/desktop/api/winuser/nf-winuser-drawstatea) w zestawie Windows SDK dla możliwe *nFlags* typów i stanów.  
   
  *hBrush*  
  Dojście do pędzla.  
@@ -1711,7 +1711,7 @@ BOOL DrawState(
  Długość ciągu tekstowego, wskazywana przez *lpszText*. Jeśli *nTextLen* wynosi 0, ciąg jest zakłada się, że zakończony znakiem null.  
   
  *lpDrawProc*  
- Wskaźnik do funkcji wywołania zwrotnego, używany do renderowania obrazu. Ten parametr jest wymagany, jeśli obraz wpisać *nFlags* jest DST_COMPLEX. Jest opcjonalne i może mieć wartość NULL, jeśli typ obrazu jest DST_TEXT. Ten parametr jest ignorowany dla innych typów obrazu. Aby uzyskać więcej informacji na temat funkcji wywołania zwrotnego, zobacz [DrawStateProc](http://msdn.microsoft.com/library/windows/desktop/dd162497) funkcji w zestawie Windows SDK.  
+ Wskaźnik do funkcji wywołania zwrotnego, używany do renderowania obrazu. Ten parametr jest wymagany, jeśli obraz wpisać *nFlags* jest DST_COMPLEX. Jest opcjonalne i może mieć wartość NULL, jeśli typ obrazu jest DST_TEXT. Ten parametr jest ignorowany dla innych typów obrazu. Aby uzyskać więcej informacji na temat funkcji wywołania zwrotnego, zobacz [DrawStateProc](/windows/desktop/api/winuser/nc-winuser-drawstateproc) funkcji w zestawie Windows SDK.  
   
  *lData*  
  Określa informacje o obrazie. Znaczenie tego parametru, zależy od typu obraz.  
@@ -1750,7 +1750,7 @@ int DrawText(
  A [CString](../../atl-mfc-shared/reference/cstringt-class.md) obiekt, który zawiera określony znaki do rysowania.  
   
  *nFormat*  
- Określa metodę formatowania tekstu. Może być dowolną kombinacją wartości opisanych dla *uFormat* parametru w [DrawText](http://msdn.microsoft.com/library/windows/desktop/dd162498) w zestawie Windows SDK. (Połącz je przy użyciu bitowego operatora OR):  
+ Określa metodę formatowania tekstu. Może być dowolną kombinacją wartości opisanych dla *uFormat* parametru w [DrawText](/windows/desktop/api/winuser/nf-winuser-drawtext) w zestawie Windows SDK. (Połącz je przy użyciu bitowego operatora OR):  
   
 > [!NOTE]
 >  Niektóre *uFormat* kombinacje flagi może spowodować, że przekazany ciąg do zmodyfikowania. Przy DT_MODIFYSTRING DT_END_ELLIPSIS lub DT_PATH_ELLIPSIS może spowodować, że ciąg, który może zostać zmodyfikowany, co powoduje potwierdzenie w `CString` zastąpienia. Nie można użyć wartości DT_CALCRECT, DT_EXTERNALLEADING, DT_INTERNAL, DT_NOCLIP i DT_NOPREFIX wartością DT_TABSTOP.  
@@ -1804,16 +1804,16 @@ int DrawTextEx(
  A [CString](../../atl-mfc-shared/reference/cstringt-class.md) obiekt, który zawiera określony znaki do rysowania.  
   
  *nFormat*  
- Określa metodę formatowania tekstu. Może być dowolną kombinacją wartości opisanych dla *uFormat* parametru w [DrawText](http://msdn.microsoft.com/library/windows/desktop/dd162498) w zestawie Windows SDK. (Połącz użycie operatora testu koniunkcji **lub** operator):  
+ Określa metodę formatowania tekstu. Może być dowolną kombinacją wartości opisanych dla *uFormat* parametru w [DrawText](/windows/desktop/api/winuser/nf-winuser-drawtext) w zestawie Windows SDK. (Połącz użycie operatora testu koniunkcji **lub** operator):  
   
 > [!NOTE]
 >  Niektóre *uFormat* kombinacje flagi może spowodować, że przekazany ciąg do zmodyfikowania. Przy DT_MODIFYSTRING DT_END_ELLIPSIS lub DT_PATH_ELLIPSIS może spowodować, że ciąg, który może zostać zmodyfikowany, co powoduje potwierdzenie w `CString` zastąpienia. Nie można użyć wartości DT_CALCRECT, DT_EXTERNALLEADING, DT_INTERNAL, DT_NOCLIP i DT_NOPREFIX wartością DT_TABSTOP.  
   
  *lpDTParams*  
- Wskaźnik do [DRAWTEXTPARAMS](http://msdn.microsoft.com/library/windows/desktop/dd162500) strukturę, która określa formatowanie dodatkowe opcje. Ten parametr może mieć wartości NULL.  
+ Wskaźnik do [DRAWTEXTPARAMS](/windows/desktop/api/winuser/ns-winuser-tagdrawtextparams) strukturę, która określa formatowanie dodatkowe opcje. Ten parametr może mieć wartości NULL.  
   
 ### <a name="remarks"></a>Uwagi  
- Jego formatowania tekstu, rozwijając karty do odpowiednich miejsc do magazynowania, wyrównanie tekstu w lewo, prawo, lub Centrum danego prostokąt i podzielenie tekst na wiersze, które mieszczą się w danym prostokąta. Typ formatowania jest określany przez *nFormat* i *lpDTParams*. Aby uzyskać więcej informacji, zobacz [CDC::DrawText](#drawtext) i [DrawTextEx](http://msdn.microsoft.com/library/windows/desktop/dd162499) w zestawie Windows SDK.  
+ Jego formatowania tekstu, rozwijając karty do odpowiednich miejsc do magazynowania, wyrównanie tekstu w lewo, prawo, lub Centrum danego prostokąt i podzielenie tekst na wiersze, które mieszczą się w danym prostokąta. Typ formatowania jest określany przez *nFormat* i *lpDTParams*. Aby uzyskać więcej informacji, zobacz [CDC::DrawText](#drawtext) i [DrawTextEx](/windows/desktop/api/winuser/nf-winuser-drawtextexa) w zestawie Windows SDK.  
   
  Kolor tekstu może być ustawiona [CDC::SetTextColor](#settextcolor).  
   
@@ -1973,7 +1973,7 @@ int Escape(
  *nEscape*  
  Określa funkcję ucieczki do wykonania.  
   
- Aby uzyskać pełną listę funkcji ucieczki, zobacz [ucieczki](http://msdn.microsoft.com/library/windows/desktop/dd162701) w zestawie Windows SDK.  
+ Aby uzyskać pełną listę funkcji ucieczki, zobacz [ucieczki](/windows/desktop/api/wingdi/nf-wingdi-escape) w zestawie Windows SDK.  
   
  *nCount*  
  Określa liczbę bajtów danych wskazywanego przez *lpszInData*.  
@@ -2024,11 +2024,11 @@ int Escape(
   
 - [CDC::StartPage](#startpage)  
   
- Ponadto [rc_bitblt](#getdevicecaps) obsługuje indeksy Win32, które zastępują inne wyprowadza drukarki. Zobacz [GetDeviceCaps](http://msdn.microsoft.com/library/windows/desktop/dd144877) w zestawie Windows SDK, aby uzyskać więcej informacji.  
+ Ponadto [rc_bitblt](#getdevicecaps) obsługuje indeksy Win32, które zastępują inne wyprowadza drukarki. Zobacz [GetDeviceCaps](/windows/desktop/api/wingdi/nf-wingdi-getdevicecaps) w zestawie Windows SDK, aby uzyskać więcej informacji.  
   
  Ta funkcja elementu członkowskiego zezwala aplikacjom na dostęp do urządzenia określonego urządzenia, które nie są bezpośrednio dostępne za pośrednictwem interfejsu GDI.  
   
- Jeśli aplikacja używa ucieczki wstępnie zdefiniowane wartości, należy użyć pierwszej wersji. Druga wersja należy użyć, jeśli aplikacja definiuje wartości prywatne ucieczki. Zobacz [ExtEscape](http://msdn.microsoft.com/library/windows/desktop/dd162708) w zestawie SDK Windows, aby uzyskać więcej informacji o drugiej wersji.  
+ Jeśli aplikacja używa ucieczki wstępnie zdefiniowane wartości, należy użyć pierwszej wersji. Druga wersja należy użyć, jeśli aplikacja definiuje wartości prywatne ucieczki. Zobacz [ExtEscape](/windows/desktop/api/wingdi/nf-wingdi-extescape) w zestawie SDK Windows, aby uzyskać więcej informacji o drugiej wersji.  
   
 ##  <a name="excludecliprect"></a>  CDC::ExcludeClipRect  
  Tworzy nowy region wycinek, który składa się z istniejącym regionem wycinka pomniejszoną o określony prostokąt.  
@@ -2597,11 +2597,11 @@ BOOL GetCharABCWidths(
   
  Gdy `GetCharABCWidths` funkcja elementu członkowskiego pobiera ujemny "A" lub "C" szerokość znaku, znaku zawiera underhangs lub znacznego udziału.  
   
- Aby przekonwertować szerokości ABC jednostki projektu czcionki, aplikację należy utworzyć czcionkę którego wysokość (jak określono w `lfHeight` członkiem [LOGFONT](http://msdn.microsoft.com/library/windows/desktop/dd145037) struktury) jest równa wartości przechowywane w `ntmSizeEM` członkiem [ NEWTEXTMETRIC](http://msdn.microsoft.com/library/windows/desktop/dd162741) struktury. (Wartość `ntmSizeEM` element członkowski może być pobierany przez wywołanie [EnumFontFamilies](http://msdn.microsoft.com/library/windows/desktop/dd162619) funkcji Windows.)  
+ Aby przekonwertować szerokości ABC jednostki projektu czcionki, aplikację należy utworzyć czcionkę którego wysokość (jak określono w `lfHeight` członkiem [LOGFONT](/windows/desktop/api/wingdi/ns-wingdi-taglogfonta) struktury) jest równa wartości przechowywane w `ntmSizeEM` członkiem [ NEWTEXTMETRIC](/windows/desktop/api/wingdi/ns-wingdi-tagnewtextmetrica) struktury. (Wartość `ntmSizeEM` element członkowski może być pobierany przez wywołanie [EnumFontFamilies](/windows/desktop/api/wingdi/nf-wingdi-enumfontfamiliesa) funkcji Windows.)  
   
  Szerokość ABC, domyślny znak są używane znaki, które wykraczają poza zakres aktualnie wybranej czcionki.  
   
- Aby pobrać szerokości znaków w zwykłe czcionki, aplikacje powinny używać [GetCharWidth](http://msdn.microsoft.com/library/windows/desktop/dd144861) funkcji Windows.  
+ Aby pobrać szerokości znaków w zwykłe czcionki, aplikacje powinny używać [GetCharWidth](/windows/desktop/api/wingdi/nf-wingdi-getcharwidtha) funkcji Windows.  
   
 ##  <a name="getcharabcwidthsi"></a>  CDC::GetCharABCWidthsI  
  Pobiera szerokości, w jednostkach logicznych, indeksów kolejnych symbol w określonym zakresie z bieżącej czcionki TrueType.  
@@ -2625,13 +2625,13 @@ BOOL GetCharABCWidthsI(
  Wskaźnik do tablicę zawierającą indeksów symboli. Jeśli wartość wynosi NULL, *giFirst* parametr jest używany zamiast tego. *Cgi* parametr określa liczbę indeksów symbol w tej tablicy.  
   
  *lpabc*  
- Wskaźnik do tablicy [ABC](http://msdn.microsoft.com/library/windows/desktop/dd162454) struktury odbieranie szerokości znaków. Tablica musi zawierać co najmniej tyle `ABC` struktury, ponieważ indeksy symbolu, określony przez *cgi* parametru.  
+ Wskaźnik do tablicy [ABC](/windows/desktop/api/wingdi/ns-wingdi-_abc) struktury odbieranie szerokości znaków. Tablica musi zawierać co najmniej tyle `ABC` struktury, ponieważ indeksy symbolu, określony przez *cgi* parametru.  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Różne od zera, jeśli funkcja zakończyła się pomyślnie; w przeciwnym razie 0.  
   
 ### <a name="remarks"></a>Uwagi  
- Ta funkcja członkowska emuluje funkcjonalność funkcji [GetCharABCWidthsI](http://msdn.microsoft.com/library/windows/desktop/dd144859), zgodnie z opisem w zestawie Windows SDK.  
+ Ta funkcja członkowska emuluje funkcjonalność funkcji [GetCharABCWidthsI](/windows/desktop/api/wingdi/nf-wingdi-getcharabcwidthsi), zgodnie z opisem w zestawie Windows SDK.  
   
 ##  <a name="getcharwidth"></a>  CDC::GetCharWidth  
  Pobiera szerokość poszczególnych znaków w grupie następujących po sobie znaków z bieżącą czcionkę przy użyciu `m_hAttribDC`, kontekst urządzenia wejściowego.  
@@ -2699,7 +2699,7 @@ BOOL GetCharWidthI(
  Różne od zera, jeśli funkcja zakończyła się pomyślnie; w przeciwnym razie 0.  
   
 ### <a name="remarks"></a>Uwagi  
- Ta funkcja członkowska emuluje funkcjonalność funkcji [GetCharWidthI](http://msdn.microsoft.com/library/windows/desktop/dd144864), zgodnie z opisem w zestawie Windows SDK.  
+ Ta funkcja członkowska emuluje funkcjonalność funkcji [GetCharWidthI](/windows/desktop/api/wingdi/nf-wingdi-getcharwidthi), zgodnie z opisem w zestawie Windows SDK.  
   
 ##  <a name="getclipbox"></a>  CDC::GetClipBox  
  Pobiera wymiary tightest otaczający prostokąt wokół granicy bieżącego wycinka.  
@@ -2826,12 +2826,12 @@ COLORREF GetDCBrushColor() const;
 ```  
   
 ### <a name="return-value"></a>Wartość zwracana  
- Jeśli funkcja się powiedzie, wartość zwracana jest [COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449) wartość bieżący kolor pędzla.  
+ Jeśli funkcja się powiedzie, wartość zwracana jest [COLORREF](/windows/desktop/gdi/colorref) wartość bieżący kolor pędzla.  
   
  Jeśli funkcja zawiedzie, wartość zwracana jest CLR_INVALID.  
   
 ### <a name="remarks"></a>Uwagi  
- Ta funkcja członkowska emuluje funkcjonalność funkcji [GetDCBrushColor](http://msdn.microsoft.com/library/windows/desktop/dd144872), zgodnie z opisem w zestawie Windows SDK.  
+ Ta funkcja członkowska emuluje funkcjonalność funkcji [GetDCBrushColor](/windows/desktop/api/wingdi/nf-wingdi-getdcbrushcolor), zgodnie z opisem w zestawie Windows SDK.  
   
 ##  <a name="getdcpencolor"></a>  CDC::GetDCPenColor  
  Pobiera bieżący kolor pióra.  
@@ -2841,12 +2841,12 @@ COLORREF GetDCPenColor() const;
 ```  
   
 ### <a name="return-value"></a>Wartość zwracana  
- Jeśli funkcja się powiedzie, wartość zwracana jest [COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449) wartość dla bieżącego koloru pióra.  
+ Jeśli funkcja się powiedzie, wartość zwracana jest [COLORREF](/windows/desktop/gdi/colorref) wartość dla bieżącego koloru pióra.  
   
  Jeśli funkcja zawiedzie, wartość zwracana jest CLR_INVALID.  
   
 ### <a name="remarks"></a>Uwagi  
- Ta funkcja elementu członkowskiego wykorzystuje funkcję Win32 [GetDCPenColor](http://msdn.microsoft.com/library/windows/desktop/dd144875), zgodnie z opisem w zestawie Windows SDK.  
+ Ta funkcja elementu członkowskiego wykorzystuje funkcję Win32 [GetDCPenColor](/windows/desktop/api/wingdi/nf-wingdi-getdcpencolor), zgodnie z opisem w zestawie Windows SDK.  
   
 ##  <a name="getdevicecaps"></a>  Rc_bitblt  
  Pobiera szerokiej gamy informacji specyficznych dla urządzenia o urządzenia.  
@@ -2857,7 +2857,7 @@ int GetDeviceCaps(int nIndex) const;
   
 ### <a name="parameters"></a>Parametry  
  *nIndex*  
- Określa typ danych do zwrócenia. Zobacz [GetDeviceCaps](http://msdn.microsoft.com/library/windows/desktop/dd144877) w zestawie Windows SDK dla listy wartości.  
+ Określa typ danych do zwrócenia. Zobacz [GetDeviceCaps](/windows/desktop/api/wingdi/nf-wingdi-getdevicecaps) w zestawie Windows SDK dla listy wartości.  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Wartość żądanej funkcji, jeśli funkcja się powiedzie.  
@@ -2897,7 +2897,7 @@ DWORD GetFontData(
   
  Aplikację można czasami wykorzystują `GetFontData` funkcja elementu członkowskiego, aby zapisać czcionki TrueType dokumentu. Aby to zrobić, aplikacja określa, czy czcionka mogą być osadzone, a następnie pobiera plik całą czcionkę, określając 0 dla *dwTable*, *dwOffset*, i *cbData* Parametry.  
   
- Aplikacje można określić, czy można osadzić czcionkę, sprawdzając `otmfsType` członkiem [OUTLINETEXTMETRIC](http://msdn.microsoft.com/library/windows/desktop/dd162755) struktury. Jeśli bit 1 `otmfsType` jest ustawiony, Osadzanie czcionki, nie jest dozwolona. W przypadku clear bit 1 czcionkę można osadzać. Jeśli ustawiono bit 2, osadzania jest tylko do odczytu.  
+ Aplikacje można określić, czy można osadzić czcionkę, sprawdzając `otmfsType` członkiem [OUTLINETEXTMETRIC](/windows/desktop/api/wingdi/ns-wingdi-_outlinetextmetrica) struktury. Jeśli bit 1 `otmfsType` jest ustawiony, Osadzanie czcionki, nie jest dozwolona. W przypadku clear bit 1 czcionkę można osadzać. Jeśli ustawiono bit 2, osadzania jest tylko do odczytu.  
   
  Jeśli aplikacja próbuje użyć tej funkcji można pobrać informacji o zwykłe czcionki, `GetFontData` funkcja elementu członkowskiego zwraca -1.  
   
@@ -2909,10 +2909,10 @@ DWORD GetFontLanguageInfo() const;
 ```  
   
 ### <a name="return-value"></a>Wartość zwracana  
- Wartość zwracana określa właściwości aktualnie wybranej czcionki. Aby uzyskać pełną listę możliwych wartości, zobacz [GetFontLanguageInfo](http://msdn.microsoft.com/library/windows/desktop/dd144886).  
+ Wartość zwracana określa właściwości aktualnie wybranej czcionki. Aby uzyskać pełną listę możliwych wartości, zobacz [GetFontLanguageInfo](/windows/desktop/api/wingdi/nf-wingdi-getfontlanguageinfo).  
   
 ### <a name="remarks"></a>Uwagi  
- Ta funkcja członkowska emuluje funkcjonalność funkcji [GetFontLanguageInfo](http://msdn.microsoft.com/library/windows/desktop/dd144886), zgodnie z opisem w zestawie Windows SDK.  
+ Ta funkcja członkowska emuluje funkcjonalność funkcji [GetFontLanguageInfo](/windows/desktop/api/wingdi/nf-wingdi-getfontlanguageinfo), zgodnie z opisem w zestawie Windows SDK.  
   
 ##  <a name="getglyphoutline"></a>  CDC::GetGlyphOutline  
  Pobiera krzywej konspektu lub mapy bitowej dla znaku konturu w bieżącej czcionki.  
@@ -2939,7 +2939,7 @@ DWORD GetGlyphOutline(
 |GGO_BITMAP|Zwraca symbol mapy bitowej. Gdy funkcja zwróci wynik, bufor wskazywany przez *sprawdzanie* zawiera mapę bitową 1 bit każdego piksela, w której wiersze uruchomić się w granicach bitowego.|  
 |GGO_NATIVE|Zwraca krzywej punktów danych w formacie natywnym rasteryzatora, przy użyciu jednostek urządzenia. Gdy ta wartość jest określona, wszystkie przekształcenia określone w *lpmat2* jest ignorowana.|  
   
- Gdy wartość *nFormat* wynosi 0, funkcja wypełnia [GLYPHMETRICS](http://msdn.microsoft.com/library/windows/desktop/dd144955) struktury, ale nie może zwracać danych obrysu symbolu.  
+ Gdy wartość *nFormat* wynosi 0, funkcja wypełnia [GLYPHMETRICS](/windows/desktop/api/wingdi/ns-wingdi-_glyphmetrics) struktury, ale nie może zwracać danych obrysu symbolu.  
   
  *lpgm*  
  Wskazuje strukturę GLYPHMETRICS, która opisuje położenie symbol w komórce znaków.  
@@ -2951,7 +2951,7 @@ DWORD GetGlyphOutline(
  Wskazuje buforu, w której funkcja kopiuje informacje o znaku konspektu. Jeśli *nFormat* określa wartość GGO_NATIVE informacje są kopiowane w postaci TTPOLYGONHEADER i TTPOLYCURVE struktur. Jeśli ta wartość jest równa NULL i *nFormat* jest wartością GGO_BITMAP albo GGO_NATIVE, funkcja zwraca wymagany rozmiar buforu.  
   
  *lpmat2*  
- Wskazuje [MAT2](http://msdn.microsoft.com/library/windows/desktop/dd145048) strukturę, która zawiera znak, macierzy transformacji. Ten parametr nie może mieć wartości NULL, nawet wtedy, gdy określona jest wartość GGO_NATIVE dla *nFormat*.  
+ Wskazuje [MAT2](/windows/desktop/api/wingdi/ns-wingdi-_mat2) strukturę, która zawiera znak, macierzy transformacji. Ten parametr nie może mieć wartości NULL, nawet wtedy, gdy określona jest wartość GGO_NATIVE dla *nFormat*.  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Rozmiar w bajtach buforu wymagane pobrane informacje, jeśli *cbBuffer* ma wartość 0 lub *sprawdzanie* ma wartość NULL. W przeciwnym razie jest to wartość dodatnią, jeśli funkcja się powiedzie, lub wartość -1, jeśli występuje błąd.  
@@ -2959,7 +2959,7 @@ DWORD GetGlyphOutline(
 ### <a name="remarks"></a>Uwagi  
  Aplikację można obracać znaków, pobrać w formacie mapy bitowej, określając macierzy transformacji 2-przez-2 w strukturze wskazywany przez *lpmat2*.  
   
- Obrysu symbolu jest zwracana jako szereg konturów. Każdy rozkład jest definiowany przez [TTPOLYGONHEADER](http://msdn.microsoft.com/library/windows/desktop/dd145158) struktury następuje tyle `TTPOLYCURVE` struktur, które są wymagane do opisania go. Wszystkie punkty są zwracane jako [POINTFX](http://msdn.microsoft.com/library/windows/desktop/dd162806) struktury i reprezentują położenia bezwzględne względna nie przenosi. Początkowy punkt przez `pfxStart` członkiem [TTPOLYGONHEADER](http://msdn.microsoft.com/library/windows/desktop/dd145158) struktury to punkt, od której rozpoczyna się konturu dla ROZKŁAD. [TTPOLYCURVE](http://msdn.microsoft.com/library/windows/desktop/dd145157) struktur, które należy wykonać, może być linii łamanej rekordów i rekordy z krzywymi składanymi. Wielokąt rekordy, które są serii punktów. linii między punktami opisują konspektu znaku. Rekordy z krzywymi składanymi reprezentują drugiego stopnia krzywych używanych przez TrueType (czyli drugiego stopnia b — krzywe).  
+ Obrysu symbolu jest zwracana jako szereg konturów. Każdy rozkład jest definiowany przez [TTPOLYGONHEADER](/windows/desktop/api/wingdi/ns-wingdi-tagttpolygonheader) struktury następuje tyle `TTPOLYCURVE` struktur, które są wymagane do opisania go. Wszystkie punkty są zwracane jako [POINTFX](/windows/desktop/api/wingdi/ns-wingdi-tagpointfx) struktury i reprezentują położenia bezwzględne względna nie przenosi. Początkowy punkt przez `pfxStart` członkiem [TTPOLYGONHEADER](/windows/desktop/api/wingdi/ns-wingdi-tagttpolygonheader) struktury to punkt, od której rozpoczyna się konturu dla ROZKŁAD. [TTPOLYCURVE](/windows/desktop/api/wingdi/ns-wingdi-tagttpolycurve) struktur, które należy wykonać, może być linii łamanej rekordów i rekordy z krzywymi składanymi. Wielokąt rekordy, które są serii punktów. linii między punktami opisują konspektu znaku. Rekordy z krzywymi składanymi reprezentują drugiego stopnia krzywych używanych przez TrueType (czyli drugiego stopnia b — krzywe).  
   
 ##  <a name="getgraphicsmode"></a>  CDC::GetGraphicsMode  
  Pobiera bieżący tryb graficznych dla kontekstu określonego urządzenia.  
@@ -2969,14 +2969,14 @@ int GetGraphicsMode() const;
 ```  
   
 ### <a name="return-value"></a>Wartość zwracana  
- Zwraca bieżący tryb grafiki w przypadku powodzenia. Aby uzyskać listę wartości, które może zwracać tej metody, zobacz [GetGraphicsMode](http://msdn.microsoft.com/library/windows/desktop/dd144892).  
+ Zwraca bieżący tryb grafiki w przypadku powodzenia. Aby uzyskać listę wartości, które może zwracać tej metody, zobacz [GetGraphicsMode](/windows/desktop/api/wingdi/nf-wingdi-getgraphicsmode).  
   
  Zwraca wartość 0 w przypadku niepowodzenia.  
   
- Aby uzyskać rozszerzone informacje o błędzie, należy wywołać [GetLastError](http://msdn.microsoft.com/library/windows/desktop/ms679360).  
+ Aby uzyskać rozszerzone informacje o błędzie, należy wywołać [GetLastError](https://msdn.microsoft.com/library/windows/desktop/ms679360).  
   
 ### <a name="remarks"></a>Uwagi  
- Ta metoda opakowuje funkcję Windows GDI [GetGraphicsMode](http://msdn.microsoft.com/library/windows/desktop/dd144892).  
+ Ta metoda opakowuje funkcję Windows GDI [GetGraphicsMode](/windows/desktop/api/wingdi/nf-wingdi-getgraphicsmode).  
   
 ##  <a name="gethalftonebrush"></a>  CDC::GetHalftoneBrush  
  Wywołaj tę funkcję elementu członkowskiego, aby pobrać pędzla półtonów.  
@@ -3004,7 +3004,7 @@ int GetKerningPairs(
   
 ### <a name="parameters"></a>Parametry  
  *nPairs*  
- Określa liczbę [KERNINGPAIR](http://msdn.microsoft.com/library/windows/desktop/dd145024) struktury wskazywany przez *lpkrnpair*. Funkcja nie skopiuje pary kerningu więcej niż określony przez *nPairs*.  
+ Określa liczbę [KERNINGPAIR](/windows/desktop/api/wingdi/ns-wingdi-tagkerningpair) struktury wskazywany przez *lpkrnpair*. Funkcja nie skopiuje pary kerningu więcej niż określony przez *nPairs*.  
   
  *lpkrnpair*  
  Wskazuje na tablicę `KERNINGPAIR` struktur, które odbierają kerning pary, gdy funkcja zwraca. Tablica musi zawierać co najmniej tyle struktury określony przez *nPairs*. Jeśli ten parametr ma wartość NULL, funkcja zwraca sumę kerning pary czcionki.  
@@ -3020,7 +3020,7 @@ DWORD GetLayout() const;
 ```  
   
 ### <a name="return-value"></a>Wartość zwracana  
- Jeśli to się powiedzie, układ flagi dla bieżącego kontekstu urządzenia. W przeciwnym razie GDI_ERROR. Aby uzyskać rozszerzone informacje o błędzie, wywołaj [GetLastError](http://msdn.microsoft.com/library/windows/desktop/ms679360). Aby uzyskać listę flag, układ, zobacz [CDC::SetLayout](#setlayout).  
+ Jeśli to się powiedzie, układ flagi dla bieżącego kontekstu urządzenia. W przeciwnym razie GDI_ERROR. Aby uzyskać rozszerzone informacje o błędzie, wywołaj [GetLastError](https://msdn.microsoft.com/library/windows/desktop/ms679360). Aby uzyskać listę flag, układ, zobacz [CDC::SetLayout](#setlayout).  
   
 ### <a name="remarks"></a>Uwagi  
  Układ domyślny jest od lewej do prawej.  
@@ -3082,7 +3082,7 @@ UINT GetOutlineTextMetrics(
   
 ### <a name="parameters"></a>Parametry  
  *lpotm*  
- Wskazuje na tablicę [OUTLINETEXTMETRIC](http://msdn.microsoft.com/library/windows/desktop/dd162755) struktury. Jeśli ten parametr ma wartość NULL, funkcja zwraca rozmiar buforu wymagane dla pobranych danych metryk.  
+ Wskazuje na tablicę [OUTLINETEXTMETRIC](/windows/desktop/api/wingdi/ns-wingdi-_outlinetextmetrica) struktury. Jeśli ten parametr ma wartość NULL, funkcja zwraca rozmiar buforu wymagane dla pobranych danych metryk.  
   
  *cbData*  
  Określa rozmiar w bajtach, bufor, do których informacje są zwracane.  
@@ -3094,7 +3094,7 @@ UINT GetOutlineTextMetrics(
  Różne od zera, jeśli funkcja zakończyła się pomyślnie; w przeciwnym razie 0.  
   
 ### <a name="remarks"></a>Uwagi  
- [OUTLINETEXTMETRIC](http://msdn.microsoft.com/library/windows/desktop/dd162755) struktura zawiera większość informacji metryki czcionki podany w formacie TrueType tym [TEXTMETRIC](http://msdn.microsoft.com/library/windows/desktop/dd145132) struktury. Cztery ostatnie elementy członkowskie `OUTLINETEXTMETRIC` struktury są wskaźnikami do ciągów. Aplikacje należy przydzielić miejsce dla tych ciągów, oprócz miejsca wymaganego dla innych członków. Ponieważ nie ma żadnego limitu rozmiaru ciągi nałożone przez system, najprostszą metodą przydzielania pamięci jest pobrać wymagany rozmiar, określając wartość NULL w przypadku *lpotm* w pierwszym wywołaniu `GetOutlineTextMetrics` funkcji.  
+ [OUTLINETEXTMETRIC](/windows/desktop/api/wingdi/ns-wingdi-_outlinetextmetrica) struktura zawiera większość informacji metryki czcionki podany w formacie TrueType tym [TEXTMETRIC](/windows/desktop/api/wingdi/ns-wingdi-tagtextmetrica) struktury. Cztery ostatnie elementy członkowskie `OUTLINETEXTMETRIC` struktury są wskaźnikami do ciągów. Aplikacje należy przydzielić miejsce dla tych ciągów, oprócz miejsca wymaganego dla innych członków. Ponieważ nie ma żadnego limitu rozmiaru ciągi nałożone przez system, najprostszą metodą przydzielania pamięci jest pobrać wymagany rozmiar, określając wartość NULL w przypadku *lpotm* w pierwszym wywołaniu `GetOutlineTextMetrics` funkcji.  
   
 ##  <a name="getoutputcharwidth"></a>  CDC::GetOutputCharWidth  
  Używany jest kontekst urządzenia wyjściowego `m_hDC`i pobiera szerokości pojedynczych znaków w grupie następujących po sobie znaków z bieżącej czcionki.  
@@ -3208,7 +3208,7 @@ BOOL GetOutputTextMetrics(LPTEXTMETRIC lpMetrics) const;
   
 ### <a name="parameters"></a>Parametry  
  *lpMetrics*  
- Wskazuje [TEXTMETRIC](http://msdn.microsoft.com/library/windows/desktop/dd145132) strukturę, która odbiera metryki.  
+ Wskazuje [TEXTMETRIC](/windows/desktop/api/wingdi/ns-wingdi-tagtextmetrica) strukturę, która odbiera metryki.  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Różne od zera, jeśli funkcja zakończyła się pomyślnie; w przeciwnym razie 0.  
@@ -3515,13 +3515,13 @@ BOOL GetTextExtentExPointI(
  Wskaźnik do tablicy liczb całkowitych, odbierająca częściowe symbol zakresów. Każdy element w tablicy zapewnia odległość, w jednostkach logicznych, od początku tabeli indeksów symbol do jednego glify, która pasuje w miejscu określonym przez *nMaxExtent*. Chociaż ta tablica powinien mieć co najmniej tyle elementów, jak indeksy symbolu, określony przez *cgi*, funkcja wypełnia tablicę z zakresów, tylko w przypadku dowolną liczbę indeksów symbol określone przez *lpnFit*. Jeśli *lpnDx* ma wartość NULL, funkcja nie może obliczyć szerokości częściowe ciągu.  
   
  *lpSize*  
- Wskaźnik do [rozmiar](http://msdn.microsoft.com/library/windows/desktop/dd145106) struktury, która odbiera wymiary tablicy wskaźników symbol w jednostkach logicznych. Ta wartość nie może mieć wartości NULL.  
+ Wskaźnik do [rozmiar](https://msdn.microsoft.com/library/windows/desktop/dd145106) struktury, która odbiera wymiary tablicy wskaźników symbol w jednostkach logicznych. Ta wartość nie może mieć wartości NULL.  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Różne od zera, jeśli funkcja zakończyła się pomyślnie; w przeciwnym razie 0.  
   
 ### <a name="remarks"></a>Uwagi  
- Ta funkcja członkowska emuluje funkcjonalność funkcji [GetTextExtentExPointI](http://msdn.microsoft.com/library/windows/desktop/dd144936), zgodnie z opisem w zestawie Windows SDK.  
+ Ta funkcja członkowska emuluje funkcjonalność funkcji [GetTextExtentExPointI](/windows/desktop/api/wingdi/nf-wingdi-gettextextentexpointi), zgodnie z opisem w zestawie Windows SDK.  
   
 ##  <a name="gettextextentpointi"></a>  CDC::GetTextExtentPointI  
  Pobiera szerokość i wysokość określonej tablicy indeksów symboli.  
@@ -3541,13 +3541,13 @@ BOOL GetTextExtentPointI(
  Określa liczbę symboli w tablicy, do których prowadzą *pgiIn*.  
   
  *lpSize*  
- Wskaźnik do [rozmiar](http://msdn.microsoft.com/library/windows/desktop/dd145106) struktury, która odbiera wymiary tablicy wskaźników symbol w jednostkach logicznych. Ta wartość nie może mieć wartości NULL.  
+ Wskaźnik do [rozmiar](https://msdn.microsoft.com/library/windows/desktop/dd145106) struktury, która odbiera wymiary tablicy wskaźników symbol w jednostkach logicznych. Ta wartość nie może mieć wartości NULL.  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Różne od zera, jeśli funkcja zakończyła się pomyślnie; w przeciwnym razie 0.  
   
 ### <a name="remarks"></a>Uwagi  
- Ta funkcja członkowska emuluje funkcjonalność funkcji [GetTextExtentPointI](http://msdn.microsoft.com/library/windows/desktop/dd144939), zgodnie z opisem w zestawie Windows SDK.  
+ Ta funkcja członkowska emuluje funkcjonalność funkcji [GetTextExtentPointI](/windows/desktop/api/wingdi/nf-wingdi-gettextextentpointi), zgodnie z opisem w zestawie Windows SDK.  
   
 ##  <a name="gettextface"></a>  CDC::GetTextFace  
  Wywołaj tę funkcję elementu członkowskiego, skopiujesz nazwę krój czcionki bieżącego do bufora.  
@@ -3585,7 +3585,7 @@ BOOL GetTextMetrics(LPTEXTMETRIC lpMetrics) const;
   
 ### <a name="parameters"></a>Parametry  
  *lpMetrics*  
- Wskazuje [TEXTMETRIC](http://msdn.microsoft.com/library/windows/desktop/dd145132) strukturę, która odbiera metryki.  
+ Wskazuje [TEXTMETRIC](/windows/desktop/api/wingdi/ns-wingdi-tagtextmetrica) strukturę, która odbiera metryki.  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Różne od zera, jeśli funkcja zakończyła się pomyślnie; w przeciwnym razie 0.  
@@ -3652,17 +3652,17 @@ BOOL GetWorldTransform(XFORM& rXform) const;
   
 ### <a name="parameters"></a>Parametry  
  *rXform*  
- Odwołanie do [XFORM](http://msdn.microsoft.com/library/windows/desktop/dd145228) strukturę, która odbiera bieżącej przestrzeni świata transformację miejsce na stronie.  
+ Odwołanie do [XFORM](/windows/desktop/api/wingdi/ns-wingdi-tagxform) strukturę, która odbiera bieżącej przestrzeni świata transformację miejsce na stronie.  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Zwraca wartość różną od zera w przypadku powodzenia.  
   
  Zwraca wartość 0 w przypadku niepowodzenia.  
   
- Aby uzyskać rozszerzone informacje o błędzie, należy wywołać [GetLastError](http://msdn.microsoft.com/library/windows/desktop/ms679360).  
+ Aby uzyskać rozszerzone informacje o błędzie, należy wywołać [GetLastError](https://msdn.microsoft.com/library/windows/desktop/ms679360).  
   
 ### <a name="remarks"></a>Uwagi  
- Ta metoda opakowuje funkcję Windows GDI [GetWorldTransform](http://msdn.microsoft.com/library/windows/desktop/dd144953).  
+ Ta metoda opakowuje funkcję Windows GDI [GetWorldTransform](/windows/desktop/api/wingdi/nf-wingdi-getworldtransform).  
   
 ##  <a name="gradientfill"></a>  CDC::GradientFill  
  Wywołaj tę funkcję elementu członkowskiego, aby wypełnić prostokąt, trójkąt struktury kolorem, które płynnie stopniowo zmienia się z jednej strony do drugiego.  
@@ -3678,19 +3678,19 @@ BOOL GradientFill(
   
 ### <a name="parameters"></a>Parametry  
  *pVertices*  
- Wskaźnik do tablicy [TRIVERTEX](http://msdn.microsoft.com/library/windows/desktop/dd145142) struktury, że każdy definiuje wierzchołka trójkąt.  
+ Wskaźnik do tablicy [TRIVERTEX](/windows/desktop/api/wingdi/ns-wingdi-_trivertex) struktury, że każdy definiuje wierzchołka trójkąt.  
   
  *nVertices*  
  Liczba wierzchołków.  
   
  *pMesh*  
- Tablica [GRADIENT_TRIANGLE](http://msdn.microsoft.com/library/windows/desktop/dd144959) struktur w trybie trójkąt lub tablicę [GRADIENT_RECT](http://msdn.microsoft.com/library/windows/desktop/dd144958) struktur w trybie prostokąta.  
+ Tablica [GRADIENT_TRIANGLE](/windows/desktop/api/wingdi/ns-wingdi-_gradient_triangle) struktur w trybie trójkąt lub tablicę [GRADIENT_RECT](/windows/desktop/api/wingdi/ns-wingdi-_gradient_rect) struktur w trybie prostokąta.  
   
  *nMeshElements*  
  Liczba elementów (trójkąty lub prostokąty) w *pMesh*.  
   
  *dwMode*  
- Określa tryb gradientu wypełnienia. Aby uzyskać listę możliwych wartości, zobacz [GradientFill](http://msdn.microsoft.com/library/windows/desktop/dd144957) w zestawie Windows SDK.  
+ Określa tryb gradientu wypełnienia. Aby uzyskać listę możliwych wartości, zobacz [GradientFill](/windows/desktop/api/wingdi/nf-wingdi-gradientfill) w zestawie Windows SDK.  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Wartość TRUE, jeśli to się powiedzie; w przeciwnym razie wartość FALSE.  
@@ -3749,7 +3749,7 @@ virtual BOOL GrayString(
   
  Aplikację można narysować wygaszone ciągów (wygaszone) na urządzeniach, które obsługuje jednolitego szarego koloru bez wywoływania `GrayString` funkcja elementu członkowskiego. Kolor system COLOR_GRAYTEXT jest kolor szary stałe systemu, używany do rysowania wyłączonego tekstu. Aplikacja może wywołać `GetSysColor` funkcji Windows można pobrać wartości koloru COLOR_GRAYTEXT. Jeśli kolor jest równa 0 (czarny), aplikacja może wywołać `SetTextColor` funkcja elementu członkowskiego, aby ustawić kolor tekstu na wartość koloru, a następnie narysuj ciąg bezpośrednio. Jeśli pobrane kolor czarny, aplikacja musi wywołać `GrayString` do dim (szare) tekst.  
   
- Jeśli *lpfnOutput* ma wartość NULL, Windows korzysta z użyciem interfejsu GDI [TextOut](http://msdn.microsoft.com/library/windows/desktop/dd145133) funkcji i *lpData* zakłada, że Daleki wskaźnik znak na wyjściu. Jeśli znaki, które mają być danych wyjściowych nie mogą być obsługiwane przez `TextOut` funkcja elementu członkowskiego (na przykład, ciąg jest przechowywany jako mapę bitową), aplikacji, należy podać jego własnej funkcji danych wyjściowych.  
+ Jeśli *lpfnOutput* ma wartość NULL, Windows korzysta z użyciem interfejsu GDI [TextOut](/windows/desktop/api/wingdi/nf-wingdi-textouta) funkcji i *lpData* zakłada, że Daleki wskaźnik znak na wyjściu. Jeśli znaki, które mają być danych wyjściowych nie mogą być obsługiwane przez `TextOut` funkcja elementu członkowskiego (na przykład, ciąg jest przechowywany jako mapę bitową), aplikacji, należy podać jego własnej funkcji danych wyjściowych.  
   
  Należy również zauważyć, że wszystkie funkcje wywołania zwrotnego musi przechwytują wyjątki Microsoft Foundation przed zwróceniem do Windows, ponieważ nie może być zgłaszane wyjątki granice wywołania zwrotnego. Aby uzyskać więcej informacji na temat wyjątków, zobacz artykuł [wyjątki](../../mfc/exception-handling-in-mfc.md).  
   
@@ -3766,7 +3766,7 @@ void HIMETRICtoDP(LPSIZE lpSize) const;
   
 ### <a name="parameters"></a>Parametry  
  *lpSize*  
- Wskazuje [rozmiar](http://msdn.microsoft.com/library/windows/desktop/dd145106) struktury lub [CSize](../../atl-mfc-shared/reference/csize-class.md) obiektu.  
+ Wskazuje [rozmiar](https://msdn.microsoft.com/library/windows/desktop/dd145106) struktury lub [CSize](../../atl-mfc-shared/reference/csize-class.md) obiektu.  
   
 ### <a name="remarks"></a>Uwagi  
  W przypadku MM_LOENGLISH, MM_HIENGLISH, MM_LOMETRIC lub MM_HIMETRIC tryb mapowania obiektu kontekstu urządzenia konwersji jest oparty na liczbę pikseli w fizycznych CAL. Jeśli tryb mapowania jest jednym z innych niż ograniczonego trybów (np. MM_TEXT), następnie konwersji opiera się na liczbę pikseli cal logiczny.  
@@ -3780,7 +3780,7 @@ void HIMETRICtoLP(LPSIZE lpSize) const;
   
 ### <a name="parameters"></a>Parametry  
  *lpSize*  
- Wskazuje [rozmiar](http://msdn.microsoft.com/library/windows/desktop/dd145106) struktury lub [CSize](../../atl-mfc-shared/reference/csize-class.md) obiektu.  
+ Wskazuje [rozmiar](https://msdn.microsoft.com/library/windows/desktop/dd145106) struktury lub [CSize](../../atl-mfc-shared/reference/csize-class.md) obiektu.  
   
 ### <a name="remarks"></a>Uwagi  
  Funkcja ta jest używana, po uzyskiwanie rozmiary HIMETRIC OLE i chcesz konwertować je na tryb mapowania fizyczną aplikacji.  
@@ -3929,7 +3929,7 @@ void LPtoDP(LPSIZE lpSize) const;
  Wskazuje [Prostokąt](../../mfc/reference/rect-structure1.md) struktury lub [CRect](../../atl-mfc-shared/reference/crect-class.md) obiektu. Ten parametr jest używany w przypadku typowych mapowanie prostokąt, od logicznych jednostek urządzenia.  
   
  *lpSize*  
- Wskazuje [rozmiar](http://msdn.microsoft.com/library/windows/desktop/dd145106) struktury lub [CSize](../../atl-mfc-shared/reference/csize-class.md) obiektu.  
+ Wskazuje [rozmiar](https://msdn.microsoft.com/library/windows/desktop/dd145106) struktury lub [CSize](../../atl-mfc-shared/reference/csize-class.md) obiektu.  
   
 ### <a name="remarks"></a>Uwagi  
  Funkcja map, współrzędne każdego punktu lub wymiary rozmiaru, od firmy GDI logiczne współrzędnych w układzie współrzędnych urządzenia. Konwersja zależy od tego, bieżący tryb mapowania i ustawienia źródła i zakresów okna i okienka ekranu urządzenia.  
@@ -4045,20 +4045,20 @@ BOOL ModifyWorldTransform(
   
 ### <a name="parameters"></a>Parametry  
  *rXform*  
- Odwołanie do [XFORM](http://msdn.microsoft.com/library/windows/desktop/dd145228) struktury, używane do modyfikowania transformacji świata w kontekście danego urządzenia.  
+ Odwołanie do [XFORM](/windows/desktop/api/wingdi/ns-wingdi-tagxform) struktury, używane do modyfikowania transformacji świata w kontekście danego urządzenia.  
   
  *iMode*  
- Określa, jak dane transformacji modyfikuje bieżącego transformacji świata. Aby uzyskać listę wartości, które można wykonać tego parametru zobacz [ModifyWorldTransform](http://msdn.microsoft.com/library/windows/desktop/dd145060).  
+ Określa, jak dane transformacji modyfikuje bieżącego transformacji świata. Aby uzyskać listę wartości, które można wykonać tego parametru zobacz [ModifyWorldTransform](/windows/desktop/api/wingdi/nf-wingdi-modifyworldtransform).  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Zwraca wartość różną od zera w przypadku powodzenia.  
   
  Zwraca wartość 0 w przypadku niepowodzenia.  
   
- Aby uzyskać rozszerzone informacje o błędzie, należy wywołać [GetLastError](http://msdn.microsoft.com/library/windows/desktop/ms679360).  
+ Aby uzyskać rozszerzone informacje o błędzie, należy wywołać [GetLastError](https://msdn.microsoft.com/library/windows/desktop/ms679360).  
   
 ### <a name="remarks"></a>Uwagi  
- Ta metoda opakowuje funkcję Windows GDI [ModifyWorldTransform](http://msdn.microsoft.com/library/windows/desktop/dd145060).  
+ Ta metoda opakowuje funkcję Windows GDI [ModifyWorldTransform](/windows/desktop/api/wingdi/nf-wingdi-modifyworldtransform).  
   
 ##  <a name="moveto"></a>  CDC::MoveTo  
  Przenosi bieżącą pozycję w punkcie określonym przez *x* i *y* (lub *punktu*).  
@@ -4538,7 +4538,7 @@ BOOL Polyline(
 ### <a name="remarks"></a>Uwagi  
  Wiersze są pobierane z pierwszym punktem przez kolejne punkty za pomocą bieżącego pióra. W odróżnieniu od `LineTo` funkcja elementu członkowskiego `Polyline` funkcja używa ani aktualizuje bieżącej pozycji.  
   
- Aby uzyskać więcej informacji, zobacz [linii łamanej](http://msdn.microsoft.com/library/windows/desktop/dd162815) w zestawie Windows SDK.  
+ Aby uzyskać więcej informacji, zobacz [linii łamanej](/windows/desktop/api/wingdi/nf-wingdi-polyline) w zestawie Windows SDK.  
   
 ##  <a name="polylineto"></a>  CDC::PolylineTo  
  Rysuje jeden lub więcej wierszy proste.  
@@ -5387,7 +5387,7 @@ COLORREF SetDCBrushColor(COLORREF crColor);
  Jeśli funkcja zawiedzie, wartość zwracana jest CLR_INVALID.  
   
 ### <a name="remarks"></a>Uwagi  
- Ta metoda emuluje funkcjonalność funkcji [SetDCBrushColor](http://msdn.microsoft.com/library/windows/desktop/dd162969), zgodnie z opisem w zestawie Windows SDK.  
+ Ta metoda emuluje funkcjonalność funkcji [SetDCBrushColor](/windows/desktop/api/wingdi/nf-wingdi-setdcbrushcolor), zgodnie z opisem w zestawie Windows SDK.  
   
 ##  <a name="setdcpencolor"></a>  CDC::SetDCPenColor  
  Ustawia wartość określonego koloru bieżącego koloru pióra (DC) kontekstu urządzenia.  
@@ -5404,7 +5404,7 @@ COLORREF SetDCPenColor(COLORREF crColor);
  Różne od zera, jeśli funkcja zakończyła się pomyślnie; w przeciwnym razie 0.  
   
 ### <a name="remarks"></a>Uwagi  
- Ta funkcja elementu członkowskiego wykorzystuje funkcję Win32 [SetDCPenColor](http://msdn.microsoft.com/library/windows/desktop/dd162970), zgodnie z opisem w zestawie Windows SDK.  
+ Ta funkcja elementu członkowskiego wykorzystuje funkcję Win32 [SetDCPenColor](/windows/desktop/api/wingdi/nf-wingdi-setdcpencolor), zgodnie z opisem w zestawie Windows SDK.  
   
 ##  <a name="setgraphicsmode"></a>  CDC::SetGraphicsMode  
  Ustawia tryb graficznych dla kontekstu określonego urządzenia.  
@@ -5415,15 +5415,15 @@ int SetGraphicsMode(int iMode);
   
 ### <a name="parameters"></a>Parametry  
  *iMode*  
- Określa tryb grafiki. Aby uzyskać listę wartości, które można wykonać tego parametru zobacz [SetGraphicsMode](http://msdn.microsoft.com/library/windows/desktop/dd162977).  
+ Określa tryb grafiki. Aby uzyskać listę wartości, które można wykonać tego parametru zobacz [SetGraphicsMode](/windows/desktop/api/wingdi/nf-wingdi-setgraphicsmode).  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Zwraca tryb stare grafiki w przypadku powodzenia.  
   
- Zwraca wartość 0 w przypadku niepowodzenia. Aby uzyskać rozszerzone informacje o błędzie, należy wywołać [GetLastError](http://msdn.microsoft.com/library/windows/desktop/ms679360).  
+ Zwraca wartość 0 w przypadku niepowodzenia. Aby uzyskać rozszerzone informacje o błędzie, należy wywołać [GetLastError](https://msdn.microsoft.com/library/windows/desktop/ms679360).  
   
 ### <a name="remarks"></a>Uwagi  
- Ta metoda opakowuje funkcję Windows GDI [SetGraphicsMode](http://msdn.microsoft.com/library/windows/desktop/dd162977).  
+ Ta metoda opakowuje funkcję Windows GDI [SetGraphicsMode](/windows/desktop/api/wingdi/nf-wingdi-setgraphicsmode).  
   
 ##  <a name="setlayout"></a>  CDC::SetLayout  
  Wywołaj tę funkcję elementu członkowskiego, aby zmienić układ tekstu i grafiki do kontekstu urządzenia do prawej do lewej, standardowego układu kultury, takie jak arabski i hebrajski.  
@@ -5445,7 +5445,7 @@ DWORD SetLayout(DWORD dwLayout);
 ### <a name="return-value"></a>Wartość zwracana  
  W przypadku powodzenia poprzedniej układ kontekstu urządzenia.  
   
- W przypadku niepowodzenia GDI_ERROR. Aby uzyskać rozszerzone informacje o błędzie, należy wywołać [GetLastError](http://msdn.microsoft.com/library/windows/desktop/ms679360).  
+ W przypadku niepowodzenia GDI_ERROR. Aby uzyskać rozszerzone informacje o błędzie, należy wywołać [GetLastError](https://msdn.microsoft.com/library/windows/desktop/ms679360).  
   
 ### <a name="remarks"></a>Uwagi  
  Zazwyczaj użytkownik nie może wywołać `SetLayout` okna. Zamiast kontrolować układ od prawej do lewej w oknie przez ustawienie [rozszerzone Style okna ramowego](../../mfc/reference/styles-used-by-mfc.md#extended-window-styles) takich jak WS_EX_RTLREADING. Kontekst urządzenia, takie jak drukarka lub metaplik nie dziedziczy ten układ. Jedynym sposobem, aby ustawić kontekst urządzenia dla układ od prawej do lewej to przez wywołanie metody `SetLayout`.  
@@ -5454,7 +5454,7 @@ DWORD SetLayout(DWORD dwLayout);
   
  W niektórych przypadkach takich jak przy użyciu wielu map bitowych, warto zachować układ od lewej do prawej. W takich przypadkach renderowania obrazu, wywołując `BitBlt` lub `StretchBlt`, następnie ustaw flagę kontrolki mapy bitowej dla *dwLayout* do LAYOUT_BITMAPORIENTATIONPRESERVED.  
   
- Po zmianie układu z flagą LAYOUT_RTL flagi zwykle określenie prawej lub lewej zostały cofnięte. Aby uniknąć nieporozumień, można zdefiniować alternatywne nazwy dla standardowych flag. Aby uzyskać listę sugerowanych alternatywnych flagi nazw, zobacz [SetLayout](http://msdn.microsoft.com/library/windows/desktop/dd162979) w zestawie Windows SDK.  
+ Po zmianie układu z flagą LAYOUT_RTL flagi zwykle określenie prawej lub lewej zostały cofnięte. Aby uniknąć nieporozumień, można zdefiniować alternatywne nazwy dla standardowych flag. Aby uzyskać listę sugerowanych alternatywnych flagi nazw, zobacz [SetLayout](/windows/desktop/api/wingdi/nf-wingdi-setlayout) w zestawie Windows SDK.  
   
 ##  <a name="setmapmode"></a>  CDC::SetMapMode  
  Ustawia tryb mapowania.  
@@ -5572,7 +5572,7 @@ COLORREF SetPixel(
  Określa logiczną współrzędną y punktu, który ma być ustawiona.  
   
  *crColor*  
- Wartość COLORREF RGB, która określa kolor używany do malowania w punkcie. Zobacz [COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449) w zestawie Windows SDK opis tej wartości.  
+ Wartość COLORREF RGB, która określa kolor używany do malowania w punkcie. Zobacz [COLORREF](/windows/desktop/gdi/colorref) w zestawie Windows SDK opis tej wartości.  
   
  *Punkt*  
  Określa logiczną - współrzędnych x i y punktu, który ma być ustawiona. Można przekazać `POINT` struktury lub `CPoint` obiektu dla tego parametru.  
@@ -5707,7 +5707,7 @@ int SetStretchBltMode(int nStretchMode);
 |BLACKONWHITE|Wykonuje operację LOGICZNEGO przy użyciu wartości kolorów pikseli usunięte i istniejące. Mapy bitowej w przypadku monochromatycznych map bitowych, w tym trybie zachowuje czarne pikseli kosztem piksele.|  
 |COLORONCOLOR|Usuwa pikseli. W tym trybie usuwa wszystkie usunięte wiersze pikseli bez próby zachować swoje informacje.|  
 |PÓŁTONÓW|Mapuje pikseli z prostokąta źródłowego na bloki pikseli prostokąta docelowego. Średnia kolor przez blok docelowy pikseli przybliża kolor źródłowych.|  
-||Po ustawieniu PÓŁTONÓW rozciąganie trybu, aplikacja musi wywołać funkcję Win32 [SetBrushOrgEx](http://msdn.microsoft.com/library/windows/desktop/dd162967) można ustawić źródła pędzla. Jeśli nie powiedzie się w tym celu, wystąpi niezgodność pędzla.|  
+||Po ustawieniu PÓŁTONÓW rozciąganie trybu, aplikacja musi wywołać funkcję Win32 [SetBrushOrgEx](/windows/desktop/api/wingdi/nf-wingdi-setbrushorgex) można ustawić źródła pędzla. Jeśli nie powiedzie się w tym celu, wystąpi niezgodność pędzla.|  
 |STRETCH_ANDSCANS|**Windows 95/98**: taki sam jak BLACKONWHITE|  
 |STRETCH_DELETESCANS|**Windows 95/98**: taki sam jak COLORONCOLOR|  
 |STRETCH_HALFTONE|**Windows 95/98**: taki sam jak PÓŁTONÓW.|  
@@ -5989,17 +5989,17 @@ BOOL SetWorldTransform(const XFORM& rXform);
   
 ### <a name="parameters"></a>Parametry  
  *rXform*  
- Odwołanie do [XFORM](http://msdn.microsoft.com/library/windows/desktop/dd145228) strukturę, która zawiera dane transformacji.  
+ Odwołanie do [XFORM](/windows/desktop/api/wingdi/ns-wingdi-tagxform) strukturę, która zawiera dane transformacji.  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Zwraca wartość różną od zera w przypadku powodzenia.  
   
  Zwraca wartość 0 w przypadku niepowodzenia.  
   
- Aby uzyskać rozszerzone informacje o błędzie, należy wywołać [GetLastError](http://msdn.microsoft.com/library/windows/desktop/ms679360).  
+ Aby uzyskać rozszerzone informacje o błędzie, należy wywołać [GetLastError](https://msdn.microsoft.com/library/windows/desktop/ms679360).  
   
 ### <a name="remarks"></a>Uwagi  
- Ta metoda opakowuje funkcję Windows GDI [SetWorldTransform](http://msdn.microsoft.com/library/windows/desktop/dd145104).  
+ Ta metoda opakowuje funkcję Windows GDI [SetWorldTransform](/windows/desktop/api/wingdi/nf-wingdi-setworldtransform).  
   
 ##  <a name="startdoc"></a>  CDC::StartDoc  
  Informuje o sterownik urządzenia, który rozpoczyna nowe zadanie drukowania i wszystkich kolejnych `StartPage` i `EndPage` wywołania mają być buforowane w ramach tego samego zadania do momentu `EndDoc` wywołania.  
@@ -6011,7 +6011,7 @@ int StartDoc(LPCTSTR lpszDocName);
   
 ### <a name="parameters"></a>Parametry  
  *lpDocInfo*  
- Wskazuje [DOCINFO](http://msdn.microsoft.com/library/windows/desktop/dd183574) struktury zawierający nazwę pliku dokument i nazwę pliku wyjściowego.  
+ Wskazuje [DOCINFO](/windows/desktop/api/wingdi/ns-wingdi-_docinfoa) struktury zawierający nazwę pliku dokument i nazwę pliku wyjściowego.  
   
  *lpszDocName*  
  Wskaźnik do ciągu zawierającego nazwę pliku dokumentu.  
@@ -6331,7 +6331,7 @@ BOOL TransparentBlt(
 ### <a name="remarks"></a>Uwagi  
  `TransparentBlt` Umożliwia przejrzystości. oznacza to, że kolor RGB wskazywanym przez *clrTransparent* staje się przezroczyste w celu wykonania transferu.  
   
- Aby uzyskać więcej informacji, zobacz [TransparentBlt](http://msdn.microsoft.com/library/windows/desktop/dd145141) w zestawie Windows SDK.  
+ Aby uzyskać więcej informacji, zobacz [TransparentBlt](/windows/desktop/api/wingdi/nf-wingdi-transparentblt) w zestawie Windows SDK.  
   
 ##  <a name="updatecolors"></a>  CDC::UpdateColors  
  Aktualizacje obszaru klienta, kontekstu urządzenia, porównując bieżącą kolorów w obszar klienta do palety system na podstawie poszczególne piksele.  
@@ -6343,7 +6343,7 @@ void UpdateColors();
 ### <a name="remarks"></a>Uwagi  
  Może wywołać nieaktywnego okna z zrealizowane logiczną paletę `UpdateColors` jako alternatywę do ponownego narysowania obszaru klienckiego po zmianie palety systemu.  
   
- Aby uzyskać więcej informacji o korzystaniu z palety kolorów, zobacz [UpdateColors](http://msdn.microsoft.com/library/windows/desktop/dd145166) w zestawie Windows SDK.  
+ Aby uzyskać więcej informacji o korzystaniu z palety kolorów, zobacz [UpdateColors](/windows/desktop/api/wingdi/nf-wingdi-updatecolors) w zestawie Windows SDK.  
   
  `UpdateColors` Funkcja elementu członkowskiego szybciej niż odświeżanie obszaru zazwyczaj aktualizuje obszaru klienta. Jednak ponieważ funkcja dokonuje translacji kolorów, na podstawie koloru każdego piksela przed zmianą paleta systemu, każde wywołanie tej funkcji powoduje utratę niektórych odwzorowanie kolorów.  
   

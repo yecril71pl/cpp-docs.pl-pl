@@ -14,12 +14,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 004da50bf8d688f1d7b0432e5196094b878870cf
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 43a8851d11e6113d52b2ad128b1ff41e66c1ad12
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38955010"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43223238"
 ---
 # <a name="sample-container-class"></a>Sample Container — Klasa
 
@@ -34,7 +34,7 @@ Kilka dodatkowych ostrzeżenia:
 
 - Jeśli wyrażenie `~Ty` zgłasza wyjątek, który, stan wynikowy obiekt kontenera jest niezdefiniowana.
 
-- Jeśli kontener przechowywany obiekt alokatora *al*, i *al* zgłasza wyjątek innych niż w wyniku wywołania * al ***.allocate**, Wynikowy stan kontenera obiekt jest niezdefiniowany.
+- Jeśli kontener przechowywany obiekt alokatora *al*, i *al* zgłasza wyjątek innych niż w wyniku wywołania `al.allocate`, stan wynikowy obiekt kontenera jest niezdefiniowana.
 
 - Jeśli kontener przechowuje obiekt funkcyjny *comp*, aby ustalić sposób uporządkowania kontrolowanej sekwencji i *comp* zgłaszającej wyjątek dowolnego rodzaju, stan wynikowy obiekt kontenera jest niezdefiniowana.
 

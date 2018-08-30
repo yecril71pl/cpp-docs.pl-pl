@@ -36,12 +36,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 690c7bd36046161fb39a560b7aa2f7bf13c55828
-ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
+ms.openlocfilehash: 06bb7101524a51872ca4d329fbe9db6b13b6b8bd
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37339624"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43214949"
 ---
 # <a name="cgopherfilefind-class"></a>Klasa CGopherFileFind
 Pomoc Internetowych plikach wyszukiwania serwerów gopher.  
@@ -162,7 +162,7 @@ virtual BOOL FindFile(
 -   INTERNET_FLAG_USE_EXISTING, jeśli jest to możliwe, ponowne używanie istniejących połączeń z serwerem dla nowych `FindFile` żądania, zamiast tworzenia nowej sesji dla każdego żądania.  
   
 ### <a name="return-value"></a>Wartość zwracana  
- Wartość różną od zera, jeśli to się powiedzie; w przeciwnym razie 0. Aby uzyskać rozszerzone informacje o błędzie, należy wywołać funkcję Win32 [GetLastError](http://msdn.microsoft.com/library/windows/desktop/ms679360).  
+ Wartość różną od zera, jeśli to się powiedzie; w przeciwnym razie 0. Aby uzyskać rozszerzone informacje o błędzie, należy wywołać funkcję Win32 [GetLastError](https://msdn.microsoft.com/library/windows/desktop/ms679360).  
   
 ### <a name="remarks"></a>Uwagi  
  Po wywołaniu `FindFile` można pobrać pierwszy obiekt gopher, można wywołać [FindNextFile](#findnextfile) do pobierania plików kolejnych gopher.  
@@ -175,7 +175,7 @@ virtual BOOL FindNextFile();
 ```  
   
 ### <a name="return-value"></a>Wartość zwracana  
- Wartość różną od zera, jeśli istnieje więcej plików; zero, jeśli znaleziono pliku jest ostatni z nich w katalogu lub jeśli wystąpił błąd. Aby uzyskać rozszerzone informacje o błędzie, należy wywołać funkcję Win32 [GetLastError](http://msdn.microsoft.com/library/windows/desktop/ms679360). Jeśli znaleziono pliku ostatniego pliku w katalogu lub jeśli nie pasujących plików można znaleźć `GetLastError` :: gettotalsize() zwróciło ERROR_NO_MORE_FILES.  
+ Wartość różną od zera, jeśli istnieje więcej plików; zero, jeśli znaleziono pliku jest ostatni z nich w katalogu lub jeśli wystąpił błąd. Aby uzyskać rozszerzone informacje o błędzie, należy wywołać funkcję Win32 [GetLastError](https://msdn.microsoft.com/library/windows/desktop/ms679360). Jeśli znaleziono pliku ostatniego pliku w katalogu lub jeśli nie pasujących plików można znaleźć `GetLastError` :: gettotalsize() zwróciło ERROR_NO_MORE_FILES.  
   
 ##  <a name="getcreationtime"></a>  CGopherFileFind::GetCreationTime  
  Pobiera czasu utworzenia dla bieżącego pliku.  
@@ -187,7 +187,7 @@ virtual BOOL GetCreationTime(CTime& refTime) const;
   
 ### <a name="parameters"></a>Parametry  
  *pTimeStamp*  
- Wskaźnik do [FILETIME](http://msdn.microsoft.com/library/windows/desktop/ms724284) struktury zawierającej czas utworzenia pliku.  
+ Wskaźnik do [FILETIME](https://msdn.microsoft.com/library/windows/desktop/ms724284) struktury zawierającej czas utworzenia pliku.  
   
  *refTime*  
  Odwołanie do [CTime](../../atl-mfc-shared/reference/ctime-class.md) obiektu.  
@@ -199,7 +199,7 @@ virtual BOOL GetCreationTime(CTime& refTime) const;
  Należy wywołać [FindNextFile](#findnextfile) co najmniej raz przed wywołaniem `GetCreationTime`.  
   
 > [!NOTE]
->  Nie wszystkie systemy plików użycie tej samej semantyki w celu zaimplementowania sygnaturę czasową, zwrócona przez tę funkcję. Ta funkcja może zwrócić tę samą wartość zwracana przez inne funkcje sygnatury czasu, jeśli bazowego systemu plików lub serwer nie obsługuje atrybutu czas przechowywania. Zobacz [Win32_FIND_DATA](http://msdn.microsoft.com/library/windows/desktop/aa365740) struktury, aby uzyskać informacje na temat formatów czasu. W niektórych systemach operacyjnych zwracana godzina jest w czasie lokalnej strefy do maszyny były znajduje się plik. Zobacz Win32 [FileTimeToLocalFileTime](http://msdn.microsoft.com/library/windows/desktop/ms724277) interfejsu API, aby uzyskać więcej informacji.  
+>  Nie wszystkie systemy plików użycie tej samej semantyki w celu zaimplementowania sygnaturę czasową, zwrócona przez tę funkcję. Ta funkcja może zwrócić tę samą wartość zwracana przez inne funkcje sygnatury czasu, jeśli bazowego systemu plików lub serwer nie obsługuje atrybutu czas przechowywania. Zobacz [Win32_FIND_DATA](/windows/desktop/api/minwinbase/ns-minwinbase-_win32_find_dataa) struktury, aby uzyskać informacje na temat formatów czasu. W niektórych systemach operacyjnych zwracana godzina jest w czasie lokalnej strefy do maszyny były znajduje się plik. Zobacz Win32 [FileTimeToLocalFileTime](/windows/desktop/api/fileapi/nf-fileapi-filetimetolocalfiletime) interfejsu API, aby uzyskać więcej informacji.  
   
 ##  <a name="getlastaccesstime"></a>  CGopherFileFind::GetLastAccessTime  
  Pobiera czas, w których nastąpił ostatni dostęp do określonego pliku.  
@@ -214,7 +214,7 @@ virtual BOOL GetLastAccessTime(FILETIME* pTimeStamp) const;
  Odwołanie do [CTime](../../atl-mfc-shared/reference/ctime-class.md) obiektu.  
   
  *pTimeStamp*  
- Wskaźnik do [FILETIME](http://msdn.microsoft.com/library/windows/desktop/ms724284) struktury zawierającej czas ostatniego dostępu do pliku.  
+ Wskaźnik do [FILETIME](https://msdn.microsoft.com/library/windows/desktop/ms724284) struktury zawierającej czas ostatniego dostępu do pliku.  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Wartość różną od zera, jeśli to się powiedzie; 0 w przypadku niepowodzenia. `GetLastAccessTime` Zwraca wartość 0, tylko wtedy, gdy [FindNextFile](#findnextfile) nigdy nie została wywołana na tym `CGopherFileFind` obiektu.  
@@ -223,7 +223,7 @@ virtual BOOL GetLastAccessTime(FILETIME* pTimeStamp) const;
  Należy wywołać [FindNextFile](#findnextfile) co najmniej raz przed wywołaniem `GetLastAccessTime`.  
   
 > [!NOTE]
->  Nie wszystkie systemy plików użycie tej samej semantyki w celu zaimplementowania sygnaturę czasową, zwrócona przez tę funkcję. Ta funkcja może zwrócić tę samą wartość zwracana przez inne funkcje sygnatury czasu, jeśli bazowego systemu plików lub serwer nie obsługuje atrybutu czas przechowywania. Zobacz [Win32_FIND_DATA](http://msdn.microsoft.com/library/windows/desktop/aa365740) struktury, aby uzyskać informacje na temat formatów czasu. W niektórych systemach operacyjnych zwracana godzina jest w czasie lokalnej strefy do maszyny były znajduje się plik. Zobacz Win32 [FileTimeToLocalFileTime](http://msdn.microsoft.com/library/windows/desktop/ms724277) interfejsu API, aby uzyskać więcej informacji.  
+>  Nie wszystkie systemy plików użycie tej samej semantyki w celu zaimplementowania sygnaturę czasową, zwrócona przez tę funkcję. Ta funkcja może zwrócić tę samą wartość zwracana przez inne funkcje sygnatury czasu, jeśli bazowego systemu plików lub serwer nie obsługuje atrybutu czas przechowywania. Zobacz [Win32_FIND_DATA](/windows/desktop/api/minwinbase/ns-minwinbase-_win32_find_dataa) struktury, aby uzyskać informacje na temat formatów czasu. W niektórych systemach operacyjnych zwracana godzina jest w czasie lokalnej strefy do maszyny były znajduje się plik. Zobacz Win32 [FileTimeToLocalFileTime](/windows/desktop/api/fileapi/nf-fileapi-filetimetolocalfiletime) interfejsu API, aby uzyskać więcej informacji.  
   
 ##  <a name="getlastwritetime"></a>  CGopherFileFind::GetLastWriteTime  
  Pobiera podczas ostatniego plik został zmieniony.  
@@ -235,7 +235,7 @@ virtual BOOL GetLastWriteTime(CTime& refTime) const;
   
 ### <a name="parameters"></a>Parametry  
  *pTimeStamp*  
- Wskaźnik do [FILETIME](http://msdn.microsoft.com/library/windows/desktop/ms724284) struktury zawierającej czas do ostatniego zapisania pliku.  
+ Wskaźnik do [FILETIME](https://msdn.microsoft.com/library/windows/desktop/ms724284) struktury zawierającej czas do ostatniego zapisania pliku.  
   
  *refTime*  
  Odwołanie do [CTime](../../atl-mfc-shared/reference/ctime-class.md) obiektu.  
@@ -247,7 +247,7 @@ virtual BOOL GetLastWriteTime(CTime& refTime) const;
  Należy wywołać [FindNextFile](#findnextfile) co najmniej raz przed wywołaniem `GetLastWriteTime`.  
   
 > [!NOTE]
->  Nie wszystkie systemy plików użycie tej samej semantyki w celu zaimplementowania sygnaturę czasową, zwrócona przez tę funkcję. Ta funkcja może zwrócić tę samą wartość zwracana przez inne funkcje sygnatury czasu, jeśli bazowego systemu plików lub serwer nie obsługuje atrybutu czas przechowywania. Zobacz [Win32_FIND_DATA](http://msdn.microsoft.com/library/windows/desktop/aa365740) struktury, aby uzyskać informacje na temat formatów czasu. W niektórych systemach operacyjnych zwracana godzina jest w czasie lokalnej strefy do maszyny były znajduje się plik. Zobacz Win32 [FileTimeToLocalFileTime](http://msdn.microsoft.com/library/windows/desktop/ms724277) interfejsu API, aby uzyskać więcej informacji.  
+>  Nie wszystkie systemy plików użycie tej samej semantyki w celu zaimplementowania sygnaturę czasową, zwrócona przez tę funkcję. Ta funkcja może zwrócić tę samą wartość zwracana przez inne funkcje sygnatury czasu, jeśli bazowego systemu plików lub serwer nie obsługuje atrybutu czas przechowywania. Zobacz [Win32_FIND_DATA](/windows/desktop/api/minwinbase/ns-minwinbase-_win32_find_dataa) struktury, aby uzyskać informacje na temat formatów czasu. W niektórych systemach operacyjnych zwracana godzina jest w czasie lokalnej strefy do maszyny były znajduje się plik. Zobacz Win32 [FileTimeToLocalFileTime](/windows/desktop/api/fileapi/nf-fileapi-filetimetolocalfiletime) interfejsu API, aby uzyskać więcej informacji.  
   
 ##  <a name="getlength"></a>  CGopherFileFind::GetLength  
  Wywołaj tę funkcję elementu członkowskiego, aby uzyskać długość w bajtach, znaleziony plik.  
@@ -260,7 +260,7 @@ virtual ULONGLONG GetLength() const;
  Długość, w bajtach, znaleziony plik.  
   
 ### <a name="remarks"></a>Uwagi  
- `GetLength` używa struktury Win32 [WIN32_FIND_DATA](http://msdn.microsoft.com/library/windows/desktop/aa365740) można uzyskać wartość rozmiaru pliku w bajtach.  
+ `GetLength` używa struktury Win32 [WIN32_FIND_DATA](/windows/desktop/api/minwinbase/ns-minwinbase-_win32_find_dataa) można uzyskać wartość rozmiaru pliku w bajtach.  
   
 > [!NOTE]
 >  Począwszy od MFC 7.0 `GetLength` obsługuje typy 64-bitową liczbę całkowitą. Wcześniej istniejący kod utworzonych za pomocą tego nowszą wersję biblioteki może spowodować ostrzeżenia obcięcie.  

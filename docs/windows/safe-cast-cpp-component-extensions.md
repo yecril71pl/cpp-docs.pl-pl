@@ -19,12 +19,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 5b09bbb831218c073b590233c572d5a5453659ed
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 85a27fceabcac9c5fa3b36fae4990da7dcd65deb
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42595335"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43222929"
 ---
 # <a name="safecast-c-component-extensions"></a>safe_cast (C++ Component Extensions)
 
@@ -46,7 +46,7 @@ expression
 
 ## <a name="windows-runtime"></a>Środowisko wykonawcze systemu Windows
 
-**safe_cast** pozwala na zmianę typu określonego wyrażenia. W sytuacjach, w pełni nieoczekiwany zmiennej lub parametru, aby umożliwiać konwersję do pewnego typu, można użyć **safe_cast** bez **try-catch —** bloku, aby wykryć błędy programowania podczas programowania. Aby uzyskać więcej informacji, zobacz [rzutowanie (C + +/ CX)](http://msdn.microsoft.com/library/windows/apps/hh755802.aspx).
+**safe_cast** pozwala na zmianę typu określonego wyrażenia. W sytuacjach, w pełni nieoczekiwany zmiennej lub parametru, aby umożliwiać konwersję do pewnego typu, można użyć **safe_cast** bez **try-catch —** bloku, aby wykryć błędy programowania podczas programowania. Aby uzyskać więcej informacji, zobacz [rzutowanie (C + +/ CX)](https://msdn.microsoft.com/library/windows/apps/hh755802.aspx).
 
 ### <a name="syntax"></a>Składnia
 

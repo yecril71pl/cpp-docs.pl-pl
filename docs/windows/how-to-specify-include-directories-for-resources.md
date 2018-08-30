@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: baa317610339e7073f2e829860e11ab15e66277e
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: c52f2a17e347e7b37152a3d7a78423f0523b5679
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42611064"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43220601"
 ---
 # <a name="how-to-specify-include-directories-for-resources"></a>Porady: określanie katalogów dołączenia dla zasobów
 
@@ -32,7 +32,7 @@ ms.locfileid: "42611064"
 
 2. W **stron właściwości** okno dialogowe, kliknij przycisk **zasobów** węzła w okienku po lewej stronie, następnie określ dodatkowe katalogi dołączane we **dodatkowe katalogi dołączane** Właściwość.
 
-Aby uzyskać informacje na temat dodawania zasobów do projektów zarządzanych, zobacz [zasoby w aplikacjach pulpitu](/dotnet/framework/resources/index) w przewodniku dewelopera .NET Framework. Aby uzyskać informacji na temat ręcznego dodawania plików zasobów do projektów zarządzanych, uzyskiwania dostępu do zasobów, wyświetlania statycznych zasobów i przypisywania ciągów zasobów do właściwości, zobacz [Instruktaż: Using Resources for Localization with ASP.NET](http://msdn.microsoft.com/Library/bb4e5b44-e2b0-48ab-bbe9-609fb33900b6).
+Aby uzyskać informacje na temat dodawania zasobów do projektów zarządzanych, zobacz [zasoby w aplikacjach pulpitu](/dotnet/framework/resources/index) w przewodniku dewelopera .NET Framework. Aby uzyskać informacji na temat ręcznego dodawania plików zasobów do projektów zarządzanych, uzyskiwania dostępu do zasobów, wyświetlania statycznych zasobów i przypisywania ciągów zasobów do właściwości, zobacz [Instruktaż: Using Resources for Localization with ASP.NET](https://msdn.microsoft.com/Library/bb4e5b44-e2b0-48ab-bbe9-609fb33900b6).
 
 ## <a name="requirements"></a>Wymagania
 

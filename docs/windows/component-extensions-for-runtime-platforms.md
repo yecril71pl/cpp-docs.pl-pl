@@ -19,12 +19,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 9c939a2a96d0f8a34dbe9424ab7e07c5a60c2224
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 7a8bb269f1d572fed2d7fc85ee33f07d22a98aae
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42610208"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43220585"
 ---
 # <a name="component-extensions-for-runtime-platforms"></a>Component Extensions dla platform środowiska uruchomieniowego
 
@@ -34,7 +34,7 @@ Visual C++ zapewnia rozszerzeń językowych, aby ułatwić programowanie platfor
 
 C + +/ CX jest podzbiorem C + +/ interfejsu wiersza polecenia. Dla rozszerzeń, które są wspólne dla C + +/ CX i C + +/ CLI, semantyka zależą od tego, czy celem jest środowisko uruchomieniowe języka wspólnego (CLR) lub środowiska wykonawczego Windows. Aby skompilować aplikację do uruchamiania w środowisku uruchomieniowym Windows, należy określić `/ZW` — opcja kompilatora. Aby skompilować je do uruchomienia na środowisko CLR, należy określić `/clr` — opcja kompilatora. Te przełączniki są ustawiane automatycznie, gdy używasz programu Visual Studio, aby utworzyć projekt.
 
-Aby uzyskać więcej informacji na temat tworzenia aplikacji uniwersalnych platformy Windows w języku C++, zobacz [plan for Windows aplikacji środowiska wykonawczego przy użyciu języka C++](http://msdn.microsoft.com/library/windows/apps/hh700360.aspx).
+Aby uzyskać więcej informacji na temat tworzenia aplikacji uniwersalnych platformy Windows w języku C++, zobacz [plan for Windows aplikacji środowiska wykonawczego przy użyciu języka C++](https://msdn.microsoft.com/library/windows/apps/hh700360.aspx).
 
 C + +/ CLI rozszerza standard ISO/ANSI C++ i jest zdefiniowana w obszarze Ecma C + +/ interfejsu wiersza polecenia Standard. Aby uzyskać więcej informacji, zobacz [programowania .NET w języku C + +/ interfejsu wiersza polecenia (Visual C++)](../dotnet/dotnet-programming-with-cpp-cli-visual-cpp.md).
 

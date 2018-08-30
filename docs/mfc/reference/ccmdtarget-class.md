@@ -56,12 +56,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b6630ad9721b7a58e7da2660337660cc7916db01
-ms.sourcegitcommit: b92ca0b74f0b00372709e81333885750ba91f90e
+ms.openlocfilehash: bb4d7a06d728bddfd4ba1ee355cb4d1e0b5b9fd6
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/16/2018
-ms.locfileid: "42466474"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43221713"
 ---
 # <a name="ccmdtarget-class"></a>CCmdTarget — klasa
 Klasa bazowa dla architektury mapy wiadomości w bibliotece klas Microsoft Foundation.  
@@ -163,19 +163,19 @@ BOOL DoOleVerb(
  Identyfikator numeryczny zlecenia.  
   
  *lpMsg*  
- Wskaźnik do [MSG](http://msdn.microsoft.com/library/windows/desktop/ms644958) struktury opisujące zdarzenie (takie jak dwukrotne kliknięcie), która wywołała zlecenie.  
+ Wskaźnik do [MSG](https://msdn.microsoft.com/library/windows/desktop/ms644958) struktury opisujące zdarzenie (takie jak dwukrotne kliknięcie), która wywołała zlecenie.  
   
  *hWndParent*  
  Uchwyt okna dokumentu z obiektem.  
   
  *lprect —*  
- Wskaźnik do [Prostokąt](http://msdn.microsoft.com/library/windows/desktop/dd162897) struktury zawierającej współrzędne, w pikselach, które definiują obiekt użytkownika blokujących prostokąta w *hwndParent*.  
+ Wskaźnik do [Prostokąt](https://msdn.microsoft.com/library/windows/desktop/dd162897) struktury zawierającej współrzędne, w pikselach, które definiują obiekt użytkownika blokujących prostokąta w *hwndParent*.  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Wartość TRUE, jeśli pomyślnie, w przeciwnym razie wartość FALSE.  
   
 ### <a name="remarks"></a>Uwagi  
- Ta funkcja członkowska jest zasadniczo implementację [IOleObject::DoVerb](http://msdn.microsoft.com/library/windows/desktop/ms694508). Możliwe działania są wyliczane przez [CCmdTarget::EnumOleVerbs](#enumoleverbs).  
+ Ta funkcja członkowska jest zasadniczo implementację [IOleObject::DoVerb](/windows/desktop/api/oleidl/nf-oleidl-ioleobject-doverb). Możliwe działania są wyliczane przez [CCmdTarget::EnumOleVerbs](#enumoleverbs).  
   
 ##  <a name="enableautomation"></a>  CCmdTarget::EnableAutomation  
  Wywołaj tę funkcję, aby włączyć obiekt automatyzacji OLE.  
@@ -229,13 +229,13 @@ BOOL EnumOleVerbs(LPENUMOLEVERB* ppenumOleVerb);
   
 ### <a name="parameters"></a>Parametry  
  *ppenumOleVerb*  
- Wskaźnik do wskaźnika do [IEnumOLEVERB](http://msdn.microsoft.com/library/windows/desktop/ms695084) interfejsu.  
+ Wskaźnik do wskaźnika do [IEnumOLEVERB](/windows/desktop/api/oleidl/nn-oleidl-ienumoleverb) interfejsu.  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Wartość TRUE, jeśli obiekt obsługuje co najmniej jeden zlecenia OLE (w którym to przypadku \* *ppenumOleVerb* wskazuje `IEnumOLEVERB` interfejsu modułu wyliczającego), w przeciwnym razie wartość FALSE.  
   
 ### <a name="remarks"></a>Uwagi  
- Ta funkcja członkowska jest zasadniczo implementację [IOleObject::EnumVerbs](http://msdn.microsoft.com/library/windows/desktop/ms692781).  
+ Ta funkcja członkowska jest zasadniczo implementację [IOleObject::EnumVerbs](/windows/desktop/api/oleidl/nf-oleidl-ioleobject-enumverbs).  
   
 ##  <a name="fromidispatch"></a>  CCmdTarget::FromIDispatch  
  Wywołaj tę funkcję, aby zamapować `IDispatch` wskaźnika, otrzymane od automatyzacji funkcji elementów członkowskich klasy do `CCmdTarget` obiekt, który implementuje interfejsy `IDispatch` obiektu.  
@@ -263,7 +263,7 @@ virtual BOOL GetDispatchIID(IID* pIID);
   
 ### <a name="parameters"></a>Parametry  
  *pIID*  
- Wskaźnik do Identyfikatora interfejsu ( [GUID](http://msdn.microsoft.com/library/windows/desktop/aa373931)).  
+ Wskaźnik do Identyfikatora interfejsu ( [GUID](https://msdn.microsoft.com/library/windows/desktop/aa373931)).  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Wartość TRUE, jeśli pomyślnie, w przeciwnym razie wartość FALSE. W przypadku powodzenia \* *pIID* jest ustawiona na identyfikator wysyłania podstawowego interfejsu.  
@@ -288,7 +288,7 @@ LPDISPATCH GetIDispatch(BOOL bAddRef);
  `IDispatch` Kursor skojarzony z obiektem.  
   
 ### <a name="remarks"></a>Uwagi  
- Dla obiektów to wywołanie `EnableAutomation` w ich konstruktory mogę nadawania automatyzacji włączona, ta funkcja zwraca wskaźnik do implementacji MFC `IDispatch` używanego przez klientów, którzy komunikują się za pośrednictwem `IDispatch` interfejsu. Wywołaniu tej funkcji, automatycznie dodaje odwołanie do wskaźnika, tak nie jest konieczne było wywołanie [IUnknown::AddRef](http://msdn.microsoft.com/library/windows/desktop/ms691379).  
+ Dla obiektów to wywołanie `EnableAutomation` w ich konstruktory mogę nadawania automatyzacji włączona, ta funkcja zwraca wskaźnik do implementacji MFC `IDispatch` używanego przez klientów, którzy komunikują się za pośrednictwem `IDispatch` interfejsu. Wywołaniu tej funkcji, automatycznie dodaje odwołanie do wskaźnika, tak nie jest konieczne było wywołanie [IUnknown::AddRef](/windows/desktop/api/unknwn/nf-unknwn-iunknown-addref).  
   
 ##  <a name="gettypeinfocount"></a>  CCmdTarget::GetTypeInfoCount  
  Pobiera numer typu informacji interfejsy, które zawiera obiekt.  
@@ -320,7 +320,7 @@ HRESULT GetTypeInfoOfGuid(
  Identyfikator ustawień regionalnych ( `LCID`).  
   
  *Identyfikator GUID*  
- [GUID](http://msdn.microsoft.com/library/windows/desktop/aa373931) opisu typu.  
+ [GUID](https://msdn.microsoft.com/library/windows/desktop/aa373931) opisu typu.  
   
  *ppTypeInfo*  
  Wskaźnik do wskaźnika do `ITypeInfo` interfejsu.  

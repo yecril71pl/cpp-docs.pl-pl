@@ -18,29 +18,29 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 928a954be6a96f5026a98f724a77bebd51be27f0
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 28191191572e508828a23f0e719a57d63163b08d
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33345081"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43222354"
 ---
 # <a name="memory-management"></a>Zarządzanie pamięcią
-Ta grupa artykułów opisuje sposób korzystać z usług ogólnego przeznaczenia z Microsoft Foundation Class biblioteki (MFC) związane z zarządzaniem pamięci. Alokacja pamięci można podzielić na dwie główne kategorie: ramkę alokacji i alokacji sterty.  
+Ta grupa artykułów opisano, jak korzystać z usług ogólnego przeznaczenia z Microsoft Foundation Class Library (MFC) związane z zarządzaniem pamięcią. Alokacja pamięci można podzielić na dwie główne kategorie: klatki, alokacji i Alokacje sterty.  
   
- Co podstawowa różnica między używane techniki alokacji dwóch polega na tym, że z Alokacja ramek, zwykle pracę z rzeczywistego pamięci zablokowanie, gdy z alokacji sterty są zawsze podany wskaźnik do bloku pamięci. Inny główną różnicą między dwoma systemami jest czy obiekty ramki są automatycznie usuwane, gdy stos obiektów, które muszą zostać jawnie usunięte przez programistę.  
+ Jedną z głównych różnic między techniki alokacji dwóch jest, że za pomocą Alokacja ramek, zwykle działają z rzeczywistych pamięci zablokowanie, gdy za pomocą alokacji stosu, są zawsze podając wskaźnik do bloku pamięci. Inna główna różnica między dwa schematy jest, że obiekty ramki są automatycznie usuwane, gdy sterty obiektów, które muszą zostać jawnie usunięte przez programistę.  
   
- Innego typu niż MFC informacji o pamięci zarządzania programów dla systemu Windows, temacie [zarządzania pamięcią](http://msdn.microsoft.com/library/windows/desktop/aa366779) w zestawie Windows SDK.  
+ Dla innego typu niż MFC informacji na temat zarządzania pamięcią w programach dla Windows, zobacz [zarządzanie pamięcią](https://msdn.microsoft.com/library/windows/desktop/aa366779) w zestawie Windows SDK.  
   
-## <a name="what-do-you-want-to-know-more-about"></a>Co chcesz dowiedzieć się więcej o  
+## <a name="what-do-you-want-to-know-more-about"></a>Co chcesz dowiedzieć się więcej na temat  
   
 -   [Alokacja ramek](../mfc/memory-management-frame-allocation.md)  
   
 -   [Alokacja sterty](../mfc/memory-management-heap-allocation.md)  
   
--   [Przydzielanie pamięci dla tablicy](../mfc/memory-management-examples.md)  
+-   [Przydzielanie pamięci dla tablic](../mfc/memory-management-examples.md)  
   
--   [Cofanie przydziału pamięci dla tablicy w stercie](../mfc/memory-management-examples.md)  
+-   [Cofanie przydziału pamięci dla tablicy ze sterty](../mfc/memory-management-examples.md)  
   
 -   [Przydzielanie pamięci dla struktury danych](../mfc/memory-management-examples.md)  
   

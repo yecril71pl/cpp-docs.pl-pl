@@ -15,39 +15,39 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 45eda098202fdf9286905bdc967b6aa1d7bd7035
-ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
+ms.openlocfilehash: 00b19fa7166e6edad05d729c5a738a2a827086ae
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "33327583"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43212798"
 ---
 # <a name="adding-a-property-visual-c"></a>Dodawanie właściwości (Visual C++)
-Można użyć [Dodaj Kreatora właściwości](../ide/names-add-property-wizard.md) dodanie metody interfejsu w projekcie.  
+Możesz użyć [Kreator dodawania właściwości](../ide/names-add-property-wizard.md) Aby dodać metodę do interfejsu w projekcie.  
   
-### <a name="to-add-a-property-to-your-object"></a>Aby dodać właściwości do obiektu  
+### <a name="to-add-a-property-to-your-object"></a>Aby dodać właściwość do obiektu  
   
-1.  W [widoku klasy](http://msdn.microsoft.com/en-us/8d7430a9-3e33-454c-a9e1-a85e3d2db925), kliknij prawym przyciskiem myszy nazwę interfejsu, do którego chcesz dodać właściwości.  
+1.  W [Widok klas](https://msdn.microsoft.com/8d7430a9-3e33-454c-a9e1-a85e3d2db925), kliknij prawym przyciskiem myszy nazwę interfejsu, do którego chcesz dodać właściwość.  
   
     > [!NOTE]
     >  Można również dodać właściwości do dispinterfaces, który, chyba że projekt jest przypisane, są zagnieżdżone w obrębie węzła biblioteki.  
   
 2.  W menu skrótów kliknij **Dodaj**, a następnie kliknij przycisk **Dodaj właściwość**.  
   
-3.  W [Dodaj Kreatora właściwości](../ide/names-add-property-wizard.md), podaj informacje, aby utworzyć właściwość.  
+3.  W [Kreator dodawania właściwości](../ide/names-add-property-wizard.md), podaj informacje, aby utworzyć właściwość.  
   
-4.  Określ jakiekolwiek ustawienia języka (IDL) definicji interfejsu dla właściwości w [atrybuty IDL](../ide/idl-attributes-add-property-wizard.md) stronie kreatora.  
+4.  Określ jakiekolwiek ustawienia interfejsu definicja języka (IDL) dla właściwości w [atrybuty IDL](../ide/idl-attributes-add-property-wizard.md) strony kreatora.  
   
 5.  Kliknij przycisk **Zakończ** można dodać właściwości.  
   
- **Uzyskać** i `Put` metody, właściwości są wyświetlane jako dwa ikony w widoku klas, w obszarze interfejsu, w którym jest zdefiniowana. Możesz kliknąć dwukrotnie albo ikonę, aby wyświetlić deklaracja właściwości w pliku .idl.  
+ **Uzyskać** i `Put` metody, właściwości są wyświetlane jako dwie ikony w widoku klas w obszarze interfejs, w którym jest zdefiniowana. Możesz kliknąć dwukrotnie albo ikonę, aby wyświetlić deklaracja właściwości w pliku .idl.  
   
--   Dla interfejsów ATL **uzyskać** i **Put** funkcje są dodawane do pliku .cpp, a odwołania do tych funkcji są dodawane do pliku .h.  
+-   Interfejsy ATL **uzyskać** i **umieścić** funkcje są dodawane do pliku .cpp i odwołania do tych funkcji są dodawane do pliku .h.  
   
--   Dla dispinterfaces MFC, w przypadku wybrania **zmiennej członkowskiej** jako typ implementacji metody i zmienna są dodawane do klasy, która implementuje go. W przypadku wybrania **metod Get/Set** jako typ implementacji dwie metody są dodawane do klasy, która implementuje go.  
+-   Dla dispinterfaces MFC, jeśli zostanie wybrana **zmiennej składowej** jako typ implementacji metody i zmienna są dodawane do klasy, która implementuje go. Jeśli wybierzesz **metod Get/Set** jako typ implementacji dwie metody są dodawane do klasy, która implementuje go.  
   
 ## <a name="see-also"></a>Zobacz też  
  [Tworzenie interfejsu COM](../ide/creating-a-com-interface-visual-cpp.md)   
  [Edytowanie interfejsu COM](../ide/editing-a-com-interface.md)   
- [Model Component Object Model](http://msdn.microsoft.com/library/windows/desktop/ms694363)   
- [Wskaźniki interfejsu i interfejsy](http://msdn.microsoft.com/library/windows/desktop/ms688484)
+ [Model Component Object Model](/windows/desktop/com/the-component-object-model)   
+ [Wskaźniki interfejsu i interfejsy](/windows/desktop/com/interface-pointers-and-interfaces)

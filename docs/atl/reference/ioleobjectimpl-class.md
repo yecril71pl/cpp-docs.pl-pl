@@ -59,12 +59,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: aec4de071df8dcca960a0f1cb802375e5553ceb3
-ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
+ms.openlocfilehash: 3646a640cb3873ec32f6284f8d2be99469ef7633
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37880307"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43220906"
 ---
 # <a name="ioleobjectimpl-class"></a>Klasa IOleObjectImpl
 Ta klasa implementuje `IUnknown` i jest główną interfejs, za pomocą którego kontener komunikuje się za pomocą kontrolki.  
@@ -131,7 +131,7 @@ class ATL_NO_VTABLE IOleObjectImpl : public IOleObject
 |[IOleObjectImpl::Update](#update)|Aktualizuje formantu. Implementacja biblioteki ATL, zwraca wartość S_OK.|  
   
 ## <a name="remarks"></a>Uwagi  
- [IOleObject](http://msdn.microsoft.com/library/windows/desktop/dd542709) interfejs jest interfejsem podmiotu zabezpieczeń za pomocą którego kontener komunikuje się za pomocą kontrolki. Klasa `IOleObjectImpl` udostępnia domyślną implementację tego interfejsu i implementuje `IUnknown` , wysyłając informacje o do zrzutu kompilacji urządzenia podczas debugowania.  
+ [IOleObject](/windows/desktop/api/oleidl/nn-oleidl-ioleobject) interfejs jest interfejsem podmiotu zabezpieczeń za pomocą którego kontener komunikuje się za pomocą kontrolki. Klasa `IOleObjectImpl` udostępnia domyślną implementację tego interfejsu i implementuje `IUnknown` , wysyłając informacje o do zrzutu kompilacji urządzenia podczas debugowania.  
   
  **Powiązane artykuły** [ALT — samouczek](../../atl/active-template-library-atl-tutorial.md), [Tworzenie projektu ATL](../../atl/reference/creating-an-atl-project.md)  
   
@@ -153,7 +153,7 @@ STDMETHOD(Advise)(
 ```  
   
 ### <a name="remarks"></a>Uwagi  
- Zobacz [IOleObject::Advise](http://msdn.microsoft.com/library/windows/desktop/ms686573) w Windows SDK.  
+ Zobacz [IOleObject::Advise](/windows/desktop/api/oleidl/nf-oleidl-ioleobject-advise) w Windows SDK.  
   
 ##  <a name="close"></a>  IOleObjectImpl::Close  
  Zmienia stan formantu uruchamianie załadowane.  
@@ -167,7 +167,7 @@ STDMETHOD(Close)(DWORD dwSaveOption);
   
  Wskaźniki przechowywanych w składowe danych klasy kontrolki [CComControlBase::m_spInPlaceSite](../../atl/reference/ccomcontrolbase-class.md#m_spinplacesite) i [CComControlBase::m_spAdviseSink](../../atl/reference/ccomcontrolbase-class.md#m_spadvisesink) zostaną zwolnione i elementy członkowskie danych [CComControlBase:: m_bNegotiatedWnd](../../atl/reference/ccomcontrolbase-class.md#m_bnegotiatedwnd), [CComControlBase::m_bWndless](../../atl/reference/ccomcontrolbase-class.md#m_bwndless), i [CComControlBase::m_bInPlaceSiteEx](../../atl/reference/ccomcontrolbase-class.md#m_binplacesiteex) są ustawione na wartość FALSE.  
   
- Zobacz [IOleObject::Close](http://msdn.microsoft.com/library/windows/desktop/ms683922) w Windows SDK.  
+ Zobacz [IOleObject::Close](/windows/desktop/api/oleidl/nf-oleidl-ioleobject-close) w Windows SDK.  
   
 ##  <a name="doverb"></a>  IOleObjectImpl::DoVerb  
  Informuje kontroli, wykonaj jedną z jego akcje wyliczany.  
@@ -196,7 +196,7 @@ STDMETHOD(DoVerb)(
 |OLEIVERB_SHOW|[DoVerbShow](#doverbshow)|  
 |OLEIVERB_UIACTIVATE|[DoVerbUIActivate](#doverbuiactivate)|  
   
- Zobacz [IOleObject::DoVerb](http://msdn.microsoft.com/library/windows/desktop/ms694508) w Windows SDK.  
+ Zobacz [IOleObject::DoVerb](/windows/desktop/api/oleidl/nf-oleidl-ioleobject-doverb) w Windows SDK.  
   
 ##  <a name="doverbdiscardundo"></a>  IOleObjectImpl::DoVerbDiscardUndo  
  Informuje formant aby odrzucić wszystkie stany cofania, których obsługi.  
@@ -250,7 +250,7 @@ HRESULT DoVerbInPlaceActivate(LPCRECT prcPosRect, HWND /* hwndParent */);
  Jedna z wartości HRESULT standardowych.  
   
 ### <a name="remarks"></a>Uwagi  
- Aktywuje kontrolkę w miejscu, wywołując [CComControlBase::InPlaceActivate](../../atl/reference/ccomcontrolbase-class.md#inplaceactivate). Chyba że element członkowski danych Twojej klasy kontrolki `m_bWindowOnly` ma wartość PRAWDA, `DoVerbInPlaceActivate` najpierw umożliwia przeprowadzenie próby aktywacji formantu kontrolce (możliwe tylko wtedy, gdy kontener obsługuje [IOleInPlaceSiteWindowless](http://msdn.microsoft.com/library/windows/desktop/ms682300)). W przypadku niepowodzenia funkcja umożliwia przeprowadzenie próby aktywacji kontrolki z rozszerzonych funkcji (możliwe tylko wtedy, gdy kontener obsługuje [IOleInPlaceSiteEx](http://msdn.microsoft.com/library/windows/desktop/ms693461)). W przypadku niepowodzenia funkcja umożliwia przeprowadzenie próby aktywacji kontrolki z nie rozszerzonych funkcji (możliwe tylko wtedy, gdy kontener obsługuje [IOleInPlaceSite](http://msdn.microsoft.com/library/windows/desktop/ms686586)). Jeśli aktywacja zakończy się powodzeniem, funkcja powiadamia kontener formantu został aktywowany.  
+ Aktywuje kontrolkę w miejscu, wywołując [CComControlBase::InPlaceActivate](../../atl/reference/ccomcontrolbase-class.md#inplaceactivate). Chyba że element członkowski danych Twojej klasy kontrolki `m_bWindowOnly` ma wartość PRAWDA, `DoVerbInPlaceActivate` najpierw umożliwia przeprowadzenie próby aktywacji formantu kontrolce (możliwe tylko wtedy, gdy kontener obsługuje [IOleInPlaceSiteWindowless](/windows/desktop/api/ocidl/nn-ocidl-ioleinplacesitewindowless)). W przypadku niepowodzenia funkcja umożliwia przeprowadzenie próby aktywacji kontrolki z rozszerzonych funkcji (możliwe tylko wtedy, gdy kontener obsługuje [IOleInPlaceSiteEx](/windows/desktop/api/ocidl/nn-ocidl-ioleinplacesiteex)). W przypadku niepowodzenia funkcja umożliwia przeprowadzenie próby aktywacji kontrolki z nie rozszerzonych funkcji (możliwe tylko wtedy, gdy kontener obsługuje [IOleInPlaceSite](/windows/desktop/api/oleidl/nn-oleidl-ioleinplacesite)). Jeśli aktywacja zakończy się powodzeniem, funkcja powiadamia kontener formantu został aktywowany.  
   
 ##  <a name="doverbopen"></a>  IOleObjectImpl::DoVerbOpen  
  Powoduje, że formantu ma być edytowany otwarte w oddzielnym oknie.  
@@ -331,7 +331,7 @@ STDMETHOD(EnumAdvise)(IEnumSTATDATA** ppenumAdvise);
 ```  
   
 ### <a name="remarks"></a>Uwagi  
- Zobacz [IOleObject::EnumAdvise](http://msdn.microsoft.com/library/windows/desktop/ms682355) w Windows SDK.  
+ Zobacz [IOleObject::EnumAdvise](/windows/desktop/api/oleidl/nf-oleidl-ioleobject-enumadvise) w Windows SDK.  
   
 ##  <a name="enumverbs"></a>  IOleObjectImpl::EnumVerbs  
  Dostarcza wyliczenie zarejestrowanych działań (poleceń) dla tego formantu przez wywołanie metody `OleRegEnumVerbs`.  
@@ -343,7 +343,7 @@ STDMETHOD(EnumVerbs)(IEnumOLEVERB** ppEnumOleVerb);
 ### <a name="remarks"></a>Uwagi  
  Zlecenia można dodać do pliku .rgs Twojego projektu. Na przykład zobacz CIRCCTL. RGS w [OK](../../visual-cpp-samples.md) próbki.  
   
- Zobacz [IOleObject::EnumVerbs](http://msdn.microsoft.com/library/windows/desktop/ms692781) w Windows SDK.  
+ Zobacz [IOleObject::EnumVerbs](/windows/desktop/api/oleidl/nf-oleidl-ioleobject-enumverbs) w Windows SDK.  
   
 ##  <a name="getclientsite"></a>  IOleObjectImpl::GetClientSite  
  Umieszcza wskaźnik w składowa danych klasy kontrolki [CComControlBase::m_spClientSite](../../atl/reference/ccomcontrolbase-class.md#m_spclientsite) do *ppClientSite* i zwiększa liczbę odwołań wskaźnika.  
@@ -353,7 +353,7 @@ STDMETHOD(GetClientSite)(IOleClientSite** ppClientSite);
 ```  
   
 ### <a name="remarks"></a>Uwagi  
- Zobacz [IOleObject::GetClientSite](http://msdn.microsoft.com/library/windows/desktop/ms692603) w Windows SDK.  
+ Zobacz [IOleObject::GetClientSite](/windows/desktop/api/oleidl/nf-oleidl-ioleobject-getclientsite) w Windows SDK.  
   
 ##  <a name="getclipboarddata"></a>  IOleObjectImpl::GetClipboardData  
  Pobiera dane ze Schowka.  
@@ -368,7 +368,7 @@ STDMETHOD(GetClipboardData)(
  Zwraca E_NOTIMPL.  
   
 ### <a name="remarks"></a>Uwagi  
- Zobacz [IOleObject::GetClipboardData](http://msdn.microsoft.com/library/windows/desktop/ms682288) w Windows SDK.  
+ Zobacz [IOleObject::GetClipboardData](/windows/desktop/api/oleidl/nf-oleidl-ioleobject-getclipboarddata) w Windows SDK.  
   
 ##  <a name="getextent"></a>  IOleObjectImpl::GetExtent  
  Pobiera rozmiar wyświetlania kontrolkę uruchomionej w jednostkach HIMETRIC (0,01 milimetra na jednostkę).  
@@ -382,7 +382,7 @@ STDMETHOD(GetExtent)(
 ### <a name="remarks"></a>Uwagi  
  Rozmiar jest przechowywany w składowa danych klasy kontrolki [CComControlBase::m_sizeExtent](../../atl/reference/ccomcontrolbase-class.md#m_sizeextent).  
   
- Zobacz [IOleObject::GetExtent](http://msdn.microsoft.com/library/windows/desktop/ms692325) w Windows SDK.  
+ Zobacz [IOleObject::GetExtent](/windows/desktop/api/oleidl/nf-oleidl-ioleobject-getextent) w Windows SDK.  
   
 ##  <a name="getmiscstatus"></a>  IOleObjectImpl::GetMiscStatus  
  Zwraca wskaźnik do informacji o stanie zarejestrowane dla formantu przez wywołanie metody `OleRegGetMiscStatus`.  
@@ -396,7 +396,7 @@ STDMETHOD(GetMiscStatus)(
 ### <a name="remarks"></a>Uwagi  
  Informacje o stanie zawiera mechanizm zachowań. obsługiwane przez kontrolę i prezentację danych. Informacje o stanie można dodać do pliku .rgs Twojego projektu.  
   
- Zobacz [IOleObject::GetMiscStatus](http://msdn.microsoft.com/library/windows/desktop/ms678521) w Windows SDK.  
+ Zobacz [IOleObject::GetMiscStatus](/windows/desktop/api/oleidl/nf-oleidl-ioleobject-getmiscstatus) w Windows SDK.  
   
 ##  <a name="getmoniker"></a>  IOleObjectImpl::GetMoniker  
  Pobiera moniker formantu.  
@@ -412,7 +412,7 @@ STDMETHOD(GetMoniker)(
  Zwraca E_NOTIMPL.  
   
 ### <a name="remarks"></a>Uwagi  
- Zobacz [IOleObject::GetMoniker](http://msdn.microsoft.com/library/windows/desktop/ms686576) w Windows SDK.  
+ Zobacz [IOleObject::GetMoniker](/windows/desktop/api/oleidl/nf-oleidl-ioleobject-getmoniker) w Windows SDK.  
   
 ##  <a name="getuserclassid"></a>  IOleObjectImpl::GetUserClassID  
  Zwraca identyfikator klasy formantu.  
@@ -422,7 +422,7 @@ STDMETHOD(GetUserClassID)(CLSID* pClsid);
 ```  
   
 ### <a name="remarks"></a>Uwagi  
- Zobacz [IOleObject::GetUserClassID](http://msdn.microsoft.com/library/windows/desktop/ms682313) w Windows SDK.  
+ Zobacz [IOleObject::GetUserClassID](/windows/desktop/api/oleidl/nf-oleidl-ioleobject-getuserclassid) w Windows SDK.  
   
 ##  <a name="getusertype"></a>  IOleObjectImpl::GetUserType  
  Zwraca nazwę użytkownika — typ formantu przez wywołanie metody `OleRegGetUserType`.  
@@ -436,7 +436,7 @@ STDMETHOD(GetUserType)(
 ### <a name="remarks"></a>Uwagi  
  Nazwa typu użytkownika jest używana do wyświetlania w elementach interfejsu użytkownika, takie jak menu i okien dialogowych. Możesz zmienić nazwę typu użytkownika w pliku .rgs projektu.  
   
- Zobacz [IOleObject::GetUserType](http://msdn.microsoft.com/library/windows/desktop/ms688643) w Windows SDK.  
+ Zobacz [IOleObject::GetUserType](/windows/desktop/api/oleidl/nf-oleidl-ioleobject-getusertype) w Windows SDK.  
   
 ##  <a name="initfromdata"></a>  IOleObjectImpl::InitFromData  
  Inicjuje formantu z wybranych danych.  
@@ -452,7 +452,7 @@ STDMETHOD(InitFromData)(
  Zwraca E_NOTIMPL.  
   
 ### <a name="remarks"></a>Uwagi  
- Zobacz [IOleObject::InitFromData](http://msdn.microsoft.com/library/windows/desktop/ms688510) w Windows SDK.  
+ Zobacz [IOleObject::InitFromData](/windows/desktop/api/oleidl/nf-oleidl-ioleobject-initfromdata) w Windows SDK.  
   
 ##  <a name="isuptodate"></a>  IOleObjectImpl::IsUpToDate  
  Sprawdza, czy kontrolka jest aktualny.  
@@ -465,7 +465,7 @@ STDMETHOD(IsUpToDate)(void);
  Zwraca wartość S_OK.  
   
 ### <a name="remarks"></a>Uwagi  
- Zobacz [IOleObject::IsUpToDate](http://msdn.microsoft.com/library/windows/desktop/ms686624) w Windows SDK.  
+ Zobacz [IOleObject::IsUpToDate](/windows/desktop/api/oleidl/nf-oleidl-ioleobject-isuptodate) w Windows SDK.  
   
 ##  <a name="onpostverbdiscardundo"></a>  IOleObjectImpl::OnPostVerbDiscardUndo  
  Wywoływane przez [DoVerbDiscardUndo](#doverbdiscardundo) po poprzedni stan jest odrzucany.  
@@ -633,7 +633,7 @@ STDMETHOD(SetClientSite)(IOleClientSite* pClientSite);
 ### <a name="remarks"></a>Uwagi  
  Następnie metoda zwraca S_OK.  
   
- Zobacz [IOleObject::SetClientSite](http://msdn.microsoft.com/library/windows/desktop/ms684013) w Windows SDK.  
+ Zobacz [IOleObject::SetClientSite](/windows/desktop/api/oleidl/nf-oleidl-ioleobject-setclientsite) w Windows SDK.  
   
 ##  <a name="setcolorscheme"></a>  IOleObjectImpl::SetColorScheme  
  Zaleca schemat kolorów kontroli aplikacji, jeśli istnieje.  
@@ -646,7 +646,7 @@ STDMETHOD(SetColorScheme)(LOGPALETTE* /* pLogPal */);
  Zwraca E_NOTIMPL.  
   
 ### <a name="remarks"></a>Uwagi  
- Zobacz [IOleObject::SetColorScheme](http://msdn.microsoft.com/library/windows/desktop/ms683971) w Windows SDK.  
+ Zobacz [IOleObject::SetColorScheme](/windows/desktop/api/oleidl/nf-oleidl-ioleobject-setcolorscheme) w Windows SDK.  
   
 ##  <a name="setextent"></a>  IOleObjectImpl::SetExtent  
  Ustawia maksymalny zakres obszaru wyświetlania kontrolki.  
@@ -664,7 +664,7 @@ STDMETHOD(SetExtent)(
   
  Jeśli dane składowej klasy kontrolki [CComControlBase::m_bRecomposeOnResize](../../atl/reference/ccomcontrolbase-class.md#m_brecomposeonresize) ma wartość PRAWDA, `SetExtent` wywołania `SendOnDataChange` i `SendOnViewChange` powiadomić wszystkich doradztwa ujść zarejestrowany właściciel Porada, który ma rozmiar kontrolki zmienione.  
   
- Zobacz [IOleObject::SetExtent](http://msdn.microsoft.com/library/windows/desktop/ms694330) w Windows SDK.  
+ Zobacz [IOleObject::SetExtent](/windows/desktop/api/oleidl/nf-oleidl-ioleobject-setextent) w Windows SDK.  
   
 ##  <a name="sethostnames"></a>  IOleObjectImpl::SetHostNames  
  Informuje kontrolki nazwy aplikacji kontenera i dokumentu kontenera.  
@@ -677,7 +677,7 @@ STDMETHOD(SetHostNames)(LPCOLESTR /* szContainerApp */, LPCOLESTR /* szContainer
  Zwraca wartość S_OK.  
   
 ### <a name="remarks"></a>Uwagi  
- Zobacz [IOleObject::SetHostNames](http://msdn.microsoft.com/library/windows/desktop/ms680642) w Windows SDK.  
+ Zobacz [IOleObject::SetHostNames](/windows/desktop/api/oleidl/nf-oleidl-ioleobject-sethostnames) w Windows SDK.  
   
 ##  <a name="setmoniker"></a>  IOleObjectImpl::SetMoniker  
  Informuje o tym formant jest jego nazwie.  
@@ -692,7 +692,7 @@ STDMETHOD(SetMoniker)(
  Zwraca E_NOTIMPL.  
   
 ### <a name="remarks"></a>Uwagi  
- Zobacz [IOleObject::SetMoniker](http://msdn.microsoft.com/library/windows/desktop/ms679671) w Windows SDK.  
+ Zobacz [IOleObject::SetMoniker](/windows/desktop/api/oleidl/nf-oleidl-ioleobject-setmoniker) w Windows SDK.  
   
 ##  <a name="unadvise"></a>  IOleObjectImpl::Unadvise  
  Usuwa doradztwa technicznego dotyczącego połączenia przechowywana w klasie kontrolki `m_spOleAdviseHolder` element członkowski danych.  
@@ -702,7 +702,7 @@ STDMETHOD(Unadvise)(DWORD dwConnection);
 ```  
   
 ### <a name="remarks"></a>Uwagi  
- Zobacz [IOleObject::Unadvise](http://msdn.microsoft.com/library/windows/desktop/ms693749) w Windows SDK.  
+ Zobacz [IOleObject::Unadvise](/windows/desktop/api/oleidl/nf-oleidl-ioleobject-unadvise) w Windows SDK.  
   
 ##  <a name="update"></a>  IOleObjectImpl::Update  
  Aktualizuje formantu.  
@@ -715,9 +715,9 @@ STDMETHOD(Update)(void);
  Zwraca wartość S_OK.  
   
 ### <a name="remarks"></a>Uwagi  
- Zobacz [IOleObject::Update](http://msdn.microsoft.com/library/windows/desktop/ms679699) w Windows SDK.  
+ Zobacz [IOleObject::Update](/windows/desktop/api/oleidl/nf-oleidl-ioleobject-update) w Windows SDK.  
   
 ## <a name="see-also"></a>Zobacz też  
  [Klasa CComControl](../../atl/reference/ccomcontrol-class.md)   
- [Interfejsy kontrolki ActiveX](http://msdn.microsoft.com/library/windows/desktop/ms692724)   
+ [Interfejsy kontrolki ActiveX](/windows/desktop/com/activex-controls-interfaces)   
  [Klasa — Przegląd](../../atl/atl-class-overview.md)

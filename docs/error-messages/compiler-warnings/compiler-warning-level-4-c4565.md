@@ -1,7 +1,7 @@
 ---
-title: Kompilatora (poziom 4) ostrzeżenie C4565 | Dokumentacja firmy Microsoft
+title: Kompilator ostrzeżenie (poziom 4) C4565 | Dokumentacja firmy Microsoft
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 08/27/2018
 ms.technology:
 - cpp-diagnostics
 ms.topic: error-reference
@@ -16,23 +16,28 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d3c4249783686c1fabb44395d3c092eca0d9230a
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: c25f2f1fc16c6d45a7d1eddec8d3efe62db142f2
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33293367"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43211265"
 ---
-# <a name="compiler-warning-level-4-c4565"></a>Kompilator C4565 ostrzegawcze (poziom 4)
-"Funkcja": zmiana definicji; symbol został wcześniej zadeklarowany z __declspec(modifier)  
-  
- Symbol został ponownie zdefiniować lub ponownie zadeklarować i deklaracji, w przeciwieństwie do pierwszej deklaracji, lub definicji lub druga definicja nie miał `__declspec` modyfikator (***modyfikator***). To ostrzeżenie ma charakter informacyjny. Aby usunąć to ostrzeżenie, usuń jedną z definicji.  
-  
- Poniższy przykład generuje C4565:  
-  
-```  
-// C4565.cpp  
-// compile with: /W4 /LD  
-__declspec(noalias) void f();  
-void f();   // C4565  
+# <a name="compiler-warning-level-4-c4565"></a>Kompilator ostrzeżenie (poziom 4) C4565
+
+> "*funkcja*": zmiana definicji; symbol został poprzednio zadeklarowany za pomocą __declspec (*modyfikator*)
+
+## <a name="remarks"></a>Uwagi
+
+Symbol został ponownie zdefiniować lub ponownie zadeklarowany, a drugi definicji lub deklaracji, w odróżnieniu od pierwszej definicji lub deklaracji, nie ma `__declspec` modyfikator (*modyfikator*). To ostrzeżenie ma charakter informacyjny. Aby usunąć to ostrzeżenie, usuń jedną z definicji.
+
+## <a name="example"></a>Przykład
+
+Poniższy przykład spowoduje wygenerowanie C4565:
+
+```cpp
+// C4565.cpp
+// compile with: /W4 /LD
+__declspec(noalias) void f();
+void f();   // C4565
 ```

@@ -38,16 +38,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 972d8e3f1798a7498173c3d8b0677bb57231b990
-ms.sourcegitcommit: 6e3cf8df676d59119ce88bf5321d063cf479108c
+ms.openlocfilehash: f10422d8efcebec62e77a495a6fb04c980da6060
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/22/2018
-ms.locfileid: "34451542"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43215164"
 ---
 # <a name="wctomb-wctombl"></a>wctomb, _wctomb_l
 
-Przekonwertować odpowiednich znaków wielobajtowych znaków dwubajtowych. Bezpieczniejsza wersje te funkcje są dostępne; zobacz [wctomb_s —, _wctomb_s_l —](wctomb-s-wctomb-s-l.md).
+Konwertuj znaków dwubajtowych do odpowiedniego znaku wielobajtowego. Bardziej bezpieczne wersje tych funkcji są dostępne; zobacz [wctomb_s —, _wctomb_s_l —](wctomb-s-wctomb-s-l.md).
 
 ## <a name="syntax"></a>Składnia
 
@@ -69,17 +69,17 @@ int _wctomb_l(
 Adres znaków wielobajtowych.
 
 *WChar*<br/>
-Znaków dwubajtowych.
+Znakiem dwubajtowym.
 
 ## <a name="return-value"></a>Wartość zwracana
 
-Jeśli **wctomb —** konwertuje znaków dwubajtowych do znaków wielobajtowych, zwraca liczbę bajtów (który nigdy nie jest większa niż **mb_cur_max —**) w znaków dwubajtowych. Jeśli *wchar* jest znakiem pustym znaków dwubajtowych (L '\0'), **wctomb —** zwraca wartość 1. Jeśli wskaźnika docelowej *mbchar* jest **NULL**, **wctomb —** zwraca wartość 0. Jeśli konwersja nie jest możliwe w bieżących ustawień regionalnych, **wctomb —** zwraca wartość -1 i **errno** ustawiono **eilseq —**.
+Jeśli **wctomb —** konwertuje znak dwubajtowy znak wielobajtowy, zwraca liczbę bajtów (która nigdy nie jest większa niż **MB_CUR_MAX**) w szerokich znaków. Jeśli *wchar* jest znakiem null szerokich znaków (L '\0'), **wctomb —** zwraca wartość 1. Jeśli wskaźnik docelowej *mbchar* jest **NULL**, **wctomb —** zwraca wartość 0. Jeśli konwersja nie jest możliwe przy bieżących ustawieniach regionalnych **wctomb —** zwraca wartość -1 i **errno** ustawiono **EILSEQ**.
 
 ## <a name="remarks"></a>Uwagi
 
-**Wctomb —** funkcji konwertuje jego *wchar* argument odpowiednich znaków wielobajtowych i zapisuje wynik w *mbchar*. Funkcję można wywołać z dowolnego punktu w programach. **wctomb —** używa bieżące ustawienia regionalne dla dowolnego zachowań zależnych od ustawień regionalnych. **_wctomb_l —** jest taka sama jak **wctomb —** z tą różnicą, że używa ustawień regionalnych przekazano zamiast tego. Aby uzyskać więcej informacji, zobacz [ustawień regionalnych](../../c-runtime-library/locale.md).
+**Wctomb —** funkcji konwertuje jej *wchar* argument do odpowiedniego znaku wielobajtowego i zapisuje wynik w *mbchar*. Funkcję można wywołać z dowolnego punktu w dowolnym programie. **wctomb —** używa bieżących ustawień regionalnych dla wszelkich zachowań zależnych od ustawień regionalnych; **_wctomb_l —** jest taka sama jak **wctomb —** z tą różnicą, że używa ustawień regionalnych przekazanych w zamian. Aby uzyskać więcej informacji, zobacz [ustawień regionalnych](../../c-runtime-library/locale.md).
 
-**wctomb —** sprawdza poprawność parametrów. Jeśli *mbchar* jest **NULL**, program obsługi nieprawidłowych parametrów zostanie wywołany, zgodnie z opisem w [sprawdzanie poprawności parametru](../../c-runtime-library/parameter-validation.md). Jeśli jest dozwolone wykonywanie, aby kontynuować, **errno** ustawiono **einval —** i funkcja zwraca wartość -1.
+**wctomb —** sprawdza poprawność parametrów. Jeśli *mbchar* jest **NULL**, procedura obsługi nieprawidłowego parametru zostanie wywołana, zgodnie z opisem w [Parameter Validation](../../c-runtime-library/parameter-validation.md). Jeśli wykonanie może być kontynuowane, **errno** ustawiono **EINVAL** a funkcja zwraca wartość -1.
 
 ## <a name="requirements"></a>Wymagania
 
@@ -127,4 +127,4 @@ Convert a wide character:
 [mbstowcs, _mbstowcs_l](mbstowcs-mbstowcs-l.md)<br/>
 [mbtowc, _mbtowc_l](mbtowc-mbtowc-l.md)<br/>
 [wcstombs, _wcstombs_l](wcstombs-wcstombs-l.md)<br/>
-[WideCharToMultiByte](http://msdn.microsoft.com/library/windows/desktop/dd374130)<br/>
+[WideCharToMultiByte](/windows/desktop/api/stringapiset/nf-stringapiset-widechartomultibyte)<br/>

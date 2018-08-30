@@ -84,12 +84,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7ffd2a8969b4cd0edb5845310300e3b42148f816
-ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
+ms.openlocfilehash: c74bc6a134ea31f3184912192ccbcb3908e64cd3
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37337619"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43221528"
 ---
 # <a name="casyncsocket-class"></a>Klasa CAsyncSocket
 Przedstawia gniazdo Windows — punkt końcowy komunikacji sieciowej.  
@@ -173,7 +173,7 @@ class CAsyncSocket : public CObject
 > [!NOTE]
 >  Korzystając z MFC gniazd w pomocnicze wątki w statycznie połączonym aplikacji MFC, należy wywołać `AfxSocketInit` w każdy wątek, który używa gniazda można zainicjować biblioteki gniazda. Domyślnie `AfxSocketInit` jest wywoływana tylko w wątku głównym.  
   
- Aby uzyskać więcej informacji, zobacz [Windows Sockets: przy użyciu klasy CAsyncSocket](../../mfc/windows-sockets-using-class-casyncsocket.md) i powiązanych artykułach., a także [Windows Sockets 2 API](http://msdn.microsoft.com/library/windows/desktop/ms740673).  
+ Aby uzyskać więcej informacji, zobacz [Windows Sockets: przy użyciu klasy CAsyncSocket](../../mfc/windows-sockets-using-class-casyncsocket.md) i powiązanych artykułach., a także [Windows Sockets 2 API](/windows/desktop/WinSock/windows-sockets-start-page-2).  
   
 ## <a name="inheritance-hierarchy"></a>Hierarchia dziedziczenia  
  [CObject](../../mfc/reference/cobject-class.md)  
@@ -515,7 +515,7 @@ BOOL Create(
 > [!IMPORTANT]
 > `Create` jest **nie** metodą o bezpiecznych wątkach.  Jeśli wywołujesz ją w środowisku wielowątkowych go może zostać przywołane jednocześnie przez inne wątki, pamiętaj chronić każdego wywołania elementu mutex lub innych lock synchronizacji.  
   
- Aby uzyskać więcej informacji na temat usługi stream i datagram gniazda, zobacz artykuły [Windows Sockets: tła](../../mfc/windows-sockets-background.md) i [Windows Sockets: porty i adresy gniazd](../../mfc/windows-sockets-ports-and-socket-addresses.md) i [interfejsu API Windows Sockets 2](http://msdn.microsoft.com/library/windows/desktop/ms740673).  
+ Aby uzyskać więcej informacji na temat usługi stream i datagram gniazda, zobacz artykuły [Windows Sockets: tła](../../mfc/windows-sockets-background.md) i [Windows Sockets: porty i adresy gniazd](../../mfc/windows-sockets-ports-and-socket-addresses.md) i [interfejsu API Windows Sockets 2](/windows/desktop/WinSock/windows-sockets-start-page-2).  
   
 ##  <a name="detach"></a>  CAsyncSocket::Detach  
  Wywołaj tę funkcję elementu członkowskiego, aby odłączyć uchwyt GNIAZDA w *m_hSocket* element członkowski danych z `CAsyncSocket` obiektu i ustaw *m_hSocket* na wartość NULL.  
@@ -554,7 +554,7 @@ static int PASCAL GetLastError();
 ### <a name="remarks"></a>Uwagi  
  Gdy funkcja określony element członkowski wskazuje, że wystąpił błąd, `GetLastError` powinna być wywoływana, aby pobrać kod odpowiedni komunikat o błędzie. Zobacz opisy funkcji poszczególnym członkom listę kodów błędów dotyczy.  
   
- Aby uzyskać więcej informacji o kodach błędów, zobacz [Windows Sockets 2 API](http://msdn.microsoft.com/library/windows/desktop/ms740673).  
+ Aby uzyskać więcej informacji o kodach błędów, zobacz [Windows Sockets 2 API](/windows/desktop/WinSock/windows-sockets-start-page-2).  
   
 ##  <a name="getpeername"></a>  CAsyncSocket::GetPeerName  
  Wywołaj tę funkcję elementu członkowskiego, aby pobrać adres gniazda elementów równorzędnych, do którego jest podłączony tego gniazda.  

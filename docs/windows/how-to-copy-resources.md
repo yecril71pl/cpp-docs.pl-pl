@@ -23,12 +23,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: f9cef186c18622dc361f97bd65e7bd264a6f03cf
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 2abd889584ce39627153d6eac59db9240367ba20
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42599587"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43214394"
 ---
 # <a name="how-to-copy-resources"></a>Porady: zasoby dotyczące kopiowania
 
@@ -37,7 +37,7 @@ Możesz skopiować zasoby z jednego pliku do innego bez ich zmieniania lub może
 Można go łatwo skopiować zasoby z istniejącego zasobu lub plik wykonywalny do bieżącego pliku zasobów. Aby to zrobić, należy otworzyć oba pliki zawierające zasoby w tym samym czasie i przeciągnij elementy z jednego pliku lub skopiuj i Wklej między dwoma plikami. Ta metoda działa w przypadku plików skryptu (.rc) zasobów i plików szablonów (.rct) zasobu, a także pliki wykonywalne (.exe).
 
 > [!NOTE]
-> Visual C++ zawiera przykładowe pliki zasobów, które można użyć w swojej aplikacji. Aby uzyskać więcej informacji, zobacz [CLIPART: wspólnych zasobów](http://msdn.microsoft.com/9bac2891-b6b3-49ec-a287-cec850c707e0).
+> Visual C++ zawiera przykładowe pliki zasobów, które można użyć w swojej aplikacji. Aby uzyskać więcej informacji, zobacz [CLIPART: wspólnych zasobów](https://msdn.microsoft.com/9bac2891-b6b3-49ec-a287-cec850c707e0).
 
 Metodą przeciągania i upuszczania między plikami .rc, które są otwarte [poza projektem](../windows/how-to-open-a-resource-script-file-outside-of-a-project-standalone.md).
 

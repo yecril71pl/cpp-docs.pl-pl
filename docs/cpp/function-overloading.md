@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f57ae6a7d084a497ec41c9b66b314ad1fdb3e7fc
-ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
+ms.openlocfilehash: 16d9123125cc6cb01ee5dfb03f771e263d9915f2
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/01/2018
-ms.locfileid: "39406574"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43221443"
 ---
 # <a name="function-overloading"></a>Przeładowywanie funkcji
 C++ umożliwia określenie więcej niż jednej funkcji o tej samej nazwie w tym samym zakresie. Są to tak zwane *przeciążone* funkcji. Przeciążone funkcje umożliwiają podanie różnego znaczenia dla funkcji, w zależności od typu i liczby argumentów. 
@@ -43,8 +43,9 @@ Możesz doprowadzić do przeciążenia funkcji elementów członkowskich i funkc
 |**Const** lub **volatile**|Tak, gdy jest stosowany do całej funkcji|
 |[ref-qualifier](#ref-qualifier)|Tak|  
   
-## <a name="example"></a>Przykład  
- Poniższy przykład ilustruje sposób użycia przeciążenia.  
+## <a name="example"></a>Przykład
+
+Poniższy przykład ilustruje sposób użycia przeciążenia.  
   
 ```cpp 
 // function_overloading.cpp  
@@ -270,9 +271,9 @@ volatile Over&
   
 1.  Dokładne dopasowanie. Dokładne dopasowanie między typami, z którymi funkcja jest wywoływana i typy zadeklarowane w prototyp funkcji jest zawsze najlepsze dopasowanie. Sekwencje trivial konwersje są klasyfikowane jako dokładne dopasowania. Jednak sekwencji, których nie należy do żadnego z tych konwersje są uważane za lepsze niż sekwencji, które konwertują:  
   
-    -   Ze wskaźnika do wskaźnika do **const** (`type` **\*** do **const** `type` **\*** ).  
+    -   Ze wskaźnika do wskaźnika do **const** (`type` <strong>\*</strong> do **const** `type` <strong>\*</strong> ).  
   
-    -   Ze wskaźnika do wskaźnika do **volatile** (`type` **\*** do **volatile** `type` **\***).  
+    -   Ze wskaźnika do wskaźnika do **volatile** (`type` <strong>\*</strong> do **volatile** `type` <strong>\*</strong>).  
   
     -   Z odwołania do odwołania do **const** (`type` **&** do **const** `type` **&**).  
   

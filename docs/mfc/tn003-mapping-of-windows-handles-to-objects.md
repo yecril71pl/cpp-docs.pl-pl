@@ -1,5 +1,5 @@
 ---
-title: 'TN003: Mapowanie uchwytów okien na obiekty | Dokumentacja firmy Microsoft'
+title: 'TN003: Mapowanie Windows uchwytów na obiektach | Dokumentacja firmy Microsoft'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -19,26 +19,26 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b2be47da802fd1168ec7b43c2f7701351b3c88d8
-ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
+ms.openlocfilehash: a7dbd74a8f216efb64d220747155a619d2084b3b
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/26/2018
-ms.locfileid: "36951511"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43211765"
 ---
 # <a name="tn003-mapping-of-windows-handles-to-objects"></a>TN003: mapowanie uchwytów okien na obiekty
-Ta uwaga opisuje MFC dojścia do obiektów C++ obiekt procedur, które obsługuje mapowania systemu Windows.  
+Ta uwaga opisuje MFC procedur, które obsługuje mapowania Windows obiektu dojścia do obiektów języka C++.  
   
-## <a name="the-problem"></a>Problem  
- Obiekty systemu Windows są zazwyczaj reprezentowany przez różne [obsługi](http://msdn.microsoft.com/library/windows/desktop/aa383751) obiektów klas MFC zawijać uchwytami systemu Windows z obiektami C++. Dojście zawijania funkcje biblioteki klas MFC umożliwiają znaleźć obiekt C++, który jest zawijany obiektu systemu Windows, który ma określonego dojścia. Jednak czasami obiekt nie ma obiektu C++ i w tych godzinach system tworzy tymczasowy obiekt do działania jako otoki C++.  
+## <a name="the-problem"></a>Ten Problem  
+ Obiekty Windows zwykle są reprezentowane przez różne [obsługi](/windows/desktop/WinProg/windows-data-types) obiektów klas MFC opakować Windows uchwytów obiektu z obiektami C++. Uchwyt otaczania funkcji biblioteki klas MFC pozwalają znaleźć obiektu języka C++, do którego jest zawijany obiekt Windows, który ma określoną dojście. Jednak czasami obiekt nie ma obiektu języka C++ i w tych godzinach system tworzy tymczasowy obiekt jako otoki języka C++.  
   
- Obiektów systemu Windows, które mapy dojścia są następujące:  
+ Windows obiektów, które uchwyt mapy są następujące:  
   
--   Właściwość HWND ([CWnd](../mfc/reference/cwnd-class.md) i `CWnd`-klas pochodnych)  
+-   HWND ([CWnd](../mfc/reference/cwnd-class.md) i `CWnd`-klas pochodnych)  
   
 -   Elementu HDC ([CDC](../mfc/reference/cdc-class.md) i `CDC`-klas pochodnych)  
   
--   HMENU ([cmenu —](../mfc/reference/cmenu-class.md))  
+-   HMENU ([CMenu](../mfc/reference/cmenu-class.md))  
   
 -   Hpen — ([CGdiObject](../mfc/reference/cgdiobject-class.md))  
   
@@ -54,39 +54,39 @@ Ta uwaga opisuje MFC dojścia do obiektów C++ obiekt procedur, które obsługuj
   
 -   HIMAGELIST ([CImageList](../mfc/reference/cimagelist-class.md))  
   
--   GNIAZDA ([CSocket —](../mfc/reference/csocket-class.md))  
+-   GNIAZDA ([CSocket](../mfc/reference/csocket-class.md))  
   
- Podane dojście do dowolnego z tych obiektów, można znaleźć obiektu MFC, który opakowuje dojście przez wywołanie metody statycznej `FromHandle`. Na przykład, dla danego HWND o nazwie *hWnd*, zwraca wskaźnik do następującego `CWnd` który opakowuje *hWnd*:  
+ Podane dojście do jednej z tych obiektów, można znaleźć obiektu MFC, który otacza uchwytu przez wywołanie metody statycznej `FromHandle`. Na przykład, biorąc pod uwagę HWND o nazwie *hWnd*, zwraca wskaźnik do następujący wiersz `CWnd` to opakowuje *hWnd*:  
   
 ```  
 CWnd::FromHandle(hWnd)  
 ```  
   
- Jeśli *hWnd* nie ma określonego obiektu, tymczasowej `CWnd` utworzeniu opakowywać *hWnd*. Dzięki temu można uzyskać prawidłowy obiekt C++ z dowolnego uchwytu.  
+ Jeśli *hWnd* nie ma określonego obiektu, to tymczasowy `CWnd` zostanie utworzony, aby zawijać *hWnd*. Dzięki temu można uzyskać prawidłowego obiektu języka C++ z dowolnego uchwytu.  
   
- Po utworzeniu obiektu można pobrać uchwytu zmiennej publicznego elementu członkowskiego klasy otoki. W przypadku liczby `CWnd`, *m_hWnd* zawiera HWND dla tego obiektu.  
+ Po utworzeniu obiektu, można pobrać uchwytu ze zmiennej publicznej składowej klasy otoki. W przypadku właściwości `CWnd`, *m_hWnd* zawiera HWND dla tego obiektu.  
   
-## <a name="attaching-handles-to-mfc-objects"></a>Dołączanie dojść do obiektów MFC  
- Biorąc pod uwagę nowo utworzony uchwyt-obiektu i dojścia do obiektu systemu Windows, można skojarzyć dwa przez wywołanie metody `Attach` działać jak w poniższym przykładzie:  
+## <a name="attaching-handles-to-mfc-objects"></a>Dołączanie dojścia do obiektów MFC  
+ Biorąc pod uwagę nowo utworzony dojście-obiektu i jego uchwyt do obiektu Windows, należy skojarzyć dwóch przez wywołanie metody `Attach` działa jak w poniższym przykładzie:  
   
 ```  
 CWnd myWnd;  
 myWnd.Attach(hWnd);
 ```  
   
- Dzięki temu podczas kojarzenia stałe mapy wpis *myWnd* i *hWnd*. Wywoływanie `CWnd::FromHandle(hWnd)` teraz zwraca wskaźnik do *myWnd*. Gdy *myWnd* jest usunięte, destruktor automatycznie zniszczy *hWnd* przez wywołanie systemu Windows [DestroyWindow](http://msdn.microsoft.com/library/windows/desktop/ms632682) funkcji. Jeśli jest to niepożądane, *hWnd* musi zostać odłączony od *myWnd* przed *myWnd* zostanie zniszczony (zwykle, podczas opuszczania zakresu, w którym *myWnd*została zdefiniowana). `Detach` Metody robi to.  
+ To sprawia, że wpis w kojarzenie stałe mapy *myWnd* i *hWnd*. Wywoływanie `CWnd::FromHandle(hWnd)` teraz zwraca wskaźnik do *myWnd*. Gdy *myWnd* jest usunięte, destruktor automatycznie zniszcz *hWnd* wywołując Windows [destroywindow —](https://msdn.microsoft.com/library/windows/desktop/ms632682) funkcji. Jeśli jest to niepożądane, *hWnd* musi zostać odłączony od *myWnd* przed *myWnd* zostanie zniszczony (zwykle w przypadku, gdy opuszczania zakresu, w którym *myWnd*została zdefiniowana). `Detach` To realizowane przez metodę.  
   
 ```  
 myWnd.Detach();
 ```  
   
-## <a name="more-about-temporary-objects"></a>Więcej informacji na temat obiekty tymczasowe  
- Obiekty tymczasowe są tworzone przy każdym `FromHandle` podano uchwytu, które jeszcze nie ma obiektu. Te obiekty tymczasowe są odłączone od ich dojścia i usuwane przez `DeleteTempMap` funkcji. Domyślnie [CWinThread::OnIdle](../mfc/reference/cwinthread-class.md#onidle) automatycznie wywołuje `DeleteTempMap` dla każdej klasy, która obsługuje mapy dojście tymczasowe. Oznacza to, że możesz nie przyjęto założenie, że wskaźnik do tymczasowego obiektu będzie obowiązywać poza punkt wyjścia z funkcji których uzyskano kursor.  
+## <a name="more-about-temporary-objects"></a>Więcej informacji na temat obiektów tymczasowych.  
+ Obiekty tymczasowe są tworzone po każdym `FromHandle` otrzymuje uchwyt, który nie ma już obiekt otoki. Takie obiekty tymczasowe są odłączone od ich dojścia i usunięte przez `DeleteTempMap` funkcji. Domyślnie [CWinThread::OnIdle](../mfc/reference/cwinthread-class.md#onidle) automatycznie wywołuje `DeleteTempMap` dla każdej klasy, która obsługuje uchwyt tymczasowego mapy. Oznacza to, że możesz nie zakłada, że wskaźnik do obiektów tymczasowych prawidłowe poza punktem wyjścia z funkcji której uzyskano wskaźnika.  
   
 ## <a name="wrapper-objects-and-multiple-threads"></a>Otoki obiektów i wiele wątków  
- Obiekty zarówno tymczasowe i stałe są obsługiwane na podstawie dla każdego wątku. Oznacza to, że jeden wątek nie może uzyskać dostępu inny wątek C++ otoki obiektów, niezależnie od tego, czy jest tymczasowych lub trwałych.  
+ Obiekty tymczasowe i stałe są przechowywane na zasadzie na wątek. Oznacza to jeden wątek nie może uzyskać dostęp do obiektów otoki C++ innego wątku, niezależnie od tego, czy jest tymczasowy lub stały.  
   
- Aby przekazać te obiekty z jednego wątku do innego, zawsze wysyłać je jako ich native `HANDLE` typu. Przekazywanie obiektu języka C++ z jednego wątku na inny często spowodować nieoczekiwane wyniki.  
+ Aby przekazać te obiekty z jednego wątku do innego, zawsze wysyłać je jako ich native `HANDLE` typu. Przekazywanie obiektu języka C++ z jednego wątku do innego często spowodować nieoczekiwane rezultaty.  
   
 ## <a name="see-also"></a>Zobacz też  
  [Uwagi techniczne według numerów](../mfc/technical-notes-by-number.md)   
