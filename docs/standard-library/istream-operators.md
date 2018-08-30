@@ -12,12 +12,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 60ec526dd8874529b60558f7131c31f0bf4a2d3b
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 1fdad6f34fed49ec851f027cba4c53ea08b48902
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38961116"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43195406"
 ---
 # <a name="ltistreamgt-operators"></a>&lt;IStream&gt; operatorów
 
@@ -90,7 +90,7 @@ basic_istream<Elem, Tr>& operator>>(
 
 wyodrębnia maksymalnie *N* - 1 elementy i przechowuje je w tablicy, zaczynając od _ *Str*. If `Istr`. [szerokość](../standard-library/ios-base-class.md#width) jest większa od zera, *N* jest `Istr`. **szerokość**; w przeciwnym razie jest rozmiar największego tablicę `Elem` mogą być deklarowane. Funkcja zawsze przechowuje wartość `Elem()` po wyodrębnieniu dowolne elementy, które są przechowywane. Wyodrębnianie wcześnie zatrzymuje się na końcu pliku, na znak o wartości **Elem**(0) (który jest nie wyodrębnić), lub w dowolnym elemencie, (która nie jest wyodrębniany), który będzie odrzucany przez [ws](../standard-library/istream-functions.md#ws). Jeśli funkcja wyodrębnia żadnych elementów, wywołuje metodę `Istr`. [setstate](../standard-library/basic-ios-class.md#setstate)(**failbit**). W każdym przypadku wywoływanych przez nią `Istr`. **szerokość**(0) i zwraca *Istr*.
 
-**Uwaga dotycząca zabezpieczeń** ciąg zakończony zerem wyodrębniania ze strumienia wejściowego, nie może przekraczać rozmiaru bufora docelowego *str*. Aby uzyskać więcej informacji, zobacz [unikanie przepełnień bufora](http://msdn.microsoft.com/library/windows/desktop/ms717795).
+**Uwaga dotycząca zabezpieczeń** ciąg zakończony zerem wyodrębniania ze strumienia wejściowego, nie może przekraczać rozmiaru bufora docelowego *str*. Aby uzyskać więcej informacji, zobacz [unikanie przepełnień bufora](/windows/desktop/SecBP/avoiding-buffer-overruns).
 
 Funkcja szablonu:
 
@@ -110,7 +110,7 @@ basic_istream<char, Tr>& operator>>(
     basic_istream<char, Tr>& Istr, signed char* str);
 ```
 
-Zwraca `Istr` >> ( `char` **\***) `str`.
+Zwraca `Istr >> ( char * ) str`.
 
 Funkcja szablonu:
 
@@ -120,7 +120,7 @@ basic_istream<char, Tr>& operator>>(
     basic_istream<char, Tr>& Istr, signed char& Ch);
 ```
 
-Zwraca `Istr` >> ( **char &**) `Ch`.
+Zwraca `Istr >> ( char& ) Ch`.
 
 Funkcja szablonu:
 
@@ -130,7 +130,7 @@ basic_istream<char, Tr>& operator>>(
     basic_istream<char, Tr>& Istr, unsigned char* str);
 ```
 
-Zwraca `Istr` >> ( **char \*** ) `str`.
+Zwraca `Istr >> ( char * ) str`.
 
 Funkcja szablonu:
 
@@ -140,7 +140,7 @@ basic_istream<char, Tr>& operator>>(
     basic_istream<char, Tr>& Istr, unsigned char& Ch);
 ```
 
-Zwraca `Istr` >> ( **char &**) `Ch`.
+Zwraca `Istr >> ( char& ) Ch`.
 
 Funkcja szablonu:
 
@@ -151,7 +151,7 @@ basic_istream<Elem, Tr>& operator>>(
     Type& val);
 ```
 
-Zwraca `Istr` `>>` `val` (i konwertuje `rvalue reference` do `Istr` do `lvalue` w procesie).
+Zwraca `Istr >> val` (i konwertuje odwołania rvalue do `Istr` z wartościowaniem lewostronnym w procesie).
 
 ### <a name="example"></a>Przykład
 

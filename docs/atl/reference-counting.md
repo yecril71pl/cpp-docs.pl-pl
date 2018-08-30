@@ -18,17 +18,17 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8e0ce8b2cc412c576b0eded9662d8e70b34cf2ec
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: 1469bef0ef41c72e2ff5e59017088cd63f0f9c79
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37850816"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43194601"
 ---
 # <a name="reference-counting"></a>Zliczanie odwołań
 COM, sama nie automatycznie próbuje usunąć obiekt z pamięci, jeśli uważa, że obiekt jest już używany. Zamiast tego programisty obiektu, należy usunąć nieużywane obiektu. Programistę Określa, czy obiekt można usunąć zależności od liczby odwołań.  
   
- COM używa `IUnknown` metod [AddRef](http://msdn.microsoft.com/library/windows/desktop/ms691379) i [wersji](http://msdn.microsoft.com/library/windows/desktop/ms682317), aby zarządzać licznikiem odwołań interfejsów na obiekcie. Ogólne zasady wywoływanie tych metod są:  
+ COM używa `IUnknown` metod [AddRef](/windows/desktop/api/unknwn/nf-unknwn-iunknown-addref) i [wersji](/windows/desktop/api/unknwn/nf-unknwn-iunknown-release), aby zarządzać licznikiem odwołań interfejsów na obiekcie. Ogólne zasady wywoływanie tych metod są:  
   
 -   Zawsze, gdy klient odbierze wskaźnika interfejsu `AddRef` musi zostać wywołana w interfejsie.  
   
@@ -43,5 +43,5 @@ COM, sama nie automatycznie próbuje usunąć obiekt z pamięci, jeśli uważa, 
   
 ## <a name="see-also"></a>Zobacz też  
  [Wprowadzenie do modelu COM](../atl/introduction-to-com.md)   
- [Zarządzanie czasów istnienia obiektów za pomocą zliczanie odwołań](http://msdn.microsoft.com/library/windows/desktop/ms687260)
+ [Zarządzanie czasów istnienia obiektów za pomocą zliczanie odwołań](/windows/desktop/com/managing-object-lifetimes-through-reference-counting)
 

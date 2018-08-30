@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8bc6080bf66ad9bb9d436832b1066214f8cdbfb7
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: 7b3db7fbcf190aa2dda05cabd2d1553824fb076e
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42466234"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43194730"
 ---
 # <a name="appearance-atl-control-wizard"></a>Wygląd, Kreator kontrolki ATL
 Tutaj Wstaw "Wyniki wyszukiwania" podsumowania.  
@@ -32,7 +32,7 @@ Tutaj Wstaw "Wyniki wyszukiwania" podsumowania.
 **Wyświetl stan**  
 Ustawia wyglądu formantu w kontenerze.  
   
- -   **Nieprzezroczysty**: ustawia VIEWSTATUS_OPAQUE bit w [stan](http://msdn.microsoft.com/library/windows/desktop/ms687201) wyliczenie i rysuje prostokąt całego kontroli przekazany do [CComControlBase::OnDraw](../../atl/reference/ccomcontrolbase-class.md#ondraw) metody. Ten formant jest widoczny całkowicie nieprzezroczysty, a żaden z kontenera pokazuje poza granice formantu.      
+ -   **Nieprzezroczysty**: ustawia VIEWSTATUS_OPAQUE bit w [stan](/windows/desktop/api/ocidl/ne-ocidl-tagviewstatus) wyliczenie i rysuje prostokąt całego kontroli przekazany do [CComControlBase::OnDraw](../../atl/reference/ccomcontrolbase-class.md#ondraw) metody. Ten formant jest widoczny całkowicie nieprzezroczysty, a żaden z kontenera pokazuje poza granice formantu.      
       
         To ustawienie pozwala kontenera narysuj kontrolkę szybciej. Jeśli ta opcja nie jest zaznaczone, formant może zawierać części przezroczysty.  
       
@@ -82,7 +82,7 @@ Określa dodatkowe opcje wygląd i zachowanie dla formantu.
   
  -   **Niewidoczne w czasie wykonywania**: formant ma być niewidoczna w czasie wykonywania. Niewidoczne formantów służy do wykonywania operacji w tle, takie jak wyzwalanie zdarzeń w określonych interwałach.  
       
- -   **Zachowuje się jak przycisk**: ustawia OLEMISC_ACTSLIKEBUTTON bit w [OLEMISC](http://msdn.microsoft.com/library/windows/desktop/ms678497) wyliczeniu, aby włączyć kontrolę do działania, takie jak przycisk. Jeśli kontener został oznaczony formantu lokacji klienta jako przycisk domyślny, wybranie tej opcji umożliwia kontrolki przycisku do wyświetlenia sama jako przycisk domyślny za pomocą rysowania sam grubszy ramki. Zobacz [CComControlBase::GetAmbientDisplayAsDefault](../../atl/reference/ccomcontrolbase-class.md#getambientdisplayasdefault) Aby uzyskać więcej informacji.  
+ -   **Zachowuje się jak przycisk**: ustawia OLEMISC_ACTSLIKEBUTTON bit w [OLEMISC](/windows/desktop/api/oleidl/ne-oleidl-tagolemisc) wyliczeniu, aby włączyć kontrolę do działania, takie jak przycisk. Jeśli kontener został oznaczony formantu lokacji klienta jako przycisk domyślny, wybranie tej opcji umożliwia kontrolki przycisku do wyświetlenia sama jako przycisk domyślny za pomocą rysowania sam grubszy ramki. Zobacz [CComControlBase::GetAmbientDisplayAsDefault](../../atl/reference/ccomcontrolbase-class.md#getambientdisplayasdefault) Aby uzyskać więcej informacji.  
       
   -   **Zachowuje się jak etykiety**: ustawia OLEMISC_ACTSLIKELABEL bit w wyliczeniu OLEMISC, aby włączyć kontrolę zamiast kontenera natywne etykiety. Kontener Określa, co należy zrobić z tą flagą Jeśli niczego.  
   

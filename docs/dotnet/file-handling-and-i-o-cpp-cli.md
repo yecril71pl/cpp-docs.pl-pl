@@ -35,12 +35,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 515d74b30e63fbc40411ec9cd62b2b1ab6d92591
-ms.sourcegitcommit: b8b1cba85ff423142d73c888be26baa8c33f3cdc
+ms.openlocfilehash: 1d04f918c9c92c2de8ff6b654a8a0d4ee43c2130
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/17/2018
-ms.locfileid: "39093010"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43196028"
 ---
 # <a name="file-handling-and-io-ccli"></a>Obsługa plików i we/wy (C++/CLI)
 Demonstruje różne operacje na plikach za pomocą programu .NET Framework.  
@@ -337,6 +337,6 @@ int main()
 ## <a name="see-also"></a>Zobacz też   
  [Programowanie .NET w języku C++/interfejsie wiersza polecenia (Visual C++)](../dotnet/dotnet-programming-with-cpp-cli-visual-cpp.md)
 
- [Plik i Stream we/wy](http://msdn.microsoft.com/Library/4f4a33a9-66b7-4cd7-a285-4ad3e4276cd2)
+ [Plik i Stream we/wy](https://msdn.microsoft.com/Library/4f4a33a9-66b7-4cd7-a285-4ad3e4276cd2)
 
  [System.IO — przestrzeń nazw](https://msdn.microsoft.com/library/system.io.aspx)

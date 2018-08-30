@@ -42,12 +42,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 87b5b42c72f4ea2756358208f85d9c01f7863dba
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: d3d83c1e86c574f56b08eecdf2c29e7ab20a28b4
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32400567"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43194321"
 ---
 # <a name="fgetchar-fgetwchar"></a>_fgetchar, _fgetwchar
 
@@ -62,13 +62,13 @@ wint_t _fgetwchar( void );
 
 ## <a name="return-value"></a>Wartość zwracana
 
-**_fgetchar —** zwraca znak odczytany jako **int** lub zwróć **EOF** wskazująca błąd lub koniec pliku. **_ *** fgetwchar —** zwraca, jako [wint_t —](../../c-runtime-library/standard-types.md), znaków dwubajtowych, który odpowiada znaków do odczytu lub zwraca **weof —** wskazująca błąd lub koniec pliku. Dla obu tych funkcji, należy użyć **feof —** lub **ferror —** odróżnić błąd warunku końcowego pliku.
+**\_fgetchar —** zwraca znak odczytywany jako **int** lub zwraca `EOF` aby wskazać błąd lub koniec pliku. **\_fgetwchar —** zwraca, jako [wint_t](../../c-runtime-library/standard-types.md), znak dwubajtowy, który odpowiada znakowi odczytu lub zwraca `WEOF` aby wskazać błąd lub koniec pliku. W przypadku obu tych funkcji, użyj **feof** lub **ferror** Aby rozróżnić między błędem a warunkiem końca pliku.
 
 ## <a name="remarks"></a>Uwagi
 
-Te funkcje odczytu pojedynczy znak z **stdin**. Funkcja zwiększa następnie kursor skojarzony plik (jeśli jest zdefiniowana), aby wskazywały na następny znak. Jeśli strumień jest na końcu pliku, jest ustawiony dla tego strumienia wskaźnika końca pliku.
+Te funkcje odczytują pojedynczy znak z **stdin**. Funkcja następnie zwiększa skojarzony wskaźnik pliku (Jeżeli zdefiniowane) aby wskazywała na następny znak. Jeśli strumień jest na końcu pliku, wskaźnik końca pliku dla strumienia jest ustawiony.
 
-**_fgetchar —** jest odpowiednikiem `fgetc( stdin )`. Również jest odpowiednikiem **getchar**, ale zaimplementowany tylko jako funkcję, a nie jako funkcję i makra. **_fgetwchar —** jest wersja znaków dwubajtowych **_fgetchar —**.
+**_fgetchar —** jest odpowiednikiem `fgetc( stdin )`. Jest również równoważne **getchar**, ale realizowane tylko jako funkcja, a nie jako funkcja i makra. **_fgetwchar —** jest wersją znaków dwubajtowych **_fgetchar —**.
 
 Te funkcje nie są zgodne ze standardem ANSI.
 
@@ -85,7 +85,7 @@ Te funkcje nie są zgodne ze standardem ANSI.
 |**_fgetchar**|\<stdio.h>|
 |**_fgetwchar**|\<stdio.h > lub \<wchar.h >|
 
-Konsoli nie jest obsługiwane w aplikacjach systemu Windows platformy Uniwersalnej. Uchwyty Standardowy strumień, które są skojarzone z konsoli programu —**stdin**, **stdout**, i **stderr**— muszą być przekierowywane przed funkcje wykonawcze języka C można używać ich w aplikacji platformy uniwersalnej systemu Windows . Aby uzyskać więcej informacji o zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md).
+Konsola nie jest obsługiwana w aplikacjach platformy uniwersalnej Windows (UWP). Standardowe uchwyty strumienia, które są powiązane z konsolą —**stdin**, **stdout**, i **stderr**— muszą zostać przekierowane zanim funkcje środowiska wykonawczego języka C można ich używać w aplikacjach platformy UWP . Aby uzyskać więcej informacji na temat zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Przykład
 
@@ -127,6 +127,6 @@ Line two.
 
 ## <a name="see-also"></a>Zobacz także
 
-[We/Wy strumienia](../../c-runtime-library/stream-i-o.md)<br/>
+[Stream operacji We/Wy](../../c-runtime-library/stream-i-o.md)<br/>
 [fputc, fputwc](fputc-fputwc.md)<br/>
 [getc, getwc](getc-getwc.md)<br/>

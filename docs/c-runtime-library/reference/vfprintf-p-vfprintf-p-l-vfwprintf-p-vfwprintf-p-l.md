@@ -53,16 +53,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: dd54c27f4208dce317d9c09720cb63b65af4a54b
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 1e4e7776688fa95a81cd76e6db48f38f82bc076d
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32415744"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43195297"
 ---
 # <a name="vfprintfp-vfprintfpl-vfwprintfp-vfwprintfpl"></a>_vfprintf_p, _vfprintf_p_l, _vfwprintf_p, _vfwprintf_p_l
 
-Zapis sformatowane wyniki za pomocą wskaźnika do listy argumentów, z możliwością określić kolejność, że argumenty są używane w ciągu formatu.
+Napisz sformatowane wyniki za pomocą wskaźnika do listy argumentów, za pomocą możliwość określenia kolejność, że argumenty są używane w ciągu formatu.
 
 ## <a name="syntax"></a>Składnia
 
@@ -93,11 +93,11 @@ int _vfwprintf_p_l(
 
 ### <a name="parameters"></a>Parametry
 
-*Strumień*<br/>
+*Stream*<br/>
 Wskaźnik do **pliku** struktury.
 
 *Format*<br/>
-Definicja formatu.
+Specyfikacja formatu.
 
 *argptr*<br/>
 Wskaźnik do listy argumentów.
@@ -105,28 +105,28 @@ Wskaźnik do listy argumentów.
 *Ustawienia regionalne*<br/>
 Ustawienia regionalne do użycia.
 
-Aby uzyskać więcej informacji, zobacz [specyfikacje formatu](../../c-runtime-library/format-specification-syntax-printf-and-wprintf-functions.md).
+Aby uzyskać więcej informacji, zobacz [specyfikacji formatu](../../c-runtime-library/format-specification-syntax-printf-and-wprintf-functions.md).
 
 ## <a name="return-value"></a>Wartość zwracana
 
-**_vfprintf_p —** i **_vfwprintf_p —** zwraca liczbę znaków zapisane, nie włączając znak końcowy null lub wartość ujemną, jeśli wystąpi błąd wyjścia.
+**_vfprintf_p —** i **_vfwprintf_p —** zwracają liczbę znaków napisanych, nie wliczając kończącego znaku null lub wartość ujemną, jeśli wystąpi błąd danych wyjściowych.
 
 ## <a name="remarks"></a>Uwagi
 
-Każda z tych funkcji przyjmuje wskaźnik do listy argumentów, a następnie formatuje i zapisuje określone dane do *strumienia*. Funkcje te różnią się od **_vfprint_s** i **_vfwprint_s** wersji tylko w tym obsługują parametrów pozycyjnych. Aby uzyskać więcej informacji, zobacz [printf_p parametry pozycyjne](../../c-runtime-library/printf-p-positional-parameters.md).
+Każda z tych funkcji pobiera wskaźnik do listy argumentów, a następnie formatuje i zapisuje dostarczone dane do *strumienia*. Funkcje te różnią się od **_vfprint_s** i **_vfwprint_s** wersje tylko dlatego, że obsługują one parametry pozycyjne. Aby uzyskać więcej informacji, zobacz [printf_p parametry pozycyjne](../../c-runtime-library/printf-p-positional-parameters.md).
 
-**_vfwprintf_p —** jest wersja znaków dwubajtowych **_vprintf_p —**; dwie funkcje zachowują się tak samo, jakby strumień jest otwarty w trybie ANSI. **_vprintf_p —** aktualnie nie obsługuje dane wyjściowe do strumienia UNICODE.
+**_vfwprintf_p —** jest wersją znaków dwubajtowych **_vprintf_p —**; dwie funkcje zachowują się identycznie, jeżeli strumień jest otwarty w trybie ANSI. **_vprintf_p —** aktualnie nie obsługuje danych wyjściowych w strumieniu UNICODE.
 
-Wersje tych funkcji z **_l** sufiks są identyczne, z wyjątkiem tego, aby używały parametr ustawień regionalnych przekazano zamiast bieżącego ustawienia regionalne wątku.
+Wersje tych funkcji **_l** sufiksem są identyczne, z tą różnicą, że używają parametru ustawień regionalnych przekazanych zamiast bieżących ustawień regionalnych wątku.
 
 > [!IMPORTANT]
-> Upewnij się, że *format* nie jest ciągiem zdefiniowane przez użytkownika. Aby uzyskać więcej informacji, zobacz [unikanie Overruns buforu](http://msdn.microsoft.com/library/windows/desktop/ms717795).
+> Upewnij się, że *format* nie jest ciągiem zdefiniowanym przez użytkownika. Aby uzyskać więcej informacji, zobacz [unikanie przepełnień bufora](/windows/desktop/SecBP/avoiding-buffer-overruns).
 
-Jeśli dowolny *strumienia* lub *format* jest wskaźnika o wartości null, lub jeśli ciąg formatu zawiera nieprawidłowe znaki formatowania, program obsługi nieprawidłowych parametrów zostanie wywołany, zgodnie z opisem w [parametru Sprawdzanie poprawności](../../c-runtime-library/parameter-validation.md). Zwróć -1, jeśli może kontynuować wykonywania, funkcje i ustaw **errno** do **einval —**.
+Jeśli *strumienia* lub *format* jest wskaźnikiem typu null lub jeżeli ciąg formatu zawiera nieprawidłowe znaki formatowania, procedura obsługi nieprawidłowego parametru zostanie wywołana, zgodnie z opisem w [parametru Sprawdzanie poprawności](../../c-runtime-library/parameter-validation.md). Jeśli wykonanie może być kontynuowane, te funkcje zwracają wartość -1 i ustaw **errno** do **EINVAL**.
 
 ### <a name="generic-text-routine-mappings"></a>Mapowania procedur zwykłego tekstu
 
-|Procedura TCHAR.H|_Unicode — & _MBCS nie zdefiniowany|_MBCS zdefiniowano|_UNICODE zdefiniowano|
+|Procedura TCHAR.H|_UNICODE & _MBCS nie zdefiniowano|_MBCS zdefiniowano|_UNICODE zdefiniowano|
 |---------------------|------------------------------------|--------------------|-----------------------|
 |**_vftprintf_p —**|**_vfprintf_p**|**_vfprintf_p**|**_vfwprintf_p**|
 |**_vftprintf_p_l —**|**_vfprintf_p_l**|**_vfprintf_p_l**|**_vfwprintf_p_l**|
@@ -138,13 +138,13 @@ Jeśli dowolny *strumienia* lub *format* jest wskaźnika o wartości null, lub j
 |**_vfprintf_p —**, **_vfprintf_p_l —**|\<stdio.h > i \<stdarg.h >|\<varargs.h>*|
 |**_vfwprintf_p —**, **_vfwprintf_p_l —**|\<stdio.h > lub \<wchar.h >, a \<stdarg.h >|\<varargs.h>*|
 
-\* Wymagany w przypadku zgodności UNIX V.
+\* Wymagane dla zgodności systemu UNIX V.
 
 Aby uzyskać dodatkowe informacje o zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md).
 
 ## <a name="see-also"></a>Zobacz także
 
-[We/Wy strumienia](../../c-runtime-library/stream-i-o.md)<br/>
+[Stream operacji We/Wy](../../c-runtime-library/stream-i-o.md)<br/>
 [vprintf, funkcje](../../c-runtime-library/vprintf-functions.md)<br/>
 [fprintf, _fprintf_l, fwprintf, _fwprintf_l](fprintf-fprintf-l-fwprintf-fwprintf-l.md)<br/>
 [printf, _printf_l, wprintf, _wprintf_l](printf-printf-l-wprintf-wprintf-l.md)<br/>

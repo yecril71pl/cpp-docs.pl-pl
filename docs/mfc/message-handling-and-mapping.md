@@ -16,25 +16,25 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 906d84d70b3bf2ae2a9da14ce9e5b06ed92d3730
-ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
+ms.openlocfilehash: 11ac9e794aef374012f2b15faa7e93b907f6a15c
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/25/2018
-ms.locfileid: "36931037"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43194544"
 ---
 # <a name="message-handling-and-mapping"></a>Obsługa i mapowanie komunikatów
-Rodziny tego artykułu opisano, jak komunikaty i polecenia są przetwarzane przez MFC framework i jak łączyć się ich funkcje programu obsługi.  
+Rodzina tego artykułu opisano, jak komunikaty i polecenia są przetwarzane przez platformę, MFC i jak łącz je z ich funkcje obsługi.  
   
- W przypadku tradycyjnych programów dla systemu Windows komunikaty systemu Windows są obsługiwane w instrukcji switch dużych w procedurę okna. Zamiast tego używa MFC [mapy komunikatów](../mfc/message-categories.md) mapować wiadomości bezpośrednie do funkcji Członkowskich różne klasy. Mapy wiadomości są bardziej efektywne niż funkcji wirtualnych w tym celu, a także zezwalać komunikatów obsługiwanych przez najbardziej odpowiedniego obiektu C++ — aplikacji, dokumentu, widok i tak dalej. Można mapować pojedynczym komunikacie lub zakres komunikatów, identyfikatory poleceń lub kontrolować identyfikatorów.  
+ W przypadku tradycyjnych programów dla Windows Windows komunikaty są obsługiwane w instrukcji switch dużych procedury okna. Zamiast tego używa MFC [komunikatu mapy](../mfc/message-categories.md) do mapowania bezpośredniej wiadomości funkcje składowych klasy distinct. Mapy komunikatów są bardziej wydajne niż funkcje wirtualne w tym celu i umożliwiają one wiadomości, które mają być obsługiwane przez najbardziej odpowiedniego obiektu języka C++ — aplikacji, dokumentu, widok i tak dalej. Można mapować pojedynczej wiadomości lub zakres komunikatów, identyfikatory poleceń lub kontroli identyfikatorów.  
   
- WM_COMMAND — komunikaty — zwykle generowane przez menu, przycisków paska narzędzi lub akceleratorów — również używać mechanizmu mapy komunikatów. MFC definiuje standard [routingu](../mfc/command-routing.md) polecenia komunikatów między aplikacji, ramka okna, widok i dokumenty aktywne w programie. Można zastąpić to routingu, jeśli potrzebujesz.  
+ Wm_command — komunikaty — zwykle generowane przez menu, przyciski paska narzędzi lub akceleratorów — także użyć mechanizmu mapy komunikatów. MFC zdefiniowano standard [routingu](../mfc/command-routing.md) polecenia komunikatów między aplikacji, ramki okien, widok i dokumenty aktywne w programach. Możesz przesłonić to routingu, jeśli potrzebujesz.  
   
- Mapy komunikatów podać również sposób aktualizowanie obiektów interfejsu użytkownika (np. menu i przycisków paska narzędzi), włączając lub wyłączając je zgodnie z bieżącego kontekstu.  
+ Mapy komunikatów również podać sposób aktualizowania obiektów interfejsu użytkownika (takich jak menu i przycisków paska narzędzi), włączając lub wyłączając je do potrzeb bieżącego kontekstu.  
   
- Aby uzyskać ogólne informacje na temat wiadomości i kolejki wiadomości w systemie Windows, temacie [wiadomości i kolejki wiadomości](http://msdn.microsoft.com/library/windows/desktop/ms632590) w zestawie Windows SDK.  
+ Aby uzyskać ogólne informacje dotyczące wiadomości i kolejki komunikatów w Windows, zobacz [wiadomości i kolejki komunikatów](https://msdn.microsoft.com/library/windows/desktop/ms632590) w zestawie Windows SDK.  
   
-## <a name="what-do-you-want-to-know-more-about"></a>Co chcesz dowiedzieć się więcej o  
+## <a name="what-do-you-want-to-know-more-about"></a>Co chcesz dowiedzieć się więcej na temat  
   
 -   [Komunikaty i polecenia w strukturze](../mfc/messages-and-commands-in-the-framework.md)  
   

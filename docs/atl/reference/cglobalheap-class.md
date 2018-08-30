@@ -21,12 +21,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1f3113cf4176c3f582a210e89e732d5e0d92b62d
-ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
+ms.openlocfilehash: c39a91fb01f8a67c9e6eb2e5189cf1b81ba4bd51
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37882835"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43195215"
 ---
 # <a name="cglobalheap-class"></a>Klasa CGlobalHeap
 Ta klasa implementuje [IAtlMemMgr](../../atl/reference/iatlmemmgr-class.md) przy użyciu funkcji sterty globalnej Win32.  
@@ -55,7 +55,7 @@ class CGlobalHeap : public IAtlMemMgr
  `CGlobalHeap` implementuje funkcje alokacji pamięci za pomocą funkcji sterty globalnej Win32.  
   
 > [!NOTE]
->  Funkcje globalne sterty wolniej niż inne funkcje zarządzania pamięcią i nie są oferowane jako wiele funkcji. W związku z tym, nowe aplikacje powinny używać [sterty funkcji](http://msdn.microsoft.com/library/windows/desktop/aa366711). Są one dostępne w [CWin32Heap](../../atl/reference/cwin32heap-class.md) klasy. Funkcje globalne są nadal używane przez DDE i funkcje Schowka.  
+>  Funkcje globalne sterty wolniej niż inne funkcje zarządzania pamięcią i nie są oferowane jako wiele funkcji. W związku z tym, nowe aplikacje powinny używać [sterty funkcji](/windows/desktop/Memory/heap-functions). Są one dostępne w [CWin32Heap](../../atl/reference/cwin32heap-class.md) klasy. Funkcje globalne są nadal używane przez DDE i funkcje Schowka.  
   
 ## <a name="example"></a>Przykład  
  Zobacz przykład [IAtlMemMgr](../../atl/reference/iatlmemmgr-class.md).  
@@ -85,7 +85,7 @@ virtual __declspec(allocator) void* Allocate(size_t nBytes) throw();
 ### <a name="remarks"></a>Uwagi  
  Wywołaj [CGlobalHeap::Free](#free) lub [CGlobalHeap::Reallocate](#reallocate) zwolnienie pamięci przydzielonej przez tę metodę.  
   
- Implementowany przy użyciu [działanie funkcji GlobalAlloc](http://msdn.microsoft.com/library/windows/desktop/aa366574) z parametrem flagi GMEM_FIXED.  
+ Implementowany przy użyciu [działanie funkcji GlobalAlloc](/windows/desktop/api/winbase/nf-winbase-globalalloc) z parametrem flagi GMEM_FIXED.  
   
 ##  <a name="free"></a>  CGlobalHeap::Free  
  Wywołaj tę metodę w celu zwolnienia bloku pamięci przydzielonej przez tego menedżera pamięci.  
@@ -99,7 +99,7 @@ virtual void Free(void* p) throw();
  Wskaźnik do pamięci uprzednio przydzielonej przez tego menedżera pamięci. Wartość NULL jest prawidłową wartością i nic nie robi.  
   
 ### <a name="remarks"></a>Uwagi  
- Implementowany przy użyciu [GlobalFree](http://msdn.microsoft.com/library/windows/desktop/aa366579).  
+ Implementowany przy użyciu [GlobalFree](/windows/desktop/api/winbase/nf-winbase-globalfree).  
   
 ##  <a name="getsize"></a>  CGlobalHeap::GetSize  
  Wywołaj tę metodę, aby uzyskać przydzielony rozmiar bloku pamięci przydzielonej przez tego menedżera pamięci.  
@@ -116,7 +116,7 @@ virtual size_t GetSize(void* p) throw();
  Zwraca rozmiar bloku ilość przydzielonej pamięci w bajtach.  
   
 ### <a name="remarks"></a>Uwagi  
- Implementowany przy użyciu [Funkcja GlobalSize](http://msdn.microsoft.com/library/windows/desktop/aa366593).  
+ Implementowany przy użyciu [Funkcja GlobalSize](/windows/desktop/api/winbase/nf-winbase-globalsize).  
   
 ##  <a name="reallocate"></a>  CGlobalHeap::Reallocate  
  Wywołaj tę metodę w celu ponownego przydzielenia pamięci przydzielonej przez tego menedżera pamięci.  
@@ -138,7 +138,7 @@ virtual __declspec(allocator) void* Reallocate(void* p, size_t nBytes) throw();
 ### <a name="remarks"></a>Uwagi  
  Wywołaj [CGlobalHeap::Free](#free) zwolnienie pamięci przydzielonej przez tę metodę.  
   
- Implementowany przy użyciu [GlobalReAlloc](http://msdn.microsoft.com/library/windows/desktop/aa366590).  
+ Implementowany przy użyciu [GlobalReAlloc](/windows/desktop/api/winbase/nf-winbase-globalrealloc).  
   
 ## <a name="see-also"></a>Zobacz też  
  [Klasa — Przegląd](../../atl/atl-class-overview.md)   

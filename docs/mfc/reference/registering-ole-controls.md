@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 468eb677a0073e25c9ef33182aea0d321cded352
-ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
+ms.openlocfilehash: 4855ca5c461b7437345150f5d199521c48f0b253
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37335624"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43196556"
 ---
 # <a name="registering-ole-controls"></a>Rejestrowanie formantów OLE
 Formanty OLE, podobnie jak inne obiekty serwera OLE, jest możliwy przez inne aplikacje OLE-aware. Jest to osiągane przez zarejestrowanie biblioteki typów i klasy kontrolki.  
@@ -83,7 +83,7 @@ BOOL AFXAPI AfxOleRegisterControlClass(
   
 - `afxRegFreeThreading` Ustawia model wątkowości w rejestrze, aby ThreadingModel = bezpłatna.  
   
-     Można połączyć dwie flagi `afxRegApartmentThreading` i `afxRegFreeThreading` można ustawić ThreadingModel = jednocześnie. Zobacz [InprocServer32](http://msdn.microsoft.com/library/windows/desktop/ms682390) w zestawie SDK Windows, aby uzyskać więcej informacji na temat rejestracji modelu wątkowości.  
+     Można połączyć dwie flagi `afxRegApartmentThreading` i `afxRegFreeThreading` można ustawić ThreadingModel = jednocześnie. Zobacz [InprocServer32](/windows/desktop/com/inprocserver32) w zestawie SDK Windows, aby uzyskać więcej informacji na temat rejestracji modelu wątkowości.  
   
 > [!NOTE]
 >  W wersjach MFC przed MFC 4.2 **int** *nRegFlags* parametr jest parametrem BOOL *bInsertable*, który dozwolone lub niedozwolone formant, który ma zostać wstawiony z Insert Okno dialogowe obiektów.  
@@ -142,7 +142,7 @@ BOOL AFXAPI AfxOleRegisterControlClass(
  Wartość różną od zera, jeśli klasa sterowania został zarejestrowany; w przeciwnym razie 0.  
   
 ### <a name="remarks"></a>Uwagi  
- Dzięki temu formant, który ma być używany przez kontenerów, które są OLE-control. `AfxOleRegisterControlClass` aktualizuje rejestr przy użyciu nazwy i lokalizacji w systemie kontrolki, a także ustawia model wątków, które są obsługiwane przez kontrolkę w rejestrze. Aby uzyskać więcej informacji, zobacz [techniczne Pamiętaj, że 64](../../mfc/tn064-apartment-model-threading-in-activex-controls.md), "Komórkowy Model wątkowości w OLE kontrolek" i [o procesy i wątki](http://msdn.microsoft.com/library/windows/desktop/ms681917) w zestawie Windows SDK.  
+ Dzięki temu formant, który ma być używany przez kontenerów, które są OLE-control. `AfxOleRegisterControlClass` aktualizuje rejestr przy użyciu nazwy i lokalizacji w systemie kontrolki, a także ustawia model wątków, które są obsługiwane przez kontrolkę w rejestrze. Aby uzyskać więcej informacji, zobacz [techniczne Pamiętaj, że 64](../../mfc/tn064-apartment-model-threading-in-activex-controls.md), "Komórkowy Model wątkowości w OLE kontrolek" i [o procesy i wątki](/windows/desktop/ProcThread/about-processes-and-threads) w zestawie Windows SDK.  
   
 ### <a name="example"></a>Przykład  
  [!code-cpp[NVC_MFCAxCtl#11](../../mfc/reference/codesnippet/cpp/registering-ole-controls_1.cpp)]  
@@ -189,7 +189,7 @@ BOOL AFXAPI AfxOleRegisterPropertyPageClass(
  Wartość różną od zera, jeśli klasa sterowania został zarejestrowany; w przeciwnym razie 0.  
   
 ### <a name="remarks"></a>Uwagi  
- Pozwala to na stronie właściwości, który będzie używany przez kontenerów, które są OLE — formant. `AfxOleRegisterPropertyPageClass` aktualizuje rejestr przy użyciu nazwy strony właściwości i jego lokalizacji w systemie, a także ustawia model wątków, które są obsługiwane przez kontrolkę w rejestrze. Aby uzyskać więcej informacji, zobacz [techniczne Pamiętaj, że 64](../../mfc/tn064-apartment-model-threading-in-activex-controls.md), "Komórkowy Model wątkowości w OLE kontrolek" i [o procesy i wątki](http://msdn.microsoft.com/library/windows/desktop/ms681917) w zestawie Windows SDK.  
+ Pozwala to na stronie właściwości, który będzie używany przez kontenerów, które są OLE — formant. `AfxOleRegisterPropertyPageClass` aktualizuje rejestr przy użyciu nazwy strony właściwości i jego lokalizacji w systemie, a także ustawia model wątków, które są obsługiwane przez kontrolkę w rejestrze. Aby uzyskać więcej informacji, zobacz [techniczne Pamiętaj, że 64](../../mfc/tn064-apartment-model-threading-in-activex-controls.md), "Komórkowy Model wątkowości w OLE kontrolek" i [o procesy i wątki](/windows/desktop/ProcThread/about-processes-and-threads) w zestawie Windows SDK.  
   
 ### <a name="requirements"></a>Wymagania  
   **Nagłówek** afxctl.h  

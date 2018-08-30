@@ -39,16 +39,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bdb9a1f13fcb387aeddf18cc0f734101463bd3eb
-ms.sourcegitcommit: 6e3cf8df676d59119ce88bf5321d063cf479108c
+ms.openlocfilehash: c5bdc05f903c1313d4844be8d5fc4fa619505670
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/22/2018
-ms.locfileid: "34450911"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43195122"
 ---
 # <a name="wctombs-wctombsl"></a>wctomb_s, _wctomb_s_l
 
-Konwertuje odpowiednich znaków wielobajtowych znaków dwubajtowych. Wersja [wctomb —, _wctomb_l —](wctomb-wctomb-l.md) ulepszeń zabezpieczeń zgodnie z opisem w [funkcje zabezpieczeń w CRT](../../c-runtime-library/security-features-in-the-crt.md).
+Konwertuje znak dwubajtowy do odpowiedniego znaku wielobajtowego. Wersja [wctomb —, _wctomb_l —](wctomb-wctomb-l.md) ze wzmocnieniem zabezpieczeń, zgodnie z opisem w [funkcje zabezpieczeń w CRT](../../c-runtime-library/security-features-in-the-crt.md).
 
 ## <a name="syntax"></a>Składnia
 
@@ -80,32 +80,32 @@ Adres znaków wielobajtowych.
 Rozmiar buforu *mbchar*.
 
 *WChar*<br/>
-Znaków dwubajtowych.
+Znakiem dwubajtowym.
 
 *Ustawienia regionalne*<br/>
 Ustawienia regionalne do użycia.
 
 ## <a name="return-value"></a>Wartość zwracana
 
-Zero, jeśli to się powiedzie, kod błędu w przypadku awarii.
+Zero, jeśli to się powiedzie, kod błędu.
 
 Warunki błędów
 
 |*mbchar*|*sizeInBytes*|Wartość zwracana|*pRetValue*|
 |--------------|-------------------|------------------|-----------------|
-|**NULL**|>0|**EINVAL —**|Nie zmodyfikowano|
-|wszystkie|>**INT_MAX —**|**EINVAL —**|Nie zmodyfikowano|
-|wszystkie|za mały|**EINVAL —**|Nie zmodyfikowano|
+|**NULL**|>0|**EINVAL**|Nie zmodyfikowano|
+|Wszystkie|>**INT_MAX**|**EINVAL**|Nie zmodyfikowano|
+|Wszystkie|za mały|**EINVAL**|Nie zmodyfikowano|
 
-Jeśli dowolne z powyższych warunków błąd wystąpi, program obsługi nieprawidłowych parametrów zostanie wywołany, zgodnie z opisem w [sprawdzanie poprawności parametru](../../c-runtime-library/parameter-validation.md). Jeśli jest dozwolone wykonywanie, aby kontynuować, **wctomb —** zwraca **einval —** i ustawia **errno** do **einval —**.
+Jeśli wystąpi dowolne z powyższych warunków błędu, procedura obsługi nieprawidłowego parametru zostanie wywołana, zgodnie z opisem w [Parameter Validation](../../c-runtime-library/parameter-validation.md). Jeśli wykonanie może być kontynuowane, **wctomb —** zwraca **EINVAL** i ustawia **errno** do **EINVAL**.
 
 ## <a name="remarks"></a>Uwagi
 
-**Wctomb_s —** funkcji konwertuje jego *wchar* argument odpowiednich znaków wielobajtowych i zapisuje wynik w *mbchar*. Funkcję można wywołać z dowolnego punktu w programach.
+**Wctomb_s —** funkcji konwertuje jej *wchar* argument do odpowiedniego znaku wielobajtowego i zapisuje wynik w *mbchar*. Funkcję można wywołać z dowolnego punktu w dowolnym programie.
 
-Jeśli **wctomb_s —** konwertuje znaków dwubajtowych do znaków wielobajtowych, umieszcza liczba bajtów (który nigdy nie jest większa niż **mb_cur_max —**) w znaków dwubajtowych w całkowitą wskazywana przez *pRetValue*. Jeśli *wchar* jest znakiem pustym znaków dwubajtowych (L '\0'), **wctomb_s —** wypełnia *pRetValue* z 1. Jeśli wskaźnika docelowej *mbchar* jest **NULL**, **wctomb_s —** umieszcza 0 *pRetValue*. Jeśli konwersja nie jest możliwe w bieżących ustawień regionalnych, **wctomb_s —** umieszcza -1 *pRetValue*.
+Jeśli **wctomb_s —** konwertuje znak dwubajtowy znak wielobajtowy, umieszcza je liczba bajtów (która nigdy nie jest większa niż **MB_CUR_MAX**) w szerokich znaków do liczby całkowitej, wskazywana przez *pRetValue*. Jeśli *wchar* jest znakiem null szerokich znaków (L '\0'), **wctomb_s —** wypełnia *pRetValue* z 1. Jeśli wskaźnik docelowej *mbchar* jest **NULL**, **wctomb_s —** umieszcza 0 w *pRetValue*. Jeśli konwersja nie jest możliwe przy bieżących ustawieniach regionalnych **wctomb_s —** umieszcza -1 w *pRetValue*.
 
-**wctomb_s —** używa bieżące ustawienia regionalne dla informacji zależnych od ustawień regionalnych. **_wctomb_s_l —** jest identyczny z tą różnicą, że używa ustawień regionalnych przekazano zamiast tego. Aby uzyskać więcej informacji, zobacz [ustawień regionalnych](../../c-runtime-library/locale.md).
+**wctomb_s —** używa bieżących ustawień regionalnych dla informacje zależne od ustawień regionalnych; **_wctomb_s_l —** jest identyczna, z tą różnicą, że używa ustawień regionalnych przekazanych w zamian. Aby uzyskać więcej informacji, zobacz [ustawień regionalnych](../../c-runtime-library/locale.md).
 
 ## <a name="requirements"></a>Wymagania
 
@@ -152,4 +152,4 @@ Convert a wide character:
 [mbstowcs, _mbstowcs_l](mbstowcs-mbstowcs-l.md)<br/>
 [mbtowc, _mbtowc_l](mbtowc-mbtowc-l.md)<br/>
 [wcstombs, _wcstombs_l](wcstombs-wcstombs-l.md)<br/>
-[WideCharToMultiByte](http://msdn.microsoft.com/library/windows/desktop/dd374130)<br/>
+[WideCharToMultiByte](/windows/desktop/api/stringapiset/nf-stringapiset-widechartomultibyte)<br/>

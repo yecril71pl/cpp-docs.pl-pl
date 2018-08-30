@@ -19,12 +19,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2eaa1a0589cb001658b18144e06956eebd302287
-ms.sourcegitcommit: f7703076b850c717c33d72fb0755fbb2215c5ddc
+ms.openlocfilehash: 6a0e57931b7f2af3f6232f140fd38155cfa5b2f8
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/28/2018
-ms.locfileid: "43131857"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43195238"
 ---
 # <a name="c-run-time-library-functions-for-thread-control"></a>Funkcje biblioteki czasu wykonywania języka C do sterowania wątkami
 Wszystkie programy Win32 ma co najmniej jeden wątek. Jednym z wątków można utworzyć dodatkowe wątki. Wątek można szybko wykonać pracę, a następnie Zakończ działanie lub mogą pozostać aktywne przez cały okres istnienia programu.  
@@ -40,7 +40,7 @@ Biblioteki wykonawczej LIBCMT i MSVCRT C zapewniają następujące funkcje do tw
  
 `_beginthread` i `_beginthreadex` functions w celu utworzenia nowego wątku. Wątek udostępni segmenty kodu i danych procesu inne wątki w procesie, ale ma swoje własne wartości rejestru unikatowych obszar stosu i bieżący adres instrukcji. System daje czas procesora CPU do każdego wątku, tak, aby wszystkie wątki w procesie można wykonywać jednocześnie.  
   
-`_beginthread` i `_beginthreadex` są podobne do [CreateThread](http://msdn.microsoft.com/library/windows/desktop/ms682453) funkcji API Win32, ale ma te różnice:  
+`_beginthread` i `_beginthreadex` są podobne do [CreateThread](/windows/desktop/api/processthreadsapi/nf-processthreadsapi-createthread) funkcji API Win32, ale ma te różnice:  
   
 - Inicjowania pewne zmienne biblioteki wykonawczej C. Jest to ważne, tylko wtedy, gdy używasz biblioteki wykonawczej języka C w wątki.  
   

@@ -1,5 +1,5 @@
 ---
-title: Różnice w programowaniu Windows Forms MFC | Dokumentacja firmy Microsoft
+title: Różnice w programie Windows Forms / MFC programowaniu | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,54 +16,54 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 9ad9e47ba2bb3d9a5e5b21620a4bf4b50177d63b
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 48a337ab82045543035c2612c707d8c47186ed2d
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33172674"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43195455"
 ---
 # <a name="windows-formsmfc-programming-differences"></a>Różnice w programowaniu Windows Forms/MFC
-Tematy w [za pomocą formantu użytkownika formularza systemu Windows w MFC](../dotnet/using-a-windows-form-user-control-in-mfc.md) opisano Obsługa MFC dla formularzy systemu Windows. Jeśli nie masz doświadczenia z .NET Framework lub programowania MFC, ten temat zawiera informacje dotyczące programowania różnice między nimi.  
+Tematy w [za pomocą kontrolki użytkownika formularza Windows w MFC](../dotnet/using-a-windows-form-user-control-in-mfc.md) opisują Obsługa MFC dla formularzy Windows Forms. Jeśli nie jesteś zaznajomiony z .NET Framework lub programowania MFC, ten temat zawiera informacje dotyczące programowania różnice między nimi.  
   
- Formularze systemu Windows jest przy tworzeniu aplikacji Microsoft Windows w programie .NET Framework. Ta struktura zawiera zestaw nowoczesny zorientowany obiektowo, extensible klas, które umożliwiają tworzenie zaawansowanych aplikacji opartych na systemie Windows. W przypadku formularzy systemu Windows jest możliwe do utworzenia aplikacji wzbogaconego klienta, który można uzyskać dostępu do różnych źródeł danych i wyświetlania danych i edytowanie danych urządzeń za pomocą formantów formularzy systemu Windows.  
+ Windows Forms służy do tworzenia aplikacji Windows firmy Microsoft dla programu .NET Framework. Ta struktura zawiera nowoczesnych, zorientowany obiektowo i rozszerzalny zestaw klas, które umożliwiają tworzenie rozbudowanych aplikacji z systemem Windows. Za pomocą interfejsu Windows Forms jesteś można tworzyć rozbudowane aplikacje klienckie mogą dostęp do wielu różnych źródeł danych i wyświetlania danych i edytowanie danych z urządzeń, za pomocą kontrolek Windows Forms.  
   
- Jednak jeśli użytkownik jest przyzwyczajony do MFC, możesz mogą być wykorzystane do tworzenia niektórych typów aplikacji, które nie są jeszcze jawnie obsługiwane w formularzach systemu Windows. Aplikacji formularzy systemu Windows są równoważne aplikacji okna dialogowego MFC. Jednak nie zapewniają infrastrukturę do bezpośrednio obsługi różnych typów aplikacji MFC, takich jak kontener serwera dokumentu OLE, dokumenty ActiveX, obsługa dokument/widok dla interfejsu pojedynczego dokumentu (SDI) interfejsu wielu dokumentów (MDI), a wiele interfejs najwyższego poziomu (MTI). Można napisać logiki do tworzenia tych aplikacji.  
+ Jednak jeśli użytkownik jest przyzwyczajony do MFC, użytkownik może służyć do tworzenia niektórych typów aplikacji, które nie są jeszcze jawnie obsługiwane w formularzach Windows Forms. Aplikacje Windows Forms są równoważne aplikacji okna dialogowego MFC. Jednak nie zapewniają infrastrukturę do bezpośrednio obsługi innych typów aplikacji MFC, takich jak kontener serwera dokumentów OLE, dokumenty ActiveX, obsługa dokument/widok interfejsu pojedynczego dokumentu (SDI) interfejsu wielu dokumentów (MDI), a wiele interfejs najwyższego poziomu (MTI). Można napisać własną logiką do tworzenia tych aplikacji.  
   
- Aby uzyskać więcej informacji o aplikacji formularzy systemu Windows, zobacz [wprowadzenie do formularzy systemu Windows](/dotnet/framework/winforms/windows-forms-overview).  
+ Aby uzyskać więcej informacji o aplikacjach Windows Forms, zobacz [wprowadzenie do formularzy Windows Forms](/dotnet/framework/winforms/windows-forms-overview).  
   
- Dla przykładowej aplikacji, która zawiera formularze systemu Windows używana z MFC, zobacz [MFC i integracja z formularzy systemu Windows](http://www.microsoft.com/downloads/details.aspx?FamilyID=987021bc-e575-4fe3-baa9-15aa50b0f599&displaylang=en).  
+ Dla przykładowej aplikacji, który pokazuje formularze Windows używane z biblioteką MFC, zobacz [MFC i integracji formularzy Windows](http://www.microsoft.com/downloads/details.aspx?FamilyID=987021bc-e575-4fe3-baa9-15aa50b0f599&displaylang=en).  
   
- Następujące widoku MFC lub dokument i polecenia funkcje routingu nie mają swoich odpowiedników w formularzach systemu Windows:  
+ Następujące widoku MFC lub dokumentu i funkcji routing poleceń ma odpowiedników w formularzach Windows:  
   
 -   Integracja powłoki  
   
-     MFC obsługuje dane dynamiczne exchange (DDE) polecenia i argumentów wiersza polecenia, których powłoki używa kliknij prawym przyciskiem myszy dokument i wybierz zleceń, takich jak otwieranie, edytować lub drukować. Formularze systemu Windows ma integracja nie powłoki i nie odpowiada na polecenia powłoki.  
+     MFC obsługuje dynamiczne dane programu exchange (DDE) polecenia i argumentów wiersza polecenia, używanych przez powłokę, kliknij prawym przyciskiem myszy dokument i wybierz takie czasowniki jako Otwórz, edytować lub drukować. Formularze Windows ma integracja nie powłoki i nie odpowiada na polecenia powłoki.  
   
 -   Szablony dokumentów  
   
-     W MFC szablonów dokumentów skojarzyć widoku, który znajduje się w oknie ramowym (w trybie MDI, SDI lub MTI), z otwartego dokumentu. Formularze systemu Windows nie ma odpowiednika w szablonach dokumentu.  
+     W MFC szablonów dokumentów skojarzyć widok, w którym znajduje się w oknie ramowym (w trybie MDI, SDI lub MTI), z dokumentu, które zostało otwarte. Formularze Windows nie ma odpowiedników szablonów dokumentów.  
   
 -   Dokumenty  
   
-     MFC rejestruje typy plików dokumentów i procesów typu dokumentu, dokument jest otwierany z poziomu powłoki. Formularze systemu Windows ma Brak obsługi dokumentów.  
+     MFC, rejestruje typy plików dokumentów i procesów typu dokumentu, dokument jest otwierany z poziomu powłoki. Formularze Windows ma nie obsługuje dokumentów.  
   
 -   Stany dokumentu  
   
-     MFC zachowuje zmiany stanów dla dokumentu. W związku z tym podczas Zamknij aplikację, zamknij ostatni widok, który zawiera aplikację lub wyjść z systemu Windows MFC wyświetli monit o zapisanie dokumentu. Formularze systemu Windows ma równoważne nie są obsługiwane.  
+     MFC obsługuje zanieczyszczone stanów dla dokumentu. W związku z tym Zamknij aplikację, zamknij ostatni widok, który zawiera aplikację lub zakończenia z Windows MFC wyświetli monit o zapisanie dokumentu. Windows Forms zawiera równoważne obsługi.  
   
 -   Polecenia  
   
-     MFC korzysta z koncepcji poleceń. Pasek menu, paska narzędzi i menu kontekstowego wszystkie można wywołać tego samego polecenia, na przykład, wycinanie i kopiowanie. W formularzach systemu Windows polecenia są ściśle powiązane zdarzenia z określonego elementu interfejsu użytkownika (na przykład element menu); w związku z tym należy jawnie podpinanie zdarzeń polecenia. Można również obsługa wielu zdarzeń z jednym programem obsługi w formularzach systemu Windows. Aby uzyskać więcej informacji, zobacz [łączenie wielu zdarzeń pojedynczego obsługi zdarzeń w formularzach systemu Windows](/dotnet/framework/winforms/how-to-connect-multiple-events-to-a-single-event-handler-in-windows-forms).  
+     MFC korzysta z koncepcji poleceń. Pasek menu, pasek narzędzi i menu kontekstowego wszystkie można wywołać tego samego polecenia, na przykład wycinanie i kopiowanie. W formularzach Windows Forms polecenia są ściśle powiązane zdarzenia z elementem interfejsu użytkownika (na przykład element menu); w związku z tym należy jawnie dołączyć wszystkie zdarzenia polecenia. Może również obsługiwać wielu zdarzeń z jednym programem obsługi w formularzach Windows Forms. Aby uzyskać więcej informacji, zobacz [łączenie wielu zdarzeń do jednego programu obsługi zdarzeń w formularzach Windows Forms](/dotnet/framework/winforms/how-to-connect-multiple-events-to-a-single-event-handler-in-windows-forms).  
   
 -   Routing poleceń  
   
-     Routing poleceń MFC umożliwia aktywnego widoku lub dokument do przetwarzania poleceń. Ponieważ tego samego polecenia często ma inną funkcję dla różnych widoków (na przykład kopii zachowuje się inaczej w widoku edycji tekstu niż w edytorze grafiki), polecenia muszą być obsługiwani przez aktywnego widoku. Ponieważ formularzy systemu Windows menu i pasków narzędzi nie nie związanego z używaniem opis widoku aktywnego, nie może mieć inny program obsługi dla każdego typu widoku dla Twojego **MenuItem.Click** zdarzenia bez pisania dodatkowy kod wewnętrzny.  
+     Routing poleceń MFC umożliwia bieżącym widokiem lub dokumentu do przetwarzania poleceń. Ponieważ to samo polecenie często ma różne znaczenie w różnych widokach (na przykład kopiowania zachowuje się inaczej w widoku do edycji tekstu niż w edytorze grafiki), polecenia, które muszą być obsługiwani przez widok aktywny. Ponieważ Windows Forms, menu i paski narzędzi wiedzę na temat nie związane z bieżącym widokiem, nie może mieć różne procedury obsługi dla każdego typu widoku dla Twojego **MenuItem.Click** zdarzeń bez tworzenia dodatkowego kodu wewnętrznego.  
   
 -   Polecenie mechanizmu aktualizacji  
   
-     MFC zawiera polecenie mechanizm aktualizacji. W związku z tym aktywnego widoku lub dokument jest odpowiedzialny za stan elementy interfejsu użytkownika (na przykład włączenie lub wyłączenie przycisku menu element lub narzędzia i sprawdzane stanów). Formularze systemu Windows nie ma odpowiednika mechanizmu aktualizacji polecenia.  
+     MFC posiada polecenia mechanizmu aktualizacji. W związku z tym widok aktywny lub dokument jest odpowiedzialny za stan elementów interfejsu użytkownika (na przykład, włączanie lub wyłączanie przycisku lub narzędzia elementu menu i sprawdzane stanów). Formularze Windows nie ma odpowiednika polecenia mechanizmu aktualizacji.  
   
 ## <a name="see-also"></a>Zobacz też  
- [Używanie formantu użytkownika formularza systemu Windows w MFC](../dotnet/using-a-windows-form-user-control-in-mfc.md)   
- [Wskazówki dotyczące formularzy systemu Windows](http://msdn.microsoft.com/en-us/fd44d13d-4733-416f-aefc-32592e59e5d9)
+ [Używanie kontrolki użytkownika formularza Windows w MFC](../dotnet/using-a-windows-form-user-control-in-mfc.md)   
+ [Windows Forms — wskazówki](https://msdn.microsoft.com/fd44d13d-4733-416f-aefc-32592e59e5d9)

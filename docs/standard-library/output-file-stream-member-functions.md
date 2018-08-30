@@ -14,12 +14,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0b79700277486c43035bd7d448fc942f785f4cc8
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: ab1d229f2c1933025993aa1bc3a3a8b91b41a2cc
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38959942"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43195818"
 ---
 # <a name="output-file-stream-member-functions"></a>Funkcje elementów członkowskich strumienia pliku danych wyjściowych
 
@@ -96,7 +96,7 @@ int main( )
 }
 ```
 
-`write` — Funkcja nie zatrzymuje się po osiągnięciu znak null, więc są zapisywane w strukturze klas ukończone. Funkcja przyjmuje dwa argumenty: **char** wskaźnik i liczba znaków do zapisania. Należy pamiętać, wymagane Rzutowanie na **char\***  przed adres obiektu, struktury.
+`write` — Funkcja nie zatrzymuje się po osiągnięciu znak null, więc są zapisywane w strukturze klas ukończone. Funkcja przyjmuje dwa argumenty: **char** wskaźnik i liczba znaków do zapisania. Należy pamiętać, wymagane Rzutowanie na **char** <strong>\*</strong> przed adres obiektu, struktury.
 
 ## <a name="the-seekp-and-tellp-functions"></a>Seekp — i tellp — funkcje
 
@@ -114,12 +114,12 @@ Aby sprawdzić błędy podczas zapisywania do strumienia za pomocą tych funkcji
 
 |Funkcja|Wartość zwracana|
 |--------------|------------------|
-|[bad](http://msdn.microsoft.com/Library/4038d331-e9c9-48b0-bf49-c6505744469c)|Zwraca **true** przypadku wystąpił nieodwracalny błąd.|
-|[Niepowodzenie](http://msdn.microsoft.com/Library/619f1b36-1e72-4551-8b48-888ae4e370d2)|Zwraca **true** przypadku wystąpił nieodwracalny błąd lub warunek "Oczekiwano", takie jak błąd konwersji, lub jeśli plik nie zostanie znaleziony. Przetwarzanie często wznowienie jest możliwe po wywołaniu `clear` z argumentem zero.|
-|[dobre](http://msdn.microsoft.com/Library/77f0aa17-2ae1-48ae-8040-592d301e3972)|Zwraca **true** Jeśli brak jest nie błędu (nieodwracalny lub w inny sposób), a nie jest ustawiona flaga końca pliku.|
-|[eof](http://msdn.microsoft.com/Library/3087f631-1268-49cd-86cf-ff4108862329)|Zwraca **true** pod warunkiem końca pliku.|
-|[Usuń zaznaczenie](http://msdn.microsoft.com/Library/dc172694-1267-45f8-8f5c-e822e16fc271)|Ustawia stan błędu wewnętrznego. Jeśli wywołana z argumentami domyślnymi, czyści wszystkie bity błędu.|
-|[rdstate](http://msdn.microsoft.com/Library/e235e4e2-7e95-4777-a160-3938d263dd9c)|Zwraca bieżący stan błędu.|
+|[bad](basic-ios-class.md#bad)|Zwraca **true** przypadku wystąpił nieodwracalny błąd.|
+|[Niepowodzenie](basic-ios-class.md#fail)|Zwraca **true** przypadku wystąpił nieodwracalny błąd lub warunek "Oczekiwano", takie jak błąd konwersji, lub jeśli plik nie zostanie znaleziony. Przetwarzanie często wznowienie jest możliwe po wywołaniu `clear` z argumentem zero.|
+|[dobre](basic-ios-class.md#good)|Zwraca **true** Jeśli brak jest nie błędu (nieodwracalny lub w inny sposób), a nie jest ustawiona flaga końca pliku.|
+|[eof](basic-ios-class.md#eof)|Zwraca **true** pod warunkiem końca pliku.|
+|[Usuń zaznaczenie](basic-ios-class.md#clear)|Ustawia stan błędu wewnętrznego. Jeśli wywołana z argumentami domyślnymi, czyści wszystkie bity błędu.|
+|[rdstate —] (basic-ios-class.md #rdstate|Zwraca bieżący stan błędu.|
 
 **!** operator jest przeciążony przeprowadzić taką samą funkcję jak `fail` funkcji. Ten sposób wyrażenie:
 

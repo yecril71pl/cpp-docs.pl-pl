@@ -1,7 +1,7 @@
 ---
 title: Błąd PRJ0026 kompilacji projektu | Dokumentacja firmy Microsoft
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 08/27/2018
 ms.technology:
 - cpp-diagnostics
 ms.topic: error-reference
@@ -16,18 +16,19 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 28f74b3c12520e16dad8306b16833544c34f925b
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 2402ee3f8e099a58c236ad7055a1a1487773dd9f
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33318444"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43195053"
 ---
 # <a name="project-build-error-prj0026"></a>Błąd PRJ0026 kompilacji projektu
-Plik odpowiedzi 'Plik' zawiera znaki unikodowe, które nie mogą być przekonwertowana na stronę kodową ANSI użytkownika.  
-  
- ***Zawartość pliku UNICODE***  
-  
- System projektu znaleziono zawartość Unicode w pliku odpowiedzi, którego nie można przetłumaczyć prawidłowo na stronę kodową ANSI bieżącego użytkownika.  
-  
- Rozwiązanie dotyczące tego błędu jest zawartość pliku odpowiedzi, użyj ANSI lub aby zainstalować stronę kodową na komputerze i ustawić go jako domyślny system aktualizowanie.
+
+> Plik odpowiedzi "*pliku*' zawiera znaki unikodowe, które nie mogą być przekonwertowana na stronę kodową ANSI użytkownika.
+>
+> *UNICODE zawartość pliku*
+
+System projektu znaleźć zawartość Unicode w pliku odpowiedzi, który nie można przetłumaczyć prawidłowo na bieżącą stronę kodową ANSI użytkownika.
+
+To rozwiązanie dotyczące tego błędu można zaktualizować zawartości pliku odpowiedzi, aby użyć ANSI lub Zainstaluj stronę kodową na swoim komputerze i jest ustawiony jako domyślny system.

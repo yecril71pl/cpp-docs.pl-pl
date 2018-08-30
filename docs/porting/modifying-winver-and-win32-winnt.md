@@ -15,12 +15,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c3b41404c3f003d8f4d87ca98888f004c08c9721
-ms.sourcegitcommit: e9ce38decc9f986edab5543de3464b11ebccb123
+ms.openlocfilehash: 6593168e87f8a0dde1dd996aeadf2d225adbbe72
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/13/2018
-ms.locfileid: "42465881"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43194182"
 ---
 # <a name="modifying-winver-and-win32winnt"></a>Modyfikowanie symboli WINVER i _WIN32_WINNT
 
@@ -63,7 +63,7 @@ Jeśli nie widzisz wszystkich tych wersjach systemu Windows wymienionych w kopi�
   
 Można również zdefiniować to makro za pomocą `/D` — opcja kompilatora. Aby uzyskać więcej informacji, zobacz [/D (definicje preprocesora)](../build/reference/d-preprocessor-definitions.md).  
   
-Aby uzyskać więcej informacji na temat znaczenia tych makr, zobacz [przy użyciu nagłówków Windows](https://msdn.microsoft.com/library/windows/desktop/aa383745).  
+Aby uzyskać więcej informacji na temat znaczenia tych makr, zobacz [przy użyciu nagłówków Windows](/windows/desktop/WinProg/using-the-windows-headers).  
   
 ## <a name="see-also"></a>Zobacz też  
 

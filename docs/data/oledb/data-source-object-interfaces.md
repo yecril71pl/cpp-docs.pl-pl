@@ -20,29 +20,29 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 1c8aaed0a9f50e20dba5938b9b37425f4caa2bb1
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 25fca5e7e51789aceef8fb92cf48cc238a8e26fa
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33101880"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43196000"
 ---
 # <a name="data-source-object-interfaces"></a>Interfejsy obiektu źródła danych
-W poniższej tabeli przedstawiono interfejsów obowiązkowe i opcjonalne zdefiniowanych przez OLE DB dla obiekt źródła danych.  
+W poniższej tabeli przedstawiono interfejsów obowiązkowych i opcjonalnych, zdefiniowane przez OLE DB dla obiektu źródła danych.  
   
 |Interface|Wymagany?|Implementowany przez Szablony OLE DB?|  
 |---------------|---------------|--------------------------------------|  
 |`IDBCreateSession`|Obowiązkowy|Tak|  
 |`IDBInitialize`|Obowiązkowy|Tak|  
 |`IDBProperties`|Obowiązkowy|Tak|  
-|[IPersist](http://msdn.microsoft.com/library/windows/desktop/ms688695)|Obowiązkowy|Tak|  
-|[IConnectionPointContainer](http://msdn.microsoft.com/library/windows/desktop/ms683857)|Optional|Nie|  
+|[IPersist](/windows/desktop/api/objidl/nn-objidl-ipersist)|Obowiązkowy|Tak|  
+|[IConnectionPointContainer](/windows/desktop/api/ocidl/nn-ocidl-iconnectionpointcontainer)|Optional|Nie|  
 |`IDBDataSourceAdmin`|Optional|Nie|  
 |`IDBInfo`|Optional|Nie|  
-|[IPersistFile](http://msdn.microsoft.com/library/windows/desktop/ms687223)|Optional|Nie|  
+|[IPersistFile](/windows/desktop/api/objidl/nn-objidl-ipersistfile)|Optional|Nie|  
 |`ISupportErrorInfo`|Optional|Nie|  
   
- Źródło danych implementuje obiektu `IDBProperties`, `IDBInitialize`, i `IDBCreateSession` interfejsy przez dziedziczenie. Można wybrać do obsługi dodatkowych funkcji przy dziedziczeniu ani nie dziedziczy z jednej z tych klas implementacji. Jeśli chcesz obsługiwać `IDBDataSourceAdmin` interfejsu, musi dziedziczyć z `IDBDataSourceAdminImpl` klasy.  
+ Źródła danych, obiekt implementuje `IDBProperties`, `IDBInitialize`, i `IDBCreateSession` interfejsów poprzez dziedziczenie. Można obsługiwać dodatkowe funkcje, dziedziczenie lub nie dziedziczy z jednej z tych klasach implementacji. Jeśli chcesz obsługiwać `IDBDataSourceAdmin` interfejs musi dziedziczyć z `IDBDataSourceAdminImpl` klasy.  
   
 ## <a name="see-also"></a>Zobacz też  
  [Architektura szablonu dostawcy OLE DB](../../data/oledb/ole-db-provider-template-architecture.md)

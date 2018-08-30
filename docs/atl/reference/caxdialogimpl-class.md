@@ -27,12 +27,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: dd019112e846875bfa8e27faac5088fbcf1cdaef
-ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
+ms.openlocfilehash: 88cb742464507fe7040b38d88355ab473b366bac
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37881990"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43196013"
 ---
 # <a name="caxdialogimpl-class"></a>Klasa CAxDialogImpl
 Ta klasa implementuje okno dialogowe (modalnym lub niemodalnym), który obsługuje formanty ActiveX.  
@@ -170,7 +170,7 @@ INT_PTR DoModal(
   
 ### <a name="parameters"></a>Parametry  
  *hWndParent*  
- [in] Dojście do okna właściciela. Wartość domyślna to wartość zwracana przez [GetActiveWindow](http://msdn.microsoft.com/library/windows/desktop/ms646292) funkcję Win32.  
+ [in] Dojście do okna właściciela. Wartość domyślna to wartość zwracana przez [GetActiveWindow](https://msdn.microsoft.com/library/windows/desktop/ms646292) funkcję Win32.  
   
  *dwInitParam*  
  [in] Określa wartość do przekazania do okna dialogowego w *lParam* parametr / / Złap wiadomości.  
@@ -235,7 +235,7 @@ BOOL IsDialogMessage(LPMSG pMsg);
   
 ### <a name="parameters"></a>Parametry  
  *pMsg*  
- Wskaźnik do [MSG](http://msdn.microsoft.com/library/windows/desktop/ms644958) strukturę, która zawiera komunikat, który ma być zaznaczone.  
+ Wskaźnik do [MSG](https://msdn.microsoft.com/library/windows/desktop/ms644958) strukturę, która zawiera komunikat, który ma być zaznaczone.  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Zwraca wartość TRUE, jeśli komunikat został przetworzony, wartość FALSE w przeciwnym razie.  

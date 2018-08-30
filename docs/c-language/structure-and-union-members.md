@@ -1,5 +1,5 @@
 ---
-title: Struktury i złożenia członków | Dokumentacja firmy Microsoft
+title: Składowe struktury i złożenia | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -21,60 +21,43 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7cf98987323b96c8b3977e9a6d2bc590e0b612b8
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: a5b497745177bce165277e3a6e4ece2a3c47f20a
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32392253"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43194878"
 ---
 # <a name="structure-and-union-members"></a>Elementy członkowskie struktury i złożenia
 „Wyrażenie wyboru elementu członkowskiego” dotyczy elementów członkowskich struktur i unii. Takie wyrażenie ma wartość i typ wybranego elementu członkowskiego.  
   
-```  
+> *wyrażeniem przyrostkowym* **.** *Identyfikator*  
+> *wyrażeniem przyrostkowym* **->** *identyfikator*
   
-postfix-expression  
-.  
-identifier  
-postfix-expression  
-->  
-identifier  
+Poniższa lista opisuje dwie formy wyrażeń wyboru elementów członkowskich:  
   
-```  
+1.  W pierwszej formie *wyrażeniem przyrostkowym* reprezentuje wartość **struktury** lub **Unii** typu, i *identyfikator* nazwy członka określonej struktury lub Unii. Wartością operacji jest *identyfikator* i jest l wartością, jeśli *wyrażeniem przyrostkowym* jest l wartością. Zobacz [wyrażenia wartości L i r](../c-language/l-value-and-r-value-expressions.md) Aby uzyskać więcej informacji.  
   
- Poniższa lista opisuje dwie formy wyrażeń wyboru elementów członkowskich:  
-  
-1.  W formularzu pierwszy *wyrażenie przyrostek* reprezentuje wartość `struct` lub **Unii** typu, i *identyfikator* nazwy jest członkiem określonej struktury lub związku. Wartość operacji jest *identyfikator* i jest wartością l-value, jeśli *wyrażenie przyrostek* jest wartością l-value. Zobacz [wartości L i r wyrażenia](../c-language/l-value-and-r-value-expressions.md) Aby uzyskać więcej informacji.  
-  
-2.  W drugiej formy *wyrażenie przyrostek* reprezentuje wskaźnik do struktury lub związku, i *identyfikator* nazwy jest członkiem określonej struktury lub związku. Wartość jest *identyfikator* i jest wartością l-value.  
+2.  W drugim formularzu *wyrażeniem przyrostkowym* reprezentuje wskaźnik do struktury lub Unii, i *identyfikator* nazw jest członkiem określonej struktury lub Unii. Wartość jest *identyfikator* i jest l wartością.  
   
  Obie formy wyrażeń wyboru elementów członkowskich mają podobne skutki.  
   
- W rzeczywistości wyrażenie obejmujące operatora wyboru elementu członkowskiego (**->**) jest skrócona wersja wyrażenie używające okres (**.**), jeśli wyrażenie przed okresem składa się z operator pośredni (**\***) stosowane do wartości wskaźnika. W związku z tym  
-  
-```  
-  
-expression  
-->  
-identifier  
-  
-```  
-  
- jest równoważny  
-  
-```  
-  
-(*  
-expression  
-) .  
-identifier  
-  
-```  
-  
- gdy *wyrażenie* jest wartość wskaźnika.  
+ W rzeczywistości, wyrażenie obejmujące operator wyboru składowej (**->**) jest wersją skróconą wyrażenia używającego kropki (**.**) Jeśli wyrażenie przed kropką składa się z operator pośredni (<strong>\*</strong>) stosowany do wartości wskaźnika. W związku z tym,  
+
+```cpp
+expression->identifier  
+```
+
+odpowiada wyrażeniu  
+
+```cpp
+(*expression).identifier
+```
+
+ gdy *wyrażenie* jest wartością wskaźnika.  
   
 ## <a name="examples"></a>Przykłady  
- Następujące przykłady dotyczą niniejszej deklaracji struktury. Aby uzyskać informacje na temat operator pośredni (**\***) używane w tych przykładach, zobacz [operatory pośrednie i operatorów adresu](../c-language/indirection-and-address-of-operators.md).  
+ Następujące przykłady dotyczą niniejszej deklaracji struktury. Aby uzyskać informacje dotyczące operatora pośredniego (<strong>\*</strong>) używanego w tych przykładach, zobacz [pośredni i Address-of operatory](../c-language/indirection-and-address-of-operators.md).  
   
 ```  
 struct pair   
@@ -97,7 +80,7 @@ item.sp = &item;
 (item.sp)->a = 24;  
 ```  
   
- W tym przykładzie wyrażenia wskaźnika `item.sp` jest używany z operatorem wyboru elementu członkowskiego (**->**) można przypisać wartości do elementu członkowskiego `a`.  
+ W tym przykładzie wyrażenie wskaźnika `item.sp` jest używany z operatorem wyboru elementów członkowskich (**->**) do przypisania wartości do elementu członkowskiego `a`.  
   
 ```  
 list[8].b = 12;  

@@ -1,7 +1,7 @@
 ---
 title: Błąd krytyczny NMAKE U1000 | Dokumentacja firmy Microsoft
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 08/27/2018
 ms.technology:
 - cpp-diagnostics
 ms.topic: error-reference
@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3a8d4e0f150d82482dd8391efa1f2251ac37bc8f
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 69909c542a02baf8aa261c8ef78413a877a223a7
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33325269"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43194891"
 ---
 # <a name="nmake-fatal-error-u1000"></a>Błąd krytyczny NMAKE U1000
-Błąd składniowy: ")" Brak w wywołaniu makra  
-  
- Lewy nawias, **(**, faktyczna bez pasującego nawiasu zamykającego **)**, w wywołaniu makra. Poprawna forma to **$(***nazwa***)**; `$` *n* jest dozwolone w nazwach jeden znak.
+
+> Błąd składniowy: ")" Brak w wywołaniu makra
+
+Lewy nawias okrągły **(**, faktyczna bez pasującego prawy nawias **)**, w wywołaniu makra. Formularz poprawne **$(**<em>nazwa</em>**)**; **$** <em>n</em> jest dozwolona w przypadku nazw jeden znak.

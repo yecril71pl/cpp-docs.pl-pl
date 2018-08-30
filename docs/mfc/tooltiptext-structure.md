@@ -17,15 +17,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8cae7efbee59b24ff34518b62ff212d436973053
-ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
+ms.openlocfilehash: 0f65b94294b3b3d55f9839dffa99a18be61c5639
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/26/2018
-ms.locfileid: "36953935"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43195987"
 ---
 # <a name="tooltiptext-structure"></a>Struktura TOOLTIPTEXT
-W przypadku pisma użytkownika [obsługi powiadamiania tip narzędzia](../mfc/handling-ttn-needtext-notification-for-tool-tips.md), należy użyć **TOOLTIPTEXT** struktury. Elementy członkowskie **TOOLTIPTEXT** struktury są:  
+Na piśmie swoje [obsługi powiadomień Porada narzędzie](../mfc/handling-ttn-needtext-notification-for-tool-tips.md), należy użyć **TOOLTIPTEXT** struktury. Elementy członkowskie **TOOLTIPTEXT** struktury są:  
   
  `typedef struct {`  
   
@@ -46,24 +46,24 @@ W przypadku pisma użytkownika [obsługi powiadamiania tip narzędzia](../mfc/ha
  `} TOOLTIPTEXT, FAR *LPTOOLTIPTEXT;`  
   
  *HDR*  
- Określa narzędzie, które wymaga tekstu. Jedynym członkiem tej struktury, który może być konieczne jest identyfikator formantu polecenia. Identyfikator polecenia formantu będą znajdować się w *idFrom* członkiem **NMHDR** struktury dostęp przy użyciu składni `hdr.idFrom`. Zobacz [NMHDR](http://msdn.microsoft.com/library/windows/desktop/bb775514) omówienie członkami **NMHDR** struktury.  
+ Określa narzędzie, które wymaga tekstu. Jedynym członkiem tej struktury, który może być konieczne jest identyfikator formantu polecenia. Identyfikator polecenia kontrolki będą znajdować się w *idFrom* członkiem **NMHDR** struktury, uzyskać dostęp przy użyciu składni `hdr.idFrom`. Zobacz [NMHDR](/windows/desktop/api/richedit/ns-richedit-_nmhdr) dyskusję na temat elementów członkowskich **NMHDR** struktury.  
   
  *lpszText*  
- Adres ciąg do odbierania tekstu dla narzędzia.  
+ Adres ciąg wyświetlany tekst dla narzędzia.  
   
  *szText*  
- Bufor, który odbiera tekst wskazówki. Aplikację można skopiować tekst do buforu jako alternatywę do określenia adresu ciągu.  
+ Bufor, który odbiera tekst wskazówki. Aplikację można skopiować tekst do tego buforu jako alternatywę do określania adresu ciąg.  
   
  *hinst*  
- Dojście wystąpienia, który zawiera ciąg, który ma być używany jako tekst wskazówki. Jeśli *lpszText* adres z tekst wskazówki ten element członkowski ma wartość NULL.  
+ Dojście wystąpienia, które zawiera ciąg, który ma być używany jako tekst wskazówki. Jeśli *lpszText* to adres elementu tekst wskazówki ten element członkowski ma wartość NULL.  
   
- Podczas obsługi `TTN_NEEDTEXT` powiadomień wiadomości, podaj ciąg, który będzie wyświetlany w jednym z następujących sposobów:  
+ Podczas obsługi `TTN_NEEDTEXT` powiadomień wiadomości, określ ciąg, który ma być wyświetlany w jednym z następujących sposobów:  
   
--   Skopiuj tekst w buforze określona przez *szText* elementu członkowskiego.  
+-   Skopiuj tekst do buforu określonego przez *szText* elementu członkowskiego.  
   
--   Skopiuj adres buforu, który zawiera tekst, który *lpszText* elementu członkowskiego.  
+-   Skopiuj adres buforu, który zawiera tekst, który ma *lpszText* elementu członkowskiego.  
   
--   Skopiuj identyfikator zasobu ciągu do *lpszText* — członek, a następnie skopiuj dojście wystąpienia, który zawiera zasób do *hinst* elementu członkowskiego.  
+-   Skopiuj identyfikator zasobu ciągu do *lpszText* elementu członkowskiego, a następnie skopiuj dojście wystąpienia, które zawiera zasób do *hinst* elementu członkowskiego.  
   
 ## <a name="see-also"></a>Zobacz też  
  [Etykietki narzędzi w systemie Windows niepochodzące od obiektu CFrameWnd](../mfc/tool-tips-in-windows-not-derived-from-cframewnd.md)

@@ -1,5 +1,5 @@
 ---
-title: Przetwarzanie powiadomień dotyczących formantu karty | Dokumentacja firmy Microsoft
+title: Przetwarzanie powiadomień dotyczących formantów nagłówka | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,17 +18,17 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1a0fe657089c33679cf8d18f95268a70335804c5
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 539e7411dcc47be17bb10a5322e30a524679ca8c
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33348894"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43194214"
 ---
 # <a name="processing-header-control-notifications"></a>Przetwarzanie powiadomień dotyczących formantu karty
-W klasie widoku lub okna dialogowego okno właściwości do utworzenia [OnChildNotify](../mfc/reference/cwnd-class.md#onchildnotify) funkcji obsługi z instrukcji switch dla każdego formantu nagłówka ([CHeaderCtrl](../mfc/reference/cheaderctrl-class.md)) chcesz komunikaty powiadomień Obsługa (zobacz [mapowanie komunikatów do funkcji](../mfc/reference/mapping-messages-to-functions.md)). Powiadomienia są wysyłane do okna nadrzędnego, gdy użytkownik kliknie lub kliknie dwukrotnie element nagłówka drags a podziału między elementami i tak dalej.  
+W klasie widoku lub w oknie dialogowym, użyj okna właściwości, aby utworzyć [OnChildNotify](../mfc/reference/cwnd-class.md#onchildnotify) funkcji obsługi za pomocą instrukcji switch dla każdego formantu nagłówka ([CHeaderCtrl](../mfc/reference/cheaderctrl-class.md)) komunikaty powiadomień, które mają być Obsługa (zobacz [mapowanie komunikatów do funkcji](../mfc/reference/mapping-messages-to-functions.md)). Powiadomienia są wysyłane do okna nadrzędnego, gdy użytkownik kliknie przycisk lub kliknie dwukrotnie element nagłówka drags na linię podziału między elementami i tak dalej.  
   
- Komunikaty powiadomień skojarzony z formantem nagłówka są wymienione w [odwołanie do formantu nagłówka](http://msdn.microsoft.com/library/windows/desktop/bb775239) w zestawie Windows SDK.  
+ Powiadomienia związane z formantem nagłówka są wymienione w [odwołanie do formantu nagłówka](https://msdn.microsoft.com/library/windows/desktop/bb775239) w zestawie Windows SDK.  
   
 ## <a name="see-also"></a>Zobacz też  
  [Korzystanie z CHeaderCtrl](../mfc/using-cheaderctrl.md)   

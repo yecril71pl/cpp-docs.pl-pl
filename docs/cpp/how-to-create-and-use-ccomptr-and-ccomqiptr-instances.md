@@ -12,15 +12,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b22bbcfd2055a362a3ee9b3fcfd4498cdb089586
-ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
+ms.openlocfilehash: 3cfdbff4d63197ca37976d5dcc242ac7b8ab8410
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/01/2018
-ms.locfileid: "39407959"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43194135"
 ---
 # <a name="how-to-create-and-use-ccomptr-and-ccomqiptr-instances"></a>Porady: tworzenie wystąpień CComPtr i CComQIPtr i korzystanie z nich
-W klasycznym programowaniu Windows, bibliotek są często implementowane jako obiekty COM (lub dokładniej, jako serwery COM). Wiele składników systemu operacyjnego Windows są implementowane jako serwerów COM, a wiele współautorzy podają bibliotek w tym formularzu. Aby uzyskać informacje dotyczące podstawowych informacji o modelu COM, zobacz [składnik modelu COM](http://msdn.microsoft.com/3578ca42-a4b6-44b3-ad5b-aeb5fa61f3f4).  
+W klasycznym programowaniu Windows, bibliotek są często implementowane jako obiekty COM (lub dokładniej, jako serwery COM). Wiele składników systemu operacyjnego Windows są implementowane jako serwerów COM, a wiele współautorzy podają bibliotek w tym formularzu. Aby uzyskać informacje dotyczące podstawowych informacji o modelu COM, zobacz [składnik modelu COM](https://msdn.microsoft.com/3578ca42-a4b6-44b3-ad5b-aeb5fa61f3f4).  
   
  Podczas tworzenia wystąpienia obiektu Component Object Model (COM) przechowywania wskaźnik interfejsu w modelu COM inteligentny wskaźnik, który wykonuje liczenia odwołań przy użyciu wywołania `AddRef` i `Release` w destruktorze. Jeśli używasz Active Template Library (ATL) lub biblioteki Microsoft Foundation Class (MFC), należy użyć `CComPtr` inteligentnego wskaźnika. Jeśli nie używasz biblioteki ATL lub MFC, należy użyć `_com_ptr_t`. Ponieważ COM nie jest odpowiednikiem `std::unique_ptr`, używaj tych inteligentnych wskaźników dla scenariuszy z jednego właściciela i wielu właściciela. Zarówno `CComPtr` i `ComQIPtr` obsługę przenoszenia operacji, które mają odwołania rvalue.  
   

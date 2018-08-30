@@ -16,28 +16,28 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6184e5bb251a2b74e8500cc195a38f2d814c1b5f
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 8c07de9e766b7c2126d0ce4c8d1daed631a8355c
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33319055"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43194743"
 ---
 # <a name="project-build-error-prj0016"></a>Błąd PRJ0016 kompilacji projektu
-Ustawienia zabezpieczeń użytkownika uniemożliwić tworzony przez proces. Te ustawienia są wymagane do kompilacji.  
+Ustawienia zabezpieczeń użytkownika uniemożliwić tworzony przez proces. Te ustawienia są wymagane do kompilowania.  
   
- Użytkownik jest zalogowany jako użytkownik, który nie ma uprawnień do tworzenia procesów przy użyciu procesu. Zmienianie poziomów uprawnień dla tego konta użytkownika lub skontaktuj się z administratorem konta.  
+ Zalogowano Cię jako użytkownik, który nie ma uprawnień do tworzenia procesów za pomocą procesu. Zmień poziomy uprawnień dla tego konta użytkownika lub skontaktuj się z administratorem konta.  
   
  Ten błąd może również wystąpić, jeśli ustawiono następujący klucz rejestru:  
   
  \\\HKCU\Software\Microsoft\Windows\CurrentVersion\Policies\Explorer\RestrictRun  
   
- Aby rozwiązać ten problem, Usuń klucz RestrictRun. Jeśli ten klucz rejestru nie jest konieczne, dołącz **vcspawn.exe** do listy wpisów w kluczu.  
+ Aby rozwiązać ten problem, Usuń klucz RestrictRun. Jeśli ten klucz rejestru jest potrzebny, należy dołączyć **vcspawn.exe** listę wpisów w kluczu.  
   
- Inną przyczyną tego błędu jest to, że ustawienia zasad nie obejmuje VCSpawn.exe w kluczu rejestru HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Policies\RestrictRun jako dozwolone program okna dla tego konta użytkownika.  
+ Inną przyczyną tego błędu jest to, że ustawienia zasad nie obejmuje VCSpawn.exe w kluczu rejestru HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Policies\RestrictRun jako program okna dozwolone dla tego konta użytkownika.  
   
  Aby uzyskać dodatkowe informacje Zobacz:  
   
--   Artykuł bazy wiedzy 324153, który jest dostępny na [ http://support.microsoft.com/default.aspx?scid=kb; en-us; 324153](http://support.microsoft.com/default.aspx?scid=kb;en-us;324153).  
+-   Artykuł bazy wiedzy 324153, która jest dostępna na [ http://support.microsoft.com/default.aspx?scid=kb; en-us; 324153](http://support.microsoft.com/default.aspx?scid=kb;en-us;324153).  
   
--   [Do ustawienia zasad systemu](http://msdn.microsoft.com/library/aa372139), sekcję "Uruchamiaj tylko dozwolone aplikacje systemu Windows".
+-   [Dostosowanie się do ustawienia zasad systemu](https://msdn.microsoft.com/library/aa372139), sekcję "Uruchom tylko dozwolone aplikacje Windows".

@@ -12,15 +12,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b67d30ce301ec1a0b8952b780f52a5627e90df38
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: bc4e6dbf3023256a6a0db556c02e08453bb1a730
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42464492"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43194278"
 ---
 # <a name="walkthrough-compiling-a-ccx-program-on-the-command-line"></a>Wskazówki: kompilowanie programu w języku C++/CX w wierszu polecenia
-Można tworzyć programy Visual C++, które przeznaczone dla środowiska uruchomieniowego Windows i utworzyć je w wiersza polecenia. Visual C++ obsługuje rozszerzeniami składnika środowiska Visual C++ (C + +/ CX), który ma dodatkowe typy i podmioty, pod kątem modelu programowania środowiska wykonawczego Windows. Można użyć C + +/ CX, aby tworzyć aplikacje dla Windows platformy Uniwersalnej systemu Windows Phone 8.1 i Windows desktop. Aby uzyskać więcej informacji, zobacz [samouczek c + +/ CX](http://msdn.microsoft.com/magazine/dn166929.aspx) i [Component Extensions dla platform środowiska uruchomieniowego](../windows/component-extensions-for-runtime-platforms.md).  
+Można tworzyć programy Visual C++, które przeznaczone dla środowiska uruchomieniowego Windows i utworzyć je w wiersza polecenia. Visual C++ obsługuje rozszerzeniami składnika środowiska Visual C++ (C + +/ CX), który ma dodatkowe typy i podmioty, pod kątem modelu programowania środowiska wykonawczego Windows. Można użyć C + +/ CX, aby tworzyć aplikacje dla Windows platformy Uniwersalnej systemu Windows Phone 8.1 i Windows desktop. Aby uzyskać więcej informacji, zobacz [samouczek c + +/ CX](https://msdn.microsoft.com/magazine/dn166929.aspx) i [Component Extensions dla platform środowiska uruchomieniowego](../windows/component-extensions-for-runtime-platforms.md).  
   
  W tym przewodniku umożliwia edytora tekstu Utwórz podstawowe języka C + +/ CX program, a następnie skompilować go w wierszu polecenia. (Możesz użyć własnego C + +/ CX programu zamiast wpisywać ten, który jest wyświetlany, lub można użyć w języku C + +/ CX przykładowy kod z innego artykułu pomocy. Ta technika jest przydatna do tworzenia i testowania małych moduły, które zawierają bez elementów interfejsu użytkownika).  
   

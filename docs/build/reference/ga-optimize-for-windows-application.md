@@ -1,5 +1,5 @@
 ---
-title: -GA (Optymalizuj dla aplikacji systemu Windows) | Dokumentacja firmy Microsoft
+title: -GA (Optymalizuj dla aplikacji Windows) | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -20,15 +20,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 387732c5bde04970e3a467ca4f43f911afa7a9a6
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 61bf8844a5471a97214ca6f3d3b5b473c9cd6217
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32374261"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43194666"
 ---
 # <a name="ga-optimize-for-windows-application"></a>/GA (Optymalizuj dla aplikacji systemu Windows)
-Wyniki w bardziej wydajny kodu dla pliku .exe do uzyskiwania dostępu do zmiennych lokalny magazyn wątków (TLS).  
+Wyniki w kodzie bardziej wydajne dla pliku .exe do uzyskiwania dostępu do zmiennych lokalny magazyn wątków (TLS).  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -37,19 +37,19 @@ Wyniki w bardziej wydajny kodu dla pliku .exe do uzyskiwania dostępu do zmienny
 ```  
   
 ## <a name="remarks"></a>Uwagi  
- **/GA** szybkość dostępu do danych jest zadeklarowany z [__declspec(thread)](../../cpp/declspec.md) w programie opartych na systemie Windows. Gdy ta opcja jest ustawiona, [__tls_index](http://msdn.microsoft.com/library/windows/desktop/ms686749) makro jest wartość równa 0.  
+ **/GA** szybkość dostępu do danych zadeklarowane za pomocą [__declspec(thread)](../../cpp/declspec.md) w programie systemu Windows. Gdy ta opcja jest ustawiona, [__tls_index](/windows/desktop/ProcThread/thread-local-storage) — makro jest domyślnie przyjmuje wartość 0.  
   
- Przy użyciu **/GA** dla biblioteki DLL może spowodować wygenerowanie złego kodu.  
+ Za pomocą **/GA** dla biblioteki DLL może spowodować wygenerowanie złego kodu.  
   
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Aby ustawić tę opcję kompilatora w środowisku programowania Visual Studio  
   
-1.  Otwórz projekt **strony właściwości** okno dialogowe. Aby uzyskać więcej informacji, zobacz [Praca z właściwościami projektu](../../ide/working-with-project-properties.md).  
+1.  Otwórz projekt **stron właściwości** okno dialogowe. Aby uzyskać więcej informacji, zobacz [Praca z właściwościami projektu](../../ide/working-with-project-properties.md).  
   
 2.  Kliknij przycisk **C/C++** folderu.  
   
-3.  Kliknij przycisk **wiersza polecenia** strony właściwości.  
+3.  Kliknij przycisk **wiersza polecenia** stronę właściwości.  
   
-4.  Typ opcji kompilatora w **dodatkowe opcje** pole.  
+4.  Wpisz opcje kompilatora w **dodatkowe opcje** pole.  
   
 ### <a name="to-set-this-compiler-option-programmatically"></a>Aby programowo ustawić tę opcję kompilatora  
   

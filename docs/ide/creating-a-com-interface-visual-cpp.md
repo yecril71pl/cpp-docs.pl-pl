@@ -16,35 +16,35 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d2844e9051c5e6adf14085bcd7bfcd8096c6f8f7
-ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
+ms.openlocfilehash: b69c2318ec5b1dd986a71bc684e1c9adc0f4ef0f
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "33332585"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43194967"
 ---
 # <a name="creating-a-com-interface-visual-c"></a>Tworzenie interfejsu COM (Visual C++)
-Visual C++ udostępnia kreatorów i szablony do tworzenia projektów używające definiującego interfejsy modelu COM i dispinterfaces dla obiektów COM i klas automatyzacji.  
+Visual C++ zapewnia kreatory i szablony do tworzenia projektów używających definiowanie interfejsów COM i dispinterfaces dla obiektów COM i klasy automatyzacji.  
   
- Tych kreatorów umożliwia wykonywanie następujących trzech typowych zadań:  
+ Te kreatory służy do wykonywania następujących trzech typowych zadań:  
   
 -   [Dodawanie obsługi ATL do projektu MFC](../mfc/reference/adding-atl-support-to-your-mfc-project.md)  
   
-     Dodaj obsługę ATL do MFC aplikacji po utworzeniu projektu MFC przy użyciu [Kreator aplikacji MFC](../mfc/reference/mfc-application-wizard.md) , a następnie uruchamiając **Dodawanie obsługi ATL do MFC** kodu kreatora. Ta obsługa dotyczy tylko prostych obiektów COM dodane do pliku wykonywalnego MFC lub projektu biblioteki DLL. Te obiekty ATL może mieć wiele interfejsów.  
+     Dodaj obsługę ATL do aplikacji MFC, po utworzeniu projektu MFC przy użyciu [Kreator aplikacji MFC](../mfc/reference/mfc-application-wizard.md) , a następnie uruchamiając **Dodawanie obsługi ATL do MFC** kreatora kodów. Ta funkcja dotyczy tylko proste obiekty COM, dodane do projektu biblioteki DLL lub pliku wykonywalnego MFC. Te obiekty ATL może mieć wiele interfejsów.  
   
 -   [Tworzenie kontrolki ActiveX MFC](../mfc/reference/creating-an-mfc-activex-control.md)  
   
-     Otwórz [Kreator kontrolek ActiveX MFC](../mfc/reference/mfc-activex-control-wizard.md) można utworzyć formantu ActiveX dispinterface i mapę zdarzeń zdefiniowanych w pliku .idl i klasy formantu odpowiednio.  
+     Otwórz [Kreator kontrolek ActiveX MFC](../mfc/reference/mfc-activex-control-wizard.md) tworzenia kontrolki ActiveX z dispinterface i mapę zdarzeń zdefiniowanych w pliku .idl i klasy kontrolek, odpowiednio.  
   
 -   [Dodawanie kontrolki ATL](../atl/reference/adding-an-atl-control.md)  
   
-     Użyj kombinacji [Kreator projektu ATL](../atl/reference/atl-project-wizard.md) i [Kreator formantu ATL](../atl/reference/atl-control-wizard.md) można utworzyć formantu ATL ActiveX.  
+     Użyj kombinacji [Kreator projektów ATL](../atl/reference/atl-project-wizard.md) i [Kreator kontrolki ATL](../atl/reference/atl-control-wizard.md) do tworzenia formantu ATL ActiveX.  
   
-     Można również dodać formantu ATL do projektu MFC, do której dodano obsługę ATL, zgodnie z powyższym opisem. Ponadto w przypadku wybrania **formantu ATL** w **Dodaj klasę** okno dialogowe, a nie zostały jeszcze dodane obsługi ATL do projektu MFC, Visual Studio Wyświetla okno dialogowe Dodawanie obsługi ATL do potwierdzenia Twojej Projekt MFC.  
+     Można również dodać kontrolki ATL do projektu MFC, do której dodano obsługę ATL, zgodnie z powyższym opisem. Ponadto jeśli zostanie wybrana **kontrolka ATL** w **Dodaj klasę** okno dialogowe, a nie zostały jeszcze dodane obsługi ATL do projektu MFC, Visual Studio wyświetli okno dialogowe potwierdzające Dodawanie obsługi ATL do usługi Projekt MFC.  
   
-     Ten kreator generuje źródło IDL i mapowanie modelu COM w klasach projektu.  
+     Ten kreator generuje źródło IDL i mapy COM w klasach projektu.  
   
- Po utworzeniu otwarcia, Projekt ATL [Dodaj klasę](../ide/add-class-dialog-box.md) okno dialogowe umożliwia wybór dodatkowe kreatorów i szablony, aby dodać interfejsy modelu COM do projektu. Następujących kreatorów pozwalają na wprowadzenie co najmniej jeden interfejs dla obiektu:  
+ Po utworzeniu projektu ATL otworzyć, [Dodaj klasę](../ide/add-class-dialog-box.md) okno dialogowe umożliwia wybór dodatkowe kreatorów i szablonów, aby dodać interfejsy modelu COM do projektu. Zezwalaj na następujących kreatorów, ustanowienia co najmniej jeden interfejs dla obiektu:  
   
 -   [Kreator składników ATL COM+ 1.0](../atl/reference/atl-com-plus-1-0-component-wizard.md)  
   
@@ -54,10 +54,10 @@ Visual C++ udostępnia kreatorów i szablony do tworzenia projektów używające
   
 -   [Kreator kontrolki ATL](../atl/reference/atl-control-wizard.md)  
   
- Ponadto można wdrożyć nowe interfejsy COM formantu prawym przyciskiem myszy obiekt klasy formantu w widoku klas, a następnie klikając polecenie [implementować interfejs](../ide/implement-interface-wizard.md).  
+ Ponadto można wdrożyć nowe interfejsy na kontrolki COM, klikając prawym przyciskiem myszy obiekt klasy formantu w widoku klas i klikając [implementować interfejs](../ide/implement-interface-wizard.md).  
   
 > [!NOTE]
->  Program Visual Studio nie udostępnia kreatora, aby dodać interfejs do projektu. Można dodać interfejs do Projekt ATL lub do [Dodawanie obsługi ATL do projektu MFC Your](../mfc/reference/adding-atl-support-to-your-mfc-project.md) przez dodawanie przy użyciu prostego obiektu [Kreator prostych obiektów ATL](../atl/reference/atl-simple-object-wizard.md). Alternatywnie Otwórz pliku .idl projektu i utworzyć interfejsu, wpisz:  
+>  Program Visual Studio nie udostępnia kreatora, aby dodać interfejs do projektu. Można dodać interfejs do projektu ATL lub do [Dodawanie obsługi ATL do projektu MFC](../mfc/reference/adding-atl-support-to-your-mfc-project.md) przez dodanie przy użyciu prostego obiektu [proste Kreator obiektu ATL](../atl/reference/atl-simple-object-wizard.md). Alternatywnie Otwórz pliku .idl projektu i Utwórz interfejs, wpisując:  
   
 ```  
 interface IMyInterface {  
@@ -65,20 +65,20 @@ interface IMyInterface {
   
 ```  
   
- Zobacz [implementującej interfejs](../ide/implementing-an-interface-visual-cpp.md) i [Dodawanie obiektów i kontroli w celu Projekt ATL](../atl/reference/adding-objects-and-controls-to-an-atl-project.md) Aby uzyskać więcej informacji.  
+ Zobacz [implementującej interfejs](../ide/implementing-an-interface-visual-cpp.md) i [Dodawanie obiektów i kontrolek do projektu ATL](../atl/reference/adding-objects-and-controls-to-an-atl-project.md) Aby uzyskać więcej informacji.  
   
- Visual C++ udostępnia kilka sposobów, aby wyświetlić i [Edytuj interfejsy modelu COM](../ide/editing-a-com-interface.md) zdefiniowane dla projektów. [Widok klasy](http://msdn.microsoft.com/en-us/8d7430a9-3e33-454c-a9e1-a85e3d2db925) Wyświetla ikony dla interfejsu lub dispinterface zdefiniowane w pliku .idl w projekcie języka C++.  
+ Visual C++ oferuje kilka sposobów, aby wyświetlić i [Edytuj interfejsów COM](../ide/editing-a-com-interface.md) zdefiniowane dla Twoich projektów. [Widok klas](https://msdn.microsoft.com/8d7430a9-3e33-454c-a9e1-a85e3d2db925) Wyświetla ikony dla dowolnej interfejsu dispinterface zdefiniowane w pliku .idl w projekcie języka C++.  
   
- Dla klas obiektów oparty na ATL COM widoku klasy odczytuje mapie modelu COM klasy ATL do wyświetlenia relacji między klasą ATL i wszystkie interfejsy, które implementuje.  
+ Dla klas obiektów oparty na bibliotece ATL COM widoku klasy odczytuje mapy COM w klasy ATL do wyświetlania relacji między klasą ATL i wszystkie interfejsy, które implementuje.  
   
- W widoku klas i jego menu skrótów możesz pracować z interfejsów w następujący sposób:  
+ W widoku klas i jego menu skrótów można pracować z interfejsów w następujący sposób:  
   
--   Dodawanie obiektów ATL do aplikacji opartych na MFC.  
+-   Dodaj obiekty ATL z aplikacją oparty na bibliotece MFC.  
   
--   Dodaj metody, właściwości i zdarzeń.  
+-   Dodaj metody, właściwości i zdarzenia.  
   
--   Przejście bezpośrednio w kodzie interfejsu elementu, klikając ten element.  
+-   Przechodzić bezpośrednio do elementu kod interfejsu, klikając ten element.  
   
 ## <a name="see-also"></a>Zobacz też  
  [Tworzenie projektów pulpitu za pomocą kreatorów aplikacji](../ide/creating-desktop-projects-by-using-application-wizards.md)   
- [Dodawanie funkcji z kreatorami kodów](../ide/adding-functionality-with-code-wizards-cpp.md)
+ [Dodawanie funkcji za pomocą kreatorów kodu](../ide/adding-functionality-with-code-wizards-cpp.md)

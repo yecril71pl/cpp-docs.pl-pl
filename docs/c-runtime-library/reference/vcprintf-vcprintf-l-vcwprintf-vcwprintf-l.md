@@ -53,19 +53,19 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: aa7ccf2db8447b51757f5c8a90b2e9a5b6558929
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: d31ebd1e4df65ef35449c374a5cbb99b878f00a6
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32415796"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43196787"
 ---
 # <a name="vcprintf-vcprintfl-vcwprintf-vcwprintfl"></a>_vcprintf, _vcprintf_l, _vcwprintf, _vcwprintf_l
 
-Zapisy sformatowane dane wyjściowe do konsoli za pomocą wskaźnika do listy argumentów. Dostępne są bardziej bezpieczne wersje tych funkcji, zobacz [_vcprintf_s —, _vcprintf_s_l —, _vcwprintf_s —, _vcwprintf_s_l —](vcprintf-s-vcprintf-s-l-vcwprintf-s-vcwprintf-s-l.md).
+Pisze sformatowane dane wyjściowe do konsoli, za pomocą wskaźnika do listy argumentów. Dostępne są bardziej bezpieczne wersje tych funkcji, zobacz [_vcprintf_s —, _vcprintf_s_l —, _vcwprintf_s —, _vcwprintf_s_l —](vcprintf-s-vcprintf-s-l-vcwprintf-s-vcwprintf-s-l.md).
 
 > [!IMPORTANT]
-> Nie można używać tego interfejsu API w aplikacjach, które są wykonywane w środowisku wykonawczym systemu Windows. Aby uzyskać więcej informacji, zobacz [funkcje CRT, nie są obsługiwane w aplikacjach platformy uniwersalnej systemu Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
+> Tego API nie można używać w aplikacjach korzystających ze środowiska wykonawczego Windows. Aby uzyskać więcej informacji, zobacz [funkcje CRT nieobsługiwane w aplikacjach platformy uniwersalnej Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
 
 ## <a name="syntax"></a>Składnia
 
@@ -93,7 +93,7 @@ int _vcwprintf_l(
 ### <a name="parameters"></a>Parametry
 
 *Format*<br/>
-Definicja formatu.
+Specyfikacja formatu.
 
 *argptr*<br/>
 Wskaźnik do listy argumentów.
@@ -101,24 +101,24 @@ Wskaźnik do listy argumentów.
 *Ustawienia regionalne*<br/>
 Ustawienia regionalne do użycia.
 
-Aby uzyskać więcej informacji, zobacz [specyfikacje formatu](../../c-runtime-library/format-specification-syntax-printf-and-wprintf-functions.md).
+Aby uzyskać więcej informacji, zobacz [specyfikacji formatu](../../c-runtime-library/format-specification-syntax-printf-and-wprintf-functions.md).
 
 ## <a name="return-value"></a>Wartość zwracana
 
-Liczba znaków zapisywane, lub wartość ujemną, jeśli wystąpi błąd wyjścia. Jeśli *format* wskaźnika o wartości null, jest program obsługi nieprawidłowych parametrów zostanie wywołany, zgodnie z opisem w [sprawdzanie poprawności parametru](../../c-runtime-library/parameter-validation.md). Jeśli jest dozwolone wykonywanie, aby kontynuować, **errno** ustawiono **einval —** i jest zwracana wartość -1.
+Liczba znaków zapisanych, lub wartość ujemną, jeśli wystąpi błąd danych wyjściowych. Jeśli *format* jest pustym wskaźnikiem, wywoływany nieprawidłowy parametr uchwytu, zgodnie z opisem w [Parameter Validation](../../c-runtime-library/parameter-validation.md). Jeśli wykonanie może być kontynuowane, **errno** ustawiono **EINVAL** i zwracana jest wartość -1.
 
 ## <a name="remarks"></a>Uwagi
 
-Każda z tych funkcji przyjmuje wskaźnik do listy argumentów, a następnie formaty i zapisuje podane dane do konsoli. **_vcwprintf —** jest wersja znaków dwubajtowych **_vcprintf —**. Ciąg znaków dwubajtowych trwa jako argument.
+Każda z tych funkcji pobiera wskaźnik do listy argumentów, a następnie formatuje i zapisuje dostarczone dane do konsoli. **_vcwprintf —** jest wersją znaków dwubajtowych **_vcprintf —**. Pobiera ciąg znaków dwubajtowych jako argument.
 
-Wersje tych funkcji z **_l** sufiks są identyczne, z wyjątkiem tego, aby używały parametr ustawień regionalnych przekazano zamiast bieżących ustawień regionalnych.
+Wersje tych funkcji **_l** sufiksem są identyczne, z tą różnicą, że używają parametru ustawień regionalnych przekazanych zamiast bieżących ustawień regionalnych.
 
 > [!IMPORTANT]
-> Upewnij się, że *format* nie jest ciągiem zdefiniowane przez użytkownika. Aby uzyskać więcej informacji, zobacz [unikanie Overruns buforu](http://msdn.microsoft.com/library/windows/desktop/ms717795).
+> Upewnij się, że *format* nie jest ciągiem zdefiniowanym przez użytkownika. Aby uzyskać więcej informacji, zobacz [unikanie przepełnień bufora](/windows/desktop/SecBP/avoiding-buffer-overruns).
 
 ### <a name="generic-text-routine-mappings"></a>Mapowania procedur zwykłego tekstu
 
-|Procedura TCHAR.H|_Unicode — & _MBCS nie zdefiniowany|_MBCS zdefiniowano|_UNICODE zdefiniowano|
+|Procedura TCHAR.H|_UNICODE & _MBCS nie zdefiniowano|_MBCS zdefiniowano|_UNICODE zdefiniowano|
 |---------------------|------------------------------------|--------------------|-----------------------|
 |**_vtcprintf —**|**_vcprintf**|**_vcprintf**|**_vcwprintf**|
 |**_vtcprintf_l —**|**_vcprintf_l**|**_vcprintf_l**|**_vcwprintf_l**|
@@ -130,7 +130,7 @@ Wersje tych funkcji z **_l** sufiks są identyczne, z wyjątkiem tego, aby używ
 |**_vcprintf —**, **_vcprintf_l —**|\<conio.h > i \<stdarg.h >|\<varargs.h>*|
 |**_vcwprintf —**, **_vcwprintf_l —**|\<conio.h > lub \<wchar.h >, a \<stdarg.h >|\<varargs.h>*|
 
-\* Wymagany w przypadku zgodności UNIX V.
+\* Wymagane dla zgodności systemu UNIX V.
 
 Aby uzyskać dodatkowe informacje o zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md).
 
@@ -168,7 +168,7 @@ int main()
 
 ## <a name="see-also"></a>Zobacz także
 
-[We/Wy strumienia](../../c-runtime-library/stream-i-o.md)<br/>
+[Stream operacji We/Wy](../../c-runtime-library/stream-i-o.md)<br/>
 [vprintf, funkcje](../../c-runtime-library/vprintf-functions.md)<br/>
 [_cprintf, _cprintf_l, _cwprintf, _cwprintf_l](cprintf-cprintf-l-cwprintf-cwprintf-l.md)<br/>
 [fprintf, _fprintf_l, fwprintf, _fwprintf_l](fprintf-fprintf-l-fwprintf-fwprintf-l.md)<br/>

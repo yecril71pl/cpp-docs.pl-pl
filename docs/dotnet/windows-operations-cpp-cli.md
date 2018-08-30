@@ -54,12 +54,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 0f9566fb6e3117b10d0d6f4a2bccbe56fe33a28a
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 10ddc04471c749aad217780e9a27494783f1e9b0
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42609352"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43195636"
 ---
 # <a name="windows-operations-ccli"></a>Operacje związane z systemem Windows (C++/CLI)
 Demonstruje różne zadania specyficzne dla Windows przy użyciu zestawu Windows SDK.  
@@ -499,7 +499,7 @@ int main()
 ```  
   
 ### <a name="remarks"></a>Uwagi  
- .NET Framework umożliwia dostęp do rejestru przy użyciu <xref:Microsoft.Win32.Registry> i [RegistryKey](https://msdn.microsoft.com/en-us/library/microsoft.win32.registrykey.aspx) klasy, które są zdefiniowane w <xref:Microsoft.Win32> przestrzeni nazw. **Rejestru** klasy jest kontenerem dla statycznych wystąpień <xref:Microsoft.Win32.RegistryKey> klasy. Każde wystąpienie reprezentuje węzeł główny rejestru. Wystąpienia są <xref:Microsoft.Win32.Registry.ClassesRoot>, <xref:Microsoft.Win32.Registry.CurrentConfig>, <xref:Microsoft.Win32.Registry.CurrentUser>, <xref:Microsoft.Win32.Registry.LocalMachine>, i <xref:Microsoft.Win32.Registry.Users>.  
+ .NET Framework umożliwia dostęp do rejestru przy użyciu <xref:Microsoft.Win32.Registry> i [RegistryKey](https://msdn.microsoft.com/library/microsoft.win32.registrykey.aspx) klasy, które są zdefiniowane w <xref:Microsoft.Win32> przestrzeni nazw. **Rejestru** klasy jest kontenerem dla statycznych wystąpień <xref:Microsoft.Win32.RegistryKey> klasy. Każde wystąpienie reprezentuje węzeł główny rejestru. Wystąpienia są <xref:Microsoft.Win32.Registry.ClassesRoot>, <xref:Microsoft.Win32.Registry.CurrentConfig>, <xref:Microsoft.Win32.Registry.CurrentUser>, <xref:Microsoft.Win32.Registry.LocalMachine>, i <xref:Microsoft.Win32.Registry.Users>.  
 
 ## <a name="related-sections"></a>Sekcje pokrewne  
  <xref:System.Environment>  
@@ -507,4 +507,4 @@ int main()
 ## <a name="see-also"></a>Zobacz też  
  [Programowanie .NET w języku C++/interfejsie wiersza polecenia (Visual C++)](../dotnet/dotnet-programming-with-cpp-cli-visual-cpp.md)
 
- [Wprowadzenie do monitorowania wydajności](http://msdn.microsoft.com/en-us/d40f10b9-e2b7-4ec8-a9b3-706929e5bf35) 
+ [Wprowadzenie do monitorowania wydajności](https://msdn.microsoft.com/d40f10b9-e2b7-4ec8-a9b3-706929e5bf35) 

@@ -25,12 +25,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e29bf1c8265a0d92200cda2704b750dfd8db3d6f
-ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
+ms.openlocfilehash: 78d846db4080c780bfa72fca52b7c9f6868edc2f
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37885643"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43195345"
 ---
 # <a name="cworkerthread-class"></a>Klasa CWorkerThread
 Ta klasa tworzy wątek roboczy lub korzysta z istniejącą grupę, czeka na co najmniej jeden uchwytów obiektu jądra i wykonuje funkcję określonego klienta, gdy jeden z uchwytów, jest sygnalizowane.  
@@ -232,7 +232,7 @@ HRESULT RemoveHandle(HANDLE hObject) throw();
  Zwraca wartość S_OK w przypadku powodzenia lub błędu HRESULT w przypadku niepowodzenia.  
   
 ### <a name="remarks"></a>Uwagi  
- Po usunięciu uchwytu [IWorkerThreadClient::CloseHandle](../../atl/reference/iworkerthreadclient-interface.md#closehandle) będzie wywoływana dla skojarzonego obiektu, który został przekazany do [AddHandle](#addhandle). Jeśli to wywołanie nie powiedzie się, `CWorkerThread` wywoła Windows [funkcja CloseHandle](http://msdn.microsoft.com/library/windows/desktop/ms724211) funkcji na dojście.  
+ Po usunięciu uchwytu [IWorkerThreadClient::CloseHandle](../../atl/reference/iworkerthreadclient-interface.md#closehandle) będzie wywoływana dla skojarzonego obiektu, który został przekazany do [AddHandle](#addhandle). Jeśli to wywołanie nie powiedzie się, `CWorkerThread` wywoła Windows [funkcja CloseHandle](https://msdn.microsoft.com/library/windows/desktop/ms724211) funkcji na dojście.  
   
 ##  <a name="shutdown"></a>  CWorkerThread::Shutdown  
  Wywołaj tę metodę, aby zamknąć wątku roboczego.  

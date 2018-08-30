@@ -12,21 +12,21 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2c219669d018dc8c4cb038e90dffd1137877f422
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 1e824e94f79aa01ab3a82675fb3e8f76059c567d
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32382880"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43195555"
 ---
 # <a name="diagnostic-printed-by-the-assert-function"></a>Diagnostyka wydrukowana przez funkcję assert
-**ANSI 4.2** dane diagnostyczne drukowanymi przez i zachowanie po przerwaniu dla **assert** — funkcja  
+**ANSI 4.2** diagnostyczne drukowanymi przez i zachowanie po przerwaniu dla **asercja** — funkcja  
   
- **Assert** komunikatów diagnostycznych i wywołania funkcji drukowane **przerwać** procedury, jeśli wyrażenie ma wartość false (0). Komunikat diagnostycznych ma formularza  
-  
- **Nie można potwierdzić**: *wyrażenie ***, plik** *filename ***, linia** *numer wiersza*  
-  
- gdzie nazwa pliku jest nazwa pliku źródłowego, a numer wiersza jest numer wiersza to potwierdzenie, że nie powiodło się w pliku źródłowym. Nie podjęto żadnej akcji, jeśli wyrażenie jest prawdziwe (różną od zera).  
+**Asercja** funkcja drukuje komunikat diagnostyczny i wywołania **przerwać** procedury, jeśli wyrażenie ma wartość false (0). Komunikat diagnostyczny ma postać  
+
+> **Nie można potwierdzić**: <em>wyrażenie</em>**, plik** <em>filename</em>**, wiersz** *linenumber*  
+
+gdzie *filename* jest nazwa pliku źródłowego i *linenumber* jest numer wiersza potwierdzenie, że nie powiodło się w pliku źródłowym. Jeśli zostanie podjęta żadna akcja *wyrażenie* ma wartość true (niezerową).  
   
 ## <a name="see-also"></a>Zobacz też  
  [Funkcje bibliotek](../c-language/library-functions.md)

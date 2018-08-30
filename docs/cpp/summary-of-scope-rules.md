@@ -18,18 +18,18 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4439ec167cca7a2e3314879faf4c65c842801e90
-ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
+ms.openlocfilehash: d58bf1d860bac7328c491164f6aeb77bed19b9cd
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39465476"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43195034"
 ---
 # <a name="summary-of-scope-rules"></a>Podsumowanie reguł zakresu
 Użycie nazwy muszą być jednoznaczną w jego zakresie (aż do momentu, w której jest określana przeciążenie). Jeśli nazwa wskazuje funkcję, funkcja musi być jednoznaczną względem numer i typ parametrów. Jeśli nazwa jest jednoznaczna, [dostęp do elementu członkowskiego](../cpp/member-access-control-cpp.md) reguły są stosowane.  
   
 ## <a name="constructor-initializers"></a>Inicjatory konstruktora  
- Inicjatory konstruktora (opisanego w [Inicjowanie baz i elementów członkowskich](http://msdn.microsoft.com/2f71377e-2b6b-49da-9a26-18e9b40226a1)) są obliczane w zakresie peryferyjnych bloku konstruktora, dla której są określone. W związku z tym mogą używać nazwy parametrów konstruktora.  
+ Inicjatory konstruktora (opisanego w [Inicjowanie baz i elementów członkowskich](https://msdn.microsoft.com/2f71377e-2b6b-49da-9a26-18e9b40226a1)) są obliczane w zakresie peryferyjnych bloku konstruktora, dla której są określone. W związku z tym mogą używać nazwy parametrów konstruktora.  
   
 ## <a name="global-names"></a>Nazwy globalne  
  Nazwa obiektu, funkcji lub modułu wyliczającego jest globalna, jeśli zostanie wprowadzone poza żadnych funkcji lub klasy lub poprzedzony globalnego zakresu jednoargumentowej (`::`), a jeśli nie jest używany w połączeniu z dowolną z tych operatorów binarnych:  

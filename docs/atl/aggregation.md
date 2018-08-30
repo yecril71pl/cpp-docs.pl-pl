@@ -15,12 +15,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2457d6e94677c43985cadf8ca49a176a82566b6a
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: 83d19e53b50791255b87cfa73a51761e2cdf5e1f
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37847872"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43196148"
 ---
 # <a name="aggregation"></a>Agregacji
 Istnieją terminy, gdy obiekt implementujący chcesz korzystać z usług oferowanych przez inną, wstępnie utworzonym obiekt. Ponadto chcesz ten drugi obiekt do są wyświetlane jako fizyczną część pierwsza. COM osiąga obu tych celów poprzez zawierania i agregacji.  
@@ -31,5 +31,5 @@ Istnieją terminy, gdy obiekt implementujący chcesz korzystać z usług oferowa
   
 ## <a name="see-also"></a>Zobacz też  
  [Wprowadzenie do modelu COM](../atl/introduction-to-com.md)   
- [Ponowne używanie obiektów](http://msdn.microsoft.com/library/windows/desktop/ms678443)
+ [Ponowne używanie obiektów](/windows/desktop/com/reusing-objects)
 

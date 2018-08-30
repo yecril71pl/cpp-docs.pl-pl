@@ -16,15 +16,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0c13167c42c6acbfcc5f3af500205eed6ab884d9
-ms.sourcegitcommit: 208d445fd7ea202de1d372d3f468e784e77bd666
+ms.openlocfilehash: e2ba459a2ee98a89e264be452b04f116072d41e6
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/29/2018
-ms.locfileid: "37121578"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43194614"
 ---
 # <a name="devnames-structure"></a>Struktura DEVNAMES
-`DEVNAMES` Struktura zawiera ciągi, które sterownik urządzenia, a port wyjściowy nazwy drukarki.  
+`DEVNAMES` Struktura zawiera ciągi, które identyfikują sterownika, urządzenia i nazwy portu wyjściowego dla drukarki.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -41,19 +41,19 @@ typedef struct tagDEVNAMES { /* dvnm */
   
 #### <a name="parameters"></a>Parametry  
  *wDriverOffset*  
- (We/Wy) Określa przesunięcie w znakach zerem ciąg znaków zawierający nazwę pliku (bez rozszerzenia) sterownika urządzenia. W danych wejściowych ten ciąg jest używany do określenia drukarki, aby wyświetlić początkowo w oknie dialogowym.  
+ (Wejście/wyjście) Określa przesunięcie w znakach na ciąg zakończony wartością null zawierający nazwę pliku (bez rozszerzenia) sterownika urządzenia. W danych wejściowych ten ciąg jest używany do określenia drukarki na początku wyświetlić w oknie dialogowym.  
   
  *wDeviceOffset*  
- (We/Wy) Określa przesunięcie w znaków do ciągu zakończonego wartością null (maksymalnie 32 bajtach, włącznie z wartości null) zawierający nazwę urządzenia. Ten ciąg musi być taki sam jak `dmDeviceName` członkiem [DEVMODE](http://msdn.microsoft.com/library/windows/desktop/dd183565) struktury.  
+ (Wejście/wyjście) Określa przesunięcie w znakach na ciąg zakończony znakiem null (maksymalnie 32 bajty, w tym o wartości null) zawierający nazwę urządzenia. Ten ciąg musi być taka sama jak `dmDeviceName` członkiem [DEVMODE](/windows/desktop/api/wingdi/ns-wingdi-_devicemodea) struktury.  
   
  *wOutputOffset*  
- (We/Wy) Określa przesunięcie w znakach zerem ciąg zawierający nazwę urządzenia systemu DOS na nośnik fizyczny danych wyjściowych (port wyjściowy).  
+ (Wejście/wyjście) Określa przesunięcie w znakach ciąg zakończony znakiem null, która zawiera nazwy urządzenia systemu DOS dla średnich wyjściowego fizycznej (port wyjściowy).  
   
  *wDefault*  
- Określa, czy ciągi są zawarte w `DEVNAMES` struktury zidentyfikować drukarki domyślnej. Ten ciąg jest używany, aby sprawdzić, czy drukarki domyślnej nie uległy zmianie od czasu ostatniej operacji drukowania. W danych wejściowych, jeśli jest ustawiona flaga DN_DEFAULTPRN, innych wartości w `DEVNAMES` struktury są porównywane z bieżącej drukarki domyślnej. Jeśli dowolne ciągi nie są zgodne, zostanie wyświetlony komunikat ostrzegawczy informującego o dokumentu może być konieczne ponownie sformatowany. W danych wyjściowych `wDefault` element członkowski zostanie zmieniona tylko wtedy, gdy zostało wyświetlone okno dialogowe Ustawienia wydruku i użytkownik wybrał przycisk OK. Flaga DN_DEFAULTPRN jest ustawiona, jeśli wybrano drukarki domyślnej. Jeśli wybrano drukarkę, flaga nie jest ustawiona. Wszystkie bity w tym elemencie członkowskim są zarezerwowane do użytku wewnętrznego przez procedurę — okno dialogowe drukowania.  
+ Określa, czy ciągi są zawarte w `DEVNAMES` struktury zidentyfikować zostanie użyta drukarka domyślna. Ten ciąg jest używany, aby zweryfikować, że zostanie użyta drukarka domyślna nie została zmieniona od czasu ostatniej operacji drukowania. W danych wejściowych, jeśli jest ustawiona flaga DN_DEFAULTPRN, innych wartości w `DEVNAMES` struktury są porównywane z bieżącej domyślnej drukarki. Jeśli dowolne ciągi nie są zgodne, zostanie wyświetlony komunikat ostrzegawczy, informujący użytkownika, że dokument może być konieczne sformatowany. W danych wyjściowych `wDefault` element członkowski zostanie zmieniony tylko wtedy, gdy zostało wyświetlone okno dialogowe Ustawienia wydruku i użytkownik wybrał przycisk OK. Flaga DN_DEFAULTPRN jest ustawiona, jeśli wybrano zostanie użyta drukarka domyślna. Jeśli wybrano drukarkę, flaga nie jest ustawiona. Wszystkie bity w tym elemencie członkowskim są zarezerwowane do użytku wewnętrznego przez tę procedurę, okno dialogowe drukowania.  
   
 ## <a name="remarks"></a>Uwagi  
- `PrintDlg` Funkcja używa tych ciągów zainicjować członków w oknie dialogowym drukowania zdefiniowane przez system. Gdy użytkownik zamyka okno dialogowe, informacje o wybranej drukarki jest zwracany w tej struktury.  
+ `PrintDlg` Funkcja używa tych ciągów do zainicjowania elementów członkowskich w oknie dialogowym drukowania zdefiniowaną przez system. Gdy użytkownik zamyka okno dialogowe, informacje na temat wybrane drukarki jest zwracany w tej struktury.  
   
 ## <a name="requirements"></a>Wymagania  
  **Nagłówek:** commdlg.h  

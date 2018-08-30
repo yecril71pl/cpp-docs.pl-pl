@@ -30,12 +30,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f55f7d676988e43216adbf6e8a0b6c21afd958a3
-ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
+ms.openlocfilehash: d8371ec583bd8b9ee4962445e4c2b6f2fbfa6280
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37884090"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43196965"
 ---
 # <a name="cthreadpool-class"></a>Klasa CThreadPool
 Ta klasa dostarcza puli wątków roboczych, które przetwarzają kolejki elementów roboczych.  
@@ -83,9 +83,9 @@ class CThreadPool : public IThreadPoolConfig
 ## <a name="remarks"></a>Uwagi  
  Wątków w puli są tworzone i niszczone zainicjowany, rozmiaru lub zamknąć puli. Wystąpienie klasy *procesu roboczego* zostanie utworzony na stosie każdego wątku roboczego w puli. Każde wystąpienie będzie funkcjonować przez okres istnienia wątku.  
   
- Natychmiast po utworzeniu wątku *procesu roboczego*:: `Initialize` będzie wywoływana dla obiektu skojarzonego z tym wątkiem. Tuż przed niszczenie wątków *procesu roboczego*:: `Terminate` zostanie wywołana. Musisz zaakceptować obie metody **void\***  argumentu. Wartość tego argumentu jest przekazywany do puli wątków za pośrednictwem *pvWorkerParam* parametru [CThreadPool::Initialize](#initialize).  
+ Natychmiast po utworzeniu wątku *procesu roboczego*::`Initialize` będzie wywoływana dla obiektu skojarzonego z tym wątkiem. Tuż przed niszczenie wątków *procesu roboczego*::`Terminate` zostanie wywołana. Musisz zaakceptować obie metody **void** <strong>\*</strong> argumentu. Wartość tego argumentu jest przekazywany do puli wątków za pośrednictwem *pvWorkerParam* parametru [CThreadPool::Initialize](#initialize).  
   
- Gdy brak dostępnych elementów roboczych w wątkach kolejkę i proces roboczy do pracy, wątek roboczy będzie pobierać element kolejki i wywołania `Execute` metody *procesu roboczego* obiektu dla tego wątku. Trzy elementy są następnie przekazywane do metody: element w kolejce takie same `pvWorkerParam` przekazany do *procesu roboczego*:: `Initialize` i *procesu roboczego*:: `Terminate`i wskaźnik [OVERLAPPED](http://msdn.microsoft.com/library/windows/desktop/ms684342) strukturą używaną dla kolejki portu zakończenia We/Wy.  
+ Gdy brak dostępnych elementów roboczych w wątkach kolejkę i proces roboczy do pracy, wątek roboczy będzie pobierać element kolejki i wywołania `Execute` metody *procesu roboczego* obiektu dla tego wątku. Trzy elementy są następnie przekazywane do metody: element w kolejce takie same `pvWorkerParam` przekazany do *procesu roboczego*:: `Initialize` i *procesu roboczego*:: `Terminate`i wskaźnik [OVERLAPPED](/windows/desktop/api/minwinbase/ns-minwinbase-_overlapped) strukturą używaną dla kolejki portu zakończenia We/Wy.  
   
  *Procesu roboczego* klasa deklaruje typ elementów, które zostaną umieszczone w kolejce w puli wątków, zapewniając element typedef *procesu roboczego*:: `RequestType`. Ten typ musi być w stanie rzutowany do i z typu ULONG_PTR.  
   
@@ -308,7 +308,7 @@ void Shutdown(DWORD dwMaxWait = 0) throw();
  Żądany maksymalny czas (w milisekundach) oczekiwania na wątek zamknąć puli wątków. Jeśli 0 lub wartość nie zostanie podany, ta metoda użyje limit czasu ustawiony [CThreadPool::SetTimeout](#settimeout).  
   
 ### <a name="remarks"></a>Uwagi  
- Ta metoda wysyła żądanie zamknięcia do wszystkich wątków w puli. Jeśli upłynie limit czasu, Metoda ta będzie wywoływać [TerminateThread](http://msdn.microsoft.com/library/windows/desktop/ms686717) dotyczące dowolnego wątku, który nie został zakończony. Ta metoda jest wywoływana automatycznie przez destruktor klasy.  
+ Ta metoda wysyła żądanie zamknięcia do wszystkich wątków w puli. Jeśli upłynie limit czasu, Metoda ta będzie wywoływać [TerminateThread](/windows/desktop/api/processthreadsapi/nf-processthreadsapi-terminatethread) dotyczące dowolnego wątku, który nie został zakończony. Ta metoda jest wywoływana automatycznie przez destruktor klasy.  
   
 ## <a name="see-also"></a>Zobacz też  
  [Interfejs IThreadPoolConfig](../../atl/reference/ithreadpoolconfig-interface.md)   

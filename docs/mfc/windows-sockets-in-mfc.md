@@ -20,38 +20,38 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 84fc25ab6515b22fa647b3cc32833c791b59f2b8
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: d8b497fc7e5e22a654d1f5037a983165fcd5594c
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33385515"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43194984"
 ---
 # <a name="windows-sockets-in-mfc"></a>Windows Sockets w MFC
 > [!NOTE]
->  MFC Windows Sockets 1 obsługuje, ale nie obsługuje [Windows Sockets 2](http://msdn.microsoft.com/library/windows/desktop/ms740673). Windows Sockets 2 najpierw dostarczane z systemem Windows 98, a jest to wersja systemu Windows 2000.  
+>  MFC obsługuje Windows Sockets 1, ale nie obsługuje [Windows Sockets 2](/windows/desktop/WinSock/windows-sockets-start-page-2). Windows Sockets 2 najpierw dostarczane z programem Windows 98 i jest w wersji uwzględniony w systemie Windows 2000.  
   
- MFC udostępnia dwa modele do pisania programów komunikacji sieciowej z usługi Windows Sockets zawartymi w dwóch klas MFC. W tym artykule opisano te modele i dalsze szczegóły MFC gniazda pomocy technicznej. "Gniazda" jest punktem końcowym komunikacji: obiekt, za pomocą których aplikacja komunikuje się z innych aplikacji Windows Sockets w sieci.  
+ MFC udostępnia dwa modele do pisania programów łączności sieciowej z Windows Sockets, zawarte w dwóch klas MFC. W tym artykule opisano te modele i dalsze szczegóły MFC gniazd pomocy technicznej. "Gniazda" jest punktem końcowym komunikacji: obiekt, za pomocą którego aplikacja komunikuje się z innymi aplikacjami Windows Sockets w sieci.  
   
- Aby uzyskać informacje o Windows Sockets, łącznie z wyjaśnieniem koncepcji gniazda, zobacz [Windows Sockets: tła](../mfc/windows-sockets-background.md).  
+ Informacji na temat Windows Sockets, wyjaśnienie pojęcia gniazda, w tym temacie [Windows Sockets: tła](../mfc/windows-sockets-background.md).  
   
 ##  <a name="_core_sockets_programming_models"></a> Modele programowania gniazd  
- Dwa MFC Windows Sockets modele programowania są obsługiwane przez następujące klasy:  
+ Dwa gniazda Windows MFC modeli programowania są obsługiwane przez następujące klasy:  
   
 -   `CAsyncSocket`  
   
-     Ta klasa hermetyzuje interfejsu API systemu Windows Sockets. [CAsyncSocket](../mfc/reference/casyncsocket-class.md) dla programistów, którzy znać programowanie dla sieci i elastyczność programowania bezpośrednio do gniazda interfejsu API, ale również wygodne funkcje wywołania zwrotnego dla powiadomień o zdarzeniach w sieci. Inne niż pakowania sockets w zorientowane obiektowo formularza do użycia w języku C++, tylko dodatkowe warstwy abstrakcji przez ta klasa dostarcza konwertuje komunikatów systemu Windows związanych z gniazda do wywołania zwrotne. Aby uzyskać więcej informacji, zobacz [Windows Sockets: powiadomienia dotyczące gniazd](../mfc/windows-sockets-socket-notifications.md).  
+     Ta klasa hermetyzuje interfejs API Windows Sockets. [CAsyncSocket](../mfc/reference/casyncsocket-class.md) dla programistów, którzy znać programowanie dla sieci i elastyczność programowania bezpośrednio do gniazda interfejsu API, ale również wygodne funkcje wywołania zwrotnego dla powiadomień o zdarzeniach w sieci. Inne niż pakowania gniazda w postaci zorientowane obiektowo, do użytku w języku C++, jedynymi dodatkowymi abstrakcji, który dostarcza tej klasy jest konwersji niektóre komunikaty dotyczące gniazd Windows do wywołania zwrotne. Aby uzyskać więcej informacji, zobacz [Windows Sockets: powiadomienia dotyczące gniazd](../mfc/windows-sockets-socket-notifications.md).  
   
 -   `CSocket`  
   
-     Ta klasa pochodzi od `CAsyncSocket`, dostarcza wyższej abstrakcji poziomu do pracy z gniazda za pomocą MFC [CArchive](../mfc/reference/carchive-class.md) obiektu. Przy użyciu gniazda z archiwum znacznie podobny przy użyciu protokołu serializacji pliku MFC. Dzięki temu łatwiejsze niż w `CAsyncSocket` modelu. [CSocket —](../mfc/reference/csocket-class.md) dziedziczy wiele funkcji Członkowskich z `CAsyncSocket` które hermetyzują interfejsów API usługi Windows Sockets; będą musiały korzystać z niektórych z tych funkcji i zrozumieć zazwyczaj programowania gniazd. Ale `CSocket` zarządza wielu aspektów komunikacji, który będzie musiał wykonać samodzielnie przy użyciu raw interfejsu API albo klasy `CAsyncSocket`. Przede wszystkim `CSocket` umożliwia blokowanie (z przetwarzania w tle komunikatów systemu Windows), co jest niezbędne do działania synchroniczne `CArchive`.  
+     Ta klasa jest pochodną `CAsyncSocket`, dostarcza wyższe poziomu abstrakcji do pracy z gniazda za pomocą MFC [CArchive](../mfc/reference/carchive-class.md) obiektu. Przy użyciu gniazdo archiwum znacznie przypomina przy użyciu protokołu serializacji pliku MCF. To sprawia, że łatwiej niż korzystanie z `CAsyncSocket` modelu. [CSocket](../mfc/reference/csocket-class.md) dziedziczy wiele funkcji elementów członkowskich z `CAsyncSocket` które hermetyzują Windows Sockets API; trzeba będzie korzystać z niektórych z tych funkcji i zrozumieć ogólnie programowania gniazd. Ale `CSocket` zarządza wieloma aspektami komunikacji, który będzie trzeba samodzielnie przy użyciu surowego interfejsu API lub klasy `CAsyncSocket`. Co najważniejsze `CSocket` umożliwia blokowanie (z przetwarzania w tle komunikatów Windows), co jest niezbędne dla operacji synchronicznych `CArchive`.  
   
- Tworzenie i używanie `CSocket` i `CAsyncSocket` obiektów jest opisany w [Windows Sockets: przy użyciu gniazda z archiwami](../mfc/windows-sockets-using-sockets-with-archives.md) i [Windows Sockets: przy użyciu klasy CAsyncSocket](../mfc/windows-sockets-using-class-casyncsocket.md).  
+ Tworzenie i używanie `CSocket` i `CAsyncSocket` obiektów jest opisana w [Windows Sockets: przy użyciu gniazda z archiwami](../mfc/windows-sockets-using-sockets-with-archives.md) i [Windows Sockets: przy użyciu klasy CAsyncSocket](../mfc/windows-sockets-using-class-casyncsocket.md).  
   
-##  <a name="_core_mfc_socket_samples_and_windows_sockets_dlls"></a> Windows Sockets bibliotek DLL  
- Systemy operacyjne Microsoft Windows, podaj Windows Sockets biblioteki dołączanej (dynamicznie DLL). Visual C++ dostarcza odpowiednie pliki nagłówkowe i biblioteki i specyfikację Windows Sockets.  
+##  <a name="_core_mfc_socket_samples_and_windows_sockets_dlls"></a> Windows Sockets biblioteki dll  
+ Systemy operacyjne Microsoft Windows, podaj Windows Sockets bibliotek dołączanych dynamicznie (DLL). Visual C++ dostarcza odpowiednie nagłówki i biblioteki i specyfikacja Windows Sockets.  
   
- Aby uzyskać więcej informacji na temat usługi Windows Sockets zobacz:  
+ Aby uzyskać więcej informacji na temat Windows Sockets zobacz:  
   
 -   [Gniazda systemu Windows: gniazda strumieni](../mfc/windows-sockets-stream-sockets.md)  
   

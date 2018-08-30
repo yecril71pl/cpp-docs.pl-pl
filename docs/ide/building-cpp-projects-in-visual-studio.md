@@ -16,75 +16,75 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a7008e7fe670471301968482fbd4c6c758f0ff5e
-ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
+ms.openlocfilehash: 3ad6ef6ffaa6341e62b09920ab95d50c5720428c
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "33340505"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43195869"
 ---
 # <a name="building-c-projects-in-visual-studio"></a>Kompilowanie projektów C++ w Visual Studio
-W programie Visual Studio zintegrowane środowisko programistyczne (IDE) istnieje kilka sposobów skompiluj całe rozwiązanie lub tylko jednego projektu w nim. Można również zmodyfikować ustawienia kompilacji i określić niestandardowe kroki procesu kompilacji dokonanie efektywniejsze procesie tworzenia aplikacji.  
+W programie Visual Studio zintegrowane środowisko programistyczne (IDE) istnieje kilka sposobów tworzenia całego rozwiązania lub tylko jeden projekt w nim. Można także zmodyfikować ustawienia kompilacji i określić niestandardowych kroków kompilacji się proces tworzenia bardziej wydajne.  
   
- Aby zbudować rozwiązanie, które jest otwarty w programie Visual Studio i zaznaczone w **Eksploratora rozwiązań**, można wykonywać następujące czynności:  
+ Aby utworzenie rozwiązania, w którym jest otwarta w programie Visual Studio i wybranego w **Eksploratora rozwiązań**, możesz:  
   
 -   Na pasku menu wybierz **kompilacji**, **Kompiluj rozwiązanie**.  
   
--   Lub, w **Eksploratora rozwiązań**, otwórz menu skrótów dla rozwiązania, a następnie wybierz pozycję **Kompiluj rozwiązanie**.  
+-   Lub w **Eksploratora rozwiązań**, otwórz menu skrótów dla rozwiązania, a następnie wybierz **Kompiluj rozwiązanie**.  
   
--   Możesz również nacisnąć klawisz F7. (Jest to domyślny skrót klawiaturowy ustawienia środowiska deweloperskiego C/C++).  
+-   Lub naciśnij klawisz F7. (Jest to domyślny skrót klawiaturowy dla ustawień rozwoju języka C/C++).  
   
--   Lub, w [okno polecenia](/visualstudio/ide/reference/command-window) (na pasku menu wybierz **widoku**, **inne okna**, **okno polecenia**), wprowadź `Build.BuildSolution`.  
+-   Lub w [okna polecenia](/visualstudio/ide/reference/command-window) (na pasku menu wybierz **widoku**, **Windows inne**, **okna polecenia**), wprowadź `Build.BuildSolution`.  
   
--   Lub, w [Szybkie uruchamianie](/visualstudio/ide/reference/quick-launch-environment-options-dialog-box) wprowadź `build build solution`.  
+-   Lub w [Szybkie uruchamianie](/visualstudio/ide/reference/quick-launch-environment-options-dialog-box) wprowadź `build build solution`.  
   
- Aby utworzyć projekt, który wybrano w **Eksploratora rozwiązań**, można wykonywać następujące czynności:  
+ Aby skompilować projekt, który wybrano w **Eksploratora rozwiązań**, możesz:  
   
 -   Na pasku menu wybierz **kompilacji**, **kompilacji \<Nazwa projektu >**.  
   
--   Lub, w **Eksploratora rozwiązań**, otwórz menu skrótów projektu, a następnie wybierz pozycję **kompilacji**.  
+-   Lub w **Eksploratora rozwiązań**, otwórz menu skrótów dla projektu, a następnie wybierz **kompilacji**.  
   
--   Lub, w oknie wiersza polecenia (na pasku menu wybierz **widoku**, **inne okna**, **okno polecenia**), wprowadź `Build.BuildOnlyProject`.  
+-   Lub, w oknie wiersza polecenia (na pasku menu wybierz **widoku**, **Windows inne**, **okna polecenia**), wprowadź `Build.BuildOnlyProject`.  
   
--   W polu Szybkie uruchamianie wprowadzić `build project only build only <project name>`.  
+-   Lub, w polu Szybkie uruchamianie wpisz `build project only build only <project name>`.  
   
- Podczas tworzenia aplikacji Visual C++ w programie Visual Studio można modyfikować wiele ustawień kompilacji w oknie dialogowym stron właściwości projektu. Aby uzyskać informacje na temat ustawiania właściwości projektu, zobacz [Praca z właściwościami projektu](../ide/working-with-project-properties.md).  
+ W przypadku tworzenia aplikacji Visual C++ w programie Visual Studio, można modyfikować wiele ustawień kompilacji w oknie dialogowym strony właściwości projektu. Aby uzyskać informacje o sposobie ustawiania właściwości projektu, zobacz [Praca z właściwościami projektu](../ide/working-with-project-properties.md).  
   
- Na przykład sposobu tworzenia, kompilacji i debugowania projektu C++ za pomocą środowiska IDE, zobacz [wskazówki: eksplorowanie środowiska IDE programu Visual Studio z C++](/visualstudio/ide/getting-started-with-cpp-in-visual-studio). Na przykład o używaniu środowiska IDE do kompilacji C + +/ CLR projektu, zobacz [wskazówki: kompilowanie programu C++ przeznaczonego dla CLR w Visual Studio](../ide/walkthrough-compiling-a-cpp-program-that-targets-the-clr-in-visual-studio.md). Na przykład o używaniu środowiska IDE umożliwiające utworzenie aplikacji środowiska wykonawczego systemu Windows, temacie [tworzenie pierwszej aplikacji środowiska wykonawczego systemu Windows w języku C++](http://msdn.microsoft.com/library/windows/apps/hh974580.aspx).  
+ Na przykład o tym, jak używać IDE do tworzenia, kompilowania i debugowania projektu w języku C++, zobacz [Instruktaż: Zapoznaj się z programu Visual Studio IDE, za pomocą języka C++](/visualstudio/ide/getting-started-with-cpp-in-visual-studio). Na przykład o tym, jak używać IDE do tworzenia w języku C + +/ CLR projektu, zobacz [wskazówki: kompilowanie programu C++ przeznaczonego dla CLR w programie Visual Studio](../ide/walkthrough-compiling-a-cpp-program-that-targets-the-clr-in-visual-studio.md). Na przykład o tym, jak używać IDE do tworzenia aplikacji środowiska wykonawczego Windows, zobacz [tworzenie pierwszej aplikacji przy użyciu języka C++ środowiska wykonawczego Windows](https://msdn.microsoft.com/library/windows/apps/hh974580.aspx).  
   
- Aby przeczytać więcej informacji o sposobie tworzenia, zmodyfikuj ustawienia kompilacji i określić niestandardowe kroki procesu kompilacji, zobacz następujące artykuły.  
+ Aby przeczytać więcej na temat sposobu tworzenia, modyfikowania ustawień kompilacji i określ niestandardowe kroki kompilacji, zobacz następujące artykuły.  
   
 ## <a name="in-this-section"></a>W tej sekcji  
  [Ogólne informacje o niestandardowych krokach budowania lub zdarzeniach kompilacji](../ide/understanding-custom-build-steps-and-build-events.md)  
- Opisuje sposób dostosowywania procesu kompilacji w zintegrowane środowisko programistyczne.  
+ Opisuje sposób dostosowywania procesu kompilacji w zintegrowanym środowisku programistycznym.  
   
  [Typowe makra dla właściwości i poleceń kompilacji](../ide/common-macros-for-build-commands-and-properties.md)  
- Wyświetla listę makra, które są dostępne, gdzie parametry są akceptowane.  
+ Wyświetla listę makra, które są dostępne, gdzie ciągi są akceptowane.  
   
  [Konstruowanie projektów zewnętrznych](../ide/building-external-projects.md)  
- W tym artykule omówiono kompilowania projektów, korzystających z urządzeń poza zintegrowane środowisko programistyczne.  
+ W tym artykule omówiono kompilowanie projektów, które używają obiektów poza zintegrowanym środowisku programistycznym.  
   
  [Pliki projektu](../ide/project-files.md)  
  Przedstawia informacje o strukturze XML w pliku .vcxproj.  
   
 ## <a name="related-sections"></a>Sekcje pokrewne  
- [VC ++ katalogów, projektów, opcje — Okno dialogowe](vcpp-directories-property-page.md)  
- (Tylko dla projektów MSBuild) Omówiono sposób zmodyfikować ścieżkę wyszukiwania dla plików wykonywalnych, Dołącz pliki, pliki bibliotek i pliki kodu źródłowego podczas kompilacji.  
+ [VC ++ katalogi, projekty, okno dialogowe Opcje](vcpp-directories-property-page.md)  
+ (Tylko dla projektów programu MSBuild) W tym artykule omówiono, jak zmodyfikować ścieżkę wyszukiwania dla plików wykonywalnych, podając pliki, pliki biblioteki i pliki kodu źródłowego podczas kompilacji.  
   
  [Kompilowanie i tworzenie](/visualstudio/ide/compiling-and-building-in-visual-studio)  
- Zawiera informacje na temat tworzenia w programie Visual Studio.  
+ Zawiera informacje dotyczące tworzenia aplikacji w programie Visual Studio.  
   
  [Kompilowanie programów C/C++](../build/building-c-cpp-programs.md)  
- Zawiera łącza do tematów opisujących kompilowania programu z wiersza polecenia lub zintegrowane środowisko programistyczne Visual Studio.  
+ Zawiera łącza do tematów opisujących, tworzenie programu z wiersza polecenia lub zintegrowanego środowiska projektowego programu Visual Studio.  
   
  [Dokumentacja kompilacji w języku C/C++](../build/reference/c-cpp-building-reference.md)  
- Zawiera łącza do omówienie tworzenia programów w języku C++, kompilatora i konsolidatora, narzędzi i opcji dodatkowych kompilacji.  
+ Zawiera łącza do przeglądu w procesie tworzenia programów w języku C++, kompilatora i konsolidatora, narzędzi i opcji dodatkowych kompilacji.  
   
  [Uaktualnianie projektów ze starszych wersji programu Visual C++](../porting/upgrading-projects-from-earlier-versions-of-visual-cpp.md)  
- Zawiera łącza do tematów obejmujących problemów dotyczących uaktualniania projektu C++ do nowszej wersji zestawu narzędzi kompilatora.  
+ Zawiera łącza do tematów obejmujących problemów dotyczących uaktualniania projektu C++ na nowsze wersje zestawu narzędzi kompilatora.  
   
 [Przewodnik po przenoszeniu i uaktualnianiu pakietu Visual C++](../porting/visual-cpp-porting-and-upgrading-guide.md)  
-  Szczegółowe informacje o sposobie uaktualniania aplikacji C++, które zostały utworzone we wcześniejszych wersjach programu Visual Studio i przeprowadzanie migracji aplikacji, które zostały utworzone przy użyciu narzędzia innego niż Visual Studio.  
+  Szczegółowe informacje o sposobie uaktualniania aplikacji w języku C++, które zostały utworzone we wcześniejszych wersjach programu Visual Studio, a także jak przeprowadzić migrację aplikacji, które zostały utworzone przy użyciu narzędzi innych niż program Visual Studio.  
   
 ## <a name="see-also"></a>Zobacz też  
  [Aplikacje uniwersalne systemu Windows (C++)](../windows/universal-windows-apps-cpp.md)

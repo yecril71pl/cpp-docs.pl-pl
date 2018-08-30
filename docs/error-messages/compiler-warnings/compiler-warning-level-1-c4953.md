@@ -1,7 +1,7 @@
 ---
-title: Kompilatora (poziom 1) ostrzeżenie C4953 | Dokumentacja firmy Microsoft
+title: Kompilator ostrzeżenie (poziom 1) C4953 | Dokumentacja firmy Microsoft
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 08/27/2018
 ms.technology:
 - cpp-diagnostics
 ms.topic: error-reference
@@ -16,18 +16,19 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0af5a16ebbf7851eceb2f2cd355f953b14c4bd38
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 9e53808d4ad97bad4eccdf81b0a863277f8f7796
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33293065"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43194635"
 ---
-# <a name="compiler-warning-level-1-c4953"></a>Kompilator C4953 ostrzegawcze (poziom 1)
-Element Wbudowywany "function" został wyedytowany od profil, który zebrania danych profilu dane nie zostały użyte  
-  
- Korzystając z [/LTCG:PGUPDATE](../../build/reference/ltcg-link-time-code-generation.md), kompilator wykryto moduł wejściowy kompilowanej po `/LTCG:PGINSTRUMENT` i ma funkcję (***funkcja***) który był edytowany i gdzie zidentyfikowanych uruchamia istniejącego testu Funkcja jako potencjalny ze śródwierszowaniem. Jednak w związku z tym ponownej kompilacji modułu, funkcja nie będzie już kandydatem do ze śródwierszowaniem.  
-  
- To ostrzeżenie ma charakter informacyjny. Aby usunąć to ostrzeżenie, uruchom `/LTCG:PGINSTRUMENT`, powtórz test wszystkie działa, a następnie uruchom `/LTCG:PGOPTIMIZE`.  
-  
- To ostrzeżenie będzie zastąpiony z powodu błędu, jeśli `/LTCG:PGOPTIMIZE` została użyta.
+# <a name="compiler-warning-level-1-c4953"></a>Kompilator ostrzeżenie (poziom 1) C4953
+
+> Wbudowany "*funkcja*" został wyedytowany od profilu dane zostały zebrane, dane profilu nieużywane
+
+Korzystając z [/LTCG:PGUPDATE](../../build/reference/ltcg-link-time-code-generation.md), kompilator wykrył moduł wejściowy nie kompilowanej po `/LTCG:PGINSTRUMENT` i ma funkcję (*funkcja*), był edytowany i którym wskazany działa istniejącego testu pełnią kandydatem do wbudowanie. Jednak w wyniku o konieczności ponownego kompilowania modułu, funkcja nie będzie już kandydatem do wbudowanie.
+
+To ostrzeżenie ma charakter informacyjny. Aby rozwiązać tego ostrzeżenia, należy uruchomić `/LTCG:PGINSTRUMENT`, powtórz wszystkie testu działa, a następnie uruchom `/LTCG:PGOPTIMIZE`.
+
+To ostrzeżenie zostanie zamienione błąd Jeśli `/LTCG:PGOPTIMIZE` została użyta.

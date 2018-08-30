@@ -19,31 +19,31 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 94f9dfa441fd98a91b15478eadc10eaa39a08687
-ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
+ms.openlocfilehash: ff661394bd3b1ea9d01e8c1e1c29f747135f7aa8
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "33328854"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43194378"
 ---
 # <a name="web-references-property-page"></a>Strona właściwości Odwołania sieci Web
-**Odwołania sieci Web** strony właściwości określa sposób generowania klasy serwera proxy usługi XML sieci Web. Klasy serwera proxy usługi XML sieci Web zostanie wygenerowany, jeśli możesz dodać odwołania sieci web do projektu. Zobacz [Dodaj odwołanie sieci Web](http://msdn.microsoft.com/en-us/bdf05776-c591-40af-bfd7-e1e2aa1e87b5) Aby uzyskać więcej informacji.  
+**Odwołania sieci Web** strona właściwości określa sposób generowania klasy serwera proxy usługi sieci Web XML. Jeśli dodasz odwołanie sieci web do projektu, zostaną wygenerowane klasy serwera proxy usługi sieci Web XML. Zobacz [Dodaj odwołanie sieci Web](https://msdn.microsoft.com/bdf05776-c591-40af-bfd7-e1e2aa1e87b5) Aby uzyskać więcej informacji.  
   
- **Odwołania sieci Web** strona zawiera następujące właściwości:  
+ **Odwołania sieci Web** strona właściwości zawiera następujące właściwości:  
   
  **Plik wyjściowy**  
- Nazwa pliku zawiera klasy serwera proxy usługi XML sieci Web.  
+ Nazwa pliku zawiera klasy serwera proxy usługi sieci Web XML.  
   
- **Pomiń Baner startowy**  
- Nie wyświetlaj transparentu narzędzia języka opisu usługi sieci Web (Wsdl.exe).  
+ **Pomijaj transparent startowy**  
+ Nie wyświetla transparentu narzędzia języka opisu usługi sieci Web (Wsdl.exe).  
   
  **Namespace**  
- Określa nazwę serwera proxy sieci web wygenerowany.  
+ Określa nazwę serwera proxy wygenerowanego sieci web.  
   
  **Dodatkowe informacje**  
  Określa dodatkowe biblioteki DLL przywoływany przez serwer proxy biblioteki DLL.  
   
- Aby uzyskać informacje dotyczące dostępu do **odwołania sieci Web** strony właściwości, zobacz [Praca z właściwościami projektu](../ide/working-with-project-properties.md).  
+ Aby uzyskać informacje dotyczące uzyskiwania dostępu do **odwołania sieci Web** strony właściwości, zobacz [Praca z właściwościami projektu](../ide/working-with-project-properties.md).  
   
 ## <a name="see-also"></a>Zobacz też  
  [Strony właściwości](../ide/property-pages-visual-cpp.md)

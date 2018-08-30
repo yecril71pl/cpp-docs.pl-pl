@@ -1,7 +1,7 @@
 ---
-title: Kompilatora (poziom 4) ostrzeżenie C4559 | Dokumentacja firmy Microsoft
+title: Kompilator ostrzeżenie (poziom 4) C4559 | Dokumentacja firmy Microsoft
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 08/27/2018
 ms.technology:
 - cpp-diagnostics
 ms.topic: error-reference
@@ -16,23 +16,28 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c853fa55482604d97c29653fadb06b0afdd44977
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 4d5743b33f62aa954c3765b729ab5c0297b20e32
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33295353"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43195579"
 ---
-# <a name="compiler-warning-level-4-c4559"></a>Kompilator C4559 ostrzegawcze (poziom 4)
-"Funkcja": zmiana definicji; __declspec(modifier) zyski — funkcja  
-  
- Funkcja została ponownie zdefiniować lub ponownie zadeklarować i drugi deklaracji lub definicji dodane __**declspec** modyfikator (***modyfikator***). To ostrzeżenie ma charakter informacyjny. Aby usunąć to ostrzeżenie, usuń jedną z definicji.  
-  
- Poniższy przykład generuje C4559:  
-  
-```  
-// C4559.cpp  
-// compile with: /W4 /LD  
-void f();  
-__declspec(noalias) void f();   // C4559  
+# <a name="compiler-warning-level-4-c4559"></a>Kompilator ostrzeżenie (poziom 4) C4559
+
+> "*funkcja*": zmiana definicji; __declspec zyski — funkcja (*modyfikator*)
+
+## <a name="remarks"></a>Uwagi
+
+Funkcja została zdefiniowana ponownie lub ponownie zadeklarowany, i dodany drugi definicji lub deklaracji **__declspec** modyfikator (*modyfikator*). To ostrzeżenie ma charakter informacyjny. Aby usunąć to ostrzeżenie, usuń jedną z definicji.
+
+## <a name="example"></a>Przykład
+
+Poniższy przykład spowoduje wygenerowanie C4559:
+
+```cpp
+// C4559.cpp
+// compile with: /W4 /LD
+void f();
+__declspec(noalias) void f();   // C4559
 ```
