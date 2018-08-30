@@ -27,12 +27,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1f6fb0cc519b7c03b84122b24e23e4ea9b49bc71
-ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
+ms.openlocfilehash: 09cc987b583bdddd78604f75bd07bc9e2743a1dc
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37880706"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43206644"
 ---
 # <a name="cdialogimpl-class"></a>Cdialogimpl — klasa
 Ta klasa dostarcza metody do tworzenia modalne lub niemodalne okno dialogowe.  
@@ -102,7 +102,7 @@ template <class T,
 |Tworzenie formantów|[ALT — samouczek](../../atl/active-template-library-atl-tutorial.md)|  
 |Za pomocą okien dialogowych w ATL|[Klasy okien ATL](../../atl/atl-window-classes.md)|  
 |Kreator projektu ATL|[Tworzenie projektu ATL](../../atl/reference/creating-an-atl-project.md)|  
-|Okna dialogowe|[Okna dialogowe](http://msdn.microsoft.com/library/windows/desktop/ms632588) i kolejnych tematów w zestawie Windows SDK|  
+|Okna dialogowe|[Okna dialogowe](https://msdn.microsoft.com/library/windows/desktop/ms632588) i kolejnych tematów w zestawie Windows SDK|  
   
 ## <a name="requirements"></a>Wymagania  
  **Nagłówek:** atlwin.h  
@@ -126,7 +126,7 @@ HWND Create(
  [in] Dojście do okna właściciela.  
   
  **Prostokąt &** *rect*  
- [in] A [Prostokąt](http://msdn.microsoft.com/library/windows/desktop/dd162897) struktury, określając rozmiar i położenie okna dialogowego.  
+ [in] A [Prostokąt](https://msdn.microsoft.com/library/windows/desktop/dd162897) struktury, określając rozmiar i położenie okna dialogowego.  
   
  *dwInitParam*  
  [in] Określa wartość do przekazania do okna dialogowego w *lParam* parametr / / Złap wiadomości.  
@@ -199,7 +199,7 @@ INT_PTR DoModal(
   
 ### <a name="parameters"></a>Parametry  
  *hWndParent*  
- [in] Dojście do okna właściciela. Wartość domyślna to wartość zwracana przez [GetActiveWindow](http://msdn.microsoft.com/library/windows/desktop/ms646292) funkcję Win32.  
+ [in] Dojście do okna właściciela. Wartość domyślna to wartość zwracana przez [GetActiveWindow](https://msdn.microsoft.com/library/windows/desktop/ms646292) funkcję Win32.  
   
  *dwInitParam*  
  [in] Określa wartość do przekazania do okna dialogowego w *lParam* parametr / / Złap wiadomości.  

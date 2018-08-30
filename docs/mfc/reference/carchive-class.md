@@ -62,12 +62,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 81e76347e197469e4e4fa490d4ddfc42ef0fbd71
-ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
+ms.openlocfilehash: b76525c6e10284109952ede7f5e7c70132684d75
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37338085"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43210967"
 ---
 # <a name="carchive-class"></a>CArchive — klasa
 Umożliwia zapisanie złożonej sieci obiektów w stałą postać binarną (zazwyczaj pamięć dyskowa), która utrzymuje się po usunięciu tych obiektów.  
@@ -561,7 +561,7 @@ CRuntimeClass* ReadClass(
   
  Należy użyć klasy środowiska uruchomieniowego [DECLARE_SERIAL](../../mfc/reference/run-time-object-model-services.md#declare_serial) i [IMPLEMENT_SERIAL](../../mfc/reference/run-time-object-model-services.md#implement_serial); w przeciwnym razie `ReadClass` zgłosi [CNotSupportedException](../../mfc/reference/cnotsupportedexception-class.md).  
   
- Jeśli *pSchema* ma wartość NULL, schematu przechowywanych klasy może być pobierany przez wywołanie [CArchive::GetObjectSchema](#getobjectschema); w przeciwnym razie **\**** pSchema* będzie zawiera schemat klasy środowiska wykonawczego, która została wcześniej zapisana.  
+ Jeśli *pSchema* ma wartość NULL, schematu przechowywanych klasy może być pobierany przez wywołanie [CArchive::GetObjectSchema](#getobjectschema); w przeciwnym razie <strong>\*</strong>  *pSchema* będzie zawierać schematu klasy środowiska wykonawczego, która została wcześniej zapisana.  
   
  Możesz użyć [SerializeClass](#serializeclass) zamiast `ReadClass`, która obsługuje Odczyt i zapis dla odwołania do klasy.  
   

@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4ef7551047449167ff60372da146618fbdc4e564
-ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
+ms.openlocfilehash: 95b0931438afe8ff151d3c9f6c4727013df79478
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39464165"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43209345"
 ---
 # <a name="varianttvariantt"></a>_variant_t::_variant_t
 **Microsoft Specific**  
@@ -210,7 +210,7 @@ _variant_t(
   
 -   **_variant_t — (WARIANTU &***varSrc***)** tworzy `_variant_t` obiektu na podstawie kopii `VARIANT` obiektu.     Typ wariantu są zachowywane.  
   
--   **_variant_t — (WARIANTU\****pVarSrc***)** tworzy `_variant_t` obiektu na podstawie kopii `VARIANT` obiektu.     Typ wariantu są zachowywane.  
+-   **_variant_t — (WARIANTU**<strong>\*</strong>*pVarSrc***)** tworzy `_variant_t` obiektu na podstawie kopii `VARIANT` obiektu.     Typ wariantu są zachowywane.  
   
 -   **_variant_t — (_variant_t &***var_t_Src***)** tworzy `_variant_t` obiektu z innego `_variant_t` obiektu.     Typ wariantu są zachowywane.  
   
@@ -228,15 +228,15 @@ _variant_t(
   
 -   **_variant_t — (_bstr_t &**`bstrSrc`**)** tworzy `_variant_t` typu VT_BSTR z `_bstr_t` obiektu.     Nowy `BSTR` jest przydzielony.  
   
--   **_variant_t — (wchar_t \***  *wstrSrc***)** tworzy `_variant_t` obiektu typu VT_BSTR z ciągu Unicode.   Nowy `BSTR` jest przydzielony.  
+-   **_variant_t — (wchar_t** <strong>\*</strong> *wstrSrc***)** tworzy `_variant_t` obiektu typu VT_BSTR z ciągu Unicode.   Nowy `BSTR` jest przydzielony.  
   
--   **_variant_t — (char\***`strSrc`**)** tworzy `_variant_t` obiektu typu VT_BSTR z ciągu.     Nowy `BSTR` jest przydzielony.  
+-   **_variant_t — (char**<strong>\*</strong>`strSrc`**)** tworzy `_variant_t` obiektu typu VT_BSTR z ciągu.     Nowy `BSTR` jest przydzielony.  
   
 -   **_variant_t — (wartość logiczna**`bSrc`**)** tworzy `_variant_t` typu VT_BOOL, z **bool** wartość.      
   
--   **_variant_t — (IUnknown\***  `pIUknownSrc` **, bool**`fAddRef`**= true)** tworzy `_variant_t` obiektu typu VT_UNKNOWN ze wskaźnika interfejsu COM .       Jeśli `fAddRef` jest **true**, następnie `AddRef` jest wywoływana we wskaźniku interfejsu podany w celu dopasowania wywołania do `Release` , nastąpi po `_variant_t` niszczony jest obiekt. Aby wywołać to `Release` na wskaźnik interfejsu podany. Jeśli `fAddRef` jest **false**, ten konstruktor przejmuje na własność wskaźnika interfejsu podany; nie należy wywoływać metody `Release` na wskaźnik interfejsu podany.  
+-   **_variant_t — (IUnknown** <strong>\*</strong> `pIUknownSrc` **, bool**`fAddRef`**= true)** tworzy `_variant_t` typ obiektu: VT_UNKNOWN ze wskaźnika interfejsu COM.       Jeśli `fAddRef` jest **true**, następnie `AddRef` jest wywoływana we wskaźniku interfejsu podany w celu dopasowania wywołania do `Release` , nastąpi po `_variant_t` niszczony jest obiekt. Aby wywołać to `Release` na wskaźnik interfejsu podany. Jeśli `fAddRef` jest **false**, ten konstruktor przejmuje na własność wskaźnika interfejsu podany; nie należy wywoływać metody `Release` na wskaźnik interfejsu podany.  
   
--   **_variant_t — (IDispatch\***  `pDispSrc` **, bool**`fAddRef`**= true)** tworzy `_variant_t` obiektu typu VT_DISPATCH za pomocą interfejsu COM wskaźnik.       Jeśli `fAddRef` jest **true**, następnie `AddRef` jest wywoływana we wskaźniku interfejsu podany w celu dopasowania wywołania do `Release` , nastąpi po `_variant_t` niszczony jest obiekt. Aby wywołać to `Release` na wskaźnik interfejsu podany. Jeśli `fAddRef` jest **false**, ten konstruktor przejmuje na własność wskaźnika interfejsu podany; nie należy wywoływać metody `Release` na wskaźnik interfejsu podany.  
+-   **_variant_t — (IDispatch** <strong>\*</strong> `pDispSrc` **, bool**`fAddRef`**= true)** tworzy `_variant_t` obiektu Wpisz VT_DISPATCH ze wskaźnika interfejsu COM.       Jeśli `fAddRef` jest **true**, następnie `AddRef` jest wywoływana we wskaźniku interfejsu podany w celu dopasowania wywołania do `Release` , nastąpi po `_variant_t` niszczony jest obiekt. Aby wywołać to `Release` na wskaźnik interfejsu podany. Jeśli `fAddRef` jest **false**, ten konstruktor przejmuje na własność wskaźnika interfejsu podany; nie należy wywoływać metody `Release` na wskaźnik interfejsu podany.  
   
 -   **_variant_t — (dziesiętna &**`decSrc`**)** tworzy `_variant_t` typu VT_DECIMAL z `DECIMAL` wartości.      
   

@@ -19,12 +19,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c2648d3628b8edd8b864dcf69dcfa7acb6d07339
-ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
+ms.openlocfilehash: 3a1470c544e624de4ef9fb570859dca9b282edde
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/01/2018
-ms.locfileid: "39406666"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43208069"
 ---
 # <a name="new-and-delete-operators"></a>new i delete — operatory
 
@@ -55,7 +55,7 @@ Dwa zakresy dla **nowy operator** funkcje są opisane w poniższej tabeli.
 |**:: nowy operator**|Global|  
 |*Nazwa klasy* **:: nowy operator**|Class|  
   
- Pierwszy argument **nowy operator** musi być typu `size_t` (typ zdefiniowany w \<stddef.h >), a typ zwracany to zawsze **void \*** .  
+ Pierwszy argument **nowy operator** musi być typu `size_t` (typ zdefiniowany w \<stddef.h >), a typ zwracany to zawsze **void** <strong>\*</strong>.  
   
  Globalna **nowy operator** funkcja jest wywoływana, gdy **nowe** operator jest używany do alokowania obiektów typów wbudowanych, obiektów typu klasy, które nie zawierają zdefiniowanych przez użytkownika **nowy operator** funkcje i tablic dowolnego typu. Gdy **nowe** operator jest używany do alokowania obiektów typu klasy gdzie **nowy operator** jest zdefiniowany, tej klasy **nowy operator** jest wywoływana.  
   

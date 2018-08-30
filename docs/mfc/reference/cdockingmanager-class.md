@@ -170,12 +170,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 87fcaf93823e504f3631d50de4f981ae30e882e9
-ms.sourcegitcommit: 76fd30ff3e0352e2206460503b61f45897e60e4f
+ms.openlocfilehash: e61b6a9b967cc62bf8ba028783a019b8ecda7878
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/13/2018
-ms.locfileid: "39027829"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43200273"
 ---
 # <a name="cdockingmanager-class"></a>Klasa CDockingManager
 Implementuje podstawową funkcję, która kontroluje układ dokowania w oknie głównym ramki.  
@@ -379,7 +379,7 @@ virtual void AdjustDockingLayout(HDWP hdwp = NULL);
   
 ### <a name="parameters"></a>Parametry  
  [in] *hdwp*  
- Określa strukturę położenie okna odroczone. Aby uzyskać więcej informacji, zobacz [typy danych Windows](http://msdn.microsoft.com/library/windows/desktop/aa383751).  
+ Określa strukturę położenie okna odroczone. Aby uzyskać więcej informacji, zobacz [typy danych Windows](/windows/desktop/WinProg/windows-data-types).  
   
 ### <a name="remarks"></a>Uwagi  
   
@@ -924,7 +924,7 @@ CSmartDockingManager* GetSmartDockingManager();
 ```  
   
 ### <a name="return-value"></a>Wartość zwracana  
- Wskaźnik do [smart Menedżer dokowania](http://msdn.microsoft.com/f537a1a6-fb9e-41d7-952f-0f25d5ee7534).  
+ Wskaźnik do [smart Menedżer dokowania](https://msdn.microsoft.com/f537a1a6-fb9e-41d7-952f-0f25d5ee7534).  
   
 ##  <a name="getsmartdockingmanagerpermanent"></a>  CDockingManager::GetSmartDockingManagerPermanent  
  Pobiera wskaźnik do inteligentnego Menedżera dokowania.  

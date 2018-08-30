@@ -16,19 +16,19 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 93d37b49a949ab29e0ae888d9c961da086ee4ca4
-ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
+ms.openlocfilehash: 4369fe312669f75eb8217be7a6a09c4287f7cc8b
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/25/2018
-ms.locfileid: "36928599"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43210716"
 ---
 # <a name="image-overlays-in-image-lists"></a>Nakładki obrazów na listach obrazów
-Każdy listy obrazów ([CImageList](../mfc/reference/cimagelist-class.md)) zawiera listę obrazów do użycia jako maski nakładki. "Maska nakładki" jest rysowany jako przezroczysty za pośrednictwem innego obrazu obrazu. Żadnego obrazu może służyć jako maska nakładki. Można określić maksymalnie cztery maski nakładki na listy obrazów.  
+Każdy z listy obrazów ([CImageList](../mfc/reference/cimagelist-class.md)) zawiera listę obrazów do użycia jako nakładka maski. "Maska nakładki" jest obrazem rysowane w sposób niewidoczny dla użytkownika za pośrednictwem innego obrazu. Dowolny obraz może służyć jako maski nakładki. Można określić maksymalnie cztery maski nakładki na listy obrazów.  
   
- Dodaj indeks obrazu do listy maski nakładki za pomocą [SetOverlayImage](../mfc/reference/cimagelist-class.md#setoverlayimage) funkcji członkowskiej, indeks obrazu i indeks maski nakładki. Należy pamiętać, że indeksy masek nakładki są oparte na jeden zamiast liczony od zera.  
+ Dodaj indeks obrazu do listy maski nakładki przy użyciu [SetOverlayImage](../mfc/reference/cimagelist-class.md#setoverlayimage) funkcja elementu członkowskiego, indeks obrazu i indeks maski nakładki. Należy pamiętać, że indeksy masek nakładki są oparte na jeden, a nie od zera.  
   
- Rysuj maski nakładki nad obrazu przy użyciu jednego wywołania `Draw`. Parametry zawierają indeks obrazu do rysowania i indeksu maski nakładki. Należy użyć [INDEXTOOVERLAYMASK](http://msdn.microsoft.com/library/windows/desktop/bb761408) makra, aby określić indeks maska nakładki. Można również określić obrazu nakładki podczas wywoływania metody [DrawIndirect](../mfc/reference/cimagelist-class.md#drawindirect) funkcję elementu członkowskiego.  
+ Rysowanie maski nakładki na obrazie za pomocą jednego wywołania do `Draw`. Parametry zawierają indeks obrazu do rysowania i indeks maski nakładki. Należy użyć [INDEXTOOVERLAYMASK](/windows/desktop/api/commctrl/nf-commctrl-indextooverlaymask) makra, aby określić indeks maska nakładki. Należy również wskazać obraz nakładki podczas wywoływania [DrawIndirect](../mfc/reference/cimagelist-class.md#drawindirect) funkcja elementu członkowskiego.  
   
 ## <a name="see-also"></a>Zobacz też  
  [Korzystanie z CImageList](../mfc/using-cimagelist.md)   

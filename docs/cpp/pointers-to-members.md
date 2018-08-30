@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7c610d7f72c76e8c761de0cb01c42c8d6006e4b7
-ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
+ms.openlocfilehash: e137f0f41c94473d47985ceb848eeef7c7c9ca08
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/01/2018
-ms.locfileid: "39407783"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43208519"
 ---
 # <a name="pointers-to-members"></a>Wskaźniki do elementów członkowskich
 Deklaracje wskaźników do elementów członkowskich są specjalne przypadki deklaracje wskaźników.  Są deklarowane za pomocą następującej sekwencji:  
@@ -45,7 +45,7 @@ Deklaracje wskaźników do elementów członkowskich są specjalne przypadki dek
   - Opcjonalny modyfikator właściwy dla Microsoft. Aby uzyskać więcej informacji, zobacz [Modyfikatory specyficzne dla Microsoft](../cpp/microsoft-specific-modifiers.md).  
 1. Kwalifikowana nazwa klasy zawierającej członków do będzie wskazywał na.  
   - :: Operator.  
-  - **\*** Operatora.  
+  - <strong>\*</strong> Operatora.  
   - Opcjonalnie **const** i/lub **volatile** specyfikatorów.  
   - Identyfikator nazwy wskaźnika do składowej.  
   
@@ -101,7 +101,7 @@ strcpy_s( pwChildWindow->*pwCaption, cUntitledLen, szUntitled );
 (pwChildWindow->*pwCaption)[cUntitledLen - 1] = '2'; //same as //pwChildWindow->szWinCaption[cUntitledLen - 1] = '2';  
 ```  
   
- Różnica między **.\***  i **-> \*** operatorów (operatory wskaźników do elementów członkowskich) jest to, że **.\***  operator wybiera elementy członkowskie danego obiektu lub odwołanie do obiektu, podczas gdy **-> \*** operator wybiera elementy członkowskie za pomocą wskaźnika. (Aby uzyskać więcej informacji o tych operatorów, zobacz [wyrażenia zawierające operatory wskaźników do elementów członkowskich](../cpp/pointer-to-member-operators-dot-star-and-star.md).)  
+ Różnica między **.** <strong>\*</strong> i **->** <strong>\*</strong> operatorów (operatory wskaźników do elementów członkowskich) jest to, że **.** <strong>\*</strong> operator wybiera elementy członkowskie danego obiektu lub odwołanie do obiektu, podczas gdy **->** <strong>\*</strong> — operator wybiera elementy członkowskie za pomocą wskaźnika. (Aby uzyskać więcej informacji o tych operatorów, zobacz [wyrażenia zawierające operatory wskaźników do elementów członkowskich](../cpp/pointer-to-member-operators-dot-star-and-star.md).)  
   
  Wynik operatory wskaźników do elementów członkowskich jest typ elementu członkowskiego — w tym przypadku `char *`.  
   
@@ -123,7 +123,7 @@ strcat_s( szCaptionBase, sizeOfBuffer, " [View 1]" );
 ```  
   
 ## <a name="restrictions-on-pointers-to-members"></a>Ograniczenia dotyczące wskaźników do elementów członkowskich  
- Adres statyczny element członkowski nie jest wskaźnik do elementu członkowskiego. Jest to zwykły wskaźnik do jednego wystąpienia statycznego elementu członkowskiego. Ponieważ istnieje tylko jedno wystąpienie statyczny element członkowski, dla wszystkich obiektów klasy danego zwykłych address-of **(&)** i wyłuskania **(\*)** można używać operatorów.  
+ Adres statyczny element członkowski nie jest wskaźnik do elementu członkowskiego. Jest to zwykły wskaźnik do jednego wystąpienia statycznego elementu członkowskiego. Ponieważ istnieje tylko jedno wystąpienie statyczny element członkowski, dla wszystkich obiektów klasy danego zwykłych address-of (**&**) i wyłuskania (<strong>\*</strong>) można używać operatorów.  
   
 ## <a name="pointers-to-members-and-virtual-functions"></a>Wskaźniki do elementów członkowskich i funkcji wirtualnych  
  Wywoływanie funkcji wirtualnej za pomocą funkcji wskaźnika do składowej działa tak, jakby funkcja jakby została ona bezpośrednio wywołana; poprawnej funkcji są wyszukiwane w tabeli v i wywołana.  

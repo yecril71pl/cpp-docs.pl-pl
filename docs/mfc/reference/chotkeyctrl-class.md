@@ -32,12 +32,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8151b69b92566f45766c4ffa25d40bb5f077c606
-ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
+ms.openlocfilehash: 4a7f5cee986ad82790870bfa7684a99c60dc462e
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37337261"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43206269"
 ---
 # <a name="chotkeyctrl-class"></a>Klasa CHotKeyCtrl
 Oferuje funkcje Windows formantu typowego klawisza dostępu.  
@@ -75,7 +75,7 @@ class CHotKeyCtrl : public CWnd
   
  Po użytkownik wybierze kombinację klawiszy, aplikacja może pobrać określonej kombinacji klawiszy z formantu i komunikat WM_SETHOTKEY umożliwia ustawianie klawisza dostępu w systemie. Zawsze, gdy użytkownik naciśnie klawisz skrótu, z dowolnej części systemu, okna określony w komunikacie WM_SETHOTKEY odbiera komunikat WM_SYSCOMMAND, określając SC_HOTKEY. Ten komunikat uaktywnia okna, które otrzymuje go. Klawisz skrótu pozostanie ważny aż do aplikacji, która umożliwia zamknięcie WM_SETHOTKEY wywołana.  
   
- Ten mechanizm różni się od gorąca obsługę kluczy, która jest zależna od komunikat WM_HOTKEY i Windows [RegisterHotKey](http://msdn.microsoft.com/library/windows/desktop/ms646309) i [UnregisterHotKey](http://msdn.microsoft.com/library/windows/desktop/ms646327) funkcji.  
+ Ten mechanizm różni się od gorąca obsługę kluczy, która jest zależna od komunikat WM_HOTKEY i Windows [RegisterHotKey](https://msdn.microsoft.com/library/windows/desktop/ms646309) i [UnregisterHotKey](https://msdn.microsoft.com/library/windows/desktop/ms646327) funkcji.  
   
  Aby uzyskać więcej informacji na temat korzystania z `CHotKeyCtrl`, zobacz [kontrolki](../../mfc/controls-mfc.md) i [korzystanie z CHotKeyCtrl](../../mfc/using-chotkeyctrl.md).  
   
@@ -111,7 +111,7 @@ virtual BOOL Create(
   
 ### <a name="parameters"></a>Parametry  
  *dwStyle*  
- Określa styl formantu klawisza dostępu firmy. Zastosuj dowolną kombinację style kontrolki. Zobacz [najczęściej używane style kontrolki](http://msdn.microsoft.com/library/windows/desktop/bb775498) w zestawie Windows SDK, aby uzyskać więcej informacji.  
+ Określa styl formantu klawisza dostępu firmy. Zastosuj dowolną kombinację style kontrolki. Zobacz [najczęściej używane style kontrolki](/windows/desktop/Controls/common-control-styles) w zestawie Windows SDK, aby uzyskać więcej informacji.  
   
  *Rect*  
  Określa rozmiar i położenie formantu klawisza dostępu firmy. Może być albo [CRect](../../atl-mfc-shared/reference/crect-class.md) obiektu lub [struktura RECT](../../mfc/reference/rect-structure1.md).  
@@ -144,13 +144,13 @@ virtual BOOL CreateEx(
   
 ### <a name="parameters"></a>Parametry  
  *dwExStyle*  
- Określa styl rozszerzony kontrolki tworzona. Aby uzyskać listę rozszerzone style Windows, zobacz *dwExStyle* parametr [elementu CreateWindowEx](http://msdn.microsoft.com/library/windows/desktop/ms632680) w zestawie Windows SDK.  
+ Określa styl rozszerzony kontrolki tworzona. Aby uzyskać listę rozszerzone style Windows, zobacz *dwExStyle* parametr [elementu CreateWindowEx](https://msdn.microsoft.com/library/windows/desktop/ms632680) w zestawie Windows SDK.  
   
  *dwStyle*  
- Określa styl formantu klawisza dostępu firmy. Zastosuj dowolną kombinację style kontrolki. Aby uzyskać więcej informacji, zobacz [najczęściej używane style kontrolki](http://msdn.microsoft.com/library/windows/desktop/bb775498) w zestawie Windows SDK.  
+ Określa styl formantu klawisza dostępu firmy. Zastosuj dowolną kombinację style kontrolki. Aby uzyskać więcej informacji, zobacz [najczęściej używane style kontrolki](/windows/desktop/Controls/common-control-styles) w zestawie Windows SDK.  
   
  *Rect*  
- Odwołanie do [Prostokąt](http://msdn.microsoft.com/library/windows/desktop/dd162897) struktury opisujących rozmiar i położenie okna, można utworzyć klienta współrzędne *pParentWnd*.  
+ Odwołanie do [Prostokąt](https://msdn.microsoft.com/library/windows/desktop/dd162897) struktury opisujących rozmiar i położenie okna, można utworzyć klienta współrzędne *pParentWnd*.  
   
  *pParentWnd*  
  Wskaźnik do okna, które jest elementem nadrzędnym formantu.  

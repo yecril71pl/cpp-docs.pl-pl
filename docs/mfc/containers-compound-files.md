@@ -1,5 +1,5 @@
 ---
-title: 'Kontenery: Pliki złożone | Dokumentacja firmy Microsoft'
+title: 'Kontenery: Złożona (c) plików | Dokumentacja firmy Microsoft'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -24,32 +24,32 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a8bee847d1121a6d5da1679c29a9107c8a447ab1
-ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
+ms.openlocfilehash: 33a50c36bf41b8685c711cf6fb2e3797787a5b3c
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/25/2018
-ms.locfileid: "36930228"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43206954"
 ---
 # <a name="containers-compound-files"></a>Kontenery: pliki złożone
 W tym artykule opisano składniki i implementacja pliki złożone i zalety i wady używania pliki złożone w aplikacji OLE.  
   
- Pliki złożone są integralną częścią OLE. Są one używane do ułatwienia transferu danych i przechowywanie dokumentów OLE. Pliki złożone są implementację modelu magazynu o strukturze aktywnej. Interfejsy zgodne istnieje tej serializacji pomocy technicznej do magazynu, strumienia lub obiektu pliku. Pliki złożone są obsługiwane w programie Microsoft Foundation Class Library przez klasy `COleStreamFile` i `COleDocument`.  
+ Pliki złożone są integralną częścią OLE. Są one używane do ułatwienia transferu danych i przechowywania dokumentów OLE. Pliki złożone są implementacja modelu Active strukturalny magazyn. Spójne interfejsy istnieć tej serializacji pomocy technicznej do magazynu, strumienia lub obiektu pliku. Pliki złożone są obsługiwane w bibliotece klas Microsoft Foundation przez klasy `COleStreamFile` i `COleDocument`.  
   
 > [!NOTE]
->  Przy użyciu pliku złożonego nie oznacza, czy informacje pochodzą z dokumentu OLE lub złożonych. Pliki złożone są tylko jedną z metod do przechowywania dokumentów złożonych, dokumenty OLE i innych danych.  
+>  Przy użyciu pliku złożonym nie oznacza, czy informacje pochodzą z dokumentu OLE lub złożone. Pliki złożone są co najmniej jeden sposoby przechowywania dokumentów złożonych, dokumenty OLE i innych danych.  
   
-##  <a name="_core_components_of_a_compound_file"></a> Składniki plik złożony  
- Implementacja OLE pliki złożone używa trzech typów obiektów: obiekty strumienia, obiektów magazynu oraz `ILockBytes` obiektów. Te obiekty są podobne do składników systemu standardowego pliku w następujący sposób:  
+##  <a name="_core_components_of_a_compound_file"></a> Składniki pliku złożonym  
+ Implementacja plików złożonych OLE używa trzech typów obiektów: obiekty strumienia, obiektów magazynu oraz `ILockBytes` obiektów. Te obiekty są podobne do składników systemu standardowy plik w następujący sposób:  
   
--   Obiekty strumienia, takich jak pliki, przechowywać dane dowolnego typu.  
+-   Stream obiektów, takich jak pliki, przechowuj dane dowolnego typu.  
   
--   Magazyn obiekty, takie jak katalogi, może zawierać inne obiekty magazynu i strumienia.  
+-   Magazyn obiektów, takich jak katalogi, mogą zawierać inne obiekty magazynu i strumieni.  
   
--   `LockBytes` obiekty reprezentują interfejs między obiektami pamięci masowej i sprzętem fizycznym. Określają one, jak rzeczywista liczba bajtów zapisywanych w niezależnie od urządzenia magazynującego `LockBytes` obiekt uzyskuje dostęp do takich jak dysk twardy lub obszar pamięci globalnej. Aby uzyskać więcej informacji na temat `LockBytes` obiektów i `ILockBytes` interfejsu, zobacz *OLE Podręcznik programisty*.  
+-   `LockBytes` obiekty reprezentują interfejs między obiektami magazynu i sprzętu fizycznego. Określają, jak rzeczywista liczba bajtów zapisywanych niezależnie od urządzenia magazynującego `LockBytes` obiekt uzyskuje dostęp do takich jak dysk twardy lub obszar pamięci globalnej. Aby uzyskać więcej informacji na temat `LockBytes` obiektów i `ILockBytes` interfejsu, zobacz *OLE Podręcznik programisty*.  
   
 ##  <a name="_core_advantages_and_disadvantages_of_compound_files"></a> Zalety i wady pliki złożone  
- Pliki złożone zapewniają korzyści, które nie są dostępne z wcześniejszych metod magazynu plików. Obejmują one:  
+ Pliki złożone zapewniają korzyści, które nie są dostępne za pomocą wcześniejszych metod magazynu plików. Obejmują one:  
   
 -   Uzyskiwanie dostępu do pliku przyrostowe.  
   
@@ -57,35 +57,35 @@ W tym artykule opisano składniki i implementacja pliki złożone i zalety i wad
   
 -   Standaryzacja struktury plików.  
   
- Potencjalne wady pliki złożone — duże problemy rozmiaru i wydajności dotyczących pamięci masowej na dyskietki — powinien być uważane po wybraniu podjęcie decyzji o użyciu je w aplikacji.  
+ Potencjalne wady pliki złożone — duży rozmiar problemów z wydajnością związane z magazynem na dyskietki — powinny być uważane gdy podjęcie decyzji o użyciu je w aplikacji.  
   
 ###  <a name="_core_incremental_access_to_files"></a> Przyrostowe dostęp do plików  
- Przyrostowe dostęp do plików jest automatyczne zaletą używania pliki złożone. Ponieważ plik złożony można wyświetlić jako "system plików w pliku", są dostępne typów poszczególnych obiektów, takich jak strumienia lub magazynu, bez konieczności załadować całego pliku. Może to znacznie skrócić czas aplikacji wymaga dostępu do nowych obiektów do edycji przez użytkownika. Przyrostowe aktualizowanie na podstawie tego samego pojęcia korzyści podobnych oferty. Zamiast zapisywania całego pliku tak, aby zapisać zmiany wprowadzone do jednego obiektu OLE zapisuje tylko strumienia lub magazynu obiekt edytowane przez użytkownika.  
+ Przyrostowe dostęp do plików jest automatyczne zaletą używania plików złożonych. Ponieważ plik złożony mogą być wyświetlane jako "systemu plików w pliku", typów poszczególnych obiektów, takich jak stream lub magazynu, są dostępne bez konieczności wczytać całego pliku. To jest znacznie zmniejszyć czas, aplikacja musi uzyskać dostęp do nowych obiektów do edycji przez użytkownika. Przyrostowe aktualizowanie na podstawie tego samego pojęcia oferuje podobne korzyści. Zamiast zapisywać cały plik tak, aby zapisać zmiany wprowadzone do jednego obiektu, OLE są zapisywane tylko strumienia lub magazynu obiekt edytowane przez użytkownika.  
   
 ###  <a name="_core_file_access_modes"></a> Tryby dostępu do pliku  
- Możliwość określenia, gdy dysku są zmiany do obiektów w pliku złożonego jest inną zaletą używania pliki złożone. Tryb, w którym pliki są dostępne, transakcyjne lub bezpośrednio, określa, kiedy są zatwierdzone zmiany.  
+ Jest możliwe ustalenie, kiedy zmiany obiektów w pliku złożonym zobowiązujemy się do dysku jest kolejną korzyścią wynikającą z korzystania z plików złożone. Tryb, w której pliki są dostępne, transakcyjne lub bezpośrednich, określa, kiedy zmiany zostaną zatwierdzone.  
   
--   Tryb transakcyjne używa operacji dwufazowe wprowadzać zmiany do obiektów w pliku złożonego, co utrzymywanie zarówno stary, jak i nowych kopii dokumentu dostępne, dopóki użytkownik wybierze opcję albo zapisać lub cofnąć zmiany.  
+-   Tryb transakcyjne używa operacji dwufazowego, aby wprowadzić zmiany do obiektów w pliku złożonym, w tym samym sprowadzając zarówno stare i nowe kopie dokumentu, które są dostępne, dopóki użytkownik wybierze albo zapisać albo cofnąć zmiany.  
   
--   W trybie bezpośrednim zawiera zmiany w dokumencie, jak zostały wprowadzone, bez możliwości ich później cofnąć.  
+-   W trybie bezpośrednim zawiera zmiany w dokumencie, jak zostały wprowadzone, bez możliwości ich później wycofać.  
   
  Aby uzyskać więcej informacji na temat trybów dostępu, zobacz *OLE Podręcznik programisty*.  
   
 ###  <a name="_core_standardization"></a> Standaryzacja  
- Struktura standardowych pliki złożone umożliwia różnych aplikacji OLE przeglądać pliki złożone utworzone przez aplikację OLE z nie wie, aplikacji, która faktycznie utworzony plik.  
+ Standardowej struktury plików złożonych umożliwia różnym aplikacjom OLE, przejrzyj pliki złożone tworzone przez testowaną aplikację OLE nie znajomości aplikacji, która faktycznie utworzyła plik.  
   
 ###  <a name="_core_size_and_performance_considerations"></a> Rozmiar i zagadnienia dotyczące wydajności  
- Ze względu na złożoność struktury magazynu plików złożone i możliwość zapisania danych przyrostowo plików za pomocą tego formatu zazwyczaj będzie większy niż inne pliki przy użyciu bez struktury lub magazynu "płaskim plik". Jeśli aplikacja często załadowanie i zapisanie plików, przy użyciu pliki złożone może spowodować znacznie szybciej niż pliki noncompound zwiększyć rozmiar pliku. Ponieważ pliki złożone można uzyskać duży, czas dostępu dla plików przechowywanych na i załadowane z dyskietek można również będzie zmienione, spowodować wolniejszy dostęp do plików.  
+ Ze względu na złożoność i możliwość zapisania danych przyrostowe struktury magazynu złożony plik, pliki, używając następującego formatu zwykle będzie większy niż inne pliki przy użyciu bez określonej struktury lub magazynu "prostego pliku". Jeśli aplikacja często załadowanie i zapisanie plików, przy użyciu plików złożonych może spowodować rozmiar pliku zwiększyć się znacznie szybciej niż pliki noncompound. Ponieważ pobieranie dużych plików złożonych, czas dostępu dla plików przechowywanych w i ładowane z stacje dyskietek może mieć wpływ, co spowoduje wolniejszy dostęp do plików.  
   
- Inny problem, który wpływa na wydajność jest złożone pliku fragmentacji. Rozmiar pliku złożonego jest określany przez różnicę między sektorów dysku imię i nazwisko, używane przez plik. Pofragmentowany plik może zawierać wiele obszarów wolnego miejsca, które nie zawierają danych, ale są uwzględniane podczas obliczania rozmiaru. Okres istnienia pliku złożonego tych obszarów są tworzone przez wstawiania lub usuwania obiektów magazynu.  
+ Inny problem, który wpływa na wydajność jest fragmentację pliku złożone. Rozmiar pliku złożonym wynika różnica między sektory dysku imię i nazwisko, używane przez plik. Pofragmentowany plik może zawierać wiele obszarów wolnego miejsca na dysku, które nie zawierają danych, ale są uwzględniane podczas obliczania rozmiaru. W okresie istnienia pliku złożonym te obszary są tworzone przez wstawiania lub usuwania obiektów magazynu.  
   
-##  <a name="_core_using_compound_files_format_for_your_data"></a> Dla danych przy użyciu formatu pliki złożone  
- Po pomyślnie tworzenie aplikacji zawierającej pochodzi od klasy dokumentu `COleDocument`, upewnij się, że Twoje Konstruktor głównego dokumentu wywołuje `EnableCompoundFile`. Gdy Kreator aplikacji tworzy aplikacje kontenera OLE, to wywołanie jest wprowadzana automatycznie.  
+##  <a name="_core_using_compound_files_format_for_your_data"></a> Przy użyciu formatu plików złożonych danych  
+ Po pomyślnym tworzenia aplikacji, która pochodzi od klasy dokumentów `COleDocument`, upewnij się, że wywołuje konstruktora dokumentu głównego `EnableCompoundFile`. Gdy Kreator aplikacji tworzy się aplikacje kontenera OLE, to wywołanie jest wstawiany za Ciebie.  
   
- W *OLE Podręcznik programisty*, zobacz [IStream](http://msdn.microsoft.com/library/windows/desktop/aa380034), [IStorage](http://msdn.microsoft.com/library/windows/desktop/aa380015), i [typ ILockBytes](http://msdn.microsoft.com/library/windows/desktop/aa379238).  
+ W *OLE Podręcznik programisty*, zobacz [IStream](/windows/desktop/api/objidl/nn-objidl-istream), [IStorage](/windows/desktop/api/objidl/nn-objidl-istorage), i [interfejsu ILockBytes](/windows/desktop/api/objidl/nn-objidl-ilockbytes).  
   
 ## <a name="see-also"></a>Zobacz też  
  [Kontenery](../mfc/containers.md)   
- [Kontenery: Problemy z interfejsem użytkownika](../mfc/containers-user-interface-issues.md)   
+ [Kontenery: Kwestie dotyczące interfejsu użytkownika](../mfc/containers-user-interface-issues.md)   
  [Klasa COleStreamFile](../mfc/reference/colestreamfile-class.md)   
  [Klasa COleDocument](../mfc/reference/coledocument-class.md)

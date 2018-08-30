@@ -39,12 +39,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 49e07fd632459e1d668d0201c821065bfaeea72c
-ms.sourcegitcommit: b92ca0b74f0b00372709e81333885750ba91f90e
+ms.openlocfilehash: e4bdae31c3a2f84dd959baf49fae7e43a6cc9eb0
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/16/2018
-ms.locfileid: "42465063"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43206400"
 ---
 # <a name="beginthread-beginthreadex"></a>_beginthread, _beginthreadex
 
@@ -93,7 +93,7 @@ Rozmiar stosu dla nowego wątku lub 0.
 Lista argumentów do przekazania do nowego wątku lub **NULL**.
 
 *Zabezpieczenia*<br/>
-Wskaźnik do [SECURITY_ATTRIBUTES](http://msdn.microsoft.com/library/windows/desktop/aa379560) strukturę, która określa, czy zwracany uchwyt może być dziedziczony przez procesy podrzędne. Jeśli *zabezpieczeń* jest **NULL**, uchwyt nie może być dziedziczona. Musi być **NULL** dla aplikacji Windows 95.
+Wskaźnik do [SECURITY_ATTRIBUTES](https://msdn.microsoft.com/library/windows/desktop/aa379560) strukturę, która określa, czy zwracany uchwyt może być dziedziczony przez procesy podrzędne. Jeśli *zabezpieczeń* jest **NULL**, uchwyt nie może być dziedziczona. Musi być **NULL** dla aplikacji Windows 95.
 
 *initflag*<br/>
 Flagi określające początkowy stan nowego wątku. Ustaw *initflag* do 0, aby natychmiast uruchomić lub **CREATE_SUSPENDED** można utworzyć wątku w stanie wstrzymania; użyj [ResumeThread](/windows/desktop/api/processthreadsapi/nf-processthreadsapi-resumethread) realizować wątek. Ustaw *initflag* do **STACK_SIZE_PARAM_IS_A_RESERVATION** flagi używania *stack_size* zgodnie z pierwszym zarezerwować rozmiar stosu w bajtach; Jeśli ta flaga jest nieokreślona, *stack_size* Określa rozmiar zatwierdzenia.
@@ -131,7 +131,7 @@ Bezpieczniej jest używać **_beginthreadex** niż **_beginthread**. Jeśli wąt
 
 Możesz wywołać [_endthread](endthread-endthreadex.md) lub **_endthreadex** jawnie, aby zakończyć wątek; jednak **_endthread** lub **_endthreadex** nosi nazwę automatycznie kiedy wątek wraca z procedury, która jest przekazywana jako parametr. Zakończenie wątku z wywołaniem **_endthread** lub **_endthreadex** pomaga zapewnić poprawny odzysk zasobów, które są przydzielane do wątku.
 
-**_endthread** automatycznie zamyka uchwyt do wątku, natomiast **_endthreadex** nie. W związku z tym, kiedy używasz **_beginthread** i **_endthread**, nie zamykaj jawnie uchwytu wątku poprzez wywołanie Win32 [funkcja CloseHandle](http://msdn.microsoft.com/library/windows/desktop/ms724211.aspx) interfejsu API. To zachowanie różni się od Win32 [ExitThread](/windows/desktop/api/processthreadsapi/nf-processthreadsapi-exitthread) interfejsu API.
+**_endthread** automatycznie zamyka uchwyt do wątku, natomiast **_endthreadex** nie. W związku z tym, kiedy używasz **_beginthread** i **_endthread**, nie zamykaj jawnie uchwytu wątku poprzez wywołanie Win32 [funkcja CloseHandle](https://msdn.microsoft.com/library/windows/desktop/ms724211.aspx) interfejsu API. To zachowanie różni się od Win32 [ExitThread](/windows/desktop/api/processthreadsapi/nf-processthreadsapi-exitthread) interfejsu API.
 
 > [!NOTE]
 > Dla pliku wykonywalnego połączonego z Libcmt.lib Nie wywołuj Win32 **ExitThread** interfejsu API, aby nie uniemożliwiają odzyskiwanie przez system środowiska wykonawczego przydzielone zasoby. **_endthread** i **_endthreadex** odzyskiwania zasobów przydzielonych wątku, a następnie wywołać **ExitThread**.
@@ -335,4 +335,4 @@ Counter should be 1000000; it is-> 1000000
 - [_endthread, _endthreadex](endthread-endthreadex.md)
 - [abort](abort.md)
 - [exit, _Exit, _exit](exit-exit-exit.md)
-- [GetExitCodeThread](http://msdn.microsoft.com/library/windows/desktop/ms683190)
+- [GetExitCodeThread](/windows/desktop/api/processthreadsapi/nf-processthreadsapi-getexitcodethread)

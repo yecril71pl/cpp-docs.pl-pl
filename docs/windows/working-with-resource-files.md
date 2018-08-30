@@ -17,17 +17,17 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 67d1b32fe880a278bc2b737148a90afa5bd2ad6e
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: d96b9430cd5a6a4a9f3d65ab60c49a38b0530db7
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42592085"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43211100"
 ---
 # <a name="working-with-resource-files"></a>Praca z plikami zasobów
 
 > [!WARNING]
-> Ta sekcja dotyczy Windows aplikacji klasycznych w języku C++. Aby uzyskać informacji na temat zasobów w aplikacjach platformy uniwersalnej Windows w języku C++, zobacz [Definiowanie zasobów aplikacji](http://msdn.microsoft.com/476ea844-632c-4467-9ce3-966be1350dd4).
+> Ta sekcja dotyczy Windows aplikacji klasycznych w języku C++. Aby uzyskać informacji na temat zasobów w aplikacjach platformy uniwersalnej Windows w języku C++, zobacz [Definiowanie zasobów aplikacji](https://msdn.microsoft.com/476ea844-632c-4467-9ce3-966be1350dd4).
 >
 > Aby uzyskać informacje na temat dodawania zasobów dla C + +/ projektów interfejsu wiersza polecenia, zobacz [zasoby w aplikacjach pulpitu](/dotnet/framework/resources/index) w *przewodniku dewelopera .NET Framework*.
 
@@ -53,7 +53,7 @@ Opisuje edytory zasobów w programie Visual Studio typów zasobów możesz zmody
 [Visual C++](../visual-cpp-in-visual-studio.md)  
 Oferuje łącza do dokumentacji języka Visual C++.
 
-[Wprowadzenie do programu Visual Studio](http://msdn.microsoft.com/99997089-56ff-4d60-81a9-447062dc98ac)  
+[Wprowadzenie do programu Visual Studio](https://msdn.microsoft.com/99997089-56ff-4d60-81a9-447062dc98ac)  
 W tym artykule opisano kompletny zestaw narzędzi programistycznych, które używają tego samego zintegrowanego środowiska programistycznego (IDE), umożliwiając im udostępnić narzędzia i ułatwia tworzenia rozwiązania mieszane pod względem językowym.
 
 [Porozmawiaj z nami](/visualstudio/ide/talk-to-us)  
@@ -62,4 +62,4 @@ Zawiera łącza do informacji na temat używania zestawu dokumentacji, kontaktuj
 ## <a name="see-also"></a>Zobacz też
 
 [Aplikacje pulpitu Windows](../windows/windows-desktop-applications-cpp.md)  
-[Menu i inne zasoby](http://msdn.microsoft.com/library/windows/desktop/ms632583.aspx)
+[Menu i inne zasoby](https://msdn.microsoft.com/library/windows/desktop/ms632583.aspx)

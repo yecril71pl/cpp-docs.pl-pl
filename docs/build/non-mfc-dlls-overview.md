@@ -15,17 +15,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 037f6d7bc80956536a7098ee67275425c41a2f68
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 8acb1db66e4f6cc78ca79403aea782a936bff494
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42613222"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43199468"
 ---
 # <a name="non-mfc-dlls-overview"></a>Biblioteki DLL inne niż MFC: omówienie
 Nie - MFC DLL jest biblioteki DLL, która nie używa MFC wewnętrznie i eksportowanych funkcji w bibliotece DLL może być wywoływany przez pliki wykonywalne MFC lub inne niż MFC. Funkcje eksportowane są zazwyczaj z DLL bez MFC za pomocą standardowego interfejsu C.  
   
- Aby uzyskać więcej informacji na temat dll bez MFC, zobacz [bibliotek dołączanych dynamicznie](http://msdn.microsoft.com/library/windows/desktop/ms682589) w zestawie Windows SDK.  
+ Aby uzyskać więcej informacji na temat dll bez MFC, zobacz [bibliotek dołączanych dynamicznie](https://msdn.microsoft.com/library/windows/desktop/ms682589) w zestawie Windows SDK.  
   
 ## <a name="what-do-you-want-to-do"></a>Co chcesz zrobić?  
   

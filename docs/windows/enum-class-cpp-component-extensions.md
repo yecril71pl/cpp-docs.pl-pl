@@ -13,12 +13,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: b1f1e19ac51e36b04dd8ecfe89dbb7e3d592d869
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 625b99751c570c47456aad4903de5b8c4049ac42
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42611965"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43207605"
 ---
 # <a name="enum-class--c-component-extensions"></a>enum class (C++ Component Extensions)
 
@@ -65,7 +65,7 @@ Wartość każdy moduł wyliczający jest wyrażeniem stałym, zdefiniowanego al
 
 ### <a name="remarks"></a>Uwagi
 
-Aby uzyskać więcej informacji i przykładów, zobacz [wyliczenia](http://msdn.microsoft.com/%20library/windows/apps/hh755820.aspx).
+Aby uzyskać więcej informacji i przykładów, zobacz [wyliczenia](https://msdn.microsoft.com/%20library/windows/apps/hh755820.aspx).
 
 Należy pamiętać, że kompilator generuje komunikaty o błędach, jeśli wyrażenie stałe, który definiuje wartość modułu wyliczającego nie może być przedstawiona przez *typu bazowego*.  Jednak kompilator nie zgłasza błędu dla wartości, który jest nieodpowiedni dla podstawowego typu. Na przykład:
 

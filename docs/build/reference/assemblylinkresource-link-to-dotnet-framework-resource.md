@@ -1,5 +1,5 @@
 ---
-title: -ASSEMBLYLINKRESOURCE (łącze do zasobów .NET Framework) | Dokumentacja firmy Microsoft
+title: -ASSEMBLYLINKRESOURCE (Link do zasobów .NET Framework) | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -19,12 +19,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a922ac1a96a59d574f46f7b04db8b160a5079918
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: e23bd9e0816c10f41e298afc9e82edbdd27e7a5f
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32374053"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43206491"
 ---
 # <a name="assemblylinkresource-link-to-net-framework-resource"></a>/ASSEMBLYLINKRESOURCE (Łącze do Zasobów .NET Framework)
 ```  
@@ -35,20 +35,20 @@ ms.locfileid: "32374053"
  gdzie:  
   
  *Nazwa pliku*  
- Plik zasobu .NET Framework, do którego chcesz połączyć z zestawu.  
+ Plik zasobów .NET Framework, z którym chcesz się połączyć z zestawu.  
   
 ## <a name="remarks"></a>Uwagi  
- Opcja/assemblylinkresource tworzy łącze do zasobu .NET Framework w pliku wyjściowym; plik zasobu nie jest umieszczony w pliku wyjściowym. [/ ASSEMBLYRESOURCE](../../build/reference/assemblyresource-embed-a-managed-resource.md) osadza plik zasobu w pliku wyjściowym.  
+ Opcja assemblylinkresource tworzy łącze do zasobu .NET Framework w pliku wyjściowym; plik zasobu nie zostanie umieszczony w pliku wyjściowym. [/ ASSEMBLYRESOURCE](../../build/reference/assemblyresource-embed-a-managed-resource.md) osadza plik zasobów w pliku wyjściowym.  
   
- Połączonych zasobów są publicznie udostępniane w zestawie, gdy utworzone za pomocą konsolidator.  
+ Połączone zasoby są publiczne w zestawie, gdy utworzone za pomocą konsolidatora.  
   
- / ASSEMBLYLINKRESOURCE wymaga się, że obejmuje kompilacji [/CLR](../../build/reference/clr-common-language-runtime-compilation.md); [/LN](../../build/reference/ln-create-msil-module.md) lub [/noassembly](../../build/reference/noassembly-create-a-msil-module.md) z/assemblylinkresource jest niedozwolone.  
+ / ASSEMBLYLINKRESOURCE wymaga, że kompilacja obejmują [/CLR](../../build/reference/clr-common-language-runtime-compilation.md); [/LN](../../build/reference/ln-create-msil-module.md) lub [/noassembly](../../build/reference/noassembly-create-a-msil-module.md) nie jest dozwolona z assemblylinkresource.  
   
- Jeśli *filename* to plik zasobu .NET Framework utworzone, na przykład przez [Resgen.exe](/dotnet/framework/tools/resgen-exe-resource-file-generator) lub w środowisku programistycznym, jest dostępny z elementami członkowskimi w **System.Resources** przestrzeni nazw. Aby uzyskać więcej informacji, zobacz [System.Resources.ResourceManager](https://msdn.microsoft.com/en-us/library/system.resources.resourcemanager.aspx). Inne zasoby, można użyć **GetManifestResource** \* metod w **System.Reflection.Assembly** klasę, aby uzyskać dostęp do zasobu w czasie wykonywania.  
+ Jeśli *filename* jest plikiem zasobów .NET Framework, utworzonym na przykład przez [Resgen.exe](/dotnet/framework/tools/resgen-exe-resource-file-generator) lub w środowisku deweloperskim, jest dostępny za pomocą elementów członkowskich w **System.Resources** przestrzeni nazw. Aby uzyskać więcej informacji, zobacz [System.Resources.ResourceManager](https://msdn.microsoft.com/library/system.resources.resourcemanager.aspx). W przypadku wszystkich innych zasobów, użyj **GetManifestResource** \* metody **System.Reflection.Assembly** klasy, aby uzyskać dostęp do zasobu w czasie wykonywania.  
   
- *Nazwa pliku* może być dowolnym formacie pliku. Można na przykład upewnij natywnej biblioteki DLL częścią zestawu, dzięki czemu może być zainstalowane w globalnej pamięci podręcznej zestawów i dostępne z kodu zarządzanego w zestawie.  
+ *Nazwa pliku* może być dowolnym formacie pliku. Na przykład można wprowadzić natywną DLL częścią zestawu, dzięki czemu mogą być zainstalowane w globalnej pamięci podręcznej zestawów i dostępne z kodu zarządzanego w zestawie.  
   
- Inne opcje konsolidatora, które mają wpływ na generowanie zestawów są:  
+ Są także inne opcje konsolidatora, które mają wpływ na Generowanie zestawu:  
   
 -   [/ASSEMBLYDEBUG](../../build/reference/assemblydebug-add-debuggableattribute.md)  
   
@@ -58,7 +58,7 @@ ms.locfileid: "32374053"
   
 -   [/ DELAYSIGN](../../build/reference/delaysign-partially-sign-an-assembly.md)  
   
--   [/ KEYCONTAINER.](../../build/reference/keycontainer-specify-a-key-container-to-sign-an-assembly.md)  
+-   [/ KEYCONTAINER](../../build/reference/keycontainer-specify-a-key-container-to-sign-an-assembly.md)  
   
 -   [/ KEYFILE](../../build/reference/keyfile-specify-key-or-key-pair-to-sign-an-assembly.md)  
   
@@ -66,13 +66,13 @@ ms.locfileid: "32374053"
   
 ### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>Aby ustawić tę opcję konsolidatora w środowisku programowania Visual Studio  
   
-1.  Otwórz projekt **strony właściwości** okno dialogowe. Aby uzyskać więcej informacji, zobacz [Ustawianie właściwości projektu Visual C++](../../ide/working-with-project-properties.md).  
+1.  Otwórz projekt **stron właściwości** okno dialogowe. Aby uzyskać więcej informacji, zobacz [ustawienie właściwości projektu Visual C++](../../ide/working-with-project-properties.md).  
   
 2.  Kliknij przycisk **konsolidatora** folderu.  
   
-3.  Kliknij przycisk **wiersza polecenia** strony właściwości.  
+3.  Kliknij przycisk **wiersza polecenia** stronę właściwości.  
   
-4.  Typ opcji do **dodatkowe opcje** pole.  
+4.  Wpisz opcje w **dodatkowe opcje** pole.  
   
 ### <a name="to-set-this-linker-option-programmatically"></a>Aby programowo ustawić tę opcję konsolidatora  
   

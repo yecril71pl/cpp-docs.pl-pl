@@ -25,12 +25,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4b238a496718088f0251faa49281fdc8939c01c7
-ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
+ms.openlocfilehash: a51544f1e367e1db0b5ae72948af68fbedfa7504
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/01/2018
-ms.locfileid: "39408362"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43209731"
 ---
 # <a name="multiplicative-operators-and-the-modulus-operator"></a>Operatory mnożenia i Operator modulo
 ## <a name="syntax"></a>Składnia  
@@ -44,15 +44,15 @@ expression % expression
 ## <a name="remarks"></a>Uwagi  
  Operatory multiplikatywne to:  
   
--   Mnożenie (**\***)  
+-   Mnożenie (<strong>\*</strong>)  
   
 -   Dzielenie (**/**)  
   
--   Moduł (resztę z dzielenia) (`%`)  
+-   Moduł (resztę z dzielenia) (**%**)  
   
  Te operatory dwuargumentowe mają łączność od lewej do prawej.  
   
- Operatory multiplikatywne przyjmują operandy typów arytmetycznych. Operator modulo (`%`) ma bardziej rygorystyczne wymagania w tym jego operandy muszą być typu całkowitego. (Aby uzyskać resztę z dzielenia liczb zmiennopozycyjnych, należy użyć funkcji środowiska uruchomieniowego [fmod](../c-runtime-library/reference/fmod-fmodf.md).) Konwersje omówione w [konwersje standardowe](standard-conversions.md) są stosowane do operandów, a wynik jest typu konwertowanego.  
+ Operatory multiplikatywne przyjmują operandy typów arytmetycznych. Operator modulo (**%**) ma bardziej rygorystyczne wymagania w tym jego operandy muszą być typu całkowitego. (Aby uzyskać resztę z dzielenia liczb zmiennopozycyjnych, należy użyć funkcji środowiska uruchomieniowego [fmod](../c-runtime-library/reference/fmod-fmodf.md).) Konwersje omówione w [konwersje standardowe](standard-conversions.md) są stosowane do operandów, a wynik jest typu konwertowanego.  
   
  Operator mnożenia daje wynik mnożenia pierwszego operandu przez drugi.  
   

@@ -16,23 +16,23 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c02165635e8715c1fcac28b9fbee72612b72c1f2
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: e7b56570a2821cef3cd2d2676a5260f42bc2ffaf
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33349483"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43210773"
 ---
 # <a name="character-formatting-in-rich-edit-controls"></a>Formatowanie znaków w formantach edycji wzbogaconej
-Możesz użyć funkcji Członkowskich formantu edycji wzbogaconej ([CRichEditCtrl](../mfc/reference/cricheditctrl-class.md)) do formatowania znaków i pobrać informacji o formatowania. Dla znaków można określić krój, rozmiar, kolor i efekty, takie jak pogrubienie, kursywa, a chronione.  
+Można użyć funkcji składowych kontrolki edycji wzbogaconej ([CRichEditCtrl](../mfc/reference/cricheditctrl-class.md)) do formatowania znaków i, aby pobrać informacje o formatowaniu. Znaki można określić krój czcionki, rozmiar, kolor i efektów, takich jak pogrubienie, kursywa, a chronione.  
   
- Można zastosować formatowanie znaków za pomocą [SetSelectionCharFormat](../mfc/reference/cricheditctrl-class.md#setselectioncharformat) i [SetWordCharFormat](../mfc/reference/cricheditctrl-class.md#setwordcharformat) funkcji elementów członkowskich. Aby określić bieżący znak formatowania zaznaczonego tekstu, użyj [GetSelectionCharFormat](../mfc/reference/cricheditctrl-class.md#getselectioncharformat) funkcję elementu członkowskiego. [CHARFORMAT](http://msdn.microsoft.com/library/windows/desktop/bb787881) struktura jest używana z tych funkcji Członkowskich, aby określić atrybuty znaków. Jeden z członków ważne **CHARFORMAT** jest **dwMask**. W `SetSelectionCharFormat` i `SetWordCharFormat`, **dwMask** określa atrybuty znaków zostanie ustawiony przez wywołanie tej funkcji. `GetSelectionCharFormat` Raporty atrybuty pierwszy znak w zaznaczeniu; **dwMask** określa atrybuty, które są spójne w całym zaznaczenia.  
+ Można zastosować formatowanie przy użyciu znaków [SetSelectionCharFormat](../mfc/reference/cricheditctrl-class.md#setselectioncharformat) i [SetWordCharFormat](../mfc/reference/cricheditctrl-class.md#setwordcharformat) funkcji elementów członkowskich. Aby określić bieżący znak formatowanie do zaznaczonego tekstu, należy użyć [GetSelectionCharFormat](../mfc/reference/cricheditctrl-class.md#getselectioncharformat) funkcja elementu członkowskiego. [CHARFORMAT](/windows/desktop/api/richedit/ns-richedit-_charformat) struktury jest używany z tych funkcji elementów członkowskich do określenia atrybuty znaków. Jedną z ważnych elementów członkowskich **CHARFORMAT** jest **dwMask**. W `SetSelectionCharFormat` i `SetWordCharFormat`, **dwMask** określa atrybuty znaków zostanie ustawiony przez wywołanie tej funkcji. `GetSelectionCharFormat` Raporty atrybuty pierwszy znak w zaznaczeniu; **dwMask** określa atrybuty, które są spójne zaznaczenia.  
   
- Można również pobieranie i ustawianie "domyślne formatowanie znaków," który jest formatowanie zastosowane do znaków następnie wstawionego. Na przykład jeśli użytkownik wpisze znak aplikacji ustawia domyślny znak formatowania mają zostać pogrubione, ten znak jest pogrubiony. Aby get i set, formatowanie znaków domyślne, należy użyć [GetDefaultCharFormat](../mfc/reference/cricheditctrl-class.md#getdefaultcharformat) i [SetDefaultCharFormat](../mfc/reference/cricheditctrl-class.md#setdefaultcharformat) funkcji elementów członkowskich.  
+ Można również pobieranie i ustawianie "domyślnego znaków formatowania," który jest sformatowanie znaków następnie wstawiono. Na przykład jeśli użytkownik wpisze znak aplikacja ustawia domyślny znak odpowiadający ustawieniom lokalnym pogrubienie, ten znak jest pogrubiony. Aby uzyskać i ustawianie domyślnego formatowania znaków, należy użyć [GetDefaultCharFormat](../mfc/reference/cricheditctrl-class.md#getdefaultcharformat) i [SetDefaultCharFormat](../mfc/reference/cricheditctrl-class.md#setdefaultcharformat) funkcji elementów członkowskich.  
   
- Atrybut "chronionych" znak nie zmienia wygląd tekstu. Jeśli użytkownik próbuje zmodyfikować chroniony tekst, kontrolki zaawansowanej edycji wysyła jej okna nadrzędnego **EN_PROTECTED** komunikat powiadomienia, dzięki czemu okno nadrzędne umożliwić lub uniemożliwić zmianę. Ten komunikat powiadomienia, należy ją włączyć za pomocą [SetEventMask](../mfc/reference/cricheditctrl-class.md#seteventmask) funkcję elementu członkowskiego. Aby uzyskać więcej informacji na temat maski zdarzeń, zobacz [powiadomienia za pomocą formantu edycji wzbogaconej](../mfc/notifications-from-a-rich-edit-control.md)w dalszej części tego tematu.  
+ Atrybut "chroniony" znak nie zmienia się wygląd tekstu. Jeśli użytkownik próbuje zmodyfikować chroniony plik tekstowy, kontrolki edycji wzbogaconej wysyła okna nadrzędnego **EN_PROTECTED** komunikat powiadomienia, dzięki czemu okno nadrzędne umożliwić lub uniemożliwić zmiany. Ten komunikat powiadomienia, należy je włączyć za pomocą [seteventmask —](../mfc/reference/cricheditctrl-class.md#seteventmask) funkcja elementu członkowskiego. Aby uzyskać więcej informacji na temat maski zdarzeń, zobacz [powiadomień w kontrolce edycji wzbogaconej](../mfc/notifications-from-a-rich-edit-control.md)w dalszej części tego tematu.  
   
- Kolor pierwszego planu jest atrybutem znaku, ale kolor tła jest właściwością kontrolki zaawansowanej edycji. Aby ustawić kolor tła, użyj [SetBackgroundColor](../mfc/reference/cricheditctrl-class.md#setbackgroundcolor) funkcję elementu członkowskiego.  
+ Kolor pierwszego planu jest atrybutem znaków, ale kolor tła jest właściwość formantu bogatej edycji. Aby ustawić kolor tła, użyj [SetBackgroundColor](../mfc/reference/cricheditctrl-class.md#setbackgroundcolor) funkcja elementu członkowskiego.  
   
 ## <a name="see-also"></a>Zobacz też  
  [Korzystanie z CRichEditCtrl](../mfc/using-cricheditctrl.md)   

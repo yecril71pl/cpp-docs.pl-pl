@@ -18,15 +18,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c0dff1d6ce31f6b26c0f8a46ef2ff620a4d40f93
-ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
+ms.openlocfilehash: 69421faced2873a4083cc6edbf7dd86e15f3cd9e
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "33322292"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43199086"
 ---
 # <a name="ltsummarygt-visual-c"></a>&lt;Podsumowanie&gt; (Visual C++)
-\<Podsumowania > tag powinien być używany do opisu typu lub członka typu. Użyj [ \<Uwagi >](../ide/remarks-visual-cpp.md) można dodać dodatkowe informacje do opisu typu.  
+\<Podsumowania > tag powinien być używany do opisu typu lub składowej typu. Użyj [ \<Uwagi >](../ide/remarks-visual-cpp.md) można dodać dodatkowe informacje do opisu typu.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -39,9 +39,9 @@ ms.locfileid: "33322292"
  Podsumowanie obiektu.  
   
 ## <a name="remarks"></a>Uwagi  
- Tekst dla \<podsumowania > tag jest jedynym źródłem informacji o typie w IntelliSense i jest wyświetlany w [przeglądarki obiektów](http://msdn.microsoft.com/en-us/f89acfc5-1152-413d-9f56-3dc16e3f0470) w komentarz kodu — raport w sieci Web.  
+ Tekst dla \<podsumowania > tag to jedyne źródło informacji o typie w technologii IntelliSense i jest wyświetlany na [przeglądarki obiektów](https://msdn.microsoft.com/f89acfc5-1152-413d-9f56-3dc16e3f0470) i w raporcie Web komentarzy kodu.  
   
- Kompiluj z użyciem [/doc](../build/reference/doc-process-documentation-comments-c-cpp.md) na przetwarzanie komentarzy dokumentacji do pliku.  
+ Kompiluj przy użyciu [/doc](../build/reference/doc-process-documentation-comments-c-cpp.md) do Przetwarzaj komentarze dokumentacji do pliku.  
   
 ## <a name="example"></a>Przykład  
   

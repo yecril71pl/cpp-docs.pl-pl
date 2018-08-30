@@ -19,16 +19,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c85c19e4f23f7c6e9454793ac86a574614ec2fae
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 81046c8472a2a741d5e59622986326ab4b399871
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33847250"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43207926"
 ---
 # <a name="ltfilesystemgt"></a>&lt;filesystem&gt;
 
-Dołącz nagłówek &lt;filesystem > do uzyskiwania dostępu do klasy i funkcje, które manipulowania i pobieranie informacji na temat ścieżek, plików i katalogów.
+Dołączyć nagłówek &lt;filesystem > Aby uzyskać dostęp do klasy i funkcje, które manipulowanie i pobieranie informacji na temat ścieżek, pliki i katalogi.
 
 ## <a name="syntax"></a>Składnia
 
@@ -39,45 +39,45 @@ using namespace std::experimental::filesystem::v1;
 ```
 
 > [!IMPORTANT]
-> Począwszy od wersji programu Visual Studio 2017 r. \<filesystem > nagłówka nie zostało jeszcze C++ standard. Visual C++ 2017 implementuje standardowe ostatecznego projektu, podczas gdy znaleziono w [ISO/IEC JTC 1/SC 22/WG 21 N4100](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2014/n4100.pdf).
+> Począwszy od wersji programu Visual Studio 2017 \<filesystem > nagłówka nie zostało jeszcze C++ standard. Visual C++ 2017 implementuje standardowe ostatecznego projektu, podczas gdy znaleziono w [JTC ISO/IEC 1/SC 22/WG 21 N4100](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2014/n4100.pdf).
 
-Ten nagłówek obsługuje systemy plików dla jednej z dwóch klas szerokie systemów operacyjnych hosta: Microsoft Windows i Posix.
+Ten nagłówek obsługuje systemy plików dla jednej z dwóch klas szerokiego systemów operacyjnych hosta: Windows firmy Microsoft i Posix.
 
-Większość funkcji jest wspólny dla obu systemów operacyjnych, ten dokument identyfikuje, których wystąpić różnice. Na przykład:
+Większość funkcji jest wspólny dla obu systemów operacyjnych, w tym dokumencie określa, gdzie występują różnice. Na przykład:
 
-- System Windows obsługuje wiele nazw głównych, takich jak c: lub \\\network_name. System plików składa się z lasem drzewa, każda z własnego katalogu głównego, na przykład c:\ lub \\\network_name\\, a każda z własną bieżący katalog kończenia względną nazwę ścieżki (taki, który nie jest ścieżki).
+- Windows obsługuje wiele nazw głównych, takich jak c: lub \\\network_name. System plików, który składa się z lasem drzewa, każdy z własną katalogu głównego, na przykład c:\ lub \\\network_name\\, a każdy z własną bieżącego katalogu, do ukończenia względną nazwę ścieżki (taki, który nie jest ścieżki).
 
-- POSIX obsługuje jedno drzewo bez nazwy głównego katalogu z jednym elementem głównym oraz jeden katalog bieżący.
+- POSIX obsługuje jedno drzewo bez nazwy katalogu głównego katalogu z jednym elementem głównym / i jeden katalog bieżący.
 
-Inną istotną różnicą jest natywny reprezentacja nazwy ścieżek:
+Inny istotną różnicą jest natywna reprezentacja nazwy ścieżek:
 
-- System Windows używa sekwencji zerem wchar_t zakodowane jako UTF-16 (jeden lub dwa elementy dla każdego znaku).
+- Windows używa sekwencji zakończony znakiem null wchar_t, zakodowanymi w formacie UTF-16 (jeden lub dwa elementy, dla każdego znaku).
 
-- POSIX używa sekwencję zerem, char, został zakodowany jako UTF-8 (jeden lub więcej elementów, dla każdego znaku).
+- POSIX używa sekwencję zakończony znakiem null, char, zakodowanymi w formacie UTF-8 (jeden lub więcej elementów, dla każdego znaku).
 
-- Obiekt klasy ścieżki przechowuje nazwy ścieżki w postaci natywnej, ale obsługuje prosty konwersji między tą przechowywane formularza i kilka formularzy zewnętrznych:
+- Obiekt ścieżki klas przechowuje nazwy ścieżki w postaci natywnej, ale obsługuje proste konwersji między tą przechowywane formularza i kilka postaci zewnętrznych:
 
-- Sekwencja zerem char, został zakodowany jako favored przez system operacyjny.
+- Sekwencja zakończony znakiem null char, zakodowanymi w formacie favored przez system operacyjny.
 
-- Sekwencja zerem char, został zakodowany jako UTF-8.
+- Sekwencja zakończony znakiem null char, zakodowanymi w formacie UTF-8.
 
-- Sekwencja zerem wchar_t zakodowane jako favored przez system operacyjny.
+- Sekwencja zakończony znakiem null wchar_t, zakodowanymi w formacie favored przez system operacyjny.
 
-- Sekwencja zerem char16_t, został zakodowany jako UTF-16.
+- Sekwencja zakończony znakiem null char16_t, zakodowanymi w formacie UTF-16.
 
-- Sekwencja zerem char32_t zakodowane jako UTF-32.
+- Sekwencja zakończony znakiem null char32_t, zakodowanymi w formacie UTF-32.
 
-Interconversions między tymi reprezentacje są przenoszone przez, zgodnie z potrzebami, używając jednego lub więcej `codecvt` aspektami. Jeśli nie wyznaczono obiektu ustawień regionalnych, te aspekty są uzyskiwane z globalnych ustawień regionalnych.
+Interconversions między te oświadczenia są przenoszone przez, zgodnie z potrzebami przy użyciu jednej lub więcej `codecvt` aspektami. Jeśli nie wyznaczono obiekt ustawień regionalnych, tych zestawów reguł są uzyskiwane z globalnych ustawień regionalnych.
 
-Inna różnica polega na szczegółów, z którym każdy system operacyjny umożliwia określenie uprawnień dostępu do pliku lub katalogu:
+Inna różnica polega na szczegóły, z którym każdy system operacyjny umożliwia określenie uprawnień dostępu do pliku lub katalogu:
 
-1. Rejestruje Windows czy odczytu pliku tylko lub zapisywalny, atrybut, który nie ma znaczenia dla katalogów.
+1. Rekordy Windows czy odczytu pliku tylko lub zapisywalnego, atrybut, który nie ma znaczenia w przypadku katalogów.
 
-1. POSIX rejestruje, czy plik mogą być odczytywane, napisane lub wykonane (przeprowadzone skanowanie, jeśli katalog), przez właściciela, przez właściciela grupy lub przez każdy, a także kilka innych uprawnień.
+1. POSIX — rejestruje, czy plik mogą być odczytywane, napisane, czy wykonywany (skanowane Jeśli katalogu), przez właściciela, przez właściciela grupy lub przez każdy, a także kilka innych uprawnień.
 
-Wspólne dla obu systemów struktury nakłada się na nazwę ścieżki po pokonać nazwy głównej. Dla pathname c:/abc/xyz/def.ext:
+Wspólny dla obu systemów struktury nakłada się na nazwę ścieżki po pokonać nazwę katalogu głównego. Aby uzyskać c:/abc/xyz/def.ext nazwy ścieżki:
 
-- Nazwa głównego jest c:.
+- Nazwa głównego to c:.
 
 - Katalog główny jest /.
 
@@ -89,25 +89,25 @@ Wspólne dla obu systemów struktury nakłada się na nazwę ścieżki po pokona
 
 - Nazwa pliku jest def.ext.
 
-- Trzon jest def.
+- Stem jest def.
 
-- Rozszerzenie jest. zewnętrzne
+- To rozszerzenie. zewnętrzne
 
-Drobne różnica polega na **preferowanych separatora**, między sekwencji katalogów w nazwie ścieżki. Obu systemów operacyjnych pozwalają na zapis ukośnik, ale w niektórych kontekstach Windows preferuje ukośnik odwrotny \\.
+Drobne różnica polega na tym **preferowanych separator**, między sekwencji katalogów w nazwie ścieżki. Oba systemy operacyjne umożliwiają napisanie ukośnik /, ale w niektórych kontekstach Windows preferuje ukośnik odwrotny \\.
 
-Na koniec ważna cecha obiektów ścieżki jest, której można je tam, gdzie filename argument jest wymagana w klas zdefiniowanych w nagłówku \<fstream — >.
+Na koniec ważną funkcją obiekty ścieżki jest, że można ich używać w dowolnym miejscu w klas zdefiniowanych w nagłówku wymagany jest argument pliku \<fstream — >.
 
-Aby uzyskać więcej informacji oraz przykłady kodu, zobacz [nawigacji systemu plików (C++)](../standard-library/file-system-navigation.md).
+Aby uzyskać więcej informacji i przykłady kodu, zobacz [nawigacji systemu plików (C++)](../standard-library/file-system-navigation.md).
 
 ## <a name="classes"></a>Klasy
 
 |Nazwa|Opis|
 |----------|-----------------|
 |[directory_entry, klasa](../standard-library/directory-entry-class.md)|Opisuje obiekt, który jest zwracany przez `directory_iterator` lub `recursive_directory_iterator` i zawiera ścieżkę.|
-|[directory_iterator, klasa](../standard-library/directory-iterator-class.md)|W tym artykule opisano iterację wejściowych, które sekwencji za pomocą nazwy pliku w katalogu systemu plików.|
-|[filesystem_error, klasa](../standard-library/filesystem-error-class.md)|Klasa podstawowa dla wyjątków, które są zgłaszane do zgłaszania przepełnienie niskiego poziomu systemu.|
-|[path, klasa](../standard-library/path-class.md)|Definiuje klasę, która przechowuje typu szablonu obiektu `String` jest odpowiednie do użycia jako nazwę pliku.|
-|[recursive_directory_iterator, klasa](../standard-library/recursive-directory-iterator-class.md)|W tym artykule opisano iterację wejściowych, które sekwencji za pomocą nazwy pliku w katalogu systemu plików. Iterator można również malejąca do podkatalogów.|
+|[directory_iterator, klasa](../standard-library/directory-iterator-class.md)|Opisuje iterator danych wejściowych, które sekwencji za pomocą nazwy plików w katalogu systemu plików.|
+|[filesystem_error, klasa](../standard-library/filesystem-error-class.md)|Klasa bazowa dla wyjątków, które są generowane do zgłaszania przepełnienie niskiego poziomu systemu.|
+|[path, klasa](../standard-library/path-class.md)|Definiuje klasę, która przechowuje obiekt typu szablonu `String` który jest odpowiedni do użytku jako nazwę pliku.|
+|[recursive_directory_iterator, klasa](../standard-library/recursive-directory-iterator-class.md)|Opisuje iterator danych wejściowych, które sekwencji za pomocą nazwy plików w katalogu systemu plików. Iterator który można również jest elementem podrzędnym elementu do podkatalogów.|
 |[file_status, klasa](../standard-library/file-status-class.md)|Opakowuje `file_type`.|
 
 ## <a name="structs"></a>Struktury
@@ -118,20 +118,20 @@ Aby uzyskać więcej informacji oraz przykłady kodu, zobacz [nawigacji systemu 
 
 ## <a name="functions"></a>Funkcje
 
-[\<FileSystem > Funkcje](../standard-library/filesystem-functions.md)
+[\<System plików > funkcji](../standard-library/filesystem-functions.md)
 
 ## <a name="operators"></a>Operatory
 
-[\<FileSystem > operatory](../standard-library/filesystem-operators.md)
+[\<System plików > operatorów](../standard-library/filesystem-operators.md)
 
 ## <a name="enumerations"></a>Wyliczenia
 
 |Nazwa|Opis|
 |----------|-----------------|
-|[copy_options](../standard-library/filesystem-enumerations.md#copy_options)|Wyliczenie, który jest używany z [copy_file —](http://msdn.microsoft.com/4af7a9b0-8861-45ed-b84e-0307f0669d60) i określa zachowanie, jeśli plik docelowy już istnieje.|
-|[directory_options —](../standard-library/filesystem-enumerations.md#directory_options)|Wyliczenie określający opcje dla Iteratory katalogu.|
+|[copy_options](../standard-library/filesystem-enumerations.md#copy_options)|Wyliczenie, które jest używane z [copy_file —](https://msdn.microsoft.com/4af7a9b0-8861-45ed-b84e-0307f0669d60) i określa zachowanie, jeśli plik docelowy już istnieje.|
+|[directory_options —](../standard-library/filesystem-enumerations.md#directory_options)|Wyliczenie, które określa opcje dla iteratorów katalogu.|
 |[file_type](../standard-library/filesystem-enumerations.md#file_type)|Wyliczenie dla typów plików.|
-|[PERMS](../standard-library/filesystem-enumerations.md#perms)|Typ maski używany do przekazania uprawnień i opcji, aby uprawnienia|
+|[PERMS](../standard-library/filesystem-enumerations.md#perms)|Typ maski bitów używany do przekazywania, uprawnień i opcje uprawnień|
 
 ## <a name="see-also"></a>Zobacz także
 

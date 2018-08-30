@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 9d86984dc67dd5cbea6fe52ff1c8b099e5b061f5
-ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
+ms.openlocfilehash: 7b131119f5f6207feccec3c683a470a8b099de12
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/30/2018
-ms.locfileid: "39337193"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43207845"
 ---
 # <a name="obtaining-metadata-with-schema-rowsets"></a>Uzyskiwanie metadanych za pomocą zestawów wierszy schematu
 Czasami zachodzi potrzeba uzyskania informacji o dostawcy, zestawu wierszy, tabeli, kolumny lub inne informacje o bazie danych bez konieczności otwierania zestawu wierszy. Dane dotyczące struktury bazy danych jest nazywane metadanych i mogą być pobierane przez wiele różnych sposobów. Jedną z metod jest używać zestawów wierszy schematu.  
@@ -60,7 +60,7 @@ CRestrictions<CAccessor<CColumnsInfo>
   
  [CRestrictions](../../data/oledb/crestrictions-class.md) klasa zapewnia obsługę ograniczeń. Po utworzeniu wystąpienia zestaw wierszy schematu, wywołaj [CRestrictions::Open](../../data/oledb/crestrictions-open.md). Ta metoda zwraca zestaw wyników, oparte na ograniczenia, które określisz.  
   
- Aby określić ograniczenia, zapoznaj się [zestawów wierszy schematu B: dodatku](http://go.microsoft.com/fwlink/p/?linkid=64681) i poszukiwanie zestawu wierszy, którego używasz. Na przykład `CColumns` odpowiada [zestawu wierszy kolumn](http://go.microsoft.com/fwlink/p/?linkid=64682); tego tematu spowoduje wyświetlenie listy kolumn ograniczeń w zestawie wierszy kolumn: TABLE_CATALOG, TABLE_SCHEMA, nazwa_tabeli COLUMN_NAME. Należy przestrzegać tej kolejności określania Twojej ograniczenia.  
+ Aby określić ograniczenia, zapoznaj się [zestawów wierszy schematu B: dodatku](/previous-versions/windows/desktop/ms712921\(v=vs.85\)) i poszukiwanie zestawu wierszy, którego używasz. Na przykład `CColumns` odpowiada [zestawu wierszy kolumn](/previous-versions/windows/desktop/ms723052\(v%3dvs.85\)); tego tematu spowoduje wyświetlenie listy kolumn ograniczeń w zestawie wierszy kolumn: TABLE_CATALOG, TABLE_SCHEMA, nazwa_tabeli COLUMN_NAME. Należy przestrzegać tej kolejności określania Twojej ograniczenia.  
   
  Tak, na przykład, jeśli chcesz ograniczyć, nazwę tabeli, należy pamiętać, że nazwa_tabeli trzecia kolumna ograniczenia, a następnie wywołaj `Open`, określając nazwę odpowiednią tabelę jako trzeci parametr ograniczenia, jak pokazano w poniższym przykładzie.  
   
@@ -90,9 +90,9 @@ CRestrictions<CAccessor<CColumnsInfo>
   
  Dla odwołania do zestawu wierszy schematu klasy typedef podane w szablonach OLE DB (zobacz [klasy zestawów wierszy schematu i klasy Typedef](../../data/oledb/schema-rowset-classes-and-typedef-classes.md)).  
   
- Aby uzyskać więcej informacji na temat zestawów wierszy schematu OLE DB, w tym kolumny ograniczenia zobacz [zestawów wierszy schematu B: dodatku](http://go.microsoft.com/fwlink/p/?linkid=64681) w OLE DB Podręcznik programisty.  
+ Aby uzyskać więcej informacji na temat zestawów wierszy schematu OLE DB, w tym kolumny ograniczenia zobacz [zestawów wierszy schematu B: dodatku](/previous-versions/windows/desktop/ms712921\(v=vs.85\)) w OLE DB Podręcznik programisty.  
   
- Bardziej złożone przykłady sposobów użycia klasy zestawów wierszy schematu, zobacz [CatDB](http://msdn.microsoft.com/003d516b-2bf6-444e-8be5-4ebaa0b66046) i [DBViewer](http://msdn.microsoft.com/07620f99-c347-4d09-9ebc-2459e8049832) przykłady.  
+ Bardziej złożone przykłady sposobów użycia klasy zestawów wierszy schematu, zobacz [CatDB](https://github.com/Microsoft/VCSamples) i [DBViewer](https://github.com/Microsoft/VCSamples) przykłady.  
   
  Aby uzyskać informacje dotyczące obsługi dostawcy zestawów wierszy schematu, zobacz [Obsługa zestawów wierszy schematu](../../data/oledb/supporting-schema-rowsets.md).  
   

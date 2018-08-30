@@ -1,5 +1,5 @@
 ---
-title: Kompilatora (poziom 1) ostrzeżenie C4158 | Dokumentacja firmy Microsoft
+title: Kompilator ostrzeżenie (poziom 1) C4158 | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8fc7a3e8dca8b263d0d49b9d213692284e221b58
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 417c730a515ef38c19c4108dd6c71d5d3d5a660b
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33277023"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43207882"
 ---
-# <a name="compiler-warning-level-1-c4158"></a>Kompilator C4158 ostrzegawcze (poziom 1)
-Zakładając, że pointers_to_members #pragma (full_generality, dziedziczenia)  
-  
- A **#pragma pointers_to_members (***pojedynczego&#124;wiele&#124;wirtualnego***)** został wystawiony bez towarzyszącego **#pragma pointers_to_members(full_generality)**.
+# <a name="compiler-warning-level-1-c4158"></a>Kompilator ostrzeżenie (poziom 1) C4158
+
+> przy założeniu #pragma pointers_to_members (full_generality, dziedziczenie)
+
+A **#pragma pointers_to_members (** *pojedynczego* &#124; *wielu* &#124; *wirtualnego* **)** został wystawiony bez towarzyszącego **#pragma pointers_to_members(full_generality)**.

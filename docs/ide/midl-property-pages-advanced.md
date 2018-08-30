@@ -26,37 +26,37 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9b99dae277fec7618c2e7caeb76229edce7a78c2
-ms.sourcegitcommit: 7eadb968405bcb92ffa505e3ad8ac73483e59685
+ms.openlocfilehash: ed9d6ba12e65eac325008cb2a448abdab087ee46
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/23/2018
-ms.locfileid: "39207763"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43197963"
 ---
 # <a name="midl-property-pages-advanced"></a>Strony właściwości MIDL: zaawansowane
 **Zaawansowane** — strona właściwości w **MIDL** folderu określa następujące opcje kompilatora MIDL:  
   
--   Włącz sprawdzanie błędów ([/Error](http://msdn.microsoft.com/library/windows/desktop/aa367324))  
+-   Włącz sprawdzanie błędów ([/Error](https://msdn.microsoft.com/library/windows/desktop/aa367324))  
   
--   Sprawdź alokacje ([/Error](http://msdn.microsoft.com/library/windows/desktop/aa367324))  
+-   Sprawdź alokacje ([/Error](https://msdn.microsoft.com/library/windows/desktop/aa367324))  
   
--   Sprawdź granice ([/Error](http://msdn.microsoft.com/library/windows/desktop/aa367324))  
+-   Sprawdź granice ([/Error](https://msdn.microsoft.com/library/windows/desktop/aa367324))  
   
--   Sprawdź zakres wartości wyliczeniowych ([/Error](http://msdn.microsoft.com/library/windows/desktop/aa367324))  
+-   Sprawdź zakres wartości wyliczeniowych ([/Error](https://msdn.microsoft.com/library/windows/desktop/aa367324))  
   
--   Sprawdź wskaźniki odwołań ([/Error](http://msdn.microsoft.com/library/windows/desktop/aa367324))  
+-   Sprawdź wskaźniki odwołań ([/Error](https://msdn.microsoft.com/library/windows/desktop/aa367324))  
   
--   Sprawdź dane szczątkowe ([/Error](http://msdn.microsoft.com/library/windows/desktop/aa367324))  
+-   Sprawdź dane szczątkowe ([/Error](https://msdn.microsoft.com/library/windows/desktop/aa367324))  
   
--   Sprawdza poprawność parametrów ([/ robust](http://msdn.microsoft.com/library/windows/desktop/aa367363)) \*  
+-   Sprawdza poprawność parametrów ([/ robust](https://msdn.microsoft.com/library/windows/desktop/aa367363)) \*  
   
--   Wyrównanie składowej struktury ([/ZP](http://msdn.microsoft.com/library/windows/desktop/aa367388))  
+-   Wyrównanie składowej struktury ([/ZP](https://msdn.microsoft.com/library/windows/desktop/aa367388))  
   
--   Przekieruj dane wyjściowe ([/o](http://msdn.microsoft.com/library/windows/desktop/aa367351))  
+-   Przekieruj dane wyjściowe ([/o](https://msdn.microsoft.com/library/windows/desktop/aa367351))  
   
--   Opcje przetwarzania wstępnego C ([/cpp_opt](http://msdn.microsoft.com/library/windows/desktop/aa367318))  
+-   Opcje przetwarzania wstępnego C ([/cpp_opt](https://msdn.microsoft.com/library/windows/desktop/aa367318))  
   
--   Usuń definicje preprocesora ([/U](http://msdn.microsoft.com/library/windows/desktop/aa367373))  
+-   Usuń definicje preprocesora ([/U](https://msdn.microsoft.com/library/windows/desktop/aa367373))  
   
  \* / niezawodne jest tylko do użytku podczas kompilowania dla Windows 2000 lub nowszym maszyny. Jeśli tworzenie projektu ATL i chcesz używać / robust, zmień ten wiersz w pliku dlldatax.c:  
   

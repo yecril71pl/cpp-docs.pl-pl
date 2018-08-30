@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 044c5df5ae0a51912893ccf306a5c93afceb7ab3
-ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
+ms.openlocfilehash: 66c1e1eea44ee105176d8693cec95bcce3c18a1f
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/01/2018
-ms.locfileid: "39407591"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43200643"
 ---
 # <a name="argument-definitions"></a>Definicje argumentu
 Argumenty w prototypie  
@@ -44,7 +44,7 @@ int wmain( int argc, wchar_t* argv[], wchar_t* envp[]);
  Pierwszym argumentem wiersza polecenia jest zawsze `argv` **[1]** i jest ostatni z nich `argv` **[** `argc` - 1 **]**.  
   
 > [!NOTE]
->  Zgodnie z Konwencją `argv` **[0]** jest poleceniem, z którym wywoływany jest program.  Jednak jest możliwe, aby utworzyć proces przy użyciu [CreateProcess](http://msdn.microsoft.com/library/windows/desktop/ms683197) i jeśli korzystasz z pierwszego i drugiego argumentu (*lpApplicationName* i *lpCommandLine*), `argv` **[0]** może nie być plik wykonywalny o nazwie; użyj [Funkcja GetModuleFileName](http://msdn.microsoft.com/library/windows/desktop/ms683197) można pobrać nazwy pliku wykonywalnego oraz jego w pełni kwalifikowanej ścieżki.  
+>  Zgodnie z Konwencją `argv` **[0]** jest poleceniem, z którym wywoływany jest program.  Jednak jest możliwe, aby utworzyć proces przy użyciu [CreateProcess](https://msdn.microsoft.com/library/windows/desktop/ms683197) i jeśli korzystasz z pierwszego i drugiego argumentu (*lpApplicationName* i *lpCommandLine*), `argv` **[0]** może nie być plik wykonywalny o nazwie; użyj [Funkcja GetModuleFileName](https://msdn.microsoft.com/library/windows/desktop/ms683197) można pobrać nazwy pliku wykonywalnego oraz jego w pełni kwalifikowanej ścieżki.  
   
 ## <a name="microsoft-specific"></a>Specyficzne dla firmy Microsoft  
  *envp*  

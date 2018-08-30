@@ -1,7 +1,7 @@
 ---
 title: Ostrzeżenie prj0042 dotyczące kompilacji projektu | Dokumentacja firmy Microsoft
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 08/27/2018
 ms.technology:
 - cpp-diagnostics
 ms.topic: error-reference
@@ -16,23 +16,23 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4c0465b160615af96da8f489bbde63684598cffc
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 260da8ac336c640ea875610b2c62e6c42c7d335e
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33316832"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43211353"
 ---
 # <a name="project-build-warning-prj0042"></a>Ostrzeżenie PRJ0042 dotyczące kompilacji projektu
-**"Właściwość wyniki dla niestandardowego kroku kompilacji dla pliku"**   
- ***plik* "nie jest ustawiona. Niestandardowy krok kompilacji będzie pominięty.**  
-  
- Nie można wykonać niestandardowego kroku kompilacji, nie podano żadnych danych wyjściowych.  
-  
- Aby rozwiązać ten problem, wykonaj jedną z następujących czynności:  
-  
--   Wyklucz kroku kompilacji niestandardowej kompilacji.  
-  
--   Dodawanie danych wyjściowych.  
-  
--   Usuń zawartość tego polecenia kroku kompilacji niestandardowej.
+
+> "W danych wyjściowych właściwość niestandardowego kroku kompilacji dla pliku"*pliku*"nie jest ustawiona. Niestandardowy krok kompilacji będzie pominięty.
+
+Niestandardowy krok kompilacji nie został wykonany, ponieważ określono żadnych danych wyjściowych.
+
+Aby rozwiązać ten problem, wykonaj jedną z następujących czynności:
+
+- Wykluczanie niestandardowego kroku kompilacji z kompilacji.
+
+- Dodaj dane wyjściowe.
+
+- Usuń zawartość polecenie kroku kompilacji niestandardowej.

@@ -18,12 +18,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 39d19749f44645d30d9a3826758f54737d3e68af
-ms.sourcegitcommit: d4c803bd3a684d7951bf88dcecf1f14af43ae411
+ms.openlocfilehash: 0bcbd8dcc64d26f124a7b6443a79f01aa4329414
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/10/2018
-ms.locfileid: "42465124"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43207495"
 ---
 # <a name="pack"></a>pakiet
 Określa wyrównanie pakowania dla struktury, Unii i składowych klasy.  
@@ -38,7 +38,7 @@ Określa wyrównanie pakowania dla struktury, Unii i składowych klasy.
 
 Umieszczenie klasy jest umieszczenie jej elementy członkowskie bezpośrednio po sobie nawzajem w pamięci, co może oznaczać, że niektóre lub wszystkie elementy członkowskie można wyrównać na granicy mniejszy niż domyślne wyrównanie architektury docelowej. **pakiet** zapewnia kontrolę na poziomie deklaracji danych. To różni się od — opcja kompilatora [/ZP](../build/reference/zp-struct-member-alignment.md), który tylko można kontrolować poziom modułu. **pakiet** staje się skuteczny po pierwszym **struktury**, **Unii**, lub **klasy** deklaracji po pragmy jest widoczny. **pakiet** nie ma wpływu na definicje. Wywoływanie **pakiet** z zestawami nie argumentów *n* wartość ustawioną w — opcja kompilatora `/Zp`. Jeśli nie ustawiono opcję kompilatora, wartością domyślną jest 8.  
   
-Jeśli zmienisz Wyrównanie struktury, nie może używać dużej ilości miejsca w pamięci, ale może zobaczyć spadek wydajności lub nawet uzyskać wyjątek generowany sprzętu dla niewyrównany dostęp.  To zachowanie wyjątku można zmienić za pomocą [SetErrorMode](http://msdn.microsoft.com/library/windows/desktop/ms680621).  
+Jeśli zmienisz Wyrównanie struktury, nie może używać dużej ilości miejsca w pamięci, ale może zobaczyć spadek wydajności lub nawet uzyskać wyjątek generowany sprzętu dla niewyrównany dostęp.  To zachowanie wyjątku można zmienić za pomocą [SetErrorMode](https://msdn.microsoft.com/library/windows/desktop/ms680621).  
   
 *Pokaż* (opcjonalnie)  
 Wyświetla bieżącą wartość bajtu pakowania wyrównania. Wartość jest wyświetlana przez komunikat ostrzegawczy.  

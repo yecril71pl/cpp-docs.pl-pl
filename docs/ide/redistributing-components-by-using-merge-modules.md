@@ -15,19 +15,19 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6d95b6d2a69b4b40c4464136dd33a8c5231185f5
-ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
+ms.openlocfilehash: d816d932ce518e006e5537075fe4ac7782362ad4
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "33329117"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43206987"
 ---
 # <a name="redistributing-components-by-using-merge-modules"></a>Redystrybucja składników za pomocą modułów scalania
-Visual Studio zawiera [scalania modułów](http://msdn.microsoft.com/library/aa367434) dla każdego składnika Visual C++, która jest licencjonowana do można rozpowszechniać za pomocą aplikacji. Gdy moduł scalania jest wkompilowany w plik instalacyjny Instalatora Windows, umożliwia on wdrażanie określonych bibliotek DLL na komputerach, które mają określoną platformę. W pliku konfiguracji należy określić, że moduły scalania stanowią wymagania wstępne dotyczące aplikacji. Po zainstalowaniu programu Visual Studio modułów scalania są zainstalowane w \Program Files\Common modułów Files\Merge\\. (Można rozpowszechniać tylko bez debugowania wersje programu Visual C++ bibliotek DLL). Więcej informacji oraz link do listy modułów scalania, które są licencjonowane dla redystrybucji, zobacz [redystrybuowanie pliki Visual C++](../ide/redistributing-visual-cpp-files.md).  
+Program Visual Studio obejmuje [modułów scalania,](/windows/desktop/Msi/about-merge-modules) dla każdego składnika Visual C++, którego licencja pozwala na redystrybucję z aplikacją. Gdy moduł scalania jest wkompilowany w plik instalacyjny Instalatora Windows, umożliwia on wdrażanie określonych bibliotek DLL na komputerach, które mają określoną platformę. W pliku konfiguracji należy określić, że moduły scalania stanowią wymagania wstępne dotyczące aplikacji. Po zainstalowaniu programu Visual Studio, moduły scalania są zainstalowane w \Program Files\Common Files\Merge Modules\\. (Może być rozpowszechniany wyłącznie bez debugowania wersje bibliotek DLL Visual C++.) Aby uzyskać więcej informacji i łącze do listy modułów scalania, których licencja pozwala na redystrybucję, zobacz [Redistributing Visual C++ Files](../ide/redistributing-visual-cpp-files.md).  
   
- W przeciwnym razie instalacja pakietu redystrybucyjnego dll programu Visual C++ do folderu %SYSTEMROOT%\system32\, można użyć modułów scalania. (Visual Studio sam korzysta z tej techniki). Jednakże instalacja w tym folderze się nie uda, chyba że użytkownik ma prawa administratora.  
+ Można użyć modułów scalania, aby umożliwić instalację redystrybucyjnych bibliotek DLL Visual C++ do folderu %SYSTEMROOT%\system32\. (Visual Studio używa tej techniki.) Jednakże instalacja w tym folderze się nie uda, chyba że użytkownik ma prawa administratora.  
   
- Nie zalecamy korzystania z modułów scalania z wyjątkiem przypadków, kiedy nie musisz świadczyć serwisu aplikacji i nie zależy ona od więcej niż jednej wersji biblioteki DLL. Modułów scalania dla różnych wersji tej samej biblioteki DLL nie można włączyć do jednego instalatora, moduły scalania utrudniają serwisowanie bibliotek DLL niezależnie od aplikacji. Zamiast tego zaleca się, że zainstaluj pakiet redystrybucyjny Visual C++.  
+ Nie zalecamy korzystania z modułów scalania z wyjątkiem przypadków, kiedy nie musisz świadczyć serwisu aplikacji i nie zależy ona od więcej niż jednej wersji biblioteki DLL. Modułów scalania dla różnych wersji tej samej biblioteki DLL nie można włączyć do jednego instalatora, moduły scalania utrudniają serwisowanie bibliotek DLL niezależnie od aplikacji. Zamiast tego zaleca się, że możesz zainstalować pakiet redystrybucyjny Visual C++.  
   
 ## <a name="see-also"></a>Zobacz też  
  [Ponowne dystrybuowanie plików programu Visual C++](../ide/redistributing-visual-cpp-files.md)

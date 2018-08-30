@@ -18,41 +18,41 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f9758c63562a19d6b9e458fd434108a92bbc8576
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 89a899c7604f3342564a315ba704fc2fcd31ec36
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33379271"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43206941"
 ---
 # <a name="scrolling-and-scaling-views"></a>Przewijanie i skalowanie widoków
-MFC obsługuje widoki, które przewiń i widoki, które są automatycznie przeskalowany do rozmiaru okna ramki, która wyświetla je. Klasa `CScrollView` obsługuje oba rodzaje widoków.  
+Biblioteka MFC obsługuje widoki, które przewiń i widoki, które są automatycznie skalowane do rozmiaru okna ramki, które wyświetla je. Klasa `CScrollView` obsługuje oba rodzaje widoków.  
   
- Aby uzyskać więcej informacji na temat przewijanie i skalowanie, zobacz klasy [CScrollView](../mfc/reference/cscrollview-class.md) w *odwołania MFC*. Na przykład przewijania, zobacz [próbki bazgrołów](../visual-cpp-samples.md).  
+ Aby uzyskać więcej informacji na temat przewijanie i skalowanie Zobacz klasy [CScrollView](../mfc/reference/cscrollview-class.md) w *odwołanie MFC*. Na przykład przewijania, zobaczyć [próbki Bazgroły](../visual-cpp-samples.md).  
   
-## <a name="what-do-you-want-to-know-more-about"></a>Co chcesz dowiedzieć się więcej o  
+## <a name="what-do-you-want-to-know-more-about"></a>Co chcesz dowiedzieć się więcej na temat  
   
 -   Przewijanie widoku  
   
--   Skalowanie widoku  
+-   Skalowanie w widoku  
   
--   [Wyświetlanie współrzędnych](http://msdn.microsoft.com/library/windows/desktop/dd145205)  
+-   [Wyświetlanie współrzędnych](/windows/desktop/gdi/window-coordinate-system)  
   
 ##  <a name="_core_scrolling_a_view"></a> Przewijanie widoku  
- Często rozmiar pliku jest większy niż rozmiar widoku jego mogą być wyświetlane. Może to nastąpić, ponieważ dane dokumentu zwiększa lub użytkownik zmniejsza okno widoku ramki. W takich przypadkach widok musi obsługiwać przewijania.  
+ Często rozmiaru dokumentu jest większy niż rozmiar, który można wyświetlić jej widok. Może to nastąpić, ponieważ dane dokumentu zwiększa się lub użytkownik zmniejsza okno, który określa widoku. W takich przypadkach widok musi obsługiwać przewijania.  
   
- Dowolny widok może obsłużyć komunikaty paska przewijania w jego `OnHScroll` i `OnVScroll` funkcji elementów członkowskich. Można albo zaimplementuj paska przewijania komunikat — Obsługa w tych funkcji, wykonanie całej pracy samodzielnie, lub można użyć `CScrollView` klasy do obsługi przewijanie dla Ciebie.  
+ Dowolny widok może obsługiwać komunikaty paska przewijania w jego `OnHScroll` i `OnVScroll` funkcji elementów członkowskich. Można albo obsługa komunikatów paska przewijania implementacji tych funkcji samodzielnie wykonać całą pracę, lub możesz użyć `CScrollView` klasy do obsługi przewijanie za Ciebie.  
   
  `CScrollView` wykonuje następujące czynności:  
   
--   Zarządza rozmiarów okna i okienka ekranu i tryby mapowania  
+-   Zarządza tryby mapowania i rozmiary okna i okienka ekranu  
   
 -   Przewija automatycznie w odpowiedzi na komunikaty paska przewijania  
   
- Można określić, ile przewiń "page", (po kliknięciu przez użytkownika w wale paska przewijania) i "wiersz" (gdy użytkownik kliknie strzałkę przewijania). Te wartości do własnych rodzaj widoku planu. Można na przykład przewiń 1 piksel w widoku grafiki, ale w przyrostach oparte na wysokość wiersza w dokumentach tekstu.  
+ Można określić, ile przewiń "page", (gdy użytkownik kliknie wałka pasek przewijania) i "wiersz" (po kliknięciu przez użytkownika w strzałki przewijania). Należy zaplanować te wartości w zależności od charakteru widoku. Na przykład można przewijać w 1 piksel w celu wyświetlenia grafiki, ale w przyrostach oparte na wysokość wiersza tekstu, dokumentów.  
   
-##  <a name="_core_scaling_a_view"></a> Skalowanie widoku  
- Widok, aby automatycznie Dopasuj rozmiar okna ramki, należy służy `CScrollView` skalowania zamiast przewijania. Widok logiczny jest rozciągany tak, lub zmniejszyć, aby dokładnie dopasować obszaru klienckiego okna. Skalowanie widoku nie ma pasków przewijania.  
+##  <a name="_core_scaling_a_view"></a> Skalowanie w widoku  
+ Jeśli chcesz, aby widok, aby automatycznie Dopasuj rozmiar okna ramki, można użyć `CScrollView` skalowania zamiast przewijania. Widok logiczny jest rozciągana lub zmniejszyć, aby dokładnie dopasować obszaru klienckiego okna. Przeskalowano widoku nie ma pasków przewijania.  
   
 ## <a name="see-also"></a>Zobacz też  
  [Używanie widoków](../mfc/using-views.md)

@@ -9,15 +9,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0cf5041e6e3faa8c495d52c31d86ff25c903a174
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 50c7b6a8e62aa957c54f66ebaf87fcd86df458fb
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42600723"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43199346"
 ---
 # <a name="operator-windowsuixamlinteroptypename"></a>operator Windows::UI::Xaml::Interop::TypeName
-Umożliwia konwersję z `Platform::Type` do [Windows::UI::Xaml::Interop::TypeName](http://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.interop.typename.aspx).  
+Umożliwia konwersję z `Platform::Type` do [Windows::UI::Xaml::Interop::TypeName](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.interop.typename.aspx).  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -26,10 +26,10 @@ Operator TypeName(Platform::Type^ type)
 ```  
   
 ### <a name="return-value"></a>Wartość zwracana  
- Zwraca [Windows::UI::Xaml::Interop::TypeName](http://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.interop.typename.aspx) danego pseudoelementu `Platform::Type^`.  
+ Zwraca [Windows::UI::Xaml::Interop::TypeName](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.interop.typename.aspx) danego pseudoelementu `Platform::Type^`.  
   
 ### <a name="remarks"></a>Uwagi  
- `TypeName` jest niezależny od języka struktura Windows Runtime reprezentujących informacje o typie. [Platform::type](../cppcx/platform-type-class.md) jest specyficzne dla języka C++ i nie mogą być przekazywane między interfejsem binarnym aplikacji (ABI). W tym miejscu jest jednym z zastosowań `TypeName`w [Navigate](http://msdn.microsoft.com/library/windows/apps/hh702394.aspx) funkcji:  
+ `TypeName` jest niezależny od języka struktura Windows Runtime reprezentujących informacje o typie. [Platform::type](../cppcx/platform-type-class.md) jest specyficzne dla języka C++ i nie mogą być przekazywane między interfejsem binarnym aplikacji (ABI). W tym miejscu jest jednym z zastosowań `TypeName`w [Navigate](https://msdn.microsoft.com/library/windows/apps/hh702394.aspx) funkcji:  
   
 ```  
 rootFrame->Navigate(TypeName(MainPage::typeid), e->Arguments);  

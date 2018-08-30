@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7cfc0b62fd3008ae18ae82703bfb896d56dba1de
-ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
+ms.openlocfilehash: b6793cbb120b44456a880a47ffd114c346662376
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37337372"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43208888"
 ---
 # <a name="application-information-and-management"></a>Informacje o aplikacji i zarządzanie nią
 Podczas pisania aplikacji, Utwórz jeden [CWinApp](../../mfc/reference/cwinapp-class.md)-pochodnych obiektu. Czasami możesz chcieć uzyskać informacje na temat tego obiektu wynikające ze poza `CWinApp`-pochodnych obiektu. Lub może być wymagany dostęp do innych obiektów globalnych "Manager".
@@ -96,7 +96,7 @@ CWinThread* AfxBeginThread(
  Parametr do przekazania do funkcji kontroli zgodnie z informacjami w parametrze do deklaracji funkcji w *pfnThreadProc*.  
   
  *nPriority*  
- Żądany priorytet wątku. Aby uzyskać pełną listę i opis dostępnych priorytetów, zobacz [SetThreadPriority](http://msdn.microsoft.com/library/windows/desktop/ms686277) w zestawie Windows SDK.  
+ Żądany priorytet wątku. Aby uzyskać pełną listę i opis dostępnych priorytetów, zobacz [SetThreadPriority](/windows/desktop/api/processthreadsapi/nf-processthreadsapi-setthreadpriority) w zestawie Windows SDK.  
   
  *nStackSize*  
  Określa rozmiar w bajtach stosu dla nowego wątku. Jeśli jest to 0, rozmiar stosu domyślnie taki sam jak rozmiar stosu wątku tworzącego.  
@@ -109,7 +109,7 @@ CWinThread* AfxBeginThread(
 - **0** uruchomić wątku od razu po utworzeniu.  
   
  *lpSecurityAttrs*  
- Wskazuje [SECURITY_ATTRIBUTES](http://msdn.microsoft.com/library/windows/desktop/aa379560) strukturę, która określa atrybuty zabezpieczeń dla wątku. Jeśli ma wartość NULL, będą używane te same atrybuty zabezpieczeń jako wątku tworzącego. Aby uzyskać więcej informacji na temat tej struktury zobacz zestaw Windows SDK.  
+ Wskazuje [SECURITY_ATTRIBUTES](https://msdn.microsoft.com/library/windows/desktop/aa379560) strukturę, która określa atrybuty zabezpieczeń dla wątku. Jeśli ma wartość NULL, będą używane te same atrybuty zabezpieczeń jako wątku tworzącego. Aby uzyskać więcej informacji na temat tej struktury zobacz zestaw Windows SDK.  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Wskaźnik do nowo utworzony obiekt wątku lub wartość NULL, jeśli wystąpi błąd.  
@@ -178,7 +178,7 @@ HINSTANCE AFXAPI AfxFindResourceHandle( LPCTSTR lpszName,  LPCTSTR lpszType );
  *lpszName*  
  Wskaźnik do ciągu zawierającego identyfikator zasobu.    
  *lpszType*  
- Wskaźnik do typu zasobu. Aby uzyskać listę typów zasobów, zobacz [FindResource](http://msdn.microsoft.com/library/windows/desktop/ms648042) w zestawie Windows SDK.  
+ Wskaźnik do typu zasobu. Aby uzyskać listę typów zasobów, zobacz [FindResource](/windows/desktop/api/winbase/nf-winbase-findresourcea) w zestawie Windows SDK.  
    
 ### <a name="return-value"></a>Wartość zwracana  
  Dojście do modułu, który zawiera zasób.  
@@ -506,7 +506,7 @@ HINSTANCE AFXAPI AfxLoadLibrary(LPCTSTR lpszModuleName);
  Jeśli funkcja się powiedzie, wartość zwracana jest dojścia do modułu. Jeśli funkcja zawiedzie, wartość zwracana jest wartość NULL.  
   
 ### <a name="remarks"></a>Uwagi  
- Zwraca uchwyt, który może służyć w [GetProcAddress](http://msdn.microsoft.com/library/windows/desktop/ms683212) można pobrać adresu funkcji DLL. `AfxLoadLibrary` można również mapować inne moduły pliku wykonywalnego.  
+ Zwraca uchwyt, który może służyć w [GetProcAddress](https://msdn.microsoft.com/library/windows/desktop/ms683212) można pobrać adresu funkcji DLL. `AfxLoadLibrary` można również mapować inne moduły pliku wykonywalnego.  
   
  Każdy proces przechowuje licznik odwołań dla każdego modułu załadować biblioteki. Ten licznik odwołań rośnie każdorazowo `AfxLoadLibrary` nosi nazwę i jest zmniejszana każdorazowo `AfxFreeLibrary` jest wywoływana. Gdy licznik odwołań osiągnie zero, moduł jest niezamapowany przestrzeni adresowej procesu wywołującego, a uchwyt nie jest już prawidłowy.  
   
@@ -559,7 +559,7 @@ BOOL AFXAPI AfxRegisterClass(WNDCLASS* lpWndClass);
   
 ### <a name="parameters"></a>Parametry  
  *lpWndClass*  
- Wskaźnik do [WNDCLASS](http://msdn.microsoft.com/library/windows/desktop/ms633576) struktury zawierający informacje na temat klasy okna do zarejestrowania. Aby uzyskać więcej informacji na temat tej struktury zobacz zestaw Windows SDK.  
+ Wskaźnik do [WNDCLASS](https://msdn.microsoft.com/library/windows/desktop/ms633576) struktury zawierający informacje na temat klasy okna do zarejestrowania. Aby uzyskać więcej informacji na temat tej struktury zobacz zestaw Windows SDK.  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Wartość TRUE, jeśli klasa zostanie pomyślnie zarejestrowana; w przeciwnym razie wartość FALSE.  
@@ -588,7 +588,7 @@ LPCTSTR AFXAPI AfxRegisterWndClass(
   
 ### <a name="parameters"></a>Parametry  
  *nClassStyle*  
- Określa styl klasy Windows lub kombinacji style, utworzone za pomocą bitowej OR ( **&#124;**) — operator dla klasy okna. Aby uzyskać listę style klasy, zobacz [WNDCLASS](http://msdn.microsoft.com/library/windows/desktop/ms633576) struktury w zestawie Windows SDK. Jeśli ma wartość NULL, wartości domyślne będzie można ustawić w następujący sposób:  
+ Określa styl klasy Windows lub kombinacji style, utworzone za pomocą bitowej OR ( **&#124;**) — operator dla klasy okna. Aby uzyskać listę style klasy, zobacz [WNDCLASS](https://msdn.microsoft.com/library/windows/desktop/ms633576) struktury w zestawie Windows SDK. Jeśli ma wartość NULL, wartości domyślne będzie można ustawić w następujący sposób:  
   
 -   Ustawia styl myszy CS_DBLCLKS, które wysyła kliknij dwukrotnie wiadomości do procedury okna, gdy użytkownik kliknie dwukrotnie myszy.  
   
@@ -602,7 +602,7 @@ LPCTSTR AFXAPI AfxRegisterWndClass(
  Określa dojście do zasobu kursora do zainstalowania w każdym oknie utworzone na podstawie klasy okna. Jeśli używasz domyślnego **0**, zostanie wyświetlony standardowy kursora IDC_ARROW.  
   
  *hbrBackground*  
- Określa dojście do zasobu pędzla, który ma być zainstalowany w każde okno utworzone na podstawie klasy okna. Jeśli używasz domyślnego **0**, będzie miał wartość NULL pędzel tła i okna domyślnie usunie tłem podczas przetwarzania [WM_ERASEBKGND](http://msdn.microsoft.com/library/windows/desktop/ms648055).  
+ Określa dojście do zasobu pędzla, który ma być zainstalowany w każde okno utworzone na podstawie klasy okna. Jeśli używasz domyślnego **0**, będzie miał wartość NULL pędzel tła i okna domyślnie usunie tłem podczas przetwarzania [WM_ERASEBKGND](/windows/desktop/winmsg/wm-erasebkgnd).  
   
  *hIcon*  
  Określa dojście do zasobu ikony, która ma być zainstalowany w każde okno utworzone na podstawie klasy okna. Jeśli używasz domyślnego **0**, zostanie wyświetlony standardowy, którzy wymachują flagi ikona logo Windows.  

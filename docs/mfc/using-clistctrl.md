@@ -16,24 +16,24 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3ce28c5be7ff87d9ebad38d35bf19b7d182531ca
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 52ec0bcda66ec8f1a166351682b163a09ffb55d8
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33382989"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43210493"
 ---
 # <a name="using-clistctrl"></a>Korzystanie z CListCtrl
-Formant listy umożliwia wyświetlenie każdy układ ikon z etykiet, jak Eksploratora plików lub list kolumnowy tekstu, z lub bez ikon. Opis cztery możliwe "opinie" (nie należy mylić z MFC widoków) może mieć w formancie listy — Widok ikony, widoku małych ikon widok listy i widok raportu — Zobacz widoków w [CListCtrl](../mfc/reference/clistctrl-class.md) Przegląd klasy.  
+Formant do wyświetlania dowolnego Rozmieszczenie ikon z etykietami, tak jak w Eksploratorze plików lub kolumnowy list tekstu, z lub bez ikony. Opis czterech możliwych "opinie" (nie należy mylić z widokami MFC) może mieć w formancie listy — widoku ikon, widoku małych ikon, widoku listy i widok raportu — wyświetlanie widoków w [CListCtrl](../mfc/reference/clistctrl-class.md) klasa — Przegląd.  
   
- W niektórych widokach użytkowników można przeciągnij ikony w inne miejsca lub edytować etykietach ikon. Na przykład można znaleźć w prawym okienku w Eksploratorze plików, która używa kontrolki listy w oknie nondialog. Możesz eksperymentować z widoków dostępne w menu Widok Eksploratora.  
+ W niektórych widokach użytkowników można przeciągnąć ikon do innej pozycji lub edytować etykietach ikon. Na przykład można znaleźć w okienku po prawej stronie w Eksploratorze plików, która używa kontrolki listy w oknie nondialog. Możesz eksperymentować z widoków dostępnych w menu Widok Eksploratora.  
   
- Aby uzyskać odpowiednie informacje, zobacz [o kontrolki widok listy](http://msdn.microsoft.com/library/windows/desktop/bb774735) w zestawie Windows SDK.  
+ Aby uzyskać powiązane informacje, zobacz [o kontrolki widoku listy](/windows/desktop/Controls/list-view-controls-overview) w zestawie Windows SDK.  
   
 > [!NOTE]
->  Zestaw Windows SDK odwołuje się do formantów listy jako "kontrolki widoku listy." To użycie "Widok" nie odwołuje się do klasy widoków MFC, szczególnie `CListView`. Aby uzyskać więcej informacji, zobacz [formant listy i widok listy](../mfc/list-control-and-list-view.md).  
+>  Zestaw Windows SDK odwołuje się do kontrolki listy jako "kontrolki widoku listy." To użycie "view" nie odwołuje się do klasy widoku MFC, szczególnie `CListView`. Aby uzyskać więcej informacji, zobacz [kontrolka listy i widok listy](../mfc/list-control-and-list-view.md).  
   
-## <a name="what-do-you-want-to-know-more-about"></a>Co chcesz dowiedzieć się więcej o  
+## <a name="what-do-you-want-to-know-more-about"></a>Co chcesz dowiedzieć się więcej na temat  
   
 -   [Kontrolka listy i widok listy](../mfc/list-control-and-list-view.md)  
   

@@ -37,16 +37,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8407848db8f442324127df8d7267a5350c077b2f
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: c75b2988dd00d8141c25e67c29bcc0b082270ffe
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32405760"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43210165"
 ---
 # <a name="rands"></a>rand_s
 
-Generuje pseudolosowych numer. Jest to bardziej bezpieczne wersja funkcji [rand](rand.md), ulepszeń zabezpieczeń zgodnie z opisem w [funkcje zabezpieczeń w CRT](../../c-runtime-library/security-features-in-the-crt.md).
+Generuje numer pseudolosowych. Jest to bardziej bezpieczna wersja funkcji [rand](rand.md), ze wzmocnieniem zabezpieczeń, zgodnie z opisem w [funkcje zabezpieczeń w CRT](../../c-runtime-library/security-features-in-the-crt.md).
 
 ## <a name="syntax"></a>Składnia
 
@@ -57,24 +57,24 @@ errno_t rand_s(unsigned int* randomValue);
 ### <a name="parameters"></a>Parametry
 
 *randomValue*<br/>
-Wskaźnik do wartości całkowitej, aby pomieścić wygenerowaną wartość.
+Wskaźnik na liczbę całkowitą zawierającą wygenerowaną wartość.
 
 ## <a name="return-value"></a>Wartość zwracana
 
-Zero, jeśli to się powiedzie, w przeciwnym razie kod błędu. Jeśli wskaźnika wejścia _randomValue_ jest wskaźnika o wartości null, funkcja wywołuje program obsługi nieprawidłowych parametrów, zgodnie z opisem w [sprawdzanie poprawności parametru](../../c-runtime-library/parameter-validation.md). Jeśli jest dozwolone wykonywanie, aby kontynuować, funkcja zwraca **einval —** i ustawia **errno** do **einval —**. Jeśli funkcja nie powiedzie się z jakiegokolwiek powodu *_randomValue_ jest równa 0.
+Zero, jeśli operacja się powiedzie, w przeciwnym razie, kod błędu. Jeśli wskaźnik danych wejściowych _randomValue_ jest pustym wskaźnikiem, funkcja wywołuje program obsługi nieprawidłowego parametru, zgodnie z opisem w [Parameter Validation](../../c-runtime-library/parameter-validation.md). Jeśli wykonanie może być kontynuowane, funkcja zwraca **EINVAL** i ustawia **errno** do **EINVAL**. Jeśli funkcja nie powiedzie się z jakiegokolwiek powodu, *_randomValue_ jest równa 0.
 
 ## <a name="remarks"></a>Uwagi
 
-**Rand_s —** funkcja zapisuje pseudolosowych liczbą całkowitą z zakresu od 0 do **uint_max —** do wskaźnika wejścia. **Rand_s —** funkcja używa systemu operacyjnego dla generatora liczb losowych kryptograficznie bezpieczne. Nie używa inicjatora generowane przez [srand —](srand.md) funkcji, ani nie ogranicza losowe sekwencja używane przez [rand](rand.md).
+**Rand_s —** funkcja zapisuje pseudolosowych liczbą całkowitą z zakresu od 0 do **UINT_MAX** na wskaźnik danych wejściowych. **Rand_s —** funkcja używa systemu operacyjnego do generowania liczb losowych kryptograficznie bezpieczne. Używaj inicjatora generowane przez [srand —](srand.md) funkcji, ani nie ogranicza losową sekwencję liczb, używane przez [rand](rand.md).
 
-**Rand_s —** funkcja wymaga tej stałej **_CRT_RAND_S** można zdefiniować przed instrukcji włączenia funkcji zgłoszone, jak w poniższym przykładzie:
+**Rand_s —** funkcja wymaga, aby stała tym **_CRT_RAND_S** można zdefiniować przed instrukcji dołączania dla funkcji, które mają zostać zadeklarowane, jak w poniższym przykładzie:
 
 ```C
 #define _CRT_RAND_S
 #include <stdlib.h>
 ```
 
-**rand_s —** zależy od [RtlGenRandom](http://msdn.microsoft.com/library/windows/desktop/aa387694) interfejsu API, który jest tylko dostępne w systemie Windows XP lub nowszy.
+**rand_s —** zależy od [RtlGenRandom](/windows/desktop/api/ntsecapi/nf-ntsecapi-rtlgenrandom) interfejsu API, który jest tylko dostępne w Windows XP i nowszych wersjach.
 
 ## <a name="requirements"></a>Wymagania
 

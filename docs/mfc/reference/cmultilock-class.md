@@ -24,12 +24,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a098f275ec0c7b553d7ac192d7b588ffa6dcfa1b
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: ebcfda85c82d10f2493234bb340a68129f779a28
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37849876"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43198115"
 ---
 # <a name="cmultilock-class"></a>Klasa CMultiLock
 Przedstawia mechanizm kontroli dostępu wykorzystywany w kontrolowaniu dostępu do zasobów w programie wielowątkowym.  
@@ -128,7 +128,7 @@ DWORD Lock(
  Określa, czy wszystkie obiekty oczekiwany muszą zostać sygnalizowane, w tym samym czasie przed zwróceniem. W przypadku wartości FAŁSZ `Lock` zwróci, gdy jeden z obiektów, oczekiwany jest sygnalizowane.  
   
  *dwWakeMask*  
- Określa inne warunki, które mogą przerwać czas oczekiwania. Aby uzyskać pełną listę dostępnych opcji dla tego parametru zobacz [MsgWaitForMultipleObjects](http://msdn.microsoft.com/library/windows/desktop/ms684242) w zestawie Windows SDK.  
+ Określa inne warunki, które mogą przerwać czas oczekiwania. Aby uzyskać pełną listę dostępnych opcji dla tego parametru zobacz [MsgWaitForMultipleObjects](/windows/desktop/api/winuser/nf-winuser-msgwaitformultipleobjects) w zestawie Windows SDK.  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Jeśli `Lock` nie powiedzie się, zwraca - 1. Jeśli to się powiedzie, zwraca jedną z następujących wartości:  

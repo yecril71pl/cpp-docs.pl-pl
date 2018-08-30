@@ -35,12 +35,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f1fff338bfce32f8233cd58aa7c0790508ce542c
-ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
+ms.openlocfilehash: 4fdf98e41b552fa759f1aed3e67d531e02bc7f58
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37882885"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43206778"
 ---
 # <a name="category-macros"></a>Makra kategorii
 Te makra definiują mapy kategorii.  
@@ -76,7 +76,7 @@ BEGIN_CATEGORY_MAP(theClass)
 > [!NOTE]
 >  ATL używa standardowy składnik Menedżer kategorii, aby zarejestrować kategorii składników. Jeśli Menedżer nie jest obecny w systemie, po zarejestrowaniu modułu, rejestracja zakończy się pomyślnie, ale kategorii składników nie zostanie zarejestrowany dla tej klasy.  
   
- Aby uzyskać więcej informacji na temat kategorii składników, zobacz [co to są kategorii składników i sposobie ich działania](http://msdn.microsoft.com/library/windows/desktop/ms694322) w zestawie Windows SDK.  
+ Aby uzyskać więcej informacji na temat kategorii składników, zobacz [co to są kategorii składników i sposobie ich działania](/windows/desktop/com/component-categories-and-how-they-work) w zestawie Windows SDK.  
   
 ### <a name="example"></a>Przykład  
  [!code-cpp[NVC_ATL_Windowing#100](../../atl/codesnippet/cpp/category-macros_1.h)]  
@@ -107,7 +107,7 @@ IMPLEMENTED_CATEGORY(catID)
   
  Klienci mogą używać informacji kategorii zarejestrowane dla tej klasy, aby określić wymagania i możliwości bez konieczności tworzenia jego wystąpienie.  
   
- Aby uzyskać więcej informacji na temat kategorii składników, zobacz [co to są kategorii składników i sposobie ich działania](http://msdn.microsoft.com/library/windows/desktop/ms694322) w zestawie Windows SDK.  
+ Aby uzyskać więcej informacji na temat kategorii składników, zobacz [co to są kategorii składników i sposobie ich działania](/windows/desktop/com/component-categories-and-how-they-work) w zestawie Windows SDK.  
   
 ### <a name="a-selection-of-stock-categories"></a>Wybór kategorii podstawowe  
   
@@ -119,7 +119,7 @@ IMPLEMENTED_CATEGORY(catID)
 |Proste powiązanie danych|CATID_PropertyNotifyControl|{157083E1-2368-11cf-87B9-00AA006C8166}|  
 |Zaawansowane powiązania danych|CATID_VBDataBound|{157083E2-2368-11cf-87B9-00AA006C8166}|  
 |Od kontrolek bez okien|CATID_WindowlessObject|{1D06B600-3AE3-11cf-87B9-00AA006C8166}|  
-|Obiekty obsługujących Internet|Zobacz [obiektów pamiętać Internet](http://msdn.microsoft.com/library/windows/desktop/ms690561) w zestawie Windows SDK dla lista przykładów.||  
+|Obiekty obsługujących Internet|Zobacz [obiektów pamiętać Internet](/windows/desktop/com/internet-aware-objects) w zestawie Windows SDK dla lista przykładów.||  
   
 ### <a name="example"></a>Przykład  
  [!code-cpp[NVC_ATL_Windowing#100](../../atl/codesnippet/cpp/category-macros_1.h)]  
@@ -140,7 +140,7 @@ REQUIRED_CATEGORY( catID )
   
  Klienci mogą używać informacji kategorii zarejestrowane dla tej klasy, aby określić wymagania i możliwości bez konieczności tworzenia jego wystąpienie. Na przykład formant może wymagać, że kontener obsługuje powiązanie danych. Kontener można dowiedzieć się, jeśli ma możliwości, które są niezbędne do hostowania kontrolki, badając Menedżer kategorii dla kategorii, wymagane przez tę kontrolkę. Jeśli kontener nie obsługuje wymaganych funkcji, można odmówić hosta obiektu COM.  
   
- Aby uzyskać więcej informacji na temat kategorii składników, takich jak lista przykładów, zobacz [co to są kategorii składników i sposobie ich działania](http://msdn.microsoft.com/library/windows/desktop/ms694322) w zestawie Windows SDK.  
+ Aby uzyskać więcej informacji na temat kategorii składników, takich jak lista przykładów, zobacz [co to są kategorii składników i sposobie ich działania](/windows/desktop/com/component-categories-and-how-they-work) w zestawie Windows SDK.  
   
 ### <a name="a-selection-of-stock-categories"></a>Wybór kategorii podstawowe  
   
@@ -152,7 +152,7 @@ REQUIRED_CATEGORY( catID )
 |Proste powiązanie danych|CATID_PropertyNotifyControl|{157083E1-2368-11cf-87B9-00AA006C8166}|  
 |Zaawansowane powiązania danych|CATID_VBDataBound|{157083E2-2368-11cf-87B9-00AA006C8166}|  
 |Od kontrolek bez okien|CATID_WindowlessObject|{1D06B600-3AE3-11cf-87B9-00AA006C8166}|  
-|Obiekty obsługujących Internet|Zobacz [obiektów pamiętać Internet](http://msdn.microsoft.com/library/windows/desktop/ms690561) w zestawie Windows SDK dla lista przykładów.||  
+|Obiekty obsługujących Internet|Zobacz [obiektów pamiętać Internet](/windows/desktop/com/internet-aware-objects) w zestawie Windows SDK dla lista przykładów.||  
   
 ### <a name="example"></a>Przykład  
  [!code-cpp[NVC_ATL_Windowing#135](../../atl/codesnippet/cpp/category-macros_2.h)]  

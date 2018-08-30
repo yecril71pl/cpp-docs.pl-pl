@@ -14,12 +14,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1f09df81587012703d8ba1fc883413d6d35929e8
-ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
+ms.openlocfilehash: dd815f1af5a6eced06eae99316b2ee137fa398c9
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/01/2018
-ms.locfileid: "39404941"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43209364"
 ---
 # <a name="overview-of-declarators"></a>Przegląd deklaratorów
 Deklaratory są składnikami deklaracji, które określają nazwy obiektów lub funkcji. Deklaratory określają również, czy nazwany obiekt jest obiektem, wskaźnikiem, odwołaniem lub tablicą.  Deklaratory nie określają typu podstawowego, ale modyfikują informacje o typie w obrębie typu podstawowego w celu określenia typów pochodnych, takich jak wskaźniki, odwołania i tablice.  Deklarator w zastosowaniu do funkcji współpracuje ze specyfikatorem typu, aby w pełni określić, że typ zwracany funkcji jest obiektem, wskaźnikiem lub odwołaniem. (Specyfikatory omówione w [deklaracje i definicje](declarations-and-definitions-cpp.md), przekazują właściwości, takie jak typ i Klasa magazynu. Modyfikatory omówione w tej sekcji i w [Modyfikatory specyficzne dla Microsoft](../cpp/microsoft-specific-modifiers.md), modyfikowania deklaratorów.) Na poniższej ilustracji pokazano pełną deklarację `MyFunction` i wywołano składniki deklaracji.  
@@ -53,7 +53,7 @@ const char *pch, ch;
   
  **Deklaratory dla wskaźników, odwołań i tablic**  
   
- Operatory wskaźników wstawione przed nazwą powodują, że obiekt jest wskaźnikiem lub odwołaniem.  **\*** Operator deklaruje nazwę jako wskaźnik; **&** operator deklaruje ją jako odwołanie.  
+ Operatory wskaźników wstawione przed nazwą powodują, że obiekt jest wskaźnikiem lub odwołaniem.  <strong>\*</strong> Operator deklaruje nazwę jako wskaźnik; **&** operator deklaruje ją jako odwołanie.  
   
 ```cpp 
 int *i; // declarator is *i  

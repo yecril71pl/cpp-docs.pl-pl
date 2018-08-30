@@ -14,12 +14,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 338412780116201b40e51ff38c4805097add4e3c
-ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
+ms.openlocfilehash: 770d110a5acd66b307e675d8c71a7de108bae6b5
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37885979"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43198500"
 ---
 # <a name="standard-dialog-data-exchange-routines"></a>Standardowe procedury wymiany danych w oknie dialogowym
 Ten temat zawiera standardowe procedury wymiany danych w (DDX) używany dla typowych formantów okna dialogowego MFC.  
@@ -159,7 +159,7 @@ void AFXAPI DDX_Check(
  Odwołanie do zmiennej składowej, okno dialogowe, widok formularza lub formantu obiekt widoku wymiany danych.  
   
 ### <a name="remarks"></a>Uwagi  
- Gdy `DDX_Check` jest wywoływana, *wartość* jest ustawiona na bieżący stan formant pola wyboru. Aby uzyskać listę stan możliwe wartości, zobacz [BM_GETCHECK](http://msdn.microsoft.com/library/windows/desktop/bb775986) w zestawie Windows SDK.  
+ Gdy `DDX_Check` jest wywoływana, *wartość* jest ustawiona na bieżący stan formant pola wyboru. Aby uzyskać listę stan możliwe wartości, zobacz [BM_GETCHECK](/windows/desktop/Controls/bm-getcheck) w zestawie Windows SDK.  
   
  Aby uzyskać więcej informacji na temat DDX zobacz [wymiana danych okna dialogowego i sprawdzanie poprawności](../../mfc/dialog-data-exchange-and-validation.md).  
   
@@ -296,7 +296,7 @@ void AFXAPI DDX_IPAddress(
 |1|16 do 23|  
 |0|24 do 31|  
   
- Używa Win32 [IPM_GETADDRESS](http://msdn.microsoft.com/library/windows/desktop/bb761378) odczytać wartości lub użyć [IPM_SETADDRESS](http://msdn.microsoft.com/library/windows/desktop/bb761380) do wypełnienia wartości. Te komunikaty są opisane w zestawie Windows SDK.  
+ Używa Win32 [IPM_GETADDRESS](/windows/desktop/Controls/ipm-getaddress) odczytać wartości lub użyć [IPM_SETADDRESS](/windows/desktop/Controls/ipm-setaddress) do wypełnienia wartości. Te komunikaty są opisane w zestawie Windows SDK.  
   
 ### <a name="remarks"></a>Uwagi  
  Gdy `DDX_IPAddress` jest wywoływana, *wartość* jest albo odczytywać formant adresu IP lub *wartość* są zapisywane do kontrolki, w zależności od kierunku programu exchange.  
@@ -488,7 +488,7 @@ void AFXAPI DDX_Scroll(
  Odwołanie do zmiennej składowej, okno dialogowe, widok formularza lub formantu wyświetlić obiekt wymiany danych.  
   
 ### <a name="remarks"></a>Uwagi  
- Gdy `DDX_Scroll` jest wywoływana, *wartość* jest ustawiony do bieżącego położenia kontrolki thumb. Aby uzyskać więcej informacji na temat wartości skojarzone z bieżącego położenia kontrolki thumb, zobacz [GetScrollPos](http://msdn.microsoft.com/library/windows/desktop/bb787585) w zestawie Windows SDK.  
+ Gdy `DDX_Scroll` jest wywoływana, *wartość* jest ustawiony do bieżącego położenia kontrolki thumb. Aby uzyskać więcej informacji na temat wartości skojarzone z bieżącego położenia kontrolki thumb, zobacz [GetScrollPos](/windows/desktop/api/winuser/nf-winuser-getscrollpos) w zestawie Windows SDK.  
   
  Aby uzyskać więcej informacji na temat DDX zobacz [wymiana danych okna dialogowego i sprawdzanie poprawności](../../mfc/dialog-data-exchange-and-validation.md).  
   

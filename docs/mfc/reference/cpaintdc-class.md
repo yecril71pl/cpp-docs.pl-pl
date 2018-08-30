@@ -22,12 +22,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 119a4e1b39d86ef2d12565fd593ce2124cef5bd5
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: 49681f240d6cee257e48c2cf1c5d2479b3678135
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37848918"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43208373"
 ---
 # <a name="cpaintdc-class"></a>Cpaintdc — klasa
 Kontekst urządzenia klasą pochodną [CDC](../../mfc/reference/cdc-class.md).  
@@ -61,7 +61,7 @@ class CPaintDC : public CDC
 ## <a name="remarks"></a>Uwagi  
  Wykonuje [CWnd::BeginPaint](../../mfc/reference/cwnd-class.md#beginpaint) podczas konstruowania i [CWnd::EndPaint](../../mfc/reference/cwnd-class.md#endpaint) w trakcie niszczenia.  
   
- A `CPaintDC` obiekt może być używany tylko w przypadku reagowania na [WM_PAINT](http://msdn.microsoft.com/library/windows/desktop/dd145213) komunikatu, zazwyczaj w swojej `OnPaint` funkcja elementu członkowskiego program obsługi komunikatów.  
+ A `CPaintDC` obiekt może być używany tylko w przypadku reagowania na [WM_PAINT](/windows/desktop/gdi/wm-paint) komunikatu, zazwyczaj w swojej `OnPaint` funkcja elementu członkowskiego program obsługi komunikatów.  
   
  Aby uzyskać więcej informacji na temat korzystania z `CPaintDC`, zobacz [konteksty urządzenia](../../mfc/device-contexts.md).  
   
@@ -87,7 +87,7 @@ explicit CPaintDC(CWnd* pWnd);
  Wskazuje `CWnd` obiekt, do którego `CPaintDC` należy obiekt.  
   
 ### <a name="remarks"></a>Uwagi  
- Wyjątek (typu `CResourceException`) jest generowany, jeśli Windows [getdc —](http://msdn.microsoft.com/library/windows/desktop/dd144871) wywołanie zakończy się niepowodzeniem. Kontekst urządzenia może nie być dostępne w przypadku Windows został już przydzielony wszystkie jego kontekstów dostępnego urządzenia. Aplikacja konkuruje dla pięciu typowych kontekstach wyświetlania dostępnych w danym momencie w obszarze Windows.  
+ Wyjątek (typu `CResourceException`) jest generowany, jeśli Windows [getdc —](/windows/desktop/api/winuser/nf-winuser-getdc) wywołanie zakończy się niepowodzeniem. Kontekst urządzenia może nie być dostępne w przypadku Windows został już przydzielony wszystkie jego kontekstów dostępnego urządzenia. Aplikacja konkuruje dla pięciu typowych kontekstach wyświetlania dostępnych w danym momencie w obszarze Windows.  
   
 ### <a name="example"></a>Przykład  
  [!code-cpp[NVC_MFCDocView#97](../../mfc/codesnippet/cpp/cpaintdc-class_1.cpp)]  

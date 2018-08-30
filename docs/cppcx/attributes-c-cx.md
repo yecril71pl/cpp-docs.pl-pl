@@ -9,15 +9,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7db8d6c527842cd3784623002fba001a4174c1fc
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 491b3cabd8003664a34543d8bb7a640759bd50ee
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42601141"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43207408"
 ---
 # <a name="attributes-ccx"></a>Atrybuty (C + +/ CX)
-Atrybut jest specjalnym rodzajem klasy referencyjnej, która może zostać dołączony w nawiasach kwadratowych do typów środowiska wykonawczego Windows i metod, aby określić niektóre zachowania podczas tworzenia metadanych. Kilka wstępnie zdefiniowanych atrybutów — na przykład [Windows::Foundation::Metadata::WebHostHidden](http://msdn.microsoft.com/library/windows/apps/windows.foundation.metadata.webhosthiddenattribute.aspx)— są często używane w języku C + +/ CX kodu. Ten przykład pokazuje, jak ten atrybut jest stosowany do klasy:  
+Atrybut jest specjalnym rodzajem klasy referencyjnej, która może zostać dołączony w nawiasach kwadratowych do typów środowiska wykonawczego Windows i metod, aby określić niektóre zachowania podczas tworzenia metadanych. Kilka wstępnie zdefiniowanych atrybutów — na przykład [Windows::Foundation::Metadata::WebHostHidden](https://msdn.microsoft.com/library/windows/apps/windows.foundation.metadata.webhosthiddenattribute.aspx)— są często używane w języku C + +/ CX kodu. Ten przykład pokazuje, jak ten atrybut jest stosowany do klasy:  
   
  [!code-cpp[cx_attributes#01](../cppcx/codesnippet/CPP/cx_attributes/class1.h#01)]  
   

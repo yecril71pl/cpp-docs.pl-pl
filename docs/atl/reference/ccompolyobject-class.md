@@ -27,12 +27,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2b5cff88aab5a4b069d96808755ce92d61f32fff
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: 9b739a2c4388877bc463a6345dcfe347d8638b27
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42465985"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43206375"
 ---
 # <a name="ccompolyobject-class"></a>Klasa CComPolyObject
 Ta klasa implementuje `IUnknown` zagregowane lub nieagregowane w obiekcie.  
@@ -76,7 +76,7 @@ class CComPolyObject : public IUnknown,
 |[CComPolyObject::m_contained](#m_contained)|Delegaty `IUnknown` wywołuje zewnętrzne nieznany, jeśli obiekt jest zagregowany, lub aby `IUnknown` obiektu, jeśli obiekt nie jest agregowany.|  
   
 ## <a name="remarks"></a>Uwagi  
- `CComPolyObject` implementuje [IUnknown](http://msdn.microsoft.com/library/windows/desktop/ms680509) zagregowane lub nieagregowane w obiekcie.  
+ `CComPolyObject` implementuje [IUnknown](/windows/desktop/api/unknwn/nn-unknwn-iunknown) zagregowane lub nieagregowane w obiekcie.  
   
  Jeśli wystąpienie `CComPolyObject` utworzeniu wartość zewnętrzny zaznaczono opcję nieznane. Jeśli ma wartość NULL, `IUnknown` został zaimplementowany dla obiektu nieagregowane. Jeśli nieznany zewnętrzny nie ma wartość NULL, `IUnknown` został zaimplementowany dla obiektu zagregowanego.  
   

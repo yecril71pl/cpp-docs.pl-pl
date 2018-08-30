@@ -1,5 +1,5 @@
 ---
-title: 'Formanty MFC ActiveX: Dodawanie zdarzeń standardowych do formantu ActiveX | Dokumentacja firmy Microsoft'
+title: 'Kontrolki ActiveX MFC: Dodawanie zdarzeń standardowych do kontrolki ActiveX | Dokumentacja firmy Microsoft'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -52,44 +52,44 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 41445015f30eb953675f763652fb85ef3eeb857a
-ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
+ms.openlocfilehash: cf5cb0ccdfe4b8281cf4a56f798da2c4f85c178b
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/25/2018
-ms.locfileid: "36930790"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43199824"
 ---
 # <a name="mfc-activex-controls-adding-stock-events-to-an-activex-control"></a>Kontrolki ActiveX MFC: dodawanie zdarzeń standardowych do kontrolki ActiveX
-Zdarzeń standardowych różnią się od zdarzeń niestandardowych, są one uruchamiane automatycznie przez klasę [colecontrol —](../mfc/reference/colecontrol-class.md). `COleControl` zawiera funkcji wstępnie zdefiniowanych elementów członkowskich, które wyzwalać zdarzenia wynikające z typowych akcji. Niektóre typowe akcje implementowane przez `COleControl` obejmują jednym - i double - clicks na kontroli, zdarzenia klawiatury i zmiany w stanie przycisku myszy. Zdarzenie mapy wpisów, akcji, które zdarzenia są zawsze poprzedzone event_stock — prefiks.  
+Zdarzeń standardowych różnią się od zdarzenia niestandardowe, w tym, że są one uruchamiane automatycznie przez klasę [COleControl](../mfc/reference/colecontrol-class.md). `COleControl` zawiera funkcje Członkowskie wstępnie zdefiniowanych, które wyzwolenie zdarzenia wynikające z typowych akcji. Niektóre typowe akcje implementowany przez `COleControl` obejmują jedną — i double - clicks na kontrolki, zdarzenia klawiatury i zmiany w stanie przycisków myszy. Zdarzenie mapy zapisów akcji, które zdarzenia są zawsze poprzedzone event_stock — prefiks.  
   
 ##  <a name="_core_stock_events_supported_by_classwizard"></a> Podstawowy zdarzenia obsługiwane przez Kreator dodawania zdarzenia  
- `COleControl` Klasa udostępnia dziesięć zdarzeń standardowych wymienionych w poniższej tabeli. Można określić zdarzenia w za pomocą formantu [Kreator dodawania zdarzenia](../ide/add-event-wizard.md).  
+ `COleControl` Klasa udostępnia dziesięciu standardowych zdarzeń, wymienione w poniższej tabeli. Można określić zdarzeń w sieci za pomocą kontrolki [Kreator dodawania zdarzenia](../ide/add-event-wizard.md).  
   
-### <a name="stock-events"></a>Zdarzeń standardowych  
+### <a name="stock-events"></a>Podstawowe zdarzenia  
   
-|Zdarzenie|Wyzwalania — funkcja|Komentarze|  
+|Zdarzenie|Wyzwalanie funkcji|Komentarze|  
 |-----------|---------------------|--------------|  
-|Kliknij|**void (fireclick —)**|Wywoływane, gdy formant przechwytuje mysz, wszystkie **BUTTONUP** (po lewej stronie, średnie lub prawego) komunikat jest odbierany i zwolnieniu przycisku nad formantem. MouseDown giełdowych i zdarzenia MouseUp odbywa się przed tym zdarzeniem.<br /><br /> Wpisu mapowania zdarzeń: **(event_stock_click —)**|  
-|DblClick|**void (firedblclick —)**|Podobny do kliknij ale wywoływane, gdy **BUTTONDBLCLK** odebrać wiadomości.<br /><br /> Wpisu mapowania zdarzeń: **(event_stock_dblclick —)**|  
-|Błąd|**void FireError (SCODE***scode* **, LPCSTR** `lpszDescription` **, UINT**`nHelpID`**= 0)** |Uruchamiany po wystąpieniu błędu w formantu ActiveX poza zakres dostępu metody wywołania lub właściwości.<br /><br /> Wpisu mapowania zdarzeń: **(event_stock_errorevent —)**|  
-|KeyDown|**firekeydown — void (krótka** `nChar` **, krótki**`nShiftState`**)** |Wywoływane, gdy `WM_SYSKEYDOWN` lub `WM_KEYDOWN` odebrać wiadomości.<br /><br /> Wpisu mapowania zdarzeń: **(event_stock_keydown —)**|  
-|KeyPress|**firekeypress — void (krótka\***`pnChar`**)** |Wywoływane, gdy `WM_CHAR` odebrać wiadomości.<br /><br /> Wpisu mapowania zdarzeń: **(event_stock_keypress —)**|  
-|KeyUp|**firekeyup — void (krótka** `nChar` **, krótki**`nShiftState`**)** |Wywoływane, gdy `WM_SYSKEYUP` lub `WM_KEYUP` odebrać wiadomości.<br /><br /> Wpisu mapowania zdarzeń: **(event_stock_keyup —)**|  
-|MouseDown|**firemousedown — void (krótka** `nButton` **, krótki** `nShiftState` **, float***x* **, float** *y***)** |Uruchamiany, jeśli istnieją **BUTTONDOWN** odebraniu (po lewej, środka lub do prawej). Mysz jest przechwytywany bezpośrednio przed to zdarzenie jest wywoływane.<br /><br /> Wpisu mapowania zdarzeń: **(event_stock_mousedown —)**|  
-|MouseMove|**firemousemove — void (krótka** `nButton` **, krótki** `nShiftState` **, float***x* **, float** *y***)** |Uruchamiany, gdy zostaje otrzymany komunikat WM_MOUSEMOVE.<br /><br /> Wpisu mapowania zdarzeń: **(event_stock_mousemove —)**|  
-|MouseUp|**firemouseup — void (krótka** `nButton` **, krótki** `nShiftState` **, float***x* **, float** *y***)** |Uruchamiany, jeśli istnieją **BUTTONUP** odebraniu (po lewej, środka lub do prawej). Przechwytywanie myszy jest zwolniony przed to zdarzenie jest wywoływane.<br /><br /> Wpisu mapowania zdarzeń: **(event_stock_mouseup —)**|  
-|ReadyStateChange|**void (FireReadyStateChange)**|Uruchamiany, gdy formant przejścia do następnego stanu gotowości ze względu na ilość danych otrzymywanych.<br /><br /> Wpisu mapowania zdarzeń: **(event_stock_readystatechange —)**|  
+|Kliknij|**void (fireclick —)**|Wywoływane, gdy kontrolka przechwytuje mysz, wszelkie **BUTTONUP** (lewy, środkowy lub prawy) wiadomość zostaje odebrana i zwolnieniu przycisku kontrolki. Stock MouseDown i MouseUp zdarzeń odbywa się przed tym zdarzeniem.<br /><br /> Wpisu mapowania zdarzeń: **event_stock_click —)**|  
+|DblClick|**void (firedblclick —)**|Podobne, a następnie kliknij ale wyzwalane, gdy **BUTTONDBLCLK** wiadomość zostaje odebrana.<br /><br /> Wpisu mapowania zdarzeń: **event_stock_dblclick —)**|  
+|Błąd|**fireerror — void (SCODE***scode* **, LPCSTR** `lpszDescription` **, UINT**`nHelpID`**= 0)** |Wywoływane, gdy wystąpi błąd w obrębie formant ActiveX poza zakres dostępu metody wywołania lub właściwość.<br /><br /> Wpisu mapowania zdarzeń: **event_stock_errorevent —)**|  
+|KeyDown|**firekeydown — void (krótki** `nChar` **, krótkich**`nShiftState`**)** |Wywoływane, gdy `WM_SYSKEYDOWN` lub `WM_KEYDOWN` wiadomość zostaje odebrana.<br /><br /> Wpisu mapowania zdarzeń: **event_stock_keydown —)**|  
+|KeyPress|**firekeypress — void (krótki** <strong>\*</strong> `pnChar` **)** |Wywoływane, gdy `WM_CHAR` wiadomość zostaje odebrana.<br /><br /> Wpisu mapowania zdarzeń: **(EVENT_STOCK_KEYPRESS)**|  
+|KeyUp|**firekeyup — void (krótki** `nChar` **, krótkich**`nShiftState`**)** |Wywoływane, gdy `WM_SYSKEYUP` lub `WM_KEYUP` wiadomość zostaje odebrana.<br /><br /> Wpisu mapowania zdarzeń: **event_stock_keyup —)**|  
+|MouseDown|**firemousedown — void (krótki** `nButton` **, krótkich** `nShiftState` **, float***x* **, float** *y***)** |Wywoływane, jeśli istnieje **BUTTONDOWN** (po lewej stronie, środka lub do prawej) została odebrana. Przycisk myszy jest przechwytywany bezpośrednio przed wykonaniem to zdarzenie jest wywoływane.<br /><br /> Wpisu mapowania zdarzeń: **event_stock_mousedown —)**|  
+|MouseMove|**firemousemove — void (krótki** `nButton` **, krótkich** `nShiftState` **, float***x* **, float** *y***)** |Wywoływane, gdy WM_MOUSEMOVE wiadomość zostaje odebrana.<br /><br /> Wpisu mapowania zdarzeń: **event_stock_mousemove —)**|  
+|MouseUp|**firemouseup — void (krótki** `nButton` **, krótkich** `nShiftState` **, float***x* **, float** *y***)** |Wywoływane, jeśli istnieje **BUTTONUP** (po lewej stronie, środka lub do prawej) została odebrana. Przechwytywanie myszy jest zwalniany, zanim to zdarzenie jest wywoływane.<br /><br /> Wpisu mapowania zdarzeń: **event_stock_mouseup —)**|  
+|ReadyStateChange|**void (FireReadyStateChange)**|Wywoływane, gdy przejściu kontrolki do następnego stanu gotowości ze względu na ilość danych odebranych.<br /><br /> Wpisu mapowania zdarzeń: **event_stock_readystatechange —)**|  
   
 ##  <a name="_core_adding_a_stock_event_using_classwizard"></a> Dodawanie zdarzeń standardowych przy użyciu Kreator dodawania zdarzenia  
- Dodawanie zdarzeń standardowych wymaga mniej pracy niż dodawanie zdarzeń niestandardowych, ponieważ uruchamiania rzeczywistego zdarzenia odbywa się automatycznie przez klasę podstawową `COleControl`. Poniższa procedura dodaje zdarzeń standardowych do formantu, który został utworzony przy użyciu [Kreator kontrolek ActiveX MFC](../mfc/reference/mfc-activex-control-wizard.md). Zdarzenia o nazwie KeyPress generowane, gdy zostanie naciśnięty klawisz i kontrolka jest aktywny. Tę procedurę można również dodać innych standardowych zdarzeń. Zastąp nazwę wybranego standardowych zdarzenia KeyPress.  
+ Dodawanie zdarzeń standardowych wymaga mniej pracy niż dodawanie zdarzeń niestandardowych, ponieważ uruchomieniem rzeczywistego zdarzenia jest obsługiwane automatycznie przez klasę bazową `COleControl`. Poniższa procedura dodaje zdarzenie do formantu, który został utworzony przy użyciu [Kreator kontrolek ActiveX MFC](../mfc/reference/mfc-activex-control-wizard.md). Zdarzenia KeyPress, wywoływana jest uruchamiana, gdy zostanie naciśnięty klawisz i sterowania jest aktywna. Tej procedury można również dodać inne podstawowe zdarzenia. Zastąp nazwę wybranego zdarzenie KeyPress.  
   
-#### <a name="to-add-the-keypress-stock-event-using-the-add-event-wizard"></a>Aby dodać zdarzenie standardowe KeyPress za pomocą Kreatora dodawania zdarzenia  
+#### <a name="to-add-the-keypress-stock-event-using-the-add-event-wizard"></a>Aby dodać podstawowe zdarzenia KeyPress przy użyciu Kreatora dodawania zdarzenia  
   
-1.  Załaduj projekt z kontroli.  
+1.  Załaduj projekt formantu.  
   
-2.  W widoku klas kliknij prawym przyciskiem myszy Twojej klasy kontrolki ActiveX, aby otworzyć menu skrótów.  
+2.  W widoku klas kliknij prawym przyciskiem myszy, aby otworzyć menu skrótów klasy kontrolki ActiveX.  
   
-3.  W menu skrótów kliknij **Dodaj** , a następnie kliknij przycisk **Dodawanie zdarzenia**.  
+3.  W menu skrótów kliknij **Dodaj** a następnie kliknij przycisk **Dodawanie zdarzenia**.  
   
      Spowoduje to otwarcie Kreatora dodawania zdarzenia.  
   
@@ -97,20 +97,20 @@ Zdarzeń standardowych różnią się od zdarzeń niestandardowych, są one uruc
   
 5.  Kliknij przycisk **Zakończ**.  
   
-##  <a name="_core_classwizard_changes_for_stock_events"></a> Dodawanie zdarzenia zmiany kreatora dla standardowych zdarzeń  
- Ponieważ standardowych zdarzenia są obsługiwane przez klasę podstawową formantu, Kreator dodawania zdarzenia nie zmienia się z deklaracji klasy, w dowolny sposób. Dodaje zdarzenie do formantu mapy zdarzeń i powoduje, że wpis w jej. Plik IDL. Następujący wiersz zostanie dodany do mapy zdarzeń formantu, znajduje się w implementacji klasy formantu (. Pliku CPP):  
+##  <a name="_core_classwizard_changes_for_stock_events"></a> Dodaj zmiany w zdarzeniu kreatora dla zdarzeń dotyczących zapasów  
+ Ponieważ zdarzeń standardowych są obsługiwane przez klasę bazową kontrolki, Kreator dodawania zdarzenia nie zmienia się deklaracją klasy w dowolny sposób. Dodaje zdarzenie do mapy zdarzeń formantów i sprawia, że wpis w jego. Plik IDL. Następujący wiersz zostanie dodany do mapy zdarzeń formantu, znajduje się w implementacji klasy formantu (. Plik CPP):  
   
  [!code-cpp[NVC_MFC_AxUI#5](../mfc/codesnippet/cpp/mfc-activex-controls-adding-stock-events-to-an-activex-control_1.cpp)]  
   
- Dodawanie tego kodu wyzwala zdarzenia KeyPress po otrzymaniu komunikatu WM_CHAR i jest aktywny formant. Zdarzenia KeyPress mogą być uruchamiane w pozostałych godzinach przez wywołanie jego uruchamiania funkcji (na przykład `FireKeyPress`) z kodem formantu.  
+ Dodając ten kod wyzwala zdarzenia KeyPress po otrzymaniu komunikat WM_CHAR i sterowania jest aktywna. Zdarzenia KeyPress, uruchamiane w innym czasie przez wywołanie funkcji jego uruchomieniu którego (na przykład `FireKeyPress`) z kodem kontroli.  
   
  Kreator dodawania zdarzenia dodaje następujący wiersz kodu do formantu. Plik IDL:  
   
  [!code-cpp[NVC_MFC_AxUI#6](../mfc/codesnippet/cpp/mfc-activex-controls-adding-stock-events-to-an-activex-control_2.idl)]  
   
- Ten wiersz kojarzy zdarzenia KeyPress z Identyfikatora wysyłania standardowe i umożliwia kontenera do przewidzenia zdarzenia KeyPress.  
+ Ten wiersz kojarzy zdarzenie KeyPress za pomocą jego Identyfikatora wysyłania standardowego i umożliwia kontener, aby przewidywać zdarzenia KeyPress.  
   
 ## <a name="see-also"></a>Zobacz też  
  [Kontrolki ActiveX MFC](../mfc/mfc-activex-controls.md)   
- [Formanty MFC ActiveX: metody](../mfc/mfc-activex-controls-methods.md)   
+ [Kontrolki ActiveX MFC: metody](../mfc/mfc-activex-controls-methods.md)   
  [Klasa COleControl](../mfc/reference/colecontrol-class.md)

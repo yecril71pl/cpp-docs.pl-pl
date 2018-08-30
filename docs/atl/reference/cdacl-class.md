@@ -23,12 +23,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3cd66c7c0637b4874f6a40bd77b3387191f00d35
-ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
+ms.openlocfilehash: 93427eb8e842687e9bba3dc1eef12bcd07e7e167
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37881204"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43208014"
 ---
 # <a name="cdacl-class"></a>Klasa CDacl
 Ta klasa jest otoką dla struktury DACL (list arbitralnej kontroli dostępu).  
@@ -74,7 +74,7 @@ class CDacl : public CAcl
   
  Należy użyć metod klasy dostarczonych do tworzenia, dodawania, usuwania i Usuń wpisy kontroli dostępu z `CDacl` obiektu. Zobacz też [AtlGetDacl](security-global-functions.md#atlgetdacl) i [AtlSetDacl](security-global-functions.md#atlsetdacl).  
   
- Wprowadzenie do modelu kontroli dostępu w Windows, zobacz [kontroli dostępu](http://msdn.microsoft.com/library/windows/desktop/aa374860) w zestawie Windows SDK.  
+ Wprowadzenie do modelu kontroli dostępu w Windows, zobacz [kontroli dostępu](/windows/desktop/SecAuthZ/access-control) w zestawie Windows SDK.  
   
 ## <a name="inheritance-hierarchy"></a>Hierarchia dziedziczenia  
  [CAcl](../../atl/reference/cacl-class.md)  
@@ -123,7 +123,7 @@ bool AddAllowedAce(
 ### <a name="remarks"></a>Uwagi  
  A `CDacl` obiektów zawiera zero lub więcej wpisów ACE (wpisy kontroli dostępu), które identyfikują użytkowników i grupy, którzy mogą uzyskiwać dostęp do obiektu. Metoda ta umożliwia dodanie wpisu kontroli dostępu, który umożliwia dostęp do `CDacl` obiektu.  
   
- Zobacz [ACE_HEADER](http://msdn.microsoft.com/library/windows/desktop/aa374919) opis różnych flag, które można ustawić w `AceFlags` parametru.  
+ Zobacz [ACE_HEADER](/windows/desktop/api/winnt/ns-winnt-_ace_header) opis różnych flag, które można ustawić w `AceFlags` parametru.  
   
 ##  <a name="adddeniedace"></a>  CDacl::AddDeniedAce  
  Dodaje odmowy ACE (wpis kontroli dostępu) do `CDacl` obiektu.  
@@ -164,7 +164,7 @@ bool AddDeniedAce(
 ### <a name="remarks"></a>Uwagi  
  A `CDacl` obiektów zawiera zero lub więcej wpisów ACE (wpisy kontroli dostępu), które identyfikują użytkowników i grupy, którzy mogą uzyskiwać dostęp do obiektu. Metoda ta umożliwia dodanie wpisu kontroli dostępu, który nie zezwala na dostęp do `CDacl` obiektu.  
   
- Zobacz [ACE_HEADER](http://msdn.microsoft.com/library/windows/desktop/aa374919) opis różnych flag, które można ustawić w `AceFlags` parametru.  
+ Zobacz [ACE_HEADER](/windows/desktop/api/winnt/ns-winnt-_ace_header) opis różnych flag, które można ustawić w `AceFlags` parametru.  
   
 ##  <a name="cdacl"></a>  CDacl::CDacl  
  Konstruktor.  
@@ -245,7 +245,7 @@ void RemoveAllAces() throw();
 ## <a name="see-also"></a>Zobacz też  
  [Zabezpieczenia — przykład](../../visual-cpp-samples.md)   
  [Klasa CAcl](../../atl/reference/cacl-class.md)   
- [Listy kontroli dostępu](http://msdn.microsoft.com/library/windows/desktop/aa374872)   
- [Wpisy kontroli dostępu](http://msdn.microsoft.com/library/windows/desktop/aa374868)   
+ [Listy kontroli dostępu](/windows/desktop/SecAuthZ/access-control-lists)   
+ [Wpisy kontroli dostępu](/windows/desktop/SecAuthZ/access-control-entries)   
  [Klasa — Przegląd](../../atl/atl-class-overview.md)   
  [Funkcje globalne zabezpieczeń](../../atl/reference/security-global-functions.md)

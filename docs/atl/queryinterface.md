@@ -18,15 +18,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b3227ebd4767bd7639bb5e5d8d5a1c73e26079dc
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 5a0f00e9ad0a94aaa96afb3031b57e1c7da703dc
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38953424"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43208192"
 ---
 # <a name="queryinterface"></a>QueryInterface
-Mimo że istnieją mechanizmy, według których obiekt można wyrazić funkcjonalność zapewnia statycznie (zanim zostanie on uruchomiony), podstawowe mechanizm COM jest użycie `IUnknown` metodę o nazwie [QueryInterface](http://msdn.microsoft.com/library/windows/desktop/ms682521).  
+Mimo że istnieją mechanizmy, według których obiekt można wyrazić funkcjonalność zapewnia statycznie (zanim zostanie on uruchomiony), podstawowe mechanizm COM jest użycie `IUnknown` metodę o nazwie [QueryInterface](/windows/desktop/api/unknwn/nf-unknwn-iunknown-queryinterface(q_)).  
   
  Każdy interfejs jest tworzony na podstawie `IUnknown`, dzięki czemu każdy interfejs jest implementacją `QueryInterface`. Niezależnie od implementacji ta metoda wysyła zapytanie do obiektu przy użyciu identyfikatora IID interfejsu, do którego obiekt wywołujący chce wskaźnika. Jeśli obiekt obsługuje ten interfejs `QueryInterface` pobiera wskaźnik do interfejsu, podczas wywoływania również `AddRef`. W przeciwnym razie zwraca kod błędu E_NOINTERFACE.  
   
@@ -34,5 +34,5 @@ Mimo że istnieją mechanizmy, według których obiekt można wyrazić funkcjona
   
 ## <a name="see-also"></a>Zobacz też  
  [Wprowadzenie do modelu COM](../atl/introduction-to-com.md)   
- [QueryInterface: Nawigacja w obiekcie](http://msdn.microsoft.com/library/windows/desktop/ms687230)
+ [QueryInterface: Nawigacja w obiekcie](/windows/desktop/com/queryinterface--navigating-in-an-object)
 

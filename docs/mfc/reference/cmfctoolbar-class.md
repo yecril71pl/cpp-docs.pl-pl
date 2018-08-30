@@ -321,12 +321,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0f2d01de9d2ee8fe585a55d89808bb76250c242b
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: a510d163075ccefbc61364cd7efa4003dfd0b8aa
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42465900"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43208561"
 ---
 # <a name="cmfctoolbar-class"></a>Klasa CMFCToolBar
 `CMFCToolBar` Klasa przypomina [klasa CToolBar](../../mfc/reference/ctoolbar-class.md), ale zapewnia dodatkową obsługę funkcji interfejsu użytkownika. Te obejmują płaskie paski narzędzi, paski narzędzi z wymiennymi obrazami, duże ikony, przyciski pagera, zablokowane paski narzędzi, formanty paska pomocniczego, tekst pod obrazami, obrazy w tle i paski narzędzi w kartach. `CMFCToolBar` Klasa zawiera także wbudowaną obsługę użytkownika dostosowywania pasków narzędzi i menu, przeciągania i upuszczania pomiędzy paskami narzędzi i menu, przyciskami pola kombi, Edytuj pola, próbnikami kolorów i przyciski zbiorczy.
@@ -916,7 +916,7 @@ virtual BOOL Create(
  Wskaźnik do nadrzędnego okna narzędzi.  
   
  [in] *dwStyle*  
- Styl paska narzędzi. Zobacz [formantu paska narzędzi oraz style przycisku](http://msdn.microsoft.com/library/windows/desktop/bb760439) w zestawie Windows SDK dla listy stylów.  
+ Styl paska narzędzi. Zobacz [formantu paska narzędzi oraz style przycisku](/windows/desktop/Controls/toolbar-control-and-button-styles) w zestawie Windows SDK dla listy stylów.  
   
  [in] *nID*  
  Identyfikator okna podrzędnego, na pasku narzędzi.  
@@ -950,7 +950,7 @@ virtual BOOL CreateEx(
  Dodatkowe style do tworzenia formantu osadzonego obiektu paska.  
   
  [in] *dwStyle*  
- Styl paska narzędzi. Zobacz [formantu paska narzędzi oraz style przycisku](http://msdn.microsoft.com/library/windows/desktop/bb760439) listę odpowiednie style.  
+ Styl paska narzędzi. Zobacz [formantu paska narzędzi oraz style przycisku](/windows/desktop/Controls/toolbar-control-and-button-styles) listę odpowiednie style.  
   
  [in] *rcBorders*  
  A `CRect` obiekt, który określa szerokość obramowania okna narzędzi.  
@@ -1493,7 +1493,7 @@ static COLORREF GetHotTextColor();
 ```  
   
 ### <a name="return-value"></a>Wartość zwracana  
- A [COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449) wartość, która reprezentuje bieżący kolor wyróżnionego tekstu.  
+ A [COLORREF](/windows/desktop/gdi/colorref) wartość, która reprezentuje bieżący kolor wyróżnionego tekstu.  
   
 ### <a name="remarks"></a>Uwagi  
  Wywołaj [CMFCToolBar::SetHotTextColor](#sethottextcolor) można ustawić nowy kolor tekstu dla przycisków paska narzędzi wyróżnione.  
@@ -2222,7 +2222,7 @@ BOOL IsOneRowWithSibling();
  Wartość TRUE, jeśli pasek narzędzi i jego równorzędne są ustawione w tym samym wierszu; w przeciwnym razie wartość FALSE.  
   
 ### <a name="remarks"></a>Uwagi  
- [CMFCCustomizeButton::CreatePopupMenu](http://msdn.microsoft.com/e501083e-f78e-4d8d-900c-40bd6e2bb7f8) metoda wywołuje tę metodę, aby określić sposób wyświetlania **Dostosuj** menu podręcznego. Jeśli ta metoda zwraca wartość PRAWDA, struktura Wyświetla **Pokaż przyciski w jednym wierszu** przycisku. W przeciwnym razie wyświetla ramach **Pokaż przycisków w dwóch wierszach** przycisku.  
+ [CMFCCustomizeButton::CreatePopupMenu](https://msdn.microsoft.com/e501083e-f78e-4d8d-900c-40bd6e2bb7f8) metoda wywołuje tę metodę, aby określić sposób wyświetlania **Dostosuj** menu podręcznego. Jeśli ta metoda zwraca wartość PRAWDA, struktura Wyświetla **Pokaż przyciski w jednym wierszu** przycisku. W przeciwnym razie wyświetla ramach **Pokaż przycisków w dwóch wierszach** przycisku.  
   
  Zwykle nie trzeba używać tej metody. Aby włączyć **Pokaż przyciski w jednym wierszu** lub **Pokaż przycisków w dwóch wierszach** przycisków, wywołań [CMFCToolBar::SetSiblingToolBar](#setsiblingtoolbar).  
   

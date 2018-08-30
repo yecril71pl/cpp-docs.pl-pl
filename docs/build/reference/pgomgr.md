@@ -15,16 +15,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7bf7567cfe9f21effda913606ca3af9a19464f9d
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 70a0615debabb056110dd9d6f7a6aac86e9d464a
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32377209"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43198318"
 ---
 # <a name="pgomgr"></a>pgomgr
 
-Dodaje dane profilu z jednego lub więcej plików .pgc do plik .pgd.
+Dane profilowe z co najmniej jeden plik .pgc są dodawane do pliku .pgd.
 
 ## <a name="syntax"></a>Składnia
 
@@ -33,41 +33,41 @@ Dodaje dane profilu z jednego lub więcej plików .pgc do plik .pgd.
 ### <a name="parameters"></a>Parametry
 
 *Opcje*<br/>
-Można określić następujące opcje do **pgomgr**:
+Można określić następujące opcje w celu **pgomgr**:
 
 - **/ help** lub **/?** Wyświetla dostępne **pgomgr** opcje.
 
-- **/ clear** powoduje, że plik .pgd do wyczyszczenia wszystkich danych profilu. Nie można określić .pgc plików podczas **/clear** jest określona.
+- **/ clear** powoduje, że plik .pgd do wyczyszczenia wszystkich informacji o profilu. Nie można określić .pgc pliku, kiedy **/clear** jest określony.
 
 - **/ detail** Wyświetla szczegółowe statystyki, w tym informacje o pokryciu Wykres przepływu.
 
-- **/ summary** wyświetla na funkcji statystyk.
+- **/ summary** Wyświetla poszczególnych funkcji statystyk.
 
-- **/ unique** w przypadku użycia z **/summary**, przyczyny dekorowane nazwy funkcji do wyświetlenia. Domyślnie, gdy **/ unique** nie jest używana, jest dla nazwy funkcji bez mają być wyświetlane.
+- **/ Unikatowy** gdy jest używane z **/summary**, powoduje, że dekorowane nazwy funkcji, aby wyświetlić. Wartość domyślna, gdy **/ unikatowy** nie jest używany, to dla nazw niedekorowanego funkcji, które mają być wyświetlane.
 
-- **/ merge**[**: *** n*] powoduje, że dane w pliku .pgc lub pliki, które mają zostać dodane do pliku .pgd. Opcjonalny parametr *n*, pozwala określić, czy dane powinny zostać dodane *n* razy. Na przykład, jeśli scenariusz często będą gotowe sześć razy do uwzględnienia, jak często jest wykonywane przez klientów, można odbywa się raz w uruchomienia testu i dodaj go do pliku .pgd sześć razy z **pgomgr /merge:6**.
+- **/ merge**\[**:**<em>n</em>] powoduje, że dane w pliku .pgc lub plików, które mają zostać dodane do pliku .pgd. Opcjonalny parametr *n*, pozwala określić, że dane należy dodać *n* razy. Na przykład, jeśli scenariusz będzie najczęściej gotowe sześć razy do uwzględnienia, jak często jest wykonywane przez klientów, można ją wykonać jeden raz w przebiegu testu i dodać go do pliku .pgd sześciokrotnie z **pgomgr /merge:6**.
 
 *pgcfiles*<br/>
-Co najmniej jeden .pgc pliki danych profilu, którego chcesz scalić plik .pgd. Można określić plik .pgc jednego lub wielu plików .pgc. Jeśli nie określono żadnych plików .pgc **pgomgr** scala wszystkie pliki .pgc, których nazwy plików są takie same jak plik .pgd.
+Co najmniej jeden .pgc pliki danych profilu, którego chcesz scalić plik .pgd. Można określić plik .pgc jednego lub wielu plików .pgc. Jeśli nie określisz żadnych plików .pgc **pgomgr** scala wszystkie pliki .pgc, których nazwy plików są takie same jak plik .pgd.
 
 *pgdfile* plik .pgd, do którego są scalane dane z pliku .pgc lub plików.
 
 ## <a name="remarks"></a>Uwagi
 
 > [!NOTE]
-> To narzędzie można uruchomić tylko z wiersza polecenia programu Visual Studio developer. Nie można uruchomić go z wiersza polecenia systemu lub z Eksploratora plików.
+> To narzędzie można uruchomić tylko z poziomu wiersza polecenia dla deweloperów programu Visual Studio. Nie można uruchomić go z wiersza poleceń systemu lub Eksploratora plików.
 
 ## <a name="example"></a>Przykład
 
-To przykładowe polecenie powoduje wyczyszczenie plików myapp.pgd danych profilów:
+To przykładowe polecenie usuwa plik myapp.pgd dane profilu:
 
 `pgomgr /clear myapp.pgd`
 
-To przykładowe polecenie dodaje dane profilu myapp1.pgc do pliku .pgd trzy razy:
+To przykładowe polecenie dodaje dane profilu w myapp1.pgc do pliku .pgd trzy razy:
 
 `pgomgr /merge:3 myapp1.pgc myapp.pgd`
 
-W tym przykładzie danych profilu z wszystkie pliki # .pgc moja_aplikacja są dodawane do pliku myapp.pgd.
+W tym przykładzie dane profilu ze wszystkich wygenerowanych plików # .pgc myapp jest dodawane do pliku myapp.pgd.
 
 `pgomgr -merge myapp1.pgd`
 

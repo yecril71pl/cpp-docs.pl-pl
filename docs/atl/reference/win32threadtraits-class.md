@@ -20,12 +20,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c61ba91fe29610f4b313cf31c65f514ef8e46f96
-ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
+ms.openlocfilehash: a5d94f92d21ea435bf7d73a6e28470babd293ed3
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37883677"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43206918"
 ---
 # <a name="win32threadtraits-class"></a>Klasa Win32ThreadTraits
 Ta klasa udostępnia funkcję tworzenia wątku Windows. Jeśli wątek nie użyje funkcji CRT, należy użyć tej klasy.  
@@ -48,7 +48,7 @@ class Win32ThreadTraits
 |[Win32ThreadTraits::CreateThread](#createthread)|(Statyczny) Wywołaj tę funkcję, aby utworzyć wątek, który nie należy używać funkcji CRT.|  
   
 ## <a name="remarks"></a>Uwagi  
- Klasy, które zapewniają funkcję tworzenia dla określonego typu wątku z nich są cechami wątku. Funkcja tworzenia ma ten sam podpis i semantyka jako Windows [CreateThread](http://msdn.microsoft.com/library/windows/desktop/ms682453) funkcji.  
+ Klasy, które zapewniają funkcję tworzenia dla określonego typu wątku z nich są cechami wątku. Funkcja tworzenia ma ten sam podpis i semantyka jako Windows [CreateThread](/windows/desktop/api/processthreadsapi/nf-processthreadsapi-createthread) funkcji.  
   
  Cechy wątku są używane przez następujące klasy:  
   
@@ -94,10 +94,10 @@ static HANDLE CreateThread(
  [out] Adres zmiennej typu DWORD, że w przypadku powodzenia odbiera identyfikator wątku dla nowo utworzonego wątku.  
   
 ### <a name="return-value"></a>Wartość zwracana  
- Zwraca uchwyt do nowo utworzonego wątku lub wartość NULL w przypadku niepowodzenia. Wywołaj [GetLastError](http://msdn.microsoft.com/library/windows/desktop/ms679360) Aby uzyskać rozszerzone informacje o błędzie.  
+ Zwraca uchwyt do nowo utworzonego wątku lub wartość NULL w przypadku niepowodzenia. Wywołaj [GetLastError](https://msdn.microsoft.com/library/windows/desktop/ms679360) Aby uzyskać rozszerzone informacje o błędzie.  
   
 ### <a name="remarks"></a>Uwagi  
- Zobacz [CreateThread](http://msdn.microsoft.com/library/windows/desktop/ms682453) więcej informacji na temat parametrów dotyczących wyłącznie tej funkcji.  
+ Zobacz [CreateThread](/windows/desktop/api/processthreadsapi/nf-processthreadsapi-createthread) więcej informacji na temat parametrów dotyczących wyłącznie tej funkcji.  
   
  Ta funkcja wywołuje `CreateThread` można utworzyć wątku.  
   

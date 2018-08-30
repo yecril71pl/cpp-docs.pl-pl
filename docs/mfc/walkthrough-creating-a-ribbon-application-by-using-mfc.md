@@ -15,18 +15,18 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7d13503ff19c4c7c132bd100921ff716ca3abca0
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: 495f5b415aac2a59eeae45720944a03251b0faa5
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42465691"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43210700"
 ---
 # <a name="walkthrough-creating-a-ribbon-application-by-using-mfc"></a>Wskazówki: tworzenie aplikacji wstążki za pomocą MFC
 Ten poradnik pokazuje jak używać **Kreator aplikacji MFC** do tworzenia aplikacji, która domyślnie zawiera Wstążkę. Powstałą Wstążkę, dodając **niestandardowe** kategoria wstążki, który ma **ulubione** wstążki, panelu, a następnie dodając kilka często używanych poleceń do panelu.  
   
 ## <a name="prerequisites"></a>Wymagania wstępne  
- Instruktaż ten zakłada, że zostało ustawione Visual Studio ma używać **ogólnych ustawieniach projektowych**. Jeśli są używane inne ustawienia, niektóre elementy interfejsu użytkownika, do których odwołują się poniższe instrukcje, mogą nie być wyświetlane. Aby dowiedzieć się, jak zmienić ustawienia, zobacz [jak: Reset Your Settings](http://msdn.microsoft.com/c95c51be-e609-4769-abba-65e6beedec76).  
+ Instruktaż ten zakłada, że zostało ustawione Visual Studio ma używać **ogólnych ustawieniach projektowych**. Jeśli są używane inne ustawienia, niektóre elementy interfejsu użytkownika, do których odwołują się poniższe instrukcje, mogą nie być wyświetlane. Aby dowiedzieć się, jak zmienić ustawienia, zobacz [jak: Reset Your Settings](https://msdn.microsoft.com/c95c51be-e609-4769-abba-65e6beedec76).  
   
 ### <a name="to-create-an-mfc-application-that-has-a-ribbon"></a>Tworzenie aplikacji MFC zawierającej wstążkę  
   

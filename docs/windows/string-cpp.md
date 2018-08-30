@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: eb3a57cec78c0ea02e16edd890d2a66362bfc011
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 86a6437e7a30fb92d2af66c3d657150549273cd3
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42594872"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43208452"
 ---
 # <a name="string-c"></a>string (C++)
 
@@ -36,7 +36,7 @@ Oznacza to, że jednowymiarowy **char**, **wchar_t**, `byte` (lub równoważnego
 
 ## <a name="remarks"></a>Uwagi
 
-**Ciąg** atrybut C++ ma taką samą funkcjonalność jak [ciąg](http://msdn.microsoft.com/library/windows/desktop/aa367270) atrybutów w MIDL.
+**Ciąg** atrybut C++ ma taką samą funkcjonalność jak [ciąg](/windows/desktop/Midl/string) atrybutów w MIDL.
 
 ## <a name="example"></a>Przykład
 

@@ -20,12 +20,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 03e773e57b4cdaee09331dab651f41f1fa8db211
-ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
+ms.openlocfilehash: bbc42f1af6dab8c34c6092e604682669ab18b9bb
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37336065"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43211580"
 ---
 # <a name="chttpconnection-class"></a>Klasa CHttpConnection
 Zarządza połączeniem z serwerem HTTP.  
@@ -129,7 +129,7 @@ CHttpConnection(
 |Ciąg znaków innych niż NULL|Ciąg znaków innych niż NULL|*pstrUserName*|*pstrPassword*|  
   
  *Flagidw*  
- Dowolną kombinację **INTERNET_ FLAG_\***  flag. Zobacz tabelę w **uwagi** części [CHttpConnection::OpenRequest](#openrequest) opis *Flagidw* wartości.  
+ Dowolną kombinację `INTERNET_FLAG_*` flag. Zobacz tabelę w **uwagi** części [CHttpConnection::OpenRequest](#openrequest) opis *Flagidw* wartości.  
   
 ### <a name="remarks"></a>Uwagi  
  Nigdy nie twórz `CHttpConnection` bezpośrednio. Zamiast tworzenia obiektu przez wywołanie [CInternetSession::GetHttpConnection](../../mfc/reference/cinternetsession-class.md#gethttpconnection).  

@@ -32,16 +32,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ddb085fee2459abd4cdef8a400f291bea4f6313b
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 6addc369de344b40a616b2ee1efbe840e98cc6d4
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32401847"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43199543"
 ---
 # <a name="memccpy"></a>_memccpy
 
-Znaki kopie z buforu.
+Kopiuje znaków z bufora.
 
 ## <a name="syntax"></a>Składnia
 
@@ -70,13 +70,13 @@ Liczba znaków.
 
 ## <a name="return-value"></a>Wartość zwracana
 
-Jeśli znak *c* jest kopiowany **_memccpy —** zwraca wskaźnik do znaku w *dest* natychmiast następujący znak. Jeśli *c* nie są kopiowane, zwraca **NULL**.
+Jeśli znak *c* jest kopiowany **_memccpy —** zwraca wskaźnik do znaku w *dest* który poprzedza znak. Jeśli *c* nie jest kopiowany, funkcja zwraca **NULL**.
 
 ## <a name="remarks"></a>Uwagi
 
-**_Memccpy —** funkcja kopiuje 0 lub więcej znaków *src* do *dest*, zatrzymywanie, gdy znak *c* został skopiowany lub gdy *liczba* znaków zostały skopiowane, zależnie od zostanie osiągnięty jako pierwszy.
+**_Memccpy —** funkcja kopiuje 0 lub więcej znaków *src* do *dest*, zatrzymaniu, gdy znak *c* został skopiowany lub *liczba* znaków zostały skopiowane, osiągnięta jako pierwsza.
 
-**Uwaga dotycząca zabezpieczeń** upewnij się, że bufor docelowy jest taki sam lub większy rozmiar niż bufor źródłowy. Aby uzyskać więcej informacji, zobacz [unikanie Overruns buforu](http://msdn.microsoft.com/library/windows/desktop/ms717795).
+**Uwaga dotycząca zabezpieczeń** upewnij się, że bufor docelowy jest taki sam lub większy rozmiar niż bufor źródłowy. Aby uzyskać więcej informacji, zobacz [unikanie przepełnień bufora](/windows/desktop/SecBP/avoiding-buffer-overruns).
 
 ## <a name="requirements"></a>Wymagania
 
@@ -84,11 +84,11 @@ Jeśli znak *c* jest kopiowany **_memccpy —** zwraca wskaźnik do znaku w *des
 |-------------|---------------------|
 |**_memccpy**|\<Memory.h > lub \<string.h >|
 
-Aby uzyskać więcej informacji o zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md).
+Aby uzyskać więcej informacji na temat zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md).
 
 ## <a name="libraries"></a>Biblioteki
 
-Wszystkie wersje [biblioteki wykonawcze języka C](../../c-runtime-library/crt-library-features.md).
+Wszystkie wersje [biblioteki wykonawczej C](../../c-runtime-library/crt-library-features.md).
 
 ## <a name="example"></a>Przykład
 

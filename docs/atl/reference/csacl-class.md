@@ -22,12 +22,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 65375b764c0d8d8673a59fcfb47b4eecaf730cb5
-ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
+ms.openlocfilehash: 817875dd32457fa47eafca9d634bc2e7cc8e079d
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37879959"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43206573"
 ---
 # <a name="csacl-class"></a>Klasa CSacl
 Ta klasa jest otoką dla struktury SACL (systemowa lista kontroli dostępu).  
@@ -72,7 +72,7 @@ class CSacl : public CAcl
   
  Należy użyć metod klasy dostarczonych do dodawania, usuwania, tworzyć i usuwać wpisy kontroli dostępu z `SACL` obiektu. Zobacz też [AtlGetSacl](security-global-functions.md#atlgetsacl) i [AtlSetSacl](security-global-functions.md#atlsetsacl).  
   
- Wprowadzenie do modelu kontroli dostępu w Windows, zobacz [kontroli dostępu](http://msdn.microsoft.com/library/windows/desktop/aa374860) w zestawie Windows SDK.  
+ Wprowadzenie do modelu kontroli dostępu w Windows, zobacz [kontroli dostępu](/windows/desktop/SecAuthZ/access-control) w zestawie Windows SDK.  
   
 ## <a name="inheritance-hierarchy"></a>Hierarchia dziedziczenia  
  [CAcl](../../atl/reference/cacl-class.md)  
@@ -131,7 +131,7 @@ bool AddAuditAce(
 ### <a name="remarks"></a>Uwagi  
  A `CSacl` obiekt zawiera wpisy kontroli dostępu (ACE), które określają typy prób dostępu, które generują rekordów inspekcji w dzienniku zdarzeń zabezpieczeń. Metoda ta umożliwia dodanie AS, do `CSacl` obiektu.  
   
- Zobacz [ACE_HEADER](http://msdn.microsoft.com/library/windows/desktop/aa374919) opis różnych flag, które można ustawić w *AceFlags* parametru.  
+ Zobacz [ACE_HEADER](/windows/desktop/api/winnt/ns-winnt-_ace_header) opis różnych flag, które można ustawić w *AceFlags* parametru.  
   
 ##  <a name="csacl"></a>  CSacl::CSacl  
  Konstruktor.  
@@ -208,7 +208,7 @@ void RemoveAllAces() throw();
   
 ## <a name="see-also"></a>Zobacz też  
  [Klasa CAcl](../../atl/reference/cacl-class.md)   
- [Listy kontroli dostępu](http://msdn.microsoft.com/library/windows/desktop/aa374872)   
- [Wpisy kontroli dostępu](http://msdn.microsoft.com/library/windows/desktop/aa374868)   
+ [Listy kontroli dostępu](/windows/desktop/SecAuthZ/access-control-lists)   
+ [Wpisy kontroli dostępu](/windows/desktop/SecAuthZ/access-control-entries)   
  [Klasa — Przegląd](../../atl/atl-class-overview.md)   
  [Funkcje globalne zabezpieczeń](../../atl/reference/security-global-functions.md)

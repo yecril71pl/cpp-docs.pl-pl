@@ -15,35 +15,35 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b12a65e61c5677943b4ea1b4b85c12cfc796af45
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 482d140407a22d1ea63db07101f76f028877bdc1
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33300280"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43206791"
 ---
 # <a name="linker-tools-error-lnk1123"></a>Błąd narzędzi konsolidatora LNK1123
 
-> Błąd podczas konwersji do formatu COFF: plik jest nieprawidłowy lub uszkodzony
+> Wystąpił błąd podczas konwersji do formatu COFF: plik jest nieprawidłowy lub uszkodzony
 
-Pliki wejściowe musi mieć format wspólnej obiektu pliku formatu (COFF). Jeśli plik wejściowy nie jest COFF, konsolidator automatycznie podejmuje próbę przekonwertowania obiektów OMF 32-bitowej do formatu COFF lub uruchamia CVTRES. Wywołanie pliku EXE można przekonwertować plików zasobów. Ten komunikat oznacza, że konsolidator nie można skonwertować pliku. Może to także wystąpić w przypadku korzystania z niezgodną wersję CVTRES. EXE z innej instalacji programu Visual Studio, zestaw Windows Development Kit lub .NET Framework.
+Pliki wejściowe musi mieć format Common Object File Format (COFF). Jeśli plik wejściowy nie jest COFF, konsolidator automatycznie podejmuje próbę przekonwertowania obiektów OMF 32-bitowego do formatu COFF lub działa na błąd. EXE w celu konwersji plików zasobów. Ten komunikat oznacza, że konsolidator nie można skonwertować pliku. Może również wystąpić podczas korzystania z niezgodną wersję narzędzia CVTRES. EXE z innej instalacji programu Visual Studio, zestaw deweloperski Windows lub .NET Framework.
 
 > [!NOTE]
-> Jeśli używasz starszej wersji programu Visual Studio nie może być obsługiwana automatycznej konwersji.
+> Jeśli używasz starszej wersji programu Visual Studio automatyczna konwersja nie może być obsługiwane.
 
 ## <a name="to-fix-the-problem"></a>Aby rozwiązać ten problem
 
-- Zastosuj wszystkie dodatki service pack i aktualizacje dla używanej wersji programu Visual Studio. Jest to szczególnie ważne dla programu Visual Studio 2010.
+- Zastosuj wszystkie dodatki service pack i aktualizacje dla używanej wersji programu Visual Studio. Jest to szczególnie ważne w przypadku programu Visual Studio 2010.
 
-- Spróbuj budynku z konsolidowania przyrostowego wyłączone. Na pasku menu wybierz **projektu**, **właściwości**. W **strony właściwości** okna dialogowego rozwiń **właściwości konfiguracji**, **konsolidatora**. Zmień wartość **włączyć konsolidowania przyrostowego** do **nr**.
+- Spróbować utworzyć z łączeniem przyrostowym wyłączone. Na pasku menu wybierz **projektu**, **właściwości**. W **stron właściwości** okna dialogowego rozwiń **właściwości konfiguracji**, **konsolidatora**. Zmień wartość właściwości **Włącz konsolidację przyrostową** do **nie**.
 
-- Sprawdź, czy wersja CVTRES. Znaleziono EXE najpierw w zmiennej środowiskowej PATH zgodna wersja narzędzia kompilacji lub wersję zestawu narzędzi platformy, używaną w projekcie.
+- Upewnij się, że wersja narzędzia CVTRES. Znaleziono plik EXE najpierw w zmiennej środowiskowej PATH jest zgodna wersja narzędzia do kompilacji lub wersji zestawu narzędzi platformy, używaną w projekcie.
 
-- Spróbuj wyłączyć opcję osadzania manifestu. Na pasku menu wybierz **projektu**, **właściwości**. W **strony właściwości** okna dialogowego rozwiń **właściwości konfiguracji**, **narzędziu manifestu**, **wejściowa i wyjściowa**. Zmień wartość **Osadź Manifest** do **nr**.
+- Spróbuj wyłączyć opcję Osadzanie manifestu. Na pasku menu wybierz **projektu**, **właściwości**. W **stron właściwości** okna dialogowego rozwiń **właściwości konfiguracji**, **narzędziu manifestu**, **danych wejściowych i wyjściowych**. Zmień wartość właściwości **osadzanie manifestu** do **nie**.
 
-- Upewnij się, że typ pliku jest nieprawidłowa. Na przykład upewnij się, że obiekt OMF jest 32-bitowe i nie 16-bitowych. Aby uzyskać więcej informacji, zobacz [. Pliki obj jako wejście konsolidatora](../../build/reference/dot-obj-files-as-linker-input.md) i [formatu PE](https://msdn.microsoft.com/library/windows/desktop/ms680547).
+- Upewnij się, że typ pliku jest prawidłowa. Na przykład upewnij się, że obiekt OMF jest 32-bitowe i nie 16-bitowych. Aby uzyskać więcej informacji, zobacz [. Pliki obj jako wejście konsolidatora](../../build/reference/dot-obj-files-as-linker-input.md) i [formatu PE](/windows/desktop/Debug/pe-format).
 
-- Upewnij się, że plik nie jest uszkodzony. Skompiluj ponownie, jeśli to konieczne.
+- Upewnij się, że plik nie jest uszkodzony. Ponownie skompiluj go, jeśli to konieczne.
 
 ## <a name="see-also"></a>Zobacz także
 

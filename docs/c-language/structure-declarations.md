@@ -18,65 +18,65 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e7d305b2bc74455abd6fdbcfb29ed7ef4103bf19
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: ffb239db12111f80e894c68cff568338bb3ed038
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32391903"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43207273"
 ---
 # <a name="structure-declarations"></a>Deklaracje struktur
-"Deklaracja struktury" nazwy typu i określa sekwencję wartości zmiennych (nazywany "Członkowie" lub "pola" konstrukcji), które mogą mieć różnych typów. Opcjonalny identyfikator o nazwie "tag", nadaje nazwę typu struktury i mogą być używane w kolejnych odwołań do typ struktury. Zmienna typu Struktura zawiera całą sekwencję wynika z tego typu. Struktury w języku C są podobne do typów znana jako "rekordy" w innych językach.  
+"Deklaracji struktury" nazwy typu i określa sekwencję wartości zmiennych (nazywany "Członkowie" lub "fields" struktury), które mogą mieć różne typy. Opcjonalny identyfikator o nazwie "tag", nadaje nazwę typu struktury i mogą być używane w kolejnych odwołaniach do typu struktury. Zmienna tego typu struktury zawiera całą sekwencję zdefiniowane według tego typu. Struktury w języku C są podobne do typów, znane jako "rekordy" w innych językach.  
   
 ## <a name="syntax"></a>Składnia  
  *struct-or-union-specifier*:  
- *Identyfikator struktury lub Unii* opt **{** *struktury deklaracji listy* **}**  
+ *Identyfikator struktury lub Unii* zoptymalizowany pod kątem **{** *struktury deklaracji listy* **}**  
   
- *Identyfikator struktury lub związku*  
+ *Identyfikator struktury lub Unii*  
   
  *struct-or-union*:  
  **struct**  
   
- **Unii**  
+ **Unia**  
   
  *struct-declaration-list*:  
  *struct-declaration*  
   
- *Deklaracja struktury deklaracjach — struktura*  
+ *Struktura deklaracji struktury deklaracji listy*  
   
- Struktura zawartości jest zdefiniowany  
+ Zawartość struktury jest definiowany jako  
   
  *struct-declaration*:  
- *Specyfikator kwalifikator listy w strukturze listy deklarator***;**  
+ *Specyfikator kwalifikator listy w strukturze lista deklaratorów***;**   
   
  *specifier-qualifier-list*:  
- *Specyfikator typu w specyfikatorze listy kwalifikator* opcjonalnych  
+ *Specyfikator typu w specyfikator listy kwalifikator* zoptymalizowany pod kątem  
   
- *Kwalifikator typu w specyfikatorze listy kwalifikator* opcjonalnych  
+ *Kwalifikator typu w specyfikator listy kwalifikator* zoptymalizowany pod kątem  
   
  *struct-declarator-list*:  
  *deklarator — struktura*  
   
- *Struktura deklarator listy***,***deklarator — struktura*   
+ *Struktura declarator-list***,***deklaratora — struktura*   
   
  *struct-declarator*:  
  `declarator`  
   
- Deklaracja typu struktury nie zarezerwowane miejsce dla struktury. Jest tylko szablon dla nowszej deklaracje zmiennych struktury.  
+ Deklaracja typu struktury Nieustawione zarezerwować miejsce dla struktury. Jest tylko szablon służący do nowszych deklaracje zmiennych struktury.  
   
- A uprzednio zdefiniowany *identyfikator* (tagów) może służyć do odwołuje się do typu struktury zdefiniowany w innym miejscu. W takim przypadku *struktury deklaracji listy* nie może powtarzać się tak długo, jak definicji jest widoczny. Deklaracje wskaźników do struktur i definicje typów dla typów struktury można zastosować tag struktury, przed zdefiniowaniem typ struktury. Jednak definicji struktury musi wystąpić przed jakimkolwiek użyciem rzeczywisty rozmiar pól. To jest niekompletna definicja typu i tag typu. Definicja ta zostanie ukończona definicją typu musi występować później w tym samym zakresie.  
+ A uprzednio zdefiniowany *identyfikator* (tagów) może służyć do odwoływania się do typ struktury zdefiniowany w innym miejscu. W tym przypadku *struktury deklaracji listy* nie może powtarzać tak długo, jak definicja jest widoczny. Deklaracje wskaźników do struktur i definicje typów dla typów struktury, można użyć tag struktury, przed zdefiniowaniem typ struktury. Jednak definicji struktury musi napotkał przed jakimkolwiek użyciem rzeczywisty rozmiar pól. Jest niekompletna definicja typu oraz tag typu. Dla tej definicji, należy wykonać definicja typu musi znajdować się w dalszej części w tym samym zakresie.  
   
- *Struktury deklaracji listy* Określa typy i nazwy elementów członkowskich struktury. A *struktury deklaracji listy* argument zawiera co najmniej jednej zmiennej lub pola bitowego deklaracji.  
+ *Struktury deklaracji listy* Określa typy i nazwy elementów członkowskich struktury. A *struktury deklaracji listy* argument zawiera co najmniej jednej zmiennej lub deklaracje pole bitowe.  
   
- Każdej zmiennej zadeklarowanej w *struktury deklaracji listy* jest zdefiniowany jako element członkowski typu struktury. Deklaracje zmiennej w ramach *struktury deklaracji listy* mieć tego samego formularza jako innych deklaracji zmiennych, które zostały omówione w tej sekcji, z wyjątkiem tego, czy deklaracje nie może zawierać specyfikatory klasy magazynowania lub inicjatorów. Elementy członkowskie struktury może mieć żadnych zmiennych typów, z wyjątkiem typu `void`, niekompletnego typu lub typu funkcji.  
+ Każda Zmienna zadeklarowana w *struktury deklaracji listy* jest zdefiniowany jako członek typu struktury. Deklaracje zmiennych w ramach *struktury deklaracji listy* mają tę samą postać co innych deklaracji zmiennych, które zostały omówione w tej sekcji, z tą różnicą, że deklaracje nie może zawierać specyfikatory klasy magazynowania lub inicjatorów. Elementy członkowskie struktury mogą mieć wszystkie typy zmiennych, z wyjątkiem typu `void`, typu niekompletnego lub typu funkcji.  
   
- Element członkowski nie można zadeklarować typu struktury, w których występuje. Jednak element członkowski mogą być deklarowane jako wskaźnik do typu struktury, w której występuje tak długo, jak typ struktury ma tag. Dzięki temu można utworzyć połączonej listy struktur.  
+ Nie można zadeklarować członek typ struktury, w której występuje. Jednak członka może być deklarowana jako wskaźnik do struktury typu, w której występuje tak długo, jak typ struktury ma tag. Dzięki temu można utworzyć połączonej listy struktur.  
   
- Struktury postępuj zgodnie z tego samego zakresu jako innych identyfikatorów. Struktura identyfikatory muszą być różne od innych strukturę, Unii i tagi wyliczania z taką samą widoczność.  
+ Struktury postępuj zgodnie z tego samego zakresu jak innych identyfikatorów. Struktura identyfikatory muszą być różne od innych struktury, Unii i wyliczenia tagi z taką samą widoczność.  
   
- Każdy *deklaracji struktury* w *struktury deklaracji listy* muszą być unikatowe w obrębie listy. Jednakże identyfikatora nazwy w *struktury deklaracji listy* nie muszą się różnić od zwykłej nazwy zmiennych lub identyfikatorów list deklaracji struktury.  
+ Każdy *deklaracji struktury* w *struktury deklaracji listy* muszą być unikatowe w obrębie listy. Jednak identyfikatora nazwy w *struktury deklaracji listy* nie muszą się różnić od zwykłej nazwy zmiennych lub z identyfikatorów w inne listy deklaracji struktury.  
   
- Zagnieżdżone struktury są dostępne również tak, jakby zostały zgłoszone na poziomie zakresu pliku. Przykładowo podana tej deklaracji:  
+ Zagnieżdżone struktury można również uzyskać dostęp, tak, jakby były one zadeklarowane na poziomie zakresu pliku. Na przykład biorąc pod uwagę tę deklarację:  
   
 ```  
 struct a  
@@ -89,7 +89,7 @@ struct a
 } var1;  
 ```  
   
- Deklaracje te są prawnych:  
+ Deklaracje te są prawne:  
   
 ```  
 struct a var3;  
@@ -97,7 +97,7 @@ struct b var4;
 ```  
   
 ## <a name="examples"></a>Przykłady  
- Tych przykładach deklaracje struktur:  
+ Te przykłady ilustrują deklaracje struktur:  
   
 ```  
 struct employee   /* Defines a structure variable named temp */  
@@ -108,13 +108,13 @@ struct employee   /* Defines a structure variable named temp */
 } temp;  
 ```  
   
- `employee` Struktury ma trzy elementy członkowskie: `name`, `id`, i `class`. `name` Element członkowski jest tablicą 20 element i `id` i `class` są proste elementy członkowskie o `int` i **długi** wpisz odpowiednio. Identyfikator `employee` jest identyfikatorem struktury.  
+ `employee` Struktura ma trzy elementy członkowskie: `name`, `id`, i `class`. `name` Element członkowski jest 20-elementowej tablicy, i `id` i `class` są proste członków z `int` i **długie** typ, odpowiednio. Identyfikator `employee` jest identyfikatorem struktury.  
   
 ```  
 struct employee student, faculty, staff;  
 ```  
   
- W tym przykładzie definiuje trzy zmienne struktury: `student`, `faculty`, i `staff`. Każda struktura ma tę samą listę trzech elementów członkowskich. Elementy członkowskie są deklarowane jako typ struktury `employee`zdefiniowanej w poprzednim przykładzie.  
+ Ten przykład definiuje trzy zmienne struktury: `student`, `faculty`, i `staff`. Każda struktura została ta sama lista trzy elementy członkowskie. Elementy członkowskie są zadeklarowane typ struktury `employee`zdefiniowaną w poprzednim przykładzie.  
   
 ```  
 struct           /* Defines an anonymous struct and a */  
@@ -123,7 +123,7 @@ struct           /* Defines an anonymous struct and a */
 } complex;  
 ```  
   
- `complex` Struktury ma dwa elementy członkowskie z **float** typu `x` i `y`. Typ struktury nie ma tagu i dlatego jest bez nazwy lub anonimowe.  
+ `complex` Struktura ma dwa elementy członkowskie z **float** typu `x` i `y`. Typ struktury nie ma tagu i dlatego nienazwane lub anonimowe.  
   
 ```  
 struct sample   /* Defines a structure named x */  
@@ -134,9 +134,9 @@ struct sample   /* Defines a structure named x */
 } x;  
 ```  
   
- Pierwsze dwa elementy członkowskie struktury są `char` zmienną i wskaźnika do **float** wartość. Trzeci członek `next`, jest zadeklarowany jako wskaźnik do zdefiniowanych struktury (`sample`).  
+ Pierwsze dwa elementy członkowskie struktury są `char` zmiennej i wskaźnik **float** wartość. Trzeci członek `next`, jest zadeklarowany jako wskaźnik do typu struktury definiowanego (`sample`).  
   
- Struktury anonimowe mogą być przydatne, gdy tag o nazwie nie jest wymagana. Jest to sytuacji, gdy wszystkie wystąpienia struktury definiuje jedną deklarację. Na przykład:  
+ Struktury anonimowe może być przydatne, gdy tag o nazwie nie jest potrzebne. Dotyczy to sytuacji, gdy jedna deklaracja określa wszystkie wystąpienia struktury. Na przykład:  
   
 ```  
 struct  
@@ -161,13 +161,13 @@ struct somestruct
   
  **Microsoft Specific**  
   
- Kompilator umożliwia bez określonego rozmiaru lub zerowy rozmiar tablicy jako ostatni element członkowski struktury. Może to być przydatne, jeśli rozmiar tablicy stałej różni się w różnych sytuacjach. Deklaracja taka struktura wygląda następująco:  
+ Kompilator umożliwi tablica bez określonego rozmiaru lub o rozmiarze zero jako ostatni element członkowski struktury. Może to być przydatne, jeśli rozmiar tablicy stałej różni się, gdy są używane w różnych sytuacjach. Deklaracja takiej struktury wygląda następująco:  
   
- `struct` *Identyfikator *** {** *zestawu z deklaracji* *typu tablicy — [nazwa ***];};**  
+**Struktura** *identyfikator* **{** *zestawu z deklaracji* *typu* <em>nazwa tablicy</em> **\[]; };**  
   
- Tablic bez określonego rozmiaru może występować tylko jako ostatni element członkowski struktury. Struktury zawierające deklaracje bez określonego rozmiaru tablicy mogą być zagnieżdżane w innych konstrukcji tak długo, jak długo ma więcej elementów członkowskich są zadeklarowane w dowolnej struktury otaczającej. Tablice takie struktury są niedozwolone. `sizeof` Operatora, gdy jest stosowany do zmiennej tego typu lub sam typ zakłada 0 dla rozmiaru tablicy.  
+ Tablice bez określonego rozmiaru może znajdować się tylko jako ostatniej składowej struktury. Struktury zawierające deklaracje tablic bez określonego rozmiaru mogą być zagnieżdżane w innych struktur, tak długo, jak żadne dalsze składowe są deklarowane w dowolnej struktury otaczającej. Tablic z takimi strukturami nie są dozwolone. `sizeof` Operatora, po zastosowaniu do zmiennej tego typu lub sam typ, zakłada, 0, aby uzyskać rozmiar tablicy.  
   
- Deklaracje struktur można również określić bez deklaratorze, gdy są oni członkami innego struktury lub związku. Nazwy pól są awansowane w otaczającej strukturę. Na przykład typ struktury wygląda następująco:  
+ Deklaracje struktur można również określić bez deklarator, gdy są oni członkami innej struktury lub Unii. Nazwy pól są promowane do otaczającej strukturze. Na przykład struktura pustego wygląda następująco:  
   
 ```  
 struct s  
@@ -185,9 +185,9 @@ struct s
 p_s->b = 100;  /* A reference to a field in the s structure */  
 ```  
   
- Zobacz [struktury i elementów członkowskich Unii](../c-language/structure-and-union-members.md) uzyskać informacji o odwołaniach struktury.  
+ Zobacz [składowe struktury i złożenia](../c-language/structure-and-union-members.md) uzyskać informacji na temat struktury odwołania.  
   
- **KOŃCOWY określonych firmy Microsoft**  
+ **END specyficzny dla Microsoft**  
   
 ## <a name="see-also"></a>Zobacz też  
  [Deklaratory i deklaracje zmiennych](../c-language/declarators-and-variable-declarations.md)

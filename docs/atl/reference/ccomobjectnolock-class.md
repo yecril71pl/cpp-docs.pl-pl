@@ -21,12 +21,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 27dd0ad9bb64c8e708b228ec13a9fbf0e33fa589
-ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
+ms.openlocfilehash: 85332341e1a229ce5110153c0ad6195ef0ad42c4
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37884119"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43208178"
 ---
 # <a name="ccomobjectnolock-class"></a>Klasa CComObjectNoLock
 Ta klasa implementuje `IUnknown` nieagregowane obiektu, ale ma nie przyrostu liczbę blokad modułu w konstruktorze.  
@@ -60,7 +60,7 @@ class CComObjectNoLock : public Base
 |[CComObjectNoLock::Release](#release)|Dekrementuje liczbę odwołań do obiektu.|  
   
 ## <a name="remarks"></a>Uwagi  
- `CComObjectNoLock` jest podobny do [CComObject](../../atl/reference/ccomobject-class.md) , implementuje [IUnknown](http://msdn.microsoft.com/library/windows/desktop/ms680509) nieagregowane obiektu; jednak `CComObjectNoLock` jest przyrost blokady modułu count w konstruktorze.  
+ `CComObjectNoLock` jest podobny do [CComObject](../../atl/reference/ccomobject-class.md) , implementuje [IUnknown](/windows/desktop/api/unknwn/nn-unknwn-iunknown) nieagregowane obiektu; jednak `CComObjectNoLock` jest przyrost blokady modułu count w konstruktorze.  
   
  Używa ATL `CComObjectNoLock` wewnętrznie dla fabryki klas. Ogólnie rzecz biorąc nie użyjesz tej klasy bezpośrednio.  
   
@@ -90,8 +90,8 @@ CComObjectNoLock(void* = NULL);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- **Void\***  
- [in] Ten parametr nienazwany nie jest używany. Istnieje symetrii z innymi **CCom *** XXX*`Object`*XXX* konstruktorów.  
+ <em>Void\*</em>  
+ [in] Ten parametr nienazwany nie jest używany. Istnieje symetrii z innymi `CComXXXObjectXXX` konstruktorów.  
   
 ##  <a name="dtor"></a>  CComObjectNoLock:: ~ CComObjectNoLock  
  Destruktor.  

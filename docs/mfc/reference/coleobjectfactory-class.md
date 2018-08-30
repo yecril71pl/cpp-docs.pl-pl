@@ -46,12 +46,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4d2ac698466709931259f1df28d6c75aa38b30f2
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: 656500e69f97481c90cdbea41b8c640f470e7b1c
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37850709"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43210020"
 ---
 # <a name="coleobjectfactory-class"></a>Coleobjectfactory — klasa
 Implementuje mechanizm klasy OLE factory, która tworzy obiekty OLE, takich jak serwery, obiekty automatyzacji i dokumenty.  
@@ -157,7 +157,7 @@ COleObjectFactory(
   
 - `afxRegFreeThreading` Ustawia model wątkowości w rejestrze, aby ThreadingModel = bezpłatna.  
   
-     Można połączyć dwie flagi `afxRegApartmentThreading` i `afxRegFreeThreading` można ustawić ThreadingModel = jednocześnie. Zobacz [InprocServer32](http://msdn.microsoft.com/library/windows/desktop/ms682390) w zestawie SDK Windows, aby uzyskać więcej informacji na temat rejestracji modelu wątkowości.  
+     Można połączyć dwie flagi `afxRegApartmentThreading` i `afxRegFreeThreading` można ustawić ThreadingModel = jednocześnie. Zobacz [InprocServer32](/windows/desktop/com/inprocserver32) w zestawie SDK Windows, aby uzyskać więcej informacji na temat rejestracji modelu wątkowości.  
   
  *lpszProgID*  
  Wskaźnik do ciągu zawierającego identyfikator programu werbalne, takie jak "Programu Microsoft Excel."  
@@ -165,7 +165,7 @@ COleObjectFactory(
 ### <a name="remarks"></a>Uwagi  
  Aby użyć obiektu, jednak należy zarejestrować go.  
   
- Aby uzyskać więcej informacji, zobacz [klucz identyfikator CLSID](http://msdn.microsoft.com/library/windows/desktop/ms691424) w zestawie Windows SDK.  
+ Aby uzyskać więcej informacji, zobacz [klucz identyfikator CLSID](/windows/desktop/com/clsid-key-hklm) w zestawie Windows SDK.  
   
 ##  <a name="getclassid"></a>  COleObjectFactory::GetClassID  
  Zwraca odwołanie do Identyfikatora klasy OLE reprezentuje tej fabryki.  
@@ -178,7 +178,7 @@ REFCLSID GetClassID() const;
  Reprezentuje odwołanie do Identyfikatora klasy OLE tej fabryki.  
   
 ### <a name="remarks"></a>Uwagi  
- Aby uzyskać więcej informacji, zobacz [klucz identyfikator CLSID](http://msdn.microsoft.com/library/windows/desktop/ms691424) w zestawie Windows SDK.  
+ Aby uzyskać więcej informacji, zobacz [klucz identyfikator CLSID](/windows/desktop/com/clsid-key-hklm) w zestawie Windows SDK.  
   
 ##  <a name="getlicensekey"></a>  COleObjectFactory::GetLicenseKey  
  Żąda klucz unikatową licencję z formantu biblioteki DLL i zapisuje go w BSTR wskazywany przez *pbstrKey*.  

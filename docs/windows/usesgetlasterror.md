@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 7921ff48adf2f987844557f9af3be5adcd6736de
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 39052024224b1a78a84b2d9503957b8fff09b96f
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42602765"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43208294"
 ---
 # <a name="usesgetlasterror"></a>usesgetlasterror
 
@@ -36,7 +36,7 @@ Informuje obiekt wywołujący, że jeśli występuje błąd podczas wywoływania
 
 ## <a name="remarks"></a>Uwagi
 
-**Usesgetlasterror —** atrybut C++ ma taką samą funkcjonalność jak [usesgetlasterror —](http://msdn.microsoft.com/library/windows/desktop/aa367297) atrybutów w MIDL.
+**Usesgetlasterror —** atrybut C++ ma taką samą funkcjonalność jak [usesgetlasterror —](/windows/desktop/Midl/usesgetlasterror) atrybutów w MIDL.
 
 ## <a name="example"></a>Przykład
 

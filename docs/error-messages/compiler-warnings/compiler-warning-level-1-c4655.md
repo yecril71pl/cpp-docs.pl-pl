@@ -1,7 +1,7 @@
 ---
-title: Kompilatora (poziom 1) ostrzeżenie C4655 | Dokumentacja firmy Microsoft
+title: Kompilator ostrzeżenie (poziom 1) C4655 | Dokumentacja firmy Microsoft
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 08/27/2018
 ms.technology:
 - cpp-diagnostics
 ms.topic: error-reference
@@ -16,29 +16,31 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6011bf3a2a3bf1718fc15823f2541f49306857c8
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 9600c0fb9b4f03112ebd9cf430e3f833899c5f3c
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33283266"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43209104"
 ---
-# <a name="compiler-warning-level-1-c4655"></a>Kompilator C4655 ostrzegawcze (poziom 1)
-**'**   
- ***symbol* ": typ zmiennej jest nowy od czasu ostatniej kompilacji lub jest zdefiniowany w różny sposób w innym miejscu**  
-  
- Zmienić lub dodać nowy typ danych od czasu ostatniej zakończonej pomyślnie kompilacji. Edytuj i Kontynuuj nie obsługuje zmian do istniejących typów danych.  
-  
- To ostrzeżenie występuje [krytyczny błąd C1092](../../error-messages/compiler-errors-1/fatal-error-c1092.md). Aby uzyskać więcej informacji, zobacz [obsługiwane zmiany kodu](/visualstudio/debugger/supported-code-changes-cpp).  
-  
-### <a name="to-remove-this-warning-without-ending-the-current-debug-session"></a>Aby usunąć to ostrzeżenie bez przerywania bieżącej sesji debugowania  
-  
-1.  Zmień typ danych do stanu sprzed rozpoczęcia błędu.  
-  
-2.  Z **debugowania** menu, wybierz **zastosowanie zmian kodu**.  
-  
-### <a name="to-remove-this-warning-without-changing-your-source-code"></a>Aby usunąć to ostrzeżenie, bez konieczności zmieniania kodu źródłowego  
-  
-1.  Z **debugowania** menu, wybierz **Zatrzymaj debugowanie**.  
-  
-2.  Z **kompilacji** menu, wybierz **kompilacji**.
+# <a name="compiler-warning-level-1-c4655"></a>Kompilator ostrzeżenie (poziom 1) C4655
+
+> "*symbol*": typ zmiennej jest nowy od czasu ostatniej kompilacji lub zdefiniowanej w różny sposób w innym miejscu
+
+## <a name="remarks"></a>Uwagi
+
+Zmienić lub dodać nowy typ danych od czasu ostatniej zakończonej pomyślnie kompilacji. Edytuj i Kontynuuj nie obsługuje zmian do istniejących typów danych.
+
+To ostrzeżenie jest poprzedzony [krytyczny C1092 błąd](../../error-messages/compiler-errors-1/fatal-error-c1092.md). Aby uzyskać więcej informacji, zobacz [obsługiwane zmiany kodu](/visualstudio/debugger/supported-code-changes-cpp).
+
+### <a name="to-remove-this-warning-without-ending-the-current-debug-session"></a>Aby usunąć to ostrzeżenie, bez przerywania bieżącej sesji debugowania
+
+1. Zmiana typu danych, wróć do stanu przed błędu.
+
+2. Z **debugowania** menu, wybierz **zastosowanie zmian kodu**.
+
+### <a name="to-remove-this-warning-without-changing-your-source-code"></a>Aby usunąć to ostrzeżenie bez wprowadzania zmian w kodzie źródłowym
+
+1. Z **debugowania** menu, wybierz **Zatrzymaj debugowanie**.
+
+2. Z **kompilacji** menu, wybierz **kompilacji**.

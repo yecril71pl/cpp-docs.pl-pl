@@ -30,12 +30,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5291ae4783e252341371844ca08e390958c3ff89
-ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
+ms.openlocfilehash: 4412e30316bd2d5f43eac4dddb062adb11dc6f6e
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37882575"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43210004"
 ---
 # <a name="catlmodule-class"></a>Klasa CAtlModule
 Ta klasa udostępnia metody używane przez kilka klasy modułów ALT.  
@@ -167,7 +167,7 @@ virtual HRESULT GetGITPtr(IGlobalInterfaceTable** ppGIT) throw();
   
  W kompilacjach debugowania, wystąpi błąd asercji Jeśli *ppGIT* jest równa NULL, lub jeśli nie można uzyskać wskaźnik Tabela interfejsu globalnego.  
   
- Zobacz [IGlobalInterfaceTable](http://msdn.microsoft.com/library/windows/desktop/ms678517) uzyskać informacji na temat Tabela interfejsu globalnego.  
+ Zobacz [IGlobalInterfaceTable](/windows/desktop/api/objidl/nn-objidl-iglobalinterfacetable) uzyskać informacji na temat Tabela interfejsu globalnego.  
   
 ##  <a name="getlockcount"></a>  CAtlModule::GetLockCount  
  Zwraca liczbę blokad.  

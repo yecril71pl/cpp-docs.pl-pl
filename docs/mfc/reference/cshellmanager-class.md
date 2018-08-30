@@ -38,12 +38,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0752d278f0459c3558021d02fbcddb6ba234df53
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: 35f186822e00f74552e3bf8d52950f3c4bbe5b45
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37852389"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43207395"
 ---
 # <a name="cshellmanager-class"></a>Klasa CShellManager
 Implementuje kilka metod, które umożliwiają użytkownikowi pracować ze wskaźnikami do list identyfikatorów (PIDLs).  
@@ -117,7 +117,7 @@ BOOL BrowseForFolder(
  Tytuł okna dialogowego.  
   
  [in] *ulFlags*  
- Flagi określające opcje dla okna dialogowego. Zobacz [BROWSEINFO](http://msdn.microsoft.com/library/windows/desktop/bb773205) szczegółowy opis.  
+ Flagi określające opcje dla okna dialogowego. Zobacz [BROWSEINFO](/windows/desktop/api/shlobj_core/ns-shlobj_core-_browseinfoa) szczegółowy opis.  
   
  [out] *piFolderImage*  
  Wskaźnik do wartości całkowitej, gdzie metoda zapisuje indeks obrazu wybranego folderu.  
@@ -153,7 +153,7 @@ LPITEMIDLIST ConcatenateItem(
  Wskaźnik do nowej listy elementów, jeśli funkcja się powiedzie, w przeciwnym razie wartość NULL.  
   
 ### <a name="remarks"></a>Uwagi  
- Ta metoda tworzy nowy [ITEMIDLIST](http://msdn.microsoft.com/library/windows/desktop/bb773321) wystarczająco duży, aby zawierać równocześnie *pidl1* i *pidl2*. Następnie kopiuje *pidl1* i *pidl2* do nowej listy.  
+ Ta metoda tworzy nowy [ITEMIDLIST](/windows/desktop/api/shtypes/ns-shtypes-_itemidlist) wystarczająco duży, aby zawierać równocześnie *pidl1* i *pidl2*. Następnie kopiuje *pidl1* i *pidl2* do nowej listy.  
   
 ##  <a name="copyitem"></a>  CShellManager::CopyItem  
  Kopiuje listy elementów.  

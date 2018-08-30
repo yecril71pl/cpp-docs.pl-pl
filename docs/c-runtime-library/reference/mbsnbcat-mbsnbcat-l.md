@@ -42,19 +42,19 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ff7dc09e4305c16ebe710cb99c9e1bdd24490761
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 6f6d75df13263c0eb6a239f2fe6f4f5a400e03d3
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32405064"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43210085"
 ---
 # <a name="mbsnbcat-mbsnbcatl"></a>_mbsnbcat, _mbsnbcat_l
 
-Dołącza co najwyżej pierwszy **n** bajtów ciągu znaków wielobajtowych. Bezpieczniejsza wersje te funkcje są dostępne; zobacz [_mbsnbcat_s —, _mbsnbcat_s_l —](mbsnbcat-s-mbsnbcat-s-l.md).
+Dołącza co najwyżej, pierwsze **n** bajtów jednego ciągu znaków wielobajtowych do innego. Bardziej bezpieczne wersje tych funkcji są dostępne; zobacz [_mbsnbcat_s —, _mbsnbcat_s_l —](mbsnbcat-s-mbsnbcat-s-l.md).
 
 > [!IMPORTANT]
-> Nie można używać tego interfejsu API w aplikacjach, które są wykonywane w środowisku wykonawczym systemu Windows. Aby uzyskać więcej informacji, zobacz [funkcje CRT, nie są obsługiwane w aplikacjach platformy uniwersalnej systemu Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
+> Tego API nie można używać w aplikacjach korzystających ze środowiska wykonawczego Windows. Aby uzyskać więcej informacji, zobacz [funkcje CRT nieobsługiwane w aplikacjach platformy uniwersalnej Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
 
 ## <a name="syntax"></a>Składnia
 
@@ -88,10 +88,10 @@ unsigned char *_mbsnbcat_l(
 ### <a name="parameters"></a>Parametry
 
 *dest*<br/>
-Ciąg docelowego znaków wielobajtowych zerem.
+Ciąg docelowy znaków wielobajtowych przerwany wartością null.
 
 *src*<br/>
-Ciąg źródłowy znaków wielobajtowych zerem.
+Ciąg źródłowy znaków wielobajtowych przerwany wartością null.
 
 *Liczba*<br/>
 Liczba bajtów z *src* do dołączenia do *dest*.
@@ -101,19 +101,19 @@ Ustawienia regionalne do użycia.
 
 ## <a name="return-value"></a>Wartość zwracana
 
-**_mbsnbcat —** zwraca wskaźnik do ciągu docelowego. Brak wartości zwracanej jest zarezerwowana wystąpił błąd.
+**_mbsnbcat —** zwraca wskaźnik do ciągu docelowego. Zwraca żadnej wartości zarezerwowanej, aby wskazać błąd.
 
 ## <a name="remarks"></a>Uwagi
 
-**_Mbsnbcat —** funkcja dołącza co najwyżej pierwszy *liczba* bajtów *src* do *dest*. Jeśli bajt bezpośrednio przed znakiem pustym w *dest* jest bajtu, początkowej bajt *src* spowoduje zastąpienie tego bajtu. W przeciwnym razie wartość początkowa bajt *src* zastępuje znak końcowy null z *dest*. Jeśli null bajt jest wyświetlany w *src* przed *liczba* bajtów są dołączane, **_mbsnbcat —** dołącza wszystkich bajtów z *src*, maksymalnie znakiem pustym. Jeśli *liczba* jest większa niż długość *src*, długość *src* jest używany zamiast *liczba*. Wynikowy ciąg kończy się znakiem null. Jeśli kopiowanie odbywa się między ciągów, które nakładają się na, zachowanie jest niezdefiniowany.
+**_Mbsnbcat —** funkcja dołącza co najwyżej, pierwsze *liczba* bajtów *src* do *dest*. Jeśli bajt bezpośrednio poprzedzający znak null w *dest* jest bajtem wiodącym, bajt początkowy *src* powoduje zastąpienie tego bajtu. W przeciwnym razie bajt początkowy *src* zastępuje kończący znak null z *dest*. Jeśli bajt typu null znajduje się w *src* przed *liczba* bajtów są dołączane, **_mbsnbcat —** dołącza wszystkie bajty z *src*, do znaku null. Jeśli *liczba* jest większa niż długość *src*, długość *src* jest używana zamiast *liczba*. Wynikowy ciąg znaków jest zakończony znakiem null. Jeśli kopiowanie odbywa się między nakładającymi się ciągami, zachowanie jest niezdefiniowane.
 
-Wartość wyjściowa jest zagrożony ustawienie **lc_ctype —** ustawienie kategorii ustawień regionalnych; zobacz [setlocale](setlocale-wsetlocale.md) Aby uzyskać więcej informacji. **_Mbsnbcat —** wersji funkcji używa bieżące ustawienia regionalne dla tego zachowania zależnych od ustawień regionalnych; **_mbsnbcat_l —** wersji jest identyczny z wyjątkiem tego, aby były używane zamiast przekazany parametr ustawień regionalnych. Aby uzyskać więcej informacji, zobacz [ustawień regionalnych](../../c-runtime-library/locale.md).
+Wartość wyjściowa jest zależna od ustawienia **LC_CTYPE** ustawienia kategorii ustawień regionalnych; zobacz [setlocale](setlocale-wsetlocale.md) Aby uzyskać więcej informacji. **_Mbsnbcat —** wersja tej funkcji używa bieżących ustawień regionalnych dla wszelkich zachowań; **_mbsnbcat_l —** wersja jest identyczna, z tą różnicą, że używają parametru ustawień regionalnych przekazanych w zamian. Aby uzyskać więcej informacji, zobacz [ustawień regionalnych](../../c-runtime-library/locale.md).
 
-**Uwaga dotycząca zabezpieczeń** użyć ciągu zakończonego wartością null. Ciąg znaków zakończony znakiem null nie może przekraczać rozmiar buforu docelowego. Aby uzyskać więcej informacji, zobacz [unikanie Overruns buforu](http://msdn.microsoft.com/library/windows/desktop/ms717795).
+**Uwaga dotycząca zabezpieczeń** Użyj ciąg zakończony znakiem null. Ciąg zakończony znakiem null nie może przekraczać rozmiaru bufora docelowego. Aby uzyskać więcej informacji, zobacz [unikanie przepełnień bufora](/windows/desktop/SecBP/avoiding-buffer-overruns).
 
-Jeśli *dest* lub *src* jest **NULL**, funkcja wygeneruje błąd nieprawidłowego parametru zgodnie z opisem w [sprawdzanie poprawności parametru](../../c-runtime-library/parameter-validation.md). Jeśli ten błąd jest obsługiwane, funkcja zwraca **einval —** i ustawia **errno** do **einval —**.
+Jeśli *dest* lub *src* jest **NULL**, funkcja spowoduje błąd nieprawidłowego parametru, zgodnie z opisem w [Parameter Validation](../../c-runtime-library/parameter-validation.md). Jeśli obsługiwany jest błąd, funkcja zwraca **EINVAL** i ustawia **errno** do **EINVAL**.
 
-W języku C++ te funkcje mają przeciążenia szablonu, które wywołują odpowiedników nowsza, bezpieczne tych funkcji. Aby uzyskać więcej informacji, zobacz [Secure szablonu Overloads](../../c-runtime-library/secure-template-overloads.md).
+W języku C++ funkcje te mają przeciążenia szablonu, które wywołują nowsze, bezpieczne odpowiedniki tych funkcji. Aby uzyskać więcej informacji, zobacz [Secure przeciążenia szablonu](../../c-runtime-library/secure-template-overloads.md).
 
 ### <a name="generic-text-routine-mappings"></a>Mapowania procedur zwykłego tekstu
 
@@ -129,7 +129,7 @@ W języku C++ te funkcje mają przeciążenia szablonu, które wywołują odpowi
 |**_mbsnbcat**|\<mbstring.h>|
 |**_mbsnbcat_l**|\<mbstring.h>|
 
-Aby uzyskać więcej informacji o zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md).
+Aby uzyskać więcej informacji na temat zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md).
 
 ## <a name="see-also"></a>Zobacz także
 

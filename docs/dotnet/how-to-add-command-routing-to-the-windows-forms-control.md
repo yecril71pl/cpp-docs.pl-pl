@@ -1,5 +1,5 @@
 ---
-title: 'Porady: Dodawanie polecenia routingu do systemu Windows formantu formularzy | Dokumentacja firmy Microsoft'
+title: 'Porady: Dodawanie polecenia routingu do Windows formantu formularzy | Dokumentacja firmy Microsoft'
 ms.custom: get-started-article
 ms.date: 11/04/2016
 ms.technology:
@@ -16,47 +16,47 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 4c13b0bedf7c81431449aaed8d4fa8f067cdf3d9
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 6d3fc2fdcbc1c0947319ce3e13b7cd3006296606
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33133652"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43210614"
 ---
 # <a name="how-to-add-command-routing-to-the-windows-forms-control"></a>Porady: dodawanie routingu poleceń do formantu interfejsu Windows Forms
-[CWinFormsView](../mfc/reference/cwinformsview-class.md) kieruje poleceń i polecenia update interfejsu użytkownika wiadomości do kontrolki użytkownika, aby umożliwić jego poleceń MFC (na przykład elementów menu ramki i przycisków paska narzędzi).  
+[CWinFormsView](../mfc/reference/cwinformsview-class.md) kieruje polecenia i komunikaty interfejsu użytkownika aktualizacji poleceń do formantu użytkownika, aby zezwolić na obsługę jego poleceń MFC (na przykład ramek elementów menu i przycisków paska narzędzi).  
   
- Kontrola użytkownika używa [ICommandTarget::Initialize](../mfc/reference/icommandtarget-interface.md#initialize) do przechowywania odwołanie do obiektu źródłowego polecenia w `m_CmdSrc`, jak pokazano w poniższym przykładzie. Aby użyć `ICommandTarget` należy dodać odwołanie do mfcmifc80.dll.  
+ Formant użytkownika używa [ICommandTarget::Initialize](../mfc/reference/icommandtarget-interface.md#initialize) do przechowywania odwołania do obiektu źródła polecenia w `m_CmdSrc`, jak pokazano w poniższym przykładzie. Aby użyć `ICommandTarget` należy dodać odwołanie do mfcmifc80.dll.  
   
- `CWinFormsView` obsługuje szereg typowych powiadomienia widoku MFC przez przekazywanie ich do kontrolki użytkownika zarządzanych. Te powiadomienia obejmują [OnInitialUpdate](../mfc/reference/iview-interface.md#oninitialupdate), [OnUpdate](../mfc/reference/iview-interface.md#onupdate) i [OnActivateView](../mfc/reference/iview-interface.md#onactivateview) metody.  
+ `CWinFormsView` obsługuje wiele wspólnych powiadomień widoku MFC, przekazując je do zarządzanego formantu użytkownika. Te powiadomienia obejmują [OnInitialUpdate](../mfc/reference/iview-interface.md#oninitialupdate), [OnUpdate](../mfc/reference/iview-interface.md#onupdate) i [OnActivateView](../mfc/reference/iview-interface.md#onactivateview) metody.  
   
- W tym temacie założono wcześniej zakończył [porady: Tworzenie formantu użytkownika i hosta w oknie dialogowym](../dotnet/how-to-create-the-user-control-and-host-in-a-dialog-box.md) i [porady: Tworzenie formantu użytkownika i widoku MDI hosta](../dotnet/how-to-create-the-user-control-and-host-mdi-view.md).  
+ W tym temacie założono, że została już ukończona [porady: tworzenie kontrolki użytkownika i hosta w oknie dialogowym](../dotnet/how-to-create-the-user-control-and-host-in-a-dialog-box.md) i [porady: tworzenie kontrolki użytkownika i hosta widoku MDI](../dotnet/how-to-create-the-user-control-and-host-mdi-view.md).  
   
 ### <a name="to-create-the-mfc-host-application"></a>Aby utworzyć aplikację hosta MFC  
   
-1.  Biblioteka formantów formularzy systemu Windows utworzonego w Otwórz [porady: Tworzenie formantu użytkownika i hosta w oknie dialogowym](../dotnet/how-to-create-the-user-control-and-host-in-a-dialog-box.md).  
+1.  Otwórz bibliotekę kontrolek formularzy Windows utworzone w [porady: tworzenie kontrolki użytkownika i hosta w oknie dialogowym](../dotnet/how-to-create-the-user-control-and-host-in-a-dialog-box.md).  
   
-2.  Dodaj odwołanie do mfcmifc80.dll, co można zrobić, klikając prawym przyciskiem myszy węzeł projektu w **Eksploratora rozwiązań**, wybierając żądane **Dodaj**, **odwołania**, a następnie przechodząc do Microsoft Visual Studio 10.0\VC\atlmfc\lib.  
+2.  Dodaj odwołanie do mfcmifc80.dll, co można zrobić, klikając prawym przyciskiem myszy węzeł projektu w **Eksploratora rozwiązań**, wybierając opcję **Dodaj**, **odwołania**, a następnie przechodząc do Microsoft Visual Studio 10.0\VC\atlmfc\lib.  
   
-3.  Otwórz UserControl1.Designer.cs i dodaj następującą instrukcję using:  
+3.  Otwórz plik UserControl1.Designer.cs i dodaj następującą instrukcję using:  
   
     ```  
     using Microsoft.VisualC.MFC;  
     ```  
   
-4.  Ponadto w UserControl1.Designer.cs, należy zmienić ten wiersz:  
+4.  Ponadto w UserControl1.Designer.cs Zmień ten wiersz:  
   
     ```  
     partial class UserControl1  
     ```  
   
-     następujące zmiany:  
+     Następujące zmiany:  
   
     ```  
     partial class UserControl1 : System.Windows.Forms.UserControl, ICommandTarget  
     ```  
   
-5.  Dodaj ją w pierwszym wierszu definicji klasy dla `UserControl1`:  
+5.  Dodaj to jako pierwszy wiersz w definicji klasy dla `UserControl1`:  
   
     ```  
     private ICommandSource m_CmdSrc;  
@@ -79,26 +79,25 @@ ms.locfileid: "33133652"
     }  
     ```  
   
-7.  Otwórz aplikację MFC utworzony w [porady: Tworzenie formantu użytkownika i widoku MDI hosta](../dotnet/how-to-create-the-user-control-and-host-mdi-view.md).  
+7.  Otwórz aplikację MFC, został utworzony w [porady: tworzenie kontrolki użytkownika i hosta widoku MDI](../dotnet/how-to-create-the-user-control-and-host-mdi-view.md).  
   
-8.  Dodaj opcję menu, która wywoła `singleMenuHandler`.  
+8.  Dodaj opcję menu, którą będzie wywoływać `singleMenuHandler`.  
   
      Przejdź do **widok zasobów** (Ctrl + Shift + E), rozwiń węzeł **Menu** folder, a następnie kliknij dwukrotnie plik **IDR_MFC02TYPE**. Spowoduje to wyświetlenie Edytora menu.  
   
-     Dodaj opcję menu u dołu **widoku** menu. Zwróć uwagę, identyfikator opcji menu w **właściwości** okna. Zapisz plik.  
+     Dodaj opcję menu w dolnej części **widoku** menu. Zwróć uwagę na identyfikator opcji menu w **właściwości** okna. Zapisz plik.  
   
-     W **Eksploratora rozwiązań**, otwórz plik Resource.h, skopiuj wartość Identyfikatora opcji menu dodaną i Wklej tej wartości jako pierwszy parametr `m_CmdSrc.AddCommandHandler` wywołań w projekcie C# `Initialize` (zastępując —Metoda`32771` w razie potrzeby).  
+     W **Eksploratora rozwiązań**, otwórz plik Resource.h, skopiuj wartość Identyfikatora dla opcji menu dodanej przed chwilą i wklej tę wartość jako pierwszy parametr `m_CmdSrc.AddCommandHandler` wywołania w projekcie języka C# `Initialize` (zastępując —Metoda`32771` w razie potrzeby).  
   
-9. Tworzenie i uruchamianie projektu.  
+9. Skompiluj i uruchom projekt.  
   
      Na **kompilacji** menu, kliknij przycisk **Kompiluj rozwiązanie**.  
   
-     Na **debugowania** menu, kliknij przycisk **uruchomienie bez debugowania**.  
+     Na **debugowania** menu, kliknij przycisk **Uruchom bez debugowania**.  
   
-     Wybierz opcję menu dodane. Zwróć uwagę, że ma zostać wywołana metoda w biblioteki dll.  
+     Wybierz opcję menu, którą dodałeś. Należy zauważyć, że wywoływana jest metoda w pliku .dll.  
   
 ## <a name="see-also"></a>Zobacz też  
- [Hostowanie formantu użytkownika formularzy systemu Windows jako widoku MFC](../dotnet/hosting-a-windows-forms-user-control-as-an-mfc-view.md)   
- [Interfejs ICommandSource](../mfc/reference/icommandsource-interface.md)   
- [Interfejs obiektu ICommandTarget](../mfc/reference/icommandtarget-interface.md)   
- [CommandHandler](http://msdn.microsoft.com/Library/22096734-e074-4aca-8523-4b15590109f9)
+ [Hostowanie kontrolki użytkownika interfejsu Windows Forms jako widoku MFC](../dotnet/hosting-a-windows-forms-user-control-as-an-mfc-view.md)   
+ [Klasa Icommandsource](../mfc/reference/icommandsource-interface.md)   
+ [Klasa ICommandTarget](../mfc/reference/icommandtarget-interface.md)   

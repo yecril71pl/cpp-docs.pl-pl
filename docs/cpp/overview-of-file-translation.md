@@ -19,12 +19,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: eec47e9810e0cc846cc351330512256a32f95aac
-ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
+ms.openlocfilehash: e6ef9a28af02cbb22eb4e3d2ceaad206a94d6309
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/01/2018
-ms.locfileid: "39406848"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43199395"
 ---
 # <a name="overview-of-file-translation"></a>Przegląd tłumaczenia pliku
 Programy napisane w języku C++ (podobnie jak programy napisane w języku C), składają się z co najmniej jednego pliku. Każdy z tych plików jest tłumaczony w następującej, koncepcyjnej kolejności (rzeczywista kolejność postępuje zgodnie z regułą „jak gdyby”: tłumaczenie musi wystąpić, jak gdyby wykonano następujące kroki):  
@@ -54,7 +54,7 @@ Programy napisane w języku C++ (podobnie jak programy napisane w języku C), sk
   
 - Jedno wstępnie zdefiniowane makro, `__cplusplus`, jest zdefiniowana tylko dla języka C++. Zobacz [wstępnie zdefiniowane makra](../preprocessor/predefined-macros.md) w *Preprocessor Reference* Aby uzyskać więcej informacji.  
   
-- Preprocesor języka C nie rozpoznaje operatorów języka C++: **.\*** , **-> \***, i `::`. Zobacz [operatory](../cpp/cpp-built-in-operators-precedence-and-associativity.md) i [wyrażeń](../cpp/expressions-cpp.md), aby uzyskać więcej informacji dotyczących operatorów.  
+- Preprocesor języka C nie rozpoznaje operatorów języka C++: **.** <strong>\*</strong>, **->** <strong>\*</strong>, i **::**. Zobacz [operatory](../cpp/cpp-built-in-operators-precedence-and-associativity.md) i [wyrażeń](../cpp/expressions-cpp.md), aby uzyskać więcej informacji dotyczących operatorów.  
   
 ## <a name="see-also"></a>Zobacz także  
  [Konwencje leksykalne](../cpp/lexical-conventions.md)

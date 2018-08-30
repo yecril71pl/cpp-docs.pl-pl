@@ -32,12 +32,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fe649a3ca8ef0fb5e0091136fc9160ac89c248a1
-ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
+ms.openlocfilehash: 4d31392a59707e5a7d072615ed7c930eaf1e14b9
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37338665"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43207631"
 ---
 # <a name="cmdichildwnd-class"></a>Cmdichildwnd — klasa
 Oferuje funkcje Windows okna interfejsu wielu dokumentów (MDI) podrzędne, wraz z elementami członkowskimi do zarządzania oknem.  
@@ -143,7 +143,7 @@ virtual BOOL Create(
   
 ### <a name="parameters"></a>Parametry  
  *lpszClassName*  
- Wskazuje ciąg znaków zakończony znakiem null, że nazwy klas Windows ( [WNDCLASS](http://msdn.microsoft.com/library/windows/desktop/ms633576) struktury). Nazwa klasy może być dowolna nazwa, zarejestrowane w usłudze [afxregisterwndclass —](application-information-and-management.md#afxregisterwndclass) funkcja globalna. Powinna być równa NULL dla standardowego `CMDIChildWnd`.  
+ Wskazuje ciąg znaków zakończony znakiem null, że nazwy klas Windows ( [WNDCLASS](https://msdn.microsoft.com/library/windows/desktop/ms633576) struktury). Nazwa klasy może być dowolna nazwa, zarejestrowane w usłudze [afxregisterwndclass —](application-information-and-management.md#afxregisterwndclass) funkcja globalna. Powinna być równa NULL dla standardowego `CMDIChildWnd`.  
   
  *lpszWindowName*  
  Wskazuje ciąg znaków zakończony znakiem null, który reprezentuje nazwę okna. Używane jako tekst, na pasku tytułu.  

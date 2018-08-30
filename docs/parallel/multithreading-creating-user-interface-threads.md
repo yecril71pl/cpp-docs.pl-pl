@@ -21,12 +21,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 625518a76bb22c60a41175e649af7ae650161494
-ms.sourcegitcommit: f7703076b850c717c33d72fb0755fbb2215c5ddc
+ms.openlocfilehash: ad16b4955cf8128d4f54edceeadd4b6551bc6f14
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/28/2018
-ms.locfileid: "43131563"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43206517"
 ---
 # <a name="multithreading-creating-mfc-user-interface-threads"></a>Wielowątkowość: Tworzenie wątków interfejsu użytkownika MFC
 Wątek interfejsu użytkownika jest często używane do obsługi danych wejściowych użytkownika i reagowania na zdarzenia użytkownika, niezależnie od wątków wykonywanie innych części aplikacji. Wątku głównego aplikacji (podany w swojej `CWinApp`-klasy pochodnej) jest już utworzona i uruchomiona za Ciebie. W tym temacie opisano kroki niezbędne do tworzenia wątków interfejsu użytkownika.  
@@ -49,13 +49,13 @@ Biblioteka MFC zawiera dwie wersje `AfxBeginThread` za pomocą parametru przeci�
   
 - [RUNTIME_CLASS](../mfc/reference/run-time-object-model-services.md#runtime_class) klasy pochodzące z `CWinThread`.  
   
-- (Opcjonalnie) Żądany priorytet. Wartością domyślną jest normalnym priorytecie. Aby uzyskać więcej informacji na temat dostępnych poziomów priorytetu, zobacz [SetThreadPriority](http://msdn.microsoft.com/library/windows/desktop/ms686277) w zestawie Windows SDK.  
+- (Opcjonalnie) Żądany priorytet. Wartością domyślną jest normalnym priorytecie. Aby uzyskać więcej informacji na temat dostępnych poziomów priorytetu, zobacz [SetThreadPriority](/windows/desktop/api/processthreadsapi/nf-processthreadsapi-setthreadpriority) w zestawie Windows SDK.  
   
 - (Opcjonalnie) Żądany rozmiar stosu dla wątku. Wartość domyślna to taki sam jak rozmiar stosu wątku tworzącego.  
   
 - (Opcjonalnie) CREATE_SUSPENDED, jeśli chcesz, aby wątek był utworzony w stanie wstrzymania. Wartość domyślna jest równa 0 lub wątek uruchamia się normalnie.  
   
-- (Opcjonalnie) Atrybuty pożądanych zabezpieczeń. Wartość domyślna to taki sam dostęp jak wątku nadrzędnego. Aby uzyskać więcej informacji dotyczących formatu informacji o zabezpieczeniach, zobacz [SECURITY_ATTRIBUTES](http://msdn.microsoft.com/library/windows/desktop/aa379560) w zestawie Windows SDK.  
+- (Opcjonalnie) Atrybuty pożądanych zabezpieczeń. Wartość domyślna to taki sam dostęp jak wątku nadrzędnego. Aby uzyskać więcej informacji dotyczących formatu informacji o zabezpieczeniach, zobacz [SECURITY_ATTRIBUTES](https://msdn.microsoft.com/library/windows/desktop/aa379560) w zestawie Windows SDK.  
   
 `AfxBeginThread` wykonuje większość pracy za Ciebie. Tworzy nowy obiekt klasy, inicjuje go przy użyciu informacji podasz i wywołania [CWinThread::CreateThread](../mfc/reference/cwinthread-class.md#createthread) można rozpocząć wykonywanie wątku. Kontrole są wprowadzane w trakcie trwania procedury upewnij się, że wszystkie obiekty są zdelokowane poprawnie w przypadku dowolnej części tworzenia nie.  
   

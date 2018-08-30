@@ -59,12 +59,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a7b19cff6e4f90485946521824bb0fd2f6358372
-ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
+ms.openlocfilehash: a953f94e48f3093b1c61a1567252e04d98c1beb8
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37885239"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43208546"
 ---
 # <a name="cpatht-class"></a>Klasa CPathT
 Ta klasa reprezentuje ścieżkę.  
@@ -176,7 +176,7 @@ void AddBackslash();
 ```  
   
 ### <a name="remarks"></a>Uwagi  
- Aby uzyskać więcej informacji, zobacz [PathAddBackSlash](http://msdn.microsoft.com/library/windows/desktop/bb773561).  
+ Aby uzyskać więcej informacji, zobacz [PathAddBackSlash](/windows/desktop/api/shlwapi/nf-shlwapi-pathaddbackslasha).  
   
 ##  <a name="addextension"></a>  CPathT::AddExtension  
  Wywołaj tę metodę, aby dodać rozszerzenie pliku do ścieżki.  
@@ -193,7 +193,7 @@ BOOL AddExtension(PCXSTR pszExtension);
  Zwraca wartość TRUE w przypadku powodzenia, wartość FALSE w przypadku niepowodzenia.  
   
 ### <a name="remarks"></a>Uwagi  
- Aby uzyskać więcej informacji, zobacz [PathAddExtension](http://msdn.microsoft.com/library/windows/desktop/bb773563).  
+ Aby uzyskać więcej informacji, zobacz [PathAddExtension](/windows/desktop/api/shlwapi/nf-shlwapi-pathaddextensiona).  
   
 ##  <a name="append"></a>  CPathT::Append  
  Wywołaj tę metodę, aby dołączyć ciąg w bieżącej ścieżce.  
@@ -210,7 +210,7 @@ BOOL Append(PCXSTR pszMore);
  Zwraca wartość TRUE w przypadku powodzenia, wartość FALSE w przypadku niepowodzenia.  
   
 ### <a name="remarks"></a>Uwagi  
- Aby uzyskać więcej informacji, zobacz [PathAppend](http://msdn.microsoft.com/library/windows/desktop/bb773565).  
+ Aby uzyskać więcej informacji, zobacz [PathAppend](/windows/desktop/api/shlwapi/nf-shlwapi-pathappenda).  
   
 ##  <a name="buildroot"></a>  CPathT::BuildRoot  
  Wywołaj tę metodę, aby utworzyć ścieżkę katalogu głównego z liczbą danego dysku.  
@@ -224,7 +224,7 @@ void BuildRoot(int iDrive);
  Liczba dysków (0 oznacza A:, to 1, b i tak dalej).  
   
 ### <a name="remarks"></a>Uwagi  
- Aby uzyskać więcej informacji, zobacz [PathBuildRoot](http://msdn.microsoft.com/library/windows/desktop/bb773567).  
+ Aby uzyskać więcej informacji, zobacz [PathBuildRoot](/windows/desktop/api/shlwapi/nf-shlwapi-pathbuildroota).  
   
 ##  <a name="canonicalize"></a>  CPathT::Canonicalize  
  Wywołaj tę metodę, aby przekonwertować ścieżkę do postaci kanonicznej.  
@@ -234,7 +234,7 @@ void Canonicalize();
 ```  
   
 ### <a name="remarks"></a>Uwagi  
- Aby uzyskać więcej informacji, zobacz [PathCanonicalize](http://msdn.microsoft.com/library/windows/desktop/bb773569).  
+ Aby uzyskać więcej informacji, zobacz [PathCanonicalize](/windows/desktop/api/shlwapi/nf-shlwapi-pathcanonicalizea).  
   
 ##  <a name="combine"></a>  CPathT::Combine  
  Wywołaj tę metodę, aby złączyć ciąg reprezentujący nazwę katalogu i ciąg reprezentujący nazwę ścieżki pliku w jednej ścieżki.  
@@ -251,7 +251,7 @@ void Combine(PCXSTR pszDir, PCXSTR  pszFile);
  Ścieżka do pliku.  
   
 ### <a name="remarks"></a>Uwagi  
- Aby uzyskać więcej informacji, zobacz [PathCombine](http://msdn.microsoft.com/library/windows/desktop/bb773571).  
+ Aby uzyskać więcej informacji, zobacz [PathCombine](/windows/desktop/api/shlwapi/nf-shlwapi-pathcombinea).  
   
 ##  <a name="commonprefix"></a>  CPathT::CommonPrefix  
  Wywołaj tę metodę w celu określenia, czy podana ścieżka udostępni Wspólny prefiks bieżącej ścieżce.  
@@ -268,7 +268,7 @@ CPathT<StringType> CommonPrefix(PCXSTR pszOther);
  Zwraca Wspólny prefiks.  
   
 ### <a name="remarks"></a>Uwagi  
- Prefiks, który jest jednym z następujących typów: "C:\\\\",".","..",".. \\\\". Aby uzyskać więcej informacji, zobacz [PathCommonPrefix](http://msdn.microsoft.com/library/windows/desktop/bb773574).  
+ Prefiks, który jest jednym z następujących typów: "C:\\\\",".","..",".. \\\\". Aby uzyskać więcej informacji, zobacz [PathCommonPrefix](/windows/desktop/api/shlwapi/nf-shlwapi-pathcommonprefixa).  
   
 ##  <a name="compactpath"></a>  CPathT::CompactPath  
  Wywołaj tę metodę, aby obciąć ścieżki pliku w celu dopasowania szerokość piksela podanego przez zamianę składników ścieżki elipsy.  
@@ -288,7 +288,7 @@ BOOL CompactPath(HDC hDC, UINT nWidth);
  Zwraca wartość TRUE w przypadku powodzenia, wartość FALSE w przypadku niepowodzenia.  
   
 ### <a name="remarks"></a>Uwagi  
- Aby uzyskać więcej informacji, zobacz [PathCompactPath](http://msdn.microsoft.com/library/windows/desktop/bb773575).  
+ Aby uzyskać więcej informacji, zobacz [PathCompactPath](/windows/desktop/api/shlwapi/nf-shlwapi-pathcompactpatha).  
   
 ##  <a name="compactpathex"></a>  CPathT::CompactPathEx  
  Wywołaj tę metodę, aby obciąć mieścić się w danej liczby znaków, zastępując składników ścieżki wielokropek ścieżki pliku.  
@@ -308,7 +308,7 @@ BOOL CompactPathEx(UINT nMaxChars, DWORD dwFlags = 0);
  Zwraca wartość TRUE w przypadku powodzenia, wartość FALSE w przypadku niepowodzenia.  
   
 ### <a name="remarks"></a>Uwagi  
- Aby uzyskać więcej informacji, zobacz [PathCompactPathEx](http://msdn.microsoft.com/library/windows/desktop/bb773578).  
+ Aby uzyskać więcej informacji, zobacz [PathCompactPathEx](/windows/desktop/api/shlwapi/nf-shlwapi-pathcompactpathexa).  
   
 ##  <a name="cpatht"></a>  CPathT::CPathT  
  Konstruktor.  
@@ -337,7 +337,7 @@ BOOL FileExists() const;
  Zwraca wartość TRUE, jeśli plik istnieje, wartość FALSE w przeciwnym razie.  
   
 ### <a name="remarks"></a>Uwagi  
- Aby uzyskać więcej informacji, zobacz [PathFileExists](http://msdn.microsoft.com/library/windows/desktop/bb773584).  
+ Aby uzyskać więcej informacji, zobacz [PathFileExists](/windows/desktop/api/shlwapi/nf-shlwapi-pathfileexistsa).  
   
 ##  <a name="findextension"></a>  CPathT::FindExtension  
  Wywołaj tę metodę, aby znaleźć położenie rozszerzenie pliku w ścieżce.  
@@ -350,7 +350,7 @@ int FindExtension() const;
  Zwraca pozycję "." poprzedzających rozszerzenia. Jeśli rozszerzenie nie zostanie znaleziona, zwraca -1.  
   
 ### <a name="remarks"></a>Uwagi  
- Aby uzyskać więcej informacji, zobacz [PathFindExtension](http://msdn.microsoft.com/library/windows/desktop/bb773587).  
+ Aby uzyskać więcej informacji, zobacz [PathFindExtension](/windows/desktop/api/shlwapi/nf-shlwapi-pathfindextensiona).  
   
 ##  <a name="findfilename"></a>  CPathT::FindFileName  
  Wywołaj tę metodę, aby znaleźć położenie nazwę pliku w ścieżce.  
@@ -363,7 +363,7 @@ int FindFileName() const;
  Zwraca pozycję nazwę pliku. Jeśli nazwa pliku nie zostanie znaleziona, zwraca -1.  
   
 ### <a name="remarks"></a>Uwagi  
- Aby uzyskać więcej informacji, zobacz [PathFindFileName](http://msdn.microsoft.com/library/windows/desktop/bb773589).  
+ Aby uzyskać więcej informacji, zobacz [PathFindFileName](/windows/desktop/api/shlwapi/nf-shlwapi-pathfindfilenamea).  
   
 ##  <a name="getdrivenumber"></a>  CPathT::GetDriveNumber  
  Wywołaj tę metodę, aby wyszukać ścieżkę do litery dysku w zakresie od "A" do "Z" i zwróć odpowiedni numer dysku.  
@@ -376,7 +376,7 @@ int GetDriveNumber() const;
  Zwraca liczbę dysków jako liczba całkowita z zakresu od 0 do 25 (odpowiadający "A" do "Z") jeżeli ścieżka zawiera literę dysku lub wartość -1 w przeciwnym razie.  
   
 ### <a name="remarks"></a>Uwagi  
- Aby uzyskać więcej informacji, zobacz [PathGetDriveNumber](http://msdn.microsoft.com/library/windows/desktop/bb773612).  
+ Aby uzyskać więcej informacji, zobacz [PathGetDriveNumber](/windows/desktop/api/shlwapi/nf-shlwapi-pathgetdrivenumbera).  
   
 ##  <a name="getextension"></a>  CPathT::GetExtension  
  Wywołaj tę metodę, aby pobrać rozszerzenie pliku ze ścieżki.  
@@ -399,7 +399,7 @@ BOOL IsDirectory() const;
  Zwraca wartość niezerową (16), jeśli ścieżka jest katalogiem, wartość FALSE w przeciwnym razie.  
   
 ### <a name="remarks"></a>Uwagi  
- Aby uzyskać więcej informacji, zobacz [PathIsDirectory](http://msdn.microsoft.com/library/windows/desktop/bb773621).  
+ Aby uzyskać więcej informacji, zobacz [PathIsDirectory](/windows/desktop/api/shlwapi/nf-shlwapi-pathisdirectorya).  
   
 ##  <a name="isfilespec"></a>  CPathT::IsFileSpec  
  Wywołanie tej metody, aby wyszukać ścieżkę znaków rozdzielający ścieżki (na przykład, ":" lub "\\"). W przypadku żadne rozdzielający ścieżki znaki nie istnieje ścieżka uważany jest za ścieżką specyfikacji pliku.  
@@ -412,7 +412,7 @@ BOOL IsFileSpec() const;
  Zwraca wartość TRUE, jeśli istnieją żadne rozdzielający ścieżki znaki w ścieżce, lub FAŁSZ, jeśli istnieją rozdzielający ścieżki znaków.  
   
 ### <a name="remarks"></a>Uwagi  
- Aby uzyskać więcej informacji, zobacz [PathIsFileSpec](http://msdn.microsoft.com/library/windows/desktop/bb773627).  
+ Aby uzyskać więcej informacji, zobacz [PathIsFileSpec](/windows/desktop/api/shlwapi/nf-shlwapi-pathisfilespeca).  
   
 ##  <a name="isprefix"></a>  CPathT::IsPrefix  
  Wywołaj tę metodę, aby określić, czy ścieżka zawiera prawidłowy prefiks przekazany typ *pszPrefix*.  
@@ -429,7 +429,7 @@ BOOL IsPrefix(PCXSTR pszPrefix) const;
  Zwraca wartość PRAWDA, jeśli ścieżka zawiera prefiks lub wartość FALSE w przeciwnym razie.  
   
 ### <a name="remarks"></a>Uwagi  
- Aby uzyskać więcej informacji, zobacz [PathIsPrefix](http://msdn.microsoft.com/library/windows/desktop/bb773650).  
+ Aby uzyskać więcej informacji, zobacz [PathIsPrefix](/windows/desktop/api/shlwapi/nf-shlwapi-pathisprefixa).  
   
 ##  <a name="isrelative"></a>  CPathT::IsRelative  
  Wywołaj tę metodę w celu ustalenia, czy ścieżka jest względna.  
@@ -442,7 +442,7 @@ BOOL IsRelative() const;
  Zwraca wartość TRUE, jeśli ścieżka jest względna, lub FAŁSZ, jeśli bezwzględne.  
   
 ### <a name="remarks"></a>Uwagi  
- Aby uzyskać więcej informacji, zobacz [PathIsRelative](http://msdn.microsoft.com/library/windows/desktop/bb773660).  
+ Aby uzyskać więcej informacji, zobacz [PathIsRelative](/windows/desktop/api/shlwapi/nf-shlwapi-pathisrelativea).  
   
 ##  <a name="isroot"></a>  CPathT::IsRoot  
  Wywołaj tę metodę w celu określenia, czy ścieżka katalogu głównego.  
@@ -455,7 +455,7 @@ BOOL IsRoot() const;
  Zwraca wartość PRAWDA, jeśli ścieżka jest główny lub wartość FALSE w przeciwnym razie.  
   
 ### <a name="remarks"></a>Uwagi  
- Aby uzyskać więcej informacji, zobacz [PathIsRoot](http://msdn.microsoft.com/library/windows/desktop/bb773674).  
+ Aby uzyskać więcej informacji, zobacz [PathIsRoot](/windows/desktop/api/shlwapi/nf-shlwapi-pathisroota).  
   
 ##  <a name="issameroot"></a>  CPathT::IsSameRoot  
  Wywołaj tę metodę, aby określić, czy inną ścieżkę ma typowe składnik główny przy użyciu bieżącej ścieżki.  
@@ -472,7 +472,7 @@ BOOL IsSameRoot(PCXSTR pszOther) const;
  Zwraca wartość TRUE, jeśli oba ciągi mają ten sam składnik główny lub wartość FALSE w przeciwnym razie.  
   
 ### <a name="remarks"></a>Uwagi  
- Aby uzyskać więcej informacji, zobacz [PathIsSameRoot](http://msdn.microsoft.com/library/windows/desktop/bb773687).  
+ Aby uzyskać więcej informacji, zobacz [PathIsSameRoot](/windows/desktop/api/shlwapi/nf-shlwapi-pathissameroota).  
   
 ##  <a name="isunc"></a>  CPathT::IsUNC  
  Wywołaj tę metodę w celu ustalenia, czy ścieżka jest prawidłową ścieżkę UNC (universal Konwencja nazewnictwa) dla serwera i udostępniania.  
@@ -485,7 +485,7 @@ BOOL IsUNC() const;
  Zwraca wartość TRUE, jeśli ścieżka jest prawidłowa ścieżka UNC lub wartość FALSE w przeciwnym razie.  
   
 ### <a name="remarks"></a>Uwagi  
- Aby uzyskać więcej informacji, zobacz [PathIsUNC](http://msdn.microsoft.com/library/windows/desktop/bb773712).  
+ Aby uzyskać więcej informacji, zobacz [PathIsUNC](/windows/desktop/api/shlwapi/nf-shlwapi-pathisunca).  
   
 ##  <a name="isuncserver"></a>  CPathT::IsUNCServer  
  Wywołaj tę metodę, aby określić, czy ścieżka jest prawidłową ścieżkę UNC (universal Konwencja nazewnictwa) tylko w przypadku serwera.  
@@ -498,7 +498,7 @@ BOOL IsUNCServer() const;
  Zwraca wartość TRUE, jeśli ciąg jest prawidłową ścieżkę UNC tylko w przypadku serwera (Brak nazwy udziału) lub wartość FALSE w przeciwnym razie.  
   
 ### <a name="remarks"></a>Uwagi  
- Aby uzyskać więcej informacji, zobacz [PathIsUNCServer](http://msdn.microsoft.com/library/windows/desktop/bb773722).  
+ Aby uzyskać więcej informacji, zobacz [PathIsUNCServer](/windows/desktop/api/shlwapi/nf-shlwapi-pathisuncservera).  
   
 ##  <a name="isuncservershare"></a>  CPathT::IsUNCServerShare  
  Wywołaj tę metodę w celu określenia, czy ścieżka jest prawidłowa ścieżka UNC (universal Konwencja nazewnictwa) udziału, \\ \  *serwera*\ *udostępnianie*.  
@@ -511,7 +511,7 @@ BOOL IsUNCServerShare() const;
  Zwraca wartość PRAWDA, jeśli ścieżka znajduje się w formularzu \\ \  *serwera*\ *udostępnianie*, lub FAŁSZ, w przeciwnym razie.  
   
 ### <a name="remarks"></a>Uwagi  
- Aby uzyskać więcej informacji, zobacz [PathIsUNCServerShare](http://msdn.microsoft.com/library/windows/desktop/bb773723).  
+ Aby uzyskać więcej informacji, zobacz [PathIsUNCServerShare](/windows/desktop/api/shlwapi/nf-shlwapi-pathisuncserversharea).  
   
 ##  <a name="m_strpath"></a>  CPathT::m_strPath  
  Ścieżka.  
@@ -534,7 +534,7 @@ BOOL MakePretty();
  W przeciwnym razie zwraca wartość TRUE, jeśli ścieżka została przekonwertowana, lub FAŁSZ.  
   
 ### <a name="remarks"></a>Uwagi  
- Aby uzyskać więcej informacji, zobacz [PathMakePretty](http://msdn.microsoft.com/library/windows/desktop/bb773725).  
+ Aby uzyskać więcej informacji, zobacz [PathMakePretty](/windows/desktop/api/shlwapi/nf-shlwapi-pathmakeprettya).  
   
 ##  <a name="matchspec"></a>  CPathT::MatchSpec  
  Wywołaj tę metodę, aby wyszukać ścieżkę dla ciąg zawierający typ dopasowania symboli wieloznacznych.  
@@ -551,7 +551,7 @@ BOOL MatchSpec(PCXSTR pszSpec) const;
  W przeciwnym razie zwraca wartość TRUE, jeśli ciąg jest zgodny, lub FAŁSZ.  
   
 ### <a name="remarks"></a>Uwagi  
- Aby uzyskać więcej informacji, zobacz [PathMatchSpec](http://msdn.microsoft.com/library/windows/desktop/bb773727).  
+ Aby uzyskać więcej informacji, zobacz [PathMatchSpec](/windows/desktop/api/shlwapi/nf-shlwapi-pathmatchspeca).  
   
 ##  <a name="operator_add_eq"></a>  CPathT::operator +=  
  Ten operator dołącza ciąg do ścieżki.  
@@ -625,7 +625,7 @@ void QuoteSpaces();
 ```  
   
 ### <a name="remarks"></a>Uwagi  
- Aby uzyskać więcej informacji, zobacz [PathQuoteSpaces](http://msdn.microsoft.com/library/windows/desktop/bb773739).  
+ Aby uzyskać więcej informacji, zobacz [PathQuoteSpaces](/windows/desktop/api/shlwapi/nf-shlwapi-pathquotespacesa).  
   
 ##  <a name="relativepathto"></a>  CPathT::RelativePathTo  
  Wywołaj tę metodę, aby utworzyć ścieżkę względną z jednego pliku lub folderu.  
@@ -655,7 +655,7 @@ BOOL RelativePathTo(
  Zwraca wartość TRUE w przypadku powodzenia, wartość FALSE w przypadku niepowodzenia.  
   
 ### <a name="remarks"></a>Uwagi  
- Aby uzyskać więcej informacji, zobacz [PathRelativePathTo](http://msdn.microsoft.com/library/windows/desktop/bb773740).  
+ Aby uzyskać więcej informacji, zobacz [PathRelativePathTo](/windows/desktop/api/shlwapi/nf-shlwapi-pathrelativepathtoa).  
   
 ##  <a name="removeargs"></a>  CPathT::RemoveArgs  
  Wywołaj tę metodę w celu usunięcia żadnych argumentów wiersza polecenia przy użyciu ścieżki.  
@@ -665,7 +665,7 @@ void RemoveArgs();
 ```  
   
 ### <a name="remarks"></a>Uwagi  
- Aby uzyskać więcej informacji, zobacz [PathRemoveArgs](http://msdn.microsoft.com/library/windows/desktop/bb773742).  
+ Aby uzyskać więcej informacji, zobacz [PathRemoveArgs](/windows/desktop/api/shlwapi/nf-shlwapi-pathremoveargsa).  
   
 ##  <a name="removebackslash"></a>  CPathT::RemoveBackslash  
  Wywołaj tę metodę, aby usunąć ukośnik odwrotny na końcu ze ścieżki.  
@@ -675,7 +675,7 @@ void RemoveBackslash();
 ```  
   
 ### <a name="remarks"></a>Uwagi  
- Aby uzyskać więcej informacji, zobacz [PathRemoveBackslash](http://msdn.microsoft.com/library/windows/desktop/bb773743).  
+ Aby uzyskać więcej informacji, zobacz [PathRemoveBackslash](/windows/desktop/api/shlwapi/nf-shlwapi-pathremovebackslasha).  
   
 ##  <a name="removeblanks"></a>  CPathT::RemoveBlanks  
  Wywołaj tę metodę w celu usunięcia wszystkich spacji wiodących i końcowych przy użyciu ścieżki.  
@@ -685,7 +685,7 @@ void RemoveBlanks();
 ```  
   
 ### <a name="remarks"></a>Uwagi  
- Aby uzyskać więcej informacji, zobacz [PathRemoveBlanks](http://msdn.microsoft.com/library/windows/desktop/bb773745).  
+ Aby uzyskać więcej informacji, zobacz [PathRemoveBlanks](/windows/desktop/api/shlwapi/nf-shlwapi-pathremoveblanksa).  
   
 ##  <a name="removeextension"></a>  CPathT::RemoveExtension  
  Wywołaj tę metodę, aby usunąć rozszerzenie pliku ze ścieżki, jeśli taka istnieje.  
@@ -695,7 +695,7 @@ void RemoveExtension();
 ```  
   
 ### <a name="remarks"></a>Uwagi  
- Aby uzyskać więcej informacji, zobacz [PathRemoveExtension](http://msdn.microsoft.com/library/windows/desktop/bb773746).  
+ Aby uzyskać więcej informacji, zobacz [PathRemoveExtension](/windows/desktop/api/shlwapi/nf-shlwapi-pathremoveextensiona).  
   
 ##  <a name="removefilespec"></a>  CPathT::RemoveFileSpec  
  Wywołaj tę metodę, aby usunąć końcowe nazwę pliku i kreski ułamkowej odwróconej ze ścieżki, jeśli je ma.  
@@ -708,7 +708,7 @@ BOOL RemoveFileSpec();
  Zwraca wartość TRUE w przypadku powodzenia, wartość FALSE w przypadku niepowodzenia.  
   
 ### <a name="remarks"></a>Uwagi  
- Aby uzyskać więcej informacji, zobacz [PathRemoveFileSpec](http://msdn.microsoft.com/library/windows/desktop/bb773748).  
+ Aby uzyskać więcej informacji, zobacz [PathRemoveFileSpec](/windows/desktop/api/shlwapi/nf-shlwapi-pathremovefilespeca).  
   
 ##  <a name="renameextension"></a>  CPathT::RenameExtension  
  Wywołaj tę metodę, aby zastąpić nowego rozszerzenia rozszerzenie nazwy pliku w ścieżce. Jeśli nazwa pliku zawiera rozszerzenie, rozszerzenie zostanie dołączony do końca ścieżki.  
@@ -725,7 +725,7 @@ BOOL RenameExtension(PCXSTR pszExtension);
  Zwraca wartość TRUE w przypadku powodzenia, wartość FALSE w przypadku niepowodzenia.  
   
 ### <a name="remarks"></a>Uwagi  
- Aby uzyskać więcej informacji, zobacz [PathRenameExtension](http://msdn.microsoft.com/library/windows/desktop/bb773749).  
+ Aby uzyskać więcej informacji, zobacz [PathRenameExtension](/windows/desktop/api/shlwapi/nf-shlwapi-pathrenameextensiona).  
   
 ##  <a name="skiproot"></a>  CPathT::SkipRoot  
  Wywołaj tę metodę można przeanalizować ścieżki, ignorowanie literę dysku i części ścieżki serwera/udział UNC (universal Konwencja nazewnictwa).  
@@ -738,7 +738,7 @@ int SkipRoot() const;
  Zwraca pozycję początku podrzędną, która następuje po katalogu głównego (literę dysku lub udziale serwera UNC).  
   
 ### <a name="remarks"></a>Uwagi  
- Aby uzyskać więcej informacji, zobacz [PathSkipRoot](http://msdn.microsoft.com/library/windows/desktop/bb773754).  
+ Aby uzyskać więcej informacji, zobacz [PathSkipRoot](/windows/desktop/api/shlwapi/nf-shlwapi-pathskiproota).  
   
 ##  <a name="strippath"></a>  CPathT::StripPath  
  Wywołaj tę metodę, aby usunąć część ścieżki pełną ścieżkę i nazwę pliku.  
@@ -748,7 +748,7 @@ void StripPath();
 ```  
   
 ### <a name="remarks"></a>Uwagi  
- Aby uzyskać więcej informacji, zobacz [PathStripPath](http://msdn.microsoft.com/library/windows/desktop/bb773756).  
+ Aby uzyskać więcej informacji, zobacz [PathStripPath](/windows/desktop/api/shlwapi/nf-shlwapi-pathstrippatha).  
   
 ##  <a name="striptoroot"></a>  CPathT::StripToRoot  
  Wywołaj tę metodę, aby usunąć wszystkie części ścieżki, z wyjątkiem informacji katalogu głównego.  
@@ -761,7 +761,7 @@ BOOL StripToRoot();
  Zwraca wartość TRUE, jeśli prawidłową literę dysku został znaleziony w ścieżce, lub FAŁSZ w przeciwnym razie.  
   
 ### <a name="remarks"></a>Uwagi  
- Aby uzyskać więcej informacji, zobacz [PathStripToRoot](http://msdn.microsoft.com/library/windows/desktop/bb773757).  
+ Aby uzyskać więcej informacji, zobacz [PathStripToRoot](/windows/desktop/api/shlwapi/nf-shlwapi-pathstriptoroota).  
   
 ##  <a name="unquotespaces"></a>  CPathT::UnquoteSpaces  
  Wywołaj tę metodę, aby usunąć znaki cudzysłowu na początku i końca ścieżki.  
@@ -771,7 +771,7 @@ void UnquoteSpaces();
 ```  
   
 ### <a name="remarks"></a>Uwagi  
- Aby uzyskać więcej informacji, zobacz [PathUnquoteSpaces](http://msdn.microsoft.com/library/windows/desktop/bb773763).  
+ Aby uzyskać więcej informacji, zobacz [PathUnquoteSpaces](/windows/desktop/api/shlwapi/nf-shlwapi-pathunquotespacesa).  
   
 ##  <a name="xchar"></a>  CPathT::XCHAR  
  Typ znaku.  

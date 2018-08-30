@@ -18,12 +18,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 0be744b8f703bfdc6487995e4a082e5b4c1561c3
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 648b1084b978e4a7ab38775aefcdc7026fee1243
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42606843"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43206464"
 ---
 # <a name="event--c-component-extensions"></a>event (C++ Component Extensions)
 
@@ -85,7 +85,7 @@ Możesz użyć **+= operatory** i **operator-=** do dodawania i usuwania zdarzen
 
 ### <a name="remarks"></a>Uwagi
 
-Aby uzyskać więcej informacji, zobacz [zdarzenia (C + +/ CX)](http://msdn.microsoft.com/library/windows/apps/hh755799.aspx).
+Aby uzyskać więcej informacji, zobacz [zdarzenia (C + +/ CX)](https://msdn.microsoft.com/library/windows/apps/hh755799.aspx).
 
 Jeśli zamierzasz dodać, a następnie usuń procedurę obsługi zdarzeń, musisz najpierw zapisać struktury EventRegistrationToken, który jest zwracany przez operacji dodawania. Następnie w operacji usuwania, należy użyć zapisanych struktury EventRegistrationToken do identyfikowania programu obsługi zdarzeń do usunięcia.
 

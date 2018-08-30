@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8bed065eb959d959086133a757b7ca3594214719
-ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
+ms.openlocfilehash: a2cc139fa0aa933131e4e19b8efa397e4bddee50
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37883283"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43209231"
 ---
 # <a name="server-registration-global-functions"></a>Funkcje globalne rejestracji serwera
 Te funkcje umożliwiają rejestrowanie i wyrejestrowywanie serwera obiektów na mapie obiektu.  
@@ -113,10 +113,10 @@ ATLINLINE ATLAPI AtlComModuleRegisterClassObjects(
  Wskaźnik do modułu COM.  
   
  *dwClsContext*  
- Określa kontekst, w którym ma być uruchamiane obiektu klasy. Możliwe wartości to CLSCTX_INPROC_SERVER, CLSCTX_INPROC_HANDLER lub CLSCTX_LOCAL_SERVER. Zobacz [CLSCTX](http://msdn.microsoft.com/library/windows/desktop/ms693716) Aby uzyskać więcej informacji.  
+ Określa kontekst, w którym ma być uruchamiane obiektu klasy. Możliwe wartości to CLSCTX_INPROC_SERVER, CLSCTX_INPROC_HANDLER lub CLSCTX_LOCAL_SERVER. Zobacz [CLSCTX](https://msdn.microsoft.com/library/windows/desktop/ms693716) Aby uzyskać więcej informacji.  
   
  *Flagidw*  
- Określa typy połączeń do obiektu klasy. Możliwe wartości to REGCLS_SINGLEUSE, REGCLS_MULTIPLEUSE lub REGCLS_MULTI_SEPARATE. Zobacz [REGCLS](http://msdn.microsoft.com/library/windows/desktop/ms679697) Aby uzyskać więcej informacji.  
+ Określa typy połączeń do obiektu klasy. Możliwe wartości to REGCLS_SINGLEUSE, REGCLS_MULTIPLEUSE lub REGCLS_MULTI_SEPARATE. Zobacz [REGCLS](/windows/desktop/api/combaseapi/ne-combaseapi-tagregcls) Aby uzyskać więcej informacji.  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Zwraca wartość S_OK w przypadku powodzenia lub błędu HRESULT w przypadku niepowodzenia.  

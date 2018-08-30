@@ -41,15 +41,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f7692f60731c47f295630885c77e0e61e8bb5aac
-ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
+ms.openlocfilehash: 7377a6b47df76190c4dc97b916590e53c7df8f9c
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37884753"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43210114"
 ---
 # <a name="ipropertypageimpl-class"></a>Klasa IPropertyPageImpl
-Ta klasa implementuje `IUnknown` i udostępnia domyślną implementację elementu [IPropertyPage](http://msdn.microsoft.com/library/windows/desktop/ms691246) interfejsu.  
+Ta klasa implementuje `IUnknown` i udostępnia domyślną implementację elementu [IPropertyPage](/windows/desktop/api/ocidl/nn-ocidl-ipropertypage) interfejsu.  
   
 > [!IMPORTANT]
 >  Ta klasa i jej elementów członkowskich nie można użyć w aplikacjach korzystających ze środowiska wykonawczego Windows.  
@@ -105,7 +105,7 @@ class IPropertyPageImpl
 |[IPropertyPageImpl::m_size](#m_size)|Przechowuje wysokość i szerokość okna dialogowego strony właściwości, w pikselach.|  
   
 ## <a name="remarks"></a>Uwagi  
- [IPropertyPage](http://msdn.microsoft.com/library/windows/desktop/ms691246) interfejs umożliwia zarządzanie określoną stronę właściwości w arkuszu właściwości obiektu. Klasa `IPropertyPageImpl` udostępnia domyślną implementację tego interfejsu i implementuje `IUnknown` , wysyłając informacje o do zrzutu kompilacji urządzenia podczas debugowania.  
+ [IPropertyPage](/windows/desktop/api/ocidl/nn-ocidl-ipropertypage) interfejs umożliwia zarządzanie określoną stronę właściwości w arkuszu właściwości obiektu. Klasa `IPropertyPageImpl` udostępnia domyślną implementację tego interfejsu i implementuje `IUnknown` , wysyłając informacje o do zrzutu kompilacji urządzenia podczas debugowania.  
   
  **Powiązane artykuły** [ALT — samouczek](../../atl/active-template-library-atl-tutorial.md), [Tworzenie projektu ATL](../../atl/reference/creating-an-atl-project.md)  
   
@@ -130,7 +130,7 @@ HRESULT Activate(
 ### <a name="remarks"></a>Uwagi  
  Domyślnie okno dialogowe zawsze jest niemodalne, bez względu na wartość *bModal* parametru.  
   
- Zobacz [IPropertyPage::Activate](http://msdn.microsoft.com/library/windows/desktop/ms682250) w Windows SDK.  
+ Zobacz [IPropertyPage::Activate](/windows/desktop/api/ocidl/nf-ocidl-ipropertypage-activate) w Windows SDK.  
   
 ##  <a name="apply"></a>  IPropertyPageImpl::Apply  
  Dotyczy bieżące wartości strony właściwości określone przez obiekty źródłowe `SetObjects`.  
@@ -143,7 +143,7 @@ HRESULT Apply();
  Zwraca wartość S_OK.  
   
 ### <a name="remarks"></a>Uwagi  
- Zobacz [IPropertyPage::Apply](http://msdn.microsoft.com/library/windows/desktop/ms691284) w Windows SDK.  
+ Zobacz [IPropertyPage::Apply](/windows/desktop/api/ocidl/nf-ocidl-ipropertypage-apply) w Windows SDK.  
   
 ##  <a name="deactivate"></a>  IPropertyPageImpl::Deactivate  
  Niszczy okno dialogowe, utworzony za pomocą [Aktywuj](#activate).  
@@ -153,7 +153,7 @@ HRESULT Deactivate();
 ```  
   
 ### <a name="remarks"></a>Uwagi  
- Zobacz [IPropertyPage::Deactivate](http://msdn.microsoft.com/library/windows/desktop/ms682504) w Windows SDK.  
+ Zobacz [IPropertyPage::Deactivate](/windows/desktop/api/ocidl/nf-ocidl-ipropertypage-deactivate) w Windows SDK.  
   
 ##  <a name="getpageinfo"></a>  IPropertyPageImpl::GetPageInfo  
  Wypełnia *pPageInfo* strukturę z informacjami zawartymi w składowych danych.  
@@ -165,7 +165,7 @@ HRESULT GetPageInfo(PROPPAGEINFO* pPageInfo);
 ### <a name="remarks"></a>Uwagi  
  `GetPageInfo` ładuje zasoby ciągu skojarzone z [m_dwDocString](#m_dwdocstring), [m_dwHelpFile](#m_dwhelpfile), i [m_dwTitle](#m_dwtitle).  
   
- Zobacz [IPropertyPage::GetPageInfo](http://msdn.microsoft.com/library/windows/desktop/ms680714) w Windows SDK.  
+ Zobacz [IPropertyPage::GetPageInfo](/windows/desktop/api/ocidl/nf-ocidl-ipropertypage-getpageinfo) w Windows SDK.  
   
 ##  <a name="help"></a>  IPropertyPageImpl::Help  
  Wywołuje Pomoc Windows dla strony właściwości.  
@@ -175,7 +175,7 @@ HRESULT Help(PROPPAGEINFO* pPageInfo);
 ```  
   
 ### <a name="remarks"></a>Uwagi  
- Zobacz [IPropertyPage::Help](http://msdn.microsoft.com/library/windows/desktop/ms691504) w Windows SDK.  
+ Zobacz [IPropertyPage::Help](/windows/desktop/api/ocidl/nf-ocidl-ipropertypage-help) w Windows SDK.  
   
 ##  <a name="ipropertypageimpl"></a>  IPropertyPageImpl::IPropertyPageImpl  
  Konstruktor.  
@@ -240,7 +240,7 @@ UINT m_dwTitle;
 ```  
   
 ##  <a name="m_ppagesite"></a>  IPropertyPageImpl::m_pPageSite  
- Wskazuje [IPropertyPageSite](http://msdn.microsoft.com/library/windows/desktop/ms690583) interfejsu komunikuje za pomocą którego ramka właściwości na stronie właściwości.  
+ Wskazuje [IPropertyPageSite](/windows/desktop/api/ocidl/nn-ocidl-ipropertypagesite) interfejsu komunikuje za pomocą którego ramka właściwości na stronie właściwości.  
   
 ```
 IPropertyPageSite* m_pPageSite;
@@ -268,7 +268,7 @@ HRESULT Move(LPCRECT pRect);
 ```  
   
 ### <a name="remarks"></a>Uwagi  
- Zobacz [IPropertyPage::Move](http://msdn.microsoft.com/library/windows/desktop/ms680118) w Windows SDK.  
+ Zobacz [IPropertyPage::Move](/windows/desktop/api/ocidl/nf-ocidl-ipropertypage-move) w Windows SDK.  
   
 ##  <a name="setdirty"></a>  IPropertyPageImpl::SetDirty  
  Na stronie właściwości Stan zmienionego lub bez zmian, w zależności od wartości flagi *bDirty*.  
@@ -292,17 +292,17 @@ HRESULT SetObjects(ULONG nObjects, IUnknown** ppUnk);
 ```  
   
 ### <a name="remarks"></a>Uwagi  
- Zobacz [IPropertyPage::SetObjects](http://msdn.microsoft.com/library/windows/desktop/ms678529) w Windows SDK.  
+ Zobacz [IPropertyPage::SetObjects](/windows/desktop/api/ocidl/nf-ocidl-ipropertypage-setobjects) w Windows SDK.  
   
 ##  <a name="setpagesite"></a>  IPropertyPageImpl::SetPageSite  
- Miejsce na stronie właściwości, za pomocą [IPropertyPageSite](http://msdn.microsoft.com/library/windows/desktop/ms690583) wskaźnika, za pomocą którego strony właściwości komunikuje się z ramka właściwości.  
+ Miejsce na stronie właściwości, za pomocą [IPropertyPageSite](/windows/desktop/api/ocidl/nn-ocidl-ipropertypagesite) wskaźnika, za pomocą którego strony właściwości komunikuje się z ramka właściwości.  
   
 ```
 HRESULT SetPageSite(IPropertyPageSite* pPageSite);
 ```  
   
 ### <a name="remarks"></a>Uwagi  
- Zobacz [IPropertyPage::SetPageSite](http://msdn.microsoft.com/library/windows/desktop/ms690413) w Windows SDK.  
+ Zobacz [IPropertyPage::SetPageSite](/windows/desktop/api/ocidl/nf-ocidl-ipropertypage-setpagesite) w Windows SDK.  
   
 ##  <a name="show"></a>  IPropertyPageImpl::Show  
  Sprawia, że okno dialogowe strony właściwości widoczny lub niewidoczny.  
@@ -312,7 +312,7 @@ HRESULT Show(UINT nCmdShow);
 ```  
   
 ### <a name="remarks"></a>Uwagi  
- Zobacz [IPropertyPage::Show](http://msdn.microsoft.com/library/windows/desktop/ms694467) w Windows SDK.  
+ Zobacz [IPropertyPage::Show](/windows/desktop/api/ocidl/nf-ocidl-ipropertypage-show) w Windows SDK.  
   
 ##  <a name="translateaccelerator"></a>  IPropertyPageImpl::TranslateAccelerator  
  Przetwarza naciśnięcia klawisza określone w `pMsg`.  
@@ -322,7 +322,7 @@ HRESULT TranslateAccelerator(MSG* pMsg);
 ```  
   
 ### <a name="remarks"></a>Uwagi  
- Zobacz [IPropertyPage::TranslateAccelerator](http://msdn.microsoft.com/library/windows/desktop/ms686603) w Windows SDK.  
+ Zobacz [IPropertyPage::TranslateAccelerator](/windows/desktop/api/ocidl/nf-ocidl-ipropertypage-translateaccelerator) w Windows SDK.  
   
 ## <a name="see-also"></a>Zobacz też  
  [Klasa IPropertyPage2Impl](../../atl/reference/ipropertypage2impl-class.md)   

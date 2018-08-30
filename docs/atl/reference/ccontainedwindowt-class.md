@@ -32,12 +32,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5e7e77238478e32fd5b45f96cdd8a86c2205eef7
-ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
+ms.openlocfilehash: 94468f2499a349847f62ed65a03e88cf776536ce
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37882848"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43207199"
 ---
 # <a name="ccontainedwindowt-class"></a>Klasa CContainedWindowT
 Ta klasa implementuje okno znajdujących się w innym obiekcie.  
@@ -115,7 +115,7 @@ class CContainedWindowT : public TBase
 |Tworzenie formantów|[ALT — samouczek](../../atl/active-template-library-atl-tutorial.md)|  
 |Korzystanie z systemu windows w ATL|[Klasy okien ATL](../../atl/atl-window-classes.md)|  
 |Kreator projektu ATL|[Tworzenie projektu ATL](../../atl/reference/creating-an-atl-project.md)|  
-|Windows|[Windows](http://msdn.microsoft.com/library/windows/desktop/ms632595) i kolejnych tematów w zestawie Windows SDK|  
+|Windows|[Windows](https://msdn.microsoft.com/library/windows/desktop/ms632595) i kolejnych tematów w zestawie Windows SDK|  
   
 ## <a name="inheritance-hierarchy"></a>Hierarchia dziedziczenia  
  `TBase`  
@@ -214,22 +214,22 @@ HWND Create(
  [in] Dojście do okna nadrzędnego lub właściciela.  
   
  *Rect*  
- [in] A [Prostokąt](http://msdn.microsoft.com/library/windows/desktop/dd162897) Struktura określająca położenie okna. `RECT` Mogą być przekazywane przez wskaźnik lub przez odwołanie.  
+ [in] A [Prostokąt](https://msdn.microsoft.com/library/windows/desktop/dd162897) Struktura określająca położenie okna. `RECT` Mogą być przekazywane przez wskaźnik lub przez odwołanie.  
   
  *szWindowName*  
  [in] Określa nazwę okna. Wartością domyślną jest NULL.  
   
  *dwStyle*  
- [in] Styl okna. Wartość domyślna to WS_CHILD &#124; WS_VISIBLE. Aby uzyskać listę możliwych wartości, zobacz [CreateWindow](http://msdn.microsoft.com/library/windows/desktop/ms632679) w zestawie Windows SDK.  
+ [in] Styl okna. Wartość domyślna to WS_CHILD &#124; WS_VISIBLE. Aby uzyskać listę możliwych wartości, zobacz [CreateWindow](https://msdn.microsoft.com/library/windows/desktop/ms632679) w zestawie Windows SDK.  
   
  *dwExStyle*  
- [in] Styl okna rozszerzonej. Wartość domyślna to 0, co oznacza nie rozszerzonego stylu. Aby uzyskać listę możliwych wartości, zobacz [elementu CreateWindowEx](http://msdn.microsoft.com/library/windows/desktop/ms632680) w zestawie Windows SDK.  
+ [in] Styl okna rozszerzonej. Wartość domyślna to 0, co oznacza nie rozszerzonego stylu. Aby uzyskać listę możliwych wartości, zobacz [elementu CreateWindowEx](https://msdn.microsoft.com/library/windows/desktop/ms632680) w zestawie Windows SDK.  
   
  *MenuOrID*  
  [in] Dla okna podrzędnego identyfikator okna. Aby uzyskać oknem najwyższego poziomu uchwyt menu dla okna. Wartość domyślna to **0U**.  
   
  *lpCreateParam*  
- [in] Wskaźnik do danych tworzenie okien. Aby uzyskać pełny opis, zobacz opis ostatni parametr do [elementu CreateWindowEx](http://msdn.microsoft.com/library/windows/desktop/ms632680).  
+ [in] Wskaźnik do danych tworzenie okien. Aby uzyskać pełny opis, zobacz opis ostatni parametr do [elementu CreateWindowEx](https://msdn.microsoft.com/library/windows/desktop/ms632680).  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Jeśli to się powiedzie, uchwyt do nowo utworzonego okna; w przeciwnym razie wartość NULL.  
@@ -268,7 +268,7 @@ LRESULT DefWindowProc(
  Wynik przetwarzania wiadomości.  
   
 ### <a name="remarks"></a>Uwagi  
- Domyślnie `DefWindowProc` wywołania [CallWindowProc](http://msdn.microsoft.com/library/windows/desktop/ms633571) Win32/funkcja do wysyłania informacji wiadomości do procedury okna, określony w [m_pfnSuperWindowProc](#m_pfnsuperwindowproc).  
+ Domyślnie `DefWindowProc` wywołania [CallWindowProc](https://msdn.microsoft.com/library/windows/desktop/ms633571) Win32/funkcja do wysyłania informacji wiadomości do procedury okna, określony w [m_pfnSuperWindowProc](#m_pfnsuperwindowproc).  
   
 ##  <a name="getcurrentmessage"></a>  CContainedWindowT::GetCurrentMessage  
  Zwraca bieżący komunikat (`m_pCurrentMsg`).  

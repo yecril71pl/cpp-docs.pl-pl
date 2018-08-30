@@ -1,5 +1,5 @@
 ---
-title: _Rtc_seterrorfuncw — | Dokumentacja firmy Microsoft
+title: _RTC_SetErrorFuncW | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -35,12 +35,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cf610316c504e61d56556a20797f55d2906bca27
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: ea9d028454c408492378c345fb6d6c6d9dfc23cb
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32406917"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43199594"
 ---
 # <a name="rtcseterrorfuncw"></a>_RTC_SetErrorFuncW
 
@@ -56,42 +56,55 @@ _RTC_error_fnW _RTC_SetErrorFuncW(
 
 ### <a name="parameters"></a>Parametry
 
-*Funkcja*<br/>
+*— Funkcja*<br/>
 Adres funkcji, która będzie obsługiwać sprawdzanie błędów czasu wykonywania.
 
 ## <a name="return-value"></a>Wartość zwracana
 
-Funkcja wcześniej zdefiniowanego błąd; lub **NULL** Jeśli żadna funkcja uprzednio zdefiniowany.
+Funkcję wcześniej zdefiniowaną błędu; lub **NULL** Jeśli nie ma zdefiniowanej wcześniej funkcji.
 
 ## <a name="remarks"></a>Uwagi
 
-Nowy kod, używana będzie tylko **_rtc_seterrorfuncw —**. **_Rtc_seterrorfunc —** jest dostępny tylko w bibliotece dla zgodności z poprzednimi wersjami.
+W nowym kodzie, używana będzie tylko **_RTC_SetErrorFuncW**. **_RTC_SetErrorFunc** jest dostępny tylko w bibliotece zgodności z poprzednimi wersjami.
 
-**_Rtc_seterrorfuncw —** wywołania zwrotnego ma zastosowanie tylko do składnika, który został połączony, ale nie globalnie.
+**_RTC_SetErrorFuncW** wywołania zwrotnego, który ma zastosowanie tylko do składnika, który był połączony, ale nie globalny.
 
-Upewnij się, że adres, który jest przekazywany do **_rtc_seterrorfuncw —** jest to, że prawidłowy błąd funkcji obsługi.
+Upewnij się, że adres, który jest przekazywany do **_RTC_SetErrorFuncW** jest fakt, że prawidłowy funkcji obsługi błędu.
 
-Jeśli błąd został przypisany typ-1 za pomocą [_rtc_seterrortype —](rtc-seterrortype.md), nie jest wywoływana funkcja obsługi błędów.
+Jeśli błąd został przypisany typ -1 za pomocą [_RTC_SetErrorType](rtc-seterrortype.md), nie zostanie wywołana funkcja obsługi błędów.
 
-Przed wywołaniem tej funkcji, należy najpierw wywołać jednej z funkcji inicjowania sprawdzanie błędów czasu wykonywania. Aby uzyskać więcej informacji, zobacz [przy użyciu sprawdza bez C Run-Time biblioteki wykonawczej](/visualstudio/debugger/using-run-time-checks-without-the-c-run-time-library).
+Przed wywołaniem tej funkcji, najpierw musisz wywołać jedną z funkcji inicjowania sprawdzanie błędów czasu wykonywania. Aby uzyskać więcej informacji, zobacz [przy użyciu biblioteki czasu wykonywania sprawdza, czy bez C Run-Time](/visualstudio/debugger/using-run-time-checks-without-the-c-run-time-library).
 
-**_RTC_error_fnW** jest zdefiniowane w następujący sposób:
+**_RTC_error_fnW** jest zdefiniowana w następujący sposób:
 
-> **int — TypeDef (__cdecl \*_RTC_error_fnW) (int** *errorType* **, const wchar_t \***  *filename* **, int***numer wiersza* **, const wchar_t \***  *moduleName* **, const wchar_t \***  *format* **,...);** 
+```cpp
+typedef int (__cdecl * _RTC_error_fnW)(
+    int errorType,
+    const wchar_t * filename,
+    int linenumber,
+    const wchar_t * moduleName,
+    const wchar_t * format,
+    ... );
+```
 
 gdzie:
 
-*errorType* typ błędu, który jest określony przez [_rtc_seterrortype —](rtc-seterrortype.md).
+*ErrorType*<br/>
+Typ błędu, który jest określony przez [_RTC_SetErrorType](rtc-seterrortype.md).
 
-*Nazwa pliku* pliku źródłowego, w którym wystąpił błąd, lub wartość null, jeśli nie są dostępne żadne informacje debugowania.
+*Nazwa pliku*<br/>
+Plik źródłowy, w którym wystąpił błąd, lub wartość null, jeśli są dostępne żadne informacje debugowania.
 
-*numer wiersza* linię w *filename* którym wystąpił błąd lub 0, jeśli nie są dostępne żadne informacje debugowania.
+*numer wiersza*<br/>
+Wiersz w *filename* moment wystąpienia awarii lub 0, jeśli są dostępne żadne informacje debugowania.
 
-*Nazwa modułu* Biblioteka DLL lub nazwę pliku wykonywalnego, w którym wystąpił błąd.
+*Nazwa modułu*<br/>
+Plik DLL lub nazwą pliku wykonywalnego, w którym wystąpił błąd.
 
-*Format* printf styl ciąg wyświetlany komunikat o błędzie, korzystając z pozostałych parametrów. Pierwszy argument VA_ARGLIST jest kod błędu RTC, który wystąpił.
+*Format*<br/>
+ciąg stylu printf wyświetlany komunikat o błędzie, za pomocą pozostałych parametrów. Pierwszy argument VA_ARGLIST jest numer błędu RTC, który wystąpił.
 
-Na przykład, który przedstawia sposób użycia **_RTC_error_fnW**, zobacz [dostosowywania sprawdza Run-Time natywnego](/visualstudio/debugger/native-run-time-checks-customization).
+Aby uzyskać przykład, w którym pokazano, jak **_RTC_error_fnW**, zobacz [natywnego środowiska wykonawczego sprawdza dostosowywania](/visualstudio/debugger/native-run-time-checks-customization).
 
 ## <a name="requirements"></a>Wymagania
 
@@ -103,7 +116,7 @@ Aby uzyskać więcej informacji, zobacz [zgodności](../../c-runtime-library/com
 
 ## <a name="libraries"></a>Biblioteki
 
-Wszystkie wersje [biblioteki wykonawcze języka C](../../c-runtime-library/crt-library-features.md).
+Wszystkie wersje [biblioteki wykonawczej C](../../c-runtime-library/crt-library-features.md).
 
 ## <a name="see-also"></a>Zobacz także
 

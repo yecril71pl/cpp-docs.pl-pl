@@ -19,12 +19,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0f945766283fa6e58b1eb3430cc780b1ae136e9f
-ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
+ms.openlocfilehash: b9853cbcecd691f0ea16358259c8a0ac7b213433
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37884740"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43211190"
 ---
 # <a name="umenuorid-class"></a>Klasa _U_MENUorID
 Ta klasa udostępnia otokę dla `CreateWindow` i `CreateWindowEx`.  
@@ -55,7 +55,7 @@ class _U_MENUorID
 ## <a name="remarks"></a>Uwagi  
  Ta klasa adaptera argument umożliwia identyfikatorów (UINTs) lub menu dojścia (HMENUs), który zostanie przekazany do funkcji bez konieczności jawnego rzutowania przez obiekt wywołujący.  
   
- Ta klasa jest przeznaczona dla implementacji otoki do interfejsu API Windows, szczególnie [CreateWindow](http://msdn.microsoft.com/library/windows/desktop/ms632679) i [elementu CreateWindowEx](http://msdn.microsoft.com/library/windows/desktop/ms632680) funkcje, które akceptują argument HMENU, które mogą być okna podrzędnego Identyfikator (UINT) zamiast uchwyt menu. Na przykład zostanie wyświetlony jako parametr do tej klasy w użyciu [CWindowImpl::Create](cwindowimpl-class.md#create).  
+ Ta klasa jest przeznaczona dla implementacji otoki do interfejsu API Windows, szczególnie [CreateWindow](https://msdn.microsoft.com/library/windows/desktop/ms632679) i [elementu CreateWindowEx](https://msdn.microsoft.com/library/windows/desktop/ms632680) funkcje, które akceptują argument HMENU, które mogą być okna podrzędnego Identyfikator (UINT) zamiast uchwyt menu. Na przykład zostanie wyświetlony jako parametr do tej klasy w użyciu [CWindowImpl::Create](cwindowimpl-class.md#create).  
 
   
  Klasa definiuje dwa przeciążenia konstruktora: przyjmuje jeden UINT argument, a druga akceptuje HMENU argument. UINT argument tylko jest rzutowany na HMENU konstruktora i wyników, przechowywane w składowej danych jednego klasy, [m_hMenu](#_u_menuorid__m_hmenu). Argument Pro Konstruktor HMENU są przechowywane bezpośrednio, bez konwersji.  

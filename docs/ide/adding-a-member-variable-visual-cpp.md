@@ -17,50 +17,50 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fa2a8ef8f7bcdc2d90893acdad98705c9588a5d5
-ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
+ms.openlocfilehash: d20611d2cc5e4b391e2dafdef614dd5173d32ef7
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "33325734"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43207301"
 ---
 # <a name="adding-a-member-variable--visual-c"></a>Dodawanie zmiennej członkowskiej (Visual C++)
-Można dodać zmienną członkowską do klasy przy użyciu widoku klasy. Zmienne Członkowskie mogą być dla [danych wymiana i Walidacja danych](../mfc/dialog-data-exchange-and-validation.md), lub mogą być ogólne. Kreator zmiennej elementu członkowskiego danych jest specjalnie zaprojektowane do podjąć odpowiednie informacje i użyj go, aby wstawić elementów w plikach źródłowych w odpowiednich lokalizacjach. Można dodać zmienną członkowską z [Edytor okien dialogowych](../windows/dialog-editor.md) w [widok zasobów](../windows/resource-view-window.md), lub z [widoku klasy](http://msdn.microsoft.com/en-us/8d7430a9-3e33-454c-a9e1-a85e3d2db925).  
+Możesz dodać zmienną członkowską do klasy za pomocą widoku klas. Zmienne składowe mogą być albo dla [wymiany danych i sprawdzanie poprawności danych](../mfc/dialog-data-exchange-and-validation.md), lub może być ogólny. Kreator zmiennej składowej danych jest specjalnie przeznaczona do podjąć odpowiednie informacje i używać go do wstawienia elementów w plikach źródłowych w odpowiednich lokalizacjach. Można dodać zmienną członkowską z [Edytor okien dialogowych](../windows/dialog-editor.md) w [widok zasobów](../windows/resource-view-window.md), lub z [Widok klas](https://msdn.microsoft.com/8d7430a9-3e33-454c-a9e1-a85e3d2db925).  
   
 > [!NOTE]
->  Podczas projektowania i wdrażania okno dialogowe, może okazać bardziej efektywne przy użyciu okna dialogowego edytora w celu Dodaj formanty okna dialogowego, a następnie wdrożyć zmienne Członkowskie formantów.  
+>  Podczas projektowania i implementowania okno dialogowe, może okazać się bardziej wydajne, można użyć okna dialogowego edytora, aby dodać formanty okna dialogowego, a następnie wdrożyć zmiennych składowych kontrolek.  
   
-### <a name="to-add-a-member-variable-for-a-dialog-control-in-resource-view-using-the-add-member-variable-wizard"></a>Aby dodać zmienną członkowską dla formantu okna dialogowego w widoku zasobów za pomocą Kreatora dodawania zmiennej elementu członkowskiego  
+### <a name="to-add-a-member-variable-for-a-dialog-control-in-resource-view-using-the-add-member-variable-wizard"></a>Aby dodać zmienną składową dla formantu w oknie dialogowym w widoku zasobów za pomocą Kreatora dodawania zmiennej składowej  
   
-1.  W widokach rozwiń węzeł projektu i węzeł okna dialogowego, aby wyświetlić listę okien dialogowych projektu.  
+1.  W widoku zasobu rozwiń węzeł projektu i węzeł okna dialogowego, aby wyświetlić listę okien dialogowych projektu.  
   
-2.  Kliknij dwukrotnie okno dialogowe, do której chcesz dodać zmiennej członka, aby otworzyć go w edytorze okien dialogowych.  
+2.  Dwukrotnie kliknij okno dialogowe, do którego chcesz dodać zmienną członkowską, aby otworzyć go w edytorze okien dialogowych.  
   
-3.  W oknie dialogowym wyświetlany w edytorze okien dialogowych kliknij prawym przyciskiem myszy formantu, do której chcesz dodać zmiennej członka.  
+3.  W oknie dialogowym wyświetlany w edytorze okien dialogowych kliknij prawym przyciskiem myszy formant, do którego chcesz dodać zmienną członkowską.  
   
 4.  W menu skrótów kliknij **Dodaj zmienną** do wyświetlenia [Dodaj kreatora zmiennej elementu członkowskiego](../ide/add-member-variable-wizard.md).  
   
     > [!NOTE]
-    >  Wartość domyślna znajduje się już w **Identyfikatora formantu**.  
+    >  Wartość domyślna znajduje się już w **identyfikator formantu**.  
   
 5.  Podaj informacje w polach odpowiedniego kreatora. Zobacz [formantów okna dialogowego i typy zmiennych](../ide/dialog-box-controls-and-variable-types.md) Aby uzyskać więcej informacji.  
   
-6.  Kliknij przycisk **Zakończ** można dodać definicji i wdrażanie kodu do projektu i zamknąć kreatora.  
+6.  Kliknij przycisk **Zakończ** Dodaj definicję i implementację kodu do projektu i zamknąć kreatora.  
   
-### <a name="to-add-a-member-variable-from-class-view-using-the-add-member-variable-wizard"></a>Aby dodać zmienną członkowską z widoku klasy przy użyciu Kreatora dodawania zmiennej elementu członkowskiego  
+### <a name="to-add-a-member-variable-from-class-view-using-the-add-member-variable-wizard"></a>Aby dodać zmienną członkowską z widoku klasy za pomocą Kreatora dodawania zmiennej składowej  
   
-1.  W [widoku klasy](http://msdn.microsoft.com/en-us/8d7430a9-3e33-454c-a9e1-a85e3d2db925), rozwiń węzeł projektu, aby wyświetlić klasy w projekcie.  
+1.  W [Widok klas](https://msdn.microsoft.com/8d7430a9-3e33-454c-a9e1-a85e3d2db925), rozwiń węzeł projektu, aby wyświetlić klasy w projekcie.  
   
 2.  Kliknij prawym przyciskiem myszy klasę, do której chcesz dodać zmienną.  
   
-3.  W menu skrótów kliknij **Dodaj**, a następnie kliknij przycisk **Dodaj zmienną** do wyświetlania elementu członkowskiego zmiennej Kreatora dodawania.  
+3.  W menu skrótów kliknij **Dodaj**, a następnie kliknij przycisk **Dodaj zmienną** wyświetlić Dodaj kreatora zmiennej elementu członkowskiego.  
   
-4.  Podaj informacje w polach odpowiedniego kreatora. Zobacz [Dodaj kreatora zmiennej elementu członkowskiego](../ide/add-member-variable-wizard.md) szczegółowe informacje.  
+4.  Podaj informacje w polach odpowiedniego kreatora. Zobacz [Dodaj kreatora zmiennej elementu członkowskiego](../ide/add-member-variable-wizard.md) Aby uzyskać szczegółowe informacje.  
   
-5.  Kliknij przycisk **Zakończ** można dodać definicji i wdrażanie kodu do projektu i zamknąć kreatora.  
+5.  Kliknij przycisk **Zakończ** Dodaj definicję i implementację kodu do projektu i zamknąć kreatora.  
   
 ## <a name="see-also"></a>Zobacz też  
- [Dodawanie funkcji z kreatorami kodów](../ide/adding-functionality-with-code-wizards-cpp.md)   
+ [Dodawanie funkcji za pomocą kreatorów kodu](../ide/adding-functionality-with-code-wizards-cpp.md)   
  [Dodawanie klasy](../ide/adding-a-class-visual-cpp.md)   
  [Dodawanie funkcji członkowskiej](../ide/adding-a-member-function-visual-cpp.md)   
  [Handler komunikatów MFC](../mfc/reference/adding-an-mfc-message-handler.md)   

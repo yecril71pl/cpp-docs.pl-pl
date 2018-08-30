@@ -19,21 +19,21 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3fdf0d53cca00424c2c933e2578fb5c70b7d07e1
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: 3ec1fb89817da663dd088dadc9b667a3ff0aef46
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42465047"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43200981"
 ---
 # <a name="atl-com-property-pages"></a>Strony właściwości ALT COM
 Strony właściwości COM udostępniają interfejs użytkownika do ustawiania właściwości (lub wywoływania metod) jeden lub więcej obiektów COM. Strony właściwości są często używane przez formanty ActiveX zapewniające bogatych interfejsów użytkownika umożliwiające właściwości formantu należy ustawić w czasie projektowania.  
   
- Strony właściwości są obiektów COM, które implementują [IPropertyPage](http://msdn.microsoft.com/library/windows/desktop/ms691246) lub [IPropertyPage2](http://msdn.microsoft.com/library/windows/desktop/ms683996) interfejsu. Te interfejsy, zapewniają metody, które umożliwiają strony do skojarzenia z `site` (obiekt COM reprezentujący kontener strony) i liczbę *obiektów* (obiekty COM metod, których zostanie wywołana w odpowiedzi na zmiany wprowadzone przez użytkownika na stronie właściwości). Kontener strony właściwości jest odpowiedzialny za wywoływanie metod na interfejsie strony właściwości sprawdzić na stronie, gdy pokazać lub ukryć jego interfejs użytkownika i kiedy należy zastosować zmiany wprowadzone przez użytkownika do obiektów.  
+ Strony właściwości są obiektów COM, które implementują [IPropertyPage](/windows/desktop/api/ocidl/nn-ocidl-ipropertypage) lub [IPropertyPage2](/windows/desktop/api/ocidl/nn-ocidl-ipropertypage2) interfejsu. Te interfejsy, zapewniają metody, które umożliwiają strony do skojarzenia z `site` (obiekt COM reprezentujący kontener strony) i liczbę *obiektów* (obiekty COM metod, których zostanie wywołana w odpowiedzi na zmiany wprowadzone przez użytkownika na stronie właściwości). Kontener strony właściwości jest odpowiedzialny za wywoływanie metod na interfejsie strony właściwości sprawdzić na stronie, gdy pokazać lub ukryć jego interfejs użytkownika i kiedy należy zastosować zmiany wprowadzone przez użytkownika do obiektów.  
   
  Każdą stronę właściwości mogą być wbudowane w całkowicie niezależnie od obiektów, których właściwości można ustawić. Wszystko to strona właściwości jest wymaga, aby zrozumieć określonego interfejsu (lub zestawu interfejsów) i udostępniają interfejs użytkownika na potrzeby wywoływania metod, w tym interfejsie.  
   
- Aby uzyskać więcej informacji, zobacz [arkusze właściwości i strony właściwości](http://msdn.microsoft.com/library/windows/desktop/ms686577) w zestawie Windows SDK.  
+ Aby uzyskać więcej informacji, zobacz [arkusze właściwości i strony właściwości](/windows/desktop/com/property-sheets-and-property-pages) w zestawie Windows SDK.  
   
 ## <a name="in-this-section"></a>W tej sekcji  
  [Określanie stron właściwości](../atl/specifying-property-pages.md)  

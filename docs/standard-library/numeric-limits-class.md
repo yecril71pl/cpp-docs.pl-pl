@@ -80,12 +80,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 70e980a33e88920afef9c6f19dcd8b2ecfca5071
-ms.sourcegitcommit: f7703076b850c717c33d72fb0755fbb2215c5ddc
+ms.openlocfilehash: cbcc47bf7b8eff276135bb5eb2f6206471fee524
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/28/2018
-ms.locfileid: "43131441"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43206478"
 ---
 # <a name="numericlimits-class"></a>numeric_limits — Klasa
 
@@ -100,11 +100,12 @@ class numeric_limits
 
 ### <a name="parameters"></a>Parametry
 
-*Typ* element podstawowy typ danych, którego właściwości są przetestowane zapytania lub zestawu.
+*Typ*<br/>
+ Element podstawowy typ danych, którego właściwości są przetestowane zapytania lub zestawu.
 
 ## <a name="remarks"></a>Uwagi
 
-Nagłówek definiuje jawne specjalizacje dla typów **wchar_t**, **bool**, **char**, **podpisany char**, **bez znaku CHAR**, **krótki**, **typ unsigned short**, **int**, **unsigned int**, **długich**, **unsigned long**, **float**, **double**, **long double ***,** **długi długi**, **unsigned long long**, `char16_t`, i `char32_t`. Dla tych jawne specjalizacje elementu członkowskiego [numeric_limits::is_specialized](#is_specialized) jest **true**, i wszystkie odpowiednie elementy członkowskie mają znaczący wartości. Program można podać dodatkowe jawne specjalizacje. Większość funkcji składowej klasy opisują lub testowania implementacji możliwe **float**.
+Nagłówek definiuje jawne specjalizacje dla typów **wchar_t**, **bool**, **char**, **podpisany char**, **bez znaku CHAR**, **krótki**, **typ unsigned short**, **int**, **unsigned int**, **długich**, **unsigned long**, **float**, **double**, **typu long double**, **długi długi**, **unsigned long long**, **char16_t**, i **char32_t**. Dla tych jawne specjalizacje elementu członkowskiego [numeric_limits::is_specialized](#is_specialized) jest **true**, i wszystkie odpowiednie elementy członkowskie mają znaczący wartości. Program można podać dodatkowe jawne specjalizacje. Większość funkcji składowej klasy opisują lub testowania implementacji możliwe **float**.
 
 Dla dowolnego specjalizacji żadnych elementów członkowskich mają znaczący wartości. Obiekt elementu członkowskiego, który nie ma odpowiednią wartość przechowuje wartość zero (lub **false**) i funkcja elementu członkowskiego, która nie zwraca zrozumiałą wartość zwraca `Type(0)`.
 

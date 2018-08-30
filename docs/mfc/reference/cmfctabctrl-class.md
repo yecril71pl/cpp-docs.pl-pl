@@ -114,12 +114,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d843b3b491973c32d8fb5ff3160327a9e82223c8
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: eae771aed819577708d945cb2a62997f5b45e7fd
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42465693"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43199849"
 ---
 # <a name="cmfctabctrl-class"></a>Klasa CMFCTabCtrl
 `CMFCTabCtrl` Klasa oferuje funkcję dla formantu zakładki. Kontrolka karty wyświetla dokujące okno z płaskimi lub trójwymiarowymi kartami na górze i dole. Karty mogą wyświetlać tekst i obraz oraz zmieniać kolor, gdy jest ona aktywna.  
@@ -186,7 +186,7 @@ class CMFCTabCtrl : public CMFCBaseTabCtrl
 |[CMFCTabCtrl::OnDragEnter](#ondragenter)|Wywoływane przez platformę, gdy kursor jest najpierw przeciągany do okna kontrolki karty.|  
 |[CMFCTabCtrl::OnDragOver](#ondragover)|Wywoływane przez platformę podczas operacji przeciągania, gdy wskaźnik myszy zostanie przesunięty nad oknem docelowego upuszczania. (Przesłania [CMFCBaseTabCtrl::OnDragOver](../../mfc/reference/cmfcbasetabctrl-class.md#ondragover).)|  
 |[CMFCTabCtrl::OnShowTabDocumentsMenu](#onshowtabdocumentsmenu)|Wyświetla menu podręczne dla okien z zakładkami, czeka, aż użytkownik wybiera kartę i sprawia, że wybranej karty aktywną kartę.|  
-|`CMFCTabCtrl::PreTranslateMessage`|Wykonuje translację komunikatów okien, zanim zostaną rozesłane do [TranslateMessage](http://msdn.microsoft.com/library/windows/desktop/ms644955) i [DispatchMessage](http://msdn.microsoft.com/library/windows/desktop/ms644934) funkcje Windows. (Przesłania [CMFCBaseTabCtrl::PreTranslateMessage](../../mfc/reference/cmfcbasetabctrl-class.md#pretranslatemessage).)|  
+|`CMFCTabCtrl::PreTranslateMessage`|Wykonuje translację komunikatów okien, zanim zostaną rozesłane do [TranslateMessage](https://msdn.microsoft.com/library/windows/desktop/ms644955) i [DispatchMessage](https://msdn.microsoft.com/library/windows/desktop/ms644934) funkcje Windows. (Przesłania [CMFCBaseTabCtrl::PreTranslateMessage](../../mfc/reference/cmfcbasetabctrl-class.md#pretranslatemessage).)|  
 |`CMFCTabCtrl::RecalcLayout`|Ponownie oblicza układ wewnętrznej kontrolki karty. (Przesłania [CMFCBaseTabCtrl::RecalcLayout](../../mfc/reference/cmfcbasetabctrl-class.md#recalclayout).)|  
 |[CMFCTabCtrl::SetActiveInMDITabGroup](#setactiveinmditabgroup)|Ustawia bieżącej karty formantu karty jako aktywną kartę w grupie kartę interfejsu wielu dokumentów.|  
 |[CMFCTabCtrl::SetActiveTab](#setactivetab)|Aktywuje kartę. (Przesłania [CMFCBaseTabCtrl::SetActiveTab](../../mfc/reference/cmfcbasetabctrl-class.md#setactivetab).)|  
@@ -784,7 +784,7 @@ virtual DROPEFFECT OnDragEnter(
  Wskazuje obiekt danych, który zawiera dane, które użytkownik przeciąga.  
   
  [in] *dwKeyState*  
- Zawiera stan klawisze modyfikujące. Ten parametr jest bitową kombinacją (lub) następujące wartości: MK_CONTROL, MK_SHIFT, MK_ALT MK_LBUTTON, MK_MBUTTON i MK_RBUTTON. Aby uzyskać więcej informacji, zobacz **parametry komunikatu** części [o wejście myszy](http://msdn.microsoft.com/library/windows/desktop/ms645601).  
+ Zawiera stan klawisze modyfikujące. Ten parametr jest bitową kombinacją (lub) następujące wartości: MK_CONTROL, MK_SHIFT, MK_ALT MK_LBUTTON, MK_MBUTTON i MK_RBUTTON. Aby uzyskać więcej informacji, zobacz **parametry komunikatu** części [o wejście myszy](/windows/desktop/inputdev/about-mouse-input).  
   
  [in] *punktu*  
  Zawiera bieżącą lokalizację kursor w współrzędne klienta.  
@@ -812,7 +812,7 @@ virtual DROPEFFECT OnDragOver(
  Wskaźnik do [COleDataObject](../../mfc/reference/coledataobject-class.md) obiekt, który jest przeciągany nad element docelowy upuszczania.  
   
  [in] *dwKeyState*  
- Stan klawisze modyfikujące, które jest bitową kombinacją (lub) MK_CONTROL, MK_SHIFT, MK_ALT MK_LBUTTON, MK_MBUTTON i MK_RBUTTON. Aby uzyskać więcej informacji, zobacz "Parametry komunikatu" w [o wejście myszy](http://msdn.microsoft.com/library/windows/desktop/ms645601).  
+ Stan klawisze modyfikujące, które jest bitową kombinacją (lub) MK_CONTROL, MK_SHIFT, MK_ALT MK_LBUTTON, MK_MBUTTON i MK_RBUTTON. Aby uzyskać więcej informacji, zobacz "Parametry komunikatu" w [o wejście myszy](/windows/desktop/inputdev/about-mouse-input).  
   
  [in] *punktu*  
  Bieżące położenie myszy.  
@@ -1000,7 +1000,7 @@ BOOL SynchronizeScrollBar(SCROLLINFO* pScrollInfo = NULL);
   
 ### <a name="parameters"></a>Parametry  
  [out] *pScrollInfo*  
- Wskaźnik do [SCROLLINFO](http://msdn.microsoft.com/library/windows/desktop/bb787537) struktury lub o wartości NULL. Gdy metoda zwróci wartość, a ten parametr nie ma wartości NULL, struktura zawiera wszystkie parametry paska przewijania. Wartością domyślną jest NULL.  
+ Wskaźnik do [SCROLLINFO](/windows/desktop/api/winuser/ns-winuser-tagscrollinfo) struktury lub o wartości NULL. Gdy metoda zwróci wartość, a ten parametr nie ma wartości NULL, struktura zawiera wszystkie parametry paska przewijania. Wartością domyślną jest NULL.  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Wartość TRUE, jeśli ta metoda zakończy się pomyślnie; w przeciwnym razie wartość FALSE.  

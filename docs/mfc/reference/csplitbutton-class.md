@@ -24,12 +24,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d7fd35c351639d4b7b5f3b9dbbbce1c5e7cbcb79
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: 38a624aacc302812865a785c537eb906a0489379
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42465525"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43207644"
 ---
 # <a name="csplitbutton-class"></a>Klasa CSplitButton
 `CSplitButton` Klasa reprezentuje formant przycisku podziału. Kontrolka przycisku podziału wykonuje domyślne zachowanie kiedy użytkownik klika na główną część przycisku oraz wyświetla menu rozwijane, gdy użytkownik kliknie strzałkę listy rozwijanej przycisku.  
@@ -62,7 +62,7 @@ class CSplitButton : public CButton
 |[CSplitButton::OnDropDown](#ondropdown)|Obsługuje powiadomienie BCN_DROPDOWN, które wysyła system, gdy użytkownik kliknie strzałkę listy rozwijanej bieżącego formantu przycisku podziału.|  
   
 ## <a name="remarks"></a>Uwagi  
- `CSplitButton` Klasa pochodzi od [CButton](../../mfc/reference/cbutton-class.md) klasy. Kontrolka przycisku podziału jest formant przycisku, którego styl jest BS_SPLITBUTTON. Wyświetla menu niestandardowe, gdy użytkownik kliknie strzałkę listy rozwijanej. Aby uzyskać więcej informacji, zobacz BS_SPLITBUTTON i BS_DEFSPLITBUTTON style w [style przycisku](http://msdn.microsoft.com/library/windows/desktop/bb775951).  
+ `CSplitButton` Klasa pochodzi od [CButton](../../mfc/reference/cbutton-class.md) klasy. Kontrolka przycisku podziału jest formant przycisku, którego styl jest BS_SPLITBUTTON. Wyświetla menu niestandardowe, gdy użytkownik kliknie strzałkę listy rozwijanej. Aby uzyskać więcej informacji, zobacz BS_SPLITBUTTON i BS_DEFSPLITBUTTON style w [style przycisku](/windows/desktop/Controls/button-styles).  
   
  Poniższa ilustracja przedstawia okno dialogowe, który zawiera kontrolkę pagera i formant przycisku podziału (1). (2) strzałkę listy rozwijanej już został kliknięty i pojawi się podmenu (3).  
   
@@ -102,7 +102,7 @@ virtual BOOL Create(
 |Parametr|Opis|  
 |---------------|-----------------|  
 |[in] *dwStyle*|Bitowa kombinacja (lub) style, które mają być stosowane do formantu. Aby uzyskać więcej informacji, zobacz [style przycisku](../../mfc/reference/styles-used-by-mfc.md#button-styles).|  
-|[in] *rect*|Odwołanie do [Prostokąt](http://msdn.microsoft.com/library/windows/desktop/dd162897) strukturę, która zawiera położenie i rozmiar kontrolki.|  
+|[in] *rect*|Odwołanie do [Prostokąt](https://msdn.microsoft.com/library/windows/desktop/dd162897) strukturę, która zawiera położenie i rozmiar kontrolki.|  
 |[in] *pParentWnd*|Wskaźnik zerowy [CWnd](../../mfc/reference/cwnd-class.md) obiekt, który jest okno nadrzędne kontrolki.|  
 |[in] *nID*|Identyfikator kontrolki.|  
   
@@ -146,8 +146,8 @@ afx_msg void OnDropDown(
   
 |Parametr|Opis|  
 |---------------|-----------------|  
-|[in] *pNMHDR*|Wskaźnik do [NMHDR](http://msdn.microsoft.com/library/windows/desktop/bb775514) struktury, który zawiera informacje o [BCN_DROPDOWN](http://msdn.microsoft.com/library/windows/desktop/bb775983) powiadomień.|  
-|[out] *pResult*|(Nie jest używany; jest zwracana żadna wartość). Zwraca wartość [BCN_DROPDOWN](http://msdn.microsoft.com/library/windows/desktop/bb775983) powiadomień.|  
+|[in] *pNMHDR*|Wskaźnik do [NMHDR](/windows/desktop/api/richedit/ns-richedit-_nmhdr) struktury, który zawiera informacje o [BCN_DROPDOWN](/windows/desktop/Controls/bcn-dropdown) powiadomień.|  
+|[out] *pResult*|(Nie jest używany; jest zwracana żadna wartość). Zwraca wartość [BCN_DROPDOWN](/windows/desktop/Controls/bcn-dropdown) powiadomień.|  
   
 ### <a name="remarks"></a>Uwagi  
  Gdy użytkownik kliknie strzałkę listy rozwijanej na formant przycisku podziału, system wysyła powiadomienie BCN_DROPDOWN komunikat, który `OnDropDown` metodę uchwytów. Jednak `CSplitButton` obiektu nie przekazuje powiadomień BCN_DROPDOWN do formantu, który zawiera formant przycisku podziału. W związku z tym zawierającą formant nie może obsługiwać niestandardową akcję w odpowiedzi na powiadomienia.  

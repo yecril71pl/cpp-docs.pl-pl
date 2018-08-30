@@ -22,15 +22,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 76980dab9246527162e124b9ce599791b49c8a26
-ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
+ms.openlocfilehash: f83775e04c7b5c4c104f9790870ea067392b0bce
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/27/2018
-ms.locfileid: "37038409"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43209217"
 ---
 # <a name="cinstantaneoustransition-class"></a>Klasa CInstantaneousTransition
-Hermetyzuje natychmiastowe przejścia.  
+Hermetyzuje natychmiastowe przejście.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -44,22 +44,22 @@ class CInstantaneousTransition : public CBaseTransition;
   
 |Nazwa|Opis|  
 |----------|-----------------|  
-|[CInstantaneousTransition::CInstantaneousTransition](#cinstantaneoustransition)|Tworzy obiekt przejścia i inicjuje jego końcowej.|  
+|[CInstantaneousTransition::CInstantaneousTransition](#cinstantaneoustransition)|Tworzy obiekt przejścia i inicjuje jego wartość końcową.|  
   
 ### <a name="public-methods"></a>Metody publiczne  
   
 |Nazwa|Opis|  
 |----------|-----------------|  
-|[CInstantaneousTransition::Create](#create)|Wywołuje biblioteki przejścia do utworzenia obiektu hermetyzowany przejścia COM. (Przesłania [CBaseTransition::Create](../../mfc/reference/cbasetransition-class.md#create).)|  
+|[CInstantaneousTransition::Create](#create)|Wywołania biblioteki przejścia do utworzenia obiektu zhermetyzowany przejścia COM. (Przesłania [CBaseTransition::Create](../../mfc/reference/cbasetransition-class.md#create).)|  
   
 ### <a name="public-data-members"></a>Publiczne elementy członkowskie danych  
   
 |Nazwa|Opis|  
 |----------|-----------------|  
-|[CInstantaneousTransition::m_dblFinalValue](#m_dblfinalvalue)|Wartość zmiennej animacji na końcu przejścia.|  
+|[CInstantaneousTransition::m_dblFinalValue](#m_dblfinalvalue)|Wartość zmiennej animacji z końcem przejścia.|  
   
 ## <a name="remarks"></a>Uwagi  
- Podczas przejście chwilową wartość zmiennej animacji zmienia się natychmiast z bieżącą wartość do określonej wartości końcowej. Czas trwania ten proces przejścia jest zawsze zero. Ponieważ wszystkie przejścia są automatycznie usuwane, zaleca się ich przydzielony przy użyciu nowego operatora. Hermetyzowany obiektu IUIAnimationTransition COM utworzeniu przez CAnimationController::AnimateGroup, aż do, a następnie jest NULL. Po utworzenia tego obiektu modelu COM nie ma wpływu, zmiana zmiennych Członkowskich.  
+ Podczas natychmiastowe przejście wartość zmiennej animacji zmienia się natychmiast z jego bieżąca wartość określonej wartości końcowej. Czas trwania tego przejścia zawsze wynosi zero. Ponieważ wszystkie przejścia są automatycznie czyszczone, zaleca się ich przydzielone za pomocą nowego operatora. Zhermetyzowanego obiektu IUIAnimationTransition COM przy utworzono CAnimationController::AnimateGroup, aż do, a następnie ma wartość NULL. Zmienianie zmiennych składowych, po tworzenie ten obiekt COM nie ma wpływu.  
   
 ## <a name="inheritance-hierarchy"></a>Hierarchia dziedziczenia  
  [CObject](../../mfc/reference/cobject-class.md)  
@@ -72,7 +72,7 @@ class CInstantaneousTransition : public CBaseTransition;
  **Nagłówek:** afxanimationcontroller.h  
   
 ##  <a name="cinstantaneoustransition"></a>  CInstantaneousTransition::CInstantaneousTransition  
- Tworzy obiekt przejścia i inicjuje jego końcowej.  
+ Tworzy obiekt przejścia i inicjuje jego wartość końcową.  
   
 ```  
 CInstantaneousTransition(DOUBLE dblFinalValue);
@@ -80,10 +80,10 @@ CInstantaneousTransition(DOUBLE dblFinalValue);
   
 ### <a name="parameters"></a>Parametry  
  *dblFinalValue*  
- Wartość zmiennej animacji na końcu przejścia.  
+ Wartość zmiennej animacji z końcem przejścia.  
   
 ##  <a name="create"></a>  CInstantaneousTransition::Create  
- Wywołuje biblioteki przejścia do utworzenia obiektu hermetyzowany przejścia COM.  
+ Wywołania biblioteki przejścia do utworzenia obiektu zhermetyzowany przejścia COM.  
   
 ```  
 virtual BOOL Create(
@@ -93,14 +93,14 @@ virtual BOOL Create(
   
 ### <a name="parameters"></a>Parametry  
 *pLibrary*  
- Wskaźnik do [interfejsu IUIAnimationTransitionLibrary](https://msdn.microsoft.com/library/windows/desktop/dd371897), który definiuje biblioteki standardowe przejścia.  
+ Wskaźnik do [interfejsu IUIAnimationTransitionLibrary](/windows/desktop/api/uianimation/nn-uianimation-iuianimationtransitionlibrary), który definiuje bibliotekę przejścia standardowe.  
 
   
 ### <a name="return-value"></a>Wartość zwracana  
- Wartość TRUE, jeśli przejście jest tworzony pomyślnie; w przeciwnym razie wartość FALSE.  
+ Wartość TRUE, jeśli przejście został utworzony pomyślnie; w przeciwnym razie wartość FALSE.  
   
 ##  <a name="m_dblfinalvalue"></a>  CInstantaneousTransition::m_dblFinalValue  
- Wartość zmiennej animacji na końcu przejścia.  
+ Wartość zmiennej animacji z końcem przejścia.  
   
 ```  
 DOUBLE m_dblFinalValue;  

@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 392460cde35096bc1c61db4d7e6bd2143932838d
-ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
+ms.openlocfilehash: 0555b050770d5fbd411e1720282e3fb50769385b
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/01/2018
-ms.locfileid: "39403998"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43208407"
 ---
 # <a name="comptrtgetactiveobject"></a>_com_ptr_t::GetActiveObject
 **Microsoft Specific**  
@@ -59,7 +59,7 @@ HRESULT GetActiveObject(
   
 -   **Getactiveobject — (**`clsidString`**)** dołącza do istniejącego wystąpienia obiektu, który został podany ciąg Unicode, który zawiera jedną `CLSID` (począwszy od "**{**") lub `ProgID`.  
   
--   **Getactiveobject — (**`clsidStringA`**)** dołącza do istniejącego wystąpienia obiektu, który został podany ciąg znaku wielobajtowego, który zawiera jedną `CLSID` (począwszy od "**{**") lub `ProgID`. Wywołania [MultiByteToWideChar](http://msdn.microsoft.com/library/windows/desktop/dd319072), która zakłada, że ten ciąg jest w stronę kodową ANSI zamiast stronę kodową OEM.  
+-   **Getactiveobject — (**`clsidStringA`**)** dołącza do istniejącego wystąpienia obiektu, który został podany ciąg znaku wielobajtowego, który zawiera jedną `CLSID` (począwszy od "**{**") lub `ProgID`. Wywołania [MultiByteToWideChar](/windows/desktop/api/stringapiset/nf-stringapiset-multibytetowidechar), która zakłada, że ten ciąg jest w stronę kodową ANSI zamiast stronę kodową OEM.  
   
  **END specyficzny dla Microsoft**  
   

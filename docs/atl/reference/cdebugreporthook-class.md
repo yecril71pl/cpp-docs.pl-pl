@@ -23,12 +23,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ac3c020bbb5ff46f4684c9ed089a2fe327de252e
-ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
+ms.openlocfilehash: 8de1f44b079b269d76054b1a221a8ec3e36daf5e
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37884366"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43209328"
 ---
 # <a name="cdebugreporthook-class"></a>Klasa CDebugReportHook
 Klasa jest używana do wysyłania raportów debugowania z nazwanym potokiem.  
@@ -61,7 +61,7 @@ class CDebugReportHook
 ## <a name="remarks"></a>Uwagi  
  Utwórz wystąpienie tej klasy w kompilacjach debugowania, usługi lub aplikacji na wysyłanie raportów debugowania do nazwanego potoku. Debugowanie raporty są generowane przez wywołanie metody [_CrtDbgReport](../../c-runtime-library/reference/crtdbgreport-crtdbgreportw.md) lub użyć otokę dla tej funkcji, takich jak [ATLTRACE](debugging-and-error-reporting-macros.md#atltrace) i [ATLASSERT](debugging-and-error-reporting-macros.md#atlassert) makra.  
   
- Użyj tej klasy umożliwia interakcyjnie debugować składników działających w trybie nieinteraktywnym [stacji okna](http://msdn.microsoft.com/library/windows/desktop/ms687096).  
+ Użyj tej klasy umożliwia interakcyjnie debugować składników działających w trybie nieinteraktywnym [stacji okna](/windows/desktop/winstation/window-stations).  
   
  Należy zwrócić uwagę na to, czy raporty debugowania są wysyłane przy użyciu podstawowych kontekstu zabezpieczeń w wątku. Personifikacja jest tymczasowo wyłączona, aby raporty debugowania mogą być wyświetlane w sytuacjach, w którym z obniżonymi uprawnieniami użytkowników jest personifikacja, takie jak w aplikacjach sieci web.  
   

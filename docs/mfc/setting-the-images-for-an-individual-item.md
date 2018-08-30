@@ -15,37 +15,37 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: aec02a07de8fad2f9ad063295090be5ace4146e6
-ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
+ms.openlocfilehash: c64ab33f053c941bd5332269d4c952b3a318cb6b
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/26/2018
-ms.locfileid: "36953805"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43209307"
 ---
 # <a name="setting-the-images-for-an-individual-item"></a>Ustawianie obrazów dla pojedynczego elementu
-Różne typy obrazów używany przez element pola kombi rozszerzone są określane przez wartości *iImage*, *iSelectedImage*, i *iOverlay* członkami [ COMBOBOXEXITEM](http://msdn.microsoft.com/library/windows/desktop/bb775746) struktury. Każda wartość jest indeks obrazu na liście skojarzony obraz formantu. Domyślnie te elementy członkowskie są ustawione na 0, powodując kontrolka do wyświetlenia nie obraz dla elementu. Jeśli chcesz używać obrazów dla określonego elementu, można zmodyfikować struktury w związku z tym podczas wstawiania elementu pola kombi lub przez zmodyfikowanie istniejącego elementu pola kombi.  
+Różne rodzaje obrazy używane przez element pola kombi rozszerzone są określane przez wartości w *iImage*, *iSelectedImage*, i *iOverlay* członkowie [ COMBOBOXEXITEM](/windows/desktop/api/commctrl/ns-commctrl-tagcomboboxexitema) struktury. Każda wartość jest indeks obrazu, na liście skojarzony obraz kontrolki. Domyślnie te elementy członkowskie są ustawione na 0, powodując kontrolka do wyświetlenia nie obraz dla elementu. Jeśli chcesz używać obrazów dla określonego elementu, można zmodyfikować struktury w związku z tym podczas wstawiania elementu pola kombi lub modyfikując istniejący element pola kombi.  
   
-## <a name="setting-the-image-for-a-new-item"></a>Ustawienia dla nowego elementu obrazu  
- W przypadku wstawiania nowego elementu zainicjować *iImage*, *iSelectedImage*, i *iOverlay* struktury elementów członkowskich o odpowiednie wartości, a następnie Wstaw element z wywołania [CComboBoxEx::InsertItem](../mfc/reference/ccomboboxex-class.md#insertitem).  
+## <a name="setting-the-image-for-a-new-item"></a>Ustawienie obrazu dla nowego elementu  
+ W przypadku wstawiania nowego elementu zainicjować *iImage*, *iSelectedImage*, i *iOverlay* elementy członkowskie z odpowiednimi wartościami struktury, a następnie wstawianie elementu z wywołaniem [CComboBoxEx::InsertItem](../mfc/reference/ccomboboxex-class.md#insertitem).  
   
- Poniższy przykład Wstawia nowy element pola kombi rozszerzonej (`cbi`) w formancie rozszerzonego pola kombi (`m_comboEx`), podając indeksów dla obrazów wszystkich trzech stanów:  
+ Poniższy przykład ilustruje wstawienie nowego elementu pola kombi rozszerzone (`cbi`) w formancie rozszerzonego pola kombi (`m_comboEx`), podając indeksów dla wszystkich trzech obrazem stany:  
   
  [!code-cpp[NVC_MFCControlLadenDialog#12](../mfc/codesnippet/cpp/setting-the-images-for-an-individual-item_1.cpp)]  
   
-## <a name="setting-the-image-for-an-existing-item"></a>Ustawienie obraz istniejącego elementu  
- W przypadku modyfikowania istniejącego elementu potrzebne do pracy z *maski* członkiem **COMBOBOXEXITEM** struktury.  
+## <a name="setting-the-image-for-an-existing-item"></a>Ustawienie obrazu istniejącego elementu  
+ W przypadku modyfikowania istniejącego elementu, musisz pracować *maski* członkiem **COMBOBOXEXITEM** struktury.  
   
-#### <a name="to-modify-an-existing-item-to-use-images"></a>Aby zmodyfikować istniejący element do użycia obrazy  
+#### <a name="to-modify-an-existing-item-to-use-images"></a>Aby zmodyfikować istniejący element, aby używać obrazów  
   
-1.  Deklarowanie **COMBOBOXEXITEM** struktury i ustaw *maski* element członkowski danych wartości interesuje Cię przy modyfikacji.  
+1.  Zadeklaruj **COMBOBOXEXITEM** struktury i ustaw *maski* element członkowski danych do wartości interesuje Cię modyfikowania.  
   
-2.  Przy użyciu tej struktury wywoływania [CComboBoxEx::GetItem](../mfc/reference/ccomboboxex-class.md#getitem).  
+2.  Za pomocą tej struktury wywołania [CComboBoxEx::GetItem](../mfc/reference/ccomboboxex-class.md#getitem).  
   
-3.  Modyfikowanie *maski*, *iImage*, i *iSelectedImage* elementy członkowskie struktury nowo zwrócony przy użyciu odpowiednich wartości.  
+3.  Modyfikowanie *maski*, *iImage*, i *iSelectedImage* elementy członkowskie nowo zwróconej struktury, przy użyciu odpowiednich wartości.  
   
-4.  Wywoływania [CComboBoxEx::SetItem](../mfc/reference/ccomboboxex-class.md#setitem), przekazując modyfikacji struktury.  
+4.  Wywołanie [CComboBoxEx::SetItem](../mfc/reference/ccomboboxex-class.md#setitem), przekazując zmodyfikowanej struktury.  
   
- W poniższym przykładzie pokazano tej procedury przez zamianę obrazów zaznaczone i niezaznaczone trzeciego elementu pola kombi rozszerzonej:  
+ W poniższym przykładzie pokazano tej procedury przez zamianę obrazów zaznaczone i niezaznaczone trzeci element pola kombi rozszerzonej:  
   
  [!code-cpp[NVC_MFCControlLadenDialog#13](../mfc/codesnippet/cpp/setting-the-images-for-an-individual-item_2.cpp)]  
   

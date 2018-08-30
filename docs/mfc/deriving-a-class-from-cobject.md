@@ -23,12 +23,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 05828283f560e73d4c5d2ddf2cbc05963cbb217f
-ms.sourcegitcommit: 76fd30ff3e0352e2206460503b61f45897e60e4f
+ms.openlocfilehash: e9e098890a90b76da8452fb2a2ca86222b49c296
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/13/2018
-ms.locfileid: "39026120"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43198258"
 ---
 # <a name="deriving-a-class-from-cobject"></a>Wyprowadzanie klasy z obiektu CObject
 W tym artykule opisano minimalną procedurę niezbędną do wyprowadzenia klasy z [CObject](../mfc/reference/cobject-class.md). Inne `CObject` artykuły klasy opisują czynności, aby móc korzystać z określonych `CObject` funkcje, takie jak serializacji i diagnostycznych obsługę debugowania.  
@@ -68,7 +68,7 @@ W tym artykule opisano minimalną procedurę niezbędną do wyprowadzenia klasy 
   
      [!code-cpp[NVC_MFCCObjectSample#1](../mfc/codesnippet/cpp/deriving-a-class-from-cobject_1.h)]  
   
- Zwykle jednak możesz zastąpić niektóre `CObject`przez funkcje składowe w celu obsługi szczegółowe informacje na temat nowej klasie. Na przykład zazwyczaj warto zastąpić `Dump` funkcji `CObject` zapewnienie dane wyjściowe debugowania zawartość swojej klasy. Aby uzyskać szczegółowe informacje o zastępowaniu `Dump`, zapoznaj się z artykułem [diagnostyki: zawartość zrzucania obiektów](http://msdn.microsoft.com/727855b1-5a83-44bd-9fe3-f1d535584b59). Możesz także Przesłoń `AssertValid` funkcji `CObject` zapewnienie dostosowane testowania w celu zweryfikowania spójności składowych danych klas obiektów. Opis sposobu zastąpienia `AssertValid`, zobacz [MFC ASSERT_VALID i CObject::AssertValid](http://msdn.microsoft.com/7654fb75-9e9a-499a-8165-0a96faf2d5e6).  
+ Zwykle jednak możesz zastąpić niektóre `CObject`przez funkcje składowe w celu obsługi szczegółowe informacje na temat nowej klasie. Na przykład zazwyczaj warto zastąpić `Dump` funkcji `CObject` zapewnienie dane wyjściowe debugowania zawartość swojej klasy. Aby uzyskać szczegółowe informacje o zastępowaniu `Dump`, zapoznaj się z artykułem [diagnostyki: zawartość zrzucania obiektów](/previous-versions/visualstudio/visual-studio-2010/sc15kz85\(v=vs.100\)). Możesz także Przesłoń `AssertValid` funkcji `CObject` zapewnienie dostosowane testowania w celu zweryfikowania spójności składowych danych klas obiektów. Opis sposobu zastąpienia `AssertValid`, zobacz [MFC ASSERT_VALID i CObject::AssertValid](/previous-versions/visualstudio/visual-studio-2010/38z04tfa\(v=vs.100\)).  
   
  Artykuł [Określanie poziomów funkcjonalności](../mfc/specifying-levels-of-functionality.md) opisuje sposób określenia innych poziomach funkcjonalności, w tym informacje o klasie czasu wykonywania, dynamiczne tworzenie obiektów i serializacji.  
   

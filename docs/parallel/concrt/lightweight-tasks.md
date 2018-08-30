@@ -14,27 +14,27 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d602f83cfe2da6bc1506e07720d3ef021ebce04a
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: 8548412436be6e505c0ea08a2991e6948496f592
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33687416"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43210287"
 ---
 # <a name="lightweight-tasks"></a>Zadania lekkie
-Ten dokument zawiera opis roli zadań lekkich współbieżność środowiska wykonawczego. A *zadań lekkich* to zadanie, które można planować bezpośrednio z `concurrency::Scheduler` lub `concurrency::ScheduleGroup` obiektu. Zadania lekkie podobny funkcji, które świadczą interfejsu API systemu Windows [CreateThread](http://msdn.microsoft.com/library/windows/desktop/ms682453) funkcji. W związku z tym potrzeb zadań lekkich są przydatne, gdy dostosowania istniejącego kodu do korzystania z funkcji planowania programu współbieżności środowiska wykonawczego. Współbieżność środowiska wykonawczego sam używa zadań lekkich zaplanować agentów asynchronicznych i wysyłanie komunikatów między bloki komunikatów asynchronicznych.  
+W tym dokumencie opisano rolę zadania lekkie środowisko uruchomieniowe współbieżności. A *lekkie zadanie* jest zadaniem, która jest zaplanowania bezpośrednio z `concurrency::Scheduler` lub `concurrency::ScheduleGroup` obiektu. Lekkie zadanie jest podobne funkcja, która zapewnia interfejsu API Windows [CreateThread](/windows/desktop/api/processthreadsapi/nf-processthreadsapi-createthread) funkcji. W związku z tym zadań lekkich są przydatne, gdy dostosowanie istniejącego kodu do planowania funkcji środowiska uruchomieniowego współbieżności. Samo środowisko uruchomieniowe współbieżności używa zadań lekkich planować agentów asynchronicznych i wysyłać wiadomości między bloki komunikatów asynchronicznych.  
   
 > [!TIP]
->  Współbieżność środowiska wykonawczego zapewnia harmonogram domyślny, i dlatego nie trzeba utworzyć w aplikacji. Harmonogram zadań ułatwia dostrojenie wydajności aplikacji, dlatego zaleca się uruchamiania z [równoległych biblioteki wzorców (PLL)](../../parallel/concrt/parallel-patterns-library-ppl.md) lub [biblioteki agentów asynchronicznych](../../parallel/concrt/asynchronous-agents-library.md) w przypadku jesteś nowym użytkownikiem współbieżności środowiska wykonawczego.  
+>  Środowisko uruchomieniowe współbieżności zawiera domyślnego harmonogramu, a w związku z tym nie należy utworzyć w aplikacji. Ponieważ Harmonogram zadań ułatwia dostrajania wydajności aplikacji, zalecamy rozpoczęcie od [biblioteki wzorców równoległych (PPL)](../../parallel/concrt/parallel-patterns-library-ppl.md) lub [bibliotekę asynchronicznych agentów](../../parallel/concrt/asynchronous-agents-library.md) przypadku jesteś nowym użytkownikiem w czasie wykonywania współbieżności.  
   
- Zadania lekkie przenosić mniejsze koszty niż agentów asynchronicznych i grupy zadań. Na przykład środowisko uruchomieniowe nie informują po zakończeniu zadania lekkie. Ponadto środowisko uruchomieniowe catch lub nie obsługi wyjątków, które są generowane z lekkie zadania. Aby uzyskać więcej informacji na temat obsługi wyjątków i zadania lekkie zobacz [obsługi wyjątków](../../parallel/concrt/exception-handling-in-the-concurrency-runtime.md).  
+ Zadania lekkie mają mniejsze obciążenie niż agentów asynchronicznych i grupy zadań. Na przykład środowisko wykonawcze nie informują po zakończeniu lekkie zadanie. Ponadto środowisko wykonawcze catch lub nie obsługiwać wyjątki, które są generowane przez lekkie zadanie. Aby uzyskać więcej informacji na temat obsługi wyjątków i zadań lekkich zobacz [wyjątków](../../parallel/concrt/exception-handling-in-the-concurrency-runtime.md).  
   
- W przypadku większości zadań zaleca się, użyj bardziej niezawodne funkcje, takie jak grupy zadań i algorytmy równoległe, ponieważ umożliwiają one łatwiej Podziel złożone zadania na bardziej z nich. Aby uzyskać więcej informacji na temat grupy zadań, zobacz [równoległość zadań](../../parallel/concrt/task-parallelism-concurrency-runtime.md). Aby uzyskać więcej informacji na temat algorytmy równoległe, zobacz [algorytmy równoległe](../../parallel/concrt/parallel-algorithms.md).  
+ W przypadku większości zadań zaleca się, czy użyć bardziej niezawodne funkcje, takie jak grupy zadań i algorytmów równoległych, ponieważ umożliwiają one łatwiej przerwać złożonych zadań bardziej z nich. Aby uzyskać więcej informacji o grupach zadań, zobacz [równoległość zadań](../../parallel/concrt/task-parallelism-concurrency-runtime.md). Aby uzyskać więcej informacji dotyczących algorytmów równoległych, zobacz [algorytmy równoległe](../../parallel/concrt/parallel-algorithms.md).  
   
- Aby utworzyć zadanie lekkie, należy wywołać [concurrency::ScheduleGroup::ScheduleTask](reference/schedulegroup-class.md#scheduletask), [concurrency::CurrentScheduler::ScheduleTask](reference/currentscheduler-class.md#scheduletask), lub [concurrency::Scheduler::ScheduleTask ](reference/scheduler-class.md#scheduletask) metody. Oczekiwanie na zakończenie zadania lekkie, poczekaj, aż harmonogramu nadrzędnego zamknięcia lub korzysta z mechanizmu synchronizacji, takie jak [concurrency::event](../../parallel/concrt/reference/event-class.md) obiektu.  
+ Aby utworzyć zadanie lekkie, wywołaj [concurrency::ScheduleGroup::ScheduleTask](reference/schedulegroup-class.md#scheduletask), [concurrency::CurrentScheduler::ScheduleTask](reference/currentscheduler-class.md#scheduletask), lub [concurrency::Scheduler::ScheduleTask ](reference/scheduler-class.md#scheduletask) metody. Oczekiwania na zakończenie zadania lekkie, poczekaj, aż harmonogram nadrzędnej, aby zamknąć lub używany był mechanizm synchronizacji, takie jak [concurrency::event](../../parallel/concrt/reference/event-class.md) obiektu.  
   
 ## <a name="example"></a>Przykład  
- Na przykład, który demonstruje sposób dostosowania istniejącego kodu do lekkie zadań, zobacz [wskazówki: adaptacja istniejącego kodu do potrzeb zadań lekkich użyj](../../parallel/concrt/walkthrough-adapting-existing-code-to-use-lightweight-tasks.md).  
+ Na przykład, który demonstruje, jak dostosować istniejący kod do użycia lekkiego zadania, zobacz [Instruktaż: dostosowanie istniejącego kodu, aby użyć zadań lekkich](../../parallel/concrt/walkthrough-adapting-existing-code-to-use-lightweight-tasks.md).  
   
 ## <a name="see-also"></a>Zobacz też  
  [Harmonogram zadań](../../parallel/concrt/task-scheduler-concurrency-runtime.md)   

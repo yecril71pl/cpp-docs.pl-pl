@@ -1,5 +1,5 @@
 ---
-title: putchar —, putwchar — | Dokumentacja firmy Microsoft
+title: putchar, putwchar | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -38,16 +38,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7602ca44d6f8ec8197d1ebc61b4ef1d0847133f6
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 00016bb191cc3a4d7b4df47f5252706a129c3583
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32404626"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43199734"
 ---
 # <a name="putchar-putwchar"></a>putchar, putwchar
 
-Zapisuje znaku **stdout**.
+Zapisuje znak do **stdout**.
 
 ## <a name="syntax"></a>Składnia
 
@@ -67,34 +67,34 @@ Znak do zapisania.
 
 ## <a name="return-value"></a>Wartość zwracana
 
-Zwraca znak zapisywane. Wskazująca błąd lub warunek plik końcowy **putc —** i **putchar —** zwracać ** EOF`; **putwc` i **putwchar —** zwracać **weof —**. Wszystkie cztery procedury, można użyć [ferror —](ferror.md) lub [feof —](feof.md) do sprawdzenia błąd lub koniec pliku. Jeśli przekazany wskaźnika o wartości null *strumienia*, te funkcje wygeneruje wyjątek nieprawidłowy parametr, zgodnie z opisem w [sprawdzanie poprawności parametru](../../c-runtime-library/parameter-validation.md). Jeśli jest dozwolone wykonywanie, aby kontynuować, zwracają **EOF** lub **weof —** i ustaw **errno** do **einval —**.
+Zwraca znak napisany. Aby wskazać błąd lub warunek końca pliku **putc** i **putchar** zwracają ** EOF`; **putwc` i **putwchar** zwracają **WEOF**. W przypadku wszystkich czterech procedur, użyj [ferror](ferror.md) lub [feof](feof.md) pod kątem błąd lub koniec pliku. Jeśli przekazywany jest pusty wskaźnik *strumienia*, te funkcje tworzą wyjątek nieprawidłowego parametru, zgodnie z opisem w [Parameter Validation](../../c-runtime-library/parameter-validation.md). Jeśli wykonanie może być kontynuowane, zwracają one **EOF** lub **WEOF** i ustaw **errno** do **EINVAL**.
 
-Zobacz [_doserrno —, errno, _sys_errlist — i _sys_nerr —](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md) Aby uzyskać więcej informacji na temat tych i innych kodów błędów.
+Zobacz [_doserrno, errno, _sys_errlist i _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md) Aby uzyskać więcej informacji na temat tych i innych kodów błędu,.
 
 ## <a name="remarks"></a>Uwagi
 
-**Putc —** procedury zapisuje pojedynczy znak *c* z danymi wyjściowymi *strumienia* w bieżącym położeniu. Dowolna liczba całkowita mogą zostać przekazane do **putc —**, ale są zapisywane tylko pierwszych 8 bitów. **Putchar —** procedura jest identyczna jak **putc — (** * c ***, stdout)**. Dla każdej procedury Jeśli wystąpi błąd, ustaw wskaźnik błędów dla tego strumienia. **putc —** i **putchar —** są podobne do **fputc —** i **_fputchar —**, ale są implementowane zarówno jako funkcje, jak i jako makra (zobacz [ Wybieranie pomiędzy funkcjami i makrami](../../c-runtime-library/recommendations-for-choosing-between-functions-and-macros.md)). **putwc —** i **putwchar —** wersji znaków dwubajtowych **putc —** i **putchar —** odpowiednio.
+**Putc** rutynowo pisze pojedynczy znak *c* w danych wyjściowych *strumienia* w bieżącym położeniu. Dowolna liczba całkowita może być przekazywany do **putc**, ale tylko niższe 8 bitów jest zapisywane. **Putchar** rutyna jest identyczna z `putc( c, stdout )`. Dla każdej procedury Jeśli wystąpi błąd odczytu, wskaźnik błędu dla strumienia jest ustawiony. **putc** i **putchar** są podobne do **fputc** i **_fputchar**, odpowiednio, ale są implementowane zarówno funkcje, jak makra (zobacz [ Wybierania pomiędzy funkcjami i makrami](../../c-runtime-library/recommendations-for-choosing-between-functions-and-macros.md)). **putwc** i **putwchar** są wersjami znaków dwubajtowych **putc** i **putchar**, odpowiednio.
 
-Wersje z **_nolock —** sufiks są identyczne z tą różnicą, że nie są chronione przez inne wątki od zakłóceń. Może być szybsze, ponieważ nie wiążą się z obciążenie zablokowania inne wątki. Ich używać tylko w kontekstach wątkowo, np. aplikacje jednowątkowe lub gdzie wywoływania zakres już obsługuje izolacji wątku.
+Wersje **_nolock** sufiksem są identyczne, z tą różnicą, że nie są chronione przed ingerencją przez inne wątki. Mogą one być szybsze, ponieważ nie wiążą się z obciążeniem związanym z blokowaniem innych wątków. Za pomocą tych funkcji tylko w kontekstach wątków, takich jak aplikacje jednowątkowe lub gdzie zakres wywołujący już obsługuje izolację wątków.
 
 ### <a name="generic-text-routine-mappings"></a>Mapowania procedur zwykłego tekstu
 
-|Procedura TCHAR.H|_Unicode — & _MBCS nie zdefiniowany|_MBCS zdefiniowano|_UNICODE zdefiniowano|
+|Procedura TCHAR.H|_UNICODE & _MBCS nie zdefiniowano|_MBCS zdefiniowano|_UNICODE zdefiniowano|
 |---------------------|------------------------------------|--------------------|-----------------------|
-|**_puttchar —**|**putchar —**|**putchar —**|**putwchar —**|
+|**_puttchar —**|**putchar**|**putchar**|**putwchar**|
 
 ## <a name="requirements"></a>Wymagania
 
 |Procedura|Wymagany nagłówek|
 |-------------|---------------------|
-|**putchar —**|\<stdio.h>|
-|**putwchar —**|\<stdio.h > lub \<wchar.h >|
+|**putchar**|\<stdio.h>|
+|**putwchar**|\<stdio.h > lub \<wchar.h >|
 
-Konsoli nie jest obsługiwane w aplikacjach systemu Windows platformy Uniwersalnej. Uchwyty Standardowy strumień, które są skojarzone z konsoli programu **stdin**, **stdout**, i **stderr**, muszą być przekierowywane przed funkcje wykonawcze języka C można używać ich w aplikacji platformy uniwersalnej systemu Windows . Aby uzyskać dodatkowe informacje o zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md).
+Konsola nie jest obsługiwana w aplikacjach platformy uniwersalnej Windows (UWP). Standardowe uchwyty strumienia, które są powiązane z konsolą, **stdin**, **stdout**, i **stderr**, muszą zostać przekierowane zanim funkcje środowiska wykonawczego języka C można ich używać w aplikacjach platformy UWP . Aby uzyskać dodatkowe informacje o zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md).
 
 ## <a name="libraries"></a>Biblioteki
 
-Wszystkie wersje [biblioteki wykonawcze języka C](../../c-runtime-library/crt-library-features.md).
+Wszystkie wersje [biblioteki wykonawczej C](../../c-runtime-library/crt-library-features.md).
 
 ## <a name="example"></a>Przykład
 
@@ -128,6 +128,6 @@ This is the line of output
 
 ## <a name="see-also"></a>Zobacz także
 
-[We/Wy strumienia](../../c-runtime-library/stream-i-o.md)<br/>
+[Stream operacji We/Wy](../../c-runtime-library/stream-i-o.md)<br/>
 [fputc, fputwc](fputc-fputwc.md)<br/>
 [getc, getwc](getc-getwc.md)<br/>

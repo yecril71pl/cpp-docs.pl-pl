@@ -41,12 +41,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ada1377efea8bd05dea1fd59dbbe6cd4495e6ea2
-ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
+ms.openlocfilehash: 77876aad65a06cd541949937898496f811375e58
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/01/2018
-ms.locfileid: "39404645"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43209606"
 ---
 # <a name="access-waccess"></a>_access, _waccess
 
@@ -96,7 +96,7 @@ Gdy jest używana z plikami, **_access** funkcja określa, czy określony plik l
 |04|tylko do odczytu|
 |06|Odczyt i zapis|
 
-Ta funkcja sprawdza tylko, czy plików i katalogów są tylko do odczytu lub nie, nie sprawdza ustawienia zabezpieczeń systemu plików. W tym należy tokenu dostępu. Aby uzyskać więcej informacji na temat zabezpieczeń systemu plików, zobacz [tokenów dostępu](http://msdn.microsoft.com/library/windows/desktop/aa374909). Klasy ATL istnieje w celu zapewnienia tej funkcji; zobacz [klasa CAccessToken](../../atl/reference/caccesstoken-class.md).
+Ta funkcja sprawdza tylko, czy plików i katalogów są tylko do odczytu lub nie, nie sprawdza ustawienia zabezpieczeń systemu plików. W tym należy tokenu dostępu. Aby uzyskać więcej informacji na temat zabezpieczeń systemu plików, zobacz [tokenów dostępu](/windows/desktop/SecAuthZ/access-tokens). Klasy ATL istnieje w celu zapewnienia tej funkcji; zobacz [klasa CAccessToken](../../atl/reference/caccesstoken-class.md).
 
 **_waccess —** to wersja znaku dwubajtowego **_access**; *ścieżki* argument **_waccess —** jest ciągiem znaku dwubajtowego. **_waccess —** i **_access** zachowują się identycznie.
 

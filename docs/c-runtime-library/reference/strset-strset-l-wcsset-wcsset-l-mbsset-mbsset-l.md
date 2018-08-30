@@ -69,19 +69,19 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: db6c1711931e7ac017e9d55a64e317e4e4520335
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 53096465b346403d62638e6e24a1609759a78d73
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32414340"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43206586"
 ---
 # <a name="strset-strsetl-wcsset-wcssetl-mbsset-mbssetl"></a>_strset, _strset_l, _wcsset, _wcsset_l, _mbsset, _mbsset_l
 
-Zestawy znaków ciągu na znak. Bezpieczniejsza wersje te funkcje są dostępne; zobacz [_strset_s —, _strset_s_l —, _wcsset_s —, _wcsset_s_l —, _mbsset_s —, _mbsset_s_l —](strset-s-strset-s-l-wcsset-s-wcsset-s-l-mbsset-s-mbsset-s-l.md).
+Ustawia znaki ciągu do znaku. Bardziej bezpieczne wersje tych funkcji są dostępne; zobacz [_strset_s —, _strset_s_l —, _wcsset_s —, _wcsset_s_l —, _mbsset_s —, _mbsset_s_l —](strset-s-strset-s-l-wcsset-s-wcsset-s-l-mbsset-s-mbsset-s-l.md).
 
 > [!IMPORTANT]
-> **_mbsset —** i **_mbsset_l —** nie można używać w aplikacjach, które są wykonywane w środowisku wykonawczym systemu Windows. Aby uzyskać więcej informacji, zobacz [funkcje CRT, nie są obsługiwane w aplikacjach platformy uniwersalnej systemu Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
+> **_mbsset —** i **_mbsset_l —** nie można używać w aplikacjach korzystających ze środowiska wykonawczego Windows. Aby uzyskać więcej informacji, zobacz [funkcje CRT nieobsługiwane w aplikacjach platformy uniwersalnej Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
 
 ## <a name="syntax"></a>Składnia
 
@@ -118,7 +118,7 @@ unsigned char *_mbsset_l(
 ### <a name="parameters"></a>Parametry
 
 *str*<br/>
-Ciąg zakończony zerem, należy ustawić wartość.
+Ciąg zakończony wartością null do ustawienia.
 
 *c*<br/>
 Ustawienie znaków.
@@ -128,22 +128,22 @@ Ustawienia regionalne do użycia.
 
 ## <a name="return-value"></a>Wartość zwracana
 
-Zwraca wskaźnik do ciągu zmieniony.
+Zwraca wskaźnik do zmienionego ciągu.
 
 ## <a name="remarks"></a>Uwagi
 
-**_Strset —** funkcja ustawia wszystkich znaków (oprócz znak końcowy null) *str* do *c*, przekonwertowany na **char**. **_wcsset —** i **_mbsset_l —** znaków dwubajtowych i znaków wielobajtowych wersji **_strset —**, i typy danych argumentów i zwracanych wartości różnią się odpowiednio. Funkcje te działają tak samo w przeciwnym razie wartość.
+**_Strset —** funkcja Ustawia wszystkie znaki (z wyjątkiem kończącego znaku null) z *str* do *c*, przekonwertowane na **char**. **_wcsset —** i **_mbsset_l —** są wersjami znaków dwubajtowych i znaków wielobajtowych **_strset —**, i typy danych argumentów i zwracanych wartości różnią się odpowiednio. Funkcje te zachowują się identycznie.
 
-**_mbsset —** sprawdza poprawność parametrów. Jeśli *str* wskaźnika o wartości null, jest program obsługi nieprawidłowych parametrów zostanie wywołany, zgodnie z opisem w [sprawdzanie poprawności parametru](../../c-runtime-library/parameter-validation.md). Jeśli jest dozwolone wykonywanie, aby kontynuować, **_mbsset —** zwraca **NULL** i ustawia **errno** do **einval —**. **_strset —** i **_wcsset —** nie weryfikują ich parametrów.
+**_mbsset —** sprawdza poprawność parametrów. Jeśli *str* jest pustym wskaźnikiem, wywoływany nieprawidłowy parametr uchwytu, zgodnie z opisem w [Parameter Validation](../../c-runtime-library/parameter-validation.md). Jeśli wykonanie może być kontynuowane, **_mbsset —** zwraca **NULL** i ustawia **errno** do **EINVAL**. **_strset —** i **_wcsset —** nie sprawdzają poprawność swoich parametrów.
 
-Wartość wyjściowa jest zagrożony ustawienie **lc_ctype —** ustawienie kategorii ustawień regionalnych; zobacz [setlocale, _wsetlocale —](setlocale-wsetlocale.md) Aby uzyskać więcej informacji. Wersje te funkcje są identyczne, z tą różnicą, że te nie mają **_l** używać sufiksu bieżące ustawienia regionalne i te, które **_l** sufiks zamiast tego użyj parametru ustawienia regionalne to jest Przekazano. Aby uzyskać więcej informacji, zobacz [ustawień regionalnych](../../c-runtime-library/locale.md).
+Wartość wyjściowa jest zależna od ustawienia **LC_CTYPE** ustawienia kategorii ustawień regionalnych; zobacz [setlocale, _wsetlocale](setlocale-wsetlocale.md) Aby uzyskać więcej informacji. Wersje tych funkcji są identyczne, z tą różnicą, że te, które nie mają **_l** sufiksa używa bieżących ustawień regionalnych i te, które mają **_l** sufiks używają parametru ustawień regionalnych to przekazana. Aby uzyskać więcej informacji, zobacz [ustawień regionalnych](../../c-runtime-library/locale.md).
 
 > [!IMPORTANT]
-> Funkcje te mogą być podatne na zagrożenia przepełnienie buforu. Przepełnienia buforów może służyć do ataków systemu, ponieważ mogą one powodować nieuzasadnione podniesienie uprawnień. Aby uzyskać więcej informacji, zobacz [unikanie Overruns buforu](http://msdn.microsoft.com/library/windows/desktop/ms717795).
+> Funkcje te mogą być podatne na zagrożenia przepełnienia buforu. Przepełnienia buforu może służyć do ataków systemu, ponieważ mogą one spowodować nieuzasadnione podniesienie poziomu uprawnień. Aby uzyskać więcej informacji, zobacz [unikanie przepełnień bufora](/windows/desktop/SecBP/avoiding-buffer-overruns).
 
 ### <a name="generic-text-routine-mappings"></a>Mapowania procedur zwykłego tekstu
 
-|Procedura TCHAR.H|_Unicode — & _MBCS nie zdefiniowany|_MBCS zdefiniowano|_UNICODE zdefiniowano|
+|Procedura TCHAR.H|_UNICODE & _MBCS nie zdefiniowano|_MBCS zdefiniowano|_UNICODE zdefiniowano|
 |---------------------|------------------------------------|--------------------|-----------------------|
 |**_tcsset —**|**_strset**|**_mbsset —**|**_wcsset**|
 |**_tcsset_l —**|**_strset_l**|**_mbsset_l**|**_wcsset_l**|
@@ -154,7 +154,7 @@ Wartość wyjściowa jest zagrożony ustawienie **lc_ctype —** ustawienie kate
 |-------------|---------------------|
 |**_strset**|\<string.h>|
 |**_strset_l**|\<tchar.h >|
-|**_wcsset**|\<String.h > lub \<wchar.h >|
+|**_wcsset**|\<Włącz String.h > lub \<wchar.h >|
 |**_wcsset_l**|\<tchar.h >|
 |**_mbsset —**, **_mbsset_l —**|\<mbstring.h>|
 

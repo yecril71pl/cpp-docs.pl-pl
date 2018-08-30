@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: fc70734867b0b6b7c1d9ebc5e66c45893cf1db1e
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 93a7adbca8c659a757e0e8fbb05b8fb926b237d2
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42602094"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43210313"
 ---
 # <a name="readonly-c"></a>readonly (C++)
 
@@ -36,7 +36,7 @@ Zabrania przypisania element członkowski danych.
 
 ## <a name="remarks"></a>Uwagi
 
-**Tylko do odczytu** atrybut C++ ma taką samą funkcjonalność jak [tylko do odczytu](http://msdn.microsoft.com/library/windows/desktop/aa367152) atrybutów w MIDL.
+**Tylko do odczytu** atrybut C++ ma taką samą funkcjonalność jak [tylko do odczytu](/windows/desktop/Midl/readonly) atrybutów w MIDL.
 
 Jeśli chcesz uniemożliwiają modyfikację parametru metody, należy użyć [w](../windows/in-cpp.md) atrybutu.
 

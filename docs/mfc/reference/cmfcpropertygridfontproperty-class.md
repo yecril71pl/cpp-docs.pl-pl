@@ -22,12 +22,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3ea43fefabe43bec8a5bf9b00404491a405e5416
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: d9e90570e783b2c42081da4854d54a65d1bdb9b6
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37852984"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43208869"
 ---
 # <a name="cmfcpropertygridfontproperty-class"></a>Klasa CMFCPropertyGridFontProperty
 `CMFCPropertyGridFileProperty` Klasa obsługuje element formantu listy właściwości, który powoduje otwarcie okna dialogowego wyboru czcionki.  
@@ -90,7 +90,7 @@ CMFCPropertyGridFontProperty(
  Struktury logicznej czcionek, która określa atrybuty czcionki.  
   
  [in] *dwFontDialogFlags*  
- Style, które są stosowane do czcionki okna dialogowego wyświetlanego po kliknięciu przycisku rozwijanego wartości właściwości. Wartością domyślną jest bitową kombinacją (lub) CF_EFFECTS i CF_SCREENFONTS. Aby uzyskać więcej informacji, zobacz *flagi* parametru [struktury CHOOSEFONT](http://msdn.microsoft.com/library/windows/desktop/ms646832).  
+ Style, które są stosowane do czcionki okna dialogowego wyświetlanego po kliknięciu przycisku rozwijanego wartości właściwości. Wartością domyślną jest bitową kombinacją (lub) CF_EFFECTS i CF_SCREENFONTS. Aby uzyskać więcej informacji, zobacz *flagi* parametru [struktury CHOOSEFONT](/windows/desktop/api/commdlg/ns-commdlg-tagchoosefonta).  
   
  [in] *lpszDescr*  
  Opis właściwości czcionki. Wartością domyślną jest NULL.  
@@ -129,7 +129,7 @@ LPLOGFONT GetLogFont();
 ```  
   
 ### <a name="return-value"></a>Wartość zwracana  
- Wskaźnik do [LOGFONT](http://msdn.microsoft.com/library/windows/desktop/dd145037) strukturę, która opisuje wybranej czcionki.  
+ Wskaźnik do [LOGFONT](/windows/desktop/api/wingdi/ns-wingdi-taglogfonta) strukturę, która opisuje wybranej czcionki.  
   
 ### <a name="remarks"></a>Uwagi  
   

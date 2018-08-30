@@ -1,5 +1,5 @@
 ---
-title: Kompilatora (poziom 1) ostrzeżenie C4076 | Dokumentacja firmy Microsoft
+title: Kompilator ostrzeżenie (poziom 1) C4076 | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,22 +16,26 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1cfa28469e099dbf2b6bd43213073c304d0b2894
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 928b0a78c09773e334c1a291877b74304dab66ec
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33275476"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43198481"
 ---
-# <a name="compiler-warning-level-1-c4076"></a>Kompilator C4076 ostrzegawcze (poziom 1)
-"typemod": nie można użyć typu "typename"  
-  
- Modyfikator typu, czy jest **podpisany** lub `unsigned`, nie można używać z typem niebędąca. ***typemod*** jest ignorowana.  
+# <a name="compiler-warning-level-1-c4076"></a>Kompilator ostrzeżenie (poziom 1) C4076
+
+> "*modyfikatora typu*": nie można używać z typem "*typename*"
+
+## <a name="remarks"></a>Uwagi
+
+Modyfikator typu, czy jest to **podpisany** lub **niepodpisane**, nie można używać z typem danych nie jest liczbą całkowitą. *Modyfikator typu* jest ignorowana.
   
 ## <a name="example"></a>Przykład  
- Poniższy przykład generuje C4076:  
-  
-```  
+
+Poniższy przykład spowoduje wygenerowanie C4076; Aby rozwiązać ten problem, Usuń **niepodpisane** modyfikatora typu:
+
+```cpp
 // C4076.cpp  
 // compile with: /W1 /LD  
 unsigned double x;   // C4076  

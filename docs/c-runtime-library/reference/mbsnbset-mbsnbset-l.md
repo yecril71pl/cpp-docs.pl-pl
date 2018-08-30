@@ -42,19 +42,19 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 316580b0c5f1f46ffa9f4a49ef759b347032fc09
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 17cbcb0313ac0a3e14b45d851ee6f4e98d5ec993
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32404652"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43206413"
 ---
 # <a name="mbsnbset-mbsnbsetl"></a>_mbsnbset, _mbsnbset_l
 
-Ustawia pierwszy **n** bajtów ciąg znaków wielobajtowych określony znak. Bezpieczniejsza wersje te funkcje są dostępne; zobacz [_mbsnbset_s —, _mbsnbset_s_l —](mbsnbset-s-mbsnbset-s-l.md).
+Ustawia pierwszy **n** bajtów ciąg znaków wielobajtowych do określonego znaku. Bardziej bezpieczne wersje tych funkcji są dostępne; zobacz [_mbsnbset_s —, _mbsnbset_s_l —](mbsnbset-s-mbsnbset-s-l.md).
 
 > [!IMPORTANT]
-> Nie można używać tego interfejsu API w aplikacjach, które są wykonywane w środowisku wykonawczym systemu Windows. Aby uzyskać więcej informacji, zobacz [funkcje CRT, nie są obsługiwane w aplikacjach platformy uniwersalnej systemu Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
+> Tego API nie można używać w aplikacjach korzystających ze środowiska wykonawczego Windows. Aby uzyskać więcej informacji, zobacz [funkcje CRT nieobsługiwane w aplikacjach platformy uniwersalnej Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
 
 ## <a name="syntax"></a>Składnia
 
@@ -75,10 +75,10 @@ unsigned char *_mbsnbset_l(
 ### <a name="parameters"></a>Parametry
 
 *str*<br/>
-Ciąg, który ma zostać zmienione.
+Ciąg, który ma zostać zmodyfikowana.
 
 *c*<br/>
-Ustawienie jednobajtowe lub znaków wielobajtowych.
+Ustawienie jednobajtowych lub znaków wielobajtowych.
 
 *Liczba*<br/>
 Liczba bajtów do ustawienia.
@@ -88,19 +88,19 @@ Ustawienia regionalne do użycia.
 
 ## <a name="return-value"></a>Wartość zwracana
 
-**_mbsnbset —** zwraca wskaźnik do ciągu zmieniony.
+**_mbsnbset —** zwraca wskaźnik do zmienionego ciągu.
 
 ## <a name="remarks"></a>Uwagi
 
-**_Mbsnbset —** i **_mbsnbset_l —** funkcje ustawiać co najwyżej pierwszy *liczba* bajtów *str* do *c*. Jeśli *liczba* jest większa niż długość *str*, długość *str* jest używany zamiast *liczba*. Jeśli *c* jest znaków wielobajtowych i nie można ustawić wyłącznie do ostatniego bajtu określony przez *liczby*, ostatniego bajtu jest uzupełniana znakiem puste. **_mbsnbset —** i **_mbsnbset_l —** nie umieścić kończącym wartości null na końcu *str*.
+**_Mbsnbset —** i **_mbsnbset_l —** funkcje ustawiają, co najwyżej, pierwsze *liczba* bajtów *str* do *c*. Jeśli *liczba* jest większa niż długość *str*, długość *str* jest używana zamiast *liczba*. Jeśli *c* jest znakiem wielobajtowym i nie może być wyłącznie ustawiony jako ostatni bajt określony przez *liczba*, ostatni bajt jest uzupełniany pustym znakiem. **_mbsnbset —** i **_mbsnbset_l —** nie umieszczają kończącego znaku null na końcu *str*.
 
-**_mbsnbset —** i **_mbsnbset_l —** jest podobny do **_mbsnset —**, z wyjątkiem tego, że ustawia *liczba* bajtów zamiast *liczba* znaki *c*.
+**_mbsnbset —** i **_mbsnbset_l —** przypomina **_mbsnset —**, z tą różnicą, że ustawia *liczba* bajtów zamiast *liczba* znaki *c*.
 
-Jeśli *str* jest **NULL** lub *liczba* wynosi zero, ta funkcja generuje wyjątek nieprawidłowy parametr zgodnie z opisem w [sprawdzanie poprawności parametru](../../c-runtime-library/parameter-validation.md). Jeśli jest dozwolone wykonywanie, aby kontynuować, **errno** ustawiono **einval —** i funkcja zwraca **NULL**. Ponadto jeśli *c* nie jest prawidłową znaków wielobajtowych **errno** ustawiono **einval —** i spacji zamiast niego jest używana.
+Jeśli *str* jest **NULL** lub *liczba* wynosi zero, funkcja ta wytwarza wyjątek nieprawidłowego parametru, zgodnie z opisem w [Parameter Validation](../../c-runtime-library/parameter-validation.md). Jeśli wykonanie może być kontynuowane, **errno** ustawiono **EINVAL** a funkcja zwraca **NULL**. Ponadto jeśli *c* nie jest prawidłowym znakiem wielobajtowym **errno** ustawiono **EINVAL** i spacja jest używana w zamian.
 
-Wartość wyjściowa jest zagrożony ustawienie **lc_ctype —** ustawienie kategorii ustawień regionalnych; zobacz [setlocale](setlocale-wsetlocale.md) Aby uzyskać więcej informacji. **_Mbsnbset —** wersja tej funkcji używa bieżące ustawienia regionalne tego zachowania zależnych od ustawień regionalnych; **_mbsnbset_l —** wersji jest identyczny z tą różnicą, że on używać zamiast niej przekazany parametr ustawień regionalnych. Aby uzyskać więcej informacji, zobacz [ustawień regionalnych](../../c-runtime-library/locale.md).
+Wartość wyjściowa jest zależna od ustawienia **LC_CTYPE** ustawienia kategorii ustawień regionalnych; zobacz [setlocale](setlocale-wsetlocale.md) Aby uzyskać więcej informacji. **_Mbsnbset —** wersja tej funkcji używa bieżących ustawień regionalnych dla wszelkich zachowań; **_mbsnbset_l —** wersja jest identyczna, z tą różnicą, że korzysta z parametru ustawień regionalnych przekazanych w zamian. Aby uzyskać więcej informacji, zobacz [ustawień regionalnych](../../c-runtime-library/locale.md).
 
-**Uwaga dotycząca zabezpieczeń** ten interfejs API ponosi potencjalne zagrożenie wynikające z problem przepełnienie buforu. Przepełnienie buforu problemy używanej metody ataku systemu, co powoduje nieuzasadnione podniesienie uprawnień. Aby uzyskać więcej informacji, zobacz [unikanie Overruns buforu](http://msdn.microsoft.com/library/windows/desktop/ms717795).
+**Uwaga dotycząca zabezpieczeń** ten interfejs API wiąże potencjalnym zagrożeniem spowodowanym ulepszonym problem przepełnienia buforu. Problemy z przepełnieniem buforu są częstą metodą ataku systemu, co nieuzasadnione podniesienie poziomu uprawnień. Aby uzyskać więcej informacji, zobacz [unikanie przepełnień bufora](/windows/desktop/SecBP/avoiding-buffer-overruns).
 
 ### <a name="generic-text-routine-mappings"></a>Mapowania procedur zwykłego tekstu
 
@@ -116,7 +116,7 @@ Wartość wyjściowa jest zagrożony ustawienie **lc_ctype —** ustawienie kate
 |**_mbsnbset —**|\<mbstring.h>|
 |**_mbsnbset_l**|\<mbstring.h>|
 
-Aby uzyskać więcej informacji o zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md).
+Aby uzyskać więcej informacji na temat zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Przykład
 

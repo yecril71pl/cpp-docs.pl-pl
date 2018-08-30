@@ -36,12 +36,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 61e4a36db71809dab5603211dce91fad3eedd082
-ms.sourcegitcommit: b92ca0b74f0b00372709e81333885750ba91f90e
+ms.openlocfilehash: e25684e0adcace0510f74bdc98968ef52ad6d797
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/16/2018
-ms.locfileid: "42466252"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43209571"
 ---
 # <a name="coledispatchdriver-class"></a>Klasa COleDispatchDriver
 implementuje po stronie klienta automatyzację OLE.  
@@ -283,7 +283,7 @@ void AFX_CDECL InvokeHelper(
   
  Ta funkcja konwertuje parametry VARIANTARG wartości, a następnie wywołuje [uwzględniając](/previous-versions/windows/desktop/api/oaidl/nf-oaidl-idispatch-invoke) metody. Jeśli wywołanie `Invoke` zakończy się niepowodzeniem, ta funkcja spowoduje zgłoszenie wyjątku. Jeśli SCODE (kod stanu) jest zwracany przez `IDispatch::Invoke` jest DISP_E_EXCEPTION, ta funkcja zgłosi [COleException](../../mfc/reference/coleexception-class.md) obiektu; w przeciwnym razie wyniku weryfikacji zgłasza wyjątek [COleDispatchException](../../mfc/reference/coledispatchexception-class.md).  
   
- Aby uzyskać więcej informacji, zobacz [VARIANTARG](/previous-versions/windows/desktop/api/oaidl/ns-oaidl-tagvariant), [implementowania interfejsu IDispatch](/previous-versions/windows/desktop/automat/implementing-the-idispatch-interface), [uwzględniając](/previous-versions/windows/desktop/api/oaidl/nf-oaidl-idispatch-invoke), i [struktury z COM kody błędów](http://msdn.microsoft.com/library/windows/desktop/ms690088) w Windows SDK.  
+ Aby uzyskać więcej informacji, zobacz [VARIANTARG](/previous-versions/windows/desktop/api/oaidl/ns-oaidl-tagvariant), [implementowania interfejsu IDispatch](/previous-versions/windows/desktop/automat/implementing-the-idispatch-interface), [uwzględniając](/previous-versions/windows/desktop/api/oaidl/nf-oaidl-idispatch-invoke), i [struktury z COM kody błędów](/windows/desktop/com/structure-of-com-error-codes) w Windows SDK.  
   
 ### <a name="example"></a>Przykład  
   Zobacz przykład [COleDispatchDriver::CreateDispatch](#createdispatch).  
@@ -298,7 +298,7 @@ BOOL m_bAutoRelease;
 ### <a name="remarks"></a>Uwagi  
  Domyślnie `m_bAutoRelease` jest ustawiona na wartość TRUE w konstruktorze.  
   
- Aby uzyskać więcej informacji na temat zwalnianie obiektów COM, zobacz [Implementowanie zliczanie odwołań](http://msdn.microsoft.com/library/windows/desktop/ms693431) i [IUnknown::Release](http://msdn.microsoft.com/library/windows/desktop/ms682317) w zestawie Windows SDK.  
+ Aby uzyskać więcej informacji na temat zwalnianie obiektów COM, zobacz [Implementowanie zliczanie odwołań](/windows/desktop/com/implementing-reference-counting) i [IUnknown::Release](/windows/desktop/api/unknwn/nf-unknwn-iunknown-release) w zestawie Windows SDK.  
   
 ### <a name="example"></a>Przykład  
  [!code-cpp[NVC_MFCOleContainer#9](../../mfc/codesnippet/cpp/coledispatchdriver-class_5.cpp)]  

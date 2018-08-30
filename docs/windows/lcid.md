@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: cb1e8085810eea78d18a5ef68f18e4323ec9d3f4
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 936777adf9863c233303c4b78ffd9e45aa0f3b95
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42605424"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43209534"
 ---
 # <a name="lcid"></a>lcid
 
@@ -36,7 +36,7 @@ Służy do przekazywania identyfikator ustawień regionalnych do funkcji.
 
 ## <a name="remarks"></a>Uwagi
 
-**Lcid** atrybut C++ implementuje funkcje [lcid](http://msdn.microsoft.com/library/windows/desktop/aa367067) atrybutów w MIDL. Jeśli chcesz wdrożyć ustawienia regionalne dla bloku biblioteki, użyj **lcid =** `lcid` parametr [modułu](../windows/module-cpp.md) atrybutu.
+**Lcid** atrybut C++ implementuje funkcje [lcid](/windows/desktop/Midl/lcid) atrybutów w MIDL. Jeśli chcesz wdrożyć ustawienia regionalne dla bloku biblioteki, użyj **lcid =** `lcid` parametr [modułu](../windows/module-cpp.md) atrybutu.
 
 ## <a name="example"></a>Przykład
 

@@ -40,16 +40,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4300d5fdab43cf4d22cf4e1fdee790f9d06d00d0
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 5b5414a59aac41bec29886b1aa83c20395b3e916
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32403251"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43208682"
 ---
 # <a name="asctimes-wasctimes"></a>asctime_s, _wasctime_s
 
-Konwertuj **tm** czasu struktury do ciągu znaków. Te funkcje są wersje [asctime —, _wasctime —](asctime-wasctime.md) ulepszeń zabezpieczeń zgodnie z opisem w [funkcje zabezpieczeń w CRT](../../c-runtime-library/security-features-in-the-crt.md).
+Konwertuj **tm** czasu struktury do ciągu znaków. Te funkcje są wersjami [asctime —, _wasctime —](asctime-wasctime.md) ze wzmocnieniem zabezpieczeń, zgodnie z opisem w [funkcje zabezpieczeń w CRT](../../c-runtime-library/security-features-in-the-crt.md).
 
 ## <a name="syntax"></a>Składnia
 
@@ -79,60 +79,60 @@ errno_t _wasctime_s(
 ### <a name="parameters"></a>Parametry
 
 *buffer*<br/>
-Wskaźnik do buforu do przechowywania wyników ciąg znaków. Ta funkcja zakłada wskaźnik do lokalizacji w pamięci prawidłowy o rozmiarze określonym przez *numberOfElements*.
+Wskaźnik do buforu do przechowywania wynikowy ciąg znaków. Ta funkcja zakłada wskaźnik do lokalizacji w pamięci prawidłowe o rozmiarze określonym przez *numberOfElements*.
 
 *numberOfElements*<br/>
-Rozmiar buforu używany do przechowywania wyniku.
+Rozmiar buforu używany do przechowywania wyników.
 
 *tmSource*<br/>
-Godzina i Data struktury. Ta funkcja przyjmuje wskaźnik do prawidłowej **struktury** **tm** obiektu.
+Daty/godziny struktury. Ta funkcja przyjęto założenie, wskaźnik do prawidłowego **struktury** **tm** obiektu.
 
 ## <a name="return-value"></a>Wartość zwracana
 
-Zero, jeśli to się powiedzie. W przypadku awarii, program obsługi nieprawidłowych parametrów zostanie wywołany, zgodnie z opisem w [sprawdzanie poprawności parametru](../../c-runtime-library/parameter-validation.md). Jeśli wykonanie może kontynuować, wartość zwracana jest kod błędu. Kody błędów są definiowane w numer błędu. H. Aby uzyskać więcej informacji, zobacz [errno — stałe](../../c-runtime-library/errno-constants.md). Kody błędów rzeczywiste zwrócony dla każdego warunku błędu przedstawiono w poniższej tabeli.
+Zero, jeśli to się powiedzie. Jeśli wystąpi awaria, program obsługi nieprawidłowego parametru zostanie wywołana, zgodnie z opisem w [Parameter Validation](../../c-runtime-library/parameter-validation.md). Jeśli wykonanie może być kontynuowane, wartość zwracana jest kod błędu. Kody błędów są definiowane w numer błędu. H. Aby uzyskać więcej informacji, zobacz [errno — stałe](../../c-runtime-library/errno-constants.md). W poniższej tabeli przedstawiono faktyczne kody błędów zwracane dla poszczególnych warunków wystąpienia błędu.
 
 ### <a name="error-conditions"></a>Warunki błędów
 
-|*buffer*|*numberOfElements*|*tmSource*|Zwraca|Wartość w *buforu*|
+|*buffer*|*numberOfElements*|*tmSource*|Wróć|Wartość w *buforu*|
 |--------------|------------------------|----------|------------|-----------------------|
-|**NULL**|wszystkie|wszystkie|**EINVAL —**|Nie zmodyfikowano|
-|Nie **NULL** (wskazuje prawidłowy pamięci)|0|wszystkie|**EINVAL —**|Nie zmodyfikowano|
-|Nie **wartości NULL**|0 < < 26 rozmiaru|wszystkie|**EINVAL —**|Pusty ciąg|
-|Nie **wartości NULL**|>= 26|**NULL**|**EINVAL —**|Pusty ciąg|
-|Nie **wartości NULL**|>= 26|Struktura nieprawidłową wartość czas lub wartości spoza zakresu dla składników czasu|**EINVAL —**|Pusty ciąg|
+|**NULL**|Wszystkie|Wszystkie|**EINVAL**|Nie zmodyfikowano|
+|Nie **NULL** (wskazuje prawidłowy pamięci)|0|Wszystkie|**EINVAL**|Nie zmodyfikowano|
+|Nie **o wartości NULL**|0 < < 26 rozmiar|Wszystkie|**EINVAL**|Pusty ciąg|
+|Nie **o wartości NULL**|>= 26|**NULL**|**EINVAL**|Pusty ciąg|
+|Nie **o wartości NULL**|>= 26|Nieprawidłowa godzina struktury lub wartości spoza zakresu dla składników czasu|**EINVAL**|Pusty ciąg|
 
 > [!NOTE]
-> Błąd warunki dotyczące **wasctime_s —** są podobne do **asctime_s —** z wyjątkiem, że limit rozmiaru jest mierzony w wyrazy.
+> Błąd warunki dla **wasctime_s —** są podobne do **asctime_s —** z wyjątkiem, że limit rozmiaru jest mierzony w słowach.
 
 ## <a name="remarks"></a>Uwagi
 
-**Asctime —** funkcja konwertuje godzinę przechowywane jako struktura na ciąg znaków. *TmSource* wartość zazwyczaj jest uzyskiwana w wyniku wywołania **gmtime —** lub **konwersję**. Funkcjami może służyć do wypełnienia **tm** struktury, zgodnie z definicją w czasie. H.
+**Asctime —** funkcja konwertuje czas przechowywane jako struktura do ciągu znaków. *TmSource* wartość zwykle jest uzyskiwana w wyniku wywołania **gmtime** lub **localtime**. Obu tych funkcji można wypełnić **tm** struktury, zgodnie z definicją w czasie. H.
 
 |element członkowski timeptr|Wartość|
 |--------------------|-----------|
 |**tm_hour**|Godziny od północy (0-23)|
-|**tm_isdst**|Dodatnie, jeśli czas letni są włączone; 0, jeśli czas letni nie jest włączone; ujemna, jeśli stan okresu obowiązywania czasu letniego jest nieznany. Biblioteki wykonawcze języka C zakłada Stanów Zjednoczonych zasady wykonywania obliczeń czasu (DST).|
+|**tm_isdst**|Dodatnie, jeśli czas letni obowiązuje; 0, jeśli czas letni nie jest włączone; ujemna, jeśli stan czasu jest nieznany. Biblioteki wykonawczej C zakłada zasady Stanów Zjednoczonych wykonywania obliczeń czasu letniego (DST).|
 |**tm_mday**|Dzień miesiąca (1-31)|
-|**tm_min**|Minut po godziny (0-59)|
-|**tm_mon**|Miesiąc (0-11; Stycznia = 0)|
-|**tm_sec**|Sekund po minucie (0-59)|
+|**tm_min**|Min. po godzinie (0-59)|
+|**tm_mon**|Miesiąc (0-11; Styczeń = 0)|
+|**tm_sec**|Sekundy po minucie (0-59)|
 |**tm_wday**|Dzień tygodnia (0 – 6; Niedziela = 0)|
-|**tm_yday**|Dzień roku (0-365; 1 stycznia = 0)|
-|**tm_year**|Roku (bieżącego roku minus 1900)|
+|**tm_yday**|Dzień roku (0 – 365; Od 1 stycznia = 0)|
+|**tm_year**|Rok (bieżący roku minus 1900)|
 
-Ciąg przekonwertowany znaków jest również dostosowywana zgodnie z ustawieniami strefy czasu lokalnego. Zobacz [czas, _time32 —, _time64 —](time-time32-time64.md), [_ftime —, _ftime32 —, _ftime64 —](ftime-ftime32-ftime64.md), i [localtime_s —, _localtime32_s —, _localtime64_s —](localtime-s-localtime32-s-localtime64-s.md) funkcje informacji o konfigurowaniu czas lokalny i [_tzset —](tzset.md) funkcja dla informacji na temat definiowania strefy czasowej środowiska i zmiennych globalnych.
+Ciąg przekonwertowany znak również jest dostosowywany zgodnie z ustawieniami strefy czasu lokalnego. Zobacz [czasu, _time32 —, _time64](time-time32-time64.md), [_ftime _ftime32, _ftime64](ftime-ftime32-ftime64.md), i [localtime_s —, _localtime32_s —, _localtime64_s —](localtime-s-localtime32-s-localtime64-s.md) funkcji dla informacji o konfigurowaniu czas lokalny i [_tzset —](tzset.md) funkcji dla informacji na temat definiowania środowiska strefy czasowej i zmienne globalne.
 
-Wynik ciąg utworzony przez **asctime_s —** zawiera dokładnie 26 znaków i ma postać `Wed Jan 02 02:03:55 1980\n\0`. 24-godzinnym jest używany. Wszystkie pola mają stałej szerokości. Znaku nowego wiersza i znaku null zajmują ostatnich dwóch pozycji w ciągu. Wartość przekazany jako drugi parametr należy co najmniej tym duży. Jeśli jest mniejsza ilość kodu błędu, **einval —**, zostaną zwrócone.
+Wynikowy ciąg utworzony przez **asctime_s —** zawiera dokładnie 26 znaków i ma postać `Wed Jan 02 02:03:55 1980\n\0`. Używany jest zegar 24-godzinny. Wszystkie pola są stałej szerokości. Znak nowego wiersza i znak null zajmują się dwie ostatnie pozycje ciągu. Wartości przekazanej w jako drugi parametr powinien wynosić co najmniej tak dużego. Jeśli jest mniej kodu błędu, **EINVAL**, zostaną zwrócone.
 
-**_wasctime_s —** jest wersja znaków dwubajtowych **asctime_s —**. **_wasctime_s —** i **asctime_s —** zachowują się tak samo w przeciwnym razie wartość.
+**_wasctime_s —** to wersja znaku dwubajtowego **asctime_s —**. **_wasctime_s —** i **asctime_s —** zachowują się identycznie.
 
-### <a name="generic-text-routine-mapping"></a>Rutynowe mapowanie — zwykły tekst
+### <a name="generic-text-routine-mapping"></a>Mapowania procedur zwykłego tekstu
 
-|Procedura TCHAR.H|_Unicode — & _MBCS nie zdefiniowany|_MBCS zdefiniowano|_UNICODE zdefiniowano|
+|Procedura TCHAR.H|_UNICODE & _MBCS nie zdefiniowano|_MBCS zdefiniowano|_UNICODE zdefiniowano|
 |---------------------|------------------------------------|--------------------|-----------------------|
 |**_tasctime_s —**|**asctime_s**|**asctime_s**|**_wasctime_s**|
 
-W języku C++ za pomocą tych funkcji zostało uproszczone dzięki przeciążenia szablonu; przeciążeń można wnioskować o długości buforu automatycznie, co eliminuje konieczność określić argument rozmiar. Aby uzyskać więcej informacji, zobacz [Secure szablonu Overloads](../../c-runtime-library/secure-template-overloads.md).
+W języku C++ korzystanie z tych funkcji jest uproszczone przez przeciążania szablonu; przeciążenia mogą automatycznie wywnioskować długość buforu, eliminując konieczność określenia argumentu rozmiaru. Aby uzyskać więcej informacji, zobacz [Secure przeciążenia szablonu](../../c-runtime-library/secure-template-overloads.md).
 
 ## <a name="requirements"></a>Wymagania
 
@@ -143,13 +143,13 @@ W języku C++ za pomocą tych funkcji zostało uproszczone dzięki przeciążeni
 
 ## <a name="security"></a>Zabezpieczenia
 
-Jeśli nie jest wskaźnika buforu **NULL** i wskaźnik nie wskazuje prawidłowego buforu, funkcja spowoduje zastąpienie, niezależnie od znajduje się w lokalizacji. Ponadto może to spowodować naruszenie zasad dostępu.
+Jeśli wskaźnik bufor nie jest **NULL** i wskaźnik nie wskazuje prawidłowego buforu, funkcja spowoduje zastąpienie, niezależnie od rodzaju znajduje się w lokalizacji. Może to również spowodować naruszenie zasad dostępu.
 
-A [przepełnienie buforu](http://msdn.microsoft.com/library/windows/desktop/ms717795) może wystąpić, jeśli przekazany argument rozmiar jest większy niż rzeczywisty rozmiar buforu.
+A [przepełnienie buforu](/windows/desktop/SecBP/avoiding-buffer-overruns) może wystąpić, jeśli rozmiar przekazanego argumentu jest większa niż rzeczywisty rozmiar buforu.
 
 ## <a name="example"></a>Przykład
 
-Ten program umieszcza czasu systemowego w długich liczb całkowitych **aclock**, tłumaczy go do struktury **newtime** i konwertuje ją do postaci ciągu dla danych wyjściowych, używając **asctime_s —** funkcji.
+Ten program umieszcza czas systemowy w długich liczb całkowitych **aclock**, przekształca je w strukturze **newtime** i konwertuje je do postaci ciągu dla danych wyjściowych, przy użyciu **asctime_s —** funkcji.
 
 ```C
 // crt_asctime_s.c

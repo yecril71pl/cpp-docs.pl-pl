@@ -8,12 +8,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 36b0647863076661eb130da1cde694b128f49d47
-ms.sourcegitcommit: 76fd30ff3e0352e2206460503b61f45897e60e4f
+ms.openlocfilehash: 224f4d78aec432a27b2a0258d0d6b3d4a8f2174d
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/13/2018
-ms.locfileid: "39026091"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43209511"
 ---
 # <a name="atl-http-utility-functions"></a>Funkcje pomocnicze protokołu HTTP ATL
 
@@ -27,7 +27,7 @@ Funkcje te obsługują manipulowania adresów URL.
 |[AtlGetDefaultUrlPort](#atlgetdefaulturlport)|Pobiera domyślny numer portu skojarzony z określonym protokołem lub schematem internetowym.|  
 |[AtlIsUnsafeUrlChar](#atlisunsafeurlchar)|Określa, czy znak jest bezpieczny dla adresu URL.|  
 |[AtlUnescapeUrl](#atlunescapeurl)|Konwertuje poprzedzone znakiem zmiany znaczenia znaków do ich oryginalnych wartości.|  
-|[RGBToHtml](#rgbtohtml)|Konwertuje [COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449) wartość na tekst HTML odpowiadający wartości tego koloru.|
+|[RGBToHtml](#rgbtohtml)|Konwertuje [COLORREF](/windows/desktop/gdi/colorref) wartość na tekst HTML odpowiadający wartości tego koloru.|
 |[SystemTimeToHttpDate](#systemtimetohttpdate)|Wywołaj tę funkcję, aby skonwertować czas systemowy na ciąg znaków w formacie odpowiednim do używania nagłówków HTTP.|
 
 ## <a name="requirements"></a>Wymagania  
@@ -69,10 +69,10 @@ inline BOOL AtlCanonicalizeUrl(
  Zwraca wartość TRUE w przypadku powodzenia, wartość FALSE w przypadku niepowodzenia.  
   
 ### <a name="remarks"></a>Uwagi  
- Zachowuje się jak bieżąca wersja [InternetCanonicalizeUrl](http://msdn.microsoft.com/library/windows/desktop/aa384342) , ale nie wymaga WinInet lub Internet Explorer do zainstalowania.  
+ Zachowuje się jak bieżąca wersja [InternetCanonicalizeUrl](/windows/desktop/api/wininet/nf-wininet-internetcanonicalizeurla) , ale nie wymaga WinInet lub Internet Explorer do zainstalowania.  
   
 ### <a name="see-also"></a>Zobacz też  
- [InternetCanonicalizeUrl](http://msdn.microsoft.com/library/windows/desktop/aa384342)
+ [InternetCanonicalizeUrl](/windows/desktop/api/wininet/nf-wininet-internetcanonicalizeurla)
 
  ## <a name="atlcombineurl"></a> AtlCombineUrl
  Wywołaj tę funkcję, aby połączyć podstawowy adres URL i względny adres URL w jeden kanoniczny adres URL.  
@@ -106,7 +106,7 @@ inline BOOL AtlCombineUrl(
  Zwraca wartość TRUE w przypadku powodzenia, wartość FALSE w przypadku niepowodzenia.  
   
 ### <a name="remarks"></a>Uwagi  
- Zachowuje się jak bieżąca wersja [InternetCombineUrl](http://msdn.microsoft.com/library/windows/desktop/aa384355) , ale nie wymaga WinInet lub Internet Explorer do zainstalowania.  
+ Zachowuje się jak bieżąca wersja [InternetCombineUrl](/windows/desktop/api/wininet/nf-wininet-internetcombineurla) , ale nie wymaga WinInet lub Internet Explorer do zainstalowania.  
   
 ## <a name="atlescapeurl"></a> AtlEscapeUrl
  Wywołaj tę funkcję, aby skonwertować wszystkie niebezpieczne znaki na sekwencje ucieczki.  
@@ -214,7 +214,7 @@ inline BOOL AtlUnescapeUrl(
  Odwraca proces konwersji stosowane przez [AtlEscapeUrl](#atlescapeurl).  
   
 ## <a name="rgbtohtml"></a> RGBToHtml
-Konwertuje [COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449) wartość na tekst HTML odpowiadający wartości tego koloru.  
+Konwertuje [COLORREF](/windows/desktop/gdi/colorref) wartość na tekst HTML odpowiadający wartości tego koloru.  
   
 ```  
 bool inline RGBToHtml(  

@@ -24,12 +24,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a36aaddd5540fc9259178ba1686960c488b4d246
-ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
+ms.openlocfilehash: 38c76d582a6bd30c5fa3f9285bc96853f7e9d162
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39462300"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43199482"
 ---
 # <a name="transporting-exceptions-between-threads"></a>Transport wyjątków między wątkami
 
@@ -106,7 +106,7 @@ W poniższych sekcjach opisano sposób transportu wyjątków za pomocą `excepti
 
 ## <a name="exceptionptr-type"></a>Typ exception_ptr
 
-Użyj `exception_ptr` obiekt, aby odwoływać się do bieżącego wyjątku lub wystąpienia wyjątku określonego przez użytkownika. W implementacji firmy Microsoft wyjątek jest reprezentowany przez [EXCEPTION_RECORD](https://msdn.microsoft.com/library/windows/desktop/aa363082) struktury. Każdy `exception_ptr` obiekt zawiera pole odwołania wyjątku wskazuje kopię `EXCEPTION_RECORD` strukturę, która reprezentuje wyjątek.
+Użyj `exception_ptr` obiekt, aby odwoływać się do bieżącego wyjątku lub wystąpienia wyjątku określonego przez użytkownika. W implementacji firmy Microsoft wyjątek jest reprezentowany przez [EXCEPTION_RECORD](/windows/desktop/api/winnt/ns-winnt-_exception_record) struktury. Każdy `exception_ptr` obiekt zawiera pole odwołania wyjątku wskazuje kopię `EXCEPTION_RECORD` strukturę, która reprezentuje wyjątek.
 
 Kiedy Deklarujesz `exception_ptr` zmiennej, zmienna nie jest skojarzony z żadnym wyjątkiem. To znaczy, że pole odwołania wyjątku ma wartość NULL. Takie `exception_ptr` obiekt jest nazywany *null exception_ptr*.
 

@@ -62,12 +62,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b65bed61f864bc5515c2639be6afe5984702ae29
-ms.sourcegitcommit: f923f667065cd6c4203d10ca9520600ee40e5f84
+ms.openlocfilehash: d2e9e13f7b5838cb13497dd874f7f0cf42f34e98
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/24/2018
-ms.locfileid: "42901091"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43200149"
 ---
 # <a name="cpropertysheet-class"></a>Cpropertysheet — klasa
 
@@ -117,13 +117,13 @@ class CPropertySheet : public CWnd
 
 |Nazwa|Opis|
 |----------|-----------------|
-|[CPropertySheet::m_psh](#m_psh)|Windows [PROPSHEETHEADER](http://msdn.microsoft.com/library/windows/desktop/bb774546) struktury. Zapewnia dostęp do właściwości podstawowe parametry arkusza.|
+|[CPropertySheet::m_psh](#m_psh)|Windows [PROPSHEETHEADER](/windows/desktop/api/prsht/ns-prsht-_propsheetheadera_v2) struktury. Zapewnia dostęp do właściwości podstawowe parametry arkusza.|
 
 ## <a name="remarks"></a>Uwagi
 
 Arkusz właściwości składa się z `CPropertySheet` obiektu i co najmniej jeden [CPropertyPage](../../mfc/reference/cpropertypage-class.md) obiektów. Struktura wyświetlany arkusz właściwości w oknie z zestawem karty indeksów i obszar, który zawiera aktualnie wybranej strony. Użytkownik przechodzi do określonej strony za pomocą odpowiedniej karty.
 
-`CPropertySheet` zapewnia obsługę rozwiniętym okienku [PROPSHEETHEADER](http://msdn.microsoft.com/library/windows/desktop/bb774546) struktury wprowadzone w programie Windows 98 i Windows NT Windows 2000. Struktura zawiera dodatkowe flagi i elementów członkowskich, które obsługuje tła mapy bitowej "limit".
+`CPropertySheet` zapewnia obsługę rozwiniętym okienku [PROPSHEETHEADER](/windows/desktop/api/prsht/ns-prsht-_propsheetheadera_v2) struktury wprowadzone w programie Windows 98 i Windows NT Windows 2000. Struktura zawiera dodatkowe flagi i elementów członkowskich, które obsługuje tła mapy bitowej "limit".
 
 Aby wyświetlić te nowe obrazy automatycznie obiekt arkusza właściwości, należy przekazać prawidłowe wartości dla obrazy mapy bitowej i palety w wywołaniu [CPropertySheet::Construct](#construct) lub [CPropertySheet::CPropertySheet](#cpropertysheet).
 
@@ -601,7 +601,7 @@ Na przykład można wywołać tej funkcji elementu członkowskiego, jeśli chces
 
 ##  <a name="m_psh"></a>  CPropertySheet::m_psh
 
-Struktura, w której członkowie przechowywania właściwości [PROPSHEETHEADER](http://msdn.microsoft.com/library/windows/desktop/bb774546).
+Struktura, w której członkowie przechowywania właściwości [PROPSHEETHEADER](/windows/desktop/api/prsht/ns-prsht-_propsheetheadera_v2).
 
 ### <a name="remarks"></a>Uwagi
 
@@ -624,13 +624,13 @@ void MapDialogRect(LPRECT lpRect) const;
 ### <a name="parameters"></a>Parametry
 
 *lprect —*  
-Wskazuje [Prostokąt](http://msdn.microsoft.com/library/windows/desktop/dd162897) struktury lub [CRect](../../atl-mfc-shared/reference/crect-class.md) obiekt, który zawiera okno dialogowe służy do koordynowania ma zostać przekonwertowany.
+Wskazuje [Prostokąt](https://msdn.microsoft.com/library/windows/desktop/dd162897) struktury lub [CRect](../../atl-mfc-shared/reference/crect-class.md) obiekt, który zawiera okno dialogowe służy do koordynowania ma zostać przekonwertowany.
 
 ### <a name="remarks"></a>Uwagi
 
 Okno dialogowe jednostki są wyrażony w postaci bieżące okno dialogowe podstawowej jednostce pochodzi od średniej szerokości i wysokości znaków czcionkę tekstu okno dialogowe. Jedna jednostka poziomy to jedna czwarta jednostki podstawowej szerokość okno dialogowe, a jedna jednostka w pionie jest jednej ósmej jednostki podstawowej wysokość okno dialogowe.
 
-[GetDialogBaseUnits](http://msdn.microsoft.com/library/windows/desktop/ms645475) Windows funkcja zwraca informacje o rozmiarze do czcionki systemowej, ale można określić inną czcionkę dla każdego arkusza właściwości, jeśli używasz stylu DS_SETFONT w pliku definicji zasobu. [MapDialogRect](http://msdn.microsoft.com/library/windows/desktop/ms645502) Windows funkcji opisanych w zestawie Windows SDK używa odpowiednią czcionkę dla tego okna dialogowego.
+[GetDialogBaseUnits](/windows/desktop/api/winuser/nf-winuser-getdialogbaseunits) Windows funkcja zwraca informacje o rozmiarze do czcionki systemowej, ale można określić inną czcionkę dla każdego arkusza właściwości, jeśli używasz stylu DS_SETFONT w pliku definicji zasobu. [MapDialogRect](/windows/desktop/api/winuser/nf-winuser-mapdialogrect) Windows funkcji opisanych w zestawie Windows SDK używa odpowiednią czcionkę dla tego okna dialogowego.
 
 `MapDialogRect` Funkcji składowej zastępuje jednostki okno dialogowe *lprect —* z ekranu jednostki (w pikselach), dzięki czemu prostokąt można utworzyć okno dialogowe lub położenie formantu w polu.
 
@@ -683,9 +683,9 @@ Nprzycisk: identyfikuje przycisk aby zostać naciśnięte. Ten parametr może by
 
 ### <a name="remarks"></a>Uwagi
 
-Zobacz [PSM_PRESSBUTTON](http://msdn.microsoft.com/library/windows/desktop/bb774597) Aby uzyskać więcej informacji na temat wiadomości Pressbutton zestaw SDK Windows.
+Zobacz [PSM_PRESSBUTTON](/windows/desktop/Controls/psm-pressbutton) Aby uzyskać więcej informacji na temat wiadomości Pressbutton zestaw SDK Windows.
 
-Wywołanie `PressButton` nie będą wysyłały [PSN_APPLY](http://msdn.microsoft.com/library/windows/desktop/bb774552) powiadomienia na stronie właściwości Framework. Aby wysłać powiadomienie, należy wywołać [CPropertyPage::OnOK](../../mfc/reference/cpropertypage-class.md#onok).
+Wywołanie `PressButton` nie będą wysyłały [PSN_APPLY](/windows/desktop/Controls/psn-apply) powiadomienia na stronie właściwości Framework. Aby wysłać powiadomienie, należy wywołać [CPropertyPage::OnOK](../../mfc/reference/cpropertypage-class.md#onok).
 
 ### <a name="example"></a>Przykład
 

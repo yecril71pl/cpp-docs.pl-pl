@@ -202,12 +202,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c756de90967b4c9178d5e6a584990cc53ad7786c
-ms.sourcegitcommit: f923f667065cd6c4203d10ca9520600ee40e5f84
+ms.openlocfilehash: 58509ec4f6a3773478e1bc544f28baf92d7e97b7
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/24/2018
-ms.locfileid: "42900941"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43206895"
 ---
 # <a name="cwinapp-class"></a>Klasa CWinApp
 
@@ -270,7 +270,7 @@ class CWinApp : public CWinThread
 |[CWinApp::OnIdle](#onidle)|Należy przesłonić, aby wykonać przetwarzanie specyficzne dla aplikacji w czasie bezczynności (%).|
 |[CWinApp::OpenDocumentFile](#opendocumentfile)|Metoda wywoływana przez platformę, by otworzyć dokument z pliku.|
 |[CWinApp::ParseCommandLine](#parsecommandline)|Analizuje poszczególne parametry i flagi w wierszu polecenia.|
-|[CWinApp::PreTranslateMessage](#pretranslatemessage)|Filtry komunikatów przed ich wysłaniem do funkcji Windows [TranslateMessage](http://msdn.microsoft.com/library/windows/desktop/ms644955) i [DispatchMessage](http://msdn.microsoft.com/library/windows/desktop/ms644934).|
+|[CWinApp::PreTranslateMessage](#pretranslatemessage)|Filtry komunikatów przed ich wysłaniem do funkcji Windows [TranslateMessage](https://msdn.microsoft.com/library/windows/desktop/ms644955) i [DispatchMessage](https://msdn.microsoft.com/library/windows/desktop/ms644934).|
 |[CWinApp::ProcessMessageFilter](#processmessagefilter)|Przechwytuje niektóre komunikaty zanim osiągną one aplikację.|
 |[CWinApp::ProcessShellCommand](#processshellcommand)|Obsługuje argumenty wiersza polecenia i flagi.|
 |[CWinApp::ProcessWndProcException](#processwndprocexception)|Przechwytuje wszystkie nieobsługiwane wyjątki rzucane przez komunikat aplikacji i programy obsługi poleceń.|
@@ -860,7 +860,7 @@ BOOL GetPrinterDeviceDefaults(struct tagPDA* pPrintDlg);
 ### <a name="parameters"></a>Parametry
 
 *pPrintDlg*  
-Wskaźnik do [PRINTDLG](http://msdn.microsoft.com/library/windows/desktop/ms646843) struktury.
+Wskaźnik do [PRINTDLG](/windows/desktop/api/commdlg/ns-commdlg-tagpda) struktury.
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -912,7 +912,7 @@ Ta funkcja elementu członkowskiego nie jest wielkość liter, dlatego ciągów 
 > `GetProfileBinary` przydziela bufor i zwraca jego adres w \* *ppData*. Obiekt wywołujący jest odpowiedzialny za zwalniania bufora, za pomocą **delete []**.
 
 > [!IMPORTANT]
-> Dane zwracane przez tę funkcję, nie jest zawsze wartość NULL zakończone i obiekt wywołujący musi wykonać sprawdzanie poprawności. Aby uzyskać więcej informacji, zobacz [unikanie przepełnień bufora](http://msdn.microsoft.com/library/windows/desktop/ms717795).
+> Dane zwracane przez tę funkcję, nie jest zawsze wartość NULL zakończone i obiekt wywołujący musi wykonać sprawdzanie poprawności. Aby uzyskać więcej informacji, zobacz [unikanie przepełnień bufora](/windows/desktop/SecBP/avoiding-buffer-overruns).
 
 ### <a name="example"></a>Przykład
 
@@ -953,7 +953,7 @@ Ta funkcja elementu członkowskiego obsługę wartości w zapisie szesnastkowym.
 Ta funkcja elementu członkowskiego nie jest wielkość liter, dlatego ciągów w *lpszSection* i *lpszEntry* parametry mogą się różnić w przypadku.
 
 > [!IMPORTANT]
-> Dane zwracane przez tę funkcję, nie jest zawsze wartość NULL zakończone i obiekt wywołujący musi wykonać sprawdzanie poprawności. Aby uzyskać więcej informacji, zobacz [unikanie przepełnień bufora](http://msdn.microsoft.com/library/windows/desktop/ms717795).
+> Dane zwracane przez tę funkcję, nie jest zawsze wartość NULL zakończone i obiekt wywołujący musi wykonać sprawdzanie poprawności. Aby uzyskać więcej informacji, zobacz [unikanie przepełnień bufora](/windows/desktop/SecBP/avoiding-buffer-overruns).
 
 ### <a name="example"></a>Przykład
 
@@ -990,7 +990,7 @@ Wartość zwracana jest ciąg, z aplikacji. Plik INI lub *lpszDefault* Jeśli ni
 ### <a name="remarks"></a>Uwagi
 
 > [!IMPORTANT]
-> Dane zwracane przez tę funkcję, nie jest zawsze wartość NULL zakończone i obiekt wywołujący musi wykonać sprawdzanie poprawności. Aby uzyskać więcej informacji, zobacz [unikanie przepełnień bufora](http://msdn.microsoft.com/library/windows/desktop/ms717795).
+> Dane zwracane przez tę funkcję, nie jest zawsze wartość NULL zakończone i obiekt wywołujący musi wykonać sprawdzanie poprawności. Aby uzyskać więcej informacji, zobacz [unikanie przepełnień bufora](/windows/desktop/SecBP/avoiding-buffer-overruns).
 
 ### <a name="example"></a>Przykład
 
@@ -1073,7 +1073,7 @@ Inicjowanie aplikacji pod względem koncepcyjnym jest podzielona na dwie sekcje:
 Zastąp `InitInstance` zainicjować każde nowe wystąpienie aplikacji uruchomionej w obszarze Windows. Zazwyczaj można zastąpić `InitInstance` do konstruowania obiektu głównego okna i ustaw `CWinThread::m_pMainWnd` element członkowski danych wskaż tego okna. Aby uzyskać więcej informacji w przypadku przesłaniania tej funkcji elementu członkowskiego, zobacz [CWinApp: klasa aplikacji](../../mfc/cwinapp-the-application-class.md).
 
 > [!NOTE]
-> Aplikacji MFC muszą być zainicjowane w formacie komórek wielowątkowych pojedynczego (STA). Jeśli wywołasz [CoInitializeEx](http://msdn.microsoft.com/library/windows/desktop/ms695279) w swojej `InitInstance` zastąpienia, określ COINIT_APARTMENTTHREADED (zamiast COINIT_MULTITHREADED). Aby uzyskać więcej informacji, zobacz PRB: Aplikacja MFC przestaje odpowiadać podczas inicjowania aplikacji jako wielowątkowe apartamentu (828643) na [ http://support.microsoft.com/default.aspxscid=kb; en-us; 828643](http://support.microsoft.com/default.aspxscid=kb;en-us;828643).
+> Aplikacji MFC muszą być zainicjowane w formacie komórek wielowątkowych pojedynczego (STA). Jeśli wywołasz [CoInitializeEx](/windows/desktop/api/combaseapi/nf-combaseapi-coinitializeex) w swojej `InitInstance` zastąpienia, określ COINIT_APARTMENTTHREADED (zamiast COINIT_MULTITHREADED). Aby uzyskać więcej informacji, zobacz PRB: Aplikacja MFC przestaje odpowiadać podczas inicjowania aplikacji jako wielowątkowe apartamentu (828643) na [ http://support.microsoft.com/default.aspxscid=kb; en-us; 828643](http://support.microsoft.com/default.aspxscid=kb;en-us;828643).
 
 ### <a name="example"></a>Przykład
 
@@ -1109,7 +1109,7 @@ HCURSOR LoadCursor(LPCTSTR lpszResourceName) const;  HCURSOR LoadCursor(UINT nID
 Wskazuje ciąg zakończony znakiem null, który zawiera nazwę zasobu kursora. Możesz użyć `CString` dla tego argumentu.
 
 *nIDResource*  
-Identyfikator zasobu kursora. Aby uzyskać listę zasobów, zobacz [LoadCursor](http://msdn.microsoft.com/library/windows/desktop/ms648391) w zestawie Windows SDK.
+Identyfikator zasobu kursora. Aby uzyskać listę zasobów, zobacz [LoadCursor](/windows/desktop/api/winuser/nf-winuser-loadcursora) w zestawie Windows SDK.
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -1152,7 +1152,7 @@ Dojście do ikony, jeśli to się powiedzie; w przeciwnym razie wartość NULL.
 Możesz użyć [LoadStandardIcon](#loadstandardicon) lub [LoadOEMIcon](#loadoemicon) funkcja elementu członkowskiego, aby uzyskać dostęp do wstępnie zdefiniowanych ikon Windows.
 
 > [!NOTE]
-> Ta funkcja elementu członkowskiego wywołuje funkcję Win32 API [LoadIcon](http://msdn.microsoft.com/library/windows/desktop/ms648072), który może ładować wyłącznie ikony, którego rozmiar jest zgodny z wartości metryk systemu SM_CXICON i SM_CYICON.
+> Ta funkcja elementu członkowskiego wywołuje funkcję Win32 API [LoadIcon](/windows/desktop/api/winuser/nf-winuser-loadicona), który może ładować wyłącznie ikony, którego rozmiar jest zgodny z wartości metryk systemu SM_CXICON i SM_CYICON.
 
 ##  <a name="loadoemcursor"></a>  CWinApp::LoadOEMCursor
 
@@ -1262,7 +1262,7 @@ HICON LoadStandardIcon(LPCTSTR lpszIconName) const;
 ### <a name="parameters"></a>Parametry
 
 *lpszIconName*  
-Manifestu identyfikator stałej określa wstępnie zdefiniowanych ikonę Windows. Te identyfikatory są definiowane w systemie WINDOWS. H. Aby uzyskać listę możliwych wartości wstępnie zdefiniowane i ich opisów, zobacz *lpIconName* parametru w [LoadIcon](http://msdn.microsoft.com/library/windows/desktop/ms648072) w zestawie Windows SDK.
+Manifestu identyfikator stałej określa wstępnie zdefiniowanych ikonę Windows. Te identyfikatory są definiowane w systemie WINDOWS. H. Aby uzyskać listę możliwych wartości wstępnie zdefiniowane i ich opisów, zobacz *lpIconName* parametru w [LoadIcon](/windows/desktop/api/winuser/nf-winuser-loadicona) w zestawie Windows SDK.
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -1444,7 +1444,7 @@ LPCTSTR m_pszAppName;
 
 Nazwa aplikacji mogą pochodzić z przekazanego do parametru [CWinApp](#cwinapp) konstruktora, lub, jeśli nie zostanie określony, do ciągu zasobu z Identyfikatorem AFX_IDS_APP_TITLE. Jeśli nazwa aplikacji nie zostanie znaleziony w zasobie, pochodzi z tego programu. Nazwa pliku EXE.
 
-Zwrócona przez funkcję globalnego [afxgetappname —](application-information-and-management.md#afxgetappname). `m_pszAppName` jest publiczną zmienną typu **const char\***.
+Zwrócona przez funkcję globalnego [afxgetappname —](application-information-and-management.md#afxgetappname). `m_pszAppName` jest publiczną zmienną typu **const char**<strong>\*</strong>.
 
 > [!NOTE]
 > Jeśli przypisujesz wartość do `m_pszAppName`, muszą być dynamicznie przydzielane na stosie. `CWinApp` Wywołania destruktora **bezpłatne**() za pomocą tego wskaźnika. Wiele chcesz użyć `_tcsdup`wykonać przydzielanie funkcja biblioteki wykonawczej (). Ponadto zwolnić pamięć, o których skojarzone z bieżącym wskaźnika przed przypisaniem nowych wartości. Na przykład:
@@ -1465,7 +1465,7 @@ LPCTSTR m_pszExeName;
 
 ### <a name="remarks"></a>Uwagi
 
-W odróżnieniu od [m_pszAppName](#m_pszappname), ta nazwa nie może zawierać spacji. `m_pszExeName` jest publiczną zmienną typu **const char\***.
+W odróżnieniu od [m_pszAppName](#m_pszappname), ta nazwa nie może zawierać spacji. `m_pszExeName` jest publiczną zmienną typu **const char**<strong>\*</strong>.
 
 > [!NOTE]
 > Jeśli przypisujesz wartość do `m_pszExeName`, muszą być dynamicznie przydzielane na stosie. `CWinApp` Wywołania destruktora **bezpłatne**() za pomocą tego wskaźnika. Wiele chcesz użyć `_tcsdup`wykonać przydzielanie funkcja biblioteki wykonawczej (). Ponadto zwolnić pamięć, o których skojarzone z bieżącym wskaźnika przed przypisaniem nowych wartości. Na przykład:
@@ -1482,7 +1482,7 @@ LPCTSTR m_pszHelpFilePath;
 
 ### <a name="remarks"></a>Uwagi
 
-Domyślnie, inicjuje platformę `m_pszHelpFilePath` do nazwy aplikacji ". HLP"dołączony. Aby zmienić nazwę pliku pomocy, należy ustawić `m_pszHelpFilePath` wskaż ciąg, który zawiera pełną nazwę pliku odpowiednią pomoc. Wygodne miejsce, w tym celu znajduje się w aplikacji [InitInstance](#initinstance) funkcji. `m_pszHelpFilePath` jest publiczną zmienną typu **const char\***.
+Domyślnie, inicjuje platformę `m_pszHelpFilePath` do nazwy aplikacji ". HLP"dołączony. Aby zmienić nazwę pliku pomocy, należy ustawić `m_pszHelpFilePath` wskaż ciąg, który zawiera pełną nazwę pliku odpowiednią pomoc. Wygodne miejsce, w tym celu znajduje się w aplikacji [InitInstance](#initinstance) funkcji. `m_pszHelpFilePath` jest publiczną zmienną typu **const char**<strong>\*</strong>.
 
 > [!NOTE]
 > Jeśli przypisujesz wartość do `m_pszHelpFilePath`, muszą być dynamicznie przydzielane na stosie. `CWinApp` Wywołania destruktora **bezpłatne**() za pomocą tego wskaźnika. Wiele chcesz użyć `_tcsdup`wykonać przydzielanie funkcja biblioteki wykonawczej (). Ponadto zwolnić pamięć, o których skojarzone z bieżącym wskaźnika przed przypisaniem nowych wartości. Na przykład:
@@ -1499,7 +1499,7 @@ LPCTSTR m_pszProfileName;
 
 ### <a name="remarks"></a>Uwagi
 
-`m_pszProfileName` jest publiczną zmienną typu **const char\***.
+`m_pszProfileName` jest publiczną zmienną typu **const char**<strong>\*</strong>.
 
 > [!NOTE]
 > Jeśli przypisujesz wartość do `m_pszProfileName`, muszą być dynamicznie przydzielane na stosie. `CWinApp` Wywołania destruktora **bezpłatne**() za pomocą tego wskaźnika. Wiele chcesz użyć `_tcsdup`wykonać przydzielanie funkcja biblioteki wykonawczej (). Ponadto zwolnić pamięć, o których skojarzone z bieżącym wskaźnika przed przypisaniem nowych wartości. Na przykład:
@@ -1794,7 +1794,7 @@ Aby uzyskać opis flag wiersza polecenia, zobacz [CCommandLineInfo::m_nShellComm
 
 ##  <a name="pretranslatemessage"></a>  CWinApp::PreTranslateMessage
 
-Zastąp tę funkcję, aby przefiltrować komunikaty okna, zanim zostaną rozesłane do funkcji Windows [TranslateMessage](http://msdn.microsoft.com/library/windows/desktop/ms644955) i [DispatchMessage](http://msdn.microsoft.com/library/windows/desktop/ms644934) Domyślna implementacja wykonuje klawisza skrótu tłumaczenie, więc należy wywołać `CWinApp::PreTranslateMessage` funkcja elementu członkowskiego w zgodnym z przesłoniętą wersji.
+Zastąp tę funkcję, aby przefiltrować komunikaty okna, zanim zostaną rozesłane do funkcji Windows [TranslateMessage](https://msdn.microsoft.com/library/windows/desktop/ms644955) i [DispatchMessage](https://msdn.microsoft.com/library/windows/desktop/ms644934) Domyślna implementacja wykonuje klawisza skrótu tłumaczenie, więc należy wywołać `CWinApp::PreTranslateMessage` funkcja elementu członkowskiego w zgodnym z przesłoniętą wersji.
 
 ```
 virtual BOOL PreTranslateMessage(MSG* pMsg);
@@ -2131,7 +2131,7 @@ void SelectPrinter(
 Dojście do [DEVNAMES](../../mfc/reference/devnames-structure.md) struktura, która identyfikuje sterownika, urządzenia i dane wyjściowe nazwy portu określonej drukarki.
 
 *pole hDevMode*  
-Dojście do [DEVMODE](http://msdn.microsoft.com/library/windows/desktop/dd183565) strukturę, która określa informacje dotyczące inicjowania urządzenia i środowiska drukarki.
+Dojście do [DEVMODE](/windows/desktop/api/wingdi/ns-wingdi-_devicemodea) strukturę, która określa informacje dotyczące inicjowania urządzenia i środowiska drukarki.
 
 *bFreeOld*  
 Zwalnia wcześniej wybrane drukarki.
@@ -2270,7 +2270,7 @@ virtual void WinHelp(
 Określa dodatkowe dane. Wartość zależy od wartości *nCmd* parametru.
 
 *nCmd*  
-Określa typ żądanego pomocy. Aby uzyskać listę możliwych wartości i ich wpływ *dwData* parametrów, zobacz [WinHelp](http://msdn.microsoft.com/library/windows/desktop/bb762267) funkcji Windows.
+Określa typ żądanego pomocy. Aby uzyskać listę możliwych wartości i ich wpływ *dwData* parametrów, zobacz [WinHelp](/windows/desktop/api/winuser/nf-winuser-winhelpa) funkcji Windows.
 
 ### <a name="remarks"></a>Uwagi
 

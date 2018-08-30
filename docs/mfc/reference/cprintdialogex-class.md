@@ -48,12 +48,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 45975354305323f2a3a4d4f8916b901110d91441
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: 6d1e8ae445da8c69901c319665704e06895103d1
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37849587"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43199512"
 ---
 # <a name="cprintdialogex-class"></a>Klasa CPrintDialogEx
 Hermetyzuje usługi świadczone przez arkusz własności drukowania Windows.  
@@ -102,7 +102,7 @@ class CPrintDialogEx : public CCommonDialog
   
  Jeśli chcesz, aby aplikacja obsługiwała drukowanie bez angażowania struktury, możesz użyć `CPrintDialogEx` klasy "w jakim jest" za pomocą konstruktora przewidzianej lub może pochodzić własne klasy okien dialogowych z `CPrintDialogEx` i zapisywanie konstruktora do własnych potrzeb. W obu przypadkach tych okien dialogowych będą zachowywać się jak standardowego okna dialogowe MFC, ponieważ są pochodnymi klasy `CCommonDialog`.  
   
- Aby użyć `CPrintDialogEx` obiektów, najpierw utwórz obiekt przy użyciu `CPrintDialogEx` konstruktora. Gdy okno dialogowe został skonstruowany, można ustawić lub zmodyfikować dowolne wartości na [m_pdex](#m_pdex) strukturę, aby zainicjować wartości formantów w oknie dialogowym. `m_pdex` Struktury jest typu [PRINTDLGEX](http://msdn.microsoft.com/library/windows/desktop/ms646844). Aby uzyskać więcej informacji na temat tej struktury zobacz zestaw Windows SDK.  
+ Aby użyć `CPrintDialogEx` obiektów, najpierw utwórz obiekt przy użyciu `CPrintDialogEx` konstruktora. Gdy okno dialogowe został skonstruowany, można ustawić lub zmodyfikować dowolne wartości na [m_pdex](#m_pdex) strukturę, aby zainicjować wartości formantów w oknie dialogowym. `m_pdex` Struktury jest typu [PRINTDLGEX](/windows/desktop/api/commdlg/ns-commdlg-tagpdexa). Aby uzyskać więcej informacji na temat tej struktury zobacz zestaw Windows SDK.  
   
  Jeśli nie podasz własne dojść w `m_pdex` dla `hDevMode` i `hDevNames` członków, pamiętaj wywołać funkcję Windows `GlobalFree` dla te dojścia, gdy są wykonywane za pomocą okna dialogowego.  
   
@@ -147,7 +147,7 @@ CPrintDialogEx(
   
 ### <a name="parameters"></a>Parametry  
  *Flagidw*  
- Co najmniej jeden flagi, których można użyć, aby dostosować ustawienia okna dialogowego łączyć przy użyciu bitowego operatora OR. Na przykład flaga PD_ALLPAGES ustawia domyślny zakres wydruku dla wszystkich stron dokumentu. Zobacz [PRINTDLGEX](http://msdn.microsoft.com/library/windows/desktop/ms646844) struktury w zestawie Windows SDK, aby uzyskać więcej informacji na temat tych flag.  
+ Co najmniej jeden flagi, których można użyć, aby dostosować ustawienia okna dialogowego łączyć przy użyciu bitowego operatora OR. Na przykład flaga PD_ALLPAGES ustawia domyślny zakres wydruku dla wszystkich stron dokumentu. Zobacz [PRINTDLGEX](/windows/desktop/api/commdlg/ns-commdlg-tagpdexa) struktury w zestawie Windows SDK, aby uzyskać więcej informacji na temat tych flag.  
   
  *pParentWnd*  
  Wskaźnik do okna nadrzędnego lub właściciela okno dialogowe.  
@@ -156,7 +156,7 @@ CPrintDialogEx(
  Ta funkcja elementu członkowskiego tylko tworzy obiekt. Użyj `DoModal` funkcja elementu członkowskiego, aby wyświetlić okno dialogowe.  
   
 ##  <a name="createprinterdc"></a>  CPrintDialogEx::CreatePrinterDC  
- Tworzy kontekst urządzenia drukarki (DC) na podstawie [DEVMODE](http://msdn.microsoft.com/library/windows/desktop/dd183565) i [DEVNAMES](../../mfc/reference/devnames-structure.md) struktury.  
+ Tworzy kontekst urządzenia drukarki (DC) na podstawie [DEVMODE](/windows/desktop/api/wingdi/ns-wingdi-_devicemodea) i [DEVNAMES](../../mfc/reference/devnames-structure.md) struktury.  
   
 ```  
 HDC CreatePrinterDC();
@@ -178,14 +178,14 @@ virtual INT_PTR DoModal();
 ```  
   
 ### <a name="return-value"></a>Wartość zwracana  
- INT_PTR zwracana wartość jest faktycznie HRESULT. Zobacz sekcję zwracają wartości w [PrintDlgEx](http://msdn.microsoft.com/library/windows/desktop/ms646942) w zestawie Windows SDK.  
+ INT_PTR zwracana wartość jest faktycznie HRESULT. Zobacz sekcję zwracają wartości w [PrintDlgEx](https://msdn.microsoft.com/library/windows/desktop/ms646942) w zestawie Windows SDK.  
   
 ### <a name="remarks"></a>Uwagi  
  Aby inicjowanie różne opcje Okno dialogowe drukowania, ustawiając członkowie `m_pdex` struktury, należy to zrobić przed wywołaniem `DoModal`, ale po jest konstruowany obiektu okna dialogowego.  
   
  Po wywołaniu `DoModal`, może wywołać inny członek funkcje, które można pobrać ustawień lub wprowadzania informacji przez użytkownika w oknie dialogowym.  
   
- Jeśli flaga PD_RETURNDC jest używany podczas wywoływania `DoModal`, drukarki kontrolera domeny, które zostaną zwrócone w `hDC` członkiem [m_pdex](#m_pdex). Ten kontroler domeny musi być zwolniona przez wywołanie [DeleteDC](http://msdn.microsoft.com/library/windows/desktop/dd183533) przez obiekt wywołujący `CPrintDialogEx`.  
+ Jeśli flaga PD_RETURNDC jest używany podczas wywoływania `DoModal`, drukarki kontrolera domeny, które zostaną zwrócone w `hDC` członkiem [m_pdex](#m_pdex). Ten kontroler domeny musi być zwolniona przez wywołanie [DeleteDC](/windows/desktop/api/wingdi/nf-wingdi-deletedc) przez obiekt wywołujący `CPrintDialogEx`.  
   
 ##  <a name="getcopies"></a>  CPrintDialogEx::GetCopies  
  Wywołaj tę funkcję, po wywołaniu `DoModal` można pobrać liczby kopii żądane.  
@@ -208,11 +208,11 @@ BOOL GetDefaults();
  Wartość TRUE, jeśli pomyślnie, w przeciwnym razie wartość FALSE.  
   
 ### <a name="remarks"></a>Uwagi  
- Tworzy kontekst urządzenia drukarki (DC) na podstawie [DEVMODE](http://msdn.microsoft.com/library/windows/desktop/dd183565) i [DEVNAMES](../../mfc/reference/devnames-structure.md) struktury.  
+ Tworzy kontekst urządzenia drukarki (DC) na podstawie [DEVMODE](/windows/desktop/api/wingdi/ns-wingdi-_devicemodea) i [DEVNAMES](../../mfc/reference/devnames-structure.md) struktury.  
   
- `GetDefaults` nie są wyświetlane arkusz własności drukowania. Zamiast ustawia `hDevNames` i `hDevMode` członkowie [m_pdex](#m_pdex) do dojścia do [DEVMODE](http://msdn.microsoft.com/library/windows/desktop/dd183565) i [DEVNAMES](../../mfc/reference/devnames-structure.md) struktur, które są inicjowane dla drukarka domyślna systemu. Zarówno `hDevNames` i `hDevMode` musi mieć wartość NULL, lub `GetDefaults` zakończy się niepowodzeniem.  
+ `GetDefaults` nie są wyświetlane arkusz własności drukowania. Zamiast ustawia `hDevNames` i `hDevMode` członkowie [m_pdex](#m_pdex) do dojścia do [DEVMODE](/windows/desktop/api/wingdi/ns-wingdi-_devicemodea) i [DEVNAMES](../../mfc/reference/devnames-structure.md) struktur, które są inicjowane dla drukarka domyślna systemu. Zarówno `hDevNames` i `hDevMode` musi mieć wartość NULL, lub `GetDefaults` zakończy się niepowodzeniem.  
   
- Jeśli ustawiona jest flaga PD_RETURNDC, ta funkcja nie zwróci jedynie `hDevNames` i `hDevMode` (znajdujący się w `m_pdex.hDevNames` i `m_pdex.hDevMode`) do obiektu wywołującego, ale zwróci drukarkę kontrolera domeny w `m_pdex.hDC`. Jest odpowiedzialny za obiekt wywołujący, aby usunąć drukarki kontrolera domeny, a następnie wywołać Windows [GlobalFree](http://msdn.microsoft.com/library/windows/desktop/aa366579) funkcja obsługuje po zakończeniu `CPrintDialogEx` obiektu.  
+ Jeśli ustawiona jest flaga PD_RETURNDC, ta funkcja nie zwróci jedynie `hDevNames` i `hDevMode` (znajdujący się w `m_pdex.hDevNames` i `m_pdex.hDevMode`) do obiektu wywołującego, ale zwróci drukarkę kontrolera domeny w `m_pdex.hDC`. Jest odpowiedzialny za obiekt wywołujący, aby usunąć drukarki kontrolera domeny, a następnie wywołać Windows [GlobalFree](/windows/desktop/api/winbase/nf-winbase-globalfree) funkcja obsługuje po zakończeniu `CPrintDialogEx` obiektu.  
   
 ##  <a name="getdevicename"></a>  CPrintDialogEx::GetDeviceName  
  Wywołaj tę funkcję, po wywołaniu [DoModal](#domodal) można pobrać nazwę aktualnie wybranej drukarki lub po wywołaniu [GetDefaults](#getdefaults) pobrać nazwy zostanie użyta drukarka domyślna.  
@@ -235,7 +235,7 @@ LPDEVMODE GetDevMode() const;
 ```  
   
 ### <a name="return-value"></a>Wartość zwracana  
- [DEVMODE](http://msdn.microsoft.com/library/windows/desktop/dd183565) struktury danych, który zawiera informacje na temat inicjowania urządzenia i środowisko sterownika drukarki. Musisz odblokować pamięć podjęte przez tę strukturę z Windows [GlobalUnlock](http://msdn.microsoft.com/library/windows/desktop/aa366595) funkcji, która jest opisana w zestawie Windows SDK.  
+ [DEVMODE](/windows/desktop/api/wingdi/ns-wingdi-_devicemodea) struktury danych, który zawiera informacje na temat inicjowania urządzenia i środowisko sterownika drukarki. Musisz odblokować pamięć podjęte przez tę strukturę z Windows [GlobalUnlock](/windows/desktop/api/winbase/nf-winbase-globalunlock) funkcji, która jest opisana w zestawie Windows SDK.  
   
 ##  <a name="getdrivername"></a>  CPrintDialogEx::GetDriverName  
  Wywołaj tę funkcję, po wywołaniu [DoModal](#domodal) lub [GetDefaults](#getdefaults) można pobrać nazwę sterownika drukarki zdefiniowaną przez system.  
@@ -271,7 +271,7 @@ HDC GetPrinterDC() const;
  Dojście do kontekstu urządzenia drukarki.  
   
 ### <a name="remarks"></a>Uwagi  
- Należy wywołać Windows [DeleteDC](http://msdn.microsoft.com/library/windows/desktop/dd183533) funkcję, aby usunąć kontekst urządzenia, po zakończeniu korzystania z niego.  
+ Należy wywołać Windows [DeleteDC](/windows/desktop/api/wingdi/nf-wingdi-deletedc) funkcję, aby usunąć kontekst urządzenia, po zakończeniu korzystania z niego.  
   
 ##  <a name="m_pdex"></a>  CPrintDialogEx::m_pdex  
  Struktura PRINTDLGEX, której członkowie przechowywania właściwości obiektu okna dialogowego.  
@@ -281,7 +281,7 @@ PRINTDLGEX m_pdex;
 ```  
   
 ### <a name="remarks"></a>Uwagi  
- Po konstruowanie `CPrintDialogEx` obiektu, możesz użyć `m_pdex` można ustawić różne aspekty okno dialogowe przed wywołaniem [DoModal](#domodal) funkcja elementu członkowskiego. Aby uzyskać więcej informacji na temat `m_pdex` struktury, zobacz [PRINTDLGEX](http://msdn.microsoft.com/library/windows/desktop/ms646844) w zestawie Windows SDK.  
+ Po konstruowanie `CPrintDialogEx` obiektu, możesz użyć `m_pdex` można ustawić różne aspekty okno dialogowe przed wywołaniem [DoModal](#domodal) funkcja elementu członkowskiego. Aby uzyskać więcej informacji na temat `m_pdex` struktury, zobacz [PRINTDLGEX](/windows/desktop/api/commdlg/ns-commdlg-tagpdexa) w zestawie Windows SDK.  
   
  Jeśli zmodyfikujesz `m_pdex` element członkowski danych bezpośrednio, spowoduje zastąpienie wszelkich zachowanie domyślne.  
   
@@ -326,7 +326,7 @@ BOOL PrintRange() const;
  Wartość TRUE, jeśli tylko zakres stron w dokumencie mają być drukowane; w przeciwnym razie wartość FALSE.  
   
 ### <a name="remarks"></a>Uwagi  
- Zakresy określonej strony można ustalić na podstawie [m_pdex](#m_pdex) (zobacz `nPageRanges`, `nMaxPageRanges`, i `lpPageRanges` w [PRINTDLGEX](http://msdn.microsoft.com/library/windows/desktop/ms646844) struktury w zestawie Windows SDK).  
+ Zakresy określonej strony można ustalić na podstawie [m_pdex](#m_pdex) (zobacz `nPageRanges`, `nMaxPageRanges`, i `lpPageRanges` w [PRINTDLGEX](/windows/desktop/api/commdlg/ns-commdlg-tagpdexa) struktury w zestawie Windows SDK).  
   
 ##  <a name="printselection"></a>  CPrintDialogEx::PrintSelection  
  Wywołaj tę funkcję, po wywołaniu `DoModal` do określenia, czy można drukować tylko aktualnie wybrane elementy.  

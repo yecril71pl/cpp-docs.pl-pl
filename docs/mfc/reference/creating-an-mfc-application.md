@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d5907006fcff607ad91f9cf579e5bf022c02b8f0
-ms.sourcegitcommit: 76fd30ff3e0352e2206460503b61f45897e60e4f
+ms.openlocfilehash: 9ba0930d0d1441801d18152a5ece4ace70f70425
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/13/2018
-ms.locfileid: "39026994"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43207340"
 ---
 # <a name="creating-an-mfc-application"></a>Tworzenie aplikacji MFC
 Aplikacja MFC jest aplikacją wykonywalnego pliku dla Windows, który jest oparty na bibliotece Microsoft Foundation Class (MFC). Najprostszym sposobem utworzenia aplikacji MFC jest użycie Kreatora aplikacji MFC.  
@@ -59,8 +59,8 @@ Aplikacja MFC jest aplikacją wykonywalnego pliku dla Windows, który jest opart
  Po utworzeniu projektu można przeglądać pliki utworzone w **Eksploratora rozwiązań**. Aby uzyskać więcej informacji o plikach Kreator tworzy dla projektu, zobacz plik ReadMe.txt wygenerowany przez projekt. Aby uzyskać więcej informacji na temat typów plików, zobacz [typy plików utworzonych dla projektów Visual C++](../../ide/file-types-created-for-visual-cpp-projects.md).  
   
 ## <a name="see-also"></a>Zobacz też  
- [Przygotowanie debugowania: Visual C++ Windows aplikacji](http://msdn.microsoft.com/a8bc54de-41a3-464d-9a12-db9bdcbc1ad5)   
+ [Przygotowanie debugowania: Visual C++ Windows aplikacji](https://msdn.microsoft.com/a8bc54de-41a3-464d-9a12-db9bdcbc1ad5)   
  [Dodawanie funkcji za pomocą kreatorów kodu](../../ide/adding-functionality-with-code-wizards-cpp.md)   
  [Strony właściwości](../../ide/property-pages-visual-cpp.md)   
- [Wdrażanie aplikacji](http://msdn.microsoft.com/4ff8881d-0daf-47e7-bfe7-774c625031b4)
+ [Wdrażanie aplikacji](https://msdn.microsoft.com/4ff8881d-0daf-47e7-bfe7-774c625031b4)
 

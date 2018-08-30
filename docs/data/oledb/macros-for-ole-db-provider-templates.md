@@ -62,12 +62,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 747f54e4ae37fe31eeea7540c1531b988d692427
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: e2456eed4f55fe5a5f68552cfe91e5785fc99cf5
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42466075"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43209024"
 ---
 # <a name="macros-for-ole-db-provider-templates"></a>Makra dla szablonów dostawców OLE DB
 Makra dostawcy OLE DB szablonów oferty funkcji w następujące kategorie:  
@@ -231,7 +231,7 @@ PROPERTY_INFO_ENTRY(dwPropID)
  [in] A [DBPROPID](/previous-versions/windows/desktop/ms723882\(v=vs.85\)) wartości, które mogą być używane w połączeniu z właściwością ustawić identyfikator GUID służący do identyfikowania właściwości.  
   
 #### <a name="remarks"></a>Uwagi  
- To makro, ustawia wartość właściwości typu `DWORD` wartość domyślną, zdefiniowane w ATLDB. H. Aby ustawić wartość wybranej właściwości, należy użyć [PROPERTY_INFO_ENTRY_VALUE](../../data/oledb/property-info-entry-value.md). Aby ustawić [VARTYPE](http://msdn.microsoft.com/317b911b-1805-402d-a9cb-159546bc88b4) i [DBPROPFLAGS](/previous-versions/windows/desktop/ms724342\(v=vs.85\)) dla właściwości, w tym samym czasie, należy użyć [PROPERTY_INFO_ENTRY_EX](../../data/oledb/property-info-entry-ex.md).  
+ To makro, ustawia wartość właściwości typu `DWORD` wartość domyślną, zdefiniowane w ATLDB. H. Aby ustawić wartość wybranej właściwości, należy użyć [PROPERTY_INFO_ENTRY_VALUE](../../data/oledb/property-info-entry-value.md). Aby ustawić [VARTYPE](https://msdn.microsoft.com/317b911b-1805-402d-a9cb-159546bc88b4) i [DBPROPFLAGS](/previous-versions/windows/desktop/ms724342\(v=vs.85\)) dla właściwości, w tym samym czasie, należy użyć [PROPERTY_INFO_ENTRY_EX](../../data/oledb/property-info-entry-ex.md).  
   
 #### <a name="example"></a>Przykład  
  Zobacz [BEGIN_PROPSET_MAP](../../data/oledb/begin-propset-map.md).  
@@ -250,7 +250,7 @@ PROPERTY_INFO_ENTRY_EX(dwPropID, vt, dwFlags, value, options)
  [in] A [DBPROPID](/previous-versions/windows/desktop/ms723882\(v=vs.85\)) wartości, które mogą być używane w połączeniu z właściwością ustawić identyfikator GUID służący do identyfikowania właściwości.  
   
  *vt*  
- [in] [VARTYPE](http://msdn.microsoft.com/317b911b-1805-402d-a9cb-159546bc88b4) tego wpisu właściwości.  
+ [in] [VARTYPE](https://msdn.microsoft.com/317b911b-1805-402d-a9cb-159546bc88b4) tego wpisu właściwości.  
   
  *Flagidw*  
  [in] A [DBPROPFLAGS](/previous-versions/windows/desktop/ms724342\(v=vs.85\)) wartości opisujące ten wpis właściwości.  

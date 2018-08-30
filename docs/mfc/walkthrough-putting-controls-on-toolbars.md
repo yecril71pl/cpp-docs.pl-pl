@@ -15,12 +15,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 236c7df60fc023710139c8975486428fd7cd7cfd
-ms.sourcegitcommit: 76fd30ff3e0352e2206460503b61f45897e60e4f
+ms.openlocfilehash: 2dd920f3dd8d08d6ceb766b9c10969137b8bf03c
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/13/2018
-ms.locfileid: "39027128"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43199267"
 ---
 # <a name="walkthrough-putting-controls-on-toolbars"></a>Wskazówki: umieszczanie formantów na paskach narzędzi
 W tym temacie opisano sposób dodawania przycisku paska narzędzi, który zawiera formant Windows, na pasku narzędzi. W MFC, musi być przycisku paska narzędzi [klasa CMFCToolBarButton](../mfc/reference/cmfctoolbarbutton-class.md)-pochodne klasy, na przykład [klasa CMFCToolBarComboBoxButton](../mfc/reference/cmfctoolbarcomboboxbutton-class.md), [klasa CMFCToolBarEditBoxButton](../mfc/reference/cmfctoolbareditboxbutton-class.md), [Klasa CMFCDropDownToolbarButton](../mfc/reference/cmfcdropdowntoolbarbutton-class.md), lub [klasa CMFCToolBarMenuButton](../mfc/reference/cmfctoolbarmenubutton-class.md).  
@@ -65,7 +65,7 @@ W tym temacie opisano sposób dodawania przycisku paska narzędzi, który zawier
   
 2.  Utwórz nową klasę `CFindComboBox`, pochodzącej z [klasa CComboBox](../mfc/reference/ccombobox-class.md).  
   
-3.  W `CFindComboBox` klasy, Zastąp `PreTranslateMessage` metodę wirtualną. Ta metoda umożliwi pole kombi, aby przetworzyć [przetłumaczyła](http://msdn.microsoft.com/library/windows/desktop/ms646280) wiadomości. Jeśli użytkownik naciśnie klawisz ESC (`VK_ESCAPE`), ponowne Ustawianie fokusa w oknie głównym ramki. Jeśli użytkownik naciśnie klawisz Enter (`VK_ENTER`), Opublikuj ramką głównego okna komunikatów WM_COMMAND, który zawiera `ID_EDIT_FIND_COMBO` polecenia identyfikatora.  
+3.  W `CFindComboBox` klasy, Zastąp `PreTranslateMessage` metodę wirtualną. Ta metoda umożliwi pole kombi, aby przetworzyć [przetłumaczyła](/windows/desktop/inputdev/wm-keydown) wiadomości. Jeśli użytkownik naciśnie klawisz ESC (`VK_ESCAPE`), ponowne Ustawianie fokusa w oknie głównym ramki. Jeśli użytkownik naciśnie klawisz Enter (`VK_ENTER`), Opublikuj ramką głównego okna komunikatów WM_COMMAND, który zawiera `ID_EDIT_FIND_COMBO` polecenia identyfikatora.  
   
 4.  Utwórz klasę dla **znaleźć** przycisk pola kombi, pochodzące z [klasa CMFCToolBarComboBoxButton](../mfc/reference/cmfctoolbarcomboboxbutton-class.md). W tym przykładzie jest on nazwany `CFindComboButton`.  
   
@@ -73,7 +73,7 @@ W tym temacie opisano sposób dodawania przycisku paska narzędzi, który zawier
   
     1.  Przekaż `ID_EDIT_FIND_COMBO` jako identyfikator polecenia.  
   
-    2.  Użyj [CCommandManager::GetCmdImage](http://msdn.microsoft.com/4094d08e-de74-4398-a483-76d27a742dca) z `ID_EDIT_FIND` uzyskać indeks obrazu.  
+    2.  Użyj [CCommandManager::GetCmdImage](https://msdn.microsoft.com/4094d08e-de74-4398-a483-76d27a742dca) z `ID_EDIT_FIND` uzyskać indeks obrazu.  
   
     3.  Aby uzyskać listę style pola kombi dostępne, zobacz [style pola kombi](../mfc/reference/styles-used-by-mfc.md#combo-box-styles).  
   

@@ -22,15 +22,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 48a8ccb49001b93ded52edc732fc59222775e6f8
-ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
+ms.openlocfilehash: dc7e4104e6555ada88483336917708db943be2a0
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/26/2018
-ms.locfileid: "36954030"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43210582"
 ---
 # <a name="cconstanttransition-class"></a>Klasa CConstantTransition
-Hermetyzuje stałej przejścia.  
+Hermetyzuje stałe przejścia.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -50,7 +50,7 @@ class CConstantTransition : public CBaseTransition;
   
 |Nazwa|Opis|  
 |----------|-----------------|  
-|[CConstantTransition::Create](#create)|Wywołuje biblioteki przejścia do utworzenia obiektu hermetyzowany przejścia COM. (Przesłania [CBaseTransition::Create](../../mfc/reference/cbasetransition-class.md#create).)|  
+|[CConstantTransition::Create](#create)|Wywołania biblioteki przejścia do utworzenia obiektu zhermetyzowany przejścia COM. (Przesłania [CBaseTransition::Create](../../mfc/reference/cbasetransition-class.md#create).)|  
   
 ### <a name="public-data-members"></a>Publiczne elementy członkowskie danych  
   
@@ -59,7 +59,7 @@ class CConstantTransition : public CBaseTransition;
 |[CConstantTransition::m_duration](#m_duration)|Czas trwania przejścia.|  
   
 ## <a name="remarks"></a>Uwagi  
- Podczas przejścia stałą wartość zmiennej animacji pozostaje w początkowej wartości w czasie trwania przejścia. Ponieważ wszystkie przejścia są automatycznie usuwane, zaleca się ich przydzielony przy użyciu nowego operatora. Hermetyzowany obiektu IUIAnimationTransition COM utworzeniu przez CAnimationController::AnimateGroup, aż do, a następnie jest NULL. Po utworzenia tego obiektu modelu COM nie ma wpływu, zmiana zmiennych Członkowskich.  
+ Stałe przejścia wartość zmiennej animacji nie ulegnie zmianie wartość początkową na czas trwania przejścia. Ponieważ wszystkie przejścia są automatycznie czyszczone, zaleca się ich przydzielone za pomocą nowego operatora. Zhermetyzowanego obiektu IUIAnimationTransition COM przy utworzono CAnimationController::AnimateGroup, aż do, a następnie ma wartość NULL. Zmienianie zmiennych składowych, po tworzenie ten obiekt COM nie ma wpływu.  
   
 ## <a name="inheritance-hierarchy"></a>Hierarchia dziedziczenia  
  [CObject](../../mfc/reference/cobject-class.md)  
@@ -83,7 +83,7 @@ CConstantTransition (UI_ANIMATION_SECONDS duration);
  Czas trwania przejścia.  
   
 ##  <a name="create"></a>  CConstantTransition::Create  
- Wywołuje biblioteki przejścia do utworzenia obiektu hermetyzowany przejścia COM.  
+ Wywołania biblioteki przejścia do utworzenia obiektu zhermetyzowany przejścia COM.  
   
 ```  
 virtual BOOL Create(
@@ -93,10 +93,10 @@ virtual BOOL Create(
   
 ### <a name="parameters"></a>Parametry  
  *pLibrary*  
- Wskaźnik do [interfejsu IUIAnimationTransitionLibrary](https://msdn.microsoft.com/library/windows/desktop/dd371897), który definiuje biblioteki standardowe przejścia.  
+ Wskaźnik do [interfejsu IUIAnimationTransitionLibrary](/windows/desktop/api/uianimation/nn-uianimation-iuianimationtransitionlibrary), który definiuje bibliotekę przejścia standardowe.  
 
 ### <a name="return-value"></a>Wartość zwracana  
- Wartość TRUE, jeśli przejście jest tworzony pomyślnie; w przeciwnym razie wartość FALSE.  
+ Wartość TRUE, jeśli przejście został utworzony pomyślnie; w przeciwnym razie wartość FALSE.  
   
 ##  <a name="m_duration"></a>  CConstantTransition::m_duration  
  Czas trwania przejścia.  
