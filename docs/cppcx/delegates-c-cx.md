@@ -9,12 +9,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 050b11050cc280fc6d3aa8900487442bd723a57f
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: fda9cab73088746ec64caf482f9e606d713eaa4f
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42592776"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43222746"
 ---
 # <a name="delegates-ccx"></a>Delegaty (C + +/ CX)
 `delegate` — Słowo kluczowe jest używane do deklarowania typu odwołania, który jest odpowiednikiem obiektu funkcyjnego w standardzie języka C++ środowiska wykonawczego Windows. Deklaracja delegata, podobny do podpisu funkcji. Określa typ zwracany i typy parametrów, które jej opakowana funkcja musi mieć. Jest to deklaracja delegata użytkownika:  
@@ -29,7 +29,7 @@ ms.locfileid: "42592776"
 event PrimeFoundHandler^ primeFoundEvent;  
 ```  
   
- Podczas deklarowania obiektów delegowanych, które będą dostępne dla klientów między interfejsem binarnym aplikacji środowiska wykonawczego Windows, użyj [Windows::Foundation:: typedeventhandler\<TSender, TResult >](http://msdn.microsoft.com/library/windows/apps/br225997.aspx). Ten delegat jest wstępnie zdefiniowane serwera proxy i klas zastępczych pliki binarne, które umożliwiają go do użycia przez klientów języka Javascript.  
+ Podczas deklarowania obiektów delegowanych, które będą dostępne dla klientów między interfejsem binarnym aplikacji środowiska wykonawczego Windows, użyj [Windows::Foundation:: typedeventhandler\<TSender, TResult >](https://msdn.microsoft.com/library/windows/apps/br225997.aspx). Ten delegat jest wstępnie zdefiniowane serwera proxy i klas zastępczych pliki binarne, które umożliwiają go do użycia przez klientów języka Javascript.  
   
 ## <a name="consuming-delegates"></a>Korzystanie z obiektów delegowanych  
  Podczas tworzenia aplikacji uniwersalnych platformy Windows często pracują z delegatem, jako typ zdarzenia, które udostępnia klasy środowiska wykonawczego Windows. Aby subskrybować zdarzenie, Utwórz wystąpienie obiektu jego typ delegowany, określając funkcji — lub lambda, które odpowiadają podpisowi delegata. Następnie użyj `+=` operatora do przekazania obiektu delegowanego do elementu członkowskiego zdarzenia w klasie. Jest to nazywane subskrybowanie zdarzenia. Jeśli wystąpienie klasy"" zdarzenia, Twoja funkcja jest wywoływana wraz z innych programów obsługi, które zostały dodane przez obiekt lub innych obiektów.  

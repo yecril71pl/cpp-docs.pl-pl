@@ -52,12 +52,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b2f295b6bf54077ad131176092b06dbeca7a2201
-ms.sourcegitcommit: b92ca0b74f0b00372709e81333885750ba91f90e
+ms.openlocfilehash: 1fe661f48c583cfb82e52b6c125f6cf7fce2e714
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/16/2018
-ms.locfileid: "42465743"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43203561"
 ---
 # <a name="cregkey-class"></a>Klasa CRegKey
 Ta klasa dostarcza metody do manipulowania wpisy w rejestrze systemowym.  
@@ -132,10 +132,10 @@ class CRegKey
   
  `CRegKey` udostępnia interfejs programowania do rejestru systemowego na danym komputerze. Na przykład można otworzyć klucza rejestru w szczególności, należy wywołać `CRegKey::Open`. Aby pobrać lub zmodyfikować wartość danych, należy wywołać `CRegKey::QueryValue` lub `CRegKey::SetValue`, odpowiednio. Aby zamknąć klucza, należy wywołać `CRegKey::Close`.  
   
- Po zamknięciu klucza, jego rejestru dane są zapisywane (opróżniania buforów) na dysku twardym. Ten proces może potrwać kilka sekund. Jeśli aplikacja musi jawnie zapisu danych rejestru na dysku twardym, można wywołać [RegFlushKey](http://msdn.microsoft.com/library/windows/desktop/ms724867) funkcję Win32. Jednak `RegFlushKey` używa wielu zasobów systemowych i powinna być wywoływana tylko wtedy, gdy jest to absolutnie konieczne.  
+ Po zamknięciu klucza, jego rejestru dane są zapisywane (opróżniania buforów) na dysku twardym. Ten proces może potrwać kilka sekund. Jeśli aplikacja musi jawnie zapisu danych rejestru na dysku twardym, można wywołać [RegFlushKey](/windows/desktop/api/winreg/nf-winreg-regflushkey) funkcję Win32. Jednak `RegFlushKey` używa wielu zasobów systemowych i powinna być wywoływana tylko wtedy, gdy jest to absolutnie konieczne.  
   
 > [!IMPORTANT]
->  Wszystkie metody, które umożliwiają obiektowi wywołującemu określenie lokalizacji w rejestrze ma możliwość odczytywania danych, który nie jest zaufany. Użycie metody ułatwiające wykonanie [RegQueryValueEx](http://msdn.microsoft.com/library/windows/desktop/ms724911) należy wziąć pod uwagę, że ta funkcja nie obsługuje jawnie ciągów, które są zakończone znakiem NULL. Oba warunki powinny zostać sprawdzone przez kod wywołujący.  
+>  Wszystkie metody, które umożliwiają obiektowi wywołującemu określenie lokalizacji w rejestrze ma możliwość odczytywania danych, który nie jest zaufany. Użycie metody ułatwiające wykonanie [RegQueryValueEx](/windows/desktop/api/winreg/nf-winreg-regqueryvalueexa) należy wziąć pod uwagę, że ta funkcja nie obsługuje jawnie ciągów, które są zakończone znakiem NULL. Oba warunki powinny zostać sprawdzone przez kod wywołujący.  
   
 ## <a name="requirements"></a>Wymagania  
  **Nagłówek:** atlbase.h  
@@ -189,13 +189,13 @@ LONG Create(
  Określa klasę klucza, który ma zostać utworzony lub otwarty. Wartość domyślna to REG_NONE.  
   
  *dwOptions*  
- Opcje dla klucza. Wartość domyślna to REG_OPTION_NON_VOLATILE. Aby uzyskać listę możliwych wartości i opisy, zobacz [RegCreateKeyEx](http://msdn.microsoft.com/library/windows/desktop/ms724844) w zestawie Windows SDK.  
+ Opcje dla klucza. Wartość domyślna to REG_OPTION_NON_VOLATILE. Aby uzyskać listę możliwych wartości i opisy, zobacz [RegCreateKeyEx](/windows/desktop/api/winreg/nf-winreg-regcreatekeyexa) w zestawie Windows SDK.  
   
  *samDesired*  
  Zabezpieczeń dostępu do klucza. Wartość domyślna to KEY_READ &#124; KEY_WRITE. Aby uzyskać listę możliwych wartości i opisy, zobacz `RegCreateKeyEx`.  
   
  *lpSecAttr*  
- Wskaźnik do [SECURITY_ATTRIBUTES](http://msdn.microsoft.com/library/windows/desktop/aa379560) strukturę, która wskazuje, czy uchwyt klucza może być dziedziczona przez proces podrzędny. Domyślnie ten parametr ma wartość NULL (znaczenie, który nie może być dziedziczona uchwyt).  
+ Wskaźnik do [SECURITY_ATTRIBUTES](https://msdn.microsoft.com/library/windows/desktop/aa379560) strukturę, która wskazuje, czy uchwyt klucza może być dziedziczona przez proces podrzędny. Domyślnie ten parametr ma wartość NULL (znaczenie, który nie może być dziedziczona uchwyt).  
   
  *lpdwDisposition*  
  [out] Jeśli innych niż NULL, pobiera REG_CREATED_NEW_KEY (Jeśli klucz nie istnieje i został utworzony) lub REG_OPENED_EXISTING_KEY (Jeśli klucz istniał i został otwarty).  
@@ -308,7 +308,7 @@ LONG EnumKey(
  Jeśli metoda się powiedzie, wartością zwracaną jest ERROR_SUCCESS. Jeśli metoda nie powiedzie się, wartość zwracana jest zdefiniowany w powiodło się. kod błędu różny od zera. H.  
   
 ### <a name="remarks"></a>Uwagi  
- Aby wyliczyć podkluczy, należy wywołać `CRegKey::EnumKey` o indeksie zero. Zwiększ wartość indeksu, a następnie powtórz, metoda zwraca ERROR_NO_MORE_ITEMS. Aby uzyskać więcej informacji, zobacz [RegEnumKeyEx](http://msdn.microsoft.com/library/windows/desktop/ms724862) w zestawie Windows SDK.  
+ Aby wyliczyć podkluczy, należy wywołać `CRegKey::EnumKey` o indeksie zero. Zwiększ wartość indeksu, a następnie powtórz, metoda zwraca ERROR_NO_MORE_ITEMS. Aby uzyskać więcej informacji, zobacz [RegEnumKeyEx](/windows/desktop/api/winreg/nf-winreg-regenumkeyexa) w zestawie Windows SDK.  
   
 ##  <a name="flush"></a>  CRegKey::Flush  
  Wywołaj tę metodę, aby zapisać wszystkie atrybuty otworzyć klucza rejestru do rejestru.  
@@ -321,7 +321,7 @@ LONG Flush() throw();
  Jeśli metoda się powiedzie, wartością zwracaną jest ERROR_SUCCESS. Jeśli metoda nie powiedzie się, wartość zwracana jest zdefiniowany w powiodło się. kod błędu różny od zera. H.  
   
 ### <a name="remarks"></a>Uwagi  
- Aby uzyskać więcej informacji, zobacz [RegEnumFlush](http://msdn.microsoft.com/library/windows/desktop/ms724867) w zestawie Windows SDK.  
+ Aby uzyskać więcej informacji, zobacz [RegEnumFlush](/windows/desktop/api/winreg/nf-winreg-regflushkey) w zestawie Windows SDK.  
   
 ##  <a name="getkeysecurity"></a>  CRegKey::GetKeySecurity  
  Wywołaj tę metodę, aby pobrać kopię deskryptora zabezpieczeń, ochrony otworzyć klucza rejestru.  
@@ -335,7 +335,7 @@ LONG GetKeySecurity(
   
 ### <a name="parameters"></a>Parametry  
  *SI*  
- [SECURITY_INFORMATION](http://msdn.microsoft.com/library/windows/desktop/aa379573) wartość, która wskazuje żądane informacje o zabezpieczeniach.  
+ [SECURITY_INFORMATION](/windows/desktop/SecAuthZ/security-information) wartość, która wskazuje żądane informacje o zabezpieczeniach.  
   
  *PSD*  
  Wskaźnik do buforu, który otrzymuje kopię deskryptora zabezpieczeń żądanej.  
@@ -347,7 +347,7 @@ LONG GetKeySecurity(
  Jeśli metoda się powiedzie, wartością zwracaną jest ERROR_SUCCESS. Jeśli metoda nie powiedzie się, wartość zwracana jest, że zdefiniowano powiodło się. kod błędu różny od zera. H.  
   
 ### <a name="remarks"></a>Uwagi  
- Aby uzyskać więcej informacji, zobacz [RegGetKeySecurity](http://msdn.microsoft.com/library/windows/desktop/aa379313).  
+ Aby uzyskać więcej informacji, zobacz [RegGetKeySecurity](/windows/desktop/api/winreg/nf-winreg-reggetkeysecurity).  
   
 ##  <a name="m_hkey"></a>  CRegKey::m_hKey  
  Zawiera uchwyt klucza rejestru, skojarzone z `CRegKey` obiektu.  
@@ -404,7 +404,7 @@ LONG NotifyChangeKeyValue(
 > [!NOTE]
 >  Ta metoda nie powoduje powiadomienia obiekt wywołujący, jeśli określony klucz zostanie usunięty.  
   
- Aby uzyskać więcej informacji i przykładowy program, zobacz [wywołanie funkcji RegNotifyChangeKeyValue](http://msdn.microsoft.com/library/windows/desktop/ms724892).  
+ Aby uzyskać więcej informacji i przykładowy program, zobacz [wywołanie funkcji RegNotifyChangeKeyValue](/windows/desktop/api/winreg/nf-winreg-regnotifychangekeyvalue).  
   
 ##  <a name="open"></a>  CRegKey::Open  
  Wywołanie tej metody, aby otworzyć określony klucz i ustawić [m_hKey](#m_hkey) obsługiwać tego klucza.  
@@ -424,7 +424,7 @@ LONG Open(
  Określa nazwę klucza, który ma zostać utworzony lub otwarty. Ta nazwa musi być podklucz *hKeyParent*.  
   
  *samDesired*  
- Zabezpieczeń dostępu do klucza. Wartość domyślna to KEY_ALL_ACCESS. Aby uzyskać listę możliwych wartości i opisy, zobacz [RegCreateKeyEx](http://msdn.microsoft.com/library/windows/desktop/ms724844) w zestawie Windows SDK.  
+ Zabezpieczeń dostępu do klucza. Wartość domyślna to KEY_ALL_ACCESS. Aby uzyskać listę możliwych wartości i opisy, zobacz [RegCreateKeyEx](/windows/desktop/api/winreg/nf-winreg-regcreatekeyexa) w zestawie Windows SDK.  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Jeśli to się powiedzie, zwraca ERROR_SUCCESS; w przeciwnym razie wartość błędu różny od zera jest zdefiniowany w powiodło się. H.  
@@ -482,10 +482,10 @@ LONG QueryBinaryValue(
  Jeśli metoda się powiedzie, zwracany jest ERROR_SUCCESS. Jeśli metoda nie może odczytać wartości, zwraca zdefiniowane w powiodło się. kod błędu różny od zera. H. Jeśli dane przywoływane nie jest typu REG_BINARY, zwracany jest ERROR_INVALID_DATA.  
   
 ### <a name="remarks"></a>Uwagi  
- Ta metoda korzysta z `RegQueryValueEx` i potwierdza, że zwracany jest poprawny typ danych. Zobacz [RegQueryValueEx](http://msdn.microsoft.com/library/windows/desktop/ms724911) Aby uzyskać więcej informacji.  
+ Ta metoda korzysta z `RegQueryValueEx` i potwierdza, że zwracany jest poprawny typ danych. Zobacz [RegQueryValueEx](/windows/desktop/api/winreg/nf-winreg-regqueryvalueexa) Aby uzyskać więcej informacji.  
   
 > [!IMPORTANT]
->  Ta metoda umożliwia obiektowi wywołującemu określenie dowolnej lokalizacji w rejestrze, potencjalny Odczyt danych, który nie jest zaufany. Ponadto [RegQueryValueEx](http://msdn.microsoft.com/library/windows/desktop/ms724911) funkcja używana przez tę metodę nie obsługuje jawnie ciągów, które są zakończone znakiem NULL. Oba warunki powinny zostać sprawdzone przez kod wywołujący.  
+>  Ta metoda umożliwia obiektowi wywołującemu określenie dowolnej lokalizacji w rejestrze, potencjalny Odczyt danych, który nie jest zaufany. Ponadto [RegQueryValueEx](/windows/desktop/api/winreg/nf-winreg-regqueryvalueexa) funkcja używana przez tę metodę nie obsługuje jawnie ciągów, które są zakończone znakiem NULL. Oba warunki powinny zostać sprawdzone przez kod wywołujący.  
   
 ##  <a name="querydwordvalue"></a>  CRegKey::QueryDWORDValue  
  Wywołaj tę metodę, aby pobrać dane typu DWORD nazwę określoną wartość.  
@@ -507,10 +507,10 @@ LONG QueryDWORDValue(
  Jeśli metoda się powiedzie, zwracany jest ERROR_SUCCESS. Jeśli metoda nie może odczytać wartości, zwraca zdefiniowane w powiodło się. kod błędu różny od zera. H. Jeśli dane przywoływane nie jest typu REG_DWORD, zwracany jest ERROR_INVALID_DATA.  
   
 ### <a name="remarks"></a>Uwagi  
- Ta metoda korzysta z `RegQueryValueEx` i potwierdza, że zwracany jest poprawny typ danych. Zobacz [RegQueryValueEx](http://msdn.microsoft.com/library/windows/desktop/ms724911) Aby uzyskać więcej informacji.  
+ Ta metoda korzysta z `RegQueryValueEx` i potwierdza, że zwracany jest poprawny typ danych. Zobacz [RegQueryValueEx](/windows/desktop/api/winreg/nf-winreg-regqueryvalueexa) Aby uzyskać więcej informacji.  
   
 > [!IMPORTANT]
->  Ta metoda umożliwia obiektowi wywołującemu określenie dowolnej lokalizacji w rejestrze, potencjalny Odczyt danych, który nie jest zaufany. Ponadto [RegQueryValueEx](http://msdn.microsoft.com/library/windows/desktop/ms724911) funkcja używana przez tę metodę nie obsługuje jawnie ciągów, które są zakończone znakiem NULL. Oba warunki powinny zostać sprawdzone przez kod wywołujący.  
+>  Ta metoda umożliwia obiektowi wywołującemu określenie dowolnej lokalizacji w rejestrze, potencjalny Odczyt danych, który nie jest zaufany. Ponadto [RegQueryValueEx](/windows/desktop/api/winreg/nf-winreg-regqueryvalueexa) funkcja używana przez tę metodę nie obsługuje jawnie ciągów, które są zakończone znakiem NULL. Oba warunki powinny zostać sprawdzone przez kod wywołujący.  
   
 ##  <a name="queryguidvalue"></a>  CRegKey::QueryGUIDValue  
  Wywołaj tę metodę w celu pobrania danych identyfikatora GUID dla nazwy określonej wartości.  
@@ -532,7 +532,7 @@ LONG QueryGUIDValue(
  Jeśli metoda się powiedzie, zwracany jest ERROR_SUCCESS. Jeśli metoda nie może odczytać wartości, zwraca zdefiniowane w powiodło się. kod błędu różny od zera. H. Jeśli dane przywoływane nie jest prawidłowym identyfikatorem GUID, zwracany jest ERROR_INVALID_DATA.  
   
 ### <a name="remarks"></a>Uwagi  
- Ta metoda korzysta z `CRegKey::QueryStringValue` i konwertuje ciąg na identyfikator GUID za pomocą [CLSIDFromString](http://msdn.microsoft.com/library/windows/desktop/ms680589).  
+ Ta metoda korzysta z `CRegKey::QueryStringValue` i konwertuje ciąg na identyfikator GUID za pomocą [CLSIDFromString](/windows/desktop/api/combaseapi/nf-combaseapi-clsidfromstring).  
   
 > [!IMPORTANT]
 >  Ta metoda umożliwia obiektowi wywołującemu określenie dowolnej lokalizacji w rejestrze, potencjalny Odczyt danych, który nie jest zaufany.  
@@ -561,10 +561,10 @@ LONG QueryMultiStringValue(
  Jeśli metoda się powiedzie, zwracany jest ERROR_SUCCESS. Jeśli metoda nie może odczytać wartości, zwraca zdefiniowane w powiodło się. kod błędu różny od zera. H. Jeśli dane przywoływane nie jest typu REG_MULTI_SZ, zwracany jest ERROR_INVALID_DATA.  
   
 ### <a name="remarks"></a>Uwagi  
- Ta metoda korzysta z `RegQueryValueEx` i potwierdza, że zwracany jest poprawny typ danych. Zobacz [RegQueryValueEx](http://msdn.microsoft.com/library/windows/desktop/ms724911) Aby uzyskać więcej informacji.  
+ Ta metoda korzysta z `RegQueryValueEx` i potwierdza, że zwracany jest poprawny typ danych. Zobacz [RegQueryValueEx](/windows/desktop/api/winreg/nf-winreg-regqueryvalueexa) Aby uzyskać więcej informacji.  
   
 > [!IMPORTANT]
->  Ta metoda umożliwia obiektowi wywołującemu określenie dowolnej lokalizacji w rejestrze, potencjalny Odczyt danych, który nie jest zaufany. Ponadto [RegQueryValueEx](http://msdn.microsoft.com/library/windows/desktop/ms724911) funkcja używana przez tę metodę nie obsługuje jawnie ciągów, które są zakończone znakiem NULL. Oba warunki powinny zostać sprawdzone przez kod wywołujący.  
+>  Ta metoda umożliwia obiektowi wywołującemu określenie dowolnej lokalizacji w rejestrze, potencjalny Odczyt danych, który nie jest zaufany. Ponadto [RegQueryValueEx](/windows/desktop/api/winreg/nf-winreg-regqueryvalueexa) funkcja używana przez tę metodę nie obsługuje jawnie ciągów, które są zakończone znakiem NULL. Oba warunki powinny zostać sprawdzone przez kod wywołujący.  
   
 ##  <a name="queryqwordvalue"></a>  CRegKey::QueryQWORDValue  
  Wywołaj tę metodę w celu pobrania danych QWORD nazwę określoną wartość.  
@@ -586,10 +586,10 @@ LONG QueryQWORDValue(
  Jeśli metoda się powiedzie, zwracany jest ERROR_SUCCESS. Jeśli metoda nie może odczytać wartości, zwraca zdefiniowane w powiodło się. kod błędu różny od zera. H. Jeśli dane przywoływane nie jest typu REG_QWORD, zwracany jest ERROR_INVALID_DATA.  
   
 ### <a name="remarks"></a>Uwagi  
- Ta metoda korzysta z `RegQueryValueEx` i potwierdza, że zwracany jest poprawny typ danych. Zobacz [RegQueryValueEx](http://msdn.microsoft.com/library/windows/desktop/ms724911) Aby uzyskać więcej informacji.  
+ Ta metoda korzysta z `RegQueryValueEx` i potwierdza, że zwracany jest poprawny typ danych. Zobacz [RegQueryValueEx](/windows/desktop/api/winreg/nf-winreg-regqueryvalueexa) Aby uzyskać więcej informacji.  
   
 > [!IMPORTANT]
->  Ta metoda umożliwia obiektowi wywołującemu określenie dowolnej lokalizacji w rejestrze, potencjalny Odczyt danych, który nie jest zaufany. Ponadto [RegQueryValueEx](http://msdn.microsoft.com/library/windows/desktop/ms724911) funkcja używana przez tę metodę nie obsługuje jawnie ciągów, które są zakończone znakiem NULL. Oba warunki powinny zostać sprawdzone przez kod wywołujący.  
+>  Ta metoda umożliwia obiektowi wywołującemu określenie dowolnej lokalizacji w rejestrze, potencjalny Odczyt danych, który nie jest zaufany. Ponadto [RegQueryValueEx](/windows/desktop/api/winreg/nf-winreg-regqueryvalueexa) funkcja używana przez tę metodę nie obsługuje jawnie ciągów, które są zakończone znakiem NULL. Oba warunki powinny zostać sprawdzone przez kod wywołujący.  
   
 ##  <a name="querystringvalue"></a>  CRegKey::QueryStringValue  
  Wywołaj tę metodę, aby pobrać dane ciągu dla nazwy określonej wartości.  
@@ -615,10 +615,10 @@ LONG QueryStringValue(
  Jeśli metoda się powiedzie, zwracany jest ERROR_SUCCESS. Jeśli metoda nie może odczytać wartości, zwraca zdefiniowane w powiodło się. kod błędu różny od zera. H. Jeśli dane przywoływane nie jest typu REG_SZ, zwracany jest ERROR_INVALID_DATA. Jeśli metoda zwraca kod ERROR_MORE_DATA, *pnChars* jest równa zero nie wymagany rozmiar buforu w bajtach.  
   
 ### <a name="remarks"></a>Uwagi  
- Ta metoda korzysta z `RegQueryValueEx` i potwierdza, że zwracany jest poprawny typ danych. Zobacz [RegQueryValueEx](http://msdn.microsoft.com/library/windows/desktop/ms724911) Aby uzyskać więcej informacji.  
+ Ta metoda korzysta z `RegQueryValueEx` i potwierdza, że zwracany jest poprawny typ danych. Zobacz [RegQueryValueEx](/windows/desktop/api/winreg/nf-winreg-regqueryvalueexa) Aby uzyskać więcej informacji.  
   
 > [!IMPORTANT]
->  Ta metoda umożliwia obiektowi wywołującemu określenie dowolnej lokalizacji w rejestrze, potencjalny Odczyt danych, który nie jest zaufany. Ponadto [RegQueryValueEx](http://msdn.microsoft.com/library/windows/desktop/ms724911) funkcja używana przez tę metodę nie obsługuje jawnie ciągów, które są zakończone znakiem NULL. Oba warunki powinny zostać sprawdzone przez kod wywołujący.  
+>  Ta metoda umożliwia obiektowi wywołującemu określenie dowolnej lokalizacji w rejestrze, potencjalny Odczyt danych, który nie jest zaufany. Ponadto [RegQueryValueEx](/windows/desktop/api/winreg/nf-winreg-regqueryvalueexa) funkcja używana przez tę metodę nie obsługuje jawnie ciągów, które są zakończone znakiem NULL. Oba warunki powinny zostać sprawdzone przez kod wywołujący.  
   
 ##  <a name="queryvalue"></a>  CRegKey::QueryValue  
  Wywołanie tej metody do pobierania danych dla określonej wartości pola [m_hKey](#m_hkey). Wcześniejszych wersjach tej metody nie są już obsługiwane i są oznaczone jako ATL_DEPRECATED.  
@@ -717,7 +717,7 @@ LONG SetBinaryValue(
  Jeśli metoda się powiedzie, wartością zwracaną jest ERROR_SUCCESS. Jeśli metoda nie powiedzie się, wartość zwracana jest zdefiniowany w powiodło się. kod błędu różny od zera. H.  
   
 ### <a name="remarks"></a>Uwagi  
- Ta metoda używa [RegSetValueEx](http://msdn.microsoft.com/library/windows/desktop/ms724923) do zapisu wartości w rejestrze.  
+ Ta metoda używa [RegSetValueEx](/windows/desktop/api/winreg/nf-winreg-regsetvalueexa) do zapisu wartości w rejestrze.  
   
 ##  <a name="setdwordvalue"></a>  CRegKey::SetDWORDValue  
  Wywołaj tę metodę, aby ustawić wartość DWORD klucza rejestru.  
@@ -737,7 +737,7 @@ LONG SetDWORDValue(LPCTSTR pszValueName, DWORD dwValue) throw();
  Jeśli metoda się powiedzie, wartością zwracaną jest ERROR_SUCCESS. Jeśli metoda nie powiedzie się, wartość zwracana jest zdefiniowany w powiodło się. kod błędu różny od zera. H.  
   
 ### <a name="remarks"></a>Uwagi  
- Ta metoda używa [RegSetValueEx](http://msdn.microsoft.com/library/windows/desktop/ms724923) do zapisu wartości w rejestrze.  
+ Ta metoda używa [RegSetValueEx](/windows/desktop/api/winreg/nf-winreg-regsetvalueexa) do zapisu wartości w rejestrze.  
   
 ##  <a name="setguidvalue"></a>  CRegKey::SetGUIDValue  
  Wywołaj tę metodę, aby ustawić wartość identyfikatora GUID klucza rejestru.  
@@ -757,7 +757,7 @@ LONG SetGUIDValue(LPCTSTR pszValueName, REFGUID guidValue) throw();
  Jeśli metoda się powiedzie, wartością zwracaną jest ERROR_SUCCESS. Jeśli metoda nie powiedzie się, wartość zwracana jest zdefiniowany w powiodło się. kod błędu różny od zera. H.  
   
 ### <a name="remarks"></a>Uwagi  
- Ta metoda korzysta z `CRegKey::SetStringValue` i konwertuje ciąg za pomocą identyfikatora GUID [StringFromGUID2](http://msdn.microsoft.com/library/windows/desktop/ms683893).  
+ Ta metoda korzysta z `CRegKey::SetStringValue` i konwertuje ciąg za pomocą identyfikatora GUID [StringFromGUID2](/windows/desktop/api/combaseapi/nf-combaseapi-stringfromguid2).  
   
 ##  <a name="setkeyvalue"></a>  CRegKey::SetKeyValue  
  Wywołaj tę metodę, aby przechowywać dane w polu określoną wartość z określonym kluczem.  
@@ -801,16 +801,16 @@ LONG SetKeySecurity(SECURITY_INFORMATION si, PSECURITY_DESCRIPTOR psd) throw();
 |DACL_SECURITY_INFORMATION|Ustawia klucz poufnej-listy kontroli dostępu (DACL). Klucz musi mieć dostęp WRITE_DAC lub proces wywołujący musi być właścicielem obiektu.|  
 |GROUP_SECURITY_INFORMATION|Ustawia identyfikator zabezpieczeń grupy podstawowej klucza (SID). Klucz musi mieć dostęp WRITE_OWNER lub proces wywołujący musi być właścicielem obiektu.|  
 |OWNER_SECURITY_INFORMATION|Ustawia identyfikator SID właściciela klucza. Klucz musi mieć dostęp WRITE_OWNER lub proces wywołujący musi być właścicielem obiektu lub mieć włączone uprawnienie SE_TAKE_OWNERSHIP_NAME.|  
-|SACL_SECURITY_INFORMATION|Ustawia listy kontroli dostępu systemu klucza (SACL). Klucz musi mieć dostęp ACCESS_SYSTEM_SECURITY. Odpowiednie sposobem uzyskania takiego dostępu jest umożliwienie SE_SECURITY_NAME [uprawnień](http://msdn.microsoft.com/library/windows/desktop/aa379306) w bieżącym tokenu dostępu obiektu wywołującego, otworzyć uchwytu ACCESS_SYSTEM_SECURITY dostępu, a następnie wyłącz uprawnienia.|  
+|SACL_SECURITY_INFORMATION|Ustawia listy kontroli dostępu systemu klucza (SACL). Klucz musi mieć dostęp ACCESS_SYSTEM_SECURITY. Odpowiednie sposobem uzyskania takiego dostępu jest umożliwienie SE_SECURITY_NAME [uprawnień](https://msdn.microsoft.com/library/windows/desktop/aa379306) w bieżącym tokenu dostępu obiektu wywołującego, otworzyć uchwytu ACCESS_SYSTEM_SECURITY dostępu, a następnie wyłącz uprawnienia.|  
   
  *PSD*  
- Wskaźnik do [SECURITY_DESCRIPTOR](http://msdn.microsoft.com/library/windows/desktop/aa379561) strukturę, która określa atrybuty zabezpieczeń, aby ustawić dla określonego klucza.  
+ Wskaźnik do [SECURITY_DESCRIPTOR](/windows/desktop/api/winnt/ns-winnt-_security_descriptor) strukturę, która określa atrybuty zabezpieczeń, aby ustawić dla określonego klucza.  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Jeśli metoda się powiedzie, wartością zwracaną jest ERROR_SUCCESS. Jeśli metoda nie powiedzie się, wartość zwracana jest zdefiniowany w powiodło się. kod błędu różny od zera. H.  
   
 ### <a name="remarks"></a>Uwagi  
- Ustawia atrybuty zabezpieczeń klucza. Zobacz [RegSetKeySecurity](http://msdn.microsoft.com/library/windows/desktop/aa379314) Aby uzyskać więcej informacji.  
+ Ustawia atrybuty zabezpieczeń klucza. Zobacz [RegSetKeySecurity](/windows/desktop/api/winreg/nf-winreg-regsetkeysecurity) Aby uzyskać więcej informacji.  
   
 ##  <a name="setmultistringvalue"></a>  CRegKey::SetMultiStringValue  
  Wywołaj tę metodę można ustawić wartości wielociągu klucza rejestru.  
@@ -830,7 +830,7 @@ LONG SetMultiStringValue(LPCTSTR pszValueName, LPCTSTR pszValue) throw();
  Jeśli metoda się powiedzie, wartością zwracaną jest ERROR_SUCCESS. Jeśli metoda nie powiedzie się, wartość zwracana jest zdefiniowany w powiodło się. kod błędu różny od zera. H.  
   
 ### <a name="remarks"></a>Uwagi  
- Ta metoda używa [RegSetValueEx](http://msdn.microsoft.com/library/windows/desktop/ms724923) do zapisu wartości w rejestrze.  
+ Ta metoda używa [RegSetValueEx](/windows/desktop/api/winreg/nf-winreg-regsetvalueexa) do zapisu wartości w rejestrze.  
   
 ##  <a name="setqwordvalue"></a>  CRegKey::SetQWORDValue  
  Wywołaj tę metodę, aby ustawić wartość QWORD klucza rejestru.  
@@ -850,7 +850,7 @@ LONG SetQWORDValue(LPCTSTR pszValueName, ULONGLONG qwValue) throw();
  Jeśli metoda się powiedzie, wartością zwracaną jest ERROR_SUCCESS. Jeśli metoda nie powiedzie się, wartość zwracana jest zdefiniowany w powiodło się. kod błędu różny od zera. H.  
   
 ### <a name="remarks"></a>Uwagi  
- Ta metoda używa [RegSetValueEx](http://msdn.microsoft.com/library/windows/desktop/ms724923) do zapisu wartości w rejestrze.  
+ Ta metoda używa [RegSetValueEx](/windows/desktop/api/winreg/nf-winreg-regsetvalueexa) do zapisu wartości w rejestrze.  
   
 ##  <a name="setstringvalue"></a>  CRegKey::SetStringValue  
  Wywołaj tę metodę, aby ustawić wartość ciągu klucza rejestru.  
@@ -945,7 +945,7 @@ ATL_DEPRECATED LONG SetValue(
 ### <a name="remarks"></a>Uwagi  
  Dwie wersje oryginalnego `SetValue` są oznaczone jako ATL_DEPRECATED i już nie powinny być używane. Kompilator zgłosi ostrzeżenie, jeśli używane są te formularze.  
   
- Trzeci wywołania metody [RegSetValueEx](http://msdn.microsoft.com/library/windows/desktop/ms724923).  
+ Trzeci wywołania metody [RegSetValueEx](/windows/desktop/api/winreg/nf-winreg-regsetvalueexa).  
   
 ## <a name="see-also"></a>Zobacz też  
  [Przykładowy model DCOM](../../visual-cpp-samples.md)   

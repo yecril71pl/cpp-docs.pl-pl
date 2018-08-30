@@ -15,12 +15,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0bb96db2ff3a927885bdb914665147dc0e7ce8da
-ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
+ms.openlocfilehash: 71025785fbc9eab2b962e0f9e48ba9170edf1de1
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37881295"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43204193"
 ---
 # <a name="atl-classes-and-structs"></a>Klasy i struktury ATL
 Active Template Library (ATL) obejmuje następujące klasy i struktury. Aby znaleźć określonej klasy według kategorii, zobacz [Przegląd klas ATL](../../atl/atl-class-overview.md).  
@@ -71,20 +71,20 @@ Active Template Library (ATL) obejmuje następujące klasy i struktury. Aby znal
 |[CAxWindow](../../atl/reference/caxwindow-class.md)|Ta klasa dostarcza metody do manipulowania okna hostowania kontrolki ActiveX.|atlwin.h|  
 |[CAxWindow2T](../../atl/reference/caxwindow2t-class.md)|Ta klasa dostarcza metody do manipulowania okno które obsługuje formant ActiveX i ma również obsługę hostowania licencjonowane formanty ActiveX.|atlwin.h|  
 |[CBindStatusCallback](../../atl/reference/cbindstatuscallback-class.md)|Ta klasa implementuje `IBindStatusCallback` interfejsu.|atlctl.h|  
-|[CComAggObject](../../atl/reference/ccomaggobject-class.md)|Ta klasa implementuje [IUnknown](http://msdn.microsoft.com/library/windows/desktop/ms680509) dla obiektu zagregowanego.|atlcom.h|  
+|[CComAggObject](../../atl/reference/ccomaggobject-class.md)|Ta klasa implementuje [IUnknown](/windows/desktop/api/unknwn/nn-unknwn-iunknown) dla obiektu zagregowanego.|atlcom.h|  
 |[CComAllocator](../../atl/reference/ccomallocator-class.md)|Ta klasa dostarcza metody do zarządzania ilości pamięci za pomocą procedury pamięci COM.|atlbase.h|  
 |[CComApartment](../../atl/reference/ccomapartment-class.md)|Ta klasa obsługuje zarządzanie typu apartment w module EXE wątków w puli.|atlbase.h|  
 |[CComAutoCriticalSection](../../atl/reference/ccomautocriticalsection-class.md)|Ta klasa dostarcza metody do uzyskania i zwalniania własności obiektu sekcję krytyczną.|atlcore.h|  
 |[CComAutoThreadModule](../../atl/reference/ccomautothreadmodule-class.md)|Począwszy od ATL 7.0 `CComAutoThreadModule` jest przestarzała: zobacz [modułów ATL](../../atl/atl-module-classes.md) Aby uzyskać więcej informacji.|atlbase.h|  
 |[CComBSTR](../../atl/reference/ccombstr-class.md)|Ta klasa jest otoką BSTR.|atlbase.h|  
-|[CComCachedTearOffObject](../../atl/reference/ccomcachedtearoffobject-class.md)|Ta klasa implementuje [IUnknown](http://msdn.microsoft.com/library/windows/desktop/ms680509) odrywania interfejsu.|atlcom.h|  
-|[CComClassFactory](../../atl/reference/ccomclassfactory-class.md)|Ta klasa implementuje [IClassFactory](http://msdn.microsoft.com/library/windows/desktop/ms694364) interfejsu.|atlcom.h|  
-|[CComClassFactory2](../../atl/reference/ccomclassfactory2-class.md)|Ta klasa implementuje [IClassFactory2](http://msdn.microsoft.com/library/windows/desktop/ms692720) interfejsu.|atlcom.h|  
-|[CComClassFactoryAutoThread](../../atl/reference/ccomclassfactoryautothread-class.md)|Ta klasa implementuje [IClassFactory](http://msdn.microsoft.com/library/windows/desktop/ms694364) interfejs i umożliwia tworzenie w apartamentach wielu obiektów.|atlcom.h|  
+|[CComCachedTearOffObject](../../atl/reference/ccomcachedtearoffobject-class.md)|Ta klasa implementuje [IUnknown](/windows/desktop/api/unknwn/nn-unknwn-iunknown) odrywania interfejsu.|atlcom.h|  
+|[CComClassFactory](../../atl/reference/ccomclassfactory-class.md)|Ta klasa implementuje [IClassFactory](/windows/desktop/api/unknwnbase/nn-unknwnbase-iclassfactory) interfejsu.|atlcom.h|  
+|[CComClassFactory2](../../atl/reference/ccomclassfactory2-class.md)|Ta klasa implementuje [IClassFactory2](/windows/desktop/api/ocidl/nn-ocidl-iclassfactory2) interfejsu.|atlcom.h|  
+|[CComClassFactoryAutoThread](../../atl/reference/ccomclassfactoryautothread-class.md)|Ta klasa implementuje [IClassFactory](/windows/desktop/api/unknwnbase/nn-unknwnbase-iclassfactory) interfejs i umożliwia tworzenie w apartamentach wielu obiektów.|atlcom.h|  
 |[CComClassFactorySingleton](../../atl/reference/ccomclassfactorysingleton-class.md)|Ta klasa jest pochodną [CComClassFactory](../../atl/reference/ccomclassfactory-class.md) i używa [CComObjectGlobal](../../atl/reference/ccomobjectglobal-class.md) skonstruowanie pojedynczego obiektu.|atlcom.h|  
 |[CComCoClass](../../atl/reference/ccomcoclass-class.md)|Ta klasa dostarcza metody do tworzenia wystąpienia klasy i uzyskania jej właściwości.|atlcom.h|  
 |[CComCompositeControl](../../atl/reference/ccomcompositecontrol-class.md)|Ta klasa dostarcza metody, o których trzeba do zaimplementowania kontrolek złożonych.|atlctl.h|  
-|[CComContainedObject](../../atl/reference/ccomcontainedobject-class.md)|Ta klasa implementuje [IUnknown](http://msdn.microsoft.com/library/windows/desktop/ms680509) przez delegowanie do obiektu właściciela `IUnknown`.|atlcom.h|  
+|[CComContainedObject](../../atl/reference/ccomcontainedobject-class.md)|Ta klasa implementuje [IUnknown](/windows/desktop/api/unknwn/nn-unknwn-iunknown) przez delegowanie do obiektu właściciela `IUnknown`.|atlcom.h|  
 |[CComControl](../../atl/reference/ccomcontrol-class.md)|Ta klasa dostarcza metody do tworzenia i zarządzania formantami ATL.|atlctl.h|  
 |[CComControlBase](../../atl/reference/ccomcontrolbase-class.md)|Ta klasa dostarcza metody do tworzenia i zarządzania formantami ATL.|atlctl.h|  
 |[CComCriticalSection](../../atl/reference/ccomcriticalsection-class.md)|Ta klasa dostarcza metody do uzyskania i zwalniania własności obiektu sekcję krytyczną.|atlcore.h|  
@@ -208,20 +208,20 @@ Active Template Library (ATL) obejmuje następujące klasy i struktury. Aby znal
 |[IOleObjectImpl](../../atl/reference/ioleobjectimpl-class.md)|Ta klasa implementuje `IUnknown` i jest główną interfejs, za pomocą którego kontener komunikuje się za pomocą kontrolki.|atlctl.h|  
 |[IPerPropertyBrowsingImpl](../../atl/reference/iperpropertybrowsingimpl-class.md)|Ta klasa implementuje `IUnknown` i umożliwia klientom dostęp do informacji na stronach właściwości obiektu.|atlctl.h|  
 |[IPersistPropertyBagImpl](../../atl/reference/ipersistpropertybagimpl-class.md)|Ta klasa implementuje `IUnknown` i zezwala na obiekt zapisać właściwości zbioru właściwości dostarczonych przez klienta.|atlcom.h|  
-|[IPersistStorageImpl](../../atl/reference/ipersiststorageimpl-class.md)|Ta klasa implementuje [IPersistStorage](http://msdn.microsoft.com/library/windows/desktop/ms679731) interfejsu.|atlcom.h|  
-|[IPersistStreamInitImpl](../../atl/reference/ipersiststreaminitimpl-class.md)|Ta klasa implementuje `IUnknown` i udostępnia domyślną implementację elementu [IPersistStreamInit](http://msdn.microsoft.com/library/windows/desktop/ms682273) interfejsu.|atlcom.h|  
-|[IPointerInactiveImpl](../../atl/reference/ipointerinactiveimpl-class.md)|Ta klasa implementuje `IUnknown` i [IPointerInactive](http://msdn.microsoft.com/library/windows/desktop/ms693712) metody interfejsu.|atlctl.h|  
-|[IPropertyNotifySinkCP](../../atl/reference/ipropertynotifysinkcp-class.md)|Ta klasa udostępnia [ipropertynotifysink —](http://msdn.microsoft.com/library/windows/desktop/ms692638) interfejs jako interfejsu wychodzącego w obiekcie składnika.|atlctl.h|  
+|[IPersistStorageImpl](../../atl/reference/ipersiststorageimpl-class.md)|Ta klasa implementuje [IPersistStorage](/windows/desktop/api/objidl/nn-objidl-ipersiststorage) interfejsu.|atlcom.h|  
+|[IPersistStreamInitImpl](../../atl/reference/ipersiststreaminitimpl-class.md)|Ta klasa implementuje `IUnknown` i udostępnia domyślną implementację elementu [IPersistStreamInit](/windows/desktop/api/ocidl/nn-ocidl-ipersiststreaminit) interfejsu.|atlcom.h|  
+|[IPointerInactiveImpl](../../atl/reference/ipointerinactiveimpl-class.md)|Ta klasa implementuje `IUnknown` i [IPointerInactive](/windows/desktop/api/ocidl/nn-ocidl-ipointerinactive) metody interfejsu.|atlctl.h|  
+|[IPropertyNotifySinkCP](../../atl/reference/ipropertynotifysinkcp-class.md)|Ta klasa udostępnia [ipropertynotifysink —](/windows/desktop/api/ocidl/nn-ocidl-ipropertynotifysink) interfejs jako interfejsu wychodzącego w obiekcie składnika.|atlctl.h|  
 |[IPropertyPage2Impl](../../atl/reference/ipropertypage2impl-class.md)|Ta klasa implementuje `IUnknown` i dziedziczy domyślna Implementacja klasy [IPropertyPageImpl](../../atl/reference/ipropertypageimpl-class.md).|atlctl.h|  
-|[IPropertyPageImpl](../../atl/reference/ipropertypageimpl-class.md)|Ta klasa implementuje `IUnknown` i udostępnia domyślną implementację elementu [IPropertyPage](http://msdn.microsoft.com/library/windows/desktop/ms691246) interfejsu.|atlctl.h|  
-|[IProvideClassInfo2Impl](../../atl/reference/iprovideclassinfo2impl-class.md)|Ta klasa udostępnia domyślną implementację elementu [IProvideClassInfo](http://msdn.microsoft.com/library/windows/desktop/ms687303) i [IProvideClassInfo2](http://msdn.microsoft.com/library/windows/desktop/ms693764) metody.|atlcom.h|  
+|[IPropertyPageImpl](../../atl/reference/ipropertypageimpl-class.md)|Ta klasa implementuje `IUnknown` i udostępnia domyślną implementację elementu [IPropertyPage](/windows/desktop/api/ocidl/nn-ocidl-ipropertypage) interfejsu.|atlctl.h|  
+|[IProvideClassInfo2Impl](../../atl/reference/iprovideclassinfo2impl-class.md)|Ta klasa udostępnia domyślną implementację elementu [IProvideClassInfo](/windows/desktop/api/ocidl/nn-ocidl-iprovideclassinfo) i [IProvideClassInfo2](/windows/desktop/api/ocidl/nn-ocidl-iprovideclassinfo2) metody.|atlcom.h|  
 |[IQuickActivateImpl](../../atl/reference/iquickactivateimpl-class.md)|Ta klasa łączy inicjowania kontroli kontenery w jednym wywołaniu.|atlctl.h|  
-|[IRunnableObjectImpl](../../atl/reference/irunnableobjectimpl-class.md)|Ta klasa implementuje `IUnknown` i udostępnia domyślną implementację elementu [IRunnableObject](http://msdn.microsoft.com/library/windows/desktop/ms692783) interfejsu.|atlctl.h|  
+|[IRunnableObjectImpl](../../atl/reference/irunnableobjectimpl-class.md)|Ta klasa implementuje `IUnknown` i udostępnia domyślną implementację elementu [IRunnableObject](/windows/desktop/api/objidl/nn-objidl-irunnableobject) interfejsu.|atlctl.h|  
 |[IServiceProviderImpl](../../atl/reference/iserviceproviderimpl-class.md)|Ta klasa udostępnia domyślną implementację elementu `IServiceProvider` interfejsu.|atlcom.h|  
-|[ISpecifyPropertyPagesImpl](../../atl/reference/ispecifypropertypagesimpl-class.md)|Ta klasa implementuje `IUnknown` i udostępnia domyślną implementację elementu [ISpecifyPropertyPages](http://msdn.microsoft.com/library/windows/desktop/ms695217) interfejsu.|atlcom.h|  
+|[ISpecifyPropertyPagesImpl](../../atl/reference/ispecifypropertypagesimpl-class.md)|Ta klasa implementuje `IUnknown` i udostępnia domyślną implementację elementu [ISpecifyPropertyPages](/windows/desktop/api/ocidl/nn-ocidl-ispecifypropertypages) interfejsu.|atlcom.h|  
 |[ISupportErrorInfoImpl](../../atl/reference/isupporterrorinfoimpl-class.md)|Ta klasa udostępnia domyślną implementację elementu `ISupportErrorInfo Interface` interfejsu i mogą być używane, gdy tylko jeden interfejs generuje błędy na obiekcie.|atlcom.h|  
 |[Interfejs IThreadPoolConfig](../../atl/reference/ithreadpoolconfig-interface.md)|Ten interfejs zapewnia metody konfigurowania puli wątków.|atlutil.h|  
-|[IViewObjectExImpl](../../atl/reference/iviewobjecteximpl-class.md)|Ta klasa implementuje `IUnknown` i zawiera domyślne implementacje [IViewObject](http://msdn.microsoft.com/library/windows/desktop/ms680763), [IViewObject2](http://msdn.microsoft.com/library/windows/desktop/ms691318), i [IViewObjectEx](http://msdn.microsoft.com/library/windows/desktop/ms682375) interfejsów.|atlctl.h|  
+|[IViewObjectExImpl](../../atl/reference/iviewobjecteximpl-class.md)|Ta klasa implementuje `IUnknown` i zawiera domyślne implementacje [IViewObject](/windows/desktop/api/oleidl/nn-oleidl-iviewobject), [IViewObject2](/windows/desktop/api/oleidl/nn-oleidl-iviewobject2), i [IViewObjectEx](/windows/desktop/api/ocidl/nn-ocidl-iviewobjectex) interfejsów.|atlctl.h|  
 |[Interfejs IWorkerThreadClient](../../atl/reference/iworkerthreadclient-interface.md)|`IWorkerThreadClient` interfejs implementowany przez klientów [CWorkerThread](../../atl/reference/cworkerthread-class.md) klasy.|atlutil.h|  
 |[_U_MENUorID](../../atl/reference/u-menuorid-class.md)|Ta klasa udostępnia otokę dla `CreateWindow` i `CreateWindowEx`.|atlwin.h|  
 |[_U_RECT](../../atl/reference/u-rect-class.md)|Ta klasa adaptera argument umożliwia albo `RECT` wskaźników lub odwołań, które zostaną przekazane do funkcji, która jest zaimplementowana w zakresie wskaźników.|atlwin.h|  

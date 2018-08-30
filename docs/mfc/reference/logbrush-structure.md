@@ -16,15 +16,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 15b904a07eb668a59a269741973424aa30e15877
-ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
+ms.openlocfilehash: b868efed07f786a78c516862e1f88d2310a7c05d
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37336409"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43208781"
 ---
 # <a name="logbrush-structure"></a>Struktura LOGBRUSH
-`LOGBRUSH` Definiuje struktury, style, kolor i wzoru pędzla fizycznych. Jest on używany przez Windows [CreateBrushIndirect](http://msdn.microsoft.com/library/windows/desktop/dd183487) i [ExtCreatePen](http://msdn.microsoft.com/library/windows/desktop/dd162705) funkcji.  
+`LOGBRUSH` Definiuje struktury, style, kolor i wzoru pędzla fizycznych. Jest on używany przez Windows [CreateBrushIndirect](/windows/desktop/api/wingdi/nf-wingdi-createbrushindirect) i [ExtCreatePen](/windows/desktop/api/wingdi/nf-wingdi-extcreatepen) funkcji.  
   
 ## <a name="syntax"></a>Składnia  
   

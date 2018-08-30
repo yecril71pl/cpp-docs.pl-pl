@@ -29,12 +29,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 77b0c115dbd820ea715b739dd3e4d6eb2c5f4950
-ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
+ms.openlocfilehash: 0a2652730c981313ee3e168aca4a36a91fadde47
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37883453"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43198458"
 ---
 # <a name="ccomcontrol-class"></a>Klasa CComControl
 Ta klasa dostarcza metody do tworzenia i zarządzania formantami ATL.  
@@ -157,7 +157,7 @@ HRESULT FireOnChanged(DISPID dispID);
  Jedna z wartości HRESULT standardowych.  
   
 ### <a name="remarks"></a>Uwagi  
- Jeśli pochodną klasy kontrolki [ipropertynotifysink —](http://msdn.microsoft.com/library/windows/desktop/ms692638), ta metoda wywołuje [CFirePropNotifyEvent::FireOnChanged](cfirepropnotifyevent-class.md#fireonchanged) powiadomić wszystkich połączonych `IPropertyNotifySink` interfejsów określoną kontrolkę Właściwość zostanie zmieniona. Jeśli nie jest pochodną klasy kontrolki `IPropertyNotifySink`, ta metoda zwraca wartość S_OK. 
+ Jeśli pochodną klasy kontrolki [ipropertynotifysink —](/windows/desktop/api/ocidl/nn-ocidl-ipropertynotifysink), ta metoda wywołuje [CFirePropNotifyEvent::FireOnChanged](cfirepropnotifyevent-class.md#fireonchanged) powiadomić wszystkich połączonych `IPropertyNotifySink` interfejsów określoną kontrolkę Właściwość zostanie zmieniona. Jeśli nie jest pochodną klasy kontrolki `IPropertyNotifySink`, ta metoda zwraca wartość S_OK. 
   
  Ta metoda jest bezpieczny do wywołania, nawet jeśli formant nie obsługuje punktów połączenia.  
   
@@ -179,7 +179,7 @@ HRESULT FireOnRequestEdit(DISPID dispID);
  Jedna z wartości HRESULT standardowych.  
   
 ### <a name="remarks"></a>Uwagi  
- Jeśli pochodną klasy kontrolki [ipropertynotifysink —](http://msdn.microsoft.com/library/windows/desktop/ms692638), ta metoda wywołuje [CFirePropNotifyEvent::FireOnRequestEdit](cfirepropnotifyevent-class.md#fireonrequestedit) powiadomić wszystkich połączonych `IPropertyNotifySink` interfejsów określonego właściwości kontrolki zostanie zmienione. Jeśli nie jest pochodną klasy kontrolki `IPropertyNotifySink`, ta metoda zwraca wartość S_OK.  
+ Jeśli pochodną klasy kontrolki [ipropertynotifysink —](/windows/desktop/api/ocidl/nn-ocidl-ipropertynotifysink), ta metoda wywołuje [CFirePropNotifyEvent::FireOnRequestEdit](cfirepropnotifyevent-class.md#fireonrequestedit) powiadomić wszystkich połączonych `IPropertyNotifySink` interfejsów określonego właściwości kontrolki zostanie zmienione. Jeśli nie jest pochodną klasy kontrolki `IPropertyNotifySink`, ta metoda zwraca wartość S_OK.  
 
   
  Ta metoda jest bezpieczny do wywołania, nawet jeśli formant nie obsługuje punktów połączenia.  
@@ -205,10 +205,10 @@ int MessageBox(
  Tytuł okna dialogowego. Jeśli wartość NULL (ustawienie domyślne), tytuł "Error" jest używany.  
   
  *nNie*  
- Określa zawartość i zachowanie okna dialogowego. Zobacz [MessageBox](http://msdn.microsoft.com/library/windows/desktop/ms645505) wpisu w dokumentacji zestawu SDK Windows listę dostępnych pól inny komunikat. Wartość domyślna zapewnia prosty **OK** przycisku.  
+ Określa zawartość i zachowanie okna dialogowego. Zobacz [MessageBox](/windows/desktop/api/winuser/nf-winuser-messagebox) wpisu w dokumentacji zestawu SDK Windows listę dostępnych pól inny komunikat. Wartość domyślna zapewnia prosty **OK** przycisku.  
   
 ### <a name="return-value"></a>Wartość zwracana  
- Zwraca wartość całkowitą określającą jedną z wartości element menu na liście [MessageBox](http://msdn.microsoft.com/library/windows/desktop/ms645505) w dokumentacji zestawu Windows SDK.  
+ Zwraca wartość całkowitą określającą jedną z wartości element menu na liście [MessageBox](/windows/desktop/api/winuser/nf-winuser-messagebox) w dokumentacji zestawu Windows SDK.  
   
 ### <a name="remarks"></a>Uwagi  
  `MessageBox` jest przydatne zarówno podczas tworzenia, jak i w prosty sposób, aby wyświetlić błąd lub ostrzeżenie dla użytkownika.  

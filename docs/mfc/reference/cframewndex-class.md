@@ -188,12 +188,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 97548fca6b47e8d765eb7744a86ab0d4cfa27b17
-ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
+ms.openlocfilehash: 50bb4061a13a9057a695b25ca32421c4dd7ed88b
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37337489"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43207827"
 ---
 # <a name="cframewndex-class"></a>Klasa CFrameWndEx
 Implementuje funkcje Windows pojedynczego dokumentu (SDI) okna nachodzącego lub interfejsu okna podręcznego ramki i oferuje elementy członkowskie do zarządzania oknem. Rozszerza [CFrameWnd](../../mfc/reference/cframewnd-class.md) klasy.  
@@ -250,7 +250,7 @@ class CFrameWndEx : public CFrameWnd
 |[CFrameWndEx::OnCreate](#oncreate)|Wywoływane przez platformę, po utworzeniu ramki.|  
 |[CFrameWndEx::OnDestroy](#ondestroy)|Wywoływane przez platformę, kiedy niszczony jest ramki.|  
 |[CFrameWndEx::OnDrawMenuImage](#ondrawmenuimage)|Wywoływane przez platformę, gdy aplikacja rysuje obrazu skojarzonego z elementem menu.|  
-|[CFrameWndEx::OnDrawMenuLogo](#ondrawmenulogo)|Wywoływane przez platformę, gdy `CMFCPopupMenu` obiektu procesy [WM_PAINT](http://msdn.microsoft.com/library/windows/desktop/dd145213) wiadomości.|  
+|[CFrameWndEx::OnDrawMenuLogo](#ondrawmenulogo)|Wywoływane przez platformę, gdy `CMFCPopupMenu` obiektu procesy [WM_PAINT](/windows/desktop/gdi/wm-paint) wiadomości.|  
 |[CFrameWndEx::OnDWMCompositionChanged](#ondwmcompositionchanged)|Wywoływane przez platformę, gdy włączono lub wyłączono kompozycję Menedżera okien pulpitu (DWM).|  
 |[CFrameWndEx::OnExitSizeMove](#onexitsizemove)|Wywoływane przez platformę, po zatrzymaniu ramki, przenoszenia lub zmieniania jej rozmiaru.|  
 |[CFrameWndEx::OnGetMinMaxInfo](#ongetminmaxinfo)|Wywoływane przez platformę, gdy zmieniany jest rozmiar ramki pozwala zastosować limity wymiaru okna.|  
@@ -358,7 +358,7 @@ virtual void AdjustDockingLayout(HDWP hdwp=NULL);
  Dojście do struktury, która zawiera pozycje wiele okien. .  
   
 ### <a name="remarks"></a>Uwagi  
- Struktura hdwp jest inicjowany przez [BeginDeferWindowPos](http://msdn.microsoft.com/library/windows/desktop/ms632672) metody.  
+ Struktura hdwp jest inicjowany przez [BeginDeferWindowPos](https://msdn.microsoft.com/library/windows/desktop/ms632672) metody.  
   
 ##  <a name="delayupdateframemenu"></a>  CFrameWndEx::DelayUpdateFrameMenu  
  Ustawia menu ramki, a następnie aktualizuje podczas przetwarzania polecenia jest w stanie bezczynności.  
@@ -1093,7 +1093,7 @@ afx_msg void OnGetMinMaxInfo(MINMAXINFO FAR* lpMMI);
   
 ### <a name="parameters"></a>Parametry  
  [in] *lpMMI*  
- Wskaźnik do [MINMAXINFO](http://msdn.microsoft.com/library/windows/desktop/ms632605) struktury.  
+ Wskaźnik do [MINMAXINFO](https://msdn.microsoft.com/library/windows/desktop/ms632605) struktury.  
   
 ### <a name="remarks"></a>Uwagi  
   
@@ -1129,7 +1129,7 @@ afx_msg void OnLButtonDown(
   
 ### <a name="parameters"></a>Parametry  
  [in] *nFlags*  
- Wskazuje, czy użytkownik nacisnął klawisz klawisze modyfikujące. Możliwe wartości parametru można znaleźć *wParam* w [powiadomień WM_LBUTTONDOWN](http://msdn.microsoft.com/library/windows/desktop/ms645607).  
+ Wskazuje, czy użytkownik nacisnął klawisz klawisze modyfikujące. Możliwe wartości parametru można znaleźć *wParam* w [powiadomień WM_LBUTTONDOWN](/windows/desktop/inputdev/wm-lbuttondown).  
   
  [in] *punktu*  
  Określa x i współrzędne y wskaźnika, względem lewego górnego rogu okna.  
@@ -1147,7 +1147,7 @@ afx_msg void OnLButtonUp(
   
 ### <a name="parameters"></a>Parametry  
  [in] *nFlags*  
- Wskazuje, czy użytkownik nacisnął klawisz klawisze modyfikujące. Możliwe wartości parametru można znaleźć *wParam* w [powiadomień WM_LBUTTONUP](http://msdn.microsoft.com/library/windows/desktop/ms645608).  
+ Wskazuje, czy użytkownik nacisnął klawisz klawisze modyfikujące. Możliwe wartości parametru można znaleźć *wParam* w [powiadomień WM_LBUTTONUP](/windows/desktop/inputdev/wm-lbuttonup).  
   
  [in] *punktu*  
  Określa x i współrzędne y wskaźnika, względem lewego górnego rogu okna.  
@@ -1221,7 +1221,7 @@ afx_msg void OnMouseMove(
   
 ### <a name="parameters"></a>Parametry  
  [in] *nFlags*  
- Wskazuje, czy użytkownik Naciśnięto klawisze modyfikujące. Możliwe wartości parametru można znaleźć *wParam* w [powiadomień WM_MOUSEMOVE](http://msdn.microsoft.com/library/windows/desktop/ms645616).  
+ Wskazuje, czy użytkownik Naciśnięto klawisze modyfikujące. Możliwe wartości parametru można znaleźć *wParam* w [powiadomień WM_MOUSEMOVE](/windows/desktop/inputdev/wm-mousemove).  
   
  [in] *punktu*  
  Określa x i y współrzędne wskaźnika względem lewego górnego rogu okna.  
@@ -1290,7 +1290,7 @@ afx_msg LRESULT OnNcHitTest(CPoint point);
  Lokalizacja wskaźnika w współrzędne ekranu.  
   
 ### <a name="return-value"></a>Wartość zwracana  
- Wskaźnik trafień wyliczany wartości. Aby uzyskać listę możliwych wartości, zobacz [powiadomień WM_NCHITTEST](http://msdn.microsoft.com/library/windows/desktop/ms645618).  
+ Wskaźnik trafień wyliczany wartości. Aby uzyskać listę możliwych wartości, zobacz [powiadomień WM_NCHITTEST](/windows/desktop/inputdev/wm-nchittest).  
   
 ### <a name="remarks"></a>Uwagi  
   
@@ -1305,7 +1305,7 @@ afx_msg void OnNcMouseMove(
   
 ### <a name="parameters"></a>Parametry  
  [in] *nHitTest*  
- Wskaźnik trafień wyliczany wartości. Aby uzyskać listę możliwych wartości, zobacz [powiadomień WM_NCHITTEST](http://msdn.microsoft.com/library/windows/desktop/ms645618).  
+ Wskaźnik trafień wyliczany wartości. Aby uzyskać listę możliwych wartości, zobacz [powiadomień WM_NCHITTEST](/windows/desktop/inputdev/wm-nchittest).  
   
  [in] *punktu*  
  Lokalizacja wskaźnika w współrzędne ekranu.  
@@ -1369,7 +1369,7 @@ afx_msg LRESULT OnPowerBroadcast(
   
 ### <a name="parameters"></a>Parametry  
  [in] *wp*  
- Zdarzenie zarządzania energią. Aby uzyskać listę możliwych wartości, zobacz [komunikat WM_POWERBROADCAST](http://msdn.microsoft.com/library/windows/desktop/aa373247).  
+ Zdarzenie zarządzania energią. Aby uzyskać listę możliwych wartości, zobacz [komunikat WM_POWERBROADCAST](/windows/desktop/Power/wm-powerbroadcast).  
   
  [in] *lp*  
  Ten parametr nie jest używany.  
@@ -1442,7 +1442,7 @@ afx_msg LRESULT OnSetText(
  Wskaźnik na tekst okna.  
   
 ### <a name="return-value"></a>Wartość zwracana  
- Wartość zwracana z wywołania do [DefWindowProc](http://msdn.microsoft.com/library/windows/desktop/ms633572).  
+ Wartość zwracana z wywołania do [DefWindowProc](https://msdn.microsoft.com/library/windows/desktop/ms633572).  
   
 ### <a name="remarks"></a>Uwagi  
   
@@ -1518,7 +1518,7 @@ afx_msg void OnSize(
   
 ### <a name="parameters"></a>Parametry  
  [in] *nNie*  
- Typ zmiany rozmiaru. Możliwe wartości parametru można znaleźć *wParam* w [powiadomień WM_SIZE](http://msdn.microsoft.com/library/windows/desktop/ms632646).  
+ Typ zmiany rozmiaru. Możliwe wartości parametru można znaleźć *wParam* w [powiadomień WM_SIZE](/windows/desktop/winmsg/wm-size).  
   
  [in] *cx*  
  Nową szerokość ramki w pikselach.  
@@ -1539,7 +1539,7 @@ afx_msg void OnSizing(
   
 ### <a name="parameters"></a>Parametry  
  [in] *fwSide*  
- Krawędzi ramki, który jest przenoszony. Zobacz parametr *wParam* w [powiadomień WM_SIZING](http://msdn.microsoft.com/library/windows/desktop/ms632647).  
+ Krawędzi ramki, który jest przenoszony. Zobacz parametr *wParam* w [powiadomień WM_SIZING](/windows/desktop/winmsg/wm-sizing).  
   
  [out w] *pRect*  
  Wskaźnik do [CRect](../../atl-mfc-shared/reference/crect-class.md) lub [Prostokąt](../../mfc/reference/rect-structure1.md) strukturę, która zawiera współrzędne ramki.  
@@ -1896,10 +1896,10 @@ virtual void WinHelp(
   
 ### <a name="parameters"></a>Parametry  
  *dwData*  
- Dane, które jest zależna od *nCmd* parametru. Aby uzyskać listę możliwych wartości, zobacz [WinHelp](http://msdn.microsoft.com/library/windows/desktop/bb762267).  
+ Dane, które jest zależna od *nCmd* parametru. Aby uzyskać listę możliwych wartości, zobacz [WinHelp](/windows/desktop/api/winuser/nf-winuser-winhelpa).  
   
  *nCmd*  
- Polecenie help. Aby uzyskać listę możliwych wartości, zobacz [WinHelp](http://msdn.microsoft.com/library/windows/desktop/bb762267).  
+ Polecenie help. Aby uzyskać listę możliwych wartości, zobacz [WinHelp](/windows/desktop/api/winuser/nf-winuser-winhelpa).  
   
 ### <a name="remarks"></a>Uwagi  
   

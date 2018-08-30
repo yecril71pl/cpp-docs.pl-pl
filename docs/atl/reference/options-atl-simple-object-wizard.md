@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c1cef503bf9862f1259e25aff76a013d60776077
-ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
+ms.openlocfilehash: 36aab0177eaa62e5ec9601d9258c7de1a6ce7b59
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37883729"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43205693"
 ---
 # <a name="options-atl-simple-object-wizard"></a>Opcje, Kreator prostych obiektów ATL
 Użyj tej strony Kreator prostego obiektu ATL projektować pod kątem zwiększenia wydajności i obsługi błędów dla tego obiektu.  
@@ -35,14 +35,14 @@ Użyj tej strony Kreator prostego obiektu ATL projektować pod kątem zwiększen
   
 |Opcja|Opis|  
 |------------|-----------------|  
-|**Single**|Określa, czy obiekt jest zawsze uruchamiany w podstawowym wątku com. Zobacz [Apartamentach Single-Threaded](http://msdn.microsoft.com/library/windows/desktop/ms680112) i [InprocServer32](http://msdn.microsoft.com/library/windows/desktop/ms682390) Aby uzyskać więcej informacji.|  
-|**Apartamentu**|Określa, że obiekt używa wątkowości typu apartment. Komórka równoważne z jednego wątku. Każdy obiekt jako składnik typu apartment przypisano Lokal do wątku, przez cały okres istnienia obiektu. Jednak wiele wątków może służyć do wielu obiektów. Każda komórka jest powiązany z określonym wątku i ma pompy komunikatów Windows (ustawienie domyślne).<br /><br /> Zobacz [Apartamentach Single-Threaded](http://msdn.microsoft.com/library/windows/desktop/ms680112) Aby uzyskać więcej informacji.|  
+|**Single**|Określa, czy obiekt jest zawsze uruchamiany w podstawowym wątku com. Zobacz [Apartamentach Single-Threaded](/windows/desktop/com/single-threaded-apartments) i [InprocServer32](/windows/desktop/com/inprocserver32) Aby uzyskać więcej informacji.|  
+|**Apartamentu**|Określa, że obiekt używa wątkowości typu apartment. Komórka równoważne z jednego wątku. Każdy obiekt jako składnik typu apartment przypisano Lokal do wątku, przez cały okres istnienia obiektu. Jednak wiele wątków może służyć do wielu obiektów. Każda komórka jest powiązany z określonym wątku i ma pompy komunikatów Windows (ustawienie domyślne).<br /><br /> Zobacz [Apartamentach Single-Threaded](/windows/desktop/com/single-threaded-apartments) Aby uzyskać więcej informacji.|  
 |**Oba**|Określa, czy obiekt może używać apartamentu lub wolnych wątków w zależności od jakich wątek jest tworzony.|  
-|**Bezpłatne**|Określa, że obiekt używa wolnych wątków. Wolnych wątków jest równoważna z modelem apartamentu wielowątkowych. Zobacz [wielowątkowy Apartamentach](http://msdn.microsoft.com/library/windows/desktop/ms693421) Aby uzyskać więcej informacji.|  
+|**Bezpłatne**|Określa, że obiekt używa wolnych wątków. Wolnych wątków jest równoważna z modelem apartamentu wielowątkowych. Zobacz [wielowątkowy Apartamentach](/windows/desktop/com/multithreaded-apartments) Aby uzyskać więcej informacji.|  
 |**Niezależny od**|Określa, że obiekt następujące wytyczne dotyczące wielowątkowy apartamentach, ale można wykonywać na dowolny rodzaj wątku.|  
   
  **Agregacja**  
- Wskazuje, czy obiekt używa [agregacji](http://msdn.microsoft.com/library/windows/desktop/ms686558). Wybiera obiektu agregacji, które interfejsy do udostępnienia klientom i interfejsy są dostępne, tak jakby obiekt agregacji, zaimplementować je. Klienci z obiektu agregacji komunikują się tylko za pomocą obiektu agregacji.  
+ Wskazuje, czy obiekt używa [agregacji](/windows/desktop/com/aggregation). Wybiera obiektu agregacji, które interfejsy do udostępnienia klientom i interfejsy są dostępne, tak jakby obiekt agregacji, zaimplementować je. Klienci z obiektu agregacji komunikują się tylko za pomocą obiektu agregacji.  
   
 |Opcja|Opis|  
 |------------|-----------------|  
@@ -71,5 +71,5 @@ Użyj tej strony Kreator prostego obiektu ATL projektować pod kątem zwiększen
 ## <a name="see-also"></a>Zobacz też  
  [Kreator prostych obiektów ATL](../../atl/reference/atl-simple-object-wizard.md)   
  [Prosty obiekt ATL](../../atl/reference/adding-an-atl-simple-object.md)   
- [Problemy wielowątkowości dotyczące serwera przetwarzania](http://msdn.microsoft.com/library/windows/desktop/ms687205)
+ [Problemy wielowątkowości dotyczące serwera przetwarzania](/windows/desktop/com/in-process-server-threading-issues)
 

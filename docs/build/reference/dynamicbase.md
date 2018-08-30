@@ -1,7 +1,7 @@
 ---
 title: -DYNAMICBASE | Dokumentacja firmy Microsoft
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 06/12/2018
 ms.technology:
 - cpp-tools
 ms.topic: reference
@@ -18,29 +18,28 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4d7a4cf7aa35d7ad6b41fc6d61f3f27662ae2c8d
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 255123157da3f802eafaf26206598d54fea02335
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43211690"
 ---
 # <a name="dynamicbase"></a>/DYNAMICBASE
-Określa, czy obraz wykonywalny może być losowo przebazowanych w czasie ładowania przy użyciu randomizacji układu przestrzeni adresowej (ASLR).  
-  
-## <a name="syntax"></a>Składnia  
-  
-```  
-  
-/DYNAMICBASE[:NO]  
-```  
-  
-## <a name="remarks"></a>Uwagi  
- Domyślnie ustawia konsolidator **/DYNAMICBASE** opcji.  
-  
- Ta opcja modyfikuje nagłówek obrazu wykonywalnego, aby wskazać, czy moduł ładujący mogą losowo rebase obrazu w czasie ładowania.  
-  
- ASLR jest obsługiwana w systemach Windows Vista, Windows Server 2008, Windows 7, Windows 8 i Windows Server 2012.  
-  
-## <a name="see-also"></a>Zobacz też  
- [Opcje polecenia EDITBIN](../../build/reference/editbin-options.md)   
- [Poziom ochrony oprogramowania niezależnego dostawcy oprogramowania systemu Windows](http://msdn.microsoft.com/library/bb430720.aspx)
+
+Określa, czy ma być generowany obraz wykonywalny, który może być losowo przebazowanych w czasie ładowania przy użyciu funkcji randomizacji (ASLR) adres miejsca układu systemu Windows, która została po raz pierwszy dostępny w Windows Vista.
+
+## <a name="syntax"></a>Składnia
+
+> **/ DYNAMICBASE**[**: NO**]
+
+## <a name="remarks"></a>Uwagi
+
+**Opcja/DynamicBase** opcja modyfikuje nagłówek *obrazu pliku wykonywalnego*, pliku .dll lub .exe, aby wskazać, czy aplikacja powinna być losowo przebazowanych w czasie ładowania i umożliwia wirtualnego adresu losowe alokacji, który ma wpływ na lokalizację w pamięci wirtualnej sterty, stosy i alokacjami systemu operacyjnego. **Opcja/DynamicBase** opcja dotyczy zarówno 32-bitowych i 64-bitowych obrazów. Obsługiwany jest ASLR w systemach Windows Vista i nowszych systemach operacyjnych. Opcja jest ignorowana przez starszych systemów operacyjnych.
+
+Domyślnie **opcja/DynamicBase** jest włączona. Aby wyłączyć tę opcję, należy użyć **: No**. **Opcja/DynamicBase** opcja jest wymagana dla [/highentropyva](highentropyva-support-64-bit-aslr.md) opcję, aby mieć wpływ.
+
+## <a name="see-also"></a>Zobacz także
+
+- [Opcje EDITBIN](../../build/reference/editbin-options.md)
+- [Poziom ochrony oprogramowania niezależnego dostawcy oprogramowania Windows](https://msdn.microsoft.com/library/bb430720.aspx)

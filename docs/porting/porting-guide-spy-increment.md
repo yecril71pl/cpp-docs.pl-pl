@@ -12,12 +12,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ebc7abdcdad1c44d0758100abdea96101fb68e52
-ms.sourcegitcommit: b92ca0b74f0b00372709e81333885750ba91f90e
+ms.openlocfilehash: 019e63009706fd5d0ab22044642449c5bce3c3a6
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/16/2018
-ms.locfileid: "42465191"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43222384"
 ---
 # <a name="porting-guide-spy"></a>Przewodnik przenoszenia: Narzędzie Spy++
 To przenoszenia analiza przypadku jest przeznaczona do daje wyobrażenie o jakie typowym projekcie przenoszenia jest podobna, jakiego rodzaju problemy mogą wystąpić i pewne ogólne porady i wskazówki dotyczące przenoszenia problemów adresowania. Ma nie należy traktować jako ostateczny przewodnik do przenoszenia, ponieważ środowisko Eksportowanie projektu zależy od bardzo szczegółowe informacje na temat kodu.  
@@ -527,7 +527,7 @@ Teraz Daj nam faktycznie aktualizować stary kod zestawu znaków wielobajtowych 
   
 Przenoszenie Unicode UTF-16, firma Microsoft należy zdecydować, czy nadal chcemy możliwość kompilowania do MBCS, czy nie.  Jeśli chcemy mieć możliwość obsługi MBCS powinniśmy skorzystać — makro tchar — jako typ znaku, który jest rozpoznawany jako celu **char** lub **wchar_t**, w zależności od tego, czy _MBCS lub _UNICODE zdefiniowano podczas Kompilacja. Przełączanie do TCHAR i TCHAR wersje różnych interfejsów API, zamiast **wchar_t** i jego skojarzone interfejsy API oznacza, że możesz wrócić do MBCS wersję kodu poprzez definiowanie makro _MBCS zamiast _UNICODE. Oprócz TCHAR istnieje wiele wersji tchar — takich jak definicje powszechnie używanych typów, makra i funkcje. Na przykład LPCTSTR zamiast LPCSTR i tak dalej. W oknie dialogowym właściwości projektu w obszarze **właściwości konfiguracji**w **ogólne** sekcji, zmień **zestaw znaków** właściwość **Użyj MBCS Zestaw znaków** do **Użyj kodowania Unicode**. To ustawienie ma wpływ na wstępnie zdefiniowane makra, które podczas kompilacji. Brak makro _UNICODE i makra UNICODE. Właściwość projektu ma wpływ na oba spójne. Nagłówki Windows używaj UNICODE w przypadku, gdy nagłówki Visual C++, takie jak MFC Użyj _UNICODE, ale jest zdefiniowana, drugi zawsze jest definiowany.  
   
-Jest dobrą [przewodnik](http://msdn.microsoft.com/library/cc194801.aspx) przenoszenie z MBCS na Unicode UTF-16 za pomocą TCHAR istnieje. Wybraliśmy tę trasę. Po pierwsze zmienimy **zestaw znaków** właściwości **zestaw znaków Unicode, użyj** i skompiluj ponownie projekt.  
+Jest dobrą [przewodnik](https://msdn.microsoft.com/library/cc194801.aspx) przenoszenie z MBCS na Unicode UTF-16 za pomocą TCHAR istnieje. Wybraliśmy tę trasę. Po pierwsze zmienimy **zestaw znaków** właściwości **zestaw znaków Unicode, użyj** i skompiluj ponownie projekt.  
   
 Niektóre miejsca w kodzie była już używana TCHAR, najwyraźniej oczekując na końcu obsługi standardu Unicode. Niektóre nie były dostępne. Przeszukaliśmy dla wystąpień CHAR, czyli **typedef** dla **char**i zastąpione większość z nich TCHAR. Ponadto firma Microsoft wyszukiwanego `sizeof(CHAR)`. Zawsze, gdy zmieniliśmy z CHAR do tchar — zwykle mieliśmy można zmienić na `sizeof(TCHAR)` ponieważ był to często używane do określenia liczby znaków w ciągu. W tym miejscu przy użyciu nieprawidłowego typu nie generuje błąd kompilatora, aby poświęcić nieco uwagi w tym przypadku zwracając.  
   

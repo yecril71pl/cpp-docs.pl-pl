@@ -21,23 +21,23 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8257631e46a1ebcf5c882d9f87c628c04ccc84f5
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 3e8c3af361e1ffb5928132727fa124f03a99e81e
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33347776"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43205652"
 ---
 # <a name="mfc-com"></a>MFC COM
-Podzbiór MFC zaprojektowano w celu obsługi modelu COM, podczas gdy większość Active biblioteki szablonu (ATL) jest przeznaczony dla modelu COM programowania. Tematy w tej części opisano Obsługa MFC dla modelu COM.  
+Podzbiór MFC jest przeznaczona do obsługi COM, podczas gdy większość z Active Template Library (ATL) jest przeznaczona do programowania COM. W tej sekcji tematów opisano obsługi MFC dla modelu COM.  
   
- Technologie Active (np. ActiveX formantów, zawieranie dokumentów aktywnych OLE i tak dalej) umożliwiają składnik modelu COM. składniki oprogramowania do współdziałać ze sobą w środowisku sieciowym, niezależnie od języka, z którym znajdowały się utworzony. Technologie Active może służyć do tworzenia aplikacji działających na pulpicie lub w Internecie. Aby uzyskać więcej informacji, zobacz [wprowadzenie do COM](../atl/introduction-to-com.md) lub [Component Object Model](http://msdn.microsoft.com/library/windows/desktop/ms694363).  
+ Aktywne technologii (np. ActiveX formantów, zawieranie dokumentów aktywnych, OLE i tak dalej) umożliwiają Component Object Model (COM) składników oprogramowania współdziałać ze sobą w środowisku sieciowym, niezależnie od języka, z którym znajdowały się utworzony. Technologii Active może służyć do tworzenia aplikacji, które są uruchamiane na pulpicie lub w Internecie. Aby uzyskać więcej informacji, zobacz [wprowadzenie do COM](../atl/introduction-to-com.md) lub [Component Object Model](/windows/desktop/com/the-component-object-model).  
   
- Aktywne technologie obejmują technologie klienta i serwera, takie jak następujące:  
+ Aktywne technologie obejmują technologie klienta i serwera, w tym następujące czynności:  
   
--   [Zawieranie dokumentów aktywnych](../mfc/active-document-containment.md), obsługiwane w wersjach MFC 4.2 i później, umożliwia użytkownikom wyświetlanie [dokumenty aktywne](../mfc/active-documents.md) (takich jak pliki programu Microsoft Excel lub Word) i Aktywuj interfejsu całego dokumentu w trybie macierzystym w obszarze klienckim aplikacji [kontenera dokumentów aktywnych](../mfc/active-document-containers.md) takich jak Microsoft Office Binder lub programu Microsoft Internet Explorer. Kontenery działać jako klienci, gdy dokumenty są udostępniane przez [serwery dokumentów aktywnych](../mfc/active-document-servers.md). Aby uzyskać więcej informacji na temat używania dokumenty aktywne w aplikacji internetowych, zobacz: [dokumenty aktywne w Internecie](../mfc/active-documents-on-the-internet.md).  
+-   [Zawieranie dokumentów aktywnych](../mfc/active-document-containment.md), obsługiwane w wersjach MFC 4.2 i nowszym, pozwala użytkownikom na wyświetlanie [dokumenty aktywne](../mfc/active-documents.md) (takich jak pliki programu Microsoft Excel lub Word) i Aktywuj cały interfejs dokumentu macierzystego Aplikacja w klienckim obszarze [kontener dokumentów aktywnych](../mfc/active-document-containers.md) takich jak Microsoft Office Binder ani Microsoft Internet Explorer. Kontenery działają jako klienci, natomiast dokumenty są udostępniane przez [serwery dokumentów aktywnych](../mfc/active-document-servers.md). Aby uzyskać więcej informacji na temat używania dokumentów aktywnych aplikacji internetowych, zobacz: [dokumenty aktywne w Internecie](../mfc/active-documents-on-the-internet.md).  
   
--   Formanty ActiveX są interaktywne obiektów, których można użyć w kontenerach, takich jak witryny sieci Web. Aby uzyskać więcej informacji dotyczących formantów ActiveX zobacz:  
+-   Formanty ActiveX to interaktywny obiektów, które mogą być używane w kontenerach, takich jak witryny sieci Web. Aby uzyskać więcej informacji na temat formantów ActiveX zobacz:  
   
     -   [Kontrolki ActiveX MFC](../mfc/mfc-activex-controls.md)  
   
@@ -45,21 +45,21 @@ Podzbiór MFC zaprojektowano w celu obsługi modelu COM, podczas gdy większoś�
   
     -   [Omówienie: Internet](../mfc/mfc-internet-programming-basics.md)  
   
-    -   [Uaktualnienie istniejącego formantu ActiveX do użycia w Internecie](../mfc/upgrading-an-existing-activex-control.md)  
+    -   [Uaktualnianie istniejącego kontrolki ActiveX, który ma być używany w Internecie](../mfc/upgrading-an-existing-activex-control.md)  
   
-    -   [Debugowanie formantu ActiveX](/visualstudio/debugger/how-to-debug-an-activex-control)  
+    -   [Debugowanie kontrolki ActiveX](/visualstudio/debugger/how-to-debug-an-activex-control)  
   
--   Wykonywanie aktywnych skryptów steruje zachowaniem zintegrowane formantów ActiveX co najmniej jeden z przeglądarki lub serwera. Aby uzyskać więcej informacji na wykonywanie aktywnych skryptów, zobacz [Technologia Active w Internecie](../mfc/active-technology-on-the-internet.md).  
+-   Wykonywanie aktywnych skryptów steruje zachowaniem zintegrowane z co najmniej jednej kontrolki ActiveX z przeglądarki lub serwera. Aby uzyskać więcej informacji na wykonywanie aktywnych skryptów, zobacz [Technologia Active w Internecie](../mfc/active-technology-on-the-internet.md).  
   
--   [Automatyzacja](../mfc/automation.md) (wcześniej znane jako automatyzacji OLE) umożliwia jednej aplikacji do modyfikowania obiektów w innej aplikacji lub "prezentować" obiekty co może manipulować.  
+-   [Automatyzacja](../mfc/automation.md) (wcześniej znane jako automatyzacji OLE) umożliwia jedną aplikację do manipulowania obiektami implementowane w innej aplikacji lub "Udostępnianie" obiekty, dzięki czemu można manipulować.  
   
-     Automatyczne obiektu może być lokalnym lub zdalnym (na innej maszynie jest dostępny w sieci). Automatyzacja jest dostępna dla obiektów COM i OLE.  
+     Automatyczne obiekt może być lokalnym lub zdalnym (na innej maszynie jest dostępny w sieci). Usługa Automation jest dostępna dla obiektów COM i OLE.  
   
--   Ta sekcja zawiera również informacje dotyczące programowania składników COM za pomocą MFC, na przykład w [punkty połączenia](../mfc/connection-points.md).  
+-   Ta sekcja zawiera również informacje na temat składników COM za pomocą MFC, na przykład w [punkty połączenia](../mfc/connection-points.md).  
   
- Omówienie nadal tzw OLE i co nosi teraz nazwę technologii active, zobacz tematy na [OLE](../mfc/ole-in-mfc.md).  
+ Omówienie nadal tak zwany OLE i co to jest teraz nazywana technologia active, zobacz Tematy w [OLE](../mfc/ole-in-mfc.md).  
   
- Ponadto zobacz artykuł bazy wiedzy Knowledge Base Q248019: Porada: zapobiec zajęty okna dialogowego pole z pojawiające się podczas długich COM działanie serwera.  
+ Zobacz też artykuł bazy wiedzy Q248019: Porada: Zapobiegaj zajęty okna dialogowego pole z pojawiające się podczas długich COM operacji serwera.  
   
 ## <a name="in-this-section"></a>W tej sekcji  
  [Zawieranie dokumentów aktywnych](../mfc/active-document-containment.md)  

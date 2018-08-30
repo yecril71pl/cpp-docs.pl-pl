@@ -50,12 +50,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7323dfa06e73342e956a9aacb1ad925b6fb022f2
-ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
+ms.openlocfilehash: bcc4af6f4aeb6c7a0df005d164729cf87065f613
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37338499"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43220833"
 ---
 # <a name="ceditview-class"></a>Klasa CEditView
 Typ widoku klasy, która udostępnia funkcje Windows formantu edycyjnego i może służyć do implementowania prostego edytora tekstu.  
@@ -120,7 +120,7 @@ class CEditView : public CCtrlView
   
  Domyślna implementacja klasy `CEditView` obsługuje następujące polecenia: id_edit_select_all — id_edit_find —, id_edit_replace —, id_edit_repeat — i ID_FILE_PRINT.  
   
- Domyślny limit znaków `CEditView` jest (1024 \* 1024-1 = 1048575). Można to zmienić, wywołując funkcję EM_LIMITTEXT podstawowej kontrolki edycji. Jednak ograniczenia są różne w zależności od systemu operacyjnego i typu pole edycji (pojedyncze lub wielowierszowy). Aby uzyskać więcej informacji na temat tych ograniczeń, zobacz [EM_LIMITTEXT](http://msdn.microsoft.com/library/windows/desktop/bb761607).  
+ Domyślny limit znaków `CEditView` jest (1024 \* 1024-1 = 1048575). Można to zmienić, wywołując funkcję EM_LIMITTEXT podstawowej kontrolki edycji. Jednak ograniczenia są różne w zależności od systemu operacyjnego i typu pole edycji (pojedyncze lub wielowierszowy). Aby uzyskać więcej informacji na temat tych ograniczeń, zobacz [EM_LIMITTEXT](/windows/desktop/Controls/em-limittext).  
   
  Aby zmienić ten limit w kontrolce, należy zastąpić `OnCreate()` funkcji dla Twojego `CEditView` klasy i Wstaw następujący wiersz kodu:  
   

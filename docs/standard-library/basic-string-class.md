@@ -126,12 +126,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7458a82cce22830dd16525a5f33ed12c6c1b6e0d
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 3c56cdcf59c6dad891029e21e14940598e0cfeae
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38957977"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43209087"
 ---
 # <a name="basicstring-class"></a>basic_string — Klasa
 
@@ -881,7 +881,7 @@ Wskaźnik do wersji stylu C, powinny być przekazywane wywołującemu ciągu.  P
 
 ### <a name="remarks"></a>Uwagi
 
-Obiekty typu String należących do basic_string klasy szablonu C++\<char > nie zawsze ma wartości null są przerwane. Znak null '\0' jest używany jako znak specjalny w ciągu języka C do oznaczenia końca ciągu, ale nie ma specjalnego znaczenia w obiekcie typu ciąg i może być częścią ciąg znaków, podobnie jak jakikolwiek inny znak. Brak automatyczna konwersja const **char\***  do ciągów, ale ciąg klasy nie przewiduje automatyczna konwersja ciągi stylu C do obiektów tego typu **basic_string\< CHAR >**.
+Obiekty typu String należących do basic_string klasy szablonu C++\<char > nie zawsze ma wartości null są przerwane. Znak null '\0' jest używany jako znak specjalny w ciągu języka C do oznaczenia końca ciągu, ale nie ma specjalnego znaczenia w obiekcie typu ciąg i może być częścią ciąg znaków, podobnie jak jakikolwiek inny znak. Brak automatyczna konwersja **const char** <strong>\*</strong> do ciągów, ale ciąg klasy nie przewiduje automatyczna konwersja ciągi stylu C do obiektów tego typu **basic_string\<char >**.
 
 Zwracany ciąg stylu C nie powinien być modyfikowany, zgodnie z tym może unieważnić wskaźnik do ciągu lub usunięty, ponieważ ten ciąg ma ograniczony okres istnienia i jest własnością ciąg klasy.
 
@@ -1652,7 +1652,7 @@ Wskaźnik do pierwszego elementu tablicy z zawartością ciągu lub, w przypadku
 
 Obiekty typu String należących do basic_string klasy szablonu C++ \<char > nie zawsze ma wartości null są przerwane. Typ zwracany dla `data` nie jest prawidłowym ciągiem C, ponieważ pobiera dołączany nie znaku null. Znak null '\0' jest używany jako znak specjalny w ciągu języka C do oznaczenia końca ciągu, ale nie ma specjalnego znaczenia w obiekcie typu String i może być częścią z obiektem ciągu, podobnie jak jakikolwiek inny znak.
 
-Brak automatyczna konwersja const **char\***  do ciągów, ale ciąg klasy nie przewiduje automatyczna konwersja ciągi stylu C do obiektów tego typu **basic_string \< CHAR >**.
+Brak automatyczna konwersja **const char** <strong>\*</strong> do ciągów, ale ciąg klasy nie przewiduje automatyczna konwersja ciągi stylu C do obiektów tego typu **basic_string \<char >**.
 
 Zwracany ciąg nie powinny być modyfikowane, ponieważ to może unieważnić wskaźnik do ciągu lub usunięty, ponieważ ten ciąg ma ograniczony okres istnienia i jest własnością ciąg klasy.
 
@@ -3528,7 +3528,7 @@ typedef typename allocator_type::pointer pointer;
 
 Typ jest synonimem dla `allocator_type::pointer`.
 
-Dla typu `string`, jest to równoważne **char\***.
+Dla typu `string`, jest to równoważne **char**<strong>\*</strong>.
 
 ### <a name="example"></a>Przykład
 
