@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 3f312267d83f73e30eecb569b50678e7cf5da5e7
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 52fb779173565eaa35eec37da80c93ba0610c14f
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42607281"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43199071"
 ---
 # <a name="public-c-attributes"></a>public (Atrybuty C++)
 
@@ -36,7 +36,7 @@ Zapewnia, że typedef zostaną umieszczone w biblioteki typów, nawet wtedy, gdy
 
 ## <a name="remarks"></a>Uwagi
 
-**Publicznych** atrybut C++ ma taką samą funkcjonalność jak [publicznych](http://msdn.microsoft.com/library/windows/desktop/aa367150) atrybutów w MIDL.
+**Publicznych** atrybut C++ ma taką samą funkcjonalność jak [publicznych](/windows/desktop/Midl/public) atrybutów w MIDL.
 
 ## <a name="example"></a>Przykład
 

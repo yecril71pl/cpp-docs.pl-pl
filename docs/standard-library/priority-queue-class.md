@@ -30,12 +30,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a53b865d054948d9ee22acbfbec0b6ddf807ec0c
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: e63f13c07ceb6220ba3dc8e7932c7357ed649188
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38954763"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43199241"
 ---
 # <a name="priorityqueue-class"></a>priority_queue — Klasa
 
@@ -50,11 +50,14 @@ class priority_queue
 
 ### <a name="parameters"></a>Parametry
 
-*Typ* typ danych elementu, który ma być przechowywany w priority_queue —.
+*Typ*<br/>
+ Typ danych elementu, który ma być przechowywany w priority_queue —.
 
-*Kontener* typu bazowego kontenera, używaną do zaimplementowania priority_queue —.
+*Kontener*<br/>
+ Typ podstawowy kontener używany do implementowania priority_queue —.
 
-*Porównaj* typ, który dostarcza obiekt funkcji, która może porównać dwie wartości elementów jako klucze sortowania, aby określić ich względną kolejność w priority_queue —. Ten argument jest opcjonalny i predykat dwuelementowy **mniej***\<*** typename** *kontenera ***:: value_type*** >* jest wartością domyślną.
+*Compare*<br/>
+ Typ, który dostarcza obiekt funkcji, która może porównać dwie wartości elementów jako klucze sortowania, aby określić ich względną kolejność w priority_queue —. Ten argument jest opcjonalny i predykat dwuelementowy `less<typename Container::value_type>` jest wartością domyślną.
 
 ## <a name="remarks"></a>Uwagi
 
@@ -249,15 +252,20 @@ priority_queue(InputIterator first, InputIterator last, const Traits&_comp, cons
 
 ### <a name="parameters"></a>Parametry
 
-*_ comp* funkcji porównywania typu **constTraits** porządkowania elementów w priority_queue — wartość domyślna to porównanie funkcji podstawowym kontenerem.
+*_ comp*<br/>
+ Funkcja porównywania typu **constTraits** porządkowania elementów w priority_queue — wartość domyślna to porównanie funkcji podstawowym kontenerem.
 
-*_Cont* podstawowy kontener, którego skonstruowany priority_queue — jest kopią.
+*_Cont*<br/>
+ Podstawowy kontener, którego skonstruowany priority_queue — jest kopią.
 
-*prawy* priority_queue — której zestaw zbudowany jest kopią.
+*right*<br/>
+ Priority_queue — której zestaw zbudowany jest kopią.
 
-*pierwszy* pozycja pierwszego elementu w zakresie elementów, które mają zostać skopiowane.
+*pierwszy*<br/>
+ Pozycja pierwszego elementu w zakresie elementów, które mają zostać skopiowane.
 
-*ostatni* pozycja pierwszego elementu poza zakresem elementów, które mają zostać skopiowane.
+*ostatni*<br/>
+ Pozycja pierwszego elementu poza zakresem elementów, które mają zostać skopiowane.
 
 ### <a name="remarks"></a>Uwagi
 
@@ -388,7 +396,8 @@ void push(const Type& val);
 
 ### <a name="parameters"></a>Parametry
 
-*Val* elementu dodany na początku priority_queue —.
+*Val*<br/>
+ Element dodany na początku priority_queue —.
 
 ### <a name="remarks"></a>Uwagi
 

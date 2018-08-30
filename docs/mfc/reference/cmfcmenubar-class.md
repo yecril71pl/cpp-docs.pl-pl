@@ -116,12 +116,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a4d8961cc929196c21838fd21132146deddabcc1
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: 2933ed9fbb9a464b4458ce357ce196f2ae9df8f6
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42465052"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43196385"
 ---
 # <a name="cmfcmenubar-class"></a>Klasa CMFCMenuBar
 Pasek menu, który implementuje dokowania.  
@@ -387,7 +387,7 @@ virtual BOOL CreateEx(
 ### <a name="remarks"></a>Uwagi  
  Należy użyć tej funkcji, zamiast [CMFCMenuBar::Create](#create) kiedy chcesz określić style oprócz styl paska narzędzi. Niektóre najczęściej używane style dodatkowe są TBSTYLE_TRANSPARENT i CBRS_TOP.  
   
- W przypadku list dodatkowe style, zobacz [formantu paska narzędzi oraz style przycisku](http://msdn.microsoft.com/library/windows/desktop/bb760439), [najczęściej używane style kontrolki](http://msdn.microsoft.com/library/windows/desktop/bb775498), i [najczęściej używane style okna](http://msdn.microsoft.com/library/windows/desktop/ms632600).  
+ W przypadku list dodatkowe style, zobacz [formantu paska narzędzi oraz style przycisku](/windows/desktop/Controls/toolbar-control-and-button-styles), [najczęściej używane style kontrolki](/windows/desktop/Controls/common-control-styles), i [najczęściej używane style okna](https://msdn.microsoft.com/library/windows/desktop/ms632600).  
   
 ### <a name="example"></a>Przykład  
  Poniższy przykład pokazuje sposób użycia `CreateEx` metody `CMFCMenuBar` klasy. Ten fragment kodu jest częścią [próbka IE Demo](../../visual-cpp-samples.md).  
@@ -964,7 +964,7 @@ static BOOL SetMenuFont(
   
 ### <a name="parameters"></a>Parametry  
  [in] *lpLogFont*  
- Wskaźnik do [LOGFONT](http://msdn.microsoft.com/library/windows/desktop/bb773327) strukturę, która definiuje czcionki do ustawienia.  
+ Wskaźnik do [LOGFONT](/windows/desktop/api/dimm/ns-dimm-__midl___midl_itf_dimm_0000_0000_0003) strukturę, która definiuje czcionki do ustawienia.  
   
  [in] *bHorz*  
  Wartość TRUE, jeśli chcesz, aby *lpLogFont* parametr służący do czcionki pionowej, wartość FALSE, jeśli chcesz, aby służyć do czcionki poziomej.  

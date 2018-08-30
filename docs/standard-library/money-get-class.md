@@ -26,12 +26,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7b6043da3945b36bd756714049b2bb6c91a32bd4
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 4cae819ccffae37ca27d1e062ae9a766e7acba1f
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38966553"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43201754"
 ---
 # <a name="moneyget-class"></a>money_get — Klasa
 
@@ -46,9 +46,11 @@ class money_get : public locale::facet;
 
 ### <a name="parameters"></a>Parametry
 
-*CharType* typ używany w programie do kodowania znaków w ustawieniach regionalnych.
+*CharType*<br/>
+ Typ używany w programie do kodowania znaków w ustawieniach regionalnych.
 
-*InputIterator* typ iteratora, z której funkcje get odczytują swoje dane wejściowe.
+*InputIterator*<br/>
+ Typ iteratora, z której funkcje get odczytują swoje dane wejściowe.
 
 ## <a name="remarks"></a>Uwagi
 
@@ -113,17 +115,23 @@ virtual iter_type do_get(iter_type first,
 
 ### <a name="parameters"></a>Parametry
 
-*pierwszy* iterator danych wejściowych, odnoszący się na początku sekwencji, który ma zostać przekonwertowany.
+*pierwszy*<br/>
+ Iterator danych wejściowych, odnoszący się na początku sekwencji, który ma zostać przekonwertowany.
 
-*ostatni* iterator danych wejściowych, odnoszący się koniec sekwencji, który ma zostać przekonwertowany.
+*ostatni*<br/>
+ Iterator danych wejściowych, odnoszący się koniec sekwencji, który ma zostać przekonwertowany.
 
-*Intl* wartość logiczną wskazującą typ symbolu waluty, oczekiwano w sekwencji: **true** Jeśli międzynarodowe, **false** Jeśli krajowych.
+*Wewnętrzna*<br/>
+ Wartość logiczną wskazującą typ symbolu waluty, oczekiwano w sekwencji: **true** Jeśli międzynarodowe, **false** Jeśli krajowych.
 
-*Iosbase* formatu Flaga który, gdy zestaw wskazuje, że symbol waluty jest opcjonalny; w przeciwnym razie jest to wymagane.
+*iosbase*<br/>
+ Flagi formatu, który po zestaw wskazuje, że symbol waluty jest opcjonalna. w przeciwnym razie jest ona wymagana.
 
-*Stan* Ustawia elementy odpowiedniej maski bitów dla stanu strumień zgodnie z tego, czy operacje zakończyło się pomyślnie, czy nie.
+*State*<br/>
+ Ustawia elementy odpowiedniej maski bitów dla stanu strumień zgodnie z tego, czy operacje zakończyło się pomyślnie, czy nie.
 
-*Val* przechowywania sekwencji przekonwertowany ciąg.
+*Val*<br/>
+ Ciąg przechowywania przekonwertowany sekwencji.
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -189,17 +197,23 @@ iter_type get(iter_type first,
 
 ### <a name="parameters"></a>Parametry
 
-*pierwszy* iterator danych wejściowych, odnoszący się na początku sekwencji, który ma zostać przekonwertowany.
+*pierwszy*<br/>
+ Iterator danych wejściowych, odnoszący się na początku sekwencji, który ma zostać przekonwertowany.
 
-*ostatni* iterator danych wejściowych, odnoszący się koniec sekwencji, który ma zostać przekonwertowany.
+*ostatni*<br/>
+ Iterator danych wejściowych, odnoszący się koniec sekwencji, który ma zostać przekonwertowany.
 
-*Intl* wartość logiczną wskazującą typ symbolu waluty, oczekiwano w sekwencji: **true** Jeśli międzynarodowe, **false** Jeśli krajowych.
+*Wewnętrzna*<br/>
+ Wartość logiczną wskazującą typ symbolu waluty, oczekiwano w sekwencji: **true** Jeśli międzynarodowe, **false** Jeśli krajowych.
 
-*Iosbase* formatu Flaga który, gdy zestaw wskazuje, że symbol waluty jest opcjonalny; w przeciwnym razie jest wymagana
+*iosbase*<br/>
+ Flagi formatu, który po zestaw wskazuje, że symbol waluty jest opcjonalna. w przeciwnym razie jest wymagana
 
-*Stan* Ustawia elementy odpowiedniej maski bitów dla stanu strumień zgodnie z tego, czy operacje zakończyło się pomyślnie.
+*State*<br/>
+ Ustawia elementy odpowiedniej maski bitów dla stanu strumień zgodnie z tego, czy operacje zakończyło się pomyślnie.
 
-*Val* przechowywania sekwencji przekonwertowany ciąg.
+*Val*<br/>
+ Ciąg przechowywania przekonwertowany sekwencji.
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -280,7 +294,8 @@ explicit money_get(size_t _Refs = 0);
 
 ### <a name="parameters"></a>Parametry
 
-*_Refs* wartość całkowitą, można określić typ zarządzania pamięci dla obiektu.
+*_Refs*<br/>
+ Wartość liczby całkowitej, można określić typ zarządzania pamięci dla obiektu.
 
 ### <a name="remarks"></a>Uwagi
 
@@ -294,7 +309,7 @@ Możliwe wartości parametru *_Refs* parametrów i ich znaczenie są:
 
 Żadnych przykładów bezpośrednie są to tylko możliwe, ponieważ destruktor jest chroniony.
 
-Konstruktor inicjuje jego podstawowego obiektu z **locale::**[aspekt](../standard-library/locale-class.md#facet_class)(**_ *** system plików Refs*).
+Konstruktor inicjuje jego podstawowego obiektu z **locale::**[aspekt](../standard-library/locale-class.md#facet_class)(*_Refs*).
 
 ## <a name="string_type"></a>  money_get::STRING_TYPE
 

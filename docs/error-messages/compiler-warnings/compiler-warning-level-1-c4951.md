@@ -1,7 +1,7 @@
 ---
-title: Kompilatora (poziom 1) ostrzeżenie C4951 | Dokumentacja firmy Microsoft
+title: Kompilator ostrzeżenie (poziom 1) C4951 | Dokumentacja firmy Microsoft
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 08/27/2018
 ms.technology:
 - cpp-diagnostics
 ms.topic: error-reference
@@ -16,18 +16,19 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c3ebf012338bdf6b90cc943e754056335c6751a4
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: e26c4bc176a54f063a3f9bce2faf451a9c0406f0
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33290468"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43204238"
 ---
-# <a name="compiler-warning-level-1-c4951"></a>Kompilator C4951 ostrzegawcze (poziom 1)
-"Funkcja" został wyedytowany od profil, który został zebrany danych, dane profilu funkcji nie zostały użyte  
-  
- Funkcja został zmodyfikowany w wejściowych modułu do [/LTCG:PGUPDATE](../../build/reference/ltcg-link-time-code-generation.md), dzięki czemu dane profilu są obecnie nieprawidłowe. Moduł wejściowy został ponownie kompilowana po **/LTCG:PGINSTRUMENT** i ma funkcję (***funkcja***) dla różnych przepływu sterowania niż modułu w momencie **/LTCG:PGINSTRUMENT**  operacji.  
-  
- To ostrzeżenie ma charakter informacyjny. Aby usunąć to ostrzeżenie, uruchom **/LTCG:PGINSTRUMENT**, powtórz test wszystkie działa, a następnie uruchom **/LTCG:PGOPTIMIZE**.  
-  
- To ostrzeżenie będzie zastąpiony z powodu błędu, jeśli **/LTCG:PGOPTIMIZE** została użyta.
+# <a name="compiler-warning-level-1-c4951"></a>Kompilator ostrzeżenie (poziom 1) C4951
+
+> "*funkcja*" został wyedytowany od profilu dane zostały zebrane, nieużywane dane profilu funkcji
+
+Funkcja został zmodyfikowany w danych wejściowych modułu [/LTCG:PGUPDATE](../../build/reference/ltcg-link-time-code-generation.md), dzięki czemu dane profilu są obecnie nieprawidłowe. Moduł wejściowy został ponownie kompilowana po **pginstrument** i ma funkcję (*funkcja*) przy użyciu różnych przepływu sterowania niż w module w momencie **pginstrument**  operacji.
+
+To ostrzeżenie ma charakter informacyjny. Aby rozwiązać tego ostrzeżenia, należy uruchomić **pginstrument**, powtórz wszystkie testu działa, a następnie uruchom **/LTCG:PGOPTIMIZE**.
+
+To ostrzeżenie zostanie zamienione błąd Jeśli **/LTCG:PGOPTIMIZE** została użyta.

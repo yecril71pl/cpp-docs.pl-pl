@@ -20,15 +20,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: add135c353366ed54a24c63fcce2101c49d24fe7
-ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
+ms.openlocfilehash: c767b39874ff64082d8533f92a9e006f69835c97
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37338584"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43205938"
 ---
 # <a name="cclientdc-class"></a>Cclientdc — klasa
-Zajmuje się wywoływanie funkcji Windows [getdc —](http://msdn.microsoft.com/library/windows/desktop/dd144871) podczas konstruowania i [ReleaseDC](http://msdn.microsoft.com/library/windows/desktop/dd162920) w trakcie niszczenia.  
+Zajmuje się wywoływanie funkcji Windows [getdc —](/windows/desktop/api/winuser/nf-winuser-getdc) podczas konstruowania i [ReleaseDC](/windows/desktop/api/winuser/nf-winuser-releasedc) w trakcie niszczenia.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -77,7 +77,7 @@ explicit CClientDC(CWnd* pWnd);
  Okno obszaru klienta, którego obiekt kontekstu urządzenia będą miały dostęp.  
   
 ### <a name="remarks"></a>Uwagi  
- Konstruktor wywołuje funkcję Windows [getdc —](http://msdn.microsoft.com/library/windows/desktop/dd144871).  
+ Konstruktor wywołuje funkcję Windows [getdc —](/windows/desktop/api/winuser/nf-winuser-getdc).  
   
  Wyjątek (typu `CResourceException`) jest generowany, jeśli Windows `GetDC` wywołanie zakończy się niepowodzeniem. Kontekst urządzenia może nie być dostępne w przypadku Windows został już przydzielony wszystkie jego kontekstów dostępnego urządzenia. Aplikacja konkuruje dla pięciu typowych kontekstach wyświetlania dostępnych w danym momencie w obszarze Windows.  
   

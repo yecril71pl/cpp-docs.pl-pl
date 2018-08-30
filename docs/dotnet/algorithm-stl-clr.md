@@ -151,12 +151,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 353044389b6be308eca2fae65f21eeae4e78532a
-ms.sourcegitcommit: bad2441d1930275ff506d44759d283d94cccd1c0
+ms.openlocfilehash: 93bbc86e32d75e81c342a0a0a71b823b87df62b0
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/31/2018
-ms.locfileid: "39376153"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43196768"
 ---
 # <a name="algorithm-stlclr"></a>algorithm (STL/CLR)
 Definiuje funkcje szablonu kontenera STL/CLR, które wykonują algorytmy.  
@@ -287,7 +287,7 @@ template<class _InIt, class _OutIt> inline
 ```  
   
 ### <a name="remarks"></a>Uwagi  
- Ta funkcja działa w taki sam, jak funkcja standardowej biblioteki języka C++ `copy`. Aby uzyskać więcej informacji, zobacz [kopiowania](http://msdn.microsoft.com/Library/f1fec7da-e01b-40f1-b5bd-6b81e304cae1). 
+ Ta funkcja działa w taki sam, jak funkcja standardowej biblioteki języka C++ `copy`. Aby uzyskać więcej informacji, zobacz [kopiowania](../standard-library/algorithm-functions.md#copy). 
 
 ## <a name="copy_backward"></a> copy_backward (STL/CLR)
 Przypisuje wartości elementów z zakresu źródłowego do zakresu docelowego, iterując przez sekwencję źródłową elementów oraz przypisując im nowe pozycje w kierunku do tyłu.  
@@ -826,7 +826,7 @@ template<class _FwdIt, class _Ty> inline
 ```  
   
 ### <a name="remarks"></a>Uwagi  
- Ta funkcja działa w taki sam, jak funkcja standardowej biblioteki języka C++ `remove`. Aby uzyskać więcej informacji, zobacz [Usuń](http://msdn.microsoft.com/Library/77e2585c-441e-448d-bd1d-c893d1356ed8).  
+ Ta funkcja działa w taki sam, jak funkcja standardowej biblioteki języka C++ `remove`. Aby uzyskać więcej informacji, zobacz [Usuń](../standard-library/algorithm-functions.md#remove).  
 
 ## <a name="remove_copy"></a> remove_copy — (STL/CLR)
 Kopiuje elementy z zakresu źródłowego do zakresu docelowego, z tym wyjątkiem, że elementy o określonej wartości nie są kopiowane, bez naruszania kolejności pozostałych elementów i zwracania końca nowego zakresu docelowego.  
@@ -1149,7 +1149,7 @@ Wymienia wartości elementów między dwoma typami obiektów, przypisując zawar
 ```  
   
 ### <a name="remarks"></a>Uwagi  
- Ta funkcja działa w taki sam, jak funkcja standardowej biblioteki języka C++ `swap`. Aby uzyskać więcej informacji, zobacz [wymiany](http://msdn.microsoft.com/Library/b471a2de-035e-4aff-b1c7-345d85d93972).  
+ Ta funkcja działa w taki sam, jak funkcja standardowej biblioteki języka C++ `swap`. Aby uzyskać więcej informacji, zobacz [wymiany](../standard-library/algorithm-functions.md#swap).  
 
 ## <a name="swap_ranges"></a> swap_ranges — (STL/CLR)
 Zamienia elementy jednego zakresu przez elementy innego zakresu, zakresy mają równe wielkości.  

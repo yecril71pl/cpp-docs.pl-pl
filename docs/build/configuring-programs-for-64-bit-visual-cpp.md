@@ -1,5 +1,5 @@
 ---
-title: Skonfiguruj Visual C++ dla 64-bitowy, x64 cele | Dokumentacja firmy Microsoft
+title: Konfigurowanie Visual C++ x64 64-bitowy, obiekty docelowe | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,16 +18,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5eaae71fb55b176ee4903978a6b4b5a8624dc049
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: e1054343d5e6afbc739fe302870b43eb9526f7d8
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32366812"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43196992"
 ---
-# <a name="configure-visual-c-for-64-bit-x64-targets"></a>Visual C++ for x64 64-bitowy, konfigurowanie obiektów docelowych
+# <a name="configure-visual-c-for-64-bit-x64-targets"></a>Konfigurowanie Visual C++ x64 64-bitowy, obiektów docelowych
 
-Ta sekcja zawiera tematy dotyczące przeznaczonych dla 64-bitowych x64 sprzętu z programem Visual C++ narzędzi do kompilacji.  
+Ta sekcja zawiera tematy dotyczące określania wartości docelowej x64 64-bitowych sprzętu z programem Visual C++ narzędzia do kompilacji.  
   
 ## <a name="in-this-section"></a>W tej sekcji  
   
@@ -41,7 +41,7 @@ Ta sekcja zawiera tematy dotyczące przeznaczonych dla 64-bitowych x64 sprzętu 
   
 ## <a name="related-sections"></a>Sekcje pokrewne  
 
-[Aplikacje 64-bitowe .NET framework](/dotnet/framework/64-bit-apps)  
+[.NET framework 64-bitowych aplikacji](/dotnet/framework/64-bit-apps)  
   
 [align](../cpp/align-cpp.md)  
   
@@ -49,7 +49,7 @@ Ta sekcja zawiera tematy dotyczące przeznaczonych dla 64-bitowych x64 sprzętu 
   
 [/favor (Optymalizacja pod kątem specyfiki architektury)](../build/reference/favor-optimize-for-architecture-specifics.md)  
   
-[Przewodnik programowania w języku dla 64-bitowego systemu Windows](http://msdn.microsoft.com/library/windows/desktop/bb427430)  
+[Przewodnik programowania w Windows 64-bitowych](/windows/desktop/WinProg64/programming-guide-for-64-bit-windows)  
   
 [MASM dla wersji x64 (ml64.exe)](../assembler/masm/masm-for-x64-ml64-exe.md)  
   

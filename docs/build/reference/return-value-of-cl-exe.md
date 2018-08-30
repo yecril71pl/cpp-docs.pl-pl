@@ -14,21 +14,21 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: dc8b5deab86597aca6e35b3d6f2d1adcca18be69
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 3925044f8cf827c38610308226cd6c32008a59a1
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32374596"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43206099"
 ---
 # <a name="return-value-of-clexe"></a>Wartość zwracania cl.exe
 Program cl.exe zwraca 0 w przypadku sukcesu (bez błędów) i wartość różną od zera w przeciwnym razie.  
   
  Wartość zwracana przez cl.exe może być przydatna, jeśli kompilujesz z pliku skryptu, powershell, .cmd lub .bat. Zaleca się przechwycenie danych wyjściowych kompilatora w przypadku błędów lub ostrzeżeń, tak aby można je było rozwiązać.  
   
- Istnieje zbyt wiele możliwych kodów wyjścia błędów dla cl.exe, aby je wszystkie wymienić. Można wyszukiwać kod błędu w pliku winerror.h lub ntstatus.h pliki uwzględniane w systemie Windows Software Development Kit w % ProgramFiles (x86) %\Windows Kit\\`version`\Include\shared\ katalogu. Kody błędów zwracane w zapisie dziesiętnym muszą zostać przekonwertowane na format szesnastkowy, aby możne je było wyszukać. Na przykład, kod błędu -1073741620 przekonwertowany na liczbę szesnastkową to 0xC00000CC. Ten błąd znajduje się w ntstatus.h, gdzie jest odpowiedni komunikat „Nie można odnaleźć określonej nazwy udziału na zdalnym serwerze”. Aby uzyskać listę kodów błędów systemu Windows, do pobrania, zobacz [ &#91;MS-ERREF&#93;: kodów błędów systemu Windows](http://msdn.microsoft.com/library/cc231196).  
+ Istnieje zbyt wiele możliwych kodów wyjścia błędów dla cl.exe, aby je wszystkie wymienić. Możesz wyszukać kod błędu w plikach winerror.h lub ntstatus.h, zawartych w Windows Software Development Kit w % ProgramFiles (x86) %\Windows zestawy\\`version`\Include\shared\ katalogu. Kody błędów zwracane w zapisie dziesiętnym muszą zostać przekonwertowane na format szesnastkowy, aby możne je było wyszukać. Na przykład, kod błędu -1073741620 przekonwertowany na liczbę szesnastkową to 0xC00000CC. Ten błąd znajduje się w ntstatus.h, gdzie jest odpowiedni komunikat „Nie można odnaleźć określonej nazwy udziału na zdalnym serwerze”. Aby pobrać listę kodów błędów, Windows, zobacz [ &#91;MS-ERREF&#93;: kody błędów Windows](https://msdn.microsoft.com/library/cc231196).  
   
- Możesz też użyć narzędzia wyszukiwania błędów w Visual Studio, aby się dowiedzieć, co oznacza komunikat o błędzie kompilatora. W powłoce poleceń programu Visual Studio, wprowadź **errlook.exe** Uruchom narzędzie; lub w programie Visual Studio IDE na pasku menu wybierz opcję **narzędzia**, **błąd podczas wyszukiwania**. Wprowadź wartość błędu, aby znaleźć opisowy tekst skojarzony z błędem. Aby uzyskać więcej informacji, zobacz [odwołanie ERRLOOK](../../build/reference/errlook-reference.md).  
+ Możesz też użyć narzędzia wyszukiwania błędów w Visual Studio, aby się dowiedzieć, co oznacza komunikat o błędzie kompilatora. W powłoce poleceń programu Visual Studio, wprowadź **errlook.exe** Aby uruchomić narzędzie lub w programie Visual Studio IDE na pasku menu wybierz **narzędzia**, **wyszukiwanie błędów**. Wprowadź wartość błędu, aby znaleźć opisowy tekst skojarzony z błędem. Aby uzyskać więcej informacji, zobacz [odwołanie ERRLOOK](../../build/reference/errlook-reference.md).  
   
 ## <a name="remarks"></a>Uwagi  
  Oto przykładowy plik .bat, używający wartości zwracanej przez cl.exe.  

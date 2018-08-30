@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: e696b3c141a83882af67e72039c164a0f917d446
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: d5da3f03500ccaadb4cff3be0226592e36ed3160
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42611203"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43200892"
 ---
 # <a name="export"></a>export
 
@@ -42,7 +42,7 @@ Nie można zastosować **wyeksportować** atrybutów do klasy, nawet wtedy, gdy 
 
 Jeśli eksportujesz nienazwane **wyliczenia** lub **struktury**, otrzymuje nazwę, która rozpoczyna się od **__unnamed**<em>x</em>, gdzie *x* jest to numer kolejny.
 
-Definicje typów prawidłowe eksportu są typy podstawowe, struktury, złożenia, wyliczenia lub wpisz identyfikatory.  Zobacz [typedef](http://msdn.microsoft.com/library/windows/desktop/aa367287) Aby uzyskać więcej informacji.
+Definicje typów prawidłowe eksportu są typy podstawowe, struktury, złożenia, wyliczenia lub wpisz identyfikatory.  Zobacz [typedef](/windows/desktop/Midl/typedef) Aby uzyskać więcej informacji.
 
 ## <a name="example"></a>Przykład
 

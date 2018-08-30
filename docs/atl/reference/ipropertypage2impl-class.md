@@ -20,12 +20,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bf5cf9438d2fcecb434802dc99aaa5c692ba108f
-ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
+ms.openlocfilehash: 6cce467218b92f6d0827cff2b8ede56b735ab9af
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37882900"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43197149"
 ---
 # <a name="ipropertypage2impl-class"></a>Klasa IPropertyPage2Impl
 Ta klasa implementuje `IUnknown` i dziedziczy domyślna Implementacja klasy [IPropertyPageImpl](../../atl/reference/ipropertypageimpl-class.md).  
@@ -53,7 +53,7 @@ class IPropertyPage2Impl : public IPropertyPageImpl<T>
 |[IPropertyPage2Impl::EditProperty](#editproperty)|Określa, które określają właściwość otrzyma fokus, po aktywowaniu na stronie właściwości. Implementacja biblioteki ATL zwraca E_NOTIMPL.|  
   
 ## <a name="remarks"></a>Uwagi  
- [IPropertyPage2](http://msdn.microsoft.com/library/windows/desktop/ms683996) interfejs rozszerza [IPropertyPage](http://msdn.microsoft.com/library/windows/desktop/ms691246) , dodając `EditProperty` metody. Ta metoda umożliwia klientowi do wybrania konkretnej właściwości w obiekcie strony właściwości.  
+ [IPropertyPage2](/windows/desktop/api/ocidl/nn-ocidl-ipropertypage2) interfejs rozszerza [IPropertyPage](/windows/desktop/api/ocidl/nn-ocidl-ipropertypage) , dodając `EditProperty` metody. Ta metoda umożliwia klientowi do wybrania konkretnej właściwości w obiekcie strony właściwości.  
   
  Klasa `IPropertyPage2Impl` po prostu zwraca E_NOTIMPL dla `IPropertyPage2::EditProperty`. Jednak dziedziczy domyślna Implementacja klasy [IPropertyPageImpl](../../atl/reference/ipropertypageimpl-class.md) i implementuje `IUnknown` , wysyłając informacje o do zrzutu kompilacji urządzenia podczas debugowania.  
   
@@ -82,7 +82,7 @@ HRESULT EditProperty(DISPID dispID);
  Zwraca E_NOTIMPL.  
   
 ### <a name="remarks"></a>Uwagi  
- Zobacz [IPropertyPage2::EditProperty](http://msdn.microsoft.com/library/windows/desktop/ms690353) w Windows SDK.  
+ Zobacz [IPropertyPage2::EditProperty](/windows/desktop/api/ocidl/nf-ocidl-ipropertypage2-editproperty) w Windows SDK.  
   
 ## <a name="see-also"></a>Zobacz też  
  [Klasa IPerPropertyBrowsingImpl](../../atl/reference/iperpropertybrowsingimpl-class.md)   

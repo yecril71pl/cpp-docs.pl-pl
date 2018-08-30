@@ -1,5 +1,5 @@
 ---
-title: Formanty MFC ActiveX | Dokumentacja firmy Microsoft
+title: Kontrolki ActiveX MFC | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -25,30 +25,30 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1209353f10e52b13202a91ae120057ba85dfa805
-ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
+ms.openlocfilehash: 9f0f0d88274e6804d087f8acf905ba3181d57798
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/25/2018
-ms.locfileid: "36930100"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43205845"
 ---
 # <a name="mfc-activex-controls"></a>Kontrolki ActiveX MFC
-Formant ActiveX jest składnik oprogramowania wielokrotnego użytku, oparte na modelu obiektu składników (COM), obsługuje wiele funkcji OLE, który można dostosować do potrzeb wiele oprogramowania. Formanty ActiveX są przeznaczone do użycia zarówno w zwykłym kontenery formantów ActiveX w Internecie, w strony sieci Web. Formanty ActiveX można utworzyć za pomocą MFC, opisane w tym miejscu lub z [Active Template Library (ATL)](../atl/active-template-library-atl-concepts.md).  
+Kontrolki ActiveX jest składnik oprogramowania wielokrotnego użytku, oparte na Component Object Model (COM) obsługuje szeroki zakres funkcji OLE, który można dostosować do potrzeb wiele oprogramowania. Kontrolki ActiveX są przeznaczone do użycia zarówno w zwykłych kontenery kontrolek ActiveX w Internecie, w strony sieci Web. Kontrolki ActiveX można utworzyć za pomocą MFC, opisane w tym miejscu lub za pomocą [Active Template Library (ATL)](../atl/active-template-library-atl-concepts.md).  
   
- Formant ActiveX jest narysowanie sam w osobnym oknie, odpowiadanie na zdarzenia (takie jak kliknięcie myszą), a następnie można zarządzać za pomocą interfejsu, który zawiera właściwości i metody podobne do obiektów automatyzacji.  
+ Kontrolki ActiveX można narysować sam w osobnym oknie reagowania na zdarzenia (na przykład kliknięć myszą), a następnie można zarządzać za pomocą interfejsu, który zawiera właściwości i metod podobnych do tych obiektów automatyzacji.  
   
- Formanty te mogą być opracowane dla wielu zastosowań, takich jak dostęp do bazy danych, monitorowania i tworzenie wykresów danych. Oprócz ich przenośność formantów ActiveX obsługuje funkcje wcześniej dostępne do formantu ActiveX, takich jak zgodność z istniejącą kontenery OLE i możliwość integracji z menu kontenera OLE ich menu. Ponadto formantu ActiveX w pełni obsługuje automatyzację, co umożliwia sterowanie do udostępnienia właściwości odczytem/zapisem i zestaw metod, które mogą być wywoływane przez kontrolki użytkownika.  
+ Te kontrolki mogą być tworzone dla zastosowań, takich jak dostęp do bazy danych, dane monitorowania lub wykresów. Oprócz ich przenoszenia kontrolek ActiveX obsługuje funkcje wcześniej niedostępne do kontrolki ActiveX, takich jak zgodność z istniejących kontenerów OLE i możliwość integracji z ich menu z menu kontenera OLE. Ponadto kontrolki ActiveX w pełni obsługuje automatyzację, co umożliwia kontrolę do udostępnienia właściwości odczytem/zapisem i zestaw metod, które mogą być wywoływane przez formant użytkownika.  
   
- Można utworzyć formanty ActiveX niepowiązane z oknami i kontrolek, które tylko utworzyć okna, gdy stanie się aktywne. Formanty bez okien przyspieszyć wyświetlanie aplikacji i umożliwia przezroczyste i nieprostokątny formantów. Można również asynchronicznie ładować właściwości formantu ActiveX.  
+ Można utworzyć kontrolek ActiveX bez okien i formantów, które tylko utworzyć okno, gdy tylko staną się aktywne. Od kontrolek bez okien przyspieszyć wyświetlanie aplikacji i umożliwia przejrzyste i nieprostokątne formantów. Można również załadować właściwości formantu ActiveX asynchronicznie.  
   
- Formant ActiveX jest wdrażany jako serwer w procesie (zazwyczaj małego obiektu) używanej w dowolnym kontener OLE. Należy pamiętać, że wszystkie funkcje formantu ActiveX dostępne tylko wtedy, gdy jest używany w kontenerze OLE zaprojektowane pod uwagę formantów ActiveX. Zobacz [portu formantów ActiveX do innych aplikacji](../mfc/containers-for-activex-controls.md) listę kontenerach obsługujących formanty ActiveX. Tego typu kontenera, zwany "kontenera formantu" może działać formantu ActiveX przy użyciu właściwości i metod formantu i odbierania powiadomień z formantu ActiveX w formularzu zdarzenia. Na poniższym rysunku pokazano interakcji.  
+ Kontrolki ActiveX jest wdrażany jako serwer w trakcie (zazwyczaj małego obiektu), który może służyć w dowolnym kontenerze OLE. Należy pamiętać, że pełną funkcjonalność formantu ActiveX dostępne tylko wtedy, gdy jest używane w ramach kontener OLE, który jest zaprojektowany pod uwagę formantów ActiveX. Zobacz [portu kontrolek ActiveX do innych aplikacji](../mfc/containers-for-activex-controls.md) listę kontenerów, które obsługuje formantów ActiveX. Ten typ kontenera, zwany "kontener formantu" może działać formantu ActiveX przy użyciu właściwości i metod formantu i odbiera powiadomienia z kontrolek ActiveX w formularzu zdarzenia. Na poniższym rysunku pokazano ta interakcja.  
   
- ![Wzajemne oddziaływanie kontenera formantu ActiveX i kontroli](../mfc/media/vc37221.gif "vc37221")  
-Interakcja między kontenerze formantów ActiveX i okna formantu ActiveX  
+ ![Wzajemne oddziaływania wykresów w kontenerze kontrolek ActiveX i kontroli](../mfc/media/vc37221.gif "vc37221")  
+Interakcja między kontenerze kontrolek ActiveX i okna formantu ActiveX  
   
- Niektóre najnowsze informacje dotyczące optymalizacji formantów ActiveX, zobacz [kontrolki ActiveX MFC: Optymalizacja](../mfc/mfc-activex-controls-optimization.md).  
+ Aby uzyskać niektóre najnowsze informacje dotyczące optymalizacji formantów ActiveX, zobacz [kontrolki ActiveX MFC: Optymalizacja](../mfc/mfc-activex-controls-optimization.md).  
   
- Aby utworzyć formantu MFC ActiveX, zobacz [Tworzenie projektu formantu ActiveX](../mfc/reference/mfc-activex-control-wizard.md).  
+ Aby utworzyć formant MFC ActiveX, zobacz [Tworzenie projektu kontrolki ActiveX](../mfc/reference/mfc-activex-control-wizard.md).  
   
  Aby uzyskać więcej informacji, zobacz:  
   
@@ -56,48 +56,48 @@ Interakcja między kontenerze formantów ActiveX i okna formantu ActiveX
   
 -   [Dokumenty aktywne](../mfc/active-documents.md)  
   
--   [Opis ActiveX — formanty](http://msdn.microsoft.com/library/windows/desktop/ms693753)  
+-   [Opis kontrolek ActiveX](/windows/desktop/com/activex-controls)  
   
--   [Uaktualnianie istniejącego formantu ActiveX do użycia w Internecie](../mfc/upgrading-an-existing-activex-control.md)  
+-   [Uaktualnianie istniejącego kontrolki ActiveX, który ma być używany w Internecie](../mfc/upgrading-an-existing-activex-control.md)  
   
 ##  <a name="_core_basic_components_of_an_activex_control"></a> Podstawowe składniki formantu ActiveX  
- Kontrolki ActiveX używa kilku elementów programistycznych wydajnie interakcję z kontenera formantu i użytkownika. Są to klasa [colecontrol —](../mfc/reference/colecontrol-class.md), zestaw funkcji inicjowanie zdarzeń i wysyłania mapy.  
+ Kontrolki ActiveX używa kilku elementów programowe wchodzić w interakcje wydajnie z kontenera kontrolki i użytkownika. Są to klasy [COleControl](../mfc/reference/colecontrol-class.md), zestaw funkcji inicjowanie zdarzeń oraz wysyłania mapy.  
   
- Każdy obiekt formantu ActiveX, w przypadku tworzenia dziedziczy jej klasa podstawowa MFC bogaty zestaw funkcji `COleControl`. Te funkcje obejmują Aktywacja w miejscu i logiki automatyzacji. `COleControl` te same funkcje co obiekt window MFC, a także możliwość wyzwalać zdarzeń można udostępnić obiektu formantu. `COleControl` można też podać [kontrolek bez okien](../mfc/providing-windowless-activation.md), które polegać na ich kontenera, aby uzyskać pomoc dotyczącą niektóre funkcje okna zapewnia (przechwytywanie myszy, klawiatury, przewijanie), ale oferuje znacznie szybsze wyświetlanie.  
+ Każdy obiekt formantu ActiveX, tworzysz dziedziczy jej klasa bazowa MFC bogaty zestaw funkcji `COleControl`. Funkcje te obejmują aktywacji w miejscu i logiki automatyzacji. `COleControl` można udostępnić obiekt formantu taką samą funkcjonalność jak obiekt okna MFC, a także możliwość wyzwalać zdarzeń. `COleControl` można też podać [kontrolek bez okien](../mfc/providing-windowless-activation.md), które polegają na ich kontenera, aby uzyskać pomoc dotyczącą niektóre z funkcji okna zapewnia (przechwytywanie myszy, klawiatury, przewijania), ale oferuje znacznie szybsze wyświetlanie.  
   
- Ponieważ pochodną klasy formantu `COleControl`, dziedziczy możliwość wysyłania lub zdarzeń do kontenera formantu, gdy zostaną spełnione określone warunki o nazwie "fire," wiadomości. Te zdarzenia są używane do powiadomi kontenera formantu, gdy coś ważne odbywa się w formancie. Dodatkowe informacje o zdarzeniu można wysłać do kontenera formantu dołączając parametrów zdarzenia. Aby uzyskać więcej informacji na temat zdarzeń formantu ActiveX, zobacz artykuł [kontrolki ActiveX MFC: zdarzenia](../mfc/mfc-activex-controls-events.md).  
+ Ponieważ klasa formantów wywodzi się z `COleControl`, dziedziczy on możliwość wysyłania lub "ogień", wiadomości, wywołuje zdarzenia, do kontenera kontrolki, gdy są spełnione określone warunki. Aby otrzymywać powiadomienia, kontenera kontrolki, gdy coś, co jest ważne się dzieje w kontrolce korzysta z tych zdarzeń. Dodatkowe informacje o zdarzeniu może wysyłać do kontenera kontrolki, dołączając parametrów do zdarzenia. Aby uzyskać więcej informacji na temat zdarzeń formantów ActiveX, zobacz artykuł [kontrolki ActiveX MFC: zdarzenia](../mfc/mfc-activex-controls-events.md).  
   
- Końcowy element jest mapy wysyłania, który jest używany do udostępnienia zestaw funkcji (nazywanych metody) i atrybuty (nazywane właściwości) dla użytkownika formant. Właściwości Zezwalaj kontenera kontrolki lub kontroli użytkownika do manipulowania kontrolki na różne sposoby. Użytkownik może Zmienianie wyglądu formantu, zmiany niektórych wartości formantu lub żądania kontroli, takich jak uzyskiwanie dostępu do określone dane, które obsługuje formantu. Ten interfejs jest określana przez dewelopera kontrolek i jest definiowana za pomocą **widoku klasy**. Aby uzyskać więcej informacji dotyczących właściwości i metod formantu ActiveX, zobacz artykuły [kontrolki ActiveX MFC: metody](../mfc/mfc-activex-controls-methods.md) i [właściwości](../mfc/mfc-activex-controls-properties.md).  
+ Ostatnim elementem jest mapa wysyłania, który jest używany do udostępnienia zestaw funkcji (o nazwie metody) i atrybuty (nazywane właściwościami) do formantu użytkownika. Właściwości umożliwiają kontener formantu lub użytkownika kontrolki do manipulowania kontroli na różne sposoby. Użytkownika można zmienić wygląd kontrolki, zmienić niektóre wartości kontrolki lub wysyłać żądania kontrolki, takie jak uzyskiwanie dostępu do konkretne dane, które obsługuje formant. Ten interfejs jest określana przez dewelopera kontrolek i jest definiowana za pomocą **Widok klas**. Aby uzyskać więcej informacji na temat właściwości i metod formantu ActiveX, zobacz artykuły [kontrolki ActiveX MFC: metody](../mfc/mfc-activex-controls-methods.md) i [właściwości](../mfc/mfc-activex-controls-properties.md).  
   
-##  <a name="_core_interaction_between_controls_with_windows_and_activex_control_containers"></a> Interakcja między formantami z systemem Windows i kontenery formantów ActiveX  
- Gdy formant jest używany w kontenerze kontroli, używa dwóch mechanizmów do komunikowania się: ujawnia on właściwości i metody, a jego wyzwala zdarzenia. Na poniższym rysunku pokazano implementowania tych dwóch mechanizmów.  
+##  <a name="_core_interaction_between_controls_with_windows_and_activex_control_containers"></a> Interakcja między formantami za pomocą Windows i kontenery kontrolek ActiveX  
+ Gdy formant jest używany w kontenerze kontrolki, używa dwóch mechanizmów do komunikowania się: udostępnia właściwości i metody, a jego wyzwala zdarzenia. Na poniższym rysunku pokazano, jak te dwa mechanizmy są implementowane.  
   
- ![Formant ActiveX, który komunikuje się z jego kontenera](../mfc/media/vc37222.gif "vc37222")  
-Komunikacja między kontenerze formantów ActiveX i formantu ActiveX  
+ ![Kontrolki ActiveX, który komunikuje się z jego kontenerem](../mfc/media/vc37222.gif "vc37222")  
+Komunikacja między kontenerze kontrolek ActiveX i kontrolki ActiveX  
   
- Również na poprzedniej ilustracji pokazano, jak inne interfejsy OLE (oprócz automatyzacji i zdarzenia) są obsługiwane przez formanty.  
+ Powyższy rysunek pokazuje również, jak inne interfejsy OLE (oprócz automatyzacji i zdarzenia) są obsługiwane przez formanty.  
   
- Wszystkie kontrolki komunikacji z kontenerem odbywa się za pośrednictwem `COleControl`. Do obsługi niektórych żądań kontenera `COleControl` wywołać elementu członkowskiego funkcje, które zostały wdrożone w klasy formantu. Wszystkie metody i niektóre właściwości są obsługiwane w ten sposób. Klasa formantu można także zainicjować komunikacji z kontenerem przez wywołanie funkcji Członkowskich `COleControl`. Zdarzenia są uruchamiane w ten sposób.  
+ Wszystkie kontrolki komunikacji z kontenerem odbywa się przez `COleControl`. Do obsługi niektórych żądań kontenera `COleControl` wywoła element członkowski funkcji, które są implementowane w klasie kontrolki. Wszystkie metody i niektóre właściwości są obsługiwane w ten sposób. Przez wywołanie funkcji składowych klasy z kontrolki można także zainicjować komunikacji z kontenerem `COleControl`. Zdarzenia są uruchamiane w ten sposób.  
   
-##  <a name="_core_active_and_inactive_states_of_an_activex_control"></a> Stany aktywną i nieaktywną formantu ActiveX  
- Formant ma dwa stany podstawowe: aktywnych i nieaktywnych. Zazwyczaj te stany zostały rozróżnianych na podstawie tego, czy formant miał okna. Aktywny formant miał okna; nie kontrolkę, która jest nieaktywne. Ta różnica nie jest już uniwersalnych wraz z wprowadzeniem aktywacji niepowiązanej z oknami, ale nadal mają zastosowanie wielu formantów.  
+##  <a name="_core_active_and_inactive_states_of_an_activex_control"></a> Stany aktywnych i nieaktywnych formantu ActiveX  
+ Formant ma dwa podstawowe stany: aktywnych i nieaktywnych. Zazwyczaj te stany zostały rozróżnianych na podstawie tego, czy formant ma okna. Aktywny formant ma okna; nie kontrolkę, która jest nieaktywny. Wraz z wprowadzeniem aktywacji niepowiązanej z oknami wykonywania tego rozróżnienia nie jest już uniwersalne, ale nadal dotyczy wielu kontrolek.  
   
- Gdy [kontroli bez okien](../mfc/providing-windowless-activation.md) umieszczane active wywołuje przechwytywanie myszy, klawiatury, przewijanie i innych usług okna z jego kontenera. Możesz również [Podaj interakcji z myszą do formantów nieaktywne](../mfc/providing-mouse-interaction-while-inactive.md), jak również formanty utworzone [czekać do momentu aktywowania można utworzyć okna](../mfc/turning-off-the-activate-when-visible-option.md).  
+ Gdy [niepowiązanej z oknami kontroli](../mfc/providing-windowless-activation.md) zbliża się aktywny, wywołuje ono przechwytywanie myszy, fokus klawiatury, przewijania i innych usług okna z jego kontenerem. Możesz również [zapewniają interakcji z myszą z kontrolkami nieaktywne](../mfc/providing-mouse-interaction-while-inactive.md), jak również tworzyć formanty [poczekaj, aż uaktywniony można utworzyć okna](../mfc/turning-off-the-activate-when-visible-option.md).  
   
- Podczas aktywowania formantu z oknem jest w stanie pełni interakcję z kontenera formantu, użytkownika i systemu Windows. Na poniższej ilustracji przedstawiono ścieżki komunikacji między formantu ActiveX, kontenera formantu i systemu operacyjnego.  
+ Gdy stanie się aktywny formant z okna, jest w stanie w pełni korzystać z kontenera kontrolki, użytkownika i Windows. Na poniższym rysunku przedstawiono ścieżki komunikacji między formantu ActiveX, kontener formantu i systemu operacyjnego.  
   
  ![Przetwarzanie w aktywny formant ActiveX okna komunikatów](../mfc/media/vc37223.gif "vc37223")  
-Przetwarzania w formancie ActiveX okna (jeśli jest aktywny) komunikatów systemu Windows  
+Windows przetwarzania komunikatów w oknie kontrolki ActiveX (jeśli jest aktywna)  
   
 ##  <a name="_core_serializing_activex_elements"></a> Serializacja  
- Możliwość serializowania danych, czasami określane jako trwałości, umożliwia sterowanie do zapisu wartości właściwości do magazynu trwałego. Formanty można następnie utworzyć ponownie, odczytując stan obiektu z magazynu.  
+ Zdolność do serializowania danych, czasami nazywane trwałości, umożliwia formant do zapisu wartości właściwości w magazynie trwałym. Następnie można odtworzyć formantów, zapoznając się stan obiektu z magazynu.  
   
- Należy pamiętać, że formant nie jest odpowiedzialny za uzyskanie dostępu do nośnika magazynowania. Zamiast tego formantu kontenera jest odpowiedzialny za zapewnienie formantu z nośnika magazynowania do użycia w odpowiednim czasie. Aby uzyskać więcej informacji na serializacji, zobacz artykuł [kontrolki ActiveX MFC: serializacja](../mfc/mfc-activex-controls-serializing.md). Aby uzyskać informacje dotyczące optymalizacji serializacji, zobacz [Optymalizacja stanu trwałego i inicjalizacji](../mfc/optimizing-persistence-and-initialization.md) w formantach ActiveX: Optymalizacja.  
+ Należy pamiętać, że kontrolka nie jest odpowiedzialna za uzyskiwanie dostępu do nośnika magazynowania. Zamiast tego należy kontener formantu jest odpowiedzialne za świadczenie kontrolki z nośnika magazynowania do użycia w odpowiednim czasie. Aby uzyskać więcej informacji na temat serializacji, zobacz artykuł [kontrolki ActiveX MFC: serializacja](../mfc/mfc-activex-controls-serializing.md). Aby uzyskać informacje dotyczące optymalizacji serializacji, zobacz [Optymalizacja stanu trwałego i inicjalizacji](../mfc/optimizing-persistence-and-initialization.md) w kontrolkach ActiveX: optymalizacji.  
   
-##  <a name="_core_installing_activex_control_classes_and_tools"></a> Instalowanie narzędzia i klasy formantów ActiveX  
- Po zainstalowaniu programu Visual C++ MFC ActiveX kontrolować klasy i handlowych i debugowanie formantu ActiveX, który biblioteki DLL środowiska wykonawczego są instalowane automatycznie, jeśli nie wybrano formantów ActiveX w Instalatorze (są one wybrane domyślnie).  
+##  <a name="_core_installing_activex_control_classes_and_tools"></a> Instalowanie narzędzia i klasy kontrolki ActiveX  
+ Po zainstalowaniu programu Visual C++, MFC ActiveX sterowania klasy i handel detaliczny i debugowanie kontrolki ActiveX, które biblioteki wykonawczej DLL są instalowane automatycznie, jeśli zaznaczono kontrolki ActiveX w Instalatorze (są one wybrane domyślnie).  
   
- Domyślnie klasy formantów ActiveX i narzędzia są instalowane w następujących podkatalogów w obszarze \Program Files\Microsoft programu Visual Studio .NET:  
+ Domyślnie klasy kontrolek ActiveX i narzędzia są instalowane w poniższych podkatalogach \Program Files\Microsoft programu Visual Studio .NET:  
   
 -   **\Common7\Tools**  
   
@@ -105,17 +105,17 @@ Przetwarzania w formancie ActiveX okna (jeśli jest aktywny) komunikatów system
   
 -   **\Vc7\atlmfc\include**  
   
-     Zawiera pliki nagłówkowe, konieczne jest opracowanie formantów ActiveX MFC  
+     Zawiera pliki nagłówkowe potrzebne do tworzenia kontrolki ActiveX z MFC  
   
 -   **\Vc7\atlmfc\src\mfc**  
   
-     Zawiera kod źródłowy dla określonej klasy formantów ActiveX w MFC  
+     Zawiera kod źródłowy dla określonej klasy kontrolek ActiveX w MFC  
   
 -   **\Vc7\atlmfc\lib**  
   
-     Zawiera biblioteki wymagane do opracowywania formantów ActiveX MFC  
+     Zawiera biblioteki wymagane do rozwoju formantów ActiveX MFC  
   
- Istnieją również przykłady dla formantów MFC ActiveX. Aby uzyskać więcej informacji na temat te przykłady, zobacz [przykłady formantów: MFC-Based formantów ActiveX](../visual-cpp-samples.md)  
+ Dostępne są także przykłady dla kontrolek MFC ActiveX. Aby uzyskać więcej informacji na temat tych przykładów, zobacz [przykłady formantów: MFC-Based kontrolek ActiveX](../visual-cpp-samples.md)  
   
 ## <a name="see-also"></a>Zobacz też  
  [Elementy interfejsu użytkownika](../mfc/user-interface-elements-mfc.md)

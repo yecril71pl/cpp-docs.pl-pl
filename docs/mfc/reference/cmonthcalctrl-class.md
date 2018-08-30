@@ -100,12 +100,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 61fc3d0ddf07887af2f565fd338b337eacd130ef
-ms.sourcegitcommit: b92ca0b74f0b00372709e81333885750ba91f90e
+ms.openlocfilehash: 14fbe2bf5f74a2d6d2f6ae3f394c2e6e74a4e76f
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/16/2018
-ms.locfileid: "42465442"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43206193"
 ---
 # <a name="cmonthcalctrl-class"></a>Klasa CMonthCalCtrl
 Hermetyzuje funkcjonalność formantu kalendarza miesięcznego.  
@@ -179,7 +179,7 @@ class CMonthCalCtrl : public CWnd
   
 -   Pobrania miesiąc lub rok z menu podręcznego.  
   
- Można dostosować miesiąca kontrolki kalendarza, stosując różne style do obiektu podczas jego tworzenia. Te style są opisane w [style kontrolki kalendarza miesięcznego](http://msdn.microsoft.com/library/windows/desktop/bb760919) w zestawie Windows SDK.  
+ Można dostosować miesiąca kontrolki kalendarza, stosując różne style do obiektu podczas jego tworzenia. Te style są opisane w [style kontrolki kalendarza miesięcznego](/windows/desktop/Controls/month-calendar-control-styles) w zestawie Windows SDK.  
   
  Formant kalendarza miesięcznego można wyświetlić więcej niż jeden miesiąc, a dni specjalnych (takich jak dni wolnych od pracy) może sugerować przez pogrubienie daty.  
   
@@ -227,13 +227,13 @@ virtual BOOL Create(
   
 ### <a name="parameters"></a>Parametry  
  *dwStyle*  
- Określa kombinację style Windows, które dotyczą kontrolki kalendarza miesięcznego. Zobacz [style kontrolki kalendarza miesięcznego](http://msdn.microsoft.com/library/windows/desktop/bb760919) w zestawie SDK Windows, aby uzyskać więcej informacji o stylach.  
+ Określa kombinację style Windows, które dotyczą kontrolki kalendarza miesięcznego. Zobacz [style kontrolki kalendarza miesięcznego](/windows/desktop/Controls/month-calendar-control-styles) w zestawie SDK Windows, aby uzyskać więcej informacji o stylach.  
   
  *Rect*  
- Odwołanie do [Prostokąt](http://msdn.microsoft.com/library/windows/desktop/dd162897) struktury. Zawiera położenie i rozmiar kontrolki kalendarza miesięcznego.  
+ Odwołanie do [Prostokąt](https://msdn.microsoft.com/library/windows/desktop/dd162897) struktury. Zawiera położenie i rozmiar kontrolki kalendarza miesięcznego.  
   
  *(czas pacyficzny)*  
- Odwołanie do [punktu](http://msdn.microsoft.com/library/windows/desktop/dd162805) strukturę, która określa lokalizację formant kalendarza miesięcznego.  
+ Odwołanie do [punktu](https://msdn.microsoft.com/library/windows/desktop/dd162805) strukturę, która określa lokalizację formant kalendarza miesięcznego.  
   
  *pParentWnd*  
  Wskaźnik do [CWnd](../../mfc/reference/cwnd-class.md) obiekt, który jest okno nadrzędne kontrolki kalendarza miesięcznego. Nie może być równa NULL.  
@@ -271,7 +271,7 @@ int GetCalendarBorder() const;
  Szerokość obramowania kontrolki, w pikselach.  
   
 ### <a name="remarks"></a>Uwagi  
- Ta metoda wysyła [MCM_GETCALENDARBORDER](http://msdn.microsoft.com/library/windows/desktop/bb760945) komunikat, który jest opisany w zestawie Windows SDK.  
+ Ta metoda wysyła [MCM_GETCALENDARBORDER](/windows/desktop/Controls/mcm-getcalendarborder) komunikat, który jest opisany w zestawie Windows SDK.  
   
 ##  <a name="getcalendarcount"></a>  CMonthCalCtrl::GetCalendarCount  
  Pobiera liczbę kalendarzy wyświetlany w formancie bieżącego miesiąca w kalendarzu.  
@@ -284,7 +284,7 @@ int GetCalendarCount() const;
  Liczba kalendarzy aktualnie wyświetlany w formancie kalendarza miesięcznego. Maksymalną dozwoloną liczbę kalendarzy jest 12.  
   
 ### <a name="remarks"></a>Uwagi  
- Ta metoda wysyła [MCM_GETCALENDARCOUNT](http://msdn.microsoft.com/library/windows/desktop/bb760947) komunikat, który jest opisany w zestawie Windows SDK.  
+ Ta metoda wysyła [MCM_GETCALENDARCOUNT](/windows/desktop/Controls/mcm-getcalendarcount) komunikat, który jest opisany w zestawie Windows SDK.  
   
 ##  <a name="getcalendargridinfo"></a>  CMonthCalCtrl::GetCalendarGridInfo  
  Pobiera informacje o kontrolce kalendarza bieżącego miesiąca.  
@@ -297,13 +297,13 @@ BOOL GetCalendarGridInfo(PMCGRIDINFO pmcGridInfo) const;
   
 |Parametr|Opis|  
 |---------------|-----------------|  
-|[out] *pmcGridInfo*|Wskaźnik do [MCGRIDINFO](http://msdn.microsoft.com/library/windows/desktop/bb760925) strukturę, która otrzymuje informacje o formant kalendarza miesięcznego bieżącego. Obiekt wywołujący jest odpowiedzialny za przydzielanie i Inicjowanie tej struktury.|  
+|[out] *pmcGridInfo*|Wskaźnik do [MCGRIDINFO](/windows/desktop/api/commctrl/ns-commctrl-tagmcgridinfo) strukturę, która otrzymuje informacje o formant kalendarza miesięcznego bieżącego. Obiekt wywołujący jest odpowiedzialny za przydzielanie i Inicjowanie tej struktury.|  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Wartość TRUE, jeśli ta metoda jest kończy się pomyślnie; w przeciwnym razie wartość FALSE.  
   
 ### <a name="remarks"></a>Uwagi  
- Ta metoda wysyła [MCM_GETCALENDARGRIDINFO](http://msdn.microsoft.com/library/windows/desktop/bb760949) komunikat, który jest opisany w zestawie Windows SDK.  
+ Ta metoda wysyła [MCM_GETCALENDARGRIDINFO](/windows/desktop/Controls/mcm-getcalendargridinfo) komunikat, który jest opisany w zestawie Windows SDK.  
   
 ### <a name="example"></a>Przykład  
  Poniższy kod definiuje zmienną, `m_monthCalCtrl`, która jest używana do uzyskania programowego dostępu formant kalendarza miesięcznego. Ta zmienna jest używana w następnym przykładzie.  
@@ -323,12 +323,12 @@ CALID GetCalID() const;
 ```  
   
 ### <a name="return-value"></a>Wartość zwracana  
- Jedną z [identyfikator kalendarza](http://msdn.microsoft.com/library/windows/desktop/dd317732) stałe.  
+ Jedną z [identyfikator kalendarza](/windows/desktop/Intl/calendar-identifiers) stałe.  
   
 ### <a name="remarks"></a>Uwagi  
  Identyfikator kalendarza wskazuje kalendarz określonego regionu, takich jak gregoriański (zlokalizowany), japoński lub Hidżry kalendarzy. Aplikacja może używać identyfikator kalendarza, który jest różnych języków, które obsługują funkcje.  
   
- Ta metoda wysyła [MCM_GETCALID](http://msdn.microsoft.com/library/windows/desktop/bb760951) komunikat, który jest opisany w zestawie Windows SDK.  
+ Ta metoda wysyła [MCM_GETCALID](/windows/desktop/Controls/mcm-getcalid) komunikat, który jest opisany w zestawie Windows SDK.  
   
 ##  <a name="getcolor"></a>  CMonthCalCtrl::GetColor  
  Pobiera kolor obszar miesiąca w kalendarzu kontrolki określonej przez *nRegion*.  
@@ -342,7 +342,7 @@ COLORREF GetColor(int nRegion) const;
  Region formant kalendarza miesięcznego, z którego są pobierane kolor. Aby uzyskać listę wartości, zobacz *nRegion* parametru [setcolor —](#setcolor).  
   
 ### <a name="return-value"></a>Wartość zwracana  
- A [COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449) wartość określającą kolor skojarzony z części kontrolki kalendarza miesięcznego, jeśli to się powiedzie. W przeciwnym razie ta funkcja elementu członkowskiego zwraca wartość -1.  
+ A [COLORREF](/windows/desktop/gdi/colorref) wartość określającą kolor skojarzony z części kontrolki kalendarza miesięcznego, jeśli to się powiedzie. W przeciwnym razie ta funkcja elementu członkowskiego zwraca wartość -1.  
   
 ##  <a name="getcurrentview"></a>  CMonthCalCtrl::GetCurrentView  
  Pobiera widok, który jest aktualnie wyświetlany przez kontrolkę kalendarza bieżącego miesiąca.  
@@ -362,7 +362,7 @@ DWORD GetCurrentView() const;
 |MCMV_CENTURY|Wyświetl wieku|  
   
 ### <a name="remarks"></a>Uwagi  
- Ta metoda wysyła [MCM_GETCURRENTVIEW](http://msdn.microsoft.com/library/windows/desktop/bb760955) komunikat, który jest opisany w zestawie Windows SDK.  
+ Ta metoda wysyła [MCM_GETCURRENTVIEW](/windows/desktop/Controls/mcm-getcurrentview) komunikat, który jest opisany w zestawie Windows SDK.  
   
 ### <a name="example"></a>Przykład  
  Poniższy kod definiuje zmienną, `m_monthCalCtrl`, która jest używana do uzyskania programowego dostępu formant kalendarza miesięcznego. Ta zmienna jest używana w następnym przykładzie.  
@@ -388,13 +388,13 @@ BOOL GetCurSel(LPSYSTEMTIME pDateTime) const;
  Odwołanie do [COleDateTime](../../atl-mfc-shared/reference/coledatetime-class.md) obiektu lub [CTime](../../atl-mfc-shared/reference/ctime-class.md) obiektu. Odbiera bieżący czas.  
   
  *pDateTime*  
- Wskaźnik do [SYSTEMTIME](http://msdn.microsoft.com/library/windows/desktop/ms724950) struktury, który będzie otrzymywać informacje o dacie aktualnie wybrany. Ten parametr musi być prawidłowym adresem i nie może mieć wartości NULL.  
+ Wskaźnik do [SYSTEMTIME](https://msdn.microsoft.com/library/windows/desktop/ms724950) struktury, który będzie otrzymywać informacje o dacie aktualnie wybrany. Ten parametr musi być prawidłowym adresem i nie może mieć wartości NULL.  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Wartość różną od zera, jeśli to się powiedzie; otherwize 0.  
   
 ### <a name="remarks"></a>Uwagi  
- Ta funkcja elementu członkowskiego implementuje zachowanie komunikatu Win32 [MCM_GETCURSEL](http://msdn.microsoft.com/library/windows/desktop/bb760957), zgodnie z opisem w zestawie Windows SDK.  
+ Ta funkcja elementu członkowskiego implementuje zachowanie komunikatu Win32 [MCM_GETCURSEL](/windows/desktop/Controls/mcm-getcursel), zgodnie z opisem w zestawie Windows SDK.  
   
 > [!NOTE]
 >  Ta funkcja elementu członkowskiego kończy się niepowodzeniem, jeśli styl MCS_MULTISELECT jest ustawiona.  
@@ -416,7 +416,7 @@ int GetFirstDayOfWeek(BOOL* pbLocal = NULL) const;
  Wartość całkowita, która reprezentuje pierwszy dzień tygodnia. Zobacz **uwagi** więcej informacji na temat reprezentują te liczby całkowite.  
   
 ### <a name="remarks"></a>Uwagi  
- Ta funkcja elementu członkowskiego implementuje zachowanie komunikatu Win32 [MCM_GETFIRSTDAYOFWEEK](http://msdn.microsoft.com/library/windows/desktop/bb760958), zgodnie z opisem w zestawie Windows SDK. Dni tygodnia są reprezentowane jako liczby całkowite.  
+ Ta funkcja elementu członkowskiego implementuje zachowanie komunikatu Win32 [MCM_GETFIRSTDAYOFWEEK](/windows/desktop/Controls/mcm-getfirstdayofweek), zgodnie z opisem w zestawie Windows SDK. Dni tygodnia są reprezentowane jako liczby całkowite.  
   
 |Wartość|Dzień tygodnia|  
 |-----------|---------------------|  
@@ -442,7 +442,7 @@ int GetMaxSelCount() const;
  Wartość całkowitą, która reprezentuje całkowita liczba dni, które można wybrać dla formantu.  
   
 ### <a name="remarks"></a>Uwagi  
- Ta funkcja elementu członkowskiego implementuje zachowanie komunikatu Win32 [MCM_GETMAXSELCOUNT](http://msdn.microsoft.com/library/windows/desktop/bb760960), zgodnie z opisem w zestawie Windows SDK. Użyj tej funkcji elementu członkowskiego dla formantów z zestawem styl MCS_MULTISELECT.  
+ Ta funkcja elementu członkowskiego implementuje zachowanie komunikatu Win32 [MCM_GETMAXSELCOUNT](/windows/desktop/Controls/mcm-getmaxselcount), zgodnie z opisem w zestawie Windows SDK. Użyj tej funkcji elementu członkowskiego dla formantów z zestawem styl MCS_MULTISELECT.  
   
 ### <a name="example"></a>Przykład  
   Zobacz przykład [CMonthCalCtrl::SetMaxSelCount](#setmaxselcount).  
@@ -470,7 +470,7 @@ DWORD GetMaxTodayWidth() const;
 ### <a name="remarks"></a>Uwagi  
  Użytkownik może zwrócić do bieżącej daty, klikając pozycję "Dzisiaj" ciągu, który jest wyświetlany w dolnej części kontrolki kalendarza miesięcznego. Ciąg "Dzisiaj" zawiera tekst etykiety i tekst daty.  
   
- Ta metoda wysyła [MCM_GETMAXTODAYWIDTH](http://msdn.microsoft.com/library/windows/desktop/bb760962) komunikat, który jest opisany w zestawie Windows SDK.  
+ Ta metoda wysyła [MCM_GETMAXTODAYWIDTH](/windows/desktop/Controls/mcm-getmaxtodaywidth) komunikat, który jest opisany w zestawie Windows SDK.  
   
 ##  <a name="getminreqrect"></a>  CMonthCalCtrl::GetMinReqRect  
  Pobiera rozmiar minimalny wymagany, aby wyświetlić pełne miesiące w formant kalendarza miesięcznego.  
@@ -481,13 +481,13 @@ BOOL GetMinReqRect(RECT* pRect) const;
   
 ### <a name="parameters"></a>Parametry  
  *pRect*  
- Wskaźnik do [Prostokąt](http://msdn.microsoft.com/library/windows/desktop/dd162897) struktury, który będzie otrzymywał otaczający informacji prostokąta. Ten parametr musi być prawidłowym adresem i nie może mieć wartości NULL.  
+ Wskaźnik do [Prostokąt](https://msdn.microsoft.com/library/windows/desktop/dd162897) struktury, który będzie otrzymywał otaczający informacji prostokąta. Ten parametr musi być prawidłowym adresem i nie może mieć wartości NULL.  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Jeśli operacja się powiedzie, ta funkcja elementu członkowskiego zwraca wartość różną od zera i `lpRect` otrzymuje otaczający odpowiednie informacje. W przypadku niepowodzenia funkcja elementu członkowskiego zwraca wartość 0.  
   
 ### <a name="remarks"></a>Uwagi  
- Ta funkcja elementu członkowskiego implementuje zachowanie komunikatu Win32 [MCM_GETMINREQRECT](http://msdn.microsoft.com/library/windows/desktop/bb760978), zgodnie z opisem w zestawie Windows SDK.  
+ Ta funkcja elementu członkowskiego implementuje zachowanie komunikatu Win32 [MCM_GETMINREQRECT](/windows/desktop/Controls/mcm-getminreqrect), zgodnie z opisem w zestawie Windows SDK.  
   
 ##  <a name="getmonthdelta"></a>  CMonthCalCtrl::GetMonthDelta  
  Pobiera wartość współczynnika przewijania na formant kalendarza miesięcznego.  
@@ -500,7 +500,7 @@ int GetMonthDelta() const;
  Kurs przewijania formant kalendarza miesięcznego. Współczynnik przewijania jest liczba miesięcy, że formant przenosi jego wyświetlania po kliknięciu przycisku przewijania raz.  
   
 ### <a name="remarks"></a>Uwagi  
- Ta funkcja elementu członkowskiego implementuje zachowanie komunikatu Win32 [MCM_GETMONTHDELTA](http://msdn.microsoft.com/library/windows/desktop/bb760980), zgodnie z opisem w zestawie Windows SDK.  
+ Ta funkcja elementu członkowskiego implementuje zachowanie komunikatu Win32 [MCM_GETMONTHDELTA](/windows/desktop/Controls/mcm-getmonthdelta), zgodnie z opisem w zestawie Windows SDK.  
   
 ##  <a name="getmonthrange"></a>  CMonthCalCtrl::GetMonthRange  
  Pobiera datę informacji reprezentujących wysoki i niski limitów Wyświetl formant kalendarza miesięcznego.  
@@ -530,7 +530,7 @@ int GetMonthRange(
  Odwołanie do `COleDateTime` lub `CTime` obiekt zawierający maksymalna dozwolona data.  
   
  *pMinRange*  
- Wskaźnik do [SYSTEMTIME](http://msdn.microsoft.com/library/windows/desktop/ms724950) struktury zawierającej daty przy najniższe koniec zakresu.  
+ Wskaźnik do [SYSTEMTIME](https://msdn.microsoft.com/library/windows/desktop/ms724950) struktury zawierającej daty przy najniższe koniec zakresu.  
   
  *pMaxRange*  
  Wskaźnik do `SYSTEMTIME` struktury zawierającej daty na najwyższym koniec zakresu.  
@@ -547,7 +547,7 @@ int GetMonthRange(
  Liczba całkowita, która reprezentuje zakres, w miesiącach, pochodzących z tych dwóch limitów wskazywanym przez *refMinRange* i *refMaxRange* w wersjach pierwszego i drugiego, lub *pMinRange* i *pMaxRange* w trzeciej wersji.  
   
 ### <a name="remarks"></a>Uwagi  
- Ta funkcja elementu członkowskiego implementuje zachowanie komunikatu Win32 [MCM_GETMONTHRANGE](http://msdn.microsoft.com/library/windows/desktop/bb760981), zgodnie z opisem w zestawie Windows SDK. W implementacji MFC `GetMonthRange`, można określić `COleDateTime` użycia `CTime` użycia lub `SYSTEMTIME` struktury użycia.  
+ Ta funkcja elementu członkowskiego implementuje zachowanie komunikatu Win32 [MCM_GETMONTHRANGE](/windows/desktop/Controls/mcm-getmonthrange), zgodnie z opisem w zestawie Windows SDK. W implementacji MFC `GetMonthRange`, można określić `COleDateTime` użycia `CTime` użycia lub `SYSTEMTIME` struktury użycia.  
   
 ### <a name="example"></a>Przykład  
   Zobacz przykład [CMonthCalCtrl::SetDayState](#setdaystate).  
@@ -571,10 +571,10 @@ DWORD GetRange(
   
 ### <a name="parameters"></a>Parametry  
  *pMinRange*  
- Wskaźnik do `COleDateTime` obiektu `CTime` obiektu lub [SYSTEMTIME](http://msdn.microsoft.com/library/windows/desktop/ms724950) struktury zawierającej daty przy najniższe koniec zakresu.  
+ Wskaźnik do `COleDateTime` obiektu `CTime` obiektu lub [SYSTEMTIME](https://msdn.microsoft.com/library/windows/desktop/ms724950) struktury zawierającej daty przy najniższe koniec zakresu.  
   
  *pMaxRange*  
- Wskaźnik do `COleDateTime` obiektu `CTime` obiektu lub [SYSTEMTIME](http://msdn.microsoft.com/library/windows/desktop/ms724950) struktury zawierającej daty na najwyższym koniec zakresu.  
+ Wskaźnik do `COleDateTime` obiektu `CTime` obiektu lub [SYSTEMTIME](https://msdn.microsoft.com/library/windows/desktop/ms724950) struktury zawierającej daty na najwyższym koniec zakresu.  
   
 ### <a name="return-value"></a>Wartość zwracana  
  DWORD, który może być równa zero (nie ustawiono żadnych ograniczeń) lub jako kombinację następujących wartości, które określają limitu.  
@@ -585,7 +585,7 @@ DWORD GetRange(
 |GDTR_MIN|Minimalny limit jest ustawiony dla formantu; *pMinRange* jest prawidłowy i zawiera informacje o dacie dotyczy.|  
   
 ### <a name="remarks"></a>Uwagi  
- Ta funkcja elementu członkowskiego implementuje zachowanie komunikatu Win32 [MCM_GETRANGE](http://msdn.microsoft.com/library/windows/desktop/bb760983), zgodnie z opisem w zestawie Windows SDK. W implementacji MFC `GetRange`, można określić `COleDateTime` użycia `CTime` użycia lub `SYSTEMTIME` struktury użycia.  
+ Ta funkcja elementu członkowskiego implementuje zachowanie komunikatu Win32 [MCM_GETRANGE](/windows/desktop/Controls/mcm-getrange), zgodnie z opisem w zestawie Windows SDK. W implementacji MFC `GetRange`, można określić `COleDateTime` użycia `CTime` użycia lub `SYSTEMTIME` struktury użycia.  
   
 ### <a name="example"></a>Przykład  
  [!code-cpp[NVC_MFC_CMonthCalCtrl#2](../../mfc/reference/codesnippet/cpp/cmonthcalctrl-class_6.cpp)]  
@@ -615,7 +615,7 @@ BOOL GetSelRange(
  Odwołanie do `COleDateTime` lub `CTime` obiekt zawierający maksymalna dozwolona data.  
   
  *pMinRange*  
- Wskaźnik do [SYSTEMTIME](http://msdn.microsoft.com/library/windows/desktop/ms724950) struktury zawierającej daty przy najniższe koniec zakresu.  
+ Wskaźnik do [SYSTEMTIME](https://msdn.microsoft.com/library/windows/desktop/ms724950) struktury zawierającej daty przy najniższe koniec zakresu.  
   
  *pMaxRange*  
  Wskaźnik do `SYSTEMTIME` struktury zawierającej daty na najwyższym koniec zakresu.  
@@ -624,7 +624,7 @@ BOOL GetSelRange(
  Wartość różną od zera, jeśli to się powiedzie; w przeciwnym razie 0.  
   
 ### <a name="remarks"></a>Uwagi  
- Ta funkcja elementu członkowskiego implementuje zachowanie komunikatu Win32 [MCM_GETSELRANGE](http://msdn.microsoft.com/library/windows/desktop/bb760985), zgodnie z opisem w zestawie Windows SDK. `GetSelRange` zakończy się niepowodzeniem, jeśli dotyczą formant kalendarza miesięcznego, która nie korzysta z stylu MCS_MULTISELECT.  
+ Ta funkcja elementu członkowskiego implementuje zachowanie komunikatu Win32 [MCM_GETSELRANGE](/windows/desktop/Controls/mcm-getselrange), zgodnie z opisem w zestawie Windows SDK. `GetSelRange` zakończy się niepowodzeniem, jeśli dotyczą formant kalendarza miesięcznego, która nie korzysta z stylu MCS_MULTISELECT.  
   
  W implementacji MFC `GetSelRange`, można określić `COleDateTime` użycia `CTime` użycia lub `SYSTEMTIME` struktury użycia.  
   
@@ -642,13 +642,13 @@ BOOL GetToday(LPSYSTEMTIME pDateTime) const;
  Odwołanie do [COleDateTime](../../atl-mfc-shared/reference/coledatetime-class.md) lub [CTime](../../atl-mfc-shared/reference/ctime-class.md) wskazujące dzień bieżącego obiektu.  
   
  *pDateTime*  
- Wskaźnik do [SYSTEMTIME](http://msdn.microsoft.com/library/windows/desktop/ms724950) struktury, który będzie otrzymywać informacje o dacie. Ten parametr musi być prawidłowym adresem i nie może mieć wartości NULL.  
+ Wskaźnik do [SYSTEMTIME](https://msdn.microsoft.com/library/windows/desktop/ms724950) struktury, który będzie otrzymywać informacje o dacie. Ten parametr musi być prawidłowym adresem i nie może mieć wartości NULL.  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Wartość różną od zera, jeśli to się powiedzie; w przeciwnym razie 0.  
   
 ### <a name="remarks"></a>Uwagi  
- Ta funkcja elementu członkowskiego implementuje zachowanie komunikatu Win32 [MCM_GETTODAY](http://msdn.microsoft.com/library/windows/desktop/bb760987), zgodnie z opisem w zestawie Windows SDK. W implementacji MFC `GetToday`, można określić `COleDateTime` użycia `CTime` użycia lub `SYSTEMTIME` struktury użycia.  
+ Ta funkcja elementu członkowskiego implementuje zachowanie komunikatu Win32 [MCM_GETTODAY](/windows/desktop/Controls/mcm-gettoday), zgodnie z opisem w zestawie Windows SDK. W implementacji MFC `GetToday`, można określić `COleDateTime` użycia `CTime` użycia lub `SYSTEMTIME` struktury użycia.  
   
 ### <a name="example"></a>Przykład  
  [!code-cpp[NVC_MFC_CMonthCalCtrl#3](../../mfc/reference/codesnippet/cpp/cmonthcalctrl-class_7.cpp)]  
@@ -662,7 +662,7 @@ DWORD HitTest(PMCHITTESTINFO pMCHitTest);
   
 ### <a name="parameters"></a>Parametry  
  *pMCHitTest*  
- Wskaźnik do [MCHITTESTINFO](http://msdn.microsoft.com/library/windows/desktop/bb760927) struktury zawierającej testowania trafień punkty dla formant kalendarza miesięcznego.  
+ Wskaźnik do [MCHITTESTINFO](/windows/desktop/api/commctrl/ns-commctrl-mchittestinfo) struktury zawierającej testowania trafień punkty dla formant kalendarza miesięcznego.  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Wartość DWORD. Równa **uHit** członkiem `MCHITTESTINFO` struktury.  
@@ -681,7 +681,7 @@ BOOL IsCenturyView() const;
  Wartość TRUE, jeśli bieżący widok jest widokiem wieku; w przeciwnym razie wartość FALSE.  
   
 ### <a name="remarks"></a>Uwagi  
- Ta metoda wysyła [MCM_GETCURRENTVIEW](http://msdn.microsoft.com/library/windows/desktop/bb760955) komunikat, który jest opisany w zestawie Windows SDK. Jeśli ten komunikat zwraca MCMV_CENTURY, ta metoda zwraca wartość TRUE.  
+ Ta metoda wysyła [MCM_GETCURRENTVIEW](/windows/desktop/Controls/mcm-getcurrentview) komunikat, który jest opisany w zestawie Windows SDK. Jeśli ten komunikat zwraca MCMV_CENTURY, ta metoda zwraca wartość TRUE.  
   
 ##  <a name="isdecadeview"></a>  CMonthCalCtrl::IsDecadeView  
  Wskazuje, czy bieżący widok formant kalendarza miesięcznego bieżący widok dekadę.  
@@ -694,7 +694,7 @@ BOOL IsDecadeView() const;
  Wartość TRUE, jeśli bieżący widok jest widokiem dekadę; w przeciwnym razie wartość FALSE.  
   
 ### <a name="remarks"></a>Uwagi  
- Ta metoda wysyła [MCM_GETCURRENTVIEW](http://msdn.microsoft.com/library/windows/desktop/bb760955) komunikat, który jest opisany w zestawie Windows SDK. Jeśli ten komunikat zwraca MCMV_DECADE, ta metoda zwraca wartość TRUE.  
+ Ta metoda wysyła [MCM_GETCURRENTVIEW](/windows/desktop/Controls/mcm-getcurrentview) komunikat, który jest opisany w zestawie Windows SDK. Jeśli ten komunikat zwraca MCMV_DECADE, ta metoda zwraca wartość TRUE.  
   
 ##  <a name="ismonthview"></a>  CMonthCalCtrl::IsMonthView  
  Wskazuje, czy bieżący widok formant kalendarza miesięcznego bieżącego widoku miesiąca.  
@@ -707,7 +707,7 @@ BOOL IsMonthView() const;
  Wartość TRUE, jeśli bieżący widok jest widokiem miesiąc; w przeciwnym razie wartość FALSE.  
   
 ### <a name="remarks"></a>Uwagi  
- Ta metoda wysyła [MCM_GETCURRENTVIEW](http://msdn.microsoft.com/library/windows/desktop/bb760955) komunikat, który jest opisany w zestawie Windows SDK. Jeśli ten komunikat zwraca MCMV_MONTH, ta metoda zwraca wartość TRUE.  
+ Ta metoda wysyła [MCM_GETCURRENTVIEW](/windows/desktop/Controls/mcm-getcurrentview) komunikat, który jest opisany w zestawie Windows SDK. Jeśli ten komunikat zwraca MCMV_MONTH, ta metoda zwraca wartość TRUE.  
   
 ##  <a name="isyearview"></a>  CMonthCalCtrl::IsYearView  
  Wskazuje, czy bieżący widok formant kalendarza miesięcznego bieżący widok roku.  
@@ -720,7 +720,7 @@ BOOL IsYearView() const;
  Wartość TRUE, jeśli bieżący widok jest widokiem rok; w przeciwnym razie wartość FALSE.  
   
 ### <a name="remarks"></a>Uwagi  
- Ta metoda wysyła [MCM_GETCURRENTVIEW](http://msdn.microsoft.com/library/windows/desktop/bb760955) komunikat, który jest opisany w zestawie Windows SDK. Jeśli ten komunikat zwraca MCMV_YEAR, ta metoda zwraca wartość TRUE.  
+ Ta metoda wysyła [MCM_GETCURRENTVIEW](/windows/desktop/Controls/mcm-getcurrentview) komunikat, który jest opisany w zestawie Windows SDK. Jeśli ten komunikat zwraca MCMV_YEAR, ta metoda zwraca wartość TRUE.  
   
 ##  <a name="setcalendarborder"></a>  CMonthCalCtrl::SetCalendarBorder  
  Określa szerokość obramowania formantu kalendarza bieżącego miesiąca.  
@@ -738,7 +738,7 @@ void SetCalendarBorder(int cxyBorder);
 ### <a name="remarks"></a>Uwagi  
  Jeśli ta metoda zakończy się powodzeniem, szerokość obramowania jest ustawiony na *cxyBorder* parametru. W przeciwnym razie szerokość obramowania zostanie zresetowana do wartości domyślnej, który jest określony przez bieżącą [motyw](/windows/desktop/Controls/visual-styles-overview), lub zero, jeśli nie są używane motywów.  
   
- Ta metoda wysyła [MCM_SETCALENDARBORDER](http://msdn.microsoft.com/library/windows/desktop/bb760993) komunikat, który jest opisany w zestawie Windows SDK.  
+ Ta metoda wysyła [MCM_SETCALENDARBORDER](/windows/desktop/Controls/mcm-setcalendarborder) komunikat, który jest opisany w zestawie Windows SDK.  
   
 ### <a name="example"></a>Przykład  
  Poniższy kod definiuje zmienną, `m_monthCalCtrl`, która jest używana do uzyskania programowego dostępu formant kalendarza miesięcznego. Ta zmienna jest używana w następnym przykładzie.  
@@ -760,7 +760,7 @@ void SetCalendarBorderDefault();
 ### <a name="remarks"></a>Uwagi  
  Szerokość obramowania ma ustawioną wartość domyślną, określony przez bieżącą [motyw](/windows/desktop/Controls/visual-styles-overview), lub zero, jeśli nie są używane motywów.  
   
- Ta metoda wysyła [MCM_SETCALENDARBORDER](http://msdn.microsoft.com/library/windows/desktop/bb760993) komunikat, który jest opisany w zestawie Windows SDK.  
+ Ta metoda wysyła [MCM_SETCALENDARBORDER](/windows/desktop/Controls/mcm-setcalendarborder) komunikat, który jest opisany w zestawie Windows SDK.  
   
 ##  <a name="setcalid"></a>  CMonthCalCtrl::SetCalID  
  Ustawia identyfikator kalendarza dla bieżącego miesiąca kontrolki kalendarza.  
@@ -773,7 +773,7 @@ BOOL SetCalID(CALID calid);
   
 |Parametr|Opis|  
 |---------------|-----------------|  
-|[in] *ID_kalendarza*|Jedną z [identyfikator kalendarza](http://msdn.microsoft.com/library/windows/desktop/dd317732) stałe.|  
+|[in] *ID_kalendarza*|Jedną z [identyfikator kalendarza](/windows/desktop/Intl/calendar-identifiers) stałe.|  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Wartość TRUE, jeśli ta metoda jest kończy się pomyślnie; w przeciwnym razie wartość FALSE.  
@@ -781,7 +781,7 @@ BOOL SetCalID(CALID calid);
 ### <a name="remarks"></a>Uwagi  
  Identyfikator kalendarza określa kalendarz określonego regionu, takich jak gregoriański (zlokalizowany), japoński lub Hidżry kalendarzy. Użyj `SetCalID` metodę w celu wyświetlenia kalendarza, który jest określony przez *ID_kalendarza* parametru, jeśli ustawienia regionalne, który zawiera kalendarz jest zainstalowany na tym komputerze.  
   
- Ta metoda wysyła [MCM_SETCALID](http://msdn.microsoft.com/library/windows/desktop/bb760995) komunikat, który jest opisany w zestawie Windows SDK.  
+ Ta metoda wysyła [MCM_SETCALID](/windows/desktop/Controls/mcm-setcalid) komunikat, który jest opisany w zestawie Windows SDK.  
   
 ### <a name="example"></a>Przykład  
  Poniższy kod definiuje zmienną, `m_monthCalCtrl`, która jest używana do uzyskania programowego dostępu formant kalendarza miesięcznego. Ta zmienna jest używana w następnym przykładzie.  
@@ -835,7 +835,7 @@ COLORREF SetColor(
  Wartość COLORREF reprezentujący poprzedniego ustawienia kolorów dla określonej części formant kalendarza miesięcznego, jeśli to się powiedzie. W przeciwnym razie ten komunikat zwraca wartość -1.  
   
 ### <a name="remarks"></a>Uwagi  
- Ta funkcja elementu członkowskiego implementuje zachowanie komunikatu Win32 [MCM_SETCOLOR](http://msdn.microsoft.com/library/windows/desktop/bb760997), zgodnie z opisem w zestawie Windows SDK.  
+ Ta funkcja elementu członkowskiego implementuje zachowanie komunikatu Win32 [MCM_SETCOLOR](/windows/desktop/Controls/mcm-setcolor), zgodnie z opisem w zestawie Windows SDK.  
   
 ### <a name="example"></a>Przykład  
  [!code-cpp[NVC_MFC_CMonthCalCtrl#4](../../mfc/reference/codesnippet/cpp/cmonthcalctrl-class_10.cpp)]  
@@ -857,7 +857,7 @@ BOOL SetCurrentView(DWORD dwNewView);
  Wartość TRUE, jeśli ta metoda jest kończy się pomyślnie; w przeciwnym razie wartość FALSE.  
   
 ### <a name="remarks"></a>Uwagi  
- Ta metoda wysyła [MCM_SETCURRENTVIEW](http://msdn.microsoft.com/library/windows/desktop/bb760998) komunikat, który jest opisany w zestawie Windows SDK.  
+ Ta metoda wysyła [MCM_SETCURRENTVIEW](/windows/desktop/Controls/mcm-setcurrentview) komunikat, który jest opisany w zestawie Windows SDK.  
   
 ##  <a name="setcursel"></a>  CMonthCalCtrl::SetCurSel  
  Ustawia datę zaznaczony formant kalendarza miesięcznego.  
@@ -873,13 +873,13 @@ BOOL SetCurSel(const CTime& refDateTime);
  Odwołanie do [COleDateTime](../../atl-mfc-shared/reference/coledatetime-class.md) lub [CTime](../../atl-mfc-shared/reference/ctime-class.md) wskazujący formant kalendarza miesięcznego aktualnie wybrany obiekt.  
   
  *pDateTime*  
- Wskaźnik do [SYSTEMTIME](http://msdn.microsoft.com/library/windows/desktop/ms724950) strukturę, która zawiera datę można ustawić jako bieżący wybór.  
+ Wskaźnik do [SYSTEMTIME](https://msdn.microsoft.com/library/windows/desktop/ms724950) strukturę, która zawiera datę można ustawić jako bieżący wybór.  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Wartość różną od zera, jeśli to się powiedzie; w przeciwnym razie 0.  
   
 ### <a name="remarks"></a>Uwagi  
- Ta funkcja elementu członkowskiego implementuje zachowanie komunikatu Win32 [MCM_SETCURSEL](http://msdn.microsoft.com/library/windows/desktop/bb761002), zgodnie z opisem w zestawie Windows SDK. W implementacji MFC `SetCurSel`, można określić `COleDateTime` użycia `CTime` użycia lub `SYSTEMTIME` struktury użycia.  
+ Ta funkcja elementu członkowskiego implementuje zachowanie komunikatu Win32 [MCM_SETCURSEL](/windows/desktop/Controls/mcm-setcursel), zgodnie z opisem w zestawie Windows SDK. W implementacji MFC `SetCurSel`, można określić `COleDateTime` użycia `CTime` użycia lub `SYSTEMTIME` struktury użycia.  
   
 ### <a name="example"></a>Przykład  
  [!code-cpp[NVC_MFC_CMonthCalCtrl#5](../../mfc/reference/codesnippet/cpp/cmonthcalctrl-class_11.cpp)]  
@@ -898,13 +898,13 @@ BOOL SetDayState(
  Wartość wskazująca, ile elementów znajdują się w tablicy, *pStates* wskazuje.  
   
  *pStates*  
- Wskaźnik do [MONTHDAYSTATE](http://msdn.microsoft.com/library/windows/desktop/bb760915) tablicę wartości, które określają, jak formant kalendarza miesięcznego rysowania każdego dnia w jego wyświetlania. Typ danych MONTHDAYSTATE jest polem bitowym, w którym każdy bit (od 1 do 31) reprezentuje stan dzień w miesiącu. Jeśli bit jest włączony, zostanie wyświetlony odpowiedni dzień pogrubiona; w przeciwnym razie zostanie wyświetlony ze nie szczególnym.  
+ Wskaźnik do [MONTHDAYSTATE](/windows/desktop/Controls/monthdaystate) tablicę wartości, które określają, jak formant kalendarza miesięcznego rysowania każdego dnia w jego wyświetlania. Typ danych MONTHDAYSTATE jest polem bitowym, w którym każdy bit (od 1 do 31) reprezentuje stan dzień w miesiącu. Jeśli bit jest włączony, zostanie wyświetlony odpowiedni dzień pogrubiona; w przeciwnym razie zostanie wyświetlony ze nie szczególnym.  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Wartość różną od zera, jeśli to się powiedzie; w przeciwnym razie 0.  
   
 ### <a name="remarks"></a>Uwagi  
- Ta funkcja elementu członkowskiego implementuje zachowanie komunikatu Win32 [MCM_SETDAYSTATE](http://msdn.microsoft.com/library/windows/desktop/bb761004), zgodnie z opisem w zestawie Windows SDK.  
+ Ta funkcja elementu członkowskiego implementuje zachowanie komunikatu Win32 [MCM_SETDAYSTATE](/windows/desktop/Controls/mcm-setdaystate), zgodnie z opisem w zestawie Windows SDK.  
   
 ### <a name="example"></a>Przykład  
  [!code-cpp[NVC_MFC_CMonthCalCtrl#6](../../mfc/reference/codesnippet/cpp/cmonthcalctrl-class_12.cpp)]  
@@ -942,7 +942,7 @@ BOOL SetFirstDayOfWeek(
  Różna od zera, jeśli poprzednie pierwszego dnia tygodnia jest ustawiona na wartość inną niż LOCALE_IFIRSTDAYOFWEEK, czyli dzień czcionką ustawienia Panelu sterowania. W przeciwnym razie funkcja zwraca 0.  
   
 ### <a name="remarks"></a>Uwagi  
- Ta funkcja elementu członkowskiego implementuje zachowanie komunikatu Win32 [MCM_SETFIRSTDAYOFWEEK](http://msdn.microsoft.com/library/windows/desktop/bb761006), zgodnie z opisem w zestawie Windows SDK.  
+ Ta funkcja elementu członkowskiego implementuje zachowanie komunikatu Win32 [MCM_SETFIRSTDAYOFWEEK](/windows/desktop/Controls/mcm-setfirstdayofweek), zgodnie z opisem w zestawie Windows SDK.  
   
 ### <a name="example"></a>Przykład  
  [!code-cpp[NVC_MFC_CMonthCalCtrl#7](../../mfc/reference/codesnippet/cpp/cmonthcalctrl-class_13.cpp)]  
@@ -962,7 +962,7 @@ BOOL SetMaxSelCount(int nMax);
  Wartość różną od zera, jeśli to się powiedzie; w przeciwnym razie 0.  
   
 ### <a name="remarks"></a>Uwagi  
- Ta funkcja elementu członkowskiego implementuje zachowanie komunikatu Win32 [MCM_SETMAXSELCOUNT](http://msdn.microsoft.com/library/windows/desktop/bb761008), zgodnie z opisem w zestawie Windows SDK.  
+ Ta funkcja elementu członkowskiego implementuje zachowanie komunikatu Win32 [MCM_SETMAXSELCOUNT](/windows/desktop/Controls/mcm-setmaxselcount), zgodnie z opisem w zestawie Windows SDK.  
   
 ### <a name="example"></a>Przykład  
  [!code-cpp[NVC_MFC_CMonthCalCtrl#8](../../mfc/reference/codesnippet/cpp/cmonthcalctrl-class_14.cpp)]  
@@ -982,7 +982,7 @@ int SetMonthDelta(int iDelta);
  Poprzednie stawki przewijania. Jeśli szybkość przewijania nie została wcześniej ustawiona, wartość zwracana to 0.  
   
 ### <a name="remarks"></a>Uwagi  
- Ta funkcja elementu członkowskiego implementuje zachowanie komunikatu Win32 [MCM_SETMONTHDELTA](http://msdn.microsoft.com/library/windows/desktop/bb761010), zgodnie z opisem w zestawie Windows SDK.  
+ Ta funkcja elementu członkowskiego implementuje zachowanie komunikatu Win32 [MCM_SETMONTHDELTA](/windows/desktop/Controls/mcm-setmonthdelta), zgodnie z opisem w zestawie Windows SDK.  
   
 ##  <a name="setmonthview"></a>  CMonthCalCtrl::SetMonthView  
  Ustawia kontrolki kalendarza bieżącego miesiąca, aby wyświetlić widok miesiąca.  
@@ -1028,7 +1028,7 @@ BOOL SetRange(
   
 ### <a name="parameters"></a>Parametry  
  *pMinRange*  
- Wskaźnik do `COleDateTime` obiektu `CTime` obiektu lub [SYSTEMTIME](http://msdn.microsoft.com/library/windows/desktop/ms724950) struktury zawierającej daty przy najniższe koniec zakresu.  
+ Wskaźnik do `COleDateTime` obiektu `CTime` obiektu lub [SYSTEMTIME](https://msdn.microsoft.com/library/windows/desktop/ms724950) struktury zawierającej daty przy najniższe koniec zakresu.  
   
  *pMaxRange*  
  Wskaźnik do `COleDateTime` obiektu `CTime` obiektu lub `SYSTEMTIME` struktury zawierającej daty na najwyższym koniec zakresu.  
@@ -1037,7 +1037,7 @@ BOOL SetRange(
  Wartość różną od zera, jeśli to się powiedzie; w przeciwnym razie 0.  
   
 ### <a name="remarks"></a>Uwagi  
- Ta funkcja elementu członkowskiego implementuje zachowanie komunikatu Win32 [MCM_SETRANGE](http://msdn.microsoft.com/library/windows/desktop/bb761012), zgodnie z opisem w zestawie Windows SDK. W implementacji MFC `SetRange`, można określić `COleDateTime` użycia `CTime` użycia lub `SYSTEMTIME` struktury użycia.  
+ Ta funkcja elementu członkowskiego implementuje zachowanie komunikatu Win32 [MCM_SETRANGE](/windows/desktop/Controls/mcm-setrange), zgodnie z opisem w zestawie Windows SDK. W implementacji MFC `SetRange`, można określić `COleDateTime` użycia `CTime` użycia lub `SYSTEMTIME` struktury użycia.  
   
 ### <a name="example"></a>Przykład  
   Zobacz przykład [CMonthCalCtrl::GetRange](#getrange).  
@@ -1063,7 +1063,7 @@ BOOL SetSelRange(
   
 ### <a name="parameters"></a>Parametry  
  *pMinRange*  
- Wskaźnik do `COleDateTime` obiektu `CTime` obiektu lub [SYSTEMTIME](http://msdn.microsoft.com/library/windows/desktop/ms724950) struktury zawierającej daty przy najniższe koniec zakresu.  
+ Wskaźnik do `COleDateTime` obiektu `CTime` obiektu lub [SYSTEMTIME](https://msdn.microsoft.com/library/windows/desktop/ms724950) struktury zawierającej daty przy najniższe koniec zakresu.  
   
  *pMaxRange*  
  Wskaźnik do `COleDateTime` obiektu `CTime` obiektu lub `SYSTEMTIME` struktury zawierającej daty na najwyższym koniec zakresu.  
@@ -1072,7 +1072,7 @@ BOOL SetSelRange(
  Wartość różną od zera, jeśli to się powiedzie; w przeciwnym razie 0.  
   
 ### <a name="remarks"></a>Uwagi  
- Ta funkcja elementu członkowskiego implementuje zachowanie komunikatu Win32 [MCM_SETSELRANGE](http://msdn.microsoft.com/library/windows/desktop/bb761014), zgodnie z opisem w zestawie Windows SDK. W implementacji MFC `SetSelRange`, można określić `COleDateTime` użycia `CTime` użycia lub `SYSTEMTIME` struktury użycia.  
+ Ta funkcja elementu członkowskiego implementuje zachowanie komunikatu Win32 [MCM_SETSELRANGE](/windows/desktop/Controls/mcm-setselrange), zgodnie z opisem w zestawie Windows SDK. W implementacji MFC `SetSelRange`, można określić `COleDateTime` użycia `CTime` użycia lub `SYSTEMTIME` struktury użycia.  
   
 ##  <a name="settoday"></a>  CMonthCalCtrl::SetToday  
  Ustawia bieżącego dnia kontrolki kalendarza.  
@@ -1088,10 +1088,10 @@ void SetToday(const CTime* pDateTime);
  Odwołanie do [COleDateTime](../../atl-mfc-shared/reference/coledatetime-class.md) obiekt, który zawiera bieżącą datę.  
   
  *pDateTime*  
- W drugiej wersji, wskaźnik do [CTime](../../atl-mfc-shared/reference/ctime-class.md) obiekt zawierający informacje o bieżącej daty. W trzeciej wersji, wskaźnik do [SYSTEMTIME](http://msdn.microsoft.com/library/windows/desktop/ms724950) strukturę, która zawiera informacje o bieżącej daty.  
+ W drugiej wersji, wskaźnik do [CTime](../../atl-mfc-shared/reference/ctime-class.md) obiekt zawierający informacje o bieżącej daty. W trzeciej wersji, wskaźnik do [SYSTEMTIME](https://msdn.microsoft.com/library/windows/desktop/ms724950) strukturę, która zawiera informacje o bieżącej daty.  
   
 ### <a name="remarks"></a>Uwagi  
- Ta funkcja elementu członkowskiego implementuje zachowanie komunikatu Win32 [MCM_SETTODAY](http://msdn.microsoft.com/library/windows/desktop/bb761016), zgodnie z opisem w zestawie Windows SDK.  
+ Ta funkcja elementu członkowskiego implementuje zachowanie komunikatu Win32 [MCM_SETTODAY](/windows/desktop/Controls/mcm-settoday), zgodnie z opisem w zestawie Windows SDK.  
   
 ### <a name="example"></a>Przykład  
   Zobacz przykład [CMonthCalCtrl::GetToday](#gettoday).  
@@ -1137,15 +1137,15 @@ LPRECT SizeRectToMin(LPRECT lpRect);
   
 |Parametr|Opis|  
 |---------------|-----------------|  
-|[in] *lprect —*|Wskaźnik do [Prostokąt](http://msdn.microsoft.com/library/windows/desktop/dd162897) strukturę, która definiuje prostokąt, który zawiera odpowiednią liczbę kalendarzy.|  
+|[in] *lprect —*|Wskaźnik do [Prostokąt](https://msdn.microsoft.com/library/windows/desktop/dd162897) strukturę, która definiuje prostokąt, który zawiera odpowiednią liczbę kalendarzy.|  
   
 ### <a name="return-value"></a>Wartość zwracana  
- Wskaźnik do [Prostokąt](http://msdn.microsoft.com/library/windows/desktop/dd162897) strukturę, która definiuje prostokąta, którego rozmiar jest mniejszy niż lub równe prostokąta zdefiniowane przez *lprect —* parametru.  
+ Wskaźnik do [Prostokąt](https://msdn.microsoft.com/library/windows/desktop/dd162897) strukturę, która definiuje prostokąta, którego rozmiar jest mniejszy niż lub równe prostokąta zdefiniowane przez *lprect —* parametru.  
   
 ### <a name="remarks"></a>Uwagi  
  Ta metoda oblicza, ile kalendarzy mieści się w prostokącie określonego przez *lprect —* parametru, a następnie zwraca najmniejszy prostokąt, który może zawierać tę liczbę kalendarzy. W efekcie ta metoda zmniejsza określony prostokąt, aby dokładnie dopasować odpowiednią liczbę kalendarzy.  
   
- Ta metoda wysyła [MCM_SIZERECTTOMIN](http://msdn.microsoft.com/library/windows/desktop/bb761020) komunikat, który jest opisany w zestawie Windows SDK.  
+ Ta metoda wysyła [MCM_SIZERECTTOMIN](/windows/desktop/Controls/mcm-sizerecttomin) komunikat, który jest opisany w zestawie Windows SDK.  
   
 ## <a name="see-also"></a>Zobacz też  
  [CMNCTRL1 próbki MFC](../../visual-cpp-samples.md)   

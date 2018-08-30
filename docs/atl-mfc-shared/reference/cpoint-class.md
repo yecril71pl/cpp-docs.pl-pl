@@ -21,12 +21,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bd7e3b405f5724abd1df5e0e8fcc35dcd2149153
-ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
+ms.openlocfilehash: 03a47ea35740a7e5d019e4c932ec879f18e0714e
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37880103"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43204029"
 ---
 # <a name="cpoint-class"></a>CPoint, klasa
 Podobnie jak Windows `POINT` struktury.  
@@ -65,7 +65,7 @@ class CPoint : public tagPOINT
 ## <a name="remarks"></a>Uwagi  
  Obejmuje również funkcji elementów członkowskich do manipulowania `CPoint` i [punktu](../../mfc/reference/point-structure1.md) struktury.  
   
- A `CPoint` obiekt może być używane wszędzie tam, gdzie `POINT` struktura jest używana. Operatory tej klasy, które współdziałają z "rozmiar" Zaakceptuj albo [CSize](../../atl-mfc-shared/reference/csize-class.md) obiektów lub [rozmiar](http://msdn.microsoft.com/library/windows/desktop/dd145106) struktury, ponieważ są one wymienne.  
+ A `CPoint` obiekt może być używane wszędzie tam, gdzie `POINT` struktura jest używana. Operatory tej klasy, które współdziałają z "rozmiar" Zaakceptuj albo [CSize](../../atl-mfc-shared/reference/csize-class.md) obiektów lub [rozmiar](https://msdn.microsoft.com/library/windows/desktop/dd145106) struktury, ponieważ są one wymienne.  
   
 > [!NOTE]
 >  Ta klasa jest pochodną `tagPOINT` struktury. (Nazwa `tagPOINT` jest nazwą rzadziej używanych dla `POINT` struktury.) Oznacza to, że członkowie danych `POINT` struktury `x` i `y`, należą dane dostępne `CPoint`.  
@@ -103,7 +103,7 @@ CPoint(LPARAM dwPoint) throw();
  [PUNKT](../../mfc/reference/point-structure1.md) struktury lub `CPoint` , który określa wartości używane do zainicjowania `CPoint`.  
   
  *initSize*  
- [ROZMIAR](http://msdn.microsoft.com/library/windows/desktop/dd145106) struktury lub [CSize](../../atl-mfc-shared/reference/csize-class.md) , który określa wartości używane do zainicjowania `CPoint`.  
+ [ROZMIAR](https://msdn.microsoft.com/library/windows/desktop/dd145106) struktury lub [CSize](../../atl-mfc-shared/reference/csize-class.md) , który określa wartości używane do zainicjowania `CPoint`.  
   
  *dwPoint*  
  Zestawy `x` elementu członkowskiego na słowo mniej znaczący *dwPoint* i `y` członka do wyższego rzędu słowo *dwPoint*.  
@@ -158,7 +158,7 @@ void Offset(SIZE size) throw();
  Określa ilość ( [punktu](../../mfc/reference/point-structure1.md) lub `CPoint`) do przesunięcia `CPoint`.  
   
  *Rozmiar*  
- Określa ilość ( [rozmiar](http://msdn.microsoft.com/library/windows/desktop/dd145106) lub [CSize](../../atl-mfc-shared/reference/csize-class.md)) do przesunięcia `CPoint`.  
+ Określa ilość ( [rozmiar](https://msdn.microsoft.com/library/windows/desktop/dd145106) lub [CSize](../../atl-mfc-shared/reference/csize-class.md)) do przesunięcia `CPoint`.  
   
 ### <a name="example"></a>Przykład  
  [!code-cpp[NVC_ATLMFC_Utilities#28](../../atl-mfc-shared/codesnippet/cpp/cpoint-class_1.cpp)]  
@@ -207,7 +207,7 @@ void operator+=(POINT point) throw();
   
 ### <a name="parameters"></a>Parametry  
  *Rozmiar*  
- Zawiera [rozmiar](http://msdn.microsoft.com/library/windows/desktop/dd145106) struktury lub [CSize](../../atl-mfc-shared/reference/csize-class.md) obiektu.  
+ Zawiera [rozmiar](https://msdn.microsoft.com/library/windows/desktop/dd145106) struktury lub [CSize](../../atl-mfc-shared/reference/csize-class.md) obiektu.  
   
  *Punkt*  
  Zawiera [punktu](../../mfc/reference/point-structure1.md) struktury lub [CPoint](../../atl-mfc-shared/reference/cpoint-class.md) obiektu.  
@@ -232,7 +232,7 @@ void operator-=(POINT point) throw();
   
 ### <a name="parameters"></a>Parametry  
  *Rozmiar*  
- Zawiera [rozmiar](http://msdn.microsoft.com/library/windows/desktop/dd145106) struktury lub [CSize](../../atl-mfc-shared/reference/csize-class.md) obiektu.  
+ Zawiera [rozmiar](https://msdn.microsoft.com/library/windows/desktop/dd145106) struktury lub [CSize](../../atl-mfc-shared/reference/csize-class.md) obiektu.  
   
  *Punkt*  
  Zawiera [punktu](../../mfc/reference/point-structure1.md) struktury lub [CPoint](../../atl-mfc-shared/reference/cpoint-class.md) obiektu.  
@@ -258,7 +258,7 @@ CRect operator+(const RECT* lpRect) const throw();
   
 ### <a name="parameters"></a>Parametry  
  *Rozmiar*  
- Zawiera [rozmiar](http://msdn.microsoft.com/library/windows/desktop/dd145106) struktury lub [CSize](../../atl-mfc-shared/reference/csize-class.md) obiektu.  
+ Zawiera [rozmiar](https://msdn.microsoft.com/library/windows/desktop/dd145106) struktury lub [CSize](../../atl-mfc-shared/reference/csize-class.md) obiektu.  
   
  *Punkt*  
  Zawiera [punktu](../../mfc/reference/point-structure1.md) struktury lub [CPoint](../../atl-mfc-shared/reference/cpoint-class.md) obiektu.  
@@ -292,7 +292,7 @@ CPoint operator-() const throw();
  A [punktu](../../mfc/reference/point-structure1.md) struktury lub [CPoint](../../atl-mfc-shared/reference/cpoint-class.md) obiektu.  
   
  *Rozmiar*  
- A [rozmiar](http://msdn.microsoft.com/library/windows/desktop/dd145106) struktury lub [CSize](../../atl-mfc-shared/reference/csize-class.md) obiektu.  
+ A [rozmiar](https://msdn.microsoft.com/library/windows/desktop/dd145106) struktury lub [CSize](../../atl-mfc-shared/reference/csize-class.md) obiektu.  
   
  *lprect —*  
  Wskaźnik do [Prostokąt](../../mfc/reference/rect-structure1.md) struktury lub [CRect](../../atl-mfc-shared/reference/crect-class.md) obiektu.  

@@ -248,12 +248,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6a629f372058e3e6688a57043d73e29717f3601d
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: 212637b55a422c11d82ae6ad9f548d9e429c41dd
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42466150"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43198571"
 ---
 # <a name="cmfcbasetabctrl-class"></a>Klasa CMFCBaseTabCtrl
 Implementuje podstawowe funkcje dla okien z zakładkami.  
@@ -357,7 +357,7 @@ class CMFCBaseTabCtrl : public CWnd
 |[CMFCBaseTabCtrl::OnDragOver](#ondragover)||  
 |[CMFCBaseTabCtrl::OnDrop](#ondrop)||  
 |[CMFCBaseTabCtrl::OnRenameTab](#onrenametab)||  
-|[CMFCBaseTabCtrl::PreTranslateMessage](#pretranslatemessage)|Używane przez klasę [CWinApp](../../mfc/reference/cwinapp-class.md) do translacji komunikatów okien, zanim zostaną rozesłane do [TranslateMessage](http://msdn.microsoft.com/library/windows/desktop/ms644955) i [DispatchMessage](http://msdn.microsoft.com/library/windows/desktop/ms644934) funkcje Windows. (Przesłania [CWnd::PreTranslateMessage](../../mfc/reference/cwnd-class.md#pretranslatemessage).)|  
+|[CMFCBaseTabCtrl::PreTranslateMessage](#pretranslatemessage)|Używane przez klasę [CWinApp](../../mfc/reference/cwinapp-class.md) do translacji komunikatów okien, zanim zostaną rozesłane do [TranslateMessage](https://msdn.microsoft.com/library/windows/desktop/ms644955) i [DispatchMessage](https://msdn.microsoft.com/library/windows/desktop/ms644934) funkcje Windows. (Przesłania [CWnd::PreTranslateMessage](../../mfc/reference/cwnd-class.md#pretranslatemessage).)|  
 |[CMFCBaseTabCtrl::RecalcLayout](#recalclayout)|Ponownie oblicza układ wewnętrznego okien z kartami.|  
 |[CMFCBaseTabCtrl::RemoveAllTabs](#removealltabs)|Usuwa wszystkie karty z okna z kartami.|  
 |[CMFCBaseTabCtrl::RemoveTab](#removetab)|Usuwa kartę z oknem z kartami.|  
@@ -776,7 +776,7 @@ virtual COLORREF GetActiveTabColor() const;
 ```  
   
 ### <a name="return-value"></a>Wartość zwracana  
- A [COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449) wartość, która określa kolor tła aktywną kartę.  
+ A [COLORREF](/windows/desktop/gdi/colorref) wartość, która określa kolor tła aktywną kartę.  
   
 ### <a name="remarks"></a>Uwagi  
  Domyślnie kolor tła w aktywnej karcie jest COLOR_WINDOW. Można zmienić kolor tła dla aktywnej karty przy użyciu metody [CMFCBaseTabCtrl::SetActiveTabColor](#setactivetabcolor).  
@@ -789,7 +789,7 @@ virtual COLORREF GetActiveTabTextColor() const;
 ```  
   
 ### <a name="return-value"></a>Wartość zwracana  
- A [COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449) wartość, która określa kolor tekstu w aktywnej karcie.  
+ A [COLORREF](/windows/desktop/gdi/colorref) wartość, która określa kolor tekstu w aktywnej karcie.  
   
 ### <a name="remarks"></a>Uwagi  
  Domyślnie kolor tekstu dla aktywnych kart jest COLOR_WINDOWTEXT. Możesz zmienić kolor tekstu przy użyciu metody [CMFCBaseTabCtrl::SetActiveTabTextColor](#setactivetabtextcolor).  
@@ -812,7 +812,7 @@ const CArray<COLORREF,COLORREF>& GetAutoColors() const;
 ```  
   
 ### <a name="return-value"></a>Wartość zwracana  
- Odwołanie do tablicy [COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449) wartości [CMFCBaseTabCtrl](../../mfc/reference/cmfcbasetabctrl-class.md) kartę automatyczne kolorowanie używa obiektu.  
+ Odwołanie do tablicy [COLORREF](/windows/desktop/gdi/colorref) wartości [CMFCBaseTabCtrl](../../mfc/reference/cmfcbasetabctrl-class.md) kartę automatyczne kolorowanie używa obiektu.  
   
 ### <a name="remarks"></a>Uwagi  
  Domyślnie w ramach inicjuje macierzy kolorów do kolorów zdefiniowanych przez bibliotekę. Możesz podać niestandardowy tablicę kolorów, wywołując metodę [CMFCBaseTabCtrl::SetAutoColors](#setautocolors).  
@@ -958,7 +958,7 @@ virtual COLORREF GetTabBkColor(int iTab) const;
  Liczony od zera indeks karty.  
   
 ### <a name="return-value"></a>Wartość zwracana  
- A [COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449) wartość, która określa kolor tła na określonej karcie; -1 Jeśli *iTab* znajduje się poza zakresem.  
+ A [COLORREF](/windows/desktop/gdi/colorref) wartość, która określa kolor tła na określonej karcie; -1 Jeśli *iTab* znajduje się poza zakresem.  
   
 ##  <a name="gettabbordersize"></a>  CMFCBaseTabCtrl::GetTabBorderSize  
  Pobiera informacje o rozmiarze obramowania kart w kontrolce karty.  
@@ -1176,7 +1176,7 @@ virtual COLORREF GetTabTextColor(int iTab) const;
  Liczony od zera indeks karty.  
   
 ### <a name="return-value"></a>Wartość zwracana  
- A [COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449) parametrem, który wskazuje kolor tekstu w określoną kartę; -1 Jeśli *iTab* znajduje się poza zakresem.  
+ A [COLORREF](/windows/desktop/gdi/colorref) parametrem, który wskazuje kolor tekstu w określoną kartę; -1 Jeśli *iTab* znajduje się poza zakresem.  
   
 ##  <a name="gettabwnd"></a>  CMFCBaseTabCtrl::GetTabWnd  
  Zwraca wskaźnik do okienko w którym znajduje się na określonej karcie.  
@@ -1844,7 +1844,7 @@ virtual void SetActiveTabColor(COLORREF clr);
  Określa nowy kolor tła.  
   
 ### <a name="remarks"></a>Uwagi  
- Struktura uzyskuje domyślny kolor tła dla aktywnych kart z [GetSysColor](http://msdn.microsoft.com/library/windows/desktop/ms724371)metody.  
+ Struktura uzyskuje domyślny kolor tła dla aktywnych kart z [GetSysColor](https://msdn.microsoft.com/library/windows/desktop/ms724371)metody.  
   
 ##  <a name="setactivetabtextcolor"></a>  CMFCBaseTabCtrl::SetActiveTabTextColor  
  Określa kolor tekstu dla aktywnych kart.  
@@ -1855,10 +1855,10 @@ virtual void SetActiveTabTextColor(COLORREF clr);
   
 ### <a name="parameters"></a>Parametry  
  [in] *clr*  
- A [COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449) parametr, który określa nowy kolor tekstu.  
+ A [COLORREF](/windows/desktop/gdi/colorref) parametr, który określa nowy kolor tekstu.  
   
 ### <a name="remarks"></a>Uwagi  
- Domyślnie struktura uzyskuje kolor tekstu z [GetSysColor](http://msdn.microsoft.com/library/windows/desktop/ms724371). Zastąpić ten kolor domyślny za pomocą `SetActiveTabTextColor` metody.  
+ Domyślnie struktura uzyskuje kolor tekstu z [GetSysColor](https://msdn.microsoft.com/library/windows/desktop/ms724371). Zastąpić ten kolor domyślny za pomocą `SetActiveTabTextColor` metody.  
   
 ##  <a name="setautocolors"></a>  CMFCBaseTabCtrl::SetAutoColors  
  Ustawia kolory używającej w ramach kontrolki karty w trybie kolorowi automatycznemu.  
@@ -1929,7 +1929,7 @@ virtual BOOL SetImageList(HIMAGELIST hImageList);
  Szerokość każdego obrazu w pikselach.  
   
  [in] *clrTransp*  
- A [COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449) parametr, który określa przezroczysty kolor obrazu.  
+ A [COLORREF](/windows/desktop/gdi/colorref) parametr, który określa przezroczysty kolor obrazu.  
   
  [in] *hImageList*  
  Dojście do listy wstępnie załadowanych obrazów.  
@@ -2114,7 +2114,7 @@ virtual BOOL SetTabTextColor(
  Liczony od zera indeks karty.  
   
  [in] *kolorów*  
- A [COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449) parametrem, który wskazuje na nowy kolor tekstu.  
+ A [COLORREF](/windows/desktop/gdi/colorref) parametrem, który wskazuje na nowy kolor tekstu.  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Wartość różną od zera, jeśli to się powiedzie; w przeciwnym razie 0.  

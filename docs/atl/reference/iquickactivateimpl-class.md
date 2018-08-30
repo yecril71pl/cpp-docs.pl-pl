@@ -23,12 +23,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9131a1cc1f8d0c66f2eb3616f4903db74ea4bdf0
-ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
+ms.openlocfilehash: 6de7ee0ede844ce05b59b13e2f8acd7e6068220b
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37881376"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43204511"
 ---
 # <a name="iquickactivateimpl-class"></a>Klasa IQuickActivateImpl
 Ta klasa łączy inicjowania kontroli kontenery w jednym wywołaniu.  
@@ -58,7 +58,7 @@ class ATL_NO_VTABLE IQuickActivateImpl : public IQuickActivate
 |[IQuickActivateImpl::SetContentExtent](#setcontentextent)|Informuje o kontroli ilości wykorzystanego miejsca wyświetlania kontener został przypisany do niego.|  
   
 ## <a name="remarks"></a>Uwagi  
- [IQuickActivate](http://msdn.microsoft.com/library/windows/desktop/ms690146) interfejsu pomaga uniknąć opóźnień, podczas ładowania formantów, łącząc inicjowania w pojedynczym wywołaniu kontenerów. `QuickActivate` Metoda umożliwia kontener, aby przekazać wskaźnik do [QACONTAINER](http://msdn.microsoft.com/library/windows/desktop/ms688630) musi strukturę, która przechowuje wskaźniki do wszystkich interfejsów kontrolki. Przy powrocie, kontrola przechodzi wstecz wskaźnik do [QACONTROL](http://msdn.microsoft.com/library/windows/desktop/ms693721) strukturę, która przechowuje wskaźniki do jego własnej interfejsów, które są używane przez kontener. Klasa `IQuickActivateImpl` udostępnia domyślną implementację elementu `IQuickActivate` i implementuje `IUnknown` , wysyłając informacje o do zrzutu kompilacji urządzenia podczas debugowania.  
+ [IQuickActivate](/windows/desktop/api/ocidl/nn-ocidl-iquickactivate) interfejsu pomaga uniknąć opóźnień, podczas ładowania formantów, łącząc inicjowania w pojedynczym wywołaniu kontenerów. `QuickActivate` Metoda umożliwia kontener, aby przekazać wskaźnik do [QACONTAINER](/windows/desktop/api/ocidl/ns-ocidl-tagqacontainer) musi strukturę, która przechowuje wskaźniki do wszystkich interfejsów kontrolki. Przy powrocie, kontrola przechodzi wstecz wskaźnik do [QACONTROL](/windows/desktop/api/ocidl/ns-ocidl-tagqacontrol) strukturę, która przechowuje wskaźniki do jego własnej interfejsów, które są używane przez kontener. Klasa `IQuickActivateImpl` udostępnia domyślną implementację elementu `IQuickActivate` i implementuje `IUnknown` , wysyłając informacje o do zrzutu kompilacji urządzenia podczas debugowania.  
   
  **Powiązane artykuły** [ALT — samouczek](../../atl/active-template-library-atl-tutorial.md), [Tworzenie projektu ATL](../../atl/reference/creating-an-atl-project.md)  
   
@@ -80,7 +80,7 @@ STDMETHOD(GetContentExtent)(LPSIZEL pSize);
 ### <a name="remarks"></a>Uwagi  
  Rozmiar jest pełna renderowanie formantu i jest określony w jednostkach HIMETRIC.  
   
- Zobacz [IQuickActivate::GetContentExtent](http://msdn.microsoft.com/library/windows/desktop/ms693792) w Windows SDK.  
+ Zobacz [IQuickActivate::GetContentExtent](/windows/desktop/api/ocidl/nf-ocidl-iquickactivate-getcontentextent) w Windows SDK.  
   
 ##  <a name="quickactivate"></a>  IQuickActivateImpl::QuickActivate  
  Wykonuje szybkie inicjowanie kontrolki ładowany.  
@@ -92,9 +92,9 @@ STDMETHOD(QuickActivate)(
 ```  
   
 ### <a name="remarks"></a>Uwagi  
- Struktura zawiera wskaźniki do interfejsów, które wymagają kontroli i wartości niektórych właściwości otoczenia. Po powrocie, kontrola przechodzi wskaźnik do [QACONTROL](http://msdn.microsoft.com/library/windows/desktop/ms693721) strukturę, która zawiera wskaźniki do własnej interfejsy, które wymaga kontenera i informacje o stanie dodatkowe.  
+ Struktura zawiera wskaźniki do interfejsów, które wymagają kontroli i wartości niektórych właściwości otoczenia. Po powrocie, kontrola przechodzi wskaźnik do [QACONTROL](/windows/desktop/api/ocidl/ns-ocidl-tagqacontrol) strukturę, która zawiera wskaźniki do własnej interfejsy, które wymaga kontenera i informacje o stanie dodatkowe.  
   
- Zobacz [IQuickActivate::QuickActivate](http://msdn.microsoft.com/library/windows/desktop/ms682421) w Windows SDK.  
+ Zobacz [IQuickActivate::QuickActivate](/windows/desktop/api/ocidl/nf-ocidl-iquickactivate-quickactivate) w Windows SDK.  
   
 ##  <a name="setcontentextent"></a>  IQuickActivateImpl::SetContentExtent  
  Informuje o kontroli ilości wykorzystanego miejsca wyświetlania kontener został przypisany do niego.  
@@ -106,7 +106,7 @@ STDMETHOD(SetContentExtent)(LPSIZEL pSize);
 ### <a name="remarks"></a>Uwagi  
  Rozmiar określa się w jednostkach HIMETRIC.  
   
- Zobacz [IQuickActivate::SetContentExtent](http://msdn.microsoft.com/library/windows/desktop/ms678806) w Windows SDK.  
+ Zobacz [IQuickActivate::SetContentExtent](/windows/desktop/api/ocidl/nf-ocidl-iquickactivate-setcontentextent) w Windows SDK.  
   
 ## <a name="see-also"></a>Zobacz też  
  [Klasa CComControl](../../atl/reference/ccomcontrol-class.md)   

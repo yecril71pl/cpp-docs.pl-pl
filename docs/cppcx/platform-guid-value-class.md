@@ -15,15 +15,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 102585cf7148923f584591102712278847ee7573
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: d971d4cce8dc3a9d01a666bc8e0e6333f85260c8
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42601257"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43201377"
 ---
 # <a name="platformguid-value-class"></a>Klasa wartości Platform::Guid
-Reprezentuje [GUID](http://msdn.microsoft.com/library/windows/desktop/aa373931\(v=vs.85\).aspx) typu w systemie typów środowiska wykonawczego Windows.  
+Reprezentuje [GUID](https://msdn.microsoft.com/library/windows/desktop/aa373931\(v=vs.85\).aspx) typu w systemie typów środowiska wykonawczego Windows.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -151,7 +151,7 @@ Platform::Guid::operator!=
 
 
 ## <a name="operator-call"></a> GUID::operator() Operator
-Niejawnie konwertuje [identyfikator GUID struktury](http://msdn.microsoft.com/library/windows/desktop/aa373931\(v=vs.85\).aspx)identyfikator GUID służący do Platform::Guid.  
+Niejawnie konwertuje [identyfikator GUID struktury](https://msdn.microsoft.com/library/windows/desktop/aa373931\(v=vs.85\).aspx)identyfikator GUID służący do Platform::Guid.  
   
 ### <a name="syntax"></a>Składnia  
   

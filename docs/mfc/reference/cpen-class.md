@@ -28,12 +28,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 132936805d948257f8d6579f0f840aaf2fd15a0d
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: 60fb1c219068cc0c59f908688ea5c471946458ad
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37849661"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43204144"
 ---
 # <a name="cpen-class"></a>Cpen — klasa
 Hermetyzuje pióro Windows grafiki urządzenia interface (GDI).  
@@ -57,10 +57,10 @@ class CPen : public CGdiObject
 |Nazwa|Opis|  
 |----------|-----------------|  
 |[CPen::CreatePen](#createpen)|Tworzy logiczną pióra kosmetycznych lub geometryczne przy użyciu stylu określonego, szerokość i atrybuty pędzla i dołącza go do `CPen` obiektu.|  
-|[CPen::CreatePenIndirect](#createpenindirect)|Tworzy pióra przy użyciu stylu, szerokość i kolor w [LOGPEN](http://msdn.microsoft.com/library/windows/desktop/dd145041) struktury i dołącza go do `CPen` obiektu.|  
+|[CPen::CreatePenIndirect](#createpenindirect)|Tworzy pióra przy użyciu stylu, szerokość i kolor w [LOGPEN](/windows/desktop/api/wingdi/ns-wingdi-taglogpen) struktury i dołącza go do `CPen` obiektu.|  
 |[CPen::FromHandle](#fromhandle)|Zwraca wskaźnik do `CPen` obiektu, gdy hpen — Windows.|  
-|[CPen::GetExtLogPen](#getextlogpen)|Pobiera [EXTLOGPEN](http://msdn.microsoft.com/library/windows/desktop/dd162711) struktury.|  
-|[CPen::GetLogPen](#getlogpen)|Pobiera [LOGPEN](http://msdn.microsoft.com/library/windows/desktop/dd145041) struktury.|  
+|[CPen::GetExtLogPen](#getextlogpen)|Pobiera [EXTLOGPEN](/windows/desktop/api/wingdi/ns-wingdi-tagextlogpen) struktury.|  
+|[CPen::GetLogPen](#getlogpen)|Pobiera [LOGPEN](/windows/desktop/api/wingdi/ns-wingdi-taglogpen) struktury.|  
   
 ### <a name="public-operators"></a>Operatory publiczne  
   
@@ -144,7 +144,7 @@ CPen(
   
 - Dołącza PS_JOIN_BEVEL są ukośne.  
   
-- Dołącza PS_JOIN_MITER są połączenia znajdujących się w bieżącym określonym przez [SetMiterLimit](http://msdn.microsoft.com/library/windows/desktop/dd145076) funkcji. Jeśli sprzężenia przekracza ten limit, jest ukośne.  
+- Dołącza PS_JOIN_MITER są połączenia znajdujących się w bieżącym określonym przez [SetMiterLimit](/windows/desktop/api/wingdi/nf-wingdi-setmiterlimit) funkcji. Jeśli sprzężenia przekracza ten limit, jest ukośne.  
   
 - Dołącza PS_JOIN_ROUND są Rundy.  
   
@@ -208,7 +208,7 @@ BOOL CreatePen(
  Zawiera kolor RGB pióra.  
   
  *pLogBrush*  
- Wskazuje [LOGBRUSH](http://msdn.microsoft.com/library/windows/desktop/dd145035) struktury. Jeśli *nPenStyle* jest PS_COSMETIC, `lbColor` członkiem `LOGBRUSH` struktury Określa kolor pióra i *lbStyle* członkiem `LOGBRUSH` struktury musi być równa BS_ STAŁE. Jeśli nPenStyle PS_GEOMETRIC, wszystkie elementy Członkowskie musi służyć do określania atrybutów pędzla pióra.  
+ Wskazuje [LOGBRUSH](/windows/desktop/api/wingdi/ns-wingdi-taglogbrush) struktury. Jeśli *nPenStyle* jest PS_COSMETIC, `lbColor` członkiem `LOGBRUSH` struktury Określa kolor pióra i *lbStyle* członkiem `LOGBRUSH` struktury musi być równa BS_ STAŁE. Jeśli nPenStyle PS_GEOMETRIC, wszystkie elementy Członkowskie musi służyć do określania atrybutów pędzla pióra.  
   
  *nStyleCount*  
  Określa długość w jednostkach bitowego *lpStyle* tablicy. Ta wartość musi być zero, jeśli *nPenStyle* nie jest PS_USERSTYLE.  
@@ -290,7 +290,7 @@ int GetExtLogPen(EXTLOGPEN* pLogPen);
   
 ### <a name="parameters"></a>Parametry  
  *pLogPen*  
- Wskazuje [EXTLOGPEN](http://msdn.microsoft.com/library/windows/desktop/dd162711) strukturę, która zawiera informacje o pióra.  
+ Wskazuje [EXTLOGPEN](/windows/desktop/api/wingdi/ns-wingdi-tagextlogpen) strukturę, która zawiera informacje o pióra.  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Wartość różną od zera, jeśli to się powiedzie; w przeciwnym razie 0.  
@@ -300,13 +300,13 @@ int GetExtLogPen(EXTLOGPEN* pLogPen);
   
  Zobacz następujące tematy w zestawie Windows SDK dla informacji o atrybutach pióra:  
   
-- [GetObject](http://msdn.microsoft.com/library/windows/desktop/dd144904)  
+- [GetObject](/windows/desktop/api/wingdi/nf-wingdi-getobject)  
   
-- [EXTLOGPEN](http://msdn.microsoft.com/library/windows/desktop/dd162711)  
+- [EXTLOGPEN](/windows/desktop/api/wingdi/ns-wingdi-tagextlogpen)  
   
-- [LOGPEN](http://msdn.microsoft.com/library/windows/desktop/dd145041)  
+- [LOGPEN](/windows/desktop/api/wingdi/ns-wingdi-taglogpen)  
   
-- [ExtCreatePen](http://msdn.microsoft.com/library/windows/desktop/dd162705)  
+- [ExtCreatePen](/windows/desktop/api/wingdi/nf-wingdi-extcreatepen)  
   
 ### <a name="example"></a>Przykład  
  Poniższy przykład kodu demonstruje wywołanie `GetExtLogPen` można pobrać atrybutów pióra, a następnie utwórz nowe, kosmetycznych pióra przy użyciu tego samego koloru.  
@@ -322,7 +322,7 @@ int GetLogPen(LOGPEN* pLogPen);
   
 ### <a name="parameters"></a>Parametry  
  *pLogPen*  
- Wskazuje [LOGPEN](http://msdn.microsoft.com/library/windows/desktop/dd145041) struktury zawierają informacje na temat pióra.  
+ Wskazuje [LOGPEN](/windows/desktop/api/wingdi/ns-wingdi-taglogpen) struktury zawierają informacje na temat pióra.  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Wartość różną od zera, jeśli to się powiedzie; w przeciwnym razie 0.  
@@ -334,9 +334,9 @@ int GetLogPen(LOGPEN* pLogPen);
   
  Zobacz następujące tematy w zestawie Windows SDK dla informacji o atrybutach pióra:  
   
-- [GetObject](http://msdn.microsoft.com/library/windows/desktop/dd144904)  
+- [GetObject](/windows/desktop/api/wingdi/nf-wingdi-getobject)  
   
-- [LOGPEN](http://msdn.microsoft.com/library/windows/desktop/dd145041)  
+- [LOGPEN](/windows/desktop/api/wingdi/ns-wingdi-taglogpen)  
   
 ### <a name="example"></a>Przykład  
  Poniższy przykład kodu demonstruje wywołanie `GetLogPen` można pobrać znaku pióra, a następnie utwórz nowe, pełne pióra przy użyciu tego samego koloru.  
@@ -356,7 +356,7 @@ operator HPEN() const;
 ### <a name="remarks"></a>Uwagi  
  Ten operator jest operatora rzutowania, który obsługuje bezpośredniego użycia obiektu hpen —.  
   
- Aby uzyskać więcej informacji o korzystaniu z obiektów graficznych, zobacz artykuł [obiektów grafiki](http://msdn.microsoft.com/library/windows/desktop/dd144962) w zestawie Windows SDK.  
+ Aby uzyskać więcej informacji o korzystaniu z obiektów graficznych, zobacz artykuł [obiektów grafiki](/windows/desktop/gdi/graphic-objects) w zestawie Windows SDK.  
   
 ### <a name="example"></a>Przykład  
  [!code-cpp[NVC_MFCDocView#104](../../mfc/codesnippet/cpp/cpen-class_7.cpp)]  

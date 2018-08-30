@@ -15,51 +15,51 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e37ac421627d4c4503d75eaf65188bbe234af015
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: f965481ae1d3abea40577680b1af72004f793123
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32388386"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43197231"
 ---
 # <a name="c-type-specifiers"></a>Specyfikatory typu C
 
-Specyfikatory typów w deklaracjach typ deklaracji zmiennej lub funkcji.
+Specyfikatory typów w deklaracjach zdefiniować typu w deklaracji zmiennej lub funkcji.
 
 ## <a name="syntax"></a>Składnia
 
 *Specyfikator typu*:  
 &nbsp;&nbsp;**Void**  
-&nbsp;&nbsp;**char**  
-&nbsp;&nbsp;**krótki**  
+&nbsp;&nbsp;**Char**  
+&nbsp;&nbsp;**Krótka**  
 &nbsp;&nbsp;**int**  
-&nbsp;&nbsp;**długa**  
-&nbsp;&nbsp;**Float**  
-&nbsp;&nbsp;**O podwójnej precyzji**  
+&nbsp;&nbsp;**długi**  
+&nbsp;&nbsp;**float**  
+&nbsp;&nbsp;**Podwójne**  
 &nbsp;&nbsp;**Podpisany**  
 &nbsp;&nbsp;**Bez znaku**  
 &nbsp;&nbsp;*struct-or-union-specifier*  
 &nbsp;&nbsp;*enum-specifier*  
-&nbsp;&nbsp;*Nazwa typu TypeDef*  
+&nbsp;&nbsp;*Nazwa TypeDef*  
 
-**Podpisany char**, **podpisany int**, **podpisany krótkich liczb całkowitych**, i **podpisany długi int** typów, wraz z ich **bez znaku**  odpowiednikowi i **wyliczenia**, są nazywane *integralną* typów. **Float**, **podwójne**, i **podwójnej długości** specyfikatorze typu są określane jako *przestawne* lub *liczbzmiennoprzecinkowych* typów. W deklaracji zmiennej lub funkcji, można użyć dowolnego specyfikatora typu całkowitego lub zmiennoprzecinkowej. Jeśli *specyfikatora typu* nie jest dostępny w deklaracji, przyjmuje się **int**.
+**Podpisany char**, **podpisany int**, **podpisany krótka wartość całkowita**, i **podpisany long int** typów, wraz z ich **bez znaku**  odpowiedniki i **wyliczenia**, są nazywane *całkowitego* typów. **Float**, **double**, i **typu long double** specyfikatory typu są określane jako *zmiennoprzecinkowy* lub *zmiennoprzecinkowych* typów. W deklaracji zmiennej lub funkcji, można użyć dowolnego Specyfikator typu całkowitego lub zmiennoprzecinkowego. Jeśli *Specyfikator typu* nie znajduje się w deklaracji, jest traktowana jako **int**.
 
-Opcjonalne słowa kluczowe **podpisany** i **niepodpisane** może poprzedzać lub skorzystać z dowolnego z typów całkowitych z wyjątkiem **wyliczenia**i może również służyć jako specyfikatorze typu, w którym to przypadku rozumie jako **podpisany int** i **unsigned int**odpowiednio. Gdy użyte bez parametrów, słowo kluczowe **int** zakłada się, że **podpisany**. Gdy użyte bez parametrów, słowa kluczowe **długi** i **krótki** rozumie jako **długi int** i **krótkich liczb całkowitych**.
+Opcjonalne słowa kluczowe **podpisany** i **niepodpisane** może poprzedzać lub skorzystać z dowolnego typu całkowitoliczbowego z wyjątkiem **wyliczenia**i może również służyć jako specyfikatory typu, w którym to przypadku Rozumiemy jako **podpisany int** i **unsigned int**odpowiednio. Gdy jest używana samodzielnie, słowo kluczowe **int** zakłada się, że **podpisany**. Gdy jest używana samodzielnie, słowa kluczowe **długie** i **krótki** są zrozumiałe jako **long int** i **krótka wartość całkowita**.
 
-Typy wyliczeniowe są traktowane jako typów podstawowych. Specyfikatory typów dla typów wyliczenia, omówiono w [deklaracje modułów Wyliczających](../c-language/c-enumeration-declarations.md).
+Typy wyliczeniowe są traktowane jako typy podstawowe. Specyfikatory typu dla typów wyliczenia zostały omówione w [deklaracje modułów Wyliczających](../c-language/c-enumeration-declarations.md).
 
-Słowo kluczowe **void** ma trzy zastosowań: Aby określić funkcję zwracany typ, aby określić listę typ argumentu dla funkcji, która nie przyjmuje żadnych argumentów i określić wskaźnik do nieokreślonego typu. Można użyć **void** typu do zadeklarowania funkcji zwracających wartości lub zadeklarować wskaźnika nieokreślonego typu. Zobacz [argumenty](../c-language/arguments.md) uzyskać informacji o **void** po wyświetleniu wyłącznie wewnątrz nawiasów po nazwie funkcji.
+Słowo kluczowe **void** ma trzy zastosowań: Aby określić funkcję zwracany typ, aby określić listy Typ argumentu dla funkcji, która nie przyjmuje żadnych argumentów, a także do określenia wskaźnika do nieokreślonego typu. Możesz użyć **void** typu, Zadeklaruj funkcje wracające żadnej wartości lub zadeklarować wskaźnika do nieokreślonego typu. Zobacz [argumenty](../c-language/arguments.md) uzyskać informacji na temat **void** , gdy pojawia się tylko w obrębie nawiasów po nazwie funkcji.
 
 **Microsoft Specific**
 
-Sprawdzanie typu jest teraz ANSI zgodne, co oznacza, że typ **krótki** i typ **int** są różne typy. Na przykład jest to ponowna definicja w kompilatorze C firmy Microsoft, który został zaakceptowany przez poprzednie wersje kompilatora.
+Kontrola typów jest teraz ze standardem ANSI, co oznacza, że typ **krótki** i typ **int** są różnych typów. Na przykład to dokonanym w kompilatorze Microsoft C, który został zaakceptowany przez poprzednie wersje kompilatora.
 
 ```C
 int   myfunc();
 short myfunc();
 ```
 
-W tym przykładzie dalej również generuje ostrzeżenie o pośredni do różnych typów:
+Ten przykład dalej również generuje ostrzeżenie dotyczące operatora pośredniego do różnych typów:
 
 ```C
 int *pi;
@@ -68,7 +68,7 @@ short *ps;
 ps = pi;  /* Now generates warning */
 ```
 
-Kompilator Microsoft C generuje również ostrzeżeń dotyczących różnic w logowania. Na przykład:
+Kompilator Microsoft C: generuje również wyświetlanie ostrzeżeń dotyczących różnice w logowania. Na przykład:
 
 ```C
 signed int *pi;
@@ -77,13 +77,13 @@ unsigned int *pu
 pi = pu;  /* Now generates warning */
 ```
 
-Typ **void** wyrażenia są oceniane pod kątem efekty uboczne. Nie można użyć (nieistniejącą) wartości wyrażenia o typie **void** w dowolnym sposób ani może konwersji **void** wyrażenia (za pomocą konwersji jawnych ani niejawnych) do dowolnego typu, z wyjątkiem **void** . Użycie innego typu wyrażenia w kontekście, w którym **void** wymagane jest wyrażenie, jego wartość jest usuwana.
+Typ **void** wyrażenia są obliczane na efektów ubocznych. Nie można używać (nieistniejącej) wartości wyrażenia typu **void** w dowolnym sposób ani może konwersji **void** wyrażenia (przez jawnych lub niejawnych konwersji) do dowolnego typu z wyjątkiem **void** . Jeśli używasz innego typu wyrażenia w kontekście gdzie **void** wyrażenie jest wymagany, jego wartość jest odrzucany.
 
-Aby był zgodny ze specyfikacją ANSI **void\* \***  nie można użyć jako **int\*\***. Tylko **void\***  może być używany jako wskaźnik do nieokreślonego typu.
+Aby były zgodne ze specyfikacją ANSI <strong>void\* \*</strong>  nie można użyć jako <strong>int\*\*</strong>. Tylko **void** <strong>\*</strong> może służyć jako wskaźnik do nieokreślonego typu.
 
-**KOŃCOWY określonych firmy Microsoft**
+**END specyficzny dla Microsoft**
 
-Możesz utworzyć dodatkowe typu specyfikatory z **typedef** deklaracje, zgodnie z opisem w [deklaracje Typedef](../c-language/typedef-declarations.md). Zobacz [magazyn typów podstawowych](../c-language/storage-of-basic-types.md) informacji na temat rozmiar każdego typu.
+Można utworzyć dodatkowy typ specyfikatory z **typedef** deklaracji, zgodnie z opisem w [deklaracje Typedef](../c-language/typedef-declarations.md). Zobacz [magazyn typów podstawowych](../c-language/storage-of-basic-types.md) informacji na podstawie rozmiaru każdego typu.
 
 ## <a name="see-also"></a>Zobacz także
 

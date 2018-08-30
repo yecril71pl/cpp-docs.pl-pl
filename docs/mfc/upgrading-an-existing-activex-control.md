@@ -22,12 +22,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 175b64b40ab2fd242e3e430cf99d761f577835cb
-ms.sourcegitcommit: 76fd30ff3e0352e2206460503b61f45897e60e4f
+ms.openlocfilehash: ca5a5e4d7bda9fe14362696d44137273cc020c7f
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/13/2018
-ms.locfileid: "39026423"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43203133"
 ---
 # <a name="upgrading-an-existing-activex-control"></a>Uaktualnianie istniejącego kontrolki ActiveX
 Kontrolki ActiveX istniejących (dawniej kontrolka OLE) może służyć w Internecie bez żadnych modyfikacji. Można zmodyfikować formantów, aby zwiększyć ich wydajność. Korzystając z kontrolki na stronie sieci Web, istnieją dodatkowe zagadnienia. Plik ocx i wszystkie pliki obsługi muszą znajdować się na komputerze docelowym lub można pobrać przez Internet. To sprawia, że rozmiar kodu i pobierania czasu ważną kwestią. W pliku .cab podpisanych można spakować pliki do pobrania. Możesz oznaczyć obsługi skryptów, jak i bezpiecznie zainicjować formant.  
@@ -89,7 +89,7 @@ CODEBASE="http://example.microsoft.com/acontrol.cab#version=1,
   
  Plik cabinet wskazywany przez `CODEBASE` powinien zawierać plik ocx kontrolki ActiveX i pliku .inf, aby kontrolować jego instalacji. Tworzenie pliku cabinet, określając nazwę pliku kontroli i plik inf. Nie dołączaj zależne biblioteki dll, które mogą już istnieć w systemie, w tym pliku cabinet. Na przykład biblioteki MFC DLL są spakowane w oddzielnym pliku cabinet i kontrolowanie pliku inf.  
   
- Aby uzyskać więcej informacji na temat tworzenia pliku CAB, zobacz [tworzenia pliku CAB](http://msdn.microsoft.com/cc52fd09-bdf6-4410-a693-149a308f36a3).  
+ Aby uzyskać więcej informacji na temat tworzenia pliku CAB, zobacz [tworzenia pliku CAB](https://msdn.microsoft.com/cc52fd09-bdf6-4410-a693-149a308f36a3).  
   
 ### <a name="the-inf-file"></a>Plik INF  
  Poniższy przykład, spindial.inf, listy plików oraz informacje o wersji wymagane w przypadku MFC Spindial kontroli. Należy zauważyć, że lokalizacja biblioteki MFC dll to witrynie internetowej firmy Microsoft. Mfc42.cab ma być dostarczana i podpisany przez firmę Microsoft.  
@@ -221,7 +221,7 @@ HKEY_CLASSES_ROOT\CLSID\{06889605-B8D0-101A-91F1-00608CEAD5B3}\Implemented Categ
 ##  <a name="_core_signing_code"></a> Podpisywanie kodu  
  Podpisywanie kodu zaprojektowano w celu zidentyfikowania źródła kodu, a aby zagwarantować, że kod nie zmienił się od czasu jej został podpisany. W zależności od ustawienia zabezpieczeń przeglądarki użytkownicy mogą ostrzegani, przed pobraniem kodu. Użytkownicy mogą wybrać zaufania niektórych właścicieli certyfikatu lub firmy, w których wielkość kod jest podpisywany przy użyciu zaufanego, zostaną pobrane bez ostrzeżenia. Kod jest podpisany cyfrowo, aby zapobiec naruszeniu.  
   
- Upewnij się, że kod końcowy jest podpisany, dzięki czemu formant można pobierać automatycznie bez wyświetlania komunikatów ostrzegawczych zaufania. Aby uzyskać szczegółowe informacje na temat podpisywania kodu, zapoznaj się z dokumentacją na Authenticode w zestawie SDK ActiveX i zobacz [podpisanie pliku CAB](http://msdn.microsoft.com/04d8b47a-8f1c-4b54-ab90-730fcdc03747).  
+ Upewnij się, że kod końcowy jest podpisany, dzięki czemu formant można pobierać automatycznie bez wyświetlania komunikatów ostrzegawczych zaufania. Aby uzyskać szczegółowe informacje na temat podpisywania kodu, zapoznaj się z dokumentacją na Authenticode w zestawie SDK ActiveX i zobacz [podpisanie pliku CAB](https://msdn.microsoft.com/04d8b47a-8f1c-4b54-ab90-730fcdc03747).  
   
  W zależności od zaufania i przeglądarki poziomu ustawienia bezpieczeństwa certyfikat może być wyświetlany do identyfikowania podpisywania osoby lub firmy. Jeśli poziom bezpieczeństwa to none lub właściciela certyfikatu z podpisem kontroli jest zaufany, certyfikat nie będą wyświetlane. Zobacz [Internet Explorer przeglądarki bezpieczeństwa poziomy i zachowanie kontrolki](#_core_internet_explorer_browser_safety_levels_and_control_behavior) szczegółowe informacje na temat sposobu ustawienia zabezpieczeń przeglądarki określi, czy formant jest pobierana i certyfikat wyświetlany.  
   

@@ -39,12 +39,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a8df8ef2a0846f5ac90a2adfc53fa64da92930f3
-ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
+ms.openlocfilehash: 8879c1d304e6d46b7ae3c8c2f1ed535526a5390e
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37881243"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43202465"
 ---
 # <a name="cbindstatuscallback-class"></a>Klasa CBindStatusCallback
 Ta klasa implementuje `IBindStatusCallback` interfejsu.  
@@ -101,10 +101,10 @@ class ATL_NO_VTABLE CBindStatusCallback : public CComObjectRootEx
 |[CBindStatusCallback::m_dwTotalRead](#m_dwtotalread)|Całkowita liczba bajtów do odczytu.|  
 |[CBindStatusCallback::m_pFunc](#m_pfunc)|Wskaźnik do funkcji wywoływane, gdy dane są dostępne.|  
 |[CBindStatusCallback::m_pT](#m_pt)|Wskaźnik do obiektu żądającego transferu asynchronicznego danych.|  
-|[CBindStatusCallback::m_spBindCtx](#m_spbindctx)|Wskaźnik do [IBindCtx](http://msdn.microsoft.com/library/windows/desktop/ms693755) interfejs dla bieżącej operacji wiązania.|  
+|[CBindStatusCallback::m_spBindCtx](#m_spbindctx)|Wskaźnik do [IBindCtx](/windows/desktop/api/objidl/nn-objidl-ibindctx) interfejs dla bieżącej operacji wiązania.|  
 |[CBindStatusCallback::m_spBinding](#m_spbinding)|Wskaźnik do `IBinding` interfejs dla bieżącej operacji wiązania.|  
-|[CBindStatusCallback::m_spMoniker](#m_spmoniker)|Wskaźnik do [imoniker —](http://msdn.microsoft.com/library/windows/desktop/ms679705) interfejsu dla adresu URL do użycia.|  
-|[CBindStatusCallback::m_spStream](#m_spstream)|Wskaźnik do [IStream](http://msdn.microsoft.com/library/windows/desktop/aa380034) interfejsu do transferu danych.|  
+|[CBindStatusCallback::m_spMoniker](#m_spmoniker)|Wskaźnik do [imoniker —](/windows/desktop/api/objidl/nn-objidl-imoniker) interfejsu dla adresu URL do użycia.|  
+|[CBindStatusCallback::m_spStream](#m_spstream)|Wskaźnik do [IStream](/windows/desktop/api/objidl/nn-objidl-istream) interfejsu do transferu danych.|  
   
 ## <a name="remarks"></a>Uwagi  
  `CBindStatusCallback` Klasy implementuje `IBindStatusCallback` interfejsu. `IBindStatusCallback` muszą być zaimplementowane przez aplikację, więc może ona odbierać powiadomienia z transferu asynchronicznego danych. Używa asynchronicznej krótkiej nazwy systemu `IBindStatusCallback` metody służące do wysyłania i odbierania informacji o danych asynchroniczne przesyłanie do i z obiektu.  
@@ -278,7 +278,7 @@ T* m_pT;
  `CBindStatusCallback` Obiektu jest szablonowana na klasy tego obiektu.  
   
 ##  <a name="m_spbindctx"></a>  CBindStatusCallback::m_spBindCtx  
- Wskaźnik do [IBindCtx](http://msdn.microsoft.com/library/windows/desktop/ms693755) interfejs, który zapewnia dostęp do kontekstu powiązania (obiekt, który przechowuje informacje o operacji wiązania określonej krótkiej nazwy).  
+ Wskaźnik do [IBindCtx](/windows/desktop/api/objidl/nn-objidl-ibindctx) interfejs, który zapewnia dostęp do kontekstu powiązania (obiekt, który przechowuje informacje o operacji wiązania określonej krótkiej nazwy).  
   
 ```
 CComPtr<IBindCtx> m_spBindCtx;
@@ -298,7 +298,7 @@ CComPtr<IBinding> m_spBinding;
  Zainicjowane w `OnStartBinding` i wydawane w `OnStopBinding`.  
   
 ##  <a name="m_spmoniker"></a>  CBindStatusCallback::m_spMoniker  
- Wskaźnik do [imoniker —](http://msdn.microsoft.com/library/windows/desktop/ms679705) interfejsu dla adresu URL do użycia.  
+ Wskaźnik do [imoniker —](/windows/desktop/api/objidl/nn-objidl-imoniker) interfejsu dla adresu URL do użycia.  
   
 ```
 CComPtr<IMoniker> m_spMoniker;
@@ -308,7 +308,7 @@ CComPtr<IMoniker> m_spMoniker;
  Zainicjowane w `StartAsyncDownload`.  
   
 ##  <a name="m_spstream"></a>  CBindStatusCallback::m_spStream  
- Wskaźnik do [IStream](http://msdn.microsoft.com/library/windows/desktop/aa380034) interfejsu bieżącej operacji wiązania.  
+ Wskaźnik do [IStream](/windows/desktop/api/objidl/nn-objidl-istream) interfejsu bieżącej operacji wiązania.  
   
 ```
 CComPtr<IStream> m_spStream;
@@ -336,10 +336,10 @@ STDMETHOD(
  [in] Zbiorcza kwota (w bajtach) dostępnych od początku powiązanie danych. Może być równy zero, wskazującą, ilości danych nie jest ważna, lub że bez żadnej kwoty określone stały się dostępne.  
   
  *pformatetc*  
- [in] Wskaźnik do [FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682242) strukturę, która zawiera format dostępnych danych. W przypadku formatu nie może być CF_NULL.  
+ [in] Wskaźnik do [FORMATETC](/windows/desktop/com/the-formatetc-structure) strukturę, która zawiera format dostępnych danych. W przypadku formatu nie może być CF_NULL.  
   
  *pstgmed*  
- [in] Wskaźnik do [STGMEDIUM](http://msdn.microsoft.com/library/windows/desktop/ms695269) strukturę, która przechowuje dane rzeczywiste, która jest teraz dostępna.  
+ [in] Wskaźnik do [STGMEDIUM](/windows/desktop/com/the-stgmedium-structure) strukturę, która przechowuje dane rzeczywiste, która jest teraz dostępna.  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Jedna z wartości HRESULT standardowych.  

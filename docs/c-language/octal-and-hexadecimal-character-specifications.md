@@ -15,23 +15,23 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2f5709ef6fdcaaceecc79cd635374ee77d537100
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: eeb1f8e08fbb1d4f30517485c9296febab5a0de0
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32387391"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43198759"
 ---
 # <a name="octal-and-hexadecimal-character-specifications"></a>Ósemkowe i szesnastkowe specyfikacje znaków
-Sekwencja **\\*** ooo* zestaw jako kod znaku ósemkowe trzycyfrowa znaków oznacza, że możesz określić znaków ASCII. Liczbowa wartość ósemkowej liczby całkowitej określa wartość wymaganego znaku lub znak dwubajtowy.  
+Sekwencja **\\** <em>ooo</em> oznacza, że można określić dowolny znak ASCII znak zestawu jako trzycyfrowy ósemkowy kod znaku. Liczbowa wartość ósemkowej liczby całkowitej określa wartość wymaganego znaku lub znak dwubajtowy.  
   
- Podobnie, sekwencja **\x***hhh* służy do określenia znaków ASCII jako kod znaków szesnastkowych. Na przykład można podać znaków ASCII backspace jako normalne sekwencji unikowej C (**\b**), lub kodu, jako **\010** (ósemkowe) lub **\x008** (szesnastkowo).  
+ Podobnie, sekwencja **\x**<em>hhh</em> umożliwia określenie dowolnego znaku ASCII jako szesnastkowego kodu znaku. Na przykład można podać znaku backspace ASCII jako normalnego sekwencja ucieczki C (**\b**), lub zakodować go jako **\010** (ósemkowo) lub **\x008** (szesnastkowo).  
   
- Można użyć tylko cyfr od 0 do 7 w ósemkowej sekwencji ucieczki. Ósemkowe sekwencje ucieczki nigdy nie mogą być dłuższe niż trzy cyfry i są zakończone pierwszym znakiem, który nie jest cyfrą ósemkową. Chociaż nie trzeba używać wszystkich trzech cyfr, należy użyć co najmniej jednej. Na przykład jest ósemkową reprezentację **\10** backspace znaku ASCII i **\101** litery A podane w formacie ASCII wykresu.  
+ Można użyć tylko cyfr od 0 do 7 w ósemkowej sekwencji ucieczki. Ósemkowe sekwencje ucieczki nigdy nie mogą być dłuższe niż trzy cyfry i są zakończone pierwszym znakiem, który nie jest cyfrą ósemkową. Chociaż nie trzeba używać wszystkich trzech cyfr, należy użyć co najmniej jednej. Na przykład, ósemkowe reprezentacje to **\10** dla znaku backspace ASCII i **\101** dla litery A, jak podano ASCII wykresu.  
   
- Podobnie, należy użyć co najmniej jednej cyfry do szesnastkowej sekwencji ucieczki, ale można pominąć drugą i trzecią cyfrę. W związku z tym można określić jako szesnastkowa sekwencja unikowa znaku backspace **\x8**, **\x08**, lub **\x008**.  
+ Podobnie, należy użyć co najmniej jednej cyfry do szesnastkowej sekwencji ucieczki, ale można pominąć drugą i trzecią cyfrę. W związku z tym można określić szesnastkową sekwencję ucieczki dla znaku backspace jako **\x8**, **\x08**, lub **\x008**.  
   
- Wartość sekwencji unikowej ósemkowe i szesnastkowe musi należeć do zakresu, można przedstawić wartości dla typu **unsigned char** dla stałej znakowej i typu `wchar_t` stałej znaków dwubajtowych. Zobacz [wielobajtowe i dwubajtowe znaki](../c-language/multibyte-and-wide-characters.md) informacji na stałe znaków dwubajtowych.  
+ Wartość ósemkowej lub szesnastkowej sekwencji ucieczki musi być w zakresie reprezentowanych wartości dla typu **unsigned char** dla stałej znakowej i typu `wchar_t` dla dwubajtowej stałej znakowej. Zobacz [wielobajtowe i dwubajtowe znaki](../c-language/multibyte-and-wide-characters.md) uzyskać informacji na temat dwubajtowych stałych znakowych.  
   
  W odróżnieniu od ósemkowych stałych wyjścia, nie ma limitu dotyczącego liczby cyfr szesnastkowych w sekwencji wyjścia. Szesnastkowa sekwencja ucieczki kończy się przy pierwszym znaku, który nie jest cyfrą szesnastkową. Ponieważ cyfry szesnastkowe zawierają litery **a** za pośrednictwem **f**, należy zachować ostrożność się upewnić, że sekwencja specjalna kończy się na zamierzone cyfr. Aby uniknąć nieporozumień, można umieścić definicje znaku ósemkowego lub szesnastkowego w definicji makra:  
   

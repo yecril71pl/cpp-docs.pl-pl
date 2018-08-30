@@ -46,12 +46,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fd96c7028f5f37d617c86e412fa238ccf141cb58
-ms.sourcegitcommit: e9ce38decc9f986edab5543de3464b11ebccb123
+ms.openlocfilehash: 0d548a5cf0384a59c3fa12d88268997f1e801704
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/13/2018
-ms.locfileid: "42464459"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43196664"
 ---
 # <a name="csimplestringt-class"></a>CSimpleStringT, klasa
 Ta klasa reprezentuje `CSimpleStringT` obiektu.  
@@ -471,11 +471,11 @@ PXSTR GetBufferSetLength(int nLength);
   
  Aby uzyskać więcej informacji na temat zliczanie odwołań zobacz następujące artykuły:  
   
-- [Zarządzanie czasów istnienia obiektów za pomocą zliczanie odwołań](http://msdn.microsoft.com/library/windows/desktop/ms687260) w Windows SDK. 
+- [Zarządzanie czasów istnienia obiektów za pomocą zliczanie odwołań](/windows/desktop/com/managing-object-lifetimes-through-reference-counting) w Windows SDK. 
   
-- [Implementowanie zliczanie odwołań](http://msdn.microsoft.com/library/windows/desktop/ms693431) w Windows SDK.
+- [Implementowanie zliczanie odwołań](/windows/desktop/com/implementing-reference-counting) w Windows SDK.
   
-- [Zasady zarządzania odwołań](http://msdn.microsoft.com/library/windows/desktop/ms692481) w Windows SDK.  
+- [Zasady zarządzania odwołań](/windows/desktop/com/rules-for-managing-reference-counts) w Windows SDK.  
   
 ### <a name="example"></a>Przykład  
  W poniższym przykładzie pokazano użycie `CSimpleStringT::GetBufferSetLength`.  
@@ -599,11 +599,11 @@ PXSTR LockBuffer();
   
  Aby uzyskać więcej informacji na temat zliczanie odwołań zobacz następujące artykuły:  
   
-- [Zarządzanie czasów istnienia obiektów za pomocą zliczanie odwołań](http://msdn.microsoft.com/library/windows/desktop/ms687260) w Windows SDK  
+- [Zarządzanie czasów istnienia obiektów za pomocą zliczanie odwołań](/windows/desktop/com/managing-object-lifetimes-through-reference-counting) w Windows SDK  
   
-- [Implementowanie zliczanie odwołań](http://msdn.microsoft.com/library/windows/desktop/ms693431) w Windows SDK  
+- [Implementowanie zliczanie odwołań](/windows/desktop/com/implementing-reference-counting) w Windows SDK  
   
-- [Zasady zarządzania odwołań](http://msdn.microsoft.com/library/windows/desktop/ms692481) w Windows SDK  
+- [Zasady zarządzania odwołań](/windows/desktop/com/rules-for-managing-reference-counts) w Windows SDK  
   
 ### <a name="example"></a>Przykład  
  W poniższym przykładzie pokazano użycie `CSimpleStringT::LockBuffer`.  

@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 80fdbe14539c5b32c2da80a5de75fbe0a2b64241
-ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
+ms.openlocfilehash: a23951697a5f736305734c6d49044a2e33ac4783
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/01/2018
-ms.locfileid: "39408627"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43200496"
 ---
 # <a name="indirection-operator-"></a>Operator bezpośredni: *
 ## <a name="syntax"></a>Składnia  
@@ -32,7 +32,7 @@ ms.locfileid: "39408627"
 ```  
   
 ## <a name="remarks"></a>Uwagi  
- Jednoargumentowy operator pośredni (**\***) wyłuskania wskaźnika; oznacza to, konwertuje wartość wskaźnika do l wartością. Argument operacji operatora pośredniego musi być wskaźnikiem do typu. Wynik wyrażenia pośredni to typ, z którego jest tworzony na typ wskaźnika. Korzystanie z **\*** operatora w tym kontekście różni się od jego znaczenie jako operator binarny, który jest mnożenia.  
+ Jednoargumentowy operator pośredni (<strong>\*</strong>) wyłuskania wskaźnika; oznacza to, konwertuje wartość wskaźnika do l wartością. Argument operacji operatora pośredniego musi być wskaźnikiem do typu. Wynik wyrażenia pośredni to typ, z którego jest tworzony na typ wskaźnika. Korzystanie z <strong>\*</strong> operatora w tym kontekście różni się od jego znaczenie jako operator binarny, który jest mnożenia.  
   
  Jeśli operand wskazuje funkcję, wynik jest oznaczeniem funkcji. Jeśli wskazuje on lokalizację magazynu, wynikiem jest l-wartość opisująca lokalizację magazynu.  
   

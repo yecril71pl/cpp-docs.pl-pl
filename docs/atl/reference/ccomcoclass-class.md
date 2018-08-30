@@ -22,12 +22,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6043277eff17340cd57d0a6ee1bb8e84625f45b9
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: 693a0e63e5fe67b1a3837ae71945ccc60b5fb247
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42464554"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43204346"
 ---
 # <a name="ccomcoclass-class"></a>Klasa CComCoClass
 Ta klasa dostarcza metody do tworzenia wystąpienia klasy i uzyskania jej właściwości.  
@@ -58,7 +58,7 @@ class CComCoClass
 |[CComCoClass::GetObjectDescription](#getobjectdescription)|(Statyczny) Należy przesłonić, aby zwrócić opis obiektu.|  
   
 ## <a name="remarks"></a>Uwagi  
- `CComCoClass` udostępnia metody do pobierania identyfikatora CLSID obiektu, ustawiania informacji o błędach i tworzenia wystąpienia klasy. Każda klasa zarejestrowane w [mapy obiektu](http://msdn.microsoft.com/b57619cc-534f-4b8f-bfd4-0c12f937202f) powinny pochodzić z `CComCoClass`.  
+ `CComCoClass` udostępnia metody do pobierania identyfikatora CLSID obiektu, ustawiania informacji o błędach i tworzenia wystąpienia klasy. Każda klasa zarejestrowane w [mapy obiektu](https://msdn.microsoft.com/b57619cc-534f-4b8f-bfd4-0c12f937202f) powinny pochodzić z `CComCoClass`.  
   
  `CComCoClass` definiuje również domyślne klasy fabryki i agregację modelu obiektu. `CComCoClass` wykorzystuje dwa następujące makra:  
   

@@ -50,12 +50,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4c6a5b0e031aebb658b4da20d3aa9a6dd47f8c2a
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: 632e8c0039dc0cac35fe46cff1fc539e534f8e20
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37851564"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43203406"
 ---
 # <a name="cpropertypage-class"></a>Cpropertypage — klasa
 Przedstawia pojedyncze strony arkusza właściwości, znane również jako zakładki okna dialogowego.  
@@ -80,7 +80,7 @@ class CPropertyPage : public CDialog
 |----------|-----------------|  
 |[CPropertyPage::CancelToClose](#canceltoclose)|Zmienia przycisk OK, aby odczytać Zamknij i wyłącza przycisk Anuluj, po zmianie nieodwracalny, na stronie modalny arkusz właściwości.|  
 |[CPropertyPage::Construct](#construct)|Konstruuje `CPropertyPage` obiektu. Użyj `Construct` czy chcesz określić parametry w czasie wykonywania, czy używasz tablic.|  
-|[CPropertyPage::GetPSP](#getpsp)|Pobiera Windows [PROPSHEETPAGE](http://msdn.microsoft.com/library/windows/desktop/bb774548) struktury skojarzone z `CPropertyPage` obiektu.|  
+|[CPropertyPage::GetPSP](#getpsp)|Pobiera Windows [PROPSHEETPAGE](/windows/desktop/api/prsht/ns-prsht-_propsheetpagea_v2) struktury skojarzone z `CPropertyPage` obiektu.|  
 |[CPropertyPage::OnApply](#onapply)|Wywoływane przez platformę, gdy kliknięto przycisk Zastosuj teraz.|  
 |[CPropertyPage::OnCancel](#oncancel)|Wywoływane przez platformę, gdy kliknięto przycisk Anuluj.|  
 |[CPropertyPage::OnKillActive](#onkillactive)|Wywoływane przez platformę, gdy bieżąca strona nie jest już stroną aktywną. Wykonaj sprawdzanie poprawności danych w tym miejscu.|  
@@ -98,7 +98,7 @@ class CPropertyPage : public CDialog
   
 |Nazwa|Opis|  
 |----------|-----------------|  
-|[CPropertyPage::m_psp](#m_psp)|Windows [PROPSHEETPAGE](http://msdn.microsoft.com/library/windows/desktop/bb774548) struktury. Zapewnia dostęp do właściwości podstawowe parametry strony.|  
+|[CPropertyPage::m_psp](#m_psp)|Windows [PROPSHEETPAGE](/windows/desktop/api/prsht/ns-prsht-_propsheetpagea_v2) struktury. Zapewnia dostęp do właściwości podstawowe parametry strony.|  
   
 ## <a name="remarks"></a>Uwagi  
  Jak za pomocą standardowych oknach dialogowych, należy wyprowadzić klasę z `CPropertyPage` dla każdej strony w arkuszu właściwości. Aby użyć `CPropertyPage`-obiektów pochodnych, należy najpierw utworzyć [CPropertySheet](../../mfc/reference/cpropertysheet-class.md) obiektu, a następnie utwórz obiekt, dla każdej strony, który znajduje się w arkuszu właściwości. Wywołaj [CPropertySheet::AddPage](../../mfc/reference/cpropertysheet-class.md#addpage) dla każdej strony w arkuszu, a następnie wyświetlić arkusz właściwości, wywołując [CPropertySheet::DoModal](../../mfc/reference/cpropertysheet-class.md#domodal) dla modalny arkusz właściwości, lub [CPropertySheet:: Utwórz](../../mfc/reference/cpropertysheet-class.md#create) dla niemodalnego arkusza właściwości.  
@@ -263,7 +263,7 @@ CPropertyPage(
  [!code-cpp[NVC_MFCDocView#113](../../mfc/codesnippet/cpp/cpropertypage-class_2.cpp)]  
   
 ##  <a name="getpsp"></a>  CPropertyPage::GetPSP  
- Pobiera Windows [PROPSHEETPAGE](http://msdn.microsoft.com/library/windows/desktop/bb774548) struktury skojarzone z `CPropertyPage` obiektu.  
+ Pobiera Windows [PROPSHEETPAGE](/windows/desktop/api/prsht/ns-prsht-_propsheetpagea_v2) struktury skojarzone z `CPropertyPage` obiektu.  
   
 ```  
 const PROPSHEETPAGE& GetPSP() const;  
@@ -275,7 +275,7 @@ PROPSHEETPAGE& GetPSP();
  Odwołanie do `PROPSHEETPAGE` struktury.  
   
 ##  <a name="m_psp"></a>  CPropertyPage::m_psp  
- `m_psp` jest strukturą, której członkowie przechowywania charakterystyki [PROPSHEETPAGE](http://msdn.microsoft.com/library/windows/desktop/bb774548).  
+ `m_psp` jest strukturą, której członkowie przechowywania charakterystyki [PROPSHEETPAGE](/windows/desktop/api/prsht/ns-prsht-_propsheetpagea_v2).  
   
 ```  
 PROPSHEETPAGE m_psp;  
@@ -306,7 +306,7 @@ virtual BOOL OnApply();
   
  Domyślna implementacja klasy `OnApply` wywołania `OnOK`.  
   
- Aby uzyskać więcej informacji na temat komunikaty powiadomień wysłane, gdy użytkownik naciśnie Zastosuj teraz lub przycisk OK w arkuszu właściwości, zobacz [PSN_APPLY](http://msdn.microsoft.com/library/windows/desktop/bb774552) w zestawie Windows SDK.  
+ Aby uzyskać więcej informacji na temat komunikaty powiadomień wysłane, gdy użytkownik naciśnie Zastosuj teraz lub przycisk OK w arkuszu właściwości, zobacz [PSN_APPLY](/windows/desktop/Controls/psn-apply) w zestawie Windows SDK.  
   
 ### <a name="example"></a>Przykład  
   Zobacz przykład [CPropertyPage::OnOK](#onok).  
@@ -352,7 +352,7 @@ virtual void OnOK();
 ```  
   
 ### <a name="remarks"></a>Uwagi  
- Gdy użytkownik wybierze przycisk Zastosuj teraz lub OK, struktura odbiera [PSN_APPLY](http://msdn.microsoft.com/library/windows/desktop/bb774552) powiadomień z poziomu strony właściwości. Wywołanie `OnOK` nie będzie mieć miejsce, gdy wywołujesz [CPropertySheet::PressButton](../../mfc/reference/cpropertysheet-class.md#pressbutton) ponieważ strona właściwości wysyłał powiadomienie w takiej sytuacji.  
+ Gdy użytkownik wybierze przycisk Zastosuj teraz lub OK, struktura odbiera [PSN_APPLY](/windows/desktop/Controls/psn-apply) powiadomień z poziomu strony właściwości. Wywołanie `OnOK` nie będzie mieć miejsce, gdy wywołujesz [CPropertySheet::PressButton](../../mfc/reference/cpropertysheet-class.md#pressbutton) ponieważ strona właściwości wysyłał powiadomienie w takiej sytuacji.  
   
  Zastąp tę funkcję elementu członkowskiego, aby zaimplementować dodatkowe zachowania specyficzne dla obecnie aktywnej strony po użytkownik odrzuci arkusza właściwości całego.  
   
@@ -447,7 +447,7 @@ virtual BOOL OnWizardFinish();
   
  Można zastąpić, ta funkcja elementu członkowskiego, aby określić niektóre akcje, które użytkownik musi wykonać po naciśnięciu przycisku Zakończ. Podczas zastępowania tej funkcji, zwraca wartość FALSE, aby uniemożliwić niszczone arkusza właściwości.  
   
- Aby uzyskać więcej informacji na temat komunikaty powiadomień wysłane, gdy użytkownik naciśnie przycisk Zakończ w arkuszu właściwości kreatora, zobacz [PSN_WIZFINISH](http://msdn.microsoft.com/library/windows/desktop/bb774571) w zestawie Windows SDK.  
+ Aby uzyskać więcej informacji na temat komunikaty powiadomień wysłane, gdy użytkownik naciśnie przycisk Zakończ w arkuszu właściwości kreatora, zobacz [PSN_WIZFINISH](/windows/desktop/Controls/psn-wizfinish) w zestawie Windows SDK.  
   
  Aby uzyskać więcej informacji na temat sposobu wykonywania arkusza właściwości typu Kreator, zobacz [CPropertySheet::SetWizardMode](../../mfc/reference/cpropertysheet-class.md#setwizardmode).  
   

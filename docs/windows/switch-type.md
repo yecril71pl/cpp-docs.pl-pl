@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 28501c0105ce9d62c72dc9013b881029f4bc8bfb
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: faa2a3be7260eecb16599db967336bcb7b774c99
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42590669"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43200129"
 ---
 # <a name="switchtype"></a>switch_type
 
@@ -43,9 +43,9 @@ Typ przełącznika może być typu Liczba całkowita, znaku, wartość logiczna 
 
 ## <a name="remarks"></a>Uwagi
 
-**Switch_type —** atrybut C++ ma taką samą funkcjonalność jak [switch_type —](http://msdn.microsoft.com/library/windows/desktop/aa367276) atrybutów w MIDL.
+**Switch_type —** atrybut C++ ma taką samą funkcjonalność jak [switch_type —](/windows/desktop/Midl/switch-type) atrybutów w MIDL.
 
-Atrybuty C++ nie obsługują [hermetyzowane unie](http://msdn.microsoft.com/library/windows/desktop/aa366811). [Unie nonencapsulated](http://msdn.microsoft.com/library/windows/desktop/aa367119) są obsługiwane tylko w następującej postaci:
+Atrybuty C++ nie obsługują [hermetyzowane unie](/windows/desktop/Midl/encapsulated-unions). [Unie nonencapsulated](/windows/desktop/Midl/nonencapsulated-unions) są obsługiwane tylko w następującej postaci:
 
 ```cpp
 // cpp_attr_ref_switch_type.cpp

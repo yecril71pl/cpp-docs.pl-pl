@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2704e39ffced414e84236302c9ad31586226dd8d
-ms.sourcegitcommit: 76fd30ff3e0352e2206460503b61f45897e60e4f
+ms.openlocfilehash: 13e04c7f1ae9873ebf2d044dd8b6d6948e55a120
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/13/2018
-ms.locfileid: "39027689"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43197475"
 ---
 # <a name="run-time-object-model-services"></a>Usługi modelu obiektów czasu wykonywania
 Klasy [CObject](../../mfc/reference/cobject-class.md) i [CRuntimeClass](../../mfc/reference/cruntimeclass-structure.md) hermetyzacji kilka usług obiekt, w tym dostęp do informacji o klasie czasu wykonywania serializacji i dynamiczne tworzenie obiektów. Wszystkie klasy pochodne `CObject` dziedziczą tę funkcję.  
@@ -87,7 +87,7 @@ AFX_COMCTL32_IF_EXISTS(  proc );
  Wskaźnik na ciąg zakończony wartością null zawierający nazwę funkcji, lub określa wartość porządkową przez funkcję. Jeśli ten parametr ma wartość będącą liczbą porządkową, musi być w programie word niskiego rzędu; word wyższego rzędu musi mieć wartość zero. Ten parametr musi być w formacie Unicode.  
    
 ### <a name="remarks"></a>Uwagi  
- Użyj tego makra, aby określić, czy biblioteki formantów wspólnych funkcji określił *proc* (zamiast wywoływać metodę [GetProcAddress](http://msdn.microsoft.com/library/windows/desktop/ms683212).  
+ Użyj tego makra, aby określić, czy biblioteki formantów wspólnych funkcji określił *proc* (zamiast wywoływać metodę [GetProcAddress](https://msdn.microsoft.com/library/windows/desktop/ms683212).  
    
 ### <a name="requirements"></a>Wymagania  
  afxcomctl32.h, afxcomctl32.inl  
@@ -107,7 +107,7 @@ AFX_COMCTL32_IF_EXISTS2( proc );
  Wskaźnik na ciąg zakończony wartością null zawierający nazwę funkcji, lub określa wartość porządkową przez funkcję. Jeśli ten parametr ma wartość będącą liczbą porządkową, musi być w programie word niskiego rzędu; word wyższego rzędu musi mieć wartość zero. Ten parametr musi być w formacie Unicode.  
    
 ### <a name="remarks"></a>Uwagi  
- Użyj tego makra, aby określić, czy biblioteki formantów wspólnych funkcji określił *proc* (zamiast wywoływać metodę [GetProcAddress](http://msdn.microsoft.com/library/windows/desktop/ms683212). To makro jest wersją Unicode AFX_COMCTL32_IF_EXISTS.  
+ Użyj tego makra, aby określić, czy biblioteki formantów wspólnych funkcji określił *proc* (zamiast wywoływać metodę [GetProcAddress](https://msdn.microsoft.com/library/windows/desktop/ms683212). To makro jest wersją Unicode AFX_COMCTL32_IF_EXISTS.  
    
 ### <a name="requirements"></a>Wymagania  
  afxcomctl32.h, afxcomctl32.inl  
@@ -330,7 +330,7 @@ IMPLEMENT_OLECREATE_FLAGS( class_name, external_name, nFlags,
     -   `afxRegApartmentThreading` Ustawia model wątkowości w rejestrze, aby ThreadingModel = typu Apartment.    
     -   `afxRegFreeThreading` Ustawia model wątkowości w rejestrze, aby ThreadingModel = bezpłatna.  
       
-         Można połączyć dwie flagi `afxRegApartmentThreading` i `afxRegFreeThreading` można ustawić ThreadingModel = jednocześnie. Zobacz [InprocServer32](http://msdn.microsoft.com/library/windows/desktop/ms682390) w zestawie SDK Windows, aby uzyskać więcej informacji na temat rejestracji modelu wątkowości. 
+         Można połączyć dwie flagi `afxRegApartmentThreading` i `afxRegFreeThreading` można ustawić ThreadingModel = jednocześnie. Zobacz [InprocServer32](/windows/desktop/com/inprocserver32) w zestawie SDK Windows, aby uzyskać więcej informacji na temat rejestracji modelu wątkowości. 
    
  *l*, *w1*, *w2*, *b1*, *b2*, *b3*, *b4* , *b5*, *b6*, *b7*, *b8*  
  Składniki CLSID tej klasy.  
@@ -350,7 +350,7 @@ IMPLEMENT_OLECREATE_FLAGS( class_name, external_name, nFlags,
 ### <a name="see-also"></a>Zobacz też  
  [Makra i funkcje globalne](mfc-macros-and-globals.md)   
  [DECLARE_OLECREATE](#declare_olecreate)   
- [Identyfikator CLSID klucza](http://msdn.microsoft.com/library/windows/desktop/ms691424)
+ [Identyfikator CLSID klucza](/windows/desktop/com/clsid-key-hklm)
 
 
 ## <a name="implement_olecreate"></a> IMPLEMENT_OLECTLTYPE
@@ -368,12 +368,12 @@ DECLARE_OLECTLTYPE( class_name, idsUserTypeName, dwOleMisc )
  Identyfikator zasobu ciągu zawierającego nazwę zewnętrznego kontrolki.  
   
  *dwOleMisc*  
- Wyliczenie zawierający jedną lub więcej flag. Aby uzyskać więcej informacji na temat tego wyliczenia, zobacz [OLEMISC](http://msdn.microsoft.com/library/windows/desktop/ms678497) w zestawie Windows SDK.  
+ Wyliczenie zawierający jedną lub więcej flag. Aby uzyskać więcej informacji na temat tego wyliczenia, zobacz [OLEMISC](/windows/desktop/api/oleidl/ne-oleidl-tagolemisc) w zestawie Windows SDK.  
    
 ### <a name="remarks"></a>Uwagi  
  Oprócz IMPLEMENT_OLECTLTYPE należy dodać DECLARE_OLECTLTYPE — makro do sterowania deklaracją klasy.  
   
- `GetUserTypeNameID` Funkcja elementu członkowskiego zwraca ciąg zasobu, który identyfikuje klasy kontrolki. `GetMiscStatus` Zwraca bitów OLEMISC kontrolki. To wyliczenie określa zbiór ustawień opisujących różne właściwości kontrolki. Aby uzyskać pełny opis ustawienia OLEMISC zobacz [OLEMISC](http://msdn.microsoft.com/library/windows/desktop/ms678497) w zestawie Windows SDK.  
+ `GetUserTypeNameID` Funkcja elementu członkowskiego zwraca ciąg zasobu, który identyfikuje klasy kontrolki. `GetMiscStatus` Zwraca bitów OLEMISC kontrolki. To wyliczenie określa zbiór ustawień opisujących różne właściwości kontrolki. Aby uzyskać pełny opis ustawienia OLEMISC zobacz [OLEMISC](/windows/desktop/api/oleidl/ne-oleidl-tagolemisc) w zestawie Windows SDK.  
   
 > [!NOTE]
 >  Domyślne ustawienia używane przez ActiveX ControlWizard są: OLEMISC_ACTIVATEWHENVISIBLE, OLEMISC_SETCLIENTSITEFIRST, OLEMISC_INSIDEOUT, OLEMISC_CANTLINKINSIDE i OLEMISC_RECOMPOSEONRESIZE.  

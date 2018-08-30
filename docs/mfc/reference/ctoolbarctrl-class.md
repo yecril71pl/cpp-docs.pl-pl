@@ -192,12 +192,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4e8a958ac670f91edfccdfced43fce311bc29c04
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: ac4a2c7bafc25aaaf8591f38cad47df199e74c30
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42464945"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43196594"
 ---
 # <a name="ctoolbarctrl-class"></a>Klasa CToolBarCtrl
 Oferuje funkcje formantu typowego paska narzędzi Windows.  
@@ -242,7 +242,7 @@ class CToolBarCtrl : public CWnd
 |[CToolBarCtrl::GetButtonSize](#getbuttonsize)|Pobiera bieżący szerokość i wysokość przycisków na pasku narzędzi, w pikselach.|  
 |[CToolBarCtrl::GetColorScheme](#getcolorscheme)|Pobiera schemat kolorów bieżącego formantu paska narzędzi.|  
 |[CToolBarCtrl::GetDisabledImageList](#getdisabledimagelist)|Pobiera listę obrazu, korzystającą z formantem paska narzędzi w celu wyłączone wyświetlają przyciski.|  
-|[CToolBarCtrl::GetDropTarget](#getdroptarget)|Pobiera [IDropTarget](http://msdn.microsoft.com/library/windows/desktop/ms679679) interfejsu dla kontrolki paska narzędzi.|  
+|[CToolBarCtrl::GetDropTarget](#getdroptarget)|Pobiera [IDropTarget](/windows/desktop/api/oleidl/nn-oleidl-idroptarget) interfejsu dla kontrolki paska narzędzi.|  
 |[CToolBarCtrl::GetExtendedStyle](#getextendedstyle)|Pobiera rozszerzone style kontrolki paska narzędzi.|  
 |[CToolBarCtrl::GetHotImageList](#gethotimagelist)|Pobiera listę obrazu, którego użyto w formancie paska narzędzi, aby wyświetlić przyciski "gorącymi". Przycisk gorąca zostanie wyróżniona, gdy wskaźnik myszy znajduje się nad nim.|  
 |[CToolBarCtrl::GetHotItem](#gethotitem)|Pobiera indeks elementu gorąca, na pasku narzędzi.|  
@@ -289,7 +289,7 @@ class CToolBarCtrl : public CWnd
 |[CToolBarCtrl::SetCmdID](#setcmdid)|Ustawia identyfikator polecenia wysyłane do okna właściciela, po naciśnięciu przycisku określony.|  
 |[CToolBarCtrl::SetColorScheme](#setcolorscheme)|Ustawia schemat kolorów bieżącego formantu paska narzędzi.|  
 |[CToolBarCtrl::SetDisabledImageList](#setdisabledimagelist)|Ustawia wyłączone wyświetlają przyciski listy obrazów, który będzie używany w formancie paska narzędzi.|  
-|[CToolBarCtrl::SetDrawTextFlags](#setdrawtextflags)|Ustawia flagi funkcji Win32 [DrawText](http://msdn.microsoft.com/library/windows/desktop/dd162498), używany do rysowania tekstu w prostokącie określonego, formatowana zgodnie z konfiguracji flag.|  
+|[CToolBarCtrl::SetDrawTextFlags](#setdrawtextflags)|Ustawia flagi funkcji Win32 [DrawText](/windows/desktop/api/winuser/nf-winuser-drawtext), używany do rysowania tekstu w prostokącie określonego, formatowana zgodnie z konfiguracji flag.|  
 |[CToolBarCtrl::SetExtendedStyle](#setextendedstyle)|Ustawia rozszerzone style kontrolki paska narzędzi.|  
 |[CToolBarCtrl::SetHotImageList](#sethotimagelist)|Ustawia listę obrazu który formantu paska narzędzi będzie używany do wyświetlania przyciski "gorącymi".|  
 |[CToolBarCtrl::SetHotItem](#sethotitem)|Ustawia element gorąca na pasku narzędzi.|  
@@ -386,7 +386,7 @@ int AddBitmap(
  Liczony od zera indeks pierwszego nowy obraz w przypadku powodzenia; w przeciwnym razie - 1.  
   
 ### <a name="remarks"></a>Uwagi  
- Można użyć interfejsu API Windows [CreateMappedBitmap](http://msdn.microsoft.com/library/windows/desktop/bb787467) mapowania kolorów przed dodaniem mapę bitową do paska narzędzi. W przypadku przekazania wskaźnika do `CBitMap` obiektu, należy upewnić się, że mapy bitowej nie jest niszczony aż do po pasek narzędzi jest niszczona.  
+ Można użyć interfejsu API Windows [CreateMappedBitmap](/windows/desktop/api/commctrl/nf-commctrl-createmappedbitmap) mapowania kolorów przed dodaniem mapę bitową do paska narzędzi. W przypadku przekazania wskaźnika do `CBitMap` obiektu, należy upewnić się, że mapy bitowej nie jest niszczony aż do po pasek narzędzi jest niszczona.  
   
 ##  <a name="addbuttons"></a>  CToolBarCtrl::AddButtons  
  Dodaje jeden lub więcej przycisków do formantu paska narzędzi.  
@@ -541,7 +541,7 @@ BOOL ChangeBitmap(
 ### <a name="remarks"></a>Uwagi  
  Jeśli ta metoda zakończy się pomyślnie, system wyświetla określony obraz w określonym przycisku.  
   
- Ta metoda wysyła [TB_CHANGEBITMAP](http://msdn.microsoft.com/library/windows/desktop/bb787301) komunikat, który jest opisany w zestawie Windows SDK.  
+ Ta metoda wysyła [TB_CHANGEBITMAP](/windows/desktop/Controls/tb-changebitmap) komunikat, który jest opisany w zestawie Windows SDK.  
   
 ### <a name="example"></a>Przykład  
  Poniższy przykład kodu zmienia mapy bitowej dla **zapisywania pliku** przycisk mapy bitowej dla **o** przycisku.  
@@ -602,7 +602,7 @@ virtual BOOL Create(
  Określa styl formantu paska narzędzi. Paski narzędzi musi zawsze mieć styl WS_CHILD. Ponadto można określić dowolną kombinację toolbar — style i style okna ramowego zgodnie z opisem w obszarze **uwagi**.  
   
  *Rect*  
- Opcjonalnie określa rozmiar i położenie formantu paska narzędzi. Może być albo [CRect](../../atl-mfc-shared/reference/crect-class.md) obiektu lub [Prostokąt](http://msdn.microsoft.com/library/windows/desktop/dd162897) struktury.  
+ Opcjonalnie określa rozmiar i położenie formantu paska narzędzi. Może być albo [CRect](../../atl-mfc-shared/reference/crect-class.md) obiektu lub [Prostokąt](https://msdn.microsoft.com/library/windows/desktop/dd162897) struktury.  
   
  *pParentWnd*  
  Określa okno nadrzędne kontrolki paska narzędzi. Nie może być równa NULL.  
@@ -622,11 +622,11 @@ virtual BOOL Create(
   
 - WS_DISABLED rzadko  
   
- Zobacz [CreateWindow](http://msdn.microsoft.com/library/windows/desktop/ms632679) w zestawie Windows SDK opis style okna ramowego.  
+ Zobacz [CreateWindow](https://msdn.microsoft.com/library/windows/desktop/ms632679) w zestawie Windows SDK opis style okna ramowego.  
   
- Można również użyć kombinacji [najczęściej używane style kontrolki](http://msdn.microsoft.com/library/windows/desktop/bb775498), zgodnie z opisem w zestawie Windows SDK.  
+ Można również użyć kombinacji [najczęściej używane style kontrolki](/windows/desktop/Controls/common-control-styles), zgodnie z opisem w zestawie Windows SDK.  
   
- Dotyczy kombinacji toolbar — style przycisków, samodzielnie lub formantu. Style są opisane w temacie [formantu paska narzędzi oraz style przycisku](http://msdn.microsoft.com/library/windows/desktop/bb760439) w zestawie Windows SDK.  
+ Dotyczy kombinacji toolbar — style przycisków, samodzielnie lub formantu. Style są opisane w temacie [formantu paska narzędzi oraz style przycisku](/windows/desktop/Controls/toolbar-control-and-button-styles) w zestawie Windows SDK.  
   
  Aby użyć narzędzi rozszerzone style, wywołania [SetExtendedStyle](#setextendedstyle) po wywołaniu metody `Create`. Aby utworzyć pasek narzędzi z rozszerzone Style okna, należy wywołać [CToolBarCtrl::CreateEx](#createex) zamiast `Create`.  
   
@@ -646,13 +646,13 @@ virtual BOOL CreateEx(
   
 ### <a name="parameters"></a>Parametry  
  *dwExStyle*  
- Określa styl rozszerzony kontrolki tworzona. Aby uzyskać listę rozszerzone style Windows, zobacz *dwExStyle* parametr [elementu CreateWindowEx](http://msdn.microsoft.com/library/windows/desktop/ms632680) w zestawie Windows SDK.  
+ Określa styl rozszerzony kontrolki tworzona. Aby uzyskać listę rozszerzone style Windows, zobacz *dwExStyle* parametr [elementu CreateWindowEx](https://msdn.microsoft.com/library/windows/desktop/ms632680) w zestawie Windows SDK.  
   
  *dwStyle*  
  Określa styl formantu paska narzędzi. Paski narzędzi musi zawsze mieć styl WS_CHILD. Ponadto można określić dowolną kombinację toolbar — style i style okna ramowego zgodnie z opisem w **uwagi** części [Utwórz](#create).  
   
  *Rect*  
- Odwołanie do [Prostokąt](http://msdn.microsoft.com/library/windows/desktop/dd162897) struktury opisujących rozmiar i położenie okna, można utworzyć klienta współrzędne *pParentWnd*.  
+ Odwołanie do [Prostokąt](https://msdn.microsoft.com/library/windows/desktop/dd162897) struktury opisujących rozmiar i położenie okna, można utworzyć klienta współrzędne *pParentWnd*.  
   
  *pParentWnd*  
  Wskaźnik do okna, które jest elementem nadrzędnym formantu.  
@@ -664,7 +664,7 @@ virtual BOOL CreateEx(
  Wartość różną od zera, jeśli to się powiedzie; w przeciwnym razie 0.  
   
 ### <a name="remarks"></a>Uwagi  
- Użyj `CreateEx` zamiast [Utwórz](#create) do zastosowania rozszerzone style Windows, określonego przez tekst wstępny rozszerzonego stylu Windows **WS_EX_**. `CreateEx` Tworzy formant z rozszerzone style Windows określonego przez *dwExStyle*. Rozszerzone style specyficzne dla kontrolkę za pomocą zestawu [SetExtendedStyle](#setextendedstyle). Na przykład użyć `CreateEx` Ustaw takie style jako WS_EX_CONTEXTHELP, ale korzystać z `SetExtendedStyle` do ustawiania tych stylów jako TBSTYLE_EX_DRAWDDARROWS. Aby uzyskać więcej informacji, zobacz style opisanego w [Toolbar — rozszerzone style](http://msdn.microsoft.com/library/windows/desktop/bb760430) w zestawie Windows SDK.  
+ Użyj `CreateEx` zamiast [Utwórz](#create) do zastosowania rozszerzone style Windows, określonego przez tekst wstępny rozszerzonego stylu Windows **WS_EX_**. `CreateEx` Tworzy formant z rozszerzone style Windows określonego przez *dwExStyle*. Rozszerzone style specyficzne dla kontrolkę za pomocą zestawu [SetExtendedStyle](#setextendedstyle). Na przykład użyć `CreateEx` Ustaw takie style jako WS_EX_CONTEXTHELP, ale korzystać z `SetExtendedStyle` do ustawiania tych stylów jako TBSTYLE_EX_DRAWDDARROWS. Aby uzyskać więcej informacji, zobacz style opisanego w [Toolbar — rozszerzone style](/windows/desktop/Controls/toolbar-extended-styles) w zestawie Windows SDK.  
   
 ##  <a name="ctoolbarctrl"></a>  CToolBarCtrl::CToolBarCtrl  
  Konstruuje `CToolBarCtrl` obiektu.  
@@ -737,7 +737,7 @@ BOOL GetAnchorHighlight() const;
  Jeśli wartość jest niezerowa, wyróżnianie kontrolnych jest włączone. Jeśli zero, wyróżnianie kontrolnych jest wyłączone.  
   
 ### <a name="remarks"></a>Uwagi  
- Ta funkcja elementu członkowskiego implementuje zachowanie komunikatu Win32 [TB_GETANCHORHIGHLIGHT](http://msdn.microsoft.com/library/windows/desktop/bb787313), zgodnie z opisem w zestawie Windows SDK.  
+ Ta funkcja elementu członkowskiego implementuje zachowanie komunikatu Win32 [TB_GETANCHORHIGHLIGHT](/windows/desktop/Controls/tb-getanchorhighlight), zgodnie z opisem w zestawie Windows SDK.  
   
 ##  <a name="getbitmap"></a>  CToolBarCtrl::GetBitmap  
  Pobiera indeks mapy bitowej skojarzone z przycisku na pasku narzędzi.  
@@ -754,7 +754,7 @@ int GetBitmap(int nID) const;
  Zwraca indeks mapy bitowej w przypadku powodzenia lub wartość zero, w przeciwnym razie.  
   
 ### <a name="remarks"></a>Uwagi  
- Implementuje funkcje [TB_GETBITMAP](http://msdn.microsoft.com/library/windows/desktop/bb787315) w zestawie Windows SDK.  
+ Implementuje funkcje [TB_GETBITMAP](/windows/desktop/Controls/tb-getbitmap) w zestawie Windows SDK.  
   
 ##  <a name="getbitmapflags"></a>  CToolBarCtrl::GetBitmapFlags  
  Pobranie flagi mapę bitową z paska narzędzi.  
@@ -812,13 +812,13 @@ int GetButtonInfo(
  Identyfikator przycisku.  
   
  *ptbbi*  
- Wskaźnik do [TBBUTTONINFO](http://msdn.microsoft.com/library/windows/desktop/bb760478) strukturę, która otrzymuje informacje przycisku.  
+ Wskaźnik do [TBBUTTONINFO](/windows/desktop/api/commctrl/ns-commctrl-tbbuttoninfoa) strukturę, która otrzymuje informacje przycisku.  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Liczony od zera indeks przycisku, jeśli to się powiedzie; w przeciwnym razie wartość-1.  
   
 ### <a name="remarks"></a>Uwagi  
- Ta funkcja elementu członkowskiego implementuje zachowanie komunikatu Win32 [TB_GETBUTTONINFO](http://msdn.microsoft.com/library/windows/desktop/bb787321), zgodnie z opisem w zestawie Windows SDK.  
+ Ta funkcja elementu członkowskiego implementuje zachowanie komunikatu Win32 [TB_GETBUTTONINFO](/windows/desktop/Controls/tb-getbuttoninfo), zgodnie z opisem w zestawie Windows SDK.  
   
 ##  <a name="getbuttonsize"></a>  CToolBarCtrl::GetButtonSize  
  Pobiera rozmiar przycisku paska narzędzi.  
@@ -847,7 +847,7 @@ CString GetButtonText(int idButton) const;
  A [CString](../../atl-mfc-shared/using-cstring.md) zawierający tekst wyświetlany określonego przycisku.  
   
 ### <a name="remarks"></a>Uwagi  
- Ta metoda wysyła [TB_GETBUTTONTEXT](http://msdn.microsoft.com/library/windows/desktop/bb787325) komunikat, który jest opisany w zestawie Windows SDK.  
+ Ta metoda wysyła [TB_GETBUTTONTEXT](/windows/desktop/Controls/tb-getbuttontext) komunikat, który jest opisany w zestawie Windows SDK.  
   
 ##  <a name="getcolorscheme"></a>  CToolBarCtrl::GetColorScheme  
  Pobiera schemat kolorów bieżącego formantu paska narzędzi.  
@@ -860,13 +860,13 @@ BOOL GetColorScheme(COLORSCHEME* lpColorScheme) const;
   
 |Parametr|Opis|  
 |---------------|-----------------|  
-|[out] *lpColorScheme*|Wskaźnik do [COLORSCHEME](http://msdn.microsoft.com/library/windows/desktop/bb775502) strukturę, która otrzymuje informacje schemat kolorów. Po powrocie z tej metody struktury opisuje kolor wyróżnienia i kolor cienia formantu paska narzędzi.|  
+|[out] *lpColorScheme*|Wskaźnik do [COLORSCHEME](/windows/desktop/api/commctrl/ns-commctrl-tagcolorscheme) strukturę, która otrzymuje informacje schemat kolorów. Po powrocie z tej metody struktury opisuje kolor wyróżnienia i kolor cienia formantu paska narzędzi.|  
   
 ### <a name="return-value"></a>Wartość zwracana  
 Wartość TRUE, jeśli ta metoda jest kończy się pomyślnie; w przeciwnym razie wartość FALSE.  
   
 ### <a name="remarks"></a>Uwagi  
- Ta metoda wysyła [TB_GETCOLORSCHEME](http://msdn.microsoft.com/library/windows/desktop/bb787327) komunikat, który jest opisany w zestawie Windows SDK.  
+ Ta metoda wysyła [TB_GETCOLORSCHEME](/windows/desktop/Controls/tb-getcolorscheme) komunikat, który jest opisany w zestawie Windows SDK.  
   
 ##  <a name="getdisabledimagelist"></a>  CToolBarCtrl::GetDisabledImageList  
  Pobiera listę obrazu, korzystającą z formantem paska narzędzi w celu wyłączone wyświetlają przyciski.  
@@ -879,10 +879,10 @@ CImageList* GetDisabledImageList() const;
  Wskaźnik do [CImageList](../../mfc/reference/cimagelist-class.md) obiekt lub wartość NULL, jeśli jest ustawiona żadna lista wyłączonych obrazu.  
   
 ### <a name="remarks"></a>Uwagi  
- Ta funkcja elementu członkowskiego implementuje zachowanie komunikatu Win32 [TB_GETDISABLEDIMAGELIST](http://msdn.microsoft.com/library/windows/desktop/bb787329), zgodnie z opisem w zestawie Windows SDK. Implementacja MFC `GetDisabledImageList` używa `CImageList` obiekt zawierający przycisk formantu paska narzędzi obrazów, zamiast dojścia do listy obrazów.  
+ Ta funkcja elementu członkowskiego implementuje zachowanie komunikatu Win32 [TB_GETDISABLEDIMAGELIST](/windows/desktop/Controls/tb-getdisabledimagelist), zgodnie z opisem w zestawie Windows SDK. Implementacja MFC `GetDisabledImageList` używa `CImageList` obiekt zawierający przycisk formantu paska narzędzi obrazów, zamiast dojścia do listy obrazów.  
   
 ##  <a name="getdroptarget"></a>  CToolBarCtrl::GetDropTarget  
- Pobiera [IDropTarget](http://msdn.microsoft.com/library/windows/desktop/ms679679) interfejsu dla kontrolki paska narzędzi.  
+ Pobiera [IDropTarget](/windows/desktop/api/oleidl/nn-oleidl-idroptarget) interfejsu dla kontrolki paska narzędzi.  
   
 ```  
 HRESULT GetDropTarget(IDropTarget** ppDropTarget) const;  
@@ -890,13 +890,13 @@ HRESULT GetDropTarget(IDropTarget** ppDropTarget) const;
   
 ### <a name="parameters"></a>Parametry  
  *ppDropTarget*  
- Wskaźnik do [IDropTarget](http://msdn.microsoft.com/library/windows/desktop/ms679679) wskaźnika interfejsu. Jeśli wystąpi błąd, wskaźnikiem typu NULL znajduje się w tym adresie.  
+ Wskaźnik do [IDropTarget](/windows/desktop/api/oleidl/nn-oleidl-idroptarget) wskaźnika interfejsu. Jeśli wystąpi błąd, wskaźnikiem typu NULL znajduje się w tym adresie.  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Zwraca wartość HRESULT oznaczający powodzenie lub Niepowodzenie operacji.  
   
 ### <a name="remarks"></a>Uwagi  
- Ta funkcja elementu członkowskiego implementuje zachowanie komunikatu Win32 [TB_GETOBJECT](http://msdn.microsoft.com/library/windows/desktop/bb787343), zgodnie z opisem w zestawie Windows SDK.  
+ Ta funkcja elementu członkowskiego implementuje zachowanie komunikatu Win32 [TB_GETOBJECT](/windows/desktop/Controls/tb-getobject), zgodnie z opisem w zestawie Windows SDK.  
   
 ##  <a name="getextendedstyle"></a>  CToolBarCtrl::GetExtendedStyle  
  Pobiera rozszerzone style kontrolki paska narzędzi.  
@@ -906,10 +906,10 @@ DWORD GetExtendedStyle() const;
 ```  
   
 ### <a name="return-value"></a>Wartość zwracana  
- DWORD, który reprezentuje rozszerzone style obecnie w przypadku formantu paska narzędzi. Aby uzyskać listę style, zobacz [Toolbar — rozszerzone style](http://msdn.microsoft.com/library/windows/desktop/bb760430), w zestawie Windows SDK.  
+ DWORD, który reprezentuje rozszerzone style obecnie w przypadku formantu paska narzędzi. Aby uzyskać listę style, zobacz [Toolbar — rozszerzone style](/windows/desktop/Controls/toolbar-extended-styles), w zestawie Windows SDK.  
   
 ### <a name="remarks"></a>Uwagi  
- Ta funkcja elementu członkowskiego implementuje zachowanie komunikatu Win32 [TB_GETEXTENDEDSTYLE](http://msdn.microsoft.com/library/windows/desktop/bb787331), zgodnie z opisem w zestawie Windows SDK.  
+ Ta funkcja elementu członkowskiego implementuje zachowanie komunikatu Win32 [TB_GETEXTENDEDSTYLE](/windows/desktop/Controls/tb-getextendedstyle), zgodnie z opisem w zestawie Windows SDK.  
   
 ##  <a name="gethotimagelist"></a>  CToolBarCtrl::GetHotImageList  
  Pobiera listę obrazu, którego użyto w formancie paska narzędzi, aby wyświetlić przyciski "gorącymi". Przycisk gorąca zostanie wyróżniona, gdy wskaźnik myszy znajduje się nad nim.  
@@ -922,7 +922,7 @@ CImageList* GetHotImageList() const;
  Wskaźnik do [CImageList](../../mfc/reference/cimagelist-class.md) obiekt lub wartość NULL, jeśli jest ustawiona żadna lista wyłączonych obrazu.  
   
 ### <a name="remarks"></a>Uwagi  
- Ta funkcja elementu członkowskiego implementuje zachowanie komunikatu Win32 [TB_GETHOTIMAGELIST](http://msdn.microsoft.com/library/windows/desktop/bb787334), zgodnie z opisem w zestawie Windows SDK. Przycisk gorąca zostanie wyróżniona, gdy wskaźnik myszy znajduje się nad nim.  
+ Ta funkcja elementu członkowskiego implementuje zachowanie komunikatu Win32 [TB_GETHOTIMAGELIST](/windows/desktop/Controls/tb-gethotimagelist), zgodnie z opisem w zestawie Windows SDK. Przycisk gorąca zostanie wyróżniona, gdy wskaźnik myszy znajduje się nad nim.  
   
 ##  <a name="gethotitem"></a>  CToolBarCtrl::GetHotItem  
  Pobiera indeks elementu gorąca, na pasku narzędzi.  
@@ -935,7 +935,7 @@ int GetHotItem() const;
  Liczony od zera indeks elementu gorąca na pasku narzędzi.  
   
 ### <a name="remarks"></a>Uwagi  
- Ta funkcja elementu członkowskiego implementuje zachowanie komunikatu Win32 [TB_GETHOTITEM](http://msdn.microsoft.com/library/windows/desktop/bb787336), zgodnie z opisem w zestawie Windows SDK.  
+ Ta funkcja elementu członkowskiego implementuje zachowanie komunikatu Win32 [TB_GETHOTITEM](/windows/desktop/Controls/tb-gethotitem), zgodnie z opisem w zestawie Windows SDK.  
   
 ##  <a name="getimagelist"></a>  CToolBarCtrl::GetImageList  
  Pobiera listę obrazu, korzystającą z formantem paska narzędzi w celu wyświetlanie przycisków w ich stanu domyślnego.  
@@ -948,7 +948,7 @@ CImageList* GetImageList() const;
  Wskaźnik do [CImageList](../../mfc/reference/cimagelist-class.md) obiekt lub wartość NULL, jeśli jest ustawiona żadna lista obrazów.  
   
 ### <a name="remarks"></a>Uwagi  
- Ta funkcja elementu członkowskiego implementuje zachowanie komunikatu Win32 [TB_GETIMAGELIST](http://msdn.microsoft.com/library/windows/desktop/bb787337), zgodnie z opisem w zestawie Windows SDK.  
+ Ta funkcja elementu członkowskiego implementuje zachowanie komunikatu Win32 [TB_GETIMAGELIST](/windows/desktop/Controls/tb-getimagelist), zgodnie z opisem w zestawie Windows SDK.  
   
 ##  <a name="getinsertmark"></a>  CToolBarCtrl::GetInsertMark  
  Pobiera bieżący znacznika wstawiania w paska narzędzi.  
@@ -959,10 +959,10 @@ void GetInsertMark(TBINSERTMARK* ptbim) const;
   
 ### <a name="parameters"></a>Parametry  
  *ptbim*  
- Wskaźnik do [TBINSERTMARK](http://msdn.microsoft.com/library/windows/desktop/bb760480) strukturę, która odbiera znacznika wstawiania.  
+ Wskaźnik do [TBINSERTMARK](/windows/desktop/api/commctrl/ns-commctrl-tbinsertmark) strukturę, która odbiera znacznika wstawiania.  
   
 ### <a name="remarks"></a>Uwagi  
- Ta funkcja elementu członkowskiego implementuje zachowanie komunikatu Win32 [TB_GETINSERTMARK](http://msdn.microsoft.com/library/windows/desktop/bb787338), zgodnie z opisem w zestawie Windows SDK.  
+ Ta funkcja elementu członkowskiego implementuje zachowanie komunikatu Win32 [TB_GETINSERTMARK](/windows/desktop/Controls/tb-getinsertmark), zgodnie z opisem w zestawie Windows SDK.  
   
 ##  <a name="getinsertmarkcolor"></a>  CToolBarCtrl::GetInsertMarkColor  
  Pobiera kolor używany do rysowania znacznika wstawiania paska narzędzi.  
@@ -975,7 +975,7 @@ COLORREF GetInsertMarkColor() const;
  Wartość COLORREF, który zawiera bieżący kolor znacznika wstawiania.  
   
 ### <a name="remarks"></a>Uwagi  
- Ta funkcja elementu członkowskiego implementuje zachowanie komunikatu Win32 [TB_GETINSERTMARKCOLOR](http://msdn.microsoft.com/library/windows/desktop/bb787339), zgodnie z opisem w zestawie Windows SDK.  
+ Ta funkcja elementu członkowskiego implementuje zachowanie komunikatu Win32 [TB_GETINSERTMARKCOLOR](/windows/desktop/Controls/tb-getinsertmarkcolor), zgodnie z opisem w zestawie Windows SDK.  
   
 ##  <a name="getitemrect"></a>  CToolBarCtrl::GetItemRect  
  Pobiera prostokąt otaczający przycisku w formancie paska narzędzi.  
@@ -991,7 +991,7 @@ BOOL GetItemRect(
  Liczony od zera indeks przycisku, dla którego mają zostać pobrane informacje.  
   
  *lprect —*  
- Adres [Prostokąt](http://msdn.microsoft.com/library/windows/desktop/dd162897) struktury lub [CRect](../../atl-mfc-shared/reference/crect-class.md) obiekt, który odbiera współrzędne prostokąt otaczający.  
+ Adres [Prostokąt](https://msdn.microsoft.com/library/windows/desktop/dd162897) struktury lub [CRect](../../atl-mfc-shared/reference/crect-class.md) obiekt, który odbiera współrzędne prostokąt otaczający.  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Wartość różną od zera, jeśli to się powiedzie; w przeciwnym razie wartość zero.  
@@ -1008,13 +1008,13 @@ BOOL GetMaxSize(LPSIZE pSize) const;
   
 ### <a name="parameters"></a>Parametry  
  *pSize*  
- Wskaźnik do [rozmiar](http://msdn.microsoft.com/library/windows/desktop/dd145106) strukturę, która odbiera rozmiar elementów.  
+ Wskaźnik do [rozmiar](https://msdn.microsoft.com/library/windows/desktop/dd145106) strukturę, która odbiera rozmiar elementów.  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Wartość różną od zera, jeśli to się powiedzie; w przeciwnym razie 0.  
   
 ### <a name="remarks"></a>Uwagi  
- Ta funkcja elementu członkowskiego implementuje zachowanie komunikatu Win32 [TB_GETMAXSIZE](http://msdn.microsoft.com/library/windows/desktop/bb787341), zgodnie z opisem w zestawie Windows SDK.  
+ Ta funkcja elementu członkowskiego implementuje zachowanie komunikatu Win32 [TB_GETMAXSIZE](/windows/desktop/Controls/tb-getmaxsize), zgodnie z opisem w zestawie Windows SDK.  
   
 ##  <a name="getmaxtextrows"></a>  CToolBarCtrl::GetMaxTextRows  
  Pobiera maksymalną liczbę wierszy tekst wyświetlany na przycisku paska narzędzi.  
@@ -1035,10 +1035,10 @@ void GetMetrics(LPTBMETRICS ptbm) const;
   
 ### <a name="parameters"></a>Parametry  
  *ptbm*  
- Wskaźnik do [TBMETRICS](http://msdn.microsoft.com/library/windows/desktop/bb760482) struktury `CToolBarCtrl` obiektu.  
+ Wskaźnik do [TBMETRICS](/windows/desktop/api/commctrl/ns-commctrl-tbmetrics) struktury `CToolBarCtrl` obiektu.  
   
 ### <a name="remarks"></a>Uwagi  
- Ta funkcja członkowska emuluje funkcjonalność [TB_GETMETRICS](http://msdn.microsoft.com/library/windows/desktop/bb787342) komunikat, zgodnie z opisem w zestawie Windows SDK.  
+ Ta funkcja członkowska emuluje funkcjonalność [TB_GETMETRICS](/windows/desktop/Controls/tb-getmetrics) komunikat, zgodnie z opisem w zestawie Windows SDK.  
   
 ##  <a name="getpadding"></a>  CToolBarCtrl::GetPadding  
  Pobiera poziome i pionowe dopełnienie bieżącego formantu paska narzędzi.  
@@ -1060,7 +1060,7 @@ BOOL GetPadding(
  Wartość TRUE, jeśli ta metoda jest kończy się pomyślnie; w przeciwnym razie wartość FALSE.  
   
 ### <a name="remarks"></a>Uwagi  
- Ta metoda wysyła [TB_GETPADDING](http://msdn.microsoft.com/library/windows/desktop/bb787344) komunikat, który jest opisany w zestawie Windows SDK.  
+ Ta metoda wysyła [TB_GETPADDING](/windows/desktop/Controls/tb-getpadding) komunikat, który jest opisany w zestawie Windows SDK.  
   
 ##  <a name="getpressedimagelist"></a>  CToolBarCtrl::GetPressedImageList  
  Pobiera listę obrazu który używa bieżącego formantu paska narzędzi, który reprezentuje przycisków w stanie po naciśnięciu.  
@@ -1073,7 +1073,7 @@ CImageList* GetPressedImageList();
  Wskaźnik do [CImageList](../../mfc/reference/cimagelist-class.md) zawierający lista obrazów dla bieżącego formantu lub wartość NULL, jeśli jest ustawiony nie listy obrazów.  
   
 ### <a name="remarks"></a>Uwagi  
- Ta metoda wysyła [TB_GETPRESSEDIMAGELIST](http://msdn.microsoft.com/library/windows/desktop/bb787345) komunikat, który jest opisany w zestawie Windows SDK.  
+ Ta metoda wysyła [TB_GETPRESSEDIMAGELIST](/windows/desktop/Controls/tb-getpressedimagelist) komunikat, który jest opisany w zestawie Windows SDK.  
   
 ##  <a name="getrect"></a>  CToolBarCtrl::GetRect  
  Pobiera prostokąt otaczający dla przycisku kontrolki toolbar określony.  
@@ -1089,13 +1089,13 @@ BOOL GetRect(
  Identyfikator przycisku.  
   
  *lprect —*  
- Wskaźnik do [Prostokąt](http://msdn.microsoft.com/library/windows/desktop/dd162897) struktury do uzyskiwania informacji prostokąt otaczający.  
+ Wskaźnik do [Prostokąt](https://msdn.microsoft.com/library/windows/desktop/dd162897) struktury do uzyskiwania informacji prostokąt otaczający.  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Wartość TRUE, jeśli to się powiedzie; w przeciwnym razie wartość FALSE.  
   
 ### <a name="remarks"></a>Uwagi  
- Ta funkcja elementu członkowskiego implementuje zachowanie komunikatu Win32 [TB_GETRECT](http://msdn.microsoft.com/library/windows/desktop/bb787346), zgodnie z opisem w zestawie Windows SDK.  
+ Ta funkcja elementu członkowskiego implementuje zachowanie komunikatu Win32 [TB_GETRECT](/windows/desktop/Controls/tb-getrect), zgodnie z opisem w zestawie Windows SDK.  
   
 ##  <a name="getrows"></a>  CToolBarCtrl::GetRows  
  Pobiera liczbę wierszy przyciski aktualnie wyświetlany przez kontrolkę paska narzędzi.  
@@ -1158,7 +1158,7 @@ int GetString(
  Długość ciągu, jeśli to się powiedzie, -1, jeśli nie.  
   
 ### <a name="remarks"></a>Uwagi  
- Ta funkcja elementu członkowskiego implementuje zachowanie komunikatu Win32 [TB_GETSTRING](http://msdn.microsoft.com/library/windows/desktop/bb787349), zgodnie z opisem w zestawie Windows SDK.  
+ Ta funkcja elementu członkowskiego implementuje zachowanie komunikatu Win32 [TB_GETSTRING](/windows/desktop/Controls/tb-getstring), zgodnie z opisem w zestawie Windows SDK.  
   
 ##  <a name="getstyle"></a>  CToolBarCtrl::GetStyle  
  Pobiera style obecnie stosowane do formantu paska narzędzi.  
@@ -1168,7 +1168,7 @@ DWORD GetStyle() const;
 ```  
   
 ### <a name="return-value"></a>Wartość zwracana  
- DWORD, zawierające kombinację [style formantu toolbar](http://msdn.microsoft.com/library/windows/desktop/bb760439), zgodnie z opisem w zestawie Windows SDK.  
+ DWORD, zawierające kombinację [style formantu toolbar](/windows/desktop/Controls/toolbar-control-and-button-styles), zgodnie z opisem w zestawie Windows SDK.  
   
 ##  <a name="gettooltips"></a>  CToolBarCtrl::GetToolTips  
  Pobiera uchwyt formantem etykietki narzędzia, jeśli istnieją skojarzone z formantem paska narzędzi.  
@@ -1192,7 +1192,7 @@ int HitTest(LPPOINT ppt) const;
   
 ### <a name="parameters"></a>Parametry  
  *ppt*  
- Wskaźnik do [punktu](http://msdn.microsoft.com/library/windows/desktop/dd162805) strukturę, która zawiera współrzędną x test trafień w `x` członka i współrzędną y hit test w `y` elementu członkowskiego. Współrzędne są względne wobec obszaru klienckiego pasku narzędzi.  
+ Wskaźnik do [punktu](https://msdn.microsoft.com/library/windows/desktop/dd162805) strukturę, która zawiera współrzędną x test trafień w `x` członka i współrzędną y hit test w `y` elementu członkowskiego. Współrzędne są względne wobec obszaru klienckiego pasku narzędzi.  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Wartość całkowitą, wskazując lokalizację punktu na pasku narzędzi. Jeśli wartość wynosi zero lub wartość dodatnią, zwrócona wartość jest liczony od zera indeks elementu nonseparator, w którym znajduje się punkt.  
@@ -1200,7 +1200,7 @@ int HitTest(LPPOINT ppt) const;
  Jeśli wartość zwracana jest ujemna, punkt nie leży w przycisku. Wartość bezwzględna wartość zwracana jest indeksem element separatora lub najbliższego elementu nonseparator.  
   
 ### <a name="remarks"></a>Uwagi  
- Ta funkcja elementu członkowskiego implementuje zachowanie komunikatu Win32 [TB_HITTEST](http://msdn.microsoft.com/library/windows/desktop/bb787360), zgodnie z opisem w zestawie Windows SDK.  
+ Ta funkcja elementu członkowskiego implementuje zachowanie komunikatu Win32 [TB_HITTEST](/windows/desktop/Controls/tb-hittest), zgodnie z opisem w zestawie Windows SDK.  
   
 ##  <a name="hidebutton"></a>  CToolBarCtrl::HideButton  
  Ukrywa lub pokazuje określonego przycisku w formancie paska narzędzi.  
@@ -1279,16 +1279,16 @@ BOOL InsertMarkHitTest(
   
 ### <a name="parameters"></a>Parametry  
  *ppt*  
- Wskaźnik do [punktu](http://msdn.microsoft.com/library/windows/desktop/dd162805) struktury, który zawiera test trafień służy do koordynowania, względem pola klienta, na pasku narzędzi.  
+ Wskaźnik do [punktu](https://msdn.microsoft.com/library/windows/desktop/dd162805) struktury, który zawiera test trafień służy do koordynowania, względem pola klienta, na pasku narzędzi.  
   
  *ptbim*  
- Wskaźnik do [TBINSERTMARK](http://msdn.microsoft.com/library/windows/desktop/bb760480) strukturę, która otrzymuje informacje znacznika wstawiania.  
+ Wskaźnik do [TBINSERTMARK](/windows/desktop/api/commctrl/ns-commctrl-tbinsertmark) strukturę, która otrzymuje informacje znacznika wstawiania.  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Wartość różną od zera, jeśli to się powiedzie; w przeciwnym razie wartość zero.  
   
 ### <a name="remarks"></a>Uwagi  
- Ta funkcja elementu członkowskiego implementuje zachowanie komunikatu Win32 [TB_INSERTMARKHITTEST](http://msdn.microsoft.com/library/windows/desktop/bb787367), zgodnie z opisem w zestawie Windows SDK.  
+ Ta funkcja elementu członkowskiego implementuje zachowanie komunikatu Win32 [TB_INSERTMARKHITTEST](/windows/desktop/Controls/tb-insertmarkhittest), zgodnie z opisem w zestawie Windows SDK.  
   
 ##  <a name="isbuttonchecked"></a>  CToolBarCtrl::IsButtonChecked  
  Określa, czy zaznaczono opcję określonego przycisku w formancie paska narzędzi.  
@@ -1415,7 +1415,7 @@ void LoadImages(
  Dojście wystąpienia programu do aplikacji wywołującej. Ten parametr może być HINST_COMMCTRL załadować listy standardowy obraz.  
   
 ### <a name="remarks"></a>Uwagi  
- Ta funkcja elementu członkowskiego implementuje zachowanie komunikatu Win32 [TB_LOADIMAGES](http://msdn.microsoft.com/library/windows/desktop/bb787381), zgodnie z opisem w zestawie Windows SDK.  
+ Ta funkcja elementu członkowskiego implementuje zachowanie komunikatu Win32 [TB_LOADIMAGES](/windows/desktop/Controls/tb-loadimages), zgodnie z opisem w zestawie Windows SDK.  
   
 ##  <a name="mapaccelerator"></a>  CToolBarCtrl::MapAccelerator  
  Mapuje się od znaku skrótu na przycisku paska narzędzi.  
@@ -1437,7 +1437,7 @@ BOOL MapAccelerator(
  Wartość różną od zera, jeśli to się powiedzie; w przeciwnym razie wartość zero.  
   
 ### <a name="remarks"></a>Uwagi  
- Ta funkcja elementu członkowskiego implementuje zachowanie komunikatu Win32 [TB_MAPACCELERATOR](http://msdn.microsoft.com/library/windows/desktop/bb787383), zgodnie z opisem w zestawie Windows SDK.  
+ Ta funkcja elementu członkowskiego implementuje zachowanie komunikatu Win32 [TB_MAPACCELERATOR](/windows/desktop/Controls/tb-mapaccelerator), zgodnie z opisem w zestawie Windows SDK.  
   
 ##  <a name="markbutton"></a>  CToolBarCtrl::MarkButton  
  Ustawia stan wyróżnienia danego przycisku w formancie paska narzędzi.  
@@ -1459,7 +1459,7 @@ BOOL MarkButton(
  Wartość różną od zera, jeśli to się powiedzie; w przeciwnym razie 0.  
   
 ### <a name="remarks"></a>Uwagi  
- Ta funkcja elementu członkowskiego implementuje zachowanie komunikatu Win32 [TB_MARKBUTTON](http://msdn.microsoft.com/library/windows/desktop/bb787385), zgodnie z opisem w zestawie Windows SDK.  
+ Ta funkcja elementu członkowskiego implementuje zachowanie komunikatu Win32 [TB_MARKBUTTON](/windows/desktop/Controls/tb-markbutton), zgodnie z opisem w zestawie Windows SDK.  
   
 ##  <a name="movebutton"></a>  CToolBarCtrl::MoveButton  
  Przenosi przycisku z jednego indeksu.  
@@ -1481,7 +1481,7 @@ BOOL MoveButton(
  Wartość różną od zera, jeśli to się powiedzie; w przeciwnym razie 0.  
   
 ### <a name="remarks"></a>Uwagi  
- Ta funkcja elementu członkowskiego implementuje zachowanie komunikatu Win32 [TB_MOVEBUTTON](http://msdn.microsoft.com/library/windows/desktop/bb787387), zgodnie z opisem w zestawie Windows SDK.  
+ Ta funkcja elementu członkowskiego implementuje zachowanie komunikatu Win32 [TB_MOVEBUTTON](/windows/desktop/Controls/tb-movebutton), zgodnie z opisem w zestawie Windows SDK.  
   
 ##  <a name="pressbutton"></a>  CToolBarCtrl::PressButton  
  Naciśnie lub zwolni określony przycisk w formancie paska narzędzi.  
@@ -1503,7 +1503,7 @@ BOOL PressButton(int nID, BOOL bPress = TRUE);
 ### <a name="remarks"></a>Uwagi  
  Jeśli chcesz zmienić więcej niż jednego stanu przycisku, należy wziąć pod uwagę wywoływania [SetState](#setstate) zamiast tego.  
   
- Ta metoda wysyła [TB_PRESSBUTTON](http://msdn.microsoft.com/library/windows/desktop/bb787389) komunikat, który jest opisany w zestawie Windows SDK.  
+ Ta metoda wysyła [TB_PRESSBUTTON](/windows/desktop/Controls/tb-pressbutton) komunikat, który jest opisany w zestawie Windows SDK.  
   
 ##  <a name="replacebitmap"></a>  CToolBarCtrl::ReplaceBitmap  
  Zamienia istniejącej mapy bitowej w bieżącym formantem paska narzędzi nowej mapy bitowej.  
@@ -1516,13 +1516,13 @@ BOOL ReplaceBitmap(LPTBREPLACEBITMAP pReplaceBitmap);
   
 |Parametr|Opis|  
 |---------------|-----------------|  
-|[in] *pReplaceBitmap*|Wskaźnik do [TBREPLACEBITMAP](http://msdn.microsoft.com/library/windows/desktop/bb760484) strukturę, która opisuje mapy bitowej, który ma zostać zastąpione i nowej mapy bitowej.|  
+|[in] *pReplaceBitmap*|Wskaźnik do [TBREPLACEBITMAP](/windows/desktop/api/commctrl/ns-commctrl-tbreplacebitmap) strukturę, która opisuje mapy bitowej, który ma zostać zastąpione i nowej mapy bitowej.|  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Wartość TRUE, jeśli ta metoda jest kończy się pomyślnie; w przeciwnym razie wartość FALSE.  
   
 ### <a name="remarks"></a>Uwagi  
- Ta metoda wysyła [TB_REPLACEBITMAP](http://msdn.microsoft.com/library/windows/desktop/bb787391) komunikat, który jest opisany w zestawie Windows SDK.  
+ Ta metoda wysyła [TB_REPLACEBITMAP](/windows/desktop/Controls/tb-replacebitmap) komunikat, który jest opisany w zestawie Windows SDK.  
   
 ### <a name="example"></a>Przykład  
  Poniższy przykład kodu jest zastępowany mapy bitowej dla standardowego paska narzędzi innej mapy bitowej.  
@@ -1600,7 +1600,7 @@ BOOL SetAnchorHighlight(BOOL fAnchor = TRUE);
  Poprzednie ustawienie zakotwiczenia. Jeśli wyróżnianie zostało włączone, ta wartość jest różna od zera. Jeśli wyróżnienie nie zostało włączone, ta wartość wynosi zero.  
   
 ### <a name="remarks"></a>Uwagi  
- Ta metoda implementuje zachowanie komunikatu Win32 [TB_SETANCHORHIGHLIGHT](http://msdn.microsoft.com/library/windows/desktop/bb787396), zgodnie z opisem w zestawie Windows SDK.  
+ Ta metoda implementuje zachowanie komunikatu Win32 [TB_SETANCHORHIGHLIGHT](/windows/desktop/Controls/tb-setanchorhighlight), zgodnie z opisem w zestawie Windows SDK.  
   
 ##  <a name="setbitmapsize"></a>  CToolBarCtrl::SetBitmapSize  
  Określa rozmiar rzeczywisty bitowymi obrazów mają zostać dodane do formantu paska narzędzi.  
@@ -1633,13 +1633,13 @@ BOOL SetButtonInfo(
  Identyfikator przycisku.  
   
  *ptbbi*  
- Wskaźnik do [TBBUTTONINFO](http://msdn.microsoft.com/library/windows/desktop/bb760478) strukturę, która otrzymuje informacje przycisku.  
+ Wskaźnik do [TBBUTTONINFO](/windows/desktop/api/commctrl/ns-commctrl-tbbuttoninfoa) strukturę, która otrzymuje informacje przycisku.  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Wartość różną od zera, jeśli to się powiedzie; w przeciwnym razie 0.  
   
 ### <a name="remarks"></a>Uwagi  
- Funkcja elementu członkowskiego implementuje zachowanie komunikatu Win32 [TB_SETBUTTONINFO](http://msdn.microsoft.com/library/windows/desktop/bb787413), zgodnie z opisem w zestawie Windows SDK.  
+ Funkcja elementu członkowskiego implementuje zachowanie komunikatu Win32 [TB_SETBUTTONINFO](/windows/desktop/Controls/tb-setbuttoninfo), zgodnie z opisem w zestawie Windows SDK.  
   
 ##  <a name="setbuttonsize"></a>  CToolBarCtrl::SetButtonSize  
  Ustawia rozmiar przycisków w formancie paska narzędzi.  
@@ -1697,7 +1697,7 @@ BOOL SetButtonWidth(
  Wartość różną od zera, jeśli to się powiedzie; w przeciwnym razie 0.  
   
 ### <a name="remarks"></a>Uwagi  
- Ta funkcja elementu członkowskiego implementuje zachowanie komunikatu Win32 [TB_SETBUTTONWIDTH](http://msdn.microsoft.com/library/windows/desktop/bb787417), zgodnie z opisem w zestawie Windows SDK.  
+ Ta funkcja elementu członkowskiego implementuje zachowanie komunikatu Win32 [TB_SETBUTTONWIDTH](/windows/desktop/Controls/tb-setbuttonwidth), zgodnie z opisem w zestawie Windows SDK.  
   
 ##  <a name="setcmdid"></a>  CToolBarCtrl::SetCmdID  
  Ustawia identyfikator polecenia, który zostanie wysłany do okna właściciela, po naciśnięciu przycisku określony.  
@@ -1729,12 +1729,12 @@ void SetColorScheme(const COLORSCHEME* lpColorScheme);
   
 |Parametr|Opis|  
 |---------------|-----------------|  
-|[in] *lpColorScheme*|Wskaźnik do [COLORSCHEME](http://msdn.microsoft.com/library/windows/desktop/bb775502) strukturę, która opisuje kolor wyróżnienia i kolor w tle formantu paska narzędzi.|  
+|[in] *lpColorScheme*|Wskaźnik do [COLORSCHEME](/windows/desktop/api/commctrl/ns-commctrl-tagcolorscheme) strukturę, która opisuje kolor wyróżnienia i kolor w tle formantu paska narzędzi.|  
   
 ### <a name="remarks"></a>Uwagi  
  Ta metoda nie obowiązuje, jeśli ustawiono motyw wizualny Windows Vista.  
   
- Ta metoda wysyła [TB_SETCOLORSCHEME](http://msdn.microsoft.com/library/windows/desktop/bb787421) komunikat, który jest opisany w zestawie Windows SDK.  
+ Ta metoda wysyła [TB_SETCOLORSCHEME](/windows/desktop/Controls/tb-setcolorscheme) komunikat, który jest opisany w zestawie Windows SDK.  
   
 ### <a name="example"></a>Przykład  
  Poniższy przykład kodu ustawia schemat kolorów na potrzeby bieżącego formantu paska narzędzi. W przykładzie kodu sprawia, że lewym i górnym krawędzi każdej czerwony przycisk Narzędzie i po prawej stronie i dolną krawędzią niebieski. Gdy użytkownik naciśnie przycisk, kolor czerwony przycisk Włącz niebieski i czerwony niebieski krawędzie.  
@@ -1756,10 +1756,10 @@ CImageList* SetDisabledImageList(CImageList* pImageList);
  Wskaźnik do [CImageList](../../mfc/reference/cimagelist-class.md) obiektu, który był wcześniej używany przez kontrolkę paska narzędzi obrazów przycisku display wyłączone.  
   
 ### <a name="remarks"></a>Uwagi  
- Ta funkcja elementu członkowskiego implementuje zachowanie komunikatu Win32 [TB_SETDISABLEDIMAGELIST](http://msdn.microsoft.com/library/windows/desktop/bb787423), zgodnie z opisem w zestawie Windows SDK. Implementacja MFC `SetDisabledImageList` używa `CImageList` obiekt zawierający przycisk wyłączone formantu paska narzędzi obrazów, zamiast dojścia do listy obrazów.  
+ Ta funkcja elementu członkowskiego implementuje zachowanie komunikatu Win32 [TB_SETDISABLEDIMAGELIST](/windows/desktop/Controls/tb-setdisabledimagelist), zgodnie z opisem w zestawie Windows SDK. Implementacja MFC `SetDisabledImageList` używa `CImageList` obiekt zawierający przycisk wyłączone formantu paska narzędzi obrazów, zamiast dojścia do listy obrazów.  
   
 ##  <a name="setdrawtextflags"></a>  CToolBarCtrl::SetDrawTextFlags  
- Ustawia flagi funkcji Win32 [DrawText](http://msdn.microsoft.com/library/windows/desktop/dd162498), używany do rysowania tekstu w prostokącie określonego, formatowana zgodnie z konfiguracji flag.  
+ Ustawia flagi funkcji Win32 [DrawText](/windows/desktop/api/winuser/nf-winuser-drawtext), używany do rysowania tekstu w prostokącie określonego, formatowana zgodnie z konfiguracji flag.  
   
 ```  
 DWORD SetDrawTextFlags(
@@ -1769,7 +1769,7 @@ DWORD SetDrawTextFlags(
   
 ### <a name="parameters"></a>Parametry  
  *dwMask*  
- Kombinacji jednego lub większej liczby określono w funkcji Win32 flagi DT_ [DrawText](http://msdn.microsoft.com/library/windows/desktop/dd162498), który wskazuje, której bits w *dwDTFlags* będą używane podczas rysowania tekstu.  
+ Kombinacji jednego lub większej liczby określono w funkcji Win32 flagi DT_ [DrawText](/windows/desktop/api/winuser/nf-winuser-drawtext), który wskazuje, której bits w *dwDTFlags* będą używane podczas rysowania tekstu.  
   
  *dwDTFlags*  
  Być kombinacją flag DT_ określone w funkcji Win32 `DrawText`, które wskazują, jak zostać narysowany tekst przycisku. Ta wartość jest przekazywana do `DrawText` podczas rysowania tekstu przycisku.  
@@ -1778,7 +1778,7 @@ DWORD SetDrawTextFlags(
  Flagi DWORD zawierający tekst poprzednim rysunku.  
   
 ### <a name="remarks"></a>Uwagi  
- Ta funkcja elementu członkowskiego implementuje zachowanie komunikatu Win32 [TB_SETDRAWTEXTFLAGS](http://msdn.microsoft.com/library/windows/desktop/bb787425), zgodnie z opisem w zestawie Windows SDK. Ta funkcja elementu członkowskiego Ustawia flagi funkcji Win32 `DrawText`, który rysuje tekst w prostokącie określonego, formatowana zgodnie z konfiguracji flag.  
+ Ta funkcja elementu członkowskiego implementuje zachowanie komunikatu Win32 [TB_SETDRAWTEXTFLAGS](/windows/desktop/Controls/tb-setdrawtextflags), zgodnie z opisem w zestawie Windows SDK. Ta funkcja elementu członkowskiego Ustawia flagi funkcji Win32 `DrawText`, który rysuje tekst w prostokącie określonego, formatowana zgodnie z konfiguracji flag.  
   
 ##  <a name="setextendedstyle"></a>  CToolBarCtrl::SetExtendedStyle  
  Ustawia rozszerzone style kontrolki paska narzędzi.  
@@ -1792,10 +1792,10 @@ DWORD SetExtendedStyle(DWORD dwExStyle);
  Style rozszerzone wartość, określając nowy. Ten parametr może być kombinacją narzędzi style rozszerzone.  
   
 ### <a name="return-value"></a>Wartość zwracana  
- Style rozszerzone DWORD, reprezentujący poprzedniego. Aby uzyskać listę style, zobacz [Toolbar — rozszerzone style](http://msdn.microsoft.com/library/windows/desktop/bb760430), w zestawie Windows SDK.  
+ Style rozszerzone DWORD, reprezentujący poprzedniego. Aby uzyskać listę style, zobacz [Toolbar — rozszerzone style](/windows/desktop/Controls/toolbar-extended-styles), w zestawie Windows SDK.  
   
 ### <a name="remarks"></a>Uwagi  
- Ta funkcja elementu członkowskiego implementuje zachowanie komunikatu Win32 [TB_SETEXTENDEDSTYLE](http://msdn.microsoft.com/library/windows/desktop/bb787427), zgodnie z opisem w zestawie Windows SDK.  
+ Ta funkcja elementu członkowskiego implementuje zachowanie komunikatu Win32 [TB_SETEXTENDEDSTYLE](/windows/desktop/Controls/tb-setextendedstyle), zgodnie z opisem w zestawie Windows SDK.  
   
 ##  <a name="sethotimagelist"></a>  CToolBarCtrl::SetHotImageList  
  Ustawia listę obrazu który formantu paska narzędzi będzie używany do wyświetlania przyciski "gorącymi".  
@@ -1812,7 +1812,7 @@ CImageList* SetHotImageList(CImageList* pImageList);
  Wskaźnik do [CImageList](../../mfc/reference/cimagelist-class.md) obiektu, który był wcześniej używany przez kontrolkę paska narzędzi na wyświetlanie obrazów przycisk gorąca.  
   
 ### <a name="remarks"></a>Uwagi  
- Ta funkcja elementu członkowskiego implementuje zachowanie komunikatu Win32 [TB_SETHOTIMAGELIST](http://msdn.microsoft.com/library/windows/desktop/bb787429), zgodnie z opisem w zestawie Windows SDK.  
+ Ta funkcja elementu członkowskiego implementuje zachowanie komunikatu Win32 [TB_SETHOTIMAGELIST](/windows/desktop/Controls/tb-sethotimagelist), zgodnie z opisem w zestawie Windows SDK.  
   
  Implementacja MFC `SetHotImageList` używa `CImageList` obiekt zawierający przycisk aktywny formant paska narzędzi obrazów, zamiast dojścia do listy obrazów. Przycisk gorąca zostanie wyróżniona, gdy wskaźnik znajduje się nad nim.  
   
@@ -1831,7 +1831,7 @@ int SetHotItem(int nHot);
  Indeks poprzedniego elementu gorąca lub -1, jeśli wystąpił żaden element gorąca.  
   
 ### <a name="remarks"></a>Uwagi  
- Ta funkcja elementu członkowskiego implementuje zachowanie komunikatu Win32 [TB_SETHOTITEM](http://msdn.microsoft.com/library/windows/desktop/bb787431), zgodnie z opisem w zestawie Windows SDK.  
+ Ta funkcja elementu członkowskiego implementuje zachowanie komunikatu Win32 [TB_SETHOTITEM](/windows/desktop/Controls/tb-sethotitem), zgodnie z opisem w zestawie Windows SDK.  
   
 ##  <a name="setimagelist"></a>  CToolBarCtrl::SetImageList  
  Ustawia listę obrazu który pasek narzędzi będzie używany do wyświetlania przycisków, które znajdują się w ich stanu domyślnego.  
@@ -1848,7 +1848,7 @@ CImageList* SetImageList(CImageList* pImageList);
  Wskaźnik do [CImageList](../../mfc/reference/cimagelist-class.md) obiektu, który był wcześniej używany przez kontrolkę paska narzędzi na wyświetlanie obrazów przycisku w ich stanu domyślnego.  
   
 ### <a name="remarks"></a>Uwagi  
- Ta funkcja elementu członkowskiego implementuje zachowanie komunikatu Win32 [TB_SETIMAGELIST](http://msdn.microsoft.com/library/windows/desktop/bb787433), zgodnie z opisem w zestawie Windows SDK.  
+ Ta funkcja elementu członkowskiego implementuje zachowanie komunikatu Win32 [TB_SETIMAGELIST](/windows/desktop/Controls/tb-setimagelist), zgodnie z opisem w zestawie Windows SDK.  
   
  Implementacja MFC `SetImageList` używa `CImageList` obiekt zawierający przycisk formantu paska narzędzi obrazów, zamiast dojścia do listy obrazów.  
   
@@ -1875,10 +1875,10 @@ void SetInsertMark(TBINSERTMARK* ptbim);
   
 ### <a name="parameters"></a>Parametry  
  *ptbim*  
- Wskaźnik do [TBINSERTMARK](http://msdn.microsoft.com/library/windows/desktop/bb760480) strukturę, która zawiera znacznika wstawiania.  
+ Wskaźnik do [TBINSERTMARK](/windows/desktop/api/commctrl/ns-commctrl-tbinsertmark) strukturę, która zawiera znacznika wstawiania.  
   
 ### <a name="remarks"></a>Uwagi  
- Ta funkcja elementu członkowskiego implementuje zachowanie komunikatu Win32 [TB_SETINSERTMARK](http://msdn.microsoft.com/library/windows/desktop/bb787437), zgodnie z opisem w zestawie Windows SDK.  
+ Ta funkcja elementu członkowskiego implementuje zachowanie komunikatu Win32 [TB_SETINSERTMARK](/windows/desktop/Controls/tb-setinsertmark), zgodnie z opisem w zestawie Windows SDK.  
   
 ##  <a name="setinsertmarkcolor"></a>  CToolBarCtrl::SetInsertMarkColor  
  Ustawia kolor używany do rysowania znacznika wstawiania paska narzędzi.  
@@ -1895,7 +1895,7 @@ COLORREF SetInsertMarkColor(COLORREF clrNew);
  Wartość COLORREF, która zawiera na poprzedni kolor znacznika wstawiania.  
   
 ### <a name="remarks"></a>Uwagi  
- Ta funkcja elementu członkowskiego implementuje zachowanie komunikatu Win32 [TB_SETINSERTMARKCOLOR](http://msdn.microsoft.com/library/windows/desktop/bb787439), zgodnie z opisem w zestawie Windows SDK.  
+ Ta funkcja elementu członkowskiego implementuje zachowanie komunikatu Win32 [TB_SETINSERTMARKCOLOR](/windows/desktop/Controls/tb-setinsertmarkcolor), zgodnie z opisem w zestawie Windows SDK.  
   
 ##  <a name="setmaxtextrows"></a>  CToolBarCtrl::SetMaxTextRows  
  Ustawia maksymalną liczbę wierszy tekst wyświetlany na przycisku paska narzędzi.  
@@ -1920,10 +1920,10 @@ void SetMetrics(LPTBMETRICS ptbm);
   
 ### <a name="parameters"></a>Parametry  
  *ptbm*  
- Wskaźnik do [TBMETRICS](http://msdn.microsoft.com/library/windows/desktop/bb760482) struktury `CToolBarCtrl` obiektu.  
+ Wskaźnik do [TBMETRICS](/windows/desktop/api/commctrl/ns-commctrl-tbmetrics) struktury `CToolBarCtrl` obiektu.  
   
 ### <a name="remarks"></a>Uwagi  
- Ta funkcja członkowska emuluje funkcjonalność [TB_SETMETRICS](http://msdn.microsoft.com/library/windows/desktop/bb787446) komunikat, zgodnie z opisem w zestawie Windows SDK.  
+ Ta funkcja członkowska emuluje funkcjonalność [TB_SETMETRICS](/windows/desktop/Controls/tb-setmetrics) komunikat, zgodnie z opisem w zestawie Windows SDK.  
   
 ##  <a name="setowner"></a>  CToolBarCtrl::SetOwner  
  Ustawia okno właściciela formantu paska narzędzi.  
@@ -1959,7 +1959,7 @@ DWORD SetPadding(
  DWORD, którego niższe słowo zawiera poprzedniej wartości dopełnienie w poziomie, a których wyższe słowo poprzednią wartość dopełnienie w pionie. Wypełnienie wartości jest podawana w pikselach.  
   
 ### <a name="remarks"></a>Uwagi  
- Ta metoda wysyła [TB_SETPADDING](http://msdn.microsoft.com/library/windows/desktop/bb787448) komunikat, który jest opisany w zestawie Windows SDK.  
+ Ta metoda wysyła [TB_SETPADDING](/windows/desktop/Controls/tb-setpadding) komunikat, który jest opisany w zestawie Windows SDK.  
   
 ### <a name="example"></a>Przykład  
  Poniższy przykład kodu ustawia poziomy i pionowy dopełnienie bieżącego formantu paska narzędzi do 20 pikseli.  
@@ -1986,7 +1986,7 @@ CImagelist* SetPressedImageList(
  Wskaźnik do [CImageList](../../mfc/reference/cimagelist-class.md) zawierający poprzedniej listy obrazów w bieżącym kontroli lub wartość NULL, jeśli został ustawiony nie listy obrazów.  
   
 ### <a name="remarks"></a>Uwagi  
- Ta metoda wysyła [TB_SETPRESSEDIMAGELIST](http://msdn.microsoft.com/library/windows/desktop/bb787453) komunikat, który jest opisany w zestawie Windows SDK.  
+ Ta metoda wysyła [TB_SETPRESSEDIMAGELIST](/windows/desktop/Controls/tb-setpressedimagelist) komunikat, który jest opisany w zestawie Windows SDK.  
   
 ### <a name="example"></a>Przykład  
  Poniższy przykład kodu ustawia listy obrazów po naciśnięciu do być taka sama jak domyślnej listy obrazów.  
@@ -2011,7 +2011,7 @@ void SetRows(
  Informuje, czy ma być używany mniej wierszy lub więcej wierszy, jeśli pasek narzędzi nie można zmienić rozmiaru do żądanej liczby wierszy.  
   
  *lprect —*  
- Wskazuje [CRect](../../atl-mfc-shared/reference/crect-class.md) obiektu lub [Prostokąt](http://msdn.microsoft.com/library/windows/desktop/dd162897) strukturę, która zostanie wyświetlony nowy prostokąt otaczający paska narzędzi.  
+ Wskazuje [CRect](../../atl-mfc-shared/reference/crect-class.md) obiektu lub [Prostokąt](https://msdn.microsoft.com/library/windows/desktop/dd162897) strukturę, która zostanie wyświetlony nowy prostokąt otaczający paska narzędzi.  
   
 ### <a name="remarks"></a>Uwagi  
  Jeśli pasek narzędzi nie zmieniał swój rozmiar do żądanej liczby lub wiersze, będzie ona rozmiar samego celu kolejny większy lub dalej mniejsze prawidłowy rozmiar, w zależności od wartości *bLarger*. Jeśli *bLarger* ma wartość PRAWDA, nowa liczba wierszy jest większy niż żądana. Jeśli *bLarger* ma wartość FAŁSZ, nowa liczba wierszy będą mniejsze niż żądana.  
@@ -2057,7 +2057,7 @@ void SetStyle(DWORD dwStyle);
   
 ### <a name="parameters"></a>Parametry  
  *dwStyle*  
- DWORD, zawierające kombinację [style formantu toolbar](http://msdn.microsoft.com/library/windows/desktop/bb760439), zgodnie z opisem w zestawie Windows SDK.  
+ DWORD, zawierające kombinację [style formantu toolbar](/windows/desktop/Controls/toolbar-control-and-button-styles), zgodnie z opisem w zestawie Windows SDK.  
   
 ##  <a name="settooltips"></a>  CToolBarCtrl::SetToolTips  
  Tworzy skojarzenia między formantem etykietki narzędzia, za pomocą kontrolki paska narzędzi.  
@@ -2085,7 +2085,7 @@ HRESULT SetWindowTheme(LPCWSTR pszSubAppName);
  Zwracana wartość nie jest używana.  
   
 ### <a name="remarks"></a>Uwagi  
- Ta funkcja członkowska emuluje funkcjonalność [TB_SETWINDOWTHEME](http://msdn.microsoft.com/library/windows/desktop/bb787465) komunikat, zgodnie z opisem w zestawie Windows SDK.  
+ Ta funkcja członkowska emuluje funkcjonalność [TB_SETWINDOWTHEME](/windows/desktop/Controls/tb-setwindowtheme) komunikat, zgodnie z opisem w zestawie Windows SDK.  
   
 ## <a name="see-also"></a>Zobacz też  
  [CMNCTRL1 próbki MFC](../../visual-cpp-samples.md)   

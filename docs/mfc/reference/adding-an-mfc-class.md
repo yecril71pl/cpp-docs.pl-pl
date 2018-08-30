@@ -17,15 +17,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b09ed632f22ec78e6b2fd8d5bf0a64cec1512ba8
-ms.sourcegitcommit: 76fd30ff3e0352e2206460503b61f45897e60e4f
+ms.openlocfilehash: c865fdce61af5b5bbce6e8b8b8658946ffbf5e48
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/13/2018
-ms.locfileid: "39028125"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43204302"
 ---
 # <a name="adding-an-mfc-class"></a>Dodawanie klasy MFC
-Aby dodać klasy pochodne od klas biblioteki Microsoft Foundation Class (MFC) do projektu, należy użyć **Dodaj klasę** polecenia dostępne [Widok klas](http://msdn.microsoft.com/8d7430a9-3e33-454c-a9e1-a85e3d2db925). Określ nazwę dla nowej klasy, wybierz klasę bazową, a następnie wybierz identyfikator okna dialogowego, z którą jest skojarzony (jeśli istnieje). Kreator kod tworzy plik nagłówka i pliku z implementacją i dodaje je do projektu.  
+Aby dodać klasy pochodne od klas biblioteki Microsoft Foundation Class (MFC) do projektu, należy użyć **Dodaj klasę** polecenia dostępne [Widok klas](https://msdn.microsoft.com/8d7430a9-3e33-454c-a9e1-a85e3d2db925). Określ nazwę dla nowej klasy, wybierz klasę bazową, a następnie wybierz identyfikator okna dialogowego, z którą jest skojarzony (jeśli istnieje). Kreator kod tworzy plik nagłówka i pliku z implementacją i dodaje je do projektu.  
   
 > [!NOTE]
 >  Klasy MFC można dodawać do aplikacji ATL COM, jeśli można początkowo [tworzenia aplikacji z obsługą MFC](../../atl/reference/mfc-support-in-atl-projects.md). Klasy MFC można również dodać do projekty Win32, które obsługują MFC.  

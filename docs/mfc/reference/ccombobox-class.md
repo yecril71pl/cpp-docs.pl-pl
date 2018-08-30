@@ -118,12 +118,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 15623673651e2c1aa02a5c1b5baa779789961e2b
-ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
+ms.openlocfilehash: c4fc2eb252c81e903174d99d4a55b2f3c1eed321
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37339569"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43205290"
 ---
 # <a name="ccombobox-class"></a>Ccombobox — klasa
 Oferuje funkcje pola kombi Windows.  
@@ -286,7 +286,7 @@ int AddString(LPCTSTR lpszString);
  Jeśli pole listy nie został utworzony za pomocą [CBS_SORT](../../mfc/reference/styles-used-by-mfc.md#combo-box-styles) stylu, ciąg zostanie dodany na końcu listy. W przeciwnym razie ten ciąg jest wstawiany do listy, a lista jest posortowana.  
   
 > [!NOTE]
->  Ta funkcja nie jest obsługiwana przez Windows `ComboBoxEx` kontroli. Aby uzyskać więcej informacji na temat tego formantu, zobacz [kontrolki ComboBoxEx](http://msdn.microsoft.com/library/windows/desktop/bb775738) w zestawie Windows SDK.  
+>  Ta funkcja nie jest obsługiwana przez Windows `ComboBoxEx` kontroli. Aby uzyskać więcej informacji na temat tego formantu, zobacz [kontrolki ComboBoxEx](/windows/desktop/Controls/comboboxex-controls) w zestawie Windows SDK.  
   
  Aby wstawić ciąg do konkretnej lokalizacji na liście, należy użyć [InsertString](#insertstring) funkcja elementu członkowskiego.  
   
@@ -493,7 +493,7 @@ int Dir(
  Jeśli wartość zwracana jest większa niż lub równa 0, jest liczony od zera indeks ostatniego filename dodany do listy. Wartość zwracana jest CB_ERR, jeśli wystąpi błąd; Wartość zwracana jest CB_ERRSPACE w przypadku niewystarczającej ilości miejsca do przechowywania nowych parametrów.  
   
 ### <a name="remarks"></a>Uwagi  
- Ta funkcja nie jest obsługiwana przez Windows `ComboBoxEx` kontroli. Aby uzyskać więcej informacji na temat tego formantu, zobacz [kontrolki ComboBoxEx](http://msdn.microsoft.com/library/windows/desktop/bb775738) w zestawie Windows SDK.  
+ Ta funkcja nie jest obsługiwana przez Windows `ComboBoxEx` kontroli. Aby uzyskać więcej informacji na temat tego formantu, zobacz [kontrolki ComboBoxEx](/windows/desktop/Controls/comboboxex-controls) w zestawie Windows SDK.  
   
 ### <a name="example"></a>Przykład  
  [!code-cpp[NVC_MFC_CComboBox#10](../../mfc/reference/codesnippet/cpp/ccombobox-class_10.cpp)]  
@@ -537,7 +537,7 @@ int FindString(
  Jeśli wartość zwracana jest większa niż lub równa 0, jest liczony od zera indeks pasujący element. Jest to CB_ERR, jeśli wyszukiwanie nie powiodło się.  
   
 ### <a name="remarks"></a>Uwagi  
- Ta funkcja nie jest obsługiwana przez Windows `ComboBoxEx` kontroli. Aby uzyskać więcej informacji na temat tego formantu, zobacz [kontrolki ComboBoxEx](http://msdn.microsoft.com/library/windows/desktop/bb775738) w zestawie Windows SDK.  
+ Ta funkcja nie jest obsługiwana przez Windows `ComboBoxEx` kontroli. Aby uzyskać więcej informacji na temat tego formantu, zobacz [kontrolki ComboBoxEx](/windows/desktop/Controls/comboboxex-controls) w zestawie Windows SDK.  
   
 ### <a name="example"></a>Przykład  
  [!code-cpp[NVC_MFC_CComboBox#12](../../mfc/reference/codesnippet/cpp/ccombobox-class_12.cpp)]  
@@ -576,13 +576,13 @@ BOOL GetComboBoxInfo(PCOMBOBOXINFO pcbi) const;
   
 ### <a name="parameters"></a>Parametry  
  *pcbi*  
- Wskaźnik do [COMBOBOXINFO](http://msdn.microsoft.com/library/windows/desktop/bb775798) struktury.  
+ Wskaźnik do [COMBOBOXINFO](/windows/desktop/api/winuser/ns-winuser-tagcomboboxinfo) struktury.  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Zwraca wartość TRUE w przypadku powodzenia, wartość FALSE w przypadku niepowodzenia.  
   
 ### <a name="remarks"></a>Uwagi  
- Ta funkcja członkowska emuluje funkcjonalność [CB_GETCOMBOBOXINFO](http://msdn.microsoft.com/library/windows/desktop/bb775839) komunikat, zgodnie z opisem w zestawie Windows SDK.  
+ Ta funkcja członkowska emuluje funkcjonalność [CB_GETCOMBOBOXINFO](/windows/desktop/Controls/cb-getcomboboxinfo) komunikat, zgodnie z opisem w zestawie Windows SDK.  
   
 ##  <a name="getcount"></a>  CComboBox::GetCount  
  Wywołaj tę funkcję elementu członkowskiego, aby pobrać liczbę elementów w części zawierającej pole listy, pola kombi.  
@@ -625,7 +625,7 @@ BOOL GetCueBanner(
 ### <a name="remarks"></a>Uwagi  
  Tekst wskaźnika jest monit jest wyświetlany w obszarze danych wejściowych formant pola kombi. Tekst wskaźnika jest wyświetlany, dopóki użytkownik udostępnia dane wejściowe.  
   
- Ta metoda wysyła [CB_GETCUEBANNER](http://msdn.microsoft.com/library/windows/desktop/bb775843) komunikat, który jest opisany w zestawie Windows SDK.  
+ Ta metoda wysyła [CB_GETCUEBANNER](/windows/desktop/Controls/cb-getcuebanner) komunikat, który jest opisany w zestawie Windows SDK.  
   
 ##  <a name="getcursel"></a>  CComboBox::GetCurSel  
  Wywołaj tę funkcję elementu członkowskiego, aby ustalić, który element w polu kombi jest zaznaczony.  
@@ -754,13 +754,13 @@ DWORD_PTR GetItemData(int nIndex) const;
  32-bitową wartość skojarzony element lub CB_ERR, jeśli wystąpi błąd.  
   
 ### <a name="remarks"></a>Uwagi  
- 32-bitową wartość można ustawić za pomocą *dwItemData* parametru [setitemdata —](#setitemdata) wywołanie funkcji elementu członkowskiego. Użyj `GetItemDataPtr` funkcja elementu członkowskiego, jeśli wskaźnik 32-bitową wartość do pobrania ( **void\***).  
+ 32-bitową wartość można ustawić za pomocą *dwItemData* parametru [setitemdata —](#setitemdata) wywołanie funkcji elementu członkowskiego. Użyj `GetItemDataPtr` funkcja elementu członkowskiego, jeśli wskaźnik 32-bitową wartość do pobrania (**void** <strong>\*</strong>).  
   
 ### <a name="example"></a>Przykład  
  [!code-cpp[NVC_MFC_CComboBox#21](../../mfc/reference/codesnippet/cpp/ccombobox-class_21.cpp)]  
   
 ##  <a name="getitemdataptr"></a>  CComboBox::GetItemDataPtr  
- Pobiera wartość 32-bitowa aplikacja dostarczona skojarzone z elementem pola kombi jako wskaźnik ( **void\***).  
+ Pobiera wartość 32-bitowa aplikacja dostarczona skojarzone z elementem pola kombi jako wskaźnik (**void** <strong>\*</strong>).  
   
 ```  
 void* GetItemDataPtr(int nIndex) const;  
@@ -869,7 +869,7 @@ int GetMinVisible() const;
  Minimalna liczba widocznych elementów z bieżącej listy rozwijanej.  
   
 ### <a name="remarks"></a>Uwagi  
- Ta metoda wysyła [CB_GETMINVISIBLE](http://msdn.microsoft.com/library/windows/desktop/bb775915) komunikat, który jest opisany w zestawie Windows SDK.  
+ Ta metoda wysyła [CB_GETMINVISIBLE](/windows/desktop/Controls/cb-setminvisible) komunikat, który jest opisany w zestawie Windows SDK.  
   
 ##  <a name="gettopindex"></a>  CComboBox::GetTopIndex  
  Pobiera liczony od zera indeks pierwszego elementu widoczny w polu listy części pola kombi.  
@@ -939,7 +939,7 @@ int InsertString(
  W odróżnieniu od [addstring —](#addstring) funkcja elementu członkowskiego `InsertString` funkcji składowej nie powoduje, że lista z [CBS_SORT](../../mfc/reference/styles-used-by-mfc.md#combo-box-styles) styl ma zostać posortowana.  
   
 > [!NOTE]
->  Ta funkcja nie jest obsługiwana przez Windows `ComboBoxEx` kontroli. Aby uzyskać więcej informacji na temat tego formantu, zobacz [kontrolki ComboBoxEx](http://msdn.microsoft.com/library/windows/desktop/bb775738) w zestawie Windows SDK.  
+>  Ta funkcja nie jest obsługiwana przez Windows `ComboBoxEx` kontroli. Aby uzyskać więcej informacji na temat tego formantu, zobacz [kontrolki ComboBoxEx](/windows/desktop/Controls/comboboxex-controls) w zestawie Windows SDK.  
   
 ### <a name="example"></a>Przykład  
  [!code-cpp[NVC_MFC_CComboBox#27](../../mfc/reference/codesnippet/cpp/ccombobox-class_27.cpp)]  
@@ -1056,7 +1056,7 @@ BOOL SetCueBanner(LPCTSTR lpszText);
 ### <a name="remarks"></a>Uwagi  
  Tekst wskaźnika jest monit jest wyświetlany w obszarze danych wejściowych formant pola kombi. Tekst wskaźnika jest wyświetlany, dopóki użytkownik udostępnia dane wejściowe.  
   
- Ta metoda wysyła [CB_SETCUEBANNER](http://msdn.microsoft.com/library/windows/desktop/bb775897) komunikat, który jest opisany w zestawie Windows SDK.  
+ Ta metoda wysyła [CB_SETCUEBANNER](/windows/desktop/Controls/cb-setcuebanner) komunikat, który jest opisany w zestawie Windows SDK.  
   
 ### <a name="example"></a>Przykład  
  Poniższy kod definiuje zmienną, *m_combobox*, która jest używana do uzyskania programowego dostępu formant pola kombi. Ta zmienna jest używana w następnym przykładzie.  
@@ -1133,7 +1133,7 @@ BOOL SetEditSel(
  Położenie jest liczony od zera. Aby zaznaczyć pierwszy znak kontrolki edycji, należy określić początkową 0. Pozycja końcowa jest znaku zaraz po ostatnim znakiem, aby wybrać. Na przykład aby wybrać pierwsze cztery znaki kontrolki edycji, będą używać począwszy od pozycji 0 i pozycji końcowej 4.  
   
 > [!NOTE]
->  Ta funkcja nie jest obsługiwana przez Windows `ComboBoxEx` kontroli. Aby uzyskać więcej informacji na temat tego formantu, zobacz [kontrolki ComboBoxEx](http://msdn.microsoft.com/library/windows/desktop/bb775738) w zestawie Windows SDK.  
+>  Ta funkcja nie jest obsługiwana przez Windows `ComboBoxEx` kontroli. Aby uzyskać więcej informacji na temat tego formantu, zobacz [kontrolki ComboBoxEx](/windows/desktop/Controls/comboboxex-controls) w zestawie Windows SDK.  
   
 ### <a name="example"></a>Przykład  
   Zobacz przykład [CComboBox::GetEditSel](#geteditsel).  
@@ -1207,7 +1207,7 @@ int SetItemData(
  [!code-cpp[NVC_MFC_CComboBox#36](../../mfc/reference/codesnippet/cpp/ccombobox-class_38.cpp)]  
   
 ##  <a name="setitemdataptr"></a>  CComboBox::SetItemDataPtr  
- Ustawia wartość 32-bitowych, skojarzone z określonym elementem w polu kombi jako określony wskaźnik ( **void\***).  
+ Ustawia wartość 32-bitowych, skojarzone z określonym elementem w polu kombi jako określony wskaźnik (**void** <strong>\*</strong>).  
   
 ```  
 int SetItemDataPtr(
@@ -1297,7 +1297,7 @@ BOOL SetMinVisibleItems(int iMinVisible);
  Wartość TRUE, jeśli ta metoda jest kończy się pomyślnie; w przeciwnym razie wartość FALSE.  
   
 ### <a name="remarks"></a>Uwagi  
- Ta metoda wysyła [CB_SETMINVISIBLE](http://msdn.microsoft.com/library/windows/desktop/bb775915) komunikat, który jest opisany w zestawie Windows SDK.  
+ Ta metoda wysyła [CB_SETMINVISIBLE](/windows/desktop/Controls/cb-setminvisible) komunikat, który jest opisany w zestawie Windows SDK.  
   
 ### <a name="example"></a>Przykład  
  Poniższy kod definiuje zmienną, *m_combobox*, która jest używana do uzyskania programowego dostępu formant pola kombi. Ta zmienna jest używana w następnym przykładzie.  

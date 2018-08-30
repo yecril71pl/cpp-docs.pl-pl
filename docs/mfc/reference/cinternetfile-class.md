@@ -42,12 +42,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e16aa9377676e415f416dc4f7dae9cb9f2a40dab
-ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
+ms.openlocfilehash: ed85edeaf5400805d4628e10acab4cdf4af52082
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37336569"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43202733"
 ---
 # <a name="cinternetfile-class"></a>Klasa CInternetFile
 Umożliwia dostęp do plików w systemach zdalnych, które korzystają z protokołów internetowych.  
@@ -258,7 +258,7 @@ virtual LPTSTR ReadString(
  Odwołanie do [CString](../../atl-mfc-shared/reference/cstringt-class.md) obiekt, który odbiera odczytu wiersza.  
   
 ### <a name="return-value"></a>Wartość zwracana  
- Wskaźnik do buforu zawierający zwykłe dane pobierane z [CInternetFile](../../mfc/reference/cinternetfile-class.md) obiektu. Bez względu na rozmiar buforu przekazanego do tej metody, na typ danych, nie wykonuje wszystkie operacje na danych (na przykład konwersja na Unicode), dzięki czemu zwróconych danych muszą być zmapowana do struktury spodziewasz się, jak gdyby **void\***  typu zostały zwrócone.  
+ Wskaźnik do buforu zawierający zwykłe dane pobierane z [CInternetFile](../../mfc/reference/cinternetfile-class.md) obiektu. Bez względu na rozmiar buforu przekazanego do tej metody, na typ danych, nie wykonuje wszystkie operacje na danych (na przykład konwersja na Unicode), dzięki czemu zwróconych danych muszą być zmapowana do struktury spodziewasz się, jak gdyby **void** <strong>\*</strong> typu zostały zwrócone.  
   
  Wartość NULL, jeśli osiągnięto koniec pliku przed odczytaniem żadnych danych; lub, jeśli osiągnięto wartość logiczna, wartość FALSE, jeśli koniec pliku przed odczytaniem danych.  
   
@@ -317,7 +317,7 @@ BOOL SetReadBufferSize(UINT nReadSize);
  Bufor żądany rozmiar w bajtach.  
   
 ### <a name="return-value"></a>Wartość zwracana  
- Wartość różną od zera, jeśli to się powiedzie; w przeciwnym razie 0. W przypadku niepowodzenia wywołania funkcji Win32 [GetLastError](http://msdn.microsoft.com/library/windows/desktop/ms679360) może zostać wywołana w celu ustalenia przyczyny błędu.  
+ Wartość różną od zera, jeśli to się powiedzie; w przeciwnym razie 0. W przypadku niepowodzenia wywołania funkcji Win32 [GetLastError](https://msdn.microsoft.com/library/windows/desktop/ms679360) może zostać wywołana w celu ustalenia przyczyny błędu.  
   
 ### <a name="remarks"></a>Uwagi  
  Podstawowe interfejsy API WinInet nie wykonać buforowania, więc wybierz rozmiar buforu, który pozwala aplikacji na odczytywanie danych z efektywnością, niezależnie od ilości danych do odczytu. Jeśli wywołanie każdego [odczytu](#read) zwykle obejmuje aount dużych danych (na przykład, w kilobajtach cztery lub więcej), nie należy buforu. Jednak jeśli wywołasz `Read` uzyskanie małych fragmentów danych, lub jeśli używasz [ReadString](#readstring) do odczytania poszczególnych wierszy w czasie, a następnie buforu odczytu zwiększa wydajność aplikacji.  
@@ -338,7 +338,7 @@ BOOL SetWriteBufferSize(UINT nWriteSize);
  Rozmiar buforu w bajtach.  
   
 ### <a name="return-value"></a>Wartość zwracana  
- Wartość różną od zera, jeśli to się powiedzie; w przeciwnym razie 0. W przypadku niepowodzenia wywołania funkcji Win32 [GetLastError](http://msdn.microsoft.com/library/windows/desktop/ms679360) może zostać wywołana w celu ustalenia przyczyny błędu.  
+ Wartość różną od zera, jeśli to się powiedzie; w przeciwnym razie 0. W przypadku niepowodzenia wywołania funkcji Win32 [GetLastError](https://msdn.microsoft.com/library/windows/desktop/ms679360) może zostać wywołana w celu ustalenia przyczyny błędu.  
   
 ### <a name="remarks"></a>Uwagi  
  Podstawowe interfejsy API WinInet nie wykonują buforowania, więc wybierz rozmiar buforu, który pozwala aplikacji na zapisywanie danych efektywnie niezależnie od ilości danych ma zostać zapisany. Jeśli wywołanie każdego [zapisu](#write) zwykle obejmuje dużą ilość danych (na przykład co najmniej cztery w kilobajtach na raz), nie należy buforu. Jednak jeśli wywołasz [zapisu](#write) do zapisu małych fragmentów danych, bufor zapisu zwiększa wydajność aplikacji.  

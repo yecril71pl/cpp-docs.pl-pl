@@ -16,14 +16,14 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9d7c18a81b2a7cf978ce056672cb318edca700fe
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 654996499c0fbee2c7410663fd7dfbbac3d145b2
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33319042"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43199099"
 ---
 # <a name="resource-compiler-warning-rc4214"></a>Ostrzeżenie RC4214 kompilatora zasobów
 Strona kodowa jest nieprawidłowa: ignorowane  
   
- Plik .rc zawiera argument stronę kodową i określona strona kodowa jest nieprawidłowa. Zobacz [IsValidCodePage](http://msdn.microsoft.com/library/windows/desktop/dd318674) Aby uzyskać więcej informacji.
+ Plik .rc zawarte w nim argumentu stronę kodową i określona strona kodowa jest nieprawidłowa. Zobacz [IsValidCodePage](/windows/desktop/api/winnls/nf-winnls-isvalidcodepage) Aby uzyskać więcej informacji.

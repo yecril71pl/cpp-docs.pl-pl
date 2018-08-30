@@ -9,12 +9,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: adad70bfa069a43382c06f60dea53bc2e53ff187
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 8b90e1f40a4de3331dfb712d8dd0f113df5e9f9e
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42606115"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43203755"
 ---
 # <a name="array-and-writeonlyarray-ccx"></a>Tablica i WriteOnlyArray (C + +/ CX)
 Można bez ograniczeń wykorzystywać regularne tablice stylu C lub [std::array](../standard-library/array-class-stl.md) w języku C + +/ CX program (mimo że [std::vector](../standard-library/vector-class.md) często jest lepszym rozwiązaniem), ale w dowolnym interfejsem API, który jest publikowany w metadanych, należy przekonwertować tablicy stylu C lub vector do [Platform::Array](../cppcx/platform-array-class.md) lub [Platform::WriteOnlyArray](../cppcx/platform-writeonlyarray-class.md) typu, w zależności od tego, w jaki sposób jest używany. [Platform::Array](../cppcx/platform-array-class.md) typu nie jest wydajne ani jak [std::vector](../standard-library/vector-class.md), więc generalnie nie należy jej użycia w kodu wewnętrznego, który wykonuje wiele operacji na tablicy elementy.  
@@ -82,12 +82,12 @@ Można bez ograniczeń wykorzystywać regularne tablice stylu C lub [std::array]
 ## <a name="use-arrayreference-to-avoid-copying-data"></a>Użyj ArrayReference w celu uniknięcia kopiowania danych  
  W niektórych scenariuszach, gdzie dane są przekazywane między ABI do [Platform::Array](../cppcx/platform-array-class.md), a ostatecznie chce przetwarzać dane w tablicy stylu C w celu zwiększenia wydajności, można użyć [Platform::ArrayReference](../cppcx/platform-arrayreference-class.md) Aby uniknąć operacji kopiowania dodatkowych. Podczas przekazywania [Platform::ArrayReference](../cppcx/platform-arrayreference-class.md) jako argumentu do parametru, który przyjmuje `Platform::Array`, `ArrayReference` będą przechowywane dane bezpośrednio do tablicy stylu C, który określisz. Tylko należy pamiętać, że `ArrayReference` ma nie blokadę na źródle danych, więc jeśli zmodyfikowane lub usunięte w innym wątku przed zakończeniem wywołanie danych, wyniki będzie niezdefiniowane.  
   
- Poniższy fragment kodu przedstawia sposób kopiowania wyników [DataReader](http://msdn.microsoft.com/library/windows/apps/windows.storage.streams.datareader.aspx) operacji na `Platform::Array` (zwyczajowego wzorca) i następnie zastąp `ArrayReference` do kopiowania danych bezpośrednio do tablicy stylu C:  
+ Poniższy fragment kodu przedstawia sposób kopiowania wyników [DataReader](https://msdn.microsoft.com/library/windows/apps/windows.storage.streams.datareader.aspx) operacji na `Platform::Array` (zwyczajowego wzorca) i następnie zastąp `ArrayReference` do kopiowania danych bezpośrednio do tablicy stylu C:  
   
  [!code-cpp[cx_arrays#07](../cppcx/codesnippet/CPP/js-array/class1.h#07)]  
   
 ## <a name="avoid-exposing-an-array-as-a-property"></a>Należy unikać udostępnianie tablicę jako właściwość  
- Ogólnie rzecz biorąc, należy unikać udostępnianie `Platform::Array` wpisać jako właściwości w klasie ref, ponieważ zwracany jest całej tablicy, nawet wtedy, gdy kod klienta jest tylko próba uzyskania dostępu pojedynczy element. Gdy trzeba udostępnić kontenerem sekwencyjnym jako właściwość w klasie ref publicznych [Windows::Foundation::IVector](http://msdn.microsoft.com/library/windows/apps/br206631.aspx) jest lepszym rozwiązaniem. Prywatne lub wewnętrzne interfejsów API, (które nie są publikowane w metadanych), należy wziąć pod uwagę przy użyciu standardowych kontener C++, takich jak [std::vector](../standard-library/vector-class.md).  
+ Ogólnie rzecz biorąc, należy unikać udostępnianie `Platform::Array` wpisać jako właściwości w klasie ref, ponieważ zwracany jest całej tablicy, nawet wtedy, gdy kod klienta jest tylko próba uzyskania dostępu pojedynczy element. Gdy trzeba udostępnić kontenerem sekwencyjnym jako właściwość w klasie ref publicznych [Windows::Foundation::IVector](https://msdn.microsoft.com/library/windows/apps/br206631.aspx) jest lepszym rozwiązaniem. Prywatne lub wewnętrzne interfejsów API, (które nie są publikowane w metadanych), należy wziąć pod uwagę przy użyciu standardowych kontener C++, takich jak [std::vector](../standard-library/vector-class.md).  
   
 ## <a name="see-also"></a>Zobacz też  
  [System typów](../cppcx/type-system-c-cx.md)   

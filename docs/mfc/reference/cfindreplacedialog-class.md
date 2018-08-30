@@ -42,12 +42,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4c88a517d600536d4f89b1621e225ad80666885a
-ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
+ms.openlocfilehash: cabd6f331ed7348fe84a585a863ccb7e90b992fc
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37338652"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43204008"
 ---
 # <a name="cfindreplacedialog-class"></a>Klasa CFindReplaceDialog
 Umożliwia wdrożenie okien dialogowych standardowego ciągu Znajdź/Zamień w aplikacji.  
@@ -95,9 +95,9 @@ class CFindReplaceDialog : public CCommonDialog
   
  Raz `CFindReplaceDialog` obiekt został skonstruowany, musisz użyć wywołania [Utwórz](#create) funkcja elementu członkowskiego, aby utworzyć i wyświetlić okno dialogowe.  
   
- Użyj [m_fr](#m_fr) strukturę, aby zainicjować okno dialogowe przed wywołaniem `Create`. `m_fr` Struktury jest typu [FINDREPLACE](http://msdn.microsoft.com/library/windows/desktop/ms646835). Aby uzyskać więcej informacji na temat tej struktury zobacz zestaw Windows SDK.  
+ Użyj [m_fr](#m_fr) strukturę, aby zainicjować okno dialogowe przed wywołaniem `Create`. `m_fr` Struktury jest typu [FINDREPLACE](/windows/desktop/api/commdlg/ns-commdlg-tagfindreplacea). Aby uzyskać więcej informacji na temat tej struktury zobacz zestaw Windows SDK.  
   
- Aby okno nadrzędne otrzymywać powiadomienia, Znajdź/Zamień żądań, należy użyć Windows [RegisterWindowMessage](http://msdn.microsoft.com/library/windows/desktop/ms644947) działać, a następnie użyć [ON_REGISTERED_MESSAGE](message-map-macros-mfc.md#on_registered_message) makra mapy komunikatów w swojej ramki okno, który obsługuje ten zarejestrowany komunikat.  
+ Aby okno nadrzędne otrzymywać powiadomienia, Znajdź/Zamień żądań, należy użyć Windows [RegisterWindowMessage](https://msdn.microsoft.com/library/windows/desktop/ms644947) działać, a następnie użyć [ON_REGISTERED_MESSAGE](message-map-macros-mfc.md#on_registered_message) makra mapy komunikatów w swojej ramki okno, który obsługuje ten zarejestrowany komunikat.  
   
  Można określić, czy użytkownik zdecydował się zakończyć okno dialogowe z `IsTerminating` funkcja elementu członkowskiego.  
   
@@ -165,7 +165,7 @@ virtual BOOL Create(
  Wskaźnik do ciągu zamiennym domyślną, gdy pojawi się okno dialogowe. Jeśli ma wartość NULL, okno dialogowe nie zawiera domyślny ciąg zastępczy.  
   
  *Flagidw*  
- Co najmniej jeden flagi, których można użyć, aby dostosować ustawienia okna dialogowego łączyć przy użyciu bitowego operatora OR. Wartość domyślna to FR_DOWN, która określa, że wyszukiwanie postępować w kierunku w dół. Zobacz [FINDREPLACE](http://msdn.microsoft.com/library/windows/desktop/ms646835) struktury w zestawie Windows SDK, aby uzyskać więcej informacji na temat tych flag.  
+ Co najmniej jeden flagi, których można użyć, aby dostosować ustawienia okna dialogowego łączyć przy użyciu bitowego operatora OR. Wartość domyślna to FR_DOWN, która określa, że wyszukiwanie postępować w kierunku w dół. Zobacz [FINDREPLACE](/windows/desktop/api/commdlg/ns-commdlg-tagfindreplacea) struktury w zestawie Windows SDK, aby uzyskać więcej informacji na temat tych flag.  
   
  *pParentWnd*  
  Wskaźnik do okna nadrzędnego lub właściciela okno dialogowe. To okno, które otrzymają specjalne komunikat wskazujący, żądanie akcji Znajdź/Zamień. Jeśli ma wartość NULL, jest używany w głównym oknie aplikacji.  
@@ -174,7 +174,7 @@ virtual BOOL Create(
  Wartość różną od zera, jeśli obiekt okno dialogowe został pomyślnie utworzony; w przeciwnym razie 0.  
   
 ### <a name="remarks"></a>Uwagi  
- Aby okno nadrzędne otrzymywać powiadomienia, Znajdź/Zamień żądań, należy użyć Windows [RegisterWindowMessage](http://msdn.microsoft.com/library/windows/desktop/ms644947) funkcji, których wartość zwracana jest liczba wiadomości, unikatowe dla wystąpienia aplikacji. Okno ramki powinny mieć wpisu mapy wiadomości, która deklaruje funkcję wywołania zwrotnego ( `OnFindReplace` w poniższym przykładzie) obsługującego ten zarejestrowany komunikat. Poniższy fragment kodu znajduje się przykład jak to zrobić w klasie okien ramowych, o nazwie `CMyRichEditView`:  
+ Aby okno nadrzędne otrzymywać powiadomienia, Znajdź/Zamień żądań, należy użyć Windows [RegisterWindowMessage](https://msdn.microsoft.com/library/windows/desktop/ms644947) funkcji, których wartość zwracana jest liczba wiadomości, unikatowe dla wystąpienia aplikacji. Okno ramki powinny mieć wpisu mapy wiadomości, która deklaruje funkcję wywołania zwrotnego ( `OnFindReplace` w poniższym przykładzie) obsługującego ten zarejestrowany komunikat. Poniższy fragment kodu znajduje się przykład jak to zrobić w klasie okien ramowych, o nazwie `CMyRichEditView`:  
   
  [!code-cpp[NVC_MFCDocView#171](../../mfc/codesnippet/cpp/cfindreplacedialog-class_2.h)]  
   
@@ -269,7 +269,7 @@ FINDREPLACE m_fr;
 ```  
   
 ### <a name="remarks"></a>Uwagi  
- `m_fr` jest to struktura typu [FINDREPLACE](http://msdn.microsoft.com/library/windows/desktop/ms646835). Jego członkowie przechowywać właściwości obiektu, okno dialogowe. Po konstruowanie `CFindReplaceDialog` obiektu, możesz użyć `m_fr` do modyfikowania różnych wartości w oknie dialogowym.  
+ `m_fr` jest to struktura typu [FINDREPLACE](/windows/desktop/api/commdlg/ns-commdlg-tagfindreplacea). Jego członkowie przechowywać właściwości obiektu, okno dialogowe. Po konstruowanie `CFindReplaceDialog` obiektu, możesz użyć `m_fr` do modyfikowania różnych wartości w oknie dialogowym.  
   
  Aby uzyskać więcej informacji na temat tej struktury, zobacz `FINDREPLACE` struktury w zestawie Windows SDK.  
   

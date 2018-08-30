@@ -34,24 +34,24 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d098a88e57ecbbedfde1a4674a915e13c28ab435
-ms.sourcegitcommit: 208d445fd7ea202de1d372d3f468e784e77bd666
+ms.openlocfilehash: 07745d1488b22645200d7af155d2af9b2ea73838
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/29/2018
-ms.locfileid: "37121017"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43199872"
 ---
 # <a name="data-types-mfc"></a>Typy danych (MFC)
-Ten temat zawiera listę typów danych najczęściej używane w programie Microsoft Foundation Class Library. Większość typów danych są takie same jak w platformie Software Development Kit (SDK), a inne są unikatowe dla MFC.  
+Ten temat zawiera listę typów danych najczęściej używane w bibliotece klas Microsoft Foundation. Większość typów danych są takie same jak w platformie Software Development Kit (SDK), a inne są unikatowe dla MFC.  
   
- Aby uzyskać informacje o typach danych używany w zestawie Windows SDK i MFC, zobacz [typów danych systemu Windows](http://msdn.microsoft.com/library/windows/desktop/aa383751).  
+ Aby uzyskać informacje o typach danych używane w Windows SDK i MFC, zobacz [typy danych Windows](/windows/desktop/WinProg/windows-data-types).  
   
- Następujące typy danych są unikatowe dla Microsoft Foundation Class Library:  
+ Następujące typy danych są unikatowe dla biblioteki klas Microsoft Foundation:  
   
--   Ustaw wartość używana do oznaczania położenie elementu w kolekcji; używane przez klasy kolekcji MFC.  
+-   Ustaw wartość używana do określenia położenie elementu w kolekcji; używane przez klasy kolekcji MFC.  
   
--   Lpcrect — wskaźnik A 32-bitowych na stałą (niemodyfikowalnymi) `RECT` struktury.  
+-   Lpcrect — wskaźnik 32-bitowego na stałą (niemodyfikowalnymi) `RECT` struktury.  
   
 ## <a name="see-also"></a>Zobacz też  
- [Przegląd klas](../../mfc/class-library-overview.md)   
+ [Klasa — Przegląd](../../mfc/class-library-overview.md)   
  [Makra i funkcje globalne](../../mfc/reference/mfc-macros-and-globals.md)

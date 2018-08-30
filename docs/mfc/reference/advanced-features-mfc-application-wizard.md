@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 71cfea0f5dc62e9e7aee4ec5372464ed83bced15
-ms.sourcegitcommit: b92ca0b74f0b00372709e81333885750ba91f90e
+ms.openlocfilehash: c5a3746116679ba8cfee086b42359cce8003b282
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/16/2018
-ms.locfileid: "42464664"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43198129"
 ---
 # <a name="advanced-features-mfc-application-wizard"></a>Funkcje zaawansowane, kreator aplikacji MFC
 Ten temat zawiera listę opcji dodatkowych funkcji aplikacji, takich jak pomoc, obsługa drukowania i tak dalej. W każdej sekcji określ dodatkową pomoc techniczną dla tych zaawansowanych funkcji.  
@@ -47,17 +47,17 @@ Ten temat zawiera listę opcji dodatkowych funkcji aplikacji, takich jak pomoc, 
  Obsługuje usługi Windows sockets, które można wykorzystać do pisania aplikacji komunikujących się za pośrednictwem sieci TCP/IP.  
   
  **Active Accessibility**  
- Dodaje obsługę [IAccessible](http://msdn.microsoft.com/library/windows/desktop/dd318466) do [CWnd](../../mfc/reference/cwnd-class.md)-pochodne klasy, które umożliwia dostosowywanie interfejsu użytkownika w celu lepszej interakcji z klientami ułatwień dostępu.  
+ Dodaje obsługę [IAccessible](/windows/desktop/api/oleacc/nn-oleacc-iaccessible) do [CWnd](../../mfc/reference/cwnd-class.md)-pochodne klasy, które umożliwia dostosowywanie interfejsu użytkownika w celu lepszej interakcji z klientami ułatwień dostępu.  
   
  **Typowe formant manifestu**  
  Domyślnie włączony. Generuje manifest aplikacji, aby włączyć bibliotekę DLL wspólnych formantów, która jest dołączona do systemu Microsoft Windows XP i nowszych systemów operacyjnych.  
   
  Biblioteka DLL wspólnych formantów w wersji 6 nie uaktualnia automatycznie wcześniejszej wersji wspólnych formantów, z których korzystają istniejące aplikacje. Aby używać wersji 6 biblioteki DLL wspólnych formantów, należy utworzyć manifest aplikacji, instruujący aplikację, aby załadowała bibliotekę DLL. Ta biblioteka DLL wspólnych formantów obsługuje również kompozycje systemu Windows XP.  
   
- Manifest aplikacji może również określić inne biblioteki DLL i wersje, których wymaga aplikacja. Aby uzyskać więcej informacji na temat manifestów aplikacji, zobacz [izolowanymi oraz aplikacjami wykonywanymi Side-by-Side](http://msdn.microsoft.com/library/dd408052) w zestawie Windows SDK.  
+ Manifest aplikacji może również określić inne biblioteki DLL i wersje, których wymaga aplikacja. Aby uzyskać więcej informacji na temat manifestów aplikacji, zobacz [izolowanymi oraz aplikacjami wykonywanymi Side-by-Side](/windows/desktop/SbsCs/isolated-applications-and-side-by-side-assemblies-portal) w zestawie Windows SDK.  
   
  **Obsługa Menedżera ponownego uruchamiania**  
- Dodaje obsługę [Menedżera ponownego uruchamiania Windows](/windows/desktop/RstMgr/using-restart-manager). Ten film pokazuje, jak używać Menedżera ponownego uruchamiania MFC: [jak używać nowego Menedżera ponownego uruchamiania](http://msdn.microsoft.com/vstudio/ee886407).  
+ Dodaje obsługę [Menedżera ponownego uruchamiania Windows](/windows/desktop/RstMgr/using-restart-manager). Ten film pokazuje, jak używać Menedżera ponownego uruchamiania MFC: [jak używać nowego Menedżera ponownego uruchamiania](https://msdn.microsoft.com/vstudio/ee886407).  
   
  **Zaawansowane okienka ramki**  
  |Opcja|Opis|  

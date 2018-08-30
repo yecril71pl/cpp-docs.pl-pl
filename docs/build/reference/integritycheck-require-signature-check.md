@@ -12,12 +12,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5a10594391b0f3be490608f7dfa006b0c32aa2e0
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: acc43bc4175f42282014e94426717527143dc059
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42609283"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43197059"
 ---
 # <a name="integritycheck-require-signature-check"></a>/INTEGRITYCHECK (Wymagaj sprawdzania podpisu)
 Określa, czy podpis cyfrowy obrazu binarnego musi być zaznaczone w czasie ładowania.  
@@ -47,5 +47,5 @@ Określa, czy podpis cyfrowy obrazu binarnego musi być zaznaczone w czasie ład
  [Ustawianie opcji konsolidatora](../../build/reference/setting-linker-options.md)   
  [Opcje konsolidatora](../../build/reference/linker-options.md)   
  [Wymuszone podpisywanie integralności z przenośny plik wykonywalny () plików PE](http://social.technet.microsoft.com/wiki/contents/articles/255.forced-integrity-signing-of-portable-executable-pe-files.aspx)   
- [Podpisywanie instruktażu kodu trybu jądra](http://msdn.microsoft.com/windows/hardware/gg487328.aspx)   
- [AppInit dll w Windows 7 i Windows Server 2008](http://msdn.microsoft.com/windows/hardware/gg463040.aspx)
+ [Podpisywanie instruktażu kodu trybu jądra](https://msdn.microsoft.com/windows/hardware/gg487328.aspx)   
+ [AppInit dll w Windows 7 i Windows Server 2008](https://msdn.microsoft.com/windows/hardware/gg463040.aspx)

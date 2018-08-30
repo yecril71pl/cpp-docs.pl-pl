@@ -44,12 +44,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 01a3d5aa898dccd680ea575a5753bc5cc3b8abf9
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: ef37b3bae0fa6bff9353b4415a614d252ddf661e
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38962832"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43205343"
 ---
 # <a name="bitset-class"></a>bitset — Klasa
 
@@ -64,7 +64,8 @@ class bitset
 
 ### <a name="parameters"></a>Parametry
 
-*N* określa liczbę bitów w obiekcie bitset — z liczbą całkowitą różną od zera typu `size_t` musi być znane w czasie kompilacji.
+*N*<br/>
+ Określa liczbę bitów w obiekcie bitset — z liczbą całkowitą różną od zera typu `size_t` musi być znane w czasie kompilacji.
 
 ## <a name="remarks"></a>Uwagi
 
@@ -237,19 +238,26 @@ explicit bitset(
 
 ### <a name="parameters"></a>Parametry
 
-*Val* liczba całkowita bez znaku, którego reprezentacja base dwóch służy do inicjowania usługi bits w bitset — są zbudowane.
+*Val*<br/>
+ Bez znaku liczby całkowitej, którego reprezentacja base dwóch służy do inicjowania usługi bits w bitset — są zbudowane.
 
-*str* ciąg zer i używane do zainicjowania wartości bitowe bitset —.
+*str*<br/>
+ Ciąg zer i używane do zainicjowania wartości bitowe bitset —.
 
-*_CStr* ciąg stylu C zer i używane do zainicjowania wartości bitowe bitset —.
+*_CStr*<br/>
+ Ciąg stylu C zer i używane do zainicjowania wartości bitowe bitset —.
 
-*_Pos* pozycja znaku w ciągu, licząc od lewej do prawej i od zaczynając od zera, używany do inicjowania pierwszego bitu bitset —.
+*_Pos*<br/>
+ Pozycja znaku w ciągu, licząc od lewej do prawej i rozpoczynającą się od zera, używany do inicjowania pierwszego bitu bitset —.
 
-*Liczba* liczbę znaków w ciągu, który służy do zapewnienia wartości początkowe usługi bits w bitset —.
+*Liczba*<br/>
+ Liczba znaków w ciągu, który służy do zapewnienia wartości początkowe usługi bits w bitset —.
 
-*_Zero* znak, który jest używany do reprezentowania zero. Wartość domyślna to "0".
+*_Zero*<br/>
+ Znak, który jest używany do reprezentowania zero. Wartość domyślna to "0".
 
-*_Jedna* znak, który jest używany do reprezentowania jednego. Wartość domyślna to "1".
+*_Co*<br/>
+ Znak, który jest używany do reprezentowania jednego. Wartość domyślna to "1".
 
 ### <a name="remarks"></a>Uwagi
 
@@ -465,7 +473,8 @@ bitset\<N>& flip(size_t _Pos);
 
 ### <a name="parameters"></a>Parametry
 
-*_Pos* Pozycja bitu, którego wartość ma być zmieniany.
+*_Pos*<br/>
+ Pozycja bitu, którego wartość ma być zmieniany.
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -473,7 +482,7 @@ Kopia zmodyfikowane bitset —, dla którego została wywołana funkcja elementu
 
 ### <a name="remarks"></a>Uwagi
 
-Funkcja drugiego członka zgłasza [out_of_range —](../standard-library/out-of-range-class.md) wyjątek, jeśli określona jako parametr pozycja jest większa niż rozmiar *N* z **bitset —\<***N***  >**  którego bitowa została odwrócona.
+Funkcja drugiego członka zgłasza [out_of_range —](../standard-library/out-of-range-class.md) wyjątek, jeśli określona jako parametr pozycja jest większa niż rozmiar *N* z **bitset —\<**  *N* **>** którego bitowa została odwrócona.
 
 ### <a name="example"></a>Przykład
 
@@ -593,7 +602,8 @@ bool operator!=(const bitset\<N>& right) const;
 
 ### <a name="parameters"></a>Parametry
 
-*prawy* bitset —, który ma być porównywana z bitset — docelowego pod kątem nierówności.
+*right*<br/>
+ Bitset — jest porównywana bitset — docelowego pod kątem nierówności.
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -654,7 +664,8 @@ bitset\<N>& operator&=(const bitset\<N>& right);
 
 ### <a name="parameters"></a>Parametry
 
-*prawy* bitset —, będącego ma być wyłączny sumy bitowej połączona z bitset — docelowy.
+*right*<br/>
+ Bitset — to być łączone bitowego z bitset — docelowy.
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -720,7 +731,8 @@ bitset\<N> operator<<(size_t _Pos) const;
 
 ### <a name="parameters"></a>Parametry
 
-*_Pos* liczbę pozycji z lewej strony, że bity w bitset — są lekkie.
+*_Pos*<br/>
+ Numer pozycji w lewo, że bity w bitset — są lekkie.
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -771,7 +783,8 @@ bitset\<N>& operator<<=(size_t _Pos);
 
 ### <a name="parameters"></a>Parametry
 
-*_Pos* liczbę pozycji z lewej strony, bity w bitset — są lekkie.
+*_Pos*<br/>
+ Numer pozycji w lewo, bity w bitset — są lekkie.
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -817,7 +830,8 @@ bool operator==(const bitset\<N>& right) const;
 
 ### <a name="parameters"></a>Parametry
 
-*prawy* bitset —, będącego ma być porównywana bitset — docelowego pod kątem równości.
+*right*<br/>
+ Bitset — jest porównywana bitset — docelowego pod kątem równości.
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -877,7 +891,8 @@ bitset\<N> operator>>(size_t _Pos) const;
 
 ### <a name="parameters"></a>Parametry
 
-*_Pos* liczbę pozycji po prawej stronie, bity w bitset — są lekkie.
+*_Pos*<br/>
+ Liczba pozycji po prawej stronie, że bity w bitset — są lekkie.
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -929,7 +944,8 @@ bitset\<N>& operator>>=(size_t _Pos);
 
 ### <a name="parameters"></a>Parametry
 
-*_Pos* liczbę pozycji po prawej stronie, bity w bitset — są lekkie.
+*_Pos*<br/>
+ Liczba pozycji po prawej stronie, że bity w bitset — są lekkie.
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -977,7 +993,8 @@ reference operator[](size_t _Pos);
 
 ### <a name="parameters"></a>Parametry
 
-*_Pos* pozycji lokalizowanie bit w bitset —.
+*_Pos*<br/>
+ Pozycja lokalizowanie bit w bitset —.
 
 ### <a name="remarks"></a>Uwagi
 
@@ -1019,7 +1036,8 @@ bitset\<N>& operator^=(const bitset\<N>& right);
 
 ### <a name="parameters"></a>Parametry
 
-*prawy* bitset —, będącego ma być wyłączny sumy bitowej połączona z bitset — docelowy.
+*right*<br/>
+ Bitset — to być łączone bitowego z bitset — docelowy.
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -1084,7 +1102,8 @@ bitset\<N>& operator|=(const bitset\<N>& right);
 
 ### <a name="parameters"></a>Parametry
 
-*prawy* bitset —, będącego ma być wyłączny sumy bitowej połączona z bitset — docelowy.
+*right*<br/>
+ Bitset — to być łączone bitowego z bitset — docelowy.
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -1203,9 +1222,11 @@ public:
 
 ### <a name="parameters"></a>Parametry
 
-*Val* wartość obiektu typu **bool** przypisuje się nieco w zestawu bitów.
+*Val*<br/>
+ Wartość obiektu typu **bool** przypisuje się nieco w zestawu bitów.
 
-*_Bitref* odwołanie do formularza *x [i]* do bitu w położeniu *i* w bitset — *x*.
+*_Bitref*<br/>
+ Odwołanie do formularza *x [i]* do bitu w położeniu *i* w bitset — *x*.
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -1213,7 +1234,7 @@ Odwołanie do bitu w bitset — określone przez pozycja argumentu dla pierwszeg
 
 ### <a name="remarks"></a>Uwagi
 
-Klasa `reference` istnieje tylko jako klasa pomocnicza do bitset — `operator[]`. Klasa składowej opisuje obiekt, który mogą uzyskiwać dostęp do poszczególnych bitowe, w ramach zestawu bitów. Pozwól *b* być obiektem typu **bool**, *x* i *y* obiektów typu **bitset —\<***N***  >** , i *i* i *"j"* prawidłowe położenie takiego obiektu. Notacja *x [i]* odwołuje się do bitu w położeniu *i* w bitset — *x*. Funkcje elementów członkowskich klasy `reference` zapewniają kolejno następujące operacje:
+Klasa `reference` istnieje tylko jako klasa pomocnicza do bitset — `operator[]`. Klasa składowej opisuje obiekt, który mogą uzyskiwać dostęp do poszczególnych bitowe, w ramach zestawu bitów. Pozwól *b* być obiektem typu **bool**, *x* i *y* obiektów typu **bitset —\<**  *N* **>**, i *i* i *"j"* prawidłowe położenie takiego obiektu. Notacja *x [i]* odwołuje się do bitu w położeniu *i* w bitset — *x*. Funkcje elementów członkowskich klasy `reference` zapewniają kolejno następujące operacje:
 
 |Operacja|Definicja|
 |---------------|----------------|
@@ -1316,7 +1337,8 @@ bitset\<N>& reset(size_t _Pos);
 
 ### <a name="parameters"></a>Parametry
 
-*_Pos* Pozycja bitu w bitset — aby zresetowane do wartości 0.
+*_Pos*<br/>
+ Pozycja bitu bitset — aby zresetowane do wartości 0.
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -1378,9 +1400,11 @@ bitset\<N>& set(
 
 ### <a name="parameters"></a>Parametry
 
-*_Pos* Pozycja bitu w bitset — należy ustawić przypisana wartość.
+*_Pos*<br/>
+ Pozycja bitu w bitset — należy ustawić przypisanej wartości.
 
-*Val* wartość do przypisania do bitu na określonej pozycji.
+*Val*<br/>
+ Wartość do przypisania do bitu na określonej pozycji.
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -1482,7 +1506,8 @@ bool test(size_t _Pos) const;
 
 ### <a name="parameters"></a>Parametry
 
-*_Pos* Pozycja bitu w bitset — do przetestowania jako jej wartość.
+*_Pos*<br/>
+ Pozycja bitu bitset — do przetestowania jako jej wartość.
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -1491,4 +1516,3 @@ bool test(size_t _Pos) const;
 ### <a name="remarks"></a>Uwagi
 
 Funkcja elementu członkowskiego zgłasza [out_of_range —](../standard-library/out-of-range-class.md)
-

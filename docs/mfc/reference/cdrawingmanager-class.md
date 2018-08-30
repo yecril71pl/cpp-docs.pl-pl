@@ -66,12 +66,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2f19461b04f98ab06a2c828b0f61fb556f9a7d7d
-ms.sourcegitcommit: 7eadb968405bcb92ffa505e3ad8ac73483e59685
+ms.openlocfilehash: 52ded6eb4b6b757934bcdb62c280c6d57e1b171e
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/23/2018
-ms.locfileid: "39209173"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43196063"
 ---
 # <a name="cdrawingmanager-class"></a>Klasa CDrawingManager
 `CDrawingManager` Klasa implementuje złożonych algorytmów rysowania.  
@@ -169,7 +169,7 @@ static HBITMAP __stdcall CreateBitmap_32(
  Uchwyt do nowo utworzonej mapy bitowej DIB Jeśli ta metoda się powiedzie; w przeciwnym razie wartość NULL.  
   
 ### <a name="remarks"></a>Uwagi  
- Aby uzyskać więcej informacji na temat tworzenia mapy bitowej DIB zobacz [CreateDIBSection](http://msdn.microsoft.com/library/windows/desktop/dd183491).  
+ Aby uzyskać więcej informacji na temat tworzenia mapy bitowej DIB zobacz [CreateDIBSection](/windows/desktop/api/wingdi/nf-wingdi-createdibitmap).  
   
 ##  <a name="drawalpha"></a>  CDrawingManager::DrawAlpha  
  Wyświetla mapy bitowe, które mają przezroczyste lub półprzezroczystych pikseli.  
@@ -196,7 +196,7 @@ void DrawAlpha(
  Prostokąta źródłowego.  
   
 ### <a name="remarks"></a>Uwagi  
- Ta metoda przeprowadza przenikaniem alfa dla dwóch map bitowych. Aby uzyskać więcej informacji na temat mieszania alfa, zobacz [AlphaBlend](http://msdn.microsoft.com/library/windows/desktop/dd183351) w zestawie Windows SDK.  
+ Ta metoda przeprowadza przenikaniem alfa dla dwóch map bitowych. Aby uzyskać więcej informacji na temat mieszania alfa, zobacz [AlphaBlend](/windows/desktop/api/wingdi/nf-wingdi-alphablend) w zestawie Windows SDK.  
   
 ##  <a name="drawellipse"></a>  CDrawingManager::DrawEllipse  
  Rysuje elipsę o podanej kolorów wypełnienia i obramowanie.  

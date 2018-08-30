@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 17da583b770fcab1d682868c38c04e0aa97155dd
-ms.sourcegitcommit: 76fd30ff3e0352e2206460503b61f45897e60e4f
+ms.openlocfilehash: 348f25718fe22e056da5097bca0d67013a56c4c8
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/13/2018
-ms.locfileid: "39026436"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43203152"
 ---
 # <a name="cmemorystate-structure"></a>Struktura CMemoryState
 Zapewnia wygodny sposób wykrywania przecieki pamięci w programie.  
@@ -172,7 +172,7 @@ void DumpStatistics() const;
   
 -   Całkowita pamięć, aktualnie używane przez program (w bajtach)  
   
- Wolne bloki to liczba bloków, których dezalokacji została opóźniona, jeśli `afxMemDF` została ustawiona na `delayFreeMemDF`. Aby uzyskać więcej informacji, zobacz [afxmemdf —](diagnostic-services.md#afxmemdf), w sekcji "Makra i globalne MFC". Zobacz [typy bloków na stercie debugowania](http://msdn.microsoft.com/db2e7f62-0679-4b39-a23f-26f2c2f407c5) dla więcej informacji na ten temat blokowania typów.  
+ Wolne bloki to liczba bloków, których dezalokacji została opóźniona, jeśli `afxMemDF` została ustawiona na `delayFreeMemDF`. Aby uzyskać więcej informacji, zobacz [afxmemdf —](diagnostic-services.md#afxmemdf), w sekcji "Makra i globalne MFC". Zobacz [typy bloków na stercie debugowania](https://msdn.microsoft.com/db2e7f62-0679-4b39-a23f-26f2c2f407c5) dla więcej informacji na ten temat blokowania typów.  
   
 ### <a name="example"></a>Przykład  
   Poniższy kod, należy umieścić w *projname*App.cpp. Zdefiniuj następujące zmienne globalne:  

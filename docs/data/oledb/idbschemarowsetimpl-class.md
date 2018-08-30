@@ -47,12 +47,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 21910a85dfecf6bd1e66b4ce0df366e3841f3c36
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: 3f8e1875f318b35e0b28cf1e36f926d54cab4831
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42464558"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43204131"
 ---
 # <a name="idbschemarowsetimpl-class"></a>IDBSchemaRowsetImpl — Klasa
 Udostępnia implementację dla zestawów wierszy schematu.  
@@ -145,7 +145,7 @@ HRESULT CreateSchemaRowset(IUnknown *pUnkOuter,
   
 #### <a name="parameters"></a>Parametry  
  *pUnkOuter*  
- [in] Zewnętrzne [IUnknown](http://msdn.microsoft.com/library/windows/desktop/ms680509) podczas agregowania, w przeciwnym razie wartość NULL.  
+ [in] Zewnętrzne [IUnknown](/windows/desktop/api/unknwn/nn-unknwn-iunknown) podczas agregowania, w przeciwnym razie wartość NULL.  
   
  *cRestrictions*  
  [in] Liczba ograniczenia stosowane do zestawu wierszy schematu.  
@@ -279,7 +279,7 @@ STDMETHOD (GetSchema s )(ULONG * pcSchemas,
  Implementacja tej funkcji wymaga użytkownik musi mieć schemat mapowania w klasie sesji. Korzystając z informacji Mapa schematu, następnie odpowiadały tablicę identyfikatorów GUID dla schematów w mapie. Reprezentuje schematów obsługiwane przez dostawcę.  
 
 ## <a name="see-also"></a>Zobacz też  
- [Elementy członkowskie idbschemarowsetimpl — klasa](http://msdn.microsoft.com/e74f6f82-541c-42e7-b4c6-e2d4656a0649)   
+ [Elementy członkowskie idbschemarowsetimpl — klasa](https://msdn.microsoft.com/e74f6f82-541c-42e7-b4c6-e2d4656a0649)   
  [Klasy zestawów wierszy schematu i klasy Typedef](../../data/oledb/schema-rowset-classes-and-typedef-classes.md)   
  [Obsługa zestawów wierszy schematu](../../data/oledb/supporting-schema-rowsets.md)    
  [SCHEMA_ENTRY](../../data/oledb/schema-entry.md)    

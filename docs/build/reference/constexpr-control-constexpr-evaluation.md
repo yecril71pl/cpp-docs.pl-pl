@@ -1,5 +1,5 @@
 ---
-title: -constexpr (oceny specyfikatora constexpr kontroli) | Dokumentacja firmy Microsoft
+title: -constexpr (Szacowanie kontrolki constexpr) | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 08/15/2017
 ms.technology:
@@ -19,47 +19,47 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f83f1d9a505ebc4c05ce4e367bb1e978d6a14b78
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 475702792686a3de8d1ae52bd9e40ef113c49da1
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32373962"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43202577"
 ---
-# <a name="constexpr-control-constexpr-evaluation"></a>/constexpr (oceny specyfikatora constexpr sterowania)  
+# <a name="constexpr-control-constexpr-evaluation"></a>/constexpr (Szacowanie kontrolki constexpr)  
   
-Użyj **/constexpr** — opcje kompilatora sterowania parametrami dla `constexpr` oceny w czasie kompilacji.  
+Użyj **/constexpr** opcje kompilatora sterowania parametrami dla **constexpr** oceny w czasie kompilacji.  
   
 ## <a name="syntax"></a>Składnia  
   
-> /constexpr:DEPTH*N*  
-> /constexpr:backtrace*N*  
-> Steps*N*  
+> **/ constexpr: DEPTH**<em>N</em>  
+> **/ constexpr: backtrace**<em>N</em>  
+> **/ constexpr: Steps**<em>N</em>  
   
 ## <a name="arguments"></a>Argumenty  
   
-**głębokość *** N*  
-Ogranicz głębokość cykliczne `constexpr` na wywołania funkcji *N* poziomów. Wartość domyślna to 512.  
+**głębokość**<em>N</em>  
+Limit głębokości cyklicznego **constexpr** wywołania do funkcji *N* poziomów. Wartość domyślna to 512.  
   
-**backtrace *** N*  
-Pokaż maksymalnie *N* `constexpr` oceny w diagnostyce. Wartość domyślna to 10.  
+**backtrace**<em>N</em>  
+Pokaż maksymalnie *N* **constexpr** ocen w diagnostyce. Wartość domyślna wynosi 10.  
   
-**kroki *** N*  
-Przerwanie `constexpr` szacowania po *N* czynności. Wartość domyślna to 100 000.  
+**kroki**<em>N</em>  
+Zakończenie **constexpr** szacowania po *N* kroki. Wartość domyślna to 100 000.  
   
 ## <a name="remarks"></a>Uwagi  
   
-**/Constexpr** kompilatora opcje umożliwiają kontrolowanie oceny kompilacji `constexpr` wyrażenia. Kroki oceny, poziom rekursji i głębokość backtrace są kontrolowane aby uniemożliwić kompilatorowi wydatków zbyt dużo czasu na `constexpr` oceny. Aby uzyskać więcej informacji na temat `constexpr` element języka, zobacz [constexpr (C++)](../../cpp/constexpr-cpp.md).  
+**/Constexpr** opcje kompilatora kontrolować obliczania kompilacji **constexpr** wyrażenia. Kroki oceny, poziom rekursji i głębi backtrace są kontrolowane można uniemożliwić kompilatorowi zbyt dużo czasu podstawą przedstawiają analizę wydatków **constexpr** oceny. Aby uzyskać więcej informacji na temat **constexpr** elementu języka, zobacz [constexpr (C++)](../../cpp/constexpr-cpp.md).  
 
 **/Constexpr** opcje są dostępne począwszy od wersji programu Visual Studio 2015.  
   
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Aby ustawić tę opcję kompilatora w środowisku programowania Visual Studio  
   
-1. Otwórz projekt w **strony właściwości** okno dialogowe.   
+1. Otwórz swój projekt **stron właściwości** okno dialogowe.   
   
-2. W obszarze **właściwości konfiguracji**, rozwiń węzeł **C/C++** folder i wybierz polecenie **wiersza polecenia** strony właściwości.  
+2. W obszarze **właściwości konfiguracji**, rozwiń węzeł **C/C++** folder i wybierz polecenie **wiersza polecenia** stronę właściwości.  
   
-3. Wprowadź wszelkie **/constexpr** opcje kompilatora w **dodatkowe opcje** pole. Wybierz **OK** lub **Zastosuj** Aby zapisać zmiany.  
+3. Wprowadź dowolne **/constexpr** kompilatora opcji na liście **dodatkowe opcje** pole. Wybierz **OK** lub **Zastosuj** Aby zapisać zmiany.  
   
 ### <a name="to-set-this-compiler-option-programmatically"></a>Aby programowo ustawić tę opcję kompilatora  
   

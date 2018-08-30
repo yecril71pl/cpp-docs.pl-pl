@@ -25,39 +25,39 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6e1709c878a0b5f5325798b874e5549c5c8cb83f
-ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
+ms.openlocfilehash: eae97f795898c97bfb371637fc52a27c9e39039d
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "33329985"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43204692"
 ---
 # <a name="midl-property-pages-general"></a>Strony właściwości MIDL: ogólne
-**Ogólne** stronę właściwości w **MIDL** folderu określa następujące opcje kompilatora MIDL:  
+**Ogólne** — strona właściwości w **MIDL** folderu określa następujące opcje kompilatora MIDL:  
   
--   Definicje preprocesora [(/D](http://msdn.microsoft.com/library/windows/desktop/aa367321))  
+-   Definicje preprocesora [(/D](https://msdn.microsoft.com/library/windows/desktop/aa367321))  
   
--   Dodatkowe katalogi dołączenia ([/I](http://msdn.microsoft.com/library/windows/desktop/aa367328))  
+-   Dodatkowe katalogi dyrektywy Include ([/I](https://msdn.microsoft.com/library/windows/desktop/aa367328))  
   
--   Ignoruj standardową ścieżkę obejmują ([/no_def_idir](http://msdn.microsoft.com/library/windows/desktop/aa367347))  
+-   Ignoruj standardową ścieżkę obejmują ([/no_def_idir](https://msdn.microsoft.com/library/windows/desktop/aa367347))  
   
--   Kompatybilne z MkTypLib ([/mktyplib203](http://msdn.microsoft.com/library/windows/desktop/aa367332))  
+-   Zgodne z MkTypLib ([/mktyplib203](https://msdn.microsoft.com/library/windows/desktop/aa367332))  
   
--   Poziom ostrzeżenia ([/W](http://msdn.microsoft.com/library/windows/desktop/aa367383))  
+-   Poziom ostrzeżeń ([Wn](https://msdn.microsoft.com/library/windows/desktop/aa367383))  
   
--   Ostrzeżenia jak błędy ([wx](http://msdn.microsoft.com/library/windows/desktop/aa367387))  
+-   Ostrzeżenie jako błąd ([/WX](https://msdn.microsoft.com/library/windows/desktop/aa367387))  
   
--   Pomiń Baner startowy ([/nologo](http://msdn.microsoft.com/library/windows/desktop/aa367341))  
+-   Pomiń transparent początkowy ([/nologo](https://msdn.microsoft.com/library/windows/desktop/aa367341))  
   
--   Typ Char MIDL ([/char](http://msdn.microsoft.com/library/windows/desktop/aa367314))  
+-   Typ Char MIDL ([/char](https://msdn.microsoft.com/library/windows/desktop/aa367314))  
   
--   Środowisko docelowe ([/ENV](http://msdn.microsoft.com/library/windows/desktop/aa367323))  
+-   Środowisko docelowe ([/ENV](https://msdn.microsoft.com/library/windows/desktop/aa367323))  
   
--   Generuj pośredników bez namiastek ([/oicf](http://msdn.microsoft.com/library/windows/desktop/aa367352))  
+-   Generuj proxy bez klas zastępczych ([/Oicf](https://msdn.microsoft.com/library/windows/desktop/aa367352))  
   
- Aby uzyskać informacje dotyczące dostępu do **ogólne** stronę właściwości w **MIDL** folderu, zobacz [Praca z właściwościami projektu](../ide/working-with-project-properties.md).  
+ Aby uzyskać informacje dotyczące uzyskiwania dostępu do **ogólne** — strona właściwości w **MIDL** folderów, zobacz [Praca z właściwościami projektu](../ide/working-with-project-properties.md).  
   
- Aby uzyskać informacje dotyczące sposobu uzyskania programowego dostępu do MIDL opcje dla projektów C++, zobacz <xref:Microsoft.VisualStudio.VCProjectEngine.VCMidlTool> obiektu.  
+ Aby uzyskać informacje o tym, jak programowo uzyskać dostęp do MIDL opcji dla projektów języka C++, zobacz <xref:Microsoft.VisualStudio.VCProjectEngine.VCMidlTool> obiektu.  
   
 ## <a name="see-also"></a>Zobacz też  
  [Strony właściwości MIDL](../ide/midl-property-pages.md)

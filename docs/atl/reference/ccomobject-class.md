@@ -22,12 +22,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4be126af9228312fa5fd4430e4f477f037d31df8
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: 37c8140d3579fc5d629b10c8e3ae5459e6492920
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42466236"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43198663"
 ---
 # <a name="ccomobject-class"></a>Klasa CComObject
 Ta klasa implementuje `IUnknown` nieagregowane obiektu.  
@@ -62,7 +62,7 @@ class CComObject : public Base
 |[CComObject::Release](#release)|Dekrementuje liczbę odwołań do obiektu.|  
   
 ## <a name="remarks"></a>Uwagi  
- `CComObject` implementuje [IUnknown](http://msdn.microsoft.com/library/windows/desktop/ms680509) nieagregowane obiektu. Jednak wywołania `QueryInterface`, `AddRef`, i `Release` są delegowane `CComObjectRootEx`.  
+ `CComObject` implementuje [IUnknown](/windows/desktop/api/unknwn/nn-unknwn-iunknown) nieagregowane obiektu. Jednak wywołania `QueryInterface`, `AddRef`, i `Release` są delegowane `CComObjectRootEx`.  
   
  Aby uzyskać więcej informacji o korzystaniu z `CComObject`, zapoznaj się z artykułem [podstawy ATL obiektów COM](../../atl/fundamentals-of-atl-com-objects.md).  
   
@@ -92,8 +92,8 @@ CComObject(void* = NULL);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- **Void\***  
- [in] Ten parametr nienazwany nie jest używany. Istnieje symetrii z innymi **CCom *** XXX*`Object`*XXX* konstruktorów.  
+ <em>Void\*</em>  
+ [in] Ten parametr nienazwany nie jest używany. Istnieje symetrii z innymi `CComXXXObjectXXX` konstruktorów.  
   
 ### <a name="remarks"></a>Uwagi  
  Dekrementuje destruktor go.  

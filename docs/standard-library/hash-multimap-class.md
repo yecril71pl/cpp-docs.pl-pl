@@ -96,12 +96,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: efebe74f0f2735b9f32b0114a3db68d0839b90f2
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 857c0614288240aeaf3001d03aa5d6372ccee1c9
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38965012"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43196308"
 ---
 # <a name="hashmultimap-class"></a>hash_multimap — Klasa
 
@@ -122,13 +122,17 @@ class hash_multimap
 
 ### <a name="parameters"></a>Parametry
 
-*Klucz* typ danych klucza ma być przechowywany w hash_multimap.
+*Key*<br/>
+ Typ danych klucza, który ma być przechowywany w hash_multimap.
 
-*Typ* typ danych elementu, który ma być przechowywany w hash_multimap.
+*Typ*<br/>
+ Typ danych elementu, który ma być przechowywany w hash_multimap.
 
-*Cechy* typ, który zawiera dwa obiekty funkcyjne, jednej klasy *cech* który będzie można porównać dwie wartości elementów jako klucze sortowania, aby określić ich względną kolejność i funkcję mieszania, która jest kluczem predykatu mapowania jednoargumentowy wartości elementów do liczb całkowitych bez znaku typu `size_t`. Ten argument jest opcjonalny, a `hash_compare<Key, less<Key>>` jest wartością domyślną.
+*Cechy*<br/>
+ Typ, który zawiera dwa obiekty funkcyjne, jednej klasy *cech* który będzie można porównać dwie wartości elementów jako klucze sortowania, aby określić ich względną kolejność i funkcję mieszania, która jest jednoargumentowy wartości klucza predykatu Mapowanie elementów do niepodpisane liczby całkowite typu `size_t`. Ten argument jest opcjonalny, a `hash_compare<Key, less<Key>>` jest wartością domyślną.
 
-*Allocator* typ reprezentujący przechowywany obiekt alokatora, który hermetyzuje szczegóły dotyczące alokacji i dezalokacji pamięci hash_multimap. Ten argument jest opcjonalny, a wartość domyślna to `allocator<pair <const Key, Type>>`.
+*Allocator*<br/>
+ Typ reprezentujący przechowywany obiekt alokatora, który hermetyzuje szczegóły dotyczące alokacji i dezalokacji pamięci hash_multimap. Ten argument jest opcjonalny, a wartość domyślna to `allocator<pair <const Key, Type>>`.
 
 ## <a name="remarks"></a>Uwagi
 
@@ -474,11 +478,11 @@ typedef list<typename Traits::value_type, typename Traits::allocator_type>::cons
 
 Typ `const_iterator` nie może służyć do modyfikowania wartości elementu.
 
-`const_iterator` Zdefiniowane przez punkty hash_multimap do obiektów [value_type](#value_type), które są typu `pair` *\< ***constKey, typ*** >*. Wartość klucza jest dostępna za pośrednictwem pary pierwszego elementu członkowskiego, a wartość elementu zmapowanego jest dostępna za pośrednictwem drugiego elementu członkowskiego pary.
+`const_iterator` Zdefiniowane przez punkty hash_multimap do obiektów [value_type](#value_type), które są typu `pair<const Key, Type>`. Wartość klucza jest dostępna za pośrednictwem pary pierwszego elementu członkowskiego, a wartość elementu zmapowanego jest dostępna za pośrednictwem drugiego elementu członkowskiego pary.
 
 Próbę `const_iterator` `cIter` wskazuje element hash_multimap, użyj `->` operatora.
 
-Aby uzyskać dostęp do wartości klucza dla elementu, należy użyć `cIter`  ->  **pierwszy**, która jest równoważna (\* `cIter`). **pierwszy**. Aby uzyskać dostęp do wartości zamapowanego datum dla elementu, należy użyć `cIter`  ->  **drugi**, która jest równoważna (\* `cIter`). **pierwszy**.
+Aby uzyskać dostęp do wartości klucza dla elementu, należy użyć `cIter->first`, który jest odpowiednikiem `(*cIter).first`. Aby uzyskać dostęp do wartości zamapowanego datum dla elementu, należy użyć `cIter->second`, który jest odpowiednikiem `(*cIter).second`.
 
 ### <a name="example"></a>Przykład
 
@@ -572,11 +576,11 @@ typedef list<typename Traits::value_type, typename Traits::allocator_type>::cons
 
 Typ `const_reverse_iterator` nie można zmodyfikować wartości elementu i jest używany do iterowania po hash_multimap w odwrotnej kolejności.
 
-`const_reverse_iterator` Zdefiniowane przez punkty hash_multimap do obiektów [value_type](#value_type), które są typu `pair` * \< * **const Key, wpisz >**, którego pierwszego elementu członkowskiego jest kluczem do elementu i którego second — członek jest zamapowany datum utrzymywane przez element.
+`const_reverse_iterator` Zdefiniowane przez punkty hash_multimap do obiektów [value_type](#value_type), które są typu `pair<const Key, Type>`, którego pierwszy element członkowski jest kluczem do elementu, jak i drugi, którego element członkowski jest zamapowany podstawy wymiarowej utrzymywane przez element.
 
 Próbę `const_reverse_iterator` `crIter` wskazuje element hash_multimap, użyj `->` operatora.
 
-Aby uzyskać dostęp do wartości klucza dla elementu, należy użyć `crIter`  ->  **pierwszy**, która jest równoważna (\* `crIter`). **pierwszy**. Aby uzyskać dostęp do wartości zamapowanego datum dla elementu, należy użyć `crIter`  ->  **drugi**, która jest równoważna (\* `crIter`). **pierwszy**.
+Aby uzyskać dostęp do wartości klucza dla elementu, należy użyć `crIter->first`, który jest odpowiednikiem `(*crIter).first`. Aby uzyskać dostęp do wartości zamapowanego datum dla elementu, należy użyć `crIter->second`, który jest odpowiednikiem `(*crIter).second`.
 
 ### <a name="example"></a>Przykład
 
@@ -595,7 +599,8 @@ size_type count(const Key& key) const;
 
 ### <a name="parameters"></a>Parametry
 
-*klucz* klucz elementy, które mają być dopasowywane z hash_multimap.
+*Klucz*<br/>
+ Klucz elementy, które mają być dopasowywane z hash_multimap.
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -1090,7 +1095,8 @@ pair <iterator, iterator> equal_range (const Key& key);
 
 ### <a name="parameters"></a>Parametry
 
-*klucz* klucza argumentu ma być porównywana za pomocą klucza sortowania z hash_multimap wyszukiwany element.
+*Klucz*<br/>
+ Argument klucz, który ma zostać porównane z klucza sortowania elementu z hash_multimap wyszukiwany.
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -1180,13 +1186,17 @@ size_type erase(const key_type& key);
 
 ### <a name="parameters"></a>Parametry
 
-*_Where* pozycję elementu do usunięcia z hash_multimap.
+*_Where*<br/>
+ Pozycja elementu do usunięcia z hash_multimap.
 
-*pierwszy* pozycja pierwszego elementu usunięte z hash_multimap.
+*pierwszy*<br/>
+ Pozycja pierwszego elementu są usuwane z hash_multimap.
 
-*ostatni* pozycji tuż za ostatnim elementem usunięte z hash_multimap.
+*ostatni*<br/>
+ Pozycja tuż za ostatnim elementem usunięte z hash_multimap.
 
-*klucz* klucz elementów do usunięcia z hash_multimap.
+*Klucz*<br/>
+ Klucz elementów do usunięcia z hash_multimap.
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -1300,7 +1310,8 @@ const_iterator find(const Key& key) const;
 
 ### <a name="parameters"></a>Parametry
 
-*klucz* klucza, które mają być dopasowywane o klucz sortowania elementu z hash_multimap wyszukiwany.
+*Klucz*<br/>
+ Klucz, które mają być dopasowywane o klucz sortowania elementu z hash_multimap wyszukiwany.
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -1517,7 +1528,7 @@ hash_multimap(
 |-|-|
 |*Al*|Klasa alokatora magazynu ma być używany dla tego obiektu hash_multimap, wartość domyślna to `Allocator`.|
 |*Comp*|Funkcja porównywania typu `const Traits` porządkowania elementów w mapie, którego wartość domyślna to `Traits`.|
-|*Po prawej stronie*|Mapa, w której zestaw zbudowany jest kopią.|
+|*po prawej stronie*|Mapa, w której zestaw zbudowany jest kopią.|
 |*pierwszy*|Pozycja pierwszego elementu w zakresie elementów, które mają zostać skopiowane.|
 |*ostatni*|Pozycja pierwszego elementu poza zakresem elementów, które mają zostać skopiowane.|
 |*IList*|Lista initializer_list do skopiowania.|
@@ -1750,7 +1761,8 @@ const_iterator lower_bound(const Key& key) const;
 
 ### <a name="parameters"></a>Parametry
 
-*klucz* klucza argumentu ma być porównywana za pomocą klucza sortowania z hash_multimap wyszukiwany element.
+*Klucz*<br/>
+ Argument klucz, który ma zostać porównane z klucza sortowania elementu z hash_multimap wyszukiwany.
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -2303,7 +2315,8 @@ void swap(hash_multimap& right);
 
 ### <a name="parameters"></a>Parametry
 
-*prawy* hash_multimap zawierająca elementy, które mają być zamienione lub hash_multimap, której elementy są wymieniane z tymi hash_multimap.
+*right*<br/>
+ Hash_multimap, zawierająca elementy, które mają być zamienione lub hash_multimap, której elementy są wymieniane z tymi hash_multimap.
 
 ### <a name="remarks"></a>Uwagi
 
@@ -2376,7 +2389,8 @@ const_iterator upper_bound(const Key& key) const;
 
 ### <a name="parameters"></a>Parametry
 
-*klucz* klucza argumentu ma być porównywana za pomocą klucza sortowania z hash_multimap wyszukiwany element.
+*Klucz*<br/>
+ Argument klucz, który ma zostać porównane z klucza sortowania elementu z hash_multimap wyszukiwany.
 
 ### <a name="return-value"></a>Wartość zwracana
 

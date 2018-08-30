@@ -47,12 +47,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 295fb6944c3c18c2e7794ca13ad5ab93b788a776
-ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
+ms.openlocfilehash: 6d87a3b0e4ed9c5c558c90a2935c538b4fb826be
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37883482"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43201683"
 ---
 # <a name="message-map-macros-atl"></a>Makra mapy komunikatów (ATL)
 Te makra definiują mapy komunikatów i wpisów.  
@@ -346,7 +346,7 @@ CHAIN_MSG_MAP_MEMBER(theChainMember)
  **Nagłówek:** atlwin.h   
   
 ##  <a name="command_code_handler"></a>  COMMAND_CODE_HANDLER  
- Podobnie jak [COMMAND_HANDLER](#command_handler), ale mapuje [WM_COMMAND](http://msdn.microsoft.com/library/windows/desktop/ms647591) wiadomości tylko na podstawie powiadomień kodu.  
+ Podobnie jak [COMMAND_HANDLER](#command_handler), ale mapuje [WM_COMMAND](/windows/desktop/menurc/wm-command) wiadomości tylko na podstawie powiadomień kodu.  
   
 ```
 COMMAND_CODE_HANDLER(code, func)
@@ -380,7 +380,7 @@ COMMAND_HANDLER(id, code, func)
  [in] Nazwa funkcji obsługi wiadomości.  
   
 ### <a name="remarks"></a>Uwagi  
- Mapuje COMMAND_HANDLER [WM_COMMAND](http://msdn.microsoft.com/library/windows/desktop/ms647591) komunikatów do funkcji obsługi, na podstawie kodu powiadomienia i identyfikator formantu. Na przykład:  
+ Mapuje COMMAND_HANDLER [WM_COMMAND](/windows/desktop/menurc/wm-command) komunikatów do funkcji obsługi, na podstawie kodu powiadomienia i identyfikator formantu. Na przykład:  
   
  [!code-cpp[NVC_ATL_Windowing#119](../../atl/codesnippet/cpp/message-map-macros-atl_6.h)]  
   
@@ -401,7 +401,7 @@ COMMAND_HANDLER(id, code, func)
  **Nagłówek:** atlwin.h   
   
 ##  <a name="command_id_handler"></a>  COMMAND_ID_HANDLER  
- Podobnie jak [COMMAND_HANDLER](#command_handler), ale mapuje [WM_COMMAND](http://msdn.microsoft.com/library/windows/desktop/ms647591) wiadomości tylko na podstawie identyfikatora elementu menu, kontrolki lub klawiszy skrótów.  
+ Podobnie jak [COMMAND_HANDLER](#command_handler), ale mapuje [WM_COMMAND](/windows/desktop/menurc/wm-command) wiadomości tylko na podstawie identyfikatora elementu menu, kontrolki lub klawiszy skrótów.  
   
 ```
 COMMAND_ID_HANDLER(id, func)
@@ -418,7 +418,7 @@ COMMAND_ID_HANDLER(id, func)
  **Nagłówek:** atlwin.h   
   
 ##  <a name="command_range_code_handler"></a>  COMMAND_RANGE_CODE_HANDLER  
- Podobnie jak [COMMAND_RANGE_HANDLER](#command_range_handler), ale mapuje [WM_COMMAND](http://msdn.microsoft.com/library/windows/desktop/ms647591) komunikatów za pomocą kodu określonych powiadomień z szeroką gamę elementów sterujących funkcji pojedynczy program obsługi.  
+ Podobnie jak [COMMAND_RANGE_HANDLER](#command_range_handler), ale mapuje [WM_COMMAND](/windows/desktop/menurc/wm-command) komunikatów za pomocą kodu określonych powiadomień z szeroką gamę elementów sterujących funkcji pojedynczy program obsługi.  
   
 ```
 COMMAND_RANGE_CODE_HANDLER(idFirst, idLast, code, func)
@@ -444,7 +444,7 @@ COMMAND_RANGE_CODE_HANDLER(idFirst, idLast, code, func)
  **Nagłówek:** atlwin.h   
   
 ##  <a name="command_range_handler"></a>  COMMAND_RANGE_HANDLER  
- Podobnie jak [COMMAND_HANDLER](#command_handler), ale mapuje [WM_COMMAND](http://msdn.microsoft.com/library/windows/desktop/ms647591) wiadomości z szeroką gamę elementów sterujących funkcji pojedynczy program obsługi.  
+ Podobnie jak [COMMAND_HANDLER](#command_handler), ale mapuje [WM_COMMAND](/windows/desktop/menurc/wm-command) wiadomości z szeroką gamę elementów sterujących funkcji pojedynczy program obsługi.  
   
 ```
 COMMAND_RANGE_HANDLER( idFirst, idLast, func)
@@ -553,7 +553,7 @@ MESSAGE_HANDLER( msg, func )
 > [!NOTE]
 >  Zawsze zaczynają się mapy komunikatów za pomocą [BEGIN_MSG_MAP](#begin_msg_map). Następnie można zadeklarować mapy kolejnych komunikatów alternatywny z [ALT_MSG_MAP](#alt_msg_map). [END_MSG_MAP](#end_msg_map) — makro oznacza koniec mapie komunikatów. Mapy komunikatów, co musi mieć dokładnie jedno wystąpienie BEGIN_MSG_MAP i END_MSG_MAP.  
   
- Oprócz MESSAGE_HANDLER, można użyć [COMMAND_HANDLER](#command_handler) i [NOTIFY_HANDLER](#notify_handler) do mapowania [WM_COMMAND](http://msdn.microsoft.com/library/windows/desktop/ms647591) i [WM_NOTIFY](http://msdn.microsoft.com/library/windows/desktop/bb775583) wiadomości , odpowiednio.  
+ Oprócz MESSAGE_HANDLER, można użyć [COMMAND_HANDLER](#command_handler) i [NOTIFY_HANDLER](#notify_handler) do mapowania [WM_COMMAND](/windows/desktop/menurc/wm-command) i [WM_NOTIFY](https://msdn.microsoft.com/library/windows/desktop/bb775583) wiadomości , odpowiednio.  
   
  Aby uzyskać więcej informacji o korzystaniu z mapy komunikatów w ATL, zobacz [mapy wiadomości](../../atl/message-maps-atl.md).  
   
@@ -584,7 +584,7 @@ MESSAGE_RANGE_HANDLER( msgFirst, msgLast, func )
  **Nagłówek:** atlwin.h   
   
 ##  <a name="notify_code_handler"></a>  NOTIFY_CODE_HANDLER  
- Podobnie jak [NOTIFY_HANDLER](#notify_handler), ale mapuje [WM_NOTIFY](http://msdn.microsoft.com/library/windows/desktop/bb775583) wiadomości tylko na podstawie powiadomień kodu.  
+ Podobnie jak [NOTIFY_HANDLER](#notify_handler), ale mapuje [WM_NOTIFY](https://msdn.microsoft.com/library/windows/desktop/bb775583) wiadomości tylko na podstawie powiadomień kodu.  
   
 ```
 NOTIFY_CODE_HANDLER(cd, func)
@@ -618,7 +618,7 @@ NOTIFY_HANDLER( id, cd, func )
  [in] Nazwa funkcji obsługi wiadomości.  
   
 ### <a name="remarks"></a>Uwagi  
- Mapuje NOTIFY_HANDLER [WM_NOTIFY](http://msdn.microsoft.com/library/windows/desktop/bb775583) komunikatów do funkcji obsługi, na podstawie kodu powiadomienia i identyfikator formantu.  
+ Mapuje NOTIFY_HANDLER [WM_NOTIFY](https://msdn.microsoft.com/library/windows/desktop/bb775583) komunikatów do funkcji obsługi, na podstawie kodu powiadomienia i identyfikator formantu.  
   
  Żadnej funkcji, które określono w makrze NOTIFY_HANDLER musi być zdefiniowany w następujący sposób:  
   
@@ -640,7 +640,7 @@ NOTIFY_HANDLER( id, cd, func )
  **Nagłówek:** atlwin.h   
   
 ##  <a name="notify_id_handler"></a>  NOTIFY_ID_HANDLER  
- Podobnie jak [NOTIFY_HANDLER](#notify_handler), ale mapuje [WM_NOTIFY](http://msdn.microsoft.com/library/windows/desktop/bb775583) wiadomości tylko na podstawie kontroli identyfikatora.  
+ Podobnie jak [NOTIFY_HANDLER](#notify_handler), ale mapuje [WM_NOTIFY](https://msdn.microsoft.com/library/windows/desktop/bb775583) wiadomości tylko na podstawie kontroli identyfikatora.  
   
 ```
 NOTIFY_ID_HANDLER( id, func )
@@ -657,7 +657,7 @@ NOTIFY_ID_HANDLER( id, func )
  **Nagłówek:** atlwin.h   
   
 ##  <a name="notify_range_code_handler"></a>  NOTIFY_RANGE_CODE_HANDLER  
- Podobnie jak [NOTIFY_RANGE_HANDLER](#notify_range_handler), ale mapuje [WM_NOTIFY](http://msdn.microsoft.com/library/windows/desktop/bb775583) komunikatów za pomocą kodu określonych powiadomień z szeroką gamę elementów sterujących funkcji pojedynczy program obsługi.  
+ Podobnie jak [NOTIFY_RANGE_HANDLER](#notify_range_handler), ale mapuje [WM_NOTIFY](https://msdn.microsoft.com/library/windows/desktop/bb775583) komunikatów za pomocą kodu określonych powiadomień z szeroką gamę elementów sterujących funkcji pojedynczy program obsługi.  
   
 ```
 NOTIFY_RANGE_CODE_HANDLER( idFirst, idLast, cd, func )
@@ -683,7 +683,7 @@ NOTIFY_RANGE_CODE_HANDLER( idFirst, idLast, cd, func )
  **Nagłówek:** atlwin.h   
   
 ##  <a name="notify_range_handler"></a>  NOTIFY_RANGE_HANDLER  
- Podobnie jak [NOTIFY_HANDLER](#notify_handler), ale mapuje [WM_NOTIFY](http://msdn.microsoft.com/library/windows/desktop/bb775583) wiadomości z szeroką gamę elementów sterujących funkcji pojedynczy program obsługi.  
+ Podobnie jak [NOTIFY_HANDLER](#notify_handler), ale mapuje [WM_NOTIFY](https://msdn.microsoft.com/library/windows/desktop/bb775583) wiadomości z szeroką gamę elementów sterujących funkcji pojedynczy program obsługi.  
   
 ```
 NOTIFY_RANGE_HANDLER( idFirst, idLast, func )

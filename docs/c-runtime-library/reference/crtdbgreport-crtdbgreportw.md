@@ -38,12 +38,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b2b0bcdc5ee6c4c2b71837f1cdd958f50d8d0b4a
-ms.sourcegitcommit: b92ca0b74f0b00372709e81333885750ba91f90e
+ms.openlocfilehash: 5aa7efb7881b00933afab92a7157c09e0f769605
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/16/2018
-ms.locfileid: "42465903"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43204426"
 ---
 # <a name="crtdbgreport-crtdbgreportw"></a>_CrtDbgReport, _CrtDbgReportW
 
@@ -108,8 +108,8 @@ W poniższej tabeli przedstawiono dostępne opcje trybu raportu lub trybów i pl
 
 |Tryb raportu|Plik raportu|**_CrtDbgReport**, **_crtdbgreportw —** zachowanie|
 |-----------------|-----------------|------------------------------------------------|
-|**_CRTDBG_MODE_DEBUG**|Nie dotyczy|Zapisuje komunikat przy użyciu Windows [OutputDebugString](http://msdn.microsoft.com/library/windows/desktop/aa363362.aspx) interfejsu API.|
-|**_CRTDBG_MODE_WNDW**|Nie dotyczy|Wywołuje Windows [MessageBox](http://msdn.microsoft.com/library/windows/desktop/ms645505) interfejsu API w celu tworzenia okna komunikatu, aby wyświetlić wiadomość wraz z **przerwać**, **ponów**, i **Ignoruj** przycisków. Jeśli użytkownik kliknie **przerwać**, **_CrtDbgReport** lub **_CrtDbgReport** niezwłocznie przerywa. Jeśli użytkownik kliknie **ponów**, zwraca wartość 1. Jeśli użytkownik kliknie **Ignoruj**, wykonywanie jest kontynuowane i **_CrtDbgReport** i **_crtdbgreportw —** zwracają 0. Należy pamiętać, że kliknięcie **Ignoruj** kiedy warunek błędu istnieje często powoduje "nieokreślone zachowanie".|
+|**_CRTDBG_MODE_DEBUG**|Nie dotyczy|Zapisuje komunikat przy użyciu Windows [OutputDebugString](https://msdn.microsoft.com/library/windows/desktop/aa363362.aspx) interfejsu API.|
+|**_CRTDBG_MODE_WNDW**|Nie dotyczy|Wywołuje Windows [MessageBox](/windows/desktop/api/winuser/nf-winuser-messagebox) interfejsu API w celu tworzenia okna komunikatu, aby wyświetlić wiadomość wraz z **przerwać**, **ponów**, i **Ignoruj** przycisków. Jeśli użytkownik kliknie **przerwać**, **_CrtDbgReport** lub **_CrtDbgReport** niezwłocznie przerywa. Jeśli użytkownik kliknie **ponów**, zwraca wartość 1. Jeśli użytkownik kliknie **Ignoruj**, wykonywanie jest kontynuowane i **_CrtDbgReport** i **_crtdbgreportw —** zwracają 0. Należy pamiętać, że kliknięcie **Ignoruj** kiedy warunek błędu istnieje często powoduje "nieokreślone zachowanie".|
 |**_CRTDBG_MODE_FILE**|**__HFILE**|Wpisuje wiadomość do dostarczone przez użytkownika **obsługi**, przy użyciu Windows [WriteFile](/windows/desktop/api/fileapi/nf-fileapi-writefile) API i nie sprawdza poprawności dojścia do pliku; aplikacja jest odpowiedzialna za otwarcie pliku raportu i przekazywanie pliku dojście.|
 |**_CRTDBG_MODE_FILE**|**_CRTDBG_FILE_STDERR**|Wpisuje wiadomość do **stderr**.|
 |**_CRTDBG_MODE_FILE**|**_CRTDBG_FILE_STDOUT**|Wpisuje wiadomość do **stdout**.|

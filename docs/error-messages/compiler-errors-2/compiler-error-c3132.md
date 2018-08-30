@@ -1,5 +1,5 @@
 ---
-title: C3132 błąd kompilatora | Dokumentacja firmy Microsoft
+title: Błąd kompilatora C3132 | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,19 +16,19 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bb2ecc863bc06542e4bb2e78e71ce95279c004f8
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: bb32d65b119330e49773118e38e1c8b618d03cfc
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33252390"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43204761"
 ---
-# <a name="compiler-error-c3132"></a>C3132 błąd kompilatora
-"parametr funkcji": tablice parametrów można stosować tylko do formalnego argumentu typu "jednowymiarowej tablicy zarządzanej"  
+# <a name="compiler-error-c3132"></a>Błąd kompilatora C3132
+"parametr funkcji": tablice parametrów można stosować tylko do formalnego argumentu typu "single-dimensional tablicy zarządzanej"  
   
- [ParamArray](https://msdn.microsoft.com/en-us/library/system.paramarrayattribute.aspx) atrybutu została zastosowana do parametru, który nie był tablicy jednowymiarowej.  
+ [ParamArray](https://msdn.microsoft.com/library/system.paramarrayattribute.aspx) atrybut został zastosowany do parametru, który nie był tablicy jednowymiarowej.  
   
- Poniższy przykład generuje C3132:  
+ Poniższy przykład spowoduje wygenerowanie C3132:  
   
 ```  
 // C3132.cpp  

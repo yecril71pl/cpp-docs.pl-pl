@@ -34,16 +34,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9b914e950fd94435768c355f327d3d48a653e0d5
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 78e3d346bca087a6fd855e6428e6a53779cd7355
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32407148"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43202519"
 ---
 # <a name="setnewmode"></a>_set_new_mode
 
-Ustawia tryb obsługi nowych **— funkcja malloc**.
+Ustawia nowy tryb obsługi dla **— funkcja malloc**.
 
 ## <a name="syntax"></a>Składnia
 
@@ -54,15 +54,15 @@ int _set_new_mode( int newhandlermode );
 ### <a name="parameters"></a>Parametry
 
 *newhandlermode*<br/>
-Nowy tryb obsługi na **— funkcja malloc**; prawidłowe wartości to 0 lub 1.
+Nowy tryb obsługi dla **— funkcja malloc**; prawidłowe wartości to 0 lub 1.
 
 ## <a name="return-value"></a>Wartość zwracana
 
-Zwraca poprzednią procedurę obsługi trybu zestawie **— funkcja malloc**. Zwracana wartość 1 oznacza, że, nie można przydzielić pamięci, **— funkcja malloc** wcześniej nazywane nowe procedury obsługi; wartość zwracana 0 wskazuje nie zostało. Jeśli *newhandlermode* argument nie jest równa 0 lub 1, zwraca -1.
+Zwraca zestaw trybu dla poprzedniej procedury obsługi **— funkcja malloc**. Zwracana wartość 1 oznacza, że, w przypadku niepowodzenia, można przydzielić pamięci, **— funkcja malloc** wcześniej nazywane nową procedurę obsługi; zwracana wartość wynosząca 0 wskazuje, czy nie. Jeśli *newhandlermode* argument nie jest równa 0 lub 1, funkcja zwraca wartość -1.
 
 ## <a name="remarks"></a>Uwagi
 
-C++ **_set_new_mode —** funkcja ustawia tryb obsługi nowych [— funkcja malloc](malloc.md). Nowy tryb obsługi wskazuje, czy w przypadku awarii, **— funkcja malloc** jest wywołanie nowe procedury obsługi zgodnie z ustawieniami [_set_new_handler —](set-new-handler.md). Domyślnie **— funkcja malloc** nie wywołuje nowe procedury obsługi nie można przydzielić pamięci. Można zastąpić to zachowanie domyślne, aby, gdy **— funkcja malloc** nie może przydzielić pamięci, **— funkcja malloc** wywołuje nowe procedury obsługi w taki sam jak robi **nowe** operator jest Jeśli go nie powiodło się z tego samego powodu. Aby uzyskać więcej informacji, zobacz [nowe](../../cpp/new-operator-cpp.md) i [usunąć](../../cpp/delete-operator-cpp.md) operatory w *dokumentacja języka C++*. Aby zastąpić domyślną, należy wywołać:
+C++ **_set_new_mode** funkcja Ustawia nowy tryb obsługi dla [— funkcja malloc](malloc.md). Nowy tryb obsługi wskazuje, czy w przypadku awarii, **— funkcja malloc** ma wywoływać nową procedurę obsługi zgodnie z ustawieniem [_set_new_handler](set-new-handler.md). Domyślnie **— funkcja malloc** nie wywołuje nowej procedury obsługi awarii w celu przydzielenia pamięci. Można zastąpić to zachowanie domyślne tak, aby, gdy **— funkcja malloc** nie może przydzielić pamięci, **— funkcja malloc** wywoła nową procedurę obsługi w taki sam sposób **nowe** jest operator Jeśli jej nie powiedzie się z tego samego powodu. Aby uzyskać więcej informacji, zobacz [nowe](../../cpp/new-operator-cpp.md) i [Usuń](../../cpp/delete-operator-cpp.md) operatorów w *C++ Language Reference*. Aby zastąpić domyślne, wywołaj polecenie:
 
 ```cpp
 _set_new_mode(1);
@@ -70,7 +70,7 @@ _set_new_mode(1);
 
 wczesne programu w lub Połącz z Newmode.obj (zobacz [opcje łącza](../../c-runtime-library/link-options.md)).
 
-Ta funkcja weryfikuje jej parametr. Jeśli *newhandlermode* żadnych innych niż 0 lub 1, funkcja wywołuje program obsługi nieprawidłowych parametrów, jak opisano w [sprawdzanie poprawności parametru](../../c-runtime-library/parameter-validation.md). Jeśli jest dozwolone wykonywanie, aby kontynuować, **_ *** set_new_mode —** zwraca wartość -1 i ustawia **errno** do **einval —**.
+Ta funkcja sprawdza poprawność swojego parametru. Jeśli *newhandlermode* żadnych innych niż 0 lub 1, funkcja wywołuje procedurę obsługi nieprawidłowego parametru, jak opisano w [Parameter Validation](../../c-runtime-library/parameter-validation.md). Jeśli wykonanie może być kontynuowane, <strong>_set_new_mode</strong> zwraca wartość -1 i ustawia **errno** do `EINVAL`.
 
 ## <a name="requirements"></a>Wymagania
 
@@ -78,7 +78,7 @@ Ta funkcja weryfikuje jej parametr. Jeśli *newhandlermode* żadnych innych niż
 |-------------|---------------------|
 |**_set_new_mode**|\<new.h>|
 
-Aby uzyskać więcej informacji o zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md).
+Aby uzyskać więcej informacji na temat zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md).
 
 ## <a name="see-also"></a>Zobacz także
 

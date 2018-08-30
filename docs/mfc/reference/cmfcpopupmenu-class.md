@@ -170,12 +170,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 04217a03defcecf990a943d5d99f8370a966a5f7
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: 125b15062fc46850ad9b0d2512f9f7cc2e2095e1
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42465699"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43204215"
 ---
 # <a name="cmfcpopupmenu-class"></a>Klasa CMFCPopupMenu
 Implementuje funkcje menu podręcznego Windows i rozszerza je, dodając funkcje, takie jak zrywanie menu i etykietek narzędzi.
@@ -510,7 +510,7 @@ static void EnableMenuSound(BOOL bEnable = TRUE);
  Wartość TRUE, aby włączyć dźwięk, wartość FALSE w przeciwnym razie.  
   
 ### <a name="remarks"></a>Uwagi  
- Jeśli włączysz dźwięk, struktura wywołuje [PlaySound](http://msdn.microsoft.com/library/windows/desktop/bb774426) metody, gdy użytkownik otwiera menu rozwijane lub wybierze polecenie menu. Ta funkcja jest domyślnie włączona.  
+ Jeśli włączysz dźwięk, struktura wywołuje [PlaySound](/windows/desktop/api/shobjidl_core/nf-shobjidl_core-iusernotification-playsound) metody, gdy użytkownik otwiera menu rozwijane lub wybierze polecenie menu. Ta funkcja jest domyślnie włączona.  
   
 ##  <a name="enableresize"></a>  CMFCPopupMenu::EnableResize  
 

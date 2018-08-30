@@ -52,12 +52,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 93a637c1374e77127a5bf71c6fa736d2857928f1
-ms.sourcegitcommit: b92ca0b74f0b00372709e81333885750ba91f90e
+ms.openlocfilehash: 05b259afe5c266db30ed31ed47e917f0ac1a5607
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/16/2018
-ms.locfileid: "42465625"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43196193"
 ---
 # <a name="cprogressctrl-class"></a>Klasa CProgressCtrl
 Oferuje funkcje formantu Windows typowego paska postępu.  
@@ -143,14 +143,14 @@ virtual BOOL Create(
   
 ### <a name="parameters"></a>Parametry  
  *dwStyle*  
- Określa styl formantu paska postępu. Zastosuj dowolną kombinację stylesdescribed okna w [CreateWindow](http://msdn.microsoft.com/library/windows/desktop/ms632679) w zestawie SDK Windows, oprócz pasek style kontrolki do kontrolki postępu następujące:  
+ Określa styl formantu paska postępu. Zastosuj dowolną kombinację stylesdescribed okna w [CreateWindow](https://msdn.microsoft.com/library/windows/desktop/ms632679) w zestawie SDK Windows, oprócz pasek style kontrolki do kontrolki postępu następujące:  
   
 - Pbs_vertical — Wyświetla postęp informacji w pionie, od góry do dołu. Bez tej flagi kontrolkę paska postępu Wyświetla poziomie, w lewo po prawej stronie.  
   
 - Wyświetla pbs_smooth — stopniowe, smooth, wypełniając kontrolkę paska postępu. Bez tej flagi kontrolki spowoduje wypełnienie przy użyciu bloków.  
   
  *Rect*  
- Określa rozmiar i położenie formantu paska postępu. Może być albo [CRect](../../atl-mfc-shared/reference/crect-class.md) obiektu lub [Prostokąt](http://msdn.microsoft.com/library/windows/desktop/dd162897) struktury. Ponieważ kontrolki musi być okna podrzędnego, określonych współrzędnych są względne wobec obszaru klienckiego *pParentWnd*.  
+ Określa rozmiar i położenie formantu paska postępu. Może być albo [CRect](../../atl-mfc-shared/reference/crect-class.md) obiektu lub [Prostokąt](https://msdn.microsoft.com/library/windows/desktop/dd162897) struktury. Ponieważ kontrolki musi być okna podrzędnego, określonych współrzędnych są względne wobec obszaru klienckiego *pParentWnd*.  
   
  *pParentWnd*  
  Określa pasek okno nadrzędne kontrolki, postępu, zwykle `CDialog`. Nie może być równa NULL.  
@@ -181,13 +181,13 @@ virtual BOOL CreateEx(
   
 ### <a name="parameters"></a>Parametry  
  *dwExStyle*  
- Określa styl rozszerzony kontrolki tworzona. Aby uzyskać listę rozszerzone style Windows, zobacz *dwExStyle* parametr [elementu CreateWindowEx](http://msdn.microsoft.com/library/windows/desktop/ms632680) w zestawie Windows SDK.  
+ Określa styl rozszerzony kontrolki tworzona. Aby uzyskać listę rozszerzone style Windows, zobacz *dwExStyle* parametr [elementu CreateWindowEx](https://msdn.microsoft.com/library/windows/desktop/ms632680) w zestawie Windows SDK.  
   
  *dwStyle*  
- Określa styl formantu paska postępu. Zastosuj dowolną kombinację Style okna ramowego opisanego w [CreateWindow](http://msdn.microsoft.com/library/windows/desktop/ms632679) w zestawie Windows SDK.  
+ Określa styl formantu paska postępu. Zastosuj dowolną kombinację Style okna ramowego opisanego w [CreateWindow](https://msdn.microsoft.com/library/windows/desktop/ms632679) w zestawie Windows SDK.  
   
  *Rect*  
- Odwołanie do [Prostokąt](http://msdn.microsoft.com/library/windows/desktop/dd162897) struktury opisujących rozmiar i położenie okna, można utworzyć klienta współrzędne *pParentWnd*.  
+ Odwołanie do [Prostokąt](https://msdn.microsoft.com/library/windows/desktop/dd162897) struktury opisujących rozmiar i położenie okna, można utworzyć klienta współrzędne *pParentWnd*.  
   
  *pParentWnd*  
  Wskaźnik do okna, które jest elementem nadrzędnym formantu.  
@@ -209,10 +209,10 @@ COLORREF GetBarColor() const;
 ```  
   
 ### <a name="return-value"></a>Wartość zwracana  
- Kolor bieżącego pasek postępu, reprezentowane jako [COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449) wartość lub CLR_DEFAULT Jeśli kolor paska wskaźnika postępu jest domyślny kolor.  
+ Kolor bieżącego pasek postępu, reprezentowane jako [COLORREF](/windows/desktop/gdi/colorref) wartość lub CLR_DEFAULT Jeśli kolor paska wskaźnika postępu jest domyślny kolor.  
   
 ### <a name="remarks"></a>Uwagi  
- Ta metoda wysyła [PBM_GETBARCOLOR](http://msdn.microsoft.com/library/windows/desktop/bb760826) komunikat, który jest opisany w zestawie Windows SDK.  
+ Ta metoda wysyła [PBM_GETBARCOLOR](/windows/desktop/Controls/pbm-getbarcolor) komunikat, który jest opisany w zestawie Windows SDK.  
   
 ##  <a name="getbkcolor"></a>  CProgressCtrl::GetBkColor  
  Pobiera kolor tła bieżącego pasek postępu.  
@@ -222,10 +222,10 @@ COLORREF GetBkColor() const;
 ```  
   
 ### <a name="return-value"></a>Wartość zwracana  
- Kolor tła bieżącego pasek postępu, reprezentowane jako [COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449) wartości.  
+ Kolor tła bieżącego pasek postępu, reprezentowane jako [COLORREF](/windows/desktop/gdi/colorref) wartości.  
   
 ### <a name="remarks"></a>Uwagi  
- Ta metoda wysyła [PBM_GETBKCOLOR](http://msdn.microsoft.com/library/windows/desktop/bb760828) komunikat, który jest opisany w zestawie Windows SDK.  
+ Ta metoda wysyła [PBM_GETBKCOLOR](/windows/desktop/Controls/pbm-getbkcolor) komunikat, który jest opisany w zestawie Windows SDK.  
   
 ##  <a name="getpos"></a>  CProgressCtrl::GetPos  
  Pobiera bieżącą pozycję pasek postępu.  
@@ -282,7 +282,7 @@ int GetState() const;
 |PBST_PAUSED|Wstrzymano|  
   
 ### <a name="remarks"></a>Uwagi  
- Ta metoda wysyła [PBM_GETSTATE](http://msdn.microsoft.com/library/windows/desktop/bb760834) komunikat, który jest opisany w zestawie Windows SDK.  
+ Ta metoda wysyła [PBM_GETSTATE](/windows/desktop/Controls/pbm-getstate) komunikat, który jest opisany w zestawie Windows SDK.  
   
 ### <a name="example"></a>Przykład  
  Poniższy kod definiuje zmienną, `m_progressCtrl`, która jest używana do uzyskania programowego dostępu formantu paska postępu. Ta zmienna jest używana w następnym przykładzie.  
@@ -307,7 +307,7 @@ int GetStep() const;
 ### <a name="remarks"></a>Uwagi  
  Wartość, o którą jest zwiększenie kroku wywołanie [CProgressCtrl::StepIt](#stepit) zwiększa bieżącego położenia obiektu pasek postępu.  
   
- Ta metoda wysyła [PBM_GETSTEP](http://msdn.microsoft.com/library/windows/desktop/bb760836) komunikat, który jest opisany w zestawie Windows SDK.  
+ Ta metoda wysyła [PBM_GETSTEP](/windows/desktop/Controls/pbm-getstep) komunikat, który jest opisany w zestawie Windows SDK.  
   
 ### <a name="example"></a>Przykład  
  Poniższy kod definiuje zmienną, `m_progressCtrl`, która jest używana do uzyskania programowego dostępu formantu paska postępu. Ta zmienna jest używana w następnym przykładzie.  
@@ -347,17 +347,17 @@ COLORREF SetBarColor(COLORREF clrBar);
   
 |Parametr|Opis|  
 |---------------|-----------------|  
-|[in] *clrBar*|A [COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449) wartość, która określa nowy kolor paska wskaźnika postępu. Określ CLR_DEFAULT do powodują pasek postępu używać jej domyślny kolor.|  
+|[in] *clrBar*|A [COLORREF](/windows/desktop/gdi/colorref) wartość, która określa nowy kolor paska wskaźnika postępu. Określ CLR_DEFAULT do powodują pasek postępu używać jej domyślny kolor.|  
   
 ### <a name="return-value"></a>Wartość zwracana  
 
-Poprzedni kolor paska wskaźnika postępu, reprezentowane jako [COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449) wartość lub CLR_DEFAULT Jeśli kolor paska wskaźnika postępu jest domyślny kolor.  
+Poprzedni kolor paska wskaźnika postępu, reprezentowane jako [COLORREF](/windows/desktop/gdi/colorref) wartość lub CLR_DEFAULT Jeśli kolor paska wskaźnika postępu jest domyślny kolor.  
   
 ### <a name="remarks"></a>Uwagi  
 
 `SetBarColor` Metoda ustawia pasek koloru tylko wtedy, gdy postępu Windows Vista [motyw](/windows/desktop/Controls/visual-styles-overview) nie jest włączone.  
   
- Ta metoda wysyła [PBM_SETBARCOLOR](http://msdn.microsoft.com/library/windows/desktop/bb760838) komunikat, który jest opisany w zestawie Windows SDK.  
+ Ta metoda wysyła [PBM_SETBARCOLOR](/windows/desktop/Controls/pbm-setbarcolor) komunikat, który jest opisany w zestawie Windows SDK.  
   
 ### <a name="example"></a>Przykład  
  Poniższy kod definiuje zmienną, `m_progressCtrl`, która jest używana do uzyskania programowego dostępu formantu paska postępu. Ta zmienna jest używana w następnym przykładzie.  
@@ -381,7 +381,7 @@ COLORREF SetBkColor(COLORREF clrNew);
  Wartość COLORREF, która określa nowy kolor tła. Określ wartość CLR_DEFAULT na potrzeby domyślny kolor tła paska postępu.  
   
 ### <a name="return-value"></a>Wartość zwracana  
- [COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449) wartość wskazującą poprzedni kolor tła lub CLR_DEFAULT, jeśli kolor domyślny kolor tła.  
+ [COLORREF](/windows/desktop/gdi/colorref) wartość wskazującą poprzedni kolor tła lub CLR_DEFAULT, jeśli kolor domyślny kolor tła.  
   
 ### <a name="example"></a>Przykład  
  [!code-cpp[NVC_MFC_CProgressCtrl#6](../../mfc/reference/codesnippet/cpp/cprogressctrl-class_10.cpp)]  
@@ -408,7 +408,7 @@ BOOL SetMarquee(
 ### <a name="remarks"></a>Uwagi  
  Gdy jest włączony tryb zaznaczenia, jest animowany pasek postępu i przewija, takich jak logowania theater ruchome obramowanie.  
   
- Ta metoda wysyła [PBM_SETMARQUEE](http://msdn.microsoft.com/library/windows/desktop/bb760842) komunikat, który jest opisany w zestawie Windows SDK.  
+ Ta metoda wysyła [PBM_SETMARQUEE](/windows/desktop/Controls/pbm-setmarquee) komunikat, który jest opisany w zestawie Windows SDK.  
   
 ### <a name="example"></a>Przykład  
  Poniższy kod definiuje zmienną, `m_progressCtrl`, która jest używana do uzyskania programowego dostępu formantu paska postępu. Ta zmienna jest używana w następnym przykładzie.  
@@ -484,7 +484,7 @@ int SetState(int iState);
  Poprzedni stan bieżący formant paska postępu.  
   
 ### <a name="remarks"></a>Uwagi  
- Ta metoda wysyła [PBM_SETSTATE](http://msdn.microsoft.com/library/windows/desktop/bb760850) komunikat, który jest opisany w zestawie Windows SDK.  
+ Ta metoda wysyła [PBM_SETSTATE](/windows/desktop/Controls/pbm-setstate) komunikat, który jest opisany w zestawie Windows SDK.  
   
 ### <a name="example"></a>Przykład  
  Poniższy kod definiuje zmienną, `m_progressCtrl`, która jest używana do uzyskania programowego dostępu formantu paska postępu. Ta zmienna jest używana w następnym przykładzie.  

@@ -44,19 +44,19 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d79ab8362eaa911b7a4aa936d6351aa29f610fa8
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 8fca6772c00715722acecd810595a42c60f77d86
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32403173"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43201390"
 ---
 # <a name="mbccpy-mbccpyl"></a>_mbccpy, _mbccpy_l
 
-Kopiuje znaków wielobajtowych z jednego ciągu na inny ciąg. Bezpieczniejsza wersje te funkcje są dostępne; zobacz [_mbccpy_s —, _mbccpy_s_l —](mbccpy-s-mbccpy-s-l.md).
+Kopiuje znak wielobajtowy z jednego ciągu do innego ciągu. Bardziej bezpieczne wersje tych funkcji są dostępne; zobacz [_mbccpy_s —, _mbccpy_s_l —](mbccpy-s-mbccpy-s-l.md).
 
 > [!IMPORTANT]
-> Nie można używać tego interfejsu API w aplikacjach, które są wykonywane w środowisku wykonawczym systemu Windows. Aby uzyskać więcej informacji, zobacz [funkcje CRT, nie są obsługiwane w aplikacjach platformy uniwersalnej systemu Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
+> Tego API nie można używać w aplikacjach korzystających ze środowiska wykonawczego Windows. Aby uzyskać więcej informacji, zobacz [funkcje CRT nieobsługiwane w aplikacjach platformy uniwersalnej Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
 
 ## <a name="syntax"></a>Składnia
 
@@ -74,7 +74,7 @@ void _mbccpy_l(
 
 ### <a name="parameters"></a>Parametry
 
-*docelowy* lokalizacji docelowej kopiowania.
+*dest* miejsce docelowe kopii.
 
 *SRC* znaków wielobajtowych do skopiowania.
 
@@ -82,19 +82,19 @@ void _mbccpy_l(
 
 ## <a name="remarks"></a>Uwagi
 
-**_Mbccpy —** funkcja kopiuje znaków wielobajtowych jednego z *src* do *dest*.
+**_Mbccpy —** funkcja kopiuje jeden znak wielobajtowy z *src* do *dest*.
 
-Ta funkcja weryfikuje jego parametrów. Jeśli **_mbccpy —** jest przekazywany wskaźnika o wartości null *dest* lub *src*, program obsługi nieprawidłowych parametrów zostanie wywołany, zgodnie z opisem w [sprawdzanie poprawności parametru](../../c-runtime-library/parameter-validation.md). Jeśli jest dozwolone wykonywanie, aby kontynuować, **errno** ustawiono **einval —**.
+Ta funkcja sprawdza poprawność swoich parametrów. Jeśli **_mbccpy —** jest przekazywany jest pusty wskaźnik *dest* lub *src*, procedura obsługi nieprawidłowego parametru zostanie wywołana, zgodnie z opisem w [Parameter Validation](../../c-runtime-library/parameter-validation.md). Jeśli wykonanie może być kontynuowane, **errno** ustawiono **EINVAL**.
 
-**_mbccpy —** używa bieżące ustawienia regionalne dla dowolnego zachowanie zależnych od ustawień regionalnych. **_mbccpy_l —** jest taka sama jak **_mbccpy —** z tą różnicą, że **_mbccpy_l —** korzysta z ustawień regionalnych przekazano wszystkie działania zależne od ustawień regionalnych. Aby uzyskać więcej informacji, zobacz [ustawień regionalnych](../../c-runtime-library/locale.md).
+**_mbccpy —** używa bieżących ustawień regionalnych dla wszelkich zachowań zależnych od ustawień regionalnych. **_mbccpy_l —** jest taka sama jak **_mbccpy —** z tą różnicą, że **_mbccpy_l —** korzysta z regionalnych dla wszelkich zachowań zależnych od ustawień regionalnych. Aby uzyskać więcej informacji, zobacz [ustawień regionalnych](../../c-runtime-library/locale.md).
 
-**Uwaga dotycząca zabezpieczeń** użyć ciągu zakończonego wartością null. Ciąg znaków zakończony znakiem null nie może przekraczać rozmiar buforu docelowego. Aby uzyskać więcej informacji, zobacz [unikanie Overruns buforu](http://msdn.microsoft.com/library/windows/desktop/ms717795). Przepełnienie buforu problemy używanej metody ataku systemu, co powoduje nieuzasadnione podniesienie uprawnień.
+**Uwaga dotycząca zabezpieczeń** Użyj ciąg zakończony znakiem null. Ciąg zakończony znakiem null nie może przekraczać rozmiaru bufora docelowego. Aby uzyskać więcej informacji, zobacz [unikanie przepełnień bufora](/windows/desktop/SecBP/avoiding-buffer-overruns). Problemy z przepełnieniem buforu są częstą metodą ataku systemu, co nieuzasadnione podniesienie poziomu uprawnień.
 
 ### <a name="generic-text-routine-mappings"></a>Mapowania procedur zwykłego tekstu
 
 |Procedura tchar.h|_UNICODE i _MBCS niezdefiniowane|_MBCS zdefiniowano|_UNICODE zdefiniowano|
 |---------------------|--------------------------------------|--------------------|-----------------------|
-|**_tccpy —**|Map — makro lub wewnętrznej funkcji|**_mbccpy**|Map — makro lub wewnętrznej funkcji|
+|**_tccpy —**|Mapy i makro lub funkcja śródwierszowa|**_mbccpy**|Mapy i makro lub funkcja śródwierszowa|
 |**_tccpy_l —**|n/d|**_mbccpy_l**|n/d|
 
 ## <a name="requirements"></a>Wymagania
@@ -104,7 +104,7 @@ Ta funkcja weryfikuje jego parametrów. Jeśli **_mbccpy —** jest przekazywany
 |**_mbccpy**|\<mbctype.h>|
 |**_mbccpy_l**|\<mbctype.h>|
 
-Aby uzyskać więcej informacji o zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md).
+Aby uzyskać więcej informacji na temat zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md).
 
 ## <a name="see-also"></a>Zobacz także
 

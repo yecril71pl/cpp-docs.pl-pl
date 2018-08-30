@@ -21,12 +21,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: af604ac6afce91dc865cfbb465e8c27acea8f775
-ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
+ms.openlocfilehash: 9d4c752dc2a139d1e0bac38d9c307154cdc32fe6
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37885324"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43196322"
 ---
 # <a name="cautorevertimpersonation-class"></a>Klasa CAutoRevertImpersonation
 Ta klasa zostanie przywrócona [CAccessToken](../../atl/reference/caccesstoken-class.md) obiektów nonimpersonating stanu, gdy jej wykracza poza zakres.  
@@ -55,11 +55,11 @@ class CAutoRevertImpersonation
 |[CAutoRevertImpersonation::GetAccessToken](#getaccesstoken)|Pobiera bieżący token dostępu skojarzone z tym obiektem.|  
   
 ## <a name="remarks"></a>Uwagi  
- [Token dostępu](http://msdn.microsoft.com/library/windows/desktop/aa374909) jest obiektem, w tym artykule opisano proces lub wątek kontekstu zabezpieczeń, która jest przydzielona do każdego użytkownika zalogowanego systemu Windows NT lub Windows 2000. Te tokeny dostępu mogą być reprezentowane za pomocą `CAccessToken` klasy.  
+ [Token dostępu](/windows/desktop/SecAuthZ/access-tokens) jest obiektem, w tym artykule opisano proces lub wątek kontekstu zabezpieczeń, która jest przydzielona do każdego użytkownika zalogowanego systemu Windows NT lub Windows 2000. Te tokeny dostępu mogą być reprezentowane za pomocą `CAccessToken` klasy.  
   
  Czasami jest konieczne personifikacji tokenów dostępu. Ta klasa jest dostarczana jako udogodnienie, ale nie wykonuje personifikacji tokenów dostępu. wykonuje tylko automatyczna operacja cofania nonimpersonated stanu. Jest to spowodowane personifikacji tokenów dostępu mogą być wykonywane na kilka różnych sposobów.  
   
- Wprowadzenie do modelu kontroli dostępu w Windows, zobacz [kontroli dostępu](http://msdn.microsoft.com/library/windows/desktop/aa374860) w zestawie Windows SDK.  
+ Wprowadzenie do modelu kontroli dostępu w Windows, zobacz [kontroli dostępu](/windows/desktop/SecAuthZ/access-control) w zestawie Windows SDK.  
   
 ## <a name="requirements"></a>Wymagania  
  **Nagłówek:** atlsecurity.h  
@@ -130,5 +130,5 @@ const CAccessToken* GetAccessToken() throw();
   
 ## <a name="see-also"></a>Zobacz też  
  [Przykładowe ATLSecurity](../../visual-cpp-samples.md)   
- [Tokeny dostępu](http://msdn.microsoft.com/library/windows/desktop/aa374909)   
+ [Tokeny dostępu](/windows/desktop/SecAuthZ/access-tokens)   
  [Klasa — Przegląd](../../atl/atl-class-overview.md)

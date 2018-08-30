@@ -20,20 +20,20 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5d06c4adfa5493929a24c233fa923451c7bf0f95
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 8d0bb7aa4f647ceeb61c20cccd626d9da999b241
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33379232"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43200115"
 ---
 # <a name="relationship-to-the-c-language-api"></a>Relacja z interfejsem API języka C
-Jedna właściwość, która ustawia biblioteki Microsoft Foundation Class (MFC) oprócz innych bibliotek klas dla systemu Windows jest bardzo Zamknij mapowania do interfejsu API systemu Windows w języku C. Ponadto można zwykle łączyć wywołania do biblioteki klas za darmo bezpośrednie wywołania interfejsu API systemu Windows. Dostęp bezpośredni, jednak oznacza, że klasy są całkowite zastąpienie dla tego interfejsu API. Deweloperzy muszą nadal sporadycznie bezpośrednich wywołań do niektórych funkcji systemu Windows, takich jak [SetCursor](http://msdn.microsoft.com/library/windows/desktop/ms648393) i [GetSystemMetrics](http://msdn.microsoft.com/library/windows/desktop/ms724385), np. Funkcja systemu Windows jest opakowane przez funkcji członkowskiej klasy tylko wtedy, gdy ma wyczyść dodatkowych zalet w ten sposób.  
+Jedna właściwość, która ustawia biblioteki Microsoft Foundation Class (MFC) niezależnie od innych bibliotek klas dla Windows jest bardzo ścisłej mapowania interfejsu API Windows napisanych w języku C. Dodatkowo można zazwyczaj łączyć wywołania do biblioteki klas za darmo z bezpośrednim wywołaniem do interfejsu API Windows. Dostęp bezpośredni, jednak oznacza, że klasy są całkowitego zastąpienia dla tego interfejsu API. Deweloperzy nadal od czasu do czasu należy wykonywać bezpośrednich wywołań do niektórych funkcji Windows takich jak [SetCursor](/windows/desktop/api/winuser/nf-winuser-setcursor) i [GetSystemMetrics](https://msdn.microsoft.com/library/windows/desktop/ms724385), na przykład. Funkcja Windows jest otoczony przez funkcji składowej klasy, tylko wtedy, gdy z zalet jasny sposób.  
   
- Ponieważ czasami konieczne jest wprowadzenie macierzystych wywołań funkcji systemu Windows, należy mieć dostęp do dokumentacji interfejsu API systemu Windows w języku C. Niniejsza dokumentacja jest dołączana do pakietu Microsoft Visual C++.  
+ Ponieważ czasami trzeba wykonać natywnych wywołania funkcji Windows powinna mieć dostęp do dokumentacji interfejsu API Windows języka C. Ta dokumentacja jest dołączony do programu Microsoft Visual C++.  
   
 > [!NOTE]
->  Omówienie sposób działania w ramach biblioteki MFC, zobacz [pisać aplikacje dla systemu Windows za pomocą klasy](../mfc/using-the-classes-to-write-applications-for-windows.md).  
+>  Aby zapoznać się z omówieniem sposób działania w ramach biblioteki MFC, zobacz [używanie klas do pisania aplikacji dla Windows](../mfc/using-the-classes-to-write-applications-for-windows.md).  
   
 ## <a name="see-also"></a>Zobacz też  
  [Ogólne zasady projektowania klas](../mfc/general-class-design-philosophy.md)

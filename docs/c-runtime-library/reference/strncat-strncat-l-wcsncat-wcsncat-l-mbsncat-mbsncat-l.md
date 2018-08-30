@@ -67,19 +67,19 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3d80ca39f4bb12fa28190c499d93ad4152831b4e
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: e689f29433712f2f8a2adc1730c803ab6c55ba82
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32417590"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43202871"
 ---
-# <a name="strncat-strncatl-wcsncat-wcsncatl-mbsncat-mbsncatl"></a>strncat —, _strncat_l, wcsncat —, _wcsncat_l _mbsncat —, _mbsncat_l —
+# <a name="strncat-strncatl-wcsncat-wcsncatl-mbsncat-mbsncatl"></a>strncat — _strncat_l, wcsncat —, _wcsncat_l, _mbsncat —, _mbsncat_l —
 
-Dołącza znaków ciągu. Dostępne są bardziej bezpieczne wersje tych funkcji, zobacz [strncat_s —, _strncat_s_l, wcsncat_s —, _wcsncat_s_l, _mbsncat_s —, _mbsncat_s_l —](strncat-s-strncat-s-l-wcsncat-s-wcsncat-s-l-mbsncat-s-mbsncat-s-l.md) .
+Dołącza znaki ciągu. Dostępne są bardziej bezpieczne wersje tych funkcji, zobacz [strncat_s —, _strncat_s_l, wcsncat_s —, _wcsncat_s_l, _mbsncat_s —, _mbsncat_s_l —](strncat-s-strncat-s-l-wcsncat-s-wcsncat-s-l-mbsncat-s-mbsncat-s-l.md) .
 
 > [!IMPORTANT]
-> **_mbsncat —** i **_mbsncat_l —** nie można używać w aplikacjach, które są wykonywane w środowisku wykonawczym systemu Windows. Aby uzyskać więcej informacji, zobacz [funkcje CRT, nie są obsługiwane w aplikacjach platformy uniwersalnej systemu Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
+> **_mbsncat —** i **_mbsncat_l —** nie można używać w aplikacjach korzystających ze środowiska wykonawczego Windows. Aby uzyskać więcej informacji, zobacz [funkcje CRT nieobsługiwane w aplikacjach platformy uniwersalnej Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
 
 ## <a name="syntax"></a>Składnia
 
@@ -135,10 +135,10 @@ unsigned char *_mbsncat_l(
 ### <a name="parameters"></a>Parametry
 
 *strDest*<br/>
-Ciąg docelowego zerem.
+Ciąg docelowy zakończony wartością null.
 
 *strSource*<br/>
-Ciąg źródłowy zerem.
+Ciąg źródłowy zakończony wartością null.
 
 *Liczba*<br/>
 Liczba znaków do dołączenia.
@@ -148,37 +148,37 @@ Ustawienia regionalne do użycia.
 
 ## <a name="return-value"></a>Wartość zwracana
 
-Zwraca wskaźnik do ciągu docelowego. Brak wartości zwracanej jest zarezerwowana wystąpił błąd.
+Zwraca wskaźnik do ciągu docelowego. Zwraca żadnej wartości zarezerwowanej, aby wskazać błąd.
 
 ## <a name="remarks"></a>Uwagi
 
-**Strncat —** funkcja dołącza co najwyżej pierwszy *liczba* znaków *strSource* do *strDest*. Litery *strSource* zastępuje znak końcowy null z *strDest*. Jeśli w pojawi się znak null *strSource* przed *liczba* znaki są dołączane, **strncat —** dołącza wszystkie znaki od *strSource*, maksymalnie znakiem pustym. Jeśli *liczba* jest większa niż długość *strSource*, długość *strSource* jest używany zamiast *liczba*. Wszystkich przypadkach, wynikowy ciąg zostanie zakończony znakiem null. Jeśli kopiowanie odbywa się między ciągów, które nakładają się na, zachowanie jest niezdefiniowany.
+**Strncat —** funkcja dołącza co najwyżej, pierwsze *liczba* znaków *strSource* do *strDest*. Początkowy znak *strSource* zastępuje kończący znak null z *strDest*. Jeśli znak null znajduje się w *strSource* przed *liczba* znaki są dołączane, **strncat —** dołącza wszystkie znaki z *strSource*, do znaku null. Jeśli *liczba* jest większa niż długość *strSource*, długość *strSource* jest używana zamiast *liczba*. We wszystkich przypadkach wynikowy ciąg znaków jest zakończony znakiem null. Jeśli kopiowanie odbywa się między nakładającymi się ciągami, zachowanie jest niezdefiniowane.
 
 > [!IMPORTANT]
-> **strncat —** nie sprawdza wystarczającą ilość miejsca w *strDest*; w związku z tym jest przyczyną przepełnienia buforu. Należy pamiętać, że *liczba* ogranicza liczbę znaków dołączany; nie jest limit rozmiaru *strDest*. Zobacz poniższy przykład. Aby uzyskać więcej informacji, zobacz [unikanie Overruns buforu](http://msdn.microsoft.com/library/windows/desktop/ms717795).
+> **strncat —** nie sprawdza wystarczająco dużo miejsca w *strDest*; dlatego jest potencjalną przyczyną przekroczenia buforu. Należy pamiętać, że *liczba* ogranicza liczbę znaków dołączanych; nie jest objęta limitem rozmiaru *strDest*. Zobacz przykład poniżej. Aby uzyskać więcej informacji, zobacz [unikanie przepełnień bufora](/windows/desktop/SecBP/avoiding-buffer-overruns).
 
-**wcsncat —** i **_mbsncat —** znaków dwubajtowych i znaków wielobajtowych wersji **strncat —**. Argumenty typu string i zwracana wartość **wcsncat —** są znaków dwubajtowych ciągi; tych **_mbsncat —** są ciągami znaków wielobajtowych. Te trzy funkcje działają tak samo w przeciwnym razie wartość.
+**wcsncat —** i **_mbsncat —** są wersjami znaków dwubajtowych i znaków wielobajtowych **strncat —**. Argumenty typu string i wartość zwracana przez **wcsncat —** są znakami dwubajtowymi ciągów; te z **_mbsncat —** są ciągami znaków wielobajtowych. Te trzy funkcje zachowują się identycznie.
 
-Wartość wyjściowa jest zagrożony ustawienie **lc_ctype —** ustawienie kategorii ustawień regionalnych; zobacz [setlocale](setlocale-wsetlocale.md) Aby uzyskać więcej informacji. Wersje tych funkcji bez **_l** Użyj sufiksu bieżące ustawienia regionalne tego zachowania zależnych od ustawień regionalnych; wersje z **_l** sufiks są identyczne, z wyjątkiem tego, aby używały parametr ustawień regionalnych Przekazano zamiast tego. Aby uzyskać więcej informacji, zobacz [ustawień regionalnych](../../c-runtime-library/locale.md).
+Wartość wyjściowa jest zależna od ustawienia **LC_CTYPE** ustawienia kategorii ustawień regionalnych; zobacz [setlocale](setlocale-wsetlocale.md) Aby uzyskać więcej informacji. Wersje tych funkcji, bez **_l** sufiks używają bieżących ustawień regionalnych dla zachowania zależnego od ustawień regionalnych; wersje **_l** sufiksem są identyczne, z tą różnicą, że używają parametru ustawień regionalnych w zamian przekazanych. Aby uzyskać więcej informacji, zobacz [ustawień regionalnych](../../c-runtime-library/locale.md).
 
-W języku C++ te funkcje mają przeciążenia szablonu. Aby uzyskać więcej informacji, zobacz [Secure szablonu Overloads](../../c-runtime-library/secure-template-overloads.md).
+W języku C++ funkcje te mają przeciążenia szablonu. Aby uzyskać więcej informacji, zobacz [Secure przeciążenia szablonu](../../c-runtime-library/secure-template-overloads.md).
 
 ### <a name="generic-text-routine-mappings"></a>Mapowania procedur zwykłego tekstu
 
-|Procedura TCHAR.H|_Unicode — & _MBCS nie zdefiniowany|_MBCS zdefiniowano|_UNICODE zdefiniowano|
+|Procedura TCHAR.H|_UNICODE & _MBCS nie zdefiniowano|_MBCS zdefiniowano|_UNICODE zdefiniowano|
 |---------------------|------------------------------------|--------------------|-----------------------|
 |**_tcsncat —**|**strncat**|**_mbsnbcat**|**wcsncat —**|
 |**_tcsncat_l —**|**_strncat_l**|**_mbsnbcat_l**|**_wcsncat_l**|
 
 > [!NOTE]
-> **_strncat_l** i **_wcsncat_l** nie zależność od ustawień regionalnych, a nie są przeznaczone do bezpośredniego wywoływania. Są one udostępniane do użytku wewnętrznego przez **_tcsncat_l —**.
+> **_strncat_l** i **_wcsncat_l** ma zależność od nie ustawień regionalnych i nie są przeznaczone do bezpośredniego wywoływania. Są one udostępniane do użytku wewnętrznego przez **_tcsncat_l —**.
 
 ## <a name="requirements"></a>Wymagania
 
 |Procedura|Wymagany nagłówek|
 |-------------|---------------------|
 |**strncat**|\<string.h>|
-|**wcsncat —**|\<String.h > lub \<wchar.h >|
+|**wcsncat —**|\<Włącz String.h > lub \<wchar.h >|
 |**_mbsncat —**|\<mbstring.h>|
 |**_mbsncat_l**|\<mbstring.h>|
 
@@ -231,7 +231,7 @@ After BadAppend :  This is the initial string!Extra text to add to (47 chars)
 After GoodAppend:  This is the initial string!Extra text t (39 chars)
 ```
 
-Należy pamiętać, że **BadAppend** spowodowała przepełnienie buforu.
+Należy pamiętać, że **BadAppend** powoduje przepełnienie buforu.
 
 ## <a name="see-also"></a>Zobacz także
 

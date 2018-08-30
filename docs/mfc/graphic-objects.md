@@ -51,24 +51,24 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2cf7e2c56094727c6956d0e2e21708dd81be4f10
-ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
+ms.openlocfilehash: dd8fc67f7cdc11328c4da9643f57b65a1cc6bfd0
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/25/2018
-ms.locfileid: "36930849"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43197188"
 ---
 # <a name="graphic-objects"></a>Obiekty graficzne
-System Windows udostępnia wiele narzędzi do użycia w kontekstach urządzenia do rysowania. Zapewnia on pióra do rysowania linii, pędzle wnętrza wypełnienia i czcionek do rysowania tekstu. MFC udostępnia klasy obiektów grafiki odpowiednikiem narzędzi do rysowania w systemie Windows. Poniższej tabeli przedstawiono dostępne klasy i równoważne grafiki Windows typ dojścia urządzenia interfejsu (GDI).  
+Windows oferuje szereg narzędzi do użycia w kontekstach urządzenia do rysowania. Zawiera pióra, aby rysować linie, pędzle do wypełnienia wnętrza i czcionek, aby rysować tekst. Biblioteka MFC zawiera klasy obiektów grafiki jest równoważne z narzędzi do rysowania w Windows. W poniższej tabeli przedstawiono dostępne klasy i równoważne grafiki Windows typ dojścia interface (GDI) urządzenia.  
   
 > [!NOTE]
->  Aby uzyskać więcej informacji, zobacz dokumentację interfejsu GDI + SDK w: [ http://msdn.microsoft.com/library/default.aspurl=/library/gdicpp/GDIPlus/GDIPlus.asp ](http://msdn.microsoft.com/library/default.aspurl=/library/gdicpp/gdiplus/gdiplus.asp).  
+>  Aby uzyskać więcej informacji, zobacz dokumentację zestawu SDK interfejsu GDI + w: [ https://msdn.microsoft.com/library/default.aspurl=/library/gdicpp/GDIPlus/GDIPlus.asp ](https://msdn.microsoft.com/library/default.aspurl=/library/gdicpp/gdiplus/gdiplus.asp).  
   
  W tym artykule opisano korzystanie z tych klas obiektów grafiki:  
   
-### <a name="classes-for-windows-gdi-objects"></a>Klasy dla systemu Windows Obiekty GDI  
+### <a name="classes-for-windows-gdi-objects"></a>Klasy Windows Obiekty GDI  
   
-|Class|Typ dojścia systemu Windows|  
+|Class|Windows obsługi typu|  
 |-----------|-------------------------|  
 |[CPen](../mfc/reference/cpen-class.md)|`HPEN`|  
 |[CBrush](../mfc/reference/cbrush-class.md)|`HBRUSH`|  
@@ -80,32 +80,32 @@ System Windows udostępnia wiele narzędzi do użycia w kontekstach urządzenia 
 > [!NOTE]
 >  Klasa [CImage](../atl-mfc-shared/reference/cimage-class.md) zapewnia obsługę rozszerzonych mapy bitowej.  
   
- Każdej klasy obiektów grafiki w bibliotece klas ma konstruktora, który pozwala na tworzenie obiektów graficznych dla tej klasy, które należy następnie zainicjować funkcją Utwórz odpowiednie, takich jak `CreatePen`.  
+ Każda klasa obiekt graficzny w bibliotece klas ma konstruktora, który pozwala na tworzenie obiektów graficznych tej klasy, które należy następnie zainicjować za pomocą funkcji tworzenia odpowiednie, takich jak `CreatePen`.  
   
- Każdej klasy obiektów grafiki w bibliotece klas ma operator rzutowania, który będzie rzutować obiekt MFC skojarzone uchwytów okien. Wynikowa dojścia jest prawidłowa, dopóki skojarzonego obiektu odłącza go. Użyj obiektu `Detach` funkcji członkowskiej można odłączyć dojście.  
+ Każdej klasy obiektów grafiki w bibliotece klas zawiera operator rzutowania, który będzie rzutować obiekt MFC skojarzone uchwyt Windows. Wynikowy uchwyt jest prawidłowy, dopóki skojarzonego obiektu odłączy ją. Użyj obiektu `Detach` funkcja elementu członkowskiego, aby odłączyć uchwytu.  
   
- Poniższy kod rzutowania `CPen` obiekt do obsługi systemu Windows:  
+ Poniższy kod rzutowania `CPen` obiektu do uchwytu Windows:  
   
  [!code-cpp[NVC_MFCDocViewSDI#5](../mfc/codesnippet/cpp/graphic-objects_1.cpp)]  
   
-#### <a name="to-create-a-graphic-object-in-a-device-context"></a>Aby utworzyć obiekt graficzny kontekstu urządzenia  
+#### <a name="to-create-a-graphic-object-in-a-device-context"></a>Aby utworzyć obiekt graficzny w kontekście urządzenia  
   
-1.  Należy zdefiniować obiektu graficznego w ramce stosu. Takie jak zainicjować obiektu za pomocą funkcji tworzenia określonego typu `CreatePen`. Można również zainicjować obiektu w konstruktorze. Zawiera omówienie [tworzenia jedno- i dwuetapowa](../mfc/one-stage-and-two-stage-construction-of-objects.md), który zawiera przykładowy kod.  
+1.  Zdefiniuj obiekt graficzny na ramce stosu. Inicjują obiekt za pomocą funkcji tworzenia określonego typu, takie jak `CreatePen`. Alternatywnie można zainicjować obiektu w konstruktorze. Zobacz Omówienie [tworzenia jedno- i dwuetapowa](../mfc/one-stage-and-two-stage-construction-of-objects.md), który zawiera przykładowy kod.  
   
 2.  [Wybierz obiekt do bieżącego kontekstu urządzenia](../mfc/selecting-a-graphic-object-into-a-device-context.md), zapisywanie stary obiekt graficzny, który został wybrany przed.  
   
-3.  Po zakończeniu bieżącego obiektu graficznego, wybierz starego obiektu graficznego do kontekstu urządzenia w celu przywrócenia jego stanu.  
+3.  Po zakończeniu z bieżącym obiektem grafiki wybierz pozycję starego obiektu graficznego do kontekstu urządzenia, aby przywrócić jego stan.  
   
-4.  Zezwalaj na obiekt graficzny przydzielone ramki mają zostać usunięte automatycznie, gdy zakresu jest zakończone.  
+4.  Zezwalaj na przydzielone ramki obiektu graficznego do były automatycznie usuwane, gdy zakres jest został zakończony.  
   
 > [!NOTE]
->  Jeśli będziesz używać obiektu graficznego wielokrotnie, można po jego przydziału i zaznacz go do kontekstu urządzenia za każdym razem, gdy jest to potrzebne. Pamiętaj usunąć takiego obiektu, gdy nie są już potrzebne.  
+>  Jeśli będzie używany obiekt graficzny wielokrotnie, można przydzielić ją jeden raz i zaznacz go do kontekstu urządzenia za każdym razem, gdy jest to konieczne. Pamiętaj usunąć takiego obiektu, gdy nie są już potrzebne.  
   
-### <a name="what-do-you-want-to-know-more-about"></a>Co chcesz dowiedzieć się więcej o  
+### <a name="what-do-you-want-to-know-more-about"></a>Co chcesz dowiedzieć się więcej na temat  
   
 -   [Jedno- i dwuetapowa konstrukcja obiektów graficznych](../mfc/one-stage-and-two-stage-construction-of-objects.md)  
   
--   [Przykład konstruowania pióra w jedno i dwóch etapach](../mfc/one-stage-and-two-stage-construction-of-objects.md)  
+-   [Przykład konstruowanie pióra w jedno i dwa etapy](../mfc/one-stage-and-two-stage-construction-of-objects.md)  
   
 -   [Wybieranie obiektu graficznego do kontekstu urządzenia](../mfc/selecting-a-graphic-object-into-a-device-context.md)  
   

@@ -40,12 +40,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 898281e0652345f22c63076cf4b0a73294faaf04
-ms.sourcegitcommit: b92ca0b74f0b00372709e81333885750ba91f90e
+ms.openlocfilehash: 2bed0b93b2c9643a19aa8fd97c0e52da2ba1f8be
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/16/2018
-ms.locfileid: "42464854"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43198793"
 ---
 # <a name="endthread-endthreadex"></a>_endthread, _endthreadex
 
@@ -71,7 +71,7 @@ Możesz wywołać **_endthread** lub **_endthreadex** jawnie, aby zakończyć w�
 > [!NOTE]
 > Dla pliku wykonywalnego połączonego z Libcmt.lib Nie wywołuj Win32 [ExitThread](/windows/desktop/api/processthreadsapi/nf-processthreadsapi-exitthread) interfejsu API, uniemożliwia to systemowi środowiska wykonawczego odzyskiwanie przydzielone zasoby. **_endthread** i **_endthreadex** odzyskiwania zasobów przydzielonych wątku, a następnie wywołać **ExitThread**.
 
-**_endthread** automatycznie zamyka uchwyt do wątku. (To zachowanie różni się od Win32 **ExitThread** interfejsu API.) W związku z tym, kiedy używasz **_beginthread** i **_endthread**, nie zamykaj jawnie uchwytu wątku poprzez wywołanie Win32 [funkcja CloseHandle](http://msdn.microsoft.com/library/windows/desktop/ms724211.aspx) interfejsu API.
+**_endthread** automatycznie zamyka uchwyt do wątku. (To zachowanie różni się od Win32 **ExitThread** interfejsu API.) W związku z tym, kiedy używasz **_beginthread** i **_endthread**, nie zamykaj jawnie uchwytu wątku poprzez wywołanie Win32 [funkcja CloseHandle](https://msdn.microsoft.com/library/windows/desktop/ms724211.aspx) interfejsu API.
 
 Win32, takich jak **ExitThread** interfejsu API, **_endthreadex** nie zamyka dojście wątku. W związku z tym, kiedy używasz **_beginthreadex** i **_endthreadex**, należy zamknąć uchwytu wątku poprzez wywołanie Win32 **funkcja CloseHandle** interfejsu API.
 

@@ -1,5 +1,5 @@
 ---
-title: snprintf —, _snprintf —, _snprintf_l —, _snwprintf —, _snwprintf_l — | Dokumentacja firmy Microsoft
+title: snprintf —, _snprintf, _snprintf_l —, _snwprintf, _snwprintf_l — | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -58,15 +58,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 90f931153b4328c404fa4a0e6be8f0c3548c4d95
-ms.sourcegitcommit: 6e3cf8df676d59119ce88bf5321d063cf479108c
+ms.openlocfilehash: fe100cbd38581b733c07b5d129d215f368e27aa7
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/22/2018
-ms.locfileid: "34451748"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43203521"
 ---
 # <a name="snprintf-snprintf-snprintfl-snwprintf-snwprintfl"></a>snprintf, _snprintf, _snprintf_l, _snwprintf, _snwprintf_l
-Zapisuje sformatowane dane do ciągu. Bezpieczniejsza wersje te funkcje są dostępne; zobacz [_snprintf_s —, _snprintf_s_l —, _snwprintf_s —, _snwprintf_s_l —](snprintf-s-snprintf-s-l-snwprintf-s-snwprintf-s-l.md).
+Zapisuje sformatowane dane do ciągu. Bardziej bezpieczne wersje tych funkcji są dostępne; zobacz [_snprintf_s, _snprintf_s_l, _snwprintf_s, _snwprintf_s_l](snprintf-s-snprintf-s-l-snwprintf-s-snwprintf-s-l.md).
 
 ## <a name="syntax"></a>Składnia
 
@@ -156,34 +156,34 @@ Aby uzyskać więcej informacji, zobacz [składnia specyfikacji formatu: funkcje
 
 ## <a name="return-value"></a>Wartość zwracana
 
-Let **len** można długość ciągu formatowania danych, nie włączając zakończenia null. Zarówno **len** i *liczba* w bajtach dla **snprintf —** i **_snprintf —**, wielu znaków dla **_snwprintf —**.
+Pozwól **len** będzie długością sformatowanego ciągu danych, nie wliczając zakończenia o wartości null. Zarówno **len** i *liczba* są w bajtach dla **snprintf —** i **_snprintf**, znaki dwubajtowe dla **_snwprintf**.
 
-Dla wszystkich funkcji Jeśli **len** < *liczba*, **len** znaków są przechowywane w *buforu*, dołączany terminatora wartości null i **len** jest zwracany.
+Dla wszystkich funkcji Jeśli **len** < *liczba*, **len** znaki są przechowywane w *buforu*, jest dołączany terminator o wartości null, i **len** jest zwracana.
 
-**Snprintf —** Funkcja obcina dane wyjściowe podczas **len** jest większa niż lub równa *liczba*, umieszczając terminatora null w `buffer[count-1]`. Wartość zwracana jest **len**, liczba znaków, które byłyby dane wyjściowe Jeśli *liczba* był wystarczająco duży. **Snprintf —** funkcja zwraca wartość ujemną, jeśli wystąpi błąd kodowania.
+**Snprintf —** Funkcja obcina dane wyjściowe po **len** jest większa niż lub równa *liczba*, umieszczając terminator o wartości null w `buffer[count-1]`. Wartość zwracana jest **len**, liczbę znaków, które mogą być danych wyjściowych Jeśli *liczba* był wystarczająco duży. **Snprintf —** funkcja zwraca wartość ujemną, jeśli wystąpi błąd kodowania.
 
-Dla wszystkich funkcji innych niż **snprintf —**, jeśli **len** = *liczba*, **len** znaków są przechowywane w  *Bufor*, dołączany nie terminatorem null i **len** jest zwracany. Jeśli **len** > *liczba*, *liczba* znaków są przechowywane w *buforu*, nie terminatorem null jest dołączany, ujemna wartość jest zwracana.
+Dla wszystkich funkcji innych niż **snprintf —**, jeśli **len** = *liczba*, **len** znaki są przechowywane w  *Bufor*, nie terminator o wartości null jest dołączany, i **len** jest zwracana. Jeśli **len** > *liczba*, *liczba* znaki są przechowywane w *buforu*, nie terminator o wartości null jest dołączany oraz ujemna wartość jest zwracana.
 
-Jeśli *buforu* wskaźnik null i *liczba* wynosi zero, **len** jest zwracana jako liczbę znaków wymaganą do formatowania danych wyjściowych, nie włączając zakończenia null. Aby pomyślnym nawiązaniu połączenia z tym samym *argument* i *ustawień regionalnych* parametrów, przydzielić buforu zawierający co najmniej **len** + 1 znaków.
+Jeśli *buforu* jest pustym wskaźnikiem i *liczba* wynosi zero, **len** jest zwracany jako liczba znaków wymaganych do sformatowania danych wyjściowych, nie wliczając zakończenia o wartości null. Aby prawidłowo wywołać z takimi samymi *argument* i *ustawień regionalnych* parametrów, Przydziel bufor mieszczący co najmniej **len** + 1 znaków.
 
-Jeśli *buforu* wskaźnik null i *liczba* jest różna od zera, lub jeśli *format* wskaźnika o wartości null, jest program obsługi nieprawidłowych parametrów zostanie wywołany, zgodnie z opisem w [ Sprawdzanie poprawności parametru](../../c-runtime-library/parameter-validation.md). Zwróć -1, jeśli wykonanie może kontynuować, następujące funkcje i ustaw **errno** do **einval —**.
+Jeśli *buforu* jest pustym wskaźnikiem i *liczba* jest różna od zera, lub jeśli *format* jest pustym wskaźnikiem, wywołany nieprawidłowy parametr uchwytu, zgodnie z opisem w [ Walidacja parametru](../../c-runtime-library/parameter-validation.md). Jeśli wykonanie może być kontynuowane, te funkcje zwracają wartość -1 i ustaw **errno** do **EINVAL**.
 
-Aby uzyskać informacje na temat tych i innych kodów błędów, zobacz [errno _doserrno —, _sys_errlist — i _sys_nerr —](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
+Aby uzyskać informacje na temat tych i innych kodów błędu, zobacz [errno, _doserrno, _sys_errlist i _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
 ## <a name="remarks"></a>Uwagi
 
-**Snprintf —** funkcji i **_snprintf —** rodziny funkcji format i magazynu *liczba* lub mniej znaków w *buforu*. **Snprintf —** funkcja zawsze przechowuje znak końcowy null, obcinanie dane wyjściowe, jeśli to konieczne. **_Snprintf —** rodziny funkcji tylko dołącza znak końcowy null, jeśli długość ciągu sformatowaną jest ściśle mniejsza niż *liczba* znaków. Każdy *argument* (jeśli istnieje) jest konwertowany i dane wyjściowe według specyfikacji formatu w *format*. Format składa się ze znaków zwykłych i ma tę samą tworzą i działać jako *format* argument [printf](printf-printf-l-wprintf-wprintf-l.md). Jeśli kopiowanie odbywa się między nakładającymi się ciągami, zachowanie jest niezdefiniowane.
+**Snprintf —** funkcji i **_snprintf** rodziny funkcji format i magazynem *liczba* lub mniej znaków w *buforu*. **Snprintf —** funkcja zawsze przechowuje kończącego znaku null obcinanie dane wyjściowe, jeśli to konieczne. **_Snprintf** rodzinę funkcji tylko dołącza kończący znak null, jeśli długość sformatowanego ciągu jest ściśle mniejsza niż *liczba* znaków. Każdy *argument* (jeśli istnieje) jest konwertowany i dane wyjściowe według specyfikacji formatu w *format*. Format składa się ze znaków zwykłych i ma taką samą formę i funkcjonuje jako *format* argument [printf](printf-printf-l-wprintf-wprintf-l.md). Jeśli kopiowanie odbywa się między nakładającymi się ciągami, zachowanie jest niezdefiniowane.
 
 > [!IMPORTANT]
-> Upewnij się, że *format* nie jest ciągiem zdefiniowane przez użytkownika. Ponieważ **_snprintf —** funkcje gwarantuje zakończenia null — w szczególności, gdy wartość zwracana jest *liczba*— upewnij się, że zostały wykonane przez kod, który dodaje terminatorem null. Aby uzyskać więcej informacji, zobacz [unikanie Overruns buforu](http://msdn.microsoft.com/library/windows/desktop/ms717795).
+> Upewnij się, że *format* nie jest ciągiem zdefiniowanym przez użytkownika. Ponieważ **_snprintf** funkcji nie gwarantuje zakończenia null — w szczególności, gdy wartość zwracana jest *liczba*— upewnij się, że są wykonane przez kod, który dodaje terminator o wartości null. Aby uzyskać więcej informacji, zobacz [unikanie przepełnień bufora](/windows/desktop/SecBP/avoiding-buffer-overruns).
 
-Począwszy od Biblioteka UCRT w programie Visual Studio 2015 i Windows 10 **snprintf —** nie jest już takie same jak **_snprintf —**. **Snprintf —** zachowanie funkcji jest teraz zgodne standard C99.
+Począwszy od UCRT w programie Visual Studio 2015 i Windows 10 **snprintf —** nie jest już taka sama jak **_snprintf**. **Snprintf —** zachowanie funkcji jest teraz zgodne standard C99.
 
-**_snwprintf —** jest wersja znaków dwubajtowych **_snprintf —**; argumenty wskaźnika **_snwprintf —** są ciągami znaków dwubajtowych. Wykrywanie błędów kodowania **_snwprintf —** może się różnić od w **_snprintf —**. **_snwprintf —**, tak jak **swprintf —**, zapisuje dane wyjściowe do ciągu zamiast docelowego typu **pliku**.
+**_snwprintf** to wersja znaku dwubajtowego **_snprintf**; argumenty wskaźnika do **_snwprintf** są ciągami znaków dwubajtowych. Wykrywanie kodowania błędów w **_snwprintf** może różnić się od w **_snprintf**. **_snwprintf**, podobnie jak **swprintf**, zapisuje dane wyjściowe do ciągu, nie miejsca docelowego typu **pliku**.
 
-Wersje tych funkcji, które mają **_l** sufiks są identyczne, z wyjątkiem tego, aby używały parametr ustawień regionalnych przekazano zamiast bieżącego ustawienia regionalne wątku.
+Wersje tych funkcji, które mają **_l** sufiksem są identyczne, z tą różnicą, że używają parametru ustawień regionalnych przekazanych zamiast bieżących ustawień regionalnych wątku.
 
-W C++ te funkcje mają przeciążenia szablonu, które wywołują ich nowsze, bezpieczniejsze odpowiedniki. Aby uzyskać więcej informacji, zobacz [Secure szablonu Overloads](../../c-runtime-library/secure-template-overloads.md).
+W C++ te funkcje mają przeciążenia szablonu, które wywołują ich nowsze, bezpieczniejsze odpowiedniki. Aby uzyskać więcej informacji, zobacz [Secure przeciążenia szablonu](../../c-runtime-library/secure-template-overloads.md).
 
 ### <a name="generic-text-routine-mappings"></a>Mapowania procedur zwykłego tekstu
 
@@ -196,10 +196,10 @@ W C++ te funkcje mają przeciążenia szablonu, które wywołują ich nowsze, be
 
 |Procedura|Wymagany nagłówek|
 |-------------|---------------------|
-|**snprintf —**, **_snprintf —**, **_snprintf_l —**|\<stdio.h>|
-|**_snwprintf —**, **_snwprintf_l —**|\<stdio.h > lub \<wchar.h >|
+|**snprintf —**, **_snprintf**, **_snprintf_l —**|\<stdio.h>|
+|**_snwprintf**, **_snwprintf_l —**|\<stdio.h > lub \<wchar.h >|
 
-Aby uzyskać więcej informacji o zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md).
+Aby uzyskać więcej informacji na temat zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Przykład
 
@@ -316,7 +316,7 @@ character count = 69
 
 ## <a name="see-also"></a>Zobacz także
 
-[We/Wy strumienia](../../c-runtime-library/stream-i-o.md)<br/>
+[Stream operacji We/Wy](../../c-runtime-library/stream-i-o.md)<br/>
 [sprintf, _sprintf_l, swprintf, _swprintf_l, \__swprintf_l](sprintf-sprintf-l-swprintf-swprintf-l-swprintf-l.md)<br/>
 [fprintf, _fprintf_l, fwprintf, _fwprintf_l](fprintf-fprintf-l-fwprintf-fwprintf-l.md)<br/>
 [printf, _printf_l, wprintf, _wprintf_l](printf-printf-l-wprintf-wprintf-l.md)<br/>

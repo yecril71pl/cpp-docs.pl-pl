@@ -25,15 +25,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a7aad2093ecc9511c3b15f68963b496130bf3c3f
-ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
+ms.openlocfilehash: 62ed04d8e54e4bf107ae12b9a4165b663c9d10d8
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37882114"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43203874"
 ---
 # <a name="ccomcachedtearoffobject-class"></a>Klasa CComCachedTearOffObject
-Ta klasa implementuje [IUnknown](http://msdn.microsoft.com/library/windows/desktop/ms680509) odrywania interfejsu.  
+Ta klasa implementuje [IUnknown](/windows/desktop/api/unknwn/nn-unknwn-iunknown) odrywania interfejsu.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -76,7 +76,7 @@ public CComObjectRootEx<contained
 |[CComCachedTearOffObject::m_contained](#m_contained)|A `CComContainedObject` obiekt pochodzi od klasy odrywania (klasy `contained`).|  
   
 ## <a name="remarks"></a>Uwagi  
- `CComCachedTearOffObject` implementuje [IUnknown](http://msdn.microsoft.com/library/windows/desktop/ms680509) odrywania interfejsu. Ta klasa różni się od `CComTearOffObject` , `CComCachedTearOffObject` ma swój własny `IUnknown`, niezależne od obiektu właściciela `IUnknown` (właścicielem jest obiekt, dla którego odrywania jest tworzona). `CComCachedTearOffObject` przechowuje swój własny odwoływać się do liczby na jego `IUnknown` i usuwana po jego licznik odwołań wynosi zero. Jednak po wykonaniu zapytania dotyczącego wszystkich jego odrywania interfejsy, licznik odwołań obiektu właściciela `IUnknown` jest zwiększany.  
+ `CComCachedTearOffObject` implementuje [IUnknown](/windows/desktop/api/unknwn/nn-unknwn-iunknown) odrywania interfejsu. Ta klasa różni się od `CComTearOffObject` , `CComCachedTearOffObject` ma swój własny `IUnknown`, niezależne od obiektu właściciela `IUnknown` (właścicielem jest obiekt, dla którego odrywania jest tworzona). `CComCachedTearOffObject` przechowuje swój własny odwoływać się do liczby na jego `IUnknown` i usuwana po jego licznik odwołań wynosi zero. Jednak po wykonaniu zapytania dotyczącego wszystkich jego odrywania interfejsy, licznik odwołań obiektu właściciela `IUnknown` jest zwiększany.  
   
  Jeśli `CComCachedTearOffObject` obiektu Implementowanie odrywania jest już uruchomiony, a interfejs odrywania jest wysyłane zapytanie ponownie, tego samego `CComCachedTearOffObject` obiektu jest ponownie. Natomiast jeśli odrywania interfejs implementowany przez `CComTearOffObject` jest ponownie wykonywane zapytanie dla za pośrednictwem obiektu właściciela innego `CComTearOffObject` zostanie utworzone wystąpienie.  
   

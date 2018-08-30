@@ -14,12 +14,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 75f9e974a2969fa817598556e3e043626a826970
-ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
+ms.openlocfilehash: fd9e665a83db3b824e03eb960baf54f296d15d4f
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37881308"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43204857"
 ---
 # <a name="worker-archetype"></a>Archetyp procesu roboczego
 Klasy, które są zgodne z *procesu roboczego* archetype zapewniają kodu do elementów roboczych procesu w kolejce puli wątków.  
@@ -31,8 +31,8 @@ Klasy, które są zgodne z *procesu roboczego* archetype zapewniają kodu do ele
 |Metoda|Opis|  
 |------------|-----------------|  
 |[Initialize](#initialize)|Wywoływana w celu zainicjowania obiektu proces roboczy, zanim wszystkie żądania są przekazywane do [Execute](#execute).|  
-|[Wykonywanie](#execute)|Wywołuje się, by przetworzyć elementu roboczego.|  
-|[Zakończenie](#terminate)|Wywoływana na uninitialize obiektu procesu roboczego po przejściu wszystkich żądań do [Execute](#execute).|  
+|[Execute](#execute)|Wywołuje się, by przetworzyć elementu roboczego.|  
+|[Terminate](#terminate)|Wywoływana na uninitialize obiektu procesu roboczego po przejściu wszystkich żądań do [Execute](#execute).|  
   
 |Element TypeDef|Opis|  
 |-------------|-----------------|  
@@ -82,7 +82,7 @@ void Execute(
  Parametru niestandardowego, zrozumiałym dla klasy procesu roboczego. Również są przekazywane do `WorkerArchetype::Initialize` i `Terminate`.  
   
  *pOverlapped*  
- Wskaźnik do [OVERLAPPED](http://msdn.microsoft.com/library/windows/desktop/ms684342) struktura używana do tworzenia kolejek na pracy, dla których elementy znajdują się w kolejce.  
+ Wskaźnik do [OVERLAPPED](/windows/desktop/api/minwinbase/ns-minwinbase-_overlapped) struktura używana do tworzenia kolejek na pracy, dla których elementy znajdują się w kolejce.  
   
 ## <a name="initialize"></a> WorkerArchetype::Initialize
 Wywoływana w celu zainicjowania obiektu proces roboczy, zanim wszystkie żądania są przekazywane do `WorkerArchetype::Execute`.  

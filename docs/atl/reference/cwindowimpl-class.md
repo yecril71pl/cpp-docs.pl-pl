@@ -28,12 +28,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c773cb242b3ac432ad5c0482bfad318c4c33b78a
-ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
+ms.openlocfilehash: fb99d0cb37fff5abe5a7eb54d3ba9c4226e5fd1c
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37883859"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43197204"
 ---
 # <a name="cwindowimpl-class"></a>Klasa CWindowImpl
 Zawiera metody służące do tworzenia lub Tworzenie podklasy okna.  
@@ -150,22 +150,22 @@ HWND Create(
  [in] Dojście do okna nadrzędnego lub właściciela.  
   
  *Rect*  
- [in] A [Prostokąt](http://msdn.microsoft.com/library/windows/desktop/dd162897) Struktura określająca położenie okna. `RECT` Mogą być przekazywane przez wskaźnik lub przez odwołanie.  
+ [in] A [Prostokąt](https://msdn.microsoft.com/library/windows/desktop/dd162897) Struktura określająca położenie okna. `RECT` Mogą być przekazywane przez wskaźnik lub przez odwołanie.  
   
  *szWindowName*  
  [in] Określa nazwę okna. Wartością domyślną jest NULL.  
   
  *dwStyle*  
- [in] Styl okna. Ta wartość zostanie połączona z style zapewniany przez klasę cech okna. Wartość domyślna zapewnia cech klasy pełną kontrolę nad stylu. Aby uzyskać listę możliwych wartości, zobacz [CreateWindow](http://msdn.microsoft.com/library/windows/desktop/ms632679) w zestawie Windows SDK.  
+ [in] Styl okna. Ta wartość zostanie połączona z style zapewniany przez klasę cech okna. Wartość domyślna zapewnia cech klasy pełną kontrolę nad stylu. Aby uzyskać listę możliwych wartości, zobacz [CreateWindow](https://msdn.microsoft.com/library/windows/desktop/ms632679) w zestawie Windows SDK.  
   
  *dwExStyle*  
- [in] Styl okna rozszerzonej. Ta wartość zostanie połączona z style zapewniany przez klasę cech okna. Wartość domyślna zapewnia cech klasy pełną kontrolę nad stylu. Aby uzyskać listę możliwych wartości, zobacz [elementu CreateWindowEx](http://msdn.microsoft.com/library/windows/desktop/ms632680) w zestawie Windows SDK.  
+ [in] Styl okna rozszerzonej. Ta wartość zostanie połączona z style zapewniany przez klasę cech okna. Wartość domyślna zapewnia cech klasy pełną kontrolę nad stylu. Aby uzyskać listę możliwych wartości, zobacz [elementu CreateWindowEx](https://msdn.microsoft.com/library/windows/desktop/ms632680) w zestawie Windows SDK.  
   
  *MenuOrID*  
  [in] Dla okna podrzędnego identyfikator okna. Aby uzyskać oknem najwyższego poziomu uchwyt menu dla okna. Wartość domyślna to **0U**.  
   
  *lpCreateParam*  
- [in] Wskaźnik do danych tworzenie okien. Aby uzyskać pełny opis, zobacz opis ostatni parametr do [elementu CreateWindowEx](http://msdn.microsoft.com/library/windows/desktop/ms632680).  
+ [in] Wskaźnik do danych tworzenie okien. Aby uzyskać pełny opis, zobacz opis ostatni parametr do [elementu CreateWindowEx](https://msdn.microsoft.com/library/windows/desktop/ms632680).  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Jeśli to się powiedzie, uchwyt do nowo utworzonego okna. W przeciwnym razie wartość NULL.  
@@ -207,7 +207,7 @@ LRESULT DefWindowProc();
  Wynik przetwarzania wiadomości.  
   
 ### <a name="remarks"></a>Uwagi  
- Domyślnie `DefWindowProc` wywołania [CallWindowProc](http://msdn.microsoft.com/library/windows/desktop/ms633571) Win32/funkcja do wysyłania informacji wiadomości do procedury okna, określony w [m_pfnSuperWindowProc](#m_pfnsuperwindowproc).  
+ Domyślnie `DefWindowProc` wywołania [CallWindowProc](https://msdn.microsoft.com/library/windows/desktop/ms633571) Win32/funkcja do wysyłania informacji wiadomości do procedury okna, określony w [m_pfnSuperWindowProc](#m_pfnsuperwindowproc).  
   
  Funkcja bez parametrów automatycznie pobiera wymagane parametry z bieżącego komunikatu.  
   
@@ -262,7 +262,7 @@ WNDPROC m_pfnSuperWindowProc;
   
 |Typ okna|Procedury okna|  
 |--------------------|----------------------|  
-|Okno oparte na nową klasę okna, określony przez [DECLARE_WND_CLASS](window-class-macros.md#declare_wnd_class) makra.|[DefWindowProc](http://msdn.microsoft.com/library/windows/desktop/ms633572) funkcję Win32.|  
+|Okno oparte na nową klasę okna, określony przez [DECLARE_WND_CLASS](window-class-macros.md#declare_wnd_class) makra.|[DefWindowProc](https://msdn.microsoft.com/library/windows/desktop/ms633572) funkcję Win32.|  
 |Okno w oparciu klasy okna, która modyfikuje istniejącej klasy, określony przez [DECLARE_WND_SUPERCLASS](window-class-macros.md#declare_wnd_superclass) makra.|Istniejące klasy okna procedurę okna.|  
 |Będące podklasami okno.|Okno będące podklasami oryginalnego procedurę okna.|  
   

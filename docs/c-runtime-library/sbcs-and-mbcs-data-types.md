@@ -18,29 +18,29 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ccdec81251589ba36209f878f1fa8b727d7d2b98
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 8cd45a20557eb3a7b2af3b1c2ecba3cc858af503
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32409280"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43205263"
 ---
 # <a name="sbcs-and-mbcs-data-types"></a>SBCS i MBCS — Typy danych
 
-Do procedury biblioteki czasu wykonywania MBCS firmy Microsoft, które obsługuje tylko znaków wielobajtowych jednego lub jeden bajt znaków wielobajtowych oczekuje `unsigned int` argumentu (gdzie 0x00 < = wartość znaku < = 0xFFFF i 0x00 < = wartość bajtu < = 0xFF). Procedura MBCS obsługująca wielobajtowe bajtów lub znaków w kontekście ciąg spodziewa się ciągu znaków wielobajtowych może być reprezentowana jako `unsigned char` wskaźnika.
+Oczekuje, że do procedury biblioteki czasu wykonywania MBCS firmy Microsoft, który obsługuje tylko jeden znak wielobajtowy lub jednobajtowego znaku wielobajtowego `unsigned int` argumentu (gdzie 0x00 < = wartość znaku < = 0xFFFF i 0x00 < = wartość bajtu < = 0xFF). Procedura MBCS, który obsługuje wielobajtowych bajtów lub znaków w kontekście ciągu oczekuje, że może być reprezentowana jako ciąg znaków wielobajtowych `unsigned char` wskaźnika.
 
 > [!CAUTION]
-> Każdy bajt znaków wielobajtowych może być reprezentowany w 8-bitową **char**. Jednak SBCS i MBCS znaków jednobajtowych typu **char** o wartości większej niż 0x7F jest ujemna. Gdy taki znak jest konwertowany bezpośrednio do **int** lub **długi**, wynik jest znakiem przez kompilator i w związku z tym może dać nieoczekiwane wyniki.
+> Każdego bajtu wiodącego znaku wielobajtowego mogą być przedstawione na 8-bitową **char**. Jednak znak Jednobajtowy SBCS lub MBCS typu **char** o wartości większej niż 0x7F jest ujemny. Gdy taki znak jest konwertowany bezpośrednio do **int** lub **długie**, wynik jest rozszerzona o znak przez kompilator i w związku z tym może przynieść nieoczekiwane wyniki.
 
-W związku z tym najlepiej do reprezentowania bajt znaków wielobajtowych jako 8-bitową `unsigned char`. Lub, w celu uniknięcia negatywnego wyniku, po prostu wykonać konwersji znaków typu **char** do `unsigned char` przed przekonwertowaniem go do **int** lub **długi**.
+W związku z tym najlepiej reprezentują bajtu wiodącego znaku wielobajtowego jak 8-bitową `unsigned char`. Lub, aby uniknąć wynik ujemny, po prostu konwersji znaków jednobajtowych typu **char** do `unsigned char` przed przekonwertowaniem go do **int** lub **długie**.
 
-Ponieważ niektóre SBCS ciąg służącego do obsługi funkcji podjęcia (ze znakiem) **char\***  parametrów, ostrzeżenie kompilatora niezgodność typu spowoduje, że podczas **_MBCS** jest zdefiniowany. Istnieją trzy sposoby, aby uniknąć tego ostrzeżenia, wymienionych według wydajności:
+Ponieważ niektóre parametry SBCS — Obsługa funkcji take (z podpisem) **char** <strong>\*</strong> parametrów ostrzeżenia kompilatora niezgodność typu spowoduje, że gdy **_MBCS** jest zdefiniowane. Istnieją trzy sposoby, aby uniknąć to ostrzeżenie, wymienione w kolejności wydajność:
 
-1. Użyj funkcji śródwierszowych bezpieczne w tchar —. H. Jest to zachowanie domyślne.
+1. W TCHAR, należy używać funkcji śródwierszowych bezpiecznegop typu. H. Jest to zachowanie domyślne.
 
-1. Użyj bezpośredniego makra w tchar —. H, definiując **_MB_MAP_DIRECT** w wierszu polecenia. Jeśli to zrobisz, musisz ręcznie dopasować typów. To jest najszybszy sposób, ale nie jest bezpieczne.
+1. Użyj makra bezpośrednie w TCHAR. H, definiując **_MB_MAP_DIRECT** w wierszu polecenia. Jeśli to zrobisz, musisz ręcznie dopasować typów. To najszybszy sposób, ale nie jest bezpieczny.
 
-1. Użyj funkcji bezpieczny statycznie połączone biblioteki w tchar —. H. Aby to zrobić, należy zdefiniować stała **_NO_INLINING** w wierszu polecenia. Jest to metoda najwolniejsze, ale najbardziej bezpieczne.
+1. W TCHAR, należy użyć funkcji bezpiecznego typu statycznie połączoną bibliotekę. H. Aby to zrobić, należy zdefiniować stałą **_NO_INLINING** w wierszu polecenia. Jest to metoda najwolniejsze, ale najbardziej bezpieczny.
 
 ## <a name="see-also"></a>Zobacz też
 

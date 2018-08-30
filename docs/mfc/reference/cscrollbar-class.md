@@ -40,12 +40,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7c37e8cb4d69e93fd0842aa7cb2149331f502eae
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: 03588a0c41633f632c99c8c178d6b69b39b00e48
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37850048"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43199204"
 ---
 # <a name="cscrollbar-class"></a>Klasa CScrollBar
 Oferuje funkcje formantu paska przewijania Windows.  
@@ -195,13 +195,13 @@ BOOL GetScrollBarInfo(PSCROLLBARINFO pScrollInfo) const;
   
 ### <a name="parameters"></a>Parametry  
  *pScrollInfo*  
- Wskaźnik do [SCROLLBARINFO](http://msdn.microsoft.com/library/windows/desktop/bb787535) struktury.  
+ Wskaźnik do [SCROLLBARINFO](/windows/desktop/api/winuser/ns-winuser-tagscrollbarinfo) struktury.  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Zwraca wartość TRUE w przypadku powodzenia, wartość FALSE w przypadku niepowodzenia.  
   
 ### <a name="remarks"></a>Uwagi  
- Ta funkcja członkowska emuluje funkcjonalność [SBM_SCROLLBARINFO](http://msdn.microsoft.com/library/windows/desktop/bb787545) komunikat, zgodnie z opisem w zestawie Windows SDK.  
+ Ta funkcja członkowska emuluje funkcjonalność [SBM_SCROLLBARINFO](/windows/desktop/Controls/sbm-getscrollbarinfo) komunikat, zgodnie z opisem w zestawie Windows SDK.  
   
 ##  <a name="getscrollinfo"></a>  CScrollBar::GetScrollInfo  
  Pobiera informacje o który `SCROLLINFO` struktury przechowuje informacje paska przewijania.  
@@ -214,7 +214,7 @@ BOOL GetScrollInfo(
   
 ### <a name="parameters"></a>Parametry  
  *lpScrollInfo*  
- Wskaźnik do [SCROLLINFO](http://msdn.microsoft.com/library/windows/desktop/bb787537) struktury. Zobacz zestaw SDK Windows, aby uzyskać więcej informacji na temat tej struktury.  
+ Wskaźnik do [SCROLLINFO](/windows/desktop/api/winuser/ns-winuser-tagscrollinfo) struktury. Zobacz zestaw SDK Windows, aby uzyskać więcej informacji na temat tej struktury.  
   
  *nMask*  
  Określa parametry paska przewijania, do pobrania. Typowy SIF_ALL, określa kombinację SIF_PAGE, SIF_POS, SIF_TRACKPOS i SIF_RANGE. Zobacz `SCROLLINFO` więcej informacji na temat wartości nMask.  
@@ -225,7 +225,7 @@ BOOL GetScrollInfo(
 ### <a name="remarks"></a>Uwagi  
  `GetScrollInfo` Umożliwia aplikacjom używanie pozycji przewijania 32-bitowych.  
   
- [SCROLLINFO](http://msdn.microsoft.com/library/windows/desktop/bb787537) struktura zawiera informacje dotyczące paska, w tym minimalne i maksymalne przewijanie położenia, rozmiaru strony i położenie suwaka (thumb) przewijania. Zobacz `SCROLLINFO` struktury tematu w zestawie SDK Windows, aby uzyskać więcej informacji na temat zmiany ustawień domyślnych struktury.  
+ [SCROLLINFO](/windows/desktop/api/winuser/ns-winuser-tagscrollinfo) struktura zawiera informacje dotyczące paska, w tym minimalne i maksymalne przewijanie położenia, rozmiaru strony i położenie suwaka (thumb) przewijania. Zobacz `SCROLLINFO` struktury tematu w zestawie SDK Windows, aby uzyskać więcej informacji na temat zmiany ustawień domyślnych struktury.  
   
  Windows MFC komunikatu programów obsługi, które wskazują na położenie paska przewijania, [CWnd::OnHScroll](../../mfc/reference/cwnd-class.md#onhscroll) i [CWnd::OnVScroll](../../mfc/reference/cwnd-class.md#onvscroll), podaj tylko 16 bitów danych position. `GetScrollInfo` i `SetScrollInfo` zapewniają 32 bity danych position — pasek przewijania. W związku z tym, aplikacja może wywołać `GetScrollInfo` podczas przetwarzania albo `CWnd::OnHScroll` lub `CWnd::OnVScroll` do uzyskania danych położenie paska przewijania 32-bitowych.  
   
@@ -294,7 +294,7 @@ BOOL SetScrollInfo(
   
 ### <a name="parameters"></a>Parametry  
  *lpScrollInfo*  
- Wskaźnik do [SCROLLINFO](http://msdn.microsoft.com/library/windows/desktop/bb787537) struktury.  
+ Wskaźnik do [SCROLLINFO](/windows/desktop/api/winuser/ns-winuser-tagscrollinfo) struktury.  
   
  *bRedraw*  
  Określa, czy pasek przewijania powinien być narysowany ponownie, aby odzwierciedlić nowe informacje. Jeśli *bRedraw* ma wartość TRUE, jest odświeżana, pasek przewijania. Jeśli jest to wartość FALSE, nie jest narysowany na ponownie. Pasek przewijania jest odświeżana, domyślnie.  
@@ -305,7 +305,7 @@ BOOL SetScrollInfo(
 ### <a name="remarks"></a>Uwagi  
  Należy podać wartości wymagane przez `SCROLLINFO` struktury parametrów, w tym wartości flag.  
   
- `SCROLLINFO` Struktura zawiera informacje dotyczące paska, w tym minimalne i maksymalne przewijanie położenia, rozmiaru strony i położenie suwaka (thumb) przewijania. Zobacz [SCROLLINFO](http://msdn.microsoft.com/library/windows/desktop/bb787537) struktury tematu w zestawie SDK Windows, aby uzyskać więcej informacji na temat zmiany ustawień domyślnych struktury.  
+ `SCROLLINFO` Struktura zawiera informacje dotyczące paska, w tym minimalne i maksymalne przewijanie położenia, rozmiaru strony i położenie suwaka (thumb) przewijania. Zobacz [SCROLLINFO](/windows/desktop/api/winuser/ns-winuser-tagscrollinfo) struktury tematu w zestawie SDK Windows, aby uzyskać więcej informacji na temat zmiany ustawień domyślnych struktury.  
   
 ### <a name="example"></a>Przykład  
  [!code-cpp[NVC_MFC_CScrollBar#3](../../mfc/reference/codesnippet/cpp/cscrollbar-class_3.cpp)]  

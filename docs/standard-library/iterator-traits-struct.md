@@ -17,12 +17,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e0b4221e32b6e85df0b559b1d6d4ecda381d8e3d
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 4188c099e676ba58b0194953110fc2e62e8aced8
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38959641"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43204922"
 ---
 # <a name="iteratortraits-struct"></a>iterator_traits — Struktura
 
@@ -57,7 +57,7 @@ Struktura szablon definiuje typy elementów członkowskich
 
 - `reference`: jest to synonim `Iterator::reference`.
 
-Częściowe specjalizacje określić typy krytyczne skojarzony wskaźnik do obiektu typu **typu \***  lub const **typu \*** .
+Częściowe specjalizacje określić typy krytyczne skojarzony wskaźnik do obiektu typu **typu** <strong>\*</strong> lub **typ const**  <strong>\*</strong>.
 
 W tej implementacji, które można również użyć kilku funkcji szablonu, które nie należy wprowadzać użytkowania częściowej specjalizacji:
 

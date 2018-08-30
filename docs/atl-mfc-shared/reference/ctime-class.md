@@ -35,12 +35,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4b68ebd20d449c11ac8c62a6a01c086dbe566811
-ms.sourcegitcommit: 76fd30ff3e0352e2206460503b61f45897e60e4f
+ms.openlocfilehash: ccfb9c8873ff7e954e4e8169fafb94c53e6a311e
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/13/2018
-ms.locfileid: "39027676"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43205990"
 ---
 # <a name="ctime-class"></a>CTime, klasa
 Reprezentuje bezwzględnego czasu i daty.  
@@ -66,7 +66,7 @@ class CTime
 |[CTime::Format](#format)|Konwertuje `CTime` obiekt na ciąg sformatowany — oparte na podstawie lokalnej strefy czasowej.|  
 |[CTime::FormatGmt](#formatgmt)|Konwertuje `CTime` obiekt na ciąg sformatowany — oparty na czasie UTC.|  
 |[CTime::GetAsDBTIMESTAMP](#getasdbtimestamp)|Konwertuje czas informacji przechowywanych w `CTime` obiektu do struktury odcisk CZASOWY zgodnego z Win32.|  
-|[CTime::GetAsSystemTime](#getassystemtime)|Konwertuje czas informacji przechowywanych w `CTime` obiektu Win32 zgodnych [SYSTEMTIME](http://msdn.microsoft.com/library/windows/desktop/ms724950) struktury.|  
+|[CTime::GetAsSystemTime](#getassystemtime)|Konwertuje czas informacji przechowywanych w `CTime` obiektu Win32 zgodnych [SYSTEMTIME](https://msdn.microsoft.com/library/windows/desktop/ms724950) struktury.|  
 |[CTime::GetCurrentTime](#getcurrenttime)|Tworzy `CTime` obiekt, który reprezentuje bieżący czas (statyczny element członkowski funkcji).|  
 |[CTime::GetDay](#getday)|Zwraca reprezentują dnia przez `CTime` obiektu.|  
 |[CTime::GetDayOfWeek](#getdayofweek)|Zwraca dzień tygodnia, reprezentowane przez `CTime` obiektu.|  
@@ -210,7 +210,7 @@ CTime(const DBTIMESTAMP& dbts,int nDST = -1) throw();
     > [!NOTE]
     >  Za pomocą konstruktora `DBTIMESTAMP` parametr jest dostępna tylko, gdy OLEDB.h jest dołączony.  
   
- Aby uzyskać więcej informacji, zobacz [SYSTEMTIME](http://msdn.microsoft.com/library/windows/desktop/ms724950) i [FILETIME](http://msdn.microsoft.com/library/windows/desktop/ms724284) struktury w zestawie Windows SDK. Zobacz też [MS-DOS daty i godziny](http://msdn.microsoft.com/library/windows/desktop/ms724503) wejścia w zestawie Windows SDK.  
+ Aby uzyskać więcej informacji, zobacz [SYSTEMTIME](https://msdn.microsoft.com/library/windows/desktop/ms724950) i [FILETIME](https://msdn.microsoft.com/library/windows/desktop/ms724284) struktury w zestawie Windows SDK. Zobacz też [MS-DOS daty i godziny](/windows/desktop/SysInfo/ms-dos-date-and-time) wejścia w zestawie Windows SDK.  
   
 ### <a name="example"></a>Przykład  
  [!code-cpp[NVC_ATLMFC_Utilities#148](../../atl-mfc-shared/codesnippet/cpp/ctime-class_2.cpp)]  
@@ -288,7 +288,7 @@ bool GetAsDBTIMESTAMP(DBTIMESTAMP& dbts) const throw();
  [!code-cpp[NVC_ATLMFC_Utilities#150](../../atl-mfc-shared/codesnippet/cpp/ctime-class_4.cpp)]  
   
 ##  <a name="getassystemtime"></a>  CTime::GetAsSystemTime  
- Wywołaj tę funkcję elementu członkowskiego, aby przekonwertować czasu informacji przechowywanych w `CTime` obiektu Win32 zgodnych [SYSTEMTIME](http://msdn.microsoft.com/library/windows/desktop/ms724950) struktury.  
+ Wywołaj tę funkcję elementu członkowskiego, aby przekonwertować czasu informacji przechowywanych w `CTime` obiektu Win32 zgodnych [SYSTEMTIME](https://msdn.microsoft.com/library/windows/desktop/ms724950) struktury.  
   
 ```  
 bool GetAsSystemTime(SYSTEMTIME& st) const throw();
@@ -296,7 +296,7 @@ bool GetAsSystemTime(SYSTEMTIME& st) const throw();
   
 ### <a name="parameters"></a>Parametry  
  *timeDest*  
- Odwołanie do [SYSTEMTIME](http://msdn.microsoft.com/library/windows/desktop/ms724950) strukturę, która będzie przechowywać wartość daty/godziny przekonwertowanego `CTime` obiektu.  
+ Odwołanie do [SYSTEMTIME](https://msdn.microsoft.com/library/windows/desktop/ms724950) strukturę, która będzie przechowywać wartość daty/godziny przekonwertowanego `CTime` obiektu.  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Wartość TRUE, jeśli to się powiedzie; w przeciwnym razie wartość FALSE.  

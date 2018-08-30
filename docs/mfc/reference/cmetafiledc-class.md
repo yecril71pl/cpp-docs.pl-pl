@@ -26,12 +26,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1da8f48fc993ec2b6c963bf3648359cc39dfc8ce
-ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
+ms.openlocfilehash: fb2fd794798f96cceca893df4a69dc888196d9a6
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37338863"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43197006"
 ---
 # <a name="cmetafiledc-class"></a>Cmetafiledc — klasa
 Implementuje metaplik Windows, który zawiera sekwencję poleceń interface (GDI) urządzenia grafiki, które można powtarzać tak, aby utworzyć żądany obraz lub tekst.  
@@ -66,9 +66,9 @@ class CMetaFileDC : public CDC
   
  Po zostało wysłane żądanego polecenia, aby metaplik, wywołać `Close` funkcja elementu członkowskiego, który zamyka konteksty urządzenia metaplików i zwraca uchwyt metaplik. Następnie usuwa `CMetaFileDC` obiektu.  
   
- [CDC::PlayMetaFile](../../mfc/reference/cdc-class.md#playmetafile) można następnie użyć uchwytu metaplik powtarzanie odtwarzania metaplik. Metaplik może również być manipulowane przez Windows funkcje takie jak [CopyMetaFile](http://msdn.microsoft.com/library/windows/desktop/dd183480), który kopiuje metaplik na dysku.  
+ [CDC::PlayMetaFile](../../mfc/reference/cdc-class.md#playmetafile) można następnie użyć uchwytu metaplik powtarzanie odtwarzania metaplik. Metaplik może również być manipulowane przez Windows funkcje takie jak [CopyMetaFile](/windows/desktop/api/wingdi/nf-wingdi-copymetafilea), który kopiuje metaplik na dysku.  
   
- Gdy metaplik nie jest już potrzebny, usuń go z pamięci za pomocą [DeleteMetaFile](http://msdn.microsoft.com/library/windows/desktop/dd183537) funkcji Windows.  
+ Gdy metaplik nie jest już potrzebny, usuń go z pamięci za pomocą [DeleteMetaFile](/windows/desktop/api/wingdi/nf-wingdi-deletemetafile) funkcji Windows.  
   
  Możesz również wdrożyć `CMetaFileDC` obiekt, tak aby może obsługiwać zarówno dane wyjściowe wywołania i atrybutu wywołania interfejsu GDI, takich jak `GetTextExtent`. Takie metaplik jest bardziej elastyczna i więcej z łatwością wykorzystać ogólne kodu interfejsu GDI, który często składa się z różnych połączeń w danych wyjściowych i atrybut. `CMetaFileDC` Klasa dziedziczy dwa konteksty urządzenia, `m_hDC` i `m_hAttribDC`, z przechwytywania zmian danych. `m_hDC` Kontekstu urządzenia obsługuje wszystkie [CDC](../../mfc/reference/cdc-class.md) GDI dane wyjściowe wywołania i `m_hAttribDC` kontekstu urządzenia obsługuje wszystkie wywołania atrybut GDI przechwytywania zmian danych. Zazwyczaj te konteksty urządzenia dwóch odnoszą się do tego samego urządzenia. W przypadku właściwości `CMetaFileDC`, atrybut kontroler domeny jest domyślnie null.  
   
@@ -97,9 +97,9 @@ HMETAFILE Close();
  Nieprawidłowa HMETAFILE, jeśli funkcja się powiedzie; w przeciwnym razie wartość NULL.  
   
 ### <a name="remarks"></a>Uwagi  
- Uchwyt metaplik Windows można także do manipulowania metaplik za pomocą funkcji Windows, takich jak [CopyMetaFile](http://msdn.microsoft.com/library/windows/desktop/dd183480).  
+ Uchwyt metaplik Windows można także do manipulowania metaplik za pomocą funkcji Windows, takich jak [CopyMetaFile](/windows/desktop/api/wingdi/nf-wingdi-copymetafilea).  
   
- Usuń metaplik po użyciu wywołując Windows [DeleteMetaFile](http://msdn.microsoft.com/library/windows/desktop/dd183537) funkcji.  
+ Usuń metaplik po użyciu wywołując Windows [DeleteMetaFile](/windows/desktop/api/wingdi/nf-wingdi-deletemetafile) funkcji.  
   
 ##  <a name="closeenhanced"></a>  CMetaFileDC::CloseEnhanced  
  Zamyka rozszerzonych metaplików kontekstu urządzenia i zwraca uchwyt, który identyfikuje format rozszerzony metaplik.  

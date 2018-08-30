@@ -20,12 +20,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6e9d212e74f77d21efa1b2ed030f8a1446d111fc
-ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
+ms.openlocfilehash: 74f1f0f88828b5d6355c692aa8eaeecd5869bf57
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37882952"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43202937"
 ---
 # <a name="unicode-and-multibyte-character-set-mbcs-support"></a>Unicode i Multibyte Character Set (MBCS) pomocy technicznej
 
@@ -67,9 +67,9 @@ Na zakończenie programowania Unicode aplikacji, musisz mieć również:
 
    - Użyj TCHAR, w której można zastosować **char**.
 
-   - Użyj LPTSTR użycia **char\***.
+   - Użyj LPTSTR użycia **char**<strong>\*</strong>.
 
-   - Użyj LPCTSTR użycia **const char\***. `CString` zawiera operator LPCTSTR do konwersji między `CString` i LPCTSTR.
+   - Użyj LPCTSTR użycia **const char**<strong>\*</strong>. `CString` zawiera operator LPCTSTR do konwersji między `CString` i LPCTSTR.
 
 `CString` dostarcza również obsługujących Unicode konstruktorów, operatory przypisania i operatory porównania.
 
@@ -101,7 +101,7 @@ W obszarze znaków Dwubajtowych podany ciąg może zawierać wszystkie jednobajt
 
 Mapowania zwykłego tekstu, funkcja wszystkie procedury obsługi ciągów czasu wykonywania są omówione w [odwołanie do biblioteki wykonawczej C](../c-runtime-library/c-run-time-library-reference.md). Aby uzyskać listę, zobacz [internacjonalizacji](../c-runtime-library/internationalization.md).
 
-Podobnie `CString` metody są implementowane za pomocą mapowania typów danych typu ogólnego. Umożliwia Unicode i MBCS MFC wykorzystuje TCHAR dla **char** lub `wchar_t`, LPTSTR dla **char\***  lub `wchar_t*`i LPCTSTR dla **const char\***  lub `const wchar_t*`. Te zapewnienia poprawnego mapowania MBCS lub Unicode.
+Podobnie `CString` metody są implementowane za pomocą mapowania typów danych typu ogólnego. Umożliwia Unicode i MBCS MFC wykorzystuje TCHAR dla **char** lub `wchar_t`, LPTSTR dla **char** <strong>\*</strong> lub `wchar_t*`i LPCTSTR dla **const char** <strong>\*</strong> lub `const wchar_t*`. Te zapewnienia poprawnego mapowania MBCS lub Unicode.
 
 ## <a name="see-also"></a>Zobacz też
 

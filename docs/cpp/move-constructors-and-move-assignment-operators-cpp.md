@@ -14,12 +14,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 33ed35d02547acdbc9a08928a6e698c3e039d745
-ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
+ms.openlocfilehash: f414871477e8d263546833cb71496f5795dd4671
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/01/2018
-ms.locfileid: "39405574"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43204990"
 ---
 # <a name="move-constructors-and-move-assignment-operators-c"></a>Konstruktory przenoszące i przenoszące operatory przypisania (C++)
 W tym temacie opisano sposób pisania *Konstruktor przenoszący* i operator przypisania przenoszenia dla klasy języka C++. Konstruktor przenoszący umożliwia zasoby należące do obiektem wartościowanym prawostronnie do przeniesienia do l-wartości bez kopiowania. Aby uzyskać więcej informacji dotyczących semantyki przenoszenia, zobacz [Rvalue Reference Declarator: & &](../cpp/rvalue-reference-declarator-amp-amp.md).  
@@ -317,4 +317,4 @@ MemoryBlock(MemoryBlock&& other)
   
 ## <a name="see-also"></a>Zobacz także  
  [Deklarator odwołania do wartości r: & &](../cpp/rvalue-reference-declarator-amp-amp.md)   
- [\<Narzędzia > Przenieś](http://msdn.microsoft.com/abef7e85-9dd6-4724-85da-d7f7fe95dca9)
+ [\<Narzędzia > Przenieś](https://msdn.microsoft.com/abef7e85-9dd6-4724-85da-d7f7fe95dca9)

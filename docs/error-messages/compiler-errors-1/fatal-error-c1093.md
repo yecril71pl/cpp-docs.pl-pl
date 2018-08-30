@@ -16,16 +16,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e6e7bfe845c35b31f5a1b0833c600e6947be8592
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 5c736fbb5180edb26eda6a557a4e8e45a3ffc881
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33226353"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43202029"
 ---
 # <a name="fatal-error-c1093"></a>Błąd krytyczny C1093
-Wywołanie interfejsu API "Nazwa funkcji" nie powiodło się "location wywołania": "tekst z run-time"  
+
+> Wywołanie interfejsu API "*nazwy funkcji*"nie powiodło się"*lokalizacji wywołania*": "*tekst ze środowiska wykonawczego*"  
   
- Nie można wywołać funkcji .NET. ***tekst ze środowiska wykonawczego*** mogą lub nie mogą być dostarczane przez środowisko uruchomieniowe COM.  
+Nie można wywołać funkcji platformy .NET. *Tekst ze środowiska wykonawczego* ciąg może lub nie mogą być dostarczane przez środowisko uruchomieniowe COM.  
   
- Aby uzyskać więcej informacji na temat komunikatów o błędach systemu, zobacz pliku winerror.h plików systemowych, i [FormatMessage](http://msdn.microsoft.com/library/windows/desktop/ms679351).
+Aby uzyskać więcej informacji na temat komunikaty o błędach systemu, zobacz plik winerror.h systemu i [FormatMessage](/windows/desktop/api/winbase/nf-winbase-formatmessage).

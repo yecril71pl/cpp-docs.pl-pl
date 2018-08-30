@@ -206,12 +206,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 318951b5216513c20cdb21ac4a4fcfff9c3e0ac7
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: 6de4e448450aa346875bfef5e9455d713258b5d6
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42466136"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43199924"
 ---
 # <a name="styles-used-by-mfc"></a>Style używane przez MFC  
   
@@ -308,7 +308,7 @@ Następujące style pola kombi są dostępne w MFC. Aby uzyskać więcej informa
   
 ## <a name="edit-styles"></a>  Style edycji  
   
-Edytuj style dotyczą [klasa CEdit](../../mfc/reference/cedit-class.md) obiektów. Określ kombinację style w *dwStyle* parametru [CEdit::Create](../../mfc/reference/cedit-class.md#create). Aby uzyskać więcej informacji dotyczących edytowania stylów kontrolki w Windows, zobacz [Edytuj style kontrolki (Windows)](http://msdn.microsoft.com/library/windows/desktop/bb775464).  
+Edytuj style dotyczą [klasa CEdit](../../mfc/reference/cedit-class.md) obiektów. Określ kombinację style w *dwStyle* parametru [CEdit::Create](../../mfc/reference/cedit-class.md#create). Aby uzyskać więcej informacji dotyczących edytowania stylów kontrolki w Windows, zobacz [Edytuj style kontrolki (Windows)](https://msdn.microsoft.com/library/windows/desktop/bb775464).  
   
 |Styl|Opis|  
 |-----------|-----------------|  
@@ -403,7 +403,7 @@ Dostępne są następujące style okno komunikatu.
   
 ## <a name="scroll-bar-styles"></a> Style paska przewijania  
   
-Style paska przewijania dotyczą [klasa CScrollBar](../../mfc/reference/cscrollbar-class.md) obiektów. Określ kombinację style w *dwStyle* parametru [CScrollBar::Create](../../mfc/reference/cscrollbar-class.md#create). Aby uzyskać więcej informacji na temat paska sterowania style w Windows przewijania, zobacz [style formantu paska przewijania (Windows)](http://msdn.microsoft.com/library/windows/desktop/bb787533).  
+Style paska przewijania dotyczą [klasa CScrollBar](../../mfc/reference/cscrollbar-class.md) obiektów. Określ kombinację style w *dwStyle* parametru [CScrollBar::Create](../../mfc/reference/cscrollbar-class.md#create). Aby uzyskać więcej informacji na temat paska sterowania style w Windows przewijania, zobacz [style formantu paska przewijania (Windows)](https://msdn.microsoft.com/library/windows/desktop/bb787533).  
   
 |Styl|Opis|  
 |-----------|-----------------|  
@@ -420,7 +420,7 @@ Style paska przewijania dotyczą [klasa CScrollBar](../../mfc/reference/cscrollb
   
 ## <a name="static-styles"></a> Style statyczne  
   
-Style statyczne dotyczą [klasa CStatic](../../mfc/reference/cstatic-class.md) obiektów. Określ kombinację style w *dwStyle* parametru [CStatic::Create](../../mfc/reference/cstatic-class.md#create). Aby uzyskać więcej informacji na temat style kontrolki statycznej w Windows zobacz [style kontrolki statyczne (Windows)](http://msdn.microsoft.com/library/windows/desktop/bb760773).  
+Style statyczne dotyczą [klasa CStatic](../../mfc/reference/cstatic-class.md) obiektów. Określ kombinację style w *dwStyle* parametru [CStatic::Create](../../mfc/reference/cstatic-class.md#create). Aby uzyskać więcej informacji na temat style kontrolki statycznej w Windows zobacz [style kontrolki statyczne (Windows)](https://msdn.microsoft.com/library/windows/desktop/bb760773).  
   
 |Styl|Opis|  
 |-----------|-----------------|  
@@ -498,7 +498,7 @@ Rozszerzone Style okna dotyczą [klasa CWnd](../../mfc/reference/cwnd-class.md) 
 |WS_EX_CONTEXTHELP|Zawiera znak zapytania na pasku tytułu okna. Kiedy użytkownik kliknie na znak zapytania, kursor zmieni się znak zapytania ze wskaźnikiem. Jeśli następnie użytkownik klika pozycję okna podrzędnego, podrzędne otrzymuje komunikat WM_HELP.|  
 |WS_EX_CONTROLPARENT|Umożliwia użytkownikom przechodzenie między oknami podrzędne okna przy użyciu klawisza TAB.|  
 |WS_EX_DLGMODALFRAME|Wyznacza okno z podwójne obramowanie, który może zostać utworzony (opcjonalnie) z tytułu paska po określeniu Flaga styl WS_CAPTION w *dwStyle* parametru.|  
-|WS_EX_LAYERED|Okno jest [warstwie okna](http://msdn.microsoft.com/library/ms632599.aspx#layered). Ten styl nie można użyć, jeśli okno ma [klasy styl](http://msdn.microsoft.com/library/ms633574.aspx#class_styles) CS_OWNDC lub CS_CLASSDC. Jednak program Microsoft Windows 8 obsługę stylów WS_EX_LAYERED okien podrzędnych, gdy poprzednie wersje Windows go obsługują tylko dla okien najwyższego poziomu.|  
+|WS_EX_LAYERED|Okno jest [warstwie okna](/windows/desktop/winmsg/window-features). Ten styl nie można użyć, jeśli okno ma [klasy styl](/windows/desktop/winmsg/about-window-classes) CS_OWNDC lub CS_CLASSDC. Jednak program Microsoft Windows 8 obsługę stylów WS_EX_LAYERED okien podrzędnych, gdy poprzednie wersje Windows go obsługują tylko dla okien najwyższego poziomu.|  
 |WS_EX_LEFT|Udostępnia ogólne właściwości wyrównany do lewej strony okna. Domyślnie włączone.|  
 |WS_EX_LEFTSCROLLBAR|Umieszcza pionowy pasek przewijania z lewej strony obszaru klienta.|  
 |WS_EX_LTRREADING|Wyświetla tekst okna przy użyciu od lewej do prawej właściwości kolejność odczytu. Domyślnie włączone.|  
@@ -524,14 +524,14 @@ Rozszerzone Style okna dotyczą [klasa CWnd](../../mfc/reference/cwnd-class.md) 
 [CScrollBar::Create](../../mfc/reference/cscrollbar-class.md#create)  
 [CStatic::Create](../../mfc/reference/cstatic-class.md#create)  
 [AfxMessageBox](../../mfc/reference/cstring-formatting-and-message-box-display.md#afxmessagebox)  
-[CreateWindow](http://msdn.microsoft.com/library/windows/desktop/ms632679)  
-[Elementu CreateWindowEx](http://msdn.microsoft.com/library/windows/desktop/ms632680)  
+[CreateWindow](https://msdn.microsoft.com/library/windows/desktop/ms632679)  
+[Elementu CreateWindowEx](https://msdn.microsoft.com/library/windows/desktop/ms632680)  
 [Style przycisku (Windows)](https://msdn.microsoft.com/library/windows/desktop/bb775951)  
 [Style pola kombi (Windows)](https://msdn.microsoft.com/library/windows/desktop/bb775796)  
-[Edytuj style kontrolki (Windows)](http://msdn.microsoft.com/library/windows/desktop/bb775464)  
+[Edytuj style kontrolki (Windows)](https://msdn.microsoft.com/library/windows/desktop/bb775464)  
 [Style okna (Windows) do listy](https://msdn.microsoft.com/library/windows/desktop/bb775149) 
 [funkcji MessageBox (Windows)](https://msdn.microsoft.com/library/windows/desktop/ms645505) 
-[style formantu paska przewijania (Windows)](http://msdn.microsoft.com/library/windows/desktop/bb787533)  
-[Style formantu statycznego (Windows)](http://msdn.microsoft.com/library/windows/desktop/bb760773)  
+[style formantu paska przewijania (Windows)](https://msdn.microsoft.com/library/windows/desktop/bb787533)  
+[Style formantu statycznego (Windows)](https://msdn.microsoft.com/library/windows/desktop/bb760773)  
 [Style okna ramowego (Windows)](https://msdn.microsoft.com/library/windows/desktop/ms632600)  
 [Rozszerzone Style okna (Windows)](https://msdn.microsoft.com/library/windows/desktop/ff700543)  

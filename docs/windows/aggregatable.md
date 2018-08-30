@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 66c85999e70e505176700ecaac69b75048ce2422
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: a9d65f77126ceb4268d41610c6d5fe3a07968d02
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42595245"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43200571"
 ---
 # <a name="aggregatable"></a>aggregatable
 
@@ -49,7 +49,7 @@ Parametr, aby wskazać, kiedy obiekt COM może być agregowany:
 
 ## <a name="remarks"></a>Uwagi
 
-**Się agregowaniu** atrybut C++ ma taką samą funkcjonalność jak [się agregowaniu](http://msdn.microsoft.com/library/windows/desktop/aa366721) atrybutów w MIDL. Oznacza to, że kompilator będzie przekazywać **się agregowaniu** atrybutu za pomocą pliku .idl wygenerowany.
+**Się agregowaniu** atrybut C++ ma taką samą funkcjonalność jak [się agregowaniu](/windows/desktop/Midl/aggregatable) atrybutów w MIDL. Oznacza to, że kompilator będzie przekazywać **się agregowaniu** atrybutu za pomocą pliku .idl wygenerowany.
 
 Ten atrybut wymaga, aby [coclass](../windows/coclass.md), [progid](../windows/progid.md), lub [vi_progid —](../windows/vi-progid.md) atrybutów (lub innego atrybutu, który oznacza jeden z nich) również będą stosowane do tego samego elementu. Jeśli dowolny pojedynczy atrybut jest używany, pozostałe dwa są automatycznie stosowane. Na przykład jeśli `progid` zastosowaniu `vi_progid` i `coclass` są również stosowane.
 
@@ -97,4 +97,4 @@ Aby uzyskać więcej informacji na temat konteksty atrybutu zobacz [konteksty at
 [Atrybuty IDL](../windows/idl-attributes.md)  
 [Atrybuty klasy](../windows/class-attributes.md)  
 [Atrybuty Typedef, Enum, Union oraz Struct](../windows/typedef-enum-union-and-struct-attributes.md)  
-[Agregacja](http://msdn.microsoft.com/library/windows/desktop/ms686558)  
+[Agregacja](/windows/desktop/com/aggregation)  

@@ -1,7 +1,7 @@
 ---
-title: Kompilatora (poziom 3) ostrzeżenie C4686 | Dokumentacja firmy Microsoft
+title: Kompilator ostrzeżenie (poziom 3) C4686 | Dokumentacja firmy Microsoft
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 08/27/2018
 ms.technology:
 - cpp-diagnostics
 ms.topic: error-reference
@@ -16,42 +16,46 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1edbf438951644f63aae637a68f69d173ab7e1b5
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 32a44cd929eb7629ef317ce9847950b613bde52c
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33292782"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43202083"
 ---
-# <a name="compiler-warning-level-3-c4686"></a>Kompilator C4686 ostrzegawcze (poziom 3)
-**'**   
- ***Typ zdefiniowany przez użytkownika* ": możliwe zmiany w zachowaniu, zmiana UDT zwracać konwencji wywoływania**  
-  
- Specjalizacja szablonu klasy nie jest zdefiniowany, zanim została użyta w zwracanego typu. Wszystko, co tworzy wystąpienie klasy rozwiąże C4686; deklarowanie wystąpienia lub dostęp do elementu członkowskiego (C\<int >:: niczego) są także opcje.  
-  
- To ostrzeżenie jest domyślnie wyłączone. Zobacz [kompilatora ostrzeżeń czy są wyłączone domyślnie](../../preprocessor/compiler-warnings-that-are-off-by-default.md) Aby uzyskać więcej informacji.  
-  
- Zamiast tego należy spróbować wykonać następujące czynności  
-  
-```  
-// C4686.cpp  
-// compile with: /W3  
-#pragma warning (default : 4686)  
-template <class T>  
-class C;  
-  
-template <class T>  
-C<T> f(T);  
-  
-template <class T>  
-class C {};  
-  
-int main() {  
-   f(1);   // C4686  
-}  
-  
-template <class T>  
-C<T> f(T) {  
-   return C<int>();  
-}  
+# <a name="compiler-warning-level-3-c4686"></a>Kompilator ostrzeżenie (poziom 3) C4686
+
+> "*typu zdefiniowanego przez użytkownika*': możliwe zmiany w zachowaniu, zmiana UDT zwracają konwencji wywoływania
+
+## <a name="remarks"></a>Uwagi
+
+Specjalizacja szablonu klasy nie jest zdefiniowany, zanim został on użyty w zwracanym typem. Wszystkie elementy, które tworzy wystąpienie klasy rozwiąże C4686; deklarowanie wystąpienia lub uzyskiwania dostępu do członka (C\<int >:: niczego) są również opcje.
+
+To ostrzeżenie jest domyślnie wyłączona. Zobacz [kompilatora ostrzeżenia, są wyłączone domyślnie](../../preprocessor/compiler-warnings-that-are-off-by-default.md) Aby uzyskać więcej informacji.
+
+## <a name="example"></a>Przykład
+
+Zamiast tego spróbuj wykonać następujące czynności:
+
+```cpp
+// C4686.cpp
+// compile with: /W3
+#pragma warning (default : 4686)
+template <class T>
+class C;
+
+template <class T>
+C<T> f(T);
+
+template <class T>
+class C {};
+
+int main() {
+   f(1);   // C4686
+}
+
+template <class T>
+C<T> f(T) {
+   return C<int>();
+}
 ```

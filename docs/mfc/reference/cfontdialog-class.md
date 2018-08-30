@@ -44,12 +44,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3b7f82988e8756a6894464c9d95ae47fe6baf922
-ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
+ms.openlocfilehash: 6ef5728a20cc97d330540b10c2de325f62583b69
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37336816"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43203079"
 ---
 # <a name="cfontdialog-class"></a>Klasa CFontDialog
 Umożliwia uwzględnienie okna dialogowego wyboru czcionki w aplikacji.  
@@ -96,13 +96,13 @@ class CFontDialog : public CCommonDialog
   
  Do konstruowania `CFontDialog` obiektu, użyj podanych konstruktora lub pobrać nową podklasę i używania niestandardowego konstruktora.  
   
- Gdy `CFontDialog` obiekt został skonstruowany, możesz użyć `m_cf` strukturę, aby zainicjować wartości lub stany formantów w oknie dialogowym. [M_cf](#m_cf) struktury jest typu [CHOOSEFONT](http://msdn.microsoft.com/library/windows/desktop/ms646832). Aby uzyskać więcej informacji na temat tej struktury zobacz zestaw Windows SDK.  
+ Gdy `CFontDialog` obiekt został skonstruowany, możesz użyć `m_cf` strukturę, aby zainicjować wartości lub stany formantów w oknie dialogowym. [M_cf](#m_cf) struktury jest typu [CHOOSEFONT](/windows/desktop/api/commdlg/ns-commdlg-tagchoosefonta). Aby uzyskać więcej informacji na temat tej struktury zobacz zestaw Windows SDK.  
   
  Po inicjowanie obiektu okna dialogowego formantów, wywołanie `DoModal` funkcja elementu członkowskiego, aby wyświetlić okno dialogowe i Zezwalaj użytkownikowi na wybranie czcionki. `DoModal` Zwraca, czy użytkownik wybrał przycisk OK (IDOK) lub anulować (IDCANCEL).  
   
  Jeśli `DoModal` zwraca IDOK, możesz użyć jednej z `CFontDialog`przez funkcje Członkowskie można pobrać informacji o danych wejściowych przez użytkownika.  
   
- Możesz użyć Windows [CommDlgExtendedError](http://msdn.microsoft.com/library/windows/desktop/ms646916) funkcji, aby ustalić, czy wystąpił błąd podczas inicjowania okna dialogowego i Dowiedz się więcej o błędzie. Aby uzyskać więcej informacji na temat tej funkcji zobacz zestaw Windows SDK.  
+ Możesz użyć Windows [CommDlgExtendedError](/windows/desktop/api/commdlg/nf-commdlg-commdlgextendederror) funkcji, aby ustalić, czy wystąpił błąd podczas inicjowania okna dialogowego i Dowiedz się więcej o błędzie. Aby uzyskać więcej informacji na temat tej funkcji zobacz zestaw Windows SDK.  
   
  `CFontDialog` opiera się na pliku COMMDLG. Plik DLL, który jest dostarczany z programem Windows w wersji 3.1 lub nowszej.  
   
@@ -147,13 +147,13 @@ CFontDialog(
   
 ### <a name="parameters"></a>Parametry  
  *plfInitial*  
- Wskaźnik do [LOGFONT](http://msdn.microsoft.com/library/windows/desktop/dd145037) struktura danych, która pozwala na ustawienie niektórych cech czcionki.  
+ Wskaźnik do [LOGFONT](/windows/desktop/api/wingdi/ns-wingdi-taglogfonta) struktura danych, która pozwala na ustawienie niektórych cech czcionki.  
   
  *charFormat*  
- Wskaźnik do [CHARFORMAT](http://msdn.microsoft.com/library/windows/desktop/bb787881) struktura danych, która pozwala na ustawienie niektórych cech czcionki w Zaawansowane edytowanie kontrolki.  
+ Wskaźnik do [CHARFORMAT](/windows/desktop/api/richedit/ns-richedit-_charformat) struktura danych, która pozwala na ustawienie niektórych cech czcionki w Zaawansowane edytowanie kontrolki.  
   
  *Flagidw*  
- Określa co najmniej jeden flagi wybierz czcionkę. Co najmniej jeden wstępnie zdefiniowane wartości można łączyć przy użyciu bitowego operatora OR. Jeśli zmodyfikujesz `m_cf.Flag`s elementu członkowskiego struktury, należy użyć bitowy operator OR zmiany, aby zachować zachowanie domyślne. Aby uzyskać szczegółowe informacje na każdym z tych flag, zobacz opis [CHOOSEFONT](http://msdn.microsoft.com/library/windows/desktop/ms646832) struktury w zestawie Windows SDK.  
+ Określa co najmniej jeden flagi wybierz czcionkę. Co najmniej jeden wstępnie zdefiniowane wartości można łączyć przy użyciu bitowego operatora OR. Jeśli zmodyfikujesz `m_cf.Flag`s elementu członkowskiego struktury, należy użyć bitowy operator OR zmiany, aby zachować zachowanie domyślne. Aby uzyskać szczegółowe informacje na każdym z tych flag, zobacz opis [CHOOSEFONT](/windows/desktop/api/commdlg/ns-commdlg-tagchoosefonta) struktury w zestawie Windows SDK.  
   
  *pdcPrinter*  
  Wskaźnik do kontekstu urządzenia drukarki. Jeśli zostanie podany, ten parametr wskazuje kontekst urządzenie drukarki drukarki, na którym można wybrać czcionek.  
@@ -178,7 +178,7 @@ virtual INT_PTR DoModal();
 ```  
   
 ### <a name="return-value"></a>Wartość zwracana  
- IDOK lub IDCANCEL. Jeśli zwracana jest IDCANCEL, wywołaj Windows [CommDlgExtendedError](http://msdn.microsoft.com/library/windows/desktop/ms646916) funkcję, aby ustalić, czy wystąpił błąd.  
+ IDOK lub IDCANCEL. Jeśli zwracana jest IDCANCEL, wywołaj Windows [CommDlgExtendedError](/windows/desktop/api/commdlg/nf-commdlg-commdlgextendederror) funkcję, aby ustalić, czy wystąpił błąd.  
   
  IDOK i IDCANCEL są stałe, które wskazują, czy użytkownik wybrał przycisk OK, lub przycisk Anuluj.  
   
@@ -199,7 +199,7 @@ void GetCharFormat(CHARFORMAT& cf) const;
   
 ### <a name="parameters"></a>Parametry  
  *usługi CF*  
- A [CHARFORMAT](http://msdn.microsoft.com/library/windows/desktop/bb787881) struktury zawierającej informacje o formatowanie znaków w wybranej czcionki.  
+ A [CHARFORMAT](/windows/desktop/api/richedit/ns-richedit-_charformat) struktury zawierającej informacje o formatowanie znaków w wybranej czcionki.  
   
 ##  <a name="getcolor"></a>  CFontDialog::GetColor  
  Wywołaj tę funkcję, aby pobrać kolor wybranej czcionki.  
@@ -215,7 +215,7 @@ COLORREF GetColor() const;
  [!code-cpp[NVC_MFCDocView#79](../../mfc/codesnippet/cpp/cfontdialog-class_2.cpp)]  
   
 ##  <a name="getcurrentfont"></a>  CFontDialog::GetCurrentFont  
- Wywołaj tę funkcję, aby przypisać właściwości aktualnie wybranej czcionki do elementów członkowskich [LOGFONT](http://msdn.microsoft.com/library/windows/desktop/dd145037) struktury.  
+ Wywołaj tę funkcję, aby przypisać właściwości aktualnie wybranej czcionki do elementów członkowskich [LOGFONT](/windows/desktop/api/wingdi/ns-wingdi-taglogfonta) struktury.  
   
 ```  
 void GetCurrentFont(LPLOGFONT lplf);
@@ -348,7 +348,7 @@ CHOOSEFONT m_cf;
 ```  
   
 ### <a name="remarks"></a>Uwagi  
- Po konstruowanie `CFontDialog` obiektu, możesz użyć `m_cf` do modyfikowania różnych aspektów okno dialogowe przed wywołaniem `DoModal` funkcja elementu członkowskiego. Aby uzyskać więcej informacji na temat tej struktury, zobacz [CHOOSEFONT](http://msdn.microsoft.com/library/windows/desktop/ms646832) w zestawie Windows SDK.  
+ Po konstruowanie `CFontDialog` obiektu, możesz użyć `m_cf` do modyfikowania różnych aspektów okno dialogowe przed wywołaniem `DoModal` funkcja elementu członkowskiego. Aby uzyskać więcej informacji na temat tej struktury, zobacz [CHOOSEFONT](/windows/desktop/api/commdlg/ns-commdlg-tagchoosefonta) w zestawie Windows SDK.  
   
 ### <a name="example"></a>Przykład  
  [!code-cpp[NVC_MFCDocView#89](../../mfc/codesnippet/cpp/cfontdialog-class_12.cpp)]  

@@ -22,12 +22,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7e6abf906d9fa0e5866b28a0c617e68edead8378
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: 2772ec96558c4aa1d1f5fcb573166a37a31c0592
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37852253"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43201208"
 ---
 # <a name="cminiframewnd-class"></a>Klasa CMiniFrameWnd
 Przedstawia okna ramki w połowie wysokości zwykle widoczne wokół przestawnych pasków narzędzi.  
@@ -165,7 +165,7 @@ virtual BOOL CreateEx(
  Określa styl rozszerzonej `CMiniFrameWnd` tworzona. Zastosowania któregokolwiek z [rozszerzone Style okna ramowego](../../mfc/reference/styles-used-by-mfc.md#extended-window-styles) do okna.  
   
  *lpClassName*  
- Wskazuje ciąg znaków zakończony znakiem null, że nazwy klas Windows ( [WNDCLASS](http://msdn.microsoft.com/library/windows/desktop/ms633576) struktury). Nazwa klasy może być dowolna nazwa, zarejestrowany w globalnej [afxregisterwndclass —](application-information-and-management.md#afxregisterwndclass) funkcji lub żadnej z nazw wstępnie zdefiniowanych klasy kontrolki. Nie może być równa NULL.  
+ Wskazuje ciąg znaków zakończony znakiem null, że nazwy klas Windows ( [WNDCLASS](https://msdn.microsoft.com/library/windows/desktop/ms633576) struktury). Nazwa klasy może być dowolna nazwa, zarejestrowany w globalnej [afxregisterwndclass —](application-information-and-management.md#afxregisterwndclass) funkcji lub żadnej z nazw wstępnie zdefiniowanych klasy kontrolki. Nie może być równa NULL.  
   
  *lpWindowName*  
  Wskazuje ciąg znaków zakończony znakiem null, który zawiera nazwę okna.  

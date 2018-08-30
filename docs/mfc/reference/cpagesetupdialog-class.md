@@ -40,12 +40,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 220a4fc1b97c30be28554faf68d5338b2a8e4ea8
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: c134d2e1dc6f3782446afc57b8384279a615e86f
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37849984"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43197460"
 ---
 # <a name="cpagesetupdialog-class"></a>Klasa CPageSetupDialog
 Hermetyzuje usługi świadczone przez wspólne okno dialogowe Ustawienia strony OLE Windows z obsługą dodatkowgoe ustawienie i modyfikowania marginesów wydruku.  
@@ -146,7 +146,7 @@ CPageSetupDialog(
   
 - PSD_DISABLEORIENTATION wyłącza formantu okna dialogowego orientacja strony.  
   
-- Powoduje, że PSD_RETURNDEFAULT `CPageSetupDialog` do zwrócenia [DEVMODE](http://msdn.microsoft.com/library/windows/desktop/dd183565) i [DEVNAMES](../../mfc/reference/devnames-structure.md) struktur, które są inicjowane dla domyślną drukarkę systemu bez wyświetlania okna dialogowego. Zakłada się, że oba `hDevNames` i `hDevMode` mają wartość NULL; w przeciwnym razie funkcja zwraca błąd. Jeśli zostanie użyta drukarka domyślna systemu jest obsługiwany przez stary sterownika drukarki (starszych niż Windows w wersji 3.0 lub nowszej), tylko `hDevNames` jest zwracana; `hDevMode` ma wartość NULL.  
+- Powoduje, że PSD_RETURNDEFAULT `CPageSetupDialog` do zwrócenia [DEVMODE](/windows/desktop/api/wingdi/ns-wingdi-_devicemodea) i [DEVNAMES](../../mfc/reference/devnames-structure.md) struktur, które są inicjowane dla domyślną drukarkę systemu bez wyświetlania okna dialogowego. Zakłada się, że oba `hDevNames` i `hDevMode` mają wartość NULL; w przeciwnym razie funkcja zwraca błąd. Jeśli zostanie użyta drukarka domyślna systemu jest obsługiwany przez stary sterownika drukarki (starszych niż Windows w wersji 3.0 lub nowszej), tylko `hDevNames` jest zwracana; `hDevMode` ma wartość NULL.  
   
 - PSD_DISABLEPAPER wyłącza kontrolkę wyboru papieru.  
   
@@ -172,7 +172,7 @@ CPageSetupDialog(
  [!code-cpp[NVC_MFCDocView#94](../../mfc/codesnippet/cpp/cpagesetupdialog-class_1.cpp)]  
   
 ##  <a name="createprinterdc"></a>  CPageSetupDialog::CreatePrinterDC  
- Tworzy kontekst urządzenia drukarki z [DEVMODE](http://msdn.microsoft.com/library/windows/desktop/dd183565) i [DEVNAMES](../../mfc/reference/devnames-structure.md) struktury.  
+ Tworzy kontekst urządzenia drukarki z [DEVMODE](/windows/desktop/api/wingdi/ns-wingdi-_devicemodea) i [DEVNAMES](../../mfc/reference/devnames-structure.md) struktury.  
   
 ```  
 HDC CreatePrinterDC();
@@ -189,7 +189,7 @@ virtual INT_PTR DoModal();
 ```  
   
 ### <a name="return-value"></a>Wartość zwracana  
- IDOK lub IDCANCEL. Jeśli zwracana jest IDCANCEL, wywołaj Windows [CommDlgExtendedError](http://msdn.microsoft.com/library/windows/desktop/ms646916) funkcję, aby ustalić, czy wystąpił błąd.  
+ IDOK lub IDCANCEL. Jeśli zwracana jest IDCANCEL, wywołaj Windows [CommDlgExtendedError](/windows/desktop/api/commdlg/nf-commdlg-commdlgextendederror) funkcję, aby ustalić, czy wystąpił błąd.  
   
  IDOK i IDCANCEL są stałe, które wskazują, czy użytkownik wybrał przycisk OK, lub przycisk Anuluj.  
   
@@ -223,7 +223,7 @@ LPDEVMODE GetDevMode() const;
 ```  
   
 ### <a name="return-value"></a>Wartość zwracana  
- [DEVMODE](http://msdn.microsoft.com/library/windows/desktop/dd183565) struktury danych, który zawiera informacje na temat inicjowania urządzenia i środowisko sterownika drukarki. Musisz odblokować pamięć podjęte przez tę strukturę z Windows [GlobalUnlock](http://msdn.microsoft.com/library/windows/desktop/aa366595) funkcji, która jest opisana w zestawie Windows SDK.  
+ [DEVMODE](/windows/desktop/api/wingdi/ns-wingdi-_devicemodea) struktury danych, który zawiera informacje na temat inicjowania urządzenia i środowisko sterownika drukarki. Musisz odblokować pamięć podjęte przez tę strukturę z Windows [GlobalUnlock](/windows/desktop/api/winbase/nf-winbase-globalunlock) funkcji, która jest opisana w zestawie Windows SDK.  
   
 ##  <a name="getdrivername"></a>  CPageSetupDialog::GetDriverName  
  Wywołaj tę funkcję, po wywołaniu [DoModal](../../mfc/reference/cprintdialog-class.md#domodal) można pobrać nazwę sterownika drukarki zdefiniowaną przez system.  
@@ -286,7 +286,7 @@ PAGESETUPDLG m_psd;
   
  Jeśli zmodyfikujesz `m_psd` element członkowski danych bezpośrednio, spowoduje zastąpienie wszelkich zachowanie domyślne.  
   
- Aby uzyskać więcej informacji na temat [PAGESETUPDLG](http://msdn.microsoft.com/library/windows/desktop/ms646842) struktury, zobacz zestaw Windows SDK.  
+ Aby uzyskać więcej informacji na temat [PAGESETUPDLG](/windows/desktop/api/commdlg/ns-commdlg-tagpsda) struktury, zobacz zestaw Windows SDK.  
   
  Zobacz przykład [CPageSetupDialog::CPageSetupDialog](#cpagesetupdialog).  
   
@@ -346,7 +346,7 @@ virtual UINT PreDrawPage(
   
 ### <a name="parameters"></a>Parametry  
  *wPaper*  
- Określa wartość, która wskazuje rozmiar papieru. Ta wartość może być jednym z **DMPAPER_** wartości wymienionych w opisie [DEVMODE](http://msdn.microsoft.com/library/windows/desktop/dd183565) struktury.  
+ Określa wartość, która wskazuje rozmiar papieru. Ta wartość może być jednym z **DMPAPER_** wartości wymienionych w opisie [DEVMODE](/windows/desktop/api/wingdi/ns-wingdi-_devicemodea) struktury.  
   
  *wFlags*  
  Określa orientację papieru lub koperty, oraz czy drukarka jest-Mozaika lub urządzenie HPPCL (Hewlett Packard drukarki kontroli Language). Ten parametr może mieć jedną z następujących wartości:  
@@ -368,7 +368,7 @@ virtual UINT PreDrawPage(
 -   0x01f koperta w trybie portret (Mozaika)  
   
  *pPSD*  
- Wskaźnik do `PAGESETUPDLG` struktury. Aby uzyskać więcej informacji na temat [PAGESETUPDLG](http://msdn.microsoft.com/library/windows/desktop/ms646842), zobacz dokumentację Windows SDK.  
+ Wskaźnik do `PAGESETUPDLG` struktury. Aby uzyskać więcej informacji na temat [PAGESETUPDLG](/windows/desktop/api/commdlg/ns-commdlg-tagpsda), zobacz dokumentację Windows SDK.  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Wartość różną od zera, jeśli obsługiwane; w przeciwnym razie 0.  

@@ -19,15 +19,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1d58fc816bea6672309e60a09528b0727c64c6fd
-ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
+ms.openlocfilehash: 866d556c06cc7f627c2f5108384704b737eb0330
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37880027"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43205215"
 ---
 # <a name="ccomclassfactory-class"></a>Klasa CComClassFactory
-Ta klasa implementuje [IClassFactory](http://msdn.microsoft.com/library/windows/desktop/ms694364) interfejsu.  
+Ta klasa implementuje [IClassFactory](/windows/desktop/api/unknwnbase/nn-unknwnbase-iclassfactory) interfejsu.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -47,7 +47,7 @@ class CComClassFactory
 |[CComClassFactory::LockServer](#lockserver)|Blokuje fabryki klas w pamięci.|  
   
 ## <a name="remarks"></a>Uwagi  
- `CComClassFactory` implementuje [IClassFactory](http://msdn.microsoft.com/library/windows/desktop/ms694364) interfejs, który zawiera metody do tworzenia obiektu z określonym identyfikatorem CLSID, jak również blokowanie fabryki klas w pamięci umożliwiające szybsze tworzenie nowych obiektów. `IClassFactory` należy zaimplementować dla każdej klasy, która zarejestrowania w rejestrze systemowym i który przypisania CLSID.  
+ `CComClassFactory` implementuje [IClassFactory](/windows/desktop/api/unknwnbase/nn-unknwnbase-iclassfactory) interfejs, który zawiera metody do tworzenia obiektu z określonym identyfikatorem CLSID, jak również blokowanie fabryki klas w pamięci umożliwiające szybsze tworzenie nowych obiektów. `IClassFactory` należy zaimplementować dla każdej klasy, która zarejestrowania w rejestrze systemowym i który przypisania CLSID.  
   
  Obiekty ATL zwykle uzyskać fabryki klas, wynikające z [CComCoClass](../../atl/reference/ccomcoclass-class.md). Ta klasa zawiera makra [DECLARE_CLASSFACTORY](aggregation-and-class-factory-macros.md#declare_classfactory), która deklaruje `CComClassFactory` jako domyślnej fabryki klas. Aby zastąpić to ustawienie domyślne, należy określić jedną z `DECLARE_CLASSFACTORY` *XXX* makra w definicji klasy. Na przykład [DECLARE_CLASSFACTORY_EX](aggregation-and-class-factory-macros.md#declare_classfactory_ex) makro używa określonej klasie dla fabryki klas:  
   

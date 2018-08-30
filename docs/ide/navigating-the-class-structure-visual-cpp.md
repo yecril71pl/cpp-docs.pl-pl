@@ -17,20 +17,20 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c6612d215902657aed9869e66be93b8b2ea2da25
-ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
+ms.openlocfilehash: b926ab618a631ca1334e89da983f169b6a38e49b
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "33330236"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43204654"
 ---
 # <a name="navigating-the-class-structure-visual-c"></a>Nawigacja w strukturze klas (Visual C++)
-Można przejść struktury klasy projektu, w tym funkcje, dziedziczenia i przy użyciu interfejsów [widoku klasy](http://msdn.microsoft.com/en-us/8d7430a9-3e33-454c-a9e1-a85e3d2db925) lub [przeglądarki obiektów](http://msdn.microsoft.com/en-us/f89acfc5-1152-413d-9f56-3dc16e3f0470).  
+Możesz przejść struktury klasy projektu, łącznie z funkcjami, dziedziczenie i interfejsy, za pomocą **Widok klas** lub **przeglądarki obiektów**. Aby uzyskać więcej informacji, zobacz [wyświetlanie struktury kodu](/visualstudio/ide/viewing-the-structure-of-code).  
   
- Można przejść do deklaracji funkcji przez dwukrotne kliknięcie nazwy funkcji w widoku klas. Można przejść do definicji klasy, klikając dwukrotnie nazwę klasy w widoku klasy.  
+ Możesz przejść do deklaracji funkcji przez dwukrotne kliknięcie nazwy funkcji w widoku klas. Możesz przejść do definicji klasy, klikając dwukrotnie nazwę klasy, w widoku klas.  
   
 ## <a name="see-also"></a>Zobacz też  
- [Dodawanie funkcji z kreatorami kodów](../ide/adding-functionality-with-code-wizards-cpp.md)   
+ [Dodawanie funkcji za pomocą kreatorów kodu](../ide/adding-functionality-with-code-wizards-cpp.md)   
  [Dodawanie klasy](../ide/adding-a-class-visual-cpp.md)   
  [Dodawanie funkcji członkowskiej](../ide/adding-a-member-function-visual-cpp.md)   
  [Dodawanie zmiennej członkowskiej](../ide/adding-a-member-variable-visual-cpp.md)   

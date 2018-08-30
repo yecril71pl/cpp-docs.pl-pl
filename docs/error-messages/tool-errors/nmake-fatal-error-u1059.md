@@ -1,7 +1,7 @@
 ---
 title: Błąd krytyczny NMAKE U1059 | Dokumentacja firmy Microsoft
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 08/27/2018
 ms.technology:
 - cpp-diagnostics
 ms.topic: error-reference
@@ -16,23 +16,23 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6eb038befdb7c587c6fe2a734003abba585c3e2a
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 8b54919398c757bfe05f747ff57341f31decfc61
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33320706"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43200793"
 ---
 # <a name="nmake-fatal-error-u1059"></a>Błąd krytyczny NMAKE U1059
-Błąd składniowy: "}" brakuje w elemencie zależnym  
-  
- Ścieżkę wyszukiwania dla zależną został niepoprawnie określony. Albo miejsca istniał w ścieżce lub zamykający nawias klamrowy (**}**) został pominięty.  
-  
- Składnia specyfikacji katalogu dla zależną jest  
-  
- **{**   
- ***katalogi* } zależne**  
-  
- gdzie `directories` określa jeden lub więcej ścieżek rozdzielonych średnikami (**;**). Spacje nie są dozwolone.  
-  
- Jeśli część lub całość ścieżki wyszukiwania zostanie zastąpiony przez makra, upewnij się, że istnieje bez spacji w rozwinięciu makra.
+
+> Błąd składniowy: "}" brakuje w zależnych od ustawień lokalnych
+
+Ścieżki wyszukiwania dla zależnych od ustawień lokalnych został niepoprawnie określony. Albo miejsca istniał w ścieżce lub zamykającego nawiasu klamrowego (**}**) został pominięty.
+
+Składnia dla specyfikację katalogu dla zależnych od ustawień lokalnych
+
+> **{** *katalogi* **} zależne**
+
+gdzie *katalogi* określa jeden lub więcej ścieżek rozdzielonych średnikami (**;**). Żadne spacje są dozwolone.
+
+Jeśli część lub całość ścieżki wyszukiwania zostanie zastąpiony przez makro, upewnij się, że nie może zawierać spacji, istnieje w rozwinięciu makra.

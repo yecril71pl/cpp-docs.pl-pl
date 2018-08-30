@@ -44,12 +44,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9968a3601e366628b3539343dde34e956387356a
-ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
+ms.openlocfilehash: ea4bfc278e0912248c437123bd1510002a5c3829
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37885767"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43201630"
 ---
 # <a name="csecuritydesc-class"></a>Klasa CSecurityDesc
 Ta klasa jest otoką `SECURITY_DESCRIPTOR` struktury.  
@@ -115,7 +115,7 @@ class CSecurityDesc
   
  Aplikacje nie należy modyfikować `SECURITY_DESCRIPTOR` struktury bezpośrednio, a zamiast tego należy używać metod klasy, pod warunkiem.  
   
- Wprowadzenie do modelu kontroli dostępu w Windows, zobacz [kontroli dostępu](http://msdn.microsoft.com/library/windows/desktop/aa374860) w zestawie Windows SDK.  
+ Wprowadzenie do modelu kontroli dostępu w Windows, zobacz [kontroli dostępu](/windows/desktop/SecAuthZ/access-control) w zestawie Windows SDK.  
   
 ## <a name="requirements"></a>Wymagania  
  **Nagłówek:** atlsecurity.h  
@@ -155,7 +155,7 @@ bool FromString(LPCTSTR pstr) throw(...);
   
 ### <a name="parameters"></a>Parametry  
  *pstr*  
- Wskaźnik na ciąg zakończony znakiem null, który zawiera [format ciągu deskryptora zabezpieczeń](http://msdn.microsoft.com/library/windows/desktop/aa379570) ma zostać przekonwertowany.  
+ Wskaźnik na ciąg zakończony znakiem null, który zawiera [format ciągu deskryptora zabezpieczeń](/windows/desktop/SecAuthZ/security-descriptor-string-format) ma zostać przekonwertowany.  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Zwraca wartość true w przypadku powodzenia. Zgłasza wyjątek w przypadku niepowodzenia.  
@@ -163,7 +163,7 @@ bool FromString(LPCTSTR pstr) throw(...);
 ### <a name="remarks"></a>Uwagi  
  Ciąg można utworzyć za pomocą [CSecurityDesc::ToString](#tostring). Konwersja deskryptora zabezpieczeń w ciąg ułatwia do przechowywania i przesyłania.  
   
- Ta metoda wywołuje [ConvertStringSecurityDescriptorToSecurityDescriptor](http://msdn.microsoft.com/library/windows/desktop/aa376401).  
+ Ta metoda wywołuje [ConvertStringSecurityDescriptorToSecurityDescriptor](/windows/desktop/api/sddl/nf-sddl-convertstringsecuritydescriptortosecuritydescriptora).  
   
 ##  <a name="getcontrol"></a>  CSecurityDesc::GetControl  
  Pobiera kontrolować informacji z deskryptora zabezpieczeń.  
@@ -180,7 +180,7 @@ bool GetControl(SECURITY_DESCRIPTOR_CONTROL* psdc) const throw();
  Zwraca wartość PRAWDA, jeśli metoda się powiedzie, wartość false Jeśli zakończy się niepowodzeniem.  
   
 ### <a name="remarks"></a>Uwagi  
- Ta metoda wywołuje [GetSecurityDescriptorControl](http://msdn.microsoft.com/library/windows/desktop/aa446647).  
+ Ta metoda wywołuje [GetSecurityDescriptorControl](https://msdn.microsoft.com/library/windows/desktop/aa446647).  
   
 ##  <a name="getdacl"></a>  CSecurityDesc::GetDacl  
  Pobiera arbitralnej kontroli dostępu (DACL) listy informacji z deskryptora zabezpieczeń.  
@@ -251,7 +251,7 @@ const SECURITY_DESCRIPTOR* GetPSECURITY_DESCRIPTOR() const throw();
 ```  
   
 ### <a name="return-value"></a>Wartość zwracana  
- Zwraca wskaźnik do [SECURITY_DESCRIPTOR](http://msdn.microsoft.com/library/windows/desktop/aa379561) struktury.  
+ Zwraca wskaźnik do [SECURITY_DESCRIPTOR](/windows/desktop/api/winnt/ns-winnt-_security_descriptor) struktury.  
   
 ##  <a name="getsacl"></a>  CSecurityDesc::GetSacl  
  Pobiera informacje o systemie kontroli dostępu (SACL) listy z deskryptora zabezpieczeń.  
@@ -428,7 +428,7 @@ bool IsSelfRelative() const throw();
 ```  
   
 ### <a name="return-value"></a>Wartość zwracana  
- Zwraca wartość PRAWDA, jeśli deskryptor zabezpieczeń jest w formacie autorelacyjnym wszystkich informacji zabezpieczeń w ciągłym bloku pamięci. Zwraca wartość false, jeśli deskryptor zabezpieczeń jest w formacie bezwzględnym. Aby uzyskać więcej informacji, zobacz [bezwzględne i deskryptorami zabezpieczeń Self-Relative](http://msdn.microsoft.com/library/windows/desktop/aa374807).  
+ Zwraca wartość PRAWDA, jeśli deskryptor zabezpieczeń jest w formacie autorelacyjnym wszystkich informacji zabezpieczeń w ciągłym bloku pamięci. Zwraca wartość false, jeśli deskryptor zabezpieczeń jest w formacie bezwzględnym. Aby uzyskać więcej informacji, zobacz [bezwzględne i deskryptorami zabezpieczeń Self-Relative](/windows/desktop/SecAuthZ/absolute-and-self-relative-security-descriptors).  
   
 ##  <a name="makeabsolute"></a>  CSecurityDesc::MakeAbsolute  
  Wywołaj tę metodę, aby przekonwertować deskryptora zabezpieczeń w formacie bezwzględnym.  
@@ -441,7 +441,7 @@ bool MakeAbsolute() throw(...);
  Zwraca wartość PRAWDA, jeśli metoda się powiedzie, wartość false w przeciwnym razie.  
   
 ### <a name="remarks"></a>Uwagi  
- Deskryptor zabezpieczeń w formacie bezwzględnym podano łącza do informacji zawartych w nim, zamiast samych informacji. Deskryptor zabezpieczeń w formacie autorelacyjnym zawiera informacje zawarte w ciągłym bloku pamięci. W deskryptorze zabezpieczeń autorelacyjnym `SECURITY_DESCRIPTOR` struktury zawsze zaczynają się od informacji, ale deskryptora zabezpieczeń przez inne składniki można zgodny ze strukturą w dowolnej kolejności. Zamiast używać adresów pamięci, składniki deskryptora zabezpieczeń autorelacyjnym są identyfikowane przez przesunięcia od początku deskryptora zabezpieczeń. Ten format jest użyteczny, gdy deskryptora zabezpieczeń, które muszą być przechowywane na dysku lub przesyłane przy użyciu protokołu komunikacji. Aby uzyskać więcej informacji, zobacz [bezwzględne i deskryptorami zabezpieczeń Self-Relative](http://msdn.microsoft.com/library/windows/desktop/aa374807).  
+ Deskryptor zabezpieczeń w formacie bezwzględnym podano łącza do informacji zawartych w nim, zamiast samych informacji. Deskryptor zabezpieczeń w formacie autorelacyjnym zawiera informacje zawarte w ciągłym bloku pamięci. W deskryptorze zabezpieczeń autorelacyjnym `SECURITY_DESCRIPTOR` struktury zawsze zaczynają się od informacji, ale deskryptora zabezpieczeń przez inne składniki można zgodny ze strukturą w dowolnej kolejności. Zamiast używać adresów pamięci, składniki deskryptora zabezpieczeń autorelacyjnym są identyfikowane przez przesunięcia od początku deskryptora zabezpieczeń. Ten format jest użyteczny, gdy deskryptora zabezpieczeń, które muszą być przechowywane na dysku lub przesyłane przy użyciu protokołu komunikacji. Aby uzyskać więcej informacji, zobacz [bezwzględne i deskryptorami zabezpieczeń Self-Relative](/windows/desktop/SecAuthZ/absolute-and-self-relative-security-descriptors).  
   
 ##  <a name="makeselfrelative"></a>  CSecurityDesc::MakeSelfRelative  
  Wywołaj tę metodę, aby przekonwertować deskryptora zabezpieczeń w formacie autorelacyjnym.  
@@ -454,7 +454,7 @@ bool MakeSelfRelative() throw(...);
  Zwraca wartość PRAWDA, jeśli metoda się powiedzie, wartość false w przeciwnym razie.  
   
 ### <a name="remarks"></a>Uwagi  
- Deskryptor zabezpieczeń w formacie bezwzględnym podano łącza do informacji zawartych w nim, a nie samych informacji. Deskryptor zabezpieczeń w formacie autorelacyjnym zawiera informacje zawarte w ciągłym bloku pamięci. W deskryptorze zabezpieczeń autorelacyjnym `SECURITY_DESCRIPTOR` struktury zawsze zaczynają się od informacji, ale deskryptora zabezpieczeń przez inne składniki można zgodny ze strukturą w dowolnej kolejności. Zamiast używać adresów pamięci, składniki deskryptora zabezpieczeń są identyfikowane przez przesunięcia od początku deskryptora zabezpieczeń. Ten format jest użyteczny, gdy deskryptora zabezpieczeń, które muszą być przechowywane na dysku lub przesyłane przy użyciu protokołu komunikacji. Aby uzyskać więcej informacji, zobacz [bezwzględne i deskryptorami zabezpieczeń Self-Relative](http://msdn.microsoft.com/library/windows/desktop/aa374807).  
+ Deskryptor zabezpieczeń w formacie bezwzględnym podano łącza do informacji zawartych w nim, a nie samych informacji. Deskryptor zabezpieczeń w formacie autorelacyjnym zawiera informacje zawarte w ciągłym bloku pamięci. W deskryptorze zabezpieczeń autorelacyjnym `SECURITY_DESCRIPTOR` struktury zawsze zaczynają się od informacji, ale deskryptora zabezpieczeń przez inne składniki można zgodny ze strukturą w dowolnej kolejności. Zamiast używać adresów pamięci, składniki deskryptora zabezpieczeń są identyfikowane przez przesunięcia od początku deskryptora zabezpieczeń. Ten format jest użyteczny, gdy deskryptora zabezpieczeń, które muszą być przechowywane na dysku lub przesyłane przy użyciu protokołu komunikacji. Aby uzyskać więcej informacji, zobacz [bezwzględne i deskryptorami zabezpieczeń Self-Relative](/windows/desktop/SecAuthZ/absolute-and-self-relative-security-descriptors).  
   
 ##  <a name="operator_eq"></a>  CSecurityDesc::operator =  
  Operator przypisania.  
@@ -489,7 +489,7 @@ bool SetControl(
   
 ### <a name="parameters"></a>Parametry  
  *ControlBitsOfInterest*  
- Maska SECURITY_DESCRIPTOR_CONTROL, która wskazuje bity kontrolne do ustawienia. Aby uzyskać listę flag, które można ustawiać, zobacz [SetSecurityDescriptorControl](http://msdn.microsoft.com/library/windows/desktop/aa379582\(v=vs.85\).aspx).  
+ Maska SECURITY_DESCRIPTOR_CONTROL, która wskazuje bity kontrolne do ustawienia. Aby uzyskać listę flag, które można ustawiać, zobacz [SetSecurityDescriptorControl](https://msdn.microsoft.com/library/windows/desktop/aa379582\(v=vs.85\).aspx).  
   
  *ControlBitsToSet*  
  Wskazuje nowe wartości dla bitów kontrolnych określonych przez maskę SECURITY_DESCRIPTOR_CONTROL *ControlBitsOfInterest* maski. Ten parametr może być kombinacją flag wymienionych dla *ControlBitsOfInterest* parametru.  
@@ -498,7 +498,7 @@ bool SetControl(
  Zwraca wartość true w przypadku powodzenia; wartość false w razie niepowodzenia.  
   
 ### <a name="remarks"></a>Uwagi  
- Ta metoda wywołuje [SetSecurityDescriptorControl](http://msdn.microsoft.com/library/windows/desktop/aa379582\(v=vs.85\).aspx).  
+ Ta metoda wywołuje [SetSecurityDescriptorControl](https://msdn.microsoft.com/library/windows/desktop/aa379582\(v=vs.85\).aspx).  
   
 ##  <a name="setdacl"></a>  CSecurityDesc::SetDacl  
  Ustawia informacje o liście arbitralnej kontroli dostępu (DACL). Jeśli lista DACL jest już obecny w deskryptora zabezpieczeń, jest on zastępowany.  
@@ -592,7 +592,7 @@ bool ToString(
   
 ### <a name="parameters"></a>Parametry  
  *pstr*  
- Wskaźnik na ciąg zakończony znakiem null, który otrzyma [format ciągu deskryptora zabezpieczeń](http://msdn.microsoft.com/library/windows/desktop/aa379570).  
+ Wskaźnik na ciąg zakończony znakiem null, który otrzyma [format ciągu deskryptora zabezpieczeń](/windows/desktop/SecAuthZ/security-descriptor-string-format).  
   
  *SI*  
  Określa kombinacja flag bitowych SECURITY_INFORMATION, aby wskazać składniki deskryptora zabezpieczeń, aby uwzględnić w ciągu wyjściowym.  
@@ -614,12 +614,12 @@ bool ToString(
   
  Jeśli wejściowy deskryptor zabezpieczeń jest ustawiony bit kontroli SE_DACL_PRESENT listy DACL ma wartość NULL, metoda kończy się niepowodzeniem.  
   
- Jeśli nie ustawiono bitu kontroli SE_DACL_PRESENT w deskryptorze zabezpieczeń listy DACL ma wartość NULL, wynikowego ciągu deskryptora zabezpieczeń nie ma składnika D:. Zobacz [Format ciągu deskryptora zabezpieczeń](http://msdn.microsoft.com/library/windows/desktop/aa379570) Aby uzyskać więcej informacji.  
+ Jeśli nie ustawiono bitu kontroli SE_DACL_PRESENT w deskryptorze zabezpieczeń listy DACL ma wartość NULL, wynikowego ciągu deskryptora zabezpieczeń nie ma składnika D:. Zobacz [Format ciągu deskryptora zabezpieczeń](/windows/desktop/SecAuthZ/security-descriptor-string-format) Aby uzyskać więcej informacji.  
   
- Ta metoda wywołuje [ConvertStringSecurityDescriptorToSecurityDescriptor](http://msdn.microsoft.com/library/windows/desktop/aa376401).  
+ Ta metoda wywołuje [ConvertStringSecurityDescriptorToSecurityDescriptor](/windows/desktop/api/sddl/nf-sddl-convertstringsecuritydescriptortosecuritydescriptora).  
   
 ## <a name="see-also"></a>Zobacz też  
  [Zabezpieczenia — przykład](../../visual-cpp-samples.md)   
- [SECURITY_DESCRIPTOR](http://msdn.microsoft.com/library/windows/desktop/aa379561)   
+ [SECURITY_DESCRIPTOR](/windows/desktop/api/winnt/ns-winnt-_security_descriptor)   
  [Klasa — Przegląd](../../atl/atl-class-overview.md)   
  [Funkcje globalne zabezpieczeń](../../atl/reference/security-global-functions.md)

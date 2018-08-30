@@ -16,12 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 059ad07e50fb6325850d1095940ce084893bf70b
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 32a748c240d8da55765ac5862c9a2f11eafb14ef
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38966513"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43201726"
 ---
 # <a name="constmemfun1t-class"></a>const_mem_fun1_t — Klasa
 
@@ -41,11 +41,14 @@ class const_mem_fun1_t
 
 ### <a name="parameters"></a>Parametry
 
-*_Pm* wskaźnik do funkcji składowej klasy typu `Type` do konwersji na obiekt funkcyjny.
+*_Pm*<br/>
+Wskaźnik do funkcji składowej klasy typu `Type` do konwersji na obiekt funkcyjny.
 
-*_Pleft* **const** obiekt *_Pm* wywoływana jest funkcja elementu członkowskiego.
+*_Pleft*<br/>
+**Const** obiekt *_Pm* wywoływana jest funkcja elementu członkowskiego.
 
-*prawy* argument, który jest umożliwiającej *_Pm*.
+*right*<br/>
+Argument, który jest umożliwiającej *_Pm*.
 
 ## <a name="return-value"></a>Wartość zwracana
 
@@ -53,7 +56,7 @@ Dostosowywalne funkcja binarnego.
 
 ## <a name="remarks"></a>Uwagi
 
-Klasa szablonu przechowuje kopię *_Pm*, który musi być wskaźnikiem do funkcji składowej klasy `Type`, w obiekcie prywatnego elementu członkowskiego. Definiuje jej funkcji członkowskiej `operator()` powrotu ( **_Pleft** -> \* * Pm) (***po prawej stronie**) **const**.
+Klasa szablonu przechowuje kopię *_Pm*, który musi być wskaźnikiem do funkcji składowej klasy `Type`, w obiekcie prywatnego elementu członkowskiego. Definiuje jej funkcji członkowskiej `operator()` powrotu ( *_Pleft*->\*<em>Pm</em>) ( *prawo* ) **const**.
 
 ## <a name="example"></a>Przykład
 

@@ -19,50 +19,50 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f48d9a013240dddc95fbd977cdf383c3ebff188b
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 0d040f3ce29f78b614c60d815cac16362374bddb
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32391031"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43205613"
 ---
 # <a name="type-cast-conversions"></a>Konwersje rzutowania typów
-Rzutowania typów umożliwia jawnej konwersji typów.  
+Rzutowania typów umożliwia jawne konwertowanie typów.  
   
  **Składnia**  
   
  *wyrażenie CAST*:  
  *wyrażenie jednoargumentowe*  
   
- **(***nazwy typu***)***wyrażenie cast*  
+ **(***nazwy typu***)***wyrażenie cast*   
   
  *Nazwa typu*:  
- *Specyfikator kwalifikator listy abstrakcyjny — deklarator* opcjonalnych  
+ *Specyfikator kwalifikator listy abstrakcyjny declarator* zoptymalizowany pod kątem  
   
- *Nazwy typu* jest typem i *wyrażenie cast* jest wartość ma zostać przekonwertowane na tego typu. Wyrażenia z rzutowanie typu nie jest wartością l-value. *Wyrażenie cast* przekonwertowaniu tak, jakby była został przypisany do zmiennej typu *nazwy typu*. Reguły konwersji dla przypisania (opisane w temacie [konwersje przypisań](../c-language/assignment-conversions.md)) dotyczą również rzutowania typu. W poniższej tabeli przedstawiono typy, które mogą być rzutowane do danego typu.  
+ *Nazwy typu* jest typem i *wyrażenie cast* wartość ma zostać przekonwertowany do tego typu. Wyrażenia z rzutowanie typu nie jest l wartością. *Wyrażenie cast* jest konwertowany tak, jakby były przypisane do zmiennej typu *nazwy typu*. Reguły konwersji dla przypisania (opisane w temacie [konwersje przypisań](../c-language/assignment-conversions.md)) dotyczą również rzutowania typu. W poniższej tabeli przedstawiono typy, które mogą być rzutowane do dowolnego typu.  
   
-### <a name="legal-type-casts"></a>Rzutowania typów prawnych  
+### <a name="legal-type-casts"></a>Rzutowania typów prawne  
   
 |Typy docelowego|Potencjalne źródła|  
 |-----------------------|-----------------------|  
-|Typy całkowite|Dowolnego typu Liczba całkowita lub typ zmiennoprzecinkowy lub wskaźnika do obiektu|  
+|Typy całkowite|Dowolnego typu liczby całkowitej lub typu zmiennoprzecinkowego lub wskaźnik do obiektu|  
 |Zmiennoprzecinkowe|Dowolny typ arytmetyczny|  
-|Wskaźnik do obiektu lub (**void \*** )|Dowolnego typu Liczba całkowita (**void \*** ), wskaźnika do obiektu lub wskaźnik funkcji|  
-|wskaźnik funkcji|Dowolnego typu całkowitego, wskaźnik do obiektu lub wskaźnik funkcji|  
-|Struktura, Unią lub tablicy|Brak|  
+|Wskaźnik do obiektu, lub (**void** <strong>\*</strong>)|Dowolnego typu liczby całkowitej (**void** <strong>\*</strong>), wskaźnik do obiektu lub wskaźnika funkcji|  
+|Wskaźnik funkcji|Dowolnego typu całkowitego, wskaźnik do obiektu lub wskaźnika funkcji|  
+|Struktura, Unia lub tablicy|Brak|  
 |Typ void|Dowolnego typu|  
   
- Wszelkie identyfikator mogą być rzutowane na `void` typu. Jeśli typ określony w wyrażeniu rzutowanie typu nie jest jednak `void`, a następnie jest identyfikator rzutować czy typ nie może być `void` wyrażenia. Dowolne wyrażenie mogą być rzutowane na `void`, ale wyrażenie typu `void` nie można rzutować na innego typu. Na przykład funkcja z `void` zwracany typ nie może mieć jego powrotu rzutowanie do innego typu.  
+ Może być rzutowany jakiegokolwiek identyfikatora `void` typu. Jeśli typ określony w wyrażeniu rzutowanie typu nie jest jednak `void`, a następnie identyfikatora rzutowany czy typ nie może być `void` wyrażenia. Każde wyrażenie może być rzutowany `void`, ale wyrażenia typu `void` nie można rzutować do jakichkolwiek innych typów. Na przykład funkcji z `void` zwracać typ nie może mieć jego powrotu rzutowanie do innego typu.  
   
- Należy pamiętać, że **void \***  wyrażenie zawiera typ wskaźnika do `void`, nie jest typu `void`. Jeśli obiekt jest rzutowane na `void` typu, wynikowe wyrażenie nie można przypisać do dowolnego elementu. Podobnie obiekt rzutowanie typu nie jest dopuszczalne wartości l, więc nie przypisanie nie jest możliwe do obiektu rzutowanie typu.  
+ Należy pamiętać, że **void** <strong>\*</strong> wyrażenie zawiera typ wskaźnika do `void`, nie `void`. Jeśli obiekt jest rzutowany na `void` typu wyrażenie wynikowe nie można przypisać do dowolnego elementu. Podobnie obiekt rzutowanie typu nie jest dopuszczalne l wartością, więc żadnego przypisania nie jest możliwe do obiektu rzutowanie typu.  
   
  **Microsoft Specific**  
   
- Rzutowanie typu może być wyrażenia wartości l, dopóki nie zmienia rozmiar identyfikatora. Aby uzyskać informacje na wyrażenia wartości l, zobacz [wartości L i r wyrażenia](../c-language/l-value-and-r-value-expressions.md).  
+ Rzutowanie typu może być wyrażeniem l wartością, tak długo, jak rozmiar identyfikatora nie zmienia się. Aby uzyskać informacji na temat wyrażeniem l-wartości, zobacz [wyrażenia wartości L i r](../c-language/l-value-and-r-value-expressions.md).  
   
- **KOŃCOWY określonych firmy Microsoft**  
+ **END specyficzny dla Microsoft**  
   
- Można przekonwertować na typ wyrażenia `void` z rzutowanie, ale wynikowe wyrażenie może być używana tylko wtedy, gdy wartość nie jest wymagane. Wskaźnik do obiektu przekonwertować **void \***  i wstecz do oryginalnego typu powróci do oryginalnej wartości.  
+ Można przekonwertować wyrażenia na typ `void` z rzutowania, ale wyrażenie wynikowe mogą być używane tylko wtedy, gdy wartość nie jest wymagane. Wskaźnik do obiektu jest konwertowana na **void** <strong>\*</strong> i powrót do oryginalnego typu powróci do oryginalnej wartości.  
   
 ## <a name="see-also"></a>Zobacz też  
  [Konwersje typów](../c-language/type-conversions-c.md)

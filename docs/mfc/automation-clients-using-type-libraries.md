@@ -1,5 +1,5 @@
 ---
-title: 'Klienci automatyzacji: Korzystanie z biblioteki typu | Dokumentacja firmy Microsoft'
+title: 'Klienci automatyzacji: Korzystanie z bibliotek typów | Dokumentacja firmy Microsoft'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -24,48 +24,48 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 67fa0f5d164ae325caff576fb41695fc8689fda0
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 3899fd61426e9b07294f624f7f3ce68c2acc002b
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33342592"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43198649"
 ---
 # <a name="automation-clients-using-type-libraries"></a>Klienci automatyzacji: korzystanie z bibliotek typów
-Klienci automatyzacji musi mieć informacje dotyczące właściwości i metod obiektów serwera, jeżeli klienci są do manipulowania obiektami serwerach programu. Właściwości mają typy danych; metody często zwracać wartości i akceptują parametrów. Klient wymaga informacji o typach danych wszystkich tych statycznie powiązania z typem obiektu serwera.  
+Klienci automatyzacji muszą mieć informacji na temat właściwości i metod obiektów serwera, jeśli klienci znajdują się do manipulowania obiektami serwerów. Właściwości mają typy danych; metody często zwracać wartości i akceptuje parametrów. Klient wymaga informacji o typach danych wszystkich tych statycznie wiążącej typu obiektu serwera.  
   
- Informacje o tym typie może się na kilka sposobów. Zalecaną metodą jest można utworzyć biblioteki typów.  
+ Informacje o tym typie może przedstawili na kilka sposobów. Zalecaną metodą jest, aby utworzyć bibliotekę typów.  
   
- Aby uzyskać informacje dotyczące [mktyplib —](http://msdn.microsoft.com/library/windows/desktop/aa366797), zobacz zestaw Windows SDK.  
+ Instrukcje dotyczące [z MkTypLib](/windows/desktop/Midl/differences-between-midl-and-mktyplib), zobacz dokumentację Windows SDK.  
   
- Visual C++ może odczytać pliku biblioteki typów i utworzenia pochodzi od klasy wysyłania [COleDispatchDriver](../mfc/reference/coledispatchdriver-class.md). Obiekt tej klasy nie ma właściwości i operacji duplikowania tych obiektu serwera. Aplikacja wymaga właściwości tego obiektu i operacje, i funkcji dziedziczone z `COleDispatchDriver` kieruje te wywołania OLE systemu, który z kolei kieruje je do obiektu serwera.  
+ Visual C++ można odczytać pliku biblioteki typów oraz tworzyć wysyłania klasy pochodzącej od [COleDispatchDriver](../mfc/reference/coledispatchdriver-class.md). Obiekt tej klasy nie ma właściwości i operacje duplikowania udostępnianych przez obiekt serwera. Twoja aplikacja wywołuje właściwości tego obiektu i operacje i funkcje są dziedziczone z `COleDispatchDriver` kieruje te wywołania na system OLE, który z kolei kieruje je do obiektu serwera.  
   
- Visual C++ również automatycznie obsługuje ten plik biblioteki typów dla Ciebie w przypadku wybrania obejmują automatyzacji, gdy projekt został utworzony. W ramach każdej kompilacji pliku .tlb zostaną skompilowane z mktyplib —.  
+ Jeśli wybrano automatyzacji podczas tworzenia projektu Visual C++ automatycznie przechowuje ten plik biblioteki typów dla Ciebie. W ramach każdej kompilacji zostanie utworzona pliku .tlb z mktyplib —.  
   
 ### <a name="to-create-a-dispatch-class-from-a-type-library-tlb-file"></a>Aby utworzyć klasę wysyłania z pliku biblioteki typów (.tlb)  
   
-1.  W widoku klas lub Eksploratorze rozwiązań kliknij prawym przyciskiem myszy projekt i kliknij przycisk **Dodaj** , a następnie kliknij przycisk **Dodaj klasę** menu skrótów.  
+1.  W widoku klas lub Eksploratora rozwiązań kliknij prawym przyciskiem myszy projekt, a następnie kliknij pozycję **Dodaj** a następnie kliknij przycisk **Dodaj klasę** w menu skrótów.  
   
-2.  W **Dodaj klasę** okno dialogowe, wybierz opcję **Visual c + +/ MFC** folderu w okienku po lewej stronie. Wybierz **klasy MFC z biblioteki typów** ikonę w prawym okienku, kliknij **Otwórz**.  
+2.  W **Dodaj klasę** okno dialogowe, wybierz opcję **Visual c + +/ MFC** folderu w okienku po lewej stronie. Wybierz **klasy MFC z biblioteki typów** ikonę w okienku po prawej stronie, a następnie kliknij **Otwórz**.  
   
-3.  W **klasy z Typelib Kreatora dodawania** oknie dialogowym Wybierz bibliotekę typów z **bibliotek typów dostępne** listy rozwijanej. **Interfejsów** w polu są wyświetlane interfejsy dostępne do wybranej biblioteki typów.  
-  
-    > [!NOTE]
-    >  Możesz wybrać interfejsów z więcej niż jednej biblioteki typów.  
-  
-     Wybierz interfejsy, kliknij je dwukrotnie lub kliknij przycisk **Dodaj** przycisku. Po wykonaniu tej nazwy klas wysyłania będą wyświetlane w **wygenerowane klasy** pole. Można edytować nazwy klas w `Class` pole.  
-  
-     **Pliku** pliku, w którym będzie można zadeklarować klasy w polu są wyświetlane. (można edytować tej nazwy pliku). Umożliwia także przycisk Przeglądaj i wybierz inne pliki, jeśli wolisz nagłówka i implementacji informacje zapisane w istniejących plików lub w katalogu innym niż katalogu projektu.  
+3.  W **klasy z Typelib Kreatora dodawania** okna dialogowego Wybierz bibliotekę typów z **bibliotek typów dostępnych** listy rozwijanej. **Interfejsów** wyświetlone interfejsy, które są dostępne dla wybranej biblioteki typów.  
   
     > [!NOTE]
-    >  Wszystkie klasy wysyłania wybrane interfejsy zostaną wprowadzone w pliku określonego w tym miejscu. Interfejsy mają zostać zadeklarowane w oddzielnych nagłówków, należy uruchomić tego kreatora dla każdego pliku nagłówka, którą chcesz utworzyć.  
+    >  Możesz wybrać interfejsy z więcej niż jednej biblioteki typów.  
+  
+     Wybierz interfejsy, kliknij je dwukrotnie lub kliknij przycisk **Dodaj** przycisku. Jeśli tak zrobisz, nazwy klas wysyłania pojawi się w **wygenerowane klasy** pole. Można edytować nazwy klasy w `Class` pole.  
+  
+     **Pliku** wyświetlone pliku, w którym będzie można zadeklarować klasy. (można edytować tej nazwy pliku). Umożliwia także przycisk przeglądania i wybierz inne pliki, jeśli chcesz mieć nagłówkowy i implementacji informacje zapisane w istniejących plików lub w katalogu innym niż katalog projektu.  
   
     > [!NOTE]
-    >  Niektóre informacje o typie biblioteki mogą być przechowywane w plikach z. BIBLIOTEKA DLL. OCX, lub. OLB rozszerzenia pliku.  
+    >  Wszystkie klasy wysyłania dla wybranych interfejsów, będą umieszczone w pliku określonego w tym miejscu. Chcąc interfejsów deklaruje się w oddzielnych nagłówków, należy uruchomić tego kreatora dla każdego pliku nagłówka, który chcesz utworzyć.  
+  
+    > [!NOTE]
+    >  Niektóre informacje o typie biblioteki mogą być przechowywane w plikach za pomocą. BIBLIOTEKA DLL. OCX, lub. Rozszerzenia pliku OLB.  
   
 4.  Kliknij przycisk **Zakończ**.  
   
-     Kreator zapisze następnie kod z klasy wysyłania, przy użyciu określonej klasy i nazwy pliku.  
+     Kreator zostanie następnie pisanie kodu dla swojej klasy wysyłania, przy użyciu określonej klasy i nazwy plików.  
   
 ## <a name="see-also"></a>Zobacz też  
  [Klienci automatyzacji](../mfc/automation-clients.md)

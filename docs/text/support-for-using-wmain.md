@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b82c233d1f03ae4679a355b6782bb9e7dd9dad15
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: c0222856d3ba2956959913305a60ceb812f13f8d
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42604066"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43205719"
 ---
 # <a name="support-for-using-wmain"></a>Obsługa używania funkcji wmain
 Visual C++ obsługuje definiowanie **wmain** funkcji i przekazanie argumentów do znaków dwubajtowych do aplikacji Unicode. Możesz deklarować Parametry formalne dla **wmain**, za pomocą format podobny do `main`. Możesz następnie przekazać argumenty znaków dwubajtowych i, opcjonalnie, wskaźnik znaku dwubajtowego środowiska do programu. `argv` i `envp` parametry **wmain** typu `wchar_t*`. Na przykład:  
@@ -42,4 +42,4 @@ wmain( int argc, wchar_t *argv[ ], wchar_t *envp[ ] )
 ## <a name="see-also"></a>Zobacz też  
  [Obsługa formatu Unicode](../text/support-for-unicode.md)   
  [Podsumowanie programowania Unicode](../text/unicode-programming-summary.md)   
- [Funkcja WinMain](http://msdn.microsoft.com/library/windows/desktop/ms633559)
+ [Funkcja WinMain](https://msdn.microsoft.com/library/windows/desktop/ms633559)

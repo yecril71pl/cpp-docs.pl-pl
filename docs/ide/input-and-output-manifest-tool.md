@@ -1,7 +1,7 @@
 ---
-title: Manifest wejściowy narzędzia i dane wyjściowe właściwości (Visual C++) | Dokumentacja firmy Microsoft
+title: Manifest narzędzia wejście i wyjście właściwości (Visual C++) | Dokumentacja firmy Microsoft
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 08/27/2018
 ms.technology:
 - cpp-ide
 ms.topic: conceptual
@@ -20,56 +20,59 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 15be7636188bb670febd7875974d683c1d78360f
-ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
+ms.openlocfilehash: b4320339021f0de25d49cba3fbe1f5e4377cd062
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "33331561"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43201222"
 ---
-# <a name="input-and-output-manifest-tool-configuration-properties-ltprojectnamegt-property-pages-dialog-box"></a>Dane wejściowe i wyjściowe narzędzie, właściwości konfiguracji manifestu &lt;Projectname&gt; stron właściwości — okno dialogowe
-To okno dialogowe służy do określania opcji wejściowymi i wyjściowymi dla [Mt.exe](http://msdn.microsoft.com/library/aa375649).  
-  
- Aby uzyskać dostęp do tej strony właściwości — okno dialogowe, otwórz strony właściwości projektu lub arkuszu właściwości. Rozwiń węzeł **narzędziu manifestu** węźle **właściwości konfiguracji**, a następnie wybierz **wejściowa i wyjściowa**.  
-  
-## <a name="uielement-list"></a>Lista elementów UI  
- **Dodatkowe pliki manifestu**  
- Używa **/manifest** opcję, aby określić pełne ścieżki dodatkowe pliki manifestu przetwarzające narzędzia manifestu lub scalania. Pełne ścieżki są rozdzielone średnikami.  
-  
- **Manifesty zasobów wejściowych**  
- Używa **/inputresource** opcję, aby określić pełną ścieżkę zasobu typu RT_MANIFEST jako danych wejściowych narzędzia manifestu. Ścieżka może następować identyfikator określonego zasobu. Na przykład:  
-  
- `dll_with_manifest.dll;#1`  
-  
- Identyfikator zasobu jest opcjonalny i domyślnie ustawiany na CREATEPROCESS_MANIFEST_RESOURCE_ID w winuser.h.  
-  
- **Osadź Manifest**  
- **Tak** określa system projektu zostanie osadzić pliku manifestu aplikacji w zestawie.  
-  
- **Nie** Określa, czy system projektu spowoduje utworzenie pliku manifestu aplikacji jako plik samodzielny.  
-  
- **Plik wynikowy manifestu**  
- Określa nazwę pliku manifestu wyjściowego. Ta właściwość jest opcjonalna, gdy tylko jeden plik manifestu jest wykonywane są operacje za pomocą narzędzia manifestu.  
-  
- **Plik zasobu manifestu**  
- Określa dane wyjściowe pliki zasobów używany do osadzania manifestu w danych wyjściowych projektu.  
-  
- **Generuj pliki katalogów**  
- Używa **/makecdfs** opcję, aby określić, że narzędzia manifestu wygeneruje katalogu definicji plików (.cdf), które służą do tworzenia katalogów.  
-  
- **Generuj Manifest z biblioteki ManagedAssembly**  
- Generuje manifest z zarządzanego zestawu. (**- managedassemblyname: *** pliku*).  
-  
- **Pomijanie elementu zależności**  
- Używane z **- managedassembly** opcji. Ten tag pomija generację zależności elementów w manifeście końcowym.  
-  
- **Generowanie tagi kategorii**  
- Używane z **- managedassembly** opcji. Ten tag powoduje, że tagi kategorii do wygenerowania.  
-  
- **Włącz świadomości DPI**  
- Określa, czy aplikacja jest obsługującą ustawienia DPI. Domyślnym ustawieniem jest **tak** w projektach MFC i **nr** inaczej, ponieważ tylko projekty MFC utworzone w świadomości DPI. Można zastąpić to ustawienie, aby **tak** Jeśli dodasz kod obsługujący różne ustawienia DPI. Aplikacja może wyglądać rozmytego lub mały, jeśli zostanie ustawiona jako obsługującą ustawienia DPI gdy nie jest.  
-  
-## <a name="see-also"></a>Zobacz też  
- [Manifest aplikacji ClickOnce](/visualstudio/deployment/clickonce-application-manifest)   
- [Strony właściwości narzędzia manifestu](../ide/manifest-tool-property-pages.md)   
- [Praca z właściwościami projektu](../ide/working-with-project-properties.md)   
+# <a name="input-and-output-manifest-tool-configuration-properties-ltprojectnamegt-property-pages-dialog-box"></a>Wejście i wyjście, narzędzie manifestu, właściwości konfiguracji &lt;Projectname&gt; okno dialogowe strony właściwości
+
+To okno dialogowe służy do określania opcji wejściowe i wyjściowe dla [Mt.exe](/windows/desktop/SbsCs/mt-exe).
+
+Aby uzyskać dostęp do tego okna dialogowego strony właściwości, otwórz strony właściwości dla projektu lub arkuszu właściwości. Rozwiń **narzędziu manifestu** węźle **właściwości konfiguracji**, a następnie wybierz pozycję **danych wejściowych i wyjściowych**.
+
+## <a name="uielement-list"></a>Lista elementów UI
+
+**Dodatkowe pliki manifestu**<br/>
+Używa **/manifest** możliwość określenia pełnej ścieżki dodatkowe pliki manifestu, przetwarzających narzędzia manifestu lub scalania. Pełne ścieżki są rozdzielone średnikami.
+
+**Manifesty zasobów wejściowych**<br/>
+Używa **/inputresource** opcję, aby określić pełną ścieżkę zasobu typu RT_MANIFEST jako danych wejściowych na narzędziu manifestu. Ścieżka może następować identyfikator określonego zasobu. Na przykład:
+
+`dll_with_manifest.dll;#1`
+
+Identyfikator zasobu jest opcjonalny i domyślnie CREATEPROCESS_MANIFEST_RESOURCE_ID w winuser.h.
+
+**Osadź Manifest**<br/>
+- **Tak** określa system projektu będzie Osadzanie pliku manifestu aplikacji do zestawu.
+
+- **Nie** Określa, czy system projektu spowoduje utworzenie pliku manifestu aplikacji jako autonomiczny plik.
+
+**Plik wynikowy manifestu**<br/>
+Określa nazwę wyjściowego pliku manifestu. Ta właściwość jest opcjonalna, gdy tylko jeden plik manifestu jest wykonywane są operacje za pomocą narzędzia manifestu.
+
+**Plik zasobów manifestu**<br/>
+Określa dane wyjściowe pliki zasoby używane do osadzania manifestu w danych wyjściowych projektu.
+
+**Generuj pliki katalogu**<br/>
+Używa **/makecdfs** opcję, aby określić, czy narzędzie manifestu, spowoduje wygenerowanie plików definicji katalogu (pliki .cdf), które służą do katalogów.
+
+**Generuj Manifest z biblioteki ManagedAssembly**<br/>
+Generuje manifest z zarządzanego zestawu. (**- managedassemblyname:**<em>pliku</em>).
+
+**Pomiń Element zależności**<br/>
+Używane z **- managedassembly** opcji. Ten tag pomija generację zależności elementów w manifeście końcowym.
+
+**Generuj tagi kategorii**<br/>
+Używane z **- managedassembly** opcji. Ten tag powoduje, że tagi kategorii do wygenerowania.
+
+**Włączanie rozpoznawanie DPI**<br/>
+Określa, czy aplikacja jest obsługującą ustawienia DPI. Domyślnym ustawieniem jest **tak** dla projektów MFC i **nie** inaczej, ponieważ tylko projekty MFC mają wbudowane świadomości DPI. Można zastąpić to ustawienie, aby **tak** Jeśli dodasz kod służący do obsługi różnych ustawień DPI. Aplikacja może pojawić się rozmyte lub małe, jeśli zostanie ustawiona jako obsługującą ustawienia DPI gdy nie jest.
+
+## <a name="see-also"></a>Zobacz też
+
+[Manifest aplikacji ClickOnce](/visualstudio/deployment/clickonce-application-manifest)<br/>
+[Strony właściwości narzędzia manifestu](../ide/manifest-tool-property-pages.md)<br/>
+[Praca z właściwościami projektu](../ide/working-with-project-properties.md)<br/>

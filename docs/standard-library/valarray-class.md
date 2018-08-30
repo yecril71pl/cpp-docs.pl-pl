@@ -38,12 +38,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0521d09f4f96c73c20022d88621671564e7ada78
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 3294730f8f1cc835af49ee003d8f81830d64c9a6
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38965529"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43198305"
 ---
 # <a name="valarray-class"></a>valarray — Klasa
 
@@ -131,9 +131,11 @@ valarray<Type> apply(Type _Func(constType&)) const;
 
 ### <a name="parameters"></a>Parametry
 
-*_Func(Type)* obiekt funkcji, które mają być stosowane do każdego elementu operand valarray.
+*_Func(Type)*<br/>
+ Obiekt funkcji, które mają być stosowane do każdego elementu operand valarray.
 
-*_Func(Const type&)* obiekt funkcji, który const, które mają być stosowane do każdego elementu operand valarray.
+*_Func(Const type&)*<br/>
+ Obiekt funkcji dla stałej, które mają być stosowane do każdego elementu operand valarray.
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -141,7 +143,7 @@ Valarray, której elementy miały `_Func` element-wise stosowany do elementów o
 
 ### <a name="remarks"></a>Uwagi
 
-Funkcja elementu członkowskiego zwraca obiekt klasy [valarray](../standard-library/valarray-class.md)**\<typ >**, długości [rozmiar](#size), każdy z elementów, których `I` jest **func**((  **\*to**) [ `I`]).
+Funkcja elementu członkowskiego zwraca obiekt klasy [valarray](../standard-library/valarray-class.md)**\<typ >**, długości [rozmiar](#size), każdy z elementów, których *I*jest `_Func((*this)[I])`.
 
 ### <a name="example"></a>Przykład
 
@@ -1247,7 +1249,7 @@ Odwołanie do elementu lub jego wartość w określonym indeksie lub określony 
 
 ### <a name="remarks"></a>Uwagi
 
-Operator elementów członkowskich jest przeciążona, aby podać kilka sposobów zaznaczania elementów spośród kontrolowanych przez *\****to**. Pierwsza grupa pięć operatorach składowych pracy w połączeniu z różnych przeciążenia [operator =](#op_eq) (i inne operatory przypisywanie) umożliwia selektywne zastąpienia (dzielenie) kontrolowanej sekwencji. Wybrane elementy, musi istnieć.
+Operator elementów członkowskich jest przeciążona, aby podać kilka sposobów zaznaczania elementów spośród kontrolowanych przez  <strong>\*to</strong>. Pierwsza grupa pięć operatorach składowych pracy w połączeniu z różnych przeciążenia [operator =](#op_eq) (i inne operatory przypisywanie) umożliwia selektywne zastąpienia (dzielenie) kontrolowanej sekwencji. Wybrane elementy, musi istnieć.
 
 Gdy kompilowany przy użyciu [_ITERATOR_DEBUG_LEVEL](../standard-library/iterator-debug-level.md) zdefiniowana jako 1 lub 2, błąd czasu wykonywania występuje, jeśli użytkownik podejmie próbę uzyskania dostępu do elementu poza granicami tablicy valarray.  Zobacz [Checked Iterators](../standard-library/checked-iterators.md) Aby uzyskać więcej informacji.
 
@@ -1845,7 +1847,7 @@ valarray(
 *PTR*  
  Wskaźnik do wartości, które mają użyte do inicjowania elementów w tablicy valarray.
 
-*Po prawej stronie*  
+*po prawej stronie*  
  Istniejąca tablica valarray do zainicjowania nowej tablicy valarray.
 
 *SliceArray*  

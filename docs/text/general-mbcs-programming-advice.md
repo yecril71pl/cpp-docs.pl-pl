@@ -19,12 +19,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0a23ed1283241d3582c0bd548553cb2fed9a47fa
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 532f1e060398b20d4714f461c2d687031756c910
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42596798"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43201125"
 ---
 # <a name="general-mbcs-programming-advice"></a>Ogólne porady dotyczące programowania MBSC
 Użyj następujących wskazówek:  
@@ -41,7 +41,7 @@ Użyj następujących wskazówek:
   
 -   Należy zachować ostrożność, wybierając czcionki dla aplikacji, ponieważ niektóre czcionki nie są dostępne we wszystkich systemach.  
   
--   Podczas wybierania czcionek dla okien dialogowych, użyj [MS Shell Dlg](http://msdn.microsoft.com/library/windows/desktop/dd374112) zamiast MS Serif sieci SAN lub Helvetica. MS Shell Dlg zastępuje z poprawną czcionką systemu przed utworzeniem okna dialogowego. Korzystanie z MS Shell Dlg zapewnia, wszelkie zmiany w systemie operacyjnym, aby poradzić sobie w tej czcionce będą automatycznie dostępne. (MFC zastępuje MS Shell Dlg DEFAULT_GUI_FONT lub czcionki systemowej na Windows 95, Windows 98 i Windows NT 4, ponieważ te systemy nie obsługują MS Shell Dlg poprawnie).  
+-   Podczas wybierania czcionek dla okien dialogowych, użyj [MS Shell Dlg](/windows/desktop/Intl/using-ms-shell-dlg-and-ms-shell-dlg-2) zamiast MS Serif sieci SAN lub Helvetica. MS Shell Dlg zastępuje z poprawną czcionką systemu przed utworzeniem okna dialogowego. Korzystanie z MS Shell Dlg zapewnia, wszelkie zmiany w systemie operacyjnym, aby poradzić sobie w tej czcionce będą automatycznie dostępne. (MFC zastępuje MS Shell Dlg DEFAULT_GUI_FONT lub czcionki systemowej na Windows 95, Windows 98 i Windows NT 4, ponieważ te systemy nie obsługują MS Shell Dlg poprawnie).  
   
 -   Podczas projektowania aplikacji, należy zdecydować, ciągi, które może być lokalizowana. W razie wątpliwości założono zostanie zlokalizowany wszelkie dany ciąg znaków. Jako takie nie należy mieszać ciągów, które może być lokalizowana z tymi, które nie.  
   

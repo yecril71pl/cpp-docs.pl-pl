@@ -23,12 +23,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3b192c0ee4bc7658fc39791545c4aa9334edd183
-ms.sourcegitcommit: f7703076b850c717c33d72fb0755fbb2215c5ddc
+ms.openlocfilehash: 1bd8abd7971c112f0d9e872df73b431c78259981
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/28/2018
-ms.locfileid: "43131948"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43205425"
 ---
 # <a name="multithreading-terminating-threads-in-mfc"></a>Wielowątkowość: Przerywanie wątków w MFC
 Dwie normalne sytuacje powodują zakończenie wątku: funkcja kontrolowania istnieje lub wątek nie jest dozwolony do zakończenia. Jeśli Edytor tekstu używa wątku do drukowania w tle, funkcja kontrolowania zakończy się normalnie Jeśli drukowanie zostanie ukończone pomyślnie. Jeśli użytkownik chce anulować drukowanie, natomiast wątek drukowanie w tle musi być zakończony przedwcześnie. W tym temacie wyjaśniono, jak implementować każdą sytuację i jak uzyskać kod wyjścia wątku, po jego działania.  
@@ -43,7 +43,7 @@ Dwie normalne sytuacje powodują zakończenie wątku: funkcja kontrolowania istn
  
 W przypadku wątku roboczego zakończenie zwykłych wątków jest proste: zamknij funkcję kontrolującą i zwróć wartość, która oznacza powód zakończenia. Można użyć dowolnego [AfxEndThread](../mfc/reference/application-information-and-management.md#afxendthread) funkcji lub **zwracają** instrukcji. Typowo 0 oznacza pomyślne ukończenie, ale która zależy od użytkownika.  
   
-Dla wątku interfejsu użytkownika, proces jest równie prosty: z wewnątrz wątku interfejsu użytkownika Wywołaj [PostQuitMessage](http://msdn.microsoft.com/library/windows/desktop/ms644945) w zestawie Windows SDK. Jedynym parametrem, `PostQuitMessage` przyjmuje jest kod wyjścia wątku. Jak w przypadku wątków roboczych 0 zazwyczaj oznacza pomyślne zakończenie.  
+Dla wątku interfejsu użytkownika, proces jest równie prosty: z wewnątrz wątku interfejsu użytkownika Wywołaj [PostQuitMessage](https://msdn.microsoft.com/library/windows/desktop/ms644945) w zestawie Windows SDK. Jedynym parametrem, `PostQuitMessage` przyjmuje jest kod wyjścia wątku. Jak w przypadku wątków roboczych 0 zazwyczaj oznacza pomyślne zakończenie.  
   
 ##  <a name="_core_premature_thread_termination"></a> Przedwczesne zakończenie wątku  
  
@@ -53,7 +53,7 @@ Przedwczesne zakończenie wątku jest prawie tak samo proste: wywołanie [AfxEnd
   
 ##  <a name="_core_retrieving_the_exit_code_of_a_thread"></a> Pobieranie kodu wyjścia wątku  
  
-Aby uzyskać kod zakończenia pracownika lub wątku interfejsu użytkownika, wywołaj [GetExitCodeThread](http://msdn.microsoft.com/library/windows/desktop/ms683190) funkcji. Aby uzyskać informacji na temat tej funkcji zobacz zestaw Windows SDK. Ta funkcja pobiera uchwyt do wątku (przechowywany w `m_hThread` element członkowski danych `CWinThread` obiekty) i adres DWORD.  
+Aby uzyskać kod zakończenia pracownika lub wątku interfejsu użytkownika, wywołaj [GetExitCodeThread](/windows/desktop/api/processthreadsapi/nf-processthreadsapi-getexitcodethread) funkcji. Aby uzyskać informacji na temat tej funkcji zobacz zestaw Windows SDK. Ta funkcja pobiera uchwyt do wątku (przechowywany w `m_hThread` element członkowski danych `CWinThread` obiekty) i adres DWORD.  
   
 Jeśli wątek jest nadal aktywne `GetExitCodeThread` umieszcza STILL_ACTIVE w podany adres DWORD; w przeciwnym razie kod wyjścia jest umieszczany w tym adresie.  
   
@@ -70,4 +70,4 @@ Każda z tych metod pozwala określić dlaczego `CWinThread` obiekt został zako
 [Wielowątkowość z C++ i MFC](multithreading-with-cpp-and-mfc.md)   
 [_endthread, _endthreadex](../c-runtime-library/reference/endthread-endthreadex.md)   
 [_beginthread, _beginthreadex](../c-runtime-library/reference/beginthread-beginthreadex.md)   
-[ExitThread](http://msdn.microsoft.com/library/windows/desktop/ms682659)
+[ExitThread](/windows/desktop/api/processthreadsapi/nf-processthreadsapi-exitthread)

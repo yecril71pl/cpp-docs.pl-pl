@@ -116,12 +116,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5c6f84f575edbcaf8ecc64f424f3225d969d6a7f
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: f79917e34a749048696f320a8311978acc2739f4
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37850358"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43202858"
 ---
 # <a name="colecontrolsite-class"></a>Klasa COleControlSite
 Zapewnia obsługę interfejsów kontrolki niestandardowej po stronie klienta.  
@@ -205,7 +205,7 @@ class COleControlSite : public CCmdTarget
 |[COleControlSite::m_rect](#m_rect)|Wymiary kontroli lokacji.|  
   
 ## <a name="remarks"></a>Uwagi  
- Ta funkcja jest podstawowym elementem używanym za pomocą którego osadzonego formantu ActiveX uzyskuje informacje o lokalizacji i zasięg swojej witryny wyświetlania, jego nazwie, interfejs użytkownika, jego właściwości otoczenia i innych zasobów dostarczanych przez kontener. `COleControlSite` w pełni zaimplementowano [IOleControlSite](http://msdn.microsoft.com/library/windows/desktop/ms688502), [IOleInPlaceSite](http://msdn.microsoft.com/library/windows/desktop/ms686586), [IOleClientSite](http://msdn.microsoft.com/library/windows/desktop/ms693706), [ipropertynotifysink —](http://msdn.microsoft.com/library/windows/desktop/ms692638), `IBoundObjectSite`, `INotifyDBEvents`, [IRowSetNotify](../../data/oledb/irowsetnotifyimpl-class.md) interfejsów. Ponadto jest również implementowana interfejsu IDispatch (świadczenie pomocy technicznej dla właściwości otoczenia i ujścia zdarzeń).  
+ Ta funkcja jest podstawowym elementem używanym za pomocą którego osadzonego formantu ActiveX uzyskuje informacje o lokalizacji i zasięg swojej witryny wyświetlania, jego nazwie, interfejs użytkownika, jego właściwości otoczenia i innych zasobów dostarczanych przez kontener. `COleControlSite` w pełni zaimplementowano [IOleControlSite](/windows/desktop/api/ocidl/nn-ocidl-iolecontrolsite), [IOleInPlaceSite](/windows/desktop/api/oleidl/nn-oleidl-ioleinplacesite), [IOleClientSite](/windows/desktop/api/oleidl/nn-oleidl-ioleclientsite), [ipropertynotifysink —](/windows/desktop/api/ocidl/nn-ocidl-ipropertynotifysink), `IBoundObjectSite`, `INotifyDBEvents`, [IRowSetNotify](../../data/oledb/irowsetnotifyimpl-class.md) interfejsów. Ponadto jest również implementowana interfejsu IDispatch (świadczenie pomocy technicznej dla właściwości otoczenia i ujścia zdarzeń).  
   
  Aby utworzyć ActiveX sterowania lokacji za pomocą `COleControlSite`, wyprowadzić klasę z `COleControlSite`. W swojej `CWnd`— zastąpienie klasy pochodnej dla kontenera (na przykład Twoje okno dialogowe) `CWnd::CreateControlSite` funkcji.  
   
@@ -406,7 +406,7 @@ virtual HRESULT DoVerb(
 ### <a name="remarks"></a>Uwagi  
  Ta funkcja odwołuje się bezpośrednio za pośrednictwem formantu `IOleObject` interfejsu, aby wykonać określone zlecenie. Jeśli wyjątek jest generowany w wyniku tego wywołania funkcji, zwracany jest kod błędu HRESULT.  
   
- Aby uzyskać więcej informacji, zobacz [IOleObject::DoVerb](http://msdn.microsoft.com/library/windows/desktop/ms694508) w zestawie Windows SDK.  
+ Aby uzyskać więcej informacji, zobacz [IOleObject::DoVerb](/windows/desktop/api/oleidl/nf-oleidl-ioleobject-doverb) w zestawie Windows SDK.  
   
 ##  <a name="enabledsc"></a>  COleControlSite::EnableDSC  
  Umożliwia określanie źródła dla tej witryny kontroli danych.  
@@ -676,7 +676,7 @@ CONTROLINFO m_ctlInfo;
 ```  
   
 ### <a name="remarks"></a>Uwagi  
- Te informacje są przechowywane w [CONTROLINFO](http://msdn.microsoft.com/library/windows/desktop/ms680734) struktury.  
+ Te informacje są przechowywane w [CONTROLINFO](/windows/desktop/api/ocidl/ns-ocidl-tagcontrolinfo) struktury.  
   
 ##  <a name="m_dweventsink"></a>  COleControlSite::m_dwEventSink  
  Zawiera cookie punkt połączenia z obiektu sink zdarzenia formantu.  
@@ -693,10 +693,10 @@ DWORD m_dwMiscStatus;
 ```  
   
 ### <a name="remarks"></a>Uwagi  
- Aby uzyskać więcej informacji, zobacz [OLEMISC](http://msdn.microsoft.com/library/windows/desktop/ms678497)w zestawie Windows SDK.  
+ Aby uzyskać więcej informacji, zobacz [OLEMISC](/windows/desktop/api/oleidl/ne-oleidl-tagolemisc)w zestawie Windows SDK.  
   
 ##  <a name="m_dwpropnotifysink"></a>  COleControlSite::m_dwPropNotifySink  
- Zawiera [ipropertynotifysink —](http://msdn.microsoft.com/library/windows/desktop/ms692638) pliku cookie.  
+ Zawiera [ipropertynotifysink —](/windows/desktop/api/ocidl/nn-ocidl-ipropertynotifysink) pliku cookie.  
   
 ```  
 DWORD m_dwPropNotifySink;  
@@ -731,7 +731,7 @@ UINT m_nID;
 ```  
   
 ##  <a name="m_pactiveobject"></a>  COleControlSite::m_pActiveObject  
- Zawiera [IOleInPlaceActiveObject](http://msdn.microsoft.com/library/windows/desktop/ms691299) interfejsu formantu.  
+ Zawiera [IOleInPlaceActiveObject](/windows/desktop/api/oleidl/nn-oleidl-ioleinplaceactiveobject) interfejsu formantu.  
   
 ```  
 LPOLEINPLACEACTIVEOBJECT m_pActiveObject;  
@@ -745,7 +745,7 @@ COleControlContainer* m_pCtrlCont;
 ```  
   
 ##  <a name="m_pinplaceobject"></a>  COleControlSite::m_pInPlaceObject  
- Zawiera `IOleInPlaceObject` [IOleInPlaceObject](http://msdn.microsoft.com/library/windows/desktop/ms692646) interfejsu formantu.  
+ Zawiera `IOleInPlaceObject` [IOleInPlaceObject](/windows/desktop/api/oleidl/nn-oleidl-ioleinplaceobject) interfejsu formantu.  
   
 ```  
 LPOLEINPLACEOBJECT m_pInPlaceObject;  
@@ -759,7 +759,7 @@ LPOLEOBJECT m_pObject;
 ```  
   
 ##  <a name="m_pwindowlessobject"></a>  COleControlSite::m_pWindowlessObject  
- Zawiera `IOleInPlaceObjectWindowless` [IOleInPlaceObjectWindowless](http://msdn.microsoft.com/library/windows/desktop/ms687304) interfejsu formantu.  
+ Zawiera `IOleInPlaceObjectWindowless` [IOleInPlaceObjectWindowless](/windows/desktop/api/ocidl/nn-ocidl-ioleinplaceobjectwindowless) interfejsu formantu.  
   
 ```  
 IOleInPlaceObjectWindowless* m_pWindowlessObject;  
@@ -797,7 +797,7 @@ virtual BOOL ModifyStyle(
  Style, które mają zostać dodane z bieżącym Style okna ramowego.  
   
  *nFlags*  
- Okno pozycjonowanie flag. Aby uzyskać listę możliwych wartości, zobacz [SetWindowPos](http://msdn.microsoft.com/library/windows/desktop/ms633545) funkcji w zestawie Windows SDK.  
+ Okno pozycjonowanie flag. Aby uzyskać listę możliwych wartości, zobacz [SetWindowPos](https://msdn.microsoft.com/library/windows/desktop/ms633545) funkcji w zestawie Windows SDK.  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Różna od zera, jeśli style zostaną zmienione, w przeciwnym razie wartość zero.  
@@ -805,7 +805,7 @@ virtual BOOL ModifyStyle(
 ### <a name="remarks"></a>Uwagi  
  Stock formantu właściwość włączone zostaną zmodyfikowane w taki sposób, aby dopasować ustawienie WS_DISABLED. Podstawowe właściwości Styl obramowania formantu zostaną zmodyfikowane w taki sposób, aby dopasować żądany ustawienie WS_BORDER. Innymi stylami są stosowane bezpośrednio do dojścia okna kontrolki, jeśli jest obecna.  
   
- Modyfikuje style okna ramowego formantu. Style, które mają być dodane lub usunięte, może być połączone za pomocą bitowe OR ( &#124; ) — operator. Zobacz [CreateWindow](http://msdn.microsoft.com/library/windows/desktop/ms632679) funkcji w zestawie Windows SDK dla informacji o stylach dostępnym oknie.  
+ Modyfikuje style okna ramowego formantu. Style, które mają być dodane lub usunięte, może być połączone za pomocą bitowe OR ( &#124; ) — operator. Zobacz [CreateWindow](https://msdn.microsoft.com/library/windows/desktop/ms632679) funkcji w zestawie Windows SDK dla informacji o stylach dostępnym oknie.  
   
  Jeśli *nFlags* jest różna od zera, `ModifyStyle` wywołuje funkcję Win32 `SetWindowPos`i ponownie rysuje okna, łącząc *nFlags* z czterech następujących flag:  
   
@@ -837,7 +837,7 @@ virtual BOOL ModifyStyleEx(
  Rozszerzone style do dodania z bieżącym Style okna ramowego.  
   
  *nFlags*  
- Okno pozycjonowanie flag. Aby uzyskać listę możliwych wartości, zobacz [SetWindowPos](http://msdn.microsoft.com/library/windows/desktop/ms633545) funkcji w zestawie Windows SDK.  
+ Okno pozycjonowanie flag. Aby uzyskać listę możliwych wartości, zobacz [SetWindowPos](https://msdn.microsoft.com/library/windows/desktop/ms633545) funkcji w zestawie Windows SDK.  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Różna od zera, jeśli style zostaną zmienione, w przeciwnym razie wartość zero.  
@@ -845,7 +845,7 @@ virtual BOOL ModifyStyleEx(
 ### <a name="remarks"></a>Uwagi  
  Stock formantu właściwości wyglądu zostaną zmodyfikowane w taki sposób, aby dopasować ustawienie WS_EX_CLIENTEDGE. Wszystkie inne rozszerzone Style okna są stosowane bezpośrednio do dojścia okna kontrolki, jeśli jest obecna.  
   
- Modyfikuje okna rozszerzone style obiektu kontroli lokacji. Style, które mają być dodane lub usunięte, może być połączone za pomocą bitowe OR ( &#124; ) — operator. Zobacz [elementu CreateWindowEx](http://msdn.microsoft.com/library/windows/desktop/ms632680) funkcji w zestawie Windows SDK dla informacji o stylach dostępnym oknie.  
+ Modyfikuje okna rozszerzone style obiektu kontroli lokacji. Style, które mają być dodane lub usunięte, może być połączone za pomocą bitowe OR ( &#124; ) — operator. Zobacz [elementu CreateWindowEx](https://msdn.microsoft.com/library/windows/desktop/ms632680) funkcji w zestawie Windows SDK dla informacji o stylach dostępnym oknie.  
   
  Jeśli *nFlags* jest różna od zera, `ModifyStyleEx` wywołuje funkcję Win32 `SetWindowPos`i ponownie rysuje okna, łącząc *nFlags* z czterech następujących flag:  
   
@@ -1051,7 +1051,7 @@ virtual BOOL SetWindowPos(
  Nową wysokość okna.  
   
  *nFlags*  
- Określa okna, rozmiar i położenie flag. Aby uzyskać możliwych wartości, zobacz sekcję Spostrzeżenia, aby [SetWindowPos](http://msdn.microsoft.com/library/windows/desktop/ms633545) w zestawie Windows SDK.  
+ Określa okna, rozmiar i położenie flag. Aby uzyskać możliwych wartości, zobacz sekcję Spostrzeżenia, aby [SetWindowPos](https://msdn.microsoft.com/library/windows/desktop/ms633545) w zestawie Windows SDK.  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Wartość różną od zera jeśli to się powiedzie, w przeciwnym razie wartość zero.  

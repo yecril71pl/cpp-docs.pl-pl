@@ -1,7 +1,7 @@
 ---
-title: Kompilatora (poziom 1) ostrzeżenie C4325 | Dokumentacja firmy Microsoft
+title: Kompilator ostrzeżenie (poziom 1) C4325 | Dokumentacja firmy Microsoft
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 08/27/2018
 ms.technology:
 - cpp-diagnostics
 ms.topic: error-reference
@@ -16,46 +16,49 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 936433987f823ae7d5d22cfd075f188dd5d4b1e4
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: cd265938afb51cc402dc84f38b7e95188c6292a7
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33277647"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43197488"
 ---
-# <a name="compiler-warning-level-1-c4325"></a>Kompilator C4325 ostrzegawcze (poziom 1)
-**atrybuty dla standardowej sekcji "**   
- ***sekcja* "ignorowane**  
-  
- Nie możesz zmienić atrybuty standardowej sekcji. Na przykład:  
-  
-```  
-#pragma section(".sdata", long)  
-```  
-  
- Spowoduje to zastąpienie `.sdata` standardowa sekcja, która używa **krótki** typ danych **długi** — typ danych.  
-  
- Zawiera sekcje standardowe atrybuty, których nie można zmieniać,  
-  
--   .Data  
-  
--   .sdata  
-  
--   .BSS  
-  
--   .sbss  
-  
--   .Text  
-  
--   .const —  
-  
--   .sconst  
-  
--   .rdata  
-  
--   .srdata  
-  
- Później można dodać dodatkowe sekcje.  
-  
-## <a name="see-also"></a>Zobacz też  
- [sekcja](../../preprocessor/section.md)
+# <a name="compiler-warning-level-1-c4325"></a>Kompilator ostrzeżenie (poziom 1) C4325
+
+> atrybuty dla standardowej sekcji "*sekcji*" zignorowany
+
+## <a name="remarks"></a>Uwagi
+
+Nie możesz zmienić atrybuty standardowej sekcji. Na przykład:
+
+```cpp
+#pragma section(".sdata", long)
+```
+
+To spowodowałoby zastąpienie `.sdata` standardowa sekcja, która używa **krótki** to typ danych **długie** typu danych.
+
+Standardowa sekcje zawierają atrybuty, których nie można zmienić,
+
+- .Data
+
+- .sdata
+
+- .BSS
+
+- .sbss
+
+- .Text
+
+- .const —
+
+- .sconst
+
+- .rdata
+
+- .srdata
+
+Dodatkowe sekcje mogą być dodawane później.
+
+## <a name="see-also"></a>Zobacz także
+
+[sekcja](../../preprocessor/section.md)

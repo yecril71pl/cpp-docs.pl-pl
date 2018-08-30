@@ -1,5 +1,5 @@
 ---
-title: memset —, wmemset — | Dokumentacja firmy Microsoft
+title: funkcji memset, wmemset — | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -35,16 +35,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c0cbc05c0e337560982f69a5ca920340bc1b0de8
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: d6b26f0c200f19cab4bb2710be686b25a9dce014
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32401246"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43202013"
 ---
 # <a name="memset-wmemset"></a>memset, wmemset
 
-Ustawia buforów określony znak.
+Ustawia buforów do określonego znaku.
 
 ## <a name="syntax"></a>Składnia
 
@@ -67,7 +67,7 @@ wchar_t *wmemset(
 Wskaźnik do miejsca docelowego.
 
 *c*<br/>
-Znak do ustawienia.
+Znak do zestawu.
 
 *Liczba*<br/>
 Liczba znaków.
@@ -78,9 +78,9 @@ Wartość *dest*.
 
 ## <a name="remarks"></a>Uwagi
 
-Ustawia pierwszy *liczba* znaków *dest* na znak *c*.
+Ustawia pierwszy *liczba* znaków *dest* znaku *c*.
 
-**Uwaga dotycząca zabezpieczeń** upewnij się, że bufor docelowy ma za mało miejsca na co najmniej *liczba* znaków. Aby uzyskać więcej informacji, zobacz [unikanie Overruns buforu](http://msdn.microsoft.com/library/windows/desktop/ms717795).
+**Uwaga dotycząca zabezpieczeń** upewnij się, że bufor docelowy ma wystarczającą ilość miejsca na co najmniej *liczba* znaków. Aby uzyskać więcej informacji, zobacz [unikanie przepełnień bufora](/windows/desktop/SecBP/avoiding-buffer-overruns).
 
 ## <a name="requirements"></a>Wymagania
 
@@ -93,7 +93,7 @@ Aby uzyskać dodatkowe informacje o zgodności, zobacz [zgodności](../../c-runt
 
 ## <a name="libraries"></a>Biblioteki
 
-Wszystkie wersje [biblioteki wykonawcze języka C](../../c-runtime-library/crt-library-features.md).
+Wszystkie wersje [biblioteki wykonawczej C](../../c-runtime-library/crt-library-features.md).
 
 ## <a name="example"></a>Przykład
 
@@ -123,7 +123,7 @@ Before: This is a test of the memset function
 After:  **** is a test of the memset function
 ```
 
-Oto przykład wykorzystania wmemset —:
+Poniżej przedstawiono przykład użycia wmemset —:
 
 ```C
 // crt_wmemset.c

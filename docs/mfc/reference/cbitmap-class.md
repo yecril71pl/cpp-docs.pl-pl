@@ -44,12 +44,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: dce8ac623337d6b1b1dafbe242a9d13979b81a01
-ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
+ms.openlocfilehash: 4a0c6b9a9f01746788a01b6528a7508db141089e
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37337019"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43195855"
 ---
 # <a name="cbitmap-class"></a>Klasa CBitmap
 Hermetyzuje mapę bitową Windows graphics urządzenia interface (GDI) i dostarcza funkcji elementów członkowskich do manipulowania mapy bitowej.  
@@ -174,7 +174,7 @@ BOOL CreateBitmapIndirect(LPBITMAP lpBitmap);
 ### <a name="remarks"></a>Uwagi  
  Mimo że nie można bezpośrednio wybrać mapę bitową do wyświetlania na urządzeniach, można go ustawić jako bieżący mapy bitowej dla kontekstu urządzenia pamięci za pomocą [CDC::SelectObject](../../mfc/reference/cdc-class.md#selectobject) i skopiowane do wszystkich kontekstach urządzenia za pomocą [CDC::BitBlt](../../mfc/reference/cdc-class.md#bitblt) lub [CDC::StretchBlt](../../mfc/reference/cdc-class.md#stretchblt) funkcji. ( [CDC::PatBlt](../../mfc/reference/cdc-class.md#patblt) funkcji można skopiować mapy bitowej dla aktualny pędzel bezpośrednio do kontekstu urządzenia wyświetlaną.)  
   
- Jeśli `BITMAP` wskazywanej przez *lpBitmap* parametru zostało wypełnione przy użyciu `GetObject` funkcji, bity mapy bitowej nie są określone i mapy bitowej nie został zainicjowany. Aby zainicjować mapy bitowej, aplikacja może użyć funkcji takich jak [CDC::BitBlt](../../mfc/reference/cdc-class.md#bitblt) lub [SetDIBits](http://msdn.microsoft.com/library/windows/desktop/dd162973) do skopiowania bity mapy bitowej identyfikowane przez pierwszy parametr `CGdiObject::GetObject` do mapy bitowej utworzone przez `CreateBitmapIndirect`.  
+ Jeśli `BITMAP` wskazywanej przez *lpBitmap* parametru zostało wypełnione przy użyciu `GetObject` funkcji, bity mapy bitowej nie są określone i mapy bitowej nie został zainicjowany. Aby zainicjować mapy bitowej, aplikacja może użyć funkcji takich jak [CDC::BitBlt](../../mfc/reference/cdc-class.md#bitblt) lub [SetDIBits](/windows/desktop/api/wingdi/nf-wingdi-setdibits) do skopiowania bity mapy bitowej identyfikowane przez pierwszy parametr `CGdiObject::GetObject` do mapy bitowej utworzone przez `CreateBitmapIndirect`.  
   
  Po zakończeniu pracy z `CBitmap` obiekt utworzony za pomocą `CreateBitmapIndirect` funkcji, najpierw wybierz mapę bitową z kontekstu urządzenia, a następnie usuń `CBitmap` obiektu.  
   
@@ -374,7 +374,7 @@ BOOL LoadMappedBitmap(
 ### <a name="remarks"></a>Uwagi  
  Domyślnie `LoadMappedBitmap` zmapuje kolory często używane w symbole przycisku.  
   
- Dla informacji o tworzeniu zamapowanego mapy bitowej, zobacz opis funkcji Windows [CreateMappedBitmap](http://go.microsoft.com/fwlink/p/?linkid=230562) i [COLORMAP](http://msdn.microsoft.com/library/windows/desktop/bb760448) struktury w zestawie Windows SDK.  
+ Dla informacji o tworzeniu zamapowanego mapy bitowej, zobacz opis funkcji Windows [CreateMappedBitmap](http://go.microsoft.com/fwlink/p/?linkid=230562) i [COLORMAP](/windows/desktop/api/commctrl/ns-commctrl-_colormap) struktury w zestawie Windows SDK.  
   
 ##  <a name="loadoembitmap"></a>  CBitmap::LoadOEMBitmap  
  Ładuje mapę bitową wstępnie zdefiniowane, używana przez Windows.  
@@ -428,7 +428,7 @@ operator HBITMAP() const;
 ### <a name="remarks"></a>Uwagi  
  Ten operator jest operatora rzutowania, który obsługuje bezpośredniemu wykorzystaniu `HBITMAP` obiektu.  
   
- Aby uzyskać więcej informacji o korzystaniu z obiektów graficznych, zobacz [obiektów grafiki](http://msdn.microsoft.com/library/windows/desktop/dd144962) w zestawie Windows SDK.  
+ Aby uzyskać więcej informacji o korzystaniu z obiektów graficznych, zobacz [obiektów grafiki](/windows/desktop/gdi/graphic-objects) w zestawie Windows SDK.  
   
 ##  <a name="setbitmapbits"></a>  CBitmap::SetBitmapBits  
  Ustawia bity mapy bitowej wartości bitowe dane *lpBits*.  

@@ -27,15 +27,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9ea5da8b98c528eb6832c850e41b0a42c386f901
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: 0259716bb1106dbc5c2da5a3738cd78e5c8c877f
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42466061"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43202478"
 ---
 # <a name="ccomaggobject-class"></a>Klasa CComAggObject
-Ta klasa implementuje [IUnknown](http://msdn.microsoft.com/library/windows/desktop/ms680509) interfejs dla obiektu zagregowanego. Zgodnie z definicją obiektu zagregowanego jest zawarty w obiekcie zewnętrznym. `CComAggObject` Klasa jest podobna do [klasa CComObject](../../atl/reference/ccomobject-class.md), z tą różnicą, że udostępnia interfejs, który jest bezpośrednio dostępny dla klientów zewnętrznych.  
+Ta klasa implementuje [IUnknown](/windows/desktop/api/unknwn/nn-unknwn-iunknown) interfejs dla obiektu zagregowanego. Zgodnie z definicją obiektu zagregowanego jest zawarty w obiekcie zewnętrznym. `CComAggObject` Klasa jest podobna do [klasa CComObject](../../atl/reference/ccomobject-class.md), z tą różnicą, że udostępnia interfejs, który jest bezpośrednio dostępny dla klientów zewnętrznych.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -76,7 +76,7 @@ class CComAggObject : public IUnknown,
 |[CComAggObject::m_contained](#m_contained)|Delegaty `IUnknown` wywołania zewnętrznego nieznany.|  
   
 ## <a name="remarks"></a>Uwagi  
- `CComAggObject` implementuje [IUnknown](http://msdn.microsoft.com/library/windows/desktop/ms680509) dla obiektu zagregowanego. `CComAggObject` ma swój własny `IUnknown` interfejs, niezależnie od obiektu zewnętrznego `IUnknown` interfejs i przechowuje swoje własne licznika odwołań.  
+ `CComAggObject` implementuje [IUnknown](/windows/desktop/api/unknwn/nn-unknwn-iunknown) dla obiektu zagregowanego. `CComAggObject` ma swój własny `IUnknown` interfejs, niezależnie od obiektu zewnętrznego `IUnknown` interfejs i przechowuje swoje własne licznika odwołań.  
   
  Aby uzyskać więcej informacji na temat agregacji, zobacz artykuł [podstawy ATL obiektów COM](../../atl/fundamentals-of-atl-com-objects.md).  
   
@@ -139,7 +139,7 @@ static HRESULT WINAPI CreateInstance(
   
 ### <a name="parameters"></a>Parametry  
  *strony*  
- [out] Wskaźnik do **CComAggObject\<*** zawarte* **>** wskaźnika. Jeśli `CreateInstance` zakończy się niepowodzeniem, *pp* ma wartość NULL.  
+ [out] Wskaźnik do **CComAggObject\<**<em>zawarte</em> **>** wskaźnika. Jeśli `CreateInstance` zakończy się niepowodzeniem, *pp* ma wartość NULL.  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Standardowe wartości HRESULT.  

@@ -126,12 +126,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 17a6d1e618dc9345266cb3c0d618fda1c4f78c44
-ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
+ms.openlocfilehash: b3a80cf072a4f95885ef0bc9a0b28a385fde085f
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37339465"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43206086"
 ---
 # <a name="cdhtmldialog-class"></a>Klasa CDHtmlDialog
 Służy do utworzenia okien dialogowych, które korzystają z HTML a nie zasobów dialogowych do implementacji interfejsu użytkownika.  
@@ -171,7 +171,7 @@ class CDHtmlDialog : public CDialog, public CDHtmlEventSink
 |[CDHtmlDialog::GetControlProperty](#getcontrolproperty)|Pobiera żądanej właściwości określonego formantu ActiveX.|  
 |[CDHtmlDialog::GetCurrentUrl](#getcurrenturl)|Pobiera Uniform Resource Locator (adres URL) są skojarzone z bieżącym dokumentem.|  
 |[CDHtmlDialog::GetDHtmlDocument](#getdhtmldocument)|Pobiera interfejs IHTMLDocument2 w aktualnie załadowanych dokumentu HTML.|  
-|[CDHtmlDialog::GetDropTarget](#getdroptarget)|Wywoływane przez zawarte formantu WebBrowser, gdy jest on używany jako miejsca docelowego zezwalająca na oknie dialogowym, aby podać zamiast [IDropTarget](http://msdn.microsoft.com/library/windows/desktop/ms679679).|  
+|[CDHtmlDialog::GetDropTarget](#getdroptarget)|Wywoływane przez zawarte formantu WebBrowser, gdy jest on używany jako miejsca docelowego zezwalająca na oknie dialogowym, aby podać zamiast [IDropTarget](/windows/desktop/api/oleidl/nn-oleidl-idroptarget).|  
 |[CDHtmlDialog::GetElement](#getelement)|Pobiera interfejs w elemencie HTML.|  
 |[CDHtmlDialog::GetElementHtml](#getelementhtml)|Pobiera `innerHTML` właściwość elementu HTML.|  
 |[CDHtmlDialog::GetElementInterface](#getelementinterface)|Pobiera wskaźnik do żądanego interfejsu z elementu HTML.|  
@@ -678,7 +678,7 @@ HRESULT GetDHtmlDocument(IHTMLDocument2 **pphtmlDoc);
  Standardowa HRESULT. Zwraca wartość S_OK w przypadku powodzenia.  
   
 ##  <a name="getdroptarget"></a>  CDHtmlDialog::GetDropTarget  
- Wywoływane przez zawarte formantu WebBrowser, gdy jest on używany jako miejsca docelowego zezwalająca na oknie dialogowym, aby podać zamiast [IDropTarget](http://msdn.microsoft.com/library/windows/desktop/ms679679).  
+ Wywoływane przez zawarte formantu WebBrowser, gdy jest on używany jako miejsca docelowego zezwalająca na oknie dialogowym, aby podać zamiast [IDropTarget](/windows/desktop/api/oleidl/nn-oleidl-idroptarget).  
   
 ```  
 STDMETHOD(GetDropTarget)(

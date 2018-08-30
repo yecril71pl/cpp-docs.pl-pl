@@ -26,12 +26,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7f31d5d04638685b6d7636f40108b7e95bbd5d37
-ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
+ms.openlocfilehash: 301549e26212448ae0392a356aa556358dcf6f47
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37338828"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43205466"
 ---
 # <a name="cevent-class"></a>Klasa CEvent
 Przedstawia zdarzenie, które jest obiektem synchronizacji umożliwiającym jednemu wątkowi na powiadomienie drugiego o zdarzeniu.  
@@ -113,7 +113,7 @@ CEvent(
  Nazwa `CEvent` obiektu. Należy podać, jeśli obiekt ma być używany przez granice procesu. Jeśli nazwa pasuje do istniejącego zdarzenia, Konstruktor tworzy nową `CEvent` obiektu, który odwołuje się zdarzenie o takiej nazwie. Jeśli nazwa jest zgodna z istniejącym obiektem synchronizacji nie jest zdarzeniem, konstrukcja nie powiedzie się. Jeśli ma wartość NULL, nazwa będzie mieć wartości null.  
   
  *lpsaAttribute*  
- Atrybuty zabezpieczeń dla obiektu zdarzenia. Aby uzyskać pełny opis tej struktury, zobacz [SECURITY_ATTRIBUTES](http://msdn.microsoft.com/library/windows/desktop/aa379560) w zestawie Windows SDK.  
+ Atrybuty zabezpieczeń dla obiektu zdarzenia. Aby uzyskać pełny opis tej struktury, zobacz [SECURITY_ATTRIBUTES](https://msdn.microsoft.com/library/windows/desktop/aa379560) w zestawie Windows SDK.  
   
 ### <a name="remarks"></a>Uwagi  
  Dostęp i zwalniania `CEvent` obiektu, Utwórz [CMultiLock](../../mfc/reference/cmultilock-class.md) lub [CSingleLock](../../mfc/reference/csinglelock-class.md) obiektu, a następnie wywołać jej [blokady](../../mfc/reference/csinglelock-class.md#lock) i [Unlock](../../mfc/reference/csinglelock-class.md#unlock) Funkcje Członkowskie.  
@@ -121,7 +121,7 @@ CEvent(
  Aby zmienić stan `CEvent` obiektu sygnalizowane (wątków musi czekać), wywołania [SetEvent](#setevent) lub [PulseEvent](#pulseevent). Można ustawić stanu `CEvent` obiektu nonsignaled (wątków musi czekać), wywołaj [ResetEvent](#resetevent).  
   
 > [!IMPORTANT]
->  Po utworzeniu `CEvent` obiektu, należy użyć [GetLastError](http://msdn.microsoft.com/library/windows/desktop/ms679360) aby upewnić się, że element mutex nie istnieje. Jeśli element mutex istniał nieoczekiwanie, może to oznaczać, nieautoryzowany proces zajmowanie i może zamierza użyć obiektu mutex złośliwie. W tym przypadku zalecaną procedurą zabezpieczenia jest zamknąć dojścia i kontynuować tak, jakby wystąpił błąd podczas tworzenia obiektu.  
+>  Po utworzeniu `CEvent` obiektu, należy użyć [GetLastError](https://msdn.microsoft.com/library/windows/desktop/ms679360) aby upewnić się, że element mutex nie istnieje. Jeśli element mutex istniał nieoczekiwanie, może to oznaczać, nieautoryzowany proces zajmowanie i może zamierza użyć obiektu mutex złośliwie. W tym przypadku zalecaną procedurą zabezpieczenia jest zamknąć dojścia i kontynuować tak, jakby wystąpił błąd podczas tworzenia obiektu.  
   
 ##  <a name="pulseevent"></a>  CEvent::PulseEvent  
  Ustawia stan zdarzenia w celu sygnalizowane (dostępne), zwalnia żadnych wątków oczekujących i resetuje ją do nonsignaled (niedostępna) automatycznie.  
@@ -138,7 +138,7 @@ BOOL PulseEvent();
   
  Jeśli żadne wątki oczekują lub żadne wątki nie może być zwolnione natychmiast, `PulseEvent` ustawia stan zdarzenia w celu nonsignaled i zwraca.  
   
- `PulseEvent` używa podstawowej Win32 `PulseEvent` funkcji, która może chwilowo usunięte ze stanu oczekiwania przez wywołanie asynchroniczne procedury trybu jądra. W związku z tym `PulseEvent` jest zawodne i nie powinny być używane przez nowych aplikacji. Aby uzyskać więcej informacji, zobacz [funkcja PulseEvent](http://msdn.microsoft.com/library/windows/desktop/ms684914).  
+ `PulseEvent` używa podstawowej Win32 `PulseEvent` funkcji, która może chwilowo usunięte ze stanu oczekiwania przez wywołanie asynchroniczne procedury trybu jądra. W związku z tym `PulseEvent` jest zawodne i nie powinny być używane przez nowych aplikacji. Aby uzyskać więcej informacji, zobacz [funkcja PulseEvent](/windows/desktop/api/winbase/nf-winbase-pulseevent).  
   
 ##  <a name="resetevent"></a>  CEvent::ResetEvent  
  Ustawia stan zdarzenia w celu, nonsignaled do momentu, jawnie ustawione do sygnalizowanego przez [SetEvent](#setevent) funkcja elementu członkowskiego.  

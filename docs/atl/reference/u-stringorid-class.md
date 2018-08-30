@@ -19,12 +19,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 611fecad210b9297b6c7cd16c83dbd0c6c3e41a8
-ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
+ms.openlocfilehash: 68283d8dc0e8b2152b28a2fe2990ddc22fafa6d3
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37886170"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43196400"
 ---
 # <a name="ustringorid-class"></a>Klasa _U_STRINGorID
 Ta klasa adaptera argument umożliwia nazw zasobów (LPCTSTRs) lub identyfikatory zasobów (UINTs), który zostanie przekazany do funkcji bez konieczności obiekt wywołujący, aby przekonwertować na ciąg przy użyciu makra MAKEINTRESOURCE identyfikator.  
@@ -53,7 +53,7 @@ class _U_STRINGorID
 |[_U_STRINGorID::m_lpstr](#_u_stringorid__m_lpstr)|Identyfikator zasobu.|  
   
 ## <a name="remarks"></a>Uwagi  
- Ta klasa jest przeznaczona dla takich jak wdrażanie otoki, aby interfejs API zarządzania zasobami Windows [FindResource](http://msdn.microsoft.com/library/windows/desktop/ms648042), [LoadIcon](http://msdn.microsoft.com/library/windows/desktop/ms648072), i [LoadMenu](http://msdn.microsoft.com/library/windows/desktop/ms647990) funkcji, które akceptują argument LPCTSTR, który może być nazwy zasobu lub jego identyfikator.  
+ Ta klasa jest przeznaczona dla takich jak wdrażanie otoki, aby interfejs API zarządzania zasobami Windows [FindResource](/windows/desktop/api/winbase/nf-winbase-findresourcea), [LoadIcon](/windows/desktop/api/winuser/nf-winuser-loadicona), i [LoadMenu](/windows/desktop/api/winuser/nf-winuser-loadmenua) funkcji, które akceptują argument LPCTSTR, który może być nazwy zasobu lub jego identyfikator.  
   
  Klasa definiuje dwa przeciążenia konstruktora: przyjmuje jeden LPCTSTR argument, a druga akceptuje UINT argument. UINT argument jest konwertowany na typ zasobu, zgodny z funkcji zarządzania zasobami Windows przy użyciu makra MAKEINTRESOURCE i wynik przechowywany w element członkowski danych jednej klasy, [m_lpstr](#_u_stringorid__m_lpstr). Argument Pro Konstruktor LPCTSTR są przechowywane bezpośrednio, bez konwersji.  
   

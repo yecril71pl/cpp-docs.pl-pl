@@ -46,12 +46,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ca12ba74df7099aa137e5e7dc9c1b8b75131ab66
-ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
+ms.openlocfilehash: 7c3626fbdba9fcf34364237e8970e5b941ecce9d
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37336621"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43201529"
 ---
 # <a name="ccomboboxex-class"></a>Klasa CComboBoxEx
 Rozszerza formant pola kombi, umożliwiając obsługę list obrazów.  
@@ -109,7 +109,7 @@ class CComboBoxEx : public CComboBox
  Flagi te style są dokładniejszym opisem zawartym w [korzystanie z CComboBoxEx](../../mfc/using-ccomboboxex.md).  
   
 ## <a name="item-retention-and-callback-item-attributes"></a>Zachowanie elementu i atrybuty elementu wywołania zwrotnego  
- Informacje o elementach, takich jak indeksy dla elementów i obrazów, wartości wcięcia i ciągi tekstowe są przechowywane w strukturze Win32 [COMBOBOXEXITEM](http://msdn.microsoft.com/library/windows/desktop/bb775746), zgodnie z opisem w zestawie Windows SDK. Struktura zawiera również elementy członkowskie, które odpowiadają flagi wywołania zwrotnego.  
+ Informacje o elementach, takich jak indeksy dla elementów i obrazów, wartości wcięcia i ciągi tekstowe są przechowywane w strukturze Win32 [COMBOBOXEXITEM](/windows/desktop/api/commctrl/ns-commctrl-tagcomboboxexitema), zgodnie z opisem w zestawie Windows SDK. Struktura zawiera również elementy członkowskie, które odpowiadają flagi wywołania zwrotnego.  
   
  Omówienie szczegółowe, opisami pojęć, zobacz [korzystanie z CComboBoxEx](../../mfc/using-ccomboboxex.md).  
   
@@ -150,7 +150,7 @@ virtual BOOL Create(
  Określa kombinację style pola kombi stosowane do pola kombi. Zobacz **uwagi** poniżej więcej informacji o stylach.  
   
  *Rect*  
- Odwołanie do [CRect](../../atl-mfc-shared/reference/crect-class.md) obiektu lub [Prostokąt](http://msdn.microsoft.com/library/windows/desktop/dd162897) struktury, która jest położenie i rozmiar pola kombi.  
+ Odwołanie do [CRect](../../atl-mfc-shared/reference/crect-class.md) obiektu lub [Prostokąt](https://msdn.microsoft.com/library/windows/desktop/dd162897) struktury, która jest położenie i rozmiar pola kombi.  
   
  *pParentWnd*  
  Wskaźnik do [CWnd](../../mfc/reference/cwnd-class.md) obiekt okna nadrzędnego pola kombi (zazwyczaj `CDialog`). Nie może być równa NULL.  
@@ -182,7 +182,7 @@ virtual BOOL Create(
   
 - WS_CHILD  
   
- Innymi stylami przekazane podczas tworzenia okna są ignorowane. `ComboBoxEx` Control obsługuje także rozszerzone style, które zapewniają dodatkowe funkcje. Te style są opisane w [ComboBoxEx kontrolować rozszerzone style](http://msdn.microsoft.com/library/windows/desktop/bb775742), w zestawie Windows SDK. Ustaw te style, wywołując [SetExtendedStyle](#setextendedstyle).  
+ Innymi stylami przekazane podczas tworzenia okna są ignorowane. `ComboBoxEx` Control obsługuje także rozszerzone style, które zapewniają dodatkowe funkcje. Te style są opisane w [ComboBoxEx kontrolować rozszerzone style](/windows/desktop/Controls/comboboxex-control-extended-styles), w zestawie Windows SDK. Ustaw te style, wywołując [SetExtendedStyle](#setextendedstyle).  
   
  Style rozszerzone systemu windows za pomocą formantu należy wywołać [CreateEx](#createex) zamiast `Create`.  
   
@@ -200,13 +200,13 @@ virtual BOOL CreateEx(
   
 ### <a name="parameters"></a>Parametry  
  *dwExStyle*  
- Określa styl rozszerzony kontrolki tworzona. Aby uzyskać listę rozszerzone style Windows, zobacz *dwExStyle* parametr [elementu CreateWindowEx](http://msdn.microsoft.com/library/windows/desktop/ms632680) w zestawie Windows SDK.  
+ Określa styl rozszerzony kontrolki tworzona. Aby uzyskać listę rozszerzone style Windows, zobacz *dwExStyle* parametr [elementu CreateWindowEx](https://msdn.microsoft.com/library/windows/desktop/ms632680) w zestawie Windows SDK.  
   
  *dwStyle*  
  Styl kontrolki pola kombi. Zobacz [Utwórz](#create) listę style.  
   
  *Rect*  
- Odwołanie do [Prostokąt](http://msdn.microsoft.com/library/windows/desktop/dd162897) struktury opisujących rozmiar i położenie okna, można utworzyć klienta współrzędne *pParentWnd*.  
+ Odwołanie do [Prostokąt](https://msdn.microsoft.com/library/windows/desktop/dd162897) struktury opisujących rozmiar i położenie okna, można utworzyć klienta współrzędne *pParentWnd*.  
   
  *pParentWnd*  
  Wskaźnik do okna, które jest elementem nadrzędnym formantu.  
@@ -220,7 +220,7 @@ virtual BOOL CreateEx(
 ### <a name="remarks"></a>Uwagi  
  Użyj `CreateEx` zamiast `Create` do zastosowania rozszerzone style Windows, określonego przez tekst wstępny rozszerzonego stylu Windows **WS_EX_**.  
   
- `CreateEx` Tworzy formant z rozszerzone style Windows określonego przez *dwExStyle*. Należy ustawić rozszerzone style określone na Rozszerzone pole kombi pola kontrolkę za pomocą [SetExtendedStyle](#setextendedstyle). Na przykład użyć `CreateEx` Ustaw takie style jako WS_EX_CONTEXTHELP, ale korzystać z `SetExtendedStyle` do ustawiania tych stylów jako CBES_EX_CASESENSITIVE. Aby uzyskać więcej informacji, zobacz opisane w temacie style [style rozszerzone kontrolki ComboBoxEx](http://msdn.microsoft.com/library/windows/desktop/bb775742) w zestawie Windows SDK.  
+ `CreateEx` Tworzy formant z rozszerzone style Windows określonego przez *dwExStyle*. Należy ustawić rozszerzone style określone na Rozszerzone pole kombi pola kontrolkę za pomocą [SetExtendedStyle](#setextendedstyle). Na przykład użyć `CreateEx` Ustaw takie style jako WS_EX_CONTEXTHELP, ale korzystać z `SetExtendedStyle` do ustawiania tych stylów jako CBES_EX_CASESENSITIVE. Aby uzyskać więcej informacji, zobacz opisane w temacie style [style rozszerzone kontrolki ComboBoxEx](/windows/desktop/Controls/comboboxex-control-extended-styles) w zestawie Windows SDK.  
   
 ##  <a name="deleteitem"></a>  CComboBoxEx::DeleteItem  
  Usuwa element z `ComboBoxEx` kontroli.  
@@ -237,7 +237,7 @@ int DeleteItem(int iIndex);
  Liczba elementów, które pozostały w formancie. Jeśli *iIndex* jest nieprawidłowy, funkcja zwraca CB_ERR.  
   
 ### <a name="remarks"></a>Uwagi  
- Ta funkcja elementu członkowskiego implementuje funkcje komunikatu [CBEM_DELETEITEM](http://msdn.microsoft.com/library/windows/desktop/bb775768), zgodnie z opisem w zestawie Windows SDK. Gdy wywołujesz DeleteItem, [WM_NOTIFY](http://msdn.microsoft.com/library/windows/desktop/bb775583) wiadomości z powiadomieniem CBEN_DELETEITEM będą wysyłane do okna nadrzędnego.  
+ Ta funkcja elementu członkowskiego implementuje funkcje komunikatu [CBEM_DELETEITEM](/windows/desktop/Controls/cbem-deleteitem), zgodnie z opisem w zestawie Windows SDK. Gdy wywołujesz DeleteItem, [WM_NOTIFY](https://msdn.microsoft.com/library/windows/desktop/bb775583) wiadomości z powiadomieniem CBEN_DELETEITEM będą wysyłane do okna nadrzędnego.  
   
 ##  <a name="getcomboboxctrl"></a>  CComboBoxEx::GetComboBoxCtrl  
  Wywołaj tę funkcję elementu członkowskiego, aby uzyskać wskaźnik do kontrolki pola kombi w `CComboBoxEx` obiektu.  
@@ -280,7 +280,7 @@ DWORD GetExtendedStyle() const;
  Wartość DWORD, który zawiera rozszerzone style, które są używane do kontrolki pola kombi.  
   
 ### <a name="remarks"></a>Uwagi  
- Zobacz [style rozszerzone kontrolki ComboBoxEx](http://msdn.microsoft.com/library/windows/desktop/bb775742) w zestawie SDK Windows, aby uzyskać więcej informacji na temat tych stylów.  
+ Zobacz [style rozszerzone kontrolki ComboBoxEx](/windows/desktop/Controls/comboboxex-control-extended-styles) w zestawie SDK Windows, aby uzyskać więcej informacji na temat tych stylów.  
   
 ##  <a name="getimagelist"></a>  CComboBoxEx::GetImageList  
  Wywołaj tę funkcję elementu członkowskiego, aby uzyskać wskaźnik do listy obrazów, używane przez `CComboBoxEx` kontroli.  
@@ -304,13 +304,13 @@ BOOL GetItem(COMBOBOXEXITEM* pCBItem);
   
 ### <a name="parameters"></a>Parametry  
  *pCBItem*  
- Wskaźnik do [COMBOBOXEXITEM](http://msdn.microsoft.com/library/windows/desktop/bb775746) struktury, który będzie otrzymywać informacje o elementach.  
+ Wskaźnik do [COMBOBOXEXITEM](/windows/desktop/api/commctrl/ns-commctrl-tagcomboboxexitema) struktury, który będzie otrzymywać informacje o elementach.  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Wartość różną od zera, jeśli operacja się powiodła. w przeciwnym razie 0.  
   
 ### <a name="remarks"></a>Uwagi  
- Ta funkcja elementu członkowskiego implementuje funkcje komunikatu [CBEM_GETITEM](http://msdn.microsoft.com/library/windows/desktop/bb775779), zgodnie z opisem w zestawie Windows SDK.  
+ Ta funkcja elementu członkowskiego implementuje funkcje komunikatu [CBEM_GETITEM](/windows/desktop/Controls/cbem-getitem), zgodnie z opisem w zestawie Windows SDK.  
   
 ##  <a name="haseditchanged"></a>  CComboBoxEx::HasEditChanged  
  Określa, czy użytkownik zmienił zawartość `ComboBoxEx` formant edycji, wpisując polecenie.  
@@ -323,7 +323,7 @@ BOOL HasEditChanged();
  Wartość różną od zera, jeśli użytkownik wpisał w polu edycji dla formantu; w przeciwnym razie 0.  
   
 ### <a name="remarks"></a>Uwagi  
- Ta funkcja elementu członkowskiego implementuje funkcje komunikatu [CBEM_HASEDITCHANGED](http://msdn.microsoft.com/library/windows/desktop/bb775782), zgodnie z opisem w zestawie Windows SDK.  
+ Ta funkcja elementu członkowskiego implementuje funkcje komunikatu [CBEM_HASEDITCHANGED](/windows/desktop/Controls/cbem-haseditchanged), zgodnie z opisem w zestawie Windows SDK.  
   
 ##  <a name="insertitem"></a>  CComboBoxEx::InsertItem  
  Wstawia nowy element w `ComboBoxEx` kontroli.  
@@ -334,13 +334,13 @@ int InsertItem(const COMBOBOXEXITEM* pCBItem);
   
 ### <a name="parameters"></a>Parametry  
  *pCBItem*  
- Wskaźnik do [COMBOBOXEXITEM](http://msdn.microsoft.com/library/windows/desktop/bb775746) struktury, który będzie otrzymywać informacje o elementach. Ta struktura zawiera wartości flagi wywołania zwrotnego dla elementu.  
+ Wskaźnik do [COMBOBOXEXITEM](/windows/desktop/api/commctrl/ns-commctrl-tagcomboboxexitema) struktury, który będzie otrzymywać informacje o elementach. Ta struktura zawiera wartości flagi wywołania zwrotnego dla elementu.  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Indeks, w którym dodano nowy element w przypadku powodzenia; w przeciwnym razie wartość-1.  
   
 ### <a name="remarks"></a>Uwagi  
- Gdy wywołujesz `InsertItem`, [WM_NOTIFY](http://msdn.microsoft.com/library/windows/desktop/bb775583) komunikatu o [CBEN_INSERTITEM](http://msdn.microsoft.com/library/windows/desktop/bb775764) zostanie wysłane powiadomienie do okna nadrzędnego.  
+ Gdy wywołujesz `InsertItem`, [WM_NOTIFY](https://msdn.microsoft.com/library/windows/desktop/bb775583) komunikatu o [CBEN_INSERTITEM](/windows/desktop/Controls/cben-insertitem) zostanie wysłane powiadomienie do okna nadrzędnego.  
   
 ##  <a name="setextendedstyle"></a>  CComboBoxEx::SetExtendedStyle  
  Wywołaj tę funkcję elementu członkowskiego, aby ustawić rozszerzonej stylów używanych dla rozszerzony formant pola kombi.  
@@ -362,7 +362,7 @@ DWORD SetExtendedStyle(
  Wartość DWORD zawiera rozszerzone style, które wcześniej używane dla formantu.  
   
 ### <a name="remarks"></a>Uwagi  
- Zobacz [style rozszerzone kontrolki ComboBoxEx](http://msdn.microsoft.com/library/windows/desktop/bb775742) w zestawie SDK Windows, aby uzyskać więcej informacji na temat tych stylów.  
+ Zobacz [style rozszerzone kontrolki ComboBoxEx](/windows/desktop/Controls/comboboxex-control-extended-styles) w zestawie SDK Windows, aby uzyskać więcej informacji na temat tych stylów.  
   
  Aby utworzyć rozszerzony formant z windows rozszerzone style pola kombi, użyj [CreateEx](#createex).  
   
@@ -381,7 +381,7 @@ CImageList* SetImageList(CImageList* pImageList);
  Wskaźnik do [CImageList](../../mfc/reference/cimagelist-class.md) obiekt zawierający obrazy używanych wcześniej przez `CComboBoxEx` kontroli. Wartość NULL, jeśli uprzednio ustawioną nie listy obrazów.  
   
 ### <a name="remarks"></a>Uwagi  
- Ta funkcja elementu członkowskiego implementuje funkcje komunikatu [CBEM_SETIMAGELIST](http://msdn.microsoft.com/library/windows/desktop/bb775787), zgodnie z opisem w zestawie Windows SDK. Jeśli zmienisz wysokość domyślny formant edycji, należy wywołać funkcję Win32 [SetWindowPos](http://msdn.microsoft.com/library/windows/desktop/ms633545) zmiana rozmiaru formantu po wywołaniu metody `SetImageList`, lub nie będzie on wyświetlany poprawnie.  
+ Ta funkcja elementu członkowskiego implementuje funkcje komunikatu [CBEM_SETIMAGELIST](/windows/desktop/Controls/cbem-setimagelist), zgodnie z opisem w zestawie Windows SDK. Jeśli zmienisz wysokość domyślny formant edycji, należy wywołać funkcję Win32 [SetWindowPos](https://msdn.microsoft.com/library/windows/desktop/ms633545) zmiana rozmiaru formantu po wywołaniu metody `SetImageList`, lub nie będzie on wyświetlany poprawnie.  
   
  `CImageList` Obiekt wskazywany przez wartość zwracana jest obiektem tymczasowym i jest niszczony, podczas następnego przetwarzania bezczynności.  
   
@@ -394,13 +394,13 @@ BOOL SetItem(const COMBOBOXEXITEM* pCBItem);
   
 ### <a name="parameters"></a>Parametry  
  *pCBItem*  
- Wskaźnik do [COMBOBOXEXITEM](http://msdn.microsoft.com/library/windows/desktop/bb775746) struktury, który będzie otrzymywać informacje o elementach.  
+ Wskaźnik do [COMBOBOXEXITEM](/windows/desktop/api/commctrl/ns-commctrl-tagcomboboxexitema) struktury, który będzie otrzymywać informacje o elementach.  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Wartość różną od zera, jeśli operacja się powiodła. w przeciwnym razie 0.  
   
 ### <a name="remarks"></a>Uwagi  
- Ta funkcja elementu członkowskiego implementuje funkcje komunikatu [CBEM_SETITEM](http://msdn.microsoft.com/library/windows/desktop/bb775788), zgodnie z opisem w zestawie Windows SDK.  
+ Ta funkcja elementu członkowskiego implementuje funkcje komunikatu [CBEM_SETITEM](/windows/desktop/Controls/cbem-setitem), zgodnie z opisem w zestawie Windows SDK.  
   
 ##  <a name="setwindowtheme"></a>  CComboBoxEx::SetWindowTheme  
  Ustawia rozszerzone pole kombi stylu wizualnego formantu pola.  
@@ -417,7 +417,7 @@ HRESULT SetWindowTheme(LPCWSTR pszSubAppName);
  Zwracana wartość nie jest używana.  
   
 ### <a name="remarks"></a>Uwagi  
- Ta funkcja członkowska emuluje funkcjonalność [CBEM_SETWINDOWTHEME](http://msdn.microsoft.com/library/windows/desktop/bb775790) komunikat, zgodnie z opisem w zestawie Windows SDK.  
+ Ta funkcja członkowska emuluje funkcjonalność [CBEM_SETWINDOWTHEME](/windows/desktop/Controls/cbem-setwindowtheme) komunikat, zgodnie z opisem w zestawie Windows SDK.  
   
 ## <a name="see-also"></a>Zobacz też  
  [Próbki MFC MFCIE](../../visual-cpp-samples.md)   

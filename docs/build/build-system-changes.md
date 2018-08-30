@@ -22,12 +22,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a3d6dffb4a4b0b4f5ef3a373cf2dcd0d93d1bd12
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: e29d664824a01c0e2a0c0e738368f8d025a239ee
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42613204"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43202160"
 ---
 # <a name="build-system-changes"></a>Zmiany systemu kompilacji
 MSBuild system jest używany do tworzenia projektów Visual C++. Jednak w programie Visual Studio 2008 i jego starszych wersji systemu program VCBuild był używany. Niektóre typy plików i pojęcia, które są zależne od program VCBuild nie istnieją lub są reprezentowane w różny sposób w obecnym systemie. W tym dokumencie omówiono różnice w obecnym systemie kompilacji.  
@@ -55,7 +55,7 @@ MSBuild system jest używany do tworzenia projektów Visual C++. Jednak w progra
   
  W bieżącej wersji obsługiwane jest dziedziczenie, określając wartość właściwości jako łączenia jednej lub więcej wartości literału, jak i makra właściwości. **$(Inherit)** i **$(NoInherit)** makra nie są obsługiwane.  
   
- W poniższym przykładzie rozdzielaną średnikami listę jest przypisany do właściwości na stronie właściwości. Lista składa się łączenia  *\<wartość >* literału i wartością `MyProperty` właściwość, która jest dostępne przy użyciu notacji makra, **$(***MyProperty***)** .  
+ W poniższym przykładzie rozdzielaną średnikami listę jest przypisany do właściwości na stronie właściwości. Lista składa się łączenia  *\<wartość >* literału i wartością `MyProperty` właściwość, która jest dostępne przy użyciu notacji makra, **$(**  <em>MyProperty</em>**)**.  
   
 ```  
 Property=<value>;$(MyProperty)  

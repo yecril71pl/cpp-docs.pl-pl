@@ -16,25 +16,25 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 69d64265a94df2770e3a234ab992130b4809f9e3
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: a6450d99b8df436c64337e52fc14244ecbb0edfc
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33342738"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43206150"
 ---
 # <a name="adding-items-to-the-header-control"></a>Dodawanie elementów do formantu nagłówka
-Po utworzeniu formantu nagłówka ([CHeaderCtrl](../mfc/reference/cheaderctrl-class.md)) w jej okna nadrzędnego, Dodaj tyle "elementów nagłówka" zgodnie z potrzebami: zazwyczaj jest to jeden dla kolumny.  
+Po utworzeniu kontrolki nagłówka ([CHeaderCtrl](../mfc/reference/cheaderctrl-class.md)) w okna nadrzędnego, Dodaj tyle nagłówek "items" według potrzeb: zazwyczaj jedna według kolumny.  
   
 ### <a name="to-add-a-header-item"></a>Aby dodać element nagłówka  
   
-1.  Przygotowanie [HD_ITEM](http://msdn.microsoft.com/library/windows/desktop/bb775247) struktury.  
+1.  Przygotowanie [HD_ITEM](/windows/desktop/api/commctrl/ns-commctrl-_hd_itema) struktury.  
   
-2.  Wywołanie [CHeaderCtrl::InsertItem](../mfc/reference/cheaderctrl-class.md#insertitem), przekazanie struktury.  
+2.  Wywołaj [CHeaderCtrl::InsertItem](../mfc/reference/cheaderctrl-class.md#insertitem), przekazywanie struktury.  
   
 3.  Powtórz kroki 1 i 2 dla dodatkowych elementów.  
   
- Aby uzyskać więcej informacji, zobacz [Dodawanie elementów do formantu nagłówka](http://msdn.microsoft.com/library/windows/desktop/bb775238) w zestawie Windows SDK.  
+ Aby uzyskać więcej informacji, zobacz [dodanie elementu do kontrolki nagłówka o](/windows/desktop/Controls/header-controls) w zestawie Windows SDK.  
   
 ## <a name="see-also"></a>Zobacz też  
  [Korzystanie z CHeaderCtrl](../mfc/using-cheaderctrl.md)   

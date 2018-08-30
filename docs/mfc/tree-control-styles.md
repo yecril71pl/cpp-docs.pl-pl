@@ -1,5 +1,5 @@
 ---
-title: Style formantu drzewa | Dokumentacja firmy Microsoft
+title: Style kontrolki drzewa | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -29,25 +29,25 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f44f0de4527d6d9f14a06795a297617f46c0010a
-ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
+ms.openlocfilehash: 2a448d76236c3467228b2aa57cd71284274687ac
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/26/2018
-ms.locfileid: "36953149"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43200434"
 ---
 # <a name="tree-control-styles"></a>Style kontrolki drzewa
-Kontrolki drzewa ([CTreeCtrl](../mfc/reference/ctreectrl-class.md)) style regulują aspektów wygląd formantu drzewa. Można ustawić style początkowej podczas tworzenia formantu drzewa. Możesz pobrać i zmieniać style po utworzeniu drzewie przy użyciu [GetWindowLong](http://msdn.microsoft.com/library/windows/desktop/ms633584) i [SetWindowLong](http://msdn.microsoft.com/library/windows/desktop/ms633591) funkcje systemu Windows, określając **GWL_STYLE** dla *nIndex* parametru. Aby uzyskać pełną listę style, zobacz [Style okna kontrolki widoku drzewa](http://msdn.microsoft.com/library/windows/desktop/bb760013) w zestawie Windows SDK.  
+Kontrolki drzewa ([CTreeCtrl](../mfc/reference/ctreectrl-class.md)) Style określają aspekty wyglądu formantu drzewa. Możesz ustawić style początkowej podczas tworzenia kontrolki drzewa. Możesz pobrać i zmieniać style po utworzeniu kontrolki drzewa za pomocą [GetWindowLong](https://msdn.microsoft.com/library/windows/desktop/ms633584) i [SetWindowLong](https://msdn.microsoft.com/library/windows/desktop/ms633591) funkcje Windows, określając **GWL_STYLE** dla *nIndex* parametru. Aby uzyskać pełną listę style, zobacz [Style okna kontrolki widoku drzewa](/windows/desktop/Controls/tree-view-control-window-styles) w zestawie Windows SDK.  
   
- **TVS_HASLINES** styl zwiększa graficzną reprezentację formantem drzewa hierarchii za pomocą rysowania linii połączonych elementów podrzędnych ich odpowiedniego elementu nadrzędnego. Ten styl nie połączyć elementy w elemencie głównym hierarchii. Aby to zrobić, należy połączyć **TVS_HASLINES** i **TVS_LINESATROOT** style.  
+ **TVS_HASLINES** styl zwiększa graficzną reprezentację kontrolką drzewa hierarchii za pomocą rysowania wiersze, które łączą elementy podrzędne do ich odpowiedniego elementu nadrzędnego. Ten styl nie łączy się elementy w folderze głównym hierarchii. Aby to zrobić, trzeba połączyć **TVS_HASLINES** i **TVS_LINESATROOT** style.  
   
- Użytkownik może rozwinąć lub zwinąć listy elementów podrzędnych elementu nadrzędnego przez dwukrotne kliknięcie elementu nadrzędnego. Formant drzewa, który ma **TVS_SINGLEEXPAND** stylu powoduje, że element wybierana, aby rozwinąć i anulować tak, aby zwinąć elementu. Jeśli wskaźnik myszy jest używany do wybranego elementu jednym kliknięciem i tego elementu jest zamknięty, będą rozszerzane. Wybrany element jest kliknięte raz otwarty, będzie zwinięte.  
+ Użytkownika można rozwinąć lub zwinąć listę elementów podrzędnych elementu nadrzędnego, klikając dwukrotnie plik elementu nadrzędnego. Kontrolka drzewa, która ma **TVS_SINGLEEXPAND** stylu powoduje, że element wybrane do rozwijania i elementu jest usunięto zaznaczenie, aby zwinąć. Jeśli przycisk myszy jest używany do wybranego elementu jednym kliknięciem i ten element jest zamknięty, zostanie rozszerzona. Wybrany element jest kliknięte po otwarciu, będzie zwinięte.  
   
- Formant drzewa, który ma **TVS_HASBUTTONS** styl dodaje przycisku po lewej stronie każdego elementu nadrzędnego. Użytkownik może kliknąć przycisk, aby rozwinąć lub zwinąć elementy podrzędne zamiast dwukrotnie element nadrzędny. **TVS_HASBUTTONS** nie dodawanie przycisków do elementów w elemencie głównym hierarchii. Aby to zrobić, należy połączyć **TVS_HASLINES**, **TVS_LINESATROOT**, i **TVS_HASBUTTONS**.  
+ Kontrolka drzewa, która ma **TVS_HASBUTTONS** stylów dodaje przycisk do po lewej stronie każdego elementu nadrzędnego. Użytkownik może kliknąć przycisk, aby rozwinąć lub zwinąć elementów podrzędnych jako alternatywę dla dwukrotnie element nadrzędny. **TVS_HASBUTTONS** nie powoduje dodania przycisków do elementów w folderze głównym hierarchii. Aby to zrobić, należy połączyć **TVS_HASLINES**, **TVS_LINESATROOT**, i **TVS_HASBUTTONS**.  
   
- **TVS_EDITLABELS** styl umożliwia użytkownikowi edytowanie etykiety elementów formantu drzewa. Aby uzyskać więcej informacji na temat edytowania etykiet, zobacz [edytowanie etykiety formantu drzewa](../mfc/tree-control-label-editing.md) dalszej części tego tematu.  
+ **TVS_EDITLABELS** style umożliwia użytkownikowi edytowanie etykiety elementów kontrolki drzewa. Aby uzyskać więcej informacji na temat edytowania etykiet, zobacz [Edytowanie etykiet kontrolki drzewa](../mfc/tree-control-label-editing.md) w dalszej części tego tematu.  
   
- **TVS_NOTOOLTIPS** styl wyłącza funkcję automatycznego narzędzia Porada kontrolki widoku drzewa. Funkcja ta automatycznie wyświetla etykietki narzędzia, zawierający tytuł elementu pod kursorem myszy, jeśli cały tytuł nie jest widoczne.  
+ **TVS_NOTOOLTIPS** styl wyłącza funkcję Porada automatyczne narzędzia z kontrolki widoku drzewa. Ta funkcja automatycznie wyświetla etykietki narzędzia, zawierające tytuł elementu pod kursorem myszy, jeśli cały tytuł nie jest aktualnie widoczne.  
   
 ## <a name="see-also"></a>Zobacz też  
  [Korzystanie z CTreeCtrl](../mfc/using-ctreectrl.md)   

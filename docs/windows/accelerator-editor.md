@@ -22,12 +22,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 81642132272b40229437c2be8bac32d160885600
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: b3f29d5b2c4343ea156d1ccd1dfbf347026a127b
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42578097"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43202279"
 ---
 # <a name="accelerator-editor"></a>Edytor klawiszy skrótów
 
@@ -35,7 +35,7 @@ Tabeli klawiszy skrótu jest zasobem Windows, który zawiera listę klawisze skr
 
 Zwykle akceleratorów są używane jako skróty klawiaturowe dla poleceń programu, które są również dostępne w menu lub paska narzędzi. Jednak można użyć tabeli akceleratora do definiowania kombinacji klawiszy dla polecenia, które nie mają skojarzonych z nimi obiektu interfejsu użytkownika.
 
-Możesz użyć [Widok klas](http://msdn.microsoft.com/8d7430a9-3e33-454c-a9e1-a85e3d2db925) można dołączyć klucza polecenia klawiszy skrótów do kodu.
+Możesz użyć [Widok klas](https://msdn.microsoft.com/8d7430a9-3e33-454c-a9e1-a85e3d2db925) można dołączyć klucza polecenia klawiszy skrótów do kodu.
 
 Za pomocą **akceleratora** edytora, możesz:
 

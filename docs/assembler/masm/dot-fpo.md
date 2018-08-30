@@ -16,15 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: df5185c0dc699764427989b2f46345d90ded1729
-ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
+ms.openlocfilehash: 234ec5bd703a390d1e2ee60e48d99d346d4aad95
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/28/2018
-ms.locfileid: "32055941"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43203116"
 ---
 # <a name="fpo"></a>.FPO
-. Dyrektywa FPO steruje emisji .debug$ F segmentu lub części rekordów debugowania.  
+. Dyrektywa FPO steruje emisji rekordów debugowania do sekcji lub .debug$ F segmentu.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -48,22 +48,22 @@ cbFrame
   
 #### <a name="parameters"></a>Parametry  
  `cdwLocals`  
- Liczba zmiennych lokalnych, wartość bez znaku 32-bitowych.  
+ Liczba zmiennych lokalnych, wartością bez znaku 32-bitowych.  
   
  `cdwParams`  
- Rozmiar parametrów w dane DWORD, wartość bez znaku 16-bitowych.  
+ Rozmiar parametrów w dane DWORD, wartością bez znaku 16-bitowych.  
   
  *cbProlog*  
- Liczba bajtów w kod prologu funkcji wartości bez znaku 8-bitowej.  
+ Liczba bajtów w kodzie prologu funkcji wartością bez znaku 8-bitową.  
   
  `cbRegs`  
- Rejestruje numer zapisany.  
+ Liczba rejestrów zapisane.  
   
  `fUseBP`  
- Wskazuje, czy została przydzielona do rejestru EBP. 0 lub 1.  
+ Wskazuje, czy został przydzielony do rejestru EBP. 0 lub 1.  
   
  *cbFrame*  
- Wskazuje typ ramki.  Zobacz [FPO_DATA](http://msdn.microsoft.com/library/windows/desktop/ms679352) Aby uzyskać więcej informacji.  
+ Wskazuje typ ramki.  Zobacz [FPO_DATA](/windows/desktop/api/winnt/ns-winnt-_fpo_data) Aby uzyskać więcej informacji.  
   
 ## <a name="see-also"></a>Zobacz też  
  [Dokumentacja dyrektyw](../../assembler/masm/directives-reference.md)

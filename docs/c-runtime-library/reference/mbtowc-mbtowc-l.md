@@ -1,5 +1,5 @@
 ---
-title: mbtowc —, _mbtowc_l — | Dokumentacja firmy Microsoft
+title: mbtowc, _mbtowc_l — | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -35,16 +35,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: eeba73be12fdf8e068800d192cef7df9462aa4fe
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: b6600706690dea3573f8eb1aa47f68b592b3bff1
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32402790"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43200310"
 ---
 # <a name="mbtowc-mbtowcl"></a>mbtowc, _mbtowc_l
 
-Konwertuj znaków wielobajtowych na odpowiednich znaków dwubajtowych.
+Konwertuj znak wielobajtowy do odpowiedniego szerokiego znaku.
 
 ## <a name="syntax"></a>Składnia
 
@@ -68,21 +68,21 @@ int _mbtowc_l(
 Adres znaków dwubajtowych (typ **wchar_t**).
 
 *mbchar*<br/>
-Adres sekwencję bajtów (znaków wielobajtowych).
+Adres sekwencji bajtów (znak wielobajtowy).
 
 *Liczba*<br/>
-Liczba bajtów do sprawdzenia.
+Liczba bajtów do wyboru.
 
 *Ustawienia regionalne*<br/>
 Ustawienia regionalne do użycia.
 
 ## <a name="return-value"></a>Wartość zwracana
 
-Jeśli **mbchar** nie jest **NULL** i jeśli obiekt który *mbchar* wskazuje prawidłowy znaków wielobajtowych formularze **mbtowc —** zwraca długość w Bajty znaków wielobajtowych. Jeśli *mbchar* jest **NULL** lub obiekt, który wskazuje znak null znaków dwubajtowych (L '\0'), funkcja zwraca wartość 0. Jeśli obiekt który *mbchar* punktów nie stanowi prawidłowy znaków wielobajtowych w pierwszym *liczba* znaków, zwraca -1.
+Jeśli **mbchar** nie jest **NULL** i, jeśli obiekt, *mbchar* wskazuje prawidłowy znak wielobajtowy formularzy **mbtowc** zwraca długość w bajtów znaków wielobajtowych. Jeśli *mbchar* jest **NULL** lub obiekt, który wskazuje na to znak null szerokich znaków (L '\0'), funkcja zwraca 0. Jeśli obiekt, *mbchar* wskazuje nie tworzą prawidłowy znak wielobajtowy w obrębie pierwszych *liczba* znaków, zwraca wartość -1.
 
 ## <a name="remarks"></a>Uwagi
 
-**Mbtowc —** funkcji konwertuje *liczba* lub mniej bajtów wskazywana przez *mbchar*, jeśli *mbchar* nie jest **wartościNULL**, aby odpowiednie znaków dwubajtowych. **mbtowc —** przechowuje wynikowy znaków dwubajtowych w *wchar,* Jeśli *wchar* nie jest **NULL**. **mbtowc —** nie bada więcej niż **mb_cur_max —** bajtów. **mbtowc —** używa bieżące ustawienia regionalne dla zachowań zależnych od ustawień regionalnych. **_mbtowc_l —** jest identyczny z tą różnicą, że używa ustawień regionalnych przekazano zamiast tego. Aby uzyskać więcej informacji, zobacz [ustawień regionalnych](../../c-runtime-library/locale.md).
+**Mbtowc** funkcji konwertuje *liczba* lub mniejsza liczba bajtów wskazywany przez *mbchar*, jeśli *mbchar* nie **wartościNULL**, do odpowiedniego szerokiego znaku. **mbtowc** zapisuje wynikowy znak dwubajtowy na *wchar,* Jeśli *wchar* nie jest **NULL**. **mbtowc** nie analizuje ponad **MB_CUR_MAX** bajtów. **mbtowc** używa bieżących ustawień regionalnych dla zachowań zależnych od ustawień regionalnych; **_mbtowc_l —** jest identyczna, z tą różnicą, że używa ustawień regionalnych przekazanych w zamian. Aby uzyskać więcej informacji, zobacz [ustawień regionalnych](../../c-runtime-library/locale.md).
 
 ## <a name="requirements"></a>Wymagania
 
@@ -95,7 +95,7 @@ Aby uzyskać dodatkowe informacje o zgodności, zobacz [zgodności](../../c-runt
 
 ## <a name="libraries"></a>Biblioteki
 
-Wszystkie wersje [biblioteki wykonawcze języka C](../../c-runtime-library/crt-library-features.md).
+Wszystkie wersje [biblioteki wykonawczej C](../../c-runtime-library/crt-library-features.md).
 
 ## <a name="example"></a>Przykład
 
@@ -156,7 +156,7 @@ Attempt to convert a NULL pointer to a wide character:
 ## <a name="see-also"></a>Zobacz także
 
 [Konwersja danych](../../c-runtime-library/data-conversion.md)<br/>
-[MultiByteToWideChar](http://msdn.microsoft.com/library/windows/desktop/dd319072)<br/>
+[MultiByteToWideChar](/windows/desktop/api/stringapiset/nf-stringapiset-multibytetowidechar)<br/>
 [Wersja regionalna](../../c-runtime-library/locale.md)<br/>
 [Interpretacja wielobajtowych sekwencji znaków](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)<br/>
 [_mbclen, mblen, _mblen_l](mbclen-mblen-mblen-l.md)<br/>

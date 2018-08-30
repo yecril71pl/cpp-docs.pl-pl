@@ -56,12 +56,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 03b88f2c295ae4fa31a0afd2093251c94e1c6b79
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: d4ac334221f22dcd80434c1be2f59998709aae5e
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37853865"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43204883"
 ---
 # <a name="crgn-class"></a>Klasa CRgn
 Hermetyzuje region Windows graphics urządzenia interface (GDI).  
@@ -678,7 +678,7 @@ operator HRGN() const;
 ### <a name="remarks"></a>Uwagi  
  Ten operator jest operatora rzutowania, który obsługuje bezpośredniego użycia obiektu hrgn —.  
   
- Aby uzyskać więcej informacji o korzystaniu z obiektów graficznych, zobacz artykuł [obiektów grafiki](http://msdn.microsoft.com/library/windows/desktop/dd144962) w zestawie Windows SDK.  
+ Aby uzyskać więcej informacji o korzystaniu z obiektów graficznych, zobacz artykuł [obiektów grafiki](/windows/desktop/gdi/graphic-objects) w zestawie Windows SDK.  
   
 ##  <a name="ptinregion"></a>  CRgn::PtInRegion  
  Sprawdza, czy punktu określonego przez właściwość *x* i *y* znajduje się w regionie, przechowywane w `CRgn` obiektu.  

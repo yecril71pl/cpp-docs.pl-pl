@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 9523fc63e36d9a2b93dc6df1a49627ac5fbebc9b
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 350f1c7c844bd386191b2a236f5bc4ada4e1672a
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42602158"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43204531"
 ---
 # <a name="hidden"></a>hidden
 
@@ -36,7 +36,7 @@ Wskazuje, czy element istnieje, ale nie powinien być wyświetlany w przeglądar
 
 ## <a name="remarks"></a>Uwagi
 
-**Ukryte** atrybut C++ ma taką samą funkcjonalność jak [ukryte](http://msdn.microsoft.com/library/windows/desktop/aa366861) atrybutów w MIDL.
+**Ukryte** atrybut C++ ma taką samą funkcjonalność jak [ukryte](/windows/desktop/Midl/hidden) atrybutów w MIDL.
 
 ## <a name="example"></a>Przykład
 

@@ -44,12 +44,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a384f79944ace90fcb289511e18297de7a7da233
-ms.sourcegitcommit: 7eadb968405bcb92ffa505e3ad8ac73483e59685
+ms.openlocfilehash: 422326f03674c541c4fdc45529bee45bf0ff5df6
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/23/2018
-ms.locfileid: "39208013"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43201007"
 ---
 # <a name="clinkctrl-class"></a>Klasa CLinkCtrl
 Oferuje funkcje formantu typowego SysLink Windows.  
@@ -91,7 +91,7 @@ class CLinkCtrl : public CWnd
   
  Ta kontrolka (i w związku z tym `CLinkCtrl` klasy) jest dostępna tylko dla programów uruchomionych w obszarze Windows XP lub nowszy.  
   
- Aby uzyskać więcej informacji, zobacz [kontroli SysLink](http://msdn.microsoft.com/library/windows/desktop/bb760706) w zestawie Windows SDK.  
+ Aby uzyskać więcej informacji, zobacz [kontroli SysLink](/windows/desktop/Controls/syslink-overview) w zestawie Windows SDK.  
   
 ## <a name="inheritance-hierarchy"></a>Hierarchia dziedziczenia  
  [CObject](../../mfc/reference/cobject-class.md)  
@@ -132,10 +132,10 @@ virtual BOOL Create(DWORD dwStyle,
   
 ### <a name="parameters"></a>Parametry  
  *lpszLinkMarkup*  
- Wskaźnik na ciąg zakończony zerem, zawierający oznaczone tekst do wyświetlenia. Aby uzyskać więcej informacji, zobacz sekcję "Znaczników i łącze dostępu", która znajduje się w temacie [Przegląd formanty SysLink](http://msdn.microsoft.com/library/windows/desktop/bb760706).  
+ Wskaźnik na ciąg zakończony zerem, zawierający oznaczone tekst do wyświetlenia. Aby uzyskać więcej informacji, zobacz sekcję "Znaczników i łącze dostępu", która znajduje się w temacie [Przegląd formanty SysLink](/windows/desktop/Controls/syslink-overview).  
   
  *dwStyle*  
- Określa styl kontrolki łącza. Zastosuj dowolną kombinację style kontrolki. Zobacz [najczęściej używane style kontrolki](http://msdn.microsoft.com/library/windows/desktop/bb775498) w `Windows SDK` Aby uzyskać więcej informacji.  
+ Określa styl kontrolki łącza. Zastosuj dowolną kombinację style kontrolki. Zobacz [najczęściej używane style kontrolki](/windows/desktop/Controls/common-control-styles) w `Windows SDK` Aby uzyskać więcej informacji.  
   
  *Rect*  
  Określa rozmiar i położenie kontrolki łącza. Może być albo [CRect](../../atl-mfc-shared/reference/crect-class.md) obiektu lub [Prostokąt](../../mfc/reference/rect-structure1.md) struktury.  
@@ -186,13 +186,13 @@ virtual BOOL CreateEx(DWORD  dwExStyle,
   
 ### <a name="parameters"></a>Parametry  
  *lpszLinkMarkup*  
- Wskaźnik na ciąg zakończony zerem, zawierający oznaczone tekst do wyświetlenia. Aby uzyskać więcej informacji, zobacz sekcję "Znaczników i łącze dostępu", która znajduje się w temacie [Przegląd formanty SysLink](http://msdn.microsoft.com/library/windows/desktop/bb760706).  
+ Wskaźnik na ciąg zakończony zerem, zawierający oznaczone tekst do wyświetlenia. Aby uzyskać więcej informacji, zobacz sekcję "Znaczników i łącze dostępu", która znajduje się w temacie [Przegląd formanty SysLink](/windows/desktop/Controls/syslink-overview).  
   
  *dwExStyle*  
- Określa styl rozszerzony kontrolki łącza. Aby uzyskać listę rozszerzone style Windows, zobacz *dwExStyle* parametr [elementu CreateWindowEx](http://msdn.microsoft.com/library/windows/desktop/ms632680) w zestawie Windows SDK.  
+ Określa styl rozszerzony kontrolki łącza. Aby uzyskać listę rozszerzone style Windows, zobacz *dwExStyle* parametr [elementu CreateWindowEx](https://msdn.microsoft.com/library/windows/desktop/ms632680) w zestawie Windows SDK.  
   
  *dwStyle*  
- Określa styl kontrolki łącza. Zastosuj dowolną kombinację style kontrolki. Aby uzyskać więcej informacji, zobacz [najczęściej używane style kontrolki](http://msdn.microsoft.com/library/windows/desktop/bb775498) w zestawie Windows SDK.  
+ Określa styl kontrolki łącza. Zastosuj dowolną kombinację style kontrolki. Aby uzyskać więcej informacji, zobacz [najczęściej używane style kontrolki](/windows/desktop/Controls/common-control-styles) w zestawie Windows SDK.  
   
  *Rect*  
  Określa rozmiar i położenie kontrolki łącza. Może być albo [CRect](../../atl-mfc-shared/reference/crect-class.md) obiektu lub [Prostokąt](../../mfc/reference/rect-structure1.md) struktury.  
@@ -222,7 +222,7 @@ int GetIdealHeight() const;
  Idealna wysokość formantu w pikselach.  
   
 ### <a name="remarks"></a>Uwagi  
- Ta funkcja elementu członkowskiego implementuje zachowanie komunikatu Win32 [LM_GETIDEALHEIGHT](http://msdn.microsoft.com/library/windows/desktop/bb760716), zgodnie z opisem w zestawie Windows SDK.  
+ Ta funkcja elementu członkowskiego implementuje zachowanie komunikatu Win32 [LM_GETIDEALHEIGHT](/windows/desktop/Controls/lm-getidealheight), zgodnie z opisem w zestawie Windows SDK.  
   
 ##  <a name="getidealsize"></a>  CLinkCtrl::GetIdealSize  
  Oblicza preferowana wysokość tekstu linku dla bieżącego kontrolki linku w zależności od określonej szerokości łącza.  
@@ -238,7 +238,7 @@ int GetIdealSize(
 |Parametr|Opis|  
 |---------------|-----------------|  
 |[in] *cxMaxWidth*|Maksymalna szerokość łącza, w pikselach.|  
-|[out] \* *pSize*|Wskaźnik do Windows [rozmiar](http://msdn.microsoft.com/library/windows/desktop/dd145106) struktury. Po powrocie z tej metody *cy* członkiem `SIZE` struktura zawiera wysokość tekstu łącza idealne rozwiązanie dla szerokość tekstu łącza, który jest określony przez *cxMaxWidth*. *Cx* element członkowski struktury zawiera szerokość tekstu łącza, wymaganej w danym momencie.|  
+|[out] \* *pSize*|Wskaźnik do Windows [rozmiar](https://msdn.microsoft.com/library/windows/desktop/dd145106) struktury. Po powrocie z tej metody *cy* członkiem `SIZE` struktura zawiera wysokość tekstu łącza idealne rozwiązanie dla szerokość tekstu łącza, który jest określony przez *cxMaxWidth*. *Cx* element członkowski struktury zawiera szerokość tekstu łącza, wymaganej w danym momencie.|  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Preferowany wysokość tekstu łącza, w pikselach. Zwracana wartość jest taka sama jak wartość *cy* członkiem `SIZE` struktury.  
@@ -246,7 +246,7 @@ int GetIdealSize(
 ### <a name="remarks"></a>Uwagi  
  Na przykład `GetIdealSize` metody, zobacz przykład w [CLinkCtrl::Create](#create).  
   
- Ta metoda wysyła [LM_GETIDEALSIZE](http://msdn.microsoft.com/library/windows/desktop/bb760718) komunikat, który jest opisany w zestawie Windows SDK.  
+ Ta metoda wysyła [LM_GETIDEALSIZE](/windows/desktop/Controls/lm-getidealsize) komunikat, który jest opisany w zestawie Windows SDK.  
   
 ##  <a name="getitem"></a>  CLinkCtrl::GetItem  
  Pobiera Stany i atrybuty element kontroli łączy.  
@@ -257,13 +257,13 @@ BOOL GetItem(PLITEM pItem) const;
   
 ### <a name="parameters"></a>Parametry  
  *pItem*  
- Wskaźnik do [LITEM](http://msdn.microsoft.com/library/windows/desktop/bb760710) struktury, aby otrzymywać informacje o elementach.  
+ Wskaźnik do [LITEM](/windows/desktop/api/commctrl/ns-commctrl-taglitem) struktury, aby otrzymywać informacje o elementach.  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Zwraca wartość TRUE w przypadku powodzenia, wartość FALSE w przypadku niepowodzenia.  
   
 ### <a name="remarks"></a>Uwagi  
- Ta funkcja elementu członkowskiego implementuje zachowanie komunikatu Win32 [LM_GETITEM](http://msdn.microsoft.com/library/windows/desktop/bb760720), zgodnie z opisem w zestawie Windows SDK.  
+ Ta funkcja elementu członkowskiego implementuje zachowanie komunikatu Win32 [LM_GETITEM](/windows/desktop/Controls/lm-getitem), zgodnie z opisem w zestawie Windows SDK.  
   
 ##  <a name="getitemid"></a>  CLinkCtrl::GetItemID  
  Pobiera identyfikator elementu kontrolki łącza.  
@@ -299,7 +299,7 @@ BOOL GetItemID(
 >  Ta funkcja także zwraca wartość FALSE, jeśli bufor o *szID lub strID* jest mniejszy niż MAX_LINKID_TEXT.  
   
 ### <a name="remarks"></a>Uwagi  
- Pobiera identyfikator elementu sterowania jedno łącze. Aby uzyskać więcej informacji, zobacz komunikat Win32 [LM_GETITEM](http://msdn.microsoft.com/library/windows/desktop/bb760720) w zestawie Windows SDK.  
+ Pobiera identyfikator elementu sterowania jedno łącze. Aby uzyskać więcej informacji, zobacz komunikat Win32 [LM_GETITEM](/windows/desktop/Controls/lm-getitem) w zestawie Windows SDK.  
   
 ##  <a name="getitemstate"></a>  CLinkCtrl::GetItemState  
  Pobiera stan element kontroli łączy.  
@@ -319,13 +319,13 @@ BOOL GetItemState(
  Wartość elementu określonego stanu.  
   
  *stateMask*  
- Kombinacja flagi opisujące element stanu, które można pobrać. Aby uzyskać listę wartości, zobacz opis `state` elementu członkowskiego w [LITEM](http://msdn.microsoft.com/library/windows/desktop/bb760710) struktury. Dopuszczalne elementy są identyczne z tymi dozwolone w `state`.  
+ Kombinacja flagi opisujące element stanu, które można pobrać. Aby uzyskać listę wartości, zobacz opis `state` elementu członkowskiego w [LITEM](/windows/desktop/api/commctrl/ns-commctrl-taglitem) struktury. Dopuszczalne elementy są identyczne z tymi dozwolone w `state`.  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Zwraca wartość TRUE w przypadku powodzenia, wartość FALSE w przypadku niepowodzenia.  
   
 ### <a name="remarks"></a>Uwagi  
- Pobiera wartość elementu określonego stanu elementu sterowania jedno łącze. Aby uzyskać więcej informacji, zobacz komunikat Win32 [LM_GETITEM](http://msdn.microsoft.com/library/windows/desktop/bb760720) w zestawie Windows SDK.  
+ Pobiera wartość elementu określonego stanu elementu sterowania jedno łącze. Aby uzyskać więcej informacji, zobacz komunikat Win32 [LM_GETITEM](/windows/desktop/Controls/lm-getitem) w zestawie Windows SDK.  
   
 ##  <a name="getitemurl"></a>  CLinkCtrl::GetItemUrl  
  Pobiera adres URL, reprezentowane przez element kontroli łączy.  
@@ -361,7 +361,7 @@ BOOL GetItemUrl(
 >  Ta funkcja także zwraca wartość FALSE, jeśli bufor o *szUrl lub strUrl* jest mniejszy niż MAX_LINKID_TEXT.  
   
 ### <a name="remarks"></a>Uwagi  
- Pobiera adres URL reprezentowanego przez określone łącze elementu kontrolki. Aby uzyskać więcej informacji, zobacz komunikat Win32 [LM_GETITEM](http://msdn.microsoft.com/library/windows/desktop/bb760720) w zestawie Windows SDK.  
+ Pobiera adres URL reprezentowanego przez określone łącze elementu kontrolki. Aby uzyskać więcej informacji, zobacz komunikat Win32 [LM_GETITEM](/windows/desktop/Controls/lm-getitem) w zestawie Windows SDK.  
   
 ##  <a name="hittest"></a>  CLinkCtrl::HitTest  
  Określa, jeśli użytkownik kliknął element określone łącze.  
@@ -378,7 +378,7 @@ BOOL HitTest(PLHITTESTINFO phti) const;
  Zwraca wartość TRUE w przypadku powodzenia, wartość FALSE w przypadku niepowodzenia.  
   
 ### <a name="remarks"></a>Uwagi  
- Ta funkcja elementu członkowskiego implementuje zachowanie komunikatu Win32 [LM_HITTEST](http://msdn.microsoft.com/library/windows/desktop/bb760722), zgodnie z opisem w zestawie Windows SDK.  
+ Ta funkcja elementu członkowskiego implementuje zachowanie komunikatu Win32 [LM_HITTEST](/windows/desktop/Controls/lm-hittest), zgodnie z opisem w zestawie Windows SDK.  
   
 ##  <a name="setitem"></a>  CLinkCtrl::SetItem  
  Ustawia stanów i atrybuty element kontroli łączy.  
@@ -389,13 +389,13 @@ BOOL SetItem(PLITEM pItem);
   
 ### <a name="parameters"></a>Parametry  
  *pItem*  
- Wskaźnik do [LITEM](http://msdn.microsoft.com/library/windows/desktop/bb760710) struktury zawierające informacje, które można ustawić.  
+ Wskaźnik do [LITEM](/windows/desktop/api/commctrl/ns-commctrl-taglitem) struktury zawierające informacje, które można ustawić.  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Zwraca wartość TRUE w przypadku powodzenia, wartość FALSE w przypadku niepowodzenia.  
   
 ### <a name="remarks"></a>Uwagi  
- Ta funkcja elementu członkowskiego implementuje zachowanie komunikatu Win32 [LM_SETITEM](http://msdn.microsoft.com/library/windows/desktop/bb760724), zgodnie z opisem w zestawie Windows SDK.  
+ Ta funkcja elementu członkowskiego implementuje zachowanie komunikatu Win32 [LM_SETITEM](/windows/desktop/Controls/lm-setitem), zgodnie z opisem w zestawie Windows SDK.  
   
 ##  <a name="setitemid"></a>  CLinkCtrl::SetItemID  
  Pobiera identyfikator elementu kontrolki łącza.  
@@ -417,7 +417,7 @@ BOOL SetItemID(
  Zwraca wartość TRUE w przypadku powodzenia, wartość FALSE w przypadku niepowodzenia.  
   
 ### <a name="remarks"></a>Uwagi  
- Określa identyfikator elementu sterowania jedno łącze. Aby uzyskać więcej informacji, zobacz komunikat Win32 [LM_SETITEM](http://msdn.microsoft.com/library/windows/desktop/bb760724) w zestawie Windows SDK.  
+ Określa identyfikator elementu sterowania jedno łącze. Aby uzyskać więcej informacji, zobacz komunikat Win32 [LM_SETITEM](/windows/desktop/Controls/lm-setitem) w zestawie Windows SDK.  
   
 ##  <a name="setitemstate"></a>  CLinkCtrl::SetItemState  
  Pobiera stan element kontroli łączy.  
@@ -437,13 +437,13 @@ BOOL SetItemState(
  Wartość elementu określonego stanu, zostanie ustawiony.  
   
  *stateMask*  
- Kombinacja flagi opisujące element stan zostanie ustawiony. Aby uzyskać listę wartości, zobacz opis `state` elementu członkowskiego w [LITEM](http://msdn.microsoft.com/library/windows/desktop/bb760710) struktury. Dopuszczalne elementy są identyczne z tymi dozwolone w `state`.  
+ Kombinacja flagi opisujące element stan zostanie ustawiony. Aby uzyskać listę wartości, zobacz opis `state` elementu członkowskiego w [LITEM](/windows/desktop/api/commctrl/ns-commctrl-taglitem) struktury. Dopuszczalne elementy są identyczne z tymi dozwolone w `state`.  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Zwraca wartość TRUE w przypadku powodzenia, wartość FALSE w przypadku niepowodzenia.  
   
 ### <a name="remarks"></a>Uwagi  
- Ustawia wartość elementu określonego stanu elementu sterowania jedno łącze. Aby uzyskać więcej informacji, zobacz komunikat Win32 [LM_SETITEM](http://msdn.microsoft.com/library/windows/desktop/bb760724) w zestawie Windows SDK.  
+ Ustawia wartość elementu określonego stanu elementu sterowania jedno łącze. Aby uzyskać więcej informacji, zobacz komunikat Win32 [LM_SETITEM](/windows/desktop/Controls/lm-setitem) w zestawie Windows SDK.  
   
 ##  <a name="setitemurl"></a>  CLinkCtrl::SetItemUrl  
  Ustawia adres URL, reprezentowane przez element kontroli łączy.  
@@ -465,7 +465,7 @@ BOOL SetItemUrl(
  Zwraca wartość TRUE w przypadku powodzenia, wartość FALSE w przypadku niepowodzenia.  
   
 ### <a name="remarks"></a>Uwagi  
- Ustawia adres URL, reprezentowane przez element kontroli określone łącze. Aby uzyskać więcej informacji, zobacz komunikat Win32 [LM_SETITEM](http://msdn.microsoft.com/library/windows/desktop/bb760724) w zestawie Windows SDK.  
+ Ustawia adres URL, reprezentowane przez element kontroli określone łącze. Aby uzyskać więcej informacji, zobacz komunikat Win32 [LM_SETITEM](/windows/desktop/Controls/lm-setitem) w zestawie Windows SDK.  
   
 ## <a name="see-also"></a>Zobacz też  
  [Diagram hierarchii](../../mfc/hierarchy-chart.md)   

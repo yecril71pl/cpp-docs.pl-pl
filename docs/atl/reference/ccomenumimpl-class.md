@@ -28,12 +28,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 40a5604a1b1c469272889aa7b4e283b3ee6f23bf
-ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
+ms.openlocfilehash: c2b2f8ab8828c994b729180805be0a51a83b3487
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37882799"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43203629"
 ---
 # <a name="ccomenumimpl-class"></a>Klasa CComEnumImpl
 Ta klasa zawiera implementację interfejsu modułu wyliczającego COM, gdzie elementy wyliczany są przechowywane w tablicy.  
@@ -48,7 +48,7 @@ class ATL_NO_VTABLE CComEnumImpl : public Base
   
 #### <a name="parameters"></a>Parametry  
  *podstawowy*  
- Moduł wyliczający COM ( [IEnumXXXX](https://msdn.microsoft.com/library/ms680089.aspx)) interfejsu.  
+ Moduł wyliczający interfejsu COM. Zobacz [IEnumString](/windows/desktop/api/objidl/nn-objidl-ienumstring) przykład. 
   
  *piid*  
  Wskaźnik do Identyfikatora interfejsu interfejsu modułu wyliczającego.  
@@ -72,11 +72,11 @@ class ATL_NO_VTABLE CComEnumImpl : public Base
   
 |Nazwa|Opis|  
 |----------|-----------------|  
-|[CComEnumImpl::Clone](#clone)|Implementacja [IEnumXXXX::Clone](https://msdn.microsoft.com/library/ms690336.aspx).|  
+|[CComEnumImpl::Clone](#clone)|Implementacja **klonowania** wyliczenie metody interfejsu.|  
 |[CComEnumImpl::Init](#init)|Inicjuje modułu wyliczającego.|  
-|[CComEnumImpl::Next](#next)|Implementacja [IEnumXXXX::Next](https://msdn.microsoft.com/library/ms695273.aspx).|  
-|[CComEnumImpl::Reset](#reset)|Implementacja [IEnumXXXX::Reset](https://msdn.microsoft.com/library/ms693414.aspx).|  
-|[CComEnumImpl::Skip](#skip)|Implementacja [IEnumXXXX::Skip](https://msdn.microsoft.com/library/ms690392.aspx).|  
+|[CComEnumImpl::Next](#next)|Implementacja **dalej**.|  
+|[CComEnumImpl::Reset](#reset)|Implementacja **resetowania**.|  
+|[CComEnumImpl::Skip](#skip)|Implementacja **Pomiń**.|  
   
 ### <a name="public-data-members"></a>Publiczne elementy członkowskie danych  
   
@@ -89,7 +89,7 @@ class ATL_NO_VTABLE CComEnumImpl : public Base
 |[CComEnumImpl::m_spUnk](#m_spunk)|`IUnknown` Wskaźnika obiektu dostarczenie kolekcji wyliczenia.|  
   
 ## <a name="remarks"></a>Uwagi  
- `CComEnumImpl` udostępnia implementację dla interfejsu modułu wyliczającego COM, gdzie elementy wyliczany są przechowywane w tablicy. Ta klasa jest odpowiednikiem `IEnumOnSTLImpl` klasy, która dostarcza implementację interfejsu modułu wyliczającego oparte na kontenera standardowej biblioteki języka C++.  
+Zobacz [IEnumString](/windows/desktop/api/objidl/nn-objidl-ienumstring) przykład implementacje metod. `CComEnumImpl` udostępnia implementację dla interfejsu modułu wyliczającego COM, gdzie elementy wyliczany są przechowywane w tablicy. Ta klasa jest odpowiednikiem `IEnumOnSTLImpl` klasy, która dostarcza implementację interfejsu modułu wyliczającego oparte na kontenera standardowej biblioteki języka C++.  
   
 > [!NOTE]
 >  Aby uzyskać szczegółowe informacje na temat dalszych różnic między `CComEnumImpl` i `IEnumOnSTLImpl`, zobacz [CComEnumImpl::Init](#init).  
@@ -175,7 +175,7 @@ enum CComEnumFlags
 >  Prototyp ta metoda określa elementy tablicy jako typu `T`, gdzie `T` został zdefiniowany jako parametr szablonu klasy. Jest to ten sam typ, który jest uwidaczniany za pomocą metody interfejsu COM [CComEnumImpl::Next](#next). Domniemanie tego jest fakt, że w przeciwieństwie do [IEnumOnSTLImpl](../../atl/reference/ienumonstlimpl-class.md), ta klasa nie obsługuje innego magazynu i dostępne typy danych. Typ danych elementów w tablicy musi być taki sam jak typ danych udostępnianych za pośrednictwem interfejsu COM.  
   
 ##  <a name="clone"></a>  CComEnumImpl::Clone  
- Ta metoda zapewnia wykonania [IEnumXXXX::Clone](https://msdn.microsoft.com/library/ms690336.aspx) metoda przez utworzenie obiektu typu `CComEnum`, inicjując go przy użyciu tej samej tablicy i używane przez bieżący obiekt iteratora i zwraca interfejs na nowo utworzony obiekt.  
+ Ta metoda zapewnia wykonania **klonowania** metoda przez utworzenie obiektu typu `CComEnum`, inicjując go przy użyciu tej samej tablicy i używane przez bieżący obiekt iteratora i zwraca interfejs na nowo utworzony obiekt.  
   
 ```
 STDMETHOD(Clone)(Base** ppEnum);
@@ -227,7 +227,7 @@ DWORD m_dwFlags;
 ```  
   
 ##  <a name="next"></a>  CComEnumImpl::Next  
- Ta metoda zapewnia wykonania [IEnumXXXX::Next](https://msdn.microsoft.com/library/ms695273.aspx) metody.  
+ Ta metoda zapewnia wykonania **dalej** metody.  
   
 ```
 STDMETHOD(Next)(ULONG celt, T* rgelt, ULONG* pceltFetched);
@@ -247,7 +247,7 @@ STDMETHOD(Next)(ULONG celt, T* rgelt, ULONG* pceltFetched);
  Standardowe wartości HRESULT.  
   
 ##  <a name="reset"></a>  CComEnumImpl::Reset  
- Ta metoda zapewnia wykonania [IEnumXXXX::Reset](https://msdn.microsoft.com/library/ms693414.aspx) metody.  
+ Ta metoda zapewnia wykonania **resetowania** metody.  
   
 ```
 STDMETHOD(Reset)(void);
@@ -257,7 +257,7 @@ STDMETHOD(Reset)(void);
  Standardowe wartości HRESULT.  
   
 ##  <a name="skip"></a>  CComEnumImpl::Skip  
- Ta metoda zapewnia wykonania [IEnumXXXX::Skip](https://msdn.microsoft.com/library/ms690392.aspx) metody.  
+ Ta metoda zapewnia wykonania **Pomiń** metody.  
   
 ```
 STDMETHOD(Skip)(ULONG celt);

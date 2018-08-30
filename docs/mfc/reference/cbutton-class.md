@@ -84,12 +84,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 67e4c1755a4d7e5da451305260d4f88ac2c938bf
-ms.sourcegitcommit: 76fd30ff3e0352e2206460503b61f45897e60e4f
+ms.openlocfilehash: e9932f8814855213f133323f2102e0cacf1e69c8
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/13/2018
-ms.locfileid: "39027891"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43196714"
 ---
 # <a name="cbutton-class"></a>Klasa CButton
 Oferuje funkcje kontrolek przycisku Windows.  
@@ -360,7 +360,7 @@ BOOL GetIdealSize(SIZE* psize);
  Wartość różną od zera, jeśli to się powiedzie; w przeciwnym razie 0.  
   
 ### <a name="remarks"></a>Uwagi  
- Ta funkcja członkowska emuluje funkcjonalność komunikat BCM_GETIDEALSIZE zgodnie z opisem w [przyciski](http://msdn.microsoft.com/library/windows/desktop/bb775943) część zestawu Windows SDK.  
+ Ta funkcja członkowska emuluje funkcjonalność komunikat BCM_GETIDEALSIZE zgodnie z opisem w [przyciski](https://msdn.microsoft.com/library/windows/desktop/bb775943) część zestawu Windows SDK.  
   
 ##  <a name="getimagelist"></a>  CButton::GetImageList  
  Wywołaj tę metodę można pobrać listy obrazów z kontrolki przycisku.  
@@ -377,7 +377,7 @@ BOOL GetImageList(PBUTTON_IMAGELIST pbuttonImagelist);
  Wartość różną od zera, jeśli to się powiedzie; w przeciwnym razie 0.  
   
 ### <a name="remarks"></a>Uwagi  
- Ta funkcja członkowska emuluje funkcjonalność komunikat BCM_GETIMAGELIST zgodnie z opisem w [przyciski](http://msdn.microsoft.com/library/windows/desktop/bb775943) część zestawu Windows SDK.  
+ Ta funkcja członkowska emuluje funkcjonalność komunikat BCM_GETIMAGELIST zgodnie z opisem w [przyciski](https://msdn.microsoft.com/library/windows/desktop/bb775943) część zestawu Windows SDK.  
   
 ##  <a name="getnote"></a>  CButton::GetNote  
  Pobiera skojarzone z kontrolą bieżącą link polecenie tekstu Uwaga.  
@@ -407,7 +407,7 @@ BOOL GetNote(
 ### <a name="remarks"></a>Uwagi  
  Użyj tej metody tylko w przypadku którego styl przycisku jest BS_COMMANDLINK lub BS_DEFCOMMANDLINK kontrolki.  
   
- Ta metoda wysyła [BCM_GETNOTE](http://msdn.microsoft.com/library/windows/desktop/bb775965) komunikat, który jest opisany w zestawie Windows SDK.  
+ Ta metoda wysyła [BCM_GETNOTE](/windows/desktop/Controls/bcm-getnote) komunikat, który jest opisany w zestawie Windows SDK.  
   
 ##  <a name="getnotelength"></a>  CButton::GetNoteLength  
  Pobiera długość tekstu notatki dla kontrolki linku bieżącego polecenia.  
@@ -422,7 +422,7 @@ UINT GetNoteLength() const;
 ### <a name="remarks"></a>Uwagi  
  Użyj tej metody tylko w przypadku którego styl przycisku jest BS_COMMANDLINK lub BS_DEFCOMMANDLINK kontrolki.  
   
- Ta metoda wysyła [BCM_GETNOTELENGTH](http://msdn.microsoft.com/library/windows/desktop/bb775967) komunikat, który jest opisany w zestawie Windows SDK.  
+ Ta metoda wysyła [BCM_GETNOTELENGTH](/windows/desktop/Controls/bcm-getnotelength) komunikat, który jest opisany w zestawie Windows SDK.  
   
 ##  <a name="getsplitglyph"></a>  CButton::GetSplitGlyph  
  Pobiera symbol skojarzone z bieżącym kontrolki przycisku podziału.  
@@ -439,7 +439,7 @@ TCHAR GetSplitGlyph() const;
   
  Użyj tej metody tylko w przypadku którego styl przycisku jest BS_SPLITBUTTON lub BS_DEFSPLITBUTTON kontrolki.  
   
- Ta metoda inicjuje `mask` członkiem [BUTTON_SPLITINFO](http://msdn.microsoft.com/library/windows/desktop/bb775955) struktury z flagą BCSIF_GLYPH, a następnie wysyła, które struktury w [BCM_GETSPLITINFO](http://msdn.microsoft.com/library/windows/desktop/bb775969) komunikat, który jest opisany w Windows SDK. Po powrocie z funkcji komunikatów ta metoda pobiera symbol z `himlGlyph` elementu członkowskiego struktury.  
+ Ta metoda inicjuje `mask` członkiem [BUTTON_SPLITINFO](/windows/desktop/api/commctrl/ns-commctrl-tagbutton_splitinfo) struktury z flagą BCSIF_GLYPH, a następnie wysyła, które struktury w [BCM_GETSPLITINFO](/windows/desktop/Controls/bcm-getsplitinfo) komunikat, który jest opisany w Windows SDK. Po powrocie z funkcji komunikatów ta metoda pobiera symbol z `himlGlyph` elementu członkowskiego struktury.  
   
 ##  <a name="getsplitimagelist"></a>  CButton::GetSplitImageList  
  Pobiera [listy obrazów](../../mfc/reference/cimagelist-class.md) dla bieżącego kontrolki przycisku podziału.  
@@ -454,7 +454,7 @@ CImageList* GetSplitImageList() const;
 ### <a name="remarks"></a>Uwagi  
  Użyj tej metody tylko w przypadku którego styl przycisku jest BS_SPLITBUTTON lub BS_DEFSPLITBUTTON kontrolki.  
   
- Ta metoda inicjuje `mask` członkiem [BUTTON_SPLITINFO](http://msdn.microsoft.com/library/windows/desktop/bb775955) struktury z flagą BCSIF_IMAGE, a następnie wysyła, które struktury w [BCM_GETSPLITINFO](http://msdn.microsoft.com/library/windows/desktop/bb775969) komunikat, który jest opisany w Windows SDK. Po powrocie z funkcji komunikatów ta metoda umożliwia pobranie listy obrazów z `himlGlyph` elementu członkowskiego struktury.  
+ Ta metoda inicjuje `mask` członkiem [BUTTON_SPLITINFO](/windows/desktop/api/commctrl/ns-commctrl-tagbutton_splitinfo) struktury z flagą BCSIF_IMAGE, a następnie wysyła, które struktury w [BCM_GETSPLITINFO](/windows/desktop/Controls/bcm-getsplitinfo) komunikat, który jest opisany w Windows SDK. Po powrocie z funkcji komunikatów ta metoda umożliwia pobranie listy obrazów z `himlGlyph` elementu członkowskiego struktury.  
   
 ##  <a name="getsplitinfo"></a>  CButton::GetSplitInfo  
  Pobiera parametry, które określają, jak Windows pobiera bieżący formant przycisku podziału.  
@@ -467,7 +467,7 @@ BOOL GetSplitInfo(PBUTTON_SPLITINFO pInfo) const;
   
 |Parametr|Opis|  
 |---------------|-----------------|  
-|[out] *pInfo*|Wskaźnik do [BUTTON_SPLITINFO](http://msdn.microsoft.com/library/windows/desktop/bb775955) strukturę, która otrzymuje informacje o bieżącym kontrolki przycisku podziału. Obiekt wywołujący jest odpowiedzialny za przydzielanie struktury.|  
+|[out] *pInfo*|Wskaźnik do [BUTTON_SPLITINFO](/windows/desktop/api/commctrl/ns-commctrl-tagbutton_splitinfo) strukturę, która otrzymuje informacje o bieżącym kontrolki przycisku podziału. Obiekt wywołujący jest odpowiedzialny za przydzielanie struktury.|  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Wartość TRUE, jeśli ta metoda jest kończy się pomyślnie; w przeciwnym razie wartość FALSE.  
@@ -475,7 +475,7 @@ BOOL GetSplitInfo(PBUTTON_SPLITINFO pInfo) const;
 ### <a name="remarks"></a>Uwagi  
  Użyj tej metody tylko w przypadku którego styl przycisku jest BS_SPLITBUTTON lub BS_DEFSPLITBUTTON kontrolki.  
   
- Ta metoda wysyła [BCM_GETSPLITINFO](http://msdn.microsoft.com/library/windows/desktop/bb775969) komunikat, który jest opisany w zestawie Windows SDK.  
+ Ta metoda wysyła [BCM_GETSPLITINFO](/windows/desktop/Controls/bcm-getsplitinfo) komunikat, który jest opisany w zestawie Windows SDK.  
   
 ##  <a name="getsplitsize"></a>  CButton::GetSplitSize  
  Pobiera prostokąt otaczający składnika listy rozwijanej bieżącego kontrolki przycisku podziału.  
@@ -488,7 +488,7 @@ BOOL GetSplitSize(LPSIZE pSize) const;
   
 |Parametr|Opis|  
 |---------------|-----------------|  
-|[out] *pSize*|Wskaźnik do [rozmiar](http://msdn.microsoft.com/library/windows/desktop/dd145106) struktury, która odbiera opis prostokąt.|  
+|[out] *pSize*|Wskaźnik do [rozmiar](https://msdn.microsoft.com/library/windows/desktop/dd145106) struktury, która odbiera opis prostokąt.|  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Wartość TRUE, jeśli ta metoda jest kończy się pomyślnie; w przeciwnym razie wartość FALSE.  
@@ -498,7 +498,7 @@ BOOL GetSplitSize(LPSIZE pSize) const;
   
  Po rozwinięciu formant przycisku podziału umożliwia wyświetlanie składnika listy rozwijanej, takiego jak kontrolka listy lub kontroli pagera. Ta metoda pobiera prostokąt otaczający, który zawiera składnik listy rozwijanej.  
   
- Ta metoda inicjuje `mask` członkiem [BUTTON_SPLITINFO](http://msdn.microsoft.com/library/windows/desktop/bb775955) struktury z flagą BCSIF_SIZE, a następnie wysyła, które struktury w [BCM_GETSPLITINFO](http://msdn.microsoft.com/library/windows/desktop/bb775969) komunikat, który jest opisany w Windows SDK. Po powrocie z funkcji komunikatów ta metoda pobiera prostokąt otaczający z `size` elementu członkowskiego struktury.  
+ Ta metoda inicjuje `mask` członkiem [BUTTON_SPLITINFO](/windows/desktop/api/commctrl/ns-commctrl-tagbutton_splitinfo) struktury z flagą BCSIF_SIZE, a następnie wysyła, które struktury w [BCM_GETSPLITINFO](/windows/desktop/Controls/bcm-getsplitinfo) komunikat, który jest opisany w Windows SDK. Po powrocie z funkcji komunikatów ta metoda pobiera prostokąt otaczający z `size` elementu członkowskiego struktury.  
   
 ##  <a name="getsplitstyle"></a>  CButton::GetSplitStyle  
  Pobiera style przycisku podziału, definiujące bieżącego kontrolki przycisku podziału.  
@@ -508,14 +508,14 @@ UINT GetSplitStyle() const;
 ```  
   
 ### <a name="return-value"></a>Wartość zwracana  
- Bitowa kombinacja style przycisku podziału. Aby uzyskać więcej informacji, zobacz `uSplitStyle` członkiem [BUTTON_SPLITINFO](http://msdn.microsoft.com/library/windows/desktop/bb775955) struktury.  
+ Bitowa kombinacja style przycisku podziału. Aby uzyskać więcej informacji, zobacz `uSplitStyle` członkiem [BUTTON_SPLITINFO](/windows/desktop/api/commctrl/ns-commctrl-tagbutton_splitinfo) struktury.  
   
 ### <a name="remarks"></a>Uwagi  
  Użyj tej metody tylko w przypadku którego styl przycisku jest BS_SPLITBUTTON lub BS_DEFSPLITBUTTON kontrolki.  
   
  Style przycisku podziału Określ wyrównanie, współczynnik proporcji i w postaci graficznej za pomocą którego Windows rysuje ikonę przycisku podziału.  
   
- Ta metoda inicjuje `mask` członkiem [BUTTON_SPLITINFO](http://msdn.microsoft.com/library/windows/desktop/bb775955) struktury z flagą BCSIF_STYLE, a następnie wysyła, które struktury w [BCM_GETSPLITINFO](http://msdn.microsoft.com/library/windows/desktop/bb775969) komunikat, który jest opisany w Windows SDK. Po powrocie z funkcji komunikatów ta metoda pobiera style przycisku podziału z `uSplitStyle` elementu członkowskiego struktury.  
+ Ta metoda inicjuje `mask` członkiem [BUTTON_SPLITINFO](/windows/desktop/api/commctrl/ns-commctrl-tagbutton_splitinfo) struktury z flagą BCSIF_STYLE, a następnie wysyła, które struktury w [BCM_GETSPLITINFO](/windows/desktop/Controls/bcm-getsplitinfo) komunikat, który jest opisany w Windows SDK. Po powrocie z funkcji komunikatów ta metoda pobiera style przycisku podziału z `uSplitStyle` elementu członkowskiego struktury.  
   
 ##  <a name="getstate"></a>  CButton::GetState  
  Pobiera stan kontrolki przycisku.  
@@ -559,7 +559,7 @@ BOOL GetTextMargin(RECT* pmargin);
  Wartość różną od zera, jeśli to się powiedzie; w przeciwnym razie 0.  
   
 ### <a name="remarks"></a>Uwagi  
- Ta funkcja członkowska emuluje funkcjonalność komunikat BCM_GETTEXTMARGIN zgodnie z opisem w [przyciski](http://msdn.microsoft.com/library/windows/desktop/bb775943) część zestawu Windows SDK.  
+ Ta funkcja członkowska emuluje funkcjonalność komunikat BCM_GETTEXTMARGIN zgodnie z opisem w [przyciski](https://msdn.microsoft.com/library/windows/desktop/bb775943) część zestawu Windows SDK.  
   
 ##  <a name="setbitmap"></a>  CButton::SetBitmap  
  Wywołaj tę funkcję elementu członkowskiego, aby skojarzyć nowej mapy bitowej przy użyciu przycisku.  
@@ -693,9 +693,9 @@ BOOL SetDropDownState(BOOL fDropDown);
  Wartość TRUE, jeśli ta metoda jest kończy się pomyślnie; w przeciwnym razie wartość FALSE.  
   
 ### <a name="remarks"></a>Uwagi  
- Kontrolka przycisku podziału ma styl BS_SPLITBUTTON lub BS_DEFSPLITBUTTON i składa się z przycisku i strzałkę listy rozwijanej, po jego prawej stronie. Aby uzyskać więcej informacji, zobacz [style przycisku](http://msdn.microsoft.com/library/windows/desktop/bb775951). Zazwyczaj stan listy rozwijanej jest ustawiony, kiedy użytkownik kliknie strzałkę listy rozwijanej. Aby programowo ustawić stan listy rozwijanej kontrolki, należy użyć tej metody. Strzałki listy rozwijanej jest rysowana przyciemnione do wskazywania stanu.  
+ Kontrolka przycisku podziału ma styl BS_SPLITBUTTON lub BS_DEFSPLITBUTTON i składa się z przycisku i strzałkę listy rozwijanej, po jego prawej stronie. Aby uzyskać więcej informacji, zobacz [style przycisku](/windows/desktop/Controls/button-styles). Zazwyczaj stan listy rozwijanej jest ustawiony, kiedy użytkownik kliknie strzałkę listy rozwijanej. Aby programowo ustawić stan listy rozwijanej kontrolki, należy użyć tej metody. Strzałki listy rozwijanej jest rysowana przyciemnione do wskazywania stanu.  
   
- Ta metoda wysyła [BCM_SETDROPDOWNSTATE](http://msdn.microsoft.com/library/windows/desktop/bb775973) komunikat, który jest opisany w zestawie Windows SDK.  
+ Ta metoda wysyła [BCM_SETDROPDOWNSTATE](/windows/desktop/Controls/bcm-setdropdownstate) komunikat, który jest opisany w zestawie Windows SDK.  
   
 ### <a name="example"></a>Przykład  
  Poniższy kod definiuje zmienną, *m_splitButton*, która jest używana do uzyskania programowego dostępu formant przycisku podziału. Ta zmienna jest używana w następującym przykładzie.  
@@ -726,7 +726,7 @@ BOOL SetElevationRequired(BOOL fElevationRequired);
 ### <a name="remarks"></a>Uwagi  
  Jeśli formant łącza przycisk lub polecenie wymaga uprawnień zabezpieczeń z podwyższonym poziomem uprawnień do wykonania akcji, ustaw kontrolkę `elevation required` stanu. Następnie Windows wyświetla ikona tarczy kontroli konta użytkownika (UAC) w kontrolce. Aby uzyskać więcej informacji, zobacz "Kontrola konta użytkownika" w [MSDN](http://go.microsoft.com/fwlink/p/?linkid=18507).  
   
- Ta metoda wysyła [BCM_SETSHIELD](http://msdn.microsoft.com/library/windows/desktop/bb775979) komunikat, który jest opisany w zestawie Windows SDK.  
+ Ta metoda wysyła [BCM_SETSHIELD](/windows/desktop/Controls/bcm-setshield) komunikat, który jest opisany w zestawie Windows SDK.  
   
 ##  <a name="seticon"></a>  CButton::SetIcon  
  Wywołaj tę funkcję elementu członkowskiego, aby skojarzyć ikonę Nowy przycisk.  
@@ -777,7 +777,7 @@ BOOL SetImageList(PBUTTON_IMAGELIST pbuttonImagelist);
  Zwraca wartość TRUE w przypadku powodzenia, wartość FALSE w przypadku niepowodzenia.  
   
 ### <a name="remarks"></a>Uwagi  
- Ta funkcja członkowska emuluje funkcjonalność komunikat BCM_SETIMAGELIST zgodnie z opisem w [przyciski](http://msdn.microsoft.com/library/windows/desktop/bb775943) część zestawu Windows SDK.  
+ Ta funkcja członkowska emuluje funkcjonalność komunikat BCM_SETIMAGELIST zgodnie z opisem w [przyciski](https://msdn.microsoft.com/library/windows/desktop/bb775943) część zestawu Windows SDK.  
   
 ##  <a name="setnote"></a>  CButton::SetNote  
  Ustawia tekst notatki dla kontrolki linku bieżącego polecenia.  
@@ -798,7 +798,7 @@ BOOL SetNote(LPCTSTR lpszNote);
 ### <a name="remarks"></a>Uwagi  
  Użyj tej metody tylko w przypadku którego styl przycisku jest BS_COMMANDLINK lub BS_DEFCOMMANDLINK kontrolki.  
   
- Ta metoda wysyła [BCM_SETNOTE](http://msdn.microsoft.com/library/windows/desktop/bb775977) komunikat, który jest opisany w zestawie Windows SDK.  
+ Ta metoda wysyła [BCM_SETNOTE](/windows/desktop/Controls/bcm-setnote) komunikat, który jest opisany w zestawie Windows SDK.  
   
 ### <a name="example"></a>Przykład  
  Poniższy kod definiuje zmienną, *m_cmdLink*, która jest używana do uzyskania programowego dostępu formant łącza polecenia. Ta zmienna jest używana w następującym przykładzie.  
@@ -831,7 +831,7 @@ BOOL SetSplitGlyph(TCHAR chGlyph);
   
  Glif jest fizyczna reprezentacja znaku w określonej czcionki. *ChGlyph* parametru nie jest używana jako symbol, ale zamiast tego jest używany do wybierania glif z zestawu symboli zdefiniowanych w systemie. Domyślnego symbolu strzałki listy rozwijanej jest określona przez znak '6' i przypomina znak Unicode TRÓJKĄT czarny dół WSKAZUJE (U + 25BC).  
   
- Ta metoda inicjuje `mask` członkiem [BUTTON_SPLITINFO](http://msdn.microsoft.com/library/windows/desktop/bb775955) struktury z flagą BCSIF_GLYPH i `himlGlyph` element członkowski o *chGlyph* parametru, a następnie wysyła go struktury w [BCM_GETSPLITINFO](http://msdn.microsoft.com/library/windows/desktop/bb775969) komunikat, który jest opisany w zestawie Windows SDK.  
+ Ta metoda inicjuje `mask` członkiem [BUTTON_SPLITINFO](/windows/desktop/api/commctrl/ns-commctrl-tagbutton_splitinfo) struktury z flagą BCSIF_GLYPH i `himlGlyph` element członkowski o *chGlyph* parametru, a następnie wysyła go struktury w [BCM_GETSPLITINFO](/windows/desktop/Controls/bcm-getsplitinfo) komunikat, który jest opisany w zestawie Windows SDK.  
   
 ##  <a name="setsplitimagelist"></a>  CButton::SetSplitImageList  
  Kojarzy [listy obrazów](../../mfc/reference/cimagelist-class.md) z kontrolą bieżącą przycisku podziału.  
@@ -852,7 +852,7 @@ BOOL SetSplitImageList(CImageList* pSplitImageList);
 ### <a name="remarks"></a>Uwagi  
  Użyj tej metody tylko w przypadku którego styl przycisku jest BS_SPLITBUTTON lub BS_DEFSPLITBUTTON kontrolki.  
   
- Ta metoda inicjuje `mask` członkiem [BUTTON_SPLITINFO](http://msdn.microsoft.com/library/windows/desktop/bb775955) struktury z flagą BCSIF_IMAGE i `himlGlyph` element członkowski o *pSplitImageList* parametru, a następnie wysyła tej struktury w [BCM_GETSPLITINFO](http://msdn.microsoft.com/library/windows/desktop/bb775969) komunikat, który jest opisany w zestawie Windows SDK.  
+ Ta metoda inicjuje `mask` członkiem [BUTTON_SPLITINFO](/windows/desktop/api/commctrl/ns-commctrl-tagbutton_splitinfo) struktury z flagą BCSIF_IMAGE i `himlGlyph` element członkowski o *pSplitImageList* parametru, a następnie wysyła tej struktury w [BCM_GETSPLITINFO](/windows/desktop/Controls/bcm-getsplitinfo) komunikat, który jest opisany w zestawie Windows SDK.  
   
 ##  <a name="setsplitinfo"></a>  CButton::SetSplitInfo  
  Określa parametry, które określają, jak Windows pobiera bieżący formant przycisku podziału.  
@@ -865,7 +865,7 @@ BOOL SetSplitInfo(PBUTTON_SPLITINFO pInfo);
   
 |Parametr|Opis|  
 |---------------|-----------------|  
-|[in] *pInfo*|Wskaźnik do [BUTTON_SPLITINFO](http://msdn.microsoft.com/library/windows/desktop/bb775955) strukturę, która definiuje bieżącego kontrolki przycisku podziału.|  
+|[in] *pInfo*|Wskaźnik do [BUTTON_SPLITINFO](/windows/desktop/api/commctrl/ns-commctrl-tagbutton_splitinfo) strukturę, która definiuje bieżącego kontrolki przycisku podziału.|  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Wartość TRUE, jeśli ta metoda jest kończy się pomyślnie; w przeciwnym razie wartość FALSE.  
@@ -873,7 +873,7 @@ BOOL SetSplitInfo(PBUTTON_SPLITINFO pInfo);
 ### <a name="remarks"></a>Uwagi  
  Użyj tej metody tylko w przypadku którego styl przycisku jest BS_SPLITBUTTON lub BS_DEFSPLITBUTTON kontrolki.  
   
- Ta metoda wysyła [BCM_SETSPLITINFO](http://msdn.microsoft.com/library/windows/desktop/bb775981) komunikat, który jest opisany w zestawie Windows SDK.  
+ Ta metoda wysyła [BCM_SETSPLITINFO](/windows/desktop/Controls/bcm-setsplitinfo) komunikat, który jest opisany w zestawie Windows SDK.  
   
 ### <a name="example"></a>Przykład  
  Poniższy kod definiuje zmienną, `m_splitButton`, która jest używana do uzyskania programowego dostępu formant przycisku podziału.  
@@ -896,7 +896,7 @@ BOOL SetSplitSize(LPSIZE pSize);
   
 |Parametr|Opis|  
 |---------------|-----------------|  
-|[in] *pSize*|Wskaźnik do [rozmiar](http://msdn.microsoft.com/library/windows/desktop/dd145106) strukturę, która opisuje prostokąt otaczający.|  
+|[in] *pSize*|Wskaźnik do [rozmiar](https://msdn.microsoft.com/library/windows/desktop/dd145106) strukturę, która opisuje prostokąt otaczający.|  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Wartość TRUE, jeśli ta metoda jest kończy się pomyślnie; w przeciwnym razie wartość FALSE.  
@@ -906,7 +906,7 @@ BOOL SetSplitSize(LPSIZE pSize);
   
  Po rozwinięciu formant przycisku podziału umożliwia wyświetlanie składnika listy rozwijanej, takiego jak kontrolka listy lub kontroli pagera. Ta metoda określa rozmiar prostokąt otaczający, który zawiera składnik listy rozwijanej.  
   
- Ta metoda inicjuje `mask` członkiem [BUTTON_SPLITINFO](http://msdn.microsoft.com/library/windows/desktop/bb775955) struktury z flagą BCSIF_SIZE i `size` element członkowski o *pSize* parametru, a następnie wysyła, które struktury w [BCM_GETSPLITINFO](http://msdn.microsoft.com/library/windows/desktop/bb775969) komunikat, który jest opisany w zestawie Windows SDK.  
+ Ta metoda inicjuje `mask` członkiem [BUTTON_SPLITINFO](/windows/desktop/api/commctrl/ns-commctrl-tagbutton_splitinfo) struktury z flagą BCSIF_SIZE i `size` element członkowski o *pSize* parametru, a następnie wysyła, które struktury w [BCM_GETSPLITINFO](/windows/desktop/Controls/bcm-getsplitinfo) komunikat, który jest opisany w zestawie Windows SDK.  
   
 ### <a name="example"></a>Przykład  
  Poniższy kod definiuje zmienną, `m_splitButton`, która jest używana do uzyskania programowego dostępu formant przycisku podziału. Ta zmienna jest używana w następującym przykładzie.  
@@ -929,7 +929,7 @@ BOOL SetSplitStyle(UINT uSplitStyle);
   
 |Parametr|Opis|  
 |---------------|-----------------|  
-|[in] *uSplitStyle*|Bitowa kombinacja style przycisku podziału. Aby uzyskać więcej informacji, zobacz `uSplitStyle` członkiem [BUTTON_SPLITINFO](http://msdn.microsoft.com/library/windows/desktop/bb775955) struktury.|  
+|[in] *uSplitStyle*|Bitowa kombinacja style przycisku podziału. Aby uzyskać więcej informacji, zobacz `uSplitStyle` członkiem [BUTTON_SPLITINFO](/windows/desktop/api/commctrl/ns-commctrl-tagbutton_splitinfo) struktury.|  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Wartość TRUE, jeśli ta metoda jest kończy się pomyślnie; w przeciwnym razie wartość FALSE.  
@@ -937,9 +937,9 @@ BOOL SetSplitStyle(UINT uSplitStyle);
 ### <a name="remarks"></a>Uwagi  
  Użyj tej metody tylko w przypadku którego styl przycisku jest BS_SPLITBUTTON lub BS_DEFSPLITBUTTON kontrolki.  
   
- Style przycisku podziału Określ wyrównanie, współczynnik proporcji i w postaci graficznej za pomocą którego Windows rysuje ikonę przycisku podziału. Aby uzyskać więcej informacji, zobacz `uSplitStyle` członkiem [BUTTON_SPLITINFO](http://msdn.microsoft.com/library/windows/desktop/bb775955) struktury.  
+ Style przycisku podziału Określ wyrównanie, współczynnik proporcji i w postaci graficznej za pomocą którego Windows rysuje ikonę przycisku podziału. Aby uzyskać więcej informacji, zobacz `uSplitStyle` członkiem [BUTTON_SPLITINFO](/windows/desktop/api/commctrl/ns-commctrl-tagbutton_splitinfo) struktury.  
   
- Ta metoda inicjuje `mask` członkiem [BUTTON_SPLITINFO](http://msdn.microsoft.com/library/windows/desktop/bb775955) struktury z flagą BCSIF_STYLE i `uSplitStyle` element członkowski o *uSplitStyle* parametru, a następnie wysyła go struktury w [BCM_GETSPLITINFO](http://msdn.microsoft.com/library/windows/desktop/bb775969) komunikat, który jest opisany w zestawie Windows SDK.  
+ Ta metoda inicjuje `mask` członkiem [BUTTON_SPLITINFO](/windows/desktop/api/commctrl/ns-commctrl-tagbutton_splitinfo) struktury z flagą BCSIF_STYLE i `uSplitStyle` element członkowski o *uSplitStyle* parametru, a następnie wysyła go struktury w [BCM_GETSPLITINFO](/windows/desktop/Controls/bcm-getsplitinfo) komunikat, który jest opisany w zestawie Windows SDK.  
   
 ### <a name="example"></a>Przykład  
  Poniższy kod definiuje zmienną, `m_splitButton`, która jest używana do uzyskania programowego dostępu formant przycisku podziału.  
@@ -985,7 +985,7 @@ BOOL SetTextMargin(RECT* pmargin);
  Zwraca wartość TRUE w przypadku powodzenia, wartość FALSE w przypadku niepowodzenia.  
   
 ### <a name="remarks"></a>Uwagi  
- Ta funkcja członkowska emuluje funkcjonalność komunikat BCM_SETTEXTMARGIN zgodnie z opisem w [przyciski](http://msdn.microsoft.com/library/windows/desktop/bb775943) część zestawu Windows SDK.  
+ Ta funkcja członkowska emuluje funkcjonalność komunikat BCM_SETTEXTMARGIN zgodnie z opisem w [przyciski](https://msdn.microsoft.com/library/windows/desktop/bb775943) część zestawu Windows SDK.  
   
 ## <a name="see-also"></a>Zobacz też  
  [Klasa CWnd](../../mfc/reference/cwnd-class.md)   

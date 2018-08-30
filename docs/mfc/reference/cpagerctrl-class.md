@@ -58,12 +58,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 56b00604f57c67ba2555f667e41501451d06fed4
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: f311f7b73e72f47f363cfd5645c97b57eda5b480
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37853826"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43200879"
 ---
 # <a name="cpagerctrl-class"></a>Klasa CPagerCtrl
 `CPagerCtrl` Klasy opakowuje formant pagera Windows, który można przewijać w widoku okna, które nie pasuje do okna nadrzędnego.  
@@ -88,12 +88,12 @@ class CPagerCtrl : public CWnd
 |----------|-----------------|  
 |[CPagerCtrl::Create](#create)|Tworzy kontrolkę pagera przy użyciu określonego stylów i dołącza go do bieżącego `CPagerCtrl` obiektu.|  
 |[CPagerCtrl::CreateEx](#createex)|Tworzy kontrolkę pagera przy użyciu określonego style rozszerzone i dołącza go do bieżącego `CPagerCtrl` obiektu.|  
-|[CPagerCtrl::ForwardMouse](#forwardmouse)|Włącza lub wyłącza przekazywanie [WM_MOUSEMOVE](http://msdn.microsoft.com/library/windows/desktop/ms645616) wiadomości do okna, które są zawarte w bieżącym kontroli pagera.|  
+|[CPagerCtrl::ForwardMouse](#forwardmouse)|Włącza lub wyłącza przekazywanie [WM_MOUSEMOVE](/windows/desktop/inputdev/wm-mousemove) wiadomości do okna, które są zawarte w bieżącym kontroli pagera.|  
 |[CPagerCtrl::GetBkColor](#getbkcolor)|Pobiera bieżącą kontroli pagera kolor tła.|  
 |[CPagerCtrl::GetBorder](#getborder)|Pobiera o bieżącej kontroli pagera wielkości.|  
 |[CPagerCtrl::GetButtonSize](#getbuttonsize)|Pobiera rozmiar przycisku do kontroli bieżącej pager.|  
 |[CPagerCtrl::GetButtonState](#getbuttonstate)|Pobiera stan określonego przycisku w bieżącej kontroli pagera.|  
-|[CPagerCtrl::GetDropTarget](#getdroptarget)|Pobiera [IDropTarget](http://msdn.microsoft.com/library/windows/desktop/ms679679) interfejs dla bieżącej kontroli pagera.|  
+|[CPagerCtrl::GetDropTarget](#getdroptarget)|Pobiera [IDropTarget](/windows/desktop/api/oleidl/nn-oleidl-idroptarget) interfejs dla bieżącej kontroli pagera.|  
 |[CPagerCtrl::GetScrollPos](#getscrollpos)|Pobiera położenie przewijania bieżącą kontroli pagera.|  
 |[CPagerCtrl::IsButtonDepressed](#isbuttondepressed)|Wskazuje, czy określonego przycisku bieżącą kontroli pagera w `pressed` stanu.|  
 |[CPagerCtrl::IsButtonGrayed](#isbuttongrayed)|Wskazuje, czy określonego przycisku bieżącą kontroli pagera w `grayed` stanu.|  
@@ -112,7 +112,7 @@ class CPagerCtrl : public CWnd
   
  Na przykład jeśli aplikacja ma pasek narzędzi, który nie jest dostatecznie szeroka, aby wyświetlić wszystkie jego elementy, pasek narzędzi można przypisać do kontroli pagera, a użytkownicy będą mogli być przewinięcie w pasku narzędzi po lewej stronie lub w prawo, aby uzyskać dostęp do wszystkich elementów. Microsoft Internet Explorer w wersji 4.0 (wersja commctrl.dll 4.71) wprowadza kontroli pagera.  
   
- `CPagerCtrl` Klasa pochodzi od [CWnd](../../mfc/reference/cwnd-class.md) klasy. Więcej informacji oraz ilustrację kontrolkę pagera, zobacz [kontroli pagera](http://msdn.microsoft.com/library/windows/desktop/bb760855).  
+ `CPagerCtrl` Klasa pochodzi od [CWnd](../../mfc/reference/cwnd-class.md) klasy. Więcej informacji oraz ilustrację kontrolkę pagera, zobacz [kontroli pagera](/windows/desktop/Controls/pager-controls).  
   
 ## <a name="inheritance-hierarchy"></a>Hierarchia dziedziczenia  
  [CObject](../../mfc/reference/cobject-class.md)  
@@ -151,8 +151,8 @@ virtual BOOL Create(
   
 |Parametr|Opis|  
 |---------------|-----------------|  
-|[in] *dwStyle*|Bitowa kombinacja (lub) [Style okna ramowego](../../mfc/reference/styles-used-by-mfc.md#window-styles) i [style kontroli pagera](http://msdn.microsoft.com/library/windows/desktop/bb760859) mają być stosowane do formantu.|  
-|[in] *rect*|Odwołanie do [Prostokąt](http://msdn.microsoft.com/library/windows/desktop/dd162897) strukturę, która zawiera położenie i rozmiar formantu w współrzędne klienta.|  
+|[in] *dwStyle*|Bitowa kombinacja (lub) [Style okna ramowego](../../mfc/reference/styles-used-by-mfc.md#window-styles) i [style kontroli pagera](/windows/desktop/Controls/pager-control-styles) mają być stosowane do formantu.|  
+|[in] *rect*|Odwołanie do [Prostokąt](https://msdn.microsoft.com/library/windows/desktop/dd162897) strukturę, która zawiera położenie i rozmiar formantu w współrzędne klienta.|  
 |[in] *pParentWnd*|Wskaźnik do [CWnd](../../mfc/reference/cwnd-class.md) obiekt, który jest okno nadrzędne kontrolki. Ten parametr nie może mieć wartości NULL.|  
 |[in] *nID*|Identyfikator kontrolki.|  
   
@@ -183,9 +183,9 @@ virtual BOOL CreateEx(
   
 |Parametr|Opis|  
 |---------------|-----------------|  
-|[in] *dwExStyle*|Bitowa kombinacja rozszerzone style, które mają być stosowane do formantu. Aby uzyskać więcej informacji, zobacz *dwExStyle* parametru [elementu CreateWindowEx](http://msdn.microsoft.com/library/windows/desktop/ms632680) funkcji.|  
-|[in] *dwStyle*|Bitowa kombinacja (lub) [Style okna ramowego](../../mfc/reference/styles-used-by-mfc.md#window-styles) i [style kontroli pagera](http://msdn.microsoft.com/library/windows/desktop/bb760859) mają być stosowane do formantu.|  
-|[in] *rect*|Odwołanie do [Prostokąt](http://msdn.microsoft.com/library/windows/desktop/dd162897) strukturę, która zawiera położenie i rozmiar formantu w współrzędne klienta.|  
+|[in] *dwExStyle*|Bitowa kombinacja rozszerzone style, które mają być stosowane do formantu. Aby uzyskać więcej informacji, zobacz *dwExStyle* parametru [elementu CreateWindowEx](https://msdn.microsoft.com/library/windows/desktop/ms632680) funkcji.|  
+|[in] *dwStyle*|Bitowa kombinacja (lub) [Style okna ramowego](../../mfc/reference/styles-used-by-mfc.md#window-styles) i [style kontroli pagera](/windows/desktop/Controls/pager-control-styles) mają być stosowane do formantu.|  
+|[in] *rect*|Odwołanie do [Prostokąt](https://msdn.microsoft.com/library/windows/desktop/dd162897) strukturę, która zawiera położenie i rozmiar formantu w współrzędne klienta.|  
 |[in] *pParentWnd*|Wskaźnik do [CWnd](../../mfc/reference/cwnd-class.md) obiekt, który jest okno nadrzędne kontrolki. Ten parametr nie może mieć wartości NULL.|  
 |[in] *nID*|Identyfikator kontrolki.|  
   
@@ -196,7 +196,7 @@ virtual BOOL CreateEx(
  Aby utworzyć kontrolkę pagera, Zadeklaruj `CPagerCtrl` zmiennej, następnie wywołać [CPagerCtrl::Create](#create) lub [CPagerCtrl::CreateEx](#createex) metody w tej zmiennej.  
   
 ##  <a name="forwardmouse"></a>  CPagerCtrl::ForwardMouse  
- Włącza lub wyłącza przekazywanie [WM_MOUSEMOVE](http://msdn.microsoft.com/library/windows/desktop/ms645616) wiadomości do okna, które są zawarte w bieżącym kontroli pagera.  
+ Włącza lub wyłącza przekazywanie [WM_MOUSEMOVE](/windows/desktop/inputdev/wm-mousemove) wiadomości do okna, które są zawarte w bieżącym kontroli pagera.  
   
 ```  
 void ForwardMouse(BOOL bForward);
@@ -209,7 +209,7 @@ void ForwardMouse(BOOL bForward);
 |[in] *bForward*|Wartość true, komunikaty myszy do przodu lub wartość FALSE nie przekazuje komunikaty myszy.|  
   
 ### <a name="remarks"></a>Uwagi  
- Ta metoda wysyła [PGM_FORWARDMOUSE](http://msdn.microsoft.com/library/windows/desktop/bb760867) komunikat, który jest opisany w zestawie Windows SDK.  
+ Ta metoda wysyła [PGM_FORWARDMOUSE](/windows/desktop/Controls/pgm-forwardmouse) komunikat, który jest opisany w zestawie Windows SDK.  
   
 ##  <a name="getborder"></a>  CPagerCtrl::GetBorder  
  Pobiera o bieżącej kontroli pagera wielkości.  
@@ -222,7 +222,7 @@ int GetBorder() const;
  Bieżący rozmiar obramowania (w pikselach).  
   
 ### <a name="remarks"></a>Uwagi  
- Ta metoda wysyła [PGM_GETBORDER](http://msdn.microsoft.com/library/windows/desktop/bb760869) komunikat, który jest opisany w zestawie Windows SDK.  
+ Ta metoda wysyła [PGM_GETBORDER](/windows/desktop/Controls/pgm-getborder) komunikat, który jest opisany w zestawie Windows SDK.  
   
 ### <a name="example"></a>Przykład  
  W poniższym przykładzie użyto [CPagerCtrl::GetBorder](#getborder) metodę, która pobierze grubość obramowania kontrolki pager.  
@@ -237,10 +237,10 @@ COLORREF GetBkColor() const;
 ```  
   
 ### <a name="return-value"></a>Wartość zwracana  
- A [COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449) wartość, która zawiera bieżący kolor tła kontrolki pager.  
+ A [COLORREF](/windows/desktop/gdi/colorref) wartość, która zawiera bieżący kolor tła kontrolki pager.  
   
 ### <a name="remarks"></a>Uwagi  
- Ta metoda wysyła [PGM_GETBKCOLOR](http://msdn.microsoft.com/library/windows/desktop/bb760868) komunikat, który jest opisany w zestawie Windows SDK.  
+ Ta metoda wysyła [PGM_GETBKCOLOR](/windows/desktop/Controls/pgm-getbkcolor) komunikat, który jest opisany w zestawie Windows SDK.  
   
 ### <a name="example"></a>Przykład  
  W poniższym przykładzie użyto [CPagerCtrl::SetBkColor](#setbkcolor) metodę, aby ustawić kolor tła kontroli pagera czerwony i [CPagerCtrl::GetBkColor](#getbkcolor) metody, aby upewnić się, że zmiana została wprowadzona.  
@@ -258,9 +258,9 @@ int GetButtonSize() const;
  Bieżący rozmiar przycisku (w pikselach).  
   
 ### <a name="remarks"></a>Uwagi  
- Ta metoda wysyła [PGM_GETBUTTONSIZE](http://msdn.microsoft.com/library/windows/desktop/bb760870) komunikat, który jest opisany w zestawie Windows SDK.  
+ Ta metoda wysyła [PGM_GETBUTTONSIZE](/windows/desktop/Controls/pgm-getbuttonsize) komunikat, który jest opisany w zestawie Windows SDK.  
   
- Jeśli formant pagera ma styl PGS_HORZ, rozmiar przycisku określa szerokość przyciski pagera, a jeśli formant pagera ma styl PGS_VERT, rozmiar przycisku określa wysokość przyciski pagera. Aby uzyskać więcej informacji, zobacz [style kontroli pagera](http://msdn.microsoft.com/library/windows/desktop/bb760859).  
+ Jeśli formant pagera ma styl PGS_HORZ, rozmiar przycisku określa szerokość przyciski pagera, a jeśli formant pagera ma styl PGS_VERT, rozmiar przycisku określa wysokość przyciski pagera. Aby uzyskać więcej informacji, zobacz [style kontroli pagera](/windows/desktop/Controls/pager-control-styles).  
   
 ##  <a name="getbuttonstate"></a>  CPagerCtrl::GetButtonState  
  Pobiera stan przycisku przewijania określonego w bieżącym kontroli pagera.  
@@ -273,16 +273,16 @@ DWORD GetButtonState(int iButton) const;
   
 |Parametr|Opis|  
 |---------------|-----------------|  
-|[in] *iButton*|Określa przycisk, którego stan jest pobierany. Jeśli styl kontroli pagera PGS_HORZ, należy określić PGB_TOPORLEFT przycisku po lewej stronie i PGB_BOTTOMORRIGHT prawy przycisk. Jeśli styl kontroli pagera PGS_VERT, należy określić PGB_TOPORLEFT przycisk u góry i PGB_BOTTOMORRIGHT przycisk u dołu. Aby uzyskać więcej informacji, zobacz [style kontroli pagera](http://msdn.microsoft.com/library/windows/desktop/bb760859).|  
+|[in] *iButton*|Określa przycisk, którego stan jest pobierany. Jeśli styl kontroli pagera PGS_HORZ, należy określić PGB_TOPORLEFT przycisku po lewej stronie i PGB_BOTTOMORRIGHT prawy przycisk. Jeśli styl kontroli pagera PGS_VERT, należy określić PGB_TOPORLEFT przycisk u góry i PGB_BOTTOMORRIGHT przycisk u dołu. Aby uzyskać więcej informacji, zobacz [style kontroli pagera](/windows/desktop/Controls/pager-control-styles).|  
   
 ### <a name="return-value"></a>Wartość zwracana  
- Stan przycisku określony przez *iButton* parametru. Stan to PGF_INVISIBLE, PGF_NORMAL, PGF_GRAYED, PGF_DEPRESSED albo PGF_HOT. Aby uzyskać więcej informacji, zobacz sekcję zwracają wartość [PGM_GETBUTTONSTATE](http://msdn.microsoft.com/library/windows/desktop/bb760871) wiadomości.  
+ Stan przycisku określony przez *iButton* parametru. Stan to PGF_INVISIBLE, PGF_NORMAL, PGF_GRAYED, PGF_DEPRESSED albo PGF_HOT. Aby uzyskać więcej informacji, zobacz sekcję zwracają wartość [PGM_GETBUTTONSTATE](/windows/desktop/Controls/pgm-getbuttonstate) wiadomości.  
   
 ### <a name="remarks"></a>Uwagi  
- Ta metoda wysyła [PGM_GETBUTTONSTATE](http://msdn.microsoft.com/library/windows/desktop/bb760871) komunikat, który jest opisany w zestawie Windows SDK.  
+ Ta metoda wysyła [PGM_GETBUTTONSTATE](/windows/desktop/Controls/pgm-getbuttonstate) komunikat, który jest opisany w zestawie Windows SDK.  
   
 ##  <a name="getdroptarget"></a>  CPagerCtrl::GetDropTarget  
- Pobiera [IDropTarget](http://msdn.microsoft.com/library/windows/desktop/ms679679) interfejs dla bieżącej kontroli pagera.  
+ Pobiera [IDropTarget](/windows/desktop/api/oleidl/nn-oleidl-idroptarget) interfejs dla bieżącej kontroli pagera.  
   
 ```  
 IDropTarget* GetDropTarget() const;  
@@ -294,7 +294,7 @@ IDropTarget* GetDropTarget() const;
 ### <a name="remarks"></a>Uwagi  
  `IDropTarget` to jeden z interfejsów wdrożenia do obsługi operacji przeciągania i upuszczania w aplikacji.  
   
- Ta metoda wysyła [PGM_GETDROPTARGET](http://msdn.microsoft.com/library/windows/desktop/bb760872) komunikat, który jest opisany w zestawie Windows SDK. Obiekt wywołujący tę metodę jest odpowiedzialny za wywołanie `Release` członkiem [IDropTarget](http://msdn.microsoft.com/library/windows/desktop/ms679679) interfejs, gdy interfejs nie jest już potrzebny.  
+ Ta metoda wysyła [PGM_GETDROPTARGET](/windows/desktop/Controls/pgm-getdroptarget) komunikat, który jest opisany w zestawie Windows SDK. Obiekt wywołujący tę metodę jest odpowiedzialny za wywołanie `Release` członkiem [IDropTarget](/windows/desktop/api/oleidl/nn-oleidl-idroptarget) interfejs, gdy interfejs nie jest już potrzebny.  
   
 ##  <a name="getscrollpos"></a>  CPagerCtrl::GetScrollPos  
  Pobiera położenie przewijania bieżącą kontroli pagera.  
@@ -307,7 +307,7 @@ int GetScrollPos() const;
  Bieżące położenie przewijania (w pikselach).  
   
 ### <a name="remarks"></a>Uwagi  
- Ta metoda wysyła [PGM_GETPOS](http://msdn.microsoft.com/library/windows/desktop/bb760874) komunikat, który jest opisany w zestawie Windows SDK.  
+ Ta metoda wysyła [PGM_GETPOS](/windows/desktop/Controls/pgm-getpos) komunikat, który jest opisany w zestawie Windows SDK.  
   
 ### <a name="example"></a>Przykład  
  W poniższym przykładzie użyto [CPagerCtrl::GetScrollPos](#getscrollpos) metodę, która pobierze bieżące położenie przewijania kontroli pagera. Jeśli formant pagera nie jest już przewijane do zera, skrajnie po lewej stronie pozycji w przykładzie użyto [CPagerCtrl::SetScrollPos](#setscrollpos) metodę, aby ustawić położenie przewijania na zero.  
@@ -325,13 +325,13 @@ BOOL IsButtonDepressed(int iButton) const;
   
 |Parametr|Opis|  
 |---------------|-----------------|  
-|[in] *iButton*|Określa przycisk, którego stan jest pobierany. Jeśli styl kontroli pagera PGS_HORZ, należy określić PGB_TOPORLEFT przycisku po lewej stronie i PGB_BOTTOMORRIGHT prawy przycisk. Jeśli styl kontroli pagera PGS_VERT, należy określić PGB_TOPORLEFT przycisk u góry i PGB_BOTTOMORRIGHT przycisk u dołu. Aby uzyskać więcej informacji, zobacz [style kontroli pagera](http://msdn.microsoft.com/library/windows/desktop/bb760859).|  
+|[in] *iButton*|Określa przycisk, którego stan jest pobierany. Jeśli styl kontroli pagera PGS_HORZ, należy określić PGB_TOPORLEFT przycisku po lewej stronie i PGB_BOTTOMORRIGHT prawy przycisk. Jeśli styl kontroli pagera PGS_VERT, należy określić PGB_TOPORLEFT przycisk u góry i PGB_BOTTOMORRIGHT przycisk u dołu. Aby uzyskać więcej informacji, zobacz [style kontroli pagera](/windows/desktop/Controls/pager-control-styles).|  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Wartość TRUE, jeśli określony przycisk znajduje się w stanie po naciśnięciu; w przeciwnym razie wartość FALSE.  
   
 ### <a name="remarks"></a>Uwagi  
- Ta metoda wysyła [PGM_GETBUTTONSTATE](http://msdn.microsoft.com/library/windows/desktop/bb760871) komunikat, który jest opisany w zestawie Windows SDK. Następnie sprawdza, czy stan, który jest zwracany jest PGF_DEPRESSED. Aby uzyskać więcej informacji, zobacz sekcję zwracają wartość [PGM_GETBUTTONSTATE](http://msdn.microsoft.com/library/windows/desktop/bb760871) wiadomości.  
+ Ta metoda wysyła [PGM_GETBUTTONSTATE](/windows/desktop/Controls/pgm-getbuttonstate) komunikat, który jest opisany w zestawie Windows SDK. Następnie sprawdza, czy stan, który jest zwracany jest PGF_DEPRESSED. Aby uzyskać więcej informacji, zobacz sekcję zwracają wartość [PGM_GETBUTTONSTATE](/windows/desktop/Controls/pgm-getbuttonstate) wiadomości.  
   
 ##  <a name="isbuttongrayed"></a>  CPagerCtrl::IsButtonGrayed  
  Wskazuje, czy przycisk przewijania określonego bieżącej kontroli pagera znajduje się w stanie wygaszone.  
@@ -344,13 +344,13 @@ BOOL IsButtonGrayed(int iButton) const;
   
 |Parametr|Opis|  
 |---------------|-----------------|  
-|[in] *iButton*|Określa przycisk, którego stan jest pobierany. Jeśli styl kontroli pagera PGS_HORZ, należy określić PGB_TOPORLEFT przycisku po lewej stronie i PGB_BOTTOMORRIGHT prawy przycisk. Jeśli styl kontroli pagera PGS_VERT, należy określić PGB_TOPORLEFT przycisk u góry i PGB_BOTTOMORRIGHT przycisk u dołu. Aby uzyskać więcej informacji, zobacz [style kontroli pagera](http://msdn.microsoft.com/library/windows/desktop/bb760859).|  
+|[in] *iButton*|Określa przycisk, którego stan jest pobierany. Jeśli styl kontroli pagera PGS_HORZ, należy określić PGB_TOPORLEFT przycisku po lewej stronie i PGB_BOTTOMORRIGHT prawy przycisk. Jeśli styl kontroli pagera PGS_VERT, należy określić PGB_TOPORLEFT przycisk u góry i PGB_BOTTOMORRIGHT przycisk u dołu. Aby uzyskać więcej informacji, zobacz [style kontroli pagera](/windows/desktop/Controls/pager-control-styles).|  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Wartość TRUE, jeśli określony przycisk znajduje się w stanie wygaszone; w przeciwnym razie wartość FALSE.  
   
 ### <a name="remarks"></a>Uwagi  
- Ta metoda wysyła [PGM_GETBUTTONSTATE](http://msdn.microsoft.com/library/windows/desktop/bb760871) komunikat, który jest opisany w zestawie Windows SDK. Następnie sprawdza, czy stan, który jest zwracany jest PGF_GRAYED. Aby uzyskać więcej informacji, zobacz sekcję zwracają wartość [PGM_GETBUTTONSTATE](http://msdn.microsoft.com/library/windows/desktop/bb760871) wiadomości.  
+ Ta metoda wysyła [PGM_GETBUTTONSTATE](/windows/desktop/Controls/pgm-getbuttonstate) komunikat, który jest opisany w zestawie Windows SDK. Następnie sprawdza, czy stan, który jest zwracany jest PGF_GRAYED. Aby uzyskać więcej informacji, zobacz sekcję zwracają wartość [PGM_GETBUTTONSTATE](/windows/desktop/Controls/pgm-getbuttonstate) wiadomości.  
   
 ##  <a name="isbuttonhot"></a>  CPagerCtrl::IsButtonHot  
  Wskazuje, czy przycisk przewijania określonego bieżącej kontroli pagera znajduje się w stanie.  
@@ -363,13 +363,13 @@ BOOL IsButtonHot(int iButton) const;
   
 |Parametr|Opis|  
 |---------------|-----------------|  
-|[in] *iButton*|Określa przycisk, którego stan jest pobierany. Jeśli styl kontroli pagera PGS_HORZ, należy określić PGB_TOPORLEFT przycisku po lewej stronie i PGB_BOTTOMORRIGHT prawy przycisk. Jeśli styl kontroli pagera PGS_VERT, należy określić PGB_TOPORLEFT przycisk u góry i PGB_BOTTOMORRIGHT przycisk u dołu. Aby uzyskać więcej informacji, zobacz [style kontroli pagera](http://msdn.microsoft.com/library/windows/desktop/bb760859).|  
+|[in] *iButton*|Określa przycisk, którego stan jest pobierany. Jeśli styl kontroli pagera PGS_HORZ, należy określić PGB_TOPORLEFT przycisku po lewej stronie i PGB_BOTTOMORRIGHT prawy przycisk. Jeśli styl kontroli pagera PGS_VERT, należy określić PGB_TOPORLEFT przycisk u góry i PGB_BOTTOMORRIGHT przycisk u dołu. Aby uzyskać więcej informacji, zobacz [style kontroli pagera](/windows/desktop/Controls/pager-control-styles).|  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Wartość TRUE, jeśli określony przycisk znajduje się w stanie; w przeciwnym razie wartość FALSE.  
   
 ### <a name="remarks"></a>Uwagi  
- Ta metoda wysyła [PGM_GETBUTTONSTATE](http://msdn.microsoft.com/library/windows/desktop/bb760871) komunikat, który jest opisany w zestawie Windows SDK. Następnie sprawdza, czy stan, który jest zwracany jest PGF_HOT. Aby uzyskać więcej informacji, zobacz sekcję zwracają wartość [PGM_GETBUTTONSTATE](http://msdn.microsoft.com/library/windows/desktop/bb760871) wiadomości.  
+ Ta metoda wysyła [PGM_GETBUTTONSTATE](/windows/desktop/Controls/pgm-getbuttonstate) komunikat, który jest opisany w zestawie Windows SDK. Następnie sprawdza, czy stan, który jest zwracany jest PGF_HOT. Aby uzyskać więcej informacji, zobacz sekcję zwracają wartość [PGM_GETBUTTONSTATE](/windows/desktop/Controls/pgm-getbuttonstate) wiadomości.  
   
 ##  <a name="isbuttoninvisible"></a>  CPagerCtrl::IsButtonInvisible  
  Wskazuje, czy przycisku przewijania określonego bieżącą kontroli pagera jest w stanie niewidoczne.  
@@ -382,7 +382,7 @@ BOOL IsButtonInvisible(int iButton) const;
   
 |Parametr|Opis|  
 |---------------|-----------------|  
-|[in] *iButton*|Określa przycisk, którego stan jest pobierany. Jeśli styl kontroli pagera PGS_HORZ, należy określić PGB_TOPORLEFT przycisku po lewej stronie i PGB_BOTTOMORRIGHT prawy przycisk. Jeśli styl kontroli pagera PGS_VERT, należy określić PGB_TOPORLEFT przycisk u góry i PGB_BOTTOMORRIGHT przycisk u dołu. Aby uzyskać więcej informacji, zobacz [style kontroli pagera](http://msdn.microsoft.com/library/windows/desktop/bb760859).|  
+|[in] *iButton*|Określa przycisk, którego stan jest pobierany. Jeśli styl kontroli pagera PGS_HORZ, należy określić PGB_TOPORLEFT przycisku po lewej stronie i PGB_BOTTOMORRIGHT prawy przycisk. Jeśli styl kontroli pagera PGS_VERT, należy określić PGB_TOPORLEFT przycisk u góry i PGB_BOTTOMORRIGHT przycisk u dołu. Aby uzyskać więcej informacji, zobacz [style kontroli pagera](/windows/desktop/Controls/pager-control-styles).|  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Wartość TRUE, jeśli określony przycisk znajduje się w stanie niewidoczne; w przeciwnym razie wartość FALSE.  
@@ -390,7 +390,7 @@ BOOL IsButtonInvisible(int iButton) const;
 ### <a name="remarks"></a>Uwagi  
  Windows sprawia, że przycisk przewijania w określonym kierunku niewidoczne po zawartego okna jest przewijane w jego zakresie położony, ponieważ kliknięcie przycisku Dalej nie można przełączyć więcej zawartego okna w widoku.  
   
- Ta metoda wysyła [PGM_GETBUTTONSTATE](http://msdn.microsoft.com/library/windows/desktop/bb760871) komunikat, który jest opisany w zestawie Windows SDK. Następnie sprawdza, czy stan, który jest zwracany jest PGF_INVISIBLE. Aby uzyskać więcej informacji, zobacz sekcję zwracają wartość [PGM_GETBUTTONSTATE](http://msdn.microsoft.com/library/windows/desktop/bb760871) wiadomości.  
+ Ta metoda wysyła [PGM_GETBUTTONSTATE](/windows/desktop/Controls/pgm-getbuttonstate) komunikat, który jest opisany w zestawie Windows SDK. Następnie sprawdza, czy stan, który jest zwracany jest PGF_INVISIBLE. Aby uzyskać więcej informacji, zobacz sekcję zwracają wartość [PGM_GETBUTTONSTATE](/windows/desktop/Controls/pgm-getbuttonstate) wiadomości.  
   
 ### <a name="example"></a>Przykład  
  W poniższym przykładzie użyto [CPagerCtrl::IsButtonInvisible](#isbuttoninvisible) metodę, aby określić, czy formant pagera lewą i przyciski przewijania w prawo są wyświetlane.  
@@ -408,13 +408,13 @@ BOOL IsButtonNormal(int iButton) const;
   
 |Parametr|Opis|  
 |---------------|-----------------|  
-|[in] *iButton*|Określa przycisk, którego stan jest pobierany. Jeśli styl kontroli pagera PGS_HORZ, należy określić PGB_TOPORLEFT przycisku po lewej stronie i PGB_BOTTOMORRIGHT prawy przycisk. Jeśli styl kontroli pagera PGS_VERT, należy określić PGB_TOPORLEFT przycisk u góry i PGB_BOTTOMORRIGHT przycisk u dołu. Aby uzyskać więcej informacji, zobacz [style kontroli pagera](http://msdn.microsoft.com/library/windows/desktop/bb760859).|  
+|[in] *iButton*|Określa przycisk, którego stan jest pobierany. Jeśli styl kontroli pagera PGS_HORZ, należy określić PGB_TOPORLEFT przycisku po lewej stronie i PGB_BOTTOMORRIGHT prawy przycisk. Jeśli styl kontroli pagera PGS_VERT, należy określić PGB_TOPORLEFT przycisk u góry i PGB_BOTTOMORRIGHT przycisk u dołu. Aby uzyskać więcej informacji, zobacz [style kontroli pagera](/windows/desktop/Controls/pager-control-styles).|  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Wartość TRUE, jeśli określony przycisk znajduje się w normalnym stanie.; w przeciwnym razie wartość FALSE.  
   
 ### <a name="remarks"></a>Uwagi  
- Ta metoda wysyła [PGM_GETBUTTONSTATE](http://msdn.microsoft.com/library/windows/desktop/bb760871) komunikat, który jest opisany w zestawie Windows SDK. Następnie sprawdza, czy stan, który jest zwracany jest PGF_NORMAL. Aby uzyskać więcej informacji, zobacz sekcję zwracają wartość [PGM_GETBUTTONSTATE](http://msdn.microsoft.com/library/windows/desktop/bb760871) wiadomości.  
+ Ta metoda wysyła [PGM_GETBUTTONSTATE](/windows/desktop/Controls/pgm-getbuttonstate) komunikat, który jest opisany w zestawie Windows SDK. Następnie sprawdza, czy stan, który jest zwracany jest PGF_NORMAL. Aby uzyskać więcej informacji, zobacz sekcję zwracają wartość [PGM_GETBUTTONSTATE](/windows/desktop/Controls/pgm-getbuttonstate) wiadomości.  
   
 ##  <a name="recalcsize"></a>  CPagerCtrl::RecalcSize  
  Powoduje, że bieżący formant pagera, i ponownie oblicza rozmiar okna zawarte.  
@@ -424,7 +424,7 @@ void RecalcSize();
 ```  
   
 ### <a name="remarks"></a>Uwagi  
- Ta metoda wysyła [PGM_RECALCSIZE](http://msdn.microsoft.com/library/windows/desktop/bb760876) komunikat, który jest opisany w zestawie Windows SDK. W związku z tym, kontroli pagera wysyła [PGN_CALCSIZE](http://msdn.microsoft.com/library/windows/desktop/bb760864) powiadomienie, aby uzyskać przewijalne wymiary zawartego okna.  
+ Ta metoda wysyła [PGM_RECALCSIZE](/windows/desktop/Controls/pgm-recalcsize) komunikat, który jest opisany w zestawie Windows SDK. W związku z tym, kontroli pagera wysyła [PGN_CALCSIZE](/windows/desktop/Controls/pgn-calcsize) powiadomienie, aby uzyskać przewijalne wymiary zawartego okna.  
   
 ### <a name="example"></a>Przykład  
  W poniższym przykładzie użyto [CPagerCtrl::RecalcSize](#recalcsize) metodę, aby zażądać bieżącej kontroli pagera, aby ponownie obliczyć jej rozmiaru.  
@@ -432,7 +432,7 @@ void RecalcSize();
  [!code-cpp[NVC_MFC_CSplitButton_s2#3](../../mfc/reference/codesnippet/cpp/cpagerctrl-class_6.cpp)]  
   
 ### <a name="example"></a>Przykład  
- W poniższym przykładzie użyto [komunikatu odbicia](../../mfc/tn062-message-reflection-for-windows-controls.md) do włączania kontroli pagera ponownego obliczenia rozmiaru zamiast okno nadrzędne kontrolki do wykonywania obliczeń. Przykład pochodzi `MyPagerCtrl` klasy z [klasa CPagerCtrl](../../mfc/reference/cpagerctrl-class.md), następnie używa mapy komunikatów, aby skojarzyć [PGN_CALCSIZE](http://msdn.microsoft.com/library/windows/desktop/bb760864) powiadomienia o `OnCalcsize` obsługi powiadomień. W tym przykładzie obsługi powiadomień Ustawia szerokość i wysokość kontroli pagera wartości stałych.  
+ W poniższym przykładzie użyto [komunikatu odbicia](../../mfc/tn062-message-reflection-for-windows-controls.md) do włączania kontroli pagera ponownego obliczenia rozmiaru zamiast okno nadrzędne kontrolki do wykonywania obliczeń. Przykład pochodzi `MyPagerCtrl` klasy z [klasa CPagerCtrl](../../mfc/reference/cpagerctrl-class.md), następnie używa mapy komunikatów, aby skojarzyć [PGN_CALCSIZE](/windows/desktop/Controls/pgn-calcsize) powiadomienia o `OnCalcsize` obsługi powiadomień. W tym przykładzie obsługi powiadomień Ustawia szerokość i wysokość kontroli pagera wartości stałych.  
   
  [!code-cpp[NVC_MFC_CSplitButton_s2#8](../../mfc/reference/codesnippet/cpp/cpagerctrl-class_7.cpp)]  
   
@@ -447,13 +447,13 @@ COLORREF SetBkColor(COLORREF clrBk);
   
 |Parametr|Opis|  
 |---------------|-----------------|  
-|[in] *clrBk*|A [COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449) wartość, która zawiera nowy kolor tła kontrolki pager.|  
+|[in] *clrBk*|A [COLORREF](/windows/desktop/gdi/colorref) wartość, która zawiera nowy kolor tła kontrolki pager.|  
   
 ### <a name="return-value"></a>Wartość zwracana  
- A [COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449) wartość, która zawiera poprzedni kolor tła kontroli pagera.  
+ A [COLORREF](/windows/desktop/gdi/colorref) wartość, która zawiera poprzedni kolor tła kontroli pagera.  
   
 ### <a name="remarks"></a>Uwagi  
- Ta metoda wysyła [PGM_SETBKCOLOR](http://msdn.microsoft.com/library/windows/desktop/bb760878) komunikat, który jest opisany w zestawie Windows SDK.  
+ Ta metoda wysyła [PGM_SETBKCOLOR](/windows/desktop/Controls/pgm-setbkcolor) komunikat, który jest opisany w zestawie Windows SDK.  
   
 ### <a name="example"></a>Przykład  
  W poniższym przykładzie użyto [CPagerCtrl::SetBkColor](#setbkcolor) metodę, aby ustawić kolor tła kontroli pagera czerwony i [CPagerCtrl::GetBkColor](#getbkcolor) metody, aby upewnić się, że zmiana została wprowadzona.  
@@ -477,7 +477,7 @@ int SetBorder(int iBorder);
  Poprzedni rozmiar obramowania (w pikselach).  
   
 ### <a name="remarks"></a>Uwagi  
- Ta metoda wysyła [PGM_SETBORDER](http://msdn.microsoft.com/library/windows/desktop/bb760880) komunikat, który jest opisany w zestawie Windows SDK.  
+ Ta metoda wysyła [PGM_SETBORDER](/windows/desktop/Controls/pgm-setborder) komunikat, który jest opisany w zestawie Windows SDK.  
   
 ### <a name="example"></a>Przykład  
  Poniższy przykład tworzy formant pagera, a następnie używa [CPagerCtrl::SetChild](#setchild) metoda powiązania kontrolki przycisku bardzo długich przy użyciu kontroli pagera. Następnie w przykładzie [CPagerCtrl::SetButtonSize](#setbuttonsize) metodę, aby ustawić wysokość kontroli pagera do 20 pikseli i [CPagerCtrl::SetBorder](#setborder) metodę, aby ustawić grubość obramowania do 1 piksela.  
@@ -501,9 +501,9 @@ int SetButtonSize(int iButtonSize);
  Poprzedni rozmiar przycisku (w pikselach).  
   
 ### <a name="remarks"></a>Uwagi  
- Ta metoda wysyła [PGM_SETBUTTONSIZE](http://msdn.microsoft.com/library/windows/desktop/bb760886) komunikat, który jest opisany w zestawie Windows SDK.  
+ Ta metoda wysyła [PGM_SETBUTTONSIZE](/windows/desktop/Controls/pgm-setpos) komunikat, który jest opisany w zestawie Windows SDK.  
   
- Jeśli formant pagera ma styl PGS_HORZ, rozmiar przycisku określa szerokość przyciski pagera, a jeśli formant pagera ma styl PGS_VERT, rozmiar przycisku określa wysokość przyciski pagera. Domyślny rozmiar przycisku to trzy czwarte szerokości paska przewijania, a rozmiar przycisku minimalnych to 12 pikseli. Aby uzyskać więcej informacji, zobacz [style kontroli pagera](http://msdn.microsoft.com/library/windows/desktop/bb760859).  
+ Jeśli formant pagera ma styl PGS_HORZ, rozmiar przycisku określa szerokość przyciski pagera, a jeśli formant pagera ma styl PGS_VERT, rozmiar przycisku określa wysokość przyciski pagera. Domyślny rozmiar przycisku to trzy czwarte szerokości paska przewijania, a rozmiar przycisku minimalnych to 12 pikseli. Aby uzyskać więcej informacji, zobacz [style kontroli pagera](/windows/desktop/Controls/pager-control-styles).  
   
 ### <a name="example"></a>Przykład  
  Poniższy przykład tworzy formant pagera, a następnie używa [CPagerCtrl::SetChild](#setchild) metoda powiązania kontrolki przycisku bardzo długich przy użyciu kontroli pagera. Następnie w przykładzie [CPagerCtrl::SetButtonSize](#setbuttonsize) metodę, aby ustawić wysokość kontroli pagera do 20 pikseli i [CPagerCtrl::SetBorder](#setborder) metodę, aby ustawić grubość obramowania do 1 piksela.  
@@ -524,7 +524,7 @@ void SetChild(HWND hwndChild);
 |[in] *hwndChild*|Dojście do okna, które mają zostać zawarte.|  
   
 ### <a name="remarks"></a>Uwagi  
- Ta metoda wysyła [PGM_SETCHILD](http://msdn.microsoft.com/library/windows/desktop/bb760884) komunikat, który jest opisany w zestawie Windows SDK.  
+ Ta metoda wysyła [PGM_SETCHILD](/windows/desktop/Controls/pgm-setchild) komunikat, który jest opisany w zestawie Windows SDK.  
   
  Ta metoda nie powoduje zmiany nadrzędnego zawartego okna; przypisuje tylko uchwyt okna do kontroli pagera przewijania. W większości przypadków zawartego okna będzie kontroli pagera okna podrzędnego.  
   
@@ -547,12 +547,12 @@ void SetScrollPos(int iPos);
 |[in] *iPos*|Nowe położenie przewijania (w pikselach).|  
   
 ### <a name="remarks"></a>Uwagi  
- Ta metoda wysyła [PGM_SETPOS](http://msdn.microsoft.com/library/windows/desktop/bb760886) komunikat, który jest opisany w zestawie Windows SDK.  
+ Ta metoda wysyła [PGM_SETPOS](/windows/desktop/Controls/pgm-setpos) komunikat, który jest opisany w zestawie Windows SDK.  
   
 ## <a name="see-also"></a>Zobacz też  
  [Klasa CPagerCtrl](../../mfc/reference/cpagerctrl-class.md)   
  [Diagram hierarchii](../../mfc/hierarchy-chart.md)   
- [Formanty pager](http://msdn.microsoft.com/library/windows/desktop/bb760855)
+ [Formanty pager](/windows/desktop/Controls/pager-controls)
 
 
 

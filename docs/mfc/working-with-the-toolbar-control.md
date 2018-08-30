@@ -17,36 +17,36 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 32d3cc6244bc2f928c8d1d0c6e46d1bc5a57aa3b
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: e488d4b475cbc73f57bb90ccd081b6d490221d58
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33385940"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43202263"
 ---
 # <a name="working-with-the-toolbar-control"></a>Praca z formantem paska narzędzi
-W tym artykule opisano, jak można pobrać [CToolBarCtrl](../mfc/reference/ctoolbarctrl-class.md) obiekt podstawowy [ctoolbar —](../mfc/reference/ctoolbar-class.md) uzyskać większą kontrolę nad pasków narzędzi. Jest to zaawansowane tematu.  
+W tym artykule wyjaśniono, jak można pobrać [CToolBarCtrl](../mfc/reference/ctoolbarctrl-class.md) obiektu bazowego [CToolBar](../mfc/reference/ctoolbar-class.md) uzyskać większą kontrolę nad pasków narzędzi. Jest to zaawansowane tematu.  
   
 ## <a name="procedures"></a>Procedury  
   
-#### <a name="to-access-the-toolbar-common-control-underlying-your-ctoolbar-object"></a>Aby dostęp do narzędzi formantu wspólnego źródłowego obiektu ctoolbar —  
+#### <a name="to-access-the-toolbar-common-control-underlying-your-ctoolbar-object"></a>Aby uzyskać dostęp bazowy obiekt CToolBar formantu typowego paska narzędzi  
   
-1.  Wywołanie [CToolBar::GetToolBarCtrl](../mfc/reference/ctoolbar-class.md#gettoolbarctrl).  
+1.  Wywołaj [CToolBar::GetToolBarCtrl](../mfc/reference/ctoolbar-class.md#gettoolbarctrl).  
   
- `GetToolBarCtrl` Zwraca odwołanie do [CToolBarCtrl](../mfc/reference/ctoolbarctrl-class.md) obiektu. Można użyć odwołania do wywołania funkcji elementów członkowskich klasy formantu paska narzędzi.  
+ `GetToolBarCtrl` Zwraca odwołanie do [CToolBarCtrl](../mfc/reference/ctoolbarctrl-class.md) obiektu. Odwołania można użyć do wywołania funkcji elementów członkowskich klasy kontrolki paska narzędzi.  
   
 > [!CAUTION]
->  Podczas wywoływania `CToolBarCtrl` **uzyskać** funkcji jest bezpieczne, jeśli wywołujesz należy zachować ostrożność **ustawić** funkcji. Jest to zaawansowane tematu. Zwykle nie należy dostęp do podstawowych formantu paska narzędzi.  
+>  Podczas wywoływania `CToolBarCtrl` **uzyskać** funkcji jest bezpieczne, jeśli wywołasz należy zachować ostrożność **ustaw** funkcji. Jest to zaawansowane tematu. Zwykle nie należy uzyskać dostęp do podstawowych formantu paska narzędzi.  
   
-### <a name="what-do-you-want-to-know-more-about"></a>Co chcesz dowiedzieć się więcej o  
+### <a name="what-do-you-want-to-know-more-about"></a>Co chcesz dowiedzieć się więcej na temat  
   
--   [Formanty (formanty standardowe systemu Windows)](../mfc/controls-mfc.md)  
+-   [Formanty (wspólnych formantów Windows)](../mfc/controls-mfc.md)  
   
--   [Podstawowe informacje na temat narzędzi](../mfc/toolbar-fundamentals.md)  
+-   [Podstawowe informacje dotyczące narzędzi](../mfc/toolbar-fundamentals.md)  
   
 -   [Zadokowane i przestawne paski narzędzi](../mfc/docking-and-floating-toolbars.md)  
   
--   [Dynamiczne zmiany rozmiaru paska narzędzi](../mfc/docking-and-floating-toolbars.md)  
+-   [Dynamiczne zmiany rozmiaru na pasku narzędzi](../mfc/docking-and-floating-toolbars.md)  
   
 -   [Etykietki narzędzi paska narzędzi](../mfc/toolbar-tool-tips.md)  
   
@@ -54,7 +54,7 @@ W tym artykule opisano, jak można pobrać [CToolBarCtrl](../mfc/reference/ctool
   
 -   [Obsługa powiadomień dotyczących etykietek narzędzi](../mfc/handling-tool-tip-notifications.md)  
   
--   [Ctoolbar —](../mfc/reference/ctoolbar-class.md) i [CToolBarCtrl](../mfc/reference/ctoolbarctrl-class.md) klas  
+-   [CToolBar](../mfc/reference/ctoolbar-class.md) i [CToolBarCtrl](../mfc/reference/ctoolbarctrl-class.md) klas  
   
 -   [Obsługa powiadomień dotyczących dostosowania](../mfc/handling-customization-notifications.md)  
   
@@ -64,7 +64,7 @@ W tym artykule opisano, jak można pobrać [CToolBarCtrl](../mfc/reference/ctool
   
 -   [Paski sterowania](../mfc/control-bars.md)  
   
- Aby uzyskać ogólne informacje o używaniu formanty standardowe systemu Windows, temacie [formanty standardowe](http://msdn.microsoft.com/library/windows/desktop/bb775493).  
+ Aby uzyskać ogólne informacje o użyciu wspólnych formantów Windows, zobacz [wspólnych formantów](/windows/desktop/Controls/common-controls-intro).  
   
 ## <a name="see-also"></a>Zobacz też  
  [MFC, implementacja paska narzędzi](../mfc/mfc-toolbar-implementation.md)

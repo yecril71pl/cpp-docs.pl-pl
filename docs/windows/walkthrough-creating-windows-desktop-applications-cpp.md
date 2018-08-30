@@ -16,12 +16,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 724772c0057d5defc8bfa3e2207df85d3a207f31
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: e9a946689d563f1c681fee305ec05438bc5eb687
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42590297"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43204741"
 ---
 # <a name="walkthrough-create-a-traditional-windows-desktop-application-c"></a>Przewodnik: Tworzenie tradycyjnych aplikacji Windows Desktop (C++)
 
@@ -219,7 +219,7 @@ Następnie dowiesz się, jak utworzyć kod dla aplikacji klasycznych Windows w p
    }
    ```
 
-   Ta funkcja zwraca `HWND`, który jest uchwytem do okna. Dojście jest nieco jak wskaźnik, który Windows jest używane do śledzenia otwarte okna. Aby uzyskać więcej informacji, zobacz [typy danych Windows](https://msdn.microsoft.com/library/windows/desktop/aa383751).
+   Ta funkcja zwraca `HWND`, który jest uchwytem do okna. Dojście jest nieco jak wskaźnik, który Windows jest używane do śledzenia otwarte okna. Aby uzyskać więcej informacji, zobacz [typy danych Windows](/windows/desktop/WinProg/windows-data-types).
 
 1. W tym momencie okna została utworzona, ale nadal należy przekazać do Windows, aby była widoczna. To znaczy, co robi ten kod:
 
@@ -340,9 +340,9 @@ Następnie dowiesz się, jak utworzyć kod dla aplikacji klasycznych Windows w p
 
 1. Aby włączyć `WndProc` funkcji obsługi wiadomości otrzymywanych przez aplikację, Wdróż instrukcję przełącznika.
 
-   Co ważne komunikat do obsłużenia to [WM_PAINT](https://msdn.microsoft.com/library/windows/desktop/dd145213) wiadomości. Aplikacja otrzymuje tę wiadomość, gdy część jej wyświetlanego okna musi zostać zaktualizowany. To zdarzenie może wystąpić, gdy użytkownik przesuwa okno przed okna, a następnie przenosi ją natychmiast ponownie. Aplikacja nie wie, po wystąpieniu zdarzenia następująco; tylko Windows zna, więc powiadomi użytkownika o `WM_PAINT`. Po wyświetleniu okna należy zaktualizować wszystkie.
+   Co ważne komunikat do obsłużenia to [WM_PAINT](/windows/desktop/gdi/wm-paint) wiadomości. Aplikacja otrzymuje tę wiadomość, gdy część jej wyświetlanego okna musi zostać zaktualizowany. To zdarzenie może wystąpić, gdy użytkownik przesuwa okno przed okna, a następnie przenosi ją natychmiast ponownie. Aplikacja nie wie, po wystąpieniu zdarzenia następująco; tylko Windows zna, więc powiadomi użytkownika o `WM_PAINT`. Po wyświetleniu okna należy zaktualizować wszystkie.
 
-   Aby obsłużyć `WM_PAINT` komunikatu, pierwsze wywołanie [BeginPaint](https://msdn.microsoft.com/library/windows/desktop/dd183362), a następnie obsłuż całą logikę układu tekstu, przycisków i innych kontrolek w oknie, a następnie wywołaj [EndPaint](https://msdn.microsoft.com/library/windows/desktop/dd162598). Dla tej aplikacji logika między wywołaniem rozpoczęcia z zakończenia jest wyświetlić napis "Hello, pulpitu Windows!" w oknie. W poniższym kodzie Zauważ, że [TextOut](https://msdn.microsoft.com/library/windows/desktop/dd145133) funkcja służy do wyświetlenia ciągu.
+   Aby obsłużyć `WM_PAINT` komunikatu, pierwsze wywołanie [BeginPaint](/windows/desktop/api/winuser/nf-winuser-beginpaint), a następnie obsłuż całą logikę układu tekstu, przycisków i innych kontrolek w oknie, a następnie wywołaj [EndPaint](/windows/desktop/api/winuser/nf-winuser-endpaint). Dla tej aplikacji logika między wywołaniem rozpoczęcia z zakończenia jest wyświetlić napis "Hello, pulpitu Windows!" w oknie. W poniższym kodzie Zauważ, że [TextOut](/windows/desktop/api/wingdi/nf-wingdi-textouta) funkcja służy do wyświetlenia ciągu.
 
    ```cpp
    PAINTSTRUCT ps;
@@ -369,7 +369,7 @@ Następnie dowiesz się, jak utworzyć kod dla aplikacji klasycznych Windows w p
 
    `HDC` w tym kodzie jest uchwytem do kontekstu urządzenia, która jest strukturą danych, której Windows używa, aby umożliwić aplikacji do komunikowania się z podsystem grafiki. `BeginPaint` i `EndPaint` funkcji upewnij się, że aplikacja zachowuje się jak jest "pełnoprawnym" w dobrej i nie używa kontekstu urządzenia przez dłuższy czas, nie należy go. Pozwala to zagwarantować, że podsystem grafiki jest dostępny do użytku przez inne aplikacje.
 
-1. Aplikacja zazwyczaj obsługuje wiele innych wiadomości, na przykład [WM_CREATE](https://msdn.microsoft.com/library/windows/desktop/ms632619) podczas okna i [WM_DESTROY](https://msdn.microsoft.com/library/windows/desktop/ms632620) po zamknięciu okna. Poniższy kod przedstawia podstawowe lecz ukończenia `WndProc` funkcji.
+1. Aplikacja zazwyczaj obsługuje wiele innych wiadomości, na przykład [WM_CREATE](/windows/desktop/winmsg/wm-create) podczas okna i [WM_DESTROY](/windows/desktop/winmsg/wm-destroy) po zamknięciu okna. Poniższy kod przedstawia podstawowe lecz ukończenia `WndProc` funkcji.
 
    ```cpp
    LRESULT CALLBACK WndProc(HWND hWnd, UINT message, WPARAM wParam, LPARAM lParam)

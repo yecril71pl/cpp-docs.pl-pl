@@ -20,26 +20,21 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a8d7366a2c0a1b8ae9ed4e37eaaa89de9baf794d
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: bbb47eae81df8b1080480843bfa5a444f6eb989f
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32388909"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43196979"
 ---
 # <a name="one-dimensional-arrays"></a>Tablice jednowymiarowe
-Wyrażenie przyrostek następuje wyrażenia w nawiasach kwadratowych (**[**) jako reprezentacja elementu tablicy obiektów. Wyrażenia indeksu dolnego reprezentuje wartość na adres, który jest *wyrażenie* umieszcza poza *wyrażenie przyrostek* wyrażone jako  
+Wyrażenie przyrostkowe następują wyrażenia w nawiasach kwadratowych (**[**) jest indeksem reprezentacja elementu tablicy obiektów. Wyrażenie indeksu dolnego reprezentuje wartość pod adresem, który jest *wyrażenie* umieszcza poza *wyrażeniem przyrostkowym* wyrażone jako  
   
 ```  
-  
-postfix-expression  
-[  
-expression  
-]  
-  
+postfix-expression [ expression ]
 ```  
   
- Zazwyczaj reprezentowany przez wartość *wyrażenie przyrostek* jest wartość wskaźnika, na przykład identyfikator tablicy i *wyrażenie* jest wartością całkowitą. Wszystko jest jednak wymagana Składnia tego jedno z wyrażeń jest typu wskaźnika i innych być typu całkowitego. W związku z tym może być wartością całkowitą w *wyrażenie przyrostek* pozycji i wartości wskaźnika, które mogą być w nawiasach w *wyrażenie*, lub pozycji "indeksu". Na przykład ten kod jest prawnych:  
+ Zwykle reprezentowany przez wartość *wyrażeniem przyrostkowym* jest wartością wskaźnika, takich jak identyfikator tablicy, a *wyrażenie* jest wartością całkowitą. Jednakże, wszystko co jest wymagane składniowo tego jednego z wyrażeń jest typu wskaźnika i innych być typu całkowitego. Ten sposób może być wartością typu całkowitego *wyrażeniem przyrostkowym* położenie i wartość wskaźnika można w nawiasach w *wyrażenie*, lub pozycji "indeksu dolnego,". Na przykład ten kod jest dozwolony:  
   
 ```  
 // one_dimensional_arrays.c  
@@ -50,9 +45,9 @@ int main() {
 }  
 ```  
   
- Wyrażenia indeksu dolnego są zazwyczaj używane do odwoływania się do elementów tablicy, ale indeks dolny można zastosować do dowolnego wskaźnika. Niezależnie od kolejność wartości, *wyrażenie* musi być ujęta w nawiasy kwadratowe (**[**).  
+ Wyrażenia indeksu dolnego są zazwyczaj używane do odwoływania się do elementów tablicy, ale można zastosować indeks dolny dowolny wskaźnik. Niezależnie od kolejności wartości *wyrażenie* muszą być ujęte w nawiasy kwadratowe (**[**).  
   
- Obliczanie wyrażenia indeksu dolnego dodając wartość całkowitą wartość wskaźnika, a następnie zastosowanie operator pośredni (**\***) do wyniku. (Zobacz [operatory pośrednie i operatorów adresu](../c-language/indirection-and-address-of-operators.md) omówienie operator pośredni.) W efekcie dla tablicą jednowymiarową następujące cztery wyrażenia są równoważne, przy założeniu, że `a` wskaźnik i `b` jest liczbą całkowitą:  
+ Wyrażenie indeksu dolnego jest oceniany przez dodanie wartość całkowitą wartość wskaźnika, a następnie zastosowanie operatora pośredniego (<strong>\*</strong>) do wyniku. (Zobacz [pośredni i Address-of operatory](../c-language/indirection-and-address-of-operators.md) dyskusję na temat operatora pośredniego.) W efekcie Jednowymiarowa tablica następujących czterech wyrażeń są równoważne przy założeniu, że `a` jest wskaźnikiem typu i `b` jest liczbą całkowitą:  
   
 ```  
 a[b]  
@@ -61,17 +56,17 @@ a[b]
 b[a]  
 ```  
   
- Zgodnie z reguły konwersji dla operator dodawania (podano w [operatory dodatku](../c-language/c-additive-operators.md)), wartości całkowite jest konwertowana na adres przesunięcie mnożąc długość typu adresowane przez wskaźnik.  
+ Zgodnie z regułami konwersji, operator dodawania (podano [operatory addytywne](../c-language/c-additive-operators.md)), wartość całkowitą jest konwertowany na przesunięcie adresu mnożąc długość typ adresowany przez wskaźnik myszy.  
   
  Na przykład, załóżmy, że identyfikator `line` odwołuje się do tablicy `int` wartości. Poniższa procedura służy do obliczenia wyrażenia indeksu dolnego `line[ i ]`:  
   
-1.  Wartość całkowita `i` jest mnożona przez liczbę bajtów zdefiniowany jako długość `int` elementu. Wartość przekonwertowanego `i` reprezentuje `i` `int` pozycji.  
+1.  Wartość całkowita `i` jest mnożony przez liczbę bajtów zdefiniowane jako długość `int` elementu. Przekonwertowana wartości `i` reprezentuje `i` `int` pozycji.  
   
-2.  Ta wartość przekonwertowanego jest dodawana do oryginalnej wartości wskaźnika (`line`) umożliwiające uzyskanie adres, który jest przesuwane `i` `int` umieszcza z `line`.  
+2.  Ta wartość przekonwertowanego jest dodawana do oryginalnej wartości wskaźnika (`line`) umożliwiające uzyskanie adres który jest przesunięty `i` `int` umieszcza z `line`.  
   
-3.  Operator pośredni jest stosowany do nowego adresu. Wynik jest wartością elementu tablicy w tym miejscu (intuicyjnie `line [ i ]`).  
+3.  Operator pośredni jest stosowany do nowego adresu. Wynik jest wartością elementu tablicy, w tym miejscu (intuicyjnie `line [ i ]`).  
   
- Wyrażenia indeksu `line[0]` reprezentuje wartość elementu pierwszego wiersza, ponieważ przesunięcie z adresu reprezentowany przez `line` ma wartość 0. Podobnie, wyrażenie, takie jak `line[5]` odwołuje się do pozycji przesunięcie pięciu elementu z wiersza lub szóstego element tablicy.  
+ Wyrażenie indeksu dolnego `line[0]` reprezentuje wartość pierwszego elementu wiersza, ponieważ przesunięcie z adresu reprezentowanego przez `line` wynosi 0. Podobnie, wyrażenie, takie jak `line[5]` odwołuje się do pozycji przesunięcia pięciu elementu z wiersza lub szóstego elementu tablicy.  
   
 ## <a name="see-also"></a>Zobacz też  
  [Operator indeksu dolnego:](../cpp/subscript-operator.md)

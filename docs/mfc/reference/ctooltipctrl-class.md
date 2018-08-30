@@ -1,5 +1,5 @@
 ---
-title: CToolTipCtrl — klasa | Dokumentacja firmy Microsoft
+title: Klasa CToolTipCtrl | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -82,15 +82,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9436f3809a337b732a2e95d9c30b9baa45c4e8ba
-ms.sourcegitcommit: 208d445fd7ea202de1d372d3f468e784e77bd666
+ms.openlocfilehash: 1225ab62dfd64a991ba5ff680e86b62e7d48f8ac
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/29/2018
-ms.locfileid: "37123113"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43200077"
 ---
-# <a name="ctooltipctrl-class"></a>CToolTipCtrl — klasa
-Hermetyzuje funkcjonalność "formantem etykietki narzędzia," małe okno podręczne wyświetlające pojedynczy wiersz tekst opisujący cel narzędzia w aplikacji.  
+# <a name="ctooltipctrl-class"></a>Ctooltipctrl — klasa
+Hermetyzuje funkcjonalność "firmant narzędzia wskazówki" niewielkie okno podręczne, które wyświetla pojedynczy wiersz tekstu opisującego cel narzędzia w aplikacji.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -111,48 +111,48 @@ class CToolTipCtrl : public CWnd
 |Nazwa|Opis|  
 |----------|-----------------|  
 |[CToolTipCtrl::Activate](#activate)|Aktywuje i dezaktywuje formantem etykietki narzędzia.|  
-|[CToolTipCtrl::AddTool](#addtool)|Rejestruje narzędzie z formantem etykietki narzędzia.|  
+|[CToolTipCtrl::AddTool](#addtool)|Rejestruje to narzędzie z formantem etykietki narzędzia.|  
 |[CToolTipCtrl::AdjustRect](#adjustrect)|Konwertuje między formantem etykietki narzędzia wyświetlana prostokąt i jego prostokąt okna.|  
-|[CToolTipCtrl::Create](#create)|Tworzy formantem etykietki narzędzia i dołącza go do `CToolTipCtrl` obiektu.|  
-|[CToolTipCtrl::CreateEx](#createex)|Tworzy formantem etykietki narzędzia w określonym stylu rozszerzonej systemu Windows i dołącza go do `CToolTipCtrl` obiektu.|  
+|[CToolTipCtrl::Create](#create)|Tworzy formantem etykietki narzędzia i dołącza je do `CToolTipCtrl` obiektu.|  
+|[CToolTipCtrl::CreateEx](#createex)|Tworzy formantem etykietki narzędzia w określonym stylu rozszerzonej Windows i dołącza je do `CToolTipCtrl` obiektu.|  
 |[CToolTipCtrl::DelTool](#deltool)|Usuwa to narzędzie z formantem etykietki narzędzia.|  
-|[CToolTipCtrl::GetBubbleSize](#getbubblesize)|Pobiera informacje o rozmiarze etykietka narzędzia.|  
-|[CToolTipCtrl::GetCurrentTool](#getcurrenttool)|Pobiera informacje, takie jak rozmiar, położenie i tekstu okna etykietki narzędzia wyświetlany bieżącego formantu tooltip.|  
-|[CToolTipCtrl::GetDelayTime](#getdelaytime)|Pobiera początkowy, podręczne oraz reshow formantu etykietki okresów, które są aktualnie ustawione dla narzędzia.|  
-|[CToolTipCtrl::GetMargin](#getmargin)|Pobiera top, lewej strony, dołu i prawego marginesu, które są ustawione dla okna Porada narzędzia.|  
-|[CToolTipCtrl::GetMaxTipWidth](#getmaxtipwidth)|Pobiera maksymalną szerokość okna Porada narzędzia.|  
-|[CToolTipCtrl::GetText](#gettext)|Pobiera tekst, który obsługuje formantem etykietki narzędzia dla narzędzia.|  
-|[CToolTipCtrl::GetTipBkColor](#gettipbkcolor)|Pobiera kolor tła w oknie Porada narzędzia.|  
-|[CToolTipCtrl::GetTipTextColor](#gettiptextcolor)|Pobiera kolor tekstu w oknie Porada narzędzia.|  
-|[CToolTipCtrl::GetTitle](#gettitle)|Pobiera tytuł bieżącego formantu tooltip.|  
+|[CToolTipCtrl::GetBubbleSize](#getbubblesize)|Pobiera informacje o rozmiarze etykietki narzędzia.|  
+|[CToolTipCtrl::GetCurrentTool](#getcurrenttool)|Pobiera informacje, takie jak rozmiar, położenie i tekst w okno etykietki narzędzia, które wyświetla bieżący kontrolki tooltip.|  
+|[CToolTipCtrl::GetDelayTime](#getdelaytime)|Pobiera początkowy, okno podręczne oraz reshow formantu etykietki czasów trwania, które są aktualnie ustawione dla narzędzia.|  
+|[CToolTipCtrl::GetMargin](#getmargin)|Pobiera pierwszych, po lewej stronie, dolnej i prawego marginesu ustawione dla okna narzędzi porada.|  
+|[CToolTipCtrl::GetMaxTipWidth](#getmaxtipwidth)|Pobiera maksymalną szerokość okna narzędzia porada.|  
+|[CToolTipCtrl::GetText](#gettext)|Pobiera tekst, który obsługuje formantem etykietki narzędzia, dla narzędzia.|  
+|[CToolTipCtrl::GetTipBkColor](#gettipbkcolor)|Pobiera kolor tła w oknie narzędzi porada.|  
+|[CToolTipCtrl::GetTipTextColor](#gettiptextcolor)|Pobiera kolor tekstu w oknie narzędzi porada.|  
+|[CToolTipCtrl::GetTitle](#gettitle)|Pobiera tytuł bieżącego kontrolki tooltip.|  
 |[CToolTipCtrl::GetToolCount](#gettoolcount)|Pobiera liczbę narzędzia obsługiwanego przez formantem etykietki narzędzia.|  
-|[CToolTipCtrl::GetToolInfo](#gettoolinfo)|Pobiera formantem etykietki narzędzia przechowuje informacje dotyczące narzędzia.|  
-|[CToolTipCtrl::HitTest](#hittest)|Testy punktu w celu ustalenia, czy w ramach prostokątem danego narzędzia. Jeśli tak, pobiera informacje o narzędziu.|  
-|[CToolTipCtrl::Pop](#pop)|Usuwa wyświetlane okno Porada w widoku.|  
-|[CToolTipCtrl::Popup](#popup)|Powoduje, że bieżący formantu ToolTip do wyświetlenia na współrzędne ostatniego komunikatu myszy.|  
+|[CToolTipCtrl::GetToolInfo](#gettoolinfo)|Pobiera informacje, która utrzymuje formantem etykietki narzędzia o narzędziu.|  
+|[CToolTipCtrl::HitTest](#hittest)|Testy punktu w celu ustalenia, czy w ramach prostokąt otaczający danego narzędzia. Jeśli tak, pobiera informacje o tym narzędziu.|  
+|[CToolTipCtrl::Pop](#pop)|Usuwa okna narzędzi wyświetlanych Porada w widoku.|  
+|[CToolTipCtrl::Popup](#popup)|Powoduje, że bieżący formantu etykietki narzędzia, aby wyświetlić współrzędne ostatniego komunikatu myszy.|  
 |[CToolTipCtrl::RelayEvent](#relayevent)|Przekazuje komunikatu myszy formantem etykietki narzędzia w celu przetworzenia.|  
-|[CToolTipCtrl::SetDelayTime](#setdelaytime)|Ustawia początkowej wyskakujących i reshow czasy trwania formantem etykietki narzędzia.|  
-|[CToolTipCtrl::SetMargin](#setmargin)|Ustawia góry po lewej, dolnej i prawego marginesu Porada okna narzędzia.|  
-|[CToolTipCtrl::SetMaxTipWidth](#setmaxtipwidth)|Ustawia maksymalną szerokość okna Porada narzędzia.|  
-|[CToolTipCtrl::SetTipBkColor](#settipbkcolor)|Ustawia kolor tła w oknie Porada narzędzia.|  
-|[CToolTipCtrl::SetTipTextColor](#settiptextcolor)|Ustawia kolor tekstu w oknie Porada narzędzia.|  
-|[CToolTipCtrl::SetTitle](#settitle)|Dodaje ciąg standardowy ikony, jak i tytuł etykietka narzędzia.|  
-|[CToolTipCtrl::SetToolInfo](#settoolinfo)|Ustawia informacje, które obsługuje etykietki narzędzia dla narzędzia.|  
-|[CToolTipCtrl::SetToolRect](#settoolrect)|Ustawia nowy prostokąt ograniczający narzędzia.|  
-|[CToolTipCtrl::SetWindowTheme](#setwindowtheme)|Ustawia styl wizualny Porada okna narzędzia.|  
-|[CToolTipCtrl::Update](#update)|Wymusza bieżącego narzędzia do narysowania.|  
+|[CToolTipCtrl::SetDelayTime](#setdelaytime)|Określa początkowy podręcznym i reshow czasy trwania formantem etykietki narzędzia.|  
+|[CToolTipCtrl::SetMargin](#setmargin)|Ustawia top, po lewej stronie, dolnej i prawego marginesu Porada okna narzędzia.|  
+|[CToolTipCtrl::SetMaxTipWidth](#setmaxtipwidth)|Ustawia maksymalną szerokość okna narzędzia porada.|  
+|[CToolTipCtrl::SetTipBkColor](#settipbkcolor)|Ustawia kolor tła w oknie narzędzi porada.|  
+|[CToolTipCtrl::SetTipTextColor](#settiptextcolor)|Ustawia kolor tekstu w oknie narzędzi porada.|  
+|[CToolTipCtrl::SetTitle](#settitle)|Dodaje ciąg standardowy ikonę i tytuł do etykietki narzędzia.|  
+|[CToolTipCtrl::SetToolInfo](#settoolinfo)|Ustawia informacje o, zawierającą etykietka narzędzia.|  
+|[CToolTipCtrl::SetToolRect](#settoolrect)|Ustawia nowy prostokąt otaczający narzędzia.|  
+|[CToolTipCtrl::SetWindowTheme](#setwindowtheme)|Ustawia styl wizualny okna narzędzia porada.|  
+|[CToolTipCtrl::Update](#update)|Wymusza narysowania bieżącego narzędzia.|  
 |[CToolTipCtrl::UpdateTipText](#updatetiptext)|Ustawia tekst wskazówki dla narzędzia.|  
   
 ## <a name="remarks"></a>Uwagi  
- "Narzędzia" jest albo okna, takich jak kontrolki lub okna podrzędnego albo zdefiniowanym przez aplikację prostokątny obszar wewnątrz obszaru klienckiego okna. Etykietka narzędzia, która jest niewidoczna w większości przypadków pojawiające się tylko po użytkownik umieszcza kursor na narzędzia i drugi pozostawia jej istnieje na około pół. Etykietka narzędzia, która pojawi się w pobliżu kursor i znika, gdy użytkownik kliknie przycisk myszy lub przesuwa kursor poza narzędzie.  
+ "Narzędzia" jest albo okien, na przykład okno podrzędne lub kontroli lub zdefiniowanych przez aplikację prostokątny obszar w obrębie obszaru klienckiego okna. Etykietka narzędzia jest ukryty w większości przypadków, pojawiają się tylko po użytkownik umieszcza kursor nad narzędziem i drugie pozostawi je istnieje dla około połowie. Etykietka narzędzia która pojawia się obok kursor i znika, gdy użytkownik kliknie przycisk myszy lub przenosi kursor poza narzędzie.  
   
- `CToolTipCtrl` udostępnia funkcje umożliwiające kontroli początkowy czas i czas trwania etykietka narzędzia otaczający tekst wskazówki, szerokość okna Porada narzędzia sam i kolor tła i tekstu podpowiedzi szerokości marginesów. Formantem etykietki narzędzia pojedynczego zapewniają informacje o więcej niż jedno narzędzie.  
+ `CToolTipCtrl` oferuje funkcje w celu sterowania czas wstępnej i czasu trwania etykietka narzędzia szerokości marginesów otaczający tekst wskazówki, szerokość samo okna Narzędzie Porada i kolor tła i tekstu etykietki narzędzia. Pojedynczy firmant narzędzia wskazówki może dostarczyć informacji dla więcej niż jednego narzędzia.  
   
- `CToolTipCtrl` Klasa udostępnia funkcje formantem etykietki narzędzia wspólne systemu Windows. Ten formant (i w związku z tym `CToolTipCtrl` klasy) jest dostępne tylko dla programów w wersji Windows 95/98 i Windows NT 3.51 lub nowszej.  
+ `CToolTipCtrl` Klasa oferuje funkcje wspólne formantem etykietki narzędzia Windows. Ta kontrolka (i w związku z tym `CToolTipCtrl` klasy) jest dostępna tylko dla programów uruchomionych w wersji Windows 95/98 i Windows NT 3.51 lub nowszej.  
   
- Aby uzyskać więcej informacji na temat włączania etykietki narzędzi, zobacz [etykietki narzędzi w systemie Windows niepochodzące od obiektu CFrameWnd](../../mfc/tool-tips-in-windows-not-derived-from-cframewnd.md).  
+ Aby uzyskać więcej informacji na temat włączania etykietek narzędzi, zobacz [etykietek narzędzi w Windows niepochodzące od obiektu CFrameWnd](../../mfc/tool-tips-in-windows-not-derived-from-cframewnd.md).  
   
- Aby uzyskać więcej informacji na temat używania `CToolTipCtrl`, zobacz [formanty](../../mfc/controls-mfc.md) i [przy użyciu CToolTipCtrl](../../mfc/using-ctooltipctrl.md).  
+ Aby uzyskać więcej informacji na temat korzystania z `CToolTipCtrl`, zobacz [kontrolki](../../mfc/controls-mfc.md) i [przy użyciu CToolTipCtrl](../../mfc/using-ctooltipctrl.md).  
   
 ## <a name="inheritance-hierarchy"></a>Hierarchia dziedziczenia  
  [CObject](../../mfc/reference/cobject-class.md)  
@@ -167,7 +167,7 @@ class CToolTipCtrl : public CWnd
  **Nagłówek:** afxcmn.h  
   
 ##  <a name="activate"></a>  CToolTipCtrl::Activate  
- Wywołanie tej funkcji, aby aktywować lub dezaktywować formantem etykietki narzędzia.  
+ Wywołaj tę funkcję, aby aktywować lub dezaktywować formantem etykietki narzędzia.  
   
 ```  
 void Activate(BOOL bActivate);
@@ -175,18 +175,18 @@ void Activate(BOOL bActivate);
   
 ### <a name="parameters"></a>Parametry  
  *bActivate*  
- Określa, czy formantem etykietki narzędzia ma być aktywowany lub dezaktywowany.  
+ Określa, czy formantem etykietki narzędzia ma zostać aktywowane lub dezaktywowane.  
   
 ### <a name="remarks"></a>Uwagi  
- Jeśli *bActivate* ma wartość PRAWDA, formant jest uaktywniony; w przypadku wartości FAŁSZ jest dezaktywowana.  
+ Jeśli *bActivate* ma wartość PRAWDA, formant jest uaktywniony; Jeśli jest to wartość FAŁSZ, jest nieaktywny.  
   
- Podczas aktywnej jest formantem etykietki narzędzia, gdy kursor znajduje się w zarejestrowany za pomocą formantu; narzędzie pojawia się informacja Porada narzędzia gdy jest nieaktywny, informacje Porada narzędzia nie ma, nawet gdy kursor znajduje się na to narzędzie.  
+ Podczas formantem etykietki narzędzia jest aktywna, pojawia się informacja Porada narzędzia, gdy kursor znajduje się nad narzędziem, które jest zarejestrowane w usłudze kontroli. gdy jest nieaktywny, informacje Porada narzędzie jest niewidoczny, nawet gdy kursor znajduje się nad narzędziem.  
   
 ### <a name="example"></a>Przykład  
   Zobacz przykład [CPropertySheet::GetTabControl](../../mfc/reference/cpropertysheet-class.md#gettabcontrol).  
   
 ##  <a name="addtool"></a>  CToolTipCtrl::AddTool  
- Rejestruje narzędzie z formantem etykietki narzędzia.  
+ Rejestruje to narzędzie z formantem etykietki narzędzia.  
   
 ```  
 BOOL AddTool(
@@ -205,36 +205,36 @@ BOOL AddTool(
   
 ### <a name="parameters"></a>Parametry  
  *pWnd*  
- Wskaźnik do okna zawierającego to narzędzie.  
+ Wskaźnik do okna, które zawiera narzędzia.  
   
  *nIDText*  
- Identyfikator zasobu ciągu zawierającego tekst dla narzędzia.  
+ Identyfikator zasobu ciągu zawierający tekst dla narzędzia.  
   
  *lpRectTool*  
- Wskaźnik do [RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897) struktury zawierającej współrzędne narzędzia do ograniczenia prostokąta. Współrzędne są podawane względem lewego górnego rogu obszaru klienckiego okna identyfikowane przez *pWnd*.  
+ Wskaźnik do [Prostokąt](https://msdn.microsoft.com/library/windows/desktop/dd162897) struktury zawierającego współrzędne narzędzie użytkownika prostokąt ograniczający. Współrzędne są podawane względem lewego górnego rogu obszaru klienckiego okna identyfikowane przez *pWnd*.  
   
  *nIDTool*  
  Identyfikator narzędzia.  
   
  *lpszText*  
- Wskaźnik do tekstu dla tego narzędzia. Jeśli ten parametr zawiera wartość LPSTR_TEXTCALLBACK, komunikaty powiadomień TTN_NEEDTEXT przejdź do nadrzędnego okna który *pWnd* wskazuje.  
+ Wskaźnik do tekstu dla narzędzia. Jeśli ten parametr zawiera wartość LPSTR_TEXTCALLBACK, powiadomienia TTN_NEEDTEXT przejdź do nadrzędnego okna, *pWnd* wskazuje.  
   
 ### <a name="return-value"></a>Wartość zwracana  
- Różna od zera, w przypadku powodzenia; w przeciwnym razie 0.  
+ Wartość różną od zera, jeśli to się powiedzie; w przeciwnym razie 0.  
   
 ### <a name="remarks"></a>Uwagi  
- *LpRectTool* i *nIDTool* parametry muszą być prawidłowe, lub jeśli *lpRectTool* ma wartość NULL, *nIDTool* musi być równa 0.  
+ *LpRectTool* i *nIDTool* parametry muszą być prawidłowe, lub jeśli *lpRectTool* ma wartość NULL, *nIDTool* musi mieć wartość 0.  
   
- Formantem etykietki narzędzia może być skojarzony z więcej niż jednego narzędzia. Wywołanie tej funkcji, aby zarejestrować narzędzia z formantem etykietki narzędzia tak, aby informacje przechowywane w etykietce narzędzia jest wyświetlana, gdy kursor znajduje się w narzędziu.  
+ Formantem etykietki narzędzia może być skojarzony z więcej niż jednego narzędzia. Wywołaj tę funkcję, aby zarejestrować narzędzia z formantem etykietki narzędzia, aby informacje przechowywane w etykietce narzędzia jest wyświetlana, gdy kursor znajduje się w narzędziu.  
   
 > [!NOTE]
->  Nie można ustawić etykietka narzędzia, która je przy użyciu statyczną kontrolkę `AddTool`.  
+>  Etykietka narzędzia nie można ustawić statyczną kontrolkę za pomocą `AddTool`.  
   
 ### <a name="example"></a>Przykład  
   Zobacz przykład [CPropertySheet::GetTabControl](../../mfc/reference/cpropertysheet-class.md#gettabcontrol).  
   
 ##  <a name="adjustrect"></a>  CToolTipCtrl::AdjustRect  
- Konwertuje między tekstu formantu tooltip wyświetlanie prostokąt i jego prostokąt okna.  
+ Konwertuje między tekstem w kontrolce etykietka narzędzia wyświetlana prostokąt i jego prostokąt okna.  
   
 ```  
 BOOL AdjustRect(
@@ -244,21 +244,21 @@ BOOL AdjustRect(
   
 ### <a name="parameters"></a>Parametry  
  *lprc*  
- Wskaźnik do [RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897) strukturę, która przechowuje prostokąt okna narzędzia porada lub prostokątny obszar wyświetlania tekstu.  
+ Wskaźnik do [Prostokąt](https://msdn.microsoft.com/library/windows/desktop/dd162897) strukturę, która posiada prostokąt okna narzędzia porada lub prostokąt wyświetlania tekstu.  
   
  *bLarger*  
- Jeśli PRAWDA, *lprc* służy do określania prostokąt wyświetlania tekstu i otrzymuje prostokąt odpowiednie okna. W przypadku wartości FAŁSZ *lprc* służy do określania prostokąt okna i otrzymuje odpowiedniego prostokątny obszar wyświetlania tekstu.  
+ W przypadku opcji TRUE *lprc* służy do określania prostokąt wyświetlania tekstu i odbiera prostokąt odpowiednie okna. W przypadku wartości FAŁSZ *lprc* służy do określania prostokąt okna i odbiera odpowiedniego prostokątny obszar wyświetlania tekstu.  
   
 ### <a name="return-value"></a>Wartość zwracana  
- Różna od zera, jeśli pomyślnie dostosowania prostokąt; w przeciwnym razie 0.  
+ Wartość różną od zera, jeśli pomyślnie jest dopasowane prostokątem; w przeciwnym razie 0.  
   
 ### <a name="remarks"></a>Uwagi  
  Ta funkcja elementu członkowskiego oblicza formantem etykietki narzędzia prostokątny obszar wyświetlania tekstu z jego prostokąt okna lub prostokąt okna Porada narzędzia potrzebne do wyświetlenia prostokąt wyświetlania określony tekst.  
   
- Ta funkcja członkowska implementuje zachowanie komunikatu Win32 [TTM_ADJUSTRECT](http://msdn.microsoft.com/library/windows/desktop/bb760352), zgodnie z opisem w zestawie Windows SDK.  
+ Ta funkcja elementu członkowskiego implementuje zachowanie komunikatu Win32 [TTM_ADJUSTRECT](/windows/desktop/Controls/ttm-adjustrect), zgodnie z opisem w zestawie Windows SDK.  
   
 ##  <a name="create"></a>  CToolTipCtrl::Create  
- Tworzy formantem etykietki narzędzia i dołącza go do `CToolTipCtrl` obiektu.  
+ Tworzy formantem etykietki narzędzia i dołącza je do `CToolTipCtrl` obiektu.  
   
 ```  
 virtual BOOL Create(CWnd* pParentWnd, DWORD dwStyle = 0);
@@ -266,33 +266,33 @@ virtual BOOL Create(CWnd* pParentWnd, DWORD dwStyle = 0);
   
 ### <a name="parameters"></a>Parametry  
  *pParentWnd*  
- Określa okno nadrzędne formantem etykietki narzędzia, zwykle `CDialog`. Nie może być wartością NULL.  
+ Określa okno nadrzędne formantem etykietki narzędzia, zwykle `CDialog`. Nie może być równa NULL.  
   
  *dwStyle*  
  Określa styl formantem etykietki narzędzia. Zobacz **uwagi** sekcji, aby uzyskać więcej informacji.  
   
 ### <a name="return-value"></a>Wartość zwracana  
- Jeśli podano niezerowe `CToolTipCtrl` obiektu jest pomyślnie utworzony; w przeciwnym razie 0.  
+ Jeśli wartość różną od zera `CToolTipCtrl` obiekt jest pomyślnie utworzony; w przeciwnym razie 0.  
   
 ### <a name="remarks"></a>Uwagi  
- Możesz utworzyć `CToolTipCtrl` w dwóch krokach. Najpierw należy wywołać konstruktora, aby utworzyć `CToolTipCtrl` obiekt, a następnie wywołać `Create` utworzyć formantem etykietki narzędzia i dołączenie go do `CToolTipCtrl` obiektu.  
+ Konstruowanie `CToolTipCtrl` w dwóch krokach. Po pierwsze wywołanie konstruktora do konstruowania `CToolTipCtrl` obiektu, a następnie wywołaj `Create` tworzenie formantem etykietki narzędzia i dołącz ją do `CToolTipCtrl` obiektu.  
   
- *DwStyle* parametr może być dowolną kombinacją [Style okna](../../mfc/reference/styles-used-by-mfc.md#window-styles). Ponadto formantem etykietki narzędzia ma dwa style właściwe dla klasy: TTS_ALWAYSTIP i TTS_NOPREFIX.  
+ *DwStyle* parametr może być dowolną kombinacją [Style okna ramowego](../../mfc/reference/styles-used-by-mfc.md#window-styles). Ponadto formantem etykietki narzędzia ma dwa style swoiste dla klas: TTS_ALWAYSTIP i TTS_NOPREFIX.  
   
 |Styl|Znaczenie|  
 |-----------|-------------|  
-|TTS_ALWAYSTIP|Określa, czy etykietka narzędzia, która będzie są wyświetlane, gdy kursor znajduje się w narzędzia, niezależnie od tego, czy okno właściciela formantem etykietki narzędzia aktywne lub nieaktywne. Bez tego stylu formantem etykietki narzędzia pojawia się, gdy właściciel okno jest aktywne, a nie jest nieaktywny.|  
-|TTS_NOPREFIX|Ten styl zapobiega usuwanie ampersand (&) znaków z ciągu. Jeśli formantem etykietki narzędzia ma styl TTS_NOPREFIX, system automatycznie usuwa znaki handlowe "i", dzięki czemu aplikacja może używać tych samych parametrach jako element menu i jako tekst w formantem etykietki narzędzia.|  
+|TTS_ALWAYSTIP|Określa, czy etykietka narzędzia która pojawi się gdy kursor znajduje się nad narzędziem, niezależnie od tego, czy okno właściciela formantem etykietki narzędzia jest aktywne lub nieaktywne. Bez tego stylu formantem etykietki narzędzia jest wyświetlana po uaktywnieniu okna właściciela tego narzędzia, ale nie w przypadku, gdy jest nieaktywny.|  
+|TTS_NOPREFIX|Ten styl zapobiega obcięcie handlowe "i" (&) znaków z ciągu. Jeśli formantem etykietki narzędzia ma styl TTS_NOPREFIX, system automatycznie usuwa znaki handlowego "i", dzięki czemu aplikacja może używać tego samego ciągu jako element menu i jako tekstu w formantem etykietki narzędzia.|  
   
- Formantem etykietki narzędzia ma ws_popup — i ws_ex_toolwindow — Style okna, niezależnie od tego, czy zostały określone podczas tworzenia formantu.  
+ Formantem etykietki narzędzia ma WS_POPUP i WS_EX_TOOLWINDOW Style okna, niezależnie od tego, czy zostaną one określone podczas tworzenia kontrolki.  
   
- Aby utworzyć formantem etykietki narzędzia z windows rozszerzone style, wywołania [CToolTipCtrl::CreateEx](#createex) zamiast `Create`.  
+ Aby utworzyć formantem etykietki narzędzia windows rozszerzone style, wywołania [CToolTipCtrl::CreateEx](#createex) zamiast `Create`.  
   
 ### <a name="example"></a>Przykład  
   Zobacz przykład [CPropertySheet::GetTabControl](../../mfc/reference/cpropertysheet-class.md#gettabcontrol).  
   
 ##  <a name="createex"></a>  CToolTipCtrl::CreateEx  
- Tworzy kontrolkę (okno podrzędne) i skojarz ją z `CToolTipCtrl` obiektu.  
+ Tworzy kontrolkę (okno podrzędne) i powiąż ją z `CToolTipCtrl` obiektu.  
   
 ```  
 virtual BOOL CreateEx(
@@ -306,16 +306,16 @@ virtual BOOL CreateEx(
  Wskaźnik do okna, które jest elementem nadrzędnym formantu.  
   
  *dwStyle*  
- Określa styl formantem etykietki narzędzia. Zobacz **uwagi** sekcji [Utwórz](#create) Aby uzyskać więcej informacji.  
+ Określa styl formantem etykietki narzędzia. Zobacz **uwagi** części [Utwórz](#create) Aby uzyskać więcej informacji.  
   
  *dwStyleEx*  
- Określa styl rozszerzony formantu tworzona. Aby uzyskać listę rozszerzone style systemu Windows, zobacz *dwExStyle* parametr [CreateWindowEx](http://msdn.microsoft.com/library/windows/desktop/ms632680) w zestawie Windows SDK.  
+ Określa styl rozszerzony kontrolki tworzona. Aby uzyskać listę rozszerzone style Windows, zobacz *dwExStyle* parametr [elementu CreateWindowEx](https://msdn.microsoft.com/library/windows/desktop/ms632680) w zestawie Windows SDK.  
   
 ### <a name="return-value"></a>Wartość zwracana  
- Różna od zera w razie powodzenia 0 w inny sposób.  
+ Wartość różną od zera, jeśli to się powiedzie, w przeciwnym razie 0.  
   
 ### <a name="remarks"></a>Uwagi  
- Użyj `CreateEx` zamiast `Create` dotyczyć rozszerzone style systemu Windows, określone przez wstępu rozszerzonego stylu Windows **WS_EX_**.  
+ Użyj `CreateEx` zamiast `Create` do zastosowania rozszerzone style Windows, określonego przez tekst wstępny rozszerzonego stylu Windows **WS_EX_**.  
   
 ##  <a name="ctooltipctrl"></a>  CToolTipCtrl::CToolTipCtrl  
  Konstruuje `CToolTipCtrl` obiektu.  
@@ -325,13 +325,13 @@ CToolTipCtrl();
 ```  
   
 ### <a name="remarks"></a>Uwagi  
- Należy wywołać `Create` po konstruowania obiektu.  
+ Należy wywołać `Create` po konstruowanie obiektu.  
   
 ### <a name="example"></a>Przykład  
  [!code-cpp[NVC_MFCControlLadenDialog#74](../../mfc/codesnippet/cpp/ctooltipctrl-class_1.h)]  
   
 ##  <a name="deltool"></a>  CToolTipCtrl::DelTool  
- Usuwa określony przez narzędzie *pWnd* i *nIDTool* z kolekcji narzędzi dostarczonych przez formantem etykietki narzędzia.  
+ Usuwa narzędzie określone przez *pWnd* i *nIDTool* z kolekcji narzędzi dostarczonych przez formantem etykietki narzędzia.  
   
 ```  
 void DelTool(
@@ -341,13 +341,13 @@ void DelTool(
   
 ### <a name="parameters"></a>Parametry  
  *pWnd*  
- Wskaźnik do okna zawierającego to narzędzie.  
+ Wskaźnik do okna, które zawiera narzędzia.  
   
  *nIDTool*  
  Identyfikator narzędzia.  
   
 ##  <a name="getbubblesize"></a>  CToolTipCtrl::GetBubbleSize  
- Pobiera informacje o rozmiarze etykietka narzędzia.  
+ Pobiera informacje o rozmiarze etykietki narzędzia.  
   
 ```  
 CSize GetBubbleSize(LPTOOLINFO lpToolInfo) const;  
@@ -355,16 +355,16 @@ CSize GetBubbleSize(LPTOOLINFO lpToolInfo) const;
   
 ### <a name="parameters"></a>Parametry  
  *lpToolInfo*  
- Wskaźnik do etykietka narzędzia [TOOLINFO](http://msdn.microsoft.com/library/windows/desktop/bb760256) struktury.  
+ Wskaźnik do etykietki narzędzia [TOOLINFO](/windows/desktop/api/commctrl/ns-commctrl-tagtoolinfoa) struktury.  
   
 ### <a name="return-value"></a>Wartość zwracana  
- Rozmiar etykietka narzędzia.  
+ Rozmiar etykietki narzędzia.  
   
 ### <a name="remarks"></a>Uwagi  
- Ta funkcja członkowska implementuje zachowanie komunikatu Win32 [TTM_GETBUBBLESIZE](http://msdn.microsoft.com/library/windows/desktop/bb760387), zgodnie z opisem w zestawie Windows SDK.  
+ Ta funkcja elementu członkowskiego implementuje zachowanie komunikatu Win32 [TTM_GETBUBBLESIZE](/windows/desktop/Controls/ttm-getbubblesize), zgodnie z opisem w zestawie Windows SDK.  
   
 ##  <a name="getcurrenttool"></a>  CToolTipCtrl::GetCurrentTool  
- Pobiera informacje, takie jak rozmiar, położenie i tekstu okna etykietki narzędzia wyświetlany przez bieżący formantu tooltip.  
+ Pobiera informacje, takie jak rozmiar, położenie i tekst wyświetlany przez kontrolkę tooltip bieżącego okna etykiety narzędzi.  
   
 ```  
 BOOL GetCurrentTool(LPTOOLINFO lpToolInfo) const;  
@@ -374,21 +374,21 @@ BOOL GetCurrentTool(LPTOOLINFO lpToolInfo) const;
   
 |Parametr|Opis|  
 |---------------|-----------------|  
-|[out] *lpToolInfo*|Wskaźnik do [TOOLINFO](http://msdn.microsoft.com/library/windows/desktop/bb760256) struktury służącą do odbierania informacji na temat bieżącego okna etykietki narzędzia.|  
+|[out] *lpToolInfo*|Wskaźnik do [TOOLINFO](/windows/desktop/api/commctrl/ns-commctrl-tagtoolinfoa) strukturę, która otrzymuje informacje o bieżącym oknie etykietki narzędzia.|  
   
 ### <a name="return-value"></a>Wartość zwracana  
- Wartość TRUE, jeśli dane są pobierane pomyślnie; w przeciwnym razie wartość FALSE.  
+ Wartość TRUE, jeśli informacje są pobierane pomyślnie; w przeciwnym razie wartość FALSE.  
   
 ### <a name="remarks"></a>Uwagi  
- Ta metoda wysyła [TTM_GETCURRENTTOOL](http://msdn.microsoft.com/library/windows/desktop/bb760389) komunikat, który jest opisany w zestawie SDK systemu Windows.  
+ Ta metoda wysyła [TTM_GETCURRENTTOOL](/windows/desktop/Controls/ttm-getcurrenttool) komunikat, który jest opisany w zestawie Windows SDK.  
   
 ### <a name="example"></a>Przykład  
- Poniższy przykładowy kod pobiera informacje o bieżącym oknie etykietka narzędzia.  
+ Poniższy przykładowy kod pobiera informacje o bieżącym oknie etykietki narzędzia.  
   
  [!code-cpp[NVC_MFC_CToolBarCtrl_s1#6](../../mfc/reference/codesnippet/cpp/ctooltipctrl-class_2.cpp)]  
   
 ##  <a name="getdelaytime"></a>  CToolTipCtrl::GetDelayTime  
- Pobiera początkowy wyskakujących i reshow okresów aktualnie ustawione dla formantem etykietki narzędzia.  
+ Pobiera początkowy wyskakujące, a reshow czasów trwania aktualnie ustawione dla formantem etykietki narzędzia.  
   
 ```  
 int GetDelayTime(DWORD dwDuration) const;  
@@ -396,22 +396,22 @@ int GetDelayTime(DWORD dwDuration) const;
   
 ### <a name="parameters"></a>Parametry  
  *dwDuration*  
- Flaga określająca, które wartości czasu trwania zostaną pobrane. Ten parametr może mieć jedną z następujących wartości:  
+ Flaga określająca wartość czasu trwania, która zostanie pobrana. Ten parametr może być jedną z następujących wartości:  
   
-- Pobrać TTDT_AUTOPOP czas okna etykietka narzędzia pozostaje widoczne, gdy wskaźnik pozostaje nieruchomy wewnątrz prostokątem to narzędzie.  
+- Pobrać TTDT_AUTOPOP czas etykietka narzędzia okna pozostają widoczne, jeśli wskaźnik jest nieruchomy w ramach narzędzia prostokąt otaczający.  
   
-- Pobrać TTDT_INITIAL długość czasu, jaki wskaźnik musi spędzić w bezruchu wewnątrz to narzędzie prostokątem przed Porada okno zostanie wyświetlone.  
+- Pobieranie TTDT_INITIAL długość czasu, jaki wskaźnik musi pozostać stacjonarnych w ramach narzędzia prostokąt otaczający przed okno porad narzędzia pojawi się.  
   
-- Pobrać TTDT_RESHOW czas, jaki zajmuje kolejnych narzędzia windows porady były wyświetlane jako wskaźnik jest przenoszone z jednego narzędzia na inny.  
+- Pobieranie TTDT_RESHOW długość czasu potrzebnego dla kolejnych Porada okna są wyświetlane jako wskaźnik jest przenoszony z jednego narzędzia do innego.  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Określony okres czasu, w milisekundach  
   
 ### <a name="remarks"></a>Uwagi  
- Ta funkcja członkowska implementuje zachowanie komunikatu Win32 [TTM_GETDELAYTIME](http://msdn.microsoft.com/library/windows/desktop/bb760390), zgodnie z opisem w zestawie Windows SDK.  
+ Ta funkcja elementu członkowskiego implementuje zachowanie komunikatu Win32 [TTM_GETDELAYTIME](/windows/desktop/Controls/ttm-getdelaytime), zgodnie z opisem w zestawie Windows SDK.  
   
 ##  <a name="getmargin"></a>  CToolTipCtrl::GetMargin  
- Pobiera góry po lewej, dolnej i prawego marginesu, ustaw dla okna Porada narzędzia.  
+ Pobiera pierwszych, po lewej stronie, dolnej i prawego marginesu dla okna narzędzi porada.  
   
 ```  
 void GetMargin(LPRECT lprc) const;  
@@ -419,33 +419,33 @@ void GetMargin(LPRECT lprc) const;
   
 ### <a name="parameters"></a>Parametry  
  *lprc*  
- Adres `RECT` strukturę, która będzie otrzymywać informacje margines. Elementy członkowskie [RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897) struktury nie definiują prostokąt ograniczający. Na potrzeby tego komunikatu elementy członkowskie struktury interpretowania w następujący sposób:  
+ Adres `RECT` struktury, który będzie otrzymywać informacje margines. Elementy członkowskie [Prostokąt](https://msdn.microsoft.com/library/windows/desktop/dd162897) struktury nie definiują prostokąt otaczający. Na potrzeby tego komunikatu elementy członkowskie struktury jest interpretowany w następujący sposób:  
   
-|Element członkowski|Reprezentacja wartości|  
+|Element członkowski|Reprezentacja|  
 |------------|--------------------|  
-|`top`|Odległości między górnej krawędzi górnej części tekst wskazówki, w pikselach.|  
-|`left`|Odległość między lewą krawędzią a lewego końca tekst porady w pikselach.|  
-|`bottom`|Odległość między dolną granicę i u dołu tekst porady w pikselach.|  
-|`right`|Odległości między prawą krawędź prawego końca tekst porady w pikselach.|  
+|`top`|Odległość między górną krawędź i od góry tekst wskazówki, w pikselach.|  
+|`left`|Odległość między lewą krawędź lewego końca tekst porady, w pikselach.|  
+|`bottom`|Odległość między dolną krawędź i u dołu tekst porady, w pikselach.|  
+|`right`|Odległość między prawą krawędź prawego końca tekst porady, w pikselach.|  
   
 ### <a name="remarks"></a>Uwagi  
- Ta funkcja członkowska implementuje zachowanie komunikatu Win32 [TTM_GETMARGIN](http://msdn.microsoft.com/library/windows/desktop/bb760391), zgodnie z opisem w zestawie Windows SDK.  
+ Ta funkcja elementu członkowskiego implementuje zachowanie komunikatu Win32 [TTM_GETMARGIN](/windows/desktop/Controls/ttm-getmargin), zgodnie z opisem w zestawie Windows SDK.  
   
 ##  <a name="getmaxtipwidth"></a>  CToolTipCtrl::GetMaxTipWidth  
- Pobiera maksymalną szerokość okna Porada narzędzia.  
+ Pobiera maksymalną szerokość okna narzędzia porada.  
   
 ```  
 int GetMaxTipWidth() const;  
 ```  
   
 ### <a name="return-value"></a>Wartość zwracana  
- Maksymalna szerokość okna Porada narzędzia.  
+ Maksymalna szerokość okna narzędzi porada.  
   
 ### <a name="remarks"></a>Uwagi  
- Ta funkcja członkowska implementuje zachowanie komunikatu Win32 [TTM_GETMAXTIPWIDTH](http://msdn.microsoft.com/library/windows/desktop/bb760392), zgodnie z opisem w zestawie Windows SDK.  
+ Ta funkcja elementu członkowskiego implementuje zachowanie komunikatu Win32 [TTM_GETMAXTIPWIDTH](/windows/desktop/Controls/ttm-getmaxtipwidth), zgodnie z opisem w zestawie Windows SDK.  
   
 ##  <a name="gettext"></a>  CToolTipCtrl::GetText  
- Pobiera tekst, który obsługuje formantem etykietki narzędzia dla narzędzia.  
+ Pobiera tekst, który obsługuje formantem etykietki narzędzia, dla narzędzia.  
   
 ```  
 void GetText(
@@ -456,45 +456,45 @@ void GetText(
   
 ### <a name="parameters"></a>Parametry  
  *str*  
- Odwołanie do `CString` obiekt, który odbiera narzędzia tekstu.  
+ Odwołanie do `CString` obiekt, który odbiera tekst tego narzędzia.  
   
  *pWnd*  
- Wskaźnik do okna zawierającego to narzędzie.  
+ Wskaźnik do okna, które zawiera narzędzia.  
   
  *nIDTool*  
  Identyfikator narzędzia.  
   
 ### <a name="remarks"></a>Uwagi  
- *PWnd* i *nIDTool* parametry zidentyfikować narzędzie. Jeśli narzędzia został wcześniej zarejestrowany z formantem etykietki narzędzia przez poprzednie wywołanie `CToolTipCtrl::AddTool`, zawiera odwołanie do obiektu *str* parametru przypisano narzędzia tekstu.  
+ *PWnd* i *nIDTool* parametry zidentyfikować narzędzie. Jeśli został wcześniej zarejestrowany tego narzędzia z formantem etykietki narzędzia, za pomocą poprzedniego wywołania `CToolTipCtrl::AddTool`, zawiera odwołanie do obiektu *str* parametr jest przypisany tekst tego narzędzia.  
   
 ##  <a name="gettipbkcolor"></a>  CToolTipCtrl::GetTipBkColor  
- Pobiera kolor tła w oknie Porada narzędzia.  
+ Pobiera kolor tła w oknie narzędzi porada.  
   
 ```  
 COLORREF GetTipBkColor() const;  
 ```  
   
 ### <a name="return-value"></a>Wartość zwracana  
- A [COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449) wartość, która reprezentuje kolor tła.  
+ A [COLORREF](/windows/desktop/gdi/colorref) wartość, która reprezentuje kolor tła.  
   
 ### <a name="remarks"></a>Uwagi  
- Ta funkcja członkowska implementuje zachowanie komunikatu Win32 [TTM_GETTIPBKCOLOR](http://msdn.microsoft.com/library/windows/desktop/bb760394), zgodnie z opisem w zestawie Windows SDK.  
+ Ta funkcja elementu członkowskiego implementuje zachowanie komunikatu Win32 [TTM_GETTIPBKCOLOR](/windows/desktop/Controls/ttm-gettipbkcolor), zgodnie z opisem w zestawie Windows SDK.  
   
 ##  <a name="gettiptextcolor"></a>  CToolTipCtrl::GetTipTextColor  
- Pobiera kolor tekstu w oknie Porada narzędzia.  
+ Pobiera kolor tekstu w oknie narzędzi porada.  
   
 ```  
 COLORREF GetTipTextColor() const;  
 ```  
   
 ### <a name="return-value"></a>Wartość zwracana  
- A [COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449) wartość, która reprezentuje kolor tekstu.  
+ A [COLORREF](/windows/desktop/gdi/colorref) wartość, która reprezentuje kolor tekstu.  
   
 ### <a name="remarks"></a>Uwagi  
- Ta funkcja członkowska implementuje zachowanie komunikatu Win32 [TTM_GETTIPTEXTCOLOR](http://msdn.microsoft.com/library/windows/desktop/bb760395), zgodnie z opisem w zestawie Windows SDK.  
+ Ta funkcja elementu członkowskiego implementuje zachowanie komunikatu Win32 [TTM_GETTIPTEXTCOLOR](/windows/desktop/Controls/ttm-gettiptextcolor), zgodnie z opisem w zestawie Windows SDK.  
   
 ##  <a name="gettitle"></a>  CToolTipCtrl::GetTitle  
- Pobiera tytuł bieżącego formantu tooltip.  
+ Pobiera tytuł bieżącego kontrolki tooltip.  
   
 ```  
 void GetTitle(PTTGETTITLE pttgt) const;  
@@ -504,10 +504,10 @@ void GetTitle(PTTGETTITLE pttgt) const;
   
 |Parametr|Opis|  
 |---------------|-----------------|  
-|[out] *pttgt*|Wskaźnik do [TTGETTITLE](http://msdn.microsoft.com/library/windows/desktop/bb760260) struktury, który zawiera informacje o formantu ToolTip. Gdy metoda zwróci wartość, *pszTitle* członkiem [TTGETTITLE](http://msdn.microsoft.com/library/windows/desktop/bb760260) struktury punkty tekstu tytułu.|  
+|[out] *pttgt*|Wskaźnik do [TTGETTITLE](/windows/desktop/api/commctrl/ns-commctrl-_ttgettitle) strukturę, która zawiera informacje o formancie ToolTip. Po powrocie z tej metody *pszTitle* członkiem [TTGETTITLE](/windows/desktop/api/commctrl/ns-commctrl-_ttgettitle) struktury wskazuje tekst tytułu.|  
   
 ### <a name="remarks"></a>Uwagi  
- Ta metoda wysyła [TTM_GETTITLE](http://msdn.microsoft.com/library/windows/desktop/bb760396) komunikat, który jest opisany w zestawie SDK systemu Windows.  
+ Ta metoda wysyła [TTM_GETTITLE](/windows/desktop/Controls/ttm-gettitle) komunikat, który jest opisany w zestawie Windows SDK.  
   
 ##  <a name="gettoolcount"></a>  CToolTipCtrl::GetToolCount  
  Pobiera liczbę narzędzia zarejestrowany z formantem etykietki narzędzia.  
@@ -517,10 +517,10 @@ int GetToolCount() const;
 ```  
   
 ### <a name="return-value"></a>Wartość zwracana  
- Liczba narzędzia zarejestrowany z formantem etykietki narzędzia.  
+ Liczba narzędzia zarejestrowana z formantem etykietki narzędzia.  
   
 ##  <a name="gettoolinfo"></a>  CToolTipCtrl::GetToolInfo  
- Pobiera formantem etykietki narzędzia przechowuje informacje dotyczące narzędzia.  
+ Pobiera informacje, która utrzymuje formantem etykietki narzędzia o narzędziu.  
   
 ```  
 BOOL GetToolInfo(
@@ -531,22 +531,22 @@ BOOL GetToolInfo(
   
 ### <a name="parameters"></a>Parametry  
  *ToolInfo*  
- Odwołanie do `TOOLINFO` obiekt, który odbiera narzędzia tekstu.  
+ Odwołanie do `TOOLINFO` obiekt, który odbiera tekst tego narzędzia.  
   
  *pWnd*  
- Wskaźnik do okna zawierającego to narzędzie.  
+ Wskaźnik do okna, które zawiera narzędzia.  
   
  *nIDTool*  
  Identyfikator narzędzia.  
   
 ### <a name="return-value"></a>Wartość zwracana  
- Różna od zera, w przypadku powodzenia; w przeciwnym razie 0.  
+ Wartość różną od zera, jeśli to się powiedzie; w przeciwnym razie 0.  
   
 ### <a name="remarks"></a>Uwagi  
- `hwnd` i `uId` członkami [TOOLINFO](http://msdn.microsoft.com/library/windows/desktop/bb760256) struktury odwołuje się *CToolInfo* zidentyfikować narzędzie. Jeśli został zarejestrowany z formantem etykietki narzędzia przez poprzednie wywołanie tego narzędzia `AddTool`, `TOOLINFO` struktura jest wypełniony informacji o narzędziu.  
+ `hwnd` i `uId` członkowie [TOOLINFO](/windows/desktop/api/commctrl/ns-commctrl-tagtoolinfoa) struktury odwołuje się *CToolInfo* zidentyfikować narzędzie. Jeśli zarejestrowano tego narzędzia, z formantem etykietki narzędzia, za pomocą poprzedniego wywołania `AddTool`, `TOOLINFO` struktury jest wypełniony przy użyciu informacji o tym narzędziu.  
   
 ##  <a name="hittest"></a>  CToolTipCtrl::HitTest  
- Testy z punktem w celu ustalenia, czy w ramach prostokątem danego narzędzia, a jeśli tak, pobrać informacji o narzędziu.  
+ Testy punktu w celu ustalenia, czy w ramach prostokąt otaczający danego narzędzia, a jeśli tak, należy pobrać informacji o tym narzędziu.  
   
 ```  
 BOOL HitTest(
@@ -557,21 +557,21 @@ BOOL HitTest(
   
 ### <a name="parameters"></a>Parametry  
  *pWnd*  
- Wskaźnik do okna zawierającego to narzędzie.  
+ Wskaźnik do okna, które zawiera narzędzia.  
   
- *PT*  
- Wskaźnik do `CPoint` obiekt zawierający współrzędne punktu do sprawdzenia.  
+ *(czas pacyficzny)*  
+ Wskaźnik do `CPoint` obiekt, który zawiera współrzędne punktu ma zostać przetestowana.  
   
  *lpToolInfo*  
- Wskaźnik do [TOOLINFO](http://msdn.microsoft.com/library/windows/desktop/bb760256) struktury, który zawiera informacje o narzędziu.  
+ Wskaźnik do [TOOLINFO](/windows/desktop/api/commctrl/ns-commctrl-tagtoolinfoa) strukturę, która zawiera informacje o tym narzędziu.  
   
 ### <a name="return-value"></a>Wartość zwracana  
- Różna od zera, jeśli punkt określonym przez test trafień informacji znajduje się w narzędzia prostokąt ograniczający; w przeciwnym razie 0.  
+ Wartość różną od zera, jeśli określony przez informacji testowania trafienia punkt znajduje się w narzędzia prostokąt otaczający; w przeciwnym razie 0.  
   
 ### <a name="remarks"></a>Uwagi  
- Jeśli ta funkcja zwraca wartość niezerową, struktura wskazywana przez *lpToolInfo* informacji o narzędziu, w których prostokąta znajduje się punkt jest wypełnione.  
+ Jeśli ta funkcja zwraca wartość różną od zera, struktury, wskazywana przez *lpToolInfo* jest wypełniony informacjami na temat narzędzia w ramach którego prostokąta znajduje się punkt.  
   
- `TTHITTESTINFO` Struktury jest zdefiniowane w następujący sposób:  
+ `TTHITTESTINFO` Struktura jest zdefiniowana w następujący sposób:  
   
  `typedef struct _TT_HITTESTINFO { // tthti`  
   
@@ -584,36 +584,36 @@ BOOL HitTest(
  `} TTHITTESTINFO, FAR * LPHITTESTINFO;`  
   
  `hwnd`  
- Określa narzędzie dojścia.  
+ Określa dojście do tego narzędzia.  
   
  `pt`  
- Określa współrzędne punktu, gdy punkt jest za pomocą narzędzia obwiedni prostokąta.  
+ Określa współrzędne punktu, gdy punkt jest za pomocą narzędzia prostokąt ograniczający.  
   
  `ti`  
- Informacje o narzędziu. Aby uzyskać więcej informacji na temat `TOOLINFO` struktury, zobacz [CToolTipCtrl::GetToolInfo](#gettoolinfo).  
+ Informacje o tym narzędziu. Aby uzyskać więcej informacji na temat `TOOLINFO` struktury, zobacz [CToolTipCtrl::GetToolInfo](#gettoolinfo).  
   
 ##  <a name="pop"></a>  CToolTipCtrl::Pop  
- Usuwa wyświetlane okno Porada w widoku.  
+ Okno porad wyświetlanych narzędzie usuwa z widoku.  
   
 ```  
 void Pop();
 ```  
   
 ### <a name="remarks"></a>Uwagi  
- Ta funkcja członkowska implementuje zachowanie komunikatu Win32 [TTM_POP](http://msdn.microsoft.com/library/windows/desktop/bb760401), zgodnie z opisem w zestawie Windows SDK.  
+ Ta funkcja elementu członkowskiego implementuje zachowanie komunikatu Win32 [TTM_POP](/windows/desktop/Controls/ttm-pop), zgodnie z opisem w zestawie Windows SDK.  
   
 ##  <a name="popup"></a>  CToolTipCtrl::Popup  
- Powoduje, że bieżący formantu tooltip do wyświetlenia na współrzędne ostatniego komunikatu myszy.  
+ Powoduje, że bieżący formantu etykietki narzędzia, aby wyświetlić współrzędne ostatniego komunikatu myszy.  
   
 ```  
 void Popup();
 ```  
   
 ### <a name="remarks"></a>Uwagi  
- Ta metoda wysyła [TTM_POPUP](http://msdn.microsoft.com/library/windows/desktop/bb760402) komunikat, który jest opisany w zestawie SDK systemu Windows.  
+ Ta metoda wysyła [TTM_POPUP](/windows/desktop/Controls/ttm-popup) komunikat, który jest opisany w zestawie Windows SDK.  
   
 ### <a name="example"></a>Przykład  
- Poniższy przykładowy kod przedstawia okna etykietki narzędzia.  
+ Poniższy przykład kodu wyświetla się okno etykiety narzędzi.  
   
  [!code-cpp[NVC_MFC_CToolBarCtrl_s1#7](../../mfc/reference/codesnippet/cpp/ctooltipctrl-class_3.cpp)]  
   
@@ -626,7 +626,7 @@ void RelayEvent(LPMSG lpMsg);
   
 ### <a name="parameters"></a>Parametry  
  *lpMsg*  
- Wskaźnik do [MSG](http://msdn.microsoft.com/library/windows/desktop/ms644958) strukturę, która zawiera do przekazywania wiadomości.  
+ Wskaźnik do [MSG](https://msdn.microsoft.com/library/windows/desktop/ms644958) strukturę, która zawiera do przekazywania wiadomości.  
   
 ### <a name="remarks"></a>Uwagi  
  Formantem etykietki narzędzia przetwarza tylko następujące komunikaty, które są wysyłane do niej przez `RelayEvent`:  
@@ -654,19 +654,19 @@ void SetDelayTime(
   
 ### <a name="parameters"></a>Parametry  
  *nDelay*  
- Określa czas opóźnienia nowe, w milisekundach.  
+ Określa nową wartość czasu opóźnienia, w milisekundach.  
   
  *dwDuration*  
- Flaga określająca, które wartości czasu trwania zostaną pobrane. Zobacz [CToolTipCtrl::GetDelayTime](#getdelaytime) opis prawidłowych wartości.  
+ Flaga określająca wartość czasu trwania, która zostanie pobrana. Zobacz [CToolTipCtrl::GetDelayTime](#getdelaytime) opis prawidłowych wartości.  
   
  *iTime*  
  Czas określony opóźnienie w milisekundach.  
   
 ### <a name="remarks"></a>Uwagi  
- Czas opóźnienia jest czas, który kursor musi pozostać na narzędzie przed wyświetleniem okna narzędzia porada. Domyślny czas opóźnienia wynosi 500 milisekund.  
+ Czas opóźnienia jest długością razem, gdy kursor musi pozostawać nad narzędziem, zanim zostanie wyświetlone okno Porada narzędzia. Domyślny czas opóźnienia wynosi 500 milisekund.  
   
 ##  <a name="setmargin"></a>  CToolTipCtrl::SetMargin  
- Ustawia góry po lewej, dolnej i prawego marginesu Porada okna narzędzia.  
+ Ustawia top, po lewej stronie, dolnej i prawego marginesu Porada okna narzędzia.  
   
 ```  
 void SetMargin(LPRECT lprc);
@@ -674,13 +674,13 @@ void SetMargin(LPRECT lprc);
   
 ### <a name="parameters"></a>Parametry  
  *lprc*  
- Adres `RECT` strukturę, która zawiera informacje margines ma zostać ustawiona. Elementy członkowskie `RECT` struktury nie definiują prostokąt ograniczający. Zobacz [CToolTipCtrl::GetMargin](#getmargin) opis informacji margines.  
+ Adres `RECT` strukturę, która zawiera informacje o margines do ustawienia. Elementy członkowskie `RECT` struktury nie definiują prostokąt otaczający. Zobacz [CToolTipCtrl::GetMargin](#getmargin) opis informacji margines.  
   
 ### <a name="remarks"></a>Uwagi  
- Ta funkcja członkowska implementuje zachowanie komunikatu Win32 [TTM_SETMARGIN](http://msdn.microsoft.com/library/windows/desktop/bb760406), zgodnie z opisem w zestawie Windows SDK.  
+ Ta funkcja elementu członkowskiego implementuje zachowanie komunikatu Win32 [TTM_SETMARGIN](/windows/desktop/Controls/ttm-setmargin), zgodnie z opisem w zestawie Windows SDK.  
   
 ##  <a name="setmaxtipwidth"></a>  CToolTipCtrl::SetMaxTipWidth  
- Ustawia maksymalną szerokość okna Porada narzędzia.  
+ Ustawia maksymalną szerokość okna narzędzia porada.  
   
 ```  
 int SetMaxTipWidth(int iWidth);
@@ -694,10 +694,10 @@ int SetMaxTipWidth(int iWidth);
  Poprzednie szerokość maksymalna porada.  
   
 ### <a name="remarks"></a>Uwagi  
- Ta funkcja członkowska implementuje zachowanie komunikatu Win32 [TTM_SETMAXTIPWIDTH](http://msdn.microsoft.com/library/windows/desktop/bb760408), zgodnie z opisem w zestawie Windows SDK.  
+ Ta funkcja elementu członkowskiego implementuje zachowanie komunikatu Win32 [TTM_SETMAXTIPWIDTH](/windows/desktop/Controls/ttm-setmaxtipwidth), zgodnie z opisem w zestawie Windows SDK.  
   
 ##  <a name="settipbkcolor"></a>  CToolTipCtrl::SetTipBkColor  
- Ustawia kolor tła w oknie Porada narzędzia.  
+ Ustawia kolor tła w oknie narzędzi porada.  
   
 ```  
 void SetTipBkColor(COLORREF clr);
@@ -708,10 +708,10 @@ void SetTipBkColor(COLORREF clr);
  Nowy kolor tła.  
   
 ### <a name="remarks"></a>Uwagi  
- Ta funkcja członkowska implementuje zachowanie komunikatu Win32 [TTM_SETTIPBKCOLOR](http://msdn.microsoft.com/library/windows/desktop/bb760411), zgodnie z opisem w zestawie Windows SDK.  
+ Ta funkcja elementu członkowskiego implementuje zachowanie komunikatu Win32 [TTM_SETTIPBKCOLOR](/windows/desktop/Controls/ttm-settipbkcolor), zgodnie z opisem w zestawie Windows SDK.  
   
 ##  <a name="settiptextcolor"></a>  CToolTipCtrl::SetTipTextColor  
- Ustawia kolor tekstu w oknie Porada narzędzia.  
+ Ustawia kolor tekstu w oknie narzędzi porada.  
   
 ```  
 void SetTipTextColor(COLORREF clr);
@@ -719,13 +719,13 @@ void SetTipTextColor(COLORREF clr);
   
 ### <a name="parameters"></a>Parametry  
  *CLR*  
- Na nowy kolor tekstu.  
+ Nowy kolor tekstu.  
   
 ### <a name="remarks"></a>Uwagi  
- Ta funkcja członkowska implementuje zachowanie komunikatu Win32 [TTM_SETTIPTEXTCOLOR](http://msdn.microsoft.com/library/windows/desktop/bb760413), zgodnie z opisem w zestawie Windows SDK.  
+ Ta funkcja elementu członkowskiego implementuje zachowanie komunikatu Win32 [TTM_SETTIPTEXTCOLOR](/windows/desktop/Controls/ttm-settiptextcolor), zgodnie z opisem w zestawie Windows SDK.  
   
 ##  <a name="settitle"></a>  CToolTipCtrl::SetTitle  
- Dodaje ciąg standardowy ikony, jak i tytuł etykietka narzędzia.  
+ Dodaje ciąg standardowy ikonę i tytuł do etykietki narzędzia.  
   
 ```  
 BOOL SetTitle(
@@ -735,19 +735,19 @@ BOOL SetTitle(
   
 ### <a name="parameters"></a>Parametry  
  *uIcon*  
- Zobacz *ikona* w [TTM_SETTITLE](http://msdn.microsoft.com/library/windows/desktop/bb760414) w zestawie Windows SDK.  
+ Zobacz *ikonę* w [TTM_SETTITLE](/windows/desktop/Controls/ttm-settitle) w zestawie Windows SDK.  
   
  *lpstrTitle*  
- Wskaźnik do ciągu tytułu.  
+ Wskaźnik na ciąg tytułu.  
   
 ### <a name="return-value"></a>Wartość zwracana  
- Różna od zera, w przypadku powodzenia; w przeciwnym razie 0.  
+ Wartość różną od zera, jeśli to się powiedzie; w przeciwnym razie 0.  
   
 ### <a name="remarks"></a>Uwagi  
- Ta funkcja członkowska implementuje zachowanie komunikatu Win32 [TTM_SETTITLE](http://msdn.microsoft.com/library/windows/desktop/bb760414), zgodnie z opisem w zestawie Windows SDK.  
+ Ta funkcja elementu członkowskiego implementuje zachowanie komunikatu Win32 [TTM_SETTITLE](/windows/desktop/Controls/ttm-settitle), zgodnie z opisem w zestawie Windows SDK.  
   
 ##  <a name="settoolinfo"></a>  CToolTipCtrl::SetToolInfo  
- Ustawia informacje, które obsługuje etykietki narzędzia dla narzędzia.  
+ Ustawia informacje o, zawierającą etykietka narzędzia.  
   
 ```  
 void SetToolInfo(LPTOOLINFO lpToolInfo);
@@ -755,10 +755,10 @@ void SetToolInfo(LPTOOLINFO lpToolInfo);
   
 ### <a name="parameters"></a>Parametry  
  *lpToolInfo*  
- Wskaźnik do [TOOLINFO](http://msdn.microsoft.com/library/windows/desktop/bb760256) strukturę, która określa informacji do ustawienia.  
+ Wskaźnik do [TOOLINFO](/windows/desktop/api/commctrl/ns-commctrl-tagtoolinfoa) strukturę, która określa informacje, które można ustawić.  
   
 ##  <a name="settoolrect"></a>  CToolTipCtrl::SetToolRect  
- Ustawia nowy prostokąt ograniczający narzędzia.  
+ Ustawia nowy prostokąt otaczający narzędzia.  
   
 ```  
 void SetToolRect(
@@ -769,16 +769,16 @@ void SetToolRect(
   
 ### <a name="parameters"></a>Parametry  
  *pWnd*  
- Wskaźnik do okna zawierającego to narzędzie.  
+ Wskaźnik do okna, które zawiera narzędzia.  
   
  *nIDTool*  
  Identyfikator narzędzia.  
   
  *lprect —*  
- Wskaźnik do [RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897) Określanie prostokąt ograniczający nowe struktury.  
+ Wskaźnik do [Prostokąt](https://msdn.microsoft.com/library/windows/desktop/dd162897) struktury, określając nowy prostokąt otaczający.  
   
 ##  <a name="setwindowtheme"></a>  CToolTipCtrl::SetWindowTheme  
- Ustawia styl wizualny Porada okna narzędzia.  
+ Ustawia styl wizualny okna narzędzia porada.  
   
 ```  
 HRESULT SetWindowTheme(LPCWSTR pszSubAppName);
@@ -786,23 +786,23 @@ HRESULT SetWindowTheme(LPCWSTR pszSubAppName);
   
 ### <a name="parameters"></a>Parametry  
  *pszSubAppName*  
- Wskaźnik do ciąg Unicode, który zawiera styl wizualny, aby ustawić.  
+ Wskaźnik na ciąg Unicode, który zawiera styl wizualny do ustawienia.  
   
 ### <a name="return-value"></a>Wartość zwracana  
- Wartość zwrotna nie jest używany.  
+ Zwracana wartość nie jest używana.  
   
 ### <a name="remarks"></a>Uwagi  
- Ta funkcja członkowska emuluje funkcje [TTM_SETWINDOWTHEME](http://msdn.microsoft.com/library/windows/desktop/bb760418) komunikatu, zgodnie z opisem w zestawie Windows SDK.  
+ Ta funkcja członkowska emuluje funkcjonalność [TTM_SETWINDOWTHEME](/windows/desktop/Controls/ttm-setwindowtheme) komunikat, zgodnie z opisem w zestawie Windows SDK.  
   
 ##  <a name="update"></a>  CToolTipCtrl::Update  
- Wymusza bieżącego narzędzia do narysowania.  
+ Wymusza narysowania bieżącego narzędzia.  
   
 ```  
 void Update();
 ```  
   
 ##  <a name="updatetiptext"></a>  CToolTipCtrl::UpdateTipText  
- Aktualizuje tekst wskazówki dla narzędzi tego formantu.  
+ Aktualizuje tekst wskazówki dla narzędzi tej kontrolki.  
   
 ```  
 void UpdateTipText(
@@ -819,16 +819,16 @@ void UpdateTipText(
   
 ### <a name="parameters"></a>Parametry  
  *lpszText*  
- Wskaźnik do tekstu dla tego narzędzia.  
+ Wskaźnik do tekstu dla narzędzia.  
   
  *pWnd*  
- Wskaźnik do okna zawierającego to narzędzie.  
+ Wskaźnik do okna, które zawiera narzędzia.  
   
  *nIDTool*  
  Identyfikator narzędzia.  
   
  *nIDText*  
- Identyfikator zasobu ciągu zawierającego tekst dla narzędzia.  
+ Identyfikator zasobu ciągu zawierający tekst dla narzędzia.  
   
 ## <a name="see-also"></a>Zobacz też  
  [Klasa CWnd](../../mfc/reference/cwnd-class.md)   

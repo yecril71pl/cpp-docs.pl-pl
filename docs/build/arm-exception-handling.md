@@ -12,12 +12,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2047938e25ed235d04b7a851a21a44090194660a
-ms.sourcegitcommit: 7eadb968405bcb92ffa505e3ad8ac73483e59685
+ms.openlocfilehash: e4ce0ef6ba923332d03972e2bd8b7ebb1f1cfb9e
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/23/2018
-ms.locfileid: "39209121"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43205706"
 ---
 # <a name="arm-exception-handling"></a>Obsługa wyjątków ARM
 
@@ -25,7 +25,7 @@ Windows na ARM używa tego samego strukturalnej obsługi wyjątków mechanizm as
 
 ## <a name="arm-exception-handling"></a>Obsługa wyjątków ARM
 
-Używa Windows na ARM *kodów odwinięcia* do kontrolowania, podczas wykonywania operacji odwijania stosu [obsługę wyjątków strukturalnych](http://msdn.microsoft.com/library/windows/desktop/ms680657) (SEH). Operacja unwind kody to sekwencja bajtów przechowywanych w sekcji .xdata obrazu pliku wykonywalnego. Opisują one działania kodu prologu i epilogu funkcji abstrakcyjne przebiega tak, aby skutki prologu funkcji można cofnąć w ramach przygotowania do rozwinięcia do obiektu wywołującego ramki stosu.
+Używa Windows na ARM *kodów odwinięcia* do kontrolowania, podczas wykonywania operacji odwijania stosu [obsługę wyjątków strukturalnych](https://msdn.microsoft.com/library/windows/desktop/ms680657) (SEH). Operacja unwind kody to sekwencja bajtów przechowywanych w sekcji .xdata obrazu pliku wykonywalnego. Opisują one działania kodu prologu i epilogu funkcji abstrakcyjne przebiega tak, aby skutki prologu funkcji można cofnąć w ramach przygotowania do rozwinięcia do obiektu wywołującego ramki stosu.
 
 EABI ARM (interfejsem binarnym aplikacji osadzonej) określa kodów odwinięcia odwijania model wyjątków, który używa, ale nie jest wystarczająca dla SEH odwijanie w Windows, który musi obsługiwać asynchronicznego przypadki, w którym procesor jest w trakcie prologu lub epilogu funkcji. Windows oddziela również odwijania kontroli na poziomie funkcji odwijanie i odwijanie zakres specyficzny dla języka, który jest jednolita w ARM EABI. Z tego względu Windows na ARM określa więcej szczegółów odwijania danych i procedury.
 

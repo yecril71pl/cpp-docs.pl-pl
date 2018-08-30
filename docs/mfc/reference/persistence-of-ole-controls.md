@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 661735e91084bad45553de71e80a599afd674028
-ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
+ms.openlocfilehash: f07efa6ebbea70f83803238bf73e2d3e806ea457
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37336829"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43204572"
 ---
 # <a name="persistence-of-ole-controls"></a>Stan trwały formantów OLE
 Jeden możliwości formantów OLE jest właściwość trwałość (lub serializacji), co pozwala kontrolkę OLE do odczytu lub zapisu wartości właściwości, do i z pliku lub strumienia. Aplikacja kontenera można użyć serializacji do przechowywania wartości właściwości kontrolki, nawet po zakończeniu aplikacja ma zniszczone formantu. Wartości właściwości kontrolki OLE może następnie zostać odczytany z pliku lub strumienia, gdy nowe wystąpienie kontrolki jest tworzona w późniejszym czasie.  
@@ -93,7 +93,7 @@ hBlobDefault
   
 -   Blok pamięci zawierającej dane binarne.  
   
- Należy pamiętać, że `PX_Blob` spowoduje przydzielenie pamięci, przy użyciu Windows [działanie funkcji GlobalAlloc](http://msdn.microsoft.com/library/windows/desktop/aa366574) interfejsu API, podczas ładowania właściwości typu obiektu BLOB. Odpowiedzialność za zwalniania tej pamięci. W związku z tym, należy wywołać destruktor kontroli nad [GlobalFree](http://msdn.microsoft.com/library/windows/desktop/aa366579) dowolne właściwości typu obiektu BLOB uchwytów, aby zwolnić Konfigurowanie przydzielania pamięci na Twoją kontrolą.  
+ Należy pamiętać, że `PX_Blob` spowoduje przydzielenie pamięci, przy użyciu Windows [działanie funkcji GlobalAlloc](/windows/desktop/api/winbase/nf-winbase-globalalloc) interfejsu API, podczas ładowania właściwości typu obiektu BLOB. Odpowiedzialność za zwalniania tej pamięci. W związku z tym, należy wywołać destruktor kontroli nad [GlobalFree](/windows/desktop/api/winbase/nf-winbase-globalfree) dowolne właściwości typu obiektu BLOB uchwytów, aby zwolnić Konfigurowanie przydzielania pamięci na Twoją kontrolą.  
   
 ##  <a name="px_bool"></a>  Px_bool —  
  Wywołaj tę funkcję, w ramach kontroli nad `DoPropExchange` funkcja elementu członkowskiego do serializacji lub zainicjuj właściwość typu wartość logiczna.  

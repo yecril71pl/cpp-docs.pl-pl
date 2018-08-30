@@ -1,5 +1,5 @@
 ---
-title: Kompilatora (poziom 1) ostrzeżenie C4138 | Dokumentacja firmy Microsoft
+title: Kompilator ostrzeżenie (poziom 1) C4138 | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,17 +16,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f0865935c30c4934684c7a12e50ab26f3e8b12c4
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: cc3102f18021c16663bdf61dcde6df5e6893d46c
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33277036"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43197091"
 ---
-# <a name="compiler-warning-level-1-c4138"></a>Kompilator C4138 ostrzegawcze (poziom 1)
+# <a name="compiler-warning-level-1-c4138"></a>Kompilator ostrzeżenie (poziom 1) C4138
 "* /" znaleziono poza komentarzem  
   
- Ogranicznik zamknięcia komentarza nie jest poprzedzony ogranicznik otwarcia komentarza. Kompilator zakłada odstęp między gwiazdka (**\****) i ukośnika (/).  
+ Ogranicznik komentarza zamykający nie jest poprzedzony przez ogranicznik otwierający komentarz. Kompilator zakłada odstęp między gwiazdka (<strong>\**</strong>) i ukośnika (/).  
   
 ## <a name="example"></a>Przykład  
   
@@ -39,9 +39,9 @@ int main()
 }  
 ```  
   
- To ostrzeżenie może być spowodowane próby zagnieździć komentarze.  
+ To ostrzeżenie może być spowodowany próby zagnieździć komentarzy.  
   
- To ostrzeżenie można rozwiązać, jeśli komentarz fragmentów kodu zawierające komentarze, umieść kod w **#if / #endif** zablokować, a także ustawić na zero kontrolowanie wyrażenia:  
+ Mogą być rozwiązane to ostrzeżenie, jeśli komentarz wystąpi poza sekcje kodu zawierające komentarze, należy wpisać kod w **#if / #endif** zablokować, a wyrażenie kontrolujące należy ustawić na zero:  
   
 ```  
 // C4138b.cpp  

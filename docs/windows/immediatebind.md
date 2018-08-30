@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: f2d5e0fac0d9ab89ef14a3bfafc78fe1c1138673
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: dd546f6d3eb3b2eae60b4bbc8c8fa9b0b4ed00f1
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42602010"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43201028"
 ---
 # <a name="immediatebind"></a>immediatebind
 
@@ -36,7 +36,7 @@ Wskazuje, że baza danych zostanie niezwłocznie powiadomiona o wszystkich zmian
 
 ## <a name="remarks"></a>Uwagi
 
-**Immediatebind —** atrybut C++ ma taką samą funkcjonalność jak [immediatebind —](http://msdn.microsoft.com/library/windows/desktop/aa367045) atrybutów w MIDL.
+**Immediatebind —** atrybut C++ ma taką samą funkcjonalność jak [immediatebind —](/windows/desktop/Midl/immediatebind) atrybutów w MIDL.
 
 ## <a name="example"></a>Przykład
 

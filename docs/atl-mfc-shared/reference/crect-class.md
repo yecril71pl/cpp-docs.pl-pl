@@ -44,12 +44,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9a1b968e09ed40959c30a649d4d4e17baea28703
-ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
+ms.openlocfilehash: 3d49b7a96f98c701c2748379ed880267bff3fa5a
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37881090"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43196651"
 ---
 # <a name="crect-class"></a>CRect, klasa
 Podobnie jak Windows [Prostokąt](../../mfc/reference/rect-structure1.md) struktury.  
@@ -375,7 +375,7 @@ void DeflateRect(int l, int t, int r, int b) throw();
  Określa liczbę jednostek do korygowania górnej i dolnej części `CRect`.  
   
  *Rozmiar*  
- A [rozmiar](http://msdn.microsoft.com/library/windows/desktop/dd145106) lub [CSize](csize-class.md) , który określa liczbę jednostek do korygowania `CRect`. `cx` Wartość określa liczbę jednostek do korygowania lewej i prawej stronie i `cy` wartość określa liczbę jednostek do korygowania górny i dolny.  
+ A [rozmiar](https://msdn.microsoft.com/library/windows/desktop/dd145106) lub [CSize](csize-class.md) , który określa liczbę jednostek do korygowania `CRect`. `cx` Wartość określa liczbę jednostek do korygowania lewej i prawej stronie i `cy` wartość określa liczbę jednostek do korygowania górny i dolny.  
   
  *lprect —*  
  Wskazuje [Prostokąt](../../mfc/reference/rect-structure1.md) struktury lub `CRect` , który określa liczbę jednostek do korygowania każdej stronie.  
@@ -494,7 +494,7 @@ void InflateRect(int l, int t, int r,  int b) throw();
  Określa liczbę jednostek rozszerzanie górnej i dolnej części `CRect`.  
   
  *Rozmiar*  
- A [rozmiar](http://msdn.microsoft.com/library/windows/desktop/dd145106) lub [CSize](csize-class.md) , który określa liczbę jednostek rozszerzanie `CRect`. `cx` Wartość określa liczbę jednostek rozszerzanie lewej i prawej stronie i `cy` wartość określa liczbę jednostek, aby zwiększyć górny i dolny.  
+ A [rozmiar](https://msdn.microsoft.com/library/windows/desktop/dd145106) lub [CSize](csize-class.md) , który określa liczbę jednostek rozszerzanie `CRect`. `cx` Wartość określa liczbę jednostek rozszerzanie lewej i prawej stronie i `cy` wartość określa liczbę jednostek, aby zwiększyć górny i dolny.  
   
  *lprect —*  
  Wskazuje [Prostokąt](../../mfc/reference/rect-structure1.md) struktury lub `CRect` , który określa liczbę jednostek po każdej stronie Rozszerzanie.  
@@ -753,7 +753,7 @@ void OffsetRect(SIZE size) throw();
  Zawiera [punktu](../../mfc/reference/point-structure1.md) struktury lub [CPoint](cpoint-class.md) określający oba wymiary, według którego ma zostać przeniesiona.  
   
  *Rozmiar*  
- Zawiera [rozmiar](http://msdn.microsoft.com/library/windows/desktop/dd145106) struktury lub [CSize](csize-class.md) określający oba wymiary, według którego ma zostać przeniesiona.  
+ Zawiera [rozmiar](https://msdn.microsoft.com/library/windows/desktop/dd145106) struktury lub [CSize](csize-class.md) określający oba wymiary, według którego ma zostać przeniesiona.  
   
 ### <a name="remarks"></a>Uwagi  
  Przenosi `CRect` *x* jednostek wzdłuż osi x i *y* jednostki wzdłuż osi y. *x* i *y* parametry są wartościami podpisem, więc `CRect` mogą zostać przeniesione w lewo lub w prawo i w górę lub w dół.  
@@ -919,7 +919,7 @@ void operator+=(LPCRECT lpRect) throw();
  A [punktu](../../mfc/reference/point-structure1.md) struktury lub [CPoint](cpoint-class.md) obiekt, który określa liczbę jednostek można przenieść prostokąt.  
   
  *Rozmiar*  
- A [rozmiar](http://msdn.microsoft.com/library/windows/desktop/dd145106) struktury lub [CSize](csize-class.md) obiekt, który określa liczbę jednostek można przenieść prostokąt.  
+ A [rozmiar](https://msdn.microsoft.com/library/windows/desktop/dd145106) struktury lub [CSize](csize-class.md) obiekt, który określa liczbę jednostek można przenieść prostokąt.  
   
  *lprect —*  
  Wskazuje [Prostokąt](../../mfc/reference/rect-structure1.md) struktury lub `CRect` obiekt, który zawiera liczbę jednostek po każdej stronie Rozszerzanie `CRect`.  
@@ -958,7 +958,7 @@ void operator-=(LPCRECT lpRect) throw();
  A [punktu](../../mfc/reference/point-structure1.md) struktury lub [CPoint](cpoint-class.md) obiekt, który określa liczbę jednostek można przenieść prostokąt.  
   
  *Rozmiar*  
- A [rozmiar](http://msdn.microsoft.com/library/windows/desktop/dd145106) struktury lub [CSize](csize-class.md) obiekt, który określa liczbę jednostek można przenieść prostokąt.  
+ A [rozmiar](https://msdn.microsoft.com/library/windows/desktop/dd145106) struktury lub [CSize](csize-class.md) obiekt, który określa liczbę jednostek można przenieść prostokąt.  
   
  *lprect —*  
  Wskazuje [Prostokąt](../../mfc/reference/rect-structure1.md) struktury lub `CRect` obiekt, który zawiera liczbę jednostek do korygowania każdej strony `CRect`.  
@@ -1050,7 +1050,7 @@ CRect operator+(SIZE size) const throw();
  A [punktu](../../mfc/reference/point-structure1.md) struktury lub [CPoint](cpoint-class.md) obiekt, który określa liczbę jednostek można przenieść wartość zwracaną.  
   
  *Rozmiar*  
- A [rozmiar](http://msdn.microsoft.com/library/windows/desktop/dd145106) struktury lub [CSize](csize-class.md) obiekt, który określa liczbę jednostek można przenieść wartość zwracaną.  
+ A [rozmiar](https://msdn.microsoft.com/library/windows/desktop/dd145106) struktury lub [CSize](csize-class.md) obiekt, który określa liczbę jednostek można przenieść wartość zwracaną.  
   
  *lprect —*  
  Wskazuje [Prostokąt](../../mfc/reference/rect-structure1.md) struktury lub `CRect` obiekt, który zawiera liczbę jednostek rozszerzanie na każdej stronie zwracanej wartości.  
@@ -1089,7 +1089,7 @@ CRect operator-(LPCRECT lpRect) const throw();
  A [punktu](../../mfc/reference/point-structure1.md) struktury lub `CPoint` obiekt, który określa liczbę jednostek można przenieść wartość zwracaną.  
   
  *Rozmiar*  
- A [rozmiar](http://msdn.microsoft.com/library/windows/desktop/dd145106) struktury lub `CSize` obiekt, który określa liczbę jednostek można przenieść wartość zwracaną.  
+ A [rozmiar](https://msdn.microsoft.com/library/windows/desktop/dd145106) struktury lub `CSize` obiekt, który określa liczbę jednostek można przenieść wartość zwracaną.  
   
  *lprect —*  
  Wskazuje [Prostokąt](../../mfc/reference/rect-structure1.md) struktury lub `CRect` obiekt, który zawiera liczbę jednostek do korygowania każdej stronie zwracanej wartości.  

@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 239ea94343652d379048bbeee87d2650d3f1ed72
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: 065c7296982bc715d35431a441be5b0e8506e1fd
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37852539"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43197306"
 ---
 # <a name="event-handling-principles"></a>Reguły obsługi zdarzeń
 Istnieją trzy kroki wspólne dla wszystkich obsługi zdarzeń. Konieczne będzie:  
@@ -41,13 +41,13 @@ Istnieją trzy kroki wspólne dla wszystkich obsługi zdarzeń. Konieczne będzi
   
  Wniosku źródło zdarzenia można podzielić na trzy kroki:  
   
--   Zapytania do obiektu źródłowego [interfejsy IConnectionPointContainer](http://msdn.microsoft.com/library/windows/desktop/ms683857).  
+-   Zapytania do obiektu źródłowego [interfejsy IConnectionPointContainer](/windows/desktop/api/ocidl/nn-ocidl-iconnectionpointcontainer).  
   
--   Wywołaj [IConnectionPointContainer::FindConnectionPoint](http://msdn.microsoft.com/library/windows/desktop/ms692476) przekazywanie identyfikatora IID interfejsu zdarzenia, który Cię interesuje. Jeśli operacja się powiedzie, spowoduje to zwrócenie [IConnectionPoint](http://msdn.microsoft.com/library/windows/desktop/ms694318) interfejs dla obiektu punktu połączenia.  
+-   Wywołaj [IConnectionPointContainer::FindConnectionPoint](/windows/desktop/api/ocidl/nf-ocidl-iconnectionpointcontainer-findconnectionpoint) przekazywanie identyfikatora IID interfejsu zdarzenia, który Cię interesuje. Jeśli operacja się powiedzie, spowoduje to zwrócenie [IConnectionPoint](/windows/desktop/api/ocidl/nn-ocidl-iconnectionpoint) interfejs dla obiektu punktu połączenia.  
   
--   Wywołaj [IConnectionPoint::Advise](http://msdn.microsoft.com/library/windows/desktop/ms678815) przekazywanie `IUnknown` obiektu sink zdarzenia. Jeśli operacja się powiedzie, spowoduje to zwrócenie `DWORD` plik cookie reprezentującą połączenie.  
+-   Wywołaj [IConnectionPoint::Advise](/windows/desktop/api/ocidl/nf-ocidl-iconnectionpoint-advise) przekazywanie `IUnknown` obiektu sink zdarzenia. Jeśli operacja się powiedzie, spowoduje to zwrócenie `DWORD` plik cookie reprezentującą połączenie.  
   
- Po pomyślnym zarejestrowaniu zainteresowanie odbierania zdarzeń metod na interfejs zdarzenia obiektu będzie miała nazwę zgodnie ze zdarzenia wywoływane przez obiekt źródłowy. Jeśli nie potrzebujesz już do odbierania zdarzeń, można przekazać pliku cookie do punktu połączenia za pośrednictwem [IConnectionPoint::Unadvise](http://msdn.microsoft.com/library/windows/desktop/ms686608). Spowoduje to przerwanie połączenia między źródła i ujścia.  
+ Po pomyślnym zarejestrowaniu zainteresowanie odbierania zdarzeń metod na interfejs zdarzenia obiektu będzie miała nazwę zgodnie ze zdarzenia wywoływane przez obiekt źródłowy. Jeśli nie potrzebujesz już do odbierania zdarzeń, można przekazać pliku cookie do punktu połączenia za pośrednictwem [IConnectionPoint::Unadvise](/windows/desktop/api/ocidl/nf-ocidl-iconnectionpoint-unadvise). Spowoduje to przerwanie połączenia między źródła i ujścia.  
   
  Uważaj uniknąć odwołania cykli podczas obsługi zdarzeń.  
   

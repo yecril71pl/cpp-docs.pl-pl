@@ -32,12 +32,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f595a048d9f2e5795f69b7d1da6c4c6cf4ca0fa2
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 51472ba9c0bc15d6b12ddcd3a3b88b65a3a2682b
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42608683"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43205199"
 ---
 # <a name="mbcs-support-in-visual-c"></a>Obsługa MBCS w programie Visual C++
 Po uruchomieniu na Windows w wersji dla systemów z obsługą MBCS, systemie programistycznym Visual C++ (w tym kodu źródłowego zintegrowane narzędzia edytora, debugera i wiersza polecenia) jest MBCS włączone, z wyjątkiem okna pamięci.  
@@ -47,7 +47,7 @@ Po uruchomieniu na Windows w wersji dla systemów z obsługą MBCS, systemie pro
  Visual C++ akceptuje znaków dwubajtowych, wszędzie tam, gdzie jest to zrobić. W tym nazwy ścieżek i nazwy plików w oknach dialogowych i wpisów tekstowych w Edytor zasobów Visual C++ (na przykład statyczny tekst w edytorze okien dialogowych) i wpisy statyczny tekst w edytorze ikon. Ponadto, preprocesor rozpoznaje niektórych dyrektyw znaków dwubajtowych — na przykład plik nazwy w `#include` instrukcji i jako argumenty do `code_seg` i `data_seg` pragmy. W edytorze kodu źródłowego znaków dwubajtowych w komentarzach i literały ciągów są akceptowane, ale nie w elementy języka C/C++ (np. nazwy zmiennych).  
   
 ##  <a name="_core_support_for_the_input_method_editor_.28.ime.29"></a> Obsługa dla edytora metody wprowadzania (IME)  
- Aplikacje napisane z myślą o wschodnioazjatyckich rynków, na których zazwyczaj używają MBCS (na przykład, Japonia) obsługuje Windows IME do wprowadzania zarówno pojedynczego i znaków dwubajtowych znaków. Środowisko projektowe Visual C++ zawiera pełne wsparcie dla edytora IME. Aby uzyskać więcej informacji, zobacz [edytora IME próbki: Pokazuje, jak tryb IME kontroli i implementowanie edytora IME poziom 3](http://msdn.microsoft.com/87ebdf65-cef0-451d-a6fc-d5fb64178b14).  
+ Aplikacje napisane z myślą o wschodnioazjatyckich rynków, na których zazwyczaj używają MBCS (na przykład, Japonia) obsługuje Windows IME do wprowadzania zarówno pojedynczego i znaków dwubajtowych znaków. Środowisko projektowe Visual C++ zawiera pełne wsparcie dla edytora IME. Aby uzyskać więcej informacji, zobacz [edytora IME próbki: Pokazuje, jak tryb IME kontroli i implementowanie edytora IME poziom 3](https://msdn.microsoft.com/87ebdf65-cef0-451d-a6fc-d5fb64178b14).  
   
  Klawiatury japońskiej nie obsługują bezpośrednio znaków Kanji. Edytora IME konwertuje ciąg fonetycznych wprowadzane w jednej z innych alfabety japoński (Romaji, Katakana lub znaków Hiragana) do jego możliwe reprezentacje Kanji. W przypadku niejednoznaczności, możesz wybrać kilka rozwiązań alternatywnych. Po wybraniu zamierzony znaków Kanji edytora IME przekazuje dwa `WM_CHAR` wiadomości do kontrolowania aplikacji.  
   

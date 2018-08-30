@@ -126,12 +126,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5ff939abc93c38be198bf6edb21cbb3e3dc9fbaa
-ms.sourcegitcommit: f923f667065cd6c4203d10ca9520600ee40e5f84
+ms.openlocfilehash: 6a1c3e55f6045b0096ef614e1d3b4b054db60265
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/24/2018
-ms.locfileid: "42900855"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43202398"
 ---
 # <a name="ctaskdialog-class"></a>Klasa CTaskDialog
 
@@ -837,7 +837,7 @@ Domyślna implementacja zwraca wartość S_OK.
 
 ### <a name="remarks"></a>Uwagi
 
-Ta metoda wywołuje [ShellExecute](http://msdn.microsoft.com/library/windows/desktop/bb762153) przed zwróceniem S_OK.
+Ta metoda wywołuje [ShellExecute](/windows/desktop/api/shellapi/nf-shellapi-shellexecutea) przed zwróceniem S_OK.
 
 Należy przesłonić tę metodę w klasie pochodnej, aby implementować niestandardowe zachowanie.
 
@@ -1619,7 +1619,7 @@ Wartości *wParam* i *lParam* są zależne od szczegółowy komunikat o błędzi
 |TDN_CREATED|Nie używany.|Nie używany.|
 |TDN_NAVIGATED|Nie używany.|Nie używany.|
 |TDN_BUTTON_CLICKED|Przycisk polecenia sterowania identyfikatora.|Nie używany.|
-|TDN_HYPERLINK_CLICKED|Nie używany.|A [LPCWSTR](http://msdn.microsoft.com/library/windows/desktop/aa383751) strukturę, która zawiera link.|
+|TDN_HYPERLINK_CLICKED|Nie używany.|A [LPCWSTR](/windows/desktop/WinProg/windows-data-types) strukturę, która zawiera link.|
 |TDN_TIMER|Czas w milisekundach, ponieważ `CTaskDialog` został utworzony lub został zresetowany przez czasomierz.|Nie używany.|
 |TDN_DESTROYED|Nie używany.|Nie używany.|
 |TDN_RADIO_BUTTON_CLICKED|Identyfikator przycisku radiowego|Nie używany.|

@@ -28,12 +28,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 75742b466b284a24d6771971a831dfc91303c834
-ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
+ms.openlocfilehash: 1d433c76e054b16491ab7586d6107b4931dc2915
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37882435"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43203719"
 ---
 # <a name="composite-control-global-functions"></a>Funkcje globalne kontrolek złożonych
 Te funkcje zapewniają obsługę do utworzenia okien dialogowych i tworzenie, hostowanie i licencjonowanie kontrolek ActiveX.  
@@ -77,13 +77,13 @@ ATLAPI_(int) AtlAxDialogBox(
  [in] Identyfikuje wystąpienia modułu, którego pliku wykonywalnego zawiera szablonu okna dialogowego.  
   
  *lpTemplateName*  
- [in] Identyfikuje szablonu okna dialogowego. Ten parametr jest wskaźnik do ciągu zakończonego znakiem null, który określa nazwę szablonu okna dialogowego lub wartość całkowitą, która określa identyfikator zasobu szablonu okna dialogowego. Jeśli parametr określa identyfikator zasobu, jego word wyższego rzędu musi mieć wartość zero, a jego word niskiego rzędu musi zawierać identyfikator. Możesz użyć [MAKEINTRESOURCE](http://msdn.microsoft.com/library/windows/desktop/ms648029) makra w celu utworzenia tej wartości.  
+ [in] Identyfikuje szablonu okna dialogowego. Ten parametr jest wskaźnik do ciągu zakończonego znakiem null, który określa nazwę szablonu okna dialogowego lub wartość całkowitą, która określa identyfikator zasobu szablonu okna dialogowego. Jeśli parametr określa identyfikator zasobu, jego word wyższego rzędu musi mieć wartość zero, a jego word niskiego rzędu musi zawierać identyfikator. Możesz użyć [MAKEINTRESOURCE](https://msdn.microsoft.com/library/windows/desktop/ms648029) makra w celu utworzenia tej wartości.  
   
  *hWndParent*  
  [in] Identyfikuje okna, który jest właścicielem okno dialogowe.  
   
  *lpDialogProc*  
- [in] Wskazuje procedury okno dialogowe. Aby uzyskać więcej informacji na temat procedury okno dialogowe, zobacz [DialogProc](http://msdn.microsoft.com/library/windows/desktop/ms645469).  
+ [in] Wskazuje procedury okno dialogowe. Aby uzyskać więcej informacji na temat procedury okno dialogowe, zobacz [DialogProc](https://msdn.microsoft.com/library/windows/desktop/ms645469).  
   
  *dwInitParam*  
  [in] Określa wartość do przekazania do okna dialogowego w *lParam* parametr / / Złap wiadomości.  
@@ -99,9 +99,9 @@ CONTROL    "{04FE35E9-ADBC-4f1d-83FE-8FA4D1F71C7F}", IDC_TEST,
     "AtlAxWin80", WS_GROUP | WS_TABSTOP, 0, 0, 100, 100  
 ```  
   
- Aby uzyskać więcej informacji na temat edytowania skryptów zasobów, zobacz [porady: otwieranie pliku skryptu zasobu w formacie tekstowym](../../windows/how-to-open-a-resource-script-file-in-text-format.md). Aby uzyskać więcej informacji na temat instrukcji definicji zasobu kontroli, zobacz [wspólne parametry sterujące](http://msdn.microsoft.com/library/windows/desktop/aa380902) w ramach zestawu Windows SDK *: SDK Tools*.  
+ Aby uzyskać więcej informacji na temat edytowania skryptów zasobów, zobacz [porady: otwieranie pliku skryptu zasobu w formacie tekstowym](../../windows/how-to-open-a-resource-script-file-in-text-format.md). Aby uzyskać więcej informacji na temat instrukcji definicji zasobu kontroli, zobacz [wspólne parametry sterujące](/windows/desktop/menurc/common-control-parameters) w ramach zestawu Windows SDK *: SDK Tools*.  
   
- Aby uzyskać więcej informacji o oknach dialogowych, ogólnie rzecz biorąc, zobacz [DialogBox](http://msdn.microsoft.com/library/windows/desktop/ms645452) i [CreateDialogParam](http://msdn.microsoft.com/library/windows/desktop/ms645445) w zestawie Windows SDK.  
+ Aby uzyskać więcej informacji o oknach dialogowych, ogólnie rzecz biorąc, zobacz [DialogBox](/windows/desktop/api/winuser/nf-winuser-dialogboxa) i [CreateDialogParam](/windows/desktop/api/winuser/nf-winuser-createdialogparama) w zestawie Windows SDK.  
   
 ##  <a name="atlaxcreatedialog"></a>  AtlAxCreateDialog  
  Tworzy niemodalne okno dialogowe z szablonu okna dialogowego dostarczonego przez użytkownika.  
@@ -120,13 +120,13 @@ ATLAPI_(HWND) AtlAxCreateDialog(
  [in] Identyfikuje wystąpienia modułu, którego pliku wykonywalnego zawiera szablonu okna dialogowego.  
   
  *lpTemplateName*  
- [in] Identyfikuje szablonu okna dialogowego. Ten parametr jest wskaźnik do ciągu zakończonego znakiem null, który określa nazwę szablonu okna dialogowego lub wartość całkowitą, która określa identyfikator zasobu szablonu okna dialogowego. Jeśli parametr określa identyfikator zasobu, jego word wyższego rzędu musi mieć wartość zero, a jego word niskiego rzędu musi zawierać identyfikator. Możesz użyć [MAKEINTRESOURCE](http://msdn.microsoft.com/library/windows/desktop/ms648029) makra w celu utworzenia tej wartości.  
+ [in] Identyfikuje szablonu okna dialogowego. Ten parametr jest wskaźnik do ciągu zakończonego znakiem null, który określa nazwę szablonu okna dialogowego lub wartość całkowitą, która określa identyfikator zasobu szablonu okna dialogowego. Jeśli parametr określa identyfikator zasobu, jego word wyższego rzędu musi mieć wartość zero, a jego word niskiego rzędu musi zawierać identyfikator. Możesz użyć [MAKEINTRESOURCE](https://msdn.microsoft.com/library/windows/desktop/ms648029) makra w celu utworzenia tej wartości.  
   
  *hWndParent*  
  [in] Identyfikuje okna, który jest właścicielem okno dialogowe.  
   
  *lpDialogProc*  
- [in] Wskazuje procedury okno dialogowe. Aby uzyskać więcej informacji na temat procedury okno dialogowe, zobacz [DialogProc](http://msdn.microsoft.com/library/windows/desktop/ms645469).  
+ [in] Wskazuje procedury okno dialogowe. Aby uzyskać więcej informacji na temat procedury okno dialogowe, zobacz [DialogProc](https://msdn.microsoft.com/library/windows/desktop/ms645469).  
   
  *dwInitParam*  
  [in] Określa wartość do przekazania do okna dialogowego w *lParam* parametr / / Złap wiadomości.  
@@ -137,7 +137,7 @@ ATLAPI_(HWND) AtlAxCreateDialog(
 ### <a name="remarks"></a>Uwagi  
  Okno dialogowe wynikowy może zawierać kontrolki ActiveX.  
   
- Zobacz [CreateDialog](http://msdn.microsoft.com/library/windows/desktop/ms645434) i [CreateDialogParam](http://msdn.microsoft.com/library/windows/desktop/ms645445) w Windows SDK.  
+ Zobacz [CreateDialog](/windows/desktop/api/winuser/nf-winuser-createdialoga) i [CreateDialogParam](/windows/desktop/api/winuser/nf-winuser-createdialogparama) w Windows SDK.  
   
 ##  <a name="atlaxcreatecontrol"></a>  AtlAxCreateControl  
  Tworzy formant ActiveX, inicjuje go i umieszcza w określonym oknie.  
@@ -442,7 +442,7 @@ ATLAPI_(BOOL) AtlAxWinInit();
  Wartość różną od zera, jeśli inicjowanie kod hostingu formantu powiodła się. w przeciwnym razie wartość FALSE.  
   
 ### <a name="remarks"></a>Uwagi  
- Ta funkcja musi być wywołana przed rozpoczęciem korzystania z formantu ATL, hostowanie interfejsu API. Po wywołaniu tej funkcji **"AtlAxWin"** klasy okna może służyć w wywołaniach [CreateWindow](http://msdn.microsoft.com/library/windows/desktop/ms632679) lub [elementu CreateWindowEx](http://msdn.microsoft.com/library/windows/desktop/ms632680), zgodnie z opisem w zestawie Windows SDK.  
+ Ta funkcja musi być wywołana przed rozpoczęciem korzystania z formantu ATL, hostowanie interfejsu API. Po wywołaniu tej funkcji **"AtlAxWin"** klasy okna może służyć w wywołaniach [CreateWindow](https://msdn.microsoft.com/library/windows/desktop/ms632679) lub [elementu CreateWindowEx](https://msdn.microsoft.com/library/windows/desktop/ms632680), zgodnie z opisem w zestawie Windows SDK.  
 
 ##  <a name="atlaxwinterm"></a>  AtlAxWinTerm  
  Ta funkcja deinicjuje kod hostingu wyrejestrowując formantu ATL **"AtlAxWin80"** i **"AtlAxWinLic80"** klasy okna.  
@@ -455,7 +455,7 @@ inline BOOL AtlAxWinTerm();
  Zawsze zwraca wartość PRAWDA.  
   
 ### <a name="remarks"></a>Uwagi  
- Ta funkcja po prostu wywołuje widok [UnregisterClass](http://msdn.microsoft.com/library/windows/desktop/ms644899) zgodnie z opisem w zestawie Windows SDK.  
+ Ta funkcja po prostu wywołuje widok [UnregisterClass](https://msdn.microsoft.com/library/windows/desktop/ms644899) zgodnie z opisem w zestawie Windows SDK.  
   
  Wywołaj tę funkcję, aby wyczyścić po zniszczeniu wszystkich istniejących okien hosta, jeśli wywołano [klasy AtlAxWinInit](#atlaxwininit) nie są potrzebne do utworzenia hosta systemu windows. Jeśli nie chcesz wywołać tę funkcję, klasę okna będzie można wyrejestrować automatycznie, gdy proces zakończy się.  
   

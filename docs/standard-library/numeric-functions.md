@@ -16,12 +16,12 @@ helpviewer_keywords:
 - std::inner_product [C++]
 - std::iota [C++]
 - std::partial_sum [C++]
-ms.openlocfilehash: 47ac885152b0fdfbb9ce1ab77f6597db00c5bc07
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 1060c5c02b0e599de5ca5a39970825fd5622ebf5
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38960255"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43199191"
 ---
 # <a name="ltnumericgt-functions"></a>&lt;liczbowe&gt; funkcji
 
@@ -62,7 +62,7 @@ Suma *val* i wszystkie elementy w określonym zakresie, pierwsza funkcja szablon
 
 ### <a name="remarks"></a>Uwagi
 
-Początkowa wartość ubezpieczycielom, że zawsze będą wynik wyraźnie określone, gdy zakres jest pusta, w którym to przypadku *val* jest zwracana. Operacja binarna nie musi być asocjacyjna ani komutatywna. Wynik jest ustawiana na wartość początkową *val* i następnie *wynik*  =  `binary_op` ( *wynik*, **\*** `Iter`) jest obliczana iteracyjne przy użyciu zakresu, gdzie `Iter` jest iteratora wskazującego kolejnych elementu w zakresie. Zakres musi być prawidłowy i złożoność jest liniowa z rozmiarem zakresu. Zwracany typ operatora binarnego musi być konwertowany na **typu** zapewnienie zamknięcia podczas iteracji.
+Początkowa wartość ubezpieczycielom, że zawsze będą wynik wyraźnie określone, gdy zakres jest pusta, w którym to przypadku *val* jest zwracana. Operacja binarna nie musi być asocjacyjna ani komutatywna. Wynik jest ustawiana na wartość początkową *val* i następnie *wynik*  =  `binary_op` ( *wynik*, <strong>\*</strong> `Iter`) jest obliczana iteracyjne przy użyciu zakresu, gdzie `Iter` jest iteratora wskazującego kolejnych elementu w zakresie. Zakres musi być prawidłowy i złożoność jest liniowa z rozmiarem zakresu. Zwracany typ operatora binarnego musi być konwertowany na **typu** zapewnienie zamknięcia podczas iteracji.
 
 ### <a name="example"></a>Przykład
 

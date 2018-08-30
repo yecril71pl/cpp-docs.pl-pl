@@ -22,12 +22,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1acc2d5918bea040e1f004e8a1d11ceee3146f89
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: 61601baca7a91d76f473281184c335cc5277f815
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37848622"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43201857"
 ---
 # <a name="crebar-class"></a>Crebar — klasa
 Pasek sterowania, który zawiera układ, trwałość i informacje o stanie dla formantów rebar.  
@@ -105,7 +105,7 @@ BOOL AddBar(
  Wskaźnik do `CBitmap` obiektu, który będzie wyświetlany w tle paska pomocniczego. Wartość NULL, domyślnie.  
   
  *dwStyle*  
- Wartość typu DWORD zawierającą styl do zastosowania do paska pomocniczego. Zobacz `fStyle` funkcja opis w strukturze Win32 [REBARBANDINFO](http://msdn.microsoft.com/library/windows/desktop/bb774393) pełną listę style poza pasmem.  
+ Wartość typu DWORD zawierającą styl do zastosowania do paska pomocniczego. Zobacz `fStyle` funkcja opis w strukturze Win32 [REBARBANDINFO](/windows/desktop/api/commctrl/ns-commctrl-tagrebarbandinfoa) pełną listę style poza pasmem.  
   
  *clrFore*  
  Wartość COLORREF, która reprezentuje kolor pierwszego planu paska pomocniczego.  
@@ -135,7 +135,7 @@ virtual BOOL Create(
  Wskaźnik do `CWnd` obiekt, którego okno Windows ma element nadrzędny paska stanu. Zwykle okna ramki.  
   
  *dwCtrlStyle*  
- Styl kontrolki paska pomocniczego. Domyślnie RBS_BANDBORDERS, zawierające wąskie wierszy w celu rozdzielenia sąsiadujących paskami w formancie paska pomocniczego. Zobacz [style kontrolki paska pomocniczego](http://msdn.microsoft.com/library/windows/desktop/bb774377) w zestawie Windows SDK dla listy stylów.  
+ Styl kontrolki paska pomocniczego. Domyślnie RBS_BANDBORDERS, zawierające wąskie wierszy w celu rozdzielenia sąsiadujących paskami w formancie paska pomocniczego. Zobacz [style kontrolki paska pomocniczego](/windows/desktop/Controls/rebar-control-styles) w zestawie Windows SDK dla listy stylów.  
   
  *dwStyle*  
  Style okna ramowego paska pomocniczego.  

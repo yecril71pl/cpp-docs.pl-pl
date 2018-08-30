@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9837b42148062bdd2c44855c129f085ca47cdec0
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: 00265d3ce0f8ea867021500777d93991d245be47
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37848797"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43204816"
 ---
 # <a name="atl-collections-and-enumerators"></a>Kolekcje i wyliczenia ATL
 Element `collection` jest obiektem COM, który udostępnia interfejs, który umożliwia dostęp do jednej grupy elementów danych (nieprzetworzone dane lub innych obiektów). Interfejs, który następuje standardy dla zapewnienia dostępu do grupy obiektów jest znany jako *kolekcji interfejs*.  
@@ -31,7 +31,7 @@ Element `collection` jest obiektem COM, który udostępnia interfejs, który umo
   
  `enumerator` Jest obiektem COM, który udostępnia interfejs dla iteracji elementów w kolekcji. Interfejsy modułu wyliczającego zapewniają dostęp szeregowy do elementów kolekcji za pomocą czterech metod wymagane: `Next`, `Skip`, `Reset`, i `Clone`.  
   
- Znajdziesz więcej informacji na temat interfejsy modułu wyliczającego, czytając o archetypal (ale całkowicie urojone) [IEnumXXXX](https://msdn.microsoft.com/library/ms680089.aspx) interfejsu.  
+ Dowiedz się więcej na temat interfejsy modułu wyliczającego, zapoznając się odwoływać się do zawartości takie jak [IEnumString](/windows/desktop/api/objidl/nn-objidl-ienumstring) interfejsu.  
   
 ## <a name="in-this-section"></a>W tej sekcji  
  [Klasy kolekcji i wyliczeń ATL](../atl/atl-collection-and-enumerator-classes.md)  

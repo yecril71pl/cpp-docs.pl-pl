@@ -354,12 +354,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e9ac21e909c8286ef6a7d1973837b0caf69b711c
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: 0eb6e8da3caa9286e14072726488ad1c16f47b1e
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42464785"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43203645"
 ---
 # <a name="cmfcvisualmanager-class"></a>Klasa CMFCVisualManager
 Oferuje obsługę zmian wyglądu aplikacji na poziomie globalnym. `CMFCVisualManager` Klasy działa razem z klasą, która zawiera instrukcje rysowania formantów graficznego interfejsu użytkownika aplikacji za pomocą jednolitego stylu. Inne z tych klas są określane jako menedżerów wizualnych i przejmują od `CMFCBaseVisualManager`.  
@@ -790,7 +790,7 @@ virtual COLORREF GetAutoHideButtonTextColor(CMFCAutoHideButton* pButton);
  Wskaźnik do przycisku automatycznego ukrywania.  
   
 ### <a name="return-value"></a>Wartość zwracana  
- A [COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449) parametr, który określa kolor tekstu *pButton*.  
+ A [COLORREF](/windows/desktop/gdi/colorref) parametr, który określa kolor tekstu *pButton*.  
   
 ### <a name="remarks"></a>Uwagi  
  Należy przesłonić tę metodę w klasie pochodnej, aby dostosować kolor tekstu przycisku automatycznego ukrywania w aplikacji. Aby to zrobić, zwraca kolor, który chcesz, aby aplikacja korzysta z kolorem tekstu.  
@@ -820,7 +820,7 @@ virtual COLORREF GetCaptionBarTextColor(CMFCCaptionBar* pBar);
  Wskaźnik do paska podpisu.  
   
 ### <a name="return-value"></a>Wartość zwracana  
- A [COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449) parametr, który określa kolor tekstu w *pBar*.  
+ A [COLORREF](/windows/desktop/gdi/colorref) parametr, który określa kolor tekstu w *pBar*.  
   
 ### <a name="remarks"></a>Uwagi  
  Zastępuje tę metodę w pochodnej klasie dostosować kolor tekstu pasek podpisu. W metodzie zastąpione zwraca żądany kolor.  
@@ -998,7 +998,7 @@ virtual COLORREF GetPropertyGridGroupColor(CMFCPropertyGridCtrl* pPropList);
  Wskaźnik do listy właściwości, która jest rysowanie platformę.  
   
 ### <a name="return-value"></a>Wartość zwracana  
- A [COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449) parametr, który określa kolor tła *pPropList*.  
+ A [COLORREF](/windows/desktop/gdi/colorref) parametr, który określa kolor tła *pPropList*.  
   
 ### <a name="remarks"></a>Uwagi  
  Należy przesłonić tę funkcję, aby dostosować kolor tła listę właściwości w aplikacji.  
@@ -1015,7 +1015,7 @@ virtual COLORREF GetPropertyGridGroupTextColor(CMFCPropertyGridCtrl* pPropList);
  Wskaźnik do listy właściwości.  
   
 ### <a name="return-value"></a>Wartość zwracana  
- A [COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449) parametrem, który wskazuje kolor tekstu, listy właściwości.  
+ A [COLORREF](/windows/desktop/gdi/colorref) parametrem, który wskazuje kolor tekstu, listy właściwości.  
   
 ### <a name="remarks"></a>Uwagi  
  Należy przesłonić tę funkcję, aby dostosować kolor tekstu, listy właściwości w aplikacji.  
@@ -1214,7 +1214,7 @@ virtual void GetTabFrameColors(
  Wskaźnik do okna z kartami, gdzie ramki jest rysowanie kartę.  
   
  [out] *clrDark*  
- Odwołanie do [COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449) parametru, w której ta metoda przechowuje kolor ciemnego obramowania karty.  
+ Odwołanie do [COLORREF](/windows/desktop/gdi/colorref) parametru, w której ta metoda przechowuje kolor ciemnego obramowania karty.  
   
  [out] *clrBlack*  
  Odwołania do parametru COLORREF, w której ta metoda przechowuje kolor obramowania okna karty. Domyślny kolor obramowania jest czarny.  
@@ -1778,7 +1778,7 @@ virtual BOOL OnDrawBrowseButton(
  Wartość wyliczana, który określa stan przycisku.  
   
  [out] *clrText*  
- Odwołanie do [COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449) parametru. To jest zarezerwowaną wartość i jest aktualnie używana.  
+ Odwołanie do [COLORREF](/windows/desktop/gdi/colorref) parametru. To jest zarezerwowaną wartość i jest aktualnie używana.  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Wartość TRUE, jeśli to się powiedzie; w przeciwnym razie wartość FALSE.  
@@ -2578,7 +2578,7 @@ virtual COLORREF OnDrawPaneCaption(
  Prostokąt, który określa granice przyciski podpisu.  
   
 ### <a name="return-value"></a>Wartość zwracana  
- A [COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449) parametrem, który wskazuje kolor tekstu podpis.  
+ A [COLORREF](/windows/desktop/gdi/colorref) parametrem, który wskazuje kolor tekstu podpis.  
   
 ### <a name="remarks"></a>Uwagi  
  Należy przesłonić tę metodę w pochodnej Menedżer wizualnego do dostosowywania wyglądu napisów w okienku.  
@@ -2805,7 +2805,7 @@ virtual COLORREF OnDrawRibbonCategoryCaption(
  Wskaźnik do paska podpisu. Menedżer wizualny rysuje to [klasa CMFCRibbonContextCaption](../../mfc/reference/cmfcribboncontextcaption-class.md) obiektu.  
   
 ### <a name="return-value"></a>Wartość zwracana  
- A [COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449) parametrem, który wskazuje koloru tekstu na pasku podpisu.  
+ A [COLORREF](/windows/desktop/gdi/colorref) parametrem, który wskazuje koloru tekstu na pasku podpisu.  
   
 ### <a name="remarks"></a>Uwagi  
  Należy przesłonić tę metodę w klasie pochodnej, aby dostosować wygląd paska podpisu dla kategorii wstążki. Aby uzyskać więcej informacji na temat pasek podpisu, zobacz [klasa CMFCRibbonContextCaption](../../mfc/reference/cmfcribboncontextcaption-class.md).  
@@ -3590,7 +3590,7 @@ virtual void OnDrawStatusBarProgress(
  Bieżący postęp dla paska postępu.  
   
  [in] *clrBar*  
- A [COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449) parametrem, który wskazuje kolor początkowy dla paska postępu. Wartość jest początek gradientu koloru albo pełny kolor paska postępu.  
+ A [COLORREF](/windows/desktop/gdi/colorref) parametrem, który wskazuje kolor początkowy dla paska postępu. Wartość jest początek gradientu koloru albo pełny kolor paska postępu.  
   
  [in] *clrProgressBarDest*  
  Parametr COLORREF, który wskazuje koniec gradientu koloru, aż pasek postępu. Jeśli *clrProgressBarDest* wynosi -1, struktura nie pobiera pasek postępu jako kolor gradientu. Zamiast tego umieszcza pasek postępu całego kolor określony przy użyciu *clrBar*.  
@@ -4250,7 +4250,7 @@ virtual void OnFillOutlookBarCaption(
  Prostokąt, który określa granice pasek podpisu.  
   
  [out] *clrText*  
- Odwołanie do [COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449) parametru. Metoda zapisuje koloru tekstu na pasku podpisu tego parametru.  
+ Odwołanie do [COLORREF](/windows/desktop/gdi/colorref) parametru. Metoda zapisuje koloru tekstu na pasku podpisu tego parametru.  
   
 ### <a name="remarks"></a>Uwagi  
  Domyślna implementacja tej metody wypełnia pasek podpisu przy użyciu koloru dla cieni, w oparciu o bieżące skórki. Należy przesłonić tę metodę w pochodnej Menedżer wizualnego dostosować kolor pasek podpisu programu Outlook.  
@@ -4281,7 +4281,7 @@ virtual void OnFillOutlookPageButton(
  Parametr logiczny, który określa, czy przycisk jest wciśnięty.  
   
  [out] *clrText*  
- Odwołanie do [COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449) parametru. Ta metoda przechowuje kolor tekstu przycisku Strona programu outlook, w tym parametrze.  
+ Odwołanie do [COLORREF](/windows/desktop/gdi/colorref) parametru. Ta metoda przechowuje kolor tekstu przycisku Strona programu outlook, w tym parametrze.  
   
 ### <a name="remarks"></a>Uwagi  
  Przesłonić tę funkcję w pochodnej Menedżer wizualnego, aby dostosować wygląd przycisków strony programu Outlook.  

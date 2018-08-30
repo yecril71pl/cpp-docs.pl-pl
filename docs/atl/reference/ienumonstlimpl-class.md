@@ -25,12 +25,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b70e8012d6126b39129cff6fc86366f72459dc02
-ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
+ms.openlocfilehash: 15f0b26c5c86d023d98d6a13e6b92518756a3179
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37883011"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43206209"
 ---
 # <a name="ienumonstlimpl-class"></a>Klasa IEnumOnSTLImpl
 Ta klasa definiuje interfejs moduł wyliczający na podstawie kolekcji standardowej biblioteki języka C++.  
@@ -45,7 +45,7 @@ class ATL_NO_VTABLE IEnumOnSTLImpl : public Base
   
 #### <a name="parameters"></a>Parametry  
  *podstawowy*  
- Moduł wyliczający COM ( [IEnumXXXX](https://msdn.microsoft.com/library/ms680089.aspx)) interfejsu.  
+ Moduł wyliczający COM. Zobacz [IEnumString](/windows/desktop/api/objidl/nn-objidl-ienumstring) przykład.
   
  *piid*  
  Wskaźnik do Identyfikatora interfejsu interfejsu modułu wyliczającego.  
@@ -65,11 +65,11 @@ class ATL_NO_VTABLE IEnumOnSTLImpl : public Base
   
 |Nazwa|Opis|  
 |----------|-----------------|  
-|[IEnumOnSTLImpl::Clone](#clone)|Implementacja [IEnumXXXX::Clone](https://msdn.microsoft.com/library/ms690336.aspx).|  
+|[IEnumOnSTLImpl::Clone](#clone)|Implementacja **klonowania**.|  
 |[IEnumOnSTLImpl::Init](#init)|Inicjuje modułu wyliczającego.|  
-|[IEnumOnSTLImpl::Next](#next)|Implementacja [IEnumXXXX::Next](https://msdn.microsoft.com/library/ms695273.aspx).|  
-|[IEnumOnSTLImpl::Reset](#reset)|Implementacja [IEnumXXXX::Reset](https://msdn.microsoft.com/library/ms693414.aspx).|  
-|[IEnumOnSTLImpl::Skip](#skip)|Implementacja [IEnumXXXX::Skip](https://msdn.microsoft.com/library/ms690392.aspx).|  
+|[IEnumOnSTLImpl::Next](#next)|Implementacja **dalej**.|  
+|[IEnumOnSTLImpl::Reset](#reset)|Implementacja **resetowania**.|  
+|[IEnumOnSTLImpl::Skip](#skip)|Implementacja **Pomiń**.|  
   
 ### <a name="public-data-members"></a>Publiczne elementy członkowskie danych  
   
@@ -122,7 +122,7 @@ HRESULT Init(
  Tę metodę należy wywołać przed przekazaniem wskaźnik do interfejsu modułu wyliczającego do wszystkich klientów.  
   
 ##  <a name="clone"></a>  IEnumOnSTLImpl::Clone  
- Ta metoda zapewnia wykonania [IEnumXXXX::Clone](https://msdn.microsoft.com/library/ms690336.aspx) metoda przez utworzenie obiektu typu `CComEnumOnSTL`, inicjując go przy użyciu tej samej kolekcji i używane przez bieżący obiekt iteratora i zwraca interfejs na nowo utworzony obiekt.  
+ Ta metoda zapewnia wykonania **klonowania** metoda przez utworzenie obiektu typu `CComEnumOnSTL`, inicjując go przy użyciu tej samej kolekcji i używane przez bieżący obiekt iteratora i zwraca interfejs na nowo utworzony obiekt.  
   
 ```
 STDMETHOD(Clone)(Base** ppEnum);
@@ -163,7 +163,7 @@ CollType::iterator m_iter;
 ```  
   
 ##  <a name="next"></a>  IEnumOnSTLImpl::Next  
- Ta metoda zapewnia wykonania [IEnumXXXX::Next](https://msdn.microsoft.com/library/ms695273.aspx) metody.  
+ Ta metoda zapewnia wykonania **dalej** metody.  
   
 ```
 STDMETHOD(Next)(
@@ -186,7 +186,7 @@ STDMETHOD(Next)(
  Standardowe wartości HRESULT.  
   
 ##  <a name="reset"></a>  IEnumOnSTLImpl::Reset  
- Ta metoda zapewnia wykonania [IEnumXXXX::Reset](https://msdn.microsoft.com/library/ms693414.aspx) metody.  
+ Ta metoda zapewnia wykonania **resetowania** metody.  
   
 ```
 STDMETHOD(Reset)(void);
@@ -196,7 +196,7 @@ STDMETHOD(Reset)(void);
  Standardowe wartości HRESULT.  
   
 ##  <a name="skip"></a>  IEnumOnSTLImpl::Skip  
- Ta metoda zapewnia wykonania [IEnumXXXX::Skip](https://msdn.microsoft.com/library/ms690392.aspx) metody.  
+ Ta metoda zapewnia wykonania **Pomiń** metody.  
   
 ```
 STDMETHOD(Skip)(ULONG celt);

@@ -24,89 +24,96 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f0052f4b270366b2f3aa1e1550f790efcb860597
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 4e236f323d882ddc7091655d944f0ed78bdeac28
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32418201"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43203391"
 ---
 # <a name="scanf-width-specification"></a>scanf — Specyfikacje szerokości
-Te informacje dotyczą interpretacji ciągów formatu w `scanf` rodziny funkcji, takich jak także bezpiecznego wersji `scanf_s`. Funkcje te zwykle założenie, że strumień wejściowy jest podzielony na sekwencja tokenów. Tokeny są rozdzielone odstępem (miejsce, karty lub nowego wiersza) lub w przypadku typów wartości liczbowych, do końca fizycznych typu danych numerycznych wskazywany przez pierwszego znaku, której nie można przekonwertować na tekst wartości liczbowych. Specyfikacja szerokości można jednak powoduje analizowanie danych wejściowych zatrzymać przed zakończeniem fizycznych tokenu.  
-  
- *Szerokość* specyfikacji składa się ze znaków między `%` i specyfikatora typu pola, które mogą obejmować dodatnią liczbą całkowitą o nazwie *szerokość* pola i co najmniej jeden znak rozmiar pola, które również mogą być uważane za Modyfikatory typ pola, takie jak wskazuje, czy jest typu Liczba całkowita wskazująca **krótki** lub **długi**. Znaki te są określane jako prefiks rozmiaru.  
-  
-## <a name="the-width-field"></a>Szerokość pola  
- *Szerokość* pole jest dodatnią dziesiętną liczbą całkowitą kontrolowanie maksymalną liczbę znaków do odczytu dla tego pola. Nie więcej niż *szerokość* znaki są przekonwertować i przechowywać w odpowiedniej `argument`. Mniej niż *szerokość* znaki mogą być odczytu, jeśli występuje znak odstępu (miejsce, karty lub nowego wiersza) lub znak, której nie można przekonwertować zgodnie z danego formatu przed *szerokość* zostanie osiągnięty.  
-  
- Specyfikacja szerokości jest odrębną z argumentem rozmiaru buforu wymagane przez bezpieczny wersje tych funkcji (tj. `scanf_s`, `wscanf_s`itp.). W poniższym przykładzie Specyfikacja szerokości wynosi 20, co oznacza, że do 20 znaków mają być odczytane ze strumienia wejściowego. Długość buforu jest 21, w tym miejsca do 20 znaków plus terminatorem null:  
-  
-```  
-char str[21];  
-scanf_s("%20s", str, 21);  
-```  
-  
- Jeśli *szerokość* pole nie jest używane, `scanf_s` spróbuje odczytać całego token w ciągu. Jeśli określony rozmiar nie jest wystarczająco duży, aby pomieścić cały token, nic nie zostanie zapisany na ciąg docelowego. Jeśli *szerokość* pole jest określony, następnie pierwszy *szerokość* znaków w tokenie zostanie zapisany w ciągu docelowego wraz z terminatorem null.  
-  
-## <a name="the-size-prefix"></a>Prefiks rozmiaru  
- Opcjonalne prefiksy **h**, **l**, **ll**, **komputerach 64**, i **L** rozmiaru `argument`(długich i krótkich, znaków jednobajtowych lub znaków dwubajtowych w zależności od znaku typu, które modyfikują). Te znaki specyfikacji formatu są używane z typów znaków w `scanf` lub `wscanf` funkcji, aby określić interpretacji argumentów, jak pokazano w poniższej tabeli. Prefiks typu **komputerach 64** to rozszerzenie firmy Microsoft i nie jest ANSI zgodny. Wpisz znaki i ich znaczenie są opisane w tabeli "Typ znaków dla funkcji scanf" [scanf — znaki pola typu](../c-runtime-library/scanf-type-field-characters.md).  
-  
+
+Te informacje dotyczą interpretacji ciągów formatu w `scanf` rodziny funkcji, takich jak tym bezpieczne wersje `scanf_s`. Te funkcje zwykle założono, że strumień wejściowy jest podzielona na sekwencja tokeny. Tokeny są rozdzielone przez odstępu (miejsca, tabulatorem ani) lub w przypadku typów wartości liczbowych, do końca naturalnych typu dane liczbowe, wskazane przez pierwszy znak, który nie można konwertować wartości liczbowych. Jednak specyfikacje szerokości można spowodować, że podczas analizowania danych wejściowych można zatrzymać przed zakończeniem naturalnych tokenu.
+
+*Szerokość* specyfikacji zawiera znaki między `%` i specyfikator pola typu mogą obejmować dodatnią liczbą całkowitą o nazwie *szerokość* pola oraz jeden lub więcej znaków rozmiar pola, które mogą być również uwzględnione jako modyfikatory typu pola, takie jak wskazanie, czy jest typu Liczba całkowita wskazująca **krótki** lub **długie**. Takie znaki są określane jako prefiks rozmiaru.
+
+## <a name="the-width-field"></a>Szerokość pola
+
+*Szerokość* pole jest dodatnia dziesiętną liczbą całkowitą kontrolowanie maksymalna liczba znaków do odczytu dla tego pola. Nie więcej niż *szerokość* znaki są konwertowane i przechowywane w odpowiednich `argument`. Mniej niż *szerokość* znaki mogą być odczytu, jeśli znak odstępu (miejsca, tabulatorem ani) lub znak, który nie może zostać skonwertowany zgodnie z danego formatu występuje przed *szerokość* zostanie osiągnięty.
+
+Specyfikacja szerokości jest odrębne i niezależne od argumentu rozmiaru buforu, które są wymagane przez bezpieczne wersje tych funkcji (czyli `scanf_s`, `wscanf_s`itp.). W poniższym przykładzie, specyfikacje szerokości wynosi 20, co oznacza, że do 20 znaków mają być odczytane ze strumienia wejściowego. Długość buforu jest 21, w tym pomieszczeniu możliwe 20 znaków oraz terminator o wartości null:
+
+```C
+char str[21];
+scanf_s("%20s", str, 21);
+```
+
+Jeśli *szerokość* pole nie jest używane, `scanf_s` podejmie próbę odczytu całego token do ciągu. Jeśli określony rozmiar jest wystarczająco duży, aby pomieścić całą tokenu, nic nie zostanie zapisany do ciągu docelowego. Jeśli *szerokość* pola jest określony, następnie pierwszy *szerokość* znakami w tokenie zostanie zapisany do ciągu docelowego wraz z terminatorem null.
+
+## <a name="the-size-prefix"></a>Rozmiar przedrostka
+
+Opcjonalne prefiksy parametru **h**, **l**, **ll**, **I64**, i **L** wskazywać wielkość `argument`(długi lub krótki, znaków jednobajtowych lub znaków dwubajtowych, w zależności od znaku typu, który modyfikuje). Te znaki specyfikacji formatu są używane wraz z typów znaków w `scanf` lub `wscanf` funkcji do określenia interpretacji argumentów, jak pokazano w poniższej tabeli. Prefiks typu **I64** jest rozszerzeniem firmy Microsoft i nie jest ANSI zgodny. Znaki typu i ich znaczenie są opisane w tabeli "Typ znaków dla funkcji scanf" [scanf — znaki pola typu](../c-runtime-library/scanf-type-field-characters.md).
+
 > [!NOTE]
->  **h**, **l**, i **L** prefiksy są rozszerzenia Microsoft, gdy jest używany z danymi typu `char`.  
-  
-### <a name="size-prefixes-for-scanf-and-wscanf-format-type-specifiers"></a>Rozmiar prefiksy scanf i wscanf — typ formatu specyfikatory  
-  
-|Aby określić|Użyj prefiksu|Ze specyfikatorem typu|  
-|----------------|----------------|-------------------------|  
-|**double**|**l**|**e**, **E**, **f**, **g**, lub **G**|  
-|**Long double** (taki sam, jak podwójna)|**L**|**e**, **E**, **f**, **g**, lub **G**|  
-|**długie int**|**l**|**d**, **i**, **o**, **x**, lub **X**|  
-|**Long unsigned int**|**l**|**u**|  
-|**długie long**|**wszystko**|**d**, **i**, **o**, **x**, lub **X**|  
-|`short int`|**h**|**d**, **i**, **o**, **x**, lub **X**|  
-|**krótkich liczb całkowitych bez znaku**|**h**|**u**|  
-|__**int64**|**I64**|**d**, **i**, **o**, **u**, **x**, lub **X**|  
-|Znaków z `scanf`|**h**|**c** lub **C**|  
-|Znaków z `wscanf`|**h**|**c** lub **C**|  
-|Szerokich znaków z `scanf`|**l**|**c** lub **C**|  
-|Szerokich znaków z `wscanf`|**l**|**c**, lub **C**|  
-|Jednobajtowe — ciąg znaków z `scanf`|**h**|**s** lub **S**|  
-|Jednobajtowe — ciąg znaków z `wscanf`|**h**|**s** lub **S**|  
-|Ciąg znaków dwubajtowych z `scanf`|**l**|**s** lub **S**|  
-|Ciąg znaków dwubajtowych z `wscanf`|**l**|**s** lub **S**|  
-  
- W poniższych przykładach użyto **h** i **l** z `scanf_s` funkcje i `wscanf_s` funkcje:  
-  
-```  
-scanf_s("%ls", &x, 2);     // Read a wide-character string  
-wscanf_s(L"%hC", &x, 2);    // Read a single-byte character  
-```  
-  
- Jeśli funkcja niezabezpieczone w `scanf` rodziny, Pomiń parametr rozmiaru wskazujący długość buforu poprzedniego argumentu.  
-  
-## <a name="reading-undelimited-strings"></a>Odczytywanie Undelimited ciągów  
- Do odczytu nie rozdzielone odstępem ciągów znaków, zestaw znaków w nawiasach (**[**) mogą być zastępowane dla **s** znaku typu (ciąg). Zestaw znaków w nawiasach jest określana jako ciąg formantu. Odpowiednie pole wejściowe jest do odczytu do pierwszego znaku, który nie występuje w ciągu formantu. Jeśli pierwszy znak w zestawie jest daszek (**^**), efekt jest wycofywany: pole wejściowe jest do odczytu do pierwszego znaku, który pojawia się w pozostałej części zestawu znaków.  
-  
- Należy pamiętać, że **% [a-z]** i **% [z-a]** będą interpretowane jako odpowiednik **%[abcde...z]**. Jest to wspólny `scanf` rozszerzenia funkcji, ale należy pamiętać, że standardu ANSI nie wymaga.  
-  
-## <a name="reading-unterminated-strings"></a>Niezakończony odczytu ciągów  
- Aby ciąg bez przechowywania znak końcowy null ('\0'), należy użyć specyfikację `%` *n *** c** gdy *n* jest dziesiętną liczbą całkowitą. W takim przypadku **c** znaku typu wskazuje, że argument jest wskaźnik do tablicy znaków. Następne *n* znaki są odczytywane ze strumienia wejściowego w określonej lokalizacji, a nie znak null ('\0') jest dołączony. Jeśli *n* nie zostanie określony, jego wartość domyślna to 1.  
-  
-## <a name="when-scanf-stops-reading-a-field"></a>Gdy scanf zatrzymuje odczytywania pola  
- `scanf` Funkcja skanuje każdego pola wejściowego, znak po znaku. Może zatrzymać, odczytywania określonego pola wejściowego, przed jego znak spacji z różnych powodów:  
-  
--   Określona szerokość został osiągnięty.  
-  
--   Nie można przekonwertować następny znak jak określono.  
-  
--   Następny znak powoduje konflikt z znaku w ciągu kontroli, która powinna być zgodna.  
-  
--   Następny znak nie może występować w zestawie znaku.  
-  
- Niezależnie od przyczyny gdy `scanf` funkcja zatrzymuje odczytywania pola wejściowego, dalej pole wejściowe uważa się rozpoczynać się od pierwszego znaku nieprzeczytana. Znak powodujące konflikt, jeśli istnieje, jest traktowany jako nieprzeczytana i jest pierwszym znakiem dalej pole wejściowe lub pierwszy znak w kolejnych operacji odczytu dla strumienia wejściowego.  
-  
-## <a name="see-also"></a>Zobacz też  
- [scanf, _scanf_l —, wscanf — _wscanf_l —](../c-runtime-library/reference/scanf-scanf-l-wscanf-wscanf-l.md)   
- [scanf_s —, _scanf_s_l —, wscanf_s — _wscanf_s_l —](../c-runtime-library/reference/scanf-s-scanf-s-l-wscanf-s-wscanf-s-l.md)   
- [Pola specyfikacji formatu: funkcji wscanf](../c-runtime-library/format-specification-fields-scanf-and-wscanf-functions.md)   
- [scanf, znaki pola typu](../c-runtime-library/scanf-type-field-characters.md)
+> **h**, **l**, i **L** prefiksy są rozszerzeniami Microsoft, gdy jest używane z danymi typu `char`.
+
+### <a name="size-prefixes-for-scanf-and-wscanf-format-type-specifiers"></a>Rozmiar prefiksów dla scanf i wscanf specyfikatorów typ formatu
+
+|Aby określić|Użyj prefiksu|Ze specyfikatorem typu|
+|----------------|----------------|-------------------------|
+|**double**|**l**|**e**, **E**, **f**, **g**, lub **G**|
+|**double** (tak samo, jak double)|**L**|**e**, **E**, **f**, **g**, lub **G**|
+|**long int**|**l**|**d**, **i**, **o**, **x**, lub **X**|
+|**Long unsigned int**|**l**|**u**|
+|**długi długi**|**Wszystko**|**d**, **i**, **o**, **x**, lub **X**|
+|`short int`|**h**|**d**, **i**, **o**, **x**, lub **X**|
+|**krótka wartość całkowita bez znaku**|**h**|**u**|
+|__**int64**|**I64**|**d**, **i**, **o**, **u**, **x**, lub **X**|
+|Znak Jednobajtowy, za pomocą `scanf`|**h**|**c** lub **C**|
+|Znak Jednobajtowy, za pomocą `wscanf`|**h**|**c** lub **C**|
+|Znak dwubajtowy, za pomocą `scanf`|**l**|**c** lub **C**|
+|Znak dwubajtowy, za pomocą `wscanf`|**l**|**c**, lub **C**|
+|Jednobajtowe — ciąg znaków `scanf`|**h**|**s** lub **S**|
+|Jednobajtowe — ciąg znaków `wscanf`|**h**|**s** lub **S**|
+|Ciąg znaków dwubajtowych `scanf`|**l**|**s** lub **S**|
+|Ciąg znaków dwubajtowych `wscanf`|**l**|**s** lub **S**|
+
+W poniższych przykładach używane **h** i **l** z `scanf_s` funkcje i `wscanf_s` funkcje:
+
+```C
+scanf_s("%ls", &x, 2);     // Read a wide-character string
+wscanf_s(L"%hC", &x, 2);    // Read a single-byte character
+```
+
+Jeśli funkcja niezabezpieczonych w `scanf` rodziny, pominięto parametr rozmiaru wskazujący długość buforu poprzedniego argumentu.
+
+## <a name="reading-undelimited-strings"></a>Odczytywanie Undelimited ciągów
+
+Umożliwiające odczyt ciągów, które nie są rozdzielane znakami odstępu znaków, zestaw znaków w nawiasach kwadratowych (**[**) mogą zastąpić **s** znaku typu (ciąg). Zestaw znaków w nawiasach jest określany jako ciąg formantu. Odpowiednie pole danych wejściowych jest do odczytu do pierwszego znaku, który nie jest widoczna w ciągu kontroli. Jeśli pierwszy znak w zestawie jest znak daszka (**^**), efekt została odwrócona: pola wejściowego jest do odczytu do pierwszego znaku, który jest widoczna w pozostałej części zestawu znaków.
+
+Należy pamiętać, że **% [a-z]** i **% [z-]** są interpretowane jako równoważne **%[abcde...z]**. Jest to często `scanf` rozszerzenie funkcji, ale należy pamiętać, że ANSI standard nie wymaga.
+
+## <a name="reading-unterminated-strings"></a>Niezakończony odczyt ciągów
+
+Aby ciąg bez przechowywania kończącego znaku null ('\0'), należy użyć specyfikacji **%** <em>n</em>**c** gdzie *n* jest dziesiętną liczbą całkowitą. W tym przypadku **c** znaku typu wskazuje, że argument jest wskaźnikiem do tablicy znaków. Następne *n* znaki są odczytywane ze strumienia wejściowego do określonej lokalizacji, a nie znakiem null ('\0') jest dołączany. Jeśli *n* nie zostanie określony, jego wartość domyślna to 1.
+
+## <a name="when-scanf-stops-reading-a-field"></a>Gdy scanf zatrzymuje odczytanie pola
+
+`scanf` Funkcja skanuje każde pole wejściowe, znak po znaku. Może się zatrzymać, odczytu określonego pola wejściowego, przed osiągnięciem przez nią znak spacji różnych powodów:
+
+- Określona szerokość został osiągnięty.
+
+- Nie można przekonwertować następny znak określone.
+
+- Następny znak powoduje konflikt z znak w ciągu formant, który powinien odpowiadać.
+
+- Następny znak nie są wyświetlane w danego zestawu znaków.
+
+Z jakiegokolwiek powodu gdy `scanf` funkcja przestaje odczytywanie pola wejściowego, dalej pola wejściowego jest uważany za rozpocząć przy pierwszym znaku, jako nieprzeczytane. Znak powodujące konflikt, jeśli istnieje, jest traktowany jako nieprzeczytane i jest pierwszym znakiem następne pole wejściowe lub pierwszy znak w kolejnych operacji odczytu dla strumienia wejściowego.
+
+## <a name="see-also"></a>Zobacz też
+
+[scanf, _scanf_l, wscanf, _wscanf_l](../c-runtime-library/reference/scanf-scanf-l-wscanf-wscanf-l.md)<br/>
+[scanf_s, _scanf_s_l, wscanf_s, _wscanf_s_l](../c-runtime-library/reference/scanf-s-scanf-s-l-wscanf-s-wscanf-s-l.md)<br/>
+[Pola specyfikacji formatu dla funkcji wscanf](../c-runtime-library/format-specification-fields-scanf-and-wscanf-functions.md)<br/>
+[scanf, znaki pola typu](../c-runtime-library/scanf-type-field-characters.md)<br/>

@@ -1,5 +1,5 @@
 ---
-title: Inicjalizacja zestawów mieszanych | Dokumentacja firmy Microsoft
+title: Inicjowanie zestawów mieszanych | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 03/09/2018
 ms.technology:
@@ -21,62 +21,62 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 389246b6b002204260170fb44680c2756cd7aa6b
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 9004d62caa5368294a5a53e4e2587da05d1d495c
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33137894"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43204545"
 ---
 # <a name="initialization-of-mixed-assemblies"></a>Inicjalizacja zestawów mieszanych
 
-Deweloperów systemu Windows musi być zawsze blokady modułu ładującego ostrożność podczas uruchamiania kodu podczas `DllMain`. Istnieje jednak kilka dodatkowych kwestii dotyczących, które są dostarczane do gry podczas pracy nad C + +/ clr zestawy trybu mieszanego.
+Programiści Windows zawsze musi być ostrożnym blokady modułu ładującego podczas uruchamiania kodu podczas `DllMain`. Istnieją jednak pewne dodatkowe kwestie, które dochodzą do głosu podczas pracy z C + +/ clr trybu mieszanego zestawów.
 
-Kod w [DllMain](http://msdn.microsoft.com/library/windows/desktop/ms682583) nie może uzyskać dostępu do środowiska CLR. Oznacza to, że `DllMain` upewnić nie wywołania funkcji zarządzanych, bezpośrednio lub pośrednio; żadnego kodu zarządzanego powinny być zadeklarowane lub zaimplementowana w `DllMain`; i nie wyrzucanie elementów bezużytecznych lub biblioteki automatyczne ładowanie powinno odbywać się w obrębie `DllMain` .
+Kod w ramach [DllMain](/windows/desktop/Dlls/dllmain) nie może uzyskać dostępu do środowiska CLR. Oznacza to, że `DllMain` powinien sprawia, że żadne wywołania do funkcji zarządzanej, bezpośrednio lub pośrednio; bez kodu zarządzanego powinny być zadeklarowane lub zaimplementowane w `DllMain`; i nie wyrzucania elementów bezużytecznych lub biblioteki automatyczne ładowanie powinno odbywać się w ramach `DllMain` .
   
 ## <a name="causes-of-loader-lock"></a>Przyczyny blokady modułu ładującego
 
-Wraz z wprowadzeniem platformy .NET istnieją dwa różne mechanizmy ładowania modułu wykonywania (plik EXE lub DLL): jeden dla systemu Windows, jest używana dla modułów niezarządzane, a drugi dla .NET wspólnego języka środowiska uruchomieniowego (CLR) która ładuje zestawów platformy .NET. Mieszane problem podczas ładowania biblioteki DLL koncentruje się wokół modułu ładującego systemu Microsoft Windows.
+Wraz z wprowadzeniem platformy .NET, istnieją dwa odrębne mechanizmy ładowania modułu wykonywania (EXE lub DLL): jeden dla Windows, która jest używana dla modułów niezarządzanych, a drugi dla platformy .NET języka wspólnego środowiska uruchomieniowego (CLR), która ładuje zestawy .NET. Mieszane problem podczas ładowania biblioteki DLL koncentruje się wokół modułu ładującego systemu operacyjnego Windows firmy Microsoft.
 
-Gdy zestawu zawierającego tylko konstrukcje .NET jest ładowany do procesu, moduł ładujący CLR można przeprowadzać wszystkich niezbędnych zadań ładowanie i Inicjowanie samej siebie. Jednak dla zestawów mieszanych, ponieważ zawierają kodu natywnego i danych, modułu ładującego systemu Windows należy użyć również.
+Gdy zestaw zawierający tylko .NET konstrukcji jest ładowany do procesu, moduł ładujący CLR można wykonywać wszystkie niezbędne zadania, ładowanie i Inicjowanie sam. Jednak dla zestawów mieszanych, ponieważ zawierają natywnego kodu i danych, moduł ładujący Windows należy użyć także.
 
-Moduł ładujący systemu Windows gwarantuje, że żaden kod można kod dostępu lub danych w tej bibliotece DLL przed została zainicjowana i że żaden kod nadmiarowo można załadować biblioteki DLL, podczas częściowo został zainicjowany. Aby to zrobić, moduł ładujący systemu Windows używa procesu globalnego sekcja krytyczna (często nazywane "blokady modułu ładującego"), która uniemożliwia niebezpieczny dostęp podczas inicjowania modułu. W związku z tym proces ładowania jest narażony na wiele scenariuszy, w klasycznym zakleszczenia. Dla zestawów mieszanych następujące dwa scenariusze zwiększyć ryzyko zakleszczenia:
+Moduł ładujący Windows gwarantuje, czy bez kodu można kod dostępu lub danych w tej bibliotece DLL, zanim została zainicjowana i, bez kodu nadmiarowo można załadować biblioteki DLL, a częściowo jest inicjowany. Aby to zrobić, moduł ładujący Windows używa globalnego procesu sekcję krytyczną (często nazywane "blokady modułu ładującego"), które blokują dostęp niebezpiecznych podczas inicjowania modułu. W rezultacie proces ładowania jest narażony na wiele scenariuszy klasycznego zakleszczenia. Dla zestawów mieszanych następujące dwa scenariusze zwiększają ryzyko zakleszczenia:
 
-- Pierwsza strona, jeśli użytkownicy próba wykonania funkcji skompilowany na język pośredni firmy Microsoft (MSIL) przytrzymanie blokady modułu ładującego (z `DllMain` lub statyczne inicjatory, na przykład), może to spowodować zakleszczenia. Rozważmy przypadek, w którym funkcja MSIL odwołuje się do typu w zestawie, który nie został załadowany. Środowisko CLR spróbuje automatycznie załadować tego zestawu, które mogą wymagać modułu ładującego systemu Windows do blokowania na blokady modułu ładującego. Ponieważ blokada modułu ładującego jest już w posiadaniu kodu we wcześniejszej części sekwencję wywołań, zakleszczenie wyników. Jednak wykonywania MSIL w obszarze blokady modułu ładującego nie gwarantuje, że zakleszczenie nastąpi, utrudniając zdiagnozować i naprawić tego scenariusza. W pewnych okolicznościach np. gdy typu występującego w odwołaniu biblioteki DLL zawiera nie natywnego konstrukcje i wszystkie jego zależności zawierają nie natywnego konstrukcje Windows modułu ładującego nie jest wymagane do załadowania zestawu .NET, do którego istnieje odwołanie typu. Ponadto wymagany zestaw lub jego zależności mieszanych native/.NET mogą zostały już załadowane przez inny kod. W rezultacie zakleszczenia może być trudna do przewidzenia i może się różnić w zależności od konfiguracji komputera docelowego.
+- Pierwsze, jeśli użytkownicy spróbują wykonać funkcjach skompilowanych do języka Microsoft intermediate language (MSIL), przytrzymanie blokady modułu ładującego (z `DllMain` lub statyczne inicjatory, na przykład), może to spowodować zakleszczenia. Należy rozważyć przypadek, w którym funkcja MSIL odwołuje się do typu w zestawie, który nie został załadowany. Środowisko CLR spróbuje automatycznie załadować tego zestawu, które mogą wymagać moduł ładujący Windows, aby zablokować na blokady modułu ładującego. Ponieważ blokada modułu ładującego jest już posiadanych przez kodu we wcześniejszej części sekwencję wywołań, spowoduje zakleszczenia. Jednak wykonanie MSIL w ramach blokady modułu ładującego nie gwarantuje, że zakleszczenie nastąpi, dzięki czemu ten scenariusz jest trudny do zdiagnozowania i rozwiązania. W pewnych okolicznościach np. gdy zawiera biblioteki DLL, do którego istnieje odwołanie typu nie natywnego konstrukcje i wszystkie jego zależności zawierają nie natywnego konstrukcje Windows modułu ładującego nie jest wymagane do załadowania zestawu .NET typu odwołania. Ponadto wymagany zestaw lub jego zależności mieszane native/.NET może zostały już załadowane przez inny kod. W związku z tym zakleszczenia mogą być trudne do przewidzenia i mogą się różnić w zależności od konfiguracji komputera docelowego.
 
-- Drugie podczas ładowania biblioteki dll w wersjach 1.0 i 1.1 programu .NET Framework, CLR założono, że blokady modułu ładującego nie został zablokowany i wykonać kilka czynności, które nie są prawidłowe w obszarze blokady modułu ładującego. Przy założeniu, że blokada modułu ładującego nie jest używana jest nieprawidłowa założeń dla czysto .NET bibliotek DLL, ale ponieważ mieszanych bibliotek DLL procedury inicjowania macierzystego, wymagają one natywnego modułu ładującego systemu Windows i w związku z tym blokady modułu ładującego. W związku z tym nawet jeśli nie dewelopera próbowano wykonać wszystkie funkcje MSIL podczas inicjowania biblioteki DLL, było nadal mało prawdopodobne niedeterministyczne zakleszczenie w wersjach 1.0 i 1.1 programu .NET Framework.
+- Po drugie podczas ładowania biblioteki dll w wersjach 1.0 i 1.1 programu .NET Framework, CLR zakłada, że że blokady modułu ładującego nie został zablokowany, a następnie wykonać kilka czynności, które są nieprawidłowe w ramach blokady modułu ładującego. Przy założeniu, że blokada modułu ładującego nie jest używana jest prawidłowy założeń czysto bibliotek DLL platformy .NET, ale ponieważ procedury inicjowania w natywnych są wykonywane w mieszanych bibliotek DLL, wymagają one natywnego modułu ładującego Windows i w związku z tym blokady modułu ładującego. W związku z tym nawet wtedy, gdy deweloper nie próbowano wykonać wszystkie funkcje MSIL podczas inicjowania biblioteki DLL, było nadal niewielkie prawdopodobieństwo niedeterministyczne zakleszczenie w wersjach 1.0 i 1.1 programu .NET Framework.
 
-Wszystkie z systemem innym niż determinizm została usunięta z mieszanym proces ładowania biblioteki DLL. Zostało to zrobić z tych zmian:
+Wszystkie niedeterminizmu został usunięty z mieszanych bibliotek DLL, proces ładowania. To było wykonywane za pomocą tych zmian:
 
-- Środowisko CLR nie tworzy już false założenia gdy ładowanie mieszanych bibliotek DLL.
+- Środowisko CLR nie jest już sprawia, że założenia false, gdy ładowanie mieszanych bibliotek DLL.
 
-- Inicjowanie niezarządzane i zarządzane odbywa się w dwóch etapach oddzielne. Inicjowanie niezarządzane odbywa się najpierw (za pośrednictwem funkcji DllMain) i odbywa się inicjowanie zarządzanego później za pomocą. Konstrukcja obsługiwane NET o nazwie *.cctor*. Drugie polecenie jest całkowicie niewidoczne dla użytkownika o ile **/Zl** lub **/nodefaultlib** są używane. Zobacz[/nodefaultlib (Ignoruj biblioteki)](../build/reference/nodefaultlib-ignore-libraries.md) i [/Zl (Pomiń domyślną nazwę biblioteki)](../build/reference/zl-omit-default-library-name.md) Aby uzyskać więcej informacji.
+- Inicjowanie zarządzane i niezarządzane odbywa się w dwóch etapach odrębne i niezależne. Niezarządzane inicjowanie odbywa się najpierw (za pośrednictwem funkcji DllMain) i odbywa się inicjowanie zarządzanego później za pomocą. Obsługiwane NET konstrukcja o nazwie *.cctor*. Nie jest całkowicie niewidoczne dla użytkownika o ile nie **/Zl** lub **/nodefaultlib** są używane. Zobacz[/nodefaultlib (Ignoruj biblioteki)](../build/reference/nodefaultlib-ignore-libraries.md) i [/Zl (Pomiń domyślną nazwę biblioteki)](../build/reference/zl-omit-default-library-name.md) Aby uzyskać więcej informacji.
 
-Blokady modułu ładującego nadal może wystąpić, ale teraz występuje odtwarzalnie i wykrycia. Jeśli `DllMain` zawiera instrukcje MSIL kompilator generuje ostrzeżenie [C4747 ostrzeżenie kompilatora (poziom 1)](../error-messages/compiler-warnings/compiler-warning-level-1-c4747.md). Ponadto CRT lub CLR próbuje wykryć i zgłoś prób wykonania MSIL w obszarze blokady modułu ładującego. Powoduje wykrywania CRT środowiska uruchomieniowego diagnostyki C Run-Time błąd R6033.
+Blokady modułu ładującego jest nadal możliwe, ale teraz występuje odtwarzalnie i wykrycia. Jeśli `DllMain` zawiera instrukcje MSIL, kompilator generuje ostrzeżenie [ostrzeżenie kompilatora (poziom 1) C4747](../error-messages/compiler-warnings/compiler-warning-level-1-c4747.md). Ponadto CRT lub środowiska CLR podejmie próbę wykrycia i zgłoś prób wykonania MSIL w ramach blokady modułu ładującego. Wykrywanie CRT wyników w środowisku uruchomieniowym diagnostycznych R6033 błąd czasu wykonywania C.
 
-Pozostałej części niniejszego dokumentu opisano scenariusze pozostałe, dla których MSIL można wykonywać w obszarze blokady modułu ładującego rozwiązania problemu w każdej z tych scenariuszy i techniki debugowania.
+W pozostałej części tego dokumentu opisano scenariusze pozostałych, dla których MSIL można wykonać w ramach blokady modułu ładującego rozwiązania problemu pod każdym z tych scenariuszy i techniki debugowania.
 
 ## <a name="scenarios-and-workarounds"></a>Scenariusze i rozwiązania
 
-Istnieje kilka różnych sytuacji, w których kod użytkownika może zostać uruchomiony MSIL w obszarze blokady modułu ładującego. Deweloper musi zapewnić, że implementacji kodu użytkownika nie jest podejmowana próba wykonania instrukcji MSIL w każdej z tych sytuacji. Poniższe podpunkty opisują wszystkie możliwości z omówienie sposobu rozwiązywania problemów w typowych przypadkach.
+Istnieje kilka różnych sytuacji, w których kod użytkownika mogą wykonywać MSIL w ramach blokady modułu ładującego. Deweloper musi zapewnić, że implementacja kodu użytkownika nie jest podejmowana próba wykonania instrukcji MSIL pod każdym z tych sytuacji. Poniższe podsekcje opisano wszystkie możliwości dzięki dyskusję na temat sposobu rozwiązywania problemów w najbardziej typowe przypadki.
 
 ### <a name="dllmain"></a>DllMain
 
-`DllMain` Funkcji jest zdefiniowane przez użytkownika punkt wejścia biblioteki DLL. Jeśli użytkownik określi, w przeciwnym razie `DllMain` jest wywoływane każdorazowo proces lub wątek dołącza do lub odłączenie od zawierającego biblioteki DLL. Ponieważ to wywołanie może wystąpić, dopóki blokada modułu ładującego jest utrzymywana, dostarczone przez użytkownika nie `DllMain` funkcji powinny zostać skompilowane do MSIL. Ponadto, żadna funkcja w drzewie wywołań początek w `DllMain` zostać skompilowane do MSIL. Aby rozwiązać problemy, blok kodu, który definiuje `DllMain` powinny być modyfikowane za pomocą #pragma `unmanaged`. Należy dokładnie takie same dla każdej funkcji który `DllMain` wywołania.
+`DllMain` Funkcja jest punktem wejścia zdefiniowane przez użytkownika dla biblioteki DLL. Chyba że użytkownik określi, w przeciwnym razie `DllMain` jest wywoływana za każdym razem, gdy proces lub wątek dołącza do lub odłącza się od zawierającego biblioteki DLL. Ponieważ to wywołanie może wystąpić, gdy utrzymania blokady modułu ładującego, dostarczone przez użytkownika nie `DllMain` funkcja powinna zostać skompilowane do MSIL. Ponadto, żadna funkcja w drzewie wywołań, dostęp do konta root na `DllMain` można skompilować do MSIL. Aby rozwiązać problemy w tym miejscu blok kodu, który definiuje `DllMain` powinny być modyfikowane przy użyciu #pragma `unmanaged`. Taki sam powinno odbywać się dla każdej funkcji, która `DllMain` wywołania.
 
-W przypadkach, gdy te funkcje należy wywołać funkcję, która wymaga wykonania MSIL dla innych kontekstach wywoływania strategii dublowania może służyć których są tworzone jednocześnie .NET, jak i natywną wersję tej samej funkcji.
+W przypadkach, w którym tych funkcji, należy wywołać funkcję, która wymaga implementacji MSIL dla innych kontekstach wywoływania strategii dublowania może służyć tworzona .NET i natywną wersję tej samej funkcji.
 
-Alternatywnie Jeśli `DllMain` nie jest wymagana lub jeśli nie trzeba być wykonywane w ramach modułu ładującego zablokować, dostarczane przez użytkownika `DllMain` można usunąć wdrożenia, który będzie usunąć ten problem.
+Alternatywnie Jeśli `DllMain` nie jest wymagane lub jeśli nie trzeba być wykonywane w ramach modułu ładującego zablokować, dostarczone przez użytkownika `DllMain` można usunąć wdrożenia, który zostanie całkowicie wyeliminować problem.
 
-Jeśli DllMain podejmuje próbę wykonania MSIL bezpośrednio, [C4747 ostrzeżenie kompilatora (poziom 1)](../error-messages/compiler-warnings/compiler-warning-level-1-c4747.md) spowoduje. Jednak kompilator nie może wykryć przypadków, gdy wywołuje funkcję DllMain w innym module, który z kolei podejmuje próbę wykonania MSIL.
+Jeśli DllMain próbuje wykonać bezpośrednio MSIL [ostrzeżenie kompilatora (poziom 1) C4747](../error-messages/compiler-warnings/compiler-warning-level-1-c4747.md) spowoduje. Jednak kompilator nie może wykryć przypadki, w którym DllMain wywołuje funkcję w innym module, który z kolei podejmuje próbę wykonania MSIL.
 
-Aby uzyskać więcej informacji na temat tego scenariusza, zobacz "Przeszkód do diagnozowania".
+Aby uzyskać więcej informacji na temat tego scenariusza, zobacz "Przeszkody do diagnostyki".
 
 ### <a name="initializing-static-objects"></a>Inicjowanie obiektów statycznych
 
-Inicjowanie statyczne obiektów może spowodować zakleszczenie Jeśli wymagana jest dynamiczny inicjatora. W przypadku prostych przypadkach, takich jak kiedy zmienna statyczna jest po prostu przypisać do wartości znane w czasie kompilacji nie dynamiczna Inicjalizacja wymagane jest, nie istnieje ryzyko zakleszczenia. Jednak zmienne statyczne zainicjowane przez wywołania funkcji, wywołania konstruktora lub wyrażeń, które nie można obliczyć w kompilacji czasu wymaga kod do wykonania podczas inicjowania modułu.
+Inicjowanie obiektów statycznych może spowodować zakleszczenia, jeśli dynamiczny inicjator jest wymagana. Dla prostych przypadkach, takich jak kiedy zmienna statyczna jest po prostu przypisać do wartości znany w czasie kompilacji nie dynamiczna Inicjalizacja wymagane jest, więc nie występuje ryzyko zakleszczenia. Jednak statyczne zmienne inicjowane przez wywołania funkcji, wywołania konstruktora lub wyrażeń, które nie mogą być obliczane w kompilacji czas wszystkie wymagane do wykonania podczas inicjowania modułu kodu.
 
-Poniższy kod przedstawia przykłady inicjatorów statycznych, które wymagają dynamicznego inicjowania: wywołanie funkcji, konstrukcji obiektów i inicjowania wskaźnika. (Te przykłady nie są statyczne, ale są zakłada, że ma zostać zdefiniowana w zakresie globalnym, który ma ten sam efekt).
+Poniższy kod pokazuje przykłady statyczne inicjatory, które wymagają dynamicznego inicjowania: wywołanie funkcji, konstrukcji obiektów i inicjowania wskaźnika. (Te przykłady nie są statyczne, ale są zakłada się, że można zdefiniować w zakresie globalnym, która ma ten sam efekt).
 
 ```cpp
 // dynamic initializer function generated
@@ -85,51 +85,51 @@ CObject o(arg1, arg2);
 CObject* op = new CObject(arg1, arg2);
 ```
 
-To ryzyko zakleszczenia zależy od tego, czy moduł zawierający jest skompilowana przy użyciu **/CLR** , zostanie wykonany MSIL. W szczególności jeśli zmienna statyczna jest kompilowany bez **/CLR** (lub znajduje się w #pragma `unmanaged` blok), a inicjator dynamiczne wymagane zainicjować powoduje wykonanie instrukcji MSIL, zakleszczenie mogą występować. Wynika to z faktu, modułów skompilowany bez **/CLR**, inicjowanie zmienne statyczne odbywa się za pośrednictwem funkcji DllMain. Z kolei zmienne statyczne skompilowane z **/CLR** są inicjowane przez .cctor, po zakończeniu etapu niezarządzane inicjowania i zostało zwolnione blokady modułu ładującego.
+To ryzyko zakleszczenia zależy od tego, czy zawierające moduł został skompilowany z **/CLR** i zostanie wykonany MSIL. W szczególności jeśli zmienna statyczna jest kompilowany bez **/CLR** (lub znajduje się w #pragma `unmanaged` blok), i dynamiczny inicjator wymagane to inicjalizacji, jej wyniki podczas wykonywania instrukcji MSIL, mogą występować zakleszczenia. Jest to spowodowane dla modułów skompilowanych bez **/CLR**, Inicjalizacja zmiennych statycznych odbywa się przez funkcji DllMain. Z kolei zmienne statyczne skompilowany przy użyciu **/CLR** są inicjowane przy .cctor, po zakończeniu na etapie inicjowania niezarządzanych i udostępnieniu blokady modułu ładującego.
 
-Istnieje wiele rozwiązań zakleszczenie spowodowane dynamiczna Inicjalizacja zmienne statyczne (w sposób uporządkowane około czas wymagany do rozwiązany):
+Istnieje kilka rozwiązań zakleszczenie spowodowane dynamiczna Inicjalizacja zmiennych statycznych (rozmieszczone około według czasu wymaganego do problemu):
 
-- Plik źródłowy zawierający statyczna zmienna może być kompilowana przy użyciu **/CLR**.
+- Plik źródłowy zawierający zmienna statyczna może być skompilowana przy użyciu **/CLR**.
 
-- Wszystkie funkcje wywoływane przez zmienną statyczne mogą być kompilowane do kodu natywnego za pomocą #pragma `unmanaged` dyrektywy.
+- Wszystkie funkcje wywoływane przez zmienną statyczną, może być kompilowane do kodu natywnego za pomocą #pragma `unmanaged` dyrektywy.
 
-- Ręcznie sklonować kod, który zmienna statyczna zależy, zapewniając jednocześnie .NET, jak i natywną wersję o różnych nazwach. Deweloperzy można wywołać natywną wersję z natywnego statyczne inicjatory i wywołuje wersji platformy .NET w innym miejscu.
+- Ręcznie sklonować kod, który zmienna statyczna zależy, zapewniając .NET i natywnego wersji pod różnymi nazwami. Deweloperzy mogą następnie wywołać natywnej wersji z natywnych statyczne inicjatory i wywołać wersji programu .NET w innym miejscu.
 
-### <a name="user-supplied-functions-affecting-startup"></a>Dostarczone przez użytkownika funkcji wpływających na uruchamiania
+### <a name="user-supplied-functions-affecting-startup"></a>Dostarczone przez użytkownika funkcje wpływające na uruchamiania
 
-Istnieje kilka funkcji dostarczone przez użytkownika, na których biblioteki są zależne dla inicjowania podczas uruchamiania. Na przykład gdy globalnie takich jak przeładowanie operatorów w języku C++ `new` i `delete` operatorów, wersje dostarczane przez użytkownika są używane wszędzie, takich jak inicjowanie standardowa biblioteka C++ i zniszczenia. W związku z tym standardowa biblioteka C++ i dostarczane przez użytkownika statyczne inicjatory wywoła wszelkie dostarczane przez użytkownika wersje tych operatorów.
+Istnieje kilka funkcji dostarczone przez użytkownika, od których bibliotek zależą inicjowania podczas uruchamiania. Na przykład w przypadku globalnie przeciążania operatory w języku C++, takich jak `new` i `delete` operatorów, wersje dostarczone przez użytkownika są używane wszędzie, w tym w standardowej biblioteki języka C++ inicjowania i niszczenia. W rezultacie standardowej biblioteki języka C++ i podanych przez użytkownika statyczne inicjatory wywoła wszystkie dostarczone przez użytkownika wersje tych operatorów.
 
-Jeśli wersje dostarczane przez użytkownika są skompilowane do MSIL, te inicjatory zostanie próba do wykonywania instrukcji MSIL, dopóki blokada modułu ładującego jest utrzymywana. Podanego użytkownika `malloc` ma takie same skutki. Aby rozwiązać ten problem, żadnego z tych przeciążenia lub definicji dostarczone przez użytkownika muszą zostać zaimplementowane jako kod natywny za pomocą #pragma `unmanaged` dyrektywy.
+Jeśli wersje dostarczone przez użytkownika są skompilowane do MSIL, można wykonać instrukcji MSIL, dopóki blokada modułu ładującego jest utrzymywana podjęto jest te inicjatory. Użytkownik podał `malloc` ma takie same skutki. Aby rozwiązać ten problem, żadnego z tych przeciążeń lub definicji dostarczone przez użytkownika musi zostać wdrożony jako kodu natywnego za pomocą #pragma `unmanaged` dyrektywy.
 
-Aby uzyskać więcej informacji na temat tego scenariusza, zobacz "Przeszkód do diagnozowania".
+Aby uzyskać więcej informacji na temat tego scenariusza, zobacz "Przeszkody do diagnostyki".
 
 ### <a name="custom-locales"></a>Niestandardowe ustawienia regionalne
 
-Jeśli użytkownik udostępnia niestandardowych globalnych ustawień regionalnych, tych ustawień regionalnych będzie używany dla wszystkich przyszłych strumieni We/Wy, w tym te, które są inicjowane statycznie inicjowania. Jeśli ten obiekt globalnych ustawień regionalnych jest skompilowane do MSIL, funkcji Członkowskich obiektu ustawień regionalnych skompilowane do MSIL może wywołać dopóki blokada modułu ładującego jest utrzymywana.
+Jeśli użytkownik poda niestandardowe globalnych ustawień regionalnych, tych ustawień regionalnych będą używane do inicjowania wszystkich przyszłych strumieniach we/wy, w tym te, które są statycznie zainicjowane. Jeśli ten obiekt globalnych ustawień regionalnych jest kompilowany na język MSIL, funkcji elementów członkowskich obiektu ustawień regionalnych skompilowane do MSIL może być wywoływane podczas utrzymania blokady modułu ładującego.
 
 Dostępne są trzy opcje dotyczące rozwiązywania tego problemu:
 
-Pliki źródłowe, zawierający wszystkie definicje globalnej strumień we/wy może być kompilowana przy użyciu **/CLR** opcji. Uniemożliwi to ich statyczne inicjatory z są wykonywane w ramach blokady modułu ładującego.
+Pliki źródłowe, zawierający wszystkie definicje globalnego strumienia we/wy może być skompilowana przy użyciu **/CLR** opcji. Uniemożliwi to ich statyczne inicjatory zostanie wykonywany w ramach blokady modułu ładującego.
 
-Definicje funkcji niestandardowych ustawień regionalnych można skompilowanych do natywnego kodu za pomocą #pragma `unmanaged` dyrektywy.
+Niestandardowe ustawienia regionalne definicje funkcji może być kompilowane do kodu natywnego za pomocą #pragma `unmanaged` dyrektywy.
 
-Unikaj umieszczania ustawienie globalne ustawienia regionalne do niestandardowych ustawień regionalnych po zwolnieniu blokady modułu ładującego. Należy jawnie skonfigurować strumieni We/Wy utworzone podczas inicjowania z niestandardowych ustawień regionalnych.
+Powstrzymanie się od konfigurowania niestandardowych ustawień regionalnych jako globalne ustawienia regionalne do momentu po wydaniu blokady modułu ładującego. Następnie skonfiguruj jawnie strumieniach we/wy utworzone podczas inicjowania przy użyciu niestandardowych ustawień regionalnych.
 
-## <a name="impediments-to-diagnosis"></a>Przeszkody diagnostyki
+## <a name="impediments-to-diagnosis"></a>Przeszkody w celu diagnostyki
 
-W niektórych przypadkach jest trudne do wykrycia źródła zakleszczenia. Poniższe podpunkty omówiono konfigurowanie tych scenariuszy i sposoby obejścia tych problemów.
+W niektórych przypadkach jest trudne do wykrycia źródła zakleszczenia. Poniższe podsekcje omówiono te scenariusze i sposoby obejścia tych problemów.
 
 ### <a name="implementation-in-headers"></a>Implementacja w nagłówkach
 
-W przypadku wybierz implementacji funkcji wewnątrz pliki nagłówkowe skomplikować diagnostyki. Wbudowane funkcje i kod szablonu wymagają określenia funkcji w pliku nagłówka.  Język C++ Określa jedną regułę definicji wymusza implementacje wszystkich funkcji o takiej samej nazwie semantycznie równoważne. W związku z tym konsolidatora C++ nie muszą wprowadzać uwagi użytkownika podczas scalania obiektów pliki, których zduplikowane implementacji danej funkcji.
+W przypadku wybierz implementacje funkcji w plikach nagłówkowych skomplikować diagnostyki. Funkcje śródwierszowe a kod szablonu wymaga określenia funkcji w pliku nagłówkowym.  Język C++ określa reguły jednej definicji, co zmusza wszystkich implementacjach funkcji o tej samej nazwie semantycznie równoważne. W związku z tym konsolidatora C++ nie należy wprowadzać żadnych szczególnych kwestii podczas scalania plików obiektu, które mają zduplikowane implementacji danej funkcji.
 
-Przed Visual Studio 2005 konsolidator po prostu wybiera największy te semantycznie równoważne definicje, aby pomieścić deklaracje do przodu i scenariuszy stosowania optymalizacji różnych opcji dla plików źródłowych różnych. Spowoduje to utworzenie problemu z macierzystego/.NET mieszanych bibliotek DLL.
+Przed Visual Studio 2005 konsolidator po prostu wybiera największy z tymi definicjami semantycznie równoważne, aby pomieścić deklaracje przechodzenia do przodu i scenariuszy stosowania optymalizacji różne opcje dla innych plików źródłowych. Spowoduje to utworzenie problemu z mieszanym native/.NET biblioteki dll.
 
-Ponieważ ten sam nagłówek może być włączone zarówno w plikach C++ z **/CLR** włączone i wyłączone, lub #include można ich opakować wewnątrz #pragma `unmanaged` bloku, istnieje możliwość MSIL i macierzyste wersje funkcji, które zapewniają implementacje w nagłówkach. Natywnych implementacji i MSIL ma semantykę różną względem inicjowania w obszarze blokady modułu ładującego, które skutecznie narusza reguły jednej definicji. W związku z tym gdy konsolidator wybierze największa implementacja, go może wybierz wersję MSIL funkcję, nawet jeśli jawnie została skompilowana do kodu macierzystego w innym miejscu przy użyciu dyrektywy #pragma niezarządzanych. Aby upewnić się, że wersja MSIL szablon lub wewnętrznej funkcji nigdy nie jest wywoływana w obszarze blokady modułu ładującego, muszą zostać zmodyfikowane w każdej definicji co takich funkcji o nazwie blokady modułu ładującego z #pragma `unmanaged` dyrektywy. Jeśli plik nagłówka pochodzi z innej firmy, najprostszym sposobem, aby to osiągnąć jest wypychania i pop dyrektywa #pragma niezarządzanego wokół #include — dyrektywa ataku pliku nagłówka. (Zobacz [zarządzane, niezarządzane](../preprocessor/managed-unmanaged.md) np.) Ta strategia nie będzie działać dla nagłówków zawierających innego kodu, który należy bezpośrednio wywoływać interfejsów API architektury .NET.
+Ponieważ ten sam nagłówek może być uwzględniane zarówno przez pliki języka C++ z **/CLR** włączonych i wyłączonych, lub #include może zostać zawinięty wewnątrz #pragma `unmanaged` bloku, można mieć zarówno MSIL, jak i natywne wersje funkcji, które zapewniają implementacje w nagłówkach. MSIL i implementacji mają różną semantykę, w odniesieniu do inicjowania w ramach blokady modułu ładującego, które skutecznie narusza reguły jednej definicji. W związku z tym gdy konsolidator wybierze największa implementacja, go wybrać wersji MSIL w funkcji, nawet wtedy, gdy jawnie został skompilowany do kodu macierzystego, gdzie indziej przy użyciu dyrektywy #pragma niezarządzanych. Aby upewnić się, że MSIL wersję szablonu lub funkcji śródwierszowej. nigdy nie jest wywoływana w ramach blokady modułu ładującego, co definicji każdej takich funkcji o nazwie blokady modułu ładującego musi można modyfikować za pomocą #pragma `unmanaged` dyrektywy. Jeśli plik nagłówkowy jest w innej, najprostszym sposobem osiągnięcia tego jest pop niezarządzanych — dyrektywa #pragma wokół i wypychania #include — dyrektywa powodujący problemy pliku nagłówka. (Zobacz [zarządzane, niezarządzane](../preprocessor/managed-unmanaged.md) np.) Ta strategia nie będzie działać dla nagłówków zawierających innego kodu, który trzeba bezpośrednio wywoływać interfejsy API platformy .NET.
 
-Dla wygody użytkowników zajmujących się blokady modułu ładującego wybierze konsolidator implementacji native za pośrednictwem zarządzanych przedstawionej obu. Dzięki temu można uniknąć powyższe problemy. Istnieją dwa wyjątki od tej reguły w tej wersji z powodu dwóch nierozwiązane problemy z kompilatorem:
+Dla wygody użytkowników zajmujących się blokady modułu ładującego wybierze konsolidator natywnych implementacji za pośrednictwem zarządzanej umieszczeniem zarówno. Umożliwia to uniknięcie powyższe problemy. Istnieją jednak dwa wyjątki związane z regułą w tej wersji z powodu dwóch nierozwiązane problemy za pomocą kompilatora:
 
-- Wywołanie jest elementem śródwierszowym funkcja jest za pomocą wskaźnika funkcji globalnej statycznych. Ten scenariusz jest szczególnie ważne, ponieważ funkcje wirtualne są wywoływane za pośrednictwem wskaźników funkcji globalnych. Na przykład
+- Wywołanie jest wbudowany funkcja jest za pomocą wskaźnika globalnych funkcji statycznych. Ten scenariusz jest szczególnie istotne, ponieważ wirtualne funkcje są wywoływane za pomocą wskaźników funkcji globalnych. Na przykład
   
 ```cpp
 #include "definesmyObject.h"
@@ -151,47 +151,47 @@ void DuringLoaderlock(C & c)
 
 ### <a name="diagnosing-in-debug-mode"></a>Diagnozowanie w trybie debugowania
 
-Wszystkie diagnozować blokady modułu ładującego, który problemów należy zrobić z kompilacji debugowania. Wersja kompilacji nie może utworzyć diagnostyki i optymalizacje wykonywane w trybie wersji może maskować niektóre MSIL w scenariuszach blokady modułu ładującego.
+Wszystkie ich diagnozowania blokady modułu ładującego, problemy, które należy wykonać przy użyciu kompilacji debugowania. Kompilacji wydania nie może tworzyć diagnostyczne i optymalizacje wykonywane w trybie wersji może maskować część MSIL w scenariuszach blokady modułu ładującego.
 
-## <a name="how-to-debug-loader-lock-issues"></a>Debugowanie problemów blokady modułu ładującego
+## <a name="how-to-debug-loader-lock-issues"></a>Jak debugować problemy blokady modułu ładującego
 
-Dane diagnostyczne generowany przez środowisko CLR po wywołaniu funkcji MSIL powoduje, że CLR wstrzymania wykonywania. Z kolei powoduje debugera trybu mieszanego Visual C++, również zostanie zawieszona, podczas uruchamiania obiektu debugowanego w procesie. Jednakże podczas dołączania do procesu, nie jest możliwość uzyskania zarządzany stos wywołań dla obiekt debugowany przy użyciu mieszanych debugera.
+Diagnostyka, generowany przez środowisko CLR, po wywołaniu funkcji MSIL powoduje, że CLR w celu wstrzymania wykonywania. Z kolei powoduje debuger trybu mieszanego Visual C++, również zostać zawieszone, podczas uruchamiania obiektu debugowanego w procesie. Jednak podczas dołączania do procesu, prawdopodobnie nie można uzyskać zarządzanego stosu wywołań dla obiektu debugowanego przy użyciu mieszany debuger.
 
-Aby zidentyfikować określoną funkcję MSIL, która została wywołana w obszarze blokady modułu ładującego, deweloperzy powinien wykonaj następujące kroki:
+Aby zidentyfikować konkretną funkcję MSIL, która została wywołana w ramach blokady modułu ładującego, deweloperzy powinny wykonaj następujące czynności:
 
-1. Upewnij się, że dostępne są symbole dla biblioteki mscoree.dll i mscorwks.dll.a;a;pierwsza.
+1. Upewnij się, że dostępne są symbole dla mscoree.dll i mscorwks.dll.
 
-   Można to zrobić na dwa sposoby. Po pierwsze można dodać do ścieżki wyszukiwania symboli PDB dla biblioteki mscoree.dll i mscorwks.dll.a;a;pierwsza. Aby to zrobić, Otwórz okno dialogowe Opcje ścieżki wyszukiwania symboli. (Z **narzędzia** menu, wybierz **opcje**. W lewym okienku **opcje** po otwarciu okna dialogowego **debugowanie** węzeł i wybierz polecenie **symbole**.) Dodaj ścieżkę do plików PDB mscoree.dll i mscorwks.dll.a;a;pierwsza do listy wyszukiwania. Te pliki PDB są instalowane na % VSINSTALLDIR%\SDK\v2.0\symbols. Wybierz **OK**.
+   Można to zrobić na dwa sposoby. Po pierwsze pliki PDB dla mscoree.dll i mscorwks.dll można dodać do ścieżki wyszukiwania symboli. Aby to zrobić, Otwórz okno dialogowe Opcje ścieżki wyszukiwania symboli. (Z **narzędzia** menu, wybierz **opcje**. W okienku po lewej stronie **opcje** po otwarciu okna dialogowego **debugowanie** węzeł i wybierz polecenie **symbole**.) Dodaj ścieżkę do plików PDB mscoree.dll i mscorwks.dll do listy wyszukiwania. Te pliki PDB są instalowane na % VSINSTALLDIR%\SDK\v2.0\symbols. Wybierz **OK**.
 
-   Po drugie pliki PDB dla biblioteki mscoree.dll i mscorwks.dll.a;a;pierwsza można pobrać z serwera symboli firmy Microsoft. Aby skonfigurować serwer symboli, Otwórz okno dialogowe Opcje ścieżki wyszukiwania symboli. (Z **narzędzia** menu, wybierz **opcje**. W lewym okienku **opcje** po otwarciu okna dialogowego **debugowanie** węzeł i wybierz polecenie **symbole**.) Dodaj następującą ścieżkę wyszukiwania do listy wyszukiwania: http://msdl.microsoft.com/download/symbols. Dodaj katalog pamięci podręcznej symboli do pola tekstowego pamięci podręcznej serwera symboli. Wybierz **OK**.
+   Po drugie pliki PDB dla mscoree.dll i mscorwks.dll można pobrać z serwera symboli firmy Microsoft. Aby skonfigurować serwer symboli, Otwórz okno dialogowe Opcje ścieżki wyszukiwania symboli. (Z **narzędzia** menu, wybierz **opcje**. W okienku po lewej stronie **opcje** po otwarciu okna dialogowego **debugowanie** węzeł i wybierz polecenie **symbole**.) Dodaj następującą ścieżkę wyszukiwania do listy wyszukiwania: http://msdl.microsoft.com/download/symbols. Dodaj katalog pamięci podręcznej symboli do pola tekstowego pamięci podręcznej serwera symboli. Wybierz **OK**.
 
-1. Ustaw tryb debugowania wyłącznie natywnego trybu.
+1. Ustaw tryb debugera w trybie tylko do natywnych.
 
-   Aby to zrobić, otwórz **właściwości** siatki projektu startowego w rozwiązaniu. Wybierz **właściwości konfiguracji** > **debugowania**. Ustaw **debugera typu** do **wyłącznie natywnego**.
+   Aby to zrobić, otwórz **właściwości** siatka projektu startowego w rozwiązaniu. Wybierz **właściwości konfiguracji** > **debugowania**. Ustaw **typ debugera** do **wyłącznie natywnego**.
 
 1. Uruchom debuger (F5).
   
-1. Gdy **/CLR** diagnostyczne jest generowany, wybierz **ponów** , a następnie wybierz **Podziel**.
+1. Gdy **/CLR** diagnostyki jest generowany, wybierz polecenie **ponów próbę wykonania** , a następnie wybierz **Przerwij**.
   
-1. Otwórz okno stosu wywołań. (Na pasku menu wybierz **debugowania** > **Windows** > **stos wywołań**.) Naruszeń `DllMain` lub statycznego inicjatora jest identyfikowany z zieloną strzałką. Jeśli nie określono funkcji ataku, poniższe kroki należy go znaleźć.
+1. Otwórz okno stosu wywołań. (Na pasku menu wybierz **debugowania** > **Windows** > **stos wywołań**.) Naruszeń `DllMain` lub statycznego inicjatora jest identyfikowany za pomocą zieloną strzałkę. Jeśli funkcja naruszającym nie zostanie zidentyfikowany, poniższe kroki należy go znaleźć.
 
-1. Otwórz **Immediate** okna (na pasku menu wybierz **debugowania** > **Windows** > **Immediate**.)
+1. Otwórz **bezpośrednie** okna (na pasku menu wybierz **debugowania** > **Windows** > **bezpośrednie**.)
 
-1. Wpisz sos.dll .load do **Immediate** okno, aby załadować usługi do debugowania SOS.
+1. Wpisz sos.dll .load do **bezpośrednie** okna, aby załadować usługi do debugowania SOS.
   
-1. Typ! dumpstack do **Immediate** okno, aby uzyskać pełną listę wewnętrznej **/CLR** stosu.
+1. Typ! dumpstack do **bezpośrednie** okna, aby uzyskać pełną listę wewnętrzny **/CLR** stosu.
 
-1. Wyszukaj pierwszego wystąpienia (znajdujący się najbliżej spodzie stosu) albo _CorDllMain (Jeśli `DllMain` przyczyny problemu) lub _VTableBootstrapThunkInitHelperStub lub GetTargetForVTableEntry (Jeśli inicjator statyczny przyczyny problemu). Wpis stosu poniżej tego wywołania jest wywołania MSIL zaimplementowana funkcja, która nastąpiła próba wykonania w obszarze blokady modułu ładującego.
+1. Wyszukaj pierwszego wystąpienia (znajdujący się najbliżej spodzie stosu) albo _cordllmain — (Jeśli `DllMain` powoduje problemy) lub _VTableBootstrapThunkInitHelperStub lub GetTargetForVTableEntry (jeśli statycznego inicjatora powoduje, że problem). Wpis stosu tuż poniżej tego wywołania jest wywołania MSIL zaimplementowana funkcja, która podjęto próbę wykonania w ramach blokady modułu ładującego.
 
-1. Przejdź do pliku źródłowego i numer zidentyfikowanych w poprzednim kroku i prawidłowe wiersza problem przy użyciu scenariusze i rozwiązania opisane w sekcji scenariuszy.
+1. Przejdź do pliku źródłowego i numer zidentyfikowany w poprzednim kroku i poprawne wiersza, problem za pomocą scenariusze i rozwiązania opisane w sekcji scenariuszy.
 
 ## <a name="example"></a>Przykład
 
 ### <a name="description"></a>Opis
 
-Poniższy przykład pokazuje, jak uniknąć blokady modułu ładującego przenosząc kod z `DllMain` do konstruktora obiektu globalnego.
+Poniższy przykład pokazuje, jak uniknąć blokady modułu ładującego, przenosząc kodu z `DllMain` do konstruktora obiektów globalnych.
 
-W tym przykładzie jest globalnego obiektu zarządzanego którego konstruktor zawiera obiekt zarządzany, który pierwotnie w `DllMain`. Druga część tego przykładu odwołuje się do zestawu, tworzenia wystąpienia obiektu zarządzanego można wywołać konstruktora modułu, która obsługuje inicjowania.
+W tym przykładzie jest globalne obiektu zarządzanego, której Konstruktor zawiera obiektu zarządzanego, który został opublikowany w `DllMain`. Druga sekcja w tym przykładzie odwołuje się do zestawu, tworzenia wystąpienia obiektu zarządzanego, można wywołać konstruktora modułu, która obsługuje inicjowania.
 
 ### <a name="code"></a>Kod
 
@@ -222,7 +222,7 @@ BOOL WINAPI DllMain(HINSTANCE hInstance, DWORD dwReason, LPVOID lpReserved) {
 }
 ```
 
-W tym przykładzie przedstawiono problemy w Inicjalizacja zestawów mieszanych:
+W tym przykładzie przedstawiono problemy w inicjowanie zestawów mieszanych:
 
 ```cpp
 // initializing_mixed_assemblies_2.cpp

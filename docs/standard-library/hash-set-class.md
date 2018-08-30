@@ -96,12 +96,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 81c7572ffd5a53456cd4555b82a8d3e235286339
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: f40fbed217bde0cfe0e917100a18bbdea91f0a8f
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38961711"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43200349"
 ---
 # <a name="hashset-class"></a>hash_set — Klasa
 
@@ -121,11 +121,14 @@ class hash_set
 
 ### <a name="parameters"></a>Parametry
 
-*Klucz* typ danych elementu, który ma być przechowywany w hash_set.
+*Key*<br/>
+ Typ danych elementu, który ma być przechowywany w hash_set.
 
-*Cechy* typu, który obejmuje dwa obiekty funkcyjne, jednej klasy oznacza to porównanie predykat binarny można porównać dwie wartości elementów jako klucze sortowania, aby określić ich względną kolejność i funkcję mieszania, która jest jednoargumentowy predykatu mapowania wartości klucza elementy do liczb całkowitych bez znaku typu `size_t`. Ten argument jest opcjonalny, a `hash_compare` *< klucz* **mniej ***\<klucz >>* jest wartością domyślną.
+*Cechy*<br/>
+ Typu, który obejmuje dwa obiekty funkcji, jednej klasy porównania oznacza to predykat binarny, która może porównać dwie wartości elementów jako klucze sortowania, aby określić ich względną kolejność i funkcję mieszania, która jest jednoargumentowy predykatu mapowania klucza wartości elementów na typy bez znaku liczby całkowite typu `size_t`. Ten argument jest opcjonalny, a `hash_compare<Key, less<Key> >` jest wartością domyślną.
 
-*Allocator* typ reprezentujący przechowywany obiekt alokatora, który hermetyzuje szczegóły dotyczące alokacji i dezalokacji pamięci hash_set. Ten argument jest opcjonalny, a wartość domyślna to **alokatora ***\<Key >.*
+*Allocator*<br/>
+ Typ reprezentujący przechowywany obiekt alokatora, który hermetyzuje szczegóły dotyczące alokacji i dezalokacji pamięci hash_set. Ten argument jest opcjonalny, a wartość domyślna to `allocator<Key>`.
 
 ## <a name="remarks"></a>Uwagi
 
@@ -559,7 +562,8 @@ size_type count(const Key& key) const;
 
 ### <a name="parameters"></a>Parametry
 
-*klucz* klucz elementy, które mają być dopasowywane z hash_set.
+*Klucz*<br/>
+ Klucz elementy, które mają być dopasowywane z hash_set.
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -1025,7 +1029,8 @@ pair <iterator, iterator> equal_range (const Key& key);
 
 ### <a name="parameters"></a>Parametry
 
-*klucz* klucza argumentu ma być porównywana za pomocą klucza sortowania z hash_set wyszukiwany element.
+*Klucz*<br/>
+ Argument klucz, który ma zostać porównane z klucza sortowania elementu z hash_set wyszukiwany.
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -1111,13 +1116,17 @@ size_type erase(const key_type& key);
 
 ### <a name="parameters"></a>Parametry
 
-*_Where* pozycję elementu do usunięcia z hash_set.
+*_Where*<br/>
+ Pozycja elementu do usunięcia z hash_set.
 
-*pierwszy* pozycja pierwszego elementu usunięte z hash_set.
+*pierwszy*<br/>
+ Pozycja pierwszego elementu są usuwane z hash_set.
 
-*ostatni* pozycji tuż za ostatnim elementem usunięte z hash_set.
+*ostatni*<br/>
+ Pozycja tuż za ostatnim elementem usunięte z hash_set.
 
-*klucz* klucz elementów do usunięcia z hash_set.
+*Klucz*<br/>
+ Klucz elementów do usunięcia z hash_set.
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -1225,7 +1234,8 @@ const_iterator find(const Key& key) const;
 
 ### <a name="parameters"></a>Parametry
 
-*klucz* klucza argumentu mają być dopasowywane o klucz sortowania elementu z hash_set wyszukiwany.
+*Klucz*<br/>
+ Klucz argumentu mają być dopasowywane o klucz sortowania elementu z hash_set wyszukiwany.
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -1423,7 +1433,7 @@ hash_set(
 |-|-|
 |*Al*|Klasa alokatora magazynu, który ma być używany dla tego `hash_set` obiektu, który domyślnie przyjmuje wartość `Allocator`.|
 |*Comp*|Funkcja porównywania typu `const Traits` porządkowania elementów w `hash_set`, które domyślnie używa `hash_compare`.|
-|*Po prawej stronie*|`hash_set` Którego stworzonego elementu `hash_set` jest kopią.|
+|*po prawej stronie*|`hash_set` Którego stworzonego elementu `hash_set` jest kopią.|
 |*pierwszy*|Pozycja pierwszego elementu w zakresie elementów, które mają zostać skopiowane.|
 |*ostatni*|Pozycja pierwszego elementu poza zakresem elementów, które mają zostać skopiowane.|
 
@@ -1650,7 +1660,8 @@ iterator lower_bound(const Key& key);
 
 ### <a name="parameters"></a>Parametry
 
-*klucz* klucza argumentu ma być porównywana za pomocą klucza sortowania z hash_set wyszukiwany element.
+*Klucz*<br/>
+ Argument klucz, który ma zostać porównane z klucza sortowania elementu z hash_set wyszukiwany.
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -2139,7 +2150,8 @@ void swap(hash_set& right);
 
 ### <a name="parameters"></a>Parametry
 
-*prawy* hash_set argument zawierająca elementy, które mają być zamienione z hash_set docelowej.
+*right*<br/>
+ Hash_set — argument, zawierająca elementy, które mają być zamienione z hash_set docelowej.
 
 ### <a name="remarks"></a>Uwagi
 
@@ -2214,7 +2226,8 @@ iterator upper_bound(const Key& key);
 
 ### <a name="parameters"></a>Parametry
 
-*klucz* klucza argumentu ma być porównywana za pomocą klucza sortowania z hash_set wyszukiwany element.
+*Klucz*<br/>
+ Argument klucz, który ma zostać porównane z klucza sortowania elementu z hash_set wyszukiwany.
 
 ### <a name="return-value"></a>Wartość zwracana
 

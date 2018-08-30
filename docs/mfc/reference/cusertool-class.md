@@ -40,12 +40,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 51933ac5aeb3c14a25b3989809aab2e09686b9a3
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: 90972e39bbad812f820452816ff3df982174539f
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42465984"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43202979"
 ---
 # <a name="cusertool-class"></a>Klasa CUserTool
 Narzędzie użytkownika jest element menu, który uruchamia aplikację zewnętrzną. **Narzędzia** karcie **Dostosuj** okno dialogowe ( [klasa CMFCToolBarsCustomizeDialog](../../mfc/reference/cmfctoolbarscustomizedialog-class.md)) umożliwia użytkownikowi dodawanie narzędzi użytkownika i określ nazwę, poleceń, argumentów i początkowy katalog dla każdego z narzędzi użytkownika.  
@@ -159,7 +159,7 @@ virtual BOOL Invoke();
  Wartość różną od zera, jeśli polecenie zostało wykonane pomyślnie; w przeciwnym razie 0.  
   
 ### <a name="remarks"></a>Uwagi  
- Wywołania [ShellExecute](http://msdn.microsoft.com/library/windows/desktop/bb762153) wykonanie polecenia skojarzonego z narzędziem użytkownika. Funkcja kończy się niepowodzeniem, jeśli polecenie jest puste lub jeśli [ShellExecute](http://msdn.microsoft.com/library/windows/desktop/bb762153) zakończy się niepowodzeniem.  
+ Wywołania [ShellExecute](/windows/desktop/api/shellapi/nf-shellapi-shellexecutea) wykonanie polecenia skojarzonego z narzędziem użytkownika. Funkcja kończy się niepowodzeniem, jeśli polecenie jest puste lub jeśli [ShellExecute](/windows/desktop/api/shellapi/nf-shellapi-shellexecutea) zakończy się niepowodzeniem.  
   
 ##  <a name="loaddefaulticon"></a>  CUserTool::LoadDefaultIcon  
  Ładuje domyślną ikonę narzędzie użytkownika.  

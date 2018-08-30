@@ -1,7 +1,7 @@
 ---
-title: Kompilatora (poziom 4) ostrzeżenie C4931 | Dokumentacja firmy Microsoft
+title: Kompilator ostrzeżenie (poziom 4) C4931 | Dokumentacja firmy Microsoft
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 08/27/2018
 ms.technology:
 - cpp-diagnostics
 ms.topic: error-reference
@@ -16,16 +16,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f77d30a7e7d2386404c02c1b72cc30309bb6876c
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 20e39eda9f06330a84243634eba28fc9d351cafe
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33294576"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43201545"
 ---
-# <a name="compiler-warning-level-4-c4931"></a>Kompilator C4931 ostrzegawcze (poziom 4)
-zakładamy, że biblioteka typów została zbudowana dla wskaźników liczba-bit  
-  
- Jawne informacji nie został dostarczony wraz z **ptrsize** atrybutu [#import](../../preprocessor/hash-import-directive-cpp.md) dyrektywy; kompilator stwierdzić, że rozmiar wskaźnika biblioteki typów ***numer***.  
-  
- To ostrzeżenie jest domyślnie wyłączone. Zobacz [kompilatora ostrzeżeń czy są wyłączone domyślnie](../../preprocessor/compiler-warnings-that-are-off-by-default.md) Aby uzyskać więcej informacji.
+# <a name="compiler-warning-level-4-c4931"></a>Kompilator ostrzeżenie (poziom 4) C4931
+
+> Zakładamy, biblioteka typów została skompilowana dla *numer*-bitowych wskaźników
+
+Jawne informacji nie został dostarczony wraz z **ptrsize** atrybutu [#import](../../preprocessor/hash-import-directive-cpp.md) dyrektywę; kompilator stwierdzić, że rozmiar wskaźnika biblioteki typów *numer*.
+
+To ostrzeżenie jest domyślnie wyłączona. Zobacz [kompilatora ostrzeżenia, są wyłączone domyślnie](../../preprocessor/compiler-warnings-that-are-off-by-default.md) Aby uzyskać więcej informacji.

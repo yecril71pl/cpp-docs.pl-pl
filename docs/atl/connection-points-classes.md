@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6d458fb5805b99c8dcc5cc25abc9f85f88f08e92
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: b3f866d56d0c0ab89a91b13e238d9503c1ca9e02
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38957659"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43205078"
 ---
 # <a name="connection-points-classes"></a>Klasy punktów połączenia
 Następujące klasy obsługi punkty połączeń:  
@@ -31,7 +31,7 @@ Następujące klasy obsługi punkty połączeń:
   
 -   [IConnectionPointImpl](../atl/reference/iconnectionpointimpl-class.md) implementuje punkt połączenia.  
   
--   [IPropertyNotifySinkCP](../atl/reference/ipropertynotifysinkcp-class.md) implementuje reprezentujący punkt połączenia [ipropertynotifysink —](http://msdn.microsoft.com/library/windows/desktop/ms692638) interfejsu.  
+-   [IPropertyNotifySinkCP](../atl/reference/ipropertynotifysinkcp-class.md) implementuje reprezentujący punkt połączenia [ipropertynotifysink —](/windows/desktop/api/ocidl/nn-ocidl-ipropertynotifysink) interfejsu.  
   
 -   [CComDynamicUnkArray](../atl/reference/ccomdynamicunkarray-class.md) zarządza nieograniczone połączenia między punktem połączenia i jego ujścia.  
   

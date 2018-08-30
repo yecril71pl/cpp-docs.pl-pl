@@ -18,15 +18,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f3bde85e64fe8593ec2637e767e8c3c70d3b8200
-ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
+ms.openlocfilehash: 8162ba8ffe70225980819d45ea55fb8427abd294
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/27/2018
-ms.locfileid: "37038080"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43196677"
 ---
 # <a name="cmutex-class"></a>Klasa CMutex
-Reprezentuje "mutex" — obiektu synchronizacji, umożliwiająca jeden wątek wykluczają się wzajemnie dostęp do zasobu.  
+Reprezentuje "mutex" — obiekt synchronizacji, który umożliwia jeden wątek wzajemnie wykluczających się uzyskanie dostępu do zasobu.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -43,15 +43,15 @@ class CMutex : public CSyncObject
 |[CMutex::CMutex](#cmutex)|Konstruuje `CMutex` obiektu.|  
   
 ## <a name="remarks"></a>Uwagi  
- Muteksy są przydatne, jeśli tylko jeden wątek jednocześnie można mogą modyfikować dane i kontrolowane zasobów. Na przykład dodawania węzłów do połączonej listy jest procesem, powinien być dozwolony tylko przez jeden wątek na raz. Za pomocą `CMutex` obiekt do kontrolowania listy połączonej, tylko jeden wątek jednocześnie uzyskać dostęp do listy.  
+ Muteksy są przydatne, gdy tylko jeden wątek jednocześnie można zezwolić na modyfikowanie danych lub innego zasobu kontrolowany. Na przykład dodawanie węzłów do połączonej listy jest procesem, który powinien być dozwolony tylko przez jeden wątek jednocześnie. Za pomocą `CMutex` obiektu do kontrolowania liście połączonej, tylko jeden wątek jednocześnie uzyskać dostęp do listy.  
   
- Aby użyć `CMutex` obiektów, utworzyć `CMutex` obiektu, gdy potrzebny jest. Określ nazwę obiektu mutex czekać, a aplikacji należy początkowo jest jej właścicielem. Po powrocie z konstruktora access obiektu mutex. Wywołanie [CSyncObject::Unlock](../../mfc/reference/csyncobject-class.md#unlock) po zakończeniu dostępu do kontrolowanego zasobu.  
+ Aby użyć `CMutex` obiektów, konstruowania `CMutex` obiektu, kiedy jest to konieczne. Określ nazwę chcesz czekać na element mutex, a aplikacja początkowo powinny odpowiadać. Gdy Konstruktor zwraca access element mutex. Wywołaj [CSyncObject::Unlock](../../mfc/reference/csyncobject-class.md#unlock) po zakończeniu dostęp do zasobu kontrolowany.  
   
- Alternatywna metoda przy użyciu `CMutex` obiektów jest dodanie do zmiennej typu `CMutex` jako element członkowski danych klasy do formantu. Podczas konstruowania obiektu kontrolowanego, należy wywołać konstruktora z `CMutex` element członkowski danych, jeśli obiektu mutex jest początkowo własność, nazwa obiektu mutex (jeśli będzie on używany przez granice procesu) i potrzeby atrybutów zabezpieczeń.  
+ Alternatywna metoda przy użyciu `CMutex` obiektów jest dodanie do zmiennej typu `CMutex` jako element członkowski danych do klasy, do kontroli. Podczas konstruowania obiektu kontrolowanego, należy wywołać konstruktora `CMutex` określenie, jeśli element mutex początkowo jest właścicielem, nazwa obiektu mutex (Jeśli zostanie on użyty przez granice procesu) i żądane atrybuty zabezpieczeń element członkowski danych.  
   
- Dostęp do zasobów kontrolowane przez `CMutex` obiektów w ten sposób, najpierw Utwórz zmienną obu typów [CSingleLock](../../mfc/reference/csinglelock-class.md) lub typ [CMultiLock](../../mfc/reference/cmultilock-class.md) w funkcji członkowskiej dostępu do tego zasobu. Następnie wywołaj zablokować obiektu `Lock` funkcji członkowskiej (na przykład [CSingleLock::Lock](../../mfc/reference/csinglelock-class.md#lock)). W tym momencie z wątku zostanie albo uzyskać dostęp do zasobu, poczekaj zasobu zwolnione i uzyskać dostęp lub zaczekaj zasobów do zwolnienia i limit czasu, można uzyskać dostęp do zasobu. W każdym przypadku zasobu uzyskaniu w sposób wątkowo. Aby zwolnić zasobu, użyj obiektu blokady `Unlock` funkcji członkowskiej (na przykład [CSingleLock::Unlock](../../mfc/reference/csinglelock-class.md#unlock)), lub zezwala na wykraczać poza zakres obiektu blokady.  
+ Dostęp do zasobów w wartości clientauthtrustmode `CMutex` obiektów w ten sposób, najpierw Utwórz zmienną typu albo [CSingleLock](../../mfc/reference/csinglelock-class.md) lub typ [CMultiLock](../../mfc/reference/cmultilock-class.md) w funkcji składowej dostępu do zasobu. Następnie wywołaj zablokować obiektu `Lock` funkcja elementu członkowskiego (na przykład [CSingleLock::Lock](../../mfc/reference/csinglelock-class.md#lock)). W tym momencie wątek będzie albo uzyskania dostępu do zasobu, poczekaj, aż zasób zwolnione i uzyskać dostęp lub poczekaj, aż zasób, które mogą być wprowadzane i limit czasu, w których nie można uzyskać dostęp do zasobu. W każdym przypadku zasobu uzyskano dostęp w sposób bezpieczny dla wątków. Do zwolnienia zasobu, użyj obiektu blokady `Unlock` funkcja elementu członkowskiego (na przykład [CSingleLock::Unlock](../../mfc/reference/csinglelock-class.md#unlock)), lub zezwalać na obiekt blokady do wykraczać poza zakres.  
   
- Aby uzyskać więcej informacji na temat używania `CMutex` obiektów, zobacz artykuł [Multithreading: jak używać klas synchronizacji](../../parallel/multithreading-how-to-use-the-synchronization-classes.md).  
+ Aby uzyskać więcej informacji na temat korzystania z `CMutex` obiektów, zobacz artykuł [wielowątkowość: jak używać klas synchronizacji](../../parallel/multithreading-how-to-use-the-synchronization-classes.md).  
   
 ## <a name="inheritance-hierarchy"></a>Hierarchia dziedziczenia  
  [CObject](../../mfc/reference/cobject-class.md)  
@@ -75,19 +75,19 @@ CMutex(
   
 ### <a name="parameters"></a>Parametry  
  *bInitiallyOwn*  
- Określa, czy tworzenie wątku `CMutex` obiektu początkowo ma dostęp do zasobów kontrolowane przez obiektu mutex.  
+ Określa, jeśli tworzenia wątku `CMutex` obiektu początkowo ma dostęp do zasobu, kontrolowane przez element mutex.  
   
  *lpszName*  
- Nazwa `CMutex` obiektu. Jeśli istnieje innego obiektu mutex o takiej samej nazwie, *lpszName* musi być dostarczona, jeśli obiekt będzie można użyć poza granicami procesu. Jeśli **NULL**, obiektu mutex nie będą mieć nazwy. Jeśli nazwa pasuje do istniejącego obiektu mutex, konstruktora tworzy nową `CMutex` obiektu, który odwołuje się do obiektu mutex o tej nazwie. Jeśli nazwa jest zgodna z istniejącym obiektem synchronizacji nie jest obiektu mutex, konstrukcji zakończy się niepowodzeniem.  
+ Nazwa `CMutex` obiektu. Jeśli istnieje inny element mutex o takiej samej nazwie, *lpszName* musi zostać dostarczony, jeśli obiekt ma być używany przez granice procesu. Jeśli **NULL**, element mutex nie będą mieć nazwy. Jeśli nazwa pasuje do istniejącego obiektu mutex, Konstruktor tworzy nową `CMutex` obiektu, który odwołuje się element mutex o takiej nazwie. Jeśli nazwa jest zgodna z istniejącym obiektem synchronizacji nie jest mutex, konstrukcja nie powiedzie się.  
   
  *lpsaAttribute*  
- Atrybuty zabezpieczeń dla obiektu mutex. Pełny opis tej struktury, zobacz [SECURITY_ATTRIBUTES](http://msdn.microsoft.com/library/windows/desktop/aa379560) w zestawie Windows SDK.  
+ Atrybuty zabezpieczeń dla obiektu mutex. Aby uzyskać pełny opis tej struktury, zobacz [SECURITY_ATTRIBUTES](https://msdn.microsoft.com/library/windows/desktop/aa379560) w zestawie Windows SDK.  
   
 ### <a name="remarks"></a>Uwagi  
- Dostęp, lub zwolnij `CMutex` obiektów, Utwórz [CMultiLock](../../mfc/reference/cmultilock-class.md) lub [CSingleLock](../../mfc/reference/csinglelock-class.md) obiekt i wywołanie jego [blokady](../../mfc/reference/csinglelock-class.md#lock) i [Unlock](../../mfc/reference/csinglelock-class.md#unlock) Funkcje elementów członkowskich. Jeśli `CMutex` obiekt jest używany autonomiczny, wywołaj jego `Unlock` funkcji członkowskiej do jego zwolnienia.  
+ Dostęp i zwalniania `CMutex` obiektu, Utwórz [CMultiLock](../../mfc/reference/cmultilock-class.md) lub [CSingleLock](../../mfc/reference/csinglelock-class.md) obiektu, a następnie wywołać jej [blokady](../../mfc/reference/csinglelock-class.md#lock) i [Unlock](../../mfc/reference/csinglelock-class.md#unlock) Funkcje Członkowskie. Jeśli `CMutex` obiekt jest używany autonomiczny, wywoływanie jej `Unlock` funkcja elementu członkowskiego do jego zwolnienia.  
   
 > [!IMPORTANT]
->  Po utworzeniu `CMutex` obiektów, użyj [GetLastError](http://msdn.microsoft.com/library/windows/desktop/ms679360) aby upewnić się, że obiektu mutex nie już istnieje. Nieoczekiwanie istniał obiektu mutex, może oznaczać nieautoryzowanego zajmowanie i procesu może zamierza użyć obiektu mutex złośliwie. W takim przypadku zalecaną procedurą zabezpieczenia jest zamknąć dojścia i kontynuować tak, jakby wystąpił błąd podczas tworzenia obiektu.  
+>  Po utworzeniu `CMutex` obiektu, należy użyć [GetLastError](https://msdn.microsoft.com/library/windows/desktop/ms679360) aby upewnić się, że element mutex już nie istnieje. Jeśli element mutex istniał nieoczekiwanie, może to oznaczać, nieautoryzowany proces zajmowanie i może zamierza użyć obiektu mutex złośliwie. W tym przypadku zalecaną procedurą zabezpieczenia jest zamknąć dojścia i kontynuować tak, jakby wystąpił błąd podczas tworzenia obiektu.  
   
 ## <a name="see-also"></a>Zobacz też  
  [Klasa CSyncObject](../../mfc/reference/csyncobject-class.md)   

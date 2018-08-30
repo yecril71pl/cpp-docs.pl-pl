@@ -24,12 +24,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 91ec7e11272e0a7286d77e3fc96b7437007a0f8d
-ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
+ms.openlocfilehash: a4af9fa780aca1bc1c1304b45d226984fbb5eb7e
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/01/2018
-ms.locfileid: "39408525"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43201448"
 ---
 # <a name="member-access-operators--and--gt"></a>Operatory dostępu do składowych:. i -&gt;
 ## <a name="syntax"></a>Składnia  
@@ -46,7 +46,7 @@ postfix-expression -> name
   
 1.  W pierwszej formie *wyrażeniem przyrostkowym* reprezentuje wartość struktury, klasy lub typ union i *nazwa* nazwy członka określonej struktury, Unii lub klasy. Wartością operacji jest *nazwa* i jest l wartością, jeśli *wyrażeniem przyrostkowym* jest l wartością.  
   
-2.  W drugim formularzu *wyrażeniem przyrostkowym* reprezentuje wskaźnik do struktury, Unii lub klasy, i *nazwa* nazwy członka określonej struktury, Unii lub klasy. Wartość jest *nazwa* i jest l wartością. **->** Operator wyłuskania wskaźnika. W związku z tym, wyrażenie * e ***->** `member` i **(\****e***)**.`member` (gdzie *e* reprezentuje wskaźnik) uzyskanie takie same wyniki (z wyjątkiem, gdy operatory **->** lub **\*** są przeciążone).  
+2.  W drugim formularzu *wyrażeniem przyrostkowym* reprezentuje wskaźnik do struktury, Unii lub klasy, i *nazwa* nazwy członka określonej struktury, Unii lub klasy. Wartość jest *nazwa* i jest l wartością. **->** Operator wyłuskania wskaźnika. W związku z tym, wyrażenia `e->member` i `(*e).member` (gdzie *e* reprezentuje wskaźnik) uzyskanie takie same wyniki (z wyjątkiem, gdy operatory **->** lub <strong>\*</strong> są przeciążone).  
   
 ## <a name="example"></a>Przykład  
  W poniższym przykładzie pokazano oba rodzaje operator dostępu do elementu członkowskiego.  
