@@ -30,12 +30,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ee3fbc85ee6068c6e45f2847ae7ba45a425db8e8
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: 5be60ff1f0aa8b2ceff7517a9af968e0b7690478
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42464783"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43214682"
 ---
 # <a name="diagnostic-services"></a>Usługi diagnostyczne
 Biblioteki klas Microsoft Foundation dostarcza wiele usługi diagnostyczne, które programy łatwiejsze debugowanie. Te usługi diagnostyczne zawierają makra i funkcje globalne, które umożliwiają śledzenie pamięci programu alokacji, zrzutu zawartość obiektów w czasie wykonywania i Drukuj komunikaty debugowania w czasie wykonywania. Makra i funkcje globalne dla usługi diagnostyczne są podzielone na następujące kategorie:  
@@ -79,8 +79,8 @@ Biblioteki klas Microsoft Foundation dostarcza wiele usługi diagnostyczne, któ
 |[Afxcheckerror —](#afxcheckerror)|Zmienna globalna, używane do testowania SCODE sukces, aby zobaczyć, jeśli jest to błąd, a jeśli tak, zgłasza odpowiedni komunikat o błędzie.|  
 |[Afxcheckmemory —](#afxcheckmemory)|Sprawdza, czy integralność wszystkich aktualnie przydzielonej pamięci.|  
 |[AfxDebugBreak](#afxdebugbreak)|Powoduje przerwanie wykonywania.|
-|[AfxDump](#cdumpcontext_in_mfc)|Jeśli jest wywoływana, gdy w debugerze, zrzuty stanu obiektu podczas debugowania.|  
-|[AfxDump](#afxdump)|Funkcja wewnętrznego zrzuty stanu obiektu podczas debugowania.|
+|[afxDump](#cdumpcontext_in_mfc)|Jeśli jest wywoływana, gdy w debugerze, zrzuty stanu obiektu podczas debugowania.|  
+|[afxDump](#afxdump)|Funkcja wewnętrznego zrzuty stanu obiektu podczas debugowania.|
 |[Afxdumpstack —](#afxdumpstack)|Wygeneruj obraz bieżącego stosu. Ta funkcja jest zawsze połączone statycznie.|  
 |[Afxenablememoryleakdump —](#afxenablememoryleakdump)|Umożliwia zrzut przecieku pamięci.|  
 |[Afxenablememorytracking —](#afxenablememorytracking)|Włącza śledzenie i wyłączanie pamięci.|  
@@ -605,7 +605,7 @@ void AFXAPI AfxDumpStack(DWORD dwTarget = AFX_STACK_DUMP_TARGET_DEFAULT);
   
  Aby pomyślnie użyć tej funkcji:  
   
--   Plik IMAGEHLP. Biblioteka DLL musi być w zmiennej path. Jeśli nie masz tej biblioteki DLL, funkcja wyświetli komunikat o błędzie. Zobacz [biblioteki Pomocy obrazu](http://msdn.microsoft.com/library/windows/desktop/ms680321) uzyskać informacji na temat zestawu funkcji dostarczonych przez IMAGEHLP.  
+-   Plik IMAGEHLP. Biblioteka DLL musi być w zmiennej path. Jeśli nie masz tej biblioteki DLL, funkcja wyświetli komunikat o błędzie. Zobacz [biblioteki Pomocy obrazu](/windows/desktop/Debug/image-help-library) uzyskać informacji na temat zestawu funkcji dostarczonych przez IMAGEHLP.  
   
 -   Moduły, które mają ramki na stosie musi zawierać informacje o debugowaniu. Jeśli nie zawierają informacji o debugowaniu, funkcja nadal wygeneruje ślad stosu, ale będzie mniej dokładny śledzenia.  
 ### <a name="requirements"></a>Wymagania  

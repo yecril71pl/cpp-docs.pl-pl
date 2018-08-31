@@ -19,12 +19,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2a3b0e148104ff5620eddf7ac0d26693d96607d9
-ms.sourcegitcommit: 76fd30ff3e0352e2206460503b61f45897e60e4f
+ms.openlocfilehash: 71312a1dfa70ca3fd83242f6f706654c08a4973c
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/13/2018
-ms.locfileid: "39025659"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43217670"
 ---
 # <a name="creating-a-web-browser-style-mfc-application"></a>Tworzenie aplikacji MFC w stylu przeglądarki sieci Web
 Aplikacji w stylu przeglądarki sieci Web można uzyskać dostęp do informacji w Internecie (takich jak HTML lub dokumenty aktywne) lub intranet, a także folderów w lokalnym systemie plików, a w sieci. Przez wyprowadzanie klasy widoku aplikacji z [CHtmlView](../../mfc/reference/chtmlview-class.md), efektywnie uczynić przeglądarki sieci Web aplikacji przesyłając widoku za pomocą formantu WebBrowser.  
@@ -77,10 +77,10 @@ void CWebView::OnInitialUpdate()
 ```  
   
 ## <a name="see-also"></a>Zobacz też  
- [Próbki MFC MFCIE](http://msdn.microsoft.com/7391aa0c-fca8-4994-a6c9-6c5c7470fba0)   
+ [Próbki MFC MFCIE](https://msdn.microsoft.com/7391aa0c-fca8-4994-a6c9-6c5c7470fba0)   
  [Kreator aplikacji MFC](../../mfc/reference/mfc-application-wizard.md)   
  [Praca z właściwościami projektu](../../ide/working-with-project-properties.md)   
  [Strony właściwości](../../ide/property-pages-visual-cpp.md)   
  [Praca z właściwościami projektu](../../ide/working-with-project-properties.md)   
- [Wdrażanie aplikacji](http://msdn.microsoft.com/4ff8881d-0daf-47e7-bfe7-774c625031b4)
+ [Wdrażanie aplikacji](https://msdn.microsoft.com/4ff8881d-0daf-47e7-bfe7-774c625031b4)
 
