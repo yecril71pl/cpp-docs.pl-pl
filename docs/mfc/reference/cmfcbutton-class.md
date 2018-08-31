@@ -1,7 +1,7 @@
 ---
 title: Klasa CMFCButton | Dokumentacja firmy Microsoft
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 08/28/2018
 ms.technology:
 - cpp-mfc
 ms.topic: reference
@@ -90,12 +90,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 155aa704efe0686fc03be6e2b12c076656fad7a1
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 8385320b51efedd214424385babc5f03d5559873
+ms.sourcegitcommit: 220fd4fda829f810e15fc1a1d98ab43c46201b47
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43217512"
+ms.lasthandoff: 08/31/2018
+ms.locfileid: "43352719"
 ---
 # <a name="cmfcbutton-class"></a>Klasa CMFCButton
 `CMFCButton` Klasa dodaje funkcjonalność do [CButton](../../mfc/reference/cbutton-class.md) klasy, takie jak wyrównanie tekstu przycisku, łączenie przycisku tekstu i obrazu, wybierając kursor i określając etykietkę narzędzia.  
@@ -165,12 +165,17 @@ class CMFCButton : public CButton
   
 |Nazwa|Opis|  
 |----------|-----------------|  
-|[CMFCButton::m_bDrawFocus](#m_bdrawfocus)|Wskazuje, czy należy narysować prostokąt fokusu wokół przycisku.|  
-|[CMFCButton::m_bHighlightChecked](#m_bhighlightchecked)|Wskazuje, czy do wyróżnienia BS_CHECKBOX styl przycisku, gdy kursor znajduje się nad nią.|  
-|[CMFCButton::m_bRightImage](#m_brightimage)|Wskazuje, czy ma być wyświetlany obraz po prawej stronie przycisku.|  
-|[CMFCButton::m_bTransparent](#m_btransparent)|Wskazuje, czy przycisk jest przezroczysty.|  
 |[CMFCButton::m_nAlignStyle](#m_nalignstyle)|Określa wyrównanie tekstu przycisku.|  
+|[CMFCButton::m_bDontUseWinXPTheme](#m_bDontUseWinXPTheme)|Określa, czy używać kompozycji Windows XP.|
+|[CMFCButton::m_bDrawFocus](#m_bdrawfocus)|Wskazuje, czy należy narysować prostokąt fokusu wokół przycisku.| 
 |[CMFCButton::m_nFlatStyle](#m_nflatstyle)|Określa styl przycisku, takie jak bez obramowania, płaskiego, ta stosowana jest stała i 3D.|  
+|[CMFCButton::m_bGrayDisabled](#m_bGrayDisabled)|W przypadku wartości TRUE umożliwia wyłączony przycisk do rysowania jako nieaktywny.|
+|[CMFCButton::m_bHighlightChecked](#m_bhighlightchecked)|Wskazuje, czy do wyróżnienia BS_CHECKBOX styl przycisku, gdy kursor znajduje się nad nią.|  
+|[CMFCButton::m_bResponseOnButtonDown](#m_bResponseOnButtonDown)|Wskazuje, czy na odpowiadanie na wciśnięcie klawisza zdarzenia.|
+|[CMFCButton::m_bRightImage](#m_brightimage)|Wskazuje, czy ma być wyświetlany obraz po prawej stronie przycisku.|
+|[CMFCButton::m_bTopImage](#m_bTopImage)| Wskazuje, czy obraz, który znajduje się na szczycie przycisku.|
+|[CMFCButton::m_bTransparent](#m_btransparent)|Wskazuje, czy przycisk jest przezroczysty.|  
+|[CMFCButton::m_bWasDblClk](#m_bWasDblClk)| Wskazuje, czy kliknij ostatnie zdarzenie była dwukrotne kliknięcie.|
   
 ## <a name="remarks"></a>Uwagi  
  Inne rodzaje przyciski są uzyskiwane z `CMFCButton` klasy, takie jak [CMFCURLLinkButton](../../mfc/reference/cmfclinkctrl-class.md) klasy, która obsługuje hiperłącza, i `CMFCColorButton` klasy, która obsługuje okno dialogowe próbnika kolorów.  
@@ -376,7 +381,16 @@ static BOOL IsWindowsThemingEnabled();
   
 ### <a name="return-value"></a>Wartość zwracana  
  Wartość TRUE, jeśli styl obramowania przycisku odnosi się do bieżącego motywu Windows. w przeciwnym razie wartość FALSE.  
-  
+
+
+
+## <a name="a-namembdontusewinxptheme-cmfcbuttonmbdontusewinxptheme"></a><a name="m_bDontUseWinXPTheme"/> CMFCButton::m_bDontUseWinXPTheme
+Określa, czy używać kompozycji Windows XP, gdy przycisk.
+
+```  
+BOOL m_bDontUseWinXPTheme;  
+```
+
 ##  <a name="m_bdrawfocus"></a>  CMFCButton::m_bDrawFocus  
  Wskazuje, czy należy narysować prostokąt fokusu wokół przycisku.  
   
@@ -388,7 +402,15 @@ BOOL m_bDrawFocus;
  Ustaw `m_bDrawFocus` elementu członkowskiego na wartość TRUE, aby określić, że struktura będzie narysować prostokąt fokusu wokół tekstu przycisku i obrazów, jeśli przycisk zostanie ustawiony fokus.  
   
  `CMFCButton` Konstruktor inicjuje tą składową, aby wartość TRUE.  
-  
+
+##  <a name="m_bGrayDisabled"></a>  CMFCButton::m_bGrayDisabled
+W przypadku wartości TRUE umożliwia wyłączony przycisk do rysowania jako nieaktywny.
+
+
+```  
+BOOL m_bGrayDisabled;  
+```
+
 ##  <a name="m_bhighlightchecked"></a>  CMFCButton::m_bHighlightChecked  
  Wskazuje, czy do wyróżnienia BS_CHECKBOX styl przycisku, gdy kursor znajduje się nad nią.  
   
@@ -398,14 +420,29 @@ BOOL m_bHighlightChecked;
   
 ### <a name="remarks"></a>Uwagi  
  Ustaw `m_bHighlightChecked` elementu członkowskiego na wartość TRUE, aby określić, w ramach spowoduje wyróżnienie przycisku styl BS_CHECKBOX gdy mysz zatrzyma na niej.  
-  
+
+##  <a name="m_bResponseOnButtonDown"></a> CMFCButton::m_bResponseOnButtonDown
+Wskazuje, czy na odpowiadanie na wciśnięcie klawisza zdarzenia.
+
+```  
+BOOL m_bResponseOnButtonDown;  
+```  
+
 ##  <a name="m_brightimage"></a>  CMFCButton::m_bRightImage  
  Wskazuje, czy ma być wyświetlany obraz po prawej stronie przycisku.  
   
 ```  
 BOOL m_bRightImage;  
 ```  
-  
+
+
+##  <a name="m_bTopImage"></a>  CMFCButton::m_bTopImage](#m_bTopImage)
+Wskazuje, czy obraz, który znajduje się na szczycie przycisku.
+
+```  
+BOOL m_bTopImage;  
+```
+
 ### <a name="remarks"></a>Uwagi  
  Ustaw `m_bRightImage` elementu członkowskiego na wartość TRUE, aby określić, w ramach spowoduje wyświetlenie obrazu na przycisku z prawej strony etykiety tekstu przycisku.  
   
@@ -436,7 +473,14 @@ AlignStyle m_nAlignStyle;
 |ALIGN_RIGHT|Wyrównuje tekst przycisku po prawej stronie przycisku.|  
   
  `CMFCButton` Konstruktor inicjuje tą składową, aby ALIGN_CENTER.  
-  
+
+##  <a name="m_bWasDblClk"></a>  CMFCButton::m_bWasDblClk](#m_bWasDblClk) | 
+Wskazuje, czy kliknij ostatnie zdarzenie dwukrotne kliknięcie. |
+
+```  
+BOOL m_bWasDblClk;  
+```  
+
 ##  <a name="m_nflatstyle"></a>  CMFCButton::m_nFlatStyle  
  Określa styl przycisku, takie jak bez obramowania, płaskiego, ta stosowana jest stała i 3D.  
   
