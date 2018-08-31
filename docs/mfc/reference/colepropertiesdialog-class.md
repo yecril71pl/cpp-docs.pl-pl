@@ -32,12 +32,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5c32aed9d50e0575893c99a9552c74e6e491ecb9
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: 1c44abc596f5338ad82b49bc9761abfc5bb26a1a
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37853023"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43216205"
 ---
 # <a name="colepropertiesdialog-class"></a>Klasa COlePropertiesDialog
 Hermetyzuje wspólne okno dialogowe właściwości obiektu OLE Windows.  
@@ -153,10 +153,10 @@ virtual INT_PTR DoModal();
 ### <a name="return-value"></a>Wartość zwracana  
  IDOK lub IDCANCEL, jeśli to się powiedzie; w przeciwnym razie 0. IDOK i IDCANCEL są stałe, które wskazują, czy użytkownik wybrał przycisk OK, lub przycisk Anuluj.  
   
- Jeśli zwracana jest IDCANCEL, można wywołać Windows [CommDlgExtendedError](http://msdn.microsoft.com/library/windows/desktop/ms646916) funkcję, aby ustalić, czy wystąpił błąd.  
+ Jeśli zwracana jest IDCANCEL, można wywołać Windows [CommDlgExtendedError](/windows/desktop/api/commdlg/nf-commdlg-commdlgextendederror) funkcję, aby ustalić, czy wystąpił błąd.  
   
 ##  <a name="m_gp"></a>  COlePropertiesDialog::m_gp  
- Struktury typu [OLEUIGNRLPROPS](http://msdn.microsoft.com/library/windows/desktop/ms687297), który jest używany do zainicjowania strony Ogólne okna dialogowego właściwości obiektu OLE.  
+ Struktury typu [OLEUIGNRLPROPS](/windows/desktop/api/oledlg/ns-oledlg-tagoleuignrlpropsa), który jest używany do zainicjowania strony Ogólne okna dialogowego właściwości obiektu OLE.  
   
 ```  
 OLEUIGNRLPROPS m_gp;  
@@ -168,7 +168,7 @@ OLEUIGNRLPROPS m_gp;
  Aby uzyskać więcej informacji na temat `OLEUIGNRLPROPS` struktury, zobacz zestaw Windows SDK.  
   
 ##  <a name="m_lp"></a>  COlePropertiesDialog::m_lp  
- Struktury typu [OLEUILINKPROPS](http://msdn.microsoft.com/library/windows/desktop/ms680735), który jest używany do zainicjowania strony łącze okna dialogowego właściwości obiektu OLE.  
+ Struktury typu [OLEUILINKPROPS](/windows/desktop/api/oledlg/ns-oledlg-tagoleuilinkpropsa), który jest używany do zainicjowania strony łącze okna dialogowego właściwości obiektu OLE.  
   
 ```  
 OLEUILINKPROPS m_lp;  
@@ -180,7 +180,7 @@ OLEUILINKPROPS m_lp;
  Aby uzyskać więcej informacji na temat `OLEUILINKPROPS` struktury, zobacz zestaw Windows SDK.  
   
 ##  <a name="m_op"></a>  COlePropertiesDialog::m_op  
- Struktury typu [OLEUIOBJECTPROPS](http://msdn.microsoft.com/library/windows/desktop/ms687199), który jest używany do zainicjowania wspólne okno dialogowe właściwości obiektu OLE.  
+ Struktury typu [OLEUIOBJECTPROPS](/windows/desktop/api/oledlg/ns-oledlg-tagoleuiobjectpropsa), który jest używany do zainicjowania wspólne okno dialogowe właściwości obiektu OLE.  
   
 ```  
 OLEUIOBJECTPROPS m_op;  
@@ -189,10 +189,10 @@ OLEUIOBJECTPROPS m_op;
 ### <a name="remarks"></a>Uwagi  
  Ta struktura zawiera elementy członkowskie, używane do zainicjowania ogólne, Link i widoku strony.  
   
- Aby uzyskać więcej informacji, zobacz OLEUIOBJECTPROPS i [OLEUILINKPROPS](http://msdn.microsoft.com/library/windows/desktop/ms680735) struktur w zestawie Windows SDK.  
+ Aby uzyskać więcej informacji, zobacz OLEUIOBJECTPROPS i [OLEUILINKPROPS](/windows/desktop/api/oledlg/ns-oledlg-tagoleuilinkpropsa) struktur w zestawie Windows SDK.  
   
 ##  <a name="m_psh"></a>  COlePropertiesDialog::m_psh  
- Struktury typu [PROPSHEETHEADER](http://msdn.microsoft.com/library/windows/desktop/bb774546), której członkowie przechowywania właściwości obiektu okna dialogowego.  
+ Struktury typu [PROPSHEETHEADER](/windows/desktop/api/prsht/ns-prsht-_propsheetheadera_v2), której członkowie przechowywania właściwości obiektu okna dialogowego.  
   
 ```  
 PROPSHEETHEADER m_psh;  
@@ -206,7 +206,7 @@ PROPSHEETHEADER m_psh;
  Aby uzyskać więcej informacji na temat `PROPSHEETHEADER` struktury, zobacz zestaw Windows SDK.  
   
 ##  <a name="m_vp"></a>  COlePropertiesDialog::m_vp  
- Struktury typu [OLEUIVIEWPROPS](http://msdn.microsoft.com/library/windows/desktop/ms693751), który jest używany do zainicjowania strony widoku okna dialogowego właściwości obiektu OLE.  
+ Struktury typu [OLEUIVIEWPROPS](/windows/desktop/api/oledlg/ns-oledlg-tagoleuiviewpropsa), który jest używany do zainicjowania strony widoku okna dialogowego właściwości obiektu OLE.  
   
 ```  
 OLEUIVIEWPROPS m_vp;  

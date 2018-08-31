@@ -14,12 +14,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 87e2e48a7d923811e2c696f0ec8bee72e8327a13
-ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
+ms.openlocfilehash: 9458e427c1954a351ffcedfa2fce0a39634d8369
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39464405"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43216368"
 ---
 # <a name="statements-c"></a>Instrukcje (C++)
 Instrukcje języka C++ są elementy programu, które kontrolują, jak i w jakiej kolejności obiekty są zmieniane. Ta sekcja zawiera:  
@@ -42,7 +42,7 @@ Instrukcje języka C++ są elementy programu, które kontrolują, jak i w jakiej
   
     -   [Instrukcje skoku](../cpp/jump-statements-cpp.md). Te instrukcje kontrola jest przekazywana bezpośrednio do innej lokalizacji w funkcji lub zwrócić formant z funkcji.  
   
-    -   [Instrukcje deklaracji](http://msdn.microsoft.com/14538558-356f-450e-9e1e-3cd62ba952b9). Deklaracje wprowadzają nazwę do programu. ([Deklaracje i definicje](declarations-and-definitions-cpp.md) zawiera więcej szczegółowych informacji dotyczących deklaracji.)  
+    -   [Instrukcje deklaracji](https://msdn.microsoft.com/14538558-356f-450e-9e1e-3cd62ba952b9). Deklaracje wprowadzają nazwę do programu. ([Deklaracje i definicje](declarations-and-definitions-cpp.md) zawiera więcej szczegółowych informacji dotyczących deklaracji.)  
   
  Instrukcje dotyczące instrukcje obsługi wyjątków, zobacz [wyjątków](../cpp/exception-handling-in-visual-cpp.md).  
   

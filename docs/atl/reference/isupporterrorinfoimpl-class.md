@@ -20,12 +20,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c2862945fa95ca45d8544eda0bb06080c5e45c2e
-ms.sourcegitcommit: b92ca0b74f0b00372709e81333885750ba91f90e
+ms.openlocfilehash: fa9ee25403464a13418081abc8e8e150c7e03500
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/16/2018
-ms.locfileid: "42465990"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43217462"
 ---
 # <a name="isupporterrorinfoimpl-class"></a>Klasa ISupportErrorInfoImpl
 Ta klasa udostępnia domyślną implementację elementu [interfejsu Interfejs ISupportErrorInfo](/previous-versions/windows/desktop/api/oaidl/nn-oaidl-isupporterrorinfo) i mogą być używane, gdy tylko jeden interfejs generuje błędy na obiekcie.  
@@ -125,7 +125,7 @@ STDMETHOD(SetSize)int nNumThreads);
   
  Jeśli *nNumThreads* jest ujemna, jego wartość bezwzględna będzie pomnożona przez liczbę procesorów w komputerze, aby uzyskać łączna liczba wątków.  
   
- Jeśli *nNumThreads* wynosi zero, [ATLS_DEFAULT_THREADSPERPROC](http://msdn.microsoft.com/library/e0dcf107-72a9-4122-abb4-83c63aa7d571) zostanie pomnożona przez liczbę procesorów w komputerze, aby uzyskać łączna liczba wątków.  
+ Jeśli *nNumThreads* wynosi zero, [ATLS_DEFAULT_THREADSPERPROC](https://msdn.microsoft.com/library/e0dcf107-72a9-4122-abb4-83c63aa7d571) zostanie pomnożona przez liczbę procesorów w komputerze, aby uzyskać łączna liczba wątków.  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Zwraca wartość S_OK w przypadku powodzenia lub błędu HRESULT w przypadku niepowodzenia.  

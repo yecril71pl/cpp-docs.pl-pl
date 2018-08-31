@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 330701c4fcc75d40e782d25baa55044b88852f50
-ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
+ms.openlocfilehash: 3e31e7e9a7a15c70c74193d77181122c022a938a
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37337800"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43217314"
 ---
 # <a name="ole-initialization"></a>Inicjalizacja OLE
 Zanim aplikacja może użyć usługi systemowe OLE, musi zainicjować OLE systemowych bibliotek DLL i sprawdź, czy biblioteki DLL są w poprawnej wersji. `AfxOleInit` Funkcja inicjuje OLE systemowych bibliotek DLL.  
@@ -63,15 +63,15 @@ BOOL AFXAPI AfxOleInit();
 ### <a name="remarks"></a>Uwagi  
  Wywołaj tę funkcję można zainicjować obsługi OLE dla aplikacji MFC. Gdy ta funkcja jest wywoływana, są wykonywane następujące akcje:  
   
--   Inicjuje biblioteki COM w bieżącym apartamentu aplikacji wywołującej. Aby uzyskać więcej informacji, zobacz [OleInitialize](http://msdn.microsoft.com/library/windows/desktop/ms690134).  
+-   Inicjuje biblioteki COM w bieżącym apartamentu aplikacji wywołującej. Aby uzyskać więcej informacji, zobacz [OleInitialize](/windows/desktop/api/ole2/nf-ole2-oleinitialize).  
   
--   Tworzy obiekt filtr komunikatu Implementowanie [IMessageFilter](http://msdn.microsoft.com/library/windows/desktop/ms693740) interfejsu. Ten filtr komunikatu jest możliwy z wywołaniem [afxolegetmessagefilter —](application-control.md#afxolegetmessagefilter).  
+-   Tworzy obiekt filtr komunikatu Implementowanie [IMessageFilter](/windows/desktop/api/objidl/nn-objidl-imessagefilter) interfejsu. Ten filtr komunikatu jest możliwy z wywołaniem [afxolegetmessagefilter —](application-control.md#afxolegetmessagefilter).  
   
 > [!NOTE]
 >  Jeśli **afxoleinit —** jest wywoływana z biblioteki MFC DLL wywołanie zakończy się niepowodzeniem. Błąd występuje, ponieważ funkcja zakłada, że jeśli zostanie wywołana z biblioteki DLL, OLE system był poprzednio inicjowany przez aplikacji wywołującej.  
   
 > [!NOTE]
->  Aplikacji MFC muszą być zainicjowane w formacie komórek wielowątkowych pojedynczego (STA). Jeśli wywołasz [CoInitializeEx](http://msdn.microsoft.com/library/windows/desktop/ms695279) w swojej `InitInstance` zastąpienia, określ COINIT_APARTMENTTHREADED (zamiast COINIT_MULTITHREADED). Aby uzyskać więcej informacji, zobacz PRB: Aplikacja MFC przestaje odpowiadać podczas inicjowania aplikacji jako wielowątkowe apartamentu (828643) na [ http://support.microsoft.com/default.aspxscid=kb; en-us; 828643](http://support.microsoft.com/default.aspxscid=kb;en-us;828643).  
+>  Aplikacji MFC muszą być zainicjowane w formacie komórek wielowątkowych pojedynczego (STA). Jeśli wywołasz [CoInitializeEx](/windows/desktop/api/combaseapi/nf-combaseapi-coinitializeex) w swojej `InitInstance` zastąpienia, określ COINIT_APARTMENTTHREADED (zamiast COINIT_MULTITHREADED). Aby uzyskać więcej informacji, zobacz PRB: Aplikacja MFC przestaje odpowiadać podczas inicjowania aplikacji jako wielowątkowe apartamentu (828643) na [ http://support.microsoft.com/default.aspxscid=kb; en-us; 828643](http://support.microsoft.com/default.aspxscid=kb;en-us;828643).  
 
 ### <a name="requirements"></a>Wymagania  
  **Nagłówek:** afxdisp.h

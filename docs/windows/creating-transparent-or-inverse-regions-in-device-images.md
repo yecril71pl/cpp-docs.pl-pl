@@ -30,12 +30,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: f5ed2a88e8963bae06e33835f3982d8651445929
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: b5bc95e75cc9a58dd6f01b8a4ca537709941f6bf
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42599523"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43215943"
 ---
 # <a name="creating-transparent-or-inverse-regions-in-device-images-image-editor-for-icons"></a>Tworzenie obszarów przezroczystych lub odwróconych w obrazach urządzeń (Edytor obrazów dla ikon)
 
@@ -44,7 +44,7 @@ W [edytora obrazów](../windows/image-editor-for-icons.md), początkowego obrazu
 Kolory ekranu i odwrotność, można zastosować do ikony i kursory kształt i kolor obrazu pochodnej albo wyznaczyć odwracanie regionów. Kolory wskazują części obrazu, w czym te atrybuty. Można zmienić kolory, które reprezentują ekranu odwrotność kolorach i atrybuty w edycji. Te zmiany nie wpływają na wygląd ikony lub kursor znajduje się w aplikacji.
 
 > [!NOTE]
-> Polecenia menu, zostanie wyświetlony i okien dialogowych mogą różnić się od tych opisanych w **pomocy** w zależności od ustawień aktywnych lub wersji. Aby zmienić swoje ustawienia, wybierz opcję **Import i eksport ustawień** na **narzędzia** menu. Aby uzyskać więcej informacji, zobacz [Dostosowywanie ustawień środowiska deweloperskiego, w programie Visual Studio](http://msdn.microsoft.com/22c4debb-4e31-47a8-8f19-16f328d7dcd3).
+> Polecenia menu, zostanie wyświetlony i okien dialogowych mogą różnić się od tych opisanych w **pomocy** w zależności od ustawień aktywnych lub wersji. Aby zmienić swoje ustawienia, wybierz opcję **Import i eksport ustawień** na **narzędzia** menu. Aby uzyskać więcej informacji, zobacz [Dostosowywanie ustawień środowiska deweloperskiego, w programie Visual Studio](https://msdn.microsoft.com/22c4debb-4e31-47a8-8f19-16f328d7dcd3).
 
 ### <a name="to-create-transparent-or-inverse-regions"></a>Aby utworzyć przezroczystych lub odwróconych
 

@@ -14,12 +14,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a4c7329e7784fc5228bca5aa5b167d04ded51aaf
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: 43ce702c1da30e6f624477b74e381576539ef9e0
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37852291"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43214785"
 ---
 # <a name="example-implementing-a-property-page"></a>Przykład: Implementowanie strony właściwości
 W tym przykładzie pokazano, jak strona właściwości, która wyświetla (i pozwala na zmianę) właściwości budowania [klasy dokumentów](../mfc/document-classes.md) interfejsu.  
@@ -70,7 +70,7 @@ W tym przykładzie pokazano, jak strona właściwości, która wyświetla (i poz
  Te kontrolki będzie służyć do wyświetlania nazwa pliku dokumentu oraz jego statusu tylko do odczytu.  
   
 > [!NOTE]
->  Zasobu okna dialogowego nie zawiera ramki lub polecenia przycisków, ani nie ma wygląd z kartami, oczekiwany przez Ciebie może mieć. Te funkcje są udostępniane przez ramka strony właściwości, takiego jak utworzonych przez wywoływanie [OleCreatePropertyFrame](http://msdn.microsoft.com/library/windows/desktop/ms678437).  
+>  Zasobu okna dialogowego nie zawiera ramki lub polecenia przycisków, ani nie ma wygląd z kartami, oczekiwany przez Ciebie może mieć. Te funkcje są udostępniane przez ramka strony właściwości, takiego jak utworzonych przez wywoływanie [OleCreatePropertyFrame](/windows/desktop/api/olectl/nf-olectl-olecreatepropertyframe).  
   
 ##  <a name="vcconadding_message_handlers"></a> Dodawanie programów obsługi wiadomości  
  Za pomocą kontrolek w miejscu można dodać procedury obsługi komunikatów do aktualizowania stanu zanieczyszczone strony, po zmianie wartości albo kontrolki:  

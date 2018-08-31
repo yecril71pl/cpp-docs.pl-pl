@@ -35,16 +35,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 15bddcf3d94935f56fa2e23b6ebd0398ed379c54
-ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
+ms.openlocfilehash: 88cf46d6352f0f58a91f4e5571006090ec693c42
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/01/2018
-ms.locfileid: "34569852"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43215701"
 ---
 # <a name="getosfhandle"></a>_get_osfhandle
 
-Pobiera dojście do pliku systemu operacyjnego skojarzonego z deskryptorem określonego pliku.
+Pobiera dojście do pliku systemu operacyjnego, który jest skojarzony z deskryptorem określonego pliku.
 
 ## <a name="syntax"></a>Składnia
 
@@ -57,15 +57,15 @@ intptr_t _get_osfhandle(
 ### <a name="parameters"></a>Parametry
 
 *FD*<br/>
-Istniejące deskryptorów plików.
+Istniejące deskryptor pliku.
 
 ## <a name="return-value"></a>Wartość zwracana
 
-Zwraca dojście do pliku systemu operacyjnego, jeśli *fd* jest nieprawidłowy. W przeciwnym razie program obsługi nieprawidłowych parametrów zostanie wywołany, zgodnie z opisem w [sprawdzanie poprawności parametru](../../c-runtime-library/parameter-validation.md). Jeśli jest dozwolone wykonywanie, aby kontynuować, ta funkcja zwraca **INVALID_HANDLE_VALUE** (-1) i ustawia **errno** do **ebadf —**, wskazując nieprawidłowe dojście do pliku. Aby uniknąć ostrzeżenia kompilatora, gdy zostanie użyty wynik w procedur, które oczekują dojście do pliku Win32, należy rzutować go na **obsługi** typu.
+Zwraca uchwyt pliku systemu operacyjnego, jeśli *fd* jest prawidłowy. W przeciwnym razie program obsługi nieprawidłowego parametru zostanie wywołana, zgodnie z opisem w [Parameter Validation](../../c-runtime-library/parameter-validation.md). Jeśli wykonanie może być kontynuowane, funkcja zwraca **INVALID_HANDLE_VALUE** (-1) i ustawia **errno** do **EBADF**, wskazując nieprawidłowe dojście do pliku. Aby uniknąć ostrzeżenia kompilatora, gdy zostanie użyty wynik w procedur, które oczekują dojście do pliku systemu Win32, należy rzutować go na **obsługi** typu.
 
 ## <a name="remarks"></a>Uwagi
 
-Aby zamknąć plik, którego dojście do pliku systemu operacyjnego (OS) są uzyskiwane przez **_get_osfhandle —**, wywołaj [_zamknij](close.md) na deskryptorów plików *fd*. Nie wywołuj **CloseHandle** wartości zwracanej tej funkcji. Dojście do pliku podstawowego systemu operacyjnego jest własnością *fd* pliku deskryptora i zostanie zamknięty kiedy [_zamknij](close.md) jest wywoływana na *fd*. Jeśli właścicielem jest deskryptorów plików **pliku \***  strumienia, wywołując [fclose —](fclose-fcloseall.md) na tej **pliku \***  strumienia zamyka deskryptorów plików i podstawowy system operacyjny dojście do pliku. W takim przypadku nie wywołuj [_zamknij](close.md) na deskryptorów plików.
+Można zamknąć pliku, w których uchwyt pliku systemu operacyjnego (OS) można uzyskać przez **_get_osfhandle —**, wywołaj [_zamknij](close.md) na deskryptor pliku *fd*. Nie wywołuj **funkcja CloseHandle** na wartość zwracana przez tę funkcję. Dojście do pliku podstawowego systemu operacyjnego jest własnością *fd* deskryptor pliku i jest zamknięte, kiedy [_zamknij](close.md) jest wywoływana w *fd*. Jeżeli deskryptor pliku jest własnością `FILE *` strumienia, następnie wywoływania [fclose —](fclose-fcloseall.md) na tym `FILE *` strumień zostanie zamknięty, deskryptor pliku i dojście do pliku podstawowego systemu operacyjnego. W tym przypadku nie wywołuj [_zamknij](close.md) na deskryptor pliku.
 
 ## <a name="requirements"></a>Wymagania
 
@@ -73,7 +73,7 @@ Aby zamknąć plik, którego dojście do pliku systemu operacyjnego (OS) są uzy
 |-------------|---------------------|
 |**_get_osfhandle**|\<io.h>|
 
-Aby uzyskać więcej informacji o zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md).
+Aby uzyskać więcej informacji na temat zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md).
 
 ## <a name="see-also"></a>Zobacz także
 

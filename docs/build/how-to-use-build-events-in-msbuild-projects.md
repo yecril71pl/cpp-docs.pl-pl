@@ -16,19 +16,19 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 59863911072b491eb19a1296f3cb40d4f4ab4dce
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: cdc5ea4c2cd1e02e6894d2dedf8470641021f0b2
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42613059"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43214472"
 ---
 # <a name="how-to-use-build-events-in-msbuild-projects"></a>Porady: korzystanie ze zdarzeń kompilacji w projektach MSBuild
 To zdarzenie kompilacji jest polecenia, który program MSBuild wykonuje na określonym etapie w procesie kompilacji. *Prekompilacji* wystąpi zdarzenie, przed rozpoczęciem kompilacji; *prekonsolidacyjnego* wystąpi zdarzenie przed uruchomieniem kroku łącze; i *po kompilacji* wystąpi zdarzenie po kompilacji kończy się pomyślnie. To zdarzenie kompilacji występuje tylko wtedy, gdy występuje w kroku skojarzonej kompilacji. Na przykład zdarzenia prekonsolidacyjnego nie występuje krokiem link nie zostanie uruchomione.  
   
  Wszystkich zdarzeń kompilacji trzy jest reprezentowana w grupie definicji elementów przez command element (`<Command>`) które jest wykonywane i message element (`<Message>`) oznacza to wyświetlane, **MSBuild** wykonuje zdarzeń kompilacji. Każdy element jest opcjonalny, a jeśli określisz tego samego elementu wielokrotnie ostatniego wystąpienia ma pierwszeństwo.  
   
- Opcjonalny *Użyj kompilacji* — element (`<`* kompilacji — zdarzenie ***UseInBuild**`>`) można określić w grupie właściwości, aby wskazać, czy zdarzenie kompilacji jest wykonywany. Wartość zawartości *Użyj kompilacji* jest element `true` lub `false`. Domyślnie to zdarzenie kompilacji jest wykonywane, chyba że odpowiadającymi mu dostawcami *Użyj kompilacji* element jest ustawiony na wartość `false`.  
+ Opcjonalny *Użyj kompilacji* — element (`<`*zdarzenia kompilacji*`UseInBuild>`) można określić w grupie właściwości, aby wskazać, czy zdarzenie kompilacji jest wykonywany. Wartość zawartości *Użyj kompilacji* jest element `true` lub `false`. Domyślnie to zdarzenie kompilacji jest wykonywane, chyba że odpowiadającymi mu dostawcami *Użyj kompilacji* element jest ustawiony na wartość `false`.  
   
  Poniższa tabela zawiera listę każdego zdarzenia kompilacji — element XML:  
   

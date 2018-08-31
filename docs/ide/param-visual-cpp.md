@@ -18,15 +18,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 01add77f68ac35b4c669391504461dd516b55d3d
-ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
+ms.openlocfilehash: 1f8fae2d8af1b7121290bfbd42b2668afc50034c
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "33325386"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43217256"
 ---
 # <a name="ltparamgt-visual-c"></a>&lt;param&gt; (Visual C++)
-\<Param > tag powinny być używane w komentarz dla deklaracji metody opisujący jeden z parametrów metody.  
+\<Param > używany tag w komentarzu do deklaracji metody do opisania jeden z parametrów dla metody.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -36,15 +36,15 @@ ms.locfileid: "33325386"
   
 #### <a name="parameters"></a>Parametry  
  `name`  
- Nazwa parametru metody.  Nazwę należy ująć w cudzysłów pojedynczym lub podwójnym.  Kompilator generuje ostrzeżenie, jeśli nie znajdzie `name`.  
+ Nazwa parametru metody.  Nazwę należy ująć w pojedyncze lub podwójne znaki cudzysłowu.  Kompilator generuje ostrzeżenie, jeśli nie znajdzie `name`.  
   
  `description`  
  Opis parametru.  
   
 ## <a name="remarks"></a>Uwagi  
- Tekst dla \<param > będą wyświetlane w IntelliSense, [przeglądarki obiektów](http://msdn.microsoft.com/en-us/f89acfc5-1152-413d-9f56-3dc16e3f0470)i w raporcie Web komentarz kodu.  
+ Tekst dla \<param > będą wyświetlane w technologii IntelliSense, [przeglądarki obiektów](https://msdn.microsoft.com/f89acfc5-1152-413d-9f56-3dc16e3f0470)i w raporcie Web komentarzy kodu.  
   
- Kompiluj z użyciem [/doc](../build/reference/doc-process-documentation-comments-c-cpp.md) na przetwarzanie komentarzy dokumentacji do pliku.  
+ Kompiluj przy użyciu [/doc](../build/reference/doc-process-documentation-comments-c-cpp.md) do Przetwarzaj komentarze dokumentacji do pliku.  
   
 ## <a name="example"></a>Przykład  
   

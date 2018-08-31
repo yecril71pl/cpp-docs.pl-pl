@@ -21,12 +21,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4a5e2b68768b01d71532c358a14c53d8a033e1ed
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 686306316e6950ba62ea7c44522b95f4d935be0b
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32377092"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43216177"
 ---
 # <a name="rebase"></a>/REBASE
 ```  
@@ -34,15 +34,15 @@ ms.locfileid: "32377092"
 ```  
   
 ## <a name="remarks"></a>Uwagi  
- Ta opcja umożliwia ustawienie adresu podstawowego dla określonych plików. Polecenia EDITBIN przypisuje nowy adres podstawowy w przestrzeni adresowej ciągłe na podstawie rozmiaru poszczególnych plików zaokrąglona do najbliższej 64 KB. Aby uzyskać szczegółowe informacje o adresach podstawowej, zobacz [adres podstawowy](../../build/reference/base-base-address.md) (/ BASE) — opcja konsolidatora.  
+ Ta opcja ustawia adres podstawowy dla określonych plików. EDITBIN przypisuje nowe adresy podstawowego przestrzeni adresowej ciągłych zgodnie z rozmiarem każdego pliku, zaokrąglony do najbliższej 64 KB. Aby uzyskać szczegółowe informacje o adresach podstawowej, zobacz [adres bazowy](../../build/reference/base-base-address.md) (/ BASE) — opcja konsolidatora.  
   
- Określ program plików wykonywalnych i bibliotek DLL w *pliki* argument w wierszu polecenia polecenia EDITBIN w kolejności, w którym mają zostać oparte. Opcjonalnie można określić jedną lub więcej *Modyfikatory*, rozdzielonych przecinkami (**,**):  
+ Określ pliki wykonywalne i bibliotek DLL w programie *pliki* argument w wierszu polecenia EDITBIN w kolejności, w których są one oparte. Opcjonalnie można określić co najmniej jeden *Modyfikatory*, rozdzielonych przecinkami (**,**):  
   
 |Modyfikator|Akcja|  
 |--------------|------------|  
-|Podstawa **= *** adresu*|Adres początkowy przewiduje ponowne przypisywanie adresów bazowych do plików. Określ *adres* dziesiętne lub notacji języka C. Jeśli podstawowy nie jest określony, domyślnie podstawowy adres początkowy jest 0x400000. Jeśli w dół używany jest podstawowy musi być określona, i *adres* ustawia końca zakresu adresów podstawowej.|  
-|BASEFILE|Tworzy plik o nazwie COFFBASE. Pliki TXT, który jest plikiem tekstowym formatu oczekiwanego przez łącza/BASE — opcja.|  
-|W DÓŁ|Określa, że polecenia EDITBIN do ponownego przypisania podstawowy adres w dół z adresu końcowego. Pliki są przekazywane w kolejności określonej z pierwszy plik znajdujący się w adresie można najwyższy pod koniec zakresu adresów. BASE należy użyć do zapewnienia wystarczającej przestrzeni adresowej używanej przez utworzenie plików z w dół. Aby ustalić przestrzeń adresowa wymaganych przez określone pliki, Uruchom polecenia EDITBIN z /REBASE plików, a następnie dodaj 64 KB wyświetlanych całkowity rozmiar.|  
+|**Podstawa =**<em>adresu</em>|Ponowne przypisywanie adresów bazowych w plikach udostępnia adres początkowy. Określ *adres* w wartości dziesiętne lub notacji języka C. Jeśli podstawowy nie jest określony, domyślny początkowy adres podstawowy jest 0x400000. Jeśli w dół używany jest podstawowy musi być określona, i *adres* Określa koniec zakresu adresów bazowych.|  
+|**BASEFILE**|Tworzy plik o nazwie COFFBASE. TXT, który jest plikiem tekstowym formatu oczekiwanego przez łącza/BASE — opcja.|  
+|**W DÓŁ**|Informuje o tym polecenia EDITBIN do ponownego przypisania podstawowych adresów w dół z adresu końcowego. Pliki są przypisane w kolejności określonej za pomocą pierwszego pliku znajduje się w najwyższym możliwego adresu pod koniec zakresu adresów. PODSTAWOWY musi można używać z w dół, aby zapewnić wystarczającą przestrzeń adresową dla bazowanie pliki. Aby określić przestrzeń adresowa wymagane przez określone pliki, uruchomić polecenia EDITBIN z /REBASE w systemie plików i Dodaj 64 KB do wyświetlanych całkowity rozmiar.|  
   
 ## <a name="see-also"></a>Zobacz też  
  [Opcje EDITBIN](../../build/reference/editbin-options.md)

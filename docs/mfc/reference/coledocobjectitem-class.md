@@ -34,12 +34,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 86e4d51687f1f005ad6c6e655e243275508d1529
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: bebc146994e440d4dbfbd0bd3a5e29f597140d8d
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37849779"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43216333"
 ---
 # <a name="coledocobjectitem-class"></a>Klasa COleDocObjectItem
 Zawieranie dokumentów aktywnych implementuje.  
@@ -142,7 +142,7 @@ HRESULT ExecCommand(
  Identyfikator polecenia do wykonania. Musi należeć do grupy identyfikowane przez *pguidCmdGroup*.  
   
  *nCmdExecOpt*  
- Określa opcje wykonywania polecenia. Domyślnie można wykonać polecenia bez monitowania użytkownika. Zobacz [OLECMDEXECOPT](http://msdn.microsoft.com/library/windows/desktop/ms683930) dla listy wartości.  
+ Określa opcje wykonywania polecenia. Domyślnie można wykonać polecenia bez monitowania użytkownika. Zobacz [OLECMDEXECOPT](/windows/desktop/api/docobj/ne-docobj-olecmdexecopt) dla listy wartości.  
   
  *pguidCmdGroup*  
  Unikatowy identyfikator grupy polecenia. Domyślnie wartość NULL, co określa grupę standardowych. Polecenie przekazanej *nCmdID* musi należeć do grupy.  
@@ -172,7 +172,7 @@ LPOLEDOCUMENTVIEW GetActiveView() const;
 ```  
   
 ### <a name="return-value"></a>Wartość zwracana  
- Wskaźnik do [IOleDocumentView](http://msdn.microsoft.com/library/windows/desktop/ms678455) interfejsu aktualnie aktywnego widoku. Jeśli nie ma bieżącego widoku, zwraca wartość NULL.  
+ Wskaźnik do [IOleDocumentView](/windows/desktop/api/docobj/nn-docobj-ioledocumentview) interfejsu aktualnie aktywnego widoku. Jeśli nie ma bieżącego widoku, zwraca wartość NULL.  
   
 ### <a name="remarks"></a>Uwagi  
  Licznik odwołań w zwracanym `IOleDocumentView` wskaźnik nie jest zwiększana, zanim zostanie zwrócony przez tę funkcję.  
@@ -255,19 +255,19 @@ HRESULT QueryCommand(
  Identyfikator polecenia, którego dotyczy kwerenda dla.  
   
  *pdwStatus*  
- Wskaźnik flagi zwrócone w wyniku kwerendy. Aby uzyskać listę możliwych wartości, zobacz [OLECMDF](http://msdn.microsoft.com/library/windows/desktop/ms695237).  
+ Wskaźnik flagi zwrócone w wyniku kwerendy. Aby uzyskać listę możliwych wartości, zobacz [OLECMDF](/windows/desktop/api/docobj/ne-docobj-olecmdf).  
   
  *pCmdText*  
- Wskaźnik do [OLECMDTEXT](http://msdn.microsoft.com/library/windows/desktop/ms693314) struktury, w której ma zostać zwrócone nazwę oraz informacje o stanie jednego polecenia. Może mieć wartość NULL, aby wskazać, że obiekt wywołujący nie jest konieczne te informacje.  
+ Wskaźnik do [OLECMDTEXT](/windows/desktop/api/docobj/ns-docobj-_tagolecmdtext) struktury, w której ma zostać zwrócone nazwę oraz informacje o stanie jednego polecenia. Może mieć wartość NULL, aby wskazać, że obiekt wywołujący nie jest konieczne te informacje.  
   
  *pguidCmdGroup*  
  Unikatowy identyfikator grupy polecenia; może mieć wartość NULL, aby określić grupę standardowych.  
   
 ### <a name="return-value"></a>Wartość zwracana  
- Aby uzyskać pełną listę wartości zwracane, zobacz [IOleCommandTarget::QueryStatus](http://msdn.microsoft.com/library/windows/desktop/ms688491) w zestawie Windows SDK.  
+ Aby uzyskać pełną listę wartości zwracane, zobacz [IOleCommandTarget::QueryStatus](/windows/desktop/api/docobj/nf-docobj-iolecommandtarget-querystatus) w zestawie Windows SDK.  
   
 ### <a name="remarks"></a>Uwagi  
- Ta funkcja członkowska emuluje funkcjonalność [IOleCommandTarget::QueryStatus](http://msdn.microsoft.com/library/windows/desktop/ms688491) metodę, zgodnie z opisem w zestawie Windows SDK.  
+ Ta funkcja członkowska emuluje funkcjonalność [IOleCommandTarget::QueryStatus](/windows/desktop/api/docobj/nf-docobj-iolecommandtarget-querystatus) metodę, zgodnie z opisem w zestawie Windows SDK.  
   
 ##  <a name="release"></a>  COleDocObjectItem::Release  
  Zwalnia połączenia OLE połączony element, a następnie zamyka go, jeśli był otwarty. Niszczy element klienta.  

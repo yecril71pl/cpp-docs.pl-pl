@@ -39,16 +39,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 604ca2d2172e340459d7d5cbf406f01c484750ff
-ms.sourcegitcommit: 6e3cf8df676d59119ce88bf5321d063cf479108c
+ms.openlocfilehash: 5cbc89ff9a6c353b0df1df606a08a8c2515ed04a
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/22/2018
-ms.locfileid: "34451735"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43217137"
 ---
 # <a name="wcstombs-wcstombsl"></a>wcstombs, _wcstombs_l
 
-Konwertuje odpowiedniej sekwencji znaków wielobajtowych sekwencji znaki dwubajtowe. Bezpieczniejsza wersje te funkcje są dostępne; zobacz [wcstombs_s —, _wcstombs_s_l —](wcstombs-s-wcstombs-s-l.md).
+Konwertuje sekwencję znaków dwubajtowych do odpowiedniej sekwencji znaków wielobajtowych. Bardziej bezpieczne wersje tych funkcji są dostępne; zobacz [wcstombs_s —, _wcstombs_s_l —](wcstombs-s-wcstombs-s-l.md).
 
 ## <a name="syntax"></a>Składnia
 
@@ -85,7 +85,7 @@ size_t _wcstombs_l(
 Adres sekwencji znaków wielobajtowych.
 
 *wcstr*<br/>
-Adres sekwencję znaki dwubajtowe.
+Adres sekwencji znaków dwubajtowych.
 
 *Liczba*<br/>
 Maksymalna liczba bajtów, które mogą być przechowywane w ciągu znaków wielobajtowych danych wyjściowych.
@@ -95,21 +95,21 @@ Ustawienia regionalne do użycia.
 
 ## <a name="return-value"></a>Wartość zwracana
 
-Jeśli **wcstombs —** pomyślnie konwertuje ciąg znaków wielobajtowych, zwraca liczbę bajtów zapisanych w ciągu wielobajtowe dane wyjściowe, bez przerywania null (jeśli istnieje). Jeśli *mbstr* argument jest **NULL**, **wcstombs —** zwraca wymagany rozmiar w bajtach ciągu docelowego. Jeśli **wcstombs —** napotka znaków dwubajtowych nie można przekonwertować znaków wielobajtowych, zwraca -1 rzutowany na typ **size_t** i ustawia **errno** do **eilseq —** .
+Jeśli **wcstombs —** pomyślnie konwertuje ciąg wielobajtowy zwraca liczba bajtów zapisanych w ciągu wyjściowym wielobajtowego, z wyłączeniem zakończenia o wartości null (jeśli istnieje). Jeśli *mbstr* argument jest **NULL**, **wcstombs —** zwraca wymagany rozmiar w bajtach ciągu docelowego. Jeśli **wcstombs —** napotka znakiem dwubajtowym, nie można przekonwertować do znaku wielobajtowego, zwraca -1 rzutowane na typ **size_t** i ustawia **errno** do **EILSEQ** .
 
 ## <a name="remarks"></a>Uwagi
 
-**Wcstombs —** funkcja konwertuje ciąg znaków dwubajtowych wskazywana przez *wcstr* do odpowiedniego wielobajtowych znaków i przechowuje wyniki w *mbstr* tablicy. *Liczba* parametr wskazuje maksymalną liczbę bajtów, które mogą być przechowywane w ciągu wyjściowego Wielobajtowe (to znaczy, że rozmiar *mbstr*). Ogólnie rzecz biorąc nie wiadomo, ile bajty będzie wymagane podczas konwertowania ciągu znaków dwubajtowych. Niektóre znaki dwubajtowe wymaga tylko jednego bajtu w ciągu wyjściowego; inne wymagają dwa. Jeśli istnieją dwa bajty w ciągu wielobajtowe danych wyjściowych dla każdego znaku dwubajtowego w ciągu wejściowym (w tym znaków typu wide null), wynik jest gwarancji.
+**Wcstombs —** funkcji konwertuje ciąg znaków dwubajtowych, wskazywana przez *wcstr* do odpowiedniego znaków wielobajtowych znaków i zapisuje wyniki w *mbstr* tablicy. *Liczba* parametr wskazuje maksymalną liczbę bajtów, które mogą być przechowywane w ciągu wyjściowym wielobajtowych (czyli rozmiar *mbstr*). Ogólnie rzecz biorąc nie wiadomo, ile bajtów będzie wymagane podczas konwertowania ciągu znaków dwubajtowych. Niektóre znaki dwubajtowe będzie wymagać tylko jednego bajtu w ciągu wyjściowym; inne wymagają dwóch. W przypadku dwóch bajtów w ciąg znaków wielobajtowych dane wyjściowe dla każdego znaku dwubajtowego ciągu wejściowego (w tym znakiem dwubajtowym o wartości null), wynik jest gwarantowane.
 
-Jeśli **wcstombs —** napotka znak null znaków dwubajtowych (L '\0'), przed lub po *liczba* występuje i konwertuje ją na 8-bitowej 0 i powoduje zatrzymanie. W związku z tym ciąg znaków wielobajtowych *mbstr* jest zakończony wartością null tylko wtedy, gdy **wcstombs —** napotka znak null znaków dwubajtowych podczas konwersji. Jeśli sekwencje wskazywana przez *wcstr* i *mbstr* nakładają się zachowanie **wcstombs —** jest niezdefiniowana.
+Jeśli **wcstombs —** napotka znaków dwubajtowych znakiem null (L '\0'), przed lub po *liczba* występuje i konwertuje ją do 8-bitową 0 i kończy działanie. W związku z tym ciągu znaków wielobajtowych *mbstr* jest zakończony znakiem null tylko wtedy, gdy **wcstombs —** napotka znaku dwubajtowego znaku null podczas konwersji. Jeśli sekwencji wskazywany przez *wcstr* i *mbstr* zachodziły na siebie, zachowanie **wcstombs —** jest niezdefiniowana.
 
 Jeśli *mbstr* argument jest **NULL**, **wcstombs —** zwraca wymagany rozmiar w bajtach ciągu docelowego.
 
-**wcstombs —** sprawdza poprawność parametrów. Jeśli *wcstr* jest **NULL**, lub jeśli *liczba* jest większa niż **int_max —**, ta funkcja wywołuje program obsługi nieprawidłowych parametrów, zgodnie z opisem w [Sprawdzanie poprawności parametru](../../c-runtime-library/parameter-validation.md) . Jeśli wykonanie może kontynuować, funkcja ustawia **errno** do **einval —** i zwraca wartość -1.
+**wcstombs —** sprawdza poprawność parametrów. Jeśli *wcstr* jest **NULL**, lub jeśli *liczba* jest większa niż **INT_MAX**, funkcja wywoła procedurę obsługi nieprawidłowego parametru, zgodnie z opisem w [Parameter Validation](../../c-runtime-library/parameter-validation.md) . Jeśli wykonanie może być kontynuowane, funkcja ustawia **errno** do **EINVAL** i zwraca wartość -1.
 
-**wcstombs —** używa bieżące ustawienia regionalne dla dowolnego zachowań zależnych od ustawień regionalnych. **_wcstombs_l —** jest identyczny z tą różnicą, że używa ustawień regionalnych przekazano zamiast tego. Aby uzyskać więcej informacji, zobacz [ustawień regionalnych](../../c-runtime-library/locale.md).
+**wcstombs —** używa bieżących ustawień regionalnych dla wszelkich zachowań zależnych od ustawień regionalnych; **_wcstombs_l —** jest identyczna, z tą różnicą, że używa ustawień regionalnych przekazanych w zamian. Aby uzyskać więcej informacji, zobacz [ustawień regionalnych](../../c-runtime-library/locale.md).
 
-W języku C++ te funkcje mają przeciążenia szablonu, które wywołują odpowiedników nowsza, bezpieczne tych funkcji. Aby uzyskać więcej informacji, zobacz [Secure szablonu Overloads](../../c-runtime-library/secure-template-overloads.md).
+W języku C++ funkcje te mają przeciążenia szablonu, które wywołują nowsze, bezpieczne odpowiedniki tych funkcji. Aby uzyskać więcej informacji, zobacz [Secure przeciążenia szablonu](../../c-runtime-library/secure-template-overloads.md).
 
 ## <a name="requirements"></a>Wymagania
 
@@ -170,4 +170,4 @@ Convert wide-character string:
 [mbstowcs, _mbstowcs_l](mbstowcs-mbstowcs-l.md)<br/>
 [mbtowc, _mbtowc_l](mbtowc-mbtowc-l.md)<br/>
 [wctomb, _wctomb_l](wctomb-wctomb-l.md)<br/>
-[WideCharToMultiByte](http://msdn.microsoft.com/library/windows/desktop/dd374130)<br/>
+[WideCharToMultiByte](/windows/desktop/api/stringapiset/nf-stringapiset-widechartomultibyte)<br/>

@@ -83,12 +83,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 62a27548d51d3de1a27da0b765bd85439467c024
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: 46d96d574fedf9af2fe7eb46c872819cf54a364e
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37850225"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43216462"
 ---
 # <a name="cmfcribbonedit-class"></a>Klasa CMFCRibbonEdit
 Implementuje formant edycji, który znajduje się na pasku wstążki.  
@@ -224,7 +224,7 @@ virtual CMFCRibbonRichEditCtrl* CreateEdit(
  Wskaźnik do okna nadrzędnego `CMFCRibbonEdit` obiektu.  
   
  [in] *dwEditStyle*  
- Określa styl pola tekstowego. Można połączyć Style okna wymienionych w sekcji uwag z [style kontrolki edycji](http://msdn.microsoft.com/library/windows/desktop/bb775464) opisano w zestawie Windows SDK.  
+ Określa styl pola tekstowego. Można połączyć Style okna wymienionych w sekcji uwag z [style kontrolki edycji](/windows/desktop/Controls/edit-control-styles) opisano w zestawie Windows SDK.  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Wskaźnik do nowego pola tekstowego, jeśli metoda zakończyła się pomyślnie; w przeciwnym razie wartość NULL.  
@@ -345,7 +345,7 @@ int GetTextAlign() const;
   
 - **ES_RIGHT** dla wyrównanie do prawej  
   
- Aby uzyskać więcej informacji na temat tych stylów, zobacz [Edytuj style kontrolki](http://msdn.microsoft.com/library/windows/desktop/bb775464).  
+ Aby uzyskać więcej informacji na temat tych stylów, zobacz [Edytuj style kontrolki](/windows/desktop/Controls/edit-control-styles).  
   
 ##  <a name="getwidth"></a>  CMFCRibbonEdit::GetWidth  
  Pobiera szerokość w pikselach, o [CMFCRibbonEdit](../../mfc/reference/cmfcribbonedit-class.md) kontroli.  
@@ -601,7 +601,7 @@ virtual void Redraw();
 ```  
   
 ### <a name="remarks"></a>Uwagi  
- Ta metoda ponownie rysuje prostokąt wyświetlania dla `CMFCRibbonEdit` obiektu przez wywołanie pośrednio [CWnd::RedrawWindow](http://msdn.microsoft.com/library/windows/desktop/dd162911) przy użyciu flag RDW_INVALIDATE RDW_ERASE i RDW_UPDATENOW zestawu.  
+ Ta metoda ponownie rysuje prostokąt wyświetlania dla `CMFCRibbonEdit` obiektu przez wywołanie pośrednio [CWnd::RedrawWindow](/windows/desktop/api/winuser/nf-winuser-redrawwindow) przy użyciu flag RDW_INVALIDATE RDW_ERASE i RDW_UPDATENOW zestawu.  
   
 ##  <a name="setaccdata"></a>  CMFCRibbonEdit::SetACCData  
  Ustawia dane ułatwień dostępu dla [CMFCRibbonEdit](../../mfc/reference/cmfcribbonedit-class.md) obiektu.  
@@ -655,7 +655,7 @@ void SetTextAlign(int nAlign);
   
 - ES_RIGHT dla wyrównanie do prawej  
   
- Aby uzyskać więcej informacji na temat tych stylów, zobacz [Edytuj style kontrolki](http://msdn.microsoft.com/library/windows/desktop/bb775464).  
+ Aby uzyskać więcej informacji na temat tych stylów, zobacz [Edytuj style kontrolki](/windows/desktop/Controls/edit-control-styles).  
   
 ##  <a name="setwidth"></a>  CMFCRibbonEdit::SetWidth  
  Określa szerokość pola tekstowego dla [CMFCRibbonEdit](../../mfc/reference/cmfcribbonedit-class.md) kontroli.  

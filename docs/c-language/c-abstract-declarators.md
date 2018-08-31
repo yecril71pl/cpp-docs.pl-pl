@@ -15,19 +15,19 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cc89682a6d092bd5291551f01d9d592d64fdff85
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: ea9ca44dbc484749cc10a59fec0b91d096921827
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32381824"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43214535"
 ---
 # <a name="c-abstract-declarators"></a>Deklaratory abstrakcyjne języka C
-Deklarator abstrakcyjnej jest deklaratorze bez identyfikatora składające się z co najmniej jednego wskaźnika, tablic lub funkcja modyfikatorów. Modyfikator wskaźnika (**\***) zawsze poprzedza identyfikator w deklaratorze; tablicy (**[**) i funkcji ( **()** ) Modyfikatory postępuj zgodnie z identyfikatorem. Wiedzy o to, można określić, gdzie identyfikator będzie wyświetlane w abstrakcyjnej deklarator i odpowiednio interpretowanie deklaratorów. Zobacz [interpretowanie więcej Deklaratorów złożonych](../c-language/interpreting-more-complex-declarators.md) dodatkowe informacje i przykłady deklaratorów złożonych. Ogólnie rzecz biorąc `typedef` może służyć do uproszczenia deklaratorów. Zobacz [deklaracje Typedef](../c-language/typedef-declarations.md).  
+Deklarator abstrakcji jest deklaratorów bez identyfikatora składający się z co najmniej jeden wskaźnik, tablicy lub funkcji modyfikatorów. Modyfikator wskaźnika (<strong>\*</strong>) zawsze poprzedza identyfikator w deklaratorze; tablicy (**[**) i funkcji ( **()** ) Modyfikatory postępuj zgodnie z identyfikatorem. Wiedza o tym, można określić, gdzie pojawiają się w abstrakcyjnym deklaratorze i interpretować deklaratora w związku z tym identyfikatorem. Zobacz [interpretowanie bardziej Deklaratorów złożonych](../c-language/interpreting-more-complex-declarators.md) dodatkowe informacje i przykłady deklaratorów złożonych. Ogólnie `typedef` można uproszczenie deklaratorów. Zobacz [deklaracje Typedef](../c-language/typedef-declarations.md).  
   
- Deklaratory abstrakcyjne języka może być skomplikowane. Nawiasów w złożonych deklarator abstrakcyjny Określ określonego interpretacji, podobnie jak w przypadku deklaratorów złożonych w deklaracjach.  
+ Deklaratory abstrakcyjne mogą być skomplikowane. Nawiasy w złożonych abstrakcyjnym deklaratorze Określ określonego interpretacji, tak jak w przypadku deklaratorów złożonych w deklaracji.  
   
- Tych przykładach deklaratory abstrakcyjne języka:  
+ Te przykłady ilustrują deklaratory abstrakcyjne:  
   
 ```  
 int *         // The type name for a pointer to type int:  
@@ -52,7 +52,7 @@ int (*const []) ( unsigned int, ... )
 ```  
   
 > [!NOTE]
->  Deklarator abstrakcyjna, zawierający zestaw pustych nawiasów **()**, nie jest dozwolona, ponieważ jest ona niejednoznaczna. Nie można określić, czy identyfikator domyślnych należy wewnątrz nawiasów (w takim przypadku jest typem bez modyfikacji) lub przed nawiasów (w takim przypadku jest typem funkcji).  
+>  Abstrakcyjnym deklaratorze zawierający zestaw pustych nawiasów **()**, nie jest dozwolone, ponieważ jest ona niejednoznaczna. Jest to niemożliwe do należy określić, czy identyfikator dorozumianych należy w nawiasach (w takim przypadku jest typem niezmodyfikowanego) lub przed nawiasy (w takim przypadku jest typem funkcji).  
   
 ## <a name="see-also"></a>Zobacz też  
  [Deklaratory i deklaracje zmiennych](../c-language/declarators-and-variable-declarations.md)

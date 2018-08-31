@@ -17,25 +17,25 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 86032bd3d1ce10221cb5d8094e4ba6de866e1eea
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: cb8caad0b7d1f632a2d97e4ea6bda7c93a2b4d74
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33342856"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43218300"
 ---
 # <a name="adding-tabs-to-a-tab-control"></a>Dodawanie kart do formantu karty
-Po utworzeniu formantu karty ([CTabCtrl](../mfc/reference/ctabctrl-class.md)), dodać dowolną liczbę kart.  
+Po utworzeniu formantu karty ([CTabCtrl](../mfc/reference/ctabctrl-class.md)), Dodaj dowolną liczbę kart.  
   
 ### <a name="to-add-a-tab-item"></a>Aby dodać element karty  
   
-1.  Przygotowanie [TCITEM](http://msdn.microsoft.com/library/windows/desktop/bb760554) struktury.  
+1.  Przygotowanie [TCITEM](/windows/desktop/api/commctrl/ns-commctrl-tagtcitema) struktury.  
   
-2.  Wywołanie [CTabCtrl::InsertItem](../mfc/reference/ctabctrl-class.md#insertitem), przekazanie struktury.  
+2.  Wywołaj [CTabCtrl::InsertItem](../mfc/reference/ctabctrl-class.md#insertitem), przekazywanie struktury.  
   
-3.  Powtórz kroki 1 i 2 dla dodatkowych kartę elementów.  
+3.  Powtórz kroki 1 i 2 dla elementów dodatkową kartę.  
   
- Aby uzyskać więcej informacji, zobacz [Tworzenie formantu karty](http://msdn.microsoft.com/library/windows/desktop/bb760550) w zestawie Windows SDK.  
+ Aby uzyskać więcej informacji, zobacz [Tworzenie formantu karty](/windows/desktop/Controls/tab-controls) w zestawie Windows SDK.  
   
 ## <a name="see-also"></a>Zobacz też  
  [Korzystanie z CTabCtrl](../mfc/using-ctabctrl.md)   

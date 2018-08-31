@@ -104,12 +104,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 436c99777f526cfa364241b4dc25e33be672d6ae
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: e2eb1695383e5bb1a700305fd0cc8487590afd7c
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42464744"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43217044"
 ---
 # <a name="coleipframewndex-class"></a>Klasa COleIPFrameWndEx
 `COleIPFrameWndEx` Klasa implementuje kontener OLE, który obsługuje MFC. Uzyskujesz klasę okna ramowego w miejscu dla aplikacji z `COleIPFrameWndEx` klasy zamiast wywodzić ją z [COleIPFrameWnd](../../mfc/reference/coleipframewnd-class.md)klasy. Aby uzyskać więcej informacji, zobacz kod źródłowy znajdujący się w **VC\\atlmfc\\src\\mfc** folder instalacji programu Visual Studio.   
@@ -929,7 +929,7 @@ virtual void WinHelp(
  Określa dane zgodnie z wymaganiami dla typu określonego przez Pomoc *nCmd*.  
   
  [in] *nCmd*  
- Określa typ żądanego pomocy. Aby uzyskać listę możliwych wartości i ich wpływ *dwData* parametrów, zobacz [funkcję WinHelp](http://msdn.microsoft.com/library/windows/desktop/bb762267) w zestawie Windows SDK.  
+ Określa typ żądanego pomocy. Aby uzyskać listę możliwych wartości i ich wpływ *dwData* parametrów, zobacz [funkcję WinHelp](/windows/desktop/api/winuser/nf-winuser-winhelpa) w zestawie Windows SDK.  
   
 ### <a name="remarks"></a>Uwagi  
   

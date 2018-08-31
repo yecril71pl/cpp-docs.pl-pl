@@ -16,27 +16,21 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 25ca58d9818782b51e6c07bb6bb758948adab3ae
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: d2257ff9be5988ed6a08dd5d152c83910c6edc88
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32387964"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43214722"
 ---
 # <a name="multidimensional-arrays-c"></a>Tablice wielowymiarowe (C)
 Wyrażenie indeksu dolnego może mieć wiele indeksów dolnych, jak pokazano poniżej:  
   
 ```  
-  
-expression1  
-[  
-expression2  
-] [  
-expression3  
-]...  
+expression1 [ expression2 ] [ expression3 ] ...  
 ```  
   
- Wyrażenia indeksu dolnego są skojarzone od lewej do prawej. Po lewej stronie wyrażenia indeksu * wyrażenie1 ***[*** wyrażenie2 ***]**, jest szacowana jako pierwsza. Adres, który jest wynikiem Dodawanie *wyrażenie1* i *wyrażenie2* formularzy wyrażenia wskaźnika; następnie *expression3* zostanie dodany do tego wyrażenia wskaźnika do utworzenia nowego wyrażenia wskaźnika, i tak dalej, aż ostatniego wyrażenia indeksu został dodany. Operator pośredni (**\***) są stosowane po ostatnim jako wyrażenie jest obliczane, chyba że wpisz adresy wartość końcowego wskaźnika do tablicy (Zobacz przykłady poniżej).  
+ Wyrażenia indeksu dolnego są skojarzone od lewej do prawej. Skrajnie po lewej stronie wyrażenia indeksu dolnego, *wyrażenie1* **[** *wyrażenie2* **]**, jest stosowana jako pierwsza. Adres, który jest wynikiem dodawania *wyrażenie1* i *wyrażenie2* stanowi wyrażenie wskaźnika; następnie *expression3* jest dodawany do tego wyrażenia wskaźnika w celu utworzenia nowego wyrażenia wskaźnika, i tak dalej, aż ostatniego wyrażenia indeksu dolnego został dodany. Operator pośredni (<strong>\*</strong>) są stosowane po ostatnim indeksem wyrażenie jest obliczane, chyba że wskaźnik końcowej wartości typ tablicowy (Zobacz przykłady poniżej).  
   
  Wyrażenia zawierające wiele indeksów dolnych odwołują się do elementów „tablic wielowymiarowych”. Tablica wielowymiarowa jest tablicą, której elementy są tablicami. Na przykład, pierwszy element tablicy trójwymiarowej jest tablicą z dwoma wymiarami.  
   

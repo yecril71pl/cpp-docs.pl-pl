@@ -48,12 +48,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 8eea759f7f2af32fe688bbc8583eafc1244b20d7
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: 0af12e1cd2f9925d5b7df8ccf16a7838a2e8c78b
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42465891"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43215614"
 ---
 # <a name="cenumeratoraccessor-class"></a>CEnumeratorAccessor — Klasa
 Używane przez [CEnumerator](../../data/oledb/cenumerator-class.md) dostępu do danych z zestawu wierszy modułu wyliczającego.  
@@ -77,7 +77,7 @@ class CEnumeratorAccessor
 |[m_nType](#ntype)|Zmienną określającą, czy wiersz zawiera opis źródła danych lub moduł wyliczający.|  
 |[m_szDescription](#szdescription)|Opis źródła danych lub modułu wyliczającego.|  
 |[m_szName](#szname)|Nazwa źródła danych lub modułu wyliczającego.|  
-|[m_szParseName](#szparsename)|Parametry do przekazania do [IParseDisplayName](http://msdn.microsoft.com/library/windows/desktop/ms680604) uzyskać krótka nazwa dla źródła danych lub modułu wyliczającego.|  
+|[m_szParseName](#szparsename)|Parametry do przekazania do [IParseDisplayName](/windows/desktop/api/oleidl/nn-oleidl-iparsedisplayname) uzyskać krótka nazwa dla źródła danych lub modułu wyliczającego.|  
   
 ## <a name="remarks"></a>Uwagi  
  Ten zestaw wierszy składa się z źródła danych i moduły wyliczające widoczne z bieżącej modułu wyliczającego.  
@@ -131,7 +131,7 @@ WCHAR m_szName[129];
  Zobacz [ISourcesRowset::GetSourcesRowset](/previous-versions/windows/desktop/ms711200\(v=vs.85\)) w *OLE DB Podręcznik programisty* Aby uzyskać więcej informacji.  
 
 ## <a name="szparsename"></a> CEnumeratorAccessor::m_szParseName
-Parametry do przekazania do [IParseDisplayName](http://msdn.microsoft.com/library/windows/desktop/ms680604) uzyskać krótka nazwa dla źródła danych lub modułu wyliczającego.  
+Parametry do przekazania do [IParseDisplayName](/windows/desktop/api/oleidl/nn-oleidl-iparsedisplayname) uzyskać krótka nazwa dla źródła danych lub modułu wyliczającego.  
   
 ### <a name="syntax"></a>Składnia  
   

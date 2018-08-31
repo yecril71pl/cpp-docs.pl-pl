@@ -26,12 +26,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cfc59e4652c7c758e7fb5b3ee8a228963a6b6f7d
-ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
+ms.openlocfilehash: 8f07f14cca7ea0346cc6772d3dca959af07a05cd
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37883248"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43218165"
 ---
 # <a name="catlfilemappingbase-class"></a>Klasa CAtlFileMappingBase
 Ta klasa reprezentuje plik mapowanych na pamięć.  
@@ -76,7 +76,7 @@ class CAtlFileMappingBase
 ## <a name="remarks"></a>Uwagi  
  Mapowanie pliku jest skojarzenie zawartość pliku z części wirtualnej przestrzeni adresowej procesu. Ta klasa dostarcza metody do tworzenia obiektów w pliku mapowania, zezwalające na programy, aby łatwo uzyskiwać dostęp do i udostępniania danych.  
   
- Aby uzyskać więcej informacji, zobacz [mapowania pliku](http://msdn.microsoft.com/library/windows/desktop/aa366556) w zestawie Windows SDK.  
+ Aby uzyskać więcej informacji, zobacz [mapowania pliku](/windows/desktop/Memory/file-mapping) w zestawie Windows SDK.  
   
 ## <a name="requirements"></a>Wymagania  
  **Nagłówek:** atlfile.h  
@@ -179,16 +179,16 @@ HRESULT MapFile(
  Przesunięcie w pliku, gdy mapowanie jest rozpoczęcie. Wartość przesunięcia musi być wielokrotnością stopnia szczegółowości alokacji pamięci systemu.  
   
  *dwMappingProtection*  
- Ochrona żądanego widoku pliku, gdy plik jest zamapowany. Zobacz *flProtect* w [funkcja CreateFileMapping](http://msdn.microsoft.com/library/windows/desktop/aa366537) w zestawie Windows SDK.  
+ Ochrona żądanego widoku pliku, gdy plik jest zamapowany. Zobacz *flProtect* w [funkcja CreateFileMapping](/windows/desktop/api/winbase/nf-winbase-createfilemappinga) w zestawie Windows SDK.  
   
  *dwViewDesiredAccess*  
- Określa typ dostępu do widoku pliku, a więc ochrony stron zamapowane przy użyciu pliku. Zobacz *dwDesiredAccess* w [funkcja MapViewOfFileEx](http://msdn.microsoft.com/library/windows/desktop/aa366763) w zestawie Windows SDK.  
+ Określa typ dostępu do widoku pliku, a więc ochrony stron zamapowane przy użyciu pliku. Zobacz *dwDesiredAccess* w [funkcja MapViewOfFileEx](https://msdn.microsoft.com/library/windows/desktop/aa366763) w zestawie Windows SDK.  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Zwraca wartość S_OK w przypadku powodzenia lub błędu HRESULT w przypadku niepowodzenia.  
   
 ### <a name="remarks"></a>Uwagi  
- Po utworzeniu obiektu mapowania pliku, rozmiar pliku nie może przekraczać rozmiaru obiektu mapowania pliku. Jeśli tak jest, nie wszystkie jego zawartość będzie dostępne na potrzeby udostępniania. Aby uzyskać więcej informacji, zobacz [funkcja CreateFileMapping](http://msdn.microsoft.com/library/windows/desktop/aa366537) i [funkcja MapViewOfFileEx](http://msdn.microsoft.com/library/windows/desktop/aa366763) w zestawie Windows SDK.  
+ Po utworzeniu obiektu mapowania pliku, rozmiar pliku nie może przekraczać rozmiaru obiektu mapowania pliku. Jeśli tak jest, nie wszystkie jego zawartość będzie dostępne na potrzeby udostępniania. Aby uzyskać więcej informacji, zobacz [funkcja CreateFileMapping](/windows/desktop/api/winbase/nf-winbase-createfilemappinga) i [funkcja MapViewOfFileEx](https://msdn.microsoft.com/library/windows/desktop/aa366763) w zestawie Windows SDK.  
   
 ### <a name="example"></a>Przykład  
  Zobacz przykład [CAtlFileMappingBase::CAtlFileMappingBase](#catlfilemappingbase).  
@@ -217,19 +217,19 @@ HRESULT MapSharedMem(
  Wskazuje wartość logiczna, która jest ustawiona na wartość TRUE, jeśli mapowanie obiektu już istnieje.  
   
  *lpsa*  
- Wskaźnik do `SECURITY_ATTRIBUTES` strukturę, która określa, czy zwracany uchwyt może być dziedziczony przez procesy podrzędne. Zobacz *lpAttributes* w [funkcja CreateFileMapping](http://msdn.microsoft.com/library/windows/desktop/aa366537) w zestawie Windows SDK.  
+ Wskaźnik do `SECURITY_ATTRIBUTES` strukturę, która określa, czy zwracany uchwyt może być dziedziczony przez procesy podrzędne. Zobacz *lpAttributes* w [funkcja CreateFileMapping](/windows/desktop/api/winbase/nf-winbase-createfilemappinga) w zestawie Windows SDK.  
   
  *dwMappingProtection*  
  Ochrona żądanego widoku pliku, gdy plik jest zamapowany. Zobacz *flProtect* w `CreateFileMapping` w zestawie Windows SDK.  
   
  *dwViewDesiredAccess*  
- Określa typ dostępu do widoku pliku, a więc ochrony stron zamapowane przy użyciu pliku. Zobacz *dwDesiredAccess* w [funkcja MapViewOfFileEx](http://msdn.microsoft.com/library/windows/desktop/aa366763) w zestawie Windows SDK.  
+ Określa typ dostępu do widoku pliku, a więc ochrony stron zamapowane przy użyciu pliku. Zobacz *dwDesiredAccess* w [funkcja MapViewOfFileEx](https://msdn.microsoft.com/library/windows/desktop/aa366763) w zestawie Windows SDK.  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Zwraca wartość S_OK w przypadku powodzenia lub błędu HRESULT w przypadku niepowodzenia.  
   
 ### <a name="remarks"></a>Uwagi  
- `MapShareMem` Umożliwia istniejącego obiektu mapowania pliku, utworzone przez [funkcja CreateFileMapping](http://msdn.microsoft.com/library/windows/desktop/aa366537), aby współdzielić je między procesami.  
+ `MapShareMem` Umożliwia istniejącego obiektu mapowania pliku, utworzone przez [funkcja CreateFileMapping](/windows/desktop/api/winbase/nf-winbase-createfilemappinga), aby współdzielić je między procesami.  
   
 ##  <a name="openmapping"></a>  CAtlFileMappingBase::OpenMapping  
  Wywołaj tę metodę, aby otworzyć nazwanego obiektu mapowania pliku dla określonego pliku.  
@@ -253,7 +253,7 @@ HRESULT OpenMapping(
  Przesunięcie w pliku, gdy mapowanie jest rozpoczęcie. Wartość przesunięcia musi być wielokrotnością stopnia szczegółowości alokacji pamięci systemu.  
   
  *dwViewDesiredAccess*  
- Określa typ dostępu do widoku pliku, a więc ochrony stron zamapowane przy użyciu pliku. Zobacz *dwDesiredAccess* w [funkcja MapViewOfFileEx](http://msdn.microsoft.com/library/windows/desktop/aa366763) w zestawie Windows SDK.  
+ Określa typ dostępu do widoku pliku, a więc ochrony stron zamapowane przy użyciu pliku. Zobacz *dwDesiredAccess* w [funkcja MapViewOfFileEx](https://msdn.microsoft.com/library/windows/desktop/aa366763) w zestawie Windows SDK.  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Zwraca wartość S_OK w przypadku powodzenia lub błędu HRESULT w przypadku niepowodzenia.  
@@ -286,7 +286,7 @@ HRESULT Unmap() throw();
  Zwraca wartość S_OK w przypadku powodzenia lub błędu HRESULT w przypadku niepowodzenia.  
   
 ### <a name="remarks"></a>Uwagi  
- Zobacz [UnmapViewOfFile](http://msdn.microsoft.com/library/windows/desktop/aa366882) w zestawie Windows SDK, aby uzyskać więcej informacji.  
+ Zobacz [UnmapViewOfFile](https://msdn.microsoft.com/library/windows/desktop/aa366882) w zestawie Windows SDK, aby uzyskać więcej informacji.  
   
 ## <a name="see-also"></a>Zobacz też  
  [Klasa CAtlFileMapping](../../atl/reference/catlfilemapping-class.md)   

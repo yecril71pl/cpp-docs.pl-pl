@@ -30,12 +30,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 731229f8aca9d564e418382a54e097ff61316586
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: 1d1e9a04a660da44f1c447dcd6ec388ba791958c
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42465614"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43214924"
 ---
 # <a name="cnetaddressctrl-class"></a>Klasa CNetAddressCtrl
 `CNetAddressCtrl` Klasa reprezentuje formant adresu sieciowego, który służy do wprowadzania i sprawdzania poprawności formatu IPv4, IPv6 i nazwanych adresów DNS.  
@@ -80,7 +80,7 @@ class CNetAddressCtrl : public CEdit
  [!code-cpp[NVC_MFC_CNetAddressCtrl_s1#1](../../mfc/reference/codesnippet/cpp/cnetaddressctrl-class_1.cpp)]  
   
 ## <a name="example"></a>Przykład  
- Poniższy przykład kodu z okna dialogowego pliku nagłówka definiuje [NC_ADDRESS](http://msdn.microsoft.com/library/windows/desktop/bb773345) i [NET_ADDRESS_INFO](http://msdn.microsoft.com/library/windows/desktop/bb773346) zmiennych, które są wymagane przez [CNetAddressCtrl::GetAddress](#getaddress)metody.  
+ Poniższy przykład kodu z okna dialogowego pliku nagłówka definiuje [NC_ADDRESS](/windows/desktop/api/shellapi/ns-shellapi-tagnc_address) i [NET_ADDRESS_INFO](https://msdn.microsoft.com/library/windows/desktop/bb773346) zmiennych, które są wymagane przez [CNetAddressCtrl::GetAddress](#getaddress)metody.  
   
  [!code-cpp[NVC_MFC_CNetAddressCtrl_s1#2](../../mfc/reference/codesnippet/cpp/cnetaddressctrl-class_2.h)]  
   
@@ -128,7 +128,7 @@ virtual BOOL Create(
 |Parametr|Opis|  
 |---------------|-----------------|  
 |[in] *dwStyle*|Bitowa kombinacja style, które mają być stosowane do formantu. Aby uzyskać więcej informacji, zobacz [Edytuj style](../../mfc/reference/styles-used-by-mfc.md#edit-styles).|  
-|[in] *rect*|Odwołanie do [Prostokąt](http://msdn.microsoft.com/library/windows/desktop/dd162897) strukturę, która zawiera położenie i rozmiar kontrolki.|  
+|[in] *rect*|Odwołanie do [Prostokąt](https://msdn.microsoft.com/library/windows/desktop/dd162897) strukturę, która zawiera położenie i rozmiar kontrolki.|  
 |[in] *pParentWnd*|Wskaźnik zerowy [CWnd](../../mfc/reference/cwnd-class.md) obiekt, który jest okno nadrzędne kontrolki.|  
 |[in] *nID*|Identyfikator kontrolki.|  
   
@@ -151,9 +151,9 @@ virtual BOOL CreateEx(
   
 |Parametr|Opis|  
 |---------------|-----------------|  
-|[in] *dwExStyle*|Bitowa kombinacja (lub) rozszerzone style, które mają być stosowane do formantu. Aby uzyskać więcej informacji, zobacz *dwExStyle* parametru [elementu CreateWindowEx](http://msdn.microsoft.com/library/windows/desktop/ms632680) funkcji.|  
+|[in] *dwExStyle*|Bitowa kombinacja (lub) rozszerzone style, które mają być stosowane do formantu. Aby uzyskać więcej informacji, zobacz *dwExStyle* parametru [elementu CreateWindowEx](https://msdn.microsoft.com/library/windows/desktop/ms632680) funkcji.|  
 |[in] *dwStyle*|Bitowa kombinacja (lub) style, które mają być stosowane do formantu. Aby uzyskać więcej informacji, zobacz [Edytuj style](../../mfc/reference/styles-used-by-mfc.md#edit-styles).|  
-|[in] *rect*|Odwołanie do [Prostokąt](http://msdn.microsoft.com/library/windows/desktop/dd162897) strukturę, która zawiera położenie i rozmiar kontrolki.|  
+|[in] *rect*|Odwołanie do [Prostokąt](https://msdn.microsoft.com/library/windows/desktop/dd162897) strukturę, która zawiera położenie i rozmiar kontrolki.|  
 |[in] *pParentWnd*|Wskaźnik zerowy [CWnd](../../mfc/reference/cwnd-class.md) obiekt, który jest okno nadrzędne kontrolki.|  
 |[in] *nID*|Identyfikator kontrolki.|  
   
@@ -173,7 +173,7 @@ HRESULT DisplayErrorTip();
 ### <a name="remarks"></a>Uwagi  
  Użyj [CNetAddressCtrl::SetAllowType](#setallowtype) metodę, aby określić typy adresów, które może obsługiwać bieżące formant adresu sieciowego. Użyj [CNetAddressCtrl::GetAddress](#getaddress) metody sprawdzania poprawności i przeanalizować adresu sieciowego, wprowadzonych przez użytkownika. Użyj [CNetAddressCtrl::DisplayErrorTip](#displayerrortip) metodę w celu wyświetlenia poradę komunikat o błędzie, jeśli [CNetAddressCtrl::GetAddress](#getaddress) metoda zakończy się niepowodzeniem.  
   
- Ten komunikat, wywołuje [NetAddr_DisplayErrorTip](http://msdn.microsoft.com/library/windows/desktop/bb774314) makro, który jest opisany w zestawie Windows SDK. Wysyła tego makra `NCM_DISPLAYERRORTIP` wiadomości.  
+ Ten komunikat, wywołuje [NetAddr_DisplayErrorTip](/windows/desktop/api/shellapi/nf-shellapi-netaddr_displayerrortip) makro, który jest opisany w zestawie Windows SDK. Wysyła tego makra `NCM_DISPLAYERRORTIP` wiadomości.  
   
 ##  <a name="getaddress"></a>  CNetAddressCtrl::GetAddress  
  Pobiera reprezentację adresu sieciowego, który jest skojarzony z bieżącym formant adresu sieciowego zweryfikowane i przeanalizowane.  
@@ -186,17 +186,17 @@ HRESULT GetAddress(PNC_ADDRESS pAddress) const;
   
 |Parametr|Opis|  
 |---------------|-----------------|  
-|[out w] *pAddress*|Wskaźnik do [NC_ADDRESS](http://msdn.microsoft.com/library/windows/desktop/bb773345) struktury.  Ustaw *pAddrInfo* członkiem tej struktury adres [NET_ADDRESS_INFO](http://msdn.microsoft.com/library/windows/desktop/bb773346) struktury przed wywołaniem getaddress — metoda.|  
+|[out w] *pAddress*|Wskaźnik do [NC_ADDRESS](/windows/desktop/api/shellapi/ns-shellapi-tagnc_address) struktury.  Ustaw *pAddrInfo* członkiem tej struktury adres [NET_ADDRESS_INFO](https://msdn.microsoft.com/library/windows/desktop/bb773346) struktury przed wywołaniem getaddress — metoda.|  
   
 ### <a name="return-value"></a>Wartość zwracana  
- Wartość S_OK, jeśli ta metoda się powiedzie; w przeciwnym razie kod błędu modelu COM. Aby uzyskać więcej informacji na temat możliwych kodów błędów, zobacz sekcję zwracają wartość [NetAddr_GetAddress](http://msdn.microsoft.com/library/windows/desktop/bb774316) makra.  
+ Wartość S_OK, jeśli ta metoda się powiedzie; w przeciwnym razie kod błędu modelu COM. Aby uzyskać więcej informacji na temat możliwych kodów błędów, zobacz sekcję zwracają wartość [NetAddr_GetAddress](/windows/desktop/api/shellapi/nf-shellapi-netaddr_getaddress) makra.  
   
 ### <a name="remarks"></a>Uwagi  
- Jeśli ta metoda zakończy się pomyślnie, [NET_ADDRESS_INFO](http://msdn.microsoft.com/library/windows/desktop/bb773346) struktura zawiera dodatkowe informacje na temat adresu sieciowego.  
+ Jeśli ta metoda zakończy się pomyślnie, [NET_ADDRESS_INFO](https://msdn.microsoft.com/library/windows/desktop/bb773346) struktura zawiera dodatkowe informacje na temat adresu sieciowego.  
   
  Użyj [CNetAddressCtrl::SetAllowType](#setallowtype) metodę, aby określić typy adresów może obsługiwać bieżące formant adresu sieciowego. Użyj [CNetAddressCtrl::GetAddress](#getaddress) metody sprawdzania poprawności i przeanalizować adresu sieciowego, wprowadzonych przez użytkownika. Użyj [CNetAddressCtrl::DisplayErrorTip](#displayerrortip) metodę w celu wyświetlenia poradę komunikat o błędzie, jeśli [CNetAddressCtrl::GetAddress](#getaddress) metoda zakończy się niepowodzeniem.  
   
- Ta metoda wywołuje [NetAddr_GetAddress](http://msdn.microsoft.com/library/windows/desktop/bb774316) makro, który jest opisany w zestawie Windows SDK. Makra wysyła komunikat NCM_GETADDRESS.  
+ Ta metoda wywołuje [NetAddr_GetAddress](/windows/desktop/api/shellapi/nf-shellapi-netaddr_getaddress) makro, który jest opisany w zestawie Windows SDK. Makra wysyła komunikat NCM_GETADDRESS.  
   
 ##  <a name="getallowtype"></a>  CNetAddressCtrl::GetAllowType  
  Pobiera typ adresu sieciowego, który może obsługiwać bieżące formant adresu sieciowego.  
@@ -206,10 +206,10 @@ DWORD GetAllowType() const;
 ```  
   
 ### <a name="return-value"></a>Wartość zwracana  
- Bitowa kombinacja (lub) flagami określający typy adresów może obsługiwać formant adresu sieciowego. Aby uzyskać więcej informacji, zobacz [NET_STRING](http://msdn.microsoft.com/library/windows/desktop/bb762586).  
+ Bitowa kombinacja (lub) flagami określający typy adresów może obsługiwać formant adresu sieciowego. Aby uzyskać więcej informacji, zobacz [NET_STRING](https://msdn.microsoft.com/library/windows/desktop/bb762586).  
   
 ### <a name="remarks"></a>Uwagi  
- Ten komunikat, wywołuje [NetAddr_GetAllowType](http://msdn.microsoft.com/library/windows/desktop/bb774318) makro, który jest opisany w zestawie Windows SDK. Makra wysyła komunikat NCM_GETALLOWTYPE.  
+ Ten komunikat, wywołuje [NetAddr_GetAllowType](/windows/desktop/api/shellapi/nf-shellapi-netaddr_getallowtype) makro, który jest opisany w zestawie Windows SDK. Makra wysyła komunikat NCM_GETALLOWTYPE.  
   
 ##  <a name="setallowtype"></a>  CNetAddressCtrl::SetAllowType  
  Ustawia typ adresu sieciowego, który może obsługiwać bieżące formant adresu sieciowego.  
@@ -222,7 +222,7 @@ HRESULT SetAllowType(DWORD dwAddrMask);
   
 |Parametr|Opis|  
 |---------------|-----------------|  
-|[in] *dwAddrMask*|Bitowa kombinacja (lub) flagami określający typy adresów może obsługiwać formant adresu sieciowego. Aby uzyskać więcej informacji, zobacz [NET_STRING](http://msdn.microsoft.com/library/windows/desktop/bb762586).|  
+|[in] *dwAddrMask*|Bitowa kombinacja (lub) flagami określający typy adresów może obsługiwać formant adresu sieciowego. Aby uzyskać więcej informacji, zobacz [NET_STRING](https://msdn.microsoft.com/library/windows/desktop/bb762586).|  
   
 ### <a name="return-value"></a>Wartość zwracana  
  S_OK, jeśli ta metoda się powiedzie; w przeciwnym razie kod błędu modelu COM.  
@@ -230,7 +230,7 @@ HRESULT SetAllowType(DWORD dwAddrMask);
 ### <a name="remarks"></a>Uwagi  
  Użyj [CNetAddressCtrl::SetAllowType](#setallowtype) metodę, aby określić typy adresów, które może obsługiwać bieżące formant adresu sieciowego. Użyj [CNetAddressCtrl::GetAddress](#getaddress) metody sprawdzania poprawności i przeanalizować adresu sieciowego, wprowadzonych przez użytkownika. Użyj [CNetAddressCtrl::DisplayErrorTip](#displayerrortip) metodę w celu wyświetlenia poradę komunikat o błędzie, jeśli [CNetAddressCtrl::GetAddress](#getaddress) metoda zakończy się niepowodzeniem.  
   
- Ten komunikat, wywołuje [NetAddr_SetAllowType](http://msdn.microsoft.com/library/windows/desktop/bb774320) makro, który jest opisany w zestawie Windows SDK. Makra wysyła komunikat NCM_SETALLOWTYPE.  
+ Ten komunikat, wywołuje [NetAddr_SetAllowType](/windows/desktop/api/shellapi/nf-shellapi-netaddr_setallowtype) makro, który jest opisany w zestawie Windows SDK. Makra wysyła komunikat NCM_SETALLOWTYPE.  
   
 ## <a name="see-also"></a>Zobacz też  
  [Klasa CNetAddressCtrl](../../mfc/reference/cnetaddressctrl-class.md)   

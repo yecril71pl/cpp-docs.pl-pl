@@ -18,17 +18,17 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 015b07e5870aa6269dc76af8610d42fb469a6d33
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: 6fa2e03bbb7307b2bc9633c21510f3b1939d4ad9
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37848353"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43218051"
 ---
 # <a name="atl-and-the-free-threaded-marshaler"></a>ATL i marshaler trybu wolnych wątków
 Strona atrybutów ATL prostego obiektu kreatora zawiera opcję umożliwiającą klasy agregacji marshaler trybu (programu FTM).  
   
- Kreator generuje kod, aby utworzyć wystąpienie marshaler trybu w `FinalConstruct` i wersji tego wystąpienia w `FinalRelease`. Makra COM_INTERFACE_ENTRY_AGGREGATE jest automatycznie dodawana do mapy COM, aby upewnić się, że `QueryInterface` żądań dla [IMarshal](http://msdn.microsoft.com/library/windows/desktop/dd542707) są obsługiwane przez marshaler trybu.  
+ Kreator generuje kod, aby utworzyć wystąpienie marshaler trybu w `FinalConstruct` i wersji tego wystąpienia w `FinalRelease`. Makra COM_INTERFACE_ENTRY_AGGREGATE jest automatycznie dodawana do mapy COM, aby upewnić się, że `QueryInterface` żądań dla [IMarshal](/windows/desktop/api/objidlbase/nn-objidlbase-imarshal) są obsługiwane przez marshaler trybu.  
   
  Marshaler trybu umożliwia bezpośredni dostęp do interfejsów na obiekcie z żadnym z wątków w tym samym procesie przyspieszenia apartamentu dla wielu wywołań. Ta opcja jest przeznaczona dla klas, które używają obu modelu wątkowości.  
   
@@ -36,8 +36,8 @@ Strona atrybutów ATL prostego obiektu kreatora zawiera opcję umożliwiającą 
   
 ## <a name="see-also"></a>Zobacz też  
  [Pojęcia](../atl/active-template-library-atl-concepts.md)   
- [CoCreateFreeThreadedMarshaler](http://msdn.microsoft.com/library/windows/desktop/ms694500)   
- [IMarshal](http://msdn.microsoft.com/library/windows/desktop/dd542707)   
- [Kiedy używać tabeli interfejsu globalnego](http://msdn.microsoft.com/library/windows/desktop/ms693729)   
- [Problemy wielowątkowości dotyczące serwera przetwarzania](http://msdn.microsoft.com/library/windows/desktop/ms687205)
+ [CoCreateFreeThreadedMarshaler](/windows/desktop/api/combaseapi/nf-combaseapi-cocreatefreethreadedmarshaler)   
+ [IMarshal](/windows/desktop/api/objidlbase/nn-objidlbase-imarshal)   
+ [Kiedy używać tabeli interfejsu globalnego](/windows/desktop/com/when-to-use-the-global-interface-table)   
+ [Problemy wielowątkowości dotyczące serwera przetwarzania](/windows/desktop/com/in-process-server-threading-issues)
 

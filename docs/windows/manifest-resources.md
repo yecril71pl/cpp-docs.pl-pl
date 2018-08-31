@@ -16,12 +16,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 1c9a1786e5b3a6fb150e3e27fb459ac4341486ca
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: e1520cd301fa46fb4d9521fd6d4180ebd3710f67
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42604791"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43218253"
 ---
 # <a name="manifest-resources"></a>Zasoby manifestu
 
@@ -43,11 +43,11 @@ Zasoby manifestu są plikami XML, które opisują zależności, których używa 
 </dependency>
 ```
 
-Dla aplikacji Windows XP lub Windows Vista zasobu manifestu nie tylko określa, że aplikacja używać najnowszej wersji wspólnych formantów Windows (w wersji 6.0, jak pokazano powyżej), ale obsługuje ona również [kontroli Syslink](http://msdn.microsoft.com/library/windows/desktop/bb760706).
+Dla aplikacji Windows XP lub Windows Vista zasobu manifestu nie tylko określa, że aplikacja używać najnowszej wersji wspólnych formantów Windows (w wersji 6.0, jak pokazano powyżej), ale obsługuje ona również [kontroli Syslink](/windows/desktop/Controls/syslink-overview).
 
-Aby wyświetlić wersję i typ informacji zawartych w zasobu manifestu, można otworzyć pliku w podglądzie XML, lub w programie Visual Studio [edytora tekstów](http://msdn.microsoft.com/508e1f18-99d5-48ad-b5ad-d011b21c6ab1). Aby uzyskać więcej informacji, zobacz [otwarcie zasobu manifestu w edytorze tekstu programu Visual Studio](../windows/how-to-open-a-manifest-resource.md).
+Aby wyświetlić wersję i typ informacji zawartych w zasobu manifestu, można otworzyć pliku w podglądzie XML, lub w programie Visual Studio [edytora tekstów](https://msdn.microsoft.com/508e1f18-99d5-48ad-b5ad-d011b21c6ab1). Aby uzyskać więcej informacji, zobacz [otwarcie zasobu manifestu w edytorze tekstu programu Visual Studio](../windows/how-to-open-a-manifest-resource.md).
 
-Aby uzyskać informacje na temat dodawania zasobów do projektów zarządzanych, zobacz [zasoby w aplikacjach pulpitu](/dotnet/framework/resources/index) w *przewodniku dewelopera .NET Framework*. Aby uzyskać informacji na temat ręcznego dodawania plików zasobów do projektów zarządzanych, uzyskiwania dostępu do zasobów, wyświetlania statycznych zasobów i przypisywania ciągów zasobów do właściwości, zobacz [Instruktaż: Using Resources for Localization with ASP.NET](http://msdn.microsoft.com/Library/bb4e5b44-e2b0-48ab-bbe9-609fb33900b6).
+Aby uzyskać informacje na temat dodawania zasobów do projektów zarządzanych, zobacz [zasoby w aplikacjach pulpitu](/dotnet/framework/resources/index) w *przewodniku dewelopera .NET Framework*. Aby uzyskać informacji na temat ręcznego dodawania plików zasobów do projektów zarządzanych, uzyskiwania dostępu do zasobów, wyświetlania statycznych zasobów i przypisywania ciągów zasobów do właściwości, zobacz [Instruktaż: Using Resources for Localization with ASP.NET](https://msdn.microsoft.com/Library/bb4e5b44-e2b0-48ab-bbe9-609fb33900b6).
 
 ## <a name="limitations"></a>Ograniczenia
 

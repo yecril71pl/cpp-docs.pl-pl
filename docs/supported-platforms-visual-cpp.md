@@ -15,12 +15,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 521e08b22abb40b6e1b1fedce2375a6e33cc7e73
-ms.sourcegitcommit: f7703076b850c717c33d72fb0755fbb2215c5ddc
+ms.openlocfilehash: 6453d718454f7cfef3bb0211d05eb26a712eaf0f
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/28/2018
-ms.locfileid: "43130787"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43218316"
 ---
 # <a name="supported-platforms-visual-c"></a>Obsługiwane platformy (Visual C++)
 
@@ -28,8 +28,8 @@ Aplikacje utworzone przy użyciu programu Visual Studio mogą być kierowane do 
 
 |System operacyjny|x86|X64|ARM|
 |----------------------|---------|---------|---------|
-|Windows XP|X *|X *||
-|Windows Server 2003|X *|X *||
+|Windows XP|X\*|X\*||
+|Windows Server 2003|X\*|X\*||
 |Windows Vista|X|X||
 |Windows Server 2008|X|X||
 |Windows 7|X|X||
@@ -37,9 +37,9 @@ Aplikacje utworzone przy użyciu programu Visual Studio mogą być kierowane do 
 |Windows 8|X|X|X|
 |Windows 8.1|X|X|X|
 |Windows 10|X|X|X|
-|Android **|X|X|X|
-|iOS **|X|X|X|
-|Linux ***|X|X|X|
+|System android \*\*|X|X|X|
+|dla systemu iOS \*\*|X|X|X|
+|Linux \*\*\*|X|X|X|
 
 \* Możesz użyć zestawu narzędzi platformy Windows XP, które zostały zawarte w Visual Studio 2017, Visual Studio 2015, Visual Studio 2013 i Visual Studio 2012 Update 1 lub nowszej, aby kompilować projekty Windows XP i Windows Server 2003. Aby uzyskać informacje na temat korzystania z tego zestawu narzędzi platformy, zobacz [Konfigurowanie programów systemu Windows XP](build/configuring-programs-for-windows-xp.md). Aby uzyskać dodatkowe informacje na temat Zmiana zestawu narzędzi platformy, zobacz [porady: modyfikowanie platformy docelowej i zestawu narzędzi platformy](build/how-to-modify-the-target-framework-and-platform-toolset.md).
 

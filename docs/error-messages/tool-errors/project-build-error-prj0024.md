@@ -1,7 +1,7 @@
 ---
 title: Błąd PRJ0024 kompilacji projektu | Dokumentacja firmy Microsoft
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 08/27/2018
 ms.technology:
 - cpp-diagnostics
 ms.topic: error-reference
@@ -16,18 +16,19 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 59bf76aba80093bf9e8e653bdfb9fad49687a501
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: eb539a5f1ee5f1aa5f9d828d93fa6d0dc8690c22
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33318350"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43215601"
 ---
 # <a name="project-build-error-prj0024"></a>Błąd PRJ0024 kompilacji projektu
-Ścieżka Unikodowa 'path' nie mogą być przekonwertowana na stronę kodową ANSI użytkownika.  
-  
- ***ścieżka*** jest z oryginalną wersją ciąg ścieżki Unicode. Ten błąd może wystąpić w przypadku braku ścieżki Unicode, której nie można bezpośrednio przetłumaczenia na ANSI na bieżącej stronie kodowej systemu.  
-  
- Ten błąd może wystąpić, jeśli pracujesz z projektu, który został opracowany w systemie za pomocą stronę kodową, która nie znajduje się na tym komputerze.  
-  
- Rozwiązanie dotyczące tego błędu jest zaktualizuj ścieżkę do tekst ANSI lub do Zainstaluj stronę kodową na komputerze i ustaw go jako domyślnego systemu.
+
+> Ścieżka Unikodowa '*ścieżki*"nie mogą być przekonwertowana na stronę kodową ANSI użytkownika.
+
+*ścieżka* to oryginalna wersja Unicode ciąg ścieżki. Ten błąd może wystąpić w przypadkach, gdy ścieżka Unikodowa, niemożliwymi bezpośrednio do ANSI dla bieżącej strony kodowej systemu.
+
+Ten błąd może wystąpić, jeśli pracujesz z projektem, który został opracowany w systemie przy użyciu strony kodowej, który nie znajduje się na tym komputerze.
+
+Rozwiązanie dotyczące tego błędu jest zaktualizować ścieżkę, aby użyć tekstu ANSI lub Zainstaluj stronę kodową na swoim komputerze i jest ustawiony jako domyślny system.

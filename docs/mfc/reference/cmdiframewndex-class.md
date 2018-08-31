@@ -166,12 +166,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: db7a95327430b4d0bbfda173c83b7631af822060
-ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
+ms.openlocfilehash: d9644882f537285b27fa376afa65581d6d4c3c9f
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37339244"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43216291"
 ---
 # <a name="cmdiframewndex-class"></a>Klasa CMDIFrameWndEx
 Rozszerza funkcjonalność [CMDIFrameWnd](../../mfc/reference/cframewnd-class.md), okno ramowe interfejsu Windows wielu dokumentów (MDI).  
@@ -252,7 +252,7 @@ class CMDIFrameWndEx : public CMDIFrameWnd
 |[CMDIFrameWndEx::OnTearOffMenu](#ontearoffmenu)|Wywoływane przez platformę, gdy menu z paskiem oderwania jest aktywowane.|  
 |[CMDIFrameWndEx::OnUpdateFrameMenu](#onupdateframemenu)|Metoda wywoływana przez platformę, by aktualizowanie menu ramki. (Przesłania `CMDIFrameWnd::OnUpdateFrameMenu`.)|  
 |[CMDIFrameWndEx::PaneFromPoint](#panefrompoint)|Zwraca okienko dokowania, który zawiera określony punkt.|  
-|`CMDIFrameWndEx::PreTranslateMessage`|Używane przez klasę [CWinApp](../../mfc/reference/cwinapp-class.md) do translacji komunikatów okien, zanim zostaną rozesłane do [TranslateMessage](http://msdn.microsoft.com/library/windows/desktop/ms644955) i [DispatchMessage](http://msdn.microsoft.com/library/windows/desktop/ms644934) funkcje Windows.  (Przesłania `CMDIFrameWnd::PreTranslateMessage`.)|  
+|`CMDIFrameWndEx::PreTranslateMessage`|Używane przez klasę [CWinApp](../../mfc/reference/cwinapp-class.md) do translacji komunikatów okien, zanim zostaną rozesłane do [TranslateMessage](https://msdn.microsoft.com/library/windows/desktop/ms644955) i [DispatchMessage](https://msdn.microsoft.com/library/windows/desktop/ms644934) funkcje Windows.  (Przesłania `CMDIFrameWnd::PreTranslateMessage`.)|  
 |[CMDIFrameWndEx::RecalcLayout](#recalclayout)|Metoda wywoływana przez platformę, by ponownie Oblicz układ ramki okna. (Przesłania [CFrameWnd::RecalcLayout](../../mfc/reference/cframewnd-class.md#recalclayout).)|  
 |[CMDIFrameWndEx::RemovePaneFromDockManager](#removepanefromdockmanager)|Wyrejestrowuje okienko i usuwa go z Menedżera dokowania.|  
 |[CMDIFrameWndEx::SaveMDIState](#savemdistate)|Zapisuje bieżący układ grup z kartami MDI oraz listy wcześniej otwartych dokumentów.|  
@@ -666,7 +666,7 @@ void EnableMDITabs(
  *bTabCloseButton*  
  Określa, czy mają być wyświetlane przyciski Zamknij kartę.  
   
- *Określ informacje potrzebne do łączenia z usługą Azure storage dla właściwości connectionString.*  
+ *Styl*  
  Określa styl karty. Na użytek STYLE_3D_SCROLLED zwykłe karty lub STYLE_3D_ONENOTE dla programu Microsoft OneNote kart.  
   
  *bTabCustomTooltips*  
@@ -1341,7 +1341,7 @@ virtual BOOL OnMenuButtonToolHitTest(
  Przycisk paska narzędzi.  
   
  [out] *pTI*  
- Wskaźnik do [TOOLINFO](http://msdn.microsoft.com/library/windows/desktop/bb760256) struktury.  
+ Wskaźnik do [TOOLINFO](/windows/desktop/api/commctrl/ns-commctrl-tagtoolinfoa) struktury.  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Wartość TRUE, jeśli aplikacja wypełnia *pTI* parametru. Domyślna implementacja zwraca wartość FALSE.  
@@ -1790,7 +1790,7 @@ virtual void WinHelp(
  Określa dane zgodnie z wymaganiami dla typu określonego przez Pomoc *nCmd*.  
   
  [in] *nCmd*  
- Określa typ żądanego pomocy. Aby uzyskać listę możliwych wartości i ich wpływ *dwData* parametrów, zobacz [funkcję WinHelp](http://msdn.microsoft.com/library/windows/desktop/bb762267) w zestawie Windows SDK.  
+ Określa typ żądanego pomocy. Aby uzyskać listę możliwych wartości i ich wpływ *dwData* parametrów, zobacz [funkcję WinHelp](/windows/desktop/api/winuser/nf-winuser-winhelpa) w zestawie Windows SDK.  
   
 ### <a name="remarks"></a>Uwagi  
  Ta metoda zastępuje [CWnd::WinHelp](../../mfc/reference/cwnd-class.md#winhelp).  

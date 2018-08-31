@@ -1,5 +1,5 @@
 ---
-title: Ctoolbar — klasa | Dokumentacja firmy Microsoft
+title: Klasa CToolBar | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -54,15 +54,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2d6dc2c196e40daf4aa793f6643da95206b12be0
-ms.sourcegitcommit: 208d445fd7ea202de1d372d3f468e784e77bd666
+ms.openlocfilehash: 2abbf512085c9c59e9e6874e3f815548cd9052c1
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/29/2018
-ms.locfileid: "37123139"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43217107"
 ---
-# <a name="ctoolbar-class"></a>Ctoolbar — klasa
-Paski sterowania mających wiersz przycisków mapy bitowej i opcjonalnie separatorów.  
+# <a name="ctoolbar-class"></a>Klasa CToolBar
+Paski sterowania, które mają wiersz przycisków mapy bitowej i separatory opcjonalne.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -82,74 +82,74 @@ class CToolBar : public CControlBar
   
 |Nazwa|Opis|  
 |----------|-----------------|  
-|[CToolBar::CommandToIndex](#commandtoindex)|Zwraca indeks przycisk o tym identyfikatorze danego polecenia.|  
-|[CToolBar::Create](#create)|Tworzy narzędzi systemu Windows i dołącza go do `CToolBar` obiektu.|  
+|[CToolBar::CommandToIndex](#commandtoindex)|Zwraca indeks przycisk za pomocą identyfikatora polecenia.|  
+|[CToolBar::Create](#create)|Tworzy pasek narzędzi Windows i dołącza je do `CToolBar` obiektu.|  
 |[CToolBar::CreateEx](#createex)|Tworzy `CToolBar` obiektu o dodatkowe style osadzonego `CToolBarCtrl` obiektu.|  
 |[CToolBar::GetButtonInfo](#getbuttoninfo)|Pobiera identyfikator, stylu i numer obrazu przycisku.|  
 |[CToolBar::GetButtonStyle](#getbuttonstyle)|Pobiera styl przycisku.|  
 |[CToolBar::GetButtonText](#getbuttontext)|Pobiera tekst, który będzie wyświetlany na przycisku.|  
-|[CToolBar::GetItemID](#getitemid)|Zwraca identyfikator polecenia przycisku lub separatora pod danym indeksem.|  
+|[CToolBar::GetItemID](#getitemid)|Zwraca identyfikator polecenia przycisku lub separator pod danym indeksem.|  
 |[CToolBar::GetItemRect](#getitemrect)|Pobiera prostokątny obszar wyświetlania elementu pod danym indeksem.|  
-|[CToolBar::GetToolBarCtrl](#gettoolbarctrl)|Umożliwia bezpośredni dostęp do podstawowych formant.|  
-|[CToolBar::LoadBitmap](#loadbitmap)|Ładuje mapę bitową zawierający obrazy dla przycisków mapy bitowej.|  
-|[CToolBar::LoadToolBar](#loadtoolbar)|Ładuje zasobu paska narzędzi utworzone za pomocą edytora zasobów.|  
+|[CToolBar::GetToolBarCtrl](#gettoolbarctrl)|Umożliwia bezpośredni dostęp do podstawowych wspólnej kontroli.|  
+|[CToolBar::LoadBitmap](#loadbitmap)|Ładuje mapę bitową zawierająca obrazy mapy bitowej przycisku.|  
+|[CToolBar::LoadToolBar](#loadtoolbar)|Ładuje zasób paska narzędzi, utworzony za pomocą edytora zasobów.|  
 |[CToolBar::SetBitmap](#setbitmap)|Ustawia obraz mapy bitowej.|  
 |[CToolBar::SetButtonInfo](#setbuttoninfo)|Określa identyfikator, stylu i numer obrazu przycisku.|  
-|[CToolBar::SetButtons](#setbuttons)|Ustawia przycisk style i indeks obrazy dla przycisków w mapy bitowej.|  
+|[CToolBar::SetButtons](#setbuttons)|Ustawia przycisku — style i indeks obrazy przycisków w mapie bitowej.|  
 |[CToolBar::SetButtonStyle](#setbuttonstyle)|Ustawia styl przycisku.|  
 |[CToolBar::SetButtonText](#setbuttontext)|Ustawia tekst, który będzie wyświetlany na przycisku.|  
 |[CToolBar::SetHeight](#setheight)|Określa wysokość paska narzędzi.|  
-|[CToolBar::SetSizes](#setsizes)|Ustawia przycisków i ich map bitowych.|  
+|[CToolBar::SetSizes](#setsizes)|Ustawia wielkości przycisków i ich map bitowych.|  
   
 ## <a name="remarks"></a>Uwagi  
- Przyciski może działać tak jak przyciski, przyciski pola wyboru lub przycisków radiowych. `CToolBar` obiekty są zwykle osadzonych członkami okno ramowe obiektów pochodzących od klasy [cframewnd —](../../mfc/reference/cframewnd-class.md) lub [cmdiframewnd —](../../mfc/reference/cmdiframewnd-class.md).  
+ Przyciski może zachowywać się jak przyciski, pola wyboru lub przycisków radiowych. `CToolBar` obiekty są zazwyczaj osadzone elementy członkowskie obiektów okien ramowych pochodzących od klasy [CFrameWnd](../../mfc/reference/cframewnd-class.md) lub [CMDIFrameWnd](../../mfc/reference/cmdiframewnd-class.md).  
   
- [CToolBar::GetToolBarCtrl](#gettoolbarctrl), funkcji członkowskiej nowych 4.0 MFC pozwala korzystać z obsługi systemu Windows formantu wspólnego pasków narzędzi i dodatkowe funkcje. `CToolBar` Funkcje Członkowskie zapewniają większość funkcjonalności formanty standardowe systemu Windows; Jednak jeśli wywołasz `GetToolBarCtrl`, pasków narzędzi można nadać jeszcze więcej właściwości paski narzędzi Windows 95/98. Podczas wywoływania `GetToolBarCtrl`, zwróci odwołanie do `CToolBarCtrl` obiektu. Zobacz [CToolBarCtrl](../../mfc/reference/ctoolbarctrl-class.md) uzyskać więcej informacji o projektowaniu paski narzędzi przy użyciu formanty standardowe systemu Windows. Więcej ogólnych informacji na temat typowych formantów, zobacz [formanty standardowe](http://msdn.microsoft.com/library/windows/desktop/bb775493) w zestawie Windows SDK.  
+ [CToolBar::GetToolBarCtrl](#gettoolbarctrl), funkcją składową nowe 4.0 MFC pozwala na korzystanie z zalet obsługę Windows formantu typowego pasków narzędzi i dodatkowe funkcje. `CToolBar` Funkcje Członkowskie zapewniają większość funkcji wspólnych formantów Windows; Jednak jeśli wywołasz `GetToolBarCtrl`, zapewnić paski narzędzi jeszcze więcej właściwości pasków narzędzi Windows 95/98. Gdy wywołujesz `GetToolBarCtrl`, to zostanie zwrócona odwołanie do `CToolBarCtrl` obiektu. Zobacz [CToolBarCtrl](../../mfc/reference/ctoolbarctrl-class.md) Aby uzyskać więcej informacji na temat projektowania pasków narzędzi za pomocą wspólnych formantów Windows. Aby uzyskać więcej ogólnych informacji o wspólnych formantów, zobacz [wspólnych formantów](/windows/desktop/Controls/common-controls-intro) w zestawie Windows SDK.  
   
- Visual C++ udostępnia dwie metody tworzenia paska narzędzi. Aby utworzyć zasób paska narzędzi edytora zasobów, wykonaj następujące kroki:  
+ Visual C++ udostępnia dwie metody tworzenia paska narzędzi. Aby utworzyć zasób paska narzędzi, za pomocą edytora zasobów, wykonaj następujące kroki:  
   
 1.  Utwórz zasób paska narzędzi.  
   
-2.  Utworzyć `CToolBar` obiektu.  
+2.  Konstruowania `CToolBar` obiektu.  
   
-3.  Wywołanie [Utwórz](#create) (lub [CreateEx](#createex)) funkcja Utwórz pasek narzędzi systemu Windows i dołączenie go do `CToolBar` obiektu.  
+3.  Wywołaj [Utwórz](#create) (lub [CreateEx](#createex)) funkcji, aby utworzyć pasek narzędzi Windows i dołączyć go do `CToolBar` obiektu.  
   
-4.  Wywołanie [LoadToolBar](#loadtoolbar) można załadować zasobu paska narzędzi.  
+4.  Wywołaj [LoadToolBar](#loadtoolbar) można załadować zasobu paska narzędzi.  
   
  W przeciwnym razie wykonaj następujące kroki:  
   
-1.  Utworzyć `CToolBar` obiektu.  
+1.  Konstruowania `CToolBar` obiektu.  
   
-2.  Wywołanie [Utwórz](#create) (lub [CreateEx](#createex)) funkcja Utwórz pasek narzędzi systemu Windows i dołączenie go do `CToolBar` obiektu.  
+2.  Wywołaj [Utwórz](#create) (lub [CreateEx](#createex)) funkcji, aby utworzyć pasek narzędzi Windows i dołączyć go do `CToolBar` obiektu.  
   
-3.  Wywołanie [LoadBitmap](#loadbitmap) załadować mapy bitowej, który zawiera obrazy dla przycisków paska narzędzi.  
+3.  Wywołaj [loadbitmap —](#loadbitmap) można załadować mapy bitowej, który zawiera obrazy przycisków paska narzędzi.  
   
-4.  Wywołanie [SetButtons](#setbuttons) styl przycisku i skojarzyć z obrazem w mapie bitowej każdego przycisku.  
+4.  Wywołaj [setbuttons —](#setbuttons) Ustaw styl przycisku i skojarzyć każdy przycisk za pomocą obrazu w mapie bitowej.  
   
- Wszystkie obrazy dla przycisków na pasku narzędzi są brane z jednej bitmapy, który musi zawierać jeden obraz dla każdego przycisku. Wszystkie obrazy muszą być takie same wymiary. Wartość domyślna to 16 pikseli szerokości i wysokości 15 pikseli. Obrazy muszą być jednocześnie w mapy bitowej.  
+ Wszystkie obrazy przycisk na pasku narzędzi są pobierane z jednego mapy bitowej, który musi zawierać jeden obraz dla każdego przycisku. Wszystkie obrazy muszą mieć taki sam rozmiar; Wartość domyślna to 16 pikseli szerokości i wysokości 15 pikseli. Obrazy muszą dawać się obok siebie w mapie bitowej.  
   
- `SetButtons` Funkcja przyjmuje wskaźnika do tablicy sterowania identyfikatorów i liczba całkowita określająca liczbę elementów w tablicy. Funkcja Ustawia identyfikator każdego przycisku do wartości odpowiadającego mu elementu tablicy i przypisuje każdego przycisku Indeks obrazu, który określa położenie obrazu przycisku w pliku mapy bitowej. Jeśli element tablicy ma wartość ID_SEPARATOR, bez indeksu obrazu nie przypisano.  
+ `SetButtons` Funkcja przyjmuje wskaźnik do tablicy kontroli identyfikatorów i liczba całkowita określająca liczbę elementów w tablicy. Funkcja Ustawia identyfikator każdego przycisku na wartość odpowiedni element tablicy i przypisuje każdego przycisku Indeks obrazu, który określa pozycję obrazu na przycisku w mapie bitowej. Jeśli do elementu tablicy ma wartość ID_SEPARATOR, indeks obrazu, nie zostanie przypisany.  
   
- Kolejność obrazów w pliku mapy bitowej jest zwykle kolejność, w którym są one pobierane na ekranie, ale może użyć [SetButtonInfo](#setbuttoninfo) funkcja zmiana relacji między kolejności obrazu i kolejności rysowania.  
+ Kolejność w mapie bitowej jest zwykle kolejność, w którym są rysowane na ekranie, ale można użyć [SetButtonInfo](#setbuttoninfo) funkcję, aby zmienić relacji między kolejność obrazów i kolejności rysowania.  
   
- Wszystkie przycisków na pasku narzędzi mają taki sam rozmiar. Wartość domyślna to 24 x 22 piksele zgodnie z *Windows interfejsu wskazówki dotyczące projektowania oprogramowania*. Każde dodatkowe miejsce między wymiarami obrazu i przycisk służy do obramowania wokół obrazu.  
+ Wszystkie przyciski na pasku narzędzi mają taki sam rozmiar. Wartość domyślna to 24 x 22 piksele, zgodnie z *Windows interfejsu wytyczne dotyczące projektowania oprogramowania*. Dodatkowe miejsce między wymiarami obrazu i przycisk będzie stosowany do tworzenia obramowania wokół obrazu.  
   
- Każdy przycisk ma jeden obraz. Przycisk różnych stanów i style (naciśniętego, Strzałka w dół, wyłączone, wyłączona w dół i nieokreślony) są generowane na podstawie jednego obrazu. Mimo że mapy bitowe mogą być dowolnego koloru, można uzyskać najlepsze wyniki z obrazów w czerni i odcieni szarości.  
+ Każdy przycisk ma jeden obraz. Przycisk różnych stanów i style (po naciśnięciu, Strzałka w dół, wyłączone, wyłączone w dół i nieokreślone) są generowane na podstawie tego jednego obrazu. Mimo że mapy bitowe, może być dowolny kolor, można osiągnąć najlepsze rezultaty, przy użyciu obrazów czarno odcieni szarości.  
   
 > [!WARNING]
-> `CToolBar` obsługuje map bitowych z maksymalnie 16 kolorów. Podczas ładowania obrazu w edytorze paska narzędzi, Visual Studio automatycznie konwertuje obraz mapy bitowej 16 kolorów, jeśli to konieczne i wyświetla ostrzeżenie, jeśli obraz został przekonwertowany. Jeśli używasz obrazu z więcej niż 16 kolorów (przy użyciu edytora zewnętrznego do edycji obraz), może być nieoczekiwane zachowanie aplikacji.  
+> `CToolBar` obsługuje mapy bitowe z maksymalnie 16 kolorów. Podczas ładowania obrazu do paska narzędzi edytora, Visual Studio automatycznie konwertuje obraz mapy bitowej 16 kolorów, jeśli to konieczne i wyświetla ostrzeżenie, jeśli obraz został przekonwertowany. Jeśli używasz obrazu z więcej niż 16 kolorów (przy użyciu zewnętrznego edytora do edycji obraz), aplikacja może zachowywać się nieoczekiwanie.  
   
- Przyciski paska narzędzi naśladującej przycisków domyślnie. Przyciski paska narzędzi można również jednak naśladującej przycisków pola wyboru lub przycisków radiowych. Przyciski pole wyboru ma trzy stany: zaznaczone, wyczyszczone i nieokreślony. Przyciski radiowe mają tylko dwa stany: zaznaczone i wyczyszczone.  
+ Przyciski paska narzędzi naśladowania przycisków domyślnie. Jednak przycisków paska narzędzi można także naśladowania przyciski pola wyboru lub przycisków radiowych. Przyciski pole wyboru ma trzy stany: checked, wyczyszczone i nieokreślony. Przyciski radiowe przyjmować tylko dwa stany: zaznaczone, a wyczyszczone.  
   
- Aby ustawić separatora stylu lub przycisk poszczególnych bez wskazujące na tablicę, należy wywołać [GetButtonStyle](#getbuttonstyle) do pobrania stylu, a następnie wywołać [SetButtonStyle](#setbuttonstyle) zamiast `SetButtons`. `SetButtonStyle` jest najbardziej przydatna, gdy chcesz zmienić styl przycisku w czasie wykonywania.  
+ Aby ustawić indywidualne przycisku lub styl separatora bez wskazuje do tablicy, należy wywołać [GetButtonStyle](#getbuttonstyle) do pobrania styl, a następnie wywołaj [SetButtonStyle](#setbuttonstyle) zamiast `SetButtons`. `SetButtonStyle` Aby zmienić styl przycisku w czasie wykonywania, jest najbardziej przydatne.  
   
- Aby przypisać tekst wyświetlany na przycisku, należy wywołać [GetButtonText](#getbuttontext) można pobrać tekst wyświetlany na przycisku, a następnie wywołać [SetButtonText](#setbuttontext) można ustawić tekst.  
+ Aby przypisać tekst wyświetlany na przycisku, należy wywołać [GetButtonText](#getbuttontext) pobrać tekst wyświetlany na przycisku, a następnie wywołaj [SetButtonText](#setbuttontext) można ustawić tekst.  
   
- Tworzenie przycisków pole wyboru, przypisz do niego styl TBBS_CHECKBOX lub użyć `CCmdUI` obiektu `SetCheck` funkcji członkowskiej WE on_update_command_ui — program obsługi. Wywoływanie `SetCheck` włącza przycisk w przycisk pola wyboru. Przekaż `SetCheck` argumentu o wartości 0 nie jest zaznaczona, 1 dla zaznaczone lub 2 dla nieokreślony.  
+ Tworzy przycisk pola wyboru, należy ją przypisać stylu TBBS_CHECKBOX lub użyć `CCmdUI` obiektu `SetCheck` funkcja elementu członkowskiego w obsłudze ON_UPDATE_COMMAND_UI. Wywoływanie `SetCheck` przycisk jest przekształcany przycisk pola wyboru. Przekaż `SetCheck` argument 0 nie jest zaznaczone, 1 dla zaznaczony lub 2 dla nieokreślony.  
   
- Aby utworzyć przycisk radiowy, należy wywołać [CCmdUI](../../mfc/reference/ccmdui-class.md) obiektu [SetRadio](../../mfc/reference/ccmdui-class.md#setradio) funkcji członkowskiej z on_update_command_ui — program obsługi. Przekaż `SetRadio` argument 0 niezaznaczone lub niezerowe dla zaznaczone. Aby zapewnić zachowanie wykluczają się wzajemnie grupie opcji, musi mieć obsługi on_update_command_ui — dla wszystkich przycisków w grupie.  
+ Aby utworzyć przycisk radiowy, wywołaj [CCmdUI](../../mfc/reference/ccmdui-class.md) obiektu [setradio —](../../mfc/reference/ccmdui-class.md#setradio) funkcji składowej z nieprawidłowego ON_UPDATE_COMMAND_UI. Przekaż `SetRadio` argument 0 unchecked lub wartość różną od zera, aby sprawdzić. Aby zapewnić zachowanie wzajemnie wykluczających się grupą radio, musi mieć ON_UPDATE_COMMAND_UI obsługi wszystkie przyciski w grupie.  
   
- Aby uzyskać więcej informacji na temat używania `CToolBar`, zapoznaj się z artykułem [MFC — implementacja paska narzędzi](../../mfc/mfc-toolbar-implementation.md) i [techniczna 31 Uwaga: paski sterowania](../../mfc/tn031-control-bars.md).  
+ Aby uzyskać więcej informacji na temat korzystania z `CToolBar`, zapoznaj się z artykułem [MFC — implementacja paska narzędzi](../../mfc/mfc-toolbar-implementation.md) i [techniczne Uwaga 31: paski sterowania](../../mfc/tn031-control-bars.md).  
   
 ## <a name="inheritance-hierarchy"></a>Hierarchia dziedziczenia  
  [CObject](../../mfc/reference/cobject-class.md)  
@@ -158,7 +158,7 @@ class CToolBar : public CControlBar
   
  [CWnd](../../mfc/reference/cwnd-class.md)  
   
- [Ccontrolbar —](../../mfc/reference/ccontrolbar-class.md)  
+ [CControlBar](../../mfc/reference/ccontrolbar-class.md)  
   
  `CToolBar`  
   
@@ -166,7 +166,7 @@ class CToolBar : public CControlBar
  **Nagłówek:** afxext.h  
   
 ##  <a name="commandtoindex"></a>  CToolBar::CommandToIndex  
- Ta funkcja członkowska zwraca indeks pierwszego przycisku paska narzędzi, zaczynając od pozycji 0, którego identyfikator polecenia jest zgodna `nIDFind`.  
+ Ta funkcja elementu członkowskiego zwraca indeks pierwszego przycisku paska narzędzi, zaczynając od pozycji 0, o identyfikatorze polecenia zgodnym `nIDFind`.  
   
 ```  
 int CommandToIndex(UINT nIDFind) const;  
@@ -177,10 +177,10 @@ int CommandToIndex(UINT nIDFind) const;
  Identyfikator polecenia przycisku paska narzędzi.  
   
 ### <a name="return-value"></a>Wartość zwracana  
- Indeks przycisku lub -1, jeśli żaden przycisk nie uzyskał identyfikator danego polecenia.  
+ Indeks przycisk lub -1, gdy przycisk nie ma identyfikatora polecenia.  
   
 ##  <a name="create"></a>  CToolBar::Create  
- Ta funkcja członkowska tworzy pasek narzędzi (okno podrzędne) systemu Windows i kojarzy ją z `CToolBar` obiektu.  
+ Ta funkcja elementu członkowskiego Windows paska narzędzi (okno podrzędne) tworzy i kojarzy ją z `CToolBar` obiektu.  
   
 ```  
 virtual BOOL Create(
@@ -191,43 +191,43 @@ virtual BOOL Create(
   
 ### <a name="parameters"></a>Parametry  
  *pParentWnd*  
- Wskaźnik do okna, który jest elementem nadrzędnym w pasku narzędzi.  
+ Wskaźnik do okna, które jest elementem nadrzędnym w pasku narzędzi.  
   
  *dwStyle*  
- Styl toolbar. Style dodatkowych narzędzi obsługiwane są następujące:  
+ Styl paska narzędzi. Style dodatkowych narzędzi, obsługiwane są następujące:  
   
-- Pasek sterowania CBRS_TOP jest u góry okna ramki.  
+- Pasek sterowania CBRS_TOP to u góry okna ramki.  
   
 - Pasek sterowania CBRS_BOTTOM jest w dolnej części okna ramki.  
   
 - Pasek sterowania CBRS_NOALIGN nie zostaje przeniesiony, gdy zmieniany jest rozmiar obiektu nadrzędnego.  
   
-- Pasek sterowania cbrs_tooltips — Wyświetla etykietki narzędzi.  
+- Pasek sterowania CBRS_TOOLTIPS Wyświetla etykietek narzędzi.  
   
-- Pasek sterowania cbrs_size_dynamic — jest dynamiczny.  
+- Pasek sterowania CBRS_SIZE_DYNAMIC jest dynamiczny.  
   
-- Pasek sterowania cbrs_size_fixed — jest stała.  
+- Pasek sterowania CBRS_SIZE_FIXED jest stała.  
   
-- Pasek sterowania CBRS_FLOATING jest zmiennoprzecinkową.  
+- Pasek sterowania CBRS_FLOATING jest liczb zmiennoprzecinkowych.  
   
-- Pasek stanu cbrs_flyby — Wyświetla informacje o przycisku.  
+- Pasek stanu CBRS_FLYBY Wyświetla informacje o przycisku.  
   
-- Pasek sterowania CBRS_HIDE_INPLACE nie jest wyświetlana użytkownikowi.  
+- Pasek sterowania CBRS_HIDE_INPLACE są niewidoczne dla użytkownika.  
   
  *nID*  
  Identyfikator paska narzędzi okna podrzędnego.  
   
 ### <a name="return-value"></a>Wartość zwracana  
- Różna od zera, w przypadku powodzenia; w przeciwnym razie 0.  
+ Wartość różną od zera, jeśli to się powiedzie; w przeciwnym razie 0.  
   
 ### <a name="remarks"></a>Uwagi  
- Ustawia również wysokość paska narzędzi do wartości domyślnej.  
+ Ustawia również wysokość paska narzędzi na wartość domyślną.  
   
 ### <a name="example"></a>Przykład  
  [!code-cpp[NVC_MFCDocView#179](../../mfc/codesnippet/cpp/ctoolbar-class_1.cpp)]  
   
 ##  <a name="createex"></a>  CToolBar::CreateEx  
- Wywołanie tej funkcji do tworzenia paska narzędzi (okno podrzędne) systemu Windows i skojarzyć go z `CToolBar` obiektu.  
+ Wywołaj tę funkcję, aby utworzyć pasek narzędzi Windows (okno podrzędne) i powiąż ją z `CToolBar` obiektu.  
   
 ```  
 virtual BOOL CreateEx(
@@ -244,43 +244,43 @@ virtual BOOL CreateEx(
   
 ### <a name="parameters"></a>Parametry  
  *pParentWnd*  
- Wskaźnik do okna, który jest elementem nadrzędnym w pasku narzędzi.  
+ Wskaźnik do okna, które jest elementem nadrzędnym w pasku narzędzi.  
   
  *dwCtrlStyle*  
- Dodatkowe style w celu utworzenia osadzonego [CToolBarCtrl](../../mfc/reference/ctoolbarctrl-class.md) obiektu. Domyślnie ta wartość jest równa TBSTYLE_FLAT. Aby uzyskać pełną listę narzędzi style, zobacz *dwStyle*.  
+ Dodatkowe style Tworzenie osadzonego [CToolBarCtrl](../../mfc/reference/ctoolbarctrl-class.md) obiektu. Domyślnie ta wartość jest równa TBSTYLE_FLAT. Aby uzyskać pełną listę Style paska narzędzi, zobacz *dwStyle*.  
   
  *dwStyle*  
- Styl toolbar. Zobacz [formantu paska narzędzi oraz style przycisku](http://msdn.microsoft.com/library/windows/desktop/bb760439) w zestawie SDK systemu Windows lista odpowiednie style.  
+ Styl paska narzędzi. Zobacz [formantu paska narzędzi oraz style przycisku](/windows/desktop/Controls/toolbar-control-and-button-styles) w zestawie Windows SDK dla listy odpowiednie style.  
   
  *rcBorders*  
- A [CRect](../../atl-mfc-shared/reference/crect-class.md) obiektu, który definiuje szerokość obramowania okna narzędzi. Te granice są ustawioną 0,0,0,0 domyślnie, powodując w oknie narzędzi z bez obramowania.  
+ A [CRect](../../atl-mfc-shared/reference/crect-class.md) obiekt, który definiuje szerokość obramowania okna narzędzi. Te obramowania są domyślnie 0,0,0,0, powodując w oknie narzędzi z brak obramowania.  
   
  *nID*  
  Identyfikator paska narzędzi okna podrzędnego.  
   
 ### <a name="return-value"></a>Wartość zwracana  
- Różna od zera, w przypadku powodzenia; w przeciwnym razie 0.  
+ Wartość różną od zera, jeśli to się powiedzie; w przeciwnym razie 0.  
   
 ### <a name="remarks"></a>Uwagi  
- Ustawia również wysokość paska narzędzi do wartości domyślnej.  
+ Ustawia również wysokość paska narzędzi na wartość domyślną.  
   
- Użyj `CreateEx`, zamiast [Utwórz](#create)w przypadku niektórych style musi być obecny podczas tworzenia formantu paska narzędzi osadzony. Na przykład ustawić *dwCtrlStyle* do TBSTYLE_FLAT &#124; TBSTYLE_TRANSPARENT można utworzyć paska narzędzi podobny paski narzędzi programu Internet Explorer 4.  
+ Użyj `CreateEx`, zamiast [Utwórz](#create), gdy określone style musi być obecny podczas tworzenia formantu paska narzędzi osadzony. Na przykład ustawić *dwCtrlStyle* do TBSTYLE_FLAT &#124; TBSTYLE_TRANSPARENT, aby utworzyć pasek narzędzi, który przypomina pasków narzędzi programu Internet Explorer 4.  
   
 ### <a name="example"></a>Przykład  
  [!code-cpp[NVC_MFCDocView#180](../../mfc/codesnippet/cpp/ctoolbar-class_2.cpp)]  
   
 ##  <a name="ctoolbar"></a>  CToolBar::CToolBar  
- Konstruuje funkcji członkowskiej `CToolBar` obiektu i ustawia domyślne rozmiary.  
+ Ta funkcja elementu członkowskiego tworzy `CToolBar` obiektu i ustawia domyślne rozmiary.  
   
 ```  
 CToolBar();
 ```  
   
 ### <a name="remarks"></a>Uwagi  
- Wywołanie [Utwórz](#create) funkcji członkowskiej można utworzyć okna narzędzi.  
+ Wywołaj [Utwórz](#create) funkcja elementu członkowskiego, można utworzyć okna narzędzi.  
   
 ##  <a name="getbuttoninfo"></a>  CToolBar::GetButtonInfo  
- Ta funkcja elementu członkowskiego pobiera identyfikator formantu, stylu i indeks obrazu przycisku paska narzędzi lub separator w lokalizacji określonej przez *nIndex.*  
+ Ta funkcja elementu członkowskiego pobiera identyfikator kontrolki, stylu i indeks obrazu na przycisku paska narzędzi lub separatorem w lokalizacji określonej przez *nIndex.*  
   
 ```  
 void GetButtonInfo(
@@ -292,24 +292,24 @@ void GetButtonInfo(
   
 ### <a name="parameters"></a>Parametry  
  *nIndex*  
- Indeks przycisku paska narzędzi lub separatora, którego informacje ma być pobrana.  
+ Indeks przycisku paska narzędzi lub separatora, o których informacje są do pobrania.  
   
  *nID*  
- Odwołanie do UINT, która jest ustawiona na identyfikator polecenia przycisku.  
+ Odwołanie do UINT, który jest ustawiony na identyfikator polecenia przycisku.  
   
  *nStyle*  
- Odwołanie do UINT, która jest ustawiona na styl przycisku.  
+ Odwołanie do UINT, który jest ustawiony na styl przycisku.  
   
  *iImage*  
- Odwołanie do liczba całkowita, która ma ustawioną wartość indeksu obrazu przycisku w mapy bitowej.  
+ Odwołanie do liczba całkowita, która jest ustawiona na indeks obrazu na przycisku w mapie bitowej.  
   
 ### <a name="remarks"></a>Uwagi  
- Wartości te są przypisane do zmiennych odwołuje się *nID*, *nStyle*, i *iImage*. Indeks obrazu jest położenia obrazu w zawierający obrazy dla przycisków paska mapy bitowej. Pierwszy obraz jest na pozycji 0.  
+ Te wartości są przypisane do zmienne przywoływane przez *nID*, *nStyle*, i *iImage*. Indeks obrazu jest położenia obrazu w obrębie mapy bitowej, który zawiera obrazy dla przycisków paska narzędzi. Pierwszy obraz znajduje się na pozycji 0.  
   
- Jeśli *nIndex* Określa separator, *iImage* ustawiono szerokość separatora w pikselach.  
+ Jeśli *nIndex* Określa separator *iImage* jest ustawiona na separator szerokość w pikselach.  
   
 ##  <a name="getbuttonstyle"></a>  CToolBar::GetButtonStyle  
- Wywołanie tej funkcji Członkowskich pobrać styl przycisku lub separatora na pasku narzędzi.  
+ Wywołaj tę funkcję elementu członkowskiego, aby pobrać styl przycisku lub menu na pasku narzędzi.  
   
 ```  
 UINT GetButtonStyle(int nIndex) const;  
@@ -317,16 +317,16 @@ UINT GetButtonStyle(int nIndex) const;
   
 ### <a name="parameters"></a>Parametry  
  *nIndex*  
- Indeks styl przycisku lub separatora narzędzi do pobrania.  
+ Indeks styl przycisku lub separator narzędzi do pobrania.  
   
 ### <a name="return-value"></a>Wartość zwracana  
- Styl przycisku lub separatora określonego przez *nIndex*.  
+ Styl przycisku lub separator określony przez *nIndex*.  
   
 ### <a name="remarks"></a>Uwagi  
- Styl przycisku określa wygląd przycisku i sposobu odpowiedzi na dane wejściowe użytkownika. Zobacz [SetButtonStyle](#setbuttonstyle) przykłady style przycisku.  
+ Styl przycisku określa sposób wyświetlania przycisku i sposobu odpowiedzi na dane wejściowe użytkownika. Zobacz [SetButtonStyle](#setbuttonstyle) przykłady style przycisku.  
   
 ##  <a name="getbuttontext"></a>  CToolBar::GetButtonText  
- Wywołanie tej funkcji Członkowskich pobrać tekst wyświetlany na przycisku.  
+ Wywołaj tę funkcję elementu członkowskiego, aby przywrócić tekst, który jest wyświetlany na przycisku.  
   
 ```  
 CString GetButtonText(int nIndex) const;  
@@ -341,16 +341,16 @@ void GetButtonText(
  Indeks tekstu do pobrania.  
   
  *rString*  
- Odwołanie do [cstring —](../../atl-mfc-shared/reference/cstringt-class.md) obiekt, który będzie zawierać tekst, który ma zostać pobrane.  
+ Odwołanie do [CString](../../atl-mfc-shared/reference/cstringt-class.md) obiektu, który będzie zawierać tekst, który ma zostać pobrane.  
   
 ### <a name="return-value"></a>Wartość zwracana  
  A `CString` obiekt zawierający tekst przycisku.  
   
 ### <a name="remarks"></a>Uwagi  
- Drugi formularz tego elementu członkowskiego funkcji wypełnienia `CString` obiekt z ciągu tekstowego.  
+ Druga forma ten element członkowski funkcji wypełnienia `CString` obiektu z ciąg tekstu.  
   
 ##  <a name="getitemid"></a>  CToolBar::GetItemID  
- Ta funkcja elementu członkowskiego zwraca identyfikator polecenia przycisku lub separatora określonego przez *nIndex*.  
+ Ta funkcja elementu członkowskiego zwraca identyfikator polecenia przycisku lub separator określony przez *nIndex*.  
   
 ```  
 UINT GetItemID(int nIndex) const;  
@@ -358,16 +358,16 @@ UINT GetItemID(int nIndex) const;
   
 ### <a name="parameters"></a>Parametry  
  *nIndex*  
- Indeks elementu o identyfikatorze ma być pobrana.  
+ Indeks elementu, którego identyfikator jest do pobrania.  
   
 ### <a name="return-value"></a>Wartość zwracana  
- Identyfikator polecenia przycisku lub separatora określonego przez *nIndex*.  
+ Identyfikator polecenia przycisku lub separator określony przez *nIndex*.  
   
 ### <a name="remarks"></a>Uwagi  
- Separatorów zwracać ID_SEPARATOR.  
+ Separatory Zwróć ID_SEPARATOR.  
   
 ##  <a name="getitemrect"></a>  CToolBar::GetItemRect  
- Wypełnia tę funkcję elementu członkowskiego `RECT` struktury, którego adres znajduje się w *lprect —* z współrzędne przycisku lub separatora określonego przez *nIndex*.  
+ Ta funkcja elementu członkowskiego wypełnia `RECT` strukturę, której adres znajduje się w *lprect —* współrzędnych przycisku lub separator określony przez *nIndex*.  
   
 ```  
 virtual void GetItemRect(
@@ -377,21 +377,21 @@ virtual void GetItemRect(
   
 ### <a name="parameters"></a>Parametry  
  *nIndex*  
- Indeks elementu (przycisk lub separatora) współrzędnych prostokąta, których mają zostać pobrane.  
+ Indeks elementu (przycisk lub separatorem), którego współrzędne prostokąt, które mają być pobierane.  
   
  *lprect —*  
- Adres [RECT](../../mfc/reference/rect-structure1.md) struktury, która będzie zawierać współrzędne elementu.  
+ Adres [Prostokąt](../../mfc/reference/rect-structure1.md) strukturę, która będzie zawierać współrzędne elementu.  
   
 ### <a name="remarks"></a>Uwagi  
  Współrzędne są podawane w pikselach względem lewego górnego rogu paska narzędzi.  
   
- Użyj `GetItemRect` by uzyskać współrzędne separator, który chcesz zastąpić pola kombi lub inny formant.  
+ Użyj `GetItemRect` by uzyskać współrzędne separator, który ma zostać zamieniony pola kombi lub inny formant.  
   
 ### <a name="example"></a>Przykład  
   Zobacz przykład [CToolBar::SetSizes](#setsizes).  
   
 ##  <a name="gettoolbarctrl"></a>  CToolBar::GetToolBarCtrl  
- Ta funkcja członkowska umożliwia bezpośredni dostęp do podstawowych formant.  
+ Ta funkcja elementu członkowskiego umożliwia bezpośredni dostęp do podstawowych wspólnej kontroli.  
   
 ```  
 CToolBarCtrl& GetToolBarCtrl() const;  
@@ -401,15 +401,15 @@ CToolBarCtrl& GetToolBarCtrl() const;
  Odwołanie do `CToolBarCtrl` obiektu.  
   
 ### <a name="remarks"></a>Uwagi  
- Użyj `GetToolBarCtrl` korzystanie z funkcji formantu typowych narzędzi systemu Windows i korzystać z obsługi [CToolBarCtrl](../../mfc/reference/ctoolbarctrl-class.md) zapewnia pasków narzędzi.  
+ Użyj `GetToolBarCtrl` wykorzystać funkcje formantu typowego paska narzędzi Windows i korzystać z pomocy technicznej [CToolBarCtrl](../../mfc/reference/ctoolbarctrl-class.md) zapewnia dostosowywanie paska narzędzi.  
   
- Aby uzyskać więcej informacji na temat używanie formantów wspólnych, zobacz artykuł [formanty](../../mfc/controls-mfc.md) i [formanty standardowe](http://msdn.microsoft.com/library/windows/desktop/bb775493) w zestawie Windows SDK.  
+ Aby uzyskać więcej informacji o używaniu wspólnych formantów, zobacz artykuł [kontrolki](../../mfc/controls-mfc.md) i [wspólnych formantów](/windows/desktop/Controls/common-controls-intro) w zestawie Windows SDK.  
   
 ### <a name="example"></a>Przykład  
  [!code-cpp[NVC_MFCDocViewSDI#15](../../mfc/codesnippet/cpp/ctoolbar-class_3.cpp)]  
   
 ##  <a name="loadbitmap"></a>  CToolBar::LoadBitmap  
- Wywołanie tej funkcji Członkowskich załadować mapy bitowej określony przez `lpszResourceName` lub `nIDResource`.  
+ Wywołaj tę funkcję elementu członkowskiego, aby załadować mapy bitowej, określony przez `lpszResourceName` lub `nIDResource`.  
   
 ```  
 BOOL LoadBitmap(LPCTSTR lpszResourceName);  
@@ -424,16 +424,16 @@ BOOL LoadBitmap(UINT nIDResource);
  Identyfikator zasobu mapy bitowej do załadowania.  
   
 ### <a name="return-value"></a>Wartość zwracana  
- Różna od zera, w przypadku powodzenia; w przeciwnym razie 0.  
+ Wartość różną od zera, jeśli to się powiedzie; w przeciwnym razie 0.  
   
 ### <a name="remarks"></a>Uwagi  
- Mapa bitowa powinna zawierać jednego obrazu dla przycisku paska narzędzi. Jeśli obrazy nie są rozmiaru standard (16 pikseli szerokości i wysokości 15 pikseli), wywołanie [SetSizes](#setsizes) rozmiar przycisku i obrazów.  
+ Mapa bitowa może zawierać jeden obraz dla przycisku paska narzędzi. Jeśli obrazy nie są standardowy rozmiar 16 pikseli szerokości i 15 pikseli, wywołanie [SetSizes](#setsizes) można ustawić rozmiar przycisku i obrazów.  
   
 > [!WARNING]
-> `CToolBar` obsługuje map bitowych z maksymalnie 16 kolorów. Podczas ładowania obrazu w edytorze paska narzędzi, Visual Studio automatycznie konwertuje obraz mapy bitowej 16 kolorów, jeśli to konieczne i wyświetla ostrzeżenie, jeśli obraz został przekonwertowany. Jeśli używasz obrazu z więcej niż 16 kolorów (przy użyciu edytora zewnętrznego do edycji obraz), może być nieoczekiwane zachowanie aplikacji.  
+> `CToolBar` obsługuje mapy bitowe z maksymalnie 16 kolorów. Podczas ładowania obrazu do paska narzędzi edytora, Visual Studio automatycznie konwertuje obraz mapy bitowej 16 kolorów, jeśli to konieczne i wyświetla ostrzeżenie, jeśli obraz został przekonwertowany. Jeśli używasz obrazu z więcej niż 16 kolorów (przy użyciu zewnętrznego edytora do edycji obraz), aplikacja może zachowywać się nieoczekiwanie.  
   
 ##  <a name="loadtoolbar"></a>  CToolBar::LoadToolBar  
- Wywołanie tej funkcji Członkowskich załadować narzędzi określony przez *lpszResourceName* lub *nIDResource*.  
+ Wywołaj tę funkcję elementu członkowskiego, aby załadować narzędzi określony przez *lpszResourceName* lub *nIDResource*.  
   
 ```  
 BOOL LoadToolBar(LPCTSTR lpszResourceName);  
@@ -442,22 +442,22 @@ BOOL LoadToolBar(UINT nIDResource);
   
 ### <a name="parameters"></a>Parametry  
  *lpszResourceName*  
- Wskaźnik do nazwy zasobu paska narzędzi do załadowania.  
+ Wskaźnik do nazwy zasobu paska narzędzi, aby go załadować.  
   
  *nIDResource*  
  Identyfikator zasobu paska narzędzi do załadowania.  
   
 ### <a name="return-value"></a>Wartość zwracana  
- Różna od zera, w przypadku powodzenia; w przeciwnym razie 0.  
+ Wartość różną od zera, jeśli to się powiedzie; w przeciwnym razie 0.  
   
 ### <a name="remarks"></a>Uwagi  
- Zobacz [paska narzędzi edytora](../../windows/toolbar-editor.md) w Aby uzyskać więcej informacji na temat tworzenia zasobu paska narzędzi.  
+ Zobacz [Edytor paska narzędzi](../../windows/toolbar-editor.md) w Aby uzyskać więcej informacji na temat tworzenia zasobu paska narzędzi.  
   
 ### <a name="example"></a>Przykład  
   Zobacz przykład [CToolBar::CreateEx](#createex).  
   
 ##  <a name="setbitmap"></a>  CToolBar::SetBitmap  
- Wywołanie tej funkcji członkowskich można ustawić obraz mapy bitowej na pasku narzędzi.  
+ Wywołaj tę funkcję elementu członkowskiego, aby ustawić obraz mapy bitowej dla paska narzędzi.  
   
 ```  
 BOOL SetBitmap(HBITMAP hbmImageWell);
@@ -465,16 +465,16 @@ BOOL SetBitmap(HBITMAP hbmImageWell);
   
 ### <a name="parameters"></a>Parametry  
  *hbmImageWell*  
- Dojście do mapy bitowej, który jest skojarzony z paska narzędzi.  
+ Dojście do obrazu mapy bitowej, który jest skojarzony z paska narzędzi.  
   
 ### <a name="return-value"></a>Wartość zwracana  
- Różna od zera, w przypadku powodzenia; w przeciwnym razie 0.  
+ Wartość różną od zera, jeśli to się powiedzie; w przeciwnym razie 0.  
   
 ### <a name="remarks"></a>Uwagi  
- Na przykład wywołać `SetBitmap` zmiany obrazu mapy bitowej, po użytkownik wykona akcję w dokumencie, który zmienia Akcja przycisku.  
+ Na przykład wywołać `SetBitmap` zmienić obraz mapy bitowej, po użytkownik wykonuje akcję na dokument, który zmienia działanie przycisku.  
   
 ##  <a name="setbuttoninfo"></a>  CToolBar::SetButtonInfo  
- Wywołanie tej funkcji elementu członkowskiego, aby ustawić identyfikator polecenia, stylu i numer obrazu przycisku.  
+ Wywołaj tę funkcję elementu członkowskiego, aby ustawić identyfikator polecenia, styl i numer obrazu przycisku.  
   
 ```  
 void SetButtonInfo(
@@ -486,19 +486,19 @@ void SetButtonInfo(
   
 ### <a name="parameters"></a>Parametry  
  *nIndex*  
- Liczony od zera indeks przycisku lub separatora, dla którego ma być utworzony informacji.  
+ Liczony od zera indeks przycisku lub separatora, dla którego ma można ustawić informacji.  
   
  *nID*  
- Wartość, do którego jest ustawiony identyfikator polecenia przycisku.  
+ Wartość, do której jest ustawiony identyfikator polecenia przycisku.  
   
  *nStyle*  
- Styl przycisku Nowy. Obsługiwane są następujące style przycisku:  
+ Nowy styl przycisku. Obsługiwane są następujące style przycisku:  
   
-- Przycisk TBBS_BUTTON standardowe (ustawienie domyślne)  
+- Przycisk TBBS_BUTTON standardowe (domyślne)  
   
 - TBBS_SEPARATOR Separator  
   
-- Przycisk pole wyboru automatycznie TBBS_CHECKBOX  
+- Przycisk pola wyboru automatycznie TBBS_CHECKBOX  
   
 - TBBS_GROUP oznacza początek grupy przycisków  
   
@@ -511,18 +511,18 @@ void SetButtonInfo(
 - TBBS_NOPREFIX tekst przycisku nie będą mieć prefiks akceleratora skojarzonych z nim.  
   
  *iImage*  
- Nowy indeks obrazu przycisku w mapy bitowej.  
+ Nowy indeks obrazu na przycisku w mapie bitowej.  
   
 ### <a name="remarks"></a>Uwagi  
- Separatorami, których styl TBBS_SEPARATOR, ta funkcja Ustawia szerokość separatora w pikselach do wartości przechowywanej w *iImage*.  
+ Separatorami, których styl TBBS_SEPARATOR, funkcja ta Ustawia szerokość separatora w pikselach na wartość przechowywaną w *iImage*.  
   
 > [!NOTE]
->  Można również ustawić Stany przycisku przy użyciu *nStyle* parametru, ale ponieważ Stany przycisku są kontrolowane przez [on_update_command_ui —](message-map-macros-mfc.md#on_update_command_ui) obsługi, o podać można ustawić za pomocą `SetButtonInfo` zostaną utracone podczas następnego przetwarzania bezczynności. Zobacz [jak obiekty interfejsu użytkownika aktualizacji](../../mfc/how-to-update-user-interface-objects.md) i [TN031: paski sterowania](../../mfc/tn031-control-bars.md) Aby uzyskać więcej informacji.  
+>  Można również ustawić Stany przycisku przy użyciu *nStyle* parametru; Jednakże, ponieważ Stany przycisku są kontrolowane przez [ON_UPDATE_COMMAND_UI](message-map-macros-mfc.md#on_update_command_ui) obsługi żadnego stanu można ustawić za pomocą `SetButtonInfo` zostaną utracone podczas następnego przetwarzania bezczynności. Zobacz [jak obiektów interfejsu użytkownika aktualizacji](../../mfc/how-to-update-user-interface-objects.md) i [TN031: paski sterowania](../../mfc/tn031-control-bars.md) Aby uzyskać więcej informacji.  
   
- Informacje dotyczące bitmapy i przyciski, zobacz [ctoolbar —](../../mfc/reference/ctoolbar-class.md) Przegląd i [CToolBar::LoadBitmap](#loadbitmap).  
+ Aby uzyskać informacje na temat obrazy bitmapowe i przyciski, zobacz [CToolBar](../../mfc/reference/ctoolbar-class.md) Przegląd i [CToolBar::LoadBitmap](#loadbitmap).  
   
 ##  <a name="setbuttons"></a>  CToolBar::SetButtons  
- Ta funkcja członkowska Ustawia identyfikator polecenia przycisku paska narzędzi do wartości określonej przez odpowiadający mu element w tablicy *lpIDArray*.  
+ Ta funkcja elementu członkowskiego Ustawia identyfikator polecenia przycisku paska narzędzi na wartość określoną przez odpowiedni element tablicy *lpIDArray*.  
   
 ```  
 BOOL SetButtons(
@@ -535,20 +535,20 @@ BOOL SetButtons(
  Wskaźnik do tablicy identyfikatorów poleceń. Może być NULL można przydzielić pusty przycisków.  
   
  *nIDCount*  
- Liczba elementów w tablicy wskazywana przez *lpIDArray*.  
+ Liczba elementów w tablicy, wskazywana przez *lpIDArray*.  
   
 ### <a name="return-value"></a>Wartość zwracana  
- Różna od zera, w przypadku powodzenia; w przeciwnym razie 0.  
+ Wartość różną od zera, jeśli to się powiedzie; w przeciwnym razie 0.  
   
 ### <a name="remarks"></a>Uwagi  
- Jeśli element tablicy ma wartość ID_SEPARATOR, separator jest tworzony w odpowiednim miejscu paska narzędzi. Ta funkcja także ustawia styl każdego przycisku TBBS_BUTTON i styl każdego separatora TBBS_SEPARATOR i przypisuje indeks obrazu do każdego przycisku. Indeks obrazu Określa położenie obrazu przycisku w mapy bitowej.  
+ Jeśli element tablicy zawiera wartość ID_SEPARATOR, separator jest tworzony w odpowiednim miejscu na pasku narzędzi. Ta funkcja także ustawia styl każdy przycisk TBBS_BUTTON i styl każdego separatora TBBS_SEPARATOR i przypisuje indeks obrazu do każdego przycisku. Indeks obrazu Określa pozycję obrazu przycisku w mapie bitowej.  
   
- Nie trzeba przeprowadzać konta dla separatorów w mapie bitowej, ponieważ ta funkcja nie ma przypisanego indeksów obrazu dla separatorów. Jeśli pasek narzędzi z przyciskami na pozycji 0, 1 i 3 oraz separatora na pozycji nr 2, obrazów na pozycji 0, 1 i 2 w Twojej mapy bitowej są przypisane do przycisków w pozycji 0, 1 i 3, odpowiednio.  
+ Potrzebujesz konta separatorami w mapie bitowej, ponieważ ta funkcja nie ma przypisanego indeksów obrazu dla separatorów. Jeśli pasek narzędzi z przyciskami na pozycji 0, 1 i 3 oraz separator na pozycji 2, obrazy na pozycji 0, 1 i 2 w sieci mapy bitowej są przypisane do przycisków na pozycji 0, 1 i 3, odpowiednio.  
   
- Jeśli *lpIDArray* ma wartość NULL, funkcja przydziela miejsce dla liczby określone przez elementy *nIDCount*. Użyj [SetButtonInfo](#setbuttoninfo) można ustawić atrybutów każdego elementu.  
+ Jeśli *lpIDArray* ma wartość NULL, ta funkcja przydziela miejsce dla liczby elementów określonych przez *nIDCount*. Użyj [SetButtonInfo](#setbuttoninfo) ustawić atrybuty każdego elementu.  
   
 ##  <a name="setbuttonstyle"></a>  CToolBar::SetButtonStyle  
- Wywołanie funkcji członkowskiej na ustawienie stylu przycisku lub separatora lub do grupy przycisków.  
+ Wywołaj tę funkcję elementu członkowskiego, aby ustawić styl przycisku lub separatora lub do grupy przycisków.  
   
 ```  
 void SetButtonStyle(
@@ -558,16 +558,16 @@ void SetButtonStyle(
   
 ### <a name="parameters"></a>Parametry  
  *nIndex*  
- Indeks przycisku lub separatora, którego informacje ma być utworzony.  
+ Indeks przycisku lub separatora, o których informacje jest ustawienie.  
   
  *nStyle*  
  Styl przycisku. Obsługiwane są następujące style przycisku:  
   
-- Przycisk TBBS_BUTTON standardowe (ustawienie domyślne)  
+- Przycisk TBBS_BUTTON standardowe (domyślne)  
   
 - TBBS_SEPARATOR Separator  
   
-- Przycisk pole wyboru automatycznie TBBS_CHECKBOX  
+- Przycisk pola wyboru automatycznie TBBS_CHECKBOX  
   
 - TBBS_GROUP oznacza początek grupy przycisków  
   
@@ -580,15 +580,15 @@ void SetButtonStyle(
 - TBBS_NOPREFIX tekst przycisku nie będzie miał prefiks akceleratora skojarzonych z nim  
   
 ### <a name="remarks"></a>Uwagi  
- Styl przycisku określa wygląd przycisku i sposobu odpowiedzi na dane wejściowe użytkownika.  
+ Styl przycisku określa sposób wyświetlania przycisku i sposobu odpowiedzi na dane wejściowe użytkownika.  
   
- Przed wywołaniem `SetButtonStyle`, wywołaj [GetButtonStyle](#getbuttonstyle) funkcji członkowskiej pobrać styl przycisku lub separatora.  
+ Przed wywołaniem `SetButtonStyle`, wywołaj [GetButtonStyle](#getbuttonstyle) funkcję elementu członkowskiego, aby pobrać styl przycisku lub separatora.  
   
 > [!NOTE]
->  Można również ustawić Stany przycisku przy użyciu *nStyle* parametru, ale ponieważ Stany przycisku są kontrolowane przez [on_update_command_ui —](message-map-macros-mfc.md#on_update_command_ui) obsługi, o podać można ustawić za pomocą `SetButtonStyle` zostaną utracone podczas następnego przetwarzania bezczynności. Zobacz [jak obiekty interfejsu użytkownika aktualizacji](../../mfc/how-to-update-user-interface-objects.md) i [TN031: paski sterowania](../../mfc/tn031-control-bars.md) Aby uzyskać więcej informacji.  
+>  Można również ustawić Stany przycisku przy użyciu *nStyle* parametru; Jednakże, ponieważ Stany przycisku są kontrolowane przez [ON_UPDATE_COMMAND_UI](message-map-macros-mfc.md#on_update_command_ui) obsługi żadnego stanu można ustawić za pomocą `SetButtonStyle` zostaną utracone podczas następnego przetwarzania bezczynności. Zobacz [jak obiektów interfejsu użytkownika aktualizacji](../../mfc/how-to-update-user-interface-objects.md) i [TN031: paski sterowania](../../mfc/tn031-control-bars.md) Aby uzyskać więcej informacji.  
   
 ##  <a name="setbuttontext"></a>  CToolBar::SetButtonText  
- Wywołanie tej funkcji, aby ustawić tekst na przycisku.  
+ Wywołaj tę funkcję, aby ustawić tekst na przycisku.  
   
 ```  
 BOOL SetButtonText(
@@ -598,19 +598,19 @@ BOOL SetButtonText(
   
 ### <a name="parameters"></a>Parametry  
  *nIndex*  
- Indeks przycisk, którego tekst jest do ustawienia.  
+ Indeks przycisku, którego tekst jest do ustawienia.  
   
  *lpszText*  
  Wskazuje tekst, który ma być ustawiony na przycisku.  
   
 ### <a name="return-value"></a>Wartość zwracana  
- Różna od zera, w przypadku powodzenia; w przeciwnym razie 0.  
+ Wartość różną od zera, jeśli to się powiedzie; w przeciwnym razie 0.  
   
 ### <a name="example"></a>Przykład  
   Zobacz przykład [CToolBar::GetToolBarCtrl](#gettoolbarctrl).  
   
 ##  <a name="setheight"></a>  CToolBar::SetHeight  
- Ta funkcja członkowska Ustawia wysokość paska narzędzi wartość w pikselach, określona w *cyHeight*.  
+ Ta funkcja elementu członkowskiego Ustawia wysokość paska narzędzi na wartość w pikselach, określone w *cyHeight*.  
   
 ```  
 void SetHeight(int cyHeight);
@@ -618,15 +618,15 @@ void SetHeight(int cyHeight);
   
 ### <a name="parameters"></a>Parametry  
  *cyHeight*  
- Wysokość w pikselach paska narzędzi.  
+ Wysokość w pikselach, na pasku narzędzi.  
   
 ### <a name="remarks"></a>Uwagi  
- Po wywołaniu [SetSizes](#setsizes), użyj funkcji członkowskiej, aby przesłonić wysokość standardowym pasku narzędzi. Gdy wysokość jest za mały, przyciski zostaną przycięte u dołu.  
+ Po wywołaniu [SetSizes](#setsizes), użyj tej funkcji elementu członkowskiego, aby przesłonić wysokość standardowego paska narzędzi. Gdy wysokość jest zbyt mały, przyciski zostaną przycięte u dołu.  
   
- Jeśli ta funkcja nie jest wywoływana, platformę używa rozmiaru przycisku do ustalenia wysokość paska narzędzi.  
+ Jeśli ta funkcja nie jest wywoływana, struktura używa rozmiar przycisku, aby określić wysokość paska narzędzi.  
   
 ##  <a name="setsizes"></a>  CToolBar::SetSizes  
- Wywołanie tej funkcji Członkowskich ustawioną przycisków paska narzędzi rozmiar w pikselach, określona w *sizeButton*.  
+ Wywołaj tę funkcję elementu członkowskiego, aby ustawić przycisków paska narzędzi na rozmiar w pikselach, określone w *sizeButton*.  
   
 ```  
 void SetSizes(
@@ -642,18 +642,18 @@ void SetSizes(
  Rozmiar każdego obrazu w pikselach.  
   
 ### <a name="remarks"></a>Uwagi  
- *SizeImage* parametr może zawierać rozmiar w pikselach obrazów w pasku narzędzi mapy bitowej. Wymiary w *sizeButton* musi być wystarczająca do przechowywania obrazu oraz 7 pikseli dodatkowe szerokości i 6 pikseli dodatkowe w wysokości. Ta funkcja także Ustawia wysokość paska narzędzi do przycisków.  
+ *SizeImage* parametr musi zawierać rozmiar w pikselach, obrazy w pasku narzędzi mapy bitowej. Wymiary w *sizeButton* musi być wystarczająca do przechowywania obrazu, a także dodatkowe szerokość 7 pikseli i 6 pikseli dodatkowe wysokość. Ta funkcja spowoduje także ustawienie wysokość paska narzędzi do przycisków.  
   
- Wywołanie tej funkcji Członkowskich tylko dla pasków narzędzi, które nie są zgodne *Windows interfejsu wskazówki dotyczące projektowania oprogramowania* zalecenia dotyczące rozmiarów button i image.  
+ Wywołaj tę funkcję elementu członkowskiego tylko dla pasków narzędzi, które nie podlegają *Windows interfejsu wytyczne dotyczące projektowania oprogramowania* zaleceń dotyczących rozmiarów przycisku i obrazów.  
   
 ### <a name="example"></a>Przykład  
  [!code-cpp[NVC_MFCListView#8](../../atl/reference/codesnippet/cpp/ctoolbar-class_4.cpp)]  
   
 ## <a name="see-also"></a>Zobacz też  
- [Przykładowe MFC CTRLBARS](../../visual-cpp-samples.md)   
+ [Próbki MFC CTRLBARS](../../visual-cpp-samples.md)   
  [DLGCBR32 próbki MFC](../../visual-cpp-samples.md)   
- [Przykładowe MFC DOCKTOOL](../../visual-cpp-samples.md)   
+ [Próbki MFC DOCKTOOL](../../visual-cpp-samples.md)   
  [Ccontrolbar — klasa](../../mfc/reference/ccontrolbar-class.md)   
  [Diagram hierarchii](../../mfc/hierarchy-chart.md)   
- [Ctoolbarctrl — klasa](../../mfc/reference/ctoolbarctrl-class.md)   
+ [Klasa CToolBarCtrl](../../mfc/reference/ctoolbarctrl-class.md)   
  [Klasa CControlBar](../../mfc/reference/ccontrolbar-class.md)

@@ -20,12 +20,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 19c302f08485b6db89ea2a6b66106244ed95b48c
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: dd6f4eed4cefba16d95baabe38fc5268c0ae8512
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42601741"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43216442"
 ---
 # <a name="platformobject-class"></a>Platform::Object, klasa
 Zapewnia zachowanie wspólnej klasy i struktury ref w aplikacjach Windows Runtime odwołania. Wszystkie klasy referencyjnej i wystąpienia struktury ref są niejawnie konwertowane na Platform::Object ^, można zmienić jego metody ToString wirtualnej.  
@@ -119,7 +119,7 @@ Object::GetType()
 ### <a name="remarks"></a>Uwagi  
  Statyczne [Type::GetTypeCode](../cppcx/platform-type-class.md#gettypecode) pozwala uzyskać [Platform::TypeCode, wyliczenie](../cppcx/platform-typecode-enumeration.md) wartość, która reprezentuje bieżący typ. Najczęściej jest to użyteczne dla wbudowanych typów. Kod typu dla każdej klasy ref, oprócz [Platform::String](../cppcx/platform-string-class.md) jest obiektem (1).  
   
- [Windows::UI::Xaml::Interop::TypeName](http://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.interop.typename.aspx) klasa jest używana w interfejsach API Windows jako niezależny od języka sposób przekazywania informacji o typie między składnikami Windows i aplikacji. T[Platform::Type, klasa](../cppcx/platform-type-class.md) ma operatory konwersji między `Type` i `TypeName`.  
+ [Windows::UI::Xaml::Interop::TypeName](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.interop.typename.aspx) klasa jest używana w interfejsach API Windows jako niezależny od języka sposób przekazywania informacji o typie między składnikami Windows i aplikacji. T[Platform::Type, klasa](../cppcx/platform-type-class.md) ma operatory konwersji między `Type` i `TypeName`.  
   
  Użyj [typeid](../windows/typeid-cpp-component-extensions.md) operator, aby zwrócić `Platform::Type` obiektu dla nazwy klasy, na przykład podczas przechodzenia między stronami XAML:  
   

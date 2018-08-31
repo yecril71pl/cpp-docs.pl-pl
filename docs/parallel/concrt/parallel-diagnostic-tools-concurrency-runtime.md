@@ -14,12 +14,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bb41f9630e22d9067743b106aed49ea9c51ee4ae
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: 6243bd4167ec640553a6cb55d7d6f67319315e19
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42465798"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43217349"
 ---
 # <a name="parallel-diagnostic-tools-concurrency-runtime"></a>Równoległe narzędzia diagnostyczne (współbieżność środowiska wykonawczego)
 Program Visual Studio zapewnia rozbudowaną obsługę debugowania i profilowania aplikacji wielowątkowych.  
@@ -31,7 +31,7 @@ Program Visual Studio zapewnia rozbudowaną obsługę debugowania i profilowania
  Narzędzia profilowania zapewniają trzy widoki danych, które wyświetlają graficzne, tabelaryczne i numeryczne informacji na temat współdziałania aplikacji wielowątkowych z samym sobą oraz z innymi programami. Widoki umożliwiają szybko zidentyfikować obszary zainteresowania i można przejść z punktów na graficzny Wyświetla wywołać stosów wywołań witryny i kod źródłowy. Aby uzyskać więcej informacji, zobacz [Concurrency Visualizer](/visualstudio/profiling/concurrency-visualizer).  
   
 ## <a name="event-tracing"></a>Śledzenie zdarzeń  
- Środowisko uruchomieniowe współbieżności używa [Event Tracing for Windows](http://msdn.microsoft.com/library/windows/desktop/bb968803) (ETW), aby powiadomić narzędzia instrumentacji, takie jak profilerów, po wystąpieniu różnych zdarzeń. Te zdarzenia obejmują podczas harmonogramu jest aktywowane lub dezaktywowane, kontekst zaczyna się, kończy się, blokuje, odblokowuje lub daje i gdy algorytmu równoległego, rozpoczyna się lub kończy.  
+ Środowisko uruchomieniowe współbieżności używa [Event Tracing for Windows](/windows/desktop/ETW/event-tracing-portal) (ETW), aby powiadomić narzędzia instrumentacji, takie jak profilerów, po wystąpieniu różnych zdarzeń. Te zdarzenia obejmują podczas harmonogramu jest aktywowane lub dezaktywowane, kontekst zaczyna się, kończy się, blokuje, odblokowuje lub daje i gdy algorytmu równoległego, rozpoczyna się lub kończy.  
   
  Narzędzia takie jak [Concurrency Visualizer](/visualstudio/profiling/concurrency-visualizer) korzystanie z tej funkcji; w związku z tym, zwykle nie trzeba pracować z tych zdarzeń bezpośrednio. Jednak te zdarzenia są przydatne, gdy tworzysz niestandardowy program profilujący lub jeśli używasz narzędzia śledzenia zdarzeń takich jak [Xperf](http://go.microsoft.com/fwlink/p/?linkid=160628).  
   

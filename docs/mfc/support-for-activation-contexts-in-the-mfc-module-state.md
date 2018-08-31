@@ -15,44 +15,44 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2713e0025c0587a4ab76813d4d07eed0825db447
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 6116452a3fa0fabc2b2f458c4c597e103607aafe
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33380712"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43217717"
 ---
 # <a name="support-for-activation-contexts-in-the-mfc-module-state"></a>Obsługa kontekstów aktywacji w stanie modułu MFC
-MFC tworzy kontekst aktywacji przy użyciu zasobu manifestu podana przez moduł użytkownika. Aby uzyskać więcej informacji dotyczących sposobu tworzenia kontekstów aktywacji zobacz następujące tematy:  
+MFC tworzy kontekst aktywacji przy użyciu zasobu manifestu, dostarczone przez użytkownika moduł. Aby uzyskać więcej informacji dotyczących tworzenia kontekstów aktywacji zobacz następujące tematy:  
   
--   [Konteksty aktywacji](http://msdn.microsoft.com/library/aa374153)  
+-   [Konteksty aktywacji](/windows/desktop/SbsCs/activation-contexts)  
   
--   [Manifesty aplikacji](http://msdn.microsoft.com/library/aa374191)  
+-   [Manifesty aplikacji](/windows/desktop/SbsCs/application-manifests)  
   
--   [Manifesty](http://msdn.microsoft.com/library/aa374219)  
+-   [Manifesty](/windows/desktop/SbsCs/assembly-manifests)  
   
 ## <a name="remarks"></a>Uwagi  
- Podczas odczytywania w tych tematach zestaw Windows SDK, należy pamiętać, podobny kontekst aktywacji zestawu Windows SDK w mechanizm kontekstu aktywacji MFC, z wyjątkiem MFC nie używa interfejsu API systemu Windows SDK aktywacji kontekstu.  
+ Czytając te tematy zestawu Windows SDK, należy pamiętać, że mechanizm kontekst aktywacji MFC przypomina kontekst aktywacji zestawu Windows SDK z tą różnicą, że MFC nie korzysta z interfejsu API Windows SDK aktywacji kontekstu.  
   
- Kontekst aktywacji działa w aplikacjach MFC, użytkownik biblioteki dll i biblioteki DLL rozszerzenia MFC w następujący sposób:  
+ Kontekst aktywacji działa w aplikacjach MFC, użytkownik bibliotek DLL i bibliotek DLL rozszerzeń MFC w następujący sposób:  
   
--   Aplikacje MFC używać zasobów ID 1 ich zasobu manifestu. W takim przypadku MFC nie tworzy własny kontekst aktywacji, ale korzysta z domyślnego kontekstu aplikacji.  
+-   Resource ID 1 jest używana w aplikacjach MFC do swojego zasobu manifestu. W tym przypadku MFC nie tworzy kontekst aktywacji, ale używa domyślnego kontekstu aplikacji.  
   
--   Użytkownik MFC biblioteki DLL zasobu identyfikator 2 przy użyciu ich zasobu manifestu. W tym miejscu MFC tworzy kontekstu aktywacji dla każdej biblioteki DLL użytkownika, więc inny użytkownik bibliotek DLL, możesz użyć innej wersji tego samego bibliotek (na przykład biblioteki formantów wspólnych).  
+-   Użytkownik MFC dll na użytek resource ID 2 ich zasobu manifestu. W tym miejscu MFC tworzy kontekst aktywacji dla każdej biblioteki DLL użytkownika, więc inny użytkownik bibliotek DLL, można użyć różnych wersji tej samej biblioteki (na przykład, Biblioteka formantów standardowych).  
   
--   Biblioteki DLL rozszerzenia MFC polegają na ich hostingu aplikacji lub użytkownika biblioteki dll do ustanawiania ich kontekstu aktywacji.  
+-   Biblioteki DLL rozszerzeń MFC, zależy od hostingu aplikacji lub użytkownika biblioteki DLL nawiązać ich kontekstu aktywacji.  
   
- Mimo że można modyfikować stanu kontekstu aktywacji przy użyciu procesów opisana w sekcji [przy użyciu interfejsu API kontekstu aktywacji](http://msdn.microsoft.com/library/aa376620), przy użyciu mechanizmu kontekstu aktywacji MFC mogą być przydatne podczas opracowywania oparte na bibliotekach DLL dodatku plug-in architektury Jeżeli nie jest łatwo (lub nie jest możliwe) do ręcznie przełączać stan aktywacji przed i po poszczególnych wywołań zewnętrznych wtyczek.  
+ Mimo, że stan kontekst aktywacji można modyfikować przy użyciu procesu opisanego w sekcji [przy użyciu interfejsu API kontekst aktywacji](/windows/desktop/SbsCs/using-the-activation-context-api), przy użyciu mechanizmu kontekst aktywacji MFC mogą być przydatne podczas tworzenia oparte na bibliotekach DLL dodatku plug-in architektury Jeżeli nie jest proste (lub nie jest możliwe) ręcznie przełączać stan aktywacji przed i po poszczególnych wywołań dla zewnętrznej wtyczki.  
   
- Kontekst aktywacji jest tworzony w [afxwininit —](../mfc/reference/application-information-and-management.md#afxwininit). Zostanie zniszczony w `AFX_MODULE_STATE` destruktora. Uchwyt kontekstu aktywacji jest przechowywany w `AFX_MODULE_STATE`. (`AFX_MODULE_STATE` jest opisany w [AfxGetStaticModuleState —](reference/extension-dll-macros.md#afxgetstaticmodulestate).)  
+ Kontekst aktywacji jest tworzony w [afxwininit —](../mfc/reference/application-information-and-management.md#afxwininit). Zostanie zniszczony w `AFX_MODULE_STATE` destruktora. Uchwyt kontekstu aktywacji jest przechowywany w `AFX_MODULE_STATE`. (`AFX_MODULE_STATE` jest opisana w [AfxGetStaticModuleState —](reference/extension-dll-macros.md#afxgetstaticmodulestate).)  
   
- [Afx_manage_state —](reference/extension-dll-macros.md#afx_manage_state) makro aktywuje i dezaktywuje kontekstu aktywacji. `AFX_MANAGE_STATE` jest włączone dla statycznych biblioteki MFC, jak również biblioteki DLL MFC, aby umożliwić kod wykonywany w kontekście prawidłowego aktywacji wybrane przez użytkownika biblioteki DLL MFC.  
+ [AFX_MANAGE_STATE](reference/extension-dll-macros.md#afx_manage_state) makro aktywuje i dezaktywuje kontekstu aktywacji. `AFX_MANAGE_STATE` jest włączona dla bibliotek MFC statycznych, a także biblioteki MFC DLL MFC kodu do wykonania w kontekście właściwej aktywacji wybranych przez użytkownika pliku DLL.  
   
 ## <a name="see-also"></a>Zobacz też  
- [Konteksty aktywacji](http://msdn.microsoft.com/library/aa374153)   
- [Manifesty aplikacji](http://msdn.microsoft.com/library/aa374191)   
- [Manifesty](http://msdn.microsoft.com/library/aa374219)   
+ [Konteksty aktywacji](/windows/desktop/SbsCs/activation-contexts)   
+ [Manifesty aplikacji](/windows/desktop/SbsCs/application-manifests)   
+ [Manifesty](/windows/desktop/SbsCs/assembly-manifests)   
  [Afxwininit —](../mfc/reference/application-information-and-management.md#afxwininit)   
  [AfxGetStaticModuleState —](reference/extension-dll-macros.md#afxgetstaticmodulestate)   
- [AFX_MANAGE_STATE —](reference/extension-dll-macros.md#afx_manage_state)
+ [AFX_MANAGE_STATE](reference/extension-dll-macros.md#afx_manage_state)
 

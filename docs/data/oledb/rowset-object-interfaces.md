@@ -19,12 +19,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 177f3110b2bc782093a91ee9dfaa560843791b5c
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: 2050a444ca228554cfbb3b6bba2693c55e53c4a2
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42466243"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43217553"
 ---
 # <a name="rowset-object-interfaces"></a>Interfejsy obiektu zestawu wierszy
 W poniższej tabeli przedstawiono interfejsów obowiązkowych i opcjonalnych, zdefiniowane przez OLE DB dla obiektu zestawu wierszy.  
@@ -39,7 +39,7 @@ W poniższej tabeli przedstawiono interfejsów obowiązkowych i opcjonalnych, zd
 |[IChapteredRowset](/previous-versions/windows/desktop/ms718180\(v=vs.85\))|Optional|Nie|  
 |[IColumnsInfo2](/previous-versions/windows/desktop/ms712953\(v=vs.85\))|Optional|Nie|  
 |[IColumnsRowset](/previous-versions/windows/desktop/ms722657\(v=vs.85\))|Optional|Nie|  
-|[IConnectionPointContainer](http://msdn.microsoft.com/library/windows/desktop/ms683857)|Optional|Tak (za pośrednictwem ATL)|  
+|[IConnectionPointContainer](/windows/desktop/api/ocidl/nn-ocidl-iconnectionpointcontainer)|Optional|Tak (za pośrednictwem ATL)|  
 |[IDBAsynchStatus](/previous-versions/windows/desktop/ms709832\(v=vs.85\))|Optional|Nie|  
 |[IGetRow](/previous-versions/windows/desktop/ms718047\(v=vs.85\))|Optional|Nie|  
 |[IRowsetChange](/previous-versions/windows/desktop/ms715790\(v=vs.85\))|Optional|Tak|  

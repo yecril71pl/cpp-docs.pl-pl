@@ -24,12 +24,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cf1f012067c3a3b85dd5168cf93521e4b2024e00
-ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
+ms.openlocfilehash: d578aeea847ff04bf29fab11ecf7db2a1776b04f
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37884051"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43217606"
 ---
 # <a name="iconnectionpointimpl-class"></a>Klasa IConnectionPointImpl
 Ta klasa implementuje punkt połączenia.  
@@ -96,7 +96,7 @@ STDMETHOD(Advise)(
 ### <a name="remarks"></a>Uwagi  
  Użyj [Unadvise](#unadvise) zakończenie wywołania połączenia.  
   
- Zobacz [IConnectionPoint::Advise](http://msdn.microsoft.com/library/windows/desktop/ms678815) w Windows SDK.  
+ Zobacz [IConnectionPoint::Advise](/windows/desktop/api/ocidl/nf-ocidl-iconnectionpoint-advise) w Windows SDK.  
   
 ##  <a name="enumconnections"></a>  IConnectionPointImpl::EnumConnections  
  Tworzy moduł wyliczający do iterowania po połączeń dla punktu połączenia.  
@@ -106,7 +106,7 @@ STDMETHOD(EnumConnections)(IEnumConnections** ppEnum);
 ```  
   
 ### <a name="remarks"></a>Uwagi  
- Zobacz [IConnectionPoint::EnumConnections](http://msdn.microsoft.com/library/windows/desktop/ms680755) w Windows SDK.  
+ Zobacz [IConnectionPoint::EnumConnections](/windows/desktop/api/ocidl/nf-ocidl-iconnectionpoint-enumconnections) w Windows SDK.  
   
 ##  <a name="getconnectioninterface"></a>  IConnectionPointImpl::GetConnectionInterface  
  Pobiera identyfikator IID interfejsu, reprezentowane przez punkt połączenia.  
@@ -116,7 +116,7 @@ STDMETHOD(GetConnectionInterface)(IID* piid2);
 ```  
   
 ### <a name="remarks"></a>Uwagi  
- Zobacz [IConnectionPoint::GetConnectionInterface](http://msdn.microsoft.com/library/windows/desktop/ms693468) w Windows SDK.  
+ Zobacz [IConnectionPoint::GetConnectionInterface](/windows/desktop/api/ocidl/nf-ocidl-iconnectionpoint-getconnectioninterface) w Windows SDK.  
   
 ##  <a name="getconnectionpointcontainer"></a>  IConnectionPointImpl::GetConnectionPointContainer  
  Pobiera wskaźnik interfejsu do składnika obiektu.  
@@ -126,7 +126,7 @@ STDMETHOD(GetConnectionPointContainer)(IConnectionPointContainer** ppCPC);
 ```  
   
 ### <a name="remarks"></a>Uwagi  
- Zobacz [IConnectionPoint::GetConnectionPointContainer](http://msdn.microsoft.com/library/windows/desktop/ms679669) w Windows SDK.  
+ Zobacz [IConnectionPoint::GetConnectionPointContainer](/windows/desktop/api/ocidl/nf-ocidl-iconnectionpoint-getconnectionpointcontainer) w Windows SDK.  
   
 ##  <a name="m_vec"></a>  IConnectionPointImpl::m_vec  
  Zarządza połączeniami między obiektu punktu połączenia i ujścia.  
@@ -146,8 +146,8 @@ STDMETHOD(Unadvise)(DWORD dwCookie);
 ```  
   
 ### <a name="remarks"></a>Uwagi  
- Zobacz [IConnectionPoint::Unadvise](http://msdn.microsoft.com/library/windows/desktop/ms686608) w Windows SDK.  
+ Zobacz [IConnectionPoint::Unadvise](/windows/desktop/api/ocidl/nf-ocidl-iconnectionpoint-unadvise) w Windows SDK.  
   
 ## <a name="see-also"></a>Zobacz też  
- [IConnectionPoint](http://msdn.microsoft.com/library/windows/desktop/ms694318)   
+ [IConnectionPoint](/windows/desktop/api/ocidl/nn-ocidl-iconnectionpoint)   
  [Klasa — Przegląd](../../atl/atl-class-overview.md)

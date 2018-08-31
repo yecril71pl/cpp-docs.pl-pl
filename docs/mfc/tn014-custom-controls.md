@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e7ab10a6c0c53bd9aba87ddea594e689b3142b4c
-ms.sourcegitcommit: 76fd30ff3e0352e2206460503b61f45897e60e4f
+ms.openlocfilehash: 67dab7c8e280f8fbbdcc66beef031d1e9430ac1f
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/13/2018
-ms.locfileid: "39027264"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43215811"
 ---
 # <a name="tn014-custom-controls"></a>TN014: formanty niestandardowe
 
@@ -122,7 +122,7 @@ Najbardziej typowym przykładem własnym rysowania przycisk to przycisk mapy bit
 
 Od czasu do czasu można zmienić funkcjonalność obiektu, który już istnieje. Poprzednie przykłady wymaga dostosować formanty, zanim zostały one utworzone. Dynamiczne podklasy umożliwia dostosowywanie formantu, który został już utworzony.
 
-Podklasy to termin Windows w celu zastąpienia [WndProc](http://msdn.microsoft.com/94ba8ffa-3c36-46d4-ac74-9bd10b1ffd26) okna z niestandardową `WndProc` i wywoływania starego `WndProc` dla funkcje domyślne.
+Podklasy to termin Windows w celu zastąpienia [WndProc](https://msdn.microsoft.com/94ba8ffa-3c36-46d4-ac74-9bd10b1ffd26) okna z niestandardową `WndProc` i wywoływania starego `WndProc` dla funkcje domyślne.
 
 To nie należy mylić z pochodnym klasy języka C++. Wyjaśniające, warunki C++ *klasy bazowej* i *klasy pochodnej* są analogiczne do *superklasie* i *podklasy* w Windows model obiektu. C++ Tworzenie wartości pochodnych z podklasy MFC i Windows są podobne, z wyjątkiem C++ nie obsługuje podklasy dynamicznych.
 

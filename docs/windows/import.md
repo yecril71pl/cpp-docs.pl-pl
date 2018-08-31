@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 2ba62d3dfc1f71ab61b5041ebbd884be8b5e39f6
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 78bfc20bd88aa9691c80483c8c315cd5305d7b96
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42592667"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43216594"
 ---
 # <a name="import"></a>import
 
@@ -43,7 +43,7 @@ Nazwa pliku .idl, który ma zostać zaimportowany do biblioteki typów w bieżą
 
 ## <a name="remarks"></a>Uwagi
 
-**Zaimportować** atrybut C++ powoduje `#import` instrukcję, aby umieszczona pod `import "docobj.idl"` instrukcja w pliku .idl wygenerowany. **Zaimportować** atrybut ma taką samą funkcjonalność jak [zaimportować](http://msdn.microsoft.com/library/windows/desktop/aa367047) atrybutów w MIDL.
+**Zaimportować** atrybut C++ powoduje `#import` instrukcję, aby umieszczona pod `import "docobj.idl"` instrukcja w pliku .idl wygenerowany. **Zaimportować** atrybut ma taką samą funkcjonalność jak [zaimportować](/windows/desktop/Midl/import) atrybutów w MIDL.
 
 **Zaimportować** atrybutu tylko umieszcza określonego pliku w pliku .idl, który zostanie wygenerowany w projekcie; **zaimportować** atrybutu nie zezwala na wywołania konstrukcje w określonym pliku z kodem źródłowym w projekcie.  Aby wywołać konstrukcje w określonym pliku z kodem źródłowym w projekcie, albo użyć [#import](../preprocessor/hash-import-directive-cpp.md) i `embedded_idl` lub atrybut może znajdować się plik .h dla *idl_file*, jeśli istnieje plik .h klasy.
 

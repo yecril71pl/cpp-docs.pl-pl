@@ -9,12 +9,12 @@ f1_keywords:
 ms.assetid: d1af4b56-9a95-4c65-ab01-bf43e982c7bd
 author: corob-msft
 ms.author: corob
-ms.openlocfilehash: 327e37d1f13691eca049c98e8b1ab314b393a608
-ms.sourcegitcommit: b92ca0b74f0b00372709e81333885750ba91f90e
+ms.openlocfilehash: 11c4f3d1c994ee7a29ee47e35881d533f8c8715a
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/16/2018
-ms.locfileid: "42464495"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43216191"
 ---
 # <a name="ltnewgt-operators"></a>&lt;nowe&gt; operatorów
 
@@ -45,7 +45,7 @@ void operator delete(void* ptr,
 
 Pierwsza funkcja jest wywoływana przez wyrażenie delete do renderowania wartości *ptr* nieprawidłowy. Program można zdefiniować funkcję podpisem tej funkcji, która zastępuje domyślną wersję definicją standardowej biblioteki języka C++. Wymagane zachowanie ma akceptować wartości *ptr* oznacza to wartość null lub który został zwrócony przez wcześniejsze wywołanie [nowy operator](../standard-library/new-operators.md#op_new)(**size_t**).
 
-Domyślne zachowanie dla wartości null *ptr* się nic nie rób. Każda inna wartość *ptr* musi być wartością wcześniej zwracany przez wywołanie, jak opisano wcześniej. Domyślne zachowanie dla wartości innej niż null wartości elementu *ptr* się odzyskać Magazyn przydzielony przez wcześniejsze wywołanie elementu. Jest nieokreślony, pod jakimi warunkami część lub całość takiego odzyskiwanego magazynu jest przydzielany przez kolejne wywołanie `operator new`(**size_t**), lub dowolnych `calloc`( **size_t**), `malloc`( **size_t**), lub `realloc`( **void\***, **size_t**).
+Domyślne zachowanie dla wartości null *ptr* się nic nie rób. Każda inna wartość *ptr* musi być wartością wcześniej zwracany przez wywołanie, jak opisano wcześniej. Domyślne zachowanie dla wartości innej niż null wartości elementu *ptr* się odzyskać Magazyn przydzielony przez wcześniejsze wywołanie elementu. Jest nieokreślony, pod jakimi warunkami część lub całość takiego odzyskiwanego magazynu jest przydzielany przez kolejne wywołanie `operator new`(**size_t**), lub dowolnych `calloc`( **size_t**), `malloc`( **size_t**), lub `realloc`( **void**<strong>\*</strong>, **size_t**).
 
 Druga funkcja jest wywoływana przez wyrażenie usunięcia położenia odpowiadający nowe wyrażenie w formie **nowe**( **std::size_t**). Nic nie robi.
 
@@ -75,7 +75,7 @@ void operator delete[](void* ptr,
 
 ### <a name="remarks"></a>Uwagi
 
-Pierwsza funkcja jest wywoływana przez `delete[]` wyrażenia do renderowania wartości *ptr* nieprawidłowy. Funkcja jest wymienny, ponieważ program można zdefiniować funkcję podpisem tej funkcji, która zastępuje domyślną wersję definicją standardowej biblioteki C++. Wymagane zachowanie ma akceptować wartości *ptr* oznacza to wartość null lub który został zwrócony przez wcześniejsze wywołanie [nowy operator&#91;&#93;](../standard-library/new-operators.md#op_new_arr)(**size_t**). Domyślne zachowanie dla wartości null *ptr* się nic nie rób. Każda inna wartość *ptr* musi być wartością wcześniej zwracany przez wywołanie, jak opisano wcześniej. Domyślne zachowanie dla wartości innej niż null wartości elementu *ptr* się odzyskać Magazyn przydzielony przez wcześniejsze wywołanie elementu. Jest nieokreślony, pod jakimi warunkami część lub całość takiego odzyskiwanego magazynu jest przydzielany przez kolejne wywołanie [nowy operator](../standard-library/new-operators.md#op_new)(**size_t**), lub dowolnych `calloc`(**size_t**), `malloc`(**size_t**), lub `realloc`( **void\***, **size_t**).
+Pierwsza funkcja jest wywoływana przez `delete[]` wyrażenia do renderowania wartości *ptr* nieprawidłowy. Funkcja jest wymienny, ponieważ program można zdefiniować funkcję podpisem tej funkcji, która zastępuje domyślną wersję definicją standardowej biblioteki C++. Wymagane zachowanie ma akceptować wartości *ptr* oznacza to wartość null lub który został zwrócony przez wcześniejsze wywołanie [nowy operator&#91;&#93;](../standard-library/new-operators.md#op_new_arr)(**size_t**). Domyślne zachowanie dla wartości null *ptr* się nic nie rób. Każda inna wartość *ptr* musi być wartością wcześniej zwracany przez wywołanie, jak opisano wcześniej. Domyślne zachowanie dla tych innych niż null wartość *ptr* się odzyskać Magazyn przydzielony przez wcześniejsze wywołanie elementu. Jest nieokreślony, pod jakimi warunkami część lub całość takiego odzyskiwanego magazynu jest przydzielany przez kolejne wywołanie [nowy operator](../standard-library/new-operators.md#op_new)(**size_t**), lub dowolnych `calloc`(**size_t**), `malloc`(**size_t**), lub `realloc`( **void**<strong>\*</strong>, **size_t**) .
 
 Druga funkcja jest wywoływana przez umieszczania `delete[]` wyrażenie odpowiadające `new[]` wyrażenie w formie `new[]`(**std::size_t**). Nic nie robi.
 

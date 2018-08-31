@@ -32,12 +32,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 88f431ab86762e50f91571a85f0fc60e41d8d711
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: f8b63de74a044a55362c2ebafc814fcf0136434d
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37849633"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43216845"
 ---
 # <a name="cpropexchange-class"></a>Klasa CPropExchange
 Obsługuje trwałość wdrożenia formantów OLE.  
@@ -131,7 +131,7 @@ virtual BOOL ExchangeFontProp(
  Odwołanie do [CFontHolder](../../mfc/reference/cfontholder-class.md) obiekt, który zawiera właściwość czcionki.  
   
  *pFontDesc*  
- Wskaźnik do [FONTDESC](http://msdn.microsoft.com/library/windows/desktop/ms692782) struktury zawierającej wartości inicjowanie domyślnego stanu właściwość czcionki podczas *pFontDispAmbient* ma wartość NULL.  
+ Wskaźnik do [FONTDESC](/windows/desktop/api/olectl/ns-olectl-tagfontdesc) struktury zawierającej wartości inicjowanie domyślnego stanu właściwość czcionki podczas *pFontDispAmbient* ma wartość NULL.  
   
  *pFontDispAmbient*  
  Wskaźnik do `IFontDisp` interfejsu czcionki do użycia dla inicjowanie domyślnego stanu właściwość czcionki.  

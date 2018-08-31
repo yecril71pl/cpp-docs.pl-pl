@@ -20,12 +20,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6b51fd0f090eb53184572ac1ee26d30177fae1df
-ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
+ms.openlocfilehash: aa231a2f232c6c834e05edfbca5d6023e0326d54
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37339296"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43216739"
 ---
 # <a name="cgopherlocator-class"></a>Klasa CGopherLocator
 Pobiera "Lokalizator" gopher z serwera gopher, określa typ lokalizatora i udostępnia go do [CGopherFileFind](../../mfc/reference/cgopherfilefind-class.md).  
@@ -102,7 +102,7 @@ BOOL GetLocatorType(DWORD& dwRef) const;
  Odwołanie do typu DWORD, który będzie otrzymywać Typ lokalizatora. Zobacz **uwagi** dla tabeli typów lokalizatora.  
   
 ### <a name="return-value"></a>Wartość zwracana  
- Wartość różną od zera, jeśli to się powiedzie; w przeciwnym razie 0. W przypadku niepowodzenia wywołania funkcji Win32 [GetLastError](http://msdn.microsoft.com/library/windows/desktop/ms679360) może zostać wywołana w celu ustalenia przyczyny błędu.  
+ Wartość różną od zera, jeśli to się powiedzie; w przeciwnym razie 0. W przypadku niepowodzenia wywołania funkcji Win32 [GetLastError](https://msdn.microsoft.com/library/windows/desktop/ms679360) może zostać wywołana w celu ustalenia przyczyny błędu.  
   
 ### <a name="remarks"></a>Uwagi  
  Typy możliwe są następujące:  

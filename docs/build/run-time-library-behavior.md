@@ -25,12 +25,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6606fd65f0f551ca9105c8f9810a75902802334d
-ms.sourcegitcommit: b92ca0b74f0b00372709e81333885750ba91f90e
+ms.openlocfilehash: d6475e2ea3ec7fe69325fd82671952dbe2c39620
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/16/2018
-ms.locfileid: "42465187"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43217295"
 ---
 # <a name="dlls-and-visual-c-run-time-library-behavior"></a>Biblioteki dll i zachowanie biblioteki wykonawczej języka Visual C++  
   
@@ -67,7 +67,7 @@ extern "C" BOOL WINAPI DllMain (
 OPAKOWYWANIE niektóre biblioteki `DllMain` funkcji dla Ciebie. Na przykład w regularnej biblioteki DLL MFC, należy zaimplementować `CWinApp` obiektu `InitInstance` i `ExitInstance` elementów członkowskich do wykonania, inicjowanie i kończenie działania wymagane przez bibliotekę DLL. Aby uzyskać więcej informacji, zobacz [zainicjować zwykłe biblioteki DLL MFC](#initializing-regular-dlls) sekcji.  
   
 > [!WARNING]
-> Istnieją limity znaczące bezpiecznie jak w punkcie wejścia biblioteki DLL. Zobacz [— najlepsze praktyki ogólne](https://msdn.microsoft.com/library/windows/desktop/dn633971#general_best_practices) dla określonych niebezpieczne wywołania interfejsów API w Windows `DllMain`. Jeśli potrzebujesz wszystko, ale następnie najprostszym inicjowania to zrobić w funkcji inicjowania biblioteki dll. Możesz wymagać od aplikacji, aby wywołać funkcję inicjowania po `DllMain` ma uruchamiania i przed ich wywołania innych funkcji w bibliotece DLL.  
+> Istnieją limity znaczące bezpiecznie jak w punkcie wejścia biblioteki DLL. Zobacz [— najlepsze praktyki ogólne](/windows/desktop/Dlls/dynamic-link-library-best-practices) dla określonych niebezpieczne wywołania interfejsów API w Windows `DllMain`. Jeśli potrzebujesz wszystko, ale następnie najprostszym inicjowania to zrobić w funkcji inicjowania biblioteki dll. Możesz wymagać od aplikacji, aby wywołać funkcję inicjowania po `DllMain` ma uruchamiania i przed ich wywołania innych funkcji w bibliotece DLL.  
   
 <a name="initializing-non-mfc-dlls"></a>  
   
@@ -116,7 +116,7 @@ extern "C" BOOL WINAPI DllMain (
   
 Ponieważ ma zwykłych bibliotekach MFC dll `CWinApp` obiektu powinien wykonują swoje zadania inicjowanie i kończenie działania w tej samej lokalizacji co aplikację MFC: w `InitInstance` i `ExitInstance` funkcji elementów członkowskich, które biblioteki dll `CWinApp`-pochodne Klasa. Ponieważ biblioteka MFC zawiera `DllMain` funkcja, która jest wywoływana przez `_DllMainCRTStartup` dla `DLL_PROCESS_ATTACH` i `DLL_PROCESS_DETACH`, nie należy napisać własny `DllMain` funkcji. MFC — pod warunkiem `DllMain` wywołaniach funkcji `InitInstance` Jeśli biblioteka DLL jest ładowany i wywołuje `ExitInstance` przed biblioteki DLL jest zwalniana.  
   
-Zwykłej biblioteki MFC DLL można zachować informacje o wielu wątków, wywołując [TlsAlloc](http://msdn.microsoft.com/library/windows/desktop/ms686801) i [TlsGetValue](http://msdn.microsoft.com/library/windows/desktop/ms686812) w jego `InitInstance` funkcji. Te funkcje umożliwiają biblioteki DLL do śledzenia danych specyficznych wątku.  
+Zwykłej biblioteki MFC DLL można zachować informacje o wielu wątków, wywołując [TlsAlloc](/windows/desktop/api/processthreadsapi/nf-processthreadsapi-tlsalloc) i [TlsGetValue](/windows/desktop/api/processthreadsapi/nf-processthreadsapi-tlsgetvalue) w jego `InitInstance` funkcji. Te funkcje umożliwiają biblioteki DLL do śledzenia danych specyficznych wątku.  
   
 Regularne biblioteki DLL MFC, która łączy dynamicznie MFC, jeśli używasz dowolnego MFC OLE, baza danych MFC (lub DAO) lub obsługują MFC gniazd, odpowiednio, debugowania rozszerzenia MFC biblioteki DLL MFCO*wersji*D.dll, MFCD*wersji*D.dll i MFCN*wersji*D.dll (gdzie *wersji* jest numer wersji) jest automatycznie konsolidowana. Musi wywołać jedną z następujących funkcji inicjowania wstępnie zdefiniowane dla każdego z tych bibliotek DLL, których używasz w swojej zwykłej biblioteki MFC DLL w `CWinApp::InitInstance`.  
   
@@ -179,14 +179,14 @@ Aplikacje, które jawnie wywołać łącze do biblioteki DLL rozszerzeń MFC `Af
   
 Ponieważ MFCx0.dll jest w pełni zainicjowany przez czas `DllMain` jest wywoływana, można przydzielić pamięci i wywoływać funkcje MFC w ramach `DllMain` (w przeciwieństwie do 16-bitową wersję MFC).  
   
-Biblioteki DLL rozszerzeń zająć się wielowątkowość obsługi `DLL_THREAD_ATTACH` i `DLL_THREAD_DETACH` przypadki, w `DllMain` funkcji. Te przypadki są przekazywane do `DllMain` po wątków Dołączanie i odłączanie od biblioteki DLL. Wywoływanie [TlsAlloc](http://msdn.microsoft.com/library/windows/desktop/ms686801) podczas dołączania się biblioteki DLL umożliwia biblioteki DLL zachować wątku (TLS) w magazynie lokalnym indeksów dla każdego wątku, dołączone do biblioteki DLL.  
+Biblioteki DLL rozszerzeń zająć się wielowątkowość obsługi `DLL_THREAD_ATTACH` i `DLL_THREAD_DETACH` przypadki, w `DllMain` funkcji. Te przypadki są przekazywane do `DllMain` po wątków Dołączanie i odłączanie od biblioteki DLL. Wywoływanie [TlsAlloc](/windows/desktop/api/processthreadsapi/nf-processthreadsapi-tlsalloc) podczas dołączania się biblioteki DLL umożliwia biblioteki DLL zachować wątku (TLS) w magazynie lokalnym indeksów dla każdego wątku, dołączone do biblioteki DLL.  
   
 Należy pamiętać, że plik nagłówkowy Afxdllx.h zawiera specjalne definicje struktury używanych w bibliotek DLL rozszerzeń MFC, takich jak definicja `AFX_EXTENSION_MODULE` i `CDynLinkLibrary`. Tego pliku nagłówkowego należy uwzględnić w Biblioteka DLL rozszerzenia MFC.  
   
 > [!NOTE]
 >  Jest ważne, że możesz zdefiniować ani Usuń definicje, żadnego z `_AFX_NO_XXX` makr w pliku Stdafx.h. Te makra istnieje wyłącznie na potrzeby sprawdzania, czy platforma dany element docelowy obsługuje tę funkcję. Można napisać program, aby sprawdzić te makra (na przykład `#ifndef _AFX_NO_OLE_SUPPORT`), ale program nigdy nie należy zdefiniować lub Usuń definicje makr.  
   
-Funkcja inicjowania próbki, która obsługuje wielowątkowość znajduje się w [za pomocą wątku lokalnego magazynu w bibliotece dll](http://msdn.microsoft.com/library/windows/desktop/ms686997) w zestawie Windows SDK. Należy pamiętać, że przykład zawiera funkcję punktu wejścia o nazwie `LibMain`, ale należy nazwać tę funkcję, `DllMain` , która działa z biblioteki wykonawczej MFC i C.  
+Funkcja inicjowania próbki, która obsługuje wielowątkowość znajduje się w [za pomocą wątku lokalnego magazynu w bibliotece dll](/windows/desktop/Dlls/using-thread-local-storage-in-a-dynamic-link-library) w zestawie Windows SDK. Należy pamiętać, że przykład zawiera funkcję punktu wejścia o nazwie `LibMain`, ale należy nazwać tę funkcję, `DllMain` , która działa z biblioteki wykonawczej MFC i C.  
   
 ## <a name="see-also"></a>Zobacz też  
   

@@ -19,12 +19,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4ba9be0fe6d75a861b82bf600f97fc1ed5dc2d64
-ms.sourcegitcommit: b92ca0b74f0b00372709e81333885750ba91f90e
+ms.openlocfilehash: cfb885a5d29c26f4a40d5b93490a06652eff1ffc
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/16/2018
-ms.locfileid: "42465262"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43216675"
 ---
 # <a name="format-specification-syntax-printf-and-wprintf-functions"></a>Składnia specyfikacji formatu: funkcje printf i wprintf
 
@@ -85,7 +85,7 @@ Liczba całkowita typów, takich jak `short`, `int`, `long`, `long long`i ich `u
 |**p**|Typ wskaźnika|Wyświetla argument jako adresu cyfr szesnastkowych.|
 |**s**|String|Gdy jest używane z `printf` funkcje, określa ciąg znaków jednobajtowych lub wielobajtowych; w przypadku korzystania z `wprintf` funkcje, określa ciąg znaków dwubajtowych. Znaki są wyświetlane do pierwszego znaku null, lub do momentu *dokładności* osiągnięta wartość.|
 |**S**|String|Gdy jest używane z `printf` funkcje, określa ciąg znaków dwubajtowych; w przypadku korzystania z `wprintf` funkcje, określa ciąg znaków jednobajtowych lub wielobajtowego. Znaki są wyświetlane do pierwszego znaku null, lub do momentu *dokładności* osiągnięta wartość.|
-|**Z**|`ANSI_STRING` lub `UNICODE_STRING` struktury|Jeśli adres [ANSI_STRING](/windows/desktop/api/ntdef/ns-ntdef-_string) lub [UNICODE_STRING](http://msdn.microsoft.com/library/windows/hardware/ff564879.aspx) struktury jest przekazywany jako argument, wyświetla ciąg znajdujący się w buforze wskazywany przez `Buffer` pola struktury. Użyj *rozmiar* prefiks modyfikator **w** do określenia `UNICODE_STRING` argument — na przykład `%wZ`. `Length` Pola struktury musi być równa długości w bajtach, ciąg. `MaximumLength` Pola struktury musi być równa długości w bajtach rozmiar buforu.<br /><br /> Zazwyczaj **Z** znaku typu jest używany tylko w debugowanie funkcji używających specyfikacja konwersji, takie jak sterownik `dbgPrint` i `kdPrint`.|
+|**Z**|`ANSI_STRING` lub `UNICODE_STRING` struktury|Jeśli adres [ANSI_STRING](/windows/desktop/api/ntdef/ns-ntdef-_string) lub [UNICODE_STRING](https://msdn.microsoft.com/library/windows/hardware/ff564879.aspx) struktury jest przekazywany jako argument, wyświetla ciąg znajdujący się w buforze wskazywany przez `Buffer` pola struktury. Użyj *rozmiar* prefiks modyfikator **w** do określenia `UNICODE_STRING` argument — na przykład `%wZ`. `Length` Pola struktury musi być równa długości w bajtach, ciąg. `MaximumLength` Pola struktury musi być równa długości w bajtach rozmiar buforu.<br /><br /> Zazwyczaj **Z** znaku typu jest używany tylko w debugowanie funkcji używających specyfikacja konwersji, takie jak sterownik `dbgPrint` i `kdPrint`.|
 
 W programie Visual Studio 2015, jeśli argument, który odpowiada specyfikatorowi konwersji liczb zmiennoprzecinkowych (**a**, **A**, **e**, **E**, **f**, **F**, **g**, **G**) jest nieskończone nieokreślony, lub NaN, sformatowane wyniki zgodne ze standardem C99. Poniższa tabela zawiera listę sformatowane wyniki:
 

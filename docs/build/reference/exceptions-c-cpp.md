@@ -22,15 +22,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 819f9424b2439cc49517afe54d62a8ed4f06d22d
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 40a3a9e1cf1384603d6b7d95fa5960e951f932ef
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32373390"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43216886"
 ---
 # <a name="exceptions-cc"></a>Wyjątki (C/C++)
-Dwa kody wyjątków mogą być wywoływane, gdy zostaną napotkane błędy:  
+Dwa kody wyjątków może być wywoływane, gdy zostaną napotkane błędy:  
   
 -   Aby uzyskać **LoadLibrary** awarii  
   
@@ -46,9 +46,9 @@ Dwa kody wyjątków mogą być wywoływane, gdy zostaną napotkane błędy:
 #define VcppException(sev,err)  ((sev) | (FACILITY_VISUALCPP<<16) | err)  
 ```  
   
- Kody wyjątków zgłoszonych są standardowe VcppException (error_severity_error —, error_mod_not_found —) i wartości VcppException (error_severity_error —, ERROR_PROC_NOT_FOUND). Wskaźnik do przekazuje wyjątek **DelayLoadInfo** struktury w wartości LPDWORD, który można pobrać przez **GetExceptionInformation** w [EXCEPTION_RECORD](http://msdn.microsoft.com/library/windows/desktop/aa363082) Struktura, pole ExceptionInformation [0].  
+ Kody wyjątków, zgłaszane są standardowe VcppException (error_severity_error —, error_mod_not_found —) i wartości VcppException (error_severity_error —, ERROR_PROC_NOT_FOUND). Wyjątek przekazuje wskaźnik do **DelayLoadInfo** struktury LPDWORD wartości, które mogą być pobierane według **GetExceptionInformation** w [EXCEPTION_RECORD](/windows/desktop/api/winnt/ns-winnt-_exception_record) Struktura, pole ExceptionInformation [0].  
   
- Ponadto jeśli niepoprawne bity zostały ustawione w polu grAttrs, ERROR_INVALID_PARAMETER wyjątku. Ten wyjątek jest na wszystkich intents i purposes, krytyczny.  
+ Ponadto jeśli niepoprawne bity są ustawione w polu grAttrs, ERROR_INVALID_PARAMETER wyjątku. Ten wyjątek jest na wszystkich intents i purposes, krytyczny.  
   
  Zobacz [struktura i stała — definicje](../../build/reference/structure-and-constant-definitions.md) Aby uzyskać więcej informacji.  
   

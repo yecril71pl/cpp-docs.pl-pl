@@ -38,12 +38,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e68cdc236759776fa327b4602343ec9ac73b9bba
-ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
+ms.openlocfilehash: 61599d9080bf5cdce56f30ed38e6b20064032512
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37338378"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43216706"
 ---
 # <a name="message-map-macros-mfc"></a>Makra mapy komunikatów (MFC)
 Aby zapewnić obsługę mapy komunikatów, MFC dostarcza następujące makra:  
@@ -307,7 +307,7 @@ ON_MESSAGE( message, memberFxn )
  Typ funkcji musi być `afx_msg LRESULT (CWnd::*)(WPARAM, LPARAM)`.  
   
 ### <a name="remarks"></a>Uwagi  
- Zdefiniowane przez użytkownika wiadomości są wszystkie komunikaty, które nie są standardowe komunikaty Windows WM_MESSAGE. Podczas wybierania identyfikator komunikatu, musisz podać wartości w ramach zakresu WM_USER (0x0400) 0x7FFF lub WM_APP (0x8000) do 0xBFFF. Aby uzyskać więcej informacji na temat identyfikatory komunikatów zobacz [WM_APP](http://msdn.microsoft.com/library/windows/desktop/ms644930).  
+ Zdefiniowane przez użytkownika wiadomości są wszystkie komunikaty, które nie są standardowe komunikaty Windows WM_MESSAGE. Podczas wybierania identyfikator komunikatu, musisz podać wartości w ramach zakresu WM_USER (0x0400) 0x7FFF lub WM_APP (0x8000) do 0xBFFF. Aby uzyskać więcej informacji na temat identyfikatory komunikatów zobacz [WM_APP](/windows/desktop/winmsg/wm-app).  
   
  Powinien istnieć dokładnie jeden ON_MESSAGE — makro instrukcję na mapie komunikatów dla każdej wiadomości zdefiniowanych przez użytkownika, który musi być zamapowany na funkcję obsługi wiadomości.  
   
@@ -505,7 +505,7 @@ END_MESSAGE_MAP()
  **Nagłówek:** afxmsg_.h  
   
 ### <a name="see-also"></a>Zobacz też  
- [RegisterWindowMessage](http://msdn.microsoft.com/library/windows/desktop/ms644947)   
+ [RegisterWindowMessage](https://msdn.microsoft.com/library/windows/desktop/ms644947)   
  [Programy obsługi zdefiniowane przez użytkownika](user-defined-handlers.md)
 
 ## <a name="on_registered_thread_message"></a>  ON_REGISTERED_THREAD_MESSAGE    

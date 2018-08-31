@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 4c529abb1ade786bf7ec0a2d5cff5c49f6197be7
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 2e0ce7cffb397aaa170f13bac9fc1f4c1693d25f
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42601592"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43214855"
 ---
 # <a name="bindable"></a>bindable
 
@@ -36,15 +36,15 @@ Wskazuje, że właściwość obsługuje powiązanie danych.
 
 ## <a name="remarks"></a>Uwagi
 
-**Możliwej do wiązania** atrybut C++ ma taką samą funkcjonalność jak [możliwej do wiązania](http://msdn.microsoft.com/library/windows/desktop/aa366738) atrybutów w MIDL. Służy zdefiniowane za pomocą właściwości [propget](../windows/propget.md), [propput](../windows/propput.md), lub [propputref](../windows/propputref.md) atrybutów lub można ręcznie zdefiniować metodę możliwej do wiązania.
+**Możliwej do wiązania** atrybut C++ ma taką samą funkcjonalność jak [możliwej do wiązania](/windows/desktop/Midl/bindable) atrybutów w MIDL. Służy zdefiniowane za pomocą właściwości [propget](../windows/propget.md), [propput](../windows/propput.md), lub [propputref](../windows/propputref.md) atrybutów lub można ręcznie zdefiniować metodę możliwej do wiązania.
 
 Poniższe przykłady MFC pokazują użycie **możliwej do wiązania**:
 
-- [Próbki kontrolki: Kontrolki ActiveX oparty na bibliotece MFC](http://msdn.microsoft.com/a44adf86-0ba0-4504-bedb-512b6cba2e63)
+- [Próbki kontrolki: Kontrolki ActiveX oparty na bibliotece MFC](https://msdn.microsoft.com/a44adf86-0ba0-4504-bedb-512b6cba2e63)
 
-- [Przykład OK: Kontrolki ActiveX](http://msdn.microsoft.com/9ba34d04-280e-49f4-90ae-41a6be44c95b)
+- [Przykład OK: Kontrolki ActiveX](https://msdn.microsoft.com/9ba34d04-280e-49f4-90ae-41a6be44c95b)
 
-- [Przykład TESTHELP: Formant ActiveX przy użyciu etykietek narzędzi i pomocy](http://msdn.microsoft.com/d822861d-c6f0-4d0a-ad11-970eebb1e8cd)
+- [Przykład TESTHELP: Formant ActiveX przy użyciu etykietek narzędzi i pomocy](https://msdn.microsoft.com/d822861d-c6f0-4d0a-ad11-970eebb1e8cd)
 
 ## <a name="example"></a>Przykład
 

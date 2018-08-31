@@ -68,12 +68,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 69a96cf199e7ce131e91f750cdd83ebc915c38d8
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: 984bdabb9d67b157468287fa64f9f21ddabdd5d1
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42466237"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43217232"
 ---
 # <a name="cdatasource-class"></a>CDataSource — Klasa
 Odnosi się do obiektu źródła danych OLE DB, który reprezentuje połączenie za pośrednictwem dostawcy ze źródłem danych.  
@@ -271,7 +271,7 @@ HRESULT Open(LPCSTR szProgID,
  Standardowa HRESULT.  
   
 ### <a name="remarks"></a>Uwagi  
- Przeciążenia metody, która używa *hWnd* parametru otwiera obiekt źródła danych za pomocą składników usługi w oledb32.dll; tę bibliotekę DLL zawiera implementację składniki usługi funkcje, takie jak pule zasobów, automatyczne Rejestracji w transakcji i tak dalej. Aby uzyskać więcej informacji, zobacz "OLE DB usług" w odwołaniu OLE DB programisty w [ http://msdn.microsoft.com/library/default.asp?url=/library/oledb/htm/oledbole_db_services.asp?frame=true ](http://msdn.microsoft.com/library/default.asp?url=/library/oledb/htm/oledbole_db_services.asp?frame=true).  
+ Przeciążenia metody, która używa *hWnd* parametru otwiera obiekt źródła danych za pomocą składników usługi w oledb32.dll; tę bibliotekę DLL zawiera implementację składniki usługi funkcje, takie jak pule zasobów, automatyczne Rejestracji w transakcji i tak dalej. Aby uzyskać więcej informacji, zobacz "OLE DB usług" w odwołaniu OLE DB programisty w [ https://msdn.microsoft.com/library/default.asp?url=/library/oledb/htm/oledbole_db_services.asp?frame=true ](https://msdn.microsoft.com/library/default.asp?url=/library/oledb/htm/oledbole_db_services.asp?frame=true).  
   
  Przeciążenia metody, które nie korzystają z *hWnd* parametru Otwórz obiekt źródła danych bez używania składników usługi w oledb32.dll. A [CDataSource](../../data/oledb/cdatasource-class.md) obiektu otwartej z te przeciążenia funkcji nie będzie można korzystać z funkcjonalności składniki usługi.  
   
@@ -299,7 +299,7 @@ HRESULT OpenFromFileName(LPCOLESTR szFileName) throw();
  Standardowa HRESULT.  
   
 ### <a name="remarks"></a>Uwagi  
- Ta metoda zostanie otwarty przy użyciu składników usługi w oledb32.dll; obiekt źródła danych Ta biblioteka DLL zawiera implementację składniki usługi funkcje, takie jak pule zasobów, automatycznej rejestracji w transakcji i tak dalej. Aby uzyskać więcej informacji, zobacz "OLE DB usług" w odwołaniu OLE DB programisty w [ http://msdn.microsoft.com/library/default.asp?url=/library/oledb/htm/oledbole_db_services.asp?frame=true ](http://msdn.microsoft.com/library/default.asp?url=/library/oledb/htm/oledbole_db_services.asp?frame=true).  
+ Ta metoda zostanie otwarty przy użyciu składników usługi w oledb32.dll; obiekt źródła danych Ta biblioteka DLL zawiera implementację składniki usługi funkcje, takie jak pule zasobów, automatycznej rejestracji w transakcji i tak dalej. Aby uzyskać więcej informacji, zobacz "OLE DB usług" w odwołaniu OLE DB programisty w [ https://msdn.microsoft.com/library/default.asp?url=/library/oledb/htm/oledbole_db_services.asp?frame=true ](https://msdn.microsoft.com/library/default.asp?url=/library/oledb/htm/oledbole_db_services.asp?frame=true).  
 
 ## <a name="openfrominitializationstring"></a> CDataSource::OpenFromInitializationString
 Otwiera źródło danych określona przez ciąg inicjowania dostarczone przez użytkownika.  
@@ -351,7 +351,7 @@ HRESULT OpenWithPromptFileName(HWND hWnd = GetActiveWindow(   ),
  Standardowa HRESULT.  
   
 ### <a name="remarks"></a>Uwagi  
- Ta metoda zostanie otwarty przy użyciu składników usługi w oledb32.dll; obiekt źródła danych Ta biblioteka DLL zawiera implementację składniki usługi funkcje, takie jak pule zasobów, automatycznej rejestracji w transakcji i tak dalej. Aby uzyskać więcej informacji, zobacz "OLE DB usług" w odwołaniu OLE DB programisty w [ http://msdn.microsoft.com/library/default.asp?url=/library/oledb/htm/oledbole_db_services.asp?frame=true ](http://msdn.microsoft.com/library/default.asp?url=/library/oledb/htm/oledbole_db_services.asp?frame=true).
+ Ta metoda zostanie otwarty przy użyciu składników usługi w oledb32.dll; obiekt źródła danych Ta biblioteka DLL zawiera implementację składniki usługi funkcje, takie jak pule zasobów, automatycznej rejestracji w transakcji i tak dalej. Aby uzyskać więcej informacji, zobacz "OLE DB usług" w odwołaniu OLE DB programisty w [ https://msdn.microsoft.com/library/default.asp?url=/library/oledb/htm/oledbole_db_services.asp?frame=true ](https://msdn.microsoft.com/library/default.asp?url=/library/oledb/htm/oledbole_db_services.asp?frame=true).
 
 ## <a name="openwithservicecomponents"></a> CDataSource::OpenWithServiceComponents
 Zostanie otwarty przy użyciu składników usługi w oledb32.dll obiektu źródła danych.  
@@ -385,7 +385,7 @@ HRESULT OpenWithServiceComponents (LPCSTR szProgID,
  Standardowa HRESULT.  
   
 ### <a name="remarks"></a>Uwagi  
- Ta metoda zostanie otwarty przy użyciu składników usługi w oledb32.dll; obiekt źródła danych Ta biblioteka DLL zawiera implementację składniki usługi funkcje, takie jak pule zasobów, automatycznej rejestracji w transakcji i tak dalej. Aby uzyskać więcej informacji, zobacz "OLE DB usług" w odwołaniu OLE DB programisty w [ http://msdn.microsoft.com/library/default.asp?url=/library/oledb/htm/oledbole_db_services.asp?frame=true ](http://msdn.microsoft.com/library/default.asp?url=/library/oledb/htm/oledbole_db_services.asp?frame=true).    
+ Ta metoda zostanie otwarty przy użyciu składników usługi w oledb32.dll; obiekt źródła danych Ta biblioteka DLL zawiera implementację składniki usługi funkcje, takie jak pule zasobów, automatycznej rejestracji w transakcji i tak dalej. Aby uzyskać więcej informacji, zobacz "OLE DB usług" w odwołaniu OLE DB programisty w [ https://msdn.microsoft.com/library/default.asp?url=/library/oledb/htm/oledbole_db_services.asp?frame=true ](https://msdn.microsoft.com/library/default.asp?url=/library/oledb/htm/oledbole_db_services.asp?frame=true).    
 
 ## <a name="see-also"></a>Zobacz też  
  [Szablony konsumentów OLE DB](../../data/oledb/ole-db-consumer-templates-cpp.md)   

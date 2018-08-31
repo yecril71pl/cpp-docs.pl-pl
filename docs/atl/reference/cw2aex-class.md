@@ -20,12 +20,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 30031a4da36e4efdf91177c983691dda38b426f4
-ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
+ms.openlocfilehash: 13b6531dd1299235a125b1c25b0b1d84781755ed
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37882679"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43217843"
 ---
 # <a name="cw2aex-class"></a>Klasa CW2AEX
 Ta klasa jest używana przez makra konwersji ciągów CT2AEX, CW2TEX, CW2CTEX i CT2CAEX i typedef CW2A.  
@@ -110,7 +110,7 @@ CW2AEX(LPCWSTR psz) throw(...);
  Ciąg tekstowy, który ma zostać przekonwertowany.  
   
  *nCodePage*  
- Strona kodowa używany do wykonywania konwersji. Zobacz Omówienie kodu strony parametrów dla funkcji Windows SDK [MultiByteToWideChar](http://msdn.microsoft.com/library/windows/desktop/dd319072) Aby uzyskać więcej informacji.  
+ Strona kodowa używany do wykonywania konwersji. Zobacz Omówienie kodu strony parametrów dla funkcji Windows SDK [MultiByteToWideChar](/windows/desktop/api/stringapiset/nf-stringapiset-multibytetowidechar) Aby uzyskać więcej informacji.  
   
 ### <a name="remarks"></a>Uwagi  
  Przydziela bufor używany w procesie tłumaczenia.  

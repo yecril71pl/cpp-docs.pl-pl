@@ -22,12 +22,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3d570204a997def3b295e7ba0fb3b08b9a15677b
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: 38267ed5755b99bd97e4c923611d297673fcc41e
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37853731"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43215586"
 ---
 # <a name="csharedfile-class"></a>Klasa CSharedFile
 [CMemFile](../../mfc/reference/cmemfile-class.md)-klasy pochodnej, który obsługuje współdzielone pliki w pamięci.  
@@ -56,7 +56,7 @@ class CSharedFile : public CMemFile
 ## <a name="remarks"></a>Uwagi  
  Pliki pamięci zachowują się jak plików na dysku, z tą różnicą, że plik jest przechowywany w pamięci RAM, a nie na dysku. Plik pamięci jest przydatna, błyskawicznie obsługiwany magazyn tymczasowy lub transferu bajtów raw lub serializacji obiektów między procesami niezależne.  
   
- Pliki pamięci współużytkowanej różnią się od innych plików pamięci w tym, że pamięć dla nich została przydzielona z [działanie funkcji GlobalAlloc](http://msdn.microsoft.com/library/windows/desktop/aa366574) funkcji Windows. `CSharedFile` Klasa przechowuje dane w bloku globalnie alokacji pamięci (utworzone za pomocą `GlobalAlloc`), a ten blok pamięci mogą być udostępniane za pomocą DDE, Schowek lub innych OLE/COM jednolitego operacji transferu danych, na przykład za pomocą `IDataObject`.  
+ Pliki pamięci współużytkowanej różnią się od innych plików pamięci w tym, że pamięć dla nich została przydzielona z [działanie funkcji GlobalAlloc](/windows/desktop/api/winbase/nf-winbase-globalalloc) funkcji Windows. `CSharedFile` Klasa przechowuje dane w bloku globalnie alokacji pamięci (utworzone za pomocą `GlobalAlloc`), a ten blok pamięci mogą być udostępniane za pomocą DDE, Schowek lub innych OLE/COM jednolitego operacji transferu danych, na przykład za pomocą `IDataObject`.  
   
  `GlobalAlloc` Zwraca wartości HGLOBAL obsługi, a nie wskaźnik do pamięci, takich jak wskaźnik zwracany przez [— funkcja malloc](../../c-runtime-library/reference/malloc.md). Uchwyt wartości HGLOBAL jest wymagana w określonych aplikacji. Na przykład umieszczenie danych w Schowku należy wartości HGLOBAL dojście.  
   
@@ -89,7 +89,7 @@ CSharedFile(
   
 ### <a name="parameters"></a>Parametry  
  *nAllocFlags*  
- Flagi wskazujące, jak jest pamięci do przydzielenia. Zobacz [działanie funkcji GlobalAlloc](http://msdn.microsoft.com/library/windows/desktop/aa366574) listę prawidłowych wartości flag.  
+ Flagi wskazujące, jak jest pamięci do przydzielenia. Zobacz [działanie funkcji GlobalAlloc](/windows/desktop/api/winbase/nf-winbase-globalalloc) listę prawidłowych wartości flag.  
   
  *nGrowBytes*  
  Zwiększenie przydziału pamięci w bajtach.  

@@ -25,15 +25,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d63e5da79b0f78e701f3ababaf54bef41fbf88a1
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 127cf8683d4d2627bdc19bef4a9ddfa93e3d7387
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32418383"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43216937"
 ---
 # <a name="vprintf-functions"></a>vprintf — Funkcje
-Każdy z `vprintf` funkcje przyjmuje wskaźnik do listy argumentów, a następnie formatuje i zapisuje podane dane do określonego miejsca docelowego. Funkcje różnią się sprawdzanie poprawności parametru wykonywane, czy funkcje wykonaj szerokości lub ciągi znaków, miejsce docelowe danych wyjściowych i obsługę określania kolejności, w którym są używane parametry w ciągu formatu.  
+Każdy z `vprintf` funkcji pobiera wskaźnik do listy argumentów, a następnie formatuje i zapisuje dostarczone dane do określonego miejsca docelowego. Funkcje różnią się Walidacja parametru wykonywane, czy funkcje podejmują szeroki lub ciągów znaków jednobajtowych, miejsce docelowe danych wyjściowych i obsługę określania kolejności, w którym są używane parametry w ciągu formatu.  
   
 |||  
 |-|-|  
@@ -45,11 +45,11 @@ Każdy z `vprintf` funkcje przyjmuje wskaźnik do listy argumentów, a następni
 |[_vscprintf, _vscprintf_l, _vscwprintf, _vscwprintf_l](../c-runtime-library/reference/vscprintf-vscprintf-l-vscwprintf-vscwprintf-l.md)|[_vsnprintf —, _vsnwprintf —](../c-runtime-library/reference/vsnprintf-vsnprintf-vsnprintf-l-vsnwprintf-vsnwprintf-l.md)|  
   
 ## <a name="remarks"></a>Uwagi  
- `vprintf` Funkcje są podobne do ich odpowiednika funkcje wymienione w poniższej tabeli. Jednak każdy `vprintf` funkcja akceptuje wskaźnik do listy argumentów, podczas gdy każda z funkcji odpowiednikiem akceptuje listy argumentów.  
+ `vprintf` Funkcji są podobne do ich funkcje duplikat zgodnie z opisem w poniższej tabeli. Jednak każdy `vprintf` funkcja przyjmuje wskaźnik do listy argumentów, a każda z tych funkcji odpowiednika akceptuje listy argumentów.  
   
- Te funkcje format danych wyjściowych do miejsc docelowych w następujący sposób.  
+ Te funkcje sformatować dane wyjściowe do miejsc docelowych w następujący sposób.  
   
-|Funkcja|Odpowiednik — funkcja|Miejsce docelowe danych wyjściowych|Walidacja parametru|Obsługa parametrów pozycyjnych|  
+|Funkcja|Odpowiednikiem — funkcja|Miejsce docelowe danych wyjściowych|Walidacja parametru|Obsługa parametr pozycyjne|  
 |--------------|--------------------------|------------------------|--------------------------|----------------------------------|  
 |`_vcprintf`|[_cprintf](../c-runtime-library/reference/cprintf-cprintf-l-cwprintf-cwprintf-l.md)|konsola|Sprawdź, czy wartość null.|Brak|  
 |`_vcwprintf`|[_cwprintf](../c-runtime-library/reference/cprintf-cprintf-l-cwprintf-cwprintf-l.md)|konsola|Sprawdź, czy wartość null.|Brak|  
@@ -60,40 +60,40 @@ Każdy z `vprintf` funkcje przyjmuje wskaźnik do listy argumentów, a następni
 |**vfwprintf_p —**|[fwprintf_p —](../c-runtime-library/reference/fprintf-p-fprintf-p-l-fwprintf-p-fwprintf-p-l.md)|*Strumień*|Sprawdź, czy wartości null i prawidłowy format.|Tak|  
 |`vfwprintf_s`|[fwprintf_s](../c-runtime-library/reference/fprintf-s-fprintf-s-l-fwprintf-s-fwprintf-s-l.md)|*Strumień*|Sprawdź, czy wartości null i prawidłowy format.|Brak|  
 |`vprintf`|[printf](../c-runtime-library/reference/printf-printf-l-wprintf-wprintf-l.md)|`Stdout`|Sprawdź, czy wartość null.|Brak|  
-|**vprintf_p —**|[printf_p —](../c-runtime-library/reference/printf-p-printf-p-l-wprintf-p-wprintf-p-l.md)|`Stdout`|Sprawdź, czy wartości null i prawidłowy format.|Tak|  
+|**vprintf_p —**|[printf_p](../c-runtime-library/reference/printf-p-printf-p-l-wprintf-p-wprintf-p-l.md)|`Stdout`|Sprawdź, czy wartości null i prawidłowy format.|Tak|  
 |`vprintf_s`|[printf_s](../c-runtime-library/reference/printf-s-printf-s-l-wprintf-s-wprintf-s-l.md)|`Stdout`|Sprawdź, czy wartości null i prawidłowy format.|Brak|  
 |`vwprintf`|[wprintf](../c-runtime-library/reference/printf-printf-l-wprintf-wprintf-l.md)|`Stdout`|Sprawdź, czy wartość null.|Brak|  
 |**vwprintf_p —**|[wprintf_p —](../c-runtime-library/reference/printf-p-printf-p-l-wprintf-p-wprintf-p-l.md)|`Stdout`|Sprawdź, czy wartości null i prawidłowy format.|Tak|  
 |`vwprintf_s`|[wprintf_s](../c-runtime-library/reference/printf-s-printf-s-l-wprintf-s-wprintf-s-l.md)|`Stdout`|Sprawdź, czy wartości null i prawidłowy format.|Brak|  
-|**vsprintf**|[sprintf](../c-runtime-library/reference/sprintf-sprintf-l-swprintf-swprintf-l-swprintf-l.md)|pamięć wskazywana przez *buforu*|Sprawdź, czy wartość null.|Brak|  
-|**vsprintf_p —**|[sprintf_p —](../c-runtime-library/reference/sprintf-p-sprintf-p-l-swprintf-p-swprintf-p-l.md)|pamięć wskazywana przez *buforu*|Sprawdź, czy wartości null i prawidłowy format.|Tak|  
-|`vsprintf_s`|[sprintf_s](../c-runtime-library/reference/sprintf-s-sprintf-s-l-swprintf-s-swprintf-s-l.md)|pamięć wskazywana przez *buforu*|Sprawdź, czy wartości null i prawidłowy format.|Brak|  
-|`vswprintf`|[swprintf](../c-runtime-library/reference/sprintf-sprintf-l-swprintf-swprintf-l-swprintf-l.md)|pamięć wskazywana przez *buforu*|Sprawdź, czy wartość null.|Brak|  
-|**vswprintf_p —**|[swprintf_p —](../c-runtime-library/reference/sprintf-p-sprintf-p-l-swprintf-p-swprintf-p-l.md)|pamięć wskazywana przez *buforu*|Sprawdź, czy wartości null i prawidłowy format.|Tak|  
-|`vswprintf_s`|[swprintf_s](../c-runtime-library/reference/sprintf-s-sprintf-s-l-swprintf-s-swprintf-s-l.md)|pamięć wskazywana przez *buforu*|Sprawdź, czy wartości null i prawidłowy format.|Brak|  
-|`_vscprintf`|[_vscprintf](../c-runtime-library/reference/vscprintf-vscprintf-l-vscwprintf-vscwprintf-l.md)|pamięć wskazywana przez *buforu*|Sprawdź, czy wartość null.|Brak|  
-|`_vscwprintf`|[_vscwprintf](../c-runtime-library/reference/vscprintf-vscprintf-l-vscwprintf-vscwprintf-l.md)|pamięć wskazywana przez *buforu*|Sprawdź, czy wartość null.|Brak|  
-|`_vsnprintf`|[_snprintf](../c-runtime-library/reference/snprintf-snprintf-snprintf-l-snwprintf-snwprintf-l.md)|pamięć wskazywana przez *buforu*|Sprawdź, czy wartość null.|Brak|  
-|`_vsnwprintf`|[_snwprintf](../c-runtime-library/reference/snprintf-snprintf-snprintf-l-snwprintf-snwprintf-l.md)|pamięć wskazywana przez *buforu*|Sprawdź, czy wartość null.|Brak|  
+|**vsprintf**|[sprintf](../c-runtime-library/reference/sprintf-sprintf-l-swprintf-swprintf-l-swprintf-l.md)|pamięci wskazywany przez *buforu*|Sprawdź, czy wartość null.|Brak|  
+|**vsprintf_p —**|[sprintf_p —](../c-runtime-library/reference/sprintf-p-sprintf-p-l-swprintf-p-swprintf-p-l.md)|pamięci wskazywany przez *buforu*|Sprawdź, czy wartości null i prawidłowy format.|Tak|  
+|`vsprintf_s`|[sprintf_s](../c-runtime-library/reference/sprintf-s-sprintf-s-l-swprintf-s-swprintf-s-l.md)|pamięci wskazywany przez *buforu*|Sprawdź, czy wartości null i prawidłowy format.|Brak|  
+|`vswprintf`|[swprintf](../c-runtime-library/reference/sprintf-sprintf-l-swprintf-swprintf-l-swprintf-l.md)|pamięci wskazywany przez *buforu*|Sprawdź, czy wartość null.|Brak|  
+|**vswprintf_p —**|[swprintf_p —](../c-runtime-library/reference/sprintf-p-sprintf-p-l-swprintf-p-swprintf-p-l.md)|pamięci wskazywany przez *buforu*|Sprawdź, czy wartości null i prawidłowy format.|Tak|  
+|`vswprintf_s`|[swprintf_s](../c-runtime-library/reference/sprintf-s-sprintf-s-l-swprintf-s-swprintf-s-l.md)|pamięci wskazywany przez *buforu*|Sprawdź, czy wartości null i prawidłowy format.|Brak|  
+|`_vscprintf`|[_vscprintf](../c-runtime-library/reference/vscprintf-vscprintf-l-vscwprintf-vscwprintf-l.md)|pamięci wskazywany przez *buforu*|Sprawdź, czy wartość null.|Brak|  
+|`_vscwprintf`|[_vscwprintf](../c-runtime-library/reference/vscprintf-vscprintf-l-vscwprintf-vscwprintf-l.md)|pamięci wskazywany przez *buforu*|Sprawdź, czy wartość null.|Brak|  
+|`_vsnprintf`|[_snprintf](../c-runtime-library/reference/snprintf-snprintf-snprintf-l-snwprintf-snwprintf-l.md)|pamięci wskazywany przez *buforu*|Sprawdź, czy wartość null.|Brak|  
+|`_vsnwprintf`|[_snwprintf](../c-runtime-library/reference/snprintf-snprintf-snprintf-l-snwprintf-snwprintf-l.md)|pamięci wskazywany przez *buforu*|Sprawdź, czy wartość null.|Brak|  
   
- `argptr` Argument ma typ `va_list`, która jest zdefiniowana w VARARGS. H i STDARG. H. `argptr` Zmienna musi zostać zainicjowany przez **makra va_start,** i może zostać zainicjowane ponownie przy kolejnych `va_arg` wywołuje; `argptr` następnie wskazuje na początku listy argumentów, które są konwertowane i przesyłane dla danych wyjściowych zgodnie ze specyfikacją odpowiednie w *format* argumentu. *Format* ma taką samą tworzą i działać jako *format* argument [printf](../c-runtime-library/reference/printf-printf-l-wprintf-wprintf-l.md). Żadna z tych funkcji wywołuje `va_end`. Aby uzyskać bardziej szczegółowy opis każdego `vprintf` funkcji, zobacz opis funkcji jego odpowiednik wymienione w powyższej tabeli.  
+ `argptr` Argumentów ma typ `va_list`, który jest zdefiniowany w VARARGS. H i STDARG. H. `argptr` Zmienna musi zostać zainicjowany przez **va_start** i mogą zostać zainicjowane ponownie przez kolejne `va_arg` wywołuje; `argptr` następnie wskazuje na początku listy argumentów, które są konwertowane i przesyłanych danych wyjściowych zgodnie ze specyfikacją odpowiednie w *format* argumentu. *Format* ma taką samą formę i funkcjonuje jako *format* argument [printf](../c-runtime-library/reference/printf-printf-l-wprintf-wprintf-l.md). Żadna z tych funkcji wywołuje `va_end`. Aby uzyskać bardziej szczegółowy opis każdego `vprintf` funkcji, zobacz opis funkcji jego odpowiednika, zgodnie z opisem w powyższej tabeli.  
   
- `_vsnprintf` różni się od **vsprintf —** w tym zapisuje nie więcej niż *liczba* bajtów do *buforu*.  
+ `_vsnprintf` różni się od **vsprintf —** , zapisuje nie więcej niż *liczba* bajtów do *buforu*.  
   
- Wersje tych funkcji z **w** infiksu w nazwie są wersje znaków dwubajtowych odpowiednie funkcje bez **w** element infiksu; w każdej z tych funkcji znaków dwubajtowych  *Bufor* i *format* są ciągami znaków dwubajtowych. W przeciwnym razie każdej funkcji znaków dwubajtowych zachowuje się tak samo dla jej funkcji odpowiednikiem SBCS.  
+ Wersje tych funkcji **w** wrostkowe w nazwie są wersjami znaków dwubajtowych z odpowiednimi funkcjami **w** wrostkowe; w każdym z tych funkcji znaków dwubajtowych,  *Bufor* i *format* są ciągami znaków dwubajtowych. W przeciwnym wypadku każda funkcja znaków dwubajtowych działa identycznie do jego SBCS odpowiednikiem funkcji.  
   
- Wersje tych funkcji z **_s** i **_p** sufiksy są bardziej bezpieczne wersji. Te wersje sprawdzanie poprawności ciągów formatu i wygeneruje wyjątek, jeśli ciąg formatu nie jest poprawnie sformułowany (na przykład, jeśli używane są nieprawidłowe formatowanie znaków).  
+ Wersje tych funkcji **_s** i **_p** sufiksy są bardziej bezpieczne wersje. Te wersje sprawdzanie poprawności ciągów formatu i wygeneruje wyjątek, jeśli ciąg formatu, który nie jest poprawnie sformułowany (na przykład, jeśli są używane nieprawidłowe znaki formatowania).  
   
- Wersje tych funkcji z **_p** sufiks umożliwiają określenie kolejności, w którym mają być zastępowane podanych argumentów w ciągu formatu. Aby uzyskać więcej informacji, zobacz [printf_p parametry pozycyjne](../c-runtime-library/printf-p-positional-parameters.md).  
+ Wersje tych funkcji **_p** sufiks zapewniają możliwość określenia kolejność, w którym mają być zastępowane podanych argumentów w ciągu formatu. Aby uzyskać więcej informacji, zobacz [printf_p parametry pozycyjne](../c-runtime-library/printf-p-positional-parameters.md).  
   
- Aby uzyskać **vsprintf —**, `vswprintf`, `_vsnprintf` i `_vsnwprintf`, jeśli kopiowanie odbywa się między ciągi czy nakładają się na siebie, zachowanie jest niezdefiniowany.  
+ Aby uzyskać **vsprintf —**, `vswprintf`, `_vsnprintf` i `_vsnwprintf`, jeśli kopiowanie odbywa się między ciągów, nakładają się na siebie, zachowanie jest niezdefiniowane.  
   
 > [!IMPORTANT]
->  Upewnij się, że *format* nie jest ciągiem zdefiniowane przez użytkownika. Aby uzyskać więcej informacji, zobacz [unikanie Overruns buforu](http://msdn.microsoft.com/library/windows/desktop/ms717795). Jeśli przy użyciu bezpiecznych wersji tych funkcji (albo **_s** lub **_p** sufiksy), ciąg formatu dostarczone przez użytkownika może wywołać wyjątek nieprawidłowego parametru, jeśli zawiera ciąg dostarczone przez użytkownika nieprawidłowe znaki formatowania.  
+>  Upewnij się, że *format* nie jest ciągiem zdefiniowanym przez użytkownika. Aby uzyskać więcej informacji, zobacz [unikanie przepełnień bufora](/windows/desktop/SecBP/avoiding-buffer-overruns). Jeśli przy użyciu bezpieczne wersje tych funkcji (albo **_s** lub **_p** sufiksy), ciąg formatu dostarczone przez użytkownika może wywołać wyjątek nieprawidłowego parametru, jeśli zawiera ciąg dostarczone przez użytkownika nieprawidłowe znaki formatowania.  
   
 ## <a name="see-also"></a>Zobacz też  
- [We/Wy strumienia](../c-runtime-library/stream-i-o.md)   
- [fprintf —, _fprintf_l —, fwprintf — _fwprintf_l —](../c-runtime-library/reference/fprintf-fprintf-l-fwprintf-fwprintf-l.md)   
+ [Stream operacji We/Wy](../c-runtime-library/stream-i-o.md)   
+ [fprintf, _fprintf_l —, fwprintf — _fwprintf_l —](../c-runtime-library/reference/fprintf-fprintf-l-fwprintf-fwprintf-l.md)   
  [printf, _printf_l, wprintf, _wprintf_l](../c-runtime-library/reference/printf-printf-l-wprintf-wprintf-l.md)   
  [sprintf, _sprintf_l, swprintf, _swprintf_l, \__swprintf_l](../c-runtime-library/reference/sprintf-sprintf-l-swprintf-swprintf-l-swprintf-l.md)   
  [va_arg, va_copy, va_end, va_start](../c-runtime-library/reference/va-arg-va-copy-va-end-va-start.md)

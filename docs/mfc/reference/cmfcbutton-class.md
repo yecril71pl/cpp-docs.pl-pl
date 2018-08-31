@@ -90,12 +90,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e50f48ad935e74bff05fe41dd77a0b17c0bd26ed
-ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
+ms.openlocfilehash: 155aa704efe0686fc03be6e2b12c076656fad7a1
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37337310"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43217512"
 ---
 # <a name="cmfcbutton-class"></a>Klasa CMFCButton
 `CMFCButton` Klasa dodaje funkcjonalność do [CButton](../../mfc/reference/cbutton-class.md) klasy, takie jak wyrównanie tekstu przycisku, łączenie przycisku tekstu i obrazu, wybierając kursor i określając etykietkę narzędzia.  
@@ -137,7 +137,7 @@ class CMFCButton : public CButton
 |[CMFCButton::IsRadioButton](#isradiobutton)|Wskazuje, czy przycisk to przycisk radiowy.|  
 |[CMFCButton::IsWindowsThemingEnabled](#iswindowsthemingenabled)|Wskazuje, czy styl obramowania przycisku odnosi się do bieżącego motywu Windows.|  
 |`CMFCButton::OnDrawParentBackground`|Rysuje tło elementu nadrzędnego przycisku w podanym obszarze. (Przesłania [AFX_GLOBAL_DATA::DrawParentBackground](../../mfc/reference/afx-global-data-structure.md)|  
-|`CMFCButton::PreTranslateMessage`|Wykonuje translację komunikatów okien, zanim zostaną rozesłane do [TranslateMessage](http://msdn.microsoft.com/library/windows/desktop/ms644955) i [DispatchMessage](http://msdn.microsoft.com/library/windows/desktop/ms644934) funkcje Windows. (Przesłania [CWnd::PreTranslateMessage](../../mfc/reference/cwnd-class.md#pretranslatemessage).)|  
+|`CMFCButton::PreTranslateMessage`|Wykonuje translację komunikatów okien, zanim zostaną rozesłane do [TranslateMessage](https://msdn.microsoft.com/library/windows/desktop/ms644955) i [DispatchMessage](https://msdn.microsoft.com/library/windows/desktop/ms644934) funkcje Windows. (Przesłania [CWnd::PreTranslateMessage](../../mfc/reference/cwnd-class.md#pretranslatemessage).)|  
 |[CMFCButton::SetAutorepeatMode](#setautorepeatmode)|Ustawia tryb auto-repeat przycisku.|  
 |[CMFCButton::SetCheckedImage](#setcheckedimage)|Ustawia obraz dla przycisku zaznaczone.|  
 |[CMFCButton::SetFaceColor](#setfacecolor)|Ustawia kolor tła tekstu przycisku.|  

@@ -16,12 +16,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 3aada3dac208fcf08a9b0e61ef822c3ab13b7b44
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: f105f41c465d2750d372a8794a9ab66fa13db466
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42605769"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43215985"
 ---
 # <a name="how-to-search-for-symbols-in-resources"></a>Porady: wyszukiwanie symboli w zasobach
 
@@ -29,10 +29,10 @@ ms.locfileid: "42605769"
 
 1. Z **Edytuj** menu, wybierz **Znajdź Symbol**.
 
-2. W [Znajdź Symbol — okno dialogowe](http://msdn.microsoft.com/63e93d9c-784f-418d-a76a-723da5ff5d96)w **Znajdź** Wybierz poprzedni ciąg wyszukiwania z listy rozwijanej lub wpisz klawisza skrótu do wyszukania (na przykład ID_ACCEL1).
+2. W [Znajdź Symbol — okno dialogowe](https://msdn.microsoft.com/63e93d9c-784f-418d-a76a-723da5ff5d96)w **Znajdź** Wybierz poprzedni ciąg wyszukiwania z listy rozwijanej lub wpisz klawisza skrótu do wyszukania (na przykład ID_ACCEL1).
 
    > [!TIP]
-   > Aby użyć [wyrażeń regularnych](/visualstudio/ide/using-regular-expressions-in-visual-studio) wyszukiwania, należy użyć [Znajdź w plikach — polecenie](/visualstudio/ide/reference/find-command) z **Edytuj** menu zamiast **Znajdź Symbol**polecenia. Aby włączyć wyrażeń regularnych, konieczne jest posiadanie **użycia: wyrażeń regularnych** zaznaczone pole wyboru w [okno dialogowe Znajdź](http://msdn.microsoft.com/dad03582-4931-4893-83ba-84b37f5b1600). Następnie możesz kliknąć przycisk strzałki w dół po prawej stronie **Znajdź** pole, aby wyświetlić listę wyrażeń regularnych wyszukiwania. Po wybraniu wyrażenia z tej listy, zostanie zastąpiony jako wyszukiwany tekst w **Znajdź** pole.
+   > Aby użyć [wyrażeń regularnych](/visualstudio/ide/using-regular-expressions-in-visual-studio) wyszukiwania, należy użyć [Znajdź w plikach — polecenie](/visualstudio/ide/reference/find-command) z **Edytuj** menu zamiast **Znajdź Symbol**polecenia. Aby włączyć wyrażeń regularnych, konieczne jest posiadanie **użycia: wyrażeń regularnych** zaznaczone pole wyboru w [okno dialogowe Znajdź](https://msdn.microsoft.com/dad03582-4931-4893-83ba-84b37f5b1600). Następnie możesz kliknąć przycisk strzałki w dół po prawej stronie **Znajdź** pole, aby wyświetlić listę wyrażeń regularnych wyszukiwania. Po wybraniu wyrażenia z tej listy, zostanie zastąpiony jako wyszukiwany tekst w **Znajdź** pole.
 
 3. Wybierz dowolny z **znaleźć** opcje.
 
@@ -41,7 +41,7 @@ ms.locfileid: "42605769"
    > [!NOTE]
    > Nie można wyszukiwać symbole w ciągu, akcelerator lub zasobów binarnych.
 
-Aby uzyskać informacje na temat dodawania zasobów do projektów zarządzanych, zobacz [zasoby w aplikacjach pulpitu](/dotnet/framework/resources/index) w *przewodniku dewelopera .NET Framework*. Instrukcje dotyczące ręcznego dodawania plików zasobów do projektów zarządzanych, uzyskiwania dostępu do zasobów, wyświetlania statycznych zasobów i przypisywania ciągów zasobów do właściwości i [Instruktaż: Using Resources for Localization with ASP.NET](http://msdn.microsoft.com/Library/bb4e5b44-e2b0-48ab-bbe9-609fb33900b6).
+Aby uzyskać informacje na temat dodawania zasobów do projektów zarządzanych, zobacz [zasoby w aplikacjach pulpitu](/dotnet/framework/resources/index) w *przewodniku dewelopera .NET Framework*. Instrukcje dotyczące ręcznego dodawania plików zasobów do projektów zarządzanych, uzyskiwania dostępu do zasobów wyświetlania statycznych zasobów i przydzielanie zasobów ciągów do właściwości.
 
 ## <a name="requirements"></a>Wymagania
 

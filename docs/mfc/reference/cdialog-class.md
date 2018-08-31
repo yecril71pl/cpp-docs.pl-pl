@@ -50,12 +50,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bb8dd6fbb4cbbcea6e452afadff5b0c0e081d34e
-ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
+ms.openlocfilehash: ff3bc9ea331be6c25be80b21c14a309d47718c8e
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37339413"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43217336"
 ---
 # <a name="cdialog-class"></a>Cdialog — klasa
 Klasa podstawowa używana do wyświetlania okien dialogowych na ekranie.  
@@ -115,7 +115,7 @@ class CDialog : public CWnd
   
  Aby utworzyć modalne okno dialogowe, utworzenia obiektu na stosie, za pomocą konstruktora dla klasy pochodnej okien dialogowych, a następnie wywołać `DoModal` do utworzenia okna dialogowego i jego środków kontroli. Jeśli chcesz utworzyć niemodalnego okna dialogowego, wywołać `Create` w konstruktorze klasy okien dialogowych.  
   
- Można również utworzyć szablon w pamięci, za pomocą [DLGTEMPLATE](http://msdn.microsoft.com/library/windows/desktop/ms645394) struktury danych, zgodnie z opisem w zestawie Windows SDK. Po konstruowania `CDialog` obiektu, wywołaj [CreateIndirect](#createindirect) do tworzenia niemodalny okno dialogowe lub wywołanie [InitModalIndirect](#initmodalindirect) i [DoModal](#domodal) utworzyć modalne okno dialogowe.  
+ Można również utworzyć szablon w pamięci, za pomocą [DLGTEMPLATE](/windows/desktop/api/winuser/ns-winuser-dlgtemplate) struktury danych, zgodnie z opisem w zestawie Windows SDK. Po konstruowania `CDialog` obiektu, wywołaj [CreateIndirect](#createindirect) do tworzenia niemodalny okno dialogowe lub wywołanie [InitModalIndirect](#initmodalindirect) i [DoModal](#domodal) utworzyć modalne okno dialogowe.  
   
  Wymiana i Walidacja mapowania danych są zapisywane w zastąpieniu obiektu `CWnd::DoDataExchange` który został dodany do nowej klasy okien dialogowych. Zobacz [DoDataExchange](../../mfc/reference/cwnd-class.md#dodataexchange) funkcji składowej we `CWnd` Aby uzyskać więcej informacji na temat funkcji programu exchange i sprawdzania poprawności.  
   
@@ -220,7 +220,7 @@ virtual BOOL Create(
   
  `Create` Funkcja elementu członkowskiego zwraca natychmiast, po utworzeniu okno dialogowe.  
   
- Jeśli podczas tworzenia okna nadrzędnego, powinny zostać wyświetlone okno dialogowe, należy użyć stylu WS_VISIBLE w szablonie okno dialogowe. W przeciwnym razie należy wywołać `ShowWindow`. Dodatkowo style okno dialogowe i aplikacji, zobacz [DLGTEMPLATE](http://msdn.microsoft.com/library/windows/desktop/ms645394) struktury w zestawie Windows SDK i [Style okna ramowego](../../mfc/reference/styles-used-by-mfc.md#window-styles) w *odwołanie MFC*.  
+ Jeśli podczas tworzenia okna nadrzędnego, powinny zostać wyświetlone okno dialogowe, należy użyć stylu WS_VISIBLE w szablonie okno dialogowe. W przeciwnym razie należy wywołać `ShowWindow`. Dodatkowo style okno dialogowe i aplikacji, zobacz [DLGTEMPLATE](/windows/desktop/api/winuser/ns-winuser-dlgtemplate) struktury w zestawie Windows SDK i [Style okna ramowego](../../mfc/reference/styles-used-by-mfc.md#window-styles) w *odwołanie MFC*.  
   
  Użyj `CWnd::DestroyWindow` funkcję, aby zniszczyć okno dialogowe, utworzone przez `Create` funkcji.  
   
@@ -244,7 +244,7 @@ virtual BOOL CreateIndirect(
   
 ### <a name="parameters"></a>Parametry  
  *lpDialogTemplate*  
- Wskazuje pamięci, który zawiera szablon okno dialogowe pozwala utworzyć okno dialogowe. Ten szablon jest w formie [DLGTEMPLATE](http://msdn.microsoft.com/library/windows/desktop/ms645394) informacje dotyczące struktury i kontroli, zgodnie z opisem w zestawie Windows SDK.  
+ Wskazuje pamięci, który zawiera szablon okno dialogowe pozwala utworzyć okno dialogowe. Ten szablon jest w formie [DLGTEMPLATE](/windows/desktop/api/winuser/ns-winuser-dlgtemplate) informacje dotyczące struktury i kontroli, zgodnie z opisem w zestawie Windows SDK.  
   
  *pParentWnd*  
  Wskazuje na obiekt okna nadrzędnego obiektu okna dialogowego (typu [CWnd](../../mfc/reference/cwnd-class.md)). Jeśli ma wartość NULL, okna nadrzędnego obiektu okna dialogowego jest ustawiony na okna głównego aplikacji.  
@@ -261,7 +261,7 @@ virtual BOOL CreateIndirect(
 ### <a name="remarks"></a>Uwagi  
  `CreateIndirect` Funkcja elementu członkowskiego zwraca natychmiast, po utworzeniu okno dialogowe.  
   
- Jeśli podczas tworzenia okna nadrzędnego, powinny zostać wyświetlone okno dialogowe, należy użyć stylu WS_VISIBLE w szablonie okno dialogowe. W przeciwnym razie należy wywołać `ShowWindow` aby spowodować, że są wyświetlane. Aby uzyskać więcej informacji na temat określania innymi stylami okno dialogowe w szablonie, zobacz [DLGTEMPLATE](http://msdn.microsoft.com/library/windows/desktop/ms645394) struktury w zestawie Windows SDK.  
+ Jeśli podczas tworzenia okna nadrzędnego, powinny zostać wyświetlone okno dialogowe, należy użyć stylu WS_VISIBLE w szablonie okno dialogowe. W przeciwnym razie należy wywołać `ShowWindow` aby spowodować, że są wyświetlane. Aby uzyskać więcej informacji na temat określania innymi stylami okno dialogowe w szablonie, zobacz [DLGTEMPLATE](/windows/desktop/api/winuser/ns-winuser-dlgtemplate) struktury w zestawie Windows SDK.  
   
  Użyj `CWnd::DestroyWindow` funkcję, aby zniszczyć okno dialogowe, utworzone przez `CreateIndirect` funkcji.  
   
@@ -275,7 +275,7 @@ virtual INT_PTR DoModal();
 ```  
   
 ### <a name="return-value"></a>Wartość zwracana  
- **Int** wartość, która określa wartość *Nwynik* parametr, który został przekazany do [CDialog::EndDialog](#enddialog) funkcja elementu członkowskiego, który jest używany, aby zamknąć okno dialogowe. Wartość zwracana jest wartość -1, jeśli funkcja nie można utworzyć okna dialogowego lub IDABORT Jeśli wystąpił inny błąd, w którym to przypadku w oknie danych wyjściowych będzie zawierać informacje o błędzie z [GetLastError](http://msdn.microsoft.com/library/windows/desktop/ms679360).  
+ **Int** wartość, która określa wartość *Nwynik* parametr, który został przekazany do [CDialog::EndDialog](#enddialog) funkcja elementu członkowskiego, który jest używany, aby zamknąć okno dialogowe. Wartość zwracana jest wartość -1, jeśli funkcja nie można utworzyć okna dialogowego lub IDABORT Jeśli wystąpił inny błąd, w którym to przypadku w oknie danych wyjściowych będzie zawierać informacje o błędzie z [GetLastError](https://msdn.microsoft.com/library/windows/desktop/ms679360).  
   
 ### <a name="remarks"></a>Uwagi  
  Ta funkcja elementu członkowskiego obsługuje wszystkich interakcji z użytkownikiem, gdy okno dialogowe jest aktywne. Jest to, co sprawia, że okno dialogowe modalne; oznacza to użytkownik nie może korzystać z innymi oknami, do czasu zamknięcia okna dialogowego.  
@@ -358,7 +358,7 @@ BOOL InitModalIndirect(
   
 ### <a name="parameters"></a>Parametry  
  *lpDialogTemplate*  
- Wskazuje pamięci, który zawiera szablon okno dialogowe pozwala utworzyć okno dialogowe. Ten szablon jest w formie [DLGTEMPLATE](http://msdn.microsoft.com/library/windows/desktop/ms645394) informacje dotyczące struktury i kontroli, zgodnie z opisem w zestawie Windows SDK.  
+ Wskazuje pamięci, który zawiera szablon okno dialogowe pozwala utworzyć okno dialogowe. Ten szablon jest w formie [DLGTEMPLATE](/windows/desktop/api/winuser/ns-winuser-dlgtemplate) informacje dotyczące struktury i kontroli, zgodnie z opisem w zestawie Windows SDK.  
   
  *hDialogTemplate*  
  Zawiera dojście do pamięci globalnej, zawierający szablon okno dialogowe. Ten szablon jest w formie `DLGTEMPLATE` struktury i danych dla każdego formantu w oknie dialogowym.  

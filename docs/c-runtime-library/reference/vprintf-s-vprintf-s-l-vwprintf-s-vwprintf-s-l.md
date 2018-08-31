@@ -45,16 +45,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6e1c8f2780fb9a6b65c60c0622526020a13f74e7
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 9310939c12792d6f61c2f39da153a1abd20f02a6
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32415598"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43216218"
 ---
 # <a name="vprintfs-vprintfsl-vwprintfs-vwprintfsl"></a>vprintf_s, _vprintf_s_l, vwprintf_s, _vwprintf_s_l
 
-Zapisuje dane wyjściowe w formacie za pomocą wskaźnika do listy argumentów. Te wersje programu [vprintf —, _vprintf_l —, vwprintf —, _vwprintf_l —](vprintf-vprintf-l-vwprintf-vwprintf-l.md) zostały ulepszone zabezpieczenia, zgodnie z opisem w [funkcje zabezpieczeń w CRT](../../c-runtime-library/security-features-in-the-crt.md).
+Pisze sformatowane dane wyjściowe za pomocą wskaźnika do listy argumentów. Te wersje [vprintf —, _vprintf_l —, vwprintf —, _vwprintf_l —](vprintf-vprintf-l-vwprintf-vwprintf-l.md) mają wzmocnienia zabezpieczeń, zgodnie z opisem w [funkcje zabezpieczeń w CRT](../../c-runtime-library/security-features-in-the-crt.md).
 
 ## <a name="syntax"></a>Składnia
 
@@ -82,7 +82,7 @@ int _vwprintf_s_l(
 ### <a name="parameters"></a>Parametry
 
 *Format*<br/>
-Definicja formatu.
+Specyfikacja formatu.
 
 *argptr*<br/>
 Wskaźnik do listy argumentów.
@@ -90,30 +90,30 @@ Wskaźnik do listy argumentów.
 *Ustawienia regionalne*<br/>
 Ustawienia regionalne do użycia.
 
-Aby uzyskać więcej informacji, zobacz [specyfikacje formatu](../../c-runtime-library/format-specification-syntax-printf-and-wprintf-functions.md).
+Aby uzyskać więcej informacji, zobacz [specyfikacji formatu](../../c-runtime-library/format-specification-syntax-printf-and-wprintf-functions.md).
 
 ## <a name="return-value"></a>Wartość zwracana
 
-**vprintf_s —** i **vwprintf_s —** zwraca liczbę znaków zapisane, nie włączając znak końcowy null lub wartość ujemną, jeśli wystąpi błąd wyjścia. Jeśli *format* jest wskaźnika o wartości null, lub jeśli ciąg formatu zawiera nieprawidłowe znaki formatowania, program obsługi nieprawidłowych parametrów zostanie wywołany, zgodnie z opisem w [sprawdzanie poprawności parametru](../../c-runtime-library/parameter-validation.md). Zwróć -1, jeśli może kontynuować wykonywania, funkcje i ustaw **errno** do **einval —**.
+**vprintf_s —** i **vwprintf_s —** zwracają liczbę znaków napisanych, nie wliczając kończącego znaku null lub wartość ujemną, jeśli wystąpi błąd danych wyjściowych. Jeśli *format* jest wskaźnikiem typu null lub jeżeli ciąg formatu zawiera nieprawidłowe znaki formatowania, procedura obsługi nieprawidłowego parametru zostanie wywołana, zgodnie z opisem w [Parameter Validation](../../c-runtime-library/parameter-validation.md). Jeśli wykonanie może być kontynuowane, te funkcje zwracają wartość -1 i ustaw **errno** do **EINVAL**.
 
-Aby uzyskać informacje na temat tych i innych kodów błędów, zobacz [_doserrno —, errno, _sys_errlist — i _sys_nerr —](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
+Aby uzyskać informacje na temat tych i innych kodów błędu, zobacz [_doserrno, errno, _sys_errlist i _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
 ## <a name="remarks"></a>Uwagi
 
-Każda z tych funkcji przyjmuje wskaźnik do listy argumentów, a następnie formatuje i zapisuje określone dane do **stdout**.
+Każda z tych funkcji pobiera wskaźnik do listy argumentów, a następnie formatuje i zapisuje dostarczone dane do **stdout**.
 
-Bezpieczne wersje tych funkcji różnią się od **vprintf —** i **vwprintf —** tylko w tej wersji bezpiecznego Sprawdź, czy ciąg formatu zawiera prawidłowe znaki formatowania.
+Bezpieczne wersje tych funkcji różnią się od **vprintf —** i **vwprintf —** tylko dlatego, że bezpieczne wersje sprawdzają, czy ciąg formatu zawiera prawidłowe znaki formatowania.
 
-**vwprintf_s —** jest wersja znaków dwubajtowych **vprintf_s —**; dwie funkcje zachowują się tak samo, jakby strumień jest otwarty w trybie ANSI. **vprintf_s —** aktualnie nie obsługuje dane wyjściowe do strumienia UNICODE.
+**vwprintf_s —** jest wersją znaków dwubajtowych **vprintf_s —**; dwie funkcje zachowują się identycznie, jeżeli strumień jest otwarty w trybie ANSI. **vprintf_s —** aktualnie nie obsługuje danych wyjściowych w strumieniu UNICODE.
 
-Wersje tych funkcji z **_l** sufiks są identyczne, z wyjątkiem tego, aby używały parametr ustawień regionalnych przekazano zamiast bieżącego ustawienia regionalne wątku.
+Wersje tych funkcji **_l** sufiksem są identyczne, z tą różnicą, że używają parametru ustawień regionalnych przekazanych zamiast bieżących ustawień regionalnych wątku.
 
 > [!IMPORTANT]
-> Upewnij się, że *format* nie jest ciągiem zdefiniowane przez użytkownika. Aby uzyskać więcej informacji, zobacz [unikanie Overruns buforu](http://msdn.microsoft.com/library/windows/desktop/ms717795).
+> Upewnij się, że *format* nie jest ciągiem zdefiniowanym przez użytkownika. Aby uzyskać więcej informacji, zobacz [unikanie przepełnień bufora](/windows/desktop/SecBP/avoiding-buffer-overruns).
 
 ### <a name="generic-text-routine-mappings"></a>Mapowania procedur zwykłego tekstu
 
-|Procedura TCHAR.H|_Unicode — & _MBCS nie zdefiniowany|_MBCS zdefiniowano|_UNICODE zdefiniowano|
+|Procedura TCHAR.H|_UNICODE & _MBCS nie zdefiniowano|_MBCS zdefiniowano|_UNICODE zdefiniowano|
 |---------------------|------------------------------------|--------------------|-----------------------|
 |**_vtprintf_s —**|**vprintf_s**|**vprintf_s**|**vwprintf_s**|
 |**_vtprintf_s_l —**|**_vprintf_s_l**|**_vprintf_s_l**|**_vwprintf_s_l**|
@@ -125,13 +125,13 @@ Wersje tych funkcji z **_l** sufiks są identyczne, z wyjątkiem tego, aby używ
 |**vprintf_s —**, **_vprintf_s_l —**|\<stdio.h > i \<stdarg.h >|\<varargs.h>*|
 |**vwprintf_s —**, **_vwprintf_s_l —**|\<stdio.h > lub \<wchar.h >, a \<stdarg.h >|\<varargs.h>*|
 
-\* Wymagany w przypadku zgodności UNIX V.
+\* Wymagane dla zgodności systemu UNIX V.
 
-Konsoli nie jest obsługiwane w aplikacjach systemu Windows platformy Uniwersalnej. Uchwyty Standardowy strumień, które są skojarzone z konsoli programu **stdin**, **stdout**, i **stderr**, muszą być przekierowywane przed funkcje wykonawcze języka C można używać ich w aplikacji platformy uniwersalnej systemu Windows . Aby uzyskać dodatkowe informacje o zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md).
+Konsola nie jest obsługiwana w aplikacjach platformy uniwersalnej Windows (UWP). Standardowe uchwyty strumienia, które są powiązane z konsolą, **stdin**, **stdout**, i **stderr**, muszą zostać przekierowane zanim funkcje środowiska wykonawczego języka C można ich używać w aplikacjach platformy UWP . Aby uzyskać dodatkowe informacje o zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md).
 
 ## <a name="see-also"></a>Zobacz także
 
-[We/Wy strumienia](../../c-runtime-library/stream-i-o.md)<br/>
+[Stream operacji We/Wy](../../c-runtime-library/stream-i-o.md)<br/>
 [vprintf, funkcje](../../c-runtime-library/vprintf-functions.md)<br/>
 [fprintf, _fprintf_l, fwprintf, _fwprintf_l](fprintf-fprintf-l-fwprintf-fwprintf-l.md)<br/>
 [printf, _printf_l, wprintf, _wprintf_l](printf-printf-l-wprintf-wprintf-l.md)<br/>

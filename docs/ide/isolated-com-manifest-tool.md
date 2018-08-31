@@ -1,5 +1,5 @@
 ---
-title: Narzędzie manifestu izolowane właściwości modelu COM (Visual C++) | Dokumentacja firmy Microsoft
+title: Narzędzie manifestu COM izolowany właściwości (Visual C++) | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,37 +17,37 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c425a71f8bb8a7972ade29fb0d18cf3eab7debb5
-ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
+ms.openlocfilehash: 59b19a35a70b3bdadd935f06ff7d9ae1ce7d7d95
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "33330184"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43216383"
 ---
-# <a name="isolated-com-manifest-tool-configuration-properties-ltprojectnamegt-property-pages-dialog-box"></a>Izolowane, narzędzia manifestu, właściwości, &lt;Projectname&gt; stron właściwości — okno dialogowe
-To okno dialogowe służy do określania **izolowanego COM** opcje [Mt.exe](http://msdn.microsoft.com/library/aa375649).  
+# <a name="isolated-com-manifest-tool-configuration-properties-ltprojectnamegt-property-pages-dialog-box"></a>COM izolowany, narzędzie manifestu, właściwości konfiguracji, &lt;Projectname&gt; okno dialogowe strony właściwości
+To okno dialogowe służy do określania **COM izolowany** opcje dla [Mt.exe](https://msdn.microsoft.com/library/aa375649).  
   
- Aby uzyskać dostęp do tej strony właściwości — okno dialogowe, otwórz strony właściwości projektu lub arkuszu właściwości. Rozwiń węzeł **narzędziu manifestu** węzeł w węźle **wspólne właściwości**, a następnie wybierz **izolowanego COM**.  
+ Aby uzyskać dostęp do tego okna dialogowego strony właściwości, otwórz strony właściwości dla projektu lub arkuszu właściwości. Rozwiń **narzędziu manifestu** węźle **wspólne właściwości**, a następnie wybierz pozycję **COM izolowany**.  
   
 ## <a name="task-list"></a>Lista zadań  
   
 -   [Instrukcje: kompilowanie izolowanych aplikacji korzystających ze składników COM](../build/how-to-build-isolated-applications-to-consume-com-components.md)  
   
 ## <a name="uielement-list"></a>Lista elementów UI  
- **Pliku biblioteki typów**  
- Używa opcji/tlb, aby określić nazwę pliku biblioteki typów (pliku .tlb) używanego do generowania pliku manifestu narzędzia manifestu.  
+ **Plik biblioteki typów**  
+ Używa opcji/tlb, aby określić nazwę pliku biblioteki typów (pliku .tlb), narzędzie manifestu, zostanie użyta do wygenerowania pliku manifestu.  
   
  **Plik skryptu rejestratora**  
- Opcja /rgs jest używana do określenia nazwy plik skryptu rejestratora (pliku .rgs), który narzędzia manifestu będzie używał do generowania pliku manifestu.  
+ Opcja /rgs jest używana do określenia nazwy plik skryptu rejestratora (pliku .rgs), narzędzie manifestu, zostanie użyta do wygenerowania pliku manifestu.  
   
  **Nazwa pliku składnika**  
- Opcja/dll jest używana do określenia nazwy zasobu, który zostanie wygenerowany przez narzędzie manifestu. Wprowadź wartość dla tej właściwości po wartości w obu **pliku biblioteki typów** lub **plik skryptu rejestratora** zostały określone.  
+ Opcja/dll jest używana do określenia nazwy zasobu, który zostanie wygenerowany przez narzędzie manifestu. Wprowadź wartość tej właściwości podczas wartości dla dowolnego **pliku biblioteki typów** lub **plik skryptu rejestratora** zostały określone.  
   
  **Plik zastępstw**  
  Używa opcji /replacements, aby określić pełną ścieżkę do pliku, który zawiera wartości dla wymienialnych ciągów w pliku .rgs.  
   
 ## <a name="see-also"></a>Zobacz też  
- [Aplikacje izolowane](http://msdn.microsoft.com/library/aa375190)   
+ [Aplikacje izolowane](/windows/desktop/SbsCs/isolated-applications)   
  [Manifest aplikacji ClickOnce](/visualstudio/deployment/clickonce-application-manifest)   
  [Strony właściwości narzędzia manifestu](../ide/manifest-tool-property-pages.md)   
  [Praca z właściwościami projektu](../ide/working-with-project-properties.md)   

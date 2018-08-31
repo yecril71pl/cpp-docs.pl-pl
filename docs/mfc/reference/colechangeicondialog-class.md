@@ -26,12 +26,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 40907720965647e076c6b516f1c2de9f1d3f9edb
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: 089fe435c86b524acc41ba528452d93032d1b1a4
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37850569"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43214496"
 ---
 # <a name="colechangeicondialog-class"></a>Klasa COleChangeIconDialog
 Stosowane dla okna dialogowego OLE Zmień ikonę.  
@@ -67,7 +67,7 @@ class COleChangeIconDialog : public COleDialog
 ## <a name="remarks"></a>Uwagi  
  Utwórz obiekt klasy `COleChangeIconDialog` umożliwia wywołanie tego okna dialogowego. Po `COleChangeIconDialog` obiekt został skonstruowany, możesz użyć [m_ci](#m_ci) strukturę, aby zainicjować wartości lub stany formantów w oknie dialogowym. `m_ci` Struktury jest typu OLEUICHANGEICON. Aby uzyskać więcej informacji o korzystaniu z tej klasy okien dialogowych, zobacz [DoModal](#domodal) funkcja elementu członkowskiego.  
   
- Aby uzyskać więcej informacji, zobacz [OLEUICHANGEICON](http://msdn.microsoft.com/library/windows/desktop/ms680098) struktury w zestawie Windows SDK.  
+ Aby uzyskać więcej informacji, zobacz [OLEUICHANGEICON](/windows/desktop/api/oledlg/ns-oledlg-tagoleuichangeicona) struktury w zestawie Windows SDK.  
   
  Aby uzyskać więcej informacji o okna dialogowe OLE specyficzne artykuł [okna dialogowe w OLE](../../mfc/dialog-boxes-in-ole.md).  
   
@@ -122,7 +122,7 @@ explicit COleChangeIconDialog(
 ### <a name="remarks"></a>Uwagi  
  Aby wyświetlić okno dialogowe, należy wywołać [DoModal](#domodal) funkcji.  
   
- Aby uzyskać więcej informacji, zobacz [OLEUICHANGEICON](http://msdn.microsoft.com/library/windows/desktop/ms680098) struktury w zestawie Windows SDK.  
+ Aby uzyskać więcej informacji, zobacz [OLEUICHANGEICON](/windows/desktop/api/oledlg/ns-oledlg-tagoleuichangeicona) struktury w zestawie Windows SDK.  
   
 ##  <a name="dochangeicon"></a>  COleChangeIconDialog::DoChangeIcon  
  Wywołaj tę funkcję, aby zmienić ikonę reprezentujący elementu wybranego w oknie dialogowym po [DoModal](#domodal) zwraca IDOK.  
@@ -152,7 +152,7 @@ virtual INT_PTR DoModal();
   
 - IDCANCEL, jeśli użytkownik anulował okno dialogowe.  
   
-- IDABORT, jeśli wystąpił błąd. Jeśli zwracana jest IDABORT, wywołaj `COleDialog::GetLastError` funkcja elementu członkowskiego, aby uzyskać więcej informacji o typie błędu, który wystąpił. Aby uzyskać listę możliwych błędów, zobacz [OleUIChangeIcon](http://msdn.microsoft.com/library/windows/desktop/ms688307) funkcji w zestawie Windows SDK.  
+- IDABORT, jeśli wystąpił błąd. Jeśli zwracana jest IDABORT, wywołaj `COleDialog::GetLastError` funkcja elementu członkowskiego, aby uzyskać więcej informacji o typie błędu, który wystąpił. Aby uzyskać listę możliwych błędów, zobacz [OleUIChangeIcon](/windows/desktop/api/oledlg/nf-oledlg-oleuichangeicona) funkcji w zestawie Windows SDK.  
   
 ### <a name="remarks"></a>Uwagi  
  Aby inicjowanie różne formanty okna dialogowego, ustawiając członkowie [m_ci](#m_ci) struktury, należy to zrobić przed wywołaniem `DoModal`, ale po jest konstruowany obiektu okna dialogowego.  
@@ -179,7 +179,7 @@ OLEUICHANGEICON m_ci;
 ### <a name="remarks"></a>Uwagi  
  Elementy członkowskie tej struktury można zmodyfikować bezpośrednio lub za pośrednictwem funkcji elementów członkowskich.  
   
- Aby uzyskać więcej informacji, zobacz [OLEUICHANGEICON](http://msdn.microsoft.com/library/windows/desktop/ms680098) struktury w zestawie Windows SDK.  
+ Aby uzyskać więcej informacji, zobacz [OLEUICHANGEICON](/windows/desktop/api/oledlg/ns-oledlg-tagoleuichangeicona) struktury w zestawie Windows SDK.  
   
 ## <a name="see-also"></a>Zobacz też  
  [Klasa COleDialog](../../mfc/reference/coledialog-class.md)   

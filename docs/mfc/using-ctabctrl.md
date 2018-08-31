@@ -17,19 +17,19 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a3fd34d88a035e4180eff955238004a18d9af09a
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 9918bfa73249812a55ce2b8f5718a53ee9cec087
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33383685"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43217925"
 ---
 # <a name="using-ctabctrl"></a>Korzystanie z CTabCtrl
-Formant"karty" jest odpowiednikiem separatorów w notesie lub folderów oznaczonych w pliku cabinet. Użyj formantu karty reprezentowany przez klasę [CTabCtrl](../mfc/reference/ctabctrl-class.md), aby wyświetlić kilka stron informacje lub kontrolki użytkownika, pojedynczo, w formacie, który sugeruje elementu równorzędnego lub logiczne relacji między stronami.  
+"Formant karty" jest odpowiednikiem separatorów w notesie lub oznaczonych folderów w pliku cabinet. Korzystanie z kontrolki karty, reprezentowane przez klasę [CTabCtrl](../mfc/reference/ctabctrl-class.md), aby pokazać wielu stronach informacje lub kontrolki użytkownika, po kolei, w formacie, który sugeruje elementu równorzędnego lub logiczna relacja między stronami.  
   
- Aby uzyskać więcej informacji na formanty kart, zobacz [formanty karty](http://msdn.microsoft.com/library/windows/desktop/bb760550) w zestawie Windows SDK.  
+ Aby uzyskać więcej informacji dotyczących kontrolki karty, zobacz [kontrolki karty](/windows/desktop/Controls/tab-controls) w zestawie Windows SDK.  
   
-## <a name="what-do-you-want-to-know-more-about"></a>Co chcesz dowiedzieć się więcej o  
+## <a name="what-do-you-want-to-know-more-about"></a>Co chcesz dowiedzieć się więcej na temat  
   
 -   [Kontrolki karty i arkusze właściwości](../mfc/tab-controls-and-property-sheets.md)  
   

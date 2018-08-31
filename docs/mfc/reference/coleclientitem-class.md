@@ -174,12 +174,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6d19e808ed5e03f4ef117b91070a8885e7c68438
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: 43f9e1b342d6de1a93906d2469d0fd1eb211e886
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37850471"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43215664"
 ---
 # <a name="coleclientitem-class"></a>Klasa COleClientItem
 Definiuje interfejs kontenera elementów OLE.  
@@ -334,7 +334,7 @@ void Activate(
 |- 2|Edytuj element w osobnym oknie|OLEIVERB_OPEN|  
 |- 3|Ukrywanie elementu|OLEIVERB_HIDE|  
   
- Wartość-1 zwykle jest aliasem dla innej zlecenie. Jeśli otwarty do edycji nie jest obsługiwany, -2 ma taki sam skutek jak -1. Aby uzyskać dodatkowe wartości, zobacz [IOleObject::DoVerb](http://msdn.microsoft.com/library/windows/desktop/ms694508) w zestawie Windows SDK.  
+ Wartość-1 zwykle jest aliasem dla innej zlecenie. Jeśli otwarty do edycji nie jest obsługiwany, -2 ma taki sam skutek jak -1. Aby uzyskać dodatkowe wartości, zobacz [IOleObject::DoVerb](/windows/desktop/api/oleidl/nf-oleidl-ioleobject-doverb) w zestawie Windows SDK.  
   
  *pView*  
  Wskaźnik do okna widoku kontenera, który zawiera element OLE; jest on używany przez aplikację serwera aktywacji w miejscu. Ten parametr powinien mieć wartości NULL, jeśli kontener nie obsługuje aktywacji w miejscu.  
@@ -347,7 +347,7 @@ void Activate(
   
  Jeśli primary — zlecenie jest edycji i zero jest określona w *nVerb* parametru, aplikacja serwera zostanie uruchomiona, aby zezwolić na element OLE, który chcesz edytować. Jeśli aplikacja kontenera obsługuje aktywacji w miejscu, edytowanie może odbywać się w miejscu. Jeśli kontener nie obsługuje aktywacji w miejscu (lub jeśli określono zlecenie Otwórz), serwer jest uruchamiany w osobnym oknie i edytowanie może odbywać się tam. Zazwyczaj po użytkownik aplikacji kontenera kliknie dwukrotnie elementu OLE wartość primary — zlecenie w *nVerb* parametr określa akcję, która użytkownik może robić. Jednakże, jeśli serwer obsługuje tylko jedną akcję, zajmuje tę akcję, niezależnie od tego, która wartość jest określona w *nVerb* parametru.  
   
- Aby uzyskać więcej informacji, zobacz [IOleObject::DoVerb](http://msdn.microsoft.com/library/windows/desktop/ms694508) w zestawie Windows SDK.  
+ Aby uzyskać więcej informacji, zobacz [IOleObject::DoVerb](/windows/desktop/api/oleidl/nf-oleidl-ioleobject-doverb) w zestawie Windows SDK.  
   
 ##  <a name="activateas"></a>  COleClientItem::ActivateAs  
  Używa urządzeń konwersji obiektów OLE do aktywowania elementu, tak jakby był to element o typie określonym przez *clsidNew*.  
@@ -399,7 +399,7 @@ virtual BOOL CanActivate();
 ### <a name="remarks"></a>Uwagi  
  Domyślna implementacja umożliwia aktywacji w miejscu, jeśli kontener ma prawidłową okna. Należy przesłonić tę funkcję, aby zaimplementować logikę specjalną, aby zaakceptować lub odmowy żądania aktywacji. Na przykład żądanie aktywacji można odrzucić, jeśli element OLE jest zbyt mała lub nie są obecnie widoczne.  
   
- Aby uzyskać więcej informacji, zobacz [IOleInPlaceSite::CanInPlaceActivate](http://msdn.microsoft.com/library/windows/desktop/ms691236) w zestawie Windows SDK.  
+ Aby uzyskać więcej informacji, zobacz [IOleInPlaceSite::CanInPlaceActivate](/windows/desktop/api/oleidl/nf-oleidl-ioleinplacesite-caninplaceactivate) w zestawie Windows SDK.  
   
 ##  <a name="cancreatefromdata"></a>  COleClientItem::CanCreateFromData  
  Sprawdza, czy aplikacja kontenera można utworzyć obiekt osadzony z danym `COleDataObject` obiektu.  
@@ -454,7 +454,7 @@ static BOOL PASCAL CanPaste();
  Wartość różną od zera, jeśli ze Schowka; można wkleić wbudowanego elementu OLE w przeciwnym razie 0.  
   
 ### <a name="remarks"></a>Uwagi  
- Aby uzyskać więcej informacji, zobacz [OleGetClipboard](http://msdn.microsoft.com/library/windows/desktop/ms692778) i [OleQueryCreateFromData](http://msdn.microsoft.com/library/windows/desktop/ms683739) w zestawie Windows SDK.  
+ Aby uzyskać więcej informacji, zobacz [OleGetClipboard](/windows/desktop/api/ole2/nf-ole2-olegetclipboard) i [OleQueryCreateFromData](/windows/desktop/api/ole2/nf-ole2-olequerycreatefromdata) w zestawie Windows SDK.  
   
 ##  <a name="canpastelink"></a>  COleClientItem::CanPasteLink  
  Wywołaj tę funkcję, aby zobaczyć, czy połączony element OLE można wkleić ze Schowka.  
@@ -467,7 +467,7 @@ static BOOL PASCAL CanPasteLink();
  Wartość różną od zera, jeśli ze Schowka; można wkleić połączony element OLE w przeciwnym razie 0.  
   
 ### <a name="remarks"></a>Uwagi  
- Aby uzyskać więcej informacji, zobacz [OleGetClipboard](http://msdn.microsoft.com/library/windows/desktop/ms692778) i [OleQueryLinkFromData](http://msdn.microsoft.com/library/windows/desktop/ms690244) w zestawie Windows SDK.  
+ Aby uzyskać więcej informacji, zobacz [OleGetClipboard](/windows/desktop/api/ole2/nf-ole2-olegetclipboard) i [OleQueryLinkFromData](/windows/desktop/api/ole2/nf-ole2-olequerylinkfromdata) w zestawie Windows SDK.  
   
 ##  <a name="close"></a>  COleClientItem::Close  
  Wywołaj tę funkcję, aby zmienić stan elementu OLE z uruchomiona załadować stanu, oznacza to, załadować jej obsługi w pamięci, ale serwer nie działa.  
@@ -489,7 +489,7 @@ void Close(OLECLOSE dwCloseOption = OLECLOSE_SAVEIFDIRTY);
 ### <a name="remarks"></a>Uwagi  
  Ta funkcja nie obowiązuje, gdy element OLE nie jest uruchomiony.  
   
- Aby uzyskać więcej informacji, zobacz [IOleObject::Close](http://msdn.microsoft.com/library/windows/desktop/ms683922) w zestawie Windows SDK.  
+ Aby uzyskać więcej informacji, zobacz [IOleObject::Close](/windows/desktop/api/oleidl/nf-oleidl-ioleobject-close) w zestawie Windows SDK.  
   
 ##  <a name="coleclientitem"></a>  COleClientItem::COleClientItem  
  Konstruuje `COleClientItem` obiektu i dodaje go do kolekcji dokumentów kontenerów elementów dokumentu, tworzy tylko obiektu języka C++, która nie wykonuje żadnych Inicjalizacja OLE.  
@@ -558,7 +558,7 @@ void CopyToClipboard(BOOL bIncludeLink = FALSE);
 ### <a name="remarks"></a>Uwagi  
  Zazwyczaj można Wywołaj tę funkcję, pisząc programy obsługi komunikatów dla polecenia Kopiuj lub Wytnij z menu Edycja. Jeśli chcesz zaimplementować polecenia Kopiuj lub Wytnij, musi implementować zaznaczenie elementu w kontenerze aplikacji.  
   
- Aby uzyskać więcej informacji, zobacz [OleSetClipboard](http://msdn.microsoft.com/library/windows/desktop/ms686623) w zestawie Windows SDK.  
+ Aby uzyskać więcej informacji, zobacz [OleSetClipboard](/windows/desktop/api/ole2/nf-ole2-olesetclipboard) w zestawie Windows SDK.  
   
 ##  <a name="createclonefrom"></a>  COleClientItem::CreateCloneFrom  
  Wywołaj tę funkcję, aby utworzyć kopię określonego elementu OLE.  
@@ -589,13 +589,13 @@ BOOL CreateFromClipboard(
   
 ### <a name="parameters"></a>Parametry  
  *Renderowanie*  
- Flaga, określający, jak serwer będzie renderować element OLE. Możliwe wartości dla [OLERENDER](http://msdn.microsoft.com/library/windows/desktop/ms691507) w zestawie Windows SDK.  
+ Flaga, określający, jak serwer będzie renderować element OLE. Możliwe wartości dla [OLERENDER](/windows/desktop/api/oleidl/ne-oleidl-tagolerender) w zestawie Windows SDK.  
   
  *cfFormat*  
  Określa format danych schowka przechowywanie w pamięci podręcznej podczas tworzenia elementu OLE.  
   
  *lpFormatEtc*  
- Wskaźnik do [FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177) struktura używana, jeśli *renderowania* OLERENDER_FORMAT lub OLERENDER_DRAW. Podaj wartość dla tego parametru, tylko wtedy, gdy chcesz określić informacji o formacie dodatkowe poza określonym przez format schowka *cfFormat*. Jeśli ten parametr zostanie pominięty, wartości domyślne są używane dla innych pól w `FORMATETC` struktury.  
+ Wskaźnik do [FORMATETC](/windows/desktop/api/objidl/ns-objidl-tagformatetc) struktura używana, jeśli *renderowania* OLERENDER_FORMAT lub OLERENDER_DRAW. Podaj wartość dla tego parametru, tylko wtedy, gdy chcesz określić informacji o formacie dodatkowe poza określonym przez format schowka *cfFormat*. Jeśli ten parametr zostanie pominięty, wartości domyślne są używane dla innych pól w `FORMATETC` struktury.  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Wartość różną od zera, jeśli to się powiedzie; w przeciwnym razie 0.  
@@ -603,7 +603,7 @@ BOOL CreateFromClipboard(
 ### <a name="remarks"></a>Uwagi  
  Zazwyczaj wywołać tę funkcję z obsługi wiadomości dla polecenia Wklej menu Edycja. (Polecenie Paste jest włączone przez platformę, gdy [CanPaste](#canpaste) funkcja elementu członkowskiego zwraca wartość różną od zera.)  
   
- Aby uzyskać więcej informacji, zobacz [OLERENDER](http://msdn.microsoft.com/library/windows/desktop/ms691507) i [FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177) w zestawie Windows SDK.  
+ Aby uzyskać więcej informacji, zobacz [OLERENDER](/windows/desktop/api/oleidl/ne-oleidl-tagolerender) i [FORMATETC](/windows/desktop/api/objidl/ns-objidl-tagformatetc) w zestawie Windows SDK.  
   
 ##  <a name="createfromdata"></a>  COleClientItem::CreateFromData  
  Wywołaj tę funkcję, aby utworzyć element osadzony z `COleDataObject` obiektu.  
@@ -621,13 +621,13 @@ BOOL CreateFromData(
  Wskaźnik do [COleDataObject](../../mfc/reference/coledataobject-class.md) obiektu, z którego ma zostać utworzony element OLE.  
   
  *Renderowanie*  
- Flaga, określający, jak serwer będzie renderować element OLE. Możliwe wartości dla [OLERENDER](http://msdn.microsoft.com/library/windows/desktop/ms691507) w zestawie Windows SDK.  
+ Flaga, określający, jak serwer będzie renderować element OLE. Możliwe wartości dla [OLERENDER](/windows/desktop/api/oleidl/ne-oleidl-tagolerender) w zestawie Windows SDK.  
   
  *cfFormat*  
  Określa format danych schowka przechowywanie w pamięci podręcznej podczas tworzenia elementu OLE.  
   
  *lpFormatEtc*  
- Wskaźnik do [FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177) struktura używana, jeśli *renderowania* OLERENDER_FORMAT lub OLERENDER_DRAW. Podaj wartość dla tego parametru, tylko wtedy, gdy chcesz określić informacji o formacie dodatkowe poza określonym przez format schowka *cfFormat*. Jeśli ten parametr zostanie pominięty, wartości domyślne są używane dla innych pól w `FORMATETC` struktury.  
+ Wskaźnik do [FORMATETC](/windows/desktop/api/objidl/ns-objidl-tagformatetc) struktura używana, jeśli *renderowania* OLERENDER_FORMAT lub OLERENDER_DRAW. Podaj wartość dla tego parametru, tylko wtedy, gdy chcesz określić informacji o formacie dodatkowe poza określonym przez format schowka *cfFormat*. Jeśli ten parametr zostanie pominięty, wartości domyślne są używane dla innych pól w `FORMATETC` struktury.  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Wartość różną od zera, jeśli to się powiedzie; w przeciwnym razie 0.  
@@ -635,7 +635,7 @@ BOOL CreateFromData(
 ### <a name="remarks"></a>Uwagi  
  Podaj operacji transferu danych, takich jak wklejanie ze Schowka lub operacji przeciągania i upuszczania, `COleDataObject` obiektów, zawierającego informacje o oferowanych przez aplikację serwera. Zazwyczaj jest on używany w zastąpienie metody [CView::OnDrop](../../mfc/reference/cview-class.md#ondrop).  
   
- Aby uzyskać więcej informacji, zobacz [OleCreateFromData](http://msdn.microsoft.com/library/windows/desktop/ms691211), [OLERENDER](http://msdn.microsoft.com/library/windows/desktop/ms691507), i [FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177) w zestawie Windows SDK.  
+ Aby uzyskać więcej informacji, zobacz [OleCreateFromData](/windows/desktop/api/ole2/nf-ole2-olecreatefromdata), [OLERENDER](/windows/desktop/api/oleidl/ne-oleidl-tagolerender), i [FORMATETC](/windows/desktop/api/objidl/ns-objidl-tagformatetc) w zestawie Windows SDK.  
   
 ##  <a name="createfromfile"></a>  COleClientItem::CreateFromFile  
  Wywołaj tę funkcję, aby utworzyć wbudowanego elementu OLE z pliku.  
@@ -657,13 +657,13 @@ BOOL CreateFromFile(
  Zarezerwowane do użytku w przyszłości.  
   
  *Renderowanie*  
- Flaga, określający, jak serwer będzie renderować element OLE. Możliwe wartości dla [OLERENDER](http://msdn.microsoft.com/library/windows/desktop/ms691507) w zestawie Windows SDK.  
+ Flaga, określający, jak serwer będzie renderować element OLE. Możliwe wartości dla [OLERENDER](/windows/desktop/api/oleidl/ne-oleidl-tagolerender) w zestawie Windows SDK.  
   
  *cfFormat*  
  Określa format danych schowka przechowywanie w pamięci podręcznej podczas tworzenia elementu OLE.  
   
  *lpFormatEtc*  
- Wskaźnik do [FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177) struktura używana, jeśli *renderowania* OLERENDER_FORMAT lub OLERENDER_DRAW. Podaj wartość dla tego parametru, tylko wtedy, gdy chcesz określić informacji o formacie dodatkowe poza określonym przez format schowka *cfFormat*. Jeśli ten parametr zostanie pominięty, wartości domyślne są używane dla innych pól w `FORMATETC` struktury.  
+ Wskaźnik do [FORMATETC](/windows/desktop/api/objidl/ns-objidl-tagformatetc) struktura używana, jeśli *renderowania* OLERENDER_FORMAT lub OLERENDER_DRAW. Podaj wartość dla tego parametru, tylko wtedy, gdy chcesz określić informacji o formacie dodatkowe poza określonym przez format schowka *cfFormat*. Jeśli ten parametr zostanie pominięty, wartości domyślne są używane dla innych pól w `FORMATETC` struktury.  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Wartość różną od zera, jeśli to się powiedzie; w przeciwnym razie 0.  
@@ -671,7 +671,7 @@ BOOL CreateFromFile(
 ### <a name="remarks"></a>Uwagi  
  Struktura wywołuje tę funkcję z [COleInsertDialog::CreateItem](../../mfc/reference/coleinsertdialog-class.md#createitem) Jeśli użytkownik wybierze OK z okna dialogowego Wstawianie obiektu, jeśli wybrano pozycję Utwórz przy użyciu przycisku pliku.  
   
- Aby uzyskać więcej informacji, zobacz [OleCreateFromFile](http://msdn.microsoft.com/library/windows/desktop/ms690116), [OLERENDER](http://msdn.microsoft.com/library/windows/desktop/ms691507), i [FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177) w zestawie Windows SDK.  
+ Aby uzyskać więcej informacji, zobacz [OleCreateFromFile](/windows/desktop/api/ole/nf-ole-olecreatefromfile), [OLERENDER](/windows/desktop/api/oleidl/ne-oleidl-tagolerender), i [FORMATETC](/windows/desktop/api/objidl/ns-objidl-tagformatetc) w zestawie Windows SDK.  
   
 ##  <a name="createlinkfromclipboard"></a>  COleClientItem::CreateLinkFromClipboard  
  Wywołaj tę funkcję, aby utworzyć połączony element z zawartość Schowka.  
@@ -685,13 +685,13 @@ BOOL CreateLinkFromClipboard(
   
 ### <a name="parameters"></a>Parametry  
  *Renderowanie*  
- Flaga, określający, jak serwer będzie renderować element OLE. Możliwe wartości dla [OLERENDER](http://msdn.microsoft.com/library/windows/desktop/ms691507) w zestawie Windows SDK.  
+ Flaga, określający, jak serwer będzie renderować element OLE. Możliwe wartości dla [OLERENDER](/windows/desktop/api/oleidl/ne-oleidl-tagolerender) w zestawie Windows SDK.  
   
  *cfFormat*  
  Określa format danych schowka przechowywanie w pamięci podręcznej podczas tworzenia elementu OLE.  
   
  *lpFormatEtc*  
- Wskaźnik do [FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177) struktura używana, jeśli *renderowania* OLERENDER_FORMAT lub OLERENDER_DRAW. Podaj wartość dla tego parametru, tylko wtedy, gdy chcesz określić informacji o formacie dodatkowe poza określonym przez format schowka *cfFormat*. Jeśli ten parametr zostanie pominięty, wartości domyślne są używane dla innych pól w `FORMATETC` struktury.  
+ Wskaźnik do [FORMATETC](/windows/desktop/api/objidl/ns-objidl-tagformatetc) struktura używana, jeśli *renderowania* OLERENDER_FORMAT lub OLERENDER_DRAW. Podaj wartość dla tego parametru, tylko wtedy, gdy chcesz określić informacji o formacie dodatkowe poza określonym przez format schowka *cfFormat*. Jeśli ten parametr zostanie pominięty, wartości domyślne są używane dla innych pól w `FORMATETC` struktury.  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Wartość różną od zera, jeśli to się powiedzie; w przeciwnym razie 0.  
@@ -699,7 +699,7 @@ BOOL CreateLinkFromClipboard(
 ### <a name="remarks"></a>Uwagi  
  Zazwyczaj wywołać tę funkcję z obsługi wiadomości w poleceniu Wklej łącze w menu Edycja. (Polecenie Wklej łącze jest włączone w implementacji domyślnej [COleDocument](../../mfc/reference/coledocument-class.md) Jeśli Schowek zawiera element OLE, który może być połączony.)  
   
- Aby uzyskać więcej informacji, zobacz [OLERENDER](http://msdn.microsoft.com/library/windows/desktop/ms691507) i [FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177) w zestawie Windows SDK.  
+ Aby uzyskać więcej informacji, zobacz [OLERENDER](/windows/desktop/api/oleidl/ne-oleidl-tagolerender) i [FORMATETC](/windows/desktop/api/objidl/ns-objidl-tagformatetc) w zestawie Windows SDK.  
   
 ##  <a name="createlinkfromdata"></a>  COleClientItem::CreateLinkFromData  
  Wywołaj tę funkcję, aby utworzyć połączony element z `COleDataObject` obiektu.  
@@ -717,13 +717,13 @@ BOOL CreateLinkFromData(
  Wskaźnik do [COleDataObject](../../mfc/reference/coledataobject-class.md) obiektu, z którego ma zostać utworzony element OLE.  
   
  *Renderowanie*  
- Flaga, określający, jak serwer będzie renderować element OLE. Możliwe wartości dla [OLERENDER](http://msdn.microsoft.com/library/windows/desktop/ms691507) w zestawie Windows SDK.  
+ Flaga, określający, jak serwer będzie renderować element OLE. Możliwe wartości dla [OLERENDER](/windows/desktop/api/oleidl/ne-oleidl-tagolerender) w zestawie Windows SDK.  
   
  *cfFormat*  
  Określa format danych schowka przechowywanie w pamięci podręcznej podczas tworzenia elementu OLE.  
   
  *lpFormatEtc*  
- Wskaźnik do [FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177) struktura używana, jeśli *renderowania* OLERENDER_FORMAT lub OLERENDER_DRAW. Podaj wartość dla tego parametru, tylko wtedy, gdy chcesz określić informacji o formacie dodatkowe poza określonym przez format schowka *cfFormat*. Jeśli ten parametr zostanie pominięty, wartości domyślne są używane dla innych pól w `FORMATETC` struktury.  
+ Wskaźnik do [FORMATETC](/windows/desktop/api/objidl/ns-objidl-tagformatetc) struktura używana, jeśli *renderowania* OLERENDER_FORMAT lub OLERENDER_DRAW. Podaj wartość dla tego parametru, tylko wtedy, gdy chcesz określić informacji o formacie dodatkowe poza określonym przez format schowka *cfFormat*. Jeśli ten parametr zostanie pominięty, wartości domyślne są używane dla innych pól w `FORMATETC` struktury.  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Wartość różną od zera, jeśli to się powiedzie; w przeciwnym razie 0.  
@@ -731,7 +731,7 @@ BOOL CreateLinkFromData(
 ### <a name="remarks"></a>Uwagi  
  Połączenie się z tym podczas operacja przeciągania po użytkownik wskazuje, że można utworzyć łącza. Może również służyć do obsługi polecenia Edytuj Wklej. Jest wywoływana przez strukturę w `COleClientItem::CreateLinkFromClipboard` i [COlePasteSpecialDialog::CreateItem](../../mfc/reference/colepastespecialdialog-class.md#createitem) gdy wybrano opcję łącza.  
   
- Aby uzyskać więcej informacji, zobacz [OleCreateLinkFromData](http://msdn.microsoft.com/library/windows/desktop/ms680731), [OLERENDER](http://msdn.microsoft.com/library/windows/desktop/ms691507), i [FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177) w zestawie Windows SDK.  
+ Aby uzyskać więcej informacji, zobacz [OleCreateLinkFromData](/windows/desktop/api/ole2/nf-ole2-olecreatelinkfromdata), [OLERENDER](/windows/desktop/api/oleidl/ne-oleidl-tagolerender), i [FORMATETC](/windows/desktop/api/objidl/ns-objidl-tagformatetc) w zestawie Windows SDK.  
   
 ##  <a name="createlinkfromfile"></a>  COleClientItem::CreateLinkFromFile  
  Wywołaj tę funkcję, aby utworzyć połączony element OLE z pliku.  
@@ -749,13 +749,13 @@ BOOL CreateLinkFromFile(
  Wskaźnik na nazwę pliku, z którego ma zostać utworzony element OLE.  
   
  *Renderowanie*  
- Flaga, określający, jak serwer będzie renderować element OLE. Możliwe wartości dla [OLERENDER](http://msdn.microsoft.com/library/windows/desktop/ms691507) w zestawie Windows SDK.  
+ Flaga, określający, jak serwer będzie renderować element OLE. Możliwe wartości dla [OLERENDER](/windows/desktop/api/oleidl/ne-oleidl-tagolerender) w zestawie Windows SDK.  
   
  *cfFormat*  
  Określa format danych schowka przechowywanie w pamięci podręcznej podczas tworzenia elementu OLE.  
   
  *lpFormatEtc*  
- Wskaźnik do [FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177) struktura używana, jeśli *renderowania* OLERENDER_FORMAT lub OLERENDER_DRAW. Podaj wartość dla tego parametru, tylko wtedy, gdy chcesz określić informacji o formacie dodatkowe poza określonym przez format schowka *cfFormat*. Jeśli ten parametr zostanie pominięty, wartości domyślne są używane dla innych pól w `FORMATETC` struktury.  
+ Wskaźnik do [FORMATETC](/windows/desktop/api/objidl/ns-objidl-tagformatetc) struktura używana, jeśli *renderowania* OLERENDER_FORMAT lub OLERENDER_DRAW. Podaj wartość dla tego parametru, tylko wtedy, gdy chcesz określić informacji o formacie dodatkowe poza określonym przez format schowka *cfFormat*. Jeśli ten parametr zostanie pominięty, wartości domyślne są używane dla innych pól w `FORMATETC` struktury.  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Wartość różną od zera, jeśli to się powiedzie; w przeciwnym razie 0.  
@@ -763,7 +763,7 @@ BOOL CreateLinkFromFile(
 ### <a name="remarks"></a>Uwagi  
  Struktura wywołuje tę funkcję, jeśli użytkownik wybierze OK z okna dialogowego Wstawianie obiektu, gdy wybrano tworzenie przy użyciu przycisku pliku i Link pole wyboru jest zaznaczone. Jest wywoływane z [COleInsertDialog::CreateItem](../../mfc/reference/coleinsertdialog-class.md#createitem).  
   
- Aby uzyskać więcej informacji, zobacz [OleCreateLinkToFile](http://msdn.microsoft.com/library/windows/desktop/ms678434), [OLERENDER](http://msdn.microsoft.com/library/windows/desktop/ms691507), i [FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177) w zestawie Windows SDK.  
+ Aby uzyskać więcej informacji, zobacz [OleCreateLinkToFile](/windows/desktop/api/ole2/nf-ole2-olecreatelinktofile), [OLERENDER](/windows/desktop/api/oleidl/ne-oleidl-tagolerender), i [FORMATETC](/windows/desktop/api/objidl/ns-objidl-tagformatetc) w zestawie Windows SDK.  
   
 ##  <a name="createnewitem"></a>  COleClientItem::CreateNewItem  
  Wywołaj tę funkcję, aby utworzyć element osadzony; Ta funkcja spowoduje uruchomienie aplikacji serwera, który umożliwia użytkownikowi utworzenie elementów OLE.  
@@ -781,13 +781,13 @@ BOOL CreateNewItem(
  Identyfikator, który unikatowo identyfikuje typ elementu OLE do utworzenia.  
   
  *Renderowanie*  
- Flaga, określający, jak serwer będzie renderować element OLE. Możliwe wartości dla [OLERENDER](http://msdn.microsoft.com/library/windows/desktop/ms691507) w zestawie Windows SDK.  
+ Flaga, określający, jak serwer będzie renderować element OLE. Możliwe wartości dla [OLERENDER](/windows/desktop/api/oleidl/ne-oleidl-tagolerender) w zestawie Windows SDK.  
   
  *cfFormat*  
  Określa format danych schowka przechowywanie w pamięci podręcznej podczas tworzenia elementu OLE.  
   
  *lpFormatEtc*  
- Wskaźnik do [FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177) struktura używana, jeśli *renderowania* OLERENDER_FORMAT lub OLERENDER_DRAW. Podaj wartość dla tego parametru, tylko wtedy, gdy chcesz określić informacji o formacie dodatkowe poza określonym przez format schowka *cfFormat*. Jeśli ten parametr zostanie pominięty, wartości domyślne są używane dla innych pól w `FORMATETC` struktury.  
+ Wskaźnik do [FORMATETC](/windows/desktop/api/objidl/ns-objidl-tagformatetc) struktura używana, jeśli *renderowania* OLERENDER_FORMAT lub OLERENDER_DRAW. Podaj wartość dla tego parametru, tylko wtedy, gdy chcesz określić informacji o formacie dodatkowe poza określonym przez format schowka *cfFormat*. Jeśli ten parametr zostanie pominięty, wartości domyślne są używane dla innych pól w `FORMATETC` struktury.  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Wartość różną od zera, jeśli to się powiedzie; w przeciwnym razie 0.  
@@ -795,7 +795,7 @@ BOOL CreateNewItem(
 ### <a name="remarks"></a>Uwagi  
  Struktura wywołuje tę funkcję, jeśli użytkownik wybierze OK z okna dialogowego Wstawianie obiektu w przypadku wybrania przycisku Utwórz nowy.  
   
- Aby uzyskać więcej informacji, zobacz [OleCreate](http://msdn.microsoft.com/library/windows/desktop/ms678409), [OLERENDER](http://msdn.microsoft.com/library/windows/desktop/ms691507), i [FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177) w zestawie Windows SDK.  
+ Aby uzyskać więcej informacji, zobacz [OleCreate](/windows/desktop/api/ole/nf-ole-olecreate), [OLERENDER](/windows/desktop/api/oleidl/ne-oleidl-tagolerender), i [FORMATETC](/windows/desktop/api/objidl/ns-objidl-tagformatetc) w zestawie Windows SDK.  
   
 ##  <a name="createstaticfromclipboard"></a>  COleClientItem::CreateStaticFromClipboard  
  Wywołaj tę funkcję, aby utworzyć element statyczny od zawartości Schowka.  
@@ -809,13 +809,13 @@ BOOL CreateStaticFromClipboard(
   
 ### <a name="parameters"></a>Parametry  
  *Renderowanie*  
- Flaga, określający, jak serwer będzie renderować element OLE. Możliwe wartości dla [OLERENDER](http://msdn.microsoft.com/library/windows/desktop/ms691507) w zestawie Windows SDK.  
+ Flaga, określający, jak serwer będzie renderować element OLE. Możliwe wartości dla [OLERENDER](/windows/desktop/api/oleidl/ne-oleidl-tagolerender) w zestawie Windows SDK.  
   
  *cfFormat*  
  Określa format danych schowka przechowywanie w pamięci podręcznej podczas tworzenia elementu OLE.  
   
  *lpFormatEtc*  
- Wskaźnik do [FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177) struktura używana, jeśli *renderowania* OLERENDER_FORMAT lub OLERENDER_DRAW. Podaj wartość dla tego parametru, tylko wtedy, gdy chcesz określić informacji o formacie dodatkowe poza określonym przez format schowka *cfFormat*. Jeśli ten parametr zostanie pominięty, wartości domyślne są używane dla innych pól w `FORMATETC` struktury.  
+ Wskaźnik do [FORMATETC](/windows/desktop/api/objidl/ns-objidl-tagformatetc) struktura używana, jeśli *renderowania* OLERENDER_FORMAT lub OLERENDER_DRAW. Podaj wartość dla tego parametru, tylko wtedy, gdy chcesz określić informacji o formacie dodatkowe poza określonym przez format schowka *cfFormat*. Jeśli ten parametr zostanie pominięty, wartości domyślne są używane dla innych pól w `FORMATETC` struktury.  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Wartość różną od zera, jeśli to się powiedzie; w przeciwnym razie 0.  
@@ -823,7 +823,7 @@ BOOL CreateStaticFromClipboard(
 ### <a name="remarks"></a>Uwagi  
  Statyczny element zawiera dane prezentacji, ale nie danych natywnych; w związku z tym go nie można edytować. Zazwyczaj można wywołać tę funkcję, jeśli [CreateFromClipboard](#createfromclipboard) funkcji składowej nie powiedzie się.  
   
- Aby uzyskać więcej informacji, zobacz [OLERENDER](http://msdn.microsoft.com/library/windows/desktop/ms691507) i [FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177) w zestawie Windows SDK.  
+ Aby uzyskać więcej informacji, zobacz [OLERENDER](/windows/desktop/api/oleidl/ne-oleidl-tagolerender) i [FORMATETC](/windows/desktop/api/objidl/ns-objidl-tagformatetc) w zestawie Windows SDK.  
   
 ##  <a name="createstaticfromdata"></a>  COleClientItem::CreateStaticFromData  
  Wywołaj tę funkcję, aby utworzyć element statyczny z `COleDataObject` obiektu.  
@@ -841,13 +841,13 @@ BOOL CreateStaticFromData(
  Wskaźnik do [COleDataObject](../../mfc/reference/coledataobject-class.md) obiektu, z którego ma zostać utworzony element OLE.  
   
  *Renderowanie*  
- Flaga, określający, jak serwer będzie renderować element OLE. Możliwe wartości dla [OLERENDER](http://msdn.microsoft.com/library/windows/desktop/ms691507) w zestawie Windows SDK.  
+ Flaga, określający, jak serwer będzie renderować element OLE. Możliwe wartości dla [OLERENDER](/windows/desktop/api/oleidl/ne-oleidl-tagolerender) w zestawie Windows SDK.  
   
  *cfFormat*  
  Określa format danych schowka przechowywanie w pamięci podręcznej podczas tworzenia elementu OLE.  
   
  *lpFormatEtc*  
- Wskaźnik do [FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177) struktura używana, jeśli *renderowania* OLERENDER_FORMAT lub OLERENDER_DRAW. Podaj wartość dla tego parametru, tylko wtedy, gdy chcesz określić informacji o formacie dodatkowe poza określonym przez format schowka *cfFormat*. Jeśli ten parametr zostanie pominięty, wartości domyślne są używane dla innych pól w `FORMATETC` struktury.  
+ Wskaźnik do [FORMATETC](/windows/desktop/api/objidl/ns-objidl-tagformatetc) struktura używana, jeśli *renderowania* OLERENDER_FORMAT lub OLERENDER_DRAW. Podaj wartość dla tego parametru, tylko wtedy, gdy chcesz określić informacji o formacie dodatkowe poza określonym przez format schowka *cfFormat*. Jeśli ten parametr zostanie pominięty, wartości domyślne są używane dla innych pól w `FORMATETC` struktury.  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Wartość różną od zera, jeśli to się powiedzie; w przeciwnym razie 0.  
@@ -857,7 +857,7 @@ BOOL CreateStaticFromData(
   
  Używane w [COlePasteSpecialDialog::CreateItem](../../mfc/reference/colepastespecialdialog-class.md#createitem) po wybraniu statyczne.  
   
- Aby uzyskać więcej informacji, zobacz [OleCreateStaticFromData](http://msdn.microsoft.com/library/windows/desktop/ms687290), [OLERENDER](http://msdn.microsoft.com/library/windows/desktop/ms691507), i [FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177) w zestawie Windows SDK.  
+ Aby uzyskać więcej informacji, zobacz [OleCreateStaticFromData](/windows/desktop/api/ole2/nf-ole2-olecreatestaticfromdata), [OLERENDER](/windows/desktop/api/oleidl/ne-oleidl-tagolerender), i [FORMATETC](/windows/desktop/api/objidl/ns-objidl-tagformatetc) w zestawie Windows SDK.  
   
 ##  <a name="deactivate"></a>  COleClientItem::Deactivate  
  Wywołaj tę funkcję, aby zdezaktywować elementu OLE i zwolnić wszystkie zasoby skojarzone.  
@@ -871,7 +871,7 @@ void Deactivate();
   
  Jeśli aplikacja obsługuje cofania, nie należy wywoływać `Deactivate`; zamiast tego należy wywołać [DeactivateUI](#deactivateui).  
   
- Aby uzyskać więcej informacji, zobacz [IOleInPlaceObject::InPlaceDeactivate](http://msdn.microsoft.com/library/windows/desktop/ms679700) w zestawie Windows SDK.  
+ Aby uzyskać więcej informacji, zobacz [IOleInPlaceObject::InPlaceDeactivate](/windows/desktop/api/oleidl/nf-oleidl-ioleinplaceobject-inplacedeactivate) w zestawie Windows SDK.  
   
 ##  <a name="deactivateui"></a>  COleClientItem::DeactivateUI  
  Wywołaj tę funkcję, gdy użytkownik dezaktywuje element, któremu został aktywowany w miejscu.  
@@ -885,7 +885,7 @@ void DeactivateUI();
   
  Ta funkcja nie opróżnia informacje o stanie cofania dla elementu. Czy informacje są przechowywane, aby [ReactivateAndUndo](#reactivateandundo) później mogą być używane do wykonania polecenia Cofnij w aplikacji serwera, w przypadku, gdy wybrano polecenie Cofnij kontenera natychmiast po dezaktywacji elementu.  
   
- Aby uzyskać więcej informacji, zobacz [IOleInPlaceObject::InPlaceDeactivate](http://msdn.microsoft.com/library/windows/desktop/ms679700) w zestawie Windows SDK.  
+ Aby uzyskać więcej informacji, zobacz [IOleInPlaceObject::InPlaceDeactivate](/windows/desktop/api/oleidl/nf-oleidl-ioleinplaceobject-inplacedeactivate) w zestawie Windows SDK.  
   
 ##  <a name="delete"></a>  COleClientItem::Delete  
  Wywołaj tę funkcję, aby usunąć element OLE z kontenerem.  
@@ -943,7 +943,7 @@ DROPEFFECT DoDragDrop(
   
 -   Przeciągnij Windows 95/98 opóźnienia są przechowywane w pamięci podręcznej wersji systemu Windows. PLIKU INI.  
   
- Dla przeciągnij więcej informacji o tym, jak opóźnienie informacje są przechowywane w rejestrze albo lub. Plik INI, zobacz [WriteProfileString](http://msdn.microsoft.com/library/windows/desktop/ms725504) w zestawie Windows SDK.  
+ Dla przeciągnij więcej informacji o tym, jak opóźnienie informacje są przechowywane w rejestrze albo lub. Plik INI, zobacz [WriteProfileString](/windows/desktop/api/winbase/nf-winbase-writeprofilestringa) w zestawie Windows SDK.  
   
 ##  <a name="doverb"></a>  COleClientItem::DoVerb  
  Wywołaj `DoVerb` wykonać określone zlecenie.  
@@ -967,7 +967,7 @@ virtual BOOL DoVerb(
 |- 2|Edytuj element w osobnym oknie|OLEIVERB_OPEN|  
 |- 3|Ukrywanie elementu|OLEIVERB_HIDE|  
   
- Wartość-1 zwykle jest aliasem dla innej zlecenie. Jeśli otwarty do edycji nie jest obsługiwany, -2 ma taki sam skutek jak -1. Aby uzyskać dodatkowe wartości, zobacz [IOleObject::DoVerb](http://msdn.microsoft.com/library/windows/desktop/ms694508) w zestawie Windows SDK.  
+ Wartość-1 zwykle jest aliasem dla innej zlecenie. Jeśli otwarty do edycji nie jest obsługiwany, -2 ma taki sam skutek jak -1. Aby uzyskać dodatkowe wartości, zobacz [IOleObject::DoVerb](/windows/desktop/api/oleidl/nf-oleidl-ioleobject-doverb) w zestawie Windows SDK.  
   
  *pView*  
  Wskaźnik do okna widoku; jest on używany przez serwer aktywacji w miejscu. Tego parametru powinna być równa NULL, jeśli aplikacja kontenera nie zezwala na aktywacji w miejscu.  
@@ -1013,7 +1013,7 @@ BOOL Draw(
   
  *LpBounds* parametr identyfikuje prostokąt w kontekście urządzenia docelowego (względem jego bieżący tryb mapowanie). Renderowanie może obejmować skalowanie obrazu i może służyć przez aplikacje kontenera celu nałożenia widoku, która skaluje się między widokiem wyświetlanych i finalnego obrazu drukowanych.  
   
- Aby uzyskać więcej informacji, zobacz [IViewObject::Draw](http://msdn.microsoft.com/library/windows/desktop/ms688655) w zestawie Windows SDK.  
+ Aby uzyskać więcej informacji, zobacz [IViewObject::Draw](/windows/desktop/api/oleidl/nf-oleidl-iviewobject-draw) w zestawie Windows SDK.  
   
 ##  <a name="getactiveview"></a>  COleClientItem::GetActiveView  
  Zwraca widok, w której element jest aktywowany w miejscu.  
@@ -1047,9 +1047,9 @@ BOOL GetCachedExtent(
 ### <a name="remarks"></a>Uwagi  
  Ta funkcja udostępnia te same informacje co [GetExtent](#getextent). Jednak można wywoływać `GetCachedExtent` Aby uzyskać informacje o zakresie podczas przetwarzania innych programów obsługi OLE, takich jak [OnChange](#onchange). Wymiary znajdują się w jednostkach MM_HIMETRIC.  
   
- Jest to możliwe, ponieważ `GetCachedExtent` używa [IViewObject2](http://msdn.microsoft.com/library/windows/desktop/ms691318) interfejsu, zamiast używać [IOleObject](http://msdn.microsoft.com/library/windows/desktop/dd542709) interfejsu można pobrać w zakresie tego elementu. `IViewObject2` Obiektu COM buforuje informacje o stopniu, używane podczas poprzedniego wywołania [IViewObject::Draw](http://msdn.microsoft.com/library/windows/desktop/ms688655).  
+ Jest to możliwe, ponieważ `GetCachedExtent` używa [IViewObject2](/windows/desktop/api/oleidl/nn-oleidl-iviewobject2) interfejsu, zamiast używać [IOleObject](/windows/desktop/api/oleidl/nn-oleidl-ioleobject) interfejsu można pobrać w zakresie tego elementu. `IViewObject2` Obiektu COM buforuje informacje o stopniu, używane podczas poprzedniego wywołania [IViewObject::Draw](/windows/desktop/api/oleidl/nf-oleidl-iviewobject-draw).  
   
- Aby uzyskać więcej informacji, zobacz [IViewObject2::GetExtent](http://msdn.microsoft.com/library/windows/desktop/ms684032) w zestawie Windows SDK.  
+ Aby uzyskać więcej informacji, zobacz [IViewObject2::GetExtent](/windows/desktop/api/oleidl/nf-oleidl-iviewobject2-getextent) w zestawie Windows SDK.  
   
 ##  <a name="getclassid"></a>  COleClientItem::GetClassID  
  Zwraca identyfikator klasy elementu do pamięci wskazywany przez *pClassID*.  
@@ -1060,12 +1060,12 @@ void GetClassID(CLSID* pClassID) const;
   
 ### <a name="parameters"></a>Parametry  
  *pClassID*  
- Wskaźnik do identyfikatora typu [CLSID](http://msdn.microsoft.com/library/windows/desktop/ms691424) można pobrać identyfikator klasy. Instrukcje dotyczące CLSID zobacz zestaw Windows SDK.  
+ Wskaźnik do identyfikatora typu [CLSID](/windows/desktop/com/clsid-key-hklm) można pobrać identyfikator klasy. Instrukcje dotyczące CLSID zobacz zestaw Windows SDK.  
   
 ### <a name="remarks"></a>Uwagi  
  Identyfikator klasy jest 128-bitową liczbą, która unikatowo identyfikuje aplikację, która umożliwia edytowanie elementu.  
   
- Aby uzyskać więcej informacji, zobacz [IPersist::GetClassID](http://msdn.microsoft.com/library/windows/desktop/ms688664) w zestawie Windows SDK.  
+ Aby uzyskać więcej informacji, zobacz [IPersist::GetClassID](/windows/desktop/api/objidl/nf-objidl-ipersist-getclassid) w zestawie Windows SDK.  
   
 ##  <a name="getclipboarddata"></a>  COleClientItem::GetClipboardData  
  Wywołaj tę funkcję, aby uzyskać `COleDataSource` obiekt, który zawiera wszystkie dane, które zostają umieszczone w Schowku przez wywołanie [CopyToClipboard](#copytoclipboard) funkcja elementu członkowskiego.  
@@ -1145,7 +1145,7 @@ BOOL GetExtent(
 > [!NOTE]
 >  Nie wywołuj `GetExtent` podczas przetwarzania nieprawidłowego OLE, takich jak [OnChange](#onchange). Wywołaj [GetCachedExtent](#getcachedextent) zamiast tego.  
   
- Aby uzyskać więcej informacji, zobacz [IOleObject::GetExtent](http://msdn.microsoft.com/library/windows/desktop/ms692325) w zestawie Windows SDK.  
+ Aby uzyskać więcej informacji, zobacz [IOleObject::GetExtent](/windows/desktop/api/oleidl/nf-oleidl-ioleobject-getextent) w zestawie Windows SDK.  
   
 ##  <a name="geticonfromregistry"></a>  COleClientItem::GetIconFromRegistry  
  Wywołaj tę funkcję elementu członkowskiego, aby pobrać dojścia do zasobu ikony skojarzone z serwerem określonym identyfikatorem CLSID.  
@@ -1222,7 +1222,7 @@ SCODE GetLastStatus() const;
 ### <a name="remarks"></a>Uwagi  
  Dla funkcji elementów członkowskich, które zwracają wartość logiczna, wartość FALSE lub innego członka funkcji, które zwracają wartość NULL `GetLastStatus` zwraca szczegółowe informacje o błędzie. Należy pamiętać, że większość funkcji elementów członkowskich OLE zgłaszają wyjątki poważniejsze błędów. Informacje szczegółowe dotyczące interpretacji SCODE zależy od bazowego połączenia OLE, który ostatnio zwrócił wartość SCODE.  
   
- Aby uzyskać więcej informacji na temat SCODE, zobacz [struktury COM kody błędów](http://msdn.microsoft.com/library/windows/desktop/ms690088) w dokumentacji zestawu Windows SDK.  
+ Aby uzyskać więcej informacji na temat SCODE, zobacz [struktury COM kody błędów](/windows/desktop/com/structure-of-com-error-codes) w dokumentacji zestawu Windows SDK.  
   
 ##  <a name="getlinkupdateoptions"></a>  COleClientItem::GetLinkUpdateOptions  
  Wywołaj tę funkcję, aby uzyskać bieżącą wartość opcji Aktualizacja łącza dla elementu OLE.  
@@ -1243,7 +1243,7 @@ OLEUPDATE GetLinkUpdateOptions();
   
  Ta funkcja jest wywoływana automatycznie przez [COleLinksDialog](../../mfc/reference/colelinksdialog-class.md) klasy.  
   
- Aby uzyskać więcej informacji, zobacz [IOleLink::GetUpdateOptions](http://msdn.microsoft.com/library/windows/desktop/ms680100) w zestawie Windows SDK.  
+ Aby uzyskać więcej informacji, zobacz [IOleLink::GetUpdateOptions](/windows/desktop/api/oleidl/nf-oleidl-iolelink-getupdateoptions) w zestawie Windows SDK.  
   
 ##  <a name="gettype"></a>  COleClientItem::GetType  
  Wywołaj tę funkcję, aby określić, czy osadzony lub połączony element OLE lub statycznym.  
@@ -1288,7 +1288,7 @@ void GetUserType(
   
  W przypadku żądanego, ale nie jest dostępna pełna nazwa typu krótka nazwa jest używana zamiast tego. Jeśli żaden wpis dla typu elementu OLE znajduje się w bazie danych rejestracji lub jeśli nie ma żadnych typów użytkowników, które zarejestrowana dla typu elementu OLE, następnie typ użytkownika przechowywanych obecnie we służy element OLE. Jeśli nazwa typu użytkownika jest pustym ciągiem, "Nieznanego obiektu" jest używany.  
   
- Aby uzyskać więcej informacji, zobacz [IOleObject::GetUserType](http://msdn.microsoft.com/library/windows/desktop/ms688643) w zestawie Windows SDK.  
+ Aby uzyskać więcej informacji, zobacz [IOleObject::GetUserType](/windows/desktop/api/oleidl/nf-oleidl-ioleobject-getusertype) w zestawie Windows SDK.  
   
 ##  <a name="isinplaceactive"></a>  COleClientItem::IsInPlaceActive  
  Wywołaj tę funkcję, aby sprawdzić, czy element OLE jest aktywny w miejscu.  
@@ -1318,7 +1318,7 @@ BOOL IsLinkUpToDate() const;
   
  Jest to automatycznie przez [COleLinksDialog](../../mfc/reference/colelinksdialog-class.md) implementacji.  
   
- Aby uzyskać więcej informacji, zobacz [IOleObject::IsUpToDate](http://msdn.microsoft.com/library/windows/desktop/ms686624) w zestawie Windows SDK.  
+ Aby uzyskać więcej informacji, zobacz [IOleObject::IsUpToDate](/windows/desktop/api/oleidl/nf-oleidl-ioleobject-isuptodate) w zestawie Windows SDK.  
   
 ##  <a name="ismodified"></a>  COleClientItem::IsModified  
  Wywołaj tę funkcję, aby zobaczyć, czy element OLE został zmieniony (zmodyfikowane od ostatniego zapisu).  
@@ -1331,7 +1331,7 @@ BOOL IsModified() const;
  Wartość różną od zera, jeśli element OLE został zmieniony; w przeciwnym razie 0.  
   
 ### <a name="remarks"></a>Uwagi  
- Aby uzyskać więcej informacji, zobacz [IPersistStorage::IsDirty](http://msdn.microsoft.com/library/windows/desktop/ms683910) w zestawie Windows SDK.  
+ Aby uzyskać więcej informacji, zobacz [IPersistStorage::IsDirty](/windows/desktop/api/objidl/nf-objidl-ipersiststorage-isdirty) w zestawie Windows SDK.  
   
 ##  <a name="isopen"></a>  COleClientItem::IsOpen  
  Wywołaj tę funkcję, aby sprawdzić, czy element OLE jest otwarte oznacza to otwarte w wystąpieniu aplikacja serwera uruchomiona w osobnym oknie.  
@@ -1357,7 +1357,7 @@ BOOL IsRunning() const;
  Wartość różną od zera, jeśli element OLE jest uruchomiony; w przeciwnym razie 0.  
   
 ### <a name="remarks"></a>Uwagi  
- Aby uzyskać więcej informacji, zobacz [OleIsRunning](http://msdn.microsoft.com/library/windows/desktop/ms688705) w zestawie Windows SDK.  
+ Aby uzyskać więcej informacji, zobacz [OleIsRunning](/windows/desktop/api/ole2/nf-ole2-oleisrunning) w zestawie Windows SDK.  
   
 ##  <a name="onactivate"></a>  COleClientItem::OnActivate  
  Metoda wywoływana przez platformę, by powiadomić element, czy po prostu został aktywowany w miejscu.  
@@ -1455,7 +1455,7 @@ virtual void OnDeactivateAndUndo();
 ### <a name="remarks"></a>Uwagi  
  Domyślna implementacja wywołuje [DeactivateUI](#deactivateui) dezaktywować interfejs użytkownika serwera. Należy przesłonić tę funkcję, w przypadku wdrażania polecenia Cofnij do aplikacji kontenera. W przesłonięcia Wywołaj funkcję w wersji klasy bazowej, a następnie Cofnij ostatnie polecenie, które są wykonywane w aplikacji.  
   
- Aby uzyskać więcej informacji, zobacz [IOleInPlaceSite::DeactivateAndUndo](http://msdn.microsoft.com/library/windows/desktop/ms683743) w zestawie Windows SDK.  
+ Aby uzyskać więcej informacji, zobacz [IOleInPlaceSite::DeactivateAndUndo](/windows/desktop/api/oleidl/nf-oleidl-ioleinplacesite-deactivateandundo) w zestawie Windows SDK.  
   
 ##  <a name="ondeactivateui"></a>  COleClientItem::OnDeactivateUI  
  Wywołuje się, gdy użytkownik dezaktywuje element, który został aktywowany w miejscu.  
@@ -1485,7 +1485,7 @@ virtual void OnDiscardUndoState();
   
  Serwer został napisany z biblioteki klas Microsoft Foundation, serwer może spowodować tej funkcji do wywołania przez wywołanie [COleServerDoc::DiscardUndoState](../../mfc/reference/coleserverdoc-class.md#discardundostate).  
   
- Aby uzyskać więcej informacji, zobacz [IOleInPlaceSite::DiscardUndoState](http://msdn.microsoft.com/library/windows/desktop/ms688642) w zestawie Windows SDK.  
+ Aby uzyskać więcej informacji, zobacz [IOleInPlaceSite::DiscardUndoState](/windows/desktop/api/oleidl/nf-oleidl-ioleinplacesite-discardundostate) w zestawie Windows SDK.  
   
 ##  <a name="ongetclipboarddata"></a>  COleClientItem::OnGetClipboardData  
  Wywoływane przez platformę, by pobrać `COleDataSource` obiekt, który zawiera wszystkie dane, które zostają umieszczone w Schowku wywołania [CopyToClipboard](#copytoclipboard) lub [DoDragDrop](#dodragdrop) funkcja elementu członkowskiego.  
@@ -1563,7 +1563,7 @@ virtual BOOL OnGetWindowContext(
  Wskaźnik do wskaźnika do okna ramki dokumentu.  
   
  *lpFrameInfo*  
- Wskaźnik do [OLEINPLACEFRAMEINFO](http://msdn.microsoft.com/library/windows/desktop/ms693737) struktury, który będzie otrzymywać informacje okna ramki.  
+ Wskaźnik do [OLEINPLACEFRAMEINFO](/windows/desktop/api/oleidl/ns-oleidl-tagoifi) struktury, który będzie otrzymywać informacje okna ramki.  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Wartość różną od zera, jeśli to się powiedzie; w przeciwnym razie 0.  
@@ -1575,7 +1575,7 @@ virtual BOOL OnGetWindowContext(
   
  Przesłonić tę funkcję tylko wtedy, gdy jest to domyślna implementacja nie własnych aplikacji; na przykład, jeśli aplikacja ma paradygmatu interfejsu użytkownika, który różni się od SDI lub MDI. Jest to zaawansowany możliwym do zastąpienia.  
   
- Aby uzyskać więcej informacji, zobacz [IOleInPlaceSite::GetWindowContext](http://msdn.microsoft.com/library/windows/desktop/ms694366) i [OLEINPLACEFRAMEINFO](http://msdn.microsoft.com/library/windows/desktop/ms693737) struktury w zestawie Windows SDK.  
+ Aby uzyskać więcej informacji, zobacz [IOleInPlaceSite::GetWindowContext](/windows/desktop/api/oleidl/nf-oleidl-ioleinplacesite-getwindowcontext) i [OLEINPLACEFRAMEINFO](/windows/desktop/api/oleidl/ns-oleidl-tagoifi) struktury w zestawie Windows SDK.  
   
 ##  <a name="oninsertmenus"></a>  COleClientItem::OnInsertMenus  
  Wywoływane przez platformę podczas aktywacji w miejscu, aby wstawić menu aplikacji kontenera do pustego menu.  
@@ -1598,7 +1598,7 @@ virtual void OnInsertMenus(
   
  Domyślna implementacja wstawia do *pMenuShared* menu kontenera w miejscu, czyli grupy menu Plik, kontener i okna. [CDocTemplate::SetContainerInfo](../../mfc/reference/cdoctemplate-class.md#setcontainerinfo) służy do ustawiania tego zasobu menu. Domyślna implementacja przypisuje odpowiednie wartości do elementów, 0, 2 i 4 w *lpMenuWidths*, w zależności od zasobów menu. Przesłonić tę funkcję, jeśli domyślna implementacja nie jest odpowiedni dla aplikacji; na przykład, jeśli aplikacja nie korzysta z szablonów dokumentów kojarzenia zasoby z typów dokumentów. Jeśli zastąpisz tę funkcję, należy również zastąpić [OnSetMenu](#onsetmenu) i [OnRemoveMenus](#onremovemenus). Jest to zaawansowany możliwym do zastąpienia.  
   
- Aby uzyskać więcej informacji, zobacz [IOleInPlaceFrame::InsertMenus](http://msdn.microsoft.com/library/windows/desktop/ms683987) w zestawie Windows SDK.  
+ Aby uzyskać więcej informacji, zobacz [IOleInPlaceFrame::InsertMenus](/windows/desktop/api/oleidl/nf-oleidl-ioleinplaceframe-insertmenus) w zestawie Windows SDK.  
   
 ##  <a name="onremovemenus"></a>  COleClientItem::OnRemoveMenus  
  Metoda wywoływana przez platformę, by usunąć menu kontenera z określonym złożonego menu, po zakończeniu aktywacji w miejscu.  
@@ -1616,7 +1616,7 @@ virtual void OnRemoveMenus(CMenu* pMenuShared);
   
  Podmenu na *pMenuShared* może być współużytkowany przez więcej niż jeden złożony menu, jeśli serwer ma wielokrotne wywołania `OnInsertMenus`. W związku z tym nie należy usuwać wszelkich podmenu w zastąpienie metody `OnRemoveMenus`; tylko należy odłączyć.  
   
- Aby uzyskać więcej informacji, zobacz [IOleInPlaceFrame::RemoveMenus](http://msdn.microsoft.com/library/windows/desktop/ms688685) w zestawie Windows SDK.  
+ Aby uzyskać więcej informacji, zobacz [IOleInPlaceFrame::RemoveMenus](/windows/desktop/api/oleidl/nf-oleidl-ioleinplaceframe-removemenus) w zestawie Windows SDK.  
   
 ##  <a name="onscrollby"></a>  COleClientItem::OnScrollBy  
  Metoda wywoływana przez platformę, by przewinąć element OLE w odpowiedzi na żądania z serwera.  
@@ -1635,7 +1635,7 @@ virtual BOOL OnScrollBy(CSize sizeExtent);
 ### <a name="remarks"></a>Uwagi  
  Na przykład jeśli użytkownik przesuwa się poza regionem widoczne podczas wykonywania edycji w miejscu elementu OLE jest częściowo widoczny, ta funkcja jest wywoływana widoczne kursora. Domyślna implementacja nic nie robi. Należy przesłonić tę funkcję, aby przewinąć element według określonej ilości. Należy pamiętać, że w wyniku przewijanie, widoczną część elementu OLE można zmienić. Wywołaj [SetItemRects](#setitemrects) można zaktualizować elementu prostokąt widoczny.  
   
- Aby uzyskać więcej informacji, zobacz [IOleInPlaceSite::Scroll](http://msdn.microsoft.com/library/windows/desktop/ms690291) w zestawie Windows SDK.  
+ Aby uzyskać więcej informacji, zobacz [IOleInPlaceSite::Scroll](/windows/desktop/api/oleidl/nf-oleidl-ioleinplacesite-scroll) w zestawie Windows SDK.  
   
 ##  <a name="onsetmenu"></a>  COleClientItem::OnSetMenu  
  Wywoływane przez platformę, dwa razy podczas aktywacji w miejscu rozpoczyna się i kończy; Aby zainstalować złożone menu i po raz drugi po raz pierwszy (przy użyciu *holemenu* równa NULL) go usunąć.  
@@ -1658,9 +1658,9 @@ virtual void OnSetMenu(
  Dojście do okna edycji elementu OLE. To okno, które będą otrzymywać polecenia edycji OLE.  
   
 ### <a name="remarks"></a>Uwagi  
- Domyślna implementacja instaluje lub usuwa złożone menu, a następnie wywołuje [OleSetMenuDescriptor](http://msdn.microsoft.com/library/windows/desktop/ms692831) funkcję, aby zainstalować lub usunąć dispatching kodu. Należy przesłonić tę funkcję, jeśli domyślna implementacja nie jest odpowiedni dla aplikacji. Jeśli zastąpisz tę funkcję, należy prawdopodobnie zastąpić [OnInsertMenus](#oninsertmenus) i [OnRemoveMenus](#onremovemenus) także. Jest to zaawansowany możliwym do zastąpienia.  
+ Domyślna implementacja instaluje lub usuwa złożone menu, a następnie wywołuje [OleSetMenuDescriptor](/windows/desktop/api/ole2/nf-ole2-olesetmenudescriptor) funkcję, aby zainstalować lub usunąć dispatching kodu. Należy przesłonić tę funkcję, jeśli domyślna implementacja nie jest odpowiedni dla aplikacji. Jeśli zastąpisz tę funkcję, należy prawdopodobnie zastąpić [OnInsertMenus](#oninsertmenus) i [OnRemoveMenus](#onremovemenus) także. Jest to zaawansowany możliwym do zastąpienia.  
   
- Aby uzyskać więcej informacji, zobacz [OleCreateMenuDescriptor](http://msdn.microsoft.com/library/windows/desktop/ms691415), [OleSetMenuDescriptor](http://msdn.microsoft.com/library/windows/desktop/ms692831), i [IOleInPlaceFrame::SetMenu](http://msdn.microsoft.com/library/windows/desktop/ms693713) w zestawie Windows SDK.  
+ Aby uzyskać więcej informacji, zobacz [OleCreateMenuDescriptor](/windows/desktop/api/ole2/nf-ole2-olecreatemenudescriptor), [OleSetMenuDescriptor](/windows/desktop/api/ole2/nf-ole2-olesetmenudescriptor), i [IOleInPlaceFrame::SetMenu](/windows/desktop/api/oleidl/nf-oleidl-ioleinplaceframe-setmenu) w zestawie Windows SDK.  
   
 ##  <a name="onshowcontrolbars"></a>  COleClientItem::OnShowControlBars  
  Metoda wywoływana przez platformę, by pokazać lub ukryć paski sterowania aplikacji kontenera.  
@@ -1724,7 +1724,7 @@ BOOL ReactivateAndUndo();
   
  Jeśli aplikacja serwera są zapisywane przy użyciu biblioteki klas Microsoft Foundation, ta funkcja powoduje wywołanie serwer [COleServerDoc::OnReactivateAndUndo](../../mfc/reference/coleserverdoc-class.md#onreactivateandundo).  
   
- Aby uzyskać więcej informacji, zobacz [IOleInPlaceObject::ReactivateAndUndo](http://msdn.microsoft.com/library/windows/desktop/ms691372) w zestawie Windows SDK.  
+ Aby uzyskać więcej informacji, zobacz [IOleInPlaceObject::ReactivateAndUndo](/windows/desktop/api/oleidl/nf-oleidl-ioleinplaceobject-reactivateandundo) w zestawie Windows SDK.  
   
 ##  <a name="release"></a>  COleClientItem::Release  
  Wywołaj tę funkcję, aby wyczyścić zasoby używane przez element OLE.  
@@ -1740,7 +1740,7 @@ virtual void Release(OLECLOSE dwCloseOption = OLECLOSE_NOSAVE);
 ### <a name="remarks"></a>Uwagi  
  `Release` jest wywoływana przez `COleClientItem` destruktora.  
   
- Aby uzyskać więcej informacji, zobacz [IUnknown::Release](http://msdn.microsoft.com/library/windows/desktop/ms682317) w zestawie Windows SDK.  
+ Aby uzyskać więcej informacji, zobacz [IUnknown::Release](/windows/desktop/api/unknwn/nf-unknwn-iunknown-release) w zestawie Windows SDK.  
   
 ##  <a name="reload"></a>  COleClientItem::Reload  
  Zamknięcie i ponowne załadowanie elementu.  
@@ -1808,7 +1808,7 @@ void SetExtent(
 ### <a name="remarks"></a>Uwagi  
  Jeśli aplikacja została napisana przy użyciu biblioteki klas Microsoft Foundation, powoduje to, że [OnSetExtent](../../mfc/reference/coleserveritem-class.md#onsetextent) funkcji składowej typu odpowiadającego `COleServerItem` obiekt wywoływany. Element OLE następnie odpowiednio zmienić jego wyświetlania. Wymiary mogą być w jednostkach MM_HIMETRIC. Wywołaj tę funkcję, gdy użytkownik zmienia rozmiar elementu OLE, lub jeśli obsługujesz pewnego rodzaju negocjacji układu.  
   
- Aby uzyskać więcej informacji, zobacz [IOleObject::SetExtent](http://msdn.microsoft.com/library/windows/desktop/ms694330) w zestawie Windows SDK.  
+ Aby uzyskać więcej informacji, zobacz [IOleObject::SetExtent](/windows/desktop/api/oleidl/nf-oleidl-ioleobject-setextent) w zestawie Windows SDK.  
   
 ##  <a name="sethostnames"></a>  COleClientItem::SetHostNames  
  Wywołaj tę funkcję, aby określić nazwę aplikacji kontenera i nazwy kontenera dla wbudowanego elementu OLE.  
@@ -1831,7 +1831,7 @@ void SetHostNames(
   
  To jest również nazywany automatycznie z nazwą aplikacji i nazwy dokumentu po załadowaniu obiekt lub gdy zostanie zapisany pod inną nazwą. W związku z tym nie jest zazwyczaj konieczne bezpośrednio wywołać tę funkcję.  
   
- Aby uzyskać więcej informacji, zobacz [IOleObject::SetHostNames](http://msdn.microsoft.com/library/windows/desktop/ms680642) w zestawie Windows SDK.  
+ Aby uzyskać więcej informacji, zobacz [IOleObject::SetHostNames](/windows/desktop/api/oleidl/nf-oleidl-ioleobject-sethostnames) w zestawie Windows SDK.  
   
 ##  <a name="seticonicmetafile"></a>  COleClientItem::SetIconicMetafile  
  Buforuje metaplik używany do rysowania ikona elementu.  
@@ -1874,7 +1874,7 @@ BOOL SetItemRects(
 ### <a name="remarks"></a>Uwagi  
  Ta funkcja jest wywoływana przez domyślną implementację elementu [OnChangeItemPosition](#onchangeitemposition) funkcja elementu członkowskiego. Należy wywołać tę funkcję, zawsze wtedy, gdy zmianie tego elementu położenia lub widoczną część OLE. Zwykle oznacza to, wywołać go z widoku [OnSize](../../mfc/reference/cwnd-class.md#onsize) i [OnScrollBy](../../mfc/reference/cview-class.md#onscrollby) funkcji elementów członkowskich.  
   
- Aby uzyskać więcej informacji, zobacz [IOleInPlaceObject::SetObjectRects](http://msdn.microsoft.com/library/windows/desktop/ms683767) w zestawie Windows SDK.  
+ Aby uzyskać więcej informacji, zobacz [IOleInPlaceObject::SetObjectRects](/windows/desktop/api/oleidl/nf-oleidl-ioleinplaceobject-setobjectrects) w zestawie Windows SDK.  
   
 ##  <a name="setlinkupdateoptions"></a>  COleClientItem::SetLinkUpdateOptions  
  Wywołaj tę funkcję, aby ustawić opcję Aktualizacja łącza do przedstawiania określony element połączony.  
@@ -1894,7 +1894,7 @@ void SetLinkUpdateOptions(OLEUPDATE dwUpdateOpt);
 ### <a name="remarks"></a>Uwagi  
  Zazwyczaj nie należy zmieniać opcje aktualizacji, wybierany przez użytkownika w oknie dialogowym łącza.  
   
- Aby uzyskać więcej informacji, zobacz [IOleLink::SetUpdateOptions](http://msdn.microsoft.com/library/windows/desktop/ms680120) w zestawie Windows SDK.  
+ Aby uzyskać więcej informacji, zobacz [IOleLink::SetUpdateOptions](/windows/desktop/api/oleidl/nf-oleidl-iolelink-setupdateoptions) w zestawie Windows SDK.  
   
 ##  <a name="setprintdevice"></a>  COleClientItem::SetPrintDevice  
  Wywołaj tę funkcję, aby zmienić print-urządzenie dla tego elementu.  
@@ -1906,10 +1906,10 @@ BOOL SetPrintDevice(const PRINTDLG* ppd);
   
 ### <a name="parameters"></a>Parametry  
  *ptd*  
- Wskaźnik do [DVTARGETDEVICE](http://msdn.microsoft.com/library/windows/desktop/ms686613) struktury danych, który zawiera informacje dotyczące nowego urządzenia docelowego drukowania. Może mieć wartości NULL.  
+ Wskaźnik do [DVTARGETDEVICE](/windows/desktop/api/objidl/ns-objidl-tagdvtargetdevice) struktury danych, który zawiera informacje dotyczące nowego urządzenia docelowego drukowania. Może mieć wartości NULL.  
   
  *PPD*  
- Wskaźnik do [PRINTDLG](http://msdn.microsoft.com/library/windows/desktop/ms646940) struktury danych, który zawiera informacje dotyczące nowego urządzenia docelowego drukowania. Może mieć wartości NULL.  
+ Wskaźnik do [PRINTDLG](https://msdn.microsoft.com/library/windows/desktop/ms646940) struktury danych, który zawiera informacje dotyczące nowego urządzenia docelowego drukowania. Może mieć wartości NULL.  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Wartość różną od zera, jeśli funkcja zakończyła się pomyślnie; w przeciwnym razie 0.  
@@ -1919,9 +1919,9 @@ BOOL SetPrintDevice(const PRINTDLG* ppd);
   
  Argumenty do tej funkcji zawierają informacje, które OLE system używa do identyfikowania urządzenia docelowego. `PRINTDLG` Struktura zawiera informacje Windows używane do zainicjowania wspólne okno dialogowe drukowania. Po zamknięciu okna dialogowego użytkownika Windows zwraca informacje o wybór użytkownika w tej strukturze. `m_pd` Członkiem [CPrintDialog](../../mfc/reference/cprintdialog-class.md) obiekt jest `PRINTDLG` struktury.  
   
- Aby uzyskać więcej informacji na temat tej struktury, zobacz [PRINTDLG](http://msdn.microsoft.com/library/windows/desktop/ms646843) w zestawie Windows SDK.  
+ Aby uzyskać więcej informacji na temat tej struktury, zobacz [PRINTDLG](/windows/desktop/api/commdlg/ns-commdlg-tagpda) w zestawie Windows SDK.  
   
- Aby uzyskać więcej informacji, zobacz [DVTARGETDEVICE](http://msdn.microsoft.com/library/windows/desktop/ms686613) w zestawie Windows SDK.  
+ Aby uzyskać więcej informacji, zobacz [DVTARGETDEVICE](/windows/desktop/api/objidl/ns-objidl-tagdvtargetdevice) w zestawie Windows SDK.  
   
 ##  <a name="updatelink"></a>  COleClientItem::UpdateLink  
  Wywołaj tę funkcję, aby wykonać natychmiastową aktualizację prezentacji danych elementu OLE.  
@@ -1936,7 +1936,7 @@ BOOL UpdateLink();
 ### <a name="remarks"></a>Uwagi  
  Połączone elementy funkcji znajduje się źródło łącza, aby uzyskać nowe prezentacji do elementu OLE. Ten proces może obejmować uruchamianie co najmniej jednej aplikacji serwera, które może być czasochłonne. Dla elementów osadzonych funkcja działa cyklicznie, sprawdzanie, czy element osadzony zawiera łącza, które mogą być nieaktualne i aktualizowanie ich. Użytkownik może również ręcznie zaktualizować poszczególnych łączy za pomocą okna dialogowego łącza.  
   
- Aby uzyskać więcej informacji, zobacz [IOleLink::Update](http://msdn.microsoft.com/library/windows/desktop/ms692660) w zestawie Windows SDK.  
+ Aby uzyskać więcej informacji, zobacz [IOleLink::Update](/windows/desktop/api/oleidl/nf-oleidl-iolelink-update) w zestawie Windows SDK.  
   
 ## <a name="see-also"></a>Zobacz też  
  [Próbki MFC MFCBIND](../../visual-cpp-samples.md)   

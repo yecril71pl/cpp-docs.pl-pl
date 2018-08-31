@@ -19,18 +19,18 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b0a5582c81bdc56861a549a2d17cd95ee238975a
-ms.sourcegitcommit: 76fd30ff3e0352e2206460503b61f45897e60e4f
+ms.openlocfilehash: 5fa06417b93012c7d564a45c4e58f03edf1e2a39
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/13/2018
-ms.locfileid: "39027995"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43215681"
 ---
 # <a name="creating-an-mfc-dll-project"></a>Tworzenie projektu MFC DLL
 Biblioteki MFC DLL jest plikiem binarnym, który działa jako współdzielona biblioteka funkcji, które mogą być używane jednocześnie przez wiele aplikacji. Najprostszym sposobem utworzenia projektu MFC DLL ma używać Kreatora MFC DLL.  
   
 > [!NOTE]
->  Wygląd funkcje w IDE może zależeć od ustawień aktywnych lub wersji i mogą się różnić od tych opisanych w Pomocy. Aby zmienić swoje ustawienia, wybierz opcję **Import i eksport ustawień** na **narzędzia** menu. Aby uzyskać więcej informacji, zobacz [Dostosowywanie ustawień środowiska deweloperskiego, w programie Visual Studio](http://msdn.microsoft.com/22c4debb-4e31-47a8-8f19-16f328d7dcd3).  
+>  Wygląd funkcje w IDE może zależeć od ustawień aktywnych lub wersji i mogą się różnić od tych opisanych w Pomocy. Aby zmienić swoje ustawienia, wybierz opcję **Import i eksport ustawień** na **narzędzia** menu. Aby uzyskać więcej informacji, zobacz [Dostosowywanie ustawień środowiska deweloperskiego, w programie Visual Studio](https://msdn.microsoft.com/22c4debb-4e31-47a8-8f19-16f328d7dcd3).  
   
 ### <a name="to-create-an-mfc-dll-project-using-the-mfc-dll-wizard"></a>Aby utworzyć projekt DLL MFC przy użyciu Kreatora MFC DLL  
   
@@ -51,5 +51,5 @@ Biblioteki MFC DLL jest plikiem binarnym, który działa jako współdzielona bi
  [Typy projektów Visual C++](/visualstudio/debugger/debugging-preparation-visual-cpp-project-types)   
  [Dodawanie funkcji za pomocą kreatorów kodu](../../ide/adding-functionality-with-code-wizards-cpp.md)   
  [Strony właściwości](../../ide/property-pages-visual-cpp.md)   
- [Wdrażanie aplikacji](http://msdn.microsoft.com/4ff8881d-0daf-47e7-bfe7-774c625031b4)
+ [Wdrażanie aplikacji](https://msdn.microsoft.com/4ff8881d-0daf-47e7-bfe7-774c625031b4)
 

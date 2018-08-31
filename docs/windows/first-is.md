@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 4ef8cfc2a8485a45ac3156a277617c3eacdd8a5b
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: e9017ffe6e254aa96700beff76cd3ea62f14bfb9
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42612797"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43217486"
 ---
 # <a name="firstis"></a>first_is
 
@@ -43,7 +43,7 @@ Co najmniej jednego wyrażenia języka C. Pusty argument miejsca są dozwolone.
 
 ## <a name="remarks"></a>Uwagi
 
-**First_is —** atrybut C++ ma taką samą funkcjonalność jak [first_is —](http://msdn.microsoft.com/library/windows/desktop/aa366831) atrybutów w MIDL.
+**First_is —** atrybut C++ ma taką samą funkcjonalność jak [first_is —](/windows/desktop/Midl/first-is) atrybutów w MIDL.
 
 ## <a name="example"></a>Przykład
 

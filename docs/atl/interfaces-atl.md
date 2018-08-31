@@ -15,12 +15,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b7becd9e27294c81ce6144d08c79cfac52636fbf
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: 1410a437d87b56b244eb4fcd711797c279bec446
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37848268"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43217886"
 ---
 # <a name="interfaces-atl"></a>Interfejsy (ATL)
 Interfejs jest sposób, w którym obiekt udostępnia funkcję na zewnątrz. W modelu COM interfejs jest tabela wskaźników (na przykład C++ vtable), funkcje implementowane przez obiekt. Tabela reprezentuje interfejs, a funkcje, które wskazuje są metody tego interfejsu. Obiekt można udostępnić dowolną liczbę interfejsów, jak go wybierze.  
@@ -34,5 +34,5 @@ Interfejs jest sposób, w którym obiekt udostępnia funkcję na zewnątrz. W mo
   
 ## <a name="see-also"></a>Zobacz też  
  [Wprowadzenie do modelu COM](../atl/introduction-to-com.md)   
- [Obiekty COM i interfejsy](http://msdn.microsoft.com/library/windows/desktop/ms690343)
+ [Obiekty COM i interfejsy](/windows/desktop/com/com-objects-and-interfaces)
 

@@ -18,15 +18,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 10315395e9699e2a93c802001ba920dcac1440f6
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: ca5545f7ebf828a04321db999d74aaa0d8a42187
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33345258"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43214736"
 ---
 # <a name="making-owner-drawn-header-controls"></a>Tworzenie formantów nagłówka rysowanych przez właściciela
-Można zdefiniować poszczególnych elementów formantu nagłówka ([CHeaderCtrl](../mfc/reference/cheaderctrl-class.md)) jako elementy rysowanych przez właściciela. Aby uzyskać więcej informacji, zobacz [kontrolki nagłówka Owner-Drawn](http://msdn.microsoft.com/library/windows/desktop/bb775238) w zestawie Windows SDK.  
+Można zdefiniować poszczególne elementy kontrolki nagłówka ([CHeaderCtrl](../mfc/reference/cheaderctrl-class.md)) jako elementy rysowanych przez właściciela. Aby uzyskać więcej informacji, zobacz [kontrolki nagłówka Owner-Drawn](/windows/desktop/Controls/header-controls) w zestawie Windows SDK.  
   
 ## <a name="see-also"></a>Zobacz też  
  [Korzystanie z CHeaderCtrl](../mfc/using-cheaderctrl.md)   

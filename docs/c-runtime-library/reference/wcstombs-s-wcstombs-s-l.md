@@ -39,16 +39,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f23c4836d178c64590536a809ac5fe6cbbdf8380
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 1fec8a41a1c9d1a9d01952a0a72829d2122e0e40
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32416504"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43216980"
 ---
 # <a name="wcstombss-wcstombssl"></a>wcstombs_s, _wcstombs_s_l
 
-Konwertuje odpowiedniej sekwencji znaków wielobajtowych sekwencji znaki dwubajtowe. Wersja [wcstombs —, _wcstombs_l —](wcstombs-wcstombs-l.md) ulepszeń zabezpieczeń zgodnie z opisem w [funkcje zabezpieczeń w CRT](../../c-runtime-library/security-features-in-the-crt.md).
+Konwertuje sekwencję znaków dwubajtowych do odpowiedniej sekwencji znaków wielobajtowych. Wersja [wcstombs —, _wcstombs_l —](wcstombs-wcstombs-l.md) ze wzmocnieniem zabezpieczeń, zgodnie z opisem w [funkcje zabezpieczeń w CRT](../../c-runtime-library/security-features-in-the-crt.md).
 
 ## <a name="syntax"></a>Składnia
 
@@ -91,61 +91,61 @@ errno_t _wcstombs_s_l(
 ### <a name="parameters"></a>Parametry
 
 *pReturnValue*<br/>
-Liczba znaków konwersji.
+Liczba znaków, konwersji.
 
 *mbstr*<br/>
-Adres buforu dla wynikowy ciąg znaków wielobajtowych przekonwertowany.
+Adres buforu dla wynikowych konwersji ciągu znaków wielobajtowych.
 
 *sizeInBytes*<br/>
-Wyrażony w bajtach rozmiar *mbstr* buforu.
+Rozmiar w bajtach *mbstr* buforu.
 
 *wcstr*<br/>
-Wskazuje ciąg znaków typu wide do skonwertowania.
+Wskazuje ciąg znaków dwubajtowych do konwersji.
 
 *Liczba*<br/>
-Maksymalna liczba bajtów, które mają być przechowywane w *mbstr* buforu, nie włączając znak końcowy null lub [_truncate —](../../c-runtime-library/truncate.md).
+Maksymalna liczba bajtów do przechowywania w *mbstr* buforu, nie wliczając kończącego znaku null lub [_TRUNCATE](../../c-runtime-library/truncate.md).
 
 *Ustawienia regionalne*<br/>
 Ustawienia regionalne do użycia.
 
 ## <a name="return-value"></a>Wartość zwracana
 
-Zero, jeśli to się powiedzie, kod błędu w przypadku awarii.
+Zero, jeśli to się powiedzie, kod błędu.
 
-|Warunek błędu|Wartość zwracana i **errno**|
+|Warunek błędu|Zwraca wartość i **errno**|
 |---------------------|------------------------------|
-|*mbstr* jest **NULL** i *sizeInBytes* > 0.|**EINVAL —**|
-|*wcstr* jest **wartości NULL**|**EINVAL —**|
-|Bufor docelowy jest zbyt mały, aby pomieścił skonwertowany ciąg (chyba że *liczba* jest **_truncate —**; zobacz uwagi poniżej)|**ERANGE —**|
+|*mbstr* jest **NULL** i *sizeInBytes* > 0|**EINVAL**|
+|*wcstr* jest **o wartości NULL**|**EINVAL**|
+|Bufora docelowego jest zbyt mała, aby zawierać ciąg przekonwertowany (chyba że *liczba* jest **_TRUNCATE**; zobacz uwagi poniżej)|**ERANGE**|
 
-Jeśli występuje którykolwiek z tych warunków, zgodnie z opisem w wywołaniu wyjątek nieprawidłowy parametr [sprawdzanie poprawności parametru](../../c-runtime-library/parameter-validation.md) . Jeśli wykonanie może kontynuować, funkcja zwraca błąd o kodzie i ustawia **errno** wymienione w tabeli.
+Jeśli występuje którykolwiek z tych warunków, wyjątek nieprawidłowego parametru zostanie wywołana, zgodnie z opisem w [Parameter Validation](../../c-runtime-library/parameter-validation.md) . Jeśli wykonanie może być kontynuowane, funkcja zwraca kod błędu i ustawia **errno** jak wskazano w tabeli.
 
 ## <a name="remarks"></a>Uwagi
 
-**Wcstombs_s —** funkcja konwertuje ciąg znaki dwubajtowe wskazywana przez *wcstr* do znaków wielobajtowych przechowywane w buforze wskazywana przez *mbstr*. Konwersja będzie kontynuowane dla każdego znaku, dopóki spełniony jest jeden z następujących warunków:
+**Wcstombs_s —** funkcji konwertuje ciąg znaków dwubajtowych, wskazywana przez *wcstr* na znaki wielobajtowe przechowywane w bufor wskazywany przez *mbstr*. Konwersja będą nadal dla każdego znaku, dopóki nie jest spełniony jeden z następujących warunków:
 
-- Napotkano pusty znaków dwubajtowych
+- Szeroki znak null zostanie osiągnięty.
 
-- Napotkano znaków dwubajtowych, której nie można przekonwertować
+- Napotkano znak dwubajtowy, który nie może zostać przekonwertowany
 
-- Liczba bajtów przechowywanych w *mbstr* buforu equals *liczba*.
+- Liczbę bajtów przechowywanych w *mbstr* buforu equals *liczba*.
 
-Ciąg docelowego jest zawsze zerem (nawet w przypadku błędu).
+Ciąg docelowy jest zawsze zakończony znakiem null (nawet w przypadku błędu).
 
-Jeśli *liczba* jest specjalna wartość [_truncate —](../../c-runtime-library/truncate.md), następnie **wcstombs_s —** konwertuje tyle ciągu jako spowoduje mieści się w bufor docelowy, pozostawiając nadal miejsca na wartość null terminator. Jeśli ten ciąg został obcięty, jest zwracana wartość **struncate —**, a konwersja jest uznawany za pomyślny.
+Jeśli *liczba* jest specjalna wartość [_TRUNCATE](../../c-runtime-library/truncate.md), następnie **wcstombs_s —** konwertuje tyle ciągu jako będą dopasowania do buforu docelowego pozostawiając nadal miejsca na wartość null Element przerywający. Jeśli ten ciąg został obcięty, wartość zwracana jest **STRUNCATE**, i konwersja jest uznawany za pomyślny.
 
-Jeśli **wcstombs_s —** pomyślnie konwertuje ciąg źródłowy umieszcza rozmiar w bajtach skonwertowany ciąg, włącznie z terminatorem null do  *&#42;pReturnValue* (pod warunkiem  *pReturnValue* nie jest **NULL**). Dzieje się tak nawet wtedy, gdy *mbstr* argument jest **NULL** i zapewnia możliwość określenia wymagany rozmiar buforu. Należy pamiętać, że jeśli *mbstr* jest **NULL**, *liczba* jest ignorowana.
+Jeśli **wcstombs_s —** pomyślnie konwertuje ciąg źródłowy umieszcza rozmiar w bajtach przekonwertowanego ciągu, łącznie z terminatorem null do  *&#42;pReturnValue* (pod warunkiem  *pReturnValue* nie **NULL**). Dzieje się tak nawet wtedy, gdy *mbstr* argument jest **NULL** i zapewnia możliwość określenia wymagany rozmiar buforu. Należy pamiętać, że jeśli *mbstr* jest **NULL**, *liczba* jest ignorowana.
 
-Jeśli **wcstombs_s —** napotka znaków dwubajtowych nie można przekonwertować znaków wielobajtowych, umieszcza 0 w  *&#42;pReturnValue*, ustawia bufor docelowy na pusty ciąg, ustawia **errno**  do **eilseq —** i zwraca **eilseq —**.
+Jeśli **wcstombs_s —** napotka znakiem dwubajtowym, nie można przekonwertować na znak wielobajtowy umieszcza 0 w  *&#42;pReturnValue*, ustawia bufor docelowy pusty ciąg, ustawia **errno**  do **EILSEQ**i zwraca **EILSEQ**.
 
-Jeśli sekwencje wskazywana przez *wcstr* i *mbstr* nakładają się zachowanie **wcstombs_s —** jest niezdefiniowana.
+Jeśli sekwencji wskazywany przez *wcstr* i *mbstr* zachodziły na siebie, zachowanie **wcstombs_s —** jest niezdefiniowana.
 
 > [!IMPORTANT]
-> Upewnij się, że *wcstr* i *mbstr* nie pokrywają oraz że *liczba* poprawnie odzwierciedla liczbę znaki dwubajtowe, aby przekonwertować.
+> Upewnij się, że *wcstr* i *mbstr* nie zachodziły na siebie oraz że *liczba* poprawnie odzwierciedla liczbę znaków dwubajtowych do przekonwertowania.
 
-**wcstombs_s —** używa bieżące ustawienia regionalne dla dowolnego zachowań zależnych od ustawień regionalnych. **_wcstombs_s_l —** jest taka sama jak **wcstombs —** z tą różnicą, że używa ustawień regionalnych przekazano zamiast tego. Aby uzyskać więcej informacji, zobacz [ustawień regionalnych](../../c-runtime-library/locale.md).
+**wcstombs_s —** używa bieżących ustawień regionalnych dla wszelkich zachowań zależnych od ustawień regionalnych; **_wcstombs_s_l —** jest taka sama jak **wcstombs —** z tą różnicą, że używa ustawień regionalnych przekazanych w zamian. Aby uzyskać więcej informacji, zobacz [ustawień regionalnych](../../c-runtime-library/locale.md).
 
-W języku C++ za pomocą tych funkcji zostało uproszczone dzięki przeciążenia szablonu; przeciążeń można automatycznie rozpoznać długość buforu (wyeliminowanie konieczności określania argumentem rozmiaru) i automatycznie można zastąpić starszą, które nie są bezpieczne funkcje z ich odpowiedniki nowsza, bezpieczne. Aby uzyskać więcej informacji, zobacz [Secure szablonu Overloads](../../c-runtime-library/secure-template-overloads.md).
+W języku C++ korzystanie z tych funkcji jest uproszczone przez przeciążania szablonu; przeciążenia mogą automatycznie wywnioskować długość buforu (eliminując potrzebę określenia argumentu rozmiaru) oraz ich mogą automatycznie zastąpić starsze, niezabezpieczone funkcje ich nowsze, bezpieczne odpowiedniki. Aby uzyskać więcej informacji, zobacz [Secure przeciążenia szablonu](../../c-runtime-library/secure-template-overloads.md).
 
 ## <a name="requirements"></a>Wymagania
 
@@ -208,4 +208,4 @@ Convert wide-character string:
 [mbstowcs, _mbstowcs_l](mbstowcs-mbstowcs-l.md)<br/>
 [mbtowc, _mbtowc_l](mbtowc-mbtowc-l.md)<br/>
 [wctomb_s, _wctomb_s_l](wctomb-s-wctomb-s-l.md)<br/>
-[WideCharToMultiByte](http://msdn.microsoft.com/library/windows/desktop/dd374130)<br/>
+[WideCharToMultiByte](/windows/desktop/api/stringapiset/nf-stringapiset-widechartomultibyte)<br/>

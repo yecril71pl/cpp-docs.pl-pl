@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 921510a548f638f06953f95abe79f825e57e179b
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: ccd5f5220a49ddb63554b4c3b96533a3066d4d4b
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42586861"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43214596"
 ---
 # <a name="source-c"></a>source (C++)
 
@@ -43,7 +43,7 @@ Jeden lub więcej interfejsów, określ, po zastosowaniu źródła atrybutów do
 
 ## <a name="remarks"></a>Uwagi
 
-**Źródła** atrybut C++ ma taką samą funkcjonalność jak [źródła](http://msdn.microsoft.com/library/windows/desktop/aa367166) atrybutów w MIDL.
+**Źródła** atrybut C++ ma taką samą funkcjonalność jak [źródła](/windows/desktop/Midl/source) atrybutów w MIDL.
 
 Możesz użyć [domyślne](../windows/default-cpp.md) atrybutu, aby określić domyślnym interfejsie źródła obiektu.
 

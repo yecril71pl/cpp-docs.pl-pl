@@ -102,12 +102,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b8acf472d3727534bacd70664dc559b9d8f23d16
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: ef28bc57981868eaa1cadcbead3c11c8fade57e8
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42465982"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43217092"
 ---
 # <a name="cmfcvisualmanageroffice2003-class"></a>Klasa CMFCVisualManagerOffice2003
 `CMFCVisualManagerOffice2003` Nadaje aplikacji wygląd programu Microsoft Office 2003.  
@@ -206,7 +206,7 @@ class CMFCVisualManagerOffice2003 : public CMFCVisualManagerOfficeXP
 |[CMFCVisualManagerOffice2003::OnHighlightQuickCustomizeMenuButton](#onhighlightquickcustomizemenubutton)|Struktura wywołuje tę metodę, gdy jej rysuje wyróżnione szybkie — dostosowywanie przycisku menu. (Przesłania `CMFCVisualManagerOfficeXP::OnHighlightQuickCustomizeMenuButton`.)|  
 |[CMFCVisualManagerOffice2003::OnHighlightRarelyUsedMenuItems](#onhighlightrarelyusedmenuitems)|Struktura wywołuje tę metodę, gdy jej rysuje wyróżnione polecenie. (Przesłania `CMFCVisualManagerOfficeXP::OnHighlightRarelyUsedMenuItems`.)|  
 |[CMFCVisualManagerOffice2003::OnUpdateSystemColors](#onupdatesystemcolors)|Struktura wywołuje tę funkcję, gdy zmieniają się kolory systemowe. (Przesłania `CMFCVisualManagerOfficeXP::OnUpdateSystemColors`.)|  
-|[CMFCVisualManagerOffice2003::SetDefaultWinXPColors](#setdefaultwinxpcolors)|Określa, czy Menedżer wizualny należy używać natywnego kolory motywu Windows XP lub kolory uzyskany z [GetSysColor](http://msdn.microsoft.com/library/windows/desktop/ms724371).|  
+|[CMFCVisualManagerOffice2003::SetDefaultWinXPColors](#setdefaultwinxpcolors)|Określa, czy Menedżer wizualny należy używać natywnego kolory motywu Windows XP lub kolory uzyskany z [GetSysColor](https://msdn.microsoft.com/library/windows/desktop/ms724371).|  
 |[CMFCVisualManagerOffice2003::SetStatusBarOfficeXPLook](#setstatusbarofficexplook)|Określa, że powinny być używane motyw globalny Windows XP.|  
 |[CMFCVisualManagerOffice2003::SetUseGlobalTheme](#setuseglobaltheme)|Określa, czy Menedżer wizualny używa motyw globalny.|  
   
@@ -451,10 +451,10 @@ virtual void GetSmartDockingBaseGuideColors(
   
 ### <a name="parameters"></a>Parametry  
  [in] *clrBaseGroupBackground*  
- Odwołanie do [COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449) Aby ustawić kolor tła.  
+ Odwołanie do [COLORREF](/windows/desktop/gdi/colorref) Aby ustawić kolor tła.  
   
  [in] *clrBaseGroupBorder*  
- Odwołanie do [COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449) Aby ustawić kolor obramowania.  
+ Odwołanie do [COLORREF](/windows/desktop/gdi/colorref) Aby ustawić kolor obramowania.  
   
 ### <a name="remarks"></a>Uwagi  
   
@@ -466,7 +466,7 @@ virtual COLORREF GetSmartDockingHighlightToneColor();
 ```  
   
 ### <a name="return-value"></a>Wartość zwracana  
- Zwraca [COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449) zawierający tonowe kolor wyróżnienia.  
+ Zwraca [COLORREF](/windows/desktop/gdi/colorref) zawierający tonowe kolor wyróżnienia.  
   
 ### <a name="remarks"></a>Uwagi  
   
@@ -491,7 +491,7 @@ virtual void GetTabFrameColors(
  Wskaźnik do okna z kartami, gdzie ramki jest rysowanie kartę.  
   
  [out] *clrDark*  
- Odwołanie do [COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449) parametru, w której ta metoda przechowuje kolor ciemnego obramowania karty.  
+ Odwołanie do [COLORREF](/windows/desktop/gdi/colorref) parametru, w której ta metoda przechowuje kolor ciemnego obramowania karty.  
   
  [out] *clrBlack*  
  Odwołania do parametru COLORREF, w której ta metoda przechowuje kolor obramowania okna karty. Domyślny kolor obramowania jest czarny.  
@@ -536,7 +536,7 @@ virtual COLORREF GetToolbarDisabledColor() const;
 ```  
   
 ### <a name="return-value"></a>Wartość zwracana  
- Zwraca [COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449) zawierającą wyłączonego kolorów.  
+ Zwraca [COLORREF](/windows/desktop/gdi/colorref) zawierającą wyłączonego kolorów.  
   
 ### <a name="remarks"></a>Uwagi  
   
@@ -1095,7 +1095,7 @@ virtual COLORREF OnDrawPaneCaption(
  Prostokąt, który określa granice przyciski podpisu.  
   
 ### <a name="return-value"></a>Wartość zwracana  
- A [COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449) parametrem, który wskazuje kolor tekstu podpis.  
+ A [COLORREF](/windows/desktop/gdi/colorref) parametrem, który wskazuje kolor tekstu podpis.  
   
 ### <a name="remarks"></a>Uwagi  
   
@@ -1208,7 +1208,7 @@ virtual COLORREF OnDrawRibbonCategoryCaption(
  Wskaźnik do paska podpisu. Menedżer wizualny rysuje to [klasa CMFCRibbonContextCaption](../../mfc/reference/cmfcribboncontextcaption-class.md).  
   
 ### <a name="return-value"></a>Wartość zwracana  
- A [COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449) parametrem, który wskazuje koloru tekstu na pasku podpisu.  
+ A [COLORREF](/windows/desktop/gdi/colorref) parametrem, który wskazuje koloru tekstu na pasku podpisu.  
   
 ### <a name="remarks"></a>Uwagi  
  Należy przesłonić tę metodę w klasie pochodnej, aby dostosować wygląd paska podpisu dla kategorii wstążki.  
@@ -2231,7 +2231,7 @@ virtual void OnUpdateSystemColors();
  Struktura wywołuje tę metodę w ramach przetwarzania komunikatu WM_SYSCOLORCHANGE. Należy przesłonić tę metodę w pochodnej Menedżer wizualnego, jeśli chcesz wykonać kod niestandardowy, gdy zmieniają się kolory w aplikacji.  
   
 ##  <a name="setdefaultwinxpcolors"></a>  CMFCVisualManagerOffice2003::SetDefaultWinXPColors  
- Określa, czy Menedżer wizualny należy używać natywnego kolory motywu Windows XP lub kolory uzyskany z [GetSysColor](http://msdn.microsoft.com/library/windows/desktop/ms724371).  
+ Określa, czy Menedżer wizualny należy używać natywnego kolory motywu Windows XP lub kolory uzyskany z [GetSysColor](https://msdn.microsoft.com/library/windows/desktop/ms724371).  
   
 ```  
 static void SetDefaultWinXPColors(BOOL bDefaultWinXPColors = TRUE);

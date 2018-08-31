@@ -170,12 +170,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0865aaf418fb6d8624f3dec9c853c32c1e3bbc83
-ms.sourcegitcommit: 7eadb968405bcb92ffa505e3ad8ac73483e59685
+ms.openlocfilehash: a502ae93b43320fb3a8f43b36b5bc4ef43c23dd2
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/23/2018
-ms.locfileid: "39208783"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43217007"
 ---
 # <a name="standard-types"></a>Standardowe typy
 Biblioteki wykonawczej Microsoft definiuje następujące typy standardowe i definicje typów.  
@@ -211,7 +211,7 @@ Biblioteki wykonawczej Microsoft definiuje następujące typy standardowe i defi
 |`div_t`, `ldiv_t` i `lldiv_t` struktury|Wartości zwracane przez Store [div](../c-runtime-library/reference/div.md), [ldiv](../c-runtime-library/reference/ldiv-lldiv.md), i [lldiv](../c-runtime-library/reference/ldiv-lldiv.md), odpowiednio.|STDLIB.H|  
 |`errno_t` Liczba całkowita|Używany dla zwracanego typu funkcji lub parametru, który zajmuje się kodami błędów `errno`.|STDDEF.H,<br /><br /> CRTDEFS.H|  
 |`_exception` Struktura|Przechowuje informacje o błędach [_matherr](../c-runtime-library/reference/matherr.md).|MATH.H|  
-|`_EXCEPTION_POINTERS`|Zawiera rekord wyjątku. Zobacz [exception_pointers —](http://msdn.microsoft.com/library/windows/desktop/ms679331) Aby uzyskać więcej informacji.|FPIEEE.H|  
+|`_EXCEPTION_POINTERS`|Zawiera rekord wyjątku. Zobacz [exception_pointers —](/windows/desktop/api/winnt/ns-winnt-_exception_pointers) Aby uzyskać więcej informacji.|FPIEEE.H|  
 |`FILE` Struktura|Przechowuje informacje o bieżącym stanie strumienia; używany we wszystkich operacjach we/wy strumienia.|STDIO.H|  
 |`_finddata_t`, `_wfinddata_t`, `_finddata32_t`, `_wfinddata32_t`, `_finddatai64_t`, `_wfinddatai64_t`, `__finddata64_t`, `__wfinddata64_t`, `__finddata32i64_t`, `__wfinddata32i64_t`, `__finddata64i32_t`, `__wfinddata64i32_t` struktury|Informacje o atrybutach pliku zwrócone przez Store [_findfirst, _wfindfirst — i pokrewnych funkcji](../c-runtime-library/reference/findfirst-functions.md) i [_findnext, _wfindnext — i pokrewnych funkcji](../c-runtime-library/reference/findnext-functions.md). Zobacz [funkcje wyszukiwania nazwy pliku](../c-runtime-library/filename-search-functions.md) uzyskać informacji na temat elementów członkowskich struktury.|IO.H, WCHAR.H|  
 |`_FPIEEE_RECORD` Struktura|Zawiera informacje dotyczące wyjątku zmiennopozycyjnego IEEE; przekazywany do uchwytu pułapki zdefiniowanej przez użytkownika, przez [_fpieee_flt](../c-runtime-library/reference/fpieee-flt.md).|FPIEEE.H|  

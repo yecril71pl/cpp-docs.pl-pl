@@ -22,12 +22,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2625316aa731e658d9d45e495809d2402a3cb4c5
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: 12b6d0b0ccc21f4ab1f8b3d7116f098a532d0418
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37849753"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43216264"
 ---
 # <a name="cmfctoolbarfontcombobox-class"></a>Klasa CMFCToolBarFontComboBox
 Przycisk paska narzędzi, który zawiera formant pola kombi, która umożliwia użytkownikowi wybranie czcionkę z listy czcionek systemowych.  
@@ -70,7 +70,7 @@ class CMFCToolBarFontComboBox : public CMFCToolBarComboBoxButton
   
  Aby zsynchronizować czcionki dokumentu przy użyciu czcionki wybrane w polu kombi, należy użyć [CMFCToolBarFontComboBox::GetFontDesc](#getfontdesc) metody do pobierania atrybutów wybranej czcionki i używanie tych atrybutów do tworzenia [ Klasa CFont](../../mfc/reference/cfont-class.md) obiektu.  
   
- Przycisk pola kombi czcionki wywołuje funkcję Win32 [EnumFontFamiliesEx](http://msdn.microsoft.com/library/windows/desktop/dd162620) ustalenie czcionki ekranu i drukarki, które muszą być dostępne w systemie.  
+ Przycisk pola kombi czcionki wywołuje funkcję Win32 [EnumFontFamiliesEx](/windows/desktop/api/wingdi/nf-wingdi-enumfontfamiliesexa) ustalenie czcionki ekranu i drukarki, które muszą być dostępne w systemie.  
   
 ## <a name="inheritance-hierarchy"></a>Hierarchia dziedziczenia  
  [CObject](../../mfc/reference/cobject-class.md)  
@@ -126,7 +126,7 @@ CMFCToolBarFontComboBox();
  TRUETYPE_FONTTYPE  
   
  [in] *nCharSet*  
- Jeśli ustawienie DEFAULT_CHARSET, w polu kombi zawiera wszystkie jednoznacznie o silnych nazwach czcionki we wszystkich zestawach znaków. (Jeśli istnieją dwie czcionki o takiej samej nazwie, pole kombi zawiera jeden z nich). Jeśli ustawionym na wartość zestawu prawidłowych znaków polu kombi zawiera tylko czcionek w określonego zestawu znaków. Zobacz [LOGFONT](http://msdn.microsoft.com/library/windows/desktop/dd145037) zawiera listę możliwych znak ustawia.  
+ Jeśli ustawienie DEFAULT_CHARSET, w polu kombi zawiera wszystkie jednoznacznie o silnych nazwach czcionki we wszystkich zestawach znaków. (Jeśli istnieją dwie czcionki o takiej samej nazwie, pole kombi zawiera jeden z nich). Jeśli ustawionym na wartość zestawu prawidłowych znaków polu kombi zawiera tylko czcionek w określonego zestawu znaków. Zobacz [LOGFONT](/windows/desktop/api/wingdi/ns-wingdi-taglogfonta) zawiera listę możliwych znak ustawia.  
   
  [in] *dwStyle*  
  Style pola kombi. (zobacz [style pola kombi](../../mfc/reference/styles-used-by-mfc.md#combo-box-styles))  

@@ -25,50 +25,50 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 80f59477695b83b33dd3cfa2b37837c5b52c8002
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 723bf8d6f49157a2cdc02376e1a628ba697eceb2
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32376335"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43217994"
 ---
 # <a name="fp-name-pch-file"></a>/Fp (Nazwa pliku .Pch)
-Zawiera nazwę ścieżki dla prekompilowanego nagłówka, zamiast domyślna nazwa ścieżki.  
+Zawiera nazwę ścieżki dla prekompilowanego nagłówka, zamiast używać domyślnej nazwy ścieżki.  
   
 ## <a name="syntax"></a>Składnia  
   
-> **/ FP**_nazwy ścieżki_  
+> **/ FP**<em>nazwy ścieżki</em>  
   
 ## <a name="remarks"></a>Uwagi  
- Użyj tej opcji z [/Yc (Utwórz prekompilowany plik nagłówka)](../../build/reference/yc-create-precompiled-header-file.md) lub [/Yu (Korzystaj Prekompilowanego pliku nagłówka)](../../build/reference/yu-use-precompiled-header-file.md) o podanie nazwy ścieżki dla prekompilowanego nagłówka, zamiast domyślna nazwa ścieżki. Można również użyć **/FP** z **/Yc** Aby określić korzystanie z pliku prekompilowanego nagłówka, która różni się od **/Yc *** filename* argumentu i z podstawowej nazwy pliku źródłowego.  
+ Użyj tej opcji z [/Yc (Utwórz prekompilowany plik nagłówkowy)](../../build/reference/yc-create-precompiled-header-file.md) lub [/Yu (Korzystaj Prekompilowanego pliku nagłówka)](../../build/reference/yu-use-precompiled-header-file.md) o podanie nazwy ścieżki dla prekompilowanego nagłówka, zamiast używać domyślnej nazwy ścieżki. Można również użyć **/FP** z **/Yc** Aby określić plik prekompilowanego pliku nagłówkowego, która różni się od **/Yc**<em>filename</em> argumentów i z podstawowej nazwy pliku źródłowego.  
   
- Jeśli nie określisz rozszerzenia jako część nazwy ścieżki, przyjmowana jest rozszerzeniem .pch. Jeśli określisz katalogu bez nazwy pliku, domyślna nazwa pliku jest VC*x*0.pch, gdzie *x* jest wersję główną programu Visual C++ w użyciu.  
+ Jeśli nie określisz rozszerzenie jako część nazwy ścieżki, przyjmowana jest rozszerzeniem .pch. Jeśli określisz katalogu bez nazwy pliku, domyślna nazwa pliku jest VC*x*0.pch, gdzie *x* jest główną wersją Visual C++ w użyciu.  
   
- Można również użyć **/FP** opcję z **/Yu**.  
+ Można również użyć **/FP** z opcją **/Yu**.  
   
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Aby ustawić tę opcję kompilatora w środowisku programowania Visual Studio  
   
-1.  Otwórz projekt **strony właściwości** okno dialogowe. Aby uzyskać więcej informacji, zobacz [Praca z właściwościami projektu](../../ide/working-with-project-properties.md).  
+1.  Otwórz projekt **stron właściwości** okno dialogowe. Aby uzyskać więcej informacji, zobacz [Praca z właściwościami projektu](../../ide/working-with-project-properties.md).  
   
 2.  Kliknij przycisk **C/C++** folderu.  
   
-3.  Kliknij przycisk **prekompilowanych nagłówków** strony właściwości.  
+3.  Kliknij przycisk **prekompilowanych nagłówków** stronę właściwości.  
   
-4.  Modyfikowanie **Prekompilowanego pliku nagłówka** właściwości.  
+4.  Modyfikowanie **Prekompilowanego pliku nagłówkowego** właściwości.  
   
 ### <a name="to-set-this-compiler-option-programmatically"></a>Aby programowo ustawić tę opcję kompilatora  
   
 -   Zobacz <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.PrecompiledHeaderFile%2A>.  
   
 ## <a name="example"></a>Przykład  
- Jeśli chcesz utworzyć prekompilowanego pliku nagłówkowego dla debugowania wersji programu i kompilacja zarówno kod źródłowy, jak i pliki nagłówkowe, możesz określić polecenia takie jak:  
+ Jeśli chcesz utworzyć prekompilowany plik nagłówka dla wersji debugowania programu i kompilacja kodu źródłowego i pliki nagłówkowe, należy określić polecenia takie jak:  
   
 ```  
 CL /DDEBUG /Zi /Yc /FpDPROG.PCH PROG.CPP  
 ```  
   
 ## <a name="example"></a>Przykład  
- Polecenie Określa użycie prekompilowanego nagłówka pliku o nazwie MYPCH.pch. Kompilator przyjęto założenie, że kod źródłowy w PROG.cpp została prekompilowanego poprzez MYAPP.h i że prekompilowany kod znajduje się w MYPCH.pch. Wykorzystuje zawartość MYPCH.pch, a następnie kompiluje reszty PROG.cpp, aby utworzyć plik .obj. Dane wyjściowe w tym przykładzie jest to plik o nazwie PROG.exe.  
+ Poniższe polecenie Określa użycie pliku wstępnie skompilowanego nagłówka o nazwie MYPCH.pch. Kompilator zakłada wstępnie kodu źródłowego w PROG.cpp za pośrednictwem MYAPP.h i że wstępnie skompilowany kod znajduje się w MYPCH.pch. Używa zawartości MYPCH.pch i kompiluje pozostałą część PROG.cpp, aby utworzyć plik .obj. W tym przykładzie danych wyjściowych jest plik o nazwie PROG.exe.  
   
 ```  
 CL /YuMYAPP.H /FpMYPCH.PCH PROG.CPP  

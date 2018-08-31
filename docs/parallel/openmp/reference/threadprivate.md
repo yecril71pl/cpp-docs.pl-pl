@@ -16,15 +16,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e7e7edaa36f929750087e3c81f42204ff20e9f62
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: 0502528a2db47b8db41437fd7017aece1dc67cde
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33692915"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43217748"
 ---
 # <a name="threadprivate"></a>threadprivate
-Określa, czy zmienna jest prywatny do wątku.  
+Określa, czy zmienna jest prywatnego wątku.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -36,22 +36,22 @@ Określa, czy zmienna jest prywatny do wątku.
  w przypadku gdy  
   
  `var`  
- Rozdzielana przecinkami lista zmiennych, które mają być prywatne do wątku. `var` musi być zmiennej globalnej lub przestrzeń nazw — zakresu lub lokalna zmienna statyczna.  
+ Rozdzielana przecinkami lista zmiennych, które mają być prywatnego wątku. `var` musi być globalne lub przestrzeń nazw — zmienną o zakresie lub zmiennej lokalnej statycznej.  
   
 ## <a name="remarks"></a>Uwagi  
- `threadprivate` Dyrektywy obsługuje nie klauzule OpenMP.  
+ `threadprivate` Dyrektywy nie obsługuje żadnych klauzule OpenMP.  
   
- Aby uzyskać więcej informacji, zobacz [2.7.1 dyrektywa dotycząca prywatnego wątku](../../../parallel/openmp/2-7-1-threadprivate-directive.md).  
+ Aby uzyskać więcej informacji, zobacz [2.7.1 dyrektywa threadprivate](../../../parallel/openmp/2-7-1-threadprivate-directive.md).  
   
- `threadprivate` Dyrektywa jest oparta na [wątku](../../../cpp/thread.md) `__declspec` atrybutu; limity **__declspec(thread)** dotyczą `threadprivate`.  
+ `threadprivate` Dyrektywy opiera się na [wątku](../../../cpp/thread.md) `__declspec` atrybut; limity **__declspec(thread)** dotyczą `threadprivate`.  
   
- Nie można użyć `threadprivate` w każdej biblioteki DLL, który zostanie załadowany za pośrednictwem [LoadLibrary](http://msdn.microsoft.com/library/windows/desktop/ms684175).  Dotyczy to również bibliotek DLL załadowanych z [/delayload (Opóźnij importowanie ładowania)](../../../build/reference/delayload-delay-load-import.md), który także używa **LoadLibrary**.  
+ Nie można użyć `threadprivate` w każdej biblioteki DLL, który zostanie załadowany za pośrednictwem [LoadLibrary](https://msdn.microsoft.com/library/windows/desktop/ms684175).  Obejmuje to biblioteki dll, które są ładowane z [/delayload (Opóźnij importowanie ładowania)](../../../build/reference/delayload-delay-load-import.md), która także korzysta **LoadLibrary**.  
   
- Można użyć `threadprivate` w bibliotece DLL statycznie ładowanej podczas uruchamiania procesu.  
+ Możesz użyć `threadprivate` w bibliotece DLL, który statycznie jest ładowany podczas uruchamiania procesu.  
   
- Ponieważ `threadprivate` opiera się na **__declspec(thread)**, `threadprivate` zmienna istnieje w którymkolwiek wątku pracy w toku, nie tylko wątków, które są częścią zespołu wątku zduplikowany przez równoległego regionu.  Jest to szczegóły implementacji, których należy mieć świadomość, ponieważ mogą pojawić się, na przykład konstruktory `threadprivate` typ zdefiniowany przez użytkownika o nazwie więcej często, a następnie oczekuje.  
+ Ponieważ `threadprivate` opiera się na **__declspec(thread)**, `threadprivate` zmienna istnieje w żadnym z wątków pracę w toku, nie tylko te wątki, które są częścią zespołu wątku zduplikowany przez równoległego regionu.  Jest to szczegół implementacji, w których należy wiedzieć, ponieważ można zauważyć, na przykład konstruktory `threadprivate` typu zdefiniowanego przez użytkownika o nazwie więcej często, a następnie oczekuje.  
   
- A `threadprivate` zmiennej typu destructable nie jest gwarantowana mają jego wywołania destruktora.  Na przykład:  
+ A `threadprivate` zmienną typu destructable nie musi mieć jej wywołania destruktora.  Na przykład:  
   
 ```  
 struct MyType   
@@ -68,10 +68,10 @@ int main()
 }  
 ```  
   
- Użytkownicy mają kontrolka nie określające, kiedy zakończy wątków stanowiące równoległego regionu.  Jeśli istnieje tych wątków, gdy kończy proces, wątków nie zostanie poinformowany o zakończenie procesu i destruktor nie zostanie wywołana dla `threaded_var` w którymkolwiek wątku z wyjątkiem tego, który zamyka (tutaj, wątek głównej).  Tak kod nie powinien count prawidłowego zniszczenie `threadprivate` zmiennych.  
+ Użytkownicy mają nie kontrolę tego kiedy spowoduje przerwanie działania wątków stanowiące równoległego regionu.  Jeśli te wątki istnieje podczas procesu, wątki, nie będziesz otrzymywać powiadomienia o zakończenie procesu i destruktor nie zostaną wywołane dla `threaded_var` dotyczące dowolnego wątku, z wyjątkiem tego, który zamyka (tutaj, wątek główny).  Dlatego kod nie powinien liczyć na właściwe zniszczenie `threadprivate` zmiennych.  
   
 ## <a name="example"></a>Przykład  
- Na przykład za pomocą `threadprivate`, zobacz [prywatnej](../../../parallel/openmp/reference/private-openmp.md).  
+ Przykład użycia `threadprivate`, zobacz [prywatnej](../../../parallel/openmp/reference/private-openmp.md).  
   
 ## <a name="see-also"></a>Zobacz też  
  [Dyrektywy](../../../parallel/openmp/reference/openmp-directives.md)

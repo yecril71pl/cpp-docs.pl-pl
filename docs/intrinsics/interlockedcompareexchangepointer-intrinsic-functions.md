@@ -34,12 +34,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0f8ab76252c355bb56a1e2157e0e025a4eddb0d8
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 18f26f9ac0cd00758d1259ac368b2408a7a2e8cf
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42596539"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43214624"
 ---
 # <a name="interlockedcompareexchangepointer-intrinsic-functions"></a>Funkcje wewnętrzne _interlockedcompareexchangepointer
 **Microsoft Specific**  
@@ -110,7 +110,7 @@ long _InterlockedCompareExchangePointer_rel (
 ## <a name="remarks"></a>Uwagi  
  `_InterlockedCompareExchangePointer` Wykonuje porównanie atomowe `Destination` spełnić za pomocą `Comparand` adresu. Jeśli `Destination` adresów jest równa `Comparand` adresu `Exchange` adres jest przechowywany w adresem określonym przez `Destination`. W przeciwnym razie odbywa się żadna operacja.  
   
- `_InterlockedCompareExchangePointer` zapewnia wsparcie wewnętrznej kompilatora dla zestawu SDK Windows Win32 [_InterlockedCompareExchangePointer](http://msdn.microsoft.com/library/ff547863.aspx) funkcji.  
+ `_InterlockedCompareExchangePointer` zapewnia wsparcie wewnętrznej kompilatora dla zestawu SDK Windows Win32 [_InterlockedCompareExchangePointer](https://msdn.microsoft.com/library/ff547863.aspx) funkcji.  
   
  Na przykład sposobu użycia `_InterlockedCompareExchangePointer`, zobacz [_InterlockedDecrement](../intrinsics/interlockeddecrement-intrinsic-functions.md).  
   

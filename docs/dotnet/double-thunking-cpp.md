@@ -19,29 +19,29 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 47d5bbbecc8e1b9743c543a503df1a0afa0dc0ae
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 3e37b3b7fc477de0bdbeb00a15ebd86e6c44d25c
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33111211"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43216640"
 ---
 # <a name="double-thunking-c"></a>Podwójna konwersja bitowa adresów (C++)
-Podwójna konwersja bitowa adresów oznacza spadek wydajności, który może wystąpić, gdy wywołanie funkcji w wywołaniach kontekstu zarządzanych, Visual C++ zarządzane funkcji i gdzie program wykonywania wywołuje punkt wejścia natywnej funkcji w celu wywołania funkcji zarządzanych. W tym temacie omówiono, gdzie występuje podwójna konwersja bitowa adresów i jak można uniknąć, aby zwiększyć wydajność.  
+Podwójna konwersja bitowa odnosi się do utraty wydajności występujący podczas wywołania funkcji w wywołaniach kontekście zarządzanych, Visual C++ zarządzane funkcji i których wykonywania programu wywołuje — funkcja natywnego punktu wejścia w celu wywołania funkcji zarządzanej. W tym temacie omówiono, gdzie występuje podwójna i jak można uniknąć, aby zwiększyć wydajność.  
   
 ## <a name="remarks"></a>Uwagi  
- Domyślnie podczas kompilowania za pomocą **/CLR**, definicji funkcji zarządzanego umożliwia kompilatorowi Generowanie zarządzany punkt wejścia, a punkt wejścia natywnego. Dzięki temu zarządzanych funkcja wywoływana z miejsc wywołania natywnych i zarządzanych. Jednak jeśli istnieje punkt wejścia natywnego, może być punkt wejścia dla wszystkich wywołań funkcji. Jeśli funkcji wywołującej jest zarządzany, punkt wejścia macierzysty będzie wywoływać zarządzany punkt wejścia. W efekcie dwóch wywołania są wymagane do wywołania funkcji (w związku z tym podwójna konwersja bitowa adresów). Na przykład funkcje wirtualne są zawsze wywoływana przez punkt wejścia natywnego.  
+ Domyślnie podczas kompilowania za pomocą **/CLR**, definicja funkcji zarządzanej powoduje, że kompilator do generowania punktem wejścia zarządzanego i natywnego punktu wejścia. Dzięki temu funkcji zarządzanej do wywoływania z wywołania natywnego i zarządzanego. Jednak jeśli istnieje natywnego punktu wejścia, może być punkt wejścia dla wszystkich wywołań funkcji. Jeśli funkcja wywołująca jest zarządzany, natywnego punktu wejścia zostanie następnie wywołać zarządzany punkt wejścia. W efekcie dwóch wywołań są wymagane do wywołania funkcji (z tego powodu podwójna konwersja bitowa adresów). Na przykład funkcje wirtualne zawsze są wywoływane za pośrednictwem natywnego punktu wejścia.  
   
- Można nakazuje kompilatorowi nie Generowanie punktu wejścia natywnego dla funkcji zarządzanego, że funkcja będzie można wywołać tylko z zarządzanych kontekstu, za pomocą [__clrcall](../cpp/clrcall.md) konwencji wywoływania.  
+ Można poinformować kompilator, aby nie generować natywnego punktu wejścia dla funkcji zarządzanych, czy funkcja będzie zostać wywołana tylko z zarządzanych kontekstu przy użyciu [__clrcall](../cpp/clrcall.md) konwencji wywoływania.  
   
- Podobnie w przypadku eksportowania ([dllexport i dllimport](../cpp/dllexport-dllimport.md)) funkcją zarządzaną punktu wejścia natywnego jest generowana i wywoła dowolnej funkcji, który importuje i wywołania tej funkcji za pośrednictwem punktu wejścia macierzystego. Aby uniknąć podwójna konwersja bitowa adresów w tej sytuacji, nie należy używać semantyki natywnego eksportu/importu; po prostu odwołania metadanych za pomocą `#using` (zobacz [# dyrektywa using](../preprocessor/hash-using-directive-cpp.md)).  
+ Podobnie jeśli eksportujesz ([dllexport i dllimport](../cpp/dllexport-dllimport.md)) funkcji zarządzanej, generowany jest natywnego punktu wejścia i wywoła żadnej funkcji, które importuje i wywołuje tę funkcję za pomocą natywnego punktu wejścia. Aby uniknąć podwójna w takiej sytuacji, należy używać importu/eksportu natywny semantyki; po prostu odwoływać się do metadanych za pomocą `#using` (zobacz [# dyrektywa using](../preprocessor/hash-using-directive-cpp.md)).  
   
- Kompilator został zaktualizowany tak, aby ograniczyć niepotrzebne podwójna konwersja bitowa adresów. Na przykład dowolnej funkcji z zarządzanym typem w sygnaturze (w tym typ zwracany) niejawnie zostaną oznaczone jako `__clrcall`. Aby uzyskać więcej informacji na eliminacji podwójna konwersja bitowa, zobacz [ http://msdn.microsoft.com/msdnmag/issues/05/01/COptimizations/default.aspx ](http://msdn.microsoft.com/msdnmag/issues/05/01/COptimizations/default.aspx).  
+ Kompilator został zaktualizowany tak, aby ograniczyć niepotrzebne podwójna konwersja bitowa. Na przykład dowolnej funkcji z zarządzanym typem w sygnaturze (łącznie z typem zwracanym) zostanie niejawnie oznaczone jako `__clrcall`. Aby uzyskać więcej informacji na temat zniesienie podwójnego thunk, zobacz [ https://msdn.microsoft.com/msdnmag/issues/05/01/COptimizations/default.aspx ](https://msdn.microsoft.com/msdnmag/issues/05/01/COptimizations/default.aspx).  
   
 ## <a name="example"></a>Przykład  
   
 ### <a name="description"></a>Opis  
- W poniższym przykładzie pokazano, podwójna konwersja bitowa adresów. Podczas kompilacji natywnego (bez **/CLR**), wywołanie funkcji wirtualnej w `main` generuje jedno wywołanie `T`przez konstruktora kopiującego i jedno wywołanie destruktora. Podobnie jest osiągana, gdy jest zadeklarowany funkcji wirtualnej za pomocą **/CLR** i `__clrcall`. Jednak gdy właśnie skompilowano z opcją **/CLR**, wywołanie funkcji generuje wywołanie konstruktora kopiującego, ale istnieje inne wywołanie konstruktora kopiującego z powodu thunk native zarządzane.  
+ W poniższym przykładzie pokazano, Podwójna. Podczas kompilowania natywne (bez **/CLR**), wywołanie funkcji wirtualnej w `main` generuje jedno wywołanie `T`firmy kopiowanie konstruktora i jedno wywołanie destruktora. Podobne zachowanie jest osiągana, gdy funkcja wirtualna jest zadeklarowana za pomocą **/CLR** i `__clrcall`. Jednak gdy tylko skompilowano z opcją **/CLR**, wywołanie funkcji generuje wywołanie konstruktora kopiującego, ale ma inne wywołanie konstruktora kopiującego, ze względu na thunk native zarządzane.  
   
 ### <a name="code"></a>Kod  
   
@@ -98,7 +98,7 @@ __thiscall T::~T(void)
 ## <a name="example"></a>Przykład  
   
 ### <a name="description"></a>Opis  
- Poprzedni przykład wykazać istnienie podwójna konwersja bitowa adresów. W tym przykładzie pokazano jego skutków. `for` Pętli wywołuje funkcję wirtualną i czas wykonywania programu raportów. Najwolniejsze czas jest zgłaszany, gdy program jest skompilowana przy użyciu **/CLR**. Najszybszym czasy są zgłaszane w przypadku kompilowania kodu bez **/CLR** lub wirtualnych funkcja zadeklarowana ze `__clrcall`.  
+ Poprzedni przykład przedstawione na istnienie podwójna. Niniejszy przykład pokazuje jego wpływu. `for` Pętli wywołuje funkcję wirtualną i czas wykonywania raportów programu. Najwolniejsze czas jest zgłaszany, gdy program jest skompilowany przy użyciu **/CLR**. Najszybszy czas, w którym są zgłaszane podczas kompilowania kodu bez **/CLR** lub jeśli funkcja wirtualna jest zadeklarowana za pomocą `__clrcall`.  
   
 ### <a name="code"></a>Kod  
   

@@ -20,12 +20,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b4295fe855728f82567685a336211c2ef8c855e7
-ms.sourcegitcommit: e9ce38decc9f986edab5543de3464b11ebccb123
+ms.openlocfilehash: 18217b1d4574f6591287ab6cb83e28c67fe95537
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/13/2018
-ms.locfileid: "42465510"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43218127"
 ---
 # <a name="porting-from-unix-to-win32"></a>Eksportowanie z systemu UNIX do Win32
 Podczas migracji aplikacji z systemu UNIX do Windows, masz kilka opcji:  
@@ -66,15 +66,15 @@ Innej lokacji w firmie zapewnienie im programów obsługi przenoszenia systemu U
  
 Innym rozwiązaniem jest przenoszenie aplikacji systemu UNIX bezpośrednio do systemu Win32. Przy użyciu biblioteki ANSI C/C++ i komercyjnych bibliotek kompilator C, wiele tradycyjny system, który wywołuje opiera się na aplikacji systemu UNIX są dostępne w aplikacji Win32.  
   
-Model danych wyjściowych **stdio —**-aplikacji nie musi zostać zmienione w stosunku konsoli Win32 API naśladować **stdio —** modelu i wersji *curses* istnieje używające konsoli Win32 API. Aby uzyskać więcej informacji, zobacz [SetConsoleCursorPosition](http://msdn.microsoft.com/library/windows/desktop/ms686025).  
+Model danych wyjściowych **stdio —**-aplikacji nie musi zostać zmienione w stosunku konsoli Win32 API naśladować **stdio —** modelu i wersji *curses* istnieje używające konsoli Win32 API. Aby uzyskać więcej informacji, zobacz [SetConsoleCursorPosition](https://msdn.microsoft.com/library/windows/desktop/ms686025).  
   
 Aplikacje oparte na gniazdo Berkeley muszą bardzo kilka zmian, aby pracować w aplikacji Win32. Interfejsu Windows Sockets został zaprojektowany do celów przenośności przy użyciu gniazd BSD, przy minimalnych zmianach, które zostały wymienione w sekcjach wprowadzające specyfikacji interfejsu WinSock.  
   
-Windows obsługuje CLS DCE RPC, tak aby łatwo można używać aplikacji opartego na protokole RPC. Zobacz [funkcji RPC](http://msdn.microsoft.com/library/windows/desktop/aa378623).  
+Windows obsługuje CLS DCE RPC, tak aby łatwo można używać aplikacji opartego na protokole RPC. Zobacz [funkcji RPC](/windows/desktop/Rpc/rpc-functions).  
   
-Jest jednym z największych obszarów różnica w modelu procesów. Ma UNIX `fork`; Win32 — nie. W zależności od użycia `fork` i kodzie podstawowym, Win32 ma dwa interfejsy API, które mogą być używane: `CreateProcess` i `CreateThread`. Aplikacji systemu UNIX, który rozwidlenia wielu kopii sam można przekształcił w systemie Win32 wiele procesów lub jeden proces w wielu wątkach. Wiele procesów są używane, dostępnych jest wiele metod IPC, który może służyć do komunikacji między procesami (i prawdopodobnie aktualizowania kodu i danych nowego procesu jako element nadrzędny, np. Jeśli funkcjonalność, `fork` zapewnia jest potrzebny). Aby uzyskać więcej informacji o IPC, zobacz [komunikacji międzyprocesowej](http://msdn.microsoft.com/library/windows/desktop/aa365574).  
+Jest jednym z największych obszarów różnica w modelu procesów. Ma UNIX `fork`; Win32 — nie. W zależności od użycia `fork` i kodzie podstawowym, Win32 ma dwa interfejsy API, które mogą być używane: `CreateProcess` i `CreateThread`. Aplikacji systemu UNIX, który rozwidlenia wielu kopii sam można przekształcił w systemie Win32 wiele procesów lub jeden proces w wielu wątkach. Wiele procesów są używane, dostępnych jest wiele metod IPC, który może służyć do komunikacji między procesami (i prawdopodobnie aktualizowania kodu i danych nowego procesu jako element nadrzędny, np. Jeśli funkcjonalność, `fork` zapewnia jest potrzebny). Aby uzyskać więcej informacji o IPC, zobacz [komunikacji międzyprocesowej](/windows/desktop/ipc/interprocess-communications).  
   
-Windows i UNIX graficzny modeli są bardzo różne. UNIX używa X okna systemu graficznego interfejsu użytkownika, gdy Windows korzysta z użyciem interfejsu GDI. Chociaż jest to podobne, nie ma żadnych mapowania proste interfejsu API X do interfejsu API z użyciem interfejsu GDI. Jednak obsługa OpenGL jest dostępne do migracji aplikacji OpenGL systemu UNIX. Wiąże się z X klientów i X serwerów Windows. Zobacz [konteksty urządzenia](http://msdn.microsoft.com/library/windows/desktop/dd183553) informacji z użyciem interfejsu GDI.  
+Windows i UNIX graficzny modeli są bardzo różne. UNIX używa X okna systemu graficznego interfejsu użytkownika, gdy Windows korzysta z użyciem interfejsu GDI. Chociaż jest to podobne, nie ma żadnych mapowania proste interfejsu API X do interfejsu API z użyciem interfejsu GDI. Jednak obsługa OpenGL jest dostępne do migracji aplikacji OpenGL systemu UNIX. Wiąże się z X klientów i X serwerów Windows. Zobacz [konteksty urządzenia](https://msdn.microsoft.com/library/windows/desktop/dd183553) informacji z użyciem interfejsu GDI.  
   
 Podstawowe aplikacji systemu UNIX, w tym wiele aplikacji CGI, powinien portu łatwe do programu Visual C++ w systemie Windows. Funkcje, takie jak `open`, `fopen`, `read`, `write` i inne są dostępne w bibliotece środowiska wykonawczego Visual C++. Ponadto istnieje mapowanie jeden do jednego między interfejsów API systemu UNIX C i Win32: `open` do `CreateFile`, `read` do `ReadFile`, `write` do `WriteFile`, `ioctl` do `DeviceIOControl`, `close` do `CloseFile`i tak dalej.  
   

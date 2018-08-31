@@ -16,21 +16,21 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 23b958e6c770260082af069544480102f6d79926
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 882ed020b37ec60c072c8983c61bbe564bb74b04
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33347666"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43217691"
 ---
 # <a name="printing-in-rich-edit-controls"></a>Drukowanie w formantach edycji wzbogaconej
-Można ustalić formantów edycji wzbogaconej ([CRichEditCtrl](../mfc/reference/cricheditctrl-class.md)) do renderowania dane wyjściowe dla określonego urządzenia, takie jak drukarka. Można również określić, że urządzenia wyjściowego, dla którego formantu edycji wzbogaconej formatowania tekstu.  
+Można stwierdzić, kontrolki edycji wzbogaconej ([CRichEditCtrl](../mfc/reference/cricheditctrl-class.md)) do renderowania danych wyjściowych dla określonego urządzenia, takie jak drukarki. Można również określić, że urządzenie wyjściowe, które kontrolki edycji wzbogaconej formatuje jego tekstu.  
   
- Aby sformatować części zawartości kontrolki edycji wzbogaconej dla określonego urządzenia, można użyć [FormatRange](../mfc/reference/cricheditctrl-class.md#formatrange) funkcję elementu członkowskiego. [FORMATRANGE](http://msdn.microsoft.com/library/windows/desktop/bb787911) struktury używane z tą funkcją określa zakres tekstu do formatowania oraz kontekstu urządzenia (DC) dla urządzenia.  
+ Aby sformatować część zawartości kontrolki edycji wzbogaconej dla określonego urządzenia, możesz użyć [FormatRange](../mfc/reference/cricheditctrl-class.md#formatrange) funkcja elementu członkowskiego. [FORMATRANGE](/windows/desktop/api/richedit/ns-richedit-_formatrange) struktury używane z tą funkcją określa zakres tekstu do formatowania, a także kontekstu urządzenia (DC) dla urządzeń docelowych.  
   
- Po formatowanie tekstu urządzenia wyjściowego, możesz wysłać dane wyjściowe do urządzenia za pomocą [DisplayBand](../mfc/reference/cricheditctrl-class.md#displayband) funkcję elementu członkowskiego. Używając wielokrotnie `FormatRange` i `DisplayBand`, aplikacji, która wyświetla zawartość kontrolki zaawansowanej edycji można zaimplementować pasma. (Pasma jest podział danych wyjściowych na mniejsze części do celów drukowania).  
+ Po sformatowaniu tekst na urządzeniach, może wysłać dane wyjściowe do urządzenia za pomocą [DisplayBand](../mfc/reference/cricheditctrl-class.md#displayband) funkcja elementu członkowskiego. Używając wielokrotnie `FormatRange` i `DisplayBand`, można zaimplementować aplikację, która wyświetla zawartość kontrolki edycji wzbogaconej. (Pasma jest dzielenie danych wyjściowych na mniejsze części na potrzeby drukowania).  
   
- Można użyć [SetTargetDevice](../mfc/reference/cricheditctrl-class.md#settargetdevice) funkcji członkowskiej, aby określić urządzenie docelowe, dla którego formantu edycji wzbogaconej formatowania tekstu. Ta funkcja jest przydatna do WYSIWYG (widoczna jest możesz uzyskać) formatowania, w którym aplikacja umieszcza tekst przy użyciu drukarki domyślnej czcionki metryki zamiast ekranu.  
+ Możesz użyć [SetTargetDevice](../mfc/reference/cricheditctrl-class.md#settargetdevice) funkcja elementu członkowskiego, aby określić urządzenie docelowe, dla którego kontrolki edycji wzbogaconej formatuje jego tekstu. Ta funkcja jest przydatne w przypadku typu WYSIWYG (wyświetlanych jest, co można uzyskać) formatowania, w której aplikacja umieszcza tekst przy użyciu domyślnej drukarki miar czcionek zamiast na ekranie.  
   
 ## <a name="see-also"></a>Zobacz też  
  [Korzystanie z CRichEditCtrl](../mfc/using-cricheditctrl.md)   
